@@ -76,8 +76,8 @@ $messages['bg'] = array(
  * @author Grondin
  */
 $messages['fr'] = array(
-	'boardblastlogintitle'      => 'Vous devez être en session pour envoyer le tableau en rafale',
-	'boardblastlogintext'       => 'Vous devez être en session pour envoyer le tableau en rafales. Cliquez <a href="index.php?title=Special:UserLogin">ici pour ouvrir une session</a>',
+	'boardblastlogintitle'      => 'Vous devez être connecté pour envoyer le tableau en rafale',
+	'boardblastlogintext'       => 'Vous devez être connecté pour envoyer le tableau en rafales. Cliquez <a href="index.php?title=Special:UserLogin">ici pour ouvrir vous connecter</a>',
 	'messagesenttitle'          => 'Messages envoyés',
 	'boardblasttitle'           => 'Envoyer le tableau en rafale',
 	'boardblaststep1'           => 'Étape 1 - Écrivez votre message',
@@ -111,7 +111,7 @@ $messages['fr'] = array(
 	'userboard_prevpage'        => 'précédent',
 	'userboard_nomessages'      => 'Aucun message.',
 	'userboard_sendbutton'      => 'envoyé',
-	'userboard_loggedout'       => 'Vous devez être <a href="$1">en session</a> pour poster des messages à d’autres utilisateurs.',
+	'userboard_loggedout'       => 'Vous devez être <a href="$1">connecté</a> pour poster des messages à d’autres utilisateurs.',
 	'userboard_showingmessages' => 'Visionnement de $2-$3 de {{PLURAL:$1|$1 message|$1 messages}}',
 	'message_received_subject'  => '$1 a écrit sur votre tableau sur {{SITENAME}}',
 	'message_received_body'     => "Salut $1 : 
