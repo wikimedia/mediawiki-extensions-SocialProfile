@@ -2,8 +2,7 @@
 -- Table structure for table `user_profile`
 --
 
-DROP TABLE IF EXISTS `user_profile`;
-CREATE TABLE `user_profile` (
+CREATE TABLE /*$wgDBprefix*/user_profile (
   `up_user_id` int(5) NOT NULL default '0',
   `up_location_city` varchar(255) default NULL,
   `up_location_state` varchar(100) default NULL,

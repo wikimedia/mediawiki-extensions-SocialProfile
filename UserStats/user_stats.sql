@@ -2,8 +2,7 @@
 -- Table structure for table `user_stats`
 --
 
-DROP TABLE IF EXISTS `user_stats`;
-CREATE TABLE `user_stats` (
+CREATE TABLE /*$wgDBprefix*/user_stats (
   `stats_year_id` int(2) NOT NULL default '0',
   `stats_user_id` int(11) NOT NULL default '0',
   `stats_user_name` varchar(255) NOT NULL default '',

@@ -2,8 +2,7 @@
 -- Table structure for table `user_board`
 --
 
-DROP TABLE IF EXISTS `user_board`;
-CREATE TABLE `user_board` (
+CREATE TABLE /*$wgDBprefix*/user_board (
   `ub_id` int(11) NOT NULL auto_increment,
   `ub_user_id` int(11) NOT NULL default '0',
   `ub_user_name` varchar(255) NOT NULL default '',

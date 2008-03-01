@@ -2,8 +2,7 @@
 -- Table structure for table `user_relationship`
 --
 
-DROP TABLE IF EXISTS `user_relationship`;
-CREATE TABLE `user_relationship` (
+CREATE TABLE /*$wgDBprefix*/user_relationship (
   `r_id` int(11) NOT NULL auto_increment,
   `r_user_id` int(5) unsigned NOT NULL default '0',
   `r_user_name` varchar(255) NOT NULL default '',
@@ -20,8 +19,7 @@ CREATE TABLE `user_relationship` (
 -- Table structure for table `user_relationship_request`
 --
 
-DROP TABLE IF EXISTS `user_relationship_request`;
-CREATE TABLE `user_relationship_request` (
+CREATE TABLE /*$wgDBprefix*/user_relationship_request (
   `ur_id` int(11) NOT NULL auto_increment,
   `ur_user_id_from` int(5) unsigned NOT NULL default '0',
   `ur_user_name_from` varchar(255) NOT NULL default '',
