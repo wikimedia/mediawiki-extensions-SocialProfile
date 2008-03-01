@@ -42,7 +42,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 				$user = User::newFromId($user_id );
 				$user->loadFromId();
 				$user_name = $user->getName();
-				//echo $user_id . "-" . $user_name . "<BR>";
+				//echo $user_id . "-" . $user_name . "<br />";
 				$b->sendBoardMessage($wgUser->getID(),$wgUser->getName(),$user_id,$user_name, $wgRequest->getVal("message"), 1);
 				$count++;
 			}

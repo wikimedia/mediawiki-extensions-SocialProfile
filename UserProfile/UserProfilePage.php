@@ -431,7 +431,7 @@ class UserProfilePage extends Article{
 		$output .= "<div class=\"profile-image\">";
 			if ($wgUser->getName()==$this->user_name) {
 				$output .= "<a href=\"{$avatar->escapeFullURL()}\" rel=\"nofollow\">
-					<img src=\"{$wgUploadPath}/avatars/".$avatar->getAvatarImage()."\" alt=\"\" border=\"0\"/><br/>
+					<img src=\"{$wgUploadPath}/avatars/".$avatar->getAvatarImage()."\" alt=\"\" border=\"0\"/><br />
 					(".((strpos($avatar->getAvatarImage(), 'default_')!=false)?"upload image":"new image").")
 				</a>";
 			} else {
@@ -518,7 +518,7 @@ class UserProfilePage extends Article{
 					if($user_name!=$friend["user_name"])$user_name.= "..";
 
 					$output .= "<a href=\"".$user->escapeFullURL()."\" title=\"{$friend["user_name"]}\" rel=\"nofollow\">
-						{$avatar_img}<br/>
+						{$avatar_img}<br />
 						{$user_name}
 					</a>";
 					if($x==count($friends) || $x!=1 && $x%$per_row ==0)$output.="<div class=\"cleared\"></div>";

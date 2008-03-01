@@ -41,7 +41,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		if (count($_POST) && $_SESSION["alreadysubmitted"] == false) {
 			$_SESSION["alreadysubmitted"] = true;
 			$rel->addRelationshipRequest($this->user_name_to,$this->relationship_type,$_POST["message"]);
-			$out = "<br><span class=title>Your request Has Been Sent</span><br><br>";
+			$out = "<br /><span class=title>Your request Has Been Sent</span><br /><br />";
 			$wgOut->addHTML($out);
 		} else {
 			$_SESSION["alreadysubmitted"] = false;

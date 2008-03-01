@@ -69,7 +69,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			}
 			$log = new LogPage( wfMsgForContent( 'user-profile-update-profile' ) );
 			$log->addEntry( wfMsgForContent( 'user-profile-update-profile' ), $wgUser->getUserPage(), wfMsgForContent( 'user-profile-update-log-section' ) . " '{$section}'" );
-			$wgOut->addHTML("<span class='profile-on'>" . wfMsgForContent( 'user-profile-update-saved' ) . "</span><br><br>");
+			$wgOut->addHTML("<span class='profile-on'>" . wfMsgForContent( 'user-profile-update-saved' ) . "</span><br /><br />");
 		}
 
 			//$section = $wgRequest->getVal("section");

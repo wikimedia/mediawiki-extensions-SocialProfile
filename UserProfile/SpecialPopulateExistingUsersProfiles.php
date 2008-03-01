@@ -38,7 +38,7 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 			$user_id = User::idFromName( $user_name );
 
 			if( $user_id > 0 ){
-			//echo "user_name:{$user_name}/user_id:" . $user_id . "<BR>";
+			//echo "user_name:{$user_name}/user_id:" . $user_id . "<br />";
 			//$count++;
 
 				$s = $dbr->selectRow( 'user_profile', array( 'up_user_id' ), array( 'up_user_id' => $user_id ), $fname );

@@ -467,7 +467,7 @@ class SpecialUploadAvatar extends UnlistedSpecialPage {
 		$sub = wfMsg( 'uploadwarning' );
 		$wgOut->addHTML( "<h2>{$sub}</h2>\n" );
 		$wgOut->addHTML( "<h4 class='error'>{$error}</h4>\n" );
-		$wgOut->addHTML("<br><input type=button onclick=javascript:history.go(-1) value='" . wfMsgForContent( 'user-profile-goback' ) . "'>");
+		$wgOut->addHTML("<br /><input type=button onclick=javascript:history.go(-1) value='" . wfMsgForContent( 'user-profile-goback' ) . "'>");
 	}
 
 	/**
