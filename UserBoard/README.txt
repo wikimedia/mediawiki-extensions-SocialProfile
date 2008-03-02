@@ -1,14 +1,18 @@
 Requirements
 =======================
 
-Mediawiki 1.10
+Mediawiki 1.11
 YUI
 UserStats package
 
 Installation
 =======================
 
-This assumes you have copied all the neccessary files into /extensions/UserBoard.
+This assumes you have copied all the neccessary files into
+/extensions/SocialProfile/UserBoard.
+
+If you are installing all extensions part of SocialProfile, there is no
+need to follow the instructions below.
 
 Please change any path references if you have installed the foler elsewhere
 
@@ -33,4 +37,4 @@ $wgAutoloadClasses["UserStats"] = "$IP/extensions/SocialProfile/UserStats/UserSt
 add the following line (changing path as neccessary)
 
 global $IP;
-Require_once ("$IP/extensions/SocialProfile/UserBoard/UserBoard_AjaxFunctions.php" );
+require_once ("$IP/extensions/SocialProfile/UserBoard/UserBoard_AjaxFunctions.php" );

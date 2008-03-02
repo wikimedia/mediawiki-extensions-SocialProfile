@@ -1,7 +1,7 @@
 Requirements
 =======================
 
-Mediawiki 1.10
+Mediawiki 1.11
 YUI
 UserStats Package
 
@@ -9,6 +9,9 @@ Installation
 =======================
 
 This assumes you have copied all the neccessary files into /extensions/UserRelationship.
+
+If you are installing all extensions part of SocialProfile, there is no
+need to follow the instructions below.
 
 Please change any path references if you have installed the foler elsewhere
 
