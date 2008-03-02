@@ -63,9 +63,9 @@ class UserStatsTrack{
 	}
 
 	function initStatsTrack(){
-		global $wgDbPrefix;
+		global $wgDBprefix;
 		$dbr =& wfGetDB( DB_SLAVE );
-		$s = $dbr->selectRow( $wgDbPrefix.'`user_stats`', array( 'stats_user_id' ), array('stats_user_id'=>$this->user_id ), __METHOD__ );
+		$s = $dbr->selectRow( 'user_stats', array( 'stats_user_id' ), array('stats_user_id'=>$this->user_id ), __METHOD__ );
 
 		if ( $s === false ) {
 			$this->addStatRecord();
@@ -73,10 +73,10 @@ class UserStatsTrack{
 	}
 
 	function addStatRecord(){
-		global $wgDbPrefix;
+		global $wgDBprefix;
 		$dbr =& wfGetDB( DB_MASTER );
-		$fname = $wgDbPrefix.'user_stats::addToDatabase';
-		$dbr->insert( '`user_stats`',
+		$fname = $wgDBprefix.'user_stats::addToDatabase';
+		$dbr->insert( 'user_stats',
 
 		array(
 			'stats_year_id' => 0,
@@ -97,10 +97,10 @@ class UserStatsTrack{
 	}
 
 	function incStatField( $field, $val=1 ){
-		global $wgUser, $IP, $wgDbPrefix, $wgMemc, $wgSitename,$wgSystemGifts, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgUserStatsPointValues;
+		global $wgUser, $IP, $wgDBprefix, $wgMemc, $wgSitename,$wgSystemGifts, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgUserStatsPointValues;
 		if( !$wgUser->isBot() && !$wgUser->isAnon() && $this->stats_fields[$field]) {
 			$dbw = wfGetDB( DB_MASTER );
-			$dbw->update( $wgDbPrefix.'user_stats',
+			$dbw->update( 'user_stats',
 				array( $this->stats_fields[$field]."=".$this->stats_fields[$field]."+{$val}" ),
 				array( 'stats_user_id' => $this->user_id  ),
 				__METHOD__ );
@@ -117,10 +117,10 @@ class UserStatsTrack{
 	}
 
 	function decStatField($field,$val=1){
-		global $wgUser, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgDbPrefix;
+		global $wgUser, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgDBprefix;
 		if(  !$wgUser->isBot() && !$wgUser->isAnon() && $this->stats_fields[$field]) {
 			$dbw = wfGetDB( DB_MASTER );
-			$dbw->update( $wgDbPrefix.'user_stats',
+			$dbw->update( 'user_stats',
 				array( $this->stats_fields[$field]."=".$this->stats_fields[$field]."-{$val}" ),
 				array( 'stats_user_id' => $this->user_id  ),
 				__METHOD__ );
@@ -136,10 +136,10 @@ class UserStatsTrack{
 	}
 
 	function updateCommentCount(){
-		global $wgUser, $wgDbPrefix;
+		global $wgUser, $wgDBprefix;
 		if( !$wgUser->isAnon() ) {
 			$dbr = wfGetDB( DB_MASTER );
-			$sql = "update ".$wgDbPrefix."user_stats set ";
+			$sql = "update ".$wgDBprefix."user_stats set ";
 			$sql .= 'stats_comment_count=';
 			$sql .= "(SELECT COUNT(*) as CommentCount FROM Comments WHERE  Comment_user_id = " . $this->user_id;
 			$sql .= ")";
@@ -151,10 +151,10 @@ class UserStatsTrack{
 	}
 
 	function updateCommentIgnored(){
-		global $wgUser, $wgDbPrefix;
+		global $wgUser, $wgDBprefix;
 		if( !$wgUser->isAnon() ) {
 			$dbr = wfGetDB( DB_MASTER );
-			$sql = "update ".$wgDbPrefix."user_stats set ";
+			$sql = "update ".$wgDBprefix."user_stats set ";
 			$sql .= 'stats_comment_blocked=';
 			$sql .= "(SELECT COUNT(*) as CommentCount FROM Comments_block WHERE  cb_user_id_blocked = " . $this->user_id;
 			$sql .= ")";
@@ -166,10 +166,10 @@ class UserStatsTrack{
 	}
 
 	function updateEditCount(){
-		global $wgUser, $wgDbPrefix;
+		global $wgUser, $wgDBprefix;
 		if( !$wgUser->isAnon() ) {
 			$dbr = wfGetDB( DB_MASTER );
-			$sql = "update ".$wgDbPrefix."user_stats set ";
+			$sql = "update ".$wgDBprefix."user_stats set ";
 			$sql  .= 'stats_edit_count=';
 			$sql .= "(SELECT count(*) as EditsCount FROM {$dbr->tableName( 'revision' )} WHERE rev_user = {$this->user_id} ";
 			$sql .=	 ")";
@@ -181,10 +181,10 @@ class UserStatsTrack{
 	}
 
 	function updateVoteCount(){
-		global $wgUser, $wgDbPrefix;
+		global $wgUser, $wgDBprefix;
 		if( !$wgUser->isAnon() ) {
 			$dbr = wfGetDB( DB_MASTER );
-			$sql = "update ".$wgDbPrefix."user_stats set ";
+			$sql = "update ".$wgDBprefix."user_stats set ";
 			$sql  .= 'stats_vote_count=';
 			$sql .= "(SELECT count(*) as VoteCount FROM Vote WHERE vote_user_id = {$this->user_id} ";
 			$sql .= ")";
@@ -196,10 +196,10 @@ class UserStatsTrack{
 	}
 
 	function updateCommentScoreRec($vote_type){
-		global $wgUser, $wgDbPrefix;
+		global $wgUser, $wgDBprefix;
 		if( $this->user_id != 0 ) {
 			$dbr = wfGetDB( DB_MASTER );
-			$sql = "update ".$wgDbPrefix."user_stats set ";
+			$sql = "update ".$wgDBprefix."user_stats set ";
 			if($vote_type==1){
 				$sql  .= 'stats_comment_score_positive_rec=';
 			}else{
@@ -215,14 +215,14 @@ class UserStatsTrack{
 	}
 
 	function updateCreatedOpinionsCount(){
-		global $wgUser, $wgOut, $wgDbPrefix;
+		global $wgUser, $wgOut, $wgDBprefix;
 		if( !$wgUser->isAnon() && $this->user_id) {
 			$ctg = "Opinions by User " .  ($this->user_name) ;
 			$parser = new Parser();
 			$CtgTitle = Title::newFromText( $parser->transformMsg(trim($ctg), $wgOut->parserOptions() ) );
 			$CtgTitle = $CtgTitle->getDbKey();
 			$dbr = wfGetDB( DB_MASTER );
-			$sql = "update ".$wgDbPrefix."user_stats set stats_opinions_created=";
+			$sql = "update ".$wgDBprefix."user_stats set stats_opinions_created=";
 			$sql .= "(SELECT count(*) as CreatedOpinions FROM {$dbr->tableName( 'page' )} INNER JOIN {$dbr->tableName( 'categorylinks' )} ON page_id = cl_from WHERE  (cl_to) = " . $dbr->addQuotes($CtgTitle) . " ";
 			$sql .= ")";
 			$sql .= " WHERE stats_user_id = " . $this->user_id ;
@@ -234,13 +234,13 @@ class UserStatsTrack{
 	}
 
 	function updatePublishedOpinionsCount(){
-		global $wgUser, $wgOut, $wgDbPrefix;
+		global $wgUser, $wgOut, $wgDBprefix;
 		$parser = new Parser();
 		$dbr =& wfGetDB( DB_MASTER );
 		$ctg = "Opinions by User " . ($this->user_name) ;
 		$CtgTitle = Title::newFromText( $parser->transformMsg(trim($ctg), $wgOut->parserOptions()) );
 		$CtgTitle = $CtgTitle->getDbKey();
-		$sql = "update ".$wgDbPrefix."user_stats set stats_opinions_published = ";
+		$sql = "update ".$wgDBprefix."user_stats set stats_opinions_published = ";
 		$sql .= "(SELECT count(*) as PromotedOpinions FROM {$dbr->tableName( 'page' )} INNER JOIN {$dbr->tableName( 'categorylinks' )} ON page_id = cl_from INNER JOIN published_page ON page_id=published_page_id WHERE  (cl_to) = " . $dbr->addQuotes($CtgTitle) . " AND published_type=1 " . " " . $timeSQL;
 		$sql .= ")";
 		$sql .= " WHERE stats_user_id = " . $this->user_id ;
@@ -250,7 +250,7 @@ class UserStatsTrack{
 	}
 
 	function updateRelationshipCount($rel_type){
-		global $wgUser, $wgDbPrefix;
+		global $wgUser, $wgDBprefix;
 		if( !$wgUser->isAnon() ) {
 			$dbr = wfGetDB( DB_MASTER );
 			if($rel_type==1){
@@ -258,7 +258,7 @@ class UserStatsTrack{
 			}else{
 				$col="stats_foe_count";
 			} //Where is low_priority? where was this table created? 
-			$sql = "update low_priority ".$wgDbPrefix."user_stats set {$col}=
+			$sql = "update low_priority ".$wgDBprefix."user_stats set {$col}=
 					(SELECT COUNT(*) as rel_count FROM user_relationship WHERE
 						r_user_id = {$this->user_id} AND r_type={$rel_type}
 						)
@@ -268,10 +268,10 @@ class UserStatsTrack{
 	}
 
 	function updateGiftCountRec(){
-		global $wgUser,$wgStatsStartTimestamp, $wgDbPrefix;
+		global $wgUser,$wgStatsStartTimestamp, $wgDBprefix;
 		if( !$wgUser->isAnon() ) {
 			$dbr = wfGetDB( DB_MASTER );
-			$sql = "update low_priority ".$wgDbPrefix."user_stats set stats_gifts_rec_count=
+			$sql = "update low_priority ".$wgDBprefix."user_stats set stats_gifts_rec_count=
 					(SELECT COUNT(*) as gift_count FROM user_gift WHERE
 						ug_user_id_to = {$this->user_id}
 						)
@@ -282,10 +282,10 @@ class UserStatsTrack{
 	}
 
 	function updateGiftCountSent(){
-		global $wgUser, $wgDbPrefix;
+		global $wgUser, $wgDBprefix;
 		if( !$wgUser->isAnon() ) {
 			$dbr = wfGetDB( DB_MASTER );
-			$sql = "update low_priority ".$wgDbPrefix."user_stats set stats_gifts_sent_count=
+			$sql = "update low_priority ".$wgDBprefix."user_stats set stats_gifts_sent_count=
 					(SELECT COUNT(*) as gift_count FROM user_gift WHERE
 						ug_user_id_from = {$this->user_id}
 						)
@@ -296,10 +296,10 @@ class UserStatsTrack{
 	}
 
 	public function updateReferralComplete(){
-		global $wgUser,$wgStatsStartTimestamp, $wgDbPrefix;
+		global $wgUser,$wgStatsStartTimestamp, $wgDBprefix;
 		if( !$wgUser->isAnon() ) {
 			$dbr = wfGetDB( DB_MASTER );
-			$sql = "update low_priority ".$wgDbPrefix."user_stats set stats_referrals_completed=
+			$sql = "update low_priority ".$wgDBprefix."user_stats set stats_referrals_completed=
 					(SELECT COUNT(*) as thecount FROM user_register_track WHERE
 						ur_user_id_referral = {$this->user_id} and ur_user_name_referral<>'DNL'
 						)
@@ -362,13 +362,13 @@ class UserStatsTrack{
 	}
 
 	public function updateTotalPoints(){
-		global $wgEnableFacebook, $wgUserLevels, $wgDbPrefix;
+		global $wgEnableFacebook, $wgUserLevels, $wgDBprefix;
 
 		if( $this->user_id == 0 )return "";
 
 		$dbr =& wfGetDB( DB_MASTER );
 		$sql = "SELECT *
-			FROM ".$wgDbPrefix."user_stats where stats_user_id =  " . $this->user_id ;
+			FROM ".$wgDBprefix."user_stats where stats_user_id =  " . $this->user_id ;
 		$res = $dbr->query($sql);
 		$row = $dbr->fetchObject( $res );
 		if($row){
@@ -446,12 +446,12 @@ class UserStats{
 	}
 
 	public function getUserStatsDB(){
-		global $wgMemc, $wgDbPrefix;
+		global $wgMemc, $wgDBprefix;
 
 		wfDebug( "Got user stats  for {$this->user_name} from db\n" );
 		$dbr =& wfGetDB( DB_MASTER );
 		$sql = "SELECT *
-			FROM ".$wgDbPrefix."user_stats
+			FROM ".$wgDBprefix."user_stats
 			WHERE stats_user_id = {$this->user_id} LIMIT 0,1";
 		$res = $dbr->query($sql);
 		$row = $dbr->fetchObject( $res );
