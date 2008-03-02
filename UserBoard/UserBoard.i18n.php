@@ -65,11 +65,12 @@ and change your settings to disable email notifications.'
 
 /** Bulgarian (Български)
  * @author DCLXVI
+ * @author Borislav
  */
 $messages['bg'] = array(
 	'userboard_backprofile'     => 'Връщане към профила на $1',
 	'userboard_nomessages'      => 'Няма съобщения.',
-	'userboard_showingmessages' => 'Показване на $2-$3 от {{PLURAL:$1|$1 съобщение|$1 съобщения}}',
+	'userboard_showingmessages' => 'Показване на $2–$3 от {{PLURAL:$1|$1 съобщение|$1 съобщения}}',
 );
 
 /** French (Français)
@@ -276,3 +277,4 @@ $messages['vi'] = array(
 	'userboard_nomessages' => 'Không có tin nhắn.',
 	'userboard_sendbutton' => 'gửi',
 );
+

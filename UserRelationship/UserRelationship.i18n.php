@@ -175,7 +175,7 @@ $messages['fr'] = array(
 	'ur-remove-error-message-no-relationship'    => "Vous n'avez aucune relation avec $1.",
 	'ur-remove-error-message-remove-yourself'    => 'Vous ne pouvez pas vous supprimer vous-même.',
 	'ur-remove-error-message-pending-request'    => 'Vous avez une requête de $1 en cours avec $2.',
-	'ur-remove-error-not-loggedin'               => 'Vous devez être connecté pour supprimer un $1.',
+	'ur-remove-error-not-loggedin'               => 'Vous devez être en session pour supprimer un $1.',
 	'ur-remove'                                  => 'Enlever',
 	'ur-cancel'                                  => 'Annuler',
 	'ur-login'                                   => 'Connexion',
@@ -310,6 +310,7 @@ $messages['km'] = array(
 
 /** Dutch (Nederlands)
  * @author Siebrand
+ * @author SPQRobin
  */
 $messages['nl'] = array(
 	'viewrelationships'                          => 'Relaties bekijken',
@@ -332,13 +333,13 @@ $messages['nl'] = array(
 	'ur-add-button'                              => 'Als $1 toevoegen',
 	'ur-add-error-message-pending-request-title' => 'Even geduld alstublieft.',
 	'ur-requests-message'                        => '<a href="$1">$2</a> wil uw $3 zijn.',
-	'ur-accept'                                  => 'Accepteren',
+	'ur-accept'                                  => 'Aanvaarden',
 	'ur-reject'                                  => 'Weigeren',
 	'ur-requests-reject-message'                 => 'U hebt $1 geweigerd als $2.',
 	'friend_request_subject'                     => '$1 heeft u als vriend toegevoegd op {{SITENAME}}.',
 	'foe_request_subject'                        => '$1 heeft u toegevoegd als tegenstander op {{SITENAME}}!',
-	'friend_accept_subject'                      => '$1 heeft uw verzoek om vrienden te worden op {{SITENAME}} geaccepteerd.',
-	'foe_accept_subject'                         => '$1 heeft u als tegenstander geaccepteerd op {{SITENAME}}.',
+	'friend_accept_subject'                      => '$1 heeft uw verzoek om vrienden te worden op {{SITENAME}} aanvaard.',
+	'foe_accept_subject'                         => '$1 heeft u als tegenstander aanvaard op {{SITENAME}}.',
 	'friend_removed_subject'                     => '$1 heeft u helaas verwijderd als vriend op {{SITENAME}}!',
 	'foe_removed_subject'                        => '$1 heeft u verwijderd als tegenstander op {{SITENAME}}!',
 );
@@ -493,3 +494,4 @@ $messages['te'] = array(
 	'ur-friend' => 'స్నేహితులు',
 	'ur-foe'    => 'శత్రువు',
 );
+
