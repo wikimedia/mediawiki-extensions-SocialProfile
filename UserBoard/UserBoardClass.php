@@ -17,14 +17,14 @@ class UserBoard {
 	}
 
 	public function sendBoardMessage($user_id_from,$user_name_from,$user_id_to,$user_name_to, $message, $message_type=0){
-		global $IP;
+		global $IP, $wgDBprefix;
 		$dbr =& wfGetDB( DB_MASTER );
-		$fname = 'user_board::addToDatabase';
+		$fname = $wgDBprefix.'user_board::addToDatabase';
 
 		$user_name_from = stripslashes($user_name_from);
 		$user_name_to = stripslashes($user_name_to);
 
-		$dbr->insert( '`user_board`',
+		$dbr->insert( $wgDBprefix.'`user_board`',
 		array(
 			'ub_user_id_from' => $user_id_from,
 			'ub_user_name_from' => $user_name_from,
@@ -166,7 +166,7 @@ class UserBoard {
 	}
 
 	public function getUserBoardMessages($user_id,$user_id_2=0,$limit=0,$page=0){
-		global $wgUser, $wgOut, $wgTitle;
+		global $wgUser, $wgOut, $wgTitle, $wgDBprefix;
 		$dbr =& wfGetDB( DB_SLAVE );
 
 		if($limit>0){
@@ -194,7 +194,7 @@ class UserBoard {
 
 		$sql = "SELECT ub_id, ub_user_id_from, ub_user_name_from, ub_user_id, ub_user_name,
 			ub_message,UNIX_TIMESTAMP(ub_date) as unix_time,ub_type
-			FROM user_board
+			FROM ".$wgDBprefix."user_board
 			WHERE {$user_sql}
 			ORDER BY ub_id DESC
 			{$limit_sql}";
@@ -217,7 +217,7 @@ class UserBoard {
 	}
 
 	public function getUserBoardToBoardCount($user_id,$user_id_2){
-		global $wgOut, $wgUser, $wgTitle;
+		global $wgOut, $wgUser, $wgTitle, $wgDBprefix;
 		$dbr =& wfGetDB( DB_SLAVE );
 
 		$user_sql = " ( (ub_user_id={$user_id} and ub_user_id_from={$user_id_2}) OR
@@ -228,7 +228,7 @@ class UserBoard {
 				$user_sql .= " and ub_type = 0 ";
 		}
 		$sql = "SELECT count(*) as the_count
-			FROM user_board
+			FROM ".$wgDBprefix."user_board
 			WHERE {$user_sql}
 			";
 

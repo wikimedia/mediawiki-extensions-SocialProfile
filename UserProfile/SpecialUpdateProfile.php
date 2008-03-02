@@ -16,13 +16,13 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	function initProfile(){
-		global $wgUser;
+		global $wgUser, $wgDBprefix;
 		$dbr =& wfGetDB( DB_MASTER );
 		$s = $dbr->selectRow( 'user_profile', array( 'up_user_id' ), array( 'up_user_id' => $wgUser->getID() ), $fname );
 		if ( $s === false ) {
-			$fname = 'user_profile::addToDatabase';
+			$fname = $wgDBprefix.'user_profile::addToDatabase';
 			$dbw =& wfGetDB( DB_MASTER );
-			$dbw->insert( '`user_profile`',
+			$dbw->insert( 'user_profile',
 				array(
 					'up_user_id' => $wgUser->getID()
 				), $fname
@@ -132,7 +132,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$wgUser->setOption( 'notifyhonorifics', $notify_honorifics );
 		$wgUser->setOption( 'notifymessage', $notify_message );
 		$wgUser->saveSettings();
-
+// This code is mostly relative to ArmchairGM, however can be fixed to be used for others.. (maybe try and get code from ArmchairGM)
 		if($wgSitename=="ArmchairGM"){
 			$dbr =& wfGetDB( DB_MASTER );
 			if($wgRequest->getVal("weeklyemail")==1){
@@ -175,11 +175,11 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	function saveProfileBasic(){
-		global $wgUser, $wgMemc, $wgRequest, $wgSitename;
+		global $wgUser, $wgMemc, $wgRequest, $wgSitename, $wgDBprefix;
 
 		$this->initProfile();
 		$dbw =& wfGetDB( DB_MASTER );
-			$dbw->update( '`user_profile`',
+			$dbw->update('user_profile',
 			array( /* SET */
 				'up_location_city' => $wgRequest->getVal("location_city"),
 				'up_location_state' => $wgRequest->getVal("location_state"),
@@ -200,7 +200,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 				'up_user_id' => $wgUser->getID()
 			), ""
 			);
-
+// Relevant to wikia blackbird.
 		if($wgSitename == "Wikia Blackbird"){
 			$enroll = $wgRequest->getVal("enroll");
 			if($enroll=="")$enroll = 0;
@@ -211,11 +211,11 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	function saveProfileCustom(){
-		global $wgUser, $wgMemc, $wgRequest;
+		global $wgUser, $wgMemc, $wgRequest, $wgDBprefix;
 
 		$this->initProfile();
 		$dbw =& wfGetDB( DB_MASTER );
-			$dbw->update( '`user_profile`',
+			$dbw->update( 'user_profile',
 			array( /* SET */
 				'up_custom_1' => $wgRequest->getVal("custom1"),
 				'up_custom_2' => $wgRequest->getVal("custom2"),
@@ -230,11 +230,11 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	function saveProfilePersonal(){
-		global $wgUser, $wgMemc, $wgRequest;
+		global $wgUser, $wgMemc, $wgRequest, $wgDBprefix;
 
 		$this->initProfile();
 		$dbw =& wfGetDB( DB_MASTER );
-			$dbw->update( '`user_profile`',
+			$dbw->update( 'user_profile',
 			array( /* SET */
 
 				'up_companies' => $wgRequest->getVal("companies"),
@@ -254,10 +254,10 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	function displayBasicForm(){
-		global $wgRequest, $wgSiteView, $wgUser;
+		global $wgRequest, $wgSiteView, $wgUser, $wgDBprefix;
 
 		$dbr =& wfGetDB( DB_MASTER );
-		$s = $dbr->selectRow( '`user_profile`',
+		$s = $dbr->selectRow( 'user_profile',
 			array(
 				'up_location_city', 'up_location_state', 'up_location_country',
 				'up_hometown_city', 'up_hometown_state', 'up_hometown_country',
@@ -284,7 +284,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		if(!$location_country)$location_country = wfMsgForContent( 'user-profile-default-country' );
 		if(!$hometown_country)$hometown_country = wfMsgForContent( 'user-profile-default-country' );
-
+// where is table 'user' ???
 		$s = $dbr->selectRow( 'user',
 			array(
 				'user_real_name', 'user_email', 'user_email_authenticated'
@@ -442,10 +442,10 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	function displayPersonalForm(){
-		global $wgRequest, $wgSiteView, $wgUser, $wgOut;
+		global $wgRequest, $wgSiteView, $wgUser, $wgOut, $wgDBprefix;
 
 		$dbr =& wfGetDB( DB_MASTER );
-		$s = $dbr->selectRow( '`user_profile`',
+		$s = $dbr->selectRow( 'user_profile',
 			array(
 				'up_about', 'up_places_lived', 'up_websites','up_relationship',
 				'up_occupation', 'up_companies', 'up_schools','up_movies','up_tv', 'up_music',
@@ -555,10 +555,10 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	function displayCustomForm(){
-		global $wgRequest, $wgSiteView, $wgUser, $wgOut;
+		global $wgRequest, $wgSiteView, $wgUser, $wgOut, $wgDBprefix;
 
 		$dbr =& wfGetDB( DB_MASTER );
-		$s = $dbr->selectRow( '`user_profile`',
+		$s = $dbr->selectRow( 'user_profile',
 			array(
 				'up_custom_1', 'up_custom_2','up_custom_3', 'up_custom_4','up_custom_5'
 			),

@@ -17,7 +17,7 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 	}
 
 	function execute( $params ) {
-		global $wgRequest, $IP, $wgOut, $wgUser, $wgMemc;
+		global $wgRequest, $IP, $wgOut, $wgUser, $wgMemc, $wgDBprefix;
 
 		if( !$wgUser->isLoggedIn() ){
 			$wgOut->errorpage('error', 'badaccess');
@@ -27,9 +27,9 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 		$dbr =& wfGetDB( DB_MASTER );
 		$s = $dbr->selectRow( 'user_profile', array( 'up_user_id' ), array( 'up_user_id' => $wgUser->getID() ), $fname );
 		if ( $s === false ) {
-			$fname = 'user_profile::addToDatabase';
+			$fname = $wgDBprefix.'user_profile::addToDatabase';
 			$dbw =& wfGetDB( DB_MASTER );
-			$dbw->insert( '`user_profile`',
+			$dbw->insert( 'user_profile',
 				array(
 					'up_user_id' => $wgUser->getID()
 				), $fname
@@ -42,7 +42,7 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 		$user_page_type = (( $profile_data["user_page_type"] == 1 )?0:1);
 
 		$dbw =& wfGetDB( DB_MASTER );
-		$dbw->update( '`user_profile`',
+		$dbw->update( 'user_profile',
 			array( /* SET */
 			'up_type' => $user_page_type
 			), array( /* WHERE */

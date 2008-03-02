@@ -6,7 +6,7 @@
  * @subpackage Article
  *
  * @author David Pean <david.pean@gmail.com>
- * @copyright Copyright © 2007, Wikia Inc.
+ * @copyright Copyright  2007, Wikia Inc.
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
@@ -16,7 +16,7 @@ class UserProfilePage extends Article{
 
 	function __construct (&$title){
 		global $wgUser;
-		parent::__construct(&$title);
+		parent::__construct($title);
 		$this->user_name = $title->getText();
 		$this->user_id = User::idFromName($this->user_name);
 		$this->user = User::newFromId($this->user_id);
