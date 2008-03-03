@@ -39,6 +39,73 @@ $wgUserProfileDisplay['board'] = true;
 $wgUserProfileDisplay['foes'] = true;
 $wgUserProfileDisplay['friends'] = true;
 
+$wgExtensionCredits['other'][] = array(
+        'name' => 'WikiaUserProfile',
+        'author' => 'Wikia, Inc. (Aaron Wright, David Pean)',
+        'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile',
+        'description' => 'A set of Social Tools for MediaWiki',
+);
+$wgExtensionCredits['specialpage'][] = array(
+        'name' => 'AvatarUpload',
+        'author' => 'David Pean',
+        'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile',
+        'description' => 'A special page for uploading Avatars',
+);
+$wgExtensionCredits['specialpage'][] = array(
+        'name' => 'PopulateExistingUsersProfiles',
+        'author' => 'David Pean',
+        'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile',
+        'description' => 'A special page for initializing social profiles for existing wikis',
+);
+$wgExtensionCredits['specialpage'][] = array(
+        'name' => 'ToggleUserPage',
+        'author' => 'David Pean',
+        'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile',
+        'description' => 'A special page for updating a user\'s userpage preference',
+);
+$wgExtensionCredits['specialpage'][] = array(
+        'name' => 'UpdateProfile',
+        'author' => 'David Pean',
+        'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile',
+        'description' => 'A special page to allow users to update their social profile',
+);
+$wgExtensionCredits['specialpage'][] = array(
+        'name' => 'SendBoardBlast',
+        'author' => 'David Pean',
+        'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile',
+        'description' => ' A special page to allow users to send a mass board message by selecting from a list of their friends and foes',
+);
+$wgExtensionCredits['specialpage'][] = array(
+        'name' => 'UserBoard',
+        'author' => 'David Pean',
+        'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile',
+        'description' => 'Display User Board messages for a user',
+);
+$wgExtensionCredits['specialpage'][] = array(
+        'name' => 'AddRelationship',
+        'author' => 'David Pean',
+        'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile',
+        'description' => 'A special page for adding friends/foe requests for existing users in the wiki',
+);
+$wgExtensionCredits['specialpage'][] = array(
+        'name' => 'RemoveRelationship',
+        'author' => 'David Pean',
+        'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile',
+        'description' => 'A special page for removing existing friends/foes for the current logged in user',
+);
+$wgExtensionCredits['specialpage'][] = array(
+        'name' => 'ViewRelationshipRequests',
+        'author' => 'David Pean',
+        'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile',
+        'description' => 'A special page for viewing open relationship requests for the current logged in user',
+);
+$wgExtensionCredits['specialpage'][] = array(
+        'name' => 'ViewRelationships',
+        'author' => 'David Pean',
+        'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile',
+        'description' => 'A special page for viewing all relationships by type',
+);
+
 $wgUserProfileDirectory = "$IP/extensions/SocialProfile/UserProfile";
 
 $wgUserBoardScripts = "/extensions/SocialProfile/UserBoard";
