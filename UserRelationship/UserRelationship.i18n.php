@@ -151,19 +151,32 @@ and change your settings to disable email notifications.',
  * @author DCLXVI
  */
 $messages['bg'] = array(
-	'ur-error-message-no-user' => 'Заявката не може да бъде изпълнена, тъй като не съществува потребител с това име.',
-	'ur-main-page'             => 'Начална страница',
-	'ur-your-profile'          => 'Моят профил',
-	'ur-backlink'              => '&lt; Обратно към профила на $1',
-	'ur-relationship-count'    => '$1 има $2 {{PLURAL:$2|$3|$3и}}.',
-	'ur-add-friend'            => 'Добавяне в приятели',
-	'ur-add-foe'               => 'Добавяне в неприятели',
-	'ur-give-gift'             => 'Подаряване на подарък',
-	'ur-remove'                => 'Премахване',
-	'ur-cancel'                => 'Отказване',
-	'ur-login'                 => 'Влизане',
-	'ur-accept'                => 'Приемане',
-	'ur-reject'                => 'Отказване',
+	'ur-error-message-no-user'                   => 'Заявката не може да бъде изпълнена, тъй като не съществува потребител с това име.',
+	'ur-main-page'                               => 'Начална страница',
+	'ur-your-profile'                            => 'Моят профил',
+	'ur-backlink'                                => '&lt; Обратно към профила на $1',
+	'ur-friend'                                  => 'приятел',
+	'ur-foe'                                     => 'неприятел',
+	'ur-relationship-count'                      => '$1 има $2 {{PLURAL:$2|$3|$3и}}.',
+	'ur-add-friends'                             => '  Искате повече приятели? <a href="$1">Поканете ги!</a>',
+	'ur-add-friend'                              => 'Добавяне в приятели',
+	'ur-add-foe'                                 => 'Добавяне в неприятели',
+	'ur-remove-relationship'                     => 'Премахване от $1и',
+	'ur-give-gift'                               => 'Подаряване на подарък',
+	'ur-previous'                                => 'предишни',
+	'ur-next'                                    => 'следващи',
+	'ur-remove-relationship-title'               => 'Необходимо е потвърждение за премахване на $1 от групата на $2ите.',
+	'ur-remove-relationship-title-confirm'       => 'Премахнахте $1 от групата на вашите $2и',
+	'ur-remove'                                  => 'Премахване',
+	'ur-cancel'                                  => 'Отказване',
+	'ur-login'                                   => 'Влизане',
+	'ur-add-title'                               => 'Необходимо е потвърждение за добавяне на $1 като ваш $2.',
+	'ur-add-button'                              => 'Добавяне като $1',
+	'ur-add-error-message-no-user'               => 'Потребителят, който се опитвате да добавите, не съществува.',
+	'ur-add-error-message-existing-relationship' => 'Вече сте $1 с $2.',
+	'ur-accept'                                  => 'Приемане',
+	'ur-reject'                                  => 'Отказване',
+	'ur-requests-reject-message'                 => 'Отказахте на $1 да бъде ваш $2.',
 );
 
 /** French (Français)
@@ -333,6 +346,30 @@ $messages['km'] = array(
 	'ur-accept'                                  => 'ព្រមទទួល',
 	'ur-reject'                                  => 'ទាត់ចោល',
 	'friend_request_subject'                     => '$1 បានបន្ថែមអ្នក ជា មិត្តភក្តិ លើ {{SITENAME}}!',
+);
+
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
+$messages['lb'] = array(
+	'ur-main-page'                               => 'Haaptsäit',
+	'ur-friend'                                  => 'Frënd',
+	'ur-foe'                                     => 'Géigner',
+	'ur-previous'                                => 'vireg',
+	'ur-next'                                    => 'nächst',
+	'ur-remove'                                  => 'Ewechhuelen',
+	'ur-cancel'                                  => 'Annulléieren',
+	'ur-add-error-message-pending-request-title' => 'Gedold!',
+);
+
+/** Marathi (मराठी)
+ * @author Mahitgar
+ */
+$messages['mr'] = array(
+	'ur-foe'        => 'शत्रू',
+	'ur-previous'   => 'मागचा',
+	'ur-next'       => 'पुढचा',
+	'ur-friendship' => 'मैत्री',
 );
 
 /** Dutch (Nederlands)
@@ -804,14 +841,20 @@ $messages['sv'] = array(
  * @author Veeven
  */
 $messages['te'] = array(
-	'ur-friend'                               => 'స్నేహితులు',
-	'ur-foe'                                  => 'శత్రువు',
-	'ur-remove-error-message-remove-yourself' => 'మిమ్మల్ని మీరే తొలగించుకోలేరు.',
-	'ur-remove'                               => 'తొలగించు',
-	'ur-friendship'                           => 'స్నేహం',
-	'ur-grudge'                               => 'పగ',
-	'ur-add-error-message-no-user'            => 'మీరు చేర్చాలని ప్రయత్నిస్తున్న వాడుకరి లేనే లేరు.',
-	'ur-accept'                               => 'అంగీకరించు',
-	'ur-reject'                               => 'తిరస్కరించు',
+	'ur-friend'                                  => 'స్నేహితులు',
+	'ur-foe'                                     => 'శత్రువు',
+	'ur-add-friend'                              => 'స్నేహితునిగా చేర్చు',
+	'ur-add-foe'                                 => 'శత్రువుగా చేర్చు',
+	'ur-previous'                                => 'క్రితం',
+	'ur-next'                                    => 'తర్వాతి',
+	'ur-remove-error-message-remove-yourself'    => 'మిమ్మల్ని మీరే తొలగించుకోలేరు.',
+	'ur-remove'                                  => 'తొలగించు',
+	'ur-login'                                   => 'ప్రవేశించు',
+	'ur-friendship'                              => 'స్నేహం',
+	'ur-grudge'                                  => 'పగ',
+	'ur-add-error-message-no-user'               => 'మీరు చేర్చాలని ప్రయత్నిస్తున్న వాడుకరి లేనే లేరు.',
+	'ur-add-error-message-pending-request-title' => 'ఓపిక!',
+	'ur-accept'                                  => 'అంగీకరించు',
+	'ur-reject'                                  => 'తిరస్కరించు',
 );
 

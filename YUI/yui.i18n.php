@@ -17,3 +17,10 @@ $messages['fr'] = array(
 	'yui-desc' => 'Une série d’utilitaires et de contrôles, écrite en Javascript',
 );
 
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'yui-desc' => 'Een verzameling hulpmiddelen en besturingselementen in JavaScript',
+);
+

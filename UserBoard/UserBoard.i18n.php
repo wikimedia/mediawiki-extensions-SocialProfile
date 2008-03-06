@@ -82,7 +82,11 @@ $messages['bg'] = array(
 	'userboard_delete'          => 'Изтриване',
 	'userboard_private'         => 'лично',
 	'userboard_public'          => 'публично',
+	'userboard_messagetype'     => 'Тип съобщение',
+	'userboard_nextpage'        => 'следващи',
+	'userboard_prevpage'        => 'предишни',
 	'userboard_nomessages'      => 'Няма съобщения.',
+	'userboard_sendbutton'      => 'изпращане',
 	'userboard_loggedout'       => 'За изпращане на съобщения до другите потребители е необходимо <a href="$1">влизане</a> в системата.',
 	'userboard_showingmessages' => 'Показване на $2–$3 от {{PLURAL:$1|$1 съобщение|$1 съобщения}}',
 );
@@ -204,6 +208,35 @@ Hé ! Voulez-vous arrêter d’obtenir, de nous, les courriels ?
 
 Cliquer $4
 et modifiez vos paramètres pour désactiver les notifications des courriels.",
+);
+
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
+$messages['lb'] = array(
+	'messagesenttitle'        => 'Geschéckte Messagen',
+	'boardblaststep1'         => '1. Schrëtt: Schreiwt äre Message',
+	'boardblastprivatenote'   => 'All Message ginn als privat Message verschéckt',
+	'boardblaststep2'         => '2. Schrëtt: Wielt aus wien Dir äre Message schöcke wellt',
+	'boardlinkselectall'      => 'Alles uwielen',
+	'boardlinkselectfriends'  => 'Frënn auswielen',
+	'boardlinkselectfoes'     => 'Géigner auswielen',
+	'boardnofriends'          => 'Dir hutt keng Frënn deenen dir ee Message schécke kënnt!',
+	'userboard'               => 'Benotzertafel',
+	'userboard_noexist'       => 'De Benotzer den Dir wëllt gesi gëtt et net.',
+	'userboard_yourboard'     => 'Är Tafel',
+	'userboard_owner'         => 'Dem $1 seng Tafel',
+	'userboard_confirmdelete' => 'Sidd Dir sécher datt Dir dëse Message läsche wellt?',
+	'userboard_sendmessage'   => 'Dem $1 ee Message schécken',
+	'userboard_delete'        => 'Läschen',
+	'userboard_myboard'       => 'Meng Tafel',
+	'userboard_private'       => 'privat',
+	'userboard_public'        => 'ëffentlech',
+	'userboard_messagetype'   => 'Typ vu Message',
+	'userboard_nextpage'      => 'nächst',
+	'userboard_prevpage'      => 'vireg',
+	'userboard_nomessages'    => 'Keng Messagen',
+	'userboard_sendbutton'    => 'geschéckt',
 );
 
 /** Marathi (मराठी)
@@ -514,15 +547,19 @@ $messages['sv'] = array(
  * @author Veeven
  */
 $messages['te'] = array(
-	'messagesenttitle'      => 'సందేశాలను పంపించాం',
-	'messagesentsuccess'    => 'మీ సందేశాన్ని విజయవంతంగా పంపించాం',
-	'userboard_delete'      => 'తొలగించు',
-	'userboard_private'     => 'అంతరంగికం',
-	'userboard_public'      => 'బహిరంగం',
-	'userboard_messagetype' => 'సందేశపు రకం',
-	'userboard_nextpage'    => 'తర్వాతి',
-	'userboard_nomessages'  => 'సందేశాలు లేవు.',
-	'userboard_sendbutton'  => 'పంపించు',
+	'messagesenttitle'        => 'సందేశాలను పంపించాం',
+	'boardlinkselectall'      => 'అందరినీ ఎంచుకోండి',
+	'boardlinkselectfriends'  => 'స్నేహితులను ఎంచుకోండి',
+	'boardlinkselectfoes'     => 'శత్రువులను ఎంచుకోండి',
+	'messagesentsuccess'      => 'మీ సందేశాన్ని విజయవంతంగా పంపించాం',
+	'userboard_confirmdelete' => 'ఈ సందేశాన్ని మీరు తొలగించాలనుకుంటున్నారా?',
+	'userboard_delete'        => 'తొలగించు',
+	'userboard_private'       => 'అంతరంగికం',
+	'userboard_public'        => 'బహిరంగం',
+	'userboard_messagetype'   => 'సందేశపు రకం',
+	'userboard_nextpage'      => 'తర్వాతి',
+	'userboard_nomessages'    => 'సందేశాలు లేవు.',
+	'userboard_sendbutton'    => 'పంపించు',
 );
 
 /** Vietnamese (Tiếng Việt)
