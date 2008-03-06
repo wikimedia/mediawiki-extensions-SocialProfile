@@ -6,7 +6,11 @@ $wgExtensionCredits['other'][] = array(
         'author' => 'Yahoo! Inc.',
         'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile',
         'description' => 'A set of utilities and controls, written in JavaScript',
+	'descriptionmsg' => 'yui-desc',
 );
+
+$dir = dirname(__FILE__) . '/';
+$wgExtensionMessagesFiles['YUI'] = $dir . 'yui.i18n.php';
 
 function wfYUI() {
 	global $wgOut;
