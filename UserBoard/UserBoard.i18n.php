@@ -63,6 +63,21 @@ Click $4
 and change your settings to disable email notifications.'
 );
 
+/** Arabic (العربية)
+ * @author Alnokta
+ */
+$messages['ar'] = array(
+	'userboard_confirmdelete' => 'أتريد حذف هذه الرسالة حقًا؟',
+	'userboard_delete'        => 'احذف',
+	'userboard_private'       => 'خاص',
+	'userboard_public'        => 'عمومي',
+	'userboard_messagetype'   => 'نوع الرسالة',
+	'userboard_nextpage'      => 'بعد',
+	'userboard_prevpage'      => 'قبل',
+	'userboard_nomessages'    => 'لا رسائل.',
+	'userboard_sendbutton'    => 'ارسل',
+);
+
 /** Bulgarian (Български)
  * @author DCLXVI
  * @author Borislav
@@ -429,6 +444,17 @@ E ! Volètz arrestar d’obténer de corrièrs de nòstra part ?
 
 Clicatz $4
 e modificatz vòstres paramètres per desactivar las notificacions dels corrièrs electronics.",
+);
+
+/** Portuguese (Português)
+ * @author Lijealso
+ */
+$messages['pt'] = array(
+	'messagesenttitle'     => 'Mensagens Enviadas',
+	'userboard_nextpage'   => 'próxima',
+	'userboard_prevpage'   => 'anterior',
+	'userboard_nomessages' => 'Sem mensagens.',
+	'userboard_sendbutton' => 'enviar',
 );
 
 /** Russian (Русский)

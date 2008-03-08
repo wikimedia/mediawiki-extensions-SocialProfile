@@ -147,6 +147,35 @@ Click $4
 and change your settings to disable email notifications.',
 );
 
+/** Arabic (العربية)
+ * @author Alnokta
+ */
+$messages['ar'] = array(
+	'viewrelationships'                          => 'اعرض العلاقة',
+	'viewrelationshiprequests'                   => 'اعرض طلبات العلاقات',
+	'ur-main-page'                               => 'الصفحة الرئيسية',
+	'ur-your-profile'                            => 'ملفك',
+	'ur-friend'                                  => 'صديق',
+	'ur-foe'                                     => 'عدو',
+	'ur-add-friend'                              => 'أضف كصديق',
+	'ur-add-foe'                                 => 'أضف كعدو',
+	'ur-remove-relationship'                     => 'أزل ك&#x200d; $1',
+	'ur-give-gift'                               => 'اعطي هدية',
+	'ur-previous'                                => 'قبل',
+	'ur-next'                                    => 'بعد',
+	'ur-remove-error-message-remove-yourself'    => 'لا يمكن أن تزيل نفسك.',
+	'ur-remove'                                  => 'أزل',
+	'ur-cancel'                                  => 'الغ',
+	'ur-login'                                   => 'لج',
+	'ur-friendship'                              => 'صداقة',
+	'ur-add-button'                              => 'أضف ك&#x200d; $1',
+	'ur-add-error-message-no-user'               => 'المستخدم الذي تحاول أن تضيفه غير موجود.',
+	'ur-add-error-message-pending-request-title' => 'الصبر جميل!',
+	'ur-requests-title'                          => 'طلبات العلاقات',
+	'ur-accept'                                  => 'اقبل',
+	'ur-reject'                                  => 'ارفض',
+);
+
 /** Bulgarian (Български)
  * @author DCLXVI
  */
@@ -369,7 +398,10 @@ $messages['mr'] = array(
 	'ur-foe'        => 'शत्रू',
 	'ur-previous'   => 'मागचा',
 	'ur-next'       => 'पुढचा',
+	'ur-login'      => 'प्रवेश',
 	'ur-friendship' => 'मैत्री',
+	'ur-accept'     => 'स्विकारा',
+	'ur-reject'     => 'अव्हेर',
 );
 
 /** Dutch (Nederlands)
@@ -399,7 +431,7 @@ $messages['nl'] = array(
 	'ur-remove-relationship-message'             => 'U wilt $1 verwijderen als $2. Klik "$3" om te bevestigen.',
 	'ur-remove-relationship-message-confirm'     => 'U hebt $1 als $2 verwijderd.',
 	'ur-remove-error-message-no-relationship'    => 'U hebt geen connectie met $1.',
-	'ur-remove-error-message-remove-yourself'    => 'U kan uzelf niet verwijderen.',
+	'ur-remove-error-message-remove-yourself'    => 'U kunt uzelf niet verwijderen.',
 	'ur-remove-error-message-pending-request'    => 'U hebt een openstaand connectieverzoek als $1 bij $2.',
 	'ur-remove-error-not-loggedin'               => 'U moet aangemeld zijn om een $1 te kunnen verwijderen.',
 	'ur-remove'                                  => 'Verwijderen',
@@ -413,7 +445,7 @@ $messages['nl'] = array(
 	'ur-add-sent-title'                          => 'Uw verzoek voor een connectie als $1 is naar $2 verzonden.',
 	'ur-add-sent-message'                        => 'Uw verzoek voor een connectie als $1 is naar $2 verzonden voor bevestiging. Als $2 uw verzoek bevestigd, ontvangt u daar een e-mail over',
 	'ur-add-error-message-no-user'               => 'De gebruiker die u probeert toe te voegen bestaat niet.',
-	'ur-add-error-message-blocked'               => 'U bent geblokkeerd en kan geen vrienden of tegenstanders toevoegen.',
+	'ur-add-error-message-blocked'               => 'U bent geblokkeerd en kunt geen vrienden of tegenstanders toevoegen.',
 	'ur-add-error-message-yourself'              => 'U kunt uzelf niet als vriend of tegenstander toevoegen.',
 	'ur-add-error-message-existing-relationship' => 'U bent al $1 bij $2.',
 	'ur-add-error-message-pending-request-title' => 'Even geduld alstublieft.',
@@ -461,7 +493,7 @@ en wijzig uw instellingen om e-mailberichten uit te schakelen.',
 
 $2 heeft u als vriend geaccepteerd op {{SITENAME}}.
 
-U kan $2's pagina bekijken op $3
+U kunt $2's pagina bekijken op $3
 
 Bedankt.
 ---
@@ -475,7 +507,7 @@ en wijzig uw instellingen om e-mailberichten uit te schakelen.",
 
 $2 heeft u als tegenstander bevestigd op {{SITENAME}}.
 
-U kan $2's pagina bekijken op $3
+U kunt $2's pagina bekijken op $3
 
 Bedankt.
 ---
@@ -791,56 +823,85 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
 
 /** Portuguese (Português)
  * @author 555
+ * @author Lijealso
  */
 $messages['pt'] = array(
-	'viewrelationships'                       => 'Ver relacionamentos',
-	'viewrelationshiprequests'                => 'Ver pedidos de relacionamentos',
-	'ur-error-title'                          => 'Ooops, você pegou um caminho errado!',
-	'ur-error-message-no-user'                => 'Não podemos completar a sua requisição, não existe um utilizador com este nome.',
-	'ur-main-page'                            => 'Página principal',
-	'ur-your-profile'                         => 'Seu perfil',
-	'ur-backlink'                             => '&lt; Voltar ao perfil de $1',
-	'ur-friend'                               => 'amigo',
-	'ur-foe'                                  => 'inimigo',
-	'ur-relationship-count'                   => '$1 possui $ {{PLURAL:$2|$3|$3s}}.',
-	'ur-add-friends'                          => ' Quer mais amigos? <a href="$1">Convide-os</a>',
-	'ur-add-friend'                           => 'Adicionar como amigo',
-	'ur-add-foe'                              => 'Adicionar como inimigo',
-	'ur-remove-relationship'                  => 'Remover de $1',
-	'ur-give-gift'                            => 'Dar um presente',
-	'ur-previous'                             => 'ant',
-	'ur-next'                                 => 'prox',
-	'ur-remove-relationship-title'            => 'Deseja que $1 deixe de ser seu $2?',
-	'ur-remove-relationship-title-confirm'    => 'Você removeu $1 de seus $2s',
-	'ur-remove-relationship-message'          => 'Você requisitou a remoção de $1 como seu $2. Clique em "$3" para confirmar.',
-	'ur-remove-relationship-message-confirm'  => '$1 foi removido com sucesso de seus $2s.',
-	'ur-remove-error-message-no-relationship' => 'Você não possui um relacionamento com $1.',
-	'ur-remove-error-message-remove-yourself' => 'Você não pode remover a si mesmo.',
-	'ur-remove-error-message-pending-request' => 'Você tem um pedido de $1 com $2.',
-	'ur-remove'                               => 'Remover',
-	'ur-cancel'                               => 'Cancelar',
-	'ur-login'                                => 'Entrar',
-	'ur-add-title'                            => 'Você deseja adicionar $1 como seu $2?',
-	'ur-add-message'                          => 'Você está prestes a adicionar $1 como seu $2. Nós notificaremos $1, a fim de confirmar que há $3 entre vocês.',
-	'ur-friendship'                           => 'amizade',
-	'ur-grudge'                               => 'ressentimento',
-	'ur-add-button'                           => 'Adicionar como $1',
-	'ur-add-sent-title'                       => 'O seu pedido de $1 foi enviado para 2$!',
-	'ur-accept'                               => 'Aceitar',
-	'ur-reject'                               => 'Rejeitar',
+	'viewrelationships'                          => 'Ver relacionamentos',
+	'viewrelationshiprequests'                   => 'Ver pedidos de relacionamentos',
+	'ur-error-title'                             => 'Ooops, você pegou um caminho errado!',
+	'ur-error-message-no-user'                   => 'Não podemos completar a sua requisição, não existe um utilizador com este nome.',
+	'ur-main-page'                               => 'Página principal',
+	'ur-your-profile'                            => 'Seu perfil',
+	'ur-backlink'                                => '&lt; Voltar ao perfil de $1',
+	'ur-friend'                                  => 'amigo',
+	'ur-foe'                                     => 'inimigo',
+	'ur-relationship-count'                      => '$1 possui $ {{PLURAL:$2|$3|$3s}}.',
+	'ur-add-friends'                             => ' Quer mais amigos? <a href="$1">Convide-os</a>',
+	'ur-add-friend'                              => 'Adicionar como amigo',
+	'ur-add-foe'                                 => 'Adicionar como inimigo',
+	'ur-remove-relationship'                     => 'Remover de $1',
+	'ur-give-gift'                               => 'Dar um presente',
+	'ur-previous'                                => 'ant',
+	'ur-next'                                    => 'prox',
+	'ur-remove-relationship-title'               => 'Deseja que $1 deixe de ser seu $2?',
+	'ur-remove-relationship-title-confirm'       => 'Você removeu $1 de seus $2s',
+	'ur-remove-relationship-message'             => 'Você requisitou a remoção de $1 como seu $2. Clique em "$3" para confirmar.',
+	'ur-remove-relationship-message-confirm'     => '$1 foi removido com sucesso de seus $2s.',
+	'ur-remove-error-message-no-relationship'    => 'Você não possui um relacionamento com $1.',
+	'ur-remove-error-message-remove-yourself'    => 'Você não pode remover a si mesmo.',
+	'ur-remove-error-message-pending-request'    => 'Você tem um pedido de $1 com $2.',
+	'ur-remove'                                  => 'Remover',
+	'ur-cancel'                                  => 'Cancelar',
+	'ur-login'                                   => 'Entrar',
+	'ur-add-title'                               => 'Você deseja adicionar $1 como seu $2?',
+	'ur-add-message'                             => 'Você está prestes a adicionar $1 como seu $2. Nós notificaremos $1, a fim de confirmar que há $3 entre vocês.',
+	'ur-friendship'                              => 'amizade',
+	'ur-grudge'                                  => 'ressentimento',
+	'ur-add-button'                              => 'Adicionar como $1',
+	'ur-add-sent-title'                          => 'O seu pedido de $1 foi enviado para 2$!',
+	'ur-add-error-message-pending-request-title' => 'Paciência!',
+	'ur-add-error-message-not-loggedin'          => 'Necessita estar logado para adicionar $1',
+	'ur-accept'                                  => 'Aceitar',
+	'ur-reject'                                  => 'Rejeitar',
 );
 
 /** Swedish (Svenska)
  * @author M.M.S.
  */
 $messages['sv'] = array(
-	'ur-main-page' => 'Huvudsida',
+	'ur-main-page'                               => 'Huvudsida',
+	'ur-your-profile'                            => 'Din profil',
+	'ur-backlink'                                => '&lt; Tillbaka till $1s profil',
+	'ur-friend'                                  => 'vän',
+	'ur-foe'                                     => 'fiende',
+	'ur-relationship-count'                      => '$1 har $2 {{PLURAL:$2|$3|$3er}}.',
+	'ur-add-friend'                              => 'Lägg till som vän',
+	'ur-add-foe'                                 => 'Lägg till som fiende',
+	'ur-remove-relationship'                     => 'Ta bort som $1',
+	'ur-previous'                                => 'föregående',
+	'ur-next'                                    => 'nästa',
+	'ur-remove-relationship-title'               => 'Vill du ta bort $1 som din $2?',
+	'ur-remove-relationship-title-confirm'       => 'Du har tagit bort $1 som din $2',
+	'ur-remove-relationship-message'             => 'Du har begärt att ta bort $1 som din $2, tryck "$3" för att konfirmera.',
+	'ur-remove-error-message-remove-yourself'    => 'Du kan inte ta bort dig själv.',
+	'ur-remove'                                  => 'Ta bort',
+	'ur-cancel'                                  => 'Avbryt',
+	'ur-login'                                   => 'Logga in',
+	'ur-add-title'                               => 'Vill du lägga till $1 som din $2?',
+	'ur-add-button'                              => 'Lägg till som $1',
+	'ur-add-error-message-existing-relationship' => 'Du är redan $1 med $2.',
+	'ur-accept'                                  => 'Acceptera',
+	'ur-reject'                                  => 'Avslå',
+	'friend_request_subject'                     => '$1 har laggt till dig som vän på {{SITENAME}}!',
+	'friend_removed_subject'                     => 'Å Nej! $1 har tagit bort dig som vän på {{SITENAME}}!',
+	'foe_removed_subject'                        => 'Hurra! $1 har tagit bort dig som fiende på {{SITENAME}}!',
 );
 
 /** Telugu (తెలుగు)
  * @author Veeven
  */
 $messages['te'] = array(
+	'ur-your-profile'                            => 'మీ ప్రొఫైలు',
 	'ur-friend'                                  => 'స్నేహితులు',
 	'ur-foe'                                     => 'శత్రువు',
 	'ur-add-friend'                              => 'స్నేహితునిగా చేర్చు',
