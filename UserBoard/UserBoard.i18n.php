@@ -450,11 +450,15 @@ e modificatz vòstres paramètres per desactivar las notificacions dels corrièr
  * @author Lijealso
  */
 $messages['pt'] = array(
-	'messagesenttitle'     => 'Mensagens Enviadas',
-	'userboard_nextpage'   => 'próxima',
-	'userboard_prevpage'   => 'anterior',
-	'userboard_nomessages' => 'Sem mensagens.',
-	'userboard_sendbutton' => 'enviar',
+	'messagesenttitle'          => 'Mensagens Enviadas',
+	'userboard_private'         => 'privado',
+	'userboard_public'          => 'público',
+	'userboard_messagetype'     => 'Tipo de Mensagem',
+	'userboard_nextpage'        => 'próxima',
+	'userboard_prevpage'        => 'anterior',
+	'userboard_nomessages'      => 'Sem mensagens.',
+	'userboard_sendbutton'      => 'enviar',
+	'userboard_showingmessages' => 'Mostrando $2-$3 de {{PLURAL:$1|$1 Mensagem|$1 Mensagens}}',
 );
 
 /** Russian (Русский)

@@ -24,11 +24,32 @@ $messages['fr'] = array(
 	'yui-desc' => 'Une série d’utilitaires et de contrôles, écrite en Javascript',
 );
 
+/** Upper Sorbian (Hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'yui-desc' => 'Zběrka pomocnych programow a wodźenskich elementow, napisanych w JavaScripće.',
+);
+
+/** Icelandic (Íslenska)
+ * @author S.Örvarr.S
+ */
+$messages['is'] = array(
+	'yui-desc' => 'Sett af hjálparforritum og stjórntækjum, skrifum í JavaScript',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
 $messages['lb'] = array(
 	'yui-desc' => 'Eng Rei vun nëtzleche Funktiounen, am Javascript geschriwwen.',
+);
+
+/** Marathi (मराठी)
+ * @author Mahitgar
+ */
+$messages['mr'] = array(
+	'yui-desc' => 'जावा स्क्रिप्टने लिहीलेल्या सुविधा आणि नियंत्रणांचा संच',
 );
 
 /** Dutch (Nederlands)
@@ -43,6 +64,13 @@ $messages['nl'] = array(
  */
 $messages['no'] = array(
 	'yui-desc' => 'En serie verktøy og kontroller skrevet i JavaScript',
+);
+
+/** Polish (Polski)
+ * @author Wpedzich
+ */
+$messages['pl'] = array(
+	'yui-desc' => 'Zestaw narzędzi i elementów kontrolnych napisanych w jezyku JavaScript',
 );
 
 /** Swedish (Svenska)
