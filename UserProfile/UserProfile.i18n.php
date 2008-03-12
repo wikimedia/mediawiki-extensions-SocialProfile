@@ -256,6 +256,7 @@ $messages['ar'] = array(
  * @author DCLXVI
  */
 $messages['bg'] = array(
+	'avatarupload'                                    => 'просто тестово разширение',
 	'user-count-separator'                            => 'от',
 	'user-view-all'                                   => 'Преглед на всички',
 	'user-upload-image'                               => 'Качване на снимка',
@@ -355,6 +356,16 @@ $messages['bg'] = array(
 	'user-type-toggle-old'                            => 'Използване на потребителската страница от уикито',
 	'user-type-toggle-new'                            => 'Използване на социалната потребителска страница',
 	'user-board-login-message'                        => 'За оставяне на съобщения до другите потребители е необходимо <a href="$1">влизане</a> в системата',
+);
+
+/** Esperanto (Esperanto)
+ * @author Yekrats
+ */
+$messages['eo'] = array(
+	'user-count-separator'         => 'de',
+	'other-info-movies'            => 'Filmoj',
+	'user-profile-section-picture' => 'Avataro',
+	'user-profile-personal-name'   => 'Nomo',
 );
 
 /** Finnish (Suomi)
@@ -665,30 +676,39 @@ $messages['fr'] = array(
 
 /** Khmer (ភាសាខ្មែរ)
  * @author Chhorran
+ * @author Lovekhmer
  */
 $messages['km'] = array(
+	'other-info-books'                     => 'សៀវភៅ',
+	'other-info-magazines'                 => 'ទស្សនាវដ្តី',
+	'user-personal-info-websites'          => 'គេហទំព័រ',
+	'user-personal-info-schools'           => 'សាលា',
+	'user-personal-info-about-me'          => 'អំពីខ្ញុំ',
+	'user-profile-update-profile'          => 'ប្រវត្តិរូប',
 	'user-profile-section-interests'       => 'ពត៌មាន ផ្សេង',
-	'user-profile-section-preferences'     => 'ចំណូលចិត្ត នានា',
+	'user-profile-section-preferences'     => 'ចំនូលចិត្ត',
 	'user-profile-personal-info'           => 'ពត៌មាន',
 	'user-profile-personal-name'           => 'ឈ្មោះ',
-	'user-profile-personal-email'          => 'អ៊ីមែវល៍',
-	'user-profile-personal-confirmemail'   => 'បញ្ជាក់ទទួលស្គាល់ អ៊ីមែវល៍',
+	'user-profile-personal-email'          => 'អ៊ីមែល',
+	'user-profile-personal-confirmemail'   => 'បញ្ជាក់ទទួលស្គាល់អ៊ីមែល',
 	'user-profile-personal-city'           => 'ក្រុង',
 	'user-profile-personal-country'        => 'រដ្ឋ',
-	'user-profile-personal-aboutme'        => 'អំពី ខ្ញុំ',
-	'user-profile-personal-web'            => 'អិនរើណែត',
-	'user-profile-personal-websites'       => 'វែបសៃថ៍',
+	'user-profile-personal-birthday'       => 'ថ្ងៃខែឆ្នាំកំនើត',
+	'user-profile-personal-aboutme'        => 'អំពីខ្ញុំ',
+	'user-profile-personal-schools'        => 'សាលា',
+	'user-profile-personal-web'            => 'អ៊ីនធឺណិត',
+	'user-profile-personal-websites'       => 'គេហទំព័រ',
 	'user-profile-interests-tv'            => 'ទូរទស្សន៍',
 	'user-profile-interests-music'         => 'តន្រ្តី',
 	'user-profile-interests-books'         => 'សៀវភៅ',
 	'user-profile-interests-magazines'     => 'ទស្សនាវដ្តី',
-	'user-profile-interests-videogames'    => 'ហ្គេម វិឌីអូ',
+	'user-profile-interests-videogames'    => 'វីដេអូហ្គេម',
 	'user-profile-update-button'           => 'បន្ទាន់សម័យ',
 	'user-profile-sports-sport'            => 'កីឡា',
 	'user-profile-picture-title'           => 'ផ្ទុកឡើង រូបថត របស់អ្នក',
 	'user-profile-picture-yourpicture'     => 'រូបថត របស់អ្នក',
 	'user-profile-picture-uploaddifferent' => 'ផ្ទុកឡើង រូបថត ផ្សេង',
-	'user-profile-picture-currentimage'    => 'រូបភាព បច្ចុប្បន្ន',
+	'user-profile-picture-currentimage'    => 'រូបភាពបច្ចុប្បន្ន',
 	'user-profile-picture-choosepicture'   => 'ជ្រើសរើស រូបថត របស់អ្នក',
 	'user-profile-goback'                  => 'ត្រលប់ ក្រោយ ៖',
 	'user-no-images'                       => 'គ្មានរូបភាព ត្រូវបានផ្ទុកឡើង',
@@ -1483,6 +1503,22 @@ $messages['ru'] = array(
 	'user-board-login-message'                        => 'Вы должны <a href="$1">представиться системе</a> чтобы отправлять сообщения другим учсатникам.',
 );
 
+/** Slovak (Slovenčina)
+ * @author Helix84
+ */
+$messages['sk'] = array(
+	'populateuserprofiles' => 'Naplniť používateľské profily',
+	'avatarupload'         => 'len testovacie rozšírenie',
+	'user-count-separator' => 'z',
+	'user-view-all'        => 'Zobraziť všetky',
+	'user-upload-image'    => 'Nahrať obrázok',
+	'user-edit-this'       => 'Upraviť',
+	'user-time-ago'        => 'dozadu',
+	'user-points'          => 'bodov',
+	'user-edit-profile'    => 'Upraviť profil',
+	'user-upload-avatar'   => 'Nahrať fotografiu',
+);
+
 /** Swedish (Svenska)
  * @author M.M.S.
  */
@@ -1540,14 +1576,21 @@ $messages['sv'] = array(
  * @author Veeven
  */
 $messages['te'] = array(
+	'avatarupload'                           => 'కేవలం ఓ పరీక్షా పొడగింత',
 	'user-view-all'                          => 'అన్నీ చూడండి',
+	'user-upload-image'                      => 'బొమ్మని ఎగుమతి చేయండి',
+	'user-edit-this'                         => 'దీన్ని మార్చండి',
 	'user-time-ago'                          => 'క్రితం',
+	'user-points'                            => 'పాయింట్లు',
+	'user-watchlist'                         => 'నా వీక్షణా జాబితా',
+	'user-meet-people'                       => 'ప్రజలని కలవండి',
 	'user-add-friend'                        => 'స్నేహితునిగా చేర్చు',
 	'user-add-foe'                           => 'శత్రువుగా చేర్చు',
 	'user-remove-friend'                     => 'స్నేహితునిగా తొలగించు',
 	'user-remove-foe'                        => 'శత్రువుగా తొలగించు',
 	'user-send-message'                      => 'ఓ సందేశం పంపండి',
 	'user-send-gift'                         => 'ఓ బహుమతి పంపించండి',
+	'user-contributions'                     => 'రచనలు',
 	'other-info-title'                       => 'ఇతర సమాచారం',
 	'user-friends-title'                     => 'స్నేహితులు',
 	'user-foes-title'                        => 'శతృవులు',
@@ -1556,6 +1599,8 @@ $messages['te'] = array(
 	'other-info-music'                       => 'సంగీతం',
 	'other-info-books'                       => 'పుస్తకాలు',
 	'other-info-magazines'                   => 'పత్రికలు',
+	'other-info-snacks'                      => 'చిరుతిళ్ళు',
+	'other-info-drinks'                      => 'పానియాలు',
 	'other-no-info'                          => 'ఇతర సమాచారం లేదు',
 	'user-personal-info-title'               => 'వ్యక్తిగత సమాచారం',
 	'user-no-personal-info'                  => 'వ్యక్తిగత సమాచారం లేదు',
@@ -1569,6 +1614,7 @@ $messages['te'] = array(
 	'user-personal-info-about-me'            => 'నా గురించి',
 	'user-recent-activity-title'             => 'ఇటీవలి కలాపాలు',
 	'user-recent-activity-edit'              => 'పేజీని మార్చారు',
+	'user-recent-activity-vote'              => 'పేజీకి వోటేసారు',
 	'user-recent-activity-comment'           => 'పేజీపై వ్యాఖ్యానించారు',
 	'user-profile-default-country'           => 'అమెరికా సంయుక్త రాష్ట్రాలు',
 	'user-profile-section-personal'          => 'వ్యక్తిగత సమాచారం',
@@ -1590,14 +1636,18 @@ $messages['te'] = array(
 	'user-profile-personal-education'        => 'చదువు',
 	'user-profile-personal-schools'          => 'పాఠశాలలు',
 	'user-profile-personal-places'           => 'ప్రదేశాలు',
+	'user-profile-personal-placeslived'      => 'నేను ఉన్న ప్రదేశాలు',
 	'user-profile-personal-websites'         => 'వెబ్&zwnj;సైట్లు',
 	'user-profile-interests-movies'          => 'సినిమాలు',
 	'user-profile-interests-tv'              => 'టీవీ',
 	'user-profile-interests-music'           => 'సంగీతం',
 	'user-profile-interests-books'           => 'పుస్తకాలు',
 	'user-profile-interests-magazines'       => 'పత్రికలు',
+	'user-profile-interests-foodsnacks'      => 'ఆహారం & చిరుతిళ్ళు',
+	'user-profile-interests-drinks'          => 'పానియాలు',
 	'user-profile-preferences-emails-weekly' => 'వారంవారం తాజా విశేషాలు ఈ-మెయిల్లో అందుకోండి',
 	'user-profile-update-button'             => 'తాజాకరించు',
+	'user-profile-picture-title'             => 'మీ చిత్రాన్ని ఎగుమతి చేయండి',
 	'user-profile-picture-log'               => 'అవతారం',
 	'user-profile-picture-yourpicture'       => 'మీ బొమ్మ',
 	'user-profile-picture-large'             => 'పెద్దది',
@@ -1605,9 +1655,19 @@ $messages['te'] = array(
 	'user-profile-picture-medium'            => 'మధ్యస్థం',
 	'user-profile-picture-small'             => 'చిన్నది',
 	'user-profile-picture-currentimage'      => 'ప్రస్తుత బొమ్మ',
+	'user-profile-picture-picsize'           => 'మీ బొమ్మ 100కిబై కంటే తక్కువ పరిమాణంలో ఉండి jpeg, png, లేదా gif కానీ అయివుండాలి.',
+	'user-profile-picture-scanfailed'        => 'స్కాన్ విఫలమైంది',
 	'user-profile-goback'                    => 'వెనక్కి వెళ్ళండి',
+	'user-no-images'                         => 'బొమ్మలేమీ ఎగుమతి కాలేదు',
+	'edit-profile-title'                     => 'మీ ప్రొఫైలుని మార్చండి',
 	'user-page-link'                         => 'వాడుకరి పేజీ',
+	'user-social-profile-link'               => 'సాంఘీక ప్రొఫైలు',
 	'user-wiki-link'                         => 'వికీ వాడుకరిపేజీ',
+	'update_profile_nav'                     => '* Special:UpdateProfile|వ్యక్తిగత సమాచారం
+* Special:UpdateProfile/personal|ఇతర సమాచారం
+* Special:UpdateProfile/custom|ప్రత్యేక సమాచారం
+* Special:UploadAvatar|అవతారం
+* Special:UpdateProfile/preferences|అభిరుచులు',
 );
 
 /** Vietnamese (Tiếng Việt)

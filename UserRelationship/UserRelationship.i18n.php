@@ -208,6 +208,15 @@ $messages['bg'] = array(
 	'ur-requests-reject-message'                 => 'Отказахте на $1 да бъде ваш $2.',
 );
 
+/** Esperanto (Esperanto)
+ * @author Yekrats
+ */
+$messages['eo'] = array(
+	'ur-main-page'  => 'Ĉefpaĝo',
+	'ur-foe'        => 'malamiko',
+	'ur-add-friend' => 'Amiko',
+);
+
 /** French (Français)
  * @author Grondin
  */
@@ -353,6 +362,7 @@ et modifiez vos préférences pour désactiver les notifications par courriel.',
 
 /** Khmer (ភាសាខ្មែរ)
  * @author Chhorran
+ * @author Lovekhmer
  */
 $messages['km'] = array(
 	'ur-main-page'                               => 'ទំព័រដើម',
@@ -367,7 +377,7 @@ $messages['km'] = array(
 	'ur-remove-error-not-loggedin'               => 'អ្នកត្រូវតែ ពិនិត្យចូល ដើម្បី ដកចេញ $1 ។',
 	'ur-remove'                                  => 'ដកចេញ',
 	'ur-cancel'                                  => 'បោះបង់',
-	'ur-login'                                   => 'ពិនិត្យចូល',
+	'ur-login'                                   => 'ចូល',
 	'ur-friendship'                              => 'មិត្តភាព',
 	'ur-add-button'                              => 'បន្ថែម ជា $1',
 	'ur-add-error-message-pending-request-title' => 'ខន្តី អត់ធ្មត់ !',
@@ -903,6 +913,8 @@ $messages['sv'] = array(
  * @author Veeven
  */
 $messages['te'] = array(
+	'viewrelationships'                          => 'బంధాన్ని చూడండి',
+	'ur-main-page'                               => 'మొదటి పేజీ',
 	'ur-your-profile'                            => 'మీ ప్రొఫైలు',
 	'ur-friend'                                  => 'స్నేహితులు',
 	'ur-foe'                                     => 'శత్రువు',
@@ -911,13 +923,23 @@ $messages['te'] = array(
 	'ur-previous'                                => 'క్రితం',
 	'ur-next'                                    => 'తర్వాతి',
 	'ur-remove-error-message-remove-yourself'    => 'మిమ్మల్ని మీరే తొలగించుకోలేరు.',
+	'ur-remove-error-not-loggedin'               => '$1ని తొలగించడానికి మీరు లోనికి ప్రవేశించి ఉండాలి.',
 	'ur-remove'                                  => 'తొలగించు',
+	'ur-cancel'                                  => 'రద్దు',
 	'ur-login'                                   => 'ప్రవేశించు',
 	'ur-friendship'                              => 'స్నేహం',
 	'ur-grudge'                                  => 'పగ',
 	'ur-add-error-message-no-user'               => 'మీరు చేర్చాలని ప్రయత్నిస్తున్న వాడుకరి లేనే లేరు.',
+	'ur-add-error-message-yourself'              => 'మిమ్మల్ని మీరే స్నేహితునిగానో లేదా శత్రువుగానో చేర్చుకోలేరు.',
 	'ur-add-error-message-pending-request-title' => 'ఓపిక!',
+	'ur-add-error-message-not-loggedin'          => '$1ని చేర్చడానికి మీరు లోనికి ప్రవేశించి ఉండాలి.',
+	'ur-requests-title'                          => 'సంబంధ అభ్యర్థనలు',
+	'ur-requests-message'                        => '<a href="$1">$2</a> మీ $3 కావాలనుకుంటున్నారు.',
 	'ur-accept'                                  => 'అంగీకరించు',
 	'ur-reject'                                  => 'తిరస్కరించు',
+	'ur-no-requests-message'                     => 'మీకు మిత్రుత్వ లేదా శత్రుత్వ అభ్యర్థనలు లేవు. మీకు మరింత మంది స్నేహితులు కావాలంటే, <a href="$1">వారిని ఆహ్వానించండి!</a>',
+	'ur-requests-added-message'                  => '$1ని $2గా మీరు చేర్చుకున్నారు.',
+	'ur-requests-reject-message'                 => '$1ని $2గా మీరు తిరస్కరించారు.',
+	'friend_request_subject'                     => '{{SITENAME}}లో $1 మిమ్మల్ని స్నేహితునిగా చేర్చుకున్నారు!',
 );
 

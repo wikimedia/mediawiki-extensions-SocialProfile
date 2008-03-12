@@ -225,6 +225,17 @@ Cliquer $4
 et modifiez vos paramètres pour désactiver les notifications des courriels.",
 );
 
+/** Khmer (ភាសាខ្មែរ)
+ * @author Lovekhmer
+ */
+$messages['km'] = array(
+	'boardblaststep1'      => 'ជំហានទី១ - សរសេរសាររបស់លោកអ្នក',
+	'boardlinkselectall'   => 'ជ្រើសរើសទាំងអស់',
+	'userboard_nextpage'   => 'បន្ទាប់',
+	'userboard_prevpage'   => 'មុន',
+	'userboard_sendbutton' => 'ផ្ញើ',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
@@ -311,7 +322,7 @@ $messages['nl'] = array(
 	'userboard_nomessages'      => 'Geen berichten.',
 	'userboard_sendbutton'      => 'verzenden',
 	'userboard_loggedout'       => 'U moet <a href="$1">aangemeld</a> zijn om berichten naar andere gebruikers te verzenden.',
-	'userboard_showingmessages' => 'Berichten $2 tot $3 van {{PLURAL:$1|$1 bericht|$1 berichten}} worden getoond',
+	'userboard_showingmessages' => 'Berichten $2 tot $3 van {{PLURAL:$1|$1 bericht|$1 berichten}} worden weergegeven',
 	'message_received_subject'  => '$1 heeft op uw board op {{SITENAME}} geschreven',
 	'message_received_body'     => 'Hallo $1.
 
@@ -561,6 +572,22 @@ $messages['sk'] = array(
 	'userboard_nomessages'      => 'Žiadne správy.',
 	'userboard_sendbutton'      => 'poslať',
 	'userboard_loggedout'       => 'Musíte <a href="$1">sa prihlásiť</a>, aby ste mohli posielať správy iným používateľom.',
+	'userboard_showingmessages' => 'Zobrazujú sa správy $2-$3 z $1 {{PLURAL:$1|správy|správ}}',
+	'message_received_subject'  => '$1 napísal na vaše fórum na {{GRAMMAR:lokál|{{SITENAME}}}}',
+	'message_received_body'     => 'Ahoj, $1:
+
+$2 napísal na vaše fórum na {{GRAMMAR:lokál|{{SITENAME}}}}
+
+Po kliknutí na nasledujúci odkaz si môžete prečítať svoje fórum.
+
+$3
+
+---
+
+Chcete prestať dostávať tieto emaily?
+
+Kliknite sem $4
+a zmeňte svoje nastavenia na vypnutie upozornení emailom.',
 );
 
 /** Swedish (Svenska)
@@ -578,16 +605,23 @@ $messages['sv'] = array(
  */
 $messages['te'] = array(
 	'messagesenttitle'        => 'సందేశాలను పంపించాం',
+	'boardblaststep1'         => '1వ అంచె - మీ సందేశాన్ని వ్రాయండి',
+	'boardblastprivatenote'   => 'అన్ని సందేశాలని వ్యక్తిగత సందేశాలుగా పంపిస్తాం',
+	'boardblaststep2'         => '2వ అంచె - మీ సందేశాన్ని ఎవరికి పంపాలనుకుంటున్నారో ఎంచుకోండి',
 	'boardlinkselectall'      => 'అందరినీ ఎంచుకోండి',
 	'boardlinkselectfriends'  => 'స్నేహితులను ఎంచుకోండి',
 	'boardlinkselectfoes'     => 'శత్రువులను ఎంచుకోండి',
+	'boardnofriends'          => 'సందేశం పంపించడానికి మీకు స్నేహితులేవరూ లేరు!',
 	'messagesentsuccess'      => 'మీ సందేశాన్ని విజయవంతంగా పంపించాం',
+	'userboard_noexist'       => 'మీరు చూడాలనుకుంటున్న వాడుకరి లేనేలేరు.',
 	'userboard_confirmdelete' => 'ఈ సందేశాన్ని మీరు తొలగించాలనుకుంటున్నారా?',
+	'userboard_sendmessage'   => '$1కి ఓ సందేశం పంపండి',
 	'userboard_delete'        => 'తొలగించు',
 	'userboard_private'       => 'అంతరంగికం',
 	'userboard_public'        => 'బహిరంగం',
 	'userboard_messagetype'   => 'సందేశపు రకం',
 	'userboard_nextpage'      => 'తర్వాతి',
+	'userboard_prevpage'      => 'క్రితం',
 	'userboard_nomessages'    => 'సందేశాలు లేవు.',
 	'userboard_sendbutton'    => 'పంపించు',
 );
