@@ -1670,6 +1670,40 @@ $messages['te'] = array(
 * Special:UpdateProfile/preferences|అభిరుచులు',
 );
 
+/** Tajik (Тоҷикӣ)
+ * @author Ibrahim
+ */
+$messages['tg'] = array(
+	'other-info-title'                  => 'Иттилооти дигар',
+	'user-friends-title'                => 'Дӯстон',
+	'other-info-tv'                     => 'ТВ',
+	'other-info-music'                  => 'Мусиқӣ',
+	'other-info-books'                  => 'Китобҳо',
+	'other-info-video-games'            => 'Видео бозиҳо',
+	'other-info-magazines'              => 'Маҷаллаҳо',
+	'user-personal-info-real-name'      => 'Номи аслӣ',
+	'user-personal-info-hometown'       => 'Зодгоҳ',
+	'user-personal-info-birthday'       => 'Зодрӯз',
+	'user-personal-info-occupation'     => 'Касб',
+	'user-personal-info-websites'       => 'Сомонаҳо',
+	'user-personal-info-schools'        => 'Мактабҳо',
+	'user-personal-info-about-me'       => 'Дар бораи Ман',
+	'user-profile-personal-name'        => 'Ном',
+	'user-profile-personal-city'        => 'Шаҳр',
+	'user-profile-personal-country'     => 'Кишвар',
+	'user-profile-personal-hometown'    => 'Зодгоҳ',
+	'user-profile-personal-birthday'    => 'Зодрӯз',
+	'user-profile-personal-aboutme'     => 'Дар бораи Ман',
+	'user-profile-personal-work'        => 'Кор',
+	'user-profile-personal-education'   => 'Таҳсилот',
+	'user-profile-interests-music'      => 'Мусиқӣ',
+	'user-profile-interests-books'      => 'Китобҳо',
+	'user-profile-interests-magazines'  => 'Маҷаллаҳо',
+	'user-profile-interests-videogames' => 'Видео Бозиҳо',
+	'user-profile-sports-sport'         => 'Варзиш',
+	'user-page-link'                    => 'Саҳифаи Корбарӣ',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
  */

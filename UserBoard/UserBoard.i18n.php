@@ -626,6 +626,13 @@ $messages['te'] = array(
 	'userboard_sendbutton'    => 'పంపించు',
 );
 
+/** Tajik (Тоҷикӣ)
+ * @author Ibrahim
+ */
+$messages['tg'] = array(
+	'userboard_delete' => 'Ҳазф',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
  */
