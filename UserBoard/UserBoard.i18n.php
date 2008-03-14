@@ -229,11 +229,20 @@ et modifiez vos paramètres pour désactiver les notifications des courriels.",
  * @author Lovekhmer
  */
 $messages['km'] = array(
-	'boardblaststep1'      => 'ជំហានទី១ - សរសេរសាររបស់លោកអ្នក',
-	'boardlinkselectall'   => 'ជ្រើសរើសទាំងអស់',
-	'userboard_nextpage'   => 'បន្ទាប់',
-	'userboard_prevpage'   => 'មុន',
-	'userboard_sendbutton' => 'ផ្ញើ',
+	'messagesenttitle'      => 'សារបានផ្ញើរួចហើយ',
+	'boardblaststep1'       => 'ជំហានទី១ - សរសេរសាររបស់លោកអ្នក',
+	'boardlinkselectall'    => 'ជ្រើសរើសទាំងអស់',
+	'boardlinkunselectall'  => 'មិនជ្រើសរើសទាំងអស់',
+	'userboard_sendmessage' => 'ផ្ញើសារទៅកាន់$1',
+	'userboard_delete'      => 'លុប',
+	'userboard_private'     => 'ឯកជន',
+	'userboard_public'      => 'សាធារណៈ',
+	'userboard_messagetype' => 'ប្រភេទសារ',
+	'userboard_nextpage'    => 'បន្ទាប់',
+	'userboard_prevpage'    => 'មុន',
+	'userboard_nomessages'  => 'មិនមានសារទេ។',
+	'userboard_sendbutton'  => 'ផ្ញើ',
+	'userboard_loggedout'   => 'ដើម្បីបញ្ជូនសារទៅកាន់អ្នកប្រើប្រាស់ផ្សេងៗទៀតបាន អ្នកចាំបាច់ត្រូវតែបាន<a href="$1">ឡុកអ៊ីនចូល</a>។',
 );
 
 /** Luxembourgish (Lëtzebuergesch)

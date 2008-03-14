@@ -66,6 +66,13 @@ $messages['no'] = array(
 	'yui-desc' => 'En serie verktøy og kontroller skrevet i JavaScript',
 );
 
+/** Occitan (Occitan)
+ * @author Cedric31
+ */
+$messages['oc'] = array(
+	'yui-desc' => 'Una seria d’utilitaris e de contraròtles, escricha en Javascript',
+);
+
 /** Polish (Polski)
  * @author Wpedzich
  */
