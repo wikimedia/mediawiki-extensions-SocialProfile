@@ -80,6 +80,13 @@ $messages['pl'] = array(
 	'yui-desc' => 'Zestaw narzędzi i elementów kontrolnych napisanych w jezyku JavaScript',
 );
 
+/** Slovak (Slovenčina)
+ * @author Helix84
+ */
+$messages['sk'] = array(
+	'yui-desc' => 'Sada nástrojov napísaných v JavaScripte',
+);
+
 /** Swedish (Svenska)
  * @author M.M.S.
  */

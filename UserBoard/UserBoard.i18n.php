@@ -227,22 +227,29 @@ et modifiez vos paramètres pour désactiver les notifications des courriels.",
 
 /** Khmer (ភាសាខ្មែរ)
  * @author Lovekhmer
+ * @author គីមស៊្រុន
  */
 $messages['km'] = array(
-	'messagesenttitle'      => 'សារបានផ្ញើរួចហើយ',
-	'boardblaststep1'       => 'ជំហានទី១ - សរសេរសាររបស់លោកអ្នក',
-	'boardlinkselectall'    => 'ជ្រើសរើសទាំងអស់',
-	'boardlinkunselectall'  => 'មិនជ្រើសរើសទាំងអស់',
-	'userboard_sendmessage' => 'ផ្ញើសារទៅកាន់$1',
-	'userboard_delete'      => 'លុប',
-	'userboard_private'     => 'ឯកជន',
-	'userboard_public'      => 'សាធារណៈ',
-	'userboard_messagetype' => 'ប្រភេទសារ',
-	'userboard_nextpage'    => 'បន្ទាប់',
-	'userboard_prevpage'    => 'មុន',
-	'userboard_nomessages'  => 'មិនមានសារទេ។',
-	'userboard_sendbutton'  => 'ផ្ញើ',
-	'userboard_loggedout'   => 'ដើម្បីបញ្ជូនសារទៅកាន់អ្នកប្រើប្រាស់ផ្សេងៗទៀតបាន អ្នកចាំបាច់ត្រូវតែបាន<a href="$1">ឡុកអ៊ីនចូល</a>។',
+	'messagesenttitle'          => 'សារបានផ្ញើរួចហើយ',
+	'boardblaststep1'           => 'ជំហានទី១ - សរសេរសាររបស់លោកអ្នក',
+	'boardblastprivatenote'     => 'គ្រប់​សារ​ទាំងអស់​នឹង​ត្រូវបាន​ផ្ញើ​ក្នុងលក្ខណៈជាសារ​ឯកជន',
+	'boardblaststep2'           => 'ជំហានទី២ - សូម​ជ្រើសរើស​អ្នក​ដែលអ្នកចង់ផ្ញើសារទៅកាន់',
+	'boardlinkselectall'        => 'ជ្រើសរើសទាំងអស់',
+	'boardlinkunselectall'      => 'មិនជ្រើសរើសទាំងអស់',
+	'messagesentsuccess'        => 'សារ​របស់អ្នក​ត្រូវបាន​ផ្ញើដោយជោគជ័យ',
+	'userboard_backprofile'     => 'ត្រលប់​ទៅកាន់​ប្រវត្តិរូបរបស់ $1',
+	'userboard_backyourprofile' => 'ត្រលប់​ទៅកាន់​ប្រវត្តិរូប​របស់អ្នក',
+	'userboard_confirmdelete'   => 'តើ​អ្នកប្រាកដ​ហើយឬ​ដែលចង់​លុបសារ​នេះចោល?',
+	'userboard_sendmessage'     => 'ផ្ញើសារទៅកាន់$1',
+	'userboard_delete'          => 'លុប',
+	'userboard_private'         => 'ឯកជន',
+	'userboard_public'          => 'សាធារណៈ',
+	'userboard_messagetype'     => 'ប្រភេទសារ',
+	'userboard_nextpage'        => 'បន្ទាប់',
+	'userboard_prevpage'        => 'មុន',
+	'userboard_nomessages'      => 'មិនមានសារទេ។',
+	'userboard_sendbutton'      => 'ផ្ញើ',
+	'userboard_loggedout'       => 'ដើម្បីបញ្ជូនសារទៅកាន់អ្នកប្រើប្រាស់ផ្សេងៗទៀតបាន អ្នកចាំបាច់ត្រូវតែបាន<a href="$1">ឡុកអ៊ីនចូល</a>។',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
@@ -464,6 +471,16 @@ E ! Volètz arrestar d’obténer de corrièrs de nòstra part ?
 
 Clicatz $4
 e modificatz vòstres paramètres per desactivar las notificacions dels corrièrs electronics.",
+);
+
+/** Pashto (پښتو)
+ * @author Ahmed-Najib-Biabani-Ibrahimkhel
+ */
+$messages['ps'] = array(
+	'userboard_sendmessage' => '$1 ته يو پيغام ولېږۍ',
+	'userboard_delete'      => 'ړنګول',
+	'userboard_nomessages'  => 'هېڅ کوم پيغام نشته.',
+	'userboard_sendbutton'  => 'لېږل',
 );
 
 /** Portuguese (Português)

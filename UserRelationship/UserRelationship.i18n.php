@@ -832,6 +832,15 @@ Clicatz $4
 e modificatz vòstras preferéncias per desactivar las notificacions per corrièr electronic.',
 );
 
+/** Pashto (پښتو)
+ * @author Ahmed-Najib-Biabani-Ibrahimkhel
+ */
+$messages['ps'] = array(
+	'ur-friendship' => 'ملګرتيا',
+	'ur-accept'     => 'منل',
+	'ur-reject'     => 'ردول',
+);
+
 /** Portuguese (Português)
  * @author 555
  * @author Lijealso
