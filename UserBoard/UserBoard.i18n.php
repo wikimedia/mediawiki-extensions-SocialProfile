@@ -543,7 +543,7 @@ $messages['ru'] = array(
 	'message_received_subject'  => '$1 написал(а) на вашу доску на сайте {{SITENAME}}',
 	'message_received_body'     => 'Привет, $1:
 
-$1 написал(а) на вашу доску на сайте {{SITENAME}}!
+$2 написал(а) на вашу доску на сайте {{SITENAME}}!
 
 Щёлкните ниже, чтобы просмотреть вашу доску!
 
@@ -656,7 +656,10 @@ $messages['te'] = array(
  * @author Ibrahim
  */
 $messages['tg'] = array(
-	'userboard_delete' => 'Ҳазф',
+	'userboard_delete'     => 'Ҳазф',
+	'userboard_nextpage'   => 'баъдӣ',
+	'userboard_prevpage'   => 'қаблӣ',
+	'userboard_nomessages' => 'Пайғоме нест.',
 );
 
 /** Vietnamese (Tiếng Việt)

@@ -662,7 +662,9 @@ Takk
 
 ---
 
-Vil du ikke motta flere e-poster fra oss?',
+Vil du ikke motta flere e-poster fra oss?
+
+Klikk $4 og endre innstillingene dine for å slå av e-postmeldinger.',
 	'friend_removed_subject'                     => 'Å nei! $1 har fjernet deg som venn på {{SITENAME}}.',
 	'friend_removed_body'                        => 'Hei, $1
 
@@ -957,6 +959,16 @@ $messages['te'] = array(
  * @author Ibrahim
  */
 $messages['tg'] = array(
-	'ur-friend' => 'дӯст',
+	'ur-main-page'                               => 'Саҳифаи Аслӣ',
+	'ur-friend'                                  => 'дӯст',
+	'ur-previous'                                => 'қаблӣ',
+	'ur-next'                                    => 'баъдӣ',
+	'ur-remove'                                  => 'Ҳазф',
+	'ur-cancel'                                  => 'Лағв',
+	'ur-login'                                   => 'Вуруд кунед',
+	'ur-friendship'                              => 'дӯстӣ',
+	'ur-add-error-message-pending-request-title' => 'Сабр!',
+	'ur-accept'                                  => 'Пазируфтан',
+	'ur-reject'                                  => 'Рад кардан',
 );
 
