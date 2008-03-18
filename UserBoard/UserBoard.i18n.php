@@ -321,6 +321,7 @@ $messages['lb'] = array(
 	'boardblastprivatenote'   => 'All Message ginn als privat Message verschéckt',
 	'boardblaststep2'         => '2. Schrëtt: Wielt aus wien Dir äre Message schöcke wellt',
 	'boardlinkselectall'      => 'Alles uwielen',
+	'boardlinkunselectall'    => 'Näischt ukräizen',
 	'boardlinkselectfriends'  => 'Frënn auswielen',
 	'boardlinkselectfoes'     => 'Géigner auswielen',
 	'boardnofriends'          => 'Dir hutt keng Frënn deenen dir ee Message schécke kënnt!',
