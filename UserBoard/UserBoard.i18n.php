@@ -225,6 +225,66 @@ Cliquer $4
 et modifiez vos paramètres pour désactiver les notifications des courriels.",
 );
 
+/** German (Deutsch)
+ * @author Tim 'Avatar' Bartel
+ */
+
+$messages['de'] = array(
+	'boardblastlogintitle'           => 'Du musst angemeldet sein, um Nachrichten versenden zu können',
+	'boardblastlogintext'       => 'Du musst angemeldet sein, um Nachrichten versenden zu können.  Klicke <a href="index.php?title=Special:UserLogin">hier zum Anmelden</a>',
+	'messagesenttitle'          => 'Nachrichten verschickt',
+	'boardblasttitle'          => 'Nachricht senden',
+	'boardblaststep1'          => 'Schritt 1: Schreibe deine Nachricht',
+	'boardblastprivatenote'	=> 'Alle Nachrichten werden als private Mitteilungen verschickt',
+	'boardblaststep2'          => 'Schritt 2: Wähle aus, wem du die Nachrichte schicken willst',
+	'boardlinkselectall'          => 'Alle markieren',
+	'boardlinkunselectall'          => 'Keine markieren',
+	'boardlinkselectfriends'          => 'Freunde auswählen',
+	'boardlinkunselectfriends'          => 'Freunde abwählen',
+	'boardlinkselectfoes'          => 'Feinde auswählen',
+	'boardlinkunselectfoes'          => 'Feinde abwählen',
+	'boardsendbutton'          => 'Nachricht senden',
+	'boardnofriends' 	=> 'Du hast keine Freunde, denen du eine Nachricht senden könntest!',
+	'messagesentsuccess'	=> 'Deine Nachricht wurde erfolgreich verschickt.',
+	'userboard' => 'Pinnwand',
+	'userboard_noexist' => 'Der gesuchte Benutzer existiert nicht.',
+	'userboard_yourboard' => 'Deine Pinnwand',
+	'userboard_owner' => '$1s Pinnwand',
+	'userboard_yourboardwith' => 'Deine Pinnwand-Diskussion mit with $1',
+	'userboard_otherboardwith' => '$1s Pinnwand-Diskussion mit $2',
+	'userboard_backprofile' => 'Zurück zu $1s Profil',
+	'userboard_backyourprofile' => 'Zurück zu deinem Profil',
+	'userboard_boardtoboard' => 'Pinnwand-Diskussion',
+	'userboard_confirmdelete' => 'Diese Nachricht wirklich löschen?',
+	'userboard_sendmessage' => 'Schicke $1 eine Nachricht',
+	'userboard_delete' => 'Löschen',
+	'userboard_myboard' => 'Meine Pinnwand',
+	'userboard_private' => 'privat',
+	'userboard_public' => 'öffentlich',
+	'userboard_messagetype' => 'Nachrichtentyp',
+	'userboard_nextpage' => 'nächste',
+	'userboard_prevpage' => 'vorherige',
+	'userboard_nomessages' => 'Keine Nachrichten.',
+	'userboard_sendbutton' => 'senden',
+	'userboard_loggedout' => 'Du musst <a href="$1">angemeldet sein</a>, um Nachrichten an andere Nutzer schicken zu können.',
+	'userboard_showingmessages' => 'Zeige {{PLURAL:$1|Nachricht $1 von $1|Nachrichten $2-$3 von $1 insgesamt}}',
+	'message_received_subject' => '$1 hat auf deine {{SITENAME}}-Pinnwand geschrieben',
+	'message_received_body' => 'Hi $1:
+
+$2 hat eben auf deine {{SITENAME}}-Pinnwand geschrieben!
+
+Klicke auf den folgenden Link um deine Pinnwand aufzurufen!
+
+$3
+
+---
+
+Hm, du willst keine E-Mails mehr von uns bekommen?
+
+Klicke $4
+und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.'
+);
+
 /** Khmer (ភាសាខ្មែរ)
  * @author Lovekhmer
  * @author គីមស៊្រុន

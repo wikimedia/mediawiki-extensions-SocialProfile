@@ -86,7 +86,11 @@ Thanks
 
 ---
 
-Hey, want to stop getting emails from us?',
+Hey, want to stop getting emails from us?
+
+Click $4
+and change your settings to disable email notifications.',
+
 		'friend_accept_subject' => '$1 has accepted your friend request on {{SITENAME}}!',
 		'friend_accept_body' => 'Hi $1:
 
@@ -359,6 +363,144 @@ Hé ! Voulez-vous vous arrêter de recevoir des courriels de notre part ?
 Cliquez $4
 et modifiez vos préférences pour désactiver les notifications par courriel.',
 );
+
+/** German (Deutsch)
+ * @author Tim 'Avatar' Bartel
+ */
+$messages['de'] = array(
+		'viewrelationships' => 'Zeige Beziehungen',
+		'viewrelationshiprequests' => 'Zeige Beziehungsanfragen',
+		'ur-error-title'=>'Uuups, hier gehts nicht weiter!',
+		'ur-error-message-no-user'=>'Wir können die Anfrage nicht ausführen, da kein Benutzer dieses Namens existiert.',
+		'ur-main-page'=>'Hauptseite',
+		'ur-your-profile'=>'Dein Profil',
+		'ur-backlink'=>'&lt; Zurück zu $1s Profil',
+		'ur-friend'=>'Freund',
+		'ur-foe'=>'Feind',
+		'ur-relationship-count'=>'$1 hat $2 {{PLURAL:$2|$3|$3e}}.',
+		'ur-add-friends'=>' Du möchtest mehr Freunde haben? <a href="$1">Lad\' sie ein...</a>',
+		'ur-add-friend'=>'Als Freund hinzufügen',
+		'ur-add-foe'=>'Als Feind hinzufügen',
+		'ur-remove-relationship'=>'$1 entfernen',
+		'ur-give-gift'=>'Geschenk senden',
+		'ur-previous'=>'vorherige',
+		'ur-next'=>'nächste',
+		'ur-remove-relationship-title'=>'Möchtest du $1 als deinen $2 entfernen?',
+		'ur-remove-relationship-title-confirm'=>'Du hast $1 als deinen $2 entfernt',
+		'ur-remove-relationship-message'=>'Du möchtest $1 als deinen $2 entfernen, klicke "$3" zur Bestätigung.',
+		'ur-remove-relationship-message-confirm'=>'Du hast $1 erfolgreich als deinen $2 entfernt.',
+		'ur-remove-error-message-no-relationship'=>'$1 steht in keiner Beziehung zu dir.',
+		'ur-remove-error-message-remove-yourself'=>'Du kannst dich nicht selbst enfernen.',
+		'ur-remove-error-message-pending-request'=>'Du hast eine offene $1-Anfrage mit $2.',
+		'ur-remove-error-not-loggedin'=>'Du musst angemeldet sein um einen $1 zu entfernen.',
+		'ur-remove'=>'Entfernen',
+		'ur-cancel'=>'Abbrechen',
+		'ur-login'=>"Anmelden",
+		'ur-add-title'=>'Möchtest du $1 als $2 hinzufügen?',
+		'ur-add-message'=>'Du bist dabei $1 als $2 hinzuzufügen.  Wir informieren $1, damit er deine $3 bestätigen kann.',
+		'ur-friendship'=>'Freundschaft',
+		'ur-grudge'=>'Feindschaft',
+		'ur-add-button'=>"Als $1 hinzufügen",
+		'ur-add-sent-title'=>'Wir haben deine $1-Anfrage an $2 geschickt!',
+		'ur-add-sent-message'=>'Deine $1-Anfrage wurde zur Bestätigung an $2 geschickt.  Wenn $2 deine Anfrage bestätigt, bekommst du eine E-Mail',
+		'ur-add-error-message-no-user'=>'Der Benutzer, den du hinzufügen möchtest, existiert nicht.',
+		'ur-add-error-message-blocked'=>'Du bist momentan gesperrt und kannst keine Freunde oder Feinde hinzufügen.',
+		'ur-add-error-message-yourself'=>'Du kannst dich nicht selbst als Freund oder Feind hinzufügen.',
+		'ur-add-error-message-existing-relationship'=>'Du bist bereits $1 mit $2.',
+		'ur-add-error-message-pending-request-title'=>'Geduld!',
+		'ur-add-error-message-pending-request'=>'Du hast eine offene $1-Anfrage mit $2.  Wir benachrichtigen dich, wenn $2 deine Anfrage bestätigt.',
+		'ur-add-error-message-not-loggedin'=>'Du musst angemeldet sein um einen $1 hinzuzufügen',
+		'ur-requests-title'=>'Beziehungsanfrage',
+		'ur-requests-message'=>'<a href="$1">$2</a> will dein $3 sein.',
+		'ur-accept'=>'Annehmen',
+		'ur-reject'=>'Ablehnen',
+		'ur-no-requests-message'=>'Du hast keine Freund- oder Feind-Anfrage.  Wenn du mehr Freunde haben möchtest, <a href="$1">Lad\' sie ein...</a>',
+		'ur-requests-added-message'=>'Du hast $1 als deinen $2 hinzugefügt.',
+		'ur-requests-reject-message'=>'Du hast $1 als deinen $2 abgelehnt.',
+		'friend_request_subject' => '{{SITENAME}}: $1 hat dich als Freund hinzugefügt!',
+		'friend_request_body' => 'Hi $1:
+
+$2 hat dich in {{SITENAME}} als Freund hinzugefügt.  Wir wollen sicher gehen, dass ihr zwei wirklich Freunde seit.
+
+Bitte klicke den folgenden Link um eure Freundschaft zu bestätigen:
+$3
+
+---
+
+Hm, du willst keine E-Mails mehr von uns bekommen?
+
+Klicke $4
+und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
+		'foe_request_subject' => '{{SITENAME}}: Kriegserklärung! $1 hat dich als Feind hinzugefügt!',
+		'foe_request_body' => 'Hi $1:
+
+$2 hat dich in {{SITENAME}} als Feind hinzugefügt.  Wir wollen sicher gehen, dsas ihr zwei wirklich tödliche Feinde seid  oder euch wenigstens ein wenig streitet.
+
+Bitte klicke den folgenden Link um eure Feindschaft zu bestätigen:
+
+$3
+
+---
+
+Hm, du willst keine E-Mails mehr von uns bekommen?
+
+Klicke $4
+und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
+
+		'friend_accept_subject' => '{{SITENAME}}: $1 hat deine Freundschaftsanfrage bestätigt!',
+		'friend_accept_body' => 'Hi $1:
+
+$2 hat deine Freundschaftsanfrage in {{SITENAME}} bestätigt!
+
+Siehe $2s Seite hier: $3
+
+Danke
+
+---
+
+Hm, du willst keine E-Mails mehr von uns bekommen?
+
+Klicke $4
+und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
+		'foe_accept_subject' => '{{SITENAME}}: $1 hat deine Feind-Anfrage bestätigt!',
+		'foe_accept_body' => 'Hi $1:
+
+$2 hat deine Feind-Anfrage in {{SITENAME}} bestätigt!
+
+Siehe $2s Seite hier: $3
+
+---
+
+Hm, du willst keine E-Mails mehr von uns bekommen?
+
+Klicke $4
+und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
+		'friend_removed_subject' => '{{SITENAME}}: Oh nein! $1 hat seine Freundschaft zu dir beendet!',
+		'friend_removed_body' => 'Hi $1:
+
+$2 hat seine Freundschaft zu dir in {{SITENAME}} beendet!
+
+---
+
+Hm, du willst keine E-Mails mehr von uns bekommen?
+
+Klicke $4
+und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
+		'foe_removed_subject' => '{{SITENAME}}: Hey! $1 hat seine Feindschaft zu dir beendet!',
+		'foe_removed_body' => 'Hi $1:
+
+$2 hat seine Feindschaft zu dir in {{SITENAME}} beendet!
+
+Vielleicht werdet ihr beide ja sogar mal Freunde?
+
+---
+
+Hm, du willst keine E-Mails mehr von uns bekommen?
+
+Klicke $4
+und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
+);
+
 
 /** Khmer (ភាសាខ្មែរ)
  * @author Chhorran
