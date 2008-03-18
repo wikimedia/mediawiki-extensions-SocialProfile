@@ -106,6 +106,66 @@ $messages['bg'] = array(
 	'userboard_showingmessages' => 'Показване на $2–$3 от {{PLURAL:$1|$1 съобщение|$1 съобщения}}',
 );
 
+/** German (Deutsch)
+ * @author Tim 'Avatar' Bartel
+ */
+
+$messages['de'] = array(
+	'boardblastlogintitle'           => 'Du musst angemeldet sein, um Nachrichten versenden zu können',
+	'boardblastlogintext'       => 'Du musst angemeldet sein, um Nachrichten versenden zu können.  Klicke <a href="index.php?title=Special:UserLogin">hier zum Anmelden</a>',
+	'messagesenttitle'          => 'Nachrichten verschickt',
+	'boardblasttitle'          => 'Nachricht senden',
+	'boardblaststep1'          => 'Schritt 1: Schreibe deine Nachricht',
+	'boardblastprivatenote'	=> 'Alle Nachrichten werden als private Mitteilungen verschickt',
+	'boardblaststep2'          => 'Schritt 2: Wähle aus, wem du die Nachrichte schicken willst',
+	'boardlinkselectall'          => 'Alle markieren',
+	'boardlinkunselectall'          => 'Keine markieren',
+	'boardlinkselectfriends'          => 'Freunde auswählen',
+	'boardlinkunselectfriends'          => 'Freunde abwählen',
+	'boardlinkselectfoes'          => 'Feinde auswählen',
+	'boardlinkunselectfoes'          => 'Feinde abwählen',
+	'boardsendbutton'          => 'Nachricht senden',
+	'boardnofriends' 	=> 'Du hast keine Freunde, denen du eine Nachricht senden könntest!',
+	'messagesentsuccess'	=> 'Deine Nachricht wurde erfolgreich verschickt.',
+	'userboard' => 'Pinnwand',
+	'userboard_noexist' => 'Der gesuchte Benutzer existiert nicht.',
+	'userboard_yourboard' => 'Deine Pinnwand',
+	'userboard_owner' => '$1s Pinnwand',
+	'userboard_yourboardwith' => 'Deine Pinnwand-Diskussion mit with $1',
+	'userboard_otherboardwith' => '$1s Pinnwand-Diskussion mit $2',
+	'userboard_backprofile' => 'Zurück zu $1s Profil',
+	'userboard_backyourprofile' => 'Zurück zu deinem Profil',
+	'userboard_boardtoboard' => 'Pinnwand-Diskussion',
+	'userboard_confirmdelete' => 'Diese Nachricht wirklich löschen?',
+	'userboard_sendmessage' => 'Schicke $1 eine Nachricht',
+	'userboard_delete' => 'Löschen',
+	'userboard_myboard' => 'Meine Pinnwand',
+	'userboard_private' => 'privat',
+	'userboard_public' => 'öffentlich',
+	'userboard_messagetype' => 'Nachrichtentyp',
+	'userboard_nextpage' => 'nächste',
+	'userboard_prevpage' => 'vorherige',
+	'userboard_nomessages' => 'Keine Nachrichten.',
+	'userboard_sendbutton' => 'senden',
+	'userboard_loggedout' => 'Du musst <a href="$1">angemeldet sein</a>, um Nachrichten an andere Nutzer schicken zu können.',
+	'userboard_showingmessages' => 'Zeige {{PLURAL:$1|Nachricht $1 von $1|Nachrichten $2-$3 von $1 insgesamt}}',
+	'message_received_subject' => '$1 hat auf deine {{SITENAME}}-Pinnwand geschrieben',
+	'message_received_body' => 'Hi $1:
+
+$2 hat eben auf deine {{SITENAME}}-Pinnwand geschrieben!
+
+Klicke auf den folgenden Link um deine Pinnwand aufzurufen!
+
+$3
+
+---
+
+Hm, du willst keine E-Mails mehr von uns bekommen?
+
+Klicke $4
+und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.'
+);
+
 /** Finnish (Suomi)
  * @author Jack Phoenix
  * @author Crt
@@ -223,66 +283,6 @@ Hé ! Voulez-vous arrêter d’obtenir, de nous, les courriels ?
 
 Cliquer $4
 et modifiez vos paramètres pour désactiver les notifications des courriels.",
-);
-
-/** German (Deutsch)
- * @author Tim 'Avatar' Bartel
- */
-
-$messages['de'] = array(
-	'boardblastlogintitle'           => 'Du musst angemeldet sein, um Nachrichten versenden zu können',
-	'boardblastlogintext'       => 'Du musst angemeldet sein, um Nachrichten versenden zu können.  Klicke <a href="index.php?title=Special:UserLogin">hier zum Anmelden</a>',
-	'messagesenttitle'          => 'Nachrichten verschickt',
-	'boardblasttitle'          => 'Nachricht senden',
-	'boardblaststep1'          => 'Schritt 1: Schreibe deine Nachricht',
-	'boardblastprivatenote'	=> 'Alle Nachrichten werden als private Mitteilungen verschickt',
-	'boardblaststep2'          => 'Schritt 2: Wähle aus, wem du die Nachrichte schicken willst',
-	'boardlinkselectall'          => 'Alle markieren',
-	'boardlinkunselectall'          => 'Keine markieren',
-	'boardlinkselectfriends'          => 'Freunde auswählen',
-	'boardlinkunselectfriends'          => 'Freunde abwählen',
-	'boardlinkselectfoes'          => 'Feinde auswählen',
-	'boardlinkunselectfoes'          => 'Feinde abwählen',
-	'boardsendbutton'          => 'Nachricht senden',
-	'boardnofriends' 	=> 'Du hast keine Freunde, denen du eine Nachricht senden könntest!',
-	'messagesentsuccess'	=> 'Deine Nachricht wurde erfolgreich verschickt.',
-	'userboard' => 'Pinnwand',
-	'userboard_noexist' => 'Der gesuchte Benutzer existiert nicht.',
-	'userboard_yourboard' => 'Deine Pinnwand',
-	'userboard_owner' => '$1s Pinnwand',
-	'userboard_yourboardwith' => 'Deine Pinnwand-Diskussion mit with $1',
-	'userboard_otherboardwith' => '$1s Pinnwand-Diskussion mit $2',
-	'userboard_backprofile' => 'Zurück zu $1s Profil',
-	'userboard_backyourprofile' => 'Zurück zu deinem Profil',
-	'userboard_boardtoboard' => 'Pinnwand-Diskussion',
-	'userboard_confirmdelete' => 'Diese Nachricht wirklich löschen?',
-	'userboard_sendmessage' => 'Schicke $1 eine Nachricht',
-	'userboard_delete' => 'Löschen',
-	'userboard_myboard' => 'Meine Pinnwand',
-	'userboard_private' => 'privat',
-	'userboard_public' => 'öffentlich',
-	'userboard_messagetype' => 'Nachrichtentyp',
-	'userboard_nextpage' => 'nächste',
-	'userboard_prevpage' => 'vorherige',
-	'userboard_nomessages' => 'Keine Nachrichten.',
-	'userboard_sendbutton' => 'senden',
-	'userboard_loggedout' => 'Du musst <a href="$1">angemeldet sein</a>, um Nachrichten an andere Nutzer schicken zu können.',
-	'userboard_showingmessages' => 'Zeige {{PLURAL:$1|Nachricht $1 von $1|Nachrichten $2-$3 von $1 insgesamt}}',
-	'message_received_subject' => '$1 hat auf deine {{SITENAME}}-Pinnwand geschrieben',
-	'message_received_body' => 'Hi $1:
-
-$2 hat eben auf deine {{SITENAME}}-Pinnwand geschrieben!
-
-Klicke auf den folgenden Link um deine Pinnwand aufzurufen!
-
-$3
-
----
-
-Hm, du willst keine E-Mails mehr von uns bekommen?
-
-Klicke $4
-und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.'
 );
 
 /** Khmer (ភាសាខ្មែរ)
@@ -680,10 +680,58 @@ a zmeňte svoje nastavenia na vypnutie upozornení emailom.',
  * @author M.M.S.
  */
 $messages['sv'] = array(
-	'userboard_delete'     => 'Ta bort',
-	'userboard_nextpage'   => 'nästa',
-	'userboard_nomessages' => 'Inga meddelanden.',
-	'userboard_sendbutton' => 'sänd',
+	'boardblastlogintitle'      => 'Du måste vara inloggad för att sända meddelanden',
+	'boardblastlogintext'       => 'Du måste vara inloggad för att sända meddelanden. Klicka <a href="index.php?title=Special:Userlogin">här för att logga in</a>',
+	'messagesenttitle'          => 'Sända meddelanden',
+	'boardblasttitle'           => 'Sänd meddelande',
+	'boardblaststep1'           => 'Steg 1 - Skriv ditt meddelande',
+	'boardblastprivatenote'     => 'Alla meddelanden ska vara privata',
+	'boardblaststep2'           => 'Steg 2 - Välj vem du vill sända meddelandet till',
+	'boardlinkselectall'        => 'Märk alla',
+	'boardlinkunselectall'      => 'Radera all märkning',
+	'boardlinkselectfriends'    => 'Märk vänner',
+	'boardlinkunselectfriends'  => 'Ta bort märkning av vänner',
+	'boardlinkselectfoes'       => 'Märk fiender',
+	'boardlinkunselectfoes'     => 'Ta bort märkning av fiender',
+	'boardsendbutton'           => 'Sänd meddelande',
+	'boardnofriends'            => 'Du har inga vänner att sända meddelandet till!',
+	'messagesentsuccess'        => 'Ditt meddelande har skickats',
+	'userboard'                 => 'Användardiskussion',
+	'userboard_noexist'         => 'Användaren du prövar att se finns inte.',
+	'userboard_yourboard'       => 'Din diskussionssida',
+	'userboard_owner'           => '$1s diskussionssida',
+	'userboard_yourboardwith'   => 'Din delade diskussionssida med $1',
+	'userboard_otherboardwith'  => 'Dela diskussionsida mellan $1 och $2',
+	'userboard_backprofile'     => 'Tillbaka till $1s profil',
+	'userboard_backyourprofile' => 'Tillbaka till din profil',
+	'userboard_boardtoboard'    => 'Delad diskussionssida',
+	'userboard_confirmdelete'   => 'Är du säker på att du vill radera detta meddelande?',
+	'userboard_sendmessage'     => 'Skickade ett meddelande till $1',
+	'userboard_delete'          => 'Ta bort',
+	'userboard_myboard'         => 'Min diskussionssida',
+	'userboard_private'         => 'privat',
+	'userboard_public'          => 'offentlig',
+	'userboard_messagetype'     => 'Meddelandetyp',
+	'userboard_nextpage'        => 'nästa',
+	'userboard_prevpage'        => 'föregående',
+	'userboard_nomessages'      => 'Inga meddelanden.',
+	'userboard_sendbutton'      => 'sänd',
+	'userboard_loggedout'       => 'Du måste vara <a href="$1">inloggad</a> för att skicka meddelanden till andra användare.',
+	'userboard_showingmessages' => 'Visar $2-$3 av {{PLURAL:$1|$1 meddelande|$1 meddelanden}}',
+	'message_received_subject'  => '$1 har skrivit på din diskussionssida på {{SITENAME}}',
+	'message_received_body'     => 'Hej, $1.
+
+$2 har skrivit på din diskussionssida på {{SITENAME}}.
+
+Följ länken nedan för att se din diskussionssida.
+
+$3
+
+---
+
+Vill du inte motta mer e-post ifrån oss?
+
+Klicka $4 och ändra dina inställningar för att slå av e-postbesked.',
 );
 
 /** Telugu (తెలుగు)
