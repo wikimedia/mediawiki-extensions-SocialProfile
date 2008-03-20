@@ -162,13 +162,18 @@ $messages['en'] = array(
 
 /** Arabic (العربية)
  * @author Alnokta
+ * @author Meno25
  */
 $messages['ar'] = array(
 	'user-count-separator'                 => 'من',
 	'user-view-all'                        => 'اعرض الكل',
+	'user-upload-image'                    => 'رفع الصورة',
 	'user-edit-this'                       => 'عدل هذا',
+	'user-time-ago'                        => 'مضى',
 	'user-points'                          => 'نقاط',
 	'user-edit-profile'                    => 'عدل الملف',
+	'user-watchlist'                       => 'قائمة مراقبتي',
+	'user-meet-people'                     => 'لقاء الناس',
 	'user-add-friend'                      => 'أضف كصديق',
 	'user-add-foe'                         => 'أضف كعدو',
 	'user-remove-friend'                   => 'أزل كصديق',
@@ -183,6 +188,7 @@ $messages['ar'] = array(
 	'other-info-tv'                        => 'تلفزيون',
 	'other-info-music'                     => 'موسيقى',
 	'other-info-books'                     => 'كتب',
+	'other-info-video-games'               => 'ألعاب فيديو',
 	'other-info-magazines'                 => 'مجلات',
 	'other-info-snacks'                    => 'وجبات',
 	'other-info-drinks'                    => 'مشروبات',
@@ -202,8 +208,24 @@ $messages['ar'] = array(
 	'user-personal-info-occupation'        => 'الوظيفة',
 	'user-personal-info-websites'          => 'مواقع',
 	'user-personal-info-places-lived'      => 'أماكن أقمت فيها',
+	'user-personal-info-schools'           => 'مدارس',
+	'user-personal-info-about-me'          => 'حولي',
+	'user-recent-activity-title'           => 'نشاط حديث',
+	'user-recent-activity-edit'            => 'عدل الصفحة',
+	'user-recent-activity-vote'            => 'صوت للصفحة',
+	'user-recent-activity-comment'         => 'علق على الصفحة',
+	'user-recent-activity-gift-sent'       => 'أرسل هدية إلى',
+	'user-recent-activity-gift-rec'        => 'حصل على هدية من',
+	'user-recent-activity-friend'          => 'هو الآن صديق ل',
+	'user-recent-activity-foe'             => 'هو الآن عدو ل',
+	'user-recent-activity-user-message'    => 'أرسل رسالة إلى',
+	'user-recent-system-gift'              => 'حصل على جائزة',
+	'user-profile-update-log-section'      => 'غير القسم',
+	'user-profile-update-profile'          => 'ملف',
 	'user-profile-default-country'         => 'الولايات المتحدة',
 	'user-profile-section-personal'        => 'معلومات شخصية',
+	'user-profile-section-sportsteams'     => 'حدث الشبكات',
+	'user-profile-section-interests'       => 'معلومات أخرى',
 	'user-profile-section-preferences'     => 'تفضيلات',
 	'user-profile-personal-info'           => 'معلومات',
 	'user-profile-personal-name'           => 'اسم',
@@ -238,6 +260,7 @@ $messages['ar'] = array(
 	'user-profile-sports-sport'            => 'رياضة',
 	'user-profile-sports-teamremoved'      => 'أزيل فريقك',
 	'user-profile-sports-teamsaved'        => 'أزيلت فرقك',
+	'user-profile-picture-yourpicture'     => 'صورتك',
 	'user-profile-picture-large'           => 'كبير',
 	'user-profile-picture-medlarge'        => 'متوسط - كبير',
 	'user-profile-picture-medium'          => 'متوسط',
@@ -249,6 +272,8 @@ $messages['ar'] = array(
 	'user-no-images'                       => 'لا صور مرفوعة',
 	'edit-profile-title'                   => 'عدل ملفك',
 	'user-page-link'                       => 'صفحة مستخدم',
+	'user-social-profile-link'             => 'ملف اجتماعي',
+	'user-wiki-link'                       => 'صفحة المستخدم على الويكي',
 	'user-type-toggle-old'                 => 'استخدم صفحة مستخدم الويكي',
 );
 
@@ -512,6 +537,44 @@ $messages['de'] = array(
 	'user-type-toggle-old' => 'Benutze Wiki-Benutzerseite',
 	'user-type-toggle-new' => 'Benutzer Profil-Seite',
 	'user-board-login-message'=>'Du musst <a href="$1">angemeldet sein</a> um Nachrichten an andere Nutzer zu senden'
+);
+
+/** Greek (Ελληνικά)
+ * @author Consta
+ */
+$messages['el'] = array(
+	'user-points'                          => 'βαθμοί',
+	'user-friends-title'                   => 'Φίλοι',
+	'other-info-movies'                    => 'Ταινίες',
+	'other-info-music'                     => 'Μουσική',
+	'other-info-books'                     => 'Βιβλία',
+	'other-info-video-games'               => 'Ηλεκτρονικά Παιχνίδια',
+	'other-info-magazines'                 => 'Περιοδικά',
+	'user-personal-info-websites'          => 'Ιστοσελίδες',
+	'user-personal-info-schools'           => 'Σχολεία',
+	'user-personal-info-about-me'          => 'Για Εμένα',
+	'user-profile-default-country'         => 'Ηνωμένες Πολιτείες',
+	'user-profile-section-preferences'     => 'Προτιμήσεις',
+	'user-profile-personal-info'           => 'Πληροφορία',
+	'user-profile-personal-name'           => 'Όνομα',
+	'user-profile-personal-city'           => 'Πόλη',
+	'user-profile-personal-country'        => 'Χώρα',
+	'user-profile-personal-birthday'       => 'Γενέθλια',
+	'user-profile-personal-aboutme'        => 'Για Εμένα',
+	'user-profile-personal-occupation'     => 'Επάγγελμα',
+	'user-profile-personal-education'      => 'Εκπαίδευση',
+	'user-profile-personal-schools'        => 'Σχολεία',
+	'user-profile-personal-web'            => 'Ιστός',
+	'user-profile-personal-websites'       => 'Ιστοσελίδες',
+	'user-profile-interests-entertainment' => 'Ψυχαγωγία',
+	'user-profile-interests-movies'        => 'Ταινίες',
+	'user-profile-interests-tv'            => 'Τηλεόραση',
+	'user-profile-interests-music'         => 'Μουσική',
+	'user-profile-interests-books'         => 'Βιβλία',
+	'user-profile-interests-magazines'     => 'Περιοδικά',
+	'user-profile-interests-videogames'    => 'Ηλεκτρονικά Παιχνίδια',
+	'user-profile-interests-drinks'        => 'Ποτά',
+	'user-profile-sports-sport'            => 'Άθλημα',
 );
 
 /** Esperanto (Esperanto)

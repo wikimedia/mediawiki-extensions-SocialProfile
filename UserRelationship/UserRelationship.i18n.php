@@ -349,6 +349,17 @@ Klicke $4
 und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
 );
 
+/** Greek (Ελληνικά)
+ * @author Consta
+ */
+$messages['el'] = array(
+	'ur-main-page'                               => 'Κύρια σελίδα',
+	'ur-friend'                                  => 'φίλος',
+	'ur-give-gift'                               => 'Δώστε ένα Δώρο',
+	'ur-friendship'                              => 'φιλία',
+	'ur-add-error-message-pending-request-title' => 'Υπομονή!',
+);
+
 /** Esperanto (Esperanto)
  * @author Yekrats
  */
@@ -1111,6 +1122,17 @@ $messages['sv'] = array(
 	'friend_request_subject'                     => '$1 har laggt till dig som vän på {{SITENAME}}!',
 	'friend_removed_subject'                     => 'Å Nej! $1 har tagit bort dig som vän på {{SITENAME}}!',
 	'foe_removed_subject'                        => 'Hurra! $1 har tagit bort dig som fiende på {{SITENAME}}!',
+	'foe_removed_body'                           => 'Hej, $1.
+
+$2 har tagit bort dig som fiende på {{SITENAME}}.
+
+Kanske ni två är på väg att bli vänner?
+
+---
+
+Vill du inte motta mer e-post från oss?
+
+Klicka $4 och ändra dina inställningarna för att slå av e-postmeddelanden.',
 );
 
 /** Telugu (తెలుగు)

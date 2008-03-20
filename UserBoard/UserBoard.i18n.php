@@ -64,18 +64,29 @@ and change your settings to disable email notifications.'
 );
 
 /** Arabic (العربية)
+ * @author Meno25
  * @author Alnokta
  */
 $messages['ar'] = array(
-	'userboard_confirmdelete' => 'أتريد حذف هذه الرسالة حقًا؟',
-	'userboard_delete'        => 'احذف',
-	'userboard_private'       => 'خاص',
-	'userboard_public'        => 'عمومي',
-	'userboard_messagetype'   => 'نوع الرسالة',
-	'userboard_nextpage'      => 'بعد',
-	'userboard_prevpage'      => 'قبل',
-	'userboard_nomessages'    => 'لا رسائل.',
-	'userboard_sendbutton'    => 'ارسل',
+	'messagesenttitle'         => 'الرسائل تم إرسالها',
+	'boardlinkselectall'       => 'اختيار الكل',
+	'boardlinkunselectall'     => 'عكس اختيار الكل',
+	'boardlinkselectfriends'   => 'اختيار الأصدقاء',
+	'boardlinkunselectfriends' => 'عكس اختيار الأصدقاء',
+	'boardlinkselectfoes'      => 'اختيار الأعداء',
+	'boardlinkunselectfoes'    => 'عكس اختيار الأعداء',
+	'userboard'                => 'مجلس المستخدم',
+	'userboard_yourboard'      => 'مجلسك',
+	'userboard_confirmdelete'  => 'أتريد حذف هذه الرسالة حقًا؟',
+	'userboard_delete'         => 'احذف',
+	'userboard_myboard'        => 'مجلسي',
+	'userboard_private'        => 'خاص',
+	'userboard_public'         => 'عمومي',
+	'userboard_messagetype'    => 'نوع الرسالة',
+	'userboard_nextpage'       => 'بعد',
+	'userboard_prevpage'       => 'قبل',
+	'userboard_nomessages'     => 'لا رسائل.',
+	'userboard_sendbutton'     => 'ارسل',
 );
 
 /** Bulgarian (Български)
@@ -164,6 +175,13 @@ Hm, du willst keine E-Mails mehr von uns bekommen?
 
 Klicke $4
 und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.'
+);
+
+/** Greek (Ελληνικά)
+ * @author Consta
+ */
+$messages['el'] = array(
+	'userboard_messagetype' => 'Τύπος Μηνύματος',
 );
 
 /** Finnish (Suomi)
@@ -364,7 +382,7 @@ $messages['mr'] = array(
 $messages['nl'] = array(
 	'boardblastlogintitle'      => 'U moet aangemeld zijn om berichten naar meerdere gebruikers te kunnen verzenden',
 	'boardblastlogintext'       => 'U moet aangemeld zijn om berichten naar meerdere gebruikers te kunnen verzenden. Klik <a href="index.php?title=Special:UserLogin">hier om aan te melden</a>',
-	'messagesenttitle'          => 'Bericht verstuurd',
+	'messagesenttitle'          => 'Berichten verstuurd',
 	'boardblasttitle'           => 'Bericht aan meerdere gebruikers verzenden',
 	'boardblaststep1'           => 'Stap 1: uw bericht schrijven',
 	'boardblastprivatenote'     => 'Alle berichten worden verzonden als privéberichten',
