@@ -89,9 +89,10 @@ $messages['sk'] = array(
 
 /** Swedish (Svenska)
  * @author M.M.S.
+ * @author Sannab
  */
 $messages['sv'] = array(
-	'yui-desc' => 'En serie av utiliteter och kontroller, skrivna i JavaScript',
+	'yui-desc' => 'En serie av verktyg och kontroller, skrivna i JavaScript',
 );
 
 /** Vietnamese (Tiếng Việt)

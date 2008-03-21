@@ -184,6 +184,13 @@ $messages['el'] = array(
 	'userboard_messagetype' => 'Τύπος Μηνύματος',
 );
 
+/** Esperanto (Esperanto)
+ * @author Yekrats
+ */
+$messages['eo'] = array(
+	'boardlinkselectall' => 'Elektu Ĉiujn',
+);
+
 /** Finnish (Suomi)
  * @author Jack Phoenix
  * @author Crt
