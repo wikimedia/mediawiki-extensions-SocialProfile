@@ -367,6 +367,8 @@ $messages['eo'] = array(
 	'ur-main-page'  => 'Ĉefpaĝo',
 	'ur-foe'        => 'malamiko',
 	'ur-add-friend' => 'Amiko',
+	'ur-accept'     => 'Akceptu',
+	'ur-reject'     => 'Malakceptu',
 );
 
 /** French (Français)
