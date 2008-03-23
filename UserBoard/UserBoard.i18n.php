@@ -117,6 +117,13 @@ $messages['bg'] = array(
 	'userboard_showingmessages' => 'Показване на $2–$3 от {{PLURAL:$1|$1 съобщение|$1 съобщения}}',
 );
 
+/** Bengali (বাংলা)
+ * @author Zaheen
+ */
+$messages['bn'] = array(
+	'userboard_delete' => 'মুছে ফেলা হোক',
+);
+
 /** German (Deutsch)
  * @author Tim 'Avatar' Bartel
  */
