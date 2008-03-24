@@ -327,6 +327,37 @@ Cliquer $4
 et modifiez vos paramètres pour désactiver les notifications des courriels.",
 );
 
+/** Galician (Galego)
+ * @author Toliño
+ */
+$messages['gl'] = array(
+	'messagesenttitle'          => 'Mensaxes enviadas',
+	'boardblaststep1'           => 'Paso 1 - Estriba a súa mensaxe',
+	'boardblastprivatenote'     => 'Todas as mensaxes serán enviadas de maneira privada',
+	'boardblaststep2'           => 'Paso 2 - Escolla a quen lle quere enviar a súa mensaxe tamén',
+	'boardlinkselectall'        => 'Seleccionar todo',
+	'boardlinkselectfriends'    => 'Seleccionar amigos',
+	'boardlinkselectfoes'       => 'Seleccionar inimigos',
+	'boardnofriends'            => 'Non ten amigos para mandarlles mensaxes!',
+	'messagesentsuccess'        => 'A súa mensaxe foi enviada con éxito',
+	'userboard'                 => 'Taboleiro do usuario',
+	'userboard_noexist'         => 'O usuario que está tentando ver non existe.',
+	'userboard_yourboard'       => 'O seu taboleiro',
+	'userboard_owner'           => 'O taboleiro de $1',
+	'userboard_backprofile'     => 'Voltar ao perfil de $1',
+	'userboard_backyourprofile' => 'Voltar ao seu perfil',
+	'userboard_confirmdelete'   => 'Está seguro de que quere eliminar esta mensaxe?',
+	'userboard_delete'          => 'Borrar',
+	'userboard_myboard'         => 'O meu taboleiro',
+	'userboard_private'         => 'privada',
+	'userboard_public'          => 'pública',
+	'userboard_messagetype'     => 'Tipo de mensaxe',
+	'userboard_nextpage'        => 'seguinte',
+	'userboard_prevpage'        => 'anterior',
+	'userboard_nomessages'      => 'Ningunha mensaxe.',
+	'userboard_sendbutton'      => 'enviar',
+);
+
 /** Khmer (ភាសាខ្មែរ)
  * @author Lovekhmer
  * @author គីមស៊្រុន
@@ -358,30 +389,34 @@ $messages['km'] = array(
  * @author Robby
  */
 $messages['lb'] = array(
-	'messagesenttitle'        => 'Geschéckte Messagen',
-	'boardblaststep1'         => '1. Schrëtt: Schreiwt äre Message',
-	'boardblastprivatenote'   => 'All Message ginn als privat Message verschéckt',
-	'boardblaststep2'         => '2. Schrëtt: Wielt aus wien Dir äre Message schöcke wellt',
-	'boardlinkselectall'      => 'Alles uwielen',
-	'boardlinkunselectall'    => 'Näischt ukräizen',
-	'boardlinkselectfriends'  => 'Frënn auswielen',
-	'boardlinkselectfoes'     => 'Géigner auswielen',
-	'boardnofriends'          => 'Dir hutt keng Frënn deenen dir ee Message schécke kënnt!',
-	'userboard'               => 'Benotzertafel',
-	'userboard_noexist'       => 'De Benotzer den Dir wëllt gesi gëtt et net.',
-	'userboard_yourboard'     => 'Är Tafel',
-	'userboard_owner'         => 'Dem $1 seng Tafel',
-	'userboard_confirmdelete' => 'Sidd Dir sécher datt Dir dëse Message läsche wellt?',
-	'userboard_sendmessage'   => 'Dem $1 ee Message schécken',
-	'userboard_delete'        => 'Läschen',
-	'userboard_myboard'       => 'Meng Tafel',
-	'userboard_private'       => 'privat',
-	'userboard_public'        => 'ëffentlech',
-	'userboard_messagetype'   => 'Typ vu Message',
-	'userboard_nextpage'      => 'nächst',
-	'userboard_prevpage'      => 'vireg',
-	'userboard_nomessages'    => 'Keng Messagen',
-	'userboard_sendbutton'    => 'geschéckt',
+	'messagesenttitle'          => 'Geschéckte Messagen',
+	'boardblaststep1'           => '1. Schrëtt: Schreiwt äre Message',
+	'boardblastprivatenote'     => 'All Message ginn als privat Message verschéckt',
+	'boardblaststep2'           => '2. Schrëtt: Wielt aus wien Dir äre Message schöcke wellt',
+	'boardlinkselectall'        => 'Alles uwielen',
+	'boardlinkunselectall'      => 'Näischt ukräizen',
+	'boardlinkselectfriends'    => 'Frënn auswielen',
+	'boardlinkunselectfriends'  => 'Aus der Lëscht vun de Frënn ewechhuelen',
+	'boardlinkselectfoes'       => 'Géigner auswielen',
+	'boardnofriends'            => 'Dir hutt keng Frënn deenen dir ee Message schécke kënnt!',
+	'messagesentsuccess'        => 'Äre Noriicht gouf geschéckt',
+	'userboard'                 => 'Benotzertafel',
+	'userboard_noexist'         => 'De Benotzer den Dir wëllt gesi gëtt et net.',
+	'userboard_yourboard'       => 'Är Tafel',
+	'userboard_owner'           => 'Dem $1 seng Tafel',
+	'userboard_backprofile'     => 'Zréck op dem $1 säi Profil',
+	'userboard_backyourprofile' => 'Zréck op äre Profil',
+	'userboard_confirmdelete'   => 'Sidd Dir sécher datt Dir dëse Message läsche wellt?',
+	'userboard_sendmessage'     => 'Dem $1 ee Message schécken',
+	'userboard_delete'          => 'Läschen',
+	'userboard_myboard'         => 'Meng Tafel',
+	'userboard_private'         => 'privat',
+	'userboard_public'          => 'ëffentlech',
+	'userboard_messagetype'     => 'Typ vu Message',
+	'userboard_nextpage'        => 'nächst',
+	'userboard_prevpage'        => 'vireg',
+	'userboard_nomessages'      => 'Keng Messagen',
+	'userboard_sendbutton'      => 'geschéckt',
 );
 
 /** Marathi (मराठी)
@@ -812,6 +847,13 @@ $messages['te'] = array(
 	'userboard_prevpage'      => 'క్రితం',
 	'userboard_nomessages'    => 'సందేశాలు లేవు.',
 	'userboard_sendbutton'    => 'పంపించు',
+);
+
+/** Tetum (Tetun)
+ * @author MF-Warburg
+ */
+$messages['tet'] = array(
+	'userboard_delete' => 'Halakon',
 );
 
 /** Tajik (Тоҷикӣ)

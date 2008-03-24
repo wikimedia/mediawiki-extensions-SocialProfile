@@ -545,7 +545,7 @@ $messages['gl'] = array(
 	'ur-add-foe'                                 => 'Engadir como inimigo',
 	'ur-remove-relationship'                     => 'Eliminar dos seus $1',
 	'ur-give-gift'                               => 'Dar un agasallo',
-	'ur-previous'                                => 'previo',
+	'ur-previous'                                => 'anterior',
 	'ur-next'                                    => 'seguinte',
 	'ur-remove-relationship-title'               => 'Quere eliminar a $1 dos seus $2?',
 	'ur-remove-relationship-title-confirm'       => 'Eliminou a $1 dos seus $2',
@@ -610,13 +610,18 @@ $messages['km'] = array(
  * @author Robby
  */
 $messages['lb'] = array(
+	'ur-error-title'                             => 'Ups, hei geet et net weider!',
 	'ur-main-page'                               => 'Haaptsäit',
+	'ur-your-profile'                            => 'Äre Profil',
+	'ur-backlink'                                => '&lt; Zréck op de Profil vum $1',
 	'ur-friend'                                  => 'Frënd',
 	'ur-foe'                                     => 'Géigner',
+	'ur-give-gift'                               => 'Cadeau schécken',
 	'ur-previous'                                => 'vireg',
 	'ur-next'                                    => 'nächst',
 	'ur-remove'                                  => 'Ewechhuelen',
 	'ur-cancel'                                  => 'Annulléieren',
+	'ur-friendship'                              => 'Frëndschaft',
 	'ur-add-error-message-pending-request-title' => 'Gedold!',
 );
 

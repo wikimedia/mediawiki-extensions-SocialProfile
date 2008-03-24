@@ -80,6 +80,13 @@ $messages['pl'] = array(
 	'yui-desc' => 'Zestaw narzędzi i elementów kontrolnych napisanych w jezyku JavaScript',
 );
 
+/** Russian (Русский)
+ * @author .:Ajvol:.
+ */
+$messages['ru'] = array(
+	'yui-desc' => 'Набор написанных на JavaScript инструментов и управляющих элементов',
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */

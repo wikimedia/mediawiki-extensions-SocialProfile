@@ -1118,9 +1118,12 @@ $messages['lb'] = array(
 	'user-edit-this'                       => 'Dëst änneren',
 	'user-time-ago'                        => 'viru(n)',
 	'user-points'                          => 'Punkten',
+	'user-edit-profile'                    => 'Profil änneren',
 	'user-upload-avatar'                   => 'Avatar eroplueden',
 	'user-watchlist'                       => 'Meng Iwwerwaachungslëscht',
 	'user-meet-people'                     => 'Leit begéinen',
+	'user-send-message'                    => 'Noriicht schécken',
+	'user-send-gift'                       => 'Cadeau schécken',
 	'user-contributions'                   => 'Kontributiounen',
 	'other-info-title'                     => 'Aner Informatiounen',
 	'user-friends-title'                   => 'Frënn',
@@ -1137,6 +1140,8 @@ $messages['lb'] = array(
 	'user-personal-info-places-lived'      => 'Plaze wou ech geliewt hun',
 	'user-personal-info-schools'           => 'Schoulen',
 	'user-personal-info-about-me'          => 'Iwwer mech',
+	'user-profile-update-saved'            => 'Äre Profil gouf ofgespäichert',
+	'user-profile-update-profile'          => 'Profil',
 	'user-profile-default-country'         => 'Lëtzebuerg',
 	'user-profile-section-personal'        => 'Perséinlech Informatiounen',
 	'user-profile-section-interests'       => 'Aner Informatiounen',
@@ -1153,6 +1158,7 @@ $messages['lb'] = array(
 	'user-profile-interests-music'         => 'Musek',
 	'user-profile-interests-books'         => 'Bicher',
 	'user-profile-interests-drinks'        => 'Gedrénks',
+	'user-profile-update-button'           => 'Aktualiséieren',
 	'user-profile-sports-sport'            => 'Sport',
 	'user-profile-sports-notloggedintitle' => 'Ups!',
 	'user-profile-picture-title'           => 'Ärt Bild eroplueden',
@@ -1166,6 +1172,7 @@ Avatar',
 	'user-profile-picture-picsize'         => 'Ärt Bild muss am jpeg, png oder gif Format sinn a manner wéi 100 Kilobyte grouss sinn.',
 	'user-profile-goback'                  => "Z'réck",
 	'user-no-images'                       => 'Kee Bild eropgelueden',
+	'edit-profile-title'                   => 'Äre Profil änneren',
 	'user-page-link'                       => 'Benotzersäit',
 );
 
@@ -2282,8 +2289,12 @@ $messages['te'] = array(
  * @author MF-Warburg
  */
 $messages['tet'] = array(
-	'user-profile-personal-name' => 'Naran',
-	'user-profile-personal-city' => 'Sidade',
+	'user-watchlist'               => "Ha'u-nia lista hateke",
+	'other-info-books'             => 'Livru sira',
+	'user-profile-personal-name'   => 'Naran',
+	'user-profile-personal-email'  => 'Korreiu eletróniku',
+	'user-profile-personal-city'   => 'Sidade',
+	'user-profile-interests-books' => 'Livru sira',
 );
 
 /** Tajik (Тоҷикӣ)
