@@ -124,6 +124,16 @@ $messages['bn'] = array(
 	'userboard_delete' => 'মুছে ফেলা হোক',
 );
 
+/** Danish (Dansk)
+ * @author Jon Harald Søby
+ */
+$messages['da'] = array(
+	'userboard_delete'     => 'Slet',
+	'userboard_private'    => 'privat',
+	'userboard_nextpage'   => 'næste',
+	'userboard_sendbutton' => 'send',
+);
+
 /** German (Deutsch)
  * @author Tim 'Avatar' Bartel
  */
@@ -449,6 +459,16 @@ Klik $4
 en wijzig uw instellingen om e-mailberichten uit te schakelen.',
 );
 
+/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+ * @author Jon Harald Søby
+ */
+$messages['nn'] = array(
+	'userboard_delete'     => 'Slett',
+	'userboard_private'    => 'privat',
+	'userboard_nextpage'   => 'neste',
+	'userboard_sendbutton' => 'send',
+);
+
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Jon Harald Søby
  */
@@ -711,6 +731,7 @@ a zmeňte svoje nastavenia na vypnutie upozornení emailom.',
 
 /** Swedish (Svenska)
  * @author M.M.S.
+ * @author Jon Harald Søby
  */
 $messages['sv'] = array(
 	'boardblastlogintitle'      => 'Du måste vara inloggad för att sända meddelanden',
@@ -740,7 +761,7 @@ $messages['sv'] = array(
 	'userboard_boardtoboard'    => 'Delad diskussionssida',
 	'userboard_confirmdelete'   => 'Är du säker på att du vill radera detta meddelande?',
 	'userboard_sendmessage'     => 'Skickade ett meddelande till $1',
-	'userboard_delete'          => 'Ta bort',
+	'userboard_delete'          => 'Radera',
 	'userboard_myboard'         => 'Min diskussionssida',
 	'userboard_private'         => 'privat',
 	'userboard_public'          => 'offentlig',

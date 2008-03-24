@@ -312,6 +312,7 @@ $messages['bg'] = array(
 	'user-no-personal-info'                           => 'Не е въведена лична информация',
 	'user-personal-info-real-name'                    => 'Истинско име',
 	'user-personal-info-birthday'                     => 'Рожден ден',
+	'user-personal-info-occupation'                   => 'Длъжност',
 	'user-personal-info-websites'                     => 'Уебсайтове',
 	'user-personal-info-schools'                      => 'Училища',
 	'user-personal-info-about-me'                     => 'За мен',
@@ -340,6 +341,8 @@ $messages['bg'] = array(
 	'user-profile-personal-birthday'                  => 'Рожден ден',
 	'user-profile-personal-birthdate'                 => 'Дата (мм/дд)',
 	'user-profile-personal-aboutme'                   => 'За мен',
+	'user-profile-personal-work'                      => 'Работа',
+	'user-profile-personal-occupation'                => 'Длъжност',
 	'user-profile-personal-education'                 => 'Образование',
 	'user-profile-personal-schools'                   => 'Училища',
 	'user-profile-personal-websites'                  => 'Уебсайтове',
@@ -381,6 +384,21 @@ $messages['bg'] = array(
 	'user-type-toggle-old'                            => 'Използване на потребителската страница от уикито',
 	'user-type-toggle-new'                            => 'Използване на социалната потребителска страница',
 	'user-board-login-message'                        => 'За оставяне на съобщения до другите потребители е необходимо <a href="$1">влизане</a> в системата',
+);
+
+/** Danish (Dansk)
+ * @author Jon Harald Søby
+ */
+$messages['da'] = array(
+	'other-info-tv'                    => 'TV',
+	'user-personal-info-real-name'     => 'Virkeligt navn:',
+	'user-profile-section-preferences' => 'Indstillinger',
+	'user-profile-personal-name'       => 'Navn',
+	'user-profile-personal-email'      => 'E-mail',
+	'user-profile-personal-city'       => 'By',
+	'user-profile-personal-country'    => 'Land',
+	'user-profile-interests-tv'        => 'TV',
+	'user-page-link'                   => 'Brugerside',
 );
 
 /** German (Deutsch)
@@ -591,6 +609,7 @@ $messages['eo'] = array(
 	'other-info-movies'            => 'Filmoj',
 	'user-profile-section-picture' => 'Avataro',
 	'user-profile-personal-name'   => 'Nomo',
+	'user-profile-personal-email'  => 'Retadreso',
 );
 
 /** Finnish (Suomi)
@@ -1331,6 +1350,27 @@ Klik <a href="$1">hier</a> om u aan te melden of klik <a href="$2">hier</a> om e
 	'user-board-login-message'                        => 'U moet <a href="$1">aangemeld</a> zijn om berichten aan andere gebruikers te kunnen versturen',
 );
 
+/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+ * @author Jon Harald Søby
+ */
+$messages['nn'] = array(
+	'other-info-tv'                    => 'TV',
+	'other-info-music'                 => 'Musikk',
+	'user-personal-info-real-name'     => 'Verkeleg namn:',
+	'user-personal-info-hometown'      => 'Heimstad',
+	'user-personal-info-occupation'    => 'Yrke',
+	'user-profile-section-preferences' => 'Innstillinger',
+	'user-profile-personal-name'       => 'Namn:',
+	'user-profile-personal-email'      => 'E-post',
+	'user-profile-personal-city'       => 'By',
+	'user-profile-personal-country'    => 'Land',
+	'user-profile-personal-hometown'   => 'Heimstad',
+	'user-profile-personal-occupation' => 'Yrke',
+	'user-profile-interests-tv'        => 'TV',
+	'user-profile-interests-music'     => 'Musikk',
+	'user-page-link'                   => 'Brukarside',
+);
+
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Jon Harald Søby
  */
@@ -1378,9 +1418,9 @@ $messages['no'] = array(
 	'user-personal-info-real-name'                    => 'Virkelig navn',
 	'user-personal-info-location'                     => 'Sted',
 	'user-personal-info-hometown'                     => 'Hjemsted',
-	'user-personal-info-birthday'                     => 'Bursdag',
+	'user-personal-info-birthday'                     => 'Fødselsdag',
 	'user-personal-info-occupation'                   => 'Yrke',
-	'user-personal-info-websites'                     => 'Nettsider',
+	'user-personal-info-websites'                     => 'Nettsteder',
 	'user-personal-info-places-lived'                 => 'Steder jeg har bodd',
 	'user-personal-info-schools'                      => 'Skoler',
 	'user-personal-info-about-me'                     => 'Om meg',
@@ -1415,7 +1455,7 @@ $messages['no'] = array(
 	'user-profile-personal-city'                      => 'By',
 	'user-profile-personal-country'                   => 'Land',
 	'user-profile-personal-hometown'                  => 'Hjemsted',
-	'user-profile-personal-birthday'                  => 'Bursdag',
+	'user-profile-personal-birthday'                  => 'Fødselsdag',
 	'user-profile-personal-birthdate'                 => 'Dato (MM/DD)',
 	'user-profile-personal-aboutme'                   => 'Om meg',
 	'user-profile-personal-work'                      => 'Arbeid',
@@ -1462,7 +1502,7 @@ $messages['no'] = array(
 	'user-profile-picture-yourpicturestext'           => 'Under er bildene som vil vises på profilen din, nettverkssider og på kommentarene dine.',
 	'user-profile-picture-large'                      => 'Stort',
 	'user-profile-picture-medlarge'                   => 'Medium&ndash;stort',
-	'user-profile-picture-medium'                     => 'Medium',
+	'user-profile-picture-medium'                     => 'Middels',
 	'user-profile-picture-small'                      => 'Lite',
 	'user-profile-picture-uploaddifferent'            => 'Last opp et annet bilde',
 	'user-profile-picture-currentimage'               => 'Nåværende bilde',
@@ -2057,67 +2097,83 @@ $messages['sk'] = array(
 
 /** Swedish (Svenska)
  * @author M.M.S.
+ * @author Jon Harald Søby
+ * @author Lokal Profil
  */
 $messages['sv'] = array(
-	'populateuserprofiles'             => 'Befolka användar profiler',
-	'avatarupload'                     => 'är nuvarande ett test tilläggsprogram',
-	'user-count-separator'             => 'av',
-	'user-view-all'                    => 'Visa alla',
-	'user-upload-image'                => 'Ladda upp bild',
-	'user-edit-this'                   => 'Redigera denna',
-	'user-time-ago'                    => 'sedan',
-	'user-points'                      => 'poäng',
-	'user-edit-profile'                => 'Redigera profil',
-	'user-upload-avatar'               => 'Ladda upp Avatar',
-	'user-watchlist'                   => 'Min övervakningslista',
-	'user-meet-people'                 => 'Träffa personer',
-	'user-add-friend'                  => 'Lägg till som Vän',
-	'user-add-foe'                     => 'Lägg till som Fiende',
-	'user-remove-friend'               => 'Ta bort som Vän',
-	'user-remove-foe'                  => 'Ta bort som Fiende',
-	'user-send-message'                => 'Sänd ett meddelande',
-	'user-send-gift'                   => 'Skicka en present',
-	'user-contributions'               => 'Bidrag',
-	'other-info-title'                 => 'Annan information',
-	'user-friends-title'               => 'Vänner',
-	'user-foes-title'                  => 'Fiender',
-	'other-info-movies'                => 'Filmer',
-	'other-info-tv'                    => 'TV',
-	'other-info-music'                 => 'Musik',
-	'other-info-books'                 => 'Böcker',
-	'other-info-video-games'           => 'Tv-spel',
-	'other-info-magazines'             => 'Tidningar',
-	'other-info-snacks'                => 'Godis',
-	'other-info-drinks'                => 'Drycker',
-	'other-no-info'                    => 'Ingen annan information',
-	'custom-info-title'                => 'Egendefinierad information',
-	'custom-info-field1'               => 'Egendefinierad 1',
-	'custom-info-field2'               => 'Egendefinierad 2',
-	'custom-info-field3'               => 'Egendefinierad 3',
-	'custom-info-field4'               => 'Egendefinierad 4',
-	'custom-no-info'                   => 'Ingen egendefinierad information',
-	'user-board-title'                 => 'Diskussionssida',
-	'user-send-board-blast'            => 'Skicka meddelande',
-	'user-personal-info-title'         => 'Personlig information',
-	'user-no-personal-info'            => 'Ingen personlig information',
-	'user-personal-info-real-name'     => 'Riktigt namn',
-	'user-personal-info-location'      => 'Lokalisering',
-	'user-personal-info-hometown'      => 'Hemort',
-	'user-personal-info-birthday'      => 'Födelsedag',
-	'user-personal-info-occupation'    => 'Yrke',
-	'user-personal-info-websites'      => 'Webbsidor',
-	'user-personal-info-places-lived'  => 'Orter jag har bott i',
-	'user-personal-info-schools'       => 'Skolor',
-	'user-profile-default-country'     => 'USA',
-	'user-profile-section-preferences' => 'Inställningar',
-	'user-profile-personal-info'       => 'Info',
-	'user-profile-personal-name'       => 'Namn',
-	'user-profile-personal-email'      => 'E-post',
-	'user-profile-interests-movies'    => 'Filmer',
-	'user-profile-interests-music'     => 'Musik',
-	'user-profile-interests-books'     => 'Böcker',
-	'user-page-link'                   => 'Användarsida',
-	'update_profile_nav'               => '* Special:UpdateProfile|Personlig information
+	'populateuserprofiles'               => 'Befolka användar profiler',
+	'avatarupload'                       => 'är nuvarande ett test tilläggsprogram',
+	'user-count-separator'               => 'av',
+	'user-view-all'                      => 'Visa alla',
+	'user-upload-image'                  => 'Ladda upp bild',
+	'user-edit-this'                     => 'Redigera denna',
+	'user-time-ago'                      => 'sedan',
+	'user-points'                        => 'poäng',
+	'user-edit-profile'                  => 'Redigera profil',
+	'user-upload-avatar'                 => 'Ladda upp Avatar',
+	'user-watchlist'                     => 'Min övervakningslista',
+	'user-meet-people'                   => 'Träffa personer',
+	'user-add-friend'                    => 'Lägg till som Vän',
+	'user-add-foe'                       => 'Lägg till som Fiende',
+	'user-remove-friend'                 => 'Ta bort som Vän',
+	'user-remove-foe'                    => 'Ta bort som Fiende',
+	'user-send-message'                  => 'Sänd ett meddelande',
+	'user-send-gift'                     => 'Skicka en present',
+	'user-contributions'                 => 'Bidrag',
+	'other-info-title'                   => 'Annan information',
+	'user-friends-title'                 => 'Vänner',
+	'user-foes-title'                    => 'Fiender',
+	'other-info-movies'                  => 'Filmer',
+	'other-info-tv'                      => 'TV',
+	'other-info-music'                   => 'Musik',
+	'other-info-books'                   => 'Böcker',
+	'other-info-video-games'             => 'Tv-spel',
+	'other-info-magazines'               => 'Tidningar',
+	'other-info-snacks'                  => 'Godis',
+	'other-info-drinks'                  => 'Drycker',
+	'other-no-info'                      => 'Ingen annan information',
+	'custom-info-title'                  => 'Egendefinierad information',
+	'custom-info-field1'                 => 'Egendefinierad 1',
+	'custom-info-field2'                 => 'Egendefinierad 2',
+	'custom-info-field3'                 => 'Egendefinierad 3',
+	'custom-info-field4'                 => 'Egendefinierad 4',
+	'custom-no-info'                     => 'Ingen egendefinierad information',
+	'user-board-title'                   => 'Diskussionssida',
+	'user-send-board-blast'              => 'Skicka meddelande',
+	'user-personal-info-title'           => 'Personlig information',
+	'user-no-personal-info'              => 'Ingen personlig information',
+	'user-personal-info-real-name'       => 'Riktigt namn',
+	'user-personal-info-location'        => 'Lokalisering',
+	'user-personal-info-hometown'        => 'Hemort',
+	'user-personal-info-birthday'        => 'Födelsedag',
+	'user-personal-info-occupation'      => 'Yrke',
+	'user-personal-info-websites'        => 'Webbsidor',
+	'user-personal-info-places-lived'    => 'Orter jag har bott i',
+	'user-personal-info-schools'         => 'Skolor',
+	'user-profile-default-country'       => 'USA',
+	'user-profile-section-personal'      => 'Personlig information',
+	'user-profile-section-custom'        => 'Egendefinierad information',
+	'user-profile-section-interests'     => 'Annan information',
+	'user-profile-section-preferences'   => 'Inställningar',
+	'user-profile-personal-info'         => 'Info',
+	'user-profile-personal-name'         => 'Namn',
+	'user-profile-personal-email'        => 'E-post',
+	'user-profile-personal-confirmemail' => 'Bekräfta e-postadress',
+	'user-profile-personal-city'         => 'Ort',
+	'user-profile-personal-country'      => 'Land',
+	'user-profile-personal-hometown'     => 'Hemort',
+	'user-profile-personal-occupation'   => 'Yrke',
+	'user-profile-personal-schools'      => 'Skolor',
+	'user-profile-personal-placeslived'  => 'Orter jag har bott i',
+	'user-profile-personal-websites'     => 'Webbsidor',
+	'user-profile-interests-movies'      => 'Filmer',
+	'user-profile-interests-tv'          => 'TV',
+	'user-profile-interests-music'       => 'Musik',
+	'user-profile-interests-books'       => 'Böcker',
+	'user-profile-interests-magazines'   => 'Tidningar',
+	'user-profile-interests-videogames'  => 'Tv-spel',
+	'user-page-link'                     => 'Användarsida',
+	'update_profile_nav'                 => '* Special:UpdateProfile|Personlig information
 * Special:UpdateProfile/personal|Annan information
 * Special:UpdateProfile/custom|Egendefinierad information
 * Special:UploadAvatar|Avatar
@@ -2220,6 +2276,14 @@ $messages['te'] = array(
 * Special:UpdateProfile/custom|ప్రత్యేక సమాచారం
 * Special:UploadAvatar|అవతారం
 * Special:UpdateProfile/preferences|అభిరుచులు',
+);
+
+/** Tetum (Tetun)
+ * @author MF-Warburg
+ */
+$messages['tet'] = array(
+	'user-profile-personal-name' => 'Naran',
+	'user-profile-personal-city' => 'Sidade',
 );
 
 /** Tajik (Тоҷикӣ)

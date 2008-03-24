@@ -200,16 +200,32 @@ $messages['bg'] = array(
 	'ur-next'                                    => 'следващи',
 	'ur-remove-relationship-title'               => 'Необходимо е потвърждение за премахване на $1 от групата на $2ите.',
 	'ur-remove-relationship-title-confirm'       => 'Премахнахте $1 от групата на вашите $2и',
+	'ur-remove-error-message-remove-yourself'    => 'Не можете да премахнете себе си.',
 	'ur-remove'                                  => 'Премахване',
 	'ur-cancel'                                  => 'Отказване',
 	'ur-login'                                   => 'Влизане',
 	'ur-add-title'                               => 'Необходимо е потвърждение за добавяне на $1 като ваш $2.',
 	'ur-add-button'                              => 'Добавяне като $1',
+	'ur-add-sent-title'                          => 'Заявката за $1 беше изпратена на $2!',
 	'ur-add-error-message-no-user'               => 'Потребителят, който се опитвате да добавите, не съществува.',
+	'ur-add-error-message-blocked'               => 'В момента потребителската ви сметка е блокирана и не можете да добавяте приятели или неприятели.',
+	'ur-add-error-message-yourself'              => 'Не е позволено да добавяте себе си като приятел или неприятел.',
 	'ur-add-error-message-existing-relationship' => 'Вече сте $1 с $2.',
+	'ur-add-error-message-not-loggedin'          => 'Необходимо е влизане в системата за добавяне на $1',
 	'ur-accept'                                  => 'Приемане',
 	'ur-reject'                                  => 'Отказване',
+	'ur-requests-added-message'                  => 'Добавихте $1 като ваш $2.',
 	'ur-requests-reject-message'                 => 'Отказахте на $1 да бъде ваш $2.',
+);
+
+/** Danish (Dansk)
+ * @author Jon Harald Søby
+ */
+$messages['da'] = array(
+	'ur-main-page' => 'Forside',
+	'ur-next'      => 'næste',
+	'ur-cancel'    => 'Afbryd',
+	'ur-login'     => 'Log på',
 );
 
 /** German (Deutsch)
@@ -757,6 +773,17 @@ Klik $4
 en wijzig uw instellingen om e-mailberichten uit te schakelen.',
 );
 
+/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+ * @author Jon Harald Søby
+ */
+$messages['nn'] = array(
+	'ur-main-page' => 'Hovudside',
+	'ur-next'      => 'neste',
+	'ur-remove'    => 'Fjern',
+	'ur-cancel'    => 'Avbryt',
+	'ur-login'     => 'Logg inn',
+);
+
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Jon Harald Søby
  */
@@ -1043,6 +1070,8 @@ $messages['ps'] = array(
 	'ur-main-page'    => 'لومړی مخ',
 	'ur-your-profile' => 'ستاسو پېژنليک',
 	'ur-friend'       => 'ملګری',
+	'ur-previous'     => 'پخوانی',
+	'ur-login'        => 'ننوتل',
 	'ur-friendship'   => 'ملګرتيا',
 	'ur-accept'       => 'منل',
 	'ur-reject'       => 'ردول',
