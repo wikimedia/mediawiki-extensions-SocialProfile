@@ -17,6 +17,13 @@ $messages['bg'] = array(
 	'yui-desc' => 'Набор от инструменти и контроли, написани на Джаваскрипт',
 );
 
+/** Czech (Česky)
+ * @author Matěj Grabovský
+ */
+$messages['cs'] = array(
+	'yui-desc' => 'Sada nástrojů napsaných v JavaScriptu.',
+);
+
 /** French (Français)
  * @author Grondin
  */
