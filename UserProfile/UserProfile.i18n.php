@@ -388,6 +388,13 @@ $messages['bg'] = array(
 	'user-board-login-message'                        => 'За оставяне на съобщения до другите потребители е необходимо <a href="$1">влизане</a> в системата',
 );
 
+/** Catalan (Català)
+ * @author SMP
+ */
+$messages['ca'] = array(
+	'user-page-link' => "Pàgina d'usuari",
+);
+
 /** Danish (Dansk)
  * @author Jon Harald Søby
  */
@@ -587,6 +594,7 @@ $messages['el'] = array(
 	'user-profile-personal-country'        => 'Χώρα',
 	'user-profile-personal-birthday'       => 'Γενέθλια',
 	'user-profile-personal-aboutme'        => 'Για Εμένα',
+	'user-profile-personal-work'           => 'Εργασία',
 	'user-profile-personal-occupation'     => 'Επάγγελμα',
 	'user-profile-personal-education'      => 'Εκπαίδευση',
 	'user-profile-personal-schools'        => 'Σχολεία',
@@ -599,8 +607,10 @@ $messages['el'] = array(
 	'user-profile-interests-books'         => 'Βιβλία',
 	'user-profile-interests-magazines'     => 'Περιοδικά',
 	'user-profile-interests-videogames'    => 'Ηλεκτρονικά Παιχνίδια',
+	'user-profile-interests-eats'          => 'Φαγητά',
 	'user-profile-interests-drinks'        => 'Ποτά',
 	'user-profile-sports-sport'            => 'Άθλημα',
+	'user-profile-sports-notloggedintitle' => 'Ούπς!',
 );
 
 /** Esperanto (Esperanto)
@@ -2172,6 +2182,7 @@ $messages['sv'] = array(
 	'user-profile-personal-city'         => 'Ort',
 	'user-profile-personal-country'      => 'Land',
 	'user-profile-personal-hometown'     => 'Hemort',
+	'user-profile-personal-aboutme'      => 'Om mig',
 	'user-profile-personal-occupation'   => 'Yrke',
 	'user-profile-personal-schools'      => 'Skolor',
 	'user-profile-personal-placeslived'  => 'Orter jag har bott i',
