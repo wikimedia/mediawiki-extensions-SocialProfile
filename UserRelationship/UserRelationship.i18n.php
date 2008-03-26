@@ -69,10 +69,10 @@ Thanks
 
 ---
 
-Hey, want to stop getting emails from us?
+Hey, want to stop getting e-mails from us?
 
 Click $4
-and change your settings to disable email notifications.',
+and change your settings to disable e-mail notifications.',
 		'foe_request_subject' => 'It\'s war! $1 has added you to as a foe on {{SITENAME}}!',
 		'foe_request_body' => 'Hi $1:
 
@@ -86,10 +86,10 @@ Thanks
 
 ---
 
-Hey, want to stop getting emails from us?
+Hey, want to stop getting e-mails from us?
 
 Click $4
-and change your settings to disable email notifications.',
+and change your settings to disable e-mail notifications.',
 
 		'friend_accept_subject' => '$1 has accepted your friend request on {{SITENAME}}!',
 		'friend_accept_body' => 'Hi $1:
@@ -102,10 +102,10 @@ Thanks,
 
 ---
 
-Hey, want to stop getting emails from us?
+Hey, want to stop getting e-mails from us?
 
 Click $4
-and change your settings to disable email notifications.',
+and change your settings to disable e-mail notifications.',
 		'foe_accept_subject' => 'It\'s on! $1 has accepted your foe request on {{SITENAME}}!',
 		'foe_accept_body' => 'Hi $1:
 
@@ -117,10 +117,10 @@ Thanks
 
 ---
 
-Hey, want to stop getting emails from us?
+Hey, want to stop getting e-mails from us?
 
 Click $4
-and change your settings to disable email notifications.',
+and change your settings to disable e-mail notifications.',
 		'friend_removed_subject' => 'Oh No! $1 has removed you as a friend on {{SITENAME}}!',
 		'friend_removed_body' => 'Hi $1:
 
@@ -130,10 +130,10 @@ Thanks
 
 ---
 
-Hey, want to stop getting emails from us?
+Hey, want to stop getting e-mails from us?
 
 Click $4
-and change your settings to disable email notifications.',
+and change your settings to disable e-mail notifications.',
 		'foe_removed_subject' => 'Woohoo! $1 has removed you as a foe on {{SITENAME}}!',
 		'foe_removed_body' => 'Hi $1:
 
@@ -145,10 +145,10 @@ Thanks
 
 ---
 
-Hey, want to stop getting emails from us?
+Hey, want to stop getting e-mails from us?
 
 Click $4
-and change your settings to disable email notifications.',
+and change your settings to disable e-mail notifications.',
 );
 
 /** Arabic (العربية)

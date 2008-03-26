@@ -57,7 +57,7 @@ $3
 
 ---
 
-Hey, want to stop getting emails from us?
+Hey, want to stop getting e-mails from us?
 
 Click $4
 and change your settings to disable email notifications.'
