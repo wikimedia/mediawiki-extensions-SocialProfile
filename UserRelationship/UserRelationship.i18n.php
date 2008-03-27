@@ -1225,3 +1225,14 @@ $messages['tg'] = array(
 	'ur-reject'                                  => 'Рад кардан',
 );
 
+/** Vietnamese (Tiếng Việt)
+ * @author Minh Nguyen
+ */
+$messages['vi'] = array(
+	'ur-main-page'  => 'Trang Chính',
+	'ur-add-friend' => 'Thêm người bạn',
+	'ur-add-foe'    => 'Thêm kẻ thù',
+	'ur-cancel'     => 'Bãi bỏ',
+	'ur-login'      => 'Đăng nhập',
+);
+
