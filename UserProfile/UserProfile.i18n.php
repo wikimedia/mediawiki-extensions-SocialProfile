@@ -1191,6 +1191,7 @@ Avatar',
 
 /** Marathi (मराठी)
  * @author Mahitgar
+ * @author Kaustubh
  */
 $messages['mr'] = array(
 	'user-count-separator'               => 'चे',
@@ -1204,6 +1205,7 @@ $messages['mr'] = array(
 	'other-info-music'                   => 'संगीत',
 	'user-personal-info-websites'        => 'संकेतस्थळे',
 	'user-personal-info-about-me'        => 'माझ्या बद्दल',
+	'user-profile-personal-name'         => 'नाव',
 	'user-profile-picture-log'           => 'अवतार',
 	'user-profile-picture-yourpicture'   => 'तुमचे चित्र',
 	'user-profile-picture-large'         => 'मोठे',
@@ -1706,9 +1708,13 @@ $messages['oc'] = array(
  * @author Ahmed-Najib-Biabani-Ibrahimkhel
  */
 $messages['ps'] = array(
+	'user-view-all'                      => 'ټول کتل',
+	'user-add-friend'                    => 'خپل په ملګرو کې ورګډول',
 	'user-send-gift'                     => 'يوه ډالۍ لېږل',
 	'user-contributions'                 => 'ونډې',
+	'other-info-title'                   => 'نور مالومات',
 	'user-friends-title'                 => 'ملګري',
+	'other-info-movies'                  => 'فلمونه',
 	'other-info-music'                   => 'موسيقي',
 	'other-info-books'                   => 'کتابونه',
 	'other-info-magazines'               => 'مجلې',
@@ -1717,18 +1723,26 @@ $messages['ps'] = array(
 	'user-personal-info-hometown'        => 'ښارګوټی',
 	'user-personal-info-birthday'        => 'زېږکليزه',
 	'user-personal-info-occupation'      => 'دنده',
+	'user-personal-info-places-lived'    => 'هغه ځايونو کې چې ما ژوند کړی',
 	'user-personal-info-schools'         => 'ښوونځي',
 	'user-personal-info-about-me'        => 'زما په اړه',
 	'user-profile-update-saved'          => 'ستاسو پېژندليک په برياليتوب سره خوندي شو',
 	'user-profile-update-profile'        => 'پېژندليک',
 	'user-profile-default-country'       => 'متحده ايالتونه',
+	'user-profile-section-interests'     => 'نور مالومات',
+	'user-profile-section-preferences'   => 'غوره توبونه',
+	'user-profile-personal-info'         => 'مالومات',
 	'user-profile-personal-name'         => 'نوم',
 	'user-profile-personal-email'        => 'برېښليک',
+	'user-profile-personal-location'     => 'ځای',
 	'user-profile-personal-city'         => 'ښار',
 	'user-profile-personal-country'      => 'هېواد',
+	'user-profile-personal-hometown'     => 'ښارګوټی',
 	'user-profile-personal-birthday'     => 'زېږکليزه',
 	'user-profile-personal-birthdate'    => 'نېټه (مياشت/ورځ)',
 	'user-profile-personal-aboutme'      => 'زما په اړه',
+	'user-profile-personal-work'         => 'کار',
+	'user-profile-personal-occupation'   => 'دنده',
 	'user-profile-personal-education'    => 'زده کړې',
 	'user-profile-personal-schools'      => 'ښوونځي',
 	'user-profile-personal-places'       => 'ځايونه',

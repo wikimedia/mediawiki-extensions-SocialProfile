@@ -1078,6 +1078,7 @@ $messages['ps'] = array(
 	'ur-main-page'    => 'لومړی مخ',
 	'ur-your-profile' => 'ستاسو پېژنليک',
 	'ur-friend'       => 'ملګری',
+	'ur-add-friend'   => 'خپل په ملګرو کې ورګډول',
 	'ur-previous'     => 'پخوانی',
 	'ur-login'        => 'ننوتل',
 	'ur-friendship'   => 'ملګرتيا',

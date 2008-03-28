@@ -626,10 +626,19 @@ e modificatz vòstres paramètres per desactivar las notificacions dels corrièr
  * @author Ahmed-Najib-Biabani-Ibrahimkhel
  */
 $messages['ps'] = array(
-	'userboard_sendmessage' => '$1 ته يو پيغام ولېږۍ',
-	'userboard_delete'      => 'ړنګول',
-	'userboard_nomessages'  => 'هېڅ کوم پيغام نشته.',
-	'userboard_sendbutton'  => 'لېږل',
+	'messagesenttitle'         => 'پېغامونه مو ولېږل شول',
+	'boardblaststep1'          => '۱ ګام - خپل پيغام وليکۍ',
+	'boardlinkselectall'       => 'ټول ټاکل',
+	'boardlinkunselectall'     => 'ټول ناټاکل',
+	'boardlinkselectfriends'   => 'ملګري ټاکل',
+	'boardlinkunselectfriends' => 'ملګري ناټاکل',
+	'boardnofriends'           => 'تاسو تر اوسه پورې هېڅ کوم ملګری نلری چې پيغام ورولېږۍ!',
+	'messagesentsuccess'       => 'ستاسو پيغام په برياليتوب سره ولېږل شو.',
+	'userboard_confirmdelete'  => 'آيا تاسو ډاډه ياست چې تاسو همدا پيغام ړنګول غواړۍ؟',
+	'userboard_sendmessage'    => '$1 ته يو پيغام ولېږۍ',
+	'userboard_delete'         => 'ړنګول',
+	'userboard_nomessages'     => 'هېڅ کوم پيغام نشته.',
+	'userboard_sendbutton'     => 'لېږل',
 );
 
 /** Portuguese (Português)
