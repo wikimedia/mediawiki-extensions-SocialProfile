@@ -1161,6 +1161,15 @@ $messages['sv'] = array(
 	'ur-reject'                                  => 'Avslå',
 	'friend_request_subject'                     => '$1 har laggt till dig som vän på {{SITENAME}}!',
 	'friend_removed_subject'                     => 'Å Nej! $1 har tagit bort dig som vän på {{SITENAME}}!',
+	'friend_removed_body'                        => 'Hej, $1
+
+$2 har tagit bort dig som vän på {{SITENAME}}.
+
+---
+
+Vill du inte mottaga mer e-post från oss?
+
+Klicka $4 och ändra dina inställningar för att stänga av e-postmeddelanden.',
 	'foe_removed_subject'                        => 'Hurra! $1 har tagit bort dig som fiende på {{SITENAME}}!',
 	'foe_removed_body'                           => 'Hej, $1.
 

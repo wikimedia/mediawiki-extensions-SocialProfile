@@ -1041,6 +1041,15 @@ $messages['gl'] = array(
 * Special:UpdateProfile/preferences|Preferencias',
 );
 
+/** Hungarian (Magyar)
+ * @author Dani
+ */
+$messages['hu'] = array(
+	'user-profile-picture-large'  => 'Nagy',
+	'user-profile-picture-medium' => 'Közepes',
+	'user-profile-picture-small'  => 'Kicsi',
+);
+
 
 /** Khmer (ភាសាខ្មែរ)
  * @author Lovekhmer
