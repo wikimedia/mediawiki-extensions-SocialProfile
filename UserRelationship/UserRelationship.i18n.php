@@ -537,6 +537,9 @@ et modifiez vos préférences pour désactiver les notifications par courriel.',
  * @author Toliño
  */
 $messages['gl'] = array(
+	'viewrelationships'                          => 'Ver relación',
+	'viewrelationshiprequests'                   => 'Ver solcitudes de relación',
+	'ur-error-message-no-user'                   => 'Non podemos completar a súa petición porque non existe ningún usuario con ese nome.',
 	'ur-main-page'                               => 'Portada',
 	'ur-your-profile'                            => 'O seu perfil',
 	'ur-backlink'                                => '&lt; Voltar ao perfil de $1',
@@ -556,6 +559,7 @@ $messages['gl'] = array(
 	'ur-remove-relationship-message-confirm'     => 'Eliminou con éxito a $1 dos seus $2.',
 	'ur-remove-error-message-no-relationship'    => 'Non ten relación con $1.',
 	'ur-remove-error-message-remove-yourself'    => 'Non pode eliminarse a si mesmo.',
+	'ur-remove-error-message-pending-request'    => 'Ten pendientes $1 solicitudes con $2.',
 	'ur-remove-error-not-loggedin'               => 'Ten que acceder ao sistema para eliminar a $1.',
 	'ur-remove'                                  => 'Eliminar',
 	'ur-cancel'                                  => 'Cancelar',
@@ -564,11 +568,15 @@ $messages['gl'] = array(
 	'ur-friendship'                              => 'amizade',
 	'ur-grudge'                                  => 'rancor',
 	'ur-add-button'                              => 'Engadir aos seus $1',
+	'ur-add-sent-title'                          => 'Enviamos a súa solicitude $1 a $2!',
+	'ur-add-sent-message'                        => 'A súa solicitude $1 foi envidada a $2 para a súa confirmación.
+Se $2 a confirma, recibirá unha mensaxe de correo electrónico',
 	'ur-add-error-message-no-user'               => 'O usuario que está tentando engadir non existe.',
 	'ur-add-error-message-blocked'               => 'Actualmente está bloqueado e non pode engadir amigos nin inimigos.',
 	'ur-add-error-message-yourself'              => 'Non pode engadirse a si mesmo como amigo ou inimigo.',
 	'ur-add-error-message-existing-relationship' => 'Xa é $1 con $2.',
 	'ur-add-error-message-pending-request-title' => 'Paciencia!',
+	'ur-add-error-message-pending-request'       => 'Ten pendientes $1 solicitudes con $2.  Notificarémoslle cando $2 confirme a súa solicitude.',
 	'ur-add-error-message-not-loggedin'          => 'Ten que acceder ao sistema para engadir un $1',
 	'ur-requests-title'                          => 'Solicitudes de relación',
 	'ur-requests-message'                        => '<a href="$1">$2</a> quere ser o seu $3.',
@@ -578,6 +586,95 @@ $messages['gl'] = array(
 	'ur-requests-added-message'                  => 'Engadiu a $1 aos seus $2.',
 	'ur-requests-reject-message'                 => 'Rexeitou a $1 para ser o seu $2.',
 	'friend_request_subject'                     => '$1 engadiuno como amigo en {{SITENAME}}!',
+	'friend_request_body'                        => 'Ola $1:
+
+$2 engdiuno como amigo seu en {{SITENAME}}.  Queremos estar seguros de que vostedes dous son amigos actualmente.
+
+Por favor, faga clic nesta ligazón para confirmar a súa amizade:
+$3
+
+Grazas
+
+---
+
+Quere deixar de recibir correos electrónicos nosos?
+
+Faga clic $4
+e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
+	'foe_request_subject'                        => 'É a guerra! $1 engadiuno como inimigo seu en {{SITENAME}}!',
+	'foe_request_body'                           => 'Ola $1:
+
+$2 engdiuno como inimigo seu en {{SITENAME}}.  Queremos estar seguros de que vostedes dous son inimigos mortais actualmente  ou que teñen, polo menos, un argumento.
+
+Por favor, faga clic nesta ligazón para confirmar a súa inimizade:
+$3
+
+Grazas
+
+---
+
+Quere deixar de recibir correos electrónicos nosos?
+
+Faga clic $4
+e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
+	'friend_accept_subject'                      => '$1 aceptou a súa solicitude de amizade en {{SITENAME}}!',
+	'friend_accept_body'                         => 'Ola $1:
+
+$2 aceptou a súa solicitude de amizade en {{SITENAME}}!
+
+Comprobe a páxina de $2 en $3
+
+Grazas
+
+---
+
+Quere deixar de recibir correos electrónicos nosos?
+
+Faga clic $4
+e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
+	'foe_accept_subject'                         => 'A cousa está que arde! $1 aceptou a súa solicitude de inimizade en {{SITENAME}}!',
+	'foe_accept_body'                            => 'Ola $1:
+
+$2 aceptou a súa solicitude de inimizade en {{SITENAME}}!
+
+Comprobe a páxina de $2 en $3
+
+Grazas
+
+---
+
+Quere deixar de recibir correos electrónicos nosos?
+
+Faga clic $4
+e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
+	'friend_removed_subject'                     => 'Non! $1 eliminouno dos seus amigos en {{SITENAME}}!',
+	'friend_removed_body'                        => 'Ola $1:
+
+$2 eliminouno dos seus amigos en {{SITENAME}}!
+
+Grazas
+
+---
+
+Quere deixar de recibir correos electrónicos nosos?
+
+Faga clic $4
+e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
+	'foe_removed_subject'                        => 'Ben! $1 eliminouno dos seus inimigos en {{SITENAME}}!',
+	'foe_removed_body'                           => 'Ola $1:
+
+$2 eliminouno dos seus inimigos en {{SITENAME}}!
+
+Estares no bo camiño para convertirvos en amigos?
+
+Grazas
+
+---
+
+Quere deixar de recibir correos electrónicos nosos?
+
+Faga clic $4
+e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
 );
 
 

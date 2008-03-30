@@ -348,6 +348,7 @@ $messages['gl'] = array(
 	'userboard_backprofile'     => 'Voltar ao perfil de $1',
 	'userboard_backyourprofile' => 'Voltar ao seu perfil',
 	'userboard_confirmdelete'   => 'Está seguro de que quere eliminar esta mensaxe?',
+	'userboard_sendmessage'     => 'Enviar unha mensaxe a $1',
 	'userboard_delete'          => 'Borrar',
 	'userboard_myboard'         => 'O meu taboleiro',
 	'userboard_private'         => 'privada',
@@ -357,6 +358,7 @@ $messages['gl'] = array(
 	'userboard_prevpage'        => 'anterior',
 	'userboard_nomessages'      => 'Ningunha mensaxe.',
 	'userboard_sendbutton'      => 'enviar',
+	'userboard_loggedout'       => 'Debe <a href="$1">acceder ao sistema</a> para deixar mensaxes a outros usuarios.',
 );
 
 /** Khmer (ភាសាខ្មែរ)

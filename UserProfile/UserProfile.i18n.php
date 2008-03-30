@@ -1018,8 +1018,17 @@ $messages['gl'] = array(
 	'user-profile-interests-books'          => 'Libros',
 	'user-profile-interests-magazines'      => 'Revistas',
 	'user-profile-interests-videogames'     => 'Videoxogos',
+	'user-profile-interests-drinks'         => 'Bebidas',
 	'user-profile-preferences-emails'       => 'Notificacións por correo electrónico',
+	'user-profile-update-button'            => 'Actualizar',
+	'user-profile-sports-sport'             => 'Deporte',
+	'user-profile-sports-title'             => 'Editar os seus deportes e equipos favoritos',
+	'user-profile-sports-notloggedintitle'  => 'Ups!',
 	'user-profile-sports-notloggedintext'   => 'Debe acceder ao sistema para editar o seu perfil.',
+	'user-profile-sports-teamremoved'       => 'O seu equipo foi eliminado',
+	'user-profile-sports-teamsaved'         => 'Os seus equipos foron gardados',
+	'user-profile-sports-addmore'           => 'Engadir máis deportes/equipos',
+	'user-profile-picture-title'            => 'Actualizar a súa imaxe',
 	'user-profile-picture-yourpicture'      => 'A súa imaxe',
 	'user-profile-picture-large'            => 'Grande',
 	'user-profile-picture-medlarge'         => 'Mediano/a - Grande',
@@ -1039,6 +1048,7 @@ $messages['gl'] = array(
 * Special:UpdateProfile/custom|Custom Information
 * Special:UploadAvatar|Avatar
 * Special:UpdateProfile/preferences|Preferencias',
+	'user-board-login-message'              => 'Debe <a href="$1">acceder ao sistema</a> para deixar mensaxes a outros usuarios',
 );
 
 /** Hungarian (Magyar)
@@ -1133,6 +1143,7 @@ $messages['km'] = array(
  * @author Robby
  */
 $messages['lb'] = array(
+	'avatarupload'                         => 'just eng Test-Erweiderung',
 	'user-count-separator'                 => 'vu(n)',
 	'user-view-all'                        => 'Alles gesinn',
 	'user-upload-image'                    => 'Bild eroplueden',
@@ -1151,16 +1162,19 @@ $messages['lb'] = array(
 	'other-info-movies'                    => 'Filmen',
 	'other-info-music'                     => 'Musek',
 	'other-info-books'                     => 'Bicher',
+	'other-info-video-games'               => 'Videospiller',
 	'other-info-drinks'                    => 'Gedrénks',
 	'other-no-info'                        => 'Keng aner Informatioun',
 	'user-board-title'                     => 'Tafel',
 	'user-personal-info-title'             => 'Perséinlech Informatiounen',
 	'user-no-personal-info'                => 'Keng perséinlech Informatioun',
 	'user-personal-info-real-name'         => 'Richtege Numm',
+	'user-personal-info-birthday'          => 'Gebuertsdag',
 	'user-personal-info-occupation'        => 'Beschäftigung',
 	'user-personal-info-places-lived'      => 'Plaze wou ech geliewt hun',
 	'user-personal-info-schools'           => 'Schoulen',
 	'user-personal-info-about-me'          => 'Iwwer mech',
+	'user-recent-activity-gift-sent'       => 'Cadeau geschéckt u(n)',
 	'user-profile-update-saved'            => 'Äre Profil gouf ofgespäichert',
 	'user-profile-update-profile'          => 'Profil',
 	'user-profile-default-country'         => 'Lëtzebuerg',
@@ -1170,7 +1184,9 @@ $messages['lb'] = array(
 	'user-profile-section-preferences'     => 'Astellungen',
 	'user-profile-personal-name'           => 'Numm',
 	'user-profile-personal-email'          => 'E-Mail',
+	'user-profile-personal-city'           => 'Stad/Gemeng',
 	'user-profile-personal-country'        => 'Land',
+	'user-profile-personal-birthday'       => 'Gebuertsdag',
 	'user-profile-personal-aboutme'        => 'Iwwer mech',
 	'user-profile-personal-work'           => 'Aarbecht',
 	'user-profile-personal-schools'        => 'Schoulen',
@@ -1178,6 +1194,7 @@ $messages['lb'] = array(
 	'user-profile-interests-entertainment' => 'Ënnerhalung',
 	'user-profile-interests-music'         => 'Musek',
 	'user-profile-interests-books'         => 'Bicher',
+	'user-profile-interests-videogames'    => 'Videospiller',
 	'user-profile-interests-drinks'        => 'Gedrénks',
 	'user-profile-update-button'           => 'Aktualiséieren',
 	'user-profile-sports-sport'            => 'Sport',
