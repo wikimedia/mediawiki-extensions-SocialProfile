@@ -2354,7 +2354,7 @@ $messages['tet'] = array(
 /** Tajik (Тоҷикӣ)
  * @author Ibrahim
  */
-$messages['tg'] = array(
+$messages['tg-cyrl'] = array(
 	'other-info-title'                  => 'Иттилооти дигар',
 	'user-friends-title'                => 'Дӯстон',
 	'other-info-tv'                     => 'ТВ',

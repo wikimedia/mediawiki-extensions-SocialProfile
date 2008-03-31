@@ -871,7 +871,7 @@ $messages['tet'] = array(
 /** Tajik (Тоҷикӣ)
  * @author Ibrahim
  */
-$messages['tg'] = array(
+$messages['tg-cyrl'] = array(
 	'userboard_delete'     => 'Ҳазф',
 	'userboard_nextpage'   => 'баъдӣ',
 	'userboard_prevpage'   => 'қаблӣ',
