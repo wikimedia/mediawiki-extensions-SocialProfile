@@ -1051,6 +1051,13 @@ $messages['gl'] = array(
 	'user-board-login-message'              => 'Debe <a href="$1">acceder ao sistema</a> para deixar mensaxes a outros usuarios',
 );
 
+/** Gujarati (ગુજરાતી)
+ * @author Dsvyas
+ */
+$messages['gu'] = array(
+	'user-page-link' => 'સભ્યનું પાનું',
+);
+
 /** Hungarian (Magyar)
  * @author Dani
  */
@@ -1590,8 +1597,8 @@ $messages['oc'] = array(
 	'user-upload-avatar'                              => 'Importar un avatar',
 	'user-watchlist'                                  => 'Ma lista de seguit',
 	'user-meet-people'                                => 'Encontrar de mond',
-	'user-add-friend'                                 => 'Ajustar coma amic',
-	'user-add-foe'                                    => 'Ajustar coma enemic',
+	'user-add-friend'                                 => 'Apondre coma amic',
+	'user-add-foe'                                    => 'Apondre coma enemic',
 	'user-remove-friend'                              => 'Levar coma amic',
 	'user-remove-foe'                                 => 'Levar coma enemic',
 	'user-send-message'                               => 'Mandar un messatge',
@@ -1639,8 +1646,8 @@ $messages['oc'] = array(
 	'user-recent-activity-user-message'               => 'A mandat un messatge a',
 	'user-recent-activity-network-update'             => 'A mandat una pensada',
 	'user-recent-system-gift'                         => 'A recebut una recompensa',
-	'user-profile-update-notloggedin-title'           => 'Podètz modificar vòstre perfil sens vos èsser enregistrat dins una session',
-	'user-profile-update-notloggedin-text'            => 'Pòt pas editar vòstre perfil sens èsser en session. Clicatz <a href="$1">aicí</a> per vos metre en session o alara <a href="$2">lai</a> per vos enregistrar.',
+	'user-profile-update-notloggedin-title'           => 'Podètz modificar vòstre perfil sens vos èsser enregistrat dins una sesilha',
+	'user-profile-update-notloggedin-text'            => 'Pòt pas editar vòstre perfil sens èsser en sesilha. Clicatz <a href="$1">aicí</a> per vos metre en sesilha o alara <a href="$2">lai</a> per vos enregistrar.',
 	'user-profile-update-saved'                       => 'Vòstre perfil es estat enregistrat',
 	'user-profile-update-log-section'                 => 'seccion cambiada',
 	'user-profile-update-profile'                     => 'perfil',
@@ -1695,10 +1702,10 @@ $messages['oc'] = array(
 	'user-profile-sports-sport'                       => 'Espòrt',
 	'user-profile-sports-title'                       => 'Editatz vòstres espòrts favorits e vòstras equipas preferidas',
 	'user-profile-sports-notloggedintitle'            => 'Op !',
-	'user-profile-sports-notloggedintext'             => 'Devètz èsser en session per editar vòstre perfil.',
+	'user-profile-sports-notloggedintext'             => 'Devètz èsser en sesilha per editar vòstre perfil.',
 	'user-profile-sports-teamremoved'                 => 'Vòstra equipa es estada levada.',
 	'user-profile-sports-teamsaved'                   => 'Vòstras equipas son estadas salvagardadas',
-	'user-profile-sports-addmore'                     => "Ajustar mai d'espòrts o d'equipas esportivas",
+	'user-profile-sports-addmore'                     => "Apondre mai d'espòrts o d'equipas esportivas",
 	'user-profile-picture-title'                      => 'Importar vòstres imatges',
 	'user-profile-picture-log'                        => 'avatar',
 	'user-profile-picture-log-entry'                  => 'a importat un avatar novèl',
@@ -1727,7 +1734,7 @@ $messages['oc'] = array(
 * Special:UpdateProfile/preferences|Preferéncias',
 	'user-type-toggle-old'                            => "Utilizar la pagina d'utilizaire del wiki",
 	'user-type-toggle-new'                            => "Utilizar la pagina d'utilizaire en societat",
-	'user-board-login-message'                        => 'Devètz èsser <a href="$1">en session</a> per mandar de messatges als autres utilizaires',
+	'user-board-login-message'                        => 'Devètz èsser <a href="$1">en sesilha</a> per mandar de messatges als autres utilizaires',
 );
 
 /** Pashto (پښتو)
@@ -2073,6 +2080,7 @@ $messages['sk'] = array(
 	'custom-info-field4'                              => 'Vlastné 4',
 	'custom-no-info'                                  => 'Žiadne vlastné informácie',
 	'user-board-title'                                => 'Fórum',
+	'user-send-board-blast'                           => 'Poslať board blast',
 	'user-personal-info-title'                        => 'Osobné informácie',
 	'user-no-personal-info'                           => 'Žiadne osobné informácie',
 	'user-personal-info-real-name'                    => 'Skutočné meno',
@@ -2143,6 +2151,7 @@ $messages['sk'] = array(
 	'user-profile-preferences-emails-level'           => 'Keď postúpite o úroveň',
 	'user-profile-preferences-emails-weekly'          => 'Dostávať týždenné aktualizácie emailom',
 	'user-profile-update-button'                      => 'Aktualizácia',
+	'user-profile-tidbits-title'                      => 'Kúsky',
 	'user-profile-tidbits-favmoment'                  => 'Obľúbený športový zážitok',
 	'user-profile-tidbits-worstmoment'                => 'Najhorší športový zážitok',
 	'user-profile-tidbits-favathlete'                 => 'Obľúbený športovec a dôvod',
@@ -2153,6 +2162,45 @@ $messages['sk'] = array(
 	'user-profile-sports-notloggedintext'             => 'Aby ste mohli upraviť svoj profil, musíte sa prhlásiť.',
 	'user-profile-sports-teamremoved'                 => 'Váš tím bol odstránený',
 	'user-profile-sports-teamsaved'                   => 'Vaše tímy boli pridané',
+	'user-profile-sports-addmore'                     => 'Pridať ďalšie športy/tímy',
+	'user-profile-picture-title'                      => 'Nahrať svoj obrázok',
+	'user-profile-picture-log'                        => 'obrázok',
+	'user-profile-picture-log-entry'                  => 'bol nahraný nový obrázok',
+	'user-profile-picture-yourpicture'                => 'Váš obrázok',
+	'user-profile-picture-yourpicturestext'           => 'Dolu sa nachádzajú obrázky, ktoré sa objavia vo vašom profile, sieťových stránkach a pri vašich komentároch.',
+	'user-profile-picture-large'                      => 'Veľký',
+	'user-profile-picture-medlarge'                   => 'Stredný - veľký',
+	'user-profile-picture-medium'                     => 'Stredný',
+	'user-profile-picture-small'                      => 'Malý',
+	'user-profile-picture-uploaddifferent'            => 'Nahrať iný obrázok',
+	'user-profile-picture-currentimage'               => 'Aktuálny obrázok',
+	'user-profile-picture-choosepicture'              => 'Vyberte svoj obrázok',
+	'user-profile-picture-picsize'                    => 'Váš obrázok musí byť jpeg, png alebo gif a musí byť menší ako 100 KiB.',
+	'user-profile-picture-badvirusscanner'            => 'Chybná konfigurácia: neznámy antivírus:',
+	'user-profile-picture-scanfailed'                 => 'kontrola zlyhala',
+	'user-profile-goback'                             => 'Prejsť späť',
+	'user-no-images'                                  => 'Neboli nahrané žiadne obrázky',
+	'edit-profile-title'                              => 'Upraviť svoj profil',
+	'user-page-link'                                  => 'Používateľská stránka',
+	'user-social-profile-link'                        => 'Spoločenský profil',
+	'user-wiki-link'                                  => 'Používateľská stránka na wiki',
+	'update_profile_nav'                              => '* Special:UpdateProfile|Osobné informácie
+* Special:UpdateProfile/personal|Ostatné informácie
+* Special:UpdateProfile/custom|Vlastné informácie
+* Special:UploadAvatar|Obrázok
+* Special:UpdateProfile/preferences|nastavenia',
+	'user-type-toggle-old'                            => 'Použiť používateľskú stránku na wiki',
+	'user-type-toggle-new'                            => 'Použiť spoločenskú používateľskú stránku',
+	'user-board-login-message'                        => 'Aby ste mohli posielať správy ostatným používateľom, musíte <a href="$1">sa prihlásiť</a>.',
+);
+
+/** Serbian Cyrillic ekavian (ћирилица)
+ * @author Sasa Stefanovic
+ */
+$messages['sr-ec'] = array(
+	'user-profile-picture-large'  => 'Велика',
+	'user-profile-picture-medium' => 'Средња',
+	'user-profile-picture-small'  => 'Мала',
 );
 
 /** Swedish (Svenska)
@@ -2351,47 +2399,59 @@ $messages['tet'] = array(
 	'user-profile-interests-books' => 'Livru sira',
 );
 
-/** Tajik (Тоҷикӣ)
+/** Tajik (Cyrillic) (Тоҷикӣ/tojikī (Cyrillic))
  * @author Ibrahim
  */
 $messages['tg-cyrl'] = array(
-	'other-info-title'                  => 'Иттилооти дигар',
-	'user-friends-title'                => 'Дӯстон',
-	'other-info-tv'                     => 'ТВ',
-	'other-info-music'                  => 'Мусиқӣ',
-	'other-info-books'                  => 'Китобҳо',
-	'other-info-video-games'            => 'Видео бозиҳо',
-	'other-info-magazines'              => 'Маҷаллаҳо',
-	'user-personal-info-real-name'      => 'Номи аслӣ',
-	'user-personal-info-hometown'       => 'Зодгоҳ',
-	'user-personal-info-birthday'       => 'Зодрӯз',
-	'user-personal-info-occupation'     => 'Касб',
-	'user-personal-info-websites'       => 'Сомонаҳо',
-	'user-personal-info-schools'        => 'Мактабҳо',
-	'user-personal-info-about-me'       => 'Дар бораи Ман',
-	'user-profile-default-country'      => 'Иёлоти Муттаҳида',
-	'user-profile-personal-name'        => 'Ном',
-	'user-profile-personal-email'       => 'Почтаи электронӣ',
-	'user-profile-personal-city'        => 'Шаҳр',
-	'user-profile-personal-country'     => 'Кишвар',
-	'user-profile-personal-hometown'    => 'Зодгоҳ',
-	'user-profile-personal-birthday'    => 'Зодрӯз',
-	'user-profile-personal-aboutme'     => 'Дар бораи Ман',
-	'user-profile-personal-work'        => 'Кор',
-	'user-profile-personal-occupation'  => 'Касб',
-	'user-profile-personal-education'   => 'Таҳсилот',
-	'user-profile-personal-schools'     => 'Мактабҳо',
-	'user-profile-personal-web'         => 'Сомона',
-	'user-profile-personal-websites'    => 'Сомонаҳо',
-	'user-profile-interests-movies'     => 'Синамо',
-	'user-profile-interests-tv'         => 'ТВ',
-	'user-profile-interests-music'      => 'Мусиқӣ',
-	'user-profile-interests-books'      => 'Китобҳо',
-	'user-profile-interests-magazines'  => 'Маҷаллаҳо',
-	'user-profile-interests-videogames' => 'Видео Бозиҳо',
-	'user-profile-sports-sport'         => 'Варзиш',
-	'user-profile-picture-yourpicture'  => 'Акси Шумо',
-	'user-page-link'                    => 'Саҳифаи Корбарӣ',
+	'other-info-title'                     => 'Иттилооти дигар',
+	'user-friends-title'                   => 'Дӯстон',
+	'other-info-tv'                        => 'ТВ',
+	'other-info-music'                     => 'Мусиқӣ',
+	'other-info-books'                     => 'Китобҳо',
+	'other-info-video-games'               => 'Видео бозиҳо',
+	'other-info-magazines'                 => 'Маҷаллаҳо',
+	'user-personal-info-real-name'         => 'Номи аслӣ',
+	'user-personal-info-hometown'          => 'Зодгоҳ',
+	'user-personal-info-birthday'          => 'Зодрӯз',
+	'user-personal-info-occupation'        => 'Касб',
+	'user-personal-info-websites'          => 'Сомонаҳо',
+	'user-personal-info-schools'           => 'Мактабҳо',
+	'user-personal-info-about-me'          => 'Дар бораи Ман',
+	'user-profile-default-country'         => 'Иёлоти Муттаҳида',
+	'user-profile-personal-name'           => 'Ном',
+	'user-profile-personal-email'          => 'Почтаи электронӣ',
+	'user-profile-personal-city'           => 'Шаҳр',
+	'user-profile-personal-country'        => 'Кишвар',
+	'user-profile-personal-hometown'       => 'Зодгоҳ',
+	'user-profile-personal-birthday'       => 'Зодрӯз',
+	'user-profile-personal-aboutme'        => 'Дар бораи Ман',
+	'user-profile-personal-work'           => 'Кор',
+	'user-profile-personal-occupation'     => 'Касб',
+	'user-profile-personal-education'      => 'Таҳсилот',
+	'user-profile-personal-schools'        => 'Мактабҳо',
+	'user-profile-personal-web'            => 'Сомона',
+	'user-profile-personal-websites'       => 'Сомонаҳо',
+	'user-profile-interests-movies'        => 'Синамо',
+	'user-profile-interests-tv'            => 'ТВ',
+	'user-profile-interests-music'         => 'Мусиқӣ',
+	'user-profile-interests-books'         => 'Китобҳо',
+	'user-profile-interests-magazines'     => 'Маҷаллаҳо',
+	'user-profile-interests-videogames'    => 'Видео Бозиҳо',
+	'user-profile-sports-sport'            => 'Варзиш',
+	'user-profile-picture-yourpicture'     => 'Акси Шумо',
+	'user-profile-picture-large'           => 'Калон',
+	'user-profile-picture-medlarge'        => 'Миёна - Калон',
+	'user-profile-picture-medium'          => 'Миёна',
+	'user-profile-picture-small'           => 'Хурд',
+	'user-profile-picture-uploaddifferent' => 'Боргузорӣ кардани дигар акс',
+	'user-profile-picture-currentimage'    => 'Акси кунунӣ',
+	'user-profile-picture-choosepicture'   => 'Акси худро интихоб кунед',
+	'user-profile-picture-picsize'         => 'Акси шумо бояд jpeg, png, ё gif бошад ва бояд аз рӯи андоза хурдтар аз 100kb бошад.',
+	'user-no-images'                       => 'Ҳеҷ аксе боргузорӣ нашудааст',
+	'edit-profile-title'                   => 'Намояи худро вироиш кунед',
+	'user-page-link'                       => 'Саҳифаи Корбарӣ',
+	'user-social-profile-link'             => 'Намояи ҷамъиятӣ',
+	'user-wiki-link'                       => 'Вики саҳифаи корбарӣ',
 );
 
 /** Vietnamese (Tiếng Việt)

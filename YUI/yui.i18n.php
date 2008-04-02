@@ -109,6 +109,13 @@ $messages['sv'] = array(
 	'yui-desc' => 'En serie av verktyg och kontroller, skrivna i JavaScript',
 );
 
+/** Tajik (Cyrillic) (Тоҷикӣ/tojikī (Cyrillic))
+ * @author Ibrahim
+ */
+$messages['tg-cyrl'] = array(
+	'yui-desc' => 'Маҷмӯъи барномаҳои судманд ва танзимот, ки дар ҶаваСкрипт навишта шудаанд',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Vinhtantran
  */

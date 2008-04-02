@@ -738,6 +738,13 @@ $messages['mr'] = array(
 	'ur-reject'     => 'अव्हेर',
 );
 
+/** Low German (Plattdüütsch)
+ * @author Slomox
+ */
+$messages['nds'] = array(
+	'ur-main-page' => 'Hööftsiet',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  * @author SPQRobin
@@ -1038,8 +1045,8 @@ $messages['oc'] = array(
 	'ur-foe'                                     => 'enemic',
 	'ur-relationship-count'                      => '$1 a $2 {{PLURAL:$2|$3|$3s}}.',
 	'ur-add-friends'                             => 'Volètz mai d’amics ? <a href="$1">Invitatz-los !</a>.',
-	'ur-add-friend'                              => 'Ajustar coma amic',
-	'ur-add-foe'                                 => 'Ajustar coma enemic',
+	'ur-add-friend'                              => 'Apondre coma amic',
+	'ur-add-foe'                                 => 'Apondre coma enemic',
 	'ur-remove-relationship'                     => 'Levar coma $1',
 	'ur-give-gift'                               => 'Mandar un present',
 	'ur-previous'                                => 'precedent',
@@ -1051,24 +1058,24 @@ $messages['oc'] = array(
 	'ur-remove-error-message-no-relationship'    => 'Avètz pas cap de relacion amb $1.',
 	'ur-remove-error-message-remove-yourself'    => 'Podètz pas vos suprimir vos meteis.',
 	'ur-remove-error-message-pending-request'    => 'Avètz una requèsta de $1 en cors amb $2.',
-	'ur-remove-error-not-loggedin'               => 'Devètz èsser en session per suprimir un $1.',
+	'ur-remove-error-not-loggedin'               => 'Devètz èsser en sesilha per suprimir un $1.',
 	'ur-remove'                                  => 'Levar',
 	'ur-cancel'                                  => 'Anullar',
 	'ur-login'                                   => 'Senhal',
-	'ur-add-title'                               => 'Volètz ajustar $1 coma vòstre $2 ?',
+	'ur-add-title'                               => 'Volètz apondre $1 coma vòstre $2 ?',
 	'ur-add-message'                             => 'Avètz l’intencion d’ajustar $1 coma vòstre $2. Lo notificarem a $1 per confirmar vòstre $3.',
 	'ur-friendship'                              => 'amistat',
 	'ur-grudge'                                  => 'rancòr',
-	'ur-add-button'                              => 'Ajustar coma $1',
+	'ur-add-button'                              => 'Apondre coma $1',
 	'ur-add-sent-title'                          => 'Avètz mandat vòstra requèsta en $1 a $2 !',
 	'ur-add-sent-message'                        => 'Vòstra requèsta en $1 es estada mandada a $2 per confirmacion. Se $2 confirma vòstra demanda, recebretz un corrièr electronic en retorn.',
-	'ur-add-error-message-no-user'               => 'L’utilizaire que sètz a ajustar existís pas.',
-	'ur-add-error-message-blocked'               => 'Actualament sètz blocat e doncas podètz pas ajustar ni amics ni enemics.',
-	'ur-add-error-message-yourself'              => 'Podètz pas vos ajustar vos meteis coma enemic o amic.',
+	'ur-add-error-message-no-user'               => 'L’utilizaire que sètz a apondre existís pas.',
+	'ur-add-error-message-blocked'               => "Actualament, sètz blocat e doncas podètz pas apondre ni d'amics ni d'enemics.",
+	'ur-add-error-message-yourself'              => 'Vos podètz pas apondre vos meteis coma enemic o amic.',
 	'ur-add-error-message-existing-relationship' => 'Ja sètz $1 amb $2.',
 	'ur-add-error-message-pending-request-title' => 'Paciéncia!',
 	'ur-add-error-message-pending-request'       => 'Avètz una requèsta en $1 en espèra amb $2. Vos notificarem quora $2 aurà confirmat vòstra demanda.',
-	'ur-add-error-message-not-loggedin'          => 'Devètz èsser connectat per ajustar un $1.',
+	'ur-add-error-message-not-loggedin'          => 'Devètz èsser connectat per apondre un $1.',
 	'ur-requests-title'                          => 'Demandas de relacions.',
 	'ur-requests-message'                        => '<a href="$1">$2</a> desira èsser vòstre $3.',
 	'ur-accept'                                  => 'Acceptar',
@@ -1229,6 +1236,163 @@ $messages['pt'] = array(
 	'ur-reject'                                  => 'Rejeitar',
 );
 
+/** Slovak (Slovenčina)
+ * @author Helix84
+ */
+$messages['sk'] = array(
+	'viewrelationships'                          => 'Zobraziť vzťah',
+	'viewrelationshiprequests'                   => 'Zobraziť žiadosti o vzťah',
+	'ur-error-title'                             => 'Ops, niečo ste spravili zle!',
+	'ur-error-message-no-user'                   => 'Nebolo možné dokončiť vašu požiadavku, pretože používateľ s daným menom neexistuje.',
+	'ur-main-page'                               => 'Hlavná stránka',
+	'ur-your-profile'                            => 'Váš profil',
+	'ur-backlink'                                => '&lt; Späť na profil $1',
+	'ur-friend'                                  => 'priateľ',
+	'ur-foe'                                     => 'nepriateľ',
+	'ur-relationship-count'                      => '1 má $2 {{PLURAL:$2|$3|$3}}.',
+	'ur-add-friends'                             => 'Chcete viac priateľov? <a href="$1">Pozvite ich</a>',
+	'ur-add-friend'                              => 'Pridať ako priateľa',
+	'ur-add-foe'                                 => 'Pridať ako nepriateľa',
+	'ur-remove-relationship'                     => 'Odstrániť ako $1',
+	'ur-give-gift'                               => 'Darovať darček',
+	'ur-previous'                                => 'predch',
+	'ur-next'                                    => 'nasled',
+	'ur-remove-relationship-title'               => 'Chcete odstrániť $1 ako svojho $2?',
+	'ur-remove-relationship-title-confirm'       => 'Odstránili ste $1 ako svojho $2.',
+	'ur-remove-relationship-message'             => 'Požiadali ste o odstránenie $1 ako svojho $2. Potvrdíte to kliknutím na „$3“.',
+	'ur-remove-relationship-message-confirm'     => 'Úspešne ste odstránili $1 ako svojho $2.',
+	'ur-remove-error-message-no-relationship'    => 'Nemáte žiaden vzťah s $1.',
+	'ur-remove-error-message-remove-yourself'    => 'Nemôžete odstrániť seba.',
+	'ur-remove-error-message-pending-request'    => 'Máte nevybavenú žiadosť o $1 u $2.',
+	'ur-remove-error-not-loggedin'               => 'Aby ste mohli odstrániť $1, musíte byť prihlásený.',
+	'ur-remove'                                  => 'Odstrániť',
+	'ur-cancel'                                  => 'Zrušiť',
+	'ur-login'                                   => 'Prihlásiť sa',
+	'ur-add-title'                               => 'Chcete pridať $1 ako svojho $2?',
+	'ur-add-message'                             => 'Chystáte sa pridať $1 ako svojho $2.
+Upozorníme $1, aby potrvrdil vaše $3.',
+	'ur-friendship'                              => 'priateľstvo',
+	'ur-grudge'                                  => 'nepriateľstvo',
+	'ur-add-button'                              => 'Pridať ako $1',
+	'ur-add-sent-title'                          => 'Poslali sme vašu žiadosť o $1 používateľovi $2!',
+	'ur-add-sent-message'                        => 'Vaša žiadosť o $1 bola odoslaná na potrvrdenie používateľovi $2.
+Ak $2 potvrdí vašu žiadosť, dostanete oznámenie emailom.',
+	'ur-add-error-message-no-user'               => 'Používateľ, ktorého sa pokúšate pridať, neexistuje.',
+	'ur-add-error-message-blocked'               => 'Momentálne ste zablokovaný a nemôžete pridávať priadteľov alebo nepriateľov.',
+	'ur-add-error-message-yourself'              => 'Nemôžete pridať sám seba ako priateľa alebo nepriateľa.',
+	'ur-add-error-message-existing-relationship' => 'S $2 už ste $1.',
+	'ur-add-error-message-pending-request-title' => 'Trpezlivosť!',
+	'ur-add-error-message-pending-request'       => 'Máte čakajúcu žiadosť o $1 s používateľom $2. Oznámime vám, keď $2 potvrdí vašu žiadosť.',
+	'ur-add-error-message-not-loggedin'          => 'Aby ste mohli pridať $1, musíte sa prihlásiť.',
+	'ur-requests-title'                          => 'Žiadosti o vzťah',
+	'ur-requests-message'                        => '<a href="$1">$2</a> chce byť váš $3.',
+	'ur-accept'                                  => 'Prijať',
+	'ur-reject'                                  => 'Odmietnuť',
+	'ur-no-requests-message'                     => 'Nemáte žiadosti o vytvorenie vzťahu priateľ či nepriateľ.
+Ak chcete viac priateľov, <a href="$1">pozvite ich!</a>',
+	'ur-requests-added-message'                  => 'Pridali ste $1 ako svojho $2.',
+	'ur-requests-reject-message'                 => 'Odmietli ste $1 ako svojho $2.',
+	'friend_request_subject'                     => '$1 si vás pridal ako priateľa na {{GRAMMAR:lokál|{{SITENAME}}}}!',
+	'friend_request_body'                        => 'Ahoj $1:
+
+$2 si vás pridal ako priateľa na {{GRAMMAR:lokál|{{SITENAME}}}}. Chceme sa uistiť, že ste skutočne priatelia.
+
+Svoje priateľstvo potvrdíte kliknutím na nasledovný odkaz:
+
+$3
+
+Vďaka
+
+---
+
+Nechcete viac od nás dostávať email?
+
+Kliknite na $4
+a vypnite upozornenia emailov vo svojich nastaveniach.',
+	'foe_request_subject'                        => 'Je vojna! $1 si vás pridal ako nepriateľa na {{GRAMMAR:lokál|{{SITENAME}}}}!',
+	'foe_request_body'                           => 'Ahoj $1:
+
+$2 si vás pridal ako nepriateľa na {{GRAMMAR:lokál|{{SITENAME}}}}. Chceme sa uistiť, že ste skutočne nepriatelia na smrť alebo ste sa aspoň pohádali.
+
+Svoje nepriateľstvo potvrdíte kliknutím na nasledovný odkaz:
+
+$3
+
+Vďaka
+
+---
+
+Nechcete viac od nás dostávať email?
+
+Kliknite na $4
+a vypnite upozornenia emailov vo svojich nastaveniach.',
+	'friend_accept_subject'                      => '$1 prijal vašu požiadavku na uzavretie priateľstva na {{GRAMMAR:lokál|{{SITENAME}}}}!',
+	'friend_accept_body'                         => 'Ahoj $1:
+
+$1 prijal vašu požiadavku na uzavretie priateľstva na {{GRAMMAR:lokál|{{SITENAME}}}}!
+
+Pozrite si stránku $2 na $3
+
+Vďaka
+
+---
+
+Nechcete viac od nás dostávať email?
+
+Kliknite na $4
+a vypnite upozornenia emailov vo svojich nastaveniach.',
+	'foe_accept_subject'                         => 'Je to tu! $1 prijal vašu požiadavku na vyhlásenie nepriateľstva na {{GRAMMAR:lokál|{{SITENAME}}}}!',
+	'foe_accept_body'                            => 'Ahoj $1:
+
+$1 prijal vašu požiadavku na vyhlásenie nepriateľstva na {{GRAMMAR:lokál|{{SITENAME}}}}!
+
+Pozrite si stránku $2 na $3
+
+Vďaka
+
+---
+
+Nechcete viac od nás dostávať email?
+
+Kliknite na $4
+a vypnite upozornenia emailov vo svojich nastaveniach.',
+	'friend_removed_subject'                     => 'Ó. nie! $1 si vás odstránil ako priateľa na {{GRAMMAR:lokál|{{SITENAME}}}}!',
+	'friend_removed_body'                        => 'Ahoj $1:
+
+$2 si vás odstránil ako priateľa na {{GRAMMAR:lokál|{{SITENAME}}}}!
+
+Vďaka
+
+---
+
+Nechcete viac od nás dostávať email?
+
+Kliknite na $4
+a vypnite upozornenia emailov vo svojich nastaveniach.',
+	'foe_removed_subject'                        => 'Hej! $1 si vás odstránil ako nepriateľa na {{GRAMMAR:lokál|{{SITENAME}}}}!',
+	'foe_removed_body'                           => 'Ahoj $1:
+
+$2 si vás odstránil ako nepriateľa na {{GRAMMAR:lokál|{{SITENAME}}}}!
+
+Že by ste sa začínali spriateľovať?
+
+Vďaka
+
+---
+
+Nechcete viac od nás dostávať email?
+
+Kliknite na $4
+a vypnite upozornenia emailov vo svojich nastaveniach.',
+);
+
+/** Serbian Cyrillic ekavian (ћирилица)
+ * @author Sasa Stefanovic
+ */
+$messages['sr-ec'] = array(
+	'ur-remove' => 'Уклони',
+);
+
 /** Swedish (Svenska)
  * @author M.M.S.
  */
@@ -1315,18 +1479,28 @@ $messages['te'] = array(
 	'friend_request_subject'                     => '{{SITENAME}}లో $1 మిమ్మల్ని స్నేహితునిగా చేర్చుకున్నారు!',
 );
 
-/** Tajik (Тоҷикӣ)
+/** Tajik (Cyrillic) (Тоҷикӣ/tojikī (Cyrillic))
  * @author Ibrahim
  */
 $messages['tg-cyrl'] = array(
 	'ur-main-page'                               => 'Саҳифаи Аслӣ',
+	'ur-your-profile'                            => 'Намояи шумо',
 	'ur-friend'                                  => 'дӯст',
+	'ur-add-friends'                             => ' Бештар дӯстон мехоҳед? <a href="$1">Онҳоро даъват кунед</a>',
+	'ur-add-friend'                              => 'Чун дӯст илова кунед',
+	'ur-add-foe'                                 => 'Чун ҳариф илова кунед',
+	'ur-remove-relationship'                     => 'Чун $1 пок шавад',
+	'ur-give-gift'                               => 'Ҳадя диҳед',
 	'ur-previous'                                => 'қаблӣ',
 	'ur-next'                                    => 'баъдӣ',
+	'ur-remove-relationship-title-confirm'       => 'Шумо $1ро чун $2ӣ худ пок кардед',
+	'ur-remove-relationship-message'             => 'Шумо дархост кардед, ки $1 чун $2 шумо пок шавад, бо пахш кардани "$3" тасдиқ кунед.',
+	'ur-remove-relationship-message-confirm'     => 'Шумо бо муваффақият $1ро чун $2атон пок кардед.',
 	'ur-remove'                                  => 'Ҳазф',
 	'ur-cancel'                                  => 'Лағв',
 	'ur-login'                                   => 'Вуруд кунед',
 	'ur-friendship'                              => 'дӯстӣ',
+	'ur-add-error-message-existing-relationship' => 'Шумо аллакай $1 бо $2 мебошед.',
 	'ur-add-error-message-pending-request-title' => 'Сабр!',
 	'ur-accept'                                  => 'Пазируфтан',
 	'ur-reject'                                  => 'Рад кардан',
