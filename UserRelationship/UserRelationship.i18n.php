@@ -1184,6 +1184,7 @@ $messages['ps'] = array(
 	'ur-friend'       => 'ملګری',
 	'ur-add-friend'   => 'خپل په ملګرو کې ورګډول',
 	'ur-previous'     => 'پخوانی',
+	'ur-next'         => 'راتلونکی',
 	'ur-login'        => 'ننوتل',
 	'ur-friendship'   => 'ملګرتيا',
 	'ur-accept'       => 'منل',
