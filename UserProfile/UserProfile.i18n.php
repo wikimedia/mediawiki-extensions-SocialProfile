@@ -1058,6 +1058,17 @@ $messages['gu'] = array(
 	'user-page-link' => 'સભ્યનું પાનું',
 );
 
+/** Hindi (हिन्दी)
+ * @author Kaustubh
+ */
+$messages['hi'] = array(
+	'user-personal-info-title'       => 'वैयक्तिक ज़ानकारी',
+	'user-personal-info-real-name'   => 'असली नाम',
+	'user-profile-section-personal'  => 'वैयक्तिक ज़ानकारी',
+	'user-profile-section-interests' => 'अन्य ज़ानकारी',
+	'user-profile-personal-name'     => 'नाम',
+);
+
 /** Hungarian (Magyar)
  * @author Dani
  */

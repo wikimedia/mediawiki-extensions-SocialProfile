@@ -677,6 +677,14 @@ Faga clic $4
 e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
 );
 
+/** Hindi (हिन्दी)
+ * @author Kaustubh
+ */
+$messages['hi'] = array(
+	'ur-remove' => 'हटायें',
+	'ur-cancel' => 'रद्द करें',
+);
+
 
 /** Khmer (ភាសាខ្មែរ)
  * @author Chhorran
