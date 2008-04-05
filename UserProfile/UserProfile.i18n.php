@@ -617,11 +617,17 @@ $messages['el'] = array(
  * @author Yekrats
  */
 $messages['eo'] = array(
-	'user-count-separator'         => 'de',
-	'other-info-movies'            => 'Filmoj',
-	'user-profile-section-picture' => 'Avataro',
-	'user-profile-personal-name'   => 'Nomo',
-	'user-profile-personal-email'  => 'Retadreso',
+	'user-count-separator'           => 'de',
+	'other-info-title'               => 'Alia informo',
+	'user-friends-title'             => 'Amikoj',
+	'user-foes-title'                => 'Malamikoj',
+	'other-info-movies'              => 'Filmoj',
+	'other-info-music'               => 'Muziko',
+	'user-profile-section-interests' => 'Alia informo',
+	'user-profile-section-picture'   => 'Avataro',
+	'user-profile-personal-name'     => 'Nomo',
+	'user-profile-personal-email'    => 'Retadreso',
+	'user-profile-interests-music'   => 'Muziko',
 );
 
 /** Finnish (Suomi)
@@ -2414,6 +2420,12 @@ $messages['tet'] = array(
  * @author Ibrahim
  */
 $messages['tg-cyrl'] = array(
+	'user-count-separator'                 => 'аз',
+	'user-edit-this'                       => 'Инро вироиш кун',
+	'user-time-ago'                        => 'пеш',
+	'user-send-message'                    => 'Паёме фирист',
+	'user-send-gift'                       => 'Ҳадяе фирист',
+	'user-contributions'                   => 'Ҳиссагузориҳо',
 	'other-info-title'                     => 'Иттилооти дигар',
 	'user-friends-title'                   => 'Дӯстон',
 	'other-info-tv'                        => 'ТВ',
@@ -2421,16 +2433,29 @@ $messages['tg-cyrl'] = array(
 	'other-info-books'                     => 'Китобҳо',
 	'other-info-video-games'               => 'Видео бозиҳо',
 	'other-info-magazines'                 => 'Маҷаллаҳо',
+	'user-board-title'                     => 'Лавҳа',
+	'user-personal-info-title'             => 'Иттилооти шахсӣ',
+	'user-no-personal-info'                => 'Ҳеҷ иттилооти шахсӣ',
 	'user-personal-info-real-name'         => 'Номи аслӣ',
+	'user-personal-info-location'          => 'Макон',
 	'user-personal-info-hometown'          => 'Зодгоҳ',
 	'user-personal-info-birthday'          => 'Зодрӯз',
 	'user-personal-info-occupation'        => 'Касб',
 	'user-personal-info-websites'          => 'Сомонаҳо',
 	'user-personal-info-schools'           => 'Мактабҳо',
 	'user-personal-info-about-me'          => 'Дар бораи Ман',
+	'user-recent-activity-edit'            => 'Саҳифаро вироиш кард',
+	'user-recent-activity-gift-sent'       => 'Ҳадяе фиристод ба',
+	'user-recent-activity-user-message'    => 'Паёме фиристод ба',
+	'user-recent-activity-network-update'  => 'Фикреро фиристод',
+	'user-recent-system-gift'              => 'Ҷоиза гирифт',
 	'user-profile-default-country'         => 'Иёлоти Муттаҳида',
+	'user-profile-section-personal'        => 'Иттилооти шахсӣ',
+	'user-profile-section-interests'       => 'Иттилооти дигар',
+	'user-profile-section-preferences'     => 'Тарҷиҳот',
 	'user-profile-personal-name'           => 'Ном',
 	'user-profile-personal-email'          => 'Почтаи электронӣ',
+	'user-profile-personal-location'       => 'Макон',
 	'user-profile-personal-city'           => 'Шаҳр',
 	'user-profile-personal-country'        => 'Кишвар',
 	'user-profile-personal-hometown'       => 'Зодгоҳ',
@@ -2463,6 +2488,8 @@ $messages['tg-cyrl'] = array(
 	'user-page-link'                       => 'Саҳифаи Корбарӣ',
 	'user-social-profile-link'             => 'Намояи ҷамъиятӣ',
 	'user-wiki-link'                       => 'Вики саҳифаи корбарӣ',
+	'user-type-toggle-old'                 => 'Истифодаи саҳифаи корбарии вики',
+	'user-type-toggle-new'                 => 'Истифодаи саҳифаи корбарии ҷамъиятӣ',
 );
 
 /** Vietnamese (Tiếng Việt)

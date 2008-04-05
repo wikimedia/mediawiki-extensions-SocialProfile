@@ -206,7 +206,13 @@ $messages['el'] = array(
  * @author Yekrats
  */
 $messages['eo'] = array(
-	'boardlinkselectall' => 'Elektu Ĉiujn',
+	'boardlinkselectall'     => 'Elektu Ĉiujn',
+	'boardlinkselectfriends' => 'Selektu amikojn',
+	'boardlinkselectfoes'    => 'Selektu malamikojn',
+	'boardlinkunselectfoes'  => 'Malselektu malamikojn',
+	'userboard_delete'       => 'Forigu',
+	'userboard_private'      => 'privata',
+	'userboard_public'       => 'publika',
 );
 
 /** Finnish (Suomi)
@@ -870,14 +876,31 @@ $messages['tet'] = array(
 	'userboard_delete' => 'Halakon',
 );
 
-/** Tajik (Тоҷикӣ)
+/** Tajik (Cyrillic) (Тоҷикӣ/tojikī (Cyrillic))
  * @author Ibrahim
  */
 $messages['tg-cyrl'] = array(
-	'userboard_delete'     => 'Ҳазф',
-	'userboard_nextpage'   => 'баъдӣ',
-	'userboard_prevpage'   => 'қаблӣ',
-	'userboard_nomessages' => 'Пайғоме нест.',
+	'messagesenttitle'         => 'Паёмҳои фиристода шуданд',
+	'boardblaststep1'          => 'Қадами 1 - Паёми худро нависед',
+	'boardblastprivatenote'    => 'Ҳамаи паёмҳо чун паёмҳои шахсӣ фиристода хоҳанд шуд',
+	'boardblaststep2'          => 'Қадами 2 - Ба шахсе, ки паём фиристодан мехоҳед интихоб кунед',
+	'boardnofriends'           => 'Шумо ягон дӯсте барои фиристодани паём надоред!',
+	'messagesentsuccess'       => 'Паёми шумо бо муваффақият фиристода шуд',
+	'userboard'                => 'Лавҳаи корбар',
+	'userboard_noexist'        => 'Корбаре ки шумо кушиши дидан карда истодаед вуҷуд надорад.',
+	'userboard_yourboard'      => 'Лавҳаи Шумо',
+	'userboard_owner'          => 'Лавҳаи $1',
+	'userboard_yourboardwith'  => 'Лавҳа-ба-лавҳаи шумо бо $1',
+	'userboard_otherboardwith' => 'Лавҳа-ба-лавҳаи $1 бо $2',
+	'userboard_boardtoboard'   => 'Лавҳа-ба-лавҳа',
+	'userboard_sendmessage'    => 'Ба $1 паёме фирист',
+	'userboard_delete'         => 'Ҳазф',
+	'userboard_myboard'        => 'Лавҳаи Ман',
+	'userboard_messagetype'    => 'Навъи паём',
+	'userboard_nextpage'       => 'баъдӣ',
+	'userboard_prevpage'       => 'қаблӣ',
+	'userboard_nomessages'     => 'Пайғоме нест.',
+	'userboard_sendbutton'     => 'фирист',
 );
 
 /** Vietnamese (Tiếng Việt)
