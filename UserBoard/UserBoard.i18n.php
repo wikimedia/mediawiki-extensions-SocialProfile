@@ -101,12 +101,14 @@ $messages['bg'] = array(
 	'boardblaststep2'           => 'Стъпка 2 - Избиране на потребители, до които да бъде изпратено съобщението',
 	'boardnofriends'            => 'Нямате приятели, на които да изпращате съобщения!',
 	'messagesentsuccess'        => 'Съобщението беше изпратено успешно',
+	'userboard'                 => 'Потребителско табло',
 	'userboard_noexist'         => 'Потребителят, който се опитахте да видите, не съществува.',
 	'userboard_backprofile'     => 'Връщане към профила на $1',
 	'userboard_backyourprofile' => 'Обратно към профила ми',
 	'userboard_confirmdelete'   => 'Необходимо е потвърждение за изтриване на съобщението.',
 	'userboard_sendmessage'     => 'Изпращане на съобщение до $1',
 	'userboard_delete'          => 'Изтриване',
+	'userboard_myboard'         => 'Моето табло',
 	'userboard_private'         => 'лично',
 	'userboard_public'          => 'публично',
 	'userboard_messagetype'     => 'Тип съобщение',
@@ -116,6 +118,7 @@ $messages['bg'] = array(
 	'userboard_sendbutton'      => 'изпращане',
 	'userboard_loggedout'       => 'За изпращане на съобщения до другите потребители е необходимо <a href="$1">влизане</a> в системата.',
 	'userboard_showingmessages' => 'Показване на $2–$3 от {{PLURAL:$1|$1 съобщение|$1 съобщения}}',
+	'message_received_subject'  => '$1 писа на таблото ви в {{SITENAME}}',
 );
 
 /** Bengali (বাংলা)
@@ -206,13 +209,19 @@ $messages['el'] = array(
  * @author Yekrats
  */
 $messages['eo'] = array(
-	'boardlinkselectall'     => 'Elektu Ĉiujn',
-	'boardlinkselectfriends' => 'Selektu amikojn',
-	'boardlinkselectfoes'    => 'Selektu malamikojn',
-	'boardlinkunselectfoes'  => 'Malselektu malamikojn',
-	'userboard_delete'       => 'Forigu',
-	'userboard_private'      => 'privata',
-	'userboard_public'       => 'publika',
+	'boardlinkselectall'       => 'Elektu Ĉiujn',
+	'boardlinkunselectall'     => 'Malselektu ĉiujn',
+	'boardlinkselectfriends'   => 'Selektu amikojn',
+	'boardlinkunselectfriends' => 'Malselektu amikojn',
+	'boardlinkselectfoes'      => 'Selektu malamikojn',
+	'boardlinkunselectfoes'    => 'Malselektu malamikojn',
+	'userboard_delete'         => 'Forigu',
+	'userboard_private'        => 'privata',
+	'userboard_public'         => 'publika',
+	'userboard_nextpage'       => 'sekv',
+	'userboard_prevpage'       => 'antaŭ',
+	'userboard_nomessages'     => 'Neniuj mesaĝoj.',
+	'userboard_sendbutton'     => 'sendu',
 );
 
 /** Finnish (Suomi)
