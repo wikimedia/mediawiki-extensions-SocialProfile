@@ -639,6 +639,13 @@ Clicatz $4
 e modificatz vòstres paramètres per desactivar las notificacions dels corrièrs electronics.",
 );
 
+/** Polish (Polski)
+ * @author Sp5uhe
+ */
+$messages['pl'] = array(
+	'userboard_delete' => 'Usuń',
+);
+
 /** Pashto (پښتو)
  * @author Ahmed-Najib-Biabani-Ibrahimkhel
  */

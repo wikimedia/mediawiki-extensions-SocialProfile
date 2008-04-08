@@ -1486,6 +1486,7 @@ $messages['nn'] = array(
  * @author Jon Harald Søby
  */
 $messages['no'] = array(
+	'populateuserprofiles'                            => 'Befolk brukerprofiler',
 	'avatarupload'                                    => 'bare en testutvidelse',
 	'user-count-separator'                            => 'av',
 	'user-view-all'                                   => 'Vis alle',
@@ -1791,6 +1792,14 @@ $messages['oc'] = array(
 	'user-type-toggle-old'                            => "Utilizar la pagina d'utilizaire del wiki",
 	'user-type-toggle-new'                            => "Utilizar la pagina d'utilizaire en societat",
 	'user-board-login-message'                        => 'Devètz èsser <a href="$1">en sesilha</a> per mandar de messatges als autres utilizaires',
+);
+
+/** Polish (Polski)
+ * @author Sp5uhe
+ */
+$messages['pl'] = array(
+	'other-info-title'               => 'Inne informacje',
+	'user-profile-section-interests' => 'Inne informacje',
 );
 
 /** Pashto (پښتو)
