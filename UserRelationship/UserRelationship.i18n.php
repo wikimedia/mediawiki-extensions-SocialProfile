@@ -10,7 +10,7 @@ $messages = array();
 $messages['en'] = array(
 	'viewrelationships'                          => 'View relationship',
 	'viewrelationshiprequests'                   => 'View relationship requests',
-	'ur-already-submitted'                       => 'Your request Has Been Sent',
+	'ur-already-submitted'                       => 'Your request has been sent',
 	'ur-error-title'                             => 'Whoops, you took a wrong turn!',
 	'ur-error-message-no-user'                   => 'We cannot complete your request, because no user with this name exists.',
 	'ur-main-page'                               => 'Main page',
@@ -22,7 +22,7 @@ $messages['en'] = array(
 	'ur-add-friends'                             => ' Want more friends? <a href="$1">Invite them</a>',
 	'ur-add-friend'                              => 'Add as friend',
 	'ur-add-foe'                                 => 'Add as foe',
-	'ur-add-no-user'                             => 'No user selected.  Please request friends/foes through the correct link.',
+	'ur-add-no-user'                             => 'No user selected. Please request friends/foes through the correct link.',
 	'ur-remove-relationship'                     => 'Remove as $1',
 	'ur-give-gift'                               => 'Give a gift',
 	'ur-previous'                                => 'prev',
@@ -62,8 +62,8 @@ If $2 confirms your request, you will receive a follow-up e-mail',
 If you want more friends, <a href="$1">invite them!</a>',
 	'ur-requests-added-message'                  => 'You have added $1 as your $2.',
 	'ur-requests-reject-message'                 => 'You have rejected $1 as your $2.',
-	'ur-title-foe'                               => "$1's Foe List",
-	'ur-title-friend'                            => "$1's Friend List",
+	'ur-title-foe'                               => "$1's foe list",
+	'ur-title-friend'                            => "$1's friend list",
 	'friend_request_subject'                     => '$1 has added you as a friend on {{SITENAME}}!',
 	'friend_request_body'                        => 'Hi $1:
 
