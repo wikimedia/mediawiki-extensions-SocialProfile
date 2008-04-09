@@ -18,18 +18,19 @@ $wgHooks['ArticleFromTitle'][] = 'wfUserProfileFromTitle';
 //Calls UserProfilePage instead of standard article
 function wfUserProfileFromTitle( &$title, &$article ){
 	global $wgUser, $wgRequest, $IP, $wgOut, $wgTitle, $wgSupressPageTitle,$wgSupressSubTitle, $wgMemc,
-	$wgUserPageChoice, $wgParser, $wgUserProfileDirectory, $wgUserProfileScripts;
+	$wgUserPageChoice, $wgParser, $wgUserProfileDirectory, $wgUserProfileScripts, $wgStyleVersion;
 
 	if ( strpos( $title->getText(), "/" ) === false && ( NS_USER == $title->getNamespace() || NS_USER_PROFILE == $title->getNamespace() ) ) {
 
 		require_once( "{$wgUserProfileDirectory}/UserProfilePage.php" );
 
+		$show_user_page = false;
 		if( $wgUserPageChoice ){
 			$profile = new UserProfile( $title->getText() );
 			$profile_data = $profile->getProfile();
 
 			//If they want regular page, ignore this hook
-			if( $profile_data["user_id"] && $profile_data["user_page_type"] == 0 ){
+			if( isset( $profile_data["user_id"] ) && $profile_data["user_id"] && $profile_data["user_page_type"] == 0 ){
 				$show_user_page = true;
 			}
 		}
@@ -46,7 +47,7 @@ function wfUserProfileFromTitle( &$title, &$article ){
 
 		$wgOut->addScript("<link rel='stylesheet' type='text/css' href=\"{$wgUserProfileScripts}/UserProfile.css?{$wgStyleVersion}\"/>\n");
 
-		$article = new UserProfilePage(&$title);
+		$article = new UserProfilePage( $title );
 	}
 	return true;
 }

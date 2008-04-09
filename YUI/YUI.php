@@ -13,6 +13,6 @@ $dir = dirname(__FILE__) . '/';
 $wgExtensionMessagesFiles['YUI'] = $dir . 'yui.i18n.php';
 
 function wfYUI() {
-	global $wgOut;
-	$wgOut->addScript("<script type=\"text/javascript\" src=\"/extensions/SocialProfile/YUI/yui.js\"></script>\n");
+	global $wgOut, $wgScriptPath, $wgStyleVersion;
+	$wgOut->addScript("<script type=\"text/javascript\" src=\"{$wgScriptPath}/extensions/SocialProfile/YUI/yui.js?{$wgStyleVersion}\"></script>\n");
 }

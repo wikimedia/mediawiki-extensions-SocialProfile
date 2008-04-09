@@ -6,12 +6,13 @@
  * @subpackage SpecialPage
  *
  * @author David Pean <david.pean@gmail.com>
- * @copyright Copyright © 2007, Wikia Inc.
+ * @copyright Copyright Â© 2007, Wikia Inc.
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
 class SpecialViewRelationshipRequests extends SpecialPage {
 	function __construct() {
+		wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
 		parent::__construct( "ViewRelationshipRequests" );
 	}
 
@@ -32,8 +33,6 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		$wgOut->addScript("<script type=\"text/javascript\" src=\"{$wgUserRelationshipScripts}/UserRelationship.js?{$wgStyleVersion}\"></script>\n");
 		$wgOut->addScript("<link rel='stylesheet' type='text/css' href=\"{$wgUserRelationshipScripts}/UserRelationship.css?{$wgStyleVersion}\"/>\n");
 
-		wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
-
 		$rel = new UserRelationship($wgUser->getName() );
 		$friend_request_count = $rel->getOpenRequestCount($wgUser->getID(),1);
 		$foe_request_count = $rel->getOpenRequestCount($wgUser->getID(),2);
@@ -41,7 +40,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		if (count($_POST) && $_SESSION["alreadysubmitted"] == false) {
 			$_SESSION["alreadysubmitted"] = true;
 			$rel->addRelationshipRequest($this->user_name_to,$this->relationship_type,$_POST["message"]);
-			$out = "<br /><span class=title>Your request Has Been Sent</span><br /><br />";
+			$out = "<br /><span class=\"title\">" . wfMsg( 'ur-already-submitted' ) . "</span><br /><br />";
 			$wgOut->addHTML($out);
 		} else {
 			$_SESSION["alreadysubmitted"] = false;
@@ -83,7 +82,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 			} else {
 
 				$invite_link = Title::makeTitle(NS_SPECIAL, "InviteContacts");
-				$output = wfMsg("ur-no-request-message", $invite_link->escapeFullURL());
+				$output = wfMsg("ur-no-requests-message", $invite_link->escapeFullURL());
 			}
 			$wgOut->addHTML($output);
 		}

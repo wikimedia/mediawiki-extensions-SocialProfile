@@ -8,25 +8,25 @@
  * @subpackage SpecialPage
  *
  * @author David Pean <david.pean@gmail.com>
- * @copyright Copyright © 2007, Wikia Inc.
+ * @copyright Copyright Â© 2007, Wikia Inc.
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
 class SpecialRemoveRelationship extends UnlistedSpecialPage {
 	function __construct() {
+		wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
 		parent::__construct( "RemoveRelationship" );
 	}
 
 	function execute( $params ) {
-		global $wgUser, $wgOut, $wgRequest, $IP, $wgUploadPath, $wgUserRelationshipScripts;
+		global $wgUser, $wgOut, $wgRequest, $IP, $wgUploadPath, $wgUserRelationshipScripts, $wgStyleVersion;
 
-		wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
-
+		$this->setHeaders();
 		$wgOut->addScript("<link rel='stylesheet' type='text/css' href=\"{$wgUserRelationshipScripts}/UserRelationship.css?{$wgStyleVersion}\"/>\n");
 
 		$usertitle = Title::newFromDBkey($wgRequest->getVal('user'));
 		if(!$usertitle){
-			$wgOut->addHTML("No user selected.  Please remove friends/foes through the correct link.");
+			$wgOut->addWikiText( wfMsgNoTrans( 'ur-add-no-user' ) );
 			return false;
 		}
 
@@ -46,7 +46,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 				".wfMsg("ur-remove-error-message-remove-yourself")."
 			</div>
 			<div>
-				<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-main-page")."\" size=\"20\" onclick='window.location=\"index.php?title=Main_Page\"' /> ";
+				<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-main-page")."\" size=\"20\" onclick='window.location=\"index.php?title=" . wfMsgForContent( 'mainpage' ) . "\"' /> ";
 		if($wgUser->isLoggedIn())$out.="<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-your-profile")."\" size=\"20\" onclick=\"window.location='".$wgUser->getUserPage()->escapeFullURL() . "'\"/>";
 			$out .= "</div>";
 
@@ -58,7 +58,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 				".wfMsg("ur-remove-error-message-no-relationship", $this->user_name_to)."
 			</div>
 			<div>
-				<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-main-page")."\" size=\"20\" onclick='window.location=\"index.php?title=Main_Page\"' /> ";
+				<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-main-page")."\" size=\"20\" onclick='window.location=\"index.php?title=" . wfMsgForContent( 'mainpage' ) . "\"' /> ";
 			 	if($wgUser->isLoggedIn())$out.="<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-your-profile")."\" size=\"20\" onclick=\"window.location='".$wgUser->getUserPage()->escapeFullURL() . "'\"/>";
 			$out .= "</div>";
 
@@ -69,7 +69,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 				".wfMsg("ur-remove-error-message-pending-request", $label, $this->user_name_to)."
 			</div>
 			<div>
-				<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-main-page")."\" size=\"20\" onclick='window.location=\"index.php?title=Main_Page\"' /> ";
+				<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-main-page")."\" size=\"20\" onclick='window.location=\"index.php?title=" . wfMsgForContent( 'mainpage' ) . "\"' /> ";
 			 	if($wgUser->isLoggedIn())$out.="<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-your-profile")."\" size=\"20\" onclick=\"window.location='".$wgUser->getUserPage()->escapeFullURL() . "'\"/>";
 			$out .= "</div>";
 
@@ -80,7 +80,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 				".wfMsg("ur-remove-error-not-loggedin", $label)."
 			</div>
 			<div>
-				<input type=\"button\" class=\"site-button\" value=".wfMsg("ur-main-page")." size=\"20\" onclick='window.location=\"index.php?title=Main_Page\"' /> ";
+				<input type=\"button\" class=\"site-button\" value=".wfMsg("ur-main-page")." size=\"20\" onclick='window.location=\"index.php?title=" . wfMsgForContent( 'mainpage' ) . "\"' /> ";
 			 	if($wgUser->isLoggedIn())$out.="<input type=\"button\" class=\"site-button\" value=".wfMsg("ur-your-profile")." size=\"20\" onclick=\"window.location='".$wgUser->getUserPage()->escapeFullURL() . "'\"/>";
 			$out .= "</div>";
 
@@ -100,7 +100,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 					{$avatar_img}
 					".wfMsg("ur-remove-relationship-message-confirm", $this->user_name_to, $label)."
 					<div class=\"relationship-buttons\">
-						<input type=\"button\" class=\"site-button\" value=\"".wfMsg('ur-main-page')."\" size=\"20\" onclick=\"window.location='index.php?title=Main_Page'\"/>
+						<input type=\"button\" class=\"site-button\" value=\"".wfMsg('ur-main-page')."\" size=\"20\" onclick=\"window.location='index.php?title=" . wfMsgForContent( 'mainpage' ) . "'\"/>
 						<input type=\"button\" class=\"site-button\" value=\"".wfMsg('ur-your-profile')."\" size=\"20\" onclick=\"window.location='".$wgUser->getUserPage()->escapeFullURL() . "'\"/>
 					</div>
 					<div class=\"cleared\"></div>

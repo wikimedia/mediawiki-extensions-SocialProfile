@@ -8,21 +8,20 @@
  * @subpackage SpecialPage
  *
  * @author David Pean <david.pean@gmail.com>
- * @copyright Copyright © 2007, Wikia Inc.
+ * @copyright Copyright Â© 2007, Wikia Inc.
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
 class SpecialViewRelationships extends SpecialPage {
 	function __construct() {
+		wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
 		parent::__construct( "ViewRelationships" );
 	}
 
 	function execute( $params ) {
-		global $wgUser, $wgOut, $wgRequest, $IP, $wgMessageCache, $wgUserRelationshipScripts;
+		global $wgUser, $wgOut, $wgRequest, $IP, $wgMessageCache, $wgUserRelationshipScripts, $wgStyleVersion;
 
 		$wgOut->addScript("<link rel='stylesheet' type='text/css' href=\"{$wgUserRelationshipScripts}/UserRelationship.css?{$wgStyleVersion}\"/>\n");
-
-		wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
 
 		$output = "";
 
@@ -88,11 +87,11 @@ class SpecialViewRelationships extends SpecialPage {
 		$foe_count = $stats_data["foe_count"];
 
 		if ($rel_type==1) {
-		    $output .= $wgOut->setPagetitle( "{$rel->user_name}'s Friend List" );
+		    $output .= $wgOut->setPagetitle( wfMsg( 'ur-title-friend', $rel->user_name ) );
 			$total = $friend_count;
 			$label = wfMsg('ur-friend');
 		} else {
-		    $output .= $wgOut->setPagetitle( "{$rel->user_name}'s Foe List" );
+		    $output .= $wgOut->setPagetitle( wfMsg( 'ur-title-foe', $rel->user_name ) );
 			$total = $foe_count;
 			$label = wfMsg('ur-foe');
 		}

@@ -6,7 +6,7 @@
  * @subpackage Article
  *
  * @author David Pean <david.pean@gmail.com>
- * @copyright Copyright  2007, Wikia Inc.
+ * @copyright Copyright © 2007, Wikia Inc.
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
@@ -22,9 +22,8 @@ class UserProfilePage extends Article{
 		$this->user = User::newFromId($this->user_id);
 		$this->user->loadFromDatabase();
 
-		if( $this->user_name == $wgUser->getName() ){
-			$this->is_owner = true;
-		}
+		$this->is_owner = ( $this->user_name == $wgUser->getName() );
+
 		$profile = new UserProfile( $this->user_name );
 		$this->profile_data = $profile->getProfile();
 	}
@@ -34,10 +33,11 @@ class UserProfilePage extends Article{
 	}
 
 	function view(){
-		global $wgOut, $wgUser, $wgRequest, $wgTitle, $wgSitename;
+		global $wgOut, $wgUser, $wgRequest, $wgTitle, $wgContLang, $wgSitename;
 
 		$sk = $wgUser->getSkin();
-		$wgOut->setHTMLTitle(wfMsg( 'pagetitle', "User:{$this->user_name}" ));
+
+		$wgOut->setPageTitle( $this->mTitle->getPrefixedText() );
 
 		if ( !$this->user_id ) {
 			parent::view();
@@ -104,20 +104,19 @@ class UserProfilePage extends Article{
 	function getProfileSection($label,$value,$required=true){
 		global $wgUser, $wgTitle, $wgOut;
 
+		$output = '';
 		if($value || $required) {
 			if(!$value) {
 				if ( $wgUser->getName() == $wgTitle->getText()  ) {
-					$value = 'Update Your Profile';
+					$value = wfMsg( 'profile-updated-personal' );
 				} else {
-					$value = 'Not Provided';
+					$value = wfMsg( 'profile-not-provided' );
 				}
 			}
 
 			$value = $wgOut->parse( trim($value), false );
 
-			$output = "<div>
-				<b>{$label}</b>{$value}
-			</div>";
+			$output = "<div><b>{$label}</b>{$value}</div>";
 		}
 		return $output;
 	}
@@ -151,11 +150,12 @@ class UserProfilePage extends Article{
 			$hometown = "";
 			$hometown .= $profile_data["hometown_country"];
 		}
-		if($hometown==", ")$hometown="";
+		if($hometown==", ") $hometown="";
 
 		$joined_data = $profile_data["real_name"] . $location.$hometown . $profile_data["birthday"] . $profile_data["occupation"] . $profile_data["websites"] . $profile_data["places_lived"] . $profile_data["schools"] . $profile_data["about"];
 		$edit_info_link = Title::MakeTitle(NS_SPECIAL,"UpdateProfile");
 
+		$output = '';
 		if ($joined_data) {
 			$output .= "<div class=\"user-section-heading\">
 				<div class=\"user-section-title\">
@@ -163,7 +163,7 @@ class UserProfilePage extends Article{
 				</div>
 				<div class=\"user-section-actions\">
 					<div class=\"action-right\">";
-					if ($wgUser->getName()==$user_name)$output .= "<a href=\"".$edit_info_link->escapeFullURL()."\">".wfMsg("user-edit-this")."</a>";
+					if ($wgUser->getName()==$user_name) $output .= "<a href=\"".$edit_info_link->escapeFullURL()."\">".wfMsg("user-edit-this")."</a>";
 					$output .= "</div>
 					<div class=\"cleared\"></div>
 				</div>
@@ -219,6 +219,7 @@ class UserProfilePage extends Article{
 		$joined_data = $profile_data["custom_1"] . $profile_data["custom_2"] . $profile_data["custom_3"] . $profile_data["custom_4"];
 		$edit_info_link = Title::MakeTitle(NS_SPECIAL,"UpdateProfile");
 
+		$output = '';
 		if ($joined_data) {
 			$output .= "<div class=\"user-section-heading\">
 				<div class=\"user-section-title\">
@@ -276,6 +277,7 @@ class UserProfilePage extends Article{
 		$joined_data = $profile_data["movies"] . $profile_data["tv"] . $profile_data["music"] . $profile_data["books"] . $profile_data["video_games"] . $profile_data["magazines"] . $profile_data["drinks"] . $profile_data["snacks"];
 		$edit_info_link = Title::MakeTitle(NS_SPECIAL,"UpdateProfile");
 
+		$output = '';
 		if ($joined_data) {
 
 			$output .= "<div class=\"user-section-heading\">
@@ -360,6 +362,7 @@ class UserProfilePage extends Article{
 		$avatar = new wAvatar($this->user_id,"l");
 
 		wfDebug("profile type" . $profile_data["user_page_type"] . "\n");
+		$output = '';
 		if ( $this->isOwner() ) {
 			$toggle_title = Title::makeTitle(NS_SPECIAL, "ToggleUserPage");
 			$output .= "<div id=\"profile-toggle-button\"><a href=\"".$toggle_title->escapeFullURL()."\" rel=\"nofollow\">". (( $this->profile_data["user_page_type"] == 1 )? wfMsg("user-type-toggle-old"):wfMsg("user-type-toggle-new") ) ."</a></div>";
@@ -390,29 +393,29 @@ class UserProfilePage extends Article{
 		} else if ($wgUser->isLoggedIn()) {
 			if($relationship==false) {
 				$output .= "<a href=\"".$add_relationship->escapeFullURL('user='.$user_safe.'&rel_type=1')."\" rel=\"nofollow\">".wfMsg("user-add-friend")."</a> |
-				<a href=\"".$add_relationship->escapeFullURL('user='.$user_safe.'&rel_type=2')."\" rel=\"nofollow\">".wfMsg("user-add-foe")."</a> |";
+				<a href=\"".$add_relationship->escapeFullURL('user='.$user_safe.'&rel_type=2')."\" rel=\"nofollow\">".wfMsg("user-add-foe")."</a> | ";
 			} else {
-				if ($relationship==1)$output .= "<a href=\"".$remove_relationship->escapeFullURL('user='.$user_safe)."\">".wfMsg("user-remove-friend")."</a> |";
-				if ($relationship==2)$output .= "<a href=\"".$remove_relationship->escapeFullURL('user='.$user_safe)."\">".wfMsg("user-remove-foe")."</a> |";
+				if ($relationship==1)$output .= "<a href=\"".$remove_relationship->escapeFullURL('user='.$user_safe)."\">".wfMsg("user-remove-friend")."</a> | ";
+				if ($relationship==2)$output .= "<a href=\"".$remove_relationship->escapeFullURL('user='.$user_safe)."\">".wfMsg("user-remove-foe")."</a> | ";
 			}
 
-			$output .= "<a href=\"".$send_message->escapeFullURL('user='.$wgUser->getName().'&conv='.$user_safe)."\" rel=\"nofollow\">".wfMsg("user-send-message")."</a> |";
+			$output .= "<a href=\"".$send_message->escapeFullURL('user='.$wgUser->getName().'&conv='.$user_safe)."\" rel=\"nofollow\">".wfMsg("user-send-message")."</a> | ";
 		}
 
-			$output .= "<a href=\"".$contributions->escapeFullURL()."/{$user_safe}\" rel=\"nofollow\">".wfMsg("user-contributions")."</a>";
+		$output .= "<a href=\"".$contributions->escapeFullURL()."/{$user_safe}\" rel=\"nofollow\">".wfMsg("user-contributions")."</a> ";
 
-			//Links to User:user_name  from User_profile:
-			if( $wgTitle->getNamespace() == NS_USER_PROFILE && $this->profile_data["user_id"] && $this->profile_data["user_page_type"] == 0){
-				$output .= "| <a href=\"".$user_page->escapeFullURL()."\" rel=\"nofollow\">".wfMsg("user-page-link")."</a>";
-			}
-			//Links to User:user_name  from User_profile:
-			if( $wgTitle->getNamespace() == NS_USER && $this->profile_data["user_id"] && $this->profile_data["user_page_type"] == 0){
-				$output .= "| <a href=\"".$user_social_profile->escapeFullURL()."\" rel=\"nofollow\">".wfMsg("user-social-profile-link")."</a>";
-			}
+		//Links to User:user_name  from User_profile:
+		if( $wgTitle->getNamespace() == NS_USER_PROFILE && $this->profile_data["user_id"] && $this->profile_data["user_page_type"] == 0){
+			$output .= "| <a href=\"".$user_page->escapeFullURL()."\" rel=\"nofollow\">".wfMsg("user-page-link")."</a> ";
+		}
+		//Links to User:user_name  from User_profile:
+		if( $wgTitle->getNamespace() == NS_USER && $this->profile_data["user_id"] && $this->profile_data["user_page_type"] == 0){
+			$output .= "| <a href=\"".$user_social_profile->escapeFullURL()."\" rel=\"nofollow\">".wfMsg("user-social-profile-link")."</a> ";
+		}
 
-			if( $wgTitle->getNamespace() == NS_USER && ( !$this->profile_data["user_id"] || $this->profile_data["user_page_type"] == 1) ){
-				$output .= "| <a href=\"".$user_wiki->escapeFullURL()."\" rel=\"nofollow\">".wfMsg("user-wiki-link")."</a>";
-			}
+		if( $wgTitle->getNamespace() == NS_USER && ( !$this->profile_data["user_id"] || $this->profile_data["user_page_type"] == 1) ){
+			$output .= "| <a href=\"".$user_wiki->escapeFullURL()."\" rel=\"nofollow\">".wfMsg("user-wiki-link")."</a>";
+		}
 
 		$output .= "</div>
 

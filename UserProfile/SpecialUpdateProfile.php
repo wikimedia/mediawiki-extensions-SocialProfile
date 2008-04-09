@@ -17,11 +17,11 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 	function initProfile(){
 		global $wgUser, $wgDBprefix;
-		$dbr =& wfGetDB( DB_MASTER );
-		$s = $dbr->selectRow( 'user_profile', array( 'up_user_id' ), array( 'up_user_id' => $wgUser->getID() ), $fname );
+		$dbr = wfGetDB( DB_MASTER );
+		$s = $dbr->selectRow( 'user_profile', array( 'up_user_id' ), array( 'up_user_id' => $wgUser->getID() ), __METHOD__ );
 		if ( $s === false ) {
 			$fname = $wgDBprefix.'user_profile::addToDatabase';
-			$dbw =& wfGetDB( DB_MASTER );
+			$dbw = wfGetDB( DB_MASTER );
 			$dbw->insert( 'user_profile',
 				array(
 					'up_user_id' => $wgUser->getID()
@@ -31,7 +31,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	function execute($section){
-		global $wgUser, $wgOut, $wgRequest, $wgSiteView, $IP, $wgUserProfileScripts;
+		global $wgUser, $wgOut, $wgRequest, $wgSiteView, $IP, $wgUserProfileScripts, $wgStyleVersion;
 
 		$wgOut->setHTMLTitle( wfMsg('pagetitle', wfMsg('edit-profile-title')));
 
@@ -91,7 +91,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	function saveWikiaSettings_basic(){
-		global $wgUser, $wgOut, $wgRequest, $wgSiteView;
+		global $wgUser, $wgOut, $wgRequest, $wgSiteView, $wgEmailAuthentication;
 
 		$wgUser->setRealName( $wgRequest->getVal("real_name") );
 		$wgUser->setEmail( $wgRequest->getVal("email") );
@@ -136,13 +136,13 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		if($wgSitename=="ArmchairGM"){
 			$dbr =& wfGetDB( DB_MASTER );
 			if($wgRequest->getVal("weeklyemail")==1){
-				$s = $dbr->selectRow( '`user_mailing_list`', array( 'um_user_id' ), array( 'um_user_id' => $wgUser->getID()  ), $fname );
+				$s = $dbr->selectRow( '`user_mailing_list`', array( 'um_user_id' ), array( 'um_user_id' => $wgUser->getID()  ), __METHOD__ );
 				if ( $s === false ){
 					$dbr->insert( '`user_mailing_list`',
 					array(
 						'um_user_id' => $wgUser->getID(),
 						'um_user_name' => $wgUser->getName(),
-						), $fname
+						), __METHOD__
 					);
 				}
 			}else{
@@ -254,7 +254,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	function displayBasicForm(){
-		global $wgRequest, $wgSiteView, $wgUser, $wgDBprefix;
+		global $wgRequest, $wgSiteView, $wgUser, $wgDBprefix, $wgOut;
 
 		$dbr =& wfGetDB( DB_MASTER );
 		$s = $dbr->selectRow( 'user_profile',
@@ -300,9 +300,9 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		$countries = array("Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla","Antarctica","Antigua and Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Bouvet Island","Brazil","British Indian Ocean Territory","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central African Republic","Chad","Chile","China","Christmas Island","Cocos Islands","Colombia","Comoros","Congo","Congo, Democratic Republic of the","Cook Islands","Costa Rica","Cote d'Ivoire","Croatia","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Guiana","French Polynesia","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Heard Island and McDonald Islands","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macao","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mayotte","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Norfolk Island","North Korea","Norway","Oman","Pakistan","Palau","Palestinian Territory","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn","Poland","Portugal","Puerto Rico","Qatar","Romania","Russian Federation","Rwanda","Saint Helena","Saint Kitts and Nevis","Saint Lucia","Saint Pierre and Miquelon","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia and Montenegro","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Georgia","South Korea","Spain","Sri Lanka","Sudan","Suriname","Svalbard and Jan Mayen","Swaziland","Sweden","Switzerland","Syrian Arab Republic","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tokelau","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","United States Minor Outlying Islands","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands, British","Virgin Islands, U.S.","Wallis and Futuna","Western Sahara","Yemen","Zambia","Zimbabwe");
 
-		$form =  '<h1>'.wfMsg('edit-profile-title').'</h1>';
-		$form .= UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-personal' ) );
-		$form .= '<form action="" method=post enctype="multipart/form-data" name=profile>';
+		$wgOut->setPageTitle( wfMsg('edit-profile-title') );
+		$form = UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-personal' ) );
+		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">';
 		$form .= '<div class="profile-info">';
 		$form .= '<div class="profile-update">
 			<p class="profile-update-title">' . wfMsgForContent( 'user-profile-personal-info' ) . '</p>
@@ -320,8 +320,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			if(!$wgUser->mEmailAuthenticated){
 				$form  .= '<p class="profile-update-unit-left"></p><p class="profile-update-unit-small">(your e-mail needs to be authenticated to receive site notifications)</p>';
 			}
-			$form .='</p>
-			<div class="cleared"></div>
+			$form .='<div class="cleared"></div>
 		</div>
 		<div class="cleared"></div>';
 
@@ -337,11 +336,11 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		 		<script>
 					displaySection(\"location_state\",\"" . $location_country . "\",\"" . $location_state . "\")
 				</script>";
-		 	$form .= "<select name=\"location_country\" id=\"location_country\" onChange=displaySection('location_state',this.value,'')><option></option>";
+		 	$form .= "<select name=\"location_country\" id=\"location_country\" onChange=\"displaySection('location_state',this.value,'')\"><option></option>";
 
 		for ($i=0;$i<count($countries);$i++) {
-			$form .= "<option value=\"{$countries[$i]}\" " . (($countries[$i] == $location_country)?'selected':'') . ">";
-			$form .= $countries[$i] . "</option>";
+			$form .= "<option value=\"{$countries[$i]}\" " . (($countries[$i] == $location_country)?'selected="selected"':'') . ">";
+			$form .= $countries[$i] . "</option>\n";
 		}
 
 		$form .=  "</select>";
@@ -362,10 +361,10 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			<script>
 				displaySection(\"hometown_state\",\"" . $hometown_country . "\",\"" . $hometown_state . "\")
 			</script>";
-		$form .= "<select name=\"hometown_country\" id=\"hometown_country\" onChange=displaySection('hometown_state',this.value,'')><option></option>";
+		$form .= "<select name=\"hometown_country\" id=\"hometown_country\" onChange=\"displaySection('hometown_state',this.value,'')\"><option></option>";
 
 		for($i=0;$i<count($countries);$i++) {
-			$form .= "<option value=\"{$countries[$i]}\" " . (($countries[$i] == $hometown_country)?'selected':'') . ">";
+			$form .= "<option value=\"{$countries[$i]}\" " . (($countries[$i] == $hometown_country)?'selected="selected"':'') . ">";
 			$form .= $countries[$i] . "</option>";
 		}
 
@@ -433,10 +432,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		<div class=\"cleared\"></div>";
 
 		$form .= '
-			<input type="button" class="site-button" value="' . wfMsgForContent('user-profile-update-button') . '" size="20" onclick=document.profile.submit() />
-			</form>';
-
-		$form .= "</div>";
+			<input type="button" class="site-button" value="' . wfMsgForContent('user-profile-update-button') . '" size="20" onclick="document.profile.submit()" />
+			</div></form>';
 
 		return $form;
 	}
@@ -470,10 +467,9 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			 $drinks = $s->up_drinks;
 		}
 
-		$wgOut->setHTMLTitle( wfMsg('pagetitle', wfMsg('user-profile-section-interests')));
-		$form =  '<h1>'.wfMsg('user-profile-section-interests').'</h1>';
-		$form .= UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-interests' ) );
-		$form .= "<form action=\"\" method=post enctype=\"multipart/form-data\" name=\"profile\">
+		$wgOut->setPageTitle( wfMsg('user-profile-section-interests'));
+		$form = UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-interests' ) );
+		$form .= "<form action=\"\" method=\"post\" enctype=\"multipart/form-data\" name=\"profile\">
 			<div class=\"profile-info\">";
 		$form .= "<div class=\"profile-update\">
 			<p class=\"profile-update-title\">" . wfMsgForContent( 'user-profile-interests-entertainment' ) . "</p>
@@ -521,7 +517,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			</p>
 			<div class=\"cleared\"></div>
 			</div>
-			<input type=\"button\" class=\"site-button\" value=\"Update\" size=\"20\" onclick=document.profile.submit() />
+			<input type=\"button\" class=\"site-button\" value=\"Update\" size=\"20\" onclick=\"document.profile.submit()\" />
 			</div>
 			</form>
 			";
@@ -532,10 +528,9 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	function displayPreferencesForm(){
 		global $wgRequest, $wgSiteView, $wgUser, $wgOut;
 
-		$wgOut->setHTMLTitle( wfMsg('pagetitle', wfMsg('user-profile-section-preferences')));
-		$form =  '<h1>'.wfMsg('user-profile-section-preferences').'</h1>';
-		$form .= UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-preferences' ) );
-		$form .= '<form action="" method=post enctype="multipart/form-data" name=profile>';
+		$wgOut->setPageTitle( wfMsg('user-profile-section-preferences'));
+		$form = UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-preferences' ) );
+		$form .= '<form action="" method="post" enctype="multipart/form-data" name=profile>';
 		$form .= '<div class="profile-info">
 			<div class="profile-update">
 				<p class="profile-update-title">' . wfMsgForContent( 'user-profile-preferences-emails' ) . '</p>
@@ -547,7 +542,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 				</p>';
 		$form .= '</div>
 			<div class="cleared"></div>';
-		$form .= '<input type="button" class="site-button" value="' . wfMsgForContent('user-profile-update-button') . '" size="20" onclick=document.profile.submit() />
+		$form .= '<input type="button" class="site-button" value="' . wfMsgForContent('user-profile-update-button') . '" size="20" onclick="document.profile.submit()" />
 			</form>';
 		$form .= "</div>";
 
@@ -574,7 +569,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$wgOut->setHTMLTitle( wfMsg('pagetitle', wfMsg('user-profile-tidbits-title')));
 		$form =  '<h1>'.wfMsg('user-profile-tidbits-title').'</h1>';
 		$form .= UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-custom' ) );
-		$form .= "<form action=\"\" method=post enctype=\"multipart/form-data\" name=\"profile\">
+		$form .= "<form action=\"\" method=\"post\" enctype=\"multipart/form-data\" name=\"profile\">
 		 	<div class=\"profile-info\">
 				<div class=\"profile-update\">
 					<p class=\"profile-update-title\">" . wfMsgForContent( 'user-profile-tidbits-title' ) . "</p>
@@ -599,7 +594,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 					</p>
 					<div class=\"cleared\"></div>
 				</div>
-			<input type=\"button\" class=\"site-button\" value=\"Update\" size=\"20\" onclick=document.profile.submit() />
+			<input type=\"button\" class=\"site-button\" value=\"Update\" size=\"20\" onclick=\"document.profile.submit()\" />
 			</div>
 			</form>
 			";

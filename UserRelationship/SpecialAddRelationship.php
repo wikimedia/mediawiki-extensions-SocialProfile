@@ -9,29 +9,30 @@
  * @subpackage SpecialPage
  *
  * @author David Pean <david.pean@gmail.com>
- * @copyright Copyright © 2007, Wikia Inc.
+ * @copyright Copyright Â© 2007, Wikia Inc.
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
 class SpecialAddRelationship extends UnlistedSpecialPage {
 	function __construct() {
+		wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
 		parent::__construct( "AddRelationship" );
 	}
 
 	function execute( $params ) {
-		global $wgUser, $wgOut, $wgRequest, $IP, $wgUploadPath, $wgUserRelationshipScripts;
+		global $wgUser, $wgOut, $wgRequest, $IP, $wgUploadPath, $wgUserRelationshipScripts, $wgStyleVersion;
 
-		wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
-
+		$this->setHeaders();
 		$wgOut->addScript("<link rel='stylesheet' type='text/css' href=\"{$wgUserRelationshipScripts}/UserRelationship.css?{$wgStyleVersion}\"/>\n");
 
 		$usertitle = Title::newFromDBkey($wgRequest->getVal('user'));
-		$user = Title::makeTitle( NS_USER  , $usertitle->getText()  );
 
 		if(!$usertitle){
-			$wgOut->addHTML("No user selected.  Please request friends/foes through the correct link.");
+			$wgOut->addWikiText( wfMsgNoTrans( 'ur-add-no-user' ) );
 			return false;
 		}
+
+		$user = Title::makeTitle( NS_USER  , $usertitle->getText()  );
 
 		$this->user_name_to = $usertitle->getText();
 		$this->user_id_to = User::idFromName($this->user_name_to);
@@ -44,7 +45,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				".wfMsg("ur-add-error-message-yourself")."
 			</div>
 			<div>
-				<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-main-page")."\" size=\"20\" onclick='window.location=\"index.php?title=Main_Page\"' /> ";
+				<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-main-page")."\" size=\"20\" onclick='window.location=\"index.php?title=" . wfMsgForContent( 'mainpage' ) . "\"' /> ";
 			 	if($wgUser->isLoggedIn())$out.="<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-your-profile")."\" size=\"20\" onclick=\"window.location='".$wgUser->getUserPage()->escapeFullURL() . "'\"/>";
 			$out .= "</div>";
 
@@ -56,7 +57,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				".wfMsg("ur-add-error-message-blocked")."
 			</div>
 			<div>
-				<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-main-page")."\" size=\"20\" onclick='window.location=\"index.php?title=Main_Page\"' /> ";
+				<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-main-page")."\" size=\"20\" onclick='window.location=\"index.php?title=" . wfMsgForContent( 'mainpage' ) . "\"' /> ";
 			 	if($wgUser->isLoggedIn())$out.="<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-your-profile")."\" size=\"20\" onclick=\"window.location='".$wgUser->getUserPage()->escapeFullURL() . "'\"/>";
 			$out .= "</div>";
 
@@ -68,7 +69,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				".wfMsg("ur-add-error-message-no-user")."
 			</div>
 			<div>
-				<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-main-page")."\" size=\"20\" onclick='window.location=\"index.php?title=Main_Page\"' /> ";
+				<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-main-page")."\" size=\"20\" onclick='window.location=\"index.php?title=" . wfMsgForContent( 'mainpage' ) . "\"' /> ";
 				 if($wgUser->isLoggedIn())$out.="<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-your-profile")."\" size=\"20\" onclick=\"window.location='".$wgUser->getUserPage()->escapeFullURL() . "'\"/>";
 			$out .= "</div>";
 
@@ -92,7 +93,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				{$avatar_img}
 				".wfMsg("ur-add-error-message-existing-relationship", $label, $this->user_name_to)."
 				<div class=\"relationship-buttons\">
-					<input type=\"button\" class=\"site-button\" value=\"".wfMsg('ur-main-page')."\" size=\"20\" onclick=\"window.location='index.php?title=Main_Page'\"/>
+					<input type=\"button\" class=\"site-button\" value=\"".wfMsg('ur-main-page')."\" size=\"20\" onclick=\"window.location='index.php?title=" . wfMsgForContent( 'mainpage' ) . "'\"/>
 					<input type=\"button\" class=\"site-button\" value=\"".wfMsg('ur-your-profile')."\" size=\"20\" onclick=\"window.location='".$wgUser->getUserPage()->escapeFullURL() . "'\"/>
 				</div>
 				<div class=\"cleared\"></div>
@@ -117,7 +118,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				{$avatar_img}
 				".wfMsg("ur-add-error-message-pending-request", $label, $this->user_name_to)."
 				<div class=\"relationship-buttons\">
-					<input type=\"button\" class=\"site-button\" value=\"".wfMsg('ur-main-page')."\" size=\"20\" onclick=\"window.location='index.php?title=Main_Page'\"/>
+					<input type=\"button\" class=\"site-button\" value=\"".wfMsg('ur-main-page')."\" size=\"20\" onclick=\"window.location='index.php?title=" . wfMsgForContent( 'mainpage' ) . "'\"/>
 					<input type=\"button\" class=\"site-button\" value=\"".wfMsg('ur-your-profile')."\" size=\"20\" onclick=\"window.location='".$wgUser->getUserPage()->escapeFullURL() . "'\"/>
 				</div>
 				<div class=\"cleared\"></div>
@@ -143,7 +144,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				".wfMsg("ur-add-error-message-not-loggedin", $label)."
 			</div>
 			<div>
-				<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-main-page")."\" size=\"20\" onclick='window.location=\"index.php?title=Main_Page\"' />
+				<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-main-page")."\" size=\"20\" onclick='window.location=\"index.php?title=" . wfMsgForContent( 'mainpage' ) . "\"' />
 				<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-login")."\" size=\"20\" onclick=\"window.location='".$login_link->escapeFullURL() . "'\"/>";
 			$out .= "</div>";
 
@@ -170,7 +171,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 					{$avatar_img}
 					".wfMsg("ur-add-sent-message", $label, $this->user_name_to)."
 					<div class=\"relationship-buttons\">
-						<input type=\"button\" class=\"site-button\" value=\"".wfMsg('ur-main-page')."\" size=\"20\" onclick=\"window.location='index.php?title=Main_Page'\"/>
+						<input type=\"button\" class=\"site-button\" value=\"".wfMsg('ur-main-page')."\" size=\"20\" onclick=\"window.location='index.php?title=" . wfMsgForContent( 'mainpage' ) . "'\"/>
 						<input type=\"button\" class=\"site-button\" value=\"".wfMsg('ur-your-profile')."\" size=\"20\" onclick=\"window.location='".$wgUser->getUserPage()->escapeFullURL() . "'\"/>
 					</div>
 					<div class=\"cleared\"></div>

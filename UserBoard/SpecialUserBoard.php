@@ -8,7 +8,7 @@ if ( ! defined( 'MEDIAWIKI' ) )
  * @subpackage SpecialPage
  *
  * @author David Pean <david.pean@gmail.com>
- * @copyright Copyright © 2007, Wikia Inc.
+ * @copyright Copyright Â© 2007, Wikia Inc.
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
@@ -16,6 +16,7 @@ $wgUserBoard = true;
 
 class SpecialViewUserBoard extends SpecialPage {
 	public function __construct() {
+		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 		SpecialPage::SpecialPage("UserBoard");
 	}
 

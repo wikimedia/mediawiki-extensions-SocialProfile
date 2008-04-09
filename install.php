@@ -42,8 +42,7 @@ if( !isset( $wgDBadminuser ) || !isset( $wgDBadminpassword ) ) {
 $dbclass = $wgDBtype == 'MySql'
 			? 'Database'
 			: 'Database' . ucfirst( strtolower( $wgDBtype ) );
-$dbc = new $dbclass;
-$dba = $dbc->newFromParams( $wgDBserver, $wgDBadminuser, $wgDBadminpassword, $wgDBname, 1 );
+$dba = new $dbclass ( $wgDBserver, $wgDBadminuser, $wgDBadminpassword, $wgDBname, 1 );
 
 # Check we're connected
 if( !$dba->isOpen() ) {

@@ -12,13 +12,12 @@
 
 class SpecialBoardBlast extends UnlistedSpecialPage {
 	function __construct() {
+		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 		parent::__construct( "SendBoardBlast" );
 	}
 
 	function execute( $params ) {
 		global $wgRequest, $wgOut, $wgStyleVersion, $wgUser, $IP, $wgUserBoardScripts;
-
-		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 
 		$wgOut->addScript("<link rel='stylesheet' type='text/css' href=\"{$wgUserBoardScripts}/BoardBlast.css?{$wgStyleVersion}\"/>\n");
 		$wgOut->addScript("<script type=\"text/javascript\" src=\"{$wgUserBoardScripts}/BoardBlast.js?{$wgStyleVersion}\"></script>\n");
@@ -61,7 +60,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$stats = new UserStats($wgUser->getID(), $wgUser->getName() );
 		$stats_data = $stats->getUserStats();
 
-		$output .= "<div class=\"board-blast-message-form\">
+		$output = "<div class=\"board-blast-message-form\">
 				<h2>" . wfMsgForContent( 'boardblaststep1' ) . "</h2>
 				<form method=\"post\" name=\"blast\" action=\"\">
 					<input type=\"hidden\" name=\"ids\" id=\"ids\">

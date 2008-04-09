@@ -13,7 +13,7 @@
  * @subpackage SpecialPage
  *
  * @author David Pean <david.pean@gmail.com>
- * @copyright Copyright © 2007, Wikia Inc.
+ * @copyright Copyright Â© 2007, Wikia Inc.
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
@@ -30,7 +30,7 @@ class SpecialUploadAvatar extends UnlistedSpecialPage {
 	}
 
 	function execute( $params ) {
-		global $wgRequest, $wgOut, $IP, $wgUser, $wgUserProfileScripts;
+		global $wgRequest, $wgOut, $IP, $wgUser, $wgUserProfileScripts, $wgStyleVersion;
 
 		if( $wgUser->isBlocked() ){
 			$wgOut->blockedPage( false );
@@ -91,7 +91,7 @@ class SpecialUploadAvatar extends UnlistedSpecialPage {
 	function getAvatar($size){
 		global $wgUser, $wgDBname,$wgUploadDirectory, $wgUploadPath;
 		$files = glob($wgUploadDirectory . "/avatars/" . $wgDBname . "_" . $wgUser->getID() .  "_" . $size . "*");
-		if($files[0]){
+		if( isset( $files[0] ) && $files[0] ){
 			return "<img src=\"{$wgUploadPath}/avatars/" .  basename($files[0]) . "\" alt=\"\" border=\"0\">" ;
 		}
 	}
@@ -449,7 +449,7 @@ class SpecialUploadAvatar extends UnlistedSpecialPage {
 		</tr>";
 		$output .= "<tr>
 			<td>
-				<input type=button onclick=javascript:history.go(-1) class=\"site-button\" value='" . wfMsgForContent( 'user-profile-picture-uploaddifferent' ) . "'>
+				<input type='button' onclick='javascript:history.go(-1)' class=\"site-button\" value='" . wfMsgForContent( 'user-profile-picture-uploaddifferent' ) . "'>
 			</td>
 		</tr>";
 		$output .= "</table>";
@@ -467,7 +467,7 @@ class SpecialUploadAvatar extends UnlistedSpecialPage {
 		$sub = wfMsg( 'uploadwarning' );
 		$wgOut->addHTML( "<h2>{$sub}</h2>\n" );
 		$wgOut->addHTML( "<h4 class='error'>{$error}</h4>\n" );
-		$wgOut->addHTML("<br /><input type=button onclick=javascript:history.go(-1) value='" . wfMsgForContent( 'user-profile-goback' ) . "'>");
+		$wgOut->addHTML("<br /><input type='button' onclick='javascript:history.go(-1)' value='" . wfMsgForContent( 'user-profile-goback' ) . "'/>");
 	}
 
 	/**
@@ -586,7 +586,7 @@ class SpecialUploadAvatar extends UnlistedSpecialPage {
 
 		global $wgSitename;
 
-		$output .= "<h1>".wfMsg( 'user-profile-picture-title' )."</h1>";
+		$output = "<h1>".wfMsg( 'user-profile-picture-title' )."</h1>";
 		$output .= UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-picture' ) );
 		$output .= "<div class=\"profile-info\">";
 
@@ -685,7 +685,7 @@ class SpecialUploadAvatar extends UnlistedSpecialPage {
 		$magic=& wfGetMimeMagic();
 		$mime= $magic->guessMimeType($tmpfile,false);
 
-		$fname= "SpecialUpload::verify";
+		$fname= "SpecialUploadAvatar::verify";
 
 		#check mime type, if desired
 		global $wgVerifyMimeType;
@@ -794,7 +794,7 @@ class SpecialUploadAvatar extends UnlistedSpecialPage {
 
 		#FIXME: convert from UTF-16 if necessarry!
 
-		wfDebug("SpecialUpload::detectScript: checking for embedded scripts and HTML stuff\n");
+		wfDebug("SpecialUploadAvatar::detectScript: checking for embedded scripts and HTML stuff\n");
 
 		#check for HTML doctype
 		if (eregi("<!DOCTYPE *X?HTML",$chunk)) return true;
@@ -848,7 +848,7 @@ class SpecialUploadAvatar extends UnlistedSpecialPage {
 		#look for css-style script-urls
 		if (preg_match("!url\s*\(\s*['\"]?\s*(ecma|java)script:!sim",$chunk)) return true;
 
-		wfDebug("SpecialUpload::detectScript: no scripts found\n");
+		wfDebug("SpecialUploadAvatar::detectScript: no scripts found\n");
 		return false;
 	}
 
@@ -864,7 +864,7 @@ class SpecialUploadAvatar extends UnlistedSpecialPage {
 	function detectVirus($file) {
 		global $wgAntivirus, $wgAntivirusSetup, $wgAntivirusRequired;
 
-		$fname= "SpecialUpload::detectVirus";
+		$fname= "SpecialUploadAvatar::detectVirus";
 
 		if (!$wgAntivirus) { #disabled?
 			wfDebug("$fname: virus scanner disabled\n");

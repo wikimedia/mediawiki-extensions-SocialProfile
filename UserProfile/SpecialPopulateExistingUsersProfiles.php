@@ -8,7 +8,7 @@
  * @subpackage SpecialPage
  *
  * @author David Pean <david.pean@gmail.com>
- * @copyright Copyright © 2007, Wikia Inc.
+ * @copyright Copyright Â© 2007, Wikia Inc.
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
@@ -25,7 +25,7 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 			return "";
 		}
 
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$res = $dbr->select( 'page',
 					array('page_title'),
 					array('page_namespace' => NS_USER), __METHOD__,
@@ -44,18 +44,18 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 				$s = $dbr->selectRow( 'user_profile', array( 'up_user_id' ), array( 'up_user_id' => $user_id ), $fname );
 				if ( $s === false ) {
 					$fname = 'user_profile::addToDatabase';
-					$dbr =& wfGetDB( DB_MASTER );
+					$dbr = wfGetDB( DB_MASTER );
 					$dbr->insert( '`user_profile`',
 						array(
 							'up_user_id' => $user_id,
 							'up_type' => 0
-						), $fname
+						), __METHOD__
 					);
 					$count++;
 				}
 			}
 		}
 
-		$wgOut->addHTML("Added $count profiles");
+		$wgOut->addHTML( wfMsg( 'populate-user-profile-done', $count ) );
 	}
 }

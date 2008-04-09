@@ -21,7 +21,7 @@ class wAvatar{
 			$avatar_filename = $data;
 		}else{
 			$files = glob($wgUploadDirectory . "/avatars/" . $wgDBname . "_" . $this->user_id .  "_" . $this->avatar_size . "*");
-			if(!$files[0]){
+			if( !isset( $files[0] ) || !$files[0] ){
 				$avatar_filename  = "default" . "_" . $this->avatar_size . ".gif";
 			}else{
 				$avatar_filename  = basename($files[0]) . "?r=" . filemtime($files[0]);

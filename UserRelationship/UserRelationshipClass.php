@@ -14,6 +14,7 @@ class UserRelationship {
 	 * @private
 	 */
 	/* private */ function __construct($username) {
+		wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
 		$title1 = Title::newFromDBkey($username );
 		$this->user_name = $title1->getText();
 		$this->user_id = User::idFromName($this->user_name);
@@ -271,7 +272,7 @@ class UserRelationship {
 	global $wgDBprefix;
 		$dbr =& wfGetDB( DB_MASTER );
 		//For some reason in this function, if you add $wgDBprefix before user_relationship it adds it twice. Also removed was '' 
-		$s = $dbr->selectRow( 'user_relationship', array( 'r_type' ), array( 'r_user_id' => $user1, 'r_user_id_relation' => $user2 ), $fname );
+		$s = $dbr->selectRow( 'user_relationship', array( 'r_type' ), array( 'r_user_id' => $user1, 'r_user_id_relation' => $user2 ), __METHOD__ );
 		if ( $s !== false ) {
 			return $s->r_type;
 		}else{
@@ -282,7 +283,7 @@ class UserRelationship {
 	static function userHasRequestByID($user1,$user2){
 	global $wgDBprefix;
 		$dbr =& wfGetDB( DB_MASTER );
-		$s = $dbr->selectRow( $wgDBprefix.'`user_relationship_request`', array( 'ur_type' ), array( 'ur_user_id_to' => $user1, 'ur_user_id_from' => $user2, 'ur_status' => 0 ), $fname );
+		$s = $dbr->selectRow( $wgDBprefix.'`user_relationship_request`', array( 'ur_type' ), array( 'ur_user_id_to' => $user1, 'ur_user_id_from' => $user2, 'ur_status' => 0 ), __METHOD__ );
 		if ( $s === false ) {
 			return false;
 		}else{
@@ -315,7 +316,7 @@ class UserRelationship {
 	global $wgDBprefix;
 		$dbr =& wfGetDB( DB_MASTER );
 
-		if($limit>0)$limit_sql = " LIMIT 0,{$limit} ";
+		$limit_sql = $limit > 0 ? " LIMIT 0,{$limit} " : '';
 
 		$sql = "SELECT ur_id, ur_user_id_from, ur_user_name_from, ur_type, ur_message, ur_date
 			FROM ".$wgDBprefix."user_relationship_request
@@ -324,6 +325,7 @@ class UserRelationship {
 			ORDER BY ur_id DESC";
 		$res = $dbr->query($sql);
 
+		$requests = array();
 		while ($row = $dbr->fetchObject( $res ) ) {
 			if( $row->ur_type==1){
 				$type_name = "Friend";
@@ -357,7 +359,7 @@ class UserRelationship {
 		$key = wfMemcKey( 'user_relationship', 'open_request', $rel_type, $user_id );
 		$dbr =& wfGetDB( DB_SLAVE );
 		$request_count = 0;
-		$s = $dbr->selectRow( $wgDBprefix.'`user_relationship_request`', array( 'count(*) as count' ), array( 'ur_user_id_to' => $user_id, 'ur_status' => 0, 'ur_type' => $rel_type ), $fname );
+		$s = $dbr->selectRow( $wgDBprefix.'`user_relationship_request`', array( 'count(*) as count' ), array( 'ur_user_id_to' => $user_id, 'ur_status' => 0, 'ur_type' => $rel_type ), __METHOD__ );
 		if ( $s !== false )$request_count = $s->count;
 
 		$wgMemc->set($key,$request_count);
@@ -396,10 +398,14 @@ class UserRelationship {
 			$limitvalue = 0;
 			if($page)$limitvalue = $page * $limit - ($limit);
 			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
+		} else {
+			$limit_sql = '';
 		}
 
 		if($type){
 			$type_sql = " AND r_type = {$type} ";
+		} else {
+			$type_sql = '';
 		}
 
 		$sql = "SELECT r_id, r_user_id_relation, r_user_name_relation, r_date, r_type
