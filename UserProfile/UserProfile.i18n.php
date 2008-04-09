@@ -638,6 +638,7 @@ $messages['eo'] = array(
 	'other-info-snacks'                    => 'Manĝetoj',
 	'other-info-drinks'                    => 'Trinkaĵoj',
 	'other-no-info'                        => 'Neniu alia informo',
+	'user-personal-info-title'             => 'Persona informo',
 	'user-personal-info-real-name'         => 'Reala nomo',
 	'user-personal-info-location'          => 'Loko',
 	'user-personal-info-hometown'          => 'Hejmurbo',
@@ -645,6 +646,7 @@ $messages['eo'] = array(
 	'user-personal-info-about-me'          => 'Pri mi',
 	'user-recent-activity-user-message'    => 'Sendis mesaĝon al',
 	'user-profile-default-country'         => 'Usono',
+	'user-profile-section-personal'        => 'Persona informo',
 	'user-profile-section-interests'       => 'Alia informo',
 	'user-profile-section-picture'         => 'Avataro',
 	'user-profile-personal-name'           => 'Nomo',
@@ -1107,11 +1109,16 @@ $messages['gu'] = array(
  * @author Kaustubh
  */
 $messages['hi'] = array(
+	'other-info-title'               => 'अन्य ज़ानकारी',
 	'user-personal-info-title'       => 'वैयक्तिक ज़ानकारी',
 	'user-personal-info-real-name'   => 'असली नाम',
 	'user-profile-section-personal'  => 'वैयक्तिक ज़ानकारी',
 	'user-profile-section-interests' => 'अन्य ज़ानकारी',
 	'user-profile-personal-name'     => 'नाम',
+	'user-profile-personal-email'    => 'इ-मेल',
+	'user-profile-picture-large'     => 'बडा',
+	'user-profile-picture-medium'    => 'मध्यम',
+	'user-profile-picture-small'     => 'छोटा',
 );
 
 /** Hungarian (Magyar)
@@ -1733,7 +1740,7 @@ $messages['oc'] = array(
 	'user-profile-personal-places'                    => 'Endreches',
 	'user-profile-personal-placeslived'               => 'Endreches ont ai viscut',
 	'user-profile-personal-web'                       => 'Web',
-	'user-profile-personal-websites'                  => 'Sites Web',
+	'user-profile-personal-websites'                  => 'Sits Web',
 	'user-profile-interests-entertainment'            => 'Divertiment',
 	'user-profile-interests-movies'                   => 'Filmes',
 	'user-profile-interests-tv'                       => 'Television',
@@ -1759,7 +1766,7 @@ $messages['oc'] = array(
 	'user-profile-sports-sport'                       => 'Espòrt',
 	'user-profile-sports-title'                       => 'Editatz vòstres espòrts favorits e vòstras equipas preferidas',
 	'user-profile-sports-notloggedintitle'            => 'Op !',
-	'user-profile-sports-notloggedintext'             => 'Devètz èsser en sesilha per editar vòstre perfil.',
+	'user-profile-sports-notloggedintext'             => 'Vos cal èsser en sesilha per editar vòstre perfil.',
 	'user-profile-sports-teamremoved'                 => 'Vòstra equipa es estada levada.',
 	'user-profile-sports-teamsaved'                   => 'Vòstras equipas son estadas salvagardadas',
 	'user-profile-sports-addmore'                     => "Apondre mai d'espòrts o d'equipas esportivas",
@@ -1791,7 +1798,7 @@ $messages['oc'] = array(
 * Special:UpdateProfile/preferences|Preferéncias',
 	'user-type-toggle-old'                            => "Utilizar la pagina d'utilizaire del wiki",
 	'user-type-toggle-new'                            => "Utilizar la pagina d'utilizaire en societat",
-	'user-board-login-message'                        => 'Devètz èsser <a href="$1">en sesilha</a> per mandar de messatges als autres utilizaires',
+	'user-board-login-message'                        => 'Vos cal èsser <a href="$1">en sesilha</a> per mandar de messatges als autres utilizaires',
 );
 
 /** Polish (Polski)
@@ -1800,6 +1807,7 @@ $messages['oc'] = array(
 $messages['pl'] = array(
 	'other-info-title'               => 'Inne informacje',
 	'user-profile-section-interests' => 'Inne informacje',
+	'user-profile-picture-log-entry' => 'wgrał swój nowy portret',
 );
 
 /** Pashto (پښتو)

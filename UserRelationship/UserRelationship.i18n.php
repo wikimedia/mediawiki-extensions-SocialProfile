@@ -697,8 +697,9 @@ e troque as súas configuracións para deshabilitar as notificacións por correo
  * @author Kaustubh
  */
 $messages['hi'] = array(
-	'ur-remove' => 'हटायें',
-	'ur-cancel' => 'रद्द करें',
+	'ur-main-page' => 'मुखपृष्ठ',
+	'ur-remove'    => 'हटायें',
+	'ur-cancel'    => 'रद्द करें',
 );
 
 
@@ -1080,9 +1081,9 @@ $messages['oc'] = array(
 	'ur-remove-relationship-message'             => 'Avètz demandat la supression de $1 coma vòstre $2, picatz sus « $3 » per confirmar.',
 	'ur-remove-relationship-message-confirm'     => 'Avètz suprimit amb succès $1 coma vòstre $2.',
 	'ur-remove-error-message-no-relationship'    => 'Avètz pas cap de relacion amb $1.',
-	'ur-remove-error-message-remove-yourself'    => 'Podètz pas vos suprimir vos meteis.',
+	'ur-remove-error-message-remove-yourself'    => 'Vos podètz pas suprimir vos meteis.',
 	'ur-remove-error-message-pending-request'    => 'Avètz una requèsta de $1 en cors amb $2.',
-	'ur-remove-error-not-loggedin'               => 'Devètz èsser en sesilha per suprimir un $1.',
+	'ur-remove-error-not-loggedin'               => 'Vos cal èsser en sesilha per suprimir un $1.',
 	'ur-remove'                                  => 'Levar',
 	'ur-cancel'                                  => 'Anullar',
 	'ur-login'                                   => 'Senhal',
@@ -1099,7 +1100,7 @@ $messages['oc'] = array(
 	'ur-add-error-message-existing-relationship' => 'Ja sètz $1 amb $2.',
 	'ur-add-error-message-pending-request-title' => 'Paciéncia!',
 	'ur-add-error-message-pending-request'       => 'Avètz una requèsta en $1 en espèra amb $2. Vos notificarem quora $2 aurà confirmat vòstra demanda.',
-	'ur-add-error-message-not-loggedin'          => 'Devètz èsser connectat per apondre un $1.',
+	'ur-add-error-message-not-loggedin'          => 'Vos cal èsser connectat(ada) per apondre un $1.',
 	'ur-requests-title'                          => 'Demandas de relacions.',
 	'ur-requests-message'                        => '<a href="$1">$2</a> desira èsser vòstre $3.',
 	'ur-accept'                                  => 'Acceptar',
@@ -1126,7 +1127,7 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
 	'foe_request_subject'                        => 'Es la guèrra ! $1 vos a ajustat coma enemic sus {{SITENAME}} !',
 	'foe_request_body'                           => "Adiu $1 :
 
-$2 ven just de vos repertoriar coma un enemic sus {{SITENAME}}. Nos volèm assegurar que sètz vertadièrament d'enemics mortals o qu'al mens avètz de grèuges un envèrs l’autre/
+$2 vos ven just de repertoriar coma un enemic sus {{SITENAME}}. Nos volèm assegurar que sètz vertadièrament d'enemics mortals o qu'almens avètz de grèuges un envèrs l’autre/
 
 Clicatz sus aqueste ligam, per acceptar, a contracòr, aqueste estat de fach.
 

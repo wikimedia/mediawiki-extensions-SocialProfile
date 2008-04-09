@@ -376,6 +376,13 @@ $messages['gl'] = array(
 	'userboard_loggedout'       => 'Debe <a href="$1">acceder ao sistema</a> para deixar mensaxes a outros usuarios.',
 );
 
+/** Hindi (हिन्दी)
+ * @author Kaustubh
+ */
+$messages['hi'] = array(
+	'userboard_delete' => 'हटायें',
+);
+
 /** Khmer (ភាសាខ្មែរ)
  * @author Lovekhmer
  * @author គីមស៊្រុន
@@ -584,8 +591,8 @@ Klikk $4 og endre innstillingene dine for å slå av e-postbeskjeder.',
  * @author Cedric31
  */
 $messages['oc'] = array(
-	'boardblastlogintitle'      => 'Devètz èsser en sesilha per mandar lo tablèu en mitralhada',
-	'boardblastlogintext'       => 'Devètz èsser en sesilha per mandar lo tablèu en mitralhadas. Clicatz <a href="index.php?title=Special:UserLogin">aicí per dobrir una sesilha</a>',
+	'boardblastlogintitle'      => 'Vos cal èsser en sesilha per mandar lo tablèu en mitralhada',
+	'boardblastlogintext'       => 'Vos cal èsser en sesilha per mandar lo tablèu en mitralhadas. Clicatz <a href="index.php?title=Special:UserLogin">aicí per dobrir una sesilha</a>',
 	'messagesenttitle'          => 'Messatges mandats',
 	'boardblasttitle'           => 'Mandar lo tablèu en mitralhada',
 	'boardblaststep1'           => 'Etapa 1 - Escrivètz vòstre messatge',
@@ -620,7 +627,7 @@ $messages['oc'] = array(
 	'userboard_prevpage'        => 'precedent',
 	'userboard_nomessages'      => 'Pas de messatge.',
 	'userboard_sendbutton'      => 'mandat',
-	'userboard_loggedout'       => 'Devètz èsser <a href="$1">connectat</a> per mandar de messatges a d’autres utilizaires.',
+	'userboard_loggedout'       => 'Vos cal èsser <a href="$1">connectat(ada)</a> per mandar de messatges a d’autres utilizaires.',
 	'userboard_showingmessages' => 'Visionament de $2-$3 de {{PLURAL:$1|$1 messatge|$1 messatges}}',
 	'message_received_subject'  => '$1 a escrich sus vòstre tablèu sus {{SITENAME}}',
 	'message_received_body'     => "Adiu $1 : 
