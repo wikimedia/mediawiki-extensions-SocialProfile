@@ -99,9 +99,9 @@ class SpecialViewUserBoard extends SpecialPage {
 		}
 
 		$output .= '<div class="user-board-top-links">';
-		$output .= "<a href=\"{$user->escapeFullURL()}\">< " . wfMsg("userboard_backprofile", $user_name) . "</a>";
+		$output .= "<a href=\"{$user->escapeFullURL()}\">&lt; " . wfMsg("userboard_backprofile", $user_name) . "</a>";
 		$output .= "</div>";
-		$output .= "<script>
+		$output .= "<script>/*<![CDATA[*/
 			var _DELETE_CONFIRM = \"" . wfMsg("userboard_confirmdelete") . "\"
 			var posted = 0;
 			function send_message(){
@@ -142,7 +142,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				}
 
 			}
-		</script>";
+		/*]]>*/</script>";
 
 		if($page==1){
 			$start = 1;
@@ -277,7 +277,7 @@ class SpecialViewUserBoard extends SpecialPage {
 							<a href=\"{$user->escapeFullURL()}\" title=\"{$ub_message["user_name_from"]}}\">{$ub_message["user_name_from"]} </a> {$ub_message_type_label}
 					</div>
 					<div class=\"user-board-message-time\">
-						posted " . $b->getTimeAgo($ub_message["timestamp"])." ago
+						" . wfMsgHtml( 'userboard_posted_ago', $b->getTimeAgo( $ub_message["timestamp"] ) ) . "
 					</div>
 					<div class=\"user-board-message-content\">
 						<div class=\"user-board-message-image\">

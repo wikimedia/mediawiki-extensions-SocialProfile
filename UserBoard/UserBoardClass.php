@@ -113,7 +113,7 @@ class UserBoard {
 
 		global $wgMemc;
 		$key = wfMemcKey( 'user', 'newboardmessage', $user_id );
-		//$dbr =& wfGetDB( DB_MASTER );
+		//$dbr = wfGetDB( DB_MASTER );
 		$new_count = 0;
 		//$s = $dbr->selectRow( '`user_board`', array( 'count(*) as count' ), array( 'ug_user_id_to' => $user_id, 'ug_status' => 1 ), $fname );
 		//if ( $s !== false )$new_gift_count = $s->count;
@@ -247,7 +247,7 @@ class UserBoard {
 		if ($messages) {
 
 			foreach ($messages as $message) {
-				$user =  Title::makeTitle( NS_USER  , $message["user_name_from"]  );
+				$user =  Title::makeTitle( NS_USER, $message["user_name_from"] );
 				$avatar = new wAvatar($message["user_id_from"],"m");
 
 				$board_to_board ="";
@@ -255,16 +255,16 @@ class UserBoard {
 				$message_type_label = "";
 				$delete_link = "";
 				if($wgUser->getName()!=$message["user_name_from"]){
-					$board_to_board = "<a href=\"" . UserBoard::getUserBoardToBoardURL($message["user_name"],$message["user_name_from"])."\">Board-to-Board</a>";
-					$board_link = "<a href=\"" . UserBoard::getUserBoardURL($message["user_name_from"])."\">Send {$message["user_name_from"]} A Message</a>";
+					$board_to_board = "<a href=\"" . UserBoard::getUserBoardToBoardURL($message["user_name"],$message["user_name_from"])."\">" . wfMsgHtml( 'userboard_board-to-board' ) . "</a>";
+					$board_link = "<a href=\"" . UserBoard::getUserBoardURL($message["user_name_from"])."\">" . wfMsgHtml( 'userboard_sendmessage', $message["user_name_from"] ) . "</a>";
 				}
 				if($wgUser->getName()==$message["user_name"]){
 					$delete_link = "<span class=\"user-board-red\">
-							<a href=\"javascript:void(0);\" onclick=\"javascript:delete_message({$message["id"]})\">delete</a>
+							<a href=\"javascript:void(0);\" onclick=\"javascript:delete_message({$message["id"]})\">" . wfMsgHtml( 'userboard_delete' ) . "</a>
 						</span>";
 				}
 				if($message["type"] == 1){
-					$message_type_label = "(private)";
+					$message_type_label = '(' . wfMsgHtml( 'userboard_private' ) . ')';
 				}
 
 				$max_link_text_length = 50;
@@ -276,7 +276,7 @@ class UserBoard {
 					<a href=\"{$user->escapeFullURL()}\" title=\"{$message["user_name_from"]}\">{$message["user_name_from"]}</a> {$message_type_label}
 					</div>
 					<div class=\"user-board-message-time\">
-						posted " . $this->getTimeAgo($message["timestamp"]) . " ago
+						" . wfMsgHtml( 'userboard_posted_ago', $this->getTimeAgo( $message["timestamp"] ) ) . "
 					</div>
 					<div class=\"user-board-message-content\">
 						<div class=\"user-board-message-image\">
@@ -296,7 +296,7 @@ class UserBoard {
 			}
 		} else if ($wgUser->getName()==$wgTitle->getText()) {
 			$output .= "<div class=\"no-info-container\">
-				No board messages.
+				" . wfMsgHtml( 'userboard_nomessages' ) . "
 			</div>";
 
 		}
