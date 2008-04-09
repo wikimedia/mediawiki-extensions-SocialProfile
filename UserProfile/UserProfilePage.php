@@ -579,9 +579,11 @@ class UserProfilePage extends Article{
 
 		if($wgUser->getName() !== $user_name){
 			if($wgUser->isLoggedIn() && !$wgUser->isBlocked()){
+				// Some nice message in a other part of the extension :)
+				wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 				$output .= "<div class=\"user-page-message-form\">
 						<input type=\"hidden\" id=\"user_name_to\" name=\"user_name_to\" value=\"" . addslashes($user_name)."\"/>
-						<span style=\"color:#797979;\">Message Type</span> <select id=\"message_type\"><option value=\"0\">public</option><option value=\"1\">private</option></select><p>
+						<span style=\"color:#797979;\">" . wfMsgHtml( 'userboard_messagetype' ) . "</span> <select id=\"message_type\"><option value=\"0\">" . wfMsgHtml( 'userboard_public' ) . "</option><option value=\"1\">" . wfMsgHtml( 'userboard_private' ) . "</option></select><p>
 						<textarea name=\"message\" id=\"message\" cols=\"43\" rows=\"4\"/></textarea>
 						<div class=\"user-page-message-box-button\">
 							<input type=\"button\" value=\"Send\" class=\"site-button\" onclick=\"javascript:send_message();\">
