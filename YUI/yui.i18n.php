@@ -38,6 +38,13 @@ $messages['hsb'] = array(
 	'yui-desc' => 'Zběrka pomocnych programow a wodźenskich elementow, napisanych w JavaScripće.',
 );
 
+/** Hungarian (Magyar)
+ * @author Dani
+ */
+$messages['hu'] = array(
+	'yui-desc' => 'JavaScript nyelven írt eszközök és vezérlők gyűjteménye.',
+);
+
 /** Icelandic (Íslenska)
  * @author S.Örvarr.S
  */

@@ -416,6 +416,7 @@ $messages['eo'] = array(
 $messages['fr'] = array(
 	'viewrelationships'                          => 'Voir les relations',
 	'viewrelationshiprequests'                   => 'Voir les requêtes des relations',
+	'ur-already-submitted'                       => 'Votre demande a été envoyée',
 	'ur-error-title'                             => 'Houla, vous avez pris un mauvais virage !',
 	'ur-error-message-no-user'                   => 'Nous ne pouvons compléter votre requête, car aucun utilisateur ne porte ce nom.',
 	'ur-main-page'                               => 'Accueil',
@@ -427,6 +428,7 @@ $messages['fr'] = array(
 	'ur-add-friends'                             => 'Vouloir plus d’amis ? <a href="$1">Inviter les</a>.',
 	'ur-add-friend'                              => 'Ajouter comme ami',
 	'ur-add-foe'                                 => 'Ajouter comme ennemi',
+	'ur-add-no-user'                             => 'Aucun utilisateur sélectionné. Veuiller requérir des amis ou des ennemis au travers du lien correct.',
 	'ur-remove-relationship'                     => 'Enlever comme $1',
 	'ur-give-gift'                               => 'Envoyer un cadeau',
 	'ur-previous'                                => 'préc.',
@@ -463,6 +465,8 @@ $messages['fr'] = array(
 	'ur-no-requests-message'                     => 'Vous n’avez aucune requête en ami ou ennemi. Si vous désirez plus d\'amis, <a href="$1">invitez les !</a>',
 	'ur-requests-added-message'                  => 'Vous avez ajouté $1 comme votre $2.',
 	'ur-requests-reject-message'                 => 'Vous avez rejeté $1 comme votre $2.',
+	'ur-title-foe'                               => 'Liste des ennemis de $1',
+	'ur-title-friend'                            => 'Liste des amis de $1',
 	'friend_request_subject'                     => '$1 vous a ajouté comme un ami sur {{SITENAME}} !',
 	'friend_request_body'                        => 'Salut $1 :
 
@@ -781,6 +785,7 @@ $messages['nds'] = array(
 $messages['nl'] = array(
 	'viewrelationships'                          => 'Connecties bekijken',
 	'viewrelationshiprequests'                   => 'Connectieverzoeken bekijken',
+	'ur-already-submitted'                       => 'Uw verzoek is verzonden',
 	'ur-error-title'                             => 'U hebt een verkeerde afslag genomen.',
 	'ur-error-message-no-user'                   => 'We kunnen uw verzoek niet afhandelen omdat de gebruiker niet bestaat.',
 	'ur-main-page'                               => 'Hoofdpagina',
@@ -792,6 +797,8 @@ $messages['nl'] = array(
 	'ur-add-friends'                             => 'Wilt u meer vrienden? <a href="$1">Nodig ze uit</a>',
 	'ur-add-friend'                              => 'Als vriend toevoegen',
 	'ur-add-foe'                                 => 'Als tegenstander toevoegen',
+	'ur-add-no-user'                             => 'Er is geen gebruiker geselecteerd.
+Maak verzoeken voor vrienden/tegenstanders alstublieft via de daarvoor bedoelde link.',
 	'ur-remove-relationship'                     => 'Als $1 verwijderen',
 	'ur-give-gift'                               => 'Presentje geven',
 	'ur-previous'                                => 'vorige',
@@ -828,6 +835,8 @@ $messages['nl'] = array(
 	'ur-no-requests-message'                     => 'U hebt geen uitstaande verzoeken voor vrienden of tegenstanders. Als u meer vrienden wilt, <a href="$1">nodig ze dan uit!</a>',
 	'ur-requests-added-message'                  => 'U hebt $1 toegevoegd als $2.',
 	'ur-requests-reject-message'                 => 'U hebt $1 geweigerd als $2.',
+	'ur-title-foe'                               => 'Tegenstanderslijst van $1',
+	'ur-title-friend'                            => 'Vriendenlijst van $1',
 	'friend_request_subject'                     => '$1 heeft u als vriend toegevoegd op {{SITENAME}}.',
 	'friend_request_body'                        => 'Hallo $1.
 
@@ -1272,6 +1281,7 @@ $messages['pt'] = array(
 $messages['sk'] = array(
 	'viewrelationships'                          => 'Zobraziť vzťah',
 	'viewrelationshiprequests'                   => 'Zobraziť žiadosti o vzťah',
+	'ur-already-submitted'                       => 'Vaša požiadavka bola odoslaná',
 	'ur-error-title'                             => 'Ops, niečo ste spravili zle!',
 	'ur-error-message-no-user'                   => 'Nebolo možné dokončiť vašu požiadavku, pretože používateľ s daným menom neexistuje.',
 	'ur-main-page'                               => 'Hlavná stránka',
@@ -1283,6 +1293,7 @@ $messages['sk'] = array(
 	'ur-add-friends'                             => 'Chcete viac priateľov? <a href="$1">Pozvite ich</a>',
 	'ur-add-friend'                              => 'Pridať ako priateľa',
 	'ur-add-foe'                                 => 'Pridať ako nepriateľa',
+	'ur-add-no-user'                             => 'Nebol vybraný žiadny používateľ. Prosím, žiadajte o priateľov/nepriateľov použitím správneho odkazu.',
 	'ur-remove-relationship'                     => 'Odstrániť ako $1',
 	'ur-give-gift'                               => 'Darovať darček',
 	'ur-previous'                                => 'predch',
@@ -1322,6 +1333,8 @@ Ak $2 potvrdí vašu žiadosť, dostanete oznámenie emailom.',
 Ak chcete viac priateľov, <a href="$1">pozvite ich!</a>',
 	'ur-requests-added-message'                  => 'Pridali ste $1 ako svojho $2.',
 	'ur-requests-reject-message'                 => 'Odmietli ste $1 ako svojho $2.',
+	'ur-title-foe'                               => 'Zoznam nepriateľov používateľa $1',
+	'ur-title-friend'                            => 'Zoznam priateľov používateľa $1',
 	'friend_request_subject'                     => '$1 si vás pridal ako priateľa na {{GRAMMAR:lokál|{{SITENAME}}}}!',
 	'friend_request_body'                        => 'Ahoj $1:
 

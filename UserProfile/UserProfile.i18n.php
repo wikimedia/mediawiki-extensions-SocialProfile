@@ -865,6 +865,9 @@ $messages['fr'] = array(
 	'custom-info-field3'                              => 'Localisation 3',
 	'custom-info-field4'                              => 'Localisation 4',
 	'custom-no-info'                                  => 'Aucune information locale',
+	'profile-updated-personal'                        => 'Mettre à jour votre profil',
+	'profile-not-provided'                            => 'Non fourni',
+	'populate-user-profile-done'                      => 'Ajouté $1 {{PLURAL:$1|profil|profils}}',
 	'user-board-title'                                => 'Tableau',
 	'user-send-board-blast'                           => 'Envoyer le tableau en rafale',
 	'user-personal-info-title'                        => 'Informations personnelles',
@@ -1124,6 +1127,14 @@ $messages['hi'] = array(
 	'user-profile-picture-small'     => 'छोटा',
 );
 
+/** Upper Sorbian (Hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'avatarupload'         => 'jenož testowe rozšěrjenje',
+	'user-count-separator' => 'wot',
+);
+
 /** Hungarian (Magyar)
  * @author Dani
  */
@@ -1355,6 +1366,9 @@ $messages['nl'] = array(
 	'custom-info-field3'                              => 'Vrij veld 3',
 	'custom-info-field4'                              => 'Vrij veld 4',
 	'custom-no-info'                                  => 'Geen informatie in vrije velden',
+	'profile-updated-personal'                        => 'Uw profiel bijwerken',
+	'profile-not-provided'                            => 'Niet opgegeven',
+	'populate-user-profile-done'                      => '$1 profielen toegevoegd',
 	'user-board-title'                                => 'Board',
 	'user-send-board-blast'                           => 'Berichten aan meerdere gebruikers verzenden',
 	'user-personal-info-title'                        => 'Persoonlijke informatie',
@@ -2155,6 +2169,9 @@ $messages['sk'] = array(
 	'custom-info-field3'                              => 'Vlastné 3',
 	'custom-info-field4'                              => 'Vlastné 4',
 	'custom-no-info'                                  => 'Žiadne vlastné informácie',
+	'profile-updated-personal'                        => 'Aktualizovať svoj profil',
+	'profile-not-provided'                            => 'Neposkytnuté',
+	'populate-user-profile-done'                      => '$1 profilov pridaných',
 	'user-board-title'                                => 'Fórum',
 	'user-send-board-blast'                           => 'Poslať board blast',
 	'user-personal-info-title'                        => 'Osobné informácie',
