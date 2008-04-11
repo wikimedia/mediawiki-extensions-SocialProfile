@@ -701,6 +701,13 @@ Faga clic $4
 e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
 );
 
+/** Ancient Greek (Ἀρχαία ἑλληνικὴ)
+ * @author AndreasJS
+ */
+$messages['grc'] = array(
+	'ur-login' => 'Συνδεῖσθαι',
+);
+
 /** Hindi (हिन्दी)
  * @author Kaustubh
  */
@@ -1273,6 +1280,28 @@ $messages['pt'] = array(
 	'ur-add-error-message-not-loggedin'          => 'Necessita estar logado para adicionar $1',
 	'ur-accept'                                  => 'Aceitar',
 	'ur-reject'                                  => 'Rejeitar',
+);
+
+/** Tachelhit (Tašlḥiyt)
+ * @author Zanatos
+ */
+$messages['shi'] = array(
+	'ur-accept'           => 'qbl',
+	'ur-reject'           => 'adur-tqblt',
+	'friend_request_body' => 'Azul $1:
+
+$2 iskr gik zod amdakl ns ɣ {{SITENAME}}.  nra annisan isnit tgam imdukal nsaḥt.
+
+ad o-zday ad bach atsḥut tidukla nk:
+$3
+
+Tanmirte
+
+---
+
+yak ortrit azakn soul ur-nsifid tibratin?
+ad $4
+sbddlt reglage nk bach aktnin soul ur-nsifid.',
 );
 
 /** Slovak (Slovenčina)
