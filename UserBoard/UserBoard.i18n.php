@@ -559,6 +559,8 @@ $messages['no'] = array(
 	'boardnofriends'            => 'Du har ingen venner å sende beskjed til.',
 	'messagesentsuccess'        => 'Beskjeden din ble sendt',
 	'userboard'                 => 'Brukerdiskusjon',
+	'userboard_board-to-board'  => 'Brukerdiskusjon',
+	'userboard_delete'          => 'Slett',
 	'userboard_noexist'         => 'Brukeren du prøver å se finnes ikke.',
 	'userboard_yourboard'       => 'Din diskusjonsside',
 	'userboard_owner'           => 'Diskusjonssiden til $1',
@@ -569,8 +571,8 @@ $messages['no'] = array(
 	'userboard_boardtoboard'    => 'Delt diskusjonsside',
 	'userboard_confirmdelete'   => 'Er du sikker på at du vil slette denne beskjeden?',
 	'userboard_sendmessage'     => 'Sendte en beskjed til $1',
-	'userboard_delete'          => 'Slett',
 	'userboard_myboard'         => 'Min diskusjonsside',
+	'userboard_posted_ago'      => 'postet $1 siden',
 	'userboard_private'         => 'privat',
 	'userboard_public'          => 'offentlig',
 	'userboard_messagetype'     => 'Beskjedtype',
@@ -685,9 +687,17 @@ $messages['ps'] = array(
 
 /** Portuguese (Português)
  * @author Lijealso
+ * @author Malafaya
  */
 $messages['pt'] = array(
 	'messagesenttitle'          => 'Mensagens Enviadas',
+	'boardblaststep1'           => 'Passo 1 - Escreva a sua mensagem',
+	'boardblaststep2'           => 'Passo 2 - Seleccione a quem deseja enviar a sua mensagem',
+	'boardlinkselectfriends'    => 'Seleccionar amigos',
+	'boardlinkunselectfriends'  => 'Desseleccionar amigos',
+	'boardlinkselectfoes'       => 'Seleccionar inimigos',
+	'boardlinkunselectfoes'     => 'Desseleccionar inimigos',
+	'userboard_delete'          => 'Remover',
 	'userboard_private'         => 'privado',
 	'userboard_public'          => 'público',
 	'userboard_messagetype'     => 'Tipo de Mensagem',

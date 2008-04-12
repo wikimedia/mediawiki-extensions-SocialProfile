@@ -1547,6 +1547,9 @@ $messages['no'] = array(
 	'custom-info-field3'                              => 'Egendefinert 3',
 	'custom-info-field4'                              => 'Egendefinert 4',
 	'custom-no-info'                                  => 'Ingen egendefinert informasjon',
+	'profile-updated-personal'                        => 'Oppdater profilen din',
+	'profile-not-provided'                            => 'Ikke oppgitt',
+	'populate-user-profile-done'                      => 'La til $1 profiler',
 	'user-board-title'                                => 'Diskusjonsside',
 	'user-send-board-blast'                           => 'Send melding',
 	'user-personal-info-title'                        => 'Personlig informasjon',
@@ -1880,6 +1883,7 @@ $messages['ps'] = array(
 
 /** Portuguese (Português)
  * @author Lijealso
+ * @author Malafaya
  */
 $messages['pt'] = array(
 	'user-count-separator'                 => 'de',
@@ -1890,7 +1894,9 @@ $messages['pt'] = array(
 	'user-edit-profile'                    => 'Editar perfil',
 	'user-watchlist'                       => 'Minha lista de vigiados',
 	'user-add-friend'                      => 'Adicionar como Amigo',
+	'user-add-foe'                         => 'Adicionar como inimigo',
 	'user-remove-friend'                   => 'Revover como Amigo',
+	'user-remove-foe'                      => 'Remover como inimigo',
 	'user-send-message'                    => 'Enviar uma mensagem',
 	'user-send-gift'                       => 'Enviar uma prenda',
 	'user-contributions'                   => 'Contribuições',
@@ -1923,6 +1929,7 @@ $messages['pt'] = array(
 	'user-recent-system-gift'              => 'Recebeu uma prémio',
 	'user-profile-update-saved'            => 'O seu Perfil foi Salvo',
 	'user-profile-update-profile'          => 'perfil',
+	'user-profile-default-country'         => 'Estados Unidos',
 	'user-profile-section-interests'       => 'Outras Informações',
 	'user-profile-section-preferences'     => 'Preferências',
 	'user-profile-personal-info'           => 'Informação',

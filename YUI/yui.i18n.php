@@ -94,6 +94,13 @@ $messages['pl'] = array(
 	'yui-desc' => 'Zestaw narzędzi i elementów kontrolnych napisanych w jezyku JavaScript',
 );
 
+/** Portuguese (Português)
+ * @author Malafaya
+ */
+$messages['pt'] = array(
+	'yui-desc' => 'Um conjunto de utilitários e controlos, escritos em JavaScript',
+);
+
 /** Russian (Русский)
  * @author .:Ajvol:.
  */

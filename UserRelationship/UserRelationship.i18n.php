@@ -947,6 +947,7 @@ $messages['nn'] = array(
 $messages['no'] = array(
 	'viewrelationships'                          => 'Vis forbindelse',
 	'viewrelationshiprequests'                   => 'Vis forespørsler om forbindelse',
+	'ur-already-submitted'                       => 'Forespørselen din har blitt sendt',
 	'ur-error-title'                             => 'Ops, du svingte feil.',
 	'ur-error-message-no-user'                   => 'Vi kan ikke fullføre forespørselen din fordi det ikke finnes noen brukere ved dette navnet.',
 	'ur-main-page'                               => 'Hovedside',
@@ -958,6 +959,7 @@ $messages['no'] = array(
 	'ur-add-friends'                             => 'Vil du ha flere venner? <a href="$1">Inviter dem</a>',
 	'ur-add-friend'                              => 'Legg til som venn',
 	'ur-add-foe'                                 => 'Legg til som fiende',
+	'ur-add-no-user'                             => 'Ingen bruker valgt. Vennligst legg til venner eller fiender med den korrekte lenken.',
 	'ur-remove-relationship'                     => 'Fjern som $1',
 	'ur-give-gift'                               => 'Gi gave',
 	'ur-previous'                                => 'forrige',
@@ -994,6 +996,8 @@ $messages['no'] = array(
 	'ur-no-requests-message'                     => 'Du har ingen venne- eller fiendeforespørsler. Om du vil ha flere venner, <a href="$1">inviter dem</a>!',
 	'ur-requests-added-message'                  => 'Du har lagt til $1 som $2.',
 	'ur-requests-reject-message'                 => 'Du har avvis forespørselen fra $1 om å bli $2 med deg.',
+	'ur-title-foe'                               => '$1s fiendeliste',
+	'ur-title-friend'                            => '$1s venneliste',
 	'friend_request_subject'                     => '$1 har lagt deg til som venn på {{SITENAME}}!',
 	'friend_request_body'                        => 'Hei, $1.
 
@@ -1239,6 +1243,7 @@ $messages['ps'] = array(
 /** Portuguese (Português)
  * @author 555
  * @author Lijealso
+ * @author Malafaya
  */
 $messages['pt'] = array(
 	'viewrelationships'                          => 'Ver relacionamentos',
@@ -1274,7 +1279,7 @@ $messages['pt'] = array(
 	'ur-friendship'                              => 'amizade',
 	'ur-grudge'                                  => 'ressentimento',
 	'ur-add-button'                              => 'Adicionar como $1',
-	'ur-add-sent-title'                          => 'O seu pedido de $1 foi enviado para 2$!',
+	'ur-add-sent-title'                          => 'Enviámos o seu pedido de $1 para $2!',
 	'ur-add-error-message-no-user'               => 'O usuário que pretende adicionar não existe.',
 	'ur-add-error-message-pending-request-title' => 'Paciência!',
 	'ur-add-error-message-not-loggedin'          => 'Necessita estar logado para adicionar $1',
