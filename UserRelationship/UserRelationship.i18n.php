@@ -1522,6 +1522,13 @@ Vill du inte motta mer e-post från oss?
 Klicka $4 och ändra dina inställningarna för att slå av e-postmeddelanden.',
 );
 
+/** Silesian (ślůnski)
+ * @author Herr Kriss
+ */
+$messages['szl'] = array(
+	'ur-main-page' => 'Přodńo zajta',
+);
+
 /** Telugu (తెలుగు)
  * @author Veeven
  */

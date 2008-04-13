@@ -2346,6 +2346,9 @@ $messages['sv'] = array(
 	'custom-info-field3'                 => 'Egendefinierad 3',
 	'custom-info-field4'                 => 'Egendefinierad 4',
 	'custom-no-info'                     => 'Ingen egendefinierad information',
+	'profile-updated-personal'           => 'Uppdatera din profil',
+	'profile-not-provided'               => 'Inte uppgett',
+	'populate-user-profile-done'         => 'Lade till $1 profiler',
 	'user-board-title'                   => 'Diskussionssida',
 	'user-send-board-blast'              => 'Skicka meddelande',
 	'user-personal-info-title'           => 'Personlig information',
@@ -2358,6 +2361,10 @@ $messages['sv'] = array(
 	'user-personal-info-websites'        => 'Webbsidor',
 	'user-personal-info-places-lived'    => 'Orter jag har bott i',
 	'user-personal-info-schools'         => 'Skolor',
+	'user-personal-info-about-me'        => 'Om mig',
+	'user-recent-activity-title'         => 'Senaste aktivitet',
+	'user-recent-activity-edit'          => 'Redigerade sidan',
+	'user-recent-activity-vote'          => 'Röstade på sidan',
 	'user-profile-default-country'       => 'USA',
 	'user-profile-section-personal'      => 'Personlig information',
 	'user-profile-section-custom'        => 'Egendefinierad information',
@@ -2387,6 +2394,13 @@ $messages['sv'] = array(
 * Special:UpdateProfile/custom|Egendefinierad information
 * Special:UploadAvatar|Avatar
 * Special:UpdateProfile/preferences|Inställningar',
+);
+
+/** Silesian (ślůnski)
+ * @author Herr Kriss
+ */
+$messages['szl'] = array(
+	'user-profile-personal-name' => 'Mjano',
 );
 
 /** Telugu (తెలుగు)
