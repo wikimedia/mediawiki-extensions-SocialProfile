@@ -104,13 +104,15 @@ $messages['bg'] = array(
 	'boardnofriends'            => 'Нямате приятели, на които да изпращате съобщения!',
 	'messagesentsuccess'        => 'Съобщението беше изпратено успешно',
 	'userboard'                 => 'Потребителско табло',
+	'userboard_delete'          => 'Изтриване',
 	'userboard_noexist'         => 'Потребителят, който се опитахте да видите, не съществува.',
+	'userboard_owner'           => 'Табло на $1',
 	'userboard_backprofile'     => 'Връщане към профила на $1',
 	'userboard_backyourprofile' => 'Обратно към профила ми',
 	'userboard_confirmdelete'   => 'Необходимо е потвърждение за изтриване на съобщението.',
 	'userboard_sendmessage'     => 'Изпращане на съобщение до $1',
-	'userboard_delete'          => 'Изтриване',
 	'userboard_myboard'         => 'Моето табло',
+	'userboard_posted_ago'      => 'публикувано преди $1',
 	'userboard_private'         => 'лично',
 	'userboard_public'          => 'публично',
 	'userboard_messagetype'     => 'Тип съобщение',
@@ -359,11 +361,15 @@ $messages['gl'] = array(
 	'boardblastprivatenote'     => 'Todas as mensaxes serán enviadas de maneira privada',
 	'boardblaststep2'           => 'Paso 2 - Escolla a quen lle quere enviar a súa mensaxe tamén',
 	'boardlinkselectall'        => 'Seleccionar todo',
+	'boardlinkunselectall'      => 'Deixar de seleccionar todo',
 	'boardlinkselectfriends'    => 'Seleccionar amigos',
+	'boardlinkunselectfriends'  => 'Deixar de seleccionar amigos',
 	'boardlinkselectfoes'       => 'Seleccionar inimigos',
+	'boardlinkunselectfoes'     => 'Deixar de seleccionar inimigos',
 	'boardnofriends'            => 'Non ten amigos para mandarlles mensaxes!',
 	'messagesentsuccess'        => 'A súa mensaxe foi enviada con éxito',
 	'userboard'                 => 'Taboleiro do usuario',
+	'userboard_delete'          => 'Borrar',
 	'userboard_noexist'         => 'O usuario que está tentando ver non existe.',
 	'userboard_yourboard'       => 'O seu taboleiro',
 	'userboard_owner'           => 'O taboleiro de $1',
@@ -371,8 +377,8 @@ $messages['gl'] = array(
 	'userboard_backyourprofile' => 'Voltar ao seu perfil',
 	'userboard_confirmdelete'   => 'Está seguro de que quere eliminar esta mensaxe?',
 	'userboard_sendmessage'     => 'Enviar unha mensaxe a $1',
-	'userboard_delete'          => 'Borrar',
 	'userboard_myboard'         => 'O meu taboleiro',
+	'userboard_posted_ago'      => 'publicou hai $1',
 	'userboard_private'         => 'privada',
 	'userboard_public'          => 'pública',
 	'userboard_messagetype'     => 'Tipo de mensaxe',
@@ -381,6 +387,22 @@ $messages['gl'] = array(
 	'userboard_nomessages'      => 'Ningunha mensaxe.',
 	'userboard_sendbutton'      => 'enviar',
 	'userboard_loggedout'       => 'Debe <a href="$1">acceder ao sistema</a> para deixar mensaxes a outros usuarios.',
+	'userboard_showingmessages' => 'Amosando $2-$3 {{PLURAL:$1|dunha mensaxe|de $1 mensaxes}}',
+	'message_received_subject'  => '$1 escribiu no seu taboleiro en {{SITENAME}}',
+	'message_received_body'     => 'Ola $1:
+
+$2 acaba de escribir no seu taboleiro en {{SITENAME}}!
+
+Faga clic embaixo para comprobar o seu taboleiro!
+
+$3
+
+---
+
+Quere deixar de recibir correos electrónicos nosos?
+
+Faga clic $4
+e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
 );
 
 /** Hindi (हिन्दी)
@@ -661,7 +683,10 @@ e modificatz vòstres paramètres per desactivar las notificacions dels corrièr
  * @author Sp5uhe
  */
 $messages['pl'] = array(
-	'userboard_delete' => 'Usuń',
+	'userboard_delete'     => 'Usuń',
+	'userboard_nextpage'   => 'nast.',
+	'userboard_prevpage'   => 'poprz.',
+	'userboard_sendbutton' => 'wyślij',
 );
 
 /** Pashto (پښتو)

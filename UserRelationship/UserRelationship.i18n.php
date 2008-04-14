@@ -230,6 +230,8 @@ $1 ще бъде известен, за да оптвърди вашето $3.',
 	'ur-reject'                                  => 'Отказване',
 	'ur-requests-added-message'                  => 'Добавихте $1 като ваш $2.',
 	'ur-requests-reject-message'                 => 'Отказахте на $1 да бъде ваш $2.',
+	'ur-title-foe'                               => 'Списък с неприятели на $1',
+	'ur-title-friend'                            => 'Списък с приятели на $1',
 	'friend_request_subject'                     => '$1 ви добави като свой приятел в {{SITENAME}}!',
 	'foe_request_subject'                        => 'Война! $1 ви добави в списъка си с неприятели в {{SITENAME}}!',
 	'friend_accept_subject'                      => '$1 прие поканата ви за приятелство в {{SITENAME}}!',
@@ -563,6 +565,7 @@ et modifiez vos préférences pour désactiver les notifications par courriel.',
 $messages['gl'] = array(
 	'viewrelationships'                          => 'Ver relación',
 	'viewrelationshiprequests'                   => 'Ver solcitudes de relación',
+	'ur-already-submitted'                       => 'A súa solicitude foi enviada',
 	'ur-error-message-no-user'                   => 'Non podemos completar a súa petición porque non existe ningún usuario con ese nome.',
 	'ur-main-page'                               => 'Portada',
 	'ur-your-profile'                            => 'O seu perfil',
@@ -609,6 +612,8 @@ Se $2 a confirma, recibirá unha mensaxe de correo electrónico',
 	'ur-no-requests-message'                     => 'Non ten solicitudes de amigo ou inimigo.  Se quere máis amigos, <a href=$1">invíteos!</a>',
 	'ur-requests-added-message'                  => 'Engadiu a $1 aos seus $2.',
 	'ur-requests-reject-message'                 => 'Rexeitou a $1 para ser o seu $2.',
+	'ur-title-foe'                               => 'Listaxe de inimigos de $1',
+	'ur-title-friend'                            => 'Listaxe de amigos de $1',
 	'friend_request_subject'                     => '$1 engadiuno como amigo en {{SITENAME}}!',
 	'friend_request_body'                        => 'Ola $1:
 
@@ -1222,6 +1227,17 @@ E ! Volètz vos arrestar de recebre de corrièrs de nòstra part ?
 
 Clicatz $4
 e modificatz vòstras preferéncias per desactivar las notificacions per corrièr electronic.',
+);
+
+/** Polish (Polski)
+ * @author Sp5uhe
+ */
+$messages['pl'] = array(
+	'ur-main-page'  => 'Strona główna',
+	'ur-add-friend' => 'Dodaj do przyjaciół',
+	'ur-add-foe'    => 'Dodaj do wrogów',
+	'ur-previous'   => 'poprz.',
+	'ur-next'       => 'nast.',
 );
 
 /** Pashto (پښتو)
