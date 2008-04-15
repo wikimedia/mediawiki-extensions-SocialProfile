@@ -1233,11 +1233,34 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
  * @author Sp5uhe
  */
 $messages['pl'] = array(
-	'ur-main-page'  => 'Strona główna',
-	'ur-add-friend' => 'Dodaj do przyjaciół',
-	'ur-add-foe'    => 'Dodaj do wrogów',
-	'ur-previous'   => 'poprz.',
-	'ur-next'       => 'nast.',
+	'ur-already-submitted'                    => 'Twoje zaproszenie zostało wysłane',
+	'ur-error-message-no-user'                => 'Nie można zrealizować Twojego zaproszenia, ponieważ nie istnieje użytkownik o takiej nazwie.',
+	'ur-main-page'                            => 'Strona główna',
+	'ur-friend'                               => 'przyjaciel',
+	'ur-foe'                                  => 'wróg',
+	'ur-add-friends'                          => '  Chcesz mieć więcej przyjaciół? <a href="$1">Zaproś ich</a>',
+	'ur-add-friend'                           => 'Dodaj do przyjaciół',
+	'ur-add-foe'                              => 'Dodaj do wrogów',
+	'ur-remove-relationship'                  => 'Usuń ze swoich $1',
+	'ur-give-gift'                            => 'Daj prezent',
+	'ur-previous'                             => 'poprz.',
+	'ur-next'                                 => 'nast.',
+	'ur-remove-relationship-title'            => 'Czy chcesz usunąć $1 ze swoich $2?',
+	'ur-remove-relationship-title-confirm'    => 'Usunąłeś $1 ze swoich $2',
+	'ur-remove-error-message-remove-yourself' => 'Nie możesz usunąć sam siebie.',
+	'ur-remove'                               => 'Usuń',
+	'ur-cancel'                               => 'Anuluj',
+	'ur-login'                                => 'Zaloguj się',
+	'ur-requests-title'                       => 'Nawiązanie znajomości',
+	'ur-requests-message'                     => '<a href="$1">$2</a> chce być twoim $3.',
+	'ur-accept'                               => 'Zaakceptuj',
+	'ur-reject'                               => 'Odrzuć',
+	'ur-no-requests-message'                  => 'Nie masz zaproszeń do przyjaźni oraz zgłoszeń od wrogów.
+Jeśli chcesz mieć więcej przyjaciół <a href="$1">zaproś ich!</a>',
+	'ur-title-foe'                            => 'Lista wrogów $1',
+	'ur-title-friend'                         => 'Lista przyjaciół $1',
+	'friend_request_subject'                  => '$1 dodał Ciebie do swoich przyjaciół na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
+	'friend_removed_subject'                  => 'Och nie! $1 usunął Cię z listy przyjaciół na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
 );
 
 /** Pashto (پښتو)
