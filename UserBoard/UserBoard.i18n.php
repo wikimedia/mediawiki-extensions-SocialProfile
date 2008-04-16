@@ -106,6 +106,7 @@ $messages['bg'] = array(
 	'userboard'                 => 'Потребителско табло',
 	'userboard_delete'          => 'Изтриване',
 	'userboard_noexist'         => 'Потребителят, който се опитахте да видите, не съществува.',
+	'userboard_yourboard'       => 'Вашето табло',
 	'userboard_owner'           => 'Табло на $1',
 	'userboard_backprofile'     => 'Връщане към профила на $1',
 	'userboard_backyourprofile' => 'Обратно към профила ми',
