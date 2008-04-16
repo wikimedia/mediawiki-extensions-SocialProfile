@@ -1090,6 +1090,7 @@ Klikk $4 og endre innstillingene dine for å slå av e-postbeskjeder.',
 $messages['oc'] = array(
 	'viewrelationships'                          => 'Veire las relacions',
 	'viewrelationshiprequests'                   => 'Veire las requèstas de las relacions',
+	'ur-already-submitted'                       => 'Vòstra demanda es estada mandada',
 	'ur-error-title'                             => 'Op, avètz pres un marrida virada !',
 	'ur-error-message-no-user'                   => "Podèm pas completar vòstre requèsta, perque cap d'utilizaire pòrta pas aqueste nom.",
 	'ur-main-page'                               => 'Acuèlh',
@@ -1101,6 +1102,7 @@ $messages['oc'] = array(
 	'ur-add-friends'                             => 'Volètz mai d’amics ? <a href="$1">Invitatz-los !</a>.',
 	'ur-add-friend'                              => 'Apondre coma amic',
 	'ur-add-foe'                                 => 'Apondre coma enemic',
+	'ur-add-no-user'                             => "Cap d'utilizaire pas seleccionat. Requerissètz d'amics o d'enemics a travèrs del ligam corrècte.",
 	'ur-remove-relationship'                     => 'Levar coma $1',
 	'ur-give-gift'                               => 'Mandar un present',
 	'ur-previous'                                => 'precedent',
@@ -1137,6 +1139,8 @@ $messages['oc'] = array(
 	'ur-no-requests-message'                     => 'Avètz pas cap de requèsta en amic o enemic. Se desiratz mai d\'amics, <a href="$1">invitatz-los !</a>',
 	'ur-requests-added-message'                  => 'Avètz ajustat $1 coma vòstre $2.',
 	'ur-requests-reject-message'                 => 'Avètz regetat $1 coma vòstre $2.',
+	'ur-title-foe'                               => 'Tièra dels enemics de $1',
+	'ur-title-friend'                            => 'Tièra dels amics de $1',
 	'friend_request_subject'                     => '$1 vos a ajustat coma un amic sus {{SITENAME}} !',
 	'friend_request_body'                        => 'Adiu $1 :
 
