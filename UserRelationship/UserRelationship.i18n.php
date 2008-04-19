@@ -1560,6 +1560,13 @@ $messages['sr-ec'] = array(
 	'ur-remove' => 'Уклони',
 );
 
+/** Swati (SiSwati)
+ * @author Jatrobat
+ */
+$messages['ss'] = array(
+	'ur-main-page' => 'Likhasi lelikhulu',
+);
+
 /** Swedish (Svenska)
  * @author M.M.S.
  */

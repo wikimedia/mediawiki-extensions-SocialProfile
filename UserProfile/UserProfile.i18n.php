@@ -204,6 +204,7 @@ $messages['ar'] = array(
 	'custom-info-field3'                   => 'مخصص 3',
 	'custom-info-field4'                   => 'مخصص 4',
 	'custom-no-info'                       => 'لا معلومات مخصصة',
+	'user-board-title'                     => 'مجلس',
 	'user-personal-info-title'             => 'معلومات شخصية',
 	'user-no-personal-info'                => 'لا معلومات شخصية',
 	'user-personal-info-real-name'         => 'الاسم الحقيقي',
