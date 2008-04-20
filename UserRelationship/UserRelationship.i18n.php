@@ -449,14 +449,21 @@ $messages['el'] = array(
  * @author Yekrats
  */
 $messages['eo'] = array(
-	'ur-main-page'  => 'Ĉefpaĝo',
-	'ur-foe'        => 'malamiko',
-	'ur-add-friend' => 'Amiko',
-	'ur-previous'   => 'antaŭ',
-	'ur-next'       => 'sekv',
-	'ur-login'      => 'Ensalutu',
-	'ur-accept'     => 'Akceptu',
-	'ur-reject'     => 'Malakceptu',
+	'ur-main-page'           => 'Ĉefpaĝo',
+	'ur-friend'              => 'amiko',
+	'ur-foe'                 => 'malamiko',
+	'ur-add-friend'          => 'Amiko',
+	'ur-add-foe'             => 'Aldonis kiel malamikon',
+	'ur-remove-relationship' => 'Forigu kiel $1',
+	'ur-previous'            => 'antaŭ',
+	'ur-next'                => 'sekv',
+	'ur-remove'              => 'Forigu',
+	'ur-cancel'              => 'Nuligu',
+	'ur-login'               => 'Ensalutu',
+	'ur-friendship'          => 'amikeco',
+	'ur-add-button'          => 'Aldonu kiel $1',
+	'ur-accept'              => 'Akceptu',
+	'ur-reject'              => 'Malakceptu',
 );
 
 /** French (Français)
@@ -1318,16 +1325,23 @@ Jeśli chcesz mieć więcej przyjaciół <a href="$1">zaproś ich!</a>',
  * @author Ahmed-Najib-Biabani-Ibrahimkhel
  */
 $messages['ps'] = array(
-	'ur-main-page'    => 'لومړی مخ',
-	'ur-your-profile' => 'ستاسو پېژنليک',
-	'ur-friend'       => 'ملګری',
-	'ur-add-friend'   => 'خپل په ملګرو کې ورګډول',
-	'ur-previous'     => 'پخوانی',
-	'ur-next'         => 'راتلونکی',
-	'ur-login'        => 'ننوتل',
-	'ur-friendship'   => 'ملګرتيا',
-	'ur-accept'       => 'منل',
-	'ur-reject'       => 'ردول',
+	'viewrelationships'          => 'اړيکې کتل',
+	'viewrelationshiprequests'   => 'د اړيکو غوښتنې کتل',
+	'ur-already-submitted'       => 'ستاسو غوښتنه ولېږل شوه',
+	'ur-main-page'               => 'لومړی مخ',
+	'ur-your-profile'            => 'ستاسو پېژنليک',
+	'ur-friend'                  => 'ملګری',
+	'ur-add-friend'              => 'خپل په ملګرو کې ورګډول',
+	'ur-previous'                => 'پخوانی',
+	'ur-next'                    => 'راتلونکی',
+	'ur-remove'                  => 'غورځول',
+	'ur-login'                   => 'ننوتل',
+	'ur-friendship'              => 'ملګرتيا',
+	'ur-requests-title'          => 'د اړيکو غوښتنې',
+	'ur-accept'                  => 'منل',
+	'ur-reject'                  => 'ردول',
+	'ur-requests-added-message'  => 'تاسو $1 د ځان سره د $2 په توګه ګډ کړی.',
+	'ur-requests-reject-message' => 'تاسو $1 د ځان سره د $2 په توګه رټلی.',
 );
 
 /** Portuguese (Português)
