@@ -461,9 +461,11 @@ $messages['eo'] = array(
 	'ur-cancel'              => 'Nuligu',
 	'ur-login'               => 'Ensalutu',
 	'ur-friendship'          => 'amikeco',
+	'ur-grudge'              => 'venĝemo',
 	'ur-add-button'          => 'Aldonu kiel $1',
 	'ur-accept'              => 'Akceptu',
 	'ur-reject'              => 'Malakceptu',
+	'friend_accept_subject'  => '$1 akceptis vian amiko-peton en {{SITENAME}}!',
 );
 
 /** French (Français)

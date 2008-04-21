@@ -224,6 +224,7 @@ $messages['eo'] = array(
 	'boardlinkselectfoes'      => 'Selektu malamikojn',
 	'boardlinkunselectfoes'    => 'Malselektu malamikojn',
 	'userboard_delete'         => 'Forigu',
+	'userboard_sendmessage'    => 'Sendu al $1 mesaĝon',
 	'userboard_private'        => 'privata',
 	'userboard_public'         => 'publika',
 	'userboard_nextpage'       => 'sekv',
@@ -680,6 +681,13 @@ E ! Volètz arrestar d’obténer de corrièrs de nòstra part ?
 
 Clicatz $4
 e modificatz vòstres paramètres per desactivar las notificacions dels corrièrs electronics.",
+);
+
+/** Ossetic (Иронау)
+ * @author Amikeco
+ */
+$messages['os'] = array(
+	'userboard_delete' => 'Аппар',
 );
 
 /** Polish (Polski)
