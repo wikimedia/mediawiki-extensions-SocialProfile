@@ -1587,30 +1587,124 @@ $messages['ss'] = array(
  * @author M.M.S.
  */
 $messages['sv'] = array(
+	'viewrelationships'                          => 'Visa relationer',
+	'viewrelationshiprequests'                   => 'Visa efterfrågningar om relationer',
+	'ur-already-submitted'                       => 'Din efterfrågning har skickats',
+	'ur-error-title'                             => 'Oops, du hamnade fel!',
+	'ur-error-message-no-user'                   => 'Vi kan inte fullfölja din efterfrågning, för att det inte finns någon användare med detta namn.',
 	'ur-main-page'                               => 'Huvudsida',
 	'ur-your-profile'                            => 'Din profil',
 	'ur-backlink'                                => '&lt; Tillbaka till $1s profil',
 	'ur-friend'                                  => 'vän',
 	'ur-foe'                                     => 'fiende',
 	'ur-relationship-count'                      => '$1 har $2 {{PLURAL:$2|$3|$3er}}.',
+	'ur-add-friends'                             => 'Vill du ha mer vänner? <a href="$1">Bjud in dom</a>',
 	'ur-add-friend'                              => 'Lägg till som vän',
 	'ur-add-foe'                                 => 'Lägg till som fiende',
+	'ur-add-no-user'                             => 'Ingen användare väljd. Var god lägg till vänner eller fiender med den korrekta länken.',
 	'ur-remove-relationship'                     => 'Ta bort som $1',
+	'ur-give-gift'                               => 'Ge en present',
 	'ur-previous'                                => 'föregående',
 	'ur-next'                                    => 'nästa',
 	'ur-remove-relationship-title'               => 'Vill du ta bort $1 som din $2?',
 	'ur-remove-relationship-title-confirm'       => 'Du har tagit bort $1 som din $2',
 	'ur-remove-relationship-message'             => 'Du har begärt att ta bort $1 som din $2, tryck "$3" för att konfirmera.',
+	'ur-remove-relationship-message-confirm'     => 'Du har tagit bort $1 som $2.',
+	'ur-remove-error-message-no-relationship'    => 'Du har ingen relation med $1.',
 	'ur-remove-error-message-remove-yourself'    => 'Du kan inte ta bort dig själv.',
+	'ur-remove-error-message-pending-request'    => 'Du har en väntande efterfrågning om att bli $1 med $2 hos $2.',
+	'ur-remove-error-not-loggedin'               => 'Du måste logga in för att ta bort en $1.',
 	'ur-remove'                                  => 'Ta bort',
 	'ur-cancel'                                  => 'Avbryt',
 	'ur-login'                                   => 'Logga in',
 	'ur-add-title'                               => 'Vill du lägga till $1 som din $2?',
+	'ur-add-message'                             => 'Du håller på att lägga till $1 som din $2.
+Vi kommer meddela $1 att bekräfta din $3.',
+	'ur-friendship'                              => 'vänskap',
+	'ur-grudge'                                  => 'fiendeskap',
 	'ur-add-button'                              => 'Lägg till som $1',
+	'ur-add-sent-title'                          => 'Vi har skickat din efterfrågning om att bli $1 med $2 till $2!',
+	'ur-add-sent-message'                        => 'Din efterfrågning om att bli $1 med $2 har skickats till $2 för godkänning. 
+Om $2 godkänner efterfrågningen kommer du få ett meddelande om det.',
+	'ur-add-error-message-no-user'               => 'Användaren du prövade att lägga till finns inte.',
+	'ur-add-error-message-blocked'               => 'Du är blockerad, och kan inte lägga till vänner eller fiender.',
+	'ur-add-error-message-yourself'              => 'Du kan inte lägga till dig själv som vän eller fiende.',
 	'ur-add-error-message-existing-relationship' => 'Du är redan $1 med $2.',
+	'ur-add-error-message-pending-request-title' => 'Var tålmodig...',
+	'ur-add-error-message-pending-request'       => 'Du har en väntande efterfrågning om att bli $1 med $2. Du kommer meddelas när $2 godkänner efteerfrågningen.',
+	'ur-add-error-message-not-loggedin'          => 'Du måste vara inloggad för att lägga till en $1',
+	'ur-requests-title'                          => 'Relationsefterfrågningar',
+	'ur-requests-message'                        => '<a href="$1">$2</a> vill bli din $3.',
 	'ur-accept'                                  => 'Acceptera',
 	'ur-reject'                                  => 'Avslå',
+	'ur-no-requests-message'                     => 'Du har inga vän- eller fiendeefterfrågningar. Om du vill ha mer vänner, <a href="$1">bjud in dom</a>!',
+	'ur-requests-added-message'                  => 'Du har lagt till $1 som $2.',
+	'ur-requests-reject-message'                 => 'Du har avslagit efterfrågningen från $1 om att bli $2 med dig.',
+	'ur-title-foe'                               => '$1s lista över fiender',
+	'ur-title-friend'                            => '$1s lista över vänner',
 	'friend_request_subject'                     => '$1 har laggt till dig som vän på {{SITENAME}}!',
+	'friend_request_body'                        => 'Hej, $1!
+
+$2 har lagt till dig som en vän på {{SITENAME}}.  Vi vill vara säkra på att ni två verkligen är vänner.
+
+Var god klicka på den här länken för att bekräfta eran vänskap:
+$3
+
+Tack
+
+---
+
+Vill du inte ha mer mejl från oss?
+
+Klicka $4
+och ändra dina inställningar att inte tillåta e-postmeddelanden.',
+	'foe_request_subject'                        => 'Det är krig! $1 har lagt till dig som fiende på {{SITENAME}}!',
+	'foe_request_body'                           => 'Hej, $1!
+
+$2 har lagt till dig som fiende på {{SITENAME}}.  Vi vill vara säkra på att ni två är fiender  eller i varje fall bråkar.
+
+Var god klicka på den här länken för att bekräfta eran fiendeskap.
+
+$3
+
+Tack
+
+---
+
+Vill du inte ha mer mejl från oss?
+
+Klicka $4
+och ändra dina inställningar att inte tillåta e-postmeddelanden.',
+	'friend_accept_subject'                      => '$1 har accepterat din vänskapsefterfrågning på {{SITENAME}}!',
+	'friend_accept_body'                         => 'Hej, $1!
+
+$2 har accepterat din efterfrågning om att bli vän med $2 på {{SITENAME}}!
+
+Kolla på $2s sida på $3
+
+Tack
+
+---
+
+Vill du inte ha mer mejl från oss?
+
+Klicka $4
+och ändra dina inställningar att inte tillåta e-postmeddelanden.',
+	'foe_accept_subject'                         => '$1 har accepterat din fiendeskapsefterfrågning på {{SITENAME}}!',
+	'foe_accept_body'                            => 'Hej, $1!
+
+$2 har accepterat din efterfrågning om fiendeskap med $2 på {{SITENAME}}!
+
+Kolla på $2s sida på $3
+
+Tack
+
+---
+
+Vill du inte ha mer mejl från oss?
+
+Klicka $4
+och ändra dina inställningar att inte tillåta e-postmeddelanden.',
 	'friend_removed_subject'                     => 'Å Nej! $1 har tagit bort dig som vän på {{SITENAME}}!',
 	'friend_removed_body'                        => 'Hej, $1
 
