@@ -322,6 +322,7 @@ $messages['bg'] = array(
 	'user-personal-info-birthday'                     => 'Рожден ден',
 	'user-personal-info-occupation'                   => 'Длъжност',
 	'user-personal-info-websites'                     => 'Уебсайтове',
+	'user-personal-info-places-lived'                 => 'Места, на които съм живял',
 	'user-personal-info-schools'                      => 'Училища',
 	'user-personal-info-about-me'                     => 'За мен',
 	'user-recent-activity-title'                      => 'Скорошна активност',
