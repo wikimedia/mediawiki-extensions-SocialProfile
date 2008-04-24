@@ -293,6 +293,13 @@ $2 ви премахна от списъка си с неприятели в {{S
 за промяна на настройките и изключване на възможността за оповестяване по е-поща.',
 );
 
+/** Chamorro (Chamoru)
+ * @author Jatrobat
+ */
+$messages['ch'] = array(
+	'ur-main-page' => 'Fanhaluman',
+);
+
 /** Danish (Dansk)
  * @author Jon Harald Søby
  */
@@ -817,6 +824,7 @@ $messages['km'] = array(
  * @author Robby
  */
 $messages['lb'] = array(
+	'ur-already-submitted'                       => 'Är Ufro gouf fortgeschéckt',
 	'ur-error-title'                             => 'Ups, hei geet et net weider!',
 	'ur-main-page'                               => 'Haaptsäit',
 	'ur-your-profile'                            => 'Äre Profil',
@@ -828,8 +836,12 @@ $messages['lb'] = array(
 	'ur-next'                                    => 'nächst',
 	'ur-remove'                                  => 'Ewechhuelen',
 	'ur-cancel'                                  => 'Annulléieren',
+	'ur-login'                                   => 'Umellen',
 	'ur-friendship'                              => 'Frëndschaft',
 	'ur-add-error-message-pending-request-title' => 'Gedold!',
+	'ur-accept'                                  => 'Akzeptéieren',
+	'ur-reject'                                  => 'Refuséieren',
+	'ur-requests-added-message'                  => 'Dir hutt den $1 als äre $2 derbäigesat.',
 );
 
 /** Marathi (मराठी)
