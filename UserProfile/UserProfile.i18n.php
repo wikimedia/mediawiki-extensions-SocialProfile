@@ -165,6 +165,13 @@ Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.
 	'user-board-login-message'              => 'You must be <a href="$1">logged in</a> to post messages to other users'
 );
 
+/** Karelian (Karjala)
+ * @author Flrn
+ */
+$messages['krl'] = array(
+	'user-watchlist' => 'Kaččuolistu',
+);
+
 /** Arabic (العربية)
  * @author Alnokta
  * @author Meno25
@@ -2018,6 +2025,7 @@ $messages['oc'] = array(
  * @author Amikeco
  */
 $messages['os'] = array(
+	'user-watchlist'              => 'Мæ цæстдарды номхыгъд',
 	'user-profile-personal-email' => 'Эл. посты адрис',
 );
 
@@ -2124,6 +2132,7 @@ $messages['pt'] = array(
 	'user-points'                          => 'pontos',
 	'user-edit-profile'                    => 'Editar perfil',
 	'user-watchlist'                       => 'Minha lista de vigiados',
+	'user-meet-people'                     => 'Conhecer pessoas',
 	'user-add-friend'                      => 'Adicionar como Amigo',
 	'user-add-foe'                         => 'Adicionar como inimigo',
 	'user-remove-friend'                   => 'Revover como Amigo',
@@ -2133,13 +2142,23 @@ $messages['pt'] = array(
 	'user-contributions'                   => 'Contribuições',
 	'other-info-title'                     => 'Outras informações',
 	'user-friends-title'                   => 'Amigos',
+	'user-foes-title'                      => 'Inimigos',
 	'other-info-movies'                    => 'Filmes',
 	'other-info-tv'                        => 'TV',
 	'other-info-music'                     => 'Música',
 	'other-info-books'                     => 'Livros',
 	'other-info-video-games'               => 'Jogos vídeo',
 	'other-info-magazines'                 => 'Revistas',
+	'other-info-snacks'                    => 'Aperitivos',
 	'other-info-drinks'                    => 'Bebidas',
+	'other-no-info'                        => 'Mais nenhuma informação',
+	'custom-info-title'                    => 'Informação personalizada',
+	'custom-info-field1'                   => 'Personalizada 1',
+	'custom-info-field2'                   => 'Personalizada 2',
+	'custom-info-field3'                   => 'Personalizada 3',
+	'custom-info-field4'                   => 'Personalizada 4',
+	'custom-no-info'                       => 'Sem informação personalizada',
+	'profile-updated-personal'             => 'Actualizar o seu perfil',
 	'user-personal-info-title'             => 'Informação pessoal',
 	'user-personal-info-real-name'         => 'Nome Real',
 	'user-personal-info-location'          => 'Local',
@@ -2156,12 +2175,15 @@ $messages['pt'] = array(
 	'user-recent-activity-gift-sent'       => 'Enviar prenda a',
 	'user-recent-activity-gift-rec'        => 'Recebeu uma prenda de',
 	'user-recent-activity-friend'          => 'É agora amigo de',
+	'user-recent-activity-foe'             => 'É agora inimigo de',
 	'user-recent-activity-user-message'    => 'Enviar mensagem a',
 	'user-recent-system-gift'              => 'Recebeu uma prémio',
 	'user-profile-update-saved'            => 'O seu Perfil foi Salvo',
 	'user-profile-update-profile'          => 'perfil',
 	'user-profile-default-country'         => 'Estados Unidos',
+	'user-profile-section-custom'          => 'Informação personalizada',
 	'user-profile-section-interests'       => 'Outras Informações',
+	'user-profile-section-picture'         => 'Avatar',
 	'user-profile-section-preferences'     => 'Preferências',
 	'user-profile-personal-info'           => 'Informação',
 	'user-profile-personal-name'           => 'Nome',
@@ -2196,6 +2218,7 @@ $messages['pt'] = array(
 	'user-profile-update-button'           => 'Actualizar',
 	'user-profile-sports-sport'            => 'Desporto',
 	'user-profile-sports-notloggedintitle' => 'Oooops!',
+	'user-profile-picture-log'             => 'avatar',
 	'user-profile-picture-large'           => 'Grande',
 	'user-profile-picture-medlarge'        => 'Médio - Grande',
 	'user-profile-picture-medium'          => 'Médio',
@@ -2990,5 +3013,16 @@ $messages['vi'] = array(
 	'user-page-link'                       => 'Trang cá nhân',
 	'user-wiki-link'                       => 'Trang cá nhân wiki',
 	'user-type-toggle-old'                 => 'Sử dụng trang cá nhân wiki',
+);
+
+/** Volapük (Volapük)
+ * @author Malafaya
+ */
+$messages['vo'] = array(
+	'user-profile-personal-name'    => 'Nem',
+	'user-profile-personal-city'    => 'Zif',
+	'user-profile-personal-country' => 'Län',
+	'user-profile-personal-schools' => 'Juls',
+	'user-profile-interests-music'  => 'Musig',
 );
 

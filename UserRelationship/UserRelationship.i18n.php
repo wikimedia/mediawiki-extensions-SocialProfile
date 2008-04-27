@@ -158,6 +158,14 @@ Click $4
 and change your settings to disable e-mail notifications.',
 );
 
+/** Karelian (Karjala)
+ * @author Flrn
+ */
+$messages['krl'] = array(
+	'ur-main-page' => 'Piälehyt',
+	'ur-cancel'    => 'Keskevytä',
+);
+
 /** Arabic (العربية)
  * @author Alnokta
  */
@@ -791,6 +799,13 @@ $messages['hi'] = array(
 	'ur-cancel'    => 'रद्द करें',
 );
 
+/** Hiligaynon (Ilonggo)
+ * @author Jose77
+ */
+$messages['hil'] = array(
+	'ur-main-page' => 'Mayor nga Panid',
+);
+
 
 /** Khmer (ភាសាខ្មែរ)
  * @author Chhorran
@@ -846,11 +861,12 @@ $messages['lb'] = array(
 
 /** Marathi (मराठी)
  * @author Mahitgar
+ * @author Kaustubh
  */
 $messages['mr'] = array(
 	'ur-foe'        => 'शत्रू',
 	'ur-previous'   => 'मागचा',
-	'ur-next'       => 'पुढचा',
+	'ur-next'       => 'पुढील',
 	'ur-login'      => 'प्रवेश',
 	'ur-friendship' => 'मैत्री',
 	'ur-accept'     => 'स्विकारा',
@@ -1409,6 +1425,13 @@ $messages['pt'] = array(
 	'ur-add-error-message-not-loggedin'          => 'Necessita estar logado para adicionar $1',
 	'ur-accept'                                  => 'Aceitar',
 	'ur-reject'                                  => 'Rejeitar',
+);
+
+/** Russian (Русский)
+ * @author Flrn
+ */
+$messages['ru'] = array(
+	'ur-already-submitted' => 'Ваш запрос был отправлен',
 );
 
 /** Tachelhit (Tašlḥiyt)

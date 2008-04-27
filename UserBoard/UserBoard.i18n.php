@@ -477,6 +477,7 @@ $messages['lb'] = array(
 
 /** Marathi (मराठी)
  * @author Mahitgar
+ * @author Kaustubh
  */
 $messages['mr'] = array(
 	'messagesenttitle'      => 'संदेश पाठवले',
@@ -486,7 +487,7 @@ $messages['mr'] = array(
 	'userboard_delete'      => 'वगळा',
 	'userboard_private'     => 'खासगी',
 	'userboard_public'      => 'सार्वजनीक',
-	'userboard_nextpage'    => 'पुढे',
+	'userboard_nextpage'    => 'पुढील',
 	'userboard_prevpage'    => 'मागे',
 	'userboard_sendbutton'  => 'पाठवा',
 );
@@ -722,13 +723,15 @@ $messages['ps'] = array(
 );
 
 /** Portuguese (Português)
- * @author Lijealso
  * @author Malafaya
+ * @author Lijealso
  */
 $messages['pt'] = array(
 	'messagesenttitle'          => 'Mensagens Enviadas',
 	'boardblaststep1'           => 'Passo 1 - Escreva a sua mensagem',
 	'boardblaststep2'           => 'Passo 2 - Seleccione a quem deseja enviar a sua mensagem',
+	'boardlinkselectall'        => 'Seleccionar tudo',
+	'boardlinkunselectall'      => 'Desseleccionar tudo',
 	'boardlinkselectfriends'    => 'Seleccionar amigos',
 	'boardlinkunselectfriends'  => 'Desseleccionar amigos',
 	'boardlinkselectfoes'       => 'Seleccionar inimigos',
@@ -746,6 +749,7 @@ $messages['pt'] = array(
 
 /** Russian (Русский)
  * @author .:Ajvol:.
+ * @author Flrn
  */
 $messages['ru'] = array(
 	'boardblastlogintitle'      => 'Нужно представиться системе',
@@ -753,7 +757,7 @@ $messages['ru'] = array(
 	'messagesenttitle'          => 'Сообщение отправлено',
 	'boardblasttitle'           => 'Отправка высказывания на доску',
 	'boardblaststep1'           => 'Шаг 1 - Напишите ваше сообщение',
-	'boardblastprivatenote'     => 'Все сообщения буду отправляться как личные',
+	'boardblastprivatenote'     => 'Все сообщения будут отправляться как личные',
 	'boardblaststep2'           => 'Шаг 2 - Выберите комы вы хотите отправить сообщение',
 	'boardlinkselectall'        => 'Выбрать всех',
 	'boardlinkunselectall'      => 'Снять выделение',
@@ -765,6 +769,8 @@ $messages['ru'] = array(
 	'boardnofriends'            => 'У вас нет друзей, для которых можно отправить сообщение.',
 	'messagesentsuccess'        => 'Ваше сообщение было успешно отправлено',
 	'userboard'                 => 'Доска участника',
+	'userboard_board-to-board'  => 'Доска-к-доске',
+	'userboard_delete'          => 'Удалить',
 	'userboard_noexist'         => 'Участника, которого вы пытаетесь просмотреть, не существует.',
 	'userboard_yourboard'       => 'Ваша доска',
 	'userboard_owner'           => 'Доска участника $1',
@@ -775,7 +781,6 @@ $messages['ru'] = array(
 	'userboard_boardtoboard'    => 'Доска-на-доску',
 	'userboard_confirmdelete'   => 'Вы уверены, что хотите удалить это сообщение?',
 	'userboard_sendmessage'     => 'Отправить сообщение $1',
-	'userboard_delete'          => 'Удалить',
 	'userboard_myboard'         => 'Моя доска',
 	'userboard_private'         => 'личное',
 	'userboard_public'          => 'общедоступное',
