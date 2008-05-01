@@ -414,6 +414,14 @@ $messages['hi'] = array(
 	'userboard_delete' => 'हटायें',
 );
 
+/** Javanese (Basa Jawa)
+ * @author Meursault2004
+ */
+$messages['jv'] = array(
+	'userboard_private' => 'pribadi',
+	'userboard_public'  => 'umum',
+);
+
 /** Khmer (ភាសាខ្មែរ)
  * @author Lovekhmer
  * @author គីមស៊្រុន
@@ -473,6 +481,13 @@ $messages['lb'] = array(
 	'userboard_prevpage'        => 'vireg',
 	'userboard_nomessages'      => 'Keng Messagen',
 	'userboard_sendbutton'      => 'geschéckt',
+);
+
+/** Malayalam (മലയാളം)
+ * @author Shijualex
+ */
+$messages['ml'] = array(
+	'userboard_delete' => 'മായ്ക്കുക',
 );
 
 /** Marathi (मराठी)

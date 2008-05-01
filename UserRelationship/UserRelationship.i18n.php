@@ -806,6 +806,18 @@ $messages['hil'] = array(
 	'ur-main-page' => 'Mayor nga Panid',
 );
 
+/** Javanese (Basa Jawa)
+ * @author Meursault2004
+ */
+$messages['jv'] = array(
+	'ur-main-page'                               => 'Kaca utama',
+	'ur-remove'                                  => 'Busak',
+	'ur-cancel'                                  => 'Batal',
+	'ur-add-error-message-pending-request-title' => 'Tulung sabar sadélok.',
+	'ur-accept'                                  => 'Tampa',
+	'ur-reject'                                  => 'Tulak',
+);
+
 
 /** Khmer (ភាសាខ្មែរ)
  * @author Chhorran
@@ -857,6 +869,14 @@ $messages['lb'] = array(
 	'ur-accept'                                  => 'Akzeptéieren',
 	'ur-reject'                                  => 'Refuséieren',
 	'ur-requests-added-message'                  => 'Dir hutt den $1 als äre $2 derbäigesat.',
+);
+
+/** Malayalam (മലയാളം)
+ * @author Shijualex
+ */
+$messages['ml'] = array(
+	'ur-main-page' => 'പ്രധാന താള്‍',
+	'ur-remove'    => 'നീക്കം ചെയ്യുക',
 );
 
 /** Marathi (मराठी)

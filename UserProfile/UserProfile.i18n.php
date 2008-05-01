@@ -322,6 +322,8 @@ $messages['bg'] = array(
 	'other-no-info'                                   => 'Не е въведена друга информация',
 	'custom-info-title'                               => 'Допълнителна информация',
 	'custom-no-info'                                  => 'Не е въведена допълнителна информация',
+	'profile-updated-personal'                        => 'Обновяване на профила',
+	'user-board-title'                                => 'Табло',
 	'user-personal-info-title'                        => 'Лична информация',
 	'user-no-personal-info'                           => 'Не е въведена лична информация',
 	'user-personal-info-real-name'                    => 'Истинско име',
@@ -1332,6 +1334,44 @@ $messages['hu'] = array(
 	'user-profile-picture-small'  => 'Kicsi',
 );
 
+/** Javanese (Basa Jawa)
+ * @author Meursault2004
+ */
+$messages['jv'] = array(
+	'other-info-tv'                      => 'TV',
+	'other-info-music'                   => 'Musik',
+	'user-personal-info-real-name'       => 'Jeneng asli',
+	'user-personal-info-location'        => 'Lokasi',
+	'user-personal-info-websites'        => 'Situs-situs wèb',
+	'user-recent-activity-user-message'  => 'Wis ngirim pesen menyang',
+	'user-profile-update-profile'        => 'profil',
+	'user-profile-default-country'       => 'Amérika Sarékat',
+	'user-profile-section-personal'      => 'Informasi pribadi',
+	'user-profile-section-picture'       => 'Avatar',
+	'user-profile-section-preferences'   => 'Préferènsi',
+	'user-profile-personal-info'         => 'Info',
+	'user-profile-personal-name'         => 'Jeneng',
+	'user-profile-personal-email'        => 'E-mail',
+	'user-profile-personal-confirmemail' => 'Konfirmasi e-mail',
+	'user-profile-personal-location'     => 'Lokasi',
+	'user-profile-personal-city'         => 'Kutha',
+	'user-profile-personal-country'      => 'Negara',
+	'user-profile-personal-hometown'     => 'Kutha asal',
+	'user-profile-personal-occupation'   => 'Pagawéyan',
+	'user-profile-personal-education'    => 'Pendidikan',
+	'user-profile-personal-web'          => 'Wèb',
+	'user-profile-personal-websites'     => 'Situs wèb',
+	'user-profile-interests-movies'      => 'Film',
+	'user-profile-interests-tv'          => 'TV',
+	'user-profile-interests-music'       => 'Musik',
+	'user-profile-interests-books'       => 'Buku',
+	'user-profile-interests-magazines'   => 'Kalawarti',
+	'user-profile-interests-videogames'  => 'Dolanan komputer',
+	'user-profile-sports-sport'          => 'Olahraga',
+	'user-profile-picture-yourpicture'   => 'Gambar panjenengan',
+	'user-no-images'                     => 'Ora ana gambar sing diunggahaké',
+);
+
 
 /** Khmer (ភាសាខ្មែរ)
  * @author Lovekhmer
@@ -1437,6 +1477,7 @@ $messages['lb'] = array(
 	'other-info-video-games'               => 'Videospiller',
 	'other-info-drinks'                    => 'Gedrénks',
 	'other-no-info'                        => 'Keng aner Informatioun',
+	'profile-updated-personal'             => 'Äre Profil aktualiséieren',
 	'user-board-title'                     => 'Tafel',
 	'user-personal-info-title'             => 'Perséinlech Informatiounen',
 	'user-no-personal-info'                => 'Keng perséinlech Informatioun',
@@ -1494,6 +1535,18 @@ Avatar',
 	'edit-profile-title'                   => 'Äre Profil änneren',
 	'user-page-link'                       => 'Benotzersäit',
 	'user-wiki-link'                       => 'Wiki Benotzersäit',
+);
+
+/** Malayalam (മലയാളം)
+ * @author Shijualex
+ */
+$messages['ml'] = array(
+	'other-info-title'               => 'മറ്റ് വിവരങ്ങള്‍',
+	'user-personal-info-title'       => 'വ്യക്തിഗത വിവരങ്ങള്‍',
+	'user-profile-section-personal'  => 'വ്യക്തിഗത വിവരങ്ങള്‍',
+	'user-profile-section-interests' => 'മറ്റ് വിവരങ്ങള്‍',
+	'user-profile-personal-name'     => 'പേര്‌',
+	'user-profile-personal-email'    => 'ഇമെയില്‍',
 );
 
 /** Marathi (मराठी)
@@ -2083,6 +2136,7 @@ $messages['ps'] = array(
 	'other-info-music'                   => 'موسيقي',
 	'other-info-books'                   => 'کتابونه',
 	'other-info-magazines'               => 'مجلې',
+	'user-personal-info-title'           => 'ځاني مالومات',
 	'user-personal-info-real-name'       => 'اصلي نوم',
 	'user-personal-info-location'        => 'ځای',
 	'user-personal-info-hometown'        => 'ښارګوټی',
@@ -2094,6 +2148,7 @@ $messages['ps'] = array(
 	'user-profile-update-saved'          => 'ستاسو پېژندليک په برياليتوب سره خوندي شو',
 	'user-profile-update-profile'        => 'پېژندليک',
 	'user-profile-default-country'       => 'متحده ايالتونه',
+	'user-profile-section-personal'      => 'ځاني مالومات',
 	'user-profile-section-interests'     => 'نور مالومات',
 	'user-profile-section-preferences'   => 'غوره توبونه',
 	'user-profile-personal-info'         => 'مالومات',
