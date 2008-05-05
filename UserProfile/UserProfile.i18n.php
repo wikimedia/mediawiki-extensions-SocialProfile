@@ -1317,6 +1317,13 @@ $messages['hi'] = array(
 	'user-profile-picture-small'     => 'छोटा',
 );
 
+/** Hiligaynon (Ilonggo)
+ * @author Jose77
+ */
+$messages['hil'] = array(
+	'user-watchlist' => 'Akon Ginabantayan',
+);
+
 /** Upper Sorbian (Hornjoserbsce)
  * @author Michawiki
  */
@@ -1338,10 +1345,15 @@ $messages['hu'] = array(
  * @author Meursault2004
  */
 $messages['jv'] = array(
+	'user-upload-image'                  => 'Unggahna gambar',
+	'other-info-title'                   => 'Informasi liya',
 	'other-info-tv'                      => 'TV',
 	'other-info-music'                   => 'Musik',
+	'user-personal-info-title'           => 'Informasi pribadi',
+	'user-no-personal-info'              => 'Ora ana informasi pribadi',
 	'user-personal-info-real-name'       => 'Jeneng asli',
 	'user-personal-info-location'        => 'Lokasi',
+	'user-personal-info-occupation'      => 'Pagawéyan',
 	'user-personal-info-websites'        => 'Situs-situs wèb',
 	'user-recent-activity-user-message'  => 'Wis ngirim pesen menyang',
 	'user-profile-update-profile'        => 'profil',
@@ -1357,6 +1369,7 @@ $messages['jv'] = array(
 	'user-profile-personal-city'         => 'Kutha',
 	'user-profile-personal-country'      => 'Negara',
 	'user-profile-personal-hometown'     => 'Kutha asal',
+	'user-profile-personal-birthdate'    => 'Tanggal (Sasi/Dina)',
 	'user-profile-personal-occupation'   => 'Pagawéyan',
 	'user-profile-personal-education'    => 'Pendidikan',
 	'user-profile-personal-web'          => 'Wèb',
@@ -1367,9 +1380,18 @@ $messages['jv'] = array(
 	'user-profile-interests-books'       => 'Buku',
 	'user-profile-interests-magazines'   => 'Kalawarti',
 	'user-profile-interests-videogames'  => 'Dolanan komputer',
+	'user-profile-tidbits-title'         => 'Cilik-cilikan',
 	'user-profile-sports-sport'          => 'Olahraga',
+	'user-profile-picture-title'         => 'Unggahna gambar panjenengan',
 	'user-profile-picture-yourpicture'   => 'Gambar panjenengan',
+	'user-profile-picture-large'         => 'Gedhé',
+	'user-profile-picture-medium'        => 'Tengah-tengahan',
+	'user-profile-picture-small'         => 'Cilik',
+	'user-profile-picture-choosepicture' => 'Pilihen gambar panjenengan',
 	'user-no-images'                     => 'Ora ana gambar sing diunggahaké',
+	'edit-profile-title'                 => 'Sunting profil panjenengan',
+	'user-page-link'                     => 'Kaca panganggo',
+	'user-social-profile-link'           => 'Profil sosial',
 );
 
 
@@ -1541,12 +1563,36 @@ Avatar',
  * @author Shijualex
  */
 $messages['ml'] = array(
-	'other-info-title'               => 'മറ്റ് വിവരങ്ങള്‍',
-	'user-personal-info-title'       => 'വ്യക്തിഗത വിവരങ്ങള്‍',
-	'user-profile-section-personal'  => 'വ്യക്തിഗത വിവരങ്ങള്‍',
-	'user-profile-section-interests' => 'മറ്റ് വിവരങ്ങള്‍',
-	'user-profile-personal-name'     => 'പേര്‌',
-	'user-profile-personal-email'    => 'ഇമെയില്‍',
+	'other-info-title'                   => 'മറ്റ് വിവരങ്ങള്‍',
+	'user-personal-info-title'           => 'വ്യക്തിഗത വിവരങ്ങള്‍',
+	'user-personal-info-real-name'       => 'യഥാര്‍ത്ഥ പേര്‌',
+	'user-personal-info-birthday'        => 'ജന്മദിനം',
+	'user-personal-info-places-lived'    => 'ഞാന്‍ ജീവിച്ച സ്ഥലങ്ങള്‍',
+	'user-personal-info-schools'         => 'സ്കൂളുകള്‍',
+	'user-personal-info-about-me'        => 'എന്നെക്കുറിച്ച്',
+	'user-profile-default-country'       => 'യുണൈറ്റഡ് സ്റ്റേറ്റ്സ്',
+	'user-profile-section-personal'      => 'വ്യക്തിഗത വിവരങ്ങള്‍',
+	'user-profile-section-interests'     => 'മറ്റ് വിവരങ്ങള്‍',
+	'user-profile-section-picture'       => 'അവതാരം',
+	'user-profile-personal-name'         => 'പേര്‌',
+	'user-profile-personal-email'        => 'ഇമെയില്‍',
+	'user-profile-personal-city'         => 'പട്ടണം',
+	'user-profile-personal-country'      => 'രാജ്യം',
+	'user-profile-personal-birthday'     => 'ജന്മദിനം',
+	'user-profile-personal-aboutme'      => 'എന്നെക്കുറിച്ച്',
+	'user-profile-personal-schools'      => 'സ്കൂളുകള്‍',
+	'user-profile-personal-placeslived'  => 'ഞാന്‍ ജീവിച്ച സ്ഥലങ്ങള്‍',
+	'user-profile-picture-log'           => 'അവതാരം',
+	'user-profile-picture-log-entry'     => 'പുതിയ അവതാരം അപ്‌ലോഡ് ചെയ്തിരിക്കുന്നു',
+	'user-profile-picture-yourpicture'   => 'താങ്കളുടെ ചിത്രം',
+	'user-profile-picture-currentimage'  => 'നിലവിലുള്ള ചിത്രം',
+	'user-profile-picture-choosepicture' => 'താങ്കളുടെ ചിത്രം തിരഞ്ഞെടുക്കുക',
+	'user-profile-picture-picsize'       => 'താങ്കളുടെ ചിത്രം jpeg, png, gif എന്നീ ഫോര്‍മാറ്റുകളില്‍ ഒന്നായിരിക്കുകയും ചിത്രത്തിന്റെ വലിപ്പം 100kbയില്‍ കുറവായിരിക്കുകയും വേണം.',
+	'user-profile-goback'                => 'തിരിച്ചു പോവുക',
+	'user-no-images'                     => 'ചിത്രങ്ങള്‍ അപ്‌ലോഡ് ചെയ്തിട്ടില്ല',
+	'user-page-link'                     => 'ഉപയോക്തൃതാള്‍',
+	'user-wiki-link'                     => 'വിക്കി ഉപയോക്തൃതാള്‍',
+	'user-type-toggle-old'               => 'വിക്കിയിലെ ഉപയോക്തൃതാള്‍ ഉപയോഗിക്കുക',
 );
 
 /** Marathi (मराठी)

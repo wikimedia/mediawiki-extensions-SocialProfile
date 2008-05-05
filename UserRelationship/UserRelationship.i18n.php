@@ -187,6 +187,7 @@ $messages['ar'] = array(
 	'ur-cancel'                                  => 'الغ',
 	'ur-login'                                   => 'لج',
 	'ur-friendship'                              => 'صداقة',
+	'ur-grudge'                                  => 'ضغينة',
 	'ur-add-button'                              => 'أضف ك&#x200d; $1',
 	'ur-add-error-message-no-user'               => 'المستخدم الذي تحاول أن تضيفه غير موجود.',
 	'ur-add-error-message-pending-request-title' => 'الصبر جميل!',
@@ -804,6 +805,8 @@ $messages['hi'] = array(
  */
 $messages['hil'] = array(
 	'ur-main-page' => 'Mayor nga Panid',
+	'ur-cancel'    => 'Kanselahon',
+	'ur-login'     => 'Mag sulod',
 );
 
 /** Javanese (Basa Jawa)
@@ -811,8 +814,11 @@ $messages['hil'] = array(
  */
 $messages['jv'] = array(
 	'ur-main-page'                               => 'Kaca utama',
+	'ur-previous'                                => 'sadurungé',
+	'ur-next'                                    => 'sabanjuré',
 	'ur-remove'                                  => 'Busak',
 	'ur-cancel'                                  => 'Batal',
+	'ur-friendship'                              => 'kekancan',
 	'ur-add-error-message-pending-request-title' => 'Tulung sabar sadélok.',
 	'ur-accept'                                  => 'Tampa',
 	'ur-reject'                                  => 'Tulak',
@@ -876,7 +882,12 @@ $messages['lb'] = array(
  */
 $messages['ml'] = array(
 	'ur-main-page' => 'പ്രധാന താള്‍',
+	'ur-next'      => 'അടുത്തത്',
 	'ur-remove'    => 'നീക്കം ചെയ്യുക',
+	'ur-cancel'    => 'റദ്ദാക്കുക',
+	'ur-login'     => 'ലോഗിന്‍',
+	'ur-accept'    => 'സ്വീകരിക്കുക',
+	'ur-reject'    => 'നിരാകരിക്കുക',
 );
 
 /** Marathi (मराठी)
@@ -1389,7 +1400,7 @@ $messages['ps'] = array(
 	'ur-friend'                  => 'ملګری',
 	'ur-add-friend'              => 'خپل په ملګرو کې ورګډول',
 	'ur-previous'                => 'پخوانی',
-	'ur-next'                    => 'راتلونکی',
+	'ur-next'                    => 'راتلونکي',
 	'ur-remove'                  => 'غورځول',
 	'ur-login'                   => 'ننوتل',
 	'ur-friendship'              => 'ملګرتيا',

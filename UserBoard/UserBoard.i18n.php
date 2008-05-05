@@ -414,12 +414,25 @@ $messages['hi'] = array(
 	'userboard_delete' => 'हटायें',
 );
 
+/** Hiligaynon (Ilonggo)
+ * @author Jose77
+ */
+$messages['hil'] = array(
+	'userboard_delete' => 'Panason',
+);
+
 /** Javanese (Basa Jawa)
  * @author Meursault2004
  */
 $messages['jv'] = array(
-	'userboard_private' => 'pribadi',
-	'userboard_public'  => 'umum',
+	'userboard_delete'      => 'Busak',
+	'userboard_sendmessage' => 'Ngirimi pesen $1',
+	'userboard_private'     => 'pribadi',
+	'userboard_public'      => 'umum',
+	'userboard_nextpage'    => 'sabanjuré',
+	'userboard_prevpage'    => 'sadurungé',
+	'userboard_nomessages'  => 'Ora ana pesen.',
+	'userboard_sendbutton'  => 'kirim',
 );
 
 /** Khmer (ភាសាខ្មែរ)
@@ -487,7 +500,11 @@ $messages['lb'] = array(
  * @author Shijualex
  */
 $messages['ml'] = array(
-	'userboard_delete' => 'മായ്ക്കുക',
+	'boardlinkselectall'   => 'എല്ലാം തിരഞ്ഞെടുക്കുക',
+	'boardlinkunselectall' => 'എല്ലാം സ്വതന്ത്രമാക്കുക',
+	'userboard_delete'     => 'മായ്ക്കുക',
+	'userboard_private'    => 'സ്വകാര്യം',
+	'userboard_nextpage'   => 'അടുത്തത്',
 );
 
 /** Marathi (मराठी)
@@ -728,11 +745,11 @@ $messages['ps'] = array(
 	'boardlinkunselectfriends' => 'ملګري ناټاکل',
 	'boardnofriends'           => 'تاسو تر اوسه پورې هېڅ کوم ملګری نلری چې پيغام ورولېږۍ!',
 	'messagesentsuccess'       => 'ستاسو پيغام په برياليتوب سره ولېږل شو.',
+	'userboard_delete'         => 'ړنګول',
 	'userboard_confirmdelete'  => 'آيا تاسو ډاډه ياست چې تاسو همدا پيغام ړنګول غواړۍ؟',
 	'userboard_sendmessage'    => '$1 ته يو پيغام ولېږۍ',
-	'userboard_delete'         => 'ړنګول',
 	'userboard_messagetype'    => 'د پيغام ډول',
-	'userboard_nextpage'       => 'راتلونکی',
+	'userboard_nextpage'       => 'راتلونکي',
 	'userboard_nomessages'     => 'هېڅ کوم پيغام نشته.',
 	'userboard_sendbutton'     => 'لېږل',
 );
