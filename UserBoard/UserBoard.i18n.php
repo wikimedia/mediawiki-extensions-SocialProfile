@@ -425,10 +425,12 @@ $messages['hil'] = array(
  * @author Meursault2004
  */
 $messages['jv'] = array(
+	'messagesenttitle'      => 'Pesen dikirim',
 	'userboard_delete'      => 'Busak',
 	'userboard_sendmessage' => 'Ngirimi pesen $1',
 	'userboard_private'     => 'pribadi',
 	'userboard_public'      => 'umum',
+	'userboard_messagetype' => 'Jenis pesen',
 	'userboard_nextpage'    => 'sabanjuré',
 	'userboard_prevpage'    => 'sadurungé',
 	'userboard_nomessages'  => 'Ora ana pesen.',

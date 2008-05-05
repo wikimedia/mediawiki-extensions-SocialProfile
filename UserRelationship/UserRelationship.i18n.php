@@ -814,12 +814,16 @@ $messages['hil'] = array(
  */
 $messages['jv'] = array(
 	'ur-main-page'                               => 'Kaca utama',
+	'ur-your-profile'                            => 'Profil panjenengan',
 	'ur-previous'                                => 'sadurungé',
 	'ur-next'                                    => 'sabanjuré',
 	'ur-remove'                                  => 'Busak',
 	'ur-cancel'                                  => 'Batal',
+	'ur-login'                                   => 'Log mlebu',
 	'ur-friendship'                              => 'kekancan',
+	'ur-add-error-message-existing-relationship' => 'Panjenengan wis $1 karo $2.',
 	'ur-add-error-message-pending-request-title' => 'Tulung sabar sadélok.',
+	'ur-add-error-message-not-loggedin'          => 'Panjenengan kudu log mlebu kanggo nambahaké $1',
 	'ur-accept'                                  => 'Tampa',
 	'ur-reject'                                  => 'Tulak',
 );
