@@ -59,6 +59,13 @@ $messages['lb'] = array(
 	'yui-desc' => 'Eng Rei vun nëtzleche Funktiounen, am Javascript geschriwwen.',
 );
 
+/** Limburgish (Limburgs)
+ * @author Ooswesthoesbes
+ */
+$messages['li'] = array(
+	'yui-desc' => "'n Verzameling hölpmi-jjel en besturingsillemaenter in JavaSjrif",
+);
+
 /** Marathi (मराठी)
  * @author Mahitgar
  */

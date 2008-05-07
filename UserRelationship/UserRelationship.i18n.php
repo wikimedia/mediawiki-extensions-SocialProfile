@@ -166,6 +166,16 @@ $messages['krl'] = array(
 	'ur-cancel'    => 'Keskevytä',
 );
 
+/** Afrikaans (Afrikaans)
+ * @author Arnobarnard
+ */
+$messages['af'] = array(
+	'ur-next'   => 'volgende',
+	'ur-remove' => 'Skrap',
+	'ur-cancel' => 'Kanselleer',
+	'ur-login'  => 'Inteken',
+);
+
 /** Arabic (العربية)
  * @author Alnokta
  */
@@ -815,6 +825,9 @@ $messages['hil'] = array(
 $messages['jv'] = array(
 	'ur-main-page'                               => 'Kaca utama',
 	'ur-your-profile'                            => 'Profil panjenengan',
+	'ur-friend'                                  => 'kanca',
+	'ur-foe'                                     => 'mungsuh',
+	'ur-give-gift'                               => 'Mènèhi bebungah',
 	'ur-previous'                                => 'sadurungé',
 	'ur-next'                                    => 'sabanjuré',
 	'ur-remove'                                  => 'Busak',
@@ -826,6 +839,7 @@ $messages['jv'] = array(
 	'ur-add-error-message-not-loggedin'          => 'Panjenengan kudu log mlebu kanggo nambahaké $1',
 	'ur-accept'                                  => 'Tampa',
 	'ur-reject'                                  => 'Tulak',
+	'foe_request_subject'                        => 'Saiki perang! $1 wis nambahaké panjenengan minangka mungsuh ing {{SITENAME}}!',
 );
 
 
@@ -855,6 +869,14 @@ $messages['km'] = array(
 	'ur-accept'                                  => 'ព្រមទទួល',
 	'ur-reject'                                  => 'ទាត់ចោល',
 	'friend_request_subject'                     => '$1 បានបន្ថែមអ្នក ជា មិត្តភក្តិ លើ {{SITENAME}}!',
+);
+
+/** Kinaray-a (Kinaray-a)
+ * @author Jose77
+ */
+$messages['krj'] = array(
+	'ur-main-page' => 'Pono nga Pahina',
+	'ur-cancel'    => 'Kanselar',
 );
 
 /** Luxembourgish (Lëtzebuergesch)

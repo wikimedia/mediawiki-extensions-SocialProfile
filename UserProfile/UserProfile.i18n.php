@@ -172,6 +172,16 @@ $messages['krl'] = array(
 	'user-watchlist' => 'Kaččuolistu',
 );
 
+/** Afrikaans (Afrikaans)
+ * @author Arnobarnard
+ */
+$messages['af'] = array(
+	'user-profile-personal-name'  => 'Naam',
+	'user-profile-picture-large'  => 'Groot',
+	'user-profile-picture-medium' => 'Medium',
+	'user-profile-picture-small'  => 'Klein',
+);
+
 /** Arabic (العربية)
  * @author Alnokta
  * @author Meno25
@@ -1321,7 +1331,9 @@ $messages['hi'] = array(
  * @author Jose77
  */
 $messages['hil'] = array(
-	'user-watchlist' => 'Akon Ginabantayan',
+	'user-watchlist'              => 'Akon Ginabantayan',
+	'user-profile-personal-email' => 'E-mail',
+	'user-page-link'              => 'Panid sang Manog-gamit',
 );
 
 /** Upper Sorbian (Hornjoserbsce)
@@ -1345,20 +1357,28 @@ $messages['hu'] = array(
  * @author Meursault2004
  */
 $messages['jv'] = array(
+	'avatarupload'                         => 'namung èkstènsi tès waé',
 	'user-view-all'                        => 'Ndeleng Kabèh',
 	'user-upload-image'                    => 'Unggahna gambar',
 	'user-edit-this'                       => 'Sunting iki',
 	'user-time-ago'                        => 'kapungkur',
 	'user-edit-profile'                    => 'Sunting profil',
+	'user-upload-avatar'                   => 'Unggahna avatar',
 	'user-watchlist'                       => 'Daftar pangawasanku',
 	'user-meet-people'                     => 'Ketemu wong-wong',
 	'user-send-message'                    => 'Kirim pesen',
 	'user-send-gift'                       => 'Kirim bebungah',
 	'user-contributions'                   => 'Kontribusi',
 	'other-info-title'                     => 'Informasi liya',
+	'other-info-movies'                    => 'Film',
 	'other-info-tv'                        => 'TV',
 	'other-info-music'                     => 'Musik',
+	'other-info-books'                     => 'Buku',
+	'other-info-video-games'               => 'Dolanan vidéo',
 	'other-info-magazines'                 => 'Kalawarti',
+	'other-info-snacks'                    => 'Panganan',
+	'other-info-drinks'                    => 'Minuman',
+	'other-no-info'                        => 'Ora ana informasi liya',
 	'user-personal-info-title'             => 'Informasi pribadi',
 	'user-no-personal-info'                => 'Ora ana informasi pribadi',
 	'user-personal-info-real-name'         => 'Jeneng asli',
@@ -1369,6 +1389,7 @@ $messages['jv'] = array(
 	'user-profile-update-profile'          => 'profil',
 	'user-profile-default-country'         => 'Amérika Sarékat',
 	'user-profile-section-personal'        => 'Informasi pribadi',
+	'user-profile-section-sportsteams'     => 'Nganyari jaringan network',
 	'user-profile-section-interests'       => 'Informasi liyané',
 	'user-profile-section-picture'         => 'Avatar',
 	'user-profile-section-preferences'     => 'Préferènsi',
@@ -1380,6 +1401,7 @@ $messages['jv'] = array(
 	'user-profile-personal-city'           => 'Kutha',
 	'user-profile-personal-country'        => 'Negara',
 	'user-profile-personal-hometown'       => 'Kutha asal',
+	'user-profile-personal-birthday'       => 'Dina ulang taun',
 	'user-profile-personal-birthdate'      => 'Tanggal (Sasi/Dina)',
 	'user-profile-personal-occupation'     => 'Pagawéyan',
 	'user-profile-personal-education'      => 'Pendidikan',
@@ -1398,6 +1420,8 @@ $messages['jv'] = array(
 	'user-profile-tidbits-title'           => 'Cilik-cilikan',
 	'user-profile-sports-sport'            => 'Olahraga',
 	'user-profile-picture-title'           => 'Unggahna gambar panjenengan',
+	'user-profile-picture-log'             => 'avatar',
+	'user-profile-picture-log-entry'       => 'ngunggahaké avatar anyar',
 	'user-profile-picture-yourpicture'     => 'Gambar panjenengan',
 	'user-profile-picture-large'           => 'Gedhé',
 	'user-profile-picture-medium'          => 'Tengah-tengahan',
@@ -1488,6 +1512,13 @@ $messages['km'] = array(
 	'edit-profile-title'                   => 'កែប្រែប្រវត្តិរូបរបស់អ្នក',
 	'user-page-link'                       => 'ទំព័រ នៃ អ្នកប្រើប្រាស់',
 	'user-wiki-link'                       => 'ទំព័រ អ្នកប្រើប្រាស់ នៃ វិគី',
+);
+
+/** Kinaray-a (Kinaray-a)
+ * @author Jose77
+ */
+$messages['krj'] = array(
+	'user-profile-personal-email' => 'E-mail',
 );
 
 /** Luxembourgish (Lëtzebuergesch)

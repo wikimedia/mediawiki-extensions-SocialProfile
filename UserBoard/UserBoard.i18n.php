@@ -426,6 +426,10 @@ $messages['hil'] = array(
  */
 $messages['jv'] = array(
 	'messagesenttitle'      => 'Pesen dikirim',
+	'boardblaststep1'       => 'Tahap 1 - Nulisa pesen panjenengan',
+	'boardblastprivatenote' => 'Kabèh pesen bakal dikirim minangka pesen pribadi',
+	'boardblaststep2'       => 'Tahap 2 - Pilihen sapa waé sing péngin dikirimi pesen panjenengan',
+	'boardlinkselectall'    => 'Pilih kabèh',
 	'userboard_delete'      => 'Busak',
 	'userboard_sendmessage' => 'Ngirimi pesen $1',
 	'userboard_private'     => 'pribadi',
