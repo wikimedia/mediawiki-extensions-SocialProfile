@@ -823,6 +823,8 @@ $messages['hil'] = array(
  * @author Meursault2004
  */
 $messages['jv'] = array(
+	'ur-already-submitted'                       => 'Panyuwunan panjenengan wis dikirim',
+	'ur-error-title'                             => 'Adhuh, panjenengan salah ménggok!',
 	'ur-main-page'                               => 'Kaca utama',
 	'ur-your-profile'                            => 'Profil panjenengan',
 	'ur-friend'                                  => 'kanca',
@@ -834,12 +836,17 @@ $messages['jv'] = array(
 	'ur-cancel'                                  => 'Batal',
 	'ur-login'                                   => 'Log mlebu',
 	'ur-friendship'                              => 'kekancan',
+	'ur-add-button'                              => 'Tambah minangka $1',
 	'ur-add-error-message-existing-relationship' => 'Panjenengan wis $1 karo $2.',
 	'ur-add-error-message-pending-request-title' => 'Tulung sabar sadélok.',
 	'ur-add-error-message-not-loggedin'          => 'Panjenengan kudu log mlebu kanggo nambahaké $1',
 	'ur-accept'                                  => 'Tampa',
 	'ur-reject'                                  => 'Tulak',
+	'ur-no-requests-message'                     => 'Panjenengan ora duwé panyuwunan kanca utawa mungsuh.
+Yèn panjenengan péngin kanca luwih akèh, <a href="$1">ayo padha diundhang!</a>',
 	'foe_request_subject'                        => 'Saiki perang! $1 wis nambahaké panjenengan minangka mungsuh ing {{SITENAME}}!',
+	'friend_removed_subject'                     => 'Adhuh! $1 njabel status panjenengan minangka kanca ing {{SITENAME}}!',
+	'foe_removed_subject'                        => 'Horé! $1 wis njabel status panjenengan minangka mungsuh ing {{SITENAME}}!',
 );
 
 
