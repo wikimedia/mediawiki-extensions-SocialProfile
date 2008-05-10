@@ -217,6 +217,7 @@ $messages['el'] = array(
  * @author Yekrats
  */
 $messages['eo'] = array(
+	'messagesenttitle'         => 'Mesaĝoj senditaj',
 	'boardlinkselectall'       => 'Elektu Ĉiujn',
 	'boardlinkunselectall'     => 'Malselektu ĉiujn',
 	'boardlinkselectfriends'   => 'Selektu amikojn',
