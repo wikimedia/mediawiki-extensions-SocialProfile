@@ -52,6 +52,13 @@ $messages['is'] = array(
 	'yui-desc' => 'Sett af hjálparforritum og stjórntækjum, skrifum í JavaScript',
 );
 
+/** Javanese (Basa Jawa)
+ * @author Meursault2004
+ */
+$messages['jv'] = array(
+	'yui-desc' => 'Sawijining sèt piranti lan alat pangontrol, ditulis ing JavaScript',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
