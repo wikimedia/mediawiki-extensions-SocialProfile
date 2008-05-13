@@ -66,6 +66,13 @@ Click $4
 and change your settings to disable email notifications.'
 );
 
+/** Afrikaans (Afrikaans)
+ * @author Arnobarnard
+ */
+$messages['af'] = array(
+	'userboard_sendbutton' => 'stuur',
+);
+
 /** Arabic (العربية)
  * @author Meno25
  * @author Alnokta
