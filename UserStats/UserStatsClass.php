@@ -5,7 +5,7 @@ if ( ! defined( 'MEDIAWIKI' ) )
 $wgUserStatsTrackWeekly = false;
 $wgUserStatsTrackMonthly = false;
 
-class UserStatsTrack{
+class UserStatsTrack {
 	//for referencing purposes
 	var $stats_fields = array(
 		"edit"=>"stats_edit_count",
@@ -97,7 +97,7 @@ class UserStatsTrack{
 	}
 
 	function incStatField( $field, $val=1 ){
-		global $wgUser, $IP, $wgDBprefix, $wgMemc, $wgSitename,$wgSystemGifts, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgUserStatsPointValues;
+		global $wgUser, $IP, $wgDBprefix, $wgMemc, $wgSitename, $wgSystemGifts, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgUserStatsPointValues;
 		if( !$wgUser->isBot() && !$wgUser->isAnon() && $this->stats_fields[$field]) {
 			$dbw = wfGetDB( DB_MASTER );
 			$dbw->update( 'user_stats',
@@ -158,7 +158,7 @@ class UserStatsTrack{
 			$sql .= 'stats_comment_blocked=';
 			$sql .= "(SELECT COUNT(*) as CommentCount FROM Comments_block WHERE  cb_user_id_blocked = " . $this->user_id;
 			$sql .= ")";
-			$sql .= " WHERE stats_user_id = " . $this->user_id ;
+			$sql .= " WHERE stats_user_id = " . $this->user_id;
 			$res = $dbr->query($sql);
 
 			$this->clearCache();
@@ -202,12 +202,12 @@ class UserStatsTrack{
 			$sql = "update ".$wgDBprefix."user_stats set ";
 			if($vote_type==1){
 				$sql  .= 'stats_comment_score_positive_rec=';
-			}else{
+			} else {
 				$sql  .= 'stats_comment_score_negative_rec=';
 			}
 			$sql .= "(SELECT COUNT(*) as CommentVoteCount FROM Comments_Vote WHERE Comment_Vote_ID IN (select CommentID FROM Comments WHERE Comment_user_id = " . $this->user_id . ") AND Comment_Vote_Score=" . $vote_type;
 			$sql .= ")";
-			$sql .= " WHERE stats_user_id = " . $this->user_id ;
+			$sql .= " WHERE stats_user_id = " . $this->user_id;
 			$res = $dbr->query($sql);
 
 			$this->clearCache();
@@ -217,7 +217,7 @@ class UserStatsTrack{
 	function updateCreatedOpinionsCount(){
 		global $wgUser, $wgOut, $wgDBprefix;
 		if( !$wgUser->isAnon() && $this->user_id) {
-			$ctg = "Opinions by User " .  ($this->user_name) ;
+			$ctg = "Opinions by User " .  ($this->user_name);
 			$parser = new Parser();
 			$CtgTitle = Title::newFromText( $parser->transformMsg(trim($ctg), $wgOut->parserOptions() ) );
 			$CtgTitle = $CtgTitle->getDbKey();
@@ -225,7 +225,7 @@ class UserStatsTrack{
 			$sql = "update ".$wgDBprefix."user_stats set stats_opinions_created=";
 			$sql .= "(SELECT count(*) as CreatedOpinions FROM {$dbr->tableName( 'page' )} INNER JOIN {$dbr->tableName( 'categorylinks' )} ON page_id = cl_from WHERE  (cl_to) = " . $dbr->addQuotes($CtgTitle) . " ";
 			$sql .= ")";
-			$sql .= " WHERE stats_user_id = " . $this->user_id ;
+			$sql .= " WHERE stats_user_id = " . $this->user_id;
 
 			$res = $dbr->query($sql);
 
@@ -243,7 +243,7 @@ class UserStatsTrack{
 		$sql = "update ".$wgDBprefix."user_stats set stats_opinions_published = ";
 		$sql .= "(SELECT count(*) as PromotedOpinions FROM {$dbr->tableName( 'page' )} INNER JOIN {$dbr->tableName( 'categorylinks' )} ON page_id = cl_from INNER JOIN published_page ON page_id=published_page_id WHERE  (cl_to) = " . $dbr->addQuotes($CtgTitle) . " AND published_type=1 " . " " . $timeSQL;
 		$sql .= ")";
-		$sql .= " WHERE stats_user_id = " . $this->user_id ;
+		$sql .= " WHERE stats_user_id = " . $this->user_id;
 		$res = $dbr->query($sql);
 
 		$this->clearCache();
@@ -255,7 +255,7 @@ class UserStatsTrack{
 			$dbr = wfGetDB( DB_MASTER );
 			if($rel_type==1){
 				$col="stats_friends_count";
-			}else{
+			} else {
 				$col="stats_foe_count";
 			} //Where is low_priority? where was this table created? 
 			$sql = "update low_priority ".$wgDBprefix."user_stats set {$col}=
@@ -268,7 +268,7 @@ class UserStatsTrack{
 	}
 
 	function updateGiftCountRec(){
-		global $wgUser,$wgStatsStartTimestamp, $wgDBprefix;
+		global $wgUser, $wgStatsStartTimestamp, $wgDBprefix;
 		if( !$wgUser->isAnon() ) {
 			$dbr = wfGetDB( DB_MASTER );
 			$sql = "update low_priority ".$wgDBprefix."user_stats set stats_gifts_rec_count=
@@ -368,7 +368,7 @@ class UserStatsTrack{
 
 		$dbr =& wfGetDB( DB_MASTER );
 		$sql = "SELECT *
-			FROM ".$wgDBprefix."user_stats where stats_user_id =  " . $this->user_id ;
+			FROM ".$wgDBprefix."user_stats where stats_user_id =  " . $this->user_id;
 		$res = $dbr->query($sql);
 		$row = $dbr->fetchObject( $res );
 		if($row){
@@ -393,7 +393,7 @@ class UserStatsTrack{
 	}
 }
 
-class UserStats{
+class UserStats {
 	/**
 	 * Constructor
 	 * @private

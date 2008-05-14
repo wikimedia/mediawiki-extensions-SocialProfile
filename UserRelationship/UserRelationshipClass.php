@@ -25,7 +25,7 @@ class UserRelationship {
 		$user_id_to = User::idFromName($user_to);
 		$dbr =& wfGetDB( DB_MASTER );
 		$fname = $wgDBprefix.'user_relationship_request::addToDatabase';
-		$dbr->insert( $wgDBprefix.'`user_relationship_request`',
+		$dbr->insert( '`'.$wgDBprefix.'user_relationship_request`',
 		array(
 			'ur_user_id_from' => $this->user_id,
 			'ur_user_name_from' => $this->user_name,
@@ -141,7 +141,7 @@ class UserRelationship {
 		global $wgMemc, $wgDBprefix;
 
 		$dbr =& wfGetDB( DB_MASTER );
-		$s = $dbr->selectRow( $wgDBprefix.'`user_relationship_request`',
+		$s = $dbr->selectRow( '`'.$wgDBprefix.'user_relationship_request`',
 				array( 'ur_user_id_from','ur_user_name_from','ur_type'),
 				array( 'ur_id' => $relationship_request_id ), $fname
 		);
@@ -156,7 +156,7 @@ class UserRelationship {
 			}
 
 			$fname = $wgDBprefix.'user_relationship::addToDatabase';
-			$dbr->insert( $wgDBprefix.'`user_relationship`',
+			$dbr->insert( '`'.$wgDBprefix.'user_relationship`',
 			array(
 				'r_user_id' => $this->user_id,
 				'r_user_name' => $this->user_name,
@@ -168,7 +168,7 @@ class UserRelationship {
 			);
 
 			$fname = $wgDBprefix.'user_relationship::addToDatabase';
-			$dbr->insert( $wgDBprefix.'`user_relationship`',
+			$dbr->insert( '`'.$wgDBprefix.'user_relationship`',
 			array(
 				'r_user_id' => $ur_user_id_from,
 				'r_user_name' => $ur_user_name_from,
@@ -247,7 +247,7 @@ class UserRelationship {
 	public function updateRelationshipRequestStatus($relationship_request_id, $status){
 		global $wgDBprefix;
 		$dbw =& wfGetDB( DB_MASTER );
-		$dbw->update( $wgDBprefix.'`user_relationship_request`',
+		$dbw->update( '`'.$wgDBprefix.'user_relationship_request`',
 			array( /* SET */
 			'ur_status' => $status
 			), array( /* WHERE */
@@ -259,7 +259,7 @@ class UserRelationship {
 	public function verifyRelationshipRequest($relationship_request_id){
 	global $wgDBprefix;
 		$dbr =& wfGetDB( DB_MASTER );
-		$s = $dbr->selectRow( $wgDBprefix.'`user_relationship_request`', array( 'ur_user_id_to' ), array( 'ur_id' => $relationship_request_id ), $fname );
+		$s = $dbr->selectRow( '`'.$wgDBprefix.'user_relationship_request`', array( 'ur_user_id_to' ), array( 'ur_id' => $relationship_request_id ), $fname );
 		if ( $s !== false ) {
 			if($this->user_id == $s->ur_user_id_to){
 				return true;
@@ -280,13 +280,13 @@ class UserRelationship {
 		}
 	}
 
-	static function userHasRequestByID($user1,$user2){
+	static function userHasRequestByID($user1, $user2){
 	global $wgDBprefix;
 		$dbr =& wfGetDB( DB_MASTER );
-		$s = $dbr->selectRow( $wgDBprefix.'`user_relationship_request`', array( 'ur_type' ), array( 'ur_user_id_to' => $user1, 'ur_user_id_from' => $user2, 'ur_status' => 0 ), __METHOD__ );
+		$s = $dbr->selectRow( '`'.$wgDBprefix.'user_relationship_request`', array( 'ur_type' ), array( 'ur_user_id_to' => $user1, 'ur_user_id_from' => $user2, 'ur_status' => 0 ), __METHOD__ );
 		if ( $s === false ) {
 			return false;
-		}else{
+		} else {
 			return true;
 		}
 	}
@@ -301,7 +301,7 @@ class UserRelationship {
 		while ($row = $dbr->fetchObject( $res ) ) {
 			if($row->ur_type==1){
 				$type_name = "Friend";
-			}else{
+			} else {
 				$type_name = "Foe";
 			}
 			 $request[] = array(
@@ -359,7 +359,7 @@ class UserRelationship {
 		$key = wfMemcKey( 'user_relationship', 'open_request', $rel_type, $user_id );
 		$dbr =& wfGetDB( DB_SLAVE );
 		$request_count = 0;
-		$s = $dbr->selectRow( $wgDBprefix.'`user_relationship_request`', array( 'count(*) as count' ), array( 'ur_user_id_to' => $user_id, 'ur_status' => 0, 'ur_type' => $rel_type ), __METHOD__ );
+		$s = $dbr->selectRow( '`'.$wgDBprefix.'user_relationship_request`', array( 'count(*) as count' ), array( 'ur_user_id_to' => $user_id, 'ur_status' => 0, 'ur_type' => $rel_type ), __METHOD__ );
 		if ( $s !== false )$request_count = $s->count;
 
 		$wgMemc->set($key,$request_count);

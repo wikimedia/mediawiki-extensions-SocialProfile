@@ -212,7 +212,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				<div class=\"cleared\"></div>
 				</div>
 				<div class=\"relationship-textbox-title\">
-				Add a Personal Message
+				".wfMsg('ur-add-personal-message')."
 				</div>
 				<textarea name=\"message\" id=\"message\" rows=\"3\" cols=\"50\"></textarea>
 				<div class=\"relationship-buttons\">

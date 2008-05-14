@@ -10,7 +10,7 @@
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
-class UserProfilePage extends Article{
+class UserProfilePage extends Article {
 
 	var $title = null;
 
@@ -242,12 +242,12 @@ class UserProfilePage extends Article{
 		} else if ($wgUser->getName()==$user_name) {
 			$output .= "<div class=\"user-section-heading\">
 				<div class=\"user-section-title\">
-					".wfMSg("custom-info-title")."
+					".wfMsg("custom-info-title")."
 				</div>
 				<div class=\"user-section-actions\">
 					<div class=\"action-right\">
 						<a href=\"".$edit_info_link->escapeFullURL()."/custom\">
-							".wfMSg("user-edit-this")."
+							".wfMsg("user-edit-this")."
 						</a>
 					</div>
 					<div class=\"cleared\"></div>
@@ -255,7 +255,7 @@ class UserProfilePage extends Article{
 			</div>
 			<div class=\"cleared\"></div>
 			<div class=\"no-info-container\">
-				".wfMSg("custom-no-info")."
+				".wfMsg("custom-no-info")."
 			</div>";
 		}
 
@@ -586,7 +586,7 @@ class UserProfilePage extends Article{
 						<span style=\"color:#797979;\">" . wfMsgHtml( 'userboard_messagetype' ) . "</span> <select id=\"message_type\"><option value=\"0\">" . wfMsgHtml( 'userboard_public' ) . "</option><option value=\"1\">" . wfMsgHtml( 'userboard_private' ) . "</option></select><p>
 						<textarea name=\"message\" id=\"message\" cols=\"43\" rows=\"4\"/></textarea>
 						<div class=\"user-page-message-box-button\">
-							<input type=\"button\" value=\"Send\" class=\"site-button\" onclick=\"javascript:send_message();\">
+							<input type=\"button\" value=" . wfMsg("userboard_sendbutton") . " class=\"site-button\" onclick=\"javascript:send_message();\">
 						</div>
 					</div>";
 			} else {

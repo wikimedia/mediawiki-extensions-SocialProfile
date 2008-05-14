@@ -1,5 +1,5 @@
 <?php
-//GLOBAL VIDEO NAMESPACE REFERENCE
+//Global profile namespace reference
 define( 'NS_USER_PROFILE', 202 );
 define( 'NS_USER_WIKI', 200 );
 
@@ -17,7 +17,7 @@ $wgHooks['ArticleFromTitle'][] = 'wfUserProfileFromTitle';
 //ArticleFromTitle
 //Calls UserProfilePage instead of standard article
 function wfUserProfileFromTitle( &$title, &$article ){
-	global $wgUser, $wgRequest, $IP, $wgOut, $wgTitle, $wgSupressPageTitle,$wgSupressSubTitle, $wgMemc,
+	global $wgUser, $wgRequest, $IP, $wgOut, $wgTitle, $wgSupressPageTitle, $wgSupressSubTitle, $wgMemc,
 	$wgUserPageChoice, $wgParser, $wgUserProfileDirectory, $wgUserProfileScripts, $wgStyleVersion;
 
 	if ( strpos( $title->getText(), "/" ) === false && ( NS_USER == $title->getNamespace() || NS_USER_PROFILE == $title->getNamespace() ) ) {
@@ -40,7 +40,7 @@ function wfUserProfileFromTitle( &$title, &$article ){
 			if( $wgRequest->getVal("action") == "edit" ){
 				$wgOut->redirect( $title->getFullURL() );
 			}
-		}else{
+		} else {
 			$wgOut->enableClientCache(false);
 			$wgParser->disableCache();
 		}

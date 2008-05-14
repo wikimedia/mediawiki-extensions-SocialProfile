@@ -1,11 +1,9 @@
 Requirements
 =======================
-
-Mediawiki 1.11
+MediaWiki 1.11
 
 Installation
 =======================
-
 If you are installing all extensions part of SocialProfile, there is no
 need to follow the instructions below.
 

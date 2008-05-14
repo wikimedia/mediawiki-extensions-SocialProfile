@@ -23,6 +23,7 @@ $messages['en'] = array(
 	'ur-add-friend'                              => 'Add as friend',
 	'ur-add-foe'                                 => 'Add as foe',
 	'ur-add-no-user'                             => 'No user selected. Please request friends/foes through the correct link.',
+	'ur-add-personal-message'                    => 'Add a Personal Message',
 	'ur-remove-relationship'                     => 'Remove as $1',
 	'ur-give-gift'                               => 'Give a gift',
 	'ur-previous'                                => 'prev',
@@ -2023,4 +2024,5 @@ $messages['vi'] = array(
 	'ur-cancel'     => 'Bãi bỏ',
 	'ur-login'      => 'Đăng nhập',
 );
+
 

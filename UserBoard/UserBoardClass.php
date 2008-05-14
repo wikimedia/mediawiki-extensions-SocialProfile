@@ -24,7 +24,7 @@ class UserBoard {
 		$user_name_from = stripslashes($user_name_from);
 		$user_name_to = stripslashes($user_name_to);
 
-		$dbr->insert( $wgDBprefix.'`user_board`',
+		$dbr->insert( '`'.$wgDBprefix.'user_board`',
 		array(
 			'ub_user_id_from' => $user_id_from,
 			'ub_user_name_from' => $user_name_from,
@@ -48,7 +48,7 @@ class UserBoard {
 		if($message_type==0){
 			//public message count
 			$stats->incStatField("user_board_count");
-		}else{
+		} else {
 			//private message count
 			$stats->incStatField("user_board_count_priv");
 		}
@@ -60,12 +60,7 @@ class UserBoard {
 	}
 
 	public function sendBoardNotificationEmail($user_id_to,$user_from){
-		require_once( "UserBoard.i18n.php" );
-		# Add messages
-		global $wgMessageCache;
-		foreach( $wgUserBoardMessages as $key => $value ) {
-			$wgMessageCache->addMessages( $wgUserBoardMessages[$key], $key );
-		}
+		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 
 		$user = User::newFromId($user_id_to);
 		$user->loadFromId();
@@ -129,7 +124,7 @@ class UserBoard {
 
 		if( $data != "" ){
 			$count = $data;
-		}else{
+		} else {
 			$count = self::getNewMessageCountDB($user_id);
 		}
 		return $count;
@@ -182,7 +177,7 @@ class UserBoard {
 			if(! ($user_id == $wgUser->getID() || $user_id_2 == $wgUser->getID()) ){
 				$user_sql .= " and ub_type = 0 ";
 			}
-		}else{
+		} else {
 			$user_sql = "ub_user_id = {$user_id}";
 			if($user_id != $wgUser->getID() ){
 				$user_sql .= " and ub_type = 0 ";
@@ -243,15 +238,15 @@ class UserBoard {
 	public function displayMessages($user_id,$user_id_2=0,$count=10,$page=0){
 		global $wgUser,$max_link_text_length, $wgTitle;
 		$messages = $this->getUserBoardMessages($user_id,$user_id_2,$count,$page);
-
+		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 		if ($messages) {
 
 			foreach ($messages as $message) {
 				$user =  Title::makeTitle( NS_USER, $message["user_name_from"] );
 				$avatar = new wAvatar($message["user_id_from"],"m");
 
-				$board_to_board ="";
-				$board_link="";
+				$board_to_board = "";
+				$board_link = "";
 				$message_type_label = "";
 				$delete_link = "";
 				if($wgUser->getName()!=$message["user_name_from"]){
@@ -269,7 +264,7 @@ class UserBoard {
 
 				$max_link_text_length = 50;
 				$message_text = $message["message_text"];
-				$message_text = preg_replace_callback( "/(<a[^>]*>)(.*?)(<\/a>)/i",'cut_link_text',$message["message_text"]);
+				#$message_text = preg_replace_callback( "/(<a[^>]*>)(.*?)(<\/a>)/i",'cut_link_text',$message["message_text"]);
 
 				$output .= "<div class=\"user-board-message\" >
 					<div class=\"user-board-message-from\">
