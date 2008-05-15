@@ -514,11 +514,21 @@ $messages['lb'] = array(
  * @author Shijualex
  */
 $messages['ml'] = array(
-	'boardlinkselectall'   => 'എല്ലാം തിരഞ്ഞെടുക്കുക',
-	'boardlinkunselectall' => 'എല്ലാം സ്വതന്ത്രമാക്കുക',
-	'userboard_delete'     => 'മായ്ക്കുക',
-	'userboard_private'    => 'സ്വകാര്യം',
-	'userboard_nextpage'   => 'അടുത്തത്',
+	'messagesenttitle'         => 'സന്ദേശങ്ങള്‍ അയച്ചു',
+	'boardblaststep1'          => 'ഘട്ടം 1 - നിങ്ങളുടെ സന്ദേശം എഴുതുക',
+	'boardblastprivatenote'    => 'എല്ല സന്ദേശങ്ങളും സ്വകാര്യസന്ദേശങ്ങളായി അയക്കും.',
+	'boardblaststep2'          => 'ഘട്ടം 3- സന്ദേശം കിട്ടേണ്ട ആളിനെ തിരഞ്ഞെടുക്കുക',
+	'boardlinkselectall'       => 'എല്ലാം തിരഞ്ഞെടുക്കുക',
+	'boardlinkunselectall'     => 'എല്ലാം സ്വതന്ത്രമാക്കുക',
+	'boardlinkselectfriends'   => 'കൂട്ടുകാരെ തിരഞ്ഞെടുക്കുക',
+	'boardlinkunselectfriends' => 'കൂട്ടുകാരെ ഒഴിവാക്കുക',
+	'userboard_delete'         => 'മായ്ക്കുക',
+	'userboard_confirmdelete'  => 'ഈ സന്ദേശം ഒഴിവാക്കണമെന്നു താങ്കള്‍ക്ക് ഉറപ്പാണോ?',
+	'userboard_sendmessage'    => '$1-നു സന്ദേശം അയക്കുക',
+	'userboard_private'        => 'സ്വകാര്യം',
+	'userboard_nextpage'       => 'അടുത്തത്',
+	'userboard_nomessages'     => 'സന്ദേശങ്ങളില്ല.',
+	'userboard_sendbutton'     => 'അയക്കൂ',
 );
 
 /** Marathi (मराठी)

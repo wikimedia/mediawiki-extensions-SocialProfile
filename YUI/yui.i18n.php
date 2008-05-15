@@ -144,6 +144,13 @@ $messages['tg-cyrl'] = array(
 	'yui-desc' => 'Маҷмӯъи барномаҳои судманд ва танзимот, ки дар ҶаваСкрипт навишта шудаанд',
 );
 
+/** Vèneto (Vèneto)
+ * @author Candalua
+ */
+$messages['vec'] = array(
+	'yui-desc' => 'Na serie de utilità e controli, scriti in JavaScript',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Vinhtantran
  */

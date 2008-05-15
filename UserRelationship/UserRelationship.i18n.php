@@ -496,7 +496,7 @@ $messages['eo'] = array(
 	'ur-next'                                    => 'sekv',
 	'ur-remove'                                  => 'Forigu',
 	'ur-cancel'                                  => 'Nuligu',
-	'ur-login'                                   => 'Ensalutu',
+	'ur-login'                                   => 'Ensaluti',
 	'ur-friendship'                              => 'amikeco',
 	'ur-grudge'                                  => 'venĝemo',
 	'ur-add-button'                              => 'Aldonu kiel $1',
@@ -527,6 +527,7 @@ $messages['fr'] = array(
 	'ur-add-friend'                              => 'Ajouter comme ami',
 	'ur-add-foe'                                 => 'Ajouter comme ennemi',
 	'ur-add-no-user'                             => 'Aucun utilisateur sélectionné. Veuiller requérir des amis ou des ennemis au travers du lien correct.',
+	'ur-add-personal-message'                    => 'Ajouter un message personnel',
 	'ur-remove-relationship'                     => 'Enlever comme $1',
 	'ur-give-gift'                               => 'Envoyer un cadeau',
 	'ur-previous'                                => 'préc.',
@@ -598,7 +599,7 @@ Hé ! Voulez-vous vous arrêter de recevoir des courriels de notre part ?
 
 Cliquez $4 et modifiez vos préférences pour désactiver les notifications par courriel.',
 	'friend_accept_subject'                      => '$1 a accepté votre requête en amitié sur {{SITENAME}} !',
-	'friend_accept_body'                         => 'Salut $1 :
+	'friend_accept_body'                         => 'Salut $1 : 
 
 $2 a accepté votre requête en amitié sur {{SITENAME}} !
 
@@ -613,7 +614,7 @@ Hé ! Voulez-vous vous arrêter de recevoir des courriels de notre part ?
 Cliquez $4
 et modifiez vos préférences pour désactiver les notifications par courriel.',
 	'foe_accept_subject'                         => "C'est fait ! $1 a accepté votre déclaration de guerre sur  {{SITENAME}} !",
-	'foe_accept_body'                            => 'Salut $1 :
+	'foe_accept_body'                            => 'Salut $1 : 
 
 $2 a accepté votre déclaration de guerre sur  {{SITENAME}} !
 
@@ -973,6 +974,7 @@ $messages['nl'] = array(
 	'ur-add-foe'                                 => 'Als tegenstander toevoegen',
 	'ur-add-no-user'                             => 'Er is geen gebruiker geselecteerd.
 Maak verzoeken voor vrienden/tegenstanders alstublieft via de daarvoor bedoelde link.',
+	'ur-add-personal-message'                    => 'Persoonlijk bericht toevoegen',
 	'ur-remove-relationship'                     => 'Als $1 verwijderen',
 	'ur-give-gift'                               => 'Presentje geven',
 	'ur-previous'                                => 'vorige',
@@ -2026,5 +2028,4 @@ $messages['vi'] = array(
 	'ur-cancel'     => 'Bãi bỏ',
 	'ur-login'      => 'Đăng nhập',
 );
-
 
