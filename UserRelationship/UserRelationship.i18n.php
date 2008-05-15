@@ -22,8 +22,9 @@ $messages['en'] = array(
 	'ur-add-friends'                             => ' Want more friends? <a href="$1">Invite them</a>',
 	'ur-add-friend'                              => 'Add as friend',
 	'ur-add-foe'                                 => 'Add as foe',
-	'ur-add-no-user'                             => 'No user selected. Please request friends/foes through the correct link.',
-	'ur-add-personal-message'                    => 'Add a Personal Message',
+	'ur-add-no-user'                             => 'No user selected.
+Please request friends/foes through the correct link.',
+	'ur-add-personal-message'                    => 'Add a personal message',
 	'ur-remove-relationship'                     => 'Remove as $1',
 	'ur-give-gift'                               => 'Give a gift',
 	'ur-previous'                                => 'prev',
@@ -53,7 +54,8 @@ If $2 confirms your request, you will receive a follow-up e-mail',
 	'ur-add-error-message-yourself'              => 'You cannot add yourself as a friend or foe.',
 	'ur-add-error-message-existing-relationship' => 'You are already $1 with $2.',
 	'ur-add-error-message-pending-request-title' => 'Patience!',
-	'ur-add-error-message-pending-request'       => 'You have a pending $1 request with $2.  We will notify you when $2 confirms your request.',
+	'ur-add-error-message-pending-request'       => 'You have a pending $1 request with $2.
+We will notify you when $2 confirms your request.',
 	'ur-add-error-message-not-loggedin'          => 'You must be logged in to add a $1',
 	'ur-requests-title'                          => 'Relationship requests',
 	'ur-requests-message'                        => '<a href="$1">$2</a> wants to be your $3.',
@@ -596,7 +598,7 @@ Hé ! Voulez-vous vous arrêter de recevoir des courriels de notre part ?
 
 Cliquez $4 et modifiez vos préférences pour désactiver les notifications par courriel.',
 	'friend_accept_subject'                      => '$1 a accepté votre requête en amitié sur {{SITENAME}} !',
-	'friend_accept_body'                         => 'Salut $1 : 
+	'friend_accept_body'                         => 'Salut $1 :
 
 $2 a accepté votre requête en amitié sur {{SITENAME}} !
 
@@ -611,7 +613,7 @@ Hé ! Voulez-vous vous arrêter de recevoir des courriels de notre part ?
 Cliquez $4
 et modifiez vos préférences pour désactiver les notifications par courriel.',
 	'foe_accept_subject'                         => "C'est fait ! $1 a accepté votre déclaration de guerre sur  {{SITENAME}} !",
-	'foe_accept_body'                            => 'Salut $1 : 
+	'foe_accept_body'                            => 'Salut $1 :
 
 $2 a accepté votre déclaration de guerre sur  {{SITENAME}} !
 
@@ -1334,7 +1336,7 @@ E ! Volètz arrestar de recebre de corrièrs de nòstra part ?
 
 Clicatz $4 e modificatz vòstras preferéncias per desactivar las notificacions per corrièr electronic.",
 	'friend_accept_subject'                      => '$1 a acceptat vòstra requèsta en amistat sus {{SITENAME}} !',
-	'friend_accept_body'                         => 'Adiu $1 : 
+	'friend_accept_body'                         => 'Adiu $1 :
 
 $2 a acceptat vòstra requèsta en amistat sus {{SITENAME}} !
 
@@ -1349,7 +1351,7 @@ E ! Volètz vos arrestar de recebre de corrièrs de nòstra part ?
 Clicatz $4
 e modificatz vòstras preferéncias per desactivar las notificacions per corrièr electronic.',
 	'foe_accept_subject'                         => 'Es fach ! $1 a acceptat vòstra declaracion de guèrra sus  {{SITENAME}} !',
-	'foe_accept_body'                            => 'Adiu $1 : 
+	'foe_accept_body'                            => 'Adiu $1 :
 
 $2 a acceptat vòstra declaracion de guèrra sus  {{SITENAME}} !
 
@@ -1735,7 +1737,7 @@ Vi kommer meddela $1 att bekräfta din $3.',
 	'ur-grudge'                                  => 'fiendeskap',
 	'ur-add-button'                              => 'Lägg till som $1',
 	'ur-add-sent-title'                          => 'Vi har skickat din efterfrågning om att bli $1 med $2 till $2!',
-	'ur-add-sent-message'                        => 'Din efterfrågning om att bli $1 med $2 har skickats till $2 för godkänning. 
+	'ur-add-sent-message'                        => 'Din efterfrågning om att bli $1 med $2 har skickats till $2 för godkänning.
 Om $2 godkänner efterfrågningen kommer du få ett meddelande om det.',
 	'ur-add-error-message-no-user'               => 'Användaren du prövade att lägga till finns inte.',
 	'ur-add-error-message-blocked'               => 'Du är blockerad, och kan inte lägga till vänner eller fiender.',
