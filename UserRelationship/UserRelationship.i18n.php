@@ -495,7 +495,7 @@ $messages['eo'] = array(
 	'ur-previous'                                => 'antaŭ',
 	'ur-next'                                    => 'sekv',
 	'ur-remove'                                  => 'Forigu',
-	'ur-cancel'                                  => 'Nuligu',
+	'ur-cancel'                                  => 'Nuligi',
 	'ur-login'                                   => 'Ensaluti',
 	'ur-friendship'                              => 'amikeco',
 	'ur-grudge'                                  => 'venĝemo',
@@ -1129,6 +1129,7 @@ $messages['no'] = array(
 	'ur-add-friend'                              => 'Legg til som venn',
 	'ur-add-foe'                                 => 'Legg til som fiende',
 	'ur-add-no-user'                             => 'Ingen bruker valgt. Vennligst legg til venner eller fiender med den korrekte lenken.',
+	'ur-add-personal-message'                    => 'Legg til en personlig beskjed',
 	'ur-remove-relationship'                     => 'Fjern som $1',
 	'ur-give-gift'                               => 'Gi gave',
 	'ur-previous'                                => 'forrige',
@@ -1267,6 +1268,7 @@ $messages['oc'] = array(
 	'ur-add-friend'                              => 'Apondre coma amic',
 	'ur-add-foe'                                 => 'Apondre coma enemic',
 	'ur-add-no-user'                             => "Cap d'utilizaire pas seleccionat. Requerissètz d'amics o d'enemics a travèrs del ligam corrècte.",
+	'ur-add-personal-message'                    => 'Ajustar un messatge personal',
 	'ur-remove-relationship'                     => 'Levar coma $1',
 	'ur-give-gift'                               => 'Mandar un present',
 	'ur-previous'                                => 'precedent',
@@ -1338,7 +1340,7 @@ E ! Volètz arrestar de recebre de corrièrs de nòstra part ?
 
 Clicatz $4 e modificatz vòstras preferéncias per desactivar las notificacions per corrièr electronic.",
 	'friend_accept_subject'                      => '$1 a acceptat vòstra requèsta en amistat sus {{SITENAME}} !',
-	'friend_accept_body'                         => 'Adiu $1 :
+	'friend_accept_body'                         => 'Adiu $1 : 
 
 $2 a acceptat vòstra requèsta en amistat sus {{SITENAME}} !
 
@@ -1353,7 +1355,7 @@ E ! Volètz vos arrestar de recebre de corrièrs de nòstra part ?
 Clicatz $4
 e modificatz vòstras preferéncias per desactivar las notificacions per corrièr electronic.',
 	'foe_accept_subject'                         => 'Es fach ! $1 a acceptat vòstra declaracion de guèrra sus  {{SITENAME}} !',
-	'foe_accept_body'                            => 'Adiu $1 :
+	'foe_accept_body'                            => 'Adiu $1 : 
 
 $2 a acceptat vòstra declaracion de guèrra sus  {{SITENAME}} !
 
@@ -1717,6 +1719,7 @@ $messages['sv'] = array(
 	'ur-add-friend'                              => 'Lägg till som vän',
 	'ur-add-foe'                                 => 'Lägg till som fiende',
 	'ur-add-no-user'                             => 'Ingen användare väljd. Var god lägg till vänner eller fiender med den korrekta länken.',
+	'ur-add-personal-message'                    => 'Lägg till ett personligt meddelande',
 	'ur-remove-relationship'                     => 'Ta bort som $1',
 	'ur-give-gift'                               => 'Ge en present',
 	'ur-previous'                                => 'föregående',
@@ -1739,7 +1742,7 @@ Vi kommer meddela $1 att bekräfta din $3.',
 	'ur-grudge'                                  => 'fiendeskap',
 	'ur-add-button'                              => 'Lägg till som $1',
 	'ur-add-sent-title'                          => 'Vi har skickat din efterfrågning om att bli $1 med $2 till $2!',
-	'ur-add-sent-message'                        => 'Din efterfrågning om att bli $1 med $2 har skickats till $2 för godkänning.
+	'ur-add-sent-message'                        => 'Din efterfrågning om att bli $1 med $2 har skickats till $2 för godkänning. 
 Om $2 godkänner efterfrågningen kommer du få ett meddelande om det.',
 	'ur-add-error-message-no-user'               => 'Användaren du prövade att lägga till finns inte.',
 	'ur-add-error-message-blocked'               => 'Du är blockerad, och kan inte lägga till vänner eller fiender.',
