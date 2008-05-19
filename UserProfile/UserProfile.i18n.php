@@ -1644,8 +1644,14 @@ $messages['ml'] = array(
 	'user-view-all'                      => 'എല്ലാം കാണുക',
 	'user-upload-image'                  => 'ചിത്രം അപ്‌ലോഡ് ചെയ്യുക',
 	'user-edit-this'                     => 'ഇതു തിരുത്തുക',
+	'user-time-ago'                      => 'മുന്‍പ്',
 	'user-watchlist'                     => 'ഞാന്‍ ശ്രദ്ധിക്കുന്ന താളുകളുടെ പട്ടിക',
+	'user-add-friend'                    => 'സുഹൃത്തായി ചേര്‍ക്കുക',
+	'user-remove-friend'                 => 'സുഹൃത്തിന്റെ പട്ടികയില്‍ നിന്നു ഒഴിവാക്കുക',
+	'user-send-message'                  => 'സന്ദേശം അയക്കുക',
+	'user-contributions'                 => 'സം‌ഭാവനകള്‍',
 	'other-info-title'                   => 'മറ്റ് വിവരങ്ങള്‍',
+	'user-friends-title'                 => 'സുഹൃത്തുക്കള്‍',
 	'other-info-movies'                  => 'സിനിമകള്‍',
 	'other-info-tv'                      => 'ടിവി',
 	'other-info-music'                   => 'സംഗീതം',
@@ -1668,6 +1674,7 @@ $messages['ml'] = array(
 	'user-profile-section-picture'       => 'അവതാരം',
 	'user-profile-personal-name'         => 'പേര്‌',
 	'user-profile-personal-email'        => 'ഇമെയില്‍',
+	'user-profile-personal-confirmemail' => 'ഇമെയില്‍ വിലാസം സ്ഥിരീകരിക്കുക',
 	'user-profile-personal-city'         => 'പട്ടണം',
 	'user-profile-personal-country'      => 'രാജ്യം',
 	'user-profile-personal-birthday'     => 'ജന്മദിനം',
@@ -1694,6 +1701,11 @@ $messages['ml'] = array(
 	'user-no-images'                     => 'ചിത്രങ്ങള്‍ അപ്‌ലോഡ് ചെയ്തിട്ടില്ല',
 	'user-page-link'                     => 'ഉപയോക്തൃതാള്‍',
 	'user-wiki-link'                     => 'വിക്കി ഉപയോക്തൃതാള്‍',
+	'update_profile_nav'                 => '* Special:UpdateProfile|വ്യക്തിപരമായ വിവരങ്ങള്‍
+* Special:UpdateProfile/personal|മറ്റ് വ്യക്തിപരമായ വിവരങ്ങള്‍
+* Special:UpdateProfile/custom|മറ്റുള്ള വിവരങ്ങള്‍
+* Special:UploadAvatar|അവതാരം
+* Special:UpdateProfile/preferences|ക്രമീകരണങ്ങള്‍',
 	'user-type-toggle-old'               => 'വിക്കിയിലെ ഉപയോക്തൃതാള്‍ ഉപയോഗിക്കുക',
 );
 
