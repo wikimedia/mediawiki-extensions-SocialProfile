@@ -173,10 +173,11 @@ $messages['krl'] = array(
  * @author Arnobarnard
  */
 $messages['af'] = array(
-	'ur-next'   => 'volgende',
-	'ur-remove' => 'Skrap',
-	'ur-cancel' => 'Kanselleer',
-	'ur-login'  => 'Inteken',
+	'ur-main-page' => 'Tuisblad',
+	'ur-next'      => 'volgende',
+	'ur-remove'    => 'Skrap',
+	'ur-cancel'    => 'Kanselleer',
+	'ur-login'     => 'Inteken',
 );
 
 /** Arabic (العربية)
@@ -1575,6 +1576,7 @@ $messages['sk'] = array(
 	'ur-add-friend'                              => 'Pridať ako priateľa',
 	'ur-add-foe'                                 => 'Pridať ako nepriateľa',
 	'ur-add-no-user'                             => 'Nebol vybraný žiadny používateľ. Prosím, žiadajte o priateľov/nepriateľov použitím správneho odkazu.',
+	'ur-add-personal-message'                    => 'Pridať osobnú správu',
 	'ur-remove-relationship'                     => 'Odstrániť ako $1',
 	'ur-give-gift'                               => 'Darovať darček',
 	'ur-previous'                                => 'predch',

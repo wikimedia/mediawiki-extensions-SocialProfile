@@ -176,10 +176,16 @@ $messages['krl'] = array(
  * @author Arnobarnard
  */
 $messages['af'] = array(
-	'user-profile-personal-name'  => 'Naam',
-	'user-profile-picture-large'  => 'Groot',
-	'user-profile-picture-medium' => 'Medium',
-	'user-profile-picture-small'  => 'Klein',
+	'other-info-title'               => 'Ander inligting',
+	'user-personal-info-title'       => 'Persoonlike inligting',
+	'user-personal-info-real-name'   => 'Regte naam',
+	'user-profile-section-personal'  => 'Persoonlike inligting',
+	'user-profile-section-interests' => 'Ander inligting',
+	'user-profile-personal-name'     => 'Naam',
+	'user-profile-personal-email'    => 'E-pos',
+	'user-profile-picture-large'     => 'Groot',
+	'user-profile-picture-medium'    => 'Medium',
+	'user-profile-picture-small'     => 'Klein',
 );
 
 /** Arabic (العربية)
