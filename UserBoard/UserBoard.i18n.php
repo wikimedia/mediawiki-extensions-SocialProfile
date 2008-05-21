@@ -823,7 +823,7 @@ $messages['pt'] = array(
 );
 
 /** Russian (Русский)
- * @author .:Ajvol:.
+ * @author Александр Сигачёв
  * @author Flrn
  */
 $messages['ru'] = array(
