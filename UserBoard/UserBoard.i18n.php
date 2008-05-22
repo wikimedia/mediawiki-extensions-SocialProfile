@@ -70,6 +70,7 @@ and change your settings to disable email notifications.'
  * @author Arnobarnard
  */
 $messages['af'] = array(
+	'userboard_delete'     => 'Skrap',
 	'userboard_sendbutton' => 'stuur',
 );
 
