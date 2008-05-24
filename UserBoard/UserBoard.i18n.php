@@ -77,19 +77,26 @@ $messages['af'] = array(
 /** Arabic (العربية)
  * @author Meno25
  * @author Alnokta
+ * @author OsamaK
  */
 $messages['ar'] = array(
 	'messagesenttitle'         => 'الرسائل تم إرسالها',
+	'boardblaststep1'          => 'خطوة 1 - اكتب رسالتك',
+	'boardblastprivatenote'    => 'كل الرسائل سترسل كرسائل خاصة',
+	'boardblaststep2'          => 'خطوة 2 - انتقِ الذي تود إرسال رسالتك إليه',
 	'boardlinkselectall'       => 'اختيار الكل',
 	'boardlinkunselectall'     => 'عكس اختيار الكل',
 	'boardlinkselectfriends'   => 'اختيار الأصدقاء',
 	'boardlinkunselectfriends' => 'عكس اختيار الأصدقاء',
 	'boardlinkselectfoes'      => 'اختيار الأعداء',
 	'boardlinkunselectfoes'    => 'عكس اختيار الأعداء',
+	'boardnofriends'           => 'لا تمتلك أي أصدقاء لترسل رسالة إليهم!',
+	'messagesentsuccess'       => 'رسالتك أُرسلت بنجاح',
 	'userboard'                => 'مجلس المستخدم',
+	'userboard_delete'         => 'احذف',
+	'userboard_noexist'        => 'المستخدم الذي تحاول عرضه غير موجود.',
 	'userboard_yourboard'      => 'مجلسك',
 	'userboard_confirmdelete'  => 'أتريد حذف هذه الرسالة حقًا؟',
-	'userboard_delete'         => 'احذف',
 	'userboard_myboard'        => 'مجلسي',
 	'userboard_private'        => 'خاص',
 	'userboard_public'         => 'عمومي',
@@ -97,7 +104,7 @@ $messages['ar'] = array(
 	'userboard_nextpage'       => 'بعد',
 	'userboard_prevpage'       => 'قبل',
 	'userboard_nomessages'     => 'لا رسائل.',
-	'userboard_sendbutton'     => 'ارسل',
+	'userboard_sendbutton'     => 'أرسل',
 );
 
 /** Bulgarian (Български)
@@ -239,7 +246,7 @@ $messages['eo'] = array(
 	'userboard_nextpage'       => 'sekv',
 	'userboard_prevpage'       => 'antaŭ',
 	'userboard_nomessages'     => 'Neniuj mesaĝoj.',
-	'userboard_sendbutton'     => 'sendu',
+	'userboard_sendbutton'     => 'sendi',
 );
 
 /** Finnish (Suomi)

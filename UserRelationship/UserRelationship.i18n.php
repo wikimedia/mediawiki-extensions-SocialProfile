@@ -169,6 +169,13 @@ $messages['krl'] = array(
 	'ur-cancel'    => 'Keskevytä',
 );
 
+/** Eastern Mari (Олык Марий йылме)
+ * @author Сай
+ */
+$messages['mhr'] = array(
+	'ur-cancel' => 'Чарташ',
+);
+
 /** Afrikaans (Afrikaans)
  * @author Arnobarnard
  */
@@ -182,6 +189,7 @@ $messages['af'] = array(
 
 /** Arabic (العربية)
  * @author Alnokta
+ * @author OsamaK
  */
 $messages['ar'] = array(
 	'viewrelationships'                          => 'اعرض العلاقة',
@@ -192,10 +200,13 @@ $messages['ar'] = array(
 	'ur-foe'                                     => 'عدو',
 	'ur-add-friend'                              => 'أضف كصديق',
 	'ur-add-foe'                                 => 'أضف كعدو',
+	'ur-add-personal-message'                    => 'إضافة رسالة شخصية',
 	'ur-remove-relationship'                     => 'أزل ك&#x200d; $1',
 	'ur-give-gift'                               => 'اعطي هدية',
 	'ur-previous'                                => 'قبل',
 	'ur-next'                                    => 'بعد',
+	'ur-remove-relationship-message-confirm'     => 'قمت بحذف $1 ك$2 خاص بك.',
+	'ur-remove-error-message-no-relationship'    => 'لا تملتلك أي علاقة مع $1.',
 	'ur-remove-error-message-remove-yourself'    => 'لا يمكن أن تزيل نفسك.',
 	'ur-remove'                                  => 'أزل',
 	'ur-cancel'                                  => 'الغ',
@@ -205,6 +216,7 @@ $messages['ar'] = array(
 	'ur-add-button'                              => 'أضف ك&#x200d; $1',
 	'ur-add-error-message-no-user'               => 'المستخدم الذي تحاول أن تضيفه غير موجود.',
 	'ur-add-error-message-pending-request-title' => 'الصبر جميل!',
+	'ur-add-error-message-not-loggedin'          => 'يجب أن تكون مسجلا دخولك لتضيف $1',
 	'ur-requests-title'                          => 'طلبات العلاقات',
 	'ur-accept'                                  => 'اقبل',
 	'ur-reject'                                  => 'ارفض',
@@ -225,6 +237,7 @@ $messages['bg'] = array(
 	'ur-add-friends'                             => '  Искате повече приятели? <a href="$1">Поканете ги!</a>',
 	'ur-add-friend'                              => 'Добавяне в приятели',
 	'ur-add-foe'                                 => 'Добавяне в неприятели',
+	'ur-add-personal-message'                    => 'Добавяне на лично съобщение',
 	'ur-remove-relationship'                     => 'Премахване от $1и',
 	'ur-give-gift'                               => 'Подаряване на подарък',
 	'ur-previous'                                => 'предишни',
