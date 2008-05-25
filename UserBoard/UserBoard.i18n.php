@@ -500,6 +500,7 @@ $messages['lb'] = array(
 	'boardnofriends'            => 'Dir hutt keng Frënn deenen dir ee Message schécke kënnt!',
 	'messagesentsuccess'        => 'Äre Noriicht gouf geschéckt',
 	'userboard'                 => 'Benotzertafel',
+	'userboard_delete'          => 'Läschen',
 	'userboard_noexist'         => 'De Benotzer den Dir wëllt gesi gëtt et net.',
 	'userboard_yourboard'       => 'Är Tafel',
 	'userboard_owner'           => 'Dem $1 seng Tafel',
@@ -507,7 +508,6 @@ $messages['lb'] = array(
 	'userboard_backyourprofile' => 'Zréck op äre Profil',
 	'userboard_confirmdelete'   => 'Sidd Dir sécher datt Dir dëse Message läsche wellt?',
 	'userboard_sendmessage'     => 'Dem $1 ee Message schécken',
-	'userboard_delete'          => 'Läschen',
 	'userboard_myboard'         => 'Meng Tafel',
 	'userboard_private'         => 'privat',
 	'userboard_public'          => 'ëffentlech',
@@ -516,6 +516,7 @@ $messages['lb'] = array(
 	'userboard_prevpage'        => 'vireg',
 	'userboard_nomessages'      => 'Keng Messagen',
 	'userboard_sendbutton'      => 'geschéckt',
+	'userboard_showingmessages' => 'Weis $2-$$3 vu(n) {{PLURAL:$1|$1 Noriicht|$1 Noriichten}}',
 );
 
 /** Malayalam (മലയാളം)
