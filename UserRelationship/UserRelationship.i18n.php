@@ -220,6 +220,7 @@ $messages['ar'] = array(
 	'ur-requests-title'                          => 'طلبات العلاقات',
 	'ur-accept'                                  => 'اقبل',
 	'ur-reject'                                  => 'ارفض',
+	'friend_removed_subject'                     => 'كلا! أزالك $1 كصديق على {{SITENAME}}!',
 );
 
 /** Bulgarian (Български)
@@ -276,6 +277,20 @@ $1 ще бъде известен, за да оптвърди вашето $3.',
 	'ur-title-foe'                               => 'Списък с неприятели на $1',
 	'ur-title-friend'                            => 'Списък с приятели на $1',
 	'friend_request_subject'                     => '$1 ви добави като свой приятел в {{SITENAME}}!',
+	'friend_request_body'                        => 'Здравейте $1:
+
+$2 ви добави в списъка си с приятели в {{SITENAME}}. Бихме искали да се уверим, 
+че това наистина е така и вие двамата наистина сте приятели.
+
+За потвърждаване на приятелството, щракнете върху долната препратка:
+$3
+
+Благодарим ви!
+
+---
+
+Ако не желаете да получавате повече писма от нас, натиснете $4
+и променете настройките за оповестяване по е-поща.',
 	'foe_request_subject'                        => 'Война! $1 ви добави в списъка си с неприятели в {{SITENAME}}!',
 	'friend_accept_subject'                      => '$1 прие поканата ви за приятелство в {{SITENAME}}!',
 	'friend_accept_body'                         => 'Здравейте $1:
@@ -907,6 +922,13 @@ $messages['km'] = array(
 $messages['krj'] = array(
 	'ur-main-page' => 'Pono nga Pahina',
 	'ur-cancel'    => 'Kanselar',
+);
+
+/** Ripoarisch (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'ur-cancel' => 'Draanjevve',
 );
 
 /** Luxembourgish (Lëtzebuergesch)

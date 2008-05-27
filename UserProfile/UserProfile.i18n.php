@@ -290,6 +290,7 @@ $messages['ar'] = array(
 	'user-profile-update-button'           => 'حدث',
 	'user-profile-sports-sport'            => 'رياضة',
 	'user-profile-sports-title'            => 'تحرير رياضاتك وفرقك المفضلة',
+	'user-profile-sports-notloggedintitle' => 'أوه!',
 	'user-profile-sports-teamremoved'      => 'أزيل فريقك',
 	'user-profile-sports-teamsaved'        => 'أزيلت فرقك',
 	'user-profile-picture-yourpicture'     => 'صورتك',
@@ -307,6 +308,11 @@ $messages['ar'] = array(
 	'user-page-link'                       => 'صفحة مستخدم',
 	'user-social-profile-link'             => 'ملف اجتماعي',
 	'user-wiki-link'                       => 'صفحة المستخدم على الويكي',
+	'update_profile_nav'                   => '* Special:UpdateProfile|معلومات شخصية
+* Special:UpdateProfile/personal|معلومات أخرى
+* Special:UpdateProfile/custom|معلومات مخصصة
+* Special:UploadAvatar|أفاتر
+* Special:UpdateProfile/preferences|تفضيلات',
 	'user-type-toggle-old'                 => 'استخدم صفحة مستخدم الويكي',
 );
 
@@ -1569,6 +1575,13 @@ $messages['krj'] = array(
 	'user-profile-personal-email' => 'E-mail',
 );
 
+/** Ripoarisch (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'user-profile-personal-name' => 'Name',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
@@ -2317,7 +2330,10 @@ $messages['pl'] = array(
  */
 $messages['ps'] = array(
 	'user-view-all'                      => 'ټول کتل',
+	'user-watchlist'                     => 'زما کتلی لړليک',
+	'user-meet-people'                   => 'د خلکو سره ليدل',
 	'user-add-friend'                    => 'خپل په ملګرو کې ورګډول',
+	'user-send-message'                  => 'يو پيغام استول',
 	'user-send-gift'                     => 'يوه ډالۍ لېږل',
 	'user-contributions'                 => 'ونډې',
 	'other-info-title'                   => 'نور مالومات',
@@ -2325,6 +2341,7 @@ $messages['ps'] = array(
 	'other-info-movies'                  => 'فلمونه',
 	'other-info-music'                   => 'موسيقي',
 	'other-info-books'                   => 'کتابونه',
+	'other-info-video-games'             => 'ويډيويي لوبې',
 	'other-info-magazines'               => 'مجلې',
 	'user-personal-info-title'           => 'ځاني مالومات',
 	'user-personal-info-real-name'       => 'اصلي نوم',
@@ -2332,9 +2349,11 @@ $messages['ps'] = array(
 	'user-personal-info-hometown'        => 'ښارګوټی',
 	'user-personal-info-birthday'        => 'زېږکليزه',
 	'user-personal-info-occupation'      => 'دنده',
+	'user-personal-info-websites'        => 'وېبځايونه',
 	'user-personal-info-places-lived'    => 'هغه ځايونو کې چې ما ژوند کړی',
 	'user-personal-info-schools'         => 'ښوونځي',
 	'user-personal-info-about-me'        => 'زما په اړه',
+	'user-recent-activity-gift-sent'     => 'يو چا ته يوه ډالۍ لېږل',
 	'user-profile-update-saved'          => 'ستاسو پېژندليک په برياليتوب سره خوندي شو',
 	'user-profile-update-profile'        => 'پېژندليک',
 	'user-profile-default-country'       => 'متحده ايالتونه',
@@ -2357,12 +2376,16 @@ $messages['ps'] = array(
 	'user-profile-personal-schools'      => 'ښوونځي',
 	'user-profile-personal-places'       => 'ځايونه',
 	'user-profile-personal-placeslived'  => 'هغه ځايونو کې چې ما ژوند کړی',
+	'user-profile-personal-websites'     => 'وېبځايونه',
 	'user-profile-interests-movies'      => 'فلمونه',
 	'user-profile-interests-music'       => 'موسيقي',
 	'user-profile-interests-books'       => 'کتابونه',
 	'user-profile-interests-magazines'   => 'مجلې',
+	'user-profile-interests-videogames'  => 'ويډيويي لوبې',
+	'user-profile-sports-sport'          => 'سپورت',
 	'user-profile-picture-yourpicture'   => 'ستاسو انځور',
 	'user-profile-picture-choosepicture' => 'خپل انځور مو وټاکۍ',
+	'user-page-link'                     => 'د کارونکي پاڼه',
 );
 
 /** Portuguese (Português)
