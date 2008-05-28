@@ -148,6 +148,13 @@ $messages['bn'] = array(
 	'userboard_delete' => 'মুছে ফেলা হোক',
 );
 
+/** Church Slavic (Словѣньскъ)
+ * @author ОйЛ
+ */
+$messages['cu'] = array(
+	'userboard_delete' => 'поничьжє́ниѥ',
+);
+
 /** Danish (Dansk)
  * @author Jon Harald Søby
  */
@@ -484,6 +491,13 @@ $messages['km'] = array(
 	'userboard_loggedout'       => 'ដើម្បីបញ្ជូនសារទៅកាន់អ្នកប្រើប្រាស់ផ្សេងៗទៀតបាន អ្នកចាំបាច់ត្រូវតែបាន<a href="$1">ឡុកអ៊ីនចូល</a>។',
 );
 
+/** Ripoarisch (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'userboard_delete' => 'Fottschmieße',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
@@ -546,21 +560,53 @@ $messages['ml'] = array(
 );
 
 /** Marathi (मराठी)
- * @author Mahitgar
  * @author Kaustubh
+ * @author Mahitgar
  */
 $messages['mr'] = array(
-	'messagesenttitle'      => 'संदेश पाठवले',
-	'boardblastprivatenote' => 'सर्व संदेश खाजगी संदेश स्वरूपात पाठवले जातील',
-	'boardlinkselectall'    => 'सगळे निवडा',
-	'boardlinkunselectall'  => 'सगळी निवड रद्द करा',
-	'userboard_delete'      => 'वगळा',
-	'userboard_private'     => 'खासगी',
-	'userboard_public'      => 'सार्वजनीक',
-	'userboard_nextpage'    => 'पुढील',
-	'userboard_prevpage'    => 'मागे',
-	'userboard_sendbutton'  => 'पाठवा',
-	'message_received_body' => 'नमस्कार $ 1 : 
+	'boardblastlogintitle'      => 'बोर्ड ब्लास्ट पाठविण्यासाठी तुम्ही प्रवेश केलेला असणे आवश्यक आहे.',
+	'boardblastlogintext'       => 'बोर्ड ब्लास्ट पाठविण्यासाठी तुम्ही प्रवेश केलेला असणे आवश्यक आहे.
+प्रवेश करण्यासाठी <a href="index.php?title=Special:UserLogin">इथे टिचकी</a> द्या.',
+	'messagesenttitle'          => 'संदेश पाठवले',
+	'boardblasttitle'           => 'बोर्ड ब्लास्ट पाठवा',
+	'boardblaststep1'           => 'पायरी १ - तुमचा संदेश लिहा',
+	'boardblastprivatenote'     => 'सर्व संदेश खाजगी संदेश स्वरूपात पाठवले जातील',
+	'boardblaststep2'           => 'पायरी २ - तुम्ही कुणाला संदेश पाठवायचा ते सदस्य निवडा',
+	'boardlinkselectall'        => 'सगळे निवडा',
+	'boardlinkunselectall'      => 'सगळी निवड रद्द करा',
+	'boardlinkselectfriends'    => 'मित्र निवडा',
+	'boardlinkunselectfriends'  => 'मित्र काढा',
+	'boardlinkselectfoes'       => 'शत्रू निवडा',
+	'boardlinkunselectfoes'     => 'शत्रू काढा',
+	'boardsendbutton'           => 'बोर्ड ब्लास्ट पाठवा',
+	'boardnofriends'            => 'तुम्हाला संदेश पाठविण्यासाठी एकही मित्र नाही!',
+	'messagesentsuccess'        => 'तुमचा संदेश पाठविलेला आहे',
+	'userboard'                 => 'सदस्य बोर्ड',
+	'userboard_board-to-board'  => 'बोर्ड ते बोर्ड',
+	'userboard_delete'          => 'वगळा',
+	'userboard_noexist'         => 'तुम्ही बघू इच्छित असलेला सदस्य अस्तित्वात नाही',
+	'userboard_yourboard'       => 'तुमचे बोर्ड',
+	'userboard_owner'           => '$1चे बोर्ड',
+	'userboard_yourboardwith'   => 'तुमचे $1 बरोबरचे बोर्ड ते बोर्ड',
+	'userboard_otherboardwith'  => '$1चे $2 बरोबरचे बोर्ड ते बोर्ड',
+	'userboard_backprofile'     => '$1च्या प्रोफाइल कडे परत',
+	'userboard_backyourprofile' => 'तुमच्या प्रोफाइल कडे परत',
+	'userboard_boardtoboard'    => 'बोर्ड ते बोर्ड',
+	'userboard_confirmdelete'   => 'तुम्ही खरोखरच हा संदेश वगळू इच्छिता?',
+	'userboard_sendmessage'     => '$1 ला एक संदेश पाठवा',
+	'userboard_myboard'         => 'माझे बोर्ड',
+	'userboard_posted_ago'      => '$1 पूर्वी पाठविला',
+	'userboard_private'         => 'खासगी',
+	'userboard_public'          => 'सार्वजनीक',
+	'userboard_messagetype'     => 'संदेश प्रकार',
+	'userboard_nextpage'        => 'पुढील',
+	'userboard_prevpage'        => 'मागे',
+	'userboard_nomessages'      => 'संदेश नाहीत.',
+	'userboard_sendbutton'      => 'पाठवा',
+	'userboard_loggedout'       => 'इतर सदस्यांना संदेश पाठविण्यासाठी तुम्ही <a href="$1">प्रवेश केलेला असणे</a> आवश्यक आहे.',
+	'userboard_showingmessages' => '{{PLURAL:$1|$1 संदेशापैकी|$1 संदेशांपैकी}} $2-$3 दर्शवित आहोत',
+	'message_received_subject'  => '$1ने तुमच्या {{SITENAME}} वरच्या बोर्डवर संदेश लिहिलेला आहे',
+	'message_received_body'     => 'नमस्कार $ 1 : 
 
 $ 2 ने आत्ताच ( ( SITENAME ) )वरील तुमच्या पटलावर लिहीले आहे ! 
 
