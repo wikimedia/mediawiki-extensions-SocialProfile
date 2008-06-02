@@ -148,6 +148,68 @@ $messages['bn'] = array(
 	'userboard_delete' => 'মুছে ফেলা হোক',
 );
 
+/** Czech (Česky)
+ * @author Matěj Grabovský
+ */
+$messages['cs'] = array(
+	'boardblastlogintitle'      => 'Musíte se přihlásit, aby jste mohli posílat zprávy fóra.',
+	'boardblastlogintext'       => 'Musíte se přihlásit, aby jste mohli posílat zprávy fóra.
+Klikněte <a href="index.php?title=Special:UserLogin">sem</a> pro přihlášení.',
+	'messagesenttitle'          => 'Odeslanýh zpráv',
+	'boardblasttitle'           => 'Poslat zprávu fóra',
+	'boardblaststep1'           => 'Krok 1: Napište svoji zprávu',
+	'boardblastprivatenote'     => 'Všechny zprávy se pošlou jako soukromé zprávy.',
+	'boardblaststep2'           => 'Krok 2: Vyberte, komu chcete svoji zprávu poslat.',
+	'boardlinkselectall'        => 'Vybrat všechny',
+	'boardlinkunselectall'      => 'Zrušit výběr',
+	'boardlinkselectfriends'    => 'Vybrat přátele',
+	'boardlinkunselectfriends'  => 'Zrušit výběr přátel',
+	'boardlinkselectfoes'       => 'Vybrat nepřátele',
+	'boardlinkunselectfoes'     => 'Zrušit výběr nepřátel',
+	'boardsendbutton'           => 'Poslat zprávu fóra',
+	'boardnofriends'            => 'Nemáte žádné přátele, kterým by jste mohli poslat zprávu!',
+	'messagesentsuccess'        => 'Vaše zpráva byla úspěšně odeslána.',
+	'userboard'                 => 'Uživatelské fórum',
+	'userboard_board-to-board'  => 'Mezi fóry',
+	'userboard_delete'          => 'Smazat',
+	'userboard_noexist'         => 'Uživatel, kterého se pokoušíte zobrazit, neexistuje.',
+	'userboard_yourboard'       => 'Vaše fórum',
+	'userboard_owner'           => 'Fórum uživatele $1',
+	'userboard_yourboardwith'   => 'Vaše fórum s uživatelem $1',
+	'userboard_otherboardwith'  => 'Fórum uživatele $1 s uživatelem $2',
+	'userboard_backprofile'     => 'Zpět na profil uživatelel $1',
+	'userboard_backyourprofile' => 'Zpět na váš profil',
+	'userboard_boardtoboard'    => 'Fórum s uživatelem',
+	'userboard_confirmdelete'   => 'Jste si jistý, že chcete smazat tuto zprávu?',
+	'userboard_sendmessage'     => 'Poslat zprávu uživateli $1',
+	'userboard_myboard'         => 'Moje fórum',
+	'userboard_posted_ago'      => 'poslané před $1',
+	'userboard_private'         => 'soukromé',
+	'userboard_public'          => 'veřejné',
+	'userboard_messagetype'     => 'Typ zprávy',
+	'userboard_nextpage'        => 'další',
+	'userboard_prevpage'        => 'předchozí',
+	'userboard_nomessages'      => 'Žádné zprávy.',
+	'userboard_sendbutton'      => 'poslat',
+	'userboard_loggedout'       => 'Musíte <a href="$1">se přihlásit</a>, aby jste mohli posílat zprávy jiným uživatelům.',
+	'userboard_showingmessages' => 'Zobrazují se zprávy $2-$3 {{plural:$1|z $1 zprávy|ze $1 zpráv|ze $1 zpráv}}.',
+	'message_received_subject'  => '$1 napsal na vaše fórum na {{grammar:6sg|{{SITENAME}}}}.',
+	'message_received_body'     => 'Ahoj, $1:
+
+$2 napsal na vaše fórum na {{grammar:6sg|{{SITENAME}}}}.
+
+Po kliknutí na následující odkaz si můžete přečíst svoje fórum:
+
+$3
+
+---
+
+Nepřejete si dostávat tyt e-maily?
+
+Klikněte sem $4
+a změňte svoje nastavení na vypnutí upozornění e-mailem.',
+);
+
 /** Church Slavic (Словѣньскъ)
  * @author ОйЛ
  */

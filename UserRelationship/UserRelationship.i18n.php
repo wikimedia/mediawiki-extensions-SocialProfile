@@ -961,6 +961,9 @@ $messages['lb'] = array(
 	'ur-accept'                                  => 'Akzeptéieren',
 	'ur-reject'                                  => 'Refuséieren',
 	'ur-requests-added-message'                  => 'Dir hutt den $1 als äre $2 derbäigesat.',
+	'ur-title-friend'                            => 'L!escht vun de Frënn vum $1',
+	'friend_request_subject'                     => '$1 huet iech als Frënd op {{SITENAME}} derbäigesat!',
+	'friend_accept_subject'                      => '$1 huet är Ufro als Frënd op {{SITENAME}} ugeholl!',
 );
 
 /** Malayalam (മലയാളം)

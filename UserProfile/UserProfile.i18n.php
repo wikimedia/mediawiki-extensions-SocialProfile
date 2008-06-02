@@ -457,11 +457,101 @@ $messages['ca'] = array(
 	'user-page-link' => "Pàgina d'usuari",
 );
 
+/** Czech (Česky)
+ * @author Matěj Grabovský
+ * @author Mormegil
+ */
+$messages['cs'] = array(
+	'avatarupload'                        => 'jen testovací rozšíření',
+	'user-count-separator'                => 'z',
+	'user-view-all'                       => 'Zobrazit všechny',
+	'user-upload-image'                   => 'Nahrát obrázek',
+	'user-edit-this'                      => 'Upravit',
+	'user-time-ago'                       => 'zpátky',
+	'user-points'                         => 'bodů',
+	'user-edit-profile'                   => 'Upravit profil',
+	'user-upload-avatar'                  => 'Nahrát fotografii',
+	'user-watchlist'                      => 'Můj seznam sledoaných',
+	'user-meet-people'                    => 'Seznámit se s lidmi',
+	'user-add-friend'                     => 'Přidat jako přítele',
+	'user-add-foe'                        => 'Přidat jako nepřítele',
+	'user-remove-friend'                  => 'Odstranit přítele',
+	'user-remove-foe'                     => 'Odstranit nepřítele',
+	'user-send-message'                   => 'Poslat zprávu',
+	'user-send-gift'                      => 'Poslat dárek',
+	'user-contributions'                  => 'Příspěvky',
+	'other-info-title'                    => 'Jiné informace',
+	'user-friends-title'                  => 'Přatelé',
+	'user-foes-title'                     => 'Nepřátelé',
+	'other-info-movies'                   => 'Filmy',
+	'other-info-tv'                       => 'Televize',
+	'other-info-music'                    => 'Hudba',
+	'other-info-books'                    => 'Knihy',
+	'other-info-video-games'              => 'Videohry',
+	'other-info-magazines'                => 'Časopisy',
+	'other-info-snacks'                   => 'Jídlo',
+	'other-info-drinks'                   => 'Nápoje',
+	'other-no-info'                       => 'Žadné další informace',
+	'custom-info-title'                   => 'Vlastní informace',
+	'custom-info-field1'                  => 'Vlastní 1',
+	'custom-info-field2'                  => 'Vlastní 2',
+	'custom-info-field3'                  => 'Vlastní 3',
+	'custom-info-field4'                  => 'Vlastní 4',
+	'custom-no-info'                      => 'Žádné vlastní informace',
+	'profile-updated-personal'            => 'Aktualizovat svůj profil',
+	'profile-not-provided'                => 'Neposkytnuté',
+	'populate-user-profile-done'          => '{{plural:$1|Přidán $1 profil|Přidány $1 profily|Přidáno $1 profilů}}.',
+	'user-board-title'                    => 'Fórum',
+	'user-send-board-blast'               => 'Poslat vzkaz na fórum',
+	'user-personal-info-title'            => 'Osobní informace',
+	'user-no-personal-info'               => 'Žadné osobní informace',
+	'user-personal-info-real-name'        => 'Skutečné jméno',
+	'user-personal-info-location'         => 'Město',
+	'user-personal-info-hometown'         => 'Město',
+	'user-personal-info-birthday'         => 'Narozeniny',
+	'user-personal-info-occupation'       => 'Povolání',
+	'user-personal-info-websites'         => 'Webstránky',
+	'user-personal-info-places-lived'     => 'Kde jsem žil',
+	'user-personal-info-schools'          => 'Školy',
+	'user-personal-info-about-me'         => 'O mně',
+	'user-recent-activity-title'          => 'Nedávné akitivity',
+	'user-recent-activity-edit'           => 'Upravoval stránku',
+	'user-recent-activity-vote'           => 'Hlasoval za stránku',
+	'user-recent-activity-comment'        => 'Komentoval stránku',
+	'user-recent-activity-gift-sent'      => 'Poslal dárek',
+	'user-recent-activity-gift-rec'       => 'Dostal dárek od',
+	'user-recent-activity-friend'         => 'Je teď přítel s',
+	'user-recent-activity-foe'            => 'Je teď nepřítel s',
+	'user-recent-activity-user-message'   => 'Poslal zprávu',
+	'user-recent-activity-network-update' => 'Poslal myšlenku',
+	'user-recent-system-gift'             => 'Dostal ocenění',
+	'user-profile-update-saved'           => 'Vaš profil byl uložen.',
+	'user-profile-update-log-section'     => 'změnil sekci',
+	'user-profile-update-profile'         => 'profil',
+	'user-profile-default-country'        => 'Spojené státy',
+	'user-profile-section-personal'       => 'Osobní informace',
+	'user-profile-section-sportsteams'    => 'Aktualizovat sítěý',
+	'user-profile-section-custom'         => 'Vlastní informace',
+	'user-profile-section-interests'      => 'Jiné informace',
+	'user-profile-section-picture'        => 'Fotografie',
+	'user-profile-section-preferences'    => 'Nastavení',
+	'user-profile-personal-info'          => 'Informace',
+	'user-profile-personal-name'          => 'Jméno',
+	'user-profile-personal-email'         => 'E-mail',
+	'user-profile-personal-confirmemail'  => 'Potvrdit e-mail',
+	'user-profile-personal-location'      => 'Místo',
+	'user-profile-personal-city'          => 'Město',
+	'user-profile-personal-country'       => 'Země',
+	'user-profile-personal-hometown'      => 'Město',
+	'user-profile-personal-birthday'      => 'Narozeniny',
+);
+
 /** Church Slavic (Словѣньскъ)
  * @author ОйЛ
  */
 $messages['cu'] = array(
 	'user-watchlist' => 'Моꙗ́ блюдє́ниꙗ',
+	'user-page-link' => 'по́льꙃєватєл҄ь',
 );
 
 /** Danish (Dansk)
@@ -768,6 +858,14 @@ $messages['eo'] = array(
 	'user-profile-picture-choosepicture'   => 'Selektu vian bildon',
 	'edit-profile-title'                   => 'Redaktu viajn preferojn',
 	'user-page-link'                       => 'Paĝo de uzanto',
+);
+
+/** Estonian (Eesti)
+ * @author WikedKentaur
+ */
+$messages['et'] = array(
+	'user-watchlist'                   => 'Jälgimisloend',
+	'user-profile-section-preferences' => 'Eelistused',
 );
 
 /** Extremaduran (Estremeñu)
@@ -1394,6 +1492,13 @@ $messages['hu'] = array(
 	'user-profile-picture-small'  => 'Kicsi',
 );
 
+/** Indonesian (Bahasa Indonesia)
+ * @author Irwangatot
+ */
+$messages['id'] = array(
+	'user-no-personal-info' => 'Tidak ada informasi pribadi',
+);
+
 /** Javanese (Basa Jawa)
  * @author Meursault2004
  */
@@ -1614,6 +1719,7 @@ $messages['lb'] = array(
 	'other-info-music'                     => 'Musek',
 	'other-info-books'                     => 'Bicher',
 	'other-info-video-games'               => 'Videospiller',
+	'other-info-snacks'                    => 'Snacken',
 	'other-info-drinks'                    => 'Gedrénks',
 	'other-no-info'                        => 'Keng aner Informatioun',
 	'profile-updated-personal'             => 'Äre Profil aktualiséieren',
@@ -1622,7 +1728,7 @@ $messages['lb'] = array(
 	'user-no-personal-info'                => 'Keng perséinlech Informatioun',
 	'user-personal-info-real-name'         => 'Richtege Numm',
 	'user-personal-info-birthday'          => 'Gebuertsdag',
-	'user-personal-info-occupation'        => 'Beschäftigung',
+	'user-personal-info-occupation'        => 'Beruf',
 	'user-personal-info-websites'          => 'Internetsiten',
 	'user-personal-info-places-lived'      => 'Plaze wou ech geliewt hun',
 	'user-personal-info-schools'           => 'Schoulen',
@@ -1640,15 +1746,18 @@ $messages['lb'] = array(
 	'user-profile-personal-info'           => 'Informatioun',
 	'user-profile-personal-name'           => 'Numm',
 	'user-profile-personal-email'          => 'E-Mail',
+	'user-profile-personal-confirmemail'   => 'E-Mailadress confirméieren',
 	'user-profile-personal-city'           => 'Stad/Gemeng',
 	'user-profile-personal-country'        => 'Land',
 	'user-profile-personal-birthday'       => 'Gebuertsdag',
 	'user-profile-personal-birthdate'      => 'Datum (MM/DD)',
 	'user-profile-personal-aboutme'        => 'Iwwer mech',
 	'user-profile-personal-work'           => 'Aarbecht',
+	'user-profile-personal-occupation'     => 'Beruf',
 	'user-profile-personal-education'      => 'Formatioun',
 	'user-profile-personal-schools'        => 'Schoulen',
 	'user-profile-personal-places'         => 'Plazen',
+	'user-profile-personal-web'            => 'Internet',
 	'user-profile-personal-websites'       => 'Internetsiten',
 	'user-profile-interests-entertainment' => 'Ënnerhalung',
 	'user-profile-interests-movies'        => 'Filmer',
@@ -1915,6 +2024,13 @@ $messages['mr'] = array(
 	'user-type-toggle-old'                            => 'विकि सदस्य पान वापरा',
 	'user-type-toggle-new'                            => 'सार्वजनिक सदस्यपान वापरा',
 	'user-board-login-message'                        => 'इतर सदस्यांना संदेश पाठविण्यासाठी तुम्ही <a href="$1">प्रवेश केलेला असणे</a> आवश्यक आहे.',
+);
+
+/** Low German (Plattdüütsch)
+ * @author Slomox
+ */
+$messages['nds'] = array(
+	'user-profile-personal-name' => 'Naam',
 );
 
 /** Dutch (Nederlands)
@@ -2963,6 +3079,13 @@ $messages['sr-ec'] = array(
 	'user-profile-picture-large'  => 'Велика',
 	'user-profile-picture-medium' => 'Средња',
 	'user-profile-picture-small'  => 'Мала',
+);
+
+/** Sundanese (Basa Sunda)
+ * @author Irwangatot
+ */
+$messages['su'] = array(
+	'user-no-personal-info' => 'Euweuh informasi pribadi',
 );
 
 /** Swedish (Svenska)
