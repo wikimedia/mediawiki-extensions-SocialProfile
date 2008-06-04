@@ -2030,7 +2030,16 @@ $messages['mr'] = array(
  * @author Slomox
  */
 $messages['nds'] = array(
-	'user-profile-personal-name' => 'Naam',
+	'user-profile-personal-name'           => 'Naam',
+	'user-profile-sports-sport'            => 'Sport',
+	'user-profile-sports-notloggedintitle' => 'Höytsa!',
+	'user-profile-picture-log'             => 'Avatar',
+	'user-profile-picture-yourpicture'     => 'Dien Bild',
+	'user-profile-picture-large'           => 'Groot',
+	'user-profile-picture-medlarge'        => 'Middel - Groot',
+	'user-profile-picture-medium'          => 'Middel',
+	'user-profile-picture-small'           => 'Lütt',
+	'user-page-link'                       => 'Brukersied',
 );
 
 /** Dutch (Nederlands)

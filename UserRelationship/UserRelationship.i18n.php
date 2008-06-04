@@ -1163,7 +1163,20 @@ $2 ने तुम्हांला {{SITENAME}} वर मित्र म्
  * @author Slomox
  */
 $messages['nds'] = array(
-	'ur-main-page' => 'Hööftsiet',
+	'ur-main-page'                               => 'Hööftsiet',
+	'ur-friend'                                  => 'Fründ',
+	'ur-foe'                                     => 'Feend',
+	'ur-add-friend'                              => 'As Fründ tofögen',
+	'ur-add-foe'                                 => 'As Feend tofögen',
+	'ur-give-gift'                               => 'Geschenk maken',
+	'ur-cancel'                                  => 'Afbreken',
+	'ur-friendship'                              => 'Fründschop',
+	'ur-add-button'                              => 'As $1 tofögen',
+	'ur-add-error-message-pending-request-title' => 'Geduld!',
+	'ur-accept'                                  => 'Annehmen',
+	'ur-reject'                                  => 'Afwiesen',
+	'ur-title-foe'                               => '$1 sien Feendenlist',
+	'ur-title-friend'                            => '$1 sien Frünnlist',
 );
 
 /** Dutch (Nederlands)
