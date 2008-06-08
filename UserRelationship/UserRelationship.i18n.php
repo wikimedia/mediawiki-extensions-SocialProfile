@@ -1629,6 +1629,7 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
 
 /** Polish (Polski)
  * @author Sp5uhe
+ * @author Airwolf
  */
 $messages['pl'] = array(
 	'ur-already-submitted'                       => 'Twoje zaproszenie zostało wysłane',
