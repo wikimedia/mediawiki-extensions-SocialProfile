@@ -2105,6 +2105,7 @@ $messages['te'] = array(
 	'ur-login'                                   => 'ప్రవేశించు',
 	'ur-friendship'                              => 'స్నేహం',
 	'ur-grudge'                                  => 'పగ',
+	'ur-add-button'                              => '$1గా చేర్చు',
 	'ur-add-error-message-no-user'               => 'మీరు చేర్చాలని ప్రయత్నిస్తున్న వాడుకరి లేనే లేరు.',
 	'ur-add-error-message-yourself'              => 'మిమ్మల్ని మీరే స్నేహితునిగానో లేదా శత్రువుగానో చేర్చుకోలేరు.',
 	'ur-add-error-message-pending-request-title' => 'ఓపిక!',
