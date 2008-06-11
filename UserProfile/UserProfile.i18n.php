@@ -500,7 +500,7 @@ $messages['cs'] = array(
 	'custom-no-info'                      => 'Žádné vlastní informace',
 	'profile-updated-personal'            => 'Aktualizovat svůj profil',
 	'profile-not-provided'                => 'Neposkytnuté',
-	'populate-user-profile-done'          => '{{plural:$1|Přidán $1 profil|Přidány $1 profily|Přidáno $1 profilů}}.',
+	'populate-user-profile-done'          => '{{PLURAL:$1|Přidán $1 profil|Přidány $1 profily|Přidáno $1 profilů}}.',
 	'user-board-title'                    => 'Fórum',
 	'user-send-board-blast'               => 'Poslat vzkaz na fórum',
 	'user-personal-info-title'            => 'Osobní informace',
@@ -1407,6 +1407,8 @@ $messages['gl'] = array(
 	'user-profile-interests-books'                    => 'Libros',
 	'user-profile-interests-magazines'                => 'Revistas',
 	'user-profile-interests-videogames'               => 'Videoxogos',
+	'user-profile-interests-eats'                     => 'Comidas',
+	'user-profile-interests-foodsnacks'               => 'Comida e aperitivos',
 	'user-profile-interests-drinks'                   => 'Bebidas',
 	'user-profile-preferences-emails'                 => 'Notificacións por correo electrónico',
 	'user-profile-preferences-emails-personalmessage' => 'Cando envíe unha mensaxe personal',
@@ -1415,6 +1417,10 @@ $messages['gl'] = array(
 	'user-profile-preferences-emails-level'           => 'Cando avance un nivel',
 	'user-profile-preferences-emails-weekly'          => 'Recibir semanalmente correos electrónicos con actualizacións',
 	'user-profile-update-button'                      => 'Actualizar',
+	'user-profile-tidbits-favmoment'                  => 'Deportes favoritos agora',
+	'user-profile-tidbits-worstmoment'                => 'Deportes peores agora',
+	'user-profile-tidbits-favathlete'                 => 'Atleta favorito e por que',
+	'user-profile-tidbits-leastfavathlete'            => 'Atleta menos favorito e por que',
 	'user-profile-sports-sport'                       => 'Deporte',
 	'user-profile-sports-title'                       => 'Editar os seus deportes e equipos favoritos',
 	'user-profile-sports-notloggedintitle'            => 'Ups!',
@@ -1432,6 +1438,7 @@ $messages['gl'] = array(
 	'user-profile-picture-currentimage'               => 'Imaxe actual',
 	'user-profile-picture-choosepicture'              => 'Escolla a súa imaxe',
 	'user-profile-picture-picsize'                    => 'A súa imaxe debe ser .jpeg, .png ou .gif e non debe ser maior a 100kb.',
+	'user-profile-picture-scanfailed'                 => 'fallou a dixitalización',
 	'user-profile-goback'                             => 'Volver atrás',
 	'user-no-images'                                  => 'Ningunha imaxe foi cargada',
 	'edit-profile-title'                              => 'Editar o seu perfil',
@@ -1443,6 +1450,8 @@ $messages['gl'] = array(
 * Special:UpdateProfile/custom|Custom Information
 * Special:UploadAvatar|Avatar
 * Special:UpdateProfile/preferences|Preferencias',
+	'user-type-toggle-old'                            => 'Usar a páxina de usuario do wiki',
+	'user-type-toggle-new'                            => 'Usar a páxina de usuario social',
 	'user-board-login-message'                        => 'Debe <a href="$1">acceder ao sistema</a> para deixar mensaxes a outros usuarios',
 );
 
@@ -3105,6 +3114,7 @@ $messages['su'] = array(
  * @author M.M.S.
  * @author Jon Harald Søby
  * @author Lokal Profil
+ * @author Boivie
  */
 $messages['sv'] = array(
 	'populateuserprofiles'                            => 'Befolka användar profiler',
@@ -3117,7 +3127,7 @@ $messages['sv'] = array(
 	'user-points'                                     => 'poäng',
 	'user-edit-profile'                               => 'Redigera profil',
 	'user-upload-avatar'                              => 'Ladda upp Avatar',
-	'user-watchlist'                                  => 'Min övervakningslista',
+	'user-watchlist'                                  => 'Min bevakningslista',
 	'user-meet-people'                                => 'Träffa personer',
 	'user-add-friend'                                 => 'Lägg till som Vän',
 	'user-add-foe'                                    => 'Lägg till som Fiende',

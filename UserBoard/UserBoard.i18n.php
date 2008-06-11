@@ -198,7 +198,7 @@ Klikněte <a href="index.php?title=Special:UserLogin">sem</a> pro přihlášení
 	'userboard_nomessages'      => 'Žádné zprávy.',
 	'userboard_sendbutton'      => 'poslat',
 	'userboard_loggedout'       => 'Musíte <a href="$1">se přihlásit</a>, aby jste mohli posílat zprávy jiným uživatelům.',
-	'userboard_showingmessages' => 'Zobrazují se zprávy $2-$3 {{plural:$1|z $1 zprávy|ze $1 zpráv|ze $1 zpráv}}.',
+	'userboard_showingmessages' => 'Zobrazují se zprávy $2-$3 {{PLURAL:$1|z $1 zprávy|ze $1 zpráv|ze $1 zpráv}}.',
 	'message_received_subject'  => '$1 napsal na vaše fórum na {{grammar:6sg|{{SITENAME}}}}.',
 	'message_received_body'     => 'Ahoj, $1:
 
