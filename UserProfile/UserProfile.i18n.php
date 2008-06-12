@@ -550,8 +550,9 @@ $messages['cs'] = array(
  * @author ОйЛ
  */
 $messages['cu'] = array(
-	'user-watchlist' => 'Моꙗ́ блюдє́ниꙗ',
-	'user-page-link' => 'по́льꙃєватєл҄ь',
+	'user-watchlist'                   => 'Моꙗ́ блюдє́ниꙗ',
+	'user-profile-section-preferences' => 'строи',
+	'user-page-link'                   => 'по́льꙃєватєл҄ь',
 );
 
 /** Danish (Dansk)
@@ -1508,7 +1509,11 @@ $messages['hu'] = array(
  * @author Irwangatot
  */
 $messages['id'] = array(
-	'user-no-personal-info' => 'Tidak ada informasi pribadi',
+	'user-no-personal-info'       => 'Tidak ada informasi pribadi',
+	'user-profile-personal-name'  => 'Nama',
+	'user-profile-picture-large'  => 'Besar',
+	'user-profile-picture-medium' => 'Sedang',
+	'user-profile-picture-small'  => 'Kecil',
 );
 
 /** Javanese (Basa Jawa)
@@ -1703,8 +1708,9 @@ $messages['krj'] = array(
  * @author Purodha
  */
 $messages['ksh'] = array(
-	'user-profile-personal-name' => 'Name',
-	'user-page-link'             => 'Matmaachersigg',
+	'user-personal-info-real-name' => 'Dä richtije Name:',
+	'user-profile-personal-name'   => 'Name',
+	'user-page-link'               => 'Matmaachersigg',
 );
 
 /** Luxembourgish (Lëtzebuergesch)

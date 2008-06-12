@@ -870,6 +870,13 @@ $messages['hil'] = array(
 	'ur-login'     => 'Mag sulod',
 );
 
+/** Indonesian (Bahasa Indonesia)
+ * @author Irwangatot
+ */
+$messages['id'] = array(
+	'ur-cancel' => 'Batalkan',
+);
+
 /** Javanese (Basa Jawa)
  * @author Meursault2004
  */
