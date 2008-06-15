@@ -80,31 +80,32 @@ $messages['af'] = array(
  * @author OsamaK
  */
 $messages['ar'] = array(
-	'messagesenttitle'         => 'الرسائل تم إرسالها',
-	'boardblaststep1'          => 'خطوة 1 - اكتب رسالتك',
-	'boardblastprivatenote'    => 'كل الرسائل سترسل كرسائل خاصة',
-	'boardblaststep2'          => 'خطوة 2 - انتقِ الذي تود إرسال رسالتك إليه',
-	'boardlinkselectall'       => 'اختيار الكل',
-	'boardlinkunselectall'     => 'عكس اختيار الكل',
-	'boardlinkselectfriends'   => 'اختيار الأصدقاء',
-	'boardlinkunselectfriends' => 'عكس اختيار الأصدقاء',
-	'boardlinkselectfoes'      => 'اختيار الأعداء',
-	'boardlinkunselectfoes'    => 'عكس اختيار الأعداء',
-	'boardnofriends'           => 'لا تمتلك أي أصدقاء لترسل رسالة إليهم!',
-	'messagesentsuccess'       => 'رسالتك أُرسلت بنجاح',
-	'userboard'                => 'مجلس المستخدم',
-	'userboard_delete'         => 'احذف',
-	'userboard_noexist'        => 'المستخدم الذي تحاول عرضه غير موجود.',
-	'userboard_yourboard'      => 'مجلسك',
-	'userboard_confirmdelete'  => 'أتريد حذف هذه الرسالة حقًا؟',
-	'userboard_myboard'        => 'مجلسي',
-	'userboard_private'        => 'خاص',
-	'userboard_public'         => 'عمومي',
-	'userboard_messagetype'    => 'نوع الرسالة',
-	'userboard_nextpage'       => 'بعد',
-	'userboard_prevpage'       => 'قبل',
-	'userboard_nomessages'     => 'لا رسائل.',
-	'userboard_sendbutton'     => 'أرسل',
+	'messagesenttitle'          => 'الرسائل تم إرسالها',
+	'boardblaststep1'           => 'خطوة 1 - اكتب رسالتك',
+	'boardblastprivatenote'     => 'كل الرسائل سترسل كرسائل خاصة',
+	'boardblaststep2'           => 'خطوة 2 - انتقِ الذي تود إرسال رسالتك إليه',
+	'boardlinkselectall'        => 'اختيار الكل',
+	'boardlinkunselectall'      => 'عكس اختيار الكل',
+	'boardlinkselectfriends'    => 'اختيار الأصدقاء',
+	'boardlinkunselectfriends'  => 'عكس اختيار الأصدقاء',
+	'boardlinkselectfoes'       => 'اختيار الأعداء',
+	'boardlinkunselectfoes'     => 'عكس اختيار الأعداء',
+	'boardnofriends'            => 'لا تمتلك أي أصدقاء لترسل رسالة إليهم!',
+	'messagesentsuccess'        => 'رسالتك أُرسلت بنجاح',
+	'userboard'                 => 'مجلس المستخدم',
+	'userboard_delete'          => 'احذف',
+	'userboard_noexist'         => 'المستخدم الذي تحاول عرضه غير موجود.',
+	'userboard_yourboard'       => 'مجلسك',
+	'userboard_backyourprofile' => 'الرجوع إلى ملفك',
+	'userboard_confirmdelete'   => 'أتريد حذف هذه الرسالة حقًا؟',
+	'userboard_myboard'         => 'مجلسي',
+	'userboard_private'         => 'خاص',
+	'userboard_public'          => 'عمومي',
+	'userboard_messagetype'     => 'نوع الرسالة',
+	'userboard_nextpage'        => 'بعد',
+	'userboard_prevpage'        => 'قبل',
+	'userboard_nomessages'      => 'لا رسائل.',
+	'userboard_sendbutton'      => 'أرسل',
 );
 
 /** Bulgarian (Български)
@@ -1186,6 +1187,13 @@ $messages['tg-cyrl'] = array(
 	'userboard_prevpage'       => 'қаблӣ',
 	'userboard_nomessages'     => 'Пайғоме нест.',
 	'userboard_sendbutton'     => 'фирист',
+);
+
+/** Turkish (Türkçe)
+ * @author Karduelis
+ */
+$messages['tr'] = array(
+	'userboard_delete' => 'Sil',
 );
 
 /** Vietnamese (Tiếng Việt)

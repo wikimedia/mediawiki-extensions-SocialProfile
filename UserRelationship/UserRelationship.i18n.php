@@ -2264,6 +2264,13 @@ $4-ро клик кунед
 ва тарҷиҳоти худро бо ғайрифаъол кардани огоҳсозии тариқи почтаи электронӣ тағйир диҳед.',
 );
 
+/** Turkish (Türkçe)
+ * @author Karduelis
+ */
+$messages['tr'] = array(
+	'ur-remove' => 'Kaldır',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
  */
