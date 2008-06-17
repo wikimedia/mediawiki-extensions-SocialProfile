@@ -45,7 +45,7 @@ $wgUserProfileDisplay['foes'] = true;
 $wgUserProfileDisplay['friends'] = true;
 
 $wgExtensionCredits['other'][] = array(
-        'name' => 'WikiaUserProfile',
+        'name' => 'SocialProfile',
         'author' => 'Wikia, Inc. (Aaron Wright, David Pean)',
         'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile',
         'description' => 'A set of Social Tools for MediaWiki',
@@ -113,9 +113,9 @@ $wgExtensionCredits['specialpage'][] = array(
 
 $wgUserProfileDirectory = "$IP/extensions/SocialProfile/UserProfile";
 
-$wgUserBoardScripts = "/extensions/SocialProfile/UserBoard";
-$wgUserProfileScripts = "/extensions/SocialProfile/UserProfile";
-$wgUserRelationshipScripts = "/extensions/SocialProfile/UserRelationship";
+$wgUserBoardScripts = "$wgScriptPath/extensions/SocialProfile/UserBoard";
+$wgUserProfileScripts = "$wgScriptPath/extensions/SocialProfile/UserProfile";
+$wgUserRelationshipScripts = "$wgScriptPath/extensions/SocialProfile/UserRelationship";
 
 require_once("$IP/extensions/SocialProfile/YUI/YUI.php");
 require_once( "{$wgUserProfileDirectory}/UserProfile.php" );
