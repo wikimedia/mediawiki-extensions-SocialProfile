@@ -134,7 +134,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$wgUser->saveSettings();
 // This code is mostly relative to ArmchairGM, however can be fixed to be used for others.. (maybe try and get code from ArmchairGM)
 		if($wgSitename=="ArmchairGM"){
-			$dbr =& wfGetDB( DB_MASTER );
+			$dbr = wfGetDB( DB_MASTER );
 			if($wgRequest->getVal("weeklyemail")==1){
 				$s = $dbr->selectRow( '`user_mailing_list`', array( 'um_user_id' ), array( 'um_user_id' => $wgUser->getID()  ), __METHOD__ );
 				if ( $s === false ){
@@ -145,7 +145,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 						), __METHOD__
 					);
 				}
-			}else{
+			} else {
 				$sql = "DELETE from user_mailing_list where um_user_id = {$wgUser->getID()}";
 				$res = $dbr->query($sql);
 			}
@@ -178,7 +178,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		global $wgUser, $wgMemc, $wgRequest, $wgSitename, $wgDBprefix;
 
 		$this->initProfile();
-		$dbw =& wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_MASTER );
 			$dbw->update('user_profile',
 			array( /* SET */
 				'up_location_city' => $wgRequest->getVal("location_city"),
@@ -214,7 +214,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		global $wgUser, $wgMemc, $wgRequest, $wgDBprefix;
 
 		$this->initProfile();
-		$dbw =& wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_MASTER );
 			$dbw->update( 'user_profile',
 			array( /* SET */
 				'up_custom_1' => $wgRequest->getVal("custom1"),
@@ -256,7 +256,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	function displayBasicForm(){
 		global $wgRequest, $wgSiteView, $wgUser, $wgDBprefix, $wgOut;
 
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$s = $dbr->selectRow( 'user_profile',
 			array(
 				'up_location_city', 'up_location_state', 'up_location_country',
@@ -441,7 +441,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	function displayPersonalForm(){
 		global $wgRequest, $wgSiteView, $wgUser, $wgOut, $wgDBprefix;
 
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$s = $dbr->selectRow( 'user_profile',
 			array(
 				'up_about', 'up_places_lived', 'up_websites','up_relationship',
@@ -517,7 +517,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			</p>
 			<div class=\"cleared\"></div>
 			</div>
-			<input type=\"button\" class=\"site-button\" value=\"Update\" size=\"20\" onclick=\"document.profile.submit()\" />
+			<input type=\"button\" class=\"site-button\" value=" . wfMsgForContent( 'user-profile-update-button' ) . " size=\"20\" onclick=\"document.profile.submit()\" />
 			</div>
 			</form>
 			";
@@ -552,7 +552,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	function displayCustomForm(){
 		global $wgRequest, $wgSiteView, $wgUser, $wgOut, $wgDBprefix;
 
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$s = $dbr->selectRow( 'user_profile',
 			array(
 				'up_custom_1', 'up_custom_2','up_custom_3', 'up_custom_4','up_custom_5'

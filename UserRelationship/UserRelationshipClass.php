@@ -20,10 +20,10 @@ class UserRelationship {
 		$this->user_id = User::idFromName($this->user_name);
 	}
 
-	public function addRelationshipRequest($user_to,$type,$message, $email=true){
+	public function addRelationshipRequest($user_to, $type, $message, $email=true){
 		global $wgDBprefix;
 		$user_id_to = User::idFromName($user_to);
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$fname = $wgDBprefix.'user_relationship_request::addToDatabase';
 		$dbr->insert( '`'.$wgDBprefix.'user_relationship_request`',
 		array(
@@ -40,7 +40,7 @@ class UserRelationship {
 
 		$this->incNewRequestCount($user_id_to, $type);
 
-		if($email)$this->sendRelationshipRequestEmail($user_id_to,$this->user_name,$type);
+		if($email)$this->sendRelationshipRequestEmail($user_id_to, $this->user_name, $type);
 		return $request_id;
 	}
 
@@ -60,7 +60,7 @@ class UserRelationship {
 					$request_link->getFullURL(),
 					$update_profile_link->getFullURL()
 				);
-			}else{
+			} else {
 				$subject = wfMsgExt( 'foe_request_subject', "parsemag",
 					$user_from
 				);
@@ -91,7 +91,7 @@ class UserRelationship {
 					$user_link->getFullURL(),
 					$update_profile_link->getFullURL()
 				);
-			}else{
+			} else {
 				$subject = wfMsgExt( 'foe_accept_subject', "parsemag",
 					$user_from
 				);
@@ -122,7 +122,7 @@ class UserRelationship {
 					$user_link->getFullURL(),
 					$update_profile_link->getFullURL()
 				);
-			}else{
+			} else {
 				$subject = wfMsgExt( 'foe_removed_subject',"parsemag",
 					$user_from
 				);
@@ -140,7 +140,7 @@ class UserRelationship {
 	public function addRelationship($relationship_request_id, $email=true){
 		global $wgMemc, $wgDBprefix;
 
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$s = $dbr->selectRow( '`'.$wgDBprefix.'user_relationship_request`',
 				array( 'ur_user_id_from','ur_user_name_from','ur_type'),
 				array( 'ur_id' => $relationship_request_id ), $fname
@@ -182,24 +182,24 @@ class UserRelationship {
 			$stats = new UserStatsTrack($this->user_id, $this->user_name);
 			if($ur_type==1){
 				$stats->incStatField("friend");
-			}else{
+			} else {
 				$stats->incStatField("foe");
 			}
 
-			$stats = new UserStatsTrack($ur_user_id_from,$ur_user_name_from);
+			$stats = new UserStatsTrack($ur_user_id_from, $ur_user_name_from);
 			if($ur_type==1){
 				$stats->incStatField("friend");
-			}else{
+			} else {
 				$stats->incStatField("foe");
 			}
 
-			if($email)$this->sendRelationshipAcceptEmail($ur_user_id_from,$this->user_name,$ur_type);
+			if($email)$this->sendRelationshipAcceptEmail($ur_user_id_from, $this->user_name, $ur_type);
 
 			$wgMemc->delete( wfMemcKey( 'relationship', 'profile', "{$this->user_id}-{$ur_type}") );
 			$wgMemc->delete( wfMemcKey( 'relationship', 'profile', "{$ur_user_id_from}-{$ur_type}") );
 
 			return true;
-		}else{
+		} else {
 			return false;
 		}
 	}
@@ -211,7 +211,7 @@ class UserRelationship {
 			return false; //only logged in user should be able to delete
 		}
 		//must delete record for each user involved in relationship
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$sql = "DELETE FROM ".$wgDBprefix."user_relationship WHERE r_user_id={$user1} AND r_user_id_relation={$user2}";
 		$res = $dbr->query($sql);
 		$sql = "DELETE FROM ".$wgDBprefix."user_relationship WHERE r_user_id={$user2} AND r_user_id_relation={$user1}";
@@ -223,12 +223,12 @@ class UserRelationship {
 		$wgMemc->delete( wfMemcKey( 'relationship', 'profile', "{$user1}-2" ) );
 		$wgMemc->delete( wfMemcKey( 'relationship', 'profile', "{$user2}-2" ) );
 
-		$stats = new UserStatsTrack($user1,"");
+		$stats = new UserStatsTrack($user1, "");
 		$stats->updateRelationshipCount(1);
 		$stats->updateRelationshipCount(2);
 		$stats->clearCache();
 
-		$stats = new UserStatsTrack($user2,"");
+		$stats = new UserStatsTrack($user2, "");
 		$stats->updateRelationshipCount(1);
 		$stats->updateRelationshipCount(2);
 		$stats->clearCache();
@@ -237,16 +237,16 @@ class UserRelationship {
 	public function deleteRequest($id){
 	global $wgDBprefix;
 		$request = $this->getRequest($id);
-		$this->decNewRequestCount($this->user_id,$request[0]["rel_type"]);
+		$this->decNewRequestCount($this->user_id, $request[0]["rel_type"]);
 
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$sql = "DELETE FROM ".$wgDBprefix."user_relationship_request WHERE ur_id={$id}";
 		$res = $dbr->query($sql);;
 	}
 
 	public function updateRelationshipRequestStatus($relationship_request_id, $status){
 		global $wgDBprefix;
-		$dbw =& wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update( '`'.$wgDBprefix.'user_relationship_request`',
 			array( /* SET */
 			'ur_status' => $status
@@ -258,7 +258,7 @@ class UserRelationship {
 
 	public function verifyRelationshipRequest($relationship_request_id){
 	global $wgDBprefix;
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$s = $dbr->selectRow( '`'.$wgDBprefix.'user_relationship_request`', array( 'ur_user_id_to' ), array( 'ur_id' => $relationship_request_id ), $fname );
 		if ( $s !== false ) {
 			if($this->user_id == $s->ur_user_id_to){
@@ -270,19 +270,19 @@ class UserRelationship {
 
 	static function getUserRelationshipByID($user1,$user2){
 	global $wgDBprefix;
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		//For some reason in this function, if you add $wgDBprefix before user_relationship it adds it twice. Also removed was '' 
 		$s = $dbr->selectRow( 'user_relationship', array( 'r_type' ), array( 'r_user_id' => $user1, 'r_user_id_relation' => $user2 ), __METHOD__ );
 		if ( $s !== false ) {
 			return $s->r_type;
-		}else{
+		} else {
 			return false;
 		}
 	}
 
 	static function userHasRequestByID($user1, $user2){
 	global $wgDBprefix;
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$s = $dbr->selectRow( '`'.$wgDBprefix.'user_relationship_request`', array( 'ur_type' ), array( 'ur_user_id_to' => $user1, 'ur_user_id_from' => $user2, 'ur_status' => 0 ), __METHOD__ );
 		if ( $s === false ) {
 			return false;
@@ -293,7 +293,7 @@ class UserRelationship {
 
 	public function getRequest($id){
 	global $wgDBprefix;
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$sql = "SELECT ur_id, ur_user_id_from, ur_user_name_from, ur_type, ur_message, ur_date
 			FROM ".$wgDBprefix."user_relationship_request
 			WHERE ur_id = {$id}";
@@ -314,7 +314,7 @@ class UserRelationship {
 
 	public function getRequestList($status,$limit=0){
 	global $wgDBprefix;
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 
 		$limit_sql = $limit > 0 ? " LIMIT 0,{$limit} " : '';
 
@@ -357,12 +357,12 @@ class UserRelationship {
 
 		global $wgMemc, $wgDBprefix;
 		$key = wfMemcKey( 'user_relationship', 'open_request', $rel_type, $user_id );
-		$dbr =& wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_SLAVE );
 		$request_count = 0;
 		$s = $dbr->selectRow( '`'.$wgDBprefix.'user_relationship_request`', array( 'count(*) as count' ), array( 'ur_user_id_to' => $user_id, 'ur_status' => 0, 'ur_type' => $rel_type ), __METHOD__ );
 		if ( $s !== false )$request_count = $s->count;
 
-		$wgMemc->set($key,$request_count);
+		$wgMemc->set($key, $request_count);
 
 		return $request_count;
 	}
@@ -384,7 +384,7 @@ class UserRelationship {
 		if( $data != "" ){
 			if($data==-1)$data = 0;
 			$count = $data;
-		}else{
+		} else {
 			$count = self::getOpenRequestCountDB($user_id, $rel_type);
 		}
 		return $count;
@@ -392,7 +392,7 @@ class UserRelationship {
 
 	public function getRelationshipList($type=0,$limit=0,$page=0){
 		global $wgDBprefix;
-		$dbr =& wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_SLAVE );
 
 		if($limit>0){
 			$limitvalue = 0;
@@ -429,7 +429,7 @@ class UserRelationship {
 
 	public function getRelationshipIDs($type){
 		global $wgDBprefix;
-		$dbr =& wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_SLAVE );
 
 		$sql = "SELECT r_id, r_user_id_relation, r_user_name_relation, r_date
 			FROM ".$wgDBprefix."user_relationship
@@ -447,7 +447,7 @@ class UserRelationship {
 
 	static function getRelationshipCountByUsername($user_name){
 		global $wgDBprefix;
-		$dbr =& wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_SLAVE );
 		$user_id = User::idFromName($user_name);
 		$sql = "SELECT rs_friend_count, rs_foe_count
 			FROM ".$wgDBprefix."user_relationship_stats

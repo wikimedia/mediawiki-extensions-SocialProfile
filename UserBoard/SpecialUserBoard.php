@@ -33,19 +33,19 @@ class SpecialViewUserBoard extends SpecialPage {
 		$user_name_2 = $wgRequest->getVal('conv');
 		$page =  $wgRequest->getVal('page');
 
-		/*/
-		/* Redirect Non-logged in users to Login Page
-		/* It will automatically return them to the ViewGifts page
-		/*/
+		/**
+		* Redirect Non-logged in users to Login Page
+		* It will automatically return them to the ViewGifts page
+		*/
 		if($wgUser->getID() == 0 && $user_name==""){
 			$login =  Title::makeTitle( NS_SPECIAL  , "UserLogin"  );
 			$wgOut->redirect( $login->getFullURL() . "&returnto=Special:UserBoard" );
 			return false;
 		}
 
-		/*/
-		/* If no user is set in the URL, we assume its the current user
-		/*/
+		/** 
+		* If no user is set in the URL, we assume its the current user
+		*/
 
 		if(!$user_name)$user_name = $wgUser->getName();
 		$user_id = User::idFromName($user_name);
@@ -57,30 +57,30 @@ class SpecialViewUserBoard extends SpecialPage {
 			$user_2 =  Title::makeTitle( NS_USER  , $user_name  );
 			$user_safe_2 = urlencode($user_name_2);
 		}
-		/*/
-		/* Error message for username that does not exist (from URL)
-		/*/
+		/**
+		* Error message for username that does not exist (from URL)
+		*/
 		if($user_id == 0){
 			$wgOut->showErrorPage('error', 'userboard_noexist');
 			return false;
 		}
 
-		/*/
-		/* Config for the page
-		/*/
+		/**
+		* Config for the page
+		*/
 		$per_page = $ub_messages_show;
 		if(!$page || !is_numeric($page) )$page=1;
 
 		$b = new UserBoard();
-		$ub_messages = $b->getUserBoardMessages($user_id,$user_id_2,$ub_messages_show,$page);
+		$ub_messages = $b->getUserBoardMessages($user_id, $user_id_2, $ub_messages_show, $page);
 
 		if(!$user_id_2){
 			$stats = new UserStats($user_id, $user_name);
 			$stats_data = $stats->getUserStats();
 			$total = $stats_data["user_board"];
 			if($wgUser->getName() == $user_name)$total=$total+$stats_data["user_board_priv"];
-		}else{
-			$total = $b->getUserBoardToBoardCount($user_id,$user_id_2);
+		} else {
+			$total = $b->getUserBoardToBoardCount($user_id, $user_id_2);
 		}
 
 		if(!$user_id_2){
@@ -90,10 +90,10 @@ class SpecialViewUserBoard extends SpecialPage {
 				$b->clearNewMessageCount($wgUser->getID());
 				$wgOut->setPagetitle( wfMsg("userboard_yourboard") );
 			}
-		}else{
+		} else {
 			if ( $wgUser->getName() == $user_name ) {
 				$wgOut->setPagetitle( wfMsg("userboard_yourboardwith", $user_name_2)  );
-			}else{
+			} else {
 				$wgOut->setPagetitle( wfMsg("userboard_otherboardwith", $user_name, $user_name_2) );
 			}
 		}
@@ -146,7 +146,7 @@ class SpecialViewUserBoard extends SpecialPage {
 
 		if($page==1){
 			$start = 1;
-		}else{
+		} else {
 			$start = ($page-1) * $per_page + 1;
 		}
 		$end = $start + ( count($ub_messages) ) - 1;
@@ -161,9 +161,9 @@ class SpecialViewUserBoard extends SpecialPage {
 			</div>";
 		}
 
-		/**/
-		/*BUILD NEXT/PREV NAV
-		**/
+		/**
+		* Build next/prev nav
+		*/
 		if($user_id_2)$qs = "&conv={$user_safe_2}";
 		$numofpages = $total / $per_page;
 
@@ -192,9 +192,9 @@ class SpecialViewUserBoard extends SpecialPage {
 			}
 			$output .= "</div><p>";
 		}
-		/**/
-		/*BUILD NEXT/PREV NAV
-		**/
+		/**
+		* Build next/prev nav
+		*/
 		$can_post = false;
 
 		if(!$user_id_2){
@@ -202,7 +202,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				$can_post = true;
 				$user_name_to = addslashes($user_name);
 			}
-		}else{
+		} else {
 			if($wgUser->getName() == $user_name){
 				$can_post = true;
 				$user_name_to = addslashes($user_name_2);
@@ -231,7 +231,7 @@ class SpecialViewUserBoard extends SpecialPage {
 					</div>
 
 				</div>";
-			}else{
+			} else {
 
 				$login_link = Title::makeTitle(NS_SPECIAL, "UserLogin");
 
@@ -254,7 +254,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				if($wgUser->getName()!=$ub_message["user_name_from"]){
 					$board_to_board = "<a href=\"" . UserBoard::getUserBoardToBoardURL($user_name,$ub_message["user_name_from"])."\">" . wfMsg("userboard_boardtoboard") . "</a>";
 					$board_link = "<a href=\"" . UserBoard::getUserBoardURL($ub_message["user_name_from"])."\">" . wfMsg("userboard_sendmessage",$ub_message["user_name_from"]) . "</a>";
-				}else{
+				} else {
 					$board_link = "<a href=\"" . UserBoard::getUserBoardURL($ub_message["user_name_from"])."\">" . wfMsg("userboard_myboard") . "</a>";
 				}
 				if($wgUser->getName()==$ub_message["user_name"]){
@@ -295,8 +295,8 @@ class SpecialViewUserBoard extends SpecialPage {
 					</div>
 				</div>";
 			}
-		}else{
-			$invite_title = Title::makeTitle(NS_SPECIAL,"InviteContacts");
+		} else {
+			$invite_title = Title::makeTitle(NS_SPECIAL, "InviteContacts");
 			$output .= "<p>" . wfMsg("userboard_nomessages", $invite_title->escapeFullURL() ) . "</p>";
 
 		}

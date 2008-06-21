@@ -64,7 +64,7 @@ class UserStatsTrack {
 
 	function initStatsTrack(){
 		global $wgDBprefix;
-		$dbr =& wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_SLAVE );
 		$s = $dbr->selectRow( 'user_stats', array( 'stats_user_id' ), array('stats_user_id'=>$this->user_id ), __METHOD__ );
 
 		if ( $s === false ) {
@@ -74,7 +74,7 @@ class UserStatsTrack {
 
 	function addStatRecord(){
 		global $wgDBprefix;
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$fname = $wgDBprefix.'user_stats::addToDatabase';
 		$dbr->insert( 'user_stats',
 
@@ -116,7 +116,7 @@ class UserStatsTrack {
 		}
 	}
 
-	function decStatField($field,$val=1){
+	function decStatField($field, $val=1){
 		global $wgUser, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgDBprefix;
 		if(  !$wgUser->isBot() && !$wgUser->isAnon() && $this->stats_fields[$field]) {
 			$dbw = wfGetDB( DB_MASTER );
@@ -236,7 +236,7 @@ class UserStatsTrack {
 	function updatePublishedOpinionsCount(){
 		global $wgUser, $wgOut, $wgDBprefix;
 		$parser = new Parser();
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$ctg = "Opinions by User " . ($this->user_name) ;
 		$CtgTitle = Title::newFromText( $parser->transformMsg(trim($ctg), $wgOut->parserOptions()) );
 		$CtgTitle = $CtgTitle->getDbKey();
@@ -310,7 +310,7 @@ class UserStatsTrack {
 	}
 
 	public function updateWeeklyPoints($points){
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$sql = "SELECT up_user_id from user_points_weekly where up_user_id = {$this->user_id}"; //where is the table set for this one?
 		$res = $dbr->query($sql);
 		$row = $dbr->fetchObject( $res );
@@ -325,7 +325,7 @@ class UserStatsTrack {
 	}
 
 	public function addWeekly(){
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$fname = 'user_points_weekly::addToDatabase';
 		$dbr->insert( '`user_points_weekly`',
 		array(
@@ -336,7 +336,7 @@ class UserStatsTrack {
 	}
 
 	public function updateMonthlyPoints($points){
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$sql = "SELECT up_user_id from user_points_monthly where up_user_id = {$this->user_id}";
 		$res = $dbr->query($sql);
 		$row = $dbr->fetchObject( $res );
@@ -351,7 +351,7 @@ class UserStatsTrack {
 	}
 
 	public function addMonthly(){
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$fname = 'user_points_monthly::addToDatabase';
 		$dbr->insert( '`user_points_monthly`',
 		array(
@@ -366,7 +366,7 @@ class UserStatsTrack {
 
 		if( $this->user_id == 0 )return "";
 
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$sql = "SELECT *
 			FROM ".$wgDBprefix."user_stats where stats_user_id =  " . $this->user_id;
 		$res = $dbr->query($sql);
@@ -449,7 +449,7 @@ class UserStats {
 		global $wgMemc, $wgDBprefix;
 
 		wfDebug( "Got user stats  for {$this->user_name} from db\n" );
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$sql = "SELECT *
 			FROM ".$wgDBprefix."user_stats
 			WHERE stats_user_id = {$this->user_id} LIMIT 0,1";

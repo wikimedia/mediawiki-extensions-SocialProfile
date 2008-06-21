@@ -19,23 +19,23 @@ class SpecialViewRelationships extends SpecialPage {
 	}
 
 	function execute( $params ) {
-		global $wgUser, $wgOut, $wgRequest, $IP, $wgMessageCache, $wgUserRelationshipScripts, $wgStyleVersion;
+		global $wgUser, $wgOut, $wgRequest, $IP, $wgUserRelationshipScripts, $wgStyleVersion;
 
 		$wgOut->addScript("<link rel='stylesheet' type='text/css' href=\"{$wgUserRelationshipScripts}/UserRelationship.css?{$wgStyleVersion}\"/>\n");
 
 		$output = "";
 
-		/*/
-		/* Get querystring variables
-		/*/
+		/**
+		* Get querystring variables
+		*/
 		$user_name = $wgRequest->getVal('user');
 		$rel_type = $wgRequest->getVal('rel_type');
 		$page =  $wgRequest->getVal('page');
 
-		/*/
-		/* Redirect Non-logged in users to Login Page
-		/* It will automatically return them to the ViewGifts page
-		/*/
+		/**
+		* Redirect Non-logged in users to Login Page
+		* It will automatically return them to the ViewGifts page
+		*/
 		if($wgUser->getID() == 0 && $user_name==""){
 			$wgOut->setPagetitle( "Woops!" );
 			$login = Title::makeTitle(NS_SPECIAL,"UserLogin");
@@ -43,24 +43,24 @@ class SpecialViewRelationships extends SpecialPage {
 			return false;
 		}
 
-		/*/
-		/* Set up config for page / default values
-		/*/
+		/**
+		* Set up config for page / default values
+		*/
 		if(!$page || !is_numeric($page) )$page=1;
 		if(!$rel_type || !is_numeric($rel_type) )$rel_type = 1;
 		$per_page = 50;
 		$per_row = 2;
 
-		/*/
-		/* If no user is set in the URL, we assume its the current user
-		/*/
+		/**
+		* If no user is set in the URL, we assume its the current user
+		*/
 		if(!$user_name)$user_name = $wgUser->getName();
 		$user_id = User::idFromName($user_name);
 		$user = Title::makeTitle(NS_USER, $user_name);
 
-		/*/
-		/* Error message for username that does not exist (from URL)
-		/*/
+		/**
+		* Error message for username that does not exist (from URL)
+		*/
 		if($user_id == 0){
 			$wgOut->setPagetitle( wfMsg('ur-error-title') );
 			$out .= "<div class=\"relationship-error-message\">
@@ -74,8 +74,8 @@ class SpecialViewRelationships extends SpecialPage {
 			return false;
 		}
 
-		/*
-		Get all relationships
+		/**
+		* Get all relationships
 		*/
 
 		$rel = new UserRelationship($user_name);
@@ -160,9 +160,9 @@ class SpecialViewRelationships extends SpecialPage {
 			}
 		}
 
-		/**/
-		/*BUILD NEXT/PREV NAV
-		**/
+		/**
+		* Build next/prev nav
+		*/
 		$total = intval(str_replace(",", "", $total));
 		$numofpages = $total / $per_page;
 
@@ -191,9 +191,9 @@ class SpecialViewRelationships extends SpecialPage {
 			}
 			$output .= "</div>";
 		}
-		/**/
-		/*BUILD NEXT/PREV NAV
-		**/
+		/**
+		* Build next/prev nav
+		*/
 
 		$wgOut->addHTML($output);
 	}

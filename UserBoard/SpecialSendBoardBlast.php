@@ -46,7 +46,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 				$count++;
 			}
 			$output .= wfMsgForContent( 'messagesentsuccess' );
-		}else{
+		} else {
 			$wgOut->setPagetitle( wfMsgForContent( 'boardblasttitle' ) );
 			$output .= $this->displayForm();
 		}
@@ -107,7 +107,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 			$output .= "</div>
 
 			<div class=\"cleared\"></div>";
-		}else{
+		} else {
 			$output .= "<div>" . wfMsgForContent( 'boardnofriends' ) . "</div>";
 		}
 

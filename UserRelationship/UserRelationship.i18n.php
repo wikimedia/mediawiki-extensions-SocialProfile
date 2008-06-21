@@ -1,8 +1,8 @@
 <?php
 /**
- * Internationalisation file for UserRelantionShip extension pages.
+ * Internationalisation file for UserRelationship extension pages.
  *
- * @addtogroup Extensions
+ * @ingroup Extensions
  */
 
 $messages = array();
