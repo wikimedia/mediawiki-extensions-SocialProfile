@@ -558,7 +558,7 @@ class SpecialUploadAvatar extends UnlistedSpecialPage {
 		$destfilename = wfMsg( 'destfilename' );
 
 		$fd = wfMsg( 'filedesc' );
-		$ulb = "Upload";
+		$ulb = wfMsg( 'uploadbtn' );
 
 		$iw = wfMsg( 'ignorewarning' );
 

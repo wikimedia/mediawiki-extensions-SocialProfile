@@ -594,7 +594,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 					</p>
 					<div class=\"cleared\"></div>
 				</div>
-			<input type=\"button\" class=\"site-button\" value=\"Update\" size=\"20\" onclick=\"document.profile.submit()\" />
+			<input type=\"button\" class=\"site-button\" value='" . wfMsgForContent('user-profile-update-button') . "' size=\"20\" onclick=\"document.profile.submit()\" />
 			</div>
 			</form>
 			";
