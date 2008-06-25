@@ -173,7 +173,8 @@ $messages['krl'] = array(
  * @author Сай
  */
 $messages['mhr'] = array(
-	'ur-cancel' => 'Чарташ',
+	'ur-main-page' => 'Тӱҥ лаштык',
+	'ur-cancel'    => 'Чараш',
 );
 
 /** Afrikaans (Afrikaans)
@@ -198,6 +199,8 @@ $messages['ar'] = array(
 	'ur-your-profile'                            => 'ملفك',
 	'ur-friend'                                  => 'صديق',
 	'ur-foe'                                     => 'عدو',
+	'ur-relationship-count'                      => '$1 يمتلك $2 {{PLURAL:$2|$3|$3s}}.',
+	'ur-add-friends'                             => '  تريد المزيد من الأصدقاء؟ <a href="$1">أدعهم</a>',
 	'ur-add-friend'                              => 'أضف كصديق',
 	'ur-add-foe'                                 => 'أضف كعدو',
 	'ur-add-personal-message'                    => 'إضافة رسالة شخصية',
@@ -220,6 +223,7 @@ $messages['ar'] = array(
 	'ur-requests-title'                          => 'طلبات العلاقات',
 	'ur-accept'                                  => 'اقبل',
 	'ur-reject'                                  => 'ارفض',
+	'ur-title-friend'                            => 'قائمة أصدقاء $1',
 	'friend_removed_subject'                     => 'كلا! أزالك $1 كصديق على {{SITENAME}}!',
 );
 
@@ -850,6 +854,13 @@ e troque as súas configuracións para deshabilitar as notificacións por correo
  */
 $messages['grc'] = array(
 	'ur-login' => 'Συνδεῖσθαι',
+);
+
+/** Hawaiian (Hawai`i)
+ * @author Singularity
+ */
+$messages['haw'] = array(
+	'ur-remove' => 'Kāpae',
 );
 
 /** Hindi (हिन्दी)
@@ -1745,10 +1756,13 @@ $messages['pt'] = array(
 );
 
 /** Russian (Русский)
+ * @author Innv
  * @author Flrn
  */
 $messages['ru'] = array(
 	'ur-already-submitted' => 'Ваш запрос был отправлен',
+	'ur-main-page'         => 'Заглавная страница',
+	'ur-your-profile'      => 'Ваш профиль',
 );
 
 /** Tachelhit (Tašlḥiyt)

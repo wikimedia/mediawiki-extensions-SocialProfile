@@ -66,6 +66,13 @@ Click $4
 and change your settings to disable email notifications.'
 );
 
+/** Eastern Mari (Олык Марий йылме)
+ * @author Сай
+ */
+$messages['mhr'] = array(
+	'userboard_delete' => 'Шӧраш',
+);
+
 /** Afrikaans (Afrikaans)
  * @author Arnobarnard
  */
