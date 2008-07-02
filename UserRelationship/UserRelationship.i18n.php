@@ -177,6 +177,15 @@ $messages['mhr'] = array(
 	'ur-cancel'    => 'Чараш',
 );
 
+/** Niuean (native name missing)
+ * @author Jose77
+ */
+$messages['niu'] = array(
+	'ur-main-page' => 'Matapatu Lau',
+	'ur-cancel'    => 'Tiaki',
+	'ur-login'     => 'Hu ki loto',
+);
+
 /** Afrikaans (Afrikaans)
  * @author Arnobarnard
  */
@@ -716,6 +725,8 @@ $messages['gl'] = array(
 	'ur-add-friends'                             => '  Quere máis amigos? <a href="$1">Invíteos</a>',
 	'ur-add-friend'                              => 'Engadir como amigo',
 	'ur-add-foe'                                 => 'Engadir como inimigo',
+	'ur-add-no-user'                             => 'Non foi seleccionado ningún usuario.
+Por favor, solicite amigos/inimigos a través da ligazón correcta.',
 	'ur-add-personal-message'                    => 'Engadir unha mensaxe persoal',
 	'ur-remove-relationship'                     => 'Eliminar dos seus $1',
 	'ur-give-gift'                               => 'Dar un agasallo',
@@ -854,6 +865,13 @@ e troque as súas configuracións para deshabilitar as notificacións por correo
  */
 $messages['grc'] = array(
 	'ur-login' => 'Συνδεῖσθαι',
+);
+
+/** Hakka (Hak-kâ-fa)
+ * @author Hakka
+ */
+$messages['hak'] = array(
+	'ur-main-page' => 'Thèu-chông',
 );
 
 /** Hawaiian (Hawai`i)

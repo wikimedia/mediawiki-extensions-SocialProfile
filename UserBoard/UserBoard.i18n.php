@@ -66,11 +66,25 @@ Click $4
 and change your settings to disable email notifications.'
 );
 
+/** Tarifit (Tarifit)
+ * @author Jose77
+ */
+$messages['rif'] = array(
+	'userboard_delete' => 'Sfaḍ',
+);
+
 /** Eastern Mari (Олык Марий йылме)
  * @author Сай
  */
 $messages['mhr'] = array(
 	'userboard_delete' => 'Шӧраш',
+);
+
+/** Niuean (native name missing)
+ * @author Jose77
+ */
+$messages['niu'] = array(
+	'userboard_delete' => 'Tamate',
 );
 
 /** Afrikaans (Afrikaans)
@@ -457,7 +471,11 @@ et modifiez vos paramètres pour désactiver les notifications des courriels.",
  * @author Toliño
  */
 $messages['gl'] = array(
+	'boardblastlogintitle'      => 'Debe acceder ao sistema para enviar o taboleiro en ráfaga',
+	'boardblastlogintext'       => 'Debe acceder ao sistema para enviar o taboleiro en ráfaga.
+Prema <a href="index.php?title=Special:UserLogin">aquí para acceder</a>',
 	'messagesenttitle'          => 'Mensaxes enviadas',
+	'boardblasttitle'           => 'Enviar o taboleiro en ráfaga',
 	'boardblaststep1'           => 'Paso 1 - Estriba a súa mensaxe',
 	'boardblastprivatenote'     => 'Todas as mensaxes serán enviadas de maneira privada',
 	'boardblaststep2'           => 'Paso 2 - Escolla a quen lle quere enviar a súa mensaxe tamén',
@@ -467,15 +485,20 @@ $messages['gl'] = array(
 	'boardlinkunselectfriends'  => 'Deixar de seleccionar amigos',
 	'boardlinkselectfoes'       => 'Seleccionar inimigos',
 	'boardlinkunselectfoes'     => 'Deixar de seleccionar inimigos',
+	'boardsendbutton'           => 'Enviar o taboleiro en ráfaga',
 	'boardnofriends'            => 'Non ten amigos para mandarlles mensaxes!',
 	'messagesentsuccess'        => 'A súa mensaxe foi enviada con éxito',
 	'userboard'                 => 'Taboleiro do usuario',
+	'userboard_board-to-board'  => 'De taboleiro a taboleiro',
 	'userboard_delete'          => 'Borrar',
 	'userboard_noexist'         => 'O usuario que está tentando ver non existe.',
 	'userboard_yourboard'       => 'O seu taboleiro',
 	'userboard_owner'           => 'O taboleiro de $1',
+	'userboard_yourboardwith'   => 'O seu taboleiro a taboleiro con $1',
+	'userboard_otherboardwith'  => 'De taboleiro a taboleiro de $1 con $2',
 	'userboard_backprofile'     => 'Voltar ao perfil de $1',
 	'userboard_backyourprofile' => 'Voltar ao seu perfil',
+	'userboard_boardtoboard'    => 'De taboleiro a taboleiro',
 	'userboard_confirmdelete'   => 'Está seguro de que quere eliminar esta mensaxe?',
 	'userboard_sendmessage'     => 'Enviar unha mensaxe a $1',
 	'userboard_myboard'         => 'O meu taboleiro',
@@ -504,6 +527,13 @@ Quere deixar de recibir correos electrónicos nosos?
 
 Faga clic $4
 e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
+);
+
+/** Hakka (Hak-kâ-fa)
+ * @author Hakka
+ */
+$messages['hak'] = array(
+	'userboard_delete' => 'Chhù-thet',
 );
 
 /** Hindi (हिन्दी)
@@ -607,6 +637,13 @@ $messages['lb'] = array(
 	'userboard_nomessages'      => 'Keng Messagen',
 	'userboard_sendbutton'      => 'geschéckt',
 	'userboard_showingmessages' => 'Weis $2-$$3 vu(n) {{PLURAL:$1|$1 Noriicht|$1 Noriichten}}',
+);
+
+/** Lithuanian (Lietuvių)
+ * @author Tomasdd
+ */
+$messages['lt'] = array(
+	'userboard_delete' => 'Pašalinti',
 );
 
 /** Malayalam (മലയാളം)

@@ -180,6 +180,15 @@ $messages['mhr'] = array(
 	'user-profile-personal-email' => 'Электрон почто',
 );
 
+/** Niuean (native name missing)
+ * @author Jose77
+ */
+$messages['niu'] = array(
+	'user-watchlist'              => 'Ko e haaku lau kitekite',
+	'user-profile-personal-email' => 'Meli hila',
+	'user-page-link'              => 'Lau he tagata',
+);
+
 /** Afrikaans (Afrikaans)
  * @author Arnobarnard
  */
@@ -1353,6 +1362,7 @@ $messages['gl'] = array(
 	'user-time-ago'                                   => 'hai',
 	'user-points'                                     => 'puntos',
 	'user-edit-profile'                               => 'Editar perfil',
+	'user-upload-avatar'                              => 'Cargar un avatar',
 	'user-watchlist'                                  => 'A miña listaxe de vixilancia',
 	'user-meet-people'                                => 'Coñecer xente',
 	'user-add-friend'                                 => 'Engadir como amigo',
@@ -1384,6 +1394,7 @@ $messages['gl'] = array(
 	'profile-not-provided'                            => 'Non proporcionado',
 	'populate-user-profile-done'                      => 'Engadidos $1 perfiles',
 	'user-board-title'                                => 'Taboleiro',
+	'user-send-board-blast'                           => 'Enviar o taboleiro en ráfaga',
 	'user-personal-info-title'                        => 'Información persoal',
 	'user-no-personal-info'                           => 'Ningunha información personal',
 	'user-personal-info-real-name'                    => 'Nome real',
@@ -1416,6 +1427,7 @@ $messages['gl'] = array(
 	'user-profile-section-sportsteams'                => 'Actualizar as redes',
 	'user-profile-section-custom'                     => 'Información personalizada',
 	'user-profile-section-interests'                  => 'Outra información',
+	'user-profile-section-picture'                    => 'Avatar',
 	'user-profile-section-preferences'                => 'Preferencias',
 	'user-profile-personal-info'                      => 'Información',
 	'user-profile-personal-name'                      => 'Nome',
@@ -1453,6 +1465,7 @@ $messages['gl'] = array(
 	'user-profile-preferences-emails-level'           => 'Cando avance un nivel',
 	'user-profile-preferences-emails-weekly'          => 'Recibir semanalmente correos electrónicos con actualizacións',
 	'user-profile-update-button'                      => 'Actualizar',
+	'user-profile-tidbits-title'                      => 'Entremeses',
 	'user-profile-tidbits-favmoment'                  => 'Deportes favoritos agora',
 	'user-profile-tidbits-worstmoment'                => 'Deportes peores agora',
 	'user-profile-tidbits-favathlete'                 => 'Atleta favorito e por que',
@@ -1465,6 +1478,8 @@ $messages['gl'] = array(
 	'user-profile-sports-teamsaved'                   => 'Os seus equipos foron gardados',
 	'user-profile-sports-addmore'                     => 'Engadir máis deportes/equipos',
 	'user-profile-picture-title'                      => 'Actualizar a súa imaxe',
+	'user-profile-picture-log'                        => 'avatar',
+	'user-profile-picture-log-entry'                  => 'cargou un novo avatar',
 	'user-profile-picture-yourpicture'                => 'A súa imaxe',
 	'user-profile-picture-yourpicturestext'           => 'Embaixo están as imaxes que aparecerán no seu perfil, nas páxinas da rede e nos seus comentarios.',
 	'user-profile-picture-large'                      => 'Grande',
@@ -1475,6 +1490,7 @@ $messages['gl'] = array(
 	'user-profile-picture-currentimage'               => 'Imaxe actual',
 	'user-profile-picture-choosepicture'              => 'Escolla a súa imaxe',
 	'user-profile-picture-picsize'                    => 'A súa imaxe debe ser .jpeg, .png ou .gif e non debe ser maior a 100kb.',
+	'user-profile-picture-badvirusscanner'            => 'Configuración errónea: escáner de virus descoñecido:',
 	'user-profile-picture-scanfailed'                 => 'fallou a dixitalización',
 	'user-profile-goback'                             => 'Volver atrás',
 	'user-no-images'                                  => 'Ningunha imaxe foi cargada',
@@ -1497,6 +1513,13 @@ $messages['gl'] = array(
  */
 $messages['gu'] = array(
 	'user-page-link' => 'સભ્યનું પાનું',
+);
+
+/** Hakka (Hak-kâ-fa)
+ * @author Hakka
+ */
+$messages['hak'] = array(
+	'user-watchlist' => 'Ngô-ke kam-sṳ lie̍t-péu',
 );
 
 /** Hawaiian (Hawai`i)
@@ -1553,6 +1576,13 @@ $messages['hu'] = array(
  */
 $messages['hy'] = array(
 	'user-profile-personal-name' => 'Անուն',
+);
+
+/** Interlingua (Interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'user-watchlist' => 'Mi observatorio',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -1863,6 +1893,14 @@ Avatar',
 	'user-social-profile-link'              => 'Soziale Profil',
 	'user-wiki-link'                        => 'Wiki Benotzersäit',
 	'user-type-toggle-old'                  => "Benotzt d'Wiki-Benotzersäit",
+);
+
+/** Lithuanian (Lietuvių)
+ * @author Tomasdd
+ */
+$messages['lt'] = array(
+	'populate-user-profile-done' => 'Pridėta $1 profiliai',
+	'user-profile-personal-name' => 'Vardas',
 );
 
 /** Malayalam (മലയാളം)

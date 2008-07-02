@@ -31,6 +31,13 @@ $messages['fr'] = array(
 	'yui-desc' => 'Une série d’utilitaires et de contrôles, écrite en Javascript',
 );
 
+/** Galician (Galego)
+ * @author Toliño
+ */
+$messages['gl'] = array(
+	'yui-desc' => 'Unha colección de utilidades e controis escritos en JavaScript',
+);
+
 /** Upper Sorbian (Hornjoserbsce)
  * @author Michawiki
  */
