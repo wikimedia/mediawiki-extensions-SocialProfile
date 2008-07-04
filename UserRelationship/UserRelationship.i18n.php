@@ -161,6 +161,22 @@ Click $4
 and change your settings to disable e-mail notifications.',
 );
 
+/** Faeag Rotuma (Faeag Rotuma)
+ * @author Jose77
+ */
+$messages['rtm'] = array(
+	'ur-main-page' => 'Pej Maha',
+	'ur-cancel'    => "Mao'ạki",
+	'ur-login'     => 'Surum',
+);
+
+/** Tarifit (Tarifit)
+ * @author Jose77
+ */
+$messages['rif'] = array(
+	'ur-main-page' => 'Tasbtirt Tamzwarut',
+);
+
 /** Karelian (Karjala)
  * @author Flrn
  */
@@ -1675,6 +1691,7 @@ $messages['pl'] = array(
 	'ur-already-submitted'                       => 'Twoje zaproszenie zostało wysłane',
 	'ur-error-message-no-user'                   => 'Nie można zrealizować Twojego zaproszenia, ponieważ nie istnieje użytkownik o takiej nazwie.',
 	'ur-main-page'                               => 'Strona główna',
+	'ur-your-profile'                            => 'Twój profil',
 	'ur-friend'                                  => 'przyjaciel',
 	'ur-foe'                                     => 'wróg',
 	'ur-add-friends'                             => '  Chcesz mieć więcej przyjaciół? <a href="$1">Zaproś ich</a>',
@@ -1687,9 +1704,11 @@ $messages['pl'] = array(
 	'ur-remove-relationship-title'               => 'Czy chcesz usunąć $1 ze swoich $2?',
 	'ur-remove-relationship-title-confirm'       => 'Usunąłeś $1 ze swoich $2',
 	'ur-remove-error-message-remove-yourself'    => 'Nie możesz usunąć sam siebie.',
+	'ur-remove-error-not-loggedin'               => 'Musisz być zalogowany, aby usnąć $1.',
 	'ur-remove'                                  => 'Usuń',
 	'ur-cancel'                                  => 'Anuluj',
 	'ur-login'                                   => 'Zaloguj się',
+	'ur-add-error-message-no-user'               => 'Użytkownik, którego próbujesz dodać, nie istnieje.',
 	'ur-add-error-message-pending-request-title' => 'Cierpliwości!',
 	'ur-requests-title'                          => 'Nawiązanie znajomości',
 	'ur-requests-message'                        => '<a href="$1">$2</a> chce być twoim $3.',

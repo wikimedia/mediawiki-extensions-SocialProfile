@@ -165,6 +165,14 @@ Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.
 	'user-board-login-message'              => 'You must be <a href="$1">logged in</a> to post messages to other users'
 );
 
+/** Tarifit (Tarifit)
+ * @author Jose77
+ */
+$messages['rif'] = array(
+	'user-watchlist'               => 'Tabdart(lista) uḥṭṭu',
+	'user-personal-info-real-name' => 'Ism n dṣṣaḥ',
+);
+
 /** Karelian (Karjala)
  * @author Flrn
  */
@@ -1841,6 +1849,7 @@ $messages['lb'] = array(
 	'user-profile-update-profile'           => 'Profil',
 	'user-profile-default-country'          => 'Lëtzebuerg',
 	'user-profile-section-personal'         => 'Perséinlech Informatiounen',
+	'user-profile-section-sportsteams'      => 'Reseauen aktualiséieren',
 	'user-profile-section-interests'        => 'Aner Informatiounen',
 	'user-profile-section-picture'          => 'Avatar',
 	'user-profile-section-preferences'      => 'Astellungen',
@@ -1893,6 +1902,7 @@ Avatar',
 	'user-social-profile-link'              => 'Soziale Profil',
 	'user-wiki-link'                        => 'Wiki Benotzersäit',
 	'user-type-toggle-old'                  => "Benotzt d'Wiki-Benotzersäit",
+	'user-type-toggle-new'                  => 'Sozial-Benotzersäit benotzen',
 );
 
 /** Lithuanian (Lietuvių)
@@ -3454,6 +3464,7 @@ $messages['te'] = array(
 	'user-profile-preferences-emails'        => 'ఈ-మెయిలు గమనింపులు',
 	'user-profile-preferences-emails-weekly' => 'వారంవారం తాజా విశేషాలు ఈ-మెయిల్లో అందుకోండి',
 	'user-profile-update-button'             => 'తాజాకరించు',
+	'user-profile-sports-notloggedintitle'   => 'అయ్యో!',
 	'user-profile-picture-title'             => 'మీ చిత్రాన్ని ఎగుమతి చేయండి',
 	'user-profile-picture-log'               => 'అవతారం',
 	'user-profile-picture-yourpicture'       => 'మీ బొమ్మ',
