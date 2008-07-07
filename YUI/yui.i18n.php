@@ -24,6 +24,13 @@ $messages['cs'] = array(
 	'yui-desc' => 'Sada nástrojů napsaných v JavaScriptu.',
 );
 
+/** Lower Sorbian (Dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'yui-desc' => 'Sajźba rědow a kontrolnych elementow napisanych w JavaScripśe',
+);
+
 /** French (Français)
  * @author Grondin
  */

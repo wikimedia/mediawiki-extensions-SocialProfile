@@ -170,13 +170,6 @@ $messages['rtm'] = array(
 	'ur-login'     => 'Surum',
 );
 
-/** Tarifit (Tarifit)
- * @author Jose77
- */
-$messages['rif'] = array(
-	'ur-main-page' => 'Tasbtirt Tamzwarut',
-);
-
 /** Karelian (Karjala)
  * @author Flrn
  */
@@ -185,7 +178,7 @@ $messages['krl'] = array(
 	'ur-cancel'    => 'Keskevytä',
 );
 
-/** Eastern Mari (Олык Марий йылме)
+/** Eastern Mari (Олык Марий)
  * @author Сай
  */
 $messages['mhr'] = array(
@@ -193,7 +186,7 @@ $messages['mhr'] = array(
 	'ur-cancel'    => 'Чараш',
 );
 
-/** Niuean (native name missing)
+/** Niuean (ko e vagahau Niuē)
  * @author Jose77
  */
 $messages['niu'] = array(
@@ -1791,6 +1784,13 @@ $messages['pt'] = array(
 	'ur-add-error-message-not-loggedin'          => 'Necessita estar logado para adicionar $1',
 	'ur-accept'                                  => 'Aceitar',
 	'ur-reject'                                  => 'Rejeitar',
+);
+
+/** Tarifit (Tarifit)
+ * @author Jose77
+ */
+$messages['rif'] = array(
+	'ur-main-page' => 'Tasbtirt Tamzwarut',
 );
 
 /** Russian (Русский)

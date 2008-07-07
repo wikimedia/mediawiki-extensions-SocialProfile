@@ -66,21 +66,14 @@ Click $4
 and change your settings to disable email notifications.'
 );
 
-/** Tarifit (Tarifit)
- * @author Jose77
- */
-$messages['rif'] = array(
-	'userboard_delete' => 'Sfaḍ',
-);
-
-/** Eastern Mari (Олык Марий йылме)
+/** Eastern Mari (Олык Марий)
  * @author Сай
  */
 $messages['mhr'] = array(
 	'userboard_delete' => 'Шӧраш',
 );
 
-/** Niuean (native name missing)
+/** Niuean (ko e vagahau Niuē)
  * @author Jose77
  */
 $messages['niu'] = array(
@@ -988,6 +981,13 @@ $messages['pt'] = array(
 	'userboard_nomessages'      => 'Sem mensagens.',
 	'userboard_sendbutton'      => 'enviar',
 	'userboard_showingmessages' => 'Mostrando $2-$3 de {{PLURAL:$1|$1 Mensagem|$1 Mensagens}}',
+);
+
+/** Tarifit (Tarifit)
+ * @author Jose77
+ */
+$messages['rif'] = array(
+	'userboard_delete' => 'Sfaḍ',
 );
 
 /** Russian (Русский)

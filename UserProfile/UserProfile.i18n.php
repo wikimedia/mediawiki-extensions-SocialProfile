@@ -165,14 +165,6 @@ Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.
 	'user-board-login-message'              => 'You must be <a href="$1">logged in</a> to post messages to other users'
 );
 
-/** Tarifit (Tarifit)
- * @author Jose77
- */
-$messages['rif'] = array(
-	'user-watchlist'               => 'Tabdart(lista) uḥṭṭu',
-	'user-personal-info-real-name' => 'Ism n dṣṣaḥ',
-);
-
 /** Karelian (Karjala)
  * @author Flrn
  */
@@ -180,15 +172,15 @@ $messages['krl'] = array(
 	'user-watchlist' => 'Kaččuolistu',
 );
 
-/** Eastern Mari (Олык Марий йылме)
+/** Eastern Mari (Олык Марий)
  * @author Сай
  */
 $messages['mhr'] = array(
-	'user-watchlist'              => 'Мыен эскерымаш списке',
+	'user-watchlist'              => 'Мыйын эскерымаш списке',
 	'user-profile-personal-email' => 'Электрон почто',
 );
 
-/** Niuean (native name missing)
+/** Niuean (ko e vagahau Niuē)
  * @author Jose77
  */
 $messages['niu'] = array(
@@ -352,7 +344,7 @@ $messages['ar'] = array(
 	'user-type-toggle-old'                            => 'استخدم صفحة مستخدم الويكي',
 );
 
-/** بلوچی مکرانی (بلوچی مکرانی)
+/** Southern Balochi (بلوچی مکرانی)
  * @author Mostafadaneshvar
  */
 $messages['bcc'] = array(
@@ -589,7 +581,7 @@ $messages['cs'] = array(
 	'user-profile-personal-birthday'      => 'Narozeniny',
 );
 
-/** Church Slavic (Словѣньскъ)
+/** Church Slavic (Словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
  * @author ОйЛ
  */
 $messages['cu'] = array(
@@ -2884,6 +2876,14 @@ $messages['pt'] = array(
 	'edit-profile-title'                   => 'Editar seu perfil',
 	'user-page-link'                       => 'Página de Usuário',
 	'user-social-profile-link'             => 'Perfil Social',
+);
+
+/** Tarifit (Tarifit)
+ * @author Jose77
+ */
+$messages['rif'] = array(
+	'user-watchlist'               => 'Tabdart(lista) uḥṭṭu',
+	'user-personal-info-real-name' => 'Ism n dṣṣaḥ',
 );
 
 /** Russian (Русский)
