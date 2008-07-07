@@ -231,7 +231,7 @@ Klikněte sem $4
 a změňte svoje nastavení na vypnutí upozornění e-mailem.',
 );
 
-/** Church Slavic (Словѣньскъ)
+/** Church Slavic (Словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
  * @author ОйЛ
  */
 $messages['cu'] = array(

@@ -375,7 +375,7 @@ $messages['ch'] = array(
 	'ur-main-page' => 'Fanhaluman',
 );
 
-/** Church Slavic (Словѣньскъ)
+/** Church Slavic (Словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
  * @author ОйЛ
  */
 $messages['cu'] = array(
