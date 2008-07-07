@@ -1686,6 +1686,7 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
 /** Polish (Polski)
  * @author Sp5uhe
  * @author Airwolf
+ * @author Derbeth
  */
 $messages['pl'] = array(
 	'ur-already-submitted'                       => 'Twoje zaproszenie zostało wysłane',
@@ -1704,7 +1705,7 @@ $messages['pl'] = array(
 	'ur-remove-relationship-title'               => 'Czy chcesz usunąć $1 ze swoich $2?',
 	'ur-remove-relationship-title-confirm'       => 'Usunąłeś $1 ze swoich $2',
 	'ur-remove-error-message-remove-yourself'    => 'Nie możesz usunąć sam siebie.',
-	'ur-remove-error-not-loggedin'               => 'Musisz być zalogowany, aby usnąć $1.',
+	'ur-remove-error-not-loggedin'               => 'Musisz być zalogowany, aby usunąć $1.',
 	'ur-remove'                                  => 'Usuń',
 	'ur-cancel'                                  => 'Anuluj',
 	'ur-login'                                   => 'Zaloguj się',
