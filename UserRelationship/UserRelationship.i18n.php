@@ -1008,12 +1008,16 @@ $messages['lb'] = array(
 	'ur-cancel'                                  => 'Annulléieren',
 	'ur-login'                                   => 'Umellen',
 	'ur-friendship'                              => 'Frëndschaft',
+	'ur-add-error-message-blocked'               => 'Dir sidd elo gespaart a kënnt dofir keng Frënn oder Géigner derbäisetzen.',
 	'ur-add-error-message-pending-request-title' => 'Gedold!',
 	'ur-accept'                                  => 'Akzeptéieren',
 	'ur-reject'                                  => 'Refuséieren',
+	'ur-no-requests-message'                     => 'Dir hutt keng Ufroen fir Frënn oder Géigner.
+Wann Dir méi Frënn wellt <a href="$1">invitéiert se!</a>',
 	'ur-requests-added-message'                  => 'Dir hutt den $1 als äre $2 derbäigesat.',
 	'ur-title-friend'                            => 'L!escht vun de Frënn vum $1',
 	'friend_request_subject'                     => '$1 huet iech als Frënd op {{SITENAME}} derbäigesat!',
+	'foe_request_subject'                        => 'Et ass Krich! $1 huet iech als Géigner op {{SITENAME}} derbàigesat!',
 	'friend_accept_subject'                      => '$1 huet är Ufro als Frënd op {{SITENAME}} ugeholl!',
 );
 

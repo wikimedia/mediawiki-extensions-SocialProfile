@@ -73,6 +73,13 @@ $messages['jv'] = array(
 	'yui-desc' => 'Sawijining sèt piranti lan alat pangontrol, ditulis ing JavaScript',
 );
 
+/** Ripoarisch (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'yui-desc' => 'En Aanzahl Hellfe un Projrämmscher en JavaSkrepp',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
