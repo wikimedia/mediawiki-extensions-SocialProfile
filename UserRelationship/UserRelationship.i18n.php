@@ -907,6 +907,13 @@ $messages['hil'] = array(
 	'ur-login'     => 'Mag sulod',
 );
 
+/** Interlingua (Interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'ur-login' => 'Aperir un session',
+);
+
 /** Indonesian (Bahasa Indonesia)
  * @author Irwangatot
  */
