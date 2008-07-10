@@ -252,14 +252,13 @@ $messages['da'] = array(
  * @author Tim 'Avatar' Bartel
  * @author Raimond Spekking
  */
-
 $messages['de'] = array(
 	'boardblastlogintitle'      => 'Du musst angemeldet sein, um Nachrichten versenden zu können',
 	'boardblastlogintext'       => 'Du musst angemeldet sein, um Nachrichten versenden zu können.  Klicke <a href="index.php?title=Special:UserLogin">hier zum Anmelden</a>',
 	'messagesenttitle'          => 'Nachrichten verschickt',
 	'boardblasttitle'           => 'Nachricht senden',
 	'boardblaststep1'           => 'Schritt 1: Schreibe deine Nachricht',
-	'boardblastprivatenote'	    => 'Alle Nachrichten werden als private Mitteilungen verschickt',
+	'boardblastprivatenote'     => 'Alle Nachrichten werden als private Mitteilungen verschickt',
 	'boardblaststep2'           => 'Schritt 2: Wähle aus, wem du die Nachrichte schicken willst',
 	'boardlinkselectall'        => 'Alle markieren',
 	'boardlinkunselectall'      => 'Keine markieren',
@@ -268,8 +267,8 @@ $messages['de'] = array(
 	'boardlinkselectfoes'       => 'Feinde auswählen',
 	'boardlinkunselectfoes'     => 'Feinde abwählen',
 	'boardsendbutton'           => 'Nachricht senden',
-	'boardnofriends' 	    => 'Du hast keine Freunde, denen du eine Nachricht senden könntest!',
-	'messagesentsuccess'	    => 'Deine Nachricht wurde erfolgreich verschickt.',
+	'boardnofriends'            => 'Du hast keine Freunde, denen du eine Nachricht senden könntest!',
+	'messagesentsuccess'        => 'Deine Nachricht wurde erfolgreich verschickt.',
 	'userboard'                 => 'Pinnwand',
 	'userboard_board-to-board'  => 'Pinnwand-zu-Pinnwand',
 	'userboard_delete'          => 'Löschen',
@@ -308,7 +307,7 @@ $3
 Hm, du willst keine E-Mails mehr von uns bekommen?
 
 Klicke $4
-und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.'
+und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
 );
 
 /** Greek (Ελληνικά)
@@ -361,6 +360,7 @@ $messages['fi'] = array(
 	'boardnofriends'            => 'Sinulla ei ole ystäviä, joille lähettää viestejä!',
 	'messagesentsuccess'        => 'Viestisi lähetettiin onnistuneesti',
 	'userboard'                 => 'Käyttäjän keskustelualue',
+	'userboard_delete'          => 'Poista',
 	'userboard_noexist'         => 'Käyttäjää, jota yrität katsoa ei ole olemassa.',
 	'userboard_yourboard'       => 'Oma keskustelualueeni',
 	'userboard_owner'           => '{{GRAMMAR:genitive|$1}} keskustelualue',
@@ -371,7 +371,6 @@ $messages['fi'] = array(
 	'userboard_boardtoboard'    => 'Keskustelualueelta-keskustelualueelle',
 	'userboard_confirmdelete'   => 'Oletko varma, että haluat poistaa tämän viestin?',
 	'userboard_sendmessage'     => 'Lähetä käyttäjälle $1 viesti',
-	'userboard_delete'          => 'Poista',
 	'userboard_myboard'         => 'Keskustelualueeni',
 	'userboard_private'         => 'yksityinen',
 	'userboard_public'          => 'julkinen',
@@ -574,12 +573,13 @@ $messages['km'] = array(
 	'boardblaststep2'           => 'ជំហានទី២ - សូម​ជ្រើសរើស​អ្នក​ដែលអ្នកចង់ផ្ញើសារទៅកាន់',
 	'boardlinkselectall'        => 'ជ្រើសរើសទាំងអស់',
 	'boardlinkunselectall'      => 'មិនជ្រើសរើសទាំងអស់',
+	'boardlinkselectfriends'    => 'ជ្រើសរើសមិត្ត',
 	'messagesentsuccess'        => 'សារ​របស់អ្នក​ត្រូវបាន​ផ្ញើដោយជោគជ័យ',
+	'userboard_delete'          => 'លុប',
 	'userboard_backprofile'     => 'ត្រលប់​ទៅកាន់​ប្រវត្តិរូបរបស់ $1',
 	'userboard_backyourprofile' => 'ត្រលប់​ទៅកាន់​ប្រវត្តិរូប​របស់អ្នក',
 	'userboard_confirmdelete'   => 'តើ​អ្នកប្រាកដ​ហើយឬ​ដែលចង់​លុបសារ​នេះចោល?',
 	'userboard_sendmessage'     => 'ផ្ញើសារទៅកាន់$1',
-	'userboard_delete'          => 'លុប',
 	'userboard_private'         => 'ឯកជន',
 	'userboard_public'          => 'សាធារណៈ',
 	'userboard_messagetype'     => 'ប្រភេទសារ',
@@ -1186,10 +1186,10 @@ $messages['te'] = array(
 	'boardlinkselectfoes'     => 'శత్రువులను ఎంచుకోండి',
 	'boardnofriends'          => 'సందేశం పంపించడానికి మీకు స్నేహితులేవరూ లేరు!',
 	'messagesentsuccess'      => 'మీ సందేశాన్ని విజయవంతంగా పంపించాం',
+	'userboard_delete'        => 'తొలగించు',
 	'userboard_noexist'       => 'మీరు చూడాలనుకుంటున్న వాడుకరి లేనేలేరు.',
 	'userboard_confirmdelete' => 'ఈ సందేశాన్ని మీరు తొలగించాలనుకుంటున్నారా?',
 	'userboard_sendmessage'   => '$1కి ఓ సందేశం పంపండి',
-	'userboard_delete'        => 'తొలగించు',
 	'userboard_private'       => 'అంతరంగికం',
 	'userboard_public'        => 'బహిరంగం',
 	'userboard_messagetype'   => 'సందేశపు రకం',
@@ -1217,6 +1217,7 @@ $messages['tg-cyrl'] = array(
 	'boardnofriends'           => 'Шумо ягон дӯсте барои фиристодани паём надоред!',
 	'messagesentsuccess'       => 'Паёми шумо бо муваффақият фиристода шуд',
 	'userboard'                => 'Лавҳаи корбар',
+	'userboard_delete'         => 'Ҳазф',
 	'userboard_noexist'        => 'Корбаре ки шумо кушиши дидан карда истодаед вуҷуд надорад.',
 	'userboard_yourboard'      => 'Лавҳаи Шумо',
 	'userboard_owner'          => 'Лавҳаи $1',
@@ -1224,7 +1225,6 @@ $messages['tg-cyrl'] = array(
 	'userboard_otherboardwith' => 'Лавҳа-ба-лавҳаи $1 бо $2',
 	'userboard_boardtoboard'   => 'Лавҳа-ба-лавҳа',
 	'userboard_sendmessage'    => 'Ба $1 паёме фирист',
-	'userboard_delete'         => 'Ҳазф',
 	'userboard_myboard'        => 'Лавҳаи Ман',
 	'userboard_messagetype'    => 'Навъи паём',
 	'userboard_nextpage'       => 'баъдӣ',
