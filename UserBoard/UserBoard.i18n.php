@@ -542,6 +542,13 @@ $messages['hil'] = array(
 	'userboard_delete' => 'Panason',
 );
 
+/** Interlingua (Interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'userboard_delete' => 'Deler',
+);
+
 /** Javanese (Basa Jawa)
  * @author Meursault2004
  */

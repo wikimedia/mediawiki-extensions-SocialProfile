@@ -209,10 +209,12 @@ $messages['af'] = array(
 /** Arabic (العربية)
  * @author Alnokta
  * @author OsamaK
+ * @author Meno25
  */
 $messages['ar'] = array(
 	'viewrelationships'                          => 'اعرض العلاقة',
 	'viewrelationshiprequests'                   => 'اعرض طلبات العلاقات',
+	'ur-already-submitted'                       => 'طلبك تم إرساله',
 	'ur-main-page'                               => 'الصفحة الرئيسية',
 	'ur-your-profile'                            => 'ملفك',
 	'ur-friend'                                  => 'صديق',

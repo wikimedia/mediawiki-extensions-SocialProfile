@@ -321,6 +321,7 @@ $messages['ar'] = array(
 	'user-profile-sports-addmore'                     => 'إضافة المزيد من الرياضات/الأندية',
 	'user-profile-picture-title'                      => 'رفع صورتك',
 	'user-profile-picture-log'                        => 'أفتار',
+	'user-profile-picture-log-entry'                  => 'رفع أفاتر جديد',
 	'user-profile-picture-yourpicture'                => 'صورتك',
 	'user-profile-picture-large'                      => 'كبير',
 	'user-profile-picture-medlarge'                   => 'متوسط - كبير',
