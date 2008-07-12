@@ -19,13 +19,13 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 	function execute( $params ) {
 		global $wgUser, $wgOut, $wgTitle, $wgRequest, $IP, $wgStyleVersion, $wgUserRelationshipScripts;
 
-		/*/
-		/* Redirect Non-logged in users to Login Page
-		/* It will automatically return them to the ViewRelationshipRequests page
-		/*/
+		/**
+		* Redirect Non-logged in users to Login Page
+		* It will automatically return them to the ViewRelationshipRequests page
+		*/
 		if($wgUser->getID() == 0){
 			$wgOut->setPagetitle( "Woops!" );
-			$login =  Title::makeTitle(NS_SPECIAL,"UserLogin");
+			$login = Title::makeTitle(NS_SPECIAL, "UserLogin");
 			$wgOut->redirect( $login->getFullURL('returnto=Special:ViewRelationshipRequests') );
 			return false;
 		}
@@ -34,12 +34,12 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		$wgOut->addScript("<link rel='stylesheet' type='text/css' href=\"{$wgUserRelationshipScripts}/UserRelationship.css?{$wgStyleVersion}\"/>\n");
 
 		$rel = new UserRelationship($wgUser->getName() );
-		$friend_request_count = $rel->getOpenRequestCount($wgUser->getID(),1);
-		$foe_request_count = $rel->getOpenRequestCount($wgUser->getID(),2);
+		$friend_request_count = $rel->getOpenRequestCount($wgUser->getID(), 1);
+		$foe_request_count = $rel->getOpenRequestCount($wgUser->getID(), 2);
 
 		if (count($_POST) && $_SESSION["alreadysubmitted"] == false) {
 			$_SESSION["alreadysubmitted"] = true;
-			$rel->addRelationshipRequest($this->user_name_to,$this->relationship_type,$_POST["message"]);
+			$rel->addRelationshipRequest($this->user_name_to, $this->relationship_type, $_POST["message"]);
 			$out = "<br /><span class=\"title\">" . wfMsg( 'ur-already-submitted' ) . "</span><br /><br />";
 			$wgOut->addHTML($out);
 		} else {
@@ -60,8 +60,8 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 						$label = wfMsg("ur-friend");
 					}
 
-					$user_from =  Title::makeTitle(NS_USER,$request["user_name_from"]);
-					$avatar = new wAvatar($request["user_id_from"],"l");
+					$user_from = Title::makeTitle(NS_USER, $request["user_name_from"]);
+					$avatar = new wAvatar($request["user_id_from"], "l");
 					$avatar_img = $avatar->getAvatarURL();
 
 					$message = $wgOut->parse( trim($request["message"]), false );

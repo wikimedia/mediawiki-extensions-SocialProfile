@@ -35,10 +35,10 @@ class SpecialViewUserBoard extends SpecialPage {
 
 		/**
 		* Redirect Non-logged in users to Login Page
-		* It will automatically return them to the ViewGifts page
+		* It will automatically return them to the UserBoard page
 		*/
 		if($wgUser->getID() == 0 && $user_name==""){
-			$login =  Title::makeTitle( NS_SPECIAL  , "UserLogin"  );
+			$login =  Title::makeTitle( NS_SPECIAL, "UserLogin" );
 			$wgOut->redirect( $login->getFullURL() . "&returnto=Special:UserBoard" );
 			return false;
 		}
@@ -49,12 +49,12 @@ class SpecialViewUserBoard extends SpecialPage {
 
 		if(!$user_name)$user_name = $wgUser->getName();
 		$user_id = User::idFromName($user_name);
-		$user =  Title::makeTitle( NS_USER  , $user_name  );
-		$user_safe = str_replace("&","%26",$user_name);
+		$user =  Title::makeTitle( NS_USER, $user_name );
+		$user_safe = str_replace("&", "%26", $user_name);
 
 		if($user_name_2){
 			$user_id_2 = User::idFromName($user_name_2);
-			$user_2 =  Title::makeTitle( NS_USER  , $user_name  );
+			$user_2 =  Title::makeTitle( NS_USER, $user_name );
 			$user_safe_2 = urlencode($user_name_2);
 		}
 		/**
@@ -182,7 +182,7 @@ class SpecialViewUserBoard extends SpecialPage {
 			for($i = 1; $i <= $numofpages; $i++){
 				if($i == $page){
 				    $output .=($i." ");
-				}else{
+				} else {
 				    $output .="<a href=\"index.php?title=Special:UserBoard&user={$user_safe}&page=$i{$qs}\">$i</a> ";
 				}
 			}
@@ -244,11 +244,11 @@ class SpecialViewUserBoard extends SpecialPage {
 
 		if($ub_messages){
 			foreach ($ub_messages as $ub_message) {
-				$user =  Title::makeTitle( NS_USER  , $ub_message["user_name_from"]  );
-				$avatar = new wAvatar($ub_message["user_id_from"],"m");
+				$user =  Title::makeTitle( NS_USER, $ub_message["user_name_from"] );
+				$avatar = new wAvatar($ub_message["user_id_from"], "m");
 
-				$board_to_board ="";
-				$board_link="";
+				$board_to_board = "";
+				$board_link = "";
 				$ub_message_type_label = "";
 				$delete_link = "";
 				if($wgUser->getName()!=$ub_message["user_name_from"]){

@@ -22,9 +22,16 @@ class UserProfile {
 	 * @private
 	 */
 	/* private */ function __construct($username) {
-		$title1 = Title::newFromDBkey($username  );
+		$title1 = Title::newFromDBkey($username);
 		$this->user_name = $title1->getText();
 		$this->user_id = User::idFromName($this->user_name);
+	}
+
+	static function clearCache( $user_id ){
+		global $wgMemc;
+
+		$key = wfMemcKey( 'user', 'profile', 'info', $user_id );
+		$wgMemc->delete( $key );
 	}
 
 	public function getProfile(){
@@ -36,9 +43,9 @@ class UserProfile {
 		if ( $data ) {
 			wfDebug( "Got user profile info for {$this->user_name} from cache\n" );
 			$profile = $data;
-		}else{
-			wfDebug( "Got user profile info for {$this->user_name} from db\n" );
-			$dbr =& wfGetDB( DB_SLAVE );
+		} else {
+			wfDebug( "Got user profile info for {$this->user_name} from DB\n" );
+			$dbr = wfGetDB( DB_SLAVE );
 			$params['LIMIT'] = "5";
 			$row = $dbr->selectRow( 'user_profile',
 				"*",
@@ -48,7 +55,7 @@ class UserProfile {
 
 			if($row){
 				$profile["user_id"]= $this->user_id;
-			}else{
+			} else {
 				$profile["user_page_type"] = 1;
 				$profile["user_id"]= 0;
 			}
@@ -97,10 +104,18 @@ class UserProfile {
 		if(count($dob) == 3){
 			$month = $dob[1];
 			$day = $dob[2];
-			return date("F jS", mktime(0,0,0,$month,$day));
+			return date("F jS", mktime(0, 0, 0, $month, $day));
 			return $day . ' ' . $wgLang->getMonthNameGen( $month );
 		}
 		return $birthday;
+	}
+
+	function getBirthdayYear($birthday){
+		$dob = explode('-', $birthday);
+		if(count($dob) == 3){
+			return $dob[0];
+		}
+		return "00";
 	}
 
 	public function getProfileComplete(){
@@ -119,20 +134,20 @@ class UserProfile {
 
 		//check if avatar
 		$this->profile_fields_count++;
-		$avatar = new wAvatar($wgUser->getID(),"l");
+		$avatar = new wAvatar($wgUser->getID(), "l");
 		if (strpos($avatar->getAvatarImage(), 'default_') === false)$complete_count++;
 
 		return round($complete_count / $this->profile_fields_count * 100);
 	}
 
 	static function getEditProfileNav( $current_nav ){
-		$lines = explode( "\n", wfMsg( 'update_profile_nav' ) );
+		$lines = explode( "\n", wfMsgForContent( 'update_profile_nav' ) );
 		$output = "<div class=\"profile-tab-bar\">";
 		foreach ($lines as $line) {
 
 			if (strpos($line, '*') !== 0){
 				continue;
-			}else{
+			} else {
 				$line = explode( '|' , trim($line, '* '), 2 );
 				$page = Title::newFromText($line[0]);
 				$link_text = $line[1];

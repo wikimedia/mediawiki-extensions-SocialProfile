@@ -326,10 +326,10 @@ class SpecialUploadAvatar extends UnlistedSpecialPage {
 		$key = wfMemcKey( 'user', 'profile', 'avatar', $wgUser->getID() , "ml");
 		$data = $wgMemc->delete( $key );
 		if($type > 0 ){
-			//$dbr =& wfGetDB( DB_SLAVE );
+			//$dbr = wfGetDB( DB_SLAVE );
 			//$sql = "UPDATE user set user_avatar = " . $type . " WHERE user_id = " . $wgUser->mId;
 			//$res = $dbr->query($sql);
-		}else{
+		} else {
 			$wgOut->fileCopyError( $tempName, $stash );
 		}
 		return $type;
@@ -406,8 +406,11 @@ class SpecialUploadAvatar extends UnlistedSpecialPage {
 	 * @access private
 	 */
 	function showSuccess($status) {
-		global $wgUser, $wgOut, $wgContLang, $wgDBname, $wgSitename, $wgProfileInterests, $wgUploadPath;
+		global $wgUser, $wgOut, $wgContLang, $wgDBname, $wgSitename, $wgProfileInterests, $wgUploadPath, $wgUploadAvatarInRecentChanges;
 		$log = new LogPage( wfMsgForContent( 'user-profile-picture-log' ) );
+		if( !$wgUploadAvatarInRecentChanges ){
+			$log->updateRecentChanges = false;
+		}
 		$log->addEntry( wfMsgForContent( 'user-profile-picture-log' ), $wgUser->getUserPage(), wfMsgForContent( 'user-profile-picture-log-entry' ) );
 
 		$ext = "jpg";
@@ -881,11 +884,11 @@ class SpecialUploadAvatar extends UnlistedSpecialPage {
 		}
 
 		#look up scanner configuration
-		$virus_scanner= $wgAntivirusSetup[$wgAntivirus]["command"]; #command pattern
-		$virus_scanner_codes= $wgAntivirusSetup[$wgAntivirus]["codemap"]; #exit-code map
-		$msg_pattern= $wgAntivirusSetup[$wgAntivirus]["messagepattern"]; #message pattern
+		$virus_scanner = $wgAntivirusSetup[$wgAntivirus]["command"]; #command pattern
+		$virus_scanner_codes = $wgAntivirusSetup[$wgAntivirus]["codemap"]; #exit-code map
+		$msg_pattern = $wgAntivirusSetup[$wgAntivirus]["messagepattern"]; #message pattern
 
-		$scanner= $virus_scanner; #copy, so we can resolve the pattern
+		$scanner = $virus_scanner; #copy, so we can resolve the pattern
 
 		if (strpos($scanner,"%f")===false) $scanner.= " ".wfEscapeShellArg($file); #simple pattern: append file to scan
 		else $scanner= str_replace("%f",wfEscapeShellArg($file),$scanner); #complex pattern: replace "%f" with file to scan
@@ -893,7 +896,7 @@ class SpecialUploadAvatar extends UnlistedSpecialPage {
 		wfDebug("$fname: running virus scan: $scanner \n");
 
 		#execute virus scanner
-		$code= false;
+		$code = false;
 
 		#NOTE: there's a 50 line workaround to make stderr redirection work on windows, too.
 		#      that does not seem to be worth the pain.
@@ -901,11 +904,11 @@ class SpecialUploadAvatar extends UnlistedSpecialPage {
 		if (wfIsWindows()) exec("$scanner",$output,$code);
 		else exec("$scanner 2>&1",$output,$code);
 
-		$exit_code= $code; #remeber for user feedback
+		$exit_code = $code; #remeber for user feedback
 
 		if ($virus_scanner_codes) { #map exit code to AV_xxx constants.
-			if (isset($virus_scanner_codes[$code])) $code= $virus_scanner_codes[$code]; #explicite mapping
-			else if (isset($virus_scanner_codes["*"])) $code= $virus_scanner_codes["*"]; #fallback mapping
+			if (isset($virus_scanner_codes[$code])) $code = $virus_scanner_codes[$code]; #explicite mapping
+			else if (isset($virus_scanner_codes["*"])) $code = $virus_scanner_codes["*"]; #fallback mapping
 		}
 
 		if ($code===AV_SCAN_FAILED) { #scan failed (code was mapped to false by $virus_scanner_codes)
@@ -921,12 +924,11 @@ class SpecialUploadAvatar extends UnlistedSpecialPage {
 		else if ($code===AV_NO_VIRUS) {
 			wfDebug("$fname: file passed virus scan.\n");
 			return false; #no virus found
-		}
-		else {
+		} else {
 			$output= join("\n",$output);
 			$output= trim($output);
 
-			if (!$output) $output= true; #if ther's no output, return true
+			if (!$output) $output= true; #if there's no output, return true
 			else if ($msg_pattern) {
 				$groups= array();
 				if (preg_match($msg_pattern,$output,$groups)) {

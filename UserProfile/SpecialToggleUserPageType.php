@@ -13,7 +13,7 @@
 
 class SpecialToggleUserPage extends UnlistedSpecialPage {
 	function __construct() {
-		parent::__construct( "ToggleUserPage" );
+		parent::__construct( 'ToggleUserPage' );
 	}
 
 	function execute( $params ) {
@@ -53,7 +53,7 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 		$key = wfMemcKey( 'user', 'profile', 'info', $wgUser->getID() );
 		$wgMemc->delete($key);
 
-		if( $user_page_type == 1 ){
+		if( $user_page_type == 1 && !$wgUser->isBlocked() ){
 			$user_page = Title::makeTitle( NS_USER, $wgUser->getName() );
 			$article = new Article( $user_page );
 			$user_page_content = $article->getContent();

@@ -9,9 +9,31 @@ $wgUserProfileDisplay['friends'] = false;
 $wgUserProfileDisplay['foes'] = false;
 $wgUserProfileDisplay['profile'] = true;
 $wgUserProfileDisplay['board'] = false;
+$wgUserProfileDisplay['stats'] = false; //Display statistics on user profile pages?
 $wgUserProfileDisplay['interests'] = true;
 $wgUserProfileDisplay['custom'] = true;
 $wgUserProfileDisplay['personal'] = true;
+
+$wgUpdateProfileInRecentChanges = false; // Show a log entry in recent changes whenever a user updates their profile?
+$wgUploadAvatarInRecentChanges = false; //Same as above, but for avatar uploading
+
+$wgAvailableRights[] = 'avatarremove';
+$wgGroupPermissions['staff']['avatarremove'] = true;
+$wgGroupPermissions['sysop']['avatarremove'] = true;
+$wgGroupPermissions['janitor']['avatarremove'] = true;
+
+# Add a new log type	 
+global $wgLogTypes, $wgLogNames, $wgLogHeaders, $wgLogActions;
+$wgLogTypes[]                      = 'profile';
+$wgLogNames['profile']            = 'profilelogpage';
+$wgLogHeaders['profile']          = 'profilelogpagetext';
+$wgLogActions['profile/profile'] = 'profilelogentry';
+
+$wgLogTypes[]                      = 'avatar';
+$wgLogNames['avatar']            = 'avatarlogpage';
+$wgLogHeaders['avatar']          = 'avatarlogpagetext';
+$wgLogActions['avatar/avatar'] = 'avatarlogentry';
+
 $wgHooks['ArticleFromTitle'][] = 'wfUserProfileFromTitle';
 
 //ArticleFromTitle
