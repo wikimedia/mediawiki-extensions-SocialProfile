@@ -152,7 +152,7 @@ class UserStatsTrack {
 						$wgMemc->set( $key, $system_gift_id, 60 * 30 );
 					}
 				}
-		
+
 				if( $system_gift_id ){
 					$sg = new UserSystemGifts($this->user_name);
 					$sg->sendSystemGift($system_gift_id);
@@ -302,7 +302,7 @@ class UserStatsTrack {
 				$col = "stats_friends_count";
 			} else {
 				$col = "stats_foe_count";
-			} //Where is low_priority? where was this table created? 
+			} //Where is low_priority? where was this table created?
 			$sql = "UPDATE low_priority ".$wgDBprefix."user_stats SET {$col}=
 					(SELECT COUNT(*) as rel_count FROM user_relationship WHERE
 						r_user_id = {$this->user_id} AND r_type={$rel_type}
@@ -416,7 +416,7 @@ class UserStatsTrack {
 			$stats = new UserStats($this->user_id, $this->user_name);
 			$stats_data = $stats->getUserStats();
 			$points_before = $stats_data["points"];
-			
+
 			//Load Honorific Level before update
 			$user_level = new UserLevel($points_before);
 			$level_number_before = $user_level->getLevelNumber();
@@ -564,13 +564,13 @@ class UserStats {
 		$wgMemc->set( $key, $stats );
 		return $stats;
 	}
-	
+
 	static function getTopFansList( $limit = 10 ){
 		$dbr = wfGetDB( DB_MASTER );
 
 		if($limit>0){
 			$limitvalue = 0;
-			if($page)$limitvalue = $page * $limit - ($limit); 
+			if($page)$limitvalue = $page * $limit - ($limit);
 			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
 		}
 
@@ -592,10 +592,10 @@ class UserStats {
 
 	static function getTopFansListPeriod( $limit = 10, $period = "weekly"){
 		$dbr = wfGetDB( DB_SLAVE );
-		
+
 		if($limit>0){
 			$limitvalue = 0;
-			if($page)$limitvalue = $page * $limit - ($limit); 
+			if($page)$limitvalue = $page * $limit - ($limit);
 			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
 		}
 		if($period=="monthly"){
@@ -624,7 +624,7 @@ class UserStats {
 
 		if($limit>0){
 			$limitvalue = 0;
-			if($page)$limitvalue = $page * $limit - ($limit); 
+			if($page)$limitvalue = $page * $limit - ($limit);
 			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
 		}
 
@@ -641,7 +641,7 @@ class UserStats {
 			WHERE r_user_id = {$user_id} and stats_total_points {$op} {$points}
 			ORDER BY stats_total_points {$sort}
 			{$limit_sql}";
-			
+
 		$list = array();
 		$res = $dbr->query($sql);
 		while ($row = $dbr->fetchObject( $res ) ) {
@@ -658,7 +658,7 @@ class UserStats {
 
 class UserLevel {
 	var $level_number = 0;
-	
+
 	/* private */ function __construct($points) {
 		global $wgUserLevels;
 		$this->levels = $wgUserLevels;
@@ -692,7 +692,7 @@ class UserLevel {
 }
 
 class UserEmailTrack {
-	
+
 	/**
 	 * Constructor
 	 * @private
@@ -723,8 +723,8 @@ class UserEmailTrack {
 			array(
 				'ue_user_id' => $this->user_id,
 				'ue_user_name' => $this->user_name,
-				'ue_type' => $type,	
-				'ue_count' => $count,	
+				'ue_type' => $type,
+				'ue_count' => $count,
 				'ue_page_title' => $page_title,
 				'ue_date' => date("Y-m-d H:i:s"),
 				), $fname

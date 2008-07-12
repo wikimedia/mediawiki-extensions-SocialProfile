@@ -29,7 +29,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 		} else {
 			$edit_count = 0;
 		}
-	
+
 		$s = $dbr->selectRow( '`'.$wgDBprefix.'user_stats`', array( 'stats_user_id' ), array('stats_user_id' => $row->rev_user), __METHOD__ );
 		if ( ! $s->stats_user_id	) {
 
@@ -41,14 +41,14 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 				'stats_total_points' => 1000
 				), $fname
 			);
-		}	 
+		}
 		$wgOut->addHTML("<p>Updating {$row->rev_user_text} with {$edit_count} edits</p>");
 
 		$dbr->update( 'user_stats',
 				array( "stats_edit_count=".$edit_count ),
 				array( 'stats_user_id' => $row->rev_user ),
 				__METHOD__ );
-		
+
 			global $wgMemc;
 			//clear stats cache for current user
 			$key = wfMemcKey( 'user', 'stats', $row->rev_user );
@@ -58,7 +58,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 	}
 
 	function execute(){
-		global $wgUser, $wgOut; 
+		global $wgUser, $wgOut;
 		$dbr = wfGetDB( DB_MASTER );
 		$this->updateMainEditsCount();
 

@@ -43,7 +43,7 @@ class SpecialViewUserBoard extends SpecialPage {
 			return false;
 		}
 
-		/** 
+		/**
 		* If no user is set in the URL, we assume its the current user
 		*/
 

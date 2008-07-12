@@ -50,13 +50,13 @@ class TopFansByStat extends UnlistedSpecialPage {
 			$params['LIMIT'] = $count;
 
 			$dbr = wfGetDB( DB_SLAVE );
-			$res = $dbr->select( 'user_stats', 
-				array('stats_user_id','stats_user_name',$column), 
-				array('stats_user_id <> 0', "{$column} > 0" ), __METHOD__, 
+			$res = $dbr->select( 'user_stats',
+				array('stats_user_id','stats_user_name',$column),
+				array('stats_user_id <> 0', "{$column} > 0" ), __METHOD__,
 				$params
 			);
 			while( $row = $dbr->fetchObject($res) ){
-				$user_list[] = array(  
+				$user_list[] = array(
 						"user_id" => $row->stats_user_id,
 						"user_name" => $row->stats_user_name,
 						"stat" => $row->$column
@@ -115,7 +115,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 				$lowercase_statistics_name = "percent";
 			} else {
 				$statistics_row = number_format( $user["stat"] );
-				$lowercase_statistics_name = strtolower( wfMsgExt( "top-fans-stats-{$statistic}", "parsemag", $user["stat"] ) );		
+				$lowercase_statistics_name = strtolower( wfMsgExt( "top-fans-stats-{$statistic}", "parsemag", $user["stat"] ) );
 			}
 
 			$out .= "<div class=\"top-fan-row\">

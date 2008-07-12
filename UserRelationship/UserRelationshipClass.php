@@ -271,7 +271,7 @@ class UserRelationship {
 	static function getUserRelationshipByID($user1,$user2){
 	global $wgDBprefix;
 		$dbr = wfGetDB( DB_MASTER );
-		//For some reason in this function, if you add $wgDBprefix before user_relationship it adds it twice. Also removed was '' 
+		//For some reason in this function, if you add $wgDBprefix before user_relationship it adds it twice. Also removed was ''
 		$s = $dbr->selectRow( 'user_relationship', array( 'r_type' ), array( 'r_user_id' => $user1, 'r_user_id_relation' => $user2 ), __METHOD__ );
 		if ( $s !== false ) {
 			return $s->r_type;

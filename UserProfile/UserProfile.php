@@ -22,7 +22,7 @@ $wgGroupPermissions['staff']['avatarremove'] = true;
 $wgGroupPermissions['sysop']['avatarremove'] = true;
 $wgGroupPermissions['janitor']['avatarremove'] = true;
 
-# Add a new log type	 
+# Add a new log type
 global $wgLogTypes, $wgLogNames, $wgLogHeaders, $wgLogActions;
 $wgLogTypes[]                      = 'profile';
 $wgLogNames['profile']            = 'profilelogpage';

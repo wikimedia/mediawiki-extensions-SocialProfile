@@ -106,10 +106,10 @@ class UserProfilePage extends Article {
 
 		return $output;
 	}
-	
+
 	function getUserStats($user_id, $user_name) {
 		global $wgUser, $wgTitle, $IP, $wgUserProfileDisplay;
-	
+
 		if ($wgUserProfileDisplay['stats'] == false) {
 			return "";
 		}
@@ -129,7 +129,7 @@ class UserProfilePage extends Article {
 					</div>
 					<div class=\"action-left\">
 					</div>
-					<div class=\"cleared\"></div> 
+					<div class=\"cleared\"></div>
 				</div>
 			</div>
 			<div class=\"cleared\"></div>

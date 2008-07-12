@@ -719,19 +719,19 @@ $messages['mr'] = array(
 	'userboard_loggedout'       => 'इतर सदस्यांना संदेश पाठविण्यासाठी तुम्ही <a href="$1">प्रवेश केलेला असणे</a> आवश्यक आहे.',
 	'userboard_showingmessages' => '{{PLURAL:$1|$1 संदेशापैकी|$1 संदेशांपैकी}} $2-$3 दर्शवित आहोत',
 	'message_received_subject'  => '$1ने तुमच्या {{SITENAME}} वरच्या बोर्डवर संदेश लिहिलेला आहे',
-	'message_received_body'     => 'नमस्कार $ 1 : 
+	'message_received_body'     => 'नमस्कार $ 1 :
 
-$ 2 ने आत्ताच ( ( SITENAME ) )वरील तुमच्या पटलावर लिहीले आहे ! 
+$ 2 ने आत्ताच ( ( SITENAME ) )वरील तुमच्या पटलावर लिहीले आहे !
 
-तुमचे पटल पहाण्याकरिता खाली टिचकी मारा! 
+तुमचे पटल पहाण्याकरिता खाली टिचकी मारा!
 
-$ 3 
+$ 3
 
---- 
+---
 
-हे , तुम्हाला आमच्याकडून येणारी  विपत्रे बंद करून हवी आहेत काय ? 
+हे , तुम्हाला आमच्याकडून येणारी  विपत्रे बंद करून हवी आहेत काय ?
 
-$ 4 वर टिचकी मारा 
+$ 4 वर टिचकी मारा
 आणि विपत्र(ईमेल) सूचना अक्षम करण्याकरिता सुविधेत बदल करा.',
 );
 
@@ -911,7 +911,7 @@ $messages['oc'] = array(
 	'userboard_loggedout'       => 'Vos cal èsser <a href="$1">connectat(ada)</a> per mandar de messatges a d’autres utilizaires.',
 	'userboard_showingmessages' => 'Visionament de $2-$3 de {{PLURAL:$1|$1 messatge|$1 messatges}}',
 	'message_received_subject'  => '$1 a escrich sus vòstre tablèu sus {{SITENAME}}',
-	'message_received_body'     => "Adiu $1 : 
+	'message_received_body'     => "Adiu $1 :
 
 $2 ven just d'escriure sus vòstre tablèu sus {{SITENAME}} !
 
@@ -1259,4 +1259,3 @@ $messages['vi'] = array(
 	'userboard_nomessages' => 'Không có tin nhắn.',
 	'userboard_sendbutton' => 'gửi',
 );
-

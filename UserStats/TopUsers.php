@@ -1,14 +1,14 @@
 <?php
 
 class TopUsersPoints extends SpecialPage {
-	
+
 	function TopUsersPoints(){
 		SpecialPage::SpecialPage('TopUsers');
 		wfLoadExtensionMessages('SocialProfileUserStats');
 	}
 
 	function execute(){
-		global $IP, $wgUser, $wgOut, $wgStyleVersion, $wgScriptPath, $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgUserLevels, $wgUploadPath; 
+		global $IP, $wgUser, $wgOut, $wgStyleVersion, $wgScriptPath, $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgUserLevels, $wgUploadPath;
 
 		//read in localisation messages
 		wfLoadExtensionMessages('SocialProfileUserStats');
@@ -34,13 +34,13 @@ class TopUsersPoints extends SpecialPage {
 			$params['ORDER BY'] = 'stats_total_points DESC';
 			$params['LIMIT'] = $count;
 			$dbr = wfGetDB( DB_SLAVE );
-			$res = $dbr->select( 'user_stats', 
-				array('stats_user_id','stats_user_name','stats_total_points'), 
-				array('stats_user_id <> 0'), __METHOD__, 
+			$res = $dbr->select( 'user_stats',
+				array('stats_user_id','stats_user_name','stats_total_points'),
+				array('stats_user_id <> 0'), __METHOD__,
 				$params
 			);
 			while( $row = $dbr->fetchObject($res) ){
-				$user_list[] = array(  
+				$user_list[] = array(
 						"user_id" => $row->stats_user_id,
 						"user_name" => $row->stats_user_name,
 						"points" => $row->stats_total_points
@@ -110,7 +110,7 @@ class TopUsersPoints extends SpecialPage {
 				<img src='{$wgUploadPath}/avatars/" . $CommentIcon . "' alt='' border=''> <a href='" . $user_title->escapeFullURL() . "' >" . $user["user_name"] . "</a>
 				</span>";
 
-			$out .=  "<span class=\"top-fan-points\"><b>" . number_format( $user["points"] ) . "</b> " . wfMsg('top-fans-points') . 
+			$out .=  "<span class=\"top-fan-points\"><b>" . number_format( $user["points"] ) . "</b> " . wfMsg('top-fans-points') .
 "</span>";
 			$out .= "<div class=\"cleared\"></div>";
 			$out .= "</div>";

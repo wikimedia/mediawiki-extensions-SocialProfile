@@ -178,4 +178,3 @@ $messages['vec'] = array(
 $messages['vi'] = array(
 	'yui-desc' => 'Tập hợp các dụng cụ và trình điều khiển được viết bằng JavaScript',
 );
-

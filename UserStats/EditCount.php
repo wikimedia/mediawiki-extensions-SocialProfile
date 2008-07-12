@@ -16,10 +16,10 @@ $wgHooks['ArticleDelete'][] = 'removeDeletedEdits';
 
 function removeDeletedEdits(&$article, &$user, &$reason){
 	global $wgUser, $wgTitle, $wgNamespacesForEditPoints;
-	
+
 	//only keep tally for allowable namespaces
 	if( !is_array($wgNamespacesForEditPoints) || in_array( $wgTitle->getNamespace(), $wgNamespacesForEditPoints ) ){
-	
+
 		$dbr = wfGetDB( DB_MASTER );
 		$sql = "SELECT rev_user_text, rev_user,  count(*) AS the_count FROM revision WHERE rev_page = {$article->getID()} AND rev_user <> 0  GROUP BY rev_user_text";
 		$res = $dbr->query($sql);
@@ -35,10 +35,10 @@ $wgHooks['ArticleUndelete'][] = 'restoreDeletedEdits';
 
 function restoreDeletedEdits(&$title, $new){
 	global $wgUser, $wgNamespacesForEditPoints;
-	
+
 	//only keep tally for allowable namespaces
 	if( !is_array($wgNamespacesForEditPoints) || in_array( $title->getNamespace(), $wgNamespacesForEditPoints ) ){
-	
+
 		$dbr = wfGetDB( DB_MASTER );
 		$sql = "SELECT rev_user_text, rev_user,  count(*) AS the_count FROM revision WHERE rev_page = {$title->getArticleID()} AND rev_user <> 0  GROUP BY rev_user_text";
 		$res = $dbr->query($sql);

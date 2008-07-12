@@ -9,7 +9,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 	function execute(){
 		global $IP, $wgRequest, $wgUser, $wgOut, $wgStyleVersion, $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly,
 		$wgUserLevels, $wgUploadPath, $wgScriptPath;
-	
+
 		//read in localisation messages
 		wfLoadExtensionMessages('SocialProfileUserStats');
 
@@ -23,7 +23,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 			$wgOut->setPagetitle( wfMsg('user-stats-weekly-title') );
 		} else {
 			$wgOut->setPagetitle( wfMsg('user-stats-monthly-title') );
-		}			
+		}
 
 		$count = 50;
 
@@ -42,13 +42,13 @@ class TopFansRecent extends UnlistedSpecialPage {
 			$params['LIMIT'] = $count;
 
 			$dbr = wfGetDB( DB_SLAVE );
-			$res = $dbr->select( "user_points_{$period}", 
-				array('up_user_id','up_user_name','up_points'), 
-				array('up_user_id <> 0'), __METHOD__, 
+			$res = $dbr->select( "user_points_{$period}",
+				array('up_user_id','up_user_name','up_points'),
+				array('up_user_id <> 0'), __METHOD__,
 				$params
 			);
 			while( $row = $dbr->fetchObject($res) ){
-				$user_list[] = array(  
+				$user_list[] = array(
 						"user_id" => $row->up_user_id,
 						"user_name" => $row->up_user_name,
 						"points" => $row->up_points
