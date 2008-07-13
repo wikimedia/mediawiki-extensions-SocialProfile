@@ -17,7 +17,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 		}
 
 		$dbr = wfGetDB( DB_MASTER );
-		$sql = "SELECT rev_user_text, rev_user,	count(*) AS the_count FROM revision INNER JOIN page ON page_id = rev_page WHERE page_namespace = 0 AND rev_user <> 0 GROUP BY rev_user_text	";
+		$sql = "SELECT rev_user_text, rev_user,	count(*) AS the_count FROM ".$wgDBprefix."revision INNER JOIN ".$wgDBprefix."page ON page_id = rev_page WHERE page_namespace = 0 AND rev_user <> 0 GROUP BY rev_user_text	";
 		$res = $dbr->query($sql);
 		while ($row = $dbr->fetchObject( $res ) ) {
 
@@ -30,10 +30,10 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 			$edit_count = 0;
 		}
 
-		$s = $dbr->selectRow( '`'.$wgDBprefix.'user_stats`', array( 'stats_user_id' ), array('stats_user_id' => $row->rev_user), __METHOD__ );
+		$s = $dbr->selectRow( 'user_stats', array( 'stats_user_id' ), array('stats_user_id' => $row->rev_user), __METHOD__ );
 		if ( ! $s->stats_user_id	) {
 
-			$dbr->insert( '`'.$wgDBprefix.'user_stats`',
+			$dbr->insert( 'user_stats',
 			array(
 				'stats_year_id' => 0,
 				'stats_user_id' => $row->rev_user,
@@ -58,14 +58,14 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 	}
 
 	function execute(){
-		global $wgUser, $wgOut;
+		global $wgUser, $wgOut, $wgDBprefix;
 		$dbr = wfGetDB( DB_MASTER );
 		$this->updateMainEditsCount();
 
 		global $wgUserLevels;
 		$wgUserLevels = "";
 
-		$sql = "SELECT stats_user_id,stats_user_name, stats_total_points FROM user_stats ORDER BY stats_user_name";
+		$sql = "SELECT stats_user_id,stats_user_name, stats_total_points FROM ".$wgDBprefix."user_stats ORDER BY stats_user_name";
 		$res = $dbr->query($sql);
 		$out = "";
 		while ($row = $dbr->fetchObject( $res ) ) {

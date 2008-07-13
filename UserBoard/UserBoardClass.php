@@ -16,9 +16,9 @@ class UserBoard {
 	/* private */ function __construct() {
 	}
 
-	public function sendBoardMessage($user_id_from,$user_name_from,$user_id_to,$user_name_to, $message, $message_type=0){
+	public function sendBoardMessage($user_id_from, $user_name_from, $user_id_to, $user_name_to, $message, $message_type = 0){
 		global $IP, $wgDBprefix;
-		$dbr =& wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_MASTER );
 		$fname = $wgDBprefix.'user_board::addToDatabase';
 
 		$user_name_from = stripslashes($user_name_from);
@@ -39,8 +39,8 @@ class UserBoard {
 		$ub_gift_id = $dbr->insertId();
 
 		//Send Email (if user is not writing on own board)
-		if($user_id_from!=$user_id_to){
-			$this->sendBoardNotificationEmail($user_id_to,$user_name_from);
+		if($user_id_from != $user_id_to){
+			$this->sendBoardNotificationEmail($user_id_to, $user_name_from);
 			$this->incNewMessageCount($user_id_to);
 		}
 
@@ -59,18 +59,18 @@ class UserBoard {
 		return $ub_gift_id;
 	}
 
-	public function sendBoardNotificationEmail($user_id_to,$user_from){
+	public function sendBoardNotificationEmail($user_id_to, $user_from){
 		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 
 		$user = User::newFromId($user_id_to);
 		$user->loadFromId();
 
-		if($user->isEmailConfirmed() && $user->getIntOption("notifymessage",1) ){
-			$board_link = Title::makeTitle( NS_SPECIAL , "UserBoard"  );
-			$update_profile_link = Title::makeTitle( NS_SPECIAL , "UpdateProfile"  );
+		if($user->isEmailConfirmed() && $user->getIntOption("notifymessage", 1) ){
+			$board_link = Title::makeTitle( NS_SPECIAL, "UserBoard" );
+			$update_profile_link = Title::makeTitle( NS_SPECIAL, "UpdateProfile" );
 			$subject = wfMsgExt( 'message_received_subject', "parsemag",
 				$user_from
-				 );
+			);
 			$body = wfMsgExt( 'message_received_body', "parsemag",
 				$user->getName(),
 				$user_from,
@@ -132,7 +132,7 @@ class UserBoard {
 
 	public function doesUserOwnMessage($user_id, $ub_id){
 		$dbr = wfGetDB( DB_MASTER );
-		$s = $dbr->selectRow( '`user_board`', array( 'ub_user_id' ), array( 'ub_id' => $ub_id ), $fname );
+		$s = $dbr->selectRow( 'user_board', array( 'ub_user_id' ), array( 'ub_id' => $ub_id ), $fname );
 		if ( $s !== false ) {
 			if($user_id == $s->ub_user_id){
 				return true;
@@ -142,25 +142,26 @@ class UserBoard {
 	}
 
 	public function deleteMessage($ub_id){
+		global $wgDBprefix;
 		if($ub_id){
-			$dbr =& wfGetDB( DB_MASTER );
-			$s = $dbr->selectRow( '`user_board`', array( 'ub_user_id','ub_user_name','ub_type' ), array( 'ub_id' => $ub_id ), $fname );
+			$dbr = wfGetDB( DB_MASTER );
+			$s = $dbr->selectRow( 'user_board', array( 'ub_user_id','ub_user_name','ub_type' ), array( 'ub_id' => $ub_id ), $fname );
 			if ( $s !== false ) {
 
-				$sql = "DELETE FROM user_board WHERE ub_id={$ub_id}";
+				$sql = "DELETE FROM ".$wgDBprefix."user_board WHERE ub_id={$ub_id}";
 				$res = $dbr->query($sql);
 
 				$stats = new UserStatsTrack($s->ub_user_id, $s->ub_user_name);
 				if($s->ub_type==0){
 					$stats->decStatField("user_board_count");
-				}else{
+				} else {
 					$stats->decStatField("user_board_count_priv");
 				}
 			}
 		}
 	}
 
-	public function getUserBoardMessages($user_id,$user_id_2=0,$limit=0,$page=0){
+	public function getUserBoardMessages($user_id, $user_id_2 = 0, $limit = 0, $page = 0){
 		global $wgUser, $wgOut, $wgTitle, $wgDBprefix;
 		$dbr = wfGetDB( DB_SLAVE );
 
@@ -202,16 +203,16 @@ class UserBoard {
 			$message_text = $message_text->getText();
 
 			$messages[] = array(
-				 "id"=>$row->ub_id,"timestamp"=>($row->unix_time ) ,
-				 "user_id_from"=>$row->ub_user_id_from,"user_name_from"=>$row->ub_user_name_from,
-				 "user_id"=>$row->ub_user_id,"user_name"=>$row->ub_user_name,
-				 "message_text"=>$message_text,"type"=>$row->ub_type
-				 );
+					"id" => $row->ub_id, "timestamp" => ($row->unix_time),
+					"user_id_from" => $row->ub_user_id_from, "user_name_from" => $row->ub_user_name_from,
+					"user_id" => $row->ub_user_id, "user_name" => $row->ub_user_name,
+					"message_text" => $message_text, "type" => $row->ub_type
+				);
 		}
 		return $messages;
 	}
 
-	public function getUserBoardToBoardCount($user_id,$user_id_2){
+	public function getUserBoardToBoardCount($user_id, $user_id_2){
 		global $wgOut, $wgUser, $wgTitle, $wgDBprefix;
 		$dbr = wfGetDB( DB_SLAVE );
 
@@ -235,15 +236,15 @@ class UserBoard {
 		return $count;
 	}
 
-	public function displayMessages($user_id,$user_id_2=0,$count=10,$page=0){
+	public function displayMessages($user_id, $user_id_2 = 0, $count = 10, $page = 0){
 		global $wgUser,$max_link_text_length, $wgTitle;
-		$messages = $this->getUserBoardMessages($user_id,$user_id_2,$count,$page);
+		$messages = $this->getUserBoardMessages($user_id, $user_id_2, $count, $page);
 		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 		if ($messages) {
 
 			foreach ($messages as $message) {
 				$user =  Title::makeTitle( NS_USER, $message["user_name_from"] );
-				$avatar = new wAvatar($message["user_id_from"],"m");
+				$avatar = new wAvatar($message["user_id_from"], "m");
 
 				$board_to_board = "";
 				$board_link = "";
@@ -299,20 +300,20 @@ class UserBoard {
 	}
 
 	static function getBoardBlastURL( ){
-		$title = Title::makeTitle( NS_SPECIAL , "SendBoardBlast"  );
+		$title = Title::makeTitle( NS_SPECIAL, "SendBoardBlast" );
 		return $title->escapeFullURL();
 	}
 
 	static function getUserBoardURL($user_name){
-		$title = Title::makeTitle( NS_SPECIAL , "UserBoard"  );
-		$user_name = str_replace("&","%26",$user_name);
+		$title = Title::makeTitle( NS_SPECIAL, "UserBoard"  );
+		$user_name = str_replace("&", "%26", $user_name);
 		return $title->escapeFullURL('user='.$user_name);
 	}
 
-	static function getUserBoardToBoardURL($user_name_1,$user_name_2){
-		$title = Title::makeTitle( NS_SPECIAL , "UserBoard"  );
-		$user_name_1 = str_replace("&","%26",$user_name_1);
-		$user_name_2 = str_replace("&","%26",$user_name_2);
+	static function getUserBoardToBoardURL($user_name_1, $user_name_2){
+		$title = Title::makeTitle( NS_SPECIAL, "UserBoard" );
+		$user_name_1 = str_replace("&", "%26", $user_name_1);
+		$user_name_2 = str_replace("&", "%26", $user_name_2);
 		return $title->escapeFullURL('user='.$user_name_1.'&conv='.$user_name_2);
 	}
 
@@ -334,7 +335,7 @@ class UserBoard {
 		return $dif;
 	}
 
-	public function getTimeOffset($time,$timeabrv,$timename){
+	public function getTimeOffset($time, $timeabrv, $timename){
 		if($time[$timeabrv]>0){
 			$timeStr = $time[$timeabrv] . " " . $timename;
 			if($time[$timeabrv]>1)$timeStr .= "s";
@@ -344,12 +345,12 @@ class UserBoard {
 	}
 
 	public function getTimeAgo($time){
-		$timeArray =  $this-> dateDiff(time(),$time  );
+		$timeArray =  $this-> dateDiff( time(), $time );
 		$timeStr = "";
-		$timeStrD = $this->getTimeOffset($timeArray,"d","day");
-		$timeStrH = $this->getTimeOffset($timeArray,"h","hour");
-		$timeStrM = $this->getTimeOffset($timeArray,"m","minute");
-		$timeStrS = $this->getTimeOffset($timeArray,"s","second");
+		$timeStrD = $this->getTimeOffset($timeArray, "d", "day");
+		$timeStrH = $this->getTimeOffset($timeArray, "h", "hour");
+		$timeStrM = $this->getTimeOffset($timeArray, "m", "minute");
+		$timeStrS = $this->getTimeOffset($timeArray, "s", "second");
 		$timeStr = $timeStrD;
 		if($timeStr<2){
 			$timeStr.=$timeStrH;
