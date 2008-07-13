@@ -238,6 +238,7 @@ $messages['ar'] = array(
 	'ur-grudge'                                  => 'ضغينة',
 	'ur-add-button'                              => 'أضف ك&#x200d; $1',
 	'ur-add-error-message-no-user'               => 'المستخدم الذي تحاول أن تضيفه غير موجود.',
+	'ur-add-error-message-yourself'              => 'أنت لا يمكنك إضافة نفسك كصديق أو عدو.',
 	'ur-add-error-message-pending-request-title' => 'الصبر جميل!',
 	'ur-add-error-message-not-loggedin'          => 'يجب أن تكون مسجلا دخولك لتضيف $1',
 	'ur-requests-title'                          => 'طلبات العلاقات',
@@ -1691,6 +1692,7 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
  * @author Sp5uhe
  * @author Airwolf
  * @author Derbeth
+ * @author Maikking
  */
 $messages['pl'] = array(
 	'ur-already-submitted'                       => 'Twoje zaproszenie zostało wysłane',
@@ -1713,14 +1715,20 @@ $messages['pl'] = array(
 	'ur-remove'                                  => 'Usuń',
 	'ur-cancel'                                  => 'Anuluj',
 	'ur-login'                                   => 'Zaloguj się',
+	'ur-add-button'                              => 'Dodaj jako $1',
+	'ur-add-sent-title'                          => 'Wysłaliśmy Twoją propozycję do $2!',
 	'ur-add-error-message-no-user'               => 'Użytkownik, którego próbujesz dodać, nie istnieje.',
+	'ur-add-error-message-existing-relationship' => 'Już jesteś $1 z $2.',
 	'ur-add-error-message-pending-request-title' => 'Cierpliwości!',
+	'ur-add-error-message-not-loggedin'          => 'Żeby dodać $1, musisz się zalogować',
 	'ur-requests-title'                          => 'Nawiązanie znajomości',
 	'ur-requests-message'                        => '<a href="$1">$2</a> chce być twoim $3.',
 	'ur-accept'                                  => 'Zaakceptuj',
 	'ur-reject'                                  => 'Odrzuć',
 	'ur-no-requests-message'                     => 'Nie masz zaproszeń do przyjaźni oraz zgłoszeń od wrogów.
 Jeśli chcesz mieć więcej przyjaciół <a href="$1">zaproś ich!</a>',
+	'ur-requests-added-message'                  => 'Dodałeś $1 do swoich $2.',
+	'ur-requests-reject-message'                 => 'Odmówiłeś dodania $1 do swoich $2.',
 	'ur-title-foe'                               => 'Lista wrogów $1',
 	'ur-title-friend'                            => 'Lista przyjaciół $1',
 	'friend_request_subject'                     => '$1 dodał Ciebie do swoich przyjaciół na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
@@ -2344,3 +2352,4 @@ $messages['vi'] = array(
 	'ur-cancel'     => 'Bãi bỏ',
 	'ur-login'      => 'Đăng nhập',
 );
+

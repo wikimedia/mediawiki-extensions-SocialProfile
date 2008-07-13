@@ -936,12 +936,26 @@ $messages['os'] = array(
 
 /** Polish (Polski)
  * @author Sp5uhe
+ * @author Maikking
  */
 $messages['pl'] = array(
-	'userboard_delete'     => 'Usuń',
-	'userboard_nextpage'   => 'nast.',
-	'userboard_prevpage'   => 'poprz.',
-	'userboard_sendbutton' => 'wyślij',
+	'messagesenttitle'         => 'Wiadomości zostały wysłane',
+	'boardblaststep1'          => 'Krok 1 - Napisz swoją wiadomość',
+	'boardblastprivatenote'    => 'Wszystkie wiadomości będą wysyłane jako prywatne',
+	'boardblaststep2'          => 'Krok 2 - Wybierz do kogo chcesz wysłać wiadomość',
+	'boardlinkselectall'       => 'Zaznacz wszystkich',
+	'boardlinkunselectall'     => 'Odznacz wszystkich',
+	'boardlinkselectfriends'   => 'Zaznacz znajomych',
+	'boardlinkunselectfriends' => 'Odznacz znajomych',
+	'boardlinkselectfoes'      => 'Zaznacz wrogów',
+	'boardlinkunselectfoes'    => 'Odznacz wrogów',
+	'boardnofriends'           => 'Nie masz żadnych znajomych.',
+	'messagesentsuccess'       => 'Twoja wiadomość została wysłana',
+	'userboard_delete'         => 'Usuń',
+	'userboard_nextpage'       => 'nast.',
+	'userboard_prevpage'       => 'poprz.',
+	'userboard_nomessages'     => 'Brak wiadomości.',
+	'userboard_sendbutton'     => 'wyślij',
 );
 
 /** Pashto (پښتو)
@@ -1259,3 +1273,4 @@ $messages['vi'] = array(
 	'userboard_nomessages' => 'Không có tin nhắn.',
 	'userboard_sendbutton' => 'gửi',
 );
+
