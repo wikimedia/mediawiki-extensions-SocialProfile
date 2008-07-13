@@ -3,7 +3,7 @@ function send_message(){
 	if($("message").value && !posted){
 		posted = 1;
 		var url = "index.php?action=ajax";
-		var pars = 'rs=wfSendBoardMessage&rsargs[]=' + $("user_name_to").value +'&rsargs[]=' + escape($("message").value) + '&rsargs[]=' + $("message_type").value +'&rsargs[]=10'
+		var pars = 'rs=wfSendBoardMessage&rsargs[]=' + $("user_name_to").value +'&rsargs[]=' + encodeURIComponent($("message").value) + '&rsargs[]=' + $("message_type").value +'&rsargs[]=10'
 		var callback = {
 			success: function(originalRequest){
 				$("user-page-board").innerHTML = originalRequest.responseText
