@@ -441,7 +441,7 @@ class UserProfilePage extends Article {
 				global $wgUserLevels;
 				if( $wgUserLevels ){
 					$output .= "<div id=\"points-level\">
-					<a href=\"{$level_link->escapeFullURL()}\">{$stats_data["points"]} points</a>
+					<a href=\"{$level_link->escapeFullURL()}\">{$stats_data["points"]}".wfMsg('user-profile-points')."</a>
 					</div>
 					<div id=\"honorific-level\">
 						<a href=\"{$level_link->escapeFullURL()}\" rel=\"nofollow\">({$user_level->getLevelName()})</a>

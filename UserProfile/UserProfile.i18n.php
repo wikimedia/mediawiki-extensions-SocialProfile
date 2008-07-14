@@ -1,8 +1,8 @@
 <?php
 /**
- * Internationalisation file for UserProfile extension pages.
+ * Internationalisation file for UserProfile extension.
  *
- * @addtogroup Extensions
+ * @ingroup Extensions
  */
 
 $messages = array();
@@ -88,6 +88,7 @@ Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.
 	'user-profile-update-log-section'       => 'changed section',
 	'user-profile-update-profile'           => 'profile',
 	'user-profile-default-country'          => 'United States',
+	'user-profile-points'                   => ' points',
 	'user-profile-section-personal'         => 'Personal information',
 	'user-profile-section-sportsteams'      => 'Update networks',
 	'user-profile-section-custom'           => 'Custom information',
@@ -1168,6 +1169,7 @@ $messages['fi'] = array(
 	'user-profile-update-log-section'                 => 'muutti osioa',
 	'user-profile-update-profile'                     => 'profiili',
 	'user-profile-default-country'                    => 'Suomi',
+	'user-profile-points'                             => ' pistettä',
 	'user-profile-section-personal'                   => 'Henkilökohtaiset tiedot',
 	'user-profile-section-sportsteams'                => 'Päivitä verkostoja',
 	'user-profile-section-custom'                     => 'Omat tiedot',
