@@ -85,6 +85,38 @@ $messages['bg'] = array(
 	'top-fans-stats-foe-count'     => '{{PLURAL:$1|Неприятел|Неприятели}}',
 );
 
+/** Finnish (Suomi)
+ * @author Jack Phoenix
+ */
+$messages['fi'] = array(
+	'user-stats-alltime-title'                    => 'Kaikkien aikojen suurimmat pistemäärät',
+	'user-stats-weekly-title'                     => 'Eniten pisteitä tällä viikolla',
+	'user-stats-monthly-title'                    => 'Eniten pisteitä tässä kuussa',
+	'topusers'                                    => 'Huippukäyttäjät',
+	'top-fans-by-points-nav-header'               => 'Huippufanit',
+	'top-fans-by-category-nav-header'             => 'Huiput luokittain',
+	'top-fans-total-points-link'                  => 'Pisteitä yhteensä',
+	'top-fans-weekly-points-link'                 => 'Pisteitä tällä viikolla',
+	'top-fans-monthly-points-link'                => 'Pisteitä tässä kuussa',
+	'top-fans-points'                             => 'pistettä',
+	'top-fans-bad-field-title'                    => 'Ups!',
+	'top-fans-stats-edit-count'                   => '{{PLURAL:$1|muokkaus|muokkausta}}',
+	'level-advance-subject'                       => 'Olet nyt "$1" {{GRAMMAR:inessive|{{SITENAME}}}}!',
+	'level-advance-body'                          => 'Hei $1:
+
+Olet nyt "$2" {{GRAMMAR:inessive|{{SITENAME}}}}!
+
+Onneksi olkoon,
+
+{{GRAMMAR:genitive|{{SITENAME}}}} tiimi
+
+---
+Hei, etkö enää halua saada sähköpostia meiltä?
+
+Napsauta $3
+ja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.',
+);
+
 /** French (Français)
  * @author Grondin
  */

@@ -31,7 +31,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 		}
 
 		$s = $dbr->selectRow( 'user_stats', array( 'stats_user_id' ), array('stats_user_id' => $row->rev_user), __METHOD__ );
-		if ( ! $s->stats_user_id	) {
+		if ( ! $s->stats_user_id ) {
 
 			$dbr->insert( 'user_stats',
 			array(
