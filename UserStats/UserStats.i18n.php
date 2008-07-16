@@ -300,6 +300,55 @@ $messages['pl'] = array(
 	'top-fans-stats-foe-count'     => '{{PLURAL:$1|Wróg|Wrogów}}',
 );
 
+/** Slovak (Slovenčina)
+ * @author Helix84
+ */
+$messages['sk'] = array(
+	'user-stats-alltime-title'                    => 'Najviac bodov celkom',
+	'user-stats-weekly-title'                     => 'Najviac bodov tento týždeň',
+	'user-stats-monthly-title'                    => 'Najviac bodov tento mesiac',
+	'topusers'                                    => 'Naj používatelia',
+	'top-fans-by-points-nav-header'               => 'Naj fanúšikovia',
+	'top-fans-by-category-nav-header'             => 'Naj podľa kategórie',
+	'top-fans-total-points-link'                  => 'Celkom bodov',
+	'top-fans-weekly-points-link'                 => 'Bodov tento týždeň',
+	'top-fans-monthly-points-link'                => 'Bodov tento mesiac',
+	'top-fans-points'                             => 'bodov',
+	'top-fans-by-category-title'                  => 'Naj celkom $1',
+	'top-fans-bad-field-title'                    => 'Ops!',
+	'top-fans-bad-field-message'                  => 'Uvedená štatistika neexistuje.',
+	'top-fans-stats-vote-count'                   => '{{PLURAL:$1|Hlas|Hlasy|Hlasov}}',
+	'top-fans-stats-monthly-winner-count'         => '{{PLURAL:$1|Mesačná výhra|Mesačné výhry|Mesačných výhier}}',
+	'top-fans-stats-weekly-winner-count'          => '{{PLURAL:$1|Týždenná výhra|Týždenné výhry|Týždenných výhier}}',
+	'top-fans-stats-edit-count'                   => '{{PLURAL:$1|Úprava|Úpravy|Úprav}}',
+	'top-fans-stats-comment-count'                => '{{PLURAL:$1|Komentár|Komentáre|Komentárov}}',
+	'top-fans-stats-referrals-completed'          => '{{PLURAL:$1|Odkazujúci|Odkazujúci|Odkazujúcich}}',
+	'top-fans-stats-friends-count'                => '{{PLURAL:$1|Priateľ|Priatelia|Priateľov}}',
+	'top-fans-stats-foe-count'                    => '{{PLURAL:$1|Nepriateľ|Nepriatelia|Nepriateľov}}',
+	'top-fans-stats-opinions-published'           => '{{PLURAL:$1|Zverejnený názor|Zverejnené názory|Zverejnených názorov}}',
+	'top-fans-stats-opinions-created'             => '{{PLURAL:$1|Názor|Názory|Názorov}}',
+	'top-fans-stats-comment-score-positive-rec'   => '{{PLURAL:$1|Pochvala|Pochvaly|Pochvál}}',
+	'top-fans-stats-comment-score-negative-rec'   => '{{PLURAL:$1|Pokarhanie|Pokarhania|Pokarhaní}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Daná pochvala|Dané pochvaly|Daných pochvál}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Dané pokarhanie|Dané pokarhania|Daných pokarhaní}}',
+	'top-fans-stats-gifts-rec-count'              => '{{PLURAL:$1|Obdržaný dar|Obdržané dary|Obdržaných darov}}',
+	'top-fans-stats-gifts-sent-count'             => '{{PLURAL:$1|Poslaný dar|Poslané dary|Poslaných darov}}',
+	'level-advance-subject'                       => 'Teraz ste „$1” na {{GRAMMAR:lokál|{{SITENAME}}}}!',
+	'level-advance-body'                          => 'Ahoj $1:
+
+Teraz ste „$1” na {{GRAMMAR:lokál|{{SITENAME}}}}!
+
+Gratulujeme,
+
+Tím {{GRAMMAR:genitív|{{SITENAME}}}}
+
+---
+Nechcete ďalej dostávať tieto emaily?
+
+Kliknite na $3
+a vypnite v svojich nastaveniach upozornenia emailom.',
+);
+
 /** Swedish (Svenska)
  * @author Boivie
  */
