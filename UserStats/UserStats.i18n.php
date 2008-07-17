@@ -232,7 +232,10 @@ $messages['lb'] = array(
 	'top-fans-stats-vote-count'       => '{{PLURAL:$1|Stëmm|Stëmmen}}',
 	'top-fans-stats-edit-count'       => '{{PLURAL:$1|Ännerung|Ännerungen}}',
 	'top-fans-stats-comment-count'    => '{{PLURAL:$1|Bemierkung|Bemierkungen}}',
+	'top-fans-stats-friends-count'    => '{{PLURAL:$1|Frënd|Frënn}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Meenung|Meenungen}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Cadeau|Cadeauë}} geschéckt',
+	'level-advance-subject'           => 'Dir sidd elo "$1" op {{SITENAME}}!',
 );
 
 /** Dutch (Nederlands)
