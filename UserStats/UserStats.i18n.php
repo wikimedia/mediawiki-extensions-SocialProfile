@@ -119,6 +119,7 @@ ja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.',
 
 /** French (Français)
  * @author Grondin
+ * @author Siebrand
  */
 $messages['fr'] = array(
 	'user-stats-alltime-title'                    => 'Points les plus élevés toutes périodes confondues',
@@ -162,12 +163,13 @@ L'équipe de {{SITENAME}}
 ---
 Voulez-vous arrêter de recevoir des courriels de notre part ?
 
-Cliquez $1
+Cliquez $3
 et modifiez vos paramètres en désactivant les notifications par courriel.",
 );
 
 /** Galician (Galego)
  * @author Toliño
+ * @author Siebrand
  */
 $messages['gl'] = array(
 	'user-stats-alltime-title'                    => 'Os que obtiveron máis puntos en total',
@@ -211,7 +213,7 @@ O equipo de {{SITENAME}}
 ---
 Quere deixar de recibir correos electrónicos nosos?
 
-Faga clic $4
+Faga clic $3
 e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
 );
 
@@ -305,6 +307,7 @@ $messages['pl'] = array(
 
 /** Slovak (Slovenčina)
  * @author Helix84
+ * @author Siebrand
  */
 $messages['sk'] = array(
 	'user-stats-alltime-title'                    => 'Najviac bodov celkom',
@@ -339,7 +342,7 @@ $messages['sk'] = array(
 	'level-advance-subject'                       => 'Teraz ste „$1” na {{GRAMMAR:lokál|{{SITENAME}}}}!',
 	'level-advance-body'                          => 'Ahoj $1:
 
-Teraz ste „$1” na {{GRAMMAR:lokál|{{SITENAME}}}}!
+Teraz ste „$2” na {{GRAMMAR:lokál|{{SITENAME}}}}!
 
 Gratulujeme,
 

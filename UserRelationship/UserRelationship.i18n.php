@@ -1401,6 +1401,7 @@ $messages['nn'] = array(
 
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Jon Harald Søby
+ * @author Siebrand
  */
 $messages['no'] = array(
 	'viewrelationships'                          => 'Vis forbindelse',
@@ -1485,7 +1486,10 @@ Takk
 
 ---
 
-Vil du ikke motta flere e-poster fra oss?',
+Vil du ikke motta flere e-poster fra oss?
+
+Klikk $4
+og endre innstillingene dine for ikke å motta flere slike e-poster.',
 	'friend_accept_subject'                      => '$1 har godtatt din venneforespørsel på {{SITENAME}}.',
 	'friend_accept_body'                         => 'Hei, $1.
 
@@ -1858,7 +1862,7 @@ $messages['sk'] = array(
 	'ur-backlink'                                => '&lt; Späť na profil $1',
 	'ur-friend'                                  => 'priateľ',
 	'ur-foe'                                     => 'nepriateľ',
-	'ur-relationship-count'                      => '1 má $2 {{PLURAL:$2|$3|$3}}.',
+	'ur-relationship-count'                      => '$1 má $2 {{PLURAL:$2|$3|$3}}.',
 	'ur-add-friends'                             => 'Chcete viac priateľov? <a href="$1">Pozvite ich</a>',
 	'ur-add-friend'                              => 'Pridať ako priateľa',
 	'ur-add-foe'                                 => 'Pridať ako nepriateľa',
