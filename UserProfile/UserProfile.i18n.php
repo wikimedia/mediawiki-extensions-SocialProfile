@@ -2267,6 +2267,13 @@ $messages['mr'] = array(
 	'user-board-login-message'                        => 'इतर सदस्यांना संदेश पाठविण्यासाठी तुम्ही <a href="$1">प्रवेश केलेला असणे</a> आवश्यक आहे.',
 );
 
+/** Nahuatl (Nahuatl)
+ * @author Fluence
+ */
+$messages['nah'] = array(
+	'user-profile-personal-name' => 'Tōcāitl',
+);
+
 /** Low German (Plattdüütsch)
  * @author Slomox
  */
@@ -2820,6 +2827,7 @@ $messages['os'] = array(
  * @author Maikking
  */
 $messages['pl'] = array(
+	'user-count-separator'                   => 'z',
 	'user-view-all'                          => 'Pokaż wszystko',
 	'user-upload-image'                      => 'Prześlij grafikę',
 	'user-edit-this'                         => 'Edytuj to',
@@ -2888,6 +2896,19 @@ $messages['pl'] = array(
 	'user-profile-interests-magazines'       => 'Czasopisma',
 	'user-profile-interests-videogames'      => 'Gry wideo',
 	'user-profile-picture-log-entry'         => 'wgrał swój nowy portret',
+	'user-board-login-message'               => 'Musisz być <a href="$1">zalogowany</a>, żeby zostawiać wiadomości innym użytkownikom.',
+	'removeavatar'                           => 'Usuń awatar',
+	'givegift'                               => 'Daj prezent',
+	'viewgifts'                              => 'Zobacz prezenty',
+	'viewsystemgifts'                        => 'Zobacz nagrody',
+	'avatarupload-removeavatar'              => 'Usuń awatar',
+	'avatarupload-currentavatar'             => 'Obecny awatar użytkownika $1',
+	'avatarupload-removesuccess'             => 'Awatar został usunięty',
+	'avatarupload-removeanother'             => 'Usuń kolejny',
+	'profilelogpage'                         => 'Historia zmian profilu użytkownika',
+	'avatarlogpage'                          => 'Lista przesłanych awatarów',
+	'avatarlogpagetext'                      => 'Przesłane awatary użytkownika',
+	'user-profile-picture-log-delete-entry'  => 'usunięto awatar $1',
 );
 
 /** Pashto (پښتو)

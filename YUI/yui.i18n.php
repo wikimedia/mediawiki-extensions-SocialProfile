@@ -10,6 +10,13 @@ $messages['en'] = array(
 	'yui-desc' => 'A set of utilities and controls, written in JavaScript',
 );
 
+/** Afrikaans (Afrikaans)
+ * @author Naudefj
+ */
+$messages['af'] = array(
+	'yui-desc' => 'Versameling hulpmiddels en kontroles wat in JavaScript geskryf is',
+);
+
 /** Bulgarian (Български)
  * @author DCLXVI
  */
@@ -178,3 +185,4 @@ $messages['vec'] = array(
 $messages['vi'] = array(
 	'yui-desc' => 'Tập hợp các dụng cụ và trình điều khiển được viết bằng JavaScript',
 );
+

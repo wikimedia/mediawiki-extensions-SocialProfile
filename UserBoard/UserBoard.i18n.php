@@ -82,9 +82,11 @@ $messages['niu'] = array(
 
 /** Afrikaans (Afrikaans)
  * @author Arnobarnard
+ * @author Naudefj
  */
 $messages['af'] = array(
 	'userboard_delete'     => 'Skrap',
+	'userboard_private'    => 'persoonlik',
 	'userboard_sendbutton' => 'stuur',
 );
 
@@ -938,12 +940,13 @@ $messages['os'] = array(
 /** Polish (Polski)
  * @author Sp5uhe
  * @author Maikking
+ * @author Derbeth
  */
 $messages['pl'] = array(
 	'messagesenttitle'         => 'Wiadomości zostały wysłane',
 	'boardblaststep1'          => 'Krok 1 – Napisz wiadomość',
 	'boardblastprivatenote'    => 'Wszystkie wiadomości będą wysyłane jako prywatne',
-	'boardblaststep2'          => 'Krok 2 – Wybierz do kogo chcesz wysłać wiadomość',
+	'boardblaststep2'          => 'Krok 2 – Wybierz, do kogo chcesz wysłać wiadomość',
 	'boardlinkselectall'       => 'Zaznacz wszystkich',
 	'boardlinkunselectall'     => 'Odznacz wszystkich',
 	'boardlinkselectfriends'   => 'Zaznacz znajomych',
@@ -1010,6 +1013,13 @@ $messages['pt'] = array(
  */
 $messages['rif'] = array(
 	'userboard_delete' => 'Sfaḍ',
+);
+
+/** Romanian (Română)
+ * @author KlaudiuMihaila
+ */
+$messages['ro'] = array(
+	'userboard_delete' => 'Şterge',
 );
 
 /** Russian (Русский)
