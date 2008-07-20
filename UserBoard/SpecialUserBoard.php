@@ -116,7 +116,7 @@ class SpecialViewUserBoard extends SpecialPage {
 							if(\$(\"user_name_from\").value){ //its a board to board
 								user_1 = \$(\"user_name_from\").value
 								user_2 = \$(\"user_name_to\").value
-							}else{
+							} else {
 								user_1 = \$(\"user_name_to\").value
 								user_2 = \"\";
 							}
@@ -135,7 +135,7 @@ class SpecialViewUserBoard extends SpecialPage {
 					var pars = 'rs=wfDeleteBoardMessage&rsargs[]=' + id
 					var callback = {
 						success: function(originalRequest){
-							window.location='index.php?title=Special:UserBoard&user='+\$(\"user_name_to\").value;
+							window.location.reload();
 						}
 					};
 					var request = YAHOO.util.Connect.asyncRequest('POST', url, callback, pars);

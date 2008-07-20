@@ -21,7 +21,7 @@ function delete_message(id){
 		var pars = 'rs=wfDeleteBoardMessage&rsargs[]=' + id
 		var callback = {
 			success: function(originalRequest){
-				window.location='index.php?title=' + wgPageName ;
+				window.location.reload();
 			}
 		};
 		var request = YAHOO.util.Connect.asyncRequest('POST', url, callback, pars);
