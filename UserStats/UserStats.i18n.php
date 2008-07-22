@@ -56,6 +56,19 @@ Click $3
 and change your settings to disable email notifications.'
 );
 
+/** Afrikaans (Afrikaans)
+ * @author Naudefj
+ */
+$messages['af'] = array(
+	'user-stats-monthly-title'     => 'Meeste punte die maand',
+	'topusers'                     => 'Topgebruikers',
+	'top-fans-total-points-link'   => 'Puntetotaal',
+	'top-fans-weekly-points-link'  => 'Punte die week',
+	'top-fans-monthly-points-link' => 'Punte die maand',
+	'top-fans-points'              => 'punte',
+	'top-fans-stats-vote-count'    => '{{PLURAL:$1|Stem|Stemme}}',
+);
+
 /** Arabic (العربية)
  * @author Meno25
  */

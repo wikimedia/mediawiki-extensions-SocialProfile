@@ -738,6 +738,13 @@ $4 वर टिचकी मारा
 आणि विपत्र(ईमेल) सूचना अक्षम करण्याकरिता सुविधेत बदल करा.',
 );
 
+/** Nahuatl (Nahuatl)
+ * @author Fluence
+ */
+$messages['nah'] = array(
+	'userboard_delete' => 'Ticpoloāz',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
@@ -1019,7 +1026,9 @@ $messages['rif'] = array(
  * @author KlaudiuMihaila
  */
 $messages['ro'] = array(
-	'userboard_delete' => 'Şterge',
+	'userboard_delete'     => 'Şterge',
+	'userboard_private'    => 'privat',
+	'userboard_sendbutton' => 'trimite',
 );
 
 /** Russian (Русский)

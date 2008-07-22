@@ -143,6 +143,13 @@ $messages['pt'] = array(
 	'yui-desc' => 'Um conjunto de utilitários e controlos, escritos em JavaScript',
 );
 
+/** Romanian (Română)
+ * @author KlaudiuMihaila
+ */
+$messages['ro'] = array(
+	'yui-desc' => 'O serie de utilitzare şi controale, în JavaScript',
+);
+
 /** Russian (Русский)
  * @author Александр Сигачёв
  */

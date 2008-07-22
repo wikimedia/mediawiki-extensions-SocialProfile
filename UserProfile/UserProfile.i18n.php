@@ -219,18 +219,55 @@ $messages['niu'] = array(
 
 /** Afrikaans (Afrikaans)
  * @author Arnobarnard
+ * @author Naudefj
  */
 $messages['af'] = array(
-	'other-info-title'               => 'Ander inligting',
-	'user-personal-info-title'       => 'Persoonlike inligting',
-	'user-personal-info-real-name'   => 'Regte naam',
-	'user-profile-section-personal'  => 'Persoonlike inligting',
-	'user-profile-section-interests' => 'Ander inligting',
-	'user-profile-personal-name'     => 'Naam',
-	'user-profile-personal-email'    => 'E-pos',
-	'user-profile-picture-large'     => 'Groot',
-	'user-profile-picture-medium'    => 'Medium',
-	'user-profile-picture-small'     => 'Klein',
+	'other-info-title'                     => 'Ander inligting',
+	'other-info-music'                     => 'Musiek',
+	'other-info-magazines'                 => 'Tydskrifte',
+	'user-personal-info-title'             => 'Persoonlike inligting',
+	'user-personal-info-real-name'         => 'Regte naam',
+	'user-personal-info-hometown'          => 'Woonplek',
+	'user-personal-info-occupation'        => 'Beroep',
+	'user-personal-info-websites'          => 'Webwerwe',
+	'user-profile-default-country'         => 'Verenigde State',
+	'user-profile-points'                  => 'punte',
+	'user-profile-section-personal'        => 'Persoonlike inligting',
+	'user-profile-section-interests'       => 'Ander inligting',
+	'user-profile-personal-info'           => 'Inligting',
+	'user-profile-personal-name'           => 'Naam',
+	'user-profile-personal-email'          => 'E-pos',
+	'user-profile-personal-confirmemail'   => 'Bevestig e-pos',
+	'user-profile-personal-location'       => 'Ligging',
+	'user-profile-personal-city'           => 'Stad',
+	'user-profile-personal-country'        => 'Land',
+	'user-profile-personal-hometown'       => 'Woonplek',
+	'user-profile-personal-birthday'       => 'Verjaarsdag',
+	'user-profile-personal-birthdate'      => 'Datum (MM/DD)',
+	'user-profile-personal-aboutme'        => 'Oor my',
+	'user-profile-personal-work'           => 'Werk',
+	'user-profile-personal-occupation'     => 'Beroep',
+	'user-profile-personal-education'      => 'Opleiding',
+	'user-profile-personal-schools'        => 'Skole',
+	'user-profile-personal-places'         => 'Plekke',
+	'user-profile-personal-placeslived'    => 'Waar ek gewoon het',
+	'user-profile-personal-web'            => 'Web',
+	'user-profile-personal-websites'       => 'Webwerwe',
+	'user-profile-interests-entertainment' => 'Vermaak',
+	'user-profile-interests-movies'        => 'Films',
+	'user-profile-interests-tv'            => 'Televisie',
+	'user-profile-interests-music'         => 'Musiek',
+	'user-profile-interests-books'         => 'Boeke',
+	'user-profile-interests-magazines'     => 'Tydskrifte',
+	'user-profile-interests-eats'          => 'Eetgoed',
+	'user-profile-interests-foodsnacks'    => 'Kos en happies',
+	'user-profile-interests-drinks'        => 'Drankies',
+	'user-profile-sports-sport'            => 'Sport',
+	'user-profile-picture-yourpicture'     => 'Jou foto',
+	'user-profile-picture-large'           => 'Groot',
+	'user-profile-picture-medium'          => 'Medium',
+	'user-profile-picture-small'           => 'Klein',
+	'user-profile-goback'                  => 'Terug',
 );
 
 /** Arabic (العربية)
@@ -376,6 +413,7 @@ $messages['ar'] = array(
 * Special:UploadAvatar|أفاتر
 * Special:UpdateProfile/preferences|تفضيلات',
 	'user-type-toggle-old'                            => 'استخدم صفحة مستخدم الويكي',
+	'user-type-toggle-new'                            => 'استخدم صفحة مستخدم اجتماعية',
 	'removeavatar'                                    => 'إزالة الأفاتر',
 	'viewgifts'                                       => 'عرض الهدايا',
 	'viewsystemgifts'                                 => 'عرض الجوائز',
@@ -2271,7 +2309,11 @@ $messages['mr'] = array(
  * @author Fluence
  */
 $messages['nah'] = array(
-	'user-profile-personal-name' => 'Tōcāitl',
+	'user-watchlist'               => 'Notlachiyaliz',
+	'user-personal-info-real-name' => 'Melāhuac motōcā',
+	'user-profile-personal-name'   => 'Tōcāitl',
+	'user-profile-personal-email'  => 'E-mail',
+	'user-page-link'               => 'Tlatēquitiltilīlli',
 );
 
 /** Low German (Plattdüütsch)
@@ -3093,6 +3135,22 @@ $messages['pt'] = array(
 $messages['rif'] = array(
 	'user-watchlist'               => 'Tabdart(lista) uḥṭṭu',
 	'user-personal-info-real-name' => 'Ism n dṣṣaḥ',
+);
+
+/** Romanian (Română)
+ * @author KlaudiuMihaila
+ */
+$messages['ro'] = array(
+	'other-info-title'               => 'Alte informaţii',
+	'user-personal-info-title'       => 'Informaţii personale',
+	'user-personal-info-real-name'   => 'Nume real',
+	'user-profile-section-personal'  => 'Informaţii personale',
+	'user-profile-section-interests' => 'Alte informaţii',
+	'user-profile-personal-name'     => 'Nume',
+	'user-profile-personal-email'    => 'E-mail',
+	'user-profile-picture-large'     => 'Mare',
+	'user-profile-picture-medium'    => 'Mediu',
+	'user-profile-picture-small'     => 'Mic',
 );
 
 /** Russian (Русский)

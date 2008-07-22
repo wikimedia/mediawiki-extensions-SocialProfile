@@ -1222,6 +1222,13 @@ $2 ने तुम्हांला {{SITENAME}} वर मित्र म्
 व इमेल सूचनांच्या तुमच्या पसंती बदला.',
 );
 
+/** Nahuatl (Nahuatl)
+ * @author Fluence
+ */
+$messages['nah'] = array(
+	'ur-cancel' => 'Ticcuepāz',
+);
+
 /** Low German (Plattdüütsch)
  * @author Slomox
  */
@@ -1835,6 +1842,16 @@ $messages['pt'] = array(
  */
 $messages['rif'] = array(
 	'ur-main-page' => 'Tasbtirt Tamzwarut',
+);
+
+/** Romanian (Română)
+ * @author KlaudiuMihaila
+ */
+$messages['ro'] = array(
+	'ur-main-page' => 'Pagina principală',
+	'ur-remove'    => 'Elimină',
+	'ur-cancel'    => 'Anulează',
+	'ur-login'     => 'Autentificare',
 );
 
 /** Russian (Русский)
