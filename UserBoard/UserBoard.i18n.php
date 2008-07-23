@@ -122,6 +122,20 @@ $messages['ar'] = array(
 	'userboard_prevpage'        => 'قبل',
 	'userboard_nomessages'      => 'لا رسائل.',
 	'userboard_sendbutton'      => 'أرسل',
+	'message_received_body'     => 'مرحبا $1:
+
+$2 كتب حالا على مجلسك في {{SITENAME}}!
+
+اضغط بالأسفل للتحقق من مجلسك!
+
+$3
+
+---
+
+هل تريد التوقف عن تلقي رسائل بريد إلكتروني مننا؟
+
+اضغط $4
+وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
 );
 
 /** Bulgarian (Български)
@@ -742,7 +756,8 @@ $4 वर टिचकी मारा
  * @author Fluence
  */
 $messages['nah'] = array(
-	'userboard_delete' => 'Ticpoloāz',
+	'userboard_delete'   => 'Ticpolōz',
+	'userboard_nextpage' => 'niman',
 );
 
 /** Dutch (Nederlands)

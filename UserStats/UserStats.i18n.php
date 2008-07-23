@@ -73,29 +73,59 @@ $messages['af'] = array(
  * @author Meno25
  */
 $messages['ar'] = array(
-	'user-stats-alltime-title'        => 'أكثر النقاط كل الوقت',
-	'user-stats-weekly-title'         => 'أكثر النقاط هذا الأسبوع',
-	'user-stats-monthly-title'        => 'أكثر النقاط هذا الشهر',
-	'topusers'                        => 'أعلى المستخدمين',
-	'top-fans-by-points-nav-header'   => 'أعلى المعجبين',
-	'top-fans-by-category-nav-header' => 'الأعلى بالتصنيف',
-	'top-fans-total-points-link'      => 'إجمالي النقاط',
-	'top-fans-weekly-points-link'     => 'النقاط هذا الأسبوع',
-	'top-fans-monthly-points-link'    => 'النقاط هذا الشهر',
-	'top-fans-points'                 => 'نقاط',
-	'top-fans-bad-field-title'        => 'أوبس!',
+	'user-stats-alltime-title'                    => 'أكثر النقاط كل الوقت',
+	'user-stats-weekly-title'                     => 'أكثر النقاط هذا الأسبوع',
+	'user-stats-monthly-title'                    => 'أكثر النقاط هذا الشهر',
+	'topusers'                                    => 'أعلى المستخدمين',
+	'top-fans-by-points-nav-header'               => 'أعلى المعجبين',
+	'top-fans-by-category-nav-header'             => 'الأعلى بالتصنيف',
+	'top-fans-total-points-link'                  => 'إجمالي النقاط',
+	'top-fans-weekly-points-link'                 => 'النقاط هذا الأسبوع',
+	'top-fans-monthly-points-link'                => 'النقاط هذا الشهر',
+	'top-fans-points'                             => 'نقاط',
+	'top-fans-bad-field-title'                    => 'أوبس!',
+	'top-fans-stats-monthly-winner-count'         => '{{PLURAL:$1|فوز شهري|فوز شهري}}',
+	'top-fans-stats-weekly-winner-count'          => '{{PLURAL:$1|فوز أسبوعي|فوز أسبوعي}}',
+	'top-fans-stats-referrals-completed'          => '{{PLURAL:$1|تراجع|تراجع}}',
+	'top-fans-stats-opinions-published'           => '{{PLURAL:$1|رأي منشور|رأي منشور}}',
+	'top-fans-stats-opinions-created'             => '{{PLURAL:$1|رأي|رأي}}',
+	'top-fans-stats-comment-score-positive-rec'   => '{{PLURAL:$1|وسام|وسام}}',
+	'top-fans-stats-comment-score-negative-rec'   => '{{PLURAL:$1|عيب|عيب}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|وسام معطى|وسام معطى}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|عيب معطى|عيب معطى}}',
+	'top-fans-stats-gifts-sent-count'             => '{{PLURAL:$1|هدية مرسلة|هدية مرسلة}}',
+	'level-advance-body'                          => 'مرحبا $1:
+
+أنت الآن "$2" في {{SITENAME}}!
+
+تهانينا،
+
+فرق {{SITENAME}}
+
+---
+هل تريد التوقف عن تلقي رسائل بريد إلكتروني منا؟
+
+اضغط $3
+وغير إعداداتك لتعديل إخطارات البريد الإلكتروني.',
 );
 
 /** Bulgarian (Български)
  * @author DCLXVI
  */
 $messages['bg'] = array(
-	'top-fans-points'              => 'точки',
-	'top-fans-bad-field-title'     => 'Опа!',
-	'top-fans-stats-edit-count'    => '{{PLURAL:$1|Редакция|Редакции}}',
-	'top-fans-stats-comment-count' => '{{PLURAL:$1|Коментар|Коментари}}',
-	'top-fans-stats-friends-count' => '{{PLURAL:$1|Приятел|Приятели}}',
-	'top-fans-stats-foe-count'     => '{{PLURAL:$1|Неприятел|Неприятели}}',
+	'user-stats-weekly-title'         => 'Най-много точки тази седмица',
+	'user-stats-monthly-title'        => 'Най-много точки този месец',
+	'top-fans-total-points-link'      => 'Общо точки',
+	'top-fans-weekly-points-link'     => 'Точки тази седмица',
+	'top-fans-monthly-points-link'    => 'Точки този месец',
+	'top-fans-points'                 => 'точки',
+	'top-fans-bad-field-title'        => 'Опа!',
+	'top-fans-stats-edit-count'       => '{{PLURAL:$1|Редакция|Редакции}}',
+	'top-fans-stats-comment-count'    => '{{PLURAL:$1|Коментар|Коментари}}',
+	'top-fans-stats-friends-count'    => '{{PLURAL:$1|Приятел|Приятели}}',
+	'top-fans-stats-foe-count'        => '{{PLURAL:$1|Неприятел|Неприятели}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Мнение|Мнения}}',
+	'level-advance-subject'           => 'Вече сте „$1“ в {{SITENAME}}!',
 );
 
 /** Finnish (Suomi)
