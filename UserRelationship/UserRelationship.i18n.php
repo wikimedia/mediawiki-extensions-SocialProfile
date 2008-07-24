@@ -197,9 +197,11 @@ $messages['niu'] = array(
 
 /** Afrikaans (Afrikaans)
  * @author Arnobarnard
+ * @author Naudefj
  */
 $messages['af'] = array(
 	'ur-main-page' => 'Tuisblad',
+	'ur-previous'  => 'vorige',
 	'ur-next'      => 'volgende',
 	'ur-remove'    => 'Skrap',
 	'ur-cancel'    => 'Kanselleer',
@@ -215,37 +217,63 @@ $messages['ar'] = array(
 	'viewrelationships'                          => 'اعرض العلاقة',
 	'viewrelationshiprequests'                   => 'اعرض طلبات العلاقات',
 	'ur-already-submitted'                       => 'طلبك تم إرساله',
+	'ur-error-title'                             => 'آه، أنت أخذت منحن خاطئا!',
+	'ur-error-message-no-user'                   => 'لا يمكننا استكمال طلبك، لأنه لا يوجد مستخدم بهذا الاسم.',
 	'ur-main-page'                               => 'الصفحة الرئيسية',
 	'ur-your-profile'                            => 'ملفك',
+	'ur-backlink'                                => '&lt; رجوع إلى ملف $1',
 	'ur-friend'                                  => 'صديق',
 	'ur-foe'                                     => 'عدو',
 	'ur-relationship-count'                      => '$1 يمتلك $2 {{PLURAL:$2|$3|$3s}}.',
 	'ur-add-friends'                             => '  تريد المزيد من الأصدقاء؟ <a href="$1">أدعهم</a>',
 	'ur-add-friend'                              => 'أضف كصديق',
 	'ur-add-foe'                                 => 'أضف كعدو',
+	'ur-add-no-user'                             => 'لا مستخدم تم اختياره.
+من فضلك اطلب الأصدقاء/الأعداء من خلال الوصلة الصحيحة.',
 	'ur-add-personal-message'                    => 'إضافة رسالة شخصية',
 	'ur-remove-relationship'                     => 'أزل ك&#x200d; $1',
 	'ur-give-gift'                               => 'اعطي هدية',
 	'ur-previous'                                => 'قبل',
 	'ur-next'                                    => 'بعد',
+	'ur-remove-relationship-title'               => 'هل تريد إزالة $1 ك$2؟',
+	'ur-remove-relationship-title-confirm'       => 'أنت أزلت $1 ك$2 خاص بك',
+	'ur-remove-relationship-message'             => 'أنت طلبت إزالة $1 ك$2، اضغط "$3" للتأكيد.',
 	'ur-remove-relationship-message-confirm'     => 'قمت بحذف $1 ك$2 خاص بك.',
 	'ur-remove-error-message-no-relationship'    => 'لا تملتلك أي علاقة مع $1.',
 	'ur-remove-error-message-remove-yourself'    => 'لا يمكن أن تزيل نفسك.',
 	'ur-remove-error-message-pending-request'    => 'لديك طلب $1 قيد الانتظار مع $2.',
+	'ur-remove-error-not-loggedin'               => 'أنت ينبغي أن تكون مسجل الدخول لإزالة $1.',
 	'ur-remove'                                  => 'أزل',
 	'ur-cancel'                                  => 'الغ',
 	'ur-login'                                   => 'لج',
+	'ur-add-title'                               => 'هل تريد إضافة $1 ك$2؟',
+	'ur-add-message'                             => 'أنت على وشك إضافة $1 ك$2.
+سنخطر $1 لتأكيد $3 الخاص بك.',
 	'ur-friendship'                              => 'صداقة',
 	'ur-grudge'                                  => 'ضغينة',
 	'ur-add-button'                              => 'أضف ك&#x200d; $1',
+	'ur-add-sent-title'                          => 'لقد أرسلنا طلب $1 الخاص بك إلى $2!',
+	'ur-add-sent-message'                        => 'طلب $1 الخاص بك تم إرساله إلى $2 للتأكيد.
+لو أن $2 أكد طلبك، ستتلقى بريد متابعة إلكتروني',
 	'ur-add-error-message-no-user'               => 'المستخدم الذي تحاول أن تضيفه غير موجود.',
+	'ur-add-error-message-blocked'               => 'أنت حاليا ممنوع ولا يمكنك إضافة أصدقاء أو أعداء.',
 	'ur-add-error-message-yourself'              => 'أنت لا يمكنك إضافة نفسك كصديق أو عدو.',
+	'ur-add-error-message-existing-relationship' => 'أنت بالفعل $1 مع $2.',
 	'ur-add-error-message-pending-request-title' => 'الصبر جميل!',
+	'ur-add-error-message-pending-request'       => 'أنت لديك طلب $1 قيد الانتظار مع $2.
+سنخطرك عندما يؤكد $2 طلبك.',
 	'ur-add-error-message-not-loggedin'          => 'يجب أن تكون مسجلا دخولك لتضيف $1',
 	'ur-requests-title'                          => 'طلبات العلاقات',
+	'ur-requests-message'                        => '<a href="$1">$2</a> يريد أن يكون $3 الخاص بك.',
 	'ur-accept'                                  => 'اقبل',
 	'ur-reject'                                  => 'ارفض',
+	'ur-no-requests-message'                     => 'ليس لديك طلبات صداقة أو عداوة.
+لو أنك تريد المزيد من الأصدقاء، <a href="$1">ادعوهم!</a>',
+	'ur-requests-added-message'                  => 'أنت أضفت $1 ك$2.',
+	'ur-requests-reject-message'                 => 'أنت رفضت $1 ك$2.',
+	'ur-title-foe'                               => 'قائمة أعداء $1',
 	'ur-title-friend'                            => 'قائمة أصدقاء $1',
+	'friend_request_subject'                     => '$1 أضافك كصديق في {{SITENAME}}!',
 	'friend_request_body'                        => 'مرحبا $1:
 
 $2 أضافك كصديق في {{SITENAME}}.  نريد التأكد من أنكما فعلا صديقان.
@@ -261,6 +289,7 @@ $3
 
 اضغط $4
 وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
+	'foe_request_subject'                        => 'إنها الحرب! $1 أضافك كعدو في {{SITENAME}}!',
 	'foe_request_body'                           => 'مرحبا $1:
 
 $2 أضافك حالا كعدو في {{SITENAME}}.  نريد التحقق من أنكما فعلا عدوان أو على الأقل بينكما خلاف.
@@ -277,6 +306,7 @@ $3
 
 اضغط $4
 وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
+	'friend_accept_subject'                      => '$1 قبل طلب صداقتك في {{SITENAME}}!',
 	'friend_accept_body'                         => 'مرحبا $1:
 
 $2 قبل طلب صداقتك في {{SITENAME}}!
@@ -291,6 +321,7 @@ $2 قبل طلب صداقتك في {{SITENAME}}!
 
 اضغط $4
 وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
+	'foe_accept_subject'                         => 'إنه يعمل! $1 قبل طلب عداوتك في {{SITENAME}}!',
 	'foe_accept_body'                            => 'مرحبا $1:
 
 $2 قبل طلب عداوتك في {{SITENAME}}!
@@ -318,6 +349,7 @@ $2 أزالك كصديق في {{SITENAME}}!
 
 اضغط $4
 وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
+	'foe_removed_subject'                        => 'هاه! $1 أزالك كعدو في {{SITENAME}}!',
 	'foe_removed_body'                           => 'مرحبا $1:
 
 $2 أزالك كعدو في {{SITENAME}}!

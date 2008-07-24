@@ -17,6 +17,13 @@ $messages['af'] = array(
 	'yui-desc' => 'Versameling hulpmiddels en kontroles wat in JavaScript geskryf is',
 );
 
+/** Arabic (العربية)
+ * @author Meno25
+ */
+$messages['ar'] = array(
+	'yui-desc' => 'مجموعة من الأدوات وأجهزة التحكم، مكتوبة بجافاسكريبت',
+);
+
 /** Bulgarian (Български)
  * @author DCLXVI
  */

@@ -87,6 +87,10 @@ $messages['niu'] = array(
 $messages['af'] = array(
 	'userboard_delete'     => 'Skrap',
 	'userboard_private'    => 'persoonlik',
+	'userboard_public'     => 'publiek',
+	'userboard_nextpage'   => 'volgende',
+	'userboard_prevpage'   => 'vorige',
+	'userboard_nomessages' => 'Geen boodskappe.',
 	'userboard_sendbutton' => 'stuur',
 );
 
@@ -96,7 +100,11 @@ $messages['af'] = array(
  * @author OsamaK
  */
 $messages['ar'] = array(
+	'boardblastlogintitle'      => 'أنت ينبغي أن تكون مسجل الدخول لترسل بورد بلاست',
+	'boardblastlogintext'       => 'أنت يجب أن تكون مسجل الدخول لترسل بورد بلاست.
+اضغط <a href="index.php?title=Special:UserLogin">هنا لتسجيل الدخول</a>',
 	'messagesenttitle'          => 'الرسائل تم إرسالها',
+	'boardblasttitle'           => 'أرسل بورد بلاست',
 	'boardblaststep1'           => 'خطوة 1 - اكتب رسالتك',
 	'boardblastprivatenote'     => 'كل الرسائل سترسل كرسائل خاصة',
 	'boardblaststep2'           => 'خطوة 2 - انتقِ الذي تود إرسال رسالتك إليه',
@@ -106,15 +114,24 @@ $messages['ar'] = array(
 	'boardlinkunselectfriends'  => 'عكس اختيار الأصدقاء',
 	'boardlinkselectfoes'       => 'اختيار الأعداء',
 	'boardlinkunselectfoes'     => 'عكس اختيار الأعداء',
+	'boardsendbutton'           => 'أرسل بورد بلاست',
 	'boardnofriends'            => 'لا تمتلك أي أصدقاء لترسل رسالة إليهم!',
 	'messagesentsuccess'        => 'رسالتك أُرسلت بنجاح',
 	'userboard'                 => 'مجلس المستخدم',
+	'userboard_board-to-board'  => 'بورد إلى بورد',
 	'userboard_delete'          => 'احذف',
 	'userboard_noexist'         => 'المستخدم الذي تحاول عرضه غير موجود.',
 	'userboard_yourboard'       => 'مجلسك',
+	'userboard_owner'           => 'بورد الخاص ب$1',
+	'userboard_yourboardwith'   => 'مجلسك إلى مجلس مع $1',
+	'userboard_otherboardwith'  => 'مجلس إلى مجلس الخاص ب$1 مع $2',
+	'userboard_backprofile'     => 'رجوع إلى ملف $1',
 	'userboard_backyourprofile' => 'الرجوع إلى ملفك',
+	'userboard_boardtoboard'    => 'مجلس إلى مجلس',
 	'userboard_confirmdelete'   => 'أتريد حذف هذه الرسالة حقًا؟',
+	'userboard_sendmessage'     => 'أرسل رسالة إلى $1',
 	'userboard_myboard'         => 'مجلسي',
+	'userboard_posted_ago'      => 'بعث منذ $1',
 	'userboard_private'         => 'خاص',
 	'userboard_public'          => 'عمومي',
 	'userboard_messagetype'     => 'نوع الرسالة',
@@ -122,6 +139,9 @@ $messages['ar'] = array(
 	'userboard_prevpage'        => 'قبل',
 	'userboard_nomessages'      => 'لا رسائل.',
 	'userboard_sendbutton'      => 'أرسل',
+	'userboard_loggedout'       => 'أنت يجب أن تكون <a href="$1">مسجل الدخول</a> لترسل رسائل إلى المستخدمين الآخرين.',
+	'userboard_showingmessages' => 'عرض $2-$3 من {{PLURAL:$1|$1 رسالة|$1 رسالة}}',
+	'message_received_subject'  => '$1 كتب على مجلسك في {{SITENAME}}',
 	'message_received_body'     => 'مرحبا $1:
 
 $2 كتب حالا على مجلسك في {{SITENAME}}!
