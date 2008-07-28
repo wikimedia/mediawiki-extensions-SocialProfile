@@ -341,6 +341,16 @@ Klik $3
 en wijzig uw instellingen om e-mailberichten uit te schakelen.",',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Jon Harald Søby
+ */
+$messages['no'] = array(
+	'user-stats-alltime-title' => 'Flest poeng noensinne',
+	'user-stats-weekly-title'  => 'Flest poeng denne uka',
+	'user-stats-monthly-title' => 'Flest poeng denne måneden',
+	'topusers'                 => 'Beste brukere',
+);
+
 /** Polish (Polski)
  * @author Maikking
  */

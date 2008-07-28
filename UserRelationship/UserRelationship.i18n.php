@@ -836,6 +836,13 @@ Cliquez $4
 et modifiez vos préférences pour désactiver les notifications par courriel.',
 );
 
+/** Western Frisian (Frysk)
+ * @author Snakesteuben
+ */
+$messages['fy'] = array(
+	'ur-main-page' => 'Haadside',
+);
+
 /** Galician (Galego)
  * @author Toliño
  */

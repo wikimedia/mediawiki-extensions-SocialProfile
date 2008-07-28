@@ -495,6 +495,13 @@ Cliquer $4
 et modifiez vos paramètres pour désactiver les notifications des courriels.",
 );
 
+/** Western Frisian (Frysk)
+ * @author Snakesteuben
+ */
+$messages['fy'] = array(
+	'userboard_delete' => 'Wiskje',
+);
+
 /** Galician (Galego)
  * @author Toliño
  */
