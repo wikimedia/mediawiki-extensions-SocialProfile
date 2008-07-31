@@ -137,6 +137,14 @@ $messages['bg'] = array(
 	'level-advance-subject'           => 'Вече сте „$1“ в {{SITENAME}}!',
 );
 
+/** German (Deutsch)
+ * @author Revolus
+ */
+$messages['de'] = array(
+	'top-fans-points'          => 'Punkte',
+	'top-fans-bad-field-title' => 'Hoppla!',
+);
+
 /** Finnish (Suomi)
  * @author Jack Phoenix
  */

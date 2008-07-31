@@ -592,6 +592,13 @@ $messages['ia'] = array(
 	'userboard_delete' => 'Deler',
 );
 
+/** Italian (Italiano)
+ * @author Darth Kule
+ */
+$messages['it'] = array(
+	'userboard_delete' => 'Cancella',
+);
+
 /** Javanese (Basa Jawa)
  * @author Meursault2004
  */

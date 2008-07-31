@@ -515,10 +515,12 @@ $messages['da'] = array(
 
 /** German (Deutsch)
  * @author Tim 'Avatar' Bartel
+ * @author Revolus
  */
 $messages['de'] = array(
 	'viewrelationships'                          => 'Zeige Beziehungen',
 	'viewrelationshiprequests'                   => 'Zeige Beziehungsanfragen',
+	'ur-already-submitted'                       => 'Deine Anfrage wurde gesendet',
 	'ur-error-title'                             => 'Uuups, hier gehts nicht weiter!',
 	'ur-error-message-no-user'                   => 'Wir können die Anfrage nicht ausführen, da kein Benutzer dieses Namens existiert.',
 	'ur-main-page'                               => 'Hauptseite',

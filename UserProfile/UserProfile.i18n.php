@@ -1809,6 +1809,13 @@ $messages['id'] = array(
 	'user-profile-picture-small'  => 'Kecil',
 );
 
+/** Italian (Italiano)
+ * @author Darth Kule
+ */
+$messages['it'] = array(
+	'user-profile-personal-email' => 'Indirizzo e-mail',
+);
+
 /** Javanese (Basa Jawa)
  * @author Meursault2004
  */
