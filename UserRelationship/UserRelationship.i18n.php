@@ -1731,14 +1731,14 @@ $messages['oc'] = array(
 	'ur-accept'                                  => 'Acceptar',
 	'ur-reject'                                  => 'Regetar',
 	'ur-no-requests-message'                     => 'Avètz pas cap de requèsta en amic o enemic. Se desiratz mai d\'amics, <a href="$1">invitatz-los !</a>',
-	'ur-requests-added-message'                  => 'Avètz ajustat $1 coma vòstre $2.',
+	'ur-requests-added-message'                  => 'Avètz apondut $1 coma vòstre $2.',
 	'ur-requests-reject-message'                 => 'Avètz regetat $1 coma vòstre $2.',
 	'ur-title-foe'                               => 'Tièra dels enemics de $1',
 	'ur-title-friend'                            => 'Tièra dels amics de $1',
-	'friend_request_subject'                     => '$1 vos a ajustat coma un amic sus {{SITENAME}} !',
+	'friend_request_subject'                     => '$1 vos a apondut coma un amic sus {{SITENAME}} !',
 	'friend_request_body'                        => 'Adiu $1 :
 
-$2 vos a ajustat coma un amic sus {{SITENAME}}. Nos volèm assegurar que sètz totes dos actualament amics.
+$2 vos a apondut coma amic sus {{SITENAME}}. Nos volèm assegurar que sètz totes dos actualament amics.
 
 Clicatz sus aqueste ligam per confirmar vòstra amistat :
 $3
@@ -1747,11 +1747,11 @@ Mercés.
 
 ---
 
-E ! Volètz vos arrestar de recebre de corrièrs de nòstra part ?
+E ! Vos volètz arrestar de recebre de corrièrs de nòstra part ?
 
 Clicatz $4
 e modificatz vòstras preferéncias per desactivar las notificacions per corrièr electronic.',
-	'foe_request_subject'                        => 'Es la guèrra ! $1 vos a ajustat coma enemic sus {{SITENAME}} !',
+	'foe_request_subject'                        => 'Es la guèrra ! $1 vos a apondut coma enemic sus {{SITENAME}} !',
 	'foe_request_body'                           => "Adiu $1 :
 
 $2 vos ven just de repertoriar coma un enemic sus {{SITENAME}}. Nos volèm assegurar que sètz vertadièrament d'enemics mortals o qu'almens avètz de grèuges un envèrs l’autre/
@@ -1768,7 +1768,7 @@ E ! Volètz arrestar de recebre de corrièrs de nòstra part ?
 
 Clicatz $4 e modificatz vòstras preferéncias per desactivar las notificacions per corrièr electronic.",
 	'friend_accept_subject'                      => '$1 a acceptat vòstra requèsta en amistat sus {{SITENAME}} !',
-	'friend_accept_body'                         => 'Adiu $1 :
+	'friend_accept_body'                         => 'Adiu $1 : 
 
 $2 a acceptat vòstra requèsta en amistat sus {{SITENAME}} !
 
@@ -1783,7 +1783,7 @@ E ! Volètz vos arrestar de recebre de corrièrs de nòstra part ?
 Clicatz $4
 e modificatz vòstras preferéncias per desactivar las notificacions per corrièr electronic.',
 	'foe_accept_subject'                         => 'Es fach ! $1 a acceptat vòstra declaracion de guèrra sus  {{SITENAME}} !',
-	'foe_accept_body'                            => 'Adiu $1 :
+	'foe_accept_body'                            => 'Adiu $1 : 
 
 $2 a acceptat vòstra declaracion de guèrra sus  {{SITENAME}} !
 
