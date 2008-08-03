@@ -2361,11 +2361,12 @@ $messages['mr'] = array(
  * @author Fluence
  */
 $messages['nah'] = array(
-	'user-watchlist'               => 'Notlachiyaliz',
-	'user-personal-info-real-name' => 'Melāhuac motōcā',
-	'user-profile-personal-name'   => 'Tōcāitl',
-	'user-profile-personal-email'  => 'E-mail',
-	'user-page-link'               => 'Tlatequitiltilīlli',
+	'user-watchlist'                   => 'Notlachiyaliz',
+	'user-personal-info-real-name'     => 'Melāhuac motōcā',
+	'user-profile-section-preferences' => 'Tlaēlēhuiliztli',
+	'user-profile-personal-name'       => 'Tōcāitl',
+	'user-profile-personal-email'      => 'E-mail',
+	'user-page-link'                   => 'Tlatequitiltilīlli',
 );
 
 /** Low German (Plattdüütsch)
