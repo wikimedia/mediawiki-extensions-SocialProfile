@@ -24,7 +24,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		* It will automatically return them to the ViewRelationshipRequests page
 		*/
 		if($wgUser->getID() == 0){
-			$wgOut->setPagetitle( "Woops!" );
+			$wgOut->setPagetitle( wfMsg('ur-error-page-title') );
 			$login = Title::makeTitle(NS_SPECIAL, "UserLogin");
 			$wgOut->redirect( $login->getFullURL('returnto=Special:ViewRelationshipRequests') );
 			return false;
@@ -45,44 +45,44 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		} else {
 			$_SESSION["alreadysubmitted"] = false;
 			$output = "";
-			$plural="";
+			$plural = "";
 
-			$output .= $wgOut->setPagetitle( wfMsg("ur-requests-title") );
+			$output .= $wgOut->setPagetitle( wfMsg('ur-requests-title') );
 			$requests = $rel->getRequestList(0);
 
 			if ($requests) {
 
 				foreach ($requests as $request) {
 
-					if ($request["type"]=="Foe") {
-						$label = wfMsg("ur-foe");
-					} else {
-						$label = wfMsg("ur-friend");
-					}
-
 					$user_from = Title::makeTitle(NS_USER, $request["user_name_from"]);
 					$avatar = new wAvatar($request["user_id_from"], "l");
 					$avatar_img = $avatar->getAvatarURL();
+
+					if ($request["type"]=="Foe") {
+						$msg = wfMsg('ur-requests-message-foe', $user_from->escapeFullURL(), $request["user_name_from"]);
+					} else {
+						$msg = wfMsg('ur-requests-message-friend', $user_from->escapeFullURL(), $request["user_name_from"]);
+					}
 
 					$message = $wgOut->parse( trim($request["message"]), false );
 
 					$output .= "<div class=\"relationship-action black-text\" id=\"request_action_{$request["id"]}\">
 					  	{$avatar_img}
-						".wfMsg('ur-requests-message', $user_from->escapeFullURL(), $request["user_name_from"], $label);
+						".$msg;
 						if ($request["message"]) {
 							$output .= "<div class=\"relationship-message\">\"{$message}\"</div>";
 						}
 						$output .= "<div class=\"cleared\"></div>
 						<div class=\"relationship-buttons\">
-							<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-accept")."\" onclick=\"javascript:requestResponse(1,{$request["id"]})\">
-							<input type=\"button\" class=\"site-button\" value=\"".wfMsg("ur-reject")."\" onclick=\"javascript:requestResponse(-1,{$request["id"]})\">
+							<input type=\"button\" class=\"site-button\" value=\"".wfMsg('ur-accept')."\" onclick=\"javascript:requestResponse(1,{$request["id"]})\">
+							<input type=\"button\" class=\"site-button\" value=\"".wfMsg('ur-reject')."\" onclick=\"javascript:requestResponse(-1,{$request["id"]})\">
 						</div>
 					</div>";
 				}
 			} else {
 
 				$invite_link = Title::makeTitle(NS_SPECIAL, "InviteContacts");
-				$output = wfMsg("ur-no-requests-message", $invite_link->escapeFullURL());
+				$output = wfMsg('ur-no-requests-message', $invite_link->escapeFullURL());
 			}
 			$wgOut->addHTML($output);
 		}
