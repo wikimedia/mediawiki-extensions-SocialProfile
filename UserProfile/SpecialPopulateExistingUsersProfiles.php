@@ -14,7 +14,7 @@
 
 class SpecialPopulateUserProfiles extends SpecialPage {
 	function __construct() {
-		parent::__construct( "PopulateUserProfiles" );
+		parent::__construct( 'PopulateUserProfiles' );
 	}
 
 	function execute( $params ) {
@@ -32,6 +32,8 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 					""
 				);
 
+		$count = 0; // To avoid an annoying PHP notice
+
 		while( $row = $dbr->fetchObject($res) ){
 			$user_name_title = Title::newFromDBkey( $row->page_title );
 			$user_name = $user_name_title->getText();
@@ -41,11 +43,10 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 			//echo "user_name:{$user_name}/user_id:" . $user_id . "<br />";
 			//$count++;
 
-				$s = $dbr->selectRow( 'user_profile', array( 'up_user_id' ), array( 'up_user_id' => $user_id ), $fname );
+				$s = $dbr->selectRow( 'user_profile', array( 'up_user_id' ), array( 'up_user_id' => $user_id ), __METHOD__ );
 				if ( $s === false ) {
-					$fname = 'user_profile::addToDatabase';
 					$dbr = wfGetDB( DB_MASTER );
-					$dbr->insert( '`user_profile`',
+					$dbr->insert( 'user_profile',
 						array(
 							'up_user_id' => $user_id,
 							'up_type' => 0
