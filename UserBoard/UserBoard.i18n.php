@@ -408,6 +408,7 @@ $messages['fi'] = array(
 	'userboard_confirmdelete'   => 'Oletko varma, että haluat poistaa tämän viestin?',
 	'userboard_sendmessage'     => 'Lähetä käyttäjälle $1 viesti',
 	'userboard_myboard'         => 'Keskustelualueeni',
+	'userboard_posted_ago' => 'lähetetty $1 sitten',
 	'userboard_private'         => 'yksityinen',
 	'userboard_public'          => 'julkinen',
 	'userboard_messagetype'     => 'Viestin tyyppi',

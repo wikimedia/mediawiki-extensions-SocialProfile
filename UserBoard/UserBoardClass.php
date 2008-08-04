@@ -19,12 +19,11 @@ class UserBoard {
 	public function sendBoardMessage($user_id_from, $user_name_from, $user_id_to, $user_name_to, $message, $message_type = 0){
 		global $IP, $wgDBprefix;
 		$dbr = wfGetDB( DB_MASTER );
-		$fname = $wgDBprefix.'user_board::addToDatabase';
 
 		$user_name_from = stripslashes($user_name_from);
 		$user_name_to = stripslashes($user_name_to);
 
-		$dbr->insert( '`'.$wgDBprefix.'user_board`',
+		$dbr->insert( 'user_board',
 		array(
 			'ub_user_id_from' => $user_id_from,
 			'ub_user_name_from' => $user_name_from,
@@ -33,7 +32,7 @@ class UserBoard {
 			'ub_message' => $message,
 			'ub_type' => $message_type,
 			'ub_date' => date("Y-m-d H:i:s"),
-			), $fname
+			), __METHOD__
 		);
 
 		$ub_gift_id = $dbr->insertId();
@@ -90,7 +89,7 @@ class UserBoard {
 	static function clearNewMessageCount($user_id){
 		global $wgMemc;
 		$key = wfMemcKey( 'user', 'newboardmessage', $user_id );
-		$wgMemc->set($key,0);
+		$wgMemc->set($key, 0);
 	}
 
 	static function getNewMessageCountCache($user_id){
@@ -104,13 +103,13 @@ class UserBoard {
 	}
 
 	static function getNewMessageCountDB($user_id){
-		wfDebug( "Got new message count for id $user_id from db\n" );
+		wfDebug( "Got new message count for id $user_id from DB\n" );
 
 		global $wgMemc;
 		$key = wfMemcKey( 'user', 'newboardmessage', $user_id );
 		//$dbr = wfGetDB( DB_MASTER );
 		$new_count = 0;
-		//$s = $dbr->selectRow( '`user_board`', array( 'count(*) as count' ), array( 'ug_user_id_to' => $user_id, 'ug_status' => 1 ), $fname );
+		//$s = $dbr->selectRow( 'user_board', array( 'count(*) as count' ), array( 'ug_user_id_to' => $user_id, 'ug_status' => 1 ), __METHOD__ );
 		//if ( $s !== false )$new_gift_count = $s->count;
 
 		$wgMemc->set($key,$new_count);
@@ -132,7 +131,7 @@ class UserBoard {
 
 	public function doesUserOwnMessage($user_id, $ub_id){
 		$dbr = wfGetDB( DB_MASTER );
-		$s = $dbr->selectRow( 'user_board', array( 'ub_user_id' ), array( 'ub_id' => $ub_id ), $fname );
+		$s = $dbr->selectRow( 'user_board', array( 'ub_user_id' ), array( 'ub_id' => $ub_id ), __METHOD );
 		if ( $s !== false ) {
 			if($user_id == $s->ub_user_id){
 				return true;
@@ -145,7 +144,7 @@ class UserBoard {
 		global $wgDBprefix;
 		if($ub_id){
 			$dbr = wfGetDB( DB_MASTER );
-			$s = $dbr->selectRow( 'user_board', array( 'ub_user_id','ub_user_name','ub_type' ), array( 'ub_id' => $ub_id ), $fname );
+			$s = $dbr->selectRow( 'user_board', array( 'ub_user_id','ub_user_name','ub_type' ), array( 'ub_id' => $ub_id ), __METHOD__ );
 			if ( $s !== false ) {
 
 				$sql = "DELETE FROM ".$wgDBprefix."user_board WHERE ub_id={$ub_id}";
@@ -172,24 +171,24 @@ class UserBoard {
 		}
 
 		if($user_id_2){
-			$user_sql = "( (ub_user_id={$user_id} and ub_user_id_from={$user_id_2}) OR
-					(ub_user_id={$user_id_2} and ub_user_id_from={$user_id}) )
+			$user_sql = "( (ub_user_id={$user_id} AND ub_user_id_from={$user_id_2}) OR
+					(ub_user_id={$user_id_2} AND ub_user_id_from={$user_id}) )
 					";
 			if(! ($user_id == $wgUser->getID() || $user_id_2 == $wgUser->getID()) ){
-				$user_sql .= " and ub_type = 0 ";
+				$user_sql .= " AND ub_type = 0 ";
 			}
 		} else {
 			$user_sql = "ub_user_id = {$user_id}";
 			if($user_id != $wgUser->getID() ){
-				$user_sql .= " and ub_type = 0 ";
+				$user_sql .= " AND ub_type = 0 ";
 			}
 			if( $wgUser->isLoggedIn() ) {
-				$user_sql .= " or (ub_user_id={$user_id} and ub_user_id_from={$wgUser->getID() }) ";
+				$user_sql .= " OR (ub_user_id={$user_id} AND ub_user_id_from={$wgUser->getID() }) ";
 			}
 		}
 
 		$sql = "SELECT ub_id, ub_user_id_from, ub_user_name_from, ub_user_id, ub_user_name,
-			ub_message,UNIX_TIMESTAMP(ub_date) as unix_time,ub_type
+			ub_message,UNIX_TIMESTAMP(ub_date) AS unix_time,ub_type
 			FROM ".$wgDBprefix."user_board
 			WHERE {$user_sql}
 			ORDER BY ub_id DESC
@@ -199,15 +198,19 @@ class UserBoard {
 		$messages = array();
 		while ($row = $dbr->fetchObject( $res ) ) {
 			$CommentParser = new Parser();
-			$message_text = $CommentParser->parse( $row->ub_message, $wgTitle, $wgOut->parserOptions(),true );
+			$message_text = $CommentParser->parse( $row->ub_message, $wgTitle, $wgOut->parserOptions(), true );
 			$message_text = $message_text->getText();
 
 			$messages[] = array(
-					"id" => $row->ub_id, "timestamp" => ($row->unix_time),
-					"user_id_from" => $row->ub_user_id_from, "user_name_from" => $row->ub_user_name_from,
-					"user_id" => $row->ub_user_id, "user_name" => $row->ub_user_name,
-					"message_text" => $message_text, "type" => $row->ub_type
-				);
+				"id" => $row->ub_id,
+				"timestamp" => ($row->unix_time),
+				"user_id_from" => $row->ub_user_id_from,
+				"user_name_from" => $row->ub_user_name_from,
+				"user_id" => $row->ub_user_id,
+				"user_name" => $row->ub_user_name,
+				"message_text" => $message_text,
+				"type" => $row->ub_type
+			);
 		}
 		return $messages;
 	}
@@ -237,7 +240,7 @@ class UserBoard {
 	}
 
 	public function displayMessages($user_id, $user_id_2 = 0, $count = 10, $page = 0){
-		global $wgUser,$max_link_text_length, $wgTitle;
+		global $wgUser, $max_link_text_length, $wgTitle;
 		$messages = $this->getUserBoardMessages($user_id, $user_id_2, $count, $page);
 		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 		if ($messages) {
@@ -250,11 +253,13 @@ class UserBoard {
 				$board_link = "";
 				$message_type_label = "";
 				$delete_link = "";
-				if($wgUser->getName()!=$message["user_name_from"]){
-					$board_to_board = "<a href=\"" . UserBoard::getUserBoardToBoardURL($message["user_name"],$message["user_name_from"])."\">" . wfMsgHtml( 'userboard_board-to-board' ) . "</a>";
+				$output = ""; // Prevent E_NOTICE
+
+				if($wgUser->getName() != $message["user_name_from"]){
+					$board_to_board = "<a href=\"" . UserBoard::getUserBoardToBoardURL($message["user_name"], $message["user_name_from"])."\">" . wfMsgHtml( 'userboard_board-to-board' ) . "</a>";
 					$board_link = "<a href=\"" . UserBoard::getUserBoardURL($message["user_name_from"])."\">" . wfMsgHtml( 'userboard_sendmessage', $message["user_name_from"] ) . "</a>";
 				}
-				if($wgUser->getName()==$message["user_name"]){
+				if($wgUser->getName() == $message["user_name"]){
 					$delete_link = "<span class=\"user-board-red\">
 							<a href=\"javascript:void(0);\" onclick=\"javascript:delete_message({$message["id"]})\">" . wfMsgHtml( 'userboard_delete' ) . "</a>
 						</span>";
@@ -290,7 +295,7 @@ class UserBoard {
 					</div>
 				</div>";
 			}
-		} else if ($wgUser->getName()==$wgTitle->getText()) {
+		} else if ($wgUser->getName() == $wgTitle->getText()) {
 			$output .= "<div class=\"no-info-container\">
 				" . wfMsgHtml( 'userboard_nomessages' ) . "
 			</div>";
