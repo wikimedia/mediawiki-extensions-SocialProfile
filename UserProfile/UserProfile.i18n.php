@@ -2357,6 +2357,13 @@ $messages['mr'] = array(
 	'user-board-login-message'                        => 'इतर सदस्यांना संदेश पाठविण्यासाठी तुम्ही <a href="$1">प्रवेश केलेला असणे</a> आवश्यक आहे.',
 );
 
+/** Maltese (Malti)
+ * @author Roderick Mallia
+ */
+$messages['mt'] = array(
+	'user-page-link' => 'Paġna tal-utent',
+);
+
 /** Nahuatl (Nahuatl)
  * @author Fluence
  */
@@ -2779,7 +2786,6 @@ $messages['no'] = array(
  */
 $messages['oc'] = array(
 	'populateuserprofiles'                            => "Completar los perfils d'utilizaire",
-	'avatarupload'                                    => 'just un tèst d’extension',
 	'user-count-separator'                            => 'de',
 	'user-view-all'                                   => 'Veire tot',
 	'user-upload-image'                               => 'Importar un imatge',
@@ -2797,6 +2803,15 @@ $messages['oc'] = array(
 	'user-send-message'                               => 'Mandar un messatge',
 	'user-send-gift'                                  => 'Mandar un present',
 	'user-contributions'                              => 'Contribucions',
+	'user-stats-title'                                => 'Estatisticas',
+	'user-stats-edits'                                => 'Edicions',
+	'user-stats-votes'                                => 'Vòts',
+	'user-stats-comments'                             => 'Comentaris',
+	'user-stats-recruits'                             => 'Recruts',
+	'user-stats-poll-votes'                           => 'Vòts a las eleccions',
+	'user-stats-picture-game-votes'                   => 'Vòts pels imatges de jòcs',
+	'user-stats-quiz-points'                          => 'Punts al Quiz',
+	'user-stats-pick-points'                          => 'Causida en punts em',
 	'other-info-title'                                => 'Autras entresenhas',
 	'user-friends-title'                              => 'Amics',
 	'user-foes-title'                                 => 'Enemics',
@@ -2848,6 +2863,7 @@ $messages['oc'] = array(
 	'user-profile-update-log-section'                 => 'seccion cambiada',
 	'user-profile-update-profile'                     => 'perfil',
 	'user-profile-default-country'                    => "Estats Units d'America",
+	'user-profile-points'                             => ' punts',
 	'user-profile-section-personal'                   => 'Entresenhas personalas',
 	'user-profile-section-sportsteams'                => 'Mesa a jorn dels malhums',
 	'user-profile-section-custom'                     => 'Entresenhas localas',
@@ -2857,6 +2873,7 @@ $messages['oc'] = array(
 	'user-profile-personal-info'                      => 'Entresenhas',
 	'user-profile-personal-name'                      => 'Nom',
 	'user-profile-personal-email'                     => 'Adreça electronica',
+	'user-profile-personal-email-needs-auth'          => '(Vòstre corrièr electronics a besonn d’èsser autentificat per las notificacions del sit de recepcion)',
 	'user-profile-personal-confirmemail'              => "Confirmatz l'adreça electronica",
 	'user-profile-personal-location'                  => 'Endrech',
 	'user-profile-personal-city'                      => 'Vila',
@@ -2918,6 +2935,7 @@ $messages['oc'] = array(
 	'user-profile-picture-badvirusscanner'            => 'Marrida configuracion – escanèr antivirús desconegut :',
 	'user-profile-picture-scanfailed'                 => 'fracàs de la numerizacion',
 	'user-profile-goback'                             => 'Tornar enarrièr',
+	'user-profile-userlevels-link'                    => 'Nivèls de l’utilizaire',
 	'user-no-images'                                  => "Cap d'imatge importat",
 	'edit-profile-title'                              => 'Modificar vòstre perfil',
 	'user-page-link'                                  => "Pagina d'utilizaire",
@@ -2931,6 +2949,19 @@ $messages['oc'] = array(
 	'user-type-toggle-old'                            => "Utilizar la pagina d'utilizaire del wiki",
 	'user-type-toggle-new'                            => "Utilizar la pagina d'utilizaire en societat",
 	'user-board-login-message'                        => 'Vos cal èsser <a href="$1">en sesilha</a> per mandar de messatges als autres utilizaires',
+	'removeavatar'                                    => 'Levar l’avatar',
+	'givegift'                                        => 'Balhar un present',
+	'viewgifts'                                       => 'Veire los presents',
+	'viewsystemgifts'                                 => 'Veire las recompensas',
+	'avatarupload-removeavatar'                       => 'Levar l’avatar',
+	'avatarupload-currentavatar'                      => 'Avatar actual de $1',
+	'avatarupload-removesuccess'                      => 'L’avatar es estat levat amb succès',
+	'avatarupload-removeanother'                      => 'Levar un autre',
+	'profilelogpage'                                  => "Jornal de las modificacions del perfil d'utilizaire",
+	'profilelogpagetext'                              => "Vaquí lo jornal de las modificacions del perfil d'utilizaire",
+	'avatarlogpage'                                   => 'Jornal dels impòrts dels avatars',
+	'avatarlogpagetext'                               => 'Vaquí lo jornal dels impòrts dels avatars',
+	'user-profile-picture-log-delete-entry'           => 'a suprimit l’avatar de $1',
 );
 
 /** Ossetic (Иронау)

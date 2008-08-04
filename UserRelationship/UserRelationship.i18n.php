@@ -245,67 +245,95 @@ $messages['af'] = array(
  * @author Meno25
  */
 $messages['ar'] = array(
-	'viewrelationships'                          => 'عرض العلاقة',
-	'viewrelationshiprequests'                   => 'اعرض طلبات العلاقات',
-	'ur-already-submitted'                       => 'طلبك تم إرساله',
-	'ur-error-title'                             => 'آه، أنت أخذت منحنيا خاطئا!',
-	'ur-error-message-no-user'                   => 'لا يمكننا استكمال طلبك، لأنه لا يوجد مستخدم بهذا الاسم.',
-	'ur-main-page'                               => 'الصفحة الرئيسية',
-	'ur-your-profile'                            => 'ملفك',
-	'ur-backlink'                                => '&lt; رجوع إلى ملف $1',
-	'ur-friend'                                  => 'صديق',
-	'ur-foe'                                     => 'عدو',
-	'ur-relationship-count'                      => '$1 يمتلك $2 {{PLURAL:$2|$3|$3s}}.',
-	'ur-add-friends'                             => '  تريد المزيد من الأصدقاء؟ <a href="$1">أدعهم</a>',
-	'ur-add-friend'                              => 'أضف كصديق',
-	'ur-add-foe'                                 => 'أضف كعدو',
-	'ur-add-no-user'                             => 'لا مستخدم تم اختياره.
+	'viewrelationships'                                 => 'عرض العلاقة',
+	'viewrelationshiprequests'                          => 'اعرض طلبات العلاقات',
+	'ur-already-submitted'                              => 'طلبك تم إرساله',
+	'ur-error-page-title'                               => 'آه!',
+	'ur-error-title'                                    => 'آه، أنت أخذت منحنيا خاطئا!',
+	'ur-error-message-no-user'                          => 'لا يمكننا استكمال طلبك، لأنه لا يوجد مستخدم بهذا الاسم.',
+	'ur-main-page'                                      => 'الصفحة الرئيسية',
+	'ur-your-profile'                                   => 'ملفك',
+	'ur-backlink'                                       => '&lt; رجوع إلى ملف $1',
+	'ur-friend'                                         => 'صديق',
+	'ur-foe'                                            => 'عدو',
+	'ur-relationship-count-foes'                        => '$1 لديه $2 {{PLURAL:$2|عدو|عدو}}. تريد المزيد من الأعداء؟ <a href="$3">ادعهم.</a>',
+	'ur-relationship-count-friends'                     => '$1 لديه $2 {{PLURAL:$2|صديق|صديق}}. تريد المزيد من الأصدقاء؟ <a href="$3">ادعهم.</a>',
+	'ur-add-friends'                                    => '  تريد المزيد من الأصدقاء؟ <a href="$1">أدعهم</a>',
+	'ur-add-friend'                                     => 'أضف كصديق',
+	'ur-add-foe'                                        => 'أضف كعدو',
+	'ur-add-no-user'                                    => 'لا مستخدم تم اختياره.
 من فضلك اطلب الأصدقاء/الأعداء من خلال الوصلة الصحيحة.',
-	'ur-add-personal-message'                    => 'إضافة رسالة شخصية',
-	'ur-remove-relationship'                     => 'أزل ك&#x200d; $1',
-	'ur-give-gift'                               => 'أعط هدية',
-	'ur-previous'                                => 'قبل',
-	'ur-next'                                    => 'بعد',
-	'ur-remove-relationship-title'               => 'هل تريد إزالة $1 ك$2؟',
-	'ur-remove-relationship-title-confirm'       => 'أنت أزلت $1 ك$2 خاص بك',
-	'ur-remove-relationship-message'             => 'أنت طلبت إزالة $1 ك$2، اضغط "$3" للتأكيد.',
-	'ur-remove-relationship-message-confirm'     => 'قمت بحذف $1 ك$2 خاص بك.',
-	'ur-remove-error-message-no-relationship'    => 'لا تمتلك أي علاقة مع $1.',
-	'ur-remove-error-message-remove-yourself'    => 'لا يمكنك أن تزيل نفسك.',
-	'ur-remove-error-message-pending-request'    => 'لديك طلب $1 قيد الانتظار مع $2.',
-	'ur-remove-error-not-loggedin'               => 'أنت ينبغي أن تكون مسجل الدخول لإزالة $1.',
-	'ur-remove'                                  => 'أزل',
-	'ur-cancel'                                  => 'إلغاء',
-	'ur-login'                                   => 'دخول',
-	'ur-add-title'                               => 'هل تريد إضافة $1 ك$2؟',
-	'ur-add-message'                             => 'أنت على وشك إضافة $1 ك$2.
-سنخطر $1 لتأكيد $3 الخاص بك.',
-	'ur-friendship'                              => 'صداقة',
-	'ur-grudge'                                  => 'ضغينة',
-	'ur-add-button'                              => 'أضف ك&#x200d; $1',
-	'ur-add-sent-title'                          => 'لقد أرسلنا طلب $1 الخاص بك إلى $2!',
-	'ur-add-sent-message'                        => 'طلب $1 الخاص بك تم إرساله إلى $2 للتأكيد.
-لو أن $2 أكد طلبك، ستتلقى بريد متابعة إلكتروني',
-	'ur-add-error-message-no-user'               => 'المستخدم الذي تحاول أن تضيفه غير موجود.',
-	'ur-add-error-message-blocked'               => 'أنت حاليا ممنوع ولا يمكنك إضافة أصدقاء أو أعداء.',
-	'ur-add-error-message-yourself'              => 'أنت لا يمكنك إضافة نفسك كصديق أو عدو.',
-	'ur-add-error-message-existing-relationship' => 'أنت بالفعل $1 مع $2.',
-	'ur-add-error-message-pending-request-title' => 'صبرا!',
-	'ur-add-error-message-pending-request'       => 'أنت لديك طلب $1 قيد الانتظار مع $2.
-سنخطرك عندما يؤكد $2 طلبك.',
-	'ur-add-error-message-not-loggedin'          => 'يجب أن تكون مسجلا دخولك لتضيف $1',
-	'ur-requests-title'                          => 'طلبات العلاقات',
-	'ur-requests-message'                        => '<a href="$1">$2</a> يريد أن يكون $3 الخاص بك.',
-	'ur-accept'                                  => 'قبول',
-	'ur-reject'                                  => 'رفض',
-	'ur-no-requests-message'                     => 'ليس لديك طلبات صداقة أو عداوة.
+	'ur-add-personal-message'                           => 'إضافة رسالة شخصية',
+	'ur-remove-relationship-friend'                     => 'إزالة كصديق',
+	'ur-remove-relationship-foe'                        => 'إزالة كعدو',
+	'ur-give-gift'                                      => 'أعط هدية',
+	'ur-previous'                                       => 'قبل',
+	'ur-next'                                           => 'بعد',
+	'ur-remove-relationship-title-foe'                  => 'هل تريد إزالة $1 كعدوك؟',
+	'ur-remove-relationship-title-confirm-foe'          => 'أنت أزلت $1 كعدوك',
+	'ur-remove-relationship-title-friend'               => 'هل تريد إزالة $1 كصديقك؟',
+	'ur-remove-relationship-title-confirm-friend'       => 'أنت أزلت $1 كصديقك',
+	'ur-remove-relationship-message-foe'                => 'أنت طلبت إزالة $1 كعدوك، اضغط "$2" للتأكيد.',
+	'ur-remove-relationship-message-confirm-foe'        => 'أنت أزلت بنجاح $1 كعدوك.',
+	'ur-remove-relationship-message-friend'             => 'أنت طلبت إزالة $1 كصديقك، اضغط "$2" للتأكيد.',
+	'ur-remove-relationship-message-confirm-friend'     => 'أنت أزلت بنجاح $1 كصديقك.',
+	'ur-remove-error-message-no-relationship'           => 'لا تمتلك أي علاقة مع $1.',
+	'ur-remove-error-message-remove-yourself'           => 'لا يمكنك أن تزيل نفسك.',
+	'ur-remove-error-message-pending-request'           => 'لديك طلب $1 قيد الانتظار مع $2.',
+	'ur-remove-error-message-pending-foe-request'       => 'لديك طلب عداوة قيد الانتظار مع $1.',
+	'ur-remove-error-message-pending-friend-request'    => 'لديك طلب صداقة قيد الانتظار مع $1.',
+	'ur-remove-error-not-loggedin'                      => 'أنت ينبغي أن تكون مسجل الدخول لإزالة $1.',
+	'ur-remove-error-not-loggedin-foe'                  => 'يجب أن تكون مسجل الدخول لإزالة عدو.',
+	'ur-remove-error-not-loggedin-friend'               => 'يجب أن تكون مسجل الدخول لإزالة صديق.',
+	'ur-remove'                                         => 'أزل',
+	'ur-cancel'                                         => 'إلغاء',
+	'ur-login'                                          => 'دخول',
+	'ur-add-title-foe'                                  => 'هل تريد إضافة $1 كعدوك؟',
+	'ur-add-title-friend'                               => 'هل تريد إضافة $1 كصديقك؟',
+	'ur-add-message-foe'                                => 'أنت على وشك إضافة $1 كعدوك.
+سنخطر $1 لتأكيد عداوتك.',
+	'ur-add-message-friend'                             => 'أنت على وشك إضافة $1 كصديقك.
+سنخطر $1 لتأكيد صداقتك.',
+	'ur-friendship'                                     => 'صداقة',
+	'ur-grudge'                                         => 'ضغينة',
+	'ur-add-button'                                     => 'أضف ك&#x200d; $1',
+	'ur-add-button-foe'                                 => 'إضافة كعدو',
+	'ur-add-button-friend'                              => 'إضافة كصديق',
+	'ur-add-sent-title-foe'                             => 'لقد أرسلنا طلب عداوتك إلى $1!',
+	'ur-add-sent-title-friend'                          => 'لقد أرسلنا طلب صداقتك إلى $1!',
+	'ur-add-sent-message-foe'                           => 'طلب عداوتك تم إرساله إلى $1 للتأكيد.
+لو أن $1 أكد طلبك، ستتلقى بريد متابعة',
+	'ur-add-sent-message-friend'                        => 'طلب صداقتك تم إرساله إلى $1 للتأكيد.
+لو أن $1 أكد طلبك، ستتلقى بريد متابعة',
+	'ur-add-error-message-no-user'                      => 'المستخدم الذي تحاول أن تضيفه غير موجود.',
+	'ur-add-error-message-blocked'                      => 'أنت حاليا ممنوع ولا يمكنك إضافة أصدقاء أو أعداء.',
+	'ur-add-error-message-yourself'                     => 'أنت لا يمكنك إضافة نفسك كصديق أو عدو.',
+	'ur-add-error-message-existing-relationship'        => 'أنت بالفعل $1 مع $2.',
+	'ur-add-error-message-existing-relationship-foe'    => 'أنت بالفعل عدو $1.',
+	'ur-add-error-message-existing-relationship-friend' => 'أنت بالفعل صديق $1.',
+	'ur-add-error-message-pending-request-title'        => 'صبرا!',
+	'ur-add-error-message-pending-friend-request'       => 'لديك طلب صداقة قيد الانتظار مع $1.
+سنخطرك عندما $1 يؤكد طلبك.',
+	'ur-add-error-message-pending-foe-request'          => 'لديك طلب عداوة قيد الانتظار مع $1.
+سنخطرك عندما $1 يؤكد طلبك.',
+	'ur-add-error-message-not-loggedin'                 => 'يجب أن تكون مسجلا دخولك لتضيف $1',
+	'ur-add-error-message-not-loggedin-foe'             => 'يجب أن تكون مسجل الدخول لإضافة عدو',
+	'ur-add-error-message-not-loggedin-friend'          => 'يجب أن تكون مسجل الدخول لإضافة صديق',
+	'ur-requests-title'                                 => 'طلبات العلاقات',
+	'ur-requests-message-foe'                           => '<a href="$1">$2</a> يريد أن يكون عدوك.',
+	'ur-requests-message-friend'                        => '<a href="$1">$2</a> يريد أن يكون صديقك.',
+	'ur-accept'                                         => 'قبول',
+	'ur-reject'                                         => 'رفض',
+	'ur-no-requests-message'                            => 'ليس لديك طلبات صداقة أو عداوة.
 لو أنك تريد المزيد من الأصدقاء، <a href="$1">ادعوهم!</a>',
-	'ur-requests-added-message'                  => 'أنت أضفت $1 ك$2.',
-	'ur-requests-reject-message'                 => 'أنت رفضت $1 ك$2.',
-	'ur-title-foe'                               => 'قائمة أعداء $1',
-	'ur-title-friend'                            => 'قائمة أصدقاء $1',
-	'friend_request_subject'                     => '$1 أضافك كصديق في {{SITENAME}}!',
-	'friend_request_body'                        => 'مرحبا $1:
+	'ur-requests-added-message-foe'                     => 'أنت أضفت $1 كعدوك.',
+	'ur-requests-added-message-friend'                  => 'أنت أضفت $1 كصديقك.',
+	'ur-requests-reject-message-friend'                 => 'أنت رفضت $1 كصديقك.',
+	'ur-requests-reject-message-foe'                    => 'أنت رفضت $1 كعدوك.',
+	'ur-title-foe'                                      => 'قائمة أعداء $1',
+	'ur-title-friend'                                   => 'قائمة أصدقاء $1',
+	'friend_request_subject'                            => '$1 أضافك كصديق في {{SITENAME}}!',
+	'friend_request_body'                               => 'مرحبا $1:
 
 $2 أضافك كصديق في {{SITENAME}}.  نريد التأكد من أنكما فعلا صديقان.
 
@@ -320,8 +348,8 @@ $3
 
 اضغط $4
 وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
-	'foe_request_subject'                        => 'إنها الحرب! $1 أضافك كعدو في {{SITENAME}}!',
-	'foe_request_body'                           => 'مرحبا $1:
+	'foe_request_subject'                               => 'إنها الحرب! $1 أضافك كعدو في {{SITENAME}}!',
+	'foe_request_body'                                  => 'مرحبا $1:
 
 $2 أضافك حالا كعدو في {{SITENAME}}.  نريد التحقق من أنكما فعلا عدوان أو على الأقل بينكما خلاف.
 
@@ -337,8 +365,8 @@ $3
 
 اضغط $4
 وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
-	'friend_accept_subject'                      => '$1 قبل طلب صداقتك في {{SITENAME}}!',
-	'friend_accept_body'                         => 'مرحبا $1:
+	'friend_accept_subject'                             => '$1 قبل طلب صداقتك في {{SITENAME}}!',
+	'friend_accept_body'                                => 'مرحبا $1:
 
 $2 قبل طلب صداقتك في {{SITENAME}}!
 
@@ -352,8 +380,8 @@ $2 قبل طلب صداقتك في {{SITENAME}}!
 
 اضغط $4
 وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
-	'foe_accept_subject'                         => 'إنه يعمل! $1 قبل طلب عداوتك في {{SITENAME}}!',
-	'foe_accept_body'                            => 'مرحبا $1:
+	'foe_accept_subject'                                => 'إنه يعمل! $1 قبل طلب عداوتك في {{SITENAME}}!',
+	'foe_accept_body'                                   => 'مرحبا $1:
 
 $2 قبل طلب عداوتك في {{SITENAME}}!
 
@@ -367,8 +395,8 @@ $2 قبل طلب عداوتك في {{SITENAME}}!
 
 اضغط $4
 وغير إعداداتك لتعطيل إخطارات البريد الإكتروني.',
-	'friend_removed_subject'                     => 'كلا! أزالك $1 كصديق على {{SITENAME}}!',
-	'friend_removed_body'                        => 'مرحبا $1:
+	'friend_removed_subject'                            => 'كلا! أزالك $1 كصديق على {{SITENAME}}!',
+	'friend_removed_body'                               => 'مرحبا $1:
 
 $2 أزالك كصديق في {{SITENAME}}!
 
@@ -380,8 +408,8 @@ $2 أزالك كصديق في {{SITENAME}}!
 
 اضغط $4
 وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
-	'foe_removed_subject'                        => 'هاه! $1 أزالك كعدو في {{SITENAME}}!',
-	'foe_removed_body'                           => 'مرحبا $1:
+	'foe_removed_subject'                               => 'هاه! $1 أزالك كعدو في {{SITENAME}}!',
+	'foe_removed_body'                                  => 'مرحبا $1:
 
 $2 أزالك كعدو في {{SITENAME}}!
 
@@ -401,61 +429,74 @@ $2 أزالك كعدو في {{SITENAME}}!
  * @author DCLXVI
  */
 $messages['bg'] = array(
-	'ur-already-submitted'                       => 'Вашата заявка беше изпратена',
-	'ur-error-message-no-user'                   => 'Заявката не може да бъде изпълнена, тъй като не съществува потребител с това име.',
-	'ur-main-page'                               => 'Начална страница',
-	'ur-your-profile'                            => 'Моят профил',
-	'ur-backlink'                                => '&lt; Обратно към профила на $1',
-	'ur-friend'                                  => 'приятел',
-	'ur-foe'                                     => 'неприятел',
-	'ur-relationship-count'                      => '$1 има $2 {{PLURAL:$2|$3|$3и}}.',
-	'ur-add-friends'                             => '  Искате повече приятели? <a href="$1">Поканете ги!</a>',
-	'ur-add-friend'                              => 'Добавяне в приятели',
-	'ur-add-foe'                                 => 'Добавяне в неприятели',
-	'ur-add-no-user'                             => 'Не е посочен потребител.
+	'ur-already-submitted'                           => 'Вашата заявка беше изпратена',
+	'ur-error-message-no-user'                       => 'Заявката не може да бъде изпълнена, тъй като не съществува потребител с това име.',
+	'ur-main-page'                                   => 'Начална страница',
+	'ur-your-profile'                                => 'Моят профил',
+	'ur-backlink'                                    => '&lt; Обратно към профила на $1',
+	'ur-friend'                                      => 'приятел',
+	'ur-foe'                                         => 'неприятел',
+	'ur-relationship-count-foes'                     => '$1 има $2 {{PLURAL:$2|неприятел|неприятели}}. Искате още? <a href="$3">Поканете ги.</a>',
+	'ur-relationship-count-friends'                  => '$1 има $2 {{PLURAL:$2|приятел|приятели}}. Искате още? <a href="$3">Поканете ги.</a>',
+	'ur-add-friends'                                 => '  Искате повече приятели? <a href="$1">Поканете ги!</a>',
+	'ur-add-friend'                                  => 'Добавяне в приятели',
+	'ur-add-foe'                                     => 'Добавяне в неприятели',
+	'ur-add-no-user'                                 => 'Не е посочен потребител.
 Заявките за приятелство/неприятелство се извършват чрез съответната препратка.',
-	'ur-add-personal-message'                    => 'Добавяне на лично съобщение',
-	'ur-remove-relationship'                     => 'Премахване от $1и',
-	'ur-give-gift'                               => 'Подаряване на подарък',
-	'ur-previous'                                => 'предишни',
-	'ur-next'                                    => 'следващи',
-	'ur-remove-relationship-title'               => 'Необходимо е потвърждение за премахване на $1 от групата на $2ите.',
-	'ur-remove-relationship-title-confirm'       => 'Премахнахте $1 от групата на вашите $2и',
-	'ur-remove-relationship-message'             => 'Направихте заявка да премахнете $1 от списъка ви с $2; натиснете „$3“ за потвърждение.',
-	'ur-remove-relationship-message-confirm'     => 'Успешно премахнахте $1 като ваш $2.',
-	'ur-remove-error-message-remove-yourself'    => 'Не можете да премахнете себе си.',
-	'ur-remove-error-message-pending-request'    => 'Имате чакаща заявка за $1 с $2.',
-	'ur-remove-error-not-loggedin'               => 'Необходимо е да влезете за да премахнете $1.',
-	'ur-remove'                                  => 'Премахване',
-	'ur-cancel'                                  => 'Отказване',
-	'ur-login'                                   => 'Влизане',
-	'ur-add-title'                               => 'Необходимо е потвърждение за добавяне на $1 като ваш $2.',
-	'ur-add-message'                             => 'На път сте да добавите $1 като ваш $2.
-$1 ще бъде известен, за да оптвърди вашето $3.',
-	'ur-friendship'                              => 'приятелство',
-	'ur-grudge'                                  => 'неприятелство',
-	'ur-add-button'                              => 'Добавяне като $1',
-	'ur-add-sent-title'                          => 'Заявката за $1 беше изпратена на $2!',
-	'ur-add-sent-message'                        => 'Вашата заявка за $1 беше изпратена за потвърждение на $2.
-Ако $2 потвърди заявката, ще ви бъде изпратено електронно писмо',
-	'ur-add-error-message-no-user'               => 'Потребителят, който се опитвате да добавите, не съществува.',
-	'ur-add-error-message-blocked'               => 'В момента потребителската ви сметка е блокирана и не можете да добавяте приятели или неприятели.',
-	'ur-add-error-message-yourself'              => 'Не е позволено да добавяте себе си като приятел или неприятел.',
-	'ur-add-error-message-existing-relationship' => 'Вече сте $1 с $2.',
-	'ur-add-error-message-not-loggedin'          => 'Необходимо е влизане в системата за добавяне на $1',
-	'ur-requests-message'                        => '<a href="$1">$2</a> би желал да бъде ваш $3.',
-	'ur-accept'                                  => 'Приемане',
-	'ur-reject'                                  => 'Отказване',
-	'ur-no-requests-message'                     => 'Нямате заявки за приятелства или неприятелства.
+	'ur-add-personal-message'                        => 'Добавяне на лично съобщение',
+	'ur-remove-relationship-friend'                  => 'Премахване от приятели',
+	'ur-remove-relationship-foe'                     => 'Премахване от неприятели',
+	'ur-give-gift'                                   => 'Подаряване на подарък',
+	'ur-previous'                                    => 'предишни',
+	'ur-next'                                        => 'следващи',
+	'ur-remove-relationship-title-foe'               => 'Желаете ли да премахнете $1 от списъка ви с неприятели?',
+	'ur-remove-relationship-title-confirm-foe'       => 'Премахнахте $1 от списъка ви с неприятели',
+	'ur-remove-relationship-title-friend'            => 'Желаете ли да премахнете $1 от списъка ви с приятели?',
+	'ur-remove-relationship-title-confirm-friend'    => 'Премахнахте $1 от списъка ви с приятели',
+	'ur-remove-relationship-message-foe'             => 'Направихте заявка да премахнете $1 от списъка ви с неприятели; написнете „$2“ за потвърждаване.',
+	'ur-remove-relationship-message-confirm-foe'     => 'Успешно премахнахте $1 от списъка ви с неприятели.',
+	'ur-remove-relationship-message-friend'          => 'Направихте заявка да премахнете $1 от списъка ви с приятели; написнете „$2“ за потвърждаване.',
+	'ur-remove-relationship-message-confirm-friend'  => 'Успешно премахнахте $1 от списъка ви с приятели.',
+	'ur-remove-error-message-remove-yourself'        => 'Не можете да премахнете себе си.',
+	'ur-remove-error-message-pending-request'        => 'Имате чакаща заявка за $1 с $2.',
+	'ur-remove-error-message-pending-foe-request'    => 'Имате чакаща заявка за неприятелство с $1.',
+	'ur-remove-error-message-pending-friend-request' => 'Имате чакаща заявка за приятелство с $1.',
+	'ur-remove-error-not-loggedin'                   => 'Необходимо е да влезете за да премахнете $1.',
+	'ur-remove-error-not-loggedin-foe'               => 'За да премахвате неприятели е необходимо да влезете в системата.',
+	'ur-remove-error-not-loggedin-friend'            => 'За да премахвате приятели е необходимо да влезете в системата.',
+	'ur-remove'                                      => 'Премахване',
+	'ur-cancel'                                      => 'Отказване',
+	'ur-login'                                       => 'Влизане',
+	'ur-add-title-foe'                               => 'Желаете ли да добавите $1 като ваш неприятел?',
+	'ur-add-title-friend'                            => 'Желаете ли да добавите $1 като ваш приятел?',
+	'ur-friendship'                                  => 'приятелство',
+	'ur-grudge'                                      => 'неприятелство',
+	'ur-add-button'                                  => 'Добавяне като $1',
+	'ur-add-button-foe'                              => 'Добавяне като неприятел',
+	'ur-add-button-friend'                           => 'Добавяне като приятел',
+	'ur-add-error-message-no-user'                   => 'Потребителят, който се опитвате да добавите, не съществува.',
+	'ur-add-error-message-blocked'                   => 'В момента потребителската ви сметка е блокирана и не можете да добавяте приятели или неприятели.',
+	'ur-add-error-message-yourself'                  => 'Не е позволено да добавяте себе си като приятел или неприятел.',
+	'ur-add-error-message-existing-relationship'     => 'Вече сте $1 с $2.',
+	'ur-add-error-message-not-loggedin'              => 'Необходимо е влизане в системата за добавяне на $1',
+	'ur-add-error-message-not-loggedin-foe'          => 'За да добавяте неприятели е необходимо да влезете в системата.',
+	'ur-add-error-message-not-loggedin-friend'       => 'За да добавяте приятели е необходимо да влезете в системата.',
+	'ur-requests-message-foe'                        => '<a href="$1">$2</a> иска да бъдете неприятели.',
+	'ur-requests-message-friend'                     => '<a href="$1">$2</a> иска да бъдете приятели.',
+	'ur-accept'                                      => 'Приемане',
+	'ur-reject'                                      => 'Отказване',
+	'ur-no-requests-message'                         => 'Нямате заявки за приятелства или неприятелства.
 Ако искате да имате повече приятели, можете да ги <a href="$1">поканите!</a>',
-	'ur-requests-added-message'                  => 'Добавихте $1 като ваш $2.',
-	'ur-requests-reject-message'                 => 'Отказахте на $1 да бъде ваш $2.',
-	'ur-title-foe'                               => 'Списък с неприятели на $1',
-	'ur-title-friend'                            => 'Списък с приятели на $1',
-	'friend_request_subject'                     => '$1 ви добави като свой приятел в {{SITENAME}}!',
-	'friend_request_body'                        => 'Здравейте $1:
+	'ur-requests-added-message-foe'                  => 'Добавихте $1 като свой неприятел.',
+	'ur-requests-added-message-friend'               => 'Добавихте $1 като свой приятел.',
+	'ur-requests-reject-message-friend'              => 'Отказахте на $1 да бъдете приятели.',
+	'ur-requests-reject-message-foe'                 => 'Отказахте на $1 да бъдете неприятели.',
+	'ur-title-foe'                                   => 'Списък с неприятели на $1',
+	'ur-title-friend'                                => 'Списък с приятели на $1',
+	'friend_request_subject'                         => '$1 ви добави като свой приятел в {{SITENAME}}!',
+	'friend_request_body'                            => 'Здравейте $1:
 
-$2 ви добави в списъка си с приятели в {{SITENAME}}. Бихме искали да се уверим,
+$2 ви добави в списъка си с приятели в {{SITENAME}}. Бихме искали да се уверим, 
 че това наистина е така и вие двамата наистина сте приятели.
 
 За потвърждаване на приятелството, щракнете върху долната препратка:
@@ -467,9 +508,9 @@ $3
 
 Ако не желаете да получавате повече писма от нас, натиснете $4
 и променете настройките за оповестяване по е-поща.',
-	'foe_request_subject'                        => 'Война! $1 ви добави в списъка си с неприятели в {{SITENAME}}!',
-	'friend_accept_subject'                      => '$1 прие поканата ви за приятелство в {{SITENAME}}!',
-	'friend_accept_body'                         => 'Здравейте $1:
+	'foe_request_subject'                            => 'Война! $1 ви добави в списъка си с неприятели в {{SITENAME}}!',
+	'friend_accept_subject'                          => '$1 прие поканата ви за приятелство в {{SITENAME}}!',
+	'friend_accept_body'                             => 'Здравейте $1:
 
 $2 прие поканата за приятелство в {{SITENAME}}!
 
@@ -481,8 +522,8 @@ $2 прие поканата за приятелство в {{SITENAME}}!
 
 Щракнете $4
 за промяна на настройките и изключване на възможността за оповестяване по е-поща.',
-	'foe_accept_subject'                         => '$1 се съгласи с неприятелството ви в {{SITENAME}}!',
-	'foe_accept_body'                            => 'Здравейте $1:
+	'foe_accept_subject'                             => '$1 се съгласи с неприятелството ви в {{SITENAME}}!',
+	'foe_accept_body'                                => 'Здравейте $1:
 
 $2 прие поканата за неприятелство в {{SITENAME}}!
 
@@ -494,8 +535,8 @@ $2 прие поканата за неприятелство в {{SITENAME}}!
 
 Щракнете $4
 за промяна на настройките и изключване на възможността за оповестяване по е-поща.',
-	'friend_removed_subject'                     => 'О, не! $1 ви премахна от списъка си с приятели в {{SITENAME}}!',
-	'friend_removed_body'                        => 'Здравейте $1:
+	'friend_removed_subject'                         => 'О, не! $1 ви премахна от списъка си с приятели в {{SITENAME}}!',
+	'friend_removed_body'                            => 'Здравейте $1:
 
 $2 ви премахна от списъка си с приятели в {{SITENAME}}!
 
@@ -505,8 +546,8 @@ $2 ви премахна от списъка си с приятели в {{SITEN
 
 Щракнете $4
 за промяна на настройките и изключване на възможността за оповестяване по е-поща.',
-	'foe_removed_subject'                        => 'Юху! $1 ви премахна от списъка си с неприятели в {{SITENAME}}!',
-	'foe_removed_body'                           => 'Здравейте $1:
+	'foe_removed_subject'                            => 'Юху! $1 ви премахна от списъка си с неприятели в {{SITENAME}}!',
+	'foe_removed_body'                               => 'Здравейте $1:
 
 $2 ви премахна от списъка си с неприятели в {{SITENAME}}!
 
@@ -896,11 +937,13 @@ ja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.',
 
 /** French (Français)
  * @author Grondin
+ * @author IAlex
  */
 $messages['fr'] = array(
 	'viewrelationships'                          => 'Voir les relations',
 	'viewrelationshiprequests'                   => 'Voir les requêtes des relations',
 	'ur-already-submitted'                       => 'Votre demande a été envoyée',
+	'ur-error-page-title'                        => 'Oups !',
 	'ur-error-title'                             => 'Houla, vous avez pris un mauvais virage !',
 	'ur-error-message-no-user'                   => 'Nous ne pouvons compléter votre requête, car aucun utilisateur ne porte ce nom.',
 	'ur-main-page'                               => 'Accueil',
@@ -908,20 +951,14 @@ $messages['fr'] = array(
 	'ur-backlink'                                => '&lt; retour vers le profil de $1',
 	'ur-friend'                                  => 'ami',
 	'ur-foe'                                     => 'ennemi',
-	'ur-relationship-count'                      => '$1 a $2 {{PLURAL:$2|$3|$3s}}.',
 	'ur-add-friends'                             => 'Vouloir plus d’amis ? <a href="$1">Inviter les</a>.',
 	'ur-add-friend'                              => 'Ajouter comme ami',
 	'ur-add-foe'                                 => 'Ajouter comme ennemi',
 	'ur-add-no-user'                             => 'Aucun utilisateur sélectionné. Veuiller requérir des amis ou des ennemis au travers du lien correct.',
 	'ur-add-personal-message'                    => 'Ajouter un message personnel',
-	'ur-remove-relationship'                     => 'Enlever comme $1',
 	'ur-give-gift'                               => 'Envoyer un cadeau',
 	'ur-previous'                                => 'préc.',
 	'ur-next'                                    => 'suiv.',
-	'ur-remove-relationship-title'               => 'Voulez-vous enlever $1 comme votre $2 ?',
-	'ur-remove-relationship-title-confirm'       => 'Vous avez enlevez $1 comme votre $2',
-	'ur-remove-relationship-message'             => 'Vous avez demandé la suppression de $1 comme votre $2, appuyer sur « $3 » pour confirmer.',
-	'ur-remove-relationship-message-confirm'     => 'Vous avez supprimé avec succès $1 comme votre $2.',
 	'ur-remove-error-message-no-relationship'    => "Vous n'avez aucune relation avec $1.",
 	'ur-remove-error-message-remove-yourself'    => 'Vous ne pouvez pas vous supprimer vous-même.',
 	'ur-remove-error-message-pending-request'    => 'Vous avez une requête de $1 en cours avec $2.',
@@ -929,27 +966,19 @@ $messages['fr'] = array(
 	'ur-remove'                                  => 'Enlever',
 	'ur-cancel'                                  => 'Annuler',
 	'ur-login'                                   => 'Connexion',
-	'ur-add-title'                               => 'Voulez-vous ajouter $1 comme votre $2 ?',
-	'ur-add-message'                             => 'Vous avez l’intention d’ajouter $1 comme votre $2. Nous le notifierons à $1 pour confirmer votre $3.',
 	'ur-friendship'                              => 'amitié',
 	'ur-grudge'                                  => 'rancœur',
 	'ur-add-button'                              => 'Ajouter comme $1',
-	'ur-add-sent-title'                          => 'Vous avez envoyé votre requête en $1 à $2 !',
-	'ur-add-sent-message'                        => 'Votre requête en $1 a été à $2 aux fins de confirmation. Si $2 confirme votre demande, vous recevrez un courriel en retour.',
 	'ur-add-error-message-no-user'               => 'L’utilisateur que vous être en train d’ajouter n’existe pas.',
 	'ur-add-error-message-blocked'               => 'Vous êtes actuellement bloqué et vous ne pouvez donc ajouter ni amis ni ennemis.',
 	'ur-add-error-message-yourself'              => 'Vous ne pouvez vous-même vous ajouter comme ennemi ou ami.',
 	'ur-add-error-message-existing-relationship' => 'Vous êtes déjà $1 avec $2.',
 	'ur-add-error-message-pending-request-title' => 'Patience !',
-	'ur-add-error-message-pending-request'       => 'Vous avez une requête en $1 pendante avec $2. Nous vous notifierons quand $2 aura confirmé votre demande.',
 	'ur-add-error-message-not-loggedin'          => 'Vous devez être connecté pour ajouter un $1.',
 	'ur-requests-title'                          => 'Demandes de relations.',
-	'ur-requests-message'                        => '<a href="$1">$2</a> désire être votre $3.',
 	'ur-accept'                                  => 'Accepter',
 	'ur-reject'                                  => 'Rejeter',
 	'ur-no-requests-message'                     => 'Vous n’avez aucune requête en ami ou ennemi. Si vous désirez plus d\'amis, <a href="$1">invitez les !</a>',
-	'ur-requests-added-message'                  => 'Vous avez ajouté $1 comme votre $2.',
-	'ur-requests-reject-message'                 => 'Vous avez rejeté $1 comme votre $2.',
 	'ur-title-foe'                               => 'Liste des ennemis de $1',
 	'ur-title-friend'                            => 'Liste des amis de $1',
 	'friend_request_subject'                     => '$1 vous a ajouté comme un ami sur {{SITENAME}} !',
@@ -985,7 +1014,7 @@ Hé ! Voulez-vous vous arrêter de recevoir des courriels de notre part ?
 
 Cliquez $4 et modifiez vos préférences pour désactiver les notifications par courriel.',
 	'friend_accept_subject'                      => '$1 a accepté votre requête en amitié sur {{SITENAME}} !',
-	'friend_accept_body'                         => 'Salut $1 :
+	'friend_accept_body'                         => 'Salut $1 : 
 
 $2 a accepté votre requête en amitié sur {{SITENAME}} !
 
@@ -1000,7 +1029,7 @@ Hé ! Voulez-vous vous arrêter de recevoir des courriels de notre part ?
 Cliquez $4
 et modifiez vos préférences pour désactiver les notifications par courriel.',
 	'foe_accept_subject'                         => "C'est fait ! $1 a accepté votre déclaration de guerre sur  {{SITENAME}} !",
-	'foe_accept_body'                            => 'Salut $1 :
+	'foe_accept_body'                            => 'Salut $1 : 
 
 $2 a accepté votre déclaration de guerre sur  {{SITENAME}} !
 
@@ -1586,63 +1615,100 @@ $messages['nds'] = array(
  * @author SPQRobin
  */
 $messages['nl'] = array(
-	'viewrelationships'                          => 'Connecties bekijken',
-	'viewrelationshiprequests'                   => 'Connectieverzoeken bekijken',
-	'ur-already-submitted'                       => 'Uw verzoek is verzonden',
-	'ur-error-title'                             => 'U hebt een verkeerde afslag genomen.',
-	'ur-error-message-no-user'                   => 'We kunnen uw verzoek niet afhandelen omdat de gebruiker niet bestaat.',
-	'ur-main-page'                               => 'Hoofdpagina',
-	'ur-your-profile'                            => 'Uw profiel',
-	'ur-backlink'                                => "&lt; Terug naar $1's profiel",
-	'ur-friend'                                  => 'vriend',
-	'ur-foe'                                     => 'tegenstander',
-	'ur-relationship-count'                      => '$1 heeft $2 {{PLURAL:$2|$3|$3s}}.',
-	'ur-add-friends'                             => 'Wilt u meer vrienden? <a href="$1">Nodig ze uit</a>',
-	'ur-add-friend'                              => 'Als vriend toevoegen',
-	'ur-add-foe'                                 => 'Als tegenstander toevoegen',
-	'ur-add-no-user'                             => 'Er is geen gebruiker geselecteerd.
+	'viewrelationships'                                 => 'Connecties bekijken',
+	'viewrelationshiprequests'                          => 'Connectieverzoeken bekijken',
+	'ur-already-submitted'                              => 'Uw verzoek is verzonden',
+	'ur-error-page-title'                               => 'Oops.',
+	'ur-error-title'                                    => 'U hebt een verkeerde afslag genomen.',
+	'ur-error-message-no-user'                          => 'We kunnen uw verzoek niet afhandelen omdat de gebruiker niet bestaat.',
+	'ur-main-page'                                      => 'Hoofdpagina',
+	'ur-your-profile'                                   => 'Uw profiel',
+	'ur-backlink'                                       => "&lt; Terug naar $1's profiel",
+	'ur-friend'                                         => 'vriend',
+	'ur-foe'                                            => 'tegenstander',
+	'ur-relationship-count-foes'                        => '$1 heeft $2 {{PLURAL:$2|tegenstander|tegenstanders}}.
+Behoefte aan meer tegenstanders?
+<a href="$3">Nodig ze uit</a>.',
+	'ur-relationship-count-friends'                     => '$1 heeft $2 {{PLURAL:$2|vriend|vrienden}}.
+Behoefte aan meer vrienden?
+<a href="$3">Nodig ze uit</a>.',
+	'ur-add-friends'                                    => 'Wilt u meer vrienden? <a href="$1">Nodig ze uit</a>',
+	'ur-add-friend'                                     => 'Als vriend toevoegen',
+	'ur-add-foe'                                        => 'Als tegenstander toevoegen',
+	'ur-add-no-user'                                    => 'Er is geen gebruiker geselecteerd.
 Maak verzoeken voor vrienden/tegenstanders alstublieft via de daarvoor bedoelde link.',
-	'ur-add-personal-message'                    => 'Persoonlijk bericht toevoegen',
-	'ur-remove-relationship'                     => 'Als $1 verwijderen',
-	'ur-give-gift'                               => 'Presentje geven',
-	'ur-previous'                                => 'vorige',
-	'ur-next'                                    => 'volgende',
-	'ur-remove-relationship-title'               => 'Wilt u $1 verwijderen als uw $2?',
-	'ur-remove-relationship-title-confirm'       => 'U hebt $1 als $2 verwijderd',
-	'ur-remove-relationship-message'             => 'U wilt $1 verwijderen als $2. Klik "$3" om te bevestigen.',
-	'ur-remove-relationship-message-confirm'     => 'U hebt $1 als $2 verwijderd.',
-	'ur-remove-error-message-no-relationship'    => 'U hebt geen connectie met $1.',
-	'ur-remove-error-message-remove-yourself'    => 'U kunt uzelf niet verwijderen.',
-	'ur-remove-error-message-pending-request'    => 'U hebt een openstaand connectieverzoek als $1 bij $2.',
-	'ur-remove-error-not-loggedin'               => 'U moet aangemeld zijn om een $1 te kunnen verwijderen.',
-	'ur-remove'                                  => 'Verwijderen',
-	'ur-cancel'                                  => 'Annuleren',
-	'ur-login'                                   => 'Aanmelden',
-	'ur-add-title'                               => 'Wilt u $1 toevoegen als $2?',
-	'ur-add-message'                             => 'U staat op het punt om $1 toe te voegen als $2. We stellen $1 op de hoogte om uw $3 te kunnen bevestigen.',
-	'ur-friendship'                              => 'vriendschap',
-	'ur-grudge'                                  => 'wrok',
-	'ur-add-button'                              => 'Als $1 toevoegen',
-	'ur-add-sent-title'                          => 'Uw verzoek voor een connectie als $1 is naar $2 verzonden.',
-	'ur-add-sent-message'                        => 'Uw verzoek voor een connectie als $1 is naar $2 verzonden voor bevestiging. Als $2 uw verzoek bevestigd, ontvangt u daar een e-mail over',
-	'ur-add-error-message-no-user'               => 'De gebruiker die u probeert toe te voegen bestaat niet.',
-	'ur-add-error-message-blocked'               => 'U bent geblokkeerd en kunt geen vrienden of tegenstanders toevoegen.',
-	'ur-add-error-message-yourself'              => 'U kunt uzelf niet als vriend of tegenstander toevoegen.',
-	'ur-add-error-message-existing-relationship' => 'U bent al $1 bij $2.',
-	'ur-add-error-message-pending-request-title' => 'Even geduld alstublieft.',
-	'ur-add-error-message-pending-request'       => 'U hebt een openstaand verzoek voor $1 bij $2. We stellen u op de hoogte als $2 uw verzoek bevestigd.',
-	'ur-add-error-message-not-loggedin'          => 'U moet aangemeld zijn om een $1 toe te voegen',
-	'ur-requests-title'                          => 'Connectieverzoeken',
-	'ur-requests-message'                        => '<a href="$1">$2</a> wil uw $3 zijn.',
-	'ur-accept'                                  => 'Aanvaarden',
-	'ur-reject'                                  => 'Weigeren',
-	'ur-no-requests-message'                     => 'U hebt geen uitstaande verzoeken voor vrienden of tegenstanders. Als u meer vrienden wilt, <a href="$1">nodig ze dan uit!</a>',
-	'ur-requests-added-message'                  => 'U hebt $1 toegevoegd als $2.',
-	'ur-requests-reject-message'                 => 'U hebt $1 geweigerd als $2.',
-	'ur-title-foe'                               => 'Tegenstanderslijst van $1',
-	'ur-title-friend'                            => 'Vriendenlijst van $1',
-	'friend_request_subject'                     => '$1 heeft u als vriend toegevoegd op {{SITENAME}}.',
-	'friend_request_body'                        => 'Hallo $1.
+	'ur-add-personal-message'                           => 'Persoonlijk bericht toevoegen',
+	'ur-remove-relationship-friend'                     => 'Als vriend verwijderen',
+	'ur-remove-relationship-foe'                        => 'Als tegenstander verwijderen',
+	'ur-give-gift'                                      => 'Presentje geven',
+	'ur-previous'                                       => 'vorige',
+	'ur-next'                                           => 'volgende',
+	'ur-remove-relationship-title-foe'                  => 'Wilt u $1 verwijderen als uw tegenstander?',
+	'ur-remove-relationship-title-confirm-foe'          => 'U hebt $1 verwijderd als uw tegenstander',
+	'ur-remove-relationship-title-friend'               => 'Wilt u $1 verwijderen als uw vriend?',
+	'ur-remove-relationship-title-confirm-friend'       => 'U hebt $1 verwijderd als uw vriend',
+	'ur-remove-relationship-message-foe'                => 'U wilt $1 verwijderen als uw tegenstander.
+Klik op "$2" om dit te bevestigen.',
+	'ur-remove-relationship-message-confirm-foe'        => 'U hebt $1 als tegenstander verwijderd.',
+	'ur-remove-relationship-message-friend'             => 'U wilt $1 verwijderen als uw vriend.
+Klik op "$2" om dit te bevestigen.',
+	'ur-remove-relationship-message-confirm-friend'     => 'U hebt $1 als tegenstander vriend.',
+	'ur-remove-error-message-no-relationship'           => 'U hebt geen connectie met $1.',
+	'ur-remove-error-message-remove-yourself'           => 'U kunt uzelf niet verwijderen.',
+	'ur-remove-error-message-pending-request'           => 'U hebt een openstaand connectieverzoek als $1 bij $2.',
+	'ur-remove-error-message-pending-foe-request'       => 'U hebt een openstaand tegenstandersverzoek van $1.',
+	'ur-remove-error-message-pending-friend-request'    => 'U hebt een openstaand vriendschapsverzoek van $1.',
+	'ur-remove-error-not-loggedin'                      => 'U moet aangemeld zijn om een $1 te kunnen verwijderen.',
+	'ur-remove-error-not-loggedin-foe'                  => 'U moet aangemeld zijn om een tegenstander te verwijderen.',
+	'ur-remove-error-not-loggedin-friend'               => 'U moet aangemeld zijn om een vriend te verwijderen.',
+	'ur-remove'                                         => 'Verwijderen',
+	'ur-cancel'                                         => 'Annuleren',
+	'ur-login'                                          => 'Aanmelden',
+	'ur-add-title-foe'                                  => 'Wilt u $1 toevoegen als tegenstander?',
+	'ur-add-title-friend'                               => 'Wilt u $1 toevoegen als vriend?',
+	'ur-add-message-foe'                                => 'U wilt $1 toevoegen als tegenstander.
+$1 wordt hiervan op de hoogte gesteld.',
+	'ur-add-message-friend'                             => 'U wilt $1 toevoegen als vriend.
+$1 wordt hiervan op de hoogte gesteld.',
+	'ur-friendship'                                     => 'vriendschap',
+	'ur-grudge'                                         => 'wrok',
+	'ur-add-button'                                     => 'Als $1 toevoegen',
+	'ur-add-button-foe'                                 => 'Als tegenstander toevoegen',
+	'ur-add-button-friend'                              => 'Als vriend toevoegen',
+	'ur-add-sent-title-foe'                             => 'Uw tegenstandersverzoek is verstuurd aan $1.',
+	'ur-add-sent-title-friend'                          => 'Uw vriendschapsverzoek is verstuurd aan $1.',
+	'ur-add-sent-message-foe'                           => 'Uw tegenstandersverzoek is ter bevestiging verstuurd aan $1.
+Als $1 uw verzoek bevestigt, ontvangt u daar een e-mail over.',
+	'ur-add-sent-message-friend'                        => 'Uw vriendschapsverzoek is ter bevestiging verstuurd aan $1.
+Als $1 uw verzoek bevestigt, ontvangt u daar een e-mail over.',
+	'ur-add-error-message-no-user'                      => 'De gebruiker die u probeert toe te voegen bestaat niet.',
+	'ur-add-error-message-blocked'                      => 'U bent geblokkeerd en kunt geen vrienden of tegenstanders toevoegen.',
+	'ur-add-error-message-yourself'                     => 'U kunt uzelf niet als vriend of tegenstander toevoegen.',
+	'ur-add-error-message-existing-relationship'        => 'U bent al $1 bij $2.',
+	'ur-add-error-message-existing-relationship-foe'    => 'U bent al bevriend met $1.',
+	'ur-add-error-message-existing-relationship-friend' => '$1 is al uw tegenstander.',
+	'ur-add-error-message-pending-request-title'        => 'Even geduld alstublieft.',
+	'ur-add-error-message-pending-friend-request'       => 'U hebt een openstaand vriendschapsverzoek bij $1.
+U wordt op de hoogte gesteld als $1 uw verzoek bevestigt.',
+	'ur-add-error-message-pending-foe-request'          => 'U hebt een openstaand tegenstandersverzoek bij $1.
+U wordt op de hoogte gesteld als $1 uw verzoek bevestigt.',
+	'ur-add-error-message-not-loggedin'                 => 'U moet aangemeld zijn om een $1 toe te voegen',
+	'ur-add-error-message-not-loggedin-foe'             => 'U moet aangemeld zijn om een tegenstander toe te kunnen voegen',
+	'ur-add-error-message-not-loggedin-friend'          => 'U moet aangemeld zijn om een vriend toe te kunnen voegen',
+	'ur-requests-title'                                 => 'Connectieverzoeken',
+	'ur-requests-message-foe'                           => '<a href="$1">$2</a> wil uw tegenstander zijn.',
+	'ur-requests-message-friend'                        => '<a href="$1">$2</a> wil uw vriend zijn.',
+	'ur-accept'                                         => 'Aanvaarden',
+	'ur-reject'                                         => 'Weigeren',
+	'ur-no-requests-message'                            => 'U hebt geen uitstaande verzoeken voor vrienden of tegenstanders. Als u meer vrienden wilt, <a href="$1">nodig ze dan uit!</a>',
+	'ur-requests-added-message-foe'                     => 'U hebt $1 toegevoegd als tegenstander.',
+	'ur-requests-added-message-friend'                  => 'U hebt $1 toegevoegd als uw vriend.',
+	'ur-requests-reject-message-friend'                 => 'U hebt $1 geweigerd als vriend.',
+	'ur-requests-reject-message-foe'                    => 'U hebt $1 geweigerd als tegenstander.',
+	'ur-title-foe'                                      => 'Tegenstanderslijst van $1',
+	'ur-title-friend'                                   => 'Vriendenlijst van $1',
+	'friend_request_subject'                            => '$1 heeft u als vriend toegevoegd op {{SITENAME}}.',
+	'friend_request_body'                               => 'Hallo $1.
 
 $2 heeft u als vriend toegevoegd op {{SITENAME}}. We willen graag bevestiging dat u echt bevriend bent.
 
@@ -1656,8 +1722,8 @@ Wilt u niet langer e-mails van ons ontvangen?
 
 Klik $4
 en wijzig uw instellingen om e-mailberichten uit te schakelen.',
-	'foe_request_subject'                        => '$1 heeft u toegevoegd als tegenstander op {{SITENAME}}!',
-	'foe_request_body'                           => 'Hallo $1.
+	'foe_request_subject'                               => '$1 heeft u toegevoegd als tegenstander op {{SITENAME}}!',
+	'foe_request_body'                                  => 'Hallo $1.
 
 $2 heeft u als tegenstander toegevoegd op {{SITENAME}}. We willen graag bevestiging dat u echt tegenstanders bent of in ieder geval gebrouilleerd bent.
 
@@ -1671,8 +1737,8 @@ Wilt u niet langer e-mails van ons ontvangen?
 
 Klik $4
 en wijzig uw instellingen om e-mailberichten uit te schakelen.',
-	'friend_accept_subject'                      => '$1 heeft uw verzoek om vrienden te worden op {{SITENAME}} aanvaard.',
-	'friend_accept_body'                         => "Hallo $1.
+	'friend_accept_subject'                             => '$1 heeft uw verzoek om vrienden te worden op {{SITENAME}} aanvaard.',
+	'friend_accept_body'                                => "Hallo $1.
 
 $2 heeft u als vriend geaccepteerd op {{SITENAME}}.
 
@@ -1685,8 +1751,8 @@ Wilt u niet langer e-mails van ons ontvangen?
 
 Klik $4
 en wijzig uw instellingen om e-mailberichten uit te schakelen.",
-	'foe_accept_subject'                         => '$1 heeft u als tegenstander aanvaard op {{SITENAME}}.',
-	'foe_accept_body'                            => "Hallo $1.
+	'foe_accept_subject'                                => '$1 heeft u als tegenstander aanvaard op {{SITENAME}}.',
+	'foe_accept_body'                                   => "Hallo $1.
 
 $2 heeft u als tegenstander bevestigd op {{SITENAME}}.
 
@@ -1699,8 +1765,8 @@ Wilt u niet langer e-mails van ons ontvangen?
 
 Klik $4
 en wijzig uw instellingen om e-mailberichten uit te schakelen.",
-	'friend_removed_subject'                     => '$1 heeft u helaas verwijderd als vriend op {{SITENAME}}!',
-	'friend_removed_body'                        => 'Hallo $1.
+	'friend_removed_subject'                            => '$1 heeft u helaas verwijderd als vriend op {{SITENAME}}!',
+	'friend_removed_body'                               => 'Hallo $1.
 
 $2 heeft u als vriend verwijderd op {{SITENAME}}.
 
@@ -1711,8 +1777,8 @@ Wilt u niet langer e-mails van ons ontvangen?
 
 Klik $4
 en wijzig uw instellingen om e-mailberichten uit te schakelen.',
-	'foe_removed_subject'                        => '$1 heeft u verwijderd als tegenstander op {{SITENAME}}!',
-	'foe_removed_body'                           => 'Hallo $1.
+	'foe_removed_subject'                               => '$1 heeft u verwijderd als tegenstander op {{SITENAME}}!',
+	'foe_removed_body'                                  => 'Hallo $1.
 
 $2 heeft u als tegenstander verwijderd op {{SITENAME}}.
 

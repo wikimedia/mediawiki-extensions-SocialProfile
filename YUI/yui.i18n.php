@@ -24,6 +24,13 @@ $messages['ar'] = array(
 	'yui-desc' => 'مجموعة من الأدوات وأجهزة التحكم، مكتوبة بجافاسكريبت',
 );
 
+/** Asturian (Asturianu)
+ * @author Esbardu
+ */
+$messages['ast'] = array(
+	'yui-desc' => "Un conxuntu d'utilidaes y controles escritos en JavaScript",
+);
+
 /** Bulgarian (Български)
  * @author DCLXVI
  */
