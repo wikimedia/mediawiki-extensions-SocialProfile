@@ -17,7 +17,7 @@ $wgUserBoard = true;
 class SpecialViewUserBoard extends SpecialPage {
 	public function __construct() {
 		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
-		SpecialPage::SpecialPage("UserBoard");
+		SpecialPage::SpecialPage('UserBoard');
 	}
 
 	public function execute( $params ) {
@@ -31,6 +31,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		$output = "";
 		$user_name = $wgRequest->getVal('user');
 		$user_name_2 = $wgRequest->getVal('conv');
+		$user_id_2 = ""; // Prevent E_NOTICE
 		$page =  $wgRequest->getVal('page');
 
 		/**
@@ -69,7 +70,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		* Config for the page
 		*/
 		$per_page = $ub_messages_show;
-		if(!$page || !is_numeric($page) )$page=1;
+		if(!$page || !is_numeric($page) )$page = 1;
 
 		$b = new UserBoard();
 		$ub_messages = $b->getUserBoardMessages($user_id, $user_id_2, $ub_messages_show, $page);
@@ -78,31 +79,31 @@ class SpecialViewUserBoard extends SpecialPage {
 			$stats = new UserStats($user_id, $user_name);
 			$stats_data = $stats->getUserStats();
 			$total = $stats_data["user_board"];
-			if($wgUser->getName() == $user_name)$total=$total+$stats_data["user_board_priv"];
+			if($wgUser->getName() == $user_name)$total = $total+$stats_data["user_board_priv"];
 		} else {
 			$total = $b->getUserBoardToBoardCount($user_id, $user_id_2);
 		}
 
 		if(!$user_id_2){
 			if (!($wgUser->getName() == $user_name)) {
-				$wgOut->setPagetitle( wfMsg("userboard_owner", $user_name) );
+				$wgOut->setPagetitle( wfMsg('userboard_owner', $user_name) );
 			} else {
 				$b->clearNewMessageCount($wgUser->getID());
-				$wgOut->setPagetitle( wfMsg("userboard_yourboard") );
+				$wgOut->setPagetitle( wfMsg('userboard_yourboard') );
 			}
 		} else {
 			if ( $wgUser->getName() == $user_name ) {
-				$wgOut->setPagetitle( wfMsg("userboard_yourboardwith", $user_name_2)  );
+				$wgOut->setPagetitle( wfMsg('userboard_yourboardwith', $user_name_2)  );
 			} else {
-				$wgOut->setPagetitle( wfMsg("userboard_otherboardwith", $user_name, $user_name_2) );
+				$wgOut->setPagetitle( wfMsg('userboard_otherboardwith', $user_name, $user_name_2) );
 			}
 		}
 
 		$output .= '<div class="user-board-top-links">';
-		$output .= "<a href=\"{$user->escapeFullURL()}\">&lt; " . wfMsg("userboard_backprofile", $user_name) . "</a>";
+		$output .= "<a href=\"{$user->escapeFullURL()}\">&lt; " . wfMsg('userboard_backprofile', $user_name) . "</a>";
 		$output .= "</div>";
 		$output .= "<script>/*<![CDATA[*/
-			var _DELETE_CONFIRM = \"" . wfMsg("userboard_confirmdelete") . "\"
+			var _DELETE_CONFIRM = \"" . wfMsg('userboard_confirmdelete') . "\"
 			var posted = 0;
 			function send_message(){
 				if(\$(\"message\").value && !posted){
@@ -144,6 +145,8 @@ class SpecialViewUserBoard extends SpecialPage {
 			}
 		/*]]>*/</script>";
 
+		$board_to_board = ""; // Prevent E_NOTICE
+
 		if($page==1){
 			$start = 1;
 		} else {
@@ -151,13 +154,13 @@ class SpecialViewUserBoard extends SpecialPage {
 		}
 		$end = $start + ( count($ub_messages) ) - 1;
 
-		if($wgUser->getName()!=$user_name){
-			$board_to_board = "<a href=\"" . UserBoard::getUserBoardToBoardURL($wgUser->getName(),$user_name)."\">" .wfMsg( "userboard_boardtoboard" ) . "</a>";
+		if($wgUser->getName() != $user_name){
+			$board_to_board = "<a href=\"" . UserBoard::getUserBoardToBoardURL($wgUser->getName(), $user_name)."\">" .wfMsg( 'userboard_boardtoboard' ) . "</a>";
 		}
 
 		if( $total ){
 		$output .= "<div class=\"user-page-message-top\">
-		<span class=\"user-page-message-count\" style=\"font-size:11px;color:#666666;\">" . wfMsg( "userboard_showingmessages", $total, $start, $end ) . ".</span> {$board_to_board}</span>
+		<span class=\"user-page-message-count\" style=\"font-size:11px;color:#666666;\">" . wfMsg( 'userboard_showingmessages', $total, $start, $end ) . ".</span> {$board_to_board}</span>
 			</div>";
 		}
 
@@ -170,7 +173,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		if($numofpages>1){
 			$output .= "<div class=\"page-nav\">";
 			if($page > 1){
-				$output .= "<a href=\"index.php?title=Special:UserBoard&user={$user_safe}&page=" . ($page-1) . "{$qs}\">" . wfMsg("userboard_prevpage") . "</a> ";
+				$output .= "<a href=\"index.php?title=Special:UserBoard&user={$user_safe}&page=" . ($page-1) . "{$qs}\">" . wfMsg('userboard_prevpage') . "</a> ";
 			}
 
 			if(($total % $per_page) != 0)$numofpages++;
@@ -188,7 +191,7 @@ class SpecialViewUserBoard extends SpecialPage {
 			}
 
 			if(($total - ($per_page * $page)) > 0){
-				$output .=" <a href=\"index.php?title=Special:UserBoard&user={$user_safe}&page=" . ($page+1) . "{$qs}\">" . wfMsg("userboard_nextpage") . "</a>";
+				$output .=" <a href=\"index.php?title=Special:UserBoard&user={$user_safe}&page=" . ($page+1) . "{$qs}\">" . wfMsg('userboard_nextpage') . "</a>";
 			}
 			$output .= "</div><p>";
 		}
@@ -196,6 +199,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		* Build next/prev nav
 		*/
 		$can_post = false;
+		$user_name_from = ""; // Prevent E_NOTICE
 
 		if(!$user_id_2){
 			if($wgUser->getName() != $user_name){
@@ -223,11 +227,11 @@ class SpecialViewUserBoard extends SpecialPage {
 				$output .= "<div class=\"user-page-message-form\">
 					<input type=\"hidden\" id=\"user_name_to\" name=\"user_name_to\" value=\"{$user_name_to}\"/>
 					<input type=\"hidden\" id=\"user_name_from\" name=\"user_name_from\" value=\"{$user_name_from}\"/>
-					<span style=\"color:#797979;\">" . wfMsg("userboard_messagetype") . " </span> <select id=\"message_type\"><option value=\"0\">" . wfMsg("userboard_public") . "</option><option value=\"1\">" . wfMsg("userboard_private") . "</option></select><p>
+					<span style=\"color:#797979;\">" . wfMsg('userboard_messagetype') . " </span> <select id=\"message_type\"><option value=\"0\">" . wfMsg('userboard_public') . "</option><option value=\"1\">" . wfMsg('userboard_private') . "</option></select><p>
 					<textarea name=\"message\" id=\"message\" cols=\"63\" rows=\"4\"/></textarea>
 
 					<div class=\"user-page-message-box-button\">
-						<input type=\"button\" value=\"" . wfMsg("userboard_sendbutton") . "\" class=\"site-button\" onclick=\"javascript:send_message();\">
+						<input type=\"button\" value=\"" . wfMsg('userboard_sendbutton') . "\" class=\"site-button\" onclick=\"javascript:send_message();\">
 					</div>
 
 				</div>";
@@ -236,7 +240,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				$login_link = Title::makeTitle(NS_SPECIAL, "UserLogin");
 
 				$output .= "<div class=\"user-page-message-form\">
-						" . wfMsg("userboard_loggedout", $login_link->escapeFullURL()) . "
+						" . wfMsg('userboard_loggedout', $login_link->escapeFullURL()) . "
 						</div>";
 			}
 		}
@@ -251,19 +255,19 @@ class SpecialViewUserBoard extends SpecialPage {
 				$board_link = "";
 				$ub_message_type_label = "";
 				$delete_link = "";
-				if($wgUser->getName()!=$ub_message["user_name_from"]){
-					$board_to_board = "<a href=\"" . UserBoard::getUserBoardToBoardURL($user_name,$ub_message["user_name_from"])."\">" . wfMsg("userboard_boardtoboard") . "</a>";
+				if($wgUser->getName() != $ub_message["user_name_from"]){
+					$board_to_board = "<a href=\"" . UserBoard::getUserBoardToBoardURL($user_name, $ub_message["user_name_from"])."\">" . wfMsg("userboard_boardtoboard") . "</a>";
 					$board_link = "<a href=\"" . UserBoard::getUserBoardURL($ub_message["user_name_from"])."\">" . wfMsg("userboard_sendmessage",$ub_message["user_name_from"]) . "</a>";
 				} else {
 					$board_link = "<a href=\"" . UserBoard::getUserBoardURL($ub_message["user_name_from"])."\">" . wfMsg("userboard_myboard") . "</a>";
 				}
-				if($wgUser->getName()==$ub_message["user_name"]){
+				if($wgUser->getName() == $ub_message["user_name"]){
 					$delete_link = "<span class=\"user-board-red\">
 						<a href=\"javascript:void(0);\" onclick=\"javascript:delete_message({$ub_message["id"]})\">" . wfMsg("userboard_delete") . "</a>
 					</span>";
 				}
 				if($ub_message["type"] == 1){
-					$ub_message_type_label = "(" . wfMsg("userboard_private") . ")";
+					$ub_message_type_label = "(" . wfMsg('userboard_private') . ")";
 				}
 				global $max_link_text_length;
 				$max_link_text_length = 75;
@@ -297,7 +301,7 @@ class SpecialViewUserBoard extends SpecialPage {
 			}
 		} else {
 			$invite_title = Title::makeTitle(NS_SPECIAL, "InviteContacts");
-			$output .= "<p>" . wfMsg("userboard_nomessages", $invite_title->escapeFullURL() ) . "</p>";
+			$output .= "<p>" . wfMsg('userboard_nomessages', $invite_title->escapeFullURL() ) . "</p>";
 
 		}
 		$output .= "</div>";
