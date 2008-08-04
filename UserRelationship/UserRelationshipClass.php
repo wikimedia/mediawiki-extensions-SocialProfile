@@ -255,7 +255,7 @@ class UserRelationship {
 
 	public function verifyRelationshipRequest($relationship_request_id){
 		$dbr = wfGetDB( DB_MASTER );
-		$s = $dbr->selectRow( 'user_relationship_request', array( 'ur_user_id_to' ), array( 'ur_id' => $relationship_request_id ), $fname );
+		$s = $dbr->selectRow( 'user_relationship_request', array( 'ur_user_id_to' ), array( 'ur_id' => $relationship_request_id ), __METHOD__ );
 		if ( $s !== false ) {
 			if($this->user_id == $s->ur_user_id_to){
 				return true;
