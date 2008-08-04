@@ -131,7 +131,7 @@ class UserBoard {
 
 	public function doesUserOwnMessage($user_id, $ub_id){
 		$dbr = wfGetDB( DB_MASTER );
-		$s = $dbr->selectRow( 'user_board', array( 'ub_user_id' ), array( 'ub_id' => $ub_id ), __METHOD );
+		$s = $dbr->selectRow( 'user_board', array( 'ub_user_id' ), array( 'ub_id' => $ub_id ), __METHOD__ );
 		if ( $s !== false ) {
 			if($user_id == $s->ub_user_id){
 				return true;
@@ -241,6 +241,7 @@ class UserBoard {
 
 	public function displayMessages($user_id, $user_id_2 = 0, $count = 10, $page = 0){
 		global $wgUser, $max_link_text_length, $wgTitle;
+		$output = ""; // Prevent E_NOTICE
 		$messages = $this->getUserBoardMessages($user_id, $user_id_2, $count, $page);
 		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 		if ($messages) {
@@ -253,7 +254,6 @@ class UserBoard {
 				$board_link = "";
 				$message_type_label = "";
 				$delete_link = "";
-				$output = ""; // Prevent E_NOTICE
 
 				if($wgUser->getName() != $message["user_name_from"]){
 					$board_to_board = "<a href=\"" . UserBoard::getUserBoardToBoardURL($message["user_name"], $message["user_name_from"])."\">" . wfMsgHtml( 'userboard_board-to-board' ) . "</a>";
