@@ -30,8 +30,8 @@ $messages['en'] = array(
 	'ur-add-no-user'                             => 'No user selected.
 Please request friends/foes through the correct link.',
 	'ur-add-personal-message'                    => 'Add a personal message',
-	'ur-remove-relationship-friend' => 'Remove as Friend',
-	'ur-remove-relationship-foe' => 'Remove as Foe',
+	'ur-remove-relationship-friend' => 'Remove as friend',
+	'ur-remove-relationship-foe' => 'Remove as foe',
 	'ur-give-gift'                               => 'Give a gift',
 	'ur-previous'                                => 'prev',
 	'ur-next'                                    => 'next',
