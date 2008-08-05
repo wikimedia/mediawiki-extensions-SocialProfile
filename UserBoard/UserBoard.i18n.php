@@ -374,6 +374,13 @@ $messages['eo'] = array(
 	'userboard_sendbutton'     => 'sendi',
 );
 
+/** Spanish (Español)
+ * @author Sanbec
+ */
+$messages['es'] = array(
+	'userboard_delete' => 'Borrar',
+);
+
 /** Finnish (Suomi)
  * @author Jack Phoenix
  * @author Crt

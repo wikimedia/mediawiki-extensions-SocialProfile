@@ -466,6 +466,13 @@ $messages['bcc'] = array(
 	'populate-user-profile-done' => 'پروفایل $1 هور بوت',
 );
 
+/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+ * @author EugeneZelenko
+ */
+$messages['be-tarask'] = array(
+	'user-profile-personal-name' => 'Імя',
+);
+
 /** Bulgarian (Български)
  * @author DCLXVI
  */
@@ -566,6 +573,7 @@ $messages['bg'] = array(
 	'user-profile-interests-drinks'                   => 'Напитки',
 	'user-profile-preferences-emails'                 => 'Оповестявания по е-поща',
 	'user-profile-preferences-emails-personalmessage' => 'При изпращане на лично съобщение',
+	'user-profile-preferences-emails-friendfoe'       => 'при добавяне като приятел или неприятел от друг потребител',
 	'user-profile-preferences-emails-gift'            => 'При получаване на подарък',
 	'user-profile-preferences-emails-level'           => 'При повишаване в ранг',
 	'user-profile-preferences-emails-weekly'          => 'Получаване на седмични бюлетини по е-поща',
@@ -573,8 +581,10 @@ $messages['bg'] = array(
 	'user-profile-tidbits-favmoment'                  => 'Любим спортен момент',
 	'user-profile-tidbits-favathlete'                 => 'Любим спортист',
 	'user-profile-sports-sport'                       => 'Спорт',
+	'user-profile-sports-title'                       => 'Редактиране на любимите спортове и отбори',
 	'user-profile-sports-notloggedintitle'            => 'Опа!',
 	'user-profile-sports-notloggedintext'             => 'За редактиране на профила е необходимо влизане в системата.',
+	'user-profile-sports-teamsaved'                   => 'Отборите бяха съхранени',
 	'user-profile-sports-addmore'                     => 'Добавяне на още спортове/отбори',
 	'user-profile-picture-title'                      => 'Качване на снимка',
 	'user-profile-picture-log'                        => 'аватар',
@@ -2361,7 +2371,9 @@ $messages['mr'] = array(
  * @author Roderick Mallia
  */
 $messages['mt'] = array(
-	'user-page-link' => 'Paġna tal-utent',
+	'user-watchlist'              => 'Li qed insegwi',
+	'user-profile-personal-email' => 'E-mail',
+	'user-page-link'              => 'Paġna tal-utent',
 );
 
 /** Nahuatl (Nahuatl)
