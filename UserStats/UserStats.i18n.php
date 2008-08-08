@@ -147,6 +147,16 @@ $messages['de'] = array(
 	'top-fans-bad-field-title' => 'Hoppla!',
 );
 
+/** Greek (Ελληνικά)
+ * @author Consta
+ */
+$messages['el'] = array(
+	'top-fans-stats-edit-count'       => '{{PLURAL:$1|Επεξεργασία|Επεξεργασίες}}',
+	'top-fans-stats-comment-count'    => '{{PLURAL:$1|Σχόλιο|Σχόλια}}',
+	'top-fans-stats-friends-count'    => '{{PLURAL:$1|Φίλος|Φίλοι}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Γνώμη|Γνώμες}}',
+);
+
 /** Esperanto (Esperanto)
  * @author Yekrats
  */

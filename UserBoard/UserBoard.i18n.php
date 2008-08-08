@@ -387,7 +387,7 @@ $messages['es'] = array(
  */
 $messages['fi'] = array(
 	'boardblastlogintitle'      => 'Sinun tulee olla sisäänkirjautunut lähettääksesi keskustelupläjäyksiä',
-	'boardblastlogintext'       => 'Sinun tulee olla sisäänkirjautunut lähettääksesi keskustelupläjäyksiä.  Napsauta <a href="index.php?title=Special:Userlogin">tästä kirjautuaksesi sisään</a>',
+	'boardblastlogintext'       => 'Sinun tulee olla sisäänkirjautunut lähettääksesi keskustelupläjäyksiä.  Napsauta <a href="index.php?title=Special:UserLogin">tästä kirjautuaksesi sisään</a>',
 	'messagesenttitle'          => 'Viestit lähetetty',
 	'boardblasttitle'           => 'Lähetä keskustelupläjäys',
 	'boardblaststep1'           => 'Vaihe 1 – Kirjoita viestisi',
@@ -415,7 +415,7 @@ $messages['fi'] = array(
 	'userboard_confirmdelete'   => 'Oletko varma, että haluat poistaa tämän viestin?',
 	'userboard_sendmessage'     => 'Lähetä käyttäjälle $1 viesti',
 	'userboard_myboard'         => 'Keskustelualueeni',
-	'userboard_posted_ago' => 'lähetetty $1 sitten',
+	'userboard_posted_ago'      => 'lähetetty $1 sitten',
 	'userboard_private'         => 'yksityinen',
 	'userboard_public'          => 'julkinen',
 	'userboard_messagetype'     => 'Viestin tyyppi',
@@ -427,17 +427,17 @@ $messages['fi'] = array(
 	'userboard_showingmessages' => 'Näkyvillä $2-$3 viestiä (yhteensä {{PLURAL:$1|$1 viesti|$1 viestiä}})',
 	'message_received_subject'  => '$1 kirjoitti keskustelualueellesi {{GRAMMAR:inessive|{{SITENAME}}}}',
 	'message_received_body'     => 'Hei $1:
-
+ 
 $2 juuri kirjoitti keskustelualueellesi {{GRAMMAR:inessive|{{SITENAME}}}}!
-
+ 
 Napsauta alapuolella olevaa linkki tarkistaaksesi keskustelualueesi!
-
+ 
 $3
-
+ 
 ---
-
-Hei, etkö halua enää saada sähköposteja meiltä?
-
+ 
+Hei, etkö halua enää saada sähköposteja meiltä?  
+ 
 Napsauta $4
 ja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.',
 );
@@ -878,7 +878,7 @@ $messages['nn'] = array(
  */
 $messages['no'] = array(
 	'boardblastlogintitle'      => 'Du må være logget inn for å sende meldinger',
-	'boardblastlogintext'       => 'Du må være logget inn for å sende meldinger. Gå <a href="index.php?title=Special:Userlogin">hit for å logge inn</a>',
+	'boardblastlogintext'       => 'Du må være logget inn for å sende meldinger. Gå <a href="index.php?title=Special:UserLogin">hit for å logge inn</a>',
 	'messagesenttitle'          => 'Sendte beskjeder',
 	'boardblasttitle'           => 'Send melding',
 	'boardblaststep1'           => 'Steg 1 &ndash; skriv beskjeden din',
@@ -1216,7 +1216,7 @@ a zmeňte svoje nastavenia na vypnutie upozornení emailom.',
  */
 $messages['sv'] = array(
 	'boardblastlogintitle'      => 'Du måste vara inloggad för att sända meddelanden',
-	'boardblastlogintext'       => 'Du måste vara inloggad för att sända meddelanden. Klicka <a href="index.php?title=Special:Userlogin">här för att logga in</a>',
+	'boardblastlogintext'       => 'Du måste vara inloggad för att sända meddelanden. Klicka <a href="index.php?title=Special:UserLogin">här för att logga in</a>',
 	'messagesenttitle'          => 'Sända meddelanden',
 	'boardblasttitle'           => 'Sänd meddelande',
 	'boardblaststep1'           => 'Steg 1 - Skriv ditt meddelande',
