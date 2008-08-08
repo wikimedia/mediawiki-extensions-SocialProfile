@@ -2380,65 +2380,94 @@ sbddlt reglage nk bach aktnin soul ur-nsifid.',
  * @author Helix84
  */
 $messages['sk'] = array(
-	'viewrelationships'                          => 'Zobraziť vzťah',
-	'viewrelationshiprequests'                   => 'Zobraziť žiadosti o vzťah',
-	'ur-already-submitted'                       => 'Vaša požiadavka bola odoslaná',
-	'ur-error-title'                             => 'Ops, niečo ste spravili zle!',
-	'ur-error-message-no-user'                   => 'Nebolo možné dokončiť vašu požiadavku, pretože používateľ s daným menom neexistuje.',
-	'ur-main-page'                               => 'Hlavná stránka',
-	'ur-your-profile'                            => 'Váš profil',
-	'ur-backlink'                                => '&lt; Späť na profil $1',
-	'ur-friend'                                  => 'priateľ',
-	'ur-foe'                                     => 'nepriateľ',
-	'ur-relationship-count'                      => '$1 má $2 {{PLURAL:$2|$3|$3}}.',
-	'ur-add-friends'                             => 'Chcete viac priateľov? <a href="$1">Pozvite ich</a>',
-	'ur-add-friend'                              => 'Pridať ako priateľa',
-	'ur-add-foe'                                 => 'Pridať ako nepriateľa',
-	'ur-add-no-user'                             => 'Nebol vybraný žiadny používateľ. Prosím, žiadajte o priateľov/nepriateľov použitím správneho odkazu.',
-	'ur-add-personal-message'                    => 'Pridať osobnú správu',
-	'ur-remove-relationship'                     => 'Odstrániť ako $1',
-	'ur-give-gift'                               => 'Darovať darček',
-	'ur-previous'                                => 'predch',
-	'ur-next'                                    => 'nasled',
-	'ur-remove-relationship-title'               => 'Chcete odstrániť $1 ako svojho $2?',
-	'ur-remove-relationship-title-confirm'       => 'Odstránili ste $1 ako svojho $2.',
-	'ur-remove-relationship-message'             => 'Požiadali ste o odstránenie $1 ako svojho $2. Potvrdíte to kliknutím na „$3“.',
-	'ur-remove-relationship-message-confirm'     => 'Úspešne ste odstránili $1 ako svojho $2.',
-	'ur-remove-error-message-no-relationship'    => 'Nemáte žiaden vzťah s $1.',
-	'ur-remove-error-message-remove-yourself'    => 'Nemôžete odstrániť seba.',
-	'ur-remove-error-message-pending-request'    => 'Máte nevybavenú žiadosť o $1 u $2.',
-	'ur-remove-error-not-loggedin'               => 'Aby ste mohli odstrániť $1, musíte byť prihlásený.',
-	'ur-remove'                                  => 'Odstrániť',
-	'ur-cancel'                                  => 'Zrušiť',
-	'ur-login'                                   => 'Prihlásiť sa',
-	'ur-add-title'                               => 'Chcete pridať $1 ako svojho $2?',
-	'ur-add-message'                             => 'Chystáte sa pridať $1 ako svojho $2.
-Upozorníme $1, aby potrvrdil vaše $3.',
-	'ur-friendship'                              => 'priateľstvo',
-	'ur-grudge'                                  => 'nepriateľstvo',
-	'ur-add-button'                              => 'Pridať ako $1',
-	'ur-add-sent-title'                          => 'Poslali sme vašu žiadosť o $1 používateľovi $2!',
-	'ur-add-sent-message'                        => 'Vaša žiadosť o $1 bola odoslaná na potrvrdenie používateľovi $2.
-Ak $2 potvrdí vašu žiadosť, dostanete oznámenie emailom.',
-	'ur-add-error-message-no-user'               => 'Používateľ, ktorého sa pokúšate pridať, neexistuje.',
-	'ur-add-error-message-blocked'               => 'Momentálne ste zablokovaný a nemôžete pridávať priadteľov alebo nepriateľov.',
-	'ur-add-error-message-yourself'              => 'Nemôžete pridať sám seba ako priateľa alebo nepriateľa.',
-	'ur-add-error-message-existing-relationship' => 'S $2 už ste $1.',
-	'ur-add-error-message-pending-request-title' => 'Trpezlivosť!',
-	'ur-add-error-message-pending-request'       => 'Máte čakajúcu žiadosť o $1 s používateľom $2. Oznámime vám, keď $2 potvrdí vašu žiadosť.',
-	'ur-add-error-message-not-loggedin'          => 'Aby ste mohli pridať $1, musíte sa prihlásiť.',
-	'ur-requests-title'                          => 'Žiadosti o vzťah',
-	'ur-requests-message'                        => '<a href="$1">$2</a> chce byť váš $3.',
-	'ur-accept'                                  => 'Prijať',
-	'ur-reject'                                  => 'Odmietnuť',
-	'ur-no-requests-message'                     => 'Nemáte žiadosti o vytvorenie vzťahu priateľ či nepriateľ.
+	'viewrelationships'                                 => 'Zobraziť vzťah',
+	'viewrelationshiprequests'                          => 'Zobraziť žiadosti o vzťah',
+	'ur-already-submitted'                              => 'Vaša požiadavka bola odoslaná',
+	'ur-error-page-title'                               => 'Ops!',
+	'ur-error-title'                                    => 'Ops, niečo ste spravili zle!',
+	'ur-error-message-no-user'                          => 'Nebolo možné dokončiť vašu požiadavku, pretože používateľ s daným menom neexistuje.',
+	'ur-main-page'                                      => 'Hlavná stránka',
+	'ur-your-profile'                                   => 'Váš profil',
+	'ur-backlink'                                       => '&lt; Späť na profil $1',
+	'ur-friend'                                         => 'priateľ',
+	'ur-foe'                                            => 'nepriateľ',
+	'ur-relationship-count-foes'                        => '$1 má $2 {{PLURAL:$2|nepriateľa|nepriateľov}}. Chcete viac nepriateľov? <a href="$3">Pozvite ich.</a>',
+	'ur-relationship-count-friends'                     => '$1 má $2 {{PLURAL:$2|priateľa|priateľov}}. Chcete viac priateľov? <a href="$3">Pozvite ich.</a>',
+	'ur-add-friends'                                    => 'Chcete viac priateľov? <a href="$1">Pozvite ich</a>',
+	'ur-add-friend'                                     => 'Pridať ako priateľa',
+	'ur-add-foe'                                        => 'Pridať ako nepriateľa',
+	'ur-add-no-user'                                    => 'Nebol vybraný žiadny používateľ. Prosím, žiadajte o priateľov/nepriateľov použitím správneho odkazu.',
+	'ur-add-personal-message'                           => 'Pridať osobnú správu',
+	'ur-remove-relationship-friend'                     => 'Odstrániť priateľa',
+	'ur-remove-relationship-foe'                        => 'Odstrániť nepriateľa',
+	'ur-give-gift'                                      => 'Darovať darček',
+	'ur-previous'                                       => 'predch',
+	'ur-next'                                           => 'nasled',
+	'ur-remove-relationship-title-foe'                  => 'Chcete odstrániť $1 zo zoznamu svojich nepriateľov?',
+	'ur-remove-relationship-title-confirm-foe'          => 'Odstránili ste $1 zo zoznamu svojich nepriateľov',
+	'ur-remove-relationship-title-friend'               => 'Chcete odstrániť $1 zo zoznamu svojich priateľov?',
+	'ur-remove-relationship-title-confirm-friend'       => 'Odstránili ste $1 zo zoznamu svojich priateľov',
+	'ur-remove-relationship-message-foe'                => 'Požiadali ste o odstránenie $1 zo zoznamu svojich nepriateľov. Potvrďte to stlačením „$2”.',
+	'ur-remove-relationship-message-confirm-foe'        => 'Úspešne ste odstránili $1 zo zoznamu svojich nepriateľov.',
+	'ur-remove-relationship-message-friend'             => 'Požiadali ste o odstránenie $1 zo zoznamu svojich priateľov. Potvrďte to stlačením „$2”.',
+	'ur-remove-relationship-message-confirm-friend'     => 'Úspešne ste odstránili $1 zo zoznamu svojich priateľov.',
+	'ur-remove-error-message-no-relationship'           => 'Nemáte žiaden vzťah s $1.',
+	'ur-remove-error-message-remove-yourself'           => 'Nemôžete odstrániť seba.',
+	'ur-remove-error-message-pending-request'           => 'Máte nevybavenú žiadosť o $1 u $2.',
+	'ur-remove-error-message-pending-foe-request'       => 'Máte čakajúcu požiadavku na nepriateľstvo s $1.',
+	'ur-remove-error-message-pending-friend-request'    => 'Máte čakajúcu požiadavku na priateľstvo s $1.',
+	'ur-remove-error-not-loggedin'                      => 'Aby ste mohli odstrániť $1, musíte byť prihlásený.',
+	'ur-remove-error-not-loggedin-foe'                  => 'Aby ste mohli odstrániť nepriateľa, musíte sa prihlásiť.',
+	'ur-remove-error-not-loggedin-friend'               => 'Aby ste mohli odstrániť priateľa, musíte sa prihlásiť.',
+	'ur-remove'                                         => 'Odstrániť',
+	'ur-cancel'                                         => 'Zrušiť',
+	'ur-login'                                          => 'Prihlásiť sa',
+	'ur-add-title-foe'                                  => 'Želáte si pridať $1 medzi svojich nepriateľov?',
+	'ur-add-title-friend'                               => 'Želáte si pridať $1 medzi svojich priateľov?',
+	'ur-add-message-foe'                                => 'Chystáte sa pridať $1 medzi svojich nepriateľov.
+Upozorníme $1, aby potvrdil váš spor.',
+	'ur-add-message-friend'                             => 'Chystáte sa pridať $1 medzi svojich priateľov.
+Upozorníme $1, aby potvrdil vaše priateľstvo.',
+	'ur-friendship'                                     => 'priateľstvo',
+	'ur-grudge'                                         => 'nepriateľstvo',
+	'ur-add-button'                                     => 'Pridať ako $1',
+	'ur-add-button-foe'                                 => 'Pridať medzi nepriateľov',
+	'ur-add-button-friend'                              => 'Pridať medzi priateľov',
+	'ur-add-sent-title-foe'                             => 'Vaša požiadavka na nepriateľstvo s $1 bola odoslaná!',
+	'ur-add-sent-title-friend'                          => 'Vaša požiadavka na uzatvorenie priateľstva s $1 bola odoslaná!',
+	'ur-add-sent-message-foe'                           => 'Vaša požiadavka na nepriateľstvo bola odoslaná, aby ju $1 potrvrdil.
+Ak ju $1 potvrdí, dostanete o tom upozornenie emailom.',
+	'ur-add-sent-message-friend'                        => 'Vaša požiadavka na uzatvorenie priateľstva bola odoslaná, aby ju $1 potrvrdil.
+Ak ju $1 potvrdí, dostanete o tom upozornenie emailom.',
+	'ur-add-error-message-no-user'                      => 'Používateľ, ktorého sa pokúšate pridať, neexistuje.',
+	'ur-add-error-message-blocked'                      => 'Momentálne ste zablokovaný a nemôžete pridávať priadteľov alebo nepriateľov.',
+	'ur-add-error-message-yourself'                     => 'Nemôžete pridať sám seba ako priateľa alebo nepriateľa.',
+	'ur-add-error-message-existing-relationship'        => 'S $2 už ste $1.',
+	'ur-add-error-message-existing-relationship-foe'    => 'Už ste nepriateľ s $1.',
+	'ur-add-error-message-existing-relationship-friend' => 'Už ste priateľ s $1.',
+	'ur-add-error-message-pending-request-title'        => 'Trpezlivosť!',
+	'ur-add-error-message-pending-friend-request'       => 'Máte žiadosť o uzatvorenie priateľstva s $1, ktorá čaká na potvrdenie.
+Upozorníme vás, keď $1 potvrdí vašu žiadosť.',
+	'ur-add-error-message-pending-foe-request'          => 'Máte žiadosť o nepriateľstvo s $1, ktorá čaká na potvrdenie.
+Upozorníme vás, keď $1 potvrdí vašu žiadosť.',
+	'ur-add-error-message-not-loggedin'                 => 'Aby ste mohli pridať $1, musíte sa prihlásiť.',
+	'ur-add-error-message-not-loggedin-foe'             => 'Aby ste mohli pridať nepriateľa, musíte sa prihlásiť',
+	'ur-add-error-message-not-loggedin-friend'          => 'Aby ste mohli pridať priateľa, musíte sa prihlásiť',
+	'ur-requests-title'                                 => 'Žiadosti o vzťah',
+	'ur-requests-message-foe'                           => '<a href="$1">$2</a> chce byť váš nepriateľ.',
+	'ur-requests-message-friend'                        => '<a href="$1">$2</a> chce byť váš priateľ.',
+	'ur-accept'                                         => 'Prijať',
+	'ur-reject'                                         => 'Odmietnuť',
+	'ur-no-requests-message'                            => 'Nemáte žiadosti o vytvorenie vzťahu priateľ či nepriateľ.
 Ak chcete viac priateľov, <a href="$1">pozvite ich!</a>',
-	'ur-requests-added-message'                  => 'Pridali ste $1 ako svojho $2.',
-	'ur-requests-reject-message'                 => 'Odmietli ste $1 ako svojho $2.',
-	'ur-title-foe'                               => 'Zoznam nepriateľov používateľa $1',
-	'ur-title-friend'                            => 'Zoznam priateľov používateľa $1',
-	'friend_request_subject'                     => '$1 si vás pridal ako priateľa na {{GRAMMAR:lokál|{{SITENAME}}}}!',
-	'friend_request_body'                        => 'Ahoj $1:
+	'ur-requests-added-message-foe'                     => 'Pridali ste $1 medzi svojich nepriateľov.',
+	'ur-requests-added-message-friend'                  => 'Pridali ste $1 medzi svojich priateľov.',
+	'ur-requests-reject-message-friend'                 => 'Odmietli ste pridať $1 medzi svojich priateľov.',
+	'ur-requests-reject-message-foe'                    => 'Odmietli ste pridať $1 medzi svojich nepriateľov.',
+	'ur-title-foe'                                      => 'Zoznam nepriateľov používateľa $1',
+	'ur-title-friend'                                   => 'Zoznam priateľov používateľa $1',
+	'friend_request_subject'                            => '$1 si vás pridal ako priateľa na {{GRAMMAR:lokál|{{SITENAME}}}}!',
+	'friend_request_body'                               => 'Ahoj $1:
 
 $2 si vás pridal ako priateľa na {{GRAMMAR:lokál|{{SITENAME}}}}. Chceme sa uistiť, že ste skutočne priatelia.
 
@@ -2454,8 +2483,8 @@ Nechcete viac od nás dostávať email?
 
 Kliknite na $4
 a vypnite upozornenia emailov vo svojich nastaveniach.',
-	'foe_request_subject'                        => 'Je vojna! $1 si vás pridal ako nepriateľa na {{GRAMMAR:lokál|{{SITENAME}}}}!',
-	'foe_request_body'                           => 'Ahoj $1:
+	'foe_request_subject'                               => 'Je vojna! $1 si vás pridal ako nepriateľa na {{GRAMMAR:lokál|{{SITENAME}}}}!',
+	'foe_request_body'                                  => 'Ahoj $1:
 
 $2 si vás pridal ako nepriateľa na {{GRAMMAR:lokál|{{SITENAME}}}}. Chceme sa uistiť, že ste skutočne nepriatelia na smrť alebo ste sa aspoň pohádali.
 
@@ -2471,8 +2500,8 @@ Nechcete viac od nás dostávať email?
 
 Kliknite na $4
 a vypnite upozornenia emailov vo svojich nastaveniach.',
-	'friend_accept_subject'                      => '$1 prijal vašu požiadavku na uzavretie priateľstva na {{GRAMMAR:lokál|{{SITENAME}}}}!',
-	'friend_accept_body'                         => 'Ahoj $1:
+	'friend_accept_subject'                             => '$1 prijal vašu požiadavku na uzavretie priateľstva na {{GRAMMAR:lokál|{{SITENAME}}}}!',
+	'friend_accept_body'                                => 'Ahoj $1:
 
 $1 prijal vašu požiadavku na uzavretie priateľstva na {{GRAMMAR:lokál|{{SITENAME}}}}!
 
@@ -2486,8 +2515,8 @@ Nechcete viac od nás dostávať email?
 
 Kliknite na $4
 a vypnite upozornenia emailov vo svojich nastaveniach.',
-	'foe_accept_subject'                         => 'Je to tu! $1 prijal vašu požiadavku na vyhlásenie nepriateľstva na {{GRAMMAR:lokál|{{SITENAME}}}}!',
-	'foe_accept_body'                            => 'Ahoj $1:
+	'foe_accept_subject'                                => 'Je to tu! $1 prijal vašu požiadavku na vyhlásenie nepriateľstva na {{GRAMMAR:lokál|{{SITENAME}}}}!',
+	'foe_accept_body'                                   => 'Ahoj $1:
 
 $1 prijal vašu požiadavku na vyhlásenie nepriateľstva na {{GRAMMAR:lokál|{{SITENAME}}}}!
 
@@ -2501,8 +2530,8 @@ Nechcete viac od nás dostávať email?
 
 Kliknite na $4
 a vypnite upozornenia emailov vo svojich nastaveniach.',
-	'friend_removed_subject'                     => 'Ó. nie! $1 si vás odstránil ako priateľa na {{GRAMMAR:lokál|{{SITENAME}}}}!',
-	'friend_removed_body'                        => 'Ahoj $1:
+	'friend_removed_subject'                            => 'Ó. nie! $1 si vás odstránil ako priateľa na {{GRAMMAR:lokál|{{SITENAME}}}}!',
+	'friend_removed_body'                               => 'Ahoj $1:
 
 $2 si vás odstránil ako priateľa na {{GRAMMAR:lokál|{{SITENAME}}}}!
 
@@ -2514,8 +2543,8 @@ Nechcete viac od nás dostávať email?
 
 Kliknite na $4
 a vypnite upozornenia emailov vo svojich nastaveniach.',
-	'foe_removed_subject'                        => 'Hej! $1 si vás odstránil ako nepriateľa na {{GRAMMAR:lokál|{{SITENAME}}}}!',
-	'foe_removed_body'                           => 'Ahoj $1:
+	'foe_removed_subject'                               => 'Hej! $1 si vás odstránil ako nepriateľa na {{GRAMMAR:lokál|{{SITENAME}}}}!',
+	'foe_removed_body'                                  => 'Ahoj $1:
 
 $2 si vás odstránil ako nepriateľa na {{GRAMMAR:lokál|{{SITENAME}}}}!
 
