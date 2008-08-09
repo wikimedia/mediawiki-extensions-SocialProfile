@@ -52,6 +52,13 @@ $messages['dsb'] = array(
 	'yui-desc' => 'Sajźba rědow a kontrolnych elementow napisanych w JavaScripśe',
 );
 
+/** Esperanto (Esperanto)
+ * @author Yekrats
+ */
+$messages['eo'] = array(
+	'yui-desc' => 'Aro da iloj kaj kontroliloj, verkita en JavaScript',
+);
+
 /** French (Français)
  * @author Grondin
  */
@@ -186,7 +193,7 @@ $messages['sv'] = array(
 	'yui-desc' => 'En serie av verktyg och kontroller, skrivna i JavaScript',
 );
 
-/** Tajik (Cyrillic) (Тоҷикӣ/tojikī (Cyrillic))
+/** Tajik (Cyrillic) (Тоҷикӣ (Cyrillic))
  * @author Ibrahim
  */
 $messages['tg-cyrl'] = array(
