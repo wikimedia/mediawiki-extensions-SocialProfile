@@ -66,7 +66,9 @@ Click $4
 and change your settings to disable email notifications.'
 );
 
-/** Message documentation (Message documentation) */
+/** Message documentation (Message documentation)
+ * @author Jon Harald Søby
+ */
 $messages['qqq'] = array(
 	'userboard_delete' => '{{Identical|Delete}}',
 	'userboard_private' => '{{Identical|Private}}',

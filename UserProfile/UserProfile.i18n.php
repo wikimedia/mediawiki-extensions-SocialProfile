@@ -193,7 +193,9 @@ Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.
 	'user-profile-picture-log-delete-entry' => 'deleted $1\'s avatar',
 );
 
-/** Message documentation (Message documentation) */
+/** Message documentation (Message documentation)
+ * @author Jon Harald Søby
+ */
 $messages['qqq'] = array(
 	'user-watchlist' => '{{Identical|My watchlist}}',
 	'user-add-friend' => '{{Identical|Add as friend}}',

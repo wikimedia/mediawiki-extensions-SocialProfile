@@ -192,7 +192,10 @@ Click $4
 and change your settings to disable e-mail notifications.',
 );
 
-/** Message documentation (Message documentation) */
+/** Message documentation (Message documentation)
+ * @author Jon Harald Søby
+ * @author Siebrand
+ */
 $messages['qqq'] = array(
 	'ur-main-page' => '{{Identical|Main page}}',
 	'ur-add-friend' => '{{Identical|Add as friend}}',
