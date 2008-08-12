@@ -1315,6 +1315,13 @@ $messages['hil'] = array(
 	'ur-login' => 'Mag sulod',
 );
 
+/** Croatian (Hrvatski)
+ * @author Dalibor Bosits
+ */
+$messages['hr'] = array(
+	'ur-remove' => 'Ukloni',
+);
+
 /** Interlingua (Interlingua)
  * @author McDutchie
  */

@@ -163,6 +163,12 @@ $messages['el'] = array(
 $messages['eo'] = array(
 	'top-fans-points' => 'poentoj',
 	'top-fans-bad-field-title' => 'Ho ve!',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Voĉdono|Voĉdonoj}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Redakto|Redaktoj}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Komento|Komentoj}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Amiko|Amikoj}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Malamiko|Malamikoj}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinio|Opinioj}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Donaco ricevita|Donacoj ricevita}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Donaco sendita|Donacoj senditaj}}',
 );
