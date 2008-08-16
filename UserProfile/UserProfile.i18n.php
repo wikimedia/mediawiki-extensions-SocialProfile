@@ -3032,6 +3032,13 @@ $messages['os'] = array(
 	'user-profile-personal-email' => 'Эл. посты адрис',
 );
 
+/** Plautdietsch (Plautdietsch)
+ * @author Slomox
+ */
+$messages['pdt'] = array(
+	'user-page-link' => 'Bruckersied',
+);
+
 /** Polish (Polski)
  * @author Maikking
  * @author Sp5uhe
