@@ -670,6 +670,9 @@ $messages['km'] = array(
  * @author Purodha
  */
 $messages['ksh'] = array(
+	'messagesentsuccess' => 'Ding Nohresch eß verscheck woode',
+	'userboard' => 'Pennwand fö Metmaacher',
+	'userboard_board-to-board' => 'Pennwand-zoh-Pennwand',
 	'userboard_delete' => 'Fottschmieße',
 );
 

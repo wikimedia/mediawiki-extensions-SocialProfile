@@ -2070,6 +2070,7 @@ $messages['ksh'] = array(
 	'user-personal-info-real-name' => 'Dä richtije Name:',
 	'user-profile-personal-name' => 'Name',
 	'user-page-link' => 'Matmaachersigg',
+	'user-board-login-message' => 'Do moß <a href="$1">enjelogg</a> sin, öm Nohreschte för ander Metmaacher ze schecke',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
