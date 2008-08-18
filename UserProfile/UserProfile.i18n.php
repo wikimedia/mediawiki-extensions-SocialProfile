@@ -55,7 +55,7 @@ $messages['en'] = array(
 	'custom-no-info'                        => 'No custom information',
 	'profile-updated-personal'              => 'Update your profile',
 	'profile-not-provided'                  => 'Not provided',
-	'populate-user-profile-done'            => 'Added $1 profiles',
+	'populate-user-profile-done'            => 'Added $1 {{PLURAL:$1|profile|profiles}}',
 	'user-board-title'                      => 'Board',
 	'user-send-board-blast'                 => 'Send board blast',
 	'user-personal-info-title'              => 'Personal information',
@@ -1244,6 +1244,7 @@ Pursa <a href="$1">aquina</a> p\'abril la tu cuenta, u <a href="$2">aquina</a> p
  */
 $messages['fi'] = array(
 	'populateuserprofiles' => 'Täytä käyttäjäprofiilit',
+	'populate-user-profile-done' => 'Lisättiin $1 {{PLURAL:$1|profiili|profiilia}}',
 	'user-view-all' => 'Katso kaikki',
 	'user-upload-image' => 'Lataa kuva',
 	'user-edit-this' => 'Muokkaa tätä',
