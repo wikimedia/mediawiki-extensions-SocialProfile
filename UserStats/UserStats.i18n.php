@@ -304,6 +304,15 @@ Faga clic $3
 e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
 );
 
+/** Ripoarisch (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'user-stats-alltime-title' => 'De miehßte Punkte övver alle Zick',
+	'user-stats-weekly-title' => 'De miehßte Punkte övver diß Woch',
+	'user-stats-monthly-title' => 'De miehßte Punkte disse Mohnd',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
@@ -329,6 +338,7 @@ $messages['lb'] = array(
 
 /** Dutch (Nederlands)
  * @author Siebrand
+ * @author Tvdm
  */
 $messages['nl'] = array(
 	'user-stats-alltime-title' => 'Meeste punten aller tijden',
@@ -342,7 +352,7 @@ $messages['nl'] = array(
 	'top-fans-monthly-points-link' => 'Punten per maand',
 	'top-fans-points' => 'punten',
 	'top-fans-by-category-title' => 'Top algemeen $1',
-	'top-fans-bad-field-title' => 'Oops!',
+	'top-fans-bad-field-title' => 'Oeps!',
 	'top-fans-bad-field-message' => 'De opgegeven statistiek bestaat niet.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Stem|Stemmen}}',
 	'top-fans-stats-monthly-winner-count' => 'Maandelijkse {{PLURAL:$1|overwinning|overwinningen}}',

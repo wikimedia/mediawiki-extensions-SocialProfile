@@ -604,6 +604,13 @@ $messages['hil'] = array(
 	'userboard_delete' => 'Panason',
 );
 
+/** Croatian (Hrvatski)
+ * @author Dalibor Bosits
+ */
+$messages['hr'] = array(
+	'userboard_delete' => 'Izbriši',
+);
+
 /** Interlingua (Interlingua)
  * @author McDutchie
  */
@@ -616,6 +623,13 @@ $messages['ia'] = array(
  */
 $messages['it'] = array(
 	'userboard_delete' => 'Cancella',
+);
+
+/** Japanese (日本語)
+ * @author Aotake
+ */
+$messages['ja'] = array(
+	'userboard_noexist' => '閲覧しようとした利用者は存在していません。',
 );
 
 /** Javanese (Basa Jawa)

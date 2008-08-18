@@ -1407,6 +1407,7 @@ $messages['krj'] = array(
  */
 $messages['ksh'] = array(
 	'ur-cancel' => 'Draanjevve',
+	'friend_request_subject' => 'Metmaacher „$1“ fun de {{SITENAME}} hät Desch als ene Frünnd opjenomme.',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
@@ -1606,6 +1607,13 @@ $2 ने तुम्हांला {{SITENAME}} वर मित्र म्
 व इमेल सूचनांच्या तुमच्या पसंती बदला.',
 );
 
+/** Maltese (Malti)
+ * @author Roderick Mallia
+ */
+$messages['mt'] = array(
+	'ur-cancel' => 'Annulla',
+);
+
 /** Nahuatl (Nāhuatl)
  * @author Fluence
  */
@@ -1637,12 +1645,13 @@ $messages['nds'] = array(
 /** Dutch (Nederlands)
  * @author SPQRobin
  * @author Siebrand
+ * @author Tvdm
  */
 $messages['nl'] = array(
 	'viewrelationships' => 'Connecties bekijken',
 	'viewrelationshiprequests' => 'Connectieverzoeken bekijken',
 	'ur-already-submitted' => 'Uw verzoek is verzonden',
-	'ur-error-page-title' => 'Oops.',
+	'ur-error-page-title' => 'Oeps!',
 	'ur-error-title' => 'U hebt een verkeerde afslag genomen.',
 	'ur-error-message-no-user' => 'We kunnen uw verzoek niet afhandelen omdat de gebruiker niet bestaat.',
 	'ur-main-page' => 'Hoofdpagina',

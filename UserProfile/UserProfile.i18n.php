@@ -2457,6 +2457,7 @@ $messages['nds'] = array(
 /** Dutch (Nederlands)
  * @author Meursault2004
  * @author Siebrand
+ * @author Tvdm
  */
 $messages['nl'] = array(
 	'populateuserprofiles' => 'Gebruikersprofielen vullen',
@@ -2485,7 +2486,7 @@ $messages['nl'] = array(
 	'user-stats-poll-votes' => 'Stemmen in polls',
 	'user-stats-picture-game-votes' => 'Stemmen afbeeldingenspelletjes',
 	'user-stats-quiz-points' => 'Quizpunten',
-	'user-stats-pick-points' => "Pick 'empunten",
+	'user-stats-pick-points' => "Pick 'em-punten",
 	'other-info-title' => 'Overige informatie',
 	'user-friends-title' => 'Vrienden',
 	'user-foes-title' => 'Tegenstanders',
@@ -2506,7 +2507,7 @@ $messages['nl'] = array(
 	'custom-no-info' => 'Geen informatie in vrije velden',
 	'profile-updated-personal' => 'Uw profiel bijwerken',
 	'profile-not-provided' => 'Niet opgegeven',
-	'populate-user-profile-done' => '$1 profielen toegevoegd',
+	'populate-user-profile-done' => '$1 {{PLURAL:$1|profiel|profielen}} toegevoegd',
 	'user-board-title' => 'Board',
 	'user-send-board-blast' => 'Berichten aan meerdere gebruikers verzenden',
 	'user-personal-info-title' => 'Persoonlijke informatie',
@@ -2711,7 +2712,7 @@ $messages['no'] = array(
 	'custom-no-info' => 'Ingen egendefinert informasjon',
 	'profile-updated-personal' => 'Oppdater profilen din',
 	'profile-not-provided' => 'Ikke oppgitt',
-	'populate-user-profile-done' => 'La til $1 profiler',
+	'populate-user-profile-done' => 'La til $1 {{PLURAL:$1|profil|profiler}}',
 	'user-board-title' => 'Diskusjonsside',
 	'user-send-board-blast' => 'Send melding',
 	'user-personal-info-title' => 'Personlig informasjon',
