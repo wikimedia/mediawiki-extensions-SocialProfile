@@ -311,6 +311,31 @@ $messages['ksh'] = array(
 	'user-stats-alltime-title' => 'De miehßte Punkte övver alle Zick',
 	'user-stats-weekly-title' => 'De miehßte Punkte övver diß Woch',
 	'user-stats-monthly-title' => 'De miehßte Punkte disse Mohnd',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Stemm|Stemme}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Änderung|Änderunge}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Kommentaa|Kommentaare}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Verwies|Verwiese}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Frünnd|Frünnde}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Feind|Feinde}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|öffentlesch afjejovve Meinung|veröffentleschte Meinunge}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Meinung|Meinunge}}',
+	'top-fans-stats-comment-score-positive-rec' => '„Daume huh“',
+	'top-fans-stats-comment-score-negative-rec' => '„Daume eraf“',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Jeschenk|Jeschenke}} kräje',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Jeschenk|Jeschenke}} jescheck',
+	'level-advance-subject' => 'Do bes jätz ene „$1“ op de {{SITENAME}}!',
+	'level-advance-body' => 'Hallo $1,
+
+Do bes jetz ene $2 op de {{SITENAME}}!
+
+Hätzlesche Jlöckwonsch fun de janze {{SITENAME}}
+
+---
+
+Wells De kein e-mail fun uns han? Dann kleck
+$3
+un donn en Dinge Ennstellunge affschallde, dat
+De e-mail jescheck kriß.',
 );
 
 /** Luxembourgish (Lëtzebuergesch)

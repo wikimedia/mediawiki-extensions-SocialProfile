@@ -688,6 +688,21 @@ $messages['ksh'] = array(
 	'userboard' => 'Pennwand fö Metmaacher',
 	'userboard_board-to-board' => 'Pennwand-zoh-Pennwand',
 	'userboard_delete' => 'Fottschmieße',
+	'message_received_body' => 'Hallo $1,
+
+dä Metmaacher $2 hät jraad op Ding Brett op de {{SITENAME}}
+jeschrevve
+
+Don hee klicke, öm dat ze beloore:
+
+$3
+
+---
+
+Wells De kein e-mail fun uns han? Dann kleck
+$4
+un donn en Dinge Ennstellunge affschallde, dat
+De e-mail jescheck kriß.',
 );
 
 /** Luxembourgish (Lëtzebuergesch)

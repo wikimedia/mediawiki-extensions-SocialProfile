@@ -1406,8 +1406,203 @@ $messages['krj'] = array(
  * @author Purodha
  */
 $messages['ksh'] = array(
+	'viewrelationships' => 'Bezösch beloore',
+	'viewrelationshiprequests' => 'Don de Aanfroore noh Frünnschaff un Feinschaff un es beloore',
+	'ur-already-submitted' => 'Dinge Wonsch es övvermeddelt woode',
+	'ur-error-page-title' => 'Hoppela!',
+	'ur-error-title' => 'Hoppala, doh es jet scheif jeloufe!',
+	'ur-error-message-no-user' => 'Mer künne Ding Opdraach nit ußföhre, ene Metmaacher met dämm Name jit et jaa nit.',
+	'ur-main-page' => 'Houpsigg',
+	'ur-your-profile' => 'Ding Profil',
+	'ur-backlink' => '← zerök op däm $1 sing Profil',
+	'ur-friend' => 'Frünnd',
+	'ur-foe' => 'Feind',
+	'ur-relationship-count-foes' => 'Dä Metmaacher „$1“ hät {{PLURAL:$2|eine Feind|$2 Feinde|keine Feind}}.
+Wells mieh Feinde?
+<a href="$3">Donn se ennlade!.</a>',
+	'ur-relationship-count-friends' => 'Dä Metmaacher „$1“ hät {{PLURAL:$2|eine Frünnd|$2 Frünnde|keine Frünnd}}.
+Wells mieh Frünnde?
+<a href="$3">Donn se ennlade!.</a>',
+	'ur-add-friends' => ' De wells mieh Frünnde han?
+<a href="$1">Don se enlade!</a>',
+	'ur-add-friend' => 'Als Dinge Frünnd endraare',
+	'ur-add-foe' => 'Als Dinge Feind endraare',
+	'ur-add-no-user' => 'Keine Metmaacher usjesoht.
+Bes esu joot, un donn Der Ding Frünnde un Feinde övver der reschtijje Link enndraare.',
+	'ur-add-personal-message' => 'Donn en persönlesch Metdeilung dobei',
+	'ur-remove-relationship-friend' => 'Uß de Frünndschaffs-Leß nämme',
+	'ur-remove-relationship-foe' => 'Uß de Feindschaffs-Leß nämme',
+	'ur-give-gift' => 'e Jeschengk jevve',
+	'ur-previous' => 'Förrije',
+	'ur-next' => 'Näx',
+	'ur-remove-relationship-title-foe' => 'Do wells dä Metmaacher „$1“ uß Dinge Feindschaffs-Leß nämme?',
+	'ur-remove-relationship-title-confirm-foe' => 'Do häß dä Metmaacher „$1“ uß Dinge Feindschaffs-Leß jenumme',
+	'ur-remove-relationship-title-friend' => 'Do wells dä Metmaacher „$1“ uß Dinge Frünndschaffs-Leß nämme?',
+	'ur-remove-relationship-title-confirm-friend' => 'Do häß dä Metmaacher „$1“ uß Dinge Frünndschaffs-Leß jenumme',
+	'ur-remove-relationship-message-foe' => 'Do wells dä Metmaacher „$1“ uß Dinge Feindschaffs-Leß fott jenumme hann, kleck op „$2“, öm dat ze bestätijje.',
+	'ur-remove-relationship-message-confirm-foe' => 'Do häs dä Metmaacher „$1“ jetz loß als Dinge Feind.',
+	'ur-remove-relationship-message-friend' => 'Do wells dä Metmaacher „$1“ uß Dinge Frünndschaffs-Leß fot jenumme hann, kleck op „$2“, öm dat ze bestätijje.',
+	'ur-remove-relationship-message-confirm-friend' => 'Do häs dä Metmaacher „$1“ jetz loß als Dinge Frünnd.',
+	'ur-remove-error-message-no-relationship' => 'Do häß keine Bezoch zom Metmaacher „$1“.',
+	'ur-remove-error-message-remove-yourself' => 'Mi Leevje, dat es Stuß: Do kanns Desch nit sellver eruß schmiiße.',
+	'ur-remove-error-message-pending-request' => 'Do häß ene unbeäbeit $1-Aanfrooch met däm Metmaacher „$2“ aam Loufe.',
+	'ur-remove-error-message-pending-foe-request' => 'Do häß ene unbeäbeit Feinschaffs-Aanfrooch met däm Metmaacher „$1“ aam Loufe.',
+	'ur-remove-error-message-pending-friend-request' => 'Do häß ene unbeäbeit Frünndschaffs-Aanfrooch met däm Metmaacher „$1“ aam Loufe.',
+	'ur-remove-error-not-loggedin' => 'Do moß ennjelogg sinn, öm ene $1 affzemelde.',
+	'ur-remove-error-not-loggedin-foe' => 'Do moß ennjelogg sinn, öm ene Feind affzemelde.',
+	'ur-remove-error-not-loggedin-friend' => 'Do moß ennjelogg sinn, öm ene Frünnd affzemelde.',
+	'ur-remove' => 'Fott domet!',
 	'ur-cancel' => 'Draanjevve',
+	'ur-login' => 'Enlogge',
+	'ur-add-title-foe' => 'Do wells dä Metmaacher „$1“ als ene Feind endraare?',
+	'ur-add-title-friend' => 'Do wells dä Metmaacher „$1“ als ene Frünnd endraare?',
+	'ur-add-message-foe' => 'Do bes dobei, dä Metmaacher „$1“ als ene Feind enzedraare.
+Dä kritt jetz Bescheid övver Ding Feinschaff.',
+	'ur-add-message-friend' => 'Do bes dobei, dä Metmaacher „$1“ als ene Frünnd enzedraare.
+Dä kritt jetz Bescheid övver Ding Frünndschaff.',
+	'ur-friendship' => 'Frünndschaff',
+	'ur-grudge' => 'Ärjer un Feinschaff',
+	'ur-add-button' => 'Als $1 bei donn',
+	'ur-add-button-foe' => 'Als Feind dobei donn',
+	'ur-add-button-friend' => 'Als Frünnd dobei donn',
+	'ur-add-sent-title-foe' => 'Ding Feindschaffs-Aanjebott es aan $1 jescheck!',
+	'ur-add-sent-title-friend' => 'Ding Frünnndschaffs-Aanjebott es aan $1 jescheck!',
+	'ur-add-sent-message-foe' => 'Ding Feindschaffs-Aanjebott es aan $1 jescheck woode, zom Beshtätijje.
+Wann di Beshtätijung och kütt, kriß De en e-mail jescheck.',
+	'ur-add-sent-message-friend' => 'Dinge Frünndschaffs-Aanjebott es aan $1 jescheck woode, zom Beshtätijje.
+Wann di Beshtätijung och kütt, kriß De en e-mail jescheck.',
+	'ur-add-error-message-no-user' => 'Dä Metmaacher jitt et janit, dä De dobei donn wells.',
+	'ur-add-error-message-blocked' => 'Do bes jrad jesperrt, un kanns kein Frünnde udder Feinde enndraare.',
+	'ur-add-error-message-yourself' => 'Mi Leevje, dat es doch Stuß: Do kann nit Frünnd udder Feind fun Der sellver wääde.',
+	'ur-add-error-message-existing-relationship' => 'Do bes ald $1 met däm $2.',
+	'ur-add-error-message-existing-relationship-foe' => 'Dä Metmaacher „$1“ un Do, Ühr sitt alld Feinde meddenein.',
+	'ur-add-error-message-existing-relationship-friend' => 'Do beß alld Frünnd met dämm „$1“.',
+	'ur-add-error-message-pending-request-title' => 'Jedold!',
+	'ur-add-error-message-pending-friend-request' => 'Do häß norr_en onbeschtätesch Frünndschaffß-Aanfroch aan dä Metmaacher „$1“.
+Do kreß Bescheid, wann hä udder it se bestätesch.',
+	'ur-add-error-message-pending-foe-request' => 'Do häß norr_en onbeschtätesch Feinschaffs-Aanfroch aan dä Metmaacher „$1“.
+Do kreß Bescheid, wann hä udder it se bestätesch.',
+	'ur-add-error-message-not-loggedin' => 'Do moß enjelogg sinn, öm ene $1 enzedraare',
+	'ur-add-error-message-not-loggedin-foe' => 'För Ding Feinschaffte ze flääje, moß de ald [[Special:Userlogin|enjelogg sinn]]',
+	'ur-add-error-message-not-loggedin-friend' => 'För Ding Frünndschaffte ze flääje, moß de ald [[Special:Userlogin|enjelogg sinn]]',
+	'ur-requests-title' => 'Aanfrooch noh Frünndschaff udder Feinschaff',
+	'ur-requests-message-foe' => 'Dä Metmaacher <a href="$1">$2</a> well Dinge Feind sinn.',
+	'ur-requests-message-friend' => 'Dä Metmaacher <a href="$1">$2</a> well Dinge Fründ sinn.',
+	'ur-accept' => 'Aannemme',
+	'ur-reject' => 'Afflehne',
+	'ur-no-requests-message' => 'Do häß kein Frunndschaffs- udder Feintschaffts-Aanfrore.
+Wann de mieh dofun hann wells, <a href="$1">donn se einlade!</a>',
+	'ur-requests-added-message-foe' => 'Do has dä Metmaacher „$1“ als Dinge Feind.',
+	'ur-requests-added-message-friend' => 'Do has dä Metmaacher „$1“ als Dinge Frünnd.',
+	'ur-requests-reject-message-friend' => 'Do has dä Metmaacher „$1“ als Dinge Frünnd affjelehnt.',
+	'ur-requests-reject-message-foe' => 'Do has dä Metmaacher „$1“ als Dinge Feind affjelehnt.',
+	'ur-title-foe' => 'Dem „$1“ sing Feindesleß',
+	'ur-title-friend' => 'Dem „$1“ sing Frünndschaffßleß',
 	'friend_request_subject' => 'Metmaacher „$1“ fun de {{SITENAME}} hät Desch als ene Frünnd opjenomme.',
+	'friend_request_body' => 'Hallo $1,
+
+Dä Metmaacher $2 hät Desch als ene Frünnd enjedrare op de
+{{SITENAME}}.
+Mer wolle jeweß sin, dat Ühr zwei en der Tat Üsch jröhn
+un Frünnde sitt un Üsch winnischstens ligge künnt.
+
+Donn op dä Link klicke, öm dat ze bestätije.
+
+$3
+
+Dankeschön.
+
+---
+
+Wells De kein e-mail fun uns han? Dann kleck
+$4
+un donn en Dinge Ennstellunge affschallde, dat
+De e-mail jescheck kriß.',
+	'foe_request_subject' => 'Kreesch op de {{SITENAME}} — dä Metmaacher „$1“ hät Desch als ene Feind ennjedraare.',
+	'foe_request_body' => 'Hallo $1,
+
+Dä Metmaacher $2 hät Desch als ene Feind enjedrare op de
+{{SITENAME}}.
+Mer wolle jeweß sin, dat Ühr zwei en der Tat Üsch net jröhn
+un Dutfeinde sitt  udder winnischstens aam Strigge.
+
+Donn op dä Link klicke, öm dat ze bestätije.
+
+$3
+
+Dankeschön.
+
+---
+
+Wells De kein e-mail fun uns han? Dann kleck
+$4
+un donn en Dinge Ennstellunge affschallde, dat
+De e-mail jescheck kriß.',
+	'friend_accept_subject' => 'Dä Metmaacher „$1“ hät Ding Frünndschaffs-Aanfrooch op de {{SITENAME}} beschtätesch.',
+	'friend_accept_body' => 'Hallo $1,
+
+Dä Metmaacher $2 hät Desch als ene Fründ bestätesch op de
+{{SITENAME}}.
+Do kann däm sing Metmaacher-Sigg fenge unger däm URL
+$3
+
+Dankeschön.
+
+---
+
+Wells De kein e-mail fun uns han? Dann kleck
+$4
+un donn en Dinge Ennstellunge affschallde, dat
+De e-mail jescheck kriß.',
+	'foe_accept_subject' => 'Dä Metmaacher „$1“ hät Ding Feindschaffs-Aanfrooch op de {{SITENAME}} beschtätesch.',
+	'foe_accept_body' => 'Hallo $1,
+
+Dä Metmaacher $2 hät Desch als ene Feind bestätesch op de
+{{SITENAME}}.
+Do kann däm sing Metmaacher-Sigg fenge unger däm URL
+$3
+
+Dankeschön.
+
+---
+
+Wells De kein e-mail fun uns han? Dann kleck
+$4
+un donn en Dinge Ennstellunge affschallde, dat
+De e-mail jescheck kriß.',
+	'friend_removed_subject' => 'Dä Metmaacher „$1“ hät de Frünndschaff met Dir op de {{SITENAME}} jekündesch.',
+	'friend_removed_body' => 'Hallo $1,
+
+Dä Metmaacher $2 hät Der de Frünndschaff jekündesch,
+un Desch och uß singe Fründesleß ußjedraare, op de
+{{SITENAME}}.
+
+
+Dä, jetz weiß De dat. 
+Dankeschön.
+
+---
+
+Wells De kein e-mail fun uns han? Dann kleck
+$4
+un donn en Dinge Ennstellunge affschallde, dat
+De e-mail jescheck kriß.',
+	'foe_removed_subject' => 'Dä Metmaacher „$1“ hät de Feindschaff met Dir op de {{SITENAME}} jekündesch.',
+	'foe_removed_body' => 'Hallo $1,
+
+Dä Metmaacher $2 hät Der de Feindschaff jekündesch,
+un Desch och uß singe Feindesleß ußjedraare, op de
+{{SITENAME}}.
+
+Dä, jetz weiß De dat. 
+Dankeschön.
+
+---
+
+Wells De kein e-mail fun uns han? Dann kleck
+$4
+un donn en Dinge Ennstellunge affschallde, dat
+De e-mail jescheck kriß.',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
@@ -2017,6 +2212,7 @@ $messages['oc'] = array(
 	'viewrelationships' => 'Veire las relacions',
 	'viewrelationshiprequests' => 'Veire las requèstas de las relacions',
 	'ur-already-submitted' => 'Vòstra demanda es estada mandada',
+	'ur-error-page-title' => 'Ops !',
 	'ur-error-title' => 'Op, avètz pres un marrida virada !',
 	'ur-error-message-no-user' => "Podèm pas completar vòstre requèsta, perque cap d'utilizaire pòrta pas aqueste nom.",
 	'ur-main-page' => 'Acuèlh',
@@ -2024,34 +2220,78 @@ $messages['oc'] = array(
 	'ur-backlink' => '&lt; retorn cap al perfil de $1',
 	'ur-friend' => 'amic',
 	'ur-foe' => 'enemic',
+	'ur-relationship-count-foes' => '$1 a $2 {{PLURAL:$2|enemic|enemics}}. Ne volètz encara mai ? <a href="$3">Convidatz-los.</a>',
+	'ur-relationship-count-friends' => '$1 a $2 {{PLURAL:$2|amic|amics}}. Ne volètz encara mai ? <a href="$3">Convidatz-los.</a>',
 	'ur-add-friends' => 'Volètz mai d’amics ? <a href="$1">Invitatz-los !</a>.',
 	'ur-add-friend' => 'Apondre coma amic',
 	'ur-add-foe' => 'Apondre coma enemic',
 	'ur-add-no-user' => "Cap d'utilizaire pas seleccionat. Requerissètz d'amics o d'enemics a travèrs del ligam corrècte.",
 	'ur-add-personal-message' => 'Apondre un messatge personal',
+	'ur-remove-relationship-friend' => 'Levar coma amic',
+	'ur-remove-relationship-foe' => 'Levar coma enemic',
 	'ur-give-gift' => 'Mandar un present',
 	'ur-previous' => 'precedent',
 	'ur-next' => 'seguent',
+	'ur-remove-relationship-title-foe' => 'Volètz levar $1 de la lista de vòstres enemics ?',
+	'ur-remove-relationship-title-confirm-foe' => 'Avètz levat $1 de la lista de vòstres enemics',
+	'ur-remove-relationship-title-friend' => 'Volètz levar $1 de la lista de vòstres amics ?',
+	'ur-remove-relationship-title-confirm-friend' => 'Avètz levat $1 de la lista de vòstres amics',
+	'ur-remove-relationship-message-foe' => 'Avètz demandat la supression de $1 de la lista de vòstres enemics, quichatz sus « $2 » per confirmar.',
+	'ur-remove-relationship-message-confirm-foe' => 'Avètz levat $1 amb succès de la lista de vòstres enemics.',
+	'ur-remove-relationship-message-friend' => 'Avètz demandat la supression de $1 de la lista de vòstres amics, quichatz sus « $2 » per confirmar.',
+	'ur-remove-relationship-message-confirm-friend' => 'Avètz levat $1 amb succès de la lista de vòstres amics.',
 	'ur-remove-error-message-no-relationship' => 'Avètz pas cap de relacion amb $1.',
 	'ur-remove-error-message-remove-yourself' => 'Vos podètz pas suprimir vos meteis.',
 	'ur-remove-error-message-pending-request' => 'Avètz una requèsta de $1 en cors amb $2.',
+	'ur-remove-error-message-pending-foe-request' => 'Avètz una requèsta en cors d’un enemic amb $1.',
+	'ur-remove-error-message-pending-friend-request' => 'Avètz una requèsta en cors d’un amic amb $1.',
 	'ur-remove-error-not-loggedin' => 'Vos cal èsser en sesilha per suprimir un $1.',
+	'ur-remove-error-not-loggedin-foe' => 'Vos cal èsser connectat per levar un enemic.',
+	'ur-remove-error-not-loggedin-friend' => 'Vos cal èsser connectat per levar un amic.',
 	'ur-remove' => 'Levar',
 	'ur-cancel' => 'Anullar',
 	'ur-login' => 'Senhal',
+	'ur-add-title-foe' => 'Volètz apondre $1 a la lista de vòstres enemics ?',
+	'ur-add-title-friend' => 'Volètz apondre $1 a la lista de vòstres amics ?',
+	'ur-add-message-foe' => 'Sètz a mand d’apondre $1 a la lista de vòstres enemics.
+Assabentarem $1 per confirmar vòstra rancòr.',
+	'ur-add-message-friend' => 'Sètz a mand d’apondre $1 a la lista de vòstres amics.
+Assabentarem $1 per confirmar vòstra amistat.',
 	'ur-friendship' => 'amistat',
 	'ur-grudge' => 'rancòr',
 	'ur-add-button' => 'Apondre coma $1',
+	'ur-add-button-foe' => 'Apondre coma enemic',
+	'ur-add-button-friend' => 'Apondre coma amic',
+	'ur-add-sent-title-foe' => 'Avètz mandat una declaracion d’ostilitat a $1 !',
+	'ur-add-sent-title-friend' => 'Avètz mandat una declaracion d’amistat a $1 !',
+	'ur-add-sent-message-foe' => 'Vòstra requèsta en ostilitat es estada mandada a $1 per confirmacion.
+Se $1 confirma vòstra demanda, recebretz lo seguit per corrièr electronic.',
+	'ur-add-sent-message-friend' => 'Vòstra requèsta en amistat es estada mandada a $1 per confirmacion.
+Se $1 confirma vòstra demanda, recebretz lo seguit per corrièr electronic.',
 	'ur-add-error-message-no-user' => 'L’utilizaire que sètz a apondre existís pas.',
 	'ur-add-error-message-blocked' => "Actualament, sètz blocat e doncas podètz pas apondre ni d'amics ni d'enemics.",
 	'ur-add-error-message-yourself' => 'Vos podètz pas apondre vos meteis coma enemic o amic.',
 	'ur-add-error-message-existing-relationship' => 'Ja sètz $1 amb $2.',
+	'ur-add-error-message-existing-relationship-foe' => 'Ja sètz enemic de $1.',
+	'ur-add-error-message-existing-relationship-friend' => 'Ja sètz amic de $1.',
 	'ur-add-error-message-pending-request-title' => 'Paciéncia!',
+	'ur-add-error-message-pending-friend-request' => 'Avètz una demanda d’amistat en cors amb $1.
+Vos notificarem se $1 confirma vòstra requèsta.',
+	'ur-add-error-message-pending-foe-request' => 'Avètz una demanda d’ostilitat en cors amb $1.
+Vos notificarem se $1 confirma vòstra requèsta.',
 	'ur-add-error-message-not-loggedin' => 'Vos cal èsser connectat(ada) per apondre un $1.',
+	'ur-add-error-message-not-loggedin-foe' => 'Vos cal èsser connectat per apondre un enemic',
+	'ur-add-error-message-not-loggedin-friend' => 'Vos cal èsser connectat per apondre un amic',
 	'ur-requests-title' => 'Demandas de relacions.',
+	'ur-requests-message-foe' => '<a href="$1">$2</a> vòl èsser vòstre enemic.',
+	'ur-requests-message-friend' => '<a href="$1">$2</a> vòl èsser vòstre amic.',
 	'ur-accept' => 'Acceptar',
 	'ur-reject' => 'Regetar',
 	'ur-no-requests-message' => 'Avètz pas cap de requèsta en amic o enemic. Se desiratz mai d\'amics, <a href="$1">invitatz-los !</a>',
+	'ur-requests-added-message-foe' => 'Avètz apondut $1 a la lista de vòstres enemics.',
+	'ur-requests-added-message-friend' => 'Avètz apondut $1 a la lista de vòstres amics.',
+	'ur-requests-reject-message-friend' => 'Avètz refusat $1 en tant qu’amic.',
+	'ur-requests-reject-message-foe' => 'Avètz refusat $1 en tant qu’enemic.',
 	'ur-title-foe' => 'Tièra dels enemics de $1',
 	'ur-title-friend' => 'Tièra dels amics de $1',
 	'friend_request_subject' => '$1 vos a apondut coma un amic sus {{SITENAME}} !',

@@ -1411,6 +1411,7 @@ $messages['fi'] = array(
 
 /** French (Français)
  * @author Grondin
+ * @author IAlex
  * @author Verdy p
  */
 $messages['fr'] = array(
@@ -1461,7 +1462,7 @@ $messages['fr'] = array(
 	'custom-no-info' => 'Aucune information locale',
 	'profile-updated-personal' => 'Mettre à jour votre profil',
 	'profile-not-provided' => 'Non fourni',
-	'populate-user-profile-done' => 'Ajout de $1 profil{{PLURAL:$1||s}} effectué',
+	'populate-user-profile-done' => 'Ajout de $1 {{PLURAL:$1|profil|profils}} effectué',
 	'user-board-title' => 'Tableau',
 	'user-send-board-blast' => 'Envoyer le tableau en rafale',
 	'user-personal-info-title' => 'Informations personnelles',
@@ -1651,7 +1652,7 @@ $messages['gl'] = array(
 	'custom-no-info' => 'Non hai información personalizada',
 	'profile-updated-personal' => 'Actualizar o seu perfil',
 	'profile-not-provided' => 'Non proporcionado',
-	'populate-user-profile-done' => 'Engadidos $1 perfiles',
+	'populate-user-profile-done' => '{{PLURAL:$1|Engadiuse un perfil|Engadíronse $1 perfiles}}',
 	'user-board-title' => 'Taboleiro',
 	'user-send-board-blast' => 'Enviar o taboleiro en ráfaga',
 	'user-personal-info-title' => 'Información persoal',
@@ -2895,7 +2896,7 @@ $messages['oc'] = array(
 	'custom-no-info' => "Cap d'entresenha sus la comanda",
 	'profile-updated-personal' => 'Metre a jorn vòstre perfil',
 	'profile-not-provided' => 'Pas provesit',
-	'populate-user-profile-done' => '$1 {{PLURAL:$1|perfil apondut|perfils aponduts}}',
+	'populate-user-profile-done' => 'Apondon de $1 {{PLURAL:$1|perfil apondut|perfils aponduts}}',
 	'user-board-title' => 'Tablèu',
 	'user-send-board-blast' => 'Mandar lo tablèu en rafala',
 	'user-personal-info-title' => 'Entresenhas personalas',
@@ -3537,7 +3538,7 @@ $messages['sk'] = array(
 	'custom-no-info' => 'Žiadne vlastné informácie',
 	'profile-updated-personal' => 'Aktualizovať svoj profil',
 	'profile-not-provided' => 'Neposkytnuté',
-	'populate-user-profile-done' => '$1 profilov pridaných',
+	'populate-user-profile-done' => '$1 {{PLURAL:$1|profil pridaný|profily pridané|profilov pridaných}}',
 	'user-board-title' => 'Fórum',
 	'user-send-board-blast' => 'Poslať board blast',
 	'user-personal-info-title' => 'Osobné informácie',
