@@ -157,6 +157,13 @@ $messages['pl'] = array(
 	'yui-desc' => 'Zestaw narzędzi i elementów kontrolnych napisanych w jezyku JavaScript',
 );
 
+/** Pashto (پښتو)
+ * @author Ahmed-Najib-Biabani-Ibrahimkhel
+ */
+$messages['ps'] = array(
+	'yui-desc' => 'په جاواسکرېپټ کې ليکل شوی، د اوزارونو او مهارولو يوه ټولګه',
+);
+
 /** Portuguese (Português)
  * @author Malafaya
  */
