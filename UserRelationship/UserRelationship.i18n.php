@@ -311,7 +311,7 @@ $messages['ar'] = array(
 سنخطر $1 لتأكيد صداقتك.',
 	'ur-friendship' => 'صداقة',
 	'ur-grudge' => 'ضغينة',
-	'ur-add-button' => 'أضف ك&#x200d; $1',
+	'ur-add-button' => 'أضف ك$1',
 	'ur-add-button-foe' => 'إضافة كعدو',
 	'ur-add-button-friend' => 'إضافة كصديق',
 	'ur-add-sent-title-foe' => 'لقد أرسلنا طلب عداوتك إلى $1!',

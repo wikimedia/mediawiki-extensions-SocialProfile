@@ -694,6 +694,7 @@ $messages['ca'] = array(
 );
 
 /** Czech (Česky)
+ * @author Li-sung
  * @author Matěj Grabovský
  * @author Mormegil
  */
