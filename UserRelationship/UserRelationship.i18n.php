@@ -955,6 +955,7 @@ ja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.',
 /** French (Français)
  * @author Grondin
  * @author IAlex
+ * @author Zetud
  */
 $messages['fr'] = array(
 	'viewrelationships' => 'Voir les relations',
@@ -1001,9 +1002,9 @@ $messages['fr'] = array(
 	'ur-login' => 'Connexion',
 	'ur-add-title-foe' => 'Voulez-vous ajouter $1 parmi vos ennemis ?',
 	'ur-add-title-friend' => 'Voulez-vous ajouter $1 parmi vos amis ?',
-	'ur-add-message-foe' => 'Vous être sur le point d’ajouter $1 parmi vos ennemis.
+	'ur-add-message-foe' => 'Vous êtes sur le point d’ajouter $1 parmi vos ennemis.
 Nous informerons $1 pour confirmer votre rancune.',
-	'ur-add-message-friend' => 'Vous être sur le point d’ajouter $1 parmi vos amis.
+	'ur-add-message-friend' => 'Vous êtes sur le point d’ajouter $1 parmi vos amis.
 Nous informerons $1 pour confirmer votre amitié.',
 	'ur-friendship' => 'amitié',
 	'ur-grudge' => 'rancœur',
@@ -1012,9 +1013,9 @@ Nous informerons $1 pour confirmer votre amitié.',
 	'ur-add-button-friend' => 'Ajouter comme ami',
 	'ur-add-sent-title-foe' => 'Vous avez envoyé déclaration d’hostilité à $1 !',
 	'ur-add-sent-title-friend' => 'Vous avez envoyé déclaration d’amitié à $1 !',
-	'ur-add-sent-message-foe' => 'Votre requête en hostilité a été envoyé à $1 pour confirmation.
+	'ur-add-sent-message-foe' => 'Votre requête en hostilité a été envoyée à $1 pour confirmation.
 Si $1 confirme votre demande, vous recevrez le suivi par courriel.',
-	'ur-add-sent-message-friend' => 'Votre requête en amitié a été envoyé à $1 pour confirmation.
+	'ur-add-sent-message-friend' => 'Votre requête en amitié a été envoyée à $1 pour confirmation.
 Si $1 confirme votre demande, vous recevrez le suivi par courriel.',
 	'ur-add-error-message-no-user' => 'L’utilisateur que vous être en train d’ajouter n’existe pas.',
 	'ur-add-error-message-blocked' => 'Vous êtes actuellement bloqué et vous ne pouvez donc ajouter ni amis ni ennemis.',
