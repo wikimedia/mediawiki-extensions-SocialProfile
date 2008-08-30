@@ -1245,7 +1245,6 @@ Pursa <a href="$1">aquina</a> p\'abril la tu cuenta, u <a href="$2">aquina</a> p
  */
 $messages['fi'] = array(
 	'populateuserprofiles' => 'Täytä käyttäjäprofiilit',
-	'populate-user-profile-done' => 'Lisättiin $1 {{PLURAL:$1|profiili|profiilia}}',
 	'user-view-all' => 'Katso kaikki',
 	'user-upload-image' => 'Lataa kuva',
 	'user-edit-this' => 'Muokkaa tätä',
@@ -1282,6 +1281,7 @@ $messages['fi'] = array(
 	'custom-info-field3' => 'Oma 3',
 	'custom-info-field4' => 'Oma 4',
 	'custom-no-info' => 'Ei omia tietoja',
+	'populate-user-profile-done' => 'Lisättiin $1 {{PLURAL:$1|profiili|profiilia}}',
 	'user-board-title' => 'Keskustelualue',
 	'user-send-board-blast' => 'Lähetä keskustelupläjäys',
 	'user-personal-info-title' => 'Henkilökohtaiset tiedot',

@@ -583,6 +583,13 @@ Faga clic $4
 e troque as sÃºas configuraciÃ³ns para deshabilitar as notificaciÃ³ns por correo electrÃ³nico.',
 );
 
+/** Gothic (í €í¼²í €í¼¿í €í½„í €í¼¹í €í½ƒí €í¼º)
+ * @author Jocke Pirat
+ */
+$messages['got'] = array(
+	'userboard_delete' => 'TaÃ­ran',
+);
+
 /** Hakka (Hak-kÃ¢-fa)
  * @author Hakka
  */
