@@ -2782,6 +2782,7 @@ $messages['sv'] = array(
 	'ur-remove-relationship-title-confirm-foe' => 'Du har tagit bort $1 som din fiende',
 	'ur-remove-relationship-title-friend' => 'Vill du ta bort $1 som din vän?',
 	'ur-remove-relationship-title-confirm-friend' => 'Du har tagit bort $1 som din vän',
+	'ur-remove-relationship-message-foe' => 'Du har begärt om att ta bort $1 som din fiende, tryck "$2" för att bekräfta.',
 	'ur-remove-error-message-no-relationship' => 'Du har ingen relation med $1.',
 	'ur-remove-error-message-remove-yourself' => 'Du kan inte ta bort dig själv.',
 	'ur-remove-error-message-pending-request' => 'Du har en väntande efterfrågning om att bli $1 med $2 hos $2.',

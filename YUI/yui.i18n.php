@@ -192,6 +192,13 @@ $messages['sk'] = array(
 	'yui-desc' => 'Sada nástrojov napísaných v JavaScripte',
 );
 
+/** Sundanese (Basa Sunda)
+ * @author Irwangatot
+ */
+$messages['su'] = array(
+	'yui-desc' => 'Set ti pakakas sarta pangaturan, ditulis dina JavaScript',
+);
+
 /** Swedish (Svenska)
  * @author M.M.S.
  * @author Sannab
