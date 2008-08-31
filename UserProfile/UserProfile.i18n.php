@@ -340,6 +340,8 @@ $messages['af'] = array(
  */
 $messages['ar'] = array(
 	'populateuserprofiles' => 'أشهر ملفات المستخدمين',
+	'user-awards-title' => 'جوائز',
+	'user-gifts-title' => 'منح',
 	'user-count-separator' => 'من',
 	'user-view-all' => 'اعرض الكل',
 	'user-upload-image' => 'رفع الصورة',
@@ -1425,6 +1427,8 @@ $messages['fi'] = array(
  */
 $messages['fr'] = array(
 	'populateuserprofiles' => 'Meubler les profils utilisateurs',
+	'user-awards-title' => 'Récompenses',
+	'user-gifts-title' => 'Cadeaux',
 	'user-count-separator' => 'de',
 	'user-view-all' => 'Tout voir',
 	'user-upload-image' => 'Importer une image',
@@ -2098,6 +2102,7 @@ $messages['lb'] = array(
 	'user-upload-avatar' => 'Avatar eroplueden',
 	'user-watchlist' => 'Meng Iwwerwaachungslëscht',
 	'user-meet-people' => 'Leit begéinen',
+	'user-add-friend' => 'Als Frënd derbäisetzen',
 	'user-send-message' => 'Noriicht schécken',
 	'user-send-gift' => 'Cadeau schécken',
 	'user-contributions' => 'Kontributiounen',
@@ -2471,6 +2476,8 @@ $messages['nds'] = array(
  */
 $messages['nl'] = array(
 	'populateuserprofiles' => 'Gebruikersprofielen vullen',
+	'user-awards-title' => 'Prijzen',
+	'user-gifts-title' => 'Cadeaus',
 	'user-count-separator' => 'van',
 	'user-view-all' => 'Allemaal bekijken',
 	'user-upload-image' => 'Bestand uploaden',
@@ -2859,6 +2866,8 @@ $messages['no'] = array(
  */
 $messages['oc'] = array(
 	'populateuserprofiles' => "Completar los perfils d'utilizaire",
+	'user-awards-title' => 'Recompensas',
+	'user-gifts-title' => 'Presents',
 	'user-count-separator' => 'de',
 	'user-view-all' => 'Veire tot',
 	'user-upload-image' => 'Importar un imatge',
@@ -3501,6 +3510,8 @@ $messages['ru'] = array(
  */
 $messages['sk'] = array(
 	'populateuserprofiles' => 'Naplniť používateľské profily',
+	'user-awards-title' => 'Ocenenia',
+	'user-gifts-title' => 'Dary',
 	'user-count-separator' => 'z',
 	'user-view-all' => 'Zobraziť všetky',
 	'user-upload-image' => 'Nahrať obrázok',
