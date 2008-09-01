@@ -117,7 +117,7 @@ and change your settings to disable e-mail notifications.',
 	'foe_request_subject'                        => 'It\'s war! $1 has added you to as a foe on {{SITENAME}}!',
 	'foe_request_body'                           => 'Hi $1:
 
-$2 just listed you as a foe on {{SITENAME}}.  We want to make sure that you two are actually mortal enemies  or at least having an argument.
+$2 just listed you as a foe on {{SITENAME}}.  We want to make sure that you two are actually mortal enemies or at least having an argument.
 
 Please click this link to confirm the grudge match.
 
@@ -676,7 +676,7 @@ und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
 	'foe_request_subject' => '{{SITENAME}}: Kriegserklärung! $1 hat dich als Feind hinzugefügt!',
 	'foe_request_body' => 'Hi $1:
 
-$2 hat dich in {{SITENAME}} als Feind hinzugefügt.  Wir wollen sicher gehen, dsas ihr zwei wirklich tödliche Feinde seid  oder euch wenigstens ein wenig streitet.
+$2 hat dich in {{SITENAME}} als Feind hinzugefügt.  Wir wollen sicher gehen, dsas ihr zwei wirklich tödliche Feinde seid oder euch wenigstens ein wenig streitet.
 
 Bitte klicke den folgenden Link um eure Feindschaft zu bestätigen:
 
@@ -1209,7 +1209,7 @@ e troque as súas configuracións para deshabilitar as notificacións por correo
 	'foe_request_subject' => 'É a guerra! $1 engadiuno como inimigo seu en {{SITENAME}}!',
 	'foe_request_body' => 'Ola $1:
 
-$2 engdiuno como inimigo seu en {{SITENAME}}.  Queremos estar seguros de que vostedes dous son inimigos mortais actualmente  ou que teñen, polo menos, un argumento.
+$2 engdiuno como inimigo seu en {{SITENAME}}.  Queremos estar seguros de que vostedes dous son inimigos mortais actualmente ou que teñen, polo menos, un argumento.
 
 Por favor, faga clic nesta ligazón para confirmar a súa inimizade:
 $3
@@ -1530,7 +1530,7 @@ De e-mail jescheck kriß.',
 Dä Metmaacher $2 hät Desch als ene Feind enjedrare op de
 {{SITENAME}}.
 Mer wolle jeweß sin, dat Ühr zwei en der Tat Üsch net jröhn
-un Dutfeinde sitt  udder winnischstens aam Strigge.
+un Dutfeinde sitt udder winnischstens aam Strigge.
 
 Donn op dä Link klicke, öm dat ze bestätije.
 
