@@ -139,6 +139,19 @@ $messages['bg'] = array(
 	'level-advance-subject' => 'Вече сте „$1“ в {{SITENAME}}!',
 );
 
+/** Czech (Česky)
+ * @author Matěj Grabovský
+ */
+$messages['cs'] = array(
+	'user-stats-alltime-title' => 'Nejvíc bodů celkem',
+	'user-stats-weekly-title' => 'Nejvíc bodů tento týden',
+	'user-stats-monthly-title' => 'Nejvíc bodů tento měsíc',
+	'topusers' => 'Nej uživatelé',
+	'top-fans-by-points-nav-header' => 'Nej fanouškové',
+	'top-fans-by-category-nav-header' => 'Nej podle kategorie',
+	'top-fans-total-points-link' => 'Celkem bodů',
+);
+
 /** German (Deutsch)
  * @author Revolus
  */
@@ -635,5 +648,14 @@ Förresten, vill du slippa få epost från oss?
 
 Klicka $3
 och ändra dina inställningar för att avaktivera epost-meddelanden.',
+);
+
+/** Volapük (Volapük)
+ * @author Malafaya
+ */
+$messages['vo'] = array(
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Redakam|Redakams}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Küpet|Küpets}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Flen|Flens}}',
 );
 

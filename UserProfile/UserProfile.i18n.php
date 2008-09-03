@@ -1252,9 +1252,9 @@ Pursa <a href="$1">aquina</a> p\'abril la tu cuenta, u <a href="$2">aquina</a> p
  */
 $messages['fi'] = array(
 	'populateuserprofiles' => 'Täytä käyttäjäprofiilit',
-	'user-count-separator' => '/',
 	'user-awards-title' => 'Palkinnot',
 	'user-gifts-title' => 'Lahjat',
+	'user-count-separator' => '/',
 	'user-view-all' => 'Katso kaikki',
 	'user-upload-image' => 'Lataa kuva',
 	'user-edit-this' => 'Muokkaa tätä',
@@ -1619,6 +1619,8 @@ $messages['fy'] = array(
  */
 $messages['gl'] = array(
 	'populateuserprofiles' => 'Perfiles de usuario populares',
+	'user-awards-title' => 'Premios',
+	'user-gifts-title' => 'Agasallos',
 	'user-count-separator' => 'de',
 	'user-view-all' => 'Ver todo',
 	'user-upload-image' => 'Cargar imaxe',
@@ -1889,7 +1891,9 @@ $messages['id'] = array(
  * @author Darth Kule
  */
 $messages['it'] = array(
+	'user-profile-personal-name' => 'Nome',
 	'user-profile-personal-email' => 'Indirizzo e-mail',
+	'user-profile-picture-large' => 'Grande',
 );
 
 /** Javanese (Basa Jawa)
@@ -2069,6 +2073,13 @@ $messages['km'] = array(
 	'edit-profile-title' => 'កែប្រែប្រវត្តិរូបរបស់អ្នក',
 	'user-page-link' => 'ទំព័រ នៃ អ្នកប្រើប្រាស់',
 	'user-wiki-link' => 'ទំព័រ អ្នកប្រើប្រាស់ នៃ វិគី',
+);
+
+/** Krio (Krio)
+ * @author Jose77
+ */
+$messages['kri'] = array(
+	'user-watchlist' => 'Mi list foh wach',
 );
 
 /** Kinaray-a (Kinaray-a)
@@ -2439,6 +2450,13 @@ $messages['mt'] = array(
 	'user-watchlist' => 'Li qed insegwi',
 	'user-profile-personal-email' => 'E-mail',
 	'user-page-link' => 'Paġna tal-utent',
+);
+
+/** Erzya (Эрзянь)
+ * @author Botuzhaleny-sodamo
+ */
+$messages['myv'] = array(
+	'user-profile-personal-name' => 'Леметь',
 );
 
 /** Nahuatl (Nāhuatl)
@@ -4197,9 +4215,14 @@ $messages['vi'] = array(
  * @author Malafaya
  */
 $messages['vo'] = array(
+	'user-friends-title' => 'Flens',
 	'user-profile-personal-name' => 'Nem',
 	'user-profile-personal-city' => 'Zif',
 	'user-profile-personal-country' => 'Län',
+	'user-profile-personal-work' => 'Vob',
 	'user-profile-personal-schools' => 'Juls',
 	'user-profile-interests-music' => 'Musig',
+	'user-profile-interests-books' => 'Buks',
+	'user-profile-sports-sport' => 'Spot',
 );
+
