@@ -26,3 +26,23 @@ $aliases['en'] = array(
 	'ViewRelationshipRequests' => array( 'ViewRelationshipRequests' ),
 	'ViewRelationships' => array( 'ViewRelationships' ),
 );
+
+/** Dutch (Nederlands) */
+$aliases['nl'] = array(
+	'AddRelationship' => array( 'RelatieToevoegen' ),
+	'PopulateUserProfiles' => array( 'GebruikersprofielenVullen' ),
+	'RemoveAvatar' => array( 'AvatarVerwijderen' ),
+	'RemoveRelationship' => array( 'RelatieVerwijderen' ),
+	'SendBoardBlast' => array( 'MultiBerichtVersturen' ),
+	'TopFansByStatistic' => array( 'ToplijstFansPerStatistieken' ),
+	'TopUsers' => array( 'ToplijstGebruikers' ),
+	'TopUsersRecent' => array( 'ToplijstRecenteGebruikers' ),
+	'ToggleUserPage' => array( 'GebruikerspaginaWisselen' ),
+	'UpdateEditCounts' => array( 'BewerkingstellersBijwerken' ),
+	'UpdateProfile' => array( 'ProfielBijwerken' ),
+	'UploadAvatar' => array( 'AvatarUploaden' ),
+	'UserBoard' => array( 'Gebruikersboard' ),
+	'ViewRelationshipRequests' => array( 'RelatieverzoekenBekijken' ),
+	'ViewRelationships' => array( 'RelatiesBekijken' ),
+);
+
