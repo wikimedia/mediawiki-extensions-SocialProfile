@@ -12,6 +12,8 @@ $wgExtensionMessagesFiles['SocialProfileUserProfile'] = $dir . 'UserProfile/User
 $wgExtensionMessagesFiles['SocialProfileUserRelationship'] = $dir . 'UserRelationship/UserRelationship.i18n.php';
 $wgExtensionMessagesFiles['SocialProfileUserStats'] = $dir. 'UserStats/UserStats.i18n.php';
 
+$wgExtensionAliasesFiles['SocialProfile'] = $dir . 'SocialProfile.alias.php';
+
 $wgAutoloadClasses['SpecialAddRelationship'] = $dir . 'UserRelationship/SpecialAddRelationship.php';
 $wgAutoloadClasses['SpecialBoardBlast'] = $dir . 'UserBoard/SpecialSendBoardBlast.php';
 $wgAutoloadClasses['SpecialPopulateUserProfiles'] = $dir . 'UserProfile/SpecialPopulateExistingUsersProfiles.php';
@@ -59,7 +61,7 @@ $wgUserProfileDisplay['friends'] = true;
 $wgExtensionCredits['other'][] = array(
 	'name' => 'SocialProfile',
 	'author' => 'Wikia, Inc. (Aaron Wright, David Pean)',
-	'version' => '1.1',
+	'version' => '1.2',
 	'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile',
 	'description' => 'A set of Social Tools for MediaWiki',
 );
