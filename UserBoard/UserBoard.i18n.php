@@ -169,6 +169,68 @@ $3
 وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
 );
 
+/** Egyptian Spoken Arabic (مصرى)
+ * @author Meno25
+ */
+$messages['arz'] = array(
+	'boardblastlogintitle' => 'أنت ينبغى أن تكون مسجل الدخول لترسل بورد بلاست',
+	'boardblastlogintext' => 'أنت يجب أن تكون مسجل الدخول لترسل بورد بلاست.
+اضغط <a href="index.php?title=Special:UserLogin">هنا لتسجيل الدخول</a>',
+	'messagesenttitle' => 'الرسائل تم إرسالها',
+	'boardblasttitle' => 'أرسل بورد بلاست',
+	'boardblaststep1' => 'خطوة 1 - اكتب رسالتك',
+	'boardblastprivatenote' => 'كل الرسائل سترسل كرسائل خاصة',
+	'boardblaststep2' => 'خطوة 2 - انتقِ الذى تود إرسال رسالتك إليه',
+	'boardlinkselectall' => 'اختيار الكل',
+	'boardlinkunselectall' => 'عكس اختيار الكل',
+	'boardlinkselectfriends' => 'اختيار الأصدقاء',
+	'boardlinkunselectfriends' => 'عكس اختيار الأصدقاء',
+	'boardlinkselectfoes' => 'اختيار الأعداء',
+	'boardlinkunselectfoes' => 'عكس اختيار الأعداء',
+	'boardsendbutton' => 'أرسل بورد بلاست',
+	'boardnofriends' => 'لا تمتلك أى أصدقاء لترسل رسالة إليهم!',
+	'messagesentsuccess' => 'رسالتك أُرسلت بنجاح',
+	'userboard' => 'مجلس المستخدم',
+	'userboard_board-to-board' => 'بورد إلى بورد',
+	'userboard_delete' => 'احذف',
+	'userboard_noexist' => 'المستخدم الذى تحاول عرضه غير موجود.',
+	'userboard_yourboard' => 'مجلسك',
+	'userboard_owner' => 'بورد الخاص ب$1',
+	'userboard_yourboardwith' => 'مجلسك إلى مجلس مع $1',
+	'userboard_otherboardwith' => 'مجلس إلى مجلس الخاص ب$1 مع $2',
+	'userboard_backprofile' => 'رجوع إلى ملف $1',
+	'userboard_backyourprofile' => 'الرجوع إلى ملفك',
+	'userboard_boardtoboard' => 'مجلس إلى مجلس',
+	'userboard_confirmdelete' => 'هل أنت متأكد أنك تريد حذف هذه الرسالة؟',
+	'userboard_sendmessage' => 'أرسل رسالة إلى $1',
+	'userboard_myboard' => 'مجلسي',
+	'userboard_posted_ago' => 'بعث منذ $1',
+	'userboard_private' => 'خاص',
+	'userboard_public' => 'علني',
+	'userboard_messagetype' => 'نوع الرسالة',
+	'userboard_nextpage' => 'بعد',
+	'userboard_prevpage' => 'قبل',
+	'userboard_nomessages' => 'لا رسائل.',
+	'userboard_sendbutton' => 'إرسال',
+	'userboard_loggedout' => 'أنت يجب أن تكون <a href="$1">مسجل الدخول</a> لترسل رسائل إلى المستخدمين الآخرين.',
+	'userboard_showingmessages' => 'عرض $2-$3 من {{PLURAL:$1|$1 رسالة|$1 رسالة}}',
+	'message_received_subject' => '$1 كتب على مجلسك فى {{SITENAME}}',
+	'message_received_body' => 'مرحبا $1:
+
+$2 كتب حالا على مجلسك فى {{SITENAME}}!
+
+اضغط بالأسفل للتحقق من مجلسك!
+
+$3
+
+---
+
+هل تريد التوقف عن تلقى رسائل بريد إلكترونى مننا؟
+
+اضغط $4
+وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
+);
+
 /** Bulgarian (Български)
  * @author Borislav
  * @author DCLXVI
@@ -583,7 +645,7 @@ Faga clic $4
 e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
 );
 
-/** Gothic (������������������������������������)
+/** Gothic
  * @author Jocke Pirat
  */
 $messages['got'] = array(

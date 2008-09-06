@@ -440,6 +440,190 @@ $2 أزالك كعدو في {{SITENAME}}!
 وغير إعداداتك لتعطيل إخطارات البريد الإكتروني.',
 );
 
+/** Egyptian Spoken Arabic (مصرى)
+ * @author Meno25
+ */
+$messages['arz'] = array(
+	'viewrelationships' => 'عرض العلاقة',
+	'viewrelationshiprequests' => 'اعرض طلبات العلاقات',
+	'ur-already-submitted' => 'طلبك تم إرساله',
+	'ur-error-page-title' => 'آه!',
+	'ur-error-title' => 'آه، أنت أخذت منحنيا خاطئا!',
+	'ur-error-message-no-user' => 'لا يمكننا استكمال طلبك، لأنه لا يوجد مستخدم بهذا الاسم.',
+	'ur-main-page' => 'الصفحة الرئيسية',
+	'ur-your-profile' => 'ملفك',
+	'ur-backlink' => '&lt; رجوع إلى ملف $1',
+	'ur-friend' => 'صديق',
+	'ur-foe' => 'عدو',
+	'ur-relationship-count-foes' => '$1 لديه $2 {{PLURAL:$2|عدو|عدو}}. تريد المزيد من الأعداء؟ <a href="$3">ادعهم.</a>',
+	'ur-relationship-count-friends' => '$1 لديه $2 {{PLURAL:$2|صديق|صديق}}. تريد المزيد من الأصدقاء؟ <a href="$3">ادعهم.</a>',
+	'ur-add-friends' => '  تريد المزيد من الأصدقاء؟ <a href="$1">أدعهم</a>',
+	'ur-add-friend' => 'أضف كصديق',
+	'ur-add-foe' => 'أضف كعدو',
+	'ur-add-no-user' => 'لا مستخدم تم اختياره.
+من فضلك اطلب الأصدقاء/الأعداء من خلال الوصلة الصحيحة.',
+	'ur-add-personal-message' => 'إضافة رسالة شخصية',
+	'ur-remove-relationship-friend' => 'إزالة كصديق',
+	'ur-remove-relationship-foe' => 'إزالة كعدو',
+	'ur-give-gift' => 'أعط هدية',
+	'ur-previous' => 'قبل',
+	'ur-next' => 'بعد',
+	'ur-remove-relationship-title-foe' => 'هل تريد إزالة $1 كعدوك؟',
+	'ur-remove-relationship-title-confirm-foe' => 'أنت أزلت $1 كعدوك',
+	'ur-remove-relationship-title-friend' => 'هل تريد إزالة $1 كصديقك؟',
+	'ur-remove-relationship-title-confirm-friend' => 'أنت أزلت $1 كصديقك',
+	'ur-remove-relationship-message-foe' => 'أنت طلبت إزالة $1 كعدوك، اضغط "$2" للتأكيد.',
+	'ur-remove-relationship-message-confirm-foe' => 'أنت أزلت بنجاح $1 كعدوك.',
+	'ur-remove-relationship-message-friend' => 'أنت طلبت إزالة $1 كصديقك، اضغط "$2" للتأكيد.',
+	'ur-remove-relationship-message-confirm-friend' => 'أنت أزلت بنجاح $1 كصديقك.',
+	'ur-remove-error-message-no-relationship' => 'لا تمتلك أى علاقة مع $1.',
+	'ur-remove-error-message-remove-yourself' => 'لا يمكنك أن تزيل نفسك.',
+	'ur-remove-error-message-pending-request' => 'لديك طلب $1 قيد الانتظار مع $2.',
+	'ur-remove-error-message-pending-foe-request' => 'لديك طلب عداوة قيد الانتظار مع $1.',
+	'ur-remove-error-message-pending-friend-request' => 'لديك طلب صداقة قيد الانتظار مع $1.',
+	'ur-remove-error-not-loggedin' => 'أنت ينبغى أن تكون مسجل الدخول لإزالة $1.',
+	'ur-remove-error-not-loggedin-foe' => 'يجب أن تكون مسجل الدخول لإزالة عدو.',
+	'ur-remove-error-not-loggedin-friend' => 'يجب أن تكون مسجل الدخول لإزالة صديق.',
+	'ur-remove' => 'أزل',
+	'ur-cancel' => 'إلغاء',
+	'ur-login' => 'دخول',
+	'ur-add-title-foe' => 'هل تريد إضافة $1 كعدوك؟',
+	'ur-add-title-friend' => 'هل تريد إضافة $1 كصديقك؟',
+	'ur-add-message-foe' => 'أنت على وشك إضافة $1 كعدوك.
+سنخطر $1 لتأكيد عداوتك.',
+	'ur-add-message-friend' => 'أنت على وشك إضافة $1 كصديقك.
+سنخطر $1 لتأكيد صداقتك.',
+	'ur-friendship' => 'صداقة',
+	'ur-grudge' => 'ضغينة',
+	'ur-add-button' => 'أضف ك$1',
+	'ur-add-button-foe' => 'إضافة كعدو',
+	'ur-add-button-friend' => 'إضافة كصديق',
+	'ur-add-sent-title-foe' => 'لقد أرسلنا طلب عداوتك إلى $1!',
+	'ur-add-sent-title-friend' => 'لقد أرسلنا طلب صداقتك إلى $1!',
+	'ur-add-sent-message-foe' => 'طلب عداوتك تم إرساله إلى $1 للتأكيد.
+لو أن $1 أكد طلبك، ستتلقى بريد متابعة',
+	'ur-add-sent-message-friend' => 'طلب صداقتك تم إرساله إلى $1 للتأكيد.
+لو أن $1 أكد طلبك، ستتلقى بريد متابعة',
+	'ur-add-error-message-no-user' => 'المستخدم الذى تحاول أن تضيفه غير موجود.',
+	'ur-add-error-message-blocked' => 'أنت حاليا ممنوع ولا يمكنك إضافة أصدقاء أو أعداء.',
+	'ur-add-error-message-yourself' => 'أنت لا يمكنك إضافة نفسك كصديق أو عدو.',
+	'ur-add-error-message-existing-relationship' => 'أنت بالفعل $1 مع $2.',
+	'ur-add-error-message-existing-relationship-foe' => 'أنت بالفعل عدو $1.',
+	'ur-add-error-message-existing-relationship-friend' => 'أنت بالفعل صديق $1.',
+	'ur-add-error-message-pending-request-title' => 'صبرا!',
+	'ur-add-error-message-pending-friend-request' => 'لديك طلب صداقة قيد الانتظار مع $1.
+سنخطرك عندما $1 يؤكد طلبك.',
+	'ur-add-error-message-pending-foe-request' => 'لديك طلب عداوة قيد الانتظار مع $1.
+سنخطرك عندما $1 يؤكد طلبك.',
+	'ur-add-error-message-not-loggedin' => 'يجب أن تكون مسجلا دخولك لتضيف $1',
+	'ur-add-error-message-not-loggedin-foe' => 'يجب أن تكون مسجل الدخول لإضافة عدو',
+	'ur-add-error-message-not-loggedin-friend' => 'يجب أن تكون مسجل الدخول لإضافة صديق',
+	'ur-requests-title' => 'طلبات العلاقات',
+	'ur-requests-message-foe' => '<a href="$1">$2</a> يريد أن يكون عدوك.',
+	'ur-requests-message-friend' => '<a href="$1">$2</a> يريد أن يكون صديقك.',
+	'ur-accept' => 'قبول',
+	'ur-reject' => 'رفض',
+	'ur-no-requests-message' => 'ليس لديك طلبات صداقة أو عداوة.
+لو أنك تريد المزيد من الأصدقاء، <a href="$1">ادعوهم!</a>',
+	'ur-requests-added-message-foe' => 'أنت أضفت $1 كعدوك.',
+	'ur-requests-added-message-friend' => 'أنت أضفت $1 كصديقك.',
+	'ur-requests-reject-message-friend' => 'أنت رفضت $1 كصديقك.',
+	'ur-requests-reject-message-foe' => 'أنت رفضت $1 كعدوك.',
+	'ur-title-foe' => 'قائمة أعداء $1',
+	'ur-title-friend' => 'قائمة أصدقاء $1',
+	'friend_request_subject' => '$1 أضافك كصديق فى {{SITENAME}}!',
+	'friend_request_body' => 'مرحبا $1:
+
+$2 أضافك كصديق فى {{SITENAME}}.  نريد التأكد من أنكما فعلا صديقان.
+
+من فضلك اضغط هذه الوصلة لتأكيد صداقتك:
+$3
+
+شكرا
+
+---
+
+هل تريد التوقف عن تلقى رسائل بريد إلكترونى مننا؟
+
+اضغط $4
+وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
+	'foe_request_subject' => 'إنها الحرب! $1 أضافك كعدو فى {{SITENAME}}!',
+	'foe_request_body' => 'مرحبا $1:
+
+$2 أضافك حالا كعدو فى {{SITENAME}}.  نريد التحقق من أنكما فعلا عدوان أو على الأقل بينكما خلاف.
+
+من فضلك اضغط هذه الوصلة لتأكيد التطابق.
+
+$3
+
+شكرا
+
+---
+
+هل تريد التوقف عن تلقى رسائل بريد إلكترونى مننا؟
+
+اضغط $4
+وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
+	'friend_accept_subject' => '$1 قبل طلب صداقتك فى {{SITENAME}}!',
+	'friend_accept_body' => 'مرحبا $1:
+
+$2 قبل طلب صداقتك فى {{SITENAME}}!
+
+تحقق من صفحة $2 فى $3
+
+شكرا،
+
+---
+
+هل تريد التوقف عن تلقى رسائل بريد إلكترونى مننا؟
+
+اضغط $4
+وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
+	'foe_accept_subject' => 'إنه يعمل! $1 قبل طلب عداوتك فى {{SITENAME}}!',
+	'foe_accept_body' => 'مرحبا $1:
+
+$2 قبل طلب عداوتك فى {{SITENAME}}!
+
+تحقق من صفحة $2 فى $3
+
+شكرا
+
+---
+
+هل تريد التوقف عن تلقى رسائل بريد إلكترونى مننا؟
+
+اضغط $4
+وغير إعداداتك لتعطيل إخطارات البريد الإكتروني.',
+	'friend_removed_subject' => 'كلا! أزالك $1 كصديق على {{SITENAME}}!',
+	'friend_removed_body' => 'مرحبا $1:
+
+$2 أزالك كصديق فى {{SITENAME}}!
+
+شكرا
+
+---
+
+هل تريد التوقف عن تلقى رسائل بريد إلكترونى مننا؟
+
+اضغط $4
+وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
+	'foe_removed_subject' => 'هاه! $1 أزالك كعدو فى {{SITENAME}}!',
+	'foe_removed_body' => 'مرحبا $1:
+
+$2 أزالك كعدو فى {{SITENAME}}!
+
+ربما أنتما الاثنان على الطريق لتكونا صديقين؟
+
+شكرا
+
+---
+
+هل تريد التوقف عن تلقى رسائل بريد إلكترونى مننا؟
+
+اضغط $4
+وغير إعداداتك لتعطيل إخطارات البريد الإكتروني.',
+);
+
 /** Bulgarian (Български)
  * @author DCLXVI
  */
@@ -1663,6 +1847,7 @@ De e-mail jescheck kriß.',
  */
 $messages['lb'] = array(
 	'ur-already-submitted' => 'Är Ufro gouf fortgeschéckt',
+	'ur-error-page-title' => 'ups!',
 	'ur-error-title' => 'Ups, hei geet et net weider!',
 	'ur-main-page' => 'Haaptsäit',
 	'ur-your-profile' => 'Äre Profil',
@@ -1673,11 +1858,15 @@ $messages['lb'] = array(
 	'ur-give-gift' => 'Cadeau schécken',
 	'ur-previous' => 'vireg',
 	'ur-next' => 'nächst',
+	'ur-remove-error-message-remove-yourself' => 'Dir kënnt iech net selwer ewechhuelen.',
 	'ur-remove' => 'Ewechhuelen',
 	'ur-cancel' => 'Annulléieren',
 	'ur-login' => 'Umellen',
 	'ur-friendship' => 'Frëndschaft',
+	'ur-add-button-friend' => 'Als Frënd derbäisetzen',
+	'ur-add-error-message-no-user' => 'De Benotzer den Dir versicht derbäizesetzen gëtt et net.',
 	'ur-add-error-message-blocked' => 'Dir sidd elo gespaart a kënnt dofir keng Frënn oder Géigner derbäisetzen.',
+	'ur-add-error-message-yourself' => 'Dir kënnt Iech net selwer als Feind oder Frënd derbäisetzen.',
 	'ur-add-error-message-pending-request-title' => 'Gedold!',
 	'ur-accept' => 'Akzeptéieren',
 	'ur-reject' => 'Refuséieren',

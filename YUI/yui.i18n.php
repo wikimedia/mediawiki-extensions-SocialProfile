@@ -24,6 +24,13 @@ $messages['ar'] = array(
 	'yui-desc' => 'مجموعة من الأدوات وأجهزة التحكم، مكتوبة بجافاسكريبت',
 );
 
+/** Egyptian Spoken Arabic (مصرى)
+ * @author Meno25
+ */
+$messages['arz'] = array(
+	'yui-desc' => 'مجموعة من الأدوات وأجهزة التحكم، مكتوبة بجافاسكريبت',
+);
+
 /** Asturian (Asturianu)
  * @author Esbardu
  */

@@ -118,6 +118,55 @@ $messages['ar'] = array(
 وغير إعداداتك لتعديل إخطارات البريد الإلكتروني.',
 );
 
+/** Egyptian Spoken Arabic (مصرى)
+ * @author Meno25
+ */
+$messages['arz'] = array(
+	'user-stats-alltime-title' => 'أكثر النقاط كل الوقت',
+	'user-stats-weekly-title' => 'أكثر النقاط هذا الأسبوع',
+	'user-stats-monthly-title' => 'أكثر النقاط هذا الشهر',
+	'topusers' => 'أعلى المستخدمين',
+	'top-fans-by-points-nav-header' => 'أعلى المعجبين',
+	'top-fans-by-category-nav-header' => 'الأعلى بالتصنيف',
+	'top-fans-total-points-link' => 'إجمالى النقاط',
+	'top-fans-weekly-points-link' => 'النقاط هذا الأسبوع',
+	'top-fans-monthly-points-link' => 'النقاط هذا الشهر',
+	'top-fans-points' => 'نقاط',
+	'top-fans-by-category-title' => 'أعلى إجمالى $1',
+	'top-fans-bad-field-title' => 'آه!',
+	'top-fans-bad-field-message' => 'الإحصاءات المحددة غير موجودة.',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|تصويت|تصويت}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|فوز شهري|فوز شهري}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|فوز أسبوعي|فوز أسبوعي}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|تعديل|تعديل}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|تعليق|تعليق}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|تراجع|تراجع}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|صديق|صديق}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|عدو|عدو}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|رأى منشور|رأى منشور}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|رأي|رأي}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|وسام|وسام}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|عيب|عيب}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|وسام معطى|وسام معطى}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|عيب معطى|عيب معطى}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|هدية تم تلقيها|هدية تم تلقيها}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|هدية مرسلة|هدية مرسلة}}',
+	'level-advance-subject' => 'أنت الآن "$1" فى {{SITENAME}}!',
+	'level-advance-body' => 'مرحبا $1:
+
+أنت الآن "$2" فى {{SITENAME}}!
+
+تهانينا،
+
+فرق {{SITENAME}}
+
+---
+هل تريد التوقف عن تلقى رسائل بريد إلكترونى منا؟
+
+اضغط $3
+وغير إعداداتك لتعديل إخطارات البريد الإلكتروني.',
+);
+
 /** Bulgarian (Български)
  * @author DCLXVI
  */
