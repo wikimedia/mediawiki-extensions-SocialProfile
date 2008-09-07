@@ -27,7 +27,9 @@ $aliases['en'] = array(
 	'ViewRelationships' => array( 'ViewRelationships' ),
 );
 
-/** Arabic (العربية) */
+/** Arabic (العربية)
+ * @author Meno25
+ */
 $aliases['ar'] = array(
 	'AddRelationship' => array( 'إضافة_علاقة' ),
 	'PopulateUserProfiles' => array( 'ملء_ملفات_المستخدمين' ),
@@ -46,7 +48,9 @@ $aliases['ar'] = array(
 	'ViewRelationships' => array( 'عرض_العلاقات' ),
 );
 
-/** Egyptian Spoken Arabic (مصرى) */
+/** Egyptian Spoken Arabic (مصرى)
+ * @author Meno25
+ */
 $aliases['arz'] = array(
 	'AddRelationship' => array( 'إضافة_علاقة' ),
 	'PopulateUserProfiles' => array( 'ملء_ملفات_المستخدمين' ),
