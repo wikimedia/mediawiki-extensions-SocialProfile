@@ -1222,6 +1222,7 @@ $messages['eo'] = array(
 	'user-send-message' => 'Sendi mesaĝon',
 	'user-send-gift' => 'Sendi donacon',
 	'user-contributions' => 'Kontribuoj',
+	'user-stats-title' => 'Statistikoj',
 	'other-info-title' => 'Alia informo',
 	'user-friends-title' => 'Amikoj',
 	'user-foes-title' => 'Malamikoj',
@@ -1249,6 +1250,7 @@ $messages['eo'] = array(
 	'user-recent-activity-user-message' => 'Sendis mesaĝon al',
 	'user-profile-update-log-section' => 'ŝanĝis sekcion',
 	'user-profile-default-country' => 'Usono',
+	'user-profile-points' => ' poentoj',
 	'user-profile-section-personal' => 'Persona informo',
 	'user-profile-section-interests' => 'Alia informo',
 	'user-profile-section-picture' => 'Avataro',
@@ -1264,8 +1266,16 @@ $messages['eo'] = array(
 	'user-profile-personal-birthday' => 'Naskodato',
 	'user-profile-personal-birthdate' => 'Dato (MM/TT)',
 	'user-profile-personal-aboutme' => 'Pri mi',
+	'user-profile-personal-work' => 'Laboro',
 	'user-profile-personal-occupation' => 'Profesio',
+	'user-profile-personal-education' => 'Edukado',
+	'user-profile-personal-schools' => 'Lernejoj',
+	'user-profile-personal-places' => 'Lokoj',
+	'user-profile-personal-placeslived' => 'Kie mi iame ajn loĝis',
+	'user-profile-personal-web' => 'TTT-o',
 	'user-profile-personal-websites' => 'Retejoj',
+	'user-profile-interests-entertainment' => 'Distraĵoj',
+	'user-profile-interests-movies' => 'Filmoj',
 	'user-profile-interests-tv' => 'Televido',
 	'user-profile-interests-music' => 'Muziko',
 	'user-profile-interests-books' => 'Libroj',
@@ -1279,6 +1289,7 @@ $messages['eo'] = array(
 	'user-profile-tidbits-title' => 'Bagateloj',
 	'user-profile-sports-sport' => 'Sporto',
 	'user-profile-sports-notloggedintitle' => 'Ho ve!',
+	'user-profile-picture-title' => 'Alŝuti vian foton',
 	'user-profile-picture-log' => 'avataro',
 	'user-profile-picture-log-entry' => 'alŝutis novan avataron',
 	'user-profile-picture-yourpicture' => 'Via bildo',
@@ -1291,6 +1302,9 @@ $messages['eo'] = array(
 	'user-profile-picture-choosepicture' => 'Selektu vian bildon',
 	'edit-profile-title' => 'Redaktu viajn preferojn',
 	'user-page-link' => 'Paĝo de uzanto',
+	'removeavatar' => 'Forigi avataron',
+	'avatarupload-currentavatar' => 'nuna avataro de $1',
+	'avatarlogpage' => 'Protokolo pri avatara alŝutado',
 );
 
 /** Estonian (Eesti)
@@ -3266,10 +3280,12 @@ $messages['pdt'] = array(
 );
 
 /** Polish (Polski)
+ * @author Jwitos
  * @author Maikking
  * @author Sp5uhe
  */
 $messages['pl'] = array(
+	'user-awards-title' => 'Nagrody',
 	'user-count-separator' => 'z',
 	'user-view-all' => 'Pokaż wszystko',
 	'user-upload-image' => 'Prześlij grafikę',
@@ -3331,14 +3347,21 @@ $messages['pl'] = array(
 	'user-profile-personal-email-needs-auth' => '(otrzymywać wiadomości jest możliwe dopiero po potwierdzeniu adresu e-mail)',
 	'user-profile-personal-confirmemail' => 'Potwierdź e-mail',
 	'user-profile-personal-location' => 'Lokalizacja',
+	'user-profile-personal-city' => 'Miasto',
+	'user-profile-personal-country' => 'Kraj',
 	'user-profile-personal-hometown' => 'Miejsce zamieszkania',
+	'user-profile-personal-aboutme' => 'O mnie',
+	'user-profile-personal-schools' => 'Szkoły',
 	'user-profile-interests-movies' => 'Filmy',
 	'user-profile-interests-tv' => 'TV',
 	'user-profile-interests-music' => 'Muzyka',
 	'user-profile-interests-books' => 'Książki',
 	'user-profile-interests-magazines' => 'Czasopisma',
 	'user-profile-interests-videogames' => 'Gry wideo',
+	'user-profile-sports-notloggedintitle' => 'Ups!',
 	'user-profile-picture-log-entry' => 'wgrał swój nowy portret',
+	'edit-profile-title' => 'Edytuj swój profil',
+	'user-page-link' => 'Strona użytkownika',
 	'user-board-login-message' => 'Musisz być <a href="$1">zalogowany</a>, żeby zostawiać wiadomości innym użytkownikom.',
 	'removeavatar' => 'Usuń awatar',
 	'givegift' => 'Daj prezent',

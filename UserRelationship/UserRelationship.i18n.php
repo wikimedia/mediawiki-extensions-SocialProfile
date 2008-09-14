@@ -2640,6 +2640,7 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
 /** Polish (Polski)
  * @author Airwolf
  * @author Derbeth
+ * @author Jwitos
  * @author Maikking
  * @author Sp5uhe
  */
@@ -2647,6 +2648,7 @@ $messages['pl'] = array(
 	'viewrelationships' => 'Zobacz znajomych',
 	'viewrelationshiprequests' => 'Zobacz zaproszenia do znajomości',
 	'ur-already-submitted' => 'Twoje zaproszenie zostało wysłane',
+	'ur-error-page-title' => 'Ups!',
 	'ur-error-title' => 'Błąd',
 	'ur-error-message-no-user' => 'Nie można zrealizować Twojego zaproszenia, ponieważ nie istnieje użytkownik o takiej nazwie.',
 	'ur-main-page' => 'Strona główna',
