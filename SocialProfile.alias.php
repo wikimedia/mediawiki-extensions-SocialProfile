@@ -69,6 +69,12 @@ $aliases['arz'] = array(
 	'ViewRelationships' => array( 'عرض_العلاقات' ),
 );
 
+/** Luxembourgish (Lëtzebuergesch) */
+$aliases['lb'] = array(
+	'UpdateProfile' => array( 'Profil eroplueden' ),
+	'UploadAvatar' => array( 'Avatar eroplueden' ),
+);
+
 /** Dutch (Nederlands) */
 $aliases['nl'] = array(
 	'AddRelationship' => array( 'RelatieToevoegen' ),

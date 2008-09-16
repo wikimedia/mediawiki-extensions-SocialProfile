@@ -1854,6 +1854,7 @@ $messages['lb'] = array(
 	'ur-backlink' => '&lt; Zréck op de Profil vum $1',
 	'ur-friend' => 'Frënd',
 	'ur-foe' => 'Géigner',
+	'ur-add-friend' => 'Als Frënd derbäisetzen',
 	'ur-add-personal-message' => 'Eng perséinlech Noriicht derbäisetzen',
 	'ur-give-gift' => 'Cadeau schécken',
 	'ur-previous' => 'vireg',

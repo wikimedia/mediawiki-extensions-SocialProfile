@@ -2303,6 +2303,7 @@ $messages['ksh'] = array(
  * @author Robby
  */
 $messages['lb'] = array(
+	'user-gifts-title' => 'Cadeauen',
 	'user-count-separator' => 'vu(n)',
 	'user-view-all' => 'Alles gesinn',
 	'user-upload-image' => 'Bild eroplueden',
@@ -2317,6 +2318,11 @@ $messages['lb'] = array(
 	'user-send-message' => 'Noriicht schécken',
 	'user-send-gift' => 'Cadeau schécken',
 	'user-contributions' => 'Kontributiounen',
+	'user-stats-title' => 'Statistiken',
+	'user-stats-edits' => 'Ännerungen',
+	'user-stats-votes' => 'Stëmmen',
+	'user-stats-comments' => 'Bemierkungen',
+	'user-stats-quiz-points' => 'Punkten am Quiz',
 	'other-info-title' => 'Aner Informatiounen',
 	'user-friends-title' => 'Frënn',
 	'other-info-movies' => 'Filmen',
@@ -2346,6 +2352,7 @@ $messages['lb'] = array(
 	'user-profile-update-log-section' => 'Abschnitt änneren',
 	'user-profile-update-profile' => 'Profil',
 	'user-profile-default-country' => 'Lëtzebuerg',
+	'user-profile-points' => 'Punkten',
 	'user-profile-section-personal' => 'Perséinlech Informatiounen',
 	'user-profile-section-sportsteams' => 'Reseauen aktualiséieren',
 	'user-profile-section-interests' => 'Aner Informatiounen',
@@ -2401,6 +2408,7 @@ Avatar',
 	'user-wiki-link' => 'Wiki Benotzersäit',
 	'user-type-toggle-old' => "Benotzt d'Wiki-Benotzersäit",
 	'user-type-toggle-new' => 'Sozial-Benotzersäit benotzen',
+	'avatarupload-removeanother' => 'En aneren ewechhuelen',
 );
 
 /** Lithuanian (Lietuvių)
