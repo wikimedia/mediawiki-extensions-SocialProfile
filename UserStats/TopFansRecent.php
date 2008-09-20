@@ -6,7 +6,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 		UnlistedSpecialPage::UnlistedSpecialPage('TopUsersRecent');
 	}
 
-	function execute(){
+	function execute( $par ){
 		global $IP, $wgRequest, $wgUser, $wgOut, $wgStyleVersion, $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly,
 		$wgUserLevels, $wgUploadPath, $wgScriptPath;
 
@@ -36,7 +36,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 			wfDebug("Got top users by {$period} points ({$count}) from cache\n");
 			$user_list = $data;
 		} else {
-			wfDebug("Got top users by {$period} points ({$count}) from db\n");
+			wfDebug("Got top users by {$period} points ({$count}) from DB\n");
 
 			$params['ORDER BY'] = 'up_points DESC';
 			$params['LIMIT'] = $count;
@@ -49,10 +49,10 @@ class TopFansRecent extends UnlistedSpecialPage {
 			);
 			while( $row = $dbr->fetchObject($res) ){
 				$user_list[] = array(
-						"user_id" => $row->up_user_id,
-						"user_name" => $row->up_user_name,
-						"points" => $row->up_points
-						);
+					"user_id" => $row->up_user_id,
+					"user_name" => $row->up_user_name,
+					"points" => $row->up_points
+				);
 			}
 			$wgMemc->set( $key, $user_list, 60 * 5);
 		}

@@ -1,56 +1,59 @@
 <?php
 /**
- * Internationalisation file for User Board pages
+ * Internationalisation file for UserBoard extension.
  *
- * @addtogroup Extensions
+ * @ingroup Extensions
  */
 
 $messages = array();
 
+/** English
+ * @author Wikia, Inc.
+ */
 $messages['en'] = array(
-	'boardblastlogintitle'      => 'You must be logged in to send board blasts',
-	'boardblastlogintext'       => 'You must be logged in to send board blasts.
+	'boardblastlogintitle' => 'You must be logged in to send board blasts',
+	'boardblastlogintext' => 'You must be logged in to send board blasts.
 Click <a href="index.php?title=Special:UserLogin">here to login</a>',
-	'messagesenttitle'          => 'Messages sent',
-	'boardblasttitle'           => 'Send board blast',
-	'boardblaststep1'           => 'Step 1 - Write your message',
-	'boardblastprivatenote'	    => 'All messages will be sent as private messages',
-	'boardblaststep2'           => 'Step 2 - Select who you want to send your message to',
-	'boardlinkselectall'        => 'Select all',
-	'boardlinkunselectall'      => 'Unselect all',
-	'boardlinkselectfriends'    => 'Select friends',
-	'boardlinkunselectfriends'  => 'Unselect friends',
-	'boardlinkselectfoes'       => 'Select foes',
-	'boardlinkunselectfoes'     => 'Unselect foes',
-	'boardsendbutton'           => 'Send board blast',
-	'boardnofriends'            => 'You have no friends to send a message to!',
-	'messagesentsuccess'        => 'Your message was successfully sent',
-	'userboard'                 => 'User board',
-	'userboard_board-to-board'  => 'Board-to-board',
-	'userboard_delete'          => 'Delete',
-	'userboard_noexist'         => 'The user you are trying to view does not exist.',
-	'userboard_yourboard'       => 'Your board',
-	'userboard_owner'           => '$1\'s board',
-	'userboard_yourboardwith'   => 'Your board-to-board with $1',
-	'userboard_otherboardwith'  => '$1\'s board-to-board with $2',
-	'userboard_backprofile'     => 'Back to $1\'s profile',
+	'messagesenttitle' => 'Messages sent',
+	'boardblasttitle' => 'Send board blast',
+	'boardblaststep1' => 'Step 1 - Write your message',
+	'boardblastprivatenote'	=> 'All messages will be sent as private messages',
+	'boardblaststep2' => 'Step 2 - Select who you want to send your message to',
+	'boardlinkselectall' => 'Select all',
+	'boardlinkunselectall' => 'Unselect all',
+	'boardlinkselectfriends' => 'Select friends',
+	'boardlinkunselectfriends' => 'Unselect friends',
+	'boardlinkselectfoes' => 'Select foes',
+	'boardlinkunselectfoes' => 'Unselect foes',
+	'boardsendbutton' => 'Send board blast',
+	'boardnofriends' => 'You have no friends to send a message to!',
+	'messagesentsuccess' => 'Your message was successfully sent',
+	'userboard' => 'User board',
+	'userboard_board-to-board' => 'Board-to-board',
+	'userboard_delete' => 'Delete',
+	'userboard_noexist' => 'The user you are trying to view does not exist.',
+	'userboard_yourboard' => 'Your board',
+	'userboard_owner' => '$1\'s board',
+	'userboard_yourboardwith' => 'Your board-to-board with $1',
+	'userboard_otherboardwith' => '$1\'s board-to-board with $2',
+	'userboard_backprofile' => 'Back to $1\'s profile',
 	'userboard_backyourprofile' => 'Back to your profile',
-	'userboard_boardtoboard'    => 'Board-to-board',
-	'userboard_confirmdelete'   => 'Are you sure you want to delete this message?',
-	'userboard_sendmessage'     => 'Send $1 a message',
-	'userboard_myboard'         => 'My board',
-	'userboard_posted_ago'      => 'posted $1 ago',
-	'userboard_private'         => 'private',
-	'userboard_public'          => 'public',
-	'userboard_messagetype'     => 'Message type',
-	'userboard_nextpage'        => 'next',
-	'userboard_prevpage'        => 'prev',
-	'userboard_nomessages'      => 'No messages.',
-	'userboard_sendbutton'      => 'send',
-	'userboard_loggedout'       => 'You must be <a href="$1">logged in</a> to post messages to other users.',
+	'userboard_boardtoboard' => 'Board-to-board',
+	'userboard_confirmdelete' => 'Are you sure you want to delete this message?',
+	'userboard_sendmessage' => 'Send $1 a message',
+	'userboard_myboard' => 'My board',
+	'userboard_posted_ago' => 'posted $1 ago',
+	'userboard_private' => 'private',
+	'userboard_public' => 'public',
+	'userboard_messagetype' => 'Message type',
+	'userboard_nextpage' => 'next',
+	'userboard_prevpage' => 'prev',
+	'userboard_nomessages' => 'No messages.',
+	'userboard_sendbutton' => 'send',
+	'userboard_loggedout' => 'You must be <a href="$1">logged in</a> to post messages to other users.',
 	'userboard_showingmessages' => 'Showing $2-$3 of {{PLURAL:$1|$1 Message|$1 Messages}}',
-	'message_received_subject'  => '$1 wrote on your board on {{SITENAME}}',
-	'message_received_body'     => 'Hi $1:
+	'message_received_subject' => '$1 wrote on your board on {{SITENAME}}',
+	'message_received_body' => 'Hi $1:
 
 $2 just wrote on your board on {{SITENAME}}!
 
@@ -64,17 +67,6 @@ Hey, want to stop getting e-mails from us?
 
 Click $4
 and change your settings to disable email notifications.'
-);
-
-/** Message documentation (Message documentation)
- * @author Jon Harald Søby
- */
-$messages['qqq'] = array(
-	'userboard_delete' => '{{Identical|Delete}}',
-	'userboard_private' => '{{Identical|Private}}',
-	'userboard_nextpage' => '{{Identical|Next}}',
-	'userboard_prevpage' => '{{Identical|Prev}}',
-	'userboard_sendbutton' => '{{Identical|Send}}',
 );
 
 /** Eastern Mari (Олык Марий)

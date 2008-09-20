@@ -7,6 +7,8 @@ define( 'NS_USER_WIKI', 200 );
 $wgUserPageChoice = true;
 $wgUserProfileDisplay['friends'] = false;
 $wgUserProfileDisplay['foes'] = false;
+$wgUserProfileDisplay['gifts'] = true;
+$wgUserProfileDisplay['awards'] = true;
 $wgUserProfileDisplay['profile'] = true;
 $wgUserProfileDisplay['board'] = false;
 $wgUserProfileDisplay['stats'] = false; //Display statistics on user profile pages?

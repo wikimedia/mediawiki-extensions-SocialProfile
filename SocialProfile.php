@@ -5,6 +5,11 @@
  */
 if (!defined('MEDIAWIKI')) die();
 
+/**
+ * This is the *main* (but certainly not the only) loader file for SocialProfile extension.
+ *
+ * For more info about SocialProfile, please see the README file that was included with SocialProfile.
+ */
 $dir = dirname(__FILE__) . '/';
 
 $wgExtensionMessagesFiles['SocialProfileUserBoard'] = $dir . 'UserBoard/UserBoard.i18n.php';
@@ -54,14 +59,19 @@ $wgSpecialPages['UserBoard'] = 'SpecialViewUserBoard';
 $wgSpecialPages['ViewRelationshipRequests'] = 'SpecialViewRelationshipRequests';
 $wgSpecialPages['ViewRelationships'] = 'SpecialViewRelationships';
 
+//What to display on social profile pages by default?
 $wgUserProfileDisplay['board'] = true;
 $wgUserProfileDisplay['foes'] = true;
 $wgUserProfileDisplay['friends'] = true;
 
+//Should we display UserBoard-related things on social profile pages?
+$wgUserBoard = true;
+
+//Extension credits
 $wgExtensionCredits['other'][] = array(
 	'name' => 'SocialProfile',
 	'author' => 'Wikia, Inc. (Aaron Wright, David Pean)',
-	'version' => '1.2',
+	'version' => '1.3',
 	'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile',
 	'description' => 'A set of Social Tools for MediaWiki',
 );
@@ -144,5 +154,8 @@ $wgUserBoardScripts = "$wgScriptPath/extensions/SocialProfile/UserBoard";
 $wgUserProfileScripts = "$wgScriptPath/extensions/SocialProfile/UserProfile";
 $wgUserRelationshipScripts = "$wgScriptPath/extensions/SocialProfile/UserRelationship";
 
-require_once("$IP/extensions/SocialProfile/YUI/YUI.php");
-require_once("{$wgUserProfileDirectory}/UserProfile.php");
+require_once("$IP/extensions/SocialProfile/YUI/YUI.php"); //YUI stand-alone library
+require_once("{$wgUserProfileDirectory}/UserProfile.php"); //Profile page configuration loader file
+require_once("$IP/extensions/SocialProfile/UserGifts/Gifts.php"); //UserGifts (user-to-user gifting functionality) loader file
+require_once("$IP/extensions/SocialProfile/SystemGifts/SystemGifts.php"); //SystemGifts (awards functionality) loader file
+$wgFriendingEnabled = true; //Whether to enable friending or not -- this doesn't do very much actually, so don't rely on it

@@ -1,6 +1,6 @@
 <?php
 /**
- * Internationalisation file for UserRelationship extension pages.
+ * Internationalisation file for UserRelationship extension.
  *
  * @ingroup Extensions
  */
@@ -11,30 +11,30 @@ $messages = array();
  * @author David Pean
  */
 $messages['en'] = array(
-	'viewrelationships'                          => 'View relationship',
-	'viewrelationshiprequests'                   => 'View relationship requests',
-	'ur-already-submitted'                       => 'Your request has been sent',
+	'viewrelationships' => 'View relationship',
+	'viewrelationshiprequests' => 'View relationship requests',
+	'ur-already-submitted' => 'Your request has been sent',
 	'ur-error-page-title' => 'Woops!',
-	'ur-error-title'                             => 'Whoops, you took a wrong turn!',
-	'ur-error-message-no-user'                   => 'We cannot complete your request, because no user with this name exists.',
-	'ur-main-page'                               => 'Main page',
-	'ur-your-profile'                            => 'Your profile',
-	'ur-backlink'                                => '&lt; Back to $1\'s profile',
-	'ur-friend'                                  => 'friend',
-	'ur-foe'                                     => 'foe',
+	'ur-error-title' => 'Whoops, you took a wrong turn!',
+	'ur-error-message-no-user' => 'We cannot complete your request, because no user with this name exists.',
+	'ur-main-page' => 'Main page',
+	'ur-your-profile' => 'Your profile',
+	'ur-backlink' => '&lt; Back to $1\'s profile',
+	'ur-friend' => 'friend',
+	'ur-foe' => 'foe',
 	'ur-relationship-count-foes' => '$1 has $2 {{PLURAL:$2|foe|foes}}. Want more foes? <a href="$3">Invite them.</a>',
 	'ur-relationship-count-friends' => '$1 has $2 {{PLURAL:$2|friend|friends}}. Want more friends? <a href="$3">Invite them.</a>',
-	'ur-add-friends'                             => ' Want more friends? <a href="$1">Invite them</a>',
-	'ur-add-friend'                              => 'Add as friend',
-	'ur-add-foe'                                 => 'Add as foe',
-	'ur-add-no-user'                             => 'No user selected.
+	'ur-add-friends' => ' Want more friends? <a href="$1">Invite them</a>',
+	'ur-add-friend' => 'Add as friend',
+	'ur-add-foe' => 'Add as foe',
+	'ur-add-no-user' => 'No user selected.
 Please request friends/foes through the correct link.',
-	'ur-add-personal-message'                    => 'Add a personal message',
+	'ur-add-personal-message' => 'Add a personal message',
 	'ur-remove-relationship-friend' => 'Remove as friend',
 	'ur-remove-relationship-foe' => 'Remove as foe',
-	'ur-give-gift'                               => 'Give a gift',
-	'ur-previous'                                => 'prev',
-	'ur-next'                                    => 'next',
+	'ur-give-gift' => 'Give a gift',
+	'ur-previous' => 'prev',
+	'ur-next' => 'next',
 	'ur-remove-relationship-title-foe' => 'Do you want to remove $1 as your foe?',
 	'ur-remove-relationship-title-confirm-foe' => 'You have removed $1 as your foe',
 	'ur-remove-relationship-title-friend' => 'Do you want to remove $1 as your friend?',
@@ -43,26 +43,26 @@ Please request friends/foes through the correct link.',
 	'ur-remove-relationship-message-confirm-foe' => 'You have successfully removed $1 as your foe.',
 	'ur-remove-relationship-message-friend' => 'You have requested to remove $1 as your friend, press "$2" to confirm.',
 	'ur-remove-relationship-message-confirm-friend' => 'You have successfully removed $1 as your friend.',
-	'ur-remove-error-message-no-relationship'    => 'You do not have a relationship with $1.',
-	'ur-remove-error-message-remove-yourself'    => 'You cannot remove yourself.',
-	'ur-remove-error-message-pending-request'    => 'You have a pending $1 request with $2.',
+	'ur-remove-error-message-no-relationship' => 'You do not have a relationship with $1.',
+	'ur-remove-error-message-remove-yourself' => 'You cannot remove yourself.',
+	'ur-remove-error-message-pending-request' => 'You have a pending $1 request with $2.',
 	'ur-remove-error-message-pending-foe-request' => 'You have a pending foe request with $1.',
 	'ur-remove-error-message-pending-friend-request' => 'You have a pending friend request with $1.',
-	'ur-remove-error-not-loggedin'               => 'You have to be logged in to remove a $1.',
+	'ur-remove-error-not-loggedin' => 'You have to be logged in to remove a $1.',
 	'ur-remove-error-not-loggedin-foe' => 'You have to be logged in to remove a foe.',
 	'ur-remove-error-not-loggedin-friend' => 'You have to be logged in to remove a friend.',
-	'ur-remove'                                  => 'Remove',
-	'ur-cancel'                                  => 'Cancel',
-	'ur-login'                                   => 'Login',
+	'ur-remove' => 'Remove',
+	'ur-cancel' => 'Cancel',
+	'ur-login' => 'Login',
 	'ur-add-title-foe' => 'Do you want to add $1 as your foe?',
 	'ur-add-title-friend' => 'Do you want to add $1 as your friend?',
 	'ur-add-message-foe' => 'You are about to add $1 as your foe.
 We will notify $1 to confirm your grudge.',
 	'ur-add-message-friend' => 'You are about to add $1 as your friend.
 We will notify $1 to confirm your friendship.',
-	'ur-friendship'                              => 'friendship',
-	'ur-grudge'                                  => 'grudge',
-	'ur-add-button'                              => "Add as $1",
+	'ur-friendship' => 'friendship',
+	'ur-grudge' => 'grudge',
+	'ur-add-button' => "Add as $1",
 	'ur-add-button-foe' => 'Add as foe',
 	'ur-add-button-friend' => 'Add as friend',
 	'ur-add-sent-title-foe' => 'We have sent your foe request to $1!',
@@ -71,9 +71,9 @@ We will notify $1 to confirm your friendship.',
 If $1 confirms your request, you will receive a follow-up e-mail',
 	'ur-add-sent-message-friend' => 'Your friend request has been sent to $1 for confirmation.
 If $1 confirms your request, you will receive a follow-up e-mail',
-	'ur-add-error-message-no-user'               => 'The user you are trying to add does not exist.',
-	'ur-add-error-message-blocked'               => 'You are currently blocked and cannot add friends or foes.',
-	'ur-add-error-message-yourself'              => 'You cannot add yourself as a friend or foe.',
+	'ur-add-error-message-no-user' => 'The user you are trying to add does not exist.',
+	'ur-add-error-message-blocked' => 'You are currently blocked and cannot add friends or foes.',
+	'ur-add-error-message-yourself' => 'You cannot add yourself as a friend or foe.',
 	'ur-add-error-message-existing-relationship' => 'You are already $1 with $2.',
 	'ur-add-error-message-existing-relationship-foe' => 'You are already foes with $1.',
 	'ur-add-error-message-existing-relationship-friend' => 'You are already friends with $1.',
@@ -82,24 +82,24 @@ If $1 confirms your request, you will receive a follow-up e-mail',
 We will notify you when $1 confirms your request.',
 	'ur-add-error-message-pending-foe-request' => 'You have a pending foe request with $1.
 We will notify you when $1 confirms your request.',
-	'ur-add-error-message-not-loggedin'          => 'You must be logged in to add a $1',
+	'ur-add-error-message-not-loggedin' => 'You must be logged in to add a $1',
 	'ur-add-error-message-not-loggedin-foe' => 'You must be logged in to add a foe',
 	'ur-add-error-message-not-loggedin-friend' => 'You must be logged in to add a friend',
-	'ur-requests-title'                          => 'Relationship requests',
+	'ur-requests-title' => 'Relationship requests',
 	'ur-requests-message-foe' => '<a href="$1">$2</a> wants to be your foe.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> wants to be your friend.',
-	'ur-accept'                                  => 'Accept',
-	'ur-reject'                                  => 'Reject',
-	'ur-no-requests-message'                     => 'You have no friend or foe requests.
+	'ur-accept' => 'Accept',
+	'ur-reject' => 'Reject',
+	'ur-no-requests-message' => 'You have no friend or foe requests.
 If you want more friends, <a href="$1">invite them!</a>',
 	'ur-requests-added-message-foe' => 'You have added $1 as your foe.',
 	'ur-requests-added-message-friend' => 'You have added $1 as your friend.',
 	'ur-requests-reject-message-friend' => 'You have rejected $1 as your friend.',
 	'ur-requests-reject-message-foe' => 'You have rejected $1 as your foe.',
-	'ur-title-foe'                               => "$1's foe list",
-	'ur-title-friend'                            => "$1's friend list",
-	'friend_request_subject'                     => '$1 has added you as a friend on {{SITENAME}}!',
-	'friend_request_body'                        => 'Hi $1:
+	'ur-title-foe' => "$1's foe list",
+	'ur-title-friend' => "$1's friend list",
+	'friend_request_subject' => '$1 has added you as a friend on {{SITENAME}}!',
+	'friend_request_body' => 'Hi $1:
 
 $2 has added you as a friend on {{SITENAME}}.  We want to make sure that you two are actually friends.
 
@@ -114,8 +114,8 @@ Hey, want to stop getting e-mails from us?
 
 Click $4
 and change your settings to disable e-mail notifications.',
-	'foe_request_subject'                        => 'It\'s war! $1 has added you to as a foe on {{SITENAME}}!',
-	'foe_request_body'                           => 'Hi $1:
+	'foe_request_subject' => 'It\'s war! $1 has added you to as a foe on {{SITENAME}}!',
+	'foe_request_body' => 'Hi $1:
 
 $2 just listed you as a foe on {{SITENAME}}.  We want to make sure that you two are actually mortal enemies or at least having an argument.
 
@@ -132,8 +132,8 @@ Hey, want to stop getting e-mails from us?
 Click $4
 and change your settings to disable e-mail notifications.',
 
-	'friend_accept_subject'                      => '$1 has accepted your friend request on {{SITENAME}}!',
-	'friend_accept_body'                         => 'Hi $1:
+	'friend_accept_subject' => '$1 has accepted your friend request on {{SITENAME}}!',
+	'friend_accept_body' => 'Hi $1:
 
 $2 has accepted your friend request on {{SITENAME}}!
 
@@ -147,8 +147,8 @@ Hey, want to stop getting e-mails from us?
 
 Click $4
 and change your settings to disable e-mail notifications.',
-	'foe_accept_subject'                         => 'It\'s on! $1 has accepted your foe request on {{SITENAME}}!',
-	'foe_accept_body'                            => 'Hi $1:
+	'foe_accept_subject' => 'It\'s on! $1 has accepted your foe request on {{SITENAME}}!',
+	'foe_accept_body' => 'Hi $1:
 
 $2 has accepted your foe request on {{SITENAME}}!
 
@@ -162,8 +162,8 @@ Hey, want to stop getting e-mails from us?
 
 Click $4
 and change your settings to disable e-mail notifications.',
-	'friend_removed_subject'                     => 'Oh no! $1 has removed you as a friend on {{SITENAME}}!',
-	'friend_removed_body'                        => 'Hi $1:
+	'friend_removed_subject' => 'Oh no! $1 has removed you as a friend on {{SITENAME}}!',
+	'friend_removed_body' => 'Hi $1:
 
 $2 has removed you as a friend on {{SITENAME}}!
 
@@ -175,8 +175,8 @@ Hey, want to stop getting e-mails from us?
 
 Click $4
 and change your settings to disable e-mail notifications.',
-	'foe_removed_subject'                        => 'Woohoo! $1 has removed you as a foe on {{SITENAME}}!',
-	'foe_removed_body'                           => 'Hi $1:
+	'foe_removed_subject' => 'Woohoo! $1 has removed you as a foe on {{SITENAME}}!',
+	'foe_removed_body' => 'Hi $1:
 
 	$2 has removed you as a foe on {{SITENAME}}!
 
@@ -190,21 +190,6 @@ Hey, want to stop getting e-mails from us?
 
 Click $4
 and change your settings to disable e-mail notifications.',
-);
-
-/** Message documentation (Message documentation)
- * @author Jon Harald Søby
- * @author Siebrand
- */
-$messages['qqq'] = array(
-	'ur-main-page' => '{{Identical|Main page}}',
-	'ur-add-friend' => '{{Identical|Add as friend}}',
-	'ur-add-foe' => '{{Identical|Add as foe}}',
-	'ur-previous' => '{{Identical|Prev}}',
-	'ur-next' => '{{Identical|Next}}',
-	'ur-remove' => '{{Identical|Remove}}',
-	'ur-cancel' => '{{Identical|Cancel}}',
-	'ur-login' => '{{Identical|Log in}}',
 );
 
 /** Faeag Rotuma (Faeag Rotuma)

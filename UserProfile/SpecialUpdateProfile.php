@@ -16,16 +16,15 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	function initProfile(){
-		global $wgUser, $wgDBprefix;
+		global $wgUser;
 		$dbr = wfGetDB( DB_MASTER );
 		$s = $dbr->selectRow( 'user_profile', array( 'up_user_id' ), array( 'up_user_id' => $wgUser->getID() ), __METHOD__ );
 		if ( $s === false ) {
-			$fname = $wgDBprefix.'user_profile::addToDatabase';
 			$dbw = wfGetDB( DB_MASTER );
 			$dbw->insert( 'user_profile',
 				array(
 					'up_user_id' => $wgUser->getID()
-				), $fname
+				), __METHOD__
 			);
 		}
 	}
@@ -38,7 +37,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		if( !$wgUser->isLoggedIn() ) {
 			$wgOut->setPagetitle( wfMsgForContent( 'user-profile-update-notloggedin-title' ) );
-			$wgOut->addHTML(  wfMsgForContent(  'user-profile-update-notloggedin-text',  Title::makeTitle(NS_SPECIAL, "Login" . $which)->escapeFullUrl(), Title::makeTitle(NS_SPECIAL, "UserRegister" . $which)->escapeFullUrl() ) );
+			$wgOut->addHTML( wfMsgForContent(  'user-profile-update-notloggedin-text',  Title::makeTitle(NS_SPECIAL, "UserLogin" . $which)->escapeFullUrl(), Title::makeTitle(NS_SPECIAL, "UserRegister" . $which)->escapeFullUrl() ) );
 			return;
 		}
 
@@ -150,9 +149,9 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		if($wgSitename=="ArmchairGM"){
 			$dbr = wfGetDB( DB_MASTER );
 			if($wgRequest->getVal("weeklyemail")==1){
-				$s = $dbr->selectRow( '`user_mailing_list`', array( 'um_user_id' ), array( 'um_user_id' => $wgUser->getID()  ), __METHOD__ );
+				$s = $dbr->selectRow( 'user_mailing_list', array( 'um_user_id' ), array( 'um_user_id' => $wgUser->getID()  ), __METHOD__ );
 				if ( $s === false ){
-					$dbr->insert( '`user_mailing_list`',
+					$dbr->insert( 'user_mailing_list',
 					array(
 						'um_user_id' => $wgUser->getID(),
 						'um_user_name' => $wgUser->getName(),
@@ -160,7 +159,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 					);
 				}
 			} else {
-				$sql = "DELETE from user_mailing_list where um_user_id = {$wgUser->getID()}";
+				$sql = "DELETE FROM user_mailing_list WHERE um_user_id = {$wgUser->getID()}";
 				$res = $dbr->query($sql);
 			}
 		}

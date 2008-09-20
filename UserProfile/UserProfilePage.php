@@ -64,6 +64,8 @@ class UserProfilePage extends Article {
 
 		$wgOut->addHTML( $this->getRelationships($this->user_name, 1) );
 		$wgOut->addHTML( $this->getRelationships($this->user_name, 2) );
+		$wgOut->addHTML( $this->getGifts($this->user_name) );
+		$wgOut->addHTML( $this->getAwards($this->user_name) );
 		$wgOut->addHTML( $this->getCustomInfo($this->user_name) );
 		$wgOut->addHTML( $this->getInterests($this->user_name) );
 		$wgOut->addHTML( $this->getUserStats($this->user_id, $this->user_name) );
@@ -97,6 +99,8 @@ class UserProfilePage extends Article {
 	function getUserStatsRow($label, $value) {
 		global $wgUser, $wgTitle, $wgOut;
 
+		$output = ""; // Prevent E_NOTICE
+
 		if ($value != 0) {
 			$output = "<div>
 					<b>{$label}</b>
@@ -114,12 +118,14 @@ class UserProfilePage extends Article {
 			return "";
 		}
 
+		$output = ""; // Prevent E_NOTICE
+
 		$stats = new UserStats($user_id, $user_name);
 		$stats_data = $stats->getUserStats();
 
 		$total_value = $stats_data["edits"] . $stats_data["votes"] . $stats_data["comments"] . $stats_data["recruits"] . $stats_data["poll_votes"] . $stats_data["picture_game_votes"] . $stats_data["quiz_points"];
 
-		if ($total_value!=0) {
+		if ($total_value != 0) {
 			$output .= "<div class=\"user-section-heading\">
 				<div class=\"user-section-title\">
 					".wfMsg('user-stats-title')."
@@ -470,6 +476,7 @@ class UserProfilePage extends Article {
 			if( $wgUserBoard ){
 				$output .= "<a href=\"".$send_message->escapeFullURL('user='.$wgUser->getName().'&conv='.$user_safe)."\" rel=\"nofollow\">".wfMsg('user-send-message')."</a> | ";
 			}
+			$output .= "<a href=\"".$give_gift->escapeFullURL('user='.$user_safe)."\" rel=\"nofollow\">".wfMsg('user-send-gift')."</a> |";
 		}
 
 		$output .= "<a href=\"".$contributions->escapeFullURL()."/{$user_safe}\" rel=\"nofollow\">".wfMsg('user-contributions')."</a> ";
@@ -528,6 +535,7 @@ class UserProfilePage extends Article {
 			}
 		}
 
+		$output = ""; // Prevent E_NOTICE
 
 		$count = 4;
 		$rel = new UserRelationship($user_name);
@@ -601,6 +609,164 @@ class UserProfilePage extends Article {
 		return $output;
 	}
 
+	function getGifts($user_name){
+		global $IP, $wgUser, $wgTitle, $wgMemc, $wgUserProfileDisplay, $wgUploadPath;
+
+		//If not enabled in site settings, don't display
+		if($wgUserProfileDisplay['gifts'] == false){
+			return "";
+		}
+
+		$output = "";
+
+		//USER TO USER GIFTS
+		$g = new UserGifts($user_name);
+		$user_safe = urlencode($user_name);
+
+		//try cache
+		$key = wfMemcKey( 'user', 'profile', 'gifts', "{$g->user_id}" );
+		$data = $wgMemc->get( $key );
+
+		if( !$data ){
+			wfDebug( "Got profile gifts for user {$user_name} from DB\n" );
+			$gifts = $g->getUserGiftList(0, 4);
+			$wgMemc->set( $key, $gifts, 60 * 60 * 4 );
+		} else {
+			wfDebug( "Got profile gifts for user {$user_name} from cache\n" );
+			$gifts = $data;
+		}
+
+		$gift_count = $g->getGiftCountByUsername($user_name);
+		$gift_link = Title::makeTitle(NS_SPECIAL, 'ViewGifts');
+		$per_row = 4;
+	
+		if ($gifts) {
+
+			$output .= "<div class=\"user-section-heading\">
+				<div class=\"user-section-title\">
+					".wfMsg('user-gifts-title')."
+				</div>
+				<div class=\"user-section-actions\">
+					<div class=\"action-right\">";
+						if($gift_count>4)$output .= "<a href=\"".$gift_link->escapeFullURL('user='.$user_safe)."\" rel=\"nofollow\">".wfMsg('user-view-all')."</a>";
+					$output .= "</div>
+					<div class=\"action-left\">";
+						if($gift_count>4) {
+							$output .= "4 ".wfMsg('user-count-separator')." {$gift_count}";
+						} else {
+							$output .= "{$gift_count} ".wfMsg('user-count-separator')." {$gift_count}";
+						}
+					$output .= "</div>
+					<div class=\"cleared\"></div>
+				</div>
+			</div>
+			<div class=\"cleared\"></div>
+			<div class=\"user-gift-container\">";
+
+				$x = 1;
+
+				foreach ($gifts as $gift) {
+
+					if($gift["status"] == 1 && $user_name==$wgUser->getName() ){
+						$g->clearUserGiftStatus($gift["id"]);
+						$wgMemc->delete( $key );
+						$g->decNewGiftCount( $wgUser->getID() );
+					}
+
+					$user = Title::makeTitle( NS_USER, $gift["user_name_from"] );
+					$gift_image = "<img src=\"{$wgUploadPath}/awards/" . Gifts::getGiftImage($gift["gift_id"], "ml") . "\" border=\"0\" alt=\"\" />";
+					$gift_link = $user = Title::makeTitle( NS_SPECIAL, 'ViewGift' );
+					$output .= "<a href=\"".$gift_link->escapeFullURL('gift_id='.$gift['id'])."\" ".(($gift["status"] == 1)?"class=\"user-page-new\"":"")." rel=\"nofollow\">{$gift_image}</a>";
+					if($x==count($gifts) || $x!=1 && $x%$per_row ==0)$output .= "<div class=\"cleared\"></div>";
+					$x++;
+
+				}
+
+			$output .= "</div>";
+		} 
+
+		return $output;
+	}
+
+	function getAwards($user_name){
+		global $IP, $wgUser, $wgTitle, $wgMemc, $wgUserProfileDisplay, $wgUploadPath;
+
+		//If not enabled in site settings, don't display
+		if($wgUserProfileDisplay['awards'] == false){
+			return "";
+		}
+ 
+		$output = "";
+
+		//SYSTEM GIFTS
+		$sg = new UserSystemGifts($user_name);
+
+		//try cache
+		$sg_key = wfMemcKey( 'user', 'profile', 'system_gifts', "{$sg->user_id}" );
+		$data = $wgMemc->get( $sg_key );
+		if( !$data ){
+			wfDebug( "Got profile awards for user {$user_name} from DB\n" );
+			$system_gifts = $sg->getUserGiftList(0, 4);
+			$wgMemc->set( $sg_key, $system_gifts, 60 * 60 * 4 );
+		} else {
+			wfDebug( "Got profile awards for user {$user_name} from cache\n" );
+			$system_gifts = $data;
+		}
+
+		$system_gift_count = $sg->getGiftCountByUsername($user_name);
+		$system_gift_link = Title::makeTitle(NS_SPECIAL, 'ViewSystemGifts');
+		$per_row = 4;
+	
+		if ($system_gifts) {
+
+			$x = 1;
+
+			$output .= "<div class=\"user-section-heading\">
+				<div class=\"user-section-title\">
+					".wfMsg('user-awards-title')."
+				</div>
+				<div class=\"user-section-actions\">
+					<div class=\"action-right\">";
+						if ($system_gift_count>4)$output .= "<a href=\"".$system_gift_link->escapeFullURL('user='.$user_name)."\" rel=\"nofollow\">".wfMsg('user-view-all')."</a>";
+					$output .= "</div>
+					<div class=\"action-left\">";
+						if($system_gift_count>4) {
+							$output .= "4 ".wfMsg('user-count-separator')." {$system_gift_count}";
+						} else {
+							$output .= "{$system_gift_count}&nbsp;".wfMsg('user-count-separator')."&nbsp;{$system_gift_count}";
+						}
+					$output .= "</div>
+					<div class=\"cleared\"></div>
+				</div>
+			</div>
+			<div class=\"cleared\"></div>
+			<div class=\"user-gift-container\">";
+
+				foreach ($system_gifts as $gift) {
+
+					if($gift["status"] == 1 && $user_name==$wgUser->getName() ){
+						$sg->clearUserGiftStatus($gift["id"]);
+						$wgMemc->delete( $sg_key );
+						$sg->decNewSystemGiftCount( $wgUser->getID() );
+					}
+
+					$gift_image = "<img src=\"{$wgUploadPath}/awards/" . SystemGifts::getGiftImage($gift["gift_id"],"ml") . "\" border=\"0\" alt=\"\" />";
+					$gift_link = $user =  Title::makeTitle( NS_SPECIAL, 'ViewSystemGift' );
+
+					$output .= "<a href=\"".$gift_link->escapeFullURL('gift_id='.$gift["id"])."\" ".(($gift["status"]==1)?"class=\"user-page-new\"":"")." rel=\"nofollow\">
+						{$gift_image}
+					</a>";
+
+					if($x==count($system_gifts) || $x!=1 && $x%$per_row ==0)$output .= "<div class=\"cleared\"></div>";
+					$x++;	
+				}
+
+			$output .= "</div>";
+		}
+
+		return $output;
+	}
+
 	function getUserBoard($user_id, $user_name){
 		global $IP, $wgMemc, $wgUser, $wgTitle, $wgOut, $wgUserProfileDisplay, $wgUserProfileScripts;
 		if($user_id == 0)return "";
@@ -608,6 +774,8 @@ class UserProfilePage extends Article {
 		if ($wgUserProfileDisplay['board'] == false) {
 			return "";
 		}
+
+		$output = ""; // Prevent E_NOTICE
 
 		$wgOut->addScript("<script type=\"text/javascript\" src=\"{$wgUserProfileScripts}/UserProfilePage.js\"></script>\n");
 
@@ -619,7 +787,7 @@ class UserProfilePage extends Article {
 		$stats_data = $stats->getUserStats();
 		$total = $stats_data["user_board"];
 
-		if($wgUser->getName() == $user_name)$total=$total+$stats_data["user_board_priv"];
+		if($wgUser->getName() == $user_name)$total = $total+$stats_data["user_board_priv"];
 
 		$output .= "<div class=\"user-section-heading\">
 			<div class=\"user-section-title\">

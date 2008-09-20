@@ -7,7 +7,7 @@ class TopUsersPoints extends SpecialPage {
 		wfLoadExtensionMessages('SocialProfileUserStats');
 	}
 
-	function execute(){
+	function execute( $par ){
 		global $IP, $wgUser, $wgOut, $wgStyleVersion, $wgScriptPath, $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgUserLevels, $wgUploadPath;
 
 		//read in localisation messages
@@ -41,17 +41,17 @@ class TopUsersPoints extends SpecialPage {
 			);
 			while( $row = $dbr->fetchObject($res) ){
 				$user_list[] = array(
-						"user_id" => $row->stats_user_id,
-						"user_name" => $row->stats_user_name,
-						"points" => $row->stats_total_points
-						);
+					"user_id" => $row->stats_user_id,
+					"user_name" => $row->stats_user_name,
+					"points" => $row->stats_total_points
+				);
 			}
 			$wgMemc->set( $key, $user_list, 60 * 5);
 		}
 
 		$recent_title = Title::makeTitle( NS_SPECIAL, 'TopUsersRecent' );
 
-		$out .= "<div class=\"top-fan-nav\">
+		$out = "<div class=\"top-fan-nav\">
 			<h1>" . wfMsg('top-fans-by-points-nav-header') . "</h1>
 			<p><b>" . wfMsg('top-fans-total-points-link') . "</b></p>";
 
@@ -69,7 +69,7 @@ class TopUsersPoints extends SpecialPage {
 			$out .= "<h1 style=\"margin-top:15px !important;\">" . wfMsg('top-fans-by-category-nav-header') . "</h1>";
 		}
 
-		$by_category_title = Title::makeTitle( NS_SPECIAL, 'TopFansByStatistic');
+		$by_category_title = Title::makeTitle( NS_SPECIAL, 'TopFansByStatistic' );
 
 		$lines = explode( "\n", wfMsgForContent( 'topfans-by-category' ) );
 		foreach ($lines as $line) {
@@ -91,13 +91,13 @@ class TopUsersPoints extends SpecialPage {
 		foreach( $user_list as $user ){
 
 			$user_title = Title::makeTitle( NS_USER, $user["user_name"] );
-			$avatar = new wAvatar( $user["user_id"], "m");
+			$avatar = new wAvatar( $user["user_id"], "m" );
 			$CommentIcon = $avatar->getAvatarImage();
 
-			//Break list into sections based on User Level if its defined for this site
+			//Break list into sections based on User Level if it's defined for this site
 			if( is_array( $wgUserLevels ) ){
 				$user_level = new UserLevel( number_format( $user["points"] ) );
-				if( $user_level->getLevelName()!=$last_level ){
+				if( $user_level->getLevelName() != $last_level ){
 				    $out .= "<div class=\"top-fan-row\"><div class=\"top-fan-level\">
 						{$user_level->getLevelName()}
 						</div></div>";

@@ -11,7 +11,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 
 		$wgOut->setPageTitle('Update Edit Counts');
 
-		if( !in_array('staff', ($wgUser->getGroups()) ) ){
+		if( !in_array( 'staff', ($wgUser->getGroups()) ) ){
 			$wgOut->errorpage( 'error', 'badaccess' );
 			return false;
 		}
@@ -39,7 +39,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 				'stats_user_id' => $row->rev_user,
 				'stats_user_name' => $row->rev_user_text,
 				'stats_total_points' => 1000
-				), $fname
+				), __METHOD__
 			);
 		}
 		$wgOut->addHTML("<p>Updating {$row->rev_user_text} with {$edit_count} edits</p>");
@@ -57,7 +57,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 		}
 	}
 
-	function execute(){
+	function execute( $par ){
 		global $wgUser, $wgOut, $wgDBprefix;
 		$dbr = wfGetDB( DB_MASTER );
 		$this->updateMainEditsCount();
@@ -68,7 +68,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 		$sql = "SELECT stats_user_id,stats_user_name, stats_total_points FROM ".$wgDBprefix."user_stats ORDER BY stats_user_name";
 		$res = $dbr->query($sql);
 		$out = "";
-		while ($row = $dbr->fetchObject( $res ) ) {
+		while ( $row = $dbr->fetchObject( $res ) ) {
 			$x++;
 			$stats = new UserStatsTrack($row->stats_user_id, $row->stats_user_name);
 			$stats->updateTotalPoints();

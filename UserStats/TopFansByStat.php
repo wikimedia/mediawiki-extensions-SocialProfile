@@ -6,7 +6,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 		UnlistedSpecialPage::UnlistedSpecialPage('TopFansByStatistic');
 	}
 
-	function execute(){
+	function execute( $par ){
 		global $IP, $wgRequest, $wgUser, $wgOut, $wgStyleVersion, $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly,
 			$wgUserLevels, $wgOut, $wgUploadPath, $wgScriptPath;
 

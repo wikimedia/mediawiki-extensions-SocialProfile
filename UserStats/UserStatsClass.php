@@ -71,7 +71,7 @@ class UserStatsTrack {
 		global $wgUserStatsPointValues;
 
 		$this->user_id = $user_id;
-		if(!$user_name){
+		if( !$user_name ){
 			$user = User::newFromId($this->user_id);
 			$user->loadFromDatabase();
 			$user_name = $user->getName();
@@ -86,7 +86,7 @@ class UserStatsTrack {
 		$dbr = wfGetDB( DB_SLAVE );
 		$s = $dbr->selectRow( 'user_stats', array( 'stats_user_id' ), array('stats_user_id' => $this->user_id ), __METHOD__ );
 
-		if ( $s === false ) {
+		if( $s === false ) {
 			$this->addStatRecord();
 		}
 	}
@@ -114,7 +114,7 @@ class UserStatsTrack {
 
 	function incStatField( $field, $val = 1 ){
 		global $wgUser, $IP, $wgDBprefix, $wgMemc, $wgSitename, $wgSystemGifts, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgUserStatsPointValues;
-		if( !$wgUser->isBot() && !$wgUser->isAnon() && $this->stats_fields[$field]) {
+		if( !$wgUser->isBot() && !$wgUser->isAnon() && $this->stats_fields[$field] ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$dbw->update( 'user_stats',
 				array( $this->stats_fields[$field]."=".$this->stats_fields[$field]."+{$val}" ),
@@ -125,12 +125,12 @@ class UserStatsTrack {
 			$this->clearCache();
 
 			//update weekly/monthly points
-			if($this->point_values[$field]){
+			if( $this->point_values[$field] ){
 				if($wgUserStatsTrackWeekly)$this->updateWeeklyPoints($this->point_values[$field]);
 				if($wgUserStatsTrackMonthly)$this->updateMonthlyPoints($this->point_values[$field]);
 			}
 
-			if($wgSystemGifts){
+			if( $wgSystemGifts ){
 				$s = $dbw->selectRow( 'user_stats', array($this->stats_fields[$field]), array( 'stats_user_id' => $this->user_id ), __METHOD__ );
 				$stat_field = $this->stats_fields[$field];
 				$field_count = $s->$stat_field;
@@ -138,13 +138,13 @@ class UserStatsTrack {
 				$key = wfMemcKey( 'system_gift', 'id', $field."-".$field_count );
 				$data = $wgMemc->get( $key );
 
-				if($data){
+				if( $data ){
 					wfDebug( "Got system gift id from cache\n" );
 					$system_gift_id = $data;
 				} else {
 					$g = new SystemGifts();
 					$system_gift_id = $g->doesGiftExistForThreshold($field, $field_count);
-					if($system_gift_id){
+					if( $system_gift_id ){
 						$wgMemc->set( $key, $system_gift_id, 60 * 30 );
 					}
 				}
@@ -159,14 +159,14 @@ class UserStatsTrack {
 
 	function decStatField($field, $val = 1){
 		global $wgUser, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
-		if(  !$wgUser->isBot() && !$wgUser->isAnon() && $this->stats_fields[$field]) {
+		if( !$wgUser->isBot() && !$wgUser->isAnon() && $this->stats_fields[$field] ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$dbw->update( 'user_stats',
 				array( $this->stats_fields[$field]."=".$this->stats_fields[$field]."-{$val}" ),
 				array( 'stats_user_id' => $this->user_id ),
 				__METHOD__ );
 
-			if($this->point_values[$field]){
+			if( $this->point_values[$field] ){
 				$this->updateTotalPoints();
 				if($wgUserStatsTrackWeekly)$this->updateWeeklyPoints(0-($this->point_values[$field]));
 				if($wgUserStatsTrackMonthly)$this->updateMonthlyPoints(0-($this->point_values[$field]));
@@ -241,7 +241,7 @@ class UserStatsTrack {
 		if( $this->user_id != 0 ) {
 			$dbr = wfGetDB( DB_MASTER );
 			$sql = "UPDATE ".$wgDBprefix."user_stats SET ";
-			if($vote_type==1){
+			if( $vote_type == 1 ){
 				$sql  .= 'stats_comment_score_positive_rec=';
 			} else {
 				$sql  .= 'stats_comment_score_negative_rec=';
@@ -257,8 +257,8 @@ class UserStatsTrack {
 
 	function updateCreatedOpinionsCount(){
 		global $wgUser, $wgOut, $wgDBprefix;
-		if( !$wgUser->isAnon() && $this->user_id) {
-			$ctg = "Opinions by User " .  ($this->user_name);
+		if( !$wgUser->isAnon() && $this->user_id ) {
+			$ctg = "Opinions by User " . ($this->user_name);
 			$parser = new Parser();
 			$CtgTitle = Title::newFromText( $parser->transformMsg(trim($ctg), $wgOut->parserOptions() ) );
 			$CtgTitle = $CtgTitle->getDbKey();
@@ -294,7 +294,7 @@ class UserStatsTrack {
 		global $wgUser, $wgDBprefix;
 		if( !$wgUser->isAnon() ) {
 			$dbr = wfGetDB( DB_MASTER );
-			if($rel_type == 1){
+			if( $rel_type == 1 ){
 				$col = "stats_friends_count";
 			} else {
 				$col = "stats_foe_count";
@@ -357,7 +357,7 @@ class UserStatsTrack {
 		$res = $dbr->query($sql);
 		$row = $dbr->fetchObject( $res );
 
-		if(!$row){
+		if( !$row ){
 			$this->addWeekly();
 		}
 		$dbr->update( 'user_points_weekly',
@@ -382,7 +382,7 @@ class UserStatsTrack {
 		$sql = "SELECT up_user_id FROM ".$wgDBprefix."user_points_monthly WHERE up_user_id = {$this->user_id}";
 		$res = $dbr->query($sql);
 		$row = $dbr->fetchObject( $res );
-		if(!$row){
+		if( !$row ){
 			$this->addMonthly();
 		}
 
@@ -426,13 +426,13 @@ class UserStatsTrack {
 		if($row){
 			//recaculate point total
 			$new_total_points = 1000;
-			foreach($this->point_values as $point_field => $point_value){
-				if($this->stats_fields[$point_field]){
+			foreach( $this->point_values as $point_field => $point_value ){
+				if( $this->stats_fields[$point_field] ){
 					$field = $this->stats_fields[$point_field];
 					$new_total_points += $point_value * $row->$field;
 				}
 			}
-			if($wgEnableFacebook){
+			if( $wgEnableFacebook ){
 				$s = $dbr->selectRow( 'fb_link_view_opinions', array( 'fb_user_id','fb_user_session_key' ), array( 'fb_user_id_wikia' => $this->user_id ), __METHOD__ );
 				if ( $s !== false ) {
 					$new_total_points += $this->point_values["facebook"];
@@ -509,7 +509,7 @@ class UserStats {
 		global $wgMemc;
 		$key = wfMemcKey( 'user', 'stats', $this->user_id );
 		$data = $wgMemc->get( $key );
-		if ( $data ) {
+		if( $data ) {
 			wfDebug( "Got user stats  for {$this->user_name} from cache\n" );
 			return $data;
 		}
@@ -565,7 +565,7 @@ class UserStats {
 		global $wgDBprefix;
 		$dbr = wfGetDB( DB_MASTER );
 
-		if($limit>0){
+		if( $limit > 0 ){
 			$limitvalue = 0;
 			if($page)$limitvalue = $page * $limit - ($limit);
 			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
@@ -579,7 +579,7 @@ class UserStats {
 
 		$list = array();
 		$res = $dbr->query($sql);
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		while( $row = $dbr->fetchObject( $res ) ) {
 			$list[] = array(
 				"user_id" => $row->stats_user_id,
 				"user_name" => $row->stats_user_name,
@@ -592,12 +592,12 @@ class UserStats {
 	static function getTopFansListPeriod( $limit = 10, $period = "weekly"){
 		$dbr = wfGetDB( DB_SLAVE );
 
-		if($limit>0){
+		if( $limit > 0 ){
 			$limitvalue = 0;
 			if($page)$limitvalue = $page * $limit - ($limit);
 			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
 		}
-		if($period=="monthly"){
+		if( $period == "monthly" ){
 			$points_table = "user_points_monthly";
 		} else {
 			$points_table = "user_points_weekly";
@@ -610,7 +610,7 @@ class UserStats {
 
 		$list = array();
 		$res = $dbr->query($sql);
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		while( $row = $dbr->fetchObject( $res ) ) {
 			$list[] = array(
 				"user_id" => $row->up_user_id,
 				"user_name" => $row->up_user_name,
@@ -624,13 +624,13 @@ class UserStats {
 		global $wgDBprefix;
 		$dbr = wfGetDB( DB_SLAVE );
 
-		if($limit>0){
+		if( $limit > 0 ){
 			$limitvalue = 0;
 			if($page)$limitvalue = $page * $limit - ($limit);
 			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
 		}
 
-		if($condition == 1){
+		if( $condition == 1 ){
 			$op = ">";
 			$sort = "ASC";
 		} else {
@@ -646,12 +646,14 @@ class UserStats {
 
 		$list = array();
 		$res = $dbr->query($sql);
-		while ($row = $dbr->fetchObject( $res ) ) {
+		while( $row = $dbr->fetchObject( $res ) ) {
 			$list[] = array(
-				"user_id"=>$row->stats_user_id,"user_name"=>$row->stats_user_name,
-				"points"=>$row->stats_total_points );
+				"user_id" => $row->stats_user_id,
+				"user_name" => $row->stats_user_name,
+				"points" => $row->stats_total_points
+			);
 		}
-		if($condition==1){
+		if( $condition == 1 ){
 			$list = array_reverse($list);
 		}
 		return $list;
@@ -671,8 +673,8 @@ class UserLevel {
 
 	private function setLevel(){
 		$this->level_number = 1;
-		foreach($this->levels as $level_name => $level_points_needed){
-			if($this->points >= $level_points_needed){
+		foreach( $this->levels as $level_name => $level_points_needed ){
+			if( $this->points >= $level_points_needed ){
 				$this->level_name = $level_name;
 				$this->level_number++;
 			} else {
@@ -702,7 +704,7 @@ class UserEmailTrack {
 	 */
 	/* private */ function __construct($user_id, $user_name) {
 		$this->user_id = $user_id;
-		if(!$user_name){
+		if( !$user_name ){
 			$user = User::newFromId($this->user_id);
 			$user->loadFromDatabase();
 			$user_name = $user->getName();
@@ -719,7 +721,7 @@ class UserEmailTrack {
 		6 = Invite to Rate - Manually Address enter
 	*/
 	public function track_email($type, $count, $page_title = ""){
-		if($this->user_id>0){
+		if( $this->user_id > 0 ){
 			$dbr = wfGetDB( DB_MASTER );
 			$dbr->insert( 'user_email_track',
 			array(
