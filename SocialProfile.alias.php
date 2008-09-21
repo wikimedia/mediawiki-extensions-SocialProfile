@@ -75,6 +75,25 @@ $aliases['lb'] = array(
 	'UploadAvatar' => array( 'Avatar eroplueden' ),
 );
 
+/** Nedersaksisch (Nedersaksisch) */
+$aliases['nds-nl'] = array(
+	'AddRelationship' => array( 'Relasie_toevoegen' ),
+	'PopulateUserProfiles' => array( 'Gebrukersprefielen_vullen' ),
+	'RemoveAvatar' => array( 'Avatar_vortdoon' ),
+	'RemoveRelationship' => array( 'Relasie_vortdoon' ),
+	'SendBoardBlast' => array( 'Multiberich_versturen' ),
+	'TopFansByStatistic' => array( 'Toplieste_fans_per_staotestieken' ),
+	'TopUsers' => array( 'Toplieste_gebrukers' ),
+	'TopUsersRecent' => array( 'Toplieste_leste_gebrukers' ),
+	'ToggleUserPage' => array( 'Gebrukerspagina_wisselen' ),
+	'UpdateEditCounts' => array( 'Bewarkingsteller_biewarken' ),
+	'UpdateProfile' => array( 'Prefiel_biewarken' ),
+	'UploadAvatar' => array( 'Avatar_toevoegen' ),
+	'UserBoard' => array( 'Gebrukersbord' ),
+	'ViewRelationshipRequests' => array( 'Relasieverzeuken_bekieken' ),
+	'ViewRelationships' => array( 'Relasies_bekieken' ),
+);
+
 /** Dutch (Nederlands) */
 $aliases['nl'] = array(
 	'AddRelationship' => array( 'RelatieToevoegen' ),
@@ -92,5 +111,12 @@ $aliases['nl'] = array(
 	'UserBoard' => array( 'Gebruikersboard' ),
 	'ViewRelationshipRequests' => array( 'RelatieverzoekenBekijken' ),
 	'ViewRelationships' => array( 'RelatiesBekijken' ),
+);
+
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬) */
+$aliases['no'] = array(
+	'RemoveAvatar' => array( 'Fjern profilbilde' ),
+	'UpdateProfile' => array( 'Oppdater profil' ),
+	'UploadAvatar' => array( 'Oppdater profilbilde' ),
 );
 

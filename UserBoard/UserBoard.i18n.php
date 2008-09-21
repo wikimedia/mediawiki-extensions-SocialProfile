@@ -676,7 +676,62 @@ $messages['hr'] = array(
  * @author McDutchie
  */
 $messages['ia'] = array(
+	'boardblastlogintitle' => 'Tu debe aperir un session pro poter inviar colpos de tabuliero',
+	'boardblastlogintext' => 'Tu debe identificar te pro poter inviar colpos de tabuliero.
+Clicca <a href="index.php?title=Special:UserLogin">hic pro aperir un session</a>.',
+	'messagesenttitle' => 'Messages inviate',
+	'boardblasttitle' => 'Inviar colpo de tabuliero',
+	'boardblaststep1' => 'Passo 1 - Scribe tu message',
+	'boardblastprivatenote' => 'Tote le messages essera inviate como messages private',
+	'boardblaststep2' => 'Passo 2 - Selige a qui tu vole inviar tu message',
+	'boardlinkselectall' => 'Seliger toto',
+	'boardlinkunselectall' => 'Disseliger toto',
+	'boardlinkselectfriends' => 'Seliger amicos',
+	'boardlinkunselectfriends' => 'Disseliger amicos',
+	'boardlinkselectfoes' => 'Seliger inimicos',
+	'boardlinkunselectfoes' => 'Disseliger inimicos',
+	'boardsendbutton' => 'Inviar colpo de tabuliero',
+	'boardnofriends' => 'Tu ha nulle amico a qui inviar un message!',
+	'messagesentsuccess' => 'Tu message ha essite inviate con successo',
+	'userboard' => 'Tabuliero de usator',
+	'userboard_board-to-board' => 'De tabuliero a tabuliero',
 	'userboard_delete' => 'Deler',
+	'userboard_noexist' => 'Le usator que tu vole vider non existe.',
+	'userboard_yourboard' => 'Tu tabuliero',
+	'userboard_owner' => 'Le tabuliero de $1',
+	'userboard_yourboardwith' => 'Tu tabuliero a tabuliero con $1',
+	'userboard_otherboardwith' => 'Le tabuliero a tabuliero de $1 con $2',
+	'userboard_backprofile' => 'Retornar al profilo de $1',
+	'userboard_backyourprofile' => 'Retornar a tu profilo',
+	'userboard_boardtoboard' => 'Tabuliero a tabuliero',
+	'userboard_confirmdelete' => 'Es tu secur que tu vole deler iste message?',
+	'userboard_sendmessage' => 'Inviar un message a $1',
+	'userboard_myboard' => 'Mi tabuliero',
+	'userboard_posted_ago' => 'inviate $1 retro',
+	'userboard_private' => 'private',
+	'userboard_public' => 'public',
+	'userboard_messagetype' => 'Typo de message',
+	'userboard_nextpage' => 'seq',
+	'userboard_prevpage' => 'prec',
+	'userboard_nomessages' => 'Nulle message.',
+	'userboard_sendbutton' => 'inviar',
+	'userboard_loggedout' => 'Tu debe <a href="$1">aperir un session</a> pro poter inviar messages a altere usatores.',
+	'userboard_showingmessages' => 'Presentation de $2-$3 de $1 {{PLURAL:$1|message|messages}}',
+	'message_received_subject' => '$1 scribeva in tu tabuliero in {{SITENAME}}',
+	'message_received_body' => 'Salute $1,
+
+$2 justo scribeva in tu tabuliero in {{SITENAME}}!
+
+Clicca infra pro visitar tu tabuliero!
+
+$3
+
+---
+
+Tu non vole reciper plus e-mail de nos?
+
+Clicca $4
+e disactiva in tu preferentias le notificationes per e-mail.',
 );
 
 /** Italian (Italiano)

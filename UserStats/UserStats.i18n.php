@@ -366,6 +366,55 @@ Faga clic $3
 e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
 );
 
+/** Interlingua (Interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'user-stats-alltime-title' => 'Le plus punctos de omne tempore',
+	'user-stats-weekly-title' => 'Le plus punctos de iste septimana',
+	'user-stats-monthly-title' => 'Le plus punctos de iste mense',
+	'topusers' => 'Usatores supreme',
+	'top-fans-by-points-nav-header' => 'Admiratores supreme',
+	'top-fans-by-category-nav-header' => 'Summitate per categoria',
+	'top-fans-total-points-link' => 'Total del punctos',
+	'top-fans-weekly-points-link' => 'Punctos de iste septimana',
+	'top-fans-monthly-points-link' => 'Punctos de iste mense',
+	'top-fans-points' => 'punctos',
+	'top-fans-by-category-title' => 'Summitate general $1',
+	'top-fans-bad-field-title' => 'Ups!',
+	'top-fans-bad-field-message' => 'Le statistica specificate non existe.',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Voto|Votos}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Victoria mensual|Victorias mensual}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Victoria septimanal|Victorias septimanal}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Modification|Modificationes}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Commento|Commentos}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Referentia|Referentias}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Amico|Amicos}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Inimico|Inimicos}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Opinion|Opiniones}} publicate',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinion|Opiniones}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Acclamation|Acclamationes}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Disapprobation|Disapprobationes}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Acclamation|Acclamationes}} date',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Disapprobation|Disapprobationes}} date',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Dono|Donos}} recipite',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Dono|Donos}} inviate',
+	'level-advance-subject' => 'Tu es ora un "$1" in {{SITENAME}}!',
+	'level-advance-body' => 'Salute $1,
+
+Tu es ora un "$2" in {{SITENAME}}!
+
+Felicitationes,
+
+Le equipa de {{SITENAME}}
+
+---
+Tu non vole reciper plus e-mail de nos?
+
+Clicca $3
+e disactiva in tu preferentias le notificationes per e-mail.',
+);
+
 /** Ripoarisch (Ripoarisch)
  * @author Purodha
  */

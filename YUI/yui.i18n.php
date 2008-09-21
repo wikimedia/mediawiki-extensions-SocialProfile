@@ -94,6 +94,13 @@ $messages['hu'] = array(
 	'yui-desc' => 'JavaScript nyelven írt eszközök és vezérlők gyűjteménye.',
 );
 
+/** Interlingua (Interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'yui-desc' => 'Un collection de utilitates e controlos, scribite in JavaScript',
+);
+
 /** Icelandic (Íslenska)
  * @author S.Örvarr.S
  */
@@ -127,6 +134,13 @@ $messages['lb'] = array(
  */
 $messages['li'] = array(
 	'yui-desc' => "'n Verzameling hölpmi-jjel en besturingsillemaenter in JavaSjrif",
+);
+
+/** Macedonian (Македонски)
+ * @author Brest
+ */
+$messages['mk'] = array(
+	'yui-desc' => 'Множество на алатки и контроли, напишани во JavaScript.',
 );
 
 /** Marathi (मराठी)

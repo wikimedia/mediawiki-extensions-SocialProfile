@@ -1124,6 +1124,7 @@ ja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.',
 /** French (Français)
  * @author Grondin
  * @author IAlex
+ * @author McDutchie
  * @author Zetud
  */
 $messages['fr'] = array(
@@ -1143,7 +1144,7 @@ $messages['fr'] = array(
 	'ur-add-friends' => 'Vouloir plus d’amis ? <a href="$1">Inviter les</a>.',
 	'ur-add-friend' => 'Ajouter comme ami',
 	'ur-add-foe' => 'Ajouter comme ennemi',
-	'ur-add-no-user' => 'Aucun utilisateur sélectionné. Veuiller requérir des amis ou des ennemis au travers du lien correct.',
+	'ur-add-no-user' => 'Aucun utilisateur sélectionné. Veuillez requérir des amis ou des ennemis au travers du lien correct.',
 	'ur-add-personal-message' => 'Ajouter un message personnel',
 	'ur-remove-relationship-friend' => 'Enlever comme ami',
 	'ur-remove-relationship-foe' => 'Enlever comme ennemi',
@@ -1541,7 +1542,184 @@ $messages['hr'] = array(
  * @author McDutchie
  */
 $messages['ia'] = array(
+	'viewrelationships' => 'Vider relation',
+	'viewrelationshiprequests' => 'Vider requestas de relation',
+	'ur-already-submitted' => 'Tu requesta ha essite inviate',
+	'ur-error-page-title' => 'Uuups!',
+	'ur-error-title' => 'Hola, tu prendeva un cammino errate!',
+	'ur-error-message-no-user' => 'Nos non pote completar tu requesta, proque nulle usator con iste nomine existe.',
+	'ur-main-page' => 'Pagina principal',
+	'ur-your-profile' => 'Tu profilo',
+	'ur-backlink' => '&lt; Retornar al profilo de $1',
+	'ur-friend' => 'amico',
+	'ur-foe' => 'inimico',
+	'ur-relationship-count-foes' => '$1 ha $2 {{PLURAL:$2|inimico|inimicos}}. Vole plus inimicos? <a href="$3">Invita les.</a>',
+	'ur-relationship-count-friends' => '$1 ha $2 {{PLURAL:$2|amico|amicos}}. Vole plus amicos? <a href="$3">Invita les.</a>',
+	'ur-add-friends' => ' Vole plus amicos? <a href="$1">Invita les</a>',
+	'ur-add-friend' => 'Adder como amico',
+	'ur-add-foe' => 'Adder como inimico',
+	'ur-add-no-user' => 'Nulle usator seligite.
+Per favor requesta amicos/inimicos via le ligamine correcte.',
+	'ur-add-personal-message' => 'Adder un message personal',
+	'ur-remove-relationship-friend' => 'Remover como amico',
+	'ur-remove-relationship-foe' => 'Remover como inimico',
+	'ur-give-gift' => 'Dar un dono',
+	'ur-previous' => 'prec',
+	'ur-next' => 'seq',
+	'ur-remove-relationship-title-foe' => 'Vole tu remover $1 como tu inimico?',
+	'ur-remove-relationship-title-confirm-foe' => 'Tu ha removite $1 como tu inimico',
+	'ur-remove-relationship-title-friend' => 'Vole tu remover $1 como tu amico?',
+	'ur-remove-relationship-title-confirm-friend' => 'Tu ha removite $1 como tu amico',
+	'ur-remove-relationship-message-foe' => 'Tu ha requestate le remotion de $1 como tu inimico, preme "$2" pro confirmar.',
+	'ur-remove-relationship-message-confirm-foe' => 'Tu ha removite $1 como tu inimico con successo.',
+	'ur-remove-relationship-message-friend' => 'Tu ha requestate le remotion de $1 como tu amico, preme "$2" pro confirmar.',
+	'ur-remove-relationship-message-confirm-friend' => 'Tu ha removite $1 como tu amico con successo.',
+	'ur-remove-error-message-no-relationship' => 'Tu non ha un relation con $1.',
+	'ur-remove-error-message-remove-yourself' => 'Tu non pote remover te mesme.',
+	'ur-remove-error-message-pending-request' => 'Tu ha un requesta pendente de $1 con $2.',
+	'ur-remove-error-message-pending-foe-request' => 'Tu ha un requesta pendente de inimico con $1.',
+	'ur-remove-error-message-pending-friend-request' => 'Tu ha un requesta pendente de amico con $1.',
+	'ur-remove-error-not-loggedin' => 'Tu debe aperir un session pro poter remover un $1.',
+	'ur-remove-error-not-loggedin-foe' => 'Tu debe aperir un session pro poter remover un inimico.',
+	'ur-remove-error-not-loggedin-friend' => 'Tu debe aperir un session pro poter remover un amico.',
+	'ur-remove' => 'Remover',
+	'ur-cancel' => 'Cancellar',
 	'ur-login' => 'Aperir un session',
+	'ur-add-title-foe' => 'Vole tu adder $1 como tu inimico?',
+	'ur-add-title-friend' => 'Vole tu adder $1 como tu amico?',
+	'ur-add-message-foe' => 'Tu es super le puncto de adder $1 como tu inimico.
+Nos notificara $1 pro confirmar tu rancor.',
+	'ur-add-message-friend' => 'Tu es super le puncto de adder $1 como tu amico.
+Nos notificara $1 pro confirmar tu amicitate.',
+	'ur-friendship' => 'amicitate',
+	'ur-grudge' => 'rancor',
+	'ur-add-button' => 'Adder como $1',
+	'ur-add-button-foe' => 'Adder como inimico',
+	'ur-add-button-friend' => 'Adder como amico',
+	'ur-add-sent-title-foe' => 'Nos ha inviate tu requesta de inimico a $1!',
+	'ur-add-sent-title-friend' => 'Nos ha inviate tu requesta de amico a $1!',
+	'ur-add-sent-message-foe' => 'Tu requesta de inimico ha essite inviate a $1 pro confirmation.
+Si $1 confirma tu requesta, tu essera informate de isto in e-mail.',
+	'ur-add-sent-message-friend' => 'Tu requesta de amico ha essite inviate a $1 pro confirmation.
+Si $1 confirma tu requesta, tu essera informate de isto in e-mail.',
+	'ur-add-error-message-no-user' => 'Le usator que tu vole adder non existe.',
+	'ur-add-error-message-blocked' => 'Tu es actualmente blocate e non pote adder amicos o inimicos.',
+	'ur-add-error-message-yourself' => 'Tu non pote adder te mesme como amico o inimico.',
+	'ur-add-error-message-existing-relationship' => 'Tu e $1 es ja $2.',
+	'ur-add-error-message-existing-relationship-foe' => 'Tu e $1 es ja inimicos.',
+	'ur-add-error-message-existing-relationship-friend' => 'Tu e $1 es ja amicos.',
+	'ur-add-error-message-pending-request-title' => 'Patientia!',
+	'ur-add-error-message-pending-friend-request' => 'Tu ha un requesta pendente de amico con $1.
+Nos te notificara quando $1 confirma tu requesta.',
+	'ur-add-error-message-pending-foe-request' => 'Tu ha un requesta pendente de inimico con $1.
+Nos te notificara quando $1 confirma tu requesta.',
+	'ur-add-error-message-not-loggedin' => 'Tu debe aperir un session pro poter adder un $1.',
+	'ur-add-error-message-not-loggedin-foe' => 'Tu debe aperir un session pro poter adder un inimico.',
+	'ur-add-error-message-not-loggedin-friend' => 'Tu debe aperir un session pro poter adder un amico.',
+	'ur-requests-title' => 'Requestas de relation',
+	'ur-requests-message-foe' => '<a href="$1">$2</a> vole esser tu inimico.',
+	'ur-requests-message-friend' => '<a href="$1">$2</a> vole esser tu amico.',
+	'ur-accept' => 'Acceptar',
+	'ur-reject' => 'Rejectar',
+	'ur-no-requests-message' => 'Tu non ha requestas de amico o inimico.
+Si tu vole plus amicos, <a href="$1">invita les!</a>',
+	'ur-requests-added-message-foe' => 'Tu ha addite $1 como inimico.',
+	'ur-requests-added-message-friend' => 'Tu ha addite $1 como amico.',
+	'ur-requests-reject-message-friend' => 'Tu ha rejectate $1 como amico.',
+	'ur-requests-reject-message-foe' => 'Tu ha rejectate $1 como inimico.',
+	'ur-title-foe' => 'Lista de inimicos de $1',
+	'ur-title-friend' => 'Lista de amicos de $1',
+	'friend_request_subject' => '$1 te ha addite como amico in {{SITENAME}}!',
+	'friend_request_body' => 'Salute $1,
+
+$2 te ha addite como amico in {{SITENAME}}. Nos vole assecurar que le duo de vos es de facto amicos.
+
+Per favor clicca super iste ligamine pro confirmar vostre amicitate:
+$3
+
+Gratias.
+
+---
+
+Tu non vole reciper plus e-mail de nos?
+
+Clicca $4
+e disactiva in tu preferentias le notificationes per e-mail.',
+	'foe_request_subject' => 'Il face guerra! $1 te ha addite como inimico in {{SITENAME}}!',
+	'foe_request_body' => 'Salute $1,
+
+$2 justo te listava como inimico in {{SITENAME}}. Nos vole assecurar que le duo de vos es de facto inimicos mortal, o al minus ha un conflicto.
+
+Per favor clicca super iste ligamine pro confirmar vostre rancor mutual:
+
+$3
+
+Gratias.
+
+---
+
+Tu non vole reciper plus e-mail de nos?
+
+Clicca $4
+e disactiva in tu preferentias le notificationes per e-mail.',
+	'friend_accept_subject' => '$1 ha acceptate tu requesta de amico in {{SITENAME}}!',
+	'friend_accept_body' => 'Salute $1,
+
+$2 ha acceptate tu requesta de amico in {{SITENAME}}!
+
+Sia secur de vider le pagina de $2 a $3
+
+Gratias.
+
+---
+
+Tu non vole reciper plus e-mail de nos?
+
+Clicca $4
+e disactiva in tu preferentias le notificationes per e-mail.',
+	'foe_accept_subject' => 'Alea iacta est! $1 ha acceptate tu requesta de inimico in {{SITENAME}}!',
+	'foe_accept_body' => 'Salute $1,
+
+$2 ha acceptate tu requesta de inimico in {{SITENAME}}!
+
+Sia secur de scrutinar le pagina de $2 a $3
+
+Gratias.
+
+---
+
+Tu non vole reciper plus e-mail de nos?
+
+Clicca $4
+e disactiva in tu preferentias le notificationes per e-mail.',
+	'friend_removed_subject' => 'Oh no! $1 te ha removite como amico in {{SITENAME}}!',
+	'friend_removed_body' => 'Salute $1,
+
+$2 te ha removite como amico in {{SITENAME}}!
+
+Gratias
+
+---
+
+Tu non vole reciper plus e-mail de nos?
+
+Clicca $4
+e disactiva in tu preferentias le notificationes per e-mail.',
+	'foe_removed_subject' => 'Victoria! $1 te ha removite como inimico in {{SITENAME}}!',
+	'foe_removed_body' => 'Salute $1,
+
+$2 te ha removite como inimico in {{SITENAME}}!
+
+Pote esser que le duo de vos es in via de devenir amicos?
+
+Gratias
+
+---
+
+Tu non vole reciper plus e-mail de nos?
+
+Clicca $4
+e disactiva in tu preferentias le notificationes per e-mail.',
 );
 
 /** Indonesian (Bahasa Indonesia)
