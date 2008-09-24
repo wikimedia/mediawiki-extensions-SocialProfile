@@ -12,6 +12,7 @@ if (!defined('MEDIAWIKI')) die();
  */
 $dir = dirname(__FILE__) . '/';
 
+// Internationalization files
 $wgExtensionMessagesFiles['SocialProfileUserBoard'] = $dir . 'UserBoard/UserBoard.i18n.php';
 $wgExtensionMessagesFiles['SocialProfileUserProfile'] = $dir . 'UserProfile/UserProfile.i18n.php';
 $wgExtensionMessagesFiles['SocialProfileUserRelationship'] = $dir . 'UserRelationship/UserRelationship.i18n.php';
@@ -19,6 +20,7 @@ $wgExtensionMessagesFiles['SocialProfileUserStats'] = $dir. 'UserStats/UserStats
 
 $wgExtensionAliasesFiles['SocialProfile'] = $dir . 'SocialProfile.alias.php';
 
+// Classes to be autoloaded
 $wgAutoloadClasses['SpecialAddRelationship'] = $dir . 'UserRelationship/SpecialAddRelationship.php';
 $wgAutoloadClasses['SpecialBoardBlast'] = $dir . 'UserBoard/SpecialSendBoardBlast.php';
 $wgAutoloadClasses['SpecialPopulateUserProfiles'] = $dir . 'UserProfile/SpecialPopulateExistingUsersProfiles.php';
@@ -43,6 +45,7 @@ $wgAutoloadClasses['TopFansRecent'] = $dir . 'UserStats/TopFansRecent.php';
 $wgAutoloadClasses['TopUsersPoints'] = $dir. 'UserStats/TopUsers.php';
 $wgAutoloadClasses['wAvatar'] = $dir . 'UserProfile/AvatarClass.php';
 
+// New special pages
 $wgSpecialPages['AddRelationship'] = 'SpecialAddRelationship';
 $wgSpecialPages['PopulateUserProfiles'] = 'SpecialPopulateUserProfiles';
 $wgSpecialPages['RemoveAvatar'] = 'RemoveAvatar';
@@ -59,15 +62,26 @@ $wgSpecialPages['UserBoard'] = 'SpecialViewUserBoard';
 $wgSpecialPages['ViewRelationshipRequests'] = 'SpecialViewRelationshipRequests';
 $wgSpecialPages['ViewRelationships'] = 'SpecialViewRelationships';
 
-//What to display on social profile pages by default?
+// Special page groups for MW 1.13+
+$wgSpecialPageGroups['AddRelationship'] = 'users';
+$wgSpecialPageGroups['RemoveAvatar'] = 'users';
+$wgSpecialPageGroups['RemoveRelationship'] = 'users';
+$wgSpecialPageGroups['UserBoard'] = 'users';
+$wgSpecialPageGroups['ViewRelationshipRequests'] = 'users';
+$wgSpecialPageGroups['ViewRelationships'] = 'users';
+
+// What to display on social profile pages by default?
 $wgUserProfileDisplay['board'] = true;
 $wgUserProfileDisplay['foes'] = true;
 $wgUserProfileDisplay['friends'] = true;
 
-//Should we display UserBoard-related things on social profile pages?
+// Should we display UserBoard-related things on social profile pages?
 $wgUserBoard = true;
 
-//Extension credits
+// Whether to enable friending or not -- this doesn't do very much actually, so don't rely on it
+$wgFriendingEnabled = true;
+
+// Extension credits that show up on Special:Version
 $wgExtensionCredits['other'][] = array(
 	'name' => 'SocialProfile',
 	'author' => 'Wikia, Inc. (Aaron Wright, David Pean)',
@@ -148,14 +162,15 @@ $wgExtensionCredits['specialpage'][] = array(
 	'description' => 'A special page for viewing all relationships by type',
 );
 
+// Some paths used by the extensions
 $wgUserProfileDirectory = "$IP/extensions/SocialProfile/UserProfile";
 
 $wgUserBoardScripts = "$wgScriptPath/extensions/SocialProfile/UserBoard";
 $wgUserProfileScripts = "$wgScriptPath/extensions/SocialProfile/UserProfile";
 $wgUserRelationshipScripts = "$wgScriptPath/extensions/SocialProfile/UserRelationship";
 
-require_once("$IP/extensions/SocialProfile/YUI/YUI.php"); //YUI stand-alone library
-require_once("{$wgUserProfileDirectory}/UserProfile.php"); //Profile page configuration loader file
-require_once("$IP/extensions/SocialProfile/UserGifts/Gifts.php"); //UserGifts (user-to-user gifting functionality) loader file
-require_once("$IP/extensions/SocialProfile/SystemGifts/SystemGifts.php"); //SystemGifts (awards functionality) loader file
-$wgFriendingEnabled = true; //Whether to enable friending or not -- this doesn't do very much actually, so don't rely on it
+// Loader files
+require_once("$IP/extensions/SocialProfile/YUI/YUI.php"); // YUI stand-alone library
+require_once("{$wgUserProfileDirectory}/UserProfile.php"); // Profile page configuration loader file
+require_once("$IP/extensions/SocialProfile/UserGifts/Gifts.php"); // UserGifts (user-to-user gifting functionality) loader file
+require_once("$IP/extensions/SocialProfile/SystemGifts/SystemGifts.php"); // SystemGifts (awards functionality) loader file

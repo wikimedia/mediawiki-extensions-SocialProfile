@@ -4,7 +4,6 @@ $wgAvailableRights[] = 'awardsmanage';
 $wgGroupPermissions['awardsmanage']['awardsmanage'] = true;
 $wgGroupPermissions['staff']['awardsmanage'] = true;
 $wgGroupPermissions['sysop']['awardsmanage'] = true;
-$wgGroupPermissions['janitor']['awardsmanage'] = true;
 
 $wgSystemGiftsDirectory = "$IP/extensions/SocialProfile/SystemGifts";
 $wgSystemGiftsScripts = "$wgScriptPath/extensions/SocialProfile/SystemGifts";

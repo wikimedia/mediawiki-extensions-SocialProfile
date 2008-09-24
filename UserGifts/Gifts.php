@@ -8,34 +8,41 @@ $wgGroupPermissions['sysop']['giftadmin'] = true;
 $wgUserGiftsDirectory = "$IP/extensions/SocialProfile/UserGifts";
 $wgUserGiftsScripts = "$wgScriptPath/extensions/SocialProfile/UserGifts";
 
-//Special Pages etc.
+// Special Pages etc.
 $wgAutoloadClasses['Gifts'] = "{$wgUserGiftsDirectory}/GiftsClass.php";
 $wgAutoloadClasses['UserGifts'] = "{$wgUserGiftsDirectory}/UserGiftsClass.php";
 
 $wgAutoloadClasses['GiveGift'] = "{$wgUserGiftsDirectory}/SpecialGiveGift.php";
 $wgSpecialPages['GiveGift'] = 'GiveGift';
+$wgSpecialPageGroups['GiveGift'] = 'users';
 
 $wgAutoloadClasses['ViewGifts'] = "{$wgUserGiftsDirectory}/SpecialViewGifts.php";
 $wgSpecialPages['ViewGifts'] = 'ViewGifts';
+$wgSpecialPageGroups['ViewGifts'] = 'users';
 
 $wgAutoloadClasses['ViewGift'] = "{$wgUserGiftsDirectory}/SpecialViewGift.php";
 $wgSpecialPages['ViewGift'] = 'ViewGift';
+$wgSpecialPageGroups['ViewGift'] = 'users';
 
 $wgAutoloadClasses['GiftManager'] = "{$wgUserGiftsDirectory}/SpecialGiftManager.php";
 $wgSpecialPages['GiftManager'] = 'GiftManager';
+$wgSpecialPageGroups['GiftManager'] = 'wiki';
 
 $wgAutoloadClasses['GiftManagerLogo'] = "{$wgUserGiftsDirectory}/SpecialGiftManagerLogo.php";
 $wgSpecialPages['GiftManagerLogo'] = 'GiftManagerLogo';
+$wgSpecialPageGroups['GiftManagerLogo'] = 'wiki';
 
 $wgAutoloadClasses['RemoveMasterGift'] = "{$wgUserGiftsDirectory}/SpecialRemoveMasterGift.php";
 $wgSpecialPages['RemoveMasterGift'] = 'RemoveMasterGift';
+$wgSpecialPageGroups['RemoveMasterGift'] = 'wiki';
 
 $wgAutoloadClasses['RemoveGift'] = "{$wgUserGiftsDirectory}/SpecialRemoveGift.php";
 $wgSpecialPages['RemoveGift'] = 'RemoveGift';
+$wgSpecialPageGroups['RemoveGift'] = 'users';
 
 $wgExtensionMessagesFiles['UserGifts'] = $wgUserGiftsDirectory . '/UserGifts.i18n.php';
 
-//Credits
+// Credits
 $wgExtensionCredits['specialpage'][] = array(
 	'name' => 'GiftManager',
 	'version' => '1.0',
