@@ -1162,11 +1162,14 @@ $messages['el'] = array(
  * @author Yekrats
  */
 $messages['eo'] = array(
+	'user-awards-title' => 'Premioj',
+	'user-gifts-title' => 'Donacoj',
 	'user-count-separator' => 'de',
 	'user-view-all' => 'Rigardu Ĉiujn',
 	'user-upload-image' => 'Alŝuti bildon',
 	'user-edit-this' => 'Redaktu ĉi tion',
 	'user-points' => 'poentoj',
+	'user-edit-profile' => 'Redakti preferojn',
 	'user-upload-avatar' => 'Alŝutu avataron',
 	'user-add-friend' => 'Aldonu kiel amikon',
 	'user-add-foe' => 'Aldoni kiel malamikon',
@@ -1176,6 +1179,7 @@ $messages['eo'] = array(
 	'user-send-gift' => 'Sendi donacon',
 	'user-contributions' => 'Kontribuoj',
 	'user-stats-title' => 'Statistikoj',
+	'user-stats-edits' => 'Redaktoj',
 	'other-info-title' => 'Alia informo',
 	'user-friends-title' => 'Amikoj',
 	'user-foes-title' => 'Malamikoj',
@@ -1253,11 +1257,21 @@ $messages['eo'] = array(
 	'user-profile-picture-uploaddifferent' => 'Alŝutu apartan bildon',
 	'user-profile-picture-currentimage' => 'Nuna bildo',
 	'user-profile-picture-choosepicture' => 'Selektu vian bildon',
+	'user-profile-picture-scanfailed' => 'skanado malsukcesis',
+	'user-profile-userlevels-link' => 'Niveloj de uzantoj',
+	'user-no-images' => 'Neniuj bildoj estis alŝutitaj',
 	'edit-profile-title' => 'Redaktu viajn preferojn',
 	'user-page-link' => 'Paĝo de uzanto',
+	'user-wiki-link' => 'Vikia uzanto-paĝo',
 	'removeavatar' => 'Forigi avataron',
+	'givegift' => 'Donaci donacon',
+	'viewgifts' => 'Vidi donacojn',
+	'viewsystemgifts' => 'Vidi premiojn',
+	'avatarupload-removeavatar' => 'Forviŝi avataron',
 	'avatarupload-currentavatar' => 'nuna avataro de $1',
+	'profilelogpagetext' => 'Jen protokolon pri redaktoj de uzulaj preferoj',
 	'avatarlogpage' => 'Protokolo pri avatara alŝutado',
+	'user-profile-picture-log-delete-entry' => 'forigis avataron de $1',
 );
 
 /** Estonian (Eesti)
@@ -4583,3 +4597,4 @@ $messages['vo'] = array(
 	'user-profile-interests-books' => 'Buks',
 	'user-profile-sports-sport' => 'Spot',
 );
+

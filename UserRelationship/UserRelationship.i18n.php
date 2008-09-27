@@ -927,11 +927,14 @@ $messages['el'] = array(
  */
 $messages['eo'] = array(
 	'viewrelationships' => 'Rigardi rilatecon',
+	'ur-already-submitted' => 'Via peto estis sendita',
 	'ur-main-page' => 'Ĉefpaĝo',
 	'ur-friend' => 'amiko',
 	'ur-foe' => 'malamiko',
 	'ur-add-friend' => 'Amiko',
 	'ur-add-foe' => 'Aldoni kiel malamikon',
+	'ur-remove-relationship-friend' => 'Forigi kiel amikon',
+	'ur-remove-relationship-foe' => 'Forigi kiel malamikon',
 	'ur-give-gift' => 'Doni donacon',
 	'ur-previous' => 'antaŭ',
 	'ur-next' => 'sekv',

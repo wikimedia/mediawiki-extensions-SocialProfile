@@ -73,6 +73,7 @@ $aliases['arz'] = array(
 $aliases['lb'] = array(
 	'UpdateProfile' => array( 'Profil eroplueden' ),
 	'UploadAvatar' => array( 'Avatar eroplueden' ),
+	'ViewRelationships' => array( 'Relatiounen weisen' ),
 );
 
 /** Nedersaksisch (Nedersaksisch) */
