@@ -192,6 +192,21 @@ Click $4
 and change your settings to disable e-mail notifications.',
 );
 
+/** Message documentation (Message documentation)
+ * @author Jon Harald Søby
+ * @author Siebrand
+ */
+$messages['qqq'] = array(
+	'ur-main-page' => '{{Identical|Main page}}',
+	'ur-add-friend' => '{{Identical|Add as friend}}',
+	'ur-add-foe' => '{{Identical|Add as foe}}',
+	'ur-previous' => '{{Identical|Prev}}',
+	'ur-next' => '{{Identical|Next}}',
+	'ur-remove' => '{{Identical|Remove}}',
+	'ur-cancel' => '{{Identical|Cancel}}',
+	'ur-login' => '{{Identical|Log in}}',
+);
+
 /** Faeag Rotuma (Faeag Rotuma)
  * @author Jose77
  */
@@ -1795,6 +1810,13 @@ $messages['km'] = array(
 	'ur-accept' => 'ព្រមទទួល',
 	'ur-reject' => 'ទាត់ចោល',
 	'friend_request_subject' => '$1 បានបន្ថែមអ្នក ជា មិត្តភក្តិ លើ {{SITENAME}}!',
+);
+
+/** Krio (Krio)
+ * @author Jose77
+ */
+$messages['kri'] = array(
+	'ur-main-page' => 'Men Pej',
 );
 
 /** Kinaray-a (Kinaray-a)

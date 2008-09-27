@@ -761,3 +761,4 @@ $messages['vo'] = array(
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Küpet|Küpets}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Flen|Flens}}',
 );
+

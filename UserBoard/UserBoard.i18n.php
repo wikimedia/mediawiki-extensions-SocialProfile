@@ -69,6 +69,17 @@ Click $4
 and change your settings to disable email notifications.'
 );
 
+/** Message documentation (Message documentation)
+ * @author Jon Harald Søby
+ */
+$messages['qqq'] = array(
+	'userboard_delete' => '{{Identical|Delete}}',
+	'userboard_private' => '{{Identical|Private}}',
+	'userboard_nextpage' => '{{Identical|Next}}',
+	'userboard_prevpage' => '{{Identical|Prev}}',
+	'userboard_sendbutton' => '{{Identical|Send}}',
+);
+
 /** Eastern Mari (Олык Марий)
  * @author Сай
  */
@@ -794,6 +805,13 @@ $messages['km'] = array(
 	'userboard_nomessages' => 'មិនមានសារទេ។',
 	'userboard_sendbutton' => 'ផ្ញើ',
 	'userboard_loggedout' => 'ដើម្បីបញ្ជូនសារទៅកាន់អ្នកប្រើប្រាស់ផ្សេងៗទៀតបាន អ្នកចាំបាច់ត្រូវតែបាន<a href="$1">ឡុកអ៊ីនចូល</a>។',
+);
+
+/** Krio (Krio)
+ * @author Jose77
+ */
+$messages['kri'] = array(
+	'userboard_delete' => 'Dilit',
 );
 
 /** Ripoarisch (Ripoarisch)
