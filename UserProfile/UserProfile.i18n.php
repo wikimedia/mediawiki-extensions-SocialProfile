@@ -198,61 +198,6 @@ Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.
 	'user-profile-picture-log-delete-entry' => 'deleted $1\'s avatar',
 );
 
-/** Message documentation (Message documentation)
- * @author Jon Harald Søby
- */
-$messages['qqq'] = array(
-	'user-watchlist' => '{{Identical|My watchlist}}',
-	'user-add-friend' => '{{Identical|Add as friend}}',
-	'user-add-foe' => '{{Identical|Add as foe}}',
-	'other-info-title' => '{{Identical|Other information}}',
-	'other-info-movies' => '{{Identical|Movies}}',
-	'other-info-tv' => '{{Identical|TV}}',
-	'other-info-music' => '{{Identical|Music}}',
-	'other-info-books' => '{{Identical|Books}}',
-	'other-info-video-games' => '{{Identical|Video games}}',
-	'other-info-magazines' => '{{Identical|Magazines}}',
-	'other-info-drinks' => '{{Identical|Drinks}}',
-	'custom-info-title' => '{{Identical|Custom information}}',
-	'user-personal-info-title' => '{{Identical|Personal information}}',
-	'user-personal-info-real-name' => '{{Identical|Real name}}',
-	'user-personal-info-hometown' => '{{Identical|Hometown}}',
-	'user-personal-info-birthday' => '{{Identical|Birthday}}',
-	'user-personal-info-occupation' => '{{Identical|Occupation}}',
-	'user-personal-info-websites' => '{{Identical|Websites}}',
-	'user-personal-info-places-lived' => "{{Identical|Places I've lived}}",
-	'user-personal-info-schools' => '{{Identical|Schools}}',
-	'user-personal-info-about-me' => '{{Identical|About me}}',
-	'user-profile-section-personal' => '{{Identical|Personal information}}',
-	'user-profile-section-custom' => '{{Identical|Custom information}}',
-	'user-profile-section-interests' => '{{Identical|Other information}}',
-	'user-profile-section-picture' => '{{Identical|Avatar}}',
-	'user-profile-section-preferences' => '{{Identical|Preferences}}',
-	'user-profile-personal-name' => '{{Identical|Name}}',
-	'user-profile-personal-email' => '{{Identical|E-mail}}',
-	'user-profile-personal-city' => '{{Identical|City}}',
-	'user-profile-personal-country' => '{{Identical|Country}}',
-	'user-profile-personal-hometown' => '{{Identical|Hometown}}',
-	'user-profile-personal-birthday' => '{{Identical|Birthday}}',
-	'user-profile-personal-aboutme' => '{{Identical|About me}}',
-	'user-profile-personal-occupation' => '{{Identical|Occupation}}',
-	'user-profile-personal-schools' => '{{Identical|Schools}}',
-	'user-profile-personal-placeslived' => "{{Identical|Places I've lived}}",
-	'user-profile-personal-websites' => '{{Identical|Websites}}',
-	'user-profile-interests-movies' => '{{Identical|Movies}}',
-	'user-profile-interests-tv' => '{{Identical|TV}}',
-	'user-profile-interests-music' => '{{Identical|Music}}',
-	'user-profile-interests-books' => '{{Identical|Books}}',
-	'user-profile-interests-magazines' => '{{Identical|Magazines}}',
-	'user-profile-interests-videogames' => '{{Identical|Video games}}',
-	'user-profile-interests-drinks' => '{{Identical|Drinks}}',
-	'user-profile-picture-log' => '{{Identical|Avatar}}',
-	'user-profile-picture-large' => '{{Identical|Large}}',
-	'user-profile-picture-medium' => '{{Identical|Medium}}',
-	'user-profile-picture-small' => '{{Identical|Small}}',
-	'user-page-link' => '{{Identical|User page}}',
-);
-
 /** Karelian (Karjala)
  * @author Flrn
  */

@@ -69,17 +69,6 @@ Click $4
 and change your settings to disable email notifications.'
 );
 
-/** Message documentation (Message documentation)
- * @author Jon Harald Søby
- */
-$messages['qqq'] = array(
-	'userboard_delete' => '{{Identical|Delete}}',
-	'userboard_private' => '{{Identical|Private}}',
-	'userboard_nextpage' => '{{Identical|Next}}',
-	'userboard_prevpage' => '{{Identical|Prev}}',
-	'userboard_sendbutton' => '{{Identical|Send}}',
-);
-
 /** Eastern Mari (Олык Марий)
  * @author Сай
  */
