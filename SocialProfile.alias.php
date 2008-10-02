@@ -69,6 +69,11 @@ $aliases['arz'] = array(
 	'ViewRelationships' => array( 'عرض_العلاقات' ),
 );
 
+/** Persian (فارسی) */
+$aliases['fa'] = array(
+	'TopUsers' => array( 'کاربران_برتر' ),
+);
+
 /** Luxembourgish (Lëtzebuergesch) */
 $aliases['lb'] = array(
 	'UpdateProfile' => array( 'Profil eroplueden' ),

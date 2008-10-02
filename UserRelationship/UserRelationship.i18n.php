@@ -1483,7 +1483,7 @@ e troque as súas configuracións para deshabilitar as notificacións por correo
 
 $2 eliminouno dos seus inimigos en {{SITENAME}}!
 
-Estares no bo camiño para convertirvos en amigos?
+Talvez estades no bo camiño para convertirvos en amigos?
 
 Grazas
 
