@@ -2483,6 +2483,7 @@ $messages['lb'] = array(
 	'other-info-title' => 'Aner Informatiounen',
 	'user-friends-title' => 'Frënn',
 	'other-info-movies' => 'Filmen',
+	'other-info-tv' => 'Televisioun',
 	'other-info-music' => 'Musek',
 	'other-info-books' => 'Bicher',
 	'other-info-video-games' => 'Videospiller',
