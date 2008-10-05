@@ -210,6 +210,7 @@ $messages['krl'] = array(
  */
 $messages['mhr'] = array(
 	'user-watchlist' => 'Мыйын эскерымаш списке',
+	'user-profile-section-preferences' => 'Настройке-влак',
 	'user-profile-personal-email' => 'Электрон почто',
 );
 
@@ -1180,6 +1181,7 @@ $messages['eo'] = array(
 	'user-contributions' => 'Kontribuoj',
 	'user-stats-title' => 'Statistikoj',
 	'user-stats-edits' => 'Redaktoj',
+	'user-stats-votes' => 'Voĉdonoj',
 	'other-info-title' => 'Alia informo',
 	'user-friends-title' => 'Amikoj',
 	'user-foes-title' => 'Malamikoj',
@@ -2806,6 +2808,18 @@ $messages['mr'] = array(
 	'user-board-login-message' => 'इतर सदस्यांना संदेश पाठविण्यासाठी तुम्ही <a href="$1">प्रवेश केलेला असणे</a> आवश्यक आहे.',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Kurniasan
+ */
+$messages['ms'] = array(
+	'user-profile-picture-scanfailed' => 'imbasan gagal',
+	'user-profile-goback' => 'Pergi balik',
+	'user-profile-userlevels-link' => 'Tahap-tahap pengguna',
+	'user-no-images' => 'Tiada imej yang dimuat naik',
+	'edit-profile-title' => 'Sunting profil anda',
+	'user-page-link' => 'Laman pengguna',
+);
+
 /** Maltese (Malti)
  * @author Roderick Mallia
  */
@@ -4294,6 +4308,7 @@ $messages['szl'] = array(
  * @author Veeven
  */
 $messages['te'] = array(
+	'user-gifts-title' => 'బహుమతులు',
 	'user-view-all' => 'అన్నీ చూడండి',
 	'user-upload-image' => 'బొమ్మని ఎగుమతి చేయండి',
 	'user-edit-this' => 'దీన్ని మార్చండి',
@@ -4308,6 +4323,9 @@ $messages['te'] = array(
 	'user-send-message' => 'ఓ సందేశం పంపండి',
 	'user-send-gift' => 'ఓ బహుమతి పంపించండి',
 	'user-contributions' => 'రచనలు',
+	'user-stats-title' => 'గణాంకాలు',
+	'user-stats-votes' => 'వోట్లు',
+	'user-stats-comments' => 'వ్యాఖ్యలు',
 	'other-info-title' => 'ఇతర సమాచారం',
 	'user-friends-title' => 'స్నేహితులు',
 	'user-foes-title' => 'శతృవులు',
@@ -4378,6 +4396,7 @@ $messages['te'] = array(
 	'user-profile-picture-picsize' => 'మీ బొమ్మ 100కిబై కంటే తక్కువ పరిమాణంలో ఉండి jpeg, png, లేదా gif కానీ అయివుండాలి.',
 	'user-profile-picture-scanfailed' => 'స్కాన్ విఫలమైంది',
 	'user-profile-goback' => 'వెనక్కి వెళ్ళండి',
+	'user-profile-userlevels-link' => 'వాడుకరి స్థాయి',
 	'user-no-images' => 'బొమ్మలేమీ ఎగుమతి కాలేదు',
 	'edit-profile-title' => 'మీ ప్రొఫైలుని మార్చండి',
 	'user-page-link' => 'వాడుకరి పేజీ',

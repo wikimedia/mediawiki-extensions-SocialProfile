@@ -242,6 +242,13 @@ $messages['tg-cyrl'] = array(
 	'yui-desc' => 'Маҷмӯъи барномаҳои судманд ва танзимот, ки дар ҶаваСкрипт навишта шудаанд',
 );
 
+/** Ukrainian (Українська)
+ * @author Ahonc
+ */
+$messages['uk'] = array(
+	'yui-desc' => 'Набір засобів і керуючих елементів, написаних на JavaScript',
+);
+
 /** Vèneto (Vèneto)
  * @author Candalua
  */
