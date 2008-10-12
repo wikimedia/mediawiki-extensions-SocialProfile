@@ -2460,6 +2460,7 @@ $messages['ksh'] = array(
  * @author Robby
  */
 $messages['lb'] = array(
+	'user-awards-title' => 'Präisser',
 	'user-gifts-title' => 'Cadeauen',
 	'user-count-separator' => 'vu(n)',
 	'user-view-all' => 'Alles gesinn',
@@ -2491,6 +2492,7 @@ $messages['lb'] = array(
 	'other-info-drinks' => 'Gedrénks',
 	'other-no-info' => 'Keng aner Informatioun',
 	'profile-updated-personal' => 'Äre Profil aktualiséieren',
+	'profile-not-provided' => 'Net uginn',
 	'user-board-title' => 'Tafel',
 	'user-personal-info-title' => 'Perséinlech Informatiounen',
 	'user-no-personal-info' => 'Keng perséinlech Informatioun',
@@ -2505,6 +2507,7 @@ $messages['lb'] = array(
 	'user-recent-activity-vote' => 'Bewertung vun der Säit',
 	'user-recent-activity-comment' => 'emierkung op der Säit',
 	'user-recent-activity-gift-sent' => 'Cadeau geschéckt u(n)',
+	'user-recent-system-gift' => 'Huet e Präis kritt',
 	'user-profile-update-notloggedin-title' => 'Dir kënnt äre Profil net änneren wann dir net ageloggt sidd',
 	'user-profile-update-saved' => 'Äre Profil gouf ofgespäichert',
 	'user-profile-update-log-section' => 'Abschnitt änneren',
@@ -2566,6 +2569,7 @@ Avatar',
 	'user-wiki-link' => 'Wiki Benotzersäit',
 	'user-type-toggle-old' => "Benotzt d'Wiki-Benotzersäit",
 	'user-type-toggle-new' => 'Sozial-Benotzersäit benotzen',
+	'givegift' => 'E Cadeau maachen',
 	'avatarupload-removeanother' => 'En aneren ewechhuelen',
 );
 
