@@ -718,6 +718,7 @@ $messages['bg'] = array(
 	'user-personal-info-title' => 'Лична информация',
 	'user-no-personal-info' => 'Не е въведена лична информация',
 	'user-personal-info-real-name' => 'Истинско име',
+	'user-personal-info-location' => 'Местоживеене',
 	'user-personal-info-hometown' => 'Роден град',
 	'user-personal-info-birthday' => 'Рожден ден',
 	'user-personal-info-occupation' => 'Длъжност',
@@ -751,6 +752,7 @@ $messages['bg'] = array(
 	'user-profile-personal-email' => 'Е-поща',
 	'user-profile-personal-email-needs-auth' => '(за получаване на оповестявания от сайта е необходимо адресът ви за електронна поща да бъде потвърден)',
 	'user-profile-personal-confirmemail' => 'Потвърждаване на адреса',
+	'user-profile-personal-location' => 'Местоживеене',
 	'user-profile-personal-city' => 'Град',
 	'user-profile-personal-country' => 'Държава',
 	'user-profile-personal-hometown' => 'Роден град',
@@ -1182,6 +1184,7 @@ $messages['eo'] = array(
 	'user-stats-title' => 'Statistikoj',
 	'user-stats-edits' => 'Redaktoj',
 	'user-stats-votes' => 'Voĉdonoj',
+	'user-stats-comments' => 'Komentoj',
 	'other-info-title' => 'Alia informo',
 	'user-friends-title' => 'Amikoj',
 	'user-foes-title' => 'Malamikoj',
@@ -2838,7 +2841,17 @@ $messages['mt'] = array(
  * @author Botuzhaleny-sodamo
  */
 $messages['myv'] = array(
+	'user-friends-title' => 'Оят',
+	'user-foes-title' => 'Душмант',
+	'other-info-books' => 'Кинигат',
 	'user-profile-personal-name' => 'Леметь',
+	'user-profile-personal-country' => 'Чачи мастор',
+	'user-profile-personal-hometown' => 'Чачи ош',
+	'user-profile-personal-birthday' => 'Чачома чи',
+	'user-profile-personal-aboutme' => 'Эсьтедень',
+	'user-profile-personal-schools' => 'Школат',
+	'user-profile-picture-large' => 'Покш',
+	'user-profile-picture-small' => 'Вишкынька',
 );
 
 /** Nahuatl (Nāhuatl)

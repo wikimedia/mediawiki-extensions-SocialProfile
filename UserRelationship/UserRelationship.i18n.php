@@ -2232,6 +2232,7 @@ $messages['myv'] = array(
 	'ur-friend' => 'оя',
 	'ur-foe' => 'душман',
 	'ur-remove' => 'Нардык',
+	'ur-friendship' => 'ояксчи',
 );
 
 /** Nahuatl (Nāhuatl)

@@ -959,6 +959,13 @@ $4 वर टिचकी मारा
 आणि विपत्र(ईमेल) सूचना अक्षम करण्याकरिता सुविधेत बदल करा.',
 );
 
+/** Erzya (Эрзянь)
+ * @author Botuzhaleny-sodamo
+ */
+$messages['myv'] = array(
+	'userboard_delete' => 'Нардамс',
+);
+
 /** Nahuatl (Nāhuatl)
  * @author Fluence
  */
