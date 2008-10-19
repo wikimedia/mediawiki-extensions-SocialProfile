@@ -209,14 +209,6 @@ $messages['krl'] = array(
 	'ur-cancel' => 'Keskevytä',
 );
 
-/** Eastern Mari (Олык Марий)
- * @author Сай
- */
-$messages['mhr'] = array(
-	'ur-main-page' => 'Тӱҥ лаштык',
-	'ur-cancel' => 'Чараш',
-);
-
 /** Niuean (ko e vagahau Niuē)
  * @author Jose77
  */
@@ -2052,6 +2044,14 @@ Wann Dir méi Frënn wellt <a href="$1">invitéiert se!</a>',
 	'friend_accept_subject' => '$1 huet är Ufro als Frënd op {{SITENAME}} ugeholl!',
 );
 
+/** Eastern Mari (Олык Марий)
+ * @author Сай
+ */
+$messages['mhr'] = array(
+	'ur-main-page' => 'Тӱҥ лаштык',
+	'ur-cancel' => 'Чараш',
+);
+
 /** Malayalam (മലയാളം)
  * @author Shijualex
  */
@@ -3495,6 +3495,7 @@ $messages['vi'] = array(
 	'ur-main-page' => 'Trang Chính',
 	'ur-add-friend' => 'Thêm người bạn',
 	'ur-add-foe' => 'Thêm kẻ thù',
+	'ur-remove' => 'Dời',
 	'ur-cancel' => 'Bãi bỏ',
 	'ur-login' => 'Đăng nhập',
 );

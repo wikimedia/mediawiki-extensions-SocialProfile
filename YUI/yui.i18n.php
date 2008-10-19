@@ -108,6 +108,13 @@ $messages['ia'] = array(
 	'yui-desc' => 'Un collection de utilitates e controlos, scribite in JavaScript',
 );
 
+/** Indonesian (Bahasa Indonesia)
+ * @author Rex
+ */
+$messages['id'] = array(
+	'yui-desc' => 'Sebuah set alat-alat dan pengendali, ditulis dalam JavaScript',
+);
+
 /** Icelandic (Íslenska)
  * @author S.Örvarr.S
  */
