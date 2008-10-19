@@ -947,6 +947,7 @@ $messages['da'] = array(
 );
 
 /** German (Deutsch)
+ * @author Revolus
  * @author Tim 'Avatar' Bartel
  */
 $messages['de'] = array(
@@ -968,6 +969,7 @@ $messages['de'] = array(
 	'user-send-message' => 'Nachricht senden',
 	'user-send-gift' => 'Geschenk senden',
 	'user-contributions' => 'Beiträge',
+	'user-stats-edits' => 'Beiträge',
 	'other-info-title' => 'Weitere Informationen',
 	'user-friends-title' => 'Freunde',
 	'user-foes-title' => 'Feinde',

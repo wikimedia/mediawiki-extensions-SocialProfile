@@ -205,8 +205,10 @@ $messages['cs'] = array(
  * @author Revolus
  */
 $messages['de'] = array(
+	'topusers' => 'Top-Benutzer',
 	'top-fans-points' => 'Punkte',
 	'top-fans-bad-field-title' => 'Hoppla!',
+	'level-advance-subject' => 'Du bist jetzt „$1“ auf {{SITENAME}}!',
 );
 
 /** Greek (Ελληνικά)
