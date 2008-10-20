@@ -71,13 +71,19 @@ $aliases['arz'] = array(
 
 /** Persian (فارسی) */
 $aliases['fa'] = array(
+	'AddRelationship' => array( 'افزودن_رابطه' ),
 	'TopUsers' => array( 'کاربران_برتر' ),
 );
 
 /** Luxembourgish (Lëtzebuergesch) */
 $aliases['lb'] = array(
+	'AddRelationship' => array( 'Relatioun derbäisetzen' ),
+	'RemoveAvatar' => array( 'Avatar ewechhuelen' ),
+	'RemoveRelationship' => array( 'Relatioun ewechhuelen' ),
+	'UpdateEditCounts' => array( 'Zielen vun den Ännerungen aktualiséieren' ),
 	'UpdateProfile' => array( 'Profil eroplueden' ),
 	'UploadAvatar' => array( 'Avatar eroplueden' ),
+	'ViewRelationshipRequests' => array( 'Ufroen vu Relatiounen weisen' ),
 	'ViewRelationships' => array( 'Relatiounen weisen' ),
 );
 
