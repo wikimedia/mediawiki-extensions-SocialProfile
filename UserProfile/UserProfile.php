@@ -15,6 +15,7 @@ $wgUserProfileDisplay['stats'] = false; //Display statistics on user profile pag
 $wgUserProfileDisplay['interests'] = true;
 $wgUserProfileDisplay['custom'] = true;
 $wgUserProfileDisplay['personal'] = true;
+$wgUserProfileDisplay['userboxes'] = false; // If FanBoxes extension is installed, setting this to true will display the user's fanboxes on their profile page
 
 $wgUpdateProfileInRecentChanges = false; // Show a log entry in recent changes whenever a user updates their profile?
 $wgUploadAvatarInRecentChanges = false; //Same as above, but for avatar uploading

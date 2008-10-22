@@ -68,6 +68,7 @@ class UserProfilePage extends Article {
 		$wgOut->addHTML( $this->getAwards($this->user_name) );
 		$wgOut->addHTML( $this->getCustomInfo($this->user_name) );
 		$wgOut->addHTML( $this->getInterests($this->user_name) );
+		$wgOut->addHTML( $this->getFanBoxes($this->user_name) );
 		$wgOut->addHTML( $this->getUserStats($this->user_id, $this->user_name) );
 
 		if ( ! wfRunHooks( 'UserProfileEndLeft', array( &$this  ) ) ) {
@@ -838,6 +839,185 @@ class UserProfilePage extends Article {
 		$output .= $b->displayMessages($user_id, 0, 10);
 
 		$output .= "</div>";
+
+		return $output;
+	}
+
+	/**
+	 * Gets the user's fanboxes if $wgEnableUserBoxes = true; and $wgUserProfileDisplay['userboxes'] = true;
+	 * and FanBoxes extension is installed.
+	 */
+	function getFanBoxes( $user_name ){
+		global $wgOut, $IP, $wgUser, $wgTitle, $wgMemc, $wgUserProfileDisplay, $wgFanBoxScripts, $wgFanBoxDirectory, $wgEnableUserBoxes;
+
+		if ( !$wgEnableUserBoxes || $wgUserProfileDisplay['userboxes'] == false ) {
+			return "";
+		}
+
+		$wgOut->addScript("<script type=\"text/javascript\" src=\"{$wgFanBoxScripts}/FanBoxes.js\"></script>\n");
+		$wgOut->addScript("<link rel='stylesheet' type='text/css' href=\"{$wgFanBoxScripts}/FanBoxes.css\"/>\n");
+
+		wfLoadExtensionMessages('FanBox');
+
+		$f = new UserFanBoxes($user_name);
+		$user_safe = ($user_name);
+
+		//try cache
+		//$key = wfMemcKey( 'user', 'profile', 'fanboxes', "{$f->user_id}" );
+		//$data = $wgMemc->get( $key );
+
+		//if( !$data ){
+		//	wfDebug( "Got profile fanboxes for user {$user_name} from db\n" );
+		//	$fanboxes = $f->getUserFanboxes(0,10);
+		//	$wgMemc->set( $key, $fanboxes );
+		//} else {
+		//	wfDebug( "Got profile fanboxes for user {$user_name} from cache\n" );
+		//	$fanboxes = $data;
+		//}
+
+		$fanboxes = $f->getUserFanboxes(0, 10);
+
+		$fanbox_count = $f->getFanBoxCountByUsername($user_name);
+		$fanbox_link = Title::makeTitle(NS_SPECIAL, 'ViewUserBoxes');
+		$per_row = 1;
+
+		if ( $fanboxes ) {
+
+			$output .= "<div class=\"user-section-heading\">
+				<div class=\"user-section-title\">
+					".wfMsg('user-fanbox-title')."
+				</div>
+				<div class=\"user-section-actions\">
+					<div class=\"action-right\">";
+						if( $fanbox_count > 10 ) $output .= "<a href=\"".$fanbox_link->escapeFullURL('user='.$user_safe)."\" rel=\"nofollow\">".wfMsg('user-view-all')."</a>";
+					$output .= "</div>
+					<div class=\"action-left\">";
+						if( $fanbox_count > 10 ) {
+							$output .= "10 ".wfMsg('user-count-separator')." {$fanbox_count}";
+						} else {
+							$output .= "{$fanbox_count} ".wfMsg('user-count-separator')." {$fanbox_count}";
+						}
+					$output .= "</div>
+					<div class=\"cleared\"></div>
+
+				</div>
+			</div>
+			<div class=\"cleared\"></div>
+
+			<div class=\"user-fanbox-container clearfix\" >";
+
+				$x = 1;
+				$tagParser = new Parser();
+				foreach( $fanboxes as $fanbox ) {
+
+					$check_user_fanbox = $f->checkIfUserHasFanbox($fanbox["fantag_id"]);
+
+					if( $fanbox["fantag_image_name"] ){
+						$fantag_image_width = 45;
+						$fantag_image_height = 53;
+						$fantag_image = Image::newFromName( $fanbox["fantag_image_name"] );
+						$fantag_image_url = $fantag_image->createThumb($fantag_image_width, $fantag_image_height);
+						$fantag_image_tag = '<img alt="" src="' . $fantag_image_url . '"/>';
+					};
+
+					if ( $fanbox["fantag_left_text"] == "" ){
+						$fantag_leftside = $fantag_image_tag;
+					} else {
+						$fantag_leftside = $fanbox["fantag_left_text"];
+						$fantag_leftside = $tagParser->parse( $fantag_leftside, $wgTitle, $wgOut->parserOptions(), false );
+						$fantag_leftside = $fantag_leftside->getText();
+					}
+
+					if ( $fanbox["fantag_left_textsize"] == "mediumfont" ) {
+						$leftfontsize = "11px";
+					}
+
+					if ( $fanbox["fantag_left_textsize"] == "bigfont" ) {
+						$leftfontsize = "15px";
+					}
+
+					if ( $fanbox["fantag_right_textsize"] == "smallfont" ) {
+						$rightfontsize = "10px";
+					}
+
+					if ( $fanbox["fantag_right_textsize"] == "mediumfont" ) {
+						$rightfontsize = "11px";
+					}
+
+					//get permalink
+					$fantag_title = Title::makeTitle( NS_FANTAG, $fanbox["fantag_title"] );
+					$right_text = $fanbox["fantag_right_text"];
+					$right_text = $tagParser->parse( $right_text, $wgTitle, $wgOut->parserOptions(), false );
+					$right_text = $right_text->getText();
+
+					//output fanboxes
+					$output .= "<div class=\"fanbox-item\">
+						<div class=\"individual-fanbox\" id=\"individualFanbox".$fanbox["fantag_id"]."\">
+							<div class=\"show-message-container-profile\" id=\"show-message-container".$fanbox["fantag_id"]."\">
+								<a class=\"perma\" style=\"font-size:8px; color:".$fanbox["fantag_right_textcolor"]."\" href=\"".$fantag_title->escapeFullURL()."\" title=\"{$fanbox["fantag_title"]}\">".wfMsg('fanbox-perma')."</a>
+								<table  class=\"fanBoxTableProfile\" onclick=\"javascript:openFanBoxPopup('fanboxPopUpBox{$fanbox["fantag_id"]}', 'individualFanbox{$fanbox["fantag_id"]}')\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" >
+									<tr>
+										<td id=\"fanBoxLeftSideOutputProfile\" style=\"color:".$fanbox["fantag_left_textcolor"]."; font-size:$leftfontsize\" bgcolor=\"".$fanbox["fantag_left_bgcolor"]."\">".$fantag_leftside."</td> 
+										<td id=\"fanBoxRightSideOutputProfile\" style=\"color:".$fanbox["fantag_right_textcolor"]."; font-size:$rightfontsize\" bgcolor=\"".$fanbox["fantag_right_bgcolor"]."\">".$right_text."</td>
+									</tr>
+								</table>
+							</div>
+						</div>";
+
+				 		if( $wgUser->isLoggedIn() ) {
+							if( $check_user_fanbox == 0 ) {
+							$output .= "<div class=\"fanbox-pop-up-box-profile\" id=\"fanboxPopUpBox".$fanbox["fantag_id"]."\">
+								<table cellpadding=\"0\" cellspacing=\"0\" align=\"center\" >
+									<tr>
+										<td style=\"font-size:10px\">". wfMsgForContent( 'fanbox-add-fanbox' ) ."</td>
+									</tr>
+									<tr>
+										<td align=\"center\">
+										<input type=\"button\" value=\"".wfMsg('fanbox-add')."\" size=\"10\" onclick=\"closeFanboxAdd('fanboxPopUpBox{$fanbox["fantag_id"]}', 'individualFanbox{$fanbox["fantag_id"]}'); showAddRemoveMessageUserPage(1, {$fanbox["fantag_id"]}, 'show-addremove-message-half')\" />
+										<input type=\"button\" value=\"".wfMsg('cancel')."\" size=\"10\" onclick=\"closeFanboxAdd('fanboxPopUpBox{$fanbox["fantag_id"]}', 'individualFanbox{$fanbox["fantag_id"]}')\" />
+										</td>
+									</tr>
+								</table>
+							</div>";
+						} else {
+							$output .= "<div class=\"fanbox-pop-up-box-profile\" id=\"fanboxPopUpBox".$fanbox["fantag_id"]."\">
+								<table cellpadding=\"0\" cellspacing=\"0\" align=\"center\">
+									<tr>
+										<td style=\"font-size:10px\">". wfMsgForContent( 'fanbox-remove-fanbox' ) ."</td>
+									</tr>
+									<tr>
+										<td align=\"center\">
+											<input type=\"button\" value=\"".wfMsg('fanbox-remove')."\" size=\"10\" onclick=\"closeFanboxAdd('fanboxPopUpBox{$fanbox["fantag_id"]}', 'individualFanbox{$fanbox["fantag_id"]}'); showAddRemoveMessageUserPage(2, {$fanbox["fantag_id"]}, 'show-addremove-message-half')\" />
+											<input type=\"button\" value=\"".wfMsg('cancel')."\" size=\"10\" onclick=\"closeFanboxAdd('fanboxPopUpBox{$fanbox["fantag_id"]}', 'individualFanbox{$fanbox["fantag_id"]}')\" />
+										</td>
+									</tr>
+								</table>
+							</div>";
+						}
+					}
+
+					if( $wgUser->getID() == 0 ) {
+						$login = Title::makeTitle(NS_SPECIAL, 'UserLogin');
+						$output .= "<div class=\"fanbox-pop-up-box-profile\" id=\"fanboxPopUpBox".$fanbox["fantag_id"]."\">
+							<table cellpadding=\"0\" cellspacing=\"0\" align=\"center\">
+								<tr>
+									<td style=\"font-size:10px\">". wfMsgForContent( 'fanbox-add-fanbox-login' ) ."<a href=\"{$login->getFullURL()}\">". wfMsgForContent( 'fanbox-login' ) ."</a></td>
+								</tr>
+								<tr>
+									<td align=\"center\">
+										<input type=\"button\" value=\"".wfMsg('cancel')."\" size=\"10\" onclick=\"closeFanboxAdd('fanboxPopUpBox{$fanbox["fantag_id"]}', 'individualFanbox{$fanbox["fantag_id"]}')\" />
+									</td>
+								</tr>
+							</table>
+						</div>";
+					}
+
+				$output .= "</div>";
+
+				$x++;
+			}
+			$output .= "</div>";
+		}
 
 		return $output;
 	}
