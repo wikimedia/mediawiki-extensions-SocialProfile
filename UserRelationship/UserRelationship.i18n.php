@@ -3175,6 +3175,7 @@ $messages['ss'] = array(
 
 /** Swedish (Svenska)
  * @author M.M.S.
+ * @author Najami
  */
 $messages['sv'] = array(
 	'viewrelationships' => 'Visa relationer',
@@ -3205,13 +3206,23 @@ $messages['sv'] = array(
 	'ur-remove-relationship-title-friend' => 'Vill du ta bort $1 som din vän?',
 	'ur-remove-relationship-title-confirm-friend' => 'Du har tagit bort $1 som din vän',
 	'ur-remove-relationship-message-foe' => 'Du har begärt om att ta bort $1 som din fiende, tryck "$2" för att bekräfta.',
+	'ur-remove-relationship-message-confirm-foe' => 'Du har tagit bort $1 som din fiende.',
+	'ur-remove-relationship-message-confirm-friend' => 'Du har tagit bort $1 som din vän.',
 	'ur-remove-error-message-no-relationship' => 'Du har ingen relation med $1.',
 	'ur-remove-error-message-remove-yourself' => 'Du kan inte ta bort dig själv.',
 	'ur-remove-error-message-pending-request' => 'Du har en väntande efterfrågning om att bli $1 med $2 hos $2.',
 	'ur-remove-error-not-loggedin' => 'Du måste logga in för att ta bort en $1.',
+	'ur-remove-error-not-loggedin-foe' => 'Du måste vara inloggad för att ta bort en fiende.',
+	'ur-remove-error-not-loggedin-friend' => 'Du måste vara inloggad för att ta bort en vän.',
 	'ur-remove' => 'Ta bort',
 	'ur-cancel' => 'Avbryt',
 	'ur-login' => 'Logga in',
+	'ur-add-title-foe' => 'Vill du lägga till $1 som din fiende?',
+	'ur-add-title-friend' => 'Vill du lägga till $1 som din vän?',
+	'ur-add-message-foe' => 'Du är i färd med att lägga till $1 som din fiende.
+Vi kommer skicka $1 ett meddelande för att bekräfta fiendeskapet.',
+	'ur-add-message-friend' => 'Du är i färd med att lägga till $1 som din vän.
+Vi kommer skicka $1 ett meddelande för att bekräfta vänskapet.',
 	'ur-friendship' => 'vänskap',
 	'ur-grudge' => 'fiendeskap',
 	'ur-add-button' => 'Lägg till som $1',
@@ -3221,8 +3232,12 @@ $messages['sv'] = array(
 	'ur-add-error-message-blocked' => 'Du är blockerad, och kan inte lägga till vänner eller fiender.',
 	'ur-add-error-message-yourself' => 'Du kan inte lägga till dig själv som vän eller fiende.',
 	'ur-add-error-message-existing-relationship' => 'Du är redan $1 med $2.',
+	'ur-add-error-message-existing-relationship-foe' => 'Du är redan fiende med $1.',
+	'ur-add-error-message-existing-relationship-friend' => 'Du är redan vän med $1.',
 	'ur-add-error-message-pending-request-title' => 'Var tålmodig...',
 	'ur-add-error-message-not-loggedin' => 'Du måste vara inloggad för att lägga till en $1',
+	'ur-add-error-message-not-loggedin-foe' => 'Du måste vara inloggad för att lägga till en fiende',
+	'ur-add-error-message-not-loggedin-friend' => 'Du måste vara inloggad för att lägga till en vän',
 	'ur-requests-title' => 'Relationsefterfrågningar',
 	'ur-requests-message-foe' => '<a href="$1">$2</a> vill bli din fiende.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> vill bli din vän.',
@@ -3231,6 +3246,8 @@ $messages['sv'] = array(
 	'ur-no-requests-message' => 'Du har inga vän- eller fiendeefterfrågningar. Om du vill ha mer vänner, <a href="$1">bjud in dom</a>!',
 	'ur-requests-added-message-foe' => 'Du har lagt till $1 som din fiende.',
 	'ur-requests-added-message-friend' => 'Du har lagt till $1 som din vän.',
+	'ur-requests-reject-message-friend' => 'Du har avvisat $1 som din vän.',
+	'ur-requests-reject-message-foe' => 'Du har avvisat $1 som din fiende.',
 	'ur-title-foe' => '$1s lista över fiender',
 	'ur-title-friend' => '$1s lista över vänner',
 	'friend_request_subject' => '$1 har laggt till dig som vän på {{SITENAME}}!',

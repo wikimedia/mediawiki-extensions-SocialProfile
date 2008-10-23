@@ -4135,9 +4135,12 @@ $messages['su'] = array(
  * @author Jon Harald Søby
  * @author Lokal Profil
  * @author M.M.S.
+ * @author Najami
  */
 $messages['sv'] = array(
 	'populateuserprofiles' => 'Befolka användar profiler',
+	'user-awards-title' => 'Utmärkelser',
+	'user-gifts-title' => 'Presenter',
 	'user-count-separator' => 'av',
 	'user-view-all' => 'Visa alla',
 	'user-upload-image' => 'Ladda upp bild',
