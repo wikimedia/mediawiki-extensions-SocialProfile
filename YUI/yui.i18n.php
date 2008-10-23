@@ -201,9 +201,10 @@ $messages['ps'] = array(
 
 /** Portuguese (Português)
  * @author Malafaya
+ * @author Vanessa Sabino
  */
 $messages['pt'] = array(
-	'yui-desc' => 'Um conjunto de utilitários e controlos, escritos em JavaScript',
+	'yui-desc' => 'Um conjunto de utilitários e controles, escritos em JavaScript',
 );
 
 /** Romanian (Română)
@@ -269,4 +270,5 @@ $messages['vec'] = array(
 $messages['vi'] = array(
 	'yui-desc' => 'Tập hợp các dụng cụ và trình điều khiển được viết bằng JavaScript',
 );
+
 

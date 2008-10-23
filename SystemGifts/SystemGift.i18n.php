@@ -140,3 +140,71 @@ Hei, etkö halua enää saada sähköposteja meiltä?
 Napsauta $5
 ja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.',
 );
+
+/** Portuguese (Português)
+ * @author Vanessa Sabino
+ */
+$messages['pt'] = array(
+	'systemgiftmanager' => 'Gerenciador do Sistema de Presentes', 
+	'ga-addnew' => '+ Adicionar Novo Presente',
+	'ga-back-edit-gift' => 'Voltar para Editar Este Presente',
+	'ga-back-gift-list' => 'Voltar para Lista de Presentes',
+	'ga-back-link' => '<a href="$1">< Voltar para Perfil de $2</a>',
+	'ga-choosefile' => 'Escolher Arquivo:',
+	'ga-count' => '$1 tem $2 {{PLURAL:$2|prêmio|prêmios}}.',
+	'ga-create-gift' => 'Criar presente',
+	'ga-created' => 'O presente foi criado',
+	'ga-currentimage' => 'Imagem Atual',
+	'ga-error-message-invalid-link' => 'O link que você colocou é inválido.',
+	'ga-error-message-no-user' => 'O usuário que você está tentando ver não existe.',
+	'ga-error-title' => 'Ops, você entrou no lugar errado!',
+	'ga-file-instructions' => 'Sua imagem precisa ser um jpeg, png or gif (sem gifs animados), e precisa ter tamanho menor que 100kb.',
+	'ga-gift' => 'presente',
+	'ga-gift-given-count' => 'Este presente foi dado a $1 {{PLURAL:$1|vez|vezes}}',
+	'ga-gift-title' => '"$2" de $1',
+	'ga-giftdesc' => 'descrição do presente',
+	'ga-giftimage' => 'imagem do presente',
+	'ga-giftname' => 'nome do presente',
+	'ga-gifttype' => 'tipo do presente',
+	'ga-goback' => 'Voltar',
+	'ga-imagesbelow' => 'Abaixo estão suas imagens que serão usadas no site',
+	'ga-img' => 'adicionar/substituir imagem',
+	'ga-large' => 'Grande',
+	'ga-medium' => 'Médio',
+	'ga-mediumlarge' => 'Médio/Grande',
+	'ga-new' => 'Novo',
+	'ga-next' => 'Próximo',
+	'ga-previous' => 'Anterior',
+	'ga-recent-recipients-award' => 'Outros ganhadores recentes deste prêmio',
+	'ga-saved' => 'Este presente foi salvo',
+	'ga-small' => 'Pequeno',
+	'ga-threshold' => 'threshold',
+	'ga-title' => 'Presentes de $1',
+	'ga-uploadsuccess' => 'Upload bem sucedido',
+	'ga-viewlist' => 'Ver Lista de Presentes',
+	'system_gift_received_subject' => 'Você recebeu o prêmio $1 em {{SITENAME}}!',
+	'system_gift_received_body' => 'Oi $1:
+
+Você acaba de receber o prêmio $2 em {{SITENAME}}!
+
+"$3"
+
+Clique abaixo para ver sua estante de troféis!
+
+$4
+
+Esperamos que tenha gostado!
+
+Obrigado,
+
+
+O Time de {{SITENAME}}
+
+---
+
+Ei, quer parer de receber e-mails de nós?
+
+Clique $5
+e altere suas preferências para desabilitar e-mails de notificação.'
+);
+

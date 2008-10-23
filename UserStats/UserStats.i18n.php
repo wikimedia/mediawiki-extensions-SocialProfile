@@ -657,6 +657,55 @@ $messages['pl'] = array(
 	'level-advance-subject' => 'Należysz teraz do grupy "$1" na {{SITENAME}}!',
 );
 
+/** Portuguese (Português)
+ * @author Vanessa Sabino
+ */
+$messages['pt'] = array(
+	'user-stats-alltime-title' => 'Mais pontos de todo o tempo',
+	'user-stats-weekly-title' => 'Mais pontos esta semana',
+	'user-stats-monthly-title' => 'Mais pontos deste mês',
+	'topusers' => 'Usuários top',
+	'top-fans-by-points-nav-header' => 'Fãs top',
+	'top-fans-by-category-nav-header' => 'Top por categoria',
+	'top-fans-total-points-link' => 'Pontos totais',
+	'top-fans-weekly-points-link' => 'Pontos esta semana',
+	'top-fans-monthly-points-link' => 'Pontos este mês',
+	'top-fans-points' => 'pontos',
+	'top-fans-by-category-title' => 'Top overall $1',
+	'top-fans-bad-field-title' => 'Ops!',
+	'top-fans-bad-field-message' => 'O status especificado não existe.',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Voto|Votos}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|vencedor do mês|vencedores do mês}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|vencedor da semana|vencedores da semana}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Edição|Edições}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Comentário|Comentários}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Indicação|Indicações}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Amigo|Amigos}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Inimigo|Inimigos}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Opinião publicada|Opiniões publicadas}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinião|Opiniões}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Polegar para cima|Polegares para cima}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Polegar para baixo|Polegares para baixo}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Polegar para cima dado|Polegares para cima dados}}n',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Polegar para baixo dado|Polegares para baixo dados}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Presente recebido|Presentes recebidos}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Presente enviado|Presentes enviados}}',
+	'level-advance-subject' => 'Você agora é um "$1" em {{SITENAME}}!',
+	'level-advance-body' => 'Oi $1:
+
+Você agora é um "$2" em {{SITENAME}}!
+
+Parabéns,
+
+O Time de {{SITENAME}}
+
+---
+Ei, quer parar de receber e-mails de nós?
+
+Clique $3
+e altere suas preferências para desabilitar e-mails de notificação'
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */
@@ -763,4 +812,3 @@ $messages['vo'] = array(
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Küpet|Küpets}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Flen|Flens}}',
 );
-
