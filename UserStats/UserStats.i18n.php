@@ -368,6 +368,22 @@ Faga clic $3
 e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
 );
 
+/** Upper Sorbian (Hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'user-stats-alltime-title' => 'Najwjace dypkow za cyłu dobu',
+	'user-stats-weekly-title' => 'Najwjace dypkow tutón tydźeń',
+	'user-stats-monthly-title' => 'Najwjace dypkow tutón měsac',
+	'topusers' => 'Najlěpši wužiwarjo',
+	'top-fans-by-points-nav-header' => 'Najlěpši přiwisnicy',
+	'top-fans-by-category-nav-header' => 'Najlěpši po kategoriji',
+	'top-fans-total-points-link' => 'Dypki w cyłku',
+	'top-fans-weekly-points-link' => 'Dypki tutón tydźeń',
+	'top-fans-monthly-points-link' => 'Dypki tutón měsac',
+	'top-fans-points' => 'dypki',
+);
+
 /** Interlingua (Interlingua)
  * @author McDutchie
  */
