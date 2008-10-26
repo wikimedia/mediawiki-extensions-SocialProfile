@@ -78,6 +78,7 @@ $aliases['fa'] = array(
 /** Luxembourgish (Lëtzebuergesch) */
 $aliases['lb'] = array(
 	'AddRelationship' => array( 'Relatioun derbäisetzen' ),
+	'PopulateUserProfiles' => array( 'Benotzerprofiler ausfëllen' ),
 	'RemoveAvatar' => array( 'Avatar ewechhuelen' ),
 	'RemoveRelationship' => array( 'Relatioun ewechhuelen' ),
 	'UpdateEditCounts' => array( 'Zielen vun den Ännerungen aktualiséieren' ),
