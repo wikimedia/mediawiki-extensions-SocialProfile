@@ -755,6 +755,13 @@ $2 ви премахна от списъка си с неприятели в {{S
 за промяна на настройките и изключване на възможността за оповестяване по е-поща.',
 );
 
+/** Bosnian (Bosanski)
+ * @author CERminator
+ */
+$messages['bs'] = array(
+	'ur-login' => 'Prijava',
+);
+
 /** Chamorro (Chamoru)
  * @author Jatrobat
  */
@@ -3674,5 +3681,4 @@ $messages['vo'] = array(
 	'ur-friend' => 'flen',
 	'ur-friendship' => 'flenam',
 );
-
 

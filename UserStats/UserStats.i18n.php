@@ -722,6 +722,15 @@ Clique $3
 e altere suas preferências para desabilitar e-mails de notificação'
 );
 
+/** Russian (Русский)
+ * @author Ferrer
+ */
+$messages['ru'] = array(
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Голос|Голосов}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Правка|Правок}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Комментарий|Комментариев}}',
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */
@@ -828,3 +837,4 @@ $messages['vo'] = array(
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Küpet|Küpets}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Flen|Flens}}',
 );
+

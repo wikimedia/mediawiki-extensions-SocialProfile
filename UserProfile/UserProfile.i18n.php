@@ -3854,6 +3854,7 @@ $messages['ro'] = array(
 );
 
 /** Russian (Русский)
+ * @author Ferrer
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
@@ -3875,6 +3876,10 @@ $messages['ru'] = array(
 	'user-send-message' => 'Отправить сообщение',
 	'user-send-gift' => 'Отправить подарок',
 	'user-contributions' => 'Вклад',
+	'user-stats-title' => 'Статистика',
+	'user-stats-edits' => 'Правок',
+	'user-stats-votes' => 'Голосов',
+	'user-stats-comments' => 'Комментарии',
 	'other-info-title' => 'Другие сведения',
 	'user-friends-title' => 'Друзья',
 	'user-foes-title' => 'Неприятели',
@@ -3893,6 +3898,7 @@ $messages['ru'] = array(
 	'custom-info-field3' => 'Пользовательские 3',
 	'custom-info-field4' => 'Пользовательские 4',
 	'custom-no-info' => 'Нет пользовательской информации',
+	'populate-user-profile-done' => 'Добавлено $1 {{PLURAL:$1|профиль|профили}}',
 	'user-board-title' => 'Доска',
 	'user-send-board-blast' => 'Отправить высказывание на доску',
 	'user-personal-info-title' => 'Личные сведения',
@@ -4718,5 +4724,4 @@ $messages['vo'] = array(
 	'user-profile-interests-books' => 'Buks',
 	'user-profile-sports-sport' => 'Spot',
 );
-
 
