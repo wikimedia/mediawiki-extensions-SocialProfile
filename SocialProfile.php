@@ -70,6 +70,10 @@ $wgSpecialPageGroups['UserBoard'] = 'users';
 $wgSpecialPageGroups['ViewRelationshipRequests'] = 'users';
 $wgSpecialPageGroups['ViewRelationships'] = 'users';
 
+// Necessary AJAX functions
+require_once("$IP/extensions/SocialProfile/UserBoard/UserBoard_AjaxFunctions.php");
+require_once("$IP/extensions/SocialProfile/UserRelationship/Relationship_AjaxFunctions.php");
+
 // What to display on social profile pages by default?
 $wgUserProfileDisplay['board'] = true;
 $wgUserProfileDisplay['foes'] = true;
