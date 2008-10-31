@@ -719,7 +719,7 @@ O Time de {{SITENAME}}
 Ei, quer parar de receber e-mails de nós?
 
 Clique $3
-e altere suas preferências para desabilitar e-mails de notificação'
+e altere suas preferências para desabilitar e-mails de notificação',
 );
 
 /** Russian (Русский)

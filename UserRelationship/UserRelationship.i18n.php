@@ -3022,7 +3022,6 @@ Ei, quer parar de receber e-mails de nós?
 
 Clique $4
 e altere suas preferências para desabilitar e-mails de notificação.',
-
 	'friend_accept_subject' => '$1 aceitou você como amigo em {{SITENAME}}!',
 	'friend_accept_body' => 'Oi $1:
 
