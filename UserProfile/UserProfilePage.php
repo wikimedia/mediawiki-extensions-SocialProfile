@@ -418,7 +418,7 @@ class UserProfilePage extends Article {
 		$similar_fans = Title::makeTitle(NS_SPECIAL, "SimilarFans");
 		$update_profile = Title::makeTitle(NS_SPECIAL, "UpdateProfile");
 		$watchlist = Title::makeTitle(NS_SPECIAL, "Watchlist");
-		$contributions = Title::makeTitle(NS_SPECIAL, "Contributions");
+		$contributions = SpecialPage::getTitleFor('Contributions', $user);
 		$send_message = Title::makeTitle(NS_SPECIAL, "UserBoard");
 		$upload_avatar = Title::makeTitle(NS_SPECIAL, "UploadAvatar");
 		$user_page = Title::makeTitle(NS_USER, $user);
@@ -480,7 +480,7 @@ class UserProfilePage extends Article {
 			$output .= "<a href=\"".$give_gift->escapeFullURL('user='.$user_safe)."\" rel=\"nofollow\">".wfMsg('user-send-gift')."</a> |";
 		}
 
-		$output .= "<a href=\"".$contributions->escapeFullURL()."/{$user_safe}\" rel=\"nofollow\">".wfMsg('user-contributions')."</a> ";
+		$output .= "<a href=\"".$contributions->escapeFullURL()."\" rel=\"nofollow\">".wfMsg('user-contributions')."</a> ";
 
 		//Links to User:user_name  from User_profile:
 		if( $wgTitle->getNamespace() == NS_USER_PROFILE && $this->profile_data["user_id"] && $this->profile_data["user_page_type"] == 0){
