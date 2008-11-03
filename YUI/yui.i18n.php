@@ -1,20 +1,16 @@
 <?php
-
-/** Internationalization messages file for YUI extension
-  * @addgroup extension
-**/
+/**
+ * Internationalization messages file for YUI extension
+ *
+ * @file
+ * @ingroup Extensions
+ */
 
 $messages = array();
 
+/** English */
 $messages['en'] = array(
 	'yui-desc' => 'A set of utilities and controls, written in JavaScript',
-);
-
-/** Message documentation (Message documentation)
- * @author Purodha
- */
-$messages['qqq'] = array(
-	'yui-desc' => 'Short description of the Yui extension, shown in [[Special:Version]]. Do not translate or change links.',
 );
 
 /** Afrikaans (Afrikaans)
