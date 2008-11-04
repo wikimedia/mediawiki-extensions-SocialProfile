@@ -48,11 +48,25 @@ $messages['bg'] = array(
 	'yui-desc' => 'Набор от инструменти и контроли, написани на Джаваскрипт',
 );
 
+/** Breton (Brezhoneg)
+ * @author Fulup
+ */
+$messages['br'] = array(
+	'yui-desc' => 'Un heuliad mavegoù ha kontroloù, skrivet e JavaSkript',
+);
+
 /** Czech (Česky)
  * @author Matěj Grabovský
  */
 $messages['cs'] = array(
 	'yui-desc' => 'Sada nástrojů napsaných v JavaScriptu.',
+);
+
+/** German (Deutsch)
+ * @author Revolus
+ */
+$messages['de'] = array(
+	'yui-desc' => 'Eine Sammlung in JavaScript geschriebener Werkzeuge und Steuerelemente',
 );
 
 /** Lower Sorbian (Dolnoserbski)
@@ -266,5 +280,4 @@ $messages['vec'] = array(
 $messages['vi'] = array(
 	'yui-desc' => 'Tập hợp các dụng cụ và trình điều khiển được viết bằng JavaScript',
 );
-
 

@@ -826,6 +826,13 @@ $messages['bg'] = array(
 	'user-profile-picture-log-delete-entry' => 'изтри аватара на $1',
 );
 
+/** Bosnian (Bosanski)
+ * @author CERminator
+ */
+$messages['bs'] = array(
+	'user-profile-personal-name' => 'Ime',
+);
+
 /** Catalan (Català)
  * @author SMP
  */

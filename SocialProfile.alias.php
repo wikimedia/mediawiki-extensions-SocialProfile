@@ -75,6 +75,11 @@ $aliases['fa'] = array(
 	'TopUsers' => array( 'کاربران_برتر' ),
 );
 
+/** Khmer (ភាសាខ្មែរ) */
+$aliases['km'] = array(
+	'TopUsers' => array( 'អ្នកប្រើប្រាស់សកម្មបំផុត' ),
+);
+
 /** Luxembourgish (Lëtzebuergesch) */
 $aliases['lb'] = array(
 	'AddRelationship' => array( 'Relatioun derbäisetzen' ),
