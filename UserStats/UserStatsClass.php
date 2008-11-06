@@ -261,7 +261,7 @@ class UserStatsTrack {
 			$ctg = "Opinions by User " . ($this->user_name);
 			$parser = new Parser();
 			$CtgTitle = Title::newFromText( $parser->transformMsg(trim($ctg), $wgOut->parserOptions() ) );
-			$CtgTitle = $CtgTitle->getDbKey();
+			$CtgTitle = $CtgTitle->getDBKey();
 			$dbr = wfGetDB( DB_MASTER );
 			$sql = "UPDATE ".$wgDBprefix."user_stats SET stats_opinions_created=";
 			$sql .= "(SELECT count(*) AS CreatedOpinions FROM {$dbr->tableName( 'page' )} INNER JOIN {$dbr->tableName( 'categorylinks' )} ON page_id = cl_from WHERE  (cl_to) = " . $dbr->addQuotes($CtgTitle) . " ";
@@ -280,7 +280,7 @@ class UserStatsTrack {
 		$dbr = wfGetDB( DB_MASTER );
 		$ctg = "Opinions by User " . ($this->user_name);
 		$CtgTitle = Title::newFromText( $parser->transformMsg(trim($ctg), $wgOut->parserOptions()) );
-		$CtgTitle = $CtgTitle->getDbKey();
+		$CtgTitle = $CtgTitle->getDBKey();
 		$sql = "UPDATE ".$wgDBprefix."user_stats SET stats_opinions_published = ";
 		$sql .= "(SELECT count(*) AS PromotedOpinions FROM {$dbr->tableName( 'page' )} INNER JOIN {$dbr->tableName( 'categorylinks' )} ON page_id = cl_from INNER JOIN published_page ON page_id=published_page_id WHERE  (cl_to) = " . $dbr->addQuotes($CtgTitle) . " AND published_type=1 " . " " . $timeSQL;
 		$sql .= ")";
