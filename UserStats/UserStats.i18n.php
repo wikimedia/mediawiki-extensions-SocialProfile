@@ -671,6 +671,18 @@ $messages['pl'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Prezent otrzymany|Prezenty otrzymane}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Prezent dany|Prezenty dane}}',
 	'level-advance-subject' => 'Należysz teraz do grupy "$1" na {{SITENAME}}!',
+	'level-advance-body' => 'Witaj $1:
+
+Jesteś teraz zarejestrowany na {{SITENAME}}!
+
+Gratulacje,
+
+Zespół {{SITENAME}}
+
+---
+Jeżeli nie chcesz otrzymywać od nas więcej wiadomości, kliknij na poniższy link i zmień swoje ustawienia powiadamiania:
+
+$3',
 );
 
 /** Portuguese (Português)

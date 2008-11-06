@@ -97,6 +97,13 @@ $messages['gl'] = array(
 	'yui-desc' => 'Unha colección de utilidades e controis escritos en JavaScript',
 );
 
+/** Hebrew (עברית)
+ * @author Rotemliss
+ */
+$messages['he'] = array(
+	'yui-desc' => 'ערכת כלים ובקרים, שנכתבה ב־JavaScript',
+);
+
 /** Upper Sorbian (Hornjoserbsce)
  * @author Michawiki
  */
