@@ -643,6 +643,7 @@ e modificatz vòstres paramètres en desactivant las notificacions per corrièr 
 );
 
 /** Polish (Polski)
+ * @author Leinad
  * @author Maikking
  */
 $messages['pl'] = array(
@@ -673,7 +674,7 @@ $messages['pl'] = array(
 	'level-advance-subject' => 'Należysz teraz do grupy "$1" na {{SITENAME}}!',
 	'level-advance-body' => 'Witaj $1:
 
-Jesteś teraz zarejestrowany na {{SITENAME}}!
+Od teraz jesteś „$2” w {{SITENAME}}!
 
 Gratulacje,
 

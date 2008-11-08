@@ -203,10 +203,11 @@ $messages['oc'] = array(
 );
 
 /** Polish (Polski)
+ * @author Derbeth
  * @author Wpedzich
  */
 $messages['pl'] = array(
-	'yui-desc' => 'Zestaw narzędzi i elementów kontrolnych napisanych w jezyku JavaScript',
+	'yui-desc' => 'Zestaw narzędzi i elementów kontrolnych napisanych w JavaScripcie',
 );
 
 /** Pashto (پښتو)

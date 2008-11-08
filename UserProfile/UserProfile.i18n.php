@@ -2476,6 +2476,7 @@ $messages['lb'] = array(
 	'user-watchlist' => 'Meng Iwwerwaachungslëscht',
 	'user-meet-people' => 'Leit begéinen',
 	'user-add-friend' => 'Als Frënd derbäisetzen',
+	'user-remove-friend' => 'Als Frënd ewechhuelen',
 	'user-send-message' => 'Noriicht schécken',
 	'user-send-gift' => 'Cadeau schécken',
 	'user-contributions' => 'Kontributiounen',
@@ -2573,6 +2574,7 @@ Avatar',
 	'user-type-toggle-old' => "Benotzt d'Wiki-Benotzersäit",
 	'user-type-toggle-new' => 'Sozial-Benotzersäit benotzen',
 	'givegift' => 'E Cadeau maachen',
+	'viewgifts' => 'Cadeaue weisen',
 	'avatarupload-removeanother' => 'En aneren ewechhuelen',
 );
 
