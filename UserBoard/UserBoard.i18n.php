@@ -263,6 +263,13 @@ $messages['bn'] = array(
 	'userboard_delete' => 'মুছে ফেলা হোক',
 );
 
+/** Bosnian (Bosanski)
+ * @author CERminator
+ */
+$messages['bs'] = array(
+	'userboard_delete' => 'Obriši',
+);
+
 /** Czech (Česky)
  * @author Matěj Grabovský
  */
