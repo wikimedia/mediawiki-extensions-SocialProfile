@@ -2595,6 +2595,13 @@ $messages['mhr'] = array(
 	'user-profile-personal-email' => 'Электрон почто',
 );
 
+/** Macedonian (Македонски)
+ * @author Brest
+ */
+$messages['mk'] = array(
+	'user-watchlist' => 'Мои набљудувања',
+);
+
 /** Malayalam (മലയാളം)
  * @author Shijualex
  */
