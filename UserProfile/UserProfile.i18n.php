@@ -671,6 +671,7 @@ $messages['be-tarask'] = array(
  */
 $messages['bg'] = array(
 	'populateuserprofiles' => 'Създаване на потребителските профили',
+	'user-awards-title' => 'Награди',
 	'user-count-separator' => 'от',
 	'user-view-all' => 'Преглед на всички',
 	'user-upload-image' => 'Качване на снимка',
@@ -705,6 +706,7 @@ $messages['bg'] = array(
 	'custom-info-title' => 'Допълнителна информация',
 	'custom-no-info' => 'Не е въведена допълнителна информация',
 	'profile-updated-personal' => 'Обновяване на профила',
+	'populate-user-profile-done' => 'Добавени бяха $1 {{PLURAL:$1|профила|профила}}',
 	'user-board-title' => 'Табло',
 	'user-personal-info-title' => 'Лична информация',
 	'user-no-personal-info' => 'Не е въведена лична информация',
@@ -3741,6 +3743,7 @@ Clique <a href="$1">aqui</a> para logar ou clique <a href="$2">aqui</a> para se 
 	'user-profile-update-profile' => 'perfil',
 	'user-profile-default-country' => 'Brasil',
 	'user-profile-points' => ' pontos',
+	'user-profile-section-personal' => 'Informação pessoal',
 	'user-profile-section-sportsteams' => 'Time esportivo',
 	'user-profile-section-custom' => 'Informação personalizada',
 	'user-profile-section-interests' => 'Outra informação',
@@ -3789,6 +3792,7 @@ Clique <a href="$1">aqui</a> para logar ou clique <a href="$2">aqui</a> para se 
 	'user-profile-tidbits-favathlete' => 'Atleta preferido e por que',
 	'user-profile-tidbits-leastfavathlete' => 'Atleta que menos gosta e por que',
 	'user-profile-sports-sport' => 'Esporte',
+	'user-profile-sports-title' => 'Edite os seus desportos e equipas favoritas',
 	'user-profile-sports-notloggedintitle' => 'Oooops!',
 	'user-profile-sports-notloggedintext' => 'Você precisa estar logado para editar seu perfil.',
 	'user-profile-sports-teamremoved' => 'Seu time foi removido',

@@ -195,6 +195,13 @@ $messages['nl'] = array(
 	'yui-desc' => 'Een verzameling hulpmiddelen en besturingselementen in JavaScript',
 );
 
+/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+ * @author Frokor
+ */
+$messages['nn'] = array(
+	'yui-desc' => 'Ei rekkje verktøy og kontrollar skrive i JavaScript',
+);
+
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Jon Harald Søby
  */
