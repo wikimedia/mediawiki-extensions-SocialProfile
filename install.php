@@ -13,7 +13,13 @@
 
 # We're going to have to assume we are running from
 # extensions/SocialProfile/install.php (the dir name doesn't even matter)
-$maint = dirname( dirname( __FILE__ ) ) . '/maintenance';
+
+$maint = getenv( 'MW_INSTALL_PATH' );
+if( $maint === false )
+	$maint = dirname( dirname( __FILE__ ) ) . '/maintenance';
+else
+	$maint .= '/maintenance';
+
 if( is_file( $maint . '/commandLine.inc' ) ) {
 	require_once( $maint . '/commandLine.inc' );
 } else {
