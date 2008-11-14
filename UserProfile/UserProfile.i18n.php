@@ -833,6 +833,7 @@ $messages['bg'] = array(
  */
 $messages['bs'] = array(
 	'user-profile-personal-name' => 'Ime',
+	'user-profile-personal-birthdate' => 'Datum (MM/DD)',
 );
 
 /** Catalan (Català)

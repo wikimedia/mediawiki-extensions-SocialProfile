@@ -759,6 +759,7 @@ $2 ви премахна от списъка си с неприятели в {{S
  * @author CERminator
  */
 $messages['bs'] = array(
+	'ur-remove' => 'Ukloni',
 	'ur-login' => 'Prijava',
 );
 
