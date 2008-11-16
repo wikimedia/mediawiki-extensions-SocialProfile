@@ -1516,6 +1516,13 @@ $messages['haw'] = array(
 	'ur-remove' => 'Kāpae',
 );
 
+/** Hebrew (עברית)
+ * @author YaronSh
+ */
+$messages['he'] = array(
+	'ur-requests-title' => 'בקשות חברות',
+);
+
 /** Hindi (हिन्दी)
  * @author Kaustubh
  */
@@ -3364,10 +3371,13 @@ $messages['sv'] = array(
 	'ur-remove-relationship-title-confirm-friend' => 'Du har tagit bort $1 som din vän',
 	'ur-remove-relationship-message-foe' => 'Du har begärt om att ta bort $1 som din fiende, tryck "$2" för att bekräfta.',
 	'ur-remove-relationship-message-confirm-foe' => 'Du har tagit bort $1 som din fiende.',
+	'ur-remove-relationship-message-friend' => 'Du har begärt att ta bort $1 som din vän, tryck "$2" för att bekräfta.',
 	'ur-remove-relationship-message-confirm-friend' => 'Du har tagit bort $1 som din vän.',
 	'ur-remove-error-message-no-relationship' => 'Du har ingen relation med $1.',
 	'ur-remove-error-message-remove-yourself' => 'Du kan inte ta bort dig själv.',
 	'ur-remove-error-message-pending-request' => 'Du har en väntande efterfrågning om att bli $1 med $2 hos $2.',
+	'ur-remove-error-message-pending-foe-request' => 'Du har en väntande fiendebegäran hos $1.',
+	'ur-remove-error-message-pending-friend-request' => 'Du har en väntande vänbegäran hos $1.',
 	'ur-remove-error-not-loggedin' => 'Du måste logga in för att ta bort en $1.',
 	'ur-remove-error-not-loggedin-foe' => 'Du måste vara inloggad för att ta bort en fiende.',
 	'ur-remove-error-not-loggedin-friend' => 'Du måste vara inloggad för att ta bort en vän.',

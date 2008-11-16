@@ -1996,6 +1996,37 @@ $messages['haw'] = array(
 	'user-profile-personal-name' => 'Inoa',
 );
 
+/** Hebrew (עברית)
+ * @author YaronSh
+ */
+$messages['he'] = array(
+	'edit-profile-title' => 'ערוך את הפרופיל',
+	'user-page-link' => 'דף המשתמש',
+	'user-social-profile-link' => 'פרופיל קהילתי',
+	'user-wiki-link' => 'דף משתמש ויקי',
+	'update_profile_nav' => '* Special:UpdateProfile|מידע אישי
+* Special:UpdateProfile/personal|מידע אחר
+* Special:UpdateProfile/custom|מידע מותאם אישי
+* Special:UploadAvatar|תמונת משתמש
+* Special:UpdateProfile/preferences|העדפות',
+	'user-type-toggle-old' => 'השתמשו בדף משתמש ויקי',
+	'user-type-toggle-new' => 'השתמשו בדף משתמש קהילתי',
+	'user-board-login-message' => 'עליכם להיות <a href="$1">מחוברים</a> כדי לפרסם הודעות למשתמשים אחרים',
+	'removeavatar' => 'הסרת התמונה האישית',
+	'givegift' => 'הענקת מתנה',
+	'viewgifts' => 'הצגת מתנות',
+	'viewsystemgifts' => 'הצגת מענקים',
+	'avatarupload-removeavatar' => 'הסרת תמונה אישית',
+	'avatarupload-currentavatar' => 'תמונת המשתמש $1',
+	'avatarupload-removesuccess' => 'תמונת המשתמש הוסרה בהצלחה',
+	'avatarupload-removeanother' => 'הסרת נוספת',
+	'profilelogpage' => 'יומן עריכות פרופיל המשתמש',
+	'profilelogpagetext' => 'זהו יומן עריכות פרופיל המשתמש',
+	'avatarlogpage' => 'יומן העלאות תמונת המשתמש',
+	'avatarlogpagetext' => 'זהו יומן העלאות תמונת המשתמש',
+	'user-profile-picture-log-delete-entry' => 'תמונת המשתמש של $1 נמחקה',
+);
+
 /** Hindi (हिन्दी)
  * @author Kaustubh
  */
@@ -4738,5 +4769,12 @@ $messages['vo'] = array(
 	'user-profile-interests-music' => 'Musig',
 	'user-profile-interests-books' => 'Buks',
 	'user-profile-sports-sport' => 'Spot',
+);
+
+/** Yiddish (ייִדיש)
+ * @author פוילישער
+ */
+$messages['yi'] = array(
+	'user-profile-section-preferences' => 'פרעפֿערענצן',
 );
 
