@@ -1997,34 +1997,35 @@ $messages['haw'] = array(
 );
 
 /** Hebrew (עברית)
+ * @author Rotemliss
  * @author YaronSh
  */
 $messages['he'] = array(
-	'edit-profile-title' => 'ערוך את הפרופיל',
+	'edit-profile-title' => 'עריכת הפרופיל',
 	'user-page-link' => 'דף המשתמש',
-	'user-social-profile-link' => 'פרופיל קהילתי',
-	'user-wiki-link' => 'דף משתמש ויקי',
+	'user-social-profile-link' => 'הפרופיל הקהילתי',
+	'user-wiki-link' => 'דף המשתמש של הוויקי',
 	'update_profile_nav' => '* Special:UpdateProfile|מידע אישי
 * Special:UpdateProfile/personal|מידע אחר
-* Special:UpdateProfile/custom|מידע מותאם אישי
-* Special:UploadAvatar|תמונת משתמש
+* Special:UpdateProfile/custom|מידע מותאם אישית
+* Special:UploadAvatar|תמונת המשתמש
 * Special:UpdateProfile/preferences|העדפות',
-	'user-type-toggle-old' => 'השתמשו בדף משתמש ויקי',
-	'user-type-toggle-new' => 'השתמשו בדף משתמש קהילתי',
-	'user-board-login-message' => 'עליכם להיות <a href="$1">מחוברים</a> כדי לפרסם הודעות למשתמשים אחרים',
+	'user-type-toggle-old' => 'שימוש בדף המשתמש של הוויקי',
+	'user-type-toggle-new' => 'שימוש בדף המשתמש הקהילתי',
+	'user-board-login-message' => 'עליכם לבצע <a href="$1">כניסה לחשבון</a> כדי לשלוח הודעות למשתמשים אחרים',
 	'removeavatar' => 'הסרת התמונה האישית',
 	'givegift' => 'הענקת מתנה',
 	'viewgifts' => 'הצגת מתנות',
-	'viewsystemgifts' => 'הצגת מענקים',
+	'viewsystemgifts' => 'הצגת פרסים',
 	'avatarupload-removeavatar' => 'הסרת תמונה אישית',
 	'avatarupload-currentavatar' => 'תמונת המשתמש $1',
 	'avatarupload-removesuccess' => 'תמונת המשתמש הוסרה בהצלחה',
 	'avatarupload-removeanother' => 'הסרת נוספת',
 	'profilelogpage' => 'יומן עריכות פרופיל המשתמש',
-	'profilelogpagetext' => 'זהו יומן עריכות פרופיל המשתמש',
+	'profilelogpagetext' => 'זהו יומן העריכות של פרופיל המשתמש',
 	'avatarlogpage' => 'יומן העלאות תמונת המשתמש',
 	'avatarlogpagetext' => 'זהו יומן העלאות תמונת המשתמש',
-	'user-profile-picture-log-delete-entry' => 'תמונת המשתמש של $1 נמחקה',
+	'user-profile-picture-log-delete-entry' => 'מחק את תמונת המשתמש של $1',
 );
 
 /** Hindi (हिन्दी)
