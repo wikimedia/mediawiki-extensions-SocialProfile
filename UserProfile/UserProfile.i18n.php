@@ -1210,6 +1210,7 @@ $messages['eo'] = array(
 	'user-personal-info-about-me' => 'Pri mi',
 	'user-recent-activity-title' => 'Lasta aktiveco',
 	'user-recent-activity-edit' => 'Redaktis la paĝon',
+	'user-recent-activity-gift-sent' => 'Sendis donaĵon al',
 	'user-recent-activity-friend' => 'Nun estas amiko kun',
 	'user-recent-activity-foe' => 'Nun estas malamiko kun',
 	'user-recent-activity-user-message' => 'Sendis mesaĝon al',

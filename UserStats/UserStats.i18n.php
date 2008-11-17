@@ -235,6 +235,7 @@ $messages['eo'] = array(
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinio|Opinioj}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Donaco ricevita|Donacoj ricevita}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Donaco sendita|Donacoj senditaj}}',
+	'level-advance-subject' => 'Vi nun estas "$1" en {{SITENAME}}!',
 );
 
 /** Finnish (Suomi)
