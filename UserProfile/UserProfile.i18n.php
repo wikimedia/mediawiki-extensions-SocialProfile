@@ -672,6 +672,7 @@ $messages['be-tarask'] = array(
 $messages['bg'] = array(
 	'populateuserprofiles' => 'Създаване на потребителските профили',
 	'user-awards-title' => 'Награди',
+	'user-gifts-title' => 'Подаръци',
 	'user-count-separator' => 'от',
 	'user-view-all' => 'Преглед на всички',
 	'user-upload-image' => 'Качване на снимка',
@@ -1976,6 +1977,15 @@ $messages['gl'] = array(
 	'user-profile-picture-log-delete-entry' => 'borrou o avatar de $1',
 );
 
+/** Ancient Greek (Ἀρχαία ἑλληνικὴ)
+ * @author Crazymadlover
+ */
+$messages['grc'] = array(
+	'user-personal-info-real-name' => 'ἀληθὲς ὄνομα',
+	'user-profile-personal-name' => 'Ὄνομα',
+	'user-profile-personal-email' => 'Ἠλεκτρονικαὶ ἐπιστολαί',
+);
+
 /** Gujarati (ગુજરાતી)
  * @author Dsvyas
  */
@@ -2002,6 +2012,7 @@ $messages['haw'] = array(
  * @author YaronSh
  */
 $messages['he'] = array(
+	'user-count-separator' => 'מתוך',
 	'edit-profile-title' => 'עריכת הפרופיל',
 	'user-page-link' => 'דף המשתמש',
 	'user-social-profile-link' => 'הפרופיל הקהילתי',

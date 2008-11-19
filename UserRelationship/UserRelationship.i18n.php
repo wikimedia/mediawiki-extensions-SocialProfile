@@ -1499,8 +1499,10 @@ e troque as súas configuracións para deshabilitar as notificacións por correo
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)
  * @author AndreasJS
+ * @author Crazymadlover
  */
 $messages['grc'] = array(
+	'ur-cancel' => 'Ἀκυροῦν',
 	'ur-login' => 'Συνδεῖσθαι',
 );
 

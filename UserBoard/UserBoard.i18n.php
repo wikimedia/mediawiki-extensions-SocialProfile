@@ -240,6 +240,7 @@ $messages['bg'] = array(
 	'userboard_owner' => 'Табло на $1',
 	'userboard_backprofile' => 'Връщане към профила на $1',
 	'userboard_backyourprofile' => 'Обратно към профила ми',
+	'userboard_boardtoboard' => 'Табло-до-табло',
 	'userboard_confirmdelete' => 'Необходимо е потвърждение за изтриване на съобщението.',
 	'userboard_sendmessage' => 'Изпращане на съобщение до $1',
 	'userboard_myboard' => 'Моето табло',

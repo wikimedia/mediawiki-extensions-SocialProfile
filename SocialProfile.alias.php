@@ -69,6 +69,20 @@ $aliases['arz'] = array(
 	'ViewRelationships' => array( 'عرض_العلاقات' ),
 );
 
+/** German (Deutsch) */
+$aliases['de'] = array(
+	'AddRelationship' => array( 'Verbindung hinzufügen' ),
+	'PopulateUserProfiles' => array( 'Populäre Profile' ),
+	'RemoveAvatar' => array( 'Avatar entfernen' ),
+	'RemoveRelationship' => array( 'Verbindung entfernen' ),
+	'TopUsers' => array( 'Top-Benutzer' ),
+	'TopUsersRecent' => array( 'Letzte Top-Benutzer' ),
+	'UpdateProfile' => array( 'Profil aktualisieren' ),
+	'UploadAvatar' => array( 'Avatar hochladen' ),
+	'ViewRelationshipRequests' => array( 'Verbindungsgesuche betrachten' ),
+	'ViewRelationships' => array( 'Verbindungen betrachten' ),
+);
+
 /** Persian (فارسی) */
 $aliases['fa'] = array(
 	'AddRelationship' => array( 'افزودن_رابطه' ),

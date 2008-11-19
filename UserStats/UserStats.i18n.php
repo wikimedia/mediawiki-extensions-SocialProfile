@@ -369,6 +369,56 @@ Faga clic $3
 e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
 );
 
+/** Hebrew (עברית)
+ * @author Rotemliss
+ * @author YaronSh
+ */
+$messages['he'] = array(
+	'user-stats-alltime-title' => 'מספר הנקודות המירבי בכל הזמנים',
+	'user-stats-weekly-title' => 'מספר הנקודות המירבי השבוע',
+	'user-stats-monthly-title' => 'מספר הנקודות המירבי החודש',
+	'topusers' => 'המשתמשים המובילים',
+	'top-fans-by-points-nav-header' => 'המעריצים המובילים',
+	'top-fans-by-category-nav-header' => 'מובילים לפי קטגוריה',
+	'top-fans-total-points-link' => 'סך כל הנקודות',
+	'top-fans-weekly-points-link' => 'נקודות השבוע',
+	'top-fans-monthly-points-link' => 'נקודות החודש',
+	'top-fans-points' => 'נקודות',
+	'top-fans-by-category-title' => 'סך כל המובילים $1',
+	'top-fans-bad-field-title' => 'אופס!',
+	'top-fans-bad-field-message' => 'הסטטיסטיקה שצוינה אינה קיימת.',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|הצבעה|הצבעות}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|נצחון חודשי|נצחונות חודשיים}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|נצחון שבועי|נצחונות שבועיים}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|עריכה|עריכות}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|הערה|הערות}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|הפניה|הפניות}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|חבר|חברים}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|יריב|יריבים}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|דעה שפורסמה|דעות שפורסמו}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|דעה|דעות}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|המלצה|המלצות}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|גינוי|גינויים}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|ניתנה המלצה|ניתנו המלצות}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|ניתן גינוי|ניתנו גינויים}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|התקבלה מתנה|התקבלו מתנות}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|נשלחה מתנה|נשלחו מתנות}}',
+	'level-advance-subject' => 'כעת הינכם  "$1" ב{{grammar:תחילית|{{SITENAME}}}}!',
+	'level-advance-body' => 'שלום $1:
+
+כעת הנכם "$2" ב{{grammar:תחילית|{{SITENAME}}}}!
+
+ברכותינו,
+
+צוות {{SITENAME}}
+
+---
+מעוניינים להפסיק לקבל מאיתנו הודעות?
+
+לחצו $3
+ושנו את הגדרותיכם כדי לבטל התראות בדואר אלקטרוני.',
+);
+
 /** Upper Sorbian (Hornjoserbsce)
  * @author Michawiki
  */
