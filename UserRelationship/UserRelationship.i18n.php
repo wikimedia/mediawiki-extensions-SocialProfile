@@ -2038,6 +2038,7 @@ $messages['lb'] = array(
 	'ur-foe' => 'Géigner',
 	'ur-add-friend' => 'Als Frënd derbäisetzen',
 	'ur-add-personal-message' => 'Eng perséinlech Noriicht derbäisetzen',
+	'ur-remove-relationship-friend' => 'Als Frënd ewechhuelen',
 	'ur-give-gift' => 'Cadeau schécken',
 	'ur-previous' => 'vireg',
 	'ur-next' => 'nächst',
