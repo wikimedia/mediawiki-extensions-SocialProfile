@@ -2013,6 +2013,7 @@ $messages['haw'] = array(
  */
 $messages['he'] = array(
 	'user-count-separator' => 'מתוך',
+	'user-view-all' => 'הצגת הכול',
 	'edit-profile-title' => 'עריכת הפרופיל',
 	'user-page-link' => 'דף המשתמש',
 	'user-social-profile-link' => 'הפרופיל הקהילתי',
