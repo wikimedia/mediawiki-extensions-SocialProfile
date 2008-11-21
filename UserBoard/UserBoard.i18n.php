@@ -645,6 +645,13 @@ $messages['got'] = array(
 	'userboard_delete' => 'Taíran',
 );
 
+/** Ancient Greek (Ἀρχαία ἑλληνικὴ)
+ * @author Crazymadlover
+ */
+$messages['grc'] = array(
+	'userboard_delete' => 'Σβεννύναι',
+);
+
 /** Hakka (Hak-kâ-fa)
  * @author Hakka
  */

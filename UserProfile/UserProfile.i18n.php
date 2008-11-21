@@ -1984,6 +1984,7 @@ $messages['grc'] = array(
 	'user-personal-info-real-name' => 'ἀληθὲς ὄνομα',
 	'user-profile-personal-name' => 'Ὄνομα',
 	'user-profile-personal-email' => 'Ἠλεκτρονικαὶ ἐπιστολαί',
+	'user-page-link' => 'Δέλτος χρωμένου',
 );
 
 /** Gujarati (ગુજરાતી)
@@ -3643,7 +3644,7 @@ $messages['pl'] = array(
  */
 $messages['ps'] = array(
 	'user-view-all' => 'ټول کتل',
-	'user-watchlist' => 'زما کتلی لړليک',
+	'user-watchlist' => 'زما کتنلړليک',
 	'user-meet-people' => 'د خلکو سره ليدل',
 	'user-add-friend' => 'خپل په ملګرو کې ورګډول',
 	'user-send-message' => 'يو پيغام استول',

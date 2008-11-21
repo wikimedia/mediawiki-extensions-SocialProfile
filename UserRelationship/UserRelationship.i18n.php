@@ -1502,6 +1502,7 @@ e troque as súas configuracións para deshabilitar as notificacións por correo
  * @author Crazymadlover
  */
 $messages['grc'] = array(
+	'ur-main-page' => 'Κυρία Δέλτος',
 	'ur-cancel' => 'Ἀκυροῦν',
 	'ur-login' => 'Συνδεῖσθαι',
 );
