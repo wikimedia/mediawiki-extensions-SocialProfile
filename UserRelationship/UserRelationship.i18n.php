@@ -1522,9 +1522,30 @@ $messages['haw'] = array(
 );
 
 /** Hebrew (עברית)
+ * @author Rotemliss
  * @author YaronSh
  */
 $messages['he'] = array(
+	'viewrelationships' => 'צפייה בקשרים',
+	'viewrelationshiprequests' => 'צפייה בבקשות לקשר',
+	'ur-already-submitted' => 'בקשתכם נשלחה',
+	'ur-error-page-title' => 'אופס!',
+	'ur-error-title' => 'אופס, זאת לא הפנייה הנכונה!',
+	'ur-error-message-no-user' => 'לא נוכל להשלים את בקשתכם, כיוון שלא קיים משתמש בשם זה.',
+	'ur-main-page' => 'עמוד ראשי',
+	'ur-your-profile' => 'הפרופיל שלכם',
+	'ur-backlink' => '&lt; חזרה לפרופיל של $1',
+	'ur-friend' => 'חבר',
+	'ur-foe' => 'יריב',
+	'ur-relationship-count-foes' => 'ל־$1 יש {{PLURAL:$2|יריב אחד|$2 יריבים}}. מעוניינים ביריבים נוספים? <a href="$3">הזמינו אותם.</a>',
+	'ur-relationship-count-friends' => 'ל־$1 יש {{PLURAL:$2|חבר אחד|$2 חברים}}. מעוניינים בחברים נוספים? <a href="$3">הזמינו אותם.</a>',
+	'ur-add-friends' => '  מעוניינים בחברים נוספים? <a href="$1">הזמינו אותם</a>',
+	'ur-add-friend' => 'הוספה כחבר',
+	'ur-add-foe' => 'הוספה כיריב',
+	'ur-add-no-user' => 'לא נבחרו משתמשים.
+אנא בקשו חברות/יריבות דרך הקישור הנכון.',
+	'ur-add-personal-message' => 'הוספת הודעה אישית',
+	'ur-remove-relationship-friend' => 'הסרת חברות',
 	'ur-requests-title' => 'בקשות חברות',
 );
 
@@ -2050,6 +2071,7 @@ $messages['lb'] = array(
 	'ur-cancel' => 'Annulléieren',
 	'ur-login' => 'Umellen',
 	'ur-friendship' => 'Frëndschaft',
+	'ur-add-button' => 'Als $1 derbäisetzen',
 	'ur-add-button-friend' => 'Als Frënd derbäisetzen',
 	'ur-add-error-message-no-user' => 'De Benotzer den Dir versicht derbäizesetzen gëtt et net.',
 	'ur-add-error-message-blocked' => 'Dir sidd elo gespaart a kënnt dofir keng Frënn oder Géigner derbäisetzen.',
@@ -3114,6 +3136,7 @@ $messages['ro'] = array(
 );
 
 /** Russian (Русский)
+ * @author Ferrer
  * @author Flrn
  * @author Innv
  */
@@ -3121,6 +3144,7 @@ $messages['ru'] = array(
 	'ur-already-submitted' => 'Ваш запрос был отправлен',
 	'ur-main-page' => 'Заглавная страница',
 	'ur-your-profile' => 'Ваш профиль',
+	'ur-accept' => 'Принять',
 );
 
 /** Tachelhit (Tašlḥiyt)
