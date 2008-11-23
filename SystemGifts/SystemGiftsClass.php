@@ -1,6 +1,6 @@
 <?php
 /**
- *
+ * SystemGifts class
  */
 class SystemGifts {
 
@@ -9,20 +9,20 @@ class SystemGifts {
 	 * Please use the accessor functions
 	 */
 	var $categories = array(
-		"edit" => 1,
-		"vote" => 2,
-		"comment" => 3,
-		"comment_plus" => 4,
-		"opinions_created" => 5,
-		"opinions_pub" => 6,
-		"referral_complete" => 7,
-		"friend" => 8,
-		"foe" => 9,
-		"challenges_won" => 10,
-		"gift_rec" => 11,
-		"points_winner_weekly" => 12,
-		"points_winner_monthly" => 13,
-		"quiz_points" => 14
+		'edit' => 1,
+		'vote' => 2,
+		'comment' => 3,
+		'comment_plus' => 4,
+		'opinions_created' => 5,
+		'opinions_pub' => 6,
+		'referral_complete' => 7,
+		'friend' => 8,
+		'foe' => 9,
+		'challenges_won' => 10,
+		'gift_rec' => 11,
+		'points_winner_weekly' => 12,
+		'points_winner_monthly' => 13,
+		'quiz_points' => 14
 	);
 
 	/**
@@ -36,7 +36,7 @@ class SystemGifts {
 	public function update_system_gifts(){
 		global $IP, $wgOut, $wgMemc, $wgDBprefix;
 
-		$dbr = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_MASTER );
 		$stats = new UserStatsTrack(1, "");
 		$this->categories = array_flip($this->categories); 
 
@@ -44,22 +44,22 @@ class SystemGifts {
 			FROM ".$wgDBprefix."system_gift
 			ORDER BY gift_category,gift_threshold ASC";
 
-		$res = $dbr->query($sql);
+		$res = $dbw->query($sql);
 		$x = 1;
-		while( $row = $dbr->fetchObject( $res ) ) {
+		while( $row = $dbw->fetchObject( $res ) ) {
 
 			if( $row->gift_category ){
 				$sql2 = "SELECT stats_user_id, stats_user_name
 					FROM ".$wgDBprefix."user_stats
-					WHERE " . $stats->stats_fields[ $this->categories[$row->gift_category]] . " >= {$row->gift_threshold}
-					and stats_user_id<>0";
+					WHERE " . $stats->stats_fields[$this->categories[$row->gift_category]] . " >= {$row->gift_threshold}
+					AND stats_user_id<>0";
 
-				$res2 = $dbr->query($sql2);
+				$res2 = $dbw->query($sql2);
 
-				while( $row2 = $dbr->fetchObject( $res2 ) ) {
+				while( $row2 = $dbw->fetchObject( $res2 ) ) {
 					if( $this->doesUserHaveGift($row2->stats_user_id, $row->gift_id) == false ){
 
-						$dbr->insert( 'user_system_gift',
+						$dbw->insert( 'user_system_gift',
 						array(
 							'sg_gift_id' => $row->gift_id,
 							'sg_user_id' => $row2->stats_user_id,
@@ -72,7 +72,7 @@ class SystemGifts {
 						$sg_key = wfMemcKey( 'user', 'profile', 'system_gifts', "{$row2->stats_user_id}" );
 						$wgMemc->delete($sg_key);
 
-						$wgOut->addHTML( $row2->stats_user_name. " got ". $row->gift_name . "<br />");
+						$wgOut->addHTML( $row2->stats_user_name. " got ". $row->gift_name . "<br />" );
 						$x++;
 					}
 				}
@@ -93,8 +93,8 @@ class SystemGifts {
 
 	public function addGift( $gift_name, $gift_description, $gift_category, $gift_threshold ){
 		$user_id_to = User::idFromName($user_to);
-		$dbr = wfGetDB( DB_MASTER );
-		$dbr->insert( 'system_gift',
+		$dbw = wfGetDB( DB_MASTER );
+		$dbw->insert( 'system_gift',
 		array(
 			'gift_name' => $gift_name,
 			'gift_description' => $gift_description,
@@ -103,7 +103,7 @@ class SystemGifts {
 			'gift_createdate' => date("Y-m-d H:i:s"),
 			), __METHOD__
 		);	
-		return $dbr->insertId();
+		return $dbw->insertId();
 	}
 
 	public function updateGift( $id, $gift_name, $gift_description, $gift_category, $gift_threshold ){
@@ -164,7 +164,7 @@ class SystemGifts {
 		global $wgDBprefix;
 		$dbr = wfGetDB( DB_SLAVE );
 
-		$limit_sql = ""; // Prevent E_NOTICE
+		$limit_sql = ''; // Prevent E_NOTICE
 		if( $limit > 0 ){
 			$limitvalue = 0;
 			if( $page ) $limitvalue = $page * $limit - ($limit); 
@@ -179,13 +179,13 @@ class SystemGifts {
 		$res = $dbr->query($sql);
 		while( $row = $dbr->fetchObject( $res ) ) {
 			$gifts[] = array(
-				"id" => $row->gift_id,
-				"timestamp" => ($row->gift_timestamp ),
-				"gift_name" => $row->gift_name,
-				"gift_description" => $row->gift_description,
-				"gift_category" => $row->gift_category,
-				"gift_threshold" => $row->gift_threshold,
-				"gift_given_count" => $row->gift_given_count
+				'id' => $row->gift_id,
+				'timestamp' => ($row->gift_timestamp),
+				'gift_name' => $row->gift_name,
+				'gift_description' => $row->gift_description,
+				'gift_category' => $row->gift_category,
+				'gift_threshold' => $row->gift_threshold,
+				'gift_given_count' => $row->gift_given_count
 			);
 		}
 		return $gifts;

@@ -2,8 +2,11 @@
 
 class PopulateAwards extends UnlistedSpecialPage {
 
-	function __construct(){
-		parent::__construct('PopulateAwards');
+	/**
+	 * Constructor
+	 */
+	public function __construct(){
+		parent::__construct('PopulateAwards'/*class*/, 'populateawards' /*restriction*/);
 	}
 
 	/**
@@ -11,17 +14,30 @@ class PopulateAwards extends UnlistedSpecialPage {
 	 *
 	 * @param $gift_category Mixed: parameter passed to the page or null
 	 */
-	function execute( $gift_category ){
-		global $wgUser, $wgOut, $wgMemc; 
-		$dbr = wfGetDB( DB_MASTER );
+	public function execute( $gift_category ){
+		global $wgUser, $wgOut, $wgMemc;
+		$this->setHeaders();
 
-		if( !in_array('staff', ($wgUser->getGroups()) ) ){
-			$wgOut->errorpage( 'error', 'badaccess' );
-			return false;
+		# If user is blocked, s/he doesn't need to access this page
+		if ( $wgUser->isBlocked() ) {
+			$wgOut->blockedPage();
+			return;
+		}
+
+		# Show a message if the database is in read-only mode
+		if ( wfReadOnly() ) {
+			$wgOut->readOnlyPage();
+			return;
+		}
+
+		# If the user doesn't have the required 'awardsmanage' permission, display an error
+		if( !$wgUser->isAllowed( 'awardsmanage' ) ) {
+			$wgOut->permissionRequired( 'awardsmanage' );
+			return;
 		}
  
 		global $wgUserLevels;
-		$wgUserLevels = "";
+		$wgUserLevels = '';
 
 		$g = new SystemGifts();
 		$g->update_system_gifts();
