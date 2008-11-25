@@ -2560,6 +2560,7 @@ $messages['lb'] = array(
 	'user-recent-activity-vote' => 'Bewertung vun der Säit',
 	'user-recent-activity-comment' => 'emierkung op der Säit',
 	'user-recent-activity-gift-sent' => 'Cadeau geschéckt u(n)',
+	'user-recent-activity-user-message' => 'Message geschéckt un',
 	'user-recent-system-gift' => 'Huet e Präis kritt',
 	'user-profile-update-notloggedin-title' => 'Dir kënnt äre Profil net änneren wann dir net ageloggt sidd',
 	'user-profile-update-saved' => 'Äre Profil gouf ofgespäichert',
@@ -2625,6 +2626,7 @@ Avatar',
 	'givegift' => 'E Cadeau maachen',
 	'viewgifts' => 'Cadeaue weisen',
 	'avatarupload-removeanother' => 'En aneren ewechhuelen',
+	'profilelogpage' => 'Lëscht vun den Ännerunge vum Benotzerprofil',
 );
 
 /** Lithuanian (Lietuvių)
@@ -3912,6 +3914,24 @@ $messages['ro'] = array(
 	'user-profile-picture-large' => 'Mare',
 	'user-profile-picture-medium' => 'Mediu',
 	'user-profile-picture-small' => 'Mic',
+);
+
+/** Tarandíne (Tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'user-profile-default-country' => 'Tarde',
+	'user-profile-section-picture' => 'Avatar',
+	'user-profile-personal-info' => "'Mbormaziune",
+	'user-profile-personal-name' => 'Nome',
+	'user-profile-personal-email' => 'E-mail',
+	'user-profile-personal-confirmemail' => "Conferme l'e-mail",
+	'user-profile-personal-location' => 'Località',
+	'user-profile-personal-city' => 'Cetate',
+	'user-profile-personal-country' => 'Paise',
+	'user-profile-personal-birthday' => 'Date de nascite',
+	'user-profile-personal-web' => 'Web',
+	'user-profile-picture-log' => 'avatar',
 );
 
 /** Russian (Русский)
