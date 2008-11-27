@@ -152,3 +152,10 @@ $aliases['no'] = array(
 	'UploadAvatar' => array( 'Oppdater profilbilde' ),
 );
 
+/** Swahili (Kiswahili) */
+$aliases['sw'] = array(
+	'AddRelationship' => array( 'WekaMahusiano' ),
+	'PopulateUserProfiles' => array( 'JazaProfailizaMtumiaji' ),
+	'RemoveRelationship' => array( 'OndoaMahusiano' ),
+);
+
