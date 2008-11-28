@@ -759,7 +759,13 @@ $2 ви премахна от списъка си с неприятели в {{S
  * @author CERminator
  */
 $messages['bs'] = array(
+	'ur-main-page' => 'Početna stranica',
+	'ur-your-profile' => 'Vaš profil',
+	'ur-friend' => 'prijatelj',
+	'ur-previous' => 'preth',
+	'ur-next' => 'slijedeći',
 	'ur-remove' => 'Ukloni',
+	'ur-cancel' => 'Odustani',
 	'ur-login' => 'Prijava',
 );
 
