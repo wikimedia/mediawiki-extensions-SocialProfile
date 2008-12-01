@@ -146,6 +146,13 @@ $messages['is'] = array(
 	'yui-desc' => 'Sett af hjálparforritum og stjórntækjum, skrifum í JavaScript',
 );
 
+/** Japanese (日本語)
+ * @author Aotake
+ */
+$messages['ja'] = array(
+	'yui-desc' => 'JavaScriptで書かれた各種ユーティリティとコントロール',
+);
+
 /** Javanese (Basa Jawa)
  * @author Meursault2004
  */
@@ -244,6 +251,13 @@ $messages['pt'] = array(
  */
 $messages['ro'] = array(
 	'yui-desc' => 'O serie de utilitzare şi controale, în JavaScript',
+);
+
+/** Tarandíne (Tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'yui-desc' => "'N'inzieme de utilità e condrolle, scritte in Javascript",
 );
 
 /** Russian (Русский)

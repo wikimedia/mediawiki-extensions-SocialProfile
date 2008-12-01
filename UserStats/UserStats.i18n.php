@@ -225,6 +225,7 @@ $messages['el'] = array(
  * @author Yekrats
  */
 $messages['eo'] = array(
+	'top-fans-total-points-link' => 'Tutaj poentoj',
 	'top-fans-points' => 'poentoj',
 	'top-fans-bad-field-title' => 'Ho ve!',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Voĉdono|Voĉdonoj}}',

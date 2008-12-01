@@ -1580,6 +1580,14 @@ $messages['hr'] = array(
 	'ur-remove' => 'Ukloni',
 );
 
+/** Hungarian (Magyar)
+ * @author Bdamokos
+ */
+$messages['hu'] = array(
+	'ur-error-page-title' => 'Upsz!',
+	'ur-main-page' => 'Kezdőlap',
+);
+
 /** Interlingua (Interlingua)
  * @author McDutchie
  */
@@ -2085,6 +2093,7 @@ $messages['lb'] = array(
 	'ur-add-error-message-blocked' => 'Dir sidd elo gespaart a kënnt dofir keng Frënn oder Géigner derbäisetzen.',
 	'ur-add-error-message-yourself' => 'Dir kënnt Iech net selwer als Feind oder Frënd derbäisetzen.',
 	'ur-add-error-message-pending-request-title' => 'Gedold!',
+	'ur-add-error-message-not-loggedin-friend' => 'Dir musst ageloggt si fir a Frënd derbäizesetzen',
 	'ur-accept' => 'Akzeptéieren',
 	'ur-reject' => 'Refuséieren',
 	'ur-no-requests-message' => 'Dir hutt keng Ufroen fir Frënn oder Géigner.
