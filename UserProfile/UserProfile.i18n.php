@@ -278,6 +278,13 @@ $messages['af'] = array(
 	'user-profile-goback' => 'Terug',
 );
 
+/** Aragonese (Aragonés)
+ * @author Juanpabl
+ */
+$messages['an'] = array(
+	'user-profile-personal-birthdate' => 'Calendata (MM/DD)',
+);
+
 /** Arabic (العربية)
  * @author Alnokta
  * @author Meno25
