@@ -282,6 +282,7 @@ $messages['af'] = array(
  * @author Juanpabl
  */
 $messages['an'] = array(
+	'user-profile-personal-name' => 'Nombre',
 	'user-profile-personal-birthdate' => 'Calendata (MM/DD)',
 );
 
@@ -1989,6 +1990,7 @@ $messages['gl'] = array(
  */
 $messages['grc'] = array(
 	'user-personal-info-real-name' => 'ἀληθὲς ὄνομα',
+	'user-profile-section-preferences' => 'Αἱρέσεις',
 	'user-profile-personal-name' => 'Ὄνομα',
 	'user-profile-personal-email' => 'Ἠλεκτρονικαὶ ἐπιστολαί',
 	'user-page-link' => 'Δέλτος χρωμένου',
@@ -2408,6 +2410,7 @@ $messages['jv'] = array(
 /** Khmer (ភាសាខ្មែរ)
  * @author Chhorran
  * @author Lovekhmer
+ * @author Thearith
  * @author គីមស៊្រុន
  */
 $messages['km'] = array(
@@ -2446,7 +2449,7 @@ $messages['km'] = array(
 	'user-profile-section-interests' => 'ពត៌មានផ្សេងៗទៀត',
 	'user-profile-section-picture' => 'អាវ៉ាតារ៍',
 	'user-profile-section-preferences' => 'ចំនូលចិត្ត',
-	'user-profile-personal-info' => 'ពត៌មាន',
+	'user-profile-personal-info' => 'ព័ត៌មាន',
 	'user-profile-personal-name' => 'ឈ្មោះ',
 	'user-profile-personal-email' => 'អ៊ីមែល',
 	'user-profile-personal-confirmemail' => 'បញ្ជាក់ទទួលស្គាល់អ៊ីមែល',
