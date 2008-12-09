@@ -543,8 +543,22 @@ $messages['lb'] = array(
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Bemierkung|Bemierkungen}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Frënd|Frënn}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Meenung|Meenungen}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Cadeau kritt|Cadeaue kritt}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Cadeau|Cadeauë}} geschéckt',
 	'level-advance-subject' => 'Dir sidd elo "$1" op {{SITENAME}}!',
+	'level-advance-body' => 'Bonjour $1:
+
+Dir sidd elo e(n) "$2" op {{SITENAME}}!
+
+Eis Felicitatiounen!
+
+D\'Equipe vu(n) {{SITENAME}}
+
+--
+Wëllt dir keng E-Maile méi vun eis kréien?
+
+Klickt $3
+an ännert Är Astellungen a schalt den E-Mai-Benoriichtungssystem aus.',
 );
 
 /** Dutch (Nederlands)
@@ -789,8 +803,10 @@ e altere suas preferências para desabilitar e-mails de notificação',
 
 /** Russian (Русский)
  * @author Ferrer
+ * @author Rubin
  */
 $messages['ru'] = array(
+	'top-fans-bad-field-title' => 'Ой!',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Голос|Голосов}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Правка|Правок}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Комментарий|Комментариев}}',

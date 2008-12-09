@@ -3951,10 +3951,13 @@ $messages['roa-tara'] = array(
 
 /** Russian (Русский)
  * @author Ferrer
+ * @author Rubin
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
 	'populateuserprofiles' => 'Заполнение очерков участников',
+	'user-awards-title' => 'Награды',
+	'user-gifts-title' => 'Подарки',
 	'user-count-separator' => 'из',
 	'user-view-all' => 'Просмотреть все',
 	'user-upload-image' => 'Загрузить изображение',

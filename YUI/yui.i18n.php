@@ -195,6 +195,13 @@ $messages['mr'] = array(
 	'yui-desc' => 'जावा स्क्रिप्टने लिहीलेल्या सुविधा आणि नियंत्रणांचा संच',
 );
 
+/** Nedersaksisch (Nedersaksisch)
+ * @author Servien
+ */
+$messages['nds-nl'] = array(
+	'yui-desc' => 'Een verzameling hulpmiddels en besturingselementen in Java',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */

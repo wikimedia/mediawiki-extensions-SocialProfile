@@ -861,6 +861,7 @@ $messages['lb'] = array(
 	'userboard_confirmdelete' => 'Sidd Dir sécher datt Dir dëse Message läsche wellt?',
 	'userboard_sendmessage' => 'Dem $1 ee Message schécken',
 	'userboard_myboard' => 'Meng Tafel',
+	'userboard_posted_ago' => 'viru(n) $1 geschéckt',
 	'userboard_private' => 'privat',
 	'userboard_public' => 'ëffentlech',
 	'userboard_messagetype' => 'Typ vu Message',

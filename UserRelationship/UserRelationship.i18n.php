@@ -3156,11 +3156,16 @@ $messages['ro'] = array(
  * @author Ferrer
  * @author Flrn
  * @author Innv
+ * @author Rubin
  */
 $messages['ru'] = array(
 	'ur-already-submitted' => 'Ваш запрос был отправлен',
 	'ur-main-page' => 'Заглавная страница',
 	'ur-your-profile' => 'Ваш профиль',
+	'ur-friend' => 'друг',
+	'ur-remove' => 'Удалить',
+	'ur-cancel' => 'Отмена',
+	'ur-add-error-message-pending-request-title' => 'Терпение!',
 	'ur-accept' => 'Принять',
 );
 
