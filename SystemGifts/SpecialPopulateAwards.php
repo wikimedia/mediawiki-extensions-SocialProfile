@@ -6,7 +6,7 @@ class PopulateAwards extends UnlistedSpecialPage {
 	 * Constructor
 	 */
 	public function __construct(){
-		parent::__construct('PopulateAwards'/*class*/, 'populateawards' /*restriction*/);
+		parent::__construct('PopulateAwards'/*class*/, 'awardsmanage' /*restriction*/);
 	}
 
 	/**
@@ -18,9 +18,9 @@ class PopulateAwards extends UnlistedSpecialPage {
 		global $wgUser, $wgOut, $wgMemc;
 		$this->setHeaders();
 
-		# If user is blocked, s/he doesn't need to access this page
-		if ( $wgUser->isBlocked() ) {
-			$wgOut->blockedPage();
+		# If the user doesn't have the required 'awardsmanage' permission, display an error
+		if( !$wgUser->isAllowed( 'awardsmanage' ) ) {
+			$wgOut->permissionRequired( 'awardsmanage' );
 			return;
 		}
 
@@ -30,9 +30,9 @@ class PopulateAwards extends UnlistedSpecialPage {
 			return;
 		}
 
-		# If the user doesn't have the required 'awardsmanage' permission, display an error
-		if( !$wgUser->isAllowed( 'awardsmanage' ) ) {
-			$wgOut->permissionRequired( 'awardsmanage' );
+		# If user is blocked, s/he doesn't need to access this page
+		if ( $wgUser->isBlocked() ) {
+			$wgOut->blockedPage();
 			return;
 		}
  
