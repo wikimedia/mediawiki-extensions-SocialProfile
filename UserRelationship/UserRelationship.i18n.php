@@ -1819,12 +1819,13 @@ Yèn panjenengan péngin kanca luwih akèh, <a href="$1">ayo padha diundhang!</a
 /** Khmer (ភាសាខ្មែរ)
  * @author Chhorran
  * @author Lovekhmer
+ * @author Thearith
  */
 $messages['km'] = array(
 	'ur-main-page' => 'ទំព័រដើម',
-	'ur-your-profile' => 'ពត៌មានផ្ទាល់ខ្លួនរបស់អ្នក',
-	'ur-backlink' => '&lt; ត្រលប់​ទៅ ពត៌មានផ្ទាល់ខ្លួន របស់ $1',
-	'ur-friend' => 'មិត្តភក្តិ',
+	'ur-your-profile' => 'ព័ត៌មានផ្ទាល់ខ្លួនរបស់អ្នក',
+	'ur-backlink' => '&lt; ត្រឡប់​ទៅ ព័ត៌មានផ្ទាល់ខ្លួន របស់ $1',
+	'ur-friend' => 'មិត្តភ័ក្ដិ',
 	'ur-foe' => 'បច្ចាមិត្ត',
 	'ur-add-friend' => 'បន្ថែម ជា មិត្តភក្តិ',
 	'ur-add-foe' => 'បន្ថែម ជា បច្ចាមិត្ត',

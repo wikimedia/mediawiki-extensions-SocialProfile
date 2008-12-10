@@ -89,6 +89,23 @@ $aliases['fa'] = array(
 	'TopUsers' => array( 'کاربران_برتر' ),
 );
 
+/** Swiss German (Alemannisch) */
+$aliases['gsw'] = array(
+	'AddRelationship' => array( 'Verbindig derzuegee' ),
+	'PopulateUserProfiles' => array( 'Populäri Profil' ),
+	'RemoveAvatar' => array( 'Avatar ewägmache' ),
+	'RemoveRelationship' => array( 'Verbindig ewägmache' ),
+	'TopFansByStatistic' => array( 'Top-Fans no Statischtik' ),
+	'TopUsers' => array( 'Top-Benutzer' ),
+	'TopUsersRecent' => array( 'Letschte Top-Benutzer' ),
+	'ToggleUserPage' => array( 'Hebel Benutzersyte' ),
+	'UpdateEditCounts' => array( 'Bearbeitigszeller aktualisiere' ),
+	'UpdateProfile' => array( 'Profil aktualisiere' ),
+	'UploadAvatar' => array( 'Avatar uffelade' ),
+	'ViewRelationshipRequests' => array( 'Verbindigsgsuech bschaue' ),
+	'ViewRelationships' => array( 'Verbindige bschaue' ),
+);
+
 /** Khmer (ភាសាខ្មែរ) */
 $aliases['km'] = array(
 	'TopUsers' => array( 'អ្នកប្រើប្រាស់សកម្មបំផុត' ),

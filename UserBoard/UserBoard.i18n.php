@@ -778,6 +778,7 @@ $messages['jv'] = array(
 
 /** Khmer (ភាសាខ្មែរ)
  * @author Lovekhmer
+ * @author Thearith
  * @author គីមស៊្រុន
  */
 $messages['km'] = array(
@@ -790,8 +791,8 @@ $messages['km'] = array(
 	'boardlinkselectfriends' => 'ជ្រើសរើសមិត្ត',
 	'messagesentsuccess' => 'សារ​របស់អ្នក​ត្រូវបាន​ផ្ញើដោយជោគជ័យ',
 	'userboard_delete' => 'លុប',
-	'userboard_backprofile' => 'ត្រលប់​ទៅកាន់​ប្រវត្តិរូបរបស់ $1',
-	'userboard_backyourprofile' => 'ត្រលប់​ទៅកាន់​ប្រវត្តិរូប​របស់អ្នក',
+	'userboard_backprofile' => 'ត្រឡប់​ទៅកាន់​ប្រវត្តិរូបរបស់ $1',
+	'userboard_backyourprofile' => 'ត្រឡប់​ទៅកាន់​ប្រវត្តិរូប​របស់អ្នក',
 	'userboard_confirmdelete' => 'តើ​អ្នកប្រាកដ​ហើយឬ​ដែលចង់​លុបសារ​នេះចោល?',
 	'userboard_sendmessage' => 'ផ្ញើសារទៅកាន់$1',
 	'userboard_private' => 'ឯកជន',
