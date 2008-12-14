@@ -106,6 +106,11 @@ $aliases['gsw'] = array(
 	'ViewRelationships' => array( 'Verbindige bschaue' ),
 );
 
+/** Hungarian (Magyar) */
+$aliases['hu'] = array(
+	'UserBoard' => array( 'Felhasználói üzenőfal' ),
+);
+
 /** Khmer (ភាសាខ្មែរ) */
 $aliases['km'] = array(
 	'TopUsers' => array( 'អ្នកប្រើប្រាស់សកម្មបំផុត' ),

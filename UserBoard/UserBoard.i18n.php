@@ -650,6 +650,8 @@ $messages['got'] = array(
  */
 $messages['grc'] = array(
 	'userboard_delete' => 'Σβεννύναι',
+	'userboard_private' => 'Ἰδιωτική',
+	'userboard_nextpage' => 'Ἑπομέναι',
 );
 
 /** Hakka (Hak-kâ-fa)

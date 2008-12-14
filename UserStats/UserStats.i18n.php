@@ -229,6 +229,7 @@ $messages['eo'] = array(
 	'top-fans-points' => 'poentoj',
 	'top-fans-bad-field-title' => 'Ho ve!',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Voĉdono|Voĉdonoj}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Monata venko|Monataj venkoj}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Redakto|Redaktoj}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Komento|Komentoj}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Amiko|Amikoj}}',
