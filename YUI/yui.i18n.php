@@ -90,6 +90,13 @@ $messages['eo'] = array(
 	'yui-desc' => 'Aro da iloj kaj kontroliloj, verkita en JavaScript',
 );
 
+/** Spanish (Español)
+ * @author Sanbec
+ */
+$messages['es'] = array(
+	'yui-desc' => 'Un conjunto de utilidades y controles escritos en JavaScript',
+);
+
 /** French (Français)
  * @author Grondin
  */

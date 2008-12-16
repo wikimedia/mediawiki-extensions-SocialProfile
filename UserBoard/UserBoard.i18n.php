@@ -661,6 +661,68 @@ $messages['hak'] = array(
 	'userboard_delete' => 'Chhù-thet',
 );
 
+/** Hebrew (עברית)
+ * @author YaronSh
+ */
+$messages['he'] = array(
+	'boardblastlogintitle' => 'עליכם לבצע כניסה כדי לשלוח מסרים המוניים',
+	'boardblastlogintext' => 'עליכם לבצע כניסה כדי לשלוח מסרים המוניים.
+לחצו <a href="index.php?title=Special:UserLogin">לביצוע כניסה</a>',
+	'messagesenttitle' => 'ההודעות נשלחו',
+	'boardblasttitle' => 'שליחת מסר המוני',
+	'boardblaststep1' => 'שלב 1 - כתבו את הודעתכם',
+	'boardblastprivatenote' => 'כל ההודעות ישלחו כהודעות פרטיות',
+	'boardblaststep2' => 'שלב 2 - בחרו אל מי תרצו לשלוח את ההודעה',
+	'boardlinkselectall' => 'בחרו הכל',
+	'boardlinkunselectall' => 'ביטול בחירת הכל',
+	'boardlinkselectfriends' => 'בחירת חברים',
+	'boardlinkunselectfriends' => 'ביטול בחירת חברים',
+	'boardlinkselectfoes' => 'בחירת יריבים',
+	'boardlinkunselectfoes' => 'ביטול בחירת חברים',
+	'boardsendbutton' => 'שליחת מסר המוני',
+	'boardnofriends' => 'אין לכם חברים אליהם תוכלו לשלוח הודעות!',
+	'messagesentsuccess' => 'הודעתכם נשלחה בהצלחה',
+	'userboard' => 'לוח משתמש',
+	'userboard_board-to-board' => 'לוח־אל־לוח',
+	'userboard_delete' => 'מחיקה',
+	'userboard_noexist' => 'המשתמש בו אתה מנסה לצפות אינו קיים.',
+	'userboard_yourboard' => 'הלוח שלכם',
+	'userboard_owner' => 'הלוח של $1',
+	'userboard_yourboardwith' => 'פגישת הלוח־אל־לוח שלכם עם $1',
+	'userboard_otherboardwith' => 'מפגש הלוח־אל־לוח של $1 עם $2',
+	'userboard_backprofile' => 'חזרה לפרופיל של $1',
+	'userboard_backyourprofile' => 'חזרה לפרופיל שלכם',
+	'userboard_boardtoboard' => 'לוח־אל־לוח',
+	'userboard_confirmdelete' => 'האם אתם בטוחים שברצונכם למחוק הודעה זו?',
+	'userboard_sendmessage' => 'שליחת הודעה אל $1',
+	'userboard_myboard' => 'הלוח שלכם',
+	'userboard_posted_ago' => 'פורסם לפני $1',
+	'userboard_private' => 'פרטי',
+	'userboard_public' => 'ציבורי',
+	'userboard_messagetype' => 'סוג ההודעה',
+	'userboard_nextpage' => 'הבא',
+	'userboard_prevpage' => 'הקודם',
+	'userboard_nomessages' => 'אין הודעות.',
+	'userboard_sendbutton' => 'שליחה',
+	'userboard_loggedout' => 'עליכם <a href="$1">לבצע כניסה</a> כדי לפרסם הודעות למשתמשים אחרים.',
+	'userboard_showingmessages' => 'מציג $2-$3 מתוך {{PLURAL:$1|הודעה $1|$1 הודעות}}',
+	'message_received_subject' => '$1 כתב בלוח שלך באתר {{SITENAME}}',
+	'message_received_body' => 'שלום רב $1:
+
+$2 הרגע כתבו בלוח שלכם באתר {{SITENAME}}!
+
+לחצו כאן כדי לצפות בלוח שלכם!
+
+$3
+
+---
+
+מעוניינים להפסיק לקבל מאיתנו הודעות בדוא"ל?
+
+לחצו $4
+ושנו את ההגדרות שלכם לביטול קבלת התרעות בדוא"ל.',
+);
+
 /** Hindi (हिन्दी)
  * @author Kaustubh
  */
