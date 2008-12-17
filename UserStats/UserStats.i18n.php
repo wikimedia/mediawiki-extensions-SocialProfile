@@ -486,6 +486,46 @@ Clicca $3
 e disactiva in tu preferentias le notificationes per e-mail.',
 );
 
+/** Khmer (ភាសាខ្មែរ)
+ * @author Thearith
+ */
+$messages['km'] = array(
+	'topusers' => 'អ្នកប្រើប្រាស់​កំពូល',
+	'top-fans-by-points-nav-header' => 'អ្នកគាំទ្រ​កំពូល',
+	'top-fans-total-points-link' => 'ពិន្ទុ​សរុប',
+	'top-fans-weekly-points-link' => 'ពិន្ទុ​សប្ដាហ៍​នេះ',
+	'top-fans-monthly-points-link' => 'ពិន្ទុ​ខែ​នេះ',
+	'top-fans-points' => 'ពិន្ទុ',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Vote|បោះឆ្នោត}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Monthly win|អ្នកឈ្នះ​ប្រចាំខែ}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Weekly win|អ្នកឈ្នះ​ប្រចាំសប្ដាហ៍}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Edit|កែប្រែ}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Comment|វចនាធិប្បាយ}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Referral|ការផ្ទេរ}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Friend|មិត្តភ័ក្ដិ}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Foe|បច្ចាមិត្ត}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Published opinion|ជម្រើស​បោះពុម្ពផ្សាយ}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinion|ជម្រើស}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Thumb up|ពង្រីក}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Thumb down|បង្រួម}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Gift received|អំណោយ​ដែល​បាន​ទទួល}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Gift sent|អំណោយ​ដែល​បាន​ផ្ញើ}}',
+	'level-advance-subject' => 'ឥឡូវនេះ អ្នក​មាន "$1" នៅ {{SITENAME}}!',
+	'level-advance-body' => 'សួស្ដី $1:
+
+ឥឡូវនេះ អ្នក​មាន "$2" នៅ​លើ {{SITENAME}}!
+
+សូមអបអរសាទរ,
+
+ក្រុម {{SITENAME}} 
+
+---
+ហេ៎, តើ​អ្នក​ពិតជា​ចង់​បញ្ឈប់​ការ​ទទួល​អ៊ីមែល​ពី​យើង​មែន​ឬ​?
+
+សូម​ចុច $3
+និង​ផ្លាស់ប្ដូរ​ការកំណត់​របស់​អ្នក ដើម្បី​បិទ​មិន​ទទួល​សេចក្ដីជូនដំណឹង​តាម​អ៊ីមែល​។',
+);
+
 /** Ripoarisch (Ripoarisch)
  * @author Purodha
  */
