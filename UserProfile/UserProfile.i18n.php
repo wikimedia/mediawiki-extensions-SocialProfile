@@ -2811,6 +2811,7 @@ $messages['lb'] = array(
 	'other-no-info' => 'Keng aner Informatioun',
 	'profile-updated-personal' => 'Äre Profil aktualiséieren',
 	'profile-not-provided' => 'Net uginn',
+	'populate-user-profile-done' => '$1 {PLURAL:$1|Profil|Profiler}} derbäigesat',
 	'user-board-title' => 'Tafel',
 	'user-personal-info-title' => 'Perséinlech Informatiounen',
 	'user-no-personal-info' => 'Keng perséinlech Informatioun',

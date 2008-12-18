@@ -652,6 +652,17 @@ Klik $3
 en wijzig uw instellingen om e-mailberichten uit te schakelen.",',
 );
 
+/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+ * @author Harald Khan
+ */
+$messages['nn'] = array(
+	'user-stats-alltime-title' => 'Flest poeng nokosinne',
+	'topusers' => 'Beste brukarar',
+	'top-fans-total-points-link' => 'Poeng totalt',
+	'top-fans-points' => 'poeng',
+	'top-fans-bad-field-title' => 'Ops!',
+);
+
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Jon Harald Søby
  */

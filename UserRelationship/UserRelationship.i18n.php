@@ -1948,6 +1948,52 @@ $messages['it'] = array(
 	'ur-main-page' => 'Pagina principale',
 );
 
+/** Japanese (日本語)
+ * @author Aotake
+ */
+$messages['ja'] = array(
+	'viewrelationships' => '関係を表示',
+	'viewrelationshiprequests' => '関係申請を表示',
+	'ur-already-submitted' => '申請を送信しました',
+	'ur-error-page-title' => 'おっと！',
+	'ur-error-message-no-user' => 'その名前の利用者は存在しないため申請を完了できません。',
+	'ur-main-page' => 'メインページ',
+	'ur-your-profile' => 'あなたのプロファイル',
+	'ur-backlink' => '&lt; $1のプロファイルに戻る',
+	'ur-friend' => '友人',
+	'ur-foe' => '敵',
+	'ur-relationship-count-foes' => '$1には$2人の敵がいます。敵を増やしますか？<a href="$3">招待する。</a>',
+	'ur-relationship-count-friends' => '$1には$2人の友人がいます。友人を増やしますか？<a href="$3">招待する。</a>',
+	'ur-add-friends' => '友人を増やしますか？<a href="$3">招待する。</a>',
+	'ur-add-friend' => '友人として追加',
+	'ur-add-no-user' => '利用者が選択されていません。正しいリンクを使って友人/敵申請を行ってください。',
+	'ur-add-personal-message' => '私的なメッセージを追加',
+	'ur-remove-relationship-friend' => '友人から除去',
+	'ur-remove-relationship-foe' => '敵から除去',
+	'ur-give-gift' => 'プレゼントを贈る',
+	'ur-previous' => '前',
+	'ur-next' => '次',
+	'ur-remove-relationship-title-foe' => '$1をあなたの敵から除去しますか？',
+	'ur-remove-relationship-title-confirm-foe' => '$1を敵から除去しました',
+	'ur-remove-relationship-title-friend' => '$1を友人から除去しますか？',
+	'ur-remove-relationship-title-confirm-friend' => '$1を友人から除去しました',
+	'ur-remove-relationship-message-foe' => '$1を敵から除去することを選択しました。操作を完了するには "$2" を押してください。',
+	'ur-remove-relationship-message-confirm-foe' => '$1を敵から除去しました。',
+	'ur-remove-relationship-message-friend' => '$1を友人から除去することを選択しました。操作を完了するには "$2" を押してください。',
+	'ur-remove-relationship-message-confirm-friend' => '$1を友人から除去しました。',
+	'ur-remove-error-message-no-relationship' => '$1との関係は設定されていません。',
+	'ur-remove-error-message-remove-yourself' => '自分自身を除去することはできません。',
+	'ur-remove-error-message-pending-request' => '$2に対する$1申請が保留中です。',
+	'ur-remove-error-message-pending-foe-request' => '$2に対する敵申請が保留中です。',
+	'ur-remove-error-message-pending-friend-request' => '$2に対する友人申請が保留中です。',
+	'ur-remove-error-not-loggedin' => '$1を除去するためにはログインしている必要があります。',
+	'ur-remove-error-not-loggedin-foe' => '敵を除去するためにはログインしている必要があります。',
+	'ur-remove-error-not-loggedin-friend' => '友人を除去するためにはログインしている必要があります。',
+	'ur-remove' => '除去',
+	'ur-cancel' => 'キャンセル',
+	'ur-login' => 'ログイン',
+);
+
 /** Javanese (Basa Jawa)
  * @author Meursault2004
  */
