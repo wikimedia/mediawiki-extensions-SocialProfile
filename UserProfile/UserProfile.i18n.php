@@ -2581,6 +2581,7 @@ $messages['jv'] = array(
  * @author គីមស៊្រុន
  */
 $messages['km'] = array(
+	'user-awards-title' => 'រង្វាន់​នានា',
 	'user-gifts-title' => 'អំណោយ',
 	'user-count-separator' => 'នៃ',
 	'user-view-all' => 'មើលទាំងអស់',
@@ -5004,6 +5005,7 @@ $messages['vi'] = array(
 	'user-profile-personal-city' => 'Thành phố',
 	'user-profile-personal-country' => 'Nước',
 	'user-profile-personal-birthday' => 'Sinh nhật',
+	'user-profile-personal-birthdate' => 'Ngày (MM/DD)',
 	'user-profile-personal-aboutme' => 'Tự giới thiệu',
 	'user-profile-personal-work' => 'Công việc',
 	'user-profile-personal-occupation' => 'Nghề nghiệp',

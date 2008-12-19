@@ -486,10 +486,60 @@ Clicca $3
 e disactiva in tu preferentias le notificationes per e-mail.',
 );
 
+/** Japanese (日本語)
+ * @author Aotake
+ */
+$messages['ja'] = array(
+	'user-stats-alltime-title' => '通算最高得点者',
+	'user-stats-weekly-title' => '今週の最高得点者',
+	'user-stats-monthly-title' => '今月の最高得点者',
+	'topusers' => '上位利用者',
+	'top-fans-by-category-nav-header' => 'カテゴリ別上位者',
+	'top-fans-total-points-link' => '総得点',
+	'top-fans-weekly-points-link' => '今週の得点',
+	'top-fans-monthly-points-link' => '今月の得点',
+	'top-fans-points' => '得点',
+	'top-fans-bad-field-title' => 'おっと！',
+	'top-fans-bad-field-message' => '指定した統計は存在しません。',
+	'top-fans-stats-vote-count' => '投票',
+	'top-fans-stats-monthly-winner-count' => '月間勝者',
+	'top-fans-stats-weekly-winner-count' => '週間勝者',
+	'top-fans-stats-edit-count' => '編集',
+	'top-fans-stats-comment-count' => 'コメント',
+	'top-fans-stats-referrals-completed' => '推薦',
+	'top-fans-stats-friends-count' => '友人',
+	'top-fans-stats-foe-count' => '敵',
+	'top-fans-stats-opinions-published' => '公表された意見',
+	'top-fans-stats-opinions-created' => '意見',
+	'top-fans-stats-comment-score-positive-rec' => '拍手',
+	'top-fans-stats-comment-score-negative-rec' => 'ブーイング',
+	'top-fans-stats-comment-score-positive-given' => '拍手をうけました',
+	'top-fans-stats-comment-score-negative-given' => 'ブーイングを受けました',
+	'top-fans-stats-gifts-rec-count' => 'プレゼントを受け取りました',
+	'top-fans-stats-gifts-sent-count' => 'プレゼントを贈りました',
+	'level-advance-subject' => '{{SITENAME}}の"$1"になりました！',
+	'level-advance-body' => '$1さん、こんにちは。
+
+おめでとうございます。
+$1さんは{{SITENAME}}の"$2"になりました！
+
+
+{{SITENAME}}チーム
+
+---
+私たちからのメールがご不要ですか？
+
+$3
+をクリックして、メール通知を停止するように設定を変更してください。',
+);
+
 /** Khmer (ភាសាខ្មែរ)
  * @author Thearith
  */
 $messages['km'] = array(
+	'user-stats-alltime-title' => 'ពិន្ទុ​ខ្ពស់​បំផុត​សម្រាប់​រយៈពេល​ទាំងអស់',
+	'user-stats-weekly-title' => 'ពិន្ទុ​ខ្ពស់បំផុត​សម្រាប់​សប្ដាហ៍​នេះ',
+	'user-stats-monthly-title' => 'ពិន្ទុ​ខ្ពស់បំផុត​សម្រាប់​ខែ​នេះ',
 	'topusers' => 'អ្នកប្រើប្រាស់​កំពូល',
 	'top-fans-by-points-nav-header' => 'អ្នកគាំទ្រ​កំពូល',
 	'top-fans-total-points-link' => 'ពិន្ទុ​សរុប',
