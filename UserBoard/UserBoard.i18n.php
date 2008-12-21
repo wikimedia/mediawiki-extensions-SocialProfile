@@ -1298,6 +1298,7 @@ $messages['ps'] = array(
 	'userboard_delete' => 'ړنګول',
 	'userboard_confirmdelete' => 'آيا تاسو ډاډه ياست چې تاسو همدا پيغام ړنګول غواړۍ؟',
 	'userboard_sendmessage' => '$1 ته يو پيغام ولېږۍ',
+	'userboard_public' => 'ټولګړی',
 	'userboard_messagetype' => 'د پيغام ډول',
 	'userboard_nextpage' => 'راتلونکي',
 	'userboard_nomessages' => 'هېڅ کوم پيغام نشته.',

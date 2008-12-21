@@ -903,6 +903,16 @@ Clique $3
 e altere suas preferências para desabilitar e-mails de notificação',
 );
 
+/** Romanian (Română)
+ * @author KlaudiuMihaila
+ */
+$messages['ro'] = array(
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Vot|Voturi}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Modificare|Modificări}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Comentariu|Comentarii}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Prieten|Prieteni}}',
+);
+
 /** Russian (Русский)
  * @author Ferrer
  * @author Rubin

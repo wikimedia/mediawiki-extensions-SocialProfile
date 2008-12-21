@@ -3417,6 +3417,7 @@ $messages['ro'] = array(
 	'ur-remove' => 'Elimină',
 	'ur-cancel' => 'Anulează',
 	'ur-login' => 'Autentificare',
+	'ur-add-error-message-pending-request-title' => 'Răbdare!',
 );
 
 /** Russian (Русский)

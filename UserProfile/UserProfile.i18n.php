@@ -2471,6 +2471,7 @@ $messages['it'] = array(
  * @author Fryed-peach
  */
 $messages['ja'] = array(
+	'user-profile-section-preferences' => '個人設定',
 	'user-profile-personal-birthdate' => '日付 (MM/DD)',
 );
 
@@ -3937,7 +3938,7 @@ $messages['ps'] = array(
 	'user-profile-personal-country' => 'هېواد',
 	'user-profile-personal-hometown' => 'ښارګوټی',
 	'user-profile-personal-birthday' => 'زېږکليزه',
-	'user-profile-personal-birthdate' => 'نېټه (مياشت/ورځ)',
+	'user-profile-personal-birthdate' => 'نېټه (م م/و و)',
 	'user-profile-personal-aboutme' => 'زما په اړه',
 	'user-profile-personal-work' => 'کار',
 	'user-profile-personal-occupation' => 'دنده',
@@ -3953,6 +3954,8 @@ $messages['ps'] = array(
 	'user-profile-interests-videogames' => 'ويډيويي لوبې',
 	'user-profile-sports-sport' => 'سپورت',
 	'user-profile-picture-yourpicture' => 'ستاسو انځور',
+	'user-profile-picture-large' => 'لوی',
+	'user-profile-picture-small' => 'وړوکی',
 	'user-profile-picture-choosepicture' => 'خپل انځور مو وټاکۍ',
 	'user-page-link' => 'د کارونکي پاڼه',
 );
@@ -4156,13 +4159,27 @@ $messages['rif'] = array(
  * @author KlaudiuMihaila
  */
 $messages['ro'] = array(
+	'user-contributions' => 'Contribuţii',
+	'user-stats-title' => 'Statistici',
+	'user-stats-edits' => 'Modificări',
+	'user-stats-votes' => 'Voturi',
+	'user-stats-comments' => 'Comentarii',
 	'other-info-title' => 'Alte informaţii',
+	'user-friends-title' => 'Prieteni',
+	'other-info-movies' => 'Filme',
+	'other-info-music' => 'Muzică',
+	'other-info-books' => 'Cărţi',
+	'other-info-magazines' => 'Reviste',
 	'user-personal-info-title' => 'Informaţii personale',
 	'user-personal-info-real-name' => 'Nume real',
 	'user-profile-section-personal' => 'Informaţii personale',
 	'user-profile-section-interests' => 'Alte informaţii',
 	'user-profile-personal-name' => 'Nume',
 	'user-profile-personal-email' => 'E-mail',
+	'user-profile-interests-movies' => 'Filme',
+	'user-profile-interests-music' => 'Muzică',
+	'user-profile-interests-books' => 'Cărţi',
+	'user-profile-interests-magazines' => 'Reviste',
 	'user-profile-picture-large' => 'Mare',
 	'user-profile-picture-medium' => 'Mediu',
 	'user-profile-picture-small' => 'Mic',
