@@ -28,10 +28,10 @@ class UserSystemGifts {
 	public function sendSystemGift( $gift_id, $email = true ){
 		global $wgMemc;
 
-		if( $this->doesUserHaveGift($this->user_id, $gift_id) ) return "";
+		if( $this->doesUserHaveGift($this->user_id, $gift_id) ) return '';
 
-		$dbr = wfGetDB( DB_MASTER );
-		$dbr->insert( 'user_system_gift',
+		$dbw = wfGetDB( DB_MASTER );
+		$dbw->insert( 'user_system_gift',
 		array(
 			'sg_gift_id' => $gift_id,
 			'sg_user_id' => $this->user_id,
@@ -40,14 +40,14 @@ class UserSystemGifts {
 			'sg_date' => date("Y-m-d H:i:s"),
 			), __METHOD__
 		);
-		$sg_gift_id = $dbr->insertId();
+		$sg_gift_id = $dbw->insertId();
 		$this->incGiftGivenCount($gift_id);
 
 		//add to new gift count cache for receiving user
 		$this->incNewSystemGiftCount($this->user_id);
 
 		if( $email ) $this->sendGiftNotificationEmail( $this->user_id, $gift_id );
-		$wgMemc->delete( wfMemcKey( 'user', 'profile', 'system_gifts', $this->user_id) );
+		$wgMemc->delete( wfMemcKey( 'user', 'profile', 'system_gifts', $this->user_id ) );
 		return $sg_gift_id;
 	}
 
@@ -56,16 +56,16 @@ class UserSystemGifts {
 		$gift = SystemGifts::getGift($gift_id);
 		$user = User::newFromId($user_id_to);
 		$user->loadFromDatabase();
-		if( $user->isEmailConfirmed() && $user->getIntOption("notifygift", 1) ){
-			$gifts_link = Title::makeTitle( NS_SPECIAL, 'ViewSystemGifts' );
-			$update_profile_link = Title::makeTitle( NS_SPECIAL, 'UpdateProfile' );
+		if( $user->isEmailConfirmed() && $user->getIntOption( 'notifygift', 1 ) ){
+			$gifts_link = SpecialPage::getTitleFor( 'ViewSystemGifts' );
+			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
 			$subject = wfMsgExt( 'system_gift_received_subject', 'parsemag',
-				$gift["gift_name"]
+				$gift['gift_name']
 			);
 			$body = wfMsgExt( 'system_gift_received_body', 'parsemag',
 				( ( trim( $user->getRealName() ) ) ? $user->getRealName() : $user->getName() ),
-				$gift["gift_name"],
-				$gift["gift_description"],
+				$gift['gift_name'],
+				$gift['gift_description'],
 				$gifts_link->getFullURL(),
 				$update_profile_link->getFullURL()
 			);
@@ -76,7 +76,7 @@ class UserSystemGifts {
 
 	public function doesUserHaveGift( $user_id, $gift_id ){
 		$dbr = wfGetDB( DB_SLAVE );
-		$s = $dbr->selectRow( 'user_system_gift', array( 'sg_status' ), array( 'sg_user_id' => $user_id, 'sg_gift_id' => $gift_id ), $fname );
+		$s = $dbr->selectRow( 'user_system_gift', array( 'sg_status' ), array( 'sg_user_id' => $user_id, 'sg_gift_id' => $gift_id ), __METHOD__ );
 		if ( $s !== false ) {
 			return true;
 		}
@@ -108,7 +108,7 @@ class UserSystemGifts {
 
 	public function doesUserOwnGift( $user_id, $sg_id ){
 		$dbr = wfGetDB( DB_SLAVE );
-		$s = $dbr->selectRow( 'user_system_gift', array( 'wg_user_id' ), array( 'sg_id' => $sg_id ), $fname );
+		$s = $dbr->selectRow( 'user_system_gift', array( 'sg_user_id' ), array( 'sg_id' => $sg_id ), __METHOD__ );
 		if ( $s !== false ) {
 			if($user_id == $s->ug_user_id_to){
 				return true;
@@ -118,31 +118,28 @@ class UserSystemGifts {
 	}
 
 	static function deleteGift( $ug_id ){
-		global $wgDBprefix;
-		$dbr = wfGetDB( DB_MASTER );
-		$sql = "DELETE FROM ".$wgDBprefix."user_system_gift WHERE sg_id={$ug_id}";
-		$res = $dbr->query($sql);
+		$dbw = wfGetDB( DB_MASTER );
+		$dbw->delete( 'user_system_gift', array( 'sg_id' => $ug_id ), __METHOD__ );
 	}	
 
 	static function getUserGift( $id ){
-		global $wgDBprefix;
 		$dbr = wfGetDB( DB_SLAVE );
 		$sql = "SELECT sg_id, sg_user_id, sg_user_name,gift_id, sg_date,
 			gift_name, gift_description, gift_given_count, sg_status
-			FROM ".$wgDBprefix."user_system_gift INNER JOIN ".$wgDBprefix."system_gift ON sg_gift_id=gift_id  
+			FROM {$dbr->tableName( 'user_system_gift' )} INNER JOIN {$dbr->tableName( 'system_gift' )} ON sg_gift_id=gift_id  
 			WHERE sg_id = {$id} LIMIT 0,1";
 		$res = $dbr->query($sql);
 		$row = $dbr->fetchObject( $res );
 		if( $row ){
-			$gift["id"]= $row->sg_id;
-			$gift["user_id"]= $row->sg_user_id;
-			$gift["user_name"]= $row->sg_user_name;
-			$gift["gift_count"]= $row->gift_given_count;
-			$gift["timestamp"]= $row->sg_date;
-			$gift["gift_id"]= $row->gift_id;	
-			$gift["name"]= $row->gift_name;	
-			$gift["description"]= $row->gift_description;	
-			$gift["status"]= $row->sg_status;
+			$gift['id']= $row->sg_id;
+			$gift['user_id']= $row->sg_user_id;
+			$gift['user_name']= $row->sg_user_name;
+			$gift['gift_count']= $row->gift_given_count;
+			$gift['timestamp']= $row->sg_date;
+			$gift['gift_id']= $row->gift_id;	
+			$gift['name']= $row->gift_name;	
+			$gift['description']= $row->gift_description;	
+			$gift['status']= $row->sg_status;
 		}
 
 		return $gift;
@@ -170,7 +167,7 @@ class UserSystemGifts {
 		global $wgMemc;
 		$key = wfMemcKey( 'system_gifts', 'new_count', $user_id );
 		$data = $wgMemc->get( $key );
-		if( $data != "" ){
+		if( $data != '' ){
 			wfDebug( "Got new award count of $data for id $user_id from cache\n" );
 			return $data;
 		}
@@ -180,7 +177,7 @@ class UserSystemGifts {
 		global $wgMemc;
 		$data = self::getNewSystemGiftCountCache($user_id);
 
-		if( $data != "" ){
+		if( $data != '' ){
 			$count = $data;
 		} else {
 			$count = self::getNewSystemGiftCountDB($user_id);
@@ -195,7 +192,7 @@ class UserSystemGifts {
 		$key = wfMemcKey( 'system_gifts', 'new_count', $user_id );
 		$dbr = wfGetDB( DB_SLAVE );
 		$new_gift_count = 0;
-		$s = $dbr->selectRow( 'user_system_gift', array( 'count(*) as count' ), array( 'sg_user_id' => $user_id, 'sg_status' => 1 ), __METHOD__ );
+		$s = $dbr->selectRow( 'user_system_gift', array( 'count(*) AS count' ), array( 'sg_user_id' => $user_id, 'sg_status' => 1 ), __METHOD__ );
 		if ( $s !== false )$new_gift_count = $s->count;	
 
 		$wgMemc->set($key, $new_gift_count);
@@ -204,7 +201,6 @@ class UserSystemGifts {
 	}
 
 	public function getUserGiftList( $type, $limit = 0, $page = 0 ){
-		global $wgDBprefix;
 		$dbr = wfGetDB( DB_SLAVE );
 
 		if( $limit > 0 ){
@@ -215,7 +211,7 @@ class UserSystemGifts {
 
 		$sql = "SELECT sg_id, sg_user_id, sg_user_name, sg_gift_id, sg_date, sg_status,
 			gift_name, gift_description, gift_given_count, UNIX_TIMESTAMP(sg_date) AS unix_time
-			FROM ".$wgDBprefix."user_system_gift INNER JOIN ".$wgDBprefix."system_gift ON sg_gift_id=gift_id 
+			FROM {$dbr->tableName( 'user_system_gift' )} INNER JOIN {$dbr->tableName( 'system_gift' )} ON sg_gift_id=gift_id 
 			WHERE sg_user_id = {$this->user_id}
 			ORDER BY sg_id DESC
 			{$limit_sql}";
@@ -224,16 +220,16 @@ class UserSystemGifts {
 		$requests = array();
 		while( $row = $dbr->fetchObject( $res ) ) {
 			$requests[] = array(
-				"id" => $row->sg_id,
-				"gift_id" => $row->sg_gift_id,
-				"timestamp" => ($row->sg_date),
-				"status" => $row->sg_status,
-				"user_id" => $row->sg_user,
-				"user_name" => $row->sg_user_name,
-				"gift_name" => $row->gift_name,
-				"gift_description" => $row->gift_description, 
-				"gift_given_count" => $row->gift_given_count,
-				"unix_timestamp" => $row->unix_time
+				'id' => $row->sg_id,
+				'gift_id' => $row->sg_gift_id,
+				'timestamp' => ($row->sg_date),
+				'status' => $row->sg_status,
+				'user_id' => $row->sg_user,
+				'user_name' => $row->sg_user_name,
+				'gift_name' => $row->gift_name,
+				'gift_description' => $row->gift_description, 
+				'gift_given_count' => $row->gift_given_count,
+				'unix_timestamp' => $row->unix_time
 			);
 		}
 		return $requests;
@@ -248,11 +244,10 @@ class UserSystemGifts {
 	}
 
 	static function getGiftCountByUsername( $user_name ){
-		global $wgDBprefix;
 		$dbr = wfGetDB( DB_SLAVE );
 		$user_id = User::idFromName($user_name);
 		$sql = "SELECT count(*) AS count
-			FROM ".$wgDBprefix."user_system_gift
+			FROM {$dbr->tableName( 'user_system_gift' )}
 			WHERE sg_user_id = {$user_id}
 			LIMIT 0,1";
 		$res = $dbr->query($sql);
