@@ -664,16 +664,17 @@ $messages['hak'] = array(
 );
 
 /** Hebrew (עברית)
+ * @author Rotemliss
  * @author YaronSh
  */
 $messages['he'] = array(
-	'boardblastlogintitle' => 'עליכם לבצע כניסה כדי לשלוח מסרים המוניים',
-	'boardblastlogintext' => 'עליכם לבצע כניסה כדי לשלוח מסרים המוניים.
-לחצו <a href="index.php?title=Special:UserLogin">לביצוע כניסה</a>',
+	'boardblastlogintitle' => 'עליכם לבצע כניסה לחשבון כדי לשלוח מסרים המוניים',
+	'boardblastlogintext' => 'עליכם לבצע כניסה לחשבון כדי לשלוח מסרים המוניים.
+לחצו <a href="index.php?title=Special:UserLogin">כאן לביצוע כניסה לחשבון</a>',
 	'messagesenttitle' => 'ההודעות נשלחו',
 	'boardblasttitle' => 'שליחת מסר המוני',
 	'boardblaststep1' => 'שלב 1 - כתבו את הודעתכם',
-	'boardblastprivatenote' => 'כל ההודעות ישלחו כהודעות פרטיות',
+	'boardblastprivatenote' => 'כל ההודעות יישלחו כהודעות פרטיות',
 	'boardblaststep2' => 'שלב 2 - בחרו אל מי תרצו לשלוח את ההודעה',
 	'boardlinkselectall' => 'בחרו הכל',
 	'boardlinkunselectall' => 'ביטול בחירת הכל',
@@ -687,7 +688,7 @@ $messages['he'] = array(
 	'userboard' => 'לוח משתמש',
 	'userboard_board-to-board' => 'לוח־אל־לוח',
 	'userboard_delete' => 'מחיקה',
-	'userboard_noexist' => 'המשתמש בו אתה מנסה לצפות אינו קיים.',
+	'userboard_noexist' => 'המשתמש בו אתם מנסים לצפות אינו קיים.',
 	'userboard_yourboard' => 'הלוח שלכם',
 	'userboard_owner' => 'הלוח של $1',
 	'userboard_yourboardwith' => 'פגישת הלוח־אל־לוח שלכם עם $1',
@@ -706,23 +707,23 @@ $messages['he'] = array(
 	'userboard_prevpage' => 'הקודם',
 	'userboard_nomessages' => 'אין הודעות.',
 	'userboard_sendbutton' => 'שליחה',
-	'userboard_loggedout' => 'עליכם <a href="$1">לבצע כניסה</a> כדי לפרסם הודעות למשתמשים אחרים.',
-	'userboard_showingmessages' => 'מציג $2-$3 מתוך {{PLURAL:$1|הודעה $1|$1 הודעות}}',
-	'message_received_subject' => '$1 כתב בלוח שלך באתר {{SITENAME}}',
-	'message_received_body' => 'שלום רב $1:
+	'userboard_loggedout' => 'עליכם <a href="$1">לבצע כניסה לחשבון</a> כדי לשלוח הודעות למשתמשים אחרים.',
+	'userboard_showingmessages' => 'הצגת $2-$3 מתוך {{PLURAL:$1|הודעה אחת|$1 הודעות}}',
+	'message_received_subject' => '$1 כתב בלוח שלך ב{{grammar:תחילית|{{SITENAME}}}}',
+	'message_received_body' => 'היי $1:
 
-$2 הרגע כתבו בלוח שלכם באתר {{SITENAME}}!
+$2 הרגע כתב בלוח שלכם ב{{grammar:תחילית|{{SITENAME}}}}!
 
-לחצו כאן כדי לצפות בלוח שלכם!
+לחצו למטה כדי לצפות בלוח שלכם!
 
 $3
 
 ---
 
-מעוניינים להפסיק לקבל מאיתנו הודעות בדוא"ל?
+היי, מעוניינים להפסיק לקבל מאיתנו הודעות בדוא"ל?
 
 לחצו $4
-ושנו את ההגדרות שלכם לביטול קבלת התרעות בדוא"ל.',
+ושנו את ההגדרות שלכם כדי לבטל קבלת התרעות בדוא"ל.',
 );
 
 /** Hindi (हिन्दी)
