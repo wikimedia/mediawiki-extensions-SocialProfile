@@ -353,10 +353,12 @@ $messages['da'] = array(
 /** German (Deutsch)
  * @author Raimond Spekking
  * @author Tim 'Avatar' Bartel
+ * @author Umherirrender
  */
 $messages['de'] = array(
 	'boardblastlogintitle' => 'Du musst angemeldet sein, um Nachrichten versenden zu können',
-	'boardblastlogintext' => 'Du musst angemeldet sein, um Nachrichten versenden zu können.  Klicke <a href="index.php?title=Special:UserLogin">hier zum Anmelden</a>',
+	'boardblastlogintext' => 'Du musst angemeldet sein, um Nachrichten versenden zu können.
+Klicke <a href="index.php?title=Special:UserLogin">hier zum Anmelden</a>',
 	'messagesenttitle' => 'Nachrichten verschickt',
 	'boardblasttitle' => 'Nachricht senden',
 	'boardblaststep1' => 'Schritt 1: Schreibe deine Nachricht',
@@ -852,7 +854,8 @@ $messages['km'] = array(
 	'boardblaststep2' => 'ជំហានទី២ - សូម​ជ្រើសរើស​អ្នក​ដែលអ្នកចង់ផ្ញើសារទៅកាន់',
 	'boardlinkselectall' => 'ជ្រើសរើសទាំងអស់',
 	'boardlinkunselectall' => 'មិនជ្រើសរើសទាំងអស់',
-	'boardlinkselectfriends' => 'ជ្រើសរើសមិត្ត',
+	'boardlinkselectfriends' => 'ជ្រើសមិត្តភ័ក្ដិ',
+	'boardlinkunselectfriends' => 'មិន​ជ្រើសមិត្តភ័ក្ដិ',
 	'boardlinkselectfoes' => 'ជ្រើស​បច្ចាមិត្ត',
 	'boardlinkunselectfoes' => 'មិន​ជ្រើស​បច្ចាមិត្ត',
 	'boardnofriends' => 'អ្នក​ពុំមាន​មិត្តភ័ក្ដិ ដើម្បី​ផ្ញើ​សារ​ទៅកាន់​ទេ​!',

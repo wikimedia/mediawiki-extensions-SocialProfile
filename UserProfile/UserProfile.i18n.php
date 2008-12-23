@@ -962,6 +962,7 @@ $messages['da'] = array(
 /** German (Deutsch)
  * @author Revolus
  * @author Tim 'Avatar' Bartel
+ * @author Umherirrender
  */
 $messages['de'] = array(
 	'populateuserprofiles' => 'Benutzerprofil vervollständigen',
@@ -1024,7 +1025,8 @@ $messages['de'] = array(
 	'user-recent-activity-user-message' => 'Nachricht verschickt an',
 	'user-recent-system-gift' => 'Auszeichnung erhalten',
 	'user-profile-update-notloggedin-title' => 'Du kannst dein Profil nicht unangemeldet bearbeiten.',
-	'user-profile-update-notloggedin-text' => 'Du kannst dein Profil nicht unangemeldet bearbeiten.  Klick <a href="$1">hier</a> um dich anzumelden oder klicke <a href="$2">hier</a> um einen Account zu erstellen.',
+	'user-profile-update-notloggedin-text' => 'Du kannst dein Profil nicht unangemeldet bearbeiten.
+Klick <a href="$1">hier</a> um dich anzumelden oder klicke <a href="$2">hier</a> um einen Account zu erstellen.',
 	'user-profile-update-saved' => 'Dein Profil wurde gespeichert',
 	'user-profile-update-log-section' => 'Abschnitt geändert',
 	'user-profile-update-profile' => 'Profil',
@@ -2692,7 +2694,7 @@ $messages['km'] = array(
 	'user-profile-sports-teamsaved' => 'ក្រុម​របស់​អ្នក​ត្រូវ​បាន​រក្សាទុក​ហើយ',
 	'user-profile-sports-addmore' => 'បន្ថែម កីឡា/ក្រុម​',
 	'user-profile-picture-title' => 'ផ្ទុកឡើង រូបថត របស់អ្នក',
-	'user-profile-picture-log' => 'អាវ៉ាតារ៍',
+	'user-profile-picture-log' => 'អវតារ',
 	'user-profile-picture-log-entry' => 'ផ្ទុក​អវតារ​ថ្មី​ឡើង',
 	'user-profile-picture-yourpicture' => 'រូបថត របស់អ្នក',
 	'user-profile-picture-large' => 'ធំ',
@@ -2702,6 +2704,7 @@ $messages['km'] = array(
 	'user-profile-picture-uploaddifferent' => 'ផ្ទុកឡើង រូបថត ផ្សេង',
 	'user-profile-picture-currentimage' => 'រូបភាពបច្ចុប្បន្ន',
 	'user-profile-picture-choosepicture' => 'ជ្រើសរើស រូបថត របស់អ្នក',
+	'user-profile-picture-picsize' => 'រូបភាព​របស់​អ្នក​ត្រូវតែ​មាន​ទម្រង់​ជា jpeg, png, និង gif ហើយ​ត្រូវតែ​មាន​ទំហំ​តូចជាង ១០០​គីឡូបៃ​។',
 	'user-profile-goback' => 'ត្រឡប់​ក្រោយ​៖',
 	'user-profile-userlevels-link' => 'កម្រិត​អ្នកប្រើប្រាស់',
 	'user-no-images' => 'គ្មានរូបភាព ត្រូវបានផ្ទុកឡើង',
@@ -2725,6 +2728,10 @@ $messages['km'] = array(
 	'avatarupload-currentavatar' => 'អវតារ​បច្ចុប្បន្ន​របស់ $1',
 	'avatarupload-removesuccess' => 'អវតារ​ត្រូវ​បាន​ដកចេញ ដោយ​ជោគជ័យ​ហើយ',
 	'avatarupload-removeanother' => 'ដកចេញ​ផ្សេងទៀត',
+	'profilelogpage' => 'កំណត់ហេតុ​នៃ​ការកែប្រែ​ទំព័រ​ទម្រង់​អ្នកប្រើប្រាស់',
+	'profilelogpagetext' => 'នេះ​គឺជា​កំណត់ហេតុ​នៃ​ការកែប្រែ​ទំព័រ​ទម្រង់​អ្នកប្រើប្រាស់',
+	'avatarlogpage' => 'កំណត់ហេតុ​នៃ​ការ​ផ្ទុក​អវតារ​ឡើង',
+	'avatarlogpagetext' => 'នេះ​គឺជា​កំណត់ហេតុ​នៃ​ការ​ផ្ទុកឡើង​អវតារ​អ្នកប្រើប្រាស់',
 	'user-profile-picture-log-delete-entry' => 'បាន​លុប​អវតារ​របស់ $1',
 );
 
@@ -2799,7 +2806,7 @@ $messages['lb'] = array(
 	'other-no-info' => 'Keng aner Informatioun',
 	'profile-updated-personal' => 'Äre Profil aktualiséieren',
 	'profile-not-provided' => 'Net uginn',
-	'populate-user-profile-done' => '$1 {PLURAL:$1|Profil|Profiler}} derbäigesat',
+	'populate-user-profile-done' => '$1 {{PLURAL:$1|Profil|Profiler}} derbäigesat',
 	'user-board-title' => 'Tafel',
 	'user-personal-info-title' => 'Perséinlech Informatiounen',
 	'user-no-personal-info' => 'Keng perséinlech Informatioun',

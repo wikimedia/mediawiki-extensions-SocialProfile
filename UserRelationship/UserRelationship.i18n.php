@@ -796,6 +796,7 @@ $messages['da'] = array(
 /** German (Deutsch)
  * @author Revolus
  * @author Tim 'Avatar' Bartel
+ * @author Umherirrender
  */
 $messages['de'] = array(
 	'viewrelationships' => 'Zeige Beziehungen',
@@ -833,7 +834,7 @@ $messages['de'] = array(
 	'ur-requests-title' => 'Beziehungsanfrage',
 	'ur-accept' => 'Annehmen',
 	'ur-reject' => 'Ablehnen',
-	'ur-no-requests-message' => 'Du hast keine Freund- oder Feind-Anfrage.  Wenn du mehr Freunde haben möchtest, <a href="$1">Lad\' sie ein...</a>',
+	'ur-no-requests-message' => 'Du hast keine Freund- oder Feind-Anfrage. Wenn du mehr Freunde haben möchtest, <a href="$1">Lad\' sie ein…</a>',
 	'friend_request_subject' => '{{SITENAME}}: $1 hat dich als Freund hinzugefügt!',
 	'friend_request_body' => 'Hi $1:
 
@@ -1964,7 +1965,7 @@ $messages['ja'] = array(
 	'ur-foe' => '敵',
 	'ur-relationship-count-foes' => '$1には$2人の敵がいます。敵を増やしますか？<a href="$3">招待する。</a>',
 	'ur-relationship-count-friends' => '$1には$2人の友人がいます。友人を増やしますか？<a href="$3">招待する。</a>',
-	'ur-add-friends' => '友人を増やしますか？<a href="$3">招待する。</a>',
+	'ur-add-friends' => '友人を増やしますか？<a href="$1">招待する。</a>',
 	'ur-add-friend' => '友人として追加',
 	'ur-add-no-user' => '利用者が選択されていません。正しいリンクを使って友人/敵申請を行ってください。',
 	'ur-add-personal-message' => '私的なメッセージを追加',
@@ -1984,8 +1985,8 @@ $messages['ja'] = array(
 	'ur-remove-error-message-no-relationship' => '$1との関係は設定されていません。',
 	'ur-remove-error-message-remove-yourself' => '自分自身を除去することはできません。',
 	'ur-remove-error-message-pending-request' => '$2に対する$1申請が保留中です。',
-	'ur-remove-error-message-pending-foe-request' => '$2に対する敵申請が保留中です。',
-	'ur-remove-error-message-pending-friend-request' => '$2に対する友人申請が保留中です。',
+	'ur-remove-error-message-pending-foe-request' => '$1に対する敵申請が保留中です。',
+	'ur-remove-error-message-pending-friend-request' => '$1に対する友人申請が保留中です。',
 	'ur-remove-error-not-loggedin' => '$1を除去するためにはログインしている必要があります。',
 	'ur-remove-error-not-loggedin-foe' => '敵を除去するためにはログインしている必要があります。',
 	'ur-remove-error-not-loggedin-friend' => '友人を除去するためにはログインしている必要があります。',
@@ -2207,8 +2208,8 @@ Do kreß Bescheid, wann hä udder it se bestätesch.',
 	'ur-add-error-message-pending-foe-request' => 'Do häß norr_en onbeschtätesch Feinschaffs-Aanfroch aan dä Metmaacher „$1“.
 Do kreß Bescheid, wann hä udder it se bestätesch.',
 	'ur-add-error-message-not-loggedin' => 'Do moß enjelogg sinn, öm ene $1 enzedraare',
-	'ur-add-error-message-not-loggedin-foe' => 'För Ding Feinschaffte ze flääje, moß de ald [[Special:Userlogin|enjelogg sinn]]',
-	'ur-add-error-message-not-loggedin-friend' => 'För Ding Frünndschaffte ze flääje, moß de ald [[Special:Userlogin|enjelogg sinn]]',
+	'ur-add-error-message-not-loggedin-foe' => 'För Ding Feinschaffte ze flääje, moß de ald enjelogg sinn',
+	'ur-add-error-message-not-loggedin-friend' => 'För Ding Frünndschaffte ze flääje, moß de ald enjelogg sinn',
 	'ur-requests-title' => 'Aanfrooch noh Frünndschaff udder Feinschaff',
 	'ur-requests-message-foe' => 'Dä Metmaacher <a href="$1">$2</a> well Dinge Feind sinn.',
 	'ur-requests-message-friend' => 'Dä Metmaacher <a href="$1">$2</a> well Dinge Fründ sinn.',

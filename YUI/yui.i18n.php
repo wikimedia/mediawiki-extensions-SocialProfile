@@ -62,6 +62,13 @@ $messages['br'] = array(
 	'yui-desc' => 'Un heuliad mavegoù ha kontroloù, skrivet e JavaSkript',
 );
 
+/** Bosnian (Bosanski)
+ * @author CERminator
+ */
+$messages['bs'] = array(
+	'yui-desc' => 'Kolekcija korisnih alata i kontrola, napisanih u JavaScript',
+);
+
 /** Czech (Česky)
  * @author Matěj Grabovský
  */
@@ -308,6 +315,13 @@ $messages['sv'] = array(
  */
 $messages['tg-cyrl'] = array(
 	'yui-desc' => 'Маҷмӯъи барномаҳои судманд ва танзимот, ки дар ҶаваСкрипт навишта шудаанд',
+);
+
+/** Tagalog (Tagalog)
+ * @author AnakngAraw
+ */
+$messages['tl'] = array(
+	'yui-desc' => 'Isang pangkat ng mga kagamitan at ma pangkontrol/pangtaban, na nakasulat sa JavaScript',
 );
 
 /** Ukrainian (Українська)

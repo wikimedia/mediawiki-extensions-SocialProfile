@@ -129,6 +129,13 @@ $aliases['lb'] = array(
 	'ViewRelationships' => array( 'Relatiounen weisen' ),
 );
 
+/** Macedonian (Македонски) */
+$aliases['mk'] = array(
+	'AddRelationship' => array( 'ДодадиРелација' ),
+	'RemoveAvatar' => array( 'ИзбришиАватар' ),
+	'RemoveRelationship' => array( 'ИзбришиРелација' ),
+);
+
 /** Nedersaksisch (Nedersaksisch) */
 $aliases['nds-nl'] = array(
 	'AddRelationship' => array( 'Relasie_toevoegen' ),
