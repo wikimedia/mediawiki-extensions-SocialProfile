@@ -488,12 +488,14 @@ e disactiva in tu preferentias le notificationes per e-mail.',
 
 /** Japanese (日本語)
  * @author Aotake
+ * @author Hosiryuhosi
  */
 $messages['ja'] = array(
 	'user-stats-alltime-title' => '通算最高得点者',
 	'user-stats-weekly-title' => '今週の最高得点者',
 	'user-stats-monthly-title' => '今月の最高得点者',
 	'topusers' => '上位利用者',
+	'top-fans-by-points-nav-header' => 'トップファン',
 	'top-fans-by-category-nav-header' => 'カテゴリ別上位者',
 	'top-fans-total-points-link' => '総得点',
 	'top-fans-weekly-points-link' => '今週の得点',
