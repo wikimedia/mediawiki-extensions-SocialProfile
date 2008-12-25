@@ -234,10 +234,13 @@ $messages['bg'] = array(
 	'boardnofriends' => 'Нямате приятели, на които да изпращате съобщения!',
 	'messagesentsuccess' => 'Съобщението беше изпратено успешно',
 	'userboard' => 'Потребителско табло',
+	'userboard_board-to-board' => 'Табло-до-табло',
 	'userboard_delete' => 'Изтриване',
 	'userboard_noexist' => 'Потребителят, който се опитахте да видите, не съществува.',
 	'userboard_yourboard' => 'Вашето табло',
 	'userboard_owner' => 'Табло на $1',
+	'userboard_yourboardwith' => 'Вашето табло-до-табло с $1',
+	'userboard_otherboardwith' => 'Табло-до-табло на $1 с $2',
 	'userboard_backprofile' => 'Връщане към профила на $1',
 	'userboard_backyourprofile' => 'Обратно към профила ми',
 	'userboard_boardtoboard' => 'Табло-до-табло',
@@ -255,6 +258,20 @@ $messages['bg'] = array(
 	'userboard_loggedout' => 'За изпращане на съобщения до другите потребители е необходимо <a href="$1">влизане</a> в системата.',
 	'userboard_showingmessages' => 'Показване на $2–$3 от {{PLURAL:$1|$1 съобщение|$1 съобщения}}',
 	'message_received_subject' => '$1 писа на таблото ви в {{SITENAME}}',
+	'message_received_body' => 'Привет $1,
+
+$2 тъкмо написа съобщение на таблото ви в {{SITENAME}}!
+
+Можете да проверите таблото си чрез следната препратка:
+
+$3
+
+---
+
+Не желаете да получавате повече писма от нас?
+
+Последвайте $4
+за промяна на настройките и оповестяването по е-поща.',
 );
 
 /** Bengali (বাংলা)

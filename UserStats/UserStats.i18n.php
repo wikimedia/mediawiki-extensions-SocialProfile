@@ -186,6 +186,18 @@ $messages['bg'] = array(
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|Неприятел|Неприятели}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Мнение|Мнения}}',
 	'level-advance-subject' => 'Вече сте „$1“ в {{SITENAME}}!',
+	'level-advance-body' => 'Привет $1,
+
+Вече сте с ранг „$2“ в {{SITENAME}}!
+
+Поздравления,
+
+Екипът на {{SITENAME}}
+
+---
+Не искате да получавате повече писма от нас?
+
+Можете да промените настройките си за известяване от следната препратка: $3.',
 );
 
 /** Czech (Česky)
@@ -443,6 +455,19 @@ $messages['hsb'] = array(
 	'top-fans-weekly-points-link' => 'Dypki tutón tydźeń',
 	'top-fans-monthly-points-link' => 'Dypki tutón měsac',
 	'top-fans-points' => 'dypki',
+	'top-fans-by-category-title' => 'Najlěpše w cyłku $1',
+	'top-fans-bad-field-title' => 'Hopla!',
+	'top-fans-bad-field-message' => 'Podata statistika njeeksistuje.',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|hłós|hłosaj|hłosy|hłosow}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Měsačne dobyće|Měsačnej dobyći|Měsačne dobyća|Měsačnych dobyćow}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Tydźenske dobyće|Tydźenskej dobyći|Tydźenske dobyća|Tydźenskich dobyćow}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|$1|ZMěna|Změnje|Změny|Změnow}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Komentar|Komentaraj|Komentary|Komentarow}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Referenca|Referency|Referency|Referencow}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Přećel|Přećelej|Přećeljo|Přećelow}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Njepřećel|Njepřećelej|Njepřećeljo|Njepřećelow}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Wozjewjene měnjenje|Wozjewjenej měnjeni|Wozjewjene měnjenja|Wozjewjenych měnjenjow}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Měnjenje|Měnjeni|Měnjenja|Měnjenjow}}',
 );
 
 /** Interlingua (Interlingua)
@@ -1042,6 +1067,8 @@ $messages['te'] = array(
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|వ్యాఖ్య|వ్యాఖ్యలు}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|మిత్రుడు|మిత్రులు}}',
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|శతృవు|శతృవులు}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|అందుకున్న బహుమతి|అందుకున్న బహుమతులు}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|ఇచ్చిన బహుమతి|ఇచ్చిన బహుమతులు}}',
 	'level-advance-body' => 'హాయ్ $1:
 
 మీరిప్పుడు {{SITENAME}}లో "$2"!

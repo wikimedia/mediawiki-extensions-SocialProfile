@@ -4782,6 +4782,7 @@ $messages['szl'] = array(
  * @author Veeven
  */
 $messages['te'] = array(
+	'user-awards-title' => 'అవార్డులు',
 	'user-gifts-title' => 'బహుమతులు',
 	'user-view-all' => 'అన్నీ చూడండి',
 	'user-upload-image' => 'బొమ్మని ఎగుమతి చేయండి',
@@ -4882,6 +4883,10 @@ $messages['te'] = array(
 * Special:UpdateProfile/custom|ప్రత్యేక సమాచారం
 * Special:UploadAvatar|అవతారం
 * Special:UpdateProfile/preferences|అభిరుచులు',
+	'user-type-toggle-old' => 'వికీ వాడుకరిపేజీని వాడు',
+	'givegift' => 'ఒక బహుమతిని ఇవ్వండి',
+	'viewgifts' => 'బహుమతులను చూడండి',
+	'avatarupload-currentavatar' => '$1 యొక్క ప్రస్తుత అవతారం',
 );
 
 /** Tetum (Tetun)
