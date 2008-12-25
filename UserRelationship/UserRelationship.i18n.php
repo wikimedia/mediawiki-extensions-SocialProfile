@@ -809,7 +809,7 @@ $messages['de'] = array(
 	'ur-backlink' => '&lt; Zurück zu $1s Profil',
 	'ur-friend' => 'Freund',
 	'ur-foe' => 'Feind',
-	'ur-add-friends' => ' Du möchtest mehr Freunde haben? <a href="$1">Lad\' sie ein...</a>',
+	'ur-add-friends' => ' Du möchtest mehr Freunde haben? <a href="$1">Lad\' sie ein …</a>',
 	'ur-add-friend' => 'Als Freund hinzufügen',
 	'ur-add-foe' => 'Als Feind hinzufügen',
 	'ur-give-gift' => 'Geschenk senden',
@@ -838,7 +838,7 @@ $messages['de'] = array(
 	'friend_request_subject' => '{{SITENAME}}: $1 hat dich als Freund hinzugefügt!',
 	'friend_request_body' => 'Hi $1:
 
-$2 hat dich in {{SITENAME}} als Freund hinzugefügt.  Wir wollen sicher gehen, dass ihr zwei wirklich Freunde seit.
+$2 hat dich in {{SITENAME}} als Freund hinzugefügt. Wir wollen sicher gehen, dass ihr zwei wirklich Freunde seit.
 
 Bitte klicke den folgenden Link um eure Freundschaft zu bestätigen:
 $3
@@ -852,7 +852,7 @@ und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
 	'foe_request_subject' => '{{SITENAME}}: Kriegserklärung! $1 hat dich als Feind hinzugefügt!',
 	'foe_request_body' => 'Hi $1:
 
-$2 hat dich in {{SITENAME}} als Feind hinzugefügt.  Wir wollen sicher gehen, dsas ihr zwei wirklich tödliche Feinde seid oder euch wenigstens ein wenig streitet.
+$2 hat dich in {{SITENAME}} als Feind hinzugefügt. Wir wollen sicher gehen, dsas ihr zwei wirklich tödliche Feinde seid oder euch wenigstens ein wenig streitet.
 
 Bitte klicke den folgenden Link um eure Feindschaft zu bestätigen:
 
@@ -962,6 +962,13 @@ $messages['eo'] = array(
 	'ur-title-foe' => 'Listo de malamikoj de $1',
 	'ur-title-friend' => 'Listo de amikoj de $1',
 	'friend_accept_subject' => '$1 akceptis vian amiko-peton en {{SITENAME}}!',
+);
+
+/** Spanish (Español)
+ * @author Sanbec
+ */
+$messages['es'] = array(
+	'ur-main-page' => 'Página principal',
 );
 
 /** Finnish (Suomi)

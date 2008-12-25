@@ -1293,6 +1293,15 @@ $messages['eo'] = array(
 	'user-profile-picture-log-delete-entry' => 'forigis avataron de $1',
 );
 
+/** Spanish (Español)
+ * @author Sanbec
+ */
+$messages['es'] = array(
+	'user-count-separator' => 'de',
+	'user-profile-points' => ' puntos',
+	'user-profile-section-preferences' => 'Preferencias',
+);
+
 /** Estonian (Eesti)
  * @author WikedKentaur
  */
@@ -4788,6 +4797,7 @@ $messages['te'] = array(
 	'user-send-gift' => 'ఓ బహుమతి పంపించండి',
 	'user-contributions' => 'రచనలు',
 	'user-stats-title' => 'గణాంకాలు',
+	'user-stats-edits' => 'మార్పులు',
 	'user-stats-votes' => 'వోట్లు',
 	'user-stats-comments' => 'వ్యాఖ్యలు',
 	'other-info-title' => 'ఇతర సమాచారం',
@@ -4809,6 +4819,7 @@ $messages['te'] = array(
 	'user-personal-info-birthday' => 'పుట్టినరోజు',
 	'user-personal-info-occupation' => 'వృత్తి',
 	'user-personal-info-websites' => 'వెబ్ సైట్లు',
+	'user-personal-info-places-lived' => 'నేను నివాసమున్న ప్రదేశాలు',
 	'user-personal-info-schools' => 'పాఠశాలలు',
 	'user-personal-info-about-me' => 'నా గురించి',
 	'user-recent-activity-title' => 'ఇటీవలి కలాపాలు',

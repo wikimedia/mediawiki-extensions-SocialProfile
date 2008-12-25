@@ -240,6 +240,14 @@ $messages['eo'] = array(
 	'level-advance-subject' => 'Vi nun estas "$1" en {{SITENAME}}!',
 );
 
+/** Spanish (Español)
+ * @author Sanbec
+ */
+$messages['es'] = array(
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinión|Opiniones}}',
+	'level-advance-subject' => '¡Ahora eres un «$1» en {{SITENAME}}!',
+);
+
 /** Finnish (Suomi)
  * @author Jack Phoenix
  */
@@ -1022,6 +1030,31 @@ Förresten, vill du slippa få epost från oss?
 
 Klicka $3
 och ändra dina inställningar för att avaktivera epost-meddelanden.',
+);
+
+/** Telugu (తెలుగు)
+ * @author Veeven
+ */
+$messages['te'] = array(
+	'top-fans-bad-field-title' => 'అయ్యో!',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|వోటు|వోట్లు}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|మార్పు|మార్పులు}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|వ్యాఖ్య|వ్యాఖ్యలు}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|మిత్రుడు|మిత్రులు}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|శతృవు|శతృవులు}}',
+	'level-advance-body' => 'హాయ్ $1:
+
+మీరిప్పుడు {{SITENAME}}లో "$2"!
+
+అభినందనలు,
+
+{{SITENAME}} బృందం
+
+---
+మా నుండి ఈ-మెయిళ్ళు వద్దనుకుంటున్నారా?
+
+$3 ని నొక్కి
+ఈ-మెయిలు గమనింపులని అచేతనం చేసుకునేందుకు అమరికలని మార్చుకోండి.',
 );
 
 /** Volapük (Volapük)

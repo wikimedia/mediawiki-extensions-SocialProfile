@@ -446,6 +446,7 @@ $messages['eo'] = array(
  * @author Sanbec
  */
 $messages['es'] = array(
+	'messagesenttitle' => 'Mensajes enviados',
 	'userboard_delete' => 'Borrar',
 );
 
