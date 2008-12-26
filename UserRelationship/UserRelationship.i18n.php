@@ -986,11 +986,15 @@ $messages['el'] = array(
 $messages['eo'] = array(
 	'viewrelationships' => 'Rigardi rilatecon',
 	'ur-already-submitted' => 'Via peto estis sendita',
+	'ur-error-page-title' => 'Ho ve!',
+	'ur-error-title' => 'Ho ve, vi eraris!',
 	'ur-main-page' => 'Ĉefpaĝo',
 	'ur-your-profile' => 'Via profilo',
 	'ur-backlink' => '&lt; Reiri al profilo de $1',
 	'ur-friend' => 'amiko',
 	'ur-foe' => 'malamiko',
+	'ur-relationship-count-foes' => '$1 havas $2 {{PLURAL:$2|malamikon|malamikojn}}. Ĉu vi volas pli multaj malamikojn? <a href="$3">Inviti ilin.</a>',
+	'ur-add-friends' => ' Ĉu vi volas pli multajn amikojn? <a href="$1">Inviti ilin</a>',
 	'ur-add-friend' => 'Amiko',
 	'ur-add-foe' => 'Aldoni kiel malamikon',
 	'ur-add-personal-message' => 'Aldoni personan mesaĝon',
@@ -999,15 +1003,19 @@ $messages['eo'] = array(
 	'ur-give-gift' => 'Doni donacon',
 	'ur-previous' => 'antaŭ',
 	'ur-next' => 'sekv',
+	'ur-remove-error-message-remove-yourself' => 'Vi ne povas forigi vin mem.',
+	'ur-remove-error-not-loggedin-friend' => 'Vi devas ensaluti por forigi amikon.',
 	'ur-remove' => 'Forigi',
 	'ur-cancel' => 'Nuligi',
 	'ur-login' => 'Ensaluti',
+	'ur-add-title-foe' => 'Ĉu vi volas aldoni $1 kiel vian malamikon?',
 	'ur-friendship' => 'amikeco',
 	'ur-grudge' => 'venĝemo',
 	'ur-add-button' => 'Aldonu kiel $1',
 	'ur-add-button-foe' => 'Aldoni kiel malamikon',
 	'ur-add-button-friend' => 'Aldoni kiel amikon',
 	'ur-add-error-message-pending-request-title' => 'Pacienciĝu!',
+	'ur-requests-title' => 'Rilataj petoj',
 	'ur-accept' => 'Akceptu',
 	'ur-reject' => 'Malakceptu',
 	'ur-title-foe' => 'Listo de malamikoj de $1',
@@ -3476,7 +3484,10 @@ $messages['ro'] = array(
 	'ur-remove' => 'Elimină',
 	'ur-cancel' => 'Anulează',
 	'ur-login' => 'Autentificare',
+	'ur-friendship' => 'prietenie',
 	'ur-add-error-message-pending-request-title' => 'Răbdare!',
+	'ur-requests-title' => 'Cereri de relaţii',
+	'ur-title-friend' => 'Lista de prieteni ai lui $1',
 );
 
 /** Russian (Русский)
@@ -4077,6 +4088,14 @@ $messages['vi'] = array(
 $messages['vo'] = array(
 	'ur-friend' => 'flen',
 	'ur-friendship' => 'flenam',
+);
+
+/** Simplified Chinese (‪中文(简体)‬)
+ * @author Gzdavidwong
+ */
+$messages['zh-hans'] = array(
+	'ur-cancel' => '取消',
+	'ur-login' => '登录',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)

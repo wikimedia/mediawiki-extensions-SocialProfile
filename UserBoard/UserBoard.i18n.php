@@ -470,6 +470,7 @@ $messages['es'] = array(
 /** Finnish (Suomi)
  * @author Crt
  * @author Jack Phoenix
+ * @author Mobe
  */
 $messages['fi'] = array(
 	'boardblastlogintitle' => 'Sinun tulee olla sisäänkirjautunut lähettääksesi keskustelupläjäyksiä',
@@ -489,6 +490,7 @@ $messages['fi'] = array(
 	'boardnofriends' => 'Sinulla ei ole ystäviä, joille lähettää viestejä!',
 	'messagesentsuccess' => 'Viestisi lähetettiin onnistuneesti',
 	'userboard' => 'Käyttäjän keskustelualue',
+	'userboard_board-to-board' => 'Käyttäjäkeskustelu',
 	'userboard_delete' => 'Poista',
 	'userboard_noexist' => 'Käyttäjää, jota yrität katsoa ei ole olemassa.',
 	'userboard_yourboard' => 'Oma keskustelualueeni',
@@ -836,8 +838,10 @@ $messages['it'] = array(
 
 /** Japanese (日本語)
  * @author Aotake
+ * @author Gzdavidwong
  */
 $messages['ja'] = array(
+	'userboard_delete' => '削除',
 	'userboard_noexist' => '閲覧しようとした利用者は存在していません。',
 );
 
@@ -1403,8 +1407,14 @@ $messages['rif'] = array(
  * @author KlaudiuMihaila
  */
 $messages['ro'] = array(
+	'messagesenttitle' => 'Mesaje trimise',
+	'boardblastprivatenote' => 'Toate mesajele vor fi trimise ca mesaje private',
 	'userboard_delete' => 'Şterge',
+	'userboard_posted_ago' => 'postat acum $1',
 	'userboard_private' => 'privat',
+	'userboard_public' => 'public',
+	'userboard_messagetype' => 'Tipul mesajului',
+	'userboard_nomessages' => 'Nici un mesaj.',
 	'userboard_sendbutton' => 'trimite',
 );
 
@@ -1669,6 +1679,13 @@ $messages['vi'] = array(
 	'userboard_prevpage' => 'trước',
 	'userboard_nomessages' => 'Không có tin nhắn.',
 	'userboard_sendbutton' => 'gửi',
+);
+
+/** Simplified Chinese (‪中文(简体)‬)
+ * @author Gzdavidwong
+ */
+$messages['zh-hans'] = array(
+	'userboard_delete' => '删除',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)

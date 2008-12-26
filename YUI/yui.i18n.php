@@ -310,6 +310,13 @@ $messages['sv'] = array(
 	'yui-desc' => 'En serie av verktyg och kontroller, skrivna i JavaScript',
 );
 
+/** Silesian (Ślůnski)
+ * @author Lajsikonik
+ */
+$messages['szl'] = array(
+	'yui-desc' => 'Zestow werkcojgůw a kůntrolnych ylymyntůw naszkryflanych we JavaScripćy',
+);
+
 /** Tajik (Cyrillic) (Тоҷикӣ (Cyrillic))
  * @author Ibrahim
  */

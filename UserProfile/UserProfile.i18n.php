@@ -667,7 +667,9 @@ $messages['bcc'] = array(
  * @author EugeneZelenko
  */
 $messages['be-tarask'] = array(
+	'other-info-books' => 'Кнігі',
 	'user-profile-personal-name' => 'Імя',
+	'user-profile-interests-books' => 'Кнігі',
 );
 
 /** Bulgarian (Български)
@@ -1243,6 +1245,7 @@ $messages['eo'] = array(
 	'user-personal-info-birthday' => 'Naskodato',
 	'user-personal-info-occupation' => 'Profesio',
 	'user-personal-info-websites' => 'Retejoj',
+	'user-personal-info-places-lived' => 'Lokoj kie mi loĝis',
 	'user-personal-info-schools' => 'Lernejoj',
 	'user-personal-info-about-me' => 'Pri mi',
 	'user-recent-activity-title' => 'Lasta aktiveco',
@@ -1251,11 +1254,13 @@ $messages['eo'] = array(
 	'user-recent-activity-friend' => 'Nun estas amiko kun',
 	'user-recent-activity-foe' => 'Nun estas malamiko kun',
 	'user-recent-activity-user-message' => 'Sendis mesaĝon al',
+	'user-profile-update-saved' => 'Via profilo estis konservita',
 	'user-profile-update-log-section' => 'ŝanĝis sekcion',
 	'user-profile-update-profile' => 'profilo',
 	'user-profile-default-country' => 'Usono',
 	'user-profile-points' => ' poentoj',
 	'user-profile-section-personal' => 'Persona informo',
+	'user-profile-section-sportsteams' => 'Ĝisdatigi retojn',
 	'user-profile-section-interests' => 'Alia informo',
 	'user-profile-section-picture' => 'Avataro',
 	'user-profile-section-preferences' => 'Preferoj',
@@ -2511,8 +2516,13 @@ $messages['it'] = array(
 
 /** Japanese (日本語)
  * @author Fryed-peach
+ * @author Gzdavidwong
  */
 $messages['ja'] = array(
+	'other-info-music' => '音楽',
+	'other-info-books' => '図書',
+	'user-personal-info-birthday' => '誕生日',
+	'user-profile-default-country' => 'アメリカ合衆国',
 	'user-profile-section-preferences' => '個人設定',
 	'user-profile-personal-birthdate' => '日付 (MM/DD)',
 );
@@ -4206,6 +4216,10 @@ $messages['rif'] = array(
  * @author KlaudiuMihaila
  */
 $messages['ro'] = array(
+	'user-awards-title' => 'Premii',
+	'user-gifts-title' => 'Cadouri',
+	'user-points' => 'puncte',
+	'user-watchlist' => 'Pagini urmărite',
 	'user-contributions' => 'Contribuţii',
 	'user-stats-title' => 'Statistici',
 	'user-stats-edits' => 'Modificări',
@@ -4214,22 +4228,60 @@ $messages['ro'] = array(
 	'other-info-title' => 'Alte informaţii',
 	'user-friends-title' => 'Prieteni',
 	'other-info-movies' => 'Filme',
+	'other-info-tv' => 'TV',
 	'other-info-music' => 'Muzică',
 	'other-info-books' => 'Cărţi',
+	'other-info-video-games' => 'Jocuri video',
 	'other-info-magazines' => 'Reviste',
+	'other-info-drinks' => 'Băuturi',
+	'populate-user-profile-done' => 'Adăugat $1 {{PLURAL:$1|profil|profiluri}}',
 	'user-personal-info-title' => 'Informaţii personale',
 	'user-personal-info-real-name' => 'Nume real',
+	'user-personal-info-location' => 'Locaţie',
+	'user-personal-info-hometown' => 'Oraş natal',
+	'user-personal-info-birthday' => 'Zi de naştere',
+	'user-personal-info-occupation' => 'Ocupaţie',
+	'user-personal-info-websites' => 'Pagini web',
+	'user-personal-info-places-lived' => 'Locuri în care am locuit',
+	'user-personal-info-schools' => 'Şcoli',
+	'user-personal-info-about-me' => 'Despre mine',
+	'user-recent-activity-title' => 'Activitate recentă',
+	'user-recent-activity-edit' => 'Modificat pagina',
+	'user-recent-activity-vote' => 'Votat pentru pagina',
+	'user-recent-activity-comment' => 'Comentat pe pagina',
+	'user-recent-activity-friend' => 'Este acum prieten cu',
+	'user-profile-default-country' => 'Statele Unite',
+	'user-profile-points' => ' puncte',
 	'user-profile-section-personal' => 'Informaţii personale',
 	'user-profile-section-interests' => 'Alte informaţii',
+	'user-profile-section-picture' => 'Avatar',
+	'user-profile-section-preferences' => 'Preferinţe',
 	'user-profile-personal-name' => 'Nume',
 	'user-profile-personal-email' => 'E-mail',
+	'user-profile-personal-location' => 'Locaţie',
+	'user-profile-personal-city' => 'Oraş',
+	'user-profile-personal-country' => 'Ţară',
+	'user-profile-personal-hometown' => 'Oraş natal',
+	'user-profile-personal-birthday' => 'Zi de naştere',
+	'user-profile-personal-aboutme' => 'Despre mine',
+	'user-profile-personal-occupation' => 'Ocupaţie',
+	'user-profile-personal-education' => 'Educaţie',
+	'user-profile-personal-schools' => 'Şcoli',
+	'user-profile-personal-placeslived' => 'Locuri în care am locuit',
+	'user-profile-personal-web' => 'Web',
+	'user-profile-personal-websites' => 'Pagini web',
+	'user-profile-interests-entertainment' => 'Distracţie',
 	'user-profile-interests-movies' => 'Filme',
+	'user-profile-interests-tv' => 'TV',
 	'user-profile-interests-music' => 'Muzică',
 	'user-profile-interests-books' => 'Cărţi',
 	'user-profile-interests-magazines' => 'Reviste',
+	'user-profile-interests-videogames' => 'Jocuri video',
+	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-large' => 'Mare',
 	'user-profile-picture-medium' => 'Mediu',
 	'user-profile-picture-small' => 'Mic',
+	'user-profile-picture-log-delete-entry' => 'şters avatarul utilizatorului $1',
 );
 
 /** Tarandíne (Tarandíne)
@@ -5141,6 +5193,22 @@ $messages['vo'] = array(
  */
 $messages['yi'] = array(
 	'user-profile-section-preferences' => 'פרעפֿערענצן',
+);
+
+/** Simplified Chinese (‪中文(简体)‬)
+ * @author Gzdavidwong
+ */
+$messages['zh-hans'] = array(
+	'other-info-music' => '音乐',
+	'other-info-books' => '书籍',
+	'user-personal-info-real-name' => '真实姓名',
+	'user-personal-info-birthday' => '生日',
+	'user-profile-default-country' => '美国',
+	'user-profile-personal-birthday' => '生日',
+	'user-profile-personal-aboutme' => '关于我',
+	'user-profile-interests-movies' => '电影',
+	'user-profile-interests-music' => '音乐',
+	'user-profile-interests-books' => '书籍',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)

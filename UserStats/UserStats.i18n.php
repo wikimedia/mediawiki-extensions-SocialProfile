@@ -271,6 +271,7 @@ $messages['el'] = array(
  * @author Yekrats
  */
 $messages['eo'] = array(
+	'topusers' => 'Plej aktivaj uzantoj',
 	'top-fans-total-points-link' => 'Tutaj poentoj',
 	'top-fans-points' => 'poentoj',
 	'top-fans-bad-field-title' => 'Ho ve!',
@@ -1000,6 +1001,8 @@ $messages['ro'] = array(
 	'user-stats-monthly-title' => 'Cele mai multe puncte în această lună',
 	'top-fans-weekly-points-link' => 'Puncte în această săptămână',
 	'top-fans-monthly-points-link' => 'Puncte în această lună',
+	'top-fans-points' => 'puncte',
+	'top-fans-bad-field-title' => 'Ups!',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Vot|Voturi}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Modificare|Modificări}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Comentariu|Comentarii}}',
