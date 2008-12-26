@@ -1079,6 +1079,7 @@ $messages['myv'] = array(
 $messages['nah'] = array(
 	'userboard_delete' => 'Ticpolōz',
 	'userboard_nextpage' => 'niman',
+	'userboard_sendbutton' => 'ticquihuāz',
 );
 
 /** Dutch (Nederlands)
@@ -1668,5 +1669,12 @@ $messages['vi'] = array(
 	'userboard_prevpage' => 'trước',
 	'userboard_nomessages' => 'Không có tin nhắn.',
 	'userboard_sendbutton' => 'gửi',
+);
+
+/** Traditional Chinese (‪中文(繁體)‬)
+ * @author Wrightbus
+ */
+$messages['zh-hant'] = array(
+	'userboard_delete' => '刪除',
 );
 

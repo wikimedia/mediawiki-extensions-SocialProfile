@@ -214,13 +214,47 @@ $messages['cs'] = array(
 );
 
 /** German (Deutsch)
+ * @author Melancholie
  * @author Revolus
  */
 $messages['de'] = array(
+	'user-stats-alltime-title' => 'Am meisten Punkte (gesamt)',
+	'user-stats-weekly-title' => 'Am meisten Punkte diese Woche',
+	'user-stats-monthly-title' => 'Am meisten Punkte diesen Monat',
 	'topusers' => 'Top-Benutzer',
+	'top-fans-total-points-link' => 'Gesamtpunktzahl',
+	'top-fans-weekly-points-link' => 'Punkte diese Woche',
+	'top-fans-monthly-points-link' => 'Punkte diesen Monat',
 	'top-fans-points' => 'Punkte',
 	'top-fans-bad-field-title' => 'Hoppla!',
+	'top-fans-bad-field-message' => 'Die angegebene Statistik existiert nicht.',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Stimme|Stimmen}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Monatsgewinn|Monatsgewinne}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Wochengewinn|Wochengewinne}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Bearbeitung|Bearbeitungen}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Kommentar|Kommentare}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Freund|Freunde}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Gegner/Feind|Gegner/Feinde}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Veröffentlichte Meinung|Veröffentlichte Meinungen}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Meinung|Meinungen}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Daumen nach oben|Daumen nach oben}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Daumen nach unten|Daumen nach unten}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Gegebener Daumen nach oben|Gegebene Daumen nach oben}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Gegebener Daumen nach unten|Gegebene Daumen nach unten}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Geschenk erhalten|Geschenke erhalten}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Geschenk gemacht|Geschenke gemacht}}',
 	'level-advance-subject' => 'Du bist jetzt „$1“ auf {{SITENAME}}!',
+	'level-advance-body' => 'Hallo $1,
+
+Du bist jetzt ein „$2“ bei {{SITENAME}}!
+
+Es gratuliert das {{SITENAME}}-Team
+
+---
+Du willst gar keine E-Mails mehr von uns bekommen?
+
+Klicke $3
+und ändere deine Einstellungen, um die E-Mail-Benachrichtigungen abzustellen.',
 );
 
 /** Greek (Ελληνικά)
@@ -468,6 +502,26 @@ $messages['hsb'] = array(
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|Njepřećel|Njepřećelej|Njepřećeljo|Njepřećelow}}',
 	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Wozjewjene měnjenje|Wozjewjenej měnjeni|Wozjewjene měnjenja|Wozjewjenych měnjenjow}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Měnjenje|Měnjeni|Měnjenja|Měnjenjow}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Palc|Palcaj|Palcy|Palcow}} horje',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Palc|Palcaj|Palcy|Palcow}} dele',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Data sława|Datej sławje|Date sławy|Datych sławow}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Podata fujwołanje|Podatej fujwołani|Podate fujwołanja|Podatych fujwołanjow}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Dóstany dar|Dóstanej daraj|Dóstane dary|Dóstanych darow}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Pósłany dar|Pósłanej daraj|Pósłane dary|Pósłanych darow}}',
+	'level-advance-subject' => 'Sy nětko "$1" na {{GRAMMAR:lokatiw|{{SITENAME}}}}',
+	'level-advance-body' => 'Witaj $1:
+
+Sy nětko "$2" na {{GRAMMAR:lokatiw|{{SITENAME}}}}!
+
+Zbožopřeća,
+
+Team {{GRAMMAR:genitiw|{{SITENAME}}}}
+
+---
+Nochceš hižo žane e-mejlki wot nas dóstać?
+
+Klikń na $3
+a změn swoje nastajenja, zo by e-mejlowe zdźělenki znjemóžnił.',
 );
 
 /** Interlingua (Interlingua)
@@ -942,6 +996,10 @@ e altere suas preferências para desabilitar e-mails de notificação',
  * @author KlaudiuMihaila
  */
 $messages['ro'] = array(
+	'user-stats-weekly-title' => 'Cele mai multe puncte în această săptămână',
+	'user-stats-monthly-title' => 'Cele mai multe puncte în această lună',
+	'top-fans-weekly-points-link' => 'Puncte în această săptămână',
+	'top-fans-monthly-points-link' => 'Puncte în această lună',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Vot|Voturi}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Modificare|Modificări}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Comentariu|Comentarii}}',
@@ -1061,14 +1119,20 @@ och ändra dina inställningar för att avaktivera epost-meddelanden.',
  * @author Veeven
  */
 $messages['te'] = array(
+	'top-fans-total-points-link' => 'మొత్తం పాయింట్లు',
+	'top-fans-weekly-points-link' => 'ఈ వారం పాయింట్లు',
+	'top-fans-monthly-points-link' => 'ఈ నెల పాయింట్లు',
+	'top-fans-points' => 'పాయింట్లు',
 	'top-fans-bad-field-title' => 'అయ్యో!',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|వోటు|వోట్లు}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|మార్పు|మార్పులు}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|వ్యాఖ్య|వ్యాఖ్యలు}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|మిత్రుడు|మిత్రులు}}',
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|శతృవు|శతృవులు}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|అభిప్రాయం|అభిప్రాయాలు}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|అందుకున్న బహుమతి|అందుకున్న బహుమతులు}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|ఇచ్చిన బహుమతి|ఇచ్చిన బహుమతులు}}',
+	'level-advance-subject' => '{{SITENAME}}లో మీరిప్పుడు "$1"!',
 	'level-advance-body' => 'హాయ్ $1:
 
 మీరిప్పుడు {{SITENAME}}లో "$2"!

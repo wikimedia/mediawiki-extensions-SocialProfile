@@ -794,6 +794,7 @@ $messages['da'] = array(
 );
 
 /** German (Deutsch)
+ * @author Melancholie
  * @author Revolus
  * @author Tim 'Avatar' Bartel
  * @author Umherirrender
@@ -802,6 +803,7 @@ $messages['de'] = array(
 	'viewrelationships' => 'Zeige Beziehungen',
 	'viewrelationshiprequests' => 'Zeige Beziehungsanfragen',
 	'ur-already-submitted' => 'Deine Anfrage wurde gesendet',
+	'ur-error-page-title' => 'Hoppla!',
 	'ur-error-title' => 'Uuups, hier gehts nicht weiter!',
 	'ur-error-message-no-user' => 'Wir können die Anfrage nicht ausführen, da kein Benutzer dieses Namens existiert.',
 	'ur-main-page' => 'Hauptseite',
@@ -809,32 +811,81 @@ $messages['de'] = array(
 	'ur-backlink' => '&lt; Zurück zu $1s Profil',
 	'ur-friend' => 'Freund',
 	'ur-foe' => 'Feind',
+	'ur-relationship-count-foes' => '$1 hat {{PLURAL:$2|einen Feind|$2 Feinde}}. Du möchtest mehr Feinde? <a href="$3">Lade sie ein.</a>',
+	'ur-relationship-count-friends' => '$1 hat {{PLURAL:$2|einen Freund|$2 Freunde}}. Du willst mehr Freunde? <a href="$3">Lade sie ein.</a>',
 	'ur-add-friends' => ' Du möchtest mehr Freunde haben? <a href="$1">Lad\' sie ein …</a>',
 	'ur-add-friend' => 'Als Freund hinzufügen',
 	'ur-add-foe' => 'Als Feind hinzufügen',
+	'ur-add-no-user' => 'Kein Benutzer ausgewählt.
+Bitte wähle die Freunde/Feinde durch den richtigen Link.',
+	'ur-add-personal-message' => 'Eine persönliche Nachricht hinzufügen',
+	'ur-remove-relationship-friend' => 'Aus Freundesliste entfernen',
+	'ur-remove-relationship-foe' => 'Aus Feindesliste entfernen',
 	'ur-give-gift' => 'Geschenk senden',
 	'ur-previous' => 'vorherige',
 	'ur-next' => 'nächste',
+	'ur-remove-relationship-title-foe' => 'Du möchtest $1 aus deiner Feindesliste löschen?',
+	'ur-remove-relationship-title-confirm-foe' => 'Du hast $1 aus deiner Feindesliste gelöscht',
+	'ur-remove-relationship-title-friend' => 'Du möchtest $1 aus deiner Freundesliste entfernen?',
+	'ur-remove-relationship-title-confirm-friend' => 'Du hast $1 aus deiner Freundesliste gelöscht',
+	'ur-remove-relationship-message-foe' => 'Du willst $1 aus deiner Feindesliste entfernen? Drücke „$2“ zum Bestätigen.',
+	'ur-remove-relationship-message-confirm-foe' => 'Du hast erfolgreich $1 aus deiner Feindesliste gelöscht.',
+	'ur-remove-relationship-message-friend' => 'Du willst $1 aus deiner Freundesliste entfernen? Drücke „$2“ zum Bestätigen.',
+	'ur-remove-relationship-message-confirm-friend' => 'Du hast $1 erfolgreich aus deiner Freundesliste entfernt.',
 	'ur-remove-error-message-no-relationship' => '$1 steht in keiner Beziehung zu dir.',
 	'ur-remove-error-message-remove-yourself' => 'Du kannst dich nicht selbst enfernen.',
 	'ur-remove-error-message-pending-request' => 'Du hast eine offene $1-Anfrage mit $2.',
+	'ur-remove-error-message-pending-foe-request' => 'Du hast eine ausstehende Feindschaftsanfrage von $1.',
+	'ur-remove-error-message-pending-friend-request' => 'Du hast eine ausstehende Freundschaftsanfrage von $1.',
 	'ur-remove-error-not-loggedin' => 'Du musst angemeldet sein um einen $1 zu entfernen.',
+	'ur-remove-error-not-loggedin-foe' => 'Du musst eingeloggt sein, um einen Feind zu entfernen.',
+	'ur-remove-error-not-loggedin-friend' => 'Du musst eingeloggt sein, um einen Freund zu entfernen.',
 	'ur-remove' => 'Entfernen',
 	'ur-cancel' => 'Abbrechen',
 	'ur-login' => 'Anmelden',
+	'ur-add-title-foe' => 'Du willst $1 zu deiner Feindesliste hinzufügen?',
+	'ur-add-title-friend' => 'Du willst $1 zu deiner Freundesliste hinzufügen?',
+	'ur-add-message-foe' => 'Du bit im Begriff, $1 zu deiner Feindesliste hinzuzufügen.
+Wir werden $1 von deinem Groll berichten.',
+	'ur-add-message-friend' => 'Du bist im Begriff, $1 zu deiner Freundesliste hinzuzufügen.
+Wir werden eine Bestätigungen von $1 einholen.',
 	'ur-friendship' => 'Freundschaft',
 	'ur-grudge' => 'Feindschaft',
 	'ur-add-button' => 'Als $1 hinzufügen',
+	'ur-add-button-foe' => 'Als Feind hinzufügen',
+	'ur-add-button-friend' => 'Als Freund hinzufügen',
+	'ur-add-sent-title-foe' => 'Wir haben deine Feindschaftsanfrage an $1 gesendet!',
+	'ur-add-sent-title-friend' => 'Wir haben deine Freundschaftsanfrage an $1 gesendet!',
+	'ur-add-sent-message-foe' => 'Deine Feindschaftsanfrage wurde an $1 zum Bestätigen weitergereicht.
+Du wirst eine E-Mail bekommen, sobald $1 deine Anfrage bestätigt.',
+	'ur-add-sent-message-friend' => 'Deine Freundschaftsanfrage wurde an $1 zum Bestätigen weitergereicht.
+Du wirst eine E-Mail bekommen, sobald $1 deine Anfrage bestätigt.',
 	'ur-add-error-message-no-user' => 'Der Benutzer, den du hinzufügen möchtest, existiert nicht.',
 	'ur-add-error-message-blocked' => 'Du bist momentan gesperrt und kannst keine Freunde oder Feinde hinzufügen.',
 	'ur-add-error-message-yourself' => 'Du kannst dich nicht selbst als Freund oder Feind hinzufügen.',
 	'ur-add-error-message-existing-relationship' => 'Du bist bereits $1 mit $2.',
+	'ur-add-error-message-existing-relationship-foe' => 'Du bist bereits mit $1 befeindet.',
+	'ur-add-error-message-existing-relationship-friend' => 'Du bist bereits mit $1 befreundet.',
 	'ur-add-error-message-pending-request-title' => 'Geduld!',
+	'ur-add-error-message-pending-friend-request' => 'Du hast eine ausstehende Freundschaftsanfrage von $1.
+Wir werden $1 davon informieren, wenn du seine Anfrage bestätigst.',
+	'ur-add-error-message-pending-foe-request' => 'Du hast eine ausstehende Feindschaftsanfrage von $1.
+Wir werden $1 davon informieren, wenn du seine Anfrage bestätigst.',
 	'ur-add-error-message-not-loggedin' => 'Du musst angemeldet sein um einen $1 hinzuzufügen',
+	'ur-add-error-message-not-loggedin-foe' => 'Du musst eingeloggt sein, um einen Feind hinzuzufügen',
+	'ur-add-error-message-not-loggedin-friend' => 'Du musst eingeloggt sein, um einen Freund hinzuzufügen',
 	'ur-requests-title' => 'Beziehungsanfrage',
+	'ur-requests-message-foe' => '<a href="$1">$2</a> möchte dein Feind sein.',
+	'ur-requests-message-friend' => '<a href="$1">$2</a> möchte dein Freund sein.',
 	'ur-accept' => 'Annehmen',
 	'ur-reject' => 'Ablehnen',
 	'ur-no-requests-message' => 'Du hast keine Freund- oder Feind-Anfrage. Wenn du mehr Freunde haben möchtest, <a href="$1">Lad\' sie ein…</a>',
+	'ur-requests-added-message-foe' => 'Du hast $1 zu deiner Feindesliste hinzugefügt.',
+	'ur-requests-added-message-friend' => 'Du hast $1 zu deiner Freundesliste hinzugefügt.',
+	'ur-requests-reject-message-friend' => 'Du hast $1 als deinen Freund zurückgewiesen.',
+	'ur-requests-reject-message-foe' => 'Du hast $1 als deinen Feind zurückgewiesen.',
+	'ur-title-foe' => 'Feindesliste von $1',
+	'ur-title-friend' => 'Freundesliste von $1',
 	'friend_request_subject' => '{{SITENAME}}: $1 hat dich als Freund hinzugefügt!',
 	'friend_request_body' => 'Hi $1:
 
@@ -3845,15 +3896,18 @@ $messages['szl'] = array(
 $messages['te'] = array(
 	'viewrelationships' => 'బంధాన్ని చూడండి',
 	'ur-already-submitted' => 'మీ అభ్యర్థనని పంపించాం',
+	'ur-error-message-no-user' => 'మీ అభ్యర్థనని మన్నింపలేము, ఎందుకంటే ఈ పేరుతో వాడుకరులెవరూ లేరు.',
 	'ur-main-page' => 'మొదటి పేజీ',
 	'ur-your-profile' => 'మీ ప్రొఫైలు',
 	'ur-friend' => 'స్నేహితులు',
 	'ur-foe' => 'శత్రువు',
+	'ur-add-friends' => ' మరింత మంది మిత్రులు కావాలా? <a href="$1">ఆహ్వానించండి</a>',
 	'ur-add-friend' => 'స్నేహితునిగా చేర్చు',
 	'ur-add-foe' => 'శత్రువుగా చేర్చు',
 	'ur-give-gift' => 'ఒక బహుమతి ఇవ్వండి',
 	'ur-previous' => 'క్రితం',
 	'ur-next' => 'తర్వాతి',
+	'ur-remove-relationship-title-friend' => '$1 ని మీ మిత్రునిగా తొలగించమంటారా?',
 	'ur-remove-error-message-remove-yourself' => 'మిమ్మల్ని మీరే తొలగించుకోలేరు.',
 	'ur-remove-error-not-loggedin' => '$1ని తొలగించడానికి మీరు లోనికి ప్రవేశించి ఉండాలి.',
 	'ur-remove' => 'తొలగించు',
@@ -3871,6 +3925,8 @@ $messages['te'] = array(
 	'ur-accept' => 'అంగీకరించు',
 	'ur-reject' => 'తిరస్కరించు',
 	'ur-no-requests-message' => 'మీకు మిత్రుత్వ లేదా శత్రుత్వ అభ్యర్థనలు లేవు. మీకు మరింత మంది స్నేహితులు కావాలంటే, <a href="$1">వారిని ఆహ్వానించండి!</a>',
+	'ur-title-foe' => '$1 యొక్క శతృవుల జాబితా',
+	'ur-title-friend' => '$1 యొక్క మిత్రుల జాబితా',
 	'friend_request_subject' => '{{SITENAME}}లో $1 మిమ్మల్ని స్నేహితునిగా చేర్చుకున్నారు!',
 );
 
@@ -4021,5 +4077,13 @@ $messages['vi'] = array(
 $messages['vo'] = array(
 	'ur-friend' => 'flen',
 	'ur-friendship' => 'flenam',
+);
+
+/** Traditional Chinese (‪中文(繁體)‬)
+ * @author Wrightbus
+ */
+$messages['zh-hant'] = array(
+	'ur-cancel' => '取消',
+	'ur-login' => '登入',
 );
 

@@ -960,12 +960,15 @@ $messages['da'] = array(
 );
 
 /** German (Deutsch)
+ * @author Melancholie
  * @author Revolus
  * @author Tim 'Avatar' Bartel
  * @author Umherirrender
  */
 $messages['de'] = array(
 	'populateuserprofiles' => 'Benutzerprofil vervollständigen',
+	'user-awards-title' => 'Auszeichnungen',
+	'user-gifts-title' => 'Geschenke',
 	'user-count-separator' => 'von',
 	'user-view-all' => 'Alle anzeigen',
 	'user-upload-image' => 'Bild hochladen',
@@ -982,7 +985,12 @@ $messages['de'] = array(
 	'user-send-message' => 'Nachricht senden',
 	'user-send-gift' => 'Geschenk senden',
 	'user-contributions' => 'Beiträge',
+	'user-stats-title' => 'Statistiken',
 	'user-stats-edits' => 'Beiträge',
+	'user-stats-votes' => 'Stimmen',
+	'user-stats-comments' => 'Kommentare',
+	'user-stats-recruits' => 'Rekruten',
+	'user-stats-quiz-points' => 'Quizpunkte',
 	'other-info-title' => 'Weitere Informationen',
 	'user-friends-title' => 'Freunde',
 	'user-foes-title' => 'Feinde',
@@ -1001,6 +1009,9 @@ $messages['de'] = array(
 	'custom-info-field3' => 'Eigene Info 3',
 	'custom-info-field4' => 'Eigene Info 4',
 	'custom-no-info' => 'Keine eigenen Informationen',
+	'profile-updated-personal' => 'Dein Profil aktualisieren',
+	'profile-not-provided' => 'Nicht angeboten',
+	'populate-user-profile-done' => '{{PLURAL:$1|Ein hinzugefügtes Profil|$2 hinzugefügte Profile}}',
 	'user-board-title' => 'Pinnwand',
 	'user-send-board-blast' => 'Nachricht senden',
 	'user-personal-info-title' => 'Persönliche Informationen',
@@ -1023,6 +1034,7 @@ $messages['de'] = array(
 	'user-recent-activity-friend' => 'Neue Freundschaft mit',
 	'user-recent-activity-foe' => 'Neue Feindschaft mit',
 	'user-recent-activity-user-message' => 'Nachricht verschickt an',
+	'user-recent-activity-network-update' => 'Hat einen Gedanken veröffentlicht',
 	'user-recent-system-gift' => 'Auszeichnung erhalten',
 	'user-profile-update-notloggedin-title' => 'Du kannst dein Profil nicht unangemeldet bearbeiten.',
 	'user-profile-update-notloggedin-text' => 'Du kannst dein Profil nicht unangemeldet bearbeiten.
@@ -1031,6 +1043,7 @@ Klick <a href="$1">hier</a> um dich anzumelden oder klicke <a href="$2">hier</a>
 	'user-profile-update-log-section' => 'Abschnitt geändert',
 	'user-profile-update-profile' => 'Profil',
 	'user-profile-default-country' => 'Deutschland',
+	'user-profile-points' => ' Punkte',
 	'user-profile-section-personal' => 'Persönliche Informationen',
 	'user-profile-section-sportsteams' => 'Netzwerke aktualisieren',
 	'user-profile-section-custom' => 'Eigene Informationen',
@@ -1040,6 +1053,7 @@ Klick <a href="$1">hier</a> um dich anzumelden oder klicke <a href="$2">hier</a>
 	'user-profile-personal-info' => 'Info',
 	'user-profile-personal-name' => 'Name',
 	'user-profile-personal-email' => 'E-Mail',
+	'user-profile-personal-email-needs-auth' => '(deine E-Mail-Adresse muss bestätigt sein, damit zu Benachrichtigungen erhalten kannst)',
 	'user-profile-personal-confirmemail' => 'E-Mail bestätigen',
 	'user-profile-personal-location' => 'Ort',
 	'user-profile-personal-city' => 'Stadt',
@@ -1101,6 +1115,7 @@ Klick <a href="$1">hier</a> um dich anzumelden oder klicke <a href="$2">hier</a>
 	'user-profile-picture-badvirusscanner' => 'Konfigurationsfehler: Unbekannter Virenscanner:',
 	'user-profile-picture-scanfailed' => 'Scan fehlgeschlagen',
 	'user-profile-goback' => 'Zurück',
+	'user-profile-userlevels-link' => 'Benutzerebenen',
 	'user-no-images' => 'Keine Bilder hochgeladen',
 	'edit-profile-title' => 'Profil bearbeiten',
 	'user-page-link' => 'Benutzerseite',
@@ -1114,6 +1129,19 @@ Klick <a href="$1">hier</a> um dich anzumelden oder klicke <a href="$2">hier</a>
 	'user-type-toggle-old' => 'Benutze Wiki-Benutzerseite',
 	'user-type-toggle-new' => 'Benutzer Profil-Seite',
 	'user-board-login-message' => 'Du musst <a href="$1">angemeldet sein</a> um Nachrichten an andere Nutzer zu senden',
+	'removeavatar' => 'Avatar löschen',
+	'givegift' => 'Ein Geschenk verschenken',
+	'viewgifts' => 'Geschenke ansehen',
+	'viewsystemgifts' => 'Auszeichnungen ansehen',
+	'avatarupload-removeavatar' => 'Avatar löschen',
+	'avatarupload-currentavatar' => 'Aktuelles Avatar von $1',
+	'avatarupload-removesuccess' => 'Das Avatar wurde erfolgreich gelöscht',
+	'avatarupload-removeanother' => 'Ein weiteres löschen',
+	'profilelogpage' => 'Logbuch der Benutzerprofiländerungen',
+	'profilelogpagetext' => 'Das ist ein Logbuch der Änderungen an Benutzerprofilen',
+	'avatarlogpage' => 'Logbuch der hochgeladenen Avatars',
+	'avatarlogpagetext' => 'Das ist ein Logbuch der hochgeladenen Benutzer-Avatars.',
+	'user-profile-picture-log-delete-entry' => 'Avatar von $1 gelöscht',
 );
 
 /** Greek (Ελληνικά)
@@ -1169,6 +1197,7 @@ $messages['el'] = array(
 );
 
 /** Esperanto (Esperanto)
+ * @author Melancholie
  * @author Yekrats
  */
 $messages['eo'] = array(
@@ -1181,6 +1210,7 @@ $messages['eo'] = array(
 	'user-points' => 'poentoj',
 	'user-edit-profile' => 'Redakti preferojn',
 	'user-upload-avatar' => 'Alŝutu avataron',
+	'user-watchlist' => 'Mia atentaro',
 	'user-meet-people' => 'Renkonti homojn',
 	'user-add-friend' => 'Aldonu kiel amikon',
 	'user-add-foe' => 'Aldoni kiel malamikon',
@@ -1213,6 +1243,7 @@ $messages['eo'] = array(
 	'user-personal-info-birthday' => 'Naskodato',
 	'user-personal-info-occupation' => 'Profesio',
 	'user-personal-info-websites' => 'Retejoj',
+	'user-personal-info-schools' => 'Lernejoj',
 	'user-personal-info-about-me' => 'Pri mi',
 	'user-recent-activity-title' => 'Lasta aktiveco',
 	'user-recent-activity-edit' => 'Redaktis la paĝon',
@@ -4828,6 +4859,7 @@ $messages['te'] = array(
 	'user-recent-activity-vote' => 'పేజీకి వోటేసారు',
 	'user-recent-activity-comment' => 'పేజీపై వ్యాఖ్యానించారు',
 	'user-profile-default-country' => 'అమెరికా సంయుక్త రాష్ట్రాలు',
+	'user-profile-points' => ' పాయింట్లు',
 	'user-profile-section-personal' => 'వ్యక్తిగత సమాచారం',
 	'user-profile-section-interests' => 'ఇతర సమాచారం',
 	'user-profile-section-picture' => 'అవతారం',
@@ -4848,6 +4880,7 @@ $messages['te'] = array(
 	'user-profile-personal-schools' => 'పాఠశాలలు',
 	'user-profile-personal-places' => 'ప్రదేశాలు',
 	'user-profile-personal-placeslived' => 'నేను ఉన్న ప్రదేశాలు',
+	'user-profile-personal-web' => 'జాలం',
 	'user-profile-personal-websites' => 'వెబ్&zwnj;సైట్లు',
 	'user-profile-interests-entertainment' => 'వినోదం',
 	'user-profile-interests-movies' => 'సినిమాలు',
@@ -4855,9 +4888,14 @@ $messages['te'] = array(
 	'user-profile-interests-music' => 'సంగీతం',
 	'user-profile-interests-books' => 'పుస్తకాలు',
 	'user-profile-interests-magazines' => 'పత్రికలు',
+	'user-profile-interests-videogames' => 'వీడియో ఆటలు',
 	'user-profile-interests-foodsnacks' => 'ఆహారం & చిరుతిళ్ళు',
 	'user-profile-interests-drinks' => 'పానియాలు',
 	'user-profile-preferences-emails' => 'ఈ-మెయిలు గమనింపులు',
+	'user-profile-preferences-emails-personalmessage' => 'వ్యక్తిగత సందేశం పంపినప్పుడు',
+	'user-profile-preferences-emails-friendfoe' => 'ఇతర వాడుకర్లు మిమ్మల్ని మిత్రుడిగానే లేదా శతృవుగానే చేర్చుకున్నప్పుడు',
+	'user-profile-preferences-emails-gift' => 'మీరు ఒక బహుమతి అందుకున్నప్పుడు',
+	'user-profile-preferences-emails-level' => 'స్థాయి పెరిగినప్పుడు',
 	'user-profile-preferences-emails-weekly' => 'వారంవారం తాజా విశేషాలు ఈ-మెయిల్లో అందుకోండి',
 	'user-profile-update-button' => 'తాజాకరించు',
 	'user-profile-sports-notloggedintitle' => 'అయ్యో!',
@@ -4887,6 +4925,7 @@ $messages['te'] = array(
 	'givegift' => 'ఒక బహుమతిని ఇవ్వండి',
 	'viewgifts' => 'బహుమతులను చూడండి',
 	'avatarupload-currentavatar' => '$1 యొక్క ప్రస్తుత అవతారం',
+	'avatarlogpage' => 'అవతార ఎగుమతుల చిట్టా',
 );
 
 /** Tetum (Tetun)
@@ -5102,5 +5141,21 @@ $messages['vo'] = array(
  */
 $messages['yi'] = array(
 	'user-profile-section-preferences' => 'פרעפֿערענצן',
+);
+
+/** Traditional Chinese (‪中文(繁體)‬)
+ * @author Wrightbus
+ */
+$messages['zh-hant'] = array(
+	'other-info-music' => '音樂',
+	'other-info-books' => '書籍',
+	'user-personal-info-real-name' => '真實姓名',
+	'user-personal-info-birthday' => '生日',
+	'user-profile-default-country' => '美國',
+	'user-profile-personal-birthday' => '生日',
+	'user-profile-personal-aboutme' => '關於我',
+	'user-profile-interests-movies' => '電影',
+	'user-profile-interests-music' => '音樂',
+	'user-profile-interests-books' => '書籍',
 );
 
