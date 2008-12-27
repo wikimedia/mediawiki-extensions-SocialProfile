@@ -231,6 +231,14 @@ $messages['af'] = array(
 	'ur-login' => 'Inteken',
 );
 
+/** Amharic (አማርኛ)
+ * @author Codex Sinaiticus
+ */
+$messages['am'] = array(
+	'ur-main-page' => 'ዋና ገጽ',
+	'ur-next' => 'ቀጥሎ',
+);
+
 /** Arabic (العربية)
  * @author Alnokta
  * @author Meno25
@@ -1024,10 +1032,17 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Imre
  * @author Sanbec
  */
 $messages['es'] = array(
 	'ur-main-page' => 'Página principal',
+	'ur-friend' => 'amigo',
+	'ur-cancel' => 'Cancelar',
+	'ur-login' => 'Entrar',
+	'ur-friendship' => 'amistad',
+	'ur-accept' => 'Aceptar',
+	'ur-reject' => 'Rechazar',
 );
 
 /** Finnish (Suomi)
@@ -2633,8 +2648,15 @@ $messages['myv'] = array(
  * @author Fluence
  */
 $messages['nah'] = array(
+	'ur-main-page' => 'Calīxatl',
+	'ur-friend' => 'icnīuhtli',
+	'ur-add-friend' => 'Ticcēntilīz quemeh mocnīuh',
 	'ur-next' => 'niman',
 	'ur-cancel' => 'Ticcuepāz',
+	'ur-login' => 'Timocalaquīz',
+	'ur-friendship' => 'icnīuhcāyōtl',
+	'ur-add-button' => 'Ticcēntilīz quemeh $1',
+	'ur-add-button-friend' => 'Ticcēntilīz quemeh mocnīuh',
 );
 
 /** Low German (Plattdüütsch)
@@ -3481,6 +3503,7 @@ $messages['rif'] = array(
  */
 $messages['ro'] = array(
 	'ur-main-page' => 'Pagina principală',
+	'ur-friend' => 'prieten',
 	'ur-remove' => 'Elimină',
 	'ur-cancel' => 'Anulează',
 	'ur-login' => 'Autentificare',

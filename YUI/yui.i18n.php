@@ -104,6 +104,20 @@ $messages['es'] = array(
 	'yui-desc' => 'Un conjunto de utilidades y controles escritos en JavaScript',
 );
 
+/** Basque (Euskara)
+ * @author Theklan
+ */
+$messages['eu'] = array(
+	'yui-desc' => 'JavaScripten idatzitako baliabide eta kontrol multzo bat',
+);
+
+/** Finnish (Suomi)
+ * @author Mobe
+ */
+$messages['fi'] = array(
+	'yui-desc' => 'Valikoima apuvälineitä ja ohjaimia, ohjelmointikielenä JavaScript.',
+);
+
 /** French (Français)
  * @author Grondin
  */

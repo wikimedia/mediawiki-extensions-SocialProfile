@@ -288,9 +288,11 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Imre
  * @author Sanbec
  */
 $messages['es'] = array(
+	'top-fans-points' => 'puntos',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinión|Opiniones}}',
 	'level-advance-subject' => '¡Ahora eres un «$1» en {{SITENAME}}!',
 );
@@ -742,6 +744,16 @@ Klickt $3
 an ännert Är Astellungen a schalt den E-Mai-Benoriichtungssystem aus.',
 );
 
+/** Nahuatl (Nāhuatl)
+ * @author Fluence
+ */
+$messages['nah'] = array(
+	'topusers' => 'Huēyi tlatequitiltilīlli',
+	'top-fans-by-points-nav-header' => 'Huēyi fans',
+	'top-fans-by-category-nav-header' => 'Huēyi neneuhcāyōcopa',
+	'top-fans-bad-field-title' => '¡Ō!',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  * @author Tvdm
@@ -1004,9 +1016,13 @@ $messages['ro'] = array(
 	'top-fans-points' => 'puncte',
 	'top-fans-bad-field-title' => 'Ups!',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Vot|Voturi}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Câştig lunar|Câştiguri lunare}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Câştig săptămânal|Câştiguri săptămânale}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Modificare|Modificări}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Comentariu|Comentarii}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Prieten|Prieteni}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Cadou primit|Cadouri primite}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Cadou oferit|Cadouri oferite}}',
 );
 
 /** Russian (Русский)

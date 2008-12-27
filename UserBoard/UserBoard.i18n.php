@@ -90,6 +90,13 @@ $messages['af'] = array(
 	'userboard_sendbutton' => 'stuur',
 );
 
+/** Amharic (አማርኛ)
+ * @author Codex Sinaiticus
+ */
+$messages['am'] = array(
+	'userboard_nextpage' => 'ቀጥሎ',
+);
+
 /** Arabic (العربية)
  * @author Alnokta
  * @author Meno25
@@ -460,11 +467,15 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Imre
  * @author Sanbec
  */
 $messages['es'] = array(
 	'messagesenttitle' => 'Mensajes enviados',
 	'userboard_delete' => 'Borrar',
+	'userboard_private' => 'privado',
+	'userboard_public' => 'público',
+	'userboard_sendbutton' => 'enviar',
 );
 
 /** Finnish (Suomi)
@@ -1082,6 +1093,7 @@ $messages['myv'] = array(
  */
 $messages['nah'] = array(
 	'userboard_delete' => 'Ticpolōz',
+	'userboard_private' => 'ichtac',
 	'userboard_nextpage' => 'niman',
 	'userboard_sendbutton' => 'ticquihuāz',
 );

@@ -276,6 +276,14 @@ $messages['af'] = array(
 	'user-profile-goback' => 'Terug',
 );
 
+/** Amharic (አማርኛ)
+ * @author Codex Sinaiticus
+ */
+$messages['am'] = array(
+	'user-profile-personal-city' => 'ከተማ',
+	'user-profile-personal-country' => 'ሀገር',
+);
+
 /** Aragonese (Aragonés)
  * @author Juanpabl
  */
@@ -962,6 +970,7 @@ $messages['da'] = array(
 );
 
 /** German (Deutsch)
+ * @author ABF
  * @author Melancholie
  * @author Revolus
  * @author Tim 'Avatar' Bartel
@@ -992,6 +1001,7 @@ $messages['de'] = array(
 	'user-stats-votes' => 'Stimmen',
 	'user-stats-comments' => 'Kommentare',
 	'user-stats-recruits' => 'Rekruten',
+	'user-stats-poll-votes' => 'Abstimmungen',
 	'user-stats-quiz-points' => 'Quizpunkte',
 	'other-info-title' => 'Weitere Informationen',
 	'user-friends-title' => 'Freunde',
@@ -1330,12 +1340,48 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Imre
  * @author Sanbec
  */
 $messages['es'] = array(
+	'user-gifts-title' => 'Regalos',
 	'user-count-separator' => 'de',
+	'user-points' => 'puntos',
+	'user-upload-avatar' => 'Subir avatar',
+	'user-stats-votes' => 'Votos',
+	'user-friends-title' => 'Amigos',
+	'other-info-movies' => 'Películas',
+	'other-info-music' => 'Música',
+	'other-info-books' => 'Libros',
+	'other-info-magazines' => 'Revistas',
+	'other-info-snacks' => 'Botanas',
+	'other-info-drinks' => 'Bebidas',
+	'user-personal-info-real-name' => 'Nombre real',
+	'user-personal-info-birthday' => 'Cumpleaños',
+	'user-personal-info-websites' => 'Páginas web',
+	'user-personal-info-schools' => 'Escuelas',
+	'user-personal-info-about-me' => 'Sobre me',
+	'user-profile-default-country' => 'Estados Unidos',
 	'user-profile-points' => ' puntos',
+	'user-profile-section-personal' => 'Información personal',
+	'user-profile-section-picture' => 'Avatar',
 	'user-profile-section-preferences' => 'Preferencias',
+	'user-profile-personal-name' => 'Nombre',
+	'user-profile-personal-email' => 'Correo electrónico',
+	'user-profile-personal-city' => 'Ciudad',
+	'user-profile-personal-country' => 'País',
+	'user-profile-personal-aboutme' => 'Sobre me',
+	'user-profile-personal-work' => 'Trabajo',
+	'user-profile-personal-schools' => 'Escuelas',
+	'user-profile-personal-websites' => 'Páginas web',
+	'user-profile-interests-movies' => 'Películas',
+	'user-profile-interests-music' => 'Música',
+	'user-profile-interests-books' => 'Libros',
+	'user-profile-interests-magazines' => 'Revistas',
+	'user-profile-interests-drinks' => 'Bebidas',
+	'user-profile-sports-sport' => 'Deporte',
+	'user-profile-picture-log' => 'avatar',
+	'user-page-link' => 'Página del usuario',
 );
 
 /** Estonian (Eesti)
@@ -2517,14 +2563,40 @@ $messages['it'] = array(
 /** Japanese (日本語)
  * @author Fryed-peach
  * @author Gzdavidwong
+ * @author Hosiryuhosi
  */
 $messages['ja'] = array(
+	'user-points' => 'ポイント',
+	'user-edit-profile' => 'プロフィールの編集',
+	'user-stats-edits' => '編集',
+	'user-stats-comments' => 'コメント',
+	'user-friends-title' => '友達',
+	'other-info-movies' => '動画',
+	'other-info-tv' => 'テレビ',
 	'other-info-music' => '音楽',
 	'other-info-books' => '図書',
+	'user-personal-info-real-name' => '実名',
 	'user-personal-info-birthday' => '誕生日',
+	'user-profile-update-profile' => 'プロフィール',
 	'user-profile-default-country' => 'アメリカ合衆国',
 	'user-profile-section-preferences' => '個人設定',
+	'user-profile-personal-name' => '名前',
 	'user-profile-personal-birthdate' => '日付 (MM/DD)',
+	'user-profile-personal-web' => 'ウェブ',
+	'user-profile-personal-websites' => 'ウェブサイト',
+	'user-profile-interests-movies' => '動画',
+	'user-profile-interests-tv' => 'テレビ',
+	'user-profile-interests-music' => '音楽',
+	'user-profile-interests-books' => '本',
+	'user-profile-update-button' => 'アップデート',
+	'user-profile-picture-title' => 'あなたの写真をアップロード',
+	'user-profile-picture-log' => 'アバター',
+	'user-profile-picture-yourpicture' => 'あなたの写真',
+	'user-profile-picture-small' => '小さい',
+	'user-profile-userlevels-link' => 'ユーザーレベル',
+	'user-page-link' => 'ユーザーページ',
+	'user-social-profile-link' => 'ソーシャルプロフィール',
+	'user-wiki-link' => 'ウィキ ユーザーページ',
 );
 
 /** Javanese (Basa Jawa)
@@ -3240,11 +3312,50 @@ $messages['myv'] = array(
  * @author Fluence
  */
 $messages['nah'] = array(
+	'user-view-all' => 'Tiquinttāz mochīntīn',
+	'user-upload-image' => 'Ticquetzāz īxiptli',
 	'user-watchlist' => 'Notlachiyaliz',
+	'user-add-friend' => 'Ticcēntilīz quemeh mocnīuh',
+	'user-contributions' => 'Ītlahcuilōl',
+	'user-stats-title' => 'Tlapōhualiztli',
+	'user-stats-edits' => 'Tlapatlaliztli',
+	'other-info-title' => 'Occē tlanōnōtzaliztli',
+	'user-friends-title' => 'Icnīuhtli',
+	'other-info-movies' => 'Īxiptlayōlli',
+	'other-info-music' => 'Cuīcayōtl',
+	'other-info-books' => 'Āmoxtin',
 	'user-personal-info-real-name' => 'Melāhuac motōcā',
+	'user-personal-info-location' => 'Tlacān',
+	'user-personal-info-hometown' => 'Tlācāltepētl',
+	'user-personal-info-birthday' => 'Tlācatōnalli',
+	'user-personal-info-occupation' => 'In tlein tichīhua',
+	'user-personal-info-places-lived' => 'Zanyenō ōmonemi',
+	'user-personal-info-schools' => 'Calmecac',
+	'user-personal-info-about-me' => 'Nehhuātechcopa',
+	'user-profile-default-country' => 'Tlacetilīlli Tlahtohcāyōtl',
+	'user-profile-section-picture' => 'Avatar',
 	'user-profile-section-preferences' => 'Tlaēlēhuiliztli',
+	'user-profile-personal-info' => 'Ītechcopa',
 	'user-profile-personal-name' => 'Tōcāitl',
 	'user-profile-personal-email' => 'E-mail',
+	'user-profile-personal-location' => 'Tlacān',
+	'user-profile-personal-city' => 'Āltepētl',
+	'user-profile-personal-country' => 'Tlācatiyān',
+	'user-profile-personal-hometown' => 'Tlācāltepētl',
+	'user-profile-personal-birthday' => 'Tlācatōnalli',
+	'user-profile-personal-aboutme' => 'Nehhuātechcopa',
+	'user-profile-personal-education' => 'Tlamachtiliztli',
+	'user-profile-personal-schools' => 'Calmecac',
+	'user-profile-picture-title' => 'Ticquetzāz moīxip',
+	'user-profile-picture-log' => 'avatar',
+	'user-profile-picture-log-entry' => 'ōmoquetz yancuīc avatar',
+	'user-profile-picture-yourpicture' => 'Moīxip',
+	'user-profile-picture-large' => 'Huēyi',
+	'user-profile-picture-medlarge' => 'Nepantlah - Huēyi',
+	'user-profile-picture-medium' => 'Nepantlah',
+	'user-profile-picture-small' => 'Tepitōn',
+	'user-profile-picture-uploaddifferent' => 'Ticquetzāz ahneneuhqui īxiptli',
+	'user-profile-picture-currentimage' => 'Āxcān īxiptli',
 	'user-page-link' => 'Tlatequitiltilīlli',
 );
 
@@ -4249,7 +4360,9 @@ $messages['ro'] = array(
 	'user-recent-activity-edit' => 'Modificat pagina',
 	'user-recent-activity-vote' => 'Votat pentru pagina',
 	'user-recent-activity-comment' => 'Comentat pe pagina',
+	'user-recent-activity-gift-rec' => 'A primit un cadou de la',
 	'user-recent-activity-friend' => 'Este acum prieten cu',
+	'user-recent-system-gift' => 'A primit un premiu',
 	'user-profile-default-country' => 'Statele Unite',
 	'user-profile-points' => ' puncte',
 	'user-profile-section-personal' => 'Informaţii personale',
@@ -4263,10 +4376,13 @@ $messages['ro'] = array(
 	'user-profile-personal-country' => 'Ţară',
 	'user-profile-personal-hometown' => 'Oraş natal',
 	'user-profile-personal-birthday' => 'Zi de naştere',
+	'user-profile-personal-birthdate' => 'Dată (LL/ZZ)',
 	'user-profile-personal-aboutme' => 'Despre mine',
+	'user-profile-personal-work' => 'Muncă',
 	'user-profile-personal-occupation' => 'Ocupaţie',
 	'user-profile-personal-education' => 'Educaţie',
 	'user-profile-personal-schools' => 'Şcoli',
+	'user-profile-personal-places' => 'Locuri',
 	'user-profile-personal-placeslived' => 'Locuri în care am locuit',
 	'user-profile-personal-web' => 'Web',
 	'user-profile-personal-websites' => 'Pagini web',
@@ -4277,10 +4393,13 @@ $messages['ro'] = array(
 	'user-profile-interests-books' => 'Cărţi',
 	'user-profile-interests-magazines' => 'Reviste',
 	'user-profile-interests-videogames' => 'Jocuri video',
+	'user-profile-tidbits-favathlete' => 'Atlet favorit şi de ce',
+	'user-profile-sports-sport' => 'Sport',
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-large' => 'Mare',
 	'user-profile-picture-medium' => 'Mediu',
 	'user-profile-picture-small' => 'Mic',
+	'user-profile-userlevels-link' => 'Niveluri de utilizator',
 	'user-profile-picture-log-delete-entry' => 'şters avatarul utilizatorului $1',
 );
 
