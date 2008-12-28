@@ -113,9 +113,10 @@ $messages['eu'] = array(
 
 /** Finnish (Suomi)
  * @author Mobe
+ * @author Nike
  */
 $messages['fi'] = array(
-	'yui-desc' => 'Valikoima apuvälineitä ja ohjaimia, ohjelmointikielenä JavaScript.',
+	'yui-desc' => 'Valikoima JavaScriptillä kirjoitettuja apuvälineitä ja ohjaimia.',
 );
 
 /** French (Français)
@@ -239,9 +240,10 @@ $messages['nl'] = array(
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
  * @author Frokor
+ * @author Harald Khan
  */
 $messages['nn'] = array(
-	'yui-desc' => 'Ei rekkje verktøy og kontrollar skrive i JavaScript',
+	'yui-desc' => 'Ei rekkje verktøy og kontrollar skrivne i JavaScript',
 );
 
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
@@ -364,5 +366,12 @@ $messages['vec'] = array(
  */
 $messages['vi'] = array(
 	'yui-desc' => 'Tập hợp các dụng cụ và trình điều khiển được viết bằng JavaScript',
+);
+
+/** Simplified Chinese (‪中文(简体)‬)
+ * @author Gaoxuewei
+ */
+$messages['zh-hans'] = array(
+	'yui-desc' => '使用JavaScript编写的程序和控件',
 );
 

@@ -69,6 +69,14 @@ $messages['af'] = array(
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Stem|Stemme}}',
 );
 
+/** Amharic (አማርኛ)
+ * @author Codex Sinaiticus
+ */
+$messages['am'] = array(
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|ወዳጅ|ወዳጆች}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|ጠላት|ጠላቶች}}',
+);
+
 /** Arabic (العربية)
  * @author Meno25
  */
@@ -638,20 +646,20 @@ $messages['km'] = array(
 	'top-fans-weekly-points-link' => 'ពិន្ទុ​សប្ដាហ៍​នេះ',
 	'top-fans-monthly-points-link' => 'ពិន្ទុ​ខែ​នេះ',
 	'top-fans-points' => 'ពិន្ទុ',
-	'top-fans-stats-vote-count' => '{{PLURAL:$1|Vote|បោះឆ្នោត}}',
-	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Monthly win|អ្នកឈ្នះ​ប្រចាំខែ}}',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|បោះឆ្នោត|បោះឆ្នោត}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|អ្នកឈ្នះ​ប្រចាំខែ|អ្នកឈ្នះ​ប្រចាំខែ}}',
 	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Weekly win|អ្នកឈ្នះ​ប្រចាំសប្ដាហ៍}}',
-	'top-fans-stats-edit-count' => '{{PLURAL:$1|Edit|កែប្រែ}}',
-	'top-fans-stats-comment-count' => '{{PLURAL:$1|Comment|វចនាធិប្បាយ}}',
-	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Referral|ការផ្ទេរ}}',
-	'top-fans-stats-friends-count' => '{{PLURAL:$1|Friend|មិត្តភ័ក្ដិ}}',
-	'top-fans-stats-foe-count' => '{{PLURAL:$1|Foe|បច្ចាមិត្ត}}',
-	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Published opinion|ជម្រើស​បោះពុម្ពផ្សាយ}}',
-	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinion|ជម្រើស}}',
-	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Thumb up|ពង្រីក}}',
-	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Thumb down|បង្រួម}}',
-	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Gift received|អំណោយ​ដែល​បាន​ទទួល}}',
-	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Gift sent|អំណោយ​ដែល​បាន​ផ្ញើ}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|កែប្រែ|កែប្រែ}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|វចនាធិប្បាយ|វចនាធិប្បាយ}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|ការផ្ទេរ|ការផ្ទេរ}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|មិត្តភ័ក្ដិ|មិត្តភ័ក្ដិ}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|បច្ចាមិត្ត|បច្ចាមិត្ត}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|ជម្រើស​បោះពុម្ពផ្សាយ|ជម្រើស​បោះពុម្ពផ្សាយ}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|ជម្រើស|ជម្រើស}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|ពង្រីក|ពង្រីក}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|បង្រួម|បង្រួម}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|ជំនូន​ដែល​បាន​ទទួល|ជំនូន​ដែល​បាន​ទទួល}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|ជំនូន​ដែល​បាន​ផ្ញើ|ជំនូន​ដែល​បាន​ផ្ញើ}}',
 	'level-advance-subject' => 'ឥឡូវនេះ អ្នក​មាន "$1" នៅ {{SITENAME}}!',
 	'level-advance-body' => 'សួស្ដី $1:
 
@@ -809,10 +817,48 @@ en wijzig uw instellingen om e-mailberichten uit te schakelen.",',
  */
 $messages['nn'] = array(
 	'user-stats-alltime-title' => 'Flest poeng nokosinne',
+	'user-stats-weekly-title' => 'Flest poeng denne veka',
+	'user-stats-monthly-title' => 'Flest poeng denne månaden',
 	'topusers' => 'Beste brukarar',
+	'top-fans-by-points-nav-header' => 'Beste tilhengjarar',
+	'top-fans-by-category-nav-header' => 'Beste etter katgegori',
 	'top-fans-total-points-link' => 'Poeng totalt',
+	'top-fans-weekly-points-link' => 'Poeng denne veka',
+	'top-fans-monthly-points-link' => 'Poeng denne månaden',
 	'top-fans-points' => 'poeng',
+	'top-fans-by-category-title' => 'Best i alt $1',
 	'top-fans-bad-field-title' => 'Ops!',
+	'top-fans-bad-field-message' => 'Den oppgjevne statistikken finst ikkje.',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Røyst|Røyster}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Månadleg siger|Månadlege sigrar}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Vekesiger|Vekesigrar}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Endring|Endringar}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Kommentar|Kommentarar}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Referanse|Referansar}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Ven|Vener}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Fiende|Fiendar}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Publisert meining|Publiserte meiningar}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Meining|Meiningar}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Tommel opp|Tomlar opp}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Tommel ned|Tomlar ned}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Tommel opp gjeven|Tomlar opp gjevne}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Tommel ned gjeven|Tomlar ned gjevne}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Gåva motteke|Gåver mottekne}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Gavå sendt|Gåver sendte}}',
+	'level-advance-subject' => 'Du er no $1 på {{SITENAME}}!',
+	'level-advance-body' => 'Hei, $1.
+
+Du er no ein «$2» på {{SITENAME}}.
+
+Gratulerer,
+
+{{SITENAME}}-laget
+
+----
+Vil du ikkje lenger motta e-postar frå oss?
+
+Trykk $3
+og endra innstillingane dine for å slå av e-postmeldingar.',
 );
 
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
@@ -1138,6 +1184,9 @@ och ändra dina inställningar för att avaktivera epost-meddelanden.',
  * @author Veeven
  */
 $messages['te'] = array(
+	'user-stats-alltime-title' => 'ఇప్పటివరకు ఎక్కువ పాయింట్లు',
+	'user-stats-weekly-title' => 'ఈ వారంలో ఎక్కువ పాయింట్లు',
+	'user-stats-monthly-title' => 'ఈ నెలలో ఎక్కువ పాయింట్లు',
 	'top-fans-total-points-link' => 'మొత్తం పాయింట్లు',
 	'top-fans-weekly-points-link' => 'ఈ వారం పాయింట్లు',
 	'top-fans-monthly-points-link' => 'ఈ నెల పాయింట్లు',
