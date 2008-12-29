@@ -160,7 +160,7 @@ class SpecialViewUserBoard extends SpecialPage {
 
 		if( $total ){
 		$output .= "<div class=\"user-page-message-top\">
-		<span class=\"user-page-message-count\" style=\"font-size:11px;color:#666666;\">" . wfMsg( 'userboard_showingmessages', $total, $start, $end ) . ".</span> {$board_to_board}</span>
+		<span class=\"user-page-message-count\" style=\"font-size:11px;color:#666666;\">" . wfMsg( 'userboard_showingmessages', $total, $start, $end , $end - $start + 1) . ".</span> {$board_to_board}</span>
 			</div>";
 		}
 

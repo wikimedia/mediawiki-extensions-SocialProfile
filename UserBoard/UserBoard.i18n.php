@@ -51,7 +51,7 @@ Click <a href="index.php?title=Special:UserLogin">here to login</a>',
 	'userboard_nomessages' => 'No messages.',
 	'userboard_sendbutton' => 'send',
 	'userboard_loggedout' => 'You must be <a href="$1">logged in</a> to post messages to other users.',
-	'userboard_showingmessages' => 'Showing $2-$3 of {{PLURAL:$1|$1 Message|$1 Messages}}',
+	'userboard_showingmessages' => 'Showing {{PLURAL:$4|message $3|messages $2-$3|}} of {{PLURAL:$1|$1 Message|$1 Messages}}',
 	'message_received_subject' => '$1 wrote on your board on {{SITENAME}}',
 	'message_received_body' => 'Hi $1:
 
