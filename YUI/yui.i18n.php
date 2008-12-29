@@ -189,6 +189,13 @@ $messages['jv'] = array(
 	'yui-desc' => 'Sawijining sèt piranti lan alat pangontrol, ditulis ing JavaScript',
 );
 
+/** Khmer (ភាសាខ្មែរ)
+ * @author Thearith
+ */
+$messages['km'] = array(
+	'yui-desc' => 'ការកំណត់​នៃ​ឧបករណ៍ប្រើប្រាស់ និង​គ្រប់គ្រង ត្រូវ​បាន​សរសេរ​នៅក្នុង JavaScript',
+);
+
 /** Ripoarisch (Ripoarisch)
  * @author Purodha
  */

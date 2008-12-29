@@ -222,6 +222,7 @@ $messages['cs'] = array(
 );
 
 /** German (Deutsch)
+ * @author MF-Warburg
  * @author Melancholie
  * @author Revolus
  */
@@ -234,6 +235,7 @@ $messages['de'] = array(
 	'top-fans-weekly-points-link' => 'Punkte diese Woche',
 	'top-fans-monthly-points-link' => 'Punkte diesen Monat',
 	'top-fans-points' => 'Punkte',
+	'top-fans-by-category-title' => 'Top gesamt $1',
 	'top-fans-bad-field-title' => 'Hoppla!',
 	'top-fans-bad-field-message' => 'Die angegebene Statistik existiert nicht.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Stimme|Stimmen}}',
@@ -241,6 +243,7 @@ $messages['de'] = array(
 	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Wochengewinn|Wochengewinne}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Bearbeitung|Bearbeitungen}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Kommentar|Kommentare}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Empfehlung|Empfehlungen}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Freund|Freunde}}',
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|Gegner/Feind|Gegner/Feinde}}',
 	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Veröffentlichte Meinung|Veröffentlichte Meinungen}}',
@@ -280,11 +283,15 @@ $messages['el'] = array(
  */
 $messages['eo'] = array(
 	'topusers' => 'Plej aktivaj uzantoj',
+	'top-fans-by-category-nav-header' => 'Plej altaj laŭ kategorio',
 	'top-fans-total-points-link' => 'Tutaj poentoj',
+	'top-fans-weekly-points-link' => 'Poentoj dum ĉi tiu semajno',
+	'top-fans-monthly-points-link' => 'Poentoj dum ĉi tiu monato',
 	'top-fans-points' => 'poentoj',
 	'top-fans-bad-field-title' => 'Ho ve!',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Voĉdono|Voĉdonoj}}',
 	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Monata venko|Monataj venkoj}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Semajna venko|Semajnaj venkoj}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Redakto|Redaktoj}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Komento|Komentoj}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Amiko|Amikoj}}',
@@ -642,13 +649,14 @@ $messages['km'] = array(
 	'user-stats-monthly-title' => 'ពិន្ទុ​ខ្ពស់បំផុត​សម្រាប់​ខែ​នេះ',
 	'topusers' => 'អ្នកប្រើប្រាស់​កំពូល',
 	'top-fans-by-points-nav-header' => 'អ្នកគាំទ្រ​កំពូល',
+	'top-fans-by-category-nav-header' => 'ច្រើនបំផុតតាម​​ចំណាត់ថ្នាក់ក្រុម',
 	'top-fans-total-points-link' => 'ពិន្ទុ​សរុប',
 	'top-fans-weekly-points-link' => 'ពិន្ទុ​សប្ដាហ៍​នេះ',
 	'top-fans-monthly-points-link' => 'ពិន្ទុ​ខែ​នេះ',
 	'top-fans-points' => 'ពិន្ទុ',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|បោះឆ្នោត|បោះឆ្នោត}}',
 	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|អ្នកឈ្នះ​ប្រចាំខែ|អ្នកឈ្នះ​ប្រចាំខែ}}',
-	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Weekly win|អ្នកឈ្នះ​ប្រចាំសប្ដាហ៍}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|អ្នកឈ្នះ​ប្រចាំសប្ដាហ៍|អ្នកឈ្នះ​ប្រចាំសប្ដាហ៍}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|កែប្រែ|កែប្រែ}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|វចនាធិប្បាយ|វចនាធិប្បាយ}}',
 	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|ការផ្ទេរ|ការផ្ទេរ}}',
@@ -732,7 +740,10 @@ $messages['lb'] = array(
 	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Gewënn vun der Woch|Gewënner vun der Woch}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Ännerung|Ännerungen}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Bemierkung|Bemierkungen}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Referenz|Referenzen}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Frënd|Frënn}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Géigner|Géigner}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Verëffentlecht Meenung| Verëffentlecht Meenungen}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Meenung|Meenungen}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Cadeau kritt|Cadeaue kritt}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Cadeau|Cadeauë}} geschéckt',
