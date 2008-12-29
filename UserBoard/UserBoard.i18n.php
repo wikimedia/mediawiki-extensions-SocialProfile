@@ -69,6 +69,22 @@ Click $4
 and change your settings to disable email notifications.'
 );
 
+/** Message documentation (Message documentation)
+ * @author Jon Harald Søby
+ * @author Purodha
+ */
+$messages['qqq'] = array(
+	'userboard_delete' => '{{Identical|Delete}}',
+	'userboard_private' => '{{Identical|Private}}',
+	'userboard_nextpage' => '{{Identical|Next}}',
+	'userboard_prevpage' => '{{Identical|Prev}}',
+	'userboard_sendbutton' => '{{Identical|Send}}',
+	'userboard_showingmessages' => "*'''$1''' is the total count of messages
+*'''$2''' is the number of the first messages shown
+*'''$3''' is the number of the last messages shown
+*'''$4''' is the count of messages acutally shown",
+);
+
 /** Niuean (ko e vagahau Niuē)
  * @author Jose77
  */
@@ -375,6 +391,7 @@ $messages['da'] = array(
 );
 
 /** German (Deutsch)
+ * @author Purodha
  * @author Raimond Spekking
  * @author Tim 'Avatar' Bartel
  * @author Umherirrender
@@ -420,7 +437,7 @@ Klicke <a href="index.php?title=Special:UserLogin">hier zum Anmelden</a>',
 	'userboard_nomessages' => 'Keine Nachrichten.',
 	'userboard_sendbutton' => 'senden',
 	'userboard_loggedout' => 'Du musst <a href="$1">angemeldet sein</a>, um Nachrichten an andere Nutzer schicken zu können.',
-	'userboard_showingmessages' => 'Zeige {{PLURAL:$1|Nachricht $1 von $1|Nachrichten $2-$3 von $1 insgesamt}}',
+	'userboard_showingmessages' => 'Zeige {{PLURAL:$4|Nachricht $3|Nachrichten $2-$3}} von $1 insgesamt',
 	'message_received_subject' => '$1 hat auf deine {{SITENAME}}-Pinnwand geschrieben',
 	'message_received_body' => 'Hi $1:
 
@@ -450,6 +467,8 @@ $messages['el'] = array(
  */
 $messages['eo'] = array(
 	'messagesenttitle' => 'Mesaĝoj senditaj',
+	'boardblaststep1' => 'Ŝtupo 1 - Skribu vian mesaĝon',
+	'boardblaststep2' => 'Ŝtupo 2 - Selektu kiun vi volas alsendi vian mesaĝon',
 	'boardlinkselectall' => 'Elektu Ĉiujn',
 	'boardlinkunselectall' => 'Malselektu ĉiujn',
 	'boardlinkselectfriends' => 'Selektu amikojn',
@@ -461,7 +480,9 @@ $messages['eo'] = array(
 	'userboard_delete' => 'Forigi',
 	'userboard_yourboard' => 'Via afiŝejo',
 	'userboard_owner' => 'Afiŝejo de $1',
+	'userboard_backprofile' => 'Reiri al profilo de $1',
 	'userboard_backyourprofile' => 'Reiri vian profilon',
+	'userboard_confirmdelete' => 'Ĉu ver certas ke vi volas forigi ĉi tiun mesaĝon?',
 	'userboard_sendmessage' => 'Sendu al $1 mesaĝon',
 	'userboard_myboard' => 'Mia afiŝejo',
 	'userboard_posted_ago' => 'afiŝita antaŭ $1',
@@ -472,6 +493,9 @@ $messages['eo'] = array(
 	'userboard_prevpage' => 'antaŭ',
 	'userboard_nomessages' => 'Neniuj mesaĝoj.',
 	'userboard_sendbutton' => 'sendi',
+	'userboard_loggedout' => 'Vi devas <a href="$1">ensaluti</a> por afiŝi mesaĝojn al aliaj uzantoj.',
+	'userboard_showingmessages' => 'Montrante {{PLURAL:$4|mesaĝon|mesaĝojn $2-$3}} el {{PLURAL:$1|$1 mesaĝo|$1 mesaĝoj}}',
+	'message_received_subject' => '$1 skribis en via afiŝejon en {{SITENAME}}',
 );
 
 /** Spanish (Español)
@@ -490,6 +514,7 @@ $messages['es'] = array(
  * @author Crt
  * @author Jack Phoenix
  * @author Mobe
+ * @author Nike
  */
 $messages['fi'] = array(
 	'boardblastlogintitle' => 'Sinun tulee olla sisäänkirjautunut lähettääksesi keskustelupläjäyksiä',
@@ -531,7 +556,7 @@ $messages['fi'] = array(
 	'userboard_nomessages' => 'Ei viestejä.',
 	'userboard_sendbutton' => 'lähetä',
 	'userboard_loggedout' => 'Sinun tulee olla <a href="$1">kirjautunut sisään</a> lähettääksesi viestejä toisille käyttäjille.',
-	'userboard_showingmessages' => 'Näkyvillä $2-$3 viestiä (yhteensä {{PLURAL:$1|$1 viesti|$1 viestiä}})',
+	'userboard_showingmessages' => 'Näkyvillä on {{PLURAL:$4|viesti $3|viestit $2–$3}}. Yhteensä {{PLURAL:$1|$1 viesti|$1 viestiä}}.',
 	'message_received_subject' => '$1 kirjoitti keskustelualueellesi {{GRAMMAR:inessive|{{SITENAME}}}}',
 	'message_received_body' => 'Hei $1:
  
@@ -551,6 +576,7 @@ ja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.',
 
 /** French (Français)
  * @author Grondin
+ * @author IAlex
  */
 $messages['fr'] = array(
 	'boardblastlogintitle' => 'Vous devez être connecté pour envoyer le tableau en rafale',
@@ -592,7 +618,7 @@ $messages['fr'] = array(
 	'userboard_nomessages' => 'Aucun message.',
 	'userboard_sendbutton' => 'envoyé',
 	'userboard_loggedout' => 'Vous devez être <a href="$1">connecté</a> pour poster des messages à d’autres utilisateurs.',
-	'userboard_showingmessages' => 'Visionnement de $2-$3 de {{PLURAL:$1|$1 message|$1 messages}}',
+	'userboard_showingmessages' => 'Visionnement {{PLURAL:$4|du message $3|des messages $2-$3}} sur un total de {{PLURAL:$1|$1 message|$1 messages}}',
 	'message_received_subject' => '$1 a écrit sur votre tableau sur {{SITENAME}}',
 	'message_received_body' => "Salut $1 :
 
@@ -661,7 +687,7 @@ Prema <a href="index.php?title=Special:UserLogin">aquí para acceder</a>',
 	'userboard_nomessages' => 'Ningunha mensaxe.',
 	'userboard_sendbutton' => 'enviar',
 	'userboard_loggedout' => 'Debe <a href="$1">acceder ao sistema</a> para deixar mensaxes a outros usuarios.',
-	'userboard_showingmessages' => 'Amosando $2-$3 {{PLURAL:$1|dunha mensaxe|de $1 mensaxes}}',
+	'userboard_showingmessages' => 'Amosando {{PLURAL:$4|ata a mensaxe $3|as mensaxes da $2 á $3}} dun total {{PLURAL:$1|dunha mensaxe|de $1 mensaxes}}',
 	'message_received_subject' => '$1 escribiu no seu taboleiro en {{SITENAME}}',
 	'message_received_body' => 'Ola $1:
 
@@ -929,10 +955,48 @@ $messages['kri'] = array(
  * @author Purodha
  */
 $messages['ksh'] = array(
+	'boardblastlogintitle' => 'Do moß enjelogg sin, öm Nöhreechte verschecke ze künne',
+	'boardblastlogintext' => 'Do moß enjelogg sin, öm Nöhreechte verschecke ze künne.
+Donn jlich <a href="index.php?title=Special:UserLogin">enlogge</a>.',
+	'messagesenttitle' => 'Nohreechte verscheck',
+	'boardblasttitle' => 'Nohreech verschecke',
+	'boardblaststep1' => 'Eetste Schrett — Don Ding Nohreech schriive',
+	'boardblastprivatenote' => 'All die Nohreeche wäde als private Nohreechte verscheck',
+	'boardblaststep2' => 'Zweite Schrett — Don ußsöke, wämm De die Nohreech schecke wells',
+	'boardlinkselectall' => 'Alle ußsöke',
+	'boardlinkunselectall' => 'Nix ußsöke',
+	'boardlinkselectfriends' => 'De Fünde ußsöke',
+	'boardlinkunselectfriends' => 'Keine Fründ ußsöke',
+	'boardlinkselectfoes' => 'Feinde ußsöke',
+	'boardlinkunselectfoes' => 'Keine Feind ußsöke',
+	'boardsendbutton' => 'Nohreech schecke!',
+	'boardnofriends' => 'Do häß kein Fründe! Do kanns nix schecke!',
 	'messagesentsuccess' => 'Ding Nohresch eß verscheck woode',
 	'userboard' => 'Pennwand fö Metmaacher',
 	'userboard_board-to-board' => 'Pennwand-zoh-Pennwand',
 	'userboard_delete' => 'Fottschmieße',
+	'userboard_noexist' => 'Dä Metmaacher jit et nit, dä De do beloore wells.',
+	'userboard_yourboard' => 'Ding Pinnwand',
+	'userboard_owner' => 'Däm Metmaacher $1 sing Pinnwand',
+	'userboard_yourboardwith' => 'Ding Pinnwand-zo-Pinnwand Klaaf met däm Metmaacher $1',
+	'userboard_otherboardwith' => 'Däm Metmaacher $1 singe Pinnwand-zo-Pinnwand Klaaf met däm Metmaacher $2',
+	'userboard_backprofile' => 'Retuur noh däm Metmaacher $1 singem Profil',
+	'userboard_backyourprofile' => 'Retuur noh Dingem eije Profil',
+	'userboard_boardtoboard' => 'Pinnwand-zo-Pinnwand Klaaf',
+	'userboard_confirmdelete' => 'Wells De die Nohreech werklech fottschmieße?',
+	'userboard_sendmessage' => 'Scheck en Nohreech noh däm Metmaacher $1',
+	'userboard_myboard' => 'Ming Pinnwand',
+	'userboard_posted_ago' => 'för $1 jespeichert',
+	'userboard_private' => 'privat',
+	'userboard_public' => 'öffentlech',
+	'userboard_messagetype' => 'De Zoot Nohreech',
+	'userboard_nextpage' => 'näx',
+	'userboard_prevpage' => 'förrije',
+	'userboard_nomessages' => 'Kein Nohrechte.',
+	'userboard_sendbutton' => 'Schecke!',
+	'userboard_loggedout' => 'Do möß ald <a href="$1">enjelogg</a> sin, öm Nohrechte aan ander Metmaacher verschecke ze künne.',
+	'userboard_showingmessages' => 'Dat {{PLURAL:$4|es de Nohreech|sin de Nohreechte $2 beß|nix}} $3 vun {{PLURAL:$1|eine Nohrech|$1|nix}} ennsjesammp.',
+	'message_received_subject' => 'Dä Metmaacher $1 hät jet op Dinge Pinnwand en de {{SITENAME}} jedonn',
 	'message_received_body' => 'Hallo $1,
 
 dä Metmaacher $2 hät jraad op Ding Brett op de {{SITENAME}}
@@ -963,6 +1027,7 @@ $messages['lb'] = array(
 	'boardlinkselectfriends' => 'Frënn auswielen',
 	'boardlinkunselectfriends' => 'Aus der Lëscht vun de Frënn ewechhuelen',
 	'boardlinkselectfoes' => 'Géigner auswielen',
+	'boardlinkunselectfoes' => 'Géigner net auswielen',
 	'boardnofriends' => 'Dir hutt keng Frënn deenen dir ee Message schécke kënnt!',
 	'messagesentsuccess' => 'Äre Noriicht gouf geschéckt',
 	'userboard' => 'Benotzertafel',
@@ -983,7 +1048,7 @@ $messages['lb'] = array(
 	'userboard_prevpage' => 'vireg',
 	'userboard_nomessages' => 'Keng Messagen',
 	'userboard_sendbutton' => 'geschéckt',
-	'userboard_showingmessages' => 'Weis $2-$$3 vu(n) {{PLURAL:$1|$1 Noriicht|$1 Noriichten}}',
+	'userboard_showingmessages' => 'Weis {{PLURAL:$4|Noriicht $3|Noriichten $2-$3}} vu(n) {{PLURAL:$1|$1 Noriicht|$1 Noriichten}}',
 );
 
 /** Lithuanian (Lietuvių)
@@ -1149,7 +1214,7 @@ $messages['nl'] = array(
 	'userboard_nomessages' => 'Geen berichten.',
 	'userboard_sendbutton' => 'verzenden',
 	'userboard_loggedout' => 'U moet <a href="$1">aangemeld</a> zijn om berichten naar andere gebruikers te verzenden.',
-	'userboard_showingmessages' => 'Berichten $2 tot $3 van {{PLURAL:$1|$1 bericht|$1 berichten}} worden weergegeven',
+	'userboard_showingmessages' => '{{PLURAL:$4|Bericht $3|Berichten $2 tot $3}} van {{PLURAL:$1|$1 bericht|$1 berichten}} worden weergegeven',
 	'message_received_subject' => '$1 heeft op uw board op {{SITENAME}} geschreven',
 	'message_received_body' => 'Hallo $1.
 
@@ -1168,16 +1233,69 @@ en wijzig uw instellingen om e-mailberichten uit te schakelen.',
 );
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+ * @author Harald Khan
  * @author Jon Harald Søby
  */
 $messages['nn'] = array(
+	'boardblastlogintitle' => 'Du må logga inn for kunna senda meldingar',
+	'boardblastlogintext' => 'Du vera innlogga inn for kunna senda meldingar. 
+Gå <a href="index.php?title=Special:UserLogin">her for å logga inn</a>',
+	'messagesenttitle' => 'Sendte meldingar',
+	'boardblasttitle' => 'Send melding',
+	'boardblaststep1' => 'Steg 1 &ndash; skriv meldinga di',
+	'boardblastprivatenote' => 'Alle meldingar vil vera private',
+	'boardblaststep2' => 'Steg 2 &ndash; vel kven du vil senda meldinga til',
+	'boardlinkselectall' => 'Merk alle',
+	'boardlinkunselectall' => 'Fjern all merking',
+	'boardlinkselectfriends' => 'Merk venner',
+	'boardlinkunselectfriends' => 'Fjern merking av venner',
+	'boardlinkselectfoes' => 'Merk fiendar',
+	'boardlinkunselectfoes' => 'Fjern merking av fiendar',
+	'boardsendbutton' => 'Send melding',
+	'boardnofriends' => 'Du har ingen venner som du kan senda meldingar til.',
+	'messagesentsuccess' => 'Meldinga di blei sendt',
+	'userboard' => 'Brukardiskusjon',
+	'userboard_board-to-board' => 'Brukardiskusjon',
 	'userboard_delete' => 'Slett',
+	'userboard_noexist' => 'Brukaren du freistar å sjå finst ikkje.',
+	'userboard_yourboard' => 'Di diskusjonssida',
+	'userboard_owner' => 'Diskusjonssida til $1',
+	'userboard_yourboardwith' => 'Den delte diskusjonssida di med $1',
+	'userboard_otherboardwith' => 'Delt diskusjonssida mellom $1 og $2',
+	'userboard_backprofile' => 'Attende til profilen til $1',
+	'userboard_backyourprofile' => 'Attende til profilen din',
+	'userboard_boardtoboard' => 'Delt diskusjonssida',
+	'userboard_confirmdelete' => 'Er du sikker på at du vil sletta denne meldinga?',
+	'userboard_sendmessage' => 'Send ei melding til $1',
+	'userboard_myboard' => 'Diskusjonssida mi',
+	'userboard_posted_ago' => 'lagt inn $1 sidan',
 	'userboard_private' => 'privat',
+	'userboard_public' => 'offentleg',
+	'userboard_messagetype' => 'Meldingstype',
 	'userboard_nextpage' => 'neste',
+	'userboard_prevpage' => 'førre',
+	'userboard_nomessages' => 'Ingen meldingar.',
 	'userboard_sendbutton' => 'send',
+	'userboard_loggedout' => 'Du må vera <a href="$1">innlogga</a> for å senda meldingar til andre brukarar.',
+	'userboard_showingmessages' => 'Syner {{PLURAL:$4|melding $3|meldingane $2&ndash;$3}} av {{PLURAL:$1|éi melding|$1 meldingar}} totalt',
+	'message_received_subject' => '$1 skreiv på diskusjonssida di på {{SITENAME}}',
+	'message_received_body' => 'Hei, $1.
+
+$2 har skrive på diskusjonssida di på {{SITENAME}}.
+
+Følg lenkkja nedanfor for å sjå diskusjonssida di.
+
+$3
+
+---
+
+Vil du ikkje motta fleire e-postar frå oss?
+
+Trykk $4 og endra innstillingane dine for å slå av meldingar gjennom e-post.',
 );
 
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Harald Khan
  * @author Jon Harald Søby
  */
 $messages['no'] = array(
@@ -1209,7 +1327,7 @@ $messages['no'] = array(
 	'userboard_backyourprofile' => 'Tilbake til profilen din',
 	'userboard_boardtoboard' => 'Delt diskusjonsside',
 	'userboard_confirmdelete' => 'Er du sikker på at du vil slette denne beskjeden?',
-	'userboard_sendmessage' => 'Sendte en beskjed til $1',
+	'userboard_sendmessage' => 'Send en beskjed til $1',
 	'userboard_myboard' => 'Min diskusjonsside',
 	'userboard_posted_ago' => 'postet $1 siden',
 	'userboard_private' => 'privat',
@@ -1398,7 +1516,7 @@ Clique <a href="index.php?title=Special:UserLogin">aqui para logar</a>',
 	'userboard_nomessages' => 'Sem mensagens.',
 	'userboard_sendbutton' => 'enviar',
 	'userboard_loggedout' => 'Você precida estar <a href="$1">logado</a> para enviar mensagens a outros usuários.',
-	'userboard_showingmessages' => 'Mostrando $2-$3 de {{PLURAL:$1|$1 Mensagem|$1 Mensagens}}',
+	'userboard_showingmessages' => 'Mostrando {{PLURAL:$4|mensagem $3|mensagens $2-$3}} de {{PLURAL:$1|$1 mensagem|$1 mensagens}}',
 	'message_received_subject' => '$1 escreveu em seu mural em {{SITENAME}}',
 	'message_received_body' => 'Oi $1:
 
@@ -1436,6 +1554,14 @@ $messages['ro'] = array(
 	'userboard_messagetype' => 'Tipul mesajului',
 	'userboard_nomessages' => 'Nici un mesaj.',
 	'userboard_sendbutton' => 'trimite',
+);
+
+/** Tarandíne (Tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'boardlinkselectall' => 'Selezione tutte',
+	'boardlinkunselectall' => 'No selezionà nisciune',
 );
 
 /** Russian (Русский)
@@ -1542,7 +1668,7 @@ $messages['sk'] = array(
 	'userboard_nomessages' => 'Žiadne správy.',
 	'userboard_sendbutton' => 'poslať',
 	'userboard_loggedout' => 'Musíte <a href="$1">sa prihlásiť</a>, aby ste mohli posielať správy iným používateľom.',
-	'userboard_showingmessages' => 'Zobrazujú sa správy $2-$3 z $1 {{PLURAL:$1|správy|správ}}',
+	'userboard_showingmessages' => '{{PLURAL:$4|Zobrazuje sa správa $3|Zobrazujú sa správy $2-$3}} z $1 {{PLURAL:$1|správy|správ}}',
 	'message_received_subject' => '$1 napísal na vaše fórum na {{GRAMMAR:lokál|{{SITENAME}}}}',
 	'message_received_body' => 'Ahoj, $1:
 

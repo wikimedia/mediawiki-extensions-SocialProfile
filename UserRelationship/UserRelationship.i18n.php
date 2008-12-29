@@ -2285,8 +2285,8 @@ Bes esu joot, un donn Der Ding Frünnde un Feinde övver der reschtijje Link enn
 	'ur-remove-relationship-friend' => 'Uß de Frünndschaffs-Leß nämme',
 	'ur-remove-relationship-foe' => 'Uß de Feindschaffs-Leß nämme',
 	'ur-give-gift' => 'e Jeschengk jevve',
-	'ur-previous' => 'Förrije',
-	'ur-next' => 'Näx',
+	'ur-previous' => 'förrije',
+	'ur-next' => 'näx',
 	'ur-remove-relationship-title-foe' => 'Do wells dä Metmaacher „$1“ uß Dinge Feindschaffs-Leß nämme?',
 	'ur-remove-relationship-title-confirm-foe' => 'Do häß dä Metmaacher „$1“ uß Dinge Feindschaffs-Leß jenumme',
 	'ur-remove-relationship-title-friend' => 'Do wells dä Metmaacher „$1“ uß Dinge Frünndschaffs-Leß nämme?',
@@ -2474,32 +2474,40 @@ $messages['lb'] = array(
 	'ur-foe' => 'Géigner',
 	'ur-relationship-count-foes' => '$1 huet $2 {{PLURAL:$2|Géigner|Géigner}}. Wëllt Dir méi Géigner? a href="$3">Invitéiert se.</a>',
 	'ur-relationship-count-friends' => '$1 huet $2 {{PLURAL:$2|Frënd|Frënn}}. Wëllt Dir méi Frënn? <a href="$3">Invitéiert se.</a>',
-	'ur-add-friends' => 'Wellt Dir méi Frënn? <a href="$1">Invitéiert se</a>',
+	'ur-add-friends' => ' Wëllt Dir méi Frënn? <a href="$1">Invitéiert se</a>',
 	'ur-add-friend' => 'Als Frënd derbäisetzen',
 	'ur-add-foe' => 'Als Géigner derbäisetzen',
 	'ur-add-no-user' => 'Kee Benotzer ausgewielt.
-Maacht Ufroe fir Frënn/géigner mat dem richtege Link.',
+Maacht Ufroe fir Frënn/Géigner mat dem richtege Link.',
 	'ur-add-personal-message' => 'Eng perséinlech Noriicht derbäisetzen',
 	'ur-remove-relationship-friend' => 'Als Frënd ewechhuelen',
 	'ur-remove-relationship-foe' => 'Als Géigner ewechhuelen',
 	'ur-give-gift' => 'Cadeau schécken',
 	'ur-previous' => 'vireg',
 	'ur-next' => 'nächst',
-	'ur-remove-relationship-title-foe' => 'Wëllt Dir de(n) $1 als Äre Géigner ewechhuelen?',
-	'ur-remove-relationship-title-confirm-foe' => 'Dir hutt de(n) $1 als Äre Géigner ewechgeholl',
-	'ur-remove-relationship-title-friend' => 'Wëllt dir de(n) $1 als äre Frënd ewechhuelen?',
-	'ur-remove-relationship-title-confirm-friend' => 'Dir hutt de(n) $1 als Äre Frënd ewechgeholl',
+	'ur-remove-relationship-title-foe' => 'Wëllt Dir de Benotzer $1 als Äre Géigner ewechhuelen?',
+	'ur-remove-relationship-title-confirm-foe' => 'Dir hutt de Benotzer $1 als Äre Géigner ewechgeholl',
+	'ur-remove-relationship-title-friend' => 'Wëllt dir de Benotzer $1 als Äre Frënd ewechhuelen?',
+	'ur-remove-relationship-title-confirm-friend' => 'Dir hutt de Benotzer $1 als Äre Frënd ewechgeholl',
 	'ur-remove-relationship-message-foe' => 'Dir hutt ugefrot fir de Benotzer $1 als Äre Géigner ewechzehuelen, dréckt "$2" fir ze confirméieren.',
 	'ur-remove-relationship-message-confirm-foe' => 'Dir hutt de Benotzer $1 als Äre Géigner ewechgeholl.',
+	'ur-remove-relationship-message-friend' => 'Dir hutt ugefrot fir de Benotzer $1 als Äre Frënd ewechzehuelen, dréckt "$2" fir ze confirméieren.',
+	'ur-remove-relationship-message-confirm-friend' => 'Dir hutt de Benotzer $1 als Äre Frënd ewechgeholl.',
 	'ur-remove-error-message-no-relationship' => 'Dir hutt keng Relatioun mam $1',
 	'ur-remove-error-message-remove-yourself' => 'Dir kënnt iech net selwer ewechhuelen.',
+	'ur-remove-error-message-pending-request' => 'Dir hutt eng oppen $1-Ufro mam Benotzer $2',
+	'ur-remove-error-message-pending-foe-request' => 'Dir hutt eng oppe Géigner-Ufro mam Benotzer $1.',
+	'ur-remove-error-message-pending-friend-request' => 'Dir hutt eng oppe Frënd-Ufro mam Benozer $1.',
+	'ur-remove-error-not-loggedin' => 'Dir musst ageloggt si fir e $1 ewechzehuelen.',
 	'ur-remove-error-not-loggedin-foe' => 'Dir musst ageloggt si fir e Géigner ewechzehuelen.',
 	'ur-remove-error-not-loggedin-friend' => 'Dir musst ageloggt si fir e Frënd ewechzehuelen.',
 	'ur-remove' => 'Ewechhuelen',
 	'ur-cancel' => 'Annulléieren',
 	'ur-login' => 'Umellen',
-	'ur-add-title-foe' => 'Wëllt Dir de(n) $1 als Äre Géigner derbäisetzen?',
-	'ur-add-title-friend' => 'Wëllt dir de(n) $1 als Äre Frënd derbäisetzen?',
+	'ur-add-title-foe' => 'Wëllt Dir de Benotzer $1 als Äre Géigner derbäisetzen?',
+	'ur-add-title-friend' => 'Wëllt dir de Benotzer $1 als Äre Frënd derbäisetzen?',
+	'ur-add-message-foe' => 'Dir sidd am Gaang de Benotzer $1 als Géigner derbäizesetzen.
+Mir wäerten de Benotzer $1 informéieren fir ären Ierger ze confirméieren.',
 	'ur-friendship' => 'Frëndschaft',
 	'ur-grudge' => 'Sträit',
 	'ur-add-button' => 'Als $1 derbäisetzen',
@@ -2522,10 +2530,10 @@ Maacht Ufroe fir Frënn/géigner mat dem richtege Link.',
 	'ur-reject' => 'Refuséieren',
 	'ur-no-requests-message' => 'Dir hutt keng Ufroen fir Frënn oder Géigner.
 Wann Dir méi Frënn wellt <a href="$1">invitéiert se!</a>',
-	'ur-requests-added-message-foe' => 'Dir hutt de(n) $1 als Äre Géigner derbäigesat.',
-	'ur-requests-added-message-friend' => 'Dir hutt de(n) $1 als Frënd derbäigesat.',
-	'ur-requests-reject-message-friend' => 'Dir hutt de(n) $1 als Äre Frënd refuséiert.',
-	'ur-requests-reject-message-foe' => 'Dir hutt de(n) $1 als Äre Géigner refuséiert.',
+	'ur-requests-added-message-foe' => 'Dir hutt de Benotzer $1 als Äre Géigner derbäigesat.',
+	'ur-requests-added-message-friend' => 'Dir hutt de Benotzer $1 als Frënd derbäigesat.',
+	'ur-requests-reject-message-friend' => 'Dir hutt de Benotzer $1 als Äre Frënd refuséiert.',
+	'ur-requests-reject-message-foe' => 'Dir hutt de Benotzer $1 als Äre Géigner refuséiert.',
 	'ur-title-foe' => 'Lëscht vun de Géigner vum $1',
 	'ur-title-friend' => 'Lëscht vun de Frënn vum $1',
 	'friend_request_subject' => '$1 huet iech als Frënd op {{SITENAME}} derbäigesat!',
@@ -2947,17 +2955,182 @@ en wijzig uw instellingen om e-mailberichten uit te schakelen.',
 );
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+ * @author Harald Khan
  * @author Jon Harald Søby
  */
 $messages['nn'] = array(
+	'viewrelationships' => 'Syn forhold',
+	'viewrelationshiprequests' => 'Syn førespurnader om forhold',
+	'ur-already-submitted' => 'Førespurnaden din har blitt sendt',
+	'ur-error-page-title' => 'Ops!',
+	'ur-error-title' => 'Ops, du svingte feil!',
+	'ur-error-message-no-user' => 'Me kan ikkje fullføra førespurnaden din etter di det ikkje finst ein brukar med namnet du oppgav.',
 	'ur-main-page' => 'Hovudside',
+	'ur-your-profile' => 'Profilen din',
+	'ur-backlink' => '&lt; Attende til profilen til $1',
+	'ur-friend' => 'venn',
+	'ur-foe' => 'fiende',
+	'ur-relationship-count-foes' => '$1 har $2 {{PLURAL:$2|fiende|fiendar}}. Ynskjer du fleire fiendar? <a href="$3">Inviter dei.</a>',
+	'ur-relationship-count-friends' => '$1 har $2 {{PLURAL:$2|venn|venner}}. Ynskjer du fleire venner? <a href="$3">Inviter dei.</a>',
+	'ur-add-friends' => ' Ynskjer du fleire venner? <a href="$1">Inviter dei</a>',
+	'ur-add-friend' => 'Legg til som venn',
+	'ur-add-foe' => 'Legg til som fiende',
+	'ur-add-no-user' => 'Ingen brukar valt.
+Legg til venner eller fiendar gjennom den rette lekkja.',
+	'ur-add-personal-message' => 'Legg til ei personleg melding',
+	'ur-remove-relationship-friend' => 'Fjern frå vennene',
+	'ur-remove-relationship-foe' => 'Fjern frå fiendane',
+	'ur-give-gift' => 'Gje gåva',
+	'ur-previous' => 'førre',
 	'ur-next' => 'neste',
+	'ur-remove-relationship-title-foe' => 'Vil du fjerna $1 frå fiendane?',
+	'ur-remove-relationship-title-confirm-foe' => '$1 er ikkje lenger ein fiende',
+	'ur-remove-relationship-title-friend' => 'Vil du fjerna $1 frå vennene?',
+	'ur-remove-relationship-title-confirm-friend' => '$1 er ikkje lenger ein vennen',
+	'ur-remove-relationship-message-foe' => 'Du har spurt om å fjerna $1 frå fiendane, trykk «$2» for å stadfesta.',
+	'ur-remove-relationship-message-confirm-foe' => 'Du har fjerna $1 frå fiendane.',
+	'ur-remove-relationship-message-friend' => 'Du har spurt om å fjerna $1 frå vennene, trykk «$2» for å stadfesta.',
+	'ur-remove-relationship-message-confirm-friend' => 'Du har fjerna $1 frå vennene.',
+	'ur-remove-error-message-no-relationship' => 'Du har ikkje noko forhold til $1.',
+	'ur-remove-error-message-remove-yourself' => 'Du kan ikkje fjerna deg sjølv.',
+	'ur-remove-error-message-pending-request' => 'Du har ein uteståande førespurnad om å bli $1 med $2.',
+	'ur-remove-error-message-pending-foe-request' => 'Du har ein uteståande førespurnad om fiendskap frå $1.',
+	'ur-remove-error-message-pending-friend-request' => 'Du har ein uteståande førespurnad om vennskap frå $1.',
+	'ur-remove-error-not-loggedin' => 'Du må logga inn for å fjerna ein $1.',
+	'ur-remove-error-not-loggedin-foe' => 'Du må logga inn for å fjerna ein fiende.',
+	'ur-remove-error-not-loggedin-friend' => 'Du må logga inn for å fjerna ein fiende.',
 	'ur-remove' => 'Fjern',
 	'ur-cancel' => 'Avbryt',
 	'ur-login' => 'Logg inn',
+	'ur-add-title-foe' => 'Vil du leggja til $1 som fiende?',
+	'ur-add-title-friend' => 'Vil du leggja til $1 som venn?',
+	'ur-add-message-foe' => 'Du er i ferd med å leggja til $1 som fiende.
+Me vil senda ei melding til $1 for å beda han om å stadfesta fiendskapet.',
+	'ur-add-message-friend' => 'Du er i ferd med å leggja til $1 som venn.
+Me vil senda ei melding til $1 for å beda han om å stadfesta fiendskapet.',
+	'ur-friendship' => 'vennskap',
+	'ur-grudge' => 'fiendskap',
+	'ur-add-button' => 'Legg til som $1',
+	'ur-add-button-foe' => 'Legg til som fiende',
+	'ur-add-button-friend' => 'Legg til som venn',
+	'ur-add-sent-title-foe' => 'Me har sendt førespurnaden din om fiendskap til $1.',
+	'ur-add-sent-title-friend' => 'Me har sendt førespurnaden din om vennskap til $1.',
+	'ur-add-sent-message-foe' => 'Førespurnaden din om fiendskap har blitt sendt til $1 for stadfesting.
+Om $1 stadfestar førespurnaden din vil du motta ein e-post.',
+	'ur-add-sent-message-friend' => 'Førespurnaden din om vennskap har blitt sendt til $1 for stadfesting.
+Om $1 stadfestar førespurnaden din vil du motta ein e-post.',
+	'ur-add-error-message-no-user' => 'Brukaren du freistar å leggja til, finst ikkje.',
+	'ur-add-error-message-blocked' => 'Du er blokkert, og kan korkje leggja til venner eller fiendar.',
+	'ur-add-error-message-yourself' => 'Du kan ikkje leggja til deg sjølv som fiende.',
+	'ur-add-error-message-existing-relationship' => 'Du er allereie $1 med $2.',
+	'ur-add-error-message-existing-relationship-foe' => 'Du er allereie fiende med $1.',
+	'ur-add-error-message-existing-relationship-friend' => 'Du er allereie venn med $1.',
+	'ur-add-error-message-pending-request-title' => 'Tolmod!',
+	'ur-add-error-message-pending-friend-request' => 'Du har ein uteståande førespurnad om vennskap med $1.
+Me vil gje deg ei melding når $1 stadfestar førespurnaden din.',
+	'ur-add-error-message-pending-foe-request' => 'Du har ein uteståande førespurnad om fiendskap med $1.
+Me vil gje deg ei melding når $1 stadfestar førespurnaden din.',
+	'ur-add-error-message-not-loggedin' => 'Du må logga inn for å leggja til ein $1',
+	'ur-add-error-message-not-loggedin-foe' => 'Du må logga inn for å leggja til ein fiende',
+	'ur-add-error-message-not-loggedin-friend' => 'Du må logga inn for å leggja til ein venn',
+	'ur-requests-title' => 'Førespurnader om samband',
+	'ur-requests-message-foe' => '<a href="$1">$2</a> ynskjer å bli fienden din.',
+	'ur-requests-message-friend' => '<a href="$1">$2</a> ynskjer å bli venn med deg.',
+	'ur-accept' => 'Godta',
+	'ur-reject' => 'Avslå',
+	'ur-no-requests-message' => 'Du har ingen førespurnader om korkje vennskap eller fiendskap.
+Om du vil ha fleire venner, <a href="$1">inviter dei</a>!',
+	'ur-requests-added-message-foe' => 'Du har lagt til $1 som fiende.',
+	'ur-requests-added-message-friend' => 'Du har lagt til $1 som venn.',
+	'ur-requests-reject-message-friend' => 'Du avslo førespurnaden om vennskap frå $1.',
+	'ur-requests-reject-message-foe' => 'Du avslo førespurnaden om fiendskap frå $1.',
+	'ur-title-foe' => 'Fiendelista til $1',
+	'ur-title-friend' => 'Vennelista til $1',
+	'friend_request_subject' => '$1 har lagt deg til som venn på {{SITENAME}}!',
+	'friend_request_body' => 'Hei, $1.
+
+$2 har lagt deg til som venn på {{SITENAME}}. Me vil vera sikre på at de faktisk er venner.
+
+Følg denne lekkja for å stadfesta vennskapet dykkar:
+$3
+
+Takk
+
+---
+
+Vil du ikkje motta fleire e-postar frå oss?
+
+Trykk $4 og endra innstillingane dine for å slå av meldingar gjennom e-post.',
+	'foe_request_subject' => 'Det er krig! $1 har lagt deg til som fiende på {{SITENAME}}!',
+	'foe_request_body' => 'Hei, $1.
+
+$2 har lagt deg til som fiende på {{SITENAME}}. Me vil gjera oss visse på at de faktisk er svorne fiendar &ndash; eller i alle fall kranglar.
+
+Følg lekkja nedanfor for å stadfesta fiendeskapet.
+
+$3
+
+Takk
+
+---
+
+Vil du ikkje motta fleire e-postar frå oss?
+
+Trykk $4 og endra innstillingane dine for å slå av meldingar gjennom e-post.',
+	'friend_accept_subject' => '$1 har godteke førespurnaden din om vennskap på {{SITENAME}}.',
+	'friend_accept_body' => 'Hei, $1.
+
+$2 har godteke førespurnaden din om vennskap på {{SITENAME}}.
+
+Sjekk ut sida til $2 på $3.
+
+Takk.
+
+---
+
+Vil du ikkje motta fleire e-postar frå oss?
+
+Trykk $4 og endra innstillingane dine for å slå av meldingar gjennom e-post.',
+	'foe_accept_subject' => '$1 har godteke førespurnaden din om fiendskap på {{SITENAME}}.',
+	'foe_accept_body' => 'Hei, $1.
+
+$2 har godteke førespurnaden din om fiendskap på {{SITENAME}}.
+
+Sjekk ut sida til $2 på $3
+
+Takk
+
+---
+
+Vil du ikkje motta fleire e-postar frå oss?
+
+Trykk $4 og endra innstillingane dine for å slå av meldingar gjennom e-post.',
+	'friend_removed_subject' => 'Å nei! $1 har fjerna deg frå vennelista si på {{SITENAME}}!',
+	'friend_removed_body' => 'Hei, $1
+
+$2 har fjerna deg frå vennelista si på {{SITENAME}}!
+
+---
+
+Vil du ikkje motta fleire e-postar frå oss?
+
+Trykk $4 og endra innstillingane dine for å slå av meldingar gjennom e-post.',
+	'foe_removed_subject' => 'Jippi! $1 har fjerna deg frå fiendelista si på {{SITENAME}}!',
+	'foe_removed_body' => 'Hei, $1.
+
+$2 har fjerna deg frå fiendelista si på {{SITENAME}}.
+
+Kanskje de er på veg til å bli venner?
+
+---
+
+Vil du ikkje motta fleire e-postar frå oss?
+
+Trykk $4 og endra innstillingane dine for å slå av meldingar gjennom e-post.',
 );
 
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Harald Khan
  * @author Jon Harald Søby
  */
 $messages['no'] = array(
@@ -3010,7 +3183,7 @@ Vi vil sende $1 en melding for å bekrefte fiendeskapet.',
 	'ur-add-message-friend' => 'Du er i ferd med å legge til $1 som venn.
 Vi vil sende $1 en melding for å bekrefte vennskapet.',
 	'ur-friendship' => 'vennskap',
-	'ur-grudge' => 'fiendeskap',
+	'ur-grudge' => 'fiendskap',
 	'ur-add-button' => 'Legg til som $1',
 	'ur-add-button-foe' => 'Legg til som fiende',
 	'ur-add-button-friend' => 'Legg til som venn',
@@ -3594,6 +3767,18 @@ $messages['ro'] = array(
 	'ur-add-error-message-pending-request-title' => 'Răbdare!',
 	'ur-requests-title' => 'Cereri de relaţii',
 	'ur-title-friend' => 'Lista de prieteni ai lui $1',
+);
+
+/** Tarandíne (Tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'ur-give-gift' => "Fa 'nu riele",
+	'ur-remove' => 'Scangille',
+	'ur-cancel' => 'Scangille',
+	'ur-login' => 'Trase',
+	'ur-accept' => 'Accitte',
+	'ur-reject' => 'Scitte',
 );
 
 /** Russian (Русский)

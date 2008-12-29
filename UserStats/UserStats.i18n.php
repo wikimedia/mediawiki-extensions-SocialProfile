@@ -56,6 +56,13 @@ Click $3
 and change your settings to disable email notifications.'
 );
 
+/** Message documentation (Message documentation)
+ * @author Purodha
+ */
+$messages['qqq'] = array(
+	'top-fans-by-category-title' => '$1 is any of the messages starting with "top-fans-stats-" and the name of the statistic. Examples are {{msg-mw|top-fans-stats-vote-count}}, {{msg-mw|top-fans-stats-weekly-winner-count}}, {{msg-mw|top-fans-stats-referrals-completed}}, {{msg-mw|top-fans-stats-friends-count}}, and {{msg-mw|top-fans-stats-edit-count}}.',
+);
+
 /** Afrikaans (Afrikaans)
  * @author Naudefj
  */
@@ -691,7 +698,19 @@ $messages['ksh'] = array(
 	'user-stats-alltime-title' => 'De miehßte Punkte övver alle Zick',
 	'user-stats-weekly-title' => 'De miehßte Punkte övver diß Woch',
 	'user-stats-monthly-title' => 'De miehßte Punkte disse Mohnd',
+	'topusers' => 'Spetze-Metmaachere',
+	'top-fans-by-points-nav-header' => 'Aan de Spetz per Stemme',
+	'top-fans-by-category-nav-header' => 'Aan der Spetz per Saachjropp',
+	'top-fans-total-points-link' => 'Punkte ensjesamp',
+	'top-fans-weekly-points-link' => 'Punkte diß Woch',
+	'top-fans-monthly-points-link' => 'Punkte disse Mohnd',
+	'top-fans-points' => 'Punkte',
+	'top-fans-by-category-title' => 'De mihßte $1 ensjesamap',
+	'top-fans-bad-field-title' => 'Hoppalla!',
+	'top-fans-bad-field-message' => 'De aanjejovve Statistik jidd_et nit.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Stemm|Stemme}}',
+	'top-fans-stats-monthly-winner-count' => 'Jewenn{{PLURAL:$1||e|—}} vum Mohnd',
+	'top-fans-stats-weekly-winner-count' => 'wöschentlesche Jewenn{{PLURAL:$1||e|—}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Änderung|Änderunge}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Kommentaa|Kommentaare}}',
 	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Verwies|Verwiese}}',
@@ -699,10 +718,12 @@ $messages['ksh'] = array(
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|Feind|Feinde}}',
 	'top-fans-stats-opinions-published' => '{{PLURAL:$1|öffentlesch afjejovve Meinung|veröffentleschte Meinunge}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Meinung|Meinunge}}',
-	'top-fans-stats-comment-score-positive-rec' => '„Daume huh“',
-	'top-fans-stats-comment-score-negative-rec' => '„Daume eraf“',
+	'top-fans-stats-comment-score-positive-rec' => '„Duume erop“',
+	'top-fans-stats-comment-score-negative-rec' => '„Dume eraf“',
+	'top-fans-stats-comment-score-positive-given' => 'Duume noh bovve',
+	'top-fans-stats-comment-score-negative-given' => 'Duume noh unge',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Jeschenk|Jeschenke}} kräje',
-	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Jeschenk|Jeschenke}} jescheck',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Jeschenk|Jeschenke}} jejovve',
 	'level-advance-subject' => 'Do bes jätz ene „$1“ op de {{SITENAME}}!',
 	'level-advance-body' => 'Hallo $1,
 
@@ -1080,6 +1101,21 @@ $messages['ro'] = array(
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Prieten|Prieteni}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Cadou primit|Cadouri primite}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Cadou oferit|Cadouri oferite}}',
+);
+
+/** Tarandíne (Tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'top-fans-bad-field-title' => "Ohhhhh! C'è scritte!",
+	'top-fans-stats-vote-count' => "{{PLURAL:$1|'u Vote|le Vote}}",
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|vingita menzile|vingite menzile}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|vingita settimanele|vingite settimanele}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Cangiamende|Cangiaminde}}',
+	'top-fans-stats-comment-count' => "{{PLURAL:$1|'u Commende|le Commende}}",
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|referimende|refereminde}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Amiche|Amice}}',
+	'level-advance-subject' => 'Tu, mò, si \'nu "$1" sus a {{SITENAME}}!',
 );
 
 /** Russian (Русский)
