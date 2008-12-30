@@ -2,6 +2,7 @@
 /**
  * Internationalization file for the UserGifts extension.
  *
+ * @file
  * @ingroup Extensions
  */
 
@@ -32,7 +33,7 @@ $messages['en'] = array(
 	'g-create-gift' => 'Create gift',
 	'g-created-by' => 'created by',
 	'g-current-image' => 'Current Image',
-	'g-delete-message' => 'Are your sure you want to delete the gift "$1"? This will also delete it from user\'s who may have received it.',
+	'g-delete-message' => 'Are your sure you want to delete the gift "$1"? This will also delete it from users who may have received it.',
 	'g-description-title' => '$1\'s gift "$2"',
 	'g-error-do-not-own' => 'You do not own this gift.',
 	'g-error-message-blocked' => 'You are currently blocked and cannot give gifts',

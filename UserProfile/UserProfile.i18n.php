@@ -2,6 +2,7 @@
 /**
  * Internationalisation file for UserProfile extension.
  *
+ * @file
  * @ingroup Extensions
  */
 
@@ -149,8 +150,6 @@ Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.
 	'user-profile-sports-teamsaved' => 'Your teams have been saved',
 	'user-profile-sports-addmore' => 'Add more sports/teams',
 	'user-profile-picture-title' => 'Upload your picture',
-	'user-profile-picture-log' => 'avatar',
-	'user-profile-picture-log-entry' => 'uploaded new avatar',
 	'user-profile-picture-yourpicture' => 'Your picture',
 	'user-profile-picture-yourpicturestext' => 'Below are the images that will appear on your profile, network pages, and on your comments.',
 	'user-profile-picture-large' => 'Large',
@@ -161,8 +160,6 @@ Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.
 	'user-profile-picture-currentimage' => 'Current image',
 	'user-profile-picture-choosepicture' => 'Choose your picture',
 	'user-profile-picture-picsize' => 'Your image must be a jpeg, png, or gif and must be less than 100kb in size.',
-	'user-profile-picture-badvirusscanner' => 'Bad configuration: unknown virus scanner:',
-	'user-profile-picture-scanfailed' => 'scan failed',
 	'user-profile-goback' => 'Go back',
 	'user-profile-userlevels-link' => 'User levels',
 	'user-no-images' => 'No images uploaded',
@@ -195,6 +192,241 @@ Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'uploaded new avatar',
 	'user-profile-picture-log-delete-entry' => 'deleted $1\'s avatar',
+	'userprofile-country-list' => '
+*Afghanistan
+*Albania
+*Algeria
+*American Samoa
+*Andorra
+*Angola
+*Anguilla
+*Antarctica
+*Antigua and Barbuda
+*Argentina
+*Armenia
+*Aruba
+*Australia
+*Austria
+*Azerbaijan
+*Bahamas
+*Bahrain
+*Bangladesh
+*Barbados
+*Belarus
+*Belgium
+*Belize
+*Benin
+*Bermuda
+*Bhutan
+*Bolivia
+*Bosnia and Herzegovina
+*Botswana
+*Bouvet Island
+*Brazil
+*British Indian Ocean Territory
+*Brunei Darussalam
+*Bulgaria
+*Burkina Faso
+*Burundi
+*Cambodia
+*Cameroon
+*Canada
+*Cape Verde
+*Cayman Islands
+*Central African Republic
+*Chad
+*Chile
+*China
+*Christmas Island
+*Cocos Islands
+*Colombia
+*Comoros
+*Congo
+*Congo, Democratic Republic of the
+*Cook Islands
+*Costa Rica
+*Côte d\'Ivoire
+*Croatia
+*Cuba
+*Cyprus
+*Czech Republic
+*Denmark
+*Djibouti
+*Dominica
+*Dominican Republic
+*Ecuador
+*Egypt
+*El Salvador
+*Equatorial Guinea
+*Eritrea
+*Estonia
+*Ethiopia
+*Falkland Islands
+*Faroe Islands
+*Fiji
+*Finland
+*France
+*French Guiana
+*French Polynesia
+*Gabon
+*Gambia
+*Georgia
+*Germany
+*Ghana
+*Gibraltar
+*Greece
+*Greenland
+*Grenada
+*Guadeloupe
+*Guam
+*Guatemala
+*Guinea
+*Guinea-Bissau
+*Guyana
+*Haiti
+*Heard Island and McDonald Islands
+*Honduras
+*Hong Kong
+*Hungary
+*Iceland
+*India
+*Indonesia
+*Iran
+*Iraq
+*Ireland
+*Israel
+*Italy
+*Jamaica
+*Japan
+*Jordan
+*Kazakhstan
+*Kenya
+*Kiribati
+*Kuwait
+*Kyrgyzstan
+*Laos
+*Latvia
+*Lebanon
+*Lesotho
+*Liberia
+*Libya
+*Liechtenstein
+*Lithuania
+*Luxembourg
+*Macao
+*Macedonia
+*Madagascar
+*Malawi
+*Malaysia
+*Maldives
+*Mali
+*Malta
+*Marshall Islands
+*Martinique
+*Mauritania
+*Mauritius
+*Mayotte
+*Mexico
+*Micronesia
+*Moldova
+*Monaco
+*Mongolia
+*Montserrat
+*Morocco
+*Mozambique
+*Myanmar
+*Namibia
+*Nauru
+*Nepal
+*Netherlands
+*Netherlands Antilles
+*New Caledonia
+*New Zealand
+*Nicaragua
+*Niger
+*Nigeria
+*Norfolk Island
+*North Korea
+*Norway
+*Oman
+*Pakistan
+*Palau
+*Palestinian Territory
+*Panama
+*Papua New Guinea
+*Paraguay
+*Peru
+*Philippines
+*Pitcairn
+*Poland
+*Portugal
+*Puerto Rico
+*Qatar
+*Romania
+*Russian Federation
+*Rwanda
+*Saint Helena
+*Saint Kitts and Nevis
+*Saint Lucia
+*Saint Pierre and Miquelon
+*Saint Vincent and the Grenadines
+*Samoa
+*San Marino
+*Sao Tome and Principe
+*Saudi Arabia
+*Senegal
+*Serbia and Montenegro
+*Seychelles
+*Sierra Leone
+*Singapore
+*Slovakia
+*Slovenia
+*Solomon Islands
+*Somalia
+*South Africa
+*South Georgia
+*South Korea
+*Spain
+*Sri Lanka
+*Sudan
+*Suriname
+*Svalbard and Jan Mayen
+*Swaziland
+*Sweden
+*Switzerland
+*Syrian Arab Republic
+*Taiwan
+*Tajikistan
+*Tanzania
+*Thailand
+*Timor-Leste
+*Togo
+*Tokelau
+*Tonga
+*Trinidad and Tobago
+*Tunisia
+*Turkey
+*Turkmenistan
+*Tuvalu
+*Uganda
+*Ukraine
+*United Arab Emirates
+*United Kingdom
+*United States
+*United States Minor Outlying Islands
+*Uruguay
+*Uzbekistan
+*Vanuatu
+*Vatican City
+*Venezuela
+*Vietnam
+*Virgin Islands, British
+*Virgin Islands, U.S.
+*Wallis and Futuna
+*Western Sahara
+*Yemen
+*Zambia
+*Zimbabwe',
 );
 
 /** Karelian (Karjala)
@@ -1731,8 +1963,6 @@ $messages['fi'] = array(
 	'user-profile-picture-currentimage' => 'Tämänhetkinen kuva',
 	'user-profile-picture-choosepicture' => 'Valitse kuvasi',
 	'user-profile-picture-picsize' => 'Kuvasi tulee olla jpeg, png tai gif-muotoinen ja sen tulee olla kooltaan alle 100Kb.',
-	'user-profile-picture-badvirusscanner' => 'Huonot asetukset: tuntematon virusskanneri:',
-	'user-profile-picture-scanfailed' => 'tarkistus epäonnistui',
 	'user-profile-goback' => 'Mene takaisin',
 	'user-profile-userlevels-link' => 'Käyttäjätasot',
 	'user-no-images' => 'Ei ladattuja kuvia',

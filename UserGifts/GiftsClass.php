@@ -27,9 +27,9 @@ class Gifts {
 		global $wgUser;
 
 		$user_id_to = User::idFromName($user_to);
-		$dbr = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_MASTER );
 
-		$dbr->insert( 'gift',
+		$dbw->insert( 'gift',
 		array(
 			'gift_name' => $gift_name,
 			'gift_description' => $gift_description,
@@ -39,7 +39,7 @@ class Gifts {
 			'gift_access' => $gift_access,
 			), __METHOD__
 		);
-		return $dbr->insertId();
+		return $dbw->insertId();
 	}
 
 	public function updateGift( $id, $gift_name, $gift_description, $access = 0 ){
@@ -56,21 +56,20 @@ class Gifts {
 	}
 
 	static function getGift( $id ){
-		global $wgDBprefix;
-		if( !is_numeric($id) ) return "";
+		if( !is_numeric($id) ) return '';
 		$dbr = wfGetDB( DB_SLAVE );
 		$sql = "SELECT gift_id, gift_name, gift_description,
 			gift_creator_user_id, gift_creator_user_name, gift_access
-			FROM ".$wgDBprefix."gift WHERE gift_id = {$id} LIMIT 0,1";
+			FROM {$dbr->tableName( 'gift' )} WHERE gift_id = {$id} LIMIT 0,1";
 		$res = $dbr->query($sql);
 		$row = $dbr->fetchObject( $res );
 		if( $row ){
-			$gift["gift_id"]= $row->gift_id;	
-			$gift["gift_name"]= $row->gift_name;	
-			$gift["gift_description"]= $row->gift_description;	
-			$gift["creator_user_id"]= $row->gift_creator_user_id;
-			$gift["creator_user_name"]= $row->gift_creator_user_name;
-			$gift["access"]= $row->gift_access;
+			$gift['gift_id']= $row->gift_id;	
+			$gift['gift_name']= $row->gift_name;	
+			$gift['gift_description']= $row->gift_description;	
+			$gift['creator_user_id']= $row->gift_creator_user_id;
+			$gift['creator_user_name']= $row->gift_creator_user_name;
+			$gift['access']= $row->gift_access;
 		}
 		return $gift;
 	}
@@ -88,9 +87,9 @@ class Gifts {
 	}
 
 	static function getGiftList( $limit = 0, $page = 0, $order = "gift_createdate DESC" ){
-		global $wgUser, $wgDBprefix;
+		global $wgUser;
 
-		$dbr = wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_SLAVE );
 
 		if( $limit > 0 ){
 			$limitvalue = 0;
@@ -99,7 +98,7 @@ class Gifts {
 		}
 
 		$sql = "SELECT gift_id,gift_name,gift_description,gift_given_count
-			FROM ".$wgDBprefix."gift
+			FROM {$dbr->tableName( 'gift' )}
 			WHERE gift_access=0 OR gift_creator_user_id = {$wgUser->getID()}
 			ORDER BY {$order}
 			{$limit_sql}";
@@ -107,11 +106,11 @@ class Gifts {
 		$res = $dbr->query($sql);
 		while ( $row = $dbr->fetchObject( $res ) ) {
 			$gifts[] = array(
-				"id" => $row->gift_id,
-				"timestamp" => ($row->gift_timestamp),
-				"gift_name" => $row->gift_name,
-				"gift_description" => $row->gift_description,
-				"gift_given_count" => $row->gift_given_count
+				'id' => $row->gift_id,
+				'timestamp' => ($row->gift_timestamp),
+				'gift_name' => $row->gift_name,
+				'gift_description' => $row->gift_description,
+				'gift_given_count' => $row->gift_given_count
 			);
 		}
 		return $gifts;
@@ -121,12 +120,12 @@ class Gifts {
 		global $wgUser;
 		$dbr = wfGetDB( DB_SLAVE );
 
-		$where = ""; // Prevent E_NOTICE
+		$where = ''; // Prevent E_NOTICE
 		$params['ORDER BY'] = 'gift_createdate';
 		if( $limit ) $params['LIMIT'] = $limit;
 
-		if( !in_array('giftadmin', ($wgUser->getGroups())) && ! $wgUser->isAllowed('delete') ){
-			$where = array( "gift_creator_user_id" => $wgUser->getID() );
+		if( !in_array( 'giftadmin', ( $wgUser->getGroups() ) ) && !$wgUser->isAllowed('delete') ){
+			$where = array( 'gift_creator_user_id' => $wgUser->getID() );
 		}
 
 		$dbr = wfGetDB( DB_MASTER );
@@ -139,11 +138,11 @@ class Gifts {
 		$gifts = array();
 		while ( $row = $dbr->fetchObject( $res ) ) {
 			$gifts[] = array(
-				"id" => $row->gift_id,
-				"timestamp" => ($row->gift_timestamp),
-				"gift_name" => $row->gift_name,
-				"gift_description" => $row->gift_description,
-				"gift_given_count" => $row->gift_given_count
+				'id' => $row->gift_id,
+				'timestamp' => ($row->gift_timestamp),
+				'gift_name' => $row->gift_name,
+				'gift_description' => $row->gift_description,
+				'gift_given_count' => $row->gift_given_count
 			);
 		}
 		return $gifts;
@@ -152,16 +151,16 @@ class Gifts {
 	static function getCustomCreatedGiftCount( $user_id ){
 		$dbr = wfGetDB( DB_SLAVE );
 		$gift_count = 0;
-		$s = $dbr->selectRow( 'gift', array("count(*) as count"), array( 'gift_creator_user_id' => $user_id ), __METHOD__ );
-		if ( $s !== false )$gift_count = $s->count;	
+		$s = $dbr->selectRow( 'gift', array( 'count(*) AS count' ), array( 'gift_creator_user_id' => $user_id ), __METHOD__ );
+		if ( $s !== false ) $gift_count = $s->count;	
 		return $gift_count;
 	}
 
 	static function getGiftCount(){
 		$dbr = wfGetDB( DB_SLAVE );
 		$gift_count = 0;
-		$s = $dbr->selectRow( 'gift', array( 'count(*) as count' ), array( 'gift_given_count' => $gift_count ), __METHOD__ );
-		if ( $s !== false )$gift_count = $s->count;
+		$s = $dbr->selectRow( 'gift', array( 'count(*) AS count' ), array( 'gift_given_count' => $gift_count ), __METHOD__ );
+		if ( $s !== false ) $gift_count = $s->count;
 		return $gift_count;
 	}
 }

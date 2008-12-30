@@ -10,8 +10,11 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	var $fileExtensions;
 	var $gift_id;
 
-	function __construct(){
-		parent::__construct('SystemGiftManagerLogo');
+	/**
+	 * Constructor
+	 */
+	public function __construct(){
+		parent::__construct( 'SystemGiftManagerLogo' );
 	}
 
 	/**
@@ -19,20 +22,28 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	 *
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
-	 function execute( $par ){
-		global $wgRequest, $IP, $wgUser;
+	public function execute( $par ){
+		global $wgRequest, $wgOut, $wgUser;
 
+		# If the user doesn't have the required 'awardsmanage' permission, display an error
+		if( !$wgUser->isAllowed( 'awardsmanage' ) ) {
+			$wgOut->permissionRequired( 'awardsmanage' );
+			return;
+		}
+
+		# Show a message if the database is in read-only mode
+		if ( wfReadOnly() ) {
+			$wgOut->readOnlyPage();
+			return;
+		}
+
+		# If user is blocked, s/he doesn't need to access this page
 		if ( $wgUser->isBlocked() ) {
 			$wgOut->blockedPage();
 			return;
 		}
 
-		if( !$wgUser->isAllowed('awardsmanage') ){
-			$this->displayRestrictionError();
-			return;
-		}
-
-		$this->gift_id = $wgRequest->getVal('gift_id');
+		$this->gift_id = $wgRequest->getVal( 'gift_id' );
 		$this->initLogo($wgRequest);
 		$this->executeLogo();
 	}
@@ -44,7 +55,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			# GET requests just give the main form; no data except wpDestfile.
 			return;
 		}
-		$this->gift_id = $request->getVal("gift_id");
+		$this->gift_id = $request->getVal( 'gift_id' );
 		$this->mIgnoreWarning = $request->getCheck( 'wpIgnoreWarning');
 		$this->mReUpload = $request->getCheck( 'wpReUpload' );
 		$this->mUpload = $request->getCheck( 'wpUpload' );
@@ -84,31 +95,26 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 
 	/**
 	 * Start doing stuff
-	 * @access public
 	 */
-	function executeLogo() {
+	public function executeLogo() {
 		global $wgUser, $wgOut;
 		global $wgEnableUploads, $wgUploadDirectory;
 		$this->avatarUploadDirectory = $wgUploadDirectory . "/awards"; 
 		/** Show an error message if file upload is disabled */ 
-		if( ! $wgEnableUploads ) {
-			$wgOut->addWikiText( wfMsg( 'uploaddisabled' ) );
+		if( !$wgEnableUploads ) {
+			$wgOut->addWikiMsg( 'uploaddisabled' );
 			return;
 		}
 
-		/** Various rights checks */
-		if( !$wgUser->isAllowed( 'upload' ) || $wgUser->isBlocked() ) {
+		/** Check if the user is allowed to upload files */
+		if( !$wgUser->isAllowed( 'upload' ) ) {
 			$wgOut->errorpage( 'uploadnologin', 'uploadnologintext' );
-			return;
-		}
-		if( wfReadOnly() ) {
-			$wgOut->readOnlyPage();
 			return;
 		}
 
 		/** Check if the image directory is writeable, this is a common mistake */
-		if ( !is_writeable( $wgUploadDirectory ) ) {
-			$wgOut->addWikiText( wfMsg( 'upload_directory_read_only', $wgUploadDirectory ) );
+		if( !is_writeable( $wgUploadDirectory ) ) {
+			$wgOut->addWikiMsg( 'upload_directory_read_only', $wgUploadDirectory );
 			return;
 		}
 
@@ -122,8 +128,6 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		}
 	}
 
-	/* -------------------------------------------------------------- */
-
 	/**
 	 * Really do the upload
 	 * Checks are made in SpecialUpload::execute()
@@ -131,8 +135,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	 */
 	function processUpload() {
 		global $wgUser, $wgOut, $wgLang, $wgContLang;
-		global $wgUploadDirectory;
-		global $wgUseCopyrightUpload, $wgCheckCopyrightUpload;
+		global $wgUploadDirectory, $wgUseCopyrightUpload, $wgCheckCopyrightUpload;
 
 		/**
 		 * If there was no filename or a zero size given, give up quick.
@@ -164,8 +167,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		$filtered = $basename;
 
 		/* Don't allow users to override the blacklist (check file extension) */
-		global $wgStrictFileExtensions;
-		global $wgFileBlacklist;
+		global $wgStrictFileExtensions, $wgFileBlacklist;
 
 		if( $this->checkFileExtensionList( $ext, $wgFileBlacklist ) ||
 			($wgStrictFileExtensions &&
@@ -189,7 +191,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		/**
 		 * Check for non-fatal conditions
 		 */
-		if ( ! $this->mIgnoreWarning ) {
+		if ( !$this->mIgnoreWarning ) {
 			$warning = '';
 
 			global $wgCheckFileExtensions;
@@ -221,25 +223,23 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		 * Try actually saving the thing...
 		 * It will show an error form on failure.
 		 */
-
 		$status = $this->saveUploadedFile( $this->mUploadSaveName, $this->mUploadTempName, strtoupper($fullExt) );
 
 		if( $status > 0 ) {
-				$this->showSuccess($status);
+			$this->showSuccess($status);
 		}
 	}
 
-function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
-	list($origWidth, $origHeight, $TypeCode) = getimagesize($imageSrc);
+	function createThumbnail( $imageSrc, $ext, $imgDest, $thumbWidth ){
+		list($origWidth, $origHeight, $TypeCode) = getimagesize($imageSrc);
 
-	if($origWidth < $thumbWidth)$thumbWidth = $origWidth;
-	$thumbHeight = ($thumbWidth * $origHeight / $origWidth);
-	if($thumbHeight < $thumbWidth)$border = " -bordercolor white	-border	0x" . (($thumbWidth - $thumbHeight) / 2);
-	if($TypeCode == 2)exec("convert -size " . $thumbWidth . "x" . $thumbWidth . " -resize " . $thumbWidth . "		-quality 100 " . $border . " " . $imageSrc . " " . $this->avatarUploadDirectory . "/sg_" . $imgDest . ".jpg");
-	if($TypeCode == 1)exec("convert -size " . $thumbWidth . "x" . $thumbWidth . " -resize " . $thumbWidth . "	" . $imageSrc . " " . $border . " " . $this->avatarUploadDirectory . "/sg_" . $imgDest . ".gif");
-	if($TypeCode == 3)exec("convert -size " . $thumbWidth . "x" . $thumbWidth . " -resize " . $thumbWidth . "	 " . $imageSrc . " " . $this->avatarUploadDirectory . "/sg_" . $imgDest . ".png");
-	
-}
+		if($origWidth < $thumbWidth)$thumbWidth = $origWidth;
+		$thumbHeight = ($thumbWidth * $origHeight / $origWidth);
+		if($thumbHeight < $thumbWidth)$border = " -bordercolor white	-border	0x" . (($thumbWidth - $thumbHeight) / 2);
+		if($TypeCode == 2)exec("convert -size " . $thumbWidth . "x" . $thumbWidth . " -resize " . $thumbWidth . "		-quality 100 " . $border . " " . $imageSrc . " " . $this->avatarUploadDirectory . "/sg_" . $imgDest . ".jpg");
+		if($TypeCode == 1)exec("convert -size " . $thumbWidth . "x" . $thumbWidth . " -resize " . $thumbWidth . "	" . $imageSrc . " " . $border . " " . $this->avatarUploadDirectory . "/sg_" . $imgDest . ".gif");
+		if($TypeCode == 3)exec("convert -size " . $thumbWidth . "x" . $thumbWidth . " -resize " . $thumbWidth . "	 " . $imageSrc . " " . $this->avatarUploadDirectory . "/sg_" . $imgDest . ".png");
+	}
 
 	/**
 	 * Move the uploaded file from its temporary location to the final
@@ -253,7 +253,7 @@ function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
 	 * @param bool $useRename if true, doesn't check that the source file
 	 *					is a PHP-managed upload temporary
 	 */
-	function saveUploadedFile( $saveName, $tempName, $ext) {
+	function saveUploadedFile( $saveName, $tempName, $ext ) {
 		global $wgUploadDirectory, $wgOut, $wgUser, $wgDBname;
 
 		$dest = $this->avatarUploadDirectory;
@@ -265,34 +265,36 @@ function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
 		$this->createThumbnail($tempName, $ext, $this->gift_id . "_m", 30);
 		$this->createThumbnail($tempName, $ext, $this->gift_id . "_s", 16);
 
-		if($ext == "JPG" && is_file( $this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.jpg")){$type = 2;}
-		if($ext == "GIF" && is_file( $this->avatarUploadDirectory . "/sg_" . $this->gift_id. "_l.gif")){$type = 1;}
-		if($ext == "PNG" && is_file( $this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.png")){$type = 3;}
+		if( $ext == "JPG" && is_file( $this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.jpg") ){
+			$type = 2;
+		}
+		if( $ext == "GIF" && is_file( $this->avatarUploadDirectory . "/sg_" . $this->gift_id. "_l.gif") ){
+			$type = 1;
+		}
+		if( $ext == "PNG" && is_file( $this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.png") ){
+			$type = 3;
+		}
 
-		if($ext!="JPG"){
-			 if(is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_s.jpg") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_s.jpg");
-			 if(is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_m.jpg") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_m.jpg");
-			 if(is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.jpg") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.jpg");
-			 if(is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.jpg") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_ml.jpg");
+		if( $ext!= "JPG" ){
+			if( is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_s.jpg") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_s.jpg");
+			if( is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_m.jpg") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_m.jpg");
+			if( is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.jpg") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.jpg");
+			if( is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.jpg") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_ml.jpg");
 		}
-		if($ext!="GIF"){
-			 if(is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_s.gif") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_s.gif");
-			 if(is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_m.gif") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_m.gif");
-			 if(is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.gif") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.gif");
-			 if(is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.gif") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_ml.gif");
+		if( $ext != "GIF" ){
+			if( is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_s.gif") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_s.gif");
+			if( is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_m.gif") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_m.gif");
+			if( is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.gif") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.gif");
+			if( is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.gif") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_ml.gif");
 		}
-		if($ext!="PNG"){
-			 if(is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_s.png") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_s.png");
-			 if(is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_m.png") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_m.png");
-			 if(is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.png") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.png");	
-			 if(is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.png") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_ml.png");
+		if( $ext != "PNG" ){
+			if( is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_s.png") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_s.png");
+			if( is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_m.png") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_m.png");
+			if( is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.png") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.png");	
+			if( is_file($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_l.png") ) unlink($this->avatarUploadDirectory . "/sg_" . $this->gift_id . "_ml.png");
 		}
-		
-		if($type > 0 ){
-			//$dbr = wfGetDB( DB_SLAVE );
-			//$sql = "UPDATE user set user_avatar = " . $type . " WHERE user_id = " . $wgUser->mId;
-			//$res = $dbr->query($sql);
-		} else {
+
+		if( $type < 0 ){
 			$wgOut->fileCopyError( $tempName, $stash );
 		}
 		return $type;
@@ -357,38 +359,36 @@ function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
 		wfSuppressWarnings();
 		$success = unlink( $this->mUploadTempName );
 		wfRestoreWarnings();
-		if ( ! $success ) {
+		if ( !$success ) {
 			$wgOut->fileDeleteError( $this->mUploadTempName );
 		}
 	}
-
-	/* -------------------------------------------------------------- */
 
 	/**
 	 * Show some text and linkage on successful upload.
 	 * @access private
 	 */
-	function showSuccess($status) {
+	function showSuccess( $status ) {
 		global $wgUser, $wgOut, $wgContLang, $wgDBname, $wgUploadPath, $wgScriptPath;
 		wfLoadExtensionMessages('SystemGifts');
-		$ext = "jpg";
+		$ext = 'jpg';
 
-		$output = "<h2>".wfMsg('ga-uploadsuccess')."</h2>";
-		$output .= "<h5>".wfMsg('ga-imagesbelow')."</h5>";
-		if($status==1)$ext = "gif";
-		if($status==2)$ext = "jpg";
-		if($status==3)$ext = "png";
+		$output = '<h2>'.wfMsg('ga-uploadsuccess').'</h2>';
+		$output .= '<h5>'.wfMsg('ga-imagesbelow').'</h5>';
+		if( $status == 1 ) $ext = "gif";
+		if( $status == 2 ) $ext = "jpg";
+		if( $status == 3 ) $ext = "png";
 
-		$output .= "<table cellspacing=0 cellpadding=5>";
-		$output .= "<tr><td valign=top style='color:#666666;font-weight:800'>".wfMsg('ga-large')."</td><td><img src={$wgUploadPath}/awards/sg_" . $this->gift_id . "_l." . $ext . "?ts=" .	rand()	 . "></td></tr>";
-		$output .= "<tr><td valign=top style='color:#666666;font-weight:800'>".wfMsg('ga-mediumlarge')."</td><td><img src={$wgUploadPath}/awards/sg_" . $this->gift_id . "_ml." . $ext . "?ts=" .	rand()	 . "></td></tr>";
-		$output .= "<tr><td valign=top style='color:#666666;font-weight:800'>".wfMsg('ga-medium')."</td><td><img src={$wgUploadPath}/awards/sg_" . $this->gift_id . "_m." . $ext . "?ts=" .	rand()	 . "></td></tr>";
-		$output .= "<tr><td valign=top style='color:#666666;font-weight:800'>".wfMsg('ga-small')."</td><td><img src={$wgUploadPath}/awards/sg_" . $this->gift_id . "_s." . $ext . "?ts" .	rand()	 . "=></td></tr>";
-		$output .= "<tr><td><input type=button onclick=javascript:history.go(-1) value='".wfMsg('ga-goback')."'></td></tr>";
+		$output .= '<table cellspacing="0" cellpadding="5">';
+		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">'.wfMsg('ga-large').'</td><td><img src="'.$wgUploadPath.'/awards/sg_' . $this->gift_id . '_l.' . $ext . '?ts=' .	rand() . '"></td></tr>';
+		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">'.wfMsg('ga-mediumlarge').'</td><td><img src="'.$wgUploadPath.'/awards/sg_' . $this->gift_id . '_ml.' . $ext . '?ts=' . rand() . '"></td></tr>';
+		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">'.wfMsg('ga-medium').'</td><td><img src="'.$wgUploadPath.'/awards/sg_' . $this->gift_id . '_m.' . $ext . '?ts=' . rand()	. '"></td></tr>';
+		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">'.wfMsg('ga-small').'</td><td><img src="'.$wgUploadPath.'/awards/sg_' . $this->gift_id . '_s.' . $ext . '?ts' . rand() . '"></td></tr>';
+		$output .= '<tr><td><input type="button" onclick="javascript:history.go(-1)" value="'.wfMsg('ga-goback').'"></td></tr>';
 
-		$output .= "<tr><td><a href=\"".$wgScriptPath."/index.php?title=Special:SystemGiftManager\">".wfMsg('ga-back-gift-list')."</a> |";
-		$output .= " <a href=\"".$wgScriptPath."/index.php?title=Special:SystemGiftManager&amp;id={$this->gift_id}\">".wfMsg('ga-back-edit-gift')."</a></td></tr>";
-		$output .= "</table>";
+		$output .= '<tr><td><a href="'.$wgScriptPath.'/index.php?title=Special:SystemGiftManager">'.wfMsg('ga-back-gift-list').'</a> | ';
+		$output .= '<a href="'.$wgScriptPath.'/index.php?title=Special:SystemGiftManager&amp;id='. $this->gift_id .'">'.wfMsg('ga-back-edit-gift').'</a></td></tr>';
+		$output .= '</table>';
 		$wgOut->addHTML($output);
 	}
 
@@ -402,7 +402,7 @@ function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
 		$sub = wfMsg( 'uploadwarning' );
 		$wgOut->addHTML( "<h2>{$sub}</h2>\n" );
 		$wgOut->addHTML( "<h4 class='error'>{$error}</h4>\n" );
-		$wgOut->addHTML("<br /><input type=button onclick=javascript:history.go(-1) value='".wfMsg('ga-goback')."'>");
+		$wgOut->addHTML( '<br /><input type="button" onclick="javascript:history.go(-1)" value="'.wfMsg('ga-goback').'">' );
 	}
 
 	/**
@@ -431,7 +431,7 @@ function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
 		$reupload = wfMsg( 'reupload' );
 		$iw = wfMsg( 'ignorewarning' );
 		$reup = wfMsg( 'reuploaddesc' );
-		$titleObj = Title::makeTitle( NS_SPECIAL, 'Upload' );
+		$titleObj = SpecialPage::getTitleFor( 'Upload' );
 		$action = $titleObj->escapeLocalURL( 'action=submit' );
 
 		if ( $wgUseCopyrightUpload ) {
@@ -440,7 +440,7 @@ function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
 	<input type='hidden' name='wpUploadSource' value=\"" . htmlspecialchars( $this->mUploadSource ) . "\" />
 	";
 		} else {
-			$copyright = "";
+			$copyright = '';
 		}
 
 		$wgOut->addHTML( "
@@ -477,7 +477,7 @@ function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
 		global $wgUseCopyrightUpload;
 		wfLoadExtensionMessages('SystemGifts');
 
-		$cols = intval($wgUser->getOption( 'cols' ));
+		$cols = intval( $wgUser->getOption( 'cols' ) );
 		$ew = $wgUser->getOption( 'editwidth' );
 		if ( $ew ) $ew = " style=\"width:100%\"";
 		else $ew = '';
@@ -498,7 +498,7 @@ function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
 
 		$iw = wfMsg( 'ignorewarning' );
 
-		$titleObj = Title::makeTitle( NS_SPECIAL, 'Upload' );
+		$titleObj = SpecialPage::getTitleFor( 'Upload' );
 		$action = $titleObj->escapeLocalURL();
 
 		$encDestFile = htmlspecialchars( $this->mDestFile );
@@ -521,10 +521,10 @@ function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
 			: '';
 
 		global $wgUploadPath;
-		$gift_image = SystemGifts::getGiftImage($this->gift_id, "l");
-		if($gift_image != ""){
-			$output = "<table><tr><td style='color:#666666;font-weight:800'>".wfMsg('ga-currentimage')."</td></tr>";
-			$output .= "<tr><td><img src=\"{$wgUploadPath}/awards/" . $gift_image . "\" border=\"0\" alt=\"".wfMsg('ga-gift')."\" /></td></tr></table><br />";
+		$gift_image = SystemGifts::getGiftImage($this->gift_id, 'l');
+		if( $gift_image != '' ){
+			$output = '<table><tr><td style="color:#666666;font-weight:800">'.wfMsg('ga-currentimage').'</td></tr>';
+			$output .= '<tr><td><img src="'.$wgUploadPath.'/awards/' . $gift_image . '" border="0" alt="'.wfMsg('ga-gift').'" /></td></tr></table><br />';
 		}
 		$wgOut->addHTML($output);
 
@@ -541,8 +541,6 @@ function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
 	<input tabindex='5' type='submit' name='wpUpload' value=\"{$ulb}\" />
 	</td></tr></table></form>\n" );
 	}
-
-	/* -------------------------------------------------------------- */
 
 	/**
 	 * Split a file into a base name and all dot-delimited 'extensions'
@@ -597,13 +595,13 @@ function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
 	function verify( $tmpfile, $extension ) {
 		#magically determine mime type
 		$magic = & wfGetMimeMagic();
-		$mime = $magic->guessMimeType($tmpfile,false);
+		$mime = $magic->guessMimeType($tmpfile, false);
 
 		$fname = "SpecialSystemGiftManagerLogo::verify";
 		
 		#check mime type, if desired
 		global $wgVerifyMimeType;
-		if ($wgVerifyMimeType) {
+		if( $wgVerifyMimeType ) {
 
 			#check mime type against file extension
 			if( !$this->verifyExtension( $mime, $extension ) ) {
@@ -624,8 +622,8 @@ function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
 		}
 
 		/**
-		* Scan the uploaded file for viruses
-		*/
+		 * Scan the uploaded file for viruses
+		 */
 		$virus = $this->detectVirus($tmpfile);
 		if ( $virus ) {
 			return new WikiErrorMsg( 'uploadvirus', htmlspecialchars($virus) );
@@ -647,8 +645,8 @@ function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
 
 		$magic =& wfGetMimeMagic();
 
-		if ( ! $mime || $mime == 'unknown' || $mime == 'unknown/unknown' )
-			if ( ! $magic->isRecognizableExtension( $extension ) ) {
+		if ( !$mime || $mime == 'unknown' || $mime == 'unknown/unknown' )
+			if ( !$magic->isRecognizableExtension( $extension ) ) {
 				wfDebug( "$fname: passing file with unknown detected mime type; unrecognized extension '$extension', can't verify\n" );
 				return true;
 			} else {
@@ -656,12 +654,12 @@ function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
 				return false;
 			}
 
-		$match = $magic->isMatchingExtension($extension,$mime);
+		$match = $magic->isMatchingExtension( $extension, $mime );
 
-		if ($match===NULL) {
+		if( $match === NULL ) {
 			wfDebug( "$fname: no file extension known for mime type $mime, passing file\n" );
 			return true; 
-		} elseif ($match===true) {
+		} elseif( $match === true ) {
 			wfDebug( "$fname: mime type $mime matches extension $extension, passing file\n" );
 
 			#TODO: if it's a bitmap, make sure PHP or ImageMagic resp. can handle it!
@@ -674,15 +672,15 @@ function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
 	}
 	
 	/**
-	* Heuristig for detecting files that *could* contain JavaScript instructions or 
-	* things that may look like HTML to a browser and are thus
-	* potentially harmful. The present implementation will produce false positives in some situations.
-	*
-	* @param string $file Pathname to the temporary upload file
-	* @param string $mime The mime type of the file
-	* @return bool true if the file contains something looking like embedded scripts
-	*/
-	function detectScript($file, $mime) {
+	 * Heuristig for detecting files that *could* contain JavaScript instructions or 
+	 * things that may look like HTML to a browser and are thus
+	 * potentially harmful. The present implementation will produce false positives in some situations.
+	 *
+	 * @param string $file Pathname to the temporary upload file
+	 * @param string $mime The mime type of the file
+	 * @return bool true if the file contains something looking like embedded scripts
+	 */
+	function detectScript( $file, $mime ) {
 
 		#ugly hack: for text files, always look at the entire file.
 		#For binarie field, just check the first K.
@@ -755,44 +753,45 @@ function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
 		$chunk = Sanitizer::decodeCharReferences( $chunk );
 
 		#look for script-types
-		if (preg_match("!type\s*=\s*['\"]?\s*(\w*/)?(ecma|java)!sim", $chunk)) return true;
+		if( preg_match("!type\s*=\s*['\"]?\s*(\w*/)?(ecma|java)!sim", $chunk) ) return true;
 
 		#look for html-style script-urls
-		if (preg_match("!(href|src|data)\s*=\s*['\"]?\s*(ecma|java)script:!sim", $chunk)) return true;
+		if( preg_match("!(href|src|data)\s*=\s*['\"]?\s*(ecma|java)script:!sim", $chunk) ) return true;
 
 		#look for css-style script-urls
-		if (preg_match("!url\s*\(\s*['\"]?\s*(ecma|java)script:!sim", $chunk)) return true;
+		if( preg_match("!url\s*\(\s*['\"]?\s*(ecma|java)script:!sim", $chunk) ) return true;
 
 		wfDebug("SpecialSystemGiftManagerLogo::detectScript: no scripts found\n");
 		return false;
 	}
 	
-	/** Generic wrapper function for a virus scanner program.
-	* This relies on the $wgAntivirus and $wgAntivirusSetup variables.
-	* $wgAntivirusRequired may be used to deny upload if the scan fails.
-	*
-	* @param string $file Pathname to the temporary upload file
-	* @return mixed false if not virus is found, NULL if the scan fails or is disabled,
-	* or a string containing feedback from the virus scanner if a virus was found.
-	* If textual feedback is missing but a virus was found, this function returns true.
-	*/
-	function detectVirus($file) {
+	/**
+	 * Generic wrapper function for a virus scanner program.
+	 * This relies on the $wgAntivirus and $wgAntivirusSetup variables.
+	 * $wgAntivirusRequired may be used to deny upload if the scan fails.
+	 *
+	 * @param string $file Pathname to the temporary upload file
+	 * @return mixed false if not virus is found, NULL if the scan fails or is disabled,
+	 * or a string containing feedback from the virus scanner if a virus was found.
+	 * If textual feedback is missing but a virus was found, this function returns true.
+	 */
+	function detectVirus( $file ) {
 		global $wgAntivirus, $wgAntivirusSetup, $wgAntivirusRequired;
 
 		$fname = "SpecialSystemGiftManagerLogo::detectVirus";
 
-		if (!$wgAntivirus) { #disabled?
+		if( !$wgAntivirus ) { #disabled?
 			wfDebug("$fname: virus scanner disabled\n");
 
 			return NULL;
 		}
 
-		if (!$wgAntivirusSetup[$wgAntivirus]) { 
+		if( !$wgAntivirusSetup[$wgAntivirus] ) {
 			wfDebug("$fname: unknown virus scanner: $wgAntivirus\n");
 
-			$wgOut->addHTML( "<div class='error'>Bad configuration: unknown virus scanner: <i>$wgAntivirus</i></div>\n" ); #LOCALIZE
+			$wgOut->addHTML( '<div class="error">'. wfMsg( 'virus-badscanner', $wgAntivirus ) . "\n" );
 
-			return "unknown antivirus: $wgAntivirus";
+			return wfMsg( 'virus-unknownscanner' ). $wgAntivirus;
 		}
 
 		#look up scanner configuration
@@ -802,8 +801,8 @@ function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
 
 		$scanner = $virus_scanner; #copy, so we can resolve the pattern
 
-		if (strpos($scanner,"%f")===false) $scanner.= " ".wfEscapeShellArg($file); #simple pattern: append file to scan
-		else $scanner = str_replace("%f",wfEscapeShellArg($file),$scanner); #complex pattern: replace "%f" with file to scan
+		if( strpos( $scanner, "%f" ) === false ) $scanner.= " ".wfEscapeShellArg($file); #simple pattern: append file to scan
+		else $scanner = str_replace( "%f", wfEscapeShellArg($file), $scanner ); #complex pattern: replace "%f" with file to scan
 		
 		wfDebug("$fname: running virus scan: $scanner \n");
 		
@@ -813,38 +812,36 @@ function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
 		#NOTE: there's a 50 line workaround to make stderr redirection work on windows, too.
 		# that does not seem to be worth the pain. 
 		# Ask me (Duesentrieb) about it if it's ever needed.
-		if (wfIsWindows()) exec("$scanner", $output, $code); 
+		if( wfIsWindows() ) exec("$scanner", $output, $code); 
 		else exec("$scanner 2>&1", $output, $code); 
 
 		$exit_code = $code; #remeber for user feedback
 
-		if ($virus_scanner_codes) { #map exit code to AV_xxx constants.
-			if (isset($virus_scanner_codes[$code])) $code= $virus_scanner_codes[$code]; #explicite mapping
-			else if (isset($virus_scanner_codes["*"])) $code= $virus_scanner_codes["*"]; #fallback mapping
+		if( $virus_scanner_codes ) { #map exit code to AV_xxx constants.
+			if( isset( $virus_scanner_codes[$code] ) ) $code = $virus_scanner_codes[$code]; #explicite mapping
+			else if( isset( $virus_scanner_codes["*"] ) ) $code = $virus_scanner_codes["*"]; #fallback mapping
 		}
 
-		if ($code===AV_SCAN_FAILED) { #scan failed (code was mapped to false by $virus_scanner_codes)
+		if( $code === AV_SCAN_FAILED ) { #scan failed (code was mapped to false by $virus_scanner_codes)
 			wfDebug("$fname: failed to scan $file (code $exit_code).\n");
 
-			if ($wgAntivirusRequired) return "scan failed (code $exit_code)";
-			else return NULL; 
-		}
-		else if ($code===AV_SCAN_ABORTED) { #scan failed because filetype is unknown (probably imune)
+			if ($wgAntivirusRequired) return wfMsg( 'virus-scanfailed', $exit_code );
+			else return NULL;
+		} else if( $code === AV_SCAN_ABORTED ) { #scan failed because filetype is unknown (probably imune)
 			wfDebug("$fname: unsupported file type $file (code $exit_code).\n");
-			return NULL; 
-		}
-		else if ($code===AV_NO_VIRUS) {
+			return NULL;
+		} else if( $code === AV_NO_VIRUS ) {
 			wfDebug("$fname: file passed virus scan.\n");
 			return false; #no virus found
 		} else {
-			$output = join("\n",$output);
+			$output = join("\n", $output);
 			$output = trim($output);
 
-			if (!$output) $output = true; #if ther's no output, return true
-			else if ($msg_pattern) {
+			if( !$output ) $output = true; #if ther's no output, return true
+			else if( $msg_pattern ) {
 				$groups = array();
-				if (preg_match($msg_pattern, $output, $groups)) {
-					if ($groups[1]) $output = $groups[1];
+				if( preg_match($msg_pattern, $output, $groups) ) {
+					if( $groups[1] ) $output = $groups[1];
 				}
 			}
 

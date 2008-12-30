@@ -2,6 +2,7 @@
 /**
  * Internationalization file for the UserStats extension.
  *
+ * @file
  * @ingroup Extensions
  */
 
@@ -54,13 +55,6 @@ Hey, want to stop getting emails from us?
 
 Click $3
 and change your settings to disable email notifications.'
-);
-
-/** Message documentation (Message documentation)
- * @author Purodha
- */
-$messages['qqq'] = array(
-	'top-fans-by-category-title' => '$1 is any of the messages starting with "top-fans-stats-" and the name of the statistic. Examples are {{msg-mw|top-fans-stats-vote-count}}, {{msg-mw|top-fans-stats-weekly-winner-count}}, {{msg-mw|top-fans-stats-referrals-completed}}, {{msg-mw|top-fans-stats-friends-count}}, and {{msg-mw|top-fans-stats-edit-count}}.',
 );
 
 /** Afrikaans (Afrikaans)
@@ -334,7 +328,14 @@ $messages['fi'] = array(
 	'top-fans-monthly-points-link' => 'Pisteitä tässä kuussa',
 	'top-fans-points' => 'pistettä',
 	'top-fans-bad-field-title' => 'Ups!',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|kuukausittainen voitto|kuukausittaista voittoa}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|viikottainen voitto|viikottaista voittoa}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|muokkaus|muokkausta}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|kommentti|kommenttia}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|ystävä|ystävää}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|vihollinen|vihollista}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|saatu lahja|saatua lahjaa}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|lähetetty lahja|lähetettyä lahjaa}}',
 	'level-advance-subject' => 'Olet nyt "$1" {{GRAMMAR:inessive|{{SITENAME}}}}!',
 	'level-advance-body' => 'Hei $1:
 

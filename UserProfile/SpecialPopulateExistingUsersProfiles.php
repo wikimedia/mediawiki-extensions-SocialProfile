@@ -1,35 +1,44 @@
 <?php
-/**#@+
+/**
  * A special page for initializing social profiles for existing wikis
  * This is to be run once if you want to preserve existing user pages at User:xxx (otherwise
  * they will be moved to UserWiki:xxx)
  *
- * @package MediaWiki
- * @subpackage SpecialPage
- *
+ * @file
+ * @ingroup Extensions
  * @author David Pean <david.pean@gmail.com>
  * @copyright Copyright © 2007, Wikia Inc.
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
 class SpecialPopulateUserProfiles extends SpecialPage {
-	function __construct() {
+
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
 		parent::__construct( 'PopulateUserProfiles' );
 	}
 
-	function execute( $params ) {
+	/**
+	 * Show the special page
+	 *
+	 * @param $params Mixed: parameter(s) passed to the page or null
+	 */
+	public function execute( $params ) {
 		global $wgRequest, $IP, $wgOut, $wgUser, $wgMemc;
 
-		if( !in_array( "staff", $wgUser->getGroups())  ){
+		if( !in_array( 'staff', $wgUser->getGroups() ) ){
 			$wgOut->errorpage('error', 'badaccess');
-			return "";
+			return '';
 		}
 
-		$dbr = wfGetDB( DB_MASTER );
-		$res = $dbr->select( 'page',
-					array('page_title'),
-					array('page_namespace' => NS_USER), __METHOD__,
-					""
+		$dbw = wfGetDB( DB_MASTER );
+		$res = $dbw->select( 'page',
+					array( 'page_title' ),
+					array( 'page_namespace' => NS_USER ),
+					__METHOD__,
+					''
 				);
 
 		$count = 0; // To avoid an annoying PHP notice
@@ -43,10 +52,10 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 			//echo "user_name:{$user_name}/user_id:" . $user_id . "<br />";
 			//$count++;
 
-				$s = $dbr->selectRow( 'user_profile', array( 'up_user_id' ), array( 'up_user_id' => $user_id ), __METHOD__ );
+				$s = $dbw->selectRow( 'user_profile', array( 'up_user_id' ), array( 'up_user_id' => $user_id ), __METHOD__ );
 				if ( $s === false ) {
-					$dbr = wfGetDB( DB_MASTER );
-					$dbr->insert( 'user_profile',
+					$dbw = wfGetDB( DB_MASTER );
+					$dbw->insert( 'user_profile',
 						array(
 							'up_user_id' => $user_id,
 							'up_type' => 0

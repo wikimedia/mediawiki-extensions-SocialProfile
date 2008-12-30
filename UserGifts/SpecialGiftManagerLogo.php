@@ -9,8 +9,11 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	var $avatarUploadDirectory;
 	var $fileExtensions;
 	var $gift_id;
-	
-	function __construct(){
+
+	/**
+	 * Constructor
+	 */
+	public function __construct(){
 		parent::__construct('GiftManagerLogo');
 	}
 
@@ -19,8 +22,8 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 *
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
-	function execute( $par ){
-		global $wgRequest, $IP;
+	public function execute( $par ){
+		global $wgRequest;
 		$this->gift_id = $wgRequest->getVal('gift_id');
 		$this->initLogo($wgRequest);
 		$this->executeLogo();
@@ -34,7 +37,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		}
 
 		$gift = Gifts::getGift($this->gift_id);
-		if( $wgUser->getID() == $gift["creator_user_id"] || in_array('giftadmin', $wgUser->getGroups() ) ){
+		if( $wgUser->getID() == $gift['creator_user_id'] || in_array('giftadmin', $wgUser->getGroups() ) ){
 			return true;
 		}
 	
@@ -88,15 +91,14 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 
 	/**
 	 * Start doing stuff
-	 * @access public
 	 */
-	function executeLogo() {
+	public function executeLogo() {
 		global $wgUser, $wgOut;
 		global $wgEnableUploads, $wgUploadDirectory;
 		$this->avatarUploadDirectory = $wgUploadDirectory . "/awards"; 
 		/** Show an error message if file upload is disabled */ 
-		if( ! $wgEnableUploads ) {
-			$wgOut->addWikiText( wfMsg( 'uploaddisabled' ) );
+		if( !$wgEnableUploads ) {
+			$wgOut->addWikiMsg( 'uploaddisabled' );
 			return;
 		}
 
@@ -112,7 +114,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 
 		/** Check if the image directory is writeable, this is a common mistake */
 		if ( !is_writeable( $wgUploadDirectory ) ) {
-			$wgOut->addWikiText( wfMsg( 'upload_directory_read_only', $wgUploadDirectory ) );
+			$wgOut->addWikiMsg( 'upload_directory_read_only', $wgUploadDirectory );
 			return;
 		}
 
@@ -126,7 +128,6 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		}
 	}
 
-	/* -------------------------------------------------------------- */
 	/**
 	 * Really do the upload
 	 * Checks are made in SpecialUpload::execute()
@@ -192,12 +193,12 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		/**
 		 * Check for non-fatal conditions
 		 */
-		if ( ! $this->mIgnoreWarning ) {
+		if ( !$this->mIgnoreWarning ) {
 			$warning = '';
 
 			global $wgCheckFileExtensions;
 			if ( $wgCheckFileExtensions ) {
-				if ( ! $this->checkFileExtension( $finalExt, $this->fileExtensions ) ) {
+				if ( !$this->checkFileExtension( $finalExt, $this->fileExtensions ) ) {
 					$warning .= '<li>'.wfMsg( 'badfiletype', htmlspecialchars( $fullExt ) ).'</li>';
 				}
 			}
@@ -228,7 +229,6 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		 * Try actually saving the thing...
 		 * It will show an error form on failure.
 		 */
-
 		$status = $this->saveUploadedFile( $this->mUploadSaveName, $this->mUploadTempName, strtoupper($fullExt) );
 
 		if( $status > 0 ) {
@@ -236,7 +236,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		}
 	}
 
-	function createThumbnail($imageSrc, $ext, $imgDest, $thumbWidth){
+	function createThumbnail( $imageSrc, $ext, $imgDest, $thumbWidth ){
 		list($origWidth, $origHeight, $TypeCode) = getimagesize($imageSrc);
 
 		if($origWidth < $thumbWidth)$thumbWidth = $origWidth;
@@ -270,23 +270,29 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$this->createThumbnail($tempName, $ext, $this->gift_id . "_m", 30);
 		$this->createThumbnail($tempName, $ext, $this->gift_id . "_s", 16);
 
-		if($ext == "JPG" && is_file( $this->avatarUploadDirectory . "/" . $this->gift_id . "_l.jpg")){$type = 2;}
-		if($ext == "GIF" && is_file( $this->avatarUploadDirectory . "/" . $this->gift_id. "_l.gif")){$type = 1;}
-		if($ext == "PNG" && is_file( $this->avatarUploadDirectory . "/" . $this->gift_id . "_l.png")){$type = 3;}
+		if( $ext == "JPG" && is_file( $this->avatarUploadDirectory . "/" . $this->gift_id . "_l.jpg") ){
+			$type = 2;
+		}
+		if( $ext == "GIF" && is_file( $this->avatarUploadDirectory . "/" . $this->gift_id. "_l.gif") ){
+			$type = 1;
+		}
+		if( $ext == "PNG" && is_file( $this->avatarUploadDirectory . "/" . $this->gift_id . "_l.png") ){
+			$type = 3;
+		}
 
-		if($ext!="JPG"){
+		if( $ext != "JPG" ){
 			if(is_file($this->avatarUploadDirectory . "/" . $this->gift_id . "_s.jpg") ) unlink($this->avatarUploadDirectory . "/" . $this->gift_id . "_s.jpg");
 			if(is_file($this->avatarUploadDirectory . "/" . $this->gift_id . "_m.jpg") ) unlink($this->avatarUploadDirectory . "/" . $this->gift_id . "_m.jpg");
 			if(is_file($this->avatarUploadDirectory . "/" . $this->gift_id . "_l.jpg") ) unlink($this->avatarUploadDirectory . "/" . $this->gift_id . "_ml.jpg");
 			if(is_file($this->avatarUploadDirectory . "/" . $this->gift_id . "_l.jpg") ) unlink($this->avatarUploadDirectory . "/" . $this->gift_id . "_l.jpg");	
 		}
-		if($ext!="GIF"){
+		if( $ext != "GIF" ){
 			if(is_file($this->avatarUploadDirectory . "/" . $this->gift_id . "_s.gif") ) unlink($this->avatarUploadDirectory . "/" . $this->gift_id . "_s.gif");
 			if(is_file($this->avatarUploadDirectory . "/" . $this->gift_id . "_m.gif") ) unlink($this->avatarUploadDirectory . "/" . $this->gift_id . "_m.gif");
 			if(is_file($this->avatarUploadDirectory . "/" . $this->gift_id . "_l.gif") ) unlink($this->avatarUploadDirectory . "/" . $this->gift_id . "_l.gif");	
 			if(is_file($this->avatarUploadDirectory . "/" . $this->gift_id . "_l.gif") ) unlink($this->avatarUploadDirectory . "/" . $this->gift_id . "_ml.gif");
 		}
-		if($ext!="PNG"){
+		if( $ext != "PNG" ){
 			if(is_file($this->avatarUploadDirectory . "/" . $this->gift_id . "_s.png") ) unlink($this->avatarUploadDirectory . "/" . $this->gift_id . "_s.png");
 			if(is_file($this->avatarUploadDirectory . "/" . $this->gift_id . "_m.png") ) unlink($this->avatarUploadDirectory . "/" . $this->gift_id . "_m.png");
 			if(is_file($this->avatarUploadDirectory . "/" . $this->gift_id . "_l.png") ) unlink($this->avatarUploadDirectory . "/" . $this->gift_id . "_l.png");	
@@ -294,9 +300,9 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		}
 
 		if( $type > 0 ){
-			//$dbr = wfGetDB( DB_SLAVE );
+			//$dbw = wfGetDB( DB_MASTER );
 			//$sql = "UPDATE user set user_avatar = " . $type . " WHERE user_id = " . $wgUser->mId;
-			//$res = $dbr->query($sql);
+			//$res = $dbw->query($sql);
 		} else {
 			$wgOut->fileCopyError( $tempName, $stash );
 		}
@@ -362,38 +368,36 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		wfSuppressWarnings();
 		$success = unlink( $this->mUploadTempName );
 		wfRestoreWarnings();
-		if ( ! $success ) {
+		if ( !$success ) {
 			$wgOut->fileDeleteError( $this->mUploadTempName );
 		}
 	}
-
-	/* -------------------------------------------------------------- */
 
 	/**
 	 * Show some text and linkage on successful upload.
 	 * @access private
 	 */
-	function showSuccess($status) {
+	function showSuccess( $status ) {
 		global $wgUser, $wgOut, $wgContLang, $wgDBname, $wgUploadPath, $wgScriptPath;
 		wfLoadExtensionMessages('UserGifts');
-		$ext = "jpg";
+		$ext = 'jpg';
 
-		$output = "<h2>".wfMsg('g-uploadsuccess')."</h2>";
-		$output .= "<h5>".wfMsg('g-imagesbelow')."</h5>";
-		if($status==1)$ext = "gif";
-		if($status==2)$ext = "jpg";
-		if($status==3)$ext = "png";
+		$output = '<h2>'.wfMsg('g-uploadsuccess').'</h2>';
+		$output .= '<h5>'.wfMsg('g-imagesbelow').'</h5>';
+		if( $status == 1 ) $ext = "gif";
+		if( $status == 2 ) $ext = "jpg";
+		if( $status == 3 ) $ext = "png";
 
-		$output .= "<table cellspacing=0 cellpadding=5>";
-		$output .= "<tr><td valign=top style='color:#666666;font-weight:800'>".wfMsg('g-large')."</td><td><img src={$wgUploadPath}/awards/" . $this->gift_id . "_l." . $ext . "?ts=" .	rand()	 . "></td></tr>";
-		$output .= "<tr><td valign=top style='color:#666666;font-weight:800'>".wfMsg('g-mediumlarge')."</td><td><img src={$wgUploadPath}/awards/" . $this->gift_id . "_ml." . $ext . "?ts=" .	rand()	 . "></td></tr>";
-		$output .= "<tr><td valign=top style='color:#666666;font-weight:800'>".wfMsg('g-medium')."</td><td><img src={$wgUploadPath}/awards/" . $this->gift_id . "_m." . $ext . "?ts=" .	rand()	 . "></td></tr>";
-		$output .= "<tr><td valign=top style='color:#666666;font-weight:800'>".wfMsg('g-small')."</td><td><img src={$wgUploadPath}/awards/" . $this->gift_id . "_s." . $ext . "?ts" .	rand()	 . "=></td></tr>";
-		$output .= "<tr><td><input type=button onclick=javascript:history.go(-1) value='".wfMsg('g-go-back')."'></td></tr>";
+		$output .= '<table cellspacing="0" cellpadding="5">';
+		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">'.wfMsg('g-large').'</td><td><img src="'.$wgUploadPath.'/awards/' . $this->gift_id . '_l.' . $ext . '?ts=' . rand() . '"></td></tr>';
+		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">'.wfMsg('g-mediumlarge').'</td><td><img src="'.$wgUploadPath.'/awards/' . $this->gift_id . '_ml.' . $ext . '?ts=' . rand() . '"></td></tr>';
+		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">'.wfMsg('g-medium').'</td><td><img src="'.$wgUploadPath.'/awards/' . $this->gift_id . '_m.' . $ext . '?ts=' . rand() . '"></td></tr>';
+		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">'.wfMsg('g-small').'</td><td><img src="'.$wgUploadPath.'/awards/' . $this->gift_id . '_s.' . $ext . '?ts' . rand()  . '"></td></tr>';
+		$output .= '<tr><td><input type="button" onclick="javascript:history.go(-1)" value="'.wfMsg('g-go-back').'"></td></tr>';
 
-		$output .= "<tr><td><a href=\"".$wgScriptPath."/index.php?title=Special:GiftManager\">".wfMsg('g-back-gift-list')."</a> |";
-		$output .= " <a href=\"".$wgScriptPath."/index.php?title=Special:GiftManager&amp;id={$this->gift_id}\">".wfMsg('g-back-edit-gift')."</a></td></tr>";
-		$output .= "</table>";
+		$output .= '<tr><td><a href="'.$wgScriptPath.'/index.php?title=Special:GiftManager">'.wfMsg('g-back-gift-list').'</a> | ';
+		$output .= '<a href="'.$wgScriptPath.'/index.php?title=Special:GiftManager&amp;id='. $this->gift_id .'">'.wfMsg('g-back-edit-gift').'</a></td></tr>';
+		$output .= '</table>';
 		$wgOut->addHTML($output);
 	}
 
@@ -436,7 +440,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$reupload = wfMsg( 'reupload' );
 		$iw = wfMsg( 'ignorewarning' );
 		$reup = wfMsg( 'reuploaddesc' );
-		$titleObj = Title::makeTitle( NS_SPECIAL, 'Upload' );
+		$titleObj = SpecialPage::getTitleFor( 'Upload' );
 		$action = $titleObj->escapeLocalURL( 'action=submit' );
 
 		if ( $wgUseCopyrightUpload ) {
@@ -445,7 +449,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	<input type='hidden' name='wpUploadSource' value=\"" . htmlspecialchars( $this->mUploadSource ) . "\" />
 	";
 		} else {
-			$copyright = "";
+			$copyright = '';
 		}
 
 		$wgOut->addHTML( "
@@ -486,7 +490,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 			$wgOut->errorpage( 'error', 'badaccess' );
 		}
 
-		$cols = intval($wgUser->getOption( 'cols' ));
+		$cols = intval( $wgUser->getOption( 'cols' ) );
 		$ew = $wgUser->getOption( 'editwidth' );
 		if ( $ew ) $ew = " style=\"width:100%\"";
 		else $ew = '';
@@ -507,7 +511,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 
 		$iw = wfMsg( 'ignorewarning' );
 
-		$titleObj = Title::makeTitle( NS_SPECIAL, 'Upload' );
+		$titleObj = SpecialPage::getTitleFor( 'Upload' );
 		$action = $titleObj->escapeLocalURL();
 
 		$encDestFile = htmlspecialchars( $this->mDestFile );
@@ -530,10 +534,10 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 			: '';
 
 		global $wgUploadPath;
-		$gift_image = Gifts::getGiftImage($this->gift_id, "l");
-		if($gift_image != ""){
-			$output = "<table><tr><td style='color:#666666;font-weight:800'>".wfMsg('g-current-image')."</td></tr>";
-			$output .= "<tr><td><img src=\"{$wgUploadPath}/images/awards/" . $gift_image . "\" border=\"0\" alt=\"".wfMsg('g-gift')."\" /></td></tr></table><br />";
+		$gift_image = Gifts::getGiftImage($this->gift_id, 'l');
+		if( $gift_image != '' ){
+			$output = '<table><tr><td style="color:#666666;font-weight:800">'.wfMsg('g-current-image').'</td></tr>';
+			$output .= '<tr><td><img src="'.$wgUploadPath.'/images/awards/' . $gift_image . '" border="0" alt="'.wfMsg('g-gift').'" /></td></tr></table><br />';
 		}
 		$wgOut->addHTML($output);
 
@@ -542,7 +546,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	<table border='0'><tr>
 
 	<td style='color:#666666;font-weight:800'>".wfMsg('g-file-instructions')."<p>".wfMsg('g-choose-file')."<br />
-	<input tabindex='1' type='file' name='wpUploadFile' id='wpUploadFile'	style='width:100px' />
+	<input tabindex='1' type='file' name='wpUploadFile' id='wpUploadFile' style='width:100px' />
 	</td></tr><tr>
 	{$source}
 	</tr>
@@ -550,8 +554,6 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	<input tabindex='5' type='submit' name='wpUpload' value=\"{$ulb}\" />
 	</td></tr></table></form>\n" );
 	}
-	
-	/* -------------------------------------------------------------- */
 
 	/**
 	 * Split a file into a base name and all dot-delimited 'extensions'
@@ -612,7 +614,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		
 		#check mime type, if desired
 		global $wgVerifyMimeType;
-		if ($wgVerifyMimeType) {
+		if( $wgVerifyMimeType ) {
 
 			#check mime type against file extension
 			if( !$this->verifyExtension( $mime, $extension ) ) {
@@ -656,8 +658,8 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 
 		$magic = & wfGetMimeMagic();
 
-		if ( ! $mime || $mime == 'unknown' || $mime == 'unknown/unknown' )
-			if ( ! $magic->isRecognizableExtension( $extension ) ) {
+		if ( !$mime || $mime == 'unknown' || $mime == 'unknown/unknown' )
+			if ( !$magic->isRecognizableExtension( $extension ) ) {
 				wfDebug( "$fname: passing file with unknown detected mime type; unrecognized extension '$extension', can't verify\n" );
 				return true;
 			} else {
@@ -665,12 +667,12 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 				return false;
 			}
 
-		$match = $magic->isMatchingExtension($extension,$mime);
+		$match = $magic->isMatchingExtension( $extension, $mime );
 
-		if ($match===NULL) {
+		if( $match === NULL ) {
 			wfDebug( "$fname: no file extension known for mime type $mime, passing file\n" );
 			return true; 
-		} elseif ($match===true) {
+		} elseif( $match === true ) {
 			wfDebug( "$fname: mime type $mime matches extension $extension, passing file\n" );
 			
 			#TODO: if it's a bitmap, make sure PHP or ImageMagic resp. can handle it!
@@ -682,20 +684,21 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		}
 	}
 	
-	/** Heuristig for detecting files that *could* contain JavaScript instructions or 
-	* things that may look like HTML to a browser and are thus
-	* potentially harmful. The present implementation will produce false positives in some situations.
-	*
-	* @param string $file Pathname to the temporary upload file
-	* @param string $mime The mime type of the file
-	* @return bool true if the file contains something looking like embedded scripts
-	*/
-	function detectScript($file, $mime) {
+	/**
+	 * Heuristig for detecting files that *could* contain JavaScript instructions or 
+	 * things that may look like HTML to a browser and are thus
+	 * potentially harmful. The present implementation will produce false positives in some situations.
+	 *
+	 * @param string $file Pathname to the temporary upload file
+	 * @param string $mime The mime type of the file
+	 * @return bool true if the file contains something looking like embedded scripts
+	 */
+	function detectScript( $file, $mime ) {
 
 		#ugly hack: for text files, always look at the entire file.
 		#For binarie field, just check the first K.
 
-		if (strpos($mime,'text/')===0) $chunk = file_get_contents( $file );
+		if( strpos( $mime, 'text/' ) === 0 ) $chunk = file_get_contents( $file );
 		else {
 			$fp = fopen( $file, 'rb' );
 			$chunk = fread( $fp, 1024 );
@@ -704,7 +707,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 
 		$chunk = strtolower( $chunk );
 
-		if (!$chunk) return false;
+		if( !$chunk ) return false;
 
 		#decode from UTF-16 if needed (could be used for obfuscation).
 		if (substr($chunk,0,2)=="\xfe\xff") $enc = "UTF-16BE"; 
@@ -763,44 +766,45 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$chunk = Sanitizer::decodeCharReferences( $chunk );
 
 		#look for script-types
-		if (preg_match("!type\s*=\s*['\"]?\s*(\w*/)?(ecma|java)!sim", $chunk)) return true;
+		if( preg_match("!type\s*=\s*['\"]?\s*(\w*/)?(ecma|java)!sim", $chunk) ) return true;
 
 		#look for html-style script-urls
-		if (preg_match("!(href|src|data)\s*=\s*['\"]?\s*(ecma|java)script:!sim", $chunk)) return true;
+		if( preg_match("!(href|src|data)\s*=\s*['\"]?\s*(ecma|java)script:!sim", $chunk) ) return true;
 
 		#look for css-style script-urls
-		if (preg_match("!url\s*\(\s*['\"]?\s*(ecma|java)script:!sim", $chunk)) return true;
+		if( preg_match("!url\s*\(\s*['\"]?\s*(ecma|java)script:!sim", $chunk) ) return true;
 
 		wfDebug("SpecialGiftManagerLogo::detectScript: no scripts found\n");
 		return false;
 	}
 	
-	/** Generic wrapper function for a virus scanner program.
-	* This relies on the $wgAntivirus and $wgAntivirusSetup variables.
-	* $wgAntivirusRequired may be used to deny upload if the scan fails.
-	*
-	* @param string $file Pathname to the temporary upload file
-	* @return mixed false if not virus is found, NULL if the scan fails or is disabled,
-	* or a string containing feedback from the virus scanner if a virus was found.
-	* If textual feedback is missing but a virus was found, this function returns true.
-	*/
-	function detectVirus($file) {
+	/**
+	 * Generic wrapper function for a virus scanner program.
+	 * This relies on the $wgAntivirus and $wgAntivirusSetup variables.
+	 * $wgAntivirusRequired may be used to deny upload if the scan fails.
+	 *
+	 * @param string $file Pathname to the temporary upload file
+	 * @return mixed false if not virus is found, NULL if the scan fails or is disabled,
+	 * or a string containing feedback from the virus scanner if a virus was found.
+	 * If textual feedback is missing but a virus was found, this function returns true.
+	 */
+	function detectVirus( $file ) {
 		global $wgAntivirus, $wgAntivirusSetup, $wgAntivirusRequired;
 
 		$fname = "SpecialGiftManagerLogo::detectVirus";
 
-		if (!$wgAntivirus) { #disabled?
+		if( !$wgAntivirus ) { #disabled?
 			wfDebug("$fname: virus scanner disabled\n");
 
 			return NULL;
 		}
 
-		if (!$wgAntivirusSetup[$wgAntivirus]) { 
+		if( !$wgAntivirusSetup[$wgAntivirus] ) {
 			wfDebug("$fname: unknown virus scanner: $wgAntivirus\n"); 
 
-			$wgOut->addHTML( "<div class='error'>Bad configuration: unknown virus scanner: <i>$wgAntivirus</i></div>\n" ); #LOCALIZE
+			$wgOut->addHTML( '<div class="error">'. wfMsg( 'virus-badscanner', $wgAntivirus ). "\n" );
 
-			return "unknown antivirus: $wgAntivirus";
+			return wfMsg( 'virus-unknownscanner' ) . $wgAntivirus;
 		}
 		
 		#look up scanner configuration
@@ -826,33 +830,31 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 
 		$exit_code = $code; #remeber for user feedback
 
-		if ($virus_scanner_codes) { #map exit code to AV_xxx constants.
+		if( $virus_scanner_codes ) { #map exit code to AV_xxx constants.
 			if (isset($virus_scanner_codes[$code])) $code = $virus_scanner_codes[$code]; #explicite mapping
 			else if (isset($virus_scanner_codes["*"])) $code = $virus_scanner_codes["*"]; #fallback mapping
 		}
 
-		if ($code===AV_SCAN_FAILED) { #scan failed (code was mapped to false by $virus_scanner_codes)
+		if( $code === AV_SCAN_FAILED ) { #scan failed (code was mapped to false by $virus_scanner_codes)
 			wfDebug("$fname: failed to scan $file (code $exit_code).\n");
 
-			if ($wgAntivirusRequired) return "scan failed (code $exit_code)";
+			if ($wgAntivirusRequired) return wfMsg( 'virus-scanfailed', $exit_code );
 			else return NULL; 
-		}
-		else if ($code===AV_SCAN_ABORTED) { #scan failed because filetype is unknown (probably imune)
+		} else if( $code === AV_SCAN_ABORTED ) { #scan failed because filetype is unknown (probably imune)
 			wfDebug("$fname: unsupported file type $file (code $exit_code).\n");
 			return NULL; 
-		}
-		else if ($code===AV_NO_VIRUS) {
+		} else if( $code === AV_NO_VIRUS ) {
 			wfDebug("$fname: file passed virus scan.\n");
 			return false; #no virus found
 		} else { 
 			$output = join("\n", $output);
 			$output = trim($output);
 
-			if (!$output) $output = true; #if ther's no output, return true
-			else if ($msg_pattern) {
+			if( !$output ) $output = true; #if ther's no output, return true
+			else if( $msg_pattern ) {
 				$groups = array();
-				if (preg_match($msg_pattern, $output, $groups)) {
-					if ($groups[1]) $output = $groups[1];
+				if( preg_match( $msg_pattern, $output, $groups ) ) {
+					if( $groups[1] ) $output = $groups[1];
 				}
 			}
 

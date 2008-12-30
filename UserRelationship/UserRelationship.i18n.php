@@ -2,6 +2,7 @@
 /**
  * Internationalisation file for UserRelationship extension.
  *
+ * @file
  * @ingroup Extensions
  */
 
@@ -20,8 +21,6 @@ $messages['en'] = array(
 	'ur-main-page' => 'Main page',
 	'ur-your-profile' => 'Your profile',
 	'ur-backlink' => '&lt; Back to $1\'s profile',
-	'ur-friend' => 'friend',
-	'ur-foe' => 'foe',
 	'ur-relationship-count-foes' => '$1 has $2 {{PLURAL:$2|foe|foes}}. Want more foes? <a href="$3">Invite them.</a>',
 	'ur-relationship-count-friends' => '$1 has $2 {{PLURAL:$2|friend|friends}}. Want more friends? <a href="$3">Invite them.</a>',
 	'ur-add-friends' => ' Want more friends? <a href="$1">Invite them</a>',
@@ -45,10 +44,8 @@ Please request friends/foes through the correct link.',
 	'ur-remove-relationship-message-confirm-friend' => 'You have successfully removed $1 as your friend.',
 	'ur-remove-error-message-no-relationship' => 'You do not have a relationship with $1.',
 	'ur-remove-error-message-remove-yourself' => 'You cannot remove yourself.',
-	'ur-remove-error-message-pending-request' => 'You have a pending $1 request with $2.',
 	'ur-remove-error-message-pending-foe-request' => 'You have a pending foe request with $1.',
 	'ur-remove-error-message-pending-friend-request' => 'You have a pending friend request with $1.',
-	'ur-remove-error-not-loggedin' => 'You have to be logged in to remove a $1.',
 	'ur-remove-error-not-loggedin-foe' => 'You have to be logged in to remove a foe.',
 	'ur-remove-error-not-loggedin-friend' => 'You have to be logged in to remove a friend.',
 	'ur-remove' => 'Remove',
@@ -60,9 +57,6 @@ Please request friends/foes through the correct link.',
 We will notify $1 to confirm your grudge.',
 	'ur-add-message-friend' => 'You are about to add $1 as your friend.
 We will notify $1 to confirm your friendship.',
-	'ur-friendship' => 'friendship',
-	'ur-grudge' => 'grudge',
-	'ur-add-button' => "Add as $1",
 	'ur-add-button-foe' => 'Add as foe',
 	'ur-add-button-friend' => 'Add as friend',
 	'ur-add-sent-title-foe' => 'We have sent your foe request to $1!',
@@ -74,7 +68,6 @@ If $1 confirms your request, you will receive a follow-up e-mail',
 	'ur-add-error-message-no-user' => 'The user you are trying to add does not exist.',
 	'ur-add-error-message-blocked' => 'You are currently blocked and cannot add friends or foes.',
 	'ur-add-error-message-yourself' => 'You cannot add yourself as a friend or foe.',
-	'ur-add-error-message-existing-relationship' => 'You are already $1 with $2.',
 	'ur-add-error-message-existing-relationship-foe' => 'You are already foes with $1.',
 	'ur-add-error-message-existing-relationship-friend' => 'You are already friends with $1.',
 	'ur-add-error-message-pending-request-title' => 'Patience!',
@@ -82,7 +75,6 @@ If $1 confirms your request, you will receive a follow-up e-mail',
 We will notify you when $1 confirms your request.',
 	'ur-add-error-message-pending-foe-request' => 'You have a pending foe request with $1.
 We will notify you when $1 confirms your request.',
-	'ur-add-error-message-not-loggedin' => 'You must be logged in to add a $1',
 	'ur-add-error-message-not-loggedin-foe' => 'You must be logged in to add a foe',
 	'ur-add-error-message-not-loggedin-friend' => 'You must be logged in to add a friend',
 	'ur-requests-title' => 'Relationship requests',

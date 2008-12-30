@@ -2,7 +2,10 @@
 
 class ViewSystemGifts extends SpecialPage {
 
-	function __construct(){
+	/**
+	 * Constructor
+	 */
+	public function __construct(){
 		parent::__construct('ViewSystemGifts');
 	}
 
@@ -11,38 +14,38 @@ class ViewSystemGifts extends SpecialPage {
 	 *
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
-	function execute( $par ){
-		global $wgUser, $wgOut, $wgRequest, $IP, $wgStyleVersion, $wgMemc, $wgUploadPath, $wgSystemGiftsScripts;
+	public function execute( $par ){
+		global $wgUser, $wgOut, $wgRequest, $wgMemc, $wgUploadPath, $wgSystemGiftsScripts;
 		wfLoadExtensionMessages('SystemGifts');
 
-		$wgOut->addScript("<link rel='stylesheet' type='text/css' href=\"{$wgSystemGiftsScripts}/SystemGift.css?{$wgStyleVersion}\"/>\n");
+		$wgOut->addStyle( '../..' . $wgSystemGiftsScripts . '/SystemGift.css' );
 
-		$output = "";
+		$output = '';
 		$user_name = $wgRequest->getVal('user');
-		$page =  $wgRequest->getVal('page');
+		$page = $wgRequest->getVal('page');
 
 		/**
-		* Redirect Non-logged in users to Login Page
-		* It will automatically return them to the ViewSystemGifts page
-		*/
-		if( $wgUser->getID() == 0 && $user_name == "" ){
+		 * Redirect Non-logged in users to Login Page
+		 * It will automatically return them to the ViewSystemGifts page
+		 */
+		if( $wgUser->getID() == 0 && $user_name == '' ){
 			$wgOut->setPageTitle( wfMsg('ga-error-title') );
-			$login = Title::makeTitle(NS_SPECIAL, 'UserLogin');
+			$login = SpecialPage::getTitleFor( 'UserLogin' );
 			$wgOut->redirect( $login->escapeFullURL('returnto=Special:ViewSystemGifts') );
 			return false;
 		}
 
 		/**
-		* If no user is set in the URL, we assume its the current user
-		*/			
+		 * If no user is set in the URL, we assume its the current user
+		 */
 		if( !$user_name ) $user_name = $wgUser->getName();
 		$user_id = User::idFromName($user_name);
 		$user = Title::makeTitle( NS_USER, $user_name );
 		$user_safe = urlencode($user_name);
 
 		/**
-		* Error message for username that does not exist (from URL)
-		*/			
+		 * Error message for username that does not exist (from URL)
+		 */
 		if( $user_id == 0 ){
 			$wgOut->setPageTitle( wfMsg('ga-error-title') );
 			$wgOut->addHTML( wfMsg('ga-error-message-no-user') );
@@ -57,91 +60,91 @@ class ViewSystemGifts extends SpecialPage {
 		$per_row = 2;
 
 		/**
-		* Get all Gifts for this user into the array
-		*/	
+		 * Get all Gifts for this user into the array
+		 */
 		$rel = new UserSystemGifts($user_name);
 
 		$gifts = $rel->getUserGiftList(0, $per_page, $page);
 		$total = $rel->getGiftCountByUsername($user_name); // count($relationships);
 
-		$relationship = UserRelationship::getUserRelationshipByID($user_id, $wgUser->getID());
+		$relationship = UserRelationship::getUserRelationshipByID( $user_id, $wgUser->getID() );
 
 		/**
-		* Show gift count for user
-		*/
+		 * Show gift count for user
+		 */
 
 		$output .= $wgOut->setPageTitle( wfMsg('ga-title', $rel->user_name) );
 
-		$output .= "<div class=\"back-links\">
-			".wfMsg('ga-back-link', $wgUser->getUserPage()->escapeFullURL(), $rel->user_name)."
-		</div>";
+		$output .= '<div class="back-links">
+			'.wfMsg( 'ga-back-link', $wgUser->getUserPage()->escapeFullURL(), $rel->user_name ).'
+		</div>';
 
-		$output .= "<div class=\"ga-count\">
-			".wfMsgExt('ga-count', "parsemag", $rel->user_name, $total)."
-		</div>";
+		$output .= '<div class="ga-count">
+			'.wfMsgExt( 'ga-count', 'parsemag', $rel->user_name, $total ).'
+		</div>';
 
-		//safelinks
-		$view_system_gift_link = Title::makeTitle(NS_SPECIAL, 'ViewSystemGift');
+		// Safelinks
+		$view_system_gift_link = SpecialPage::getTitleFor( 'ViewSystemGift' );
 
 		if( $gifts ) {
 			$x = 1;
 			foreach( $gifts as $gift ) {
-				$gift_image = "<img src=\"{$wgUploadPath}/awards/" . SystemGifts::getGiftImage($gift["gift_id"], "ml") . "\" border=\"0\" alt=\"\" />";
+				$gift_image = "<img src=\"{$wgUploadPath}/awards/" . SystemGifts::getGiftImage( $gift['gift_id'], 'ml' ) . "\" border=\"0\" alt=\"\" />";
 
 				$output .= "<div class=\"ga-item\">
 					{$gift_image}
-					<a href=\"".$view_system_gift_link->escapeFullURL('gift_id='.$gift["id"])."\">{$gift["gift_name"]}</a>";
+					<a href=\"".$view_system_gift_link->escapeFullURL('gift_id='.$gift['id'])."\">{$gift["gift_name"]}</a>";
 
-					if( $gift["status"] == 1 ) {
+					if( $gift['status'] == 1 ) {
 						if( $user_name == $wgUser->getName() ){
-							$rel->clearUserGiftStatus($gift["id"]);
+							$rel->clearUserGiftStatus( $gift['id'] );
 							$rel->decNewSystemGiftCount( $wgUser->getID() );
 						}
-						$output .= "<span class=\"ga-new\">".wfMsg('ga-new')."</span>";
+						$output .= '<span class="ga-new">'.wfMsg('ga-new').'</span>';
 					}
 
-					$output .= "<div class=\"cleared\"></div>
-				</div>";
-				if( $x == count($gifts) || $x != 1 && $x%$per_row == 0 ) $output .= "<div class=\"cleared\"></div>";
+					$output .= '<div class="cleared"></div>
+				</div>';
+				if( $x == count($gifts) || $x != 1 && $x%$per_row == 0 ) $output .= '<div class="cleared"></div>';
 
 				$x++;
 			}
 		}
 
 		/**
-		* Build next/prev nav
-		*/
+		 * Build next/prev nav
+		 */
 		$numofpages = $total / $per_page; 
 
-		$page_link = Title::makeTitle(NS_SPECIAL, 'ViewSystemGifts');
+		$page_link = SpecialPage::getTitleFor( 'ViewSystemGifts' );
 
 		if( $numofpages > 1 ) {
-			$output .= "<div class=\"page-nav\">";
+			$output .= '<div class="page-nav">';
 			if( $page > 1 ) { 
 				$output .= "<a href=\"".$page_link->escapeFullURL('user='.$user_name.'&rel_type='.$rel_type.'&page='.($page-1))."\">".wfMsg('ga-previous')."</a> ";
 			}
 
 			if( ($total % $per_page) != 0 ) $numofpages++;
-			if( $numofpages >=9 && $page < $total ) $numofpages=9+$page;
+			if( $numofpages >=9 && $page < $total ) $numofpages = 9+$page;
 			if( $numofpages >= ($total / $per_page) ) $numofpages = ($total / $per_page)+1;
 
 			for( $i = 1; $i <= $numofpages; $i++ ){
 				if( $i == $page ) {
-				    $output .=($i." ");
+					$output .=($i." ");
 				} else {
-				    $output .="<a href=\"".$page_link->escapeFullURL('user='.$user_name.'&rel_type='.$rel_type.'&page='.$i)."\">$i</a> ";
+					$output .= "<a href=\"".$page_link->escapeFullURL('user='.$user_name.'&rel_type='.$rel_type.'&page='.$i)."\">$i</a> ";
 				}
 			}
 
 			if( ($total - ($per_page * $page)) > 0 ){
-				$output .=" <a href=\"".$page_link->escapeFullURL('user='.$user_name.'&rel_type='.$rel_type.'&page='.($page+1))."\">".wfMsg('ga-next')."</a>";
+				$output .= " <a href=\"".$page_link->escapeFullURL('user='.$user_name.'&rel_type='.$rel_type.'&page='.($page+1))."\">".wfMsg('ga-next')."</a>";
 			}
-			$output .= "</div>";
+			$output .= '</div>';
 		}
 
 		/**
-		* Build next/prev nav
-		*/
+		 * Build next/prev nav
+		 */
 		$wgOut->addHTML($output);
 	}
 }

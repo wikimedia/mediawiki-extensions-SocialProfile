@@ -2,7 +2,10 @@
 
 class RemoveGift extends UnlistedSpecialPage {
 
-	function __construct(){
+	/**
+	 * Constructor
+	 */
+	public function __construct(){
 		parent::__construct('RemoveGift');
 	}
 
@@ -11,11 +14,11 @@ class RemoveGift extends UnlistedSpecialPage {
 	 *
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
-	function execute( $par ){
-		global $wgUser, $wgOut, $wgRequest, $IP, $wgMemc, $wgUploadPath, $wgUserGiftsScripts;
+	public function execute( $par ){
+		global $wgUser, $wgOut, $wgRequest, $wgMemc, $wgUploadPath, $wgUserGiftsScripts;
 		wfLoadExtensionMessages('UserGifts');
 
-		$wgOut->addScript("<link rel='stylesheet' type='text/css' href=\"{$wgUserGiftsScripts}/UserGifts.css?{$wgStyleVersion}\"/>\n");
+		$wgOut->addStyle( '../..' . $wgUserGiftsScripts . '/UserGifts.css' );
 
 		$this->gift_id = $wgRequest->getVal('gift_id');
 		$rel = new UserGifts( $wgUser->getName() );
@@ -32,27 +35,27 @@ class RemoveGift extends UnlistedSpecialPage {
 		}
 
 		$gift = $rel->getUserGift($this->gift_id);
-		if( $wgRequest->wasPosted() && $_SESSION["alreadysubmitted"] == false ) {
+		if( $wgRequest->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
 
-			$_SESSION["alreadysubmitted"] = true;
+			$_SESSION['alreadysubmitted'] = true;
 
-			$user_page_link = Title::makeTitle(NS_USER, $wgUser->getName());
+			$user_page_link = Title::makeTitle( NS_USER, $wgUser->getName() );
 
 			if( $rel->doesUserOwnGift($wgUser->getID(), $this->gift_id) == true ){
 				$wgMemc->delete( wfMemcKey( 'user', 'profile', 'gifts', $wgUser->getID() ) );
 				$rel->deleteGift($this->gift_id);
 			}
 
-			$gift_image = "<img src=\"{$wgUploadPath}/awards/" . Gifts::getGiftImage($gift["gift_id"], "l") . "\" border=\"0\" alt=\"\" />";
+			$gift_image = "<img src=\"{$wgUploadPath}/awards/" . Gifts::getGiftImage($gift['gift_id'], 'l') . "\" border=\"0\" alt=\"\" />";
 
-			$out .= $wgOut->setPageTitle( wfMsg('g-remove-success-title', $gift["name"]) );
+			$out .= $wgOut->setPageTitle( wfMsg( 'g-remove-success-title', $gift['name'] ) );
 			
 			$out .= "<div class=\"back-links\">
-				".wfMsg('g-back-link', $wgUser->getUserPage()->escapeFullURL(), $gift["user_name_to"])."
+				".wfMsg( 'g-back-link', $wgUser->getUserPage()->escapeFullURL(), $gift['user_name_to'] )."
 			</div>
 			<div class=\"g-container\">
 				{$gift_image}
-				".wfMsg('g-remove-success-message', $gift["name"])."
+				".wfMsg( 'g-remove-success-message', $gift['name'] )."
 				<div class=\"cleared\"></div>
 			</div>
 			<div class=\"g-buttons\">							
@@ -63,44 +66,43 @@ class RemoveGift extends UnlistedSpecialPage {
 			$wgOut->addHTML($out);
 
 		} else {
-			$_SESSION["alreadysubmitted"] = false;
+			$_SESSION['alreadysubmitted'] = false;
 			$wgOut->addHTML( $this->displayForm() );
 		}
 	}
-
 
 	function displayForm() {
 		global $wgUser, $wgOut, $wgUploadPath;
 
 		$rel = new UserGifts( $wgUser->getName() );
 		$gift = $rel->getUserGift($this->gift_id);
-		$user = Title::makeTitle( NS_USER, $gift["user_name_from"] );
-		$gift_image = "<img src=\"{$wgUploadPath}/awards/" . Gifts::getGiftImage($gift["gift_id"], "l") . "\" border=\"0\" alt=\"gift\" />";
+		$user = Title::makeTitle( NS_USER, $gift['user_name_from'] );
+		$gift_image = "<img src=\"{$wgUploadPath}/awards/" . Gifts::getGiftImage($gift['gift_id'], 'l') . "\" border=\"0\" alt=\"gift\" />";
 
-		$output =  "";
-		$output .= $wgOut->setPagetitle( wfMsg('g-remove-title', $gift["name"]));
+		$output = '';
+		$output .= $wgOut->setPagetitle( wfMsg( 'g-remove-title', $gift['name'] ) );
 		$output .= "<div class=\"back-links\">
-			".wfMsg('g-back-link', $wgUser->getUserPage()->escapeFullURL(), $gift["user_name_to"])."
+			".wfMsg( 'g-back-link', $wgUser->getUserPage()->escapeFullURL(), $gift['user_name_to'] )."
 		</div>
 		<form action=\"\" method=\"post\" enctype=\"multipart/form-data\" name=\"form1\">
 			<div class=\"g-remove-message\">
-				".wfMsg('g-remove-message', $gift["name"])."
+				".wfMsg( 'g-remove-message', $gift['name'] )."
 			</div>
 			<div class=\"g-container\">
 				{$gift_image}
 				<div class=\"g-name\">{$gift["name"]}</div>
-				<div class=\"g-from\">".wfMsg('g-from', $user->escapeFullURL(), $gift["user_name_from"])."</div>";
-				if( $gift["message"] ) {
+				<div class=\"g-from\">".wfMsg( 'g-from', $user->escapeFullURL(), $gift['user_name_from'] )."</div>";
+				if( $gift['message'] ) {
 					$output .= "<div class=\"g-user-message\">\"{$gift["message"]}\"</div>";
 				}
-			$output .= "</div>			
-			<div class=\"cleared\"></div>
-		<div class=\"g-buttons\">
-				<input type=\"hidden\" name=\"user\" value=\"" . addslashes($this->user_name_to) . "\">
-				<input type=\"button\" class=\"site-button\" value=\"".wfMsg('g-remove')."\" size=\"20\" onclick=\"document.form1.submit()\" />
-				<input type=\"button\" class=\"site-button\" value=\"".wfMsg('g-cancel')."\" size=\"20\" onclick=\"history.go(-1)\" />
+			$output .= '</div>			
+			<div class="cleared"></div>
+		<div class="g-buttons">
+				<input type="hidden" name="user" value="' . addslashes($this->user_name_to) . '">
+				<input type="button" class="site-button" value="'.wfMsg('g-remove').'" size="20" onclick="document.form1.submit()" />
+				<input type="button" class="site-button" value="'.wfMsg('g-cancel').'" size="20" onclick="history.go(-1)" />
 			</div>
-	  </form>";
+	  </form>';
 
 	  return $output;
 	}

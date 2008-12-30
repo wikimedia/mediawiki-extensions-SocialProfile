@@ -16,7 +16,6 @@ class PopulateAwards extends UnlistedSpecialPage {
 	 */
 	public function execute( $gift_category ){
 		global $wgUser, $wgOut, $wgMemc;
-		$this->setHeaders();
 
 		# If the user doesn't have the required 'awardsmanage' permission, display an error
 		if( !$wgUser->isAllowed( 'awardsmanage' ) ) {

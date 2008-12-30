@@ -83,7 +83,7 @@ class SystemGifts {
 
 	public function doesUserHaveGift( $user_id, $gift_id ){
 		$dbr = wfGetDB( DB_SLAVE );
-		$s = $dbr->selectRow( 'user_system_gift', array( 'sg_gift_id' ), array( 'sg_gift_id' => $gift_id , 'sg_user_id' => $user_id ), __METHOD__ );
+		$s = $dbr->selectRow( 'user_system_gift', array( 'sg_gift_id' ), array( 'sg_gift_id' => $gift_id, 'sg_user_id' => $user_id ), __METHOD__ );
 		if ( $s === false ) {
 			return false;
 		} else {
@@ -122,7 +122,7 @@ class SystemGifts {
 
 	public function doesGiftExistForThreshold( $category, $threshold ){
 		$dbr = wfGetDB( DB_SLAVE );
-		$s = $dbr->selectRow( 'system_gift', array( 'gift_id' ), array( 'gift_category' => $this->categories[$category] , 'gift_threshold' => $threshold  ), __METHOD__ );
+		$s = $dbr->selectRow( 'system_gift', array( 'gift_id' ), array( 'gift_category' => $this->categories[$category], 'gift_threshold' => $threshold ), __METHOD__ );
 		if ( $s === false ) {
 			return false;
 		} else {
@@ -138,12 +138,12 @@ class SystemGifts {
 		$res = $dbr->query($sql);
 		$row = $dbr->fetchObject( $res );
 		if( $row ){
-			$gift["gift_id"]= $row->gift_id;	
-			$gift["gift_name"]= $row->gift_name;	
-			$gift["gift_description"]= $row->gift_description;
-			$gift["gift_category"]= $row->gift_category;
-			$gift["gift_threshold"]= $row->gift_threshold;
-			$gift["gift_given_count"] = $row->gift_given_count;
+			$gift['gift_id']= $row->gift_id;
+			$gift['gift_name']= $row->gift_name;
+			$gift['gift_description']= $row->gift_description;
+			$gift['gift_category']= $row->gift_category;
+			$gift['gift_threshold']= $row->gift_threshold;
+			$gift['gift_given_count'] = $row->gift_given_count;
 		}
 		return $gift;
 	}
@@ -194,8 +194,8 @@ class SystemGifts {
 	static function getGiftCount(){
 		$dbr = wfGetDB( DB_SLAVE );
 		$gift_count = 0;
-		$s = $dbr->selectRow( 'system_gift', array( 'count(*) as count' ), __METHOD__ );
-		if ( $s !== false )$gift_count = $s->count;	
+		$s = $dbr->selectRow( 'system_gift', array( 'count(*) AS count' ), __METHOD__ );
+		if ( $s !== false ) $gift_count = $s->count;
 		return $gift_count;
 	}
 }

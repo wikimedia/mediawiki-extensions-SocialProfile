@@ -2,6 +2,7 @@
 /**
  * Internationalisation file for UserBoard extension.
  *
+ * @file
  * @ingroup Extensions
  */
 
@@ -67,22 +68,6 @@ Hey, want to stop getting e-mails from us?
 
 Click $4
 and change your settings to disable email notifications.'
-);
-
-/** Message documentation (Message documentation)
- * @author Jon Harald Søby
- * @author Purodha
- */
-$messages['qqq'] = array(
-	'userboard_delete' => '{{Identical|Delete}}',
-	'userboard_private' => '{{Identical|Private}}',
-	'userboard_nextpage' => '{{Identical|Next}}',
-	'userboard_prevpage' => '{{Identical|Prev}}',
-	'userboard_sendbutton' => '{{Identical|Send}}',
-	'userboard_showingmessages' => "*'''$1''' is the total count of messages
-*'''$2''' is the number of the first messages shown
-*'''$3''' is the number of the last messages shown
-*'''$4''' is the count of messages acutally shown",
 );
 
 /** Niuean (ko e vagahau Niuē)

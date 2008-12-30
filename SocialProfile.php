@@ -3,7 +3,8 @@
  * Protect against register_globals vulnerabilities.
  * This line must be present before any global variable is referenced.
  */
-if (!defined('MEDIAWIKI')) die();
+if( !defined( 'MEDIAWIKI' ) )
+	die();
 
 /**
  * This is the *main* (but certainly not the only) loader file for SocialProfile extension.
@@ -36,6 +37,7 @@ $wgAutoloadClasses['RemoveAvatar'] = $dir . 'UserProfile/SpecialRemoveAvatar.php
 $wgAutoloadClasses['UpdateEditCounts'] = $dir . 'UserStats/SpecialUpdateEditCounts.php';
 $wgAutoloadClasses['UserBoard'] = $dir . 'UserBoard/UserBoardClass.php';
 $wgAutoloadClasses['UserProfile'] = $dir . 'UserProfile/UserProfileClass.php';
+$wgAutoloadClasses['UserProfilePage'] = $dir . 'UserProfile/UserProfilePage.php';
 $wgAutoloadClasses['UserRelationship'] = $dir . 'UserRelationship/UserRelationshipClass.php';
 $wgAutoloadClasses['UserLevel'] = $dir . 'UserStats/UserStatsClass.php';
 $wgAutoloadClasses['UserStats'] = $dir . 'UserStats/UserStatsClass.php';

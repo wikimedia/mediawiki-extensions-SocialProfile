@@ -2,7 +2,10 @@
 
 class RemoveMasterGift extends UnlistedSpecialPage {
 
-	function __construct(){
+	/**
+	 * Constructor
+	 */
+	public function __construct(){
 		parent::__construct('RemoveMasterGift');
 	}
 
@@ -34,11 +37,11 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	 *
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
-	function execute( $par ){
-		global $wgUser, $wgOut, $wgRequest, $IP, $wgMemc, $wgUploadPath, $wgUserGiftsScripts;
+	public function execute( $par ){
+		global $wgUser, $wgOut, $wgRequest, $wgMemc, $wgUploadPath, $wgUserGiftsScripts;
 		wfLoadExtensionMessages('UserGifts');
 
-		$wgOut->addScript("<link rel='stylesheet' type='text/css' href=\"{$wgUserGiftsScripts}/UserGifts.css?{$wgStyleVersion}\"/>\n");
+		$wgOut->addStyle( '../..' . $wgUserGiftsScripts . '/UserGifts.css' );
 
 		if( $wgUser->isAnon() || !$this->canUserManage() ){
 			$wgOut->errorpage( 'error', 'badaccess' );
@@ -46,48 +49,47 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 		
 		$this->gift_id = $wgRequest->getVal('gift_id');
 		
-		if(!$this->gift_id || !is_numeric($this->gift_id) ){
+		if( !$this->gift_id || !is_numeric($this->gift_id) ){
 			$wgOut->setPageTitle( wfMsg('g-error-title') );
 			$wgOut->addHTML( wfMsg('g-error-message-invalid-link') );
 			return false;
 		}
 
-		if( $wgRequest->wasPosted() && $_SESSION["alreadysubmitted"] == false ) {
+		if( $wgRequest->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
 
-			$_SESSION["alreadysubmitted"] = true;
+			$_SESSION['alreadysubmitted'] = true;
 
-			$dbr = wfGetDB( DB_MASTER );
+			$dbw = wfGetDB( DB_MASTER );
 			$gift = Gifts::getGift( $this->gift_id );
 
-			$dbr->delete( 'gift',
+			$dbw->delete( 'gift',
 			array( 'gift_id' => $this->gift_id ),
 			__METHOD__ );
 
-			$dbr->delete( 'user_gift',
+			$dbw->delete( 'user_gift',
 			array( 'ug_gift_id' => $this->gift_id ),
 			__METHOD__ );
 		 
-			$this->deleteImage( $this->gift_id, "s" );
-			$this->deleteImage( $this->gift_id, "m" );
-			$this->deleteImage( $this->gift_id, "l" );
-			$this->deleteImage( $this->gift_id, "ml" );
+			$this->deleteImage( $this->gift_id, 's' );
+			$this->deleteImage( $this->gift_id, 'm' );
+			$this->deleteImage( $this->gift_id, 'l' );
+			$this->deleteImage( $this->gift_id, 'ml' );
 
-			$wgOut->setPageTitle( wfMsg('g-remove-success-title', $gift["gift_name"]) );
+			$wgOut->setPageTitle( wfMsg('g-remove-success-title', $gift['gift_name']) );
 
-			$out .= "<div class=\"back-links\">
-				<a href=\"" . Title::makeTitle(NS_SPECIAL, "GiftManager")->escapeFullURL() . "\">".wfMsg('g-viewgiftlist')."</a>
+			$out .= '<div class="back-links">
+				<a href="' . SpecialPage::getTitleFor( 'GiftManager' )->escapeFullURL() . '">'.wfMsg('g-viewgiftlist').'</a>
 			</div>
-			<div class=\"g-container\">
-				".wfMsg('g-remove-success-message', $gift["gift_name"])."<p>
-				<div class=\"cleared\"></div>
-			</div>
-			";
+			<div class="g-container">
+				'.wfMsg( 'g-remove-success-message', $gift['gift_name'] ).'<p>
+				<div class="cleared"></div>
+			</div>';
 
 			$wgOut->addHTML($out);
 
 		} else {
 
-			$_SESSION["alreadysubmitted"] = false;
+			$_SESSION['alreadysubmitted'] = false;
 			$wgOut->addHTML( $this->displayForm() );
 
 		}
@@ -98,16 +100,16 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 
 		$gift = Gifts::getGift( $this->gift_id );
 
-		$gift_image = "<img src=\"{$wgUploadPath}/awards/" . Gifts::getGiftImage($this->gift_id, "l") . "\" border=\"0\" alt=\"gift\" />";
+		$gift_image = "<img src=\"{$wgUploadPath}/awards/" . Gifts::getGiftImage($this->gift_id, 'l') . "\" border=\"0\" alt=\"gift\" />";
 
-		$output = "";
-		$output .= $wgOut->setPagetitle( wfMsg('g-remove-title', $gift["gift_name"]));
+		$output = '';
+		$output .= $wgOut->setPagetitle( wfMsg( 'g-remove-title', $gift['gift_name'] ) );
 		$output .= "<div class=\"back-links\">
-			<a href=\"" . Title::makeTitle(NS_SPECIAL, "GiftManager")->escapeFullURL() . "\">".wfMsg('g-viewgiftlist')."</a>
+			<a href=\"" . SpecialPage::getTitleFor( 'GiftManager' )->escapeFullURL() . "\">".wfMsg('g-viewgiftlist')."</a>
 		</div>
 		<form action=\"\" method=\"post\" enctype=\"multipart/form-data\" name=\"form1\">
 			<div class=\"g-remove-message\">
-				".wfMsg('g-delete-message', $gift["gift_name"])."
+				".wfMsg('g-delete-message', $gift['gift_name'])."
 			</div>
 			<div class=\"g-container\">
 				{$gift_image}
