@@ -225,6 +225,7 @@ $messages['cs'] = array(
 /** German (Deutsch)
  * @author MF-Warburg
  * @author Melancholie
+ * @author Purodha
  * @author Revolus
  */
 $messages['de'] = array(
@@ -232,6 +233,8 @@ $messages['de'] = array(
 	'user-stats-weekly-title' => 'Am meisten Punkte diese Woche',
 	'user-stats-monthly-title' => 'Am meisten Punkte diesen Monat',
 	'topusers' => 'Top-Benutzer',
+	'top-fans-by-points-nav-header' => 'Top-Fans',
+	'top-fans-by-category-nav-header' => 'Top-per-Kategorie',
 	'top-fans-total-points-link' => 'Gesamtpunktzahl',
 	'top-fans-weekly-points-link' => 'Punkte diese Woche',
 	'top-fans-monthly-points-link' => 'Punkte diesen Monat',

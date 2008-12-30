@@ -340,6 +340,13 @@ $messages['szl'] = array(
 	'yui-desc' => 'Zestow werkcojgůw a kůntrolnych ylymyntůw naszkryflanych we JavaScripćy',
 );
 
+/** Tamil (தமிழ்)
+ * @author அருட்செல்வன்
+ */
+$messages['ta'] = array(
+	'yui-desc' => 'ஜாவாஸ்க்ரிப்ட்டில் எழுதப்பட்ட பயன்பாடுகள் மற்றும் கட்டுப்பாடுகளின் தொகுதி',
+);
+
 /** Tajik (Cyrillic) (Тоҷикӣ (Cyrillic))
  * @author Ibrahim
  */

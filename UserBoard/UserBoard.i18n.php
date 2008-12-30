@@ -841,7 +841,7 @@ Clicca <a href="index.php?title=Special:UserLogin">hic pro aperir un session</a>
 	'userboard_nomessages' => 'Nulle message.',
 	'userboard_sendbutton' => 'inviar',
 	'userboard_loggedout' => 'Tu debe <a href="$1">aperir un session</a> pro poter inviar messages a altere usatores.',
-	'userboard_showingmessages' => 'Presentation de $2-$3 de $1 {{PLURAL:$1|message|messages}}',
+	'userboard_showingmessages' => 'Presentation del {{PLURAL:$4|message $3|messages $2-$3}} de $1 {{PLURAL:$1|message|messages}}',
 	'message_received_subject' => '$1 scribeva in tu tabuliero in {{SITENAME}}',
 	'message_received_body' => 'Salute $1,
 
@@ -1243,7 +1243,7 @@ Gå <a href="index.php?title=Special:UserLogin">her for å logga inn</a>',
 	'userboard_board-to-board' => 'Brukardiskusjon',
 	'userboard_delete' => 'Slett',
 	'userboard_noexist' => 'Brukaren du freistar å sjå finst ikkje.',
-	'userboard_yourboard' => 'Di diskusjonssida',
+	'userboard_yourboard' => 'Diskusjonssida di',
 	'userboard_owner' => 'Diskusjonssida til $1',
 	'userboard_yourboardwith' => 'Den delte diskusjonssida di med $1',
 	'userboard_otherboardwith' => 'Delt diskusjonssida mellom $1 og $2',
@@ -1268,7 +1268,7 @@ Gå <a href="index.php?title=Special:UserLogin">her for å logga inn</a>',
 
 $2 har skrive på diskusjonssida di på {{SITENAME}}.
 
-Følg lenkkja nedanfor for å sjå diskusjonssida di.
+Følg lekkja nedanfor for å sjå diskusjonssida di.
 
 $3
 
@@ -1592,7 +1592,7 @@ $messages['ru'] = array(
 	'userboard_nomessages' => 'Нет сообщений.',
 	'userboard_sendbutton' => 'отправить',
 	'userboard_loggedout' => 'Вы должны быть <a href="$1">представлены системе</a>, чтобы отправлять сообщения другим участникам.',
-	'userboard_showingmessages' => 'Отображение $2-$3 из {{PLURAL:$1|$1 сообщения|$1 сообщений|$1 сообщений}}',
+	'userboard_showingmessages' => 'Отображение {{PLURAL:$4|сообщения $3|сообщений $2—$3}} из $1',
 	'message_received_subject' => '$1 написал(а) на вашу доску на сайте {{SITENAME}}',
 	'message_received_body' => 'Привет, $1:
 
