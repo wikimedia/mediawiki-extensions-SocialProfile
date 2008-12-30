@@ -378,9 +378,9 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 				</script>";
 		 	$form .= "<select name=\"location_country\" id=\"location_country\" onChange=\"displaySection('location_state',this.value,'')\"><option></option>";
 
-		for( $i = 0; $i < count($countries); $i++ ) {
-			$form .= "<option value=\"{$countries[$i]}\"" . ( ( $countries[$i] == $location_country ) ? ' selected="selected"' : '' ) . ">";
-			$form .= $countries[$i] . "</option>\n";
+		foreach( $countries as $country ) {
+			$form .= "<option value=\"{$country}\"" . ( ( $country == $location_country ) ? ' selected="selected"' : '' ) . ">";
+			$form .= $country . "</option>\n";
 		}
 
 		$form .= '</select>';
@@ -403,9 +403,9 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			</script>";
 		$form .= "<select name=\"hometown_country\" id=\"hometown_country\" onChange=\"displaySection('hometown_state',this.value,'')\"><option></option>";
 
-		for( $i = 0; $i < count($countries); $i++ ) {
-			$form .= "<option value=\"{$countries[$i]}\"" . ( ( $countries[$i] == $hometown_country ) ? ' selected="selected"' : '' ) . ">";
-			$form .= $countries[$i] . "</option>";
+		foreach( $countries as $country ) {
+			$form .= "<option value=\"{$country}\"" . ( ( $country == $hometown_country ) ? ' selected="selected"' : '' ) . ">";
+			$form .= $country . "</option>";
 		}
 
 		$form .= '</select>';
