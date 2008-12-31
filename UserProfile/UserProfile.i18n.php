@@ -525,6 +525,8 @@ $messages['am'] = array(
 	'other-no-info' => 'ሌላ መረጃ የለም',
 	'user-personal-info-schools' => 'ትምህርት ቤቶች',
 	'user-personal-info-about-me' => 'ስለ እኔ',
+	'user-profile-personal-name' => 'ስም',
+	'user-profile-personal-email' => 'ኢ-ሜል',
 	'user-profile-personal-city' => 'ከተማ',
 	'user-profile-personal-country' => 'ሀገር',
 	'user-profile-personal-aboutme' => 'ስለ እኔ',
@@ -3330,6 +3332,7 @@ $messages['lb'] = array(
 	'other-info-music' => 'Musek',
 	'other-info-books' => 'Bicher',
 	'other-info-video-games' => 'Videospiller',
+	'other-info-magazines' => 'Zäitschrëften',
 	'other-info-snacks' => 'Snacken',
 	'other-info-drinks' => 'Gedrénks',
 	'other-no-info' => 'Keng aner Informatioun',
@@ -5731,6 +5734,7 @@ $messages['te'] = array(
  */
 $messages['tet'] = array(
 	'user-watchlist' => "Ha'u-nia lista hateke",
+	'other-info-music' => 'Múzika',
 	'other-info-books' => 'Livru sira',
 	'user-personal-info-about-me' => "Kona-ba ha'u",
 	'user-profile-section-preferences' => 'Preferénsia',
@@ -5739,6 +5743,7 @@ $messages['tet'] = array(
 	'user-profile-personal-city' => 'Sidade',
 	'user-profile-personal-birthdate' => 'Tempu (FF/LL)',
 	'user-profile-personal-aboutme' => "Kona-ba ha'u",
+	'user-profile-interests-music' => 'Múzika',
 	'user-profile-interests-books' => 'Livru sira',
 );
 

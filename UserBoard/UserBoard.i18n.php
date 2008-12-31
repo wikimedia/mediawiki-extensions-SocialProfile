@@ -1763,6 +1763,7 @@ $messages['te'] = array(
  */
 $messages['tet'] = array(
 	'userboard_delete' => 'Halakon',
+	'userboard_nextpage' => 'oinmai',
 );
 
 /** Tajik (Cyrillic) (Тоҷикӣ (Cyrillic))

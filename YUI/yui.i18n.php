@@ -48,6 +48,13 @@ $messages['ast'] = array(
 	'yui-desc' => "Un conxuntu d'utilidaes y controles escritos en JavaScript",
 );
 
+/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+ * @author EugeneZelenko
+ */
+$messages['be-tarask'] = array(
+	'yui-desc' => 'Набор інструмэнтаў і кіруючых элемэнтаў, напісаных на JavaScript',
+);
+
 /** Bulgarian (Български)
  * @author DCLXVI
  */

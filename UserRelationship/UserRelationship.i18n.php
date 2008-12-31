@@ -4241,6 +4241,15 @@ $messages['te'] = array(
 	'friend_request_subject' => '{{SITENAME}}లో $1 మిమ్మల్ని స్నేహితునిగా చేర్చుకున్నారు!',
 );
 
+/** Tetum (Tetun)
+ * @author MF-Warburg
+ */
+$messages['tet'] = array(
+	'ur-main-page' => 'Pájina Mahuluk',
+	'ur-next' => 'oinmai',
+	'ur-cancel' => 'Para',
+);
+
 /** Tajik (Cyrillic) (Тоҷикӣ (Cyrillic))
  * @author Ibrahim
  */
@@ -4361,6 +4370,179 @@ $2 шуморо ҳамчун душмани худ дар  {{SITENAME}} пок �
 
 $4-ро клик кунед
 ва тарҷиҳоти худро бо ғайрифаъол кардани огоҳсозии тариқи почтаи электронӣ тағйир диҳед.',
+);
+
+/** Tagalog (Tagalog)
+ * @author AnakngAraw
+ */
+$messages['tl'] = array(
+	'viewrelationships' => 'Tanawin ang pagkakaugnayan',
+	'viewrelationshiprequests' => 'Tingnan ang mga kahilingan sa pagkakaugnayan',
+	'ur-already-submitted' => 'Ipinadala na ang kahilingan mo',
+	'ur-error-page-title' => 'Ay!',
+	'ur-error-title' => 'Ay naku, nagkamali ka sa pagliko!',
+	'ur-error-message-no-user' => 'Hindi namin mabubuo ang kahilingan mo, dahil walang tagagamit na may ganitong pangalan.',
+	'ur-main-page' => 'Pangunahing pahina',
+	'ur-your-profile' => 'Talaang pangkatangian ng sarili mo',
+	'ur-backlink' => '&lt; Magbalik sa talaang pangkatangian ni $1',
+	'ur-relationship-count-foes' => 'Si $1 ay mayroong $2 {{PLURAL:$2|katunggali|mga katunggali}}. Nais mo ba magkaroon ng mas marami pang mga katunggali? <a href="$3">Anyayahan sila.</a>',
+	'ur-relationship-count-friends' => 'Si $1 ay mayroong $2 {{PLURAL:$2|kaibigan|mga kaibigan}}. Nais mo bang magkaroon ng mas marami pang mga kaibigan? <a href="$3">Anyayahan sila.</a>',
+	'ur-add-friends' => '  Nais mo bang magkaroon ng mas marami pang mga kaibigan? <a href="$1">Anyayahan sila</a>',
+	'ur-add-friend' => 'Idagdag bilang kaibigan',
+	'ur-add-foe' => 'Idagdag bilang katunggali',
+	'ur-add-no-user' => 'Walang napiling tagagamit.
+Humiling lamang ng mga kaibigan/mga katunggali sa pamamagitan ng tamang kawing.',
+	'ur-add-personal-message' => 'Magdagdag ng isang mensaheng pansarili',
+	'ur-remove-relationship-friend' => 'Tanggalin bilang kaibigan',
+	'ur-remove-relationship-foe' => 'Tanggalin bilang katunggali',
+	'ur-give-gift' => 'Magbigay ng isang handog',
+	'ur-previous' => 'sinundan',
+	'ur-next' => 'susunod',
+	'ur-remove-relationship-title-foe' => 'Nais mo bang tanggalin si $1 bilang katunggali mo?',
+	'ur-remove-relationship-title-confirm-foe' => 'Tinanggal mo si $1 bilang katunggali mo',
+	'ur-remove-relationship-title-friend' => 'Nais mo bang tanggalin si $1 bilang kaibigan mo?',
+	'ur-remove-relationship-title-confirm-friend' => 'Tinanggal mo si $1 bilang kaibigan mo',
+	'ur-remove-relationship-message-foe' => 'Hiniling mong tanggalin si $1 bilang katunggali mo, pindutin ang "$2" upang tiyakin.',
+	'ur-remove-relationship-message-confirm-foe' => 'Matagumpay mong natanggal si $1 bilang katunggali mo.',
+	'ur-remove-relationship-message-friend' => 'Hiniling mong tanggalin si $1 bilang kaibigan mo, pindutin ang "$2" upang tiyakin.',
+	'ur-remove-relationship-message-confirm-friend' => 'Matagumpay mong natanggal si $1 bilang kaibigan mo.',
+	'ur-remove-error-message-no-relationship' => 'Wala kang isang pakikipagugnayan kay $1.',
+	'ur-remove-error-message-remove-yourself' => 'Hindi mo matatanggal ang sarili mo.',
+	'ur-remove-error-message-pending-foe-request' => 'Mayroon kang isang naghihintay na kahilingang pangkatunggali kay $1.',
+	'ur-remove-error-message-pending-friend-request' => 'Mayroon kang isang naghihintay na kahilingang pangpagkakaibigan kay $1.',
+	'ur-remove-error-not-loggedin-foe' => 'Kinakailangan mong lumagda muna upang makapagtanggal ng isang katunggali.',
+	'ur-remove-error-not-loggedin-friend' => 'Kinakailangan mong lumagda muna upang makapagtanggal ng isang kaibigan.',
+	'ur-remove' => 'Tanggalin',
+	'ur-cancel' => 'Huwag ituloy',
+	'ur-login' => 'Lumagda',
+	'ur-add-title-foe' => 'Nais mo bang idagdag si $1 bilang katunggali mo?',
+	'ur-add-title-friend' => 'Nais mo bang idagdag si $1 bilang kaibigan mo?',
+	'ur-add-message-foe' => 'Idaragdag mo na si $1 bilang katunggali mo.
+Magpapadala kami ng pabatid kay $1 upang matiyak ang pagtatampo/hinanakit mo.',
+	'ur-add-message-friend' => 'Idaragdag mo na si $1 bilang kaibigan. Magpapadala kami ng pabatid kay $1 upang matiyak ang pagkakaibigan (pagiging magkaibigan) ninyo.',
+	'ur-add-button-foe' => 'Idagdag bilang katunggali',
+	'ur-add-button-friend' => 'Idagdag bilang kaibigan',
+	'ur-add-sent-title-foe' => 'Ipinadala na namin kay $1 ang kahilingan mong pangpagtutunggali!',
+	'ur-add-sent-title-friend' => 'Ipinadala na namin kay $1 ang kahilingan mong pangpagkakaibigan!',
+	'ur-add-sent-message-foe' => 'Ipinadala na kay $1 ang kahilangan mong pangkatunggali upang matiyak.
+Kapag tiniyak na ni $1 ang kahilingan mo, makakatanggap ka ng isang patugaygay/pasunod na e-liham.',
+	'ur-add-sent-message-friend' => 'Ipinadala na kay $1 ang kahilangan mong pangpagkakaibigan upang matiyak.
+Kapag tiniyak na ni $1 ang kahilingan mo, makakatanggap ka ng isang patugaygay/pasunod na e-liham.',
+	'ur-add-error-message-no-user' => 'Hindi umiiral ang tagagamit na sinusubok mong idagdag.',
+	'ur-add-error-message-blocked' => 'Pangkasalukuyan kang hinahadlangan at hindi makapagdaragdag ng mga kaibigan o mga katunggali.',
+	'ur-add-error-message-yourself' => 'Hindi mo maidaragdag ang iyong sarili bilang isang kaibigan o katunggali.',
+	'ur-add-error-message-existing-relationship-foe' => 'Katunggali mo na si $1.',
+	'ur-add-error-message-existing-relationship-friend' => 'Kaibigan mo na si $1.',
+	'ur-add-error-message-pending-request-title' => 'Magtiyaga!',
+	'ur-add-error-message-pending-friend-request' => 'Mayroon kang isang naghihintay na kahilingan ng pakikipagkaibigan kay $1.
+Padadalhan ka namin ng pabatid kapat tiniyak na ni $1 ang kahilingan mo.',
+	'ur-add-error-message-pending-foe-request' => 'Mayroon kang isang naghihintay na kahilingan ng pagiging katunggali ni $1.
+Padadalhan ka namin ng pabatid kapat tiniyak na ni $1 ang kahilingan mo.',
+	'ur-add-error-message-not-loggedin-foe' => 'Kinakailangan mong lumagda muna upang makapagdagdag ng isang katunggali',
+	'ur-add-error-message-not-loggedin-friend' => 'Kinakailangan mong lumagda muna upang makapagdagdag ng isang kaibigan',
+	'ur-requests-title' => 'Mga kahilingan sa pakikipagkaugnayan',
+	'ur-requests-message-foe' => 'Nais ni <a href="$1">$2</a> na maing katunggali mo.',
+	'ur-requests-message-friend' => 'Nais ni <a href="$1">$2</a> na maging kaibigan mo.',
+	'ur-accept' => 'Tanggapin',
+	'ur-reject' => 'Tanggihan',
+	'ur-no-requests-message' => 'Wala kang mga kahilingang pangpakikipagkaibigan at pangpakikipagkatunggali/
+Kung nais mong magkaroon ng mas marami pang mga kaibigan, <a href="$1">anyayahan sila!</a>',
+	'ur-requests-added-message-foe' => 'Idinagdag mo si $1 bilang kaibigan mo.',
+	'ur-requests-added-message-friend' => 'Idinagdag mo si $1 bilang kaibigan mo.',
+	'ur-requests-reject-message-friend' => 'Tinanggihan mo si $1 bilang kaibigan mo.',
+	'ur-requests-reject-message-foe' => 'Tinanggihan mo si $1 bilang katunggali mo.',
+	'ur-title-foe' => 'Talaan ng mga katunggali ni $1',
+	'ur-title-friend' => 'Talaan ng mga kaibigan ni $1',
+	'friend_request_subject' => 'Idinagdag ka ni $1 bilang isang kaibigan sa {{SITENAME}}!',
+	'friend_request_body' => 'Kumusta ka $1:
+
+Idinagdag ka ni $2 bilang isang kaibigan sa {{SITENAME}}.  Ibig naming matiyak kung talagang magkaibigan kayong dalawa.
+
+Pakipindot ang kawing na ito upang mapatotohanan ang inyong pagiging magkaibigan:
+$3
+
+Salamat
+
+---
+
+Hoy, nais mo bang matigil ang pagtanggap ng mga e-liham mula sa amin?
+
+Pindutin ang $4
+at baguhin ang mga katakdaan mo upang huwag gumana/umandar ang mga pagpapabatid na pang-e-liham.',
+	'foe_request_subject' => 'Digmaan na! Idinagdag ka na ni $1 bilang isang katunggali sa {{SITENAME}}!',
+	'foe_request_body' => 'Kumusta ka $1:
+
+Katatala lamang sa iyo ni $2 bilang isang katunggali sa {{SITENAME}}.  Ibig naming matiyak kung  talagang mahigpit na magkatunggali nga kayong dalawa o nagkakaroon lamang ng isang pagtatalo.
+
+Pakipindot ang kawing na ito upang mapatotohanan ang tagisang pangtampuhan:
+$3
+
+Salamat
+
+---
+
+Hoy, nais mo bang matigil ang pagtanggap ng mga e-liham mula sa amin?
+
+Pindutin ang $4
+at baguhin ang mga katakdaan mo upang huwag gumana/umandar ang mga pagpapabatid na pang-e-liham.',
+	'friend_accept_subject' => 'Tinanggap na ni $1 ang kahilingan mong maging kaibigan sa {{SITENAME}}!',
+	'friend_accept_body' => 'Kumusta ka $1:
+
+Tinanggap ka na ni $2 ang kahilingan mong pangkaibigan sa {{SITENAME}}!  
+
+Tanawin ang pahina ni $2 sa $3
+
+Salamat
+
+---
+
+Hoy, nais mo bang matigil ang pagtanggap ng mga e-liham mula sa amin?
+
+Pindutin ang $4
+at baguhin ang mga katakdaan mo upang huwag gumana/umandar ang mga pagpapabatid na pang-e-liham.',
+	'foe_accept_subject' => 'Naganap na! Tinanggap na ni $1 ang kahilingan mong maging katunggali sa {{SITENAME}}!',
+	'foe_accept_body' => 'Kumusta ka $1:
+
+Tinanggap ka na ni $2 ang kahilingan mong pangkatunggali sa {{SITENAME}}!  
+
+Tanawin ang pahina ni $2 sa $3
+
+Salamat
+
+---
+
+Hoy, nais mo bang matigil ang pagtanggap ng mga e-liham mula sa amin?
+
+Pindutin ang $4
+at baguhin ang mga katakdaan mo upang huwag gumana/umandar ang mga pagpapabatid na pang-e-liham.',
+	'friend_removed_subject' => 'Naku po! Tinanggal ka na ni $1 bilang isang kaibigan sa {{SITENAME}}!',
+	'friend_removed_body' => 'Kumusta ka $1:
+
+Tinanggal ka ni $2 bilang isang kaibigan sa {{SITENAME}}!  
+
+Salamat
+
+---
+
+Hoy, nais mo bang matigil ang pagtanggap ng mga e-liham mula sa amin?
+
+Pindutin ang $4
+at baguhin ang mga katakdaan mo upang huwag gumana/umandar ang mga pagpapabatid na pang-e-liham.',
+	'foe_removed_subject' => 'Hay salamat! Tinanggal ka na ni $1 bilang isang katunggali sa {{SITENAME}}!',
+	'foe_removed_body' => 'Kumusta ka $1:
+
+Tinanggal ka na ni $2 bilang isang katunggali sa {{SITENAME}}!  
+
+Maaaring kayong dalawa ay nagiging magkaibigan na?
+
+Salamat
+
+---
+
+Hoy, nais mo bang matigil ang pagtanggap ng mga e-liham mula sa amin?
+
+Pindutin ang $4
+at baguhin ang mga katakdaan mo upang huwag gumana/umandar ang mga pagpapabatid na pang-e-liham.',
 );
 
 /** Turkish (Türkçe)
