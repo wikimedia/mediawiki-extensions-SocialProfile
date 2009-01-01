@@ -1267,6 +1267,55 @@ $3 ని నొక్కి
 ఈ-మెయిలు గమనింపులని అచేతనం చేసుకునేందుకు అమరికలని మార్చుకోండి.',
 );
 
+/** Tagalog (Tagalog)
+ * @author AnakngAraw
+ */
+$messages['tl'] = array(
+	'user-stats-alltime-title' => 'Pinakamaraming mga puntos sa lahat ng mga panahon',
+	'user-stats-weekly-title' => 'Pinakamaraming mga puntos sa linggong ito',
+	'user-stats-monthly-title' => 'Pinakamaraming mga puntos sa buwang ito',
+	'topusers' => 'Nangungunang mga tagagamit',
+	'top-fans-by-points-nav-header' => 'Nangungunang mga tagahanga',
+	'top-fans-by-category-nav-header' => 'Nangunguna ayon sa kaurian',
+	'top-fans-total-points-link' => 'Kabuoang mga puntos',
+	'top-fans-weekly-points-link' => 'Mga puntos sa linggong ito',
+	'top-fans-monthly-points-link' => 'Mga puntos sa buwang ito',
+	'top-fans-points' => 'mga puntos',
+	'top-fans-by-category-title' => 'Nangunguna sa pangkalahatan $1',
+	'top-fans-bad-field-title' => 'Ay!',
+	'top-fans-bad-field-message' => 'Hindi umiiral ang tinukoy na estadistika.',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Boto|Mga boto}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Buwanang pagwawagi|Buwanang mga pagwawagi}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Lingguhang pagwawagi|Lingguhang mga pagwawagi}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Pagbabago|Mga pagbabago}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Kumento|Mga kumento}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Pagsangguni|Mga pagsangguni}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Kaibigan|Mga kaibigan}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Katunggali|Mga katunggali}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Nalathalang pananaw|Nalathalang mga pananaw}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Pananaw|Mga pananaw}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Pagtaas ng hinlalaki|Pagtataas ng mga hinlalaki}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Pagbaba ng mga hinlalagi|Pagbababa ng mga hinlalaki}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Ibinigay na pagtaas ng hinlalaki|Ibinigay na mga pagtataas ng mga hinlalaki}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Ibinigay na pagbaba ng hinlalaki|Ibinigay na mga pagbababa ng mga hinlalaki}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Natanggap na handog|Natanggap na mga handog}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Naipadalang handog|Naipadalang mga handog}}',
+	'level-advance-subject' => 'Isa ka na ngayong "$1" sa {{SITENAME}}!',
+	'level-advance-body' => 'Kumusta ka $1:
+
+Isa ka na ngayong "$2" sa {{SITENAME}}!
+
+Maligayang bati,
+
+Ang Pangkat {{SITENAME}}
+
+---
+Hoy, nais mo bang matigil ang pagtanggap ng mga e-liham mula sa amin?
+
+Pindutin ang $3
+at baguhin ang mga pagtatakda mo upang huwag nang paganahin ang mga pagpapabatid sa pamamagitan ng e-liham.',
+);
+
 /** Volapük (Volapük)
  * @author Malafaya
  */

@@ -144,7 +144,7 @@ $messages['ar'] = array(
 	'userboard_nomessages' => 'لا رسائل.',
 	'userboard_sendbutton' => 'إرسال',
 	'userboard_loggedout' => 'أنت يجب أن تكون <a href="$1">مسجل الدخول</a> لترسل رسائل إلى المستخدمين الآخرين.',
-	'userboard_showingmessages' => 'عرض $2-$3 من {{PLURAL:$1|$1 رسالة|$1 رسالة}}',
+	'userboard_showingmessages' => 'عرض {{PLURAL:$4|الرسالة $3|الرسائل $2-$3}} من {{PLURAL:$1|$1 رسالة|$1 رسالة}}',
 	'message_received_subject' => '$1 كتب على مجلسك في {{SITENAME}}',
 	'message_received_body' => 'مرحبا $1:
 
@@ -758,7 +758,7 @@ $messages['he'] = array(
 	'userboard_nomessages' => 'אין הודעות.',
 	'userboard_sendbutton' => 'שליחה',
 	'userboard_loggedout' => 'עליכם <a href="$1">לבצע כניסה לחשבון</a> כדי לשלוח הודעות למשתמשים אחרים.',
-	'userboard_showingmessages' => 'הצגת $2-$3 מתוך {{PLURAL:$1|הודעה אחת|$1 הודעות}}',
+	'userboard_showingmessages' => 'הצגת {{PLURAL:$4|הודעה $3|$2-$3 הודעות}} מתוך {{PLURAL:$1|הודעה אחת|$1 הודעות}}',
 	'message_received_subject' => '$1 כתב בלוח שלך ב{{grammar:תחילית|{{SITENAME}}}}',
 	'message_received_body' => 'היי $1:
 
@@ -1791,6 +1791,68 @@ $messages['tg-cyrl'] = array(
 	'userboard_prevpage' => 'қаблӣ',
 	'userboard_nomessages' => 'Пайғоме нест.',
 	'userboard_sendbutton' => 'фирист',
+);
+
+/** Tagalog (Tagalog)
+ * @author AnakngAraw
+ */
+$messages['tl'] = array(
+	'boardblastlogintitle' => 'Dapat na nakalagda ka muna upang makapagpadala ng mga pitadang pampisara',
+	'boardblastlogintext' => 'Dapat na nakalagda ka muna upang makapagpadala ng mga pitadang pampisara.
+Pindutin <a href="index.php?title=Special:UserLogin">dito upang makalagda</a>',
+	'messagesenttitle' => 'Naipadala na ang mga mensahe',
+	'boardblasttitle' => 'Ipadala ang pitadang pampisara',
+	'boardblaststep1' => 'Hakbang 1 - Isulat ang mensahe mo',
+	'boardblastprivatenote' => 'Ipapadala ang lahat ng mga mensahe bilang pansarili/pribadong mga mensahe',
+	'boardblaststep2' => 'Hakbang 2 - Piliin kung kanino mo nais na ipadala ang mensahe mo',
+	'boardlinkselectall' => 'Piliin lahat',
+	'boardlinkunselectall' => 'Tanggalin sa pagkakapili ang lahat',
+	'boardlinkselectfriends' => 'Pumili ng mga kaibigan',
+	'boardlinkunselectfriends' => 'Tanggalin sa pagkakapili ang mga kaibigan',
+	'boardlinkselectfoes' => 'Pumili ng mga katunggali',
+	'boardlinkunselectfoes' => 'Tanggalin sa pagkakapili ang mga katunggali',
+	'boardsendbutton' => 'Ipadala ang pitadang pampisara',
+	'boardnofriends' => 'Walang kang mga kaibigang mapapadalhan ng isang mensahe!',
+	'messagesentsuccess' => 'Matagumpay na naipadala ang mensahe mo',
+	'userboard' => 'Pisara ng tagagamit',
+	'userboard_board-to-board' => 'Pisara-sa-pisara',
+	'userboard_delete' => 'Burahin',
+	'userboard_noexist' => 'Hindi umiiral ang tagagamit na sinusubok mong tingnan.',
+	'userboard_yourboard' => 'Pisara mo',
+	'userboard_owner' => 'Pisara ni $1',
+	'userboard_yourboardwith' => 'Ang pisara-sa-pisara mo kay $1',
+	'userboard_otherboardwith' => 'Ang pisara-sa-pisara ni $1 kay $2',
+	'userboard_backprofile' => 'Bumalik sa talaang pangkatangian ni $1',
+	'userboard_backyourprofile' => 'Magbalik sa iyong talaang pangkatangian',
+	'userboard_boardtoboard' => 'Pisara-sa-pisara',
+	'userboard_confirmdelete' => 'Nakatitiyak ka bang nais mong burahin ang mensaheng ito?',
+	'userboard_sendmessage' => 'Magpadala ng isang mensahe kay $1',
+	'userboard_myboard' => 'Pisara ko',
+	'userboard_posted_ago' => 'itinala/pinaskil noong $1 na ang nakalilipas',
+	'userboard_private' => 'pansarili (pribado)',
+	'userboard_public' => 'pangmadla (publiko)',
+	'userboard_messagetype' => 'Uri ng mensahe',
+	'userboard_nextpage' => 'susunod',
+	'userboard_prevpage' => 'sinundan',
+	'userboard_nomessages' => 'Walang mga mensahe.',
+	'userboard_sendbutton' => 'Ipadala',
+	'userboard_loggedout' => 'Dapat na <a href="$1">nakalagda</a>  ka muna upang makapagtala/makapagpaskil ng mga mensahe sa iba pang mga tagagamit.',
+	'userboard_showingmessages' => 'Nagpapakita ng {{PLURAL:$4|mensaheng $3|mga mensaheng $2-$3}} ng {{PLURAL:$1|$1 mensahe|$1 mga mensahe}}',
+	'message_received_subject' => 'Sumulat si $1 sa iyong pisarang nasa {{SITENAME}}',
+	'message_received_body' => 'Kumusta ka $1:
+
+Katatapos lamang magsulat ni $2 sa iyong pisarang nasa {{SITENAME}}!
+
+Pindutin sa ibaba upang matanaw na ang pisara mo!
+
+$3
+
+---
+
+Hoy, nais mo bang tumigil na ang pagtanggap mo ng mga e-liham mula sa amin?
+
+Pindutin ang $4
+at baguhin ang mga katakdaan upang huwag nang paganahin ang pagpapabatid na pang-e-liham.',
 );
 
 /** Turkish (Türkçe)

@@ -15,9 +15,10 @@ $messages['en'] = array(
 
 /** Message documentation (Message documentation)
  * @author Purodha
+ * @author Siebrand
  */
 $messages['qqq'] = array(
-	'yui-desc' => 'Short description of the Yui extension, shown in [[Special:Version]]. Do not translate or change links.',
+	'yui-desc' => 'Short description of the Yui extension, shown in [[Special:Version]].{{doc-important|Do not translate or change links.}}',
 );
 
 /** Afrikaans (Afrikaans)
