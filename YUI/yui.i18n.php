@@ -183,6 +183,13 @@ $messages['is'] = array(
 	'yui-desc' => 'Sett af hjálparforritum og stjórntækjum, skrifum í JavaScript',
 );
 
+/** Italian (Italiano)
+ * @author Xpensive
+ */
+$messages['it'] = array(
+	'yui-desc' => 'Un set di utilità e controlli, scritto in Javascript',
+);
+
 /** Japanese (日本語)
  * @author Aotake
  */

@@ -424,6 +424,7 @@ $2 أزالك كعدو في {{SITENAME}}!
 );
 
 /** Egyptian Spoken Arabic (مصرى)
+ * @author Ghaly
  * @author Meno25
  */
 $messages['arz'] = array(
@@ -436,8 +437,6 @@ $messages['arz'] = array(
 	'ur-main-page' => 'الصفحة الرئيسية',
 	'ur-your-profile' => 'ملفك',
 	'ur-backlink' => '&lt; رجوع إلى ملف $1',
-	'ur-friend' => 'صديق',
-	'ur-foe' => 'عدو',
 	'ur-relationship-count-foes' => '$1 لديه $2 {{PLURAL:$2|عدو|عدو}}. تريد المزيد من الأعداء؟ <a href="$3">ادعهم.</a>',
 	'ur-relationship-count-friends' => '$1 لديه $2 {{PLURAL:$2|صديق|صديق}}. تريد المزيد من الأصدقاء؟ <a href="$3">ادعهم.</a>',
 	'ur-add-friends' => '  تريد المزيد من الأصدقاء؟ <a href="$1">أدعهم</a>',
@@ -461,10 +460,8 @@ $messages['arz'] = array(
 	'ur-remove-relationship-message-confirm-friend' => 'أنت أزلت بنجاح $1 كصديقك.',
 	'ur-remove-error-message-no-relationship' => 'لا تمتلك أى علاقة مع $1.',
 	'ur-remove-error-message-remove-yourself' => 'لا يمكنك أن تزيل نفسك.',
-	'ur-remove-error-message-pending-request' => 'لديك طلب $1 قيد الانتظار مع $2.',
 	'ur-remove-error-message-pending-foe-request' => 'لديك طلب عداوة قيد الانتظار مع $1.',
 	'ur-remove-error-message-pending-friend-request' => 'لديك طلب صداقة قيد الانتظار مع $1.',
-	'ur-remove-error-not-loggedin' => 'أنت ينبغى أن تكون مسجل الدخول لإزالة $1.',
 	'ur-remove-error-not-loggedin-foe' => 'يجب أن تكون مسجل الدخول لإزالة عدو.',
 	'ur-remove-error-not-loggedin-friend' => 'يجب أن تكون مسجل الدخول لإزالة صديق.',
 	'ur-remove' => 'أزل',
@@ -476,9 +473,6 @@ $messages['arz'] = array(
 سنخطر $1 لتأكيد عداوتك.',
 	'ur-add-message-friend' => 'أنت على وشك إضافة $1 كصديقك.
 سنخطر $1 لتأكيد صداقتك.',
-	'ur-friendship' => 'صداقة',
-	'ur-grudge' => 'ضغينة',
-	'ur-add-button' => 'أضف ك$1',
 	'ur-add-button-foe' => 'إضافة كعدو',
 	'ur-add-button-friend' => 'إضافة كصديق',
 	'ur-add-sent-title-foe' => 'لقد أرسلنا طلب عداوتك إلى $1!',
@@ -487,10 +481,9 @@ $messages['arz'] = array(
 لو أن $1 أكد طلبك، ستتلقى بريد متابعة',
 	'ur-add-sent-message-friend' => 'طلب صداقتك تم إرساله إلى $1 للتأكيد.
 لو أن $1 أكد طلبك، ستتلقى بريد متابعة',
-	'ur-add-error-message-no-user' => 'المستخدم الذى تحاول أن تضيفه غير موجود.',
+	'ur-add-error-message-no-user' => 'اليوزر اللى بتحاول تضيفه مش  موجود.',
 	'ur-add-error-message-blocked' => 'أنت حاليا ممنوع ولا يمكنك إضافة أصدقاء أو أعداء.',
 	'ur-add-error-message-yourself' => 'أنت لا يمكنك إضافة نفسك كصديق أو عدو.',
-	'ur-add-error-message-existing-relationship' => 'أنت بالفعل $1 مع $2.',
 	'ur-add-error-message-existing-relationship-foe' => 'أنت بالفعل عدو $1.',
 	'ur-add-error-message-existing-relationship-friend' => 'أنت بالفعل صديق $1.',
 	'ur-add-error-message-pending-request-title' => 'صبرا!',
@@ -498,7 +491,6 @@ $messages['arz'] = array(
 سنخطرك عندما $1 يؤكد طلبك.',
 	'ur-add-error-message-pending-foe-request' => 'لديك طلب عداوة قيد الانتظار مع $1.
 سنخطرك عندما $1 يؤكد طلبك.',
-	'ur-add-error-message-not-loggedin' => 'يجب أن تكون مسجلا دخولك لتضيف $1',
 	'ur-add-error-message-not-loggedin-foe' => 'يجب أن تكون مسجل الدخول لإضافة عدو',
 	'ur-add-error-message-not-loggedin-friend' => 'يجب أن تكون مسجل الدخول لإضافة صديق',
 	'ur-requests-title' => 'طلبات العلاقات',
@@ -1080,6 +1072,29 @@ $messages['es'] = array(
 	'ur-friendship' => 'amistad',
 	'ur-accept' => 'Aceptar',
 	'ur-reject' => 'Rechazar',
+);
+
+/** Basque (Euskara)
+ * @author An13sa
+ */
+$messages['eu'] = array(
+	'ur-main-page' => 'Azala',
+	'ur-your-profile' => 'Zure perfila',
+	'ur-add-friend' => 'Lagun bezala gehitu',
+	'ur-add-foe' => 'Etsai bezala gehitu',
+	'ur-remove-relationship-friend' => 'Lagun bezala kendu',
+	'ur-remove-relationship-foe' => 'Etsai bezala kendu',
+	'ur-give-gift' => 'Oparia eman',
+	'ur-previous' => 'aurreko',
+	'ur-next' => 'hurrengo',
+	'ur-remove' => 'Kendu',
+	'ur-cancel' => 'Utzi',
+	'ur-login' => 'Saioa hasi',
+	'ur-add-button-foe' => 'Etsai bezala gehitu',
+	'ur-add-button-friend' => 'Lagun bezala gehitu',
+	'ur-accept' => 'Onartu',
+	'ur-reject' => 'Deuseztu',
+	'ur-title-friend' => '$1-(r)en lagun zerrenda',
 );
 
 /** Finnish (Suomi)
@@ -3496,33 +3511,38 @@ $messages['pl'] = array(
 	'ur-main-page' => 'Strona główna',
 	'ur-your-profile' => 'Twój profil',
 	'ur-backlink' => '&lt; Powrót do profilu $1',
-	'ur-friend' => 'przyjaciel',
-	'ur-foe' => 'wróg',
 	'ur-add-friends' => '  Chcesz mieć więcej przyjaciół? <a href="$1">Zaproś ich</a>',
 	'ur-add-friend' => 'Dodaj do przyjaciół',
 	'ur-add-foe' => 'Dodaj do wrogów',
 	'ur-add-no-user' => 'Nie wybrano żadnego użytkownika.
 Wybierz znajomych/wrogów poprzez poprawny link.',
 	'ur-add-personal-message' => 'Dodaj wiadomość osobistą',
+	'ur-remove-relationship-friend' => 'Usuń z przyjaciół',
+	'ur-remove-relationship-foe' => 'Usuń z wrogów',
 	'ur-give-gift' => 'Daj prezent',
 	'ur-previous' => 'poprz.',
 	'ur-next' => 'nast.',
+	'ur-remove-relationship-title-foe' => 'Czy chcesz usunąć $1 z listy wrogów?',
+	'ur-remove-relationship-title-confirm-foe' => 'Usunąłeś $1 z listy wrogów',
+	'ur-remove-relationship-title-friend' => 'Czy chcesz usunąć $1 z listy przyjaciół?',
+	'ur-remove-relationship-title-confirm-friend' => 'Usunąłeś $1 z listy przyjaciół',
+	'ur-remove-relationship-message-foe' => 'Zażądałeś usunięcia $1 ze swojej listy wrogów, wciśnij „$2” aby potwierdzić.',
+	'ur-remove-relationship-message-confirm-foe' => 'Usunąłeś $1 z listy wrogów.',
+	'ur-remove-relationship-message-friend' => 'Zażądałeś usunięcia $1 ze swojej listy przyjaciół, wciśnij „$2” aby potwierdzić.',
+	'ur-remove-relationship-message-confirm-friend' => 'Usunąłeś $1 z listy przyjaciół.',
 	'ur-remove-error-message-no-relationship' => 'Nie masz żadnych związków z $1.',
 	'ur-remove-error-message-remove-yourself' => 'Nie możesz usunąć sam siebie.',
-	'ur-remove-error-message-pending-request' => 'Masz oczekujące zaproszenie do $1 od $2.',
-	'ur-remove-error-not-loggedin' => 'Musisz być zalogowany, aby usunąć $1.',
 	'ur-remove' => 'Usuń',
 	'ur-cancel' => 'Anuluj',
 	'ur-login' => 'Zaloguj się',
-	'ur-friendship' => 'znajomość',
-	'ur-grudge' => 'wrogość',
-	'ur-add-button' => 'Dodaj jako $1',
+	'ur-add-title-foe' => 'Czy chcesz dodać $1 do listy wrogów?',
+	'ur-add-title-friend' => 'Czy chcesz dodać $1 do listy przyjaciół?',
+	'ur-add-button-foe' => 'Oznacz jako wroga',
+	'ur-add-button-friend' => 'Oznacz jako przyjaciela',
 	'ur-add-error-message-no-user' => 'Użytkownik, którego próbujesz dodać, nie istnieje.',
 	'ur-add-error-message-blocked' => 'Jesteś zablokowany i nie możesz dodawać nowych znajomych i wrogów.',
 	'ur-add-error-message-yourself' => 'Nie możesz dodać samego siebie.',
-	'ur-add-error-message-existing-relationship' => 'Już jesteś $1 z $2.',
 	'ur-add-error-message-pending-request-title' => 'Cierpliwości!',
-	'ur-add-error-message-not-loggedin' => 'Żeby dodać $1, musisz się zalogować',
 	'ur-requests-title' => 'Nawiązanie znajomości',
 	'ur-accept' => 'Zaakceptuj',
 	'ur-reject' => 'Odrzuć',
@@ -4546,10 +4566,12 @@ at baguhin ang mga katakdaan mo upang huwag gumana/umandar ang mga pagpapabatid 
 );
 
 /** Turkish (Türkçe)
+ * @author Joseph
  * @author Karduelis
  */
 $messages['tr'] = array(
 	'ur-remove' => 'Kaldır',
+	'ur-cancel' => 'İptal',
 );
 
 /** Vietnamese (Tiếng Việt)

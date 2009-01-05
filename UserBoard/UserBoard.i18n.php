@@ -163,6 +163,7 @@ $3
 );
 
 /** Egyptian Spoken Arabic (مصرى)
+ * @author Ghaly
  * @author Meno25
  */
 $messages['arz'] = array(
@@ -206,7 +207,7 @@ $messages['arz'] = array(
 	'userboard_nomessages' => 'لا رسائل.',
 	'userboard_sendbutton' => 'إرسال',
 	'userboard_loggedout' => 'أنت يجب أن تكون <a href="$1">مسجل الدخول</a> لترسل رسائل إلى المستخدمين الآخرين.',
-	'userboard_showingmessages' => 'عرض $2-$3 من {{PLURAL:$1|$1 رسالة|$1 رسالة}}',
+	'userboard_showingmessages' => 'عرض {{PLURAL:$4|الرسالة $3|الرسايل $2-$3}} من {{PLURAL:$1|$1 رسالة|$1 رسالة}}',
 	'message_received_subject' => '$1 كتب على مجلسك فى {{SITENAME}}',
 	'message_received_body' => 'مرحبا $1:
 
@@ -495,6 +496,25 @@ $messages['es'] = array(
 	'userboard_sendbutton' => 'enviar',
 );
 
+/** Basque (Euskara)
+ * @author An13sa
+ */
+$messages['eu'] = array(
+	'messagesenttitle' => 'Bidalitako mezuak',
+	'userboard_delete' => 'Ezabatu',
+	'userboard_backprofile' => '$1-(r)en perfilera itzuli',
+	'userboard_backyourprofile' => 'Perfilera itzuli',
+	'userboard_confirmdelete' => 'Ziur zaude mezu hau ezabatu nahi duzula?',
+	'userboard_sendmessage' => '$1-(r)i mezua bidali',
+	'userboard_private' => 'pribatua',
+	'userboard_public' => 'publikoa',
+	'userboard_messagetype' => 'Mezu mota',
+	'userboard_nextpage' => 'hurrengo',
+	'userboard_prevpage' => 'aurreko',
+	'userboard_nomessages' => 'Ez dago mezurik.',
+	'userboard_sendbutton' => 'bidali',
+);
+
 /** Finnish (Suomi)
  * @author Crt
  * @author Jack Phoenix
@@ -758,7 +778,7 @@ $messages['he'] = array(
 	'userboard_nomessages' => 'אין הודעות.',
 	'userboard_sendbutton' => 'שליחה',
 	'userboard_loggedout' => 'עליכם <a href="$1">לבצע כניסה לחשבון</a> כדי לשלוח הודעות למשתמשים אחרים.',
-	'userboard_showingmessages' => 'הצגת {{PLURAL:$4|הודעה $3|$2-$3 הודעות}} מתוך {{PLURAL:$1|הודעה אחת|$1 הודעות}}',
+	'userboard_showingmessages' => 'הצגת {{PLURAL:$4|הודעה $3|הודעות $2-$3}} מתוך {{PLURAL:$1|הודעה אחת|$1 הודעות}}',
 	'message_received_subject' => '$1 כתב בלוח שלך ב{{grammar:תחילית|{{SITENAME}}}}',
 	'message_received_body' => 'היי $1:
 

@@ -128,13 +128,14 @@ $messages['ar'] = array(
 );
 
 /** Egyptian Spoken Arabic (مصرى)
+ * @author Ghaly
  * @author Meno25
  */
 $messages['arz'] = array(
 	'user-stats-alltime-title' => 'أكثر النقاط كل الوقت',
 	'user-stats-weekly-title' => 'أكثر النقاط هذا الأسبوع',
 	'user-stats-monthly-title' => 'أكثر النقاط هذا الشهر',
-	'topusers' => 'أعلى المستخدمين',
+	'topusers' => 'أعلى اليوزرز',
 	'top-fans-by-points-nav-header' => 'أعلى المعجبين',
 	'top-fans-by-category-nav-header' => 'الأعلى بالتصنيف',
 	'top-fans-total-points-link' => 'إجمالى النقاط',
@@ -314,6 +315,16 @@ $messages['es'] = array(
 	'top-fans-points' => 'puntos',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinión|Opiniones}}',
 	'level-advance-subject' => '¡Ahora eres un «$1» en {{SITENAME}}!',
+);
+
+/** Basque (Euskara)
+ * @author An13sa
+ */
+$messages['eu'] = array(
+	'top-fans-total-points-link' => 'Puntuak guztira',
+	'top-fans-weekly-points-link' => 'Aste honetako puntuak',
+	'top-fans-monthly-points-link' => 'Hilabete honetako puntuak',
+	'top-fans-points' => 'puntuak',
 );
 
 /** Finnish (Suomi)
