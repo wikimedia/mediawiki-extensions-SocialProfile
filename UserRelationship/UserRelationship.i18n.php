@@ -599,6 +599,13 @@ $2 أزالك كعدو فى {{SITENAME}}!
 وغير إعداداتك لتعطيل إخطارات البريد الإكتروني.',
 );
 
+/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+ * @author EugeneZelenko
+ */
+$messages['be-tarask'] = array(
+	'ur-remove' => 'Выдаліць',
+);
+
 /** Bulgarian (Български)
  * @author DCLXVI
  */
@@ -1076,12 +1083,17 @@ $messages['es'] = array(
 
 /** Basque (Euskara)
  * @author An13sa
+ * @author Kobazulo
  */
 $messages['eu'] = array(
+	'ur-already-submitted' => 'Zure eskaera bidali da',
+	'ur-error-message-no-user' => 'Ezin dugu zure eskaera bete, ez dago izen hori duen erabiltzailerik.',
 	'ur-main-page' => 'Azala',
 	'ur-your-profile' => 'Zure perfila',
+	'ur-add-friends' => 'Lagun gehiago nahi? <a href="$1">Gonbida itzazu</a>',
 	'ur-add-friend' => 'Lagun bezala gehitu',
 	'ur-add-foe' => 'Etsai bezala gehitu',
+	'ur-add-personal-message' => 'Mezu pertsonala bidali',
 	'ur-remove-relationship-friend' => 'Lagun bezala kendu',
 	'ur-remove-relationship-foe' => 'Etsai bezala kendu',
 	'ur-give-gift' => 'Oparia eman',
@@ -1092,6 +1104,8 @@ $messages['eu'] = array(
 	'ur-login' => 'Saioa hasi',
 	'ur-add-button-foe' => 'Etsai bezala gehitu',
 	'ur-add-button-friend' => 'Lagun bezala gehitu',
+	'ur-add-error-message-pending-request-title' => 'Pazientzia!',
+	'ur-add-error-message-not-loggedin-friend' => 'Lagun bat gehitzeko saioa hasi behar duzu',
 	'ur-accept' => 'Onartu',
 	'ur-reject' => 'Deuseztu',
 	'ur-title-friend' => '$1-(r)en lagun zerrenda',
@@ -4588,10 +4602,39 @@ $messages['vi'] = array(
 
 /** Volapük (Volapük)
  * @author Malafaya
+ * @author Smeira
  */
 $messages['vo'] = array(
-	'ur-friend' => 'flen',
-	'ur-friendship' => 'flenam',
+	'ur-add-friends' => '   Vilol-li flenis pluik? <a href="$1">Vüdolös onis</a>',
+	'ur-add-friend' => 'Läükön as flen',
+	'ur-add-foe' => 'Läükön as neflen',
+	'ur-remove-relationship-friend' => 'Moükön as flen',
+	'ur-remove-relationship-foe' => 'Moükön as neflen',
+	'ur-give-gift' => 'Givön legivoti',
+	'ur-previous' => 'büik',
+	'ur-next' => 'sököl',
+	'ur-remove-relationship-title-foe' => 'Vilol-li moükön gebani: $1 as neflen olik?',
+	'ur-remove-relationship-title-confirm-foe' => 'Emoükol gebani: $1 as neflen olik',
+	'ur-remove-relationship-title-friend' => 'Vilol-li moükön gebani: $1 as flen olik?',
+	'ur-remove-relationship-title-confirm-friend' => 'Emoükol gebani: $1 as flen olik',
+	'ur-remove-relationship-message-confirm-friend' => 'Eplöpol ad möukön gebani $1: as flen olik.',
+	'ur-remove-error-message-remove-yourself' => 'No kanol moükön oli it.',
+	'ur-remove-error-not-loggedin-foe' => 'Mutol nunädön oli ad moükön nefleni.',
+	'ur-remove-error-not-loggedin-friend' => 'Mutol nunädön oli ad moükön fleni.',
+	'ur-remove' => 'Moükön',
+	'ur-add-title-foe' => 'Vilol-li läükön gebani: $1 as neflen olik?',
+	'ur-add-title-friend' => 'Vilol-li läükön gebani: $1 as flen olik?',
+	'ur-add-button-foe' => 'Läükön as neflen',
+	'ur-add-button-friend' => 'Läükön as flen',
+	'ur-add-error-message-no-user' => 'Geban, keli vilol läükön, no dabinon.',
+	'ur-add-error-message-blocked' => 'No dalol läükön flenis u neflenis bi peblokol.',
+	'ur-add-error-message-yourself' => 'No kanol läükön oli it as flen ud as neflen.',
+	'ur-add-error-message-not-loggedin-foe' => 'Mutol nunädön oli ad läükön nefleni',
+	'ur-add-error-message-not-loggedin-friend' => 'Mutol nunädön oli ad läükön fleni',
+	'ur-requests-added-message-foe' => 'Eläükol gebani: $1 as neflen olik.',
+	'ur-requests-added-message-friend' => 'Eläükol gebani: $1 as flen olik.',
+	'friend_request_subject' => 'Geban: $1 eläükon oli as flen in {{SITENAME}}!',
+	'foe_request_subject' => 'Krigö! Geban: $1 eläükon oli as neflen in {{SITENAME}}!',
 );
 
 /** Simplified Chinese (‪中文(简体)‬)

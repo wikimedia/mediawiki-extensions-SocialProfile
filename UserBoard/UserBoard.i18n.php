@@ -1403,7 +1403,7 @@ $messages['oc'] = array(
 	'userboard_nomessages' => 'Pas de messatge.',
 	'userboard_sendbutton' => 'mandat',
 	'userboard_loggedout' => 'Vos cal èsser <a href="$1">connectat(ada)</a> per mandar de messatges a d’autres utilizaires.',
-	'userboard_showingmessages' => 'Visionament de $2-$3 de {{PLURAL:$1|$1 messatge|$1 messatges}}',
+	'userboard_showingmessages' => 'Visionament {{PLURAL:$4|del messatge $3|dels messatges $2-$3}} sus un total de {{PLURAL:$1|$1 messatge|$1 messatges}}',
 	'message_received_subject' => '$1 a escrich sus vòstre tablèu sus {{SITENAME}}',
 	'message_received_body' => "Adiu $1 : 
 
@@ -1893,6 +1893,17 @@ $messages['vi'] = array(
 	'userboard_prevpage' => 'trước',
 	'userboard_nomessages' => 'Không có tin nhắn.',
 	'userboard_sendbutton' => 'gửi',
+);
+
+/** Volapük (Volapük)
+ * @author Smeira
+ */
+$messages['vo'] = array(
+	'userboard_delete' => 'Moükön',
+	'userboard_sendmessage' => 'Sedön gebane: $1 penedi',
+	'userboard_nextpage' => 'sököl',
+	'userboard_prevpage' => 'büik',
+	'userboard_sendbutton' => 'sedön',
 );
 
 /** Simplified Chinese (‪中文(简体)‬)

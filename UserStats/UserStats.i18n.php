@@ -319,12 +319,17 @@ $messages['es'] = array(
 
 /** Basque (Euskara)
  * @author An13sa
+ * @author Kobazulo
  */
 $messages['eu'] = array(
 	'top-fans-total-points-link' => 'Puntuak guztira',
 	'top-fans-weekly-points-link' => 'Aste honetako puntuak',
 	'top-fans-monthly-points-link' => 'Hilabete honetako puntuak',
 	'top-fans-points' => 'puntuak',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Laguna|Lagunak}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Etsaia|Etsaiak}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Opari bat jaso duzu|Opariak jaso dituzu}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Oparia bidali duzu|Opariak bidali dituzu}}',
 );
 
 /** Finnish (Suomi)
