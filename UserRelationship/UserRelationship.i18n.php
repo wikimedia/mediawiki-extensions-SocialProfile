@@ -2104,6 +2104,7 @@ $messages['ja'] = array(
 	'viewrelationshiprequests' => '関係申請を表示',
 	'ur-already-submitted' => '申請を送信しました',
 	'ur-error-page-title' => 'おっと！',
+	'ur-error-title' => 'おっと！悪化させましたね！',
 	'ur-error-message-no-user' => 'その名前の利用者は存在しないため申請を完了できません。',
 	'ur-main-page' => 'メインページ',
 	'ur-your-profile' => 'あなたのプロファイル',
@@ -2152,6 +2153,7 @@ $messages['ja'] = array(
 	'ur-add-error-message-yourself' => '自分自身を友人や敵に追加することはできません。',
 	'ur-add-error-message-existing-relationship-foe' => '$1とはすでに敵関係です。',
 	'ur-add-error-message-existing-relationship-friend' => '$1とはすでに友人関係です。',
+	'ur-add-error-message-pending-request-title' => 'しばらくお待ちを！',
 	'ur-add-error-message-pending-friend-request' => '$1との友人申請は保留中です。$1があなたの申請を承認したら連絡します。',
 	'ur-add-error-message-pending-foe-request' => '$1との敵申請は保留中です。$1があなたの申請を承認したら連絡します。',
 	'ur-add-error-message-not-loggedin-foe' => '敵を追加するにはログインしている必要があります。',
@@ -2164,6 +2166,94 @@ $messages['ja'] = array(
 	'ur-no-requests-message' => '申請中の敵や友人はありません。友人を増やしたければ<a href="$1">招待してください！</a>',
 	'ur-requests-added-message-foe' => '$1を敵に追加しました。',
 	'ur-requests-added-message-friend' => '$1を友人に追加しました。',
+	'ur-requests-reject-message-friend' => '$1の友人申請を却下しました。',
+	'ur-requests-reject-message-foe' => '$1の敵申請を却下しました。',
+	'ur-title-foe' => '$1の敵一覧',
+	'ur-title-friend' => '$1の友人一覧',
+	'friend_request_subject' => '$1があなたを{{SITENAME}}での友人に追加しました！',
+	'friend_request_body' => '$1さん、こんにちは。
+
+$2 さんがあなたを {{SITENAME}} での友人に追加しました。このメールはお二人がほんとうに友人であるかを確認するものです。
+
+友人であることを確認するには次のリンクをクリックしてください。
+
+$3
+
+ご協力ありがとうございます。
+
+---
+ひょっとして私たちからの電子メール受信を停止したいですか？
+
+もしそうなら、$4 をクリックして設定を変更し、電子メール通知を停止してください。',
+	'foe_request_subject' => '戦争です！$1があなたを {{SITENAME}} での敵に追加しました！',
+	'foe_request_body' => '$1さん、こんにちは。
+
+$2 さんがたったいまあなたを {{SITENAME}} での敵に追加しました。このメールは$2さんがほんとうにあなたにとって生かしておけない敵であるとか、あるいはちょっとしたけんか中であるとかいった状態であるかを確認するものです。
+
+戦闘状態を確認するには次のリンクをクリックしてください。
+
+$3
+
+ご協力ありがとうございます。
+
+---
+ひょっとして私たちからの電子メール受信を停止したいですか？
+
+もしそうなら、$4 をクリックして設定を変更し、電子メール通知を停止してください。',
+	'friend_accept_subject' => '$1があなたからの {{SITENAME}} での友人申請を承認しました！',
+	'friend_accept_body' => '$1さん、こんにちは。
+
+$2さんがあなたからの {{SITENAME}} での友人申請を承認しました！
+
+$3上の$2さんのページを見てみてください。
+
+それでは。
+
+---
+
+ひょっとして私たちからの電子メール受信を停止したいですか？
+
+もしそうなら、$4 をクリックして設定を変更し、電子メール通知を停止してください。',
+	'foe_accept_subject' => '続行中です！$1があなたからの {{SITENAME}} での敵申請を承認しました！',
+	'foe_accept_body' => '$1さん、こんにちは。
+
+$2さんがあなたからの {{SITENAME}} での敵申請を承認しました！
+
+$3上の$2さんのページを見てみてください。
+
+それでは。
+
+---
+
+ひょっとして私たちからの電子メール受信を停止したいですか？
+
+もしそうなら、$4 をクリックして設定を変更し、電子メール通知を停止してください。',
+	'friend_removed_subject' => 'たいへんです！$1があなたを {{SITENAME}} での友人から外しました！',
+	'friend_removed_body' => '$1さん、こんにちは。
+
+$2 さんがあなたを {{SITENAME}} での友人から除去しました！
+
+それでは。
+
+--- 
+
+ひょっとして私たちからの電子メール受信を停止したいですか？
+
+もしそうなら、$4 をクリックして設定を変更し、電子メール通知を停止してください。',
+	'foe_removed_subject' => 'やった！$1があなたを {{SITENAME}} での敵から外しました！',
+	'foe_removed_body' => '$1さん、こんにちは。
+
+$2 さんがあなたを {{SITENAME}} での敵から除去しました！
+
+お二人の関係が改善に向かっているものと期待します。
+
+それでは。
+
+--- 
+
+ひょっとして私たちからの電子メール受信を停止したいですか？
+
+もしそうなら、$4 をクリックして設定を変更し、電子メール通知を停止してください。',
 );
 
 /** Javanese (Basa Jawa)
