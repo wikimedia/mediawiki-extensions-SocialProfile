@@ -1751,6 +1751,7 @@ $messages['et'] = array(
 
 /** Basque (Euskara)
  * @author An13sa
+ * @author Kobazulo
  */
 $messages['eu'] = array(
 	'user-awards-title' => 'Sariak',
@@ -1772,6 +1773,7 @@ $messages['eu'] = array(
 	'user-stats-title' => 'Estatistikak',
 	'user-stats-edits' => 'Aldaketak',
 	'user-stats-votes' => 'Bozak',
+	'user-stats-comments' => 'Iruzkinak',
 	'user-friends-title' => 'Lagunak',
 	'user-foes-title' => 'Etsaiak',
 	'other-info-movies' => 'Filmeak',
@@ -1793,6 +1795,7 @@ $messages['eu'] = array(
 	'user-personal-info-schools' => 'Eskolak',
 	'user-personal-info-about-me' => 'Niri buruz',
 	'user-recent-activity-title' => 'Duela gutxiko jarduerak',
+	'user-recent-activity-gift-sent' => 'Norbaiti opari bat bidali',
 	'user-profile-update-saved' => 'Zure perfila gordea izan da',
 	'user-profile-update-profile' => 'perfila',
 	'user-profile-default-country' => 'Ameriketako Estatu Batuak',

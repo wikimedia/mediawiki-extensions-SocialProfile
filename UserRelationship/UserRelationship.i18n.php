@@ -1099,11 +1099,19 @@ $messages['eu'] = array(
 	'ur-give-gift' => 'Oparia eman',
 	'ur-previous' => 'aurreko',
 	'ur-next' => 'hurrengo',
+	'ur-remove-error-not-loggedin-foe' => 'Etsai bat zerrendatik kentzeko saioa hasi behar duzu.',
+	'ur-remove-error-not-loggedin-friend' => 'Lagun bat zerrendatik kentzeko saioa hasi behar duzu.',
 	'ur-remove' => 'Kendu',
 	'ur-cancel' => 'Utzi',
 	'ur-login' => 'Saioa hasi',
+	'ur-add-title-foe' => '$1 zure etsaia bezala gehitu nahi al duzu?',
+	'ur-add-title-friend' => '$1 zure laguna bezala gehitu nahi al duzu?',
 	'ur-add-button-foe' => 'Etsai bezala gehitu',
 	'ur-add-button-friend' => 'Lagun bezala gehitu',
+	'ur-add-sent-title-foe' => '$1 lankideari zure etsaia izateko eskaera bidali diogu!',
+	'ur-add-sent-title-friend' => '$1 lankideari zure laguna izateko eskaera bidali diogu!',
+	'ur-add-error-message-existing-relationship-foe' => 'Jada $1 lankidearen etsaia zara.',
+	'ur-add-error-message-existing-relationship-friend' => 'Jada $1 lankidearen laguna zara.',
 	'ur-add-error-message-pending-request-title' => 'Pazientzia!',
 	'ur-add-error-message-not-loggedin-friend' => 'Lagun bat gehitzeko saioa hasi behar duzu',
 	'ur-accept' => 'Onartu',
@@ -2087,6 +2095,14 @@ e disactiva in tu preferentias le notificationes per e-mail.',
  */
 $messages['id'] = array(
 	'ur-cancel' => 'Batalkan',
+);
+
+/** Ido (Ido)
+ * @author Malafaya
+ */
+$messages['io'] = array(
+	'ur-previous' => 'antea',
+	'ur-next' => 'sequanta',
 );
 
 /** Italian (Italiano)
@@ -4719,9 +4735,13 @@ $messages['vi'] = array(
  * @author Smeira
  */
 $messages['vo'] = array(
+	'ur-main-page' => 'Cifapad',
 	'ur-add-friends' => '   Vilol-li flenis pluik? <a href="$1">Vüdolös onis</a>',
 	'ur-add-friend' => 'Läükön as flen',
 	'ur-add-foe' => 'Läükön as neflen',
+	'ur-add-no-user' => 'Geban nonik pevälon.
+Begolös stadi flena/neflena medü yüm verätik.',
+	'ur-add-personal-message' => 'Läükön nuni pösodik',
 	'ur-remove-relationship-friend' => 'Moükön as flen',
 	'ur-remove-relationship-foe' => 'Moükön as neflen',
 	'ur-give-gift' => 'Givön legivoti',
@@ -4731,11 +4751,15 @@ $messages['vo'] = array(
 	'ur-remove-relationship-title-confirm-foe' => 'Emoükol gebani: $1 as neflen olik',
 	'ur-remove-relationship-title-friend' => 'Vilol-li moükön gebani: $1 as flen olik?',
 	'ur-remove-relationship-title-confirm-friend' => 'Emoükol gebani: $1 as flen olik',
+	'ur-remove-relationship-message-foe' => 'Ebegol moükami gebana: $1 as neflen olik, fümedolös me klav: „$2“.',
+	'ur-remove-relationship-message-confirm-foe' => 'Emoükol benosekiko gebani: $1 as neflen olik.',
+	'ur-remove-relationship-message-friend' => 'Ebegol moükami gebana: $1 as flen olik, fümedolös me klav: „$2“.',
 	'ur-remove-relationship-message-confirm-friend' => 'Eplöpol ad möukön gebani $1: as flen olik.',
 	'ur-remove-error-message-remove-yourself' => 'No kanol moükön oli it.',
 	'ur-remove-error-not-loggedin-foe' => 'Mutol nunädön oli ad moükön nefleni.',
 	'ur-remove-error-not-loggedin-friend' => 'Mutol nunädön oli ad moükön fleni.',
 	'ur-remove' => 'Moükön',
+	'ur-login' => 'Nunädön oki',
 	'ur-add-title-foe' => 'Vilol-li läükön gebani: $1 as neflen olik?',
 	'ur-add-title-friend' => 'Vilol-li läükön gebani: $1 as flen olik?',
 	'ur-add-button-foe' => 'Läükön as neflen',
@@ -4743,10 +4767,14 @@ $messages['vo'] = array(
 	'ur-add-error-message-no-user' => 'Geban, keli vilol läükön, no dabinon.',
 	'ur-add-error-message-blocked' => 'No dalol läükön flenis u neflenis bi peblokol.',
 	'ur-add-error-message-yourself' => 'No kanol läükön oli it as flen ud as neflen.',
+	'ur-add-error-message-existing-relationship-foe' => 'Geban: $1 ya binon neflen olik.',
+	'ur-add-error-message-existing-relationship-friend' => 'Geban: $1 ya binon flen olik.',
 	'ur-add-error-message-not-loggedin-foe' => 'Mutol nunädön oli ad läükön nefleni',
 	'ur-add-error-message-not-loggedin-friend' => 'Mutol nunädön oli ad läükön fleni',
 	'ur-requests-added-message-foe' => 'Eläükol gebani: $1 as neflen olik.',
 	'ur-requests-added-message-friend' => 'Eläükol gebani: $1 as flen olik.',
+	'ur-title-foe' => 'Lised neflenas gebana: $1',
+	'ur-title-friend' => 'Lised flenas gebana: $1',
 	'friend_request_subject' => 'Geban: $1 eläükon oli as flen in {{SITENAME}}!',
 	'foe_request_subject' => 'Krigö! Geban: $1 eläükon oli as neflen in {{SITENAME}}!',
 );

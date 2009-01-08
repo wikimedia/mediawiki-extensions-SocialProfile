@@ -333,6 +333,13 @@ $messages['sk'] = array(
 	'yui-desc' => 'Sada nástrojov napísaných v JavaScripte',
 );
 
+/** Seeltersk (Seeltersk)
+ * @author Pyt
+ */
+$messages['stq'] = array(
+	'yui-desc' => 'Ne Samlenge in JavaScript schrieuwene Reewen un Stjuurelemente',
+);
+
 /** Sundanese (Basa Sunda)
  * @author Irwangatot
  */

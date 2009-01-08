@@ -1334,10 +1334,18 @@ at baguhin ang mga pagtatakda mo upang huwag nang paganahin ang mga pagpapabatid
 
 /** Volapük (Volapük)
  * @author Malafaya
+ * @author Smeira
  */
 $messages['vo'] = array(
+	'top-fans-bad-field-message' => 'Statit pavilöl no dabinon.',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Redakam|Redakams}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Küpet|Küpets}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Flen|Flens}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Neflen|Neflens}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Ced pepüböl|Ceds pepüböl}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Ced|Ceds}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Legivot pegetöl|Legivots pegetöl}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Legivot pesedöl|Legivots pesedöl}}',
+	'level-advance-subject' => 'Anu binol „$1“ in {{SITENAME}}!',
 );
 

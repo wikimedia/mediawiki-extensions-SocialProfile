@@ -498,9 +498,14 @@ $messages['es'] = array(
 
 /** Basque (Euskara)
  * @author An13sa
+ * @author Kobazulo
  */
 $messages['eu'] = array(
 	'messagesenttitle' => 'Bidalitako mezuak',
+	'boardblaststep1' => '1. pausoa - Zure mezua idatzi',
+	'boardblaststep2' => '2. pausoa - Mezua nori bidali nahi diozun aukeratu',
+	'boardlinkselectall' => 'Guztiak hautatu',
+	'boardlinkunselectall' => 'Guztiak desautatu',
 	'userboard_delete' => 'Ezabatu',
 	'userboard_backprofile' => '$1-(r)en perfilera itzuli',
 	'userboard_backyourprofile' => 'Perfilera itzuli',
@@ -877,6 +882,14 @@ Tu non vole reciper plus e-mail de nos?
 
 Clicca $4
 e disactiva in tu preferentias le notificationes per e-mail.',
+);
+
+/** Ido (Ido)
+ * @author Malafaya
+ */
+$messages['io'] = array(
+	'userboard_nextpage' => 'sequanta',
+	'userboard_prevpage' => 'antea',
 );
 
 /** Italian (Italiano)
