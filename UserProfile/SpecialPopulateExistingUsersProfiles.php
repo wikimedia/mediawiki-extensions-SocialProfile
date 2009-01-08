@@ -43,7 +43,7 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 
 		$count = 0; // To avoid an annoying PHP notice
 
-		while( $row = $dbr->fetchObject($res) ){
+		while( $row = $dbw->fetchObject($res) ){
 			$user_name_title = Title::newFromDBkey( $row->page_title );
 			$user_name = $user_name_title->getText();
 			$user_id = User::idFromName( $user_name );
