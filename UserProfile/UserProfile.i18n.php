@@ -3027,6 +3027,7 @@ $messages['id'] = array(
 $messages['it'] = array(
 	'user-profile-personal-name' => 'Nome',
 	'user-profile-personal-email' => 'Indirizzo e-mail',
+	'user-profile-personal-birthdate' => 'Data (MM/GG)',
 	'user-profile-picture-large' => 'Grande',
 );
 
