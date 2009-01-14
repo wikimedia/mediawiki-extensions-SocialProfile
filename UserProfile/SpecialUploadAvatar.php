@@ -49,6 +49,8 @@ class SpecialUploadAvatar extends UnlistedSpecialPage {
 		$wgOut->setHTMLTitle( wfMsg( 'pagetitle', wfMsg('user-profile-picture-title') ) );
 
 		$wgOut->addStyle( '../..' . $wgUserProfileScripts . '/UserProfile.css' );
+		// Nasty hack since UserProfile.css is loaded before skin's main.css
+		$wgOut->addHTML( '<style>.profile-tab a:visited { color: #FFFFFF; } .profile-tab-on a:visited { color: #FFFFFF; }</style>' );
 		$this->initAvatar($wgRequest);
 		$this->executeAvatar();
 	}
