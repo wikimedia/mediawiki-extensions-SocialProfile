@@ -265,7 +265,7 @@ $messages['bg'] = array(
 	'userboard_nomessages' => 'Няма съобщения.',
 	'userboard_sendbutton' => 'изпращане',
 	'userboard_loggedout' => 'За изпращане на съобщения до другите потребители е необходимо <a href="$1">влизане</a> в системата.',
-	'userboard_showingmessages' => 'Показване на $2–$3 от {{PLURAL:$1|$1 съобщение|$1 съобщения}}',
+	'userboard_showingmessages' => 'Показване на {{PLURAL:$4|$3 съобщение|съобщения $2–$3}} от {{PLURAL:$1|$1 съобщение|$1 съобщения}}',
 	'message_received_subject' => '$1 писа на таблото ви в {{SITENAME}}',
 	'message_received_body' => 'Привет $1,
 
@@ -1912,10 +1912,21 @@ $messages['vi'] = array(
  * @author Smeira
  */
 $messages['vo'] = array(
+	'boardlinkselectall' => 'Välön valikis',
+	'boardlinkunselectall' => 'Sävälön valikis',
+	'boardlinkselectfriends' => 'Välön flenis',
+	'boardlinkunselectfriends' => 'Sävälön flenis',
+	'boardlinkselectfoes' => 'Välön neflenis',
+	'boardlinkunselectfoes' => 'Sävälön neflenis',
 	'userboard_delete' => 'Moükön',
+	'userboard_confirmdelete' => 'Vilol-li fümiko moükön nuni at?',
 	'userboard_sendmessage' => 'Sedön gebane: $1 penedi',
+	'userboard_private' => 'privatik',
+	'userboard_public' => 'notidik',
+	'userboard_messagetype' => 'Nunasot',
 	'userboard_nextpage' => 'sököl',
 	'userboard_prevpage' => 'büik',
+	'userboard_nomessages' => 'Nuns nonik.',
 	'userboard_sendbutton' => 'sedön',
 );
 

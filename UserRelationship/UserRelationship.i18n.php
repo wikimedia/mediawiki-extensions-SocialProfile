@@ -1068,15 +1068,15 @@ Se vi volas pliajn amikojn, <a href="$1">invitu ilin!</a>',
 );
 
 /** Spanish (Español)
+ * @author Feten7
  * @author Imre
  * @author Sanbec
  */
 $messages['es'] = array(
 	'ur-main-page' => 'Página principal',
-	'ur-friend' => 'amigo',
+	'ur-remove' => 'Eliminar',
 	'ur-cancel' => 'Cancelar',
 	'ur-login' => 'Entrar',
-	'ur-friendship' => 'amistad',
 	'ur-accept' => 'Aceptar',
 	'ur-reject' => 'Rechazar',
 );
@@ -3638,6 +3638,13 @@ Clicatz $4
 e modificatz vòstras preferéncias per desactivar las notificacions per corrièr electronic.',
 );
 
+/** Oriya (ଓଡ଼ିଆ)
+ * @author Jose77
+ */
+$messages['or'] = array(
+	'ur-main-page' => 'ପ୍ରଧାନ ପ୍ରୁଷ୍ଟ୍ଆ',
+);
+
 /** Polish (Polski)
  * @author Airwolf
  * @author Derbeth
@@ -4735,7 +4742,11 @@ $messages['vi'] = array(
  * @author Smeira
  */
 $messages['vo'] = array(
+	'ur-error-message-no-user' => 'No kanobs ledunön begi olik, bi no dabinon gebani labü nem at.',
 	'ur-main-page' => 'Cifapad',
+	'ur-your-profile' => 'Profül olik',
+	'ur-relationship-count-foes' => 'Geban: $1 labon {{PLURAL:$2|nefleni|neflenis}} $2. Vilol-li neflenis mödikum? <a href="$3">Vüdolös onis.</a>',
+	'ur-relationship-count-friends' => 'Geban: $1 labon {{PLURAL:$2|fleni|flenis}} $2. Vilol-mi flenis mödikum? <a href="$3">Vüdolös onis.</a>',
 	'ur-add-friends' => '   Vilol-li flenis pluik? <a href="$1">Vüdolös onis</a>',
 	'ur-add-friend' => 'Läükön as flen',
 	'ur-add-foe' => 'Läükön as neflen',
