@@ -567,6 +567,14 @@
 	color:#466C2C;
 }
 
+.profile-tab a:visited {
+	color: #FFFFFF !important;
+}
+
+.profile-tab-on a:visited {
+	color: #FFFFFF !important;
+}
+
 .profile-update-button {
 	background-color:#78BA5D;
 	border:1px solid #6B6B6B;

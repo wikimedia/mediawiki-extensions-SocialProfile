@@ -66,8 +66,6 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		// Add CSS & JS
 		$wgOut->addStyle( '../..' . $wgUserProfileScripts . '/UserProfile.css' );
 		$wgOut->addScriptFile( $wgUserProfileScripts.'/UpdateProfile.js' );
-		// Nasty hack since UserProfile.css is loaded before skin's main.css
-		$wgOut->addHTML( '<style>.profile-tab a:visited { color: #FFFFFF; } .profile-tab-on a:visited { color: #FFFFFF; }</style>' );
 
  		if( $wgRequest->wasPosted() ){
 			//$section = $wgRequest->getVal('section');
