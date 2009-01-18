@@ -141,6 +141,13 @@ $messages['gl'] = array(
 	'yui-desc' => 'Unha colección de utilidades e controis escritos en JavaScript',
 );
 
+/** Swiss German (Alemannisch)
+ * @author Als-Holder
+ */
+$messages['gsw'] = array(
+	'yui-desc' => 'E Sammlig vu Wärchzyyg un Styyrelemänt, wu in JavaScript gschribe sin',
+);
+
 /** Hebrew (עברית)
  * @author Rotemliss
  */
@@ -244,6 +251,13 @@ $messages['mk'] = array(
  */
 $messages['mr'] = array(
 	'yui-desc' => 'जावा स्क्रिप्टने लिहीलेल्या सुविधा आणि नियंत्रणांचा संच',
+);
+
+/** Low German (Plattdüütsch)
+ * @author Slomox
+ */
+$messages['nds'] = array(
+	'yui-desc' => 'En Sett Warktüüch un Stüürelementen in JavaScript schreven',
 );
 
 /** Nedersaksisch (Nedersaksisch)

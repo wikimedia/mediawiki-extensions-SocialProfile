@@ -743,8 +743,6 @@ $messages['ar'] = array(
 	'user-profile-sports-teamsaved' => 'فرقك تم حفظها',
 	'user-profile-sports-addmore' => 'أضف المزيد من الرياضات/الأندية',
 	'user-profile-picture-title' => 'رفع صورتك',
-	'user-profile-picture-log' => 'أفاتر',
-	'user-profile-picture-log-entry' => 'رفع أفاتر جديد',
 	'user-profile-picture-yourpicture' => 'صورتك',
 	'user-profile-picture-yourpicturestext' => 'بالأسفل الصور التي ستظهر على ملفك، صفحات الشبكة، وعلى تعليقاتك.',
 	'user-profile-picture-large' => 'كبير',
@@ -755,8 +753,6 @@ $messages['ar'] = array(
 	'user-profile-picture-currentimage' => 'الصورة الحالية',
 	'user-profile-picture-choosepicture' => 'اختر صورتك',
 	'user-profile-picture-picsize' => 'صورتك يجب أن تكون jpeg، png، أو gif ويجب أن تكون أقل من 100kb في الحجم.',
-	'user-profile-picture-badvirusscanner' => 'ضبط سيء: كاشف فيروسات غير معروف:',
-	'user-profile-picture-scanfailed' => 'فشل المسح',
 	'user-profile-goback' => 'اذهب للخلف',
 	'user-profile-userlevels-link' => 'مستويات المستخدم',
 	'user-no-images' => 'لا صور مرفوعة',
@@ -784,6 +780,8 @@ $messages['ar'] = array(
 	'profilelogpagetext' => 'هذا سجل بتعديلات ملفات المستخدمين',
 	'avatarlogpage' => 'سجل رفع الأفاتر',
 	'avatarlogpagetext' => 'هذا سجل بعمليات رفع أفاتر المستخدمين',
+	'user-profile-picture-log' => 'أفاتر',
+	'user-profile-picture-log-entry' => 'رفع أفاتر جديد',
 	'user-profile-picture-log-delete-entry' => 'حذف الأفاتر الخاص ب$1',
 );
 
@@ -1161,9 +1159,11 @@ $messages['bs'] = array(
 );
 
 /** Catalan (Català)
+ * @author Loupeter
  * @author SMP
  */
 $messages['ca'] = array(
+	'user-profile-personal-birthdate' => 'Data (MM/DD)',
 	'user-page-link' => "Pàgina d'usuari",
 );
 
@@ -1653,8 +1653,6 @@ $messages['eo'] = array(
 	'user-profile-sports-teamsaved' => 'Viaj teamoj estis konservitaj',
 	'user-profile-sports-addmore' => 'Aldoni pliajn sportojn/teamojn',
 	'user-profile-picture-title' => 'Alŝuti vian foton',
-	'user-profile-picture-log' => 'avataro',
-	'user-profile-picture-log-entry' => 'alŝutis novan avataron',
 	'user-profile-picture-yourpicture' => 'Via bildo',
 	'user-profile-picture-large' => 'Granda',
 	'user-profile-picture-medlarge' => 'Meza - Granda',
@@ -1663,7 +1661,6 @@ $messages['eo'] = array(
 	'user-profile-picture-uploaddifferent' => 'Alŝutu apartan bildon',
 	'user-profile-picture-currentimage' => 'Nuna bildo',
 	'user-profile-picture-choosepicture' => 'Selektu vian bildon',
-	'user-profile-picture-scanfailed' => 'skanado malsukcesis',
 	'user-profile-goback' => 'Retroiri',
 	'user-profile-userlevels-link' => 'Niveloj de uzantoj',
 	'user-no-images' => 'Neniuj bildoj estis alŝutitaj',
@@ -1691,6 +1688,8 @@ $messages['eo'] = array(
 	'profilelogpagetext' => 'Jen protokolon pri redaktoj de uzulaj preferoj',
 	'avatarlogpage' => 'Protokolo pri avatara alŝutado',
 	'avatarlogpagetext' => 'Jen protokolo de avataraj alŝutoj de uzantoj',
+	'user-profile-picture-log' => 'avataro',
+	'user-profile-picture-log-entry' => 'alŝutis novan avataron',
 	'user-profile-picture-log-delete-entry' => 'forigis avataron de $1',
 );
 
@@ -1736,8 +1735,8 @@ $messages['es'] = array(
 	'user-profile-interests-magazines' => 'Revistas',
 	'user-profile-interests-drinks' => 'Bebidas',
 	'user-profile-sports-sport' => 'Deporte',
-	'user-profile-picture-log' => 'avatar',
 	'user-page-link' => 'Usuario',
+	'user-profile-picture-log' => 'avatar',
 );
 
 /** Estonian (Eesti)
@@ -1971,7 +1970,6 @@ Pursa <a href="$1">aquina</a> p\'abril la tu cuenta, u <a href="$2">aquina</a> p
 	'user-profile-sports-teamremoved' => 'El tu equipu á siu esborrau',
 	'user-profile-sports-teamsaved' => 'Los tus equipus án siu emburacaus',
 	'user-profile-picture-title' => 'Empuntal la tu imahin',
-	'user-profile-picture-log' => 'avatal',
 	'user-profile-picture-large' => 'Grandi',
 	'user-profile-picture-medlarge' => 'Meyu - Grandi',
 	'user-profile-picture-medium' => 'Meyu',
@@ -1979,7 +1977,6 @@ Pursa <a href="$1">aquina</a> p\'abril la tu cuenta, u <a href="$2">aquina</a> p
 	'user-profile-picture-uploaddifferent' => 'Empuntal imahin deferenti',
 	'user-profile-picture-currentimage' => 'Imahin atual',
 	'user-profile-picture-choosepicture' => 'Lihil la tu imahin',
-	'user-profile-picture-scanfailed' => 'marru al escaneal',
 	'user-profile-goback' => 'Gorvel',
 	'user-no-images' => "Nu s'án empuntau imahin",
 	'edit-profile-title' => 'Eital el tu perfil',
@@ -1994,6 +1991,7 @@ Pursa <a href="$1">aquina</a> p\'abril la tu cuenta, u <a href="$2">aquina</a> p
 	'user-type-toggle-old' => "Gastal la páhina d'usuáriu wiki",
 	'user-type-toggle-new' => "Gastal la páhina d'usuáriu social",
 	'user-board-login-message' => 'Ebis estal <a href="$1">rustriu</a> pa envial mensahis a otrus usuárius',
+	'user-profile-picture-log' => 'avatal',
 );
 
 /** Finnish (Suomi)
@@ -2124,8 +2122,6 @@ $messages['fi'] = array(
 	'user-profile-sports-teamsaved' => 'Joukkueesi on tallennettu',
 	'user-profile-sports-addmore' => 'Lisää enemmän urheilulajeja/joukkueita',
 	'user-profile-picture-title' => 'Lataa kuvasi',
-	'user-profile-picture-log' => 'avatar',
-	'user-profile-picture-log-entry' => 'latasi uuden avatarin',
 	'user-profile-picture-yourpicture' => 'Kuvasi',
 	'user-profile-picture-yourpicturestext' => 'Alapuolella ovat kuvat, jotka näkyvät profiilissasi, verkoston sivuilla ja kommenteissasi.',
 	'user-profile-picture-large' => 'Suuri',
@@ -2163,6 +2159,8 @@ $messages['fi'] = array(
 	'profilelogpagetext' => 'Tämä on loki käyttäjäprofiilien muutoksista',
 	'avatarlogpage' => 'Avatarientallennusloki',
 	'avatarlogpagetext' => 'Tämä on loki käyttäjien avatarien tallennuksista',
+	'user-profile-picture-log' => 'avatar',
+	'user-profile-picture-log-entry' => 'latasi uuden avatarin',
 	'user-profile-picture-log-delete-entry' => 'poisti käyttäjän $1 avatarin',
 );
 
@@ -2309,8 +2307,6 @@ $messages['fr'] = array(
 	'user-profile-sports-teamsaved' => 'Vos équipes ont été sauvegardées',
 	'user-profile-sports-addmore' => "Ajouter plus de sports ou d'équipes sportives",
 	'user-profile-picture-title' => 'Importer vos images',
-	'user-profile-picture-log' => 'avatar',
-	'user-profile-picture-log-entry' => 'a importé un nouvel avatar',
 	'user-profile-picture-yourpicture' => 'Votre image',
 	'user-profile-picture-yourpicturestext' => 'Voici, ci-dessous, les images qui apparaîtront dans votre profil, pages en réseau, et dans vos commentaires.',
 	'user-profile-picture-large' => 'Grand',
@@ -2321,8 +2317,6 @@ $messages['fr'] = array(
 	'user-profile-picture-currentimage' => 'Image actuelle',
 	'user-profile-picture-choosepicture' => 'Choisir votre image',
 	'user-profile-picture-picsize' => 'Votre image doit au format jpeg, png ou gif et doit être de taille inférieure à 100 kilo-octets.',
-	'user-profile-picture-badvirusscanner' => 'Configuration mauvaise – scanner anti-virus inconnu :',
-	'user-profile-picture-scanfailed' => 'échec de la numérisation',
 	'user-profile-goback' => 'Revenir en arrière',
 	'user-profile-userlevels-link' => 'Niveaux de l’utilisateur',
 	'user-no-images' => 'Aucune image importée',
@@ -2350,6 +2344,8 @@ $messages['fr'] = array(
 	'profilelogpagetext' => 'Voici le journal des modifications du profil utilisateur',
 	'avatarlogpage' => 'Journal des imports des avatars',
 	'avatarlogpagetext' => 'Voici le journal des imports des avatars',
+	'user-profile-picture-log' => 'avatar',
+	'user-profile-picture-log-entry' => 'a importé un nouvel avatar',
 	'user-profile-picture-log-delete-entry' => 'a supprimé l’avatar de $1',
 );
 
@@ -2516,8 +2512,6 @@ $messages['gl'] = array(
 	'user-profile-sports-teamsaved' => 'Os seus equipos foron gardados',
 	'user-profile-sports-addmore' => 'Engadir máis deportes/equipos',
 	'user-profile-picture-title' => 'Actualizar a súa imaxe',
-	'user-profile-picture-log' => 'avatar',
-	'user-profile-picture-log-entry' => 'cargou un novo avatar',
 	'user-profile-picture-yourpicture' => 'A súa imaxe',
 	'user-profile-picture-yourpicturestext' => 'Embaixo están as imaxes que aparecerán no seu perfil, nas páxinas da rede e nos seus comentarios.',
 	'user-profile-picture-large' => 'Grande',
@@ -2528,8 +2522,6 @@ $messages['gl'] = array(
 	'user-profile-picture-currentimage' => 'Imaxe actual',
 	'user-profile-picture-choosepicture' => 'Escolla a súa imaxe',
 	'user-profile-picture-picsize' => 'A súa imaxe debe ser .jpeg, .png ou .gif e non debe ser maior a 100kb.',
-	'user-profile-picture-badvirusscanner' => 'Configuración errónea: escáner de virus descoñecido:',
-	'user-profile-picture-scanfailed' => 'fallou a dixitalización',
 	'user-profile-goback' => 'Volver atrás',
 	'user-profile-userlevels-link' => 'Niveis de usuario',
 	'user-no-images' => 'Ningunha imaxe foi cargada',
@@ -2557,6 +2549,8 @@ $messages['gl'] = array(
 	'profilelogpagetext' => 'Este é un rexistro de edicións do perfil de usuario',
 	'avatarlogpage' => 'Rexistro de carga de avatares',
 	'avatarlogpagetext' => 'Este é un rexistro de cargas de avatares de usuario',
+	'user-profile-picture-log' => 'avatar',
+	'user-profile-picture-log-entry' => 'cargou un novo avatar',
 	'user-profile-picture-log-delete-entry' => 'borrou o avatar de $1',
 );
 
@@ -2965,8 +2959,6 @@ Clicca <a href="$1">hic</a> pro aperir un session o clicca <a href="$2">hic</a> 
 	'user-profile-sports-teamsaved' => 'Tu equipas ha essite immagazinate',
 	'user-profile-sports-addmore' => 'Adder plus sportes/equipas',
 	'user-profile-picture-title' => 'Cargar un photo de te',
-	'user-profile-picture-log' => 'avatar',
-	'user-profile-picture-log-entry' => 'cargava un nove avatar',
 	'user-profile-picture-yourpicture' => 'Photo de te',
 	'user-profile-picture-yourpicturestext' => 'Infra es le imagines que apparera in tu profilo, paginas de rete, e in tu commentos.',
 	'user-profile-picture-large' => 'Grande',
@@ -2977,8 +2969,6 @@ Clicca <a href="$1">hic</a> pro aperir un session o clicca <a href="$2">hic</a> 
 	'user-profile-picture-currentimage' => 'Imagine actual',
 	'user-profile-picture-choosepicture' => 'Selige tu imagine',
 	'user-profile-picture-picsize' => 'Tu imagine debe esser in formato JPEG, PNG o GIF e debe esser minus de 100KB in grandor.',
-	'user-profile-picture-badvirusscanner' => 'Mal configuration: scanner anti-virus incognite:',
-	'user-profile-picture-scanfailed' => 'scansion fallite',
 	'user-profile-goback' => 'Retornar',
 	'user-profile-userlevels-link' => 'Nivellos de usator',
 	'user-no-images' => 'Nulle imagine cargate',
@@ -3006,6 +2996,8 @@ Clicca <a href="$1">hic</a> pro aperir un session o clicca <a href="$2">hic</a> 
 	'profilelogpagetext' => 'Isto es un registro de modificationes in le profilos del usatores',
 	'avatarlogpage' => 'Registro de cargamento de avatares',
 	'avatarlogpagetext' => 'Isto es un registro de avatares que le usatores ha cargate',
+	'user-profile-picture-log' => 'avatar',
+	'user-profile-picture-log-entry' => 'cargava un nove avatar',
 	'user-profile-picture-log-delete-entry' => 'deleva le avatar de $1',
 );
 
@@ -3155,8 +3147,6 @@ $messages['jv'] = array(
 	'user-profile-sports-sport' => 'Olahraga',
 	'user-profile-sports-notloggedintext' => 'Panjenengan kudu log mlebu kanggo nyunting profil panjenengan.',
 	'user-profile-picture-title' => 'Unggahna gambar panjenengan',
-	'user-profile-picture-log' => 'avatar',
-	'user-profile-picture-log-entry' => 'ngunggahaké avatar anyar',
 	'user-profile-picture-yourpicture' => 'Gambar panjenengan',
 	'user-profile-picture-large' => 'Gedhé',
 	'user-profile-picture-medium' => 'Tengah-tengahan',
@@ -3169,6 +3159,8 @@ $messages['jv'] = array(
 	'edit-profile-title' => 'Sunting profil panjenengan',
 	'user-page-link' => 'Kaca panganggo',
 	'user-social-profile-link' => 'Profil sosial',
+	'user-profile-picture-log' => 'avatar',
+	'user-profile-picture-log-entry' => 'ngunggahaké avatar anyar',
 );
 
 /** Khmer (ភាសាខ្មែរ)
@@ -3301,8 +3293,6 @@ $messages['km'] = array(
 	'user-profile-sports-teamsaved' => 'ក្រុម​របស់​អ្នក​ត្រូវ​បាន​រក្សាទុក​ហើយ',
 	'user-profile-sports-addmore' => 'បន្ថែម កីឡា/ក្រុម​',
 	'user-profile-picture-title' => 'ផ្ទុកឡើង​រូបថត​របស់អ្នក',
-	'user-profile-picture-log' => 'អវតារ',
-	'user-profile-picture-log-entry' => 'ផ្ទុក​អវតារ​ថ្មី​ឡើង',
 	'user-profile-picture-yourpicture' => 'រូបថត​របស់អ្នក',
 	'user-profile-picture-large' => 'ធំ',
 	'user-profile-picture-medlarge' => 'មធ្យម-ធំ',
@@ -3312,7 +3302,6 @@ $messages['km'] = array(
 	'user-profile-picture-currentimage' => 'រូបភាពបច្ចុប្បន្ន',
 	'user-profile-picture-choosepicture' => 'ជ្រើសរើស​រូបថត​របស់​អ្នក',
 	'user-profile-picture-picsize' => 'រូបភាព​របស់​អ្នក​ត្រូវតែ​មាន​ទម្រង់​ជា jpeg, png, និង gif ហើយ​ត្រូវតែ​មាន​ទំហំ​តូចជាង ១០០​គីឡូបៃ​។',
-	'user-profile-picture-scanfailed' => 'វិភាគ​បាន​បរាជ័យ',
 	'user-profile-goback' => 'ត្រឡប់​ក្រោយ​៖',
 	'user-profile-userlevels-link' => 'កម្រិត​អ្នកប្រើប្រាស់',
 	'user-no-images' => 'គ្មានរូបភាព ត្រូវបានផ្ទុកឡើង',
@@ -3340,6 +3329,8 @@ $messages['km'] = array(
 	'profilelogpagetext' => 'នេះ​គឺជា​កំណត់ហេតុ​នៃ​ការកែប្រែ​ទំព័រ​ទម្រង់​អ្នកប្រើប្រាស់',
 	'avatarlogpage' => 'កំណត់ហេតុ​នៃ​ការ​ផ្ទុក​អវតារ​ឡើង',
 	'avatarlogpagetext' => 'នេះ​គឺជា​កំណត់ហេតុ​នៃ​ការ​ផ្ទុកឡើង​អវតារ​អ្នកប្រើប្រាស់',
+	'user-profile-picture-log' => 'អវតារ',
+	'user-profile-picture-log-entry' => 'ផ្ទុក​អវតារ​ថ្មី​ឡើង',
 	'user-profile-picture-log-delete-entry' => 'បាន​លុប​អវតារ​របស់ $1',
 );
 
@@ -3753,8 +3744,6 @@ $messages['ml'] = array(
 	'user-profile-interests-books' => 'പുസ്തകങ്ങള്‍',
 	'user-profile-interests-magazines' => 'മാസികകള്‍',
 	'user-profile-interests-videogames' => 'വീഡിയോ ഗെയിമുകള്‍',
-	'user-profile-picture-log' => 'അവതാരം',
-	'user-profile-picture-log-entry' => 'പുതിയ അവതാരം അപ്‌ലോഡ് ചെയ്തിരിക്കുന്നു',
 	'user-profile-picture-yourpicture' => 'താങ്കളുടെ ചിത്രം',
 	'user-profile-picture-large' => 'വലുത്',
 	'user-profile-picture-medium' => 'ഇടത്തരം',
@@ -3772,6 +3761,8 @@ $messages['ml'] = array(
 * Special:UploadAvatar|അവതാരം
 * Special:UpdateProfile/preferences|ക്രമീകരണങ്ങള്‍',
 	'user-type-toggle-old' => 'വിക്കിയിലെ ഉപയോക്തൃതാള്‍ ഉപയോഗിക്കുക',
+	'user-profile-picture-log' => 'അവതാരം',
+	'user-profile-picture-log-entry' => 'പുതിയ അവതാരം അപ്‌ലോഡ് ചെയ്തിരിക്കുന്നു',
 );
 
 /** Marathi (मराठी)
@@ -3903,8 +3894,6 @@ $messages['mr'] = array(
 	'user-profile-sports-teamsaved' => 'तुमचा संघ जतन करण्यात आलेला आहे',
 	'user-profile-sports-addmore' => 'आणखी खेळ/संघ वाढवा',
 	'user-profile-picture-title' => 'तुमचे चित्र चढवा',
-	'user-profile-picture-log' => 'अवतार',
-	'user-profile-picture-log-entry' => 'नवीन अवतार चढविला',
 	'user-profile-picture-yourpicture' => 'तुमचे चित्र',
 	'user-profile-picture-yourpicturestext' => 'खाली दाखवलेली चित्रे तुमच्या प्रोफाइल , नेटवर्क पृष्ठ आणि तुमच्या टिपणात दिसतील.',
 	'user-profile-picture-large' => 'मोठे',
@@ -3915,8 +3904,6 @@ $messages['mr'] = array(
 	'user-profile-picture-currentimage' => 'सध्याचे चित्र',
 	'user-profile-picture-choosepicture' => 'तुमचे चित्र निवडा',
 	'user-profile-picture-picsize' => 'तुमचे चित्र jpeg, png, किंवा gif यापैकी एक असले पाहिजे तसेच १०० केबी पेक्षा कमी आकाराचे पाहिजे.',
-	'user-profile-picture-badvirusscanner' => 'चुकीचे कॉन्फिगरेशन: अनोळखी विषाणू तपासक:',
-	'user-profile-picture-scanfailed' => 'स्कन पूर्ण झाले नाही',
 	'user-profile-goback' => 'मागे जा',
 	'user-no-images' => 'चित्रे चढविलेली नाहीत',
 	'edit-profile-title' => 'तुमचे प्रोफाइल संपादा',
@@ -3931,13 +3918,14 @@ $messages['mr'] = array(
 	'user-type-toggle-old' => 'विकि सदस्य पान वापरा',
 	'user-type-toggle-new' => 'सार्वजनिक सदस्यपान वापरा',
 	'user-board-login-message' => 'इतर सदस्यांना संदेश पाठविण्यासाठी तुम्ही <a href="$1">प्रवेश केलेला असणे</a> आवश्यक आहे.',
+	'user-profile-picture-log' => 'अवतार',
+	'user-profile-picture-log-entry' => 'नवीन अवतार चढविला',
 );
 
 /** Malay (Bahasa Melayu)
  * @author Kurniasan
  */
 $messages['ms'] = array(
-	'user-profile-picture-scanfailed' => 'imbasan gagal',
 	'user-profile-goback' => 'Pergi balik',
 	'user-profile-userlevels-link' => 'Tahap-tahap pengguna',
 	'user-no-images' => 'Tiada imej yang dimuat naik',
@@ -4010,8 +3998,6 @@ $messages['nah'] = array(
 	'user-profile-personal-education' => 'Tlamachtiliztli',
 	'user-profile-personal-schools' => 'Calmecac',
 	'user-profile-picture-title' => 'Ticquetzāz moīxip',
-	'user-profile-picture-log' => 'avatar',
-	'user-profile-picture-log-entry' => 'ōmoquetz yancuīc avatar',
 	'user-profile-picture-yourpicture' => 'Moīxip',
 	'user-profile-picture-large' => 'Huēyi',
 	'user-profile-picture-medlarge' => 'Nepantlah - Huēyi',
@@ -4020,6 +4006,8 @@ $messages['nah'] = array(
 	'user-profile-picture-uploaddifferent' => 'Ticquetzāz ahneneuhqui īxiptli',
 	'user-profile-picture-currentimage' => 'Āxcān īxiptli',
 	'user-page-link' => 'Tlatequitiltilīlli',
+	'user-profile-picture-log' => 'avatar',
+	'user-profile-picture-log-entry' => 'ōmoquetz yancuīc avatar',
 );
 
 /** Low German (Plattdüütsch)
@@ -4029,13 +4017,13 @@ $messages['nds'] = array(
 	'user-profile-personal-name' => 'Naam',
 	'user-profile-sports-sport' => 'Sport',
 	'user-profile-sports-notloggedintitle' => 'Höytsa!',
-	'user-profile-picture-log' => 'Avatar',
 	'user-profile-picture-yourpicture' => 'Dien Bild',
 	'user-profile-picture-large' => 'Groot',
 	'user-profile-picture-medlarge' => 'Middel - Groot',
 	'user-profile-picture-medium' => 'Middel',
 	'user-profile-picture-small' => 'Lütt',
 	'user-page-link' => 'Brukersied',
+	'user-profile-picture-log' => 'Avatar',
 );
 
 /** Dutch (Nederlands)
@@ -4181,8 +4169,6 @@ Klik <a href="$1">hier</a> om u aan te melden of klik <a href="$2">hier</a> om e
 	'user-profile-sports-teamsaved' => 'Uw team is opgeslagen',
 	'user-profile-sports-addmore' => 'Meer sporten/teams toevoegen',
 	'user-profile-picture-title' => 'Uw afbeelding uploaden',
-	'user-profile-picture-log' => 'avatar',
-	'user-profile-picture-log-entry' => 'nieuwe avatar uploaden',
 	'user-profile-picture-yourpicture' => 'Uw afbeelding',
 	'user-profile-picture-yourpicturestext' => "Hieronder staan de afbeeldingen die in uw profiel, netwerkpagina's en in uw opmerkingen verschijnen.",
 	'user-profile-picture-large' => 'Groot',
@@ -4193,8 +4179,6 @@ Klik <a href="$1">hier</a> om u aan te melden of klik <a href="$2">hier</a> om e
 	'user-profile-picture-currentimage' => 'Huidige afbeelding',
 	'user-profile-picture-choosepicture' => 'Kies uw afbeelding',
 	'user-profile-picture-picsize' => 'Uw afbeelding moet van het type jpeg, png of gif zijn en kleiner zijn dan 100kb.',
-	'user-profile-picture-badvirusscanner' => 'Onjuiste instellingen: onbekende virusscanner:',
-	'user-profile-picture-scanfailed' => 'scan mislukt',
 	'user-profile-goback' => 'Terug',
 	'user-profile-userlevels-link' => 'Gebruikersniveaus',
 	'user-no-images' => 'Geen afbeeldingen toegevoegd',
@@ -4222,6 +4206,8 @@ Klik <a href="$1">hier</a> om u aan te melden of klik <a href="$2">hier</a> om e
 	'profilelogpagetext' => 'Dit logboek bevat de bewerkingen aan gebruikersprofielen',
 	'avatarlogpage' => 'Uploadlogboek avatars',
 	'avatarlogpagetext' => 'Dit logboek bevat uploads van avatars',
+	'user-profile-picture-log' => 'avatar',
+	'user-profile-picture-log-entry' => 'nieuwe avatar uploaden',
 	'user-profile-picture-log-delete-entry' => 'heeft de avatar van $1 verwijderd',
 );
 
@@ -4549,8 +4535,6 @@ $messages['no'] = array(
 	'user-profile-sports-teamsaved' => 'Lagene dine har blitt lagret',
 	'user-profile-sports-addmore' => 'Legg til flere sporter/lag',
 	'user-profile-picture-title' => 'Last opp bilde',
-	'user-profile-picture-log' => 'avatar',
-	'user-profile-picture-log-entry' => 'lastet opp ny avatar',
 	'user-profile-picture-yourpicture' => 'Ditt bilde',
 	'user-profile-picture-yourpicturestext' => 'Under er bildene som vil vises på profilen din, nettverkssider og på kommentarene dine.',
 	'user-profile-picture-large' => 'Stort',
@@ -4561,8 +4545,6 @@ $messages['no'] = array(
 	'user-profile-picture-currentimage' => 'Nåværende bilde',
 	'user-profile-picture-choosepicture' => 'Velg bilde',
 	'user-profile-picture-picsize' => 'Bildet må være JPEG, PNG eller GIF og må være midre enn 100&nbsp;KB.',
-	'user-profile-picture-badvirusscanner' => 'Dårlig konfigurasjon: ukjent virusskanner:',
-	'user-profile-picture-scanfailed' => 'skanning mislyktes',
 	'user-profile-goback' => 'Tilbake',
 	'user-profile-userlevels-link' => 'Brukernivåer',
 	'user-no-images' => 'Ingen bilder lastet opp',
@@ -4590,6 +4572,8 @@ $messages['no'] = array(
 	'profilelogpagetext' => 'Dette er en logg over redigeringer i brukerprofil',
 	'avatarlogpage' => 'Avataropplastingslogg',
 	'avatarlogpagetext' => 'Dette er en logg over opplastede brukeravatarer',
+	'user-profile-picture-log' => 'avatar',
+	'user-profile-picture-log-entry' => 'lastet opp ny avatar',
 	'user-profile-picture-log-delete-entry' => 'slettet avatar for $1',
 );
 
@@ -4733,8 +4717,6 @@ $messages['oc'] = array(
 	'user-profile-sports-teamsaved' => 'Vòstras equipas son estadas salvadas',
 	'user-profile-sports-addmore' => "Apondre mai d'espòrts o d'equipas esportivas",
 	'user-profile-picture-title' => 'Importar vòstres imatges',
-	'user-profile-picture-log' => 'avatar',
-	'user-profile-picture-log-entry' => 'a importat un avatar novèl',
 	'user-profile-picture-yourpicture' => 'Vòstre imatge',
 	'user-profile-picture-yourpicturestext' => "Vaquí, çaijós, los imatges qu'apareisseràn dins vòstre perfil, paginas en ret, e dins vòstres comentaris.",
 	'user-profile-picture-large' => 'Grand',
@@ -4745,8 +4727,6 @@ $messages['oc'] = array(
 	'user-profile-picture-currentimage' => 'Imatge actual',
 	'user-profile-picture-choosepicture' => 'Causir vòstre imatge',
 	'user-profile-picture-picsize' => 'Vòstre imatge deu èsser al format jpeg, png o gif e deu èsser de talha inferiora a 100 quilo-octets.',
-	'user-profile-picture-badvirusscanner' => 'Marrida configuracion – escanèr antivirús desconegut :',
-	'user-profile-picture-scanfailed' => 'fracàs de la numerizacion',
 	'user-profile-goback' => 'Tornar enarrièr',
 	'user-profile-userlevels-link' => 'Nivèls de l’utilizaire',
 	'user-no-images' => "Cap d'imatge importat",
@@ -4774,6 +4754,8 @@ $messages['oc'] = array(
 	'profilelogpagetext' => "Vaquí lo jornal de las modificacions del perfil d'utilizaire",
 	'avatarlogpage' => 'Jornal dels impòrts dels avatars',
 	'avatarlogpagetext' => 'Vaquí lo jornal dels impòrts dels avatars',
+	'user-profile-picture-log' => 'avatar',
+	'user-profile-picture-log-entry' => 'a importat un avatar novèl',
 	'user-profile-picture-log-delete-entry' => 'a suprimit l’avatar de $1',
 );
 
@@ -5118,8 +5100,6 @@ Clique <a href="$1">aqui</a> para logar ou clique <a href="$2">aqui</a> para se 
 	'user-profile-sports-teamsaved' => 'Seus times foram salvos',
 	'user-profile-sports-addmore' => 'Adicionar mais esportes/times',
 	'user-profile-picture-title' => 'Carregue sua imagem',
-	'user-profile-picture-log' => 'avatar',
-	'user-profile-picture-log-entry' => 'Carregado novo avatar',
 	'user-profile-picture-yourpicture' => 'Sua foto',
 	'user-profile-picture-yourpicturestext' => 'Abaixo estão as imagens que vão aparecer no seu perfil, páginas de rede e seus comentários.',
 	'user-profile-picture-large' => 'Grande',
@@ -5130,8 +5110,6 @@ Clique <a href="$1">aqui</a> para logar ou clique <a href="$2">aqui</a> para se 
 	'user-profile-picture-currentimage' => 'Imagem Atual',
 	'user-profile-picture-choosepicture' => 'Escolhea sua imagem',
 	'user-profile-picture-picsize' => 'A sua imagem deverá ter o formato jpeg, png ou gif, e deverá ter um tamanho menor que 100kb.',
-	'user-profile-picture-badvirusscanner' => 'Problema de configuração: detector de vírus desconhecido:',
-	'user-profile-picture-scanfailed' => 'scan falhou',
 	'user-profile-goback' => 'Voltar',
 	'user-profile-userlevels-link' => 'Níveis de usuário',
 	'user-no-images' => 'Nenhuma imagem carregada',
@@ -5159,6 +5137,8 @@ Clique <a href="$1">aqui</a> para logar ou clique <a href="$2">aqui</a> para se 
 	'profilelogpagetext' => 'Este é um log para edições de perfil de usuário',
 	'avatarlogpage' => 'Log de upload de avatar',
 	'avatarlogpagetext' => 'Este é um log de uploads de avatar de usuário',
+	'user-profile-picture-log' => 'avatar',
+	'user-profile-picture-log-entry' => 'Carregado novo avatar',
 	'user-profile-picture-log-delete-entry' => 'Excluído avatar de $1',
 );
 
@@ -5242,11 +5222,11 @@ $messages['ro'] = array(
 	'user-profile-interests-videogames' => 'Jocuri video',
 	'user-profile-tidbits-favathlete' => 'Atlet favorit şi de ce',
 	'user-profile-sports-sport' => 'Sport',
-	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-large' => 'Mare',
 	'user-profile-picture-medium' => 'Mediu',
 	'user-profile-picture-small' => 'Mic',
 	'user-profile-userlevels-link' => 'Niveluri de utilizator',
+	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-delete-entry' => 'şters avatarul utilizatorului $1',
 );
 
@@ -5294,13 +5274,13 @@ $messages['roa-tara'] = array(
 	'user-profile-personal-birthday' => 'Date de nascite',
 	'user-profile-personal-web' => 'Web',
 	'user-profile-picture-title' => 'Careche a fota toje',
-	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-yourpicture' => "'A fota toje",
 	'user-profile-picture-uploaddifferent' => "Careche 'na fote differende",
 	'user-profile-picture-currentimage' => 'Immaggina corrende',
 	'edit-profile-title' => "Cange 'u profile tue",
 	'user-page-link' => "Pàgene de l'utende",
 	'user-wiki-link' => "Pàgene de l'utende sus a Uicchi",
+	'user-profile-picture-log' => 'avatar',
 );
 
 /** Russian (Русский)
@@ -5436,8 +5416,6 @@ $messages['ru'] = array(
 	'user-profile-sports-teamsaved' => 'Ваши команды были сохранены',
 	'user-profile-sports-addmore' => 'Добавить ещё видов спорта или команд',
 	'user-profile-picture-title' => 'Загрузка ваших картинок',
-	'user-profile-picture-log' => 'аватар',
-	'user-profile-picture-log-entry' => 'загрузил новый аватар',
 	'user-profile-picture-yourpicture' => 'Ваша картинка',
 	'user-profile-picture-yourpicturestext' => 'Ниже приведены изображения, которые будут показываться в очерке о вас, сетевых страницах, комментариях.',
 	'user-profile-picture-large' => 'Крупная',
@@ -5448,8 +5426,6 @@ $messages['ru'] = array(
 	'user-profile-picture-currentimage' => 'Текущая картинка',
 	'user-profile-picture-choosepicture' => 'Выберите вашу картинку',
 	'user-profile-picture-picsize' => 'Ваше изображение должно быть в формате jpeg, png, или gif и не превышать 100 КБ в размере.',
-	'user-profile-picture-badvirusscanner' => 'Ошибочная настройка. Неизвестный антивирус:',
-	'user-profile-picture-scanfailed' => 'ошибка проверки',
 	'user-profile-goback' => 'Назад',
 	'user-no-images' => 'изображения не загружены',
 	'edit-profile-title' => 'Править ваш очерк',
@@ -5464,6 +5440,8 @@ $messages['ru'] = array(
 	'user-type-toggle-old' => 'Использовать вики-страницу участника',
 	'user-type-toggle-new' => 'Использовать социальную страницу участника',
 	'user-board-login-message' => 'Вы должны <a href="$1">представиться системе</a> чтобы отправлять сообщения другим учсатникам.',
+	'user-profile-picture-log' => 'аватар',
+	'user-profile-picture-log-entry' => 'загрузил новый аватар',
 );
 
 /** Slovak (Slovenčina)
@@ -5606,8 +5584,6 @@ $messages['sk'] = array(
 	'user-profile-sports-teamsaved' => 'Vaše tímy boli pridané',
 	'user-profile-sports-addmore' => 'Pridať ďalšie športy/tímy',
 	'user-profile-picture-title' => 'Nahrať svoj obrázok',
-	'user-profile-picture-log' => 'obrázok',
-	'user-profile-picture-log-entry' => 'bol nahraný nový obrázok',
 	'user-profile-picture-yourpicture' => 'Váš obrázok',
 	'user-profile-picture-yourpicturestext' => 'Dolu sa nachádzajú obrázky, ktoré sa objavia vo vašom profile, sieťových stránkach a pri vašich komentároch.',
 	'user-profile-picture-large' => 'Veľký',
@@ -5618,8 +5594,6 @@ $messages['sk'] = array(
 	'user-profile-picture-currentimage' => 'Aktuálny obrázok',
 	'user-profile-picture-choosepicture' => 'Vyberte svoj obrázok',
 	'user-profile-picture-picsize' => 'Váš obrázok musí byť jpeg, png alebo gif a musí byť menší ako 100 KiB.',
-	'user-profile-picture-badvirusscanner' => 'Chybná konfigurácia: neznámy antivírus:',
-	'user-profile-picture-scanfailed' => 'kontrola zlyhala',
 	'user-profile-goback' => 'Prejsť späť',
 	'user-profile-userlevels-link' => 'Úrovne používateľov',
 	'user-no-images' => 'Neboli nahrané žiadne obrázky',
@@ -5647,6 +5621,8 @@ $messages['sk'] = array(
 	'profilelogpagetext' => 'Toto je záznam úprav profilu používateľa',
 	'avatarlogpage' => 'Záznam nahraných fotografií používateľa',
 	'avatarlogpagetext' => 'Toto je záznam nahraných fotografií používateľa',
+	'user-profile-picture-log' => 'obrázok',
+	'user-profile-picture-log-entry' => 'bol nahraný nový obrázok',
 	'user-profile-picture-log-delete-entry' => 'zmazal fotografiu používateľa $1',
 );
 
@@ -5811,8 +5787,6 @@ Klicka <a href="$1">här</a> för att logga in eller klicka <a href="$2">här</a
 	'user-profile-sports-teamsaved' => 'Dina lag har sparats',
 	'user-profile-sports-addmore' => 'Lägg till mera sporter/lag',
 	'user-profile-picture-title' => 'Ladda upp din bild',
-	'user-profile-picture-log' => 'avatar',
-	'user-profile-picture-log-entry' => 'laddade upp ny avatar',
 	'user-profile-picture-yourpicture' => 'Din bild',
 	'user-profile-picture-yourpicturestext' => 'Nedan är bilderna som kommer visas på din profil, nätverkssidor och på dina kommentarer.',
 	'user-profile-picture-large' => 'Stor',
@@ -5823,8 +5797,6 @@ Klicka <a href="$1">här</a> för att logga in eller klicka <a href="$2">här</a
 	'user-profile-picture-currentimage' => 'Nuvarande bild',
 	'user-profile-picture-choosepicture' => 'Välj din bild',
 	'user-profile-picture-picsize' => 'Dina bilder måste vara JPEG, PNG eller GIF och vara mindre än 100kb i storlek.',
-	'user-profile-picture-badvirusscanner' => 'Dålig konfiguration: okänd virusskanner:',
-	'user-profile-picture-scanfailed' => 'skanning misslyckades',
 	'user-profile-goback' => 'Gå tillbaka',
 	'user-profile-userlevels-link' => 'Användarnivåer',
 	'user-no-images' => 'Inga bilder uppladdade',
@@ -5852,6 +5824,8 @@ Klicka <a href="$1">här</a> för att logga in eller klicka <a href="$2">här</a
 	'profilelogpagetext' => 'Detta är en logg för användarprofilredigeringar',
 	'avatarlogpage' => 'Avataruppladdningslogg',
 	'avatarlogpagetext' => 'Detta är en logg för uppladdningar av användaravatarer',
+	'user-profile-picture-log' => 'avatar',
+	'user-profile-picture-log-entry' => 'laddade upp ny avatar',
 	'user-profile-picture-log-delete-entry' => 'raderade avataren för $1',
 );
 
@@ -5961,8 +5935,6 @@ $messages['te'] = array(
 	'user-profile-update-button' => 'తాజాకరించు',
 	'user-profile-sports-notloggedintitle' => 'అయ్యో!',
 	'user-profile-picture-title' => 'మీ చిత్రాన్ని ఎగుమతి చేయండి',
-	'user-profile-picture-log' => 'అవతారం',
-	'user-profile-picture-log-entry' => 'కొత్త అవతారాన్ని ఎగుమతిచేయండి',
 	'user-profile-picture-yourpicture' => 'మీ బొమ్మ',
 	'user-profile-picture-large' => 'పెద్దది',
 	'user-profile-picture-medlarge' => 'కొంచెం పెద్దది',
@@ -5972,7 +5944,6 @@ $messages['te'] = array(
 	'user-profile-picture-currentimage' => 'ప్రస్తుత బొమ్మ',
 	'user-profile-picture-choosepicture' => 'మీ చిత్రాన్ని ఎంచుకోండి',
 	'user-profile-picture-picsize' => 'మీ బొమ్మ 100కిబై కంటే తక్కువ పరిమాణంలో ఉండి jpeg, png, లేదా gif కానీ అయివుండాలి.',
-	'user-profile-picture-scanfailed' => 'స్కాన్ విఫలమైంది',
 	'user-profile-goback' => 'వెనక్కి వెళ్ళండి',
 	'user-profile-userlevels-link' => 'వాడుకరి స్థాయి',
 	'user-no-images' => 'బొమ్మలేమీ ఎగుమతి కాలేదు',
@@ -5994,6 +5965,8 @@ $messages['te'] = array(
 	'avatarupload-currentavatar' => '$1 యొక్క ప్రస్తుత అవతారం',
 	'avatarupload-removesuccess' => 'అవతారాన్ని విజయవంతంగా తొలగించాం',
 	'avatarlogpage' => 'అవతార ఎగుమతుల చిట్టా',
+	'user-profile-picture-log' => 'అవతారం',
+	'user-profile-picture-log-entry' => 'కొత్త అవతారాన్ని ఎగుమతిచేయండి',
 );
 
 /** Tetum (Tetun)
