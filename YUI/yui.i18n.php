@@ -222,7 +222,7 @@ $messages['km'] = array(
  * @author Purodha
  */
 $messages['ksh'] = array(
-	'yui-desc' => 'En Aanzahl Hellfe un Projrämmscher en JavaSkrepp',
+	'yui-desc' => 'En Aanzahl Hellfer un Projrämmscher en JavaSkrepp',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
