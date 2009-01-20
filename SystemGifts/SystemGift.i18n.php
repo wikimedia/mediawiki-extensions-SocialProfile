@@ -71,7 +71,9 @@ The {{SITENAME}} Team
 Hey, want to stop getting emails from us?  
 
 Click $5
-and change your settings to disable email notifications.'
+and change your settings to disable email notifications.',
+	// For Special:ListGroupRights
+	'right-awardsmanage' => 'Create new and edit existing awards',
 );
 
 /** Finnish (Suomi)
@@ -139,6 +141,7 @@ Hei, etkö halua enää saada sähköposteja meiltä?
 
 Napsauta $5
 ja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.',
+	'right-awardsmanage' => 'Luoda uusia ja muokata olemassaolevia palkintoja',
 );
 
 /** Portuguese (Português)

@@ -427,6 +427,8 @@ Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.
 *Yemen
 *Zambia
 *Zimbabwe',
+	// For Special:ListGroupRights
+	'right-avatarremove' => "Remove user's avatars",
 );
 
 /** Message documentation (Message documentation)
@@ -2162,6 +2164,7 @@ $messages['fi'] = array(
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'latasi uuden avatarin',
 	'user-profile-picture-log-delete-entry' => 'poisti käyttäjän $1 avatarin',
+	'right-avatarremove' => 'Poistaa käyttäjien avatareja',
 );
 
 /** French (Français)
