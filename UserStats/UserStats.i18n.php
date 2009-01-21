@@ -184,6 +184,26 @@ $messages['arz'] = array(
 وغير إعداداتك لتعديل إخطارات البريد الإلكتروني.',
 );
 
+/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+ * @author EugeneZelenko
+ * @author Jim-by
+ */
+$messages['be-tarask'] = array(
+	'user-stats-alltime-title' => 'Болей за ўсё пунктаў у гісторыі',
+	'user-stats-weekly-title' => 'Болей за ўсё пунктаў у гэтым тыдні',
+	'user-stats-monthly-title' => 'Болей за ўсё пунктаў у гэтым месяцы',
+	'topusers' => 'Самыя актыўныя ўдзельнікі',
+	'top-fans-by-points-nav-header' => 'Самыя актыўныя аматары',
+	'top-fans-by-category-nav-header' => 'Самыя актыўныя па катэгорыям',
+	'top-fans-total-points-link' => 'Усяго пунктаў',
+	'top-fans-weekly-points-link' => 'Пунктаў на гэтым тыдні',
+	'top-fans-monthly-points-link' => 'Пунктаў у гэтым месяцы',
+	'top-fans-points' => 'пунктаў',
+	'top-fans-by-category-title' => 'Самы актыўны за ўсіх $1',
+	'top-fans-bad-field-title' => 'Ой!',
+	'top-fans-bad-field-message' => 'Такой статыстыкі няма.',
+);
+
 /** Bulgarian (Български)
  * @author DCLXVI
  */

@@ -434,6 +434,7 @@ Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.
 /** Message documentation (Message documentation)
  * @author Aotake
  * @author Jon Harald Søby
+ * @author Purodha
  */
 $messages['qqq'] = array(
 	'user-watchlist' => '{{Identical|My watchlist}}',
@@ -484,6 +485,7 @@ $messages['qqq'] = array(
 	'user-profile-picture-small' => '{{Identical|Small}}',
 	'user-page-link' => '{{Identical|User page}}',
 	'user-profile-picture-log' => '{{Identical|Avatar}}',
+	'right-avatarremove' => '{{doc-right|avatarremove}}',
 );
 
 /** Karelian (Karjala)
@@ -785,6 +787,7 @@ $messages['ar'] = array(
 	'user-profile-picture-log' => 'أفاتر',
 	'user-profile-picture-log-entry' => 'رفع أفاتر جديد',
 	'user-profile-picture-log-delete-entry' => 'حذف الأفاتر الخاص ب$1',
+	'right-avatarremove' => 'إزالة أفاترات المستخدمين',
 );
 
 /** Egyptian Spoken Arabic (مصرى)
@@ -984,6 +987,7 @@ $messages['bcc'] = array(
 $messages['be-tarask'] = array(
 	'other-info-books' => 'Кнігі',
 	'user-profile-personal-name' => 'Імя',
+	'user-profile-personal-country' => 'Краіна',
 	'user-profile-interests-books' => 'Кнігі',
 );
 
@@ -1468,6 +1472,7 @@ Klick <a href="$1">hier</a> um dich anzumelden oder klicke <a href="$2">hier</a>
 	'user-profile-picture-log' => 'Avatar',
 	'user-profile-picture-log-entry' => 'Neuer Avatar hochgeladen',
 	'user-profile-picture-log-delete-entry' => 'Avatar von $1 gelöscht',
+	'right-avatarremove' => 'Entferne das Avatar des Benutzers',
 );
 
 /** Greek (Ελληνικά)
@@ -2350,6 +2355,7 @@ $messages['fr'] = array(
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'a importé un nouvel avatar',
 	'user-profile-picture-log-delete-entry' => 'a supprimé l’avatar de $1',
+	'right-avatarremove' => "Enlever des avatars d'utilisateurs",
 );
 
 /** Western Frisian (Frysk)
@@ -2555,6 +2561,7 @@ $messages['gl'] = array(
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'cargou un novo avatar',
 	'user-profile-picture-log-delete-entry' => 'borrou o avatar de $1',
+	'right-avatarremove' => 'Eliminar os avatares do usuario',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)
@@ -3046,6 +3053,8 @@ $messages['ja'] = array(
 	'user-profile-default-country' => 'アメリカ合衆国',
 	'user-profile-section-preferences' => '個人設定',
 	'user-profile-personal-name' => '名前',
+	'user-profile-personal-city' => '市町村',
+	'user-profile-personal-country' => '国',
 	'user-profile-personal-birthdate' => '日付 (MM/DD)',
 	'user-profile-personal-web' => 'ウェブ',
 	'user-profile-personal-websites' => 'ウェブサイト',
@@ -3534,6 +3543,7 @@ Donn <a href="$1">enlogge</a> udder <a href="$2">Desch aanmellde</a>.',
 	'user-profile-picture-log' => 'Avataa',
 	'user-profile-picture-log-entry' => 'Neue Avataa huhjelaade',
 	'user-profile-picture-log-delete-entry' => 'däm $1 singe Avataa fottjeschmeße',
+	'right-avatarremove' => 'Enem Metmaacher sing Avataare fott schmiiße',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
@@ -4212,6 +4222,7 @@ Klik <a href="$1">hier</a> om u aan te melden of klik <a href="$2">hier</a> om e
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'nieuwe avatar uploaden',
 	'user-profile-picture-log-delete-entry' => 'heeft de avatar van $1 verwijderd',
+	'right-avatarremove' => 'Avatars van gebruikers verwijderen',
 );
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
@@ -4760,6 +4771,7 @@ $messages['oc'] = array(
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'a importat un avatar novèl',
 	'user-profile-picture-log-delete-entry' => 'a suprimit l’avatar de $1',
+	'right-avatarremove' => "Levar d'avatars d'utilizaires",
 );
 
 /** Ossetic (Иронау)
@@ -4975,7 +4987,7 @@ $messages['pt'] = array(
 	'user-edit-this' => 'Editar isto',
 	'user-points' => 'pontos',
 	'user-edit-profile' => 'Editar perfil',
-	'user-upload-avatar' => 'Upload avatar',
+	'user-upload-avatar' => 'Carregar avatar',
 	'user-watchlist' => 'Minha lista de vigiados',
 	'user-meet-people' => 'Conhecer pessoas',
 	'user-add-friend' => 'Adicionar como amigo',
@@ -4990,8 +5002,8 @@ $messages['pt'] = array(
 	'user-stats-votes' => 'Votos',
 	'user-stats-comments' => 'Comentários',
 	'user-stats-recruits' => 'Recrutamentos',
-	'user-stats-poll-votes' => 'Poll votes',
-	'user-stats-picture-game-votes' => 'Picture game votes',
+	'user-stats-poll-votes' => 'Votos de sondagem',
+	'user-stats-picture-game-votes' => 'Votos do jogo de imagens',
 	'user-stats-quiz-points' => 'Quiz points',
 	'user-stats-pick-points' => "Pick 'em points",
 	'other-info-title' => 'Outras informações',
@@ -5030,7 +5042,7 @@ $messages['pt'] = array(
 	'user-personal-info-about-me' => 'Sobre Mim',
 	'user-recent-activity-title' => 'Atividade Recente',
 	'user-recent-activity-edit' => 'Editou a página',
-	'user-recent-activity-vote' => 'Voteu na página',
+	'user-recent-activity-vote' => 'Votou na página',
 	'user-recent-activity-comment' => 'Comentou a página',
 	'user-recent-activity-gift-sent' => 'Enviou um presente para',
 	'user-recent-activity-gift-rec' => 'Recebeu um presente de',
@@ -5111,7 +5123,7 @@ Clique <a href="$1">aqui</a> para logar ou clique <a href="$2">aqui</a> para se 
 	'user-profile-picture-small' => 'Pequeno',
 	'user-profile-picture-uploaddifferent' => 'Carregar Imagem Diferente',
 	'user-profile-picture-currentimage' => 'Imagem Atual',
-	'user-profile-picture-choosepicture' => 'Escolhea sua imagem',
+	'user-profile-picture-choosepicture' => 'Escolha a sua imagem',
 	'user-profile-picture-picsize' => 'A sua imagem deverá ter o formato jpeg, png ou gif, e deverá ter um tamanho menor que 100kb.',
 	'user-profile-goback' => 'Voltar',
 	'user-profile-userlevels-link' => 'Níveis de usuário',
@@ -5135,7 +5147,7 @@ Clique <a href="$1">aqui</a> para logar ou clique <a href="$2">aqui</a> para se 
 	'avatarupload-removeavatar' => 'Remover avatar',
 	'avatarupload-currentavatar' => 'Avatar atual de $1',
 	'avatarupload-removesuccess' => 'O avatar foi removido com sucesso',
-	'avatarupload-removeanother' => 'Removee outro',
+	'avatarupload-removeanother' => 'Remover outro',
 	'profilelogpage' => 'Log de edição do perfil do usuário',
 	'profilelogpagetext' => 'Este é um log para edições de perfil de usuário',
 	'avatarlogpage' => 'Log de upload de avatar',
@@ -5143,6 +5155,7 @@ Clique <a href="$1">aqui</a> para logar ou clique <a href="$2">aqui</a> para se 
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'Carregado novo avatar',
 	'user-profile-picture-log-delete-entry' => 'Excluído avatar de $1',
+	'right-avatarremove' => 'Remover avatares do utilizador',
 );
 
 /** Tarifit (Tarifit)

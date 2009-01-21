@@ -924,11 +924,13 @@ $messages['it'] = array(
 
 /** Japanese (日本語)
  * @author Aotake
+ * @author Fryed-peach
  * @author Gzdavidwong
  */
 $messages['ja'] = array(
 	'userboard_delete' => '削除',
 	'userboard_noexist' => '閲覧しようとした利用者は存在していません。',
+	'userboard_private' => '非公開',
 );
 
 /** Javanese (Basa Jawa)
