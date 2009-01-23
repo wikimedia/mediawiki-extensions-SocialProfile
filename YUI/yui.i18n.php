@@ -347,6 +347,13 @@ $messages['sk'] = array(
 	'yui-desc' => 'Sada nástrojov napísaných v JavaScripte',
 );
 
+/** Albanian (Shqip)
+ * @author Puntori
+ */
+$messages['sq'] = array(
+	'yui-desc' => 'Një tërësi shërbimesh dhe kontrollesh të shkruara në JavaScript',
+);
+
 /** Seeltersk (Seeltersk)
  * @author Pyt
  */

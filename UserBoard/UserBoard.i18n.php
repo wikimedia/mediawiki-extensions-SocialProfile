@@ -400,6 +400,7 @@ $messages['da'] = array(
 );
 
 /** German (Deutsch)
+ * @author Als-Holder
  * @author Purodha
  * @author Raimond Spekking
  * @author Tim 'Avatar' Bartel
@@ -429,7 +430,7 @@ Klicke <a href="index.php?title=Special:UserLogin">hier zum Anmelden</a>',
 	'userboard_noexist' => 'Der gesuchte Benutzer existiert nicht.',
 	'userboard_yourboard' => 'Deine Pinnwand',
 	'userboard_owner' => '$1s Pinnwand',
-	'userboard_yourboardwith' => 'Deine Pinnwand-Diskussion mit with $1',
+	'userboard_yourboardwith' => 'Deine Pinnwand-Diskussion mit $1',
 	'userboard_otherboardwith' => '$1s Pinnwand-Diskussion mit $2',
 	'userboard_backprofile' => 'Zurück zu $1s Profil',
 	'userboard_backyourprofile' => 'Zurück zu deinem Profil',
@@ -752,6 +753,68 @@ $messages['grc'] = array(
 	'userboard_delete' => 'Σβεννύναι',
 	'userboard_private' => 'Ἰδιωτική',
 	'userboard_nextpage' => 'Ἑπομέναι',
+);
+
+/** Swiss German (Alemannisch)
+ * @author Als-Holder
+ */
+$messages['gsw'] = array(
+	'boardblastlogintitle' => 'Du muesch aagmäldet syy zum Nochrichte verschicke z chenne',
+	'boardblastlogintext' => 'Du muesch aagmäldet syy go Nochrichte chenne verschicke.
+Druck <a href="index.php?title=Special:UserLogin">doo zum Aamälde</a>',
+	'messagesenttitle' => 'Nochrichte gschickt',
+	'boardblasttitle' => 'Nochricht schicke',
+	'boardblaststep1' => 'Schritt 1: Schryb Dyyni Nochricht',
+	'boardblastprivatenote' => 'Alli Nochrichte wäre as privati Mitteilige verschickt',
+	'boardblaststep2' => 'Schritt 2: Wehl uus, wäm Du d Nochrichte witt schicke',
+	'boardlinkselectall' => 'Alli markiere',
+	'boardlinkunselectall' => 'Keini markiere',
+	'boardlinkselectfriends' => 'Frynd uuswehle',
+	'boardlinkunselectfriends' => 'Frynd abwehle',
+	'boardlinkselectfoes' => 'Fynd uuswehle',
+	'boardlinkunselectfoes' => 'Fynd abwehle',
+	'boardsendbutton' => 'Nochricht schicke',
+	'boardnofriends' => 'Du hesch keini Frynd, wu Du chenntsch e Nochricht schicke!',
+	'messagesentsuccess' => 'Dyyni Nochricht isch erfolgryych verschickt wore',
+	'userboard' => 'Schwarz Brätt',
+	'userboard_board-to-board' => 'Schwarz Brätt - zue - Schwarz Brätt',
+	'userboard_delete' => 'Lesche',
+	'userboard_noexist' => 'Dr Benutzer, wu Du wit aaluege, git s nit.',
+	'userboard_yourboard' => 'Dyy Schwarz Brätt',
+	'userboard_owner' => 'S Schwarz Brätt vu $1',
+	'userboard_yourboardwith' => 'Dyyni Diskussion uf em Schwarze Brätt mit $1',
+	'userboard_otherboardwith' => 'D Diskussion uf em Schwarze Brätt vu $1 mit $2',
+	'userboard_backprofile' => 'Zrugg zum Profil vu $1',
+	'userboard_backyourprofile' => 'Zrugg zue Dyynem Profil',
+	'userboard_boardtoboard' => 'Diskussion uf em Schwarze Brätt',
+	'userboard_confirmdelete' => 'Bisch sicher, ass Du die Nochricht witt lesche?',
+	'userboard_sendmessage' => 'Schick $1 e Nochricht',
+	'userboard_myboard' => 'Myy Schwarz BRätt',
+	'userboard_posted_ago' => 'vu $1 gschickt',
+	'userboard_private' => 'privat',
+	'userboard_public' => 'effentli',
+	'userboard_messagetype' => 'Nochrichtetyp',
+	'userboard_nextpage' => 'negschti',
+	'userboard_prevpage' => 'vorigi',
+	'userboard_nomessages' => 'Kei Nochrichte.',
+	'userboard_sendbutton' => 'schicke',
+	'userboard_loggedout' => 'Du muesch <a href="$1">aagmäldet syy</a> zum Nochrichte an anderi Nutzer schicke z chenne.',
+	'userboard_showingmessages' => 'Zeig {{PLURAL:$4|Nochricht $3|Nochrichte $2-$3}} vu $1 insgsamt',
+	'message_received_subject' => '$1 het uf Dyy Schwarz Brätt uf {{SITENAME}} gschribe',
+	'message_received_body' => 'Sali $1:
+
+$2 het Dir grad ebis gschribe uf Dyynem Schwarze Brätt uf {{SITENAME}}!
+
+Druck uf des Gleich go Dyy Schwarz Brätt aaluege!
+
+$3
+
+---
+
+Ha, Du wetsch gar keini E-Mail meh vun is iberchu?
+
+Druck $4
+un ändere Dyyni Yystellige go E-Mail-Benochrichtigunge abstelle.',
 );
 
 /** Hakka (Hak-kâ-fa)
@@ -1263,7 +1326,7 @@ $messages['nl'] = array(
 
 $2 heeft net een bericht achtergelaten op uw board op {{SITENAME}}!
 
-Klik op de onderstaande link om uw board te beijken!
+Klik op de onderstaande verwijzing om uw board te bekijken!
 
 $3
 

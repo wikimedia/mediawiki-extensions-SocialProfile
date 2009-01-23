@@ -187,6 +187,7 @@ $messages['arz'] = array(
 /** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
  * @author EugeneZelenko
  * @author Jim-by
+ * @author Red Winged Duck
  */
 $messages['be-tarask'] = array(
 	'user-stats-alltime-title' => 'Болей за ўсё пунктаў у гісторыі',
@@ -194,7 +195,7 @@ $messages['be-tarask'] = array(
 	'user-stats-monthly-title' => 'Болей за ўсё пунктаў у гэтым месяцы',
 	'topusers' => 'Самыя актыўныя ўдзельнікі',
 	'top-fans-by-points-nav-header' => 'Самыя актыўныя аматары',
-	'top-fans-by-category-nav-header' => 'Самыя актыўныя па катэгорыям',
+	'top-fans-by-category-nav-header' => 'Самыя актыўныя па катэгорыях',
 	'top-fans-total-points-link' => 'Усяго пунктаў',
 	'top-fans-weekly-points-link' => 'Пунктаў на гэтым тыдні',
 	'top-fans-monthly-points-link' => 'Пунктаў у гэтым месяцы',
@@ -202,6 +203,33 @@ $messages['be-tarask'] = array(
 	'top-fans-by-category-title' => 'Самы актыўны за ўсіх $1',
 	'top-fans-bad-field-title' => 'Ой!',
 	'top-fans-bad-field-message' => 'Такой статыстыкі няма.',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Голас|Галасы|Галасоў}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Пераможца месяца|Пераможцы месяца|Пераможцаў месяца}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Пераможца тыдня|Пераможцы тыдня}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Рэдагаваньне|Рэдагаваньні|Рэдагаваньняў}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Камэнтар|Камэнтары|Камэнтараў}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Прыцягнуты|Прыцягнутых|Прыцягнутых}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Сябар|Сябры|Сяброў}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Вораг|Ворагі|Ворагаў}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Апублікаванае меркаваньне|Апублікаваныя меркаваньні}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Меркаваньне|Меркаваньні|Меркаваньняў}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Атрыманы голас за|Атрыманыя галасы за|Атрыманых галасоў за}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Атрыманы голас супраць|Атрыманыя галасы супраць|Атрыманых галасоў супраць}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Адданы голас за|Адданыя галасы за|Адданых галасоў за}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Адданы голас супраць|Адданыя галасы супраць|Адданых галасоў супраць}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Атрыманы падарунак|Атрыманыя падарункі|Атрыманых падарункаў}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Дасланы падарунак|Дасланыя падарункі|Дасланых падарункаў}}',
+	'level-advance-subject' => 'Цяпер Вы ў групе «$1» у {{SITENAME}}!',
+	'level-advance-body' => 'Прывітаньне, $1:
+
+Цяпер Вы «$2» у {{SITENAME}}!
+
+Віншуем,
+
+Каманда {{SITENAME}}
+
+---
+Калі Вы не жадаеце болей атрымліваць ад нас лісты па электроннай пошце, націсьніце $3 і зьмяніце Вашыя ўстаноўкі для паведамленьняў.',
 );
 
 /** Bulgarian (Български)
@@ -495,6 +523,53 @@ Quere deixar de recibir correos electrónicos nosos?
 
 Faga clic $3
 e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
+);
+
+/** Swiss German (Alemannisch)
+ * @author Als-Holder
+ */
+$messages['gsw'] = array(
+	'user-stats-alltime-title' => 'Am meischte Pinkt (insgsamt)',
+	'user-stats-weekly-title' => 'Am meischte Pinkt in däre Wuche',
+	'user-stats-monthly-title' => 'Am meische Pinkt in däm Monet',
+	'topusers' => 'Top-Benutzer',
+	'top-fans-by-points-nav-header' => 'Top-Fan',
+	'top-fans-by-category-nav-header' => 'Top-per-Kategorii',
+	'top-fans-total-points-link' => 'Gsamtpunktzahl',
+	'top-fans-weekly-points-link' => 'Pinkt in däre Wuche',
+	'top-fans-monthly-points-link' => 'Pinkt in däm Monet',
+	'top-fans-points' => 'Pinkt',
+	'top-fans-by-category-title' => 'Top insgsamt $1',
+	'top-fans-bad-field-title' => 'Hoppla!',
+	'top-fans-bad-field-message' => 'Die Statischtik git s nit.',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Stimm|Stimme}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Monetsgwinn|Monatsgwinn}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Wuchegwinn|Wuchegwinn}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Bearbeitig|Bearbeitige}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Kommentar|Kommentar}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Empfählig|Empfählige}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Frynd|Frynd}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Fynd|Fynd}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Vereffentligti Meinig|Vereffentligti Meinige}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Meinig|Meinige}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Duume ufezues|Dyyme ufezues}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Duume abezues|Dyyme aabezues}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Duume ufezues|Dyyme ufezues}} gee',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Duume abezues|Dyyme abezues}} gee',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Gschänk iberchu|Gschänk inerchu}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Gschänk gmacht|Gschänk gmacht}}',
+	'level-advance-subject' => 'Du bisch jetz „$1“ uf {{SITENAME}}!',
+	'level-advance-body' => 'Sali $1,
+
+Du bisch jetz e „$2“ uf {{SITENAME}}!
+
+S {{SITENAME}}-Team grateliert Dir!
+
+---
+Du witt gar kei E-Mail vu uns iberchu?
+
+Druck $3
+un ändere Dyyi Yystellige go d E-Mail-Benochrichtigunge abzstelle.',
 );
 
 /** Hebrew (עברית)

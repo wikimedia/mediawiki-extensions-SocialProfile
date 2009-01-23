@@ -605,9 +605,89 @@ $2 أزالك كعدو فى {{SITENAME}}!
 
 /** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
  * @author EugeneZelenko
+ * @author Jim-by
+ * @author Red Winged Duck
  */
 $messages['be-tarask'] = array(
+	'viewrelationships' => 'Паказаць адносіны',
+	'viewrelationshiprequests' => 'Паказаць запыты аб сяброўстве',
+	'ur-already-submitted' => 'Ваш запыт быў дасланы',
+	'ur-error-page-title' => 'Ой!',
+	'ur-error-title' => 'Ой, памылка!',
+	'ur-error-message-no-user' => 'Мы ня можам выканаць Ваш запыт, таму што ўдзельнік з такім імем не існуе.',
+	'ur-main-page' => 'Галоўная старонка',
+	'ur-your-profile' => 'Ваш профіль',
+	'ur-backlink' => '&lt; Вярнуцца да профілю $1',
+	'ur-relationship-count-foes' => '$1 мае $2 {{PLURAL:$2|ворага|ворагі|ворагаў}}. Калі жадаеце мець болей ворагаў, <a href="$3">запрасіце іх.</a>',
+	'ur-relationship-count-friends' => '$1 мае $2 {{PLURAL:$2|сябра|сябры|сяброў}}. Калі жадаеце мець болей сяброў, <a href="$3">запрасіце іх.</a>',
+	'ur-add-friends' => '  Жадаеце мець болей сяброў? <a href="$1">Запрасіце іх</a>',
+	'ur-add-friend' => 'Дадаць як сябра',
+	'ur-add-foe' => 'Дадаць як ворага',
+	'ur-add-no-user' => 'Удзельнік ня выбраны.
+Калі ласка, запрасіце сяброў альбо ворагаў праз слушную спасылку.',
+	'ur-add-personal-message' => 'Дадаць асабістае паведамленьне',
+	'ur-remove-relationship-friend' => 'Выдаліць зь сяброў',
+	'ur-remove-relationship-foe' => 'Выдаліць з ворагаў',
+	'ur-give-gift' => 'Зрабіць падарунак',
+	'ur-previous' => 'папярэдні',
+	'ur-next' => 'наступны',
+	'ur-remove-relationship-title-foe' => 'Вы жадаеце выдаліць $1 са сьпісу ворагаў?',
+	'ur-remove-relationship-title-confirm-foe' => 'Вы выдалілі $1 са сьпісу ворагаў',
+	'ur-remove-relationship-title-friend' => 'Вы жадаеце выдаліць $1 са сьпісу сяброў?',
+	'ur-remove-relationship-title-confirm-friend' => 'Вы выдалілі $1 са сьпісу сяброў',
+	'ur-remove-relationship-message-foe' => 'Вы падалі запыт на выдаленьне $1 са сьпісу ворагаў, націсьніце «$2», каб пацьвердзіць.',
+	'ur-remove-relationship-message-confirm-foe' => 'Вы пасьпяхова выдалілі $1 са сьпісу ворагаў.',
+	'ur-remove-relationship-message-friend' => 'Вы падалі запыт на выдаленьне $1 са сьпісу сяброў, націсьніце «$2», каб пацьвердзіць.',
+	'ur-remove-relationship-message-confirm-friend' => 'Вы пасьпяхова выдалілі $1 са сьпісу сяброў.',
+	'ur-remove-error-message-no-relationship' => 'Вы ня маеце ніякіх адносінаў з $1.',
+	'ur-remove-error-message-remove-yourself' => 'Вы ня можаце выдаліць самі сябе.',
+	'ur-remove-error-message-pending-foe-request' => 'У Вас ёсьць запыт на даданьне $1 у сьпіс ворагаў, які чакае рашэньня.',
+	'ur-remove-error-message-pending-friend-request' => 'У Вас ёсьць запыт на даданьне $1 у сьпіс сяброў, які чакае рашэньня.',
+	'ur-remove-error-not-loggedin-foe' => 'Вам трэба ўвайсьці ў сыстэму, каб выдаляць удзельнікаў са сьпісу ворагаў.',
+	'ur-remove-error-not-loggedin-friend' => 'Вам трэба ўвайсьці ў сыстэму, каб выдаляць удзельнікаў са сьпісу сяброў.',
 	'ur-remove' => 'Выдаліць',
+	'ur-cancel' => 'Адмяніць',
+	'ur-login' => 'Увайсьці ў сыстэму',
+	'ur-add-title-foe' => 'Вы жадаеце дадаць $1 у сьпіс ворагаў?',
+	'ur-add-title-friend' => 'Вы жадаеце дадаць $1 у сьпіс сяброў?',
+	'ur-add-message-foe' => 'Зараз Вы дададзіце $1 у сьпіс ворагаў.
+Мы паведамім $1, каб пацьвердзіць Вашую варожасьць.',
+	'ur-add-message-friend' => 'Зараз Вы дададзіце $1 у сьпіс сяброў. 
+Мы паведамім $1, каб пацьвердзіць Вашае сяброўства.',
+	'ur-add-button-foe' => 'Дадаць у ворагі',
+	'ur-add-button-friend' => 'Дадаць у сябры',
+	'ur-add-sent-title-foe' => 'Вы даслалі запыт аб варожасьці да $1!',
+	'ur-add-sent-title-friend' => 'Вы даслалі запыт аб сяброўстве да $1!',
+	'ur-add-sent-message-foe' => 'Ваш запыт аб варожасьці быў дасланы $1 для пацьверджаньня.
+Калі $1 пацьвердзіць Ваш запыт, Вы атрымаеце ліст па электроннай пошце',
+	'ur-add-sent-message-friend' => 'Ваш запыт аб сяброўстве быў дасланы $1 для пацьверджаньня. 
+Калі $1 пацьвердзіць Ваш запыт, Вы атрымаеце ліст па электроннай пошце',
+	'ur-add-error-message-no-user' => 'Удзельніка, якога Вы спрабуеце дадаць, не існуе.',
+	'ur-add-error-message-blocked' => 'Вы заблякаваныя і ня можаце дадаваць новых сяброў і ворагаў.',
+	'ur-add-error-message-yourself' => 'Вы ня можаце дадаць самі сябе.',
+	'ur-add-error-message-existing-relationship-foe' => '$1 ужо зьяўляецца Вашым ворагам.',
+	'ur-add-error-message-existing-relationship-friend' => '$1 ужо зьяўляецца Вашым сябрам.',
+	'ur-add-error-message-pending-request-title' => 'Цярплівасьць!',
+	'ur-add-error-message-pending-friend-request' => 'Ваш запыт аб сяброўстве з $1 чакае пацьверджаньня.
+Мы паведамім Вам, калі $1 пацьвердзіць Ваш запыт.',
+	'ur-add-error-message-pending-foe-request' => 'Ваш запыт аб варожасьці з $1 чакае пацьверджаньня. 
+Мы паведамім Вам, калі $1 пацьвердзіць Ваш запыт.',
+	'ur-add-error-message-not-loggedin-foe' => 'Вам неабходна ўвайсьці ў сыстэму, каб дадаць ворага',
+	'ur-add-error-message-not-loggedin-friend' => 'Вам неабходна ўвайсьці ў сыстэму, каб дадаць сябра',
+	'ur-requests-title' => 'Запыты аб узаемаадносінах',
+	'ur-requests-message-foe' => '<a href=«$1»>$2</a> жадае быць Вашым ворагам.',
+	'ur-requests-message-friend' => '<a href=«$1»>$2</a> жадае быць Вашым сябрам.',
+	'ur-accept' => 'Згадзіцца',
+	'ur-reject' => 'Адмовіць',
+	'ur-no-requests-message' => 'Ня маеце запытаў на сяброўства альбо варожасьць.
+Калі Вы жадаеце мець болей сяброў, <a href="$1">запрасіце іх!</a>',
+	'ur-requests-added-message-foe' => 'Вы дадалі $1 як ворага.',
+	'ur-requests-added-message-friend' => 'Вы дадалі $1 як сябра.',
+	'ur-requests-reject-message-friend' => 'Вы адмовілі $1 у сяброўстве.',
+	'ur-requests-reject-message-foe' => 'Вы адмовілі $1 у варожасьці.',
+	'ur-title-foe' => 'Сьпіс ворагаў $1',
+	'ur-title-friend' => 'Сьпіс сяброў $1',
+	'friend_request_subject' => '$1 дадаў Вас да сваіх сяброў ў {{GRAMMAR:месны|{{SITENAME}}}}',
 );
 
 /** Bulgarian (Български)
@@ -793,6 +873,7 @@ $messages['da'] = array(
 );
 
 /** German (Deutsch)
+ * @author Als-Holder
  * @author Melancholie
  * @author Revolus
  * @author Tim 'Avatar' Bartel
@@ -810,7 +891,7 @@ $messages['de'] = array(
 	'ur-backlink' => '&lt; Zurück zu $1s Profil',
 	'ur-relationship-count-foes' => '$1 hat {{PLURAL:$2|einen Feind|$2 Feinde}}. Du möchtest mehr Feinde? <a href="$3">Lade sie ein.</a>',
 	'ur-relationship-count-friends' => '$1 hat {{PLURAL:$2|einen Freund|$2 Freunde}}. Du willst mehr Freunde? <a href="$3">Lade sie ein.</a>',
-	'ur-add-friends' => ' Du möchtest mehr Freunde haben? <a href="$1">Lad\' sie ein …</a>',
+	'ur-add-friends' => ' Du möchtest mehr Freunde haben? <a href="$1">Lade sie ein …</a>',
 	'ur-add-friend' => 'Als Freund hinzufügen',
 	'ur-add-foe' => 'Als Feind hinzufügen',
 	'ur-add-no-user' => 'Kein Benutzer ausgewählt.
@@ -840,7 +921,7 @@ Bitte wähle die Freunde/Feinde durch den richtigen Link.',
 	'ur-login' => 'Anmelden',
 	'ur-add-title-foe' => 'Du willst $1 zu deiner Feindesliste hinzufügen?',
 	'ur-add-title-friend' => 'Du willst $1 zu deiner Freundesliste hinzufügen?',
-	'ur-add-message-foe' => 'Du bit im Begriff, $1 zu deiner Feindesliste hinzuzufügen.
+	'ur-add-message-foe' => 'Du bist im Begriff, $1 zu deiner Feindesliste hinzuzufügen.
 Wir werden $1 von deinem Groll berichten.',
 	'ur-add-message-friend' => 'Du bist im Begriff, $1 zu deiner Freundesliste hinzuzufügen.
 Wir werden eine Bestätigungen von $1 einholen.',
@@ -869,7 +950,7 @@ Wir werden $1 davon informieren, wenn du seine Anfrage bestätigst.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> möchte dein Freund sein.',
 	'ur-accept' => 'Annehmen',
 	'ur-reject' => 'Ablehnen',
-	'ur-no-requests-message' => 'Du hast keine Freund- oder Feind-Anfrage. Wenn du mehr Freunde haben möchtest, <a href="$1">Lad’ sie ein …</a>',
+	'ur-no-requests-message' => 'Du hast keine Freund- oder Feind-Anfrage. Wenn du mehr Freunde haben möchtest, <a href="$1">Lade sie ein …</a>',
 	'ur-requests-added-message-foe' => 'Du hast $1 zu deiner Feindesliste hinzugefügt.',
 	'ur-requests-added-message-friend' => 'Du hast $1 zu deiner Freundesliste hinzugefügt.',
 	'ur-requests-reject-message-friend' => 'Du hast $1 als deinen Freund zurückgewiesen.',
@@ -893,7 +974,7 @@ und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
 	'foe_request_subject' => '{{SITENAME}}: Kriegserklärung! $1 hat dich als Feind hinzugefügt!',
 	'foe_request_body' => 'Hi $1:
 
-$2 hat dich in {{SITENAME}} als Feind hinzugefügt. Wir wollen sicher gehen, dsas ihr zwei wirklich tödliche Feinde seid oder euch wenigstens ein wenig streitet.
+$2 hat dich in {{SITENAME}} als Feind hinzugefügt. Wir wollen sicher gehen, dass ihr zwei wirklich tödliche Feinde seid oder euch wenigstens ein wenig streitet.
 
 Bitte klicke den folgenden Link um eure Feindschaft zu bestätigen:
 
@@ -1629,6 +1710,172 @@ $messages['grc'] = array(
 	'ur-remove' => 'Άφαιρεῖν',
 	'ur-cancel' => 'Ἀκυροῦν',
 	'ur-login' => 'Συνδεῖσθαι',
+);
+
+/** Swiss German (Alemannisch)
+ * @author Als-Holder
+ */
+$messages['gsw'] = array(
+	'viewrelationships' => 'Zeig Beziejige',
+	'viewrelationshiprequests' => 'Zeig Beziejigsaafroge',
+	'ur-already-submitted' => 'Dyy Aafrog isch abschickt wore',
+	'ur-error-page-title' => 'Hoppla!',
+	'ur-error-title' => 'Hoppla, do goht s nit wyter!',
+	'ur-error-message-no-user' => 'Mir chenne d Aafrog nit uusfiere, wel s kei Benutzer mit däm Name git.',
+	'ur-main-page' => 'Hauptsyte',
+	'ur-your-profile' => 'Dyy Profil',
+	'ur-backlink' => '&lt; Zrugg zum Profil vu $1',
+	'ur-relationship-count-foes' => '$1 het {{PLURAL:$2|ei Fynd|$2 Fynd}}. Witt meh Fynd? <a href="$3">Lad si yy.</a>',
+	'ur-relationship-count-friends' => '$1 het {{PLURAL:$2|ei Frynd|$2 Frynde}}. Witt meh Frynd? <a href="$3">Lad si yy.</a>',
+	'ur-add-friends' => 'Witt meh Frynd? <a href="$1">Lad si yy.</a>',
+	'ur-add-friend' => 'As Frynd zuefiege',
+	'ur-add-foe' => 'As Fynd zuefiege',
+	'ur-add-no-user' => 'Kei Benutzer uusgwehlt.
+Bitte wehl d Frynd/Fynd dur s rächt Gleich.',
+	'ur-add-personal-message' => 'E persenligi Nochricht zuefiege',
+	'ur-remove-relationship-friend' => 'Us dr Fryndlischt useneh',
+	'ur-remove-relationship-foe' => 'Us dr Fyndlischt useneh',
+	'ur-give-gift' => 'Gschänk schicke',
+	'ur-previous' => 'vorigi',
+	'ur-next' => 'negschti',
+	'ur-remove-relationship-title-foe' => 'Witt $1 us Dyynere Fyndlischt lesche?',
+	'ur-remove-relationship-title-confirm-foe' => 'Du hesch $1 us Dyynere Fyndlischt glescht.',
+	'ur-remove-relationship-title-friend' => 'Witt $1 us Dyynere Fryndlischt lesche',
+	'ur-remove-relationship-title-confirm-friend' => 'Du hesch $1 us Dyynere Fryndlischt glescht.',
+	'ur-remove-relationship-message-foe' => 'Witt $1 us Dyynere Fyndlischt lesche? Druck „$2“ fir zum bstätige.',
+	'ur-remove-relationship-message-confirm-foe' => 'Du hesch $1 erfolgryych us Dyynere Fyndlischt glescht.',
+	'ur-remove-relationship-message-friend' => 'Witt $1 us Dyynere Fryndlischt lesche? Druck „$2“ fir zum bstätige.',
+	'ur-remove-relationship-message-confirm-friend' => 'Du hesch $1 erfolgryych us Dyynere Fryndlischt usegnuh.',
+	'ur-remove-error-message-no-relationship' => 'S git kei Beziejig zwische $1 un Dir.',
+	'ur-remove-error-message-remove-yourself' => 'Du chasch Di nit sälber useneh.',
+	'ur-remove-error-message-pending-foe-request' => 'Du hesch no ne ufigi Fyndschaftaafrog vu $1.',
+	'ur-remove-error-message-pending-friend-request' => 'Du hesch no ne ufigi Fryndschaftsaafrog vu $1.',
+	'ur-remove-error-not-loggedin-foe' => 'Du muesch aagmäldet syy go ne Fynd lesche.',
+	'ur-remove-error-not-loggedin-friend' => 'Du muesch aagmäldet syy go ne Frynd lesche.',
+	'ur-remove' => 'Lesche',
+	'ur-cancel' => 'Abbräche',
+	'ur-login' => 'Aamälde',
+	'ur-add-title-foe' => 'Witt $1 in Dyyni Fyndlischt yyneneh?',
+	'ur-add-title-friend' => 'Witt $1 in Dyyni Fryndlischt yyneneh?',
+	'ur-add-message-foe' => 'Du bisch grad am $1 in Dyyni Fyndlischt yyneneh.
+Mir leen $1 Dyyni Wuet zuechu.',
+	'ur-add-message-friend' => 'Du bisch grad am $1 in Dyyni Fryndlischt yyneneh.
+Mir leen is des vu $1 bstätige.',
+	'ur-add-button-foe' => 'As Fynd zuefiege',
+	'ur-add-button-friend' => 'As Frynd zuefiege',
+	'ur-add-sent-title-foe' => 'Mir hän Dyyni Fyndschaftsaafrog an $1 gschickt!',
+	'ur-add-sent-title-friend' => 'Mir hän Dyyni Fryndschaftsaafrog an $1 gschickt!',
+	'ur-add-sent-message-foe' => 'Dyyni Fyndschaftsaafrog isch an $1 zum Bstätige gschickt wore.
+Du chunnsch e E-Mail iber, wänn $1 Dyyni Aafrog bstätigt.',
+	'ur-add-sent-message-friend' => 'Dyyni Fyyndschaftsaafrog isch an $1 zum Bstätige gschickt wore.
+Du chunnsch e E-Mail iber, wänn $1 Dyyni Aafrog bstätigt.',
+	'ur-add-error-message-no-user' => 'Dä Benutzer, wu Du witt dezueneh, git s nit.',
+	'ur-add-error-message-blocked' => 'Du bisch im Momänt gsperrt un chasch kei Frynd oder Fynd dezueneh.',
+	'ur-add-error-message-yourself' => 'Du chasch Di nit sälber as Frynd oder Fynd dezueneh.',
+	'ur-add-error-message-existing-relationship-foe' => 'Du bisch scho Fynd mit $1.',
+	'ur-add-error-message-existing-relationship-friend' => 'Du bisch scho Frynd mit $1.',
+	'ur-add-error-message-pending-request-title' => 'Nume nit huttle!',
+	'ur-add-error-message-pending-friend-request' => 'Du hesch no ne ufigi Fryndschaftsaafrog vu $1.
+Mir informiere $1, wänn Du syyni Aafrog bstätigsch.',
+	'ur-add-error-message-pending-foe-request' => 'Du hesch no ne ufigi Fyndschaftsaafrog vu $1.
+Mir informiere $1, wänn Du syyni Aafrog bstätigsch.',
+	'ur-add-error-message-not-loggedin-foe' => 'Du muesch aagmäldet syy go ne Fynd dezueneh.',
+	'ur-add-error-message-not-loggedin-friend' => 'Du muesch aagmäldet syy go ne Frynd dezueneh.',
+	'ur-requests-title' => 'Beziejigsaafrog',
+	'ur-requests-message-foe' => '<a href="$1">$2</a> wet Dyy Fynd syy.',
+	'ur-requests-message-friend' => '<a href="$1">$2</a> wet Dyy Frynd syy.',
+	'ur-accept' => 'Aaneh',
+	'ur-reject' => 'Ablähne',
+	'ur-no-requests-message' => 'Du hesch kei Frynd- oder Fynd-Aafrog. Wänn Du meh Frynd witt haa, <a href="$1">Lad si yy!</a>',
+	'ur-requests-added-message-foe' => 'Du hesch $1 in Dyyni Fyndlischt yygnuh.',
+	'ur-requests-added-message-friend' => 'Du hesch $1 in Dyyni Fryndlischt yynegnuh.',
+	'ur-requests-reject-message-friend' => 'Du hesch $1 as Frynd zrugg gwise.',
+	'ur-requests-reject-message-foe' => 'Du hesch $1 as Fynd zrugg gwise.',
+	'ur-title-foe' => 'Fyndlischt vu $1',
+	'ur-title-friend' => 'Fryndlischt $1',
+	'friend_request_subject' => '{{SITENAME}}: $1 het Di as Frynd dezuegnuh!',
+	'friend_request_body' => 'Sali $1:
+
+$2 het Di uf {{SITENAME}} as Frynd dezuegnuh. Mir wän aber sicher goh, ass Ihr zwei wirkli Frynd sin.
+
+Bitte druck des Gleich go Ejri Fryndschaft bstätige:
+$3
+
+---
+
+Ha, Du witt gar kei E-Mail meh vun is iberchu?
+
+Druck $4
+un ändere Dyyni Yystellige go d E-Mail-Benochrichtigunge abschalte.',
+	'foe_request_subject' => 'S isch Chrieg! $1 het Di as Fynd yynegnuh uf {{SITENAME}}!',
+	'foe_request_body' => 'Sali $1:
+
+$2 het Di uf {{SITENAME}} as Fynd dezuegnuh. Mir wän aber sicher goh, ass Ihr zwei wirkli grusigi Fynd sin.
+
+Bitte druck des Gleich go Ejri Fyndschaft bstätige:
+
+$3
+
+---
+
+Ha, Du witt gar kei E-Mail meh vun is iberchu?
+
+Druck $4
+un ändere Dyyni Yystellige go d E-Mail-Benochrichtigunge abschalte.',
+	'friend_accept_subject' => '$1 het Dyyni Fryndschaftsaaffrog aagnuh uf {{SITENAME}}!',
+	'friend_accept_body' => 'Sali $1:
+
+$2 het Dyyni Fryndschaftsaafrog uf {{SITENAME}} bstätigt! 
+
+Lueg d Syte vu $2: $3
+
+Dankschen!
+
+---
+
+Ha, Du witt gar kei E-Mail meh vun is iberchu?
+
+Druck $4
+un ändere Dyyni Yystellige go d E-Mail-Benochrichtigunge abschalte.',
+	'foe_accept_subject' => '{{SITENAME}}: $1 het Dyyni Fyndschaftsaafrog bstätigt!',
+	'foe_accept_body' => 'Sali $1:
+
+$2 het Dyyni Fyndschaftsaafrog uf {{SITENAME}} bstätigt! 
+
+Lueg d Syte vu $2: $3
+
+Dankschen!
+
+---
+
+Ha, Du witt gar kei E-Mail meh vun is iberchu?
+
+Druck $4
+un ändere Dyyni Yystellige go d E-Mail-Benochrichtigunge abschalte.',
+	'friend_removed_subject' => '{{SITENAME}}: He nei! $1 isch nimmi Dyy Frynd!',
+	'friend_removed_body' => 'Sali $1:
+
+$2 het ufghert mit syynere Fryndschaft mit Dir uf {{SITENAME}}!
+
+---
+
+Ha, Du witt gar kei E-Mail meh vun is iberchu?
+
+Druck $4
+un ändere Dyyni Yystellige go d E-Mail-Benochrichtigunge abschalte.',
+	'foe_removed_subject' => '{{SITENAME}}: Hoi! $1 het ufghert mit syynere Fyndschaft zue Dir!',
+	'foe_removed_body' => 'Sali $1:
+
+$2 het ufghert mit syynere Fyndschaft mit Dir uf {{SITENAME}}!
+
+Villicht gän Ihr jo sogar emol Frynd?
+
+---
+
+Ha, Du witt gar kei E-Mail meh vun is iberchu?
+
+Druck $4
+un ändere Dyyni Yystellige go d E-Mail-Benochrichtigunge abschalte.',
 );
 
 /** Hakka (Hak-kâ-fa)
@@ -2842,7 +3089,7 @@ Behoefte aan meer vrienden?
 	'ur-add-friend' => 'Als vriend toevoegen',
 	'ur-add-foe' => 'Als tegenstander toevoegen',
 	'ur-add-no-user' => 'Er is geen gebruiker geselecteerd.
-Maak verzoeken voor vrienden/tegenstanders alstublieft via de daarvoor bedoelde link.',
+Maak verzoeken voor vrienden/tegenstanders alstublieft via de daarvoor bedoelde verwijzing.',
 	'ur-add-personal-message' => 'Persoonlijk bericht toevoegen',
 	'ur-remove-relationship-friend' => 'Als vriend verwijderen',
 	'ur-remove-relationship-foe' => 'Als tegenstander verwijderen',
@@ -2911,7 +3158,7 @@ U wordt op de hoogte gesteld als $1 uw verzoek bevestigt.',
 
 $2 heeft u als vriend toegevoegd op {{SITENAME}}. We willen graag bevestiging dat u echt bevriend bent.
 
-Klik op de onderstaande link om uw vriendschap te bevestigen:
+Klik op de onderstaande verwijzing om uw vriendschap te bevestigen:
 $3
 
 Bedankt.
@@ -2926,7 +3173,7 @@ en wijzig uw instellingen om e-mailberichten uit te schakelen.',
 
 $2 heeft u als tegenstander toegevoegd op {{SITENAME}}. We willen graag bevestiging dat u echt tegenstanders bent of in ieder geval gebrouilleerd bent.
 
-Klik op de onderstaande link om uw animositeit te bevestigen:
+Klik op de onderstaande verwijzing om uw animositeit te bevestigen:
 $3
 
 Bedankt.
