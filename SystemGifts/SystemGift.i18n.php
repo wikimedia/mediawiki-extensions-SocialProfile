@@ -80,14 +80,26 @@ and change your settings to disable email notifications.',
  * @author Umherirrender
  */
 $messages['de'] = array(
+	'systemgiftmanager' => 'Systemgeschenke-Verwaltung',
+	'ga-addnew' => '+ Neues Geschenk hinzufügen',
+	'ga-back-edit-gift' => 'Zurück zur Geschenkbearbeitung',
+	'ga-back-gift-list' => 'Zurück zur Geschenkeliste',
 	'ga-back-link' => '<a href="$1">< Zurück zum Profil von $2</a>',
 	'ga-choosefile' => 'Wähle Datei:',
+	'ga-create-gift' => 'Geschenk erstellen',
+	'ga-created' => 'Das Geschenk wurde erstellt',
 	'ga-currentimage' => 'Aktuelles Bild',
 	'ga-error-message-invalid-link' => 'Der eingegebende Link ist ungültig.',
 	'ga-error-message-no-user' => 'Der Benutzer, den du anschauen möchtest, existiert nicht.',
 	'ga-error-title' => 'Ops, da ging etwas schief!',
 	'ga-file-instructions' => 'Das Bild muss ein „jpeg“, „png“, „gif“ (kein animiertes) sein, und eine Dateigröße kleiner als 100 kb haben.',
+	'ga-gift' => 'Geschenk',
+	'ga-gift-given-count' => 'Dieses Geschenk wurde {{PLURAL:$1|einmal|$1 mal}} ausgegeben',
 	'ga-gift-title' => '„$2“ von $1',
+	'ga-giftdesc' => 'Geschenkbeschreibung',
+	'ga-giftimage' => 'Geschenkabbildung',
+	'ga-giftname' => 'Geschenkname',
+	'ga-gifttype' => 'Geschenkart',
 	'ga-goback' => 'gehe zurück',
 	'ga-imagesbelow' => 'Hier drunter folgen alle Bilder, die auf dieser Seite genutzt werden',
 	'ga-img' => 'Bild hinzufügen / entfernen',
@@ -97,9 +109,11 @@ $messages['de'] = array(
 	'ga-new' => 'Neu',
 	'ga-next' => 'Nächste',
 	'ga-previous' => 'Vorherige',
+	'ga-saved' => 'Das Geschenk wurde gespeichert',
 	'ga-small' => 'Schmal',
 	'ga-threshold' => 'Schwelle',
 	'ga-uploadsuccess' => 'Hochladen erfolgreich',
+	'ga-viewlist' => 'Geschenkeliste ansehen',
 );
 
 /** German (formal address) (Deutsch (Sie-Form))
@@ -427,6 +441,50 @@ $messages['he'] = array(
 	'right-awardsmanage' => 'יצירת פרסים חדשים ועריכת פרסים קיימים',
 );
 
+/** Interlingua (Interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'systemgiftmanager' => 'Gerente de donos del systema',
+	'ga-addnew' => '+ Adder un nove dono',
+	'ga-back-edit-gift' => 'Retornar verso Modificar iste dono',
+	'ga-back-gift-list' => 'Retornar al lista de donos',
+	'ga-back-link' => '<a href="$1">< Retornar al profilo de $2</a>',
+	'ga-choosefile' => 'Selige un file:',
+	'ga-count' => '$1 ha $2 {{PLURAL:$2|premio|premios}}.',
+	'ga-create-gift' => 'Crear un dono',
+	'ga-created' => 'Le dono ha essite create',
+	'ga-currentimage' => 'Imagine actual',
+	'ga-error-message-invalid-link' => 'Le ligamine que tu ha entrate es invalide.',
+	'ga-error-message-no-user' => 'Le usator que tu tenta vider non existe.',
+	'ga-error-title' => 'Ups, tu ha errate!',
+	'ga-file-instructions' => 'Tu imagine debe esser in formato jpeg, png o gif (sin animation), e debe esser minus grande que 100kb.',
+	'ga-gift' => 'dono',
+	'ga-gift-given-count' => 'Iste dono ha essite date $1 {{PLURAL:$1|vice|vices}}',
+	'ga-gift-title' => '"$2" de $1',
+	'ga-giftdesc' => 'description del dono',
+	'ga-giftimage' => 'imagine del dono',
+	'ga-giftname' => 'nomine del dono',
+	'ga-gifttype' => 'typo de dono',
+	'ga-goback' => 'Retornar',
+	'ga-imagesbelow' => 'Infra se trova tu imagines que essera usate in le sito',
+	'ga-img' => 'adder/reimplaciar imagine',
+	'ga-large' => 'Grande',
+	'ga-medium' => 'Medie',
+	'ga-mediumlarge' => 'Medie-grande',
+	'ga-new' => 'Nove',
+	'ga-next' => 'Proxime',
+	'ga-previous' => 'Previe',
+	'ga-recent-recipients-award' => 'Altere ganiatores recente de iste premio',
+	'ga-saved' => 'Le dono ha essite immagazinate',
+	'ga-small' => 'Parve',
+	'ga-threshold' => 'limine',
+	'ga-title' => 'Le premios de $1',
+	'ga-uploadsuccess' => 'Cargamento succedite',
+	'ga-viewlist' => 'Vider le lista de donos',
+	'system_gift_received_subject' => 'Tu ha recipite le premio $1 in {{SITENAME}}!',
+);
+
 /** Ripoarisch (Ripoarisch)
  * @author Purodha
  */
@@ -461,10 +519,12 @@ $messages['lb'] = array(
 	'ga-goback' => 'Zréckgoen',
 	'ga-img' => 'Bild derbäisetzen/ersetzen',
 	'ga-large' => 'Grouss',
+	'ga-medium' => 'Mëttel',
 	'ga-new' => 'Nei',
 	'ga-next' => 'Nächst',
 	'ga-previous' => 'Vireg',
 	'ga-small' => 'Kleng',
+	'ga-uploadsuccess' => 'Eroplueden ofgeschloss',
 );
 
 /** Dutch (Nederlands)
@@ -712,6 +772,25 @@ $messages['sk'] = array(
 	'ga-gift-given-count' => 'Tento darček bol darovaný {{PLURAL:$1|jedenkrát|$1-krát}}',
 	'ga-gift-title' => '„$2“ používateľa $1',
 	'ga-giftdesc' => 'popis darčeka',
+	'ga-giftimage' => 'obrázok darčeka',
+	'ga-giftname' => 'názov darčeka',
+	'ga-gifttype' => 'typ darčeka',
+	'ga-goback' => 'Vrátiť sa späť',
+	'ga-imagesbelow' => 'Dolu je zoznam vašich obrázkov, ktoré sa použijú na stránke',
+	'ga-img' => 'pridať/nahradiť obrázok',
+	'ga-large' => 'Veľký',
+	'ga-medium' => 'Stredný',
+	'ga-mediumlarge' => 'Stredne veľký',
+	'ga-new' => 'Nový',
+	'ga-next' => 'Ďalší',
+	'ga-previous' => 'Predošlý',
+	'ga-recent-recipients-award' => 'Ďalší, ktorí nedávno dostali toto ocenenie',
+	'ga-saved' => 'Darček bol uložený',
+	'ga-small' => 'Malý',
+	'ga-threshold' => 'hraničná hodnota',
+	'ga-title' => 'Ocenenia používateľa $1',
+	'ga-uploadsuccess' => 'Nahrávanie prebehlo úspešne',
+	'ga-viewlist' => 'Zobraziť zoznam darčekov',
 	'system_gift_received_subject' => 'Dostali ste ocenenie $1 na {{GRAMMAR:lokál|{{SITENAME}}}}',
 	'system_gift_received_body' => 'Ahoj $1:
 

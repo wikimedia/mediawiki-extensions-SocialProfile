@@ -594,6 +594,7 @@ $messages['am'] = array(
 	'user-profile-interests-music' => 'ሙዚቃ',
 	'user-profile-interests-books' => 'መጻሕፍት',
 	'user-profile-picture-large' => 'ትልቅ',
+	'user-profile-picture-small' => 'ትንሽ',
 );
 
 /** Aragonese (Aragonés)
@@ -983,8 +984,19 @@ $messages['bcc'] = array(
 
 /** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
  * @author EugeneZelenko
+ * @author Jim-by
  */
 $messages['be-tarask'] = array(
+	'populateuserprofiles' => 'Запаўненьне зьвестак пра удзельніка',
+	'user-awards-title' => 'Узнагароды',
+	'user-gifts-title' => 'Падарункі',
+	'user-count-separator' => 'з',
+	'user-view-all' => 'Праглядзець усё',
+	'user-upload-image' => 'Загрузіць выяву',
+	'user-edit-this' => 'Рэдагаваць гэта',
+	'user-points' => 'пунктаў',
+	'user-edit-profile' => 'Рэдагаваць зьвесткі',
+	'user-upload-avatar' => 'Загрузіць аватару',
 	'other-info-books' => 'Кнігі',
 	'user-profile-personal-name' => 'Імя',
 	'user-profile-personal-country' => 'Краіна',
@@ -5797,7 +5809,7 @@ $messages['sk'] = array(
 	'user-profile-picture-currentimage' => 'Aktuálny obrázok',
 	'user-profile-picture-choosepicture' => 'Vyberte svoj obrázok',
 	'user-profile-picture-picsize' => 'Váš obrázok musí byť jpeg, png alebo gif a musí byť menší ako 100 KiB.',
-	'user-profile-goback' => 'Prejsť späť',
+	'user-profile-goback' => 'Vrátiť sa späť',
 	'user-profile-userlevels-link' => 'Úrovne používateľov',
 	'user-no-images' => 'Neboli nahrané žiadne obrázky',
 	'edit-profile-title' => 'Upraviť svoj profil',
@@ -6478,6 +6490,7 @@ Pindutin <a href="$1">dito</a> para lumagda o pindutin <a href="$2">dito</a> upa
 	'user-profile-picture-log' => 'huwaran (abatar)',
 	'user-profile-picture-log-entry' => 'nagkarga ng bagong huwaran (abatar)',
 	'user-profile-picture-log-delete-entry' => 'binura ang huwaran (abatar) ni $1',
+	'right-avatarremove' => 'Tanggalin ang mga huwaran (abatar) ng tagagamit',
 );
 
 /** Vietnamese (Tiếng Việt)
