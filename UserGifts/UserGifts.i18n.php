@@ -145,6 +145,7 @@ $messages['de'] = array(
 	'g-create-gift' => 'Geschenk erstellen',
 	'g-created-by' => 'erstellt von',
 	'g-current-image' => 'Aktuelles Bild',
+	'g-delete-message' => 'Bist du dir sicher, das du das Geschenk „$1“ löschen möchest? Dies wird es auch bei Benutzern löschen, die es bereits empfangen haben.',
 	'g-description-title' => 'Geschenk „$2“ von $1',
 	'g-error-do-not-own' => 'Du besitzt dieses Geschenk nicht.',
 	'g-error-message-blocked' => 'Du bist aktuell gesperrt und kannst keine Geschenke vergeben',
@@ -158,6 +159,7 @@ $messages['de'] = array(
 	'g-gift' => 'Geschenk',
 	'g-gift-name' => 'Geschenkname',
 	'g-give-gift' => 'Geschenk geben',
+	'g-give-all' => 'Möchtest du $1 ein Geschenk geben? Suche eins der folgenden Geschenke aus und klicke „Geschenk senden“. Es ist ganz einfach.',
 	'g-give-all-message-title' => 'Füge eine Nachricht hinzu',
 	'g-give-all-title' => 'Ein Geschenk an $1 geben',
 	'g-give-enter-friend-title' => 'Falls du einen Benutzernamen weißt, trage ihn hier unten ein',
@@ -165,7 +167,10 @@ $messages['de'] = array(
 	'g-give-list-friends-title' => 'Wähle aus deiner Freundesliste',
 	'g-give-list-select' => 'wähle einen Freund aus',
 	'g-give-separator' => 'oder',
+	'g-give-no-user-message' => 'Geschenke und Auszeichnungen sind ein großartiger Weg um seine Freunde zu würdigen!',
+	'g-give-no-user-title' => 'Wem möchtest du ein Geschenk geben?',
 	'g-give-to-user-title' => 'Das Geschenk „$1“ an $2 geben',
+	'g-give-to-user-message' => 'Möchest du $1 ein anders Geschenk geben? <a href="$2">Klicke hier</a>.',
 	'g-go-back' => 'Gehe zurück',
 	'g-imagesbelow' => 'Hier drunter folgen alle Bilder, die auf dieser Seite genutzt werden',
 	'g-large' => 'Groß',
@@ -178,6 +183,10 @@ $messages['de'] = array(
 	'g-previous' => 'Vorherige',
 	'g-remove' => 'Entfernen',
 	'g-remove-gift' => 'Dieses Geschenk entfernen',
+	'g-remove-message' => 'Bist du dir sicher, das Geschenk „$1“ zu entfernen?',
+	'g-recent-recipients' => 'Andere aktuelle Empfänger dieses Geschenkes',
+	'g-remove-success-title' => 'Du hast das Geschenk „$1“ erfolgreich entfernt.',
+	'g-remove-success-message' => 'Wie angefragt, haben wir das Geschenk „$1“ erfolgreich entfernt.',
 	'g-remove-title' => '„$1“ entfernen?',
 	'g-send-gift' => 'Geschenk senden',
 	'g-select-a-friend' => 'wähle einen Freund aus',
@@ -188,6 +197,27 @@ $messages['de'] = array(
 	'g-uploadsuccess' => 'Hochladen erfolgreich',
 	'g-viewgiftlist' => 'Geschenkeliste ansehen',
 	'g-your-profile' => 'Dein Profil',
+	'gift_received_subject' => '$1 hat dir das $2-Geschenk auf {{SITENAME}} gesendet!',
+	'gift_received_body' => 'Hallo $1,
+
+$1 hat dir eben das $2-Geschenk auf {{SITENAME}} gesendet!
+
+Möchtest du die Notiz von $2 lesen und dein Geschenk sehen? Klicke den folgenden Link:
+
+$4
+
+Wir hoffen, es gefällt dir!
+
+Danke,
+
+Das {{SITENAME}}-Team
+
+---
+
+Du möchtest keine E-Mails von uns erhalten?
+
+Klicke $5
+und ändere deine Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
 	'right-giftadmin' => 'Neue erstellen und bestehende Geschenke bearbeiten',
 );
 
@@ -195,15 +225,42 @@ $messages['de'] = array(
  * @author Umherirrender
  */
 $messages['de-formal'] = array(
+	'g-delete-message' => 'Sind Sie sich sicher, das Sie das Geschenk „$1“ löschen möchten? Dies wird es auch bei Benutzern löschen, die es bereits empfangen haben.',
 	'g-error-do-not-own' => 'Sie besitzen dieses Geschenk nicht.',
 	'g-error-message-blocked' => 'Sie sind aktuell gesperrt und können keine Geschenke vergeben',
 	'g-error-message-login' => 'Sie müssen sich anmelden um Geschenke zu vergeben',
 	'g-error-message-no-user' => 'Der Benutzer, den Sie anschauen möchten, existiert nicht.',
 	'g-error-message-to-yourself' => 'Sie können sich selber keine Geschenke geben.',
+	'g-give-all' => 'Möchten Sie $1 ein Geschenk geben? Suchen Sie eins der folgenden Geschenke aus und klicken Sie „Geschenk senden“. Es ist ganz einfach.',
 	'g-give-enter-friend-title' => 'Falls Sie einen Benutzernamen wissen, tragen Sie ihn hier unten ein',
+	'g-give-no-user-title' => 'Wem möchten Sie ein Geschenk geben?',
+	'g-give-to-user-message' => 'Möchen Sie $1 ein anders Geschenk geben? <a href="$2">Klicken Sie hier</a>.',
+	'g-remove-message' => 'Sind Sie sich sicher, das Geschenk „$1“ zu entfernen?',
+	'g-remove-success-title' => 'Sie haben das Geschenk „$1“ erfolgreich entfernt.',
 	'g-sent-title' => 'Sie haben ein Geschenk an $1 gesendet',
 	'g-sent-message' => 'Sie haben die folgenden Geschenke an $1 gesendet.',
 	'g-your-profile' => 'Ihr Profil',
+	'gift_received_subject' => '$1 hat Ihnen das $2-Geschenk auf {{SITENAME}} gesendet!',
+	'gift_received_body' => 'Hallo $1,
+
+$1 hat Ihnen eben das $2-Geschenk auf {{SITENAME}} gesendet!
+
+Möchten Sie die Notiz von $2 lesen und Ihr Geschenk sehen? Klicken Sie den folgenden Link:
+
+$4
+
+Wir hoffen, es gefällt Ihnen!
+
+Danke,
+
+Das {{SITENAME}}-Team
+
+---
+
+Sie möchten keine E-Mails von uns erhalten?
+
+Klicken Sie $5
+und änderen Sie Ihre Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
 );
 
 /** Finnish (Suomi)
@@ -851,6 +908,108 @@ Wilt u geen e-mails meer van ons ontvangen?
 
 Klik op $5 en wijzig uw instellingen om e-mailwaarschuwingen uit te schakelen.',
 	'right-giftadmin' => 'Een nieuwe gift aanmaken en bestaande giften bewerken',
+);
+
+/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+ * @author Harald Khan
+ */
+$messages['nn'] = array(
+	'giftmanager' => 'Gåvehandsamar',
+	'giftmanager-addgift' => '+ legg til ei ny gåva',
+	'giftmanager-access' => 'gåvetilgjenge',
+	'giftmanager-description' => 'skildring av gåva',
+	'giftmanager-giftimage' => 'gåvebilete',
+	'giftmanager-image' => 'legg til/erstatt bilete',
+	'giftmanager-giftcreated' => 'Gåva har vorten oppretta',
+	'giftmanager-giftsaved' => 'Gåva har vorten lagra',
+	'giftmanager-public' => 'offentleg',
+	'giftmanager-private' => 'privat',
+	'giftmanager-view' => 'Sjå gåvelista',
+	'g-add-message' => 'Legg til ei melding',
+	'g-back-edit-gift' => 'Attende til endring av gåva',
+	'g-back-gift-list' => 'Attende til gåvelista',
+	'g-back-link' => '<a href="$1">< attende til sida til $2</a>',
+	'g-choose-file' => 'Vel fil:',
+	'g-cancel' => 'Avrbyt',
+	'g-count' => '$1 har $2 {{PLURAL:$2|éi gåva|gåver}}.',
+	'g-create-gift' => 'Opprett gåva',
+	'g-created-by' => 'oppretta av',
+	'g-current-image' => 'Noverande bilete',
+	'g-delete-message' => 'Er du sikker på at du vil sletta gåva «$1»? Dette vil òg sletta ho frå brukaren som kanskje har fått ho.',
+	'g-description-title' => 'gåva «$2» til $1',
+	'g-error-do-not-own' => 'Du eig ikkje denne gåva.',
+	'g-error-message-blocked' => 'Du er på noverande tidspunkt blokkert og kan ikkje senda gåver.',
+	'g-error-message-invalid-link' => 'Lenkja du oppgav er ugyldig.',
+	'g-error-message-login' => 'Du lyt vera innlogga for å kunna gje gåver.',
+	'g-error-message-no-user' => 'Brukaren du ynskjer å sjå finst ikkje.',
+	'g-error-message-to-yourself' => 'Du kan ikkje gje ei gåva til deg sjølv.',
+	'g-error-title' => 'Oi, du svingte feil!',
+	'g-file-instructions' => 'Biletet ditt lyt vera eit jpeg, png eller gif (ingen animerte gif-filer) og ha ein storleik på mindre enn 100 kb.',
+	'g-from' => 'frå <a href="$1">$2</a>',
+	'g-gift' => 'gåva',
+	'g-gift-name' => 'gåvenamn',
+	'g-give-gift' => 'Gje ei gåva',
+	'g-give-all' => 'Ynskjer du å gje $1 ei gåva? Trykk på ei av gåvene nedanfor og trykk so på «Send gåva». So enkelt er det.',
+	'g-give-all-message-title' => 'Legg til ei melding',
+	'g-give-all-title' => 'Gje ei gåva til $1',
+	'g-give-enter-friend-title' => 'Viss du kjenner namnet på brukaren, skriv det inn under.',
+	'g-given' => 'Denne gåva har vorten gjeven {{PLURAL:$1|éin gong|$1 gonger}}',
+	'g-give-list-friends-title' => 'Vel frå lista di over venner',
+	'g-give-list-select' => 'vel ein venn',
+	'g-give-separator' => 'eller',
+	'g-give-no-user-message' => 'Gåver og utmerkingar er ein flott måte å visa at du set pris på vennene dine.',
+	'g-give-no-user-title' => 'Kven ynskjer du å gje ei gåva til?',
+	'g-give-to-user-title' => 'Send gåva «$1» til $2',
+	'g-give-to-user-message' => 'Ynskjer du å gje $1 ei anna gåva? <a href="$2">Trykk her</a>.',
+	'g-go-back' => 'Attende',
+	'g-imagesbelow' => 'Nedanfor er bileta dine som vil verta nytta på sida',
+	'g-large' => 'Stort',
+	'g-list-title' => 'gåvelista til $1',
+	'g-main-page' => 'Hovudsida',
+	'g-medium' => 'Medels',
+	'g-mediumlarge' => 'Medelsstort',
+	'g-new' => 'ny',
+	'g-next' => 'Neste',
+	'g-previous' => 'Førre',
+	'g-remove' => 'Fjern',
+	'g-remove-gift' => 'Fjern denne gåva',
+	'g-remove-message' => 'Er du sikker på at du ynskjer å fjerna gåva «$1»?',
+	'g-recent-recipients' => 'Andre som nyleg mottok denne gåva',
+	'g-remove-success-title' => 'Gåva «$1» vart fjerna av deg',
+	'g-remove-success-message' => 'Som bedne om har me fjerna gåva «$1»',
+	'g-remove-title' => 'Fjerna «$1»?',
+	'g-send-gift' => 'Send gåva',
+	'g-select-a-friend' => 'vel ein venn',
+	'g-sent-title' => 'Du har sendt ei gåva til $1',
+	'g-sent-message' => 'Du har sendt den følgjande gåva til $1.',
+	'g-small' => 'Lite',
+	'g-to-another' => 'Gje til nokon andre',
+	'g-uploadsuccess' => 'Opplasting lukkast',
+	'g-viewgiftlist' => 'Sjå gåvelista',
+	'g-your-profile' => 'Profilen din',
+	'gift_received_subject' => '$1 har sendt deg gåva «$2» på {{SITENAME}}!',
+	'gift_received_body' => 'Hei $1:
+
+$2 sendte deg nett $3-gåva på {{SITENAME}}.   
+
+Ynskjer du å sjå merknaden $2 lét att til deg, og å sjå gåva?  Trykk på lenkja nedanfor:
+
+$4
+
+Me håpar du vil lika ho!
+
+Takk,
+
+
+{{SITENAME}}-laget
+
+----
+
+Vil du ikkje lenger motta e-postar frå oss?
+
+Trykk $5
+og endra innstillingane dine for å slå av e-postmeldingar.',
+	'right-giftadmin' => 'Opprett nye og endra eksisterande gåver',
 );
 
 /** Occitan (Occitan)

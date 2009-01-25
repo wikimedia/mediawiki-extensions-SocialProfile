@@ -86,6 +86,7 @@ $messages['de'] = array(
 	'ga-back-gift-list' => 'Zurück zur Geschenkeliste',
 	'ga-back-link' => '<a href="$1">< Zurück zum Profil von $2</a>',
 	'ga-choosefile' => 'Wähle Datei:',
+	'ga-count' => '$1 hat $2 {{PLURAL:$2|Auszeichnung|Auszeichnungen}}.',
 	'ga-create-gift' => 'Geschenk erstellen',
 	'ga-created' => 'Das Geschenk wurde erstellt',
 	'ga-currentimage' => 'Aktuelles Bild',
@@ -109,11 +110,37 @@ $messages['de'] = array(
 	'ga-new' => 'Neu',
 	'ga-next' => 'Nächste',
 	'ga-previous' => 'Vorherige',
+	'ga-recent-recipients-award' => 'Andere aktuelle Empfänger dieser Auszeichnung',
 	'ga-saved' => 'Das Geschenk wurde gespeichert',
 	'ga-small' => 'Schmal',
 	'ga-threshold' => 'Schwelle',
+	'ga-title' => 'Auszeichnungen von $1',
 	'ga-uploadsuccess' => 'Hochladen erfolgreich',
 	'ga-viewlist' => 'Geschenkeliste ansehen',
+	'system_gift_received_subject' => 'Du hast die $1-Auszeichnung auf {{SITENAME}} erhalten!',
+	'system_gift_received_body' => 'Hallo $1,
+
+du hast eben die $2-Auszeichnung auf {{SITENAME}} erhalten!
+
+„$3“
+
+Klicke nachfolgend um deine Trophäe anzusehen!
+
+$4
+
+Wir hoffen, es gefällt dir!
+
+Danke,
+
+Das {{SITENAME}}-Team
+
+---
+
+Du möchtest keine E-Mails von uns erhalten?
+
+Klicke $5
+und ändere deine Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
+	'right-awardsmanage' => 'Neue erstellen und bestehende Auszeichnungen bearbeiten',
 );
 
 /** German (formal address) (Deutsch (Sie-Form))
@@ -121,6 +148,29 @@ $messages['de'] = array(
  */
 $messages['de-formal'] = array(
 	'ga-error-message-no-user' => 'Der Benutzer, den Sie anschauen möchten, existiert nicht.',
+	'system_gift_received_subject' => 'Sie haben die $1-Auszeichnung auf {{SITENAME}} erhalten!',
+	'system_gift_received_body' => 'Hallo $1,
+
+Sie haben eben die $2-Auszeichnung auf {{SITENAME}} erhalten!
+
+„$3“
+
+Klicken Sie nachfolgend um Ihre Trophäe anzusehen!
+
+$4
+
+Wir hoffen, es gefällt Ihnen!
+
+Danke,
+
+Das {{SITENAME}}-Team
+
+---
+
+Sie möchten keine E-Mails von uns erhalten?
+
+Klicken Sie $5
+und änderen Sie Ihre Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
 );
 
 /** Finnish (Suomi)
@@ -595,6 +645,74 @@ Wilt u geen e-mails meer van ons ontvangen?
 Klik op $5
 en wijzig uw instellingen om e-mailwaarschuwingen uit te schakelen.',
 	'right-awardsmanage' => 'Nieuwe prijzen aanmaken en bestaande prijzen bewerken',
+);
+
+/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+ * @author Harald Khan
+ */
+$messages['nn'] = array(
+	'systemgiftmanager' => 'Systemgåvehandsamar',
+	'ga-addnew' => '+ legg til ei ny gåva',
+	'ga-back-edit-gift' => 'Attende til endring av gåva',
+	'ga-back-gift-list' => 'Attende til gåvelista',
+	'ga-back-link' => '<a href="$1">< attende til profilen til $2</a>',
+	'ga-choosefile' => 'Vel fil:',
+	'ga-count' => '$1 har {{PLURAL:$2|éi utmerking|$2 utmerkingar}}.',
+	'ga-create-gift' => 'Opprett gåva',
+	'ga-created' => 'Gåva vart oppretta',
+	'ga-currentimage' => 'Noverande bilete',
+	'ga-error-message-invalid-link' => 'Lenkja du oppgav er ugyldig.',
+	'ga-error-message-no-user' => 'Brukaren du ynskjer å sjå finst ikkje.',
+	'ga-error-title' => 'Oi, du svingte feil!',
+	'ga-file-instructions' => 'Biletet ditt lyt vera eit jpeg, png eller gif (ingen animerte gif-filer) og ha ein storleik på mindre enn 100 kb.',
+	'ga-gift' => 'gåva',
+	'ga-gift-given-count' => 'Denne gåva har vorten gjeven {{PLURAL:$1|éin gong|$1 gonger}}',
+	'ga-gift-title' => '$2 til $1',
+	'ga-giftdesc' => 'gåveskildring',
+	'ga-giftimage' => 'gåvebilete',
+	'ga-giftname' => 'gåvenamn',
+	'ga-gifttype' => 'gåvetype',
+	'ga-goback' => 'Attende',
+	'ga-imagesbelow' => 'Nedanfor er bileta dine som vil verta nytta på sida',
+	'ga-img' => 'legg til/erstatt bilete',
+	'ga-large' => 'Stort',
+	'ga-medium' => 'Medels',
+	'ga-mediumlarge' => 'Medelsstort',
+	'ga-new' => 'Ny',
+	'ga-next' => 'Neste',
+	'ga-previous' => 'Førre',
+	'ga-recent-recipients-award' => 'Andre som nyleg mottok denne utmerkinga',
+	'ga-saved' => 'Gåva har vorten lagra',
+	'ga-small' => 'Lite',
+	'ga-threshold' => 'terskel',
+	'ga-title' => 'utmerkingane til $1',
+	'ga-uploadsuccess' => 'Opplasting lukkast',
+	'ga-viewlist' => 'Sjå gåvelista',
+	'system_gift_received_subject' => 'Du har motteke utmerkinga $1 på {{SITENAME}}!',
+	'system_gift_received_body' => 'Hei $1:
+
+Du har nett motteke $2-utmerkinga på {{SITENAME}}!   
+
+«$3»
+
+Trykk nedanfor for å sjå trofeet ditt!
+
+$4
+
+Me håpar du vil lika det!
+
+Takk,
+
+
+{{SITENAME}}-laget
+
+----
+
+Vil du ikkje lenger motta e-postar frå oss?
+
+Trykk $5
+og endra innstillingane dine for å slå av e-postmeldingar.',
+	'right-awardsmanage' => 'Opprett nye og endra eksisterande utmerkingar',
 );
 
 /** Occitan (Occitan)

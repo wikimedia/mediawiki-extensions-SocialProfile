@@ -433,6 +433,7 @@ Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.
 
 /** Message documentation (Message documentation)
  * @author Aotake
+ * @author EugeneZelenko
  * @author Jon Harald Søby
  * @author Purodha
  */
@@ -440,6 +441,7 @@ $messages['qqq'] = array(
 	'user-watchlist' => '{{Identical|My watchlist}}',
 	'user-add-friend' => '{{Identical|Add as friend}}',
 	'user-add-foe' => '{{Identical|Add as foe}}',
+	'user-stats-title' => '{{Identical|Statistics}}',
 	'other-info-title' => '{{Identical|Other information}}',
 	'other-info-movies' => '{{Identical|Movies}}',
 	'other-info-tv' => '{{Identical|TV}}',
@@ -997,7 +999,43 @@ $messages['be-tarask'] = array(
 	'user-points' => 'пунктаў',
 	'user-edit-profile' => 'Рэдагаваць зьвесткі',
 	'user-upload-avatar' => 'Загрузіць аватару',
+	'user-watchlist' => 'Мой сьпіс назіраньня',
+	'user-meet-people' => 'Спаткаць людзей',
+	'user-add-friend' => 'Дадаць як сябра',
+	'user-add-foe' => 'Дадаць як ворага',
+	'user-remove-friend' => 'Выдаліць з сяброў',
+	'user-remove-foe' => 'Выдаліць з ворагаў',
+	'user-send-message' => 'Даслаць паведамленьне',
+	'user-send-gift' => 'Даслаць падарунак',
+	'user-contributions' => 'Унёсак',
+	'user-stats-title' => 'Статыстыка',
+	'user-stats-edits' => 'Рэдагаваньняў',
+	'user-stats-votes' => 'Галасоў',
+	'user-stats-comments' => 'Камэнтараў',
+	'user-stats-recruits' => 'Запрошаных',
+	'user-stats-poll-votes' => 'Галасоў на выбарах',
+	'user-stats-picture-game-votes' => 'Галасоў у гульні з выявамі',
+	'user-stats-quiz-points' => 'Экзамэнацыйных пунктаў',
+	'user-stats-pick-points' => 'Атрыманых пунктаў',
+	'other-info-title' => 'Іншыя зьвесткі',
+	'user-friends-title' => 'Сябры',
+	'user-foes-title' => 'Ворагі',
+	'other-info-movies' => 'Фільмы',
+	'other-info-tv' => 'Тэлебачаньне',
+	'other-info-music' => 'Музыка',
 	'other-info-books' => 'Кнігі',
+	'other-info-video-games' => 'Кампутарныя гульні',
+	'other-info-magazines' => 'Часопісы',
+	'other-info-snacks' => 'Закускі',
+	'other-info-drinks' => 'Напоі',
+	'other-no-info' => 'Няма іншых зьвестак',
+	'custom-info-title' => 'Нестандартная інфармацыя',
+	'custom-info-field1' => 'Нестандартная інфармацыя 1',
+	'custom-info-field2' => 'Нестандартная інфармацыя 2',
+	'custom-info-field3' => 'Нестандартная інфармацыя 3',
+	'custom-info-field4' => 'Нестандартная інфармацыя 4',
+	'custom-no-info' => 'Няма нестандартнай інфармацыі',
+	'profile-updated-personal' => 'Абнавіць Вашыя зьвесткі',
 	'user-profile-personal-name' => 'Імя',
 	'user-profile-personal-country' => 'Краіна',
 	'user-profile-interests-books' => 'Кнігі',
@@ -3239,7 +3277,8 @@ $messages['it'] = array(
 $messages['ja'] = array(
 	'user-points' => 'ポイント',
 	'user-edit-profile' => 'プロフィールの編集',
-	'user-stats-edits' => '編集',
+	'user-stats-edits' => '編集回数',
+	'user-stats-votes' => '票数',
 	'user-stats-comments' => 'コメント',
 	'user-friends-title' => '友達',
 	'other-info-movies' => '動画',
@@ -4501,7 +4540,7 @@ $messages['nn'] = array(
 	'user-recent-activity-foe' => 'Er no fiende med',
 	'user-recent-activity-user-message' => 'Sendte ei melding til',
 	'user-recent-activity-network-update' => 'Har lagt inn ein tanke',
-	'user-recent-system-gift' => 'Mottok ein pris',
+	'user-recent-system-gift' => 'Mottok ei utmerking',
 	'user-profile-update-notloggedin-title' => 'Du kan ikkje endra profilen din utan å vera innlogga',
 	'user-profile-update-notloggedin-text' => 'Du kan ikkje endra profilen din utan å vera innlogga.
 Trykk <a href="$1">her</a> for å loggå inn eller <a href="$2">her</a> for å registrera deg.',
@@ -4594,7 +4633,7 @@ Trykk <a href="$1">her</a> for å loggå inn eller <a href="$2">her</a> for å r
 	'removeavatar' => 'Fjern avatar',
 	'givegift' => 'Gje ei gåva',
 	'viewgifts' => 'Syn gåver',
-	'viewsystemgifts' => 'Syn prisar',
+	'viewsystemgifts' => 'Sjå utmerkingar',
 	'avatarupload-removeavatar' => 'Fjern avatar',
 	'avatarupload-currentavatar' => 'Noverande avatar for $1',
 	'avatarupload-removesuccess' => 'Avataren har blitt fjerna',
@@ -4606,6 +4645,7 @@ Trykk <a href="$1">her</a> for å loggå inn eller <a href="$2">her</a> for å r
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'lasta opp ny avatar',
 	'user-profile-picture-log-delete-entry' => 'sletta avataren til $1',
+	'right-avatarremove' => 'Fjerna avatarane til brukarar',
 );
 
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
