@@ -145,15 +145,15 @@ class UserProfilePage extends Article {
 			</div>
 			<div class="cleared"></div>
 			<div class="profile-info-container bold-fix">'.
-				$this->getUserStatsRow(wfMsg('user-stats-edits'), $stats_data['edits']).
-				$this->getUserStatsRow(wfMsg('user-stats-votes'), $stats_data['votes']).
-				$this->getUserStatsRow(wfMsg('user-stats-comments'), $stats_data['comments']).
-				$this->getUserStatsRow(wfMsg('user-stats-recruits'), $stats_data['recruits']).
-				$this->getUserStatsRow(wfMsg('user-stats-poll-votes'), $stats_data['poll_votes']).
-				$this->getUserStatsRow(wfMsg('user-stats-picture-game-votes'), $stats_data['picture_game_votes']).
-				$this->getUserStatsRow(wfMsg('user-stats-quiz-points'), $stats_data['quiz_points']);
+				$this->getUserStatsRow( wfMsg( 'user-stats-edits', $stats_data['edits'] ), $stats_data['edits'] ) .
+				$this->getUserStatsRow( wfMsg( 'user-stats-votes', $stats_data['votes'] ), $stats_data['votes'] ) .
+				$this->getUserStatsRow( wfMsg( 'user-stats-comments', $stats_data['comments'] ), $stats_data['comments'] ) .
+				$this->getUserStatsRow( wfMsg( 'user-stats-recruits', $stats_data['recruits'] ), $stats_data['recruits'] ) .
+				$this->getUserStatsRow( wfMsg( 'user-stats-poll-votes', $stats_data['poll_votes'] ), $stats_data['poll_votes'] ) .
+				$this->getUserStatsRow( wfMsg( 'user-stats-picture-game-votes', $stats_data['picture_game_votes']), $stats_data['picture_game_votes'] ) .
+				$this->getUserStatsRow( wfMsg( 'user-stats-quiz-points', $stats_data['quiz_points'] ), $stats_data['quiz_points'] );
 				if( $stats_data['currency'] != '10,000' )
-					$output .= $this->getUserStatsRow( wfMsg('user-stats-pick-points'), $stats_data['currency'] );
+					$output .= $this->getUserStatsRow( wfMsg( 'user-stats-pick-points', $stats_data['currency'] ), $stats_data['currency'] );
 			$output .= '</div>';
 		}
 
