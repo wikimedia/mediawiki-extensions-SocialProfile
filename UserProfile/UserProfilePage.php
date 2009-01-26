@@ -145,15 +145,15 @@ class UserProfilePage extends Article {
 			</div>
 			<div class="cleared"></div>
 			<div class="profile-info-container bold-fix">'.
-				$this->getUserStatsRow( wfMsg( 'user-stats-edits', $stats_data['edits'] ), $stats_data['edits'] ) .
-				$this->getUserStatsRow( wfMsg( 'user-stats-votes', $stats_data['votes'] ), $stats_data['votes'] ) .
-				$this->getUserStatsRow( wfMsg( 'user-stats-comments', $stats_data['comments'] ), $stats_data['comments'] ) .
-				$this->getUserStatsRow( wfMsg( 'user-stats-recruits', $stats_data['recruits'] ), $stats_data['recruits'] ) .
-				$this->getUserStatsRow( wfMsg( 'user-stats-poll-votes', $stats_data['poll_votes'] ), $stats_data['poll_votes'] ) .
-				$this->getUserStatsRow( wfMsg( 'user-stats-picture-game-votes', $stats_data['picture_game_votes']), $stats_data['picture_game_votes'] ) .
-				$this->getUserStatsRow( wfMsg( 'user-stats-quiz-points', $stats_data['quiz_points'] ), $stats_data['quiz_points'] );
+				$this->getUserStatsRow( wfMsgExt( 'user-stats-edits', array( 'parsemag' ), $stats_data['edits'] ), $stats_data['edits'] ) .
+				$this->getUserStatsRow( wfMsgExt( 'user-stats-votes', array( 'parsemag' ), $stats_data['votes'] ), $stats_data['votes'] ) .
+				$this->getUserStatsRow( wfMsgExt( 'user-stats-comments', array( 'parsemag' ), $stats_data['comments'] ), $stats_data['comments'] ) .
+				$this->getUserStatsRow( wfMsgExt( 'user-stats-recruits', array( 'parsemag' ), $stats_data['recruits'] ), $stats_data['recruits'] ) .
+				$this->getUserStatsRow( wfMsgExt( 'user-stats-poll-votes', array( 'parsemag' ), $stats_data['poll_votes'] ), $stats_data['poll_votes'] ) .
+				$this->getUserStatsRow( wfMsgExt( 'user-stats-picture-game-votes', array( 'parsemag' ), $stats_data['picture_game_votes']), $stats_data['picture_game_votes'] ) .
+				$this->getUserStatsRow( wfMsgExt( 'user-stats-quiz-points', array( 'parsemag' ), $stats_data['quiz_points'] ), $stats_data['quiz_points'] );
 				if( $stats_data['currency'] != '10,000' )
-					$output .= $this->getUserStatsRow( wfMsg( 'user-stats-pick-points', $stats_data['currency'] ), $stats_data['currency'] );
+					$output .= $this->getUserStatsRow( wfMsgExt( 'user-stats-pick-points', array( 'parsemag' ), $stats_data['currency'] ), $stats_data['currency'] );
 			$output .= '</div>';
 		}
 
