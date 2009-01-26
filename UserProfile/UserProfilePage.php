@@ -471,7 +471,7 @@ class UserProfilePage extends Article {
 				global $wgUserLevels;
 				if( $wgUserLevels ){
 					$output .= "<div id=\"points-level\">
-					<a href=\"{$level_link->escapeFullURL()}\">{$stats_data["points"]}".wfMsg('user-profile-points')."</a>
+					<a href=\"{$level_link->escapeFullURL()}\">" . wfMsgExt( 'user-profile-points', 'parsemag', $stats_data["points"] ) . "</a>
 					</div>
 					<div id=\"honorific-level\">
 						<a href=\"{$level_link->escapeFullURL()}\" rel=\"nofollow\">({$user_level->getLevelName()})</a>
@@ -607,9 +607,9 @@ class UserProfilePage extends Article {
 					$output .= '</div>
 					<div class="action-left">';
 						if( intval( str_replace( ",", "", $relationship_count ) ) > 4 ) {
-							$output .= "{$per_row} ".wfMsg('user-count-separator')." {$relationship_count}";
+							$output .= wfMsg( 'user-count-separator', $per_row, $relationship_count );
 						} else {
-							$output .= "{$relationship_count} ".wfMsg('user-count-separator')." {$relationship_count}";
+							$output .= wfMsg( 'user-count-separator', $relationship_count, $relationship_count );
 						}
 					$output .= '</div>
 				</div>
@@ -687,9 +687,9 @@ class UserProfilePage extends Article {
 					$output .= '</div>
 					<div class="action-left">';
 						if( $gift_count > 4 ) {
-							$output .= "4 ".wfMsg('user-count-separator')." {$gift_count}";
+							$output .= wfMsg( 'user-count-separator', "4", $gift_count );
 						} else {
-							$output .= "{$gift_count} ".wfMsg('user-count-separator')." {$gift_count}";
+							$output .= wfMsg( 'user-count-separator', $gift_count, $gift_count );
 						}
 					$output .= '</div>
 					<div class="cleared"></div>
@@ -770,9 +770,9 @@ class UserProfilePage extends Article {
 					$output .= '</div>
 					<div class="action-left">';
 						if( $system_gift_count > 4 ) {
-							$output .= "4 ".wfMsg('user-count-separator')." {$system_gift_count}";
+							$output .= wfMsg( 'user-count-separator', "4", $system_gift_count );
 						} else {
-							$output .= "{$system_gift_count}&nbsp;".wfMsg('user-count-separator')."&nbsp;{$system_gift_count}";
+							$output .= wfMsg( 'user-count-separator', $system_gift_count, $system_gift_count );
 						}
 					$output .= "</div>
 					<div class=\"cleared\"></div>
@@ -846,9 +846,9 @@ class UserProfilePage extends Article {
 				$output .= '</div>
 				<div class="action-left">';
 					if( $total > 10 ) {
-						$output .= "10 ".wfMsg('user-count-separator')." {$total}";
+						$output .= wfMsg( 'user-count-separator', "10", $total );
 					} else if( $total > 0 ) {
-						$output .= "{$total} ".wfMsg('user-count-separator')." {$total}";
+						$output .= wfMsg( 'user-count-separator', $total, $total );
 					}
 				$output .= '</div>
 				<div class="cleared"></div>
@@ -939,9 +939,9 @@ class UserProfilePage extends Article {
 					$output .= '</div>
 					<div class="action-left">';
 						if( $fanbox_count > 10 ) {
-							$output .= "10 ".wfMsg('user-count-separator')." {$fanbox_count}";
+							$output .= wfMsg('user-count-separator', "10", $fanbox_count );
 						} else {
-							$output .= "{$fanbox_count} ".wfMsg('user-count-separator')." {$fanbox_count}";
+							$output .= wfMsg( 'user-count-separator',$fanbox_count, $fanbox_count);
 						}
 					$output .= '</div>
 					<div class="cleared"></div>
