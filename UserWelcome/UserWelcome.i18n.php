@@ -15,7 +15,7 @@ $messages['en'] = array(
 	'mp-userlevels-link' => 'User levels', // This is the help page...e.g. English default is Help:User Levels -- you can define a new help page with this msg.
 	'mp-welcome-upload' => 'Upload',
 	'mp-welcome-edit' => 'Edit',
-	'mp-welcome-points' => '$1 points',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|point|points}}',
 	'mp-welcome-needed-points' => 'To advance to <b><a href="$1">$2</a></b> earn <i>$3</i> more {{PLURAL:$3|point|points}}!',
 	'mp-welcome-logged-in' => 'Hello $1',
 	'mp-requests-title' => 'Requests',
