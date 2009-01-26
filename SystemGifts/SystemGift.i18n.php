@@ -539,7 +539,10 @@ $messages['ia'] = array(
  * @author Purodha
  */
 $messages['ksh'] = array(
+	'ga-addnew' => '+ Neu Jeschenk dobei donn',
+	'ga-choosefile' => 'Sök en Datei uß:',
 	'ga-create-gift' => 'Jeschenk aanlääje',
+	'ga-created' => 'Dat Jeschenk es jez aanjelaat',
 	'ga-currentimage' => 'Dat aktoälle Beld',
 	'ga-gift' => 'Jeschenk',
 	'ga-gift-given-count' => 'Dat jeschenk wood {{PLURAL:$1|eijmol|$1 mol|noch nie}} ußjejovve.',
@@ -556,7 +559,12 @@ $messages['ksh'] = array(
 	'ga-new' => 'Neu',
 	'ga-next' => 'Nächs',
 	'ga-previous' => 'Vörije',
+	'ga-saved' => 'Dat Jeschenk es afjeshpeichert',
 	'ga-small' => 'Kleijn',
+	'ga-title' => 'Dem $1 sing Belohnunge',
+	'ga-viewlist' => 'Leß met Jeschenke aanloore',
+	'system_gift_received_subject' => 'Do häs de Belohnung „$1“ op de {{SITENAME}} krääje!',
+	'right-awardsmanage' => 'Belohnunge ändere udder neu aanlööje',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
