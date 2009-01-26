@@ -111,6 +111,13 @@ and change your settings to disable email notifications.',
 	'right-giftadmin' => 'Create new and edit existing gifts',
 );
 
+/** Message documentation (Message documentation)
+ * @author Siebrand
+ */
+$messages['qqq'] = array(
+	'g-created-by' => 'Complete contents of a cell in a table. The next cell (horizontally) contains the user name of the creator of a gift.',
+);
+
 /** Arabic (العربية)
  * @author Ciphers
  */
