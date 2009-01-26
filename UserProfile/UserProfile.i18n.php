@@ -20,7 +20,6 @@ $messages['en'] = array(
 	'user-view-all' => 'View all',
 	'user-upload-image' => 'Upload image',
 	'user-edit-this' => 'Edit this',
-	'user-points' => 'points',
 	'user-edit-profile' => 'Edit profile',
 	'user-upload-avatar' => 'Upload avatar',
 	'user-watchlist' => 'My watchlist',
