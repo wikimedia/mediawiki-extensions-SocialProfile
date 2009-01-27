@@ -140,7 +140,7 @@ $messages['bs'] = array(
 	'mp-userlevels-link' => 'Nivoi korisnika',
 	'mp-welcome-upload' => 'Postavljanje',
 	'mp-welcome-edit' => 'Izmjena',
-	'mp-welcome-points' => '$1 bodova',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|bod|boda|bodova}}',
 	'mp-welcome-needed-points' => 'Da bi ste napredovali do <b><a href="$1">$2</a></b> trebate još {{PLURAL:$3|$3 bod|$3 boda|$3 bodova}}!',
 	'mp-welcome-logged-in' => 'Zdravo $1',
 	'mp-requests-title' => 'Zahtjevi',
