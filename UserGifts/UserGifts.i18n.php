@@ -776,6 +776,13 @@ e cambia tu configurationes pro disactivar le notificationes in e-mail.',
 	'right-giftadmin' => 'Crear nove donos e modificar existentes',
 );
 
+/** Japanese (日本語)
+ * @author Hosiryuhosi
+ */
+$messages['ja'] = array(
+	'giftmanager-public' => '公開',
+);
+
 /** Ripoarisch (Ripoarisch)
  * @author Purodha
  */

@@ -1115,6 +1115,7 @@ e modificatz vòstres paramètres en desactivant las notificacions per corrièr 
 /** Polish (Polski)
  * @author Leinad
  * @author Maikking
+ * @author Sp5uhe
  */
 $messages['pl'] = array(
 	'user-stats-alltime-title' => 'Najwięcej punktów w historii',
@@ -1141,7 +1142,7 @@ $messages['pl'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Głos przeciw oddane|Głosy przeciw oddane}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Prezent otrzymany|Prezenty otrzymane}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Prezent dany|Prezenty dane}}',
-	'level-advance-subject' => 'Należysz teraz do grupy "$1" na {{SITENAME}}!',
+	'level-advance-subject' => 'Należysz teraz do grupy „$1” na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
 	'level-advance-body' => 'Witaj $1:
 
 Od teraz jesteś „$2” w {{SITENAME}}!

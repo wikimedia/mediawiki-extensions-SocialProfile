@@ -1826,6 +1826,7 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Crazymadlover
  * @author Imre
  * @author Sanbec
  */
@@ -1833,7 +1834,7 @@ $messages['es'] = array(
 	'user-gifts-title' => 'Regalos',
 	'user-count-separator' => '$1 de $2',
 	'user-upload-avatar' => 'Subir avatar',
-	'user-stats-votes' => 'Votos',
+	'user-stats-votes' => '{{PLURAL:$1|Voto|Votos}}',
 	'user-friends-title' => 'Amigos',
 	'other-info-movies' => 'Películas',
 	'other-info-music' => 'Música',
@@ -1846,8 +1847,9 @@ $messages['es'] = array(
 	'user-personal-info-websites' => 'Sitios web',
 	'user-personal-info-schools' => 'Escuelas',
 	'user-personal-info-about-me' => 'Sobre mí',
+	'user-profile-update-log-section' => 'Sección cambiada',
 	'user-profile-default-country' => 'Estados Unidos',
-	'user-profile-points' => '$1 puntos',
+	'user-profile-points' => '$1 {{PLURAL:$1|punto|puntos}}',
 	'user-profile-section-personal' => 'Información personal',
 	'user-profile-section-picture' => 'Avatar',
 	'user-profile-section-preferences' => 'Preferencias',
@@ -3353,6 +3355,7 @@ $messages['ja'] = array(
 	'user-personal-info-birthday' => '誕生日',
 	'user-profile-update-profile' => 'プロフィール',
 	'user-profile-default-country' => 'アメリカ合衆国',
+	'user-profile-section-picture' => 'アバター',
 	'user-profile-section-preferences' => '個人設定',
 	'user-profile-personal-name' => '名前',
 	'user-profile-personal-city' => '市町村',
@@ -3502,10 +3505,10 @@ $messages['km'] = array(
 	'user-send-gift' => 'ជូនអំណោយ',
 	'user-contributions' => 'ការរួមចំណែក',
 	'user-stats-title' => 'ស្ថិតិ',
-	'user-stats-edits' => 'កំណែប្រែ',
-	'user-stats-votes' => 'បោះឆ្នោត',
-	'user-stats-comments' => 'សេចក្ដីអធិប្បាយ',
-	'user-stats-recruits' => 'កំណែន',
+	'user-stats-edits' => '{{PLURAL:$1|កំណែប្រែ|កំណែប្រែ}}',
+	'user-stats-votes' => '{{PLURAL:$1|បោះឆ្នោត|បោះឆ្នោត}}',
+	'user-stats-comments' => '{{PLURAL:$1|សេចក្ដីអធិប្បាយ|សេចក្ដីអធិប្បាយ}}',
+	'user-stats-recruits' => '{{PLURAL:$1|កំណែន|កំណែន}}',
 	'other-info-title' => 'ព័ត៌មានផ្សេងៗទៀត',
 	'user-friends-title' => 'មិត្តភក្តិ',
 	'user-foes-title' => 'បច្ចាមិត្ត',
@@ -5108,9 +5111,9 @@ $messages['pl'] = array(
 	'user-send-gift' => 'Wyślij prezent',
 	'user-contributions' => 'Wkład',
 	'user-stats-title' => 'Statystyki',
-	'user-stats-edits' => 'Edycje',
-	'user-stats-votes' => 'Głosy',
-	'user-stats-comments' => 'Komentarze',
+	'user-stats-edits' => '{{PLURAL:$1|Edycja|Edycje|Edycji}}',
+	'user-stats-votes' => '{{PLURAL:$1|Głos|Głosy|Głosów}}',
+	'user-stats-comments' => '{{PLURAL:$1|Komentarz|Komentarze|Komentarzy}}',
 	'other-info-title' => 'Inne informacje',
 	'user-friends-title' => 'Znajomi',
 	'user-foes-title' => 'Wrogowie',
@@ -5281,7 +5284,7 @@ $messages['pt'] = array(
 	'user-edit-this' => 'Editar isto',
 	'user-edit-profile' => 'Editar perfil',
 	'user-upload-avatar' => 'Carregar avatar',
-	'user-watchlist' => 'Minha lista de vigiados',
+	'user-watchlist' => 'Páginas vigiadas',
 	'user-meet-people' => 'Conhecer pessoas',
 	'user-add-friend' => 'Adicionar como amigo',
 	'user-add-foe' => 'Adicionar como inimigo',
