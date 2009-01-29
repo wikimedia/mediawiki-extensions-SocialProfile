@@ -539,6 +539,7 @@ $messages['ia'] = array(
  * @author Purodha
  */
 $messages['ksh'] = array(
+	'systemgiftmanager' => 'Jeschenke vum Süstem verwallde',
 	'ga-addnew' => '+ Neu Jeschenk dobei donn',
 	'ga-back-edit-gift' => 'Jangk retuur un donn dat Jeschengk beärbeide',
 	'ga-back-gift-list' => 'Jangk retuur op de Leß met de Jeschengke',
@@ -549,6 +550,7 @@ $messages['ksh'] = array(
 	'ga-created' => 'Dat Jeschenk es jez aanjelaat',
 	'ga-currentimage' => 'Dat aktoälle Beld',
 	'ga-error-message-invalid-link' => 'Do häss_enne unjöltijje Lengk enjejovve.',
+	'ga-error-message-no-user' => 'Dä Metmaacher jidd_et nit, däm De aanloore wells.',
 	'ga-file-instructions' => 'Ding Beld-Datei moß et Fommaat <code>jpeg</code>, <code>png</code>, odder <span class="plainlinks">gif</span> hann, ävver annimeete <span class="plainlinks">gif</span> donn et nit, un moß ene Dateiömfang fun 100&nbsp;KB odder winnijer han.',
 	'ga-gift' => 'Jeschenk',
 	'ga-gift-given-count' => 'Dat jeschenk wood {{PLURAL:$1|eijmol|$1 mol|noch nie}} ußjejovve.',
@@ -571,6 +573,26 @@ $messages['ksh'] = array(
 	'ga-title' => 'Dem $1 sing Belohnunge',
 	'ga-viewlist' => 'Leß met Jeschenke aanloore',
 	'system_gift_received_subject' => 'Do häs de Belohnung „$1“ op de {{SITENAME}} krääje!',
+	'system_gift_received_body' => 'Joden Daach $1,
+
+Op de {{SITENAME}} häs De jrad de Belohung $2 bekumme!
+
+„$3“
+
+Jangl op die Sigg hee, un don Ding Sammlung vun Belohnunge beloore:
+
+$4
+
+Mer hoffe, Do maachs dat!
+
+Mer bedanke uns.
+
+---
+
+Wells de kein e-mail mieh vun uns krijje?
+
+Dann jangk noh $5
+un donn en Dinge Ensstellunge de Nohrechte övver e-mail affschallde.',
 	'right-awardsmanage' => 'Belohnunge ändere udder neu aanlööje',
 );
 

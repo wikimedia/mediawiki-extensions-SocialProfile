@@ -49,6 +49,13 @@ $messages['am'] = array(
 	'mp-request-new-friend' => '$1 አዲስ {{PLURAL:$1|ወዳጅ|ወዳጆች}}',
 );
 
+/** Aragonese (Aragonés)
+ * @author Juanpabl
+ */
+$messages['an'] = array(
+	'mp-welcome-edit' => 'Editar',
+);
+
 /** Arabic (العربية)
  * @author Meno25
  * @author OsamaK
@@ -58,7 +65,7 @@ $messages['ar'] = array(
 	'mp-userlevels-link' => 'مستويات المستخدم',
 	'mp-welcome-upload' => 'رفع',
 	'mp-welcome-edit' => 'عدل',
-	'mp-welcome-points' => '$1 نقطة',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|نقطة|نقطة}}',
 	'mp-welcome-needed-points' => 'للتقدم <b><a href="$1">$2</a></b> لاستحقاق {{PLURAL:$3|نقطة|<i>$3</i> نقاط}} إضافية!',
 	'mp-welcome-logged-in' => 'مرحبا $1',
 	'mp-requests-title' => 'طلبات',
@@ -346,7 +353,7 @@ $messages['fr'] = array(
  * @author Alison
  */
 $messages['ga'] = array(
-	'mp-welcome-points' => '$1 pointí',
+	'mp-welcome-points' => '{{PLURAL:$1|point amháin|$1 pointí}}',
 	'mp-requests-title' => 'Iarratais',
 	'mp-request-new-message' => 'teachtaireacht nua',
 );
@@ -400,7 +407,7 @@ $messages['he'] = array(
 	'mp-userlevels-link' => 'רמות המשתמשים',
 	'mp-welcome-upload' => 'העלאה',
 	'mp-welcome-edit' => 'עריכה',
-	'mp-welcome-points' => '{{PLURAL:$1|נקודה $1|$1 נקודות}}',
+	'mp-welcome-points' => '{{PLURAL:$1|נקודה אחת|$1 נקודות}}',
 	'mp-welcome-needed-points' => 'כדי להתקדם ל<b><a href="$1">$2</a></b> הרוויחו {{PLURAL:$3|נקודה <i>אחת</i> נוספת|<i>$3</i> נקודות נוספות}}!',
 	'mp-welcome-logged-in' => 'שלום $1',
 	'mp-requests-title' => 'בקשות',
@@ -544,7 +551,7 @@ $messages['lb'] = array(
 	'mp-userlevels-link' => 'Benotzerniveauen',
 	'mp-welcome-upload' => 'Eroplueden',
 	'mp-welcome-edit' => 'Änneren',
-	'mp-welcome-points' => '$1 Punkten',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|Punkt|Punkten}}',
 	'mp-welcome-needed-points' => 'Fir weiderzekommen <b><a href="$1">$2</a></b> verdéngt <i>$3</i> {{PLURAL:$3|Punkt|Punkte}} méi!',
 	'mp-welcome-logged-in' => 'Salut $1',
 	'mp-requests-title' => 'Ufroen',

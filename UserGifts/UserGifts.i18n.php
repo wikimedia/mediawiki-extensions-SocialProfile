@@ -128,6 +128,7 @@ $messages['ar'] = array(
 
 /** German (Deutsch)
  * @author Als-Holder
+ * @author Jorges
  * @author Umherirrender
  */
 $messages['de'] = array(
@@ -207,7 +208,7 @@ $messages['de'] = array(
 	'gift_received_subject' => '$1 hat dir das $2-Geschenk auf {{SITENAME}} gesendet!',
 	'gift_received_body' => 'Hallo $1,
 
-$1 hat dir eben das $2-Geschenk auf {{SITENAME}} gesendet!
+$2 hat dir eben das $3-Geschenk auf {{SITENAME}} gesendet!
 
 Möchtest du die Notiz von $2 lesen und dein Geschenk sehen? Klicke den folgenden Link:
 
