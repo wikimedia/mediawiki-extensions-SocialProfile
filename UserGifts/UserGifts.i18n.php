@@ -120,10 +120,105 @@ $messages['qqq'] = array(
 
 /** Arabic (العربية)
  * @author Ciphers
+ * @author Meno25
  */
 $messages['ar'] = array(
 	'giftmanager' => 'مدير الهدايا',
+	'giftmanager-addgift' => '+ إضافة هدية جديدة',
+	'giftmanager-access' => 'وصول الهدية',
+	'giftmanager-description' => 'وصف الهدية',
+	'giftmanager-giftimage' => 'صورة الهدية',
+	'giftmanager-image' => 'أضف/استبدل الصورة',
+	'giftmanager-giftcreated' => 'الهدية تم إنشاؤها',
+	'giftmanager-giftsaved' => 'الهدية تم حفظها',
+	'giftmanager-public' => 'علني',
+	'giftmanager-private' => 'خاص',
+	'giftmanager-view' => 'عرض قائمة الهدايا',
 	'g-add-message' => 'أضف رسالة',
+	'g-back-edit-gift' => 'رجوع لتعديل هذه الهدية',
+	'g-back-gift-list' => 'رجوع لقائمة الهدايا',
+	'g-back-link' => '<a href="$1">< رجوع إلى صفحة $2</a>',
+	'g-choose-file' => 'اختر الملف:',
+	'g-cancel' => 'إلغاء',
+	'g-count' => '$1 يمتلك $2 {{PLURAL:$2|هدية|هدية}}.',
+	'g-create-gift' => 'إنشاء الهدية',
+	'g-created-by' => 'تم إنشاؤها بواسطة',
+	'g-current-image' => 'الصورة الحالية',
+	'g-delete-message' => 'هل أنت متأكد أنك تريد حذف الهدية "$1"؟ هذا سيحذفها أيضا من المستخدمين الذين ربما كانوا قد تلقوها.',
+	'g-description-title' => 'الهدية "$2" الخاصة ب$1',
+	'g-error-do-not-own' => 'أنت لا تمتلك هذه الهدية.',
+	'g-error-message-blocked' => 'أنت حاليا ممنوع ولا يمكنك إعطاء هدايا',
+	'g-error-message-invalid-link' => 'الوصلة التي أدخلتها غير صحيحة.',
+	'g-error-message-login' => 'يجب عليك تسجيل الدخول لإعطاء هدايا',
+	'g-error-message-no-user' => 'المستخدم الذي تحاول رؤيته غير موجود.',
+	'g-error-message-to-yourself' => 'أنت لا يمكنك منح هدية لنفسك.',
+	'g-error-title' => 'آه، أنت أخذت منحنى خاطئا!',
+	'g-file-instructions' => 'صورتك يجب أن تكون jpeg، png أو gif (لا gif فيديو)، ويجب أن تكون أقل من 100 كيلوبت في الحجم.',
+	'g-from' => 'من <a href="$1">$2</a>',
+	'g-gift' => 'هدية',
+	'g-gift-name' => 'اسم الهدية',
+	'g-give-gift' => 'منح هدية',
+	'g-give-all' => 'تريد إعطاء $1 هدية؟ فقط اضغط على واحد من الهدايا بالأسفل واضغط "إرسال الهدية." الموضوع بهذه السهولة.',
+	'g-give-all-message-title' => 'إضافة رسالة',
+	'g-give-all-title' => 'إعطاء هدية إلى $1',
+	'g-give-enter-friend-title' => 'لو كنت تعرف اسم المستخدم، اكتبه بالأسفل',
+	'g-given' => 'هذه الهدية تم إعطاؤها $1 {{PLURAL:$1|مرة|مرة}}',
+	'g-give-list-friends-title' => 'اختر من قائمة أصدقائك',
+	'g-give-list-select' => 'اختر صديقا',
+	'g-give-separator' => 'أو',
+	'g-give-no-user-message' => 'الهدايا والجوائز طريقة عظيمة لمعرفة أصدقائك!',
+	'g-give-no-user-title' => 'من تريد إعطاء هدية له؟',
+	'g-give-to-user-title' => 'أرسل الهدية "$1" إلى $2',
+	'g-give-to-user-message' => 'تريد إعطاء $1 هدية مختلفة؟ <a href="$2">اضغط هنا</a>.',
+	'g-go-back' => 'رجوع',
+	'g-imagesbelow' => 'بالأسفل صورك التي سيتم استخدامها في الموقع',
+	'g-large' => 'كبير',
+	'g-list-title' => 'قائمة الهدايا الخاصة ب$1',
+	'g-main-page' => 'الصفحة الرئيسية',
+	'g-medium' => 'متوسط',
+	'g-mediumlarge' => 'كبير-متوسط',
+	'g-new' => 'جديد',
+	'g-next' => 'تالي',
+	'g-previous' => 'سابق',
+	'g-remove' => 'إزالة',
+	'g-remove-gift' => 'إزالة هذه الهدية',
+	'g-remove-message' => 'هل أنت متأكد أنك تريد إزالة الهدية "$1"؟',
+	'g-recent-recipients' => 'المتلقون الجدد الآخرون لهذه الهدية',
+	'g-remove-success-title' => 'أنت أزلت بنجاح الهدية "$1"',
+	'g-remove-success-message' => 'كما هو مطلوب، نحن أزلنا بنجاح الهدية "$1".',
+	'g-remove-title' => 'إزالة "$1"؟',
+	'g-send-gift' => 'إرسال الهدية',
+	'g-select-a-friend' => 'اختر صديقا',
+	'g-sent-title' => 'أنت أرسلت هدية إلى $1',
+	'g-sent-message' => 'أنت أرسلت الهدية التالية إلى $1.',
+	'g-small' => 'صغير',
+	'g-to-another' => 'منح إلى شخص آخر',
+	'g-uploadsuccess' => 'الرفع نجح',
+	'g-viewgiftlist' => 'عرض قائمة الهدايا',
+	'g-your-profile' => 'ملفك',
+	'gift_received_subject' => '$1 أرسل لك الهدية $2 في {{SITENAME}}!',
+	'gift_received_body' => 'مرحبا $1:
+
+$2 أرسل حالا لك الهدية $3 في {{SITENAME}}.   
+
+تريد قراءة الملاحظة التي تركها $2 لك ورؤية هديتك؟  اضغط على الوصلة بالأسفل:
+
+$4
+
+نأمل أن تعجبك!
+
+شكرا،
+
+
+فريق {{SITENAME}}
+
+---
+
+ها، تريد التوقف عن تلقي رسائل بريد إلكتروني منا؟   
+
+اضغط $5
+وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
+	'right-giftadmin' => 'إنشاء هدايا جديدة وتعديل الموجودة',
 );
 
 /** German (Deutsch)
@@ -1034,6 +1129,99 @@ $messages['oc'] = array(
 	'giftmanager' => 'Gestionari de presents',
 	'giftmanager-addgift' => '+ Apondre un present novèl',
 	'giftmanager-access' => 'accès al present',
+	'giftmanager-description' => 'descripcion del present',
+	'giftmanager-giftimage' => 'imatge del present',
+	'giftmanager-image' => "apondre / remplaçar l'imatge",
+	'giftmanager-giftcreated' => 'Lo present es estat creat',
+	'giftmanager-giftsaved' => 'Lo present es estat salvat',
+	'giftmanager-public' => 'public',
+	'giftmanager-private' => 'privat',
+	'giftmanager-view' => 'Veire la lista dels presents',
+	'g-add-message' => 'Apondre un messatge',
+	'g-back-edit-gift' => "Tornar a la modificacion d'aqueste present",
+	'g-back-gift-list' => 'Tornar a la lista dels presents',
+	'g-back-link' => '<a href="$1">< Tornar a la pagina de $2</a>',
+	'g-choose-file' => 'Causir lo fichièr :',
+	'g-cancel' => 'Anullar',
+	'g-count' => '$1 a $2 {{PLURAL:$2|present|presents}}.',
+	'g-create-gift' => 'Crear un present',
+	'g-created-by' => 'creat per',
+	'g-current-image' => 'Imatge actual',
+	'g-delete-message' => "Sètz segur(a) que volètz suprimir lo present « $1 » ? Aquò o suprimirà tanben als utilizaires que l'an recebut.",
+	'g-description-title' => 'Present « $2 » de $1',
+	'g-error-do-not-own' => 'Possedètz pas aqueste present.',
+	'g-error-message-blocked' => 'Sètz blocat(ada) e doncas, podètz pas donar de presents',
+	'g-error-message-invalid-link' => "Lo ligam qu'avètz provesit es invalid.",
+	'g-error-message-login' => 'Vos cal vos connectar per donar de presents',
+	'g-error-message-no-user' => "L'utilizaire qu'ensajatz de veire existís pas.",
+	'g-error-message-to-yourself' => 'Podètz pas vos donar un present a vos meteis.',
+	'g-error-title' => 'Ops, avètz pres un marrit torn !',
+	'g-file-instructions' => 'Vòstre imatge deu èsser jpeg, png o gif (mas pas animada) e deu èsser mai pichona que 100 Ko.',
+	'g-from' => 'de <a href="$1">$2</a>',
+	'g-gift' => 'present',
+	'g-gift-name' => 'nom del present',
+	'g-give-gift' => 'Donar lo present',
+	'g-give-all' => 'Enveja de donar un present a $1 ? Clicatz sus un present çaijós e clicatz enseguida sus « Mandar lo present ». Es aisit.',
+	'g-give-all-message-title' => 'Apondre un messatge',
+	'g-give-all-title' => 'Donar un present a $1',
+	'g-give-enter-friend-title' => "Se coneissètz lo nom de l'utilizaire, picatz-o çaijós",
+	'g-given' => 'Lo present es estat donat $1 {{PLURAL:$1|còp|còps}}',
+	'g-give-list-friends-title' => 'Seleccionatz dempuèi la lista de vòstres amics',
+	'g-give-list-select' => 'seleccionatz un amic',
+	'g-give-separator' => 'o',
+	'g-give-no-user-message' => 'Los presents e prèmis son plan per far conéisser vòstres amics !',
+	'g-give-no-user-title' => 'A qui volètz donar un present ?',
+	'g-give-to-user-title' => 'Mandar lo present « $1 » a $2',
+	'g-give-to-user-message' => 'Enveja de donar un present diferent a $1 ? <a href="$2">Clicatz aicí</a>.',
+	'g-go-back' => 'Tornar',
+	'g-imagesbelow' => 'Los imatges que seràn utilizats sul sit son afichats çaijós',
+	'g-large' => 'Grand',
+	'g-list-title' => 'Lista dels presents de $1',
+	'g-main-page' => 'Acuèlh',
+	'g-medium' => 'Mejan',
+	'g-mediumlarge' => 'Mejan-Grand',
+	'g-new' => 'novèl',
+	'g-next' => 'Seguent',
+	'g-previous' => 'Precedent',
+	'g-remove' => 'Levar',
+	'g-remove-gift' => 'Levar aqueste present',
+	'g-remove-message' => 'Sètz segur(a) que volètz levar lo present « $1 » ?',
+	'g-recent-recipients' => "Autres beneficiaris recents d'aqueste present",
+	'g-remove-success-title' => 'Avètz levat lo present « $1 » amb succès',
+	'g-remove-success-message' => 'Coma demandat, avèm levat lo present « $1 » amb succès.',
+	'g-remove-title' => 'Levar « $1 » ?',
+	'g-send-gift' => 'Mandar lo present',
+	'g-select-a-friend' => 'seleccionatz un amic',
+	'g-sent-title' => 'Avètz mandat lo present a $1',
+	'g-sent-message' => 'Avètz mandat lo present seguent a $1.',
+	'g-small' => 'Pichon',
+	'g-to-another' => "Donar a qualqu'un mai",
+	'g-uploadsuccess' => 'Telecargament efectuat amb succès',
+	'g-viewgiftlist' => 'Veire la lista dels presents',
+	'g-your-profile' => 'Vòstre perfil',
+	'gift_received_subject' => '$1 vos a mandat lo present $1 sus {{SITENAME}} !',
+	'gift_received_body' => "Bonjorn $1,
+
+$2 vos ven de mandar lo present $2 sus {{SITENAME}}.
+
+Volètz veire la nòta $2 que vos es adreçada e veire vòstre present ? Clicatz sul ligam çaijós :
+
+$4
+
+Esperam que vos agradarà !
+
+Mercés,
+
+
+L'equipa de {{SITENAME}}
+
+---
+
+Volètz pas recebre mai de corrièrs electronics de nòstra part ?
+
+Clicatz $5
+e modificatz vòstras preferéncias per desactivar las notificacions per corrièr electronic.",
+	'right-giftadmin' => "Crear de presents novèls e modificar los qu'existisson",
 );
 
 /** Portuguese (Português)

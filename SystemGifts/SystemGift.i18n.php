@@ -76,6 +76,74 @@ and change your settings to disable email notifications.',
 	'right-awardsmanage' => 'Create new and edit existing awards',
 );
 
+/** Arabic (العربية)
+ * @author Meno25
+ */
+$messages['ar'] = array(
+	'systemgiftmanager' => 'مدير هدايا النظام',
+	'ga-addnew' => '+ إضافة هدية جديدة',
+	'ga-back-edit-gift' => 'رجوع لتعديل هذه الهدية',
+	'ga-back-gift-list' => 'رجوع لقائمة الهدايا',
+	'ga-back-link' => '<a href="$1">< رجوع إلى ملف $2</a>',
+	'ga-choosefile' => 'اختر الملف:',
+	'ga-count' => '$1 يمتلك $2 {{PLURAL:$2|جائزة|جائزة}}.',
+	'ga-create-gift' => 'إنشاء الهدية',
+	'ga-created' => 'الهدية تم إنشاؤها',
+	'ga-currentimage' => 'الصورة الحالية',
+	'ga-error-message-invalid-link' => 'الوصلة التي أدخلتها غير صحيحة.',
+	'ga-error-message-no-user' => 'المستخدم الذي تحاول رؤيته غير موجود.',
+	'ga-error-title' => 'آه، أنت أخذت منحنى خاطئا!',
+	'ga-file-instructions' => 'صورتك يجب أن تكون jpeg، png أو gif (لا gif فيديو)، ويجب أن تكون أقل من 100 كيلوبت في الحجم.',
+	'ga-gift' => 'هدية',
+	'ga-gift-given-count' => 'هذه الهدية تم منحها $1 {{PLURAL:$1|مرة|مرة}}',
+	'ga-gift-title' => '"$2" الخاصة ب$1',
+	'ga-giftdesc' => 'وصف الهدية',
+	'ga-giftimage' => 'صورة الهدية',
+	'ga-giftname' => 'اسم الهدية',
+	'ga-gifttype' => 'نوع الهدية',
+	'ga-goback' => 'رجوع',
+	'ga-imagesbelow' => 'بالأسفل صورك التي سيتم استخدامها في الموقع',
+	'ga-img' => 'أضف/استبدل الصورة',
+	'ga-large' => 'كبير',
+	'ga-medium' => 'متوسط',
+	'ga-mediumlarge' => 'كبير-متوسط',
+	'ga-new' => 'جديد',
+	'ga-next' => 'تالي',
+	'ga-previous' => 'سابق',
+	'ga-recent-recipients-award' => 'المتلقون الجدد الآخرون لهذه الهدية',
+	'ga-saved' => 'الهدية تم حفظها',
+	'ga-small' => 'صغير',
+	'ga-threshold' => 'حد',
+	'ga-title' => 'جوائز $1',
+	'ga-uploadsuccess' => 'الرفع نجح',
+	'ga-viewlist' => 'عرض قائمة الهدايا',
+	'system_gift_received_subject' => 'أنت تلقيت جائزة $1 في {{SITENAME}}!',
+	'system_gift_received_body' => 'مرحبا $1:
+
+أنت تلقيت حالا جائزة $2 في {{SITENAME}}!
+
+"$3"
+
+اضغط بالأسفل للتحقق من صندوق جوائزك!
+
+$4
+
+نأمل أن تعجبك!
+
+شكرا،
+
+
+فريق {{SITENAME}}
+
+---
+
+ها، تريد أن تتوقف عن تلقي رسائل البريد الإلكتروني منا؟   
+
+اضغط $5
+وغير إعداداتك لتعطيل إخطارات البريد الإكتروني.',
+	'right-awardsmanage' => 'إنشاء جوائز جديدة وتعديل الموجودة',
+);
+
 /** German (Deutsch)
  * @author Umherirrender
  */
@@ -551,6 +619,7 @@ $messages['ksh'] = array(
 	'ga-currentimage' => 'Dat aktoälle Beld',
 	'ga-error-message-invalid-link' => 'Do häss_enne unjöltijje Lengk enjejovve.',
 	'ga-error-message-no-user' => 'Dä Metmaacher jidd_et nit, däm De aanloore wells.',
+	'ga-error-title' => 'Och, do es jet donevve jejange!',
 	'ga-file-instructions' => 'Ding Beld-Datei moß et Fommaat <code>jpeg</code>, <code>png</code>, odder <span class="plainlinks">gif</span> hann, ävver annimeete <span class="plainlinks">gif</span> donn et nit, un moß ene Dateiömfang fun 100&nbsp;KB odder winnijer han.',
 	'ga-gift' => 'Jeschenk',
 	'ga-gift-given-count' => 'Dat jeschenk wood {{PLURAL:$1|eijmol|$1 mol|noch nie}} ußjejovve.',
@@ -563,14 +632,17 @@ $messages['ksh'] = array(
 	'ga-imagesbelow' => 'Hee drunger sin Ding Belder, die hee jebruch wäde',
 	'ga-img' => 'Beld dobei donn udder ußtuusche',
 	'ga-large' => 'Jrooß',
-	'ga-medium' => 'Meddeljrooß',
+	'ga-medium' => 'Meddel bes kleijn',
+	'ga-mediumlarge' => 'Meddel bes jrooß',
 	'ga-new' => 'Neu',
 	'ga-next' => 'Nächs',
 	'ga-previous' => 'Vörije',
 	'ga-recent-recipients-award' => 'Andere Metmaacher, die die Belohnung krääje han',
 	'ga-saved' => 'Dat Jeschenk es afjeshpeichert',
 	'ga-small' => 'Kleijn',
+	'ga-threshold' => 'Grenz ov Schwell',
 	'ga-title' => 'Dem $1 sing Belohnunge',
+	'ga-uploadsuccess' => 'Dat Huhlaade hät jeflupp',
 	'ga-viewlist' => 'Leß met Jeschenke aanloore',
 	'system_gift_received_subject' => 'Do häs de Belohnung „$1“ op de {{SITENAME}} krääje!',
 	'system_gift_received_body' => 'Joden Daach $1,
