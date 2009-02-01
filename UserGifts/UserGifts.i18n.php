@@ -372,6 +372,8 @@ und änderen Sie Ihre Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
 $messages['fi'] = array(
 	'giftmanager' => 'Lahjojen hallinta',
 	'giftmanager-addgift' => '+ Lisää uusi lahja',
+	'giftmanager-access' => 'lahjan tyyppi',
+	'giftmanager-description' => 'lahjan kuvaus',
 	'giftmanager-giftimage' => 'lahjan kuva',
 	'giftmanager-image' => 'lisää/korvaa kuva',
 	'giftmanager-giftcreated' => 'Lahja on luotu',
