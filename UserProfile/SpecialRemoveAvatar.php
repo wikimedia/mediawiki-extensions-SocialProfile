@@ -119,6 +119,8 @@ class RemoveAvatar extends SpecialPage {
 		global $wgUploadDirectory, $wgDBname, $wgMemc;
 		$avatar = new wAvatar( $id, $size );
 		$files = glob($wgUploadDirectory . "/avatars/" . $wgDBname . "_" . $id .  "_" . $size . "*");
+		// FIXME: Notice:  Undefined offset:  0. Probably due to an avatar file not being present.
+		// Should be caught more gracefully.
 		$img  = basename($files[0]);
 		if( $img ){
 			unlink($wgUploadDirectory . "/avatars/" .  $img);
