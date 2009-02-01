@@ -111,6 +111,14 @@ $aliases['hu'] = array(
 	'UserBoard' => array( 'Felhasználói üzenőfal' ),
 );
 
+/** Japanese (日本語) */
+$aliases['ja'] = array(
+	'RemoveAvatar' => array( 'アバター削除' ),
+	'UpdateEditCounts' => array( '編集回数の更新' ),
+	'UpdateProfile' => array( 'プロフィール更新' ),
+	'UploadAvatar' => array( 'アバターアップロード' ),
+);
+
 /** Khmer (ភាសាខ្មែរ) */
 $aliases['km'] = array(
 	'TopUsers' => array( 'អ្នកប្រើប្រាស់សកម្មបំផុត' ),
