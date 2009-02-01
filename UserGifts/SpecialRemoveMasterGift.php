@@ -12,6 +12,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	function deleteImage( $id, $size ){
 		global $wgUploadDirectory;
 		$files = glob($wgUploadDirectory . "/awards/" . $id .  "_{$size}*");
+		// FIXME: Undefined offset:  0
 		if( $files[0] ){
 			$img = basename($files[0]);
 			unlink($wgUploadDirectory . "/awards/" .  $img);
@@ -77,7 +78,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 
 			$wgOut->setPageTitle( wfMsg('g-remove-success-title', $gift['gift_name']) );
 
-			$out .= '<div class="back-links">
+			$out = '<div class="back-links">
 				<a href="' . SpecialPage::getTitleFor( 'GiftManager' )->escapeFullURL() . '">'.wfMsg('g-viewgiftlist').'</a>
 			</div>
 			<div class="g-container">

@@ -64,6 +64,7 @@ class Gifts {
 			FROM {$dbr->tableName( 'gift' )} WHERE gift_id = {$id} LIMIT 0,1";
 		$res = $dbr->query($sql);
 		$row = $dbr->fetchObject( $res );
+		$gift = '';
 		if( $row ){
 			$gift['gift_id']= $row->gift_id;	
 			$gift['gift_name']= $row->gift_name;	

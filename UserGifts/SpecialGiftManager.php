@@ -123,6 +123,7 @@ class GiftManager extends SpecialPage {
 		wfLoadExtensionMessages('UserGifts');
 		$output = ''; // Prevent E_NOTICE
 		// FIXME: undefined variables per_page and page
+		$per_page = 10;
 		$gifts = Gifts::getManagedGiftList( $per_page, $page );
 		if( $gifts ){
 			foreach( $gifts as $gift ) {

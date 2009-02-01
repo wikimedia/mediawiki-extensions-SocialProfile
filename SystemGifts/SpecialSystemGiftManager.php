@@ -77,6 +77,7 @@ class SystemGiftManager extends SpecialPage {
 	function displayGiftList(){
 		global $wgScriptPath;
 		$output = ''; // Prevent E_NOTICE
+		$per_page = 10;
 		$gifts = SystemGifts::getGiftList($per_page, $page);
 		if( $gifts ){
 			foreach( $gifts as $gift ) {
