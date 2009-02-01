@@ -426,6 +426,7 @@ class UserStatsTrack {
 		if( $row ){
 			// recaculate point total
 			$new_total_points = 1000;
+			// FIXME: Invalid argument supplied for foreach()
 			foreach( $this->point_values as $point_field => $point_value ){
 				if( $this->stats_fields[$point_field] ){
 					$field = $this->stats_fields[$point_field];
@@ -459,6 +460,7 @@ class UserStatsTrack {
 			}
 			$this->clearCache();
 		}
+		// FIXME: Undefined variable: stats_data
 		return $stats_data;
 	}
 }

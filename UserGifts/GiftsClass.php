@@ -26,6 +26,7 @@ class Gifts {
 	static function addGift( $gift_name, $gift_description, $gift_access = 0 ){
 		global $wgUser;
 
+		// FIXME: undefined variable user_to
 		$user_id_to = User::idFromName($user_to);
 		$dbw = wfGetDB( DB_MASTER );
 

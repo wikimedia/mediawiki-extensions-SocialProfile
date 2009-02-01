@@ -571,6 +571,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
 
+		// FIXME: if the checkboxes are in front of the option, this will look more like Special:Preferences
 		$wgOut->setPageTitle( wfMsg('user-profile-section-preferences') );
 		$form = UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-preferences' ) );
 		$form .= '<form action="" method="post" enctype="multipart/form-data" name=profile>';

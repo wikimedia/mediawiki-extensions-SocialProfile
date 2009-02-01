@@ -122,7 +122,8 @@ class GiftManager extends SpecialPage {
 		global $wgScriptPath;
 		wfLoadExtensionMessages('UserGifts');
 		$output = ''; // Prevent E_NOTICE
-		$gifts = Gifts::getManagedGiftList($per_page, $page);
+		// FIXME: undefined variables per_page and page
+		$gifts = Gifts::getManagedGiftList( $per_page, $page );
 		if( $gifts ){
 			foreach( $gifts as $gift ) {
 				$output .= "<div class=\"Item\">
@@ -151,6 +152,7 @@ class GiftManager extends SpecialPage {
 
 		$form .= '<form action="" method="POST" enctype="multipart/form-data" name="gift">';
 		$form .= '<table border="0" cellpadding="5" cellspacing="0" width="500">';
+		// FIXME: undefined variable gift (twice)
 		$form .= '<tr>
 		<td width="200" class="view-form">'.wfMsg('g-gift-name').'</td>
 		<td width="695"><input type="text" size="45" class="createbox" name="gift_name" value="'. $gift['gift_name'] . '"/></td>
@@ -169,6 +171,7 @@ class GiftManager extends SpecialPage {
 		if( !in_array('giftadmin', $wgUser->getGroups() ) ){
 			$form .= '<input type="hidden" name="access" value="1">';
 		} else {
+			// FIXME: undefined variable gift (twice)
 			$form .= '<tr>
 				<td class="view-form">'.wfMsg('giftmanager-access').'</td>
 				<td>
@@ -192,6 +195,7 @@ class GiftManager extends SpecialPage {
 			</tr>';
 		}
 
+		// FIXME: undefined variable gift (twice)
 		$form .=  '
 		<tr>
 		<td colspan="2">
