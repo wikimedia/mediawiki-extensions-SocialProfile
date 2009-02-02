@@ -190,6 +190,11 @@ $aliases['no'] = array(
 	'UploadAvatar' => array( 'Oppdater profilbilde' ),
 );
 
+/** Pashto (پښتو) */
+$aliases['ps'] = array(
+	'UpdateProfile' => array( 'پېژنليک تازه کول' ),
+);
+
 /** Swahili (Kiswahili) */
 $aliases['sw'] = array(
 	'AddRelationship' => array( 'WekaMahusiano' ),
