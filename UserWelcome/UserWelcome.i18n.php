@@ -86,7 +86,7 @@ $messages['arz'] = array(
 	'mp-userlevels-link' => 'مستويات اليوزر',
 	'mp-welcome-upload' => 'رفع',
 	'mp-welcome-edit' => 'عدل',
-	'mp-welcome-points' => '$1 نقطة',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|نقطة|نقطة}}',
 	'mp-welcome-needed-points' => 'للتقدم ل <b><a href="$1">$2</a></b> احصل على <i>$3</i>  نقط اكتر!',
 	'mp-welcome-logged-in' => 'مرحبا $1',
 	'mp-requests-title' => 'طلبات',

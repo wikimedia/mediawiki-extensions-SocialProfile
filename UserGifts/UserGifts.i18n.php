@@ -185,7 +185,7 @@ $messages['ar'] = array(
 	'g-remove-message' => 'هل أنت متأكد أنك تريد إزالة الهدية "$1"؟',
 	'g-recent-recipients' => 'المتلقون الجدد الآخرون لهذه الهدية',
 	'g-remove-success-title' => 'أنت أزلت بنجاح الهدية "$1"',
-	'g-remove-success-message' => 'كما هو مطلوب، نحن أزلنا بنجاح الهدية "$1".',
+	'g-remove-success-message' => 'الهدية "$1" تمت إزالتها.',
 	'g-remove-title' => 'إزالة "$1"؟',
 	'g-send-gift' => 'إرسال الهدية',
 	'g-select-a-friend' => 'اختر صديقا',
@@ -219,6 +219,20 @@ $4
 اضغط $5
 وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
 	'right-giftadmin' => 'إنشاء هدايا جديدة وتعديل الموجودة',
+);
+
+/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+ * @author EugeneZelenko
+ * @author Jim-by
+ */
+$messages['be-tarask'] = array(
+	'giftmanager' => 'Кіраваньне падарункамі',
+	'giftmanager-addgift' => '+ Дадаць новы падарунак',
+	'giftmanager-access' => 'доступ да падарунка',
+	'giftmanager-description' => 'апісаньне падарунка',
+	'giftmanager-giftimage' => 'выява падарунка',
+	'giftmanager-image' => 'дадаць/замяніць выяву',
+	'giftmanager-giftcreated' => 'Падарунак быў створаны',
 );
 
 /** German (Deutsch)
@@ -289,7 +303,7 @@ $messages['de'] = array(
 	'g-remove-message' => 'Bist du dir sicher, das Geschenk „$1“ zu entfernen?',
 	'g-recent-recipients' => 'Andere aktuelle Empfänger dieses Geschenkes',
 	'g-remove-success-title' => 'Du hast das Geschenk „$1“ erfolgreich entfernt.',
-	'g-remove-success-message' => 'Wie angefragt, haben wir das Geschenk „$1“ erfolgreich entfernt.',
+	'g-remove-success-message' => 'Das Geschenk „$1“ wurde entfernt.',
 	'g-remove-title' => '„$1“ entfernen?',
 	'g-send-gift' => 'Geschenk senden',
 	'g-select-a-friend' => 'wähle einen Freund aus',
@@ -534,7 +548,7 @@ $messages['fr'] = array(
 	'g-remove-message' => 'Êtes-vous sur de vouloir enlever le cadeau « $1 » ?',
 	'g-recent-recipients' => 'Autres bénéficiaires récents de ce cadeau',
 	'g-remove-success-title' => 'Vous avez enlevé avec succès le cadeau « $1 »',
-	'g-remove-success-message' => 'Comme demandé, nous avons enlevé avec succès le cadeau « $1 ».',
+	'g-remove-success-message' => 'Le cadeau « $1 » a été enlevé.',
 	'g-remove-title' => 'Enlever « $1 » ?',
 	'g-send-gift' => 'Envoyer le cadeau',
 	'g-select-a-friend' => 'sélectionnez un ami',
@@ -636,7 +650,7 @@ $messages['gl'] = array(
 	'g-remove-message' => 'Está seguro de querer eliminar o agasallo "$1"?',
 	'g-recent-recipients' => 'Outros receptores recentes deste agasallo',
 	'g-remove-success-title' => 'Eliminou con éxito o agasallo "$1"',
-	'g-remove-success-message' => 'Como solicitou, xa eliminamos exitosamente o agasallo "$1".',
+	'g-remove-success-message' => 'O agasallo "$1" foi eliminado.',
 	'g-remove-title' => 'Quere eliminar "$1"?',
 	'g-send-gift' => 'Enviar o agasallo',
 	'g-select-a-friend' => 'seleccionar un amigo',
@@ -737,7 +751,7 @@ $messages['gsw'] = array(
 	'g-remove-message' => 'Bisch sicher, ass Du s Gschänk "$1" wetsch useneh?',
 	'g-recent-recipients' => 'Andere Empfänger vu däm Gschänk',
 	'g-remove-success-title' => 'Du hesch s Gschänk "$1" erfolgryych usegnuh',
-	'g-remove-success-message' => 'Wie gwinscht hän mir s Gschänk "$1" usegnuh.',
+	'g-remove-success-message' => 'S Gschänk "$1" isch usegnuh wore.',
 	'g-remove-title' => '„$1“ useneh?',
 	'g-send-gift' => 'Gschänk schicke',
 	'g-select-a-friend' => 'wehl e Frynd uus',
@@ -892,6 +906,7 @@ $messages['ksh'] = array(
 	'g-back-edit-gift' => 'Jangk retuur noh em Ändere för dat Jeschenk',
 	'g-back-gift-list' => 'Jangk retuur op de Leß met de Jeschenke',
 	'g-back-link' => '<a href="$1">< Retuur noh dem $2 sing Sigg</a>',
+	'g-remove-success-message' => 'Dat Jeschengk „$1“ es jetz widder fott.',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
@@ -999,7 +1014,7 @@ $messages['nl'] = array(
 	'g-remove-message' => 'Weet u zeker dat u de gift "$1" wilt verwijderen?',
 	'g-recent-recipients' => 'Andere recente ontvangers van deze gift',
 	'g-remove-success-title' => 'U hebt de gift "$1" succesvol verwijderd',
-	'g-remove-success-message' => 'Zoals u aanvroeg, hebben we de gift "$1" succesvol verwijderd.',
+	'g-remove-success-message' => 'De gift "$1" is verwijderd.',
 	'g-remove-title' => '"$1" verwijderen?',
 	'g-send-gift' => 'Gift verzenden',
 	'g-select-a-friend' => 'selecteer een vriend',
@@ -1100,7 +1115,7 @@ $messages['nn'] = array(
 	'g-remove-message' => 'Er du sikker på at du ynskjer å fjerna gåva «$1»?',
 	'g-recent-recipients' => 'Andre som nyleg mottok denne gåva',
 	'g-remove-success-title' => 'Gåva «$1» vart fjerna av deg',
-	'g-remove-success-message' => 'Som bedne om har me fjerna gåva «$1»',
+	'g-remove-success-message' => 'Gåva «$1» vart fjerna.',
 	'g-remove-title' => 'Fjerna «$1»?',
 	'g-send-gift' => 'Send gåva',
 	'g-select-a-friend' => 'vel ein venn',
@@ -1305,7 +1320,7 @@ $messages['pt'] = array(
 	'g-remove-message' => 'Tem certeza de que deseja remover o presente "$1"?',
 	'g-recent-recipients' => 'Outros ganhadores deste presente',
 	'g-remove-success-title' => 'Você removeu com sucesso o presente "$1"',
-	'g-remove-success-message' => 'Conforme pedido, nós removemos o presente "$1".',
+	'g-remove-success-message' => 'O presente "$1" foi removido.',
 	'g-remove-title' => 'Remover "$1"?',
 	'g-send-gift' => 'Enviar Presente',
 	'g-select-a-friend' => 'selecionar um amigo',
@@ -1407,7 +1422,7 @@ $messages['sk'] = array(
 	'g-remove-message' => 'Ste si istý, že chcete odstrániť darček „$1“?',
 	'g-recent-recipients' => 'Iní, ktorí nedávno dostali tento darček',
 	'g-remove-success-title' => 'Úspešne ste odstránili darček „$1“',
-	'g-remove-success-message' => 'Na vašu žiadosť sme úspešne odstránili darček „$1“',
+	'g-remove-success-message' => 'Na vašu žiadosť bol odstránený darček „$1“.',
 	'g-remove-title' => 'Odstrániť „$1“?',
 	'g-send-gift' => 'Poslať darček',
 	'g-select-a-friend' => 'vybrať priateľa',
@@ -1519,8 +1534,8 @@ $messages['tl'] = array(
 	'g-remove-message' => 'Nakatitiyak ka bang nais mong tanggalin ang handog na "$1"?',
 	'g-recent-recipients' => 'Iba pang kamakailangang mga nakatanggap ng handog na ito',
 	'g-remove-success-title' => 'Matagumpay mong natanggal ang handog na "$1"',
-	'g-remove-success-message' => 'Ayon sa kahilingan, matagumpay naming natanggal ang handog na "$1".',
-	'g-remove-title' => 'Tanggalin ang "$1"?',
+	'g-remove-success-message' => 'Natanggal na ang handog na "$1".',
+	'g-remove-title' => 'Tatanggalin ba ang "$1"?',
 	'g-send-gift' => 'Ipadala ang Handog',
 	'g-select-a-friend' => 'pumili ng isang kaibigan',
 	'g-sent-title' => 'Nagpadala ka ng isang handog kay $1',

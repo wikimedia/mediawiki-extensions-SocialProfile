@@ -994,6 +994,7 @@ $messages['ja'] = array(
 	'userboard_delete' => '削除',
 	'userboard_noexist' => '閲覧しようとした利用者は存在していません。',
 	'userboard_private' => '非公開',
+	'userboard_nextpage' => '次',
 );
 
 /** Javanese (Basa Jawa)
