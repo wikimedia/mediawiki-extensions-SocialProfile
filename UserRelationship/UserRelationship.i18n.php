@@ -1214,12 +1214,24 @@ Se vi volas pliajn amikojn, <a href="$1">invitu ilin!</a>',
 );
 
 /** Spanish (Español)
+ * @author Crazymadlover
  * @author Feten7
  * @author Imre
  * @author Sanbec
  */
 $messages['es'] = array(
+	'viewrelationships' => 'Ver relación',
+	'ur-already-submitted' => 'Su solicitud ha sido enviada',
+	'ur-error-message-no-user' => 'No podemos completar su solicitud, porque ningun usuario con este nombre existe.',
 	'ur-main-page' => 'Página principal',
+	'ur-your-profile' => 'Su perfil',
+	'ur-backlink' => "&lt; Regresar a $1's perfil",
+	'ur-add-friends' => '  Desea más amigos? <a href="$1">Invítelos</a>',
+	'ur-add-friend' => 'Agregar como amigo',
+	'ur-add-personal-message' => 'Agregar un mensaje personal',
+	'ur-remove-relationship-friend' => 'Remover como amigo',
+	'ur-previous' => 'anterior',
+	'ur-next' => 'próximo',
 	'ur-remove' => 'Eliminar',
 	'ur-cancel' => 'Cancelar',
 	'ur-login' => 'Entrar',
@@ -1438,6 +1450,7 @@ ja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.',
 );
 
 /** French (Français)
+ * @author Crochet.david
  * @author Grondin
  * @author IAlex
  * @author McDutchie
@@ -1497,7 +1510,7 @@ Si $1 confirme votre demande, vous recevrez le suivi par courriel.',
 	'ur-add-sent-message-friend' => 'Votre requête en amitié a été envoyée à $1 pour confirmation.
 Si $1 confirme votre demande, vous recevrez le suivi par courriel.',
 	'ur-add-error-message-no-user' => 'L’utilisateur que vous être en train d’ajouter n’existe pas.',
-	'ur-add-error-message-blocked' => 'Vous êtes actuellement bloqué et vous ne pouvez donc ajouter ni amis ni ennemis.',
+	'ur-add-error-message-blocked' => 'Vous êtes actuellement bloqué{{GENDER:||e|(e)}} et vous ne pouvez donc ajouter ni amis ni ennemis.',
 	'ur-add-error-message-yourself' => 'Vous ne pouvez vous-même vous ajouter comme ennemi ou ami.',
 	'ur-add-error-message-existing-relationship-foe' => 'Vous êtes déjà l’ennemi de $1.',
 	'ur-add-error-message-existing-relationship-friend' => 'vous êtes déjà l’ami de $1.',
@@ -1539,7 +1552,7 @@ et modifiez vos préférences pour désactiver les notifications par courriel.',
 	'foe_request_subject' => "C'est la guerre ! $1 vous a ajouté comme ennemi sur {{SITENAME}} !",
 	'foe_request_body' => 'Salut $1 :
 
-$2 vient juste de vous répertorier comme un ennemi sur {{SITENAME}}. Nous voulons nous assurer que vous êtes vraiement des emmenis mortel ou avoir au moins des griefs l’un envers l’autre/
+$2 vient juste de vous répertorier comme un ennemi sur {{SITENAME}}. Nous voulons nous assurer que vous êtes vraiment des ennemis mortel ou avoir au moins des griefs l’un envers l’autre.
 
 Veuillez cliquer sur ce lien, pour accepter, à contrecœur, cet état de fait.
 

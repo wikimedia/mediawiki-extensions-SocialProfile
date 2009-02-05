@@ -241,6 +241,21 @@ Klicken Sie $5
 und änderen Sie Ihre Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
 );
 
+/** Spanish (Español)
+ * @author Crazymadlover
+ */
+$messages['es'] = array(
+	'ga-choosefile' => 'Escoger archivo:',
+	'ga-currentimage' => 'Imagen actual',
+	'ga-large' => 'Grande',
+	'ga-medium' => 'Medio',
+	'ga-mediumlarge' => 'Medio-Grande',
+	'ga-new' => 'Nuevo',
+	'ga-next' => 'Próximo',
+	'ga-previous' => 'Anterior',
+	'ga-small' => 'Pequeño',
+);
+
 /** Finnish (Suomi)
  * @author Jack Phoenix
  */

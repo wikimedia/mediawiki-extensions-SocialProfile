@@ -115,9 +115,11 @@ and change your settings to disable email notifications.',
 );
 
 /** Message documentation (Message documentation)
+ * @author EugeneZelenko
  * @author Siebrand
  */
 $messages['qqq'] = array(
+	'g-cancel' => '{{Identical|Cancel}}',
 	'g-created-by' => 'Complete contents of a cell in a table. The next cell (horizontally) contains the user name of the creator of a gift.',
 );
 
@@ -236,6 +238,43 @@ $messages['be-tarask'] = array(
 	'giftmanager-giftimage' => 'выява падарунка',
 	'giftmanager-image' => 'дадаць/замяніць выяву',
 	'giftmanager-giftcreated' => 'Падарунак быў створаны',
+	'giftmanager-giftsaved' => 'Падарунак быў захаваны',
+	'giftmanager-public' => 'публічны',
+	'giftmanager-private' => 'прыватны',
+	'giftmanager-view' => 'Паказаць сьпіс падарункаў',
+	'g-add-message' => 'Дадаць паведамленьне',
+	'g-back-edit-gift' => 'Вярнуцца да рэдагаваньня гэтага падарунка',
+	'g-back-gift-list' => 'Вярнуцца да сьпісу падарункаў',
+	'g-back-link' => '<a href="$1">< Вярнуцца на старонку $2</a>',
+	'g-choose-file' => 'Выбраць файл:',
+	'g-cancel' => 'Адмяніць',
+	'g-count' => '$1 мае $2 {{PLURAL:$2|падарунак|падарункі|падарункаў}}.',
+	'g-create-gift' => 'Стварыць падарунак',
+	'g-created-by' => 'створаны',
+	'g-current-image' => 'Цяперашняя выява',
+	'g-delete-message' => 'Вы ўпэўнены, што жадаеце выдаліць падарунак «$1»? Ён будзе выдалены і ў удзельнікаў, якія маглі яго атрымаць.',
+	'g-description-title' => 'падарунак «$2» ад $1',
+	'g-error-do-not-own' => 'Вы не валодаеце гэтым падарункам.',
+	'g-error-message-blocked' => 'Зараз Вы заблякаваны і ня можаце дарыць падарункі',
+	'g-error-message-invalid-link' => 'Вы ўвялі няслушную спасылку.',
+	'g-error-message-login' => 'Вам неабходна ўвайсьці ў сыстэму, каб дарыць падарункі',
+	'g-error-message-no-user' => 'Удзельніка, якога Вы спрабуеце паглядзець, не існуе.',
+	'g-error-message-to-yourself' => 'Вы ня можаце дарыць падарункі сабе.',
+	'g-error-title' => 'Ой! Вы выбралі няслушны кірунак!',
+	'g-file-instructions' => 'Ваша выява павінна быць у фармаце jpeg, png альбо gif (анімаваныя выявы не дазволеныя) і мець памер меней за 100 кб.',
+	'g-from' => 'ад <a href="$1">$2</a>',
+	'g-gift' => 'падарунак',
+	'g-gift-name' => 'назва падарунка',
+	'g-give-gift' => 'Падарыць падарунак',
+	'g-give-all' => 'Жадаеце падарыць $1 падарунак? Проста націсьніце на падарункі, якія знаходзяцца ніжэй, я потым націсьніце «Даслаць падарунак». Гэта вельмі проста.',
+	'g-give-all-message-title' => 'Дадаць паведамленьне',
+	'g-give-all-title' => 'Падарыць падарунак $1',
+	'g-give-enter-friend-title' => 'Калі Вы ведаеце імя ўдзельніка, проста ўвядзіце яго ніжэй',
+	'g-given' => 'Гэты падарунак быў падараваны $1 {{PLURAL:$1|раз|разы|разоў}}',
+	'g-give-list-friends-title' => 'Выбраць з Вашага сьпісу сяброў',
+	'g-give-list-select' => 'выбраць сябра',
+	'g-give-separator' => 'ці',
+	'g-give-no-user-message' => 'Падарункі і ўзнагароды — найлепшы шлях да выразу ўдзячнасьці Вашым сябрам!',
 );
 
 /** German (Deutsch)
@@ -486,6 +525,7 @@ ja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.',
 );
 
 /** French (Français)
+ * @author Crochet.david
  * @author IAlex
  */
 $messages['fr'] = array(
@@ -510,10 +550,10 @@ $messages['fr'] = array(
 	'g-create-gift' => 'Créer un cadeau',
 	'g-created-by' => 'créé par',
 	'g-current-image' => 'Image actuelle',
-	'g-delete-message' => "Êtes-vous certain de vouloir supprimer le cadeau « $1 » ? Ceci va également le supprimer des utilisateurs qui l'ont reçu.",
+	'g-delete-message' => "Êtes-vous certain{{GENDER:||e|(e)}} de vouloir supprimer le cadeau « $1 » ? Ceci va également le supprimer des utilisateurs qui l'ont reçu.",
 	'g-description-title' => 'Cadeau « $2 » de $1',
 	'g-error-do-not-own' => 'Vous ne possédez pas ce cadeau.',
-	'g-error-message-blocked' => 'Vous êtes bloqué et ne pouvez donc pas donner des cadeaux',
+	'g-error-message-blocked' => 'Vous êtes bloqué{{GENDER:||e|(e)}} et ne pouvez donc pas donner des cadeaux',
 	'g-error-message-invalid-link' => 'Le lien que vous avez fourni est invalide.',
 	'g-error-message-login' => 'Vous devez vous connecter pour donner des cadeaux',
 	'g-error-message-no-user' => "L'utilisateur que vous essayez de voir n'existe pas.",
@@ -855,7 +895,7 @@ $messages['ia'] = array(
 	'g-remove-message' => 'Es tu secur que tu vole remover le dono "$1"?',
 	'g-recent-recipients' => 'Altere beneficiarios recente de iste dono',
 	'g-remove-success-title' => 'Tu ha removite le dono "$1" con successo',
-	'g-remove-success-message' => 'Como requestate, nos ha removite le dono "$1" con successo.',
+	'g-remove-success-message' => 'Le dono "$1" ha essite removite.',
 	'g-remove-title' => 'Remover "$1"?',
 	'g-send-gift' => 'Inviar dono',
 	'g-select-a-friend' => 'selige un amico',

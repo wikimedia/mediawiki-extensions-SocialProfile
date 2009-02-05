@@ -363,11 +363,18 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Crazymadlover
  * @author Imre
  * @author Sanbec
  */
 $messages['es'] = array(
+	'topusers' => 'Usuarios top',
+	'top-fans-total-points-link' => 'Puntos totales',
 	'top-fans-points' => 'puntos',
+	'top-fans-bad-field-title' => 'Oops!',
+	'top-fans-bad-field-message' => 'La estadística especificada no existe.',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Voto|Votos}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Edición|Ediciones}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinión|Opiniones}}',
 	'level-advance-subject' => '¡Ahora eres un «$1» en {{SITENAME}}!',
 );

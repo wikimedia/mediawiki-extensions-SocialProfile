@@ -609,6 +609,7 @@ ja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.',
 );
 
 /** French (Français)
+ * @author Crochet.david
  * @author Grondin
  * @author IAlex
  */
@@ -640,7 +641,7 @@ $messages['fr'] = array(
 	'userboard_backprofile' => 'Retour vers le profil de $1',
 	'userboard_backyourprofile' => 'Retour vers votre profil',
 	'userboard_boardtoboard' => 'Tableau à tableau',
-	'userboard_confirmdelete' => 'Êtes-vous certain de vouloir supprimer ce message ?',
+	'userboard_confirmdelete' => 'Êtes-vous certain{{GENDER:||e|(e)}} de vouloir supprimer ce message ?',
 	'userboard_sendmessage' => 'Envoyer un message à $1',
 	'userboard_myboard' => 'Mon tableau',
 	'userboard_posted_ago' => 'envoyé depuis $1',
