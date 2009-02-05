@@ -12,8 +12,8 @@ $messages = array();
  * @author Wikia, Inc.
  */
 $messages['en'] = array(
-	'giftmanager' => 'Gifts Manager',
-	'giftmanager-addgift' => '+ Add New Gift',
+	'giftmanager' => 'Gifts manager',
+	'giftmanager-addgift' => '+ Add new gift',
 	'giftmanager-access' => 'gift access',
 	'giftmanager-description' => 'gift description',
 	'giftmanager-giftimage' => 'gift image',
@@ -22,18 +22,19 @@ $messages['en'] = array(
 	'giftmanager-giftsaved' => 'The gift has been saved',
 	'giftmanager-public' => 'public',
 	'giftmanager-private' => 'private',
-	'giftmanager-view' => 'View Gift List',
-	'g-add-message' => 'Add a Message',
-	'g-back-edit-gift' => 'Back to Edit This Gift',
-	'g-back-gift-list' => 'Back to Gift List',
-	'g-back-link' => '<a href="$1">< Back to $2\'s Page</a>',
-	'g-choose-file' => 'Choose File:',
+	'giftmanager-view' => 'View gift list',
+	'g-add-message' => 'Add a message',
+	'g-back-edit-gift' => 'Back to Edit this gift',
+	'g-back-gift-list' => 'Back to Gift list',
+	'g-back-link' => '<a href="$1">< Back to $2\'s page</a>',
+	'g-choose-file' => 'Choose file:',
 	'g-cancel' => 'Cancel',
 	'g-count' => '$1 has $2 {{PLURAL:$2|gift|gifts}}.',
 	'g-create-gift' => 'Create gift',
 	'g-created-by' => 'created by',
-	'g-current-image' => 'Current Image',
-	'g-delete-message' => 'Are your sure you want to delete the gift "$1"? This will also delete it from users who may have received it.',
+	'g-current-image' => 'Current image',
+	'g-delete-message' => 'Are your sure you want to delete the gift "$1"?
+This will also delete it from users who may have received it.',
 	'g-description-title' => '$1\'s gift "$2"',
 	'g-error-do-not-own' => 'You do not own this gift.',
 	'g-error-message-blocked' => 'You are currently blocked and cannot give gifts',
@@ -46,9 +47,11 @@ $messages['en'] = array(
 	'g-from' => 'from <a href="$1">$2</a>',
 	'g-gift' => 'gift',
 	'g-gift-name' => 'gift name',
-	'g-give-gift' => 'Give Gift',
-	'g-give-all' => 'Want to give $1 a gift? Just click one of the gifts below and click "Send Gift." It\'s that easy.',
-	'g-give-all-message-title' => 'Add a Message',
+	'g-give-gift' => 'Give gift',
+	'g-give-all' => 'Want to give $1 a gift?
+Just click one of the gifts below and click "Send gift".
+It is that easy.',
+	'g-give-all-message-title' => 'Add a message',
 	'g-give-all-title' => 'Give a gift to $1',
 	'g-give-enter-friend-title' => 'If you know the name of the user, type it in below',
 	'g-given' => 'This gift has been given out $1 {{PLURAL:$1|time|times}}',
@@ -62,31 +65,31 @@ $messages['en'] = array(
 	'g-go-back' => 'Go Back',
 	'g-imagesbelow' => 'Below are your images that will be used on the site',
 	'g-large' => 'Large',
-	'g-list-title' => '$1\'s Gift List',
-	'g-main-page' => 'Main Page',
+	'g-list-title' => '$1\'s gift list',
+	'g-main-page' => 'Main page',
 	'g-medium' => 'Medium',
-	'g-mediumlarge' => 'Medium-Large',
+	'g-mediumlarge' => 'Medium-large',
 	'g-new' => 'new',
 	'g-next' => 'Next',
 	'g-previous' => 'Prev',
 	'g-remove' => 'Remove',
-	'g-remove-gift' => 'Remove this Gift',
+	'g-remove-gift' => 'Remove this gift',
 	'g-remove-message' => 'Are your sure you want to remove the gift "$1"?',
 	'g-recent-recipients' => 'Other recent recipients of this gift',
 	'g-remove-success-title' => 'You have successfully removed the gift "$1"',
 	'g-remove-success-message' => 'The gift "$1" has been removed.',
 	'g-remove-title' => 'Remove "$1"?',
-	'g-send-gift' => 'Send Gift',
+	'g-send-gift' => 'Send gift',
 	'g-select-a-friend' => 'select a friend',
 	'g-sent-title' => 'You have sent a gift to $1',
 	'g-sent-message' => 'You have sent the following gift to $1.',
 	'g-small' => 'Small',
-	'g-to-another' => 'Give to Someone Else',
-	'g-uploadsuccess' => 'Upload Success',
-	'g-viewgiftlist' => 'View Gift List',
-	'g-your-profile' => 'Your Profile',
+	'g-to-another' => 'Give to someone else',
+	'g-uploadsuccess' => 'Upload successful',
+	'g-viewgiftlist' => 'View gift list',
+	'g-your-profile' => 'Your profile',
 	'gift_received_subject' => '$1 has sent you the $2 Gift on {{SITENAME}}!',
-	'gift_received_body' => 'Hi $1:
+	'gift_received_body' => 'Hi $1.
 
 $2 just sent you the $3 gift on {{SITENAME}}.   
 
@@ -99,7 +102,7 @@ We hope you like it!
 Thanks,
 
 
-The {{SITENAME}} Team
+The {{SITENAME}} team
 
 ---
 

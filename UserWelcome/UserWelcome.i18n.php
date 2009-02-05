@@ -19,7 +19,7 @@ $messages['en'] = array(
 	'mp-welcome-needed-points' => 'To advance to <b><a href="$1">$2</a></b> earn <i>$3</i> more {{PLURAL:$3|point|points}}!',
 	'mp-welcome-logged-in' => 'Hello $1',
 	'mp-requests-title' => 'Requests',
-	'mp-requests-message' => 'You have the following requests.',
+	'mp-requests-message' => 'You have the following requests.', // FIXME: should support plural.
 	'mp-request-new-message' => 'new message',
 	'mp-request-new-award' => '$1 new {{PLURAL:$1|award|awards}}',
 	'mp-request-new-gift' => '$1 new {{PLURAL:$1|gift|gifts}}',
@@ -35,6 +35,7 @@ $messages['qqq'] = array(
 	'userwelcome-desc' => 'Short description of the extension.
 Shown in [[Special:Version]].
 {{doc-important|Do not translate tags names, and links targets.}}',
+	'mp-userlevels-link' => 'This is the help page...e.g. English default is Help:User Levels. You can define a new help page with this message.',
 );
 
 /** Amharic (አማርኛ)

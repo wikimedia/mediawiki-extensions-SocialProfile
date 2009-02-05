@@ -42,19 +42,19 @@ $messages['en'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Gift received|Gifts received}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Gift sent|Gifts sent}}',
 	'level-advance-subject' => 'You are now a "$1" on {{SITENAME}}!',
-	'level-advance-body' => 'Hi $1:
+	'level-advance-body' => 'Hi $1.
 
 You are now a "$2" on {{SITENAME}}!
 
 Congratulations,
 
-The {{SITENAME}} Team
+The {{SITENAME}} team
 
 ---
-Hey, want to stop getting emails from us?
+Hey, want to stop getting e-mails from us?
 
 Click $3
-and change your settings to disable email notifications.'
+and change your settings to disable e-mail notifications.'
 );
 
 /** Message documentation (Message documentation)

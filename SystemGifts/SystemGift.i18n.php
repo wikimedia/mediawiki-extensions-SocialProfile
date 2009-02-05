@@ -11,16 +11,16 @@ $messages = array();
  * @author Wikia, Inc.
  */
 $messages['en'] = array(
-	'systemgiftmanager' => 'System Gifts Manager', 
-	'ga-addnew' => '+ Add New Gift',
-	'ga-back-edit-gift' => 'Back to Edit This Gift',
-	'ga-back-gift-list' => 'Back to Gift List',
-	'ga-back-link' => '<a href="$1">< Back to $2\'s Profile</a>',
-	'ga-choosefile' => 'Choose File:',
+	'systemgiftmanager' => 'System gifts manager', 
+	'ga-addnew' => '+ Add new gift',
+	'ga-back-edit-gift' => 'Back to Edit this gift',
+	'ga-back-gift-list' => 'Back to Gift list',
+	'ga-back-link' => '<a href="$1">< Back to $2\'s profile</a>',
+	'ga-choosefile' => 'Choose file:',
 	'ga-count' => '$1 has $2 {{PLURAL:$2|award|awards}}.',
 	'ga-create-gift' => 'Create gift',
 	'ga-created' => 'The gift has been created',
-	'ga-currentimage' => 'Current Image',
+	'ga-currentimage' => 'Current image',
 	'ga-error-message-invalid-link' => 'The link you have entered is invalid.',
 	'ga-error-message-no-user' => 'The user you are trying to view does not exist.',
 	'ga-error-title' => 'Woops, you took a wrong turn!',
@@ -32,12 +32,12 @@ $messages['en'] = array(
 	'ga-giftimage' => 'gift image',
 	'ga-giftname' => 'gift name',
 	'ga-gifttype' => 'gift type',
-	'ga-goback' => 'Go Back',
+	'ga-goback' => 'Go back',
 	'ga-imagesbelow' => 'Below are your images that will be used on the site',
 	'ga-img' => 'add/replace image',
 	'ga-large' => 'Large',
 	'ga-medium' => 'Medium',
-	'ga-mediumlarge' => 'Medium-Large',
+	'ga-mediumlarge' => 'Medium-large',
 	'ga-new' => 'New',
 	'ga-next' => 'Next',
 	'ga-previous' => 'Prev',
@@ -46,10 +46,10 @@ $messages['en'] = array(
 	'ga-small' => 'Small',
 	'ga-threshold' => 'threshold',
 	'ga-title' => '$1\'s Awards',
-	'ga-uploadsuccess' => 'Upload Success',
-	'ga-viewlist' => 'View Gift List',
+	'ga-uploadsuccess' => 'Upload successful',
+	'ga-viewlist' => 'View gift list',
 	'system_gift_received_subject' => 'You have received the $1 Award on {{SITENAME}}!',
-	'system_gift_received_body' => 'Hi $1:
+	'system_gift_received_body' => 'Hi $1.
 
 You have just received the $2 Award on {{SITENAME}}!
 
@@ -64,7 +64,7 @@ We hope you like it!
 Thanks,
 
 
-The {{SITENAME}} Team
+The {{SITENAME}} team
 
 ---
 

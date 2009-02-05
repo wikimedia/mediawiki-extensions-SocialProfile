@@ -21,9 +21,14 @@ $messages['en'] = array(
 	'ur-main-page' => 'Main page',
 	'ur-your-profile' => 'Your profile',
 	'ur-backlink' => '&lt; Back to $1\'s profile',
-	'ur-relationship-count-foes' => '$1 has $2 {{PLURAL:$2|foe|foes}}. Want more foes? <a href="$3">Invite them.</a>',
-	'ur-relationship-count-friends' => '$1 has $2 {{PLURAL:$2|friend|friends}}. Want more friends? <a href="$3">Invite them.</a>',
-	'ur-add-friends' => ' Want more friends? <a href="$1">Invite them</a>',
+	'ur-relationship-count-foes' => '$1 has $2 {{PLURAL:$2|foe|foes}}.
+Want more foes?
+<a href="$3">Invite them.</a>',
+	'ur-relationship-count-friends' => '$1 has $2 {{PLURAL:$2|friend|friends}}.
+Want more friends?
+<a href="$3">Invite them.</a>',
+	'ur-add-friends' => ' Want more friends?
+<a href="$1">Invite them</a>',
 	'ur-add-friend' => 'Add as friend',
 	'ur-add-foe' => 'Add as foe',
 	'ur-add-no-user' => 'No user selected.
@@ -91,9 +96,9 @@ If you want more friends, <a href="$1">invite them!</a>',
 	'ur-title-foe' => "$1's foe list",
 	'ur-title-friend' => "$1's friend list",
 	'friend_request_subject' => '$1 has added you as a friend on {{SITENAME}}!',
-	'friend_request_body' => 'Hi $1:
+	'friend_request_body' => 'Hi $1.
 
-$2 has added you as a friend on {{SITENAME}}.  We want to make sure that you two are actually friends.
+$2 has added you as a friend on {{SITENAME}}. We want to make sure that you two are actually friends.
 
 Please click this link to confirm your friendship:
 $3
@@ -107,9 +112,9 @@ Hey, want to stop getting e-mails from us?
 Click $4
 and change your settings to disable e-mail notifications.',
 	'foe_request_subject' => 'It\'s war! $1 has added you to as a foe on {{SITENAME}}!',
-	'foe_request_body' => 'Hi $1:
+	'foe_request_body' => 'Hi $1.
 
-$2 just listed you as a foe on {{SITENAME}}.  We want to make sure that you two are actually mortal enemies or at least having an argument.
+$2 just listed you as a foe on {{SITENAME}}. We want to make sure that you two are actually mortal enemies or at least having an argument.
 
 Please click this link to confirm the grudge match.
 
@@ -125,7 +130,7 @@ Click $4
 and change your settings to disable e-mail notifications.',
 
 	'friend_accept_subject' => '$1 has accepted your friend request on {{SITENAME}}!',
-	'friend_accept_body' => 'Hi $1:
+	'friend_accept_body' => 'Hi $1.
 
 $2 has accepted your friend request on {{SITENAME}}!
 
@@ -140,7 +145,7 @@ Hey, want to stop getting e-mails from us?
 Click $4
 and change your settings to disable e-mail notifications.',
 	'foe_accept_subject' => 'It\'s on! $1 has accepted your foe request on {{SITENAME}}!',
-	'foe_accept_body' => 'Hi $1:
+	'foe_accept_body' => 'Hi $1.
 
 $2 has accepted your foe request on {{SITENAME}}!
 
@@ -155,7 +160,7 @@ Hey, want to stop getting e-mails from us?
 Click $4
 and change your settings to disable e-mail notifications.',
 	'friend_removed_subject' => 'Oh no! $1 has removed you as a friend on {{SITENAME}}!',
-	'friend_removed_body' => 'Hi $1:
+	'friend_removed_body' => 'Hi $1.
 
 $2 has removed you as a friend on {{SITENAME}}!
 
@@ -168,7 +173,7 @@ Hey, want to stop getting e-mails from us?
 Click $4
 and change your settings to disable e-mail notifications.',
 	'foe_removed_subject' => 'Woohoo! $1 has removed you as a foe on {{SITENAME}}!',
-	'foe_removed_body' => 'Hi $1:
+	'foe_removed_body' => 'Hi $1.
 
 	$2 has removed you as a foe on {{SITENAME}}!
 
