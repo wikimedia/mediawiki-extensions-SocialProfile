@@ -10,6 +10,7 @@ $messages = array();
 
 /** English
  * @author Wikia, Inc.
+ * @author Purodha
  */
 $messages['en'] = array(
 	'giftmanager' => 'Gifts manager',
@@ -24,8 +25,8 @@ $messages['en'] = array(
 	'giftmanager-private' => 'private',
 	'giftmanager-view' => 'View gift list',
 	'g-add-message' => 'Add a message',
-	'g-back-edit-gift' => 'Back to Edit this gift',
-	'g-back-gift-list' => 'Back to Gift list',
+	'g-back-edit-gift' => 'Back to edit this gift',
+	'g-back-gift-list' => 'Back to gift list',
 	'g-back-link' => '<a href="$1">< Back to $2\'s page</a>',
 	'g-choose-file' => 'Choose file:',
 	'g-cancel' => 'Cancel',
@@ -61,8 +62,8 @@ It is that easy.',
 	'g-give-no-user-message' => 'Gifts and awards are a great way to acknowledge your friends!',
 	'g-give-no-user-title' => 'Who would you like to give a gift to?',
 	'g-give-to-user-title' => 'Send the gift "$1" to $2',
-	'g-give-to-user-message' => 'Want to give $1 a different gift? <a href="$2">Click Here</a>.',
-	'g-go-back' => 'Go Back',
+	'g-give-to-user-message' => 'Want to give $1 a <a href="$2">different gift</a>?',
+	'g-go-back' => 'Go back',
 	'g-imagesbelow' => 'Below are your images that will be used on the site',
 	'g-large' => 'Large',
 	'g-list-title' => '$1\'s gift list',
@@ -88,7 +89,7 @@ It is that easy.',
 	'g-uploadsuccess' => 'Upload successful',
 	'g-viewgiftlist' => 'View gift list',
 	'g-your-profile' => 'Your profile',
-	'gift_received_subject' => '$1 has sent you the $2 Gift on {{SITENAME}}!',
+	'gift_received_subject' => '$1 has sent you the $2 gift on {{SITENAME}}!',
 	'gift_received_body' => 'Hi $1.
 
 $2 just sent you the $3 gift on {{SITENAME}}.   
