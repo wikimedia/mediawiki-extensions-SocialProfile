@@ -9,12 +9,13 @@ $messages = array();
 
 /** English
  * @author Wikia, Inc.
+ * @author Purodha
  */
 $messages['en'] = array(
 	'systemgiftmanager' => 'System gifts manager', 
 	'ga-addnew' => '+ Add new gift',
-	'ga-back-edit-gift' => 'Back to Edit this gift',
-	'ga-back-gift-list' => 'Back to Gift list',
+	'ga-back-edit-gift' => 'Back to edit this gift',
+	'ga-back-gift-list' => 'Back to gift list',
 	'ga-back-link' => '<a href="$1">< Back to $2\'s profile</a>',
 	'ga-choosefile' => 'Choose file:',
 	'ga-count' => '$1 has $2 {{PLURAL:$2|award|awards}}.',
@@ -45,13 +46,13 @@ $messages['en'] = array(
 	'ga-saved' => 'The gift has been saved',
 	'ga-small' => 'Small',
 	'ga-threshold' => 'threshold',
-	'ga-title' => '$1\'s Awards',
+	'ga-title' => '$1\'s awards',
 	'ga-uploadsuccess' => 'Upload successful',
 	'ga-viewlist' => 'View gift list',
-	'system_gift_received_subject' => 'You have received the $1 Award on {{SITENAME}}!',
+	'system_gift_received_subject' => 'You have received the $1 award on {{SITENAME}}!',
 	'system_gift_received_body' => 'Hi $1.
 
-You have just received the $2 Award on {{SITENAME}}!
+You have just received the $2 award on {{SITENAME}}!
 
 "$3"
 
