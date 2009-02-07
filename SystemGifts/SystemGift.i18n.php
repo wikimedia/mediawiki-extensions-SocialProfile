@@ -144,6 +144,50 @@ $4
 	'right-awardsmanage' => 'إنشاء جوائز جديدة وتعديل الموجودة',
 );
 
+/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+ * @author EugeneZelenko
+ * @author Jim-by
+ */
+$messages['be-tarask'] = array(
+	'systemgiftmanager' => 'Сыстэма кіраваньня падарункамі',
+	'ga-addnew' => '+ Дадаць новы падарунак',
+	'ga-back-edit-gift' => 'Вярнуцца да рэдагаваньня гэтага падарунка',
+	'ga-back-gift-list' => 'Вярнуцца да сьпісу падарункаў',
+	'ga-back-link' => '<a href="$1">< Вярнуцца да профілю $2</a>',
+	'ga-choosefile' => 'Выберыце файл:',
+	'ga-count' => '$1 мае $2 {{PLURAL:$2|узнагароду|узнагароды|узнагародаў}}.',
+	'ga-create-gift' => 'Стварыць падарунак',
+	'ga-created' => 'Падарунак быў створаны',
+	'ga-currentimage' => 'Цяперашняя выява',
+	'ga-error-message-invalid-link' => 'Спасылка, якую Вы ўвалі — няслушная.',
+	'ga-error-message-no-user' => 'Удзельніка, якога Вы спрабуеце праглядзець, не існуе.',
+	'ga-error-title' => 'Ой, Вы выбралі няслушны накірунак!',
+	'ga-file-instructions' => 'Ваша выява павінна быць у фармаце jpeg, png альбо gif (анімаваныя выявы не дазволеныя) і мець памер меней за 100 кб.',
+	'ga-gift' => 'падарунак',
+	'ga-gift-given-count' => 'Гэты падарунак быў падараваны $1 {{PLURAL:$1|раз|разы|разоў}}',
+	'ga-gift-title' => '«$2» удзельніка $1',
+	'ga-giftdesc' => 'апісаньне падарунка',
+	'ga-giftimage' => 'выява падарунка',
+	'ga-giftname' => 'назва падарунка',
+	'ga-gifttype' => 'тып падарунка',
+	'ga-goback' => 'Вярнуцца',
+	'ga-imagesbelow' => 'Ніжэй знаходзяцца Вашыя выявы, якія будуць выкарыстана на сайце',
+	'ga-img' => 'дадаць/зьмяніць выяву',
+	'ga-large' => 'Вялікая',
+	'ga-medium' => 'Сярэдняя',
+	'ga-mediumlarge' => 'Сярэдне-вялікая',
+	'ga-new' => 'Новая',
+	'ga-next' => 'Наступная',
+	'ga-previous' => 'Папярэдняя',
+	'ga-recent-recipients-award' => 'Іншыя апошнія атрымальнікі гэтай узнагароды',
+	'ga-saved' => 'Падарунак быў захаваны',
+	'ga-small' => 'Маленькая',
+	'ga-threshold' => 'парог',
+	'ga-title' => 'Узнагароды $1',
+	'ga-uploadsuccess' => 'Пасьпяховая загрузка',
+	'ga-viewlist' => 'Паказаць сьпіс падарункаў',
+);
+
 /** German (Deutsch)
  * @author Umherirrender
  */
@@ -926,6 +970,7 @@ $messages['ps'] = array(
 /** Portuguese (Português)
  * @author Malafaya
  * @author Vanessa Sabino
+ * @author Waldir
  */
 $messages['pt'] = array(
 	'systemgiftmanager' => 'Gerenciador do Sistema de Presentes',
@@ -939,7 +984,7 @@ $messages['pt'] = array(
 	'ga-created' => 'O presente foi criado',
 	'ga-currentimage' => 'Imagem Atual',
 	'ga-error-message-invalid-link' => 'O link que você colocou é inválido.',
-	'ga-error-message-no-user' => 'O usuário que você está tentando ver não existe.',
+	'ga-error-message-no-user' => 'O utilizador que você está tentando ver não existe.',
 	'ga-error-title' => 'Ops, você entrou no lugar errado!',
 	'ga-file-instructions' => 'Sua imagem precisa ser um jpeg, png or gif (sem gifs animados), e precisa ter tamanho menor que 100kb.',
 	'ga-gift' => 'presente',

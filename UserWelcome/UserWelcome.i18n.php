@@ -295,7 +295,7 @@ $messages['eu'] = array(
 	'mp-userlevels-link' => 'Lankide mailak',
 	'mp-welcome-upload' => 'Igo',
 	'mp-welcome-edit' => 'Aldatu',
-	'mp-welcome-points' => '$1 puntu',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|puntu|puntu}}',
 	'mp-welcome-logged-in' => 'Kaixo $1',
 	'mp-requests-title' => 'Eskaerak',
 	'mp-requests-message' => 'Hurrengo eskaerak dituzu.',
@@ -572,7 +572,7 @@ $messages['mk'] = array(
 	'mp-userlevels-link' => 'Кориснички нивоа',
 	'mp-welcome-upload' => 'Подигнување',
 	'mp-welcome-edit' => 'Уреди',
-	'mp-welcome-points' => '$1 поени',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|поен|поени}}',
 	'mp-welcome-needed-points' => 'За да напредувате до <b><a href="$1">$2</a></b> заработете повеќе од <i>$3</i> {{PLURAL:$3|поен|поени}}!',
 	'mp-welcome-logged-in' => 'Добредојдовте $1',
 	'mp-requests-title' => 'Барања',
@@ -719,10 +719,11 @@ $messages['ps'] = array(
 /** Portuguese (Português)
  * @author Lijealso
  * @author Malafaya
+ * @author Waldir
  */
 $messages['pt'] = array(
 	'userwelcome-desc' => 'Adiciona a marca <tt>&lt;welcomeUser&gt;</tt> para apresentar informação social específica do utilizador, para utilizadores autenticados',
-	'mp-userlevels-link' => 'Níveis de usuário',
+	'mp-userlevels-link' => 'Níveis de utilizador',
 	'mp-welcome-upload' => 'Carregar',
 	'mp-welcome-edit' => 'Editar',
 	'mp-welcome-points' => '$1 {{PLURAL:$1|ponto|pontos}}',

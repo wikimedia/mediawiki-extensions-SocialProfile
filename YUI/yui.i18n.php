@@ -319,6 +319,13 @@ $messages['pt'] = array(
 	'yui-desc' => 'Um conjunto de utilitários e controlos, escritos em JavaScript',
 );
 
+/** Brazilian Portuguese (Português do Brasil)
+ * @author Eduardo.mps
+ */
+$messages['pt-br'] = array(
+	'yui-desc' => 'Um conjunto de utilitários e controles, escritos em JavaScript',
+);
+
 /** Romanian (Română)
  * @author KlaudiuMihaila
  */

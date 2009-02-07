@@ -3917,6 +3917,7 @@ Jeśli chcesz mieć więcej przyjaciół <a href="$1">zaproś ich!</a>',
 	'ur-title-foe' => 'Lista wrogów $1',
 	'ur-title-friend' => 'Lista przyjaciół $1',
 	'friend_request_subject' => '$1 dodał Ciebie do swoich przyjaciół na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
+	'foe_request_subject' => 'Wojna! $1 dodał Cię do wrogów na {{GRAMMAR:MS.lp|((sitename))}}!',
 	'friend_removed_subject' => 'Och nie! $1 usunął Cię z listy przyjaciół na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
 );
 
@@ -3944,6 +3945,7 @@ $messages['ps'] = array(
  * @author Lijealso
  * @author Malafaya
  * @author Vanessa Sabino
+ * @author Waldir
  */
 $messages['pt'] = array(
 	'viewrelationships' => 'Ver relacionamentos',
@@ -3951,7 +3953,7 @@ $messages['pt'] = array(
 	'ur-already-submitted' => 'Seu pedido foi enviado',
 	'ur-error-page-title' => 'Ops!',
 	'ur-error-title' => 'Ooops, você pegou um caminho errado!',
-	'ur-error-message-no-user' => 'Não podemos completar a sua requisição, não existe um usuário com este nome.',
+	'ur-error-message-no-user' => 'Não podemos completar a sua requisição, não existe um utilizador com este nome.',
 	'ur-main-page' => 'Página principal',
 	'ur-your-profile' => 'Seu perfil',
 	'ur-backlink' => '&lt; Voltar ao perfil de $1',
@@ -3960,7 +3962,7 @@ $messages['pt'] = array(
 	'ur-add-friends' => ' Quer mais amigos? <a href="$1">Convide-os</a>',
 	'ur-add-friend' => 'Adicionar como amigo',
 	'ur-add-foe' => 'Adicionar como inimigo',
-	'ur-add-no-user' => 'Nenhum usuário selecionado.
+	'ur-add-no-user' => 'Nenhum utilizador selecionado.
 Por favor peça amigos/inimigos através do link correto.',
 	'ur-add-personal-message' => 'Adicionar uma mensagem pessoal',
 	'ur-remove-relationship-friend' => 'Remover como amigo',
@@ -3999,7 +4001,7 @@ Nós iremos notificar $1 para confirmar sua amizade.',
 Se $1 confirmar seu pedido, você irá receber um e-mail',
 	'ur-add-sent-message-friend' => 'Seu pedido de amizade foi enviado para $1 para confirmação.
 Se $1 confirmar seu pedido, você irá receber um e-mail',
-	'ur-add-error-message-no-user' => 'O usuário que pretende adicionar não existe.',
+	'ur-add-error-message-no-user' => 'O utilizador que pretende adicionar não existe.',
 	'ur-add-error-message-blocked' => 'Você está bloqueado atualmente e não pode adicionar amigos ou inimigos.',
 	'ur-add-error-message-yourself' => 'Você não pode adicionar a si mesmo como amigo ou inimigo.',
 	'ur-add-error-message-existing-relationship-foe' => 'Você já é inimigo de $1.',

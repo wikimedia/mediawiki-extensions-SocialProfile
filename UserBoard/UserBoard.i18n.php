@@ -243,9 +243,65 @@ $3
 
 /** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
  * @author EugeneZelenko
+ * @author Jim-by
  */
 $messages['be-tarask'] = array(
+	'boardblastlogintitle' => 'Вам неабходна ўвайсьці ў сыстэму, каб дасылаць паведамленьні на агульную дошку',
+	'boardblastlogintext' => 'Вам неабходна ўвайсьці ў сыстэму, каб дасылаць паведамленьні на агульную дошку.
+Націсьніце <a href="index.php?title=Special:UserLogin">тут, каб увайсьці ў сыстэму</a>',
+	'messagesenttitle' => 'Паведамленьні дасланыя',
+	'boardblasttitle' => 'Адпраўка паведамленьня на дошку',
+	'boardblaststep1' => 'Крок 1: Напішыце Вашае паведамленьне',
+	'boardblastprivatenote' => 'Усе паведамленьні будуць дасланыя як прыватныя',
+	'boardblaststep2' => 'Крок 2: Выберыце, каму Вы жадаеце даслаць Ваша паведамленьне',
+	'boardlinkselectall' => 'Выбраць усіх',
+	'boardlinkunselectall' => 'Зьняць выбар',
+	'boardlinkselectfriends' => 'Выбраць сяброў',
+	'boardlinkunselectfriends' => 'Зьняць выбар сяброў',
+	'boardlinkselectfoes' => 'Выбраць ворагаў',
+	'boardlinkunselectfoes' => 'Зьняць выбар ворагаў',
+	'boardsendbutton' => 'Даслаць паведамленьне на дошку',
+	'boardnofriends' => 'У Вас няма сяброў, якім можна даслаць паведамленьне!',
+	'messagesentsuccess' => 'Ваша паведамленьне было даслана',
+	'userboard' => 'Дошка ўдзельніка',
+	'userboard_board-to-board' => 'Дошка-да-дошкі',
 	'userboard_delete' => 'Выдаліць',
+	'userboard_noexist' => 'Удзельніка, якога Вы спрабуеце паглядзець, не існуе.',
+	'userboard_yourboard' => 'Ваша дошка',
+	'userboard_owner' => 'Дошка ўдзельніка $1',
+	'userboard_yourboardwith' => 'Ваша дошка-на-дошку з $1',
+	'userboard_otherboardwith' => 'Дошка-на-дошку ўдзельніка $1 з $2',
+	'userboard_backprofile' => 'Вярнуцца да профілю ўдзельніка $1',
+	'userboard_backyourprofile' => 'Вярнуцца да Вашага профілю',
+	'userboard_boardtoboard' => 'Дошка-на-дошку',
+	'userboard_confirmdelete' => 'Вы ўпэўнены, што жадаеце выдаліць гэта паведамленьне?',
+	'userboard_sendmessage' => 'Даслаць паведамленьне $1',
+	'userboard_myboard' => 'Мая дошка',
+	'userboard_posted_ago' => 'разьмешчана $1 таму',
+	'userboard_private' => 'прыватнае',
+	'userboard_public' => 'публічнае',
+	'userboard_messagetype' => 'Тып паведамленьня',
+	'userboard_nextpage' => 'наступная',
+	'userboard_prevpage' => 'папярэдняя',
+	'userboard_nomessages' => 'Няма паведамленьняў.',
+	'userboard_sendbutton' => 'даслаць',
+	'userboard_loggedout' => 'Вам неабходна <a href="$1">ўвайсьці ў сыстэму</a>, каб пісаць паведамленьні іншым удзельнікам.',
+	'userboard_showingmessages' => '{{PLURAL:$4|Паказанае паведамленьне $3|Паказаныя паведамленьньні $2-$3}} з $1 {{PLURAL:$1|паведамленьня|паведамленьняў|паведамленьняў}}',
+	'message_received_subject' => '$1 напісаў на Вашай дошцы ў {{GRAMMAR:месны|{{SITENAME}}}}',
+	'message_received_body' => 'Прывітаньне, $1.
+
+$2 толькі што напісаў на Вашай дошцы ў {{GRAMMAR:месны|{{SITENAME}}}}!
+
+Націсьніце ніжэй, каб праверыць Вашу дошку!
+
+$3
+
+---
+
+
+Вы болей не жадаеце атрымліваць лісты па электроннай пошце ад нас?
+
+Націсьніце $4 і зьмяніце Вашыя ўстаноўкі, каб спыніць паведамленьні па электроннай пошце.',
 );
 
 /** Bulgarian (Български)
@@ -1582,6 +1638,7 @@ $messages['ps'] = array(
  * @author Lijealso
  * @author Malafaya
  * @author Vanessa Sabino
+ * @author Waldir
  */
 $messages['pt'] = array(
 	'boardblastlogintitle' => 'Você precisa estar logado para enviar recados',
@@ -1601,10 +1658,10 @@ Clique <a href="index.php?title=Special:UserLogin">aqui para logar</a>',
 	'boardsendbutton' => 'Enviar recado',
 	'boardnofriends' => 'Você não tem amigos para enviar uma mensagem!',
 	'messagesentsuccess' => 'Sua mensagem foi enviada com sucesso',
-	'userboard' => 'Mural do usuário',
+	'userboard' => 'Mural do utilizador',
 	'userboard_board-to-board' => 'Mural-para-mural',
 	'userboard_delete' => 'Remover',
-	'userboard_noexist' => 'O usuário que você está tentando ver não existe.',
+	'userboard_noexist' => 'O utilizador que você está tentando ver não existe.',
 	'userboard_yourboard' => 'Seu mural',
 	'userboard_owner' => 'Mural de $1',
 	'userboard_yourboardwith' => 'Seu mural-para-mural com $1',

@@ -3927,7 +3927,9 @@ $messages['lb'] = array(
 	'user-stats-votes' => '{{PLURAL:$1|Stëmm|Stëmmen}}',
 	'user-stats-comments' => '{{PLURAL:$1|Bemierkung|Bemierkungen}}',
 	'user-stats-poll-votes' => 'Walen $1 {{PLURAL:$1|Stëmm|Stëmmen}}',
+	'user-stats-picture-game-votes' => 'Bildspill-{{PLURAL:$1|Stëmm|Stëmmen}}',
 	'user-stats-quiz-points' => '{{PLURAL:$1|Punkt|Punkten}} am Quiz',
+	'user-stats-pick-points' => '{{PLURAL:$1|Punkt|Punkte}} fonnt',
 	'other-info-title' => 'Aner Informatiounen',
 	'user-friends-title' => 'Frënn',
 	'user-foes-title' => 'Géigner',
@@ -5325,6 +5327,7 @@ $messages['ps'] = array(
  * @author Lijealso
  * @author Malafaya
  * @author Vanessa Sabino
+ * @author Waldir
  */
 $messages['pt'] = array(
 	'populateuserprofiles' => 'Popular perfil de usuários',
@@ -5445,7 +5448,7 @@ Clique <a href="$1">aqui</a> para logar ou clique <a href="$2">aqui</a> para se 
 	'user-profile-interests-drinks' => 'Bebidas',
 	'user-profile-preferences-emails' => 'Notificações por e-mail',
 	'user-profile-preferences-emails-personalmessage' => 'Quando uma mensagem pessoal é enviada',
-	'user-profile-preferences-emails-friendfoe' => 'Quando outro usuário torna-se seu amigo ou inimigo',
+	'user-profile-preferences-emails-friendfoe' => 'Quando outro utilizador torna-se seu amigo ou inimigo',
 	'user-profile-preferences-emails-gift' => 'Quando você recebe um presente',
 	'user-profile-preferences-emails-level' => 'Quando sobe o nível',
 	'user-profile-preferences-emails-weekly' => 'Receber e-mails de atualização semanais',
@@ -5474,19 +5477,19 @@ Clique <a href="$1">aqui</a> para logar ou clique <a href="$2">aqui</a> para se 
 	'user-profile-picture-choosepicture' => 'Escolha a sua imagem',
 	'user-profile-picture-picsize' => 'A sua imagem deverá ter o formato jpeg, png ou gif, e deverá ter um tamanho menor que 100kb.',
 	'user-profile-goback' => 'Voltar',
-	'user-profile-userlevels-link' => 'Níveis de usuário',
+	'user-profile-userlevels-link' => 'Níveis de utilizador',
 	'user-no-images' => 'Nenhuma imagem carregada',
 	'edit-profile-title' => 'Edite seu perfil',
-	'user-page-link' => 'Página de Usuário',
+	'user-page-link' => 'Página de utilizador',
 	'user-social-profile-link' => 'Perfil Social',
-	'user-wiki-link' => 'página de usuário Wiki',
+	'user-wiki-link' => 'Página wiki de utilizador',
 	'update_profile_nav' => '* Special:UpdateProfile|Informação pessoal
 * Special:UpdateProfile/personal|Outra informação
 * Special:UpdateProfile/custom|Informação personalizada
 * Special:UploadAvatar|Avatar
 * Special:UpdateProfile/preferences|Preferências',
-	'user-type-toggle-old' => 'Usar página de usuário wiki',
-	'user-type-toggle-new' => 'Usar página de usuário social',
+	'user-type-toggle-old' => 'Usar página wiki de utilizador',
+	'user-type-toggle-new' => 'Usar página social de utilizador',
 	'user-board-login-message' => 'Você precisa estar <a href="$1">logado</a> para enviar mensagens para outros usuários',
 	'removeavatar' => 'Remover avatar',
 	'givegift' => 'Dar presente',
@@ -5496,10 +5499,10 @@ Clique <a href="$1">aqui</a> para logar ou clique <a href="$2">aqui</a> para se 
 	'avatarupload-currentavatar' => 'Avatar atual de $1',
 	'avatarupload-removesuccess' => 'O avatar foi removido com sucesso',
 	'avatarupload-removeanother' => 'Remover outro',
-	'profilelogpage' => 'Log de edição do perfil do usuário',
-	'profilelogpagetext' => 'Este é um log para edições de perfil de usuário',
+	'profilelogpage' => 'Registo de edição do perfil do utilizador',
+	'profilelogpagetext' => 'Este é um registo de edições de perfil de utilizador',
 	'avatarlogpage' => 'Log de upload de avatar',
-	'avatarlogpagetext' => 'Este é um log de uploads de avatar de usuário',
+	'avatarlogpagetext' => 'Este é um registo de carregamentos de avatar de utilizador',
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'Carregado novo avatar',
 	'user-profile-picture-log-delete-entry' => 'Excluído avatar de $1',

@@ -122,6 +122,7 @@ and change your settings to disable email notifications.',
 $messages['qqq'] = array(
 	'g-cancel' => '{{Identical|Cancel}}',
 	'g-created-by' => 'Complete contents of a cell in a table. The next cell (horizontally) contains the user name of the creator of a gift.',
+	'g-new' => '{{Identical|New}}',
 );
 
 /** Arabic (العربية)
@@ -276,6 +277,57 @@ $messages['be-tarask'] = array(
 	'g-give-list-select' => 'выбраць сябра',
 	'g-give-separator' => 'ці',
 	'g-give-no-user-message' => 'Падарункі і ўзнагароды — найлепшы шлях да выразу ўдзячнасьці Вашым сябрам!',
+	'g-give-no-user-title' => 'Каму Вы жадаеце падарыць падарунак?',
+	'g-give-to-user-title' => 'Даслаць падарунак «$1» у адрас $2',
+	'g-give-to-user-message' => 'Жадаеце падарыць $1 <a href="$2">іншы падарунак</a>?',
+	'g-go-back' => 'Вярнуцца',
+	'g-imagesbelow' => 'Ніжэй знаходзяцца Вашы выявы, якія будуць выкарыстоўваюцца на сайце',
+	'g-large' => 'Вялікія',
+	'g-list-title' => 'Сьпіс падарункаў $1',
+	'g-main-page' => 'Галоўная старонка',
+	'g-medium' => 'Сярэднія',
+	'g-mediumlarge' => 'Сярэдне-вялікія',
+	'g-new' => 'новыя',
+	'g-next' => 'Наступны',
+	'g-previous' => 'Папярэдні',
+	'g-remove' => 'Выдаліць',
+	'g-remove-gift' => 'Выдаліць гэты падарунак',
+	'g-remove-message' => 'Вы ўпэўнены, што жадаеце выдаліць падарунак «$1»?',
+	'g-recent-recipients' => 'Іншыя апошнія атрымальнікі гэтага падарунка',
+	'g-remove-success-title' => 'Вы пасьпяхова выдалілі падарунак «$1»',
+	'g-remove-success-message' => 'Падарунак «$1» быў выдалены.',
+	'g-remove-title' => 'Выдаліць «$1»?',
+	'g-send-gift' => 'Даслаць падарунак',
+	'g-select-a-friend' => 'выбраць сябра',
+	'g-sent-title' => 'Вы даслалі падарунак у адрас $1',
+	'g-sent-message' => 'Вы даслалі наступныя падарункі ў адрас $1.',
+	'g-small' => 'Маленькі',
+	'g-to-another' => 'Падарыць каму-небудзь іншаму',
+	'g-uploadsuccess' => 'Пасьпяхова загружаны',
+	'g-viewgiftlist' => 'Паказаць сьпіс падарункаў',
+	'g-your-profile' => 'Ваш профіль',
+	'gift_received_subject' => '$1 даслаў Вам падарунак $2 у {{GRAMMAR:месны|{{SITENAME}}}}!',
+	'gift_received_body' => 'Прывітаньне, $1.
+
+$2 толькі што даслаў Вам падарунак $3 падарунак у {{GRAMMAR:месны|{{SITENAME}}}}.
+
+Жадаеце прачытаць пажаданьні $2 далучаныя да падарунка і паглядзець сам падарунак? Націсьніце спасылку ніжэй:
+
+$4
+
+Мы спадзяемся, што ён Вам спадабаецца!
+
+Дзякуй,
+
+
+Каманда {{SITENAME}}
+
+---
+
+Вы болей не жадаеце атрымліваць лісты па электроннай пошце ад нас?
+
+Націсьніце $5 і зьмяніце Вашыя ўстаноўкі, каб спыніць паведамленьні па электроннай пошце.',
+	'right-giftadmin' => 'Стварыць новы падарунак альбо рэдагаваць існуючыя падарункі',
 );
 
 /** German (Deutsch)
@@ -330,7 +382,7 @@ $messages['de'] = array(
 	'g-give-no-user-message' => 'Geschenke und Auszeichnungen sind ein großartiger Weg um seine Freunde zu würdigen!',
 	'g-give-no-user-title' => 'Wem möchtest du ein Geschenk geben?',
 	'g-give-to-user-title' => 'Das Geschenk „$1“ an $2 geben',
-	'g-give-to-user-message' => 'Möchest du $1 ein anders Geschenk geben? <a href="$2">Klicke hier</a>.',
+	'g-give-to-user-message' => 'Möchest du $1 ein <a href="$2">anderes Geschenk geben</a>?',
 	'g-go-back' => 'Gehe zurück',
 	'g-imagesbelow' => 'Hier drunter folgen alle Bilder, die auf dieser Seite genutzt werden',
 	'g-large' => 'Groß',
@@ -394,7 +446,7 @@ $messages['de-formal'] = array(
 	'g-give-all' => 'Möchten Sie $1 ein Geschenk geben? Suchen Sie eins der folgenden Geschenke aus und klicken Sie „Geschenk senden“. Es ist ganz einfach.',
 	'g-give-enter-friend-title' => 'Falls Sie einen Benutzernamen wissen, tragen Sie ihn hier unten ein',
 	'g-give-no-user-title' => 'Wem möchten Sie ein Geschenk geben?',
-	'g-give-to-user-message' => 'Möchen Sie $1 ein anders Geschenk geben? <a href="$2">Klicken Sie hier</a>.',
+	'g-give-to-user-message' => 'Möchen Sie $1 ein <a href="$2">anderes Geschenk geben</a>?',
 	'g-remove-message' => 'Sind Sie sich sicher, das Geschenk „$1“ zu entfernen?',
 	'g-remove-success-title' => 'Sie haben das Geschenk „$1“ erfolgreich entfernt.',
 	'g-sent-title' => 'Sie haben ein Geschenk an $1 gesendet',
@@ -421,6 +473,38 @@ Sie möchten keine E-Mails von uns erhalten?
 
 Klicken Sie $5
 und änderen Sie Ihre Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
+);
+
+/** Spanish (Español)
+ * @author Crazymadlover
+ */
+$messages['es'] = array(
+	'giftmanager-public' => 'público',
+	'giftmanager-private' => 'privado',
+	'g-add-message' => 'Agregar un mensaje',
+	'g-choose-file' => 'Escoger archivo:',
+	'g-cancel' => 'Cancelar',
+	'g-created-by' => 'creado por',
+	'g-current-image' => 'Imagen actual',
+	'g-give-all-message-title' => 'Agregar un mensaje',
+	'g-give-enter-friend-title' => 'Si usted sabe el nombre del usuario, escríbalo debajo',
+	'g-give-list-friends-title' => 'Seleccione de su lista de amigos',
+	'g-give-list-select' => 'seleccione un amigo',
+	'g-give-separator' => 'o',
+	'g-go-back' => 'Regrese',
+	'g-imagesbelow' => 'Debajo están sus imágenes que serán usadas en el sitio',
+	'g-large' => 'Grande',
+	'g-main-page' => 'Página principal',
+	'g-medium' => 'Medio',
+	'g-mediumlarge' => 'Medio-grande',
+	'g-new' => 'nuevo',
+	'g-next' => 'Próximo',
+	'g-previous' => 'Anterior',
+	'g-remove' => 'Remover',
+	'g-select-a-friend' => 'seleccione un amigo',
+	'g-small' => 'Pequeño',
+	'g-uploadsuccess' => 'Carga exirosa',
+	'g-your-profile' => 'Su perfil',
 );
 
 /** Finnish (Suomi)
@@ -576,7 +660,7 @@ $messages['fr'] = array(
 	'g-give-no-user-message' => 'Les cadeaux et les prix sont bien pour faire connaitre vos amis !',
 	'g-give-no-user-title' => 'A qui voulez-vous donner un cadeau ?',
 	'g-give-to-user-title' => 'Envoyer le cadeau « $1 » à $2',
-	'g-give-to-user-message' => 'Envie de donner un cadeau différent à $1 ? <a href="$2">Cliquez ici</a>.',
+	'g-give-to-user-message' => 'Envie de donner <a href="$2">un cadeau différent</a> à $1 ?',
 	'g-go-back' => 'Revenir',
 	'g-imagesbelow' => 'Les images qui seront utilisées sur le site sont affichées ci-dessous',
 	'g-large' => 'Grand',
@@ -678,7 +762,7 @@ $messages['gl'] = array(
 	'g-give-no-user-message' => 'Os agasallos e premios son un fantástico modo de recoñecer o labor dos seus amigos!',
 	'g-give-no-user-title' => 'A quen quere agasallar?',
 	'g-give-to-user-title' => 'Enviar o agasallo "$1" a $2',
-	'g-give-to-user-message' => 'Quere agasallar a $1 con outro galardón diferente? <a href="$2">Prema aquí</a>.',
+	'g-give-to-user-message' => 'Quere darlle a $1 un <a href="$2">agasallo diferente</a>?',
 	'g-go-back' => 'Voltar',
 	'g-imagesbelow' => 'Embaixo están as súas imaxes, que serán usadas no sitio',
 	'g-large' => 'Grande',
@@ -779,7 +863,7 @@ $messages['gsw'] = array(
 	'g-give-no-user-message' => 'Gschänk un Uuszeichnige sin e scheni Art Dyyne Frynd e Freid z mache!',
 	'g-give-no-user-title' => 'Wäm wetsch ebis schänke?',
 	'g-give-to-user-title' => 'Schick s Gschänk "$1" an $2',
-	'g-give-to-user-message' => 'Wetsch $1 e ander Gschänk gee? <a href="$2">Druck doo</a>.',
+	'g-give-to-user-message' => 'Wetsch $1 e <a href="$2">ander Gschänk</a> gee?',
 	'g-go-back' => 'Gang zrugg',
 	'g-imagesbelow' => 'Do unte chemme alli Bilder, wu uf däre Syte bruucht wäre',
 	'g-large' => 'Groß',
@@ -1042,7 +1126,7 @@ $messages['nl'] = array(
 	'g-give-no-user-message' => 'Giften en prijzen zijn een goede manier om waardering te tonen voor de verdiensten van uw vrienden!',
 	'g-give-no-user-title' => 'Aan wie wilt u een gift geven?',
 	'g-give-to-user-title' => 'De gift "$1" naar $2 sturen',
-	'g-give-to-user-message' => 'Wilt u $1 een andere gift geven? <a href="$2">Klik dan hier</a>.',
+	'g-give-to-user-message' => 'Wilt u $1 een <a href="$2">andere gift geven</a>?',
 	'g-go-back' => 'Teruggaan',
 	'g-imagesbelow' => 'Hieronder volgen uw afbeeldingen die op de site gebruikt zullen worden',
 	'g-large' => 'Groot',
@@ -1245,7 +1329,7 @@ $messages['oc'] = array(
 	'g-give-no-user-message' => 'Los presents e prèmis son plan per far conéisser vòstres amics !',
 	'g-give-no-user-title' => 'A qui volètz donar un present ?',
 	'g-give-to-user-title' => 'Mandar lo present « $1 » a $2',
-	'g-give-to-user-message' => 'Enveja de donar un present diferent a $1 ? <a href="$2">Clicatz aicí</a>.',
+	'g-give-to-user-message' => 'Enveja de donar un present diferent <a href="$2">un present diferent</a> a $1 ?',
 	'g-go-back' => 'Tornar',
 	'g-imagesbelow' => 'Los imatges que seràn utilizats sul sit son afichats çaijós',
 	'g-large' => 'Grand',
@@ -1261,7 +1345,7 @@ $messages['oc'] = array(
 	'g-remove-message' => 'Sètz segur(a) que volètz levar lo present « $1 » ?',
 	'g-recent-recipients' => "Autres beneficiaris recents d'aqueste present",
 	'g-remove-success-title' => 'Avètz levat lo present « $1 » amb succès',
-	'g-remove-success-message' => 'Coma demandat, avèm levat lo present « $1 » amb succès.',
+	'g-remove-success-message' => 'Lo present « $1 » es estat levat.',
 	'g-remove-title' => 'Levar « $1 » ?',
 	'g-send-gift' => 'Mandar lo present',
 	'g-select-a-friend' => 'seleccionatz un amic',
@@ -1300,6 +1384,7 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
 /** Portuguese (Português)
  * @author Malafaya
  * @author Vanessa Sabino
+ * @author Waldir
  */
 $messages['pt'] = array(
 	'giftmanager' => 'Gerenciador de Presentes',
@@ -1329,7 +1414,7 @@ $messages['pt'] = array(
 	'g-error-message-blocked' => 'Você está bloqueado atualmente e não pode dar presentes',
 	'g-error-message-invalid-link' => 'O link que você entrou é inválido.',
 	'g-error-message-login' => 'Você precisa estar logado para enviar presentes',
-	'g-error-message-no-user' => 'O usuário que você está tentando ver não existe.',
+	'g-error-message-no-user' => 'O utilizador que você está tentando ver não existe.',
 	'g-error-message-to-yourself' => 'Você não pode dar um presente a si mesmo',
 	'g-error-title' => 'Ops, você entrou no lugar errado!',
 	'g-file-instructions' => 'Sua imagem precisa ser um jpeg, png or gif (sem gifs animados), e precisa ter tamanho menor que 100kb.',
@@ -1340,7 +1425,7 @@ $messages['pt'] = array(
 	'g-give-all' => 'Quer dar um presente para $1? Apenas clique em um dos presentes abaixo e clique em "Enviar Presente". É fácil assim.',
 	'g-give-all-message-title' => 'Adicionar Mensagem',
 	'g-give-all-title' => 'Dar um Presente para $1',
-	'g-give-enter-friend-title' => 'Se você sabe o nome do usuário, digite abaixo',
+	'g-give-enter-friend-title' => 'Se você sabe o nome do utilizador, escreva-o abaixo',
 	'g-given' => 'Este presente foi dado $1 {{PLURAL:$1|vez|vezes}}',
 	'g-give-list-friends-title' => 'Selecione da sua lista de amigos',
 	'g-give-list-select' => 'selecione um amigo',
@@ -1348,7 +1433,7 @@ $messages['pt'] = array(
 	'g-give-no-user-message' => 'Presentes e prêmios são uma ótima maneira de dar reconhecimento aos seus amigos!',
 	'g-give-no-user-title' => 'Para quem você gostaria de dar um presente?',
 	'g-give-to-user-title' => 'Enviar presente "$1" para $2',
-	'g-give-to-user-message' => 'Quer dar a $1 um presente diferente? <a href="$2">Clique Aqui</a>.',
+	'g-give-to-user-message' => 'Quer dar a $1 um <a href="$2">presente diferente</a>?',
 	'g-go-back' => 'Voltar',
 	'g-imagesbelow' => 'Abaixo estão as imagens que serão usadas no site',
 	'g-large' => 'Grande',
@@ -1562,7 +1647,7 @@ $messages['tl'] = array(
 	'g-give-no-user-message' => 'Ang mga handog at mga gantimpala ay isang napakainam na paraan para kilalanin ang mga kaibigan mo!',
 	'g-give-no-user-title' => 'Sino ba ang nais mong bigyan ng isang handog?',
 	'g-give-to-user-title' => 'Ipadala ang handog na "$1" kay $2',
-	'g-give-to-user-message' => 'Nais mo bang bigyan ng ibang handog si $1? <a href="$2">Pindutin Dito</a>.',
+	'g-give-to-user-message' => 'Nais mo bang bigyan si $1 ng isang <a href="$2">ibang handog</a>?',
 	'g-go-back' => 'Bumalik',
 	'g-imagesbelow' => 'Nasa ibaba ang mga larawang gagamitin sa sityo',
 	'g-large' => 'Malaki',
