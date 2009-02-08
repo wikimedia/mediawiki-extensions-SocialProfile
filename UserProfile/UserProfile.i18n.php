@@ -6639,6 +6639,13 @@ Pindutin <a href="$1">dito</a> para lumagda o pindutin <a href="$2">dito</a> upa
 	'right-avatarremove' => 'Tanggalin ang mga huwaran (abatar) ng tagagamit',
 );
 
+/** Turkish (Türkçe)
+ * @author Joseph
+ */
+$messages['tr'] = array(
+	'user-profile-personal-birthdate' => 'Tarih (AA/GG)',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
  */

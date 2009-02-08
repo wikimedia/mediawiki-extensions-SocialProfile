@@ -77,6 +77,15 @@ and change your settings to disable email notifications.',
 	'right-awardsmanage' => 'Create new and edit existing awards',
 );
 
+/** Message documentation (Message documentation)
+ * @author Fryed-peach
+ */
+$messages['qqq'] = array(
+	'ga-new' => '{{Identical|New}}',
+	'ga-next' => '{{Identical|Next}}',
+	'ga-previous' => '{{Identical|Prev}}',
+);
+
 /** Arabic (العربية)
  * @author Meno25
  */
@@ -187,6 +196,30 @@ $messages['be-tarask'] = array(
 	'ga-title' => 'Узнагароды $1',
 	'ga-uploadsuccess' => 'Пасьпяховая загрузка',
 	'ga-viewlist' => 'Паказаць сьпіс падарункаў',
+	'system_gift_received_subject' => 'Вы атрымалі ўзнагароду $1 у {{GRAMMAR:месны|{{SITENAME}}}}!',
+	'system_gift_received_body' => 'Прывітаньне, $1.
+
+Вы толькі што атрымалі ўзнагароду $2 у {{GRAMMAR:месны|{{SITENAME}}}}!
+
+«$3»
+
+Націсьніце ніжэй, каб пабачыць Ваш трафэй!
+
+$4
+
+Мы спадзяемся, што Вам яна спадабаецца!
+
+Дзякуй,
+
+
+Каманда {{SITENAME}}
+
+---
+
+Вы болей не жадаеце атрымліваць лісты па электроннай пошце ад нас?
+
+Націсьніце $5 і зьмяніце Вашыя ўстаноўкі, каб спыніць паведамленьні па электроннай пошце.',
+	'right-awardsmanage' => 'Стварыць новую і рэдагаваць існуючыя ўзнагароды',
 );
 
 /** German (Deutsch)
@@ -661,6 +694,15 @@ $messages['ia'] = array(
 	'ga-uploadsuccess' => 'Cargamento succedite',
 	'ga-viewlist' => 'Vider le lista de donos',
 	'system_gift_received_subject' => 'Tu ha recipite le premio $1 in {{SITENAME}}!',
+);
+
+/** Japanese (日本語)
+ * @author Fryed-peach
+ */
+$messages['ja'] = array(
+	'ga-new' => '新規',
+	'ga-next' => '次',
+	'ga-previous' => '前',
 );
 
 /** Ripoarisch (Ripoarisch)
