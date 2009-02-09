@@ -26,7 +26,7 @@ class SpecialViewRelationships extends SpecialPage {
 	 * @param $params Mixed: parameter(s) passed to the page or null
 	 */
 	public function execute( $params ) {
-		global $wgUser, $wgOut, $wgRequest, $wgUserRelationshipScripts;
+		global $wgUser, $wgOut, $wgRequest, $wgUserRelationshipScripts, $wgLang;
 
 		wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
 
@@ -159,10 +159,14 @@ class SpecialViewRelationships extends SpecialPage {
 						</div>
 					<div class=\"relationship-actions\">";
 				if( $indivRelationship == false ) {
-					$output .= "<a href=\"".$add_relationship_link->escapeFullURL('user='.$user_safe.'&rel_type=1')."\">".wfMsg('ur-add-friend')."</a> |
-						<a href=\"".$add_relationship_link->escapeFullURL('user='.$user_safe.'&rel_type=2')."\">".wfMsg('ur-add-foe')."</a> | ";
+					$output .= $wgLang->pipeList( array(
+						"<a href=\"" . $add_relationship_link->escapeFullURL( 'user=' . $user_safe . '&rel_type=1') . "\">" . wfMsg( 'ur-add-friend') . "</a>",
+						"<a href=\"" . $add_relationship_link->escapeFullURL( 'user=' . $user_safe . '&rel_type=2') . "\">" . wfMsg( 'ur-add-foe' ) . "</a>",
+						''
+					) );
 				} else if( $user_name == $wgUser->getName() ) {
-					$output .= "<a href=\"".$remove_relationship_link->escapeFullURL('user='.$user_safe)."\">".$rem."</a> | ";
+					$output .= "<a href=\"".$remove_relationship_link->escapeFullURL('user='.$user_safe)."\">".$rem."</a>";
+					$output .= wfMsgExt( 'pipe-separator' , 'escapenoentities' );
 				}
 				$output .= "<a href=\"".$give_gift_link->escapeFullURL('user='.$user_safe)."\">".wfMsg('ur-give-gift')."</a>";
 

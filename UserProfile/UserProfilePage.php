@@ -409,7 +409,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getProfileTop( $user_id, $user_name ) {
-		global $IP, $wgTitle, $wgUser, $wgMemc, $wgUploadPath;
+		global $IP, $wgTitle, $wgUser, $wgMemc, $wgUploadPath, $wgLang;
 
 		// Load messages, we're gonna need 'em
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
@@ -482,25 +482,41 @@ class UserProfilePage extends Article {
 			<div class="profile-actions">';
 
 		if ( $this->isOwner() ) {
-			$output .= '
-			<a href="'.$update_profile->escapeFullURL().'">'.wfMsg('user-edit-profile').'</a> |
-			<a href="'.$upload_avatar->escapeFullURL().'">'.wfMsg('user-upload-avatar').'</a> |
-			<a href="'.$watchlist->escapeFullURL().'">'.wfMsg('user-watchlist').'</a> |
-			';
+			$output .= $wgLang->pipeList( array(
+				'<a href="' . $update_profile->escapeFullURL() . '">' . wfMsg( 'user-edit-profile ') . '</a>',
+				'<a href="' . $upload_avatar->escapeFullURL() . '">' . wfMsg( 'user-upload-avatar' ) . '</a>',
+				'<a href="' . $watchlist->escapeFullURL() . '">' . wfMsg( 'user-watchlist' ) . '</a>',
+				''
+			) );
 		} else if( $wgUser->isLoggedIn() ) {
 			if( $relationship == false ) {
-				$output .= '<a href="'.$add_relationship->escapeFullURL('user='.$user_safe.'&rel_type=1').'" rel="nofollow">'.wfMsg('user-add-friend').'</a> |
-				<a href="'.$add_relationship->escapeFullURL('user='.$user_safe.'&rel_type=2').'" rel="nofollow">'.wfMsg('user-add-foe').'</a> | ';
+				$output .= $wgLang->pipeList( array(
+					'<a href="'.$add_relationship->escapeFullURL('user='.$user_safe.'&rel_type=1').'" rel="nofollow">'.wfMsg('user-add-friend').'</a>',
+					'<a href="'.$add_relationship->escapeFullURL('user='.$user_safe.'&rel_type=2').'" rel="nofollow">'.wfMsg('user-add-foe').'</a>',
+					''
+				) );
 			} else {
-				if( $relationship == 1 ) $output .= '<a href="'.$remove_relationship->escapeFullURL('user='.$user_safe).'">'.wfMsg('user-remove-friend').'</a> | ';
-				if( $relationship == 2 ) $output .= '<a href="'.$remove_relationship->escapeFullURL('user='.$user_safe).'">'.wfMsg('user-remove-foe').'</a> | ';
+				if( $relationship == 1 ) {
+					$output .= $wgLang->pipeList( array(
+						'<a href="' . $remove_relationship->escapeFullURL( 'user=' . $user_safe ) . '">' . wfMsg( 'user-remove-friend' ) . '</a>',
+						''
+					) );
+				}
+				if( $relationship == 2 ) {
+					$output .= $wgLang->pipeList( array(
+						'<a href="' . $remove_relationship->escapeFullURL( 'user=' . $user_safe ) . '">' . wfMsg( 'user-remove-foe' ) . '</a>',
+						''
+					) );
+				}
 			}
 
 			global $wgUserBoard;
 			if( $wgUserBoard ){
-				$output .= '<a href="'.$send_message->escapeFullURL('user='.$wgUser->getName().'&conv='.$user_safe).'" rel="nofollow">'.wfMsg('user-send-message').'</a> | ';
+				$output .= '<a href="'.$send_message->escapeFullURL('user='.$wgUser->getName().'&conv='.$user_safe).'" rel="nofollow">'.wfMsg('user-send-message').'</a>';
+				$output .= wfMsgExt( 'pipe-separator' , 'escapenoentities' );
 			}
-			$output .= '<a href="'.$give_gift->escapeFullURL('user='.$user_safe).'" rel="nofollow">'.wfMsg('user-send-gift').'</a> |';
+			$output .= '<a href="'.$give_gift->escapeFullURL('user='.$user_safe).'" rel="nofollow">'.wfMsg('user-send-gift').'</a>';
+			$output .= wfMsgExt( 'pipe-separator' , 'escapenoentities' );
 		}
 
 		$output .= '<a href="'.$contributions->escapeFullURL().'" rel="nofollow">'.wfMsg('user-contributions').'</a> ';
@@ -840,7 +856,7 @@ class UserProfilePage extends Article {
 				<div class="action-right">';
 					if( $wgUser->getName() == $user_name ) {
 						if( $friends ) $output .= '<a href="' . UserBoard::getBoardBlastURL().'">'.wfMsg('user-send-board-blast').'</a>';
-						if( $total > 10 ) $output .= ' | ';
+						if( $total > 10 ) $output .= wfMsgExt( 'pipe-separator' , 'escapenoentities' );
 					}
 					if( $total > 10 ) $output .= '<a href="'.UserBoard::getUserBoardURL($user_name).'">'.wfMsg('user-view-all').'</a>';
 				$output .= '</div>

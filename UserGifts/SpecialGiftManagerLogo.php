@@ -378,7 +378,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 * @access private
 	 */
 	function showSuccess( $status ) {
-		global $wgUser, $wgOut, $wgContLang, $wgDBname, $wgUploadPath, $wgScriptPath;
+		global $wgUser, $wgOut, $wgContLang, $wgDBname, $wgUploadPath, $wgScriptPath, $wgLang;
 		wfLoadExtensionMessages('UserGifts');
 		$ext = 'jpg';
 
@@ -395,8 +395,11 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">'.wfMsg('g-small').'</td><td><img src="'.$wgUploadPath.'/awards/' . $this->gift_id . '_s.' . $ext . '?ts' . rand()  . '"></td></tr>';
 		$output .= '<tr><td><input type="button" onclick="javascript:history.go(-1)" value="'.wfMsg('g-go-back').'"></td></tr>';
 
-		$output .= '<tr><td><a href="'.$wgScriptPath.'/index.php?title=Special:GiftManager">'.wfMsg('g-back-gift-list').'</a> | ';
-		$output .= '<a href="'.$wgScriptPath.'/index.php?title=Special:GiftManager&amp;id='. $this->gift_id .'">'.wfMsg('g-back-edit-gift').'</a></td></tr>';
+		// FIXME: contains very hard coded URLs
+		$output .= $wgLang->pipeList( array(
+			'<tr><td><a href="' . $wgScriptPath . '/index.php?title=Special:GiftManager">' . wfMsg( 'g-back-gift-list' ) . '</a>',
+			'<a href="' . $wgScriptPath . '/index.php?title=Special:GiftManager&amp;id=' . $this->gift_id . '">' . wfMsg( 'g-back-edit-gift' ) . '</a></td></tr>'
+		) );
 		$output .= '</table>';
 		$wgOut->addHTML($output);
 	}

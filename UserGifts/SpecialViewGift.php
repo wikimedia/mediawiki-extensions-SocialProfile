@@ -82,7 +82,10 @@ class ViewGift extends UnlistedSpecialPage {
 					<div class=\"g-describe\">{$gift["description"]}</div>
 					<div class=\"g-actions\">
 						<a href=\"".$give_gift_link->escapeFullURL('gift_id='.$gift['gift_id'])."\">".wfMsg('g-to-another')."</a>";
-						if( $gift['user_name_to'] == $wgUser->getName() ) $output .= " | <a href=\"".$remove_gift_link->escapeFullURL('gift_id='.$gift['id'])."\">".wfMsg('g-remove-gift')."</a>";
+						if( $gift['user_name_to'] == $wgUser->getName() ) {
+							$output .= wfMsgExt( 'pipe-separator' , 'escapenoentities' );
+							$output .= "<a href=\"" . $remove_gift_link->escapeFullURL( 'gift_id=' . $gift['id'] ) . "\">" . wfMsg( 'g-remove-gift' ) . "</a>";
+						}
 					$output .= '</div>
 				</div>';
 
