@@ -379,6 +379,13 @@ $messages['gl'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|novo amigo|novos amigos}}',
 );
 
+/** Ancient Greek (Ἀρχαία ἑλληνικὴ)
+ * @author Crazymadlover
+ */
+$messages['grc'] = array(
+	'mp-welcome-edit' => 'Μεταγράφειν',
+);
+
 /** Swiss German (Alemannisch)
  * @author Als-Holder
  */

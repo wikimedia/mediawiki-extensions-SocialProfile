@@ -171,7 +171,7 @@ $messages['arz'] = array(
 	'ga-error-message-invalid-link' => 'الوصلة التى أدخلتها غير صحيحة.',
 	'ga-error-message-no-user' => 'المستخدم الذى تحاول رؤيته غير موجود.',
 	'ga-error-title' => 'آه، أنت أخذت منحنى خاطئا!',
-	'ga-file-instructions' => 'صورتك يجب أن تكون jpeg، png أو gif (لا gif فيديو)، ويجب أن تكون أقل من 100 كيلوبت في الحجم.',
+	'ga-file-instructions' => 'صورتك يجب أن تكون jpeg، png أو gif (لا gif فيديو)، ويجب أن تكون أقل من 100 كيلوبت فى الحجم.',
 	'ga-gift' => 'هدية',
 	'ga-gift-given-count' => 'هذه الهدية تم منحها $1 {{PLURAL:$1|مرة|مرة}}',
 	'ga-gift-title' => '"$2" الخاصة ب$1',
@@ -215,7 +215,7 @@ $4
 
 ---
 
-ها، تريد أن تتوقف عن تلقي رسائل البريد الإلكترونى منا؟   
+ها، تريد أن تتوقف عن تلقى رسائل البريد الإلكترونى منا؟   
 
 اضغط $5
 وغير إعداداتك لتعطيل إخطارات البريد الإكترونى.',
@@ -604,6 +604,14 @@ Quere deixar de recibir os nosos correos electrónicos?
 Prema $5
 e cambie as súas preferencias para desactivar as notificacións por correo electrónico.',
 	'right-awardsmanage' => 'Crear novos agasallos e editar os existentes',
+);
+
+/** Ancient Greek (Ἀρχαία ἑλληνικὴ)
+ * @author Crazymadlover
+ */
+$messages['grc'] = array(
+	'ga-new' => 'Νέα',
+	'ga-next' => 'Ἑπομέναι',
 );
 
 /** Swiss German (Alemannisch)

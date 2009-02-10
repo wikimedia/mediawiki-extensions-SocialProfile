@@ -257,12 +257,12 @@ $messages['arz'] = array(
 	'g-description-title' => 'الهدية "$2" الخاصة ب$1',
 	'g-error-do-not-own' => 'أنت لا تمتلك هذه الهدية.',
 	'g-error-message-blocked' => 'أنت حاليا ممنوع ولا يمكنك إعطاء هدايا',
-	'g-error-message-invalid-link' => 'الوصلة التي أدخلتها غير صحيحة.',
+	'g-error-message-invalid-link' => 'الوصلة التى أدخلتها غير صحيحة.',
 	'g-error-message-login' => 'يجب عليك تسجيل الدخول لإعطاء هدايا',
-	'g-error-message-no-user' => 'المستخدم الذي تحاول رؤيته غير موجود.',
+	'g-error-message-no-user' => 'المستخدم الذى تحاول رؤيته غير موجود.',
 	'g-error-message-to-yourself' => 'أنت لا يمكنك منح هدية لنفسك.',
 	'g-error-title' => 'آه، أنت أخذت منحنى خاطئا!',
-	'g-file-instructions' => 'صورتك يجب أن تكون jpeg، png أو gif (لا gif فيديو)، ويجب أن تكون أقل من 100 كيلوبت في الحجم.',
+	'g-file-instructions' => 'صورتك يجب أن تكون jpeg، png أو gif (لا gif فيديو)، ويجب أن تكون أقل من 100 كيلوبت فى الحجم.',
 	'g-from' => 'من <a href="$1">$2</a>',
 	'g-gift' => 'هدية',
 	'g-gift-name' => 'اسم الهدية',
@@ -280,7 +280,7 @@ $messages['arz'] = array(
 	'g-give-to-user-title' => 'أرسل الهدية "$1" إلى $2',
 	'g-give-to-user-message' => 'تريد إعطاء $1 a <a href="$2">هدية مختلفة</a>؟',
 	'g-go-back' => 'رجوع',
-	'g-imagesbelow' => 'بالأسفل صورك التي سيتم استخدامها فى الموقع',
+	'g-imagesbelow' => 'بالأسفل صورك التى سيتم استخدامها فى الموقع',
 	'g-large' => 'كبير',
 	'g-list-title' => 'قائمة الهدايا الخاصة ب$1',
 	'g-main-page' => 'الصفحة الرئيسية',
@@ -308,9 +308,9 @@ $messages['arz'] = array(
 	'gift_received_subject' => '$1 أرسل لك الهدية $2 فى {{SITENAME}}!',
 	'gift_received_body' => 'مرحبا $1:
 
-$2 أرسل حالا لك الهدية $3 في {{SITENAME}}.   
+$2 أرسل حالا لك الهدية $3 فى {{SITENAME}}.   
 
-تريد قراءة الملاحظة التي تركها $2 لك ورؤية هديتك؟  اضغط على الوصلة بالأسفل:
+تريد قراءة الملاحظة التى تركها $2 لك ورؤية هديتك؟  اضغط على الوصلة بالأسفل:
 
 $4
 
@@ -333,6 +333,7 @@ $4
 /** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
  * @author EugeneZelenko
  * @author Jim-by
+ * @author Red Winged Duck
  */
 $messages['be-tarask'] = array(
 	'giftmanager' => 'Кіраваньне падарункамі',
@@ -356,10 +357,10 @@ $messages['be-tarask'] = array(
 	'g-create-gift' => 'Стварыць падарунак',
 	'g-created-by' => 'створаны',
 	'g-current-image' => 'Цяперашняя выява',
-	'g-delete-message' => 'Вы ўпэўнены, што жадаеце выдаліць падарунак «$1»? Ён будзе выдалены і ў удзельнікаў, якія маглі яго атрымаць.',
+	'g-delete-message' => 'Вы ўпэўненыя, што жадаеце выдаліць падарунак «$1»? Ён будзе выдалены і ва ўдзельнікаў, якія маглі яго атрымаць.',
 	'g-description-title' => 'падарунак «$2» ад $1',
 	'g-error-do-not-own' => 'Вы не валодаеце гэтым падарункам.',
-	'g-error-message-blocked' => 'Зараз Вы заблякаваны і ня можаце дарыць падарункі',
+	'g-error-message-blocked' => 'Цяпер Вы заблякаваныя і ня можаце дарыць падарункі',
 	'g-error-message-invalid-link' => 'Вы ўвялі няслушную спасылку.',
 	'g-error-message-login' => 'Вам неабходна ўвайсьці ў сыстэму, каб дарыць падарункі',
 	'g-error-message-no-user' => 'Удзельніка, якога Вы спрабуеце паглядзець, не існуе.',
@@ -369,17 +370,17 @@ $messages['be-tarask'] = array(
 	'g-from' => 'ад <a href="$1">$2</a>',
 	'g-gift' => 'падарунак',
 	'g-gift-name' => 'назва падарунка',
-	'g-give-gift' => 'Падарыць падарунак',
+	'g-give-gift' => 'Зрабіць падарунак',
 	'g-give-all' => 'Жадаеце падарыць $1 падарунак? Проста націсьніце на падарункі, якія знаходзяцца ніжэй, я потым націсьніце «Даслаць падарунак». Гэта вельмі проста.',
 	'g-give-all-message-title' => 'Дадаць паведамленьне',
-	'g-give-all-title' => 'Падарыць падарунак $1',
+	'g-give-all-title' => 'Зрабіць падарунак $1',
 	'g-give-enter-friend-title' => 'Калі Вы ведаеце імя ўдзельніка, проста ўвядзіце яго ніжэй',
 	'g-given' => 'Гэты падарунак быў падараваны $1 {{PLURAL:$1|раз|разы|разоў}}',
 	'g-give-list-friends-title' => 'Выбраць з Вашага сьпісу сяброў',
 	'g-give-list-select' => 'выбраць сябра',
 	'g-give-separator' => 'ці',
 	'g-give-no-user-message' => 'Падарункі і ўзнагароды — найлепшы шлях да выразу ўдзячнасьці Вашым сябрам!',
-	'g-give-no-user-title' => 'Каму Вы жадаеце падарыць падарунак?',
+	'g-give-no-user-title' => 'Каму Вы жадаеце зрабіць падарунак?',
 	'g-give-to-user-title' => 'Даслаць падарунак «$1» у адрас $2',
 	'g-give-to-user-message' => 'Жадаеце падарыць $1 <a href="$2">іншы падарунак</a>?',
 	'g-go-back' => 'Вярнуцца',
@@ -913,6 +914,14 @@ Quere deixar de recibir correos electrónicos nosos?
 Faga clic $5
 e troque as súas configuracións para desactivar as notificacións por correo electrónico.',
 	'right-giftadmin' => 'Crear novos agasallos e editar os existentes',
+);
+
+/** Ancient Greek (Ἀρχαία ἑλληνικὴ)
+ * @author Crazymadlover
+ */
+$messages['grc'] = array(
+	'g-cancel' => 'Ἀκυροῦν',
+	'g-new' => 'Νέα',
 );
 
 /** Swiss German (Alemannisch)
