@@ -77,6 +77,13 @@ $messages['bs'] = array(
 	'yui-desc' => 'Kolekcija korisnih alata i kontrola, napisanih u JavaScript',
 );
 
+/** Catalan (Català)
+ * @author SMP
+ */
+$messages['ca'] = array(
+	'yui-desc' => "Un conjunt d'utilitats i controls en JavaScript",
+);
+
 /** Czech (Česky)
  * @author Matěj Grabovský
  */

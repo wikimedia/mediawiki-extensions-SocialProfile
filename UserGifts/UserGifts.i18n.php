@@ -228,6 +228,108 @@ $4
 	'right-giftadmin' => 'إنشاء هدايا جديدة وتعديل الموجودة',
 );
 
+/** Egyptian Spoken Arabic (مصرى)
+ * @author Meno25
+ */
+$messages['arz'] = array(
+	'giftmanager' => 'مدير الهدايا',
+	'giftmanager-addgift' => '+ إضافة هدية جديدة',
+	'giftmanager-access' => 'وصول الهدية',
+	'giftmanager-description' => 'وصف الهدية',
+	'giftmanager-giftimage' => 'صورة الهدية',
+	'giftmanager-image' => 'أضف/استبدل الصورة',
+	'giftmanager-giftcreated' => 'الهدية تم إنشاؤها',
+	'giftmanager-giftsaved' => 'الهدية تم حفظها',
+	'giftmanager-public' => 'علنى',
+	'giftmanager-private' => 'خاص',
+	'giftmanager-view' => 'عرض قائمة الهدايا',
+	'g-add-message' => 'أضف رسالة',
+	'g-back-edit-gift' => 'رجوع لتعديل هذه الهدية',
+	'g-back-gift-list' => 'رجوع لقائمة الهدايا',
+	'g-back-link' => '<a href="$1">< رجوع إلى صفحة $2</a>',
+	'g-choose-file' => 'اختر الملف:',
+	'g-cancel' => 'إلغاء',
+	'g-count' => '$1 يمتلك $2 {{PLURAL:$2|هدية|هدية}}.',
+	'g-create-gift' => 'إنشاء الهدية',
+	'g-created-by' => 'تم إنشاؤها بواسطة',
+	'g-current-image' => 'الصورة الحالية',
+	'g-delete-message' => 'هل أنت متأكد أنك تريد حذف الهدية "$1"؟ هذا سيحذفها أيضا من المستخدمين الذين ربما كانوا قد تلقوها.',
+	'g-description-title' => 'الهدية "$2" الخاصة ب$1',
+	'g-error-do-not-own' => 'أنت لا تمتلك هذه الهدية.',
+	'g-error-message-blocked' => 'أنت حاليا ممنوع ولا يمكنك إعطاء هدايا',
+	'g-error-message-invalid-link' => 'الوصلة التي أدخلتها غير صحيحة.',
+	'g-error-message-login' => 'يجب عليك تسجيل الدخول لإعطاء هدايا',
+	'g-error-message-no-user' => 'المستخدم الذي تحاول رؤيته غير موجود.',
+	'g-error-message-to-yourself' => 'أنت لا يمكنك منح هدية لنفسك.',
+	'g-error-title' => 'آه، أنت أخذت منحنى خاطئا!',
+	'g-file-instructions' => 'صورتك يجب أن تكون jpeg، png أو gif (لا gif فيديو)، ويجب أن تكون أقل من 100 كيلوبت في الحجم.',
+	'g-from' => 'من <a href="$1">$2</a>',
+	'g-gift' => 'هدية',
+	'g-gift-name' => 'اسم الهدية',
+	'g-give-gift' => 'منح هدية',
+	'g-give-all' => 'تريد إعطاء $1 هدية؟ فقط اضغط على واحد من الهدايا بالأسفل واضغط "إرسال الهدية." الموضوع بهذه السهولة.',
+	'g-give-all-message-title' => 'إضافة رسالة',
+	'g-give-all-title' => 'إعطاء هدية إلى $1',
+	'g-give-enter-friend-title' => 'لو كنت تعرف اسم المستخدم، اكتبه بالأسفل',
+	'g-given' => 'هذه الهدية تم إعطاؤها $1 {{PLURAL:$1|مرة|مرة}}',
+	'g-give-list-friends-title' => 'اختر من قائمة أصدقائك',
+	'g-give-list-select' => 'اختر صديقا',
+	'g-give-separator' => 'أو',
+	'g-give-no-user-message' => 'الهدايا والجوائز طريقة عظيمة لمعرفة أصدقائك!',
+	'g-give-no-user-title' => 'من تريد إعطاء هدية له؟',
+	'g-give-to-user-title' => 'أرسل الهدية "$1" إلى $2',
+	'g-give-to-user-message' => 'تريد إعطاء $1 a <a href="$2">هدية مختلفة</a>؟',
+	'g-go-back' => 'رجوع',
+	'g-imagesbelow' => 'بالأسفل صورك التي سيتم استخدامها فى الموقع',
+	'g-large' => 'كبير',
+	'g-list-title' => 'قائمة الهدايا الخاصة ب$1',
+	'g-main-page' => 'الصفحة الرئيسية',
+	'g-medium' => 'متوسط',
+	'g-mediumlarge' => 'كبير-متوسط',
+	'g-new' => 'جديد',
+	'g-next' => 'تالى',
+	'g-previous' => 'سابق',
+	'g-remove' => 'إزالة',
+	'g-remove-gift' => 'إزالة هذه الهدية',
+	'g-remove-message' => 'هل أنت متأكد أنك تريد إزالة الهدية "$1"؟',
+	'g-recent-recipients' => 'المتلقون الجدد الآخرون لهذه الهدية',
+	'g-remove-success-title' => 'أنت أزلت بنجاح الهدية "$1"',
+	'g-remove-success-message' => 'الهدية "$1" تمت إزالتها.',
+	'g-remove-title' => 'إزالة "$1"؟',
+	'g-send-gift' => 'إرسال الهدية',
+	'g-select-a-friend' => 'اختر صديقا',
+	'g-sent-title' => 'أنت أرسلت هدية إلى $1',
+	'g-sent-message' => 'أنت أرسلت الهدية التالية إلى $1.',
+	'g-small' => 'صغير',
+	'g-to-another' => 'منح إلى شخص آخر',
+	'g-uploadsuccess' => 'الرفع نجح',
+	'g-viewgiftlist' => 'عرض قائمة الهدايا',
+	'g-your-profile' => 'ملفك',
+	'gift_received_subject' => '$1 أرسل لك الهدية $2 فى {{SITENAME}}!',
+	'gift_received_body' => 'مرحبا $1:
+
+$2 أرسل حالا لك الهدية $3 في {{SITENAME}}.   
+
+تريد قراءة الملاحظة التي تركها $2 لك ورؤية هديتك؟  اضغط على الوصلة بالأسفل:
+
+$4
+
+نأمل أن تعجبك!
+
+شكرا،
+
+
+فريق {{SITENAME}}
+
+---
+
+ها، تريد التوقف عن تلقى رسائل بريد إلكترونى منا؟   
+
+اضغط $5
+وغير إعداداتك لتعطيل إخطارات البريد الإلكترونى.',
+	'right-giftadmin' => 'إنشاء هدايا جديدة وتعديل الموجودة',
+);
+
 /** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
  * @author EugeneZelenko
  * @author Jim-by

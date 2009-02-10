@@ -154,6 +154,74 @@ $4
 	'right-awardsmanage' => 'إنشاء جوائز جديدة وتعديل الموجودة',
 );
 
+/** Egyptian Spoken Arabic (مصرى)
+ * @author Meno25
+ */
+$messages['arz'] = array(
+	'systemgiftmanager' => 'مدير هدايا النظام',
+	'ga-addnew' => '+ إضافة هدية جديدة',
+	'ga-back-edit-gift' => 'رجوع لتعديل هذه الهدية',
+	'ga-back-gift-list' => 'رجوع لقائمة الهدايا',
+	'ga-back-link' => '<a href="$1">< رجوع إلى ملف $2</a>',
+	'ga-choosefile' => 'اختر الملف:',
+	'ga-count' => '$1 يمتلك $2 {{PLURAL:$2|جائزة|جائزة}}.',
+	'ga-create-gift' => 'إنشاء الهدية',
+	'ga-created' => 'الهدية تم إنشاؤها',
+	'ga-currentimage' => 'الصورة الحالية',
+	'ga-error-message-invalid-link' => 'الوصلة التى أدخلتها غير صحيحة.',
+	'ga-error-message-no-user' => 'المستخدم الذى تحاول رؤيته غير موجود.',
+	'ga-error-title' => 'آه، أنت أخذت منحنى خاطئا!',
+	'ga-file-instructions' => 'صورتك يجب أن تكون jpeg، png أو gif (لا gif فيديو)، ويجب أن تكون أقل من 100 كيلوبت في الحجم.',
+	'ga-gift' => 'هدية',
+	'ga-gift-given-count' => 'هذه الهدية تم منحها $1 {{PLURAL:$1|مرة|مرة}}',
+	'ga-gift-title' => '"$2" الخاصة ب$1',
+	'ga-giftdesc' => 'وصف الهدية',
+	'ga-giftimage' => 'صورة الهدية',
+	'ga-giftname' => 'اسم الهدية',
+	'ga-gifttype' => 'نوع الهدية',
+	'ga-goback' => 'رجوع',
+	'ga-imagesbelow' => 'بالأسفل صورك التى سيتم استخدامها فى الموقع',
+	'ga-img' => 'أضف/استبدل الصورة',
+	'ga-large' => 'كبير',
+	'ga-medium' => 'متوسط',
+	'ga-mediumlarge' => 'كبير-متوسط',
+	'ga-new' => 'جديد',
+	'ga-next' => 'تالى',
+	'ga-previous' => 'سابق',
+	'ga-recent-recipients-award' => 'المتلقون الجدد الآخرون لهذه الهدية',
+	'ga-saved' => 'الهدية تم حفظها',
+	'ga-small' => 'صغير',
+	'ga-threshold' => 'حد',
+	'ga-title' => 'جوائز $1',
+	'ga-uploadsuccess' => 'الرفع نجح',
+	'ga-viewlist' => 'عرض قائمة الهدايا',
+	'system_gift_received_subject' => 'أنت تلقيت جائزة $1 فى {{SITENAME}}!',
+	'system_gift_received_body' => 'مرحبا $1:
+
+أنت تلقيت حالا جائزة $2 فى {{SITENAME}}!
+
+"$3"
+
+اضغط بالأسفل للتحقق من صندوق جوائزك!
+
+$4
+
+نأمل أن تعجبك!
+
+شكرا،
+
+
+فريق {{SITENAME}}
+
+---
+
+ها، تريد أن تتوقف عن تلقي رسائل البريد الإلكترونى منا؟   
+
+اضغط $5
+وغير إعداداتك لتعطيل إخطارات البريد الإكترونى.',
+	'right-awardsmanage' => 'إنشاء جوائز جديدة وتعديل الموجودة',
+);
+
 /** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
  * @author EugeneZelenko
  * @author Jim-by
@@ -649,6 +717,28 @@ $messages['he'] = array(
 	'ga-uploadsuccess' => 'ההעלאה הושלמה בהצלחה',
 	'ga-viewlist' => 'צפייה ברשימת המתנות',
 	'system_gift_received_subject' => 'קיבלתם את פרס ה$1 ב{{grammar:תחילית|{{SITENAME}}}}!',
+	'system_gift_received_body' => 'היי $1.
+
+הרגע קיבלתם את פרס ה$2 ב{{grammar:תחילית|{{SITENAME}}}}!
+
+"$3"
+
+לחצו להלן כדי לצפות בגביע שקיבלתם!
+
+$4
+
+אנו מקווים שתאהבו אותו!
+
+רב תודות,
+
+צוות {{SITENAME}}
+
+---
+
+היי, מעוניינים להפסיק לקבל מאיתנו הודעות בדוא"ל?
+
+לחצו על $5
+ושנו את הגדרותיכם לביטול התרעות בדוא"ל',
 	'right-awardsmanage' => 'יצירת פרסים חדשים ועריכת פרסים קיימים',
 );
 
@@ -698,8 +788,14 @@ $messages['ia'] = array(
 
 /** Japanese (日本語)
  * @author Fryed-peach
+ * @author Hosiryuhosi
  */
 $messages['ja'] = array(
+	'systemgiftmanager' => 'システムギフトマネージャー',
+	'ga-gift' => 'ギフト',
+	'ga-giftimage' => 'ギフト画像',
+	'ga-giftname' => 'ギフト名',
+	'ga-gifttype' => 'ギフトタイプ',
 	'ga-new' => '新規',
 	'ga-next' => '次',
 	'ga-previous' => '前',
