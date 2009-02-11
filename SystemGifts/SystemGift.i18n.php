@@ -225,6 +225,7 @@ $4
 /** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
  * @author EugeneZelenko
  * @author Jim-by
+ * @author Red Winged Duck
  */
 $messages['be-tarask'] = array(
 	'systemgiftmanager' => 'Сыстэма кіраваньня падарункамі',
@@ -237,7 +238,7 @@ $messages['be-tarask'] = array(
 	'ga-create-gift' => 'Стварыць падарунак',
 	'ga-created' => 'Падарунак быў створаны',
 	'ga-currentimage' => 'Цяперашняя выява',
-	'ga-error-message-invalid-link' => 'Спасылка, якую Вы ўвалі — няслушная.',
+	'ga-error-message-invalid-link' => 'Спасылка, якую Вы ўвялі — няслушная.',
 	'ga-error-message-no-user' => 'Удзельніка, якога Вы спрабуеце праглядзець, не існуе.',
 	'ga-error-title' => 'Ой, Вы выбралі няслушны накірунак!',
 	'ga-file-instructions' => 'Ваша выява павінна быць у фармаце jpeg, png альбо gif (анімаваныя выявы не дазволеныя) і мець памер меней за 100 кб.',
@@ -249,7 +250,7 @@ $messages['be-tarask'] = array(
 	'ga-giftname' => 'назва падарунка',
 	'ga-gifttype' => 'тып падарунка',
 	'ga-goback' => 'Вярнуцца',
-	'ga-imagesbelow' => 'Ніжэй знаходзяцца Вашыя выявы, якія будуць выкарыстана на сайце',
+	'ga-imagesbelow' => 'Ніжэй знаходзяцца Вашыя выявы, якія будуць выкарыстаныя на сайце',
 	'ga-img' => 'дадаць/зьмяніць выяву',
 	'ga-large' => 'Вялікая',
 	'ga-medium' => 'Сярэдняя',

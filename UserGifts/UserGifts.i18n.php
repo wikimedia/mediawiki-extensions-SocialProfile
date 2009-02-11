@@ -117,11 +117,15 @@ and change your settings to disable email notifications.',
 
 /** Message documentation (Message documentation)
  * @author EugeneZelenko
+ * @author Purodha
  * @author Siebrand
  */
 $messages['qqq'] = array(
 	'g-cancel' => '{{Identical|Cancel}}',
+	'g-count' => "* '''$1''' is a user name
+* '''$2''' is his or her count of gifts",
 	'g-created-by' => 'Complete contents of a cell in a table. The next cell (horizontally) contains the user name of the creator of a gift.',
+	'g-description-title' => "* '''$1''' is a user name",
 	'g-new' => '{{Identical|New}}',
 );
 
@@ -436,6 +440,7 @@ $4
 /** German (Deutsch)
  * @author Als-Holder
  * @author Jorges
+ * @author Purodha
  * @author Umherirrender
  */
 $messages['de'] = array(
@@ -473,10 +478,10 @@ $messages['de'] = array(
 	'g-from' => 'von <a href="$1">$2</a>',
 	'g-gift' => 'Geschenk',
 	'g-gift-name' => 'Geschenkname',
-	'g-give-gift' => 'Geschenk geben',
+	'g-give-gift' => 'Geschenk machen',
 	'g-give-all' => 'Möchtest du $1 ein Geschenk geben? Suche eins der folgenden Geschenke aus und klicke „Geschenk senden“. Es ist ganz einfach.',
 	'g-give-all-message-title' => 'Füge eine Nachricht hinzu',
-	'g-give-all-title' => 'Ein Geschenk an $1 geben',
+	'g-give-all-title' => '$1 ein Geschenk machen',
 	'g-give-enter-friend-title' => 'Falls du einen Benutzernamen weißt, trage ihn hier unten ein',
 	'g-given' => 'Dieses Geschenk wurde {{PLURAL:$1|einmal|$1 mal}} ausgegeben',
 	'g-give-list-friends-title' => 'Wähle aus deiner Freundesliste',
@@ -1138,14 +1143,38 @@ $messages['ja'] = array(
  * @author Purodha
  */
 $messages['ksh'] = array(
+	'giftmanager' => 'Jeschenke Verwallde',
+	'giftmanager-addgift' => '+ e neu Jeschenk dobei donn',
+	'giftmanager-access' => 'Zohjang nohm Jeschengk',
+	'giftmanager-description' => 'Jeschengk beschrieve',
+	'giftmanager-giftimage' => 'Beld fum Jeschengk',
+	'giftmanager-giftcreated' => 'Dat Jeschengk es aanjelaat',
+	'giftmanager-giftsaved' => 'Dat Jeschengk es afjeshpeichert',
 	'giftmanager-public' => 'öffentlesh',
 	'giftmanager-private' => 'privaat',
-	'giftmanager-view' => 'Less met Jeschenke beloore',
+	'giftmanager-view' => 'Less met Jeschengke beloore',
 	'g-add-message' => 'En Nohresch dobei donn',
 	'g-back-edit-gift' => 'Jangk retuur noh em Ändere för dat Jeschenk',
 	'g-back-gift-list' => 'Jangk retuur op de Leß met de Jeschenke',
 	'g-back-link' => '<a href="$1">< Retuur noh dem $2 sing Sigg</a>',
+	'g-choose-file' => 'Donn de Datei ußwähle:',
+	'g-cancel' => 'Stopp! Avbreche!',
+	'g-count' => '{{GENDER:$1|Dä|Dat|Dä Metmaacher}} $1 hät {{PLURAL:$2|ei Jeschengk|$2 Geschengke|kei Jeschengk}}.',
+	'g-create-gift' => 'Jeschengk äschaffe',
+	'g-created-by' => 'jemaat fun',
+	'g-description-title' => 'Däm $1 sing Jeschengk „$2“',
+	'g-gift' => 'Jeschengk',
+	'g-gift-name' => 'em Jeschengk singe Name',
+	'g-give-gift' => 'einem e Jeschengk maache',
+	'g-give-all' => 'Wells de {{GENDER:$1|dämm|dämm|dämm Metmaacher}} $1 e Jeschngk maache?
+Dann don op ein fun dä Jeschengke hee dronger klecke,
+un dann donn „{{int:G-send-gift}}“ klecke, esu eijfach es dat.',
+	'g-give-separator' => 'udder',
+	'g-new' => 'neu',
 	'g-remove-success-message' => 'Dat Jeschengk „$1“ es jetz widder fott.',
+	'g-send-gift' => 'Dat Jeschengk maache!',
+	'g-small' => 'Kleij',
+	'right-giftadmin' => 'E neu jeschengk äscahffe, un all de Jeschengke ändere, di ad doo sin.',
 );
 
 /** Luxembourgish (Lëtzebuergesch)

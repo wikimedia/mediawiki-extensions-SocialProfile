@@ -1882,6 +1882,7 @@ $messages['es'] = array(
 	'user-count-separator' => '$1 de $2',
 	'user-upload-avatar' => 'Subir avatar',
 	'user-add-friend' => 'Agregar como amigo',
+	'user-add-foe' => 'Agregar como enemigo',
 	'user-stats-title' => 'Estadísticas',
 	'user-stats-votes' => '{{PLURAL:$1|Voto|Votos}}',
 	'other-info-title' => 'Otra información',

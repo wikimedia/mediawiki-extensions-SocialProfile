@@ -958,6 +958,13 @@ $messages['tl'] = array(
 	'mp-request-new-friend' => '$1 bagong {{PLURAL:$1|kaibigan|mga kaibigan}}',
 );
 
+/** Turkish (Türkçe)
+ * @author Karduelis
+ */
+$messages['tr'] = array(
+	'mp-welcome-logged-in' => '$1 Hoşgeldiniz',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
  */

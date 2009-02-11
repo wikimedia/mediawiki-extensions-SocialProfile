@@ -565,14 +565,22 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Crazymadlover
  * @author Imre
  * @author Sanbec
  */
 $messages['es'] = array(
 	'messagesenttitle' => 'Mensajes enviados',
 	'userboard_delete' => 'Borrar',
+	'userboard_yourboard' => 'Tu pizarrón',
+	'userboard_backprofile' => 'Regresar al perfil de $1',
+	'userboard_backyourprofile' => 'Regresar a su perfil',
+	'userboard_myboard' => 'Mi pizarrón',
 	'userboard_private' => 'privado',
 	'userboard_public' => 'público',
+	'userboard_nextpage' => 'siguiente',
+	'userboard_prevpage' => 'anterior',
+	'userboard_nomessages' => 'Sin mensajes.',
 	'userboard_sendbutton' => 'enviar',
 );
 
