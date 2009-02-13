@@ -114,7 +114,7 @@ class UserStatsTrack {
 
 	function incStatField( $field, $val = 1 ){
 		global $wgUser, $IP, $wgDBprefix, $wgMemc, $wgSitename, $wgSystemGifts, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgUserStatsPointValues;
-		if( !$wgUser->isBot() && !$wgUser->isAnon() && $this->stats_fields[$field] ) {
+		if( !$wgUser->isAllowed( 'bot' ) && !$wgUser->isAnon() && $this->stats_fields[$field] ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$dbw->update( 'user_stats',
 				array( $this->stats_fields[$field]."=".$this->stats_fields[$field]."+{$val}" ),
@@ -159,7 +159,7 @@ class UserStatsTrack {
 
 	function decStatField( $field, $val = 1 ){
 		global $wgUser, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
-		if( !$wgUser->isBot() && !$wgUser->isAnon() && $this->stats_fields[$field] ) {
+		if( !$wgUser->isAllowed( 'bot' ) && !$wgUser->isAnon() && $this->stats_fields[$field] ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$dbw->update( 'user_stats',
 				array( $this->stats_fields[$field]."=".$this->stats_fields[$field]."-{$val}" ),
