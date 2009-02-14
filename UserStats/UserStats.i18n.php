@@ -330,8 +330,11 @@ und ändere deine Einstellungen, um die E-Mail-Benachrichtigungen abzustellen.',
 
 /** Greek (Ελληνικά)
  * @author Consta
+ * @author Omnipaedista
  */
 $messages['el'] = array(
+	'top-fans-points' => 'βαθμοί',
+	'top-fans-bad-field-title' => 'Ωχ!',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Επεξεργασία|Επεξεργασίες}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Σχόλιο|Σχόλια}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Φίλος|Φίλοι}}',
@@ -370,13 +373,34 @@ $messages['eo'] = array(
 $messages['es'] = array(
 	'topusers' => 'Usuarios top',
 	'top-fans-total-points-link' => 'Puntos totales',
+	'top-fans-weekly-points-link' => 'Puntos esta semana',
+	'top-fans-monthly-points-link' => 'Puntos este mes',
 	'top-fans-points' => 'puntos',
 	'top-fans-bad-field-title' => 'Oops!',
 	'top-fans-bad-field-message' => 'La estadística especificada no existe.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Voto|Votos}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Wictoria mensual|Victorias mensuales}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Victoria semanal|Victorias semanales}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Edición|Ediciones}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Comentario|Comentarios}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Amigo|Amigos}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Enemigo|Enemigos}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Opinión publicada|Opiniones publicadas}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinión|Opiniones}}',
 	'level-advance-subject' => '¡Ahora eres un «$1» en {{SITENAME}}!',
+	'level-advance-body' => 'Hola $1.
+
+Usted es ahora un "$2" en {{SITENAME}}!
+
+Felicitaciones,
+
+El  Equipo {{SITENAME}}
+
+---
+Hey, Desea no recibir correos electrónicos de nosotros?
+
+Haga click en  $3
+y cambie sus configuraciones para deshabilitar notificaciones por correo electrónico.',
 );
 
 /** Basque (Euskara)
@@ -1128,10 +1152,14 @@ $messages['pl'] = array(
 	'user-stats-alltime-title' => 'Najwięcej punktów w historii',
 	'user-stats-weekly-title' => 'Najwięcej punktów w tym tygodniu',
 	'user-stats-monthly-title' => 'Najwięcej punktów w tym miesiącu',
+	'topusers' => 'Najwyżej notowani użytkownicy',
+	'top-fans-by-points-nav-header' => 'Najwyżej notowani wielbiciele',
+	'top-fans-by-category-nav-header' => 'Najwyżej notowani według kategorii',
 	'top-fans-total-points-link' => 'Suma punktów',
 	'top-fans-weekly-points-link' => 'Punkty w tym tygodniu',
 	'top-fans-monthly-points-link' => 'Punkty w tym miesiącu',
 	'top-fans-points' => 'punktów',
+	'top-fans-by-category-title' => 'Ogólnie najwyżej notowani $1',
 	'top-fans-bad-field-title' => 'Oops!',
 	'top-fans-bad-field-message' => 'Taka statystyka nie istnieje.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Głos|Głosy}}',
@@ -1139,6 +1167,7 @@ $messages['pl'] = array(
 	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Zwycięzca tygodnia|Zwycięzcy tygodnia}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Edycja|Edycje}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Komentarz|Komentarzy}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Rekomendacja|Rekomendacje}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Znajomy|Znajomych}}',
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|Wróg|Wrogów}}',
 	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Opublikowana opinia|Opublikowane opinie}}',

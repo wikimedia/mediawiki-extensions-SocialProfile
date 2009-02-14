@@ -392,15 +392,31 @@ und änderen Sie Ihre Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
  * @author Crazymadlover
  */
 $messages['es'] = array(
+	'ga-addnew' => '+ Agregar nuevo regalo',
+	'ga-back-edit-gift' => 'Regresar a editar este regalo',
+	'ga-back-gift-list' => 'Regresar a la lista de regalos',
 	'ga-choosefile' => 'Escoger archivo:',
+	'ga-create-gift' => 'Crear regalo',
+	'ga-created' => 'El regalo ha sido creado',
 	'ga-currentimage' => 'Imagen actual',
+	'ga-error-message-invalid-link' => 'El vínculo que ha ingresado es inválido.',
+	'ga-error-message-no-user' => 'El usuario que está tratando de ver no existe',
+	'ga-gift' => 'regalo',
+	'ga-giftname' => 'nombre de regalo',
+	'ga-gifttype' => 'tipo de regalo',
+	'ga-goback' => 'Volver',
+	'ga-imagesbelow' => 'Debajo están sus imágenes que serán usadas en el sitio',
+	'ga-img' => 'agregar/reemplazar imagen',
 	'ga-large' => 'Grande',
 	'ga-medium' => 'Medio',
 	'ga-mediumlarge' => 'Medio-Grande',
 	'ga-new' => 'Nuevo',
 	'ga-next' => 'Próximo',
 	'ga-previous' => 'Anterior',
+	'ga-recent-recipients-award' => 'Otros receptores recientes de este premio',
 	'ga-small' => 'Pequeño',
+	'ga-uploadsuccess' => 'Carga exitosa',
+	'right-awardsmanage' => 'Crear nuevo y editar premios existentes',
 );
 
 /** Finnish (Suomi)

@@ -1650,10 +1650,12 @@ Klick <a href="$1">hier</a> um dich anzumelden oder klicke <a href="$2">hier</a>
 
 /** Greek (Ελληνικά)
  * @author Consta
+ * @author Omnipaedista
  */
 $messages['el'] = array(
-	'user-points' => 'βαθμοί',
+	'user-view-all' => 'Προβολή όλων',
 	'user-contributions' => 'Συνεισφορές',
+	'user-stats-title' => 'Στατιστικά',
 	'other-info-title' => 'Άλλες πληροφορίες',
 	'user-friends-title' => 'Φίλοι',
 	'other-info-movies' => 'Ταινίες',
@@ -1673,6 +1675,7 @@ $messages['el'] = array(
 	'user-profile-default-country' => 'Ηνωμένες Πολιτείες',
 	'user-profile-section-personal' => 'Προσωπικές πληροφορίες',
 	'user-profile-section-interests' => 'Άλλες πληροφορίες',
+	'user-profile-section-picture' => 'Ἀβαταρ',
 	'user-profile-section-preferences' => 'Προτιμήσεις',
 	'user-profile-personal-info' => 'Πληροφορία',
 	'user-profile-personal-name' => 'Όνομα',
@@ -1698,6 +1701,7 @@ $messages['el'] = array(
 	'user-profile-sports-sport' => 'Άθλημα',
 	'user-profile-sports-notloggedintitle' => 'Ούπς!',
 	'user-profile-picture-uploaddifferent' => 'Ανεβάστε μια διαφορετική εικόνα',
+	'user-profile-picture-currentimage' => 'Τρέχουσα εικόνα',
 );
 
 /** Esperanto (Esperanto)
@@ -3171,8 +3175,10 @@ $messages['hsb'] = array(
 
 /** Hungarian (Magyar)
  * @author Dani
+ * @author Tgr
  */
 $messages['hu'] = array(
+	'user-watchlist' => 'Figyelőlistám',
 	'user-profile-picture-large' => 'Nagy',
 	'user-profile-picture-medium' => 'Közepes',
 	'user-profile-picture-small' => 'Kicsi',
@@ -3999,6 +4005,7 @@ $messages['lb'] = array(
 	'user-profile-interests-movies' => 'Filmer',
 	'user-profile-interests-music' => 'Musek',
 	'user-profile-interests-books' => 'Bicher',
+	'user-profile-interests-magazines' => 'Zäitschrëften',
 	'user-profile-interests-videogames' => 'Videospiller',
 	'user-profile-interests-drinks' => 'Gedrénks',
 	'user-profile-preferences-emails' => 'E-mail-Notifikatiounen',
@@ -5189,6 +5196,7 @@ $messages['pl'] = array(
 	'custom-info-field4' => 'Niestandardowe 4',
 	'custom-no-info' => 'Brak niestandardowych informacji',
 	'profile-updated-personal' => 'Edytuj swój profil',
+	'populate-user-profile-done' => 'Dodano $1 {{PLURAL:$1|profil|profile}}',
 	'user-personal-info-real-name' => 'Imię i nazwisko',
 	'user-personal-info-location' => 'Kraj',
 	'user-personal-info-hometown' => 'Miejsce zamieszkania',
@@ -5208,6 +5216,7 @@ $messages['pl'] = array(
 	'user-profile-update-log-section' => 'zmieniono sekcję',
 	'user-profile-update-profile' => 'profil',
 	'user-profile-default-country' => 'Polska',
+	'user-profile-section-personal' => 'Informacje osobiste',
 	'user-profile-section-interests' => 'Inne informacje',
 	'user-profile-section-picture' => 'Awatar',
 	'user-profile-section-preferences' => 'Preferencje',
@@ -5224,6 +5233,7 @@ $messages['pl'] = array(
 	'user-profile-personal-birthdate' => 'Data (MM/DD)',
 	'user-profile-personal-aboutme' => 'O mnie',
 	'user-profile-personal-work' => 'Praca',
+	'user-profile-personal-occupation' => 'Zawód',
 	'user-profile-personal-education' => 'Wykształcenie',
 	'user-profile-personal-schools' => 'Szkoły',
 	'user-profile-personal-places' => 'Miejsca',
@@ -5241,23 +5251,41 @@ $messages['pl'] = array(
 	'user-profile-interests-foodsnacks' => 'Potrawy i przekąski',
 	'user-profile-interests-drinks' => 'Napoje',
 	'user-profile-preferences-emails' => 'Potwierdzenie poprzez e-mail',
+	'user-profile-preferences-emails-personalmessage' => 'Gdy wysłano prywatną wiadomość',
+	'user-profile-preferences-emails-friendfoe' => 'Gdy inny użytkownik stanie się Twoim przyjacielem lub wrogiem',
+	'user-profile-preferences-emails-gift' => 'Gdy otrzymasz prezent',
+	'user-profile-update-button' => 'Uaktualnij',
+	'user-profile-tidbits-title' => 'Ciekawostki',
+	'user-profile-sports-sport' => 'Sport',
 	'user-profile-sports-notloggedintitle' => 'Ups!',
+	'user-profile-picture-title' => 'Prześlij swoje zdjęcie',
+	'user-profile-picture-yourpicture' => 'Twoje zdjęcie',
+	'user-profile-picture-large' => 'Duże',
+	'user-profile-picture-medlarge' => 'Średnie – Duże',
+	'user-profile-picture-medium' => 'Średnie',
+	'user-profile-picture-small' => 'Małe',
+	'user-profile-picture-uploaddifferent' => 'Prześlij inne zdjęcie',
+	'user-profile-picture-currentimage' => 'Aktualne zdjęcie',
+	'user-profile-picture-choosepicture' => 'Wybierz zdjęcie',
+	'user-profile-picture-picsize' => 'Zdjęcie musi być w formacie jpeg, png lub gif i musi być mniejsze niż 100kb.',
 	'edit-profile-title' => 'Edytuj swój profil',
 	'user-page-link' => 'Strona użytkownika',
 	'user-board-login-message' => 'Musisz być <a href="$1">zalogowany</a>, żeby zostawiać wiadomości innym użytkownikom.',
-	'removeavatar' => 'Usuń awatar',
+	'removeavatar' => 'Usuń portret',
 	'givegift' => 'Daj prezent',
 	'viewgifts' => 'Zobacz prezenty',
 	'viewsystemgifts' => 'Zobacz nagrody',
-	'avatarupload-removeavatar' => 'Usuń awatar',
-	'avatarupload-currentavatar' => 'Obecny awatar użytkownika $1',
-	'avatarupload-removesuccess' => 'Awatar został usunięty',
+	'avatarupload-removeavatar' => 'Usuń portret',
+	'avatarupload-currentavatar' => 'Obecny portret użytkownika $1',
+	'avatarupload-removesuccess' => 'Portret został usunięty',
 	'avatarupload-removeanother' => 'Usuń kolejny',
 	'profilelogpage' => 'Historia zmian profilu użytkownika',
-	'avatarlogpage' => 'Lista przesłanych awatarów',
-	'avatarlogpagetext' => 'Przesłane awatary użytkownika',
+	'avatarlogpage' => 'Lista przesłanych portretów',
+	'avatarlogpagetext' => 'Przesłane portrety użytkownika',
+	'user-profile-picture-log' => 'portret',
 	'user-profile-picture-log-entry' => 'wgrał swój nowy portret',
 	'user-profile-picture-log-delete-entry' => 'usunięto awatar $1',
+	'right-avatarremove' => 'Usuń portret użytkownika',
 );
 
 /** Pashto (پښتو)

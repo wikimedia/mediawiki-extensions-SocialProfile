@@ -449,7 +449,7 @@ $messages['de'] = array(
 	'giftmanager-access' => 'Geschenkfortschritt',
 	'giftmanager-description' => 'Geschenkbeschreibung',
 	'giftmanager-giftimage' => 'Geschenkabbildung',
-	'giftmanager-image' => 'Bild hinzufügen / entfernen',
+	'giftmanager-image' => 'Bild hinzufügen oder ersetzen',
 	'giftmanager-giftcreated' => 'Das Geschenk wurde erstellt',
 	'giftmanager-giftsaved' => 'Das Geschenk wurde gespeichert',
 	'giftmanager-public' => 'öffentlich',
@@ -583,22 +583,53 @@ Klicken Sie $5
 und änderen Sie Ihre Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
 );
 
+/** Greek (Ελληνικά)
+ * @author Omnipaedista
+ */
+$messages['el'] = array(
+	'g-cancel' => 'Ακύρωση',
+);
+
 /** Spanish (Español)
  * @author Crazymadlover
  */
 $messages['es'] = array(
+	'giftmanager' => 'Administrador de regalos',
+	'giftmanager-addgift' => '+ Agregar nuevo regalo',
+	'giftmanager-description' => 'descripción de regalo',
+	'giftmanager-giftimage' => 'imagen de regalo',
+	'giftmanager-image' => 'agregar/reemplazar imagen',
+	'giftmanager-giftcreated' => 'El regalo ha sido creado',
+	'giftmanager-giftsaved' => 'El regalo ha sido grabado',
 	'giftmanager-public' => 'público',
 	'giftmanager-private' => 'privado',
+	'giftmanager-view' => 'Ver lista de regalos',
 	'g-add-message' => 'Agregar un mensaje',
+	'g-back-edit-gift' => 'Regresar a editar este regalo',
+	'g-back-gift-list' => 'Regresar a lista de regalos',
+	'g-back-link' => '<a href="$1">< Regresar a la página de $2</a>',
 	'g-choose-file' => 'Escoger archivo:',
 	'g-cancel' => 'Cancelar',
+	'g-count' => '$1 tiene $2 {{PLURAL:$2|regalo|regalos}}.',
+	'g-create-gift' => 'Crear regalo',
 	'g-created-by' => 'creado por',
 	'g-current-image' => 'Imagen actual',
+	'g-error-message-to-yourself' => 'No puede darse un regalo a sí mismo.',
+	'g-error-title' => 'Woops, tomó un turno erróneo!',
+	'g-from' => 'de <a href="$1">$2</a>',
+	'g-gift' => 'regalo',
+	'g-gift-name' => 'nombre de regalo',
+	'g-give-gift' => 'Dar regalo',
 	'g-give-all-message-title' => 'Agregar un mensaje',
+	'g-give-all-title' => 'De un regalo a $1',
 	'g-give-enter-friend-title' => 'Si usted sabe el nombre del usuario, escríbalo debajo',
 	'g-give-list-friends-title' => 'Seleccione de su lista de amigos',
 	'g-give-list-select' => 'seleccione un amigo',
 	'g-give-separator' => 'o',
+	'g-give-no-user-message' => 'Regalos y premios son una gran forma de reconocer a sus amigos!',
+	'g-give-no-user-title' => 'A quién le gustaría dar un regalo?',
+	'g-give-to-user-title' => 'Enviar el regalo "$1" a $2',
+	'g-give-to-user-message' => 'Desea dar $1 un <a href="$2">regalo diferente</a>?',
 	'g-go-back' => 'Regrese',
 	'g-imagesbelow' => 'Debajo están sus imágenes que serán usadas en el sitio',
 	'g-large' => 'Grande',
@@ -609,10 +640,21 @@ $messages['es'] = array(
 	'g-next' => 'Próximo',
 	'g-previous' => 'Anterior',
 	'g-remove' => 'Remover',
+	'g-remove-gift' => 'Remover este regalo',
+	'g-remove-success-title' => 'Usted ha removido exitosamente el regalo "$1"',
+	'g-remove-success-message' => 'El regalo "$1" ha sido removido.',
+	'g-remove-title' => 'Remover "$1"?',
+	'g-send-gift' => 'Enviar regalo',
 	'g-select-a-friend' => 'seleccione un amigo',
+	'g-sent-title' => 'Ha enviado un regalo a $1',
+	'g-sent-message' => 'Ha enviado el siguiente regalo a $1.',
 	'g-small' => 'Pequeño',
+	'g-to-another' => 'Dar a alguien más',
 	'g-uploadsuccess' => 'Carga exirosa',
+	'g-viewgiftlist' => 'Ver lista de regalos',
 	'g-your-profile' => 'Su perfil',
+	'gift_received_subject' => '$1 le ha enviado el regalo $2 en {{SITENAME}}!',
+	'right-giftadmin' => 'Crear nuevo y editar regalos existentes',
 );
 
 /** Finnish (Suomi)
@@ -1148,6 +1190,7 @@ $messages['ksh'] = array(
 	'giftmanager-access' => 'Zohjang nohm Jeschengk',
 	'giftmanager-description' => 'Jeschengk beschrieve',
 	'giftmanager-giftimage' => 'Beld fum Jeschengk',
+	'giftmanager-image' => 'e Beld dobei donn udder ußtuusche',
 	'giftmanager-giftcreated' => 'Dat Jeschengk es aanjelaat',
 	'giftmanager-giftsaved' => 'Dat Jeschengk es afjeshpeichert',
 	'giftmanager-public' => 'öffentlesh',
@@ -1162,18 +1205,68 @@ $messages['ksh'] = array(
 	'g-count' => '{{GENDER:$1|Dä|Dat|Dä Metmaacher}} $1 hät {{PLURAL:$2|ei Jeschengk|$2 Geschengke|kei Jeschengk}}.',
 	'g-create-gift' => 'Jeschengk äschaffe',
 	'g-created-by' => 'jemaat fun',
+	'g-current-image' => 'Et aktoälle Beld',
 	'g-description-title' => 'Däm $1 sing Jeschengk „$2“',
+	'g-error-do-not-own' => 'Dat Jeschengk jehüert Der nit.',
+	'g-error-message-invalid-link' => 'Dä Lengk es unjöltesch, dä De do enjejovve häs.',
+	'g-error-message-login' => 'Do moß ald enjelogg sin, öm Jeschengke maache eze künne',
+	'g-error-message-no-user' => 'Dä Metmaacher, dä De aanloore wells, dä jidd_et jaa nit.',
+	'g-error-message-to-yourself' => 'Do kanns Desch net sellevs beschengke.',
+	'g-from' => 'vun <a href="$1">$2</a>',
 	'g-gift' => 'Jeschengk',
 	'g-gift-name' => 'em Jeschengk singe Name',
 	'g-give-gift' => 'einem e Jeschengk maache',
 	'g-give-all' => 'Wells de {{GENDER:$1|dämm|dämm|dämm Metmaacher}} $1 e Jeschngk maache?
 Dann don op ein fun dä Jeschengke hee dronger klecke,
 un dann donn „{{int:G-send-gift}}“ klecke, esu eijfach es dat.',
+	'g-give-all-message-title' => 'Donn en Nohreesch dobei',
+	'g-give-all-title' => 'Mach däm $1 e Jeschengk',
+	'g-give-list-friends-title' => 'Uß de Leß met Dinge Fründe ußsöke',
+	'g-give-list-select' => 'Sök ene Fründ uß',
 	'g-give-separator' => 'udder',
+	'g-give-no-user-title' => 'Wämm wööds De jään e Jeschengk maache?',
+	'g-go-back' => 'Jangk retuur',
+	'g-large' => 'Jruß',
+	'g-list-title' => 'Däm $1 sing Leß met Jeschengke',
+	'g-main-page' => '{{int:mainpage}}',
+	'g-medium' => 'Meddel',
+	'g-mediumlarge' => 'Meddeljruuß',
 	'g-new' => 'neu',
+	'g-next' => 'Nächsde',
+	'g-previous' => 'Vörijje',
+	'g-remove' => 'Fott nämme',
+	'g-remove-gift' => 'Dat Jeschengk fott nämme',
 	'g-remove-success-message' => 'Dat Jeschengk „$1“ es jetz widder fott.',
 	'g-send-gift' => 'Dat Jeschengk maache!',
+	'g-select-a-friend' => 'sök ene Fründ uß',
+	'g-sent-title' => 'Do häs dämm $1 e Jeschengk jemaat',
+	'g-sent-message' => 'Do häs dämm $1 dat Jeschengk hee jemaat.',
 	'g-small' => 'Kleij',
+	'g-to-another' => 'Donn dat enem andere jevve',
+	'g-uploadsuccess' => 'Et Huhlaade hät jeflupp',
+	'g-viewgiftlist' => 'Donn de Leß met Jeschengke aanloore',
+	'g-your-profile' => 'Ding Profil',
+	'gift_received_body' => 'Jooden Daach, $1,
+
+$2 hät Der jrad op de {{SITENAME}} dat Jeschengk $3 jejovve
+
+Wells De lesse, wat dä $2 Der met dämm Jeschengk för en Nohreesch hät zohkumme lohße? Donn op dä Link klekke:
+
+$4
+
+Mer hoffe, Do maachs_et!
+
+Schööne Dank,
+
+
+De Lück vun de {{SITENAME}}
+
+---
+
+Wells De kei e-mail mieh vun uns krijje?   
+
+Dann donn op $5 klekke,
+un donn Ding Enshtellunge ändere, öm kei Meffeilunge meih övver e-mail ze krijje.',
 	'right-giftadmin' => 'E neu jeschengk äscahffe, un all de Jeschengke ändere, di ad doo sin.',
 );
 
@@ -1519,6 +1612,52 @@ Volètz pas recebre mai de corrièrs electronics de nòstra part ?
 Clicatz $5
 e modificatz vòstras preferéncias per desactivar las notificacions per corrièr electronic.",
 	'right-giftadmin' => "Crear de presents novèls e modificar los qu'existisson",
+);
+
+/** Polish (Polski)
+ * @author Sp5uhe
+ */
+$messages['pl'] = array(
+	'giftmanager' => 'Zarządzanie prezentami',
+	'giftmanager-addgift' => '+ Dodaj nowy prezent',
+	'giftmanager-access' => 'dostęp do prezentu',
+	'giftmanager-description' => 'opis prezentu',
+	'giftmanager-giftimage' => 'obrazu prezentu',
+	'giftmanager-image' => 'Dodaj lub zastąp grafikę',
+	'giftmanager-giftcreated' => 'Prezent został utworzony',
+	'giftmanager-giftsaved' => 'Prezent został zapisany',
+	'giftmanager-public' => 'publiczny',
+	'giftmanager-private' => 'prywatny',
+	'giftmanager-view' => 'Zobacz listę prezentów',
+	'g-add-message' => 'Dodaj wiadomość',
+	'g-back-edit-gift' => 'Powrót do edycji tego prezentu',
+	'g-back-gift-list' => 'Powrót do listy prezentów',
+	'g-back-link' => '<a href="$1">< Powrót do strony $2</a>',
+	'g-choose-file' => 'Wybierz plik',
+	'g-cancel' => 'Anuluj',
+	'g-count' => '$1 otrzymał $2 {{PLURAL:$2|prezent|prezenty|prezentów}}.',
+	'g-create-gift' => 'Tworzenie prezentu',
+	'g-created-by' => 'utworzony przez',
+	'g-current-image' => 'Aktualna grafika',
+	'g-delete-message' => 'Czy jesteś pewien, że chcesz usunąć prezent „$1”?
+Spowoduje to również usunięcie go u użytkowników, którzy go otrzymali.',
+	'g-description-title' => 'Prezent „$2” od $1',
+	'g-error-do-not-own' => 'Nie masz tego prezentu.',
+	'g-error-message-blocked' => 'Jesteś obecnie zablokowany i nie możesz dawać prezentów',
+	'g-error-message-invalid-link' => 'Link który wprowadziłeś jest nieprawidłowy.',
+	'g-error-message-login' => 'Należy zalogować się aby dawać prezenty',
+	'g-gift' => 'prezent',
+	'g-gift-name' => 'nazwa prezentu',
+	'g-give-gift' => 'Daj prezent',
+	'g-give-all' => 'Chcesz ofiarować $1 prezent?
+Wystarczy kliknąć jeden z prezentów poniżej, a następnie przycisk „Wyślij prezent”.
+To bardzo łatwe.',
+	'g-give-all-message-title' => 'Dodaj wiadomość',
+	'g-give-all-title' => 'Prezent dla $1',
+	'g-give-enter-friend-title' => 'Jeśli znasz nazwę użytkownika, wpisz ją poniżej',
+	'g-give-list-friends-title' => 'Wybierz z listy przyjaciół',
+	'g-give-list-select' => 'wybierz znajomego',
+	'g-give-separator' => 'lub',
 );
 
 /** Portuguese (Português)

@@ -225,9 +225,12 @@ $messages['dsb'] = array(
 
 /** Greek (Ελληνικά)
  * @author Consta
+ * @author Omnipaedista
  */
 $messages['el'] = array(
 	'mp-userlevels-link' => 'Επίπεδα χρήστη',
+	'mp-welcome-upload' => 'Επιφόρτωση',
+	'mp-welcome-edit' => 'Επεξεργασία',
 	'mp-welcome-logged-in' => 'Γεια σου $1',
 	'mp-requests-title' => 'Αιτήματα',
 	'mp-requests-message' => 'Έχετε τα ακόλουθα αιτήματα.',
