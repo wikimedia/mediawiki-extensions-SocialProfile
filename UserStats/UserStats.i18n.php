@@ -387,6 +387,8 @@ $messages['es'] = array(
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|Enemigo|Enemigos}}',
 	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Opinión publicada|Opiniones publicadas}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinión|Opiniones}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Regalo recibido|Regalos recibidos}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Regalo enviado|Regalos enviados}}',
 	'level-advance-subject' => '¡Ahora eres un «$1» en {{SITENAME}}!',
 	'level-advance-body' => 'Hola $1.
 
@@ -919,6 +921,8 @@ $messages['lb'] = array(
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|Géigner|Géigner}}',
 	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Verëffentlecht Meenung| Verëffentlecht Meenungen}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Meenung|Meenungen}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Daum no uewen|Daumen no uewen}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Daum no ënnen|Daumen no ënnen}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Cadeau kritt|Cadeaue kritt}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Cadeau|Cadeauë}} geschéckt',
 	'level-advance-subject' => 'Dir sidd elo "$1" op {{SITENAME}}!',

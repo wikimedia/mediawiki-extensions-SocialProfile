@@ -202,3 +202,21 @@ $aliases['sw'] = array(
 	'RemoveRelationship' => array( 'OndoaMahusiano' ),
 );
 
+/** Tagalog (Tagalog) */
+$aliases['tl'] = array(
+	'AddRelationship' => array( 'Idagdag ang kaugnayan' ),
+	'PopulateUserProfiles' => array( 'Paramihin ang mga talaan ng katangian ng tagagamit' ),
+	'RemoveAvatar' => array( 'Tanggalin ang huwaran', 'Tanggalin ang abatar' ),
+	'RemoveRelationship' => array( 'Tanggalin ang ugnayan' ),
+	'TopFansByStatistic' => array( 'Tampok na mga tagahanga ayon sa estadistika' ),
+	'TopUsers' => array( 'Tampok na mga tagagamit' ),
+	'TopUsersRecent' => array( 'Kamakailang tampok na mga tagagamit' ),
+	'ToggleUserPage' => array( 'Galawin ang pahina ng tagagamit' ),
+	'UpdateEditCounts' => array( 'Isapanahon ang bilang ng pamamatnugot' ),
+	'UpdateProfile' => array( 'Isapanahon ang talaan ng katangian' ),
+	'UploadAvatar' => array( 'Ikarga ang huwaran' ),
+	'UserBoard' => array( 'Pisara ng tagagamit' ),
+	'ViewRelationshipRequests' => array( 'Tingnan ang mga hiling ng kaugnayan' ),
+	'ViewRelationships' => array( 'Tingnan ang mga kaugnayan' ),
+);
+

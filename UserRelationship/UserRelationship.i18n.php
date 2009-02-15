@@ -1300,10 +1300,94 @@ Si usted desea más amigos, <a href="$1">invítelos!</a>',
 	'ur-title-foe' => 'lista de enemigos de $1',
 	'ur-title-friend' => 'lista de amigos de $1',
 	'friend_request_subject' => '$1 lo ha agragado como amigo en {{SITENAME}}!',
+	'friend_request_body' => 'Hola $1.
+
+$2 te ha agregado como un amigo en {{SITENAME}}. Queremos estar seguros que ustedes dos son realmente amigos.
+
+Por favor haga click en este vínculo para confirmar su amistad:
+$3
+
+Gracias
+
+---
+
+Hey, Desea no recibir correos electrónicos de nosotros?
+
+Haga click en $4
+y cambie sus configuraciones para deshabilitar notificaciones por correo electrónico.',
 	'foe_request_subject' => 'Esto es guerra! $1 lo ha agregado como un enemigo en {{SITENAME}}!',
+	'foe_request_body' => 'Hola $1.
+
+$2 acaba de listarte como un enemigo en {{SITENAME}}. Queremos estar seguros que ustedes dos son mortales enemigos o al menos que tiene un pleito.
+
+Por favor haga click en este vínculo para confirmar la hostilidad:
+
+$3
+
+Gracias
+
+---
+
+Hey, Desea no recibir correos electrónicos de nosotros?
+
+Haga click en $4
+y cambie sus configuraciones para deshabilitar notificaciones por correo electrónico.',
 	'friend_accept_subject' => '$1 ha aceptado su solicitud de amigo en {{SITENAME}}!',
+	'friend_accept_body' => 'Hola $1.
+
+$2 ha aceptado su solicitud de amigo en {{SITENAME}}!
+
+verifique la página de $2 en $3
+
+Gracias
+
+---
+
+Hey, Desea no recibir correos electrónicos de nosotros?
+
+Haga click en $4
+y cambie sus configuraciones para deshabilitar notificaciones por correo electrónico.',
+	'foe_accept_body' => 'Hola $1.
+
+$2 ha aceptado su solicitud de enemigo en {{SITENAME}}!
+
+verifique la página de $2 en $3
+
+Gracias
+
+---
+
+Hey, Desea no recibir correos electrónicos de nosotros?
+
+Haga click en $4
+y cambie sus configuraciones para deshabilitar notificaciones por correo electrónico.',
 	'friend_removed_subject' => 'Oh no! $1 lo ha removido como un amigo en {{SITENAME}}!',
+	'friend_removed_body' => 'Hola $1.
+
+$2 te ha removido como un amigo en {{SITENAME}}!
+
+Gracias
+
+---
+
+Hey, Desea no recibir correos electrónicos de nosotros?
+
+Haga click en $4',
 	'foe_removed_subject' => 'Woohoo! $1 lo ha removido como un enemigo en {{SITENAME}}!',
+	'foe_removed_body' => 'Hola $1.
+
+$2 te ha removido como un enemigo en {{SITENAME}}!
+
+Acaso entre ustedes dos haya una manera de llegar a ser amigos?
+
+Gracias
+
+---
+
+Hey, Desea no recibir correos electrónicos de nosotros?
+
+Haga click en $4
+y cambie sus configuraciones para deshabilitar notificaciones por correo electrónico.',
 );
 
 /** Basque (Euskara)
@@ -3957,6 +4041,8 @@ Wybierz znajomych/wrogów poprzez poprawny link.',
 	'ur-remove-relationship-message-confirm-friend' => 'Usunąłeś $1 z listy przyjaciół.',
 	'ur-remove-error-message-no-relationship' => 'Nie masz żadnych związków z $1.',
 	'ur-remove-error-message-remove-yourself' => 'Nie możesz usunąć sam siebie.',
+	'ur-remove-error-message-pending-foe-request' => 'Wysłałeś już informację, że chcesz być wrogiem dla $1.',
+	'ur-remove-error-message-pending-friend-request' => 'Wysłałeś już informację, że chcesz być znajomym dla $1.',
 	'ur-remove' => 'Usuń',
 	'ur-cancel' => 'Anuluj',
 	'ur-login' => 'Zaloguj się',
@@ -3964,6 +4050,8 @@ Wybierz znajomych/wrogów poprzez poprawny link.',
 	'ur-add-title-friend' => 'Czy chcesz dodać $1 do listy przyjaciół?',
 	'ur-add-button-foe' => 'Oznacz jako wroga',
 	'ur-add-button-friend' => 'Oznacz jako przyjaciela',
+	'ur-add-sent-title-foe' => 'Wysłano informację, że chcesz być wrogiem dla $1!',
+	'ur-add-sent-title-friend' => 'Wysłano informację, że chcesz być znajomym dla $1!',
 	'ur-add-error-message-no-user' => 'Użytkownik, którego próbujesz dodać, nie istnieje.',
 	'ur-add-error-message-blocked' => 'Jesteś zablokowany i nie możesz dodawać nowych znajomych i wrogów.',
 	'ur-add-error-message-yourself' => 'Nie możesz dodać samego siebie.',

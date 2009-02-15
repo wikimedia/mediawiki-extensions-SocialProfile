@@ -260,6 +260,13 @@ $messages['mr'] = array(
 	'yui-desc' => 'जावा स्क्रिप्टने लिहीलेल्या सुविधा आणि नियंत्रणांचा संच',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Diagramma Della Verita
+ */
+$messages['ms'] = array(
+	'yui-desc' => 'Set kawalan dan  kemudahan, ditulis dalam JavaScript',
+);
+
 /** Low German (Plattdüütsch)
  * @author Slomox
  */
