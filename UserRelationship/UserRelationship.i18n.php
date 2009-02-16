@@ -4061,6 +4061,8 @@ Wybierz znajomych/wrogów poprzez poprawny link.',
 	'ur-add-error-message-not-loggedin-foe' => 'Żeby dodać wroga musisz być zalogowany',
 	'ur-add-error-message-not-loggedin-friend' => 'Żeby dodać przyjaciela musisz być zalogowany',
 	'ur-requests-title' => 'Nawiązanie znajomości',
+	'ur-requests-message-foe' => '<a href="$1">$2</a> chce być Twoim wrogiem.',
+	'ur-requests-message-friend' => '<a href="$1">$2</a> chce zostać Twoim znajomym.',
 	'ur-accept' => 'Zaakceptuj',
 	'ur-reject' => 'Odrzuć',
 	'ur-no-requests-message' => 'Nie masz zaproszeń do przyjaźni oraz zgłoszeń od wrogów.

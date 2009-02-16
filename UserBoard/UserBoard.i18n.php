@@ -571,17 +571,29 @@ $messages['eo'] = array(
  */
 $messages['es'] = array(
 	'messagesenttitle' => 'Mensajes enviados',
+	'boardblaststep1' => 'Paso 1 - Escribir su mensaje',
+	'boardblastprivatenote' => 'Todos los mensajes serán enviados como mensajes privados',
+	'boardblaststep2' => 'Paso 2 - Seleccionar a quién desea enviar su mensaje',
+	'boardlinkselectall' => 'Seleccionar todo',
+	'boardlinkselectfriends' => 'Seleccionar amigos',
+	'boardlinkselectfoes' => 'Seleccionar enemigos',
+	'messagesentsuccess' => 'Su mensaje fue enviado exitosamente',
 	'userboard_delete' => 'Borrar',
+	'userboard_noexist' => 'El usuario que trata de ver no existe.',
 	'userboard_yourboard' => 'Tu pizarrón',
 	'userboard_backprofile' => 'Regresar al perfil de $1',
 	'userboard_backyourprofile' => 'Regresar a su perfil',
+	'userboard_confirmdelete' => 'Está seguro que desea borrar este mensaje?',
+	'userboard_sendmessage' => 'Enviar a $1 un mensaje',
 	'userboard_myboard' => 'Mi pizarrón',
 	'userboard_private' => 'privado',
 	'userboard_public' => 'público',
+	'userboard_messagetype' => 'Tipo de mensaje',
 	'userboard_nextpage' => 'siguiente',
 	'userboard_prevpage' => 'anterior',
 	'userboard_nomessages' => 'Sin mensajes.',
 	'userboard_sendbutton' => 'enviar',
+	'userboard_showingmessages' => 'Mostrando {{PLURAL:$4|mensaje $3|mensajes $2-$3}} de {{PLURAL:$1|$1 mensaje|$1 mensajes}}',
 );
 
 /** Basque (Euskara)
@@ -1862,6 +1874,7 @@ a zmeňte svoje nastavenia na vypnutie upozornení emailom.',
 /** Swedish (Svenska)
  * @author Jon Harald Søby
  * @author M.M.S.
+ * @author Najami
  */
 $messages['sv'] = array(
 	'boardblastlogintitle' => 'Du måste vara inloggad för att sända meddelanden',
@@ -1903,7 +1916,7 @@ $messages['sv'] = array(
 	'userboard_nomessages' => 'Inga meddelanden.',
 	'userboard_sendbutton' => 'sänd',
 	'userboard_loggedout' => 'Du måste vara <a href="$1">inloggad</a> för att skicka meddelanden till andra användare.',
-	'userboard_showingmessages' => 'Visar $2-$3 av {{PLURAL:$1|$1 meddelande|$1 meddelanden}}',
+	'userboard_showingmessages' => 'Visar {{PLURAL:$4|meddelande $3|$2-$3}} av {{PLURAL:$1|$1 meddelande|$1 meddelanden}}',
 	'message_received_subject' => '$1 har skrivit på din diskussionssida på {{SITENAME}}',
 	'message_received_body' => 'Hej, $1.
 
