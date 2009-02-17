@@ -111,6 +111,25 @@ $aliases['hu'] = array(
 	'UserBoard' => array( 'Felhasználói üzenőfal' ),
 );
 
+/** Interlingua (Interlingua) */
+$aliases['ia'] = array(
+	'AddRelationship' => array( 'Adder relation' ),
+	'PopulateUserProfiles' => array( 'Impler profilos de usatores' ),
+	'RemoveAvatar' => array( 'Remover avatar' ),
+	'RemoveRelationship' => array( 'Remover relation' ),
+	'SendBoardBlast' => array( 'Inviar colpo de tabuliero' ),
+	'TopFansByStatistic' => array( 'Admiratores supreme per statistica' ),
+	'TopUsers' => array( 'Usatores supreme' ),
+	'TopUsersRecent' => array( 'Usatores supreme recente' ),
+	'ToggleUserPage' => array( 'Cambiar pagina de usator' ),
+	'UpdateEditCounts' => array( 'Actualisar numeros de modificationes' ),
+	'UpdateProfile' => array( 'Actualisar profilos' ),
+	'UploadAvatar' => array( 'Cargar avatar' ),
+	'UserBoard' => array( 'Tabuliero de usator' ),
+	'ViewRelationshipRequests' => array( 'Vider requestas de relation' ),
+	'ViewRelationships' => array( 'Vider relationes' ),
+);
+
 /** Japanese (日本語) */
 $aliases['ja'] = array(
 	'RemoveAvatar' => array( 'アバター削除' ),
