@@ -4011,15 +4011,21 @@ $messages['or'] = array(
  * @author Sp5uhe
  */
 $messages['pl'] = array(
-	'viewrelationships' => 'Zobacz znajomych',
-	'viewrelationshiprequests' => 'Zobacz zaproszenia do znajomości',
-	'ur-already-submitted' => 'Twoje zaproszenie zostało wysłane',
-	'ur-error-page-title' => 'Ups!',
-	'ur-error-title' => 'Błąd',
-	'ur-error-message-no-user' => 'Nie można zrealizować Twojego zaproszenia, ponieważ nie istnieje użytkownik o takiej nazwie.',
+	'viewrelationships' => 'Zobacz nawiązane stosunki',
+	'viewrelationshiprequests' => 'Zobacz zaproszenia do nawiązania stosunków',
+	'ur-already-submitted' => 'Zaproszenie zostało wysłane',
+	'ur-error-page-title' => 'Ojej!',
+	'ur-error-title' => 'Ojej! Zrobiłeś coś źle!',
+	'ur-error-message-no-user' => 'Nie można zrealizować zaproszenia, ponieważ nie istnieje użytkownik o takiej nazwie.',
 	'ur-main-page' => 'Strona główna',
 	'ur-your-profile' => 'Twój profil',
 	'ur-backlink' => '&lt; Powrót do profilu $1',
+	'ur-relationship-count-foes' => '$1 ma $2 {{PLURAL:$2|wroga|wrogów}}.
+Chcesz mieć więcej wrogów?
+<a href="$3">Zaproś ich.</a>',
+	'ur-relationship-count-friends' => '$1 ma $2 {{PLURAL:$2|znajomego|znajomych}}.
+Chcesz mieć więcej znajomych?
+<a href="$3">Zaproś ich.</a>',
 	'ur-add-friends' => '  Chcesz mieć więcej przyjaciół? <a href="$1">Zaproś ich</a>',
 	'ur-add-friend' => 'Dodaj do przyjaciół',
 	'ur-add-foe' => 'Dodaj do wrogów',

@@ -500,6 +500,7 @@ ja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.',
 
 /** French (Français)
  * @author IAlex
+ * @author Verdy p
  */
 $messages['fr'] = array(
 	'systemgiftmanager' => 'Système de gestion de cadeaux',
@@ -530,7 +531,7 @@ $messages['fr'] = array(
 	'ga-medium' => 'Moyen',
 	'ga-mediumlarge' => 'Moyen-Grand',
 	'ga-new' => 'Nouveau',
-	'ga-next' => 'Prochain',
+	'ga-next' => 'Suivant',
 	'ga-previous' => 'Précédent',
 	'ga-recent-recipients-award' => 'Autres bénéficiaires de ce prix',
 	'ga-saved' => 'Ce cadeau a été sauvegardé',
@@ -820,6 +821,30 @@ $messages['ia'] = array(
 	'ga-uploadsuccess' => 'Cargamento succedite',
 	'ga-viewlist' => 'Vider le lista de donos',
 	'system_gift_received_subject' => 'Tu ha recipite le premio $1 in {{SITENAME}}!',
+	'system_gift_received_body' => 'Salute $1.
+
+Tu ha justo recipite le premio $2 in {{SITENAME}}!
+
+"$3"
+
+Clicca infra pro vider tu armario de tropheos!
+
+$4
+
+Nos spera que isto te place!
+
+Gratias,
+
+
+Le equipa de {{SITENAME}}
+
+---
+
+Tu non vole reciper plus messages de nos?
+
+Clicca $5
+e disactiva in tu preferentias le notificationes per e-mail.',
+	'right-awardsmanage' => 'Crear nove premios e modificar existentes',
 );
 
 /** Japanese (日本語)

@@ -458,7 +458,7 @@ $messages['ia'] = array(
 	'mp-userlevels-link' => 'Nivellos de usator',
 	'mp-welcome-upload' => 'Cargar',
 	'mp-welcome-edit' => 'Modificar',
-	'mp-welcome-points' => '$1 punctos',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|puncto|punctos}}',
 	'mp-welcome-needed-points' => 'Pro avantiar verso <b><a href="$1">$2</a></b> gania <i>$3</i> plus {{PLURAL:$3|puncto|punctos}}!',
 	'mp-welcome-logged-in' => 'Salute $1',
 	'mp-requests-title' => 'Requestas',
