@@ -51,7 +51,7 @@ class RemoveGift extends UnlistedSpecialPage {
 			$out .= $wgOut->setPageTitle( wfMsg( 'g-remove-success-title', $gift['name'] ) );
 			
 			$out .= "<div class=\"back-links\">
-				".wfMsg( 'g-back-link', $wgUser->getUserPage()->escapeFullURL(), $gift['user_name_to'] )."
+				<a href=\"" . $wgUser->getUserPage()->escapeFullURL() . "\">" . wfMsg( 'g-back-link', $gift['user_name_to'] ) . "</a>
 			</div>
 			<div class=\"g-container\">
 				{$gift_image}
@@ -82,7 +82,7 @@ class RemoveGift extends UnlistedSpecialPage {
 		$output = '';
 		$output .= $wgOut->setPagetitle( wfMsg( 'g-remove-title', $gift['name'] ) );
 		$output .= "<div class=\"back-links\">
-			".wfMsg( 'g-back-link', $wgUser->getUserPage()->escapeFullURL(), $gift['user_name_to'] )."
+			<a href=\"" . $wgUser->getUserPage()->escapeFullURL() . "\">" . wfMsg( 'g-back-link', $gift['user_name_to'] ) . "</a>
 		</div>
 		<form action=\"\" method=\"post\" enctype=\"multipart/form-data\" name=\"form1\">
 			<div class=\"g-remove-message\">

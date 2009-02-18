@@ -73,8 +73,8 @@ class ViewGifts extends SpecialPage {
 		 */
 		$output .= $wgOut->setPageTitle( wfMsg('g-list-title', $rel->user_name) );
 
-		$output .= '<div class="back-links">
-			'.wfMsg( 'g-back-link', $user->getFullURL(), $rel->user_name ).'
+		$output .= '<div class="back-links"><a href="' . $user->getFullURL() . '">
+			' . wfMsg( 'g-back-link', $rel->user_name ) . '</a>
 		</div>
 		<div class="g-count">
 			'.wfMsgExt( 'g-count', 'parsemag', $rel->user_name, $total ).'

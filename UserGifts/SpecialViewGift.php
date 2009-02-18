@@ -55,7 +55,7 @@ class ViewGift extends UnlistedSpecialPage {
 			$output .= $wgOut->setPageTitle( wfMsg( 'g-description-title', $gift['user_name_to'], $gift['name'] ) );
 
 			$output .= '<div class="back-links">
-				'.wfMsg('g-back-link', Title::makeTitle( NS_USER, $gift['user_name_to'] )->escapeFullURL(), $gift['user_name_to']).'
+				<a href="' . Title::makeTitle( NS_USER, $gift['user_name_to'] )->escapeFullURL() . '">' . wfMsg( 'g-back-link', $gift['user_name_to'] ) . '</a>
 			</div>';
 
 			$user = Title::makeTitle( NS_USER, $gift['user_name_from'] );

@@ -95,7 +95,7 @@ class GiveGift extends SpecialPage {
 				$output .= $wgOut->setPageTitle( wfMsg('g-sent-title', $this->user_name_to) );
 
 				$output .= "<div class=\"back-links\">
-					".wfMsg('g-back-link', $user_title->escapeFullURL(), $this->user_name_to)."
+					<a href=\"" . $user_title->escapeFullURL() . "\">" . wfMsg( 'g-back-link', $this->user_name_to ) . "</a>
 				</div>
 				<div class=\"g-message\">
 					".wfMsg('g-sent-message', $this->user_name_to)."
@@ -234,7 +234,7 @@ class GiveGift extends SpecialPage {
 			$wgOut->setPagetitle( wfMsg('g-give-all-title', $this->user_name_to) );
 
 			$output .= '<div class="back-links">
-				'.wfMsg('g-back-link', $user->escapeFullURL(), $this->user_name_to).'
+				<a href="' . $user->escapeFullURL() . '">' . wfMsg( 'g-back-link', $this->user_name_to ) . '</a>
 			</div>
 			<div class="g-message">
 				'.wfMsg('g-give-all', $this->user_name_to).'
