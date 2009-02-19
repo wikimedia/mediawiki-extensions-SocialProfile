@@ -748,6 +748,26 @@ $messages['pt'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|novo amigo|novos amigos}}',
 );
 
+/** Brazilian Portuguese (Português do Brasil)
+ * @author Eduardo.mps
+ */
+$messages['pt-br'] = array(
+	'userwelcome-desc' => 'Adiciona a marca <tt>&lt;welcomeUser&gt;</tt> para apresentar informação social específica do utilizador, para utilizadores autenticados',
+	'mp-userlevels-link' => 'Níveis de utilizador',
+	'mp-welcome-upload' => 'Carregar',
+	'mp-welcome-edit' => 'Editar',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|ponto|pontos}}',
+	'mp-welcome-needed-points' => 'Para avançar para <b><a href="$1">$2</a></b>, ganhe mais <i>$3</i> {{PLURAL:$3|ponto|pontos}}!',
+	'mp-welcome-logged-in' => 'Olá, $1',
+	'mp-requests-title' => 'Pedidos',
+	'mp-requests-message' => 'Você tem os seguinte pedidos.',
+	'mp-request-new-message' => 'nova mensagem',
+	'mp-request-new-award' => '$1 {{PLURAL:$1|nova condecoração|novas condecorações}}',
+	'mp-request-new-gift' => '$1 {{PLURAL:$1|nova presente|novos presentes}}',
+	'mp-request-new-foe' => '$1 {{PLURAL:$1|novo inimigo|novos inimigos}}',
+	'mp-request-new-friend' => '$1 {{PLURAL:$1|novo amigo|novos amigos}}',
+);
+
 /** Romanian (Română)
  * @author KlaudiuMihaila
  */

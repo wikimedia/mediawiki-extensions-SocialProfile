@@ -1217,7 +1217,7 @@ $messages['ksh'] = array(
 	'g-cancel' => 'Stopp! Avbreche!',
 	'g-count' => '{{GENDER:$1|Dä|Dat|Dä Metmaacher}} $1 hät {{PLURAL:$2|ei Jeschengk|$2 Geschengke|kei Jeschengk}}.',
 	'g-create-gift' => 'Jeschengk äschaffe',
-	'g-created-by' => 'jemaat fum',
+	'g-created-by' => 'aanjelaat fum',
 	'g-current-image' => 'Et aktoälle Beld',
 	'g-delete-message' => 'Beß De Der sescher, dat de dat Jeschengk „$1“ fott maacher wells?
 Domet verschwindt et och bei all de Metmaacher, di dat ald ens krääje han.',
