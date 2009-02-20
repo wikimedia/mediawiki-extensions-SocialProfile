@@ -775,6 +775,7 @@ ja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.',
 /** French (Français)
  * @author Crochet.david
  * @author IAlex
+ * @author Verdy p
  */
 $messages['fr'] = array(
 	'giftmanager' => 'Gestionnaire de cadeaux',
@@ -799,7 +800,7 @@ $messages['fr'] = array(
 	'g-created-by' => 'créé par',
 	'g-current-image' => 'Image actuelle',
 	'g-delete-message' => "Êtes-vous certain{{GENDER:||e|(e)}} de vouloir supprimer le cadeau « $1 » ? Ceci va également le supprimer des utilisateurs qui l'ont reçu.",
-	'g-description-title' => 'Cadeau « $2 » de $1',
+	'g-description-title' => 'Cadeau « $2 » de la part de $1',
 	'g-error-do-not-own' => 'Vous ne possédez pas ce cadeau.',
 	'g-error-message-blocked' => 'Vous êtes bloqué{{GENDER:||e|(e)}} et ne pouvez donc pas donner des cadeaux',
 	'g-error-message-invalid-link' => 'Le lien que vous avez fourni est invalide.',

@@ -1922,6 +1922,7 @@ $messages['es'] = array(
 	'user-personal-info-title' => 'Información personal',
 	'user-no-personal-info' => 'Sin información personal',
 	'user-personal-info-real-name' => 'Nombre real',
+	'user-personal-info-location' => 'Lugar',
 	'user-personal-info-hometown' => 'Lugar de nacimiento',
 	'user-personal-info-birthday' => 'Cumpleaños',
 	'user-personal-info-occupation' => 'Ocupación',
