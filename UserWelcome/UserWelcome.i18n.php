@@ -481,6 +481,7 @@ $messages['io'] = array(
  * @author Hosiryuhosi
  */
 $messages['ja'] = array(
+	'mp-userlevels-link' => '利用者レベル',
 	'mp-welcome-upload' => 'アップロード',
 	'mp-welcome-edit' => '編集',
 	'mp-welcome-logged-in' => 'こんにちは $1',

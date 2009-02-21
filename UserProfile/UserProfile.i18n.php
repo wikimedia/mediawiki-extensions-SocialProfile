@@ -1188,9 +1188,9 @@ $messages['bg'] = array(
 	'user-send-gift' => 'Изпращане на подарък',
 	'user-contributions' => 'Приноси',
 	'user-stats-title' => 'Статистики',
-	'user-stats-edits' => 'Редакции',
-	'user-stats-votes' => 'Гласувания',
-	'user-stats-comments' => 'Коментари',
+	'user-stats-edits' => '{{PLURAL:$1|Редакция|Редакции}}',
+	'user-stats-votes' => '{{PLURAL:$1|Гласуване|Гласувания}}',
+	'user-stats-comments' => '{{PLURAL:$1|Коментар|Коментари}}',
 	'other-info-title' => 'Друга информация',
 	'user-friends-title' => 'Приятели',
 	'user-foes-title' => 'Неприятели',
@@ -1237,7 +1237,7 @@ $messages['bg'] = array(
 	'user-profile-update-log-section' => 'промяна в раздел',
 	'user-profile-update-profile' => 'профил',
 	'user-profile-default-country' => 'България',
-	'user-profile-points' => '$1 точки',
+	'user-profile-points' => '$1 {{PLURAL:$1|точка|точки}}',
 	'user-profile-section-personal' => 'Лична информация',
 	'user-profile-section-custom' => 'Допълнителна информация',
 	'user-profile-section-interests' => 'Друга информация',
@@ -2668,7 +2668,7 @@ $messages['gl'] = array(
 	'user-edit-this' => 'Editar isto',
 	'user-edit-profile' => 'Editar perfil',
 	'user-upload-avatar' => 'Cargar un avatar',
-	'user-watchlist' => 'A miña listaxe de vixilancia',
+	'user-watchlist' => 'A miña lista de vixilancia',
 	'user-meet-people' => 'Coñecer xente',
 	'user-add-friend' => 'Engadir como amigo',
 	'user-add-foe' => 'Engadir como inimigo',
@@ -5385,7 +5385,7 @@ $messages['pl'] = array(
 	'user-profile-picture-log' => 'portret',
 	'user-profile-picture-log-entry' => 'wgrał swój nowy portret',
 	'user-profile-picture-log-delete-entry' => 'usunięto awatar $1',
-	'right-avatarremove' => 'Usuń portret użytkownika',
+	'right-avatarremove' => 'Usuwanie portretów użytkowników',
 );
 
 /** Pashto (پښتو)
@@ -6786,6 +6786,13 @@ Pindutin <a href="$1">dito</a> para lumagda o pindutin <a href="$2">dito</a> upa
  */
 $messages['tr'] = array(
 	'user-profile-personal-birthdate' => 'Tarih (AA/GG)',
+);
+
+/** Uighur (Latin) (Uyghurche‎ / ئۇيغۇرچە (Latin))
+ * @author Jose77
+ */
+$messages['ug-latn'] = array(
+	'user-profile-personal-email' => 'Élxet',
 );
 
 /** Vietnamese (Tiếng Việt)

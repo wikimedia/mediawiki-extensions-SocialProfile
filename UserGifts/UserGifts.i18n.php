@@ -1694,6 +1694,7 @@ To bardzo łatwe.',
 	'g-give-list-friends-title' => 'Wybierz z listy przyjaciół',
 	'g-give-list-select' => 'wybierz znajomego',
 	'g-give-separator' => 'lub',
+	'right-giftadmin' => 'Tworzenie nowych oraz edytowanie istniejących prezentów',
 );
 
 /** Portuguese (Português)

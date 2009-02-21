@@ -267,6 +267,13 @@ $messages['ms'] = array(
 	'yui-desc' => 'Set kawalan dan  kemudahan, ditulis dalam JavaScript',
 );
 
+/** Maltese (Malti)
+ * @author Chrisportelli
+ */
+$messages['mt'] = array(
+	'yui-desc' => "Sett ta' bżonnijiet u kontrolli, miktubin bil-JavaScript",
+);
+
 /** Low German (Plattdüütsch)
  * @author Slomox
  */

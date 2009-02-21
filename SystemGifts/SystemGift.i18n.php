@@ -1151,6 +1151,13 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
 	'right-awardsmanage' => 'Crear de prèmis novèls e modificar los prèmis existents',
 );
 
+/** Polish (Polski)
+ * @author Sp5uhe
+ */
+$messages['pl'] = array(
+	'right-awardsmanage' => 'Tworzenie nowych oraz edytowanie istniejących nagród',
+);
+
 /** Pashto (پښتو)
  * @author Ahmed-Najib-Biabani-Ibrahimkhel
  */

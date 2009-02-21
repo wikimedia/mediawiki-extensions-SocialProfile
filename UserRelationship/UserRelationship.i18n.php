@@ -1860,8 +1860,8 @@ Notificarémoslle cando $1 a confirme.',
 	'ur-requests-added-message-friend' => 'Engadiu a $1 como o seu amigo.',
 	'ur-requests-reject-message-friend' => 'Rexeitou a $1 como o seu amigo.',
 	'ur-requests-reject-message-foe' => 'Rexeitou a $1 como o seu inimigo.',
-	'ur-title-foe' => 'Listaxe de inimigos de $1',
-	'ur-title-friend' => 'Listaxe de amigos de $1',
+	'ur-title-foe' => 'Lista de inimigos de $1',
+	'ur-title-friend' => 'Lista de amigos de $1',
 	'friend_request_subject' => '$1 engadiuno como amigo en {{SITENAME}}!',
 	'friend_request_body' => 'Ola $1:
 
@@ -5058,6 +5058,13 @@ at baguhin ang mga katakdaan mo upang huwag gumana/umandar ang mga pagpapabatid 
 $messages['tr'] = array(
 	'ur-remove' => 'Kaldır',
 	'ur-cancel' => 'İptal',
+);
+
+/** Uighur (Latin) (Uyghurche‎ / ئۇيغۇرچە (Latin))
+ * @author Jose77
+ */
+$messages['ug-latn'] = array(
+	'ur-login' => 'Kirish',
 );
 
 /** Vietnamese (Tiếng Việt)
