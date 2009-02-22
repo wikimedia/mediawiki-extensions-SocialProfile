@@ -1312,6 +1312,7 @@ $messages['lb'] = array(
 	'g-back-link' => '< Zréck op dem $2 seng Säit',
 	'g-choose-file' => 'Fichier wielen:',
 	'g-cancel' => 'Ofbriechen',
+	'g-created-by' => 'ugeluecht vum',
 	'g-current-image' => 'Aktuellt Bild',
 	'g-error-message-invalid-link' => 'De Link deen Dir uginn hutt ass net valabel.',
 	'g-error-message-no-user' => 'De Benotzer deen Dir versicht ze kucken gëtt et net.',
