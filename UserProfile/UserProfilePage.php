@@ -483,7 +483,7 @@ class UserProfilePage extends Article {
 
 		if ( $this->isOwner() ) {
 			$output .= $wgLang->pipeList( array(
-				'<a href="' . $update_profile->escapeFullURL() . '">' . wfMsg( 'user-edit-profile ') . '</a>',
+				'<a href="' . $update_profile->escapeFullURL() . '">' . wfMsg( 'user-edit-profile' ) . '</a>',
 				'<a href="' . $upload_avatar->escapeFullURL() . '">' . wfMsg( 'user-upload-avatar' ) . '</a>',
 				'<a href="' . $watchlist->escapeFullURL() . '">' . wfMsg( 'user-watchlist' ) . '</a>',
 				''
