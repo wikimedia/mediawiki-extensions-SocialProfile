@@ -4110,6 +4110,7 @@ $messages['lb'] = array(
 	'user-profile-preferences-emails-weekly' => 'Wéichentlech Aktualisatioun per E-Mail',
 	'user-profile-update-button' => 'Aktualiséieren',
 	'user-profile-sports-sport' => 'Sport',
+	'user-profile-sports-title' => 'Ännert Äre léiwste Sportveräiner',
 	'user-profile-sports-notloggedintitle' => 'Ups!',
 	'user-profile-sports-notloggedintext' => 'Dir musst ageloggt sinn fir äre Profil änneren ze kënnen.',
 	'user-profile-sports-teamremoved' => 'Är Equipe gouf ewechgeholl',
@@ -4133,14 +4134,19 @@ $messages['lb'] = array(
 	'user-type-toggle-old' => "Benotzt d'Wiki-Benotzersäit",
 	'user-type-toggle-new' => 'Sozial-Benotzersäit benotzen',
 	'user-board-login-message' => 'Dir musst <a href="$1">ageloggt si</a> fir anere Benotzer e Message ze schécken',
+	'removeavatar' => 'Aavatar ewechhuelen',
 	'givegift' => 'E Cadeau maachen',
 	'viewgifts' => 'Cadeaue weisen',
+	'avatarupload-removeavatar' => 'Avatar ewechhuelen',
+	'avatarupload-removesuccess' => 'Den Avatar gouf ewechgeholl',
 	'avatarupload-removeanother' => 'En aneren ewechhuelen',
 	'profilelogpage' => 'Lëscht vun den Ännerunge vum Benotzerprofil',
 	'profilelogpagetext' => 'Dëst ass eng Lëscht vun Ännerunge vu Benotzerprofiler',
+	'avatarlogpage' => 'Logbuch vun den Avataren déi eropgelued goufen',
 	'user-profile-picture-log' => '
 Avatar',
 	'user-profile-picture-log-entry' => 'huet ee neien Avatar eropgelueden',
+	'right-avatarremove' => 'Benotzeravataren ewechhuelen',
 );
 
 /** Lithuanian (Lietuvių)
@@ -6783,8 +6789,13 @@ Pindutin <a href="$1">dito</a> para lumagda o pindutin <a href="$2">dito</a> upa
 
 /** Turkish (Türkçe)
  * @author Joseph
+ * @author Karduelis
  */
 $messages['tr'] = array(
+	'user-personal-info-real-name' => 'Gerçek isminiz',
+	'user-profile-personal-email' => 'E-posta',
+	'user-profile-personal-city' => 'Şehir',
+	'user-profile-personal-country' => 'Ülke',
 	'user-profile-personal-birthdate' => 'Tarih (AA/GG)',
 );
 

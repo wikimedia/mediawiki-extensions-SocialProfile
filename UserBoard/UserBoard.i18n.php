@@ -2060,7 +2060,9 @@ at baguhin ang mga katakdaan upang huwag nang paganahin ang pagpapabatid na pang
  * @author Karduelis
  */
 $messages['tr'] = array(
+	'messagesenttitle' => 'Mesaj gönder',
 	'userboard_delete' => 'Sil',
+	'userboard_messagetype' => 'Mesaj tipi',
 );
 
 /** Vietnamese (Tiếng Việt)

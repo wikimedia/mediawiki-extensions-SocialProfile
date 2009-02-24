@@ -1389,3 +1389,12 @@ at baguhin ang mga pagtatakda mo upang huwag nang paganahin ang mga pagpapabatid
 	'right-awardsmanage' => 'Lumikha ng bago at baguhin ang umiiral na mga gantimpala',
 );
 
+/** Turkish (Türkçe)
+ * @author Karduelis
+ */
+$messages['tr'] = array(
+	'ga-large' => 'Büyük',
+	'ga-new' => 'Yeni',
+	'ga-small' => 'Küçük',
+);
+
