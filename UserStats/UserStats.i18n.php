@@ -328,6 +328,55 @@ Klicke $3
 und ändere deine Einstellungen, um die E-Mail-Benachrichtigungen abzustellen.',
 );
 
+/** Lower Sorbian (Dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'user-stats-alltime-title' => 'Absolutnje nejwěcej dypkow',
+	'user-stats-weekly-title' => 'Nejwěcej dypkow toś ten tyźeń',
+	'user-stats-monthly-title' => 'Nejwěcej dypkow toś ten mjasec',
+	'topusers' => 'Nejlěpše wužywarje',
+	'top-fans-by-points-nav-header' => 'Nejlěpše fany',
+	'top-fans-by-category-nav-header' => 'Nejlěpše pó kategoriji',
+	'top-fans-total-points-link' => 'Dypki dogromady',
+	'top-fans-weekly-points-link' => 'Dypki toś ten tyźeń',
+	'top-fans-monthly-points-link' => 'Dypki toś ten mjasec',
+	'top-fans-points' => 'dypki',
+	'top-fans-by-category-title' => 'Nejlěpše dogromady $1',
+	'top-fans-bad-field-title' => 'Hopla!',
+	'top-fans-bad-field-message' => 'Pódana statistika njeeksistěrujo.',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Głos|Głosa|Głose|Głosow}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Mjasecne dobyśe|Mjasecnej dobyśi|Mjasecne dobyśa|Mjasecnych dobyśow}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Tyźeńske dobyśe|Tyźeńskej dobyśi|Tyźeńske dobyśa|Tyźeńskich dobyśow}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Změna|Změnje|Změny|Změnow}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Komentar|Komentara|Komentary|Komentarow}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Pórucenje|Póruceni|Pórucenja|Pórucenjow}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Pśijaśel|Pśijaśela|Pśijaśele|Pśijaśelow}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Njepśijaśel|Njepśijaśela|Njepśijaśele|Njepśijaśelow}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Wózjawjone měnjenje|Wózjawjonej měnjeni|Wózjawjone měnjenja|Wózjawjonych měnjenjow}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Měnjenje|Měnjeni|Měnjenja|Měnjenjow}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Tłusty palc|Tłustej palca|Tłuste palce|Tłustych palcow}} górjej',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Tłusty palc|Tłustej palca|Tłuste palce|Tłustych palcow}} dołoj',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Dany tłusty palc|Danej tłustej palca|Dane tłuste palce|Danych tłustych palcow}} górjej',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Dany tłusty palc|Danej tłustej palca|Dane tłuste palce|Danych tłustych palcow}} dołoj',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Dar dostaty|Dara dostatej|Dary dostate|Darow dostatych}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Dar pósłany|Dara pósłanej|Dary pósłane|Darow pósłanych}}',
+	'level-advance-subject' => 'Sy něnto "$1" na {{GRAMMAR:lokatiw|{{SITENAME}}}}!',
+	'level-advance-body' => 'Witaj $1.
+
+Sy něnto "$2" na {{GRAMMAR:lokatiw|{{SITENAME}}}}!
+
+Glukužycenje,
+
+Team {{GRAMMAR:genitiw|{{SITENAME}}}}
+
+---
+Njocoš wěcej scełego žedne e-maile wót nas dostawaś?
+
+Klikni na $3
+a změń swóje nastajenja, aby znjemóžnił zdźělenja pśez e-mail.',
+);
+
 /** Greek (Ελληνικά)
  * @author Consta
  * @author Omnipaedista
@@ -1227,6 +1276,55 @@ $messages['pt'] = array(
 	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Polegar para cima|Polegares para cima}}',
 	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Polegar para baixo|Polegares para baixo}}',
 	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Polegar para cima dado|Polegares para cima dados}}n',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Polegar para baixo dado|Polegares para baixo dados}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Presente recebido|Presentes recebidos}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Presente enviado|Presentes enviados}}',
+	'level-advance-subject' => 'Você agora é um "$1" em {{SITENAME}}!',
+	'level-advance-body' => 'Oi $1:
+
+Você agora é um "$2" em {{SITENAME}}!
+
+Parabéns,
+
+O Time de {{SITENAME}}
+
+---
+Ei, quer parar de receber e-mails de nós?
+
+Clique $3
+e altere suas preferências para desabilitar e-mails de notificação',
+);
+
+/** Brazilian Portuguese (Português do Brasil)
+ * @author Eduardo.mps
+ */
+$messages['pt-br'] = array(
+	'user-stats-alltime-title' => 'Mais pontos de todo o tempo',
+	'user-stats-weekly-title' => 'Mais pontos esta semana',
+	'user-stats-monthly-title' => 'Mais pontos deste mês',
+	'topusers' => 'Melhores utilizadores',
+	'top-fans-by-points-nav-header' => 'Maiores Fãs',
+	'top-fans-by-category-nav-header' => 'Melhores por categoria',
+	'top-fans-total-points-link' => 'Pontos totais',
+	'top-fans-weekly-points-link' => 'Pontos esta semana',
+	'top-fans-monthly-points-link' => 'Pontos este mês',
+	'top-fans-points' => 'pontos',
+	'top-fans-by-category-title' => 'Melhores $1 de sempre',
+	'top-fans-bad-field-title' => 'Ops!',
+	'top-fans-bad-field-message' => 'O status especificado não existe.',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Voto|Votos}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|vencedor do mês|vencedores do mês}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|vencedor da semana|vencedores da semana}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Edição|Edições}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Comentário|Comentários}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Indicação|Indicações}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Amigo|Amigos}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Inimigo|Inimigos}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Opinião publicada|Opiniões publicadas}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinião|Opiniões}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Polegar para cima|Polegares para cima}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Polegar para baixo|Polegares para baixo}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Polegar para cima dado|Polegares para cima dados}}',
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Polegar para baixo dado|Polegares para baixo dados}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Presente recebido|Presentes recebidos}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Presente enviado|Presentes enviados}}',

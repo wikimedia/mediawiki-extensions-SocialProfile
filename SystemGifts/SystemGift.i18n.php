@@ -388,6 +388,74 @@ Klicken Sie $5
 und änderen Sie Ihre Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
 );
 
+/** Lower Sorbian (Dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'systemgiftmanager' => 'Zastojnik systemowych darow',
+	'ga-addnew' => '+ Nowy dar pśidaś',
+	'ga-back-edit-gift' => 'Slědk k wobźěłanjeju toś togo dara',
+	'ga-back-gift-list' => 'Slědk k lisćinje darow',
+	'ga-back-link' => '<a href="$1">< Slědk k profiloju wót $2</a>',
+	'ga-choosefile' => 'Dataju wubraś:',
+	'ga-count' => '$1 ma $2 {{PLURAL:$2|myto|myśe|myta|mytow}}.',
+	'ga-create-gift' => 'Dar napóraś',
+	'ga-created' => 'Dar jo se napórał.',
+	'ga-currentimage' => 'Aktualny wobraz',
+	'ga-error-message-invalid-link' => 'Wótkaz, kótaryž sy zapódał, jo njepłaśiwy.',
+	'ga-error-message-no-user' => 'Wužywaŕ, kótaregož wopytujoš se woglědaś, njeeksistěrujo.',
+	'ga-error-title' => 'Hopla, sy cynił něco wopaki!',
+	'ga-file-instructions' => 'Twój wobraz musy typ jpeg, png abo gif (njeaniměerowany) měś a musy mjenjej ako 100 kb wjeliki byś.',
+	'ga-gift' => 'dar',
+	'ga-gift-given-count' => 'Toś ten dar jo se wudał {{PLURAL:$1|raz|dwójcy|$1 razy|$1 razow}}',
+	'ga-gift-title' => '"$2" wót $1',
+	'ga-giftdesc' => 'wopisanje dara',
+	'ga-giftimage' => 'wobraz dara',
+	'ga-giftname' => 'mě dara',
+	'ga-gifttype' => 'typ dara',
+	'ga-goback' => 'Źi slědk',
+	'ga-imagesbelow' => 'Dołojce su twóje wobraze, kótarež wužywaju se na sedle.',
+	'ga-img' => 'wobraz pśidaś/wuměniś',
+	'ga-large' => 'Wjeliki',
+	'ga-medium' => 'Srědny',
+	'ga-mediumlarge' => 'Wósrědny',
+	'ga-new' => 'Nowy',
+	'ga-next' => 'Pśiducy',
+	'ga-previous' => 'Pjerwjejšny',
+	'ga-recent-recipients-award' => 'Druge aktualne dostawarje toś togo myta',
+	'ga-saved' => 'Dar jo se składł.',
+	'ga-small' => 'Mały',
+	'ga-threshold' => 'prog',
+	'ga-title' => 'Myta wót $1',
+	'ga-uploadsuccess' => 'Nagraśe wuspěšne',
+	'ga-viewlist' => 'Lisćinu darow se woglědaś',
+	'system_gift_received_subject' => 'Sy dostał myto $1 na {{GRAMMAR:lokatiw|{{SITENAME}}}}!',
+	'system_gift_received_body' => 'Witaj $1.
+
+Sy rowno dostał myto $2 na {{GRAMMAR:lokatiw|{{SITENAME}}}}!
+
+"$3"
+
+Klikni dołojce, aby wiźeł swóju trofeju!
+
+$4
+
+Naźejamy se, až se śi spódaba!
+
+Źěkujomy se,
+
+
+Team {{GRAMMAR:genitiw|{{SITENAME}}}}
+
+---
+
+Njocoš wěcej e-mail wót nas dostaś?
+
+Klikni na $5
+a změń nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
+	'right-awardsmanage' => 'Nowe myta napóraś a eksistěrujuce wobźěłaś',
+);
+
 /** Spanish (Español)
  * @author Crazymadlover
  */
