@@ -6792,11 +6792,26 @@ Pindutin <a href="$1">dito</a> para lumagda o pindutin <a href="$2">dito</a> upa
  * @author Karduelis
  */
 $messages['tr'] = array(
+	'populateuserprofiles' => 'Popüler kullanıcı profilleri',
+	'user-awards-title' => 'Ödüller',
+	'user-gifts-title' => 'Hediyeler',
+	'user-upload-image' => 'Dosya yükle',
+	'user-upload-avatar' => 'Avatar yükle',
+	'user-stats-title' => 'İstatistikler',
+	'user-stats-edits' => '{{PLURAL:$1|Edit|Düzenlemeler}}',
+	'other-info-title' => 'Diğer bilgiler',
+	'other-info-movies' => 'Filmler',
+	'other-info-music' => 'Müzik',
+	'other-info-books' => 'Kitaplar',
 	'user-personal-info-real-name' => 'Gerçek isminiz',
+	'user-profile-section-interests' => 'Diğer bilgiler',
 	'user-profile-personal-email' => 'E-posta',
 	'user-profile-personal-city' => 'Şehir',
 	'user-profile-personal-country' => 'Ülke',
 	'user-profile-personal-birthdate' => 'Tarih (AA/GG)',
+	'user-profile-interests-movies' => 'Filmler',
+	'user-profile-interests-music' => 'Müzik',
+	'user-social-profile-link' => 'Sosyal profil',
 );
 
 /** Uighur (Latin) (Uyghurche‎ / ئۇيغۇرچە (Latin))

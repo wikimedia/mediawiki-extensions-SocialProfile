@@ -2020,3 +2020,11 @@ at baguhin ang mga pagtatakda mo upang huwag nang paganahin ang mga pagpapabatid
 	'right-giftadmin' => 'Lumikha ng bago at baguhin ang umiiral na mga handog',
 );
 
+/** Turkish (Türkçe)
+ * @author Karduelis
+ */
+$messages['tr'] = array(
+	'g-large' => 'Büyük',
+	'g-main-page' => 'Ana sayfa',
+);
+

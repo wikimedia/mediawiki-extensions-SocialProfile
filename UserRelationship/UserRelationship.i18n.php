@@ -5056,8 +5056,14 @@ at baguhin ang mga katakdaan mo upang huwag gumana/umandar ang mga pagpapabatid 
  * @author Karduelis
  */
 $messages['tr'] = array(
+	'ur-main-page' => 'Ana sayfa',
+	'ur-your-profile' => 'Profiliniz',
+	'ur-previous' => 'önceki',
+	'ur-next' => 'sonraki',
 	'ur-remove' => 'Kaldır',
 	'ur-cancel' => 'İptal',
+	'ur-accept' => 'Onayla',
+	'ur-reject' => 'Reddet',
 );
 
 /** Uighur (Latin) (Uyghurche‎ / ئۇيغۇرچە (Latin))

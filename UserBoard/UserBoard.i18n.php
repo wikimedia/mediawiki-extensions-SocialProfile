@@ -2063,6 +2063,7 @@ $messages['tr'] = array(
 	'messagesenttitle' => 'Mesaj gönder',
 	'userboard_delete' => 'Sil',
 	'userboard_messagetype' => 'Mesaj tipi',
+	'userboard_nextpage' => 'sonraki',
 );
 
 /** Vietnamese (Tiếng Việt)

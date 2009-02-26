@@ -1463,6 +1463,7 @@ at baguhin ang mga pagtatakda mo upang huwag nang paganahin ang mga pagpapabatid
 $messages['tr'] = array(
 	'ga-large' => 'Büyük',
 	'ga-new' => 'Yeni',
+	'ga-next' => 'Sonraki',
 	'ga-small' => 'Küçük',
 );
 
