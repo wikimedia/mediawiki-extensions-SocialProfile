@@ -1980,6 +1980,7 @@ $messages['es'] = array(
 	'user-profile-preferences-emails' => 'Notificaciones por correo electrónico',
 	'user-profile-preferences-emails-personalmessage' => 'Cuando envíe un mensaje personal',
 	'user-profile-preferences-emails-gift' => 'cuando recibas un regalo',
+	'user-profile-preferences-emails-level' => 'Cuando avance un nivel',
 	'user-profile-preferences-emails-weekly' => 'Recibir semanalmente actualizaciones por correo electrónico',
 	'user-profile-update-button' => 'Actualizar',
 	'user-profile-tidbits-favathlete' => 'Atleta favorito y porqué',

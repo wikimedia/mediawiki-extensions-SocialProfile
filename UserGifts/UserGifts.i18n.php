@@ -775,15 +775,16 @@ ja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.',
 /** French (Français)
  * @author Crochet.david
  * @author IAlex
+ * @author PieRRoMaN
  * @author Verdy p
  */
 $messages['fr'] = array(
 	'giftmanager' => 'Gestionnaire de cadeaux',
-	'giftmanager-addgift' => '+ Ajouter un nouveau cadeau',
+	'giftmanager-addgift' => '+ Ajouter un cadeau',
 	'giftmanager-access' => 'accès au cadeau',
 	'giftmanager-description' => 'description du cadeau',
 	'giftmanager-giftimage' => 'image du cadeau',
-	'giftmanager-image' => "ajouter / remplacer l'image",
+	'giftmanager-image' => "ajouter ou remplacer l'image",
 	'giftmanager-giftcreated' => 'Le cadeau a été créé',
 	'giftmanager-giftsaved' => 'Le cadeau a été sauvegardé',
 	'giftmanager-public' => 'public',
@@ -807,8 +808,8 @@ $messages['fr'] = array(
 	'g-error-message-login' => 'Vous devez vous connecter pour donner des cadeaux',
 	'g-error-message-no-user' => "L'utilisateur que vous essayez de voir n'existe pas.",
 	'g-error-message-to-yourself' => 'Vous ne pouvez pas vous donner un cadeau à vous-même.',
-	'g-error-title' => 'Oups, vous avez pris un mauvais tour !',
-	'g-file-instructions' => 'Voir image doit être jpeg, png ou gif (mais pas animée) et doit être plus petite que 100 Ko.',
+	'g-error-title' => 'Oups, vous avez pris un mauvais virage !',
+	'g-file-instructions' => 'Votre image doit être au format jpeg, png ou gif (non animé) et sa taille ne doit pas dépasser 100 ko.',
 	'g-from' => 'de <a href="$1">$2</a>',
 	'g-gift' => 'cadeau',
 	'g-gift-name' => 'nom du cadeau',
@@ -822,7 +823,7 @@ $messages['fr'] = array(
 	'g-give-list-select' => 'sélectionnez un ami',
 	'g-give-separator' => 'ou',
 	'g-give-no-user-message' => 'Les cadeaux et les prix sont bien pour faire connaitre vos amis !',
-	'g-give-no-user-title' => 'A qui voulez-vous donner un cadeau ?',
+	'g-give-no-user-title' => 'À qui voulez-vous donner un cadeau ?',
 	'g-give-to-user-title' => 'Envoyer le cadeau « $1 » à $2',
 	'g-give-to-user-message' => 'Envie de donner <a href="$2">un cadeau différent</a> à $1 ?',
 	'g-go-back' => 'Revenir',
@@ -831,13 +832,13 @@ $messages['fr'] = array(
 	'g-list-title' => 'Liste des cadeaux de $1',
 	'g-main-page' => 'Accueil',
 	'g-medium' => 'Moyen',
-	'g-mediumlarge' => 'Moyen-Grand',
+	'g-mediumlarge' => 'Moyen-grand',
 	'g-new' => 'nouveau',
 	'g-next' => 'Prochain',
 	'g-previous' => 'Précédent',
 	'g-remove' => 'Enlever',
 	'g-remove-gift' => 'Enlever ce cadeau',
-	'g-remove-message' => 'Êtes-vous sur de vouloir enlever le cadeau « $1 » ?',
+	'g-remove-message' => 'Êtes-vous sûr(e) de vouloir enlever le cadeau « $1 » ?',
 	'g-recent-recipients' => 'Autres bénéficiaires récents de ce cadeau',
 	'g-remove-success-title' => 'Vous avez enlevé avec succès le cadeau « $1 »',
 	'g-remove-success-message' => 'Le cadeau « $1 » a été enlevé.',
@@ -848,15 +849,15 @@ $messages['fr'] = array(
 	'g-sent-message' => 'Vous avez envoyé le cadeau suivant à $1.',
 	'g-small' => 'Petit',
 	'g-to-another' => "Donner à quelqu'un d'autre",
-	'g-uploadsuccess' => 'Téléchargement effectué avec succès',
+	'g-uploadsuccess' => 'Téléversement effectué avec succès',
 	'g-viewgiftlist' => 'Voir la liste des cadeaux',
 	'g-your-profile' => 'Votre profil',
 	'gift_received_subject' => '$1 vous a envoyé le cadeau $1 sur {{SITENAME}} !',
 	'gift_received_body' => "Bonjour $1,
 
-$2 vous a juste envoyé le cadeau $2 sur {{SITENAME}}.
+$2 vient de vous envoyer le cadeau $3 sur {{SITENAME}}.
 
-Voulez-vous voir la note $2 qui vous est adressée et voir votre cadeau ? Cliquez sur le lien ci-dessous :
+Pour lire la note $2 qui vous est adressée et voir votre cadeau, cliquez sur le lien ci-dessous :
 
 $4
 
@@ -873,7 +874,7 @@ Vous ne voulez plus recevoir de courriels de notre part ?
 
 Cliquez $5
 et modifiez vos préférences pour désactiver les notifications par courriel.",
-	'right-giftadmin' => 'Créer de nouveaux cadeaux et modifier ceux existant',
+	'right-giftadmin' => 'Créer ou modifier des cadeaux',
 );
 
 /** Galician (Galego)
@@ -1192,7 +1193,13 @@ e cambia tu configurationes pro disactivar le notificationes in e-mail.',
  * @author Hosiryuhosi
  */
 $messages['ja'] = array(
+	'giftmanager-addgift' => '+ 新しいプレゼントの追加',
+	'giftmanager-giftimage' => 'プレゼント画像',
 	'giftmanager-public' => '公開',
+	'g-gift' => 'プレゼント',
+	'g-gift-name' => 'プレゼント名',
+	'g-give-all-message-title' => 'メッセージの追加',
+	'g-give-list-select' => '友達を選択',
 );
 
 /** Ripoarisch (Ripoarisch)
