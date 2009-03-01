@@ -1312,27 +1312,48 @@ un donn Ding Enshtellunge ändere, öm kei Meffeilunge meih övver e-mail ze kri
  * @author Robby
  */
 $messages['lb'] = array(
+	'giftmanager-addgift' => '+ En neie Cadeau derbäisetzen',
+	'giftmanager-description' => 'Beschreiwung vum Cadeau',
+	'giftmanager-giftimage' => 'Bild vum Cadeau',
 	'giftmanager-image' => 'Bild derbäisetzen/ersetzen',
+	'giftmanager-giftsaved' => 'De Cadeau ouf gespäichert',
 	'giftmanager-public' => 'ëffentlech',
 	'giftmanager-private' => 'privat',
+	'giftmanager-view' => 'Lëscht vun de Cadeaue kucken',
 	'g-add-message' => 'Eng Noriicht derbäisetzen',
+	'g-back-edit-gift' => "Zréck fir dëse Cadeau z'änneren",
+	'g-back-gift-list' => "Zréck op d'Lëscht vun de Cadeauen",
 	'g-back-link' => '< Zréck op dem $1 seng Säit',
 	'g-choose-file' => 'Fichier wielen:',
 	'g-cancel' => 'Ofbriechen',
 	'g-created-by' => 'ugeluecht vum',
 	'g-current-image' => 'Aktuellt Bild',
+	'g-error-do-not-own' => 'Dëse Cadeau gehéiert Iech net.',
+	'g-error-message-blocked' => 'Dir sidd den Ament gespaart a kënnt keng Cadeaue maachen',
 	'g-error-message-invalid-link' => 'De Link deen Dir uginn hutt ass net valabel.',
 	'g-error-message-no-user' => 'De Benotzer deen Dir versicht ze kucken gëtt et net.',
+	'g-error-message-to-yourself' => 'Dir kënnt Iech net selwer e Cadeau maachen.',
 	'g-file-instructions' => 'Ärt Bild muss e jpeg, png oder gif (keng animéiert Gifen) sinn, a muss manner wéi 100KB grouss sinn.',
 	'g-from' => 'vum <a href="$1">$2</a>',
+	'g-gift' => 'Cadeau',
+	'g-gift-name' => 'Numm vum Cadeau',
+	'g-give-gift' => 'E Cadeau maachen',
+	'g-give-all' => 'Wëllt Dir dem $1 e Cadeau maachen?
+Klickt just op e vun de Cadeauen ënnedrënner a klickt op "Cadeau schécken".
+Et ass esou einfach.',
 	'g-give-all-message-title' => 'Eng Noriicht derbäisetzen',
+	'g-give-all-title' => 'Dem $1 e Cadeau maachen',
 	'g-give-enter-friend-title' => 'Wann Dir den Numm vum Benotzer wësst, dann tippt en ënndrënner an.',
 	'g-give-list-friends-title' => 'Aus Ärer Lëscht vu Frënn auswielen',
 	'g-give-list-select' => 'e Frënd auswielen',
 	'g-give-separator' => 'oder',
+	'g-give-no-user-title' => 'Wiem wëllt Dir e Cadeau maachen?',
+	'g-give-to-user-title' => 'Dem $2 de Cadeau "$1" maachen',
+	'g-give-to-user-message' => 'Wëllt Dir dem $1 en <a href="$2">anere Cadeau</a> maachen?',
 	'g-go-back' => 'Zréck goen',
 	'g-imagesbelow' => 'Ënndrënner sinn Är Biller déi op dësem Site benotzt gi werten',
 	'g-large' => 'Grouss',
+	'g-list-title' => 'Lëscht vun de Cadeaue vum $1',
 	'g-main-page' => 'Haaptsäit',
 	'g-medium' => 'Mëttel',
 	'g-mediumlarge' => 'Mëttelgrouss',
@@ -1340,12 +1361,26 @@ $messages['lb'] = array(
 	'g-next' => 'Nächst',
 	'g-previous' => 'Vireg',
 	'g-remove' => 'Ewechhuelen',
+	'g-remove-gift' => 'Dëse Cadeau ewechhuelen',
+	'g-remove-message' => 'Sidd Dir sécher datt Dir de Cadeau "$1" ewechhuele wëllt?',
+	'g-remove-success-message' => 'De Cadeau "$1" gouf ewechgeholl.',
 	'g-remove-title' => '"$1" ewechhuelen?',
+	'g-send-gift' => 'Cadeau schécken',
 	'g-select-a-friend' => 'a Frënd auswielen',
+	'g-sent-title' => 'Dir hutt dem $1 e Cadeau geschéckt',
+	'g-sent-message' => 'Dir hutt dem $1 dëse Cadeau geschéckt.',
 	'g-small' => 'Kleng',
 	'g-to-another' => 'Engem Anere ginn',
 	'g-uploadsuccess' => 'Eroplueden ofgeschloss',
+	'g-viewgiftlist' => 'Lëscht vun de Cadeaue kucken',
 	'g-your-profile' => 'Äre Profil',
+);
+
+/** Limburgish (Limburgs)
+ * @author Ooswesthoesbes
+ */
+$messages['li'] = array(
+	'g-created-by' => 'aangemaak door',
 );
 
 /** Dutch (Nederlands)
@@ -1913,6 +1948,13 @@ Neželáte si od nás dostávať emaily?
 Kliknite na $5
 a zmeňte svoje nastavenia týkajúce sa upozornení emailom.',
 	'right-giftadmin' => 'Vytvoriť nový alebo upraviť existujúce darčeky',
+);
+
+/** Slovenian (Slovenščina)
+ * @author Smihael
+ */
+$messages['sl'] = array(
+	'g-created-by' => 'ustvaril',
 );
 
 /** Telugu (తెలుగు)

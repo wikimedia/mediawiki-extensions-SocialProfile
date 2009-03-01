@@ -847,6 +847,73 @@ $4
 	'right-awardsmanage' => 'יצירת פרסים חדשים ועריכת פרסים קיימים',
 );
 
+/** Upper Sorbian (Hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'systemgiftmanager' => 'Zrjadowak systemowych darow',
+	'ga-addnew' => '+ Nowy dar přidać',
+	'ga-back-edit-gift' => 'Wróćo k wobdźěłanju tutoho dara',
+	'ga-back-gift-list' => 'Wróćo k lisćinje darow',
+	'ga-back-link' => '<a href="$1">< Wróćo k profilej wot $2</a>',
+	'ga-choosefile' => 'Wubjer dataju:',
+	'ga-count' => '$1 ma $2 {{PLURAL:$2|myto|myće|myta|mytow}}.',
+	'ga-create-gift' => 'Dar wutworić',
+	'ga-created' => 'Dar bu wutworjeny.',
+	'ga-currentimage' => 'Aktualny wobraz',
+	'ga-error-message-invalid-link' => 'Wotkaz, kotryž sy zapodał, je njepłaćiwy.',
+	'ga-error-message-no-user' => 'Wužiwar, kotrehož pospytuješ sej wobhladać, njeeksistuje.',
+	'ga-error-title' => 'Hopla, sy něšto wopak činił!',
+	'ga-file-instructions' => 'Twój wobraz dyrbi typ jpeg, png abo gif (žane animěrowane gif) měć a mjeńši hač 100 kb być.',
+	'ga-gift' => 'dar',
+	'ga-gift-given-count' => 'Tutón dar bu {{PLURAL:$1|jedyn raz|dwójce|$1 razy|$1 razow}} wudaty',
+	'ga-gift-title' => '"$2" wot $1',
+	'ga-giftdesc' => 'wopisanje dara',
+	'ga-giftimage' => 'wobraz dara',
+	'ga-giftname' => 'mjeno dara',
+	'ga-gifttype' => 'typ dara',
+	'ga-goback' => 'Wróćo',
+	'ga-imagesbelow' => 'Deleka su twoje wobrazy, kotrež so na sydle wužiwaja',
+	'ga-img' => 'Wobraz přidać/narunać',
+	'ga-large' => 'Wulki',
+	'ga-medium' => 'Srěni',
+	'ga-mediumlarge' => 'Srěnjowulki',
+	'ga-new' => 'Nowy',
+	'ga-next' => 'Přichodny',
+	'ga-previous' => 'Předchadny',
+	'ga-recent-recipients-award' => 'Druzy aktualni přijimowarjo tutoho myta',
+	'ga-saved' => 'Dar bu składowany',
+	'ga-small' => 'Mały',
+	'ga-threshold' => 'próh',
+	'ga-title' => 'Myta wot $1',
+	'ga-uploadsuccess' => 'Nahraće wuspěšne',
+	'ga-viewlist' => 'Lisćinu darow sej wobhladać',
+	'system_gift_received_subject' => 'Sy myto $1 na {{GRAMMAR:lokatiw|{{SITENAME}}}} dóstał!',
+	'system_gift_received_body' => 'Witaj $1.
+
+Sy runje myto $2 na {{GRAMMAR:lokatiw|{{SITENAME}}}} dóstał!
+
+"$3"
+
+Klikń deleka, zo by sej swoju trofeju wobhladał!
+
+$4
+
+Nadźijamy so, zo so ći spodoba!
+
+Dźakujemy so,
+
+Team {{SITENAME}}
+
+---
+
+Hej, hižo nochceš nam e-mejle słać?
+
+Klikń na $5
+a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
+	'right-awardsmanage' => 'Nowe myta wutworić a eksistowace wobdźěłać',
+);
+
 /** Interlingua (Interlingua)
  * @author McDutchie
  */
@@ -999,9 +1066,16 @@ un donn en Dinge Ensstellunge de Nohrechte övver e-mail affschallde.',
  * @author Robby
  */
 $messages['lb'] = array(
+	'ga-addnew' => '+ Neie Cadeau derbäisetzen',
+	'ga-back-edit-gift' => "Zréck fir dëse Cadeau z'änneren",
 	'ga-choosefile' => 'Wielt e Fichier:',
 	'ga-currentimage' => 'Aktuellt Bild',
+	'ga-error-message-invalid-link' => 'De Link deen Dir uginn hutt ass net valabel.',
 	'ga-gift' => 'Cadeau',
+	'ga-giftdesc' => 'Bechreiwung vum Cadeau',
+	'ga-giftimage' => 'Bild vum Cadeau',
+	'ga-giftname' => 'Numm vum Cadeau',
+	'ga-gifttype' => 'Typ vu Cadeau',
 	'ga-goback' => 'Zréckgoen',
 	'ga-img' => 'Bild derbäisetzen/ersetzen',
 	'ga-large' => 'Grouss',
@@ -1009,6 +1083,7 @@ $messages['lb'] = array(
 	'ga-new' => 'Nei',
 	'ga-next' => 'Nächst',
 	'ga-previous' => 'Vireg',
+	'ga-saved' => 'De Cadeau gouf gespäichert',
 	'ga-small' => 'Kleng',
 	'ga-uploadsuccess' => 'Eroplueden ofgeschloss',
 );
@@ -1310,6 +1385,74 @@ Ei, quer parer de receber e-mails de nós?
 Clique $5
 e altere suas preferências para desabilitar e-mails de notificação.',
 	'right-awardsmanage' => 'Crie novos e edite galardões existentes',
+);
+
+/** Brazilian Portuguese (Português do Brasil)
+ * @author Eduardo.mps
+ */
+$messages['pt-br'] = array(
+	'systemgiftmanager' => 'Gerenciador do Sistema de Presentes',
+	'ga-addnew' => '+ Adicionar Novo Presente',
+	'ga-back-edit-gift' => 'Voltar para Editar Este Presente',
+	'ga-back-gift-list' => 'Voltar para Lista de Presentes',
+	'ga-back-link' => '<a href="$1">< Voltar para Perfil de $2</a>',
+	'ga-choosefile' => 'Escolher arquivo:',
+	'ga-count' => '$1 tem $2 {{PLURAL:$2|prêmio|prêmios}}.',
+	'ga-create-gift' => 'Criar presente',
+	'ga-created' => 'O presente foi criado',
+	'ga-currentimage' => 'Imagem atual',
+	'ga-error-message-invalid-link' => 'A ligação que você colocou é inválida.',
+	'ga-error-message-no-user' => 'O utilizador que você está tentando ver não existe.',
+	'ga-error-title' => 'Ops, você entrou no lugar errado!',
+	'ga-file-instructions' => 'Sua imagem precisa ser um jpeg, png ou gif (sem gifs animados), e precisa ter tamanho menor que 100kb.',
+	'ga-gift' => 'presente',
+	'ga-gift-given-count' => 'Este presente foi dado $1 {{PLURAL:$1|vez|vezes}}',
+	'ga-gift-title' => '"$2" de $1',
+	'ga-giftdesc' => 'descrição do presente',
+	'ga-giftimage' => 'imagem do presente',
+	'ga-giftname' => 'nome do presente',
+	'ga-gifttype' => 'tipo do presente',
+	'ga-goback' => 'Voltar',
+	'ga-imagesbelow' => 'Abaixo estão suas imagens que serão usadas no sítio',
+	'ga-img' => 'adicionar/substituir imagem',
+	'ga-large' => 'Grande',
+	'ga-medium' => 'Médio',
+	'ga-mediumlarge' => 'Médio/Grande',
+	'ga-new' => 'Novo',
+	'ga-next' => 'Próximo',
+	'ga-previous' => 'Anterior',
+	'ga-recent-recipients-award' => 'Outros ganhadores recentes deste prêmio',
+	'ga-saved' => 'Este presente foi salvo',
+	'ga-small' => 'Pequeno',
+	'ga-threshold' => 'threshold',
+	'ga-title' => 'Prêmios de $1',
+	'ga-uploadsuccess' => 'Carregamento bem sucedido',
+	'ga-viewlist' => 'Ver Lista de Presentes',
+	'system_gift_received_subject' => 'Você recebeu o prêmio $1 em {{SITENAME}}!',
+	'system_gift_received_body' => 'Oi $1:
+
+Você acaba de receber o prêmio $2 em {{SITENAME}}!
+
+"$3"
+
+Clique abaixo para ver sua estante de troféis!
+
+$4
+
+Esperamos que tenha gostado!
+
+Obrigado,
+
+
+O Time de {{SITENAME}}
+
+---
+
+Ei, quer parer de receber e-mails de nós?
+
+Clique $5
+e altere suas preferências para desabilitar e-mails de notificação.',
+	'right-awardsmanage' => 'Crie novos e edite prêmios existentes',
 );
 
 /** Slovak (Slovenčina)

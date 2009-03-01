@@ -1719,6 +1719,68 @@ Clique $4
 e altere suas preferênciar para desabilidar e-mails de notificação.',
 );
 
+/** Brazilian Portuguese (Português do Brasil)
+ * @author Eduardo.mps
+ */
+$messages['pt-br'] = array(
+	'boardblastlogintitle' => 'Você precisa estar autenticado para enviar recados',
+	'boardblastlogintext' => 'Você precisa estar autenticado para enviar recados.
+Clique <a href="index.php?title=Special:UserLogin">aqui para se autenticar</a>',
+	'messagesenttitle' => 'Mensagens Enviadas',
+	'boardblasttitle' => 'Enviar recado',
+	'boardblaststep1' => 'Passo 1 - Escreva a sua mensagem',
+	'boardblastprivatenote' => 'Todas as mensagens serão enviadas como mensagens privadas',
+	'boardblaststep2' => 'Passo 2 - Selecione a quem deseja enviar a sua mensagem',
+	'boardlinkselectall' => 'Selecionar tudo',
+	'boardlinkunselectall' => 'Desselecionar tudo',
+	'boardlinkselectfriends' => 'Selecionar amigos',
+	'boardlinkunselectfriends' => 'Desselecionar amigos',
+	'boardlinkselectfoes' => 'Selecionar inimigos',
+	'boardlinkunselectfoes' => 'Desselecionar inimigos',
+	'boardsendbutton' => 'Enviar recado',
+	'boardnofriends' => 'Você não tem amigos para enviar uma mensagem!',
+	'messagesentsuccess' => 'Sua mensagem foi enviada com sucesso',
+	'userboard' => 'Mural do utilizador',
+	'userboard_board-to-board' => 'Mural-para-mural',
+	'userboard_delete' => 'Remover',
+	'userboard_noexist' => 'O utilizador que você está tentando ver não existe.',
+	'userboard_yourboard' => 'Seu mural',
+	'userboard_owner' => 'Mural de $1',
+	'userboard_yourboardwith' => 'Seu mural-para-mural com $1',
+	'userboard_otherboardwith' => 'Mural-para-mural de $1 com $2',
+	'userboard_backprofile' => 'Voltar para perfil de $1',
+	'userboard_backyourprofile' => 'Voltar para seu perfil',
+	'userboard_boardtoboard' => 'Mural-para-mural',
+	'userboard_confirmdelete' => 'Tem certeza de que você quer excluir essa mensagem?',
+	'userboard_sendmessage' => 'Enviar uma mensagem para $1',
+	'userboard_myboard' => 'Meu mural',
+	'userboard_posted_ago' => 'enviado há $1',
+	'userboard_private' => 'privado',
+	'userboard_public' => 'público',
+	'userboard_messagetype' => 'Tipo de Mensagem',
+	'userboard_nextpage' => 'próxima',
+	'userboard_prevpage' => 'anterior',
+	'userboard_nomessages' => 'Sem mensagens.',
+	'userboard_sendbutton' => 'enviar',
+	'userboard_loggedout' => 'Você precida estar <a href="$1">autenticado</a> para enviar mensagens a outros usuários.',
+	'userboard_showingmessages' => 'Mostrando {{PLURAL:$4|mensagem $3|mensagens $2-$3}} de {{PLURAL:$1|$1 mensagem|$1 mensagens}}',
+	'message_received_subject' => '$1 escreveu em seu mural em {{SITENAME}}',
+	'message_received_body' => 'Oi $1:
+
+$2 acabou de escrever em seu mural em {{SITENAME}}!
+
+Clique abaixo para ver seu mural!
+
+$3
+
+---
+
+Ei, quer parar de receber e-mails de nós?
+
+Clique $4
+e altere suas preferênciar para desabilidar e-mails de notificação.',
+);
+
 /** Tarifit (Tarifit)
  * @author Jose77
  */

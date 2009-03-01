@@ -2452,6 +2452,7 @@ $messages['fi'] = array(
  * @author Grondin
  * @author IAlex
  * @author McDutchie
+ * @author PieRRoMaN
  * @author Verdy p
  */
 $messages['fr'] = array(
@@ -2474,7 +2475,7 @@ $messages['fr'] = array(
 	'user-send-gift' => 'Envoyer un cadeau',
 	'user-contributions' => 'Contributions',
 	'user-stats-title' => 'Statistiques',
-	'user-stats-edits' => '{{PLURAL:$1|Édition|Éditions}}',
+	'user-stats-edits' => '{{PLURAL:$1|Modification|Modifications}}',
 	'user-stats-votes' => '{{PLURAL:$1|Vote|Votes}}',
 	'user-stats-comments' => '{{PLURAL:$1|Commentaire|Commentaires}}',
 	'user-stats-recruits' => '{{PLURAL:$1|Recrue|Recrues}}',
