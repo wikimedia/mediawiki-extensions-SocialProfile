@@ -521,6 +521,26 @@ Klicke $4
 und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
 );
 
+/** Lower Sorbian (Dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'boardblastlogintitle' => 'Musyš pśizjawjony byś, aby pósłał forumowe powěsći',
+	'boardblastlogintext' => 'Musyš pśizjawjony byś, aby pósłał forumowe powěsći.
+Klikni <a href="index.php?title=Special:UserLogin">sem, aby se pśizjawił</a>',
+	'messagesenttitle' => 'Powěsći pósłane',
+	'boardblasttitle' => 'Forumowu powěsć pósłaś',
+	'boardblaststep1' => 'Kšac 1 - Napiš swóju powěsć',
+	'boardblastprivatenote' => 'Wše powěsći pósćelu se ako priwatne powěsći',
+	'boardblaststep2' => 'Kšac 2 - Wubjeŕ, komuž coš swóju powěsć pósłaś',
+	'boardlinkselectall' => 'Wše wubraś',
+	'boardlinkunselectall' => 'Wuběrk za wše wótpóraś',
+	'boardlinkselectfriends' => 'Pśijaśelow wubraś',
+	'boardlinkunselectfriends' => 'Pśijaśelow wótwóliś',
+	'boardlinkselectfoes' => 'Njepśijaśelow wubraś',
+	'boardlinkunselectfoes' => 'Njepśijaśelow wótwóliś',
+);
+
 /** Greek (Ελληνικά)
  * @author Consta
  */
@@ -983,6 +1003,68 @@ $messages['hil'] = array(
  */
 $messages['hr'] = array(
 	'userboard_delete' => 'Izbriši',
+);
+
+/** Upper Sorbian (Hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'boardblastlogintitle' => 'Dyrbiš přizjewjeny być, zo by forumowe powěsće pósłał',
+	'boardblastlogintext' => 'Dyrbiš přizjewjeny być, zo by forumowe powěsće pósłał.
+Klikń <a href="index.php?title=Special:UserLogin">sem, zo by so přizjewił</a>',
+	'messagesenttitle' => 'Powěsće pósłane',
+	'boardblasttitle' => 'Forumowu powěsć pósłać',
+	'boardblaststep1' => 'Krok 1 - Napisaj swoju powěsć',
+	'boardblastprivatenote' => 'Wšě powěsće pósćelu so jako priwatne powěsće',
+	'boardblaststep2' => 'Krok 2 - Wubjer, komuž chceš swoju powěsć pósłać',
+	'boardlinkselectall' => 'Wšě wubrać',
+	'boardlinkunselectall' => 'Wuběr zběhnyć',
+	'boardlinkselectfriends' => 'Přećelow wubrać',
+	'boardlinkunselectfriends' => 'Přećelow wotwolić',
+	'boardlinkselectfoes' => 'Njepřećelow wubrać',
+	'boardlinkunselectfoes' => 'Njepřećelow wotwolić',
+	'boardsendbutton' => 'Forumowu powěsć pósłać',
+	'boardnofriends' => 'Nimaš žanych přećelow, kotrymž by móhł powěsć pósłać!',
+	'messagesentsuccess' => 'Twoja powěsć je so wuspěšnje pósłała',
+	'userboard' => 'Čorna deska',
+	'userboard_board-to-board' => 'Diskusija deska k desce',
+	'userboard_delete' => 'Wušmórnyć',
+	'userboard_noexist' => 'Wužiwar, kotrehož pospytuješ sej wobhladać, njeeksistuje.',
+	'userboard_yourboard' => 'Twoja deska',
+	'userboard_owner' => 'Deska wužiwarja $1',
+	'userboard_yourboardwith' => 'Twoja deska k desce z $1',
+	'userboard_otherboardwith' => 'Diskusija deska k desce wužiwarja $1 z $2',
+	'userboard_backprofile' => 'Wróćo k profilej wužiwarja $1',
+	'userboard_backyourprofile' => 'Wróćo k twojemu profilej',
+	'userboard_boardtoboard' => 'Diskusija deska k desce',
+	'userboard_confirmdelete' => 'Chceš tutu powěsć woprawdźe wušmórnyć?',
+	'userboard_sendmessage' => 'Wužiwarjej $1 powěsć pósłać',
+	'userboard_myboard' => 'Moja deska',
+	'userboard_posted_ago' => 'před $1 wótposłany',
+	'userboard_private' => 'priwatny',
+	'userboard_public' => 'zjawny',
+	'userboard_messagetype' => 'Typ powěsće',
+	'userboard_nextpage' => 'přichodny',
+	'userboard_prevpage' => 'předchadny',
+	'userboard_nomessages' => 'Žane powěsće.',
+	'userboard_sendbutton' => 'pósłać',
+	'userboard_loggedout' => 'Dyrbiš <a href="$1">přizjewjeny</a> być, zo by druhim wužiwarjam powěsće pósłał.',
+	'userboard_showingmessages' => '{{PLURAL:$4|Pokazuje so powěsć $3|Pokazujetej so powěsći $2-$3|Pokazuja so powěsće $2-$3|Pokazuja so powěsće $2-$3}} z {{PLURAL:$1|$1 powěsće|$1 powěsćow|$1 powěsćow|$1 powěsćow}}',
+	'message_received_subject' => '$1 je na twoju desku na {{GRAMMAR:lokatiw|{{SITENAME}}}} napisał',
+	'message_received_body' => 'Witaj $1.
+
+$2 je runje na twoju desku na {{GRAMMAR:lokatiw|{{SITENAME}}}} napisał!
+
+Klikń deleka, zo by sej swoju desku wobhladał!
+
+$3
+
+---
+
+Hej, hižo nochceš e-mejle wot nas dóstać?
+
+Klikń na $4
+a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
 );
 
 /** Interlingua (Interlingua)

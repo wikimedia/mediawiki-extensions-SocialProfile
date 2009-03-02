@@ -3283,6 +3283,13 @@ $messages['mt'] = array(
 	'ur-cancel' => 'Annulla',
 );
 
+/** Mirandese (Mirandés)
+ * @author Malafaya
+ */
+$messages['mwl'] = array(
+	'ur-main-page' => 'Páigina percipal',
+);
+
 /** Erzya (Эрзянь)
  * @author Botuzhaleny-sodamo
  */
