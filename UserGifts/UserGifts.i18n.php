@@ -1374,6 +1374,7 @@ Et ass esou einfach.',
 	'g-uploadsuccess' => 'Eroplueden ofgeschloss',
 	'g-viewgiftlist' => 'Lëscht vun de Cadeaue kucken',
 	'g-your-profile' => 'Äre Profil',
+	'gift_received_subject' => 'De Benotzer $1 huet Iech de Cadeau $2 op {{SITENAME}} gemaach!',
 );
 
 /** Limburgish (Limburgs)
@@ -1846,6 +1847,24 @@ Ei, quer parer de receber e-mails de nós?
 Clique $5
 e altere suas preferências para desabilitar e-mails de notificação.',
 	'right-giftadmin' => 'Crie novas e edite ofertas existentes',
+);
+
+/** Tarandíne (Tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'giftmanager' => 'Gestore de le riale',
+	'giftmanager-addgift' => "+ Aggiunge 'nu riale nuève",
+	'giftmanager-access' => 'accede a le riale',
+	'giftmanager-description' => "descrizione d'u riale",
+	'giftmanager-giftimage' => "immagine d'u riale",
+	'giftmanager-image' => "aggiunge/cange 'n'immaggine",
+	'giftmanager-giftcreated' => "'U riale ha state ccrejate",
+	'giftmanager-giftsaved' => "'U riale ha state reggistrate",
+	'giftmanager-public' => 'pubbliche',
+	'giftmanager-private' => 'private',
+	'giftmanager-view' => "Vide 'a liste de le riale",
+	'g-add-message' => "Aggiunge 'nu messagge",
 );
 
 /** Slovak (Slovenčina)

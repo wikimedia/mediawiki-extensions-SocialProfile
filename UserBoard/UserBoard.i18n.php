@@ -539,6 +539,48 @@ Klikni <a href="index.php?title=Special:UserLogin">sem, aby se pśizjawił</a>',
 	'boardlinkunselectfriends' => 'Pśijaśelow wótwóliś',
 	'boardlinkselectfoes' => 'Njepśijaśelow wubraś',
 	'boardlinkunselectfoes' => 'Njepśijaśelow wótwóliś',
+	'boardsendbutton' => 'Forumowu powěsć pósłaś',
+	'boardnofriends' => 'Njamaš žednych pśijaśelow, kótarymž by mógł powěsć pósłaś!',
+	'messagesentsuccess' => 'Twója powěsć jo se wuspěšnje pósłała',
+	'userboard' => 'Carna dela',
+	'userboard_board-to-board' => 'Diskusija dela k deli',
+	'userboard_delete' => 'Lašowaś',
+	'userboard_noexist' => 'Wužywaŕ, kótaregož wopytujoš se woglědaś, njeeksistěrujo.',
+	'userboard_yourboard' => 'Twója dela',
+	'userboard_owner' => 'Dela wužywarja $1',
+	'userboard_yourboardwith' => 'Twója diskusija dela k deli z $1',
+	'userboard_otherboardwith' => 'Diskusija dela k deli wužywarja $1 z $2',
+	'userboard_backprofile' => 'Slědk k profiloju wužywarja $1',
+	'userboard_backyourprofile' => 'Slědk k twójemu profiloju',
+	'userboard_boardtoboard' => 'Diskusija dela k deli',
+	'userboard_confirmdelete' => 'Coš toś tu powěsć napšawdu lašowaś?',
+	'userboard_sendmessage' => 'Wužiwarjeju $1 powěsć pósłaś',
+	'userboard_myboard' => 'Mója dela',
+	'userboard_posted_ago' => 'pśed $1 wótpósłany',
+	'userboard_private' => 'priwatny',
+	'userboard_public' => 'zjawny',
+	'userboard_messagetype' => 'Typ powěsći',
+	'userboard_nextpage' => 'pśiducy',
+	'userboard_prevpage' => 'pjerwjejšny',
+	'userboard_nomessages' => 'Žedne powěsći.',
+	'userboard_sendbutton' => 'pósłaś',
+	'userboard_loggedout' => 'Musyš <a href="$1">pśizjawjony</a> byś, aby pósłał powěsći drugim wužywarjam.',
+	'userboard_showingmessages' => '{{PLURAL:$4|Pokazujo se powěsć $3|Pokazujotej se powěsći $2-$3|Pokazuju se powěsći $2-$3|Pokazuju se powěsći $2-$3}} z {{PLURAL:$1|$1 powěsći|$1 powěsćowu|$1 powěsćow|$1 powěsćow}}',
+	'message_received_subject' => '$1 jo napisał na twóju delu na {{GRAMMAR:lokatiw|{{SITENAME}}}}',
+	'message_received_body' => 'Witaj $1.
+
+$2 jo rowno napisał na twóju delu na {{GRAMMAR:lokatiw|{{SITENAME}}}}!
+
+Klikni dołojce, aby se woglědał swóju delu!
+
+$3
+
+---
+
+Hej, njocoš wěcej e-maile wót nas dostaś?
+
+Klikni na $4
+a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
 );
 
 /** Greek (Ελληνικά)
