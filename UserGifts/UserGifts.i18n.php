@@ -818,7 +818,7 @@ $messages['fr'] = array(
 	'g-give-all-message-title' => 'Ajouter un message',
 	'g-give-all-title' => 'Donner un cadeau à $1',
 	'g-give-enter-friend-title' => "Si vous connaissez le nom de l'utilisateur, entrez-le ci-dessous",
-	'g-given' => 'Le cadeau a été donné $1 fois',
+	'g-given' => 'Ce cadeau a été donné {{PLURAL:$1|une fois|$1 fois}}',
 	'g-give-list-friends-title' => 'Sélectionnez depuis la liste de vos amis',
 	'g-give-list-select' => 'sélectionnez un ami',
 	'g-give-separator' => 'ou',
@@ -852,7 +852,7 @@ $messages['fr'] = array(
 	'g-uploadsuccess' => 'Téléversement effectué avec succès',
 	'g-viewgiftlist' => 'Voir la liste des cadeaux',
 	'g-your-profile' => 'Votre profil',
-	'gift_received_subject' => '$1 vous a envoyé le cadeau $1 sur {{SITENAME}} !',
+	'gift_received_subject' => '$1 vous a envoyé le cadeau $2 sur {{SITENAME}} !',
 	'gift_received_body' => "Bonjour $1,
 
 $2 vient de vous envoyer le cadeau $3 sur {{SITENAME}}.
@@ -1085,6 +1085,110 @@ Ha, Du wetsch gar keini E-Mail meh iberchu vun is?
 Druck $5
 un ändere Dyyni Yystellige go d E-Mail-Benochrichtigunge verhindere.',
 	'right-giftadmin' => 'Leg neji Gschänk aa un bearbeit sonigi, wu s scho het',
+);
+
+/** Upper Sorbian (Hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'giftmanager' => 'Zrjadowak darow',
+	'giftmanager-addgift' => '+ Nowy dar přidać',
+	'giftmanager-access' => 'přistup k darej',
+	'giftmanager-description' => 'wopisanje dara',
+	'giftmanager-giftimage' => 'wobraz dara',
+	'giftmanager-image' => 'wobraz přidać/narunać',
+	'giftmanager-giftcreated' => 'Dar bu wutworjeny',
+	'giftmanager-giftsaved' => 'Dar bu składowany',
+	'giftmanager-public' => 'zjawny',
+	'giftmanager-private' => 'priwatny',
+	'giftmanager-view' => 'Lisćinu darow sej wobhladać',
+	'g-add-message' => 'Powěsć přidać',
+	'g-back-edit-gift' => 'Wróćo k wobdźěłanju tutoho dara',
+	'g-back-gift-list' => 'Wróćo k lisćinje darow',
+	'g-back-link' => '< Wróćo k stronje wužiwarja $1',
+	'g-choose-file' => 'Wubjer dataju:',
+	'g-cancel' => 'Přetorhnyć',
+	'g-count' => '$1 ma $2 {{PLURAL:$2|dar|daraj|dary|darow}}.',
+	'g-create-gift' => 'Dar wutworić',
+	'g-created-by' => 'wutworjeny wot',
+	'g-current-image' => 'Aktualny wobraz',
+	'g-delete-message' => 'Chceš woprawdźe dar "$1" wušmórnyć?
+To wušmórnje jón tež z wužiwarjow, kotřiž su jón dostali.',
+	'g-description-title' => 'Dar "$2" wužiwarja $1',
+	'g-error-do-not-own' => 'Tutón dar njewobsedźiš.',
+	'g-error-message-blocked' => 'Sy tuchwilu zablokowany a njemóžeš dary dać',
+	'g-error-message-invalid-link' => 'Wotkaz, kotryž sy zapodał, je njepłaćiwy.',
+	'g-error-message-login' => 'Dyrbiš so přizjewić, zo by dary dał',
+	'g-error-message-no-user' => 'Wužiwar, kotrehož pospytuješ sej wobhladać, njeeksistuje.',
+	'g-error-message-to-yourself' => 'Njemóžeš sej dar dać.',
+	'g-error-title' => 'Hopla, sy něšto wopak činił!',
+	'g-file-instructions' => 'Twój wobraz dyrbi typ jpeg, png abo gif (žane animěrowane gif) měć a dyrbi mjeńši hač +éé kb wulki być.',
+	'g-from' => 'z <a href="$1">$2</a>',
+	'g-gift' => 'dar',
+	'g-gift-name' => 'mjeno dara',
+	'g-give-gift' => 'Dar dać',
+	'g-give-all' => 'Chceš wužiwarjej $1 dar dać?
+Klikń prosće na jedyn ze slědowacych darow a na "Dar pósłać".
+Je to cyle jednore.',
+	'g-give-all-message-title' => 'Powěsć přidać',
+	'g-give-all-title' => 'Wužiwarjej $1 něšto darić',
+	'g-give-enter-friend-title' => 'Jeli wěš mjeno wužiwarja, zapisaj jo deleka',
+	'g-given' => 'Tutón dar bu {{PLURAL:$1|jedyn raz|dwójce|$1 razy|$1 razow}} wudaty',
+	'g-give-list-friends-title' => 'Z lisćiny twojich přećelow wubrać',
+	'g-give-list-select' => 'přećela wubrać',
+	'g-give-separator' => 'abo',
+	'g-give-no-user-message' => 'Dary a myta su wulkotne wašnje, zo by swojim přećelam připóznaće wopokazał!',
+	'g-give-no-user-title' => 'Komu chceš něšto darić?',
+	'g-give-to-user-title' => 'Dar "$1" wužiwarjej $2 pósłać',
+	'g-give-to-user-message' => 'Chceš wužiwarjej $1 <a href="$2">něšto druhe darić</a>?',
+	'g-go-back' => 'Wróćo hić',
+	'g-imagesbelow' => 'Deleka slěduja twoje wobrazy, kotrež budu so na tutym sydle wužiwać',
+	'g-large' => 'Wulki',
+	'g-list-title' => 'Lisćina darow wužiwarja $1',
+	'g-main-page' => 'Hłowna strona',
+	'g-medium' => 'Srěni',
+	'g-mediumlarge' => 'Srěnjowulki',
+	'g-new' => 'nowy',
+	'g-next' => 'Přichodny',
+	'g-previous' => 'Předchadny',
+	'g-remove' => 'Wotstronić',
+	'g-remove-gift' => 'Tutón dar wotstronić',
+	'g-remove-message' => 'Chceš dar "$1" woprawdźe wotstronić?',
+	'g-recent-recipients' => 'Druzy aktualni přijimowarjo tutoho dara',
+	'g-remove-success-title' => 'Sy dar "$1" wuspěšnje wotstronił',
+	'g-remove-success-message' => 'Dar "$1" bu wotstronjeny.',
+	'g-remove-title' => '"$1" wotstronić?',
+	'g-send-gift' => 'Dar pósłać',
+	'g-select-a-friend' => 'přećela wubrać',
+	'g-sent-title' => 'Sy wužiwarjej $1 dar pósłał',
+	'g-sent-message' => 'Sy slědowacy dar wužiwarjej $1 pósłał.',
+	'g-small' => 'Mały',
+	'g-to-another' => 'Někomu druhemu dać',
+	'g-uploadsuccess' => 'Nahraće wuspěšne',
+	'g-viewgiftlist' => 'Lisćinu darow sej wobhladać',
+	'g-your-profile' => 'Twój profil',
+	'gift_received_subject' => '$1 je ći dar $2 na {{GRAMMAR:lokatiw|{{SITENAME}}}} pósłał.',
+	'gift_received_body' => 'Witaj $1.
+
+$2 je ći runje dar $3 na {{GRAMMAR:lokatiw|{{SITENAME}}}} pósłał.
+
+Chceš zdźělenku $2 čitać, kotruž je ći zawostajił a swój dar widźeć? Klikń na slědowacy wotkaz:
+
+$4
+
+Nadźijamy so, zo so ći spodoba!
+
+Dźakujemy so,
+
+team {{SITENAME}}
+
+---
+
+Hej, hižo nochceš žane e-mejle wot nas dóstać?
+
+Klikń na $5
+a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
+	'right-giftadmin' => 'Nowe dary wutworić a eksistowace wobdźěłać',
 );
 
 /** Interlingua (Interlingua)
@@ -1665,10 +1769,10 @@ $messages['oc'] = array(
 	'g-uploadsuccess' => 'Telecargament efectuat amb succès',
 	'g-viewgiftlist' => 'Veire la lista dels presents',
 	'g-your-profile' => 'Vòstre perfil',
-	'gift_received_subject' => '$1 vos a mandat lo present $1 sus {{SITENAME}} !',
+	'gift_received_subject' => '$1 vos a mandat lo present $2 sus {{SITENAME}} !',
 	'gift_received_body' => "Bonjorn $1,
 
-$2 vos ven de mandar lo present $2 sus {{SITENAME}}.
+$2 vos ven de mandar lo present $3 sus {{SITENAME}}.
 
 Volètz veire la nòta $2 que vos es adreçada e veire vòstre present ? Clicatz sul ligam çaijós :
 
@@ -1947,7 +2051,7 @@ $messages['sk'] = array(
 	'gift_received_subject' => '$1 vám poslal darček $2 na {{GRAMMAR:lokál|{{SITENAME}}}}',
 	'gift_received_body' => 'Ahoj $1:
 
-$1 vám práve poslal darček $2 na {{GRAMMAR:lokál|{{SITENAME}}}}
+$1 vám práve poslal darček $3 na {{GRAMMAR:lokál|{{SITENAME}}}}
 
 Chcete si prečítať komentár, ktorý vám $2 nechal a pozrieť si svoj darček? Kliknite na nasledovný odkaz:
 

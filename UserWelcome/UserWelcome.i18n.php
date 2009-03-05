@@ -281,12 +281,14 @@ $messages['es'] = array(
 
 /** Estonian (Eesti)
  * @author Avjoska
+ * @author KalmerE.
  */
 $messages['et'] = array(
 	'mp-userlevels-link' => 'Kasutajate tasemed',
 	'mp-welcome-upload' => 'Laadi üles',
 	'mp-welcome-edit' => 'Toimeta',
 	'mp-welcome-points' => '$1 punkti',
+	'mp-welcome-logged-in' => 'Tere $1',
 	'mp-request-new-message' => 'uus sõnum',
 );
 

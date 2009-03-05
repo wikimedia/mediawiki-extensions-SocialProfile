@@ -568,6 +568,7 @@ ja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.',
 
 /** French (Français)
  * @author IAlex
+ * @author PieRRoMaN
  * @author Verdy p
  */
 $messages['fr'] = array(
@@ -577,7 +578,7 @@ $messages['fr'] = array(
 	'ga-back-gift-list' => 'Revenir à la liste des cadeaux',
 	'ga-back-link' => '<a href="$1">< Revenir au profil de $2</a>',
 	'ga-choosefile' => 'Choisir le fichier :',
-	'ga-count' => '$1 a $2 prix.',
+	'ga-count' => '$1 a {{PLURAL:$2|un prix|$2 prix}}.',
 	'ga-create-gift' => 'Créer un cadeau',
 	'ga-created' => 'Le cadeau a été créé',
 	'ga-currentimage' => 'Image actuelle',
@@ -586,7 +587,7 @@ $messages['fr'] = array(
 	'ga-error-title' => 'Oops, vous avez pris un mauvais tour !',
 	'ga-file-instructions' => 'Voir image doit être jpeg, png ou gif (mais pas animée) et doit être plus petite que 100 Ko.',
 	'ga-gift' => 'cadeau',
-	'ga-gift-given-count' => 'Ce cadeau a été donné $1 fois',
+	'ga-gift-given-count' => 'Ce cadeau a été donné {{PLURAL:$1|une fois|$1 fois}}',
 	'ga-gift-title' => '« $2 » de $1',
 	'ga-giftdesc' => 'description du cadeau',
 	'ga-giftimage' => 'image du cadeau',
@@ -1069,7 +1070,9 @@ $messages['lb'] = array(
 	'ga-addnew' => '+ Neie Cadeau derbäisetzen',
 	'ga-back-edit-gift' => "Zréck fir dëse Cadeau z'änneren",
 	'ga-back-gift-list' => "Zréck op d'Lëscht vun de Cadeauen",
+	'ga-back-link' => '<a href="$1">< Zréck op dem $2 säi Profil</a>',
 	'ga-choosefile' => 'Wielt e Fichier:',
+	'ga-create-gift' => 'Cadeau uleeën',
 	'ga-created' => 'De Cadeau gouf ugeluecht',
 	'ga-currentimage' => 'Aktuellt Bild',
 	'ga-error-message-invalid-link' => 'De Link deen Dir uginn hutt ass net valabel.',
@@ -1089,6 +1092,7 @@ $messages['lb'] = array(
 	'ga-saved' => 'De Cadeau gouf gespäichert',
 	'ga-small' => 'Kleng',
 	'ga-uploadsuccess' => 'Eroplueden ofgeschloss',
+	'ga-viewlist' => 'Lëscht vun de Cadeaue kucken',
 );
 
 /** Dutch (Nederlands)
