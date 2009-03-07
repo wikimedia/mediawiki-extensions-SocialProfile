@@ -3499,8 +3499,12 @@ $messages['it'] = array(
  * @author Hosiryuhosi
  */
 $messages['ja'] = array(
+	'user-gifts-title' => 'プレゼント',
 	'user-edit-profile' => 'プロフィールの編集',
+	'user-upload-avatar' => 'アバターをアップロード',
 	'user-watchlist' => 'ウォッチリスト',
+	'user-send-message' => 'メッセージを送る',
+	'user-send-gift' => 'プレゼントを贈る',
 	'user-stats-title' => '統計',
 	'user-stats-edits' => '編集回数',
 	'user-stats-votes' => '票数',
@@ -3524,6 +3528,7 @@ $messages['ja'] = array(
 	'user-profile-personal-name' => '名前',
 	'user-profile-personal-city' => '市町村',
 	'user-profile-personal-country' => '国',
+	'user-profile-personal-birthday' => '誕生日',
 	'user-profile-personal-birthdate' => '日付 (MM/DD)',
 	'user-profile-personal-web' => 'ウェブ',
 	'user-profile-personal-websites' => 'ウェブサイト',

@@ -989,13 +989,23 @@ e disactiva in tu preferentias le notificationes per e-mail.',
  */
 $messages['ja'] = array(
 	'systemgiftmanager' => 'システムギフトマネージャー',
+	'ga-addnew' => '+ 新しいプレゼントを追加',
+	'ga-back-gift-list' => 'プレゼントリストへ戻る',
+	'ga-create-gift' => 'プレゼントを作成',
+	'ga-created' => 'プレゼントは作成されました。',
+	'ga-currentimage' => '現在の画像',
 	'ga-gift' => 'ギフト',
+	'ga-giftdesc' => 'プレゼントの説明',
 	'ga-giftimage' => 'ギフト画像',
 	'ga-giftname' => 'ギフト名',
 	'ga-gifttype' => 'ギフトタイプ',
 	'ga-new' => '新規',
 	'ga-next' => '次',
 	'ga-previous' => '前',
+	'ga-saved' => 'プレゼントは保存されました。',
+	'ga-small' => '小さい',
+	'ga-uploadsuccess' => 'アップロード成功',
+	'ga-viewlist' => 'プレゼントリストを見る',
 );
 
 /** Ripoarisch (Ripoarisch)

@@ -583,6 +583,110 @@ Klicken Sie $5
 und änderen Sie Ihre Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
 );
 
+/** Lower Sorbian (Dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'giftmanager' => 'Zastojnik darow',
+	'giftmanager-addgift' => '+ Nowy dar pśidaś',
+	'giftmanager-access' => 'pśistup k daroju',
+	'giftmanager-description' => 'wopisanje dara',
+	'giftmanager-giftimage' => 'wobraz dara',
+	'giftmanager-image' => 'wobraz pśidaś/wuměniś',
+	'giftmanager-giftcreated' => 'Dar jo se napórał',
+	'giftmanager-giftsaved' => 'Dar jo se składł',
+	'giftmanager-public' => 'zjawny',
+	'giftmanager-private' => 'priwatny',
+	'giftmanager-view' => 'Lisćinu darow se woglědaś',
+	'g-add-message' => 'Powěsć pśidaś',
+	'g-back-edit-gift' => 'Slědk k wobźěłanjeju toś togo dara',
+	'g-back-gift-list' => 'Slědk k lisćinje darow',
+	'g-back-link' => '< Slědk k bokoju wužywarja $1',
+	'g-choose-file' => 'Wubjeŕ dataju:',
+	'g-cancel' => 'Pśetergnuś',
+	'g-count' => '$1 ma $2 {{PLURAL:$2|dar|dara|dary|darow}}.',
+	'g-create-gift' => 'Dar napóraś',
+	'g-created-by' => 'napórany wót',
+	'g-current-image' => 'Aktualny wobraz',
+	'g-delete-message' => 'Coš dar "$1" napšawdu wulašowaś?
+To wulašujo jen teke z wužywarjow, kótarež su jen dostali.',
+	'g-description-title' => 'Dar "$2" wužywarja $1',
+	'g-error-do-not-own' => 'Njewobsejźiš toś ten dar.',
+	'g-error-message-blocked' => 'Sy tuchylu blokěrowany a njamóžoš nic dariś',
+	'g-error-message-invalid-link' => 'Wótkaz, kótaryž sy zapódał, jo njepłaśiwy.',
+	'g-error-message-login' => 'Musyš se pśizjawiś, aby něco darił',
+	'g-error-message-no-user' => 'Wužywaŕ, kótaregož wopytujoš se woglědaś, njeeksistěrujo.',
+	'g-error-message-to-yourself' => 'Njamóžoš sebje samemu nic dariś',
+	'g-error-title' => 'Hopla, sy cynił něco wopaki!',
+	'g-file-instructions' => 'Twój wobraz musy typ jpeg, png abo gif (žedne animěrowane gif) měś a mjeńšy ako 100 kb wjeliki byś.',
+	'g-from' => 'z <a href="$1">$2</a>',
+	'g-gift' => 'dar',
+	'g-gift-name' => 'mě dara',
+	'g-give-gift' => 'Dariś',
+	'g-give-all' => 'Coš wužywarjeju $1 něco dariś?
+Klikni jadnorje na jaden ze slědujucych darow a pón na "Dar pósłaś".
+Jo cele lažko.',
+	'g-give-all-message-title' => 'Powěsć pśidaś',
+	'g-give-all-title' => 'Wužywarjeju $1 něco dariś',
+	'g-give-enter-friend-title' => 'Jolic wěš mě wužywarja, zapiš jo dołojce',
+	'g-given' => 'Dar jo se wudał {{PLURAL:$1|raz|dwójcy|$1 raze|$1 raz}}',
+	'g-give-list-friends-title' => 'Z twójeje lisćiny pśijaśelow wubraś',
+	'g-give-list-select' => 'pśijaśela wubraś',
+	'g-give-separator' => 'abo',
+	'g-give-no-user-message' => 'Dary a myta su wjelicny nałog twójim pśijaśelam pśipóznaśe wopokazaś!',
+	'g-give-no-user-title' => 'Komu coš něco dariś?',
+	'g-give-to-user-title' => 'Dar "$1" wužywarjeju $2 pósłaś',
+	'g-give-to-user-message' => 'Coš wužywarjeju $1 <a href="$2">něco druge dariś</a>?',
+	'g-go-back' => 'Źi slědk',
+	'g-imagesbelow' => 'Dołojce slěduju wobraze, kótarež se wužywaju na toś tom sedle',
+	'g-large' => 'Wjeliki',
+	'g-list-title' => 'Lisćina darow wužywarja $1',
+	'g-main-page' => 'Głowny bok',
+	'g-medium' => 'Srědny',
+	'g-mediumlarge' => 'Wósrědny',
+	'g-new' => 'nowy',
+	'g-next' => 'Pśiducy',
+	'g-previous' => 'Pjerwjejšny',
+	'g-remove' => 'Wotpóraś',
+	'g-remove-gift' => 'Toś ten dar wótpóraś',
+	'g-remove-message' => 'Coš dar "$1" napšawdu wótpóraś?',
+	'g-recent-recipients' => 'Druge aktualne dostawarje toś togo dara',
+	'g-remove-success-title' => 'Sy wuspěšnje wótpórał dar "$1"',
+	'g-remove-success-message' => 'Dar "$1" jo se wótpórał.',
+	'g-remove-title' => '"$1" wótpóraś?',
+	'g-send-gift' => 'Dar pósłaś',
+	'g-select-a-friend' => 'wubjeŕ pśijaśela',
+	'g-sent-title' => 'Sy pósłał dar wužywarjeju $1',
+	'g-sent-message' => 'Sy pósłał slědujucy dar wužywarjeju $1.',
+	'g-small' => 'Mały',
+	'g-to-another' => 'Někomu drugemu daś',
+	'g-uploadsuccess' => 'Nagraśe wuspěšne',
+	'g-viewgiftlist' => 'Lisćinu darow se woglědaś',
+	'g-your-profile' => 'Twój profil',
+	'gift_received_subject' => '$1 jo śi pósłał dar $2 na {{GRAMMAR:lokatiw|{{SITENAME}}}}!',
+	'gift_received_body' => 'Witaj $1.
+
+$2 jo śi rowno pósłał dar $3 na {{GRAMMAR:lokatiw|{{SITENAME}}}}.
+
+Coš powěźeńku cytaś, kótaruž $2 jo śi zawóstajił a swój dar wiźeś? Klikni na slědujucy wótkaz:
+
+$4
+
+Naźejamy se, až se śi spódoba!
+
+Źěkujomy se,
+
+team {{SITENAME}}
+
+---
+
+Hej, južo njocoš e-maile wót nas dostaś?
+
+Klikni na $5
+a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
+	'right-giftadmin' => 'Nowe dary napóraś a eksistěrujuce wobźěłaś',
+);
+
 /** Greek (Ελληνικά)
  * @author Omnipaedista
  */
@@ -1116,20 +1220,20 @@ $messages['hsb'] = array(
 To wušmórnje jón tež z wužiwarjow, kotřiž su jón dostali.',
 	'g-description-title' => 'Dar "$2" wužiwarja $1',
 	'g-error-do-not-own' => 'Tutón dar njewobsedźiš.',
-	'g-error-message-blocked' => 'Sy tuchwilu zablokowany a njemóžeš dary dać',
+	'g-error-message-blocked' => 'Sy tuchwilu zablokowany a njemóžeš ničo darić',
 	'g-error-message-invalid-link' => 'Wotkaz, kotryž sy zapodał, je njepłaćiwy.',
-	'g-error-message-login' => 'Dyrbiš so přizjewić, zo by dary dał',
+	'g-error-message-login' => 'Dyrbiš so přizjewić, zo by něšto darił',
 	'g-error-message-no-user' => 'Wužiwar, kotrehož pospytuješ sej wobhladać, njeeksistuje.',
-	'g-error-message-to-yourself' => 'Njemóžeš sej dar dać.',
+	'g-error-message-to-yourself' => 'Njemóžeš sej samomu ničo darić.',
 	'g-error-title' => 'Hopla, sy něšto wopak činił!',
-	'g-file-instructions' => 'Twój wobraz dyrbi typ jpeg, png abo gif (žane animěrowane gif) měć a dyrbi mjeńši hač +éé kb wulki być.',
+	'g-file-instructions' => 'Twój wobraz dyrbi typ jpeg, png abo gif (žane animěrowane gif) měć a dyrbi mjeńši hač 100 kb wulki być.',
 	'g-from' => 'z <a href="$1">$2</a>',
 	'g-gift' => 'dar',
 	'g-gift-name' => 'mjeno dara',
-	'g-give-gift' => 'Dar dać',
-	'g-give-all' => 'Chceš wužiwarjej $1 dar dać?
+	'g-give-gift' => 'Darić',
+	'g-give-all' => 'Chceš wužiwarjej $1 něšsto darić?
 Klikń prosće na jedyn ze slědowacych darow a na "Dar pósłać".
-Je to cyle jednore.',
+Je to cyle lochko.',
 	'g-give-all-message-title' => 'Powěsć přidać',
 	'g-give-all-title' => 'Wužiwarjej $1 něšto darić',
 	'g-give-enter-friend-title' => 'Jeli wěš mjeno wužiwarja, zapisaj jo deleka',
@@ -1172,7 +1276,7 @@ Je to cyle jednore.',
 
 $2 je ći runje dar $3 na {{GRAMMAR:lokatiw|{{SITENAME}}}} pósłał.
 
-Chceš zdźělenku $2 čitać, kotruž je ći zawostajił a swój dar widźeć? Klikń na slědowacy wotkaz:
+Chceš zdźělenku čitać, kotruž $2 je ći zawostajił a swój dar widźeć? Klikń na slědowacy wotkaz:
 
 $4
 
