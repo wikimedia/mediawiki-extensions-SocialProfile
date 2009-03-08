@@ -36,7 +36,7 @@ $messages['en'] = array(
 	'g-current-image' => 'Current image',
 	'g-delete-message' => 'Are your sure you want to delete the gift "$1"?
 This will also delete it from users who may have received it.',
-	'g-description-title' => '$1\'s gift "$2"',
+	'g-description-title' => '$1\'s gift "$2"', # This message supports {{GENDER}}
 	'g-error-do-not-own' => 'You do not own this gift.',
 	'g-error-message-blocked' => 'You are currently blocked and cannot give gifts',
 	'g-error-message-invalid-link' => 'The link you have entered is invalid.',

@@ -52,7 +52,7 @@ class ViewGift extends UnlistedSpecialPage {
 			$sql = "SELECT DISTINCT ug_user_name_to, ug_user_id_to, ug_date FROM ".$wgDBprefix."user_gift WHERE ug_gift_id={$gift["gift_id"]} AND ug_user_name_to<>'" . addslashes($gift["user_name_to"]) . "' GROUP BY ug_user_name_to ORDER BY ug_date DESC LIMIT 0,6";
 			$res = $dbr->query($sql);
 
-			$output .= $wgOut->setPageTitle( wfMsg( 'g-description-title', $gift['user_name_to'], $gift['name'] ) );
+			$output .= $wgOut->setPageTitle( wfMsgExt( 'g-description-title', array( 'parsemag' ), $gift['user_name_to'], $gift['name'] ) );
 
 			$output .= '<div class="back-links">
 				<a href="' . Title::makeTitle( NS_USER, $gift['user_name_to'] )->escapeFullURL() . '">' . wfMsg( 'g-back-link', $gift['user_name_to'] ) . '</a>
