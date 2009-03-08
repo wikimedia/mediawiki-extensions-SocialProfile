@@ -585,9 +585,11 @@ a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
 
 /** Greek (Ελληνικά)
  * @author Consta
+ * @author Crazymadlover
  */
 $messages['el'] = array(
 	'userboard_messagetype' => 'Τύπος Μηνύματος',
+	'userboard_sendbutton' => 'Αποστολή',
 );
 
 /** Esperanto (Esperanto)

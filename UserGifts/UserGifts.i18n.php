@@ -124,8 +124,11 @@ $messages['qqq'] = array(
 	'g-cancel' => '{{Identical|Cancel}}',
 	'g-count' => "* '''$1''' is a user name
 * '''$2''' is his or her count of gifts",
-	'g-created-by' => 'Complete contents of a cell in a table. The next cell (horizontally) contains the user name of the creator of a gift.',
-	'g-description-title' => "* '''$1''' is a user name",
+	'g-created-by' => 'Complete contents of a cell in a table. The next cell (horizontally) contains the user name of the creator of a gift. {{gender}}
+* (optional) $1 is a user name that is used in the next cell',
+	'g-description-title' => '{{gender}}
+* $1 is a user name
+* $2 is the name of a gift',
 	'g-new' => '{{Identical|New}}',
 );
 
@@ -1433,7 +1436,7 @@ $messages['ksh'] = array(
 	'g-cancel' => 'Stopp! Avbreche!',
 	'g-count' => '{{GENDER:$1|Dä|Dat|Dä Metmaacher}} $1 hät {{PLURAL:$2|ei Jeschengk|$2 Geschengke|kei Jeschengk}}.',
 	'g-create-gift' => 'Jeschengk äschaffe',
-	'g-created-by' => 'aanjelaat fum',
+	'g-created-by' => 'aanjelaat {{GENDER:$1|fum|fum|fum Metmaacher|fum|fun dä}}',
 	'g-current-image' => 'Et aktoälle Beld',
 	'g-delete-message' => 'Beß De Der sescher, dat de dat Jeschengk „$1“ fott maacher wells?
 Domet verschwindt et och bei all de Metmaacher, di dat ald ens krääje han.',
@@ -1896,6 +1899,13 @@ Volètz pas recebre mai de corrièrs electronics de nòstra part ?
 Clicatz $5
 e modificatz vòstras preferéncias per desactivar las notificacions per corrièr electronic.",
 	'right-giftadmin' => "Crear de presents novèls e modificar los qu'existisson",
+);
+
+/** Ossetic (Иронау)
+ * @author Amikeco
+ */
+$messages['os'] = array(
+	'g-cancel' => 'Нæ бæззы',
 );
 
 /** Polish (Polski)

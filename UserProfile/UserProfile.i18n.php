@@ -3499,7 +3499,11 @@ $messages['it'] = array(
  * @author Hosiryuhosi
  */
 $messages['ja'] = array(
+	'user-awards-title' => '表彰',
 	'user-gifts-title' => 'プレゼント',
+	'user-view-all' => 'すべて閲覧',
+	'user-upload-image' => '画像をアップロード',
+	'user-edit-this' => 'これを編集',
 	'user-edit-profile' => 'プロフィールの編集',
 	'user-upload-avatar' => 'アバターをアップロード',
 	'user-watchlist' => 'ウォッチリスト',
@@ -3542,6 +3546,7 @@ $messages['ja'] = array(
 	'user-profile-picture-large' => '大',
 	'user-profile-picture-medium' => '中',
 	'user-profile-picture-small' => '小',
+	'user-profile-goback' => '戻る',
 	'user-profile-userlevels-link' => 'ユーザーレベル',
 	'user-page-link' => 'ユーザーページ',
 	'user-social-profile-link' => 'ソーシャルプロフィール',
@@ -5257,6 +5262,9 @@ $messages['oc'] = array(
 $messages['os'] = array(
 	'user-watchlist' => 'Мæ цæстдарды номхыгъд',
 	'user-profile-personal-email' => 'Эл. посты адрис',
+	'user-profile-picture-large' => 'Стыр',
+	'user-profile-picture-medium' => 'Рæстæмбис',
+	'user-profile-picture-small' => 'Чысыл',
 );
 
 /** Plautdietsch (Plautdietsch)
@@ -6810,8 +6818,12 @@ $messages['tr'] = array(
 	'populateuserprofiles' => 'Popüler kullanıcı profilleri',
 	'user-awards-title' => 'Ödüller',
 	'user-gifts-title' => 'Hediyeler',
+	'user-view-all' => 'Hepsini gör',
 	'user-upload-image' => 'Dosya yükle',
+	'user-edit-this' => 'Bunu değiştir',
+	'user-edit-profile' => 'Profili düzenle',
 	'user-upload-avatar' => 'Avatar yükle',
+	'user-watchlist' => 'İzleme listem',
 	'user-stats-title' => 'İstatistikler',
 	'user-stats-edits' => '{{PLURAL:$1|Edit|Düzenlemeler}}',
 	'other-info-title' => 'Diğer bilgiler',
@@ -6821,6 +6833,7 @@ $messages['tr'] = array(
 	'user-personal-info-real-name' => 'Gerçek isminiz',
 	'user-profile-section-interests' => 'Diğer bilgiler',
 	'user-profile-personal-email' => 'E-posta',
+	'user-profile-personal-location' => 'Yer',
 	'user-profile-personal-city' => 'Şehir',
 	'user-profile-personal-country' => 'Ülke',
 	'user-profile-personal-birthdate' => 'Tarih (AA/GG)',

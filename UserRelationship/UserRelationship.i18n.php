@@ -1130,6 +1130,186 @@ Klicke $4
 und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
 );
 
+/** Lower Sorbian (Dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'viewrelationships' => 'Póśěgi se woglědaś',
+	'viewrelationshiprequests' => 'Póśěgowe napšašowanja se woglědaś',
+	'ur-already-submitted' => 'Twójo napšašowanje jo se pósłało',
+	'ur-error-page-title' => 'Hopla!',
+	'ur-error-title' => 'Hopla, sy cynił něco wopaki!',
+	'ur-error-message-no-user' => 'Njamóžomy twójo napšašowanje wuwjasć, dokulaž wužywaŕ z toś tym mjenim njeeksistěrujo.',
+	'ur-main-page' => 'Głowny bok',
+	'ur-your-profile' => 'Twój profil',
+	'ur-backlink' => '&lt; Slědk k profiloju wužywarja $1',
+	'ur-relationship-count-foes' => '$1 ma $2 {{PLURAL:$2|njepśijaśela|njepśijaśelowu|njepśijaśelow|njepśijaśelow}}.
+Coš dalšnych njepśijaśelow?
+<a href="$3">Pśepšos jich.</a>',
+	'ur-relationship-count-friends' => '$1 ma $2 {{PLURAL:$2|pśijaśela|pśijaśelowu|pśijaśelow|pśijaśelow}}.
+Coš dalšnych pśijaśelow?
+<a href="$3">Pśepšos jich.</a>',
+	'ur-add-friends' => 'Coš dalšnych pśijaśelow?
+<a href="$1">Pśepšos jich</a>',
+	'ur-add-friend' => 'Ako pśijaśela pśidaś',
+	'ur-add-foe' => 'Ako njepśijaśela pśidaś',
+	'ur-add-no-user' => 'Žeden wužywaŕ wubrany.
+Pšosym wubjeŕ pśijaśelow/njepśijaśelow pśez pšawy wótkaz.',
+	'ur-add-personal-message' => 'Wósobinsku powěsć pśidaś',
+	'ur-remove-relationship-friend' => 'Ako pśijaśela wótpóraś',
+	'ur-remove-relationship-foe' => 'Ako njepśijaśela wótpóraś',
+	'ur-give-gift' => 'Dariś',
+	'ur-previous' => 'pjerwjejšny',
+	'ur-next' => 'pśiducy',
+	'ur-remove-relationship-title-foe' => 'Coš $1 ako swójogo njepśijaśela wótpóraś?',
+	'ur-remove-relationship-title-confirm-foe' => 'Sy wótpórał $1 ako swójogo njepśijaśela',
+	'ur-remove-relationship-title-friend' => 'Coš $1 ako swójogo pśijaśela wótpóraś?',
+	'ur-remove-relationship-title-confirm-friend' => 'Sy wótpórał $1 ako swójogo pśijaśela',
+	'ur-remove-relationship-message-foe' => 'Sy pominał $1 ako swójogo njepśijaśela wótpóraś, tłoc "$2", aby wobkšuśił.',
+	'ur-remove-relationship-message-confirm-foe' => 'Sy wuspěšnje wótpórał $1 ako swójogo njepśijaśela.',
+	'ur-remove-relationship-message-friend' => 'Sy pominał $1 ako swójogo pśijaśela wótpóraś, tłoc "$2", aby wobkšuśił.',
+	'ur-remove-relationship-message-confirm-friend' => 'Sy wuspěšnje wótpórał $1 ako swójogo pśijaśela.',
+	'ur-remove-error-message-no-relationship' => 'Njamaš žaden póśěg k $1.',
+	'ur-remove-error-message-remove-yourself' => 'Njamóžoš sebje wótpóraś.',
+	'ur-remove-error-message-pending-foe-request' => 'Maš njedocynjone njepśijaśelske napšašowanje z $1.',
+	'ur-remove-error-message-pending-friend-request' => 'Maš njedocynjone pśijaśelske napšašowanje z $1.',
+	'ur-remove-error-not-loggedin-foe' => 'Musyš pśizjawjony byś, aby wótpórał njepśijaśela.',
+	'ur-remove-error-not-loggedin-friend' => 'Musyš pśizjawjony byś, aby wótpórał pśijaśela.',
+	'ur-remove' => 'Wótpóraś',
+	'ur-cancel' => 'Pśetergnuś',
+	'ur-login' => 'Pśizjawjenje',
+	'ur-add-title-foe' => 'Coš $1 ako swójogo njepśijaśela pśidaś?',
+	'ur-add-title-friend' => 'Coš $1 ako swójogo pśijaśela pśidaś?',
+	'ur-add-message-foe' => 'Coš rowno $1 ako swójogo njepśijaśela pśidaś.
+Buźomy $1 informěrowaś, aby wobkšuśili twój gniw.',
+	'ur-add-message-friend' => 'Coš rowno $1 ako swójogo pśijaśela pśidaś.
+Buźomy $1 informěrowaś, aby wobkšuśili twójo pśijaśelstwo.',
+	'ur-add-button-foe' => 'Ako njepśijaśela pśidaś',
+	'ur-add-button-friend' => 'Ako pśijaśela pśidaś',
+	'ur-add-sent-title-foe' => 'Smy pósłali wužywarjeju $1 twójo njepśijaśelske napšašowanje!',
+	'ur-add-sent-title-friend' => 'Sym pósłali wužywarjeju $1 twójo pśijaśelske napšašowanje!',
+	'ur-add-sent-message-foe' => 'Twójo njepśijaśelske napšašowanje jo se pósłało wužywarjeju $1 za wobkšuśenje.
+Jolic $1 wobkšuśijo twójo napšašowanje, dostanjoš wótegronjeńsku e-mail',
+	'ur-add-sent-message-friend' => 'Twójo pśijaśelske napšašowanje jo se pósłało wužywarjeju $1 za wobkšuśenje.
+Jolic $1 wobkšuśijo twójo napšašowanje, dostanjoš wótegronjeńsku e-mail',
+	'ur-add-error-message-no-user' => 'Wužywaŕ, kótaregož wopytujoš pśidaś, njeeksistěrujo.',
+	'ur-add-error-message-blocked' => 'Sy tuchylu blokěerowany a njamóžoš pśijaśelow abo njepśijaśelow pśidaś.',
+	'ur-add-error-message-yourself' => 'Njamóžoš sebje ako pśijaśela abo njepśijaśela pśidaś.',
+	'ur-add-error-message-existing-relationship-foe' => '$1 jo južo twój njepśijaśel.',
+	'ur-add-error-message-existing-relationship-friend' => '$1 jo južo twój pśijaśel.',
+	'ur-add-error-message-pending-request-title' => 'Sćerpnosć!',
+	'ur-add-error-message-pending-friend-request' => 'Maš njedocynjone pśijaśelske napšašowanje z $1.
+Buźomy śi informěrowaś, gaž $1 wobkšuśijo twójo napšašowanje.',
+	'ur-add-error-message-pending-foe-request' => 'Maš njedocynjone njepśijaśelske napšašowanje z $1.
+Buźomy śi informěrowaś, gaž $1 wobkšuśijo twójo napšašowanje.',
+	'ur-add-error-message-not-loggedin-foe' => 'Musyš pśizjawjony byś, aby pśidał njepśijaśela',
+	'ur-add-error-message-not-loggedin-friend' => 'Musyš pśizjawjony byś, aby pśidał pśijaśela',
+	'ur-requests-title' => 'Póśěgowe napšašowanja',
+	'ur-requests-message-foe' => '<a href="$1">$2</a> co twójogo njepśijaśela byś.',
+	'ur-requests-message-friend' => '<a href="$1">$2</a> co twój pśijaśel byś.',
+	'ur-accept' => 'Akceptěrowaś',
+	'ur-reject' => 'Wótpokazaś',
+	'ur-no-requests-message' => 'Njamaš žedne pśijaśelske abo njepśijaśelske napšašowanja.
+Jolic coš wěcej pśijaśelow, <a href="$1">pśepros jich!</a>',
+	'ur-requests-added-message-foe' => 'Sy pśidał $1 ako swójogo njepśijaśela.',
+	'ur-requests-added-message-friend' => 'Sy pśidał $1 ako swójogo pśijaśela.',
+	'ur-requests-reject-message-friend' => 'Sy wótpokazał $1 ako swójogo pśijaśela.',
+	'ur-requests-reject-message-foe' => 'Sy wótpokazał $1 ako swójogo njepśijaśela.',
+	'ur-title-foe' => 'Lisćina njepśijaśelow wužywarja $1',
+	'ur-title-friend' => 'Lisćina pśijaśelow wužywarja $1',
+	'friend_request_subject' => '$1 jo śi pśidał ako pśijaśela na {{GRAMMAR:lokatiw|{{SITENAME}}}}',
+	'friend_request_body' => 'Witaj $1.
+
+$2 jo śi pśidał ako pśijaśela na {{GRAMMAR:lokatiw|{{SITENAME}}}}. Comy zawěsćiś, až wej wobej stej napšawdu pśijaśela.
+
+Pšosym klikni na toś ten wótkaz, aby wobkšuśił waju pśijaśelstwo:
+$3
+
+Źěkujomy se
+
+---
+
+Hej, južo njocoš žedne e-maile wót nas dostaś?
+
+Klikni na $4
+a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
+	'foe_request_subject' => 'Wójna! $1 jo śi pśidał ako njepśijaśela na {{GRAMMAR:lokatiw|{{SITENAME}}}}!',
+	'foe_request_body' => 'Witaj $1.
+
+$2 jo śi rowno nalicył ako njepśijaśela na {{GRAMMAR:lokatiw|{{SITENAME}}}}. Comy zawěsćiś, až wej wobej stej napšawdu nejžgóršej njepśijaśela abo matej nanejmjenjej argument za to.
+
+Pšosym klikni na toś ten wótkaz, aby wobkšuśił mjazsobnu gramotu.
+
+$3
+
+Źěkujomy se
+
+---
+
+Hej, južo njocoš žedne e-maile wót nas dostaś?
+
+Klikni na $4
+a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
+	'friend_accept_subject' => '$1 jo akceptěrował twójo pśijaśelske napšašowanje na {{GRAMMAR:lokatiw|{{SITENAME}}}}!',
+	'friend_accept_body' => 'Witaj $1.
+
+$2 jo akceptěrował twójo pśijaśelske napšašowanje na {{GRAMMAR:lokatiw|{{SITENAME}}}}!
+
+Poglědaj na bok wužywarja $2 na $3
+
+Źěkujomy se
+
+---
+
+Hej, južo njocoš žedne e-maile wót nas dostaś?
+
+Klikni na $4
+a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
+	'foe_accept_subject' => 'Jo tak daloko! $1 jo akceptěrował twójo njepśijaśelske napšašowanje na {{GRAMMAR:lokatiw|{{SITENAME}}}}!',
+	'foe_accept_body' => 'Witaj $1.
+
+$2 jo akceptěrował twójo njepśijaśelske napšašowanje na {{GRAMMAR:lokatiw|{{SITENAME}}}}!
+
+Póglědaj na bok wužywarja $2 na $3
+
+Źěkujomy se
+
+---
+
+Hej, južo njocoš žedne e-maile wót nas dostaś?
+
+Klikni na $4
+a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
+	'friend_removed_subject' => 'Ow ně! $1 jo śi wótpórał ako pśijaśela na {{GRAMMAR:lokatiw|{{SITENAME}}}}!',
+	'friend_removed_body' => 'Witaj $1.
+
+$2 jo śi wótpórał ako pśijaśela na {{GRAMMAR:lokatiw|{{SITENAME}}}}!
+
+Źěkujomy se
+
+---
+
+Hej, južo njocoš žedne e-maile wót nas dostaś?
+
+Klikni na $4
+a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
+	'foe_removed_subject' => 'Juhu! $1 jo śi wótpórał ako njepśijaśela na {{GRAMMAR:lokatiw|{{SITENAME}}}}!',
+	'foe_removed_body' => 'Witaj $1.
+
+$2 jo śi wótpórał ako njepśijaśela na {{GRAMMAR:lokatiw|{{SITENAME}}}}!
+
+Snaź stej wej wobej na nejlěpšej droze, aby se spśijaśeliłej?
+
+Źěkujomy se
+
+---
+
+Hej, južo njocoš žedne e-maile wót nas dostaś?
+
+Klikni na $4
+a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
+);
+
 /** Greek (Ελληνικά)
  * @author Consta
  * @author Omnipaedista
@@ -2140,10 +2320,12 @@ $messages['hak'] = array(
 );
 
 /** Hawaiian (Hawai`i)
+ * @author Kalani
  * @author Singularity
  */
 $messages['haw'] = array(
 	'ur-remove' => 'Kāpae',
+	'ur-login' => 'ʻEʻe',
 );
 
 /** Hebrew (עברית)
@@ -2345,6 +2527,186 @@ $messages['hil'] = array(
  */
 $messages['hr'] = array(
 	'ur-remove' => 'Ukloni',
+);
+
+/** Upper Sorbian (Hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'viewrelationships' => 'Poćah sej wobhladać',
+	'viewrelationshiprequests' => 'Poćahowe naprašowanja sej wobhladać',
+	'ur-already-submitted' => 'Twoje naprašowanje bu wotposłane',
+	'ur-error-page-title' => 'Hopla!',
+	'ur-error-title' => 'Hopla, sy něšto wopak činił!',
+	'ur-error-message-no-user' => 'Njemóžemy twoje naprašowanje wuwjesć, dokelž wužiwar z tutym mjenom njeeksistuje.',
+	'ur-main-page' => 'Hłowna strona',
+	'ur-your-profile' => 'Twój profil',
+	'ur-backlink' => '&lt; Wróćo k profilej wužiwarja $1',
+	'ur-relationship-count-foes' => '$1 ma $2 {{PLURAL:$2|njepřećela|njepřećelow|njepřećelow|njepřećelow}}.
+Chceš dalšich njepřećelow?
+<a href="$3">Přeproš jich.</a>',
+	'ur-relationship-count-friends' => '$2 ma $2 {{PLURAL:$2|přećela|přećelow|přećelow|přećelow}}.
+Coš dalšich přećelow?
+<a href="$3">Přeproš jich.</a>',
+	'ur-add-friends' => 'Coš dalšich přećelow?
+<a href="$1">Přeproš jich</a>',
+	'ur-add-friend' => 'Jako přećela přidać',
+	'ur-add-foe' => 'Jako njepřećela přidać',
+	'ur-add-no-user' => 'Žadyn wužiwar wubrany.
+Prošu wubjer přećelow/njepřećelow přez prawy wotkaz.',
+	'ur-add-personal-message' => 'Wosobinsku powěsć přidać',
+	'ur-remove-relationship-friend' => 'Jako přećela wotstronić',
+	'ur-remove-relationship-foe' => 'Jako njepřećela wotstronić',
+	'ur-give-gift' => 'Darić',
+	'ur-previous' => 'předchadny',
+	'ur-next' => 'přichodny',
+	'ur-remove-relationship-title-foe' => 'Chceš $1 jako swojeho njepřećela wotstronić?',
+	'ur-remove-relationship-title-confirm-foe' => 'Sy $1 jako swojeho njepřećela wotstronił',
+	'ur-remove-relationship-title-friend' => 'Chceš $1 jako swojeho přećela wotstronić?',
+	'ur-remove-relationship-title-confirm-friend' => 'Sy $1 jako swojeho přećela wotstronił',
+	'ur-remove-relationship-message-foe' => 'Sy požadał $1 jako swojeho njepřećela wotstronić, tłóč na "$2", zo by wobkrućił.',
+	'ur-remove-relationship-message-confirm-foe' => 'Sy $1 wuspěšnje jako swojeho njepřećela wotstronił.',
+	'ur-remove-relationship-message-friend' => 'Sy požadał $1 jako swojeho přećela wotstronić, tłóč "$2", zo by wobkrućił.',
+	'ur-remove-relationship-message-confirm-friend' => 'Sy $1 wuspěšnje jako swojeho přećela wotstronił.',
+	'ur-remove-error-message-no-relationship' => 'Nimaš poćah k $1.',
+	'ur-remove-error-message-remove-yourself' => 'Njemóžeš sebje wotstronić.',
+	'ur-remove-error-message-pending-foe-request' => 'Maš njesčinjene naprašowanje na njepřećelstwo z $1.',
+	'ur-remove-error-message-pending-friend-request' => 'Maš njesčinjene naprašowanje na přećelstwo z $1.',
+	'ur-remove-error-not-loggedin-foe' => 'Dyrbiš přizjewjeny być, zo by njepřećela wotstronił.',
+	'ur-remove-error-not-loggedin-friend' => 'Dyrbiš přizjewjeny być, zo by přećela wotstronił.',
+	'ur-remove' => 'Wotstronić',
+	'ur-cancel' => 'Přetorhnyć',
+	'ur-login' => 'Přizjewjenje',
+	'ur-add-title-foe' => 'Chceš $1 jako swojeho njepřećela přidać?',
+	'ur-add-title-friend' => 'Chceš $1 jako swojeho přećela přidać?',
+	'ur-add-message-foe' => 'Chceš runje $1 jako swojeho njepřećela přidać.
+Budźemy $1 informować, zo bychmy twój hněw wobkrućili.',
+	'ur-add-message-friend' => 'Chceš runje $1 jako swojeho přećela přidać.
+Budźemy $1 informować, zo bychmy twoje přećelstwo wobkrućili.',
+	'ur-add-button-foe' => 'Jako njepřećela přidać',
+	'ur-add-button-friend' => 'Jako přećela přidać',
+	'ur-add-sent-title-foe' => 'Smy wužiwarjej $1 twoje njepřećelske naprašowanje pósłali!',
+	'ur-add-sent-title-friend' => 'Smy wužiwarjej $1 twoje přećelske naprašowanje pósłali!',
+	'ur-add-sent-message-foe' => 'Twoje njepřećelske naprašowanje bu wužiwarjej $1 za wobkrućenje pósłane.
+Jeli $1 twoje naprašowanje wobkruća, dóstanješ wotmołwnu e-mejl.',
+	'ur-add-sent-message-friend' => 'Twoje přećelske naprašowanje bu wužiwarjej $1 za wobkrućenje pósłane.
+Jeli $1 twoje naprašowanje wobkruća, dóstanješ wotmołwnu e-mejl.',
+	'ur-add-error-message-no-user' => 'Wužiwar, kotrehož pospytuješ přidać, njeeksistuje.',
+	'ur-add-error-message-blocked' => 'Sy tuchwilu zablokowany a njemóžeš přećelow abo njepřećelow přidać.',
+	'ur-add-error-message-yourself' => 'Njemóžeš sebje jako přećela abo njepřećela přidać.',
+	'ur-add-error-message-existing-relationship-foe' => '$1 je hižo twój njepřećel.',
+	'ur-add-error-message-existing-relationship-friend' => '$1 je hižo twój přećel.',
+	'ur-add-error-message-pending-request-title' => 'Sćerpliwosć!',
+	'ur-add-error-message-pending-friend-request' => 'Maš njesčinjene přećelske naprašowanje z $1.
+Budźemy će informować, hdyž $1 twoje naprašowanje wobkruća.',
+	'ur-add-error-message-pending-foe-request' => 'Maš njesčinjene njepřećelske naprašowanje z $1.
+Budźemy će informować, hdyž $1 twoje naprašowanje wobkruća.',
+	'ur-add-error-message-not-loggedin-foe' => 'Dyrbiš přizjewjeny być, zo by njepřećela přidał',
+	'ur-add-error-message-not-loggedin-friend' => 'Dyrbiš přizjewjeny być, zo by přećela přidał',
+	'ur-requests-title' => 'Poćahowe naprašowanja',
+	'ur-requests-message-foe' => '<a href="$1">$2</a> chce twój njepřećel być.',
+	'ur-requests-message-friend' => '<a href="$1">$2</a> chce twój přećel być.',
+	'ur-accept' => 'Akceptować',
+	'ur-reject' => 'Wotpokazać',
+	'ur-no-requests-message' => 'Nimaš žane přećelske abo njepřećelske naprašowanja.
+Jeli chceš wjace přećelow, <a href="$1">přeproš jich!</a>',
+	'ur-requests-added-message-foe' => 'Sy $1 jako swojeho njepřećela přidał.',
+	'ur-requests-added-message-friend' => 'Sy $1 jako swojeho přećela přidał.',
+	'ur-requests-reject-message-friend' => 'Sy $1 jako swojeho přećela wotpokazał.',
+	'ur-requests-reject-message-foe' => 'Sy $1 jako swojeho njepřećela wotpokazał.',
+	'ur-title-foe' => 'Lisćina njepřećelow wužiwarja $1',
+	'ur-title-friend' => 'Lisćina přećelow wužiwarja $1',
+	'friend_request_subject' => '$1 je će jako přećela na {{GRAMMAR:lokatiw|{{SITENAME}}}} přidał',
+	'friend_request_body' => 'Witaj $1.
+
+$2 je će na {{GRAMMAR:lokatiw|{{SITENAME}}}} jako přećela přidał. Chcemy zawěsćić, zo wój wobaj staj woprawdźe přećelej.
+
+Prošu klikń na tutón wotkaz, zo by waju přećelstwo wobkrućił:
+$3
+
+Dźakujemy so
+
+---
+
+Hej, hižo nochceš žane e-mejle wot nas dóstać?
+
+Klikń na $4
+a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóřnił.',
+	'foe_request_subject' => 'Wójna! $1 je će na {{GRAMMAR:lokatiw|{{SITENAME}}}} jako njepřećela přidał!',
+	'foe_request_body' => 'Witaj $1.
+
+$2 je će runje na {{GRAMMAR:lokatiw|{{SITENAME}}}} jako njepřećela nalistował. Chcemy zawěsćić, zo wój wobaj woprawdźe staj smjertnaj přećeli abo znajmjeńša mataj argument za to.
+
+Prošu klikń na tutón wotkaz, zo by waju wzajomnu hidu wobkrućił.
+
+$3
+
+Dźakujemy so
+
+---
+
+Hej, hižo nochceš žane e-mejle wot nas dóstać?
+
+Klikń na $4
+a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
+	'friend_accept_subject' => '$1 je twoje přećelske naprašowanje na {{GRAMMAR:lokatiw|{{SITENAME}}}} akceptował!',
+	'friend_accept_body' => 'Witaj $1.
+
+$2 je twoje přećelske naprašowanje na {{GRAMMAR:lokatiw|{{SITENAME}}}} akceptował!
+
+Pohladaj na stronu wužiwarja $2 na $3
+
+Dźakujemy so,
+
+---
+
+Hej, hižo nochceš žane e-mejle wot nas dóstać?
+
+Klikń na $4
+a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
+	'foe_accept_subject' => 'Je tak daloko! $1 je twoje njepřećelske naprašowanje na {{GRAMMAR:lokatiw|{{SITENAME}}}} akceptował!',
+	'foe_accept_body' => 'Witaj $1.
+
+$2 je twoje njepřećelske naprašowanje na {{GRAMMAR:lokatiw|{{SITENAME}}}} akceptował!
+
+Pohladaj na stronu wužiwarja $2 na $3
+
+Dźakujemy so,
+
+---
+
+Hej, hižo nochceš žane e-mejle wot nas dóstać?
+
+Klikń na $4
+a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
+	'friend_removed_subject' => 'Owej! $1 je će na {{GRAMMAR:lokatiw|{{SITENAME}}}} jako přećela wotstronił!',
+	'friend_removed_body' => 'Witaj $1.
+
+$2 je će na {{GRAMMAR:lokatiw|{{SITENAME}}}} jako přećela wotstronił!
+
+Dźakujemy so
+
+---
+
+Hej, hižo nochceš žane e-mejle wot nas dóstać?
+
+Klikń na $4
+a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
+	'foe_removed_subject' => 'Juhu! $1 je će na {{GRAMMAR:lokatiw|{{SITENAME}}}} jako njepřećela wotstronił!',
+	'foe_removed_body' => 'Witaj $1.
+
+$2 je će na {{GRAMMAR:lokatiw|{{SITENAME}}}} jako njepřećela wotstronił!
+
+Snano staj wój wobaj na najlěpšim puću, zo byštaj so spřećeliłoj?
+
+Dźakujemy so
+
+---
+
+Hej, hižo nochceš žane e-mejle wot nas dóstać?
+
+Klikń na $4
+a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
 );
 
 /** Hungarian (Magyar)
@@ -4008,6 +4370,13 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
  */
 $messages['or'] = array(
 	'ur-main-page' => 'ପ୍ରଧାନ ପ୍ରୁଷ୍ଟ୍ଆ',
+);
+
+/** Ossetic (Иронау)
+ * @author Amikeco
+ */
+$messages['os'] = array(
+	'ur-cancel' => 'Нæ бæззы',
 );
 
 /** Polish (Polski)

@@ -1573,6 +1573,19 @@ Pindutin ang $3
 at baguhin ang mga pagtatakda mo upang huwag nang paganahin ang mga pagpapabatid sa pamamagitan ng e-liham.',
 );
 
+/** Turkish (Türkçe)
+ * @author Joseph
+ */
+$messages['tr'] = array(
+	'user-stats-alltime-title' => 'Tüm zamanların en çok puanı',
+	'user-stats-weekly-title' => 'Bu hafta en çok puan',
+	'user-stats-monthly-title' => 'Bu ay en çok puan',
+	'top-fans-total-points-link' => 'Toplam puan',
+	'top-fans-weekly-points-link' => 'Bu haftadaki puanlar',
+	'top-fans-monthly-points-link' => 'Bu ayki puanlar',
+	'top-fans-points' => 'puan',
+);
+
 /** Volapük (Volapük)
  * @author Malafaya
  * @author Smeira
