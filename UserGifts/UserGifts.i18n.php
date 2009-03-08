@@ -34,7 +34,7 @@ $messages['en'] = array(
 	'g-create-gift' => 'Create gift',
 	'g-created-by' => 'created by', # this message supports {{GENDER}}
 	'g-current-image' => 'Current image',
-	'g-delete-message' => 'Are your sure you want to delete the gift "$1"?
+	'g-delete-message' => 'Are you sure you want to delete the gift "$1"?
 This will also delete it from users who may have received it.',
 	'g-description-title' => '$1\'s gift "$2"', # This message supports {{GENDER}}
 	'g-error-do-not-own' => 'You do not own this gift.',
@@ -75,7 +75,7 @@ It is that easy.',
 	'g-previous' => 'Prev',
 	'g-remove' => 'Remove',
 	'g-remove-gift' => 'Remove this gift',
-	'g-remove-message' => 'Are your sure you want to remove the gift "$1"?',
+	'g-remove-message' => 'Are you sure you want to remove the gift "$1"?',
 	'g-recent-recipients' => 'Other recent recipients of this gift',
 	'g-remove-success-title' => 'You have successfully removed the gift "$1"',
 	'g-remove-success-message' => 'The gift "$1" has been removed.',
