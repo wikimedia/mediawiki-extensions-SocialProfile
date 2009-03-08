@@ -17,8 +17,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	function deleteImage( $id, $size ){
 		global $wgUploadDirectory;
 		$files = glob( $wgUploadDirectory . '/awards/' . $id .  "_{$size}*" );
-		// FIXME: Undefined offset:  0
-		if( $files[0] ){
+		if( $files && $files[0] ){
 			$img = basename( $files[0] );
 			unlink( $wgUploadDirectory . '/awards/' .  $img );
 		}
@@ -41,7 +40,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 		}
 
 		return false;
-	}	
+	}
 
 	/**
 	 * Show the special page
