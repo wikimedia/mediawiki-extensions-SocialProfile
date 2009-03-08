@@ -32,7 +32,7 @@ $messages['en'] = array(
 	'g-cancel' => 'Cancel',
 	'g-count' => '$1 has $2 {{PLURAL:$2|gift|gifts}}.',
 	'g-create-gift' => 'Create gift',
-	'g-created-by' => 'created by',
+	'g-created-by' => 'created by', # this message supports {{GENDER}}
 	'g-current-image' => 'Current image',
 	'g-delete-message' => 'Are your sure you want to delete the gift "$1"?
 This will also delete it from users who may have received it.',

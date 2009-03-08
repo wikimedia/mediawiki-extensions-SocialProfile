@@ -165,7 +165,7 @@ class GiftManager extends SpecialPage {
 		if( $gift_id ){
 			$creator = Title::makeTitle( NS_USER, $gift['creator_user_name'] );
 			$form .= '<tr>
-			<td class="view-form">'.wfMsg('g-created-by').'</td><td><a href="' . $creator->escapeFullURL() . '">' . $gift['creator_user_name'] . '</a></td>
+			<td class="view-form">'.wfMsgExt('g-created-by', 'parsemag', $gift['creator_user_name'] ).'</td><td><a href="' . $creator->escapeFullURL() . '">' . $gift['creator_user_name'] . '</a></td>
 			</tr>';
 		}
 		global $wgUploadPath;
