@@ -1445,9 +1445,11 @@ $messages['cu'] = array(
 );
 
 /** Danish (Dansk)
+ * @author Byrial
  * @author Jon Harald Søby
  */
 $messages['da'] = array(
+	'user-count-separator' => '$1 af $2',
 	'other-info-tv' => 'TV',
 	'user-personal-info-real-name' => 'Virkeligt navn:',
 	'user-profile-section-preferences' => 'Indstillinger',
@@ -3501,6 +3503,7 @@ $messages['it'] = array(
 $messages['ja'] = array(
 	'user-awards-title' => '表彰',
 	'user-gifts-title' => 'プレゼント',
+	'user-count-separator' => '$2中 $1',
 	'user-view-all' => 'すべて閲覧',
 	'user-upload-image' => '画像をアップロード',
 	'user-edit-this' => 'これを編集',

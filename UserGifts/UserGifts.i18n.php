@@ -1407,10 +1407,14 @@ $messages['ja'] = array(
 	'giftmanager-addgift' => '+ 新しいプレゼントの追加',
 	'giftmanager-giftimage' => 'プレゼント画像',
 	'giftmanager-public' => '公開',
+	'g-cancel' => '中止',
+	'g-create-gift' => 'プレゼントを作成',
 	'g-gift' => 'プレゼント',
 	'g-gift-name' => 'プレゼント名',
 	'g-give-all-message-title' => 'メッセージの追加',
 	'g-give-list-select' => '友達を選択',
+	'g-send-gift' => 'プレゼントを贈る',
+	'g-small' => '小さい',
 );
 
 /** Ripoarisch (Ripoarisch)

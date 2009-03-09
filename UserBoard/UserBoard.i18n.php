@@ -1194,6 +1194,8 @@ $messages['it'] = array(
  * @author Gzdavidwong
  */
 $messages['ja'] = array(
+	'boardlinkselectall' => 'すべて選択',
+	'boardlinkunselectall' => 'すべて選択解除',
 	'userboard_delete' => '削除',
 	'userboard_noexist' => '閲覧しようとした利用者は存在していません。',
 	'userboard_private' => '非公開',

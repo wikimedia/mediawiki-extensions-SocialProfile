@@ -480,15 +480,24 @@ $messages['io'] = array(
 );
 
 /** Japanese (日本語)
+ * @author Aotake
  * @author Hosiryuhosi
  */
 $messages['ja'] = array(
+	'userwelcome-desc' => 'ログイン利用者に利用者ごとの情報を表示させる<tt>&lt;welcomeUser&gt;</tt>タグを追加する',
 	'mp-userlevels-link' => '利用者レベル',
 	'mp-welcome-upload' => 'アップロード',
 	'mp-welcome-edit' => '編集',
+	'mp-welcome-points' => '$1ポイント',
+	'mp-welcome-needed-points' => '<b><a href="$1">$2</a></b>に進むにはあと<i>$3</i>ポイント必要です！',
 	'mp-welcome-logged-in' => 'こんにちは $1',
 	'mp-requests-title' => 'リクエスト',
+	'mp-requests-message' => '以下のリクエストがあります。',
 	'mp-request-new-message' => '新しいメッセージ',
+	'mp-request-new-award' => '$1つの新しい賞',
+	'mp-request-new-gift' => '$1つの新しいプレゼント',
+	'mp-request-new-foe' => '$1人の新しい敵',
+	'mp-request-new-friend' => '$1人の新しい友人',
 );
 
 /** Javanese (Basa Jawa)

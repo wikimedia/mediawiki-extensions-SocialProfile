@@ -2545,7 +2545,7 @@ $messages['hsb'] = array(
 	'ur-relationship-count-foes' => '$1 ma $2 {{PLURAL:$2|njepřećela|njepřećelow|njepřećelow|njepřećelow}}.
 Chceš dalšich njepřećelow?
 <a href="$3">Přeproš jich.</a>',
-	'ur-relationship-count-friends' => '$2 ma $2 {{PLURAL:$2|přećela|přećelow|přećelow|přećelow}}.
+	'ur-relationship-count-friends' => '$1 ma $2 {{PLURAL:$2|přećela|přećelow|přećelow|přećelow}}.
 Coš dalšich přećelow?
 <a href="$3">Přeproš jich.</a>',
 	'ur-add-friends' => 'Coš dalšich přećelow?
@@ -2916,6 +2916,7 @@ $messages['it'] = array(
 
 /** Japanese (日本語)
  * @author Aotake
+ * @author Hosiryuhosi
  */
 $messages['ja'] = array(
 	'viewrelationships' => '関係を表示',
@@ -2954,7 +2955,7 @@ $messages['ja'] = array(
 	'ur-remove-error-not-loggedin-foe' => '敵を除去するためにはログインしている必要があります。',
 	'ur-remove-error-not-loggedin-friend' => '友人を除去するためにはログインしている必要があります。',
 	'ur-remove' => '除去',
-	'ur-cancel' => 'キャンセル',
+	'ur-cancel' => '中止',
 	'ur-login' => 'ログイン',
 	'ur-add-title-foe' => '$1 を敵に追加しますか？',
 	'ur-add-title-friend' => '$1 を友人に追加しますか？',
