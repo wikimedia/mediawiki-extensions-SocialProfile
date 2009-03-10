@@ -84,6 +84,7 @@ $messages['qqq'] = array(
 	'ga-new' => '{{Identical|New}}',
 	'ga-next' => '{{Identical|Next}}',
 	'ga-previous' => '{{Identical|Prev}}',
+	'ga-small' => '{{Identical|Small}}',
 );
 
 /** Arabic (العربية)
@@ -991,6 +992,7 @@ $messages['ja'] = array(
 	'systemgiftmanager' => 'システムギフトマネージャー',
 	'ga-addnew' => '+ 新しいプレゼントを追加',
 	'ga-back-gift-list' => 'プレゼントリストへ戻る',
+	'ga-choosefile' => 'ファイルを選ぶ:',
 	'ga-create-gift' => 'プレゼントを作成',
 	'ga-created' => 'プレゼントは作成されました。',
 	'ga-currentimage' => '現在の画像',
@@ -999,11 +1001,15 @@ $messages['ja'] = array(
 	'ga-giftimage' => 'ギフト画像',
 	'ga-giftname' => 'ギフト名',
 	'ga-gifttype' => 'ギフトタイプ',
+	'ga-goback' => '戻る',
+	'ga-large' => '大',
+	'ga-medium' => '中',
+	'ga-mediumlarge' => '中大',
 	'ga-new' => '新規',
 	'ga-next' => '次',
 	'ga-previous' => '前',
 	'ga-saved' => 'プレゼントは保存されました。',
-	'ga-small' => '小さい',
+	'ga-small' => '小',
 	'ga-uploadsuccess' => 'アップロード成功',
 	'ga-viewlist' => 'プレゼントリストを見る',
 );
