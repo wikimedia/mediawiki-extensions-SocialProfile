@@ -15,7 +15,7 @@ class SystemGiftManager extends SpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ){
-		global $wgUser, $wgOut, $wgRequest, $wgScriptPath;
+		global $wgUser, $wgOut, $wgRequest, $wgScriptPath, $wgSystemGiftsScripts;
 		wfLoadExtensionMessages( 'SystemGifts' );
 
 		$wgOut->setPageTitle( wfMsg( 'systemgiftmanager' ) );
@@ -38,11 +38,8 @@ class SystemGiftManager extends SpecialPage {
 			return;
 		}
 
-		$css = "<style>
-		.view-form { font-weight:800; font-size:12px; font-color:#666666; }
-		.view-status { font-weight:800; font-size:12px; background-color:#FFFB9B; color:#666666; padding:5px; margin-bottom:5px; }
-		</style>";
-		$wgOut->addHTML( $css );
+		// Add CSS
+		$wgOut->addStyle( $wgSystemGiftsScripts . '/SystemGift.css' );
 
 		if( $wgRequest->wasPosted() ){
 			$g = new SystemGifts();
@@ -68,7 +65,7 @@ class SystemGiftManager extends SpecialPage {
 			if( $gift_id || $wgRequest->getVal( 'method' ) == 'edit' ){
 				$wgOut->addHTML( $this->displayForm( $gift_id ) );
 			} else {
-				$wgOut->addHTML( '<div><b><a href="'.$wgScriptPath.'/index.php?title=Special:SystemGiftManager&method=edit">'.wfMsg( 'ga-addnew' ).'</a></b></div><p>' );
+				$wgOut->addHTML( '<div><b><a href="'.$wgScriptPath.'/index.php?title=Special:SystemGiftManager&amp;method=edit">'.wfMsg( 'ga-addnew' ).'</a></b></div>' );
 				$wgOut->addHTML( $this->displayGiftList() );
 			}
 		}
@@ -92,41 +89,41 @@ class SystemGiftManager extends SpecialPage {
 	function displayForm( $gift_id ){
 		global $wgUploadPath, $wgScriptPath;
 
-		$form = '<div><b><a href="'.$wgScriptPath.'/index.php?title=Special:SystemGiftManager">'.wfMsg( 'ga-viewlist' ).'</a></b></div><p>';
+		$form = '<div><b><a href="'.$wgScriptPath.'/index.php?title=Special:SystemGiftManager">'.wfMsg( 'ga-viewlist' ).'</a></b></div>';
 
 		if( $gift_id ) $gift = SystemGifts::getGift( $gift_id );
 
-		$form .= '<form action="" method="post" enctype="multipart/form-data" name="gift">';
-		$form .= '<table border="0" cellpadding="5" cellspacing="0" width="500">';
-		$form .= '<tr>
-		<td width="200" class="view-form">'.wfMsg( 'ga-giftname' ).'</td>
-		<td width="695"><input type="text" size="45" class="createbox" name="gift_name" value="'. $gift['gift_name'] . '"/></td>
-		</tr>
-		<tr>
-		<td width="200" class="view-form" valign="top">'.wfMsg( 'ga-giftdesc' ).'</td>
-		<td width="695"><textarea class="createbox" name="gift_description" rows="2" cols="30">'. $gift['gift_description'] . '</textarea></td>
-		</tr>
-		<tr>
-		<td width="200" class="view-form">'.wfMsg( 'ga-gifttype' ).'</td>
-		<td width="695">
-			<select name="gift_category">';
+		$form .= '<form action="" method="post" enctype="multipart/form-data" name="gift">
+		<table border="0" cellpadding="5" cellspacing="0" width="500">
+			<tr>
+				<td width="200" class="view-form">'.wfMsg( 'ga-giftname' ).'</td>
+				<td width="695"><input type="text" size="45" class="createbox" name="gift_name" value="'. $gift['gift_name'] . '"/></td>
+			</tr>
+			<tr>
+				<td width="200" class="view-form" valign="top">'.wfMsg( 'ga-giftdesc' ).'</td>
+				<td width="695"><textarea class="createbox" name="gift_description" rows="2" cols="30">'. $gift['gift_description'] . '</textarea></td>
+			</tr>
+			<tr>
+				<td width="200" class="view-form">'.wfMsg( 'ga-gifttype' ).'</td>
+				<td width="695">
+					<select name="gift_category">';
 			$g = new SystemGifts();
 			foreach( $g->categories as $category => $id ){
 				$form .= '<option' . ( ( $gift['gift_category'] == $id ) ? ' selected="selected"' : '' ) . " value=\"{$id}\">{$category}</option>";
 			}
 			$form .= '</select>
+				</td>
+			</tr>
 		<tr>
-		<td width="200" class="view-form">'.wfMsg( 'ga-threshold' ).'</td>
-		<td width="695"><input type="text" size="25" class="createbox" name="gift_threshold" value="'. $gift['gift_threshold'] . '"/></td>
-		</tr>
-		<tr>';
+			<td width="200" class="view-form">'.wfMsg( 'ga-threshold' ).'</td>
+			<td width="695"><input type="text" size="25" class="createbox" name="gift_threshold" value="'. $gift['gift_threshold'] . '"/></td>
+		</tr>';
 
 		if( $gift_id ){
 			$gift_image = '<img src="'. $wgUploadPath .'/awards/' . SystemGifts::getGiftImage( $gift_id, 'l' ) . '" border="0" alt="gift" />';
 			$form .= '<tr>
-			<td width="200" class="view-form" valign="top">'.wfMsg('ga-giftimage').'</td>
+			<td width="200" class="view-form" valign="top">'.wfMsg( 'ga-giftimage' ).'</td>
 			<td width="695">' . $gift_image . '
-			<p>
 			<a href="'.$wgScriptPath.'/index.php?title=Special:SystemGiftManagerLogo&gift_id=' . $gift_id . '">'.wfMsg( 'ga-img' ).'</a>
 			</td>
 			</tr>';
@@ -134,9 +131,9 @@ class SystemGiftManager extends SpecialPage {
 
 		$form .= '<tr>
 		<td colspan="2">
-		<input type="hidden" name="id" value="' . $gift['gift_id'] . '">
-		<input type="button" class="createbox" value="' . ( ( $gift['gift_id'] ) ? wfMsg( 'edit' ) : wfMsg( 'ga-create-gift' ) ) . '" size="20" onclick="document.gift.submit()" />
-		<input type="button" class="createbox" value="'.wfMsg( 'cancel' ).'" size="20" onclick="history.go(-1)" />
+			<input type="hidden" name="id" value="' . $gift['gift_id'] . '" />
+			<input type="button" class="createbox" value="' . ( ( $gift['gift_id'] ) ? wfMsg( 'edit' ) : wfMsg( 'ga-create-gift' ) ) . '" size="20" onclick="document.gift.submit()" />
+			<input type="button" class="createbox" value="'.wfMsg( 'cancel' ).'" size="20" onclick="history.go(-1)" />
 		</td>
 		</tr>
 		</table>
