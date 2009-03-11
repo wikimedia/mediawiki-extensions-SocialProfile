@@ -15,7 +15,7 @@ class GiftManager extends SpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ){
-		global $wgUser, $wgOut, $wgRequest, $wgScriptPath;
+		global $wgUser, $wgOut, $wgRequest, $wgScriptPath, $wgUserGiftsScripts;
 		wfLoadExtensionMessages( 'UserGifts' );
 
 		$wgOut->setPageTitle( wfMsg( 'giftmanager' ) );
@@ -24,7 +24,7 @@ class GiftManager extends SpecialPage {
 			$wgOut->errorpage( 'error', 'badaccess' );
 		}
 
-		$wgOut->addStyle( $wgScriptPath . '/extensions/SocialProfile/UserGifts/UserGifts.css' );
+		$wgOut->addStyle( $wgUserGiftsScripts . '/UserGifts.css' );
 
 		if( count( $_POST ) ){
 			if( !( $_POST['id'] ) ){
