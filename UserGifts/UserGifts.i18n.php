@@ -117,6 +117,7 @@ and change your settings to disable email notifications.',
 
 /** Message documentation (Message documentation)
  * @author EugeneZelenko
+ * @author Fryed-peach
  * @author Purodha
  * @author Siebrand
  */
@@ -129,7 +130,13 @@ $messages['qqq'] = array(
 	'g-description-title' => '{{gender}}
 * $1 is a user name
 * $2 is the name of a gift',
+	'g-large' => '{{Identical|Large}}',
+	'g-main-page' => '{{Identical|Main page}}',
+	'g-medium' => '{{Identical|Medium}}',
 	'g-new' => '{{Identical|New}}',
+	'g-next' => '{{Identical|Next}}',
+	'g-previous' => '{{Identical|Prev}}',
+	'g-small' => '{{Identical|Small}}',
 );
 
 /** Arabic (العربية)
@@ -1401,20 +1408,31 @@ e cambia tu configurationes pro disactivar le notificationes in e-mail.',
 );
 
 /** Japanese (日本語)
+ * @author Fryed-peach
  * @author Hosiryuhosi
  */
 $messages['ja'] = array(
 	'giftmanager-addgift' => '+ 新しいプレゼントの追加',
 	'giftmanager-giftimage' => 'プレゼント画像',
 	'giftmanager-public' => '公開',
+	'g-choose-file' => 'ファイルを選ぶ:',
 	'g-cancel' => '中止',
 	'g-create-gift' => 'プレゼントを作成',
 	'g-gift' => 'プレゼント',
 	'g-gift-name' => 'プレゼント名',
 	'g-give-all-message-title' => 'メッセージの追加',
 	'g-give-list-select' => '友達を選択',
+	'g-go-back' => '戻る',
+	'g-large' => '大',
+	'g-main-page' => 'メインページ',
+	'g-medium' => '中',
+	'g-mediumlarge' => '中大',
+	'g-new' => '新規',
+	'g-next' => '次',
+	'g-previous' => '前',
+	'g-remove' => '削除',
 	'g-send-gift' => 'プレゼントを贈る',
-	'g-small' => '小さい',
+	'g-small' => '小',
 );
 
 /** Ripoarisch (Ripoarisch)

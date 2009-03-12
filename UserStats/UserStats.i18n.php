@@ -436,6 +436,10 @@ $messages['es'] = array(
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|Enemigo|Enemigos}}',
 	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Opinión publicada|Opiniones publicadas}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinión|Opiniones}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Pulgar arriba|Pulgares arriba}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Pulgar abajo|Pulgares abajo}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Pulgar arriba dado|Pulgares arriba dados}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Pulgar abajo dado|Pulgares abajos dados}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Regalo recibido|Regalos recibidos}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Regalo enviado|Regalos enviados}}',
 	'level-advance-subject' => '¡Ahora eres un «$1» en {{SITENAME}}!',
@@ -1214,31 +1218,31 @@ $messages['pl'] = array(
 	'top-fans-points' => 'punktów',
 	'top-fans-by-category-title' => 'Ogólnie najwyżej notowani $1',
 	'top-fans-bad-field-title' => 'Oops!',
-	'top-fans-bad-field-message' => 'Taka statystyka nie istnieje.',
+	'top-fans-bad-field-message' => 'Brak takiej statystyki.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Głos|Głosy}}',
 	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Zwycięzca miesiąca|Zwycięzcy miesiąca}}',
 	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Zwycięzca tygodnia|Zwycięzcy tygodnia}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Edycja|Edycje}}',
-	'top-fans-stats-comment-count' => '{{PLURAL:$1|Komentarz|Komentarzy}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Komentarz|Komentarze}}',
 	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Rekomendacja|Rekomendacje}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Znajomy|Znajomych}}',
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|Wróg|Wrogów}}',
 	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Opublikowana opinia|Opublikowane opinie}}',
-	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinia|Opinii}}',
-	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Głos za otrzymany|Głosy za otrzymane}}',
-	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Głos przeciw otrzymany|Głosy przeciw otrzymane}}',
-	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Głos za oddany|Głosy za oddane}}',
-	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Głos przeciw oddane|Głosy przeciw oddane}}',
-	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Prezent otrzymany|Prezenty otrzymane}}',
-	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Prezent dany|Prezenty dane}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinia|Opinie}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Otrzymany głos|Otrzymane głosy}} poparcia',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Otrzymany głos|Otrzymane głosy}} sprzeciwu',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Oddany głos|Oddane głosy}} poparcia',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Oddany głos|Oddane głosy}} sprzeciwu',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Otrzymany prezent|Otrzymane prezenty}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Podarowany prezent|Podarowane prezenty}}',
 	'level-advance-subject' => 'Należysz teraz do grupy „$1” na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
-	'level-advance-body' => 'Witaj $1:
+	'level-advance-body' => 'Witaj $1.
 
-Od teraz jesteś „$2” w {{SITENAME}}!
+Jesteś „$2” w {{GRAMMAR:Ms.lp|{{SITENAME}}}}!
 
-Gratulacje,
+Gratulacje
 
-Zespół {{SITENAME}}
+od zespołu {{GRAMMAR:D.lp|{{SITENAME}}}}
 
 ---
 Jeżeli nie chcesz otrzymywać od nas więcej wiadomości, kliknij na poniższy link i zmień swoje ustawienia powiadamiania:
@@ -1382,12 +1386,38 @@ $messages['roa-tara'] = array(
 /** Russian (Русский)
  * @author Ferrer
  * @author Rubin
+ * @author Александр Сигачёв
  */
 $messages['ru'] = array(
+	'user-stats-alltime-title' => 'Больше всего очков за всё время',
+	'user-stats-weekly-title' => 'Больше всего очков на этой неделе',
+	'user-stats-monthly-title' => 'Больше всего очков в этом месяце',
+	'topusers' => 'Рейтинг участников',
+	'top-fans-by-points-nav-header' => 'Рейтинг болельщиков',
+	'top-fans-by-category-nav-header' => 'Рейтинг по категориям',
+	'top-fans-total-points-link' => 'Всего очков',
+	'top-fans-weekly-points-link' => 'Очков за эту неделю',
+	'top-fans-monthly-points-link' => 'Очков за этот месяц',
+	'top-fans-points' => 'очков',
+	'top-fans-by-category-title' => 'Рейтинг $1',
 	'top-fans-bad-field-title' => 'Ой!',
+	'top-fans-bad-field-message' => 'Указанной статистики не существует.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Голос|Голосов}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Побед за месяц|Побед за месяц}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Побед за неделю|Побед за неделю}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Правка|Правок}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Комментарий|Комментариев}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Направление|Направлений}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Друг|Друзей}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Недруг|Недругов}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Опубликовано мнений|Опубликовано мнений}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Мнение|Мнений}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Голосов за|Голосов за}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Голосов против|Голосов против}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Подано голосов за|Подано голосов за}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Подано голосов против|Подано голосов против}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Получено подарков|Получено подарков}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Отправлено подарков|Отправлено подарков}}',
 );
 
 /** Slovak (Slovenčina)

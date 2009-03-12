@@ -81,6 +81,8 @@ and change your settings to disable email notifications.',
  * @author Fryed-peach
  */
 $messages['qqq'] = array(
+	'ga-large' => '{{Identical|Large}}',
+	'ga-medium' => '{{Identical|Medium}}',
 	'ga-new' => '{{Identical|New}}',
 	'ga-next' => '{{Identical|Next}}',
 	'ga-previous' => '{{Identical|Prev}}',

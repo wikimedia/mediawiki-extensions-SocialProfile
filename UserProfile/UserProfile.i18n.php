@@ -1650,6 +1650,52 @@ Klick <a href="$1">hier</a> um dich anzumelden oder klicke <a href="$2">hier</a>
 	'right-avatarremove' => 'Entferne das Avatar des Benutzers',
 );
 
+/** Lower Sorbian (Dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'populateuserprofiles' => 'Wužywarske profile napołniś',
+	'user-awards-title' => 'Myta',
+	'user-gifts-title' => 'Dary',
+	'user-count-separator' => '$1 z $2',
+	'user-view-all' => 'Wšykno se woglědaś',
+	'user-upload-image' => 'Wobraz nagraś',
+	'user-edit-this' => 'To wobźěłaś',
+	'user-edit-profile' => 'Profil wobźěłaś',
+	'user-upload-avatar' => 'Awatar nagraś',
+	'user-watchlist' => 'Mója wobglědowańka',
+	'user-meet-people' => 'Luźi zmakaś',
+	'user-add-friend' => 'Ako pśijaśela pśidaś',
+	'user-add-foe' => 'Ako njepśijaśela pśidaś',
+	'user-remove-friend' => 'Ako pśijaśela wótpóraś',
+	'user-remove-foe' => 'Ako njepśijaśela wótpóraś',
+	'user-send-message' => 'Powěsć pósłaś',
+	'user-send-gift' => 'Dar pósłaś',
+	'user-contributions' => 'Pśinoski',
+	'user-stats-title' => 'Statistika',
+	'user-stats-edits' => '{{PLURAL:$1|Změna|Změnje|Změny|Změnow}}',
+	'user-stats-votes' => '{{PLURAL:$1|Głos|Głosa|Głose|Głosow}}',
+	'user-stats-comments' => '{{PLURAL:$1|Komentar|Komentara|Komentary|Komentarow}}',
+	'other-info-title' => 'Druge informacije',
+	'user-friends-title' => 'Pśijaśele',
+	'user-foes-title' => 'Njepśijaśele',
+	'other-info-movies' => 'Filmy',
+	'other-info-tv' => 'Telewizija',
+	'other-info-music' => 'Muzika',
+	'other-info-books' => 'Knigły',
+	'other-info-video-games' => 'Wideogry',
+	'other-info-magazines' => 'Casopise',
+	'other-info-snacks' => 'Pśikuski',
+	'other-info-drinks' => 'Piśa',
+	'other-no-info' => 'Žedne dalšne informacije',
+	'custom-info-title' => 'Swójske informacije',
+	'custom-info-field1' => 'Swójske informacije 1',
+	'custom-info-field2' => 'Swójske informacije 2',
+	'custom-info-field3' => 'Swójske informacije 3',
+	'custom-info-field4' => 'Swójske informacije 4',
+	'custom-no-info' => 'Žedne swójske informacije',
+);
+
 /** Greek (Ελληνικά)
  * @author Consta
  * @author Omnipaedista
@@ -1730,8 +1776,8 @@ $messages['eo'] = array(
 	'user-send-gift' => 'Sendi donacon',
 	'user-contributions' => 'Kontribuoj',
 	'user-stats-title' => 'Statistikoj',
-	'user-stats-edits' => 'Redaktoj',
-	'user-stats-votes' => 'Voĉdonoj',
+	'user-stats-edits' => '{{PLURAL:$1|Redakto|Redaktoj}}',
+	'user-stats-votes' => '{{PLURAL:$1|Voĉdono|Voĉdonoj}}',
 	'user-stats-comments' => 'Komentoj',
 	'user-stats-recruits' => 'Varbitoj',
 	'other-info-title' => 'Alia informo',
@@ -1784,7 +1830,7 @@ $messages['eo'] = array(
 	'user-profile-update-log-section' => 'ŝanĝis sekcion',
 	'user-profile-update-profile' => 'profilo',
 	'user-profile-default-country' => 'Usono',
-	'user-profile-points' => '$1 poentoj',
+	'user-profile-points' => '$1 {{PLURAL:$1|poento|poentoj}}',
 	'user-profile-section-personal' => 'Persona informo',
 	'user-profile-section-sportsteams' => 'Ĝisdatigi retojn',
 	'user-profile-section-custom' => 'Memfara informo',
@@ -3272,6 +3318,7 @@ $messages['hil'] = array(
  * @author Michawiki
  */
 $messages['hsb'] = array(
+	'populateuserprofiles' => 'Wužiwarske profile napjelnić',
 	'user-awards-title' => 'Myta',
 	'user-gifts-title' => 'Dary',
 	'user-count-separator' => '$1 z $2',
@@ -3295,7 +3342,9 @@ $messages['hsb'] = array(
 	'user-stats-comments' => '{{PLURAL:$1|Komentar|Komentaraj|Komentary|Komentarow}}',
 	'user-stats-recruits' => '{{PLURAL:$1|Nawabjeny čłon|Nawabjenej čłonaj|Nawabjeni čłonojo|Nawabjenych čłonow}}',
 	'user-stats-poll-votes' => '{{PLURAL:$1|Hłós|Hłosaj|Hłosy|Hłosy}} w naprašowanjach',
+	'user-stats-picture-game-votes' => '{{PLUrAL:$1|Hłós|Hłosaj|Hłosy|Hłosow}} za wobrazowe hry',
 	'user-stats-quiz-points' => '{{PLURAL:$1|Kwisowy dypk|Kwisowej dypkaj|Kwisowe dypki|Kwisowych dypkow}}',
+	'user-stats-pick-points' => '{{PLURAL:$1|Wjetowy dypk|Wjetowej dypkaj|Wjetowe dypki|Wjetowych dypkow}}',
 	'other-info-title' => 'Dalše informacije',
 	'user-friends-title' => 'Přećeljo',
 	'user-foes-title' => 'Njepřećeljo',
@@ -3386,6 +3435,66 @@ Klikń <a href="$1">sem</a>, zo by so přizjewił abo klikń <a href="$2">sem</a
 	'user-profile-interests-foodsnacks' => 'Jědź a zakuski',
 	'user-profile-interests-drinks' => 'Napoje',
 	'user-profile-preferences-emails' => 'E-mejlowe zdźělenja',
+	'user-profile-preferences-emails-personalmessage' => 'Při słanju wosobinskeje powěsće',
+	'user-profile-preferences-emails-friendfoe' => 'Hdyž druhi wužiwar će za přećela abo njepřećela spóznawa',
+	'user-profile-preferences-emails-gift' => 'Hdyž dar dóstawaš',
+	'user-profile-preferences-emails-level' => 'Hdyž wo runinu postupuješ',
+	'user-profile-preferences-emails-weekly' => 'Tydźenske e-mejlowe aktualizacije dóstać',
+	'user-profile-update-button' => 'Aktualizować',
+	'user-profile-tidbits-title' => 'Drobnostki',
+	'user-profile-tidbits-favmoment' => 'Najlubši sportowy wokomik',
+	'user-profile-tidbits-worstmoment' => 'Najhórši sportowy wokomik',
+	'user-profile-tidbits-favathlete' => 'Najlubši atlet a čehodla',
+	'user-profile-tidbits-leastfavathlete' => 'Najmjenje woblubowany atlet a čehodla',
+	'user-profile-sports-sport' => 'Sport',
+	'user-profile-sports-title' => 'Wobdźěłaj swoje preferowane sportowe družiny a teamy',
+	'user-profile-sports-notloggedintitle' => 'Hopla!',
+	'user-profile-sports-notloggedintext' => 'Dyrbiš přizjewjeny być, zo by swój profil wobdźěłał.',
+	'user-profile-sports-teamremoved' => 'Twój team bu wotstronjeny',
+	'user-profile-sports-teamsaved' => 'Twoje teamy buchu składowane',
+	'user-profile-sports-addmore' => 'Dalše sportowe družiny/teamy přidać',
+	'user-profile-picture-title' => 'Nahraj swój wobraz',
+	'user-profile-picture-yourpicture' => 'Twój wobraz',
+	'user-profile-picture-yourpicturestext' => 'Deleka su wobrazy, kotrež so w twojim profilu, na syćowych stronach a w twojich komentarach zjewja.',
+	'user-profile-picture-large' => 'Wulki',
+	'user-profile-picture-medlarge' => 'Srěni - Wulki',
+	'user-profile-picture-medium' => 'Srěni',
+	'user-profile-picture-small' => 'Mały',
+	'user-profile-picture-uploaddifferent' => 'Druhi wobraz nahrać',
+	'user-profile-picture-currentimage' => 'Aktualny wobraz',
+	'user-profile-picture-choosepicture' => 'Wubjer swój wobraz',
+	'user-profile-picture-picsize' => 'Twój wobraz dyrbi format jpeg, png abo gif měć a dyrbi mjeńši hač 100 kb wulki być.',
+	'user-profile-goback' => 'Wróćo',
+	'user-profile-userlevels-link' => 'Wužiwarske runiny',
+	'user-no-images' => 'Žane wobrazy nahrate',
+	'edit-profile-title' => 'Twój profil wobdźěłać',
+	'user-page-link' => 'Wužiwarska strona',
+	'user-social-profile-link' => 'Socialny profil',
+	'user-wiki-link' => 'Wikijowa wužiwarska strona',
+	'update_profile_nav' => '* Special:UpdateProfile|Wosobinske informacije
+* Special:UpdateProfile/personal|Druhe informacije
+* Special:UpdateProfile/custom|Swójske informacije
+* Special:UploadAvatar|Awatar
+* Special:UpdateProfile/preferences|Nastajenja',
+	'user-type-toggle-old' => 'Wikijowu wužiwarsku stronu wužiwać',
+	'user-type-toggle-new' => 'Socialnu wužiwarsku stronu wužiwać',
+	'user-board-login-message' => 'Dyrbiš <a href="$1">přizjewjeny</a> być, zo by druhim wužiwarjam powěsće pósłał',
+	'removeavatar' => 'Awatar wotstronić',
+	'givegift' => 'Darić',
+	'viewgifts' => 'Dary sej wobhladać',
+	'viewsystemgifts' => 'Myta sej wobhladać',
+	'avatarupload-removeavatar' => 'Awatar wotstronić',
+	'avatarupload-currentavatar' => 'Aktualny awatar wužiwarja $1',
+	'avatarupload-removesuccess' => 'Awatar bu wuspěšnje wotstronjeny',
+	'avatarupload-removeanother' => 'Druhi wotstronić',
+	'profilelogpage' => 'Protokol změnow wužiwarskeho profila',
+	'profilelogpagetext' => 'To je protokol změnow wužiwarskeho profila',
+	'avatarlogpage' => 'Protokol wo nahratych awatarach',
+	'avatarlogpagetext' => 'To je protokol nahratych wužiwarskich awatarow',
+	'user-profile-picture-log' => 'awatar',
+	'user-profile-picture-log-entry' => 'nowy awatar nahraty',
+	'user-profile-picture-log-delete-entry' => 'awatar wužiwarja $1 wušmórnjeny',
+	'right-avatarremove' => 'Awatary wužiwarja wotstronić',
 );
 
 /** Hungarian (Magyar)
@@ -5445,8 +5554,8 @@ $messages['pl'] = array(
 	'user-personal-info-title' => 'Informacje osobiste',
 	'user-no-personal-info' => 'Brak informacji osobistych',
 	'user-personal-info-real-name' => 'Imię i nazwisko',
-	'user-personal-info-location' => 'Kraj',
-	'user-personal-info-hometown' => 'Miejsce zamieszkania',
+	'user-personal-info-location' => 'Lokalizacja',
+	'user-personal-info-hometown' => 'Miasto zamieszkania',
 	'user-personal-info-birthday' => 'Data urodzenia',
 	'user-personal-info-occupation' => 'Zawód',
 	'user-personal-info-websites' => 'Strony internetowe',
@@ -5475,7 +5584,7 @@ $messages['pl'] = array(
 	'user-profile-personal-location' => 'Lokalizacja',
 	'user-profile-personal-city' => 'Miasto',
 	'user-profile-personal-country' => 'Kraj',
-	'user-profile-personal-hometown' => 'Miejsce zamieszkania',
+	'user-profile-personal-hometown' => 'Miasto zamieszkania',
 	'user-profile-personal-birthday' => 'Urodziny',
 	'user-profile-personal-birthdate' => 'Data (MM/DD)',
 	'user-profile-personal-aboutme' => 'O mnie',
@@ -5531,7 +5640,7 @@ $messages['pl'] = array(
 	'avatarlogpagetext' => 'Przesłane portrety użytkownika',
 	'user-profile-picture-log' => 'portret',
 	'user-profile-picture-log-entry' => 'wgrał swój nowy portret',
-	'user-profile-picture-log-delete-entry' => 'usunięto awatar $1',
+	'user-profile-picture-log-delete-entry' => 'usunięto portret $1',
 	'right-avatarremove' => 'Usuwanie portretów użytkowników',
 );
 
@@ -6743,6 +6852,13 @@ $messages['tg-cyrl'] = array(
 	'user-wiki-link' => 'Вики саҳифаи корбарӣ',
 	'user-type-toggle-old' => 'Истифодаи саҳифаи корбарии вики',
 	'user-type-toggle-new' => 'Истифодаи саҳифаи корбарии ҷамъиятӣ',
+);
+
+/** Thai (ไทย)
+ * @author Ans
+ */
+$messages['th'] = array(
+	'user-count-separator' => '$1 จากทั้งหมด $2',
 );
 
 /** Tagalog (Tagalog)
