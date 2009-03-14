@@ -29,8 +29,9 @@ $wgExtensionCredits['parserhook'][] = array(
 );
 
 function wfWelcomeUser() {
-	global $wgParser;
+	global $wgParser, $wgOut, $wgScriptPath;
 	$wgParser->setHook( 'welcomeUser', 'getWelcomeUser' );
+	$wgOut->addStyle( $wgScriptPath . '/extensions/SocialProfile/UserWelcome/UserWelcome.css' );
 	return true;
 }
 
@@ -38,7 +39,6 @@ $dir = dirname(__FILE__) . '/';
 $wgExtensionMessagesFiles['UserWelcome'] = $dir . 'UserWelcome.i18n.php';
 
 function getWelcomeUser( $input, $args, $parser ){
-
 	$parser->disableCache();
 	$output = getWelcome();
 
@@ -56,7 +56,7 @@ function getWelcome(){
 
 	// Safe links
 	$level_link = Title::makeTitle( NS_HELP, wfMsgHtml( 'mp-userlevels-link' ) );
-	$avatar_link = Title::makeTitle( NS_SPECIAL, 'UploadAvatar' );
+	$avatar_link = SpecialPage::getTitleFor( 'UploadAvatar' );
 	$invite_link = Title::makeTitle( NS_SPECIAL, 'InviteContacts' );
 
 	// Make an avatar
@@ -78,12 +78,13 @@ function getWelcome(){
 	if( $wgUserLevels ){
 		$output .= '<div class="mp-welcome-points">
 			<div class="points-and-level">
-				<div class="total-points">'.wfMsgExt( 'mp-welcome-points', array( 'parsemag' ), $stats_data['points'] ).'</div>
+				<div class="total-points">'.wfMsgExt( 'mp-welcome-points', 'parsemag', $stats_data['points'] ).'</div>
 				<div class="honorific-level"><a href="'.$level_link->escapeFullURL().'">('.$user_level->getLevelName().')</a></div>
 			</div>
 			<div class="cleared"></div>
 			<div class="needed-points">
-				' . wfMsgExt( 'mp-welcome-needed-points', array( 'parsemag' ), $level_link->escapeFullURL(),
+				<br />
+				' . wfMsgExt( 'mp-welcome-needed-points', 'parsemag', $level_link->escapeFullURL(),
 					$user_level->getNextLevelName(), $user_level->getPointsNeededToAdvance() ) . '
 			</div>
 		</div>';
