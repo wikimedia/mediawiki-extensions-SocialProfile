@@ -1966,6 +1966,7 @@ Spowoduje to również usunięcie go u użytkowników, którzy go otrzymali.',
 	'g-error-message-to-yourself' => 'Nie można dać prezentu samemu siebie.',
 	'g-error-title' => 'Ojej. Nie można tego zrobić!',
 	'g-file-instructions' => 'Obrazek musi być w formacie jpeg, png lub gif (gif bez animacji) oraz musi być mniejszy niż 100kb.',
+	'g-from' => 'od <a href="$1">$2</a>',
 	'g-gift' => 'prezent',
 	'g-gift-name' => 'nazwa prezentu',
 	'g-give-gift' => 'Daj prezent',
@@ -1975,13 +1976,40 @@ To bardzo łatwe.',
 	'g-give-all-message-title' => 'Dodaj wiadomość',
 	'g-give-all-title' => 'Prezent dla $1',
 	'g-give-enter-friend-title' => 'Jeśli znasz nazwę użytkownika, wpisz ją poniżej',
+	'g-given' => 'Ten prezent został podarowany $1 {{PLURAL:$1|raz|razy}}',
 	'g-give-list-friends-title' => 'Wybierz z listy przyjaciół',
 	'g-give-list-select' => 'wybierz znajomego',
 	'g-give-separator' => 'lub',
+	'g-give-no-user-message' => 'Prezenty i nagrody to świetny sposób aby okazać swoją przyjaźń!',
+	'g-give-no-user-title' => 'Komu chciałbyś dać prezent?',
+	'g-give-to-user-title' => 'Wyślij prezent „$1” do $2',
+	'g-give-to-user-message' => 'Czy chcesz dać $1 <a href="$2">inny prezent</a>?',
+	'g-go-back' => 'Wróć',
+	'g-imagesbelow' => 'Poniżej znajdują się Twoje grafiki, które zostaną wykorzystane na stronie',
 	'g-large' => 'Duży',
+	'g-list-title' => 'lista prezentów $1',
 	'g-main-page' => 'Strona główna',
 	'g-medium' => 'Średni',
 	'g-mediumlarge' => 'Średnio–duży',
+	'g-new' => 'nowy',
+	'g-next' => 'Następny',
+	'g-previous' => 'Poprzedni',
+	'g-remove' => 'Usuń',
+	'g-remove-gift' => 'Usuń ten prezent',
+	'g-remove-message' => 'Czy na pewno chcesz usunąć prezent „$1”?',
+	'g-recent-recipients' => 'Pozostali ostatnio obdarowani tym darem',
+	'g-remove-success-title' => 'Usunąłeś prezent „$1”',
+	'g-remove-success-message' => 'Prezent „$1” został usunięty.',
+	'g-remove-title' => 'Usunąć „$1”?',
+	'g-send-gift' => 'Wyślij prezent',
+	'g-select-a-friend' => 'wybierz znajomego',
+	'g-sent-title' => 'Wysłałeś prezent do $1',
+	'g-sent-message' => 'Wysłałeś następujący prezent do $1.',
+	'g-small' => 'Mały',
+	'g-to-another' => 'Daj komuś innemu',
+	'g-uploadsuccess' => 'Przesłano',
+	'g-viewgiftlist' => 'Zobacz listę prezentów',
+	'g-your-profile' => 'Twój profil',
 	'right-giftadmin' => 'Tworzenie nowych oraz edytowanie istniejących prezentów',
 );
 
@@ -2087,6 +2115,17 @@ Ei, quer parer de receber e-mails de nós?
 Clique $5
 e altere suas preferências para desabilitar e-mails de notificação.',
 	'right-giftadmin' => 'Crie novas e edite ofertas existentes',
+);
+
+/** Brazilian Portuguese (Português do Brasil)
+ * @author Eduardo.mps
+ */
+$messages['pt-br'] = array(
+	'giftmanager' => 'Gerenciador de Presentes',
+	'giftmanager-addgift' => '+ Adicionar Novo Presente',
+	'giftmanager-access' => 'acesso ao presente',
+	'giftmanager-description' => 'descrição do presente',
+	'giftmanager-giftimage' => 'imagem do presente',
 );
 
 /** Tarandíne (Tarandíne)

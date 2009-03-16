@@ -433,10 +433,12 @@ Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.
 /** Message documentation (Message documentation)
  * @author Aotake
  * @author EugeneZelenko
+ * @author Fryed-peach
  * @author Jon Harald Søby
  * @author Purodha
  */
 $messages['qqq'] = array(
+	'user-count-separator' => '$1 and $2 are numbers of users.',
 	'user-watchlist' => '{{Identical|My watchlist}}',
 	'user-add-friend' => '{{Identical|Add as friend}}',
 	'user-add-foe' => '{{Identical|Add as foe}}',
@@ -3727,13 +3729,15 @@ $messages['it'] = array(
 $messages['ja'] = array(
 	'user-awards-title' => '表彰',
 	'user-gifts-title' => 'プレゼント',
-	'user-count-separator' => '$2中 $1',
+	'user-count-separator' => '$2人中 $1人',
 	'user-view-all' => 'すべて閲覧',
 	'user-upload-image' => '画像をアップロード',
 	'user-edit-this' => 'これを編集',
 	'user-edit-profile' => 'プロフィールの編集',
 	'user-upload-avatar' => 'アバターをアップロード',
 	'user-watchlist' => 'ウォッチリスト',
+	'user-add-friend' => '友人として追加',
+	'user-add-foe' => '敵として追加',
 	'user-send-message' => 'メッセージを送る',
 	'user-send-gift' => 'プレゼントを贈る',
 	'user-stats-title' => '統計',
@@ -3742,14 +3746,19 @@ $messages['ja'] = array(
 	'user-stats-comments' => 'コメント',
 	'other-info-title' => 'その他',
 	'user-friends-title' => '友達',
+	'user-foes-title' => '敵',
 	'other-info-movies' => '動画',
 	'other-info-tv' => 'テレビ',
 	'other-info-music' => '音楽',
 	'other-info-books' => '図書',
+	'other-no-info' => 'その他の情報なし',
 	'user-personal-info-title' => '個人情報',
 	'user-no-personal-info' => '個人情報なし',
 	'user-personal-info-real-name' => '実名',
 	'user-personal-info-birthday' => '誕生日',
+	'user-personal-info-occupation' => '職業',
+	'user-personal-info-websites' => 'ウェブサイト',
+	'user-personal-info-schools' => '学校',
 	'user-profile-update-profile' => 'プロフィール',
 	'user-profile-default-country' => 'アメリカ合衆国',
 	'user-profile-section-personal' => '個人情報',
@@ -3761,6 +3770,9 @@ $messages['ja'] = array(
 	'user-profile-personal-country' => '国',
 	'user-profile-personal-birthday' => '誕生日',
 	'user-profile-personal-birthdate' => '日付 (MM/DD)',
+	'user-profile-personal-occupation' => '職業',
+	'user-profile-personal-education' => '教育',
+	'user-profile-personal-schools' => '学校',
 	'user-profile-personal-web' => 'ウェブ',
 	'user-profile-personal-websites' => 'ウェブサイト',
 	'user-profile-interests-movies' => '動画',
@@ -3778,6 +3790,11 @@ $messages['ja'] = array(
 	'user-page-link' => 'ユーザーページ',
 	'user-social-profile-link' => 'ソーシャルプロフィール',
 	'user-wiki-link' => 'ウィキ ユーザーページ',
+	'user-type-toggle-old' => 'ウィキの利用者ページを使う',
+	'removeavatar' => 'アバターを削除',
+	'viewgifts' => 'プレゼントを見る',
+	'viewsystemgifts' => '賞を見る',
+	'avatarupload-removeavatar' => 'アバターを削除',
 	'user-profile-picture-log' => 'アバター',
 );
 
@@ -5488,6 +5505,7 @@ $messages['oc'] = array(
  */
 $messages['os'] = array(
 	'user-watchlist' => 'Мæ цæстдарды номхыгъд',
+	'user-stats-title' => 'Статистикæ',
 	'user-profile-personal-email' => 'Эл. посты адрис',
 	'user-profile-picture-large' => 'Стыр',
 	'user-profile-picture-medium' => 'Рæстæмбис',

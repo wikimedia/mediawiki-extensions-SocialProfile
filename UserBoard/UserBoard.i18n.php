@@ -1203,7 +1203,10 @@ $messages['ja'] = array(
 	'userboard_delete' => '削除',
 	'userboard_noexist' => '閲覧しようとした利用者は存在していません。',
 	'userboard_private' => '非公開',
+	'userboard_public' => '公開',
 	'userboard_nextpage' => '次',
+	'userboard_prevpage' => '前',
+	'userboard_sendbutton' => '送る',
 );
 
 /** Javanese (Basa Jawa)
