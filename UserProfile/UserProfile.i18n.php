@@ -515,6 +515,39 @@ $messages['akz'] = array(
 	'user-profile-section-preferences' => 'Nàasi istimáppìilaana',
 );
 
+/** Veps (Vepsan kel')
+ * @author Triple-ADHD-AS
+ * @author Игорь Бродский
+ */
+$messages['vep'] = array(
+	'user-gifts-title' => 'Lahjad',
+	'user-view-all' => 'Kacta kaik',
+	'user-upload-image' => 'Jügutoitta kuva',
+	'user-edit-this' => 'Redaktiruida necidä',
+	'user-edit-profile' => 'Redaktiruida profiläd',
+	'user-upload-avatar' => 'Jügutoitta avatar',
+	'user-watchlist' => 'Minun kaclendnimikirjutez',
+	'user-friends-title' => 'Sebranikad',
+	'user-foes-title' => 'Vihankandajad',
+	'other-info-books' => 'Kirjad',
+	'other-info-magazines' => 'Aiglehtesed',
+	'user-personal-info-hometown' => 'Kodilidn',
+	'user-personal-info-birthday' => 'Sündundpäiv',
+	'user-personal-info-schools' => 'Školad',
+	'user-personal-info-about-me' => 'Minun polhe',
+	'user-profile-personal-name' => 'Nimi',
+	'user-profile-personal-city' => 'Lidn',
+	'user-profile-personal-country' => 'Ma',
+	'user-profile-personal-hometown' => 'Kodilidn',
+	'user-profile-personal-birthday' => 'Sündundpäiv',
+	'user-profile-personal-aboutme' => 'Minun polhe',
+	'user-profile-personal-work' => 'Rad',
+	'user-profile-personal-places' => 'Kohtad',
+	'user-profile-picture-yourpicture' => 'Sinun kuva',
+	'user-profile-picture-small' => 'Pen’',
+	'user-social-profile-link' => "Socialine profil'",
+);
+
 /** Afrikaans (Afrikaans)
  * @author Arnobarnard
  * @author Naudefj
@@ -1698,6 +1731,13 @@ $messages['dsb'] = array(
 	'custom-no-info' => 'Žedne swójske informacije',
 );
 
+/** Ewe (Eʋegbe)
+ * @author Natsubee
+ */
+$messages['ee'] = array(
+	'user-profile-section-preferences' => 'Didiwo',
+);
+
 /** Greek (Ελληνικά)
  * @author Consta
  * @author Omnipaedista
@@ -1928,6 +1968,7 @@ $messages['eo'] = array(
 
 /** Spanish (Español)
  * @author Crazymadlover
+ * @author DoveBirkoff
  * @author Imre
  * @author Sanbec
  */
@@ -1988,6 +2029,8 @@ $messages['es'] = array(
 	'user-recent-activity-gift-rec' => 'Recibido un regalo de',
 	'user-recent-activity-user-message' => 'Enviar un mensaje a',
 	'user-recent-system-gift' => 'Recibido un premio',
+	'user-profile-update-notloggedin-text' => 'No puedes editar tu perfil sin iniciar sesión.
+Haz click <a href="$1">aquí</a> para iniciar sesión o click <a href="$2">aquí</a> para registrarte.',
 	'user-profile-update-saved' => 'Su perfil ha sido grabado',
 	'user-profile-update-log-section' => 'Sección cambiada',
 	'user-profile-update-profile' => 'perfil',
@@ -1995,6 +2038,7 @@ $messages['es'] = array(
 	'user-profile-points' => '$1 {{PLURAL:$1|punto|puntos}}',
 	'user-profile-section-personal' => 'Información personal',
 	'user-profile-section-sportsteams' => 'Actualizar redes',
+	'user-profile-section-custom' => 'Información Personalizada',
 	'user-profile-section-interests' => 'Otra información',
 	'user-profile-section-picture' => 'Avatar',
 	'user-profile-section-preferences' => 'Preferencias',
@@ -3722,11 +3766,13 @@ $messages['it'] = array(
 );
 
 /** Japanese (日本語)
+ * @author Fievarsty
  * @author Fryed-peach
  * @author Gzdavidwong
  * @author Hosiryuhosi
  */
 $messages['ja'] = array(
+	'populateuserprofiles' => '利用者プロフィールに入る',
 	'user-awards-title' => '表彰',
 	'user-gifts-title' => 'プレゼント',
 	'user-count-separator' => '$2人中 $1人',
@@ -3736,14 +3782,23 @@ $messages['ja'] = array(
 	'user-edit-profile' => 'プロフィールの編集',
 	'user-upload-avatar' => 'アバターをアップロード',
 	'user-watchlist' => 'ウォッチリスト',
+	'user-meet-people' => '人々に会う',
 	'user-add-friend' => '友人として追加',
 	'user-add-foe' => '敵として追加',
+	'user-remove-friend' => '友達を除去',
+	'user-remove-foe' => '敵を除去',
 	'user-send-message' => 'メッセージを送る',
 	'user-send-gift' => 'プレゼントを贈る',
+	'user-contributions' => '投稿記録',
 	'user-stats-title' => '統計',
 	'user-stats-edits' => '編集回数',
 	'user-stats-votes' => '票数',
 	'user-stats-comments' => 'コメント',
+	'user-stats-recruits' => '{{PLURAL:$1|募集|募集}}',
+	'user-stats-poll-votes' => 'ポール {{PLURAL:$1|票|票}}',
+	'user-stats-picture-game-votes' => '画像ゲーム {{PLURAL:$1|票|票}}',
+	'user-stats-quiz-points' => 'クイズ {{PLURAL:$1|点|点数}}',
+	'user-stats-pick-points' => '選択 {{PLURAL:$1|点|点数}}',
 	'other-info-title' => 'その他',
 	'user-friends-title' => '友達',
 	'user-foes-title' => '敵',
@@ -3751,51 +3806,149 @@ $messages['ja'] = array(
 	'other-info-tv' => 'テレビ',
 	'other-info-music' => '音楽',
 	'other-info-books' => '図書',
+	'other-info-video-games' => 'ビデオゲーム',
+	'other-info-magazines' => '雑誌',
+	'other-info-snacks' => '軽食',
+	'other-info-drinks' => '飲み物',
 	'other-no-info' => 'その他の情報なし',
+	'custom-info-title' => 'カスタム情報',
+	'custom-info-field1' => 'カスタム 1',
+	'custom-info-field2' => 'カスタム 2',
+	'custom-info-field3' => 'カスタム 3',
+	'custom-info-field4' => 'カスタム 4',
+	'custom-no-info' => 'カスタム情報がありません',
+	'profile-updated-personal' => 'あなたのプロフィールを更新する',
+	'profile-not-provided' => '提供されません',
+	'populate-user-profile-done' => '{{PLURAL:$1|プロフィール|プロフィール}} $1 を追加',
+	'user-board-title' => 'ボード',
+	'user-send-board-blast' => 'ボードのバーストを送る',
 	'user-personal-info-title' => '個人情報',
 	'user-no-personal-info' => '個人情報なし',
 	'user-personal-info-real-name' => '実名',
+	'user-personal-info-location' => '場所',
+	'user-personal-info-hometown' => '出身地',
 	'user-personal-info-birthday' => '誕生日',
 	'user-personal-info-occupation' => '職業',
 	'user-personal-info-websites' => 'ウェブサイト',
+	'user-personal-info-places-lived' => '私の住んでいた場所',
 	'user-personal-info-schools' => '学校',
+	'user-personal-info-about-me' => '私について',
+	'user-recent-activity-title' => '最近の活動',
+	'user-recent-activity-edit' => 'そのページを編集',
+	'user-recent-activity-vote' => 'そのページを投票',
+	'user-recent-activity-comment' => 'そのページでコメント',
+	'user-recent-activity-gift-sent' => '贈り物を送信する',
+	'user-recent-activity-gift-rec' => '贈り物を受け取る',
+	'user-recent-activity-friend' => '今の友達',
+	'user-recent-activity-foe' => '今の敵',
+	'user-recent-activity-user-message' => 'メッセージを送信',
+	'user-recent-activity-network-update' => '考えを掲載する',
+	'user-recent-system-gift' => '贈り受け取る',
+	'user-profile-update-notloggedin-title' => '非ログイン状態であなたのプロフィールを編集することはできません。',
+	'user-profile-update-notloggedin-text' => 'あなたはログインしていないためあなたのプロフィールを編集することはできません。
+ログインする場合は<a href="$1">ここ</a>をクリックし、登録する場合は<a href="$2">ここ</a>をクリックしてください。',
+	'user-profile-update-saved' => 'あなたのプロフィールは保存されました',
+	'user-profile-update-log-section' => 'セクションを変更',
 	'user-profile-update-profile' => 'プロフィール',
 	'user-profile-default-country' => 'アメリカ合衆国',
+	'user-profile-points' => '$1 {{PLURAL:$1|点|点数}}',
 	'user-profile-section-personal' => '個人情報',
+	'user-profile-section-sportsteams' => 'ネットワーク更新',
+	'user-profile-section-custom' => 'カスタム情報',
 	'user-profile-section-interests' => 'その他',
 	'user-profile-section-picture' => 'アバター',
 	'user-profile-section-preferences' => '個人設定',
+	'user-profile-personal-info' => '情報',
 	'user-profile-personal-name' => '名前',
+	'user-profile-personal-email' => 'メールアドレス',
+	'user-profile-personal-email-needs-auth' => '(あなたのメールを送信してサイトからの通知を受け取り認証する必要があります)',
+	'user-profile-personal-confirmemail' => 'メールを確認する',
+	'user-profile-personal-location' => '所在地',
 	'user-profile-personal-city' => '市町村',
 	'user-profile-personal-country' => '国',
+	'user-profile-personal-hometown' => '出身地',
 	'user-profile-personal-birthday' => '誕生日',
 	'user-profile-personal-birthdate' => '日付 (MM/DD)',
+	'user-profile-personal-aboutme' => '私について',
+	'user-profile-personal-work' => '仕事',
 	'user-profile-personal-occupation' => '職業',
 	'user-profile-personal-education' => '教育',
 	'user-profile-personal-schools' => '学校',
+	'user-profile-personal-places' => '場所',
+	'user-profile-personal-placeslived' => '私が住んでいる場所',
 	'user-profile-personal-web' => 'ウェブ',
 	'user-profile-personal-websites' => 'ウェブサイト',
+	'user-profile-interests-entertainment' => '楽しみ',
 	'user-profile-interests-movies' => '動画',
 	'user-profile-interests-tv' => 'テレビ',
 	'user-profile-interests-music' => '音楽',
 	'user-profile-interests-books' => '本',
+	'user-profile-interests-magazines' => '雑誌',
+	'user-profile-interests-videogames' => 'ビデオゲーム',
+	'user-profile-interests-eats' => '食べる',
+	'user-profile-interests-foodsnacks' => '食べ物 & 軽食',
+	'user-profile-interests-drinks' => '飲み物',
+	'user-profile-preferences-emails' => 'メール通知',
+	'user-profile-preferences-emails-personalmessage' => '個人メッセージを送信',
+	'user-profile-preferences-emails-friendfoe' => '別の利用者友達かあなたの敵',
+	'user-profile-preferences-emails-gift' => 'あなたの贈り物を受け取る',
+	'user-profile-preferences-emails-level' => 'レベルを進む',
+	'user-profile-preferences-emails-weekly' => '毎週更新メールを受け取る',
 	'user-profile-update-button' => 'アップデート',
+	'user-profile-tidbits-title' => 'Tidbits',
+	'user-profile-tidbits-favmoment' => '好きなスポーツの瞬間',
+	'user-profile-tidbits-worstmoment' => '最悪なスポーツ瞬間',
+	'user-profile-tidbits-favathlete' => 'お気に入りなスポーツ選手とその理由',
+	'user-profile-tidbits-leastfavathlete' => '一番お気に入りなスポーツ選手とその理由',
+	'user-profile-sports-sport' => 'スポーツ',
+	'user-profile-sports-title' => 'あなたの好きなスポーツとチームを編集する',
+	'user-profile-sports-notloggedintitle' => 'おっと！',
+	'user-profile-sports-notloggedintext' => 'あなたのプロフィールを編集するにはログインする必要があります。',
+	'user-profile-sports-teamremoved' => 'あなたの所属しているチームを削除',
+	'user-profile-sports-teamsaved' => 'あなたの所属しているチームを保存',
+	'user-profile-sports-addmore' => 'スポーツ/チームをもっと追加',
 	'user-profile-picture-title' => 'あなたの写真をアップロード',
 	'user-profile-picture-yourpicture' => 'あなたの写真',
+	'user-profile-picture-yourpicturestext' => '以下の画像はあなたのプロフィール、ネットワークページとあなたのコメントで表示されます。',
 	'user-profile-picture-large' => '大',
+	'user-profile-picture-medlarge' => '中 - 大',
 	'user-profile-picture-medium' => '中',
 	'user-profile-picture-small' => '小',
+	'user-profile-picture-uploaddifferent' => '別の画像をアップロードする',
+	'user-profile-picture-currentimage' => '現在の画像',
+	'user-profile-picture-choosepicture' => 'あなたの画像を選択する',
+	'user-profile-picture-picsize' => 'あなたの画像はjpeg、pngまたはgifである必要があり、サイズは100キロバイトより小さくする必要があります。',
 	'user-profile-goback' => '戻る',
 	'user-profile-userlevels-link' => 'ユーザーレベル',
+	'user-no-images' => '画像のアップロードがされてません',
+	'edit-profile-title' => 'あなたのプロフィールを編集',
 	'user-page-link' => 'ユーザーページ',
 	'user-social-profile-link' => 'ソーシャルプロフィール',
 	'user-wiki-link' => 'ウィキ ユーザーページ',
+	'update_profile_nav' => '* Special:UpdateProfile|個人情報
+* Special:UpdateProfile/personal|他の情報
+* Special:UpdateProfile/custom|カスタム情報
+* Special:UploadAvatar|アバター
+* Special:UpdateProfile/preferences|個人設定',
 	'user-type-toggle-old' => 'ウィキの利用者ページを使う',
+	'user-type-toggle-new' => 'ソーシャル利用者ページを使用',
+	'user-board-login-message' => '他の利用者にメッセージを投稿するには、<a href="$1">ログイン</a>する必要があります',
 	'removeavatar' => 'アバターを削除',
+	'givegift' => '贈り物をあげる',
 	'viewgifts' => 'プレゼントを見る',
 	'viewsystemgifts' => '賞を見る',
 	'avatarupload-removeavatar' => 'アバターを削除',
+	'avatarupload-currentavatar' => '現在のアバター $1',
+	'avatarupload-removesuccess' => 'アバターは正常に削除されました。',
+	'avatarupload-removeanother' => '別のものを除去',
+	'profilelogpage' => '利用者プロフィール編集記録',
+	'profilelogpagetext' => 'これは利用者プロフィールの編集記録です。',
+	'avatarlogpage' => 'アバターアップロード記録',
+	'avatarlogpagetext' => 'これは利用者アバターのアップロード記録です。',
 	'user-profile-picture-log' => 'アバター',
+	'user-profile-picture-log-entry' => '新しいアバターをアップロード',
+	'user-profile-picture-log-delete-entry' => 'アバター $1 を削除しました',
+	'right-avatarremove' => '利用者のアバターを削除',
 );
 
 /** Javanese (Basa Jawa)
@@ -4756,6 +4909,7 @@ $messages['nah'] = array(
  * @author Slomox
  */
 $messages['nds'] = array(
+	'user-count-separator' => '$1 vun $2',
 	'user-profile-personal-name' => 'Naam',
 	'user-profile-sports-sport' => 'Sport',
 	'user-profile-sports-notloggedintitle' => 'Höytsa!',

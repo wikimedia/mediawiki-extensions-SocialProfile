@@ -122,6 +122,7 @@ and change your settings to disable email notifications.',
  * @author Siebrand
  */
 $messages['qqq'] = array(
+	'giftmanager-private' => '{{Identical|Private}}',
 	'g-cancel' => '{{Identical|Cancel}}',
 	'g-count' => "* '''$1''' is a user name
 * '''$2''' is his or her count of gifts",
@@ -445,6 +446,32 @@ $4
 
 Націсьніце $5 і зьмяніце Вашыя ўстаноўкі, каб спыніць паведамленьні па электроннай пошце.',
 	'right-giftadmin' => 'Стварыць новы падарунак альбо рэдагаваць існуючыя падарункі',
+);
+
+/** Bulgarian (Български)
+ * @author DCLXVI
+ */
+$messages['bg'] = array(
+	'giftmanager-addgift' => '+ Добавяне на нов подарък',
+	'giftmanager-description' => 'описание на подаръка',
+	'giftmanager-image' => 'добавяне/заменяне на картинката',
+	'giftmanager-giftcreated' => 'Подаръкът беше създаден',
+	'giftmanager-giftsaved' => 'Подаръкът беше съхранен',
+	'giftmanager-view' => 'Преглеждане на списъка с подаръци',
+	'g-add-message' => 'Добавяне на съобщение',
+	'g-back-link' => '< Връщане към страницата на $1',
+	'g-choose-file' => 'Избиране на файл:',
+	'g-cancel' => 'Отмяна',
+	'g-count' => '$1 има $2 {{PLURAL:$2|подарък|подаръка}}.',
+	'g-current-image' => 'Текуща картинка',
+	'g-error-message-login' => 'За да давате подаръци е необходимо да влезете в системата',
+	'g-from' => 'от <a href="$1">$2</a>',
+	'g-gift' => 'подарък',
+	'g-gift-name' => 'име на подаръка',
+	'g-give-all-message-title' => 'Добавяне на съобщение',
+	'g-give-list-select' => 'избиране на приятел',
+	'g-give-separator' => 'или',
+	'g-remove' => 'Премахване',
 );
 
 /** German (Deutsch)
@@ -1412,16 +1439,23 @@ e cambia tu configurationes pro disactivar le notificationes in e-mail.',
  * @author Hosiryuhosi
  */
 $messages['ja'] = array(
+	'giftmanager' => 'プレゼントの管理',
 	'giftmanager-addgift' => '+ 新しいプレゼントの追加',
 	'giftmanager-giftimage' => 'プレゼント画像',
 	'giftmanager-public' => '公開',
+	'giftmanager-private' => '非公開',
 	'g-choose-file' => 'ファイルを選ぶ:',
 	'g-cancel' => '中止',
 	'g-create-gift' => 'プレゼントを作成',
+	'g-current-image' => '現在の画像',
+	'g-error-message-login' => 'プレゼントを贈るにはログインする必要があります',
 	'g-gift' => 'プレゼント',
 	'g-gift-name' => 'プレゼント名',
+	'g-give-gift' => 'プレゼントを贈る',
 	'g-give-all-message-title' => 'メッセージの追加',
+	'g-give-all-title' => '$1 にプレゼントを贈る',
 	'g-give-list-select' => '友達を選択',
+	'g-give-separator' => 'または',
 	'g-go-back' => '戻る',
 	'g-large' => '大',
 	'g-main-page' => 'メインページ',
@@ -1431,8 +1465,10 @@ $messages['ja'] = array(
 	'g-next' => '次',
 	'g-previous' => '前',
 	'g-remove' => '削除',
+	'g-remove-title' => '「$1」を削除しますか？',
 	'g-send-gift' => 'プレゼントを贈る',
 	'g-small' => '小',
+	'g-uploadsuccess' => 'アップロード成功',
 );
 
 /** Ripoarisch (Ripoarisch)
@@ -2126,6 +2162,99 @@ $messages['pt-br'] = array(
 	'giftmanager-access' => 'acesso ao presente',
 	'giftmanager-description' => 'descrição do presente',
 	'giftmanager-giftimage' => 'imagem do presente',
+	'giftmanager-image' => 'adicionar/substituir imagem',
+	'giftmanager-giftcreated' => 'O presente foi criado',
+	'giftmanager-giftsaved' => 'O presente foi salvo',
+	'giftmanager-public' => 'público',
+	'giftmanager-private' => 'privado',
+	'giftmanager-view' => 'Ver Lista de Presentes',
+	'g-add-message' => 'Adicionar Mensagem',
+	'g-back-edit-gift' => 'Voltar para Editar Este Presente',
+	'g-back-gift-list' => 'Voltar para Lista de Presentes',
+	'g-back-link' => '< Voltar para página de $1',
+	'g-choose-file' => 'Escolher Arquivo:',
+	'g-cancel' => 'Cancelar',
+	'g-count' => '$1 tem $2 {{PLURAL:$2|presente|presentes}}.',
+	'g-create-gift' => 'Criar Presente',
+	'g-created-by' => 'criado por',
+	'g-current-image' => 'Imagem Atual',
+	'g-delete-message' => 'Você tem certeza de que quer excluir o presente "$1"? Isto também irá excluí-lo de usuários que podem tê-lo recebido.',
+	'g-description-title' => 'presente "$2" de $1',
+	'g-error-do-not-own' => 'Você não possui este presente.',
+	'g-error-message-blocked' => 'Você está bloqueado atualmente e não pode dar presentes',
+	'g-error-message-invalid-link' => 'A ligação em que você entrou é inválida.',
+	'g-error-message-login' => 'Você precisa estar autenticado para enviar presentes',
+	'g-error-message-no-user' => 'O utilizador que você está tentando ver não existe.',
+	'g-error-message-to-yourself' => 'Você não pode dar um presente a si mesmo',
+	'g-error-title' => 'Ops, você entrou no lugar errado!',
+	'g-file-instructions' => 'Sua imagem precisa ser um jpeg, png or gif (sem gifs animados), e precisa ter tamanho menor que 100kb.',
+	'g-from' => 'de <a href="$1">$2</a>',
+	'g-gift' => 'presente',
+	'g-gift-name' => 'nome do presente',
+	'g-give-gift' => 'Dar Presente',
+	'g-give-all' => 'Quer dar um presente para $1? 
+Apenas clique em um dos presentes abaixo e clique em "Enviar Presente". 
+É fácil assim.',
+	'g-give-all-message-title' => 'Adicionar Mensagem',
+	'g-give-all-title' => 'Dar um Presente para $1',
+	'g-give-enter-friend-title' => 'Se você sabe o nome do utilizador, escreva-o abaixo',
+	'g-given' => 'Este presente foi dado $1 {{PLURAL:$1|vez|vezes}}',
+	'g-give-list-friends-title' => 'Selecione da sua lista de amigos',
+	'g-give-list-select' => 'selecione um amigo',
+	'g-give-separator' => 'ou',
+	'g-give-no-user-message' => 'Presentes e prêmios são uma ótima maneira de dar reconhecimento aos seus amigos!',
+	'g-give-no-user-title' => 'Para quem você gostaria de dar um presente?',
+	'g-give-to-user-title' => 'Enviar presente "$1" para $2',
+	'g-give-to-user-message' => 'Quer dar a $1 um <a href="$2">presente diferente</a>?',
+	'g-go-back' => 'Voltar',
+	'g-imagesbelow' => 'Abaixo estão as imagens que serão usadas no site',
+	'g-large' => 'Grande',
+	'g-list-title' => 'Lista de Presentes de $1',
+	'g-main-page' => 'Página Principal',
+	'g-medium' => 'Médio',
+	'g-mediumlarge' => 'Médio-Grande',
+	'g-new' => 'novo',
+	'g-next' => 'Próximo',
+	'g-previous' => 'Anterior',
+	'g-remove' => 'Remover',
+	'g-remove-gift' => 'Remover este Presente',
+	'g-remove-message' => 'Tem certeza de que deseja remover o presente "$1"?',
+	'g-recent-recipients' => 'Outros ganhadores deste presente',
+	'g-remove-success-title' => 'Você removeu com sucesso o presente "$1"',
+	'g-remove-success-message' => 'O presente "$1" foi removido.',
+	'g-remove-title' => 'Remover "$1"?',
+	'g-send-gift' => 'Enviar Presente',
+	'g-select-a-friend' => 'selecionar um amigo',
+	'g-sent-title' => 'Você enviou um presente para $1',
+	'g-sent-message' => 'Você enviou o seguinte presente para $1.',
+	'g-small' => 'Pequeno',
+	'g-to-another' => 'Dar para Outra Pessoa',
+	'g-uploadsuccess' => 'Carregamento bem sucedido',
+	'g-viewgiftlist' => 'Ver Lista de Presentes',
+	'g-your-profile' => 'Seu Perfil',
+	'gift_received_subject' => '$1 enviou para você o Presente $2 Gift em {{SITENAME}}!',
+	'gift_received_body' => 'Oi $1:
+
+$2 acabou de enviar o presente $3 em {{SITENAME}}.   
+
+Quer ler o recado que $2 deixou e ver seu presente? Clique na ligação abaixo:
+
+$4
+
+Esperamos que tenha gostado!
+
+Obrigado,
+
+
+O Time de {{SITENAME}}
+
+---
+
+Ei, quer parer de receber e-mails de nós?
+
+Clique $5
+e altere suas preferências para desabilitar e-mails de notificação.',
+	'right-giftadmin' => 'Crie novos e edite presentes existentes',
 );
 
 /** Tarandíne (Tarandíne)

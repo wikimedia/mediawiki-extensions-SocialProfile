@@ -377,6 +377,13 @@ Klikni na $3
 a změń swóje nastajenja, aby znjemóžnił zdźělenja pśez e-mail.',
 );
 
+/** Ewe (Eʋegbe)
+ * @author Natsubee
+ */
+$messages['ee'] = array(
+	'top-fans-bad-field-title' => 'Tsalele!',
+);
+
 /** Greek (Ελληνικά)
  * @author Consta
  * @author Omnipaedista

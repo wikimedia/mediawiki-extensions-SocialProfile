@@ -230,6 +230,21 @@ $messages['niu'] = array(
 	'ur-login' => 'Hu ki loto',
 );
 
+/** Veps (Vepsan kel')
+ * @author Triple-ADHD-AS
+ * @author Игорь Бродский
+ */
+$messages['vep'] = array(
+	'ur-main-page' => 'Pälehtpol’',
+	'ur-add-personal-message' => 'Ližata personaline tedotuz',
+	'ur-previous' => 'edel.',
+	'ur-next' => "jäl'gh.",
+	'ur-remove' => 'Čuta poiš',
+	'ur-cancel' => 'Heitta pätand',
+	'ur-login' => 'Kirjutadas sistemha',
+	'ur-add-error-message-pending-request-title' => 'Tirpand!',
+);
+
 /** Afrikaans (Afrikaans)
  * @author Arnobarnard
  * @author Naudefj
@@ -1404,6 +1419,7 @@ Se vi volas pliajn amikojn, <a href="$1">invitu ilin!</a>',
 
 /** Spanish (Español)
  * @author Crazymadlover
+ * @author DoveBirkoff
  * @author Feten7
  * @author Imre
  * @author Sanbec
@@ -1447,15 +1463,25 @@ Por favor solicite amigos/enemigos a través del enlace correcto.',
 	'ur-remove-error-message-remove-yourself' => 'No puede removerse a sí mismo.',
 	'ur-remove-error-message-pending-foe-request' => 'Usted tiene pendiente una solicitud de enemigo con $1.',
 	'ur-remove-error-message-pending-friend-request' => 'Usted tiene pendiente una solicitud de amigo con $1.',
+	'ur-remove-error-not-loggedin-foe' => 'Debes haber iniciado sesión para eliminar un enemigo.',
+	'ur-remove-error-not-loggedin-friend' => 'Debes haber iniciado sesión para remover un amigo.',
 	'ur-remove' => 'Eliminar',
 	'ur-cancel' => 'Cancelar',
 	'ur-login' => 'Entrar',
 	'ur-add-title-foe' => 'Desea agregar $1 como su enemigo?',
 	'ur-add-title-friend' => '¿Deseas agregar a $1 como amigo tuyo?',
+	'ur-add-message-foe' => 'Estás a punto de añadir $1 como tu enemigo
+Notificaremos $1 para confirmar tu rencilla.',
+	'ur-add-message-friend' => 'Estás a punto de añadir $1 como tu amigo.
+Notificaremos $1 para confirmar tu amistad.',
 	'ur-add-button-foe' => 'Agregar como enemigo',
 	'ur-add-button-friend' => 'Agregar como amigo',
 	'ur-add-sent-title-foe' => 'Hemos enviado su solicitud de enemigo a $1!',
 	'ur-add-sent-title-friend' => 'Hemos enviado su solicitud de amigo a $1!',
+	'ur-add-sent-message-foe' => 'Tu solicitud de enemigo ha sido enviada a $1 para ser confirmada.
+Si $1 confirma tu solicitud, recibirás un segundo e-mail',
+	'ur-add-sent-message-friend' => 'Tu solicitud de amigo ha sido enviada a $1 para ser confirmada.
+Si $1 confirma tu solicitud, recibirás un segundo e-mail',
 	'ur-add-error-message-no-user' => 'El usuario que está tratando de agregar no existe.',
 	'ur-add-error-message-blocked' => 'Usted está actualmente bloqueado y no puede agregar amigos o enemigos.',
 	'ur-add-error-message-yourself' => 'No puede agregarse a sí mismo como amigo o enemigo.',
@@ -1466,6 +1492,8 @@ Por favor solicite amigos/enemigos a través del enlace correcto.',
 Le notificaremos cuando $1 confirme su solicitud.',
 	'ur-add-error-message-pending-foe-request' => 'Usted tiene una solucitud de enemigo pendiente con $1.
 Le notificaremos cuando $1 confirme su solicitud.',
+	'ur-add-error-message-not-loggedin-foe' => 'Debes haber iniciado sesión para añadir un enemigo',
+	'ur-add-error-message-not-loggedin-friend' => 'Debes haber iniciado sesión para añadir un amigo',
 	'ur-requests-title' => 'Solicitudes de relación',
 	'ur-requests-message-foe' => '<a href="$1">$2</a> desea ser su enemigo.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> desea ser su amigo.',
@@ -1527,6 +1555,7 @@ Hey, Desea no recibir correos electrónicos de nosotros?
 
 Haga click en $4
 y cambie sus configuraciones para deshabilitar notificaciones por correo electrónico.',
+	'foe_accept_subject' => 'Listo! $1 ha aceptado su solicitud de enemigo en {{SITENAME}}!',
 	'foe_accept_body' => 'Hola $1.
 
 $2 ha aceptado su solicitud de enemigo en {{SITENAME}}!

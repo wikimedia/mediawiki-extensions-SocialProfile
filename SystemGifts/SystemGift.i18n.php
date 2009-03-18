@@ -294,6 +294,14 @@ $4
 	'right-awardsmanage' => 'Стварыць новую і рэдагаваць існуючыя ўзнагароды',
 );
 
+/** Bulgarian (Български)
+ * @author DCLXVI
+ */
+$messages['bg'] = array(
+	'ga-addnew' => '+ Добавяне на нов подарък',
+	'ga-choosefile' => 'Избиране на файл:',
+);
+
 /** German (Deutsch)
  * @author Umherirrender
  */
