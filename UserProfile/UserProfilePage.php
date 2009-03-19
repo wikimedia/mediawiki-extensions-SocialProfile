@@ -977,7 +977,7 @@ class UserProfilePage extends Article {
 					if( $fanbox['fantag_image_name'] ){
 						$fantag_image_width = 45;
 						$fantag_image_height = 53;
-						$fantag_image = Image::newFromName( $fanbox['fantag_image_name'] );
+						$fantag_image = wfFindFile( $fanbox['fantag_image_name'] );
 						$fantag_image_url = $fantag_image->createThumb($fantag_image_width, $fantag_image_height);
 						$fantag_image_tag = '<img alt="" src="' . $fantag_image_url . '"/>';
 					};
