@@ -1449,6 +1449,7 @@ $messages['ja'] = array(
 	'g-create-gift' => 'プレゼントを作成',
 	'g-current-image' => '現在の画像',
 	'g-error-message-login' => 'プレゼントを贈るにはログインする必要があります',
+	'g-error-message-no-user' => 'あなたが閲覧しようとした利用者は存在しません。',
 	'g-gift' => 'プレゼント',
 	'g-gift-name' => 'プレゼント名',
 	'g-give-gift' => 'プレゼントを贈る',
@@ -1465,6 +1466,7 @@ $messages['ja'] = array(
 	'g-next' => '次',
 	'g-previous' => '前',
 	'g-remove' => '削除',
+	'g-remove-gift' => 'このプレゼントを削除する',
 	'g-remove-title' => '「$1」を削除しますか？',
 	'g-send-gift' => 'プレゼントを贈る',
 	'g-small' => '小',
@@ -2273,6 +2275,13 @@ $messages['roa-tara'] = array(
 	'giftmanager-private' => 'private',
 	'giftmanager-view' => "Vide 'a liste de le riale",
 	'g-add-message' => "Aggiunge 'nu messagge",
+);
+
+/** Russian (Русский)
+ * @author Александр Сигачёв
+ */
+$messages['ru'] = array(
+	'g-created-by' => 'создан',
 );
 
 /** Slovak (Slovenčina)

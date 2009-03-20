@@ -265,6 +265,13 @@ $messages['bg'] = array(
 Можете да промените настройките си за известяване от следната препратка: $3.',
 );
 
+/** Bosnian (Bosanski)
+ * @author CERminator
+ */
+$messages['bs'] = array(
+	'top-fans-total-points-link' => 'Ukupni bodovi',
+);
+
 /** Czech (Česky)
  * @author Matěj Grabovský
  */
@@ -1425,6 +1432,20 @@ $messages['ru'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Подано голосов против|Подано голосов против}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Получено подарков|Получено подарков}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Отправлено подарков|Отправлено подарков}}',
+	'level-advance-subject' => 'Вы теперь «$1» в проекте {{SITENAME}}!',
+	'level-advance-body' => 'Привет, $1.
+
+Вы теперь «$2» в проекте {{SITENAME}}!
+
+Поздравляем!
+
+Команда проекта {{SITENAME}}
+
+---
+Эй, не хотите больше получать таких писем от нас?
+
+Нажмите $3
+и измените настройки отправки уведомлений по эл. почте.',
 );
 
 /** Slovak (Slovenčina)
