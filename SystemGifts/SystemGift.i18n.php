@@ -1020,6 +1020,7 @@ $messages['ja'] = array(
 	'ga-previous' => '前',
 	'ga-saved' => 'プレゼントは保存されました。',
 	'ga-small' => '小',
+	'ga-threshold' => '閾値',
 	'ga-uploadsuccess' => 'アップロード成功',
 	'ga-viewlist' => 'プレゼントリストを見る',
 );
@@ -1370,6 +1371,7 @@ $messages['pl'] = array(
 	'ga-title' => 'nagrody $1',
 	'ga-uploadsuccess' => 'Przesłano',
 	'ga-viewlist' => 'Zobacz listę prezentu',
+	'system_gift_received_subject' => 'Dostałeś nagrodę $1 na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
 	'right-awardsmanage' => 'Tworzenie nowych oraz edytowanie istniejących nagród',
 );
 

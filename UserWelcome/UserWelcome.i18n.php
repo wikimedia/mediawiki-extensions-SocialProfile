@@ -140,6 +140,18 @@ $messages['bg'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|нов приятел|нови приятели}}',
 );
 
+/** Breton (Brezhoneg)
+ * @author Fulup
+ */
+$messages['br'] = array(
+	'mp-welcome-logged-in' => 'Salud $1',
+	'mp-requests-title' => 'Goulennoù',
+	'mp-requests-message' => 'Setu aze ho koulennoù',
+	'mp-request-new-message' => 'Kemennadenn nevez',
+	'mp-request-new-award' => '$1 priz {{PLURAL:$1|nevez|nevez}}',
+	'mp-request-new-gift' => '$1 {{PLURAL:$1|prof|prof}} nevez',
+);
+
 /** Bosnian (Bosanski)
  * @author CERminator
  */

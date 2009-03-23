@@ -1435,30 +1435,65 @@ e cambia tu configurationes pro disactivar le notificationes in e-mail.',
 );
 
 /** Japanese (日本語)
+ * @author Fievarsty
  * @author Fryed-peach
  * @author Hosiryuhosi
  */
 $messages['ja'] = array(
 	'giftmanager' => 'プレゼントの管理',
 	'giftmanager-addgift' => '+ 新しいプレゼントの追加',
+	'giftmanager-access' => '贈り物のアクセス',
+	'giftmanager-description' => '贈り物の説明',
 	'giftmanager-giftimage' => 'プレゼント画像',
+	'giftmanager-image' => '追加/画像を置き換え',
+	'giftmanager-giftcreated' => '贈り物を作成しました',
+	'giftmanager-giftsaved' => '贈り物を保存しました',
 	'giftmanager-public' => '公開',
 	'giftmanager-private' => '非公開',
+	'giftmanager-view' => '贈り物の一覧を表示',
+	'g-add-message' => 'メッセージを追加',
+	'g-back-edit-gift' => '贈り物を戻して編集する',
+	'g-back-gift-list' => '戻した贈り物の一覧',
+	'g-back-link' => '< $1ページに戻る',
 	'g-choose-file' => 'ファイルを選ぶ:',
 	'g-cancel' => '中止',
+	'g-count' => '$1 の持っている $2 {{PLURAL:$2|贈り物|贈り物}}。',
 	'g-create-gift' => 'プレゼントを作成',
+	'g-created-by' => '作成',
 	'g-current-image' => '現在の画像',
+	'g-delete-message' => 'あなたの贈り物 "$1" を確実に削除する必要がありますがよろしいでしょうか？ 
+またこれは受け取ったと思われる他の利用者からも削除されます。',
+	'g-description-title' => '$1 の贈り物は "$2"',
+	'g-error-do-not-own' => 'あなたはこの贈り物を所持してません。',
+	'g-error-message-blocked' => 'あなたは現在ブロックされているため贈り物を与えることができません',
+	'g-error-message-invalid-link' => 'あなたの持っているその入力されたリンクは無効です。',
 	'g-error-message-login' => 'プレゼントを贈るにはログインする必要があります',
 	'g-error-message-no-user' => 'あなたが閲覧しようとした利用者は存在しません。',
+	'g-error-message-to-yourself' => '自分自身への贈り物を与えることはできません',
+	'g-error-title' => 'おっと、あなたは間違った方向です！',
+	'g-file-instructions' => 'あなたの画像はjpeg、pngまたはgif （アニメーションgifは不可）である必要があり、サイズは100キロバイトよりも小さくする必要があります。',
+	'g-from' => '<a href="$1">$2</a> から',
 	'g-gift' => 'プレゼント',
 	'g-gift-name' => 'プレゼント名',
 	'g-give-gift' => 'プレゼントを贈る',
+	'g-give-all' => '贈り物 $1 を与えますか？ 
+以下の贈り物を1つクリックし、そして「贈り物を送る」をクリックしてください。
+簡単にできます。',
 	'g-give-all-message-title' => 'メッセージの追加',
 	'g-give-all-title' => '$1 にプレゼントを贈る',
+	'g-give-enter-friend-title' => 'もしあなたが利用者の名前を知っているなら、以下にそれをタイプしてください',
+	'g-given' => 'この贈り物を $1{{PLURAL:$1|時|時}} に与えました',
+	'g-give-list-friends-title' => 'あなたの友達を一覧から選択してください',
 	'g-give-list-select' => '友達を選択',
 	'g-give-separator' => 'または',
+	'g-give-no-user-message' => '贈り物と賞はあなたの友人を承認するすばらしい方法です!',
+	'g-give-no-user-title' => 'あなたは誰に贈り物を与えたいですか？',
+	'g-give-to-user-title' => '"$1" の贈り物を $2 へ送る',
+	'g-give-to-user-message' => '<a href="$2">別の贈り物</a>を $1 へ与えますか?',
 	'g-go-back' => '戻る',
+	'g-imagesbelow' => '以下はサイトで使用されるあなたの画像です',
 	'g-large' => '大',
+	'g-list-title' => '$1 の贈り物一覧',
 	'g-main-page' => 'メインページ',
 	'g-medium' => '中',
 	'g-mediumlarge' => '中大',
@@ -1467,10 +1502,42 @@ $messages['ja'] = array(
 	'g-previous' => '前',
 	'g-remove' => '削除',
 	'g-remove-gift' => 'このプレゼントを削除する',
+	'g-remove-message' => 'あなたは贈り物の "$1" を確実に削除しようとしていますがよろしいでしょうか?',
+	'g-recent-recipients' => '最近この贈り物を受け取った他の人',
+	'g-remove-success-title' => '"$1" の贈り物は正常に削除されました',
+	'g-remove-success-message' => '贈り物 "$1" は削除されました。',
 	'g-remove-title' => '「$1」を削除しますか？',
 	'g-send-gift' => 'プレゼントを贈る',
+	'g-select-a-friend' => '友達を選択',
+	'g-sent-title' => 'あなたの贈り物を $1 に送りました。',
+	'g-sent-message' => 'あなたは以下の贈り物を $1 に送りました。',
 	'g-small' => '小',
+	'g-to-another' => '他の誰かに与える',
 	'g-uploadsuccess' => 'アップロード成功',
+	'g-viewgiftlist' => '贈り物一覧を表示',
+	'g-your-profile' => 'あなたのプロフィール',
+	'gift_received_subject' => '$1は{{SITENAME}}上に$2の贈り物をあなたに送りました!',
+	'gift_received_body' => 'こんにちは、$1 さん。
+
+$2 はちょうど{{SITENAME}}上であなたに $3 の贈り物を送りました。  
+
+あなたへの短い手紙の $2 を読み、贈り物を見てみませんか？以下のリンクをクリックしてください:
+
+$4
+
+あなたが贈り物を気に入っていただけることを望んでいます！
+
+ありがとう、
+
+{{SITENAME}}チーム
+
+---
+
+私達からメールを受け取るのを止めますか？
+
+$5 をクリックして、
+メール通知を無効にするよう設定を変更してください。',
+	'right-giftadmin' => '現在の贈り物を編集または新しく作成',
 );
 
 /** Ripoarisch (Ripoarisch)
@@ -2048,6 +2115,7 @@ To bardzo łatwe.',
 	'g-uploadsuccess' => 'Przesłano',
 	'g-viewgiftlist' => 'Zobacz listę prezentów',
 	'g-your-profile' => 'Twój profil',
+	'gift_received_subject' => '$1 dał Ci prezent $2 na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
 	'right-giftadmin' => 'Tworzenie nowych oraz edytowanie istniejących prezentów',
 );
 

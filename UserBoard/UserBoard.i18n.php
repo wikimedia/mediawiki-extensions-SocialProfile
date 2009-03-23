@@ -71,6 +71,7 @@ and change your settings to disable email notifications.'
 );
 
 /** Message documentation (Message documentation)
+ * @author Fryed-peach
  * @author Jon Harald Søby
  * @author Purodha
  */
@@ -80,10 +81,10 @@ $messages['qqq'] = array(
 	'userboard_nextpage' => '{{Identical|Next}}',
 	'userboard_prevpage' => '{{Identical|Prev}}',
 	'userboard_sendbutton' => '{{Identical|Send}}',
-	'userboard_showingmessages' => "*'''$1''' is the total count of messages
-*'''$2''' is the number of the first messages shown
-*'''$3''' is the number of the last messages shown
-*'''$4''' is the count of messages acutally shown",
+	'userboard_showingmessages' => "* '''$1''' is the total count of messages
+* '''$2''' is the number of the first message shown
+* '''$3''' is the number of the last message shown
+* '''$4''' is the count of messages acutally shown",
 );
 
 /** Niuean (ko e vagahau Niuē)
@@ -1194,19 +1195,66 @@ $messages['it'] = array(
 
 /** Japanese (日本語)
  * @author Aotake
+ * @author Fievarsty
  * @author Fryed-peach
  * @author Gzdavidwong
  */
 $messages['ja'] = array(
+	'boardblastlogintitle' => '一斉メッセージを送るにはログインする必要があります',
+	'boardblastlogintext' => '一斉メッセージを送るにはログインする必要があります
+ログインするには<a href="index.php?title=Special:UserLogin">ここをクリック</a>',
+	'messagesenttitle' => 'メッセージを送る',
+	'boardblasttitle' => '一斉メッセージを送信',
+	'boardblaststep1' => 'ステップ1 - メッセージを書きます',
+	'boardblastprivatenote' => 'すべてのメッセージはプライベートメッセージとして送信されます',
+	'boardblaststep2' => 'ステップ2 - メッセージを送りたい相手を選んでください',
 	'boardlinkselectall' => 'すべて選択',
 	'boardlinkunselectall' => 'すべて選択解除',
+	'boardlinkselectfriends' => '友達を選択する',
+	'boardlinkunselectfriends' => '友達の選択を解除する',
+	'boardlinkselectfoes' => '敵を選択する',
+	'boardlinkunselectfoes' => '敵の選択を解除する',
+	'boardsendbutton' => '一斉メッセージを送る',
+	'boardnofriends' => 'あなたはメッセージを送信する友達がいません!',
+	'messagesentsuccess' => 'あなたのメッセージは正常に送信されました',
+	'userboard' => '利用者の掲示板',
+	'userboard_board-to-board' => '掲示板連絡',
 	'userboard_delete' => '削除',
 	'userboard_noexist' => '閲覧しようとした利用者は存在していません。',
+	'userboard_yourboard' => 'あなたの掲示板',
+	'userboard_owner' => '$1 の掲示板',
+	'userboard_yourboardwith' => 'あなたの$1と掲示板',
+	'userboard_otherboardwith' => '$1の$2との連絡掲示板',
+	'userboard_backprofile' => '$1 のプロフィールへ戻る',
+	'userboard_backyourprofile' => 'あなたのプロフィールへ戻る',
+	'userboard_boardtoboard' => '掲示板',
+	'userboard_confirmdelete' => 'あなたのこのメッセージを削除しますがよろしいでしょうか？',
+	'userboard_sendmessage' => '$1 にメッセージを送る',
+	'userboard_myboard' => '自分の掲示板',
+	'userboard_posted_ago' => '$1前に投稿',
 	'userboard_private' => '非公開',
 	'userboard_public' => '公開',
+	'userboard_messagetype' => 'メッセージタイプ',
 	'userboard_nextpage' => '次',
 	'userboard_prevpage' => '前',
+	'userboard_nomessages' => 'メッセージなし',
 	'userboard_sendbutton' => '送る',
+	'userboard_loggedout' => '他の利用者にメッセージを送信するには<a href="$1">ログイン</a>する必要があります。',
+	'userboard_showingmessages' => 'メッセージ$1件中{{PLURAL:$4|$3件|$2-$3件}}を表示中',
+	'message_received_subject' => '$1が{{SITENAME}}のあなたの掲示板に書き込みました',
+	'message_received_body' => 'こんにちは、$1さん。
+
+さきほど、$2さんが{{SITENAME}}上のあなたの掲示板に書き込みをしました!
+
+以下をクリックして、掲示板を確認してください!
+
+$3
+
+---
+
+私達からメールを受け取るのをやめますか？
+
+$4 をクリックして、メール通知を無効にするよう設定を変更してください。',
 );
 
 /** Javanese (Basa Jawa)
