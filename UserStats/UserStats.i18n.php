@@ -835,6 +835,7 @@ $messages['ja'] = array(
 	'top-fans-weekly-points-link' => '今週の得点',
 	'top-fans-monthly-points-link' => '今月の得点',
 	'top-fans-points' => '得点',
+	'top-fans-by-category-title' => '総合上位$1',
 	'top-fans-bad-field-title' => 'おっと！',
 	'top-fans-bad-field-message' => '指定した統計は存在しません。',
 	'top-fans-stats-vote-count' => '投票',

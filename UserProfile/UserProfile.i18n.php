@@ -2055,6 +2055,7 @@ $messages['es'] = array(
 	'other-info-snacks' => 'Aperitivos',
 	'other-info-drinks' => 'Bebidas',
 	'other-no-info' => 'ninguna otra información',
+	'custom-no-info' => 'Sin información personalizada',
 	'profile-updated-personal' => 'Actualizar su información',
 	'profile-not-provided' => 'No proveído',
 	'populate-user-profile-done' => 'Agregado $1 {{PLURAL:$1|perfil|perfiles}}',
@@ -2077,6 +2078,7 @@ $messages['es'] = array(
 	'user-recent-activity-gift-rec' => 'Recibido un regalo de',
 	'user-recent-activity-user-message' => 'Enviar un mensaje a',
 	'user-recent-system-gift' => 'Recibido un premio',
+	'user-profile-update-notloggedin-title' => 'No se puede editar tu perfil sin haber iniciado sesión',
 	'user-profile-update-notloggedin-text' => 'No puedes editar tu perfil sin iniciar sesión.
 Haz click <a href="$1">aquí</a> para iniciar sesión o click <a href="$2">aquí</a> para registrarte.',
 	'user-profile-update-saved' => 'Su perfil ha sido grabado',
@@ -2132,6 +2134,7 @@ Haz click <a href="$1">aquí</a> para iniciar sesión o click <a href="$2">aquí
 	'user-profile-sports-sport' => 'Deporte',
 	'user-profile-sports-title' => 'Editar sus deportes y equipos favoritos',
 	'user-profile-sports-notloggedintitle' => 'Woops!',
+	'user-profile-sports-notloggedintext' => 'Tienes que iniciar sesión para editar tu perfil.',
 	'user-profile-sports-teamremoved' => 'Tu equipo ha sido removido',
 	'user-profile-sports-teamsaved' => 'Tus equipos han sido grabados',
 	'user-profile-sports-addmore' => 'Agregar más deportes/equipos',
@@ -2153,6 +2156,11 @@ Haz click <a href="$1">aquí</a> para iniciar sesión o click <a href="$2">aquí
 	'user-page-link' => 'Usuario',
 	'user-social-profile-link' => 'Perfil social',
 	'user-wiki-link' => 'Página de usuario wiki',
+	'update_profile_nav' => '* Special:UpdateProfile|Información personal
+* Special:UpdateProfile/personal|Otra información
+* Special:UpdateProfile/custom|Información personalizada
+* Special:UploadAvatar|Avatar
+* Special:UpdateProfile/preferences|Preferencias',
 	'user-type-toggle-old' => 'Usar pagina de usuario wiki',
 	'user-type-toggle-new' => 'Usar página de usuario social',
 	'removeavatar' => 'Remover avatar',
@@ -5792,6 +5800,7 @@ $messages['pl'] = array(
 	'user-profile-update-log-section' => 'zmieniono sekcję',
 	'user-profile-update-profile' => 'profil',
 	'user-profile-default-country' => 'Polska',
+	'user-profile-points' => '$1 {{PLURAL:$1|punkt|punkty|punktów}}',
 	'user-profile-section-personal' => 'Informacje osobiste',
 	'user-profile-section-interests' => 'Inne informacje',
 	'user-profile-section-picture' => 'Awatar',

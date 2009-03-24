@@ -808,6 +808,27 @@ Es fácil.',
 	'g-viewgiftlist' => 'Ver lista de regalos',
 	'g-your-profile' => 'Su perfil',
 	'gift_received_subject' => '$1 le ha enviado el regalo $2 en {{SITENAME}}!',
+	'gift_received_body' => 'Hola $1.
+
+$2 acaba de enviarte el regalo $3 en {{SITENAME}}.   
+
+Deseas leer la nota $2 que te dejó y ver tu regalo?  Haz click en el vínculo de abajo:
+
+$4
+
+Esperamos que te guste!
+
+Gracias,
+
+
+El equipo {{SITENAME}}
+
+---
+
+Hey, Deseas no recibir más correos electrónicos de nosotros?   
+
+Haz click en $5
+y cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.',
 	'right-giftadmin' => 'Crear nuevo y editar regalos existentes',
 );
 

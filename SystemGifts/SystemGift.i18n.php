@@ -995,23 +995,30 @@ e disactiva in tu preferentias le notificationes per e-mail.',
 );
 
 /** Japanese (日本語)
+ * @author Aotake
  * @author Fryed-peach
  * @author Hosiryuhosi
  */
 $messages['ja'] = array(
 	'systemgiftmanager' => 'システムギフトマネージャー',
 	'ga-addnew' => '+ 新しいプレゼントを追加',
+	'ga-back-edit-gift' => '戻ってこのプレゼントを編集する',
 	'ga-back-gift-list' => 'プレゼントリストへ戻る',
+	'ga-back-link' => '<a href="$1">< $2のプロフィールへ戻る</a>',
 	'ga-choosefile' => 'ファイルを選ぶ:',
+	'ga-count' => '$1 は $2 回表彰されています',
 	'ga-create-gift' => 'プレゼントを作成',
 	'ga-created' => 'プレゼントは作成されました。',
 	'ga-currentimage' => '現在の画像',
+	'ga-error-message-invalid-link' => '入力されたリンクは無効です',
+	'ga-error-message-no-user' => '表示しようとした利用者は存在しません。',
 	'ga-gift' => 'ギフト',
 	'ga-giftdesc' => 'プレゼントの説明',
 	'ga-giftimage' => 'ギフト画像',
 	'ga-giftname' => 'ギフト名',
 	'ga-gifttype' => 'ギフトタイプ',
 	'ga-goback' => '戻る',
+	'ga-img' => '画像を追加もしくは置き換え',
 	'ga-large' => '大',
 	'ga-medium' => '中',
 	'ga-mediumlarge' => '中大',
@@ -1023,6 +1030,7 @@ $messages['ja'] = array(
 	'ga-threshold' => '閾値',
 	'ga-uploadsuccess' => 'アップロード成功',
 	'ga-viewlist' => 'プレゼントリストを見る',
+	'right-awardsmanage' => '賞の編集・新規作成',
 );
 
 /** Ripoarisch (Ripoarisch)
