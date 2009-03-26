@@ -129,9 +129,11 @@ class SpecialViewUserBoard extends SpecialPage {
 								user_1 = \$(\"user_name_to\").value
 								user_2 = \"\";
 							}
-							user_1 = escape(user_1);
-							user_2 = escape(user_2);
-							window.location='index.php?title=Special:UserBoard&user='+user_1 + ((user_2)?\"&conv=\"+user_2:\"\");
+							//user_1 = escape(user_1);
+							//user_2 = escape(user_2);
+							var params = (user_2) ? '&conv=' + user_2 : '';
+							var url = wgScriptPath + '/index.php?title=Special:UserBoard&user=' + user_1 + params;
+							window.location = url;
 						}
 					};
 					var request = YAHOO.util.Connect.asyncRequest('POST', url, callback, pars);
@@ -213,13 +215,13 @@ class SpecialViewUserBoard extends SpecialPage {
 		if( !$user_id_2 ){
 			if( $wgUser->getName() != $user_name ){
 				$can_post = true;
-				$user_name_to = addslashes($user_name);
+				$user_name_to = htmlspecialchars( $user_name, ENT_QUOTES );
 			}
 		} else {
 			if( $wgUser->getName() == $user_name ){
 				$can_post = true;
-				$user_name_to = addslashes($user_name_2);
-				$user_name_from = addslashes($user_name);
+				$user_name_to = htmlspecialchars( $user_name_2, ENT_QUOTES );
+				$user_name_from = htmlspecialchars( $user_name, ENT_QUOTES );
 			}
 		}
 		if( $wgUser->isBlocked() ){
@@ -233,22 +235,22 @@ class SpecialViewUserBoard extends SpecialPage {
 
 		if( $can_post ){
 			if( $wgUser->isLoggedIn() ){
-				$output .= "<div class=\"user-page-message-form\">
-					<input type=\"hidden\" id=\"user_name_to\" name=\"user_name_to\" value=\"{$user_name_to}\"/>
-					<input type=\"hidden\" id=\"user_name_from\" name=\"user_name_from\" value=\"{$user_name_from}\"/>
-					<span style=\"color:#797979;\">" . wfMsg('userboard_messagetype') . " </span>
-					<select id=\"message_type\">
-						<option value=\"0\">" . wfMsg('userboard_public') . "</option>
-						<option value=\"1\">" . wfMsg('userboard_private') . "</option>
+				$output .= '<div class="user-page-message-form">
+					<input type="hidden" id="user_name_to" name="user_name_to" value="' . $user_name_to . '"/>
+					<input type="hidden" id="user_name_from" name="user_name_from" value="' . $user_name_from . '"/>
+					<span style="color:#797979;">' . wfMsg( 'userboard_messagetype' ) . ' </span>
+					<select id="message_type">
+						<option value="0">' . wfMsg( 'userboard_public' ) . '</option>
+						<option value="1">' . wfMsg( 'userboard_private' ) . '</option>
 					</select>
 					<p>
-					<textarea name=\"message\" id=\"message\" cols=\"63\" rows=\"4\"/></textarea>
+					<textarea name="message" id="message" cols="63" rows="4"/></textarea>
 
-					<div class=\"user-page-message-box-button\">
-						<input type=\"button\" value=\"" . wfMsg('userboard_sendbutton') . "\" class=\"site-button\" onclick=\"javascript:send_message();\">
+					<div class="user-page-message-box-button">
+						<input type="button" value="' . wfMsg( 'userboard_sendbutton' ) . '" class="site-button" onclick="javascript:send_message();">
 					</div>
 
-				</div>";
+				</div>';
 			} else {
 				$login_link = SpecialPage::getTitleFor( 'UserLogin' );
 				$output .= '<div class="user-page-message-form">
