@@ -230,21 +230,6 @@ $messages['niu'] = array(
 	'ur-login' => 'Hu ki loto',
 );
 
-/** Veps (Vepsan kel')
- * @author Triple-ADHD-AS
- * @author Игорь Бродский
- */
-$messages['vep'] = array(
-	'ur-main-page' => 'Pälehtpol’',
-	'ur-add-personal-message' => 'Ližata personaline tedotuz',
-	'ur-previous' => 'edel.',
-	'ur-next' => "jäl'gh.",
-	'ur-remove' => 'Čuta poiš',
-	'ur-cancel' => 'Heitta pätand',
-	'ur-login' => 'Kirjutadas sistemha',
-	'ur-add-error-message-pending-request-title' => 'Tirpand!',
-);
-
 /** Afrikaans (Afrikaans)
  * @author Arnobarnard
  * @author Naudefj
@@ -944,13 +929,30 @@ $2 ви премахна от списъка си с неприятели в {{S
  * @author CERminator
  */
 $messages['bs'] = array(
+	'viewrelationships' => 'Pogledaj vezu',
 	'ur-main-page' => 'Početna stranica',
 	'ur-your-profile' => 'Vaš profil',
+	'ur-add-friends' => '  Želite još prijatelja?
+<a href="$1">Pozovite ih</a>',
+	'ur-add-friend' => 'Dodaj kao prijatelja',
+	'ur-add-foe' => 'Dodaj kao neprijatelja',
+	'ur-add-personal-message' => 'Dodaj ličnu poruku',
 	'ur-previous' => 'preth',
 	'ur-next' => 'slijedeći',
+	'ur-remove-relationship-title-foe' => 'Da li želite ukloniti $1 kao Vašeg neprijatelja?',
+	'ur-remove-relationship-title-confirm-foe' => 'Ukonili ste $1 kao neprijatelja',
+	'ur-remove-error-message-remove-yourself' => 'Ne možete ukloniti samog sebe.',
 	'ur-remove' => 'Ukloni',
 	'ur-cancel' => 'Odustani',
 	'ur-login' => 'Prijava',
+	'ur-add-button-foe' => 'Dodaj kao neprijatelja',
+	'ur-add-button-friend' => 'Dodaj kao prijatelja',
+	'ur-add-error-message-pending-request-title' => 'Strpljenja!',
+	'ur-requests-title' => 'Zahtjevi za vezu',
+	'ur-accept' => 'Prihvati',
+	'ur-reject' => 'Odbij',
+	'ur-title-foe' => 'Spisak neprijatelja korisnika $1',
+	'ur-title-friend' => 'Spisak prijatelja korisnika $1',
 );
 
 /** Chamorro (Chamoru)
@@ -5667,6 +5669,21 @@ $messages['tr'] = array(
  */
 $messages['ug-latn'] = array(
 	'ur-login' => 'Kirish',
+);
+
+/** Veps (Vepsan kel')
+ * @author Triple-ADHD-AS
+ * @author Игорь Бродский
+ */
+$messages['vep'] = array(
+	'ur-main-page' => 'Pälehtpol’',
+	'ur-add-personal-message' => 'Ližata personaline tedotuz',
+	'ur-previous' => 'edel.',
+	'ur-next' => "jäl'gh.",
+	'ur-remove' => 'Čuta poiš',
+	'ur-cancel' => 'Heitta pätand',
+	'ur-login' => 'Kirjutadas sistemha',
+	'ur-add-error-message-pending-request-title' => 'Tirpand!',
 );
 
 /** Vietnamese (Tiếng Việt)

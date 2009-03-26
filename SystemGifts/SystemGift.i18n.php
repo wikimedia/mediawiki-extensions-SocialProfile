@@ -302,6 +302,16 @@ $messages['bg'] = array(
 	'ga-choosefile' => 'Избиране на файл:',
 );
 
+/** Bosnian (Bosanski)
+ * @author CERminator
+ */
+$messages['bs'] = array(
+	'ga-addnew' => '+ Dodaj novi poklon',
+	'ga-create-gift' => 'Napravi poklon',
+	'ga-giftdesc' => 'opis poklona',
+	'ga-next' => 'Slijedeći',
+);
+
 /** German (Deutsch)
  * @author Umherirrender
  */
@@ -1012,12 +1022,17 @@ $messages['ja'] = array(
 	'ga-currentimage' => '現在の画像',
 	'ga-error-message-invalid-link' => '入力されたリンクは無効です',
 	'ga-error-message-no-user' => '表示しようとした利用者は存在しません。',
+	'ga-error-title' => 'おっと、手順を間違えたようです！',
+	'ga-file-instructions' => '使用できる画像は jpeg、png、または gif （gifアニメーション除く）で、サイズが100kb以下のものです。',
 	'ga-gift' => 'ギフト',
+	'ga-gift-given-count' => 'このプレゼントはいままでに$1回贈られています',
+	'ga-gift-title' => '$1の「$2」',
 	'ga-giftdesc' => 'プレゼントの説明',
 	'ga-giftimage' => 'ギフト画像',
 	'ga-giftname' => 'ギフト名',
 	'ga-gifttype' => 'ギフトタイプ',
 	'ga-goback' => '戻る',
+	'ga-imagesbelow' => '以下はこのサイトであなたの画像として使用されている画像です',
 	'ga-img' => '画像を追加もしくは置き換え',
 	'ga-large' => '大',
 	'ga-medium' => '中',
@@ -1025,11 +1040,32 @@ $messages['ja'] = array(
 	'ga-new' => '新規',
 	'ga-next' => '次',
 	'ga-previous' => '前',
+	'ga-recent-recipients-award' => 'ほかにこの賞を最近受けた人',
 	'ga-saved' => 'プレゼントは保存されました。',
 	'ga-small' => '小',
 	'ga-threshold' => '閾値',
+	'ga-title' => '$1のもらった賞',
 	'ga-uploadsuccess' => 'アップロード成功',
 	'ga-viewlist' => 'プレゼントリストを見る',
+	'system_gift_received_subject' => '{{SITENAME}}にて$1賞を受けました',
+	'system_gift_received_body' => '$1さん、こんにちは。
+
+$1さんは、{{SITENAME}}にて$2賞を受賞されました！
+
+"$3"
+
+トロフィー入れを確認するには下のリンクをクリックしてください！
+
+$4
+
+喜んでもらえれば幸いです！
+
+それでは。
+
+{{SITENAME}}運営チーム
+
+---
+今後のメールの受信をやめたい場合、$5をクリックして、設定画面でメール通知を無効にしてください。',
 	'right-awardsmanage' => '賞の編集・新規作成',
 );
 

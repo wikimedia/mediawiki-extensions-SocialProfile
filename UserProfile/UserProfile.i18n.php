@@ -516,39 +516,6 @@ $messages['akz'] = array(
 	'user-profile-section-preferences' => 'Nàasi istimáppìilaana',
 );
 
-/** Veps (Vepsan kel')
- * @author Triple-ADHD-AS
- * @author Игорь Бродский
- */
-$messages['vep'] = array(
-	'user-gifts-title' => 'Lahjad',
-	'user-view-all' => 'Kacta kaik',
-	'user-upload-image' => 'Jügutoitta kuva',
-	'user-edit-this' => 'Redaktiruida necidä',
-	'user-edit-profile' => 'Redaktiruida profiläd',
-	'user-upload-avatar' => 'Jügutoitta avatar',
-	'user-watchlist' => 'Minun kaclendnimikirjutez',
-	'user-friends-title' => 'Sebranikad',
-	'user-foes-title' => 'Vihankandajad',
-	'other-info-books' => 'Kirjad',
-	'other-info-magazines' => 'Aiglehtesed',
-	'user-personal-info-hometown' => 'Kodilidn',
-	'user-personal-info-birthday' => 'Sündundpäiv',
-	'user-personal-info-schools' => 'Školad',
-	'user-personal-info-about-me' => 'Minun polhe',
-	'user-profile-personal-name' => 'Nimi',
-	'user-profile-personal-city' => 'Lidn',
-	'user-profile-personal-country' => 'Ma',
-	'user-profile-personal-hometown' => 'Kodilidn',
-	'user-profile-personal-birthday' => 'Sündundpäiv',
-	'user-profile-personal-aboutme' => 'Minun polhe',
-	'user-profile-personal-work' => 'Rad',
-	'user-profile-personal-places' => 'Kohtad',
-	'user-profile-picture-yourpicture' => 'Sinun kuva',
-	'user-profile-picture-small' => 'Pen’',
-	'user-social-profile-link' => "Socialine profil'",
-);
-
 /** Afrikaans (Afrikaans)
  * @author Arnobarnard
  * @author Naudefj
@@ -1395,6 +1362,54 @@ $messages['br'] = array(
 	'user-stats-recruits' => '{{PLURAL:$1|den tutaet|den tutaet}}',
 	'user-stats-poll-votes' => "{{PLURAL:$1|Vot|Vot}} d'an dilennadegoù",
 	'user-stats-picture-game-votes' => "{{PLURAL:$1|Vot|Vot}} evit ar c'hoari skeudennoù",
+	'user-stats-quiz-points' => "{{PLURAL:$1|Poent|Poent}} er c'hwiz",
+	'user-stats-pick-points' => '{{PLURAL:$1|Poent|Poent}} kavet',
+	'other-info-title' => 'Titouroù all',
+	'user-friends-title' => 'Mignoned',
+	'user-foes-title' => 'Enebourien',
+	'other-info-movies' => 'Filmoù',
+	'other-info-tv' => 'Skinwel',
+	'other-info-music' => 'Sonerezh',
+	'other-info-books' => 'Levrioù',
+	'other-info-video-games' => "C'hoarioù video",
+	'other-info-magazines' => 'Kelaouennoù',
+	'other-info-snacks' => 'Boued polikan',
+	'other-info-drinks' => 'Evajoù',
+	'other-no-info' => 'Tamm titour ebet all',
+	'custom-info-title' => "Titouroù lec'hel",
+	'custom-info-field1' => "Lec'helaat 1",
+	'custom-info-field2' => "Lec'helaat 2",
+	'custom-info-field3' => "Lec'helaat 3",
+	'custom-info-field4' => "Lec'helaat 4",
+	'custom-no-info' => "Tamm titour lec'hel ebet",
+	'profile-updated-personal' => 'Nevesaat ho profil',
+	'profile-not-provided' => "N'eo ket bet pourchaset",
+	'populate-user-profile-done' => 'Ouzhpennet $1 {{PLURAL:$1|profil|profil}}',
+	'user-board-title' => 'Taolenn',
+	'user-send-board-blast' => 'Kas an daolenn a-fourradoù',
+	'user-personal-info-title' => 'Titouroù personel',
+	'user-no-personal-info' => 'Tamm titour personel ebet',
+	'user-personal-info-real-name' => 'Anv gwir',
+	'user-personal-info-location' => "Chomlec'h",
+	'user-personal-info-hometown' => "Lec'h ganedigezh",
+	'user-personal-info-birthday' => 'Deiz-ha-bloaz',
+	'user-personal-info-occupation' => 'Labour',
+	'user-personal-info-websites' => "Lec'hiennoù Web",
+	'user-personal-info-places-lived' => "Lec'hioù am eus bet bevet enno",
+	'user-personal-info-schools' => 'Skolioù',
+	'user-personal-info-about-me' => 'Diwar ma fenn',
+	'user-recent-activity-title' => 'Oberiantizoù nevez',
+	'user-recent-activity-edit' => 'zo bet kemmet ar bajenn gantañ/ganti',
+	'user-recent-activity-vote' => 'en/he deus votet a-du gant ar bajenn',
+	'user-recent-activity-comment' => 'en/he deus lakaet un evezhiadenn war ar bajenn',
+	'user-recent-activity-gift-sent' => 'en/he deus kaset ur prof da',
+	'user-recent-activity-gift-rec' => 'en/he deus resevet ur prof a-berzh',
+	'user-recent-activity-friend' => 'zo bremañ mignon da',
+	'user-recent-activity-foe' => 'zo bremañ enebour da',
+	'user-recent-activity-user-message' => 'en/he deus kaset ur gemennadenn da',
+	'user-recent-activity-network-update' => 'en/he deus postet ur soñj',
+	'user-recent-system-gift' => 'zo bet priziet',
+	'user-profile-update-notloggedin-title' => "Dibosupl degas kemmoù en ho profil ma n'oc'h ket luget",
 	'user-profile-update-profile' => 'profil',
 	'user-profile-personal-name' => 'Anv',
 	'user-profile-personal-email' => 'Postel',
@@ -1417,8 +1432,36 @@ $messages['br'] = array(
  * @author CERminator
  */
 $messages['bs'] = array(
+	'user-awards-title' => 'Nagrade',
+	'user-gifts-title' => 'Pokloni',
+	'user-count-separator' => '$1 od $2',
+	'user-view-all' => 'Vidi sve',
+	'user-edit-profile' => 'Uredi profil',
+	'user-add-friend' => 'Dodaj kao prijatelja',
+	'user-send-message' => 'Pošalji poruku',
+	'user-send-gift' => 'Pošalji poklon',
+	'user-contributions' => 'Doprinosi',
+	'user-stats-title' => 'Statistike',
+	'other-info-title' => 'Ostale informacije',
+	'user-friends-title' => 'Prijatelji',
+	'other-info-movies' => 'Filmovi',
+	'other-info-books' => 'Knjige',
+	'other-info-drinks' => 'Pića',
+	'user-personal-info-real-name' => 'Pravo ime',
+	'user-personal-info-hometown' => 'Grad rođenja',
+	'user-personal-info-occupation' => 'Zanimanje',
+	'user-personal-info-schools' => 'Škole',
+	'user-personal-info-about-me' => 'O meni',
+	'user-recent-system-gift' => 'Dobio je nagradu',
 	'user-profile-personal-name' => 'Ime',
+	'user-profile-personal-email' => 'E-mail',
 	'user-profile-personal-birthdate' => 'Datum (MM/DD)',
+	'user-profile-personal-occupation' => 'Zanimanje',
+	'user-profile-personal-places' => 'Mjesta',
+	'user-profile-interests-movies' => 'Filmovi',
+	'user-profile-interests-music' => 'Muzika',
+	'user-profile-interests-drinks' => 'Pića',
+	'user-profile-sports-sport' => 'Sport',
 );
 
 /** Catalan (Català)
@@ -2431,6 +2474,7 @@ Pursa <a href="$1">aquina</a> p\'abril la tu cuenta, u <a href="$2">aquina</a> p
 );
 
 /** Finnish (Suomi)
+ * @author Crt
  * @author Jack Phoenix
  */
 $messages['fi'] = array(
@@ -2454,7 +2498,7 @@ $messages['fi'] = array(
 	'user-contributions' => 'Muokkaukset',
 	'user-stats-title' => 'Tilastot',
 	'user-stats-edits' => 'Muokkauksia',
-	'user-stats-votes' => 'Ääniä',
+	'user-stats-votes' => '{{PLURAL:$1|Ääni|Ääniä}}',
 	'other-info-title' => 'Muut tiedot',
 	'user-friends-title' => 'Ystävät',
 	'user-foes-title' => 'Viholliset',
@@ -7315,6 +7359,39 @@ $messages['tr'] = array(
  */
 $messages['ug-latn'] = array(
 	'user-profile-personal-email' => 'Élxet',
+);
+
+/** Veps (Vepsan kel')
+ * @author Triple-ADHD-AS
+ * @author Игорь Бродский
+ */
+$messages['vep'] = array(
+	'user-gifts-title' => 'Lahjad',
+	'user-view-all' => 'Kacta kaik',
+	'user-upload-image' => 'Jügutoitta kuva',
+	'user-edit-this' => 'Redaktiruida necidä',
+	'user-edit-profile' => 'Redaktiruida profiläd',
+	'user-upload-avatar' => 'Jügutoitta avatar',
+	'user-watchlist' => 'Minun kaclendnimikirjutez',
+	'user-friends-title' => 'Sebranikad',
+	'user-foes-title' => 'Vihankandajad',
+	'other-info-books' => 'Kirjad',
+	'other-info-magazines' => 'Aiglehtesed',
+	'user-personal-info-hometown' => 'Kodilidn',
+	'user-personal-info-birthday' => 'Sündundpäiv',
+	'user-personal-info-schools' => 'Školad',
+	'user-personal-info-about-me' => 'Minun polhe',
+	'user-profile-personal-name' => 'Nimi',
+	'user-profile-personal-city' => 'Lidn',
+	'user-profile-personal-country' => 'Ma',
+	'user-profile-personal-hometown' => 'Kodilidn',
+	'user-profile-personal-birthday' => 'Sündundpäiv',
+	'user-profile-personal-aboutme' => 'Minun polhe',
+	'user-profile-personal-work' => 'Rad',
+	'user-profile-personal-places' => 'Kohtad',
+	'user-profile-picture-yourpicture' => 'Sinun kuva',
+	'user-profile-picture-small' => 'Pen’',
+	'user-social-profile-link' => "Socialine profil'",
 );
 
 /** Vietnamese (Tiếng Việt)

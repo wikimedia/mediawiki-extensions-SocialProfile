@@ -474,6 +474,17 @@ $messages['bg'] = array(
 	'g-remove' => 'Премахване',
 );
 
+/** Bosnian (Bosanski)
+ * @author CERminator
+ */
+$messages['bs'] = array(
+	'giftmanager-addgift' => '+ Dodaj novi poklon',
+	'g-cancel' => 'Odustani',
+	'g-create-gift' => 'Napravi poklon',
+	'g-give-all-message-title' => 'Dodaj poruku',
+	'g-give-separator' => 'ili',
+);
+
 /** German (Deutsch)
  * @author Als-Holder
  * @author Jorges
@@ -1722,6 +1733,7 @@ Et ass esou einfach.',
 	'g-remove' => 'Ewechhuelen',
 	'g-remove-gift' => 'Dëse Cadeau ewechhuelen',
 	'g-remove-message' => 'Sidd Dir sécher datt Dir de Cadeau "$1" ewechhuele wëllt?',
+	'g-recent-recipients' => 'Anerer déi dëse Cadeau viru kuerzem kritt hunn',
 	'g-remove-success-message' => 'De Cadeau "$1" gouf ewechgeholl.',
 	'g-remove-title' => '"$1" ewechhuelen?',
 	'g-send-gift' => 'Cadeau schécken',

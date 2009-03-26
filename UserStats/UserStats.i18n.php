@@ -270,6 +270,8 @@ $messages['bg'] = array(
  */
 $messages['bs'] = array(
 	'top-fans-total-points-link' => 'Ukupni bodovi',
+	'top-fans-points' => 'bodovi',
+	'top-fans-bad-field-title' => 'Ups!',
 );
 
 /** Czech (Česky)

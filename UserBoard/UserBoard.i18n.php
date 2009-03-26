@@ -374,7 +374,11 @@ $messages['bn'] = array(
  * @author CERminator
  */
 $messages['bs'] = array(
+	'messagesenttitle' => 'Poruke poslane',
+	'boardlinkselectall' => 'Označi sve',
+	'boardlinkunselectall' => 'Ukloni sav odabir',
 	'userboard_delete' => 'Obriši',
+	'userboard_nextpage' => 'slijedeće',
 );
 
 /** Czech (Česky)
