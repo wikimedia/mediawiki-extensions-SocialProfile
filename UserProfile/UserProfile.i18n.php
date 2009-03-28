@@ -2497,7 +2497,7 @@ $messages['fi'] = array(
 	'user-send-gift' => 'Lähetä lahja',
 	'user-contributions' => 'Muokkaukset',
 	'user-stats-title' => 'Tilastot',
-	'user-stats-edits' => 'Muokkauksia',
+	'user-stats-edits' => '{{PLURAL:$1|Muokkaus|Muokkauksia}}',
 	'user-stats-votes' => '{{PLURAL:$1|Ääni|Ääniä}}',
 	'other-info-title' => 'Muut tiedot',
 	'user-friends-title' => 'Ystävät',
@@ -2547,7 +2547,7 @@ $messages['fi'] = array(
 	'user-profile-update-log-section' => 'muutti osioa',
 	'user-profile-update-profile' => 'profiili',
 	'user-profile-default-country' => 'Suomi',
-	'user-profile-points' => '$1 pistettä',
+	'user-profile-points' => '$1 {{PLURAL:$1|piste|pistettä}}',
 	'user-profile-section-personal' => 'Henkilökohtaiset tiedot',
 	'user-profile-section-sportsteams' => 'Päivitä verkostoja',
 	'user-profile-section-custom' => 'Omat tiedot',
@@ -5988,6 +5988,7 @@ $messages['ps'] = array(
 );
 
 /** Portuguese (Português)
+ * @author Jorge Morais
  * @author Lijealso
  * @author Malafaya
  * @author McDutchie
@@ -6008,7 +6009,7 @@ $messages['pt'] = array(
 	'user-meet-people' => 'Conhecer pessoas',
 	'user-add-friend' => 'Adicionar como amigo',
 	'user-add-foe' => 'Adicionar como inimigo',
-	'user-remove-friend' => 'Revover como Amigo',
+	'user-remove-friend' => 'Remover como amigo',
 	'user-remove-foe' => 'Remover como inimigo',
 	'user-send-message' => 'Enviar uma mensagem',
 	'user-send-gift' => 'Enviar um presente',
@@ -6172,6 +6173,34 @@ Clique <a href="$1">aqui</a> para logar ou clique <a href="$2">aqui</a> para se 
 	'user-profile-picture-log-entry' => 'Carregado novo avatar',
 	'user-profile-picture-log-delete-entry' => 'Excluído avatar de $1',
 	'right-avatarremove' => 'Remover avatares do utilizador',
+);
+
+/** Brazilian Portuguese (Português do Brasil)
+ * @author Jorge Morais
+ */
+$messages['pt-br'] = array(
+	'user-awards-title' => 'Prêmios',
+	'user-gifts-title' => 'Presentes',
+	'user-count-separator' => '$1 de $2',
+	'user-view-all' => 'Ver tudo',
+	'user-upload-image' => 'Carregar imagem',
+	'user-edit-this' => 'Editar isto',
+	'user-edit-profile' => 'Editar perfil',
+	'user-upload-avatar' => 'Carregar avatar',
+	'user-watchlist' => 'Páginas vigiadas',
+	'user-meet-people' => 'Conhecer pessoas',
+	'user-add-friend' => 'Adicionar como amigo',
+	'user-add-foe' => 'Adicionar como inimigo',
+	'user-remove-friend' => 'Remover como amigo',
+	'user-remove-foe' => 'Remover como inimigo',
+	'user-send-message' => 'Enviar uma mensagem',
+	'user-send-gift' => 'Enviar um presente',
+	'user-contributions' => 'Contribuições',
+	'user-stats-title' => 'Estatísticas',
+	'user-stats-edits' => '{{PLURAL:$1|Edição|Edições}}',
+	'user-stats-votes' => '{{PLURAL:$1|Voto|Votos}}',
+	'user-stats-comments' => '{{PLURAL:$1|Comentário|Comentários}}',
+	'user-stats-recruits' => '{{PLURAL:$1|Recrutamento|Recrutamentos}}',
 );
 
 /** Tarifit (Tarifit)

@@ -307,9 +307,65 @@ $messages['bg'] = array(
  */
 $messages['bs'] = array(
 	'ga-addnew' => '+ Dodaj novi poklon',
+	'ga-back-edit-gift' => 'Nazad na uređivanje ovog poklona',
+	'ga-back-gift-list' => 'Nazad na spisak poklona',
+	'ga-back-link' => '<a href="$1">< Nazad na profil korisnika $2</a>',
+	'ga-choosefile' => 'Odaberi datoteku:',
+	'ga-count' => '$1 ima $2 {{PLURAL:$2|nagradu|nagrade|nagrada}}.',
 	'ga-create-gift' => 'Napravi poklon',
+	'ga-created' => 'Poklon je napravljen',
+	'ga-currentimage' => 'Trenutna slika',
+	'ga-error-message-invalid-link' => 'Link koji ste unijeli nije valjan.',
+	'ga-error-message-no-user' => 'Korisnik kojeg pokušavate pogledati ne postoji.',
+	'ga-error-title' => 'Ups, desilo nešto se nepredviđeno!',
+	'ga-file-instructions' => 'Vaša slika treba biti jpeg, png ili gif (bez animiranih gif-ova) i mora biti manja od 100 kilobajta.',
+	'ga-gift' => 'poklon',
+	'ga-gift-given-count' => 'Ovaj poklon je poslan $1 {{PLURAL:$1|put|puta}}',
+	'ga-gift-title' => '"$2" korisnika $1',
 	'ga-giftdesc' => 'opis poklona',
+	'ga-giftimage' => 'slika poklona',
+	'ga-giftname' => 'naziv poklona',
+	'ga-gifttype' => 'tip poklona',
+	'ga-goback' => 'Idi nazad',
+	'ga-imagesbelow' => 'Ispod se nalaze Vaše slike koje se koriste na ovom sajtu',
+	'ga-img' => 'dodaj/zamijeni sliku',
+	'ga-large' => 'Veliki',
+	'ga-medium' => 'Srednji',
+	'ga-mediumlarge' => 'Srednje-veliki',
+	'ga-new' => 'Novi',
 	'ga-next' => 'Slijedeći',
+	'ga-previous' => 'Preth',
+	'ga-recent-recipients-award' => 'Drugi nedavni primaoci ove nagrade',
+	'ga-saved' => 'Poklon je sačuvan',
+	'ga-small' => 'Malehni',
+	'ga-title' => 'Nagrade korisnika $1',
+	'ga-uploadsuccess' => 'Postavljanje uspješno',
+	'ga-viewlist' => 'Pogledajte spisak poklona',
+	'system_gift_received_subject' => 'Dobili ste $1 nagradu na {{SITENAME}}!',
+	'system_gift_received_body' => 'Pozdrav $1.
+
+Upravo ste dobili $2 nagradu na {{SITENAME}}!
+
+"$3"
+
+Kliknite ispod da pregledate Vašu kolekciju nagrada!
+
+$4
+
+Nadamo se da Vam se sviđa!
+
+Hvala,
+
+
+{{SITENAME}} tim
+
+---
+
+Hej, da li želite da prestanete dobivati e-mailove od nas?   
+
+Kliknite $5
+i promijenite Vaše postavke onemogućavajući obavještenja putem emaila.',
+	'right-awardsmanage' => 'Pravljenje novih i uređivanje postojećih nagrada',
 );
 
 /** German (Deutsch)

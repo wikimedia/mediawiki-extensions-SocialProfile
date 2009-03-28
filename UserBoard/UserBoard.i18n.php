@@ -375,9 +375,16 @@ $messages['bn'] = array(
  */
 $messages['bs'] = array(
 	'messagesenttitle' => 'Poruke poslane',
+	'boardblaststep1' => 'Korak 1 - Napišite Vašu poruku',
+	'boardblaststep2' => 'Korak 2 - Odaberite kome želite poslati Vašu poruku',
 	'boardlinkselectall' => 'Označi sve',
 	'boardlinkunselectall' => 'Ukloni sav odabir',
+	'boardlinkselectfriends' => 'Odaberi prijatelje',
+	'boardlinkselectfoes' => 'Odaberi neprijatelje',
+	'boardlinkunselectfoes' => 'Deselektiraj neprijatelje',
 	'userboard_delete' => 'Obriši',
+	'userboard_private' => 'privatno',
+	'userboard_public' => 'javno',
 	'userboard_nextpage' => 'slijedeće',
 );
 
