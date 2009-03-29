@@ -132,10 +132,21 @@ $aliases['ia'] = array(
 
 /** Japanese (日本語) */
 $aliases['ja'] = array(
-	'RemoveAvatar' => array( 'アバター削除' ),
+	'AddRelationship' => array( '関係の追加' ),
+	'PopulateUserProfiles' => array( '利用者プロフィールの入力' ),
+	'RemoveAvatar' => array( 'アバターの削除' ),
+	'RemoveRelationship' => array( '関係の削除' ),
+	'SendBoardBlast' => array( '一斉メッセージの送信' ),
+	'TopFansByStatistic' => array( '統計別上位ファン' ),
+	'TopUsers' => array( '上位利用者' ),
+	'TopUsersRecent' => array( '最近の上位利用者' ),
+	'ToggleUserPage' => array( '利用者ページの切り替え' ),
 	'UpdateEditCounts' => array( '編集回数の更新' ),
-	'UpdateProfile' => array( 'プロフィール更新' ),
-	'UploadAvatar' => array( 'アバターアップロード' ),
+	'UpdateProfile' => array( 'プロフィールの更新' ),
+	'UploadAvatar' => array( 'アバターのアップロード' ),
+	'UserBoard' => array( '利用者掲示板' ),
+	'ViewRelationshipRequests' => array( '関係の表示' ),
+	'ViewRelationships' => array( '関係申請の表示' ),
 );
 
 /** Khmer (ភាសាខ្មែរ) */

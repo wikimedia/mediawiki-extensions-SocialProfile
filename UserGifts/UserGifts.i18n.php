@@ -138,6 +138,11 @@ $messages['qqq'] = array(
 	'g-next' => '{{Identical|Next}}',
 	'g-previous' => '{{Identical|Prev}}',
 	'g-small' => '{{Identical|Small}}',
+	'gift_received_body' => "* $1 is a the (real) user name
+* $2 is the giving user's name
+* $3 is the gift name
+* $4 is a link to the given gift
+* $5 is a link to the user preferences",
 );
 
 /** Arabic (العربية)
@@ -1553,7 +1558,7 @@ $messages['ja'] = array(
 
 $2 はちょうど{{SITENAME}}上であなたに $3 の贈り物を送りました。  
 
-あなたへの短い手紙の $2 を読み、贈り物を見てみませんか？以下のリンクをクリックしてください:
+$2 からあなたへの短い手紙を読み、贈り物を見てみませんか？以下のリンクをクリックしてください:
 
 $4
 
@@ -1847,7 +1852,7 @@ We hopen dat u er blij mee bent!
 Bedankt,
 
 
-Het Betawiki-team
+Het {{SITENAME}}-team
 
 ---
 

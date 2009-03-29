@@ -4033,7 +4033,7 @@ $messages['ja'] = array(
 	'user-type-toggle-old' => 'ウィキの利用者ページを使う',
 	'user-type-toggle-new' => 'ソーシャル利用者ページを使用',
 	'user-board-login-message' => '他の利用者にメッセージを投稿するには、<a href="$1">ログイン</a>する必要があります',
-	'removeavatar' => 'アバターを削除',
+	'removeavatar' => 'アバターの削除',
 	'givegift' => 'プレゼントを贈る',
 	'viewgifts' => 'プレゼントを見る',
 	'viewsystemgifts' => '賞を見る',

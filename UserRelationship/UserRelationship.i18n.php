@@ -2947,11 +2947,12 @@ $messages['it'] = array(
 
 /** Japanese (日本語)
  * @author Aotake
+ * @author Fryed-peach
  * @author Hosiryuhosi
  */
 $messages['ja'] = array(
-	'viewrelationships' => '関係を表示',
-	'viewrelationshiprequests' => '関係申請を表示',
+	'viewrelationships' => '関係の表示',
+	'viewrelationshiprequests' => '関係申請の表示',
 	'ur-already-submitted' => '申請を送信しました',
 	'ur-error-page-title' => 'おっと！',
 	'ur-error-title' => 'おっと！悪化させましたね！',

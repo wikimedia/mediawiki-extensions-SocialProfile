@@ -1066,7 +1066,7 @@ e disactiva in tu preferentias le notificationes per e-mail.',
  * @author Hosiryuhosi
  */
 $messages['ja'] = array(
-	'systemgiftmanager' => 'システムギフトマネージャー',
+	'systemgiftmanager' => 'システムからのプレゼントの管理',
 	'ga-addnew' => '+ 新しいプレゼントを追加',
 	'ga-back-edit-gift' => '戻ってこのプレゼントを編集する',
 	'ga-back-gift-list' => 'プレゼントリストへ戻る',
