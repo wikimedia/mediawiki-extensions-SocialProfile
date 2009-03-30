@@ -484,6 +484,10 @@ $messages['bg'] = array(
  */
 $messages['bs'] = array(
 	'giftmanager-addgift' => '+ Dodaj novi poklon',
+	'giftmanager-giftimage' => 'slika poklona',
+	'giftmanager-public' => 'javno',
+	'giftmanager-private' => 'privatno',
+	'g-choose-file' => 'Odaberite datoteku:',
 	'g-cancel' => 'Odustani',
 	'g-create-gift' => 'Napravi poklon',
 	'g-give-all-message-title' => 'Dodaj poruku',

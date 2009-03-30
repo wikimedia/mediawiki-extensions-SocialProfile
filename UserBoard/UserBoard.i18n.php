@@ -376,6 +376,7 @@ $messages['bn'] = array(
 $messages['bs'] = array(
 	'messagesenttitle' => 'Poruke poslane',
 	'boardblaststep1' => 'Korak 1 - Napišite Vašu poruku',
+	'boardblastprivatenote' => 'Sve poruke će biti poslane kao privatne poruke',
 	'boardblaststep2' => 'Korak 2 - Odaberite kome želite poslati Vašu poruku',
 	'boardlinkselectall' => 'Označi sve',
 	'boardlinkunselectall' => 'Ukloni sav odabir',

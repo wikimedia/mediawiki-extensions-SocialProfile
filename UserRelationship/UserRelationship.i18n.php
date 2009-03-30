@@ -930,6 +930,7 @@ $2 ви премахна от списъка си с неприятели в {{S
  */
 $messages['bs'] = array(
 	'viewrelationships' => 'Pogledaj vezu',
+	'ur-error-page-title' => 'Ups!',
 	'ur-main-page' => 'Početna stranica',
 	'ur-your-profile' => 'Vaš profil',
 	'ur-add-friends' => '  Želite još prijatelja?
@@ -937,6 +938,8 @@ $messages['bs'] = array(
 	'ur-add-friend' => 'Dodaj kao prijatelja',
 	'ur-add-foe' => 'Dodaj kao neprijatelja',
 	'ur-add-personal-message' => 'Dodaj ličnu poruku',
+	'ur-remove-relationship-friend' => 'Ukloni kao prijatelja',
+	'ur-remove-relationship-foe' => 'Ukloni kao neprijatelja',
 	'ur-previous' => 'preth',
 	'ur-next' => 'slijedeći',
 	'ur-remove-relationship-title-foe' => 'Da li želite ukloniti $1 kao Vašeg neprijatelja?',
