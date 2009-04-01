@@ -1846,6 +1846,7 @@ $messages['ee'] = array(
 
 /** Greek (Ελληνικά)
  * @author Consta
+ * @author Crazymadlover
  * @author Omnipaedista
  */
 $messages['el'] = array(
@@ -1878,6 +1879,7 @@ $messages['el'] = array(
 	'user-profile-personal-city' => 'Πόλη',
 	'user-profile-personal-country' => 'Χώρα',
 	'user-profile-personal-birthday' => 'Γενέθλια',
+	'user-profile-personal-birthdate' => 'Ημερομηνία (MM/DD)',
 	'user-profile-personal-aboutme' => 'Για Εμένα',
 	'user-profile-personal-work' => 'Εργασία',
 	'user-profile-personal-occupation' => 'Επάγγελμα',
@@ -2079,6 +2081,7 @@ $messages['eo'] = array(
  * @author Sanbec
  */
 $messages['es'] = array(
+	'populateuserprofiles' => 'Perfiles de usuario populares',
 	'user-awards-title' => 'Premios',
 	'user-gifts-title' => 'Regalos',
 	'user-count-separator' => '$1 de $2',
@@ -2113,6 +2116,7 @@ $messages['es'] = array(
 	'other-info-snacks' => 'Aperitivos',
 	'other-info-drinks' => 'Bebidas',
 	'other-no-info' => 'ninguna otra información',
+	'custom-info-title' => 'Información personalizada',
 	'custom-no-info' => 'Sin información personalizada',
 	'profile-updated-personal' => 'Actualizar su información',
 	'profile-not-provided' => 'No proveído',
@@ -2134,6 +2138,8 @@ $messages['es'] = array(
 	'user-recent-activity-comment' => 'Comentado en la página',
 	'user-recent-activity-gift-sent' => 'Enviado un regalo a',
 	'user-recent-activity-gift-rec' => 'Recibido un regalo de',
+	'user-recent-activity-friend' => 'Es ahora amigos con',
+	'user-recent-activity-foe' => 'Es ahora enemigos con',
 	'user-recent-activity-user-message' => 'Enviar un mensaje a',
 	'user-recent-system-gift' => 'Recibido un premio',
 	'user-profile-update-notloggedin-title' => 'No se puede editar tu perfil sin haber iniciado sesión',
@@ -2182,11 +2188,13 @@ Haz click <a href="$1">aquí</a> para iniciar sesión o click <a href="$2">aquí
 	'user-profile-interests-drinks' => 'Bebidas',
 	'user-profile-preferences-emails' => 'Notificaciones por correo electrónico',
 	'user-profile-preferences-emails-personalmessage' => 'Cuando envíe un mensaje personal',
+	'user-profile-preferences-emails-friendfoe' => 'Cuando otro usuario amiste o enemiste contigo',
 	'user-profile-preferences-emails-gift' => 'cuando recibas un regalo',
 	'user-profile-preferences-emails-level' => 'Cuando avance un nivel',
 	'user-profile-preferences-emails-weekly' => 'Recibir semanalmente actualizaciones por correo electrónico',
 	'user-profile-update-button' => 'Actualizar',
 	'user-profile-tidbits-favmoment' => 'Momento deportivo favorito',
+	'user-profile-tidbits-worstmoment' => 'Peores momentos deportivos',
 	'user-profile-tidbits-favathlete' => 'Atleta favorito y porqué',
 	'user-profile-tidbits-leastfavathlete' => 'Atleta menos favorito y porqué',
 	'user-profile-sports-sport' => 'Deporte',
@@ -2221,6 +2229,7 @@ Haz click <a href="$1">aquí</a> para iniciar sesión o click <a href="$2">aquí
 * Special:UpdateProfile/preferences|Preferencias',
 	'user-type-toggle-old' => 'Usar pagina de usuario wiki',
 	'user-type-toggle-new' => 'Usar página de usuario social',
+	'user-board-login-message' => 'Tiene que haber <a href="$1">iniciado sesión</a> para enviar mensajes a otros usuarios.',
 	'removeavatar' => 'Remover avatar',
 	'givegift' => 'Dar un regalo',
 	'viewgifts' => 'Ver regalos',
@@ -2229,6 +2238,10 @@ Haz click <a href="$1">aquí</a> para iniciar sesión o click <a href="$2">aquí
 	'avatarupload-currentavatar' => 'Avatar actual de $1',
 	'avatarupload-removesuccess' => 'El avatar ha sido exitosamente removido',
 	'avatarupload-removeanother' => 'Remover otro',
+	'profilelogpage' => 'Registro de edición de perfil de usuario',
+	'profilelogpagetext' => 'Este es un registro de ediciones de perfil de usuario',
+	'avatarlogpage' => 'Registro de cargas de avatar',
+	'avatarlogpagetext' => 'Este es un registro de cargas de avatar de usuario',
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'nuevo avatar cargado',
 	'user-profile-picture-log-delete-entry' => 'borrado avatar de $1',
@@ -4241,7 +4254,7 @@ $messages['km'] = array(
 	'user-profile-update-saved' => 'ប្រវត្តិរូបរបស់អ្នកត្រូវបានរក្សាទុករួចរាល់ហើយ',
 	'user-profile-update-profile' => 'ប្រវត្តិរូប',
 	'user-profile-default-country' => 'សហរដ្ឋអាមេរិក',
-	'user-profile-points' => '$1 ចំណុច',
+	'user-profile-points' => '$1 {{PLURAL:$1|ពិន្ទុ|ពិន្ទុ}}',
 	'user-profile-section-personal' => 'ព័ត៌មានផ្ទាល់​ខ្លួន',
 	'user-profile-section-sportsteams' => 'ធ្វើឱ្យទាន់សម័យ​បណ្ដាញ​នានា',
 	'user-profile-section-custom' => 'ព័ត៌មានផ្ទាល់​ខ្លួន',

@@ -601,6 +601,7 @@ a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
  * @author Crazymadlover
  */
 $messages['el'] = array(
+	'userboard_private' => 'ιδιωτικός',
 	'userboard_messagetype' => 'Τύπος Μηνύματος',
 	'userboard_sendbutton' => 'Αποστολή',
 );
@@ -667,6 +668,7 @@ $messages['es'] = array(
 	'userboard_confirmdelete' => 'Está seguro que desea borrar este mensaje?',
 	'userboard_sendmessage' => 'Enviar a $1 un mensaje',
 	'userboard_myboard' => 'Mi pizarrón',
+	'userboard_posted_ago' => 'Enviado hace $1',
 	'userboard_private' => 'privado',
 	'userboard_public' => 'público',
 	'userboard_messagetype' => 'Tipo de mensaje',
@@ -674,6 +676,7 @@ $messages['es'] = array(
 	'userboard_prevpage' => 'anterior',
 	'userboard_nomessages' => 'Sin mensajes.',
 	'userboard_sendbutton' => 'enviar',
+	'userboard_loggedout' => 'Tiene que haber <a href="$1">iniciado sesión</a> para enviar mensajes a otros usuarios.',
 	'userboard_showingmessages' => 'Mostrando {{PLURAL:$4|mensaje $3|mensajes $2-$3}} de {{PLURAL:$1|$1 mensaje|$1 mensajes}}',
 );
 

@@ -745,9 +745,11 @@ a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
 );
 
 /** Greek (Ελληνικά)
+ * @author Crazymadlover
  * @author Omnipaedista
  */
 $messages['el'] = array(
+	'giftmanager-private' => 'ιδιωτικός',
 	'g-cancel' => 'Ακύρωση',
 );
 
@@ -778,8 +780,11 @@ $messages['es'] = array(
 	'g-current-image' => 'Imagen actual',
 	'g-delete-message' => 'Estás seguro de desear borrar el regalo "$1"?
 Esto también lo borrará de los usuarios quienes pueden haberlo recibido.',
+	'g-description-title' => '"$2" Regalos de $1',
+	'g-error-do-not-own' => 'No te pertenece este regalo',
 	'g-error-message-blocked' => 'Estás actualmente bloqueado y no puedes dar regalos',
 	'g-error-message-invalid-link' => 'El vínculo que usted han ingresado es inválido.',
+	'g-error-message-login' => 'Tienes que iniciar sesión para dar regalos',
 	'g-error-message-no-user' => 'El usuario que estás tratando de ver no existe.',
 	'g-error-message-to-yourself' => 'No puede darse un regalo a sí mismo.',
 	'g-error-title' => 'Woops, tomó un turno erróneo!',
@@ -794,6 +799,7 @@ Es fácil.',
 	'g-give-all-message-title' => 'Agregar un mensaje',
 	'g-give-all-title' => 'De un regalo a $1',
 	'g-give-enter-friend-title' => 'Si usted sabe el nombre del usuario, escríbalo debajo',
+	'g-given' => 'Este regalo ha sido enviado $1 {{PLURAL:$1|vez|veces}}',
 	'g-give-list-friends-title' => 'Seleccione de su lista de amigos',
 	'g-give-list-select' => 'seleccione un amigo',
 	'g-give-separator' => 'o',

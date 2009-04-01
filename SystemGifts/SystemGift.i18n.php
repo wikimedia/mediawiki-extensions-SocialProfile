@@ -537,6 +537,7 @@ a změń nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
  * @author Crazymadlover
  */
 $messages['es'] = array(
+	'systemgiftmanager' => 'Administrador de sistema de regalos',
 	'ga-addnew' => '+ Agregar nuevo regalo',
 	'ga-back-edit-gift' => 'Regresar a editar este regalo',
 	'ga-back-gift-list' => 'Regresar a la lista de regalos',
@@ -551,6 +552,7 @@ $messages['es'] = array(
 	'ga-error-title' => 'Woops, usted tomó un turno equivocado!',
 	'ga-file-instructions' => 'Tu imagen debe ser un jpeg, png o gif (no gif animado), y debe ser menor que 100kb en tamaño.',
 	'ga-gift' => 'regalo',
+	'ga-gift-given-count' => 'Este regalo ha sido enviado $1 {{PLURAL:$1|vez|veces}}',
 	'ga-gift-title' => '"$2" de $1',
 	'ga-giftdesc' => 'descripción de regalo',
 	'ga-giftimage' => 'imagen de regalo',
@@ -568,10 +570,34 @@ $messages['es'] = array(
 	'ga-recent-recipients-award' => 'Otros receptores recientes de este premio',
 	'ga-saved' => 'El regalo ha sido grabado',
 	'ga-small' => 'Pequeño',
+	'ga-threshold' => 'umbral',
 	'ga-title' => 'premios de $1',
 	'ga-uploadsuccess' => 'Carga exitosa',
 	'ga-viewlist' => 'Ver lista de regalos',
 	'system_gift_received_subject' => 'Usted ha recibido el premio $1 en {{SITENAME}}!',
+	'system_gift_received_body' => 'Hola $1.
+
+Acabas de haber recibido el premio $2 en {{SITENAME}}!
+
+"$3"
+
+Haz click abajo para chequear tu trofeo!
+
+$4
+
+Esperamos que te guste!
+
+Gracias,
+
+
+El equipo {{SITENAME}}
+
+---
+
+Hey, Deseas no recibir más correos de nosotros?   
+
+Haz click en $5
+y cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.',
 	'right-awardsmanage' => 'Crear nuevo y editar premios existentes',
 );
 
