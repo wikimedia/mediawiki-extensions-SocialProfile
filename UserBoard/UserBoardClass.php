@@ -16,51 +16,70 @@ class UserBoard {
 	/* private */ function __construct() {
 	}
 
+	/**
+	 * Sends a user board message to another user
+	 *
+	 * @param $user_id_from Integer: user ID of the sender
+	 * @param $user_name_from Mixed: user name of the sender
+	 * @param $user_id_to Integer: user ID of the reciever
+	 * @param $user_name_to Mixed: user name of the reciever
+	 * @param $message Mixed: message text
+	 * @param $message_type Integer: 0 for public message
+	 * @return Integer: the inserted value of ub_id row
+	 */
 	public function sendBoardMessage( $user_id_from, $user_name_from, $user_id_to, $user_name_to, $message, $message_type = 0 ){
 		$dbw = wfGetDB( DB_MASTER );
 
-		$user_name_from = stripslashes($user_name_from);
-		$user_name_to = stripslashes($user_name_to);
+		$user_name_from = stripslashes( $user_name_from );
+		$user_name_to = stripslashes( $user_name_to );
 
 		$dbw->insert( 'user_board',
-		array(
-			'ub_user_id_from' => $user_id_from,
-			'ub_user_name_from' => $user_name_from,
-			'ub_user_id' => $user_id_to,
-			'ub_user_name' => $user_name_to,
-			'ub_message' => $message,
-			'ub_type' => $message_type,
-			'ub_date' => date("Y-m-d H:i:s"),
-			), __METHOD__
+			array(
+				'ub_user_id_from' => $user_id_from,
+				'ub_user_name_from' => $user_name_from,
+				'ub_user_id' => $user_id_to,
+				'ub_user_name' => $user_name_to,
+				'ub_message' => $message,
+				'ub_type' => $message_type,
+				'ub_date' => date("Y-m-d H:i:s"),
+			),
+			__METHOD__
 		);
 
 		// Send Email (if user is not writing on own board)
 		if( $user_id_from != $user_id_to ){
-			$this->sendBoardNotificationEmail($user_id_to, $user_name_from);
-			$this->incNewMessageCount($user_id_to);
+			$this->sendBoardNotificationEmail( $user_id_to, $user_name_from );
+			$this->incNewMessageCount( $user_id_to );
 		}
 
-		$stats = new UserStatsTrack($user_id_to, $user_name_to);
+		$stats = new UserStatsTrack( $user_id_to, $user_name_to );
 		if( $message_type == 0 ){
 			// public message count
-			$stats->incStatField('user_board_count');
+			$stats->incStatField( 'user_board_count' );
 		} else {
 			// private message count
-			$stats->incStatField('user_board_count_priv');
+			$stats->incStatField( 'user_board_count_priv' );
 		}
 
-		$stats = new UserStatsTrack($user_id_from, $user_name_from);
-		$stats->incStatField('user_board_sent');
+		$stats = new UserStatsTrack( $user_id_from, $user_name_from );
+		$stats->incStatField( 'user_board_sent' );
 
 		return $dbw->insertId();
 	}
 
+	/**
+	 * Sends an email to a user if someone wrote on their board
+	 *
+	 * @param $user_id_to Integer: user ID of the reciever
+	 * @param $user_from Mixed: the user name of the person who wrote the board message
+	 */
 	public function sendBoardNotificationEmail( $user_id_to, $user_from ){
 		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 
-		$user = User::newFromId($user_id_to);
+		$user = User::newFromId( $user_id_to );
 		$user->loadFromId();
 
+		// Send email if user's email is confirmed and s/he's opted in to recieving social notifications
 		if( $user->isEmailConfirmed() && $user->getIntOption( 'notifymessage', 1 ) ){
 			$board_link = SpecialPage::getTitleFor( 'UserBoard' );
 			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
@@ -86,7 +105,7 @@ class UserBoard {
 	static function clearNewMessageCount( $user_id ){
 		global $wgMemc;
 		$key = wfMemcKey( 'user', 'newboardmessage', $user_id );
-		$wgMemc->set($key, 0);
+		$wgMemc->set( $key, 0 );
 	}
 
 	static function getNewMessageCountCache( $user_id ){
@@ -109,23 +128,29 @@ class UserBoard {
 		//$s = $dbw->selectRow( 'user_board', array( 'count(*) AS count' ), array( 'ug_user_id_to' => $user_id, 'ug_status' => 1 ), __METHOD__ );
 		//if ( $s !== false )$new_gift_count = $s->count;
 
-		$wgMemc->set($key, $new_count);
+		$wgMemc->set( $key, $new_count );
 
 		return $new_count;
 	}
 
 	static function getNewMessageCount( $user_id ){
 		global $wgMemc;
-		$data = self::getNewMessageCountCache($user_id);
+		$data = self::getNewMessageCountCache( $user_id );
 
 		if( $data != '' ){
 			$count = $data;
 		} else {
-			$count = self::getNewMessageCountDB($user_id);
+			$count = self::getNewMessageCountDB( $user_id );
 		}
 		return $count;
 	}
 
+	/**
+	 * Checks if the user with ID number $user_id owns the board message with the ID number $ub_id
+	 * @param $user_id Integer: user ID number
+	 * @param $ub_id Integer: user board message ID number
+	 * @return Boolean: true if user owns the message, otherwise false
+	 */
 	public function doesUserOwnMessage( $user_id, $ub_id ){
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow( 'user_board', array( 'ub_user_id' ), array( 'ub_id' => $ub_id ), __METHOD__ );
@@ -137,6 +162,10 @@ class UserBoard {
 		return false;
 	}
 
+	/**
+	 * Deletes a user board message from the database
+	 * @param $ub_id Integer: ID number of the board message that we want to delete
+	 */
 	public function deleteMessage( $ub_id ){
 		if( $ub_id ){
 			$dbw = wfGetDB( DB_MASTER );
@@ -145,11 +174,11 @@ class UserBoard {
 
 				$dbw->delete( 'user_board', array( 'ub_id' => $ub_id ), __METHOD__ );
 
-				$stats = new UserStatsTrack($s->ub_user_id, $s->ub_user_name);
+				$stats = new UserStatsTrack( $s->ub_user_id, $s->ub_user_name );
 				if( $s->ub_type == 0 ){
-					$stats->decStatField('user_board_count');
+					$stats->decStatField( 'user_board_count' );
 				} else {
-					$stats->decStatField('user_board_count_priv');
+					$stats->decStatField( 'user_board_count_priv' );
 				}
 			}
 		}
@@ -221,8 +250,7 @@ class UserBoard {
 		}
 		$sql = "SELECT count(*) AS the_count
 			FROM ".$wgDBprefix."user_board
-			WHERE {$user_sql}
-			";
+			WHERE {$user_sql}";
 
 		$res = $dbr->query($sql);
 		$row = $dbr->fetchObject( $res );
@@ -233,14 +261,15 @@ class UserBoard {
 	}
 
 	public function displayMessages( $user_id, $user_id_2 = 0, $count = 10, $page = 0 ){
-		global $wgUser, $max_link_text_length, $wgTitle;
+		global $wgUser, $wgTitle;
+
 		$output = ''; // Prevent E_NOTICE
-		$messages = $this->getUserBoardMessages($user_id, $user_id_2, $count, $page);
+		$messages = $this->getUserBoardMessages( $user_id, $user_id_2, $count, $page );
 		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 		if( $messages ) {
 
 			foreach( $messages as $message ) {
-				$user =  Title::makeTitle( NS_USER, $message['user_name_from'] );
+				$user = Title::makeTitle( NS_USER, $message['user_name_from'] );
 				$avatar = new wAvatar( $message['user_id_from'], 'm' );
 
 				$board_to_board = '';
@@ -249,8 +278,8 @@ class UserBoard {
 				$delete_link = '';
 
 				if( $wgUser->getName() != $message['user_name_from'] ){
-					$board_to_board = "<a href=\"" . UserBoard::getUserBoardToBoardURL($message['user_name'], $message['user_name_from'])."\">" . wfMsgHtml( 'userboard_board-to-board' ) . "</a>";
-					$board_link = "<a href=\"" . UserBoard::getUserBoardURL($message['user_name_from'])."\">" . wfMsgHtml( 'userboard_sendmessage', $message["user_name_from"] ) . "</a>";
+					$board_to_board = '<a href="' . UserBoard::getUserBoardToBoardURL( $message['user_name'], $message['user_name_from'] ) . '">' . wfMsgHtml( 'userboard_board-to-board' ) . '</a>';
+					$board_link = '<a href="' . UserBoard::getUserBoardURL( $message['user_name_from'] ) . '">' . wfMsgHtml( 'userboard_sendmessage', $message['user_name_from'] ) . '</a>';
 				}
 				if( $wgUser->getName() == $message['user_name'] ){
 					$delete_link = "<span class=\"user-board-red\">
@@ -261,7 +290,7 @@ class UserBoard {
 					$message_type_label = '(' . wfMsgHtml( 'userboard_private' ) . ')';
 				}
 
-				$max_link_text_length = 50;
+				#$max_link_text_length = 50;
 				$message_text = $message['message_text'];
 				#$message_text = preg_replace_callback( "/(<a[^>]*>)(.*?)(<\/a>)/i",'cut_link_text',$message["message_text"]);
 
@@ -289,9 +318,9 @@ class UserBoard {
 				</div>";
 			}
 		} else if( $wgUser->getName() == $wgTitle->getText() ) {
-			$output .= '<div class="no-info-container">
-				' . wfMsgHtml( 'userboard_nomessages' ) . '
-			</div>';
+			$output .= '<div class="no-info-container">'
+				. wfMsgHtml( 'userboard_nomessages' ) .
+			'</div>';
 
 		}
 		return $output;
@@ -304,21 +333,25 @@ class UserBoard {
 
 	static function getUserBoardURL( $user_name ){
 		$title = SpecialPage::getTitleFor( 'UserBoard' );
-		$user_name = str_replace("&", "%26", $user_name);
-		return $title->escapeFullURL('user='.$user_name);
+		$user_name = str_replace( '&', '%26', $user_name );
+		return $title->escapeFullURL( 'user=' . $user_name );
 	}
 
 	static function getUserBoardToBoardURL( $user_name_1, $user_name_2 ){
 		$title = SpecialPage::getTitleFor( 'UserBoard' );
-		$user_name_1 = str_replace("&", "%26", $user_name_1);
-		$user_name_2 = str_replace("&", "%26", $user_name_2);
-		return $title->escapeFullURL('user='.$user_name_1.'&conv='.$user_name_2);
+		$user_name_1 = str_replace( '&', '%26', $user_name_1 );
+		$user_name_2 = str_replace( '&', '%26', $user_name_2 );
+		return $title->escapeFullURL( 'user=' . $user_name_1 . '&conv=' . $user_name_2 );
 	}
 
-	public function dateDiff( $dt1, $dt2 ) {
-		$date1 = $dt1; //(strtotime($dt1) != -1) ? strtotime($dt1) : $dt1;
-		$date2 = $dt2; //(strtotime($dt2) != -1) ? strtotime($dt2) : $dt2;
-
+	/**
+	 * Gets the difference between two given dates
+	 *
+	 * @param $dt1 Mixed: current time, as returned by PHP's time() function
+	 * @param $dt2 Mixed: date
+	 * @return Difference between dates
+	 */
+	public function dateDiff( $date1, $date2 ) {
 		$dtDiff = $date1 - $date2;
 
 		$totalDays = intval($dtDiff/(24*60*60));
@@ -333,21 +366,27 @@ class UserBoard {
 	}
 
 	public function getTimeOffset( $time, $timeabrv, $timename ){
+		$timeStr = '';
 		if( $time[$timeabrv] > 0 ){
-			$timeStr = $time[$timeabrv] . " " . $timename;
-			if( $time[$timeabrv] > 1 ) $timeStr .= "s";
+			$timeStr = $time[$timeabrv] . ' ' . $timename;
+			if( $time[$timeabrv] > 1 ) $timeStr .= 's';
 		}
-		if( $timeStr ) $timeStr .= " ";
+		if( $timeStr ) $timeStr .= ' ';
 		return $timeStr;
 	}
 
+	/**
+	 * Gets the time how long ago the given board message was posted 
+	 * @param $time
+	 * @return $timeStr Mixed: time, such as "20 days" or "11 hours"
+	 */
 	public function getTimeAgo( $time ){
 		$timeArray = $this->dateDiff( time(), $time );
 		$timeStr = '';
-		$timeStrD = $this->getTimeOffset($timeArray, 'd', 'day');
-		$timeStrH = $this->getTimeOffset($timeArray, 'h', 'hour');
-		$timeStrM = $this->getTimeOffset($timeArray, 'm', 'minute');
-		$timeStrS = $this->getTimeOffset($timeArray, 's', 'second');
+		$timeStrD = $this->getTimeOffset( $timeArray, 'd', 'day' );
+		$timeStrH = $this->getTimeOffset( $timeArray, 'h', 'hour' );
+		$timeStrM = $this->getTimeOffset( $timeArray, 'm', 'minute' );
+		$timeStrS = $this->getTimeOffset( $timeArray, 's', 'second' );
 		$timeStr = $timeStrD;
 		if( $timeStr < 2 ){
 			$timeStr.= $timeStrH;
