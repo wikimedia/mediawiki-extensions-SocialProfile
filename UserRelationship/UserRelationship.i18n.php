@@ -5698,7 +5698,7 @@ $messages['vi'] = array(
 	'ur-add-friend' => 'Thêm người bạn',
 	'ur-add-foe' => 'Thêm kẻ thù',
 	'ur-remove' => 'Dời',
-	'ur-cancel' => 'Bãi bỏ',
+	'ur-cancel' => 'Hủy bỏ',
 	'ur-login' => 'Đăng nhập',
 );
 

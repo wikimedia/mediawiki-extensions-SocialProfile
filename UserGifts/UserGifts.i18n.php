@@ -2629,3 +2629,10 @@ $messages['tr'] = array(
 	'g-main-page' => 'Ana sayfa',
 );
 
+/** Vietnamese (Tiếng Việt)
+ * @author Minh Nguyen
+ */
+$messages['vi'] = array(
+	'g-cancel' => 'Hủy bỏ',
+);
+
