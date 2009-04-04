@@ -38,12 +38,12 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * @param $section Mixed: parameter passed to the page or null
 	 */
 	public function execute( $section ){
-		global $wgUser, $wgOut, $wgRequest, $wgSiteView, $wgUserProfileScripts, $wgUpdateProfileInRecentChanges, $wgSupressPageTitle;
+		global $wgUser, $wgOut, $wgRequest, $wgUserProfileScripts, $wgUpdateProfileInRecentChanges, $wgSupressPageTitle;
 		$wgSupressPageTitle = true;
 
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
 
-		$wgOut->setHTMLTitle( wfMsg( 'pagetitle', wfMsg('edit-profile-title') ) );
+		$wgOut->setHTMLTitle( wfMsg( 'pagetitle', wfMsg( 'edit-profile-title' ) ) );
 
 		// This feature is only available for logged-in users.
 		if( !$wgUser->isLoggedIn() ) {
@@ -93,7 +93,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 				$log->updateRecentChanges = false;
 			}
 			$log->addEntry( wfMsgForContent( 'user-profile-update-profile' ), $wgUser->getUserPage(), wfMsgForContent( 'user-profile-update-log-section' ) . " '{$section}'" );
-			$wgOut->addHTML( '<span class="profile-on">' . wfMsgForContent( 'user-profile-update-saved' ) . '</span><br /><br />' );
+			$wgOut->addHTML( '<span class="profile-on">' . wfMsg( 'user-profile-update-saved' ) . '</span><br /><br />' );
 
 			// create user page if not exists
 			$title = Title::makeTitle( NS_USER, $wgUser->getName() );
@@ -122,12 +122,12 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	function saveSettings_basic(){
-		global $wgUser, $wgOut, $wgRequest, $wgSiteView, $wgEmailAuthentication;
+		global $wgUser, $wgRequest, $wgEmailAuthentication;
 
-		$wgUser->setRealName( $wgRequest->getVal('real_name') );
-		$wgUser->setEmail( $wgRequest->getVal('email') );
+		$wgUser->setRealName( $wgRequest->getVal( 'real_name' ) );
+		$wgUser->setEmail( $wgRequest->getVal( 'email' ) );
 
-		if( $wgUser->getEmail() != $wgRequest->getVal('email') ){
+		if( $wgUser->getEmail() != $wgRequest->getVal( 'email' ) ){
 			$wgUser->mEmailAuthenticated = null; # but flag as "dirty" = unauthenticated
 		}
 
@@ -145,7 +145,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	function saveSettings_pref(){
-		global $wgUser, $wgOut, $wgRequest, $wgSiteView, $wgSitename;
+		global $wgUser, $wgOut, $wgRequest, $wgSitename;
 
 		$notify_friend = $wgRequest->getVal( 'notify_friend' );
 		$notify_gift = $wgRequest->getVal( 'notify_gift' );
@@ -167,13 +167,13 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		if( $wgSitename == 'ArmchairGM' ){
 			$dbw = wfGetDB( DB_MASTER );
 			// If the user wants a weekly email, we'll put some info about that to the user_mailing_list table
-			if( $wgRequest->getVal('weeklyemail') == 1 ){
+			if( $wgRequest->getVal( 'weeklyemail' ) == 1 ){
 				$s = $dbw->selectRow( 'user_mailing_list', array( 'um_user_id' ), array( 'um_user_id' => $wgUser->getID() ), __METHOD__ );
 				if ( $s === false ){
 					$dbw->insert( 'user_mailing_list',
-					array(
-						'um_user_id' => $wgUser->getID(),
-						'um_user_name' => $wgUser->getName(),
+						array(
+							'um_user_id' => $wgUser->getID(),
+							'um_user_name' => $wgUser->getName(),
 						), __METHOD__
 					);
 				}
@@ -185,23 +185,23 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	function formatBirthdayDB( $birthday ){
-		$dob = explode('/', $birthday);
-		if( count($dob) == 2 ){
+		$dob = explode( '/', $birthday );
+		if( count( $dob ) == 2 ){
 			$year = 2007;
 			$month = $dob[0];
 			$day = $dob[1];
-			$birthday_date = $year . "-" . $month . "-" . $day;
+			$birthday_date = $year . '-' . $month . '-' . $day;
 		}
-		return ($birthday_date);
+		return ( $birthday_date );
 	}
 
 	function formatBirthday( $birthday ){
-		$dob = explode('-', $birthday);
-		if( count($dob) == 3 ){
+		$dob = explode( '-', $birthday );
+		if( count( $dob ) == 3 ){
 			$year = 0000;
 			$month = $dob[1];
 			$day = $dob[2];
-			$birthday_date = $month . "/" . $day; // . "/" . $year;
+			$birthday_date = $month . '/' . $day; // . '/' . $year;
 		}
 		return $birthday_date;
 	}
@@ -261,7 +261,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	function saveProfilePersonal(){
-		global $wgUser, $wgMemc, $wgRequest, $wgDBprefix;
+		global $wgUser, $wgMemc, $wgRequest;
 
 		$this->initProfile();
 		$dbw = wfGetDB( DB_MASTER );
@@ -284,7 +284,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	function displayBasicForm(){
-		global $wgRequest, $wgSiteView, $wgUser, $wgDBprefix, $wgOut;
+		global $wgRequest, $wgUser, $wgOut;
 
 		$dbr = wfGetDB( DB_MASTER );
 		$s = $dbr->selectRow( 'user_profile',
@@ -323,10 +323,10 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		}
 
 		$s = $dbr->selectRow( 'user',
-				array( 'user_real_name', 'user_email', 'user_email_authenticated' ),
-				array( 'user_id' => $wgUser->getID() ),
-				__METHOD__ 
-			);
+			array( 'user_real_name', 'user_email', 'user_email_authenticated' ),
+			array( 'user_id' => $wgUser->getID() ),
+			__METHOD__ 
+		);
 
 		if ( $s !== false ) {
 			$real_name = $s->user_real_name;
@@ -338,43 +338,44 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$countries = explode( "\n*", wfMsgForContent( 'userprofile-country-list' ) );
 		array_shift( $countries );
 
-		$wgOut->setPageTitle( wfMsg('edit-profile-title') );
+		$wgOut->setPageTitle( wfMsg( 'edit-profile-title' ) );
 		$form = UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-personal' ) );
 		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">';
 		$form .= '<div class="profile-info clearfix">';
 		$form .= '<div class="profile-update">
-			<p class="profile-update-title">' . wfMsgForContent( 'user-profile-personal-info' ) . '</p>
-			<p class="profile-update-unit-left">' . wfMsgForContent( 'user-profile-personal-name' ) . '</p>
+			<p class="profile-update-title">' . wfMsg( 'user-profile-personal-info' ) . '</p>
+			<p class="profile-update-unit-left">' . wfMsg( 'user-profile-personal-name' ) . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="real_name" id="real_name" value="'. $real_name . '"/></p>
 			<div class="cleared"></div>
-			<p class="profile-update-unit-left">' . wfMsgForContent( 'user-profile-personal-email' ) . '</p>
+			<p class="profile-update-unit-left">' . wfMsg( 'user-profile-personal-email' ) . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="email" id="email" value="'. $email . '"/>';
 			if( !$wgUser->mEmailAuthenticated ){
 				$confirm = SpecialPage::getTitleFor( 'Confirmemail' );
-				$form .= " <a href=\"{$confirm->getFullURL()}\">" . wfMsgForContent( 'user-profile-personal-confirmemail' ) . "</a>";
+				$form .= " <a href=\"{$confirm->getFullURL()}\">" . wfMsg( 'user-profile-personal-confirmemail' ) . "</a>";
 			}
 			$form .= '</p>
 			<div class="cleared"></div>';
 			if( !$wgUser->mEmailAuthenticated ){
-				$form .= '<p class="profile-update-unit-left"></p><p class="profile-update-unit-small">'.wfMsgForContent('user-profile-personal-email-needs-auth').'</p>';
+				$form .= '<p class="profile-update-unit-left"></p>
+				<p class="profile-update-unit-small">'.wfMsg( 'user-profile-personal-email-needs-auth' ).'</p>';
 			}
 			$form .= '<div class="cleared"></div>
 		</div>
 		<div class="cleared"></div>';
 
 		$form .= '<div class="profile-update">
-			<p class="profile-update-title">' . wfMsgForContent( 'user-profile-personal-location' ) . '</p>
-			<p class="profile-update-unit-left">' . wfMsgForContent( 'user-profile-personal-city' ) . '</p>
-			<p class="profile-update-unit"><input type="text" size="25" name="location_city" id="location_city" value="'. $location_city . '"/></p>
+			<p class="profile-update-title">' . wfMsg( 'user-profile-personal-location' ) . '</p>
+			<p class="profile-update-unit-left">' . wfMsg( 'user-profile-personal-city' ) . '</p>
+			<p class="profile-update-unit"><input type="text" size="25" name="location_city" id="location_city" value="'. $location_city . '" /></p>
 			<div class="cleared"></div>
-			<p class="profile-update-unit-left" id="location_state_label">' . wfMsgForContent( 'user-profile-personal-country' ) . '</p>';
+			<p class="profile-update-unit-left" id="location_state_label">' . wfMsg( 'user-profile-personal-country' ) . '</p>';
 			$form .= '<p class="profile-update-unit">';
 			$form .= '<span id="location_state_form">';
 		 	$form .= "</span>
-		 		<script>
+		 		<script type=\"text/javascript\">
 					displaySection(\"location_state\",\"" . $location_country . "\",\"" . $location_state . "\")
 				</script>";
-		 	$form .= "<select name=\"location_country\" id=\"location_country\" onChange=\"displaySection('location_state',this.value,'')\"><option></option>";
+		 	$form .= "<select name=\"location_country\" id=\"location_country\" onhhange=\"displaySection('location_state',this.value,'')\"><option></option>";
 
 		foreach( $countries as $country ) {
 			$form .= "<option value=\"{$country}\"" . ( ( $country == $location_country ) ? ' selected="selected"' : '' ) . ">";
@@ -388,15 +389,15 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		<div class="cleared"></div>';
 
 		$form .= '<div class="profile-update">
-			<p class="profile-update-title">' . wfMsgForContent( 'user-profile-personal-hometown' ) . '</p>
-			<p class="profile-update-unit-left">' . wfMsgForContent( 'user-profile-personal-city' ) . '</p>
-			<p class="profile-update-unit"><input type="text" size="25" name="hometown_city" id="hometown_city" value="'. $hometown_city . '"/></p>
+			<p class="profile-update-title">' . wfMsg( 'user-profile-personal-hometown' ) . '</p>
+			<p class="profile-update-unit-left">' . wfMsg( 'user-profile-personal-city' ) . '</p>
+			<p class="profile-update-unit"><input type="text" size="25" name="hometown_city" id="hometown_city" value="'. $hometown_city . '" /></p>
 			<div class="cleared"></div>
-			<p class="profile-update-unit-left" id="hometown_state_label">' . wfMsgForContent( 'user-profile-personal-country' ) . '</p>
+			<p class="profile-update-unit-left" id="hometown_state_label">' . wfMsg( 'user-profile-personal-country' ) . '</p>
 			<p class="profile-update-unit">';
 		$form .= '<span id="hometown_state_form">';
 		$form .= "</span>
-			<script>
+			<script type=\"text/javascript\">
 				displaySection(\"hometown_state\",\"" . $hometown_country . "\",\"" . $hometown_state . "\")
 			</script>";
 		$form .= "<select name=\"hometown_country\" id=\"hometown_country\" onChange=\"displaySection('hometown_state',this.value,'')\"><option></option>";
@@ -413,15 +414,15 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		<div class="cleared"></div>';
 
 		$form .= '<div class="profile-update">
-			<p class="profile-update-title">' . wfMsgForContent( 'user-profile-personal-birthday' ) . '</p>
-			<p class="profile-update-unit-left">' . wfMsgForContent( 'user-profile-personal-birthdate' ) . '</p>
-			<p class="profile-update-unit"><input type="text" size="25" name="birthday" id="birthday" value="'. $birthday . '"/></p>
+			<p class="profile-update-title">' . wfMsg( 'user-profile-personal-birthday' ) . '</p>
+			<p class="profile-update-unit-left">' . wfMsg( 'user-profile-personal-birthdate' ) . '</p>
+			<p class="profile-update-unit"><input type="text" size="25" name="birthday" id="birthday" value="'. $birthday . '" /></p>
 			<div class="cleared"></div>
 		</div><div class="cleared"></div>';
 
 		$form .= "<div class=\"profile-update\">
-			<p class=\"profile-update-title\">" . wfMsgForContent( 'user-profile-personal-aboutme' ) . "</p>
-			<p class=\"profile-update-unit-left\">" . wfMsgForContent( 'user-profile-personal-aboutme' ) . "</p>
+			<p class=\"profile-update-title\">" . wfMsg( 'user-profile-personal-aboutme' ) . "</p>
+			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-personal-aboutme' ) . "</p>
 			<p class=\"profile-update-unit\">
 				<textarea name=\"about\" id=\"about\" rows=\"3\" cols=\"75\">{$about}</textarea>
 			</p>
@@ -430,8 +431,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		<div class=\"cleared\"></div>
 
 		<div class=\"profile-update\">
-			<p class=\"profile-update-title\">" . wfMsgForContent( 'user-profile-personal-work' ) . "</p>
-			<p class=\"profile-update-unit-left\">" . wfMsgForContent( 'user-profile-personal-occupation' ) . "</p>
+			<p class=\"profile-update-title\">" . wfMsg( 'user-profile-personal-work' ) . "</p>
+			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-personal-occupation' ) . "</p>
 			<p class=\"profile-update-unit\">
 				<textarea name=\"occupation\" id=\"occupation\" rows=\"2\" cols=\"75\">{$occupation}</textarea>
 			</p>
@@ -440,8 +441,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		<div class=\"cleared\"></div>
 
 		<div class=\"profile-update\">
-			<p class=\"profile-update-title\">" . wfMsgForContent( 'user-profile-personal-education' ) . "</p>
-			<p class=\"profile-update-unit-left\">" . wfMsgForContent( 'user-profile-personal-schools' ) . "</p>
+			<p class=\"profile-update-title\">" . wfMsg( 'user-profile-personal-education' ) . "</p>
+			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-personal-schools' ) . "</p>
 			<p class=\"profile-update-unit\">
 				<textarea name=\"schools\" id=\"schools\" rows=\"2\" cols=\"75\">{$schools}</textarea>
 			</p>
@@ -450,8 +451,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		<div class=\"cleared\"></div>
 
 		<div class=\"profile-update\">
-			<p class=\"profile-update-title\">" . wfMsgForContent( 'user-profile-personal-places' ) . "</p>
-			<p class=\"profile-update-unit-left\">" . wfMsgForContent( 'user-profile-personal-placeslived' ) . "</p>
+			<p class=\"profile-update-title\">" . wfMsg( 'user-profile-personal-places' ) . "</p>
+			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-personal-placeslived' ) . "</p>
 			<p class=\"profile-update-unit\">
 				<textarea name=\"places\" id=\"places\" rows=\"3\" cols=\"75\">{$places}</textarea>
 			</p>
@@ -460,8 +461,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		<div class=\"cleared\"></div>
 
 		<div class=\"profile-update\">
-			<p class=\"profile-update-title\">" . wfMsgForContent( 'user-profile-personal-web' ) . "</p>
-			<p class=\"profile-update-unit-left\">" . wfMsgForContent( 'user-profile-personal-websites' ) . "</p>
+			<p class=\"profile-update-title\">" . wfMsg( 'user-profile-personal-web' ) . "</p>
+			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-personal-websites' ) . "</p>
 			<p class=\"profile-update-unit\">
 				<textarea name=\"websites\" id=\"websites\" rows=\"2\" cols=\"75\">{$websites}</textarea>
 			</p>
@@ -470,25 +471,25 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		<div class=\"cleared\"></div>";
 
 		$form .= '
-			<input type="button" class="site-button" value="' . wfMsgForContent('user-profile-update-button') . '" size="20" onclick="document.profile.submit()" />
+			<input type="button" class="site-button" value="' . wfMsg( 'user-profile-update-button' ) . '" size="20" onclick="document.profile.submit()" />
 			</div></form>';
 
 		return $form;
 	}
 
 	function displayPersonalForm(){
-		global $wgRequest, $wgSiteView, $wgUser, $wgOut, $wgDBprefix;
+		global $wgRequest, $wgUser, $wgOut;
 
 		$dbr = wfGetDB( DB_MASTER );
 		$s = $dbr->selectRow( 'user_profile',
-				array(
-					'up_about', 'up_places_lived', 'up_websites', 'up_relationship',
-					'up_occupation', 'up_companies', 'up_schools', 'up_movies', 'up_tv', 'up_music',
-					'up_books', 'up_video_games', 'up_magazines', 'up_snacks', 'up_drinks'
-				),
-				array( 'up_user_id' => $wgUser->getID() ),
-				__METHOD__
-			);
+			array(
+				'up_about', 'up_places_lived', 'up_websites', 'up_relationship',
+				'up_occupation', 'up_companies', 'up_schools', 'up_movies', 'up_tv', 'up_music',
+				'up_books', 'up_video_games', 'up_magazines', 'up_snacks', 'up_drinks'
+			),
+			array( 'up_user_id' => $wgUser->getID() ),
+			__METHOD__
+		);
 
 		if ( $s !== false ) {
 			$places = $s->up_places_lived;
@@ -508,93 +509,96 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
 
-		$wgOut->setPageTitle( wfMsg('user-profile-section-interests') );
+		$wgOut->setPageTitle( wfMsg( 'user-profile-section-interests' ) );
 		$form = UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-interests' ) );
-		$form .= "<form action=\"\" method=\"post\" enctype=\"multipart/form-data\" name=\"profile\">
-			<div class=\"profile-info clearfix\">";
+		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">
+			<div class="profile-info clearfix">';
 		$form .= "<div class=\"profile-update\">
-			<p class=\"profile-update-title\">" . wfMsgForContent( 'user-profile-interests-entertainment' ) . "</p>
-			<p class=\"profile-update-unit-left\">" . wfMsgForContent( 'user-profile-interests-movies' ) . "</p>
+			<p class=\"profile-update-title\">" . wfMsg( 'user-profile-interests-entertainment' ) . "</p>
+			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-interests-movies' ) . "</p>
 			<p class=\"profile-update-unit\">
 				<textarea name=\"movies\" id=\"movies\" rows=\"3\" cols=\"75\">{$movies}</textarea>
 			</p>
 			<div class=\"cleared\"></div>
-			<p class=\"profile-update-unit-left\">" . wfMsgForContent( 'user-profile-interests-tv' ) . "</p>
+			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-interests-tv' ) . "</p>
 			<p class=\"profile-update-unit\">
 				<textarea name=\"tv\" id=\"tv\" rows=\"3\" cols=\"75\">{$tv}</textarea>
 				</p>
 			<div class=\"cleared\"></div>
-			<p class=\"profile-update-unit-left\">" . wfMsgForContent( 'user-profile-interests-music' ) . "</p>
+			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-interests-music' ) . "</p>
 			<p class=\"profile-update-unit\">
 				<textarea name=\"music\" id=\"music\" rows=\"3\" cols=\"75\">{$music}</textarea>
 			</p>
 			<div class=\"cleared\"></div>
-			<p class=\"profile-update-unit-left\">" . wfMsgForContent( 'user-profile-interests-books' ) . "</p>
+			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-interests-books' ) . "</p>
 			<p class=\"profile-update-unit\">
 				<textarea name=\"books\" id=\"books\" rows=\"3\" cols=\"75\">{$books}</textarea>
 			</p>
 			<div class=\"cleared\"></div>
-			<p class=\"profile-update-unit-left\">" . wfMsgForContent( 'user-profile-interests-magazines' ) . "</p>
+			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-interests-magazines' ) . "</p>
 			<p class=\"profile-update-unit\">
 				<textarea name=\"magazines\" id=\"magazines\" rows=\"3\" cols=\"75\">{$magazines}</textarea>
 			</p>
 			<div class=\"cleared\"></div>
-			<p class=\"profile-update-unit-left\">" . wfMsgForContent( 'user-profile-interests-videogames' ) . "</p>
+			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-interests-videogames' ) . "</p>
 			<p class=\"profile-update-unit\">
 				<textarea name=\"videogames\" id=\"videogames\" rows=\"3\" cols=\"75\">{$videogames}</textarea>
 			</p>
 			<div class=\"cleared\"></div>
 			</div>
 			<div class=\"profile-info clearfix\">
-			<p class=\"profile-update-title\">" . wfMsgForContent( 'user-profile-interests-eats' ) . "</p>
-			<p class=\"profile-update-unit-left\">" . wfMsgForContent( 'user-profile-interests-foodsnacks' ) . "</p>
+			<p class=\"profile-update-title\">" . wfMsg( 'user-profile-interests-eats' ) . "</p>
+			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-interests-foodsnacks' ) . "</p>
 			<p class=\"profile-update-unit\">
 				<textarea name=\"snacks\" id=\"snacks\" rows=\"3\" cols=\"75\">{$snacks}</textarea>
 			</p>
 			<div class=\"cleared\"></div>
-			<p class=\"profile-update-unit-left\">" . wfMsgForContent( 'user-profile-interests-drinks' ) . "</p>
+			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-interests-drinks' ) . "</p>
 			<p class=\"profile-update-unit\">
 				<textarea name=\"drinks\" id=\"drinks\" rows=\"3\" cols=\"75\">{$drinks}</textarea>
 			</p>
 			<div class=\"cleared\"></div>
 			</div>
-			<input type=\"button\" class=\"site-button\" value=" . wfMsgForContent( 'user-profile-update-button' ) . " size=\"20\" onclick=\"document.profile.submit()\" />
+			<input type=\"button\" class=\"site-button\" value=" . wfMsg( 'user-profile-update-button' ) . " size=\"20\" onclick=\"document.profile.submit()\" />
 			</div>
-			</form>
-			";
+			</form>";
 
 		return $form;
 	}
 
 	function displayPreferencesForm(){
-		global $wgRequest, $wgSiteView, $wgUser, $wgOut;
+		global $wgUser, $wgOut;
 
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
 
-		// FIXME: if the checkboxes are in front of the option, this will look more like Special:Preferences
-		$wgOut->setPageTitle( wfMsg('user-profile-section-preferences') );
+		// @todo If the checkboxes are in front of the option, this would look more like Special:Preferences
+		$wgOut->setPageTitle( wfMsg( 'user-profile-section-preferences' ) );
 		$form = UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-preferences' ) );
-		$form .= '<form action="" method="post" enctype="multipart/form-data" name=profile>';
+		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">';
 		$form .= '<div class="profile-info clearfix">
 			<div class="profile-update">
-				<p class="profile-update-title">' . wfMsgForContent( 'user-profile-preferences-emails' ) . '</p>
+				<p class="profile-update-title">' . wfMsg( 'user-profile-preferences-emails' ) . '</p>
 				<p class="profile-update-row">
-					' . wfMsgForContent( 'user-profile-preferences-emails-personalmessage' ) . ' <input type="checkbox" size="25" name="notify_message" id="notify_message" value="1"' . (($wgUser->getIntOption( 'notifymessage',1 ) == 1)?'checked':'') . '/>
+					' . wfMsg( 'user-profile-preferences-emails-personalmessage' ) . ' 
+					<input type="checkbox" size="25" name="notify_message" id="notify_message" value="1"' . ( ( $wgUser->getIntOption( 'notifymessage', 1 ) == 1 ) ? 'checked' : '' ) . '/>
 				</p>
 				<p class="profile-update-row">
-					' . wfMsgForContent( 'user-profile-preferences-emails-friendfoe' ) . ' <input type="checkbox" size="25" class="createbox" name="notify_friend" id="notify_friend" value="1" ' . (($wgUser->getIntOption( 'notifyfriendrequest',1) == 1)?'checked':'') . '/>
+					' . wfMsg( 'user-profile-preferences-emails-friendfoe' ) . ' 
+					<input type="checkbox" size="25" class="createbox" name="notify_friend" id="notify_friend" value="1" ' . ( ( $wgUser->getIntOption( 'notifyfriendrequest', 1 ) == 1 ) ? 'checked' : '' ) . '/>
 				</p>
 				<p class="profile-update-row">
-					' . wfMsgForContent( 'user-profile-preferences-emails-gift' ) . ' <input type="checkbox" size="25" name="notify_gift" id="notify_gift" value="1" ' . (($wgUser->getIntOption( 'notifygift',1 ) == 1)?'checked':'') . '/>
+					' . wfMsg( 'user-profile-preferences-emails-gift' ) . ' 
+					<input type="checkbox" size="25" name="notify_gift" id="notify_gift" value="1" ' . ( ( $wgUser->getIntOption( 'notifygift', 1 ) == 1 ) ? 'checked' : '' ) . '/>
 				</p>
 
 				<p class="profile-update-row">
-					' . wfMsgForContent( 'user-profile-preferences-emails-level' ) . ' <input type="checkbox" size="25" name="notify_honorifics" id="notify_honorifics" value="1"' . (($wgUser->getIntOption( 'notifyhonorifics',1 ) == 1)?'checked':'') . '/>
+					' . wfMsg( 'user-profile-preferences-emails-level' ) . ' 
+					<input type="checkbox" size="25" name="notify_honorifics" id="notify_honorifics" value="1"' . ( ( $wgUser->getIntOption( 'notifyhonorifics', 1 ) == 1 ) ? 'checked' : '' ) . '/>
 				</p>';
 
 		$form .= '</div>
 			<div class="cleared"></div>';
-		$form .= '<input type="button" class="site-button" value="' . wfMsgForContent('user-profile-update-button') . '" size="20" onclick="document.profile.submit()" />
+		$form .= '<input type="button" class="site-button" value="' . wfMsg( 'user-profile-update-button' ) . '" size="20" onclick="document.profile.submit()" />
 			</form>';
 		$form .= '</div>';
 
@@ -602,7 +606,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	function displayCustomForm(){
-		global $wgRequest, $wgSiteView, $wgUser, $wgOut, $wgDBprefix;
+		global $wgRequest, $wgUser, $wgOut;
 
 		$dbr = wfGetDB( DB_MASTER );
 		$s = $dbr->selectRow( 'user_profile',
@@ -622,8 +626,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
 
-		$wgOut->setHTMLTitle( wfMsg('pagetitle', wfMsg('user-profile-tidbits-title')));
-		$form =  '<h1>'.wfMsg('user-profile-tidbits-title').'</h1>';
+		$wgOut->setHTMLTitle( wfMsg( 'pagetitle', wfMsg( 'user-profile-tidbits-title' ) ) );
+		$form = '<h1>' . wfMsg( 'user-profile-tidbits-title' ) . '</h1>';
 		$form .= UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-custom' ) );
 		$form .= "<form action=\"\" method=\"post\" enctype=\"multipart/form-data\" name=\"profile\">
 		 	<div class=\"profile-info clearfix\">

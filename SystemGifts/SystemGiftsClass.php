@@ -34,51 +34,52 @@ class SystemGifts {
 	}
 
 	public function update_system_gifts(){
-		global $IP, $wgOut, $wgMemc, $wgDBprefix;
+		global $wgOut, $wgMemc;
 
 		$dbw = wfGetDB( DB_MASTER );
-		$stats = new UserStatsTrack(1, "");
-		$this->categories = array_flip($this->categories); 
+		$stats = new UserStatsTrack( 1, '' );
+		$this->categories = array_flip( $this->categories ); 
 
-		$sql = "SELECT gift_id,gift_category,gift_threshold, gift_name
-			FROM ".$wgDBprefix."system_gift
-			ORDER BY gift_category,gift_threshold ASC";
+		$res = $dbw->select( 'system_gift',
+			array( 'gift_id', 'gift_category', 'gift_threshold', 'gift_name' ),
+			array(),
+			__METHOD__,
+			array( 'ORDER BY' => 'gift_category, gift_threshold ASC' )
+		);
 
-		$res = $dbw->query($sql);
 		$x = 1;
 		while( $row = $dbw->fetchObject( $res ) ) {
 
 			if( $row->gift_category ){
-				$sql2 = "SELECT stats_user_id, stats_user_name
-					FROM ".$wgDBprefix."user_stats
-					WHERE " . $stats->stats_fields[$this->categories[$row->gift_category]] . " >= {$row->gift_threshold}
-					AND stats_user_id<>0";
-
-				$res2 = $dbw->query($sql2);
+				$res2 = $dbw->select( 'user_stats',
+					array( 'stats_user_id', 'stats_user_name' ),
+					array( $stats->stats_fields[$this->categories[$row->gift_category]] . " >= {$row->gift_threshold}", 'stats_user_id<>0' ),
+					__METHOD__
+				);
 
 				while( $row2 = $dbw->fetchObject( $res2 ) ) {
-					if( $this->doesUserHaveGift($row2->stats_user_id, $row->gift_id) == false ){
+					if( $this->doesUserHaveGift( $row2->stats_user_id, $row->gift_id ) == false ){
 
 						$dbw->insert( 'user_system_gift',
-						array(
-							'sg_gift_id' => $row->gift_id,
-							'sg_user_id' => $row2->stats_user_id,
-							'sg_user_name' => $row2->stats_user_name,
-							'sg_status' => 0,
-							'sg_date' => date("Y-m-d H:i:s", time() - (60 * 60 * 24 * 3) ),
+							array(
+								'sg_gift_id' => $row->gift_id,
+								'sg_user_id' => $row2->stats_user_id,
+								'sg_user_name' => $row2->stats_user_name,
+								'sg_status' => 0,
+								'sg_date' => date("Y-m-d H:i:s", time() - (60 * 60 * 24 * 3) ),
 							), __METHOD__
 						);
 
 						$sg_key = wfMemcKey( 'user', 'profile', 'system_gifts', "{$row2->stats_user_id}" );
-						$wgMemc->delete($sg_key);
+						$wgMemc->delete( $sg_key );
 
-						$wgOut->addHTML( $row2->stats_user_name. " got ". $row->gift_name . "<br />" );
+						$wgOut->addHTML( $row2->stats_user_name . ' got ' . $row->gift_name . '<br />' );
 						$x++;
 					}
 				}
 			}
 		}
-		$wgOut->addHTML("{$x} awards were given out");
+		$wgOut->addHTML( "{$x} awards were given out" );
 	}
 
 	public function doesUserHaveGift( $user_id, $gift_id ){
@@ -92,15 +93,14 @@ class SystemGifts {
 	}
 
 	public function addGift( $gift_name, $gift_description, $gift_category, $gift_threshold ){
-		$user_id_to = User::idFromName($user_to);
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->insert( 'system_gift',
-		array(
-			'gift_name' => $gift_name,
-			'gift_description' => $gift_description,
-			'gift_category' => $gift_category,
-			'gift_threshold' => $gift_threshold,
-			'gift_createdate' => date("Y-m-d H:i:s"),
+			array(
+				'gift_name' => $gift_name,
+				'gift_description' => $gift_description,
+				'gift_category' => $gift_category,
+				'gift_threshold' => $gift_threshold,
+				'gift_createdate' => date("Y-m-d H:i:s"),
 			), __METHOD__
 		);	
 		return $dbw->insertId();
@@ -110,13 +110,13 @@ class SystemGifts {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update( 'system_gift',
 			array( /* SET */
-			'gift_name' => $gift_name,
-			'gift_description' => $gift_description,
-			'gift_category' => $gift_category,
-			'gift_threshold' => $gift_threshold,
+				'gift_name' => $gift_name,
+				'gift_description' => $gift_description,
+				'gift_category' => $gift_category,
+				'gift_threshold' => $gift_threshold,
 			), array( /* WHERE */
-			'gift_id' => $id
-			), ""
+				'gift_id' => $id
+			), __METHOD__
 		);
 	}
 
@@ -131,18 +131,20 @@ class SystemGifts {
 	}
 
 	static function getGift( $id ){
-		global $wgDBprefix;
 		$dbr = wfGetDB( DB_SLAVE );
-		$sql = "SELECT gift_id, gift_name, gift_description, gift_category, gift_threshold, gift_given_count
-			FROM ".$wgDBprefix."system_gift WHERE gift_id = {$id} LIMIT 0,1";
-		$res = $dbr->query($sql);
+		$res = $dbr->select( 'system_gift',
+			array( 'gift_id', 'gift_name', 'gift_description', 'gift_category', 'gift_threshold', 'gift_given_count' ),
+			array( 'gift_id' => $id ),
+			__METHOD__,
+			array( 'LIMIT' => 1 )
+		);
 		$row = $dbr->fetchObject( $res );
 		if( $row ){
-			$gift['gift_id']= $row->gift_id;
-			$gift['gift_name']= $row->gift_name;
-			$gift['gift_description']= $row->gift_description;
-			$gift['gift_category']= $row->gift_category;
-			$gift['gift_threshold']= $row->gift_threshold;
+			$gift['gift_id'] = $row->gift_id;
+			$gift['gift_name'] = $row->gift_name;
+			$gift['gift_description'] = $row->gift_description;
+			$gift['gift_category'] = $row->gift_category;
+			$gift['gift_threshold'] = $row->gift_threshold;
 			$gift['gift_given_count'] = $row->gift_given_count;
 		}
 		return $gift;
@@ -150,12 +152,12 @@ class SystemGifts {
 
 	static function getGiftImage( $id, $size ){
 		global $wgUploadDirectory;
-		$files = glob($wgUploadDirectory . "/awards/sg_" . $id .  "_" . $size . "*");
+		$files = glob( $wgUploadDirectory . '/awards/sg_' . $id . '_' . $size . "*" );
 
 		if( !empty( $files[0] ) ) {
-			$img = basename($files[0]) ;
+			$img = basename( $files[0] );
 		} else {
-			$img = "default" . "_" . $size . ".gif";
+			$img = 'default_' . $size . '.gif';
 		}
 		return $img . "?r=" . rand();		
 	}
@@ -171,7 +173,7 @@ class SystemGifts {
 			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
 		}
 
-		$sql = "SELECT gift_id,gift_name,gift_description,gift_category, gift_threshold, gift_given_count
+		$sql = "SELECT gift_id,gift_createdate,gift_name,gift_description,gift_category, gift_threshold, gift_given_count
 			FROM ".$wgDBprefix."system_gift
 			ORDER BY gift_createdate DESC
 			{$limit_sql}";
@@ -181,7 +183,7 @@ class SystemGifts {
 		while( $row = $dbr->fetchObject( $res ) ) {
 			$gifts[] = array(
 				'id' => $row->gift_id,
-				'timestamp' => ($row->gift_timestamp),
+				'timestamp' => ($row->gift_createdate),
 				'gift_name' => $row->gift_name,
 				'gift_description' => $row->gift_description,
 				'gift_category' => $row->gift_category,
