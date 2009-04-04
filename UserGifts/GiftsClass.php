@@ -77,13 +77,10 @@ class Gifts {
 		if( !is_numeric( $id ) )
 			return '';
 		$dbr = wfGetDB( DB_SLAVE );
-		$res = $dbr->select( 'gift',
-			array( 'gift_id', 'gift_name', 'gift_description',
-					'gift_creator_user_id', 'gift_creator_user_name', 'gift_access' ),
-			array( 'gift_id' => $id ),
-			__METHOD__,
-			array( 'LIMIT' => 1 )
-		);
+		$sql = "SELECT gift_id, gift_name, gift_description,
+			gift_creator_user_id, gift_creator_user_name, gift_access
+			FROM {$dbr->tableName( 'gift' )} WHERE gift_id = {$id} LIMIT 0,1";
+		$res = $dbr->query($sql);
 		$row = $dbr->fetchObject( $res );
 		$gift = '';
 		if( $row ){
@@ -115,16 +112,19 @@ class Gifts {
 		$dbr = wfGetDB( DB_SLAVE );
 
 		if( $limit > 0 ){
-			if( $page )
-				$limit = $page * $limit - ($limit);
+			$limitvalue = 0;
+			if( $page ) $limitvalue = $page * $limit - ($limit);
+			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
 		}
 
-		$res = $dbr->select( 'gift',
-			array( 'gift_id', 'gift_createdate', 'gift_name', 'gift_description', 'gift_given_count' ),
-			array( "gift_access=0 OR gift_creator_user_id = {$wgUser->getID()}" ),
-			__METHOD__,
-			array( 'ORDER BY' => $order, 'LIMIT' => $limit )
-		);
+		$sql = "SELECT gift_id,gift_createdate,gift_name,gift_description,gift_given_count
+			FROM {$dbr->tableName( 'gift' )}
+			WHERE gift_access=0 OR gift_creator_user_id = {$wgUser->getID()}
+			ORDER BY {$order}
+			{$limit_sql}";
+
+		$res = $dbr->query($sql);
+		$gifts = array();
 		while ( $row = $dbr->fetchObject( $res ) ) {
 			$gifts[] = array(
 				'id' => $row->gift_id,

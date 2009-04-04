@@ -132,15 +132,11 @@ class UserGifts {
 			return '';
 
 		$dbr = wfGetDB( DB_SLAVE );
-		$res = $dbr->select(
-			array( 'user_gift', 'gift' ),
-			array( 'ug_id', 'ug_user_id_from', 'ug_user_name_from', 'ug_user_id_to', 'ug_user_name_to', 'ug_message',
-				'gift_id', 'ug_date', 'ug_status', 'gift_name', 'gift_description', 'gift_given_count' ),
-			array( 'ug_id' => $id ),
-			__METHOD__,
-			array( 'LIMIT' => 1 ),
-			array( 'INNER JOIN' => array( 'gift', 'ug_gift_id=gift_id' ) )
-		);
+		$sql = "SELECT ug_id, ug_user_id_from, ug_user_name_from, ug_user_id_to,ug_user_name_to,ug_message,gift_id, ug_date,
+			ug_status,gift_name, gift_description, gift_given_count
+			FROM {$dbr->tableName( 'user_gift' )} INNER JOIN {$dbr->tableName( 'gift' )} ON ug_gift_id=gift_id  
+			WHERE ug_id = {$id} LIMIT 0,1";
+		$res = $dbr->query($sql);
 		$row = $dbr->fetchObject( $res );
 		if( $row ){
 			$gift['id'] = $row->ug_id;
@@ -219,19 +215,18 @@ class UserGifts {
 		$dbr = wfGetDB( DB_SLAVE );
 
 		if( $limit > 0 ){
-			if( $page )
-				$limit = $page * $limit - ($limit);
+			$limitvalue = 0;
+			if( $page ) $limitvalue = $page * $limit - ($limit);
+			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
 		}
 
-		$res = $dbr->select(
-			array( 'user_gift', 'gift' ),
-			array( 'ug_id', 'ug_user_id_from', 'ug_user_name_from', 'ug_gift_id', 'ug_date', 'ug_status',
-					'gift_name', 'gift_description', 'gift_given_count', 'UNIX_TIMESTAMP(ug_date) AS unix_time' ),
-			array( 'ug_user_id_to' => $this->user_id ),
-			__METHOD__,
-			array( 'ORDER BY' => 'ug_id DESC', 'LIMIT' => $limit ),
-			array( 'gift' => array( 'INNER JOIN', 'ug_gift_id=gift_id' ) )
-		);
+		$sql = "SELECT ug_id, ug_user_id_from, ug_user_name_from, ug_gift_id, ug_date, ug_status,
+			gift_name, gift_description, gift_given_count, UNIX_TIMESTAMP(ug_date) AS unix_time
+			FROM {$dbr->tableName( 'user_gift' )} INNER JOIN {$dbr->tableName( 'gift' )} ON ug_gift_id=gift_id 
+			WHERE ug_user_id_to = {$this->user_id}
+			ORDER BY ug_id DESC
+			{$limit_sql}";
+		$res = $dbr->query($sql);
 
 		$requests = array();
 		while( $row = $dbr->fetchObject( $res ) ) {
@@ -255,19 +250,17 @@ class UserGifts {
 		$dbr = wfGetDB( DB_SLAVE );
 
 		if( $limit > 0 ){
-			if( $page )
-				$limit = $page * $limit - ($limit);
+			$limitvalue = 0;
+			if( $page ) $limitvalue = $page * $limit - ($limit);
+			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
 		}
 
-		$res = $dbr->select(
-			array( 'user_gift', 'gift' ),
-			array( 'ug_id', 'ug_user_id_from', 'ug_user_name_from', 'ug_gift_id', 'ug_date', 'ug_status',
-					'gift_name', 'gift_description', 'gift_given_count', 'UNIX_TIMESTAMP(ug_date) AS unix_time' ),
-			array(),
-			__METHOD__,
-			array( 'ORDER BY' => 'ug_id DESC', 'LIMIT' => $limit ),
-			array( 'gift' => array( 'INNER JOIN', 'ug_gift_id=gift_id' ) )
-		);
+		$sql = "SELECT ug_id, ug_user_id_from, ug_user_name_from, ug_gift_id, ug_date, ug_status,
+			gift_name, gift_description, gift_given_count, UNIX_TIMESTAMP(ug_date) AS unix_time
+			FROM {$dbr->tableName( 'user_gift' )} INNER JOIN {$dbr->tableName( 'gift' )} ON ug_gift_id=gift_id 
+			ORDER BY ug_id DESC
+			{$limit_sql}";
+		$res = $dbr->query($sql);
 
 		$requests = array();
 		while( $row = $dbr->fetchObject( $res ) ) {
@@ -299,12 +292,11 @@ class UserGifts {
 	static function getGiftCountByUsername( $user_name ){
 		$dbr = wfGetDB( DB_SLAVE );
 		$user_id = User::idFromName( $user_name );
-		$res = $dbr->select( 'user_gift',
-			array( 'COUNT(*) AS count' ),
-			array( 'ug_user_id_to' => $user_id ),
-			__METHOD__,
-			array( 'LIMIT' => 1 )
-		);
+		$sql = "SELECT count(*) AS count
+			FROM {$dbr->tableName( 'user_gift' )}
+			WHERE ug_user_id_to = {$user_id}
+			LIMIT 0,1";
+		$res = $dbr->query($sql);
 		$row = $dbr->fetchObject( $res );
 		$gift_count = 0;
 		if( $row ){
