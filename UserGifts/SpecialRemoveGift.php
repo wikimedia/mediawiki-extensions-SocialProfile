@@ -48,9 +48,9 @@ class RemoveGift extends UnlistedSpecialPage {
 
 			$gift_image = '<img src="'. $wgUploadPath .'/awards/' . Gifts::getGiftImage( $gift['gift_id'], 'l' ) . '" border="0" alt="" />';
 
-			$out .= $wgOut->setPageTitle( wfMsg( 'g-remove-success-title', $gift['name'] ) );
+			$wgOut->setPageTitle( wfMsg( 'g-remove-success-title', $gift['name'] ) );
 
-			$out .= '<div class="back-links">
+			$out = '<div class="back-links">
 				<a href="' . $wgUser->getUserPage()->escapeFullURL() . '">' . wfMsg( 'g-back-link', $gift['user_name_to'] ) . '</a>
 			</div>
 			<div class="g-container">
@@ -59,7 +59,7 @@ class RemoveGift extends UnlistedSpecialPage {
 			</div>
 			<div class="g-buttons">
 				<input type="button" class="site-button" value="'.wfMsg( 'g-main-page' ).'" size="20" onclick="window.location=\'index.php?title='.wfMsgForContent( 'mainpage' ).'\'" />
-				<input type="button" class="site-button" value="'.wfMsg( 'g-your-profile' ).'" size="20" onclick="window.location=\''.$user_page_link->escapeFullURL().'\'\" />
+				<input type="button" class="site-button" value="'.wfMsg( 'g-your-profile' ).'" size="20" onclick="window.location=\''.$user_page_link->escapeFullURL().'\'" />
 			</div>';
 
 			$wgOut->addHTML( $out );
@@ -99,7 +99,7 @@ class RemoveGift extends UnlistedSpecialPage {
 			$output .= '</div>
 			<div class="cleared"></div>
 			<div class="g-buttons">
-				<input type="hidden" name="user" value="' . addslashes( $this->user_name_to ) . '">
+				<input type="hidden" name="user" value="' . addslashes( $gift['user_name_from'] ) . '">
 				<input type="button" class="site-button" value="'.wfMsg( 'g-remove' ).'" size="20" onclick="document.form1.submit()" />
 				<input type="button" class="site-button" value="'.wfMsg( 'g-cancel' ).'" size="20" onclick="history.go(-1)" />
 			</div>
