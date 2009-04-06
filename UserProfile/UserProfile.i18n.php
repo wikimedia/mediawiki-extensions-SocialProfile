@@ -1850,9 +1850,14 @@ $messages['ee'] = array(
  * @author Omnipaedista
  */
 $messages['el'] = array(
+	'user-awards-title' => 'Βραβεία',
+	'user-gifts-title' => 'Δώρα',
 	'user-view-all' => 'Προβολή όλων',
+	'user-send-message' => 'Αποστολή μηνύματος',
+	'user-send-gift' => 'Αποστολή δώρου',
 	'user-contributions' => 'Συνεισφορές',
 	'user-stats-title' => 'Στατιστικά',
+	'user-stats-edits' => '{{PLURAL:$1|Επεξεργασία|Επεξεργασίες}}',
 	'other-info-title' => 'Άλλες πληροφορίες',
 	'user-friends-title' => 'Φίλοι',
 	'other-info-movies' => 'Ταινίες',
@@ -1864,8 +1869,10 @@ $messages['el'] = array(
 	'other-info-drinks' => 'Ποτά',
 	'user-personal-info-title' => 'Προσωπικές πληροφορίες',
 	'user-personal-info-real-name' => 'Πραγματικό Όνομα',
+	'user-personal-info-location' => 'Τοποθεσία',
 	'user-personal-info-hometown' => 'Γενέτειρα',
 	'user-personal-info-birthday' => 'Γενέθλια',
+	'user-personal-info-occupation' => 'Επάγγελμα',
 	'user-personal-info-websites' => 'Ιστοσελίδες',
 	'user-personal-info-schools' => 'Σχολεία',
 	'user-personal-info-about-me' => 'Για Εμένα',
@@ -1900,6 +1907,7 @@ $messages['el'] = array(
 	'user-profile-sports-notloggedintitle' => 'Ούπς!',
 	'user-profile-picture-uploaddifferent' => 'Ανεβάστε μια διαφορετική εικόνα',
 	'user-profile-picture-currentimage' => 'Τρέχουσα εικόνα',
+	'user-page-link' => 'Σελίδα χρήστη',
 );
 
 /** Esperanto (Esperanto)

@@ -533,6 +533,20 @@ a změń nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
 	'right-awardsmanage' => 'Nowe myta napóraś a eksistěrujuce wobźěłaś',
 );
 
+/** Greek (Ελληνικά)
+ * @author Consta
+ */
+$messages['el'] = array(
+	'ga-addnew' => '+ Προσθήκη νέου δώρου',
+	'ga-choosefile' => 'Επιλογή αρχείου:',
+	'ga-create-gift' => 'Δημιουργία δώρου',
+	'ga-gift' => 'δώρο',
+	'ga-giftdesc' => 'περιγραφή δώρου',
+	'ga-giftimage' => 'εικόνα δώρου',
+	'ga-giftname' => 'όνομα δώρου',
+	'ga-gifttype' => 'τύπος δώρου',
+);
+
 /** Spanish (Español)
  * @author Crazymadlover
  */
