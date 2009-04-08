@@ -972,7 +972,7 @@ $messages['fr'] = array(
 	'giftmanager-access' => 'accès au cadeau',
 	'giftmanager-description' => 'description du cadeau',
 	'giftmanager-giftimage' => 'image du cadeau',
-	'giftmanager-image' => "ajouter ou remplacer l'image",
+	'giftmanager-image' => 'ajouter ou remplacer l’image',
 	'giftmanager-giftcreated' => 'Le cadeau a été créé',
 	'giftmanager-giftsaved' => 'Le cadeau a été sauvegardé',
 	'giftmanager-public' => 'public',
@@ -988,13 +988,13 @@ $messages['fr'] = array(
 	'g-create-gift' => 'Créer un cadeau',
 	'g-created-by' => 'créé par',
 	'g-current-image' => 'Image actuelle',
-	'g-delete-message' => "Êtes-vous certain{{GENDER:||e|(e)}} de vouloir supprimer le cadeau « $1 » ? Ceci va également le supprimer des utilisateurs qui l'ont reçu.",
+	'g-delete-message' => 'Êtes-vous certain{{GENDER:||e|(e)}} de vouloir supprimer le cadeau « $1 » ? Ceci va également le supprimer des utilisateurs qui l’ont reçu.',
 	'g-description-title' => 'Cadeau « $2 » de la part de $1',
 	'g-error-do-not-own' => 'Vous ne possédez pas ce cadeau.',
 	'g-error-message-blocked' => 'Vous êtes bloqué{{GENDER:||e|(e)}} et ne pouvez donc pas donner des cadeaux',
 	'g-error-message-invalid-link' => 'Le lien que vous avez fourni est invalide.',
 	'g-error-message-login' => 'Vous devez vous connecter pour donner des cadeaux',
-	'g-error-message-no-user' => "L'utilisateur que vous essayez de voir n'existe pas.",
+	'g-error-message-no-user' => 'L’utilisateur que vous essayez de voir n’existe pas.',
 	'g-error-message-to-yourself' => 'Vous ne pouvez pas vous donner un cadeau à vous-même.',
 	'g-error-title' => 'Oups, vous avez pris un mauvais virage !',
 	'g-file-instructions' => 'Votre image doit être au format jpeg, png ou gif (non animé) et sa taille ne doit pas dépasser 100 ko.',
@@ -1002,10 +1002,10 @@ $messages['fr'] = array(
 	'g-gift' => 'cadeau',
 	'g-gift-name' => 'nom du cadeau',
 	'g-give-gift' => 'Donner le cadeau',
-	'g-give-all' => "Envie de donner un cadeau à $1 ? Cliquez sur un cadeau ci-dessous et cliquez ensuite sur « Envoyer le cadeau ». C'est facile.",
+	'g-give-all' => 'Envie de donner un cadeau à $1 ? Cliquez sur un cadeau ci-dessous et cliquez ensuite sur « Envoyer le cadeau ». C’est facile.',
 	'g-give-all-message-title' => 'Ajouter un message',
 	'g-give-all-title' => 'Donner un cadeau à $1',
-	'g-give-enter-friend-title' => "Si vous connaissez le nom de l'utilisateur, entrez-le ci-dessous",
+	'g-give-enter-friend-title' => 'Si vous connaissez le nom de l’utilisateur, entrez-le ci-dessous',
 	'g-given' => 'Ce cadeau a été donné {{PLURAL:$1|une fois|$1 fois}}',
 	'g-give-list-friends-title' => 'Sélectionnez depuis la liste de vos amis',
 	'g-give-list-select' => 'sélectionnez un ami',
@@ -1036,12 +1036,12 @@ $messages['fr'] = array(
 	'g-sent-title' => 'Vous avez envoyé le cadeau à $1',
 	'g-sent-message' => 'Vous avez envoyé le cadeau suivant à $1.',
 	'g-small' => 'Petit',
-	'g-to-another' => "Donner à quelqu'un d'autre",
+	'g-to-another' => 'Donner à quelqu’un d’autre',
 	'g-uploadsuccess' => 'Téléversement effectué avec succès',
 	'g-viewgiftlist' => 'Voir la liste des cadeaux',
 	'g-your-profile' => 'Votre profil',
 	'gift_received_subject' => '$1 vous a envoyé le cadeau $2 sur {{SITENAME}} !',
-	'gift_received_body' => "Bonjour $1,
+	'gift_received_body' => 'Bonjour $1,
 
 $2 vient de vous envoyer le cadeau $3 sur {{SITENAME}}.
 
@@ -1049,19 +1049,19 @@ Pour lire la note $2 qui vous est adressée et voir votre cadeau, cliquez sur le
 
 $4
 
-Nous espérons que vous l'apprécierez !
+Nous espérons que vous l’apprécierez !
 
 Merci,
 
 
-L'équipe de {{SITENAME}}
+L’équipe de {{SITENAME}}
 
 ---
 
 Vous ne voulez plus recevoir de courriels de notre part ?
 
 Cliquez $5
-et modifiez vos préférences pour désactiver les notifications par courriel.",
+et modifiez vos préférences pour désactiver les notifications par courriel.',
 	'right-giftadmin' => 'Créer ou modifier des cadeaux',
 );
 

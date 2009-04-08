@@ -1851,7 +1851,7 @@ $messages['fr'] = array(
 	'ur-remove-relationship-message-confirm-foe' => 'Vous avez enlevé $1 avec succès de vos ennemis.',
 	'ur-remove-relationship-message-friend' => 'Vous avez requis la suppression de $1 de vos amis, appuyer sur « $2 » pour confirmer.',
 	'ur-remove-relationship-message-confirm-friend' => 'Vous enlevé $1 avec succès de vos amis.',
-	'ur-remove-error-message-no-relationship' => "Vous n'avez aucune relation avec $1.",
+	'ur-remove-error-message-no-relationship' => 'Vous n’avez aucune relation avec $1.',
 	'ur-remove-error-message-remove-yourself' => 'Vous ne pouvez pas vous supprimer vous-même.',
 	'ur-remove-error-message-pending-foe-request' => 'Vous avez, en cours, une requête d’un ennemi avec $1.',
 	'ur-remove-error-message-pending-friend-request' => 'Vous avez, en cours, une requête d’un ami avec $1.',
@@ -1891,7 +1891,7 @@ Nous vous notifierons si $1 confirme votre requête.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> veut être votre ami.',
 	'ur-accept' => 'Accepter',
 	'ur-reject' => 'Rejeter',
-	'ur-no-requests-message' => 'Vous n’avez aucune requête en ami ou ennemi. Si vous désirez plus d\'amis, <a href="$1">invitez les !</a>',
+	'ur-no-requests-message' => 'Vous n’avez aucune requête en ami ou ennemi. Si vous désirez plus d’amis, <a href="$1">invitez les !</a>',
 	'ur-requests-added-message-foe' => 'Vous avez ajouté $1 en tant qu’ennemi.',
 	'ur-requests-added-message-friend' => 'Vous avez ajouté $1 en tant qu’ami.',
 	'ur-requests-reject-message-friend' => 'Vous avez refusé $1 en tant qu’ami.',
@@ -1914,7 +1914,7 @@ Hé ! Voulez-vous vous arrêter de recevoir des courriels de notre part ?
 
 Cliquez $4
 et modifiez vos préférences pour désactiver les notifications par courriel.',
-	'foe_request_subject' => "C'est la guerre ! $1 vous a ajouté comme ennemi sur {{SITENAME}} !",
+	'foe_request_subject' => 'C’est la guerre ! $1 vous a ajouté comme ennemi sur {{SITENAME}} !',
 	'foe_request_body' => 'Salut $1 :
 
 $2 vient juste de vous répertorier comme un ennemi sur {{SITENAME}}. Nous voulons nous assurer que vous êtes vraiment des ennemis mortel ou avoir au moins des griefs l’un envers l’autre.
@@ -1945,7 +1945,7 @@ Hé ! Voulez-vous vous arrêter de recevoir des courriels de notre part ?
 
 Cliquez $4
 et modifiez vos préférences pour désactiver les notifications par courriel.',
-	'foe_accept_subject' => "C'est fait ! $1 a accepté votre déclaration de guerre sur  {{SITENAME}} !",
+	'foe_accept_subject' => 'C’est fait ! $1 a accepté votre déclaration de guerre sur  {{SITENAME}} !',
 	'foe_accept_body' => 'Salut $1 : 
 
 $2 a accepté votre déclaration de guerre sur  {{SITENAME}} !

@@ -815,9 +815,9 @@ $messages['fr'] = array(
 	'userboard_loggedout' => 'Vous devez être <a href="$1">connecté</a> pour poster des messages à d’autres utilisateurs.',
 	'userboard_showingmessages' => 'Visionnement {{PLURAL:$4|du message $3|des messages $2-$3}} sur un total de {{PLURAL:$1|$1 message|$1 messages}}',
 	'message_received_subject' => '$1 a écrit sur votre tableau sur {{SITENAME}}',
-	'message_received_body' => "Salut $1 :
+	'message_received_body' => 'Salut $1 :
 
-$2 vient juste d'écrire sur votre tableau sur {{SITENAME}} !
+$2 vient juste d’écrire sur votre tableau sur {{SITENAME}} !
 
 Cliquez sur le lien ci-dessous pour allez sur votre tableau !
 
@@ -828,7 +828,7 @@ $3
 Hé ! Voulez-vous arrêter d’obtenir, de nous, les courriels ?
 
 Cliquer $4
-et modifiez vos paramètres pour désactiver les notifications des courriels.",
+et modifiez vos paramètres pour désactiver les notifications des courriels.',
 );
 
 /** Western Frisian (Frysk)
@@ -2252,6 +2252,13 @@ $messages['tg-cyrl'] = array(
 	'userboard_prevpage' => 'қаблӣ',
 	'userboard_nomessages' => 'Пайғоме нест.',
 	'userboard_sendbutton' => 'фирист',
+);
+
+/** Thai (ไทย)
+ * @author Octahedron80
+ */
+$messages['th'] = array(
+	'userboard_delete' => 'ลบ',
 );
 
 /** Tagalog (Tagalog)

@@ -306,6 +306,7 @@ $messages['bg'] = array(
  * @author CERminator
  */
 $messages['bs'] = array(
+	'systemgiftmanager' => 'Upravitelj sistemskih poklona',
 	'ga-addnew' => '+ Dodaj novi poklon',
 	'ga-back-edit-gift' => 'Nazad na uređivanje ovog poklona',
 	'ga-back-gift-list' => 'Nazad na spisak poklona',
@@ -338,6 +339,7 @@ $messages['bs'] = array(
 	'ga-recent-recipients-award' => 'Drugi nedavni primaoci ove nagrade',
 	'ga-saved' => 'Poklon je sačuvan',
 	'ga-small' => 'Malehni',
+	'ga-threshold' => 'prag',
 	'ga-title' => 'Nagrade korisnika $1',
 	'ga-uploadsuccess' => 'Postavljanje uspješno',
 	'ga-viewlist' => 'Pogledajte spisak poklona',
@@ -684,6 +686,7 @@ ja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.',
 );
 
 /** French (Français)
+ * @author Crochet.david
  * @author IAlex
  * @author PieRRoMaN
  * @author Verdy p
@@ -700,7 +703,7 @@ $messages['fr'] = array(
 	'ga-created' => 'Le cadeau a été créé',
 	'ga-currentimage' => 'Image actuelle',
 	'ga-error-message-invalid-link' => 'Le lien que vous avez entré est invalide.',
-	'ga-error-message-no-user' => "L'utilisateur que vous essayez de voir n'existe pas.",
+	'ga-error-message-no-user' => 'L’utilisateur que vous essayez de voir n’existe pas.',
 	'ga-error-title' => 'Oops, vous avez pris un mauvais tour !',
 	'ga-file-instructions' => 'Voir image doit être jpeg, png ou gif (mais pas animée) et doit être plus petite que 100 Ko.',
 	'ga-gift' => 'cadeau',
@@ -712,7 +715,7 @@ $messages['fr'] = array(
 	'ga-gifttype' => 'type de cadeau',
 	'ga-goback' => 'Revenir',
 	'ga-imagesbelow' => 'Les image qui seront utilisées sur ce site sont affichées ci-dessous',
-	'ga-img' => "ajouter / modifier l'image",
+	'ga-img' => 'ajouter / modifier l’image',
 	'ga-large' => 'Grand',
 	'ga-medium' => 'Moyen',
 	'ga-mediumlarge' => 'Moyen-Grand',
@@ -727,7 +730,7 @@ $messages['fr'] = array(
 	'ga-uploadsuccess' => 'Téléchargement effectué avec succès',
 	'ga-viewlist' => 'Voir la liste des cadeaux',
 	'system_gift_received_subject' => 'Vous avez reçu le prix $1 sur {{SITENAME}} !',
-	'system_gift_received_body' => "Bonjour $1,
+	'system_gift_received_body' => 'Bonjour $1,
 
 Vous avez reçu le prix $2 sur {{SITENAME}} !
 
@@ -737,19 +740,19 @@ Cliquez sur le lien ci-dessous pour voir votre trophée
 
 $4
 
-Nous espérons que l'apprécierez !
+Nous espérons que l’apprécierez !
 
 Merci,
 
 
-L'équipe de {{SITENAME}}
+L’équipe de {{SITENAME}}
 
 ---
 
 Vous ne voulez plus recevoir de courriels de notre part ?
 
 Cliquez $5
-et modifiez vos préférences pour désactiver les notifications par courriel.",
+et modifiez vos préférences pour désactiver les notifications par courriel.',
 	'right-awardsmanage' => 'Créer et modifier les prix existants',
 );
 

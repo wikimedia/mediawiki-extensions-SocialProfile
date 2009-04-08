@@ -530,6 +530,7 @@ ja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.',
 
 /** French (Français)
  * @author Cedric31
+ * @author Crochet.david
  * @author Grondin
  */
 $messages['fr'] = array(
@@ -563,19 +564,19 @@ $messages['fr'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|cadeau reçu|cadeaux reçus}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|cadeau envoyé|cadeaux envoyés}}',
 	'level-advance-subject' => 'Vous avez désormais un « $1 » sur {{SITENAME}} !',
-	'level-advance-body' => "Salut $1 : 
+	'level-advance-body' => 'Salut $1 : 
 
 Vous avez maintenant un « $2 » sur {{SITENAME}} !
 
 Toutes nos félicitations,
 
-L'équipe de {{SITENAME}}
+L’équipe de {{SITENAME}}
 
 ---
 Voulez-vous arrêter de recevoir des courriels de notre part ?
 
 Cliquez $3
-et modifiez vos paramètres en désactivant les notifications par courriel.",
+et modifiez vos paramètres en désactivant les notifications par courriel.',
 );
 
 /** Galician (Galego)

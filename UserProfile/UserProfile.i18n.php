@@ -1858,6 +1858,8 @@ $messages['el'] = array(
 	'user-contributions' => 'Συνεισφορές',
 	'user-stats-title' => 'Στατιστικά',
 	'user-stats-edits' => '{{PLURAL:$1|Επεξεργασία|Επεξεργασίες}}',
+	'user-stats-votes' => '{{PLURAL:$1|Ψήφος|Ψήφοι}}',
+	'user-stats-comments' => '{{PLURAL:$1|Σχόλιο|Σχόλια}}',
 	'other-info-title' => 'Άλλες πληροφορίες',
 	'user-friends-title' => 'Φίλοι',
 	'other-info-movies' => 'Ταινίες',
@@ -1883,6 +1885,7 @@ $messages['el'] = array(
 	'user-profile-section-preferences' => 'Προτιμήσεις',
 	'user-profile-personal-info' => 'Πληροφορία',
 	'user-profile-personal-name' => 'Όνομα',
+	'user-profile-personal-location' => 'Τοποθεσία',
 	'user-profile-personal-city' => 'Πόλη',
 	'user-profile-personal-country' => 'Χώρα',
 	'user-profile-personal-birthday' => 'Γενέθλια',
@@ -2681,6 +2684,7 @@ $messages['fi'] = array(
 );
 
 /** French (Français)
+ * @author Crochet.david
  * @author Grondin
  * @author IAlex
  * @author McDutchie
@@ -2712,7 +2716,7 @@ $messages['fr'] = array(
 	'user-stats-comments' => '{{PLURAL:$1|Commentaire|Commentaires}}',
 	'user-stats-recruits' => '{{PLURAL:$1|Recrue|Recrues}}',
 	'user-stats-poll-votes' => '{{PLURAL:$1|Vote|Votes}} aux élections',
-	'user-stats-picture-game-votes' => "{{PLURAL:$1|Vote|Votes}} pour le jeu d'images",
+	'user-stats-picture-game-votes' => '{{PLURAL:$1|Vote|Votes}} pour le jeu d’images',
 	'user-stats-quiz-points' => '{{PLURAL:$1|Point|Points}} au quiz',
 	'user-stats-pick-points' => '{{PLURAL:$1|Point|Points}} trouvés',
 	'other-info-title' => 'Autres informations',
@@ -2761,7 +2765,7 @@ $messages['fr'] = array(
 	'user-recent-activity-network-update' => 'A posté une pensée',
 	'user-recent-system-gift' => 'A reçu une récompense',
 	'user-profile-update-notloggedin-title' => 'Impossible de modifier votre profil sans être connecté',
-	'user-profile-update-notloggedin-text' => 'Vous ne pouvez pas modifier votre profil si vous n\'êtes pas connecté.
+	'user-profile-update-notloggedin-text' => 'Vous ne pouvez pas modifier votre profil si vous n’êtes pas connecté.
 Cliquez <a href="$1">ici</a> pour vous connecter ou alors <a href="$2">là</a> pour vous enregistrer.',
 	'user-profile-update-saved' => 'Votre profil a été sauvegardé',
 	'user-profile-update-log-section' => 'section changée',
@@ -2791,7 +2795,7 @@ Cliquez <a href="$1">ici</a> pour vous connecter ou alors <a href="$2">là</a> p
 	'user-profile-personal-education' => 'Éducation',
 	'user-profile-personal-schools' => 'Écoles',
 	'user-profile-personal-places' => 'Endroits',
-	'user-profile-personal-placeslived' => "Endroits où j'ai vécu",
+	'user-profile-personal-placeslived' => 'Endroits où j’ai vécu',
 	'user-profile-personal-web' => 'Internet',
 	'user-profile-personal-websites' => 'Sites web',
 	'user-profile-interests-entertainment' => 'Divertissement',
@@ -2822,7 +2826,7 @@ Cliquez <a href="$1">ici</a> pour vous connecter ou alors <a href="$2">là</a> p
 	'user-profile-sports-notloggedintext' => 'Vous devez être connecté pour modifier votre profil.',
 	'user-profile-sports-teamremoved' => 'Votre équipe a été enlevée.',
 	'user-profile-sports-teamsaved' => 'Vos équipes ont été sauvegardées',
-	'user-profile-sports-addmore' => "Ajouter plus de sports ou d'équipes",
+	'user-profile-sports-addmore' => 'Ajouter plus de sports ou d’équipes',
 	'user-profile-picture-title' => 'Téléversez votre image',
 	'user-profile-picture-yourpicture' => 'Votre image',
 	'user-profile-picture-yourpicturestext' => 'Voici les images qui apparaîtront dans votre profil, dans vos pages de réseau, et dans vos commentaires.',
@@ -2859,12 +2863,12 @@ Cliquez <a href="$1">ici</a> pour vous connecter ou alors <a href="$2">là</a> p
 	'avatarupload-removeanother' => 'Enlever un autre',
 	'profilelogpage' => 'Journal des modifications du profil utilisateur',
 	'profilelogpagetext' => 'Voici le journal des modifications du profil utilisateur',
-	'avatarlogpage' => "Journal des téléversements d'avatar",
-	'avatarlogpagetext' => "Voici le journal des téléversements d'avatar utilisateur",
+	'avatarlogpage' => 'Journal des téléversements d’avatar',
+	'avatarlogpagetext' => 'Voici le journal des téléversements d’avatar utilisateur',
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'a téléversé un nouvel avatar',
 	'user-profile-picture-log-delete-entry' => 'a supprimé l’avatar de $1',
-	'right-avatarremove' => "Supprimer les avatars d'un utilisateur",
+	'right-avatarremove' => 'Supprimer les avatars d’un utilisateur',
 );
 
 /** Western Frisian (Frysk)
