@@ -129,7 +129,7 @@ $messages['bg'] = array(
 	'mp-userlevels-link' => 'Потребителски рангове',
 	'mp-welcome-upload' => 'Качване',
 	'mp-welcome-edit' => 'Редактиране',
-	'mp-welcome-points' => '$1 точки',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|точка|точки}}',
 	'mp-welcome-logged-in' => 'Здрасти $1',
 	'mp-requests-title' => 'Заявки',
 	'mp-requests-message' => 'Имате следните заявки.',
@@ -235,6 +235,14 @@ $messages['dsb'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|nowy pśijaśel|nowej pśijaśela|nowe pśijaśele|nowych pśijaśelow}}',
 );
 
+/** Ewe (Eʋegbe)
+ * @author Natsubee
+ */
+$messages['ee'] = array(
+	'mp-requests-title' => 'Babiawo',
+	'mp-request-new-message' => 'du yeye',
+);
+
 /** Greek (Ελληνικά)
  * @author Consta
  * @author Omnipaedista
@@ -243,6 +251,7 @@ $messages['el'] = array(
 	'mp-userlevels-link' => 'Επίπεδα χρήστη',
 	'mp-welcome-upload' => 'Επιφόρτωση',
 	'mp-welcome-edit' => 'Επεξεργασία',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|βαθμός|βαθμοί}}',
 	'mp-welcome-logged-in' => 'Γεια σου $1',
 	'mp-requests-title' => 'Αιτήματα',
 	'mp-requests-message' => 'Έχετε τα ακόλουθα αιτήματα.',
@@ -333,7 +342,7 @@ $messages['fi'] = array(
 	'mp-userlevels-link' => 'Käyttäjätasot',
 	'mp-welcome-upload' => 'Tallenna',
 	'mp-welcome-edit' => 'Muokkaa',
-	'mp-welcome-points' => '$1 pistettä',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|piste|pistettä}}',
 	'mp-welcome-needed-points' => 'Päästäksesi tasolle <b><a href="$1">$2</a></b>, ansaitse <i>$3</i> {{PLURAL:$3|piste|pistettä}} lisää!',
 	'mp-welcome-logged-in' => 'Hei $1',
 	'mp-requests-title' => 'Pyynnöt',
@@ -347,12 +356,13 @@ $messages['fi'] = array(
 
 /** French (Français)
  * @author Cedric31
+ * @author Crochet.david
  * @author Grondin
  * @author IAlex
  */
 $messages['fr'] = array(
 	'userwelcome-desc' => 'Ajoute une balise <tt>&lt;welcomeUser&gt;</tt> pour afficher des informations sociales spécifiques à chaque utilisateur aux utilisateurs enregistrés',
-	'mp-userlevels-link' => "Niveaux de l'utilisateur",
+	'mp-userlevels-link' => 'Niveaux de l’utilisateur',
 	'mp-welcome-upload' => 'Télécharger',
 	'mp-welcome-edit' => 'Modifier',
 	'mp-welcome-points' => '$1 {{PLURAL:$1|point|points}}',
@@ -813,10 +823,20 @@ $messages['ro'] = array(
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
+	'userwelcome-desc' => 'Добавляет тег <tt>&lt;welcomeUser&gt;</tt> для отображения зарегистрированным участникам социальной информации',
+	'mp-userlevels-link' => 'Уровни участников',
 	'mp-welcome-upload' => 'Загрузить',
 	'mp-welcome-edit' => 'Править',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|очко|очков|очков}}',
+	'mp-welcome-needed-points' => 'Для продвижения на <b><a href="$1">$2</a></b> требуется ещё <i>$3</i> {{PLURAL:$3|очко|очка|очков|}}!',
+	'mp-welcome-logged-in' => 'Привет, $1',
 	'mp-requests-title' => 'Запросы',
+	'mp-requests-message' => 'У вас есть следующие запросы.',
 	'mp-request-new-message' => 'новое сообщение',
+	'mp-request-new-award' => '$1 {{PLURAL:$1|новая награда|новых награды|новых наград}}',
+	'mp-request-new-gift' => '$1 {{PLURAL:$1|новый подарок|новых подарка|новых подарков}}',
+	'mp-request-new-foe' => '$1 {{PLURAL:$1|новый недруг|новых недруга|новых недругов}}',
+	'mp-request-new-friend' => '$1 {{PLURAL:$1|новый друг|новых друга|новых друзей}}',
 );
 
 /** Sanskrit (संस्कृत)
@@ -907,7 +927,7 @@ $messages['sv'] = array(
 	'mp-userlevels-link' => 'Användarnivåer',
 	'mp-welcome-upload' => 'Ladda upp',
 	'mp-welcome-edit' => 'Redigera',
-	'mp-welcome-points' => '$1 poäng',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|poäng|poäng}}',
 	'mp-welcome-needed-points' => 'För att avancera för <b><a href="$1">$2</a></b> måste du uppnå <i>$3</i> fler {{PLURAL:$3|poäng|poäng}}!',
 	'mp-welcome-logged-in' => 'Hej $1',
 	'mp-requests-title' => 'Efterfrågningar',
@@ -1006,22 +1026,37 @@ $messages['tl'] = array(
 );
 
 /** Turkish (Türkçe)
+ * @author Joseph
  * @author Karduelis
  */
 $messages['tr'] = array(
+	'userwelcome-desc' => 'Kullanıcıya-özgü sosyal bilgileri giriş yapmış kullanıcılara göstermek için <tt>&lt;welcomeUser&gt;</tt> etiketini ekler',
+	'mp-userlevels-link' => 'Kullanıcı seviyeleri',
+	'mp-welcome-upload' => 'Yükle',
+	'mp-welcome-edit' => 'Düzenle',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|puan|puan}}',
+	'mp-welcome-needed-points' => '<b><a href="$1">$2</a></b>\'ye ilerlemek için <i>$3</i> tane daha puan kazanın!',
 	'mp-welcome-logged-in' => '$1 Hoşgeldiniz',
+	'mp-requests-title' => 'İstekler',
+	'mp-requests-message' => 'Şu istekleriniz var.',
+	'mp-request-new-message' => 'yeni mesajlar',
+	'mp-request-new-award' => '$1 yeni {{PLURAL:$1|ödül|ödül}}',
+	'mp-request-new-gift' => '$1 yeni {{PLURAL:$1|hediye|hediye}}',
+	'mp-request-new-foe' => '$1 yeni {{PLURAL:$1|düşman|düşman}}',
+	'mp-request-new-friend' => '$1 yeni {{PLURAL:$1|arkadaş|arkadaş}}',
 );
 
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
+ * @author Vinhtantran
  */
 $messages['vi'] = array(
 	'userwelcome-desc' => 'Thêm thẻ <tt>&lt;welcomeUser&gt;</tt> để hiển thị thông tin cá nhân cho những thành viên đăng ký',
 	'mp-userlevels-link' => 'Cấp thành viên',
 	'mp-welcome-upload' => 'Tải lên',
 	'mp-welcome-edit' => 'Sửa đổi',
-	'mp-welcome-points' => '$1 điểm',
-	'mp-welcome-needed-points' => 'Để trở thành <b><a href="$1">$2</a></b>, hãy trúng thêm <i>$3</i> điểm!',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|điểm|điểm}}',
+	'mp-welcome-needed-points' => 'Để trở thành <b><a href="$1">$2</a></b>, hãy kiếm thêm <i>$3</i> {{PLURAL:$3|điểm|điểm}} nữa!',
 	'mp-welcome-logged-in' => 'Chào $1',
 	'mp-requests-title' => 'Các yêu cầu',
 	'mp-requests-message' => 'Bạn có các yêu cầu sau.',

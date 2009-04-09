@@ -1827,3 +1827,23 @@ $messages['tr'] = array(
 	'ga-small' => 'Küçük',
 );
 
+/** Veps (Vepsan kel')
+ * @author Игорь Бродский
+ */
+$messages['vep'] = array(
+	'ga-gift' => 'lahj',
+	'ga-gift-given-count' => 'Nece lahj om anttud $1 {{PLURAL:$1|kerd|kerdad}}',
+	'ga-gift-title' => '$1-kävutajan "$2"',
+	'ga-giftdesc' => 'lahjan ümbrikacund',
+	'ga-giftimage' => 'lahjan kuva',
+	'ga-giftname' => 'lahjan nimi',
+	'ga-gifttype' => 'lahjan tip',
+	'ga-goback' => 'Mäne tagaze',
+	'ga-large' => "Sur'",
+	'ga-medium' => 'Keskmäine',
+	'ga-mediumlarge' => "Keskmäižsur'",
+	'ga-new' => "Uz'",
+	'ga-next' => "Jäl'gh.",
+	'ga-previous' => 'Edel.',
+);
+

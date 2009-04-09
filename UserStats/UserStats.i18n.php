@@ -448,6 +448,7 @@ $messages['es'] = array(
 	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Victoria semanal|Victorias semanales}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Edición|Ediciones}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Comentario|Comentarios}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Remisión|Remisiones}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Amigo|Amigos}}',
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|Enemigo|Enemigos}}',
 	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Opinión publicada|Opiniones publicadas}}',

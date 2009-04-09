@@ -2632,6 +2632,17 @@ $messages['tr'] = array(
 	'g-main-page' => 'Ana sayfa',
 );
 
+/** Veps (Vepsan kel')
+ * @author Игорь Бродский
+ */
+$messages['vep'] = array(
+	'g-gift' => 'lahj',
+	'g-gift-name' => 'lahjan nimi',
+	'g-give-gift' => 'Anda lahj',
+	'g-large' => "Sur'",
+	'g-list-title' => '$1-kävutajan lahjoiden nimikirjutez',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
  */
