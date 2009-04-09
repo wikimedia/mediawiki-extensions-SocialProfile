@@ -1711,6 +1711,7 @@ $messages['lb'] = array(
 	'g-back-link' => '< Zréck op dem $1 seng Säit',
 	'g-choose-file' => 'Fichier wielen:',
 	'g-cancel' => 'Ofbriechen',
+	'g-create-gift' => 'Cadeau uleeën',
 	'g-created-by' => 'ugeluecht vum',
 	'g-current-image' => 'Aktuellt Bild',
 	'g-error-do-not-own' => 'Dëse Cadeau gehéiert Iech net.',

@@ -7359,9 +7359,11 @@ $messages['tg-cyrl'] = array(
 
 /** Thai (ไทย)
  * @author Ans
+ * @author Passawuth
  */
 $messages['th'] = array(
 	'user-count-separator' => '$1 จากทั้งหมด $2',
+	'user-personal-info-real-name' => 'ชื่อจริง',
 );
 
 /** Tagalog (Tagalog)

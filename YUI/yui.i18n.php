@@ -460,3 +460,10 @@ $messages['zh-hans'] = array(
 	'yui-desc' => '使用JavaScript编写的程序和控件',
 );
 
+/** Traditional Chinese (‪中文(繁體)‬)
+ * @author Alexsh
+ */
+$messages['zh-hant'] = array(
+	'yui-desc' => '使用JavaScript撰寫的控制工具',
+);
+

@@ -933,6 +933,7 @@ $messages['bs'] = array(
 	'ur-error-page-title' => 'Ups!',
 	'ur-main-page' => 'Početna stranica',
 	'ur-your-profile' => 'Vaš profil',
+	'ur-backlink' => '&lt; Nazad na profil korisnika $1',
 	'ur-add-friends' => '  Želite još prijatelja?
 <a href="$1">Pozovite ih</a>',
 	'ur-add-friend' => 'Dodaj kao prijatelja',

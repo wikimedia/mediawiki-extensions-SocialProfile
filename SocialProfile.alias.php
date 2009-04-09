@@ -232,6 +232,11 @@ $aliases['sw'] = array(
 	'RemoveRelationship' => array( 'OndoaMahusiano' ),
 );
 
+/** Thai (ไทย) */
+$aliases['th'] = array(
+	'UpdateProfile' => array( 'อัปเดตโปรไฟล์' ),
+);
+
 /** Tagalog (Tagalog) */
 $aliases['tl'] = array(
 	'AddRelationship' => array( 'Idagdag ang kaugnayan' ),
