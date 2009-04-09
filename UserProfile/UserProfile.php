@@ -49,7 +49,7 @@ $wgHooks['ArticleFromTitle'][] = 'wfUserProfileFromTitle';
  * @return true
  */
 function wfUserProfileFromTitle( &$title, &$article ){
-	global $IP, $wgUser, $wgRequest, $wgOut, $wgTitle, $wgMemc, $wgStyleVersion, $wgHooks,
+	global $IP, $wgUser, $wgRequest, $wgOut, $wgMemc, $wgStyleVersion, $wgHooks,
 		$wgUserPageChoice, $wgUserProfileScripts;
 
 	if ( strpos( $title->getText(), "/" ) === false && ( NS_USER == $title->getNamespace() || NS_USER_PROFILE == $title->getNamespace() ) ) {

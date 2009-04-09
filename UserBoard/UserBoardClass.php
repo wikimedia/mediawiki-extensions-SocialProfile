@@ -239,7 +239,7 @@ class UserBoard {
 	}
 
 	public function getUserBoardToBoardCount( $user_id, $user_id_2 ){
-		global $wgOut, $wgUser, $wgTitle, $wgDBprefix;
+		global $wgOut, $wgUser, $wgDBprefix;
 		$dbr = wfGetDB( DB_SLAVE );
 
 		$user_sql = " ( (ub_user_id={$user_id} AND ub_user_id_from={$user_id_2}) OR

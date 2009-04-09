@@ -24,7 +24,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 	 * @param $params Mixed: parameter(s) passed to the page or null
 	 */
 	public function execute( $params ) {
-		global $wgUser, $wgOut, $wgTitle, $wgRequest, $wgUserRelationshipScripts;
+		global $wgUser, $wgOut, $wgRequest, $wgUserRelationshipScripts;
 		wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
 
 		/**

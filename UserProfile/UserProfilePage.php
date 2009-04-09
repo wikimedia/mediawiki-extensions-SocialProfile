@@ -99,8 +99,6 @@ class UserProfilePage extends Article {
 	}
 
 	function getUserStatsRow( $label, $value ) {
-		global $wgUser, $wgTitle, $wgOut;
-
 		$output = ''; // Prevent E_NOTICE
 
 		if( $value != 0 ) {
@@ -114,7 +112,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getUserStats( $user_id, $user_name ) {
-		global $wgUser, $wgTitle, $IP, $wgUserProfileDisplay;
+		global $wgUser, $IP, $wgUserProfileDisplay;
 
 		// Load messages, we're gonna need 'em
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
@@ -193,7 +191,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getPersonalInfo( $user_id, $user_name ) {
-		global $IP, $wgTitle, $wgUser, $wgMemc, $wgUserProfileDisplay;
+		global $IP, $wgUser, $wgMemc, $wgUserProfileDisplay;
 
 		// Load messages, we're gonna need 'em
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
@@ -282,7 +280,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getCustomInfo( $user_name ) {
-		global $IP, $wgTitle, $wgUser, $wgMemc, $wgUserProfileDisplay;
+		global $IP, $wgUser, $wgMemc, $wgUserProfileDisplay;
 
 		if( $wgUserProfileDisplay['custom'] == false ) {
 			return '';
@@ -343,7 +341,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getInterests( $user_name ) {
-		global $IP, $wgTitle, $wgUser, $wgMemc, $wgUserProfileDisplay;
+		global $IP, $wgUser, $wgMemc, $wgUserProfileDisplay;
 
 		// Load messages, we're gonna need 'em
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
@@ -563,7 +561,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getRelationships( $user_name, $rel_type ){
-		global $IP, $wgMemc, $wgUser, $wgTitle, $wgUserProfileDisplay, $wgUploadPath;
+		global $IP, $wgMemc, $wgUser, $wgUserProfileDisplay, $wgUploadPath;
 
 		// Load messages, we're gonna need 'em
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
@@ -656,7 +654,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getGifts( $user_name ){
-		global $IP, $wgUser, $wgTitle, $wgMemc, $wgUserProfileDisplay, $wgUploadPath;
+		global $IP, $wgUser, $wgMemc, $wgUserProfileDisplay, $wgUploadPath;
 
 		// Load messages, we're gonna need 'em
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
@@ -740,7 +738,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getAwards( $user_name ){
-		global $IP, $wgUser, $wgTitle, $wgMemc, $wgUserProfileDisplay, $wgUploadPath;
+		global $IP, $wgUser, $wgMemc, $wgUserProfileDisplay, $wgUploadPath;
 
 		// Load messages, we're gonna need 'em
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
@@ -823,7 +821,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getUserBoard( $user_id, $user_name ){
-		global $IP, $wgMemc, $wgUser, $wgTitle, $wgOut, $wgUserProfileDisplay, $wgUserProfileScripts;
+		global $IP, $wgMemc, $wgUser, $wgOut, $wgUserProfileDisplay, $wgUserProfileScripts;
 
 		// Load messages, we're gonna need 'em
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
