@@ -112,7 +112,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getUserStats( $user_id, $user_name ) {
-		global $wgUser, $IP, $wgUserProfileDisplay;
+		global $wgUser, $wgUserProfileDisplay;
 
 		// Load messages, we're gonna need 'em
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
@@ -191,7 +191,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getPersonalInfo( $user_id, $user_name ) {
-		global $IP, $wgUser, $wgMemc, $wgUserProfileDisplay;
+		global $wgUser, $wgMemc, $wgUserProfileDisplay;
 
 		// Load messages, we're gonna need 'em
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
@@ -280,7 +280,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getCustomInfo( $user_name ) {
-		global $IP, $wgUser, $wgMemc, $wgUserProfileDisplay;
+		global $wgUser, $wgMemc, $wgUserProfileDisplay;
 
 		if( $wgUserProfileDisplay['custom'] == false ) {
 			return '';
@@ -341,7 +341,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getInterests( $user_name ) {
-		global $IP, $wgUser, $wgMemc, $wgUserProfileDisplay;
+		global $wgUser, $wgMemc, $wgUserProfileDisplay;
 
 		// Load messages, we're gonna need 'em
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
@@ -407,7 +407,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getProfileTop( $user_id, $user_name ) {
-		global $IP, $wgTitle, $wgUser, $wgMemc, $wgUploadPath, $wgLang;
+		global $wgTitle, $wgUser, $wgMemc, $wgUploadPath, $wgLang;
 
 		// Load messages, we're gonna need 'em
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
@@ -561,7 +561,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getRelationships( $user_name, $rel_type ){
-		global $IP, $wgMemc, $wgUser, $wgUserProfileDisplay, $wgUploadPath;
+		global $wgMemc, $wgUser, $wgUserProfileDisplay, $wgUploadPath;
 
 		// Load messages, we're gonna need 'em
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
@@ -654,7 +654,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getGifts( $user_name ){
-		global $IP, $wgUser, $wgMemc, $wgUserProfileDisplay, $wgUploadPath;
+		global $wgUser, $wgMemc, $wgUserProfileDisplay, $wgUploadPath;
 
 		// Load messages, we're gonna need 'em
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
@@ -738,7 +738,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getAwards( $user_name ){
-		global $IP, $wgUser, $wgMemc, $wgUserProfileDisplay, $wgUploadPath;
+		global $wgUser, $wgMemc, $wgUserProfileDisplay, $wgUploadPath;
 
 		// Load messages, we're gonna need 'em
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
@@ -821,7 +821,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getUserBoard( $user_id, $user_name ){
-		global $IP, $wgMemc, $wgUser, $wgOut, $wgUserProfileDisplay, $wgUserProfileScripts;
+		global $wgMemc, $wgUser, $wgOut, $wgUserProfileDisplay, $wgUserProfileScripts;
 
 		// Load messages, we're gonna need 'em
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
@@ -908,18 +908,19 @@ class UserProfilePage extends Article {
 	 * and FanBoxes extension is installed.
 	 */
 	function getFanBoxes( $user_name ){
-		global $wgOut, $IP, $wgUser, $wgTitle, $wgMemc, $wgUserProfileDisplay, $wgFanBoxScripts, $wgFanBoxDirectory, $wgEnableUserBoxes;
+		global $wgOut, $wgUser, $wgTitle, $wgMemc, $wgUserProfileDisplay, $wgFanBoxScripts, $wgFanBoxDirectory, $wgEnableUserBoxes;
 
 		if ( !$wgEnableUserBoxes || $wgUserProfileDisplay['userboxes'] == false ) {
 			return '';
 		}
 
-		$wgOut->addScript("<script type=\"text/javascript\" src=\"{$wgFanBoxScripts}/FanBoxes.js\"></script>\n");
-		$wgOut->addScript("<link rel='stylesheet' type='text/css' href=\"{$wgFanBoxScripts}/FanBoxes.css\"/>\n");
+		$wgOut->addScriptFile( $wgFanBoxScripts . '/FanBoxes.js' );
+		$wgOut->addStyle( '../..' . $wgFanBoxScripts . '/FanBoxes.css' );
 
-		wfLoadExtensionMessages('FanBox');
+		wfLoadExtensionMessages( 'FanBox' );
 
-		$f = new UserFanBoxes($user_name);
+		$output = '';
+		$f = new UserFanBoxes( $user_name );
 		$user_safe = ($user_name);
 
 		// Try cache
@@ -935,9 +936,9 @@ class UserProfilePage extends Article {
 		//	$fanboxes = $data;
 		//}
 
-		$fanboxes = $f->getUserFanboxes(0, 10);
+		$fanboxes = $f->getUserFanboxes( 0, 10 );
 
-		$fanbox_count = $f->getFanBoxCountByUsername($user_name);
+		$fanbox_count = $f->getFanBoxCountByUsername( $user_name );
 		$fanbox_link = SpecialPage::getTitleFor( 'ViewUserBoxes' );
 		$per_row = 1;
 
@@ -945,17 +946,19 @@ class UserProfilePage extends Article {
 
 			$output .= '<div class="user-section-heading">
 				<div class="user-section-title">
-					'.wfMsg('user-fanbox-title').'
+					' . wfMsg( 'user-fanbox-title' ) . '
 				</div>
 				<div class="user-section-actions">
 					<div class="action-right">';
-						if( $fanbox_count > 10 ) $output .= '<a href="'.$fanbox_link->escapeFullURL('user='.$user_safe).'" rel="nofollow">'.wfMsg('user-view-all').'</a>';
+						if( $fanbox_count > 10 ){
+							$output .= '<a href="' . $fanbox_link->escapeFullURL( 'user=' . $user_safe ) . '" rel="nofollow">' . wfMsg( 'user-view-all' ) . '</a>';
+						}
 					$output .= '</div>
 					<div class="action-left">';
 						if( $fanbox_count > 10 ) {
-							$output .= wfMsg('user-count-separator', "10", $fanbox_count );
+							$output .= wfMsg( 'user-count-separator', '10', $fanbox_count );
 						} else {
-							$output .= wfMsg( 'user-count-separator',$fanbox_count, $fanbox_count);
+							$output .= wfMsg( 'user-count-separator', $fanbox_count, $fanbox_count );
 						}
 					$output .= '</div>
 					<div class="cleared"></div>
@@ -970,14 +973,14 @@ class UserProfilePage extends Article {
 				$tagParser = new Parser();
 				foreach( $fanboxes as $fanbox ) {
 
-					$check_user_fanbox = $f->checkIfUserHasFanbox($fanbox['fantag_id']);
+					$check_user_fanbox = $f->checkIfUserHasFanbox( $fanbox['fantag_id'] );
 
 					if( $fanbox['fantag_image_name'] ){
 						$fantag_image_width = 45;
 						$fantag_image_height = 53;
 						$fantag_image = wfFindFile( $fanbox['fantag_image_name'] );
-						$fantag_image_url = $fantag_image->createThumb($fantag_image_width, $fantag_image_height);
-						$fantag_image_tag = '<img alt="" src="' . $fantag_image_url . '"/>';
+						$fantag_image_url = $fantag_image->createThumb( $fantag_image_width, $fantag_image_height );
+						$fantag_image_tag = '<img alt="" src="' . $fantag_image_url . '" />';
 					};
 
 					if ( $fanbox['fantag_left_text'] == '' ){
@@ -1015,7 +1018,7 @@ class UserProfilePage extends Article {
 						<div class=\"individual-fanbox\" id=\"individualFanbox".$fanbox['fantag_id']."\">
 							<div class=\"show-message-container-profile\" id=\"show-message-container".$fanbox['fantag_id']."\">
 								<a class=\"perma\" style=\"font-size:8px; color:".$fanbox['fantag_right_textcolor']."\" href=\"".$fantag_title->escapeFullURL()."\" title=\"{$fanbox["fantag_title"]}\">".wfMsg('fanbox-perma')."</a>
-								<table  class=\"fanBoxTableProfile\" onclick=\"javascript:openFanBoxPopup('fanboxPopUpBox{$fanbox["fantag_id"]}', 'individualFanbox{$fanbox["fantag_id"]}')\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" >
+								<table class=\"fanBoxTableProfile\" onclick=\"javascript:openFanBoxPopup('fanboxPopUpBox{$fanbox["fantag_id"]}', 'individualFanbox{$fanbox["fantag_id"]}')\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">
 									<tr>
 										<td id=\"fanBoxLeftSideOutputProfile\" style=\"color:".$fanbox['fantag_left_textcolor']."; font-size:$leftfontsize\" bgcolor=\"".$fanbox['fantag_left_bgcolor']."\">".$fantag_leftside."</td> 
 										<td id=\"fanBoxRightSideOutputProfile\" style=\"color:".$fanbox['fantag_right_textcolor']."; font-size:$rightfontsize\" bgcolor=\"".$fanbox['fantag_right_bgcolor']."\">".$right_text."</td>
@@ -1057,7 +1060,7 @@ class UserProfilePage extends Article {
 					}
 
 					if( $wgUser->getID() == 0 ) {
-						$login = SpecialPage::getTitleFor( 'UserLogin' );
+						$login = SpecialPage::getTitleFor( 'Userlogin' );
 						$output .= "<div class=\"fanbox-pop-up-box-profile\" id=\"fanboxPopUpBox".$fanbox['fantag_id']."\">
 							<table cellpadding=\"0\" cellspacing=\"0\" align=\"center\">
 								<tr>
