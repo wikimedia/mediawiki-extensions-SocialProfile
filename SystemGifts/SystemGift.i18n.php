@@ -300,6 +300,7 @@ $4
 $messages['bg'] = array(
 	'ga-addnew' => '+ Добавяне на нов подарък',
 	'ga-choosefile' => 'Избиране на файл:',
+	'ga-currentimage' => 'Текуща картинка',
 );
 
 /** Bosnian (Bosanski)

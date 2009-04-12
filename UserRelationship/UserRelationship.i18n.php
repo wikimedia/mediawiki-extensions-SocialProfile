@@ -4416,6 +4416,13 @@ $messages['os'] = array(
 	'ur-cancel' => 'Нæ бæззы',
 );
 
+/** Deitsch (Deitsch)
+ * @author Xqt
+ */
+$messages['pdc'] = array(
+	'ur-main-page' => 'Haaptblatt',
+);
+
 /** Polish (Polski)
  * @author Airwolf
  * @author Derbeth

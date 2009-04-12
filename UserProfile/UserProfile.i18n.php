@@ -1331,6 +1331,7 @@ $messages['bg'] = array(
 	'user-profile-picture-log' => 'аватар',
 	'user-profile-picture-log-entry' => 'качване на нов аватар',
 	'user-profile-picture-log-delete-entry' => 'изтри аватара на $1',
+	'right-avatarremove' => 'Премахване на потребителски аватари',
 );
 
 /** Breton (Brezhoneg)
@@ -7507,7 +7508,11 @@ $messages['tg-cyrl'] = array(
  */
 $messages['th'] = array(
 	'user-count-separator' => '$1 จากทั้งหมด $2',
+	'other-info-title' => 'ข้อมูลอื่น ๆ',
+	'user-personal-info-title' => 'ข้อมูลส่วนตัว',
 	'user-personal-info-real-name' => 'ชื่อจริง',
+	'user-profile-section-personal' => 'ข้อมูลส่วนตัว',
+	'user-profile-section-interests' => 'ข้อมูลอื่น ๆ',
 );
 
 /** Tagalog (Tagalog)
