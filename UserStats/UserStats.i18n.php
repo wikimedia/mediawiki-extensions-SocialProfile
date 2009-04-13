@@ -269,9 +269,16 @@ $messages['bg'] = array(
  * @author CERminator
  */
 $messages['bs'] = array(
+	'topusers' => 'Najkorisnici',
 	'top-fans-total-points-link' => 'Ukupni bodovi',
 	'top-fans-points' => 'bodovi',
 	'top-fans-bad-field-title' => 'Ups!',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Izmjena|Izmjene|Izmjena}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Prijatelj|Prijatelja}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Neprijatelj|Neprijatelja}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Mišljenje|Mišljenja}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Poklon primljen|Poklona primljeno}}',
+	'level-advance-subject' => 'Vi ste sada "$1" na {{SITENAME}}!',
 );
 
 /** Czech (Česky)

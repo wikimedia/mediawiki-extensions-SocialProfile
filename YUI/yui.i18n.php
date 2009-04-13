@@ -382,6 +382,13 @@ $messages['sq'] = array(
 	'yui-desc' => 'Një tërësi shërbimesh dhe kontrollesh të shkruara në JavaScript',
 );
 
+/** Serbian Cyrillic ekavian (ћирилица)
+ * @author Михајло Анђелковић
+ */
+$messages['sr-ec'] = array(
+	'yui-desc' => 'Скуп алата и контрола, написаних у јаваскрипту',
+);
+
 /** Seeltersk (Seeltersk)
  * @author Pyt
  */
