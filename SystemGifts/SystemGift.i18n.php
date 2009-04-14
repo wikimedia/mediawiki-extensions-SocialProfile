@@ -1741,6 +1741,46 @@ a zmeňte svoje nastavenia týkajúce sa upozornení emailom.',
 	'right-awardsmanage' => 'Vytvárať nové alebo upravovať existujúce ocenenia',
 );
 
+/** Serbian Cyrillic ekavian (ћирилица)
+ * @author Михајло Анђелковић
+ */
+$messages['sr-ec'] = array(
+	'ga-addnew' => '+ Додајте нови поклон',
+	'ga-back-edit-gift' => 'Повратак на измену овог поклона',
+	'ga-back-gift-list' => 'Повратак на списак поклона',
+	'ga-back-link' => '<a href="$1">< Повратак на профил $2</a>',
+	'ga-choosefile' => 'Изаберите фајл:',
+	'ga-count' => '$1 има $2 {{PLURAL:$2|награду|награда}}.',
+	'ga-create-gift' => 'Направите поклон',
+	'ga-created' => 'Поклон је направљен',
+	'ga-currentimage' => 'Тренутна слика',
+	'ga-error-message-invalid-link' => 'Линк који сте навели је неисправан.',
+	'ga-error-message-no-user' => 'Корисник кога покушавате да видите не постоји.',
+	'ga-file-instructions' => 'Ваша слика мора бити у jpeg/jpg, png или gif (неанимираном) формату, и мора бити величине испод 100kB.',
+	'ga-gift' => 'поклон',
+	'ga-gift-given-count' => 'Овај поклон је био поклоњен $1 {{PLURAL:$1|пут|пута}}',
+	'ga-gift-title' => '"$2" од $1',
+	'ga-giftdesc' => 'опис поклона',
+	'ga-giftimage' => 'слика поклона',
+	'ga-giftname' => 'назив поклона',
+	'ga-gifttype' => 'врста поклона',
+	'ga-goback' => 'Назад',
+	'ga-imagesbelow' => 'Испод се налазе ваше слике које ће бити коришћене на сајту',
+	'ga-img' => 'додај/замени слику',
+	'ga-large' => 'Велико',
+	'ga-medium' => 'Средње',
+	'ga-mediumlarge' => 'Средње-велико',
+	'ga-new' => 'Ново',
+	'ga-next' => 'Следеће',
+	'ga-previous' => 'Претходно',
+	'ga-recent-recipients-award' => 'Други скорији примаоци ове награде',
+	'ga-saved' => 'Поклон је снимљен',
+	'ga-small' => 'Мало',
+	'ga-title' => 'Награде $1',
+	'ga-uploadsuccess' => 'Слање успешно',
+	'ga-viewlist' => 'Погледај списак поклона',
+);
+
 /** Telugu (తెలుగు)
  * @author Veeven
  */

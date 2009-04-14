@@ -2131,6 +2131,22 @@ Kliknite sem $4
 a zmeňte svoje nastavenia na vypnutie upozornení emailom.',
 );
 
+/** Serbian Cyrillic ekavian (ћирилица)
+ * @author Михајло Анђелковић
+ */
+$messages['sr-ec'] = array(
+	'boardblaststep1' => 'Први корак - Напишите Вашу поруку',
+	'boardblastprivatenote' => 'Све поруке ће бити послате као приватне поруке',
+	'boardblaststep2' => 'Корак 2 - Назначите коме желите да пожаљете поруку',
+	'boardlinkselectall' => 'Означи све',
+	'boardlinkunselectall' => 'Скини ознаке са свега',
+	'boardlinkselectfriends' => 'Означи пријатеље',
+	'boardlinkunselectfriends' => 'Скини ознаке са пријатеља',
+	'boardlinkselectfoes' => 'Означи непријатеље',
+	'boardlinkunselectfoes' => 'Скини ознаке са непријатеља',
+	'boardnofriends' => 'Немате пријатеља којима бисте послали поруку!',
+);
+
 /** Swedish (Svenska)
  * @author Jon Harald Søby
  * @author M.M.S.

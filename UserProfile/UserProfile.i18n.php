@@ -5951,6 +5951,13 @@ $messages['os'] = array(
 	'user-profile-picture-small' => 'Чысыл',
 );
 
+/** Deitsch (Deitsch)
+ * @author Xqt
+ */
+$messages['pdc'] = array(
+	'user-watchlist' => 'Mei Watsch-Lischt',
+);
+
 /** Plautdietsch (Plautdietsch)
  * @author Slomox
  */
@@ -7039,11 +7046,92 @@ $messages['sk'] = array(
 
 /** Serbian Cyrillic ekavian (ћирилица)
  * @author Sasa Stefanovic
+ * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
+	'user-recent-activity-title' => 'Скорашња активност',
+	'user-recent-activity-edit' => 'Изменио страну',
+	'user-recent-activity-vote' => 'Гласао за страну',
+	'user-recent-activity-comment' => 'Коментарисао страну',
+	'user-recent-activity-gift-sent' => 'Послао поклон',
+	'user-recent-activity-gift-rec' => 'Примио поклон од',
+	'user-recent-activity-friend' => 'Спријатељио се са',
+	'user-recent-activity-foe' => 'Постао непријатељ са',
+	'user-recent-activity-user-message' => 'Послао поруку',
+	'user-recent-activity-network-update' => 'Написао је мисао',
+	'user-recent-system-gift' => 'Примио је награду',
+	'user-profile-update-notloggedin-title' => 'Не можете мењати свој профил пре него што се улогујете',
+	'user-profile-update-notloggedin-text' => 'Не можете мењати свој профил пре него што се улогујете.
+Кликните <a href="$1">овде</a> да се улогујете или кликните <a href="$2">here</a> да се региструјете.',
+	'user-profile-update-saved' => 'Ваш профил је обновљен',
+	'user-profile-update-profile' => 'профил',
+	'user-profile-section-personal' => 'Лични подаци',
+	'user-profile-section-interests' => 'Интереси',
+	'user-profile-section-picture' => 'Аватар',
+	'user-profile-section-preferences' => 'Подешавања',
+	'user-profile-personal-info' => 'Лични подаци',
+	'user-profile-personal-name' => 'Име',
+	'user-profile-personal-email' => 'Имејл',
+	'user-profile-personal-confirmemail' => 'Потврди имејл',
+	'user-profile-personal-location' => 'Локација',
+	'user-profile-personal-city' => 'Град',
+	'user-profile-personal-country' => 'Земља',
+	'user-profile-personal-hometown' => 'Град са сталним пребивалиштем',
+	'user-profile-personal-birthday' => 'Рођендан',
+	'user-profile-personal-birthdate' => 'Датум (ММ/ДД)',
+	'user-profile-personal-aboutme' => 'О мени',
+	'user-profile-personal-work' => 'Посао',
+	'user-profile-personal-occupation' => 'Занимање',
+	'user-profile-personal-education' => 'Образовање',
+	'user-profile-personal-schools' => 'Школе',
+	'user-profile-personal-places' => 'Места',
+	'user-profile-personal-placeslived' => 'Места на којима сам живео/ла',
+	'user-profile-personal-web' => 'Веб',
+	'user-profile-personal-websites' => 'Вебсајтови',
+	'user-profile-interests-entertainment' => 'Разонода',
+	'user-profile-interests-movies' => 'Филмови',
+	'user-profile-interests-tv' => 'ТВ',
+	'user-profile-interests-music' => 'Музика',
+	'user-profile-interests-books' => 'Књиге',
+	'user-profile-interests-magazines' => 'Магазини',
+	'user-profile-interests-videogames' => 'Видео игре',
+	'user-profile-interests-eats' => 'Храна',
+	'user-profile-interests-foodsnacks' => 'Храна & грицкалице',
+	'user-profile-interests-drinks' => 'Пића',
+	'user-profile-preferences-emails' => 'Обавештења путем имејла',
+	'user-profile-preferences-emails-personalmessage' => 'По приспећу приватне поруке',
+	'user-profile-preferences-emails-friendfoe' => 'Кад Вас неки корисник дода у своје пријатеље или непријатеље',
+	'user-profile-preferences-emails-gift' => 'Када примите поклон',
+	'user-profile-preferences-emails-level' => 'Када напредујете за један ниво',
+	'user-profile-preferences-emails-weekly' => 'Када добијете недељна имејл обавештења',
+	'user-profile-update-button' => 'Актуализуј',
+	'user-profile-tidbits-favathlete' => 'Омиљени атлета и зашто',
+	'user-profile-tidbits-leastfavathlete' => 'Најнеомиљенији атлета и зашто',
+	'user-profile-sports-sport' => 'Спорт',
+	'user-profile-sports-title' => 'Измените Ваше омиљеен спортове и тимове',
+	'user-profile-sports-notloggedintitle' => 'Упс!',
+	'user-profile-sports-notloggedintext' => 'Морате бити улоговани да бисте изменили Ваш профил.',
+	'user-profile-sports-teamremoved' => 'Ваш тим је обрисан',
+	'user-profile-sports-teamsaved' => 'Ваши тимови су снимљени',
+	'user-profile-sports-addmore' => 'Додајте још спортова/тимова',
+	'user-profile-picture-title' => 'Пошаљите Вашу слику',
+	'user-profile-picture-yourpicture' => 'Ваша слика',
+	'user-profile-picture-yourpicturestext' => 'Испод су слике које ће се појавити на Вашем профилу, мрежним странама и коментарима.',
 	'user-profile-picture-large' => 'Велика',
+	'user-profile-picture-medlarge' => 'Средње - Велико',
 	'user-profile-picture-medium' => 'Средња',
 	'user-profile-picture-small' => 'Мала',
+	'user-profile-picture-uploaddifferent' => 'Пошаљите другу слику',
+	'user-profile-picture-currentimage' => 'Тренутна слика',
+	'user-profile-picture-choosepicture' => 'Изаберите Вашу слику',
+	'user-profile-goback' => 'Вратите се',
+	'user-profile-userlevels-link' => 'Кориснички нивои',
+	'removeavatar' => 'Обришите аватар',
+	'givegift' => 'Дајте поклон',
+	'viewgifts' => 'Прегледајте поклоне',
+	'viewsystemgifts' => 'Погледајте награде',
+	'avatarupload-removeavatar' => 'Обришите аватар',
+	'avatarupload-currentavatar' => 'Тренутни аватар од $1',
 );
 
 /** Sundanese (Basa Sunda)
