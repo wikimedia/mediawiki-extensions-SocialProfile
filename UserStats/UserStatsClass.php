@@ -407,6 +407,7 @@ class UserStatsTrack {
 
 		if( $this->user_id == 0 ) return '';
 
+		$stats_data = array();
 		if( is_array( $wgUserLevels ) ){
 			// Load points before update
 			$stats = new UserStats($this->user_id, $this->user_name);
@@ -460,7 +461,6 @@ class UserStatsTrack {
 			}
 			$this->clearCache();
 		}
-		// FIXME: Undefined variable: stats_data
 		return $stats_data;
 	}
 }
