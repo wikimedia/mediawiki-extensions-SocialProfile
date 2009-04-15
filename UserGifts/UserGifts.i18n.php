@@ -484,15 +484,35 @@ $messages['bg'] = array(
  * @author CERminator
  */
 $messages['bs'] = array(
+	'giftmanager' => 'Upravljanje poklonima',
 	'giftmanager-addgift' => '+ Dodaj novi poklon',
+	'giftmanager-description' => 'opis poklona',
 	'giftmanager-giftimage' => 'slika poklona',
+	'giftmanager-image' => 'dodaj/zamijeni sliku',
+	'giftmanager-giftcreated' => 'Poklon je napravljen',
+	'giftmanager-giftsaved' => 'Poklon je sačuvan',
 	'giftmanager-public' => 'javno',
 	'giftmanager-private' => 'privatno',
+	'giftmanager-view' => 'Pogledaj spisak poklona',
+	'g-add-message' => 'Dodaj poruku',
+	'g-back-gift-list' => 'Nazad na spisak poklona',
+	'g-back-link' => '< Nazad na stranicu korisnika $1',
 	'g-choose-file' => 'Odaberite datoteku:',
 	'g-cancel' => 'Odustani',
 	'g-create-gift' => 'Napravi poklon',
+	'g-created-by' => 'napravljeno od strane',
+	'g-error-do-not-own' => 'Vi ne posjedujete ovaj poklon.',
+	'g-gift' => 'poklon',
+	'g-gift-name' => 'naziv poklona',
+	'g-give-gift' => 'Pokloni poklon',
 	'g-give-all-message-title' => 'Dodaj poruku',
+	'g-give-list-select' => 'odaberi prijatelja',
 	'g-give-separator' => 'ili',
+	'g-list-title' => 'Spisak poklona korisnika $1',
+	'g-remove' => 'Ukloni',
+	'g-remove-title' => 'Ukloni "$1"?',
+	'g-viewgiftlist' => 'Pogledaj spisak poklona',
+	'g-your-profile' => 'Vaš profil',
 );
 
 /** German (Deutsch)

@@ -4754,6 +4754,7 @@ $messages['lb'] = array(
 	'user-personal-info-title' => 'Perséinlech Informatiounen',
 	'user-no-personal-info' => 'Keng perséinlech Informatioun',
 	'user-personal-info-real-name' => 'Richtege Numm',
+	'user-personal-info-hometown' => 'Heemechtsuert',
 	'user-personal-info-birthday' => 'Gebuertsdag',
 	'user-personal-info-occupation' => 'Beruf',
 	'user-personal-info-websites' => 'Internetsiten',
@@ -4839,15 +4840,19 @@ $messages['lb'] = array(
 	'removeavatar' => 'Aavatar ewechhuelen',
 	'givegift' => 'E Cadeau maachen',
 	'viewgifts' => 'Cadeaue weisen',
+	'viewsystemgifts' => 'Auszeechnunge weisen',
 	'avatarupload-removeavatar' => 'Avatar ewechhuelen',
+	'avatarupload-currentavatar' => 'Dem $1 säin aktuellen Avatar',
 	'avatarupload-removesuccess' => 'Den Avatar gouf ewechgeholl',
 	'avatarupload-removeanother' => 'En aneren ewechhuelen',
 	'profilelogpage' => 'Lëscht vun den Ännerunge vum Benotzerprofil',
 	'profilelogpagetext' => 'Dëst ass eng Lëscht vun Ännerunge vu Benotzerprofiler',
 	'avatarlogpage' => 'Logbuch vun den Avataren déi eropgelued goufen',
+	'avatarlogpagetext' => "Dëst ass d'Logbuch vun den eropgluedene Benotzer-Avataren",
 	'user-profile-picture-log' => '
 Avatar',
 	'user-profile-picture-log-entry' => 'huet ee neien Avatar eropgelueden',
+	'user-profile-picture-log-delete-entry' => 'huet dem $1 säin Avatar geläscht',
 	'right-avatarremove' => 'Benotzeravataren ewechhuelen',
 );
 
