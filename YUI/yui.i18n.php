@@ -190,6 +190,13 @@ $messages['id'] = array(
 	'yui-desc' => 'Sebuah set alat-alat dan pengendali, ditulis dalam JavaScript',
 );
 
+/** Ido (Ido)
+ * @author Wyvernoid
+ */
+$messages['io'] = array(
+	'yui-desc' => 'Kolekto di utensili ed direktado, skribita per JavaScript',
+);
+
 /** Icelandic (Íslenska)
  * @author S.Örvarr.S
  */

@@ -899,6 +899,23 @@ $messages['sk'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|nový priateľ|noví priatelia|nových priateľov}}',
 );
 
+/** Serbian Cyrillic ekavian (ћирилица)
+ * @author Михајло Анђелковић
+ */
+$messages['sr-ec'] = array(
+	'mp-userlevels-link' => 'Кориснички нивои',
+	'mp-welcome-upload' => 'Слање',
+	'mp-welcome-edit' => 'Измена',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|поен|поена}}',
+	'mp-welcome-logged-in' => 'Здраво, $1',
+	'mp-requests-title' => 'Захтеви',
+	'mp-request-new-message' => 'нова порука',
+	'mp-request-new-award' => '$1 {{PLURAL:$1|нова награда|нових награда}}',
+	'mp-request-new-gift' => '$1 {{PLURAL:$1|нови поклон|нових поклона}}',
+	'mp-request-new-foe' => '$1 {{PLURAL:$1|нови непријатељ|нових непријатеља}}',
+	'mp-request-new-friend' => '$1 {{PLURAL:$1|нови пријатељ|нових пријатеља}}',
+);
+
 /** Seeltersk (Seeltersk)
  * @author Pyt
  */

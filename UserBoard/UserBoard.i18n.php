@@ -2145,6 +2145,18 @@ $messages['sr-ec'] = array(
 	'boardlinkselectfoes' => 'Означи непријатеље',
 	'boardlinkunselectfoes' => 'Скини ознаке са непријатеља',
 	'boardnofriends' => 'Немате пријатеља којима бисте послали поруку!',
+	'userboard_backprofile' => 'Повратак на профил од $1',
+	'userboard_backyourprofile' => 'Повратак на Ваш профил',
+	'userboard_sendmessage' => 'Пошаљи поруку кориснику $1',
+	'userboard_posted_ago' => 'послато пре $1',
+	'userboard_private' => 'приватан',
+	'userboard_public' => 'јаван',
+	'userboard_messagetype' => 'Тип поруке',
+	'userboard_nextpage' => 'следеће',
+	'userboard_prevpage' => 'претходно',
+	'userboard_nomessages' => 'Нема порука.',
+	'userboard_sendbutton' => 'пошаљи',
+	'userboard_loggedout' => 'Морате бити <a href="$1">улоговани</a> да бисте слали поруке другим корисницима.',
 );
 
 /** Swedish (Svenska)

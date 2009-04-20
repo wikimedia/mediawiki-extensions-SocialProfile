@@ -538,6 +538,7 @@ a změń nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
 
 /** Greek (Ελληνικά)
  * @author Consta
+ * @author Crazymadlover
  */
 $messages['el'] = array(
 	'ga-addnew' => '+ Προσθήκη νέου δώρου',
@@ -548,6 +549,9 @@ $messages['el'] = array(
 	'ga-giftimage' => 'εικόνα δώρου',
 	'ga-giftname' => 'όνομα δώρου',
 	'ga-gifttype' => 'τύπος δώρου',
+	'ga-large' => 'Μεγάλος',
+	'ga-medium' => 'Μέσος',
+	'ga-small' => 'Μικρός',
 );
 
 /** Spanish (Español)

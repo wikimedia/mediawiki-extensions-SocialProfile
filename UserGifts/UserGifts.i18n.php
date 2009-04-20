@@ -772,6 +772,9 @@ a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
 $messages['el'] = array(
 	'giftmanager-private' => 'ιδιωτικός',
 	'g-cancel' => 'Ακύρωση',
+	'g-large' => 'Μεγάλος',
+	'g-medium' => 'Μέσος',
+	'g-small' => 'Μικρός',
 );
 
 /** Spanish (Español)
