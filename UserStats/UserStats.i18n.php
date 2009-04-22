@@ -269,8 +269,10 @@ $messages['bg'] = array(
  * @author CERminator
  */
 $messages['bs'] = array(
+	'user-stats-alltime-title' => 'Najviše bodova svih vremena',
 	'topusers' => 'Najkorisnici',
 	'top-fans-total-points-link' => 'Ukupni bodovi',
+	'top-fans-monthly-points-link' => 'Bodova ovog mjeseca',
 	'top-fans-points' => 'bodovi',
 	'top-fans-bad-field-title' => 'Ups!',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Izmjena|Izmjene|Izmjena}}',

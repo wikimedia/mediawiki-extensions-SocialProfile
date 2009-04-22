@@ -2422,10 +2422,13 @@ $messages['roa-tara'] = array(
 );
 
 /** Russian (Русский)
+ * @author Innv
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
 	'g-created-by' => 'создан',
+	'g-give-separator' => 'или',
+	'g-your-profile' => 'Ваш профиль',
 );
 
 /** Slovak (Slovenčina)

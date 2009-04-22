@@ -6715,6 +6715,7 @@ $messages['roa-tara'] = array(
 
 /** Russian (Русский)
  * @author Ferrer
+ * @author Innv
  * @author Rubin
  * @author Александр Сигачёв
  */
@@ -6759,6 +6760,7 @@ $messages['ru'] = array(
 	'custom-info-field3' => 'Пользовательские 3',
 	'custom-info-field4' => 'Пользовательские 4',
 	'custom-no-info' => 'Нет пользовательской информации',
+	'profile-updated-personal' => 'Обновить ваш профиль',
 	'populate-user-profile-done' => '{{PLURAL:$1|Добавлен $1 профиль|Добавлено $1 профиля|Добавлено $1 профилей}}',
 	'user-board-title' => 'Доска',
 	'user-send-board-blast' => 'Отправить высказывание на доску',

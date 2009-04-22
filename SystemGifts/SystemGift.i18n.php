@@ -1677,6 +1677,13 @@ e altere suas preferências para desabilitar e-mails de notificação.',
 	'right-awardsmanage' => 'Crie novos e edite prêmios existentes',
 );
 
+/** Russian (Русский)
+ * @author Innv
+ */
+$messages['ru'] = array(
+	'ga-goback' => 'Перейти назад',
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */
