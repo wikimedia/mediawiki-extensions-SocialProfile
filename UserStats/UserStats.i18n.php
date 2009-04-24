@@ -1659,6 +1659,14 @@ $messages['tr'] = array(
 	'top-fans-points' => 'puan',
 );
 
+/** Vietnamese (Tiếng Việt)
+ * @author Minh Nguyen
+ */
+$messages['vi'] = array(
+	'top-fans-total-points-link' => 'Điểm tổng cộng',
+	'top-fans-points' => 'điểm',
+);
+
 /** Volapük (Volapük)
  * @author Malafaya
  * @author Smeira
