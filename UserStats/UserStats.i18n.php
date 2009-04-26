@@ -1664,7 +1664,14 @@ $messages['tr'] = array(
  */
 $messages['vi'] = array(
 	'top-fans-total-points-link' => 'Điểm tổng cộng',
+	'top-fans-weekly-points-link' => 'Số điểm tuần này',
+	'top-fans-monthly-points-link' => 'Số điểm tháng này',
 	'top-fans-points' => 'điểm',
+	'top-fans-bad-field-title' => 'Oái!',
+	'top-fans-stats-vote-count' => 'Lá phiếu',
+	'top-fans-stats-edit-count' => 'Sửa đổi',
+	'top-fans-stats-friends-count' => 'Người bạn',
+	'top-fans-stats-opinions-created' => 'Ý kiến',
 );
 
 /** Volapük (Volapük)

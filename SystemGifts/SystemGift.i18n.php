@@ -1263,6 +1263,7 @@ $messages['lb'] = array(
 	'ga-img' => 'Bild derbäisetzen/ersetzen',
 	'ga-large' => 'Grouss',
 	'ga-medium' => 'Mëttel',
+	'ga-mediumlarge' => 'Mëttelgrouss',
 	'ga-new' => 'Nei',
 	'ga-next' => 'Nächst',
 	'ga-previous' => 'Vireg',

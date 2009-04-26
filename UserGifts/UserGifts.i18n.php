@@ -1739,12 +1739,15 @@ $messages['lb'] = array(
 	'g-create-gift' => 'Cadeau uleeën',
 	'g-created-by' => 'ugeluecht vum',
 	'g-current-image' => 'Aktuellt Bild',
+	'g-delete-message' => 'Sidd dir sécher datt dir de Cadeau $1 läsche wëllt?
+Et gëtt dann och bäi de Benotzer geläscht déi e kritt hunn.',
 	'g-error-do-not-own' => 'Dëse Cadeau gehéiert Iech net.',
 	'g-error-message-blocked' => 'Dir sidd den Ament gespaart a kënnt keng Cadeaue maachen',
 	'g-error-message-invalid-link' => 'De Link deen Dir uginn hutt ass net valabel.',
 	'g-error-message-login' => 'Dir musst Iech aloggen fir Cadeauen ze maachen',
 	'g-error-message-no-user' => 'De Benotzer deen Dir versicht ze kucken gëtt et net.',
 	'g-error-message-to-yourself' => 'Dir kënnt Iech net selwer e Cadeau maachen.',
+	'g-error-title' => 'Oups, do ass eppes schief gaang!',
 	'g-file-instructions' => 'Ärt Bild muss e jpeg, png oder gif (keng animéiert Gifen) sinn, a muss manner wéi 100KB grouss sinn.',
 	'g-from' => 'vum <a href="$1">$2</a>',
 	'g-gift' => 'Cadeau',
@@ -1790,6 +1793,7 @@ Et ass esou einfach.',
 	'g-viewgiftlist' => 'Lëscht vun de Cadeaue kucken',
 	'g-your-profile' => 'Äre Profil',
 	'gift_received_subject' => 'De Benotzer $1 huet Iech de Cadeau $2 op {{SITENAME}} gemaach!',
+	'right-giftadmin' => 'Nei Cadeauen uleeën a bestoender änneren',
 );
 
 /** Limburgish (Limburgs)

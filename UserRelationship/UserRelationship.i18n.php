@@ -5748,12 +5748,20 @@ $messages['vep'] = array(
  * @author Minh Nguyen
  */
 $messages['vi'] = array(
+	'ur-error-page-title' => 'Oái!',
 	'ur-main-page' => 'Trang Chính',
 	'ur-add-friend' => 'Thêm người bạn',
 	'ur-add-foe' => 'Thêm kẻ thù',
+	'ur-give-gift' => 'Tặng món quà',
+	'ur-previous' => 'trước',
+	'ur-next' => 'sau',
 	'ur-remove' => 'Dời',
 	'ur-cancel' => 'Hủy bỏ',
 	'ur-login' => 'Đăng nhập',
+	'ur-add-error-message-pending-request-title' => 'Chịu khó nhé!',
+	'ur-accept' => 'Chấp nhận',
+	'ur-reject' => 'Từ chối',
+	'ur-title-friend' => 'Danh sách người bạn của $1',
 );
 
 /** Volapük (Volapük)

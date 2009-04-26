@@ -3433,9 +3433,12 @@ $messages['hak'] = array(
 );
 
 /** Hawaiian (Hawai`i)
+ * @author Kalani
  * @author Singularity
  */
 $messages['haw'] = array(
+	'user-watchlist' => 'Kaʻu papa nānā pono',
+	'user-profile-section-preferences' => 'Makemake',
 	'user-profile-personal-name' => 'Inoa',
 );
 
@@ -7972,7 +7975,12 @@ $messages['vep'] = array(
  * @author Minh Nguyen
  */
 $messages['vi'] = array(
+	'user-awards-title' => 'Huy chương',
+	'user-gifts-title' => 'Món quà',
+	'user-count-separator' => '$1 trong $2',
+	'user-view-all' => 'Xem tất cả',
 	'user-upload-image' => 'Tải hình lên',
+	'user-edit-this' => 'Sửa đổi',
 	'user-add-friend' => 'Thêm người bạn',
 	'user-add-foe' => 'Thêm kẻ thù',
 	'other-info-title' => 'Thông tin khác',

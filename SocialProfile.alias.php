@@ -106,6 +106,20 @@ $aliases['gsw'] = array(
 	'ViewRelationships' => array( 'Verbindige bschaue' ),
 );
 
+/** Upper Sorbian (Hornjoserbsce) */
+$aliases['hsb'] = array(
+	'AddRelationship' => array( 'Poćah přidać' ),
+	'RemoveAvatar' => array( 'Awatar wotstronić' ),
+	'RemoveRelationship' => array( 'Poćah wotstronić' ),
+	'TopUsers' => array( 'Najlěpši wužiwarjo' ),
+	'TopUsersRecent' => array( 'Aktualni najlěpši wužiwarjo' ),
+	'ToggleUserPage' => array( 'Wužiwarsku stronu přepinać' ),
+	'UpdateProfile' => array( 'Profil aktualizować' ),
+	'UploadAvatar' => array( 'Awatar nahrać' ),
+	'UserBoard' => array( 'Wužiwarska deska' ),
+	'ViewRelationships' => array( 'Poćahi sej wobhladać' ),
+);
+
 /** Hungarian (Magyar) */
 $aliases['hu'] = array(
 	'UserBoard' => array( 'Felhasználói üzenőfal' ),
