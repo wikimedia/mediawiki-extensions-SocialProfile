@@ -3424,6 +3424,13 @@ un donn en Dinge Ennstellunge affschallde, dat
 De e-mail jescheck kriß.',
 );
 
+/** Cornish (Kernewek)
+ * @author Kw-Moon
+ */
+$messages['kw'] = array(
+	'ur-cancel' => 'Hedhi',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */

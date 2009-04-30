@@ -1900,3 +1900,23 @@ $messages['vep'] = array(
 	'ga-previous' => 'Edel.',
 );
 
+/** Vietnamese (Tiếng Việt)
+ * @author Minh Nguyen
+ */
+$messages['vi'] = array(
+	'ga-choosefile' => 'Chọn tập tin:',
+	'ga-currentimage' => 'Hình hiện hành',
+	'ga-gift-title' => '“$2” của $1',
+	'ga-goback' => 'Trở lại',
+	'ga-img' => 'thêm/thay hình',
+	'ga-large' => 'Lớn',
+	'ga-medium' => 'Vừa',
+	'ga-mediumlarge' => 'Hơi lớn',
+	'ga-new' => 'Mới',
+	'ga-next' => 'Sau',
+	'ga-previous' => 'Trước',
+	'ga-small' => 'Nhỏ',
+	'ga-title' => 'Huy chương của $1',
+	'ga-uploadsuccess' => 'Đã tải lên thành công',
+);
+
