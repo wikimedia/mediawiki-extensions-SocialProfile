@@ -1247,6 +1247,7 @@ $messages['lb'] = array(
 	'ga-back-gift-list' => "Zréck op d'Lëscht vun de Cadeauen",
 	'ga-back-link' => '<a href="$1">< Zréck op dem $2 säi Profil</a>',
 	'ga-choosefile' => 'Wielt e Fichier:',
+	'ga-count' => '$1 huet $2 {{PLURAL:$2|Auszeechnung|Auszeechnungen}}.',
 	'ga-create-gift' => 'Cadeau uleeën',
 	'ga-created' => 'De Cadeau gouf ugeluecht',
 	'ga-currentimage' => 'Aktuellt Bild',
@@ -1254,6 +1255,7 @@ $messages['lb'] = array(
 	'ga-error-message-no-user' => 'De Benotzer, deen Dir kucke wëllt, gëtt et net.',
 	'ga-file-instructions' => 'Är Bild muss e jpeg, png oder gif (keng animéiert Gifen) a muss méi kleng si wéi 100 kb.',
 	'ga-gift' => 'Cadeau',
+	'ga-gift-title' => '"$2" vum $1',
 	'ga-giftdesc' => 'Bechreiwung vum Cadeau',
 	'ga-giftimage' => 'Bild vum Cadeau',
 	'ga-giftname' => 'Numm vum Cadeau',
@@ -1269,8 +1271,12 @@ $messages['lb'] = array(
 	'ga-previous' => 'Vireg',
 	'ga-saved' => 'De Cadeau gouf gespäichert',
 	'ga-small' => 'Kleng',
+	'ga-threshold' => 'Limit',
+	'ga-title' => 'Dem $1 seng Auszeechnungen',
 	'ga-uploadsuccess' => 'Eroplueden ofgeschloss',
 	'ga-viewlist' => 'Lëscht vun de Cadeaue kucken',
+	'system_gift_received_subject' => "Dir hutt d'$1-Auszeechnung op {{SITENAME}}!",
+	'right-awardsmanage' => 'Nei Auszeechnungen uleeën a bestoender änneren',
 );
 
 /** Dutch (Nederlands)
