@@ -270,16 +270,22 @@ $messages['bg'] = array(
  */
 $messages['bs'] = array(
 	'user-stats-alltime-title' => 'Najviše bodova svih vremena',
+	'user-stats-weekly-title' => 'Najviše bodova ove sedmice',
+	'user-stats-monthly-title' => 'Najviše bodova ovog mjeseca',
 	'topusers' => 'Najkorisnici',
+	'top-fans-by-points-nav-header' => 'Najveći obožavatelji',
 	'top-fans-total-points-link' => 'Ukupni bodovi',
+	'top-fans-weekly-points-link' => 'Bodova ove sedmice',
 	'top-fans-monthly-points-link' => 'Bodova ovog mjeseca',
 	'top-fans-points' => 'bodovi',
 	'top-fans-bad-field-title' => 'Ups!',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Glas|Glasa|Glasova}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Izmjena|Izmjene|Izmjena}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Prijatelj|Prijatelja}}',
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|Neprijatelj|Neprijatelja}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Mišljenje|Mišljenja}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Poklon primljen|Poklona primljeno}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Poslan poklon|Poslano poklona}}',
 	'level-advance-subject' => 'Vi ste sada "$1" na {{SITENAME}}!',
 );
 
@@ -446,6 +452,7 @@ $messages['eo'] = array(
  */
 $messages['es'] = array(
 	'topusers' => 'Usuarios top',
+	'top-fans-by-points-nav-header' => 'Fans top',
 	'top-fans-total-points-link' => 'Puntos totales',
 	'top-fans-weekly-points-link' => 'Puntos esta semana',
 	'top-fans-monthly-points-link' => 'Puntos este mes',
@@ -453,7 +460,7 @@ $messages['es'] = array(
 	'top-fans-bad-field-title' => 'Oops!',
 	'top-fans-bad-field-message' => 'La estadística especificada no existe.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Voto|Votos}}',
-	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Wictoria mensual|Victorias mensuales}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|victoria mensual|Victorias mensuales}}',
 	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Victoria semanal|Victorias semanales}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Edición|Ediciones}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Comentario|Comentarios}}',

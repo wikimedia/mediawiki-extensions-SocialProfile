@@ -660,9 +660,11 @@ $messages['es'] = array(
 	'boardlinkunselectfoes' => 'Deseleccionar enemigos',
 	'boardnofriends' => 'No tiene amigos a los que enviar un mensaje!',
 	'messagesentsuccess' => 'Su mensaje fue enviado exitosamente',
+	'userboard' => 'Pizarrón de usuario',
 	'userboard_delete' => 'Borrar',
 	'userboard_noexist' => 'El usuario que trata de ver no existe.',
 	'userboard_yourboard' => 'Tu pizarrón',
+	'userboard_owner' => 'pizarrón de $1',
 	'userboard_backprofile' => 'Regresar al perfil de $1',
 	'userboard_backyourprofile' => 'Regresar a su perfil',
 	'userboard_confirmdelete' => 'Está seguro que desea borrar este mensaje?',
@@ -678,6 +680,21 @@ $messages['es'] = array(
 	'userboard_sendbutton' => 'enviar',
 	'userboard_loggedout' => 'Tiene que haber <a href="$1">iniciado sesión</a> para enviar mensajes a otros usuarios.',
 	'userboard_showingmessages' => 'Mostrando {{PLURAL:$4|mensaje $3|mensajes $2-$3}} de {{PLURAL:$1|$1 mensaje|$1 mensajes}}',
+	'message_received_subject' => '$1 escribió en tu pizarrón en {{SITENAME}}',
+	'message_received_body' => 'Hola $1.
+
+$2 acaba de escribir en tu pizarrón en{{SITENAME}}!
+
+Haz click debajo para verificar tu pizarrón!
+
+$3
+
+---
+
+Hey, deseas dejar de recibir correos electrónicos de nosotros?
+
+Haz click en $4
+y cambia tus configuraciones para dehabilitar notificaciones por correo electrónico.',
 );
 
 /** Basque (Euskara)
