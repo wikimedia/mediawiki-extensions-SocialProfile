@@ -2631,6 +2631,7 @@ $messages['sr-ec'] = array(
  */
 $messages['te'] = array(
 	'giftmanager-description' => 'బహుమతి వివరణ',
+	'g-count' => '$1 కి $2 {{PLURAL:$2|బహుమతి ఉంది|బహుమతులు ఉన్నాయి}}.',
 	'g-gift' => 'బహుమతి',
 	'g-gift-name' => 'బహుమతి పేరు',
 	'g-give-separator' => 'లేదా',

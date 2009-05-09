@@ -383,10 +383,19 @@ $messages['bs'] = array(
 	'boardlinkselectfriends' => 'Odaberi prijatelje',
 	'boardlinkselectfoes' => 'Odaberi neprijatelje',
 	'boardlinkunselectfoes' => 'Deselektiraj neprijatelje',
+	'userboard' => 'Korisnička ploča',
 	'userboard_delete' => 'Obriši',
+	'userboard_noexist' => 'Korisnik kojeg pokušavate pogledati ne postoji.',
+	'userboard_backprofile' => 'Nazad na profil korisnika $1',
+	'userboard_confirmdelete' => 'Da li ste sigurni da želite obrisati ovu poruku?',
+	'userboard_myboard' => 'Moja ploča',
 	'userboard_private' => 'privatno',
 	'userboard_public' => 'javno',
+	'userboard_messagetype' => 'Vrsta poruke',
 	'userboard_nextpage' => 'slijedeće',
+	'userboard_prevpage' => 'preth',
+	'userboard_nomessages' => 'Nema poruka.',
+	'userboard_sendbutton' => 'pošalji',
 );
 
 /** Czech (Česky)

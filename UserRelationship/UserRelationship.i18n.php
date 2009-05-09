@@ -930,7 +930,9 @@ $2 ви премахна от списъка си с неприятели в {{S
  */
 $messages['bs'] = array(
 	'viewrelationships' => 'Pogledaj vezu',
+	'ur-already-submitted' => 'Vaš zahtjev je poslan',
 	'ur-error-page-title' => 'Ups!',
+	'ur-error-message-no-user' => 'Ne možemo završiti Vaš zahtjev, jer ne postoji nijedan korisnik s ovim imenom.',
 	'ur-main-page' => 'Početna stranica',
 	'ur-your-profile' => 'Vaš profil',
 	'ur-backlink' => '&lt; Nazad na profil korisnika $1',
