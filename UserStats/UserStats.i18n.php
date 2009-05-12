@@ -291,6 +291,15 @@ $messages['bs'] = array(
 	'level-advance-subject' => 'Vi ste sada "$1" na {{SITENAME}}!',
 );
 
+/** Catalan (Català)
+ * @author Solde
+ */
+$messages['ca'] = array(
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Edició|Edicions}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Comentari|Comentaris}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinió|Opinions}}',
+);
+
 /** Czech (Česky)
  * @author Matěj Grabovský
  */
