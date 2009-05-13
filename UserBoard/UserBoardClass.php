@@ -281,7 +281,7 @@ class UserBoard {
 					$board_to_board = '<a href="' . UserBoard::getUserBoardToBoardURL( $message['user_name'], $message['user_name_from'] ) . '">' . wfMsgHtml( 'userboard_board-to-board' ) . '</a>';
 					$board_link = '<a href="' . UserBoard::getUserBoardURL( $message['user_name_from'] ) . '">' . wfMsgHtml( 'userboard_sendmessage', $message['user_name_from'] ) . '</a>';
 				}
-				if( $wgUser->getName() == $message['user_name'] ){
+				if( $wgUser->getName() == $message['user_name'] || $wgUser->isAllowed( 'userboard-delete' ) ){
 					$delete_link = "<span class=\"user-board-red\">
 							<a href=\"javascript:void(0);\" onclick=\"javascript:delete_message({$message["id"]})\">" . wfMsgHtml( 'userboard_delete' ) . "</a>
 						</span>";

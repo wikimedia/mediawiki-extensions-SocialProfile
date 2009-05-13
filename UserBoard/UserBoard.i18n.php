@@ -53,6 +53,7 @@ Click <a href="index.php?title=Special:UserLogin">here to login</a>',
 	'userboard_sendbutton' => 'send',
 	'userboard_loggedout' => 'You must be <a href="$1">logged in</a> to post messages to other users.',
 	'userboard_showingmessages' => 'Showing {{PLURAL:$4|message $3|messages $2-$3}} of {{PLURAL:$1|$1 message|$1 messages}}',
+	'right-userboard-delete' => "Delete others' board messages",
 	'message_received_subject' => '$1 wrote on your board on {{SITENAME}}',
 	'message_received_body' => 'Hi $1.
 
@@ -777,6 +778,7 @@ $messages['fi'] = array(
 	'userboard_sendbutton' => 'lähetä',
 	'userboard_loggedout' => 'Sinun tulee olla <a href="$1">kirjautunut sisään</a> lähettääksesi viestejä toisille käyttäjille.',
 	'userboard_showingmessages' => 'Näkyvillä on {{PLURAL:$4|viesti $3|viestit $2–$3}}. Yhteensä {{PLURAL:$1|$1 viesti|$1 viestiä}}.',
+	'right-userboard-delete' => 'Poistaa toisten käyttäjien keskustelualueviestejä',
 	'message_received_subject' => '$1 kirjoitti keskustelualueellesi {{GRAMMAR:inessive|{{SITENAME}}}}',
 	'message_received_body' => 'Hei $1:
  

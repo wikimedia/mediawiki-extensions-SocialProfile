@@ -20,7 +20,7 @@ function wfDeleteBoardMessage( $ub_id ){
 	global $wgMemc, $wgUser;
 
 	$b = new UserBoard();
-	if( $b->doesUserOwnMessage( $wgUser->getID(), $ub_id ) ){
+	if( $b->doesUserOwnMessage( $wgUser->getID(), $ub_id ) || $wgUser->isAllowed( 'userboard-delete' ) ){
 		$b->deleteMessage( $ub_id );
 	}
 	return 'ok';

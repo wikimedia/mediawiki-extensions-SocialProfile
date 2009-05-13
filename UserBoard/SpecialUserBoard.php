@@ -116,7 +116,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				if(\$(\"message\").value && !posted){
 					posted = 1;
 					var url = \"index.php?action=ajax\";
-					var pars = 'rs=wfSendBoardMessage&rsargs[]=' + escape(\$(\"user_name_to\").value) +'&rsargs[]=' + encodeURIComponent(\$(\"message\").value) + '&rsargs[]=' + \$(\"message_type\").value + '&rsargs[]={$per_page}'
+					var pars = 'rs=wfSendBoardMessage&rsargs[]=' + encodeURIComponent(\$(\"user_name_to\").value) +'&rsargs[]=' + encodeURIComponent(\$(\"message\").value) + '&rsargs[]=' + \$(\"message_type\").value + '&rsargs[]={$per_page}'
 
 					var callback = {
 						success: function(originalRequest){
@@ -233,7 +233,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		}
 
 		if( $can_post ){
-			if( $wgUser->isLoggedIn() ){
+			if( $wgUser->isLoggedIn() && !$wgUser->isBlocked() ){
 				$output .= '<div class="user-page-message-form">
 					<input type="hidden" id="user_name_to" name="user_name_to" value="' . $user_name_to . '"/>
 					<input type="hidden" id="user_name_from" name="user_name_from" value="' . $user_name_from . '"/>
@@ -251,7 +251,7 @@ class SpecialViewUserBoard extends SpecialPage {
 
 				</div>';
 			} else {
-				$login_link = SpecialPage::getTitleFor( 'UserLogin' );
+				$login_link = SpecialPage::getTitleFor( 'Userlogin' );
 				$output .= '<div class="user-page-message-form">
 						' . wfMsg( 'userboard_loggedout', $login_link->escapeFullURL() ) . '
 						</div>';
@@ -261,7 +261,7 @@ class SpecialViewUserBoard extends SpecialPage {
 
 		if( $ub_messages ){
 			foreach( $ub_messages as $ub_message ) {
-				$user =  Title::makeTitle( NS_USER, $ub_message['user_name_from'] );
+				$user = Title::makeTitle( NS_USER, $ub_message['user_name_from'] );
 				$avatar = new wAvatar( $ub_message['user_id_from'], 'm' );
 
 				$board_to_board = '';
@@ -274,7 +274,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				} else {
 					$board_link = '<a href="' . UserBoard::getUserBoardURL( $ub_message['user_name_from'] ) . '">' . wfMsg( 'userboard_myboard' ) . '</a>';
 				}
-				if( $wgUser->getName() == $ub_message['user_name'] ){
+				if( $wgUser->getName() == $ub_message['user_name'] || $wgUser->isAllowed( 'userboard-delete' ) ){
 					$delete_link = "<span class=\"user-board-red\">
 						<a href=\"javascript:void(0);\" onclick=\"javascript:delete_message({$ub_message["id"]})\">" . wfMsg( 'userboard_delete' ) . "</a>
 					</span>";
