@@ -41,6 +41,7 @@ $messages['en'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Thumb down given|Thumbs down given}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Gift received|Gifts received}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Gift sent|Gifts sent}}',
+	'right-updatepoints' => 'Update edit counts',
 	'level-advance-subject' => 'You are now a "$1" on {{SITENAME}}!',
 	'level-advance-body' => 'Hi $1.
 
@@ -518,7 +519,7 @@ $messages['eu'] = array(
 );
 
 /** Finnish (Suomi)
- * @author Jack Phoenix
+ * @author Jack Phoenix <jack@countervandalism.net>
  */
 $messages['fi'] = array(
 	'user-stats-alltime-title' => 'Kaikkien aikojen suurimmat pistemäärät',
@@ -540,6 +541,7 @@ $messages['fi'] = array(
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|vihollinen|vihollista}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|saatu lahja|saatua lahjaa}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|lähetetty lahja|lähetettyä lahjaa}}',
+	'right-updatepoints' => 'Päivittää muokkausmääriä',
 	'level-advance-subject' => 'Olet nyt "$1" {{GRAMMAR:inessive|{{SITENAME}}}}!',
 	'level-advance-body' => 'Hei $1:
 
