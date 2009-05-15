@@ -525,6 +525,25 @@ $messages['bs'] = array(
 	'right-giftadmin' => 'Pravljenje novih i uređivanje postojećih poklona',
 );
 
+/** Catalan (Català)
+ * @author Solde
+ */
+$messages['ca'] = array(
+	'g-gift' => 'regal',
+	'g-give-list-select' => 'selecciona un amic',
+	'g-give-separator' => 'o',
+	'g-go-back' => 'Retorna',
+	'g-main-page' => 'Pàgina principal',
+	'g-medium' => 'Mitjà',
+	'g-mediumlarge' => 'Mitjà-alt',
+	'g-new' => 'nou',
+	'g-next' => 'Següent',
+	'g-previous' => 'Ant',
+	'g-remove' => 'Elimina',
+	'g-remove-gift' => 'Elimina aquest regal',
+	'g-small' => 'Petit',
+);
+
 /** German (Deutsch)
  * @author Als-Holder
  * @author Jorges
@@ -1018,7 +1037,7 @@ $messages['fr'] = array(
 	'g-back-link' => '< Revenir à la page de $1',
 	'g-choose-file' => 'Choisir le fichier :',
 	'g-cancel' => 'Annuler',
-	'g-count' => '$1 a $2 {{PLURAL:$2|cadeau|cadeaux}}.',
+	'g-count' => '$1 a $2 cadeau{{PLURAL:$2||x}}.',
 	'g-create-gift' => 'Créer un cadeau',
 	'g-created-by' => 'créé par',
 	'g-current-image' => 'Image actuelle',
@@ -1040,7 +1059,7 @@ $messages['fr'] = array(
 	'g-give-all-message-title' => 'Ajouter un message',
 	'g-give-all-title' => 'Donner un cadeau à $1',
 	'g-give-enter-friend-title' => 'Si vous connaissez le nom de l’utilisateur, entrez-le ci-dessous',
-	'g-given' => 'Ce cadeau a été donné {{PLURAL:$1|une fois|$1 fois}}',
+	'g-given' => 'Ce cadeau a été donné {{PLURAL:$1|une|$1}} fois',
 	'g-give-list-friends-title' => 'Sélectionnez depuis la liste de vos amis',
 	'g-give-list-select' => 'sélectionnez un ami',
 	'g-give-separator' => 'ou',

@@ -172,6 +172,15 @@ $messages['bs'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|novi prijatelja|nova prijatelja|novih prijatelja}}',
 );
 
+/** Catalan (Català)
+ * @author Solde
+ */
+$messages['ca'] = array(
+	'mp-welcome-edit' => 'Edita',
+	'mp-welcome-logged-in' => 'Hola $1',
+	'mp-request-new-message' => 'nou missatge',
+);
+
 /** Czech (Česky)
  * @author Matěj Grabovský
  */
@@ -365,13 +374,13 @@ $messages['fr'] = array(
 	'mp-userlevels-link' => 'Niveaux de l’utilisateur',
 	'mp-welcome-upload' => 'Télécharger',
 	'mp-welcome-edit' => 'Modifier',
-	'mp-welcome-points' => '$1 {{PLURAL:$1|point|points}}',
-	'mp-welcome-needed-points' => 'Avancer vers <b><a href="$1">$2</a></b> gagne <i>$3</i> {{PLURAL:$3|point|points}} en plus !',
+	'mp-welcome-points' => '$1 point{{PLURAL:$1||s}}',
+	'mp-welcome-needed-points' => 'Avancer vers <b><a href="$1">$2</a></b> gagne <i>$3</i> point{{PLURAL:$3||s}} en plus !',
 	'mp-welcome-logged-in' => 'Bienvenue $1',
 	'mp-requests-title' => 'Requêtes',
 	'mp-requests-message' => 'Vous avez les requêtes suivantes.',
 	'mp-request-new-message' => 'nouveau message',
-	'mp-request-new-award' => '$1 {{PLURAL:$1|nouveau|nouveaux}} prix',
+	'mp-request-new-award' => '$1 nouveau{{PLURAL:$1||x}} prix',
 	'mp-request-new-gift' => '$1 {{PLURAL:$1|nouveau don|nouveaux dons}}',
 	'mp-request-new-foe' => '$1 {{PLURAL:$1|nouveau ennemi|nouveaux ennemis}}',
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|nouvel ami|nouveaux amis}}',

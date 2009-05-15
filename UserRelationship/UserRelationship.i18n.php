@@ -930,23 +930,35 @@ $2 ви премахна от списъка си с неприятели в {{S
  */
 $messages['bs'] = array(
 	'viewrelationships' => 'Pogledaj vezu',
+	'viewrelationshiprequests' => 'Pogledaj zahtjeve za vezu',
 	'ur-already-submitted' => 'Vaš zahtjev je poslan',
 	'ur-error-page-title' => 'Ups!',
+	'ur-error-title' => 'Ups, odavde ne možete dalje!',
 	'ur-error-message-no-user' => 'Ne možemo završiti Vaš zahtjev, jer ne postoji nijedan korisnik s ovim imenom.',
 	'ur-main-page' => 'Početna stranica',
 	'ur-your-profile' => 'Vaš profil',
 	'ur-backlink' => '&lt; Nazad na profil korisnika $1',
+	'ur-relationship-count-foes' => '$1 ima $2 {{PLURAL:$2|neprijatelja|neprijatelja}}.
+Želite više neprijatelja?
+<a href="$3">Pozovite ih.</a>',
+	'ur-relationship-count-friends' => '$1 ima $2 {{PLURAL:$2|prijatelja|prijatelja}}.
+Želite više prijatelja?
+<a href="$3">Pozovite ih.</a>',
 	'ur-add-friends' => '  Želite još prijatelja?
 <a href="$1">Pozovite ih</a>',
 	'ur-add-friend' => 'Dodaj kao prijatelja',
 	'ur-add-foe' => 'Dodaj kao neprijatelja',
+	'ur-add-no-user' => 'Nije odabran korisnik.
+Molimo zahtjevajte prijatelje/neprijatelje preko ispravnog linka.',
 	'ur-add-personal-message' => 'Dodaj ličnu poruku',
 	'ur-remove-relationship-friend' => 'Ukloni kao prijatelja',
 	'ur-remove-relationship-foe' => 'Ukloni kao neprijatelja',
+	'ur-give-gift' => 'Pošalji poklon',
 	'ur-previous' => 'preth',
 	'ur-next' => 'slijedeći',
 	'ur-remove-relationship-title-foe' => 'Da li želite ukloniti $1 kao Vašeg neprijatelja?',
 	'ur-remove-relationship-title-confirm-foe' => 'Ukonili ste $1 kao neprijatelja',
+	'ur-remove-relationship-message-confirm-foe' => 'Uspješno ste uklonili $1 kao Vašeg neprijatelja.',
 	'ur-remove-error-message-remove-yourself' => 'Ne možete ukloniti samog sebe.',
 	'ur-remove' => 'Ukloni',
 	'ur-cancel' => 'Odustani',
@@ -955,10 +967,22 @@ $messages['bs'] = array(
 	'ur-add-button-friend' => 'Dodaj kao prijatelja',
 	'ur-add-error-message-pending-request-title' => 'Strpljenja!',
 	'ur-requests-title' => 'Zahtjevi za vezu',
+	'ur-requests-message-foe' => '<a href="$1">$2</a> želi da bude Vaš neprijatelj.',
+	'ur-requests-message-friend' => '<a href="$1">$2</a> želi da bude Vaš prijatelj.',
 	'ur-accept' => 'Prihvati',
 	'ur-reject' => 'Odbij',
 	'ur-title-foe' => 'Spisak neprijatelja korisnika $1',
 	'ur-title-friend' => 'Spisak prijatelja korisnika $1',
+);
+
+/** Catalan (Català)
+ * @author Solde
+ */
+$messages['ca'] = array(
+	'ur-remove' => 'Elimina',
+	'ur-cancel' => 'Cancel·la',
+	'ur-accept' => 'Accepta',
+	'ur-reject' => 'Rebutja',
 );
 
 /** Chamorro (Chamoru)
@@ -1834,8 +1858,12 @@ $messages['fr'] = array(
 	'ur-main-page' => 'Accueil',
 	'ur-your-profile' => 'Votre profile',
 	'ur-backlink' => '&lt; retour vers le profil de $1',
-	'ur-relationship-count-foes' => '$1 a $2 {{PLURAL:$2|ennemi|ennemis}}. En vouloir encore plus ? <a href="$3">Inviter les.</a>',
-	'ur-relationship-count-friends' => '$1 a $2 {{PLURAL:$2|ami|amis}}. En vouloir encore plus ? <a href="$3">Inviter les.</a>',
+	'ur-relationship-count-foes' => '$1 a $2 ennemi{{PLURAL:$2||s}}.
+En vouloir encore plus ?
+<a href="$3">Inviter les.</a>',
+	'ur-relationship-count-friends' => '$1 a $2 ami{{PLURAL:$2||s}}.
+En vouloir encore plus ?
+<a href="$3">Inviter les.</a>',
 	'ur-add-friends' => 'Vouloir plus d’amis ? <a href="$1">Inviter les</a>.',
 	'ur-add-friend' => 'Ajouter comme ami',
 	'ur-add-foe' => 'Ajouter comme ennemi',

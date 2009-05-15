@@ -86,6 +86,7 @@ $messages['qqq'] = array(
 * '''$2''' is the number of the first message shown
 * '''$3''' is the number of the last message shown
 * '''$4''' is the count of messages acutally shown",
+	'right-userboard-delete' => '{{doc-right}}',
 );
 
 /** Niuean (ko e vagahau Niuē)
@@ -289,6 +290,7 @@ $messages['be-tarask'] = array(
 	'userboard_sendbutton' => 'даслаць',
 	'userboard_loggedout' => 'Вам неабходна <a href="$1">ўвайсьці ў сыстэму</a>, каб пісаць паведамленьні іншым удзельнікам.',
 	'userboard_showingmessages' => '{{PLURAL:$4|Паказанае паведамленьне $3|Паказаныя паведамленьньні $2-$3}} з $1 {{PLURAL:$1|паведамленьня|паведамленьняў|паведамленьняў}}',
+	'right-userboard-delete' => 'выдаленьне паведамленьняў іншых удзельнікаў з дошкі',
 	'message_received_subject' => '$1 напісаў на Вашай дошцы ў {{GRAMMAR:месны|{{SITENAME}}}}',
 	'message_received_body' => 'Прывітаньне, $1.
 
@@ -397,6 +399,19 @@ $messages['bs'] = array(
 	'userboard_prevpage' => 'preth',
 	'userboard_nomessages' => 'Nema poruka.',
 	'userboard_sendbutton' => 'pošalji',
+);
+
+/** Catalan (Català)
+ * @author Solde
+ */
+$messages['ca'] = array(
+	'userboard_delete' => 'Elimina',
+	'userboard_private' => 'privat',
+	'userboard_public' => 'públic',
+	'userboard_nextpage' => 'següent',
+	'userboard_prevpage' => 'ant',
+	'userboard_nomessages' => 'Cap missatge.',
+	'userboard_sendbutton' => 'envia',
 );
 
 /** Czech (Česky)
@@ -589,6 +604,7 @@ Klikni <a href="index.php?title=Special:UserLogin">sem, aby se pśizjawił</a>',
 	'userboard_sendbutton' => 'pósłaś',
 	'userboard_loggedout' => 'Musyš <a href="$1">pśizjawjony</a> byś, aby pósłał powěsći drugim wužywarjam.',
 	'userboard_showingmessages' => '{{PLURAL:$4|Pokazujo se powěsć $3|Pokazujotej se powěsći $2-$3|Pokazuju se powěsći $2-$3|Pokazuju se powěsći $2-$3}} z {{PLURAL:$1|$1 powěsći|$1 powěsćowu|$1 powěsćow|$1 powěsćow}}',
+	'right-userboard-delete' => 'Powěsći z dele drugich wulašowaś',
 	'message_received_subject' => '$1 jo napisał na twóju delu na {{GRAMMAR:lokatiw|{{SITENAME}}}}',
 	'message_received_body' => 'Witaj $1.
 
@@ -841,7 +857,8 @@ $messages['fr'] = array(
 	'userboard_nomessages' => 'Aucun message.',
 	'userboard_sendbutton' => 'envoyé',
 	'userboard_loggedout' => 'Vous devez être <a href="$1">connecté</a> pour poster des messages à d’autres utilisateurs.',
-	'userboard_showingmessages' => 'Visionnement {{PLURAL:$4|du message $3|des messages $2-$3}} sur un total de {{PLURAL:$1|$1 message|$1 messages}}',
+	'userboard_showingmessages' => 'Visionnement {{PLURAL:$4|du message $3|des messages $2-$3}} sur un total de $1 message{{PLURAL:$1||s}}',
+	'right-userboard-delete' => "Supprimer les messages d'autres utilisateurs",
 	'message_received_subject' => '$1 a écrit sur votre tableau sur {{SITENAME}}',
 	'message_received_body' => 'Salut $1 :
 
@@ -870,11 +887,11 @@ $messages['fy'] = array(
  * @author Toliño
  */
 $messages['gl'] = array(
-	'boardblastlogintitle' => 'Debe acceder ao sistema para enviar o taboleiro en ráfaga',
-	'boardblastlogintext' => 'Debe acceder ao sistema para enviar o taboleiro en ráfaga.
+	'boardblastlogintitle' => 'Debe acceder ao sistema para enviar un recado',
+	'boardblastlogintext' => 'Debe acceder ao sistema para enviar un recado.
 Prema <a href="index.php?title=Special:UserLogin">aquí para acceder</a>',
 	'messagesenttitle' => 'Mensaxes enviadas',
-	'boardblasttitle' => 'Enviar o taboleiro en ráfaga',
+	'boardblasttitle' => 'Enviar un recado',
 	'boardblaststep1' => 'Paso 1 - Estriba a súa mensaxe',
 	'boardblastprivatenote' => 'Todas as mensaxes serán enviadas de maneira privada',
 	'boardblaststep2' => 'Paso 2 - Escolla a quen lle quere enviar a súa mensaxe tamén',
@@ -884,7 +901,7 @@ Prema <a href="index.php?title=Special:UserLogin">aquí para acceder</a>',
 	'boardlinkunselectfriends' => 'Deixar de seleccionar amigos',
 	'boardlinkselectfoes' => 'Seleccionar inimigos',
 	'boardlinkunselectfoes' => 'Deixar de seleccionar inimigos',
-	'boardsendbutton' => 'Enviar o taboleiro en ráfaga',
+	'boardsendbutton' => 'Enviar o recado',
 	'boardnofriends' => 'Non ten amigos para mandarlles mensaxes!',
 	'messagesentsuccess' => 'A súa mensaxe foi enviada con éxito',
 	'userboard' => 'Taboleiro do usuario',
@@ -911,6 +928,7 @@ Prema <a href="index.php?title=Special:UserLogin">aquí para acceder</a>',
 	'userboard_sendbutton' => 'enviar',
 	'userboard_loggedout' => 'Debe <a href="$1">acceder ao sistema</a> para deixar mensaxes a outros usuarios.',
 	'userboard_showingmessages' => 'Amosando {{PLURAL:$4|ata a mensaxe $3|as mensaxes da $2 á $3}} dun total {{PLURAL:$1|dunha mensaxe|de $1 mensaxes}}',
+	'right-userboard-delete' => 'Borrar o taboleiro de mensaxes doutros',
 	'message_received_subject' => '$1 escribiu no seu taboleiro en {{SITENAME}}',
 	'message_received_body' => 'Ola $1:
 
@@ -989,6 +1007,7 @@ Druck <a href="index.php?title=Special:UserLogin">doo zum Aamälde</a>',
 	'userboard_sendbutton' => 'schicke',
 	'userboard_loggedout' => 'Du muesch <a href="$1">aagmäldet syy</a> zum Nochrichte an anderi Nutzer schicke z chenne.',
 	'userboard_showingmessages' => 'Zeig {{PLURAL:$4|Nochricht $3|Nochrichte $2-$3}} vu $1 insgsamt',
+	'right-userboard-delete' => 'Nochrichte vu andere lesche',
 	'message_received_subject' => '$1 het uf Dyy Schwarz Brätt uf {{SITENAME}} gschribe',
 	'message_received_body' => 'Sali $1:
 
@@ -1142,6 +1161,7 @@ Klikń <a href="index.php?title=Special:UserLogin">sem, zo by so přizjewił</a>
 	'userboard_sendbutton' => 'pósłać',
 	'userboard_loggedout' => 'Dyrbiš <a href="$1">přizjewjeny</a> być, zo by druhim wužiwarjam powěsće pósłał.',
 	'userboard_showingmessages' => '{{PLURAL:$4|Pokazuje so powěsć $3|Pokazujetej so powěsći $2-$3|Pokazuja so powěsće $2-$3|Pokazuja so powěsće $2-$3}} z {{PLURAL:$1|$1 powěsće|$1 powěsćow|$1 powěsćow|$1 powěsćow}}',
+	'right-userboard-delete' => 'Powěsće z deski druhich wušmórnyć',
 	'message_received_subject' => '$1 je na twoju desku na {{GRAMMAR:lokatiw|{{SITENAME}}}} napisał',
 	'message_received_body' => 'Witaj $1.
 
@@ -1204,6 +1224,7 @@ Clicca <a href="index.php?title=Special:UserLogin">hic pro aperir un session</a>
 	'userboard_sendbutton' => 'inviar',
 	'userboard_loggedout' => 'Tu debe <a href="$1">aperir un session</a> pro poter inviar messages a altere usatores.',
 	'userboard_showingmessages' => 'Presentation del {{PLURAL:$4|message $3|messages $2-$3}} de $1 {{PLURAL:$1|message|messages}}',
+	'right-userboard-delete' => 'Deler le messages de alteros del tabuliero',
 	'message_received_subject' => '$1 scribeva in tu tabuliero in {{SITENAME}}',
 	'message_received_body' => 'Salute $1,
 
@@ -1244,7 +1265,7 @@ $messages['it'] = array(
  */
 $messages['ja'] = array(
 	'boardblastlogintitle' => '一斉メッセージを送るにはログインする必要があります',
-	'boardblastlogintext' => '一斉メッセージを送るにはログインする必要があります
+	'boardblastlogintext' => '一斉メッセージを送るにはログインする必要があります。
 ログインするには<a href="index.php?title=Special:UserLogin">ここをクリック</a>',
 	'messagesenttitle' => 'メッセージを送る',
 	'boardblasttitle' => '一斉メッセージを送信',
@@ -1258,7 +1279,7 @@ $messages['ja'] = array(
 	'boardlinkselectfoes' => '敵を選択する',
 	'boardlinkunselectfoes' => '敵の選択を解除する',
 	'boardsendbutton' => '一斉メッセージを送る',
-	'boardnofriends' => 'あなたはメッセージを送信する友達がいません!',
+	'boardnofriends' => 'あなたはメッセージを送信する友達がいません！',
 	'messagesentsuccess' => 'あなたのメッセージは正常に送信されました',
 	'userboard' => '利用者掲示板',
 	'userboard_board-to-board' => '掲示板連絡',
@@ -1284,12 +1305,13 @@ $messages['ja'] = array(
 	'userboard_sendbutton' => '送る',
 	'userboard_loggedout' => '他の利用者にメッセージを送信するには<a href="$1">ログイン</a>する必要があります。',
 	'userboard_showingmessages' => 'メッセージ$1件中{{PLURAL:$4|$3件|$2-$3件}}を表示中',
+	'right-userboard-delete' => '他人の掲示板のメッセージを削除する',
 	'message_received_subject' => '$1が{{SITENAME}}のあなたの掲示板に書き込みました',
 	'message_received_body' => 'こんにちは、$1さん。
 
-さきほど、$2さんが{{SITENAME}}上のあなたの掲示板に書き込みをしました!
+さきほど、$2さんが{{SITENAME}}上のあなたの掲示板に書き込みをしました！
 
-以下をクリックして、掲示板を確認してください!
+以下をクリックして、掲示板を確認してください！
 
 $3
 
@@ -1365,8 +1387,8 @@ $messages['kri'] = array(
  * @author Purodha
  */
 $messages['ksh'] = array(
-	'boardblastlogintitle' => 'Do moß enjelogg sin, öm Nöhreechte verschecke ze künne',
-	'boardblastlogintext' => 'Do moß enjelogg sin, öm Nöhreechte verschecke ze künne.
+	'boardblastlogintitle' => 'Do moß enjelogg sin, öm Nohreechte verschecke ze künne',
+	'boardblastlogintext' => 'Do moß enjelogg sin, öm Nohreechte verschecke ze künne.
 Donn jlich <a href="index.php?title=Special:UserLogin">enlogge</a>.',
 	'messagesenttitle' => 'Nohreechte verscheck',
 	'boardblasttitle' => 'Nohreech verschecke',
@@ -1375,7 +1397,7 @@ Donn jlich <a href="index.php?title=Special:UserLogin">enlogge</a>.',
 	'boardblaststep2' => 'Zweite Schrett — Don ußsöke, wämm De die Nohreech schecke wells',
 	'boardlinkselectall' => 'Alle ußsöke',
 	'boardlinkunselectall' => 'Nix ußsöke',
-	'boardlinkselectfriends' => 'De Fünde ußsöke',
+	'boardlinkselectfriends' => 'De Fründe ußsöke',
 	'boardlinkunselectfriends' => 'Keine Fründ ußsöke',
 	'boardlinkselectfoes' => 'Feinde ußsöke',
 	'boardlinkunselectfoes' => 'Keine Feind ußsöke',
@@ -1406,6 +1428,7 @@ Donn jlich <a href="index.php?title=Special:UserLogin">enlogge</a>.',
 	'userboard_sendbutton' => 'Schecke!',
 	'userboard_loggedout' => 'Do möß ald <a href="$1">enjelogg</a> sin, öm Nohrechte aan ander Metmaacher verschecke ze künne.',
 	'userboard_showingmessages' => 'Dat {{PLURAL:$4|es de Nohreech|sin de Nohreechte $2 beß|nix}} $3 vun {{PLURAL:$1|eine Nohrech|$1|nix}} ennsjesammp.',
+	'right-userboard-delete' => 'Donn anderlücks Nohreeschte vun dä Pennwand fottschmiiße',
 	'message_received_subject' => 'Dä Metmaacher $1 hät jet op Dinge Pinnwand en de {{SITENAME}} jedonn',
 	'message_received_body' => 'Hallo $1,
 
@@ -1458,6 +1481,7 @@ $messages['lb'] = array(
 	'userboard_prevpage' => 'vireg',
 	'userboard_nomessages' => 'Keng Messagen',
 	'userboard_sendbutton' => 'geschéckt',
+	'userboard_loggedout' => 'Dir musst <a href="$1">ageloggt si</a> fir anere Benotzer e Message ze schécken.',
 	'userboard_showingmessages' => 'Weis {{PLURAL:$4|Noriicht $3|Noriichten $2-$3}} vu(n) {{PLURAL:$1|$1 Noriicht|$1 Noriichten}}',
 );
 
@@ -2142,6 +2166,7 @@ $messages['sk'] = array(
 	'userboard_sendbutton' => 'poslať',
 	'userboard_loggedout' => 'Musíte <a href="$1">sa prihlásiť</a>, aby ste mohli posielať správy iným používateľom.',
 	'userboard_showingmessages' => '{{PLURAL:$4|Zobrazuje sa správa $3|Zobrazujú sa správy $2-$3}} z $1 {{PLURAL:$1|správy|správ}}',
+	'right-userboard-delete' => 'Zmazať správy na fóre iných',
 	'message_received_subject' => '$1 napísal na vaše fórum na {{GRAMMAR:lokál|{{SITENAME}}}}',
 	'message_received_body' => 'Ahoj, $1:
 

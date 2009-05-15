@@ -59,10 +59,12 @@ and change your settings to disable e-mail notifications.'
 );
 
 /** Message documentation (Message documentation)
+ * @author Fryed-peach
  * @author Purodha
  */
 $messages['qqq'] = array(
 	'top-fans-by-category-title' => '$1 is any of the messages starting with "top-fans-stats-" and the name of the statistic. Examples are {{msg-mw|top-fans-stats-vote-count}}, {{msg-mw|top-fans-stats-weekly-winner-count}}, {{msg-mw|top-fans-stats-referrals-completed}}, {{msg-mw|top-fans-stats-friends-count}}, and {{msg-mw|top-fans-stats-edit-count}}.',
+	'right-updatepoints' => '{{doc-right}}',
 );
 
 /** Afrikaans (Afrikaans)
@@ -220,6 +222,7 @@ $messages['be-tarask'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Адданы голас супраць|Адданыя галасы супраць|Адданых галасоў супраць}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Атрыманы падарунак|Атрыманыя падарункі|Атрыманых падарункаў}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Дасланы падарунак|Дасланыя падарункі|Дасланых падарункаў}}',
+	'right-updatepoints' => 'абнаўленьне колькасьці рэдагаваньняў',
 	'level-advance-subject' => 'Цяпер Вы ў групе «$1» у {{SITENAME}}!',
 	'level-advance-body' => 'Прывітаньне, $1:
 
@@ -290,12 +293,31 @@ $messages['bs'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Poklon primljen|Poklona primljeno}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Poslan poklon|Poslano poklona}}',
 	'level-advance-subject' => 'Vi ste sada "$1" na {{SITENAME}}!',
+	'level-advance-body' => 'Zdravo $1.
+
+Sada ste "$2" na {{SITENAME}}!
+
+Čestitamo,
+
+Urednici {{SITENAME}}
+
+---
+Hej, želite da prestanete dobivati e-mailove od nas?
+
+Kliknite $3
+i promijenite Vaše postavke da bi onemogućili e-mail obavještenja.',
 );
 
 /** Catalan (Català)
  * @author Solde
  */
 $messages['ca'] = array(
+	'top-fans-total-points-link' => 'Punts totals',
+	'top-fans-weekly-points-link' => 'Punts aquesta setmana',
+	'top-fans-monthly-points-link' => 'Punts aquest mes',
+	'top-fans-points' => 'punts',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Vot|Vots}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Guany mensual|Guanys mensuals}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Edició|Edicions}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Comentari|Comentaris}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinió|Opinions}}',
@@ -397,6 +419,7 @@ $messages['dsb'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Dany tłusty palc|Danej tłustej palca|Dane tłuste palce|Danych tłustych palcow}} dołoj',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Dar dostaty|Dara dostatej|Dary dostate|Darow dostatych}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Dar pósłany|Dara pósłanej|Dary pósłane|Darow pósłanych}}',
+	'right-updatepoints' => 'Licbu změnow wobźěłaś',
 	'level-advance-subject' => 'Sy něnto "$1" na {{GRAMMAR:lokatiw|{{SITENAME}}}}!',
 	'level-advance-body' => 'Witaj $1.
 
@@ -577,22 +600,23 @@ $messages['fr'] = array(
 	'top-fans-by-category-title' => 'Top général de $1',
 	'top-fans-bad-field-title' => 'Zut !',
 	'top-fans-bad-field-message' => 'La statistique indiquée n’existe pas.',
-	'top-fans-stats-vote-count' => '{{PLURAL:$1|Vote|Votes}}',
+	'top-fans-stats-vote-count' => 'Vote{{PLURAL:$1||s}}',
 	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|victoire mensuelle|victoires mensuelles}}',
 	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|victoire hebdomadaire|victoires hebdomadaires}}',
-	'top-fans-stats-edit-count' => '{{PLURAL:$1|modification|modifications}}',
-	'top-fans-stats-comment-count' => '{{PLURAL:$1|commentaire|commentaires}}',
-	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|référence|références}}',
-	'top-fans-stats-friends-count' => '{{PLURAL:$1|ami|amis}}',
-	'top-fans-stats-foe-count' => '{{PLURAL:$1|ennemi|ennemis}}',
+	'top-fans-stats-edit-count' => 'modification{{PLURAL:$1||s}}',
+	'top-fans-stats-comment-count' => 'commentaire{{PLURAL:$1||s}}',
+	'top-fans-stats-referrals-completed' => 'référence{{PLURAL:$1||s}}',
+	'top-fans-stats-friends-count' => 'ami{{PLURAL:$1||s}}',
+	'top-fans-stats-foe-count' => 'ennemi{{PLURAL:$1||s}}',
 	'top-fans-stats-opinions-published' => '{{PLURAL:$1|opinion publiée|opinions publiées}}',
-	'top-fans-stats-opinions-created' => '{{PLURAL:$1|opinion|opinions}}',
-	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|bravo|bravos}}',
+	'top-fans-stats-opinions-created' => 'opinion{{PLURAL:$1||s}}',
+	'top-fans-stats-comment-score-positive-rec' => 'bravo{{PLURAL:$1||s}}',
 	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|nul|nuls}}',
 	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|bravo attribué|bravos attribués}}',
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|nul attribué|nuls attribués}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|cadeau reçu|cadeaux reçus}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|cadeau envoyé|cadeaux envoyés}}',
+	'right-updatepoints' => "Mise à jour du compteur d'éditions",
 	'level-advance-subject' => 'Vous avez désormais un « $1 » sur {{SITENAME}} !',
 	'level-advance-body' => 'Salut $1 : 
 
@@ -642,6 +666,7 @@ $messages['gl'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Desaprobación dada|Desaprobacións dadas}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Agasallo recibido|Agasallos recibidos}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Agasallo enviado|Agasallos enviados}}',
+	'right-updatepoints' => 'Actualizar o contador de edicións',
 	'level-advance-subject' => 'Agora é un "$1" en {{SITENAME}}!',
 	'level-advance-body' => 'Ola, $1:
 
@@ -691,6 +716,7 @@ $messages['gsw'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Duume abezues|Dyyme abezues}} gee',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Gschänk iberchu|Gschänk inerchu}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Gschänk gmacht|Gschänk gmacht}}',
+	'right-updatepoints' => 'Bearbeitigszeller aktualisiere',
 	'level-advance-subject' => 'Du bisch jetz „$1“ uf {{SITENAME}}!',
 	'level-advance-body' => 'Sali $1,
 
@@ -788,6 +814,7 @@ $messages['hsb'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Podata fujwołanje|Podatej fujwołani|Podate fujwołanja|Podatych fujwołanjow}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Dóstany dar|Dóstanej daraj|Dóstane dary|Dóstanych darow}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Pósłany dar|Pósłanej daraj|Pósłane dary|Pósłanych darow}}',
+	'right-updatepoints' => 'Ličbu změnow aktualizować',
 	'level-advance-subject' => 'Sy nětko "$1" na {{GRAMMAR:lokatiw|{{SITENAME}}}}',
 	'level-advance-body' => 'Witaj $1:
 
@@ -837,6 +864,7 @@ $messages['ia'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Disapprobation|Disapprobationes}} date',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Dono|Donos}} recipite',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Dono|Donos}} inviate',
+	'right-updatepoints' => 'Actualisar le contator de modificationes',
 	'level-advance-subject' => 'Tu es ora un "$1" in {{SITENAME}}!',
 	'level-advance-body' => 'Salute $1,
 
@@ -888,6 +916,7 @@ $messages['ja'] = array(
 	'top-fans-stats-comment-score-negative-given' => 'ブーイングを受けました',
 	'top-fans-stats-gifts-rec-count' => 'プレゼントを受け取りました',
 	'top-fans-stats-gifts-sent-count' => 'プレゼントを贈りました',
+	'right-updatepoints' => '編集回数を更新する',
 	'level-advance-subject' => '{{SITENAME}}の"$1"になりました！',
 	'level-advance-body' => '$1さん、こんにちは。
 
@@ -981,6 +1010,7 @@ $messages['ksh'] = array(
 	'top-fans-stats-comment-score-negative-given' => 'Duume noh unge',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Jeschenk|Jeschenke}} kräje',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Jeschenk|Jeschenke}} jejovve',
+	'right-updatepoints' => 'De Aanzahl Änderunge ändere',
 	'level-advance-subject' => 'Do bes jätz ene „$1“ op de {{SITENAME}}!',
 	'level-advance-body' => 'Hallo $1,
 
@@ -1027,6 +1057,7 @@ $messages['lb'] = array(
 	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Daum no ënnen|Daumen no ënnen}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Cadeau kritt|Cadeaue kritt}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Cadeau|Cadeauë}} geschéckt',
+	'right-updatepoints' => 'De Compteur vun den Ännerungen aktualiséieren',
 	'level-advance-subject' => 'Dir sidd elo "$1" op {{SITENAME}}!',
 	'level-advance-body' => 'Bonjour $1:
 
@@ -1516,6 +1547,7 @@ $messages['sk'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Dané pokarhanie|Dané pokarhania|Daných pokarhaní}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Obdržaný dar|Obdržané dary|Obdržaných darov}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Poslaný dar|Poslané dary|Poslaných darov}}',
+	'right-updatepoints' => 'Aktualizovať počty úprav',
 	'level-advance-subject' => 'Teraz ste „$1” na {{GRAMMAR:lokál|{{SITENAME}}}}!',
 	'level-advance-body' => 'Ahoj $1:
 
