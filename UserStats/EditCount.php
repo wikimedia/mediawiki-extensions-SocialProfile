@@ -23,7 +23,7 @@ function incEditCount( &$article, $revision, $baseRevId ) {
 $wgHooks['ArticleDelete'][] = 'removeDeletedEdits';
 
 function removeDeletedEdits( &$article, &$user, &$reason ){
-	global $wgUser, $wgTitle, $wgNamespacesForEditPoints;
+	global $wgTitle, $wgNamespacesForEditPoints;
 
 	// only keep tally for allowable namespaces
 	if( !is_array( $wgNamespacesForEditPoints ) || in_array( $wgTitle->getNamespace(), $wgNamespacesForEditPoints ) ){
@@ -46,7 +46,7 @@ function removeDeletedEdits( &$article, &$user, &$reason ){
 $wgHooks['ArticleUndelete'][] = 'restoreDeletedEdits';
 
 function restoreDeletedEdits( &$title, $new ){
-	global $wgUser, $wgNamespacesForEditPoints;
+	global $wgNamespacesForEditPoints;
 
 	// only keep tally for allowable namespaces
 	if( !is_array( $wgNamespacesForEditPoints ) || in_array( $title->getNamespace(), $wgNamespacesForEditPoints ) ){
