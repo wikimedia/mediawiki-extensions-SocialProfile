@@ -1646,7 +1646,7 @@ $messages['eu'] = array(
 );
 
 /** Finnish (Suomi)
- * @author Jack Phoenix
+ * @author Jack Phoenix <jack@countervandalism.net>
  */
 $messages['fi'] = array(
 	'viewrelationships' => 'Ystävä- ja vihollislista',

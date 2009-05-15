@@ -13,43 +13,43 @@ class UserRelationship {
 	 * Constructor
 	 * @private
 	 */
-	/* private */ function __construct($username) {
+	/* private */ function __construct( $username ) {
 		wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
-		$title1 = Title::newFromDBkey($username);
+		$title1 = Title::newFromDBkey( $username );
 		$this->user_name = $title1->getText();
-		$this->user_id = User::idFromName($this->user_name);
+		$this->user_id = User::idFromName( $this->user_name );
 	}
 
 	public function addRelationshipRequest( $user_to, $type, $message, $email = true ){
-		$user_id_to = User::idFromName($user_to);
+		$user_id_to = User::idFromName( $user_to );
 		$dbw = wfGetDB( DB_MASTER );
 
 		$dbw->insert( 'user_relationship_request',
-		array(
-			'ur_user_id_from' => $this->user_id,
-			'ur_user_name_from' => $this->user_name,
-			'ur_user_id_to' => $user_id_to,
-			'ur_user_name_to' => $user_to,
-			'ur_type' => $type,
-			'ur_message' => $message,
-			'ur_date' => date("Y-m-d H:i:s")
+			array(
+				'ur_user_id_from' => $this->user_id,
+				'ur_user_name_from' => $this->user_name,
+				'ur_user_id_to' => $user_id_to,
+				'ur_user_name_to' => $user_to,
+				'ur_type' => $type,
+				'ur_message' => $message,
+				'ur_date' => date("Y-m-d H:i:s")
 			), __METHOD__
 		);
 		$request_id = $dbw->insertId();
 
-		$this->incNewRequestCount($user_id_to, $type);
+		$this->incNewRequestCount( $user_id_to, $type );
 
-		if( $email ) $this->sendRelationshipRequestEmail($user_id_to, $this->user_name, $type);
+		if( $email ) $this->sendRelationshipRequestEmail( $user_id_to, $this->user_name, $type );
 		return $request_id;
 	}
 
 	public function sendRelationshipRequestEmail( $user_id_to, $user_from, $type ){
-		$user = User::newFromId($user_id_to);
+		$user = User::newFromId( $user_id_to );
 		$user->loadFromDatabase();
 		if( $user->getEmail() && $user->getIntOption( 'notifyfriendrequest', 1 ) ){ //if($user->isEmailConfirmed() && $user->getIntOption("notifyfriendrequest",1)){
 			$request_link = SpecialPage::getTitleFor( 'ViewRelationshipRequests' );
 			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
-			if( $type == 1){
+			if( $type == 1 ){
 				$subject = wfMsgExt( 'friend_request_subject', 'parsemag',
 					$user_from
 				);
@@ -70,12 +70,12 @@ class UserRelationship {
 					$update_profile_link->getFullURL()
 				);
 			}
-			$user->sendMail($subject, $body);
+			$user->sendMail( $subject, $body );
 		}
 	}
 
 	public function sendRelationshipAcceptEmail( $user_id_to, $user_from, $type ){
-		$user = User::newFromId($user_id_to);
+		$user = User::newFromId( $user_id_to );
 		$user->loadFromDatabase();
 		if( $user->getEmail() && $user->getIntOption( 'notifyfriendrequest', 1 ) ){ //if($user->isEmailConfirmed() && $user->getIntOption("notifyfriendrequest",1)){
 			$user_link = Title::makeTitle( NS_USER, $user_from );
@@ -101,12 +101,12 @@ class UserRelationship {
 					$update_profile_link->getFullURL()
 				);
 			}
-			$user->sendMail($subject, $body);
+			$user->sendMail( $subject, $body );
 		}
 	}
 
 	public function sendRelationshipRemoveEmail( $user_id_to, $user_from, $type ){
-		$user = User::newFromId($user_id_to);
+		$user = User::newFromId( $user_id_to );
 		$user->loadFromDatabase();
 		if( $user->isEmailConfirmed() && $user->getIntOption( 'notifyfriendrequest', 1 ) ){
 			$user_link = Title::makeTitle( NS_USER, $user_from );
@@ -141,8 +141,9 @@ class UserRelationship {
 
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow( 'user_relationship_request',
-				array( 'ur_user_id_from', 'ur_user_name_from', 'ur_type'),
-				array( 'ur_id' => $relationship_request_id ), __METHOD__
+			array( 'ur_user_id_from', 'ur_user_name_from', 'ur_type' ),
+			array( 'ur_id' => $relationship_request_id ),
+			__METHOD__
 		);
 
 		if ( $s == true ) {
@@ -150,47 +151,47 @@ class UserRelationship {
 			$ur_user_name_from = $s->ur_user_name_from;
 			$ur_type = $s->ur_type;
 
-			if( self::getUserRelationshipByID($this->user_id, $ur_user_id_from) > 0 ){
+			if( self::getUserRelationshipByID( $this->user_id, $ur_user_id_from ) > 0 ){
 				return '';
 			}
 
 			$dbw->insert( 'user_relationship',
-			array(
-				'r_user_id' => $this->user_id,
-				'r_user_name' => $this->user_name,
-				'r_user_id_relation' => $ur_user_id_from,
-				'r_user_name_relation' => $ur_user_name_from,
-				'r_type' => $ur_type,
-				'r_date' => date("Y-m-d H:i:s")
+				array(
+					'r_user_id' => $this->user_id,
+					'r_user_name' => $this->user_name,
+					'r_user_id_relation' => $ur_user_id_from,
+					'r_user_name_relation' => $ur_user_name_from,
+					'r_type' => $ur_type,
+					'r_date' => date("Y-m-d H:i:s")
 				), __METHOD__
 			);
 
 			$dbw->insert( 'user_relationship',
-			array(
-				'r_user_id' => $ur_user_id_from,
-				'r_user_name' => $ur_user_name_from,
-				'r_user_id_relation' => $this->user_id,
-				'r_user_name_relation' => $this->user_name,
-				'r_type' => $ur_type,
-				'r_date' => date("Y-m-d H:i:s")
+				array(
+					'r_user_id' => $ur_user_id_from,
+					'r_user_name' => $ur_user_name_from,
+					'r_user_id_relation' => $this->user_id,
+					'r_user_name_relation' => $this->user_name,
+					'r_type' => $ur_type,
+					'r_date' => date("Y-m-d H:i:s")
 				), __METHOD__
 			);
 
-			$stats = new UserStatsTrack($this->user_id, $this->user_name);
+			$stats = new UserStatsTrack( $this->user_id, $this->user_name );
 			if( $ur_type == 1 ){
-				$stats->incStatField("friend");
+				$stats->incStatField( 'friend' );
 			} else {
-				$stats->incStatField("foe");
+				$stats->incStatField( 'foe' );
 			}
 
-			$stats = new UserStatsTrack($ur_user_id_from, $ur_user_name_from);
+			$stats = new UserStatsTrack( $ur_user_id_from, $ur_user_name_from );
 			if( $ur_type == 1 ){
-				$stats->incStatField("friend");
+				$stats->incStatField( 'friend' );
 			} else {
-				$stats->incStatField("foe");
+				$stats->incStatField( 'foe' );
 			}
 
-			if($email)$this->sendRelationshipAcceptEmail($ur_user_id_from, $this->user_name, $ur_type);
+			if( $email ) $this->sendRelationshipAcceptEmail( $ur_user_id_from, $this->user_name, $ur_type );
 
 			$wgMemc->delete( wfMemcKey( 'relationship', 'profile', "{$this->user_id}-{$ur_type}" ) );
 			$wgMemc->delete( wfMemcKey( 'relationship', 'profile', "{$ur_user_id_from}-{$ur_type}" ) );
@@ -218,20 +219,20 @@ class UserRelationship {
 		$wgMemc->delete( wfMemcKey( 'relationship', 'profile', "{$user1}-2" ) );
 		$wgMemc->delete( wfMemcKey( 'relationship', 'profile', "{$user2}-2" ) );
 
-		$stats = new UserStatsTrack($user1, '');
-		$stats->updateRelationshipCount(1);
-		$stats->updateRelationshipCount(2);
+		$stats = new UserStatsTrack( $user1, '' );
+		$stats->updateRelationshipCount( 1 );
+		$stats->updateRelationshipCount( 2 );
 		$stats->clearCache();
 
-		$stats = new UserStatsTrack($user2, '');
-		$stats->updateRelationshipCount(1);
-		$stats->updateRelationshipCount(2);
+		$stats = new UserStatsTrack( $user2, '' );
+		$stats->updateRelationshipCount( 1 );
+		$stats->updateRelationshipCount( 2 );
 		$stats->clearCache();
 	}
 
 	public function deleteRequest( $id ){
-		$request = $this->getRequest($id);
-		$this->decNewRequestCount($this->user_id, $request[0]['rel_type']);
+		$request = $this->getRequest( $id );
+		$this->decNewRequestCount( $this->user_id, $request[0]['rel_type'] );
 
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->delete( 'user_relationship_request', array( 'ur_id' => $id ), __METHOD__ );
@@ -240,11 +241,9 @@ class UserRelationship {
 	public function updateRelationshipRequestStatus( $relationship_request_id, $status ){
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update( 'user_relationship_request',
-			array( /* SET */
-			'ur_status' => $status
-			), array( /* WHERE */
-			'ur_id' => $relationship_request_id
-			), ""
+			/* SET */array( 'ur_status' => $status ),
+			/* WHERE */array( 'ur_id' => $relationship_request_id ),
+			__METHOD__
 		);
 	}
 
@@ -280,12 +279,12 @@ class UserRelationship {
 	}
 
 	public function getRequest( $id ){
-		global $wgDBprefix;
 		$dbr = wfGetDB( DB_MASTER );
-		$sql = "SELECT ur_id, ur_user_id_from, ur_user_name_from, ur_type, ur_message, ur_date
-			FROM ".$wgDBprefix."user_relationship_request
-			WHERE ur_id = {$id}";
-		$res = $dbr->query($sql);
+		$res = $dbr->select( 'user_relationship_request',
+			array( 'ur_id', 'ur_user_id_from', 'ur_user_name_from', 'ur_type', 'ur_message', 'ur_date' ),
+			array( "ur_id = {$id}" ),
+			__METHOD__
+		);
 		while( $row = $dbr->fetchObject( $res ) ) {
 			if( $row->ur_type == 1 ){
 				$type_name = 'Friend';
@@ -358,7 +357,7 @@ class UserRelationship {
 		$s = $dbr->selectRow( 'user_relationship_request', array( 'count(*) AS count' ), array( 'ur_user_id_to' => $user_id, 'ur_status' => 0, 'ur_type' => $rel_type ), __METHOD__ );
 		if ( $s !== false ) $request_count = $s->count;
 
-		$wgMemc->set($key, $request_count);
+		$wgMemc->set( $key, $request_count );
 
 		return $request_count;
 	}
@@ -375,13 +374,13 @@ class UserRelationship {
 	}
 
 	static function getOpenRequestCount( $user_id, $rel_type ){
-		$data = self::getOpenRequestCountCache($user_id, $rel_type);
+		$data = self::getOpenRequestCountCache( $user_id, $rel_type );
 
 		if( $data != '' ){
-			if( $data == -1 )$data = 0;
+			if( $data == -1 ) $data = 0;
 			$count = $data;
 		} else {
-			$count = self::getOpenRequestCountDB($user_id, $rel_type);
+			$count = self::getOpenRequestCountDB( $user_id, $rel_type );
 		}
 		return $count;
 	}
@@ -443,7 +442,7 @@ class UserRelationship {
 
 	static function getRelationshipCountByUsername( $user_name ){
 		$dbr = wfGetDB( DB_SLAVE );
-		$user_id = User::idFromName($user_name);
+		$user_id = User::idFromName( $user_name );
 		$sql = "SELECT rs_friend_count, rs_foe_count
 			FROM {$dbr->tableName( 'user_relationship_stats' )}
 			WHERE rs_user_id = {$user_id}
