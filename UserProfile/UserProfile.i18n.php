@@ -6936,6 +6936,7 @@ $messages['ru'] = array(
 	'user-type-toggle-old' => 'Использовать вики-страницу участника',
 	'user-type-toggle-new' => 'Использовать социальную страницу участника',
 	'user-board-login-message' => 'Вы должны <a href="$1">представиться системе</a> чтобы отправлять сообщения другим учсатникам.',
+	'avatarupload-removeavatar' => 'Удалить аватар',
 	'user-profile-picture-log' => 'аватар',
 	'user-profile-picture-log-entry' => 'загрузил новый аватар',
 );

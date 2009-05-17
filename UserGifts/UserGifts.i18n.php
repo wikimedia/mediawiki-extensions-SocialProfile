@@ -2457,11 +2457,21 @@ $messages['roa-tara'] = array(
 
 /** Russian (Русский)
  * @author Innv
+ * @author Rubin
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
+	'giftmanager-image' => 'добавить/заменить изображение',
+	'g-add-message' => 'Добавить сообщение',
+	'g-choose-file' => 'Выберите файл:',
+	'g-cancel' => 'Отмена',
 	'g-created-by' => 'создан',
+	'g-give-all-message-title' => 'Добавить сообщение',
+	'g-give-list-select' => 'выбрать друга',
 	'g-give-separator' => 'или',
+	'g-go-back' => 'Назад',
+	'g-main-page' => 'Заглавная страница',
+	'g-remove' => 'Удалить',
 	'g-your-profile' => 'Ваш профиль',
 );
 

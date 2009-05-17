@@ -4979,6 +4979,7 @@ $messages['ru'] = array(
 <a href="$1">Пригласите их</a>',
 	'ur-remove' => 'Удалить',
 	'ur-cancel' => 'Отмена',
+	'ur-login' => 'Логин',
 	'ur-add-error-message-pending-request-title' => 'Терпение!',
 	'ur-accept' => 'Принять',
 );

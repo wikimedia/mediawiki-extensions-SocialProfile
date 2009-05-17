@@ -75,6 +75,7 @@ and change your settings to disable email notifications.'
  * @author Fryed-peach
  * @author Jon Harald Søby
  * @author Purodha
+ * @author Umherirrender
  */
 $messages['qqq'] = array(
 	'userboard_delete' => '{{Identical|Delete}}',
@@ -86,7 +87,7 @@ $messages['qqq'] = array(
 * '''$2''' is the number of the first message shown
 * '''$3''' is the number of the last message shown
 * '''$4''' is the count of messages acutally shown",
-	'right-userboard-delete' => '{{doc-right}}',
+	'right-userboard-delete' => '{{doc-right|userboard-delete}}',
 );
 
 /** Niuean (ko e vagahau Niuē)
@@ -123,19 +124,19 @@ $messages['am'] = array(
  * @author OsamaK
  */
 $messages['ar'] = array(
-	'boardblastlogintitle' => 'أنت ينبغي أن تكون مسجل الدخول لترسل بورد بلاست',
-	'boardblastlogintext' => 'أنت يجب أن تكون مسجل الدخول لترسل بورد بلاست.
-اضغط <a href="index.php?title=Special:UserLogin">هنا لتسجيل الدخول</a>',
+	'boardblastlogintitle' => 'ينبغي أن تكون مسجلًا الدخول لترسل بورد بلاست',
+	'boardblastlogintext' => 'يجب أن تكون مسجلًا الدخول لترسل بورد بلاست.
+اضغط <a href="index.php?title=Special:UserLogin">هنا لتُسجّل الدخول</a>',
 	'messagesenttitle' => 'الرسائل تم إرسالها',
 	'boardblasttitle' => 'أرسل بورد بلاست',
 	'boardblaststep1' => 'خطوة 1 - اكتب رسالتك',
 	'boardblastprivatenote' => 'كل الرسائل سترسل كرسائل خاصة',
 	'boardblaststep2' => 'خطوة 2 - اختر الشخص الذي تود إرسال رسالتك إليه',
-	'boardlinkselectall' => 'اختيار الكل',
-	'boardlinkunselectall' => 'عكس اختيار الكل',
+	'boardlinkselectall' => 'اختر الكل',
+	'boardlinkunselectall' => 'ألغِ اختيار الكل',
 	'boardlinkselectfriends' => 'اختيار الأصدقاء',
 	'boardlinkunselectfriends' => 'عكس اختيار الأصدقاء',
-	'boardlinkselectfoes' => 'اختيار الأعداء',
+	'boardlinkselectfoes' => 'اختر الأعداء',
 	'boardlinkunselectfoes' => 'عكس اختيار الأعداء',
 	'boardsendbutton' => 'أرسل بورد بلاست',
 	'boardnofriends' => 'لا تمتلك أي أصدقاء لترسل رسالة إليهم!',
@@ -148,8 +149,8 @@ $messages['ar'] = array(
 	'userboard_owner' => 'بورد الخاص ب$1',
 	'userboard_yourboardwith' => 'مجلسك إلى مجلس مع $1',
 	'userboard_otherboardwith' => 'مجلس إلى مجلس الخاص ب$1 مع $2',
-	'userboard_backprofile' => 'رجوع إلى ملف $1',
-	'userboard_backyourprofile' => 'الرجوع إلى ملفك',
+	'userboard_backprofile' => 'ارجع إلى ملف $1',
+	'userboard_backyourprofile' => 'ارجع إلى ملفك',
 	'userboard_boardtoboard' => 'مجلس إلى مجلس',
 	'userboard_confirmdelete' => 'هل أنت متأكد أنك تريد حذف هذه الرسالة؟',
 	'userboard_sendmessage' => 'أرسل رسالة إلى $1',
@@ -162,7 +163,7 @@ $messages['ar'] = array(
 	'userboard_prevpage' => 'قبل',
 	'userboard_nomessages' => 'لا رسائل.',
 	'userboard_sendbutton' => 'إرسال',
-	'userboard_loggedout' => 'أنت يجب أن تكون <a href="$1">مسجل الدخول</a> لترسل رسائل إلى المستخدمين الآخرين.',
+	'userboard_loggedout' => 'يجب أن تكون <a href="$1">مُسجلًا الدخول</a> لترسل رسائل إلى المستخدمين الآخرين.',
 	'userboard_showingmessages' => 'عرض {{PLURAL:$4|الرسالة $3|الرسائل $2-$3}} من {{PLURAL:$1|$1 رسالة|$1 رسالة}}',
 	'message_received_subject' => '$1 كتب على مجلسك في {{SITENAME}}',
 	'message_received_body' => 'مرحبا $1:
@@ -542,6 +543,7 @@ Klicke <a href="index.php?title=Special:UserLogin">hier zum Anmelden</a>',
 	'userboard_sendbutton' => 'senden',
 	'userboard_loggedout' => 'Du musst <a href="$1">angemeldet sein</a>, um Nachrichten an andere Nutzer schicken zu können.',
 	'userboard_showingmessages' => 'Zeige {{PLURAL:$4|Nachricht $3|Nachrichten $2-$3}} von $1 insgesamt',
+	'right-userboard-delete' => 'Nachrichten anderer vom Board löschen',
 	'message_received_subject' => '$1 hat auf deine {{SITENAME}}-Pinnwand geschrieben',
 	'message_received_body' => 'Hi $1:
 
@@ -1649,6 +1651,7 @@ $messages['nl'] = array(
 	'userboard_sendbutton' => 'verzenden',
 	'userboard_loggedout' => 'U moet <a href="$1">aangemeld</a> zijn om berichten naar andere gebruikers te verzenden.',
 	'userboard_showingmessages' => '{{PLURAL:$4|Bericht $3|Berichten $2 tot $3}} van {{PLURAL:$1|$1 bericht|$1 berichten}} worden weergegeven',
+	'right-userboard-delete' => 'Boardberichten van andere gebruikers verwijderen',
 	'message_received_subject' => '$1 heeft op uw board op {{SITENAME}} geschreven',
 	'message_received_body' => 'Hallo $1.
 

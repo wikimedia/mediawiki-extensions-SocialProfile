@@ -61,10 +61,11 @@ and change your settings to disable e-mail notifications.'
 /** Message documentation (Message documentation)
  * @author Fryed-peach
  * @author Purodha
+ * @author Umherirrender
  */
 $messages['qqq'] = array(
 	'top-fans-by-category-title' => '$1 is any of the messages starting with "top-fans-stats-" and the name of the statistic. Examples are {{msg-mw|top-fans-stats-vote-count}}, {{msg-mw|top-fans-stats-weekly-winner-count}}, {{msg-mw|top-fans-stats-referrals-completed}}, {{msg-mw|top-fans-stats-friends-count}}, and {{msg-mw|top-fans-stats-edit-count}}.',
-	'right-updatepoints' => '{{doc-right}}',
+	'right-updatepoints' => '{{doc-right|updatepoints}}',
 );
 
 /** Afrikaans (Afrikaans)
@@ -341,6 +342,7 @@ $messages['cs'] = array(
  * @author Melancholie
  * @author Purodha
  * @author Revolus
+ * @author Umherirrender
  */
 $messages['de'] = array(
 	'user-stats-alltime-title' => 'Am meisten Punkte (gesamt)',
@@ -372,6 +374,7 @@ $messages['de'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Gegebener Daumen nach unten|Gegebene Daumen nach unten}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Geschenk erhalten|Geschenke erhalten}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Geschenk gemacht|Geschenke gemacht}}',
+	'right-updatepoints' => 'Beiträgszähler aktualisieren',
 	'level-advance-subject' => 'Du bist jetzt „$1“ auf {{SITENAME}}!',
 	'level-advance-body' => 'Hallo $1,
 
@@ -1118,6 +1121,7 @@ $messages['nl'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Duim|Duimen}} omlaag uitgedeeld',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Cadeautje|Cadeautjes}} ontvangen',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Cadeautje|Cadeautjes}} gestuurd',
+	'right-updatepoints' => 'Bewerkingstellers bijwerken',
 	'level-advance-subject' => 'U bent nu "$1" op {{SITENAME}}',
 	'level-advance-body' => 'Hallo $1.
 
