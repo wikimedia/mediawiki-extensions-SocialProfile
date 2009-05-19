@@ -1734,6 +1734,7 @@ Trykk $4 og endra innstillingane dine for å slå av meldingar gjennom e-post.',
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Harald Khan
  * @author Jon Harald Søby
+ * @author Nghtwlkr
  */
 $messages['no'] = array(
 	'boardblastlogintitle' => 'Du må være logget inn for å sende meldinger',
@@ -1775,7 +1776,7 @@ $messages['no'] = array(
 	'userboard_nomessages' => 'Ingen beskjeder.',
 	'userboard_sendbutton' => 'send',
 	'userboard_loggedout' => 'Du må være <a href="$1">logget inn</a> for å sende beskjeder til andre brukere.',
-	'userboard_showingmessages' => 'Viser $2&ndash;$3 av {{PLURAL:$1|$1 beskjed|$1 beskjeder}}',
+	'userboard_showingmessages' => 'Viser {{PLURAL:$4|melding $3|meldingene $2&ndash;$3}} av {{PLURAL:$1|$1 melding|$1 meldinger}}',
 	'message_received_subject' => '$1 har skrevet på diskusjonssiden din på {{SITENAME}}',
 	'message_received_body' => 'Hei, $1.
 
@@ -1836,6 +1837,7 @@ $messages['oc'] = array(
 	'userboard_sendbutton' => 'mandat',
 	'userboard_loggedout' => 'Vos cal èsser <a href="$1">connectat(ada)</a> per mandar de messatges a d’autres utilizaires.',
 	'userboard_showingmessages' => 'Visionament {{PLURAL:$4|del messatge $3|dels messatges $2-$3}} sus un total de {{PLURAL:$1|$1 messatge|$1 messatges}}',
+	'right-userboard-delete' => "Suprimir los messatges d'autres utilizaires",
 	'message_received_subject' => '$1 a escrich sus vòstre tablèu sus {{SITENAME}}',
 	'message_received_body' => "Adiu $1 : 
 
@@ -1955,6 +1957,7 @@ Clique <a href="index.php?title=Special:UserLogin">aqui para logar</a>',
 	'userboard_sendbutton' => 'enviar',
 	'userboard_loggedout' => 'Você precida estar <a href="$1">logado</a> para enviar mensagens a outros usuários.',
 	'userboard_showingmessages' => 'Mostrando {{PLURAL:$4|mensagem $3|mensagens $2-$3}} de {{PLURAL:$1|$1 mensagem|$1 mensagens}}',
+	'right-userboard-delete' => 'Eliminar mensagens no mural de outros',
 	'message_received_subject' => '$1 escreveu em seu mural em {{SITENAME}}',
 	'message_received_body' => 'Oi $1:
 

@@ -1189,6 +1189,7 @@ og endra innstillingane dine for å slå av e-postmeldingar.',
 
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Jon Harald Søby
+ * @author Nghtwlkr
  */
 $messages['no'] = array(
 	'user-stats-alltime-title' => 'Flest poeng noensinne',
@@ -1220,6 +1221,7 @@ $messages['no'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Tommel ned gitt|Tomler ned gitt}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Gave mottatt|Gaver mottatt}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Gave|Gaver}} sendt',
+	'right-updatepoints' => 'Oppdater redigeringsteller',
 	'level-advance-subject' => 'Du er nå $1 på {{SITENAME}}.',
 	'level-advance-body' => 'Hei, $1.
 
@@ -1268,6 +1270,7 @@ $messages['oc'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|nul atribuit|nuls atribuits}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|present recebut|presents recebuts}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|present mandat|presents mandats}}',
+	'right-updatepoints' => "Mesa a jorn del comptador d'edicions",
 	'level-advance-subject' => "D'ara enlà, avètz un « $1 » sus {{SITENAME}} !",
 	'level-advance-body' => "Adiu $1 : 
 
@@ -1336,6 +1339,7 @@ $3',
 
 /** Portuguese (Português)
  * @author Vanessa Sabino
+ * @author Waldir
  */
 $messages['pt'] = array(
 	'user-stats-alltime-title' => 'Mais pontos de todo o tempo',
@@ -1367,6 +1371,7 @@ $messages['pt'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Polegar para baixo dado|Polegares para baixo dados}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Presente recebido|Presentes recebidos}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Presente enviado|Presentes enviados}}',
+	'right-updatepoints' => 'Atualizar contadores de edição',
 	'level-advance-subject' => 'Você agora é um "$1" em {{SITENAME}}!',
 	'level-advance-body' => 'Oi $1:
 
