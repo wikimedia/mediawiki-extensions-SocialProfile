@@ -252,8 +252,7 @@ $3
  */
 $messages['be-tarask'] = array(
 	'boardblastlogintitle' => 'Вам неабходна ўвайсьці ў сыстэму, каб дасылаць паведамленьні на агульную дошку',
-	'boardblastlogintext' => 'Вам неабходна ўвайсьці ў сыстэму, каб дасылаць паведамленьні на агульную дошку.
-Націсьніце <a href="index.php?title=Special:UserLogin">тут, каб увайсьці ў сыстэму</a>',
+	'boardblastlogintext' => 'Вам неабходна <a href="index.php?title=Special:UserLogin">ўвайсьці ў сыстэму</a>, каб дасылаць паведамленьні на агульную дошку.',
 	'messagesenttitle' => 'Паведамленьні дасланыя',
 	'boardblasttitle' => 'Адпраўка паведамленьня на дошку',
 	'boardblaststep1' => 'Крок 1: Напішыце Вашае паведамленьне',
@@ -504,8 +503,7 @@ $messages['da'] = array(
  */
 $messages['de'] = array(
 	'boardblastlogintitle' => 'Du musst angemeldet sein, um Nachrichten versenden zu können',
-	'boardblastlogintext' => 'Du musst angemeldet sein, um Nachrichten versenden zu können.
-Klicke <a href="index.php?title=Special:UserLogin">hier zum Anmelden</a>',
+	'boardblastlogintext' => 'Du musst <a href="index.php?title=Special:UserLogin">angemeldet</a> sein, um Nachrichten versenden zu können.',
 	'messagesenttitle' => 'Nachrichten verschickt',
 	'boardblasttitle' => 'Nachricht senden',
 	'boardblaststep1' => 'Schritt 1: Schreibe deine Nachricht',
@@ -567,8 +565,7 @@ und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
  */
 $messages['dsb'] = array(
 	'boardblastlogintitle' => 'Musyš pśizjawjony byś, aby pósłał forumowe powěsći',
-	'boardblastlogintext' => 'Musyš pśizjawjony byś, aby pósłał forumowe powěsći.
-Klikni <a href="index.php?title=Special:UserLogin">sem, aby se pśizjawił</a>',
+	'boardblastlogintext' => 'Musyš <a href="index.php?title=Special:UserLogin">pśizjawjony</a> byś, aby pósłał forumowe powěsći.',
 	'messagesenttitle' => 'Powěsći pósłane',
 	'boardblasttitle' => 'Forumowu powěsć pósłaś',
 	'boardblaststep1' => 'Kšac 1 - Napiš swóju powěsć',
@@ -822,7 +819,8 @@ ja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.',
  */
 $messages['fr'] = array(
 	'boardblastlogintitle' => 'Vous devez être connecté pour envoyer le tableau en rafale',
-	'boardblastlogintext' => 'Vous devez être connecté pour envoyer le tableau en rafales. Cliquez <a href="index.php?title=Special:UserLogin">ici pour ouvrir vous connecter</a>',
+	'boardblastlogintext' => 'Pour envoyer des tableau en rafales,
+vous devez <a href="index.php?title=Special:UserLogin">être connecté</a>.',
 	'messagesenttitle' => 'Messages envoyés',
 	'boardblasttitle' => 'Envoyer le tableau en rafale',
 	'boardblaststep1' => 'Étape 1 - Écrivez votre message',
@@ -891,8 +889,8 @@ $messages['fy'] = array(
  */
 $messages['gl'] = array(
 	'boardblastlogintitle' => 'Debe acceder ao sistema para enviar un recado',
-	'boardblastlogintext' => 'Debe acceder ao sistema para enviar un recado.
-Prema <a href="index.php?title=Special:UserLogin">aquí para acceder</a>',
+	'boardblastlogintext' => 'Para poder enviar un recado
+debe antes ter <a href="index.php?title=Special:UserLogin">accedido ao sistema</a>.',
 	'messagesenttitle' => 'Mensaxes enviadas',
 	'boardblasttitle' => 'Enviar un recado',
 	'boardblaststep1' => 'Paso 1 - Estriba a súa mensaxe',
@@ -970,8 +968,8 @@ $messages['grc'] = array(
  */
 $messages['gsw'] = array(
 	'boardblastlogintitle' => 'Du muesch aagmäldet syy zum Nochrichte verschicke z chenne',
-	'boardblastlogintext' => 'Du muesch aagmäldet syy go Nochrichte chenne verschicke.
-Druck <a href="index.php?title=Special:UserLogin">doo zum Aamälde</a>',
+	'boardblastlogintext' => 'Go Nochrichte chenne verschicke,
+muesch <a href="index.php?title=Special:UserLogin">aagmäldet syy</a>',
 	'messagesenttitle' => 'Nochrichte gschickt',
 	'boardblasttitle' => 'Nochricht schicke',
 	'boardblaststep1' => 'Schritt 1: Schryb Dyyni Nochricht',
@@ -1124,8 +1122,7 @@ $messages['hr'] = array(
  */
 $messages['hsb'] = array(
 	'boardblastlogintitle' => 'Dyrbiš přizjewjeny być, zo by forumowe powěsće pósłał',
-	'boardblastlogintext' => 'Dyrbiš přizjewjeny być, zo by forumowe powěsće pósłał.
-Klikń <a href="index.php?title=Special:UserLogin">sem, zo by so přizjewił</a>',
+	'boardblastlogintext' => 'Dyrbiš <a href="index.php?title=Special:UserLogin">přizjewjeny</a> być, zo by forumowe powěsće pósłał.',
 	'messagesenttitle' => 'Powěsće pósłane',
 	'boardblasttitle' => 'Forumowu powěsć pósłać',
 	'boardblaststep1' => 'Krok 1 - Napisaj swoju powěsć',
@@ -1268,10 +1265,9 @@ $messages['it'] = array(
  */
 $messages['ja'] = array(
 	'boardblastlogintitle' => '一斉メッセージを送るにはログインする必要があります',
-	'boardblastlogintext' => '一斉メッセージを送るにはログインする必要があります。
-ログインするには<a href="index.php?title=Special:UserLogin">ここをクリック</a>',
+	'boardblastlogintext' => '一斉メッセージを送るには<a href="index.php?title=Special:UserLogin">ログイン</a>する必要があります。',
 	'messagesenttitle' => 'メッセージを送る',
-	'boardblasttitle' => '一斉メッセージを送信',
+	'boardblasttitle' => '一斉メッセージの送信',
 	'boardblaststep1' => 'ステップ1 - メッセージを書きます',
 	'boardblastprivatenote' => 'すべてのメッセージはプライベートメッセージとして送信されます',
 	'boardblaststep2' => 'ステップ2 - メッセージを送りたい相手を選んでください',
@@ -1613,7 +1609,7 @@ $messages['nah'] = array(
  */
 $messages['nl'] = array(
 	'boardblastlogintitle' => 'U moet aangemeld zijn om berichten naar meerdere gebruikers te kunnen verzenden',
-	'boardblastlogintext' => 'U moet aangemeld zijn om berichten naar meerdere gebruikers te kunnen verzenden. Klik <a href="index.php?title=Special:UserLogin">hier om aan te melden</a>',
+	'boardblastlogintext' => 'U moet <a href="index.php?title=Special:UserLogin"aanmelden</a> om berichten naar meerdere gebruikers te kunnen verzenden.',
 	'messagesenttitle' => 'Berichten verstuurd',
 	'boardblasttitle' => 'Bericht aan meerdere gebruikers verzenden',
 	'boardblaststep1' => 'Stap 1: uw bericht schrijven',
@@ -1676,8 +1672,7 @@ en wijzig uw instellingen om e-mailberichten uit te schakelen.',
  */
 $messages['nn'] = array(
 	'boardblastlogintitle' => 'Du må logga inn for kunna senda meldingar',
-	'boardblastlogintext' => 'Du vera innlogga inn for kunna senda meldingar. 
-Gå <a href="index.php?title=Special:UserLogin">her for å logga inn</a>',
+	'boardblastlogintext' => 'For å kunna senda meldingar, lyt du vera <a href="index.php?title=Special:UserLogin">innlogga</a>.',
 	'messagesenttitle' => 'Sendte meldingar',
 	'boardblasttitle' => 'Send melding',
 	'boardblaststep1' => 'Steg 1 &ndash; skriv meldinga di',
@@ -1716,6 +1711,7 @@ Gå <a href="index.php?title=Special:UserLogin">her for å logga inn</a>',
 	'userboard_sendbutton' => 'send',
 	'userboard_loggedout' => 'Du må vera <a href="$1">innlogga</a> for å senda meldingar til andre brukarar.',
 	'userboard_showingmessages' => 'Syner {{PLURAL:$4|melding $3|meldingane $2&ndash;$3}} av {{PLURAL:$1|éi melding|$1 meldingar}} totalt',
+	'right-userboard-delete' => 'Sletta andre sine meldingar',
 	'message_received_subject' => '$1 skreiv på diskusjonssida di på {{SITENAME}}',
 	'message_received_body' => 'Hei, $1.
 
@@ -1799,7 +1795,8 @@ Klikk $4 og endre innstillingene dine for å slå av e-postbeskjeder.',
  */
 $messages['oc'] = array(
 	'boardblastlogintitle' => 'Vos cal èsser en sesilha per mandar lo tablèu en mitralhada',
-	'boardblastlogintext' => 'Vos cal èsser en sesilha per mandar lo tablèu en mitralhadas. Clicatz <a href="index.php?title=Special:UserLogin">aicí per dobrir una sesilha</a>',
+	'boardblastlogintext' => 'Per mandar lo tablèu en mitralhadas,
+vos cal <a href="index.php?title=Special:UserLogin">èsser connectat(ada)</a>.',
 	'messagesenttitle' => 'Messatges mandats',
 	'boardblasttitle' => 'Mandar lo tablèu en mitralhada',
 	'boardblaststep1' => 'Etapa 1 - Escrivètz vòstre messatge',
@@ -2134,7 +2131,7 @@ $3
  */
 $messages['sk'] = array(
 	'boardblastlogintitle' => 'Musíte sa prihlásiť, aby ste mohli posielať správy fóra',
-	'boardblastlogintext' => 'Musíte sa prihlásiť, aby ste mohli posielať správy fóra. Kliknutím sem <a href="index.php?title=Special:UserLogin">sa prihlásite</a>',
+	'boardblastlogintext' => 'Musíte <a href="index.php?title=Special:UserLogin">sa prihlásiť</a>, aby ste mohli posielať správy fóra.',
 	'messagesenttitle' => 'Poslaných správ',
 	'boardblasttitle' => 'Poslať správu fóra',
 	'boardblaststep1' => 'Krok 1 - Napíšte svoju správu',
