@@ -708,6 +708,26 @@ $messages['nn'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|ny ven|nye vener}}',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Nghtwlkr
+ */
+$messages['no'] = array(
+	'userwelcome-desc' => 'Legger til <tt>&lt;welcomeUser&gt;</tt>-merkelappen for å vise brukerspesifisert sosial informasjon for innloggede brukere',
+	'mp-userlevels-link' => 'Brukernivå',
+	'mp-welcome-upload' => 'Last opp',
+	'mp-welcome-edit' => 'Rediger',
+	'mp-welcome-points' => '{{PLURAL:$1|ett poeng|$1 poeng}}',
+	'mp-welcome-needed-points' => 'For å avansere til <b><a href="$1">$2</a></b> må du oppnå <i>$3</i> {{PLURAL:$3|poeng|poeng}} til!',
+	'mp-welcome-logged-in' => 'Hei $1',
+	'mp-requests-title' => 'Forespørsler',
+	'mp-requests-message' => 'Du har følgende forespørsler.',
+	'mp-request-new-message' => 'ny melding',
+	'mp-request-new-award' => '$1 {{PLURAL:$1|ny utmerkelse|nye utmerkelser}}',
+	'mp-request-new-gift' => '$1 {{PLURAL:$1|ny gave|nye gaver}}',
+	'mp-request-new-foe' => '$1 {{PLURAL:$1|ny fiende|nye fiender}}',
+	'mp-request-new-friend' => '$1 {{PLURAL:$1|ny venn|nye venner}}',
+);
+
 /** Occitan (Occitan)
  * @author Cedric31
  */

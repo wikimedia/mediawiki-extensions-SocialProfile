@@ -5670,6 +5670,7 @@ Trykk <a href="$1">her</a> for å loggå inn eller <a href="$2">her</a> for å r
 
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Jon Harald Søby
+ * @author Nghtwlkr
  */
 $messages['no'] = array(
 	'populateuserprofiles' => 'Befolk brukerprofiler',
@@ -5691,14 +5692,14 @@ $messages['no'] = array(
 	'user-send-gift' => 'Send en gave',
 	'user-contributions' => 'Bidrag',
 	'user-stats-title' => 'Statistikk',
-	'user-stats-edits' => 'Redigeringer',
-	'user-stats-votes' => 'Stemmer',
-	'user-stats-comments' => 'Kommentarer',
-	'user-stats-recruits' => 'Rekrutteringer',
-	'user-stats-poll-votes' => 'Stemmer',
-	'user-stats-picture-game-votes' => 'Bildespillstemmer',
-	'user-stats-quiz-points' => 'Quizpoeng',
-	'user-stats-pick-points' => "Pick-'em-poeng",
+	'user-stats-edits' => '{{PLURAL:$1|Redigering|Redigeringer}}',
+	'user-stats-votes' => '{{PLURAL:$1|Stemme|Stemmer}}',
+	'user-stats-comments' => '{{PLURAL:$1|Kommentar|Kommentarer}}',
+	'user-stats-recruits' => '{{PLURAL:$1|Rekruttering|Rekrutteringer}}',
+	'user-stats-poll-votes' => '{{PLURAL:$1|Valgstemme|Valgstemmer}}',
+	'user-stats-picture-game-votes' => '{{PLURAL:$1|Bildespillstemme|Bildespillstemmer}}',
+	'user-stats-quiz-points' => '{{PLURAL:$1|Quizpoeng|Quizpoeng}}',
+	'user-stats-pick-points' => "{{PLURAL:$1|Pick-'em-poeng|Pick-'em-poeng}}",
 	'other-info-title' => 'Annen informasjon',
 	'user-friends-title' => 'Venner',
 	'user-foes-title' => 'Fiender',
@@ -5750,7 +5751,7 @@ $messages['no'] = array(
 	'user-profile-update-log-section' => 'endret seksjon',
 	'user-profile-update-profile' => 'profil',
 	'user-profile-default-country' => 'USA',
-	'user-profile-points' => '$1 poeng',
+	'user-profile-points' => '{{PLURAL:$1|ett poeng|$1 poeng}}',
 	'user-profile-section-personal' => 'Personlig informasjon',
 	'user-profile-section-sportsteams' => 'Oppdater nettverk',
 	'user-profile-section-custom' => 'Egendefinert informasjon',
@@ -5847,6 +5848,7 @@ $messages['no'] = array(
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'lastet opp ny avatar',
 	'user-profile-picture-log-delete-entry' => 'slettet avatar for $1',
+	'right-avatarremove' => 'Fjern brukerens avatarer',
 );
 
 /** Occitan (Occitan)

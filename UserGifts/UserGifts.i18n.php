@@ -2036,6 +2036,13 @@ og endra innstillingane dine for å slå av e-postmeldingar.',
 	'right-giftadmin' => 'Opprett nye og endra eksisterande gåver',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Nghtwlkr
+ */
+$messages['no'] = array(
+	'g-add-message' => 'Legg til en melding',
+);
+
 /** Occitan (Occitan)
  * @author Cedric31
  */
