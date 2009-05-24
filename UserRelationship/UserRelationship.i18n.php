@@ -1631,6 +1631,13 @@ Haga click en $4
 y cambie sus configuraciones para deshabilitar notificaciones por correo electrónico.',
 );
 
+/** Estonian (Eesti)
+ * @author Silvar
+ */
+$messages['et'] = array(
+	'ur-main-page' => 'Esileht',
+);
+
 /** Basque (Euskara)
  * @author An13sa
  * @author Kobazulo
@@ -2205,7 +2212,7 @@ e troque as súas configuracións para deshabilitar as notificacións por correo
  */
 $messages['grc'] = array(
 	'ur-main-page' => 'Κυρία Δέλτος',
-	'ur-next' => 'Ἑπομέναι',
+	'ur-next' => 'ἑπομέναι',
 	'ur-remove' => 'Άφαιρεῖν',
 	'ur-cancel' => 'Ἀκυροῦν',
 	'ur-login' => 'Συνδεῖσθαι',

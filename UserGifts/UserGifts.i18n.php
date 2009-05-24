@@ -911,6 +911,13 @@ y cambia tus configuraciones para deshabilitar notificaciones por correo electr�
 	'right-giftadmin' => 'Crear nuevo y editar regalos existentes',
 );
 
+/** Estonian (Eesti)
+ * @author Silvar
+ */
+$messages['et'] = array(
+	'g-main-page' => 'Esileht',
+);
+
 /** Finnish (Suomi)
  * @author Jack Phoenix
  */
@@ -1225,6 +1232,7 @@ e troque as súas configuracións para desactivar as notificacións por correo e
 $messages['grc'] = array(
 	'g-cancel' => 'Ἀκυροῦν',
 	'g-new' => 'Νέα',
+	'g-next' => 'Ἑπομέναι',
 );
 
 /** Swiss German (Alemannisch)

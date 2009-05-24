@@ -1575,6 +1575,7 @@ a vypnite v svojich nastaveniach upozornenia emailom.',
 
 /** Swedish (Svenska)
  * @author Boivie
+ * @author Najami
  */
 $messages['sv'] = array(
 	'user-stats-alltime-title' => 'Flest poäng någonsin',
@@ -1606,6 +1607,7 @@ $messages['sv'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Given tummen ner|Givna tummen ner}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Fådd gåva|Fådda gåvor}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Skickad gåva|Skickade gåvor}}',
+	'right-updatepoints' => 'Uppdatera redigeringsräknare',
 	'level-advance-subject' => 'Du är nu en "$1" på {{SITENAME}}!',
 	'level-advance-body' => 'Hej $1!
 

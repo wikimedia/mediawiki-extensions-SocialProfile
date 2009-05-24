@@ -960,7 +960,7 @@ $messages['got'] = array(
 $messages['grc'] = array(
 	'userboard_delete' => 'Σβεννύναι',
 	'userboard_private' => 'Ἰδιωτική',
-	'userboard_nextpage' => 'Ἑπομέναι',
+	'userboard_nextpage' => 'ἑπομέναι',
 );
 
 /** Swiss German (Alemannisch)
@@ -1184,8 +1184,8 @@ a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
  */
 $messages['ia'] = array(
 	'boardblastlogintitle' => 'Tu debe aperir un session pro poter inviar colpos de tabuliero',
-	'boardblastlogintext' => 'Tu debe identificar te pro poter inviar colpos de tabuliero.
-Clicca <a href="index.php?title=Special:UserLogin">hic pro aperir un session</a>.',
+	'boardblastlogintext' => 'Pro poter inviar colpos de tabuliero,
+tu debe <a href="index.php?title=Special:UserLogin">aperir un session</a>.',
 	'messagesenttitle' => 'Messages inviate',
 	'boardblasttitle' => 'Inviar colpo de tabuliero',
 	'boardblaststep1' => 'Passo 1 - Scribe tu message',
