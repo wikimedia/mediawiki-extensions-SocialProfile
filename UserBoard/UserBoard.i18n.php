@@ -956,11 +956,12 @@ $messages['got'] = array(
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)
  * @author Crazymadlover
+ * @author Omnipaedista
  */
 $messages['grc'] = array(
 	'userboard_delete' => 'Σβεννύναι',
 	'userboard_private' => 'Ἰδιωτική',
-	'userboard_nextpage' => 'ἑπομέναι',
+	'userboard_nextpage' => 'ἑπόμεναι',
 );
 
 /** Swiss German (Alemannisch)

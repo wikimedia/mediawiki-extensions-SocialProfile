@@ -2209,10 +2209,11 @@ e troque as súas configuracións para deshabilitar as notificacións por correo
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)
  * @author AndreasJS
  * @author Crazymadlover
+ * @author Omnipaedista
  */
 $messages['grc'] = array(
 	'ur-main-page' => 'Κυρία Δέλτος',
-	'ur-next' => 'ἑπομέναι',
+	'ur-next' => 'ἑπόμεναι',
 	'ur-remove' => 'Άφαιρεῖν',
 	'ur-cancel' => 'Ἀκυροῦν',
 	'ur-login' => 'Συνδεῖσθαι',

@@ -1228,11 +1228,12 @@ e troque as súas configuracións para desactivar as notificacións por correo e
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)
  * @author Crazymadlover
+ * @author Omnipaedista
  */
 $messages['grc'] = array(
 	'g-cancel' => 'Ἀκυροῦν',
 	'g-new' => 'Νέα',
-	'g-next' => 'Ἑπομέναι',
+	'g-next' => 'Ἑπόμεναι',
 );
 
 /** Swiss German (Alemannisch)
