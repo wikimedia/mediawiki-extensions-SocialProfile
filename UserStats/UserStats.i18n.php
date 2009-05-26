@@ -283,6 +283,7 @@ $messages['bs'] = array(
 	'top-fans-weekly-points-link' => 'Bodova ove sedmice',
 	'top-fans-monthly-points-link' => 'Bodova ovog mjeseca',
 	'top-fans-points' => 'bodovi',
+	'top-fans-by-category-title' => 'Najbolji ukupno po $1',
 	'top-fans-bad-field-title' => 'Ups!',
 	'top-fans-bad-field-message' => 'Navedena statistika ne postoji.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Glas|Glasa|Glasova}}',
@@ -619,7 +620,7 @@ $messages['fr'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|nul attribué|nuls attribués}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|cadeau reçu|cadeaux reçus}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|cadeau envoyé|cadeaux envoyés}}',
-	'right-updatepoints' => "Mise à jour du compteur d'éditions",
+	'right-updatepoints' => 'Mise à jour du compteur d’éditions',
 	'level-advance-subject' => 'Vous avez désormais un « $1 » sur {{SITENAME}} !',
 	'level-advance-body' => 'Salut $1 : 
 

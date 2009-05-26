@@ -859,7 +859,7 @@ vous devez <a href="index.php?title=Special:UserLogin">être connecté</a>.',
 	'userboard_sendbutton' => 'envoyé',
 	'userboard_loggedout' => 'Vous devez être <a href="$1">connecté</a> pour poster des messages à d’autres utilisateurs.',
 	'userboard_showingmessages' => 'Visionnement {{PLURAL:$4|du message $3|des messages $2-$3}} sur un total de $1 message{{PLURAL:$1||s}}',
-	'right-userboard-delete' => "Supprimer les messages d'autres utilisateurs",
+	'right-userboard-delete' => 'Supprimer les messages d’autres utilisateurs',
 	'message_received_subject' => '$1 a écrit sur votre tableau sur {{SITENAME}}',
 	'message_received_body' => 'Salut $1 :
 
