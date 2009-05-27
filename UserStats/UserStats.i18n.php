@@ -1323,6 +1323,7 @@ $messages['pl'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Oddany głos|Oddane głosy}} sprzeciwu',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Otrzymany prezent|Otrzymane prezenty}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Podarowany prezent|Podarowane prezenty}}',
+	'right-updatepoints' => 'Aktualizacja liczników edycji',
 	'level-advance-subject' => 'Należysz teraz do grupy „$1” na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
 	'level-advance-body' => 'Witaj $1.
 
