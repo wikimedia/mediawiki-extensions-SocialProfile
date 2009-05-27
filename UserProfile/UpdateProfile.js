@@ -18,7 +18,7 @@ function displaySection( id, country, section ){
 		section_select += '<select class="profile-form" name="' + id + '" id="' + id + '"><option></option>';
 		for( x = 0; x <= countries[country_id].sections.length-1; x++ ){
 			section_select += '<option value="' + countries[country_id].sections[x] + '"' +
-				( ( countries[country_id].sections[x] == section ) ? ' selected="selected"' : '' ) + '">' + countries[country_id].sections[x] + '</option>';
+				( ( countries[country_id].sections[x] == section ) ? ' selected="selected"' : '' ) + '>' + countries[country_id].sections[x] + '</option>';
 		}
 		section_select += '</select>';
 	}
