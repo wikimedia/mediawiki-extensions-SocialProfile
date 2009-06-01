@@ -1081,7 +1081,7 @@ $messages['tr'] = array(
 	'mp-welcome-upload' => 'Yükle',
 	'mp-welcome-edit' => 'Düzenle',
 	'mp-welcome-points' => '$1 {{PLURAL:$1|puan|puan}}',
-	'mp-welcome-needed-points' => '<b><a href="$1">$2</a></b>\'ye ilerlemek için <i>$3</i> tane daha puan kazanın!',
+	'mp-welcome-needed-points' => '<b><a href="$1">$2</a></b>\'ye ilerlemek için <i>$3</i> {{PLURAL:$3|puan|puan}} daha kazanın!',
 	'mp-welcome-logged-in' => '$1 Hoşgeldiniz',
 	'mp-requests-title' => 'İstekler',
 	'mp-requests-message' => 'Şu istekleriniz var.',

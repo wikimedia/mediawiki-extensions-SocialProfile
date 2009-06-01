@@ -294,6 +294,7 @@ $messages['bs'] = array(
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Mišljenje|Mišljenja}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Poklon primljen|Poklona primljeno}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Poslan poklon|Poslano poklona}}',
+	'right-updatepoints' => 'Ažuriranje brojanja izmjena',
 	'level-advance-subject' => 'Vi ste sada "$1" na {{SITENAME}}!',
 	'level-advance-body' => 'Zdravo $1.
 
