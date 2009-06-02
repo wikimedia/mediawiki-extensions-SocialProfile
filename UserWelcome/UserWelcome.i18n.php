@@ -1107,10 +1107,10 @@ $messages['vi'] = array(
 	'mp-requests-title' => 'Các yêu cầu',
 	'mp-requests-message' => 'Bạn có các yêu cầu sau.',
 	'mp-request-new-message' => 'tin nhắn mới',
-	'mp-request-new-award' => '$1 giải thưởng mới',
-	'mp-request-new-gift' => '$1 quà tặng mới',
-	'mp-request-new-foe' => '$1 kẻ thù mới',
-	'mp-request-new-friend' => '$1 người bạn mới',
+	'mp-request-new-award' => '$1 {{PLURAL:$1|giải thưởng|giải thưởng}} mới',
+	'mp-request-new-gift' => '$1 {{PLURAL:$1|quà tặng|quà tặng}} mới',
+	'mp-request-new-foe' => '$1 {{PLURAL:$1|kẻ thù|ker thù}} mới',
+	'mp-request-new-friend' => '$1 {{PLURAL:$1|người bạn|người bạn}} mới',
 );
 
 /** Volapük (Volapük)
