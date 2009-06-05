@@ -4980,7 +4980,7 @@ $messages['ru'] = array(
 	'ur-relationship-count-foes' => '$1 имеет $2 {{PLURAL:$2|недруга|недругов|недругов}}.
 Недостаточно?
 <a href="$3">Пригласите их.</a>',
-	'ur-relationship-count-friends' => '$1 имеет $2 ((PLURAL:$2|друга|друга|друзей)).
+	'ur-relationship-count-friends' => '$1 имеет $2 {{PLURAL:$2|друга|друга|друзей}}.
 Хотите больше друзей?
 <a href="$3">Пригласите их.</a>',
 	'ur-add-friends' => '  Хотите больше друзей?
