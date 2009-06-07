@@ -2453,6 +2453,13 @@ e altere suas preferências para desabilitar e-mails de notificação.',
 	'right-giftadmin' => 'Crie novos e edite presentes existentes',
 );
 
+/** Romanian (Română)
+ * @author Mihai
+ */
+$messages['ro'] = array(
+	'g-next' => 'Următorul',
+);
+
 /** Tarandíne (Tarandíne)
  * @author Joetaras
  */
