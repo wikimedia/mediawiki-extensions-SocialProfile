@@ -189,6 +189,25 @@ $aliases['mk'] = array(
 	'RemoveRelationship' => array( 'ИзбришиРелација' ),
 );
 
+/** Marathi (मराठी) */
+$aliases['mr'] = array(
+	'AddRelationship' => array( 'नातेजोडा' ),
+	'PopulateUserProfiles' => array( 'सदस्यचरित्रलेखमाहितीपाठवा' ),
+	'RemoveAvatar' => array( 'अवतारसोडा' ),
+	'RemoveRelationship' => array( 'नातेसोडा' ),
+	'SendBoardBlast' => array( 'कार्यकारिणीखरडपट्टीपाठवा' ),
+	'TopFansByStatistic' => array( 'सांख्यिकियशिरोमणीचाहते' ),
+	'TopUsers' => array( 'शिरोमणीसदस्य' ),
+	'TopUsersRecent' => array( 'अलिक्कडीलशिरोमणी' ),
+	'ToggleUserPage' => array( 'सदस्यपानबदलतेकरा' ),
+	'UpdateEditCounts' => array( 'संपादनमोजणीअद्ययावतकरा' ),
+	'UpdateProfile' => array( 'चरित्रलेखअद्ययावतकरा' ),
+	'UploadAvatar' => array( 'अवतारचढवा' ),
+	'UserBoard' => array( 'सदस्यबोर्ड' ),
+	'ViewRelationshipRequests' => array( 'नातेविनंतीपहा' ),
+	'ViewRelationships' => array( 'नातेपहा' ),
+);
+
 /** Nedersaksisch (Nedersaksisch) */
 $aliases['nds-nl'] = array(
 	'AddRelationship' => array( 'Relasie_toevoegen' ),

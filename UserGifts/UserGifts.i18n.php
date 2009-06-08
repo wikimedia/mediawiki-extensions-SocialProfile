@@ -670,7 +670,7 @@ $messages['de-formal'] = array(
 	'gift_received_subject' => '$1 hat Ihnen das $2-Geschenk auf {{SITENAME}} gesendet!',
 	'gift_received_body' => 'Hallo $1,
 
-$1 hat Ihnen eben das $2-Geschenk auf {{SITENAME}} gesendet!
+$2 hat Ihnen eben das $3-Geschenk auf {{SITENAME}} gesendet!
 
 Möchten Sie die Notiz von $2 lesen und Ihr Geschenk sehen? Klicken Sie den folgenden Link:
 
