@@ -11,7 +11,7 @@ if( !defined( 'MEDIAWIKI' ) )
  *
  * For more info about SocialProfile, please see the README file that was included with SocialProfile.
  */
-$dir = dirname(__FILE__) . '/';
+$dir = dirname( __FILE__ ) . '/';
 
 // Internationalization files
 $wgExtensionMessagesFiles['SocialProfileUserBoard'] = $dir . 'UserBoard/UserBoard.i18n.php';
@@ -42,6 +42,7 @@ $wgAutoloadClasses['UserRelationship'] = $dir . 'UserRelationship/UserRelationsh
 $wgAutoloadClasses['UserLevel'] = $dir . 'UserStats/UserStatsClass.php';
 $wgAutoloadClasses['UserStats'] = $dir . 'UserStats/UserStatsClass.php';
 $wgAutoloadClasses['UserStatsTrack'] = $dir . 'UserStats/UserStatsClass.php';
+$wgAutoloadClasses['UserSystemMessage'] = $dir . 'UserSystemMessages/UserSystemMessagesClass.php';
 $wgAutoloadClasses['TopFansByStat'] = $dir. 'UserStats/TopFansByStat.php';
 $wgAutoloadClasses['TopFansRecent'] = $dir . 'UserStats/TopFansRecent.php';
 $wgAutoloadClasses['TopUsersPoints'] = $dir. 'UserStats/TopUsers.php';
@@ -91,8 +92,8 @@ $wgFriendingEnabled = true;
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'SocialProfile',
-	'author' => 'Wikia, Inc. (Aaron Wright, David Pean)',
-	'version' => '1.3',
+	'author' => array( 'Aaron Wright', 'David Pean', 'Jack Phoenix' ),
+	'version' => '1.4',
 	'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile',
 	'description' => 'A set of Social Tools for MediaWiki',
 );
@@ -193,3 +194,4 @@ require_once("$IP/extensions/SocialProfile/YUI/YUI.php"); // YUI stand-alone lib
 require_once("{$wgUserProfileDirectory}/UserProfile.php"); // Profile page configuration loader file
 require_once("$IP/extensions/SocialProfile/UserGifts/Gifts.php"); // UserGifts (user-to-user gifting functionality) loader file
 require_once("$IP/extensions/SocialProfile/SystemGifts/SystemGifts.php"); // SystemGifts (awards functionality) loader file
+require_once("$IP/extensions/SocialProfile/UserActivity/UserActivity.php"); // UserActivity - recent social changes

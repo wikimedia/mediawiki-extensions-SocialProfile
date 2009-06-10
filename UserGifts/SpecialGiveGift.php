@@ -20,12 +20,12 @@ class GiveGift extends SpecialPage {
 
 		$output = ''; // Prevent E_NOTICE
 
-		$wgOut->addScriptFile( $wgUserGiftsScripts.'/UserGifts.js' );
-		$wgOut->addStyle( '../..' . $wgUserGiftsScripts . '/UserGifts.css' );
+		$wgOut->addScriptFile( $wgUserGiftsScripts . '/UserGifts.js' );
+		$wgOut->addExtensionStyle( $wgUserGiftsScripts . '/UserGifts.css' );
 
 		$usertitle = Title::newFromDBkey( $wgRequest->getVal( 'user' ) );
 		if( !$usertitle ) {
-			$wgOut->addHTML( $wgOut->addHTML( $this->displayFormNoUser() ) );
+			$wgOut->addHTML( /*$wgOut->addHTML(*/ $this->displayFormNoUser() /*)*/ );
 			return false;
 		}
 
@@ -98,13 +98,13 @@ class GiveGift extends SpecialPage {
 					<a href="' . $user_title->escapeFullURL() . '">' . wfMsg( 'g-back-link', $this->user_name_to ) . '</a>
 				</div>
 				<div class="g-message">
-					'.wfMsg( 'g-sent-message', $this->user_name_to ).'
+					' . wfMsg( 'g-sent-message', $this->user_name_to ) . '
 				</div>
 				<div class="g-container">
-				    '. $gift_image .'
-				<div class="g-title">'. $sent_gift['name'] .'</div>';
+					' . $gift_image . '
+				<div class="g-title">' . $sent_gift['name'] . '</div>';
 					if( $sent_gift['message'] ){
-						$output .= '<div class="g-user-message">'. $sent_gift['message'] .'</div>';
+						$output .= '<div class="g-user-message">' . $sent_gift['message'] . '</div>';
 					}
 					$output .= '</div>
 				<div class="cleared"></div>
@@ -139,6 +139,10 @@ class GiveGift extends SpecialPage {
 
 		$gift = Gifts::getGift( $gift_id );
 
+		if( empty( $gift ) ) {
+			return false;
+		}
+
 		if( $gift['access'] == 1 && $wgUser->getID() != $gift['creator_user_id'] ){
 			return $this->displayFormAll();
 		}
@@ -155,7 +159,7 @@ class GiveGift extends SpecialPage {
 			<div class="g-message">
 				'.wfMsg( 'g-give-to-user-message', $this->user_name_to, $give_gift_link->escapeFullURL( 'user=' . $this->user_name_to ) )."
 			</div>
-			<div id=\"give_gift_{$gift["id"]}\" class=\"g-container\">
+			<div id=\"give_gift_{$gift["gift_id"]}\" class=\"g-container\">
 				{$gift_image}
 				<div class=\"g-title\">{$gift["gift_name"]}</div>";
 				if( $gift['gift_description'] ){
@@ -228,12 +232,13 @@ class GiveGift extends SpecialPage {
 
 		$total = Gifts::getGiftCount();
 		$gifts = Gifts::getGiftList( $per_page, $page, 'gift_name' );
+		$output = '';
 
 		if( $gifts ) {
 
-			$wgOut->setPagetitle( wfMsg( 'g-give-all-title', $this->user_name_to ) );
+			$wgOut->setPageTitle( wfMsg( 'g-give-all-title', $this->user_name_to ) );
 
-			$output = '<div class="back-links">
+			$output .= '<div class="back-links">
 				<a href="' . $user->escapeFullURL() . '">' . wfMsg( 'g-back-link', $this->user_name_to ) . '</a>
 			</div>
 			<div class="g-message">
@@ -280,7 +285,7 @@ class GiveGift extends SpecialPage {
 					}
 				}
 
-				if( ($total - ($per_page * $page)) > 0 ) {
+				if( ( $total - ( $per_page * $page ) ) > 0 ) {
 					$output .= ' <a href="'.$give_gift_link->escapeFullURL( 'user='.$user_safe.'&page='.( $page+1 ) ).'">'.wfMsg( 'g-next' ).'</a>';
 				}
 				$output .= '</div>';
@@ -289,13 +294,13 @@ class GiveGift extends SpecialPage {
 			/**
 			 * Build next/prev nav
 			 */
-			$output .= '<div class="g-give-all-message-title">'.wfMsg( 'g-give-all-message-title' ).'</div>
+			$output .= '<div class="g-give-all-message-title">' . wfMsg( 'g-give-all-message-title' ) . '</div>
 				<textarea name="message" id="message" rows="4" cols="50"></textarea>
 				<div class="g-buttons">
-					<input type="hidden" name="gift_id" value="0">
-					<input type="hidden" name="user_name" value="'.addslashes( $this->user_name_to ).'">
-					<input type="button" class="site-button" value="'.wfMsg( 'g-send-gift' ).'" size="20" onclick="sendGift()"/>
-					<input type="button" class="site-button" value="'.wfMsg( 'g-cancel' ).'" size="20" onclick="history.go(-1)"/>
+					<input type="hidden" name="gift_id" value="0" />
+					<input type="hidden" name="user_name" value="' . addslashes( $this->user_name_to ) . '" />
+					<input type="button" class="site-button" value="' . wfMsg( 'g-send-gift' ) . '" size="20" onclick="sendGift()" />
+					<input type="button" class="site-button" value="' . wfMsg( 'g-cancel' ) . '" size="20" onclick="history.go(-1)" />
 				</div>
 			</form>';
 		} else {

@@ -3,6 +3,7 @@
 /**
  * Installation script for the extension SocialProfile. MySQL only.
  *
+ * @file
  * @ingroup Extensions
  * @author Rob Church <robchur@gmail.com>
  * @author Siebrand Mazeland
@@ -113,6 +114,16 @@ if( $dba->tableExists( 'user_gift' ) || $dba->tableExists( 'gift' ) ) {
 	$sql = $dir . '/UserGifts/usergifts.sql';
 	if( $dba->sourceFile( $sql ) ) {
 		echo( "The tables 'user_gift' and 'gift' have been set up correctly.\n" );
+	}
+}
+
+# Do nothing if the table exists
+if( $dba->tableExists( 'user_system_messages' ) ) {
+	echo( "'user_system_messages' already exists. No action was taken.\n" );
+} else {
+	$sql = $dir . '/UserSystemMessages/user_system_messages.sql';
+	if( $dba->sourceFile( $sql ) ) {
+		echo( "The table 'user_system_messages' has been set up correctly.\n" );
 	}
 }
 

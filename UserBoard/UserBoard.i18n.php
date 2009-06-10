@@ -55,6 +55,10 @@ you must be <a href="index.php?title=Special:UserLogin">logged in</a>.',
 	'userboard_loggedout' => 'You must be <a href="$1">logged in</a> to post messages to other users.',
 	'userboard_showingmessages' => 'Showing {{PLURAL:$4|message $3|messages $2-$3}} of {{PLURAL:$1|$1 message|$1 messages}}',
 	'right-userboard-delete' => "Delete others' board messages",
+	'userboard-time-days' => '{{PLURAL:$1|one day|$1 days}}',
+	'userboard-time-hours' => '{{PLURAL:$1|one hour|$1 hours}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|one minute|$1 minutes}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|one second|$1 seconds}}',
 	'message_received_subject' => '$1 wrote on your board on {{SITENAME}}',
 	'message_received_body' => 'Hi $1.
 
@@ -795,6 +799,10 @@ $messages['fi'] = array(
 	'userboard_loggedout' => 'Sinun tulee olla <a href="$1">kirjautunut sisään</a> lähettääksesi viestejä toisille käyttäjille.',
 	'userboard_showingmessages' => 'Näkyvillä on {{PLURAL:$4|viesti $3|viestit $2–$3}}. Yhteensä {{PLURAL:$1|$1 viesti|$1 viestiä}}.',
 	'right-userboard-delete' => 'Poistaa toisten käyttäjien keskustelualueviestejä',
+	'userboard-time-days' => '{{PLURAL:$1|päivä|$1 päivää}}',
+	'userboard-time-hours' => '{{PLURAL:$1|tunti|$1 tuntia}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|minuutti|$1 minuuttia}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|sekunti|$1 sekuntia}}',
 	'message_received_subject' => '$1 kirjoitti keskustelualueellesi {{GRAMMAR:inessive|{{SITENAME}}}}',
 	'message_received_body' => 'Hei $1:
  

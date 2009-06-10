@@ -73,7 +73,7 @@ class UserProfilePage extends Article {
 		$wgOut->addHTML( $this->getFanBoxes( $this->user_name ) );
 		$wgOut->addHTML( $this->getUserStats( $this->user_id, $this->user_name ) );
 
-		if ( !wfRunHooks( 'UserProfileEndLeft', array( &$this  ) ) ) {
+		if ( !wfRunHooks( 'UserProfileEndLeft', array( &$this ) ) ) {
 			wfDebug( __METHOD__ . ": UserProfileEndLeft messed up profile!\n" );
 		}
 
@@ -89,6 +89,7 @@ class UserProfilePage extends Article {
 		}
 
 		$wgOut->addHTML( $this->getPersonalInfo( $this->user_id, $this->user_name ) );
+		$wgOut->addHTML( $this->getActivity( $this->user_name ) );
 		$wgOut->addHTML( $this->getUserBoard( $this->user_id, $this->user_name ) );
 
 		if ( !wfRunHooks( 'UserProfileEndRight', array( &$this ) ) ) {
@@ -148,7 +149,7 @@ class UserProfilePage extends Article {
 				$this->getUserStatsRow( wfMsgExt( 'user-stats-comments', 'parsemag', $stats_data['comments'] ), $stats_data['comments'] ) .
 				$this->getUserStatsRow( wfMsgExt( 'user-stats-recruits', 'parsemag', $stats_data['recruits'] ), $stats_data['recruits'] ) .
 				$this->getUserStatsRow( wfMsgExt( 'user-stats-poll-votes', 'parsemag', $stats_data['poll_votes'] ), $stats_data['poll_votes'] ) .
-				$this->getUserStatsRow( wfMsgExt( 'user-stats-picture-game-votes', 'parsemag', $stats_data['picture_game_votes']), $stats_data['picture_game_votes'] ) .
+				$this->getUserStatsRow( wfMsgExt( 'user-stats-picture-game-votes', 'parsemag', $stats_data['picture_game_votes'] ), $stats_data['picture_game_votes'] ) .
 				$this->getUserStatsRow( wfMsgExt( 'user-stats-quiz-points', 'parsemag', $stats_data['quiz_points'] ), $stats_data['quiz_points'] );
 				if( $stats_data['currency'] != '10,000' )
 					$output .= $this->getUserStatsRow( wfMsgExt( 'user-stats-pick-points', 'parsemag', $stats_data['currency'] ), $stats_data['currency'] );
@@ -203,7 +204,7 @@ class UserProfilePage extends Article {
 		$stats = new UserStats( $user_id, $user_name );
 		$stats_data = $stats->getUserStats();
 		$user_level = new UserLevel( $stats_data['points'] );
-		$level_link = Title::makeTitle( NS_HELP, wfMsgHtml( 'user-profile-userlevels-link' ) );
+		$level_link = Title::makeTitle( NS_HELP, wfMsgForContent( 'user-profile-userlevels-link' ) );
 
 		if( !$this->profile_data ){
 			$profile = new UserProfile( $user_name );
@@ -226,7 +227,7 @@ class UserProfilePage extends Article {
 		}
 		if( $hometown == ', ' ) $hometown = '';
 
-		$joined_data = $profile_data['real_name'] . $location. $hometown . $profile_data['birthday'] . $profile_data['occupation'] . $profile_data['websites'] . $profile_data['places_lived'] . $profile_data['schools'] . $profile_data['about'];
+		$joined_data = $profile_data['real_name'] . $location . $hometown . $profile_data['birthday'] . $profile_data['occupation'] . $profile_data['websites'] . $profile_data['places_lived'] . $profile_data['schools'] . $profile_data['about'];
 		$edit_info_link = SpecialPage::getTitleFor( 'UpdateProfile' );
 
 		$output = '';
@@ -246,15 +247,15 @@ class UserProfilePage extends Article {
 			</div>
 			<div class="cleared"></div>
 			<div class="profile-info-container">'.
-				$this->getProfileSection( wfMsg( 'user-personal-info-real-name' ), $profile_data['real_name'], false ).
-				$this->getProfileSection( wfMsg( 'user-personal-info-location' ), $location, false ).
-				$this->getProfileSection( wfMsg( 'user-personal-info-hometown' ), $hometown, false ).
-				$this->getProfileSection( wfMsg( 'user-personal-info-birthday' ), $profile_data['birthday'], false ).
-				$this->getProfileSection( wfMsg( 'user-personal-info-occupation' ), $profile_data['occupation'], false ).
-				$this->getProfileSection( wfMsg( 'user-personal-info-websites' ), $profile_data['websites'], false ).
-				$this->getProfileSection( wfMsg( 'user-personal-info-places-lived' ), $profile_data['places_lived'], false ).
-				$this->getProfileSection( wfMsg( 'user-personal-info-schools' ), $profile_data['schools'], false ).
-				$this->getProfileSection( wfMsg( 'user-personal-info-about-me' ), $profile_data['about'], false ).
+				$this->getProfileSection( wfMsg( 'user-personal-info-real-name' ), $profile_data['real_name'], false ) .
+				$this->getProfileSection( wfMsg( 'user-personal-info-location' ), $location, false ) .
+				$this->getProfileSection( wfMsg( 'user-personal-info-hometown' ), $hometown, false ) .
+				$this->getProfileSection( wfMsg( 'user-personal-info-birthday' ), $profile_data['birthday'], false ) .
+				$this->getProfileSection( wfMsg( 'user-personal-info-occupation' ), $profile_data['occupation'], false ) .
+				$this->getProfileSection( wfMsg( 'user-personal-info-websites' ), $profile_data['websites'], false ) .
+				$this->getProfileSection( wfMsg( 'user-personal-info-places-lived' ), $profile_data['places_lived'], false ) .
+				$this->getProfileSection( wfMsg( 'user-personal-info-schools' ), $profile_data['schools'], false ) .
+				$this->getProfileSection( wfMsg( 'user-personal-info-about-me' ), $profile_data['about'], false ) .
 			'</div>';
 		} else if( $wgUser->getName() == $user_name ) {
 			$output .= '<div class="user-section-heading">
@@ -311,11 +312,11 @@ class UserProfilePage extends Article {
 				</div>
 			</div>
 			<div class="cleared"></div>
-			<div class="profile-info-container">'.
-				$this->getProfileSection( wfMsg( 'custom-info-field1' ), $profile_data['custom_1'], false ).
-				$this->getProfileSection( wfMsg( 'custom-info-field2' ), $profile_data['custom_2'], false ).
-				$this->getProfileSection( wfMsg( 'custom-info-field3' ), $profile_data['custom_3'], false ).
-				$this->getProfileSection( wfMsg( 'custom-info-field4' ), $profile_data['custom_4'], false ).
+			<div class="profile-info-container">' .
+				$this->getProfileSection( wfMsg( 'custom-info-field1' ), $profile_data['custom_1'], false ) .
+				$this->getProfileSection( wfMsg( 'custom-info-field2' ), $profile_data['custom_2'], false ) .
+				$this->getProfileSection( wfMsg( 'custom-info-field3' ), $profile_data['custom_3'], false ) .
+				$this->getProfileSection( wfMsg( 'custom-info-field4' ), $profile_data['custom_4'], false ) .
 			'</div>';
 		} else if( $wgUser->getName() == $user_name ) {
 			$output .= '<div class="user-section-heading">
@@ -375,15 +376,15 @@ class UserProfilePage extends Article {
 				</div>
 			</div>
 			<div class="cleared"></div>
-			<div class="profile-info-container">'.
-				$this->getProfileSection( wfMsg( 'other-info-movies' ), $profile_data['movies'], false ).
-				$this->getProfileSection( wfMsg( 'other-info-tv' ), $profile_data['tv'], false ).
-				$this->getProfileSection( wfMsg( 'other-info-music' ), $profile_data['music'], false ).
-				$this->getProfileSection( wfMsg( 'other-info-books' ), $profile_data['books'], false ).
-				$this->getProfileSection( wfMsg( 'other-info-video-games' ), $profile_data['video_games'], false ).
-				$this->getProfileSection( wfMsg( 'other-info-magazines' ), $profile_data['magazines'], false ).
-				$this->getProfileSection( wfMsg( 'other-info-snacks' ), $profile_data['snacks'], false ).
-				$this->getProfileSection( wfMsg( 'other-info-drinks' ), $profile_data['drinks'], false ).
+			<div class="profile-info-container">' .
+				$this->getProfileSection( wfMsg( 'other-info-movies' ), $profile_data['movies'], false ) .
+				$this->getProfileSection( wfMsg( 'other-info-tv' ), $profile_data['tv'], false ) .
+				$this->getProfileSection( wfMsg( 'other-info-music' ), $profile_data['music'], false ) .
+				$this->getProfileSection( wfMsg( 'other-info-books' ), $profile_data['books'], false ) .
+				$this->getProfileSection( wfMsg( 'other-info-video-games' ), $profile_data['video_games'], false ) .
+				$this->getProfileSection( wfMsg( 'other-info-magazines' ), $profile_data['magazines'], false ) .
+				$this->getProfileSection( wfMsg( 'other-info-snacks' ), $profile_data['snacks'], false ) .
+				$this->getProfileSection( wfMsg( 'other-info-drinks' ), $profile_data['drinks'], false ) .
 			'</div>';
 
 		} else if( $wgUser->getName() == $user_name ) {
@@ -415,7 +416,7 @@ class UserProfilePage extends Article {
 		$stats = new UserStats( $user_id, $user_name );
 		$stats_data = $stats->getUserStats();
 		$user_level = new UserLevel( $stats_data['points'] );
-		$level_link = Title::makeTitle( NS_HELP, wfMsgHtml( 'user-profile-userlevels-link' ) );
+		$level_link = Title::makeTitle( NS_HELP, wfMsgForContent( 'user-profile-userlevels-link' ) );
 
 		if( !$this->profile_data ){
 			$profile = new UserProfile( $user_name );
@@ -434,9 +435,7 @@ class UserProfilePage extends Article {
 		$add_relationship = SpecialPage::getTitleFor( 'AddRelationship' );
 		$remove_relationship = SpecialPage::getTitleFor( 'RemoveRelationship' );
 		$give_gift = SpecialPage::getTitleFor( 'GiveGift' );
-		$friends_activity = SpecialPage::getTitleFor( 'UserActivity' );
 		$send_board_blast = SpecialPage::getTitleFor( 'SendBoardBlast' );
-		$similar_fans = SpecialPage::getTitleFor( 'SimilarFans' );
 		$update_profile = SpecialPage::getTitleFor( 'UpdateProfile' );
 		$watchlist = SpecialPage::getTitleFor( 'Watchlist' );
 		$contributions = SpecialPage::getTitleFor( 'Contributions', $user );
@@ -473,10 +472,10 @@ class UserProfilePage extends Article {
 				global $wgUserLevels;
 				if( $wgUserLevels ){
 					$output .= '<div id="points-level">
-					<a href="' . $level_link->escapeFullURL() .'">' . wfMsgExt( 'user-profile-points', 'parsemag', $stats_data['points'] ) . '</a>
+					<a href="' . $level_link->escapeFullURL() . '">' . wfMsgExt( 'user-profile-points', 'parsemag', $stats_data['points'] ) . '</a>
 					</div>
 					<div id="honorific-level">
-						<a href="' . $level_link->escapeFullURL() .'" rel="nofollow">(' . $user_level->getLevelName() .')</a>
+						<a href="' . $level_link->escapeFullURL() . '" rel="nofollow">(' . $user_level->getLevelName() . ')</a>
 					</div>';
 				}
 				$output .= '<div class="cleared"></div>
@@ -584,7 +583,7 @@ class UserProfilePage extends Article {
 		$output = ''; // Prevent E_NOTICE
 
 		$count = 4;
-		$rel = new UserRelationship($user_name);
+		$rel = new UserRelationship( $user_name );
 		$key = wfMemcKey( 'relationship', 'profile', "{$rel->user_id}-{$rel_type}" );
 		$data = $wgMemc->get( $key );
 
@@ -653,6 +652,234 @@ class UserProfilePage extends Article {
 				}
 			$output .= '</div>';
 		}
+		return $output;
+	}
+
+	/**
+	 * Gets the recent social activity related to the current user
+	 * @param $user_name Mixed: name of the user whose activity we want to fetch
+	 */
+	function getActivity( $user_name ){
+		global $wgUser, $wgUserProfileDisplay, $wgScriptPath, $wgUploadPath;
+
+		// If not enabled in site settings, don't display
+		if( $wgUserProfileDisplay['activity'] == false ){
+			return '';
+		}
+
+		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
+
+		$output = '';
+
+		$limit = 8;
+		$rel = new UserActivity( $user_name, 'user', $limit );
+		$rel->setActivityToggle( 'show_votes', 0 );
+		$rel->setActivityToggle( 'show_gifts_sent', 1 );
+
+		/**
+		 * Get all relationship activity
+		 */
+		$activity = $rel->getActivityList();
+
+		if( $activity ){
+			$output .= '<div class="user-section-heading">
+				<div class="user-section-title">
+					' . wfMsg( 'user-recent-activity-title' ) . '
+				</div>
+				<div class="user-section-actions">
+					<div class="action-right">
+					</div>
+					<div class="cleared"></div>
+				</div>
+			</div>
+			<div class="cleared"></div>';
+
+			$x = 1;
+
+			if( count( $activity ) < $limit ) {
+				$style_limit = count( $activity );
+			} else {
+				$style_limit = $limit;
+			}
+
+			foreach( $activity as $item ) {
+				$item_html = '';
+				$title = Title::makeTitle( $item['namespace'], $item['pagetitle'] );
+				$user_title = Title::makeTitle( NS_USER, $item['username'] );
+				$user_title_2 = Title::makeTitle( NS_USER, $item['comment'] );
+
+				if( $user_title_2 )
+					$user_link_2 = '<a href="' . $user_title_2->escapeFullURL() . '" rel="nofollow">' . $item['comment'] . '</a>';
+
+				$comment_url = '';
+				if( $item['type'] == 'comment' )
+					$comment_url = "#comment-{$item["id"]}";
+
+				$page_link = '<b><a href="' . $title->escapeFullURL() . "{$comment_url}\">" . $title->getPrefixedText() . '</a></b> ';
+				$b = new UserBoard(); // Easier than porting the time-related functions here
+				$item_time = '<span class="item-small">' . wfMsg( 'user-time-ago', $b->getTimeAgo( $item['timestamp'] ) ) . '</span>';
+
+				if( $x < $style_limit ) {
+					$item_html .= '<div class="activity-item">
+						<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/' . UserActivity::getTypeIcon( $item['type'] ) . '" alt="" border="0" />';
+				} else {
+					$item_html .= '<div class="activity-item-bottom">
+						<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/' . UserActivity::getTypeIcon( $item['type'] ) . '" alt="" border="0" />';
+				}
+
+				switch( $item['type'] ) {
+					case 'edit':
+						$item_html .= wfMsg( 'user-recent-activity-edit' ) . " {$page_link} {$item_time}
+							<div class=\"item\">";
+								if( $item['comment'] )
+									$item_html .= "\"{$item["comment"]}\"";
+							$item_html .= '</div>';
+						break;
+					case 'vote':
+						$item_html .= wfMsg( 'user-recent-activity-vote' ) . " {$page_link} {$item_time}";
+						break;
+					case 'comment':
+						$item_html .= wfMsg( 'user-recent-activity-comment' ) . " {$page_link} {$item_time}
+							<div class=\"item\">
+								\"{$item["comment"]}\"
+							</div>";
+						break;
+					case 'gift-sent':
+						$gift_image = "<img src=\"{$wgUploadPath}/awards/" . Gifts::getGiftImage( $item['namespace'], 'm' ) . "\" border=\"0\" alt=\"\" />";
+						$item_html .= wfMsg( 'user-recent-activity-gift-sent' ) . " {$user_link_2} {$item_time}
+						<div class=\"item\">
+							<a href=\"" . $wgScriptPath . "/index.php?title=Special:ViewGift&gift_id={$item["id"]}\" rel=\"nofollow\">
+								{$gift_image}
+								{$item["pagetitle"]}
+							</a>
+						</div>";
+						break;
+					case 'gift-rec':
+						$gift_image = "<img src=\"{$wgUploadPath}/awards/" . Gifts::getGiftImage( $item['namespace'], 'm' ) . "\" border=\"0\" alt=\"\" />";
+						$item_html .= wfMsg( 'user-recent-activity-gift-rec' ) . " {$user_link_2} {$item_time}</span>
+								<div class=\"item\">
+									<a href=\"" . $wgScriptPath . "/index.php?title=Special:ViewGift&gift_id={$item["id"]}\" rel=\"nofollow\">
+										{$gift_image}
+										{$item["pagetitle"]}
+									</a>
+								</div>";
+						break;
+					case 'system_gift':
+						$gift_image = "<img src=\"{$wgUploadPath}/awards/" . SystemGifts::getGiftImage( $item['namespace'], 'm' ) . "\" border=\"0\" alt=\"\" />";
+						$item_html .= wfMsg( 'user-recent-system-gift' ) . " {$item_time}
+								<div class=\"user-home-item-gift\">
+									<a href=\"" . $wgScriptPath . "/index.php?title=Special:ViewSystemGift&gift_id={$item["id"]}\" rel=\"nofollow\">
+										{$gift_image}
+										{$item["pagetitle"]}
+									</a>
+								</div>";
+						break;
+					case 'friend':
+						$item_html .= wfMsg( 'user-recent-activity-friend' ) . " <b>{$user_link_2}</b> {$item_time}";
+						break;
+					case 'foe':
+						$item_html .= wfMsg( 'user-recent-activity-foe' ) . " <b>{$user_link_2}</b> {$item_time}";
+						break;
+					case 'system_message':
+						$item_html .= "{$item["comment"]} {$item_time}";
+						break;
+					case 'user_message':
+						$item_html .= wfMsg( 'user-recent-activity-user-message' ) . " <b><a href=\"" . UserBoard::getUserBoardURL( $user_title_2->getText() ) . "\" rel=\"nofollow\">{$item["comment"]}</a></b>  {$item_time}
+								<div class=\"item\">
+								\"{$item["namespace"]}\"
+								</div>";
+						break;
+					/*case 'network_update':
+						$page_link = '' . $item['network'] . '</a> ';
+						$network_image = SportsTeams::getLogo( $item['sport_id'], $item['team_id'], 's' );
+						$item_html .= wfMsg( 'user-recent-activity-network-update' ) . '
+								<div class="item">
+									<a href="' . SportsTeams::getNetworkURL( $item['sport_id'], $item['team_id'] ) . "\" rel=\"nofollow\">{$network_image} \"{$item["comment"]}\"</a>
+								</div>";
+						break;*/
+					}
+
+					$item_html .= '</div>';
+
+					if( $x <= $limit ){
+						$items_html_type['all'][] = $item_html;
+					}
+					$items_html_type[$item['type']][] = $item_html;
+
+				$x++;
+			}
+
+			$by_type = '';
+			foreach( $items_html_type['all'] as $item ){
+				$by_type .= $item;	
+			}
+			$output .= "<div id=\"recent-all\">$by_type</div>";
+
+			$by_type = '';
+			if( isset( $items_html_type['edit'] ) && is_array( $items_html_type['edit'] ) ){
+				foreach( $items_html_type['edit'] as $item ){
+					$by_type .= $item;	
+				}
+			}
+
+			$by_type = '';
+			if( isset( $items_html_type['comment'] ) && is_array( $items_html_type['comment'] ) ){
+				foreach( $items_html_type['comment'] as $item ){
+					$by_type .= $item;	
+				}
+			}
+
+			$by_type = '';
+			if( isset( $items_html_type['gift-sent'] ) && is_array( $items_html_type['gift-sent'] ) ){
+				foreach( $items_html_type['gift-sent'] as $item ){
+					$by_type .= $item;
+				}
+			}
+
+			$by_type = '';
+			if( isset( $items_html_type['gift-rec']) && is_array( $items_html_type['gift-rec'] ) ){
+				foreach( $items_html_type['gift-rec'] as $item ){
+					$by_type .= $item;
+				}
+			}
+
+			$by_type = '';
+			if( isset( $items_html_type['system_gift'] ) && is_array( $items_html_type['system_gift'] ) ){
+				foreach( $items_html_type['system_gift'] as $item ){
+					$by_type .= $item;
+				}
+			}
+
+			$by_type = '';
+			if( isset( $items_html_type['friend'] ) && is_array( $items_html_type['friend'] ) ){
+				foreach( $items_html_type['friend'] as $item ){
+					$by_type .= $item;
+				}
+			}
+
+			$by_type = '';
+			if( isset( $items_html_type['foe']) && is_array( $items_html_type['foe'] ) ){
+				foreach( $items_html_type['foe'] as $item ){
+					$by_type .= $item;	
+				}
+			}
+
+			$by_type = '';
+			if( isset( $items_html_type['system_message'] ) && is_array( $items_html_type['system_message'] ) ){
+				foreach( $items_html_type['system_message'] as $item ){
+					$by_type .= $item;	
+				}
+			}
+
+			/*$by_type = '';
+			if( isset( $items_html_type['network_update'] ) && is_array( $items_html_type['network_update'] ) ) {
+				foreach( $items_html_type['network_update'] as $item ){
+					$by_type .= $item;	
+				}
+			}*/
+
+		}
+
 		return $output;
 	}
 
@@ -728,7 +955,7 @@ class UserProfilePage extends Article {
 					$user = Title::makeTitle( NS_USER, $gift['user_name_from'] );
 					$gift_image = '<img src="' . $wgUploadPath . '/awards/' . Gifts::getGiftImage( $gift['gift_id'], 'ml' ) . '" border="0" alt="" />';
 					$gift_link = $user = SpecialPage::getTitleFor( 'ViewGift' );
-					$output .= "<a href=\"".$gift_link->escapeFullURL('gift_id='.$gift['id'])."\" ".( ( $gift['status'] == 1 ) ? 'class="user-page-new"' : '' )." rel=\"nofollow\">{$gift_image}</a>";
+					$output .= '<a href="' . $gift_link->escapeFullURL( 'gift_id=' . $gift['id'] ) . '" ' . ( ( $gift['status'] == 1 ) ? 'class="user-page-new"' : '' ) . " rel=\"nofollow\">{$gift_image}</a>";
 					if( $x == count( $gifts ) || $x != 1 && $x%$per_row == 0 ) $output .= '<div class="cleared"></div>';
 					$x++;
 
@@ -753,7 +980,7 @@ class UserProfilePage extends Article {
  
 		$output = '';
 
-		// SYSTEM GIFTS
+		// System gifts
 		$sg = new UserSystemGifts( $user_name );
 
 		// Try cache
@@ -809,7 +1036,7 @@ class UserProfilePage extends Article {
 					$gift_image = '<img src="' . $wgUploadPath . '/awards/' . SystemGifts::getGiftImage( $gift['gift_id'], 'ml' ) . '" border="0" alt="" />';
 					$gift_link = $user = SpecialPage::getTitleFor( 'ViewSystemGift' );
 
-					$output .= "<a href=\"".$gift_link->escapeFullURL('gift_id='.$gift['id'])."\" ".( ( $gift['status'] == 1 ) ? 'class="user-page-new"' : '' )." rel=\"nofollow\">
+					$output .= '<a href="' . $gift_link->escapeFullURL( 'gift_id=' . $gift['id'] ) . '" ' . ( ( $gift['status'] == 1 ) ? 'class="user-page-new"' : '' ) . " rel=\"nofollow\">
 						{$gift_image}
 					</a>";
 
@@ -824,7 +1051,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getUserBoard( $user_id, $user_name ){
-		global $wgMemc, $wgUser, $wgOut, $wgUserProfileDisplay, $wgUserProfileScripts;
+		global $wgUser, $wgOut, $wgUserProfileDisplay, $wgUserProfileScripts;
 
 		// Load messages, we're gonna need 'em
 		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
@@ -886,14 +1113,14 @@ class UserProfilePage extends Article {
 						</select><p>
 						<textarea name="message" id="message" cols="43" rows="4"/></textarea>
 						<div class="user-page-message-box-button">
-							<input type="button" value="' . wfMsg( 'userboard_sendbutton' ) . '" class="site-button" onclick="javascript:send_message();">
+							<input type="button" value="' . wfMsg( 'userboard_sendbutton' ) . '" class="site-button" onclick="javascript:send_message();" />
 						</div>
 					</div>';
 			} else {
 				$login_link = SpecialPage::getTitleFor( 'Userlogin' );
 
 				$output .= '<div class="user-page-message-form">
-						' . wfMsg( 'user-board-login-message', $login_link->escapeFullURL() ) . '
+					' . wfMsg( 'user-board-login-message', $login_link->escapeFullURL() ) . '
 				</div>';
 			}
 		}
@@ -918,7 +1145,7 @@ class UserProfilePage extends Article {
 		}
 
 		$wgOut->addScriptFile( $wgFanBoxScripts . '/FanBoxes.js' );
-		$wgOut->addStyle( '../..' . $wgFanBoxScripts . '/FanBoxes.css' );
+		$wgOut->addExtensionStyle( $wgFanBoxScripts . '/FanBoxes.css' );
 
 		wfLoadExtensionMessages( 'FanBox' );
 
@@ -1088,4 +1315,5 @@ class UserProfilePage extends Article {
 
 		return $output;
 	}
+
 }

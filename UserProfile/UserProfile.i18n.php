@@ -14,6 +14,7 @@ $messages = array();
  */
 $messages['en'] = array(
 	'populateuserprofiles' => 'Populate user profiles',
+	'user-time-ago' => '$1 ago',
 	'user-awards-title' => 'Awards',
 	'user-gifts-title' => 'Gifts',
 	'user-count-separator' => '$1 of $2',
@@ -2738,10 +2739,11 @@ Pursa <a href="$1">aquina</a> p\'abril la tu cuenta, u <a href="$2">aquina</a> p
 
 /** Finnish (Suomi)
  * @author Crt
- * @author Jack Phoenix
+ * @author Jack Phoenix <jack@countervandalism.net>
  */
 $messages['fi'] = array(
 	'populateuserprofiles' => 'Täytä käyttäjäprofiilit',
+	'user-time-ago' => '$1 sitten',
 	'user-awards-title' => 'Palkinnot',
 	'user-gifts-title' => 'Lahjat',
 	'user-count-separator' => '$1 / $2',

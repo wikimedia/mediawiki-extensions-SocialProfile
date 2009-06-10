@@ -42,6 +42,7 @@ $messages['en'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Gift received|Gifts received}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Gift sent|Gifts sent}}',
 	'right-updatepoints' => 'Update edit counts',
+	'level-advanced-to' => 'advanced to level <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'You are now a "$1" on {{SITENAME}}!',
 	'level-advance-body' => 'Hi $1.
 
@@ -570,6 +571,7 @@ $messages['fi'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|saatu lahja|saatua lahjaa}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|lähetetty lahja|lähetettyä lahjaa}}',
 	'right-updatepoints' => 'Päivittää muokkausmääriä',
+	'level-advanced-to' => 'pääsi tasolle <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Olet nyt "$1" {{GRAMMAR:inessive|{{SITENAME}}}}!',
 	'level-advance-body' => 'Hei $1:
 

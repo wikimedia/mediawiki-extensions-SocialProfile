@@ -6,7 +6,6 @@ define( 'NS_USER_WIKI', 200 );
 // Default setup for displaying sections
 $wgUserPageChoice = true;
 
-
 $wgUserProfileDisplay['friends'] = false;
 $wgUserProfileDisplay['foes'] = false;
 $wgUserProfileDisplay['gifts'] = true;
@@ -17,23 +16,23 @@ $wgUserProfileDisplay['stats'] = false; // Display statistics on user profile pa
 $wgUserProfileDisplay['interests'] = true;
 $wgUserProfileDisplay['custom'] = true;
 $wgUserProfileDisplay['personal'] = true;
+$wgUserProfileDisplay['activity'] = false; // Display recent social activity?
 $wgUserProfileDisplay['userboxes'] = false; // If FanBoxes extension is installed, setting this to true will display the user's fanboxes on their profile page
 
 $wgUpdateProfileInRecentChanges = false; // Show a log entry in recent changes whenever a user updates their profile?
 $wgUploadAvatarInRecentChanges = false; // Same as above, but for avatar uploading
 
 $wgAvailableRights[] = 'avatarremove';
-$wgGroupPermissions['staff']['avatarremove'] = true;
 $wgGroupPermissions['sysop']['avatarremove'] = true;
 
 # Add new log types for profile edits and avatar uploads
 global $wgLogTypes, $wgLogNames, $wgLogHeaders, $wgLogActions;
-$wgLogTypes[]                      = 'profile';
-$wgLogNames['profile']            = 'profilelogpage';
-$wgLogHeaders['profile']          = 'profilelogpagetext';
+$wgLogTypes[]                    = 'profile';
+$wgLogNames['profile']           = 'profilelogpage';
+$wgLogHeaders['profile']         = 'profilelogpagetext';
 $wgLogActions['profile/profile'] = 'profilelogentry';
 
-$wgLogTypes[]                      = 'avatar';
+$wgLogTypes[]                    = 'avatar';
 $wgLogNames['avatar']            = 'avatarlogpage';
 $wgLogHeaders['avatar']          = 'avatarlogpagetext';
 $wgLogActions['avatar/avatar'] = 'avatarlogentry';
@@ -41,7 +40,7 @@ $wgLogActions['avatar/avatar'] = 'avatarlogentry';
 $wgHooks['ArticleFromTitle'][] = 'wfUserProfileFromTitle';
 
 /**
- * called by ArticleFromTitle hook
+ * Called by ArticleFromTitle hook
  * Calls UserProfilePage instead of standard article
  *
  * @param &$title Title object
@@ -49,10 +48,9 @@ $wgHooks['ArticleFromTitle'][] = 'wfUserProfileFromTitle';
  * @return true
  */
 function wfUserProfileFromTitle( &$title, &$article ){
-	global $IP, $wgUser, $wgRequest, $wgOut, $wgMemc, $wgStyleVersion, $wgHooks,
-		$wgUserPageChoice, $wgUserProfileScripts;
+	global $wgRequest, $wgOut, $wgHooks, $wgUserPageChoice, $wgUserProfileScripts;
 
-	if ( strpos( $title->getText(), "/" ) === false && ( NS_USER == $title->getNamespace() || NS_USER_PROFILE == $title->getNamespace() ) ) {
+	if ( strpos( $title->getText(), '/' ) === false && ( NS_USER == $title->getNamespace() || NS_USER_PROFILE == $title->getNamespace() ) ) {
 
 		$show_user_page = false;
 		if( $wgUserPageChoice ){
@@ -75,7 +73,7 @@ function wfUserProfileFromTitle( &$title, &$article ){
 			$wgHooks['ParserLimitReport'][] = 'wfUserProfileMarkUncacheable';
 		}
 
-		$wgOut->addScript( "<link rel='stylesheet' type='text/css' href=\"{$wgUserProfileScripts}/UserProfile.css?{$wgStyleVersion}\"/>\n" );
+		$wgOut->addExtensionStyle( $wgUserProfileScripts . '/UserProfile.css' );
 
 		$article = new UserProfilePage( $title );
 	}

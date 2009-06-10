@@ -366,10 +366,10 @@ class UserBoard {
 	}
 
 	public function getTimeOffset( $time, $timeabrv, $timename ){
+		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 		$timeStr = '';
 		if( $time[$timeabrv] > 0 ){
-			$timeStr = $time[$timeabrv] . ' ' . $timename;
-			if( $time[$timeabrv] > 1 ) $timeStr .= 's';
+			$timeStr = wfMsgExt( "userboard-time-{$timename}", 'parsemag', $time[$timeabrv] );
 		}
 		if( $timeStr ) $timeStr .= ' ';
 		return $timeStr;
@@ -383,16 +383,17 @@ class UserBoard {
 	public function getTimeAgo( $time ){
 		$timeArray = $this->dateDiff( time(), $time );
 		$timeStr = '';
-		$timeStrD = $this->getTimeOffset( $timeArray, 'd', 'day' );
-		$timeStrH = $this->getTimeOffset( $timeArray, 'h', 'hour' );
-		$timeStrM = $this->getTimeOffset( $timeArray, 'm', 'minute' );
-		$timeStrS = $this->getTimeOffset( $timeArray, 's', 'second' );
+		$timeStrD = $this->getTimeOffset( $timeArray, 'd', 'days' );
+		$timeStrH = $this->getTimeOffset( $timeArray, 'h', 'hours' );
+		$timeStrM = $this->getTimeOffset( $timeArray, 'm', 'minutes' );
+		$timeStrS = $this->getTimeOffset( $timeArray, 's', 'seconds' );
 		$timeStr = $timeStrD;
 		if( $timeStr < 2 ){
 			$timeStr.= $timeStrH;
 			$timeStr.= $timeStrM;
 			if( !$timeStr ) $timeStr.= $timeStrS;
 		}
+		if( !$timeStr ) $timeStr = wfMsgExt( 'userboard-time-seconds', 'parsemag', 1 );
 		return $timeStr;
 	}
 }
