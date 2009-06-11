@@ -609,6 +609,10 @@ $messages['dsb'] = array(
 	'userboard_loggedout' => 'Musyš <a href="$1">pśizjawjony</a> byś, aby pósłał powěsći drugim wužywarjam.',
 	'userboard_showingmessages' => '{{PLURAL:$4|Pokazujo se powěsć $3|Pokazujotej se powěsći $2-$3|Pokazuju se powěsći $2-$3|Pokazuju se powěsći $2-$3}} z {{PLURAL:$1|$1 powěsći|$1 powěsćowu|$1 powěsćow|$1 powěsćow}}',
 	'right-userboard-delete' => 'Powěsći z dele drugich wulašowaś',
+	'userboard-time-days' => '{{PLURAL:$1|jaden źeń|$1 dna|$1 dny|$1 dnjow}}',
+	'userboard-time-hours' => '{{PLURAL:$1|jadna góźina|$1 góźinje|$1 góźiny|$1 góźin}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|jadna minuta|$1 minuśe|$1 minuty|$1 minutow}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|jadna sekunda|$1 sekunźe|$1 sekundy|$1 sekundow}}',
 	'message_received_subject' => '$1 jo napisał na twóju delu na {{GRAMMAR:lokatiw|{{SITENAME}}}}',
 	'message_received_body' => 'Witaj $1.
 
@@ -868,6 +872,10 @@ vous devez <a href="index.php?title=Special:UserLogin">être connecté</a>.',
 	'userboard_loggedout' => 'Vous devez être <a href="$1">connecté</a> pour poster des messages à d’autres utilisateurs.',
 	'userboard_showingmessages' => 'Visionnement {{PLURAL:$4|du message $3|des messages $2-$3}} sur un total de $1 message{{PLURAL:$1||s}}',
 	'right-userboard-delete' => 'Supprimer les messages d’autres utilisateurs',
+	'userboard-time-days' => '$1 {{PLURAL:$1|jour|jours}}',
+	'userboard-time-hours' => '$1 {{PLURAL:$1|heure|heures}}',
+	'userboard-time-minutes' => '$1 {{PLURAL:$1|minute|minutes}}',
+	'userboard-time-seconds' => '$1 {{PLURAL:$1|seconde|secondes}}',
 	'message_received_subject' => '$1 a écrit sur votre tableau sur {{SITENAME}}',
 	'message_received_body' => 'Salut $1 :
 
@@ -938,6 +946,10 @@ debe antes ter <a href="index.php?title=Special:UserLogin">accedido ao sistema</
 	'userboard_loggedout' => 'Debe <a href="$1">acceder ao sistema</a> para deixar mensaxes a outros usuarios.',
 	'userboard_showingmessages' => 'Amosando {{PLURAL:$4|ata a mensaxe $3|as mensaxes da $2 á $3}} dun total {{PLURAL:$1|dunha mensaxe|de $1 mensaxes}}',
 	'right-userboard-delete' => 'Borrar o taboleiro de mensaxes doutros',
+	'userboard-time-days' => '{{PLURAL:$1|un día|$1 días}}',
+	'userboard-time-hours' => '{{PLURAL:$1|unha hora|$1 horas}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|un minuto|$1 minutos}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|un segundo|$1 segundos}}',
 	'message_received_subject' => '$1 escribiu no seu taboleiro en {{SITENAME}}',
 	'message_received_body' => 'Ola $1:
 
@@ -1018,6 +1030,10 @@ muesch <a href="index.php?title=Special:UserLogin">aagmäldet syy</a>',
 	'userboard_loggedout' => 'Du muesch <a href="$1">aagmäldet syy</a> zum Nochrichte an anderi Nutzer schicke z chenne.',
 	'userboard_showingmessages' => 'Zeig {{PLURAL:$4|Nochricht $3|Nochrichte $2-$3}} vu $1 insgsamt',
 	'right-userboard-delete' => 'Nochrichte vu andere lesche',
+	'userboard-time-days' => '{{PLURAL:$1|1 Tag|$1 Täg}}',
+	'userboard-time-hours' => '{{PLURAL:$1|1 Stund|$1 Stunde}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|1 Minut|$1 Minute}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|1 Sekund|$1 Sekunde}}',
 	'message_received_subject' => '$1 het uf Dyy Schwarz Brätt uf {{SITENAME}} gschribe',
 	'message_received_body' => 'Sali $1:
 
@@ -1171,6 +1187,10 @@ $messages['hsb'] = array(
 	'userboard_loggedout' => 'Dyrbiš <a href="$1">přizjewjeny</a> być, zo by druhim wužiwarjam powěsće pósłał.',
 	'userboard_showingmessages' => '{{PLURAL:$4|Pokazuje so powěsć $3|Pokazujetej so powěsći $2-$3|Pokazuja so powěsće $2-$3|Pokazuja so powěsće $2-$3}} z {{PLURAL:$1|$1 powěsće|$1 powěsćow|$1 powěsćow|$1 powěsćow}}',
 	'right-userboard-delete' => 'Powěsće z deski druhich wušmórnyć',
+	'userboard-time-days' => '{{PLURAL:$1|jedyn dźeń|$1 dnjej|$1 dny|$1 dnjow}}',
+	'userboard-time-hours' => '{{PLURAL:$1|jedna hodźina|$1 hodźinje|$1 hodźiny|$1 hodźin}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|jedna mjeńšina|$1 mjeńšinje|$1 mjeńšiny|$1 mjeńšin}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|jedna sekunda|$1 sekundźe|$1 sekundy|$1 sekundow}}',
 	'message_received_subject' => '$1 je na twoju desku na {{GRAMMAR:lokatiw|{{SITENAME}}}} napisał',
 	'message_received_body' => 'Witaj $1.
 
@@ -1234,6 +1254,10 @@ tu debe <a href="index.php?title=Special:UserLogin">aperir un session</a>.',
 	'userboard_loggedout' => 'Tu debe <a href="$1">aperir un session</a> pro poter inviar messages a altere usatores.',
 	'userboard_showingmessages' => 'Presentation del {{PLURAL:$4|message $3|messages $2-$3}} de $1 {{PLURAL:$1|message|messages}}',
 	'right-userboard-delete' => 'Deler le messages de alteros del tabuliero',
+	'userboard-time-days' => '{{PLURAL:$1|un die|$1 dies}}',
+	'userboard-time-hours' => '{{PLURAL:$1|un hora|$1 horas}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|un minuta|$1 minutas}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|un secunda|$1 secundas}}',
 	'message_received_subject' => '$1 scribeva in tu tabuliero in {{SITENAME}}',
 	'message_received_body' => 'Salute $1,
 
@@ -1658,6 +1682,10 @@ $messages['nl'] = array(
 	'userboard_loggedout' => 'U moet <a href="$1">aangemeld</a> zijn om berichten naar andere gebruikers te verzenden.',
 	'userboard_showingmessages' => '{{PLURAL:$4|Bericht $3|Berichten $2 tot $3}} van {{PLURAL:$1|$1 bericht|$1 berichten}} worden weergegeven',
 	'right-userboard-delete' => 'Boardberichten van andere gebruikers verwijderen',
+	'userboard-time-days' => '{{PLURAL:$1|één dag|$1 dagen}}',
+	'userboard-time-hours' => '{{PLURAL:$1|één|$1}} uur',
+	'userboard-time-minutes' => '{{PLURAL:$1|één minuut|$1 minuten}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|één seconde|$1 seconden}}',
 	'message_received_subject' => '$1 heeft op uw board op {{SITENAME}} geschreven',
 	'message_received_body' => 'Hallo $1.
 
@@ -2075,12 +2103,14 @@ $messages['roa-tara'] = array(
 );
 
 /** Russian (Русский)
+ * @author Ferrer
  * @author Flrn
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
 	'boardblastlogintitle' => 'Нужно представиться системе',
-	'boardblastlogintext' => 'Вы должны представиться системе, чтобы отправлять высказывания на доски. Щёлкните <a href="index.php?title=Special:UserLogin">здесь, чтобы войти в систему</a>.',
+	'boardblastlogintext' => 'Чтобы отправлять высказывания на доски,
+вы должны <a href="index.php?title=Special:UserLogin">войти в систему</a>.',
 	'messagesenttitle' => 'Сообщение отправлено',
 	'boardblasttitle' => 'Отправка высказывания на доску',
 	'boardblaststep1' => 'Шаг 1 - Напишите ваше сообщение',
@@ -2109,6 +2139,7 @@ $messages['ru'] = array(
 	'userboard_confirmdelete' => 'Вы уверены, что хотите удалить это сообщение?',
 	'userboard_sendmessage' => 'Отправить сообщение $1',
 	'userboard_myboard' => 'Моя доска',
+	'userboard_posted_ago' => 'написано $1 назад',
 	'userboard_private' => 'личное',
 	'userboard_public' => 'общедоступное',
 	'userboard_messagetype' => 'Тип сообщения',
@@ -2118,6 +2149,11 @@ $messages['ru'] = array(
 	'userboard_sendbutton' => 'отправить',
 	'userboard_loggedout' => 'Вы должны быть <a href="$1">представлены системе</a>, чтобы отправлять сообщения другим участникам.',
 	'userboard_showingmessages' => 'Отображение {{PLURAL:$4|сообщения $3|сообщений $2—$3}} из $1',
+	'right-userboard-delete' => 'удаление сообщений других досок',
+	'userboard-time-days' => '{{PLURAL:$1|один день|$1 дней}}',
+	'userboard-time-hours' => '{{PLURAL:$1|один час|$1 часов}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|одна минута|$1 минут}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|одна секунда|$1 секунд}}',
 	'message_received_subject' => '$1 написал(а) на вашу доску на сайте {{SITENAME}}',
 	'message_received_body' => 'Привет, $1:
 
@@ -2180,6 +2216,10 @@ $messages['sk'] = array(
 	'userboard_loggedout' => 'Musíte <a href="$1">sa prihlásiť</a>, aby ste mohli posielať správy iným používateľom.',
 	'userboard_showingmessages' => '{{PLURAL:$4|Zobrazuje sa správa $3|Zobrazujú sa správy $2-$3}} z $1 {{PLURAL:$1|správy|správ}}',
 	'right-userboard-delete' => 'Zmazať správy na fóre iných',
+	'userboard-time-days' => '{{PLURAL:$1|jeden deň|$1 dni|$1 dní}}',
+	'userboard-time-hours' => '{{PLURAL:$1|jedna hodina|$1 hodiny|$1 hodín}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|jedna minúta|$1 minúty|$1 minút}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|jedna sekunda|$1 sekundy|$1 sekúnd}}',
 	'message_received_subject' => '$1 napísal na vaše fórum na {{GRAMMAR:lokál|{{SITENAME}}}}',
 	'message_received_body' => 'Ahoj, $1:
 

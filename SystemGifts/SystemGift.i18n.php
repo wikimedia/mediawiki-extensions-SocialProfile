@@ -1685,10 +1685,23 @@ e altere suas preferências para desabilitar e-mails de notificação.',
 );
 
 /** Russian (Русский)
+ * @author Ferrer
  * @author Innv
+ * @author Александр Сигачёв
  */
 $messages['ru'] = array(
+	'ga-back-link' => '<a href="$1">< Вернуться к странице $2</a>',
+	'ga-choosefile' => 'Выберите файл:',
+	'ga-currentimage' => 'Текущее изображение',
 	'ga-goback' => 'Перейти назад',
+	'ga-img' => 'добавить/изменить изображение',
+	'ga-large' => 'Большой',
+	'ga-new' => 'Новый',
+	'ga-next' => 'Следующий',
+	'ga-previous' => 'Предыдущий',
+	'ga-small' => 'Маленький',
+	'ga-threshold' => 'порог',
+	'ga-uploadsuccess' => 'Загрузка успешно завершена',
 );
 
 /** Slovak (Slovenčina)

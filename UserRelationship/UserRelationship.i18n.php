@@ -4985,11 +4985,17 @@ $messages['ru'] = array(
 <a href="$3">Пригласите их.</a>',
 	'ur-add-friends' => '  Хотите больше друзей?
 <a href="$1">Пригласите их</a>',
+	'ur-add-personal-message' => 'Добавить личное сообщение',
+	'ur-previous' => 'предыдущий',
+	'ur-next' => 'следующий',
+	'ur-remove-error-message-remove-yourself' => 'Вы не можете удалить себя.',
 	'ur-remove' => 'Удалить',
 	'ur-cancel' => 'Отмена',
 	'ur-login' => 'Логин',
 	'ur-add-error-message-pending-request-title' => 'Терпение!',
+	'ur-requests-title' => 'Связанные запросы',
 	'ur-accept' => 'Принять',
+	'ur-reject' => 'Отклонить',
 );
 
 /** Tachelhit (Tašlḥiyt)

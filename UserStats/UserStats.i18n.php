@@ -426,6 +426,7 @@ $messages['dsb'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Dar dostaty|Dara dostatej|Dary dostate|Darow dostatych}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Dar pósłany|Dara pósłanej|Dary pósłane|Darow pósłanych}}',
 	'right-updatepoints' => 'Licbu změnow wobźěłaś',
+	'level-advanced-to' => 'póstupijo k rowninje <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Sy něnto "$1" na {{GRAMMAR:lokatiw|{{SITENAME}}}}!',
 	'level-advance-body' => 'Witaj $1.
 
@@ -592,6 +593,7 @@ ja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.',
  * @author Cedric31
  * @author Crochet.david
  * @author Grondin
+ * @author McDutchie
  */
 $messages['fr'] = array(
 	'user-stats-alltime-title' => 'Points les plus élevés toutes périodes confondues',
@@ -624,6 +626,7 @@ $messages['fr'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|cadeau reçu|cadeaux reçus}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|cadeau envoyé|cadeaux envoyés}}',
 	'right-updatepoints' => 'Mise à jour du compteur d’éditions',
+	'level-advanced-to' => 'a avancé vers le niveau <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Vous avez désormais un « $1 » sur {{SITENAME}} !',
 	'level-advance-body' => 'Salut $1 : 
 
@@ -674,6 +677,7 @@ $messages['gl'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Agasallo recibido|Agasallos recibidos}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Agasallo enviado|Agasallos enviados}}',
 	'right-updatepoints' => 'Actualizar o contador de edicións',
+	'level-advanced-to' => 'avanzou ata o nivel <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Agora é un "$1" en {{SITENAME}}!',
 	'level-advance-body' => 'Ola, $1:
 
@@ -724,6 +728,7 @@ $messages['gsw'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Gschänk iberchu|Gschänk inerchu}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Gschänk gmacht|Gschänk gmacht}}',
 	'right-updatepoints' => 'Bearbeitigszeller aktualisiere',
+	'level-advanced-to' => 'furtgschritte zum Level <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Du bisch jetz „$1“ uf {{SITENAME}}!',
 	'level-advance-body' => 'Sali $1,
 
@@ -772,6 +777,7 @@ $messages['he'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|ניתן גינוי|ניתנו גינויים}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|התקבלה מתנה|התקבלו מתנות}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|נשלחה מתנה|נשלחו מתנות}}',
+	'right-updatepoints' => 'עדכון מספרי העריכות',
 	'level-advance-subject' => 'כעת הינכם  "$1" ב{{grammar:תחילית|{{SITENAME}}}}!',
 	'level-advance-body' => 'שלום $1:
 
@@ -822,6 +828,7 @@ $messages['hsb'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Dóstany dar|Dóstanej daraj|Dóstane dary|Dóstanych darow}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Pósłany dar|Pósłanej daraj|Pósłane dary|Pósłanych darow}}',
 	'right-updatepoints' => 'Ličbu změnow aktualizować',
+	'level-advanced-to' => 'postupi k runinje <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Sy nětko "$1" na {{GRAMMAR:lokatiw|{{SITENAME}}}}',
 	'level-advance-body' => 'Witaj $1:
 
@@ -872,6 +879,7 @@ $messages['ia'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Dono|Donos}} recipite',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Dono|Donos}} inviate',
 	'right-updatepoints' => 'Actualisar le contator de modificationes',
+	'level-advanced-to' => 'avantiava verso le nivello <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Tu es ora un "$1" in {{SITENAME}}!',
 	'level-advance-body' => 'Salute $1,
 
@@ -1126,6 +1134,7 @@ $messages['nl'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Cadeautje|Cadeautjes}} ontvangen',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Cadeautje|Cadeautjes}} gestuurd',
 	'right-updatepoints' => 'Bewerkingstellers bijwerken',
+	'level-advanced-to' => 'is gepromoveerd tot niveau tot niveau <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'U bent nu "$1" op {{SITENAME}}',
 	'level-advance-body' => 'Hallo $1.
 
@@ -1512,6 +1521,7 @@ $messages['ru'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Подано голосов против|Подано голосов против}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Получено подарков|Получено подарков}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Отправлено подарков|Отправлено подарков}}',
+	'right-updatepoints' => 'обновление счётчика правок',
 	'level-advance-subject' => 'Вы теперь «$1» в проекте {{SITENAME}}!',
 	'level-advance-body' => 'Привет, $1.
 
@@ -1562,6 +1572,7 @@ $messages['sk'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Obdržaný dar|Obdržané dary|Obdržaných darov}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Poslaný dar|Poslané dary|Poslaných darov}}',
 	'right-updatepoints' => 'Aktualizovať počty úprav',
+	'level-advanced-to' => 'postúpil na úroveň <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Teraz ste „$1” na {{GRAMMAR:lokál|{{SITENAME}}}}!',
 	'level-advance-body' => 'Ahoj $1:
 

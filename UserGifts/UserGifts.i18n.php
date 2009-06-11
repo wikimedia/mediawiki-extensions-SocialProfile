@@ -2479,22 +2479,33 @@ $messages['roa-tara'] = array(
 );
 
 /** Russian (Русский)
+ * @author Ferrer
  * @author Innv
  * @author Rubin
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
 	'giftmanager-image' => 'добавить/заменить изображение',
+	'giftmanager-public' => 'публичные',
+	'giftmanager-private' => 'частные',
 	'g-add-message' => 'Добавить сообщение',
+	'g-back-link' => '< Вернуться к странице $1',
 	'g-choose-file' => 'Выберите файл:',
 	'g-cancel' => 'Отмена',
 	'g-created-by' => 'создан',
+	'g-current-image' => 'Текущее изображение',
 	'g-give-all-message-title' => 'Добавить сообщение',
 	'g-give-list-select' => 'выбрать друга',
 	'g-give-separator' => 'или',
 	'g-go-back' => 'Назад',
 	'g-main-page' => 'Заглавная страница',
+	'g-new' => 'новый',
+	'g-next' => 'Следующий',
+	'g-previous' => 'Предыдущий',
 	'g-remove' => 'Удалить',
+	'g-remove-title' => 'Удалить «$1» ?',
+	'g-small' => 'Маленький',
+	'g-uploadsuccess' => 'Загрузка успешно завершена',
 	'g-your-profile' => 'Ваш профиль',
 );
 

@@ -1873,6 +1873,7 @@ Klick <a href="$1">hier</a> um dich anzumelden oder klicke <a href="$2">hier</a>
  */
 $messages['dsb'] = array(
 	'populateuserprofiles' => 'Wužywarske profile napołniś',
+	'user-time-ago' => 'wót $1',
 	'user-awards-title' => 'Myta',
 	'user-gifts-title' => 'Dary',
 	'user-count-separator' => '$1 z $2',
@@ -2739,6 +2740,7 @@ Pursa <a href="$1">aquina</a> p\'abril la tu cuenta, u <a href="$2">aquina</a> p
 
 /** Finnish (Suomi)
  * @author Crt
+ * @author Jack Phoenix
  * @author Jack Phoenix <jack@countervandalism.net>
  */
 $messages['fi'] = array(
@@ -3318,6 +3320,7 @@ $messages['grc'] = array(
  */
 $messages['gsw'] = array(
 	'populateuserprofiles' => 'Benutzerprofil vervollständige',
+	'user-time-ago' => 'syt $1',
 	'user-awards-title' => 'Uuszeichnige',
 	'user-gifts-title' => 'Gschänk',
 	'user-count-separator' => '$1 vu $2',
@@ -3734,6 +3737,7 @@ $messages['hil'] = array(
  */
 $messages['hsb'] = array(
 	'populateuserprofiles' => 'Wužiwarske profile napjelnić',
+	'user-time-ago' => 'wot $1',
 	'user-awards-title' => 'Myta',
 	'user-gifts-title' => 'Dary',
 	'user-count-separator' => '$1 z $2',
@@ -6807,6 +6811,7 @@ $messages['roa-tara'] = array(
  */
 $messages['ru'] = array(
 	'populateuserprofiles' => 'Заполнение очерков участников',
+	'user-time-ago' => 'назад',
 	'user-awards-title' => 'Награды',
 	'user-gifts-title' => 'Подарки',
 	'user-count-separator' => '$1 из $2',
@@ -6825,9 +6830,9 @@ $messages['ru'] = array(
 	'user-send-gift' => 'Отправить подарок',
 	'user-contributions' => 'Вклад',
 	'user-stats-title' => 'Статистика',
-	'user-stats-edits' => 'Правок',
-	'user-stats-votes' => 'Голосов',
-	'user-stats-comments' => 'Комментариев',
+	'user-stats-edits' => '{{PLURAL:$1|Правка|Правки}}',
+	'user-stats-votes' => '{{PLURAL:$1|Голос|Голоса}}',
+	'user-stats-comments' => '{{PLURAL:$1|Комментарий|Комментарии}}',
 	'other-info-title' => 'Другие сведения',
 	'user-friends-title' => 'Друзья',
 	'user-foes-title' => 'Неприятели',
@@ -6847,6 +6852,7 @@ $messages['ru'] = array(
 	'custom-info-field4' => 'Пользовательские 4',
 	'custom-no-info' => 'Нет пользовательской информации',
 	'profile-updated-personal' => 'Обновить ваш профиль',
+	'profile-not-provided' => 'Не предусмотрено',
 	'populate-user-profile-done' => '{{PLURAL:$1|Добавлен $1 профиль|Добавлено $1 профиля|Добавлено $1 профилей}}',
 	'user-board-title' => 'Доска',
 	'user-send-board-blast' => 'Отправить высказывание на доску',
@@ -6887,6 +6893,7 @@ $messages['ru'] = array(
 	'user-profile-personal-info' => 'Сведения',
 	'user-profile-personal-name' => 'Имя',
 	'user-profile-personal-email' => 'Эл. почта',
+	'user-profile-personal-email-needs-auth' => '(вы должны подтвердить адрес электронный почты для получения уведомлений сайта)',
 	'user-profile-personal-confirmemail' => 'Подтвердите эл. почту',
 	'user-profile-personal-location' => 'Местонахождение',
 	'user-profile-personal-city' => 'Город',
@@ -6958,6 +6965,8 @@ $messages['ru'] = array(
 	'user-type-toggle-new' => 'Использовать социальную страницу участника',
 	'user-board-login-message' => 'Вы должны <a href="$1">представиться системе</a> чтобы отправлять сообщения другим учсатникам.',
 	'avatarupload-removeavatar' => 'Удалить аватар',
+	'profilelogpage' => 'Журнал редактирования личных страниц',
+	'profilelogpagetext' => 'Это журнал редактирования личных страниц',
 	'user-profile-picture-log' => 'аватар',
 	'user-profile-picture-log-entry' => 'загрузил новый аватар',
 );
