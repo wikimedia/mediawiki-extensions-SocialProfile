@@ -5,7 +5,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 	/**
 	 * Constructor
 	 */
-	public function __construct(){
+	public function __construct() {
 		parent::__construct( 'TopUsersRecent' );
 	}
 
@@ -14,7 +14,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 	 *
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
-	public function execute( $par ){
+	public function execute( $par ) {
 		global $wgRequest, $wgUser, $wgOut, $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly,
 		$wgUserLevels, $wgUploadPath, $wgScriptPath;
 
@@ -25,9 +25,9 @@ class TopFansRecent extends UnlistedSpecialPage {
 		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStats/TopList.css' );
 		$period = $wgRequest->getVal( 'period' );
 
-		if( !$period ) $period = 'weekly';
+		if ( !$period ) $period = 'weekly';
 
-		if( $period == 'weekly' ){
+		if ( $period == 'weekly' ) {
 			$wgOut->setPageTitle( wfMsg( 'user-stats-weekly-title' ) );
 		} else {
 			$wgOut->setPageTitle( wfMsg( 'user-stats-monthly-title' ) );
@@ -40,11 +40,11 @@ class TopFansRecent extends UnlistedSpecialPage {
 		// Try cache
 		$key = wfMemcKey( 'user_stats', $period, 'points', $count );
 		$data = $wgMemc->get( $key );
-		if( $data != '' ){
-			wfDebug("Got top users by {$period} points ({$count}) from cache\n");
+		if ( $data != '' ) {
+			wfDebug( "Got top users by {$period} points ({$count}) from cache\n" );
 			$user_list = $data;
 		} else {
-			wfDebug("Got top users by {$period} points ({$count}) from DB\n");
+			wfDebug( "Got top users by {$period} points ({$count}) from DB\n" );
 
 			$params['ORDER BY'] = 'up_points DESC';
 			$params['LIMIT'] = $count;
@@ -56,7 +56,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 				__METHOD__,
 				$params
 			);
-			while( $row = $dbr->fetchObject( $res ) ){
+			while ( $row = $dbr->fetchObject( $res ) ) {
 				$user_list[] = array(
 					'user_id' => $row->up_user_id,
 					'user_name' => $row->up_user_name,
@@ -74,7 +74,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 			<h1>' . wfMsg( 'top-fans-by-points-nav-header' ) . '</h1>
 			<p><a href="' . $top_title->escapeFullURL() . '">' . wfMsg( 'top-fans-total-points-link' ) . '</a></p>';
 
-		if( $period == 'weekly' ) {
+		if ( $period == 'weekly' ) {
 			$out .= '<p><a href="' . $recent_title->escapeFullURL( 'period=monthly' ) . '">' . wfMsg( 'top-fans-monthly-points-link' ) . '</a><p>
 			<p><b>' . wfMsg( 'top-fans-weekly-points-link' ) . '</b></p>';
 		} else {
@@ -87,12 +87,12 @@ class TopFansRecent extends UnlistedSpecialPage {
 		$nav = array();
 
 		$lines = explode( "\n", wfMsgForContent( 'topfans-by-category' ) );
-		if( count( $lines ) > 0 ) {
+		if ( count( $lines ) > 0 ) {
 			$out .= '<h1 style="margin-top:15px !important;">' . wfMsg( 'top-fans-by-category-nav-header' ) . '</h1>';
 		}
-		foreach( $lines as $line ) {
+		foreach ( $lines as $line ) {
 
-			if( strpos( $line, '*' ) !== 0 ){
+			if ( strpos( $line, '*' ) !== 0 ) {
 				continue;
 			} else {
 				$line = explode( '|', trim( $line, '* ' ), 2 );
@@ -106,7 +106,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 		$x = 1;
 		$out .= '<div class="top-users">';
 
-		foreach( $user_list as $user ){
+		foreach ( $user_list as $user ) {
 			$user_title = Title::makeTitle( NS_USER, $user['user_name'] );
 			$avatar = new wAvatar( $user['user_id'], 'm' );
 			$commentIcon = $avatar->getAvatarImage();

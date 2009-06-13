@@ -92,7 +92,7 @@ It is that easy.',
 	'gift_received_subject' => '$1 has sent you the $2 gift on {{SITENAME}}!',
 	'gift_received_body' => 'Hi $1.
 
-$2 just sent you the $3 gift on {{SITENAME}}.   
+$2 just sent you the $3 gift on {{SITENAME}}.
 
 Want to read the note $2 left you and see your gift?   Click the link below:
 
@@ -107,7 +107,7 @@ The {{SITENAME}} team
 
 ---
 
-Hey, want to stop getting emails from us?  
+Hey, want to stop getting emails from us?
 
 Click $5
 and change your settings to disable email notifications.',
@@ -226,7 +226,7 @@ $messages['ar'] = array(
 	'gift_received_subject' => '$1 أرسل لك الهدية $2 في {{SITENAME}}!',
 	'gift_received_body' => 'مرحبا $1:
 
-$2 أرسل حالا لك الهدية $3 في {{SITENAME}}.   
+$2 أرسل حالا لك الهدية $3 في {{SITENAME}}.
 
 تريد قراءة الملاحظة التي تركها $2 لك ورؤية هديتك؟  اضغط على الوصلة بالأسفل:
 
@@ -241,7 +241,7 @@ $4
 
 ---
 
-ها، تريد التوقف عن تلقي رسائل بريد إلكتروني منا؟   
+ها، تريد التوقف عن تلقي رسائل بريد إلكتروني منا؟
 
 اضغط $5
 وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
@@ -328,7 +328,7 @@ $messages['arz'] = array(
 	'gift_received_subject' => '$1 أرسل لك الهدية $2 فى {{SITENAME}}!',
 	'gift_received_body' => 'مرحبا $1:
 
-$2 أرسل حالا لك الهدية $3 فى {{SITENAME}}.   
+$2 أرسل حالا لك الهدية $3 فى {{SITENAME}}.
 
 تريد قراءة الملاحظة التى تركها $2 لك ورؤية هديتك؟  اضغط على الوصلة بالأسفل:
 
@@ -343,7 +343,7 @@ $4
 
 ---
 
-ها، تريد التوقف عن تلقى رسائل بريد إلكترونى منا؟   
+ها، تريد التوقف عن تلقى رسائل بريد إلكترونى منا؟
 
 اضغط $5
 وغير إعداداتك لتعطيل إخطارات البريد الإلكترونى.',
@@ -889,7 +889,7 @@ Es fácil.',
 	'gift_received_subject' => '$1 le ha enviado el regalo $2 en {{SITENAME}}!',
 	'gift_received_body' => 'Hola $1.
 
-$2 acaba de enviarte el regalo $3 en {{SITENAME}}.   
+$2 acaba de enviarte el regalo $3 en {{SITENAME}}.
 
 Deseas leer la nota $2 que te dejó y ver tu regalo?  Haz click en el vínculo de abajo:
 
@@ -904,7 +904,7 @@ El equipo {{SITENAME}}
 
 ---
 
-Hey, Deseas no recibir más correos electrónicos de nosotros?   
+Hey, Deseas no recibir más correos electrónicos de nosotros?
 
 Haz click en $5
 y cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.',
@@ -998,7 +998,7 @@ $messages['fi'] = array(
 	'gift_received_subject' => '$1 on lähettänyt sinulle $2-lahjan {{GRAMMAR:inessive|{{SITENAME}}}}!',
 	'gift_received_body' => 'Hei $1:
 
-$2 juuri lähetti sinulle $3-lahjan {{GRAMMAR:inessive|{{SITENAME}}}}.   
+$2 juuri lähetti sinulle $3-lahjan {{GRAMMAR:inessive|{{SITENAME}}}}.
 
 Haluatko lukea viestin, jonka $2 jätti sinulle ja nähdä lahjasi?   Napsauta linkkiä alapuolella:
 
@@ -1205,7 +1205,7 @@ $messages['gl'] = array(
 	'gift_received_subject' => '$1 envioulle o agasallo $2 en {{SITENAME}}!',
 	'gift_received_body' => 'Ola $1:
 
-$2 acaba de enviarlle o agasallo $3 en {{SITENAME}}.   
+$2 acaba de enviarlle o agasallo $3 en {{SITENAME}}.
 
 Quere ler a nota $2 que lle deixaron e ver o seu agasallo?  Prema na ligazón de embaixo:
 
@@ -1316,7 +1316,7 @@ $messages['gsw'] = array(
 	'gift_received_subject' => '$1 het Dir uf {{SITENAME}} $2 gschänkt!',
 	'gift_received_body' => 'Sali $1:
 
-$2 het Dir grad $3 gschänkt uf {{SITENAME}}.   
+$2 het Dir grad $3 gschänkt uf {{SITENAME}}.
 
 Wetsch d Notiz läse, wu $2 Dir derzue gschribe het un, un Dyy Gschänk bschaue?  Druck s Gleich do unte:
 
@@ -1330,7 +1330,7 @@ Dankschen,
 D Lyt vum {{SITENAME}}
 ---
 
-Ha, Du wetsch gar keini E-Mail meh iberchu vun is?   
+Ha, Du wetsch gar keini E-Mail meh iberchu vun is?
 
 Druck $5
 un ändere Dyyni Yystellige go d E-Mail-Benochrichtigunge verhindere.',
@@ -1570,7 +1570,7 @@ $messages['ja'] = array(
 	'g-create-gift' => 'プレゼントを作成',
 	'g-created-by' => '作成',
 	'g-current-image' => '現在の画像',
-	'g-delete-message' => 'あなたの贈り物 "$1" を確実に削除する必要がありますがよろしいでしょうか？ 
+	'g-delete-message' => 'あなたの贈り物 "$1" を確実に削除する必要がありますがよろしいでしょうか？
 またこれは受け取ったと思われる他の利用者からも削除されます。',
 	'g-description-title' => '$1 の贈り物は "$2"',
 	'g-error-do-not-own' => 'あなたはこの贈り物を所持してません。',
@@ -1585,7 +1585,7 @@ $messages['ja'] = array(
 	'g-gift' => 'プレゼント',
 	'g-gift-name' => 'プレゼント名',
 	'g-give-gift' => 'プレゼントを贈る',
-	'g-give-all' => '贈り物 $1 を与えますか？ 
+	'g-give-all' => '贈り物 $1 を与えますか？
 以下の贈り物を1つクリックし、そして「贈り物を送る」をクリックしてください。
 簡単にできます。',
 	'g-give-all-message-title' => 'メッセージの追加',
@@ -1628,7 +1628,7 @@ $messages['ja'] = array(
 	'gift_received_subject' => '$1は{{SITENAME}}上に$2の贈り物をあなたに送りました!',
 	'gift_received_body' => 'こんにちは、$1 さん。
 
-$2 はちょうど{{SITENAME}}上であなたに $3 の贈り物を送りました。  
+$2 はちょうど{{SITENAME}}上であなたに $3 の贈り物を送りました。
 
 $2 からあなたへの短い手紙を読み、贈り物を見てみませんか？以下のリンクをクリックしてください:
 
@@ -1748,7 +1748,7 @@ De Lück vun de {{SITENAME}}
 
 ---
 
-Wells De kei e-mail mieh vun uns krijje?   
+Wells De kei e-mail mieh vun uns krijje?
 
 Dann donn op $5 klekke,
 un donn Ding Enshtellunge ändere, öm kei Meffeilunge meih övver e-mail ze krijje.',
@@ -1922,7 +1922,7 @@ $messages['nl'] = array(
 	'gift_received_subject' => '$1 hebt u de $2-gift gezonden op {{SITENAME}}!',
 	'gift_received_body' => 'Hallo $1,
 
-$2 heeft u zojuist de $3-gift gestuurd op {{SITENAME}}.   
+$2 heeft u zojuist de $3-gift gestuurd op {{SITENAME}}.
 
 Wilt u het bericht lezen dat $2 voor u gemaakt hebt en uw gift weergeven? Klik dan op de onderstaande verwijzing:
 
@@ -2023,7 +2023,7 @@ $messages['nn'] = array(
 	'gift_received_subject' => '$1 har sendt deg gåva «$2» på {{SITENAME}}!',
 	'gift_received_body' => 'Hei $1:
 
-$2 sendte deg nett $3-gåva på {{SITENAME}}.   
+$2 sendte deg nett $3-gåva på {{SITENAME}}.
 
 Ynskjer du å sjå merknaden $2 lét att til deg, og å sjå gåva?  Trykk på lenkja nedanfor:
 
@@ -2327,7 +2327,7 @@ $messages['pt'] = array(
 	'gift_received_subject' => '$1 enviou para você o Presente $2 Gift em {{SITENAME}}!',
 	'gift_received_body' => 'Oi $1:
 
-$2 acabou de enviar o presente $3 em {{SITENAME}}.   
+$2 acabou de enviar o presente $3 em {{SITENAME}}.
 
 Quer ler o recado que $2 deixou e ver seu presente? Clique no link abaixo:
 
@@ -2388,8 +2388,8 @@ $messages['pt-br'] = array(
 	'g-gift' => 'presente',
 	'g-gift-name' => 'nome do presente',
 	'g-give-gift' => 'Dar Presente',
-	'g-give-all' => 'Quer dar um presente para $1? 
-Apenas clique em um dos presentes abaixo e clique em "Enviar Presente". 
+	'g-give-all' => 'Quer dar um presente para $1?
+Apenas clique em um dos presentes abaixo e clique em "Enviar Presente".
 É fácil assim.',
 	'g-give-all-message-title' => 'Adicionar Mensagem',
 	'g-give-all-title' => 'Dar um Presente para $1',
@@ -2431,7 +2431,7 @@ Apenas clique em um dos presentes abaixo e clique em "Enviar Presente".
 	'gift_received_subject' => '$1 enviou para você o Presente $2 Gift em {{SITENAME}}!',
 	'gift_received_body' => 'Oi $1:
 
-$2 acabou de enviar o presente $3 em {{SITENAME}}.   
+$2 acabou de enviar o presente $3 em {{SITENAME}}.
 
 Quer ler o recado que $2 deixou e ver seu presente? Clique na ligação abaixo:
 

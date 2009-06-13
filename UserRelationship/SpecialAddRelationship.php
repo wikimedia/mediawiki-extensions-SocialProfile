@@ -36,7 +36,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 
 		$usertitle = Title::newFromDBkey( $wgRequest->getVal( 'user' ) );
 
-		if( !$usertitle ){
+		if ( !$usertitle ) {
 			$wgOut->addWikiText( wfMsgNoTrans( 'ur-add-no-user' ) );
 			return false;
 		}
@@ -46,53 +46,53 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 		$this->user_name_to = $usertitle->getText();
 		$this->user_id_to = User::idFromName( $this->user_name_to );
 		$this->relationship_type = $wgRequest->getVal( 'rel_type' );
-		if( !$this->relationship_type || !is_numeric( $this->relationship_type ) ) $this->relationship_type = 1;
+		if ( !$this->relationship_type || !is_numeric( $this->relationship_type ) ) $this->relationship_type = 1;
 
-		if( ( $wgUser->getID() == $this->user_id_to ) && ( $wgUser->getID() != 0 ) ) {
+		if ( ( $wgUser->getID() == $this->user_id_to ) && ( $wgUser->getID() != 0 ) ) {
 			$out .= $wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
 			$out .= '<div class="relationship-error-message">
 				' . wfMsg( 'ur-add-error-message-yourself' ) . '
 			</div>
 			<div>
 				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" size="20" onclick=\'window.location="index.php?title="' . wfMsgForContent( 'mainpage' ) . '"\' />';
-			 	if( $wgUser->isLoggedIn() ){
-					$out.= '<input type="button" class="site-button" value="' . wfMsg( 'ur-your-profile' ) . '" size="20" onclick=\'window.location="' . $wgUser->getUserPage()->escapeFullURL() . '"\' />';
+			 	if ( $wgUser->isLoggedIn() ) {
+					$out .= '<input type="button" class="site-button" value="' . wfMsg( 'ur-your-profile' ) . '" size="20" onclick=\'window.location="' . $wgUser->getUserPage()->escapeFullURL() . '"\' />';
 				}
 			$out .= '</div>';
 
 			$wgOut->addHTML( $out );
 
-		} else if( $wgUser->isBlocked() ) {
+		} else if ( $wgUser->isBlocked() ) {
 			$out .= $wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
 			$out .= '<div class="relationship-error-message">
 				' . wfMsg( 'ur-add-error-message-blocked' ) . '
 			</div>
 			<div>
 				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" size="20" onclick=\'window.location="index.php?title="' . wfMsgForContent( 'mainpage' ) . '"\' />';
-			 	if( $wgUser->isLoggedIn() ){
-					$out.= '<input type="button" class="site-button" value="' . wfMsg( 'ur-your-profile' ) . '" size="20" onclick=\'window.location="' . $wgUser->getUserPage()->escapeFullURL() . '"\' />';
+			 	if ( $wgUser->isLoggedIn() ) {
+					$out .= '<input type="button" class="site-button" value="' . wfMsg( 'ur-your-profile' ) . '" size="20" onclick=\'window.location="' . $wgUser->getUserPage()->escapeFullURL() . '"\' />';
 				}
 			$out .= '</div>';
 
 			$wgOut->addHTML( $out );
 
-		} else if( $this->user_id_to == 0 ) {
+		} else if ( $this->user_id_to == 0 ) {
 			$out .= $wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
 			$out .= '<div class="relationship-error-message">
 				' . wfMsg( 'ur-add-error-message-no-user' ) . '
 			</div>
 			<div>
 				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" size="20" onclick=\'window.location="index.php?title="' . wfMsgForContent( 'mainpage' ) . '"\' />';
-				if( $wgUser->isLoggedIn() ){
-					$out.= '<input type="button" class="site-button" value="' . wfMsg( 'ur-your-profile' ) . '" size="20" onclick=\'window.location="' . $wgUser->getUserPage()->escapeFullURL() . '"\' />';
+				if ( $wgUser->isLoggedIn() ) {
+					$out .= '<input type="button" class="site-button" value="' . wfMsg( 'ur-your-profile' ) . '" size="20" onclick=\'window.location="' . $wgUser->getUserPage()->escapeFullURL() . '"\' />';
 				}
 			$out .= '</div>';
 
 			$wgOut->addHTML( $out );
 
-		} else if( UserRelationship::getUserRelationshipByID( $this->user_id_to, $wgUser->getID() ) >=1 ){
+		} else if ( UserRelationship::getUserRelationshipByID( $this->user_id_to, $wgUser->getID() ) >= 1 ) {
 
-			if( UserRelationship::getUserRelationshipByID( $this->user_id_to, $wgUser->getID() ) == 1 ) {
+			if ( UserRelationship::getUserRelationshipByID( $this->user_id_to, $wgUser->getID() ) == 1 ) {
 				$error = wfMsg( 'ur-add-error-message-existing-relationship-friend', $this->user_name_to );
 			} else {
 				$error = wfMsg( 'ur-add-error-message-existing-relationship-foe', $this->user_name_to );
@@ -108,17 +108,17 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				{$avatar_img}
 				" . $error . "
 				<div class=\"relationship-buttons\">
-					<input type=\"button\" class=\"site-button\" value=\"".wfMsg('ur-main-page')."\" size=\"20\" onclick=\"window.location='index.php?title=" . wfMsgForContent( 'mainpage' ) . "'\"/>
-					<input type=\"button\" class=\"site-button\" value=\"".wfMsg('ur-your-profile')."\" size=\"20\" onclick=\"window.location='".$wgUser->getUserPage()->escapeFullURL() . "'\"/>
+					<input type=\"button\" class=\"site-button\" value=\"" . wfMsg( 'ur-main-page' ) . "\" size=\"20\" onclick=\"window.location='index.php?title=" . wfMsgForContent( 'mainpage' ) . "'\"/>
+					<input type=\"button\" class=\"site-button\" value=\"" . wfMsg( 'ur-your-profile' ) . "\" size=\"20\" onclick=\"window.location='" . $wgUser->getUserPage()->escapeFullURL() . "'\"/>
 				</div>
 				<div class=\"cleared\"></div>
 			</div>";
 
 			$wgOut->addHTML( $out );
 
-		} else if( UserRelationship::userHasRequestByID( $this->user_id_to, $wgUser->getID() ) == true ){
+		} else if ( UserRelationship::userHasRequestByID( $this->user_id_to, $wgUser->getID() ) == true ) {
 
-			if( $this->relationship_type == 1 ) {
+			if ( $this->relationship_type == 1 ) {
 				$error = wfMsg( 'ur-add-error-message-pending-friend-request', $this->user_name_to );
 			} else {
 				$error = wfMsg( 'ur-add-error-message-pending-foe-request', $this->user_name_to );
@@ -140,13 +140,13 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 			</div>";
 
 			$wgOut->addHTML( $out );
-		} else if( UserRelationship::userHasRequestByID( $wgUser->getID(), $this->user_id_to ) == true ) {
+		} else if ( UserRelationship::userHasRequestByID( $wgUser->getID(), $this->user_id_to ) == true ) {
 			$relationship_request = SpecialPage::getTitleFor( 'ViewRelationshipRequests' );
 			$wgOut->redirect( $relationship_request->getFullURL() );
-		} else if( $wgUser->getID() == 0 ){
+		} else if ( $wgUser->getID() == 0 ) {
 			$login_link = SpecialPage::getTitleFor( 'Userlogin' );
 
-			if( $this->relationship_type == 1 ) {
+			if ( $this->relationship_type == 1 ) {
 				$error = wfMsg( 'ur-add-error-message-not-loggedin-friend' );
 			} else {
 				$error = wfMsg( 'ur-add-error-message-not-loggedin-foe' );
@@ -166,7 +166,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 		} else {
 			$rel = new UserRelationship( $wgUser->getName() );
 
-			if( $wgRequest->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
+			if ( $wgRequest->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
 				$_SESSION['alreadysubmitted'] = true;
 				$rel = $rel->addRelationshipRequest( $this->user_name_to, $this->relationship_type, $wgRequest->getVal( 'message' ) );
 
@@ -175,7 +175,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 
 				$out = '';
 
-				if( $this->relationship_type == 1 ){
+				if ( $this->relationship_type == 1 ) {
 					$out .= $wgOut->setPageTitle( wfMsg( 'ur-add-sent-title-friend', $this->user_name_to ) );
 					$sent = wfMsg( 'ur-add-sent-message-friend', $this->user_name_to );
 				} else {
@@ -211,7 +211,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 
 		$form = '';
 
-		if( $this->relationship_type == 1 ) {
+		if ( $this->relationship_type == 1 ) {
 			$form .= $wgOut->setPageTitle( wfMsg( 'ur-add-title-friend', $this->user_name_to ) );
 			$add = wfMsg( 'ur-add-message-friend', $this->user_name_to );
 			$button = wfMsg( 'ur-add-button-friend' );

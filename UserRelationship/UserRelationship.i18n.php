@@ -657,7 +657,7 @@ $messages['be-tarask'] = array(
 	'ur-add-title-friend' => 'Вы жадаеце дадаць $1 у сьпіс сяброў?',
 	'ur-add-message-foe' => 'Зараз Вы дададзіце $1 у сьпіс ворагаў.
 Мы паведамім $1, каб пацьвердзіць Вашую варожасьць.',
-	'ur-add-message-friend' => 'Зараз Вы дададзіце $1 у сьпіс сяброў. 
+	'ur-add-message-friend' => 'Зараз Вы дададзіце $1 у сьпіс сяброў.
 Мы паведамім $1, каб пацьвердзіць Вашае сяброўства.',
 	'ur-add-button-foe' => 'Дадаць у ворагі',
 	'ur-add-button-friend' => 'Дадаць у сябры',
@@ -665,7 +665,7 @@ $messages['be-tarask'] = array(
 	'ur-add-sent-title-friend' => 'Вы даслалі запыт аб сяброўстве да $1!',
 	'ur-add-sent-message-foe' => 'Ваш запыт аб варожасьці быў дасланы $1 для пацьверджаньня.
 Калі $1 пацьвердзіць Ваш запыт, Вы атрымаеце ліст па электроннай пошце',
-	'ur-add-sent-message-friend' => 'Ваш запыт аб сяброўстве быў дасланы $1 для пацьверджаньня. 
+	'ur-add-sent-message-friend' => 'Ваш запыт аб сяброўстве быў дасланы $1 для пацьверджаньня.
 Калі $1 пацьвердзіць Ваш запыт, Вы атрымаеце ліст па электроннай пошце',
 	'ur-add-error-message-no-user' => 'Удзельніка, якога Вы спрабуеце дадаць, не існуе.',
 	'ur-add-error-message-blocked' => 'Вы заблякаваныя і ня можаце дадаваць новых сяброў і ворагаў.',
@@ -675,7 +675,7 @@ $messages['be-tarask'] = array(
 	'ur-add-error-message-pending-request-title' => 'Цярплівасьць!',
 	'ur-add-error-message-pending-friend-request' => 'Ваш запыт аб сяброўстве з $1 чакае пацьверджаньня.
 Мы паведамім Вам, калі $1 пацьвердзіць Ваш запыт.',
-	'ur-add-error-message-pending-foe-request' => 'Ваш запыт аб варожасьці з $1 чакае пацьверджаньня. 
+	'ur-add-error-message-pending-foe-request' => 'Ваш запыт аб варожасьці з $1 чакае пацьверджаньня.
 Мы паведамім Вам, калі $1 пацьвердзіць Ваш запыт.',
 	'ur-add-error-message-not-loggedin-foe' => 'Вам неабходна ўвайсьці ў сыстэму, каб дадаць ворага',
 	'ur-add-error-message-not-loggedin-friend' => 'Вам неабходна ўвайсьці ў сыстэму, каб дадаць сябра',
@@ -860,7 +860,7 @@ $messages['bg'] = array(
 	'friend_request_subject' => '$1 ви добави като свой приятел в {{SITENAME}}!',
 	'friend_request_body' => 'Здравейте $1:
 
-$2 ви добави в списъка си с приятели в {{SITENAME}}. Бихме искали да се уверим, 
+$2 ви добави в списъка си с приятели в {{SITENAME}}. Бихме искали да се уверим,
 че това наистина е така и вие двамата наистина сте приятели.
 
 За потвърждаване на приятелството, щракнете върху долната препратка:
@@ -1785,7 +1785,7 @@ Kiitos
 
 ---
 
-Hei, etkö enää halua saada sähköpostia meiltä? 
+Hei, etkö enää halua saada sähköpostia meiltä?
 
 Napsauta $4 ja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.',
 	'friend_accept_subject' => '$1 on hyväksynyt ystävyyspyyntösi {{GRAMMAR:inessive|{{SITENAME}}}}!',
@@ -1799,7 +1799,7 @@ Kiitos
 
 ---
 
-Hei, etkö enää halua saada sähköpostia meiltä? 
+Hei, etkö enää halua saada sähköpostia meiltä?
 
 Napsauta $4
 ja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.',
@@ -1814,7 +1814,7 @@ Kiitos
 
 ---
 
-Hei, etkö enää halua saada sähköpostia meiltä? 
+Hei, etkö enää halua saada sähköpostia meiltä?
 
 Napsauta $4
 ja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.',
@@ -1827,7 +1827,7 @@ Kiitos
 
 ---
 
-Hei, etkö enää halua saada sähköpostia meiltä? 
+Hei, etkö enää halua saada sähköpostia meiltä?
 
 Napsauta $4
 ja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.',
@@ -1842,7 +1842,7 @@ Kiitos
 
 ---
 
-Hei, etkö enää halua saada sähköpostia meiltä? 
+Hei, etkö enää halua saada sähköpostia meiltä?
 
 Napsauta $4
 ja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.',
@@ -1969,7 +1969,7 @@ Hé ! Voulez-vous vous arrêter de recevoir des courriels de notre part ?
 
 Cliquez $4 et modifiez vos préférences pour désactiver les notifications par courriel.',
 	'friend_accept_subject' => '$1 a accepté votre requête en amitié sur {{SITENAME}} !',
-	'friend_accept_body' => 'Salut $1 : 
+	'friend_accept_body' => 'Salut $1 :
 
 $2 a accepté votre requête en amitié sur {{SITENAME}} !
 
@@ -1984,7 +1984,7 @@ Hé ! Voulez-vous vous arrêter de recevoir des courriels de notre part ?
 Cliquez $4
 et modifiez vos préférences pour désactiver les notifications par courriel.',
 	'foe_accept_subject' => 'C’est fait ! $1 a accepté votre déclaration de guerre sur  {{SITENAME}} !',
-	'foe_accept_body' => 'Salut $1 : 
+	'foe_accept_body' => 'Salut $1 :
 
 $2 a accepté votre déclaration de guerre sur  {{SITENAME}} !
 
@@ -2332,7 +2332,7 @@ un ändere Dyyni Yystellige go d E-Mail-Benochrichtigunge abschalte.',
 	'friend_accept_subject' => '$1 het Dyyni Fryndschaftsaaffrog aagnuh uf {{SITENAME}}!',
 	'friend_accept_body' => 'Sali $1:
 
-$2 het Dyyni Fryndschaftsaafrog uf {{SITENAME}} bstätigt! 
+$2 het Dyyni Fryndschaftsaafrog uf {{SITENAME}} bstätigt!
 
 Lueg d Syte vu $2: $3
 
@@ -2347,7 +2347,7 @@ un ändere Dyyni Yystellige go d E-Mail-Benochrichtigunge abschalte.',
 	'foe_accept_subject' => '{{SITENAME}}: $1 het Dyyni Fyndschaftsaafrog bstätigt!',
 	'foe_accept_body' => 'Sali $1:
 
-$2 het Dyyni Fyndschaftsaafrog uf {{SITENAME}} bstätigt! 
+$2 het Dyyni Fyndschaftsaafrog uf {{SITENAME}} bstätigt!
 
 Lueg d Syte vu $2: $3
 
@@ -3128,7 +3128,7 @@ $2 さんがあなたを {{SITENAME}} での友人から除去しました！
 
 それでは。
 
---- 
+---
 
 ひょっとして私たちからの電子メール受信を停止したいですか？
 
@@ -3142,7 +3142,7 @@ $2 さんがあなたを {{SITENAME}} での敵から除去しました！
 
 それでは。
 
---- 
+---
 
 ひょっとして私たちからの電子メール受信を停止したいですか？
 
@@ -3241,7 +3241,7 @@ $messages['km'] = array(
 	'ur-requests-message-friend' => '<a href="$1">$2</a> ចង់​ក្លាយជា​មិត្តភ័ក្ដិ​របស់​អ្នក​។',
 	'ur-accept' => 'ព្រមទទួល',
 	'ur-reject' => 'ច្រានចោល',
-	'ur-no-requests-message' => 'អ្នក​មិនមាន​សំណើសុំ​ជា​មិត្តភ័ក្ដិ ឬ បច្ចាមិត្ត​ទេ​។ 
+	'ur-no-requests-message' => 'អ្នក​មិនមាន​សំណើសុំ​ជា​មិត្តភ័ក្ដិ ឬ បច្ចាមិត្ត​ទេ​។
 
 ប្រសិនបើ អ្នក​ត្រូវការ​មិត្តភ័ក្ដិ​បន្ថែម​ទៀត, <a href="$1">ចូរ​អញ្ជើញ​ពួកគេ!</a>',
 	'ur-requests-added-message-foe' => 'អ្នក​បាន​បន្ថែម $1 ជា​បច្ចាមិត្ត​របស់​អ្នក​ហើយ​។',
@@ -3435,7 +3435,7 @@ un Desch och uß singe Fründesleß ußjedraare, op de
 {{SITENAME}}.
 
 
-Dä, jetz weiß De dat. 
+Dä, jetz weiß De dat.
 Dankeschön.
 
 ---
@@ -3451,7 +3451,7 @@ Dä Metmaacher $2 hät Der de Feindschaff jekündesch,
 un Desch och uß singe Feindesleß ußjedraare, op de
 {{SITENAME}}.
 
-Dä, jetz weiß De dat. 
+Dä, jetz weiß De dat.
 Dankeschön.
 
 ---
@@ -4388,7 +4388,7 @@ E ! Volètz arrestar de recebre de corrièrs de nòstra part ?
 
 Clicatz $4 e modificatz vòstras preferéncias per desactivar las notificacions per corrièr electronic.",
 	'friend_accept_subject' => '$1 a acceptat vòstra requèsta en amistat sus {{SITENAME}} !',
-	'friend_accept_body' => 'Adiu $1 : 
+	'friend_accept_body' => 'Adiu $1 :
 
 $2 a acceptat vòstra requèsta en amistat sus {{SITENAME}} !
 
@@ -4403,7 +4403,7 @@ E ! Volètz vos arrestar de recebre de corrièrs de nòstra part ?
 Clicatz $4
 e modificatz vòstras preferéncias per desactivar las notificacions per corrièr electronic.',
 	'foe_accept_subject' => 'Es fach ! $1 a acceptat vòstra declaracion de guèrra sus  {{SITENAME}} !',
-	'foe_accept_body' => 'Adiu $1 : 
+	'foe_accept_body' => 'Adiu $1 :
 
 $2 a acceptat vòstra declaracion de guèrra sus  {{SITENAME}} !
 
@@ -5702,7 +5702,7 @@ at baguhin ang mga katakdaan mo upang huwag gumana/umandar ang mga pagpapabatid 
 	'friend_accept_subject' => 'Tinanggap na ni $1 ang kahilingan mong maging kaibigan sa {{SITENAME}}!',
 	'friend_accept_body' => 'Kumusta ka $1:
 
-Tinanggap ka na ni $2 ang kahilingan mong pangkaibigan sa {{SITENAME}}!  
+Tinanggap ka na ni $2 ang kahilingan mong pangkaibigan sa {{SITENAME}}!
 
 Tanawin ang pahina ni $2 sa $3
 
@@ -5717,7 +5717,7 @@ at baguhin ang mga katakdaan mo upang huwag gumana/umandar ang mga pagpapabatid 
 	'foe_accept_subject' => 'Naganap na! Tinanggap na ni $1 ang kahilingan mong maging katunggali sa {{SITENAME}}!',
 	'foe_accept_body' => 'Kumusta ka $1:
 
-Tinanggap ka na ni $2 ang kahilingan mong pangkatunggali sa {{SITENAME}}!  
+Tinanggap ka na ni $2 ang kahilingan mong pangkatunggali sa {{SITENAME}}!
 
 Tanawin ang pahina ni $2 sa $3
 
@@ -5732,7 +5732,7 @@ at baguhin ang mga katakdaan mo upang huwag gumana/umandar ang mga pagpapabatid 
 	'friend_removed_subject' => 'Naku po! Tinanggal ka na ni $1 bilang isang kaibigan sa {{SITENAME}}!',
 	'friend_removed_body' => 'Kumusta ka $1:
 
-Tinanggal ka ni $2 bilang isang kaibigan sa {{SITENAME}}!  
+Tinanggal ka ni $2 bilang isang kaibigan sa {{SITENAME}}!
 
 Salamat
 
@@ -5745,7 +5745,7 @@ at baguhin ang mga katakdaan mo upang huwag gumana/umandar ang mga pagpapabatid 
 	'foe_removed_subject' => 'Hay salamat! Tinanggal ka na ni $1 bilang isang katunggali sa {{SITENAME}}!',
 	'foe_removed_body' => 'Kumusta ka $1:
 
-Tinanggal ka na ni $2 bilang isang katunggali sa {{SITENAME}}!  
+Tinanggal ka na ni $2 bilang isang katunggali sa {{SITENAME}}!
 
 Maaaring kayong dalawa ay nagiging magkaibigan na?
 

@@ -34,7 +34,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 		$wgOut->addExtensionStyle( $wgUserRelationshipScripts . '/UserRelationship.css' );
 
 		$usertitle = Title::newFromDBkey( $wgRequest->getVal( 'user' ) );
-		if( !$usertitle ){
+		if ( !$usertitle ) {
 			$wgOut->addWikiText( wfMsgNoTrans( 'ur-add-no-user' ) );
 			return false;
 		}
@@ -43,7 +43,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 		$this->user_id_to = User::idFromName( $this->user_name_to );
 		$this->relationship_type = UserRelationship::getUserRelationshipByID( $this->user_id_to, $wgUser->getID() );
 
-		if( $this->relationship_type == 1 ){
+		if ( $this->relationship_type == 1 ) {
 			$confirmtitle = wfMsg( 'ur-remove-relationship-title-confirm-friend', $this->user_name_to );
 			$confirmmsg = wfMsg( 'ur-remove-relationship-message-confirm-friend', $this->user_name_to );
 			$error = wfMsg( 'ur-remove-error-not-loggedin-friend' );
@@ -55,20 +55,20 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			$pending = wfMsg( 'ur-remove-error-message-pending-foe-request', $this->user_name_to );
 		}
 
-		if( $wgUser->getID() == $this->user_id_to ){
+		if ( $wgUser->getID() == $this->user_id_to ) {
 			$out .= $wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
 			$out .= '<div class="relationship-error-message">
 				' . wfMsg( 'ur-remove-error-message-remove-yourself' ) . '
 			</div>
 			<div>
 				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" size="20" onclick=\'window.location="index.php?title=' . wfMsgForContent( 'mainpage' ) . '"\' />';
-			if( $wgUser->isLoggedIn() ){
-				$out.= '<input type="button" class="site-button" value="' . wfMsg( 'ur-your-profile' ) . '" size="20" onclick=\'window.location="'. $wgUser->getUserPage()->escapeFullURL() . '"\' />';
+			if ( $wgUser->isLoggedIn() ) {
+				$out .= '<input type="button" class="site-button" value="' . wfMsg( 'ur-your-profile' ) . '" size="20" onclick=\'window.location="' . $wgUser->getUserPage()->escapeFullURL() . '"\' />';
 			}
 			$out .= '</div>';
 
 			$wgOut->addHTML( $out );
-		} else if( $this->relationship_type == false ) {
+		} else if ( $this->relationship_type == false ) {
 
 			$out .= $wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
 			$out .= '<div class="relationship-error-message">
@@ -76,41 +76,41 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			</div>
 			<div>
 				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" size="20" onclick=\'window.location="index.php?title="' . wfMsgForContent( 'mainpage' ) . '"\' />';
-			if( $wgUser->isLoggedIn() ){
-				$out.= '<input type="button" class="site-button" value="' . wfMsg( 'ur-your-profile' ) . '" size="20" onclick=\'window.location="'. $wgUser->getUserPage()->escapeFullURL() . '"\' />';
+			if ( $wgUser->isLoggedIn() ) {
+				$out .= '<input type="button" class="site-button" value="' . wfMsg( 'ur-your-profile' ) . '" size="20" onclick=\'window.location="' . $wgUser->getUserPage()->escapeFullURL() . '"\' />';
 			}
 			$out .= '</div>';
 
 			$wgOut->addHTML( $out );
-		} else if( UserRelationship::userHasRequestByID( $this->user_id_to, $wgUser->getID() ) == true ) {
+		} else if ( UserRelationship::userHasRequestByID( $this->user_id_to, $wgUser->getID() ) == true ) {
 			$out .= $wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
 			$out .= '<div class="relationship-error-message">
 				' . $pending . '
 			</div>
 			<div>
 				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" size="20" onclick=\'window.location="index.php?title="' . wfMsgForContent( 'mainpage' ) . '"\' />';
-			if( $wgUser->isLoggedIn() ){
-				$out.= '<input type="button" class="site-button" value="' . wfMsg( 'ur-your-profile' ) . '" size="20" onclick=\'window.location="'. $wgUser->getUserPage()->escapeFullURL() . '"\' />';
+			if ( $wgUser->isLoggedIn() ) {
+				$out .= '<input type="button" class="site-button" value="' . wfMsg( 'ur-your-profile' ) . '" size="20" onclick=\'window.location="' . $wgUser->getUserPage()->escapeFullURL() . '"\' />';
 			}
 			$out .= '</div>';
 
 			$wgOut->addHTML( $out );
-		} else if( $wgUser->getID() == 0 ) {
+		} else if ( $wgUser->getID() == 0 ) {
 			$out .= $wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
 			$out .= '<div class="relationship-error-message">
 				' . $error . '
 			</div>
 			<div>
 				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" size="20" onclick=\'window.location="index.php?title="' . wfMsgForContent( 'mainpage' ) . '"\' />';
-			if( $wgUser->isLoggedIn() ){
-				$out.= '<input type="button" class="site-button" value="' . wfMsg( 'ur-your-profile' ) . '" size="20" onclick=\'window.location="'. $wgUser->getUserPage()->escapeFullURL() . '"\' />';
+			if ( $wgUser->isLoggedIn() ) {
+				$out .= '<input type="button" class="site-button" value="' . wfMsg( 'ur-your-profile' ) . '" size="20" onclick=\'window.location="' . $wgUser->getUserPage()->escapeFullURL() . '"\' />';
 			}
 			$out .= '</div>';
 
 			$wgOut->addHTML( $out );
 		} else {
 			$rel = new UserRelationship( $wgUser->getName() );
-	 		if( $wgRequest->wasPosted() && $_SESSION['alreadysubmitted'] == false ){
+	 		if ( $wgRequest->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
 
 				$_SESSION['alreadysubmitted'] = true;
 				$rel->removeRelationshipByUserID( $this->user_id_to, $wgUser->getID() );
@@ -150,7 +150,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 		$avatar = new wAvatar( $this->user_id_to, 'l' );
 		$avatar_img = '<img src="' . $wgUploadPath . '/avatars/' . $avatar->getAvatarImage() . '" alt="avatar" />';
 
-		if( $this->relationship_type == 1 ) {
+		if ( $this->relationship_type == 1 ) {
 			$title = wfMsg( 'ur-remove-relationship-title-friend', $this->user_name_to );
 			$remove = wfMsg( 'ur-remove-relationship-message-friend', $this->user_name_to, wfMsg( 'ur-remove' ) );
 		} else {

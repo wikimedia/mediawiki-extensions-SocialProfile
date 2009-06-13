@@ -13,26 +13,26 @@ $messages = array();
  * @author David Pean
  */
 $messages['en'] = array(
-	'useractivity' => "Friend's Activity",
-	'useractivity-award' => 'received an award',
-	'useractivity-all' => 'View All',
-	'useractivity-gift' => 'received a gift from',
-	'useractivity-group-edit' => 'edits',
+	'useractivity' => 'Friends activity',
+	'useractivity-award' => 'received an award', // FIXME: message lego
+	'useractivity-all' => 'View all',
+	'useractivity-gift' => 'received a gift from', // FIXME: message logo
+	'useractivity-group-edit' => 'edits', // CHECKME: message lego (as well as the messages below)?
 	'useractivity-group-comment' => 'comments',
 	'useractivity-group-user_message' => 'messages',
 	'useractivity-group-friend' => 'friends',
 	'useractivity-filter' => 'Filter',
-	'useractivity-network-thought' => 'has a thought for the $1 network',
-	'useractivity-title' => "Friends' Activity",
-	'useractivity-siteactivity' => 'Site Activity',
-	'useractivity-edit' => '{{PLURAL:$1|edited the page|edited the following pages: }}',
-	'useractivity-comment' => '{{PLURAL:$1|commented on the page|commented on the following pages: }}',
+	'useractivity-network-thought' => 'has a thought for the $1 network', // FIXME: message lego
+	'useractivity-title' => "Friends activity",
+	'useractivity-siteactivity' => 'Site activity',
+	'useractivity-edit' => '{{PLURAL:$1|edited the page|edited the following pages: }}', // CHECKME: message lego?
+	'useractivity-comment' => '{{PLURAL:$1|commented on the page|commented on the following pages: }}', // CHECKME: message lego?
 	'useractivity-user_message' => '{{PLURAL:$1|sent a message to|sent messages to}}',
-	'useractivity-votedpage' => 'voted for the page',
-	'useractivity-commentedpage' => 'commented on the page',
-	'useractivity-giftsent' => 'sent a gift to',
-	'useractivity-friend' => '{{PLURAL:$2|is now friends with|are now friends with}}',
-	'useractivity-foe' => '{{PLURAL:$2|is now foes with|are now foes with}}',
+	'useractivity-votedpage' => 'voted for the page', // FIXME: message lego
+	'useractivity-commentedpage' => 'commented on the page', // FIXME: message lego
+	'useractivity-giftsent' => 'sent a gift to', // FIXME: message lego
+	'useractivity-friend' => '{{PLURAL:$2|is now friends with|are now friends with}}', // FIXME: message lego
+	'useractivity-foe' => '{{PLURAL:$2|is now foes with|are now foes with}}', // FIXME: message lego
 );
 
 /** Finnish (Suomi)

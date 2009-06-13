@@ -5,7 +5,7 @@ class TopAwards extends UnlistedSpecialPage {
 	/**
 	 * Constructor
 	 */
-	public function __construct(){
+	public function __construct() {
 		parent::__construct( 'TopAwards' );
 	}
 
@@ -14,25 +14,25 @@ class TopAwards extends UnlistedSpecialPage {
 	 *
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
-	public function execute( $par ){
+	public function execute( $par ) {
 		global $wgRequest, $wgOut, $wgUser, $wgUploadPath, $wgScriptPath, $wgSystemGiftsScripts;
 
-		// Variables 
+		// Variables
 		$gift_name_check = '';
 		$x = 0;
 		$category_number = $wgRequest->getVal( 'category' );
 
-		// System gift class array		
+		// System gift class array
 		$categories = array(
-			array('category_name' => 'Edit', 'category_threshold' => '500', 'category_id' => 1),
-			array('category_name' => 'Vote', 'category_threshold' => '2000', 'category_id' => 2),
-			array('category_name' => 'Comment', 'category_threshold' => '1000', 'category_id' => 3),
-			array('category_name' => 'Recruit', 'category_threshold' => '0', 'category_id' => 7),
-			array('category_name' => 'Friend', 'category_threshold' => '25', 'category_id' => 8)
+			array( 'category_name' => 'Edit', 'category_threshold' => '500', 'category_id' => 1 ),
+			array( 'category_name' => 'Vote', 'category_threshold' => '2000', 'category_id' => 2 ),
+			array( 'category_name' => 'Comment', 'category_threshold' => '1000', 'category_id' => 3 ),
+			array( 'category_name' => 'Recruit', 'category_threshold' => '0', 'category_id' => 7 ),
+			array( 'category_name' => 'Friend', 'category_threshold' => '25', 'category_id' => 8 )
 		);
 
 		// Set title
-		if( !($category_number) or $category_number > 4 ) {
+		if ( !( $category_number ) or $category_number > 4 ) {
 			$category_number = 0;
 			$page_category = $categories[$category_number]['category_name'];
 		} else {
@@ -53,7 +53,7 @@ class TopAwards extends UnlistedSpecialPage {
 			array( 'system_gift' => array( 'INNER JOIN', 'gift_id=sg_gift_id' ) )
 		);
 
-		// Page title 
+		// Page title
 		$wgOut->setPageTitle( "Top Awards - {$page_category} Milestones" );
 
 		// Add CSS
@@ -64,12 +64,12 @@ class TopAwards extends UnlistedSpecialPage {
 
 			$nav_x = 0;
 
-			foreach( $categories as $award_type ) {
+			foreach ( $categories as $award_type ) {
 
-				if( $nav_x == $category_number ) {
+				if ( $nav_x == $category_number ) {
 					$output .= "<p><b>{$award_type['category_name']}s</b></p>";
 				} else {
-					$output .= "<p><a href=\"".$wgScriptPath."/index.php?title=Special:TopAwards&category={$nav_x}\">{$award_type['category_name']}s</a></p>";
+					$output .= "<p><a href=\"" . $wgScriptPath . "/index.php?title=Special:TopAwards&category={$nav_x}\">{$award_type['category_name']}s</a></p>";
 				}
 				$nav_x++;
 			}
@@ -77,15 +77,15 @@ class TopAwards extends UnlistedSpecialPage {
 		$output .= '</div>';
 		$output .= '<div class="top-awards">';
 
-		while( $row = $dbr->fetchObject( $res ) ) {
+		while ( $row = $dbr->fetchObject( $res ) ) {
 
 			$user_name = $row->sg_user_name;
 			$user_id = $row->sg_user_id;
 			$avatar = new wAvatar( $user_id, 'm' );
 			$top_gift = $row->top_gift;
-			$gift_name = number_format( $top_gift ) . " {$categories[$category_number][category_name]}".( ( $top_gift > 1 ) ? 's' : '' )." Milestone";
+			$gift_name = number_format( $top_gift ) . " {$categories[$category_number][category_name]}" . ( ( $top_gift > 1 ) ? 's' : '' ) . " Milestone";
 
-				if( $gift_name !== $gift_name_check ) {
+				if ( $gift_name !== $gift_name_check ) {
 					$x = 1;
 					$output .= "<div class=\"top-award-title\">
 						{$gift_name}
@@ -97,7 +97,7 @@ class TopAwards extends UnlistedSpecialPage {
 				$output .= "<div class=\"top-award\">
 					<span class=\"top-award-number\">{$x}.</span>
 					{$avatar->getAvatarURL()}
-					<a href=\"".$wgScriptPath."/index.php?title=User:{$row->sg_user_name}\">{$user_name}</a>
+					<a href=\"" . $wgScriptPath . "/index.php?title=User:{$row->sg_user_name}\">{$user_name}</a>
 				</div>";
 
 				$gift_name_check = $gift_name;

@@ -5,7 +5,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 	/**
 	 * Constructor
 	 */
-	public function __construct(){
+	public function __construct() {
 		parent::__construct( 'TopFansByStatistic' );
 	}
 
@@ -14,7 +14,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 	 *
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
-	public function execute( $par ){
+	public function execute( $par ) {
 		global $wgRequest, $wgUser, $wgOut, $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly,
 			$wgUserLevels, $wgUploadPath, $wgScriptPath;
 
@@ -31,7 +31,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 		$dbr = wfGetDB( DB_SLAVE );
 
 		// Error if the querystring value does not match our stat column
-		if( !$dbr->fieldExists( 'user_stats', $column ) ){
+		if ( !$dbr->fieldExists( 'user_stats', $column ) ) {
 			$wgOut->setPageTitle( wfMsg( 'top-fans-bad-field-title' ) );
 			$wgOut->addHTML( wfMsg( 'top-fans-bad-field-message' ) );
 			return false;
@@ -48,11 +48,11 @@ class TopFansByStat extends UnlistedSpecialPage {
 		// Try cache
 		$key = wfMemcKey( 'user_stats', 'top', $statistic, $count );
 		$data = $wgMemc->get( $key );
-		if( $data != '' ){
-			wfDebug("Got top users by {$statistic} ({$count}) from cache\n");
+		if ( $data != '' ) {
+			wfDebug( "Got top users by {$statistic} ({$count}) from cache\n" );
 			$user_list = $data;
 		} else {
-			wfDebug("Got top users by {$statistic} ({$count}) from DB\n");
+			wfDebug( "Got top users by {$statistic} ({$count}) from DB\n" );
 
 			$params['ORDER BY'] = "{$column} DESC";
 			$params['LIMIT'] = $count;
@@ -64,7 +64,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 				__METHOD__,
 				$params
 			);
-			while( $row = $dbr->fetchObject( $res ) ){
+			while ( $row = $dbr->fetchObject( $res ) ) {
 				$user_list[] = array(
 					'user_id' => $row->stats_user_id,
 					'user_name' => $row->stats_user_name,
@@ -82,10 +82,10 @@ class TopFansByStat extends UnlistedSpecialPage {
 			<h1>' . wfMsg( 'top-fans-by-points-nav-header' ) . '</h1>
 			<p><a href="' . $top_title->escapeFullURL() . '">' . wfMsg( 'top-fans-total-points-link' ) . '</a></p>';
 
-		if( $wgUserStatsTrackWeekly ){
+		if ( $wgUserStatsTrackWeekly ) {
 			$out .= '<p><a href="' . $recent_title->escapeFullURL( 'period=monthly' ) . '">' . wfMsg( 'top-fans-monthly-points-link' ) . '</a><p>';
 		}
-		if( $wgUserStatsTrackMonthly ){
+		if ( $wgUserStatsTrackMonthly ) {
 			$out .= '<p><a href="' . $recent_title->escapeFullURL( 'period=weekly' ) . '">' . wfMsg( 'top-fans-weekly-points-link' ) . '</a></p>';
 		}
 
@@ -96,8 +96,8 @@ class TopFansByStat extends UnlistedSpecialPage {
 		$nav = array();
 
 		$lines = explode( "\n", wfMsgForContent( 'topfans-by-category' ) );
-		foreach( $lines as $line ) {
-			if( strpos( $line, '*' ) !== 0 ){
+		foreach ( $lines as $line ) {
+			if ( strpos( $line, '*' ) !== 0 ) {
 				continue;
 			} else {
 				$line = explode( '|', trim( $line, '* ' ), 2 );
@@ -111,15 +111,15 @@ class TopFansByStat extends UnlistedSpecialPage {
 		$x = 1;
 		$out .= '<div class="top-users">';
 
-		foreach( $user_list as $user ){
-			$user_name = ( $user['user_name'] == substr( $user['user_name'] , 0, 22) ) ? $user['user_name'] : ( substr( $user['user_name'] , 0, 22 ) . '...' );
+		foreach ( $user_list as $user ) {
+			$user_name = ( $user['user_name'] == substr( $user['user_name'] , 0, 22 ) ) ? $user['user_name'] : ( substr( $user['user_name'] , 0, 22 ) . '...' );
 			$user_title = Title::makeTitle( NS_USER, $user['user_name'] );
 			$avatar = new wAvatar( $user['user_id'], 'm' );
 			$commentIcon = $avatar->getAvatarImage();
 
 			// Stats row
 			// TODO: opinion_average isn't currently working, so it's not enabled in menus
-			if( $statistic == 'opinion_average' ) {
+			if ( $statistic == 'opinion_average' ) {
 				$statistics_row = number_format( $row->opinion_average, 2 );
 				$lowercase_statistics_name = 'percent';
 			} else {

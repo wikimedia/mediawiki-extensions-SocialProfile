@@ -3,7 +3,7 @@
  * Protect against register_globals vulnerabilities.
  * This line must be present before any global variable is referenced.
  */
-if( !defined( 'MEDIAWIKI' ) ){
+if ( !defined( 'MEDIAWIKI' ) ) {
 	die( "Not a valid entry point.\n" );
 }
 
@@ -20,7 +20,7 @@ function wfSiteActivity() {
 	return true;
 }
 
-function getSiteActivity( $input, $args, &$parser ){
+function getSiteActivity( $input, $args, &$parser ) {
 	global $wgMemc, $wgScriptPath;
 
 	$parser->disableCache();
@@ -31,7 +31,7 @@ function getSiteActivity( $input, $args, &$parser ){
 
 	$key = wfMemcKey( 'site_activity', 'all', $limit );
 	$data = $wgMemc->get( $key );
-	if( !$data ){
+	if ( !$data ) {
 		wfDebug( "Got site activity from DB\n" );
 		$rel = new UserActivity( '', 'ALL', $limit );
 
@@ -45,13 +45,13 @@ function getSiteActivity( $input, $args, &$parser ){
 	}
 
 	$output = '';
-	if( $activity ) {
+	if ( $activity ) {
 
 		$output .= '<div class="mp-site-activity"><h2>' . wfMsg( 'useractivity-siteactivity' ) . '</h2>';
 
 		$x = 1;
 		foreach ( $activity as $item ) {
-			if( $x < $limit ) {
+			if ( $x < $limit ) {
 				$output .= '<div class="mp-activity' . ( ( $x == $limit ) ? ' mp-activity-boarder-fix' : '' ) . '">
 				<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/' . UserActivity::getTypeIcon( $item['type'] ) . '" alt="' . UserActivity::getTypeIcon( $item['type'] ) . '" border="0" />'
 				. $item['data'] . '</div>';

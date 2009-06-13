@@ -3,7 +3,7 @@
  * AJAX functions used by UserBoard.
  */
 $wgAjaxExportList [] = 'wfSendBoardMessage';
-function wfSendBoardMessage( $user_name, $message, $message_type, $count ){
+function wfSendBoardMessage( $user_name, $message, $message_type, $count ) {
 	global $wgMemc, $wgUser;
 	$user_name = stripslashes( $user_name );
 	$user_name = urldecode( $user_name );
@@ -16,11 +16,11 @@ function wfSendBoardMessage( $user_name, $message, $message_type, $count ){
 }
 
 $wgAjaxExportList [] = 'wfDeleteBoardMessage';
-function wfDeleteBoardMessage( $ub_id ){
+function wfDeleteBoardMessage( $ub_id ) {
 	global $wgMemc, $wgUser;
 
 	$b = new UserBoard();
-	if( $b->doesUserOwnMessage( $wgUser->getID(), $ub_id ) || $wgUser->isAllowed( 'userboard-delete' ) ){
+	if ( $b->doesUserOwnMessage( $wgUser->getID(), $ub_id ) || $wgUser->isAllowed( 'userboard-delete' ) ) {
 		$b->deleteMessage( $ub_id );
 	}
 	return 'ok';

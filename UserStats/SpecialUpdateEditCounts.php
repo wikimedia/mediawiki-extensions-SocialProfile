@@ -5,16 +5,16 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 	/**
 	 * Constructor
 	 */
-	public function __construct(){
+	public function __construct() {
 		parent::__construct( 'UpdateEditCounts' );
 	}
 
-	function updateMainEditsCount(){
+	function updateMainEditsCount() {
 		global $wgOut, $wgUser;
 
 		$wgOut->setPageTitle( 'Update Edit Counts' );
 
-		if( !$wgUser->isAllowed( 'updatepoints' ) ){
+		if ( !$wgUser->isAllowed( 'updatepoints' ) ) {
 			$wgOut->errorpage( 'error', 'badaccess' );
 			return false;
 		}
@@ -28,12 +28,12 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 			array( 'GROUP BY' => 'rev_user_text' ),
 			array( 'page' => array( 'INNER JOIN', 'page_id = rev_page' ) )
 		);
-		while( $row = $dbw->fetchObject( $res ) ) {
+		while ( $row = $dbw->fetchObject( $res ) ) {
 
 			$user = User::newFromId( $row->rev_user );
 			$user->loadFromId();
 
-			if( !$user->isAllowed( 'bot' ) ){
+			if ( !$user->isAllowed( 'bot' ) ) {
 				$edit_count = $row->the_count;
 			} else {
 				$edit_count = 0;
@@ -50,7 +50,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 					), __METHOD__
 				);
 			}
-			$wgOut->addHTML("<p>Updating {$row->rev_user_text} with {$edit_count} edits</p>");
+			$wgOut->addHTML( "<p>Updating {$row->rev_user_text} with {$edit_count} edits</p>" );
 
 			$dbw->update( 'user_stats',
 				array( 'stats_edit_count = ' . $edit_count ),
@@ -71,7 +71,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 	 *
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
-	public function execute( $par ){
+	public function execute( $par ) {
 		global $wgUser, $wgOut;
 		$dbr = wfGetDB( DB_MASTER );
 		$this->updateMainEditsCount();

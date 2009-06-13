@@ -12,7 +12,7 @@ $messages = array();
  * @author Purodha
  */
 $messages['en'] = array(
-	'systemgiftmanager' => 'System gifts manager', 
+	'systemgiftmanager' => 'System gifts manager',
 	'ga-addnew' => '+ Add new gift',
 	'ga-back-edit-gift' => 'Back to edit this gift',
 	'ga-back-gift-list' => 'Back to gift list',
@@ -69,7 +69,7 @@ The {{SITENAME}} team
 
 ---
 
-Hey, want to stop getting emails from us?  
+Hey, want to stop getting emails from us?
 
 Click $5
 and change your settings to disable email notifications.',
@@ -150,7 +150,7 @@ $4
 
 ---
 
-ها، تريد أن تتوقف عن تلقي رسائل البريد الإلكتروني منا؟   
+ها، تريد أن تتوقف عن تلقي رسائل البريد الإلكتروني منا؟
 
 اضغط $5
 وغير إعداداتك لتعطيل إخطارات البريد الإكتروني.',
@@ -218,7 +218,7 @@ $4
 
 ---
 
-ها، تريد أن تتوقف عن تلقى رسائل البريد الإلكترونى منا؟   
+ها، تريد أن تتوقف عن تلقى رسائل البريد الإلكترونى منا؟
 
 اضغط $5
 وغير إعداداتك لتعطيل إخطارات البريد الإكترونى.',
@@ -364,7 +364,7 @@ Hvala,
 
 ---
 
-Hej, da li želite da prestanete dobivati e-mailove od nas?   
+Hej, da li želite da prestanete dobivati e-mailove od nas?
 
 Kliknite $5
 i promijenite Vaše postavke onemogućavajući obavještenja putem emaila.',
@@ -615,7 +615,7 @@ El equipo {{SITENAME}}
 
 ---
 
-Hey, Deseas no recibir más correos de nosotros?   
+Hey, Deseas no recibir más correos de nosotros?
 
 Haz click en $5
 y cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.',
@@ -822,7 +822,7 @@ O equipo de {{SITENAME}}
 
 ---
 
-Quere deixar de recibir os nosos correos electrónicos?  
+Quere deixar de recibir os nosos correos electrónicos?
 
 Prema $5
 e cambie as súas preferencias para desactivar as notificacións por correo electrónico.',
@@ -898,7 +898,7 @@ D Lyt vu {{SITENAME}}
 
 ---
 
-Ha, Du wetsch gar keini E-Mai meh vun is iberchu?   
+Ha, Du wetsch gar keini E-Mai meh vun is iberchu?
 
 Druck $5
 un ändere Dyyni Yystellige go d E-Mail-Benochrichtigunge abstelle.',
@@ -1342,7 +1342,7 @@ Het {{SITENAME}}-team
 
 ---
 
-Wilt u geen e-mails meer van ons ontvangen?   
+Wilt u geen e-mails meer van ons ontvangen?
 
 Klik op $5
 en wijzig uw instellingen om e-mailwaarschuwingen uit te schakelen.',
@@ -1393,7 +1393,7 @@ $messages['nn'] = array(
 	'system_gift_received_subject' => 'Du har motteke utmerkinga $1 på {{SITENAME}}!',
 	'system_gift_received_body' => 'Hei $1:
 
-Du har nett motteke $2-utmerkinga på {{SITENAME}}!   
+Du har nett motteke $2-utmerkinga på {{SITENAME}}!
 
 «$3»
 
@@ -1938,4 +1938,3 @@ $messages['vi'] = array(
 	'ga-title' => 'Huy chương của $1',
 	'ga-uploadsuccess' => 'Đã tải lên thành công',
 );
-

@@ -15,7 +15,7 @@
  * Protect against register_globals vulnerabilities.
  * This line must be present before any global variable is referenced.
  */
-if( !defined( 'MEDIAWIKI' ) ){
+if ( !defined( 'MEDIAWIKI' ) ) {
 	die( "Not a valid entry point.\n" );
 }
 
@@ -38,4 +38,4 @@ $wgSpecialPages['UserActivity'] = 'UserHome';
 $wgSpecialPageGroups['UserActivity'] = 'users';
 
 // Load <siteactivity> parser hook
-require_once('SiteActivityHook.php');
+require_once( 'SiteActivityHook.php' );

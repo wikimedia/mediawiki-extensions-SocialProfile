@@ -628,7 +628,7 @@ $messages['fr'] = array(
 	'right-updatepoints' => 'Mise à jour du compteur d’éditions',
 	'level-advanced-to' => 'a avancé vers le niveau <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Vous avez désormais un « $1 » sur {{SITENAME}} !',
-	'level-advance-body' => 'Salut $1 : 
+	'level-advance-body' => 'Salut $1 :
 
 Vous avez maintenant un « $2 » sur {{SITENAME}} !
 
@@ -983,7 +983,7 @@ $messages['km'] = array(
 
 សូមអបអរសាទរ,
 
-ក្រុម {{SITENAME}} 
+ក្រុម {{SITENAME}}
 
 ---
 ហេ៎, តើ​អ្នក​ពិតជា​ចង់​បញ្ឈប់​ការ​ទទួល​អ៊ីមែល​ពី​យើង​មែន​ឬ​?
@@ -1285,7 +1285,7 @@ $messages['oc'] = array(
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|present mandat|presents mandats}}',
 	'right-updatepoints' => "Mesa a jorn del comptador d'edicions",
 	'level-advance-subject' => "D'ara enlà, avètz un « $1 » sus {{SITENAME}} !",
-	'level-advance-body' => "Adiu $1 : 
+	'level-advance-body' => "Adiu $1 :
 
 Ara avètz un « $2 » sus {{SITENAME}} !
 

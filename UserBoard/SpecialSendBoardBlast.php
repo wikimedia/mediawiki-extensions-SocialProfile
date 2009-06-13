@@ -28,31 +28,31 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 
 		// Add CSS & JS
 		$wgOut->addStyle( '../..' . $wgUserBoardScripts . '/BoardBlast.css' );
-		$wgOut->addScriptFile( $wgUserBoardScripts.'/BoardBlast.js' );
+		$wgOut->addScriptFile( $wgUserBoardScripts . '/BoardBlast.js' );
 
 		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 
 		$output = '';
 
 		// This feature is available only to logged-in users.
-		if( !$wgUser->isLoggedIn() ){
+		if ( !$wgUser->isLoggedIn() ) {
 			$wgOut->setPageTitle( wfMsgForContent( 'boardblastlogintitle' ) );
 			$output = wfMsgForContent( 'boardblastlogintext' );
-			$wgOut->addHTML($output);
+			$wgOut->addHTML( $output );
 			return '';
 		}
 
-		if( $wgRequest->wasPosted() ){
+		if ( $wgRequest->wasPosted() ) {
 			$wgOut->setPagetitle( wfMsgForContent( 'messagesenttitle' ) );
 			$b = new UserBoard();
 
 			$count = 0;
-			$user_ids_to = explode( ",", $wgRequest->getVal('ids') );
-			foreach( $user_ids_to as $user_id ){
+			$user_ids_to = explode( ",", $wgRequest->getVal( 'ids' ) );
+			foreach ( $user_ids_to as $user_id ) {
 				$user = User::newFromId( $user_id );
 				$user->loadFromId();
 				$user_name = $user->getName();
-				$b->sendBoardMessage( $wgUser->getID(), $wgUser->getName(), $user_id, $user_name, $wgRequest->getVal('message'), 1 );
+				$b->sendBoardMessage( $wgUser->getID(), $wgUser->getName(), $user_id, $user_name, $wgRequest->getVal( 'message' ), 1 );
 				$count++;
 			}
 			$output .= wfMsgForContent( 'messagesentsuccess' );
@@ -61,13 +61,13 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 			$output .= $this->displayForm();
 		}
 
-		$wgOut->addHTML($output);
+		$wgOut->addHTML( $output );
 	}
 
 	/**
 	 * Displays the form for sending board blasts
 	 */
-	function displayForm(){
+	function displayForm() {
 		global $wgUser;
 
 		$stats = new UserStats( $wgUser->getID(), $wgUser->getName() );
@@ -91,12 +91,12 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 					<a href="javascript:void(0);" onclick="javascript:select_all()">' . wfMsgForContent( 'boardlinkselectall' ) . '</a> -
 					<a href="javascript:void(0);" onclick="javascript:unselect_all()">' . wfMsgForContent( 'boardlinkunselectall' ) . '</a> ';
 
-					if( $stats_data['friend_count'] > 0 && $stats_data['foe_count'] > 0 ){
+					if ( $stats_data['friend_count'] > 0 && $stats_data['foe_count'] > 0 ) {
 						$output .= '- <a href="javascript:void(0);" onclick="javascript:toggle_friends(1)">' . wfMsgForContent( 'boardlinkselectfriends' ) . '</a> -';
 						$output .= '<a href="javascript:void(0);" onclick="javascript:toggle_friends(0)">' . wfMsgForContent( 'boardlinkunselectfriends' ) . '</a>';
 					}
 
-					if( $stats_data['foe_count'] > 0 && $stats_data['friend_count'] > 0 ){
+					if ( $stats_data['foe_count'] > 0 && $stats_data['friend_count'] > 0 ) {
 						$output .= '- <a href="javascript:void(0);" onclick="javascript:toggle_foes(1)">' . wfMsgForContent( 'boardlinkselectfoes' ) . '</a> -';
 						$output .= '<a href="javascript:void(0);" onclick="javascript:toggle_foes(0)">' . wfMsgForContent( 'boardlinkunselectfoes' ) . '</a>';
 					}
@@ -110,12 +110,12 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 
 		$x = 1;
 		$per_row = 3;
-		if( count($relationships) > 0 ){
-			foreach( $relationships as $relationship ){
+		if ( count( $relationships ) > 0 ) {
+			foreach ( $relationships as $relationship ) {
 				$output .= "<div class=\"blast-" . ( ( $relationship['type'] == 1 ) ? 'friend' : 'foe' ) . "-unselected\" id=\"user-{$relationship["user_id"]}\" onclick=\"javascript:toggle_user({$relationship["user_id"]})\">
 						{$relationship["user_name"]}
 					</div>";
-					if( $x == count($relationships) || $x != 1 && $x%$per_row == 0 ) $output .= '<div class="cleared"></div>';
+					if ( $x == count( $relationships ) || $x != 1 && $x % $per_row == 0 ) $output .= '<div class="cleared"></div>';
 				$x++;
 			}
 		} else {

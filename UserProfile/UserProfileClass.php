@@ -44,14 +44,14 @@ class UserProfile {
 		$this->user_id = User::idFromName( $this->user_name );
 	}
 
-	static function clearCache( $user_id ){
+	static function clearCache( $user_id ) {
 		global $wgMemc;
 
 		$key = wfMemcKey( 'user', 'profile', 'info', $user_id );
 		$wgMemc->delete( $key );
 	}
 
-	public function getProfile(){
+	public function getProfile() {
 		global $wgMemc;
 
 		// Try cache first
@@ -70,7 +70,7 @@ class UserProfile {
 				$params
 			);
 
-			if( $row ){
+			if ( $row ) {
 				$profile['user_id'] = $this->user_id;
 			} else {
 				$profile['user_page_type'] = 1;
@@ -115,10 +115,10 @@ class UserProfile {
 		return $profile;
 	}
 
-	function formatBirthday( $birthday ){
+	function formatBirthday( $birthday ) {
 		global $wgLang;
 		$dob = explode( '-', $birthday );
-		if( count( $dob ) == 3 ){
+		if ( count( $dob ) == 3 ) {
 			$month = $dob[1];
 			$day = $dob[2];
 			return date( "F jS", mktime( 0, 0, 0, $month, $day ) );
@@ -127,23 +127,23 @@ class UserProfile {
 		return $birthday;
 	}
 
-	function getBirthdayYear( $birthday ){
+	function getBirthdayYear( $birthday ) {
 		$dob = explode( '-', $birthday );
-		if( count( $dob ) == 3 ){
+		if ( count( $dob ) == 3 ) {
 			return $dob[0];
 		}
 		return '00';
 	}
 
-	public function getProfileComplete(){
+	public function getProfileComplete() {
 		global $wgUser;
 
 		$complete_count = 0;
 
 		// Check all profile fields
 		$profile = $this->getProfile();
-		foreach( $this->profile_fields as $field ){
-			if( $profile[$field] ){
+		foreach ( $this->profile_fields as $field ) {
+			if ( $profile[$field] ) {
 				$complete_count++;
 			}
 			$this->profile_fields_count++;
@@ -152,17 +152,17 @@ class UserProfile {
 		// Check if user has an avatar
 		$this->profile_fields_count++;
 		$avatar = new wAvatar( $wgUser->getID(), 'l' );
-		if( strpos( $avatar->getAvatarImage(), 'default_' ) === false ) $complete_count++;
+		if ( strpos( $avatar->getAvatarImage(), 'default_' ) === false ) $complete_count++;
 
 		return round( $complete_count / $this->profile_fields_count * 100 );
 	}
 
-	static function getEditProfileNav( $current_nav ){
+	static function getEditProfileNav( $current_nav ) {
 		$lines = explode( "\n", wfMsgForContent( 'update_profile_nav' ) );
 		$output = '<div class="profile-tab-bar">';
-		foreach( $lines as $line ) {
+		foreach ( $lines as $line ) {
 
-			if( strpos( $line, '*' ) !== 0 ){
+			if ( strpos( $line, '*' ) !== 0 ) {
 				continue;
 			} else {
 				$line = explode( '|' , trim( $line, '* ' ), 2 );

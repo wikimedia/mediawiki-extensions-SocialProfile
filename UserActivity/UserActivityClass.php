@@ -33,7 +33,7 @@ class UserActivity {
 	 * @private
 	 */
 	/* private */ function __construct( $username, $filter, $item_max ) {
-		if( $username ){
+		if ( $username ) {
 			$title1 = Title::newFromDBkey( $username );
 			$this->user_name = $title1->getText();
 			$this->user_id = User::idFromName( $this->user_name );
@@ -41,42 +41,42 @@ class UserActivity {
 		$this->setFilter( $filter );
 		$this->item_max = $item_max;
 		$this->now = time();
-		$this->three_days_ago = $this->now - (60 * 60 * 24 * 3);
+		$this->three_days_ago = $this->now - ( 60 * 60 * 24 * 3 );
 		$this->items_grouped = array();
 	}
 
-	private function setFilter( $filter ){
-		if( strtoupper( $filter ) == 'USER' ) $this->show_current_user = true;
-		if( strtoupper( $filter ) == 'FRIENDS' ) $this->rel_type = 1;
-		if( strtoupper( $filter ) == 'FOES' ) $this->rel_type = 2;
-		if( strtoupper( $filter ) == 'ALL' ) $this->show_all = true;
+	private function setFilter( $filter ) {
+		if ( strtoupper( $filter ) == 'USER' ) $this->show_current_user = true;
+		if ( strtoupper( $filter ) == 'FRIENDS' ) $this->rel_type = 1;
+		if ( strtoupper( $filter ) == 'FOES' ) $this->rel_type = 2;
+		if ( strtoupper( $filter ) == 'ALL' ) $this->show_all = true;
 	}
 
-	public function setActivityToggle( $name, $value ){
+	public function setActivityToggle( $name, $value ) {
 		$this->$name = $value;
 	}
 
-	private function setEdits(){
+	private function setEdits() {
 		$dbr = wfGetDB( DB_SLAVE );
 		$rel_sql = '';
 		$user_sql = '';
 
-		if( !empty( $this->rel_type ) ) {
+		if ( !empty( $this->rel_type ) ) {
 			$rel_sql = " WHERE rc_user IN (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type}) ";
 		}
 
-		if( !empty( $this->show_current_user ) ) {
+		if ( !empty( $this->show_current_user ) ) {
 			$user_sql = " WHERE rc_user = {$this->user_id}";
 		}
 
 		$sql = "SELECT UNIX_TIMESTAMP(rc_timestamp) AS item_date, rc_title, rc_user, rc_user_text, rc_comment, rc_id, rc_minor, rc_new,
-				rc_namespace, rc_cur_id, rc_this_oldid, rc_last_oldid 
-			FROM {$dbr->tableName( 'recentchanges' )} 
+				rc_namespace, rc_cur_id, rc_this_oldid, rc_last_oldid
+			FROM {$dbr->tableName( 'recentchanges' )}
 			{$rel_sql} {$user_sql}
 			ORDER BY rc_id DESC LIMIT 0," . $this->item_max;
 		$res = $dbr->query( $sql );
 
-		while( $row = $dbr->fetchObject( $res ) ) {
+		while ( $row = $dbr->fetchObject( $res ) ) {
 			$title = Title::makeTitle( $row->rc_namespace, $row->rc_title );
 			$this->items_grouped['edit'][$title->getPrefixedText()]['users'][$row->rc_user_text][] = array(
 				'id' => 0,
@@ -85,20 +85,20 @@ class UserActivity {
 				'pagetitle' => $row->rc_title,
 				'namespace' => $row->rc_namespace,
 				'username' => $row->rc_user_text,
-				'userid' => $row->rc_user, 
-				'comment' => $this->fixItemComment( $row->rc_comment ), 
+				'userid' => $row->rc_user,
+				'comment' => $this->fixItemComment( $row->rc_comment ),
 				'minor' => $row->rc_minor,
 				'new' => $row->rc_new
 			);
 
 			// set last timestamp
 			$this->items_grouped['edit'][$title->getPrefixedText()]['timestamp'] = $row->item_date;
-			//$this->items['edits'][$title->getPrefixedText()]['displayed'] = 0;
+			// $this->items['edits'][$title->getPrefixedText()]['displayed'] = 0;
 
 			$this->items[] = array(
 				'id' => 0,
 				'type' => 'edit',
-				'timestamp' => ($row->item_date),
+				'timestamp' => ( $row->item_date ),
 				'pagetitle' => $row->rc_title,
 				'namespace' => $row->rc_namespace,
 				'username' => $row->rc_user_text,
@@ -110,28 +110,28 @@ class UserActivity {
 		}
 	}
 
-	private function setVotes(){
+	private function setVotes() {
 		$dbr = wfGetDB( DB_SLAVE );
 
 		# Bail out if Vote table doesn't exist
-		if( !$dbr->tableExists( 'Vote' ) ){
+		if ( !$dbr->tableExists( 'Vote' ) ) {
 			return false;
 		}
 
 		$rel_sql = '';
 		$user_sql = '';
-		if( $this->rel_type )
+		if ( $this->rel_type )
 			$rel_sql = " AND vote_user_id IN (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type}) ";
-		if( $this->show_current_user )
+		if ( $this->show_current_user )
 			$user_sql = " AND vote_user_id = {$this->user_id}";
 
-		$sql = "SELECT UNIX_TIMESTAMP(vote_date) AS item_date, username, page_title, vote_count, comment_count, vote_ip, vote_user_id 
+		$sql = "SELECT UNIX_TIMESTAMP(vote_date) AS item_date, username, page_title, vote_count, comment_count, vote_ip, vote_user_id
 			FROM {$dbr->tableName( 'Vote' )} v, {$dbr->tableName( 'page' )} p
 			WHERE v.vote_page_id=p.page_id
 			{$rel_sql} {$user_sql}
 			ORDER BY vote_date DESC LIMIT 0," . $this->item_max;
-		$res = $dbr->query($sql);
-		while( $row = $dbr->fetchObject( $res ) ) {
+		$res = $dbr->query( $sql );
+		while ( $row = $dbr->fetchObject( $res ) ) {
 			$username = $row->username;
 			$this->items[] = array(
 				'id' => 0,
@@ -148,43 +148,43 @@ class UserActivity {
 		}
 	}
 
-	private function setComments(){
+	private function setComments() {
 		$dbr = wfGetDB( DB_SLAVE );
 
 		# Bail out if Comments table doesn't exist
-		if( !$dbr->tableExists( 'Comments' ) ){
+		if ( !$dbr->tableExists( 'Comments' ) ) {
 			return false;
 		}
 
 		$rel_sql = '';
 		$user_sql = '';
 
-		if( !empty( $this->rel_type ) ) {
+		if ( !empty( $this->rel_type ) ) {
 			$rel_sql = "AND Comment_user_id IN (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type})";
 		}
 
-		if( !empty( $this->show_current_user ) ) {
+		if ( !empty( $this->show_current_user ) ) {
 			$user_sql = "AND Comment_user_id = {$this->user_id}";
 		}
 
-		$sql = "SELECT UNIX_TIMESTAMP(comment_date) AS item_date, Comment_Username, Comment_IP, page_title, Comment_Text, Comment_user_id, page_namespace, CommentID 
+		$sql = "SELECT UNIX_TIMESTAMP(comment_date) AS item_date, Comment_Username, Comment_IP, page_title, Comment_Text, Comment_user_id, page_namespace, CommentID
 			FROM {$dbr->tableName( 'Comments' )} c, {$dbr->tableName( 'page' )} p
 			WHERE c.comment_page_id=p.page_id
 			{$rel_sql} {$user_sql}
 			ORDER BY comment_date DESC LIMIT 0," . $this->item_max;
 
-		$res = $dbr->query($sql);
+		$res = $dbr->query( $sql );
 		global $wgFilterComments;
-		while( $row = $dbr->fetchObject( $res ) ) {
+		while ( $row = $dbr->fetchObject( $res ) ) {
 			$show_comment = true;
 
-			if( $wgFilterComments ){
-				if ( $row->vote_count <= 4 ){
+			if ( $wgFilterComments ) {
+				if ( $row->vote_count <= 4 ) {
 					$show_comment = false;
 				}
 			}
 
-			if( $show_comment ) {
+			if ( $show_comment ) {
 				$title = Title::makeTitle( $row->page_namespace, $row->page_title );
 				$this->items_grouped['comment'][$title->getPrefixedText()]['users'][$row->Comment_Username][] = array(
 					'id' => $row->CommentID,
@@ -193,8 +193,8 @@ class UserActivity {
 					'pagetitle' => $row->page_title,
 					'namespace' => $row->page_namespace,
 					'username' => $row->Comment_Username,
-					'userid' => $row->Comment_user_id, 
-					'comment' => $this->fixItemComment( $row->Comment_Text ), 
+					'userid' => $row->Comment_user_id,
+					'comment' => $this->fixItemComment( $row->Comment_Text ),
 					'minor' => 0,
 					'new' => 0
 				);
@@ -219,19 +219,19 @@ class UserActivity {
 		}
 	}
 
-	private function setGiftsSent(){
+	private function setGiftsSent() {
 		$dbr = wfGetDB( DB_SLAVE );
-		if( $this->rel_type )
+		if ( $this->rel_type )
 			$rel_sql = "WHERE ug_user_id_to IN (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type})";
-		if( $this->show_current_user )
+		if ( $this->show_current_user )
 			$user_sql = "WHERE ug_user_id_from = {$this->user_id}";
-	
+
 		$sql = "SELECT ug_id, ug_user_id_from, ug_user_name_from, ug_user_id_to, ug_user_name_to, UNIX_TIMESTAMP(ug_date) AS item_date,gift_name, gift_id
-			FROM {$dbr->tableName( 'user_gift' )} INNER JOIN {$dbr->tableName( 'gift' )} ON gift_id = ug_gift_id 
-			{$rel_sql} {$user_sql} 
+			FROM {$dbr->tableName( 'user_gift' )} INNER JOIN {$dbr->tableName( 'gift' )} ON gift_id = ug_gift_id
+			{$rel_sql} {$user_sql}
 			ORDER BY ug_id DESC LIMIT 0,{$this->item_max}";
-		$res = $dbr->query($sql);
-		while( $row = $dbr->fetchObject( $res ) ) {
+		$res = $dbr->query( $sql );
+		while ( $row = $dbr->fetchObject( $res ) ) {
 			$this->items[] = array(
 				'id' => $row->ug_id,
 				'type' => 'gift-sent',
@@ -247,25 +247,25 @@ class UserActivity {
 		}
 	}
 
-	private function setGiftsRec(){
+	private function setGiftsRec() {
 		$dbr = wfGetDB( DB_SLAVE );
 		$rel_sql = '';
 		$user_sql = '';
 
-		if( !empty( $this->rel_type ) ) {
+		if ( !empty( $this->rel_type ) ) {
 			$rel_sql = "WHERE ug_user_id_to in (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type} )";
 		}
 
-		if( !empty( $this->show_current_user ) ) {
+		if ( !empty( $this->show_current_user ) ) {
 			$user_sql = "WHERE ug_user_id_to = {$this->user_id}";
 		}
 
 		$sql = "SELECT ug_id, ug_user_id_from, ug_user_name_from, ug_user_id_to, ug_user_name_to, UNIX_TIMESTAMP(ug_date) AS item_date,gift_name, gift_id
-			FROM {$dbr->tableName( 'user_gift' )} INNER JOIN {$dbr->tableName( 'gift' )} ON gift_id = ug_gift_id 
-			{$rel_sql} {$user_sql} 
+			FROM {$dbr->tableName( 'user_gift' )} INNER JOIN {$dbr->tableName( 'gift' )} ON gift_id = ug_gift_id
+			{$rel_sql} {$user_sql}
 			ORDER BY ug_id DESC LIMIT 0,{$this->item_max}";
-		$res = $dbr->query($sql);
-		while( $row = $dbr->fetchObject( $res ) ) {
+		$res = $dbr->query( $sql );
+		while ( $row = $dbr->fetchObject( $res ) ) {
 			global $wgUploadPath;
 			$user_title = Title::makeTitle( NS_USER, $row->ug_user_name_to );
 			$user_title_from = Title::makeTitle( NS_USER, $row->ug_user_name_from );
@@ -283,7 +283,7 @@ class UserActivity {
 
 			$this->activityLines[] = array(
 				'type' => 'gift-rec',
-				'timestamp' => $row->item_date, 
+				'timestamp' => $row->item_date,
 				'data' => "<b><a href=\"{$user_title->escapeFullURL()}\">{$row->ug_user_name_to}</a></b> {$html}"
 			);
 
@@ -302,25 +302,25 @@ class UserActivity {
 		}
 	}
 
-	private function setSystemGiftsRec(){
+	private function setSystemGiftsRec() {
 		$dbr = wfGetDB( DB_SLAVE );
 		$rel_sql = '';
 		$user_sql = '';
 
-		if( !empty( $this->rel_type ) ) {
+		if ( !empty( $this->rel_type ) ) {
 			$rel_sql = "WHERE sg_user_id in (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type} )";
 		}
 
-		if( !empty( $this->show_current_user ) ) {
+		if ( !empty( $this->show_current_user ) ) {
 			$user_sql = "WHERE sg_user_id = {$this->user_id}";
 		}
 
 		$sql = "SELECT sg_id, sg_user_id, sg_user_name, UNIX_TIMESTAMP(sg_date) AS item_date,gift_name, gift_id
-			FROM {$dbr->tableName( 'user_system_gift' )} INNER JOIN {$dbr->tableName( 'system_gift' )} ON gift_id = sg_gift_id 
-			{$rel_sql} {$user_sql} 
+			FROM {$dbr->tableName( 'user_system_gift' )} INNER JOIN {$dbr->tableName( 'system_gift' )} ON gift_id = sg_gift_id
+			{$rel_sql} {$user_sql}
 			ORDER BY sg_id DESC LIMIT 0,{$this->item_max}";
-		$res = $dbr->query($sql);
-		while( $row = $dbr->fetchObject( $res ) ) {
+		$res = $dbr->query( $sql );
+		while ( $row = $dbr->fetchObject( $res ) ) {
 			global $wgUploadPath;
 			$user_title = Title::makeTitle( NS_USER, $row->sg_user_name );
 			$system_gift_image = '<img src="' . $wgUploadPath . '/awards/' . SystemGifts::getGiftImage( $row->gift_id, 'm' ) . '" border="0" alt="" />';
@@ -336,7 +336,7 @@ class UserActivity {
 
 			$this->activityLines[] = array(
 				'type' => 'system_gift',
-				'timestamp' => $row->item_date, 
+				'timestamp' => $row->item_date,
 				'data' => "<b><a href=\"{$user_title->escapeFullURL()}\">{$row->sg_user_name}</a></b> {$html}"
 			);
 
@@ -354,15 +354,15 @@ class UserActivity {
 			);
 		}
 	}
-	
-	private function setRelationships(){
+
+	private function setRelationships() {
 		$dbr = wfGetDB( DB_SLAVE );
-		if( !empty( $this->rel_type ) ) {
+		if ( !empty( $this->rel_type ) ) {
 			$rel_sql = "WHERE r_user_id in (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type} )";
 		} else {
 			$rel_sql = '';
 		}
-		if( !empty( $this->show_current_user ) ) {
+		if ( !empty( $this->show_current_user ) ) {
 			$user_sql = "WHERE r_user_id = {$this->user_id}";
 		} else {
 			$user_sql = '';
@@ -371,20 +371,20 @@ class UserActivity {
 			FROM {$dbr->tableName( 'user_relationship' )}
 			{$rel_sql} {$user_sql}
 			ORDER BY r_id DESC LIMIT 0,{$this->item_max}";
-		$res = $dbr->query($sql);
+		$res = $dbr->query( $sql );
 
-		while( $row = $dbr->fetchObject( $res ) ) {
-			if( $row->r_type == 1 ){
+		while ( $row = $dbr->fetchObject( $res ) ) {
+			if ( $row->r_type == 1 ) {
 				$r_type = 'friend';
 			} else {
 				$r_type = 'foe';
 			}
 
 			$user_name_short = substr( $row->r_user_name, 0, 25 );
-			if( $row->r_user_name != $user_name_short )
-				$user_name_short.= '...';
+			if ( $row->r_user_name != $user_name_short )
+				$user_name_short .= '...';
 
-			//$title = Title::makeTitle( $row->page_namespace, $row->page_title );
+			// $title = Title::makeTitle( $row->page_namespace, $row->page_title );
 			$this->items_grouped[$r_type][$row->r_user_name_relation]['users'][$row->r_user_name][] = array(
 				'id' => $row->r_id,
 				'type' => $r_type,
@@ -393,7 +393,7 @@ class UserActivity {
 				'namespace' => '',
 				'username' => $user_name_short,
 				'userid' => $row->r_user_id,
-				'comment' => $row->r_user_name_relation, 
+				'comment' => $row->r_user_name_relation,
 				'minor' => 0,
 				'new' => 0
 			);
@@ -416,16 +416,16 @@ class UserActivity {
 		}
 	}
 
-	private function setMessagesSent(){
+	private function setMessagesSent() {
 		$dbr = wfGetDB( DB_SLAVE );
 		$rel_sql = '';
 		$user_sql = '';
 
-		if( !empty( $this->rel_type ) ) {
+		if ( !empty( $this->rel_type ) ) {
 			$rel_sql = " ub_user_id_from IN (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type} ) AND";
 		}
 
-		if( !empty( $this->show_current_user ) ) {
+		if ( !empty( $this->show_current_user ) ) {
 			$user_sql = " ub_user_id_from = {$this->user_id} AND";
 		}
 
@@ -434,10 +434,10 @@ class UserActivity {
 			{$rel_sql} {$user_sql}  ub_type=0
 			ORDER BY ub_id DESC LIMIT 0,{$this->item_max}";
 
-		$res = $dbr->query($sql);
-		while( $row = $dbr->fetchObject( $res ) ) {
+		$res = $dbr->query( $sql );
+		while ( $row = $dbr->fetchObject( $res ) ) {
 
-			$this->items_grouped['user_message'][stripslashes($row->ub_user_name)]['users'][stripslashes($row->ub_user_name_from)][] = array(
+			$this->items_grouped['user_message'][stripslashes( $row->ub_user_name )]['users'][stripslashes( $row->ub_user_name_from )][] = array(
 				'id' => $row->ub_id,
 				'type' => 'user_message',
 				'timestamp' => $row->item_date,
@@ -451,7 +451,7 @@ class UserActivity {
 			);
 
 			// set last timestamp
-			$this->items_grouped['user_message'][stripslashes($row->ub_user_name)]['timestamp'] = $row->item_date;
+			$this->items_grouped['user_message'][stripslashes( $row->ub_user_name )]['timestamp'] = $row->item_date;
 
 			$this->items[] = array(
 				'id' => $row->ub_id,
@@ -467,30 +467,30 @@ class UserActivity {
 			);
 		}
 	}
-	
-	private function setSystemMessages(){
+
+	private function setSystemMessages() {
 		$dbr = wfGetDB( DB_SLAVE );
 		$rel_sql = '';
 		$user_sql = '';
 
-		if( !empty( $this->rel_type ) ) {
+		if ( !empty( $this->rel_type ) ) {
 			$rel_sql = " WHERE um_user_id in (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type} )";
 		}
 
-		if( !empty( $this->show_current_user ) ) {
+		if ( !empty( $this->show_current_user ) ) {
 			$user_sql = " WHERE um_user_id = {$this->user_id}";
 		}
 
 		$sql = "SELECT um_id, um_user_id, um_user_name, um_type, um_message, UNIX_TIMESTAMP(um_date) AS item_date
-			FROM {$dbr->tableName( 'user_system_messages' )} 
+			FROM {$dbr->tableName( 'user_system_messages' )}
 			{$rel_sql} {$user_sql}
 			ORDER BY um_id DESC LIMIT 0,{$this->item_max}";
-		$res = $dbr->query($sql);
-		while( $row = $dbr->fetchObject( $res ) ) {
+		$res = $dbr->query( $sql );
+		while ( $row = $dbr->fetchObject( $res ) ) {
 			$user_title = Title::makeTitle( NS_USER, $row->um_user_name );
 			$user_name_short = substr( $row->um_user_name, 0, 15 );
-			if( $row->um_user_name != $user_name_short )
-				$user_name_short.= '...';
+			if ( $row->um_user_name != $user_name_short )
+				$user_name_short .= '...';
 			$this->activityLines[] = array(
 				'type' => 'system_message',
 				'timestamp' => $row->item_date,
@@ -515,20 +515,20 @@ class UserActivity {
 	/**
 	 * Retrieves sport network updates from the database (for ArmchairGM)
 	 */
-	private function setNetworkUpdates(){
+	private function setNetworkUpdates() {
 		$dbr = wfGetDB( DB_SLAVE );
-		if( $this->rel_type )
+		if ( $this->rel_type )
 			$rel_sql = " WHERE us_user_id IN (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type} )";
-		if( $this->show_current_user )
+		if ( $this->show_current_user )
 			$user_sql = " WHERE us_user_id = {$this->user_id}";
 		$sql = "SELECT us_id, us_user_id, us_user_name, us_text, UNIX_TIMESTAMP(us_date) AS item_date,
 			us_sport_id, us_team_id
 			FROM {$dbr->tableName( 'user_status' )}
 			{$rel_sql} {$user_sql}
 			ORDER BY us_id DESC LIMIT 0,{$this->item_max}";
-		$res = $dbr->query($sql);
-		while( $row = $dbr->fetchObject( $res ) ) {
-			if( $row->us_team_id ){
+		$res = $dbr->query( $sql );
+		while ( $row = $dbr->fetchObject( $res ) ) {
+			if ( $row->us_team_id ) {
 				$team = SportsTeams::getTeam( $row->us_team_id );
 				$network_name = $team['name'];
 			} else {
@@ -551,8 +551,8 @@ class UserActivity {
 
 			$user_title = Title::makeTitle( NS_USER, $row->us_user_name );
 			$user_name_short = substr( $row->us_user_name, 0, 15 );
-			if( $row->us_user_name != $user_name_short )
-				$user_name_short.= '...';
+			if ( $row->us_user_name != $user_name_short )
+				$user_name_short .= '...';
 			$page_link = '<a href="' . SportsTeams::getNetworkURL( $row->us_sport_id, $row->us_team_id ) . "\" rel=\"nofollow\">{$network_name}</a> ";
 			$network_image = SportsTeams::getLogo( $row->us_sport_id, $row->us_team_id, 's' );
 
@@ -573,101 +573,101 @@ class UserActivity {
 		}
 	}
 
-	public function getEdits(){
+	public function getEdits() {
 		$this->setEdits();
 		return $this->items;
 	}
 
-	public function getVotes(){
+	public function getVotes() {
 		$this->setVotes();
 		return $this->items;
 	}
 
-	public function getComments(){
+	public function getComments() {
 		$this->setComments();
 		return $this->items;
 	}
 
-	public function getGiftsSent(){
+	public function getGiftsSent() {
 		$this->setGiftsSent();
 		return $this->items;
 	}
 
-	public function getGiftsRec(){
+	public function getGiftsRec() {
 		$this->setGiftsRec();
 		return $this->items;
-	}	
+	}
 
-	public function getSystemGiftsRec(){
+	public function getSystemGiftsRec() {
 		$this->setSystemGiftsRec();
 		return $this->items;
 	}
 
-	public function getRelationships(){
+	public function getRelationships() {
 		$this->setRelationships();
 		return $this->items;
 	}
 
-	public function getSystemMessages(){
+	public function getSystemMessages() {
 		$this->setSystemMessages();
-		return $this->items; 
+		return $this->items;
 	}
 
-	public function getMessagesSent(){
+	public function getMessagesSent() {
 		$this->setMessagesSent();
-		return $this->items; 
+		return $this->items;
 	}
 
-	public function getNetworkUpdates(){
+	public function getNetworkUpdates() {
 		$this->setNetworkUpdates();
 		return $this->items;
 	}
 
-	public function getActivityList(){
-		if( $this->show_edits ) $this->setEdits();
-		if( $this->show_votes ) $this->setVotes();
-		if( $this->show_comments ) $this->setComments();
-		if( $this->show_gifts_sent ) $this->setGiftsSent();
-		if( $this->show_gifts_rec ) $this->setGiftsRec();
-		if( $this->show_relationships ) $this->setRelationships();
-		if( $this->show_system_messages ) $this->getSystemMessages();
-		if( $this->show_system_gifts ) $this->getSystemGiftsRec();
-		if( $this->show_messages_sent ) $this->getMessagesSent();
-		if( $this->show_network_updates ) $this->getNetworkUpdates();
-	
-		if( $this->items )
+	public function getActivityList() {
+		if ( $this->show_edits ) $this->setEdits();
+		if ( $this->show_votes ) $this->setVotes();
+		if ( $this->show_comments ) $this->setComments();
+		if ( $this->show_gifts_sent ) $this->setGiftsSent();
+		if ( $this->show_gifts_rec ) $this->setGiftsRec();
+		if ( $this->show_relationships ) $this->setRelationships();
+		if ( $this->show_system_messages ) $this->getSystemMessages();
+		if ( $this->show_system_gifts ) $this->getSystemGiftsRec();
+		if ( $this->show_messages_sent ) $this->getMessagesSent();
+		if ( $this->show_network_updates ) $this->getNetworkUpdates();
+
+		if ( $this->items )
 			usort( $this->items, array( 'UserActivity', 'sortItems' ) );
 		return $this->items;
 	}
 
-	public function getActivityListGrouped(){
+	public function getActivityListGrouped() {
 		$this->getActivityList();
-	
-		if( $this->show_edits ) $this->simplifyPageActivity( 'edit' );
-		if( $this->show_comments ) $this->simplifyPageActivity( 'comment' );
-		if( $this->show_relationships ) $this->simplifyPageActivity( 'friend' );
-		if( $this->show_relationships ) $this->simplifyPageActivity( 'foe' );
-		if( $this->show_messages_sent ) $this->simplifyPageActivity( 'user_message' );
-		//if( $this->show_system_messages ) $this->simplifyPageActivity( 'system_messages', false );
 
-		if( !isset( $this->activityLines ) ) {
+		if ( $this->show_edits ) $this->simplifyPageActivity( 'edit' );
+		if ( $this->show_comments ) $this->simplifyPageActivity( 'comment' );
+		if ( $this->show_relationships ) $this->simplifyPageActivity( 'friend' );
+		if ( $this->show_relationships ) $this->simplifyPageActivity( 'foe' );
+		if ( $this->show_messages_sent ) $this->simplifyPageActivity( 'user_message' );
+		// if( $this->show_system_messages ) $this->simplifyPageActivity( 'system_messages', false );
+
+		if ( !isset( $this->activityLines ) ) {
 			$this->activityLines = array();
 		}
-		if( isset( $this->activityLines ) && is_array( $this->activityLines ) )
+		if ( isset( $this->activityLines ) && is_array( $this->activityLines ) )
 			usort( $this->activityLines, array( 'UserActivity', 'sortItems' ) );
 		return $this->activityLines;
 	}
 
-	function simplifyPageActivity( $type, $has_page = true ){
-		if( !isset( $this->items_grouped[$type] ) || !is_array( $this->items_grouped[$type] ) ){
+	function simplifyPageActivity( $type, $has_page = true ) {
+		if ( !isset( $this->items_grouped[$type] ) || !is_array( $this->items_grouped[$type] ) ) {
 			return '';
 		}
 
-		foreach( $this->items_grouped[$type] as $page_name => $page_data ){
+		foreach ( $this->items_grouped[$type] as $page_name => $page_data ) {
 			$users = '';
 			$pages = '';
 
-			if( $type == 'friend' || $type == 'foe' || $type == 'user_message' ) {
+			if ( $type == 'friend' || $type == 'foe' || $type == 'user_message' ) {
 				$page_title = Title::newFromText( 'User:' . $page_name );
 			} else {
 				$page_title = Title::newFromText( $page_name );
@@ -675,49 +675,49 @@ class UserActivity {
 
 			$count_users = count( $page_data['users'] );
 			$user_index = 0;
-			$pages_count = 0; 
-	
-			foreach( $page_data['users'] as $user_name => $action ){
+			$pages_count = 0;
 
-				if( $page_data['timestamp'] < $this->three_days_ago ){
+			foreach ( $page_data['users'] as $user_name => $action ) {
+
+				if ( $page_data['timestamp'] < $this->three_days_ago ) {
 					continue;
 				}
 
 				$count_actions = count( $action );
-	
-				if( $has_page && !isset( $this->displayed[$type][$page_name] ) ){
+
+				if ( $has_page && !isset( $this->displayed[$type][$page_name] ) ) {
 
 					$this->displayed[ $type ][ $page_name ] = 1;
 
 					$pages .= " <a href=\"{$page_title->escapeFullURL()}\">{$page_name}</a>";
-					if( $count_users == 1 && $count_actions > 1 ){
+					if ( $count_users == 1 && $count_actions > 1 ) {
 						$pages .= " ($count_actions " . wfMsg( "useractivity-group-{$type}" ) . ")";
 					}
 					$pages_count++;
 				}
 
-				// Single user on this action, 
+				// Single user on this action,
 				// see if we can stack any other singles
-				if( $count_users == 1 ){
-					foreach( $this->items_grouped[$type] as $page_name2 => $page_data2 ){
+				if ( $count_users == 1 ) {
+					foreach ( $this->items_grouped[$type] as $page_name2 => $page_data2 ) {
 
-						if( !isset( $this->displayed[$type][$page_name2] ) && count( $page_data2['users'] ) == 1  ) {
+						if ( !isset( $this->displayed[$type][$page_name2] ) && count( $page_data2['users'] ) == 1  ) {
 
-							foreach( $page_data2['users'] as $user_name2 => $action2 ){
+							foreach ( $page_data2['users'] as $user_name2 => $action2 ) {
 
-								if( $user_name2 == $user_name && $pages_count < 5 ){
+								if ( $user_name2 == $user_name && $pages_count < 5 ) {
 									$count_actions2 = count( $action2 );
 
-									if( $type == 'friend' || $type == 'foe' || $type == 'user_message' ) {
+									if ( $type == 'friend' || $type == 'foe' || $type == 'user_message' ) {
 										$page_title2 = Title::newFromText( 'User:' . $page_name2 );
 									} else {
 										$page_title2 = Title::newFromText( $page_name2 );
 									}
 
-									if( $pages )
+									if ( $pages )
 										$pages .= ", ";
 									$pages .= " <a href=\"{$page_title2->escapeFullURL()}\">{$page_name2}</a>";
-									if( $count_actions2 > 1 ){
+									if ( $count_actions2 > 1 ) {
 										$pages .= " ($count_actions2 " . wfMsg( "useractivity-group-{$type}" ) . ")";
 									}
 									$pages_count++;
@@ -731,19 +731,19 @@ class UserActivity {
 
 				$user_index++;
 
-				if( $users && $count_users > 2 )
+				if ( $users && $count_users > 2 )
 					$users .= ', ';
-				if( $user_index ==  $count_users && $count_users > 1 )
+				if ( $user_index ==  $count_users && $count_users > 1 )
 					$users .= wfMsg( 'and' );
 
 				$user_title = Title::makeTitle( NS_USER, $user_name );
 				$user_name_short = substr( $user_name, 0, 15 );
-				if( $user_name != $user_name_short )
-					$user_name_short.= '...';
+				if ( $user_name != $user_name_short )
+					$user_name_short .= '...';
 
 				$users .= " <b><a href=\"{$user_title->escapeFullURL()}\">{$user_name_short}</a></b>";
 			}
-			if( $pages || $has_page == false ){
+			if ( $pages || $has_page == false ) {
 				$this->activityLines[] = array(
 					'type' => $type,
 					'timestamp' => $page_data['timestamp'],
@@ -753,7 +753,7 @@ class UserActivity {
 		}
 	}
 
-	static function getTypeIcon( $type ){
+	static function getTypeIcon( $type ) {
 		switch( $type ) {
 			case 'edit':
 				return 'editIcon.gif';
@@ -784,8 +784,8 @@ class UserActivity {
 		}
 	}
 
-	function fixItemComment( $comment ){
-		if( !$comment ){
+	function fixItemComment( $comment ) {
+		if ( !$comment ) {
 			return '';
 		} else {
 			$comment = str_replace( "<", "&lt;", $comment );
@@ -794,20 +794,19 @@ class UserActivity {
 			$comment = str_replace( "%26quot;", "\"", $comment );
 		}
 		$preview = substr( $comment, 0, 75 );
-		if( $preview != $comment ){
+		if ( $preview != $comment ) {
 			$preview .= '...';
 		}
 		return stripslashes( $preview );
 	}
 
-	private function sortItems( $x, $y ){
-		if( $x['timestamp'] == $y['timestamp'] ){
+	private function sortItems( $x, $y ) {
+		if ( $x['timestamp'] == $y['timestamp'] ) {
 			return 0;
-		} else if( $x['timestamp'] > $y['timestamp'] ){
-			return -1;
+		} else if ( $x['timestamp'] > $y['timestamp'] ) {
+			return - 1;
 		} else {
 			return 1;
-		}	
+		}
 	}
-
 }

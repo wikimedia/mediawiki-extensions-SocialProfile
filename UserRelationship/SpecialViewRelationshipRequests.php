@@ -31,7 +31,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		 * Redirect Non-logged in users to Login Page
 		 * It will automatically return them to the ViewRelationshipRequests page
 		 */
-		if( $wgUser->getID() == 0 ){
+		if ( $wgUser->getID() == 0 ) {
 			$wgOut->setPageTitle( wfMsg( 'ur-error-page-title' ) );
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
 			$wgOut->redirect( $login->getFullURL( 'returnto=Special:ViewRelationshipRequests' ) );
@@ -45,7 +45,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		$friend_request_count = $rel->getOpenRequestCount( $wgUser->getID(), 1 );
 		$foe_request_count = $rel->getOpenRequestCount( $wgUser->getID(), 2 );
 
-		if( count( $_POST ) && $_SESSION['alreadysubmitted'] == false ) {
+		if ( count( $_POST ) && $_SESSION['alreadysubmitted'] == false ) {
 			$_SESSION['alreadysubmitted'] = true;
 			$rel->addRelationshipRequest( $this->user_name_to, $this->relationship_type, $_POST['message'] );
 			$out = '<br /><span class="title">' . wfMsg( 'ur-already-submitted' ) . '</span><br /><br />';
@@ -57,15 +57,15 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 			$output .= $wgOut->setPagetitle( wfMsg( 'ur-requests-title' ) );
 			$requests = $rel->getRequestList( 0 );
 
-			if( $requests ) {
+			if ( $requests ) {
 
-				foreach( $requests as $request ) {
+				foreach ( $requests as $request ) {
 
 					$user_from = Title::makeTitle( NS_USER, $request['user_name_from'] );
 					$avatar = new wAvatar( $request['user_id_from'], 'l' );
 					$avatar_img = $avatar->getAvatarURL();
 
-					if( $request['type'] == 'Foe' ) {
+					if ( $request['type'] == 'Foe' ) {
 						$msg = wfMsg( 'ur-requests-message-foe', $user_from->escapeFullURL(), $request['user_name_from'] );
 					} else {
 						$msg = wfMsg( 'ur-requests-message-friend', $user_from->escapeFullURL(), $request['user_name_from'] );
@@ -75,7 +75,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 
 					$output .= "<div class=\"relationship-action black-text\" id=\"request_action_{$request["id"]}\">
 					  	{$avatar_img}" . $msg;
-						if( $request['message'] ) {
+						if ( $request['message'] ) {
 							$output .= '<div class="relationship-message">' . $message . '</div>';
 						}
 						$output .= '<div class="cleared"></div>

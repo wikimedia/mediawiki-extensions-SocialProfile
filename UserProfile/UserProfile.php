@@ -47,25 +47,25 @@ $wgHooks['ArticleFromTitle'][] = 'wfUserProfileFromTitle';
  * @param &$article Article object
  * @return true
  */
-function wfUserProfileFromTitle( &$title, &$article ){
+function wfUserProfileFromTitle( &$title, &$article ) {
 	global $wgRequest, $wgOut, $wgHooks, $wgUserPageChoice, $wgUserProfileScripts;
 
 	if ( strpos( $title->getText(), '/' ) === false && ( NS_USER == $title->getNamespace() || NS_USER_PROFILE == $title->getNamespace() ) ) {
 
 		$show_user_page = false;
-		if( $wgUserPageChoice ){
+		if ( $wgUserPageChoice ) {
 			$profile = new UserProfile( $title->getText() );
 			$profile_data = $profile->getProfile();
 
 			// If they want regular page, ignore this hook
-			if( isset( $profile_data['user_id'] ) && $profile_data['user_id'] && $profile_data['user_page_type'] == 0 ){
+			if ( isset( $profile_data['user_id'] ) && $profile_data['user_id'] && $profile_data['user_page_type'] == 0 ) {
 				$show_user_page = true;
 			}
 		}
 
-		if( !$show_user_page ){
+		if ( !$show_user_page ) {
 			// Prevents editing of userpage
-			if( $wgRequest->getVal( 'action' ) == 'edit' ){
+			if ( $wgRequest->getVal( 'action' ) == 'edit' ) {
 				$wgOut->redirect( $title->getFullURL() );
 			}
 		} else {

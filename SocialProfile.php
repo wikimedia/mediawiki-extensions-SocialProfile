@@ -3,7 +3,7 @@
  * Protect against register_globals vulnerabilities.
  * This line must be present before any global variable is referenced.
  */
-if( !defined( 'MEDIAWIKI' ) )
+if ( !defined( 'MEDIAWIKI' ) )
 	die();
 
 /**
@@ -17,7 +17,7 @@ $dir = dirname( __FILE__ ) . '/';
 $wgExtensionMessagesFiles['SocialProfileUserBoard'] = $dir . 'UserBoard/UserBoard.i18n.php';
 $wgExtensionMessagesFiles['SocialProfileUserProfile'] = $dir . 'UserProfile/UserProfile.i18n.php';
 $wgExtensionMessagesFiles['SocialProfileUserRelationship'] = $dir . 'UserRelationship/UserRelationship.i18n.php';
-$wgExtensionMessagesFiles['SocialProfileUserStats'] = $dir. 'UserStats/UserStats.i18n.php';
+$wgExtensionMessagesFiles['SocialProfileUserStats'] = $dir . 'UserStats/UserStats.i18n.php';
 
 $wgExtensionAliasesFiles['SocialProfile'] = $dir . 'SocialProfile.alias.php';
 
@@ -43,9 +43,9 @@ $wgAutoloadClasses['UserLevel'] = $dir . 'UserStats/UserStatsClass.php';
 $wgAutoloadClasses['UserStats'] = $dir . 'UserStats/UserStatsClass.php';
 $wgAutoloadClasses['UserStatsTrack'] = $dir . 'UserStats/UserStatsClass.php';
 $wgAutoloadClasses['UserSystemMessage'] = $dir . 'UserSystemMessages/UserSystemMessagesClass.php';
-$wgAutoloadClasses['TopFansByStat'] = $dir. 'UserStats/TopFansByStat.php';
+$wgAutoloadClasses['TopFansByStat'] = $dir . 'UserStats/TopFansByStat.php';
 $wgAutoloadClasses['TopFansRecent'] = $dir . 'UserStats/TopFansRecent.php';
-$wgAutoloadClasses['TopUsersPoints'] = $dir. 'UserStats/TopUsers.php';
+$wgAutoloadClasses['TopUsersPoints'] = $dir . 'UserStats/TopUsers.php';
 $wgAutoloadClasses['wAvatar'] = $dir . 'UserProfile/AvatarClass.php';
 
 // New special pages
@@ -74,8 +74,8 @@ $wgSpecialPageGroups['ViewRelationshipRequests'] = 'users';
 $wgSpecialPageGroups['ViewRelationships'] = 'users';
 
 // Necessary AJAX functions
-require_once("$IP/extensions/SocialProfile/UserBoard/UserBoard_AjaxFunctions.php");
-require_once("$IP/extensions/SocialProfile/UserRelationship/Relationship_AjaxFunctions.php");
+require_once( "$IP/extensions/SocialProfile/UserBoard/UserBoard_AjaxFunctions.php" );
+require_once( "$IP/extensions/SocialProfile/UserRelationship/Relationship_AjaxFunctions.php" );
 
 // What to display on social profile pages by default?
 $wgUserProfileDisplay['board'] = true;
@@ -190,8 +190,8 @@ $wgUserProfileScripts = "$wgScriptPath/extensions/SocialProfile/UserProfile";
 $wgUserRelationshipScripts = "$wgScriptPath/extensions/SocialProfile/UserRelationship";
 
 // Loader files
-require_once("$IP/extensions/SocialProfile/YUI/YUI.php"); // YUI stand-alone library
-require_once("{$wgUserProfileDirectory}/UserProfile.php"); // Profile page configuration loader file
-require_once("$IP/extensions/SocialProfile/UserGifts/Gifts.php"); // UserGifts (user-to-user gifting functionality) loader file
-require_once("$IP/extensions/SocialProfile/SystemGifts/SystemGifts.php"); // SystemGifts (awards functionality) loader file
-require_once("$IP/extensions/SocialProfile/UserActivity/UserActivity.php"); // UserActivity - recent social changes
+require_once( "$IP/extensions/SocialProfile/YUI/YUI.php" ); // YUI stand-alone library
+require_once( "{$wgUserProfileDirectory}/UserProfile.php" ); // Profile page configuration loader file
+require_once( "$IP/extensions/SocialProfile/UserGifts/Gifts.php" ); // UserGifts (user-to-user gifting functionality) loader file
+require_once( "$IP/extensions/SocialProfile/SystemGifts/SystemGifts.php" ); // SystemGifts (awards functionality) loader file
+require_once( "$IP/extensions/SocialProfile/UserActivity/UserActivity.php" ); // UserActivity - recent social changes

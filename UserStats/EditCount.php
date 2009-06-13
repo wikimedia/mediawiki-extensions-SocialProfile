@@ -3,7 +3,7 @@
  * Protect against register_globals vulnerabilities.
  * This line must be present before any global variable is referenced.
  */
-if ( !defined( 'MEDIAWIKI' ) ){
+if ( !defined( 'MEDIAWIKI' ) ) {
 	die( "This is not a valid entry point.\n" );
 }
 
@@ -13,7 +13,7 @@ function incEditCount( &$article, $revision, $baseRevId ) {
 	global $wgUser, $wgTitle, $wgNamespacesForEditPoints;
 
 	// only keep tally for allowable namespaces
-	if( !is_array( $wgNamespacesForEditPoints ) || in_array( $wgTitle->getNamespace(), $wgNamespacesForEditPoints ) ){
+	if ( !is_array( $wgNamespacesForEditPoints ) || in_array( $wgTitle->getNamespace(), $wgNamespacesForEditPoints ) ) {
 		$stats = new UserStatsTrack( $wgUser->getID(), $wgUser->getName() );
 		$stats->incStatField( 'edit' );
 	}
@@ -22,11 +22,11 @@ function incEditCount( &$article, $revision, $baseRevId ) {
 
 $wgHooks['ArticleDelete'][] = 'removeDeletedEdits';
 
-function removeDeletedEdits( &$article, &$user, &$reason ){
+function removeDeletedEdits( &$article, &$user, &$reason ) {
 	global $wgTitle, $wgNamespacesForEditPoints;
 
 	// only keep tally for allowable namespaces
-	if( !is_array( $wgNamespacesForEditPoints ) || in_array( $wgTitle->getNamespace(), $wgNamespacesForEditPoints ) ){
+	if ( !is_array( $wgNamespacesForEditPoints ) || in_array( $wgTitle->getNamespace(), $wgNamespacesForEditPoints ) ) {
 
 		$dbr = wfGetDB( DB_MASTER );
 		$res = $dbr->select( 'revision',
@@ -35,7 +35,7 @@ function removeDeletedEdits( &$article, &$user, &$reason ){
 			__METHOD__,
 			array( 'GROUP BY' => 'rev_user_text' )
 		);
-		while( $row = $dbr->fetchObject( $res ) ) {
+		while ( $row = $dbr->fetchObject( $res ) ) {
 			$stats = new UserStatsTrack( $row->rev_user, $row->rev_user_text );
 			$stats->decStatField( 'edit', $row->the_count );
 		}
@@ -45,11 +45,11 @@ function removeDeletedEdits( &$article, &$user, &$reason ){
 
 $wgHooks['ArticleUndelete'][] = 'restoreDeletedEdits';
 
-function restoreDeletedEdits( &$title, $new ){
+function restoreDeletedEdits( &$title, $new ) {
 	global $wgNamespacesForEditPoints;
 
 	// only keep tally for allowable namespaces
-	if( !is_array( $wgNamespacesForEditPoints ) || in_array( $title->getNamespace(), $wgNamespacesForEditPoints ) ){
+	if ( !is_array( $wgNamespacesForEditPoints ) || in_array( $title->getNamespace(), $wgNamespacesForEditPoints ) ) {
 
 		$dbr = wfGetDB( DB_MASTER );
 		$res = $dbr->select( 'revision',
@@ -58,7 +58,7 @@ function restoreDeletedEdits( &$title, $new ){
 			__METHOD__,
 			array( 'GROUP BY' => 'rev_user_text' )
 		);
-		while( $row = $dbr->fetchObject( $res ) ) {
+		while ( $row = $dbr->fetchObject( $res ) ) {
 			$stats = new UserStatsTrack( $row->rev_user, $row->rev_user_text );
 			$stats->incStatField( 'edit', $row->the_count );
 		}

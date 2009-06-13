@@ -5,7 +5,7 @@ class UserHome extends SpecialPage {
 	/**
 	 * Constructor
 	 */
-	public function __construct(){
+	public function __construct() {
 		parent::__construct( 'UserActivity' );
 	}
 
@@ -14,7 +14,7 @@ class UserHome extends SpecialPage {
 	 *
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
-	public function execute( $par ){
+	public function execute( $par ) {
 		global $wgUser, $wgOut, $wgRequest, $wgSitename, $wgScriptPath;
 
 		wfLoadExtensionMessages( 'UserActivity' );
@@ -30,18 +30,18 @@ class UserHome extends SpecialPage {
 		$rel_type = $wgRequest->getVal( 'rel_type' );
 		$item_type = $wgRequest->getVal( 'item_type' );
 
-		if( !$rel_type ) $rel_type = 1;
-		if( !$item_type ) $item_type = 'all';
+		if ( !$rel_type ) $rel_type = 1;
+		if ( !$item_type ) $item_type = 'all';
 
-		if( $item_type == 'edits' || $item_type == 'all' ) $edits = 1;
-		if( $item_type == 'votes' || $item_type == 'all' ) $votes = 0;
-		if( $item_type == 'comments' || $item_type == 'all' ) $comments = 1;
-		if( $item_type == 'gifts' || $item_type == 'all' ) $gifts = 1;
-		if( $item_type == 'relationships' || $item_type == 'all' ) $relationships = 1;
-		if( $item_type == 'advancements' || $item_type == 'all' ) $messages = 1;
-		if( $item_type == 'awards' || $item_type == 'all' ) $system_gifts = 1;
-		if( $item_type == 'messages' || $item_type == 'all' ) $messages_sent = 1;
-		if( $item_type == 'thoughts' || $item_type == 'all' ) $network_updates = 1;
+		if ( $item_type == 'edits' || $item_type == 'all' ) $edits = 1;
+		if ( $item_type == 'votes' || $item_type == 'all' ) $votes = 0;
+		if ( $item_type == 'comments' || $item_type == 'all' ) $comments = 1;
+		if ( $item_type == 'gifts' || $item_type == 'all' ) $gifts = 1;
+		if ( $item_type == 'relationships' || $item_type == 'all' ) $relationships = 1;
+		if ( $item_type == 'advancements' || $item_type == 'all' ) $messages = 1;
+		if ( $item_type == 'awards' || $item_type == 'all' ) $system_gifts = 1;
+		if ( $item_type == 'messages' || $item_type == 'all' ) $messages_sent = 1;
+		if ( $item_type == 'thoughts' || $item_type == 'all' ) $network_updates = 1;
 
 		/*
 		$output .= '<div class="user-home-links-container">
@@ -83,7 +83,7 @@ class UserHome extends SpecialPage {
 		$rel->setActivityToggle( 'show_messages_sent', $messages_sent );
 
 		// An extra toggle for ArmchairGM
-		if( $wgSitename == 'ArmchairGM' ){
+		if ( $wgSitename == 'ArmchairGM' ) {
 			$rel->setActivityToggle( 'show_network_updates', $network_updates );
 		}
 
@@ -93,14 +93,14 @@ class UserHome extends SpecialPage {
 		$activity = $rel->getActivityListGrouped();
 		$border_fix = '';
 
-		if( $activity ){
+		if ( $activity ) {
 			$x = 1;
 
-			foreach( $activity as $item ) {
+			foreach ( $activity as $item ) {
 
-				if( $x < 40 ) {
+				if ( $x < 40 ) {
 
-					if( ( ( count( $activity ) > 40 ) && ( $x == 39 ) ) || ( ( count( $activity ) < 40 ) && ( $x == ( count( $activity )-1 ) ) ) ) {
+					if ( ( ( count( $activity ) > 40 ) && ( $x == 39 ) ) || ( ( count( $activity ) < 40 ) && ( $x == ( count( $activity ) - 1 ) ) ) ) {
 						$border_fix = ' border-fix';
 					}
 
