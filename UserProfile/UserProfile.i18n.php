@@ -992,6 +992,7 @@ $messages['bcc'] = array(
  */
 $messages['be-tarask'] = array(
 	'populateuserprofiles' => 'Запаўненьне зьвестак пра ўдзельніка',
+	'user-time-ago' => '$1 таму',
 	'user-awards-title' => 'Узнагароды',
 	'user-gifts-title' => 'Падарункі',
 	'user-count-separator' => '$1 з $2',
@@ -1690,6 +1691,7 @@ $messages['da'] = array(
  */
 $messages['de'] = array(
 	'populateuserprofiles' => 'Benutzerprofil vervollständigen',
+	'user-time-ago' => 'vor $1',
 	'user-awards-title' => 'Auszeichnungen',
 	'user-gifts-title' => 'Geschenke',
 	'user-count-separator' => '$1 von $2',
@@ -4147,6 +4149,7 @@ $messages['it'] = array(
  */
 $messages['ja'] = array(
 	'populateuserprofiles' => '利用者プロフィールを入力する',
+	'user-time-ago' => '$1前',
 	'user-awards-title' => '表彰',
 	'user-gifts-title' => 'プレゼント',
 	'user-count-separator' => '$2人中 $1人',
@@ -4613,6 +4616,7 @@ $messages['krj'] = array(
  */
 $messages['ksh'] = array(
 	'populateuserprofiles' => 'De Metmaacher ier Profile met Date fölle',
+	'user-time-ago' => 'vür $1',
 	'user-awards-title' => 'Belohnunge un Ußzeichnunge',
 	'user-gifts-title' => 'Jeschenke',
 	'user-count-separator' => '{{PLURAL:$1|eine|$1|keine}} fun $2',
@@ -6951,6 +6955,7 @@ $messages['ru'] = array(
 	'user-profile-picture-choosepicture' => 'Выберите вашу картинку',
 	'user-profile-picture-picsize' => 'Ваше изображение должно быть в формате jpeg, png, или gif и не превышать 100 КБ в размере.',
 	'user-profile-goback' => 'Назад',
+	'user-profile-userlevels-link' => 'Уровни участника',
 	'user-no-images' => 'изображения не загружены',
 	'edit-profile-title' => 'Править ваш очерк',
 	'user-page-link' => 'Страница участника',

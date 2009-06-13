@@ -225,6 +225,7 @@ $messages['be-tarask'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Атрыманы падарунак|Атрыманыя падарункі|Атрыманых падарункаў}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Дасланы падарунак|Дасланыя падарункі|Дасланых падарункаў}}',
 	'right-updatepoints' => 'абнаўленьне колькасьці рэдагаваньняў',
+	'level-advanced-to' => 'палепшаны да ўзроўню <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Цяпер Вы ў групе «$1» у {{SITENAME}}!',
 	'level-advance-body' => 'Прывітаньне, $1:
 
@@ -932,6 +933,7 @@ $messages['ja'] = array(
 	'top-fans-stats-gifts-rec-count' => 'プレゼントを受け取りました',
 	'top-fans-stats-gifts-sent-count' => 'プレゼントを贈りました',
 	'right-updatepoints' => '編集回数を更新する',
+	'level-advanced-to' => 'レベル<span style="font-weight:800;">$1</span>に上がりました',
 	'level-advance-subject' => '{{SITENAME}}の"$1"になりました！',
 	'level-advance-body' => '$1さん、こんにちは。
 
@@ -1026,6 +1028,7 @@ $messages['ksh'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Jeschenk|Jeschenke}} kräje',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Jeschenk|Jeschenke}} jejovve',
 	'right-updatepoints' => 'De Aanzahl Änderunge ändere',
+	'level-advanced-to' => 'opjeschtoof op dat Nivoh <span style="font-weight:800">$1</span>',
 	'level-advance-subject' => 'Do bes jätz ene „$1“ op de {{SITENAME}}!',
 	'level-advance-body' => 'Hallo $1,
 
@@ -1284,6 +1287,7 @@ $messages['oc'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|present recebut|presents recebuts}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|present mandat|presents mandats}}',
 	'right-updatepoints' => "Mesa a jorn del comptador d'edicions",
+	'level-advanced-to' => 'a avançat cap al nivèl <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => "D'ara enlà, avètz un « $1 » sus {{SITENAME}} !",
 	'level-advance-body' => "Adiu $1 :
 

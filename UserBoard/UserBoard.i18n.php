@@ -296,6 +296,10 @@ $messages['be-tarask'] = array(
 	'userboard_loggedout' => 'Вам неабходна <a href="$1">ўвайсьці ў сыстэму</a>, каб пісаць паведамленьні іншым удзельнікам.',
 	'userboard_showingmessages' => '{{PLURAL:$4|Паказанае паведамленьне $3|Паказаныя паведамленьньні $2-$3}} з $1 {{PLURAL:$1|паведамленьня|паведамленьняў|паведамленьняў}}',
 	'right-userboard-delete' => 'выдаленьне паведамленьняў іншых удзельнікаў з дошкі',
+	'userboard-time-days' => '$1 {{PLURAL:$1|дзень|дні|дзён}}',
+	'userboard-time-hours' => '$1 {{PLURAL:$1|гадзіна|гадзіны|гадзінаў}}',
+	'userboard-time-minutes' => '$1 {{PLURAL:$1|хвіліна|хвіліны|хвілінаў}}',
+	'userboard-time-seconds' => '$1 {{PLURAL:$1|сэкунда|сэкунды|сэкундаў}}',
 	'message_received_subject' => '$1 напісаў на Вашай дошцы ў {{GRAMMAR:месны|{{SITENAME}}}}',
 	'message_received_body' => 'Прывітаньне, $1.
 
@@ -500,6 +504,7 @@ $messages['da'] = array(
 
 /** German (Deutsch)
  * @author Als-Holder
+ * @author MF-Warburg
  * @author Purodha
  * @author Raimond Spekking
  * @author Tim 'Avatar' Bartel
@@ -547,6 +552,10 @@ $messages['de'] = array(
 	'userboard_loggedout' => 'Du musst <a href="$1">angemeldet sein</a>, um Nachrichten an andere Nutzer schicken zu können.',
 	'userboard_showingmessages' => 'Zeige {{PLURAL:$4|Nachricht $3|Nachrichten $2-$3}} von $1 insgesamt',
 	'right-userboard-delete' => 'Nachrichten anderer vom Board löschen',
+	'userboard-time-days' => '{{PLURAL:$1|ein Tag|$1 Tage}}',
+	'userboard-time-hours' => '{{PLURAL:$1|eine Stunde|$1 Stunden}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|eine Minute|$1 Minuten}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|eine Sekunde|$1 Sekunden}}',
 	'message_received_subject' => '$1 hat auf deine {{SITENAME}}-Pinnwand geschrieben',
 	'message_received_body' => 'Hi $1:
 
@@ -1338,6 +1347,10 @@ $messages['ja'] = array(
 	'userboard_loggedout' => '他の利用者にメッセージを送信するには<a href="$1">ログイン</a>する必要があります。',
 	'userboard_showingmessages' => 'メッセージ$1件中{{PLURAL:$4|$3件|$2-$3件}}を表示中',
 	'right-userboard-delete' => '他人の掲示板のメッセージを削除する',
+	'userboard-time-days' => '$1日',
+	'userboard-time-hours' => '$1時間',
+	'userboard-time-minutes' => '$1分',
+	'userboard-time-seconds' => '$1秒',
 	'message_received_subject' => '$1が{{SITENAME}}のあなたの掲示板に書き込みました',
 	'message_received_body' => 'こんにちは、$1さん。
 
@@ -1461,6 +1474,10 @@ Donn jlich <a href="index.php?title=Special:UserLogin">enlogge</a>.',
 	'userboard_loggedout' => 'Do möß ald <a href="$1">enjelogg</a> sin, öm Nohrechte aan ander Metmaacher verschecke ze künne.',
 	'userboard_showingmessages' => 'Dat {{PLURAL:$4|es de Nohreech|sin de Nohreechte $2 beß|nix}} $3 vun {{PLURAL:$1|eine Nohrech|$1|nix}} ennsjesammp.',
 	'right-userboard-delete' => 'Donn anderlücks Nohreeschte vun dä Pennwand fottschmiiße',
+	'userboard-time-days' => '{{PLURAL:$1|eine Daach|$1 Dääsch|keine Daach}}',
+	'userboard-time-hours' => '{{PLURAL:$1|ein Shtundt|$1 Shtunde|kein Shtundt}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|ein Menutt|$1 Menutte|kein Menutt}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|ein Sekund|$1 Sekunde|kein Sekund}}',
 	'message_received_subject' => 'Dä Metmaacher $1 hät jet op Dinge Pinnwand en de {{SITENAME}} jedonn',
 	'message_received_body' => 'Hallo $1,
 
@@ -1873,6 +1890,10 @@ vos cal <a href="index.php?title=Special:UserLogin">èsser connectat(ada)</a>.',
 	'userboard_loggedout' => 'Vos cal èsser <a href="$1">connectat(ada)</a> per mandar de messatges a d’autres utilizaires.',
 	'userboard_showingmessages' => 'Visionament {{PLURAL:$4|del messatge $3|dels messatges $2-$3}} sus un total de {{PLURAL:$1|$1 messatge|$1 messatges}}',
 	'right-userboard-delete' => "Suprimir los messatges d'autres utilizaires",
+	'userboard-time-days' => '{{PLURAL:$1|un jorn|$1 jorns}}',
+	'userboard-time-hours' => '{{PLURAL:$1|una ora|$1 oras}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|una minuta|$1 minutas}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|una segonda|$1 segondas}}',
 	'message_received_subject' => '$1 a escrich sus vòstre tablèu sus {{SITENAME}}',
 	'message_received_body' => "Adiu $1 :
 
@@ -2150,10 +2171,10 @@ $messages['ru'] = array(
 	'userboard_loggedout' => 'Вы должны быть <a href="$1">представлены системе</a>, чтобы отправлять сообщения другим участникам.',
 	'userboard_showingmessages' => 'Отображение {{PLURAL:$4|сообщения $3|сообщений $2—$3}} из $1',
 	'right-userboard-delete' => 'удаление сообщений других досок',
-	'userboard-time-days' => '{{PLURAL:$1|один день|$1 дней}}',
-	'userboard-time-hours' => '{{PLURAL:$1|один час|$1 часов}}',
-	'userboard-time-minutes' => '{{PLURAL:$1|одна минута|$1 минут}}',
-	'userboard-time-seconds' => '{{PLURAL:$1|одна секунда|$1 секунд}}',
+	'userboard-time-days' => '{{PLURAL:$1|$1 день|$1 дня|$1 дней}}',
+	'userboard-time-hours' => '{{PLURAL:$1|$1 час|$1 часа|$1 часов}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|$1 минута|$1 минуты|$1 минут}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|$1 секунда|$1 секунды|$1 секунд}}',
 	'message_received_subject' => '$1 написал(а) на вашу доску на сайте {{SITENAME}}',
 	'message_received_body' => 'Привет, $1:
 

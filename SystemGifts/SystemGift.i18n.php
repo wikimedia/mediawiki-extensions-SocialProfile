@@ -1938,3 +1938,4 @@ $messages['vi'] = array(
 	'ga-title' => 'Huy chương của $1',
 	'ga-uploadsuccess' => 'Đã tải lên thành công',
 );
+
