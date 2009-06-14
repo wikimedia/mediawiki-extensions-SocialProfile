@@ -379,6 +379,7 @@ $messages['de'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Geschenk erhalten|Geschenke erhalten}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Geschenk gemacht|Geschenke gemacht}}',
 	'right-updatepoints' => 'Beiträgszähler aktualisieren',
+	'level-advanced-to' => 'erweitert auf Level <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Du bist jetzt „$1“ auf {{SITENAME}}!',
 	'level-advance-body' => 'Hallo $1,
 
