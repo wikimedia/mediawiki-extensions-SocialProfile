@@ -4466,6 +4466,7 @@ $messages['os'] = array(
  */
 $messages['pdc'] = array(
 	'ur-main-page' => 'Haaptblatt',
+	'ur-login' => 'Kumm nei',
 );
 
 /** Polish (Polski)

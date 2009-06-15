@@ -2161,6 +2161,13 @@ $messages['os'] = array(
 	'g-cancel' => 'Нæ бæззы',
 );
 
+/** Deitsch (Deitsch)
+ * @author Xqt
+ */
+$messages['pdc'] = array(
+	'g-main-page' => 'Haaptblatt',
+);
+
 /** Polish (Polski)
  * @author Sp5uhe
  */

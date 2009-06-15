@@ -1918,6 +1918,13 @@ $messages['os'] = array(
 	'userboard_delete' => 'Аппар',
 );
 
+/** Deitsch (Deitsch)
+ * @author Xqt
+ */
+$messages['pdc'] = array(
+	'userboard_delete' => 'Lösche',
+);
+
 /** Polish (Polski)
  * @author Derbeth
  * @author Maikking
