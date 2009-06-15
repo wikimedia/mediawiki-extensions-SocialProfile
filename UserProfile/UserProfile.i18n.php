@@ -1176,6 +1176,7 @@ $messages['be-tarask'] = array(
  */
 $messages['bg'] = array(
 	'populateuserprofiles' => 'Създаване на потребителските профили',
+	'user-time-ago' => 'преди',
 	'user-awards-title' => 'Награди',
 	'user-gifts-title' => 'Подаръци',
 	'user-count-separator' => '$1 от $2',
@@ -1283,6 +1284,7 @@ $messages['bg'] = array(
 	'user-profile-preferences-emails-level' => 'При повишаване в ранг',
 	'user-profile-preferences-emails-weekly' => 'Получаване на седмични бюлетини по е-поща',
 	'user-profile-update-button' => 'Обновяване',
+	'user-profile-tidbits-title' => 'Клюки',
 	'user-profile-tidbits-favmoment' => 'Любим спортен момент',
 	'user-profile-tidbits-favathlete' => 'Любим спортист',
 	'user-profile-sports-sport' => 'Спорт',
