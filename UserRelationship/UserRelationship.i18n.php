@@ -4466,6 +4466,7 @@ $messages['os'] = array(
  */
 $messages['pdc'] = array(
 	'ur-main-page' => 'Haaptblatt',
+	'ur-next' => 'neegscht',
 	'ur-login' => 'Kumm nei',
 );
 
@@ -4986,13 +4987,52 @@ $messages['ru'] = array(
 <a href="$3">Пригласите их.</a>',
 	'ur-add-friends' => '  Хотите больше друзей?
 <a href="$1">Пригласите их</a>',
+	'ur-add-friend' => 'Добавить в друзья',
+	'ur-add-foe' => 'Добавить в недруги',
+	'ur-add-no-user' => 'Участник не выбран.
+Пожалуйста, подавайте запрос на добавление в друзья/недруги через исправную ссылку.',
 	'ur-add-personal-message' => 'Добавить личное сообщение',
+	'ur-remove-relationship-friend' => 'Убрать из друзей',
+	'ur-remove-relationship-foe' => 'Убрать из недругов',
+	'ur-give-gift' => 'Подарить подарок',
 	'ur-previous' => 'предыдущий',
 	'ur-next' => 'следующий',
+	'ur-remove-relationship-title-foe' => 'Вы хотите удалить $1 из списка ваших недругов?',
+	'ur-remove-relationship-title-confirm-foe' => 'Вы удалили $1 из списка ваших недругов',
+	'ur-remove-relationship-title-friend' => 'Вы хотите удалить $1 из списка ваших друзей?',
+	'ur-remove-relationship-title-confirm-friend' => 'Вы удалили $1 из списка ваших друзей',
+	'ur-remove-relationship-message-foe' => 'Вы запросили удаление $1 из списка ваших недругов, нажмите «$2» для подтверждения.',
+	'ur-remove-relationship-message-confirm-foe' => 'Вы успешно удалили $1 из списка ваших недругов.',
+	'ur-remove-relationship-message-friend' => 'Вы запросили удаление $1 из списка ваших друзей, нажмите «$2» для подтверждения.',
+	'ur-remove-relationship-message-confirm-friend' => 'Вы успешно удалили $1 из списка ваших друзей.',
+	'ur-remove-error-message-no-relationship' => 'У вас не установлено отношений с $1.',
 	'ur-remove-error-message-remove-yourself' => 'Вы не можете удалить себя.',
+	'ur-remove-error-message-pending-foe-request' => 'У вас не закрыт запрос на добавление $1 в список недругов.',
+	'ur-remove-error-message-pending-friend-request' => 'У вас не закрыт запрос на добавление $1 в список друзей.',
+	'ur-remove-error-not-loggedin-foe' => 'Вы должны войти в систему, чтобы удалять участников из списка недругов.',
+	'ur-remove-error-not-loggedin-friend' => 'Вы должны войти в систему, чтобы удалять участников из списка друзей.',
 	'ur-remove' => 'Удалить',
 	'ur-cancel' => 'Отмена',
 	'ur-login' => 'Логин',
+	'ur-add-title-foe' => 'Вы желаете добавить $1 в список ваших недругов?',
+	'ur-add-title-friend' => 'Вы желаете добавить $1 в список ваших друзей?',
+	'ur-add-message-foe' => 'Вы собираетесь добавить $1 в список ваших недругов.
+Мы запросим у $1 подтверждения вашей неприязни.',
+	'ur-add-message-friend' => 'Вы собираетесь добавить $1 в список ваших друзей.
+Мы запросим у $1 подтверждения ваших дружеских отношений.',
+	'ur-add-button-foe' => 'Добавить в недруги',
+	'ur-add-button-friend' => 'Добавить в друзья',
+	'ur-add-sent-title-foe' => 'Мы запросили у $1 подтверждения вашего статуса недруга!',
+	'ur-add-sent-title-friend' => 'Мы запросили у $1 подтверждения вашего статуса друга!',
+	'ur-add-sent-message-foe' => 'Ваш запрос на добавление в список недругов отправлен $1 для утверждения.
+Если $1 подтвердит ваш запрос, то вы получите уведомление по электронной почте.',
+	'ur-add-sent-message-friend' => 'Ваш запрос на добавление в список друзей отправлен $1 для утверждения.
+Если $1 подтвердит ваш запрос, то вы получите уведомление по электронной почте.',
+	'ur-add-error-message-no-user' => 'Участника, которого вы пытаетесь добавить, не существует.',
+	'ur-add-error-message-blocked' => 'В настоящее время вы заблокированы и не можете добавлять участников в список друзей или врагов.',
+	'ur-add-error-message-yourself' => 'Вы не можете добавлять себя в свой собственный список друзей или недругов.',
+	'ur-add-error-message-existing-relationship-foe' => 'У вас уже установлены враждебные отношения с $1.',
+	'ur-add-error-message-existing-relationship-friend' => 'У вас уже установлены дружеские отношения с $1.',
 	'ur-add-error-message-pending-request-title' => 'Терпение!',
 	'ur-requests-title' => 'Связанные запросы',
 	'ur-accept' => 'Принять',
@@ -5257,6 +5297,7 @@ $messages['ss'] = array(
 );
 
 /** Swedish (Svenska)
+ * @author Gabbe.g
  * @author M.M.S.
  * @author Najami
  */
@@ -5307,6 +5348,7 @@ Vi kommer skicka $1 ett meddelande för att bekräfta fiendeskapet.',
 Vi kommer skicka $1 ett meddelande för att bekräfta vänskapet.',
 	'ur-add-button-foe' => 'Lägg till som fiende',
 	'ur-add-button-friend' => 'Lägg till som vän',
+	'ur-add-sent-title-friend' => 'Vi har skickat din vänskapsförfrågning till $1!',
 	'ur-add-error-message-no-user' => 'Användaren du prövade att lägga till finns inte.',
 	'ur-add-error-message-blocked' => 'Du är blockerad, och kan inte lägga till vänner eller fiender.',
 	'ur-add-error-message-yourself' => 'Du kan inte lägga till dig själv som vän eller fiende.',

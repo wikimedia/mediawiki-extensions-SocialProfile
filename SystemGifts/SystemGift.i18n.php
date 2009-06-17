@@ -1485,6 +1485,13 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
 	'right-awardsmanage' => 'Crear de prèmis novèls e modificar los prèmis existents',
 );
 
+/** Deitsch (Deitsch)
+ * @author Xqt
+ */
+$messages['pdc'] = array(
+	'ga-next' => 'Neegscht',
+);
+
 /** Polish (Polski)
  * @author Sp5uhe
  */
@@ -1692,6 +1699,7 @@ e altere suas preferências para desabilitar e-mails de notificação.',
 $messages['ru'] = array(
 	'ga-back-link' => '<a href="$1">< Вернуться к странице $2</a>',
 	'ga-choosefile' => 'Выберите файл:',
+	'ga-create-gift' => 'Создать подарок',
 	'ga-currentimage' => 'Текущее изображение',
 	'ga-goback' => 'Перейти назад',
 	'ga-img' => 'добавить/изменить изображение',

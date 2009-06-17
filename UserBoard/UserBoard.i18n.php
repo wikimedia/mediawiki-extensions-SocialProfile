@@ -1923,6 +1923,7 @@ $messages['os'] = array(
  */
 $messages['pdc'] = array(
 	'userboard_delete' => 'Lösche',
+	'userboard_nextpage' => 'neegscht',
 );
 
 /** Polish (Polski)

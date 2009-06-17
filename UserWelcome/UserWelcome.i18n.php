@@ -869,23 +869,24 @@ $messages['ru'] = array(
 );
 
 /** Sanskrit (संस्कृत)
+ * @author Hemant wikikosh1
  * @author Mahitgar
  */
 $messages['sa'] = array(
-	'userwelcome-desc' => 'वृध्धी <tt>&lt;सदस्यस्वागत&gt;</tt> चिन्ह: सदस्यस्य सार्वजनिक माहिती प्रवेशित सद्स्यानि पश्यामि कृते',
-	'mp-userlevels-link' => 'सदस्य स्तर:',
-	'mp-welcome-upload' => 'भारम्‌ न्यस्यति',
-	'mp-welcome-edit' => 'सम्पादन:',
+	'userwelcome-desc' => '<tt>&lt;सदस्यस्वागत&gt;</tt> चिह्नं योजयति यस्मात् सदस्यविशिष्टा सामाजिक-सूचना प्रवेशित-सदस्येभ्यः प्रदर्श्यते',
+	'mp-userlevels-link' => 'सदस्य-स्तराः',
+	'mp-welcome-upload' => 'उद्भारयतु',
+	'mp-welcome-edit' => 'सम्पादयतु',
 	'mp-welcome-points' => '$1 गुणदिष्ट',
 	'mp-welcome-needed-points' => 'प्रगतिकृते <b><a href="$1">$2</a></b> अर्जति <i>$3</i> अधिक {{PLURAL:$3|गुण:|गुण:}}!',
 	'mp-welcome-logged-in' => 'नमस्ते $1',
 	'mp-requests-title' => 'विनन्ती',
-	'mp-requests-message' => 'भवदिय अनुवृत् विनंती अस्ति।',
-	'mp-request-new-message' => 'नूतन संदेश',
-	'mp-request-new-award' => '$1 नूतन {{PLURAL:$1|प्रशस्ति|प्रशस्ति}}',
-	'mp-request-new-gift' => '$1 नूतन {{PLURAL:$1|उपहार|उपहार}}',
-	'mp-request-new-foe' => '$1 नुतन{{PLURAL:$1|शत्रू|शत्रू}}',
-	'mp-request-new-friend' => '$1 नुतन {{PLURAL:$1|मीत्र|मीत्र}}',
+	'mp-requests-message' => 'भवन्तं प्रति निवेदनानि एवं सन्ति।',
+	'mp-request-new-message' => "नूतनः संदेशः",
+	'mp-request-new-award' => '$1 नूतनाः {{PLURAL:$1|प्रशस्तिः|प्रशस्तयः}}',
+	'mp-request-new-gift' => '$1 नूतनाः {{PLURAL:$1|उपहारः|उपहाराः}}',
+	'mp-request-new-foe' => '$1 नूतनाः {{PLURAL:$1|शत्रुः|शत्रवः}}',
+	'mp-request-new-friend' => '$1 नूतनानि {{PLURAL:$1|मित्रम्|मित्राणि}}',
 );
 
 /** Sinhala (සිංහල)

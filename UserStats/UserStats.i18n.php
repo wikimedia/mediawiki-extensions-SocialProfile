@@ -1527,6 +1527,7 @@ $messages['ru'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Получено подарков|Получено подарков}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Отправлено подарков|Отправлено подарков}}',
 	'right-updatepoints' => 'обновление счётчика правок',
+	'level-advanced-to' => 'перешёл на уровень <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Вы теперь «$1» в проекте {{SITENAME}}!',
 	'level-advance-body' => 'Привет, $1.
 

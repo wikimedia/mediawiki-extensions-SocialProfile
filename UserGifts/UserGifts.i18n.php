@@ -2166,6 +2166,7 @@ $messages['os'] = array(
  */
 $messages['pdc'] = array(
 	'g-main-page' => 'Haaptblatt',
+	'g-next' => 'Neegscht',
 );
 
 /** Polish (Polski)
