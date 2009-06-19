@@ -1543,8 +1543,8 @@ $messages['bs'] = array(
 $messages['ca'] = array(
 	'other-info-title' => 'Altra informació',
 	'user-friends-title' => 'Amics',
-	'other-info-movies' => 'Pel·lícules',
-	'other-info-tv' => 'TV',
+	'other-info-movies' => 'Peŀlícules',
+	'other-info-tv' => 'Televisió',
 	'other-info-music' => 'Música',
 	'other-info-books' => 'Llibres',
 	'other-info-magazines' => 'Revistes',
@@ -6063,6 +6063,8 @@ $messages['os'] = array(
 $messages['pdc'] = array(
 	'user-watchlist' => 'Mei Watsch-Lischt',
 	'user-profile-section-preferences' => 'paerseenlich Profil',
+	'user-profile-personal-name' => 'Naame',
+	'user-page-link' => 'Yuuser-Blatt',
 );
 
 /** Plautdietsch (Plautdietsch)

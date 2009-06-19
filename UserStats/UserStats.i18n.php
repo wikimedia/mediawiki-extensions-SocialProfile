@@ -123,6 +123,8 @@ $messages['ar'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|عيب معطى|عيب معطى}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|هدية تم تلقيها|هدية تم تلقيها}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|هدية مرسلة|هدية مرسلة}}',
+	'right-updatepoints' => 'تحديث عدادات التعديلات',
+	'level-advanced-to' => 'تقدم إلى المستوى <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'أنت الآن "$1" في {{SITENAME}}!',
 	'level-advance-body' => 'مرحبا $1:
 
@@ -1239,6 +1241,7 @@ $messages['no'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Gave mottatt|Gaver mottatt}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Gave|Gaver}} sendt',
 	'right-updatepoints' => 'Oppdater redigeringsteller',
+	'level-advanced-to' => 'avanserte til nivå <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Du er nå $1 på {{SITENAME}}.',
 	'level-advance-body' => 'Hei, $1.
 

@@ -976,11 +976,12 @@ Molimo zahtjevajte prijatelje/neprijatelje preko ispravnog linka.',
 );
 
 /** Catalan (Català)
+ * @author SMP
  * @author Solde
  */
 $messages['ca'] = array(
 	'ur-remove' => 'Elimina',
-	'ur-cancel' => 'Cancel·la',
+	'ur-cancel' => 'Canceŀla',
 	'ur-accept' => 'Accepta',
 	'ur-reject' => 'Rebutja',
 );

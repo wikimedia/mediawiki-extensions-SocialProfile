@@ -1789,7 +1789,7 @@ Trykk $4 og endra innstillingane dine for å slå av meldingar gjennom e-post.',
  */
 $messages['no'] = array(
 	'boardblastlogintitle' => 'Du må være logget inn for å sende meldinger',
-	'boardblastlogintext' => 'Du må være logget inn for å sende meldinger. Gå <a href="index.php?title=Special:UserLogin">hit for å logge inn</a>',
+	'boardblastlogintext' => 'For å kunne sende meldinger må du være <a href="index.php?title=Special:UserLogin">logget inn</a>.',
 	'messagesenttitle' => 'Sendte beskjeder',
 	'boardblasttitle' => 'Send melding',
 	'boardblaststep1' => 'Steg 1 &ndash; skriv beskjeden din',
@@ -1828,6 +1828,11 @@ $messages['no'] = array(
 	'userboard_sendbutton' => 'send',
 	'userboard_loggedout' => 'Du må være <a href="$1">logget inn</a> for å sende beskjeder til andre brukere.',
 	'userboard_showingmessages' => 'Viser {{PLURAL:$4|melding $3|meldingene $2&ndash;$3}} av {{PLURAL:$1|$1 melding|$1 meldinger}}',
+	'right-userboard-delete' => 'Slett andres meldinger',
+	'userboard-time-days' => '{{PLURAL:$1|én dag|$1 dager}}',
+	'userboard-time-hours' => '{{PLURAL:$1|én time|$1 timer}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|ett minutt|$1 minutt}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|ett sekund|$1 sekund}}',
 	'message_received_subject' => '$1 har skrevet på diskusjonssiden din på {{SITENAME}}',
 	'message_received_body' => 'Hei, $1.
 
