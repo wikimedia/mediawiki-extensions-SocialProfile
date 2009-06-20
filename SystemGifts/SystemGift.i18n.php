@@ -1114,27 +1114,27 @@ e disactiva in tu preferentias le notificationes per e-mail.',
  * @author Hosiryuhosi
  */
 $messages['ja'] = array(
-	'systemgiftmanager' => 'システムからのプレゼントの管理',
-	'ga-addnew' => '+ 新しいプレゼントを追加',
-	'ga-back-edit-gift' => '戻ってこのプレゼントを編集する',
-	'ga-back-gift-list' => 'プレゼントリストへ戻る',
+	'systemgiftmanager' => 'システムからの贈り物の管理',
+	'ga-addnew' => '+ 新しい贈り物を追加',
+	'ga-back-edit-gift' => '戻ってこの贈り物を編集する',
+	'ga-back-gift-list' => '贈り物一覧へ戻る',
 	'ga-back-link' => '<a href="$1">< $2のプロフィールへ戻る</a>',
 	'ga-choosefile' => 'ファイルを選ぶ:',
-	'ga-count' => '$1 は $2 回表彰されています',
-	'ga-create-gift' => 'プレゼントを作成',
-	'ga-created' => 'プレゼントは作成されました。',
+	'ga-count' => '$1 は$2{{PLURAL:$2|回}}表彰されています',
+	'ga-create-gift' => '贈り物を作成',
+	'ga-created' => '贈り物を作成しました',
 	'ga-currentimage' => '現在の画像',
 	'ga-error-message-invalid-link' => '入力されたリンクは無効です',
 	'ga-error-message-no-user' => '表示しようとした利用者は存在しません。',
 	'ga-error-title' => 'おっと、手順を間違えたようです！',
 	'ga-file-instructions' => '使用できる画像は jpeg、png、または gif （gifアニメーション除く）で、サイズが100kb以下のものです。',
-	'ga-gift' => 'ギフト',
-	'ga-gift-given-count' => 'このプレゼントはいままでに$1回贈られています',
+	'ga-gift' => '贈り物',
+	'ga-gift-given-count' => 'この贈り物はいままでに$1{{PLURAL:$1|回}}贈られています',
 	'ga-gift-title' => '$1の「$2」',
-	'ga-giftdesc' => 'プレゼントの説明',
-	'ga-giftimage' => 'ギフト画像',
-	'ga-giftname' => 'ギフト名',
-	'ga-gifttype' => 'ギフトタイプ',
+	'ga-giftdesc' => '贈り物の説明',
+	'ga-giftimage' => '贈り物用画像',
+	'ga-giftname' => '贈り物名',
+	'ga-gifttype' => '贈り物の種類',
 	'ga-goback' => '戻る',
 	'ga-imagesbelow' => '以下はこのサイトであなたの画像として使用されている画像です',
 	'ga-img' => '画像を追加もしくは置き換え',
@@ -1145,31 +1145,31 @@ $messages['ja'] = array(
 	'ga-next' => '次',
 	'ga-previous' => '前',
 	'ga-recent-recipients-award' => 'ほかにこの賞を最近受けた人',
-	'ga-saved' => 'プレゼントは保存されました。',
+	'ga-saved' => '贈り物を保存しました',
 	'ga-small' => '小',
 	'ga-threshold' => '閾値',
 	'ga-title' => '$1のもらった賞',
 	'ga-uploadsuccess' => 'アップロード成功',
-	'ga-viewlist' => 'プレゼントリストを見る',
+	'ga-viewlist' => '贈り物一覧を見る',
 	'system_gift_received_subject' => '{{SITENAME}}にて$1賞を受けました',
 	'system_gift_received_body' => '$1さん、こんにちは。
 
 $1さんは、{{SITENAME}}にて$2賞を受賞されました！
 
-"$3"
+「$3」
 
 トロフィー入れを確認するには下のリンクをクリックしてください！
 
 $4
 
-喜んでもらえれば幸いです！
+お気に入れば幸いです！
 
-それでは。
-
-{{SITENAME}}運営チーム
+{{SITENAME}}チーム
 
 ---
-今後のメールの受信をやめたい場合、$5をクリックして、設定画面でメール通知を無効にしてください。',
+メール受信を停止したい場合は、
+$5
+をクリックして、メール通知を無効にするよう設定変更してください。',
 	'right-awardsmanage' => '賞の編集・新規作成',
 );
 
@@ -1697,19 +1697,42 @@ e altere suas preferências para desabilitar e-mails de notificação.',
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
+	'systemgiftmanager' => 'Система управления подарками',
+	'ga-addnew' => '+ Добавить новый подарок',
+	'ga-back-edit-gift' => 'Вернуться к редактированию этого подарка',
+	'ga-back-gift-list' => 'Вернуться к списку подарков',
 	'ga-back-link' => '<a href="$1">< Вернуться к странице $2</a>',
 	'ga-choosefile' => 'Выберите файл:',
+	'ga-count' => '$1 имеет $2 {{PLURAL:$1|награда|награды|наград}}.',
 	'ga-create-gift' => 'Создать подарок',
+	'ga-created' => 'Подарок был создан',
 	'ga-currentimage' => 'Текущее изображение',
+	'ga-error-message-invalid-link' => 'Введённая вами ссылка неверная.',
+	'ga-error-message-no-user' => 'Участник, которого вы хотите посмотреть, не существует.',
+	'ga-error-title' => 'Woops, вы ввели неправильное название!',
+	'ga-file-instructions' => 'Ваше изображение должно быть в формате jpeg, png или gif (не анимированный gif), и быть меньше 100 КБ размером.',
+	'ga-gift-title' => '$1 «$2»',
+	'ga-giftdesc' => 'описание подарка',
+	'ga-giftimage' => 'изображение подарка',
+	'ga-giftname' => 'название подарка',
+	'ga-gifttype' => 'тип подарка',
 	'ga-goback' => 'Перейти назад',
 	'ga-img' => 'добавить/изменить изображение',
 	'ga-large' => 'Большой',
+	'ga-medium' => 'Средний',
+	'ga-mediumlarge' => 'Средний-большой',
 	'ga-new' => 'Новый',
 	'ga-next' => 'Следующий',
 	'ga-previous' => 'Предыдущий',
+	'ga-recent-recipients-award' => 'Другие последние получатели этой награды',
+	'ga-saved' => 'Этот подарок был сохранён',
 	'ga-small' => 'Маленький',
 	'ga-threshold' => 'порог',
+	'ga-title' => 'Награды $1',
 	'ga-uploadsuccess' => 'Загрузка успешно завершена',
+	'ga-viewlist' => 'Просмотр списка подарков',
+	'system_gift_received_subject' => 'Вы получили награду $1 на {{SITENAME}}!',
+	'right-awardsmanage' => 'создание новых и правка существующих наград',
 );
 
 /** Slovak (Slovenčina)

@@ -919,38 +919,36 @@ $messages['ja'] = array(
 	'top-fans-by-category-title' => '総合上位$1',
 	'top-fans-bad-field-title' => 'おっと！',
 	'top-fans-bad-field-message' => '指定した統計は存在しません。',
-	'top-fans-stats-vote-count' => '投票',
-	'top-fans-stats-monthly-winner-count' => '月間勝者',
-	'top-fans-stats-weekly-winner-count' => '週間勝者',
-	'top-fans-stats-edit-count' => '編集',
-	'top-fans-stats-comment-count' => 'コメント',
-	'top-fans-stats-referrals-completed' => '推薦',
-	'top-fans-stats-friends-count' => '友人',
-	'top-fans-stats-foe-count' => '敵',
-	'top-fans-stats-opinions-published' => '公表された意見',
-	'top-fans-stats-opinions-created' => '意見',
-	'top-fans-stats-comment-score-positive-rec' => '拍手',
-	'top-fans-stats-comment-score-negative-rec' => 'ブーイング',
-	'top-fans-stats-comment-score-positive-given' => '拍手をうけました',
-	'top-fans-stats-comment-score-negative-given' => 'ブーイングを受けました',
-	'top-fans-stats-gifts-rec-count' => 'プレゼントを受け取りました',
-	'top-fans-stats-gifts-sent-count' => 'プレゼントを贈りました',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|投票}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|月間勝者}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|週間勝者}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|編集}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|コメント}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|推薦}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|友人}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|敵}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|公表された意見}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|意見}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|拍手}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|ブーイング}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|拍手}}をうけました',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|ブーイング}}を受けました',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|贈り物}}を受け取りました',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|贈り物}}を送りました',
 	'right-updatepoints' => '編集回数を更新する',
 	'level-advanced-to' => 'レベル<span style="font-weight:800;">$1</span>に上がりました',
 	'level-advance-subject' => '{{SITENAME}}の"$1"になりました！',
 	'level-advance-body' => '$1さん、こんにちは。
 
 おめでとうございます。
-$1さんは{{SITENAME}}の"$2"になりました！
-
+$1さんは{{SITENAME}}の「$2」になりました！
 
 {{SITENAME}}チーム
 
 ---
-私たちからのメールがご不要ですか？
-
+メール受信を停止したい場合は、
 $3
-をクリックして、メール通知を停止するように設定を変更してください。',
+をクリックして、メール通知を無効にするよう設定変更してください。',
 );
 
 /** Khmer (ភាសាខ្មែរ)

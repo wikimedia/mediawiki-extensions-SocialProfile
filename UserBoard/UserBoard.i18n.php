@@ -1347,10 +1347,10 @@ $messages['ja'] = array(
 	'userboard_loggedout' => '他の利用者にメッセージを送信するには<a href="$1">ログイン</a>する必要があります。',
 	'userboard_showingmessages' => 'メッセージ$1件中{{PLURAL:$4|$3件|$2-$3件}}を表示中',
 	'right-userboard-delete' => '他人の掲示板のメッセージを削除する',
-	'userboard-time-days' => '$1日',
-	'userboard-time-hours' => '$1時間',
-	'userboard-time-minutes' => '$1分',
-	'userboard-time-seconds' => '$1秒',
+	'userboard-time-days' => '{{PLURAL:$1|$1日}}',
+	'userboard-time-hours' => '{{PLURAL:$1|$1時間}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|$1分}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|$1秒}}',
 	'message_received_subject' => '$1が{{SITENAME}}のあなたの掲示板に書き込みました',
 	'message_received_body' => 'こんにちは、$1さん。
 
@@ -1361,10 +1361,9 @@ $messages['ja'] = array(
 $3
 
 ---
-
-私達からメールを受け取るのをやめますか？
-
-$4 をクリックして、メール通知を無効にするよう設定を変更してください。',
+メール受信を停止したい場合は、
+$4
+をクリックして、メール通知を無効にするよう設定変更してください。',
 );
 
 /** Javanese (Basa Jawa)

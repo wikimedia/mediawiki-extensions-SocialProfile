@@ -519,16 +519,16 @@ $messages['ja'] = array(
 	'mp-userlevels-link' => '利用者レベル',
 	'mp-welcome-upload' => 'アップロード',
 	'mp-welcome-edit' => '編集',
-	'mp-welcome-points' => '$1ポイント',
-	'mp-welcome-needed-points' => '<b><a href="$1">$2</a></b>に進むにはあと<i>$3</i>ポイント必要です！',
+	'mp-welcome-points' => '$1{{PLURAL:$1|点}}',
+	'mp-welcome-needed-points' => '<b><a href="$1">$2</a></b>に進むにはあと<i>$3</i>{{PLURAL:$3|点}}必要です！',
 	'mp-welcome-logged-in' => 'こんにちは $1',
 	'mp-requests-title' => 'リクエスト',
 	'mp-requests-message' => '以下のリクエストがあります。',
 	'mp-request-new-message' => '新しいメッセージ',
-	'mp-request-new-award' => '$1つの新しい賞',
-	'mp-request-new-gift' => '$1つの新しいプレゼント',
-	'mp-request-new-foe' => '$1人の新しい敵',
-	'mp-request-new-friend' => '$1人の新しい友人',
+	'mp-request-new-award' => '$1つの新しい{{PLURAL:$1|賞}}',
+	'mp-request-new-gift' => '$1つの新しい{{PLURAL:$1|贈り物}}',
+	'mp-request-new-foe' => '$1人の新しい{{PLURAL:$1|敵}}',
+	'mp-request-new-friend' => '$1人の新しい{{PLURAL:$1|友人}}',
 );
 
 /** Javanese (Basa Jawa)
