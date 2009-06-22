@@ -6814,11 +6814,12 @@ $messages['roa-tara'] = array(
 /** Russian (Русский)
  * @author Ferrer
  * @author Innv
+ * @author Lockal
  * @author Rubin
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
-	'populateuserprofiles' => 'Заполнение очерков участников',
+	'populateuserprofiles' => 'Заполнение профилей участников',
 	'user-time-ago' => 'назад',
 	'user-awards-title' => 'Награды',
 	'user-gifts-title' => 'Подарки',
@@ -6826,8 +6827,8 @@ $messages['ru'] = array(
 	'user-view-all' => 'Просмотреть все',
 	'user-upload-image' => 'Загрузить изображение',
 	'user-edit-this' => 'Править это',
-	'user-edit-profile' => 'Править очерк',
-	'user-upload-avatar' => 'Загрузить аватара',
+	'user-edit-profile' => 'Править профиль',
+	'user-upload-avatar' => 'Загрузить аватару',
 	'user-watchlist' => 'Мой список наблюдения',
 	'user-meet-people' => 'Встретить людей',
 	'user-add-friend' => 'Добавить как друга',
@@ -6843,9 +6844,9 @@ $messages['ru'] = array(
 	'user-stats-comments' => '{{PLURAL:$1|Комментарий|Комментарии}}',
 	'user-stats-recruits' => '{{PLURAL:$1|Новичок|Новичков}}',
 	'user-stats-poll-votes' => 'Опросов {{PLURAL:$1|голос|голосов}}',
-	'user-stats-picture-game-votes' => 'Изображений игр {{PLURAL:$1|голос|голосов}}',
-	'user-stats-quiz-points' => '{{PLURAL:$1|единица вопросов|единиц вопросов}}',
-	'user-stats-pick-points' => "Выберите {{PLURAL:$1|единицу|единицы}} 'em",
+	'user-stats-picture-game-votes' => '{{PLURAL:$1|Голос|Голосов}} в игре с картинками',
+	'user-stats-quiz-points' => '{{PLURAL:$1|Очко|Очков}} викторины',
+	'user-stats-pick-points' => "{{PLURAL:$1|Очко|Очков}} pick 'em",
 	'other-info-title' => 'Другие сведения',
 	'user-friends-title' => 'Друзья',
 	'user-foes-title' => 'Неприятели',
@@ -6891,13 +6892,13 @@ $messages['ru'] = array(
 	'user-recent-activity-user-message' => 'Отправить сообщение для',
 	'user-recent-activity-network-update' => 'отправил мысль',
 	'user-recent-system-gift' => 'получил награду',
-	'user-profile-update-notloggedin-title' => 'Невозможно редактировать свой очерк не представившись системе',
-	'user-profile-update-notloggedin-text' => 'Вы не можете редактировать свой очерк не представившись системе. Нажмите <a href="$1">здесь</a>, чтобы представиться, или <a href="$2">здесь</a>, чтобы зарегистрироваться.',
-	'user-profile-update-saved' => 'Ваш очерк сохранён',
+	'user-profile-update-notloggedin-title' => 'Невозможно редактировать свой профиль, не представившись системе',
+	'user-profile-update-notloggedin-text' => 'Вы не можете редактировать свой профиль, не представившись системе. Нажмите <a href="$1">здесь</a>, чтобы представиться, или <a href="$2">здесь</a>, чтобы зарегистрироваться.',
+	'user-profile-update-saved' => 'Ваш профиль сохранён',
 	'user-profile-update-log-section' => 'изменил раздел',
-	'user-profile-update-profile' => 'очерк',
+	'user-profile-update-profile' => 'профиль',
 	'user-profile-default-country' => 'США',
-	'user-profile-points' => '$1 {{PLURAL:$1|единица|единицы|единиц}}',
+	'user-profile-points' => '$1 {{PLURAL:$1|очко|очка|очков}}',
 	'user-profile-section-personal' => 'Личные сведения',
 	'user-profile-section-sportsteams' => 'Обновить сети',
 	'user-profile-section-custom' => 'Пользовательская информация',
@@ -6949,7 +6950,7 @@ $messages['ru'] = array(
 	'user-profile-sports-sport' => 'Спорт',
 	'user-profile-sports-title' => 'Редактирование ваших любимых видов спорта и команд',
 	'user-profile-sports-notloggedintitle' => 'Опа!',
-	'user-profile-sports-notloggedintext' => 'вы должны представиться, чтобы редактировать ваш очерк.',
+	'user-profile-sports-notloggedintext' => 'Вы должны представиться, чтобы редактировать ваш профиль.',
 	'user-profile-sports-teamremoved' => 'Ваша команда была удалена',
 	'user-profile-sports-teamsaved' => 'Ваши команды были сохранены',
 	'user-profile-sports-addmore' => 'Добавить ещё видов спорта или команд',
@@ -6967,9 +6968,9 @@ $messages['ru'] = array(
 	'user-profile-goback' => 'Назад',
 	'user-profile-userlevels-link' => 'Уровни участника',
 	'user-no-images' => 'изображения не загружены',
-	'edit-profile-title' => 'Править ваш очерк',
+	'edit-profile-title' => 'Править ваш профиль',
 	'user-page-link' => 'Страница участника',
-	'user-social-profile-link' => 'Социальный очерк',
+	'user-social-profile-link' => 'Социальный профиль',
 	'user-wiki-link' => 'Вики-страница',
 	'update_profile_nav' => '* Special:UpdateProfile|Личные сведения
 * Special:UpdateProfile/personal|Другая информация
