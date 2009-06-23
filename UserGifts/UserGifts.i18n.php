@@ -148,6 +148,7 @@ $messages['qqq'] = array(
 /** Arabic (العربية)
  * @author Ciphers
  * @author Meno25
+ * @author OsamaK
  */
 $messages['ar'] = array(
 	'giftmanager' => 'مدير الهدايا',
@@ -167,7 +168,7 @@ $messages['ar'] = array(
 	'g-back-link' => '< رجوع إلى صفحة $1',
 	'g-choose-file' => 'اختر الملف:',
 	'g-cancel' => 'إلغاء',
-	'g-count' => '$1 يمتلك $2 {{PLURAL:$2|هدية|هدية}}.',
+	'g-count' => 'لدى $1 {{PLURAL:$2||هدية واحدة|هديتان|$2 هدايا|$2 هدية}}.',
 	'g-create-gift' => 'إنشاء الهدية',
 	'g-created-by' => 'تم إنشاؤها بواسطة',
 	'g-current-image' => 'الصورة الحالية',
@@ -189,7 +190,7 @@ $messages['ar'] = array(
 	'g-give-all-message-title' => 'إضافة رسالة',
 	'g-give-all-title' => 'إعطاء هدية إلى $1',
 	'g-give-enter-friend-title' => 'لو كنت تعرف اسم المستخدم، اكتبه بالأسفل',
-	'g-given' => 'هذه الهدية تم إعطاؤها $1 {{PLURAL:$1|مرة|مرة}}',
+	'g-given' => 'أعطيت هذه الهدية {{PLURAL:$1||مرة واحدة|مرتين|$2 مرات|$2 مرة}}',
 	'g-give-list-friends-title' => 'اختر من قائمة أصدقائك',
 	'g-give-list-select' => 'اختر صديقا',
 	'g-give-separator' => 'أو',

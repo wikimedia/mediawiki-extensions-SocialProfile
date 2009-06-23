@@ -91,6 +91,7 @@ $messages['qqq'] = array(
 
 /** Arabic (العربية)
  * @author Meno25
+ * @author OsamaK
  */
 $messages['ar'] = array(
 	'systemgiftmanager' => 'مدير هدايا النظام',
@@ -99,7 +100,7 @@ $messages['ar'] = array(
 	'ga-back-gift-list' => 'رجوع لقائمة الهدايا',
 	'ga-back-link' => '<a href="$1">< رجوع إلى ملف $2</a>',
 	'ga-choosefile' => 'اختر الملف:',
-	'ga-count' => '$1 يمتلك $2 {{PLURAL:$2|جائزة|جائزة}}.',
+	'ga-count' => 'لدى $1 {{PLURAL:$2||جائزة واحدة|جائزتين|$2 جوائز|$2 جائزة}}.',
 	'ga-create-gift' => 'إنشاء الهدية',
 	'ga-created' => 'الهدية تم إنشاؤها',
 	'ga-currentimage' => 'الصورة الحالية',
@@ -108,7 +109,7 @@ $messages['ar'] = array(
 	'ga-error-title' => 'آه، أنت أخذت منحنى خاطئا!',
 	'ga-file-instructions' => 'صورتك يجب أن تكون jpeg، png أو gif (لا gif فيديو)، ويجب أن تكون أقل من 100 كيلوبت في الحجم.',
 	'ga-gift' => 'هدية',
-	'ga-gift-given-count' => 'هذه الهدية تم منحها $1 {{PLURAL:$1|مرة|مرة}}',
+	'ga-gift-given-count' => 'أعطيت هذه الهدية {{PLURAL:$1||مرة واحدة|مرتين|$1 مرات|$1 مرة}}',
 	'ga-gift-title' => '"$2" الخاصة ب$1',
 	'ga-giftdesc' => 'وصف الهدية',
 	'ga-giftimage' => 'صورة الهدية',

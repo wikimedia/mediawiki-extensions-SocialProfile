@@ -169,7 +169,7 @@ $messages['ar'] = array(
 	'userboard_nomessages' => 'لا رسائل.',
 	'userboard_sendbutton' => 'إرسال',
 	'userboard_loggedout' => 'يجب أن تكون <a href="$1">مُسجلًا الدخول</a> لترسل رسائل إلى المستخدمين الآخرين.',
-	'userboard_showingmessages' => 'عرض {{PLURAL:$4|الرسالة $3|الرسائل $2-$3}} من {{PLURAL:$1|$1 رسالة|$1 رسالة}}',
+	'userboard_showingmessages' => 'عرض {{PLURAL:$4||الرسالة $3|الرسالتين $2-$3|الرسائل $2-$3}} من أصل {{PLURAL:$1||رسالة واحدة|رسالتين|$1 رسائل|$1 رسالة}}',
 	'message_received_subject' => '$1 كتب على مجلسك في {{SITENAME}}',
 	'message_received_body' => 'مرحبا $1:
 

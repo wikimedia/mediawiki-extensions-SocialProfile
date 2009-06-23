@@ -66,16 +66,16 @@ $messages['ar'] = array(
 	'mp-userlevels-link' => 'مستويات المستخدم',
 	'mp-welcome-upload' => 'رفع',
 	'mp-welcome-edit' => 'عدل',
-	'mp-welcome-points' => '$1 {{PLURAL:$1|نقطة|نقطة}}',
-	'mp-welcome-needed-points' => 'للتقدم <b><a href="$1">$2</a></b> لاستحقاق {{PLURAL:$3|نقطة|<i>$3</i> نقاط}} إضافية!',
+	'mp-welcome-points' => '{{PLURAL:$1|لا نقاط|نقطة واحدة|نقطتان|$1 نقاط|$1 نقطة}}',
+	'mp-welcome-needed-points' => 'للتقدم <b><a href="$1">$2</a></b> لاستحقاق {{PLURAL:$3||نقطة واحدة إضافية|نقطتان إضافيتان|<i>$3</i> نقاط إضافية|<i>$3</i> نقطة إضافية}}!',
 	'mp-welcome-logged-in' => 'مرحبا $1',
 	'mp-requests-title' => 'طلبات',
 	'mp-requests-message' => 'لديك الطلبات التالية.',
 	'mp-request-new-message' => 'رسالة جديدة',
-	'mp-request-new-award' => '$1 {{PLURAL:$1|جائزة|جائزة}} جديدة',
-	'mp-request-new-gift' => '$1 {{PLURAL:$1|منحة|منحة}} جديدة',
-	'mp-request-new-foe' => '$1 {{PLURAL:$1|عدو|عدو}} جديد',
-	'mp-request-new-friend' => '$1 {{PLURAL:$1|صديق|صديق}} جديد',
+	'mp-request-new-award' => '{{PLURAL:$1|لا جوائز جديدة|جائزة جديدة|جائزتان جديدتان|$1 جوائز جديدة|$1 جائزة جديدة}}',
+	'mp-request-new-gift' => '{{PLURAL:$1|لا منح جديدة|منحة جديدة|منحتان جديدتان|$1 منح جديدة|$1 منحة جديدة}}',
+	'mp-request-new-foe' => '{{PLURAL:$1|لا أعداء جدد|عدو جديد|عدوّان جديدان|$1 أعداء جدد|$1 عدوًا جديدًا|$1 عدو جديد}}',
+	'mp-request-new-friend' => '{{PLURAL:$1|لا أصدقاء جدد|صديق جديد|صديقان جديدان|$1 أصدقاء جدد|$1 صديقًا جديدًا|$1 صديق جديد}}',
 );
 
 /** Egyptian Spoken Arabic (مصرى)
