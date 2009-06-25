@@ -221,9 +221,12 @@ class UserActivity {
 
 	private function setGiftsSent() {
 		$dbr = wfGetDB( DB_SLAVE );
-		if ( $this->rel_type )
+		$rel_sql = '';
+		$user_sql = '';
+
+		if( $this->rel_type )
 			$rel_sql = "WHERE ug_user_id_to IN (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type})";
-		if ( $this->show_current_user )
+		if( $this->show_current_user )
 			$user_sql = "WHERE ug_user_id_from = {$this->user_id}";
 
 		$sql = "SELECT ug_id, ug_user_id_from, ug_user_name_from, ug_user_id_to, ug_user_name_to, UNIX_TIMESTAMP(ug_date) AS item_date,gift_name, gift_id
@@ -800,8 +803,8 @@ class UserActivity {
 		return stripslashes( $preview );
 	}
 
-	private function sortItems( $x, $y ) {
-		if ( $x['timestamp'] == $y['timestamp'] ) {
+	private static function sortItems( $x, $y ){
+		if( $x['timestamp'] == $y['timestamp'] ){
 			return 0;
 		} else if ( $x['timestamp'] > $y['timestamp'] ) {
 			return - 1;
