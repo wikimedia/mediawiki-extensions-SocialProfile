@@ -4123,11 +4123,13 @@ Clicca <a href="$1">hic</a> pro aperir un session o clicca <a href="$2">hic</a> 
 );
 
 /** Indonesian (Bahasa Indonesia)
+ * @author Bennylin
  * @author Irwangatot
  */
 $messages['id'] = array(
 	'user-no-personal-info' => 'Tidak ada informasi pribadi',
 	'user-profile-personal-name' => 'Nama',
+	'user-profile-personal-country' => 'Negara',
 	'user-profile-picture-large' => 'Besar',
 	'user-profile-picture-medium' => 'Sedang',
 	'user-profile-picture-small' => 'Kecil',

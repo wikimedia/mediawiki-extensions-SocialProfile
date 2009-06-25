@@ -2971,9 +2971,11 @@ e disactiva in tu preferentias le notificationes per e-mail.',
 );
 
 /** Indonesian (Bahasa Indonesia)
+ * @author Bennylin
  * @author Irwangatot
  */
 $messages['id'] = array(
+	'ur-remove' => 'Hapus',
 	'ur-cancel' => 'Batalkan',
 );
 
