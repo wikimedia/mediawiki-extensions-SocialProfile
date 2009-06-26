@@ -1284,6 +1284,16 @@ Clicca $4
 e disactiva in tu preferentias le notificationes per e-mail.',
 );
 
+/** Indonesian (Bahasa Indonesia)
+ * @author Bennylin
+ */
+$messages['id'] = array(
+	'userboard_delete' => 'Hapus',
+	'userboard_private' => 'pribadi',
+	'userboard_nextpage' => 'selanjutnya',
+	'userboard_prevpage' => 'sebelumnya',
+);
+
 /** Ido (Ido)
  * @author Malafaya
  */

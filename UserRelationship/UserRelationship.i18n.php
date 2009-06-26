@@ -2975,8 +2975,14 @@ e disactiva in tu preferentias le notificationes per e-mail.',
  * @author Irwangatot
  */
 $messages['id'] = array(
+	'ur-main-page' => 'Halaman utama',
+	'ur-add-friend' => 'Tambahkan teman',
+	'ur-add-foe' => 'Tambahkan musuh',
+	'ur-previous' => 'sebelumnya',
+	'ur-next' => 'selanjutnya',
 	'ur-remove' => 'Hapus',
 	'ur-cancel' => 'Batalkan',
+	'ur-login' => 'Masuk log',
 );
 
 /** Ido (Ido)

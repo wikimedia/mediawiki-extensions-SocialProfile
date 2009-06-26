@@ -1109,6 +1109,17 @@ e disactiva in tu preferentias le notificationes per e-mail.',
 	'right-awardsmanage' => 'Crear nove premios e modificar existentes',
 );
 
+/** Indonesian (Bahasa Indonesia)
+ * @author Bennylin
+ */
+$messages['id'] = array(
+	'ga-large' => 'Besar',
+	'ga-medium' => 'Menengah',
+	'ga-new' => 'Baru',
+	'ga-next' => 'Selanjutnya',
+	'ga-previous' => 'Sebelumnya',
+);
+
 /** Japanese (日本語)
  * @author Aotake
  * @author Fryed-peach
@@ -1256,6 +1267,7 @@ $messages['lb'] = array(
 	'ga-error-message-no-user' => 'De Benotzer, deen Dir kucke wëllt, gëtt et net.',
 	'ga-file-instructions' => 'Är Bild muss e jpeg, png oder gif (keng animéiert Gifen) a muss méi kleng si wéi 100 kb.',
 	'ga-gift' => 'Cadeau',
+	'ga-gift-given-count' => 'Dëse Cadeau gouf $1 {{PLURAL:$1|mol gemaach|mol gemaach}}',
 	'ga-gift-title' => '"$2" vum $1',
 	'ga-giftdesc' => 'Bechreiwung vum Cadeau',
 	'ga-giftimage' => 'Bild vum Cadeau',
@@ -1270,6 +1282,7 @@ $messages['lb'] = array(
 	'ga-new' => 'Nei',
 	'ga-next' => 'Nächst',
 	'ga-previous' => 'Vireg',
+	'ga-recent-recipients-award' => 'Anerer déi dës Auszeechnung viru kuerzem kritt hunn',
 	'ga-saved' => 'De Cadeau gouf gespäichert',
 	'ga-small' => 'Kleng',
 	'ga-threshold' => 'Limit',

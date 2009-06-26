@@ -1544,6 +1544,20 @@ e cambia tu configurationes pro disactivar le notificationes in e-mail.',
 	'right-giftadmin' => 'Crear nove donos e modificar existentes',
 );
 
+/** Indonesian (Bahasa Indonesia)
+ * @author Bennylin
+ */
+$messages['id'] = array(
+	'giftmanager-private' => 'pribadi',
+	'g-cancel' => 'Batalkan',
+	'g-large' => 'Besar',
+	'g-main-page' => 'Halaman utama',
+	'g-medium' => 'Menengah',
+	'g-new' => 'baru',
+	'g-next' => 'Selanjutnya',
+	'g-previous' => 'Sebelumnya',
+);
+
 /** Japanese (日本語)
  * @author Aotake
  * @author Fievarsty
