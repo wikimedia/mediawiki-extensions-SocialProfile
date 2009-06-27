@@ -47,7 +47,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		 */
 		if ( $wgUser->getID() == 0 && $user_name == '' ) {
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
-			$wgOut->redirect( $login->getFullURL() . '&returnto=Special:UserBoard' );
+			$wgOut->redirect( $login->getFullURL( 'returnto=Special:UserBoard' ) );
 			return false;
 		}
 
