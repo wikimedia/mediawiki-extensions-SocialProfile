@@ -1759,6 +1759,7 @@ $messages['vi'] = array(
 	'top-fans-stats-edit-count' => 'Sửa đổi',
 	'top-fans-stats-friends-count' => 'Người bạn',
 	'top-fans-stats-opinions-created' => 'Ý kiến',
+	'right-updatepoints' => 'Cập nhật số lần sửa đổi',
 );
 
 /** Volapük (Volapük)
