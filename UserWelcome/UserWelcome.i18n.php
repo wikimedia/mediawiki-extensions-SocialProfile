@@ -503,6 +503,13 @@ $messages['ia'] = array(
 	'mp-request-new-friend' => '$1 nove {{PLURAL:$1|amico|amicos}}',
 );
 
+/** Indonesian (Bahasa Indonesia)
+ * @author Bennylin
+ */
+$messages['id'] = array(
+	'mp-welcome-edit' => 'Sunting',
+);
+
 /** Ido (Ido)
  * @author Malafaya
  */
@@ -575,6 +582,16 @@ $messages['km'] = array(
 	'mp-request-new-gift' => '{{PLURAL:$1|អំណោយ|អំណោយ}}ថ្មីចំនួន$1',
 	'mp-request-new-foe' => '{{PLURAL:$1|បច្ចាមិត្ត|បច្ចាមិត្ត}}ថ្មី $1',
 	'mp-request-new-friend' => '{{PLURAL:$1|មិត្តភ័ក្ដិ|មិត្តភ័ក្ដិ}}ថ្មី $1',
+);
+
+/** Korean (한국어)
+ * @author Yknok29
+ */
+$messages['ko'] = array(
+	'mp-userlevels-link' => '사용자 수준',
+	'mp-welcome-edit' => '편집',
+	'mp-requests-title' => '요청',
+	'mp-request-new-message' => '새로운 메시지',
 );
 
 /** Ripoarisch (Ripoarisch)
@@ -753,6 +770,13 @@ $messages['oc'] = array(
  */
 $messages['os'] = array(
 	'mp-welcome-edit' => 'Баив',
+);
+
+/** Deitsch (Deitsch)
+ * @author Xqt
+ */
+$messages['pdc'] = array(
+	'mp-welcome-edit' => 'Ennere',
 );
 
 /** Polish (Polski)

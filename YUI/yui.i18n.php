@@ -105,6 +105,13 @@ $messages['dsb'] = array(
 	'yui-desc' => 'Sajźba rědow a kontrolnych elementow napisanych w JavaScripśe',
 );
 
+/** Greek (Ελληνικά)
+ * @author Omnipaedista
+ */
+$messages['el'] = array(
+	'yui-desc' => 'Μία σειρά τυποποιήσεων και ελέγχων γραμμένων σε JavaScript',
+);
+
 /** Esperanto (Esperanto)
  * @author Yekrats
  */
@@ -382,6 +389,13 @@ $messages['sk'] = array(
 	'yui-desc' => 'Sada nástrojov napísaných v JavaScripte',
 );
 
+/** Lower Silesian (Schläsch)
+ * @author Jonny84
+ */
+$messages['sli'] = array(
+	'yui-desc' => 'Eine Sammlung in JavaScript geschriebener Werkzeuge und Steuerelemente',
+);
+
 /** Albanian (Shqip)
  * @author Puntori
  */
@@ -437,6 +451,13 @@ $messages['ta'] = array(
  */
 $messages['tg-cyrl'] = array(
 	'yui-desc' => 'Маҷмӯъи барномаҳои судманд ва танзимот, ки дар ҶаваСкрипт навишта шудаанд',
+);
+
+/** Thai (ไทย)
+ * @author Octahedron80
+ */
+$messages['th'] = array(
+	'yui-desc' => 'กลุ่มของเครื่องมือและส่วนควบคุม เขียนด้วย JavaScript',
 );
 
 /** Tagalog (Tagalog)

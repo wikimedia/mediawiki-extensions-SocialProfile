@@ -436,6 +436,7 @@ Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.
  * @author EugeneZelenko
  * @author Fryed-peach
  * @author Jon Harald Søby
+ * @author Meno25
  * @author Purodha
  */
 $messages['qqq'] = array(
@@ -522,6 +523,7 @@ $messages['akz'] = array(
  * @author Naudefj
  */
 $messages['af'] = array(
+	'user-time-ago' => 'gelede',
 	'user-count-separator' => '$1 van $2',
 	'other-info-title' => 'Ander inligting',
 	'other-info-music' => 'Musiek',
@@ -801,6 +803,7 @@ $messages['ar'] = array(
  */
 $messages['arz'] = array(
 	'populateuserprofiles' => 'أشهر ملفات اليوزرز',
+	'user-time-ago' => 'مضى',
 	'user-awards-title' => 'جوائز',
 	'user-gifts-title' => 'منح',
 	'user-count-separator' => '$1 من $2',
@@ -1575,6 +1578,7 @@ $messages['ca'] = array(
  * @author Mormegil
  */
 $messages['cs'] = array(
+	'user-time-ago' => 'zpátky',
 	'user-count-separator' => '$1 z $2',
 	'user-view-all' => 'Zobrazit všechny',
 	'user-upload-image' => 'Nahrát obrázek',
@@ -2926,6 +2930,7 @@ $messages['fi'] = array(
  */
 $messages['fr'] = array(
 	'populateuserprofiles' => 'Meubler les profils utilisateurs',
+	'user-time-ago' => 'depuis',
 	'user-awards-title' => 'Récompenses',
 	'user-gifts-title' => 'Cadeaux',
 	'user-count-separator' => '$1 sur $2',
@@ -3132,6 +3137,7 @@ $messages['ga'] = array(
  */
 $messages['gl'] = array(
 	'populateuserprofiles' => 'Perfiles de usuario populares',
+	'user-time-ago' => 'hai',
 	'user-awards-title' => 'Premios',
 	'user-gifts-title' => 'Agasallos',
 	'user-count-separator' => '$1 de $2',
@@ -3944,6 +3950,7 @@ $messages['hy'] = array(
  */
 $messages['ia'] = array(
 	'populateuserprofiles' => 'Impler profilos de usator',
+	'user-time-ago' => 'retro',
 	'user-awards-title' => 'Premios',
 	'user-gifts-title' => 'Donos',
 	'user-count-separator' => '$1 de $2',
@@ -4375,6 +4382,7 @@ $messages['ja'] = array(
  * @author Meursault2004
  */
 $messages['jv'] = array(
+	'user-time-ago' => 'kapungkur',
 	'user-view-all' => 'Ndeleng Kabèh',
 	'user-upload-image' => 'Unggahna gambar',
 	'user-edit-this' => 'Sunting iki',
@@ -4478,6 +4486,7 @@ $messages['jv'] = array(
  * @author គីមស៊្រុន
  */
 $messages['km'] = array(
+	'user-time-ago' => 'មុន',
 	'user-awards-title' => 'រង្វាន់​នានា',
 	'user-gifts-title' => 'អំណោយ',
 	'user-count-separator' => '$1 នៃ $2',
@@ -5027,6 +5036,7 @@ $messages['mk'] = array(
  * @author Shijualex
  */
 $messages['ml'] = array(
+	'user-time-ago' => 'മുന്‍പ്',
 	'user-view-all' => 'എല്ലാം കാണുക',
 	'user-upload-image' => 'ചിത്രം അപ്‌ലോഡ് ചെയ്യുക',
 	'user-edit-this' => 'ഇതു തിരുത്തുക',
@@ -5100,6 +5110,7 @@ $messages['ml'] = array(
  */
 $messages['mr'] = array(
 	'populateuserprofiles' => 'सदस्य प्रोफाइल्स तयार करा',
+	'user-time-ago' => 'पूर्वी',
 	'user-count-separator' => '$1 चे $2',
 	'user-view-all' => 'सर्व पहा',
 	'user-upload-image' => 'चित्र चढवा',
@@ -5362,6 +5373,7 @@ $messages['nds'] = array(
  */
 $messages['nl'] = array(
 	'populateuserprofiles' => 'Gebruikersprofielen vullen',
+	'user-time-ago' => '$1 geleden',
 	'user-awards-title' => 'Prijzen',
 	'user-gifts-title' => 'Cadeaus',
 	'user-count-separator' => '$1 van $2',
@@ -5730,6 +5742,7 @@ Trykk <a href="$1">her</a> for å loggå inn eller <a href="$2">her</a> for å r
  */
 $messages['no'] = array(
 	'populateuserprofiles' => 'Befolk brukerprofiler',
+	'user-time-ago' => 'siden',
 	'user-awards-title' => 'Utmerkelser',
 	'user-gifts-title' => 'Gaver',
 	'user-count-separator' => '$1 av $2',
@@ -5912,6 +5925,7 @@ $messages['no'] = array(
  */
 $messages['oc'] = array(
 	'populateuserprofiles' => "Completar los perfils d'utilizaire",
+	'user-time-ago' => 'dempuèi',
 	'user-awards-title' => 'Recompensas',
 	'user-gifts-title' => 'Presents',
 	'user-count-separator' => '$1 sus $2',
@@ -6124,6 +6138,7 @@ $messages['pdt'] = array(
  * @author Sp5uhe
  */
 $messages['pl'] = array(
+	'user-time-ago' => 'temu',
 	'user-awards-title' => 'Nagrody',
 	'user-gifts-title' => 'Prezenty',
 	'user-count-separator' => '$1 z $2',
@@ -6342,6 +6357,7 @@ $messages['ps'] = array(
  */
 $messages['pt'] = array(
 	'populateuserprofiles' => 'Popular perfil de usuários',
+	'user-time-ago' => 'atrás',
 	'user-awards-title' => 'Prêmios',
 	'user-gifts-title' => 'Presentes',
 	'user-count-separator' => '$1 de $2',
@@ -7047,6 +7063,7 @@ $messages['ru'] = array(
  */
 $messages['sk'] = array(
 	'populateuserprofiles' => 'Naplniť používateľské profily',
+	'user-time-ago' => 'dozadu',
 	'user-awards-title' => 'Ocenenia',
 	'user-gifts-title' => 'Dary',
 	'user-count-separator' => '$1 z $2',
@@ -7393,6 +7410,7 @@ $messages['su'] = array(
  */
 $messages['sv'] = array(
 	'populateuserprofiles' => 'Befolka användar profiler',
+	'user-time-ago' => 'sedan',
 	'user-awards-title' => 'Utmärkelser',
 	'user-gifts-title' => 'Presenter',
 	'user-count-separator' => '$1 av $2',
@@ -7582,6 +7600,7 @@ $messages['szl'] = array(
  * @author Veeven
  */
 $messages['te'] = array(
+	'user-time-ago' => 'క్రితం',
 	'user-awards-title' => 'అవార్డులు',
 	'user-gifts-title' => 'బహుమతులు',
 	'user-count-separator' => '$1 యొక్క $2',
@@ -7732,6 +7751,7 @@ $messages['tet'] = array(
  * @author Ibrahim
  */
 $messages['tg-cyrl'] = array(
+	'user-time-ago' => 'пеш',
 	'user-count-separator' => '$1 аз $2',
 	'user-view-all' => 'Нигаристани Ҳама',
 	'user-upload-image' => 'Богузорӣ кардани акс',
