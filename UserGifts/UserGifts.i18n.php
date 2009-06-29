@@ -1556,6 +1556,7 @@ $messages['id'] = array(
 	'g-new' => 'baru',
 	'g-next' => 'Selanjutnya',
 	'g-previous' => 'Sebelumnya',
+	'g-small' => 'Kecil',
 );
 
 /** Japanese (日本語)

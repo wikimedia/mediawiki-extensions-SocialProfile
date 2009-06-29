@@ -1118,6 +1118,7 @@ $messages['id'] = array(
 	'ga-new' => 'Baru',
 	'ga-next' => 'Selanjutnya',
 	'ga-previous' => 'Sebelumnya',
+	'ga-small' => 'Kecil',
 );
 
 /** Japanese (日本語)

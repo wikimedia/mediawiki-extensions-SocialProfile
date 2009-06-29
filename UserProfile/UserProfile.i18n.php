@@ -523,7 +523,7 @@ $messages['akz'] = array(
  * @author Naudefj
  */
 $messages['af'] = array(
-	'user-time-ago' => 'gelede',
+	'user-time-ago' => '$1 gelede',
 	'user-count-separator' => '$1 van $2',
 	'other-info-title' => 'Ander inligting',
 	'other-info-music' => 'Musiek',
@@ -2930,7 +2930,7 @@ $messages['fi'] = array(
  */
 $messages['fr'] = array(
 	'populateuserprofiles' => 'Meubler les profils utilisateurs',
-	'user-time-ago' => 'depuis',
+	'user-time-ago' => 'Il y a $1',
 	'user-awards-title' => 'Récompenses',
 	'user-gifts-title' => 'Cadeaux',
 	'user-count-separator' => '$1 sur $2',
@@ -3137,7 +3137,7 @@ $messages['ga'] = array(
  */
 $messages['gl'] = array(
 	'populateuserprofiles' => 'Perfiles de usuario populares',
-	'user-time-ago' => 'hai',
+	'user-time-ago' => 'hai $1',
 	'user-awards-title' => 'Premios',
 	'user-gifts-title' => 'Agasallos',
 	'user-count-separator' => '$1 de $2',
@@ -4137,6 +4137,7 @@ $messages['id'] = array(
 	'user-watchlist' => 'Daftar pantauan saya',
 	'user-add-friend' => 'Tambahkan teman',
 	'user-add-foe' => 'Tambahkan musuh',
+	'user-stats-title' => 'Statistik',
 	'other-info-title' => 'Informasi lain',
 	'other-info-movies' => 'Film',
 	'other-info-tv' => 'TV',
@@ -4152,6 +4153,7 @@ $messages['id'] = array(
 	'user-personal-info-occupation' => 'Pekerjaan',
 	'user-personal-info-websites' => 'Situs web',
 	'user-personal-info-places-lived' => 'Tempat yang pernah saya tinggali',
+	'user-personal-info-schools' => 'Sekolah',
 	'user-personal-info-about-me' => 'Tentang saya',
 	'user-profile-section-personal' => 'Informasi pribadi',
 	'user-profile-section-custom' => 'Informasi',
@@ -4166,6 +4168,7 @@ $messages['id'] = array(
 	'user-profile-personal-birthdate' => 'Tanggal (BB/TT)',
 	'user-profile-personal-aboutme' => 'Tentang saya',
 	'user-profile-personal-occupation' => 'Pekerjaan',
+	'user-profile-personal-schools' => 'Sekolah',
 	'user-profile-personal-placeslived' => 'Tempat yang pernah saya tinggali',
 	'user-profile-personal-websites' => 'Situs web',
 	'user-profile-interests-movies' => 'Film',
@@ -4380,9 +4383,10 @@ $messages['ja'] = array(
 
 /** Javanese (Basa Jawa)
  * @author Meursault2004
+ * @author Pras
  */
 $messages['jv'] = array(
-	'user-time-ago' => 'kapungkur',
+	'user-time-ago' => '$1 kapungkur',
 	'user-view-all' => 'Ndeleng Kabèh',
 	'user-upload-image' => 'Unggahna gambar',
 	'user-edit-this' => 'Sunting iki',
@@ -4405,7 +4409,7 @@ $messages['jv'] = array(
 	'other-no-info' => 'Ora ana informasi liya',
 	'profile-updated-personal' => 'Nganyari profil panjenengan',
 	'profile-not-provided' => 'Ora diwènèhaké',
-	'populate-user-profile-done' => 'Nambah $1 profil',
+	'populate-user-profile-done' => 'Nambah $1 {{PLURAL:$1|profil|profil}}',
 	'user-personal-info-title' => 'Informasi pribadi',
 	'user-no-personal-info' => 'Ora ana informasi pribadi',
 	'user-personal-info-real-name' => 'Jeneng asli',
@@ -4855,7 +4859,7 @@ Donn <a href="$1">enlogge</a> udder <a href="$2">Desch aanmellde</a>.',
  */
 $messages['lb'] = array(
 	'populateuserprofiles' => 'Benotzerprofiler completéieren',
-	'user-time-ago' => 'viru(n)',
+	'user-time-ago' => 'viru(n) $1',
 	'user-awards-title' => 'Präisser',
 	'user-gifts-title' => 'Cadeauen',
 	'user-count-separator' => '$1 vu(n) $2',
@@ -5738,11 +5742,12 @@ Trykk <a href="$1">her</a> for å loggå inn eller <a href="$2">her</a> for å r
 
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Jon Harald Søby
+ * @author Laaknor
  * @author Nghtwlkr
  */
 $messages['no'] = array(
 	'populateuserprofiles' => 'Befolk brukerprofiler',
-	'user-time-ago' => 'siden',
+	'user-time-ago' => '$1 siden',
 	'user-awards-title' => 'Utmerkelser',
 	'user-gifts-title' => 'Gaver',
 	'user-count-separator' => '$1 av $2',
@@ -5925,7 +5930,7 @@ $messages['no'] = array(
  */
 $messages['oc'] = array(
 	'populateuserprofiles' => "Completar los perfils d'utilizaire",
-	'user-time-ago' => 'dempuèi',
+	'user-time-ago' => '(i a $1 s)',
 	'user-awards-title' => 'Recompensas',
 	'user-gifts-title' => 'Presents',
 	'user-count-separator' => '$1 sus $2',
@@ -6357,7 +6362,7 @@ $messages['ps'] = array(
  */
 $messages['pt'] = array(
 	'populateuserprofiles' => 'Popular perfil de usuários',
-	'user-time-ago' => 'atrás',
+	'user-time-ago' => '$1 atrás',
 	'user-awards-title' => 'Prêmios',
 	'user-gifts-title' => 'Presentes',
 	'user-count-separator' => '$1 de $2',
@@ -6880,7 +6885,7 @@ $messages['roa-tara'] = array(
  */
 $messages['ru'] = array(
 	'populateuserprofiles' => 'Заполнение профилей участников',
-	'user-time-ago' => 'назад',
+	'user-time-ago' => '$1 назад',
 	'user-awards-title' => 'Награды',
 	'user-gifts-title' => 'Подарки',
 	'user-count-separator' => '$1 из $2',
@@ -7410,7 +7415,7 @@ $messages['su'] = array(
  */
 $messages['sv'] = array(
 	'populateuserprofiles' => 'Befolka användar profiler',
-	'user-time-ago' => 'sedan',
+	'user-time-ago' => '$1 sedan',
 	'user-awards-title' => 'Utmärkelser',
 	'user-gifts-title' => 'Presenter',
 	'user-count-separator' => '$1 av $2',

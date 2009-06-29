@@ -1292,6 +1292,7 @@ $messages['id'] = array(
 	'userboard_private' => 'pribadi',
 	'userboard_nextpage' => 'selanjutnya',
 	'userboard_prevpage' => 'sebelumnya',
+	'userboard_sendbutton' => 'kirim',
 );
 
 /** Ido (Ido)
