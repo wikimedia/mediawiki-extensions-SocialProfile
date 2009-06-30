@@ -249,6 +249,13 @@ $4
 	'right-giftadmin' => 'إنشاء هدايا جديدة وتعديل الموجودة',
 );
 
+/** Aramaic (ܐܪܡܝܐ)
+ * @author Basharh
+ */
+$messages['arc'] = array(
+	'g-main-page' => 'ܦܐܬܐ ܪܫܝܬܐ',
+);
+
 /** Egyptian Spoken Arabic (مصرى)
  * @author Meno25
  */
@@ -1233,6 +1240,8 @@ e troque as súas configuracións para desactivar as notificacións por correo e
  */
 $messages['grc'] = array(
 	'g-cancel' => 'Ἀκυροῦν',
+	'g-gift' => 'δῶρον',
+	'g-give-separator' => 'ἢ',
 	'g-new' => 'Νέα',
 	'g-next' => 'Ἑπόμεναι',
 );

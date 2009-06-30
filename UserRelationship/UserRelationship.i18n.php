@@ -436,6 +436,13 @@ $2 أزالك كعدو في {{SITENAME}}!
 وغير إعداداتك لتعطيل إخطارات البريد الإكتروني.',
 );
 
+/** Aramaic (ܐܪܡܝܐ)
+ * @author Basharh
+ */
+$messages['arc'] = array(
+	'ur-main-page' => 'ܦܐܬܐ ܪܫܝܬܐ',
+);
+
 /** Egyptian Spoken Arabic (مصرى)
  * @author Ghaly
  * @author Meno25

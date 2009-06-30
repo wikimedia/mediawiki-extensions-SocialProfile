@@ -832,8 +832,10 @@ e cambie as súas preferencias para desactivar as notificacións por correo elec
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)
  * @author Crazymadlover
+ * @author Omnipaedista
  */
 $messages['grc'] = array(
+	'ga-gift' => 'δῶρον',
 	'ga-new' => 'Νέα',
 	'ga-next' => 'Ἑπομέναι',
 );

@@ -3317,12 +3317,34 @@ $messages['gl'] = array(
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)
  * @author Crazymadlover
+ * @author Omnipaedista
  */
 $messages['grc'] = array(
+	'user-gifts-title' => 'Δῶρα',
+	'user-contributions' => 'Ἔρανoς',
+	'user-stats-title' => 'Στατιστικά',
+	'user-friends-title' => 'Φίλοι',
+	'user-foes-title' => 'Ἐχθροί',
+	'other-info-movies' => 'Κινηματογραφήματα',
+	'other-info-music' => 'Μουσική',
+	'other-info-books' => 'Βιβλία',
 	'user-personal-info-real-name' => 'ἀληθὲς ὄνομα',
+	'user-personal-info-websites' => 'Ἱστότοποι',
+	'user-personal-info-schools' => 'Σχολεῖα',
+	'user-profile-points' => '$1 {{PLURAL:$1|σημεῖον|σημεῖα}}',
 	'user-profile-section-preferences' => 'Αἱρέσεις',
 	'user-profile-personal-name' => 'Ὄνομα',
 	'user-profile-personal-email' => 'Ἠλεκτρονικαὶ ἐπιστολαί',
+	'user-profile-personal-location' => 'Τόπος',
+	'user-profile-personal-city' => 'Πόλις',
+	'user-profile-personal-work' => 'Ἔργον',
+	'user-profile-personal-schools' => 'Σχολεῖα',
+	'user-profile-personal-web' => 'Ἱστός',
+	'user-profile-personal-websites' => 'Ἱστότοποι',
+	'user-profile-interests-books' => 'Βιβλία',
+	'user-profile-interests-magazines' => 'Περιοδικά',
+	'user-profile-sports-sport' => 'Ἄθλημα',
+	'user-profile-picture-yourpicture' => 'Ἡ εἰκών σου',
 	'user-page-link' => 'Δέλτος χρωμένου',
 );
 
@@ -3950,7 +3972,7 @@ $messages['hy'] = array(
  */
 $messages['ia'] = array(
 	'populateuserprofiles' => 'Impler profilos de usator',
-	'user-time-ago' => 'retro',
+	'user-time-ago' => '$1 retro',
 	'user-awards-title' => 'Premios',
 	'user-gifts-title' => 'Donos',
 	'user-count-separator' => '$1 de $2',
@@ -6734,6 +6756,7 @@ $messages['rif'] = array(
 );
 
 /** Romanian (Română)
+ * @author Firilacroco
  * @author KlaudiuMihaila
  */
 $messages['ro'] = array(
@@ -6742,9 +6765,9 @@ $messages['ro'] = array(
 	'user-watchlist' => 'Pagini urmărite',
 	'user-contributions' => 'Contribuţii',
 	'user-stats-title' => 'Statistici',
-	'user-stats-edits' => 'Modificări',
-	'user-stats-votes' => 'Voturi',
-	'user-stats-comments' => 'Comentarii',
+	'user-stats-edits' => '{{PLURAL:$1|Modificare|Modificări}}',
+	'user-stats-votes' => '{{PLURAL:$1|Vot|Voturi}}',
+	'user-stats-comments' => '{{PLURAL:$1|Comentariu|Comentarii}}',
 	'other-info-title' => 'Alte informaţii',
 	'user-friends-title' => 'Prieteni',
 	'other-info-movies' => 'Filme',
@@ -6773,7 +6796,7 @@ $messages['ro'] = array(
 	'user-recent-activity-friend' => 'Este acum prieten cu',
 	'user-recent-system-gift' => 'A primit un premiu',
 	'user-profile-default-country' => 'Statele Unite',
-	'user-profile-points' => '$1 puncte',
+	'user-profile-points' => '$1 {{PLURAL:$1|punct|puncte}}',
 	'user-profile-section-personal' => 'Informaţii personale',
 	'user-profile-section-interests' => 'Alte informaţii',
 	'user-profile-section-picture' => 'Avatar',
@@ -7068,7 +7091,7 @@ $messages['ru'] = array(
  */
 $messages['sk'] = array(
 	'populateuserprofiles' => 'Naplniť používateľské profily',
-	'user-time-ago' => 'dozadu',
+	'user-time-ago' => 'pred $1',
 	'user-awards-title' => 'Ocenenia',
 	'user-gifts-title' => 'Dary',
 	'user-count-separator' => '$1 z $2',
