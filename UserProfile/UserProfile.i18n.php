@@ -1578,7 +1578,7 @@ $messages['ca'] = array(
  * @author Mormegil
  */
 $messages['cs'] = array(
-	'user-time-ago' => 'zpátky',
+	'user-time-ago' => 'před $1',
 	'user-count-separator' => '$1 z $2',
 	'user-view-all' => 'Zobrazit všechny',
 	'user-upload-image' => 'Nahrát obrázek',
@@ -2316,10 +2316,12 @@ $messages['eo'] = array(
  * @author Crazymadlover
  * @author DoveBirkoff
  * @author Imre
+ * @author Locos epraix
  * @author Sanbec
  */
 $messages['es'] = array(
 	'populateuserprofiles' => 'Perfiles de usuario populares',
+	'user-time-ago' => 'hace $1',
 	'user-awards-title' => 'Premios',
 	'user-gifts-title' => 'Regalos',
 	'user-count-separator' => '$1 de $2',
@@ -4919,6 +4921,12 @@ $messages['lb'] = array(
 	'other-info-snacks' => 'Snacken',
 	'other-info-drinks' => 'Gedrénks',
 	'other-no-info' => 'Keng aner Informatioun',
+	'custom-info-title' => 'Personaliséiert Informatioun',
+	'custom-info-field1' => 'Personalisatioun 1',
+	'custom-info-field2' => 'Personalisatioun 2',
+	'custom-info-field3' => 'Personalisatioun 3',
+	'custom-info-field4' => 'Personalisatioun 4',
+	'custom-no-info' => 'Keng personaliséiert Informatioun',
 	'profile-updated-personal' => 'Äre Profil aktualiséieren',
 	'profile-not-provided' => 'Net uginn',
 	'populate-user-profile-done' => '$1 {{PLURAL:$1|Profil|Profiler}} derbäigesat',
