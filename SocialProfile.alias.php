@@ -89,6 +89,13 @@ $aliases['fa'] = array(
 	'TopUsers' => array( 'کاربران_برتر' ),
 );
 
+/** Finnish (Suomi) */
+$aliases['fi'] = array(
+	'RemoveAvatar' => array( 'Poista Avatar' ),
+	'UpdateProfile' => array( 'Päivitä käyttäjäprofiili' ),
+	'UploadAvatar' => array( 'Lataa Avatar' ),
+);
+
 /** Swiss German (Alemannisch) */
 $aliases['gsw'] = array(
 	'AddRelationship' => array( 'Verbindig derzuegee' ),

@@ -688,6 +688,7 @@ $messages['eo'] = array(
 /** Spanish (Español)
  * @author Crazymadlover
  * @author Imre
+ * @author Locos epraix
  * @author Sanbec
  */
 $messages['es'] = array(
@@ -723,6 +724,10 @@ $messages['es'] = array(
 	'userboard_sendbutton' => 'enviar',
 	'userboard_loggedout' => 'Tiene que haber <a href="$1">iniciado sesión</a> para enviar mensajes a otros usuarios.',
 	'userboard_showingmessages' => 'Mostrando {{PLURAL:$4|mensaje $3|mensajes $2-$3}} de {{PLURAL:$1|$1 mensaje|$1 mensajes}}',
+	'userboard-time-days' => '{{PLURAL:$1|un día|$1 días}}',
+	'userboard-time-hours' => '{{PLURAL:$1|una hora|$1 horas}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|un minuto|$1 minutos}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|un segundo|$1 segundos}}',
 	'message_received_subject' => '$1 escribió en tu pizarrón en {{SITENAME}}',
 	'message_received_body' => 'Hola $1.
 
