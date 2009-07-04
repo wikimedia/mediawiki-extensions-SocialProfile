@@ -260,6 +260,13 @@ $messages['li'] = array(
 	'yui-desc' => "'n Verzameling hölpmi-jjel en besturingsillemaenter in JavaSjrif",
 );
 
+/** Lithuanian (Lietuvių)
+ * @author Matasg
+ */
+$messages['lt'] = array(
+	'yui-desc' => 'Rinkinys naudmenų ir nustatymų, parašytų JavaScript',
+);
+
 /** Macedonian (Македонски)
  * @author Brest
  */
