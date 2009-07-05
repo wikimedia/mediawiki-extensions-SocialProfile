@@ -175,6 +175,12 @@ $aliases['km'] = array(
 	'TopUsers' => array( 'អ្នកប្រើប្រាស់សកម្មបំផុត' ),
 );
 
+/** Korean (한국어) */
+$aliases['ko'] = array(
+	'RemoveAvatar' => array( '아바타제거' ),
+	'UploadAvatar' => array( '아바타올리기' ),
+);
+
 /** Luxembourgish (Lëtzebuergesch) */
 $aliases['lb'] = array(
 	'AddRelationship' => array( 'Relatioun derbäisetzen' ),

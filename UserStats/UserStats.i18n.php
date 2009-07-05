@@ -783,6 +783,7 @@ $messages['he'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|התקבלה מתנה|התקבלו מתנות}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|נשלחה מתנה|נשלחו מתנות}}',
 	'right-updatepoints' => 'עדכון מספרי העריכות',
+	'level-advanced-to' => 'התקדמות לשלב <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'כעת הינכם  "$1" ב{{grammar:תחילית|{{SITENAME}}}}!',
 	'level-advance-body' => 'שלום $1:
 

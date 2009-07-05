@@ -1078,8 +1078,7 @@ $messages['hak'] = array(
  */
 $messages['he'] = array(
 	'boardblastlogintitle' => 'עליכם לבצע כניסה לחשבון כדי לשלוח מסרים המוניים',
-	'boardblastlogintext' => 'עליכם לבצע כניסה לחשבון כדי לשלוח מסרים המוניים,
-עליכם לבצע <a href="index.php?title=Special:UserLogin">כניסה לחשבון</a>',
+	'boardblastlogintext' => 'עליכם <a href="index.php?title=Special:UserLogin">להיכנס לחשבון</a> כדי לשלוח מסרים המוניים.',
 	'messagesenttitle' => 'ההודעות נשלחו',
 	'boardblasttitle' => 'שליחת מסר המוני',
 	'boardblaststep1' => 'שלב 1 - כתבו את הודעתכם',
@@ -1119,10 +1118,10 @@ $messages['he'] = array(
 	'userboard_loggedout' => 'עליכם <a href="$1">לבצע כניסה לחשבון</a> כדי לשלוח הודעות למשתמשים אחרים.',
 	'userboard_showingmessages' => 'הצגת {{PLURAL:$4|הודעה $3|הודעות $2-$3}} מתוך {{PLURAL:$1|הודעה אחת|$1 הודעות}}',
 	'right-userboard-delete' => 'מחיקת הודעות לוח שכתבו אחרים',
-	'userboard-time-days' => '{{PLURAL:$1|יום אחד|$1 ימים|יומיים}}',
+	'userboard-time-days' => '{{PLURAL:$1|יום|$1 ימים|יומיים}}',
 	'userboard-time-hours' => '{{PLURAL:$1|שעה|$1 שעות|שעתיים}}',
-	'userboard-time-minutes' => '{{PLURAL:$1|דקה אחת|$1 דקות}}',
-	'userboard-time-seconds' => '{{PLURAL:$1|שנייה אחת|$1 שניות}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|דקה|$1 דקות}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|שנייה|$1 שניות}}',
 	'message_received_subject' => '$1 כתב בלוח שלך ב{{grammar:תחילית|{{SITENAME}}}}',
 	'message_received_body' => 'היי $1:
 

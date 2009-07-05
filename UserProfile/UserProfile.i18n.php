@@ -921,7 +921,7 @@ $messages['arz'] = array(
 	'user-profile-interests-drinks' => 'مشروبات',
 	'user-profile-preferences-emails' => 'إخطارات البريد الإلكتروني',
 	'user-profile-preferences-emails-personalmessage' => 'عند إرسال رسالة شخصية',
-	'user-profile-preferences-emails-friendfoe' => 'عندما يقوم مستخدم آخر بمصادقتك أو معاداتك',
+	'user-profile-preferences-emails-friendfoe' => 'لما  يوزر تانى يصادقك أو يعاديك',
 	'user-profile-preferences-emails-gift' => 'عندما تستلم هدية',
 	'user-profile-preferences-emails-level' => 'عندما تتقدم مستوى',
 	'user-profile-preferences-emails-weekly' => 'استقبال تحديثات بريد إلكترونى أسبوعية',
@@ -979,7 +979,7 @@ $messages['arz'] = array(
 	'user-profile-picture-log' => 'أفاتر',
 	'user-profile-picture-log-entry' => 'رفع أفاتر جديد',
 	'user-profile-picture-log-delete-entry' => 'حذف الأفاتر الخاص ب$1',
-	'right-avatarremove' => 'إزالة أفاترات المستخدمين',
+	'right-avatarremove' => 'إزالة أفاترات اليوزرات',
 );
 
 /** Southern Balochi (بلوچی مکرانی)
@@ -3564,6 +3564,7 @@ $messages['haw'] = array(
  */
 $messages['he'] = array(
 	'populateuserprofiles' => 'אכלוס פרופילי משתמשים',
+	'user-time-ago' => 'לפני $1',
 	'user-awards-title' => 'פרסים',
 	'user-gifts-title' => 'מתנות',
 	'user-count-separator' => '$1 מתוך $2',

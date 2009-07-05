@@ -453,7 +453,7 @@ $messages['arz'] = array(
 	'ur-already-submitted' => 'طلبك تم إرساله',
 	'ur-error-page-title' => 'آه!',
 	'ur-error-title' => 'آه، أنت أخذت منحنيا خاطئا!',
-	'ur-error-message-no-user' => 'لا يمكننا استكمال طلبك، لأنه لا يوجد مستخدم بهذا الاسم.',
+	'ur-error-message-no-user' => 'لا يمكننا استكمال طلبك، علشان مافيش يوزر بالاسم ده.',
 	'ur-main-page' => 'الصفحة الرئيسية',
 	'ur-your-profile' => 'ملفك',
 	'ur-backlink' => '&lt; رجوع إلى ملف $1',
@@ -462,7 +462,7 @@ $messages['arz'] = array(
 	'ur-add-friends' => '  تريد المزيد من الأصدقاء؟ <a href="$1">أدعهم</a>',
 	'ur-add-friend' => 'أضف كصديق',
 	'ur-add-foe' => 'أضف كعدو',
-	'ur-add-no-user' => 'لا مستخدم تم اختياره.
+	'ur-add-no-user' => 'و لا يوزر تم اختياره.
 من فضلك اطلب الأصدقاء/الأعداء من خلال الوصلة الصحيحة.',
 	'ur-add-personal-message' => 'إضافة رسالة شخصية',
 	'ur-remove-relationship-friend' => 'إزالة كصديق',
