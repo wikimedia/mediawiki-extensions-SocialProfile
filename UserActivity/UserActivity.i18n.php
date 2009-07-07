@@ -13,7 +13,7 @@ $messages = array();
  * @author David Pean
  */
 $messages['en'] = array(
-	'useractivity' => 'Friends activity',
+	'useractivity' => "Friends' activity",
 	'useractivity-award' => 'received an award', // FIXME: message lego
 	'useractivity-all' => 'View all',
 	'useractivity-gift' => 'received a gift from', // FIXME: message logo
@@ -23,7 +23,7 @@ $messages['en'] = array(
 	'useractivity-group-friend' => 'friends',
 	'useractivity-filter' => 'Filter',
 	'useractivity-network-thought' => 'has a thought for the $1 network', // FIXME: message lego
-	'useractivity-title' => "Friends activity",
+	'useractivity-title' => "Friends' activity",
 	'useractivity-siteactivity' => 'Site activity',
 	'useractivity-edit' => '{{PLURAL:$1|edited the page|edited the following pages: }}', // CHECKME: message lego?
 	'useractivity-comment' => '{{PLURAL:$1|commented on the page|commented on the following pages: }}', // CHECKME: message lego?

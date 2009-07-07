@@ -719,7 +719,7 @@ class UserActivity {
 
 									if ( $pages )
 										$pages .= ", ";
-									$pages .= " <a href=\"{$page_title2->escapeFullURL()}\">{$page_name2}</a>";
+									$pages .= ( ( $page_title2 instanceOf Title ) ? " <a href=\"{$page_title2->escapeFullURL()}\">{$page_name2}</a>" : '' );
 									if ( $count_actions2 > 1 ) {
 										$pages .= " ($count_actions2 " . wfMsg( "useractivity-group-{$type}" ) . ")";
 									}
