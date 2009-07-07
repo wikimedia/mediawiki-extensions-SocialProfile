@@ -91,9 +91,9 @@ $aliases['fa'] = array(
 
 /** Finnish (Suomi) */
 $aliases['fi'] = array(
-	'RemoveAvatar' => array( 'Poista Avatar' ),
+	'RemoveAvatar' => array( 'Poista_avatar' ),
 	'UpdateProfile' => array( 'Päivitä käyttäjäprofiili' ),
-	'UploadAvatar' => array( 'Lataa Avatar' ),
+	'UploadAvatar' => array( 'Lataa_avatar' ),
 );
 
 /** Swiss German (Alemannisch) */

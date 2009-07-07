@@ -91,6 +91,13 @@ $messages['cs'] = array(
 	'yui-desc' => 'Sada nástrojů napsaných v JavaScriptu.',
 );
 
+/** Danish (Dansk)
+ * @author Masz
+ */
+$messages['da'] = array(
+	'yui-desc' => 'En række værktøjer og kontroller skrevet på JavaScript',
+);
+
 /** German (Deutsch)
  * @author Revolus
  */
