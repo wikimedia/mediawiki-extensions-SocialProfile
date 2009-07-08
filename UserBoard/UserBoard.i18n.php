@@ -395,6 +395,7 @@ $messages['bs'] = array(
 	'boardlinkselectfriends' => 'Odaberi prijatelje',
 	'boardlinkselectfoes' => 'Odaberi neprijatelje',
 	'boardlinkunselectfoes' => 'Deselektiraj neprijatelje',
+	'boardnofriends' => 'Nemate prijatelja za slanje poruka!',
 	'userboard' => 'Korisnička ploča',
 	'userboard_delete' => 'Obriši',
 	'userboard_noexist' => 'Korisnik kojeg pokušavate pogledati ne postoji.',
@@ -408,6 +409,11 @@ $messages['bs'] = array(
 	'userboard_prevpage' => 'preth',
 	'userboard_nomessages' => 'Nema poruka.',
 	'userboard_sendbutton' => 'pošalji',
+	'userboard_loggedout' => 'Morate biti <a href="$1">prijavljeni</a> da biste mogli slati poruke drugim korisnicima.',
+	'userboard-time-days' => '{{PLURAL:$1|jedan dan|$1 dana}}',
+	'userboard-time-hours' => '{{PLURAL:$1|jedan sat|$1 sata|$1 sati}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|jedna minuta|$1 minute|$1 minuta}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|jedna sekunda|$1 sekunde|$1 sekundi}}',
 );
 
 /** Catalan (Català)
