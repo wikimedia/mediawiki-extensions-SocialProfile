@@ -1778,6 +1778,7 @@ un donn Ding Enshtellunge ändere, öm kei Meffeilunge meih övver e-mail ze kri
  * @author Robby
  */
 $messages['lb'] = array(
+	'giftmanager' => "Cadeau's-Verwaltung",
 	'giftmanager-addgift' => '+ En neie Cadeau derbäisetzen',
 	'giftmanager-description' => 'Beschreiwung vum Cadeau',
 	'giftmanager-giftimage' => 'Bild vum Cadeau',

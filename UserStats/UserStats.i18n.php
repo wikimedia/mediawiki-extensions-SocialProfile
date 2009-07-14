@@ -522,6 +522,8 @@ $messages['es'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Pulgar abajo dado|Pulgares abajos dados}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Regalo recibido|Regalos recibidos}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Regalo enviado|Regalos enviados}}',
+	'right-updatepoints' => 'Actualizar conteos de ediciones',
+	'level-advanced-to' => 'avanzó a nivel <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => '¡Ahora eres un «$1» en {{SITENAME}}!',
 	'level-advance-body' => 'Hola $1.
 
@@ -1079,6 +1081,7 @@ $messages['lb'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Cadeau kritt|Cadeaue kritt}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Cadeau|Cadeauë}} geschéckt',
 	'right-updatepoints' => 'De Compteur vun den Ännerungen aktualiséieren',
+	'level-advanced-to' => 'ass op den Niveau <span style="font-weight:800;">$1</span> komm',
 	'level-advance-subject' => 'Dir sidd elo "$1" op {{SITENAME}}!',
 	'level-advance-body' => 'Bonjour $1:
 

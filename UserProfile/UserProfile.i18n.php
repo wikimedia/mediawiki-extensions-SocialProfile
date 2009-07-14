@@ -4970,6 +4970,7 @@ $messages['lb'] = array(
 	'user-profile-personal-confirmemail' => 'E-Mailadress confirméieren',
 	'user-profile-personal-city' => 'Stad/Gemeng',
 	'user-profile-personal-country' => 'Land',
+	'user-profile-personal-hometown' => 'Heemechtsstad',
 	'user-profile-personal-birthday' => 'Gebuertsdag',
 	'user-profile-personal-birthdate' => 'Datum (MM/DD)',
 	'user-profile-personal-aboutme' => 'Iwwer mech',
@@ -6156,6 +6157,7 @@ $messages['os'] = array(
  */
 $messages['pdc'] = array(
 	'user-watchlist' => 'Mei Watsch-Lischt',
+	'user-stats-title' => 'Nummere',
 	'user-profile-section-preferences' => 'paerseenlich Profil',
 	'user-profile-personal-name' => 'Naame',
 	'user-page-link' => 'Yuuser-Blatt',
