@@ -296,6 +296,7 @@ $messages['bs'] = array(
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Komentar|Komentari}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Prijatelj|Prijatelja}}',
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|Neprijatelj|Neprijatelja}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Objavljeno mišljenje|Objavljena mišljenja}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Mišljenje|Mišljenja}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Poklon primljen|Poklona primljeno}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Poslan poklon|Poslano poklona}}',

@@ -2813,6 +2813,8 @@ $messages['te'] = array(
 	'g-gift' => 'బహుమతి',
 	'g-gift-name' => 'బహుమతి పేరు',
 	'g-give-separator' => 'లేదా',
+	'g-previous' => 'గత',
+	'g-remove' => 'తొలగించు',
 );
 
 /** Tagalog (Tagalog)

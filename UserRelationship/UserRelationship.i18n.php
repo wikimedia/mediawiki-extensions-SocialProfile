@@ -440,7 +440,9 @@ $2 أزالك كعدو في {{SITENAME}}!
  * @author Basharh
  */
 $messages['arc'] = array(
+	'ur-error-page-title' => 'ܐܘܝ!',
 	'ur-main-page' => 'ܦܐܬܐ ܪܫܝܬܐ',
+	'ur-your-profile' => 'ܠܦܦܐ ܕܝܠܟ',
 );
 
 /** Egyptian Spoken Arabic (مصرى)

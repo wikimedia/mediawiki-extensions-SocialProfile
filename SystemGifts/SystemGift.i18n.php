@@ -1893,6 +1893,7 @@ $messages['te'] = array(
 	'ga-giftdesc' => 'బహుమతి వివరణ',
 	'ga-giftname' => 'బహుమతి పేరు',
 	'ga-gifttype' => 'బహుమతి రకం',
+	'ga-previous' => 'గత',
 );
 
 /** Tagalog (Tagalog)

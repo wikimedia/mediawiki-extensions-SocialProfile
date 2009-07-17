@@ -78,6 +78,15 @@ $messages['ar'] = array(
 	'mp-request-new-friend' => '{{PLURAL:$1|لا أصدقاء جدد|صديق جديد|صديقان جديدان|$1 أصدقاء جدد|$1 صديقًا جديدًا|$1 صديق جديد}}',
 );
 
+/** Aramaic (ܐܪܡܝܐ)
+ * @author Basharh
+ */
+$messages['arc'] = array(
+	'mp-userlevels-link' => 'ܫܘܝ̈ܐ ܕܡܦܠܚܢ̈ܐ',
+	'mp-welcome-upload' => 'ܐܣܩ',
+	'mp-welcome-edit' => 'ܫܚܠܦ',
+);
+
 /** Egyptian Spoken Arabic (مصرى)
  * @author Ghaly
  * @author Meno25

@@ -797,6 +797,42 @@ $messages['ar'] = array(
 	'right-avatarremove' => 'إزالة أفاترات المستخدمين',
 );
 
+/** Aramaic (ܐܪܡܝܐ)
+ * @author Basharh
+ */
+$messages['arc'] = array(
+	'user-time-ago' => 'ܩܕܡ $1',
+	'user-gifts-title' => 'ܕܫܢ̈ܐ',
+	'user-view-all' => 'ܚܙܝ ܟܠ',
+	'user-upload-image' => 'ܐܣܩ ܨܘܪܬܐ',
+	'user-watchlist' => 'ܪ̈ܗܝܬܝ',
+	'user-foes-title' => 'ܒܥܠܕܒܒ̈ܐ',
+	'other-info-music' => 'ܡܘܣܝܩܝ',
+	'other-info-books' => 'ܟܬܒ̈ܐ',
+	'other-info-magazines' => 'ܡܓܠ̈ܐ',
+	'user-personal-info-real-name' => 'ܫܡܐ ܫܪܝܪܐ',
+	'user-personal-info-websites' => 'ܕܘܟܝܬ̈ܐ ܕܘܝܒ',
+	'user-personal-info-schools' => 'ܡܕܪ̈ܫܝܬܐ',
+	'user-profile-update-profile' => 'ܠܦܦܐ',
+	'user-profile-section-preferences' => 'ܓܒܝܬ̈ܐ',
+	'user-profile-personal-schools' => 'ܡܕܪ̈ܫܝܬܐ',
+	'user-profile-personal-web' => 'ܘܝܒ',
+	'user-profile-personal-websites' => 'ܕܘܟܝܬ̈ܐ ܕܘܝܒ',
+	'user-profile-interests-music' => 'ܡܘܣܝܩܝ',
+	'user-profile-interests-books' => 'ܟܬܒ̈ܐ',
+	'user-profile-interests-magazines' => 'ܡܓܠ̈ܐ',
+	'user-profile-picture-yourpicture' => 'ܨܘܪܬܐ ܕܝܠܟ',
+	'user-profile-picture-large' => 'ܪܒܬܐ',
+	'user-profile-picture-medlarge' => 'ܡܨܥܝܬܐ - ܪܒܬܐ',
+	'user-profile-picture-medium' => 'ܡܨܥܝܬܐ',
+	'user-profile-picture-small' => 'ܙܥܘܪܬܐ',
+	'user-profile-picture-currentimage' => 'ܨܘܪܬܐ ܗܫܝܬܐ',
+	'user-profile-userlevels-link' => 'ܫܘܝ̈ܐ ܕܡܦܠܚܢܐ',
+	'edit-profile-title' => 'ܫܚܠܦ ܠܦܦܟ',
+	'user-page-link' => 'ܦܐܬܐ ܕܡܦܠܚܢܐ',
+	'user-social-profile-link' => 'ܠܦܦܐ ܟܢܘܫܝܝܐ',
+);
+
 /** Egyptian Spoken Arabic (مصرى)
  * @author Ghaly
  * @author Meno25
@@ -4186,6 +4222,7 @@ $messages['id'] = array(
 	'user-profile-section-picture' => 'Avatar',
 	'user-profile-section-preferences' => 'Preferensi',
 	'user-profile-personal-name' => 'Nama',
+	'user-profile-personal-email' => 'Surel',
 	'user-profile-personal-city' => 'Kota',
 	'user-profile-personal-country' => 'Negara',
 	'user-profile-personal-hometown' => 'Kota asal',
@@ -7639,7 +7676,7 @@ $messages['szl'] = array(
  * @author Veeven
  */
 $messages['te'] = array(
-	'user-time-ago' => 'క్రితం',
+	'user-time-ago' => '$1 క్రితం',
 	'user-awards-title' => 'అవార్డులు',
 	'user-gifts-title' => 'బహుమతులు',
 	'user-count-separator' => '$1 యొక్క $2',
@@ -7659,7 +7696,7 @@ $messages['te'] = array(
 	'user-contributions' => 'రచనలు',
 	'user-stats-title' => 'గణాంకాలు',
 	'user-stats-edits' => '{{PLURAL:$1|మార్పు|మార్పులు}}',
-	'user-stats-votes' => 'వోట్లు',
+	'user-stats-votes' => '{{PLURAL:$1|వోటు|వోట్లు}}',
 	'user-stats-comments' => '{{PLURAL:$1|వ్యాఖ్య|వ్యాఖ్యలు}}',
 	'other-info-title' => 'ఇతర సమాచారం',
 	'user-friends-title' => 'స్నేహితులు',
@@ -7693,7 +7730,7 @@ $messages['te'] = array(
 	'user-profile-update-saved' => 'మీ ప్రొఫైలుని భద్రపరిచాం',
 	'user-profile-update-profile' => 'ప్రొఫైలు',
 	'user-profile-default-country' => 'అమెరికా సంయుక్త రాష్ట్రాలు',
-	'user-profile-points' => '$1 పాయింట్లు',
+	'user-profile-points' => '$1 {{PLURAL:$1|పాయింటు|పాయింట్లు}}',
 	'user-profile-section-personal' => 'వ్యక్తిగత సమాచారం',
 	'user-profile-section-interests' => 'ఇతర సమాచారం',
 	'user-profile-section-picture' => 'అవతారం',

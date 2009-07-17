@@ -460,6 +460,13 @@ $messages['ta'] = array(
 	'yui-desc' => 'ஜாவாஸ்க்ரிப்ட்டில் எழுதப்பட்ட பயன்பாடுகள் மற்றும் கட்டுப்பாடுகளின் தொகுதி',
 );
 
+/** Telugu (తెలుగు)
+ * @author Kiranmayee
+ */
+$messages['te'] = array(
+	'yui-desc' => 'జావాస్క్రిప్టు లో రాయబడిన కొన్ని పనిముట్లు మరియు ఉపకరణాలు',
+);
+
 /** Tajik (Cyrillic) (Тоҷикӣ (Cyrillic))
  * @author Ibrahim
  */
