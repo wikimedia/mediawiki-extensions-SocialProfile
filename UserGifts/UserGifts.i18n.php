@@ -257,6 +257,7 @@ $messages['arc'] = array(
 );
 
 /** Egyptian Spoken Arabic (مصرى)
+ * @author Ghaly
  * @author Meno25
  */
 $messages['arz'] = array(
@@ -271,7 +272,7 @@ $messages['arz'] = array(
 	'giftmanager-public' => 'علنى',
 	'giftmanager-private' => 'خاص',
 	'giftmanager-view' => 'عرض قائمة الهدايا',
-	'g-add-message' => 'أضف رسالة',
+	'g-add-message' => 'ضيف رساله',
 	'g-back-edit-gift' => 'رجوع لتعديل هذه الهدية',
 	'g-back-gift-list' => 'رجوع لقائمة الهدايا',
 	'g-back-link' => '< رجوع إلى صفحة $1',

@@ -1557,6 +1557,10 @@ $messages['lb'] = array(
 	'userboard_sendbutton' => 'geschéckt',
 	'userboard_loggedout' => 'Dir musst <a href="$1">ageloggt si</a> fir anere Benotzer e Message ze schécken.',
 	'userboard_showingmessages' => 'Weis {{PLURAL:$4|Noriicht $3|Noriichten $2-$3}} vu(n) {{PLURAL:$1|$1 Noriicht|$1 Noriichten}}',
+	'userboard-time-days' => '{{PLURAL:$1|een Dag|$1 Deeg}}',
+	'userboard-time-hours' => '{{PLURAL:$1|eng Stonn|$1 Stonnen}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|eng Minutt|$1 Minutten}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|eng Sekonn|$1 Sekonnen}}',
 );
 
 /** Lithuanian (Lietuvių)
