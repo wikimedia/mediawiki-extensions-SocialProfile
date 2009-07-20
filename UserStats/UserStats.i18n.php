@@ -60,12 +60,16 @@ and change your settings to disable e-mail notifications.'
 );
 
 /** Message documentation (Message documentation)
+ * @author Bennylin
  * @author Fryed-peach
  * @author Purodha
  * @author Umherirrender
  */
 $messages['qqq'] = array(
 	'top-fans-by-category-title' => '$1 is any of the messages starting with "top-fans-stats-" and the name of the statistic. Examples are {{msg-mw|top-fans-stats-vote-count}}, {{msg-mw|top-fans-stats-weekly-winner-count}}, {{msg-mw|top-fans-stats-referrals-completed}}, {{msg-mw|top-fans-stats-friends-count}}, and {{msg-mw|top-fans-stats-edit-count}}.',
+	'top-fans-stats-vote-count' => '{{Identical/Vote}}',
+	'top-fans-stats-edit-count' => '{{Identical/Edit}}',
+	'top-fans-stats-comment-count' => '{{Identical/Comment}}',
 	'right-updatepoints' => '{{doc-right|updatepoints}}',
 );
 
@@ -301,6 +305,7 @@ $messages['bs'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Poklon primljen|Poklona primljeno}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Poslan poklon|Poslano poklona}}',
 	'right-updatepoints' => 'Ažuriranje brojanja izmjena',
+	'level-advanced-to' => 'prešao na nivo <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Vi ste sada "$1" na {{SITENAME}}!',
 	'level-advance-body' => 'Zdravo $1.
 
@@ -903,6 +908,57 @@ Tu non vole reciper plus e-mail de nos?
 
 Clicca $3
 e disactiva in tu preferentias le notificationes per e-mail.',
+);
+
+/** Indonesian (Bahasa Indonesia)
+ * @author Bennylin
+ */
+$messages['id'] = array(
+	'user-stats-alltime-title' => 'Poin terbanyak sepanjang masa',
+	'user-stats-weekly-title' => 'Poin terbanyak minggu ini',
+	'user-stats-monthly-title' => 'Poin terbanyak bulan ini',
+	'topusers' => 'Pengguna teratas',
+	'top-fans-by-points-nav-header' => 'Penggemar teratas',
+	'top-fans-by-category-nav-header' => 'Teratas menurut kategori',
+	'top-fans-total-points-link' => 'Poin total',
+	'top-fans-weekly-points-link' => 'Poin minggu ini',
+	'top-fans-monthly-points-link' => 'Poin bulan ini',
+	'top-fans-points' => 'poin',
+	'top-fans-by-category-title' => 'Top secara keseluruhan $1',
+	'top-fans-bad-field-title' => 'Oh tidak!',
+	'top-fans-bad-field-message' => 'Statistik yang diminta tidak ada.',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1||}}Suara',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1||}}Kemenangan bulanan',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1||}}Kemenangan mingguan',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1||}}Suntingan',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1||}}Komentar',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1||}}Rujukan',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1||}}Kawan',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1||}}Lawan',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1||}}Opini yang dipublikasikan',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1||}}Opini',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1||}}Bagus',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1||}}Jelek',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1||}}Nilai bagus yang diberikan',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1||}}Nilai jelek yang diberikan',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1||}}Hadiah yang diterima',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1||}}Hadiah yang diberikan',
+	'right-updatepoints' => 'Mutakhirkan penghitungan suntingan',
+	'level-advanced-to' => 'naik ke level <span style="font-weight:800;">$1</span>',
+	'level-advance-subject' => 'Anda sekarang adalah "$1" di {{SITENAME}}!',
+	'level-advance-body' => 'Halo $1.
+
+Sekarang Anda adalah "$2" di {{SITENAME}}!
+
+Selamat,
+
+Tim {{SITENAME}}
+
+---
+Mau berhenti mendapatkan pesan ini?
+
+Klik $3
+dan ganti seting Anda untuk mematikan pemberitahuan lewat surel.',
 );
 
 /** Japanese (日本語)

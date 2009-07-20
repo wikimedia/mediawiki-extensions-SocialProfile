@@ -928,6 +928,7 @@ $messages['et'] = array(
 );
 
 /** Finnish (Suomi)
+ * @author Crt
  * @author Jack Phoenix
  */
 $messages['fi'] = array(
@@ -977,7 +978,7 @@ $messages['fi'] = array(
 	'g-give-no-user-message' => 'Lahjat ja palkinnot ovat loistava tapa huomioida ystäviäsi!',
 	'g-give-no-user-title' => 'Kenelle haluaisit antaa lahjan?',
 	'g-give-to-user-title' => 'Lähetä lahja "$1" käyttäjälle $2',
-	'g-give-to-user-message' => 'Haluatko antaa käyttäjälle $1 erilaisen lahjan? <a href="$2">Napsauta tästä</a>.',
+	'g-give-to-user-message' => 'Haluatko antaa käyttäjälle $1 <a href="$2">erilaisen lahjan</a>?',
 	'g-go-back' => 'Palaa takaisin',
 	'g-imagesbelow' => 'Alapuolella ovat kuvasi, joita käytetään sivustolla',
 	'g-large' => 'Suuri',
@@ -993,7 +994,7 @@ $messages['fi'] = array(
 	'g-remove-message' => 'Oletko varma, että haluat poistaa lahjan "$1"?',
 	'g-recent-recipients' => 'Muut tämän lahjan tuoreet saajat',
 	'g-remove-success-title' => 'Olet onnistuneesti poistanut lahjan "$1"',
-	'g-remove-success-message' => 'Kuten pyydettiin, olemme onnistuneesti poistaneet lahjan "$1".',
+	'g-remove-success-message' => 'Lahja ”$1” on poistettu.',
 	'g-remove-title' => 'Poista "$1"?',
 	'g-send-gift' => 'Lähetä lahja',
 	'g-select-a-friend' => 'valitse ystävä',
@@ -1800,6 +1801,7 @@ $messages['lb'] = array(
 	'g-current-image' => 'Aktuellt Bild',
 	'g-delete-message' => 'Sidd dir sécher datt dir de Cadeau $1 läsche wëllt?
 Et gëtt dann och bäi de Benotzer geläscht déi e kritt hunn.',
+	'g-description-title' => 'Cadeau "$2" vum $1',
 	'g-error-do-not-own' => 'Dëse Cadeau gehéiert Iech net.',
 	'g-error-message-blocked' => 'Dir sidd den Ament gespaart a kënnt keng Cadeaue maachen',
 	'g-error-message-invalid-link' => 'De Link deen Dir uginn hutt ass net valabel.',
@@ -1822,6 +1824,7 @@ Et ass esou einfach.',
 	'g-give-list-friends-title' => 'Aus Ärer Lëscht vu Frënn auswielen',
 	'g-give-list-select' => 'e Frënd auswielen',
 	'g-give-separator' => 'oder',
+	'g-give-no-user-message' => 'Cadeauen an Auszeechnunge sinn eng groussarteg Manéier fir senge Frënn Unerkennung auszedrécken!',
 	'g-give-no-user-title' => 'Wiem wëllt Dir e Cadeau maachen?',
 	'g-give-to-user-title' => 'Dem $2 de Cadeau "$1" maachen',
 	'g-give-to-user-message' => 'Wëllt Dir dem $1 en <a href="$2">anere Cadeau</a> maachen?',
