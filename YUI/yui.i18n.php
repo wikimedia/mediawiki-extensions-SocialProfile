@@ -14,11 +14,12 @@ $messages['en'] = array(
 );
 
 /** Message documentation (Message documentation)
+ * @author Fryed-peach
  * @author Purodha
  * @author Siebrand
  */
 $messages['qqq'] = array(
-	'yui-desc' => 'Short description of the Yui extension, shown in [[Special:Version]].{{doc-important|Do not translate or change links.}}',
+	'yui-desc' => '{{desc}}',
 );
 
 /** Afrikaans (Afrikaans)

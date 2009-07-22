@@ -271,6 +271,25 @@ $aliases['ps'] = array(
 	'UpdateProfile' => array( 'پېژنليک تازه کول' ),
 );
 
+/** Slovak (Slovenčina) */
+$aliases['sk'] = array(
+	'AddRelationship' => array( 'PridaťVzťah' ),
+	'PopulateUserProfiles' => array( 'NaplniťPoužívateľskéProfily' ),
+	'RemoveAvatar' => array( 'OdstrániťFotku' ),
+	'RemoveRelationship' => array( 'OdstrániťVzťah' ),
+	'SendBoardBlast' => array( 'PoslaťBoardBlast' ),
+	'TopFansByStatistic' => array( 'NajFanúšikoviaPodľaŠtatistiky' ),
+	'TopUsers' => array( 'NajPoužívatelia' ),
+	'TopUsersRecent' => array( 'NajNedávniPoužívatelia' ),
+	'ToggleUserPage' => array( 'PrepnúťPoužívateľskúStránku' ),
+	'UpdateEditCounts' => array( 'AktualizovaťPočtyÚprav' ),
+	'UpdateProfile' => array( 'AktualizovaťProfil' ),
+	'UploadAvatar' => array( 'AktualizovaťFotku' ),
+	'UserBoard' => array( 'PoužívateľskéFórum' ),
+	'ViewRelationshipRequests' => array( 'ZobraziťŽiadostiOVzťah' ),
+	'ViewRelationships' => array( 'ZobraziťVzťahy' ),
+);
+
 /** Swahili (Kiswahili) */
 $aliases['sw'] = array(
 	'AddRelationship' => array( 'WekaMahusiano' ),

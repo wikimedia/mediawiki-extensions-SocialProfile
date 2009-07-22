@@ -67,9 +67,9 @@ and change your settings to disable e-mail notifications.'
  */
 $messages['qqq'] = array(
 	'top-fans-by-category-title' => '$1 is any of the messages starting with "top-fans-stats-" and the name of the statistic. Examples are {{msg-mw|top-fans-stats-vote-count}}, {{msg-mw|top-fans-stats-weekly-winner-count}}, {{msg-mw|top-fans-stats-referrals-completed}}, {{msg-mw|top-fans-stats-friends-count}}, and {{msg-mw|top-fans-stats-edit-count}}.',
-	'top-fans-stats-vote-count' => '{{Identical/Vote}}',
-	'top-fans-stats-edit-count' => '{{Identical/Edit}}',
-	'top-fans-stats-comment-count' => '{{Identical/Comment}}',
+	'top-fans-stats-vote-count' => '{{Identical|Vote}}',
+	'top-fans-stats-edit-count' => '{{Identical|Edit}}',
+	'top-fans-stats-comment-count' => '{{Identical|Comment}}',
 	'right-updatepoints' => '{{doc-right|updatepoints}}',
 );
 
