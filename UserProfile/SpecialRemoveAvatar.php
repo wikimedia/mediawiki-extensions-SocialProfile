@@ -85,8 +85,9 @@ class RemoveAvatar extends SpecialPage {
 	 * Show the form for retrieving a user's current avatar
 	 */
 	function showUserForm() {
-		$output = '<form method="get" name="avatar" action="">
-				<b>' . wfMsg( 'username' ) . '</b>
+		$output = '<form method="get" name="avatar" action="">'
+				. Xml::hidden( 'title', $this->getTitle() ) .
+				'<b>' . wfMsg( 'username' ) . '</b>
 				<input type="text" name="user" />
 				<input type="submit" value="' . wfMsg( 'search' ) . '" />
 			</form>';
