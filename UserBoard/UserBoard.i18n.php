@@ -783,7 +783,7 @@ $messages['eu'] = array(
  */
 $messages['fi'] = array(
 	'boardblastlogintitle' => 'Sinun tulee olla sisäänkirjautunut lähettääksesi keskustelupläjäyksiä',
-	'boardblastlogintext' => 'Sinun tulee olla sisäänkirjautunut lähettääksesi keskustelupläjäyksiä.  Napsauta <a href="index.php?title=Special:UserLogin">tästä kirjautuaksesi sisään</a>',
+	'boardblastlogintext' => 'Sinun tulee olla <a href="index.php?title=Special:UserLogin">sisäänkirjautunut</a> lähettääksesi keskusteluja.',
 	'messagesenttitle' => 'Viestit lähetetty',
 	'boardblasttitle' => 'Lähetä keskustelupläjäys',
 	'boardblaststep1' => 'Vaihe 1 – Kirjoita viestisi',
