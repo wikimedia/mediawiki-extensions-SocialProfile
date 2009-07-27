@@ -1006,6 +1006,23 @@ $messages['ch'] = array(
 	'ur-main-page' => 'Fanhaluman',
 );
 
+/** Sorani (Arabic script) (‫کوردی (عەرەبی)‬)
+ * @author Marmzok
+ */
+$messages['ckb-arab'] = array(
+	'viewrelationships' => 'دیتنی پەیوەندی',
+	'viewrelationshiprequests' => 'دیتنی داخوازیەکانی پەیوەندی',
+	'ur-already-submitted' => 'داخوازیەکەت ناردرا',
+	'ur-main-page' => 'لاپەڕەی سەرەکی',
+	'ur-previous' => 'پێشوو',
+	'ur-next' => 'دواتر',
+	'ur-remove' => 'لابردن',
+	'ur-cancel' => 'هەڵوەشاندنەوە',
+	'ur-login' => 'چوونەژوورەوە',
+	'ur-accept' => 'پەسەند کردن',
+	'ur-reject' => 'پەسەند نەکردن',
+);
+
 /** Church Slavic (Словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
  * @author ОйЛ
  */
@@ -4966,6 +4983,7 @@ $messages['roa-tara'] = array(
 	'ur-cancel' => 'Scangille',
 	'ur-login' => 'Trase',
 	'ur-add-button-friend' => 'Aggiugne cumme amiche',
+	'ur-add-error-message-pending-request-title' => 'Pascenze!',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> vvò ccu devende amiche tue.',
 	'ur-accept' => 'Accitte',
 	'ur-reject' => 'Scitte',

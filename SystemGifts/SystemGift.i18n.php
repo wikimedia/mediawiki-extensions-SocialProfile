@@ -372,6 +372,13 @@ i promijenite Vaše postavke onemogućavajući obavještenja putem emaila.',
 	'right-awardsmanage' => 'Pravljenje novih i uređivanje postojećih nagrada',
 );
 
+/** Sorani (Arabic script) (‫کوردی (عەرەبی)‬)
+ * @author Marmzok
+ */
+$messages['ckb-arab'] = array(
+	'ga-goback' => 'گەڕانەوە بۆ دواوە',
+);
+
 /** German (Deutsch)
  * @author Umherirrender
  */

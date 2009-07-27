@@ -553,6 +553,13 @@ $messages['ca'] = array(
 	'g-small' => 'Petit',
 );
 
+/** Sorani (Arabic script) (‫کوردی (عەرەبی)‬)
+ * @author Marmzok
+ */
+$messages['ckb-arab'] = array(
+	'g-go-back' => 'گەڕانەوە بۆ دواوە',
+);
+
 /** German (Deutsch)
  * @author Als-Holder
  * @author Jorges
