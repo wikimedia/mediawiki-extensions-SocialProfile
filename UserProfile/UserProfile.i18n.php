@@ -4977,6 +4977,7 @@ Donn <a href="$1">enlogge</a> udder <a href="$2">Desch aanmellde</a>.',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
+ * @author Les Meloures
  * @author Robby
  */
 $messages['lb'] = array(
@@ -5041,7 +5042,7 @@ $messages['lb'] = array(
 	'user-personal-info-about-me' => 'Iwwer mech',
 	'user-recent-activity-title' => 'Rezent Aktivitéit',
 	'user-recent-activity-edit' => 'ännerung vun der Säit',
-	'user-recent-activity-vote' => 'Bewertung vun der Säit',
+	'user-recent-activity-vote' => 'Bewäertung vun der Säit',
 	'user-recent-activity-comment' => 'emierkung op der Säit',
 	'user-recent-activity-gift-sent' => 'Cadeau geschéckt u(n)',
 	'user-recent-activity-gift-rec' => 'Huet e Cadeau kritt vum',
@@ -6974,14 +6975,20 @@ $messages['roa-tara'] = array(
 	'user-stats-pick-points' => "Pigghije {{PLURAL:$1|'u punde|le punde}}",
 	'other-info-title' => "Otre 'mbormaziune",
 	'user-friends-title' => 'Amice',
+	'other-info-movies' => 'Filmate',
 	'other-info-tv' => 'Tivvù',
+	'other-info-music' => 'Museche',
+	'other-info-books' => 'Libbre',
+	'other-info-video-games' => 'Video Sciuèche',
 	'custom-info-title' => "'Mbormaziune personalizzate",
 	'custom-info-field1' => 'Personalizze 1',
 	'custom-info-field2' => 'Personalizze 2',
 	'custom-info-field3' => 'Personalizze 3',
 	'custom-info-field4' => 'Personalizze 4',
 	'custom-no-info' => "Nisciune 'mbormazione personalizzate",
+	'user-personal-info-real-name' => 'Nome vere',
 	'user-personal-info-birthday' => 'Sciurne de nascita',
+	'user-personal-info-schools' => 'Scole',
 	'user-recent-activity-gift-sent' => "Manne 'nu riele a",
 	'user-profile-update-profile' => 'profile',
 	'user-profile-default-country' => 'Tarde',
@@ -6994,6 +7001,8 @@ $messages['roa-tara'] = array(
 	'user-profile-personal-city' => 'Cetate',
 	'user-profile-personal-country' => 'Paise',
 	'user-profile-personal-birthday' => 'Date de nascite',
+	'user-profile-personal-work' => 'Fatije',
+	'user-profile-personal-schools' => 'Scole',
 	'user-profile-personal-web' => 'Web',
 	'user-profile-interests-entertainment' => 'Divertimende',
 	'user-profile-interests-movies' => 'Film',
@@ -7003,13 +7012,20 @@ $messages['roa-tara'] = array(
 	'user-profile-interests-magazines' => 'Riviste',
 	'user-profile-interests-videogames' => 'Video Sciueche',
 	'user-profile-interests-eats' => 'Mangiàre',
+	'user-profile-update-button' => 'Aggiorne',
+	'user-profile-sports-sport' => 'Sport',
 	'user-profile-picture-title' => 'Careche a fota toje',
 	'user-profile-picture-yourpicture' => "'A fota toje",
+	'user-profile-picture-large' => 'Larie',
+	'user-profile-picture-medlarge' => 'Medie - Larie',
+	'user-profile-picture-medium' => 'Medie',
+	'user-profile-picture-small' => 'Piccenna',
 	'user-profile-picture-uploaddifferent' => "Careche 'na fote differende",
 	'user-profile-picture-currentimage' => 'Immaggina corrende',
 	'edit-profile-title' => "Cange 'u profile tue",
 	'user-page-link' => "Pàgene de l'utende",
 	'user-wiki-link' => "Pàgene de l'utende sus a Uicchi",
+	'givegift' => "Fà 'nu riale",
 	'user-profile-picture-log' => 'avatar',
 );
 

@@ -1900,6 +1900,7 @@ $messages['te'] = array(
 	'ga-giftdesc' => 'బహుమతి వివరణ',
 	'ga-giftname' => 'బహుమతి పేరు',
 	'ga-gifttype' => 'బహుమతి రకం',
+	'ga-goback' => 'వెనక్కి వెళ్ళు',
 	'ga-previous' => 'గత',
 );
 

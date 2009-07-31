@@ -2515,6 +2515,11 @@ $messages['roa-tara'] = array(
 	'giftmanager-private' => 'private',
 	'giftmanager-view' => "Vide 'a liste de le riale",
 	'g-add-message' => "Aggiunge 'nu messagge",
+	'g-gift' => 'riale',
+	'g-gift-name' => "nome d'u riale",
+	'g-give-gift' => "Fà 'u riale",
+	'g-give-separator' => 'o',
+	'g-go-back' => 'Tuèrne rrete',
 );
 
 /** Russian (Русский)
@@ -2824,6 +2829,7 @@ $messages['te'] = array(
 	'g-gift' => 'బహుమతి',
 	'g-gift-name' => 'బహుమతి పేరు',
 	'g-give-separator' => 'లేదా',
+	'g-go-back' => 'వెనక్కి వెళ్ళు',
 	'g-previous' => 'గత',
 	'g-remove' => 'తొలగించు',
 );
