@@ -1558,6 +1558,28 @@ $messages['pl'] = array(
 	'ga-uploadsuccess' => 'Przesłano',
 	'ga-viewlist' => 'Zobacz listę prezentu',
 	'system_gift_received_subject' => 'Dostałeś nagrodę $1 na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
+	'system_gift_received_body' => 'Witaj $1.
+
+Otrzymałeś właśnie nagrodę $2 w {{GRAMMAR:MS.lp|{{SITENAME}}}}!
+
+„$3”
+
+Kliknij poniżej, aby sprawdzić dlaczego!
+
+$4
+
+Mamy nadzieję, że się cieszysz!
+
+Dziękujemy, 
+
+zespół {{GRAMMAR:D.lp|{{SITENAME}}}}
+
+--- 
+
+Nie chcesz otrzymywać wiadomości?
+
+Kliknij $5
+i zmień ustawienia, aby wyłączyć powiadomienia e-mail.',
 	'right-awardsmanage' => 'Tworzenie nowych oraz edytowanie istniejących nagród',
 );
 

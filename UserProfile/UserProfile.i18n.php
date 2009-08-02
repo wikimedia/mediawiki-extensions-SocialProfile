@@ -4612,10 +4612,10 @@ $messages['jv'] = array(
  * @author គីមស៊្រុន
  */
 $messages['km'] = array(
-	'user-time-ago' => 'មុន',
+	'user-time-ago' => '$1 មុន',
 	'user-awards-title' => 'រង្វាន់​នានា',
 	'user-gifts-title' => 'អំណោយ',
-	'user-count-separator' => '$1 នៃ $2',
+	'user-count-separator' => '$1នាក់ក្នុងចំនោម$2នាក់',
 	'user-view-all' => 'មើលទាំងអស់',
 	'user-upload-image' => 'ផ្ទុករូបភាពឡើង',
 	'user-edit-this' => 'កែប្រែ​អ្នកប្រើប្រាស់​នេះ',
