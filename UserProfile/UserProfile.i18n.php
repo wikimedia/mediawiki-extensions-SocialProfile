@@ -1477,6 +1477,7 @@ $messages['br'] = array(
  * @author CERminator
  */
 $messages['bs'] = array(
+	'user-time-ago' => 'prije $1',
 	'user-awards-title' => 'Nagrade',
 	'user-gifts-title' => 'Pokloni',
 	'user-count-separator' => '$1 od $2',
@@ -1529,6 +1530,8 @@ $messages['bs'] = array(
 	'user-personal-info-schools' => 'Škole',
 	'user-personal-info-about-me' => 'O meni',
 	'user-recent-activity-title' => 'Nedavne aktivnosti',
+	'user-recent-activity-edit' => 'uređivao je stranicu',
+	'user-recent-activity-vote' => 'glasao je za stranicu',
 	'user-recent-activity-gift-sent' => 'Poslao/la poklon za',
 	'user-recent-activity-gift-rec' => 'Dobio/la poklon od',
 	'user-recent-activity-friend' => 'je sada prijatelj sa',
@@ -1548,6 +1551,8 @@ $messages['bs'] = array(
 	'user-profile-personal-location' => 'Lokacija',
 	'user-profile-personal-city' => 'Grad',
 	'user-profile-personal-country' => 'Država',
+	'user-profile-personal-hometown' => 'Rodni grad',
+	'user-profile-personal-birthday' => 'Rođendan',
 	'user-profile-personal-birthdate' => 'Datum (MM/DD)',
 	'user-profile-personal-work' => 'Posao',
 	'user-profile-personal-occupation' => 'Zanimanje',

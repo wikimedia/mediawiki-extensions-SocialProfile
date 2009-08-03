@@ -773,6 +773,9 @@ $messages['eu'] = array(
 	'userboard_prevpage' => 'aurreko',
 	'userboard_nomessages' => 'Ez dago mezurik.',
 	'userboard_sendbutton' => 'bidali',
+	'userboard-time-hours' => '{{PLURAL:$1|ordu bat|$1 ordu}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|minutu bat|$1 minutu}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|segundo bat|$1 segundo}}',
 );
 
 /** Finnish (Suomi)

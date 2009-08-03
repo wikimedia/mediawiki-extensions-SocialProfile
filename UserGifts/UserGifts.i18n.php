@@ -523,11 +523,14 @@ $messages['bs'] = array(
 	'g-give-list-select' => 'odaberi prijatelja',
 	'g-give-separator' => 'ili',
 	'g-go-back' => 'Idi nazad',
+	'g-large' => 'Veliki',
 	'g-list-title' => 'Spisak poklona korisnika $1',
 	'g-new' => 'novo',
+	'g-next' => 'Slijedeći',
 	'g-remove' => 'Ukloni',
 	'g-remove-title' => 'Ukloni "$1"?',
 	'g-send-gift' => 'Pošalji poklon',
+	'g-select-a-friend' => 'odaberite prijatelja',
 	'g-small' => 'Malo',
 	'g-viewgiftlist' => 'Pogledaj spisak poklona',
 	'g-your-profile' => 'Vaš profil',
@@ -932,6 +935,16 @@ y cambia tus configuraciones para deshabilitar notificaciones por correo electr�
  */
 $messages['et'] = array(
 	'g-main-page' => 'Esileht',
+);
+
+/** Basque (Euskara)
+ * @author Kobazulo
+ */
+$messages['eu'] = array(
+	'g-send-gift' => 'Oparia bidali',
+	'g-select-a-friend' => 'lagun bat aukeratu',
+	'g-small' => 'Txikia',
+	'g-your-profile' => 'Zure profila',
 );
 
 /** Finnish (Suomi)
