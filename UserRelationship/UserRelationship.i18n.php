@@ -3498,7 +3498,8 @@ De e-mail jescheck kriß.',
  * @author Kw-Moon
  */
 $messages['kw'] = array(
-	'ur-cancel' => 'Hedhi',
+	'ur-main-page' => 'Pednfolen',
+	'ur-cancel' => 'Hedhy',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
