@@ -555,11 +555,30 @@ $messages['eu'] = array(
 	'top-fans-weekly-points-link' => 'Aste honetako puntuak',
 	'top-fans-monthly-points-link' => 'Hilabete honetako puntuak',
 	'top-fans-points' => 'puntuak',
+	'top-fans-bad-field-title' => 'Hara!',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Bozka|Bozkak}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Aldaketa|Aldaketak}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Iruzkina|Iruzkinak}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Laguna|Lagunak}}',
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|Etsaia|Etsaiak}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Iritzia|Iritziak}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Aldekoa|Aldekoak}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Aurkakoa|Aurkakoak}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Opari bat jaso duzu|Opariak jaso dituzu}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Oparia bidali duzu|Opariak bidali dituzu}}',
+	'level-advance-body' => 'Kaixo $1!
+
+Orain "$2" zara {{SITENAME}} gunean!
+
+Zorionak!
+
+Agur bero bat {{SITENAME}} gunearen taldearen izenean.
+
+---
+Aizu, ez al dituzu gure mezu elektronikoak jaso nahi?
+
+Egizu klik $3
+eta alda itzazu ezarpenak e-posta bidezko jakinarazpenak ezgaitzeko.',
 );
 
 /** Finnish (Suomi)

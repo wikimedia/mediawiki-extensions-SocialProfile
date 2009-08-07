@@ -630,6 +630,28 @@ y cambia tus configuraciones para deshabilitar notificaciones por correo electrÃ
 	'right-awardsmanage' => 'Crear nuevo y editar premios existentes',
 );
 
+/** Basque (Euskara)
+ * @author Kobazulo
+ */
+$messages['eu'] = array(
+	'ga-addnew' => '+ Opari berria gehitu',
+	'ga-back-edit-gift' => 'Opari hau editatzeko itzuli',
+	'ga-back-gift-list' => 'Oparien zerrendara itzuli',
+	'ga-create-gift' => 'Oparia sortu',
+	'ga-created' => 'Oparia sortu da',
+	'ga-gift' => 'oparia',
+	'ga-giftdesc' => 'opariaren deskribapena',
+	'ga-giftimage' => 'opariaren irudia',
+	'ga-giftname' => 'opariaren izena',
+	'ga-gifttype' => 'opari mota',
+	'ga-goback' => 'Atzera itzuli',
+	'ga-img' => 'gehitu/ordeztu irudia',
+	'ga-new' => 'Berria',
+	'ga-next' => 'Hurrengoa',
+	'ga-previous' => 'Aurrekoa',
+	'ga-viewlist' => 'Oparien zerrenda ikusi',
+);
+
 /** Finnish (Suomi)
  * @author Jack Phoenix
  */

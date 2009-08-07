@@ -1684,6 +1684,7 @@ $messages['eu'] = array(
 	'ur-error-message-no-user' => 'Ezin dugu zure eskaera bete, ez dago izen hori duen erabiltzailerik.',
 	'ur-main-page' => 'Azala',
 	'ur-your-profile' => 'Zure perfila',
+	'ur-backlink' => '&lt; $1(r)en profilera itzuli',
 	'ur-add-friends' => 'Lagun gehiago nahi? <a href="$1">Gonbida itzazu</a>',
 	'ur-add-friend' => 'Lagun bezala gehitu',
 	'ur-add-foe' => 'Etsai bezala gehitu',
@@ -1708,8 +1709,14 @@ $messages['eu'] = array(
 	'ur-add-error-message-existing-relationship-friend' => 'Jada $1 lankidearen laguna zara.',
 	'ur-add-error-message-pending-request-title' => 'Pazientzia!',
 	'ur-add-error-message-not-loggedin-friend' => 'Lagun bat gehitzeko saioa hasi behar duzu',
+	'ur-requests-message-foe' => '<a href="$1">$2(e)k</a> zure etsaia izan nahi du.',
+	'ur-requests-message-friend' => '<a href="$1">$2(e)k</a> zure laguna izan nahi du.',
 	'ur-accept' => 'Onartu',
 	'ur-reject' => 'Deuseztu',
+	'ur-no-requests-message' => 'Ez duzu ez lagun ez etsai eskaerarik. Lagun gehiago izan nahi badituzu, <a href="$1">gonbida itzazu!</a>',
+	'ur-requests-added-message-foe' => '$1 zure etsai bezala gehitu duzu.',
+	'ur-requests-added-message-friend' => '$1 zure lagun bezala gehitu duzu.',
+	'ur-title-foe' => '$1(r)en etsai zerrenda',
 	'ur-title-friend' => '$1-(r)en lagun zerrenda',
 );
 

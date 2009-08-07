@@ -950,9 +950,33 @@ $messages['et'] = array(
  * @author Kobazulo
  */
 $messages['eu'] = array(
+	'giftmanager-addgift' => '+ Opari berria gehitu',
+	'giftmanager-description' => 'opariaren deskribapena',
+	'giftmanager-giftimage' => 'opariaren irudia',
+	'giftmanager-image' => 'gehitu/ordeztu irudia',
+	'giftmanager-public' => 'publikoa',
+	'giftmanager-private' => 'pribatua',
+	'giftmanager-view' => 'Ikusi oparien zerrenda',
+	'g-add-message' => 'Mezu bat erantsi',
+	'g-back-gift-list' => 'Itzuli oparien zerrendara',
+	'g-back-link' => '< Itzuli $1(r)en orrialdera',
+	'g-count' => '$1-(e)k {{PLURAL:$2|opari bat du|$2 opari ditu}}.',
+	'g-create-gift' => 'Oparia sortu',
+	'g-gift' => 'oparia',
+	'g-give-gift' => 'Oparia eman',
+	'g-give-list-select' => 'hautatu lagun bat',
+	'g-give-separator' => 'edo',
+	'g-new' => 'berria',
+	'g-next' => 'Hurrengoa',
+	'g-previous' => 'Aurrekoa',
+	'g-remove' => 'Kendu',
+	'g-remove-gift' => 'Opari hau kendu',
+	'g-remove-message' => 'Ziur al zaude "$1" oparia kendu nahi duzula?',
+	'g-remove-title' => '"$1" kendu?',
 	'g-send-gift' => 'Oparia bidali',
 	'g-select-a-friend' => 'lagun bat aukeratu',
 	'g-small' => 'Txikia',
+	'g-viewgiftlist' => 'Ikusi oparien zerrenda',
 	'g-your-profile' => 'Zure profila',
 );
 
