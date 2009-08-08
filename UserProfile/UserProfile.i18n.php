@@ -618,7 +618,7 @@ $messages['an'] = array(
  */
 $messages['ar'] = array(
 	'populateuserprofiles' => 'أشهر ملفات المستخدمين',
-	'user-time-ago' => 'مضى',
+	'user-time-ago' => '$1 مضى',
 	'user-awards-title' => 'جوائز',
 	'user-gifts-title' => 'منح',
 	'user-count-separator' => '$1 من $2',

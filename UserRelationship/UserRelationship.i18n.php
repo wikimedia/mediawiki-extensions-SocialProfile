@@ -1685,6 +1685,12 @@ $messages['eu'] = array(
 	'ur-main-page' => 'Azala',
 	'ur-your-profile' => 'Zure perfila',
 	'ur-backlink' => '&lt; $1(r)en profilera itzuli',
+	'ur-relationship-count-foes' => '$1(e)k {{PLURAL:$2|etsai $2 du|$2 etsai ditu}}.
+Etsai gehiagorik nahi?
+<a href="$3">Gonbida itzazu.</a>',
+	'ur-relationship-count-friends' => '$1(e)k {{PLURAL:$2|lagun $2 du|$2 lagun ditu}}.
+Lagun gehiagorik nahi?
+<a href="$3">Gonbida itzazu.</a>',
 	'ur-add-friends' => 'Lagun gehiago nahi? <a href="$1">Gonbida itzazu</a>',
 	'ur-add-friend' => 'Lagun bezala gehitu',
 	'ur-add-foe' => 'Etsai bezala gehitu',
@@ -3505,8 +3511,8 @@ De e-mail jescheck kriß.',
  * @author Kw-Moon
  */
 $messages['kw'] = array(
-	'ur-main-page' => 'Pednfolen',
-	'ur-cancel' => 'Hedhy',
+	'ur-main-page' => 'Pennfolen',
+	'ur-cancel' => 'Hedhi',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
