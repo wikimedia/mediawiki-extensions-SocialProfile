@@ -4978,10 +4978,23 @@ $messages['rif'] = array(
 );
 
 /** Romanian (Română)
+ * @author Firilacroco
  * @author KlaudiuMihaila
  */
 $messages['ro'] = array(
+	'ur-error-page-title' => 'Ups!',
+	'ur-error-title' => 'Ups, aţi greşit pagina!',
 	'ur-main-page' => 'Pagina principală',
+	'ur-your-profile' => 'Profilul dvs.',
+	'ur-backlink' => '&lt; Înapoi la profilul lui $1',
+	'ur-add-friend' => 'Adăugaţi ca prieten',
+	'ur-add-foe' => 'Adauga ca inamic',
+	'ur-add-personal-message' => 'Adăugaţi un mesaj personal',
+	'ur-remove-relationship-friend' => 'Eliminaţi ca prieten',
+	'ur-remove-relationship-foe' => 'Eliminaţi ca inamic',
+	'ur-give-gift' => 'Daţi un cadou',
+	'ur-previous' => 'prec',
+	'ur-next' => 'următoarea',
 	'ur-remove' => 'Elimină',
 	'ur-cancel' => 'Anulează',
 	'ur-login' => 'Autentificare',

@@ -582,7 +582,9 @@ eta alda itzazu ezarpenak e-posta bidezko jakinarazpenak ezgaitzeko.',
 );
 
 /** Finnish (Suomi)
+ * @author Cimon Avaro
  * @author Jack Phoenix <jack@countervandalism.net>
+ * @author Str4nd
  */
 $messages['fi'] = array(
 	'user-stats-alltime-title' => 'Kaikkien aikojen suurimmat pistemäärät',
@@ -596,12 +598,17 @@ $messages['fi'] = array(
 	'top-fans-monthly-points-link' => 'Pisteitä tässä kuussa',
 	'top-fans-points' => 'pistettä',
 	'top-fans-bad-field-title' => 'Ups!',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Ääni|Ääniä}}',
 	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|kuukausittainen voitto|kuukausittaista voittoa}}',
 	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|viikottainen voitto|viikottaista voittoa}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|muokkaus|muokkausta}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|kommentti|kommenttia}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|ystävä|ystävää}}',
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|vihollinen|vihollista}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Julkaistu mielipide|Julkaistut mielipiteet}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Mielipide|Mielipiteet}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Peukalo ylös|Peukalot ylös}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Peukalo alas|Peukalot alas}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|saatu lahja|saatua lahjaa}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|lähetetty lahja|lähetettyä lahjaa}}',
 	'right-updatepoints' => 'Päivittää muokkausmääriä',
@@ -1540,11 +1547,16 @@ e altere suas preferências para desabilitar e-mails de notificação',
 );
 
 /** Romanian (Română)
+ * @author Firilacroco
  * @author KlaudiuMihaila
  */
 $messages['ro'] = array(
 	'user-stats-weekly-title' => 'Cele mai multe puncte în această săptămână',
 	'user-stats-monthly-title' => 'Cele mai multe puncte în această lună',
+	'topusers' => 'Top utilizatori',
+	'top-fans-by-points-nav-header' => 'Top fani',
+	'top-fans-by-category-nav-header' => 'Top după categorie',
+	'top-fans-total-points-link' => 'Total puncte',
 	'top-fans-weekly-points-link' => 'Puncte în această săptămână',
 	'top-fans-monthly-points-link' => 'Puncte în această lună',
 	'top-fans-points' => 'puncte',

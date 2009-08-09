@@ -2867,9 +2867,11 @@ Pursa <a href="$1">aquina</a> p\'abril la tu cuenta, u <a href="$2">aquina</a> p
 );
 
 /** Finnish (Suomi)
+ * @author Cimon Avaro
  * @author Crt
  * @author Jack Phoenix
  * @author Jack Phoenix <jack@countervandalism.net>
+ * @author Str4nd
  */
 $messages['fi'] = array(
 	'populateuserprofiles' => 'Täytä käyttäjäprofiilit',
@@ -2894,10 +2896,12 @@ $messages['fi'] = array(
 	'user-stats-title' => 'Tilastot',
 	'user-stats-edits' => '{{PLURAL:$1|Muokkaus|Muokkauksia}}',
 	'user-stats-votes' => '{{PLURAL:$1|Ääni|Ääniä}}',
+	'user-stats-recruits' => '{{PLURAL:$1|Rekrytoitu|Rekrytoitua}}',
 	'other-info-title' => 'Muut tiedot',
 	'user-friends-title' => 'Ystävät',
 	'user-foes-title' => 'Viholliset',
 	'other-info-movies' => 'Elokuvat',
+	'other-info-tv' => 'tv',
 	'other-info-music' => 'Musiikki',
 	'other-info-books' => 'Kirjat',
 	'other-info-video-games' => 'Videopelit',
@@ -2911,6 +2915,7 @@ $messages['fi'] = array(
 	'custom-info-field3' => 'Oma 3',
 	'custom-info-field4' => 'Oma 4',
 	'custom-no-info' => 'Ei omia tietoja',
+	'profile-updated-personal' => 'Päivitä profiilisi',
 	'populate-user-profile-done' => 'Lisättiin $1 {{PLURAL:$1|profiili|profiilia}}',
 	'user-board-title' => 'Keskustelualue',
 	'user-send-board-blast' => 'Lähetä keskustelupläjäys',
@@ -2969,6 +2974,7 @@ $messages['fi'] = array(
 	'user-profile-personal-websites' => 'Nettisivut',
 	'user-profile-interests-entertainment' => 'Viihde',
 	'user-profile-interests-movies' => 'Elokuvat',
+	'user-profile-interests-tv' => 'tv',
 	'user-profile-interests-music' => 'Musiikki',
 	'user-profile-interests-books' => 'Kirjat',
 	'user-profile-interests-magazines' => 'Lehdet',
@@ -6279,6 +6285,7 @@ $messages['pdc'] = array(
 	'user-stats-title' => 'Nummere',
 	'user-profile-section-preferences' => 'paerseenlich Profil',
 	'user-profile-personal-name' => 'Naame',
+	'user-profile-picture-small' => 'Glee',
 	'user-page-link' => 'Yuuser-Blatt',
 );
 
@@ -6695,10 +6702,12 @@ Clique <a href="$1">aqui</a> para logar ou clique <a href="$2">aqui</a> para se 
 
 /** Brazilian Portuguese (Português do Brasil)
  * @author Eduardo.mps
+ * @author Heldergeovane
  * @author Jorge Morais
  */
 $messages['pt-br'] = array(
 	'populateuserprofiles' => 'Popular perfil de utilizadores',
+	'user-time-ago' => '$1 atrás',
 	'user-awards-title' => 'Prêmios',
 	'user-gifts-title' => 'Presentes',
 	'user-count-separator' => '$1 de $2',
@@ -6890,9 +6899,24 @@ $messages['rif'] = array(
  * @author KlaudiuMihaila
  */
 $messages['ro'] = array(
+	'populateuserprofiles' => 'Populaţi profiluri de utilizator',
+	'user-time-ago' => '$1 în urmă',
 	'user-awards-title' => 'Premii',
 	'user-gifts-title' => 'Cadouri',
+	'user-count-separator' => '$1 din $2',
+	'user-view-all' => 'Vedeţi toate',
+	'user-upload-image' => 'Încărcaţi imagine',
+	'user-edit-this' => 'Editaţi aceasta',
+	'user-edit-profile' => 'Editare profil',
+	'user-upload-avatar' => 'Încărcaţi avatar',
 	'user-watchlist' => 'Pagini urmărite',
+	'user-meet-people' => 'Faceţi cunoştinţă cu oameni',
+	'user-add-friend' => 'Adăugaţi ca prieten',
+	'user-add-foe' => 'Adauga ca inamic',
+	'user-remove-friend' => 'Eliminaţi ca prieten',
+	'user-remove-foe' => 'Eliminaţi ca inamic',
+	'user-send-message' => 'Trimite un mesaj',
+	'user-send-gift' => 'Trimite un cadou',
 	'user-contributions' => 'Contribuţii',
 	'user-stats-title' => 'Statistici',
 	'user-stats-edits' => '{{PLURAL:$1|Modificare|Modificări}}',
@@ -6900,6 +6924,7 @@ $messages['ro'] = array(
 	'user-stats-comments' => '{{PLURAL:$1|Comentariu|Comentarii}}',
 	'other-info-title' => 'Alte informaţii',
 	'user-friends-title' => 'Prieteni',
+	'user-foes-title' => 'Inamici',
 	'other-info-movies' => 'Filme',
 	'other-info-tv' => 'TV',
 	'other-info-music' => 'Muzică',
@@ -6907,6 +6932,7 @@ $messages['ro'] = array(
 	'other-info-video-games' => 'Jocuri video',
 	'other-info-magazines' => 'Reviste',
 	'other-info-drinks' => 'Băuturi',
+	'other-no-info' => 'Nicio altă informaţie',
 	'populate-user-profile-done' => 'Adăugat $1 {{PLURAL:$1|profil|profiluri}}',
 	'user-personal-info-title' => 'Informaţii personale',
 	'user-personal-info-real-name' => 'Nume real',
@@ -6922,17 +6948,25 @@ $messages['ro'] = array(
 	'user-recent-activity-edit' => 'Modificat pagina',
 	'user-recent-activity-vote' => 'Votat pentru pagina',
 	'user-recent-activity-comment' => 'Comentat pe pagina',
+	'user-recent-activity-gift-sent' => 'A trimis un cadou lui',
 	'user-recent-activity-gift-rec' => 'A primit un cadou de la',
 	'user-recent-activity-friend' => 'Este acum prieten cu',
+	'user-recent-activity-foe' => 'Este acum inamic cu',
+	'user-recent-activity-user-message' => 'A trimis un mesaj lui',
 	'user-recent-system-gift' => 'A primit un premiu',
+	'user-profile-update-saved' => 'Profilul dvs. a fost salvat',
+	'user-profile-update-log-section' => 'schimbat secţiune',
+	'user-profile-update-profile' => 'profil',
 	'user-profile-default-country' => 'Statele Unite',
 	'user-profile-points' => '$1 {{PLURAL:$1|punct|puncte}}',
 	'user-profile-section-personal' => 'Informaţii personale',
 	'user-profile-section-interests' => 'Alte informaţii',
 	'user-profile-section-picture' => 'Avatar',
 	'user-profile-section-preferences' => 'Preferinţe',
+	'user-profile-personal-info' => 'Info',
 	'user-profile-personal-name' => 'Nume',
 	'user-profile-personal-email' => 'E-mail',
+	'user-profile-personal-confirmemail' => 'Confirmă adresa de email',
 	'user-profile-personal-location' => 'Locaţie',
 	'user-profile-personal-city' => 'Oraş',
 	'user-profile-personal-country' => 'Ţară',
@@ -6955,12 +6989,24 @@ $messages['ro'] = array(
 	'user-profile-interests-books' => 'Cărţi',
 	'user-profile-interests-magazines' => 'Reviste',
 	'user-profile-interests-videogames' => 'Jocuri video',
+	'user-profile-interests-eats' => 'Mănâncă',
+	'user-profile-interests-foodsnacks' => 'Mâncare şi snackuri',
+	'user-profile-interests-drinks' => 'Băuturi',
+	'user-profile-preferences-emails' => 'Notificări e-mail',
+	'user-profile-update-button' => 'Actualizare',
 	'user-profile-tidbits-favathlete' => 'Atlet favorit şi de ce',
 	'user-profile-sports-sport' => 'Sport',
+	'user-profile-sports-notloggedintitle' => 'Ups!',
+	'user-profile-picture-yourpicture' => 'Imaginea dumneavoastră',
 	'user-profile-picture-large' => 'Mare',
+	'user-profile-picture-medlarge' => 'Mediu - Mare',
 	'user-profile-picture-medium' => 'Mediu',
 	'user-profile-picture-small' => 'Mic',
+	'user-profile-picture-choosepicture' => 'Alegeţi-vă imaginea',
+	'user-profile-goback' => 'Mergeţi înapoi',
 	'user-profile-userlevels-link' => 'Niveluri de utilizator',
+	'user-page-link' => 'Pagină de utilizator',
+	'user-wiki-link' => 'Wiki pagină de utilizator',
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-delete-entry' => 'şters avatarul utilizatorului $1',
 );

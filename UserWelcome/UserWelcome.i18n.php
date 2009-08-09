@@ -328,6 +328,8 @@ $messages['et'] = array(
 	'mp-welcome-edit' => 'Toimeta',
 	'mp-welcome-points' => '$1 punkti',
 	'mp-welcome-logged-in' => 'Tere $1',
+	'mp-requests-title' => 'Päringud',
+	'mp-requests-message' => 'Sulle on järgnevad päringud.',
 	'mp-request-new-message' => 'uus sõnum',
 );
 
@@ -594,13 +596,16 @@ $messages['km'] = array(
 );
 
 /** Korean (한국어)
+ * @author Klutzy
  * @author Yknok29
  */
 $messages['ko'] = array(
-	'mp-userlevels-link' => '사용자 수준',
+	'userwelcome-desc' => '<tt>&lt;welcomeUser&gt;</tt> 태그를 통해 로그인한 사용자에게 개별적인 정보를 보여주는 기능',
+	'mp-userlevels-link' => '사용자 레벨',
+	'mp-welcome-upload' => '올리기',
 	'mp-welcome-edit' => '편집',
 	'mp-requests-title' => '요청',
-	'mp-request-new-message' => '새로운 메시지',
+	'mp-request-new-message' => '새 메시지',
 );
 
 /** Ripoarisch (Ripoarisch)
@@ -786,6 +791,7 @@ $messages['os'] = array(
  */
 $messages['pdc'] = array(
 	'mp-welcome-edit' => 'Ennere',
+	'mp-welcome-logged-in' => 'Heiya $1',
 );
 
 /** Polish (Polski)
@@ -865,11 +871,15 @@ $messages['pt-br'] = array(
 );
 
 /** Romanian (Română)
+ * @author Firilacroco
  * @author KlaudiuMihaila
  */
 $messages['ro'] = array(
 	'mp-userlevels-link' => 'Niveluri de utilizatori',
-	'mp-welcome-points' => '$1 puncte',
+	'mp-welcome-upload' => 'Încărcare',
+	'mp-welcome-edit' => 'Modificare',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|punct|puncte}}',
+	'mp-welcome-logged-in' => 'Bună ziua $1',
 	'mp-requests-title' => 'Cereri',
 	'mp-requests-message' => 'Aveţi următoarele cereri.',
 	'mp-request-new-message' => 'mesaj nou',

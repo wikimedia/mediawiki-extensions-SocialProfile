@@ -190,7 +190,7 @@ $messages['ar'] = array(
 	'g-give-all-message-title' => 'إضافة رسالة',
 	'g-give-all-title' => 'إعطاء هدية إلى $1',
 	'g-give-enter-friend-title' => 'لو كنت تعرف اسم المستخدم، اكتبه بالأسفل',
-	'g-given' => 'هذه الهدية تم إعطاؤها $1 {{PLURAL:$1|مرة|مرة}}',
+	'g-given' => 'أعطيت هذه الهدية {{PLURAL:$1||مرة واحدة|مرتين|$1 مرات|$1 مرة}}',
 	'g-give-list-friends-title' => 'اختر من قائمة أصدقائك',
 	'g-give-list-select' => 'اختر صديقا',
 	'g-give-separator' => 'أو',
@@ -2242,8 +2242,11 @@ $messages['os'] = array(
  * @author Xqt
  */
 $messages['pdc'] = array(
+	'g-give-separator' => 'odder',
 	'g-main-page' => 'Haaptblatt',
+	'g-new' => 'nei',
 	'g-next' => 'Neegscht',
+	'g-small' => 'glee',
 );
 
 /** Polish (Polski)
@@ -2539,9 +2542,21 @@ e altere suas preferências para desabilitar e-mails de notificação.',
 );
 
 /** Romanian (Română)
+ * @author Firilacroco
  * @author Mihai
  */
 $messages['ro'] = array(
+	'g-current-image' => 'Imagine actuală',
+	'g-gift' => 'cadou',
+	'g-gift-name' => 'numele cadoului',
+	'g-give-gift' => 'Daţi cadoul',
+	'g-give-all-message-title' => 'Adaugă un mesaj',
+	'g-give-all-title' => 'Daţi un cadou lui $1',
+	'g-give-list-select' => 'alegeţi un prieten',
+	'g-give-separator' => 'sau',
+	'g-go-back' => 'Mergeţi înapoi',
+	'g-large' => 'Mare',
+	'g-main-page' => 'Pagina principală',
 	'g-next' => 'Următorul',
 );
 
