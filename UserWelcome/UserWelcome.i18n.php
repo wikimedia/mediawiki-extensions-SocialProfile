@@ -989,6 +989,23 @@ $messages['sr-ec'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|нови пријатељ|нових пријатеља}}',
 );
 
+/** latinica (latinica)
+ * @author Michaello
+ */
+$messages['sr-el'] = array(
+	'mp-userlevels-link' => 'Korisnički nivoi',
+	'mp-welcome-upload' => 'Slanje',
+	'mp-welcome-edit' => 'Izmena',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|poen|poena}}',
+	'mp-welcome-logged-in' => 'Zdravo, $1',
+	'mp-requests-title' => 'Zahtevi',
+	'mp-request-new-message' => 'nova poruka',
+	'mp-request-new-award' => '$1 {{PLURAL:$1|nova nagrada|novih nagrada}}',
+	'mp-request-new-gift' => '$1 {{PLURAL:$1|novi poklon|novih poklona}}',
+	'mp-request-new-foe' => '$1 {{PLURAL:$1|novi neprijatelj|novih neprijatelja}}',
+	'mp-request-new-friend' => '$1 {{PLURAL:$1|novi prijatelj|novih prijatelja}}',
+);
+
 /** Seeltersk (Seeltersk)
  * @author Pyt
  */

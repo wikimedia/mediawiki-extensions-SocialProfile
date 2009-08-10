@@ -464,10 +464,21 @@ $messages['ee'] = array(
 /** Greek (Ελληνικά)
  * @author Consta
  * @author Omnipaedista
+ * @author ZaDiak
  */
 $messages['el'] = array(
+	'topusers' => 'Κορυφαίοι χρήστες',
+	'top-fans-by-points-nav-header' => 'Κορυφαίοι θαυμαστές',
+	'top-fans-by-category-nav-header' => 'Κορυφαίοι βάσει κατηγορίας',
+	'top-fans-total-points-link' => 'Συνολικοί πόντοι',
+	'top-fans-weekly-points-link' => 'Πόντοι αυτή την εβδομάδα',
+	'top-fans-monthly-points-link' => 'Πόντοι αυτό το μήνα',
 	'top-fans-points' => 'βαθμοί',
+	'top-fans-by-category-title' => 'Κορυφαίοι συνολικά $1',
 	'top-fans-bad-field-title' => 'Ωχ!',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Ψήφος|Ψήφοι}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Μηνιαία νίκη|Μηνιαίες νίκες}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Εβδομαδιαία νίκη|Εβδομαδιαίες νίκες}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Επεξεργασία|Επεξεργασίες}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Σχόλιο|Σχόλια}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Φίλος|Φίλοι}}',
@@ -1431,6 +1442,7 @@ $messages['pl'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Otrzymany prezent|Otrzymane prezenty}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Podarowany prezent|Podarowane prezenty}}',
 	'right-updatepoints' => 'Aktualizacja liczników edycji',
+	'level-advanced-to' => 'awansowany do poziomu <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Należysz teraz do grupy „$1” na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
 	'level-advance-body' => 'Witaj $1.
 

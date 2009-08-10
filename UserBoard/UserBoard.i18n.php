@@ -170,6 +170,10 @@ $messages['ar'] = array(
 	'userboard_sendbutton' => 'إرسال',
 	'userboard_loggedout' => 'يجب أن تكون <a href="$1">مُسجلًا الدخول</a> لترسل رسائل إلى المستخدمين الآخرين.',
 	'userboard_showingmessages' => 'عرض {{PLURAL:$4||الرسالة $3|الرسالتين $2-$3|الرسائل $2-$3}} من أصل {{PLURAL:$1||رسالة واحدة|رسالتين|$1 رسائل|$1 رسالة}}',
+	'userboard-time-days' => '{{PLURAL:$1||يوم واحد|يومان|$1 أيام|$1 يومًا|$1 يوم}}',
+	'userboard-time-hours' => '{{PLURAL:$1||ساعة واحد|ساعتان|$1 ساعات|$1 ساعة}}',
+	'userboard-time-minutes' => '{{PLURAL:$1||دقيقة واحدة|دقيقتان|$1 دقائق|$1 دقيقة}}',
+	'userboard-time-seconds' => '{{PLURAL:$1||ثانية واحدة|ثانيتان|$1 ثوانٍ|$1 ثانية}}',
 	'message_received_subject' => '$1 كتب على مجلسك في {{SITENAME}}',
 	'message_received_body' => 'مرحبا $1:
 
@@ -648,10 +652,13 @@ a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
 /** Greek (Ελληνικά)
  * @author Consta
  * @author Crazymadlover
+ * @author ZaDiak
  */
 $messages['el'] = array(
 	'userboard_private' => 'ιδιωτικός',
+	'userboard_public' => 'δημόσιο',
 	'userboard_messagetype' => 'Τύπος Μηνύματος',
+	'userboard_nomessages' => 'Κανένα μήνυμα.',
 	'userboard_sendbutton' => 'Αποστολή',
 );
 
@@ -2151,16 +2158,25 @@ $messages['rif'] = array(
 );
 
 /** Romanian (Română)
+ * @author Firilacroco
  * @author KlaudiuMihaila
  */
 $messages['ro'] = array(
 	'messagesenttitle' => 'Mesaje trimise',
 	'boardblastprivatenote' => 'Toate mesajele vor fi trimise ca mesaje private',
+	'boardlinkselectall' => 'Selectaţi tot',
+	'boardlinkunselectall' => 'Deselectaţi tot',
+	'boardlinkselectfriends' => 'Selectaţi prieteni',
+	'boardlinkunselectfriends' => 'Deselectaţi prieteni',
+	'boardlinkselectfoes' => 'Selectaţi inamici',
+	'boardlinkunselectfoes' => 'Deselectaţi inamici',
 	'userboard_delete' => 'Şterge',
 	'userboard_posted_ago' => 'postat acum $1',
 	'userboard_private' => 'privat',
 	'userboard_public' => 'public',
 	'userboard_messagetype' => 'Tipul mesajului',
+	'userboard_nextpage' => 'următorul',
+	'userboard_prevpage' => 'prec',
 	'userboard_nomessages' => 'Nici un mesaj.',
 	'userboard_sendbutton' => 'trimite',
 );
@@ -2336,14 +2352,43 @@ $messages['sr-ec'] = array(
 	'userboard_loggedout' => 'Морате бити <a href="$1">улоговани</a> да бисте слали поруке другим корисницима.',
 );
 
+/** latinica (latinica)
+ * @author Michaello
+ */
+$messages['sr-el'] = array(
+	'boardblaststep1' => 'Prvi korak - Napišite Vašu poruku',
+	'boardblastprivatenote' => 'Sve poruke će biti poslate kao privatne poruke',
+	'boardblaststep2' => 'Korak 2 - Naznačite kome želite da požaljete poruku',
+	'boardlinkselectall' => 'Označi sve',
+	'boardlinkunselectall' => 'Skini oznake sa svega',
+	'boardlinkselectfriends' => 'Označi prijatelje',
+	'boardlinkunselectfriends' => 'Skini oznake sa prijatelja',
+	'boardlinkselectfoes' => 'Označi neprijatelje',
+	'boardlinkunselectfoes' => 'Skini oznake sa neprijatelja',
+	'boardnofriends' => 'Nemate prijatelja kojima biste poslali poruku!',
+	'userboard_backprofile' => 'Povratak na profil od $1',
+	'userboard_backyourprofile' => 'Povratak na Vaš profil',
+	'userboard_sendmessage' => 'Pošalji poruku korisniku $1',
+	'userboard_posted_ago' => 'poslato pre $1',
+	'userboard_private' => 'privatan',
+	'userboard_public' => 'javan',
+	'userboard_messagetype' => 'Tip poruke',
+	'userboard_nextpage' => 'sledeće',
+	'userboard_prevpage' => 'prethodno',
+	'userboard_nomessages' => 'Nema poruka.',
+	'userboard_sendbutton' => 'pošalji',
+	'userboard_loggedout' => 'Morate biti <a href="$1">ulogovani</a> da biste slali poruke drugim korisnicima.',
+);
+
 /** Swedish (Svenska)
+ * @author Fluff
  * @author Jon Harald Søby
  * @author M.M.S.
  * @author Najami
  */
 $messages['sv'] = array(
 	'boardblastlogintitle' => 'Du måste vara inloggad för att sända meddelanden',
-	'boardblastlogintext' => 'Du måste vara inloggad för att sända meddelanden. Klicka <a href="index.php?title=Special:UserLogin">här för att logga in</a>',
+	'boardblastlogintext' => 'Du måste vara inloggad för att skicka meddelanden. Klicka <a href="index.php?title=Special:UserLogin">här för att logga in</a>',
 	'messagesenttitle' => 'Sända meddelanden',
 	'boardblasttitle' => 'Sänd meddelande',
 	'boardblaststep1' => 'Steg 1 - Skriv ditt meddelande',
@@ -2382,6 +2427,11 @@ $messages['sv'] = array(
 	'userboard_sendbutton' => 'sänd',
 	'userboard_loggedout' => 'Du måste vara <a href="$1">inloggad</a> för att skicka meddelanden till andra användare.',
 	'userboard_showingmessages' => 'Visar {{PLURAL:$4|meddelande $3|$2-$3}} av {{PLURAL:$1|$1 meddelande|$1 meddelanden}}',
+	'right-userboard-delete' => 'Ta bort andras meddelanden',
+	'userboard-time-days' => '{{PLURAL:$1|en dag|$1 dagar}}',
+	'userboard-time-hours' => '{{PLURAL:$1|en timme|$1 timmar}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|en minut|$1 minuter}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|en sekund|$1 sekunder}}',
 	'message_received_subject' => '$1 har skrivit på din diskussionssida på {{SITENAME}}',
 	'message_received_body' => 'Hej, $1.
 
@@ -2393,9 +2443,9 @@ $3
 
 ---
 
-Vill du inte motta mer e-post ifrån oss?
+Vill du inte ta emot fler e-postmeddelanden från oss?
 
-Klicka $4 och ändra dina inställningar för att slå av e-postbesked.',
+Klicka på $4 och ändra dina inställningar för att slå av e-postbesked.',
 );
 
 /** Telugu (తెలుగు)

@@ -425,6 +425,13 @@ $messages['sr-ec'] = array(
 	'yui-desc' => 'Скуп алата и контрола, написаних у јаваскрипту',
 );
 
+/** latinica (latinica)
+ * @author Michaello
+ */
+$messages['sr-el'] = array(
+	'yui-desc' => 'Skup alata i kontrola, napisanih u javaskriptu',
+);
+
 /** Seeltersk (Seeltersk)
  * @author Pyt
  */

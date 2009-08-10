@@ -547,6 +547,7 @@ a změń nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
 /** Greek (Ελληνικά)
  * @author Consta
  * @author Crazymadlover
+ * @author ZaDiak
  */
 $messages['el'] = array(
 	'ga-addnew' => '+ Προσθήκη νέου δώρου',
@@ -559,6 +560,7 @@ $messages['el'] = array(
 	'ga-gifttype' => 'τύπος δώρου',
 	'ga-large' => 'Μεγάλος',
 	'ga-medium' => 'Μέσος',
+	'ga-new' => 'Νέο',
 	'ga-small' => 'Μικρός',
 );
 
@@ -1217,6 +1219,18 @@ $5
 	'right-awardsmanage' => '賞の編集・新規作成',
 );
 
+/** Khmer (ភាសាខ្មែរ)
+ * @author វ័ណថារិទ្ធ
+ */
+$messages['km'] = array(
+	'ga-large' => 'ធំ​',
+	'ga-medium' => 'មធ្យម​',
+	'ga-new' => 'ថ្មី​',
+	'ga-next' => 'បន្ទាប់​',
+	'ga-previous' => 'មុន​',
+	'ga-small' => 'តូច​',
+);
+
 /** Ripoarisch (Ripoarisch)
  * @author Purodha
  */
@@ -1761,6 +1775,16 @@ e altere suas preferências para desabilitar e-mails de notificação.',
 	'right-awardsmanage' => 'Crie novos e edite prêmios existentes',
 );
 
+/** Romanian (Română)
+ * @author Firilacroco
+ */
+$messages['ro'] = array(
+	'ga-choosefile' => 'Alegeţi fişier:',
+	'ga-create-gift' => 'Creaţi un cadou',
+	'ga-currentimage' => 'Imaginii curente',
+	'ga-gift' => 'cadou',
+);
+
 /** Russian (Русский)
  * @author Ferrer
  * @author Innv
@@ -1937,6 +1961,46 @@ $messages['sr-ec'] = array(
 	'ga-title' => 'Награде $1',
 	'ga-uploadsuccess' => 'Слање успешно',
 	'ga-viewlist' => 'Погледај списак поклона',
+);
+
+/** latinica (latinica)
+ * @author Michaello
+ */
+$messages['sr-el'] = array(
+	'ga-addnew' => '+ Dodajte novi poklon',
+	'ga-back-edit-gift' => 'Povratak na izmenu ovog poklona',
+	'ga-back-gift-list' => 'Povratak na spisak poklona',
+	'ga-back-link' => '<a href="$1">< Povratak na profil $2</a>',
+	'ga-choosefile' => 'Izaberite fajl:',
+	'ga-count' => '$1 ima $2 {{PLURAL:$2|nagradu|nagrada}}.',
+	'ga-create-gift' => 'Napravite poklon',
+	'ga-created' => 'Poklon je napravljen',
+	'ga-currentimage' => 'Trenutna slika',
+	'ga-error-message-invalid-link' => 'Link koji ste naveli je neispravan.',
+	'ga-error-message-no-user' => 'Korisnik koga pokušavate da vidite ne postoji.',
+	'ga-file-instructions' => 'Vaša slika mora biti u jpeg/jpg, png ili gif (neanimiranom) formatu, i mora biti veličine ispod 100kB.',
+	'ga-gift' => 'poklon',
+	'ga-gift-given-count' => 'Ovaj poklon je bio poklonjen $1 {{PLURAL:$1|put|puta}}',
+	'ga-gift-title' => '"$2" od $1',
+	'ga-giftdesc' => 'opis poklona',
+	'ga-giftimage' => 'slika poklona',
+	'ga-giftname' => 'naziv poklona',
+	'ga-gifttype' => 'vrsta poklona',
+	'ga-goback' => 'Nazad',
+	'ga-imagesbelow' => 'Ispod se nalaze vaše slike koje će biti korišćene na sajtu',
+	'ga-img' => 'dodaj/zameni sliku',
+	'ga-large' => 'Veliko',
+	'ga-medium' => 'Srednje',
+	'ga-mediumlarge' => 'Srednje-veliko',
+	'ga-new' => 'Novo',
+	'ga-next' => 'Sledeće',
+	'ga-previous' => 'Prethodno',
+	'ga-recent-recipients-award' => 'Drugi skoriji primaoci ove nagrade',
+	'ga-saved' => 'Poklon je snimljen',
+	'ga-small' => 'Malo',
+	'ga-title' => 'Nagrade $1',
+	'ga-uploadsuccess' => 'Slanje uspešno',
+	'ga-viewlist' => 'Pogledaj spisak poklona',
 );
 
 /** Telugu (తెలుగు)

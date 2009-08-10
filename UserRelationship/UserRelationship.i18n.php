@@ -1397,19 +1397,36 @@ a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
 /** Greek (Ελληνικά)
  * @author Consta
  * @author Omnipaedista
+ * @author ZaDiak
  */
 $messages['el'] = array(
+	'viewrelationships' => 'Εμφάνιση σχέσης',
+	'viewrelationshiprequests' => 'Εμφάνιση των προτάσεων για σχέση',
+	'ur-already-submitted' => 'Η πρόταση σας έχει αποσταλλεί',
 	'ur-error-page-title' => 'Ωχ!',
 	'ur-main-page' => 'Κύρια σελίδα',
+	'ur-your-profile' => 'Το προφίλ σας',
+	'ur-add-friend' => 'Προσθήκη σαν φίλο',
+	'ur-add-foe' => 'Προσθήκη σαν εχθρό',
+	'ur-add-personal-message' => 'Προσθήκη ενός προσωπικού μηνύματος',
+	'ur-remove-relationship-friend' => 'Αφαίρεση ως φίλου',
+	'ur-remove-relationship-foe' => 'Αφαίρεση ως εχθρού',
 	'ur-give-gift' => 'Δώστε ένα Δώρο',
 	'ur-previous' => 'προηγ',
 	'ur-next' => 'επομ',
 	'ur-remove' => 'Αφαίρεση',
 	'ur-cancel' => 'Ακύρωση',
 	'ur-login' => 'Σύνδεση',
+	'ur-add-button-foe' => 'Προσθήκη ως εχθρού',
+	'ur-add-button-friend' => 'Προσθήκη ως φίλου',
+	'ur-add-sent-title-foe' => 'Στείλαμε την πρόταση εχθρού σας στον $1!',
+	'ur-add-sent-title-friend' => 'Στείλαμε την πρόταση φίλου σας στον $1!',
 	'ur-add-error-message-pending-request-title' => 'Υπομονή!',
+	'ur-requests-title' => 'Προτάσεις σχέσης',
 	'ur-accept' => 'Αποδοχή',
 	'ur-reject' => 'Απόρριψη',
+	'ur-title-foe' => 'Η λίστα εχθρών του $1',
+	'ur-title-friend' => 'Η λίστα φίλων του $1',
 );
 
 /** Esperanto (Esperanto)
@@ -5454,6 +5471,58 @@ $messages['sr-ec'] = array(
 	'ur-requests-reject-message-foe' => 'Нисте прихватили $1 као непријатеља.',
 	'ur-title-foe' => 'Списак непријатеља за $1',
 	'ur-title-friend' => 'Списак пријатеља за $1',
+);
+
+/** latinica (latinica)
+ * @author Michaello
+ */
+$messages['sr-el'] = array(
+	'ur-main-page' => 'Glavna strana',
+	'ur-your-profile' => 'Vaš profil',
+	'ur-add-friend' => 'Dodaj kao prijatelja',
+	'ur-add-foe' => 'Dodaj kao neprijatelja',
+	'ur-remove-relationship-friend' => 'Obriši kao prijatelja',
+	'ur-remove-relationship-foe' => 'Obriši kao neprijatelja',
+	'ur-give-gift' => 'Pošalji poklon',
+	'ur-previous' => 'prethodni',
+	'ur-next' => 'sledeći',
+	'ur-remove-relationship-title-foe' => 'Da li želite da obrišete $1 sa Vašeg spiska neprijatelja?',
+	'ur-remove-relationship-title-confirm-foe' => 'Obrisali ste $1 sa Vašeg spiska neprijatelja',
+	'ur-remove-relationship-title-friend' => 'Da li želite da obrišete $1 sa Vašeg spiska prijatelja?',
+	'ur-remove-relationship-title-confirm-friend' => 'Obrisali ste $1 sa Vašeg spiska prijatelja',
+	'ur-remove-relationship-message-foe' => 'Zatražili ste da se $1 obriše sa Vašeg spiska neprijatelja, pritisnite "$2" da biste to potvrdili.',
+	'ur-remove-relationship-message-confirm-foe' => 'Uspešno ste obrisali $1 sa Vašeg spiska neprijatelja.',
+	'ur-remove-relationship-message-friend' => 'Zatražili ste da se $1 obriše sa Vašeg spiska prijatelja, pritisnite "$2" da biste to potvrdili.',
+	'ur-remove-relationship-message-confirm-friend' => 'Uspešno ste obrisali $1 sa Vašeg spiska prijatelja.',
+	'ur-remove-error-message-no-relationship' => 'Niste ni u kakvom odnosu sa $1.',
+	'ur-remove-error-message-remove-yourself' => 'Ne možete da obrišete sebe.',
+	'ur-remove-error-not-loggedin-foe' => 'Morate biti ulogovani da biste uklonili nekoga sa Vašeg spiska neprijatelja.',
+	'ur-remove-error-not-loggedin-friend' => 'Morate biti ulogovani da biste nekoga obrisali sa spiska prijatelja.',
+	'ur-remove' => 'Ukloni',
+	'ur-cancel' => 'Poništi',
+	'ur-login' => 'Logovanje',
+	'ur-add-title-foe' => 'Da li želite da označite $1 kao Vašeg neprijatelja?',
+	'ur-add-title-friend' => 'Da li želite da označite $1 kao Vašeg prijatelja?',
+	'ur-add-button-foe' => 'Označi kao neprijatelja',
+	'ur-add-button-friend' => 'Označi kao prijatelja',
+	'ur-add-error-message-no-user' => 'Korisnik koga pokušavate da označite ne postoji.',
+	'ur-add-error-message-blocked' => 'Trenutno ste blokirani i ne možete da dodajete prijatelje i neprijatelje.',
+	'ur-add-error-message-yourself' => 'Ne možete da označite sebe kao svog prijatelja ili neprijatelja.',
+	'ur-add-error-message-existing-relationship-foe' => '$1 je već označen kao Vaš neprijatelj.',
+	'ur-add-error-message-existing-relationship-friend' => '$1 je već označen kao Vaš prijatelj.',
+	'ur-add-error-message-pending-request-title' => 'Strpljenja!',
+	'ur-add-error-message-not-loggedin-foe' => 'Morate biti ulogovani da biste nekoga označili kao neprijatelja',
+	'ur-add-error-message-not-loggedin-friend' => 'Morate biti ulogovani da biste nekoga označili kao prijatelja',
+	'ur-requests-message-foe' => '<a href="$1">$2</a> želi da bude Vaš neprijatelj.',
+	'ur-requests-message-friend' => '<a href="$1">$2</a> želi da bude Vaš prijatelj.',
+	'ur-accept' => 'Prihvati',
+	'ur-reject' => 'Odbaci',
+	'ur-requests-added-message-foe' => '$1 je označen kao Vaš neprijatelj.',
+	'ur-requests-added-message-friend' => '$1 je označen kao Vaš prijatelj.',
+	'ur-requests-reject-message-friend' => 'Niste prihvatili $1 kao prijatelja.',
+	'ur-requests-reject-message-foe' => 'Niste prihvatili $1 kao neprijatelja.',
+	'ur-title-foe' => 'Spisak neprijatelja za $1',
+	'ur-title-friend' => 'Spisak prijatelja za $1',
 );
 
 /** Swati (SiSwati)
