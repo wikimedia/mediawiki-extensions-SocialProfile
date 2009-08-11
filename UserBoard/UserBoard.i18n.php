@@ -655,11 +655,27 @@ a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
  * @author ZaDiak
  */
 $messages['el'] = array(
+	'messagesenttitle' => 'Απεσταλμένα μηνύματα',
+	'boardblaststep1' => 'Βήμα 1 - Γράψτε το μήνυμά σας',
+	'boardlinkselectall' => 'Επιλογή όλων',
+	'boardlinkunselectall' => 'Αποεπιλογή όλων',
+	'boardlinkselectfriends' => 'Επιλογή φίλων',
+	'boardlinkunselectfriends' => 'Αποεπιλογή φίλων',
+	'boardlinkselectfoes' => 'Επιλογή εχθρών',
+	'boardlinkunselectfoes' => 'Αποεπιλογή εχθρών',
+	'messagesentsuccess' => 'Το μήνυμά σας στάλθηκε επιτυχώς',
+	'userboard_delete' => 'Διαγραφή',
 	'userboard_private' => 'ιδιωτικός',
 	'userboard_public' => 'δημόσιο',
 	'userboard_messagetype' => 'Τύπος Μηνύματος',
+	'userboard_nextpage' => 'επομ',
+	'userboard_prevpage' => 'προηγ',
 	'userboard_nomessages' => 'Κανένα μήνυμα.',
 	'userboard_sendbutton' => 'Αποστολή',
+	'userboard-time-days' => '{{PLURAL:$1|μια μέρα|$1 μέρες}}',
+	'userboard-time-hours' => '{{PLURAL:$1|μια ώρα|$1 ώρες}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|ένα λεπτό|$1 λεπτά}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|ένα δευτερόλεπτο|$1 δευτερόλεπτα}}',
 );
 
 /** Esperanto (Esperanto)
@@ -1316,13 +1332,48 @@ e disactiva in tu preferentias le notificationes per e-mail.',
 
 /** Indonesian (Bahasa Indonesia)
  * @author Bennylin
+ * @author Kandar
  */
 $messages['id'] = array(
+	'messagesenttitle' => 'Surat terkirim',
+	'boardblaststep1' => 'Tahap 1 - Tulis surat anda',
+	'boardblastprivatenote' => 'Semua surat akan dikirim sebagai surat pribadi',
+	'boardblaststep2' => 'Tahap 2 - Pilih siapa yang akan anda kirimi surat',
+	'boardlinkselectall' => 'Pilih semua',
+	'boardlinkunselectall' => 'Jangan pilih semua',
+	'boardlinkselectfriends' => 'Pilih teman',
+	'boardnofriends' => 'Anda tidak punya teman yang bisa dikirimi surat!',
+	'messagesentsuccess' => 'Surat anda sudah terkirim',
+	'userboard' => 'Papan pengguna',
+	'userboard_board-to-board' => 'Antarpapan',
 	'userboard_delete' => 'Hapus',
+	'userboard_noexist' => 'Pengguna yang anda coba lihat tidak ada.',
+	'userboard_yourboard' => 'Papan anda',
+	'userboard_owner' => 'Papan $1',
+	'userboard_yourboardwith' => 'Antarpapan anda dengan $1',
+	'userboard_otherboardwith' => 'Antarpapan antara $1 dan $2',
+	'userboard_backprofile' => 'Kembali ke profil $1',
+	'userboard_backyourprofile' => 'Kembali ke profil anda',
+	'userboard_boardtoboard' => 'Antarpapan',
+	'userboard_confirmdelete' => 'Anda yakin ingin menghapus surat ini?',
+	'userboard_sendmessage' => 'Kirim surat ke $1',
+	'userboard_myboard' => 'Papan saya',
+	'userboard_posted_ago' => 'dikirim $1 yang lalu',
 	'userboard_private' => 'pribadi',
+	'userboard_public' => 'publik',
+	'userboard_messagetype' => 'Tipe surat',
 	'userboard_nextpage' => 'selanjutnya',
 	'userboard_prevpage' => 'sebelumnya',
+	'userboard_nomessages' => 'Tak ada surat.',
 	'userboard_sendbutton' => 'kirim',
+	'userboard_loggedout' => 'Anda harus <a href="$1">masuk log</a> untuk bisa mengirim surat ke pengguna lain.',
+	'userboard_showingmessages' => 'Menampilkan {{PLURAL:$4|surat $3|surat $2-$3}} dari {{PLURAL:$1|$1 surat|$1 surat}}',
+	'right-userboard-delete' => 'Hapus pesan orang lain di papan',
+	'userboard-time-days' => '{{PLURAL:$1|sehari|$1 hari}}',
+	'userboard-time-hours' => '{{PLURAL:$1|sejam|$1 jam}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|semenit|$1 menit}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|sedetik|$1 detik}}',
+	'message_received_subject' => '$1 menulis pada papan anda di {{SITENAME}}',
 );
 
 /** Ido (Ido)
@@ -2179,6 +2230,10 @@ $messages['ro'] = array(
 	'userboard_prevpage' => 'prec',
 	'userboard_nomessages' => 'Nici un mesaj.',
 	'userboard_sendbutton' => 'trimite',
+	'userboard-time-days' => '{{PLURAL:$1|o zi|$1 zile}}',
+	'userboard-time-hours' => '{{PLURAL:$1|o oră|$1 ore}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|un minut|$1 minute}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|o secundă|$1 secunde}}',
 );
 
 /** Tarandíne (Tarandíne)

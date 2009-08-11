@@ -264,6 +264,7 @@ $messages['ee'] = array(
 /** Greek (Ελληνικά)
  * @author Consta
  * @author Omnipaedista
+ * @author ZaDiak
  */
 $messages['el'] = array(
 	'mp-userlevels-link' => 'Επίπεδα χρήστη',
@@ -274,6 +275,10 @@ $messages['el'] = array(
 	'mp-requests-title' => 'Αιτήματα',
 	'mp-requests-message' => 'Έχετε τα ακόλουθα αιτήματα.',
 	'mp-request-new-message' => 'νέα μηνύματα',
+	'mp-request-new-award' => '$1 {{PLURAL:$1|νέο βραβείο|νέα βραβεία}}',
+	'mp-request-new-gift' => '$1 {{PLURAL:$1|νέο δώρο|νέα δώρα}}',
+	'mp-request-new-foe' => '$1 {{PLURAL:$1|νέος εχθρός|νέοι εχθροί}}',
+	'mp-request-new-friend' => '$1 {{PLURAL:$1|νέος φίλος|νέοι φίλοι}}',
 );
 
 /** Esperanto (Esperanto)

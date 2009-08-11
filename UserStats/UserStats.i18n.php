@@ -467,6 +467,9 @@ $messages['ee'] = array(
  * @author ZaDiak
  */
 $messages['el'] = array(
+	'user-stats-alltime-title' => 'Περισσότεροι πόντοι όλων των εποχών',
+	'user-stats-weekly-title' => 'Περισσότεροι πόντοι αυτή την εβδομάδα',
+	'user-stats-monthly-title' => 'Περισσότεροι πόντοι αυτό το μήνα',
 	'topusers' => 'Κορυφαίοι χρήστες',
 	'top-fans-by-points-nav-header' => 'Κορυφαίοι θαυμαστές',
 	'top-fans-by-category-nav-header' => 'Κορυφαίοι βάσει κατηγορίας',
@@ -476,13 +479,21 @@ $messages['el'] = array(
 	'top-fans-points' => 'βαθμοί',
 	'top-fans-by-category-title' => 'Κορυφαίοι συνολικά $1',
 	'top-fans-bad-field-title' => 'Ωχ!',
+	'top-fans-bad-field-message' => 'Το συγκεκριμένο στατιστικό δεν υπάρχει.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Ψήφος|Ψήφοι}}',
 	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Μηνιαία νίκη|Μηνιαίες νίκες}}',
 	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Εβδομαδιαία νίκη|Εβδομαδιαίες νίκες}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Επεξεργασία|Επεξεργασίες}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Σχόλιο|Σχόλια}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Φίλος|Φίλοι}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Εχθρός|Εχθροί}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Δημοσιευμένη γνώμη|Δημοσιευμένες γνώμες}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Γνώμη|Γνώμες}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Δώρο λήφθηκε|Δώρα λήφθηκαν}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Δώρο στάλθηκε|Δώρα στάλθηκαν}}',
+	'right-updatepoints' => 'Ενημέρωση των μετρήσεων επεξεργασιών',
+	'level-advanced-to' => 'προχωρημένος στο επίπεδο <span style="font-weight:800;">$1</span>',
+	'level-advance-subject' => 'Τώρα είσαι ένας "$1" στο {{SITENAME}}!',
 );
 
 /** Esperanto (Esperanto)
@@ -1542,6 +1553,8 @@ $messages['pt-br'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Polegar para baixo dado|Polegares para baixo dados}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Presente recebido|Presentes recebidos}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Presente enviado|Presentes enviados}}',
+	'right-updatepoints' => 'Atualizar contadores de edição',
+	'level-advanced-to' => 'Avançou para o nível <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Você agora é um "$1" em {{SITENAME}}!',
 	'level-advance-body' => 'Oi $1:
 

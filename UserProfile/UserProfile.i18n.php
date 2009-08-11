@@ -2176,9 +2176,12 @@ $messages['ee'] = array(
  * @author ZaDiak
  */
 $messages['el'] = array(
+	'user-time-ago' => '$1 πριν',
 	'user-awards-title' => 'Βραβεία',
 	'user-gifts-title' => 'Δώρα',
+	'user-count-separator' => '$1 από $2',
 	'user-view-all' => 'Προβολή όλων',
+	'user-upload-image' => 'Φόρτωση αρχείου',
 	'user-edit-this' => 'Επεξεργαστείτε αυτό',
 	'user-edit-profile' => 'Επεξεργασία προφίλ',
 	'user-upload-avatar' => 'Φόρτωση εικόνας',
@@ -2195,6 +2198,10 @@ $messages['el'] = array(
 	'user-stats-edits' => '{{PLURAL:$1|Επεξεργασία|Επεξεργασίες}}',
 	'user-stats-votes' => '{{PLURAL:$1|Ψήφος|Ψήφοι}}',
 	'user-stats-comments' => '{{PLURAL:$1|Σχόλιο|Σχόλια}}',
+	'user-stats-recruits' => '{{PLURAL:$1|Νεοσύλλεκτος|Νεοσύλλεκτοι}}',
+	'user-stats-poll-votes' => '{{PLURAL:$1|Ψήφος|Ψήφοι}} δημοσκόπησης',
+	'user-stats-picture-game-votes' => 'Παιχνίδι εικόνων {{PLURAL:$1|ψήφός|ψήφοι}}',
+	'user-stats-quiz-points' => '{{PLURAL:$1|Πόντος|Πόντοι}} κουίζ',
 	'other-info-title' => 'Άλλες πληροφορίες',
 	'user-friends-title' => 'Φίλοι',
 	'user-foes-title' => 'Εχθροί',
@@ -2204,10 +2211,18 @@ $messages['el'] = array(
 	'other-info-books' => 'Βιβλία',
 	'other-info-video-games' => 'Ηλεκτρονικά Παιχνίδια',
 	'other-info-magazines' => 'Περιοδικά',
+	'other-info-snacks' => 'Πρόχειρα φαγητά',
 	'other-info-drinks' => 'Ποτά',
 	'other-no-info' => 'Όχι άλλες πληροφορίες',
+	'custom-info-title' => 'Συνήθεις πληροφορίες',
+	'custom-info-field1' => 'Συνήθεις 1',
+	'custom-info-field2' => 'Συνήθεις 2',
+	'custom-info-field3' => 'Συνήθεις 3',
+	'custom-info-field4' => 'Συνήθεις 4',
+	'custom-no-info' => 'Όχι συνήθεις πληροφορίες',
 	'profile-updated-personal' => 'Ενημέρωση του προφίλ σας',
 	'profile-not-provided' => 'Δεν παρέχεται',
+	'populate-user-profile-done' => 'Προστέθηκαν $1 προφίλ',
 	'user-board-title' => 'Επιτροπή',
 	'user-personal-info-title' => 'Προσωπικές πληροφορίες',
 	'user-no-personal-info' => 'Όχι προσωπικές πληροφορίες',
@@ -2226,9 +2241,19 @@ $messages['el'] = array(
 	'user-recent-activity-comment' => 'Σχολίασε τη σελίδα',
 	'user-recent-activity-gift-sent' => 'Έστειλε ένα δώρο σε',
 	'user-recent-activity-gift-rec' => 'Παρέλαβε ένα δώρο από',
+	'user-recent-activity-friend' => 'Είναι τώρα φίλος με',
+	'user-recent-activity-foe' => 'Είναι τώρα εχθρός με',
+	'user-recent-activity-user-message' => 'Έστειλε ένα μήνυμα σε',
+	'user-recent-activity-network-update' => 'Έχει δημοσιεύσει μια σκέψη',
+	'user-recent-system-gift' => 'Παρέλαβε ένα βραβείο',
+	'user-profile-update-saved' => 'Το προφίλ σας έχει αποθηκευθεί',
+	'user-profile-update-log-section' => 'άλλαξε τμήμα',
 	'user-profile-update-profile' => 'προφίλ',
 	'user-profile-default-country' => 'Ηνωμένες Πολιτείες',
+	'user-profile-points' => '$1 {{PLURAL:$1|πόντος|πόντοι}}',
 	'user-profile-section-personal' => 'Προσωπικές πληροφορίες',
+	'user-profile-section-sportsteams' => 'Ενημέρωση δικτύων',
+	'user-profile-section-custom' => 'Συνήθεις πληροφορίες',
 	'user-profile-section-interests' => 'Άλλες πληροφορίες',
 	'user-profile-section-picture' => 'Ἀβαταρ',
 	'user-profile-section-preferences' => 'Προτιμήσεις',
@@ -2239,6 +2264,7 @@ $messages['el'] = array(
 	'user-profile-personal-location' => 'Τοποθεσία',
 	'user-profile-personal-city' => 'Πόλη',
 	'user-profile-personal-country' => 'Χώρα',
+	'user-profile-personal-hometown' => 'Γενέτειρα',
 	'user-profile-personal-birthday' => 'Γενέθλια',
 	'user-profile-personal-birthdate' => 'Ημερομηνία (MM/DD)',
 	'user-profile-personal-aboutme' => 'Για Εμένα',
@@ -2247,6 +2273,7 @@ $messages['el'] = array(
 	'user-profile-personal-education' => 'Εκπαίδευση',
 	'user-profile-personal-schools' => 'Σχολεία',
 	'user-profile-personal-places' => 'Μέρη',
+	'user-profile-personal-placeslived' => 'Μέρη που έχω ζήσει',
 	'user-profile-personal-web' => 'Ιστός',
 	'user-profile-personal-websites' => 'Ιστοσελίδες',
 	'user-profile-interests-entertainment' => 'Ψυχαγωγία',
@@ -2257,21 +2284,59 @@ $messages['el'] = array(
 	'user-profile-interests-magazines' => 'Περιοδικά',
 	'user-profile-interests-videogames' => 'Ηλεκτρονικά Παιχνίδια',
 	'user-profile-interests-eats' => 'Φαγητά',
+	'user-profile-interests-foodsnacks' => 'Φαγητό & πρόχειρα γεύματα',
 	'user-profile-interests-drinks' => 'Ποτά',
+	'user-profile-preferences-emails' => 'E-mail Ειδοποιήσεις',
+	'user-profile-preferences-emails-personalmessage' => 'Όταν στέλνει ένα προσωπικό μήνυμα',
+	'user-profile-preferences-emails-friendfoe' => 'Όταν ένας άλλος χρήστης σε κάνει φίλο ή εχθρό του',
+	'user-profile-preferences-emails-gift' => 'Όταν λαμβάνεις ένα δώρο',
+	'user-profile-preferences-emails-level' => 'Όταν προχωράς ένα επίπεδο',
+	'user-profile-preferences-emails-weekly' => 'Λήψη εβδομαδιαίων email ενημερώσεων',
 	'user-profile-update-button' => 'Ενημέρωση',
+	'user-profile-tidbits-favmoment' => 'Αγαπημένη αθλητική στιγμή',
+	'user-profile-tidbits-worstmoment' => 'Χειρότερη αθληρική στιγμή',
+	'user-profile-tidbits-favathlete' => 'Αγαπημένος αθλητής και γιατί',
+	'user-profile-tidbits-leastfavathlete' => 'Λιγότερο αγαπημένος αθλητής και γιατί',
 	'user-profile-sports-sport' => 'Άθλημα',
+	'user-profile-sports-title' => 'Επεξεργαστείτε τις αγαπημένες σας ομάδες και αθλήματα',
 	'user-profile-sports-notloggedintitle' => 'Ούπς!',
+	'user-profile-sports-notloggedintext' => 'Πρέπει να είστε συνδεδεμένος για να επεξεργαστείτε το προφίλ σας.',
+	'user-profile-sports-teamremoved' => 'Η ομάδα σας έχει αφαιρεθεί',
+	'user-profile-sports-teamsaved' => 'Οι ομάδες έχουν αποθηκευτεί',
+	'user-profile-sports-addmore' => 'Προσθήκη περισσότερων αθλημάτων/ομάδων',
+	'user-profile-picture-title' => 'Φορτώστε την εικόνα σας',
+	'user-profile-picture-yourpicture' => 'Η εικόνα σας',
 	'user-profile-picture-large' => 'Μεγάλος',
+	'user-profile-picture-medlarge' => 'Μεσαίο - Μεγάλο',
 	'user-profile-picture-medium' => 'Μέσος',
 	'user-profile-picture-small' => 'Μικρός',
 	'user-profile-picture-uploaddifferent' => 'Ανεβάστε μια διαφορετική εικόνα',
 	'user-profile-picture-currentimage' => 'Τρέχουσα εικόνα',
+	'user-profile-picture-choosepicture' => 'Επιλογή της εικόνας σας',
+	'user-profile-picture-picsize' => 'Η εικόνα σας πρέπει να είναι μια jpeg, png, ή gif και πρέπει να είναι λιγότερο από 100kb σε μέγεθος.',
 	'user-profile-goback' => 'Πήγαινε πίσω',
+	'user-profile-userlevels-link' => 'Επίπεδα χρήστη',
+	'user-no-images' => 'Δεν φορτώθηκε καμιά εικόνα',
 	'edit-profile-title' => 'Επεξεργασία προφίλ',
 	'user-page-link' => 'Σελίδα χρήστη',
 	'user-social-profile-link' => 'Κοινωνικό προφίλ',
+	'user-wiki-link' => 'Σελίδα χρήστη βίκι',
+	'user-type-toggle-old' => 'Χρησιμοποίησε τη βίκι σελίδα χρήστη',
+	'user-type-toggle-new' => 'Χρησιμοποίησε την κοινωνική σελίδα χρήστη',
+	'removeavatar' => 'Αφαίρεση εικόνας',
 	'givegift' => 'Δώσε ένα δώρο',
+	'viewgifts' => 'Προβολή δώρων',
+	'viewsystemgifts' => 'Προβολή βραβείων',
+	'avatarupload-removeavatar' => 'Αφαίρεση εικόνας',
+	'avatarupload-currentavatar' => 'Η τωρινή εικόνα του $1',
+	'avatarupload-removesuccess' => 'Η εικόνα αφαιρέθηκε επιτυχώς',
+	'avatarupload-removeanother' => 'Κι άλλη αφαίρεση',
+	'profilelogpage' => 'Αρχείο καταγραφής επεξεργασιών προφίλ χρηστών',
+	'profilelogpagetext' => 'Αυτή είναι μια καταγραφή επεξεργασιών των προφίλ χρηστών',
+	'avatarlogpage' => 'Αρχείο καταγραφής φορτώσεων εικόνων χρήστη',
 	'user-profile-picture-log' => 'εικόνα',
+	'user-profile-picture-log-entry' => 'φορτώθηκε νέα εικόνα χρήστη',
+	'user-profile-picture-log-delete-entry' => 'διαγράφηκε το άβαταρ του χρήστη $1',
 );
 
 /** Esperanto (Esperanto)
@@ -7086,11 +7151,15 @@ $messages['ro'] = array(
 	'user-profile-picture-medlarge' => 'Mediu - Mare',
 	'user-profile-picture-medium' => 'Mediu',
 	'user-profile-picture-small' => 'Mic',
+	'user-profile-picture-currentimage' => 'Imagine curentă',
 	'user-profile-picture-choosepicture' => 'Alegeţi-vă imaginea',
 	'user-profile-goback' => 'Mergeţi înapoi',
 	'user-profile-userlevels-link' => 'Niveluri de utilizator',
 	'user-page-link' => 'Pagină de utilizator',
+	'user-social-profile-link' => 'Profil social',
 	'user-wiki-link' => 'Wiki pagină de utilizator',
+	'removeavatar' => 'Şterge avatar',
+	'avatarupload-removeavatar' => 'Elimină avatar',
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-delete-entry' => 'şters avatarul utilizatorului $1',
 );
@@ -8816,35 +8885,90 @@ $messages['yi'] = array(
 	'user-profile-section-preferences' => 'פרעפֿערענצן',
 );
 
+/** Chinese (China) (‪中文(中国大陆)‬)
+ * @author Wrightbus
+ */
+$messages['zh-cn'] = array(
+	'user-upload-avatar' => '上载头像',
+	'user-stats-title' => '统计',
+	'other-info-movies' => '电影',
+	'user-personal-info-occupation' => '职业',
+	'user-recent-activity-gift-sent' => '已传送礼物给',
+	'user-recent-activity-user-message' => '传送信息给',
+	'user-profile-picture-log' => '头像',
+);
+
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Gzdavidwong
+ * @author Wrightbus
  */
 $messages['zh-hans'] = array(
+	'user-upload-avatar' => '上载头像',
+	'user-stats-title' => '统计',
+	'other-info-movies' => '电影',
 	'other-info-music' => '音乐',
 	'other-info-books' => '书籍',
 	'user-personal-info-real-name' => '真实姓名',
 	'user-personal-info-birthday' => '生日',
+	'user-personal-info-occupation' => '职业',
+	'user-recent-activity-gift-sent' => '已传送礼物给',
+	'user-recent-activity-user-message' => '传送信息给',
 	'user-profile-default-country' => '美国',
 	'user-profile-personal-birthday' => '生日',
 	'user-profile-personal-aboutme' => '关于我',
 	'user-profile-interests-movies' => '电影',
 	'user-profile-interests-music' => '音乐',
 	'user-profile-interests-books' => '书籍',
+	'user-profile-picture-log' => '头像',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
+	'user-upload-image' => '上載圖像',
+	'user-upload-avatar' => '上載頭像',
+	'user-stats-title' => '統計',
+	'other-info-movies' => '電影',
 	'other-info-music' => '音樂',
 	'other-info-books' => '書籍',
 	'user-personal-info-real-name' => '真實姓名',
 	'user-personal-info-birthday' => '生日',
+	'user-personal-info-occupation' => '職業',
+	'user-recent-activity-gift-sent' => '已傳送禮物給',
+	'user-recent-activity-user-message' => '傳送訊息給',
 	'user-profile-default-country' => '美國',
 	'user-profile-personal-birthday' => '生日',
 	'user-profile-personal-aboutme' => '關於我',
 	'user-profile-interests-movies' => '電影',
 	'user-profile-interests-music' => '音樂',
 	'user-profile-interests-books' => '書籍',
+	'user-profile-picture-log' => '頭像',
+);
+
+/** Chinese (Hong Kong) (‪中文(香港)‬)
+ * @author Wrightbus
+ */
+$messages['zh-hk'] = array(
+	'user-upload-avatar' => '上載頭像',
+	'user-stats-title' => '統計',
+	'other-info-movies' => '電影',
+	'user-personal-info-occupation' => '職業',
+	'user-recent-activity-gift-sent' => '已傳送禮物給',
+	'user-recent-activity-user-message' => '傳送訊息給',
+	'user-profile-picture-log' => '頭像',
+);
+
+/** Chinese (Taiwan) (‪中文(台灣)‬)
+ * @author Wrightbus
+ */
+$messages['zh-tw'] = array(
+	'user-upload-avatar' => '上載頭像',
+	'user-stats-title' => '統計',
+	'other-info-movies' => '電影',
+	'user-personal-info-occupation' => '職業',
+	'user-recent-activity-gift-sent' => '已傳送禮物給',
+	'user-recent-activity-user-message' => '傳送訊息給',
+	'user-profile-picture-log' => '頭像',
 );
 

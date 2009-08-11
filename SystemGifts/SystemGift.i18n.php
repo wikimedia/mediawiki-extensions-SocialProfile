@@ -547,6 +547,7 @@ a změń nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
 /** Greek (Ελληνικά)
  * @author Consta
  * @author Crazymadlover
+ * @author Omnipaedista
  * @author ZaDiak
  */
 $messages['el'] = array(
@@ -558,10 +559,16 @@ $messages['el'] = array(
 	'ga-giftimage' => 'εικόνα δώρου',
 	'ga-giftname' => 'όνομα δώρου',
 	'ga-gifttype' => 'τύπος δώρου',
+	'ga-goback' => 'Πήγαινε πίσω',
+	'ga-img' => 'προσθήκη/αντικατάσταση εικόνας',
 	'ga-large' => 'Μεγάλος',
 	'ga-medium' => 'Μέσος',
+	'ga-mediumlarge' => 'Μεσαίο-μεγάλο',
 	'ga-new' => 'Νέο',
+	'ga-next' => 'Επομ',
+	'ga-previous' => 'Προηγ',
 	'ga-small' => 'Μικρός',
+	'ga-uploadsuccess' => 'Επιτυχής φόρτωση',
 );
 
 /** Spanish (Español)
@@ -1144,13 +1151,38 @@ e disactiva in tu preferentias le notificationes per e-mail.',
 
 /** Indonesian (Bahasa Indonesia)
  * @author Bennylin
+ * @author Kandar
  */
 $messages['id'] = array(
+	'ga-addnew' => '+ Tambahkan hadiah baru',
+	'ga-back-edit-gift' => 'Kembali untuk menyunting hadiah ini',
+	'ga-back-gift-list' => 'Kembali ke daftar hadiah',
+	'ga-back-link' => '<a href="$1">< Kembali ke profil $2</a>',
+	'ga-choosefile' => 'Pilih berkas:',
+	'ga-count' => '$1 memiliki $2 {{PLURAL:$2|penghargaan|penghargaan}}.',
+	'ga-create-gift' => 'Buat hadiah',
+	'ga-created' => 'Hadiah sudah dibuat',
+	'ga-currentimage' => 'Gambar saat ini',
+	'ga-error-message-invalid-link' => 'Pranala yang anda masukkan tidak benar.',
+	'ga-error-message-no-user' => 'Pengguna yang anda coba buka tidak ada.',
+	'ga-error-title' => 'Aduh, anda salah belok!',
+	'ga-file-instructions' => 'Gambar anda harus jpeg, png atau gif (tanpa animasi), dan ukurannya tidak boleh lebih dari 100kb.',
+	'ga-gift' => 'hadiah',
+	'ga-gift-given-count' => 'Hadiah ini telah diberikan $1 {{PLURAL:$1|kali|kali}}',
+	'ga-giftdesc' => 'penjelasan hadiah',
+	'ga-giftimage' => 'gambar hadiah',
+	'ga-giftname' => 'nama hadiah',
+	'ga-gifttype' => 'tipe hadiah',
+	'ga-goback' => 'Kembali',
+	'ga-imagesbelow' => 'Di bawah ini adalah gambar-gambar yang akan digunakan di situs',
+	'ga-img' => 'tambahkan/ganti gambar',
 	'ga-large' => 'Besar',
 	'ga-medium' => 'Menengah',
+	'ga-mediumlarge' => 'Sedang-besar',
 	'ga-new' => 'Baru',
 	'ga-next' => 'Selanjutnya',
 	'ga-previous' => 'Sebelumnya',
+	'ga-saved' => 'Hadiah sudah disimpan',
 	'ga-small' => 'Kecil',
 );
 
@@ -1477,6 +1509,73 @@ og endra innstillingane dine for å slå av e-postmeldingar.',
 	'right-awardsmanage' => 'Opprett nye og endra eksisterande utmerkingar',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Simny
+ */
+$messages['no'] = array(
+	'systemgiftmanager' => 'Systemgaveforvalter',
+	'ga-addnew' => '+ legg til en ny presang',
+	'ga-back-edit-gift' => 'Tilbake til endring av gaven',
+	'ga-back-gift-list' => 'Tilbake til gavelista',
+	'ga-back-link' => '<a href="$1">< tilbake til $2s profil </a>',
+	'ga-choosefile' => 'Velg fil:',
+	'ga-count' => '$1 har {{PLURAL:$2|én utmerkelse|$2 utmerkelser}}.',
+	'ga-create-gift' => 'opprett gave',
+	'ga-created' => 'Gaven har blitt opprettet',
+	'ga-currentimage' => 'Nåværende bilde',
+	'ga-error-message-invalid-link' => 'Lenken du oppga er ugyldig.',
+	'ga-error-message-no-user' => 'Brukeren du ønsker å se finnes ikke.',
+	'ga-error-title' => 'Oi, du svingte feil!',
+	'ga-file-instructions' => 'Bildet ditt må være et jpeg, png, eller gif (ingen animerte gif-filer), og ha en størrelse på mindre en 100 kb.',
+	'ga-gift' => 'gave',
+	'ga-gift-given-count' => 'Denne gaven har blitt gitt {{PLURAL:$1|én gang|$1 ganger}}',
+	'ga-gift-title' => '$1s «$2»',
+	'ga-giftdesc' => 'beskrivelse av gave',
+	'ga-giftimage' => 'gavebilde',
+	'ga-giftname' => 'gavenavn',
+	'ga-gifttype' => 'gavetype',
+	'ga-goback' => 'Gå tilbake',
+	'ga-imagesbelow' => 'Under er bildene dine som vil bli brukt på sida.',
+	'ga-img' => 'legg til/erstatt bilde',
+	'ga-large' => 'Stort',
+	'ga-medium' => 'Middels',
+	'ga-mediumlarge' => 'middels stort',
+	'ga-new' => 'Ny',
+	'ga-next' => 'Neste',
+	'ga-previous' => 'Forrige',
+	'ga-recent-recipients-award' => 'Andre som nylig mottok denne utmerkelsen',
+	'ga-saved' => 'Gaven har blitt lagret',
+	'ga-small' => 'Lite',
+	'ga-threshold' => 'terskel',
+	'ga-title' => '$1s utmerkelser',
+	'ga-uploadsuccess' => 'Opplasting vellykket',
+	'ga-viewlist' => 'Se gavelista',
+	'system_gift_received_subject' => 'Du har mottatt utmerkelsen $1 på {{SITENAME}}!',
+	'system_gift_received_body' => 'Hei $1.
+
+Du har akkurat mottatt en $2-utmerkelse på {{SITENAME}}!
+
+«$3»
+
+Klikk under for å se trofeet ditt!
+
+$4
+
+Vi håper du liker det!
+
+Takk,
+
+{{SITENAME}}-laget
+
+---
+
+Vil du ikke lenger motta e-poster fra oss?
+
+Klikk $5
+og forandre dine innstillinger for å slå av e-postbeskjeder.',
+	'right-awardsmanage' => 'Opprett nye og endre eksisterende utmerkelser',
+);
+
 /** Occitan (Occitan)
  * @author Cedric31
  */
@@ -1777,12 +1876,18 @@ e altere suas preferências para desabilitar e-mails de notificação.',
 
 /** Romanian (Română)
  * @author Firilacroco
+ * @author KlaudiuMihaila
  */
 $messages['ro'] = array(
 	'ga-choosefile' => 'Alegeţi fişier:',
 	'ga-create-gift' => 'Creaţi un cadou',
 	'ga-currentimage' => 'Imaginii curente',
+	'ga-error-message-invalid-link' => 'Legătura introdusă este incorectă.',
 	'ga-gift' => 'cadou',
+	'ga-large' => 'Mare',
+	'ga-medium' => 'Mediu',
+	'ga-mediumlarge' => 'Mediu-mare',
+	'ga-small' => 'Mic',
 );
 
 /** Russian (Русский)

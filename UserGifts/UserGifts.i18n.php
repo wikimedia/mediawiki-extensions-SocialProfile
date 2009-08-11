@@ -828,22 +828,46 @@ a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
  * @author ZaDiak
  */
 $messages['el'] = array(
+	'giftmanager' => 'Διαχειριστής δώρων',
+	'giftmanager-addgift' => '+ Προσθήκη νέου δώρου',
+	'giftmanager-access' => 'πρόσβαση δώρου',
+	'giftmanager-description' => 'περιγραφή δώρου',
+	'giftmanager-giftimage' => 'εικόνα δώρου',
+	'giftmanager-image' => 'προσθήκη/αντικατάσταση εικόνας',
+	'giftmanager-giftcreated' => 'Το δώρο δημιουργήθηκε',
+	'giftmanager-giftsaved' => 'Το δώρο αποθηκεύτηκε',
 	'giftmanager-public' => 'δημόσιο',
 	'giftmanager-private' => 'ιδιωτικός',
+	'giftmanager-view' => 'Προβολή λίστας δώρων',
+	'g-add-message' => 'Προσθήκη ενός μηνύματος',
+	'g-back-edit-gift' => 'Πίσω στην επεξεργασία αυτού του δώρου',
 	'g-choose-file' => 'Επιλογή αρχείου:',
 	'g-cancel' => 'Ακύρωση',
+	'g-count' => 'Ο $1 έχει $2 {{PLURAL:$2|δώρο|δώρα}}.',
+	'g-create-gift' => 'Δημιουργία δώρου',
 	'g-created-by' => 'δημιουργήθηκε από',
 	'g-current-image' => 'Τωρινή εικόνα',
+	'g-error-do-not-own' => 'Δεν σου ανήκει αυτό το δώρο.',
 	'g-gift' => 'δώρο',
 	'g-gift-name' => 'όνομα δώρου',
 	'g-give-gift' => 'Δώστε δώρο',
 	'g-give-all-message-title' => 'Προσθήκη ενός μηνύματος',
+	'g-give-list-select' => 'επιλέξτε έναν φίλο',
 	'g-give-separator' => 'ή',
+	'g-go-back' => 'Πήγαινε πίσω',
 	'g-large' => 'Μεγάλος',
 	'g-main-page' => 'Κύρια σελίδα',
 	'g-medium' => 'Μέσος',
 	'g-new' => 'νέο',
+	'g-next' => 'Επομ',
+	'g-previous' => 'Προηγ',
+	'g-remove' => 'Αφαίρεση',
+	'g-remove-gift' => 'Αφαίρεση αυτού του δώρου',
+	'g-remove-title' => 'Διαγραφή "$1";',
+	'g-send-gift' => 'Αποστολή δώρου',
+	'g-select-a-friend' => 'επιλέξτε έναν φίλο',
 	'g-small' => 'Μικρός',
+	'g-uploadsuccess' => 'Επιτυχής φόρτωση',
 	'g-your-profile' => 'Το προφίλ σας',
 );
 
@@ -953,9 +977,22 @@ y cambia tus configuraciones para deshabilitar notificaciones por correo electr�
 );
 
 /** Estonian (Eesti)
+ * @author Avjoska
  * @author Silvar
  */
 $messages['et'] = array(
+	'giftmanager-public' => 'avalik',
+	'giftmanager-private' => 'privaatne',
+	'g-add-message' => 'Lisa teade',
+	'g-error-message-to-yourself' => 'Endale ei saa kingitust teha.',
+	'g-gift' => 'kingitus',
+	'g-gift-name' => 'kingituse nimi',
+	'g-give-gift' => 'Anna kingitus',
+	'g-give-all' => 'Tahad anda kasutajale $1 kingituse?
+Kliki lihtsalt ühel kingitustest ja kliki "Saada kingitus".
+Nii lihtne see ongi.',
+	'g-give-list-select' => 'vali sõber',
+	'g-give-separator' => 'või',
 	'g-main-page' => 'Esileht',
 );
 
@@ -1003,12 +1040,12 @@ $messages['fi'] = array(
 	'giftmanager-access' => 'lahjan tyyppi',
 	'giftmanager-description' => 'lahjan kuvaus',
 	'giftmanager-giftimage' => 'lahjan kuva',
-	'giftmanager-image' => 'lisää/korvaa kuva',
+	'giftmanager-image' => 'lisää tai korvaa kuva',
 	'giftmanager-giftcreated' => 'Lahja on luotu',
 	'giftmanager-giftsaved' => 'Lahja on tallennettu',
 	'giftmanager-public' => 'julkinen',
 	'giftmanager-private' => 'yksityinen',
-	'giftmanager-view' => 'Katso lahjalista',
+	'giftmanager-view' => 'Näytä lahjalista',
 	'g-add-message' => 'Lisää viesti',
 	'g-back-edit-gift' => 'Takaisin tämän lahjan muokkaamiseen',
 	'g-back-gift-list' => 'Takaisin lahjalistaan',
@@ -1017,10 +1054,10 @@ $messages['fi'] = array(
 	'g-cancel' => 'Peruuta',
 	'g-count' => 'Käyttäjällä $1 on $2 {{PLURAL:$2|lahja|lahjaa}}.',
 	'g-create-gift' => 'Luo lahja',
-	'g-created-by' => 'luoja',
-	'g-current-image' => 'Tämänhetkinen kuva',
+	'g-created-by' => 'tehnyt',
+	'g-current-image' => 'Nykyinen kuva',
 	'g-delete-message' => 'Oletko varma, että haluat poistaa lahjan "$1"? Tämä poistaa sen myös käyttäjiltä, jotka ovat saattaneet saada sen.',
-	'g-description-title' => 'Käyttäjän $1 lahja "$2"',
+	'g-description-title' => 'Käyttäjän $1 lahja ”$2”',
 	'g-error-do-not-own' => 'Et omista tätä lahjaa.',
 	'g-error-message-blocked' => 'Olet tällä hetkellä muokkauseston alaisena etkä voi antaa lahjoja',
 	'g-error-message-invalid-link' => 'Antamasi linkki ei kelpaa.',
@@ -1033,7 +1070,9 @@ $messages['fi'] = array(
 	'g-gift' => 'lahja',
 	'g-gift-name' => 'lahjan nimi',
 	'g-give-gift' => 'Anna lahja',
-	'g-give-all' => 'Haluatko antaa käyttäjälle $1 lahjan? Napsauta vain yhtä lahjoista alempana ja napsauta "Lähetä lahja." Se on niin helppoa.',
+	'g-give-all' => 'Haluatko antaa käyttäjälle $1 lahjan?
+Napsauta vain yhtä lahjoista alempana ja napsauta ”Lähetä lahja”.
+Se on helppoa.',
 	'g-give-all-message-title' => 'Lisää viesti',
 	'g-give-all-title' => 'Anna lahja käyttäjälle $1',
 	'g-give-enter-friend-title' => 'Jos tiedät käyttäjän nimen, kirjoita se alapuolelle',
@@ -1043,7 +1082,7 @@ $messages['fi'] = array(
 	'g-give-separator' => 'tai',
 	'g-give-no-user-message' => 'Lahjat ja palkinnot ovat loistava tapa huomioida ystäviäsi!',
 	'g-give-no-user-title' => 'Kenelle haluaisit antaa lahjan?',
-	'g-give-to-user-title' => 'Lähetä lahja "$1" käyttäjälle $2',
+	'g-give-to-user-title' => 'Lähetä lahja ”$1” käyttäjälle $2',
 	'g-give-to-user-message' => 'Haluatko antaa käyttäjälle $1 <a href="$2">erilaisen lahjan</a>?',
 	'g-go-back' => 'Palaa takaisin',
 	'g-imagesbelow' => 'Alapuolella ovat kuvasi, joita käytetään sivustolla',
@@ -1051,17 +1090,17 @@ $messages['fi'] = array(
 	'g-list-title' => 'Käyttäjän $1 lahjalista',
 	'g-main-page' => 'Etusivu',
 	'g-medium' => 'Keskikokoinen',
-	'g-mediumlarge' => 'Keskikokoinen - suuri',
+	'g-mediumlarge' => 'Keskikokoinen – suuri',
 	'g-new' => 'uusi',
 	'g-next' => 'Seuraava',
 	'g-previous' => 'Edell.',
 	'g-remove' => 'Poista',
 	'g-remove-gift' => 'Poista tämä lahja',
-	'g-remove-message' => 'Oletko varma, että haluat poistaa lahjan "$1"?',
+	'g-remove-message' => 'Oletko varma, että haluat poistaa lahjan ”$1”?',
 	'g-recent-recipients' => 'Muut tämän lahjan tuoreet saajat',
-	'g-remove-success-title' => 'Olet onnistuneesti poistanut lahjan "$1"',
+	'g-remove-success-title' => 'Olet onnistuneesti poistanut lahjan ”$1”',
 	'g-remove-success-message' => 'Lahja ”$1” on poistettu.',
-	'g-remove-title' => 'Poista "$1"?',
+	'g-remove-title' => 'Poista ”$1”?',
 	'g-send-gift' => 'Lähetä lahja',
 	'g-select-a-friend' => 'valitse ystävä',
 	'g-sent-title' => 'Olet lähettänyt lahjan käyttäjälle $1',
@@ -1069,9 +1108,9 @@ $messages['fi'] = array(
 	'g-small' => 'Pieni',
 	'g-to-another' => 'Anna jollekulle muulle',
 	'g-uploadsuccess' => 'Tallentaminen onnistui',
-	'g-viewgiftlist' => 'Katso lahjalista',
+	'g-viewgiftlist' => 'Näytä lahjalista',
 	'g-your-profile' => 'Profiilisi',
-	'gift_received_subject' => '$1 on lähettänyt sinulle $2-lahjan {{GRAMMAR:inessive|{{SITENAME}}}}!',
+	'gift_received_subject' => '$1 on lähettänyt sinulle lahjan $2 {{GRAMMAR:inessive|{{SITENAME}}}}!',
 	'gift_received_body' => 'Hei $1:
 
 $2 juuri lähetti sinulle $3-lahjan {{GRAMMAR:inessive|{{SITENAME}}}}.
@@ -1093,7 +1132,7 @@ Hei, etkö halua enää saada sähköposteja meiltä?
 
 Napsauta $5
 ja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.',
-	'right-giftadmin' => 'Luoda uusia ja muokata olemassaolevia lahjoja',
+	'right-giftadmin' => 'Luoda uusia ja muokata olemassa olevia lahjoja',
 );
 
 /** French (Français)
@@ -1430,6 +1469,7 @@ $messages['he'] = array(
 	'giftmanager-public' => 'ציבורי',
 	'giftmanager-private' => 'פרטי',
 	'giftmanager-view' => 'צפייה ברשימת המתנות',
+	'g-add-message' => 'הוספת הודעה',
 	'g-back-edit-gift' => 'חזרה לעריכת מתנה זו',
 	'g-back-gift-list' => 'חזרה לרשימת המתנות',
 	'g-back-link' => 'חזרה לדף של $1 >',
@@ -1452,6 +1492,8 @@ $messages['he'] = array(
 	'g-file-instructions' => 'על תמונתכם להיות מסוג jpeg, png או gif (לא מונפש), ועליה להיות קטנה מ־100 קילובתים.',
 	'g-from' => 'מ־<a href="$1">$2</a>',
 	'g-gift' => 'מתנה',
+	'g-gift-name' => 'שם המתנה',
+	'g-give-gift' => 'הענקת מתנה',
 	'g-give-all' => 'האם אתם מעוניינים לתת ל־$1 מתנה?
 פשוט לחצו על אחת מהמתנות שלהלן ובחרו ב"שליחת מתנה".',
 	'g-give-all-message-title' => 'הוספת הודעה',
@@ -1703,17 +1745,78 @@ e cambia tu configurationes pro disactivar le notificationes in e-mail.',
 
 /** Indonesian (Bahasa Indonesia)
  * @author Bennylin
+ * @author Kandar
  */
 $messages['id'] = array(
+	'giftmanager-giftsaved' => 'Hadiah sudah disimpan',
+	'giftmanager-public' => 'publik',
 	'giftmanager-private' => 'pribadi',
+	'giftmanager-view' => 'Lihat daftar hadiah',
+	'g-add-message' => 'Sisipkan surat',
+	'g-back-edit-gift' => 'Kembali untuk menyunting hadiah ini',
+	'g-back-gift-list' => 'Kembali ke daftar hadiah',
+	'g-back-link' => '< Kembali ke halaman $1',
+	'g-choose-file' => 'Pilih berkas:',
 	'g-cancel' => 'Batalkan',
+	'g-count' => '$1 memiliki $2 {{PLURAL:$2|hadiah|hadiah}}.',
+	'g-create-gift' => 'Buat hadiah',
+	'g-created-by' => 'dibuat oleh',
+	'g-current-image' => 'Gambar sekarang',
+	'g-delete-message' => 'Apakah anda yakin untuk menghapus hadiah "$1"?
+Karena ini juga akan mengakibatkan terhapusnya hadiah dari si penerima.',
+	'g-error-do-not-own' => 'Anda tidak memiliki hadiah ini.',
+	'g-error-message-blocked' => 'Saat ini anda sedang diblok dan tidak bisa memberi hadiah',
+	'g-error-message-invalid-link' => 'Pranala yang anda masukkan tidak benar.',
+	'g-error-message-login' => 'Anda harus masuk log untuk bisa memberi hadiah',
+	'g-error-message-no-user' => 'Pengguna yang anda coba buka tidak ada.',
+	'g-error-message-to-yourself' => 'Anda tidak bisa memberi hadiah kepada diri sendiri.',
+	'g-error-title' => 'Aduh, anda salah belok!',
+	'g-file-instructions' => 'Gambar anda harus berupa jpeg, png, atau gif (tanpa animasi), dan besarnya tidak boleh melebihi 100kb.',
+	'g-from' => 'dari <a href="$1">$2</a>',
+	'g-gift' => 'hadiah',
+	'g-gift-name' => 'nama hadiah',
+	'g-give-gift' => 'Berikan hadiah',
+	'g-give-all' => 'Ingin memberi hadiah kepada $1?
+Silakan klik salah satu hadiah di bawah ini, lalu klik "Kirim hadiah".
+Sangat mudah.',
+	'g-give-all-message-title' => 'Sisipkan surat',
+	'g-give-all-title' => 'Berikan hadiah kepada $1',
+	'g-give-enter-friend-title' => 'Jika anda tahu nama penggunanya, silakan langsung diketikkan di bawah ini',
+	'g-given' => 'Hadiah ini telah diberikan $1 {{PLURAL:$1|kali|kali}}',
+	'g-give-list-friends-title' => 'Pilih dari daftar teman anda',
+	'g-give-list-select' => 'pilih seorang teman',
+	'g-give-separator' => 'atau',
+	'g-give-no-user-title' => 'Siapa yang ingin anda beri hadiah?',
+	'g-give-to-user-title' => 'Kirim hadiah "$1" ke $2',
+	'g-give-to-user-message' => 'Ingin memberikan <a href="$2">hadiah istimewa</a> kepada $1?',
+	'g-go-back' => 'Kembali',
+	'g-imagesbelow' => 'Di bawah ini adalah gambar-gambar yang akan digunakan dalam situs',
 	'g-large' => 'Besar',
+	'g-list-title' => 'Daftar hadiah $1',
 	'g-main-page' => 'Halaman utama',
 	'g-medium' => 'Menengah',
+	'g-mediumlarge' => 'Sedang-besar',
 	'g-new' => 'baru',
 	'g-next' => 'Selanjutnya',
 	'g-previous' => 'Sebelumnya',
+	'g-remove' => 'Singkirkan',
+	'g-remove-gift' => 'Singkirkan hadiah ini',
+	'g-remove-message' => 'Anda yakin ingin menyingkirkan hadiah "$1"?',
+	'g-recent-recipients' => 'Penerima hadiah yang sama baru-baru ini',
+	'g-remove-success-title' => 'Hadiah "$1" sudah disingkirkan',
+	'g-remove-success-message' => 'Hadiah "$1" sudah disingkirkan.',
+	'g-remove-title' => 'Singkirkan "$1"?',
+	'g-send-gift' => 'Kirim hadiah',
+	'g-select-a-friend' => 'pilih teman',
+	'g-sent-title' => 'Anda telah mengirim hadiah ke $1',
+	'g-sent-message' => 'Anda telah mengirim hadiah berikut ini ke $1.',
 	'g-small' => 'Kecil',
+	'g-to-another' => 'Berikan ke orang lain',
+	'g-uploadsuccess' => 'Berhasil memuat',
+	'g-viewgiftlist' => 'Lihat daftar hadiah',
+	'g-your-profile' => 'Profil anda',
+	'gift_received_subject' => '$1 telah mengirimi anda hadiah $2 di {{SITENAME}}!',
+	'right-giftadmin' => 'Buat baru dan sunting hadiah yang sudah ada',
 );
 
 /** Japanese (日本語)
@@ -2663,9 +2766,12 @@ e altere suas preferências para desabilitar e-mails de notificação.',
 
 /** Romanian (Română)
  * @author Firilacroco
+ * @author KlaudiuMihaila
  * @author Mihai
  */
 $messages['ro'] = array(
+	'giftmanager-public' => 'public',
+	'giftmanager-private' => 'privat',
 	'g-created-by' => 'creat de',
 	'g-current-image' => 'Imagine actuală',
 	'g-error-do-not-own' => 'Nu deţineţi acest cadou.',
