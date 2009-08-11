@@ -1031,8 +1031,11 @@ $messages['got'] = array(
  */
 $messages['grc'] = array(
 	'userboard_delete' => 'Σβεννύναι',
-	'userboard_private' => 'Ἰδιωτική',
-	'userboard_nextpage' => 'ἑπόμεναι',
+	'userboard_private' => 'ἰδιωτικός',
+	'userboard_public' => 'δημόσιος',
+	'userboard_nextpage' => 'ἑπομ',
+	'userboard_prevpage' => 'προηγ',
+	'userboard_sendbutton' => 'πέμπειν',
 );
 
 /** Swiss German (Alemannisch)

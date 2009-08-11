@@ -875,7 +875,8 @@ e cambie as súas preferencias para desactivar as notificacións por correo elec
 $messages['grc'] = array(
 	'ga-gift' => 'δῶρον',
 	'ga-new' => 'Νέα',
-	'ga-next' => 'Ἑπομέναι',
+	'ga-next' => 'Ἑπομ',
+	'ga-previous' => 'Προηγ',
 );
 
 /** Swiss German (Alemannisch)
@@ -2235,5 +2236,17 @@ $messages['vi'] = array(
 	'ga-small' => 'Nhỏ',
 	'ga-title' => 'Huy chương của $1',
 	'ga-uploadsuccess' => 'Đã tải lên thành công',
+);
+
+/** Traditional Chinese (‪中文(繁體)‬)
+ * @author Wrightbus
+ */
+$messages['zh-hant'] = array(
+	'ga-giftdesc' => '禮物說明',
+	'ga-giftimage' => '禮物圖像',
+	'ga-giftname' => '禮物名稱',
+	'ga-gifttype' => '禮物種類',
+	'ga-uploadsuccess' => '上載成功',
+	'ga-viewlist' => '檢視禮物清單',
 );
 

@@ -1346,11 +1346,21 @@ e troque as súas configuracións para desactivar as notificacións por correo e
  * @author Omnipaedista
  */
 $messages['grc'] = array(
+	'giftmanager-public' => 'δημοσία',
+	'giftmanager-private' => 'ἰδιωτική',
+	'g-choose-file' => 'Ἐπιλέγειν ἀρχεῖον:',
 	'g-cancel' => 'Ἀκυροῦν',
+	'g-current-image' => 'Παροῦσα εἰκών',
 	'g-gift' => 'δῶρον',
 	'g-give-separator' => 'ἢ',
+	'g-large' => 'Εὐμέγεθες',
+	'g-main-page' => 'Κυρία δέλτος',
+	'g-medium' => 'Μέσον',
+	'g-mediumlarge' => 'Μέσον-μέγα',
 	'g-new' => 'Νέα',
-	'g-next' => 'Ἑπόμεναι',
+	'g-next' => 'Ἑπoμ',
+	'g-previous' => 'Προηγ',
+	'g-small' => 'Σμικρόν',
 );
 
 /** Swiss German (Alemannisch)
@@ -3129,7 +3139,7 @@ $messages['sr-ec'] = array(
 	'gift_received_subject' => '$1 Вам је послао/ла поклон $2 на {{SITENAME}}!',
 );
 
-/** latinica (latinica)
+/** Serbian Latin ekavian (Srpski (latinica))
  * @author Michaello
  */
 $messages['sr-el'] = array(
@@ -3154,9 +3164,9 @@ $messages['sr-el'] = array(
 	'g-create-gift' => 'Napravite poklon',
 	'g-created-by' => 'napravio/la',
 	'g-current-image' => 'Trenutna slika',
-	'g-delete-message' => 'Da li ste sigurni da želite da obrišete poklon &quot;$1&quot;?
+	'g-delete-message' => 'Da li ste sigurni da želite da obrišete poklon "$1"?
 Ovo će ga takođe obrisati od korisnika kojima ste ga poklonili.',
-	'g-description-title' => 'Poklon &quot;$2&quot;, od $1',
+	'g-description-title' => 'Poklon "$2", od $1',
 	'g-error-do-not-own' => 'Vi ne posedujete ovaj poklon.',
 	'g-error-message-blocked' => 'Trenutno ste blokirani i ne možete slati poklone',
 	'g-error-message-invalid-link' => 'Link koji ste naveli je neispravan.',
@@ -3164,12 +3174,12 @@ Ovo će ga takođe obrisati od korisnika kojima ste ga poklonili.',
 	'g-error-message-no-user' => 'Korisnik koga pokušavate da vidite ne postoji.',
 	'g-error-message-to-yourself' => 'Ne možete slati poklone sebi.',
 	'g-file-instructions' => 'Vaša slika mora biti u jpeg/jpg, png ili gif (neanimiranom) formatu, i mora biti manja od 100kB.',
-	'g-from' => 'od <a href=&quot;$1&quot;>$2</a>',
+	'g-from' => 'od <a href="$1">$2</a>',
 	'g-gift' => 'poklon',
 	'g-gift-name' => 'ime poklona',
 	'g-give-gift' => 'Pošaljite poklon',
 	'g-give-all' => 'Želite li da pošaljete $1 poklon?
-Samo izaberite neki od poklona ispod i kliknite &quot;Slanje poklona&quot;.
+Samo izaberite neki od poklona ispod i kliknite "Slanje poklona".
 I već će biti poslat.',
 	'g-give-all-message-title' => 'Dodaj poruku',
 	'g-give-all-title' => 'Pošalji poklon $1',
@@ -3350,5 +3360,15 @@ $messages['vep'] = array(
  */
 $messages['vi'] = array(
 	'g-cancel' => 'Hủy bỏ',
+);
+
+/** Traditional Chinese (‪中文(繁體)‬)
+ * @author Wrightbus
+ */
+$messages['zh-hant'] = array(
+	'g-cancel' => '取消',
+	'g-gift' => '禮物',
+	'g-give-separator' => '或',
+	'g-uploadsuccess' => '上載成功',
 );
 
