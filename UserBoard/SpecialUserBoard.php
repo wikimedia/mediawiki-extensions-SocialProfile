@@ -1,5 +1,5 @@
 <?php
-if ( ! defined( 'MEDIAWIKI' ) )
+if ( !defined( 'MEDIAWIKI' ) )
 	die();
 /**
  * Display User Board messages for a user
@@ -28,12 +28,12 @@ class SpecialViewUserBoard extends SpecialPage {
 	 * @param $params Mixed: parameter(s) passed to the page or null
 	 */
 	public function execute( $params ) {
-		global $wgUser, $wgOut, $wgRequest, $wgMemc, $wgScriptPath, $wgUserBoardScripts;
+		global $wgUser, $wgOut, $wgRequest, $wgScriptPath, $wgUserBoardScripts;
 
 		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 
 		// Add CSS
-		$wgOut->addStyle( '../..' . $wgUserBoardScripts . '/UserBoard.css' );
+		$wgOut->addExtensionStyle( $wgUserBoardScripts . '/UserBoard.css' );
 
 		$ub_messages_show = 25;
 		$user_name = $wgRequest->getVal( 'user' );
@@ -54,7 +54,8 @@ class SpecialViewUserBoard extends SpecialPage {
 		/**
 		 * If no user is set in the URL, we assume its the current user
 		 */
-		if ( !$user_name ) $user_name = $wgUser->getName();
+		if ( !$user_name )
+			$user_name = $wgUser->getName();
 		$user_id = User::idFromName( $user_name );
 		$user = Title::makeTitle( NS_USER, $user_name );
 		$user_safe = str_replace( '&', '%26', $user_name );
@@ -110,47 +111,38 @@ class SpecialViewUserBoard extends SpecialPage {
 		$output .= '<a href="' . $user->escapeFullURL() . '">&lt; ' . wfMsg( 'userboard_backprofile', $user_name ) . '</a>';
 		$output .= '</div>';
 		$output .= "<script type=\"text/javascript\">/*<![CDATA[*/
-			var _DELETE_CONFIRM = \"" . wfMsg( 'userboard_confirmdelete' ) . "\"
+			var _DELETE_CONFIRM = \"" . wfMsg( 'userboard_confirmdelete' ) . "\";
 			var posted = 0;
 			function send_message(){
-				if(\$(\"message\").value && !posted){
+				if( document.getElementById('message').value && !posted ){
 					posted = 1;
-					var url = \"index.php?action=ajax\";
-					var pars = 'rs=wfSendBoardMessage&rsargs[]=' + encodeURIComponent(\$(\"user_name_to\").value) +'&rsargs[]=' + encodeURIComponent(\$(\"message\").value) + '&rsargs[]=' + \$(\"message_type\").value + '&rsargs[]={$per_page}'
-
-					var callback = {
-						success: function(originalRequest){
+					encodedName = encodeURIComponent( document.getElementById('user_name_to').value );
+					encodedMsg = encodeURIComponent( document.getElementById('message').value );
+					sajax_request_type = 'POST';
+					sajax_do_call( 'wfSendBoardMessage', [ encodedName, encodedMsg, {$per_page} ], function( originalRequest ){
 							posted = 0;
-							if(\$(\"user_name_from\").value){ //its a board to board
-								user_1 = \$(\"user_name_from\").value
-								user_2 = \$(\"user_name_to\").value
+							if( document.getElementById('user_name_from').value ){ //its a board to board
+								user_1 = document.getElementById('user_name_from').value;
+								user_2 = document.getElementById('user_name_to').value;
 							} else {
-								user_1 = \$(\"user_name_to\").value
-								user_2 = \"\";
+								user_1 = document.getElementById('user_name_to').value;
+								user_2 = '';
 							}
-							//user_1 = escape(user_1);
-							//user_2 = escape(user_2);
-							var params = (user_2) ? '&conv=' + user_2 : '';
+							var params = ( user_2 ) ? '&conv=' + user_2 : '';
 							var url = wgScriptPath + '/index.php?title=Special:UserBoard&user=' + user_1 + params;
 							window.location = url;
 						}
-					};
-					var request = YAHOO.util.Connect.asyncRequest('POST', url, callback, pars);
-
+					);
 				}
 			}
-			function delete_message(id){
-				if( confirm( _DELETE_CONFIRM ) ){
-					var url = \"index.php?action=ajax\";
-					var pars = 'rs=wfDeleteBoardMessage&rsargs[]=' + id
-					var callback = {
-						success: function(originalRequest){
-							window.location.reload();
-						}
-					};
-					var request = YAHOO.util.Connect.asyncRequest('POST', url, callback, pars);
-				}
 
+			function delete_message( id ){
+				if( confirm( _DELETE_CONFIRM ) ){
+					sajax_request_type = 'POST';
+					sajax_do_call( 'wfDeleteBoardMessage', [ id ], function( originalRequest ){
+						window.location.reload();
+					});
+				}
 			}
 		/*]]>*/</script>";
 
@@ -246,7 +238,7 @@ class SpecialViewUserBoard extends SpecialPage {
 					<textarea name="message" id="message" cols="63" rows="4"/></textarea>
 
 					<div class="user-page-message-box-button">
-						<input type="button" value="' . wfMsg( 'userboard_sendbutton' ) . '" class="site-button" onclick="javascript:send_message();">
+						<input type="button" value="' . wfMsg( 'userboard_sendbutton' ) . '" class="site-button" onclick="javascript:send_message();" />
 					</div>
 
 				</div>';

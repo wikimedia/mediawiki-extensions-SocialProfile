@@ -34,7 +34,8 @@ var replaceSrc = '';
 var oldHtml = '';
 
 function showUploadFrame(){
-	new YAHOO.widget.Effects.Show('upload-container');
+	document.getElementById( 'upload-container' ).style['display'] = 'block';
+	document.getElementById( 'upload-container' ).style['visibility'] = 'visible';
 }
 
 function uploadError( message ){
@@ -42,16 +43,19 @@ function uploadError( message ){
 	document.getElementById('upload-frame-errors').innerHTML = message;
 	document.getElementById('imageUpload-frame').src = 'index.php?title=Special:MiniAjaxUpload&wpThumbWidth=75';
 
-	new YAHOO.widget.Effects.Show('upload-container');
+	document.getElementById( 'upload-container' ).style['display'] = 'block';
+	document.getElementById( 'upload-container' ).style['visibility'] = 'visible';
 }
 
 function textError( message ){
-	document.getElementById('upload-frame-errors').innerHTML = message;
-	new YAHOO.widget.Effects.Show('upload-frame-errors');
+	document.getElementById( 'upload-frame-errors' ).innerHTML = message;
+	document.getElementById( 'upload-frame-errors' ).style['display'] = 'block';
+	document.getElementById( 'upload-frame-errors' ).style['visibility'] = 'visible';
 }
 
 function completeImageUpload(){
-	new YAHOO.widget.Effects.Hide('upload-frame-errors');
+	document.getElementById( 'upload-frame-errors' ).style['display'] = 'none';
+	document.getElementById( 'upload-frame-errors' ).style['visibility'] = 'hidden';
 	document.getElementById('upload-frame-errors').innerHTML = '';
 	oldHtml = document.getElementById('mini-gallery-' + replaceID).innerHTML;
 
@@ -60,11 +64,12 @@ function completeImageUpload(){
 	}
 	document.getElementById('mini-gallery-0').innerHTML = '<a><img height="75" width="75" src="http://images.wikia.com/common/wikiany/images/ajax-loader-white.gif" alt="" /></a>';
 
-	//new YAHOO.widget.Effects.Hide('mini-gallery-nopics');
 	if( document.getElementById( 'no-pictures-containers' ) ) {
-		new YAHOO.widget.Effects.Hide( 'no-pictures-containers' );
+		document.getElementById( 'no-pictures-containers' ).style['display'] = 'none';
+		document.getElementById( 'no-pictures-containers' ).style['visibility'] = 'hidden';
 	}
-	new YAHOO.widget.Effects.Show( 'pictures-containers' );
+	document.getElementById( 'pictures-containers' ).style['display'] = 'block';
+	document.getElementById( 'pictures-containers' ).style['visibility'] = 'visible';
 }
 
 function uploadComplete( imgSrc, imgName, imgDesc ){

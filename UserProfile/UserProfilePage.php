@@ -640,7 +640,7 @@ class UserProfilePage extends Article {
 					$avatar_img = '<img src="' . $wgUploadPath . '/avatars/' . $avatar->getAvatarImage() . '" alt="" border="0" />';
 
 					// Chop down username that gets displayed
-					$user_name = substr( $friend['user_name'], 0, 9 );
+					$user_name = mb_substr( $friend['user_name'], 0, 9 );
 					if ( $user_name != $friend['user_name'] ) $user_name .= '..';
 
 					$output .= "<a href=\"" . $user->escapeFullURL() . "\" title=\"{$friend["user_name"]}\" rel=\"nofollow\">
