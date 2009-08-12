@@ -402,6 +402,16 @@ $messages['fr'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|nouvel ami|nouveaux amis}}',
 );
 
+/** Franco-Provençal (Arpetan)
+ * @author Cedric31
+ */
+$messages['frp'] = array(
+	'mp-userlevels-link' => 'Nivéls de l’utilisator',
+	'mp-welcome-upload' => 'Tèlèchargiér',
+	'mp-welcome-edit' => 'Changiér',
+	'mp-requests-title' => 'Requètes',
+);
+
 /** Irish (Gaeilge)
  * @author Alison
  */
@@ -654,10 +664,11 @@ $messages['lb'] = array(
 );
 
 /** Macedonian (Македонски)
+ * @author Bjankuloski06
  * @author Brest
  */
 $messages['mk'] = array(
-	'userwelcome-desc' => 'Додава <tt>&lt;welcomeUser&gt;</tt> приврзок за приказ на специфични кориснички социјални информации на најавени корисници',
+	'userwelcome-desc' => 'Додава ознака <tt>&lt;welcomeUser&gt;</tt> за приказ на кориснички друштвени информации на најавени корисници',
 	'mp-userlevels-link' => 'Кориснички нивоа',
 	'mp-welcome-upload' => 'Подигнување',
 	'mp-welcome-edit' => 'Уреди',

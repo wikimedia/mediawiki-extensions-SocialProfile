@@ -664,7 +664,12 @@ $messages['el'] = array(
 	'boardlinkselectfoes' => 'Επιλογή εχθρών',
 	'boardlinkunselectfoes' => 'Αποεπιλογή εχθρών',
 	'messagesentsuccess' => 'Το μήνυμά σας στάλθηκε επιτυχώς',
+	'userboard' => 'Επιτροπή χρήστη',
 	'userboard_delete' => 'Διαγραφή',
+	'userboard_yourboard' => 'Η επιτροπή σας',
+	'userboard_sendmessage' => 'Αποστολή στον $1 ένα μήνυμα',
+	'userboard_myboard' => 'Η επιτροπή μου',
+	'userboard_posted_ago' => 'δημοσιεύθηκε $1 πριν',
 	'userboard_private' => 'ιδιωτικός',
 	'userboard_public' => 'δημόσιο',
 	'userboard_messagetype' => 'Τύπος Μηνύματος',
@@ -1485,6 +1490,7 @@ $messages['jv'] = array(
  * @author Lovekhmer
  * @author Thearith
  * @author គីមស៊្រុន
+ * @author វ័ណថារិទ្ធ
  */
 $messages['km'] = array(
 	'messagesenttitle' => 'សារបានផ្ញើរួចហើយ',
@@ -1513,6 +1519,10 @@ $messages['km'] = array(
 	'userboard_nomessages' => 'មិនមានសារទេ។',
 	'userboard_sendbutton' => 'ផ្ញើ',
 	'userboard_loggedout' => 'ដើម្បីបញ្ជូនសារទៅកាន់អ្នកប្រើប្រាស់ផ្សេងៗទៀតបាន អ្នកចាំបាច់ត្រូវតែបាន<a href="$1">ឡុកអ៊ីនចូល</a>។',
+	'userboard-time-days' => '{{PLURAL:$1|មួយថ្ងៃ​|$1 ថ្ងៃ​}}',
+	'userboard-time-hours' => '{{PLURAL:$1|មួយម៉ោង​|$1 ម៉ោង​}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|មួយ​នាទី​|$1 នាទី​}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|មួយ​វិនាទី|$1 វិនាទី}}',
 );
 
 /** Krio (Krio)
@@ -2692,6 +2702,12 @@ $messages['zh-hans'] = array(
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
+	'boardlinkselectall' => '選擇全部',
+	'boardlinkselectfriends' => '選擇朋友',
+	'boardlinkselectfoes' => '選擇仇敵',
 	'userboard_delete' => '刪除',
+	'userboard_posted_ago' => '在$1前張貼',
+	'userboard_nomessages' => '沒有信息。',
+	'userboard_sendbutton' => '傳送',
 );
 

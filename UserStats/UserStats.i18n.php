@@ -485,10 +485,15 @@ $messages['el'] = array(
 	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Εβδομαδιαία νίκη|Εβδομαδιαίες νίκες}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Επεξεργασία|Επεξεργασίες}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Σχόλιο|Σχόλια}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Παραπομπή|Παραπομπές}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Φίλος|Φίλοι}}',
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|Εχθρός|Εχθροί}}',
 	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Δημοσιευμένη γνώμη|Δημοσιευμένες γνώμες}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Γνώμη|Γνώμες}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Επιδοκιμασία|Επιδοκιμασίες}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Αποδοκιμασία|Αποδοκιμασίες}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Επιδοκιμασία που δώθηκε|Επιδοκιμασίες που δώθηκαν}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Αποδοκιμασία που δώθηκε|Αποδοκιμασίες που δώθηκαν}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Δώρο λήφθηκε|Δώρα λήφθηκαν}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Δώρο στάλθηκε|Δώρα στάλθηκαν}}',
 	'right-updatepoints' => 'Ενημέρωση των μετρήσεων επεξεργασιών',
@@ -703,6 +708,14 @@ Voulez-vous arrêter de recevoir des courriels de notre part ?
 
 Cliquez $3
 et modifiez vos paramètres en désactivant les notifications par courriel.',
+);
+
+/** Franco-Provençal (Arpetan)
+ * @author Cedric31
+ */
+$messages['frp'] = array(
+	'top-fans-points' => 'pouents',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Edicion|Edicions}}',
 );
 
 /** Galician (Galego)
@@ -1895,5 +1908,19 @@ $messages['vo'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Legivot pegetöl|Legivots pegetöl}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Legivot pesedöl|Legivots pesedöl}}',
 	'level-advance-subject' => 'Anu binol „$1“ in {{SITENAME}}!',
+);
+
+/** Traditional Chinese (‪中文(繁體)‬)
+ * @author Wrightbus
+ */
+$messages['zh-hant'] = array(
+	'top-fans-stats-edit-count' => '$1次編輯',
+	'top-fans-stats-friends-count' => '$1名朋友',
+	'top-fans-stats-foe-count' => '$1名仇敵',
+	'top-fans-stats-opinions-created' => '$1個意見',
+	'top-fans-stats-gifts-rec-count' => '已收到禮物',
+	'top-fans-stats-gifts-sent-count' => '已傳送禮物',
+	'right-updatepoints' => '更新編輯次數',
+	'level-advanced-to' => '已升至第<span style="font-weight:800;">$1</span>級',
 );
 

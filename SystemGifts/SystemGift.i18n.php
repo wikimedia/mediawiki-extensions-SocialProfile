@@ -551,10 +551,18 @@ a změń nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
  * @author ZaDiak
  */
 $messages['el'] = array(
+	'systemgiftmanager' => 'Διαχειριστής συστήματος δώρων',
 	'ga-addnew' => '+ Προσθήκη νέου δώρου',
+	'ga-back-edit-gift' => 'Πίσω στην επεξεργασία αυτού του δώρου',
+	'ga-back-gift-list' => 'Πίσω στη λίστα δώρων',
 	'ga-choosefile' => 'Επιλογή αρχείου:',
+	'ga-count' => 'Ο $1 έχει $2 {{PLURAL:$2|βραβείο|βραβεία}}.',
 	'ga-create-gift' => 'Δημιουργία δώρου',
+	'ga-created' => 'Το δώρο έχει δημιουργηθεί',
+	'ga-currentimage' => 'Τρέχουσα εικόνα',
+	'ga-error-title' => 'Ουπς, πήρες μια λάθος στροφή!',
 	'ga-gift' => 'δώρο',
+	'ga-gift-title' => '"$2" του $1',
 	'ga-giftdesc' => 'περιγραφή δώρου',
 	'ga-giftimage' => 'εικόνα δώρου',
 	'ga-giftname' => 'όνομα δώρου',
@@ -567,8 +575,15 @@ $messages['el'] = array(
 	'ga-new' => 'Νέο',
 	'ga-next' => 'Επομ',
 	'ga-previous' => 'Προηγ',
+	'ga-recent-recipients-award' => 'Άλλοι πρόσφατοι παραλήπτες του βραβείου',
+	'ga-saved' => 'Το δώρο έχει αποθηκευθεί',
 	'ga-small' => 'Μικρός',
+	'ga-threshold' => 'κατώφλι',
+	'ga-title' => 'Τα βραβεία του $1',
 	'ga-uploadsuccess' => 'Επιτυχής φόρτωση',
+	'ga-viewlist' => 'Προβολή λίστας δώρων',
+	'system_gift_received_subject' => 'Έλαβες το $1 βραβείο στο {{SITENAME}}!',
+	'right-awardsmanage' => 'Δημιουργία νέων και επεξεργασία υπάρχοντων βραβείων',
 );
 
 /** Spanish (Español)
@@ -873,10 +888,14 @@ e cambie as súas preferencias para desactivar as notificacións por correo elec
  * @author Omnipaedista
  */
 $messages['grc'] = array(
+	'ga-currentimage' => 'Παροῦσα εἰκών',
 	'ga-gift' => 'δῶρον',
+	'ga-gift-title' => '"$2" τοῦ $1',
 	'ga-new' => 'Νέα',
 	'ga-next' => 'Ἑπομ',
 	'ga-previous' => 'Προηγ',
+	'ga-threshold' => 'οὐδός',
+	'ga-title' => 'Τὰ βραβεῖα τοῦ $1',
 );
 
 /** Swiss German (Alemannisch)
@@ -1256,6 +1275,9 @@ $5
  * @author វ័ណថារិទ្ធ
  */
 $messages['km'] = array(
+	'ga-addnew' => '+ បន្ថែម​អំណោយ​ថ្មី​',
+	'ga-back-gift-list' => 'ត្រឡប់ទៅកាន់បញ្ជីអំណោយ​',
+	'ga-currentimage' => 'រូបភាពបច្ចុប្បន្ន',
 	'ga-large' => 'ធំ​',
 	'ga-medium' => 'មធ្យម​',
 	'ga-new' => 'ថ្មី​',

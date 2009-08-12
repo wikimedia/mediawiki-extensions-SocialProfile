@@ -1404,6 +1404,7 @@ $messages['el'] = array(
 	'viewrelationshiprequests' => 'Εμφάνιση των προτάσεων για σχέση',
 	'ur-already-submitted' => 'Η πρόταση σας έχει αποσταλλεί',
 	'ur-error-page-title' => 'Ωχ!',
+	'ur-error-title' => 'Ουπς, πήρες μια λάθος στροφή!',
 	'ur-main-page' => 'Κύρια σελίδα',
 	'ur-your-profile' => 'Το προφίλ σας',
 	'ur-add-friend' => 'Προσθήκη σαν φίλο',
@@ -1414,10 +1415,18 @@ $messages['el'] = array(
 	'ur-give-gift' => 'Δώστε ένα Δώρο',
 	'ur-previous' => 'προηγ',
 	'ur-next' => 'επομ',
+	'ur-remove-relationship-title-foe' => 'Θες να αφαιρέσεις τον $1 ως εχθρό σου;',
+	'ur-remove-relationship-title-confirm-foe' => 'Αφαίρεσες τον $1 ως εχθρό σου',
+	'ur-remove-relationship-title-friend' => 'Θες να αφαιρέσεις τον $1 ως φίλο σου;',
+	'ur-remove-relationship-title-confirm-friend' => 'Αφαίρεσες τον $1 ως φίλο σου',
 	'ur-remove-error-message-remove-yourself' => 'Δεν μπορείς να αφαιρέσεις τον εαυτό σου',
+	'ur-remove-error-not-loggedin-foe' => 'Πρέπει να είσαι συνδεδεμένος για να αφαιρέσεις έναν εχθρό.',
+	'ur-remove-error-not-loggedin-friend' => 'Πρέπει να είσαι συνδεδεμένος για να αφαιρέσεις έναν φίλο.',
 	'ur-remove' => 'Αφαίρεση',
 	'ur-cancel' => 'Ακύρωση',
 	'ur-login' => 'Σύνδεση',
+	'ur-add-title-foe' => 'Θες να προσθέσεις τον $1 ως εχθρό σου;',
+	'ur-add-title-friend' => 'Θέλετε να προσθέσετε τον $1 ως φίλο σας;',
 	'ur-add-button-foe' => 'Προσθήκη ως εχθρού',
 	'ur-add-button-friend' => 'Προσθήκη ως φίλου',
 	'ur-add-sent-title-foe' => 'Στείλαμε την πρόταση εχθρού σας στον $1!',
@@ -1439,6 +1448,11 @@ $messages['el'] = array(
 	'ur-title-foe' => 'Η λίστα εχθρών του $1',
 	'ur-title-friend' => 'Η λίστα φίλων του $1',
 	'friend_request_subject' => 'Ο $1 σας έχει προσθέσει σαν φίλο στο {{SITENAME}}!',
+	'foe_request_subject' => 'Είναι πόλεμος! Ο $1 σας πρόσθεσε ως εχθρό του στο {{SITENAME}}!',
+	'friend_accept_subject' => 'Ο $1 αποδέχθηκε το αίτημα φιλίας σας στο {{SITENAME}}!',
+	'foe_accept_subject' => 'Έγινε! Ο $1 αποδέχθηκε το αίτημα εχθρού σας στο {{SITENAME}}!',
+	'friend_removed_subject' => 'Ω όχι! Ο $1 σας αφαίρεσε ως φίλο από το {{SITENAME}}!',
+	'foe_removed_subject' => 'Γούχου! Ο $1 σας αφαίρεσε ως εχθρό από το {{SITENAME}}!',
 );
 
 /** Esperanto (Esperanto)
@@ -2103,6 +2117,15 @@ Hé ! Voulez-vous vous arrêter de recevoir des courriels de notre part ?
 
 Cliquez $4
 et modifiez vos préférences pour désactiver les notifications par courriel.',
+);
+
+/** Franco-Provençal (Arpetan)
+ * @author Cedric31
+ */
+$messages['frp'] = array(
+	'ur-remove' => 'Enlevar',
+	'ur-cancel' => 'Anular',
+	'ur-login' => 'Branchement',
 );
 
 /** Western Frisian (Frysk)
@@ -6162,17 +6185,51 @@ Begolös stadi flena/neflena medü yüm verätik.',
 
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Gzdavidwong
+ * @author Wrightbus
  */
 $messages['zh-hans'] = array(
 	'ur-cancel' => '取消',
 	'ur-login' => '登录',
+	'ur-accept' => '接受',
+	'ur-reject' => '拒绝',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
+	'ur-already-submitted' => '您的請求經已傳送',
+	'ur-main-page' => '主頁',
+	'ur-your-profile' => '您的個人資料',
+	'ur-backlink' => '&lt; 回到$1的個人資料',
+	'ur-relationship-count-foes' => '$1已經有$2位仇敵了。
+想要多些仇敵嗎?
+<a href="$3">邀請他們。</a>',
+	'ur-relationship-count-friends' => '$1已經有$2位朋友了。
+想要多些朋友嗎?
+<a href="$3">邀請他們。</a>',
+	'ur-add-friend' => '加入成為朋友',
+	'ur-add-foe' => '加入成為仇敵',
+	'ur-remove-relationship-friend' => '從朋友清單移除',
+	'ur-remove-relationship-foe' => '從仇敵清單移除',
+	'ur-give-gift' => '送禮物',
+	'ur-remove-relationship-title-foe' => '您要把$1從仇敵清單中移除嗎?',
+	'ur-remove-relationship-title-confirm-foe' => '您已把$1從仇敵清單中移除',
+	'ur-remove-relationship-title-friend' => '您要把$1從朋友清單中移除嗎?',
+	'ur-remove-relationship-title-confirm-friend' => '您已把$1從朋友清單中移除',
+	'ur-remove-error-message-remove-yourself' => '您不能移除自己。',
+	'ur-remove' => '移除',
 	'ur-cancel' => '取消',
 	'ur-login' => '登入',
+	'ur-add-title-foe' => '您要把$1加入成為仇敵嗎?',
+	'ur-add-title-friend' => '您要把$1加入成為朋友嗎?',
+	'ur-add-button-foe' => '加入成為仇敵',
+	'ur-add-button-friend' => '加入成為朋友',
+	'ur-accept' => '接受',
+	'ur-reject' => '拒絕',
+	'ur-title-foe' => '$1的仇敵清單',
+	'ur-title-friend' => '$1的朋友清單',
+	'friend_request_subject' => '$1已在{{SITENAME}}把您加入成為朋友！',
+	'friend_removed_subject' => '哎唷！$1已在{{SITENAME}}把您從朋友清單移除了!',
 );
 
