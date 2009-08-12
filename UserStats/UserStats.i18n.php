@@ -83,6 +83,7 @@ $messages['af'] = array(
 	'top-fans-weekly-points-link' => 'Punte die week',
 	'top-fans-monthly-points-link' => 'Punte die maand',
 	'top-fans-points' => 'punte',
+	'top-fans-bad-field-title' => 'Oeps!',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Stem|Stemme}}',
 );
 

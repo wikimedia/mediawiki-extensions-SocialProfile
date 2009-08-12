@@ -949,6 +949,15 @@ Cliquer $4
 et modifiez vos paramètres pour désactiver les notifications des courriels.',
 );
 
+/** Franco-Provençal (Arpetan)
+ * @author Cedric31
+ */
+$messages['frp'] = array(
+	'userboard_delete' => 'Suprimar',
+	'userboard_private' => 'privâ',
+	'userboard_public' => 'public',
+);
+
 /** Western Frisian (Frysk)
  * @author Snakesteuben
  */
@@ -2154,6 +2163,7 @@ e altere suas preferênciar para desabilidar e-mails de notificação.',
 
 /** Brazilian Portuguese (Português do Brasil)
  * @author Eduardo.mps
+ * @author Heldergeovane
  */
 $messages['pt-br'] = array(
 	'boardblastlogintitle' => 'Você precisa estar autenticado para enviar recados',
@@ -2197,6 +2207,11 @@ Clique <a href="index.php?title=Special:UserLogin">aqui para se autenticar</a>',
 	'userboard_sendbutton' => 'enviar',
 	'userboard_loggedout' => 'Você precida estar <a href="$1">autenticado</a> para enviar mensagens a outros usuários.',
 	'userboard_showingmessages' => 'Mostrando {{PLURAL:$4|mensagem $3|mensagens $2-$3}} de {{PLURAL:$1|$1 mensagem|$1 mensagens}}',
+	'right-userboard-delete' => 'Eliminar mensagens no mural de outros',
+	'userboard-time-days' => '{{PLURAL:$1|um dia|$1 dias}}',
+	'userboard-time-hours' => '{{PLURAL:$1|uma hora|$1 horas}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|um minuto|$1 minutos}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|um segundo|$1 segundos}}',
 	'message_received_subject' => '$1 escreveu em seu mural em {{SITENAME}}',
 	'message_received_body' => 'Oi $1:
 

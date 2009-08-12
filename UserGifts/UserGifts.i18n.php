@@ -1253,6 +1253,14 @@ et modifiez vos préférences pour désactiver les notifications par courriel.',
 	'right-giftadmin' => 'Créer ou modifier des cadeaux',
 );
 
+/** Franco-Provençal (Arpetan)
+ * @author Cedric31
+ */
+$messages['frp'] = array(
+	'giftmanager-public' => 'public',
+	'giftmanager-private' => 'privâ',
+);
+
 /** Galician (Galego)
  * @author Toliño
  */

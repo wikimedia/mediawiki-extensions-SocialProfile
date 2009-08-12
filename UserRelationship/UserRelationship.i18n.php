@@ -241,6 +241,8 @@ $messages['af'] = array(
 	'ur-remove' => 'Skrap',
 	'ur-cancel' => 'Kanselleer',
 	'ur-login' => 'Inteken',
+	'ur-accept' => 'Aanvaar',
+	'ur-reject' => 'Verwerp',
 );
 
 /** Amharic (አማርኛ)

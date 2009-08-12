@@ -3379,6 +3379,15 @@ Cliquez <a href="$1">ici</a> pour vous connecter ou alors <a href="$2">là</a> p
 	'right-avatarremove' => 'Supprimer les avatars d’un utilisateur',
 );
 
+/** Franco-Provençal (Arpetan)
+ * @author Cedric31
+ */
+$messages['frp'] = array(
+	'user-profile-personal-name' => 'Nom',
+	'user-profile-personal-birthdate' => 'Dâta (MM/JJ)',
+	'user-profile-userlevels-link' => "Nivéls de l'utilisator",
+);
+
 /** Western Frisian (Frysk)
  * @author Snakesteuben
  */

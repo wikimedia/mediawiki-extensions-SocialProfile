@@ -815,6 +815,16 @@ et modifiez vos préférences pour désactiver les notifications par courriel.',
 	'right-awardsmanage' => 'Créer et modifier les prix existants',
 );
 
+/** Franco-Provençal (Arpetan)
+ * @author Cedric31
+ */
+$messages['frp'] = array(
+	'ga-large' => 'Grant',
+	'ga-new' => 'Novél',
+	'ga-next' => 'Aprés',
+	'ga-small' => 'Pechou',
+);
+
 /** Galician (Galego)
  * @author Toliño
  */
