@@ -276,10 +276,11 @@ $messages['lt'] = array(
 );
 
 /** Macedonian (Македонски)
+ * @author Bjankuloski06
  * @author Brest
  */
 $messages['mk'] = array(
-	'yui-desc' => 'Множество на алатки и контроли, напишани во JavaScript.',
+	'yui-desc' => 'Збир алатки и контроли, напишани во JavaScript.',
 );
 
 /** Marathi (मराठी)

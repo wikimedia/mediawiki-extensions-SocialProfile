@@ -713,10 +713,11 @@ et modifiez vos paramètres en désactivant les notifications par courriel.',
 
 /** Franco-Provençal (Arpetan)
  * @author Cedric31
+ * @author ChrisPtDe
  */
 $messages['frp'] = array(
 	'top-fans-points' => 'pouents',
-	'top-fans-stats-edit-count' => '{{PLURAL:$1|Edicion|Edicions}}',
+	'top-fans-stats-edit-count' => 'changement{{PLURAL:$1||s}}',
 );
 
 /** Galician (Galego)

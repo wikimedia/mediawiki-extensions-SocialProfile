@@ -997,10 +997,14 @@ Molimo zahtjevajte prijatelje/neprijatelje preko ispravnog linka.',
 );
 
 /** Catalan (Català)
+ * @author Paucabot
  * @author SMP
  * @author Solde
  */
 $messages['ca'] = array(
+	'ur-main-page' => 'Pàgina principal',
+	'ur-your-profile' => 'El vostre perfil',
+	'ur-add-friend' => 'Afegeix com a amic',
 	'ur-remove' => 'Elimina',
 	'ur-cancel' => 'Canceŀla',
 	'ur-accept' => 'Accepta',

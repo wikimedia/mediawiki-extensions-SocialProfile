@@ -1587,6 +1587,7 @@ $messages['bs'] = array(
  * @author Solde
  */
 $messages['ca'] = array(
+	'user-time-ago' => 'Fa $1',
 	'user-upload-image' => 'Carrega imatge',
 	'user-edit-this' => 'Edita',
 	'user-edit-profile' => 'Edita perfil',
@@ -1594,6 +1595,8 @@ $messages['ca'] = array(
 	'user-watchlist' => 'Llista de seguiment',
 	'user-add-friend' => 'Afegeix com a amic',
 	'user-remove-friend' => 'Elimina com a amic',
+	'user-contributions' => 'Contribucions',
+	'user-stats-title' => 'Estadístiques',
 	'user-stats-edits' => '{{PLURAL:$1|edició|edicions}}',
 	'user-stats-votes' => '{{PLURAL:$1|vot|vots}}',
 	'user-stats-comments' => '{{PLURAL:$1|comentari|comentaris}}',
@@ -1607,6 +1610,7 @@ $messages['ca'] = array(
 	'other-info-magazines' => 'Revistes',
 	'other-info-snacks' => 'Ganyips',
 	'other-info-drinks' => 'Begudes',
+	'custom-info-title' => 'Informació personalitzada',
 	'profile-updated-personal' => 'Actualitzau el vostre perfil',
 	'user-personal-info-title' => 'Informació personal',
 	'user-personal-info-real-name' => 'Nom real',
@@ -1620,6 +1624,12 @@ $messages['ca'] = array(
 	'user-recent-activity-comment' => 'Comentat a la pàgina',
 	'user-recent-activity-gift-sent' => 'Envia un regal a',
 	'user-recent-activity-friend' => 'Ara és amic amb',
+	'user-profile-update-saved' => "S'ha desat el vostre perfil",
+	'user-profile-update-profile' => 'perfil',
+	'user-profile-default-country' => 'Estats Units',
+	'user-profile-points' => '$1 {{PLURAL:$1|punt|punts}}',
+	'user-profile-section-personal' => 'Informació personal',
+	'user-profile-section-interests' => 'Altres informacions',
 	'user-profile-section-picture' => 'Avatar',
 	'user-profile-section-preferences' => 'Preferències',
 	'user-profile-personal-info' => 'Informació',
@@ -1651,9 +1661,12 @@ $messages['ca'] = array(
 	'user-profile-interests-eats' => 'Menjades',
 	'user-profile-interests-drinks' => 'Begudes',
 	'user-profile-preferences-emails' => 'Notificacions de correu-e',
+	'user-profile-update-button' => 'Actualitza',
 	'user-profile-tidbits-favmoment' => 'Moment esportiu preferit',
 	'user-profile-tidbits-worstmoment' => 'Pitjor moment esportiu',
 	'user-profile-tidbits-favathlete' => 'Atleta preferit i perquè',
+	'user-profile-sports-sport' => 'Esport',
+	'user-profile-picture-yourpicture' => 'La vostra imatge',
 	'user-profile-picture-uploaddifferent' => 'Carrega una imatge diferent',
 	'user-page-link' => "Pàgina d'usuari",
 );
@@ -8979,11 +8992,13 @@ $messages['zh-cn'] = array(
 );
 
 /** Simplified Chinese (‪中文(简体)‬)
+ * @author Fantasticfears
  * @author Gzdavidwong
+ * @author PhiLiP
  * @author Wrightbus
  */
 $messages['zh-hans'] = array(
-	'user-upload-avatar' => '上载头像',
+	'user-upload-avatar' => '上传头像',
 	'user-stats-title' => '统计',
 	'other-info-movies' => '电影',
 	'other-info-music' => '音乐',
@@ -8992,7 +9007,7 @@ $messages['zh-hans'] = array(
 	'user-personal-info-birthday' => '生日',
 	'user-personal-info-occupation' => '职业',
 	'user-recent-activity-gift-sent' => '已传送礼物给',
-	'user-recent-activity-user-message' => '传送信息给',
+	'user-recent-activity-user-message' => '发送消息给',
 	'user-profile-default-country' => '美国',
 	'user-profile-section-picture' => '头像',
 	'user-profile-personal-email' => '电邮',

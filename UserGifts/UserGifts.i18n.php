@@ -2186,6 +2186,13 @@ $messages['li'] = array(
 	'g-created-by' => 'aangemaak door',
 );
 
+/** Macedonian (Македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'giftmanager' => 'Раководител со подароци',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  * @author Tvdm

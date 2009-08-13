@@ -1404,6 +1404,13 @@ $messages['lb'] = array(
 	'right-awardsmanage' => 'Nei Auszeechnungen uleeën a bestoender änneren',
 );
 
+/** Macedonian (Македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'systemgiftmanager' => 'Раководител со системски подароци',
+);
+
 /** Dutch (Nederlands)
  * @author GerardM
  * @author Siebrand
