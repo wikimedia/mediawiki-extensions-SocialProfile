@@ -1054,6 +1054,7 @@ $messages['da'] = array(
 
 /** German (Deutsch)
  * @author Als-Holder
+ * @author Imre
  * @author Melancholie
  * @author Revolus
  * @author Tim 'Avatar' Bartel
@@ -1091,11 +1092,11 @@ Bitte wähle die Freunde/Feinde durch den richtigen Link.',
 	'ur-remove-relationship-message-friend' => 'Du willst $1 aus deiner Freundesliste entfernen? Drücke „$2“ zum Bestätigen.',
 	'ur-remove-relationship-message-confirm-friend' => 'Du hast $1 erfolgreich aus deiner Freundesliste entfernt.',
 	'ur-remove-error-message-no-relationship' => '$1 steht in keiner Beziehung zu dir.',
-	'ur-remove-error-message-remove-yourself' => 'Du kannst dich nicht selbst enfernen.',
+	'ur-remove-error-message-remove-yourself' => 'Du kannst dich nicht selbst entfernen.',
 	'ur-remove-error-message-pending-foe-request' => 'Du hast eine ausstehende Feindschaftsanfrage von $1.',
 	'ur-remove-error-message-pending-friend-request' => 'Du hast eine ausstehende Freundschaftsanfrage von $1.',
-	'ur-remove-error-not-loggedin-foe' => 'Du musst eingeloggt sein, um einen Feind zu entfernen.',
-	'ur-remove-error-not-loggedin-friend' => 'Du musst eingeloggt sein, um einen Freund zu entfernen.',
+	'ur-remove-error-not-loggedin-foe' => 'Du musst angemeldet sein, um einen Feind zu entfernen.',
+	'ur-remove-error-not-loggedin-friend' => 'Du musst angemeldet sein, um einen Freund zu entfernen.',
 	'ur-remove' => 'Entfernen',
 	'ur-cancel' => 'Abbrechen',
 	'ur-login' => 'Anmelden',
@@ -1123,8 +1124,8 @@ Du wirst eine E-Mail bekommen, sobald $1 deine Anfrage bestätigt.',
 Wir werden $1 davon informieren, wenn du seine Anfrage bestätigst.',
 	'ur-add-error-message-pending-foe-request' => 'Du hast eine ausstehende Feindschaftsanfrage von $1.
 Wir werden $1 davon informieren, wenn du seine Anfrage bestätigst.',
-	'ur-add-error-message-not-loggedin-foe' => 'Du musst eingeloggt sein, um einen Feind hinzuzufügen',
-	'ur-add-error-message-not-loggedin-friend' => 'Du musst eingeloggt sein, um einen Freund hinzuzufügen',
+	'ur-add-error-message-not-loggedin-foe' => 'Du musst angemeldet sein, um einen Feind hinzuzufügen',
+	'ur-add-error-message-not-loggedin-friend' => 'Du musst angemeldet sein, um einen Freund hinzuzufügen',
 	'ur-requests-title' => 'Beziehungsanfrage',
 	'ur-requests-message-foe' => '<a href="$1">$2</a> möchte dein Feind sein.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> möchte dein Freund sein.',
@@ -1218,6 +1219,56 @@ Hm, du willst keine E-Mails mehr von uns bekommen?
 
 Klicke $4
 und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
+);
+
+/** German (formal address) (Deutsch (Sie-Form))
+ * @author Imre
+ * @author Umherirrender
+ */
+$messages['de-formal'] = array(
+	'ur-already-submitted' => 'Ihre Anfrage wurde gesendet',
+	'ur-your-profile' => 'Ihr Profil',
+	'ur-remove-relationship-title-confirm-friend' => 'Sie haben $1 aus Ihrer Freundesliste gelöscht',
+	'ur-remove-relationship-message-foe' => 'Sie wollen $1 aus Ihrer Feindesliste entfernen? Drücken Sie „$2“ zum Bestätigen.',
+	'ur-remove-relationship-message-confirm-foe' => 'Sie haben erfolgreich $1 aus Ihrer Feindesliste gelöscht.',
+	'ur-remove-relationship-message-friend' => 'Sie wollen $1 aus Ihrer Freundesliste entfernen? Drücken Sie „$2“ zum Bestätigen.',
+	'ur-remove-relationship-message-confirm-friend' => 'Sie haben $1 erfolgreich aus Ihrer Freundesliste entfernt.',
+	'ur-remove-error-message-no-relationship' => '$1 steht in keiner Beziehung zu Ihnen.',
+	'ur-remove-error-message-remove-yourself' => 'Sie können sich nicht selbst entfernen.',
+	'ur-remove-error-message-pending-foe-request' => 'Sie haben eine ausstehende Feindschaftsanfrage von $1.',
+	'ur-remove-error-message-pending-friend-request' => 'Sie haben eine ausstehende Freundschaftsanfrage von $1.',
+	'ur-remove-error-not-loggedin-foe' => 'Sie müssen angemeldet sein, um einen Feind zu entfernen.',
+	'ur-remove-error-not-loggedin-friend' => 'Sie müssen angemeldet sein, um einen Freund zu entfernen.',
+	'ur-add-title-foe' => 'Sie wollen $1 zu Ihrer Feindesliste hinzufügen?',
+	'ur-add-title-friend' => 'Sie wollen $1 zu Ihrer Freundesliste hinzufügen?',
+	'ur-add-message-foe' => 'Sie sind im Begriff, $1 zu Ihrer Feindesliste hinzuzufügen.
+Wir werden $1 von Ihrem Groll berichten.',
+	'ur-add-message-friend' => 'Sie sind im Begriff, $1 zu Ihrer Freundesliste hinzuzufügen.
+Wir werden eine Bestätigungen von $1 einholen.',
+	'ur-add-sent-title-foe' => 'Wir haben Ihre Feindschaftsanfrage an $1 gesendet!',
+	'ur-add-sent-title-friend' => 'Wir haben Ihre Freundschaftsanfrage an $1 gesendet!',
+	'ur-add-sent-message-foe' => 'Ihre Feindschaftsanfrage wurde an $1 zum Bestätigen weitergereicht.
+Sie werden eine E-Mail bekommen, sobald $1 Ihre Anfrage bestätigt.',
+	'ur-add-sent-message-friend' => 'Ihre Freundschaftsanfrage wurde an $1 zum Bestätigen weitergereicht.
+Sie werden eine E-Mail bekommen, sobald $1 Ihre Anfrage bestätigt.',
+	'ur-add-error-message-no-user' => 'Der Benutzer, den Sie hinzufügen möchten, existiert nicht.',
+	'ur-add-error-message-blocked' => 'Sie sind momentan gesperrt und können keine Freunde oder Feinde hinzufügen.',
+	'ur-add-error-message-yourself' => 'Sie können sich nicht selbst als Freund oder Feind hinzufügen.',
+	'ur-add-error-message-existing-relationship-foe' => 'Sie sind bereits mit $1 befeindet.',
+	'ur-add-error-message-existing-relationship-friend' => 'Sie sind bereits mit $1 befreundet.',
+	'ur-add-error-message-not-loggedin-foe' => 'Sie müssen angemeldet sein, um einen Feind hinzuzufügen',
+	'ur-add-error-message-not-loggedin-friend' => 'Sie müssen angemeldet sein, um einen Freund hinzuzufügen',
+	'ur-requests-message-foe' => '<a href="$1">$2</a> möchte Ihr Feind sein.',
+	'ur-requests-message-friend' => '<a href="$1">$2</a> möchte Ihr Freund sein.',
+	'ur-no-requests-message' => 'Sie haben keine Freund- oder Feindschaftsanfragen. Wenn Sie mehr Freunde haben möchten, <a href="$1">laden Sie sie ein!</a>',
+	'ur-requests-added-message-foe' => 'Sie haben $1 zu Ihrer Feindesliste hinzugefügt.',
+	'ur-requests-added-message-friend' => 'Sie haben $1 zu Ihrer Freundesliste hinzugefügt.',
+	'ur-requests-reject-message-friend' => 'Sie haben $1 als Ihren Freund zurückgewiesen.',
+	'ur-requests-reject-message-foe' => 'Sie haben $1 als Ihren Feind zurückgewiesen.',
+	'friend_request_subject' => '{{SITENAME}}: $1 hat Sie als Freund hinzugefügt!',
+	'foe_request_subject' => '{{SITENAME}}: Kriegserklärung! $1 hat Sie als Feind hinzugefügt!',
+	'friend_removed_subject' => '{{SITENAME}}: Oh nein! $1 hat seine Freundschaft zu Ihnen beendet!',
+	'foe_removed_subject' => '{{SITENAME}}: Hey! $1 hat seine Feindschaft zu Ihnen beendet!',
 );
 
 /** Lower Sorbian (Dolnoserbski)

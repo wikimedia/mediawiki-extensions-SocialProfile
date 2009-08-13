@@ -567,7 +567,7 @@ $messages['de'] = array(
 	'userboard-time-minutes' => '{{PLURAL:$1|eine Minute|$1 Minuten}}',
 	'userboard-time-seconds' => '{{PLURAL:$1|eine Sekunde|$1 Sekunden}}',
 	'message_received_subject' => '$1 hat auf deine {{SITENAME}}-Pinnwand geschrieben',
-	'message_received_body' => 'Hi $1:
+	'message_received_body' => 'Hallo $1,
 
 $2 hat eben auf deine {{SITENAME}}-Pinnwand geschrieben!
 
@@ -581,6 +581,38 @@ Hm, du willst keine E-Mails mehr von uns bekommen?
 
 Klicke $4
 und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
+);
+
+/** German (formal address) (Deutsch (Sie-Form))
+ * @author Imre
+ * @author Umherirrender
+ */
+$messages['de-formal'] = array(
+	'boardblastlogintitle' => 'Sie müssen angemeldet sein, um Nachrichten versenden zu können',
+	'boardblastlogintext' => 'Sie müssen <a href="index.php?title=Special:UserLogin">angemeldet</a> sein, um Nachrichten versenden zu können.',
+	'boardblaststep1' => 'Schritt 1: Schreiben Sie Ihre Nachricht',
+	'boardblaststep2' => 'Schritt 2: Wählen Sie aus, wem Sie die Nachrichte schicken wollen',
+	'boardnofriends' => 'Sie haben keine Freunde, denen Sie eine Nachricht senden könnten!',
+	'messagesentsuccess' => 'Ihre Nachricht wurde erfolgreich verschickt.',
+	'userboard_yourboard' => 'Ihre Pinnwand',
+	'userboard_yourboardwith' => 'Ihre Pinnwand-Diskussion mit $1',
+	'userboard_backyourprofile' => 'Zurück zu Ihrem Profil',
+	'userboard_loggedout' => 'Sie müssen <a href="$1">angemeldet sein</a>, um Nachrichten an andere Nutzer schicken zu können.',
+	'message_received_subject' => '$1 hat auf Ihre {{SITENAME}}-Pinnwand geschrieben',
+	'message_received_body' => 'Guten Tag $1,
+
+$2 hat eben auf Ihre {{SITENAME}}-Pinnwand geschrieben!
+
+Klicken Sie auf den folgenden Link um Ihre Pinnwand aufzurufen!
+
+$3
+
+---
+
+Hm, Sie wollen keine E-Mails mehr von uns bekommen?
+
+Klicken Sie $4
+und ändern Sie Ihre Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
 );
 
 /** Lower Sorbian (Dolnoserbski)
@@ -951,11 +983,12 @@ et modifiez vos paramètres pour désactiver les notifications des courriels.',
 
 /** Franco-Provençal (Arpetan)
  * @author Cedric31
+ * @author ChrisPtDe
  */
 $messages['frp'] = array(
 	'userboard_delete' => 'Suprimar',
 	'userboard_private' => 'privâ',
-	'userboard_public' => 'public',
+	'userboard_public' => 'publico',
 );
 
 /** Western Frisian (Frysk)

@@ -817,12 +817,13 @@ et modifiez vos préférences pour désactiver les notifications par courriel.',
 
 /** Franco-Provençal (Arpetan)
  * @author Cedric31
+ * @author ChrisPtDe
  */
 $messages['frp'] = array(
 	'ga-large' => 'Grant',
 	'ga-new' => 'Novél',
 	'ga-next' => 'Aprés',
-	'ga-small' => 'Pechou',
+	'ga-small' => 'Petiôt',
 );
 
 /** Galician (Galego)
@@ -1376,6 +1377,7 @@ $messages['lb'] = array(
 	'ga-currentimage' => 'Aktuellt Bild',
 	'ga-error-message-invalid-link' => 'De Link deen Dir uginn hutt ass net valabel.',
 	'ga-error-message-no-user' => 'De Benotzer, deen Dir kucke wëllt, gëtt et net.',
+	'ga-error-title' => 'Ups, Dir hutt e falsche Wee gewielt!',
 	'ga-file-instructions' => 'Är Bild muss e jpeg, png oder gif (keng animéiert Gifen) a muss méi kleng si wéi 100 kb.',
 	'ga-gift' => 'Cadeau',
 	'ga-gift-given-count' => 'Dëse Cadeau gouf $1 {{PLURAL:$1|mol gemaach|mol gemaach}}',
@@ -2149,6 +2151,7 @@ $messages['sr-el'] = array(
 );
 
 /** Telugu (తెలుగు)
+ * @author Kiranmayee
  * @author Veeven
  */
 $messages['te'] = array(
@@ -2156,6 +2159,7 @@ $messages['te'] = array(
 	'ga-giftname' => 'బహుమతి పేరు',
 	'ga-gifttype' => 'బహుమతి రకం',
 	'ga-goback' => 'వెనక్కి వెళ్ళు',
+	'ga-next' => 'తర్వాతి',
 	'ga-previous' => 'గత',
 );
 

@@ -574,6 +574,7 @@ $messages['ckb-arab'] = array(
 
 /** German (Deutsch)
  * @author Als-Holder
+ * @author Imre
  * @author Jorges
  * @author Purodha
  * @author Umherirrender
@@ -608,7 +609,7 @@ $messages['de'] = array(
 	'g-error-message-login' => 'Du musst dich anmelden um Geschenke zu vergeben',
 	'g-error-message-no-user' => 'Der Benutzer, den du anschauen möchtest, existiert nicht.',
 	'g-error-message-to-yourself' => 'Du kannst dir selber keine Geschenke geben.',
-	'g-error-title' => 'Ops, da ging etwas schief!',
+	'g-error-title' => 'Oops, da ging etwas schief!',
 	'g-file-instructions' => 'Das Bild muss ein „jpeg“, „png“, „gif“ (kein animiertes) sein, und eine Dateigröße kleiner als 100 kb haben.',
 	'g-from' => 'von <a href="$1">$2</a>',
 	'g-gift' => 'Geschenk',
@@ -677,6 +678,7 @@ und ändere deine Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
 );
 
 /** German (formal address) (Deutsch (Sie-Form))
+ * @author Imre
  * @author Umherirrender
  */
 $messages['de-formal'] = array(
@@ -688,6 +690,7 @@ $messages['de-formal'] = array(
 	'g-error-message-to-yourself' => 'Sie können sich selber keine Geschenke geben.',
 	'g-give-all' => 'Möchten Sie $1 ein Geschenk geben? Suchen Sie eins der folgenden Geschenke aus und klicken Sie „Geschenk senden“. Es ist ganz einfach.',
 	'g-give-enter-friend-title' => 'Falls Sie einen Benutzernamen wissen, tragen Sie ihn hier unten ein',
+	'g-give-list-friends-title' => 'Wählen Sie aus Ihrer Freundesliste',
 	'g-give-no-user-title' => 'Wem möchten Sie ein Geschenk geben?',
 	'g-give-to-user-message' => 'Möchen Sie $1 ein <a href="$2">anderes Geschenk geben</a>?',
 	'g-remove-message' => 'Sind Sie sich sicher, das Geschenk „$1“ zu entfernen?',
@@ -1255,9 +1258,10 @@ et modifiez vos préférences pour désactiver les notifications par courriel.',
 
 /** Franco-Provençal (Arpetan)
  * @author Cedric31
+ * @author ChrisPtDe
  */
 $messages['frp'] = array(
-	'giftmanager-public' => 'public',
+	'giftmanager-public' => 'publico',
 	'giftmanager-private' => 'privâ',
 );
 
@@ -1565,6 +1569,26 @@ $messages['he'] = array(
 	'g-viewgiftlist' => 'צפייה ברשימת המתנות',
 	'g-your-profile' => 'הפרופיל האישי',
 	'gift_received_subject' => 'המתנה $2 נשלחה אליך מ־$1 ב{{grammar:תחילית|{{SITENAME}}}}',
+	'gift_received_body' => 'היי $1.
+
+נשלחה אליכם מתנת $3 מ$2 ב{{grammar:תחילית|{{SITENAME}}}}.
+
+מעוניינים לקרוא את ההערה שנכתבה על ידי $2 ולצפות במתנה שלכם? לחצו על הקישור שלהלן
+
+$4
+
+אנו מקווים שתאהבו אותה!
+
+רב תודות,
+
+צוות {{SITENAME}}
+
+---
+
+היי, מעוניינים להפסיק לקבל מאיתנו הודעות בדוא"ל?
+
+לחצו על $5
+ושנו את הגדרותיכם לביטול התרעות בדוא"ל',
 	'right-giftadmin' => 'יצירת מתנות חדשות ועריכת מתנות קיימות',
 );
 
@@ -3263,15 +3287,18 @@ I već će biti poslat.',
 );
 
 /** Telugu (తెలుగు)
+ * @author Kiranmayee
  * @author Veeven
  */
 $messages['te'] = array(
 	'giftmanager-description' => 'బహుమతి వివరణ',
+	'g-cancel' => 'రద్దు',
 	'g-count' => '$1 కి $2 {{PLURAL:$2|బహుమతి ఉంది|బహుమతులు ఉన్నాయి}}.',
 	'g-gift' => 'బహుమతి',
 	'g-gift-name' => 'బహుమతి పేరు',
 	'g-give-separator' => 'లేదా',
 	'g-go-back' => 'వెనక్కి వెళ్ళు',
+	'g-next' => 'తర్వాతి',
 	'g-previous' => 'గత',
 	'g-remove' => 'తొలగించు',
 );

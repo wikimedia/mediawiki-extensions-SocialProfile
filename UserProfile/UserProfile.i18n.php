@@ -2036,6 +2036,23 @@ Klick <a href="$1">hier</a> um dich anzumelden oder klicke <a href="$2">hier</a>
 	'right-avatarremove' => 'Entferne das Avatar des Benutzers',
 );
 
+/** German (formal address) (Deutsch (Sie-Form))
+ * @author Imre
+ */
+$messages['de-formal'] = array(
+	'user-profile-personal-email-needs-auth' => '(Ihre E-Mail-Adresse muss bestätigt sein, damit Sie Benachrichtigungen erhalten können)',
+	'user-profile-sports-title' => 'Bearbeiten Sie Ihre Lieblings-Sportarten und -Teams',
+	'user-profile-sports-notloggedintext' => 'Sie müssen angemeldet sein um Ihr Profil zu bearbeiten.',
+	'user-profile-sports-teamremoved' => 'Ihr Team wurde entfernt',
+	'user-profile-sports-teamsaved' => 'Ihre Teams wurden gespeichert',
+	'user-profile-picture-title' => 'Ihr Bild hochladen',
+	'user-profile-picture-yourpicture' => 'Ihr Bild',
+	'user-profile-picture-yourpicturestext' => 'Unten sind die Bilder, die auf Ihrem Profil, Ihren Netzwerkseiten und bei Ihren Kommentaren angezeigt werden.',
+	'user-profile-picture-choosepicture' => 'Wählen Sie Ihr Bild',
+	'user-profile-picture-picsize' => 'Ihr Bild muss eine jpeg-, png- oder gif-Datei sein, die weniger als 100kb groß ist.',
+	'user-board-login-message' => 'Sie müssen <a href="$1">angemeldet sein</a>, um Nachrichten an andere Nutzer zu senden',
+);
+
 /** Lower Sorbian (Dolnoserbski)
  * @author Michawiki
  */
@@ -3394,11 +3411,12 @@ Cliquez <a href="$1">ici</a> pour vous connecter ou alors <a href="$2">là</a> p
 
 /** Franco-Provençal (Arpetan)
  * @author Cedric31
+ * @author ChrisPtDe
  */
 $messages['frp'] = array(
 	'user-profile-personal-name' => 'Nom',
 	'user-profile-personal-birthdate' => 'Dâta (MM/JJ)',
-	'user-profile-userlevels-link' => "Nivéls de l'utilisator",
+	'user-profile-userlevels-link' => 'Nivéls a l’utilisator',
 );
 
 /** Western Frisian (Frysk)
@@ -5317,6 +5335,7 @@ $messages['lb'] = array(
 	'user-recent-activity-friend' => 'Ass elo e Frënd vum',
 	'user-recent-activity-foe' => 'Ass elo e Géigner vum',
 	'user-recent-activity-user-message' => 'Message geschéckt un',
+	'user-recent-activity-network-update' => 'Huet eng Iwwerleeung verëfentlecht',
 	'user-recent-system-gift' => 'Huet e Präis kritt',
 	'user-profile-update-notloggedin-title' => 'Dir kënnt äre Profil net änneren wann dir net ageloggt sidd',
 	'user-profile-update-saved' => 'Äre Profil gouf ofgespäichert',

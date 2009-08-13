@@ -235,6 +235,13 @@ $messages['de'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|neuen Freund|neue Freunde}}',
 );
 
+/** German (formal address) (Deutsch (Sie-Form))
+ * @author Imre
+ */
+$messages['de-formal'] = array(
+	'mp-requests-message' => 'Sie haben die folgenden Anfragen.',
+);
+
 /** Lower Sorbian (Dolnoserbski)
  * @author Michawiki
  */
@@ -406,12 +413,13 @@ $messages['fr'] = array(
 
 /** Franco-Provençal (Arpetan)
  * @author Cedric31
+ * @author ChrisPtDe
  */
 $messages['frp'] = array(
-	'mp-userlevels-link' => 'Nivéls de l’utilisator',
+	'mp-userlevels-link' => 'Nivéls a l’utilisator',
 	'mp-welcome-upload' => 'Tèlèchargiér',
 	'mp-welcome-edit' => 'Changiér',
-	'mp-requests-title' => 'Requètes',
+	'mp-requests-title' => 'Requétes',
 );
 
 /** Irish (Gaeilge)
