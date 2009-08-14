@@ -79,6 +79,7 @@ and change your settings to disable email notifications.',
 
 /** Message documentation (Message documentation)
  * @author Fryed-peach
+ * @author Umherirrender
  */
 $messages['qqq'] = array(
 	'ga-large' => '{{Identical|Large}}',
@@ -87,6 +88,7 @@ $messages['qqq'] = array(
 	'ga-next' => '{{Identical|Next}}',
 	'ga-previous' => '{{Identical|Prev}}',
 	'ga-small' => '{{Identical|Small}}',
+	'right-awardsmanage' => '{{doc-right|awardsmanage}}',
 );
 
 /** Arabic (العربية)

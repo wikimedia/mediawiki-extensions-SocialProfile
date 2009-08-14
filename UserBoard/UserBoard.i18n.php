@@ -2627,9 +2627,55 @@ $messages['tg-cyrl'] = array(
 
 /** Thai (ไทย)
  * @author Octahedron80
+ * @author Woraponboonkerd
  */
 $messages['th'] = array(
+	'boardblastlogintitle' => 'คุณต้องลงชื่อเข้าใช้ก่อนที่จะกระจายข้อความ',
+	'boardblastlogintext' => 'ในการที่จะกระจายข้อความนั้น
+<br />คุณต้อง<a href="index.php?title=Special:UserLogin">ได้ลงชื่อเข้าใช้แล้ว</a>',
+	'messagesenttitle' => 'ข้อความได้ถูกส่งแล้ว',
+	'boardblasttitle' => 'กระจายข้อความ',
+	'boardblaststep1' => 'ขั้นตอนที่ 1 - เขียนข้อความ',
+	'boardblastprivatenote' => 'ข้อความทั้งหมดจะถูกส่งเป็นข้อความส่วนตัว',
+	'boardblaststep2' => 'ขั้นตอนที่ 2 - เลือกผู้ที่จะส่งข้อความไปให้',
+	'boardlinkselectall' => 'เลือกทั้งหมด',
+	'boardlinkunselectall' => 'ไม่เลือกทั้งหมด',
+	'boardlinkselectfriends' => 'เลือกเพื่อน',
+	'boardlinkunselectfriends' => 'ไม่เลือกเพื่อน',
+	'boardlinkselectfoes' => 'เลือกศัตรู',
+	'boardlinkunselectfoes' => 'ไม่เลือกศัตรู',
+	'boardsendbutton' => 'กระจายข้อความ',
+	'boardnofriends' => 'คุณไม่มีเพื่อนที่จะส่งข้อความไปหา!',
+	'messagesentsuccess' => 'ข้อความของคุณได้ถูกส่งไปเป็นที่เรียบร้อยแล้ว',
+	'userboard' => 'บอร์ดของผู้ใช้',
+	'userboard_board-to-board' => 'จากบอร์ด-ถึงบอร์ด',
 	'userboard_delete' => 'ลบ',
+	'userboard_noexist' => 'ไม่ปรากฎผู้ใช้ที่คุณกำลังพยายามดูอยู่',
+	'userboard_yourboard' => 'บอร์ดของคุณ',
+	'userboard_owner' => 'บอร์ดของ $1',
+	'userboard_yourboardwith' => 'จากบอร์ด-ถึงบอร์ดกับ $1',
+	'userboard_otherboardwith' => 'จากบอร์ด-ถึงบอร์ดของ $1 กับ $2',
+	'userboard_backprofile' => 'กลับไปยังโปรไฟล์ของ $1',
+	'userboard_backyourprofile' => 'กลับไปยังโปรไฟล์ของคุณ',
+	'userboard_boardtoboard' => 'จากบอร์ด-ถึงบอร์ด',
+	'userboard_confirmdelete' => 'คุณแน่ใจหรือไม่ที่จะลบข้อความนี้?',
+	'userboard_sendmessage' => 'ส่งข้อความให้ $1',
+	'userboard_myboard' => 'บอร์ดของฉัน',
+	'userboard_posted_ago' => 'ส่งเมื่อ $1 ที่แล้ว',
+	'userboard_private' => 'ส่วนบุคคล',
+	'userboard_public' => 'สาธารณะ',
+	'userboard_messagetype' => 'ประเภทข้อความ',
+	'userboard_nextpage' => 'ถัดไป',
+	'userboard_prevpage' => 'ก่อนหน้า',
+	'userboard_nomessages' => 'ไม่มีข้อความ',
+	'userboard_sendbutton' => 'ส่ง',
+	'userboard_loggedout' => 'คุณต้อง<a href="$1">ลงชื่อเข้าใช้</a>เพื่อส่งข้อความไปยังผู้ใช้คนอื่นๆ',
+	'userboard_showingmessages' => 'กำลังแสดง {{PLURAL:$4|ข้อความที่ $3|ข้อความที่ $2-$3}} จากทั้งหมด {{PLURAL:$1|$1 ข้อความ|$1 ข้่อความ}}',
+	'right-userboard-delete' => 'ลบข้อความของบอร์ดอื่นๆ',
+	'userboard-time-days' => '{{PLURAL:$1|1 วัน|$1 วัน}}',
+	'userboard-time-hours' => '{{PLURAL:$1|1 ชั่วโมง|$1 ชั่วโมง}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|1 นาที|$1 นาที}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|1 วินาที|$1 วินาที}}',
 );
 
 /** Tagalog (Tagalog)

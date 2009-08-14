@@ -1228,6 +1228,11 @@ und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
 $messages['de-formal'] = array(
 	'ur-already-submitted' => 'Ihre Anfrage wurde gesendet',
 	'ur-your-profile' => 'Ihr Profil',
+	'ur-add-no-user' => 'Kein Benutzer ausgewählt.
+Bitte wählen Sie die Freunde/Feinde durch den richtigen Link.',
+	'ur-remove-relationship-title-foe' => 'Sie möchten $1 aus Ihrer Feindesliste löschen?',
+	'ur-remove-relationship-title-confirm-foe' => 'Sie haben $1 aus Ihrer Feindesliste gelöscht',
+	'ur-remove-relationship-title-friend' => 'Sie möchten $1 aus Ihrer Freundesliste entfernen?',
 	'ur-remove-relationship-title-confirm-friend' => 'Sie haben $1 aus Ihrer Freundesliste gelöscht',
 	'ur-remove-relationship-message-foe' => 'Sie wollen $1 aus Ihrer Feindesliste entfernen? Drücken Sie „$2“ zum Bestätigen.',
 	'ur-remove-relationship-message-confirm-foe' => 'Sie haben erfolgreich $1 aus Ihrer Feindesliste gelöscht.',
@@ -1256,6 +1261,10 @@ Sie werden eine E-Mail bekommen, sobald $1 Ihre Anfrage bestätigt.',
 	'ur-add-error-message-yourself' => 'Sie können sich nicht selbst als Freund oder Feind hinzufügen.',
 	'ur-add-error-message-existing-relationship-foe' => 'Sie sind bereits mit $1 befeindet.',
 	'ur-add-error-message-existing-relationship-friend' => 'Sie sind bereits mit $1 befreundet.',
+	'ur-add-error-message-pending-friend-request' => 'Sie haben eine ausstehende Freundschaftsanfrage von $1.
+Wir werden $1 davon informieren, wenn Sie seine Anfrage bestätigen.',
+	'ur-add-error-message-pending-foe-request' => 'Sie haben eine ausstehende Feindschaftsanfrage von $1.
+Wir werden $1 davon informieren, wenn Sie seine Anfrage bestätigen.',
 	'ur-add-error-message-not-loggedin-foe' => 'Sie müssen angemeldet sein, um einen Feind hinzuzufügen',
 	'ur-add-error-message-not-loggedin-friend' => 'Sie müssen angemeldet sein, um einen Freund hinzuzufügen',
 	'ur-requests-message-foe' => '<a href="$1">$2</a> möchte Ihr Feind sein.',
@@ -1268,7 +1277,29 @@ Sie werden eine E-Mail bekommen, sobald $1 Ihre Anfrage bestätigt.',
 	'friend_request_subject' => '{{SITENAME}}: $1 hat Sie als Freund hinzugefügt!',
 	'foe_request_subject' => '{{SITENAME}}: Kriegserklärung! $1 hat Sie als Feind hinzugefügt!',
 	'friend_removed_subject' => '{{SITENAME}}: Oh nein! $1 hat seine Freundschaft zu Ihnen beendet!',
+	'friend_removed_body' => 'Hi $1:
+
+$2 hat seine Freundschaft zu Ihnen in {{SITENAME}} beendet!
+
+---
+
+Hm, Sie wollen keine E-Mails mehr von uns bekommen?
+
+Klicken Sie $4
+und ändern Sie Ihre Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
 	'foe_removed_subject' => '{{SITENAME}}: Hey! $1 hat seine Feindschaft zu Ihnen beendet!',
+	'foe_removed_body' => 'Hi $1:
+
+$2 hat seine Feindschaft zu Ihnen in {{SITENAME}} beendet!
+
+Vielleicht werden Sie beide ja sogar mal Freunde?
+
+---
+
+Hm, Sie wollen keine E-Mails mehr von uns bekommen?
+
+Klicken Sie $4
+und ändern Sie Ihre Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
 );
 
 /** Lower Sorbian (Dolnoserbski)
@@ -2186,10 +2217,12 @@ $messages['frp'] = array(
 );
 
 /** Western Frisian (Frysk)
+ * @author SK-luuut
  * @author Snakesteuben
  */
 $messages['fy'] = array(
 	'ur-main-page' => 'Haadside',
+	'ur-cancel' => 'Ofbrekke',
 );
 
 /** Galician (Galego)

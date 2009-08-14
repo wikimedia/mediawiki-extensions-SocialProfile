@@ -239,6 +239,7 @@ $messages['de'] = array(
  * @author Imre
  */
 $messages['de-formal'] = array(
+	'mp-welcome-needed-points' => 'Um <b><a href="$1">$2</a></b> zu werden müssen Sie noch <i>$3</i> {{PLURAL:$3|weiteren Punkt|weitere Punkte}} verdienen!',
 	'mp-requests-message' => 'Sie haben die folgenden Anfragen.',
 );
 
@@ -1132,10 +1133,23 @@ $messages['te'] = array(
 
 /** Thai (ไทย)
  * @author Manop
+ * @author Woraponboonkerd
  */
 $messages['th'] = array(
+	'userwelcome-desc' => 'เพิ่มแท็ก <tt>&lt;welcomeUser&gt;</tt> เพื่อแสดงข้อมูลทางสังคมที่ผู้ใช้กำหนดแก่ผู้ใช้คนอื่นๆ ที่ได้ลงชื่อเข้าใช้แล้ว',
 	'mp-userlevels-link' => 'ระดับผู้ใช้',
 	'mp-welcome-upload' => 'อัปโหลด',
+	'mp-welcome-edit' => 'แก้ไข',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|คะแนน|คะแนน}}',
+	'mp-welcome-needed-points' => 'เพื่อยกระดับไปเป็น<b><a href="$1">$2</a></b> คุณต้องการอีก<i>$3</i>{{PLURAL:$3|คะแนน|คะแนน}}เท่านั้น!',
+	'mp-welcome-logged-in' => 'สวัสดี $1',
+	'mp-requests-title' => 'คำร้องขอ',
+	'mp-requests-message' => 'คุณมีคำร้องขอดังนี้',
+	'mp-request-new-message' => 'ข้อความใหม่',
+	'mp-request-new-award' => '$1 {{PLURAL:$1|รางวัล|รางวัล}}ใหม่',
+	'mp-request-new-gift' => '$1 {{PLURAL:$1|รางวัล|รางวัล}}ใหม่',
+	'mp-request-new-foe' => '$1 {{PLURAL:$1|ศัตรู|ศัตรู}}ใหม่',
+	'mp-request-new-friend' => '$1 {{PLURAL:$1|เพื่อน|เพื่อน}}ใหม่',
 );
 
 /** Tagalog (Tagalog)

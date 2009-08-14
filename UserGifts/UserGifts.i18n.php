@@ -120,6 +120,7 @@ and change your settings to disable email notifications.',
  * @author Fryed-peach
  * @author Purodha
  * @author Siebrand
+ * @author Umherirrender
  */
 $messages['qqq'] = array(
 	'giftmanager-private' => '{{Identical|Private}}',
@@ -143,6 +144,7 @@ $messages['qqq'] = array(
 * $3 is the gift name
 * $4 is a link to the given gift
 * $5 is a link to the user preferences",
+	'right-giftadmin' => '{{doc-right|giftadmin}}',
 );
 
 /** Arabic (العربية)
@@ -1263,6 +1265,13 @@ et modifiez vos préférences pour désactiver les notifications par courriel.',
 $messages['frp'] = array(
 	'giftmanager-public' => 'publico',
 	'giftmanager-private' => 'privâ',
+);
+
+/** Western Frisian (Frysk)
+ * @author SK-luuut
+ */
+$messages['fy'] = array(
+	'g-cancel' => 'Ofbrekke',
 );
 
 /** Galician (Galego)
@@ -3301,6 +3310,111 @@ $messages['te'] = array(
 	'g-next' => 'తర్వాతి',
 	'g-previous' => 'గత',
 	'g-remove' => 'తొలగించు',
+);
+
+/** Thai (ไทย)
+ * @author Woraponboonkerd
+ */
+$messages['th'] = array(
+	'giftmanager' => 'จัดการกับของขวัญ',
+	'giftmanager-addgift' => '+ เพิ่มของขวัญใหม่',
+	'giftmanager-access' => 'การเข้าถึงของขวัญ',
+	'giftmanager-description' => 'รายละเอียดของขวัญ',
+	'giftmanager-giftimage' => 'รูปภาพของขวัญ',
+	'giftmanager-image' => 'เพิ่ม/แทนที่รูปภาพ',
+	'giftmanager-giftcreated' => 'ของขวัญได้ถูกสร้างขึ้นแล้ว',
+	'giftmanager-giftsaved' => 'ของขวัญได้ถูกบันทึกแล้ว',
+	'giftmanager-public' => 'สาธารณะ',
+	'giftmanager-private' => 'ส่วนตัว',
+	'giftmanager-view' => 'ดูรายการของขวัญ',
+	'g-add-message' => 'เพิ่มข้อความ',
+	'g-back-edit-gift' => 'กลับไปแก้ไขของขวัญนี้',
+	'g-back-gift-list' => 'กลับไปยังรายการของขวัญ',
+	'g-back-link' => '< กลับไปยังหน้าของ $1',
+	'g-choose-file' => 'เลือกไฟล์:',
+	'g-cancel' => 'ยกเลิก',
+	'g-count' => '$1 มีของขวัญ $2 {{PLURAL:$2|ชิ้น|ชิ้น}}',
+	'g-create-gift' => 'สร้างของขวัญ',
+	'g-created-by' => 'สร้างโดย',
+	'g-current-image' => 'รูปภาพปัจจุบัน',
+	'g-delete-message' => 'คุณแน่ใจหรือไม่ที่จะลบของขวัญ "$1" ออก?
+<br />เพราะนี่จะเป็นการลบของขวัญนี้ออกจากผู้ใช้คนอื่นๆ ที่ได้รับของขวัญนี้ด้วย',
+	'g-description-title' => '"$2" ของ $1',
+	'g-error-do-not-own' => 'คุณไม่ได้เป็นเจ้าของของขวัญนี้',
+	'g-error-message-blocked' => 'ขณะนี้คุณถูกห้ามและไม่สามารถให้ของขวัญได้',
+	'g-error-message-invalid-link' => 'ลิงก์ที่คุณใส่ไม่ถูกต้อง',
+	'g-error-message-login' => 'คุณต้องลงชื่อเข้าใช้เพื่อให้ของขวัญ',
+	'g-error-message-no-user' => 'ไม่ปรากฎผู้ใช้ที่คุณกำลังพยายามดูอยู่',
+	'g-error-message-to-yourself' => 'คุณไม่สามารถให้ของขวัญกับตัวคุณเองได้',
+	'g-error-title' => 'อุ๊ย คุณมาผิดทางแล้ว!',
+	'g-file-instructions' => 'รูปภาพของคุณต้องเป็นไฟล์ JPEG, PNG หรือ GIF (ไม่ใช่ไฟล์ GIF ที่เคลื่อนไหวได้) และต้องมีขนาดเล็กกว่า 100 กิโลไบต์',
+	'g-from' => 'จาก <a href="$1">$2</a>',
+	'g-gift' => 'ของขวัญ',
+	'g-gift-name' => 'ชื่อของขวัญ',
+	'g-give-gift' => 'ให้ของขวัญ',
+	'g-give-all' => 'ต้องการที่จะให้ของขวัญกับ $1 ใช่ไหม?
+<br />เพียงแค่คลิกของขวัญด้านล่างหนึ่งอันแล้วคลิก "ให้ของขวัญ"
+<br />แค่นี้ง่ายนิดเดียว',
+	'g-give-all-message-title' => 'เพิ่มข้อความ',
+	'g-give-all-title' => 'ให้ของขวัญกับ $1',
+	'g-give-enter-friend-title' => 'ถ้าคุณรู้ชื่อของผู้ใช้ พิมพ์ลงที่ด้านล่างนี้',
+	'g-given' => 'มีผู้ที่ให้ของขวัญนี้จำนวน $1 {{PLURAL:$1|ครั้ง|ครั้ง}}',
+	'g-give-list-friends-title' => 'เลือกจากรายการเพื่อนของคุณ',
+	'g-give-list-select' => 'เลือกเพื่อน',
+	'g-give-separator' => 'หรือ',
+	'g-give-no-user-message' => 'ของขวัญและรางวัลเป็นหนทางที่ดีมากในการรับรองเพื่อนของคุณ',
+	'g-give-no-user-title' => 'คุณต้องการที่จะให้ของขวัญกับใคร?',
+	'g-give-to-user-title' => 'ให้ของขวัญ "$1" กับ $2',
+	'g-give-to-user-message' => 'ต้องการที่จะให้<a href="$2">ของขวัญชิ้นอื่น</a>กับ $1 ใช่ไหม?',
+	'g-go-back' => 'กลับไปที่เิดิม',
+	'g-imagesbelow' => 'ด้านล่างนี้คือรูปภาพของคุณที่จะถูกใช้บนเว็บไซต์',
+	'g-large' => 'ขนาดใหญ่',
+	'g-list-title' => 'รายการของขวัญของ $1',
+	'g-main-page' => 'หน้าหลัก',
+	'g-medium' => 'ขนาดกลาง',
+	'g-mediumlarge' => 'ขนาดกลาง - ขนาดใหญ่',
+	'g-new' => 'ใหม่',
+	'g-next' => 'ถัดไป',
+	'g-previous' => 'ก่อนหน้า',
+	'g-remove' => 'ลบทิ้ง',
+	'g-remove-gift' => 'ลบของขวัญนี้ทิ้ง',
+	'g-remove-message' => 'คุณแน่ใจหรือไม่ที่จะลบของขวัญ "$1" ทิ้ง?',
+	'g-recent-recipients' => 'ผู้ใช้อื่นๆ ที่ได้รับของขวัญนี้',
+	'g-remove-success-title' => 'คุณได้ลบของขวัญ "$1" ออกเป็นที่เรียบร้อยแล้ว',
+	'g-remove-success-message' => 'ของขวัญ "$1" ได้ถูกลบออกแล้ว',
+	'g-remove-title' => 'ลบ "$1"?',
+	'g-send-gift' => 'ให้ของขวัญ',
+	'g-select-a-friend' => 'เลือกเพื่อน',
+	'g-sent-title' => 'คุณได้ให้ของขวัญกับ $1',
+	'g-sent-message' => 'คุณได้ให้ของขวัญดังต่อไปนี้กับ $1',
+	'g-small' => 'ขนาดเล็ก',
+	'g-to-another' => 'ให้กับคนอื่น',
+	'g-uploadsuccess' => 'อัปโหลดสำเร็จ',
+	'g-viewgiftlist' => 'ดูรายการของขวัญ',
+	'g-your-profile' => 'โปรไฟล์ของคุณ',
+	'gift_received_subject' => '$1 ได้ให้ $2 กับคุณบนเว็บไซต์ {{SITENAME}}!',
+	'gift_received_body' => 'สวัสดี $1.
+
+$2 เพิ่งให้ของขวัญกับคุณเป็น $3 บนเว็บไซต์ {{SITENAME}}.
+
+ต้องการอ่านข้อความที่ $2 ให้กับคุณและดูของขวัญของคุณหรือไม่?  คลิกที่ลิงก์ด้านล่างนี้:
+
+$4
+
+เราหวังว่าคุณคงชอบนะ!
+
+ขอบคุณ,
+
+
+ทีมงาน {{SITENAME}}
+
+---
+
+เฮ้, ต้องการที่จะงดรับอีเมลจากเราหรือไม่?
+
+คลิก $5
+<br />และเปลี่ยนแปลงการตั้งค่าของคุณเพื่องดรับการแจ้งเตือนทางอีเมล',
+	'right-giftadmin' => 'สร้างของขวัญใหม่และแก้ไขของขวัญที่มีอยู่เดิม',
 );
 
 /** Tagalog (Tagalog)
