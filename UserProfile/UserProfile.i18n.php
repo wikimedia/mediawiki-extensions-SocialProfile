@@ -3136,7 +3136,7 @@ $messages['fi'] = array(
 	'user-profile-section-sportsteams' => 'Päivitä verkostoja',
 	'user-profile-section-custom' => 'Omat tiedot',
 	'user-profile-section-interests' => 'Muut tiedot',
-	'user-profile-section-picture' => 'Avatar-hahmo',
+	'user-profile-section-picture' => 'Avatar',
 	'user-profile-section-preferences' => 'Asetukset',
 	'user-profile-personal-info' => 'Tiedot',
 	'user-profile-personal-name' => 'Nimi',
@@ -6581,7 +6581,7 @@ $messages['pdt'] = array(
  * @author Sp5uhe
  */
 $messages['pl'] = array(
-	'user-time-ago' => 'temu',
+	'user-time-ago' => '$1 temu',
 	'user-awards-title' => 'Nagrody',
 	'user-gifts-title' => 'Prezenty',
 	'user-count-separator' => '$1 z $2',

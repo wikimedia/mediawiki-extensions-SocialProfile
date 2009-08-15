@@ -857,6 +857,7 @@ $messages['el'] = array(
 	'g-description-title' => 'Το δώρο του $1 "$2"',
 	'g-error-do-not-own' => 'Δεν σου ανήκει αυτό το δώρο.',
 	'g-error-message-login' => 'Πρέπει να συνδεθείτε για να δώσετε δώρα',
+	'g-error-message-to-yourself' => 'Δεν μπορείς να δώσεις ένα δώρο στον εαυτό σου.',
 	'g-error-title' => 'Ουπς, πήρες μια λάθος στροφή!',
 	'g-from' => 'από <a href="$1">$2</a>',
 	'g-gift' => 'δώρο',
@@ -864,8 +865,11 @@ $messages['el'] = array(
 	'g-give-gift' => 'Δώστε δώρο',
 	'g-give-all-message-title' => 'Προσθήκη ενός μηνύματος',
 	'g-give-all-title' => 'Δώστε ένα δώρο στόν $1',
+	'g-give-list-friends-title' => 'Επιλογή από τη λίστα φίλων σας',
 	'g-give-list-select' => 'επιλέξτε έναν φίλο',
 	'g-give-separator' => 'ή',
+	'g-give-no-user-title' => 'Σε ποιον θα θέλατε να δώσετε ένα δώρο;',
+	'g-give-to-user-title' => 'Αποστολή του δώρου "$1" στον $2',
 	'g-go-back' => 'Πήγαινε πίσω',
 	'g-large' => 'Μεγάλος',
 	'g-list-title' => 'Η λίστα δώρων του $1',
@@ -877,15 +881,20 @@ $messages['el'] = array(
 	'g-previous' => 'Προηγ',
 	'g-remove' => 'Αφαίρεση',
 	'g-remove-gift' => 'Αφαίρεση αυτού του δώρου',
+	'g-recent-recipients' => 'Άλλοι πρόσφατοι παραλήπτες αυτού του δώρου',
+	'g-remove-success-title' => 'Έχετε επιτυχώς αφαιρέσει το δώρο "$1"',
+	'g-remove-success-message' => 'Το δώρο "$1" έχει αφαιρεθεί.',
 	'g-remove-title' => 'Διαγραφή "$1";',
 	'g-send-gift' => 'Αποστολή δώρου',
 	'g-select-a-friend' => 'επιλέξτε έναν φίλο',
 	'g-sent-title' => 'Στείλατε ένα δώρο στον $1',
+	'g-sent-message' => 'Έχεις αποστείλει το παρακάτω δώρο στο $1.',
 	'g-small' => 'Μικρός',
 	'g-to-another' => 'Δώστε σε κάποιον άλλο',
 	'g-uploadsuccess' => 'Επιτυχής φόρτωση',
 	'g-viewgiftlist' => 'Προβολή λίστας δώρων',
 	'g-your-profile' => 'Το προφίλ σας',
+	'gift_received_subject' => 'Ο $1 σου έστειλε το δώρο $2 στο {{SITENAME}}!',
 	'right-giftadmin' => 'Δημιουργία νέων και υπάρχοντων δώρων',
 );
 
@@ -2638,6 +2647,25 @@ To bardzo łatwe.',
 	'g-viewgiftlist' => 'Zobacz listę prezentów',
 	'g-your-profile' => 'Twój profil',
 	'gift_received_subject' => '$1 dał Ci prezent $2 na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
+	'gift_received_body' => 'Cześć $1.
+
+$2 wysłał prezent $3 dla Ciebie na {{GRAMMAR:MS.lp|{{SITENAME}}}}.
+
+Chcesz przeczytać dedykację od $2 i zobaczyć prezent? Kliknij poniższy link:
+
+$4
+
+Mamy nadzieję, że prezent sprawił Ci radość!
+
+Dziękujemy,
+
+zespół {{GRAMMAR:D.lp|{{SITENAME}}}}
+
+---
+Nie chcesz otrzymywać więcej wiadomości od nas?
+
+Kliknij $5
+i zmień ustawienia dla powiadomień email.',
 	'right-giftadmin' => 'Tworzenie nowych oraz edytowanie istniejących prezentów',
 );
 
