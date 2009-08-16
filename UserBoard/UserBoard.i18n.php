@@ -2087,9 +2087,12 @@ $messages['pdc'] = array(
  * @author Derbeth
  * @author Maikking
  * @author Sp5uhe
+ * @author ToSter
  */
 $messages['pl'] = array(
+	'boardblastlogintitle' => 'Musisz się zalogować, aby pisać ogłoszenia',
 	'messagesenttitle' => 'Wiadomości zostały wysłane',
+	'boardblasttitle' => 'Wyślij ogłoszenie',
 	'boardblaststep1' => 'Krok 1 – Napisz wiadomość',
 	'boardblastprivatenote' => 'Wszystkie wiadomości będą wysyłane jako prywatne',
 	'boardblaststep2' => 'Krok 2 – Wybierz, do kogo chcesz wysłać wiadomość',
@@ -2099,13 +2102,37 @@ $messages['pl'] = array(
 	'boardlinkunselectfriends' => 'Odznacz znajomych',
 	'boardlinkselectfoes' => 'Zaznacz wrogów',
 	'boardlinkunselectfoes' => 'Odznacz wrogów',
+	'boardsendbutton' => 'Wyślij ogłoszenie',
 	'boardnofriends' => 'Nie masz żadnych znajomych.',
 	'messagesentsuccess' => 'Wiadomość została wysłana',
+	'userboard' => 'Tablica ogłoszeń',
+	'userboard_board-to-board' => 'Tablica-tablica',
 	'userboard_delete' => 'Usuń',
+	'userboard_noexist' => 'Poszukiwany użytkownik nie istnieje.',
+	'userboard_yourboard' => 'Twoja tablica',
+	'userboard_owner' => 'Tablica $1',
+	'userboard_yourboardwith' => 'Twoja dyskusja tablicowa z $1',
+	'userboard_otherboardwith' => 'Tablica-tablica $1 z $2',
+	'userboard_backprofile' => 'Powrót do profilu $1',
+	'userboard_backyourprofile' => 'Powrót do Twojego profilu',
+	'userboard_boardtoboard' => 'Tablica-tablica',
+	'userboard_confirmdelete' => 'Czy na pewno usunąć wiadomość?',
+	'userboard_sendmessage' => 'Wyślij wiadomość do $1',
+	'userboard_myboard' => 'Moja tablica',
+	'userboard_posted_ago' => 'wysłane $1 temu',
+	'userboard_private' => 'prywatne',
+	'userboard_public' => 'publiczne',
+	'userboard_messagetype' => 'Typ wiadomości',
 	'userboard_nextpage' => 'nast.',
 	'userboard_prevpage' => 'poprz.',
 	'userboard_nomessages' => 'Brak wiadomości.',
 	'userboard_sendbutton' => 'wyślij',
+	'right-userboard-delete' => 'Usuń ogłoszenia innych',
+	'userboard-time-days' => '{{PLURAL:$1|jeden dzień|$1 dni}}',
+	'userboard-time-hours' => '{{PLURAL:$1|jedna godzina|$1 godziny|$1 godzin}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|jedna minuta|$1 minuty|$1 minut}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|jedna sekunda|$1 sekundy|$1 sekund}}',
+	'message_received_subject' => '$1 napisał na Twojej tablicy na {{SITENAME}}',
 );
 
 /** Pashto (پښتو)
@@ -2202,8 +2229,8 @@ e altere suas preferênciar para desabilidar e-mails de notificação.',
  */
 $messages['pt-br'] = array(
 	'boardblastlogintitle' => 'Você precisa estar autenticado para enviar recados',
-	'boardblastlogintext' => 'Você precisa estar autenticado para enviar recados.
-Clique <a href="index.php?title=Special:UserLogin">aqui para se autenticar</a>',
+	'boardblastlogintext' => 'Para enviar recados,
+você precisa estar <a href="index.php?title=Special:UserLogin">autenticado</a>',
 	'messagesenttitle' => 'Mensagens Enviadas',
 	'boardblasttitle' => 'Enviar recado',
 	'boardblaststep1' => 'Passo 1 - Escreva a sua mensagem',

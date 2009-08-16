@@ -4667,6 +4667,7 @@ $messages['pdc'] = array(
  * @author Jwitos
  * @author Maikking
  * @author Sp5uhe
+ * @author ToSter
  */
 $messages['pl'] = array(
 	'viewrelationships' => 'Zobacz nawiązane stosunki',
@@ -4707,21 +4708,35 @@ Wybierz znajomych lub wrogów poprzez poprawny link.',
 	'ur-remove-error-message-remove-yourself' => 'Nie możesz usunąć sam siebie.',
 	'ur-remove-error-message-pending-foe-request' => 'Wysłałeś już informację, że chcesz być wrogiem dla $1.',
 	'ur-remove-error-message-pending-friend-request' => 'Wysłałeś już informację, że chcesz być znajomym dla $1.',
+	'ur-remove-error-not-loggedin-foe' => 'Musisz się zalogować, aby usunąć wroga.',
+	'ur-remove-error-not-loggedin-friend' => 'Musisz się zalogować, aby usunąć znajomego.',
 	'ur-remove' => 'Usuń',
 	'ur-cancel' => 'Anuluj',
 	'ur-login' => 'Zaloguj się',
 	'ur-add-title-foe' => 'Czy chcesz dodać $1 do listy wrogów?',
 	'ur-add-title-friend' => 'Czy chcesz dodać $1 do listy przyjaciół?',
+	'ur-add-message-foe' => 'Zamierzasz dodać $1 jako wroga.
+Powiadomimy $1 o Waszym sporze.',
+	'ur-add-message-friend' => 'Zamierzasz dodać $1 jako znajomego.
+Powiadomimy $1 o Waszej znajomości.',
 	'ur-add-button-foe' => 'Oznacz jako wroga',
 	'ur-add-button-friend' => 'Oznacz jako przyjaciela',
 	'ur-add-sent-title-foe' => 'Wysłano informację, że chcesz być wrogiem dla $1!',
 	'ur-add-sent-title-friend' => 'Wysłano informację, że chcesz być znajomym dla $1!',
+	'ur-add-sent-message-foe' => 'Twoja prośba o status wroga została wysłana do $1.
+Jeśli $1 ją potwierdzi, otrzymasz e-mail',
+	'ur-add-sent-message-friend' => 'Twoja prośba o status znajomego została wysłana do $1.
+Jeśli $1 ją potwierdzi, otrzymasz e-mail',
 	'ur-add-error-message-no-user' => 'Użytkownik, którego próbujesz dodać, nie istnieje.',
 	'ur-add-error-message-blocked' => 'Jesteś zablokowany i nie możesz dodawać nowych znajomych i wrogów.',
 	'ur-add-error-message-yourself' => 'Nie możesz dodać samego siebie jako przyjaciela lub wroga.',
 	'ur-add-error-message-existing-relationship-foe' => 'Jesteście już wrogami z $1.',
 	'ur-add-error-message-existing-relationship-friend' => 'Jesteście już przyjaciółmi z $1.',
 	'ur-add-error-message-pending-request-title' => 'Cierpliwości!',
+	'ur-add-error-message-pending-friend-request' => 'Wysłałeś prośbę o status znajomego do $1.
+Powiadomimy Cię, kiedy $1 potwierdzi prośbę.',
+	'ur-add-error-message-pending-foe-request' => 'Wysłałeś prośbę o status wroga do $1.
+Powiadomimy Cię, kiedy $1 potwierdzi prośbę.',
 	'ur-add-error-message-not-loggedin-foe' => 'Żeby dodać wroga musisz być zalogowany',
 	'ur-add-error-message-not-loggedin-friend' => 'Żeby dodać przyjaciela musisz być zalogowany',
 	'ur-requests-title' => 'Nawiązanie znajomości',
@@ -4738,8 +4753,95 @@ Jeśli chcesz mieć więcej przyjaciół <a href="$1">zaproś ich!</a>',
 	'ur-title-foe' => 'Lista wrogów $1',
 	'ur-title-friend' => 'Lista przyjaciół $1',
 	'friend_request_subject' => '$1 dodał Ciebie do swoich przyjaciół na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
+	'friend_request_body' => 'Cześć $1.
+
+$2 dodał Cię jako znajomego na {{SITENAME}}. Chcemy się upewnić, czy rzeczywiście jesteście znajomymi.
+
+Proszę kliknąć poniżej, żeby potwierdzić znajomość:
+$3
+
+Dziękujemy
+
+---
+
+Hej, nie chcesz już od nas maili?
+
+Kliknij $4
+i zmień swoje ustawienia, wyłączając powiadomienia e-mail.',
 	'foe_request_subject' => 'Wojna! $1 dodał Cię do wrogów na {{GRAMMAR:MS.lp|{{sitename}}}}!',
+	'foe_request_body' => 'Cześć $1.
+
+$2 dodał Cię jako wroga na {{SITENAME}}. Chcemy się upewnić, czy rzeczywiście jesteście śmiertelnymi wrogami lub przynajmniej skłóceni.
+
+Proszę kliknąć poniżej, żeby potwierdzić wrogość:
+$3
+
+Dziękujemy
+
+---
+
+Hej, nie chcesz już od nas maili?
+
+Kliknij $4
+i zmień swoje ustawienia, wyłączając powiadomienia e-mail.',
+	'friend_accept_subject' => '$1 zaakceptował Twoją prośbę o status znajomego na {{SITENAME}}!',
+	'friend_accept_body' => 'Cześć $1.
+
+$2 zaakceptował Twoją prośbę o status znajomego na {{SITENAME}}!
+
+Obejrzyj stronę $2 na $3
+
+Dziękujemy,
+
+---
+
+Hej, nie chcesz już od nas maili?
+
+Kliknij $4
+i zmień swoje ustawienia, wyłączając powiadomienia e-mail.',
+	'foe_accept_subject' => '$1 zaakceptował Twoją prośbę o status wroga na {{SITENAME}}!',
+	'foe_accept_body' => 'Cześć $1.
+
+$2 zaakceptował Twoją prośbę o status wroga na {{SITENAME}}!
+
+Obejrzyj stronę $2 na $3
+
+Dziękujemy,
+
+---
+
+Hej, nie chcesz już od nas maili?
+
+Kliknij $4
+i zmień swoje ustawienia, wyłączając powiadomienia e-mail.',
 	'friend_removed_subject' => 'Och nie! $1 usunął Cię z listy przyjaciół na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
+	'friend_removed_body' => 'Cześć $1.
+
+$2 usunął Cię z listy znajomych na {{SITENAME}}!
+
+Dziękujemy,
+
+---
+
+Hej, nie chcesz już od nas maili?
+
+Kliknij $4
+i zmień swoje ustawienia, wyłączając powiadomienia e-mail.',
+	'foe_removed_subject' => 'Hej! $1 usunął Cię z listy wrogów na {{SITENAME}}!',
+	'foe_removed_body' => 'Cześć $1.
+
+$2 usunął Cię z listy wrogów na {{SITENAME}}!
+
+Może zostaniecie przyjaciółmi?
+
+Dziękujemy,
+
+---
+
+Hej, nie chcesz już od nas maili?
+
+Kliknij $4
+i zmień swoje ustawienia, wyłączając powiadomienia e-mail.',
 );
 
 /** Pashto (پښتو)

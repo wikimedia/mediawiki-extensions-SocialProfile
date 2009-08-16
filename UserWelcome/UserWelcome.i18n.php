@@ -28,14 +28,18 @@ $messages['en'] = array(
 );
 
 /** Message documentation (Message documentation)
+ * @author Bennylin
+ * @author Darth Kule
+ * @author Fryed-peach
  * @author Purodha
  * @author Siebrand
  */
 $messages['qqq'] = array(
-	'userwelcome-desc' => 'Short description of the extension.
-Shown in [[Special:Version]].
-{{doc-important|Do not translate tags names, and links targets.}}',
+	'userwelcome-desc' => '{{desc}}',
 	'mp-userlevels-link' => 'This is the help page...e.g. English default is Help:User Levels. You can define a new help page with this message.',
+	'mp-welcome-upload' => '{{Identical|Upload}}',
+	'mp-welcome-edit' => '{{Identical|Edit}}',
+	'mp-request-new-message' => '{{Identical|Message}}',
 );
 
 /** Amharic (አማርኛ)
@@ -552,6 +556,13 @@ $messages['id'] = array(
  */
 $messages['io'] = array(
 	'mp-welcome-points' => '$1 punti',
+);
+
+/** Italian (Italiano)
+ * @author Darth Kule
+ */
+$messages['it'] = array(
+	'mp-welcome-edit' => 'Modifica',
 );
 
 /** Japanese (日本語)

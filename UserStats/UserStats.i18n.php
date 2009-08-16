@@ -1044,6 +1044,13 @@ Klik $3
 dan ganti seting Anda untuk mematikan pemberitahuan lewat surel.',
 );
 
+/** Italian (Italiano)
+ * @author Darth Kule
+ */
+$messages['it'] = array(
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Modifica|Modifiche}}',
+);
+
 /** Japanese (日本語)
  * @author Aotake
  * @author Fryed-peach
