@@ -42,6 +42,13 @@ $messages['qqq'] = array(
 	'mp-request-new-message' => '{{Identical|Message}}',
 );
 
+/** Afrikaans (Afrikaans)
+ * @author Naudefj
+ */
+$messages['af'] = array(
+	'mp-welcome-edit' => 'Wysig',
+);
+
 /** Amharic (አማርኛ)
  * @author Codex Sinaiticus
  */

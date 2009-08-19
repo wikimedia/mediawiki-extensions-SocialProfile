@@ -8302,13 +8302,14 @@ $messages['szl'] = array(
 );
 
 /** Telugu (తెలుగు)
+ * @author Kiranmayee
  * @author Veeven
  */
 $messages['te'] = array(
 	'user-time-ago' => '$1 క్రితం',
 	'user-awards-title' => 'అవార్డులు',
 	'user-gifts-title' => 'బహుమతులు',
-	'user-count-separator' => '$1 యొక్క $2',
+	'user-count-separator' => ' $2 లో $1',
 	'user-view-all' => 'అన్నీ చూడండి',
 	'user-upload-image' => 'బొమ్మని ఎగుమతి చేయండి',
 	'user-edit-this' => 'దీన్ని మార్చండి',
