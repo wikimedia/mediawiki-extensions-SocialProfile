@@ -562,7 +562,20 @@ $messages['io'] = array(
  * @author Darth Kule
  */
 $messages['it'] = array(
+	'userwelcome-desc' => 'Aggiunge il tag <tt>&lt;welcomeUser&gt;</tt> per visualizzare informazioni sociali specifiche per ciascun utente per gli utenti registrati',
+	'mp-userlevels-link' => 'Livelli utente',
+	'mp-welcome-upload' => 'Carica',
 	'mp-welcome-edit' => 'Modifica',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|punto|punti}}',
+	'mp-welcome-needed-points' => 'Per passare a <b><a href="$1">$2</a></b> bisogna guadagna <i>$3</i> {{PLURAL:$3|altro punto|altri punti}}',
+	'mp-welcome-logged-in' => 'Ciao $1',
+	'mp-requests-title' => 'Richieste',
+	'mp-requests-message' => 'Sono presenti le seguenti richieste.',
+	'mp-request-new-message' => 'nuovo messaggio',
+	'mp-request-new-award' => '$1 {{PLURAL:$1|nuovo premio|nuovi premi}}',
+	'mp-request-new-gift' => '$1 {{PLURAL:$1|nuovo dono|nuovi doni}}',
+	'mp-request-new-foe' => '$1 {{PLURAL:$1|nuovo nemico|nuovi nemici}}',
+	'mp-request-new-friend' => '$1 {{PLURAL:$1|nuovo amico|nuovi amici}}',
 );
 
 /** Japanese (日本語)
@@ -1262,8 +1275,10 @@ $messages['wo'] = array(
 
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Gzdavidwong
+ * @author Liangent
  */
 $messages['zh-hans'] = array(
+	'mp-userlevels-link' => '用户等级',
 	'mp-welcome-upload' => '上传',
 	'mp-welcome-edit' => '编辑',
 	'mp-welcome-logged-in' => '$1，您好',

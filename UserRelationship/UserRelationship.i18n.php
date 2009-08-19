@@ -1508,8 +1508,12 @@ $messages['el'] = array(
 	'ur-remove-relationship-title-confirm-foe' => 'Αφαίρεσες τον $1 ως εχθρό σου',
 	'ur-remove-relationship-title-friend' => 'Θες να αφαιρέσεις τον $1 ως φίλο σου;',
 	'ur-remove-relationship-title-confirm-friend' => 'Αφαίρεσες τον $1 ως φίλο σου',
+	'ur-remove-relationship-message-confirm-foe' => 'Έχετε επιτυχώς αφαιρέσει τον $1 ως εχθρό σας.',
+	'ur-remove-relationship-message-confirm-friend' => 'Έχετε επιτυχώς αφαιρέσει τον $1 ως φίλο σας.',
 	'ur-remove-error-message-no-relationship' => 'Δεν έχεις σχέση με τον $1.',
 	'ur-remove-error-message-remove-yourself' => 'Δεν μπορείς να αφαιρέσεις τον εαυτό σου',
+	'ur-remove-error-message-pending-foe-request' => 'Έχετε μια εκκρεμή αίτηση εχθρού με τον $1.',
+	'ur-remove-error-message-pending-friend-request' => 'Έχετε μια εκκρεμή αίτηση φίλου με τον $1.',
 	'ur-remove-error-not-loggedin-foe' => 'Πρέπει να είσαι συνδεδεμένος για να αφαιρέσεις έναν εχθρό.',
 	'ur-remove-error-not-loggedin-friend' => 'Πρέπει να είσαι συνδεδεμένος για να αφαιρέσεις έναν φίλο.',
 	'ur-remove' => 'Αφαίρεση',
@@ -1522,6 +1526,8 @@ $messages['el'] = array(
 	'ur-add-sent-title-foe' => 'Στείλαμε την πρόταση εχθρού σας στον $1!',
 	'ur-add-sent-title-friend' => 'Στείλαμε την πρόταση φίλου σας στον $1!',
 	'ur-add-error-message-no-user' => 'Αυτός ο χρήστης που προσπαθείτε να προσθέσετε δεν υπάρχει.',
+	'ur-add-error-message-blocked' => 'Τώρα είσαι φραγμένος και δεν μπορείς να προσθέσεις φίλους ή εχθρούς.',
+	'ur-add-error-message-yourself' => 'Δεν μπορείς να προσθέσεις τον εαυτό σου ως ένα φίλο ή εχθρό.',
 	'ur-add-error-message-existing-relationship-foe' => 'Είσαι ήδη εχθρός με τον $1.',
 	'ur-add-error-message-existing-relationship-friend' => 'Είσαι ήδη φίλος με τον $1.',
 	'ur-add-error-message-pending-request-title' => 'Υπομονή!',
@@ -1618,6 +1624,7 @@ Se vi volas pliajn amikojn, <a href="$1">invitu ilin!</a>',
 	'friend_request_subject' => '$1 aldonis vin kiel amikon en {{SITENAME}}!',
 	'foe_request_subject' => 'Estas milito! $1 aldonis vin kiel malamikon en {{SITENAME}}!',
 	'friend_accept_subject' => '$1 akceptis vian amiko-peton en {{SITENAME}}!',
+	'friend_removed_subject' => 'Ho ve! $1 forigis vin kiel amikon en {{SITENAME}}!',
 );
 
 /** Spanish (Español)
@@ -4708,35 +4715,35 @@ Wybierz znajomych lub wrogów poprzez poprawny link.',
 	'ur-remove-error-message-remove-yourself' => 'Nie możesz usunąć sam siebie.',
 	'ur-remove-error-message-pending-foe-request' => 'Wysłałeś już informację, że chcesz być wrogiem dla $1.',
 	'ur-remove-error-message-pending-friend-request' => 'Wysłałeś już informację, że chcesz być znajomym dla $1.',
-	'ur-remove-error-not-loggedin-foe' => 'Musisz się zalogować, aby usunąć wroga.',
-	'ur-remove-error-not-loggedin-friend' => 'Musisz się zalogować, aby usunąć znajomego.',
+	'ur-remove-error-not-loggedin-foe' => 'Musisz się zalogować, aby przestać uznawać kogoś za wroga.',
+	'ur-remove-error-not-loggedin-friend' => 'Musisz się zalogować, aby zakończyć znajomość.',
 	'ur-remove' => 'Usuń',
 	'ur-cancel' => 'Anuluj',
 	'ur-login' => 'Zaloguj się',
 	'ur-add-title-foe' => 'Czy chcesz dodać $1 do listy wrogów?',
 	'ur-add-title-friend' => 'Czy chcesz dodać $1 do listy przyjaciół?',
-	'ur-add-message-foe' => 'Zamierzasz dodać $1 jako wroga.
-Powiadomimy $1 o Waszym sporze.',
-	'ur-add-message-friend' => 'Zamierzasz dodać $1 jako znajomego.
-Powiadomimy $1 o Waszej znajomości.',
+	'ur-add-message-foe' => 'Zamierzasz uznać $1 za swojego wroga.
+Poprosimy $1 o potwierdzenie nieprzyjaznego stosunku.',
+	'ur-add-message-friend' => 'Zamierzasz uznać $1 za swojego znajomego.
+Poprosimy $1 o potwierdzenie nawiązania znajomości.',
 	'ur-add-button-foe' => 'Oznacz jako wroga',
 	'ur-add-button-friend' => 'Oznacz jako przyjaciela',
 	'ur-add-sent-title-foe' => 'Wysłano informację, że chcesz być wrogiem dla $1!',
 	'ur-add-sent-title-friend' => 'Wysłano informację, że chcesz być znajomym dla $1!',
-	'ur-add-sent-message-foe' => 'Twoja prośba o status wroga została wysłana do $1.
-Jeśli $1 ją potwierdzi, otrzymasz e-mail',
-	'ur-add-sent-message-friend' => 'Twoja prośba o status znajomego została wysłana do $1.
-Jeśli $1 ją potwierdzi, otrzymasz e-mail',
+	'ur-add-sent-message-foe' => 'Prośba o ustalenie statusu wroga została wysłana do $1.
+Jeśli $1 ją potwierdzi, otrzymasz powiadomienie e-mail',
+	'ur-add-sent-message-friend' => 'Prośba o ustalenie statusu znajomego została wysłana do $1.
+Jeśli $1 ją potwierdzi, otrzymasz powiadomienie e-mail',
 	'ur-add-error-message-no-user' => 'Użytkownik, którego próbujesz dodać, nie istnieje.',
 	'ur-add-error-message-blocked' => 'Jesteś zablokowany i nie możesz dodawać nowych znajomych i wrogów.',
 	'ur-add-error-message-yourself' => 'Nie możesz dodać samego siebie jako przyjaciela lub wroga.',
 	'ur-add-error-message-existing-relationship-foe' => 'Jesteście już wrogami z $1.',
 	'ur-add-error-message-existing-relationship-friend' => 'Jesteście już przyjaciółmi z $1.',
 	'ur-add-error-message-pending-request-title' => 'Cierpliwości!',
-	'ur-add-error-message-pending-friend-request' => 'Wysłałeś prośbę o status znajomego do $1.
-Powiadomimy Cię, kiedy $1 potwierdzi prośbę.',
-	'ur-add-error-message-pending-foe-request' => 'Wysłałeś prośbę o status wroga do $1.
-Powiadomimy Cię, kiedy $1 potwierdzi prośbę.',
+	'ur-add-error-message-pending-friend-request' => 'Wysłałeś prośbę o nawiązanie znajomości z $1.
+Powiadomimy Cię, jeśli $1 wyrazi zgodę.',
+	'ur-add-error-message-pending-foe-request' => 'Wysłałeś prośbę o ustalenie statusu wroga z $1.
+Powiadomimy Cię, jeśli $1 potwierdzi prośbę.',
 	'ur-add-error-message-not-loggedin-foe' => 'Żeby dodać wroga musisz być zalogowany',
 	'ur-add-error-message-not-loggedin-friend' => 'Żeby dodać przyjaciela musisz być zalogowany',
 	'ur-requests-title' => 'Nawiązanie znajomości',
@@ -4755,7 +4762,7 @@ Jeśli chcesz mieć więcej przyjaciół <a href="$1">zaproś ich!</a>',
 	'friend_request_subject' => '$1 dodał Ciebie do swoich przyjaciół na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
 	'friend_request_body' => 'Cześć $1.
 
-$2 dodał Cię jako znajomego na {{SITENAME}}. Chcemy się upewnić, czy rzeczywiście jesteście znajomymi.
+$2 chce nawiązać z Tobą znajomość na {{GRAMMAR:MS.lp|{{SITENAME}}}}. Chcemy się upewnić, czy rzeczywiście jesteście znajomymi.
 
 Proszę kliknąć poniżej, żeby potwierdzić znajomość:
 $3
@@ -4764,7 +4771,7 @@ Dziękujemy
 
 ---
 
-Hej, nie chcesz już od nas maili?
+Nie chcesz już od nas maili?
 
 Kliknij $4
 i zmień swoje ustawienia, wyłączając powiadomienia e-mail.',

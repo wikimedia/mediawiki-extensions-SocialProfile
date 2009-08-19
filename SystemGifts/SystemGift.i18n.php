@@ -593,6 +593,33 @@ $messages['el'] = array(
 	'right-awardsmanage' => 'Δημιουργία νέων και επεξεργασία υπάρχοντων βραβείων',
 );
 
+/** Esperanto (Esperanto)
+ * @author Yekrats
+ */
+$messages['eo'] = array(
+	'ga-addnew' => '+ Aldoni novan donacon',
+	'ga-back-gift-list' => 'Reiri al donaclisto',
+	'ga-choosefile' => 'Elekti dosieron:',
+	'ga-count' => '$1 havas $2 {{PLURAL:$2|premion|premiojn}}.',
+	'ga-create-gift' => 'Krei donacon',
+	'ga-created' => 'La donaco estis kreita',
+	'ga-currentimage' => 'Nuna bildo',
+	'ga-gift' => 'donaco',
+	'ga-gift-title' => '"$2" de $1',
+	'ga-gifttype' => 'donaca speco',
+	'ga-large' => 'Granda',
+	'ga-medium' => 'Meza',
+	'ga-mediumlarge' => 'Mezgranda',
+	'ga-new' => 'Nova',
+	'ga-next' => 'Poste',
+	'ga-previous' => 'Antaŭe',
+	'ga-saved' => 'La donaco estis konservita',
+	'ga-small' => 'Malgranda',
+	'ga-title' => 'Premioj de $1',
+	'ga-uploadsuccess' => 'Alŝtuo sukcesis',
+	'ga-viewlist' => 'Vidi donacan liston',
+);
+
 /** Spanish (Español)
  * @author Crazymadlover
  */
@@ -684,6 +711,7 @@ $messages['eu'] = array(
 );
 
 /** Finnish (Suomi)
+ * @author Crt
  * @author Jack Phoenix
  */
 $messages['fi'] = array(
@@ -710,7 +738,7 @@ $messages['fi'] = array(
 	'ga-gifttype' => 'lahjan tyyppi',
 	'ga-goback' => 'Palaa takaisin',
 	'ga-imagesbelow' => 'Alapuolella ovat kuvasi, joita käytetään sivustolla',
-	'ga-img' => 'lisää/korvaa kuva',
+	'ga-img' => 'lisää tai korvaa kuva',
 	'ga-large' => 'Suuri',
 	'ga-medium' => 'Keskikokoinen',
 	'ga-mediumlarge' => 'Keskikokoinen - suuri',
@@ -724,7 +752,7 @@ $messages['fi'] = array(
 	'ga-title' => 'Käyttäjän $1 palkinnot',
 	'ga-uploadsuccess' => 'Tallentaminen onnistui',
 	'ga-viewlist' => 'Katso lahjalista',
-	'system_gift_received_subject' => 'Olet saanut $1-palkinnon {{GRAMMAR:inessive|{{SITENAME}}}}!',
+	'system_gift_received_subject' => 'Olet saanut palkinnon $1 {{GRAMMAR:inessive|{{SITENAME}}}}!',
 	'system_gift_received_body' => 'Hei $1:
 
 Olet juuri saanut $2-palkinnon {{GRAMMAR:inessive|{{SITENAME}}}}!

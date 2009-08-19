@@ -85,6 +85,7 @@ $messages['af'] = array(
 	'top-fans-points' => 'punte',
 	'top-fans-bad-field-title' => 'Oeps!',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Stem|Stemme}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Opmerking|Opmerkings}}',
 );
 
 /** Amharic (አማርኛ)
@@ -524,7 +525,11 @@ $messages['el'] = array(
  * @author Yekrats
  */
 $messages['eo'] = array(
+	'user-stats-alltime-title' => 'Ĉiame plej granda poentaro',
+	'user-stats-weekly-title' => 'Plej granda poentaro ĉi-semajne',
+	'user-stats-monthly-title' => 'Plej granda poentaro ĉi-monate',
 	'topusers' => 'Plej aktivaj uzantoj',
+	'top-fans-by-points-nav-header' => 'Plej bonaj fervoruloj',
 	'top-fans-by-category-nav-header' => 'Plej altaj laŭ kategorio',
 	'top-fans-total-points-link' => 'Tutaj poentoj',
 	'top-fans-weekly-points-link' => 'Poentoj dum ĉi tiu semajno',

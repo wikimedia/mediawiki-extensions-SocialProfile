@@ -147,6 +147,13 @@ $messages['qqq'] = array(
 	'right-giftadmin' => '{{doc-right|giftadmin}}',
 );
 
+/** Afrikaans (Afrikaans)
+ * @author Naudefj
+ */
+$messages['af'] = array(
+	'g-cancel' => 'Kanselleer',
+);
+
 /** Arabic (العربية)
  * @author Ciphers
  * @author Meno25
@@ -898,6 +905,49 @@ $messages['el'] = array(
 	'right-giftadmin' => 'Δημιουργία νέων και υπάρχοντων δώρων',
 );
 
+/** Esperanto (Esperanto)
+ * @author Yekrats
+ */
+$messages['eo'] = array(
+	'giftmanager' => 'Donaca administrilo',
+	'giftmanager-addgift' => '+ Aldoni novan donacon',
+	'giftmanager-giftcreated' => 'La donaco estis kreita',
+	'giftmanager-giftsaved' => 'La donaco estis konservita',
+	'giftmanager-public' => 'publika',
+	'giftmanager-private' => 'privata',
+	'g-choose-file' => 'Elekti dosieron:',
+	'g-cancel' => 'Nuligi',
+	'g-count' => '$1 havas $2 {{PLURAL:$2|donacon|donacojn}}.',
+	'g-create-gift' => 'Krei donacon',
+	'g-created-by' => 'kreita de',
+	'g-current-image' => 'Nuna bildo',
+	'g-description-title' => 'Donaco "$2" de $1',
+	'g-gift' => 'donaco',
+	'g-gift-name' => 'donaca nomo',
+	'g-give-all-message-title' => 'Aldoni mesaĝon',
+	'g-give-all-title' => 'Donaci donacon al $1',
+	'g-give-list-select' => 'elekti amikon',
+	'g-give-separator' => 'aŭ',
+	'g-go-back' => 'Retroiri',
+	'g-large' => 'Granda',
+	'g-list-title' => 'Donaclisto de $1',
+	'g-main-page' => 'Ĉefa paĝo',
+	'g-medium' => 'Meza',
+	'g-mediumlarge' => 'Mezgranda',
+	'g-new' => 'nova',
+	'g-next' => 'Poste',
+	'g-previous' => 'Antaŭe',
+	'g-remove' => 'Forigi',
+	'g-remove-gift' => 'Forigi ĉi tiun donacon',
+	'g-remove-title' => 'Ĉu forigi "$1"?',
+	'g-send-gift' => 'Sendi donacon',
+	'g-select-a-friend' => 'elekti amikon',
+	'g-small' => 'Malgranda',
+	'g-uploadsuccess' => 'Alŝuto sukcesis',
+	'g-viewgiftlist' => 'Vidi donacliston',
+	'g-your-profile' => 'Via profilo',
+);
+
 /** Spanish (Español)
  * @author Crazymadlover
  */
@@ -1083,7 +1133,8 @@ $messages['fi'] = array(
 	'g-create-gift' => 'Luo lahja',
 	'g-created-by' => 'tehnyt',
 	'g-current-image' => 'Nykyinen kuva',
-	'g-delete-message' => 'Oletko varma, että haluat poistaa lahjan "$1"? Tämä poistaa sen myös käyttäjiltä, jotka ovat saattaneet saada sen.',
+	'g-delete-message' => 'Oletko varma, että haluat poistaa lahjan ”$1”?
+Tämä poistaa sen myös käyttäjiltä, jotka ovat saattaneet saada sen.',
 	'g-description-title' => 'Käyttäjän $1 lahja ”$2”',
 	'g-error-do-not-own' => 'Et omista tätä lahjaa.',
 	'g-error-message-blocked' => 'Olet tällä hetkellä muokkauseston alaisena etkä voi antaa lahjoja',
@@ -2441,9 +2492,37 @@ og endra innstillingane dine for å slå av e-postmeldingar.',
 
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Nghtwlkr
+ * @author Simny
  */
 $messages['no'] = array(
+	'giftmanager-giftimage' => 'gavebilde',
 	'g-add-message' => 'Legg til en melding',
+	'g-cancel' => 'Avbryt',
+	'g-give-all-title' => 'Gi en gave til $1',
+	'g-new' => 'ny',
+	'g-select-a-friend' => 'velg en venn',
+	'g-to-another' => 'Gi til noen andre',
+	'g-your-profile' => 'Profilen din',
+	'gift_received_body' => 'Hei $1.
+
+$2 sendte deg akkurat $3-gava på {{SITENAME}}.
+
+Vil du lese det som $2 skrev til deg og se gaven din? Klikk på linken under:
+
+$4
+
+Vi håper at du vil like den!
+
+Takk,
+
+{{SITENAME}}-laget
+
+---
+
+Vil du ikke lenger motta e-poster fra oss?
+
+Klikk på $5
+og forandre på dine instillinger for å slå av e-postmeldinger.',
 );
 
 /** Occitan (Occitan)
@@ -3571,6 +3650,15 @@ $messages['vep'] = array(
  */
 $messages['vi'] = array(
 	'g-cancel' => 'Hủy bỏ',
+);
+
+/** Simplified Chinese (‪中文(简体)‬)
+ * @author Liangent
+ */
+$messages['zh-hans'] = array(
+	'giftmanager-access' => '礼品访问',
+	'giftmanager-giftimage' => '礼品图像',
+	'giftmanager-public' => '公共的',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)
