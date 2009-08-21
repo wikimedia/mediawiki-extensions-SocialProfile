@@ -1646,6 +1646,16 @@ $messages['ro'] = array(
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
+	'user-stats-alltime-title' => 'Cchiù punde da sembre',
+	'user-stats-weekly-title' => 'Cchiù punde pe sta sumane',
+	'user-stats-monthly-title' => 'Cchiù punde stu mese',
+	'topusers' => 'Le megghie utinde',
+	'top-fans-by-points-nav-header' => 'Le megghie tefuse',
+	'top-fans-by-category-nav-header' => 'Le megghie pe categorije',
+	'top-fans-total-points-link' => 'Punde totale',
+	'top-fans-weekly-points-link' => 'Punde pe sta sumane',
+	'top-fans-monthly-points-link' => 'Punde pe stu mese',
+	'top-fans-points' => 'punde',
 	'top-fans-bad-field-title' => "Ohhhhh! C'è scritte!",
 	'top-fans-stats-vote-count' => "{{PLURAL:$1|'u Vote|le Vote}}",
 	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|vingita menzile|vingite menzile}}',

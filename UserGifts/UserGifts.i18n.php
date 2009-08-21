@@ -1559,10 +1559,11 @@ un ändere Dyyni Yystellige go d E-Mail-Benochrichtigunge verhindere.',
 );
 
 /** Hebrew (עברית)
+ * @author Rotemliss
  * @author YaronSh
  */
 $messages['he'] = array(
-	'giftmanager' => 'מנהל המתנות',
+	'giftmanager' => 'מנהל מתנות',
 	'giftmanager-addgift' => '+ הוספת מתנה חדשה',
 	'giftmanager-access' => 'גישה למתנה',
 	'giftmanager-description' => 'תיאור המתנה',
@@ -1572,11 +1573,11 @@ $messages['he'] = array(
 	'giftmanager-giftsaved' => 'המתנה נשמרה',
 	'giftmanager-public' => 'ציבורי',
 	'giftmanager-private' => 'פרטי',
-	'giftmanager-view' => 'צפייה ברשימת המתנות',
+	'giftmanager-view' => 'צפיה ברשימת המתנות',
 	'g-add-message' => 'הוספת הודעה',
 	'g-back-edit-gift' => 'חזרה לעריכת מתנה זו',
 	'g-back-gift-list' => 'חזרה לרשימת המתנות',
-	'g-back-link' => 'חזרה לדף של $1 >',
+	'g-back-link' => '< חזרה לדף של $1',
 	'g-choose-file' => 'בחירת קובץ:',
 	'g-cancel' => 'ביטול',
 	'g-count' => 'ל־$1 יש {{PLURAL:$2|מתנה אחת|$2 מתנות}}.',
@@ -1584,22 +1585,23 @@ $messages['he'] = array(
 	'g-created-by' => 'נוצרה על ידי',
 	'g-current-image' => 'התמונה הנוכחית',
 	'g-delete-message' => 'האם אתם בטוחים שברצונכם למחוק את המתנה "$1"?
-פעולה זו תמחק את המתנה מהמשתמשים שקיבלו אותה.',
+פעולה זו תמחק את המתנה גם מהמשתמשים שקיבלו אותה.',
 	'g-description-title' => 'המתנה של $1 "$2"',
 	'g-error-do-not-own' => 'אינכם הבעלים של מתנה זו.',
 	'g-error-message-blocked' => 'הינכם חסומים ואינכם יכולים להעניק מתנות',
 	'g-error-message-invalid-link' => 'הקישור שכתבתם אינו תקין.',
-	'g-error-message-login' => 'עליכם לבצע כניסה כדי להעניק מתנות',
+	'g-error-message-login' => 'עליכם להיכנס לחשבון כדי להעניק מתנות',
 	'g-error-message-no-user' => 'המשתמש בו אתם מנסים לצפות אינו קיים.',
-	'g-error-message-to-yourself' => 'לא תוכלו להעניק מתנה לעצמכם.',
-	'g-error-title' => 'אופס, טעות בפנייה!',
-	'g-file-instructions' => 'על תמונתכם להיות מסוג jpeg, png או gif (לא מונפש), ועליה להיות קטנה מ־100 קילובתים.',
+	'g-error-message-to-yourself' => 'אינכם יכולים להעניק מתנה לעצמכם.',
+	'g-error-title' => 'אופס, טעות בפניה!',
+	'g-file-instructions' => 'על תמונתכם להיות מסוג jpeg, png או gif (לא מונפש), ועליה להיות קטנה מ־100 קילו־בייט.',
 	'g-from' => 'מ־<a href="$1">$2</a>',
 	'g-gift' => 'מתנה',
 	'g-gift-name' => 'שם המתנה',
 	'g-give-gift' => 'הענקת מתנה',
-	'g-give-all' => 'האם אתם מעוניינים לתת ל־$1 מתנה?
-פשוט לחצו על אחת מהמתנות שלהלן ובחרו ב"שליחת מתנה".',
+	'g-give-all' => 'מעוניינים לתת ל־$1 מתנה?
+פשוט לחצו על אחת מהמתנות שלהלן ולחצו על "שליחת מתנה".
+זה עד כדי כך קל.',
 	'g-give-all-message-title' => 'הוספת הודעה',
 	'g-give-all-title' => 'הענקת מתנה ל־$1',
 	'g-give-enter-friend-title' => 'אם אתם יודעים את שם המשתמש, הקלידו אותו בתיבה שלהלן',
@@ -1609,10 +1611,10 @@ $messages['he'] = array(
 	'g-give-separator' => 'או',
 	'g-give-no-user-message' => 'מתנות ופרסים הינן דרך מעולה להוקיר את חבריכם!',
 	'g-give-no-user-title' => 'למי ברצונכם לתת את המתנה הזו?',
-	'g-give-to-user-title' => 'האם לשלוח את המתנה "$1" אל $2',
+	'g-give-to-user-title' => 'שליחת המתנה "$1" ל־$2',
 	'g-give-to-user-message' => 'מעוניינים להעניק ל־$1 <a href="$2">מתנה אחרת</a>?',
-	'g-go-back' => 'חזרה אחורה',
-	'g-imagesbelow' => 'להלן תמונותיכם בהן יעשה שימוש באתר.',
+	'g-go-back' => 'חזרה',
+	'g-imagesbelow' => 'להלן תמונותיכם בהן ייעשה שימוש באתר',
 	'g-large' => 'גדולה',
 	'g-list-title' => 'רשימת המתנות של $1',
 	'g-main-page' => 'הדף הראשי',
@@ -1630,34 +1632,34 @@ $messages['he'] = array(
 	'g-remove-title' => 'האם להסיר את "$1"?',
 	'g-send-gift' => 'שליחת מתנה',
 	'g-select-a-friend' => 'בחירת חבר',
-	'g-sent-title' => 'שלחתם מתנה אל $1',
-	'g-sent-message' => 'שלחתם את המתנה הבאה אל $1.',
+	'g-sent-title' => 'שלחתם מתנה ל־$1',
+	'g-sent-message' => 'שלחתם את המתנה הבאה ל־$1.',
 	'g-small' => 'קטנה',
 	'g-to-another' => 'העניקו למישהו אחר',
 	'g-uploadsuccess' => 'ההעלאה הושלמה',
-	'g-viewgiftlist' => 'צפייה ברשימת המתנות',
-	'g-your-profile' => 'הפרופיל האישי',
-	'gift_received_subject' => 'המתנה $2 נשלחה אליך מ־$1 ב{{grammar:תחילית|{{SITENAME}}}}',
+	'g-viewgiftlist' => 'צפיה ברשימת המתנות',
+	'g-your-profile' => 'הפרופיל שלך',
+	'gift_received_subject' => 'המתנה $2 נשלחה אליך מאת $1 ב{{grammar:תחילית|{{SITENAME}}}}!',
 	'gift_received_body' => 'היי $1.
 
-נשלחה אליכם מתנת $3 מ$2 ב{{grammar:תחילית|{{SITENAME}}}}.
+כרגע נשלחה אליכם המתנה $3 מ$2 ב{{grammar:תחילית|{{SITENAME}}}}.
 
-מעוניינים לקרוא את ההערה שנכתבה על ידי $2 ולצפות במתנה שלכם? לחצו על הקישור שלהלן
+מעוניינים לקרוא את ההערה שנכתבה על ידי $2 ולצפות במתנה שלכם? לחצו על הקישור שלהלן:
 
 $4
 
 אנו מקווים שתאהבו אותה!
 
-רב תודות,
+תודה,
 
 צוות {{SITENAME}}
 
 ---
 
-היי, מעוניינים להפסיק לקבל מאיתנו הודעות בדוא"ל?
+היי, מעוניינים להפסיק לקבל מאיתנו הודעות דוא"ל?
 
 לחצו על $5
-ושנו את הגדרותיכם לביטול התרעות בדוא"ל',
+ושנו את הגדרותיכם כדי לבטל הודעות בדוא"ל.',
 	'right-giftadmin' => 'יצירת מתנות חדשות ועריכת מתנות קיימות',
 );
 

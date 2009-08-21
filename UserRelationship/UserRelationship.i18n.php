@@ -4776,79 +4776,80 @@ Nie chcesz już od nas maili?
 Kliknij $4
 i zmień swoje ustawienia, wyłączając powiadomienia e-mail.',
 	'foe_request_subject' => 'Wojna! $1 dodał Cię do wrogów na {{GRAMMAR:MS.lp|{{sitename}}}}!',
-	'foe_request_body' => 'Cześć $1.
+	'foe_request_body' => 'Witaj $1.
 
-$2 dodał Cię jako wroga na {{SITENAME}}. Chcemy się upewnić, czy rzeczywiście jesteście śmiertelnymi wrogami lub przynajmniej skłóceni.
+$2 oznaczył Cię jako swojego wroga na {{GRAMMAR:MS.lp|{{SITENAME}}}}. Chcemy się upewnić, czy rzeczywiście jesteście śmiertelnymi wrogami lub przynajmniej skłóceni.
 
-Proszę kliknąć poniżej, żeby potwierdzić wrogość:
+Proszę kliknąć poniżej, aby potwierdzić.
+
 $3
 
 Dziękujemy
 
 ---
 
-Hej, nie chcesz już od nas maili?
+Nie chcesz już od nas maili?
 
 Kliknij $4
 i zmień swoje ustawienia, wyłączając powiadomienia e-mail.',
-	'friend_accept_subject' => '$1 zaakceptował Twoją prośbę o status znajomego na {{SITENAME}}!',
-	'friend_accept_body' => 'Cześć $1.
+	'friend_accept_subject' => '$1 zaakceptował Twoją prośbę o nawiązanie znajomości na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
+	'friend_accept_body' => 'Witaj $1.
 
-$2 zaakceptował Twoją prośbę o status znajomego na {{SITENAME}}!
+$2 zaakceptował Twoją prośbę o nawiązanie znajomości na {{GRAMMAR:MS.lp|{{SITENAME}}}}!
 
-Obejrzyj stronę $2 na $3
+Zobacz stronę $2 na $3
 
 Dziękujemy,
 
 ---
 
-Hej, nie chcesz już od nas maili?
+Nie chcesz otrzymywać od nas maili?
 
 Kliknij $4
-i zmień swoje ustawienia, wyłączając powiadomienia e-mail.',
-	'foe_accept_subject' => '$1 zaakceptował Twoją prośbę o status wroga na {{SITENAME}}!',
-	'foe_accept_body' => 'Cześć $1.
+i zmień ustawienia, wyłączając powiadomienia e-mail.',
+	'foe_accept_subject' => '$1 zaakceptował Twoją prośbę o status wroga na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
+	'foe_accept_body' => 'Witaj $1.
 
-$2 zaakceptował Twoją prośbę o status wroga na {{SITENAME}}!
+$2 zaakceptował Twoją prośbę o status wroga na {{GRAMMAR:MS.lp|{{SITENAME}}}}!
 
-Obejrzyj stronę $2 na $3
+Zobacz stronę $2 na $3
 
-Dziękujemy,
+Dziękujemy
 
 ---
 
-Hej, nie chcesz już od nas maili?
+Nie chcesz otrzymywać od nas maili?
 
 Kliknij $4
-i zmień swoje ustawienia, wyłączając powiadomienia e-mail.',
+i zmień ustawienia, wyłączając powiadomienia e-mail.',
 	'friend_removed_subject' => 'Och nie! $1 usunął Cię z listy przyjaciół na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
-	'friend_removed_body' => 'Cześć $1.
+	'friend_removed_body' => 'Witaj $1.
 
-$2 usunął Cię z listy znajomych na {{SITENAME}}!
+$2 usunął Cię z listy znajomych na {{GRAMMAR:MS.lp|{{SITENAME}}}}!
 
-Dziękujemy,
+Dziękujemy
 
 ---
 
-Hej, nie chcesz już od nas maili?
+Nie chcesz otrzymywać od nas maili?
 
 Kliknij $4
-i zmień swoje ustawienia, wyłączając powiadomienia e-mail.',
-	'foe_removed_subject' => 'Hej! $1 usunął Cię z listy wrogów na {{SITENAME}}!',
-	'foe_removed_body' => 'Cześć $1.
+i zmień ustawienia, wyłączając powiadomienia e-mail.',
+	'foe_removed_subject' => 'Hej! $1 usunął Cię z listy wrogów na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
+	'foe_removed_body' => 'Witaj $1.
 
-$2 usunął Cię z listy wrogów na {{SITENAME}}!
+$2 usunął Cię z listy wrogów na {{GRAMMAR:MS.lp|{{SITENAME}}}}!
 
 Może zostaniecie przyjaciółmi?
 
-Dziękujemy,
+Dziękujemy
 
 ---
 
-Hej, nie chcesz już od nas maili?
+Nie chcesz otrzymywać od nas maili?
 
 Kliknij $4
-i zmień swoje ustawienia, wyłączając powiadomienia e-mail.',
+i zmień ustawienia, wyłączając powiadomienia e-mail.',
 );
 
 /** Pashto (پښتو)
