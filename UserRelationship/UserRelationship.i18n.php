@@ -236,6 +236,8 @@ $messages['niu'] = array(
  */
 $messages['af'] = array(
 	'ur-main-page' => 'Tuisblad',
+	'ur-add-friend' => 'As vriend byvoeg',
+	'ur-add-foe' => 'Voeg by as teenstander',
 	'ur-previous' => 'vorige',
 	'ur-next' => 'volgende',
 	'ur-remove' => 'Skrap',

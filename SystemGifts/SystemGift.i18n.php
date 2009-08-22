@@ -91,6 +91,14 @@ $messages['qqq'] = array(
 	'right-awardsmanage' => '{{doc-right|awardsmanage}}',
 );
 
+/** Afrikaans (Afrikaans)
+ * @author Naudefj
+ */
+$messages['af'] = array(
+	'ga-medium' => 'Middelmatig',
+	'ga-small' => 'Klein',
+);
+
 /** Arabic (العربية)
  * @author Meno25
  * @author OsamaK

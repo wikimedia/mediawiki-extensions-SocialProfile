@@ -152,6 +152,8 @@ $messages['qqq'] = array(
  */
 $messages['af'] = array(
 	'g-cancel' => 'Kanselleer',
+	'g-medium' => 'Middelmatig',
+	'g-small' => 'Klein',
 );
 
 /** Arabic (العربية)

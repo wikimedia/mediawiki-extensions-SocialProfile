@@ -525,18 +525,26 @@ $messages['akz'] = array(
 $messages['af'] = array(
 	'user-time-ago' => '$1 gelede',
 	'user-count-separator' => '$1 van $2',
+	'user-add-friend' => 'As vriend byvoeg',
+	'user-add-foe' => 'Voeg by as teenstander',
 	'other-info-title' => 'Ander inligting',
+	'other-info-movies' => 'Films',
 	'other-info-music' => 'Musiek',
+	'other-info-books' => 'Boeke',
 	'other-info-magazines' => 'Tydskrifte',
+	'custom-info-title' => 'Vrye inligting',
 	'user-personal-info-title' => 'Persoonlike inligting',
 	'user-personal-info-real-name' => 'Regte naam',
 	'user-personal-info-hometown' => 'Woonplek',
+	'user-personal-info-birthday' => 'Verjaarsdag',
 	'user-personal-info-occupation' => 'Beroep',
 	'user-personal-info-websites' => 'Webwerwe',
+	'user-personal-info-about-me' => 'Oor my',
 	'user-profile-default-country' => 'Verenigde State',
 	'user-profile-points' => '$1 punte',
 	'user-profile-section-personal' => 'Persoonlike inligting',
 	'user-profile-section-interests' => 'Ander inligting',
+	'user-profile-section-picture' => 'Avatar',
 	'user-profile-personal-info' => 'Inligting',
 	'user-profile-personal-name' => 'Naam',
 	'user-profile-personal-email' => 'E-pos',
@@ -571,6 +579,7 @@ $messages['af'] = array(
 	'user-profile-picture-medium' => 'Medium',
 	'user-profile-picture-small' => 'Klein',
 	'user-profile-goback' => 'Terug',
+	'user-profile-picture-log' => 'avatar',
 );
 
 /** Amharic (አማርኛ)
@@ -5367,6 +5376,8 @@ $messages['lb'] = array(
 	'user-recent-activity-network-update' => 'Huet eng Iwwerleeung verëfentlecht',
 	'user-recent-system-gift' => 'Huet e Präis kritt',
 	'user-profile-update-notloggedin-title' => 'Dir kënnt äre Profil net änneren wann dir net ageloggt sidd',
+	'user-profile-update-notloggedin-text' => 'Dir kënnt Äre Profil net änneren wann dir net ageloggt sidd.
+Klickt <a href="$1">hei</a> fir Iech anzeloggen oder klickt <a href="$2">hei</a> Fir Iech unzemellen.',
 	'user-profile-update-saved' => 'Äre Profil gouf ofgespäichert',
 	'user-profile-update-log-section' => 'Abschnitt änneren',
 	'user-profile-update-profile' => 'Profil',

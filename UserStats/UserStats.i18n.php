@@ -550,17 +550,22 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Antur
  * @author Crazymadlover
  * @author Imre
  * @author Sanbec
  */
 $messages['es'] = array(
+	'user-stats-weekly-title' => 'Mayor puntaje semanal',
+	'user-stats-monthly-title' => 'Mayor puntaje mensual',
 	'topusers' => 'Usuarios top',
 	'top-fans-by-points-nav-header' => 'Fans top',
+	'top-fans-by-category-nav-header' => 'Máximo por categoría',
 	'top-fans-total-points-link' => 'Puntos totales',
 	'top-fans-weekly-points-link' => 'Puntos esta semana',
 	'top-fans-monthly-points-link' => 'Puntos este mes',
 	'top-fans-points' => 'puntos',
+	'top-fans-by-category-title' => 'Máximo general $1',
 	'top-fans-bad-field-title' => 'Oops!',
 	'top-fans-bad-field-message' => 'La estadística especificada no existe.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Voto|Votos}}',
