@@ -3667,6 +3667,9 @@ $messages['vi'] = array(
  */
 $messages['yi'] = array(
 	'g-give-separator' => 'אדער',
+	'g-large' => 'גרויס',
+	'g-main-page' => 'הויפט בלאט',
+	'g-new' => 'נײַ',
 );
 
 /** Simplified Chinese (‪中文(简体)‬)

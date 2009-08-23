@@ -5098,11 +5098,20 @@ $messages['km'] = array(
  * @author Nayvik
  */
 $messages['kn'] = array(
+	'other-info-music' => 'ಸಂಗೀತ',
 	'other-info-books' => 'ಪುಸ್ತಕಗಳು',
+	'user-personal-info-occupation' => 'ವೃತ್ತಿ',
 	'user-personal-info-about-me' => 'ನನ್ನ ಬಗ್ಗೆ',
+	'user-profile-personal-info' => 'ಮಾಹಿತಿ',
 	'user-profile-personal-name' => 'ಹೆಸರು',
+	'user-profile-personal-email' => 'ಇ-ಅಂಚೆ',
 	'user-profile-personal-city' => 'ನಗರ',
 	'user-profile-personal-country' => 'ದೇಶ',
+	'user-profile-personal-aboutme' => 'ನನ್ನ ಬಗ್ಗೆ',
+	'user-profile-personal-occupation' => 'ವೃತ್ತಿ',
+	'user-profile-personal-education' => 'ಶಿಕ್ಷಣ',
+	'user-profile-interests-entertainment' => 'ಮನೋರಂಜನೆ',
+	'user-profile-interests-music' => 'ಸಂಗೀತ',
 );
 
 /** Krio (Krio)
