@@ -525,8 +525,10 @@ $messages['akz'] = array(
 $messages['af'] = array(
 	'user-time-ago' => '$1 gelede',
 	'user-count-separator' => '$1 van $2',
+	'user-watchlist' => 'My dophoulys',
 	'user-add-friend' => 'As vriend byvoeg',
 	'user-add-foe' => 'Voeg by as teenstander',
+	'user-stats-title' => 'Statistieke',
 	'other-info-title' => 'Ander inligting',
 	'other-info-movies' => 'Films',
 	'other-info-music' => 'Musiek',
@@ -539,12 +541,15 @@ $messages['af'] = array(
 	'user-personal-info-birthday' => 'Verjaarsdag',
 	'user-personal-info-occupation' => 'Beroep',
 	'user-personal-info-websites' => 'Webwerwe',
+	'user-personal-info-places-lived' => 'Plekke waar ek gewoon het',
+	'user-personal-info-schools' => 'Skole',
 	'user-personal-info-about-me' => 'Oor my',
 	'user-profile-default-country' => 'Verenigde State',
 	'user-profile-points' => '$1 punte',
 	'user-profile-section-personal' => 'Persoonlike inligting',
 	'user-profile-section-interests' => 'Ander inligting',
 	'user-profile-section-picture' => 'Avatar',
+	'user-profile-section-preferences' => 'Voorkeure',
 	'user-profile-personal-info' => 'Inligting',
 	'user-profile-personal-name' => 'Naam',
 	'user-profile-personal-email' => 'E-pos',
@@ -7811,7 +7816,7 @@ $messages['sk'] = array(
 	'right-avatarremove' => 'Odstrániť fotografie používateľa',
 );
 
-/** Serbian Cyrillic ekavian (ћирилица)
+/** Serbian Cyrillic ekavian (Српски (ћирилица))
  * @author Sasa Stefanovic
  * @author Михајло Анђелковић
  */
@@ -7964,7 +7969,7 @@ $messages['sr-ec'] = array(
 	'right-avatarremove' => 'Брисање корисничких аватара',
 );
 
-/** latinica (latinica)
+/** Serbian Latin ekavian (Srpski (latinica))
  * @author Michaello
  */
 $messages['sr-el'] = array(
@@ -9248,6 +9253,7 @@ $messages['vo'] = array(
  * @author פוילישער
  */
 $messages['yi'] = array(
+	'user-count-separator' => '$1 פֿון $2',
 	'user-profile-section-preferences' => 'פרעפֿערענצן',
 );
 

@@ -95,7 +95,11 @@ $messages['qqq'] = array(
  * @author Naudefj
  */
 $messages['af'] = array(
+	'ga-large' => 'Groot',
 	'ga-medium' => 'Middelmatig',
+	'ga-new' => 'Nuut',
+	'ga-next' => 'Volgende',
+	'ga-previous' => 'Vorige',
 	'ga-small' => 'Klein',
 );
 
@@ -1687,7 +1691,7 @@ $messages['oc'] = array(
 	'ga-giftname' => 'nom del present',
 	'ga-gifttype' => 'tipe del present',
 	'ga-goback' => 'Tornar',
-	'ga-imagesbelow' => 'Los imatges que seràn utilizats sus aquel sit son afichats çaijós',
+	'ga-imagesbelow' => 'Los imatges que seràn utilizats sus aquel site son afichats çaijós',
 	'ga-img' => "apondre / modificar l'imatge",
 	'ga-large' => 'Grand',
 	'ga-medium' => 'Mejan',
@@ -2113,7 +2117,7 @@ a zmeňte svoje nastavenia týkajúce sa upozornení emailom.',
 	'right-awardsmanage' => 'Vytvárať nové alebo upravovať existujúce ocenenia',
 );
 
-/** Serbian Cyrillic ekavian (ћирилица)
+/** Serbian Cyrillic ekavian (Српски (ћирилица))
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
@@ -2153,7 +2157,7 @@ $messages['sr-ec'] = array(
 	'ga-viewlist' => 'Погледај списак поклона',
 );
 
-/** latinica (latinica)
+/** Serbian Latin ekavian (Srpski (latinica))
  * @author Michaello
  */
 $messages['sr-el'] = array(

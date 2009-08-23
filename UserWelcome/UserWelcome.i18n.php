@@ -47,6 +47,7 @@ $messages['qqq'] = array(
  */
 $messages['af'] = array(
 	'mp-welcome-edit' => 'Wysig',
+	'mp-request-new-message' => 'nuwe boodskap',
 );
 
 /** Amharic (አማርኛ)
@@ -201,6 +202,17 @@ $messages['ca'] = array(
 	'mp-welcome-edit' => 'Edita',
 	'mp-welcome-logged-in' => 'Hola $1',
 	'mp-request-new-message' => 'nou missatge',
+);
+
+/** Sorani (Arabic script) (‫کوردی (عەرەبی)‬)
+ * @author Marmzok
+ */
+$messages['ckb-arab'] = array(
+	'mp-userlevels-link' => 'ئاستەکانی بەکارهێنەر',
+	'mp-welcome-upload' => 'بارکردن',
+	'mp-welcome-edit' => 'دەستکاری کردن',
+	'mp-requests-title' => 'داواکاریەکان',
+	'mp-request-new-message' => 'پەیامی نوێ',
 );
 
 /** Czech (Česky)
@@ -555,7 +567,20 @@ $messages['ia'] = array(
  * @author Bennylin
  */
 $messages['id'] = array(
+	'userwelcome-desc' => 'Menambahkan tag <tt>&lt;welcomeUser&gt;</tt> untuk menampilkan info sosial pengguna kepada pengguna yang masuk log',
+	'mp-userlevels-link' => 'Tingkat pengguna',
+	'mp-welcome-upload' => 'Memuat',
 	'mp-welcome-edit' => 'Sunting',
+	'mp-welcome-points' => '$1 {{PLURAL:$1||}}poin',
+	'mp-welcome-needed-points' => 'Untuk naik menjadi <b><a href="$1">$2</a></b>, perolehlah $3 {{PLURAL:$3||}}poin atau lebih!',
+	'mp-welcome-logged-in' => 'Halo $1',
+	'mp-requests-title' => 'Permintaan',
+	'mp-requests-message' => 'Anda memiliki permintaan yang menunggu.',
+	'mp-request-new-message' => 'pesan baru',
+	'mp-request-new-award' => '$1 {{PLURAL:$1||}}penghargaan baru',
+	'mp-request-new-gift' => '$1 {{PLURAL:$1||}}hadiah baru',
+	'mp-request-new-foe' => '$1 {{PLURAL:$1||}}lawan baru',
+	'mp-request-new-friend' => '$1 {{PLURAL:$1||}}kawan baru',
 );
 
 /** Ido (Ido)
@@ -947,6 +972,15 @@ $messages['ro'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|prieten nou|prieteni noi}}',
 );
 
+/** Tarandíne (Tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'mp-welcome-upload' => 'Careche',
+	'mp-welcome-edit' => 'Cange',
+	'mp-welcome-logged-in' => 'Cià $1',
+);
+
 /** Russian (Русский)
  * @author Ferrer
  * @author Rubin
@@ -991,6 +1025,7 @@ $messages['sa'] = array(
 );
 
 /** Sinhala (සිංහල)
+ * @author දසනැබළයෝ
  * @author නන්දිමිතුරු
  */
 $messages['si'] = array(
@@ -998,8 +1033,8 @@ $messages['si'] = array(
 	'mp-userlevels-link' => 'පරිශීලක මට්ටම්',
 	'mp-welcome-upload' => 'උඩුගත කිරීම',
 	'mp-welcome-edit' => 'සංස්කරණය',
-	'mp-welcome-points' => 'ලකුණු $1',
-	'mp-welcome-needed-points' => '<b><a href="$1">$2</a></b> වෙත උසස් වීමට, තවත් ලකුණු <i>$3</i> ක් උපයා ගන්න!',
+	'mp-welcome-points' => '{{PLURAL:$1|එක් ලකුණක්|ලකුණු $1 ක්}}',
+	'mp-welcome-needed-points' => '<b><a href="$1">$2</a></b> වෙත උසස් වීමට,තවත් <i>$3</i> {{PLURAL:$3|ලකුණක්|ලකුණු ගණනක්}} උපයා ගන්න!',
 	'mp-welcome-logged-in' => 'සැරදේ $1',
 	'mp-requests-title' => 'ඉල්ලීම්',
 	'mp-requests-message' => 'පහත ඉල්ලීම් ඔබ වෙත යොමු වී ඇත.',
@@ -1030,7 +1065,7 @@ $messages['sk'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|nový priateľ|noví priatelia|nových priateľov}}',
 );
 
-/** Serbian Cyrillic ekavian (ћирилица)
+/** Serbian Cyrillic ekavian (Српски (ћирилица))
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
@@ -1047,7 +1082,7 @@ $messages['sr-ec'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|нови пријатељ|нових пријатеља}}',
 );
 
-/** latinica (latinica)
+/** Serbian Latin ekavian (Srpski (latinica))
  * @author Michaello
  */
 $messages['sr-el'] = array(

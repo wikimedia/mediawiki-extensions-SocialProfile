@@ -151,8 +151,14 @@ $messages['qqq'] = array(
  * @author Naudefj
  */
 $messages['af'] = array(
+	'giftmanager-private' => 'privaat',
 	'g-cancel' => 'Kanselleer',
+	'g-large' => 'Groot',
+	'g-main-page' => 'Tuisblad',
 	'g-medium' => 'Middelmatig',
+	'g-new' => 'nuut',
+	'g-next' => 'Volgende',
+	'g-previous' => 'Vorige',
 	'g-small' => 'Klein',
 );
 
@@ -2581,7 +2587,7 @@ $messages['oc'] = array(
 	'g-give-to-user-title' => 'Mandar lo present « $1 » a $2',
 	'g-give-to-user-message' => 'Enveja de donar un present diferent <a href="$2">un present diferent</a> a $1 ?',
 	'g-go-back' => 'Tornar',
-	'g-imagesbelow' => 'Los imatges que seràn utilizats sul sit son afichats çaijós',
+	'g-imagesbelow' => 'Los imatges que seràn utilizats sul site son afichats çaijós',
 	'g-large' => 'Grand',
 	'g-list-title' => 'Lista dels presents de $1',
 	'g-main-page' => 'Acuèlh',
@@ -3244,7 +3250,7 @@ $messages['sl'] = array(
 	'g-created-by' => 'ustvaril',
 );
 
-/** Serbian Cyrillic ekavian (ћирилица)
+/** Serbian Cyrillic ekavian (Српски (ћирилица))
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
@@ -3654,6 +3660,13 @@ $messages['vep'] = array(
  */
 $messages['vi'] = array(
 	'g-cancel' => 'Hủy bỏ',
+);
+
+/** Yiddish (ייִדיש)
+ * @author פוילישער
+ */
+$messages['yi'] = array(
+	'g-give-separator' => 'אדער',
 );
 
 /** Simplified Chinese (‪中文(简体)‬)

@@ -5660,7 +5660,7 @@ Kliknite na $4
 a vypnite upozornenia emailov vo svojich nastaveniach.',
 );
 
-/** Serbian Cyrillic ekavian (ћирилица)
+/** Serbian Cyrillic ekavian (Српски (ћирилица))
  * @author Sasa Stefanovic
  * @author Михајло Анђелковић
  */
@@ -5713,7 +5713,7 @@ $messages['sr-ec'] = array(
 	'ur-title-friend' => 'Списак пријатеља за $1',
 );
 
-/** latinica (latinica)
+/** Serbian Latin ekavian (Srpski (latinica))
  * @author Michaello
  */
 $messages['sr-el'] = array(

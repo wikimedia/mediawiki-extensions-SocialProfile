@@ -177,6 +177,20 @@ $messages['he'] = array(
 	'yui-desc' => 'ערכת כלים ובקרים, שנכתבה ב־JavaScript',
 );
 
+/** Hindi (हिन्दी)
+ * @author Kiranmayee
+ */
+$messages['hi'] = array(
+	'yui-desc' => 'जावास्क्रिप्ट में लिखा हुआ कुछ कंट्रोल्स और उठिलिठीस',
+);
+
+/** Hiligaynon (Ilonggo)
+ * @author Tagimata
+ */
+$messages['hil'] = array(
+	'yui-desc' => 'Isa ka set sang kagamitan kag mga kontrol, nga ginsulat sa JavaScript',
+);
+
 /** Upper Sorbian (Hornjoserbsce)
  * @author Michawiki
  */
@@ -355,6 +369,13 @@ $messages['pl'] = array(
 	'yui-desc' => 'Zestaw narzędzi i elementów kontrolnych napisanych w JavaScripcie',
 );
 
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'yui-desc' => "N'ansema d'utility e ëd controj, scrivù an JavaScript",
+);
+
 /** Pashto (پښتو)
  * @author Ahmed-Najib-Biabani-Ibrahimkhel
  */
@@ -419,14 +440,14 @@ $messages['sq'] = array(
 	'yui-desc' => 'Një tërësi shërbimesh dhe kontrollesh të shkruara në JavaScript',
 );
 
-/** Serbian Cyrillic ekavian (ћирилица)
+/** Serbian Cyrillic ekavian (Српски (ћирилица))
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
 	'yui-desc' => 'Скуп алата и контрола, написаних у јаваскрипту',
 );
 
-/** latinica (latinica)
+/** Serbian Latin ekavian (Srpski (latinica))
  * @author Michaello
  */
 $messages['sr-el'] = array(

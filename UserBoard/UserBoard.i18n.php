@@ -1079,7 +1079,7 @@ Faga clic $4
 e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
 );
 
-/** Gothic
+/** Gothic (Gothic)
  * @author Jocke Pirat
  */
 $messages['got'] = array(
@@ -2481,7 +2481,7 @@ Kliknite sem $4
 a zmeňte svoje nastavenia na vypnutie upozornení emailom.',
 );
 
-/** Serbian Cyrillic ekavian (ћирилица)
+/** Serbian Cyrillic ekavian (Српски (ћирилица))
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
@@ -2509,7 +2509,7 @@ $messages['sr-ec'] = array(
 	'userboard_loggedout' => 'Морате бити <a href="$1">улоговани</a> да бисте слали поруке другим корисницима.',
 );
 
-/** latinica (latinica)
+/** Serbian Latin ekavian (Srpski (latinica))
  * @author Michaello
  */
 $messages['sr-el'] = array(
