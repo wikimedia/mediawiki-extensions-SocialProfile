@@ -132,6 +132,7 @@ $messages['qqq'] = array(
 	'g-description-title' => '{{gender}}
 * $1 is a user name
 * $2 is the name of a gift',
+	'g-go-back' => '{{Identical|Go back}}',
 	'g-large' => '{{Identical|Large}}',
 	'g-main-page' => '{{Identical|Main page}}',
 	'g-medium' => '{{Identical|Medium}}',
@@ -153,6 +154,7 @@ $messages['qqq'] = array(
 $messages['af'] = array(
 	'giftmanager-private' => 'privaat',
 	'g-cancel' => 'Kanselleer',
+	'g-go-back' => 'Gaan terug',
 	'g-large' => 'Groot',
 	'g-main-page' => 'Tuisblad',
 	'g-medium' => 'Middelmatig',
@@ -1953,6 +1955,13 @@ Sangat mudah.',
 	'right-giftadmin' => 'Buat baru dan sunting hadiah yang sudah ada',
 );
 
+/** Italian (Italiano)
+ * @author Darth Kule
+ */
+$messages['it'] = array(
+	'g-cancel' => 'Annulla',
+);
+
 /** Japanese (日本語)
  * @author Aotake
  * @author Fievarsty
@@ -2507,12 +2516,35 @@ og endra innstillingane dine for å slå av e-postmeldingar.',
 $messages['no'] = array(
 	'giftmanager-giftimage' => 'gavebilde',
 	'g-add-message' => 'Legg til en melding',
+	'g-choose-file' => 'Velg fil:',
 	'g-cancel' => 'Avbryt',
+	'g-create-gift' => 'Opprett gave',
+	'g-created-by' => 'opprettet av',
+	'g-current-image' => 'Nåværende bilde',
+	'g-error-do-not-own' => 'Du eier ikke denne gava.',
+	'g-error-message-no-user' => 'Brukeren som du ønsker å se finnes ikke.',
+	'g-error-title' => 'Oi da, der svingte du feil!',
+	'g-gift' => 'gave',
+	'g-gift-name' => 'gavenavn',
+	'g-give-gift' => 'Gi ei gave',
+	'g-give-all' => 'Ønsker du å gi $1 ei gave? 
+Bare klikk på en av gavene nedenfor og trykk deretter på «Send gave». 
+Så enkelt er det.',
 	'g-give-all-title' => 'Gi en gave til $1',
+	'g-give-enter-friend-title' => 'Hvis du kjenner navnet på brukeren, skriv det inn under.',
+	'g-give-list-select' => 'velg en venn',
+	'g-give-separator' => 'eller',
+	'g-go-back' => 'Tilbake',
+	'g-large' => 'Stort',
+	'g-main-page' => 'Hovedside',
 	'g-new' => 'ny',
+	'g-remove' => 'Fjern',
+	'g-send-gift' => 'Send gave',
 	'g-select-a-friend' => 'velg en venn',
+	'g-sent-title' => 'Du har har sendt ei gave til $1',
 	'g-to-another' => 'Gi til noen andre',
 	'g-your-profile' => 'Profilen din',
+	'gift_received_subject' => '$1 har send deg gava «$2» på {{SITENAME}}!',
 	'gift_received_body' => 'Hei $1.
 
 $2 sendte deg akkurat $3-gava på {{SITENAME}}.
@@ -3674,11 +3706,15 @@ $messages['yi'] = array(
 
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Liangent
+ * @author PhiLiP
  */
 $messages['zh-hans'] = array(
 	'giftmanager-access' => '礼品访问',
 	'giftmanager-giftimage' => '礼品图像',
 	'giftmanager-public' => '公共的',
+	'g-large' => '大',
+	'g-medium' => '中',
+	'g-small' => '小',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)

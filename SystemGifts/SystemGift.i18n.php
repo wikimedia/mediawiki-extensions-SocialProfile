@@ -82,6 +82,7 @@ and change your settings to disable email notifications.',
  * @author Umherirrender
  */
 $messages['qqq'] = array(
+	'ga-goback' => '{{Identical|Go back}}',
 	'ga-large' => '{{Identical|Large}}',
 	'ga-medium' => '{{Identical|Medium}}',
 	'ga-new' => '{{Identical|New}}',
@@ -95,6 +96,7 @@ $messages['qqq'] = array(
  * @author Naudefj
  */
 $messages['af'] = array(
+	'ga-goback' => 'Gaan terug',
 	'ga-large' => 'Groot',
 	'ga-medium' => 'Middelmatig',
 	'ga-new' => 'Nuut',
@@ -2326,6 +2328,15 @@ $messages['vi'] = array(
 	'ga-small' => 'Nhỏ',
 	'ga-title' => 'Huy chương của $1',
 	'ga-uploadsuccess' => 'Đã tải lên thành công',
+);
+
+/** Simplified Chinese (‪中文(简体)‬)
+ * @author PhiLiP
+ */
+$messages['zh-hans'] = array(
+	'ga-large' => '大',
+	'ga-medium' => '中',
+	'ga-small' => '小',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)

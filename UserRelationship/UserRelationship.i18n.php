@@ -3197,6 +3197,7 @@ $messages['io'] = array(
  */
 $messages['it'] = array(
 	'ur-main-page' => 'Pagina principale',
+	'ur-cancel' => 'Annulla',
 );
 
 /** Japanese (日本語)
@@ -6390,9 +6391,11 @@ Begolös stadi flena/neflena medü yüm verätik.',
 
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Gzdavidwong
+ * @author PhiLiP
  * @author Wrightbus
  */
 $messages['zh-hans'] = array(
+	'ur-remove' => '移除',
 	'ur-cancel' => '取消',
 	'ur-login' => '登录',
 	'ur-accept' => '接受',

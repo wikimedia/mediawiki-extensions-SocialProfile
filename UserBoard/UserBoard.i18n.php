@@ -2828,9 +2828,11 @@ $messages['vo'] = array(
 
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Gzdavidwong
+ * @author PhiLiP
  */
 $messages['zh-hans'] = array(
 	'userboard_delete' => '删除',
+	'userboard_sendbutton' => '发送',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)
