@@ -2826,6 +2826,13 @@ $messages['vo'] = array(
 	'userboard_sendbutton' => 'sedön',
 );
 
+/** Yiddish (ייִדיש)
+ * @author פוילישער
+ */
+$messages['yi'] = array(
+	'userboard_delete' => 'אויסמעקן',
+);
+
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Gzdavidwong
  * @author PhiLiP

@@ -1535,6 +1535,7 @@ $messages['bs'] = array(
 	'custom-no-info' => 'Nema proizvoljnih informacija',
 	'profile-updated-personal' => 'Ažurirajte svoj profil',
 	'profile-not-provided' => 'Nije navedeno',
+	'populate-user-profile-done' => '$1 {{PLURAL:$1|profil dodan|profila dodano}}',
 	'user-personal-info-title' => 'Lične informacije',
 	'user-no-personal-info' => 'Nema ličnih informacija',
 	'user-personal-info-real-name' => 'Pravo ime',
@@ -1549,6 +1550,7 @@ $messages['bs'] = array(
 	'user-recent-activity-title' => 'Nedavne aktivnosti',
 	'user-recent-activity-edit' => 'uređivao je stranicu',
 	'user-recent-activity-vote' => 'glasao je za stranicu',
+	'user-recent-activity-comment' => 'Komentirano na stranici',
 	'user-recent-activity-gift-sent' => 'Poslao/la poklon za',
 	'user-recent-activity-gift-rec' => 'Dobio/la poklon od',
 	'user-recent-activity-friend' => 'je sada prijatelj sa',
@@ -1577,7 +1579,9 @@ $messages['bs'] = array(
 	'user-profile-personal-education' => 'Obrazovanje',
 	'user-profile-personal-schools' => 'Škole',
 	'user-profile-personal-places' => 'Mjesta',
+	'user-profile-personal-placeslived' => 'Mjesta gdje sam živio',
 	'user-profile-personal-web' => 'Internet',
+	'user-profile-personal-websites' => 'Web sajtovi',
 	'user-profile-interests-entertainment' => 'Zabava',
 	'user-profile-interests-movies' => 'Filmovi',
 	'user-profile-interests-tv' => 'TV',
@@ -8331,6 +8335,13 @@ Klicka <a href="$1">här</a> för att logga in eller klicka <a href="$2">här</a
 	'user-profile-picture-log-entry' => 'laddade upp ny avatar',
 	'user-profile-picture-log-delete-entry' => 'raderade avataren för $1',
 	'right-avatarremove' => 'Ta bort användares avatarer',
+);
+
+/** Swahili (Kiswahili)
+ * @author Lloffiwr
+ */
+$messages['sw'] = array(
+	'user-page-link' => 'Ukurasa wa mtumiaji',
 );
 
 /** Silesian (Ślůnski)
