@@ -528,6 +528,19 @@ $messages['el'] = array(
 	'right-updatepoints' => 'Ενημέρωση των μετρήσεων επεξεργασιών',
 	'level-advanced-to' => 'προχωρημένος στο επίπεδο <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Τώρα είσαι ένας "$1" στο {{SITENAME}}!',
+	'level-advance-body' => 'Γεια $1.
+
+Τώρα είσαι "$2" στο {{SITENAME}}!
+
+Συγχαρητήρια,
+
+Η ομάδα του {{SITENAME}}
+
+---
+Θέλεις να μην λαμβάνεις πλέον αυτά τα μέιλ από εμάς;
+
+Κάνε κλικ στο $3
+και άλλαξε τις ρυθμίσεις σου για να απενεργοποιήσεις τις ειδοποιήσεις μέσω ηλεκτρονικής αλληλογραφίας.',
 );
 
 /** Esperanto (Esperanto)
@@ -1244,6 +1257,8 @@ $messages['lb'] = array(
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Meenung|Meenungen}}',
 	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Daum no uewen|Daumen no uewen}}',
 	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Daum no ënnen|Daumen no ënnen}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Daum no uewe|Daumen no uewe}} ginn',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Daum no ënne|Daumen no ënne}} ginn',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Cadeau kritt|Cadeaue kritt}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Cadeau|Cadeauë}} geschéckt',
 	'right-updatepoints' => 'De Compteur vun den Ännerungen aktualiséieren',

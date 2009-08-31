@@ -68,7 +68,7 @@ $messages['bg'] = array(
  * @author Fulup
  */
 $messages['br'] = array(
-	'yui-desc' => 'Un heuliad mavegoù ha kontroloù, skrivet e JavaSkript',
+	'yui-desc' => 'Un heuliad mavegoù ha kontroloù, skrivet e JavaScript',
 );
 
 /** Bosnian (Bosanski)
@@ -516,6 +516,13 @@ $messages['th'] = array(
  */
 $messages['tl'] = array(
 	'yui-desc' => 'Isang pangkat ng mga kagamitan at ma pangkontrol/pangtaban, na nakasulat sa JavaScript',
+);
+
+/** Turkish (Türkçe)
+ * @author Joseph
+ */
+$messages['tr'] = array(
+	'yui-desc' => "JavaScript'de yazılmış bir araçlar ve kontroller seti",
 );
 
 /** Ukrainian (Українська)

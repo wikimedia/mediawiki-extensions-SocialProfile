@@ -1396,16 +1396,25 @@ e disactiva in tu preferentias le notificationes per e-mail.',
 
 /** Indonesian (Bahasa Indonesia)
  * @author Bennylin
+ * @author Irwangatot
  * @author Kandar
  */
 $messages['id'] = array(
+	'boardblastlogintitle' => 'Anda harus masuk log untuk mengirim papan peledak',
+	'boardblastlogintext' => 'Jika ingin mengirim papan peledak,
+anda diharuskan untuk <a href="index.php?title=Special:UserLogin">masuk log</a>.',
 	'messagesenttitle' => 'Surat terkirim',
+	'boardblasttitle' => 'Kirim papan peledak',
 	'boardblaststep1' => 'Tahap 1 - Tulis surat anda',
 	'boardblastprivatenote' => 'Semua surat akan dikirim sebagai surat pribadi',
 	'boardblaststep2' => 'Tahap 2 - Pilih siapa yang akan anda kirimi surat',
 	'boardlinkselectall' => 'Pilih semua',
 	'boardlinkunselectall' => 'Jangan pilih semua',
 	'boardlinkselectfriends' => 'Pilih teman',
+	'boardlinkunselectfriends' => 'Batalkan teman',
+	'boardlinkselectfoes' => 'Pilih musuh',
+	'boardlinkunselectfoes' => 'Batalkan musuh',
+	'boardsendbutton' => 'Kirim papan peledak',
 	'boardnofriends' => 'Anda tidak punya teman yang bisa dikirimi surat!',
 	'messagesentsuccess' => 'Surat anda sudah terkirim',
 	'userboard' => 'Papan pengguna',
@@ -1438,6 +1447,20 @@ $messages['id'] = array(
 	'userboard-time-minutes' => '{{PLURAL:$1|semenit|$1 menit}}',
 	'userboard-time-seconds' => '{{PLURAL:$1|sedetik|$1 detik}}',
 	'message_received_subject' => '$1 menulis pada papan anda di {{SITENAME}}',
+	'message_received_body' => 'Hei $1.
+
+$2 baru menulis di papan anda pada {{SITENAME}}!
+
+Click dibawah untuk mengetahuai papan anda!
+
+$3
+
+---
+
+Hey, ingin berhenti menerima surat-e dari kami?
+
+Click $4
+dan ubah setting anda untuk menonaktifkan notifikasi surat-e.',
 );
 
 /** Ido (Ido)
@@ -2170,6 +2193,7 @@ $messages['ps'] = array(
 );
 
 /** Portuguese (Português)
+ * @author Giro720
  * @author Lijealso
  * @author Malafaya
  * @author Vanessa Sabino
@@ -2218,6 +2242,10 @@ Clique <a href="index.php?title=Special:UserLogin">aqui para logar</a>',
 	'userboard_loggedout' => 'Você precida estar <a href="$1">logado</a> para enviar mensagens a outros usuários.',
 	'userboard_showingmessages' => 'Mostrando {{PLURAL:$4|mensagem $3|mensagens $2-$3}} de {{PLURAL:$1|$1 mensagem|$1 mensagens}}',
 	'right-userboard-delete' => 'Eliminar mensagens no mural de outros',
+	'userboard-time-days' => '{{PLURAL:$1|um dia|$1 dias}}',
+	'userboard-time-hours' => '{{PLURAL:$1|uma hora|$1 horas}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|um minuto|$1 minutos}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|um segundo|$1 segundos}}',
 	'message_received_subject' => '$1 escreveu em seu mural em {{SITENAME}}',
 	'message_received_body' => 'Oi $1:
 

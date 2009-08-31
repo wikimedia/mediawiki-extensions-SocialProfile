@@ -1231,9 +1231,11 @@ e disactiva in tu preferentias le notificationes per e-mail.',
 
 /** Indonesian (Bahasa Indonesia)
  * @author Bennylin
+ * @author Irwangatot
  * @author Kandar
  */
 $messages['id'] = array(
+	'systemgiftmanager' => 'Sistem pengelolaan hadiah',
 	'ga-addnew' => '+ Tambahkan hadiah baru',
 	'ga-back-edit-gift' => 'Kembali untuk menyunting hadiah ini',
 	'ga-back-gift-list' => 'Kembali ke daftar hadiah',
@@ -1249,6 +1251,7 @@ $messages['id'] = array(
 	'ga-file-instructions' => 'Gambar anda harus jpeg, png atau gif (tanpa animasi), dan ukurannya tidak boleh lebih dari 100kb.',
 	'ga-gift' => 'hadiah',
 	'ga-gift-given-count' => 'Hadiah ini telah diberikan $1 {{PLURAL:$1|kali|kali}}',
+	'ga-gift-title' => '$1 "$2"',
 	'ga-giftdesc' => 'penjelasan hadiah',
 	'ga-giftimage' => 'gambar hadiah',
 	'ga-giftname' => 'nama hadiah',
@@ -1262,8 +1265,38 @@ $messages['id'] = array(
 	'ga-new' => 'Baru',
 	'ga-next' => 'Selanjutnya',
 	'ga-previous' => 'Sebelumnya',
+	'ga-recent-recipients-award' => 'Penerima lain penghargaan ini',
 	'ga-saved' => 'Hadiah sudah disimpan',
 	'ga-small' => 'Kecil',
+	'ga-threshold' => 'ambang batas',
+	'ga-title' => '$1 hadiah',
+	'ga-uploadsuccess' => 'Sukses mengunggah',
+	'ga-viewlist' => 'Lihat daftar hadiah',
+	'system_gift_received_subject' => 'Anda mendapatkan $1 piala di {{SITENAME}}!',
+	'system_gift_received_body' => 'Hai $1.
+
+Anda baru menerima $2 penghargaan di {{SITENAME}}!
+
+"$3"
+
+Click dibawah untuk mengetahui jenis piala anda!
+
+$4
+
+Kami harap anda menyukainya!
+
+Trim\'s,
+
+
+{{SITENAME}} tim
+
+---
+
+Ingin berhenti mendapatkan surat-e dari kami?
+
+Click $5
+dan ubah setting anda untuk menonaktifkan notifikasi surat-e.',
+	'right-awardsmanage' => 'Buat baru dan sunting penghargaan yang ada',
 );
 
 /** Japanese (日本語)
