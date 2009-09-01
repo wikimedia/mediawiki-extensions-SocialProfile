@@ -1881,9 +1881,17 @@ e cambia tu configurationes pro disactivar le notificationes in e-mail.',
 
 /** Indonesian (Bahasa Indonesia)
  * @author Bennylin
+ * @author Irwangatot
  * @author Kandar
  */
 $messages['id'] = array(
+	'giftmanager' => 'Pengelolaan hadiah',
+	'giftmanager-addgift' => '+ Tambah hadiah baru',
+	'giftmanager-access' => 'akses hadiah',
+	'giftmanager-description' => 'Keterangan hadiah',
+	'giftmanager-giftimage' => 'Gambar hadiah',
+	'giftmanager-image' => 'tambah/ganti gambar',
+	'giftmanager-giftcreated' => 'Hadiah sudah dibuat',
 	'giftmanager-giftsaved' => 'Hadiah sudah disimpan',
 	'giftmanager-public' => 'publik',
 	'giftmanager-private' => 'pribadi',
@@ -1900,6 +1908,7 @@ $messages['id'] = array(
 	'g-current-image' => 'Gambar sekarang',
 	'g-delete-message' => 'Apakah anda yakin untuk menghapus hadiah "$1"?
 Karena ini juga akan mengakibatkan terhapusnya hadiah dari si penerima.',
+	'g-description-title' => '"$2" hadiah $1',
 	'g-error-do-not-own' => 'Anda tidak memiliki hadiah ini.',
 	'g-error-message-blocked' => 'Saat ini anda sedang diblok dan tidak bisa memberi hadiah',
 	'g-error-message-invalid-link' => 'Pranala yang anda masukkan tidak benar.',
@@ -1922,6 +1931,7 @@ Sangat mudah.',
 	'g-give-list-friends-title' => 'Pilih dari daftar teman anda',
 	'g-give-list-select' => 'pilih seorang teman',
 	'g-give-separator' => 'atau',
+	'g-give-no-user-message' => 'Hadiah dan penghargaan adalah hal yang bagus untuk mengetahui teman anda!',
 	'g-give-no-user-title' => 'Siapa yang ingin anda beri hadiah?',
 	'g-give-to-user-title' => 'Kirim hadiah "$1" ke $2',
 	'g-give-to-user-message' => 'Ingin memberikan <a href="$2">hadiah istimewa</a> kepada $1?',
@@ -1952,6 +1962,27 @@ Sangat mudah.',
 	'g-viewgiftlist' => 'Lihat daftar hadiah',
 	'g-your-profile' => 'Profil anda',
 	'gift_received_subject' => '$1 telah mengirimi anda hadiah $2 di {{SITENAME}}!',
+	'gift_received_body' => "Hai $1.
+
+$2 baru saja mengirim anda hadiah $3 pada {{SITENAME}}.
+
+Ingin membaca catatan $2 tinggalkan untuk anda dan lihat hadiah anda? Click pranala di bawah:
+
+$4
+
+Kami harap anda senang!
+
+Trim's,
+
+
+Tim {{SITENAME}} 
+
+---
+
+Hai, ingin berhenti mendapatkan surat-e dari kami?
+
+Click $5
+dan ubah seting untuk nonaktifkan notifikasi surat-e.",
 	'right-giftadmin' => 'Buat baru dan sunting hadiah yang sudah ada',
 );
 

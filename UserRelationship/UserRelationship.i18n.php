@@ -3666,7 +3666,7 @@ De e-mail jescheck kriß.',
  * @author Kw-Moon
  */
 $messages['kw'] = array(
-	'ur-main-page' => 'Pennfolen',
+	'ur-main-page' => 'Pednfolen',
 	'ur-cancel' => 'Hedhi',
 );
 

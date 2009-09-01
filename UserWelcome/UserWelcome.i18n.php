@@ -46,6 +46,7 @@ $messages['qqq'] = array(
  * @author Naudefj
  */
 $messages['af'] = array(
+	'mp-welcome-upload' => 'Oplaai',
 	'mp-welcome-edit' => 'Wysig',
 	'mp-request-new-message' => 'nuwe boodskap',
 );
@@ -359,12 +360,13 @@ $messages['es'] = array(
 /** Estonian (Eesti)
  * @author Avjoska
  * @author KalmerE.
+ * @author Pikne
  */
 $messages['et'] = array(
 	'mp-userlevels-link' => 'Kasutajate tasemed',
 	'mp-welcome-upload' => 'Laadi üles',
 	'mp-welcome-edit' => 'Toimeta',
-	'mp-welcome-points' => '$1 punkti',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|punkt|punkti}}',
 	'mp-welcome-logged-in' => 'Tere $1',
 	'mp-requests-title' => 'Päringud',
 	'mp-requests-message' => 'Sulle on järgnevad päringud.',
