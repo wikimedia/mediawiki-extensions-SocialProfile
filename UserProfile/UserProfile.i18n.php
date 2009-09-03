@@ -2400,6 +2400,7 @@ $messages['el'] = array(
 	'user-profile-preferences-emails-level' => 'Όταν προχωράς ένα επίπεδο',
 	'user-profile-preferences-emails-weekly' => 'Λήψη εβδομαδιαίων email ενημερώσεων',
 	'user-profile-update-button' => 'Ενημέρωση',
+	'user-profile-tidbits-title' => 'Ευχάριστα τμήματα',
 	'user-profile-tidbits-favmoment' => 'Αγαπημένη αθλητική στιγμή',
 	'user-profile-tidbits-worstmoment' => 'Χειρότερη αθληρική στιγμή',
 	'user-profile-tidbits-favathlete' => 'Αγαπημένος αθλητής και γιατί',

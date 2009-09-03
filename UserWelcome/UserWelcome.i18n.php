@@ -504,6 +504,13 @@ $messages['gsw'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|neje Frynd|neji Frynd}}',
 );
 
+/** Hawaiian (Hawai`i)
+ * @author Kalani
+ */
+$messages['haw'] = array(
+	'mp-welcome-edit' => 'E hoʻololi',
+);
+
 /** Hebrew (עברית)
  * @author Rotemliss
  * @author YaronSh
