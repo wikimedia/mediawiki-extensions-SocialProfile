@@ -1116,7 +1116,7 @@ $messages['stq'] = array(
 	'mp-userlevels-link' => 'Benutser-Ieuwenen',
 	'mp-welcome-upload' => 'Hoochleede',
 	'mp-welcome-edit' => 'Beoarbaidje',
-	'mp-welcome-points' => '$1 Punkte',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|Punkt|Punkte}}',
 	'mp-welcome-needed-points' => 'Uum <b><a href="$1">$2</a></b> tou wäiden moast du noch <i>$3</i> {{PLURAL:$3|wiederen Punkt|wiedere Punkte}} fertjoonje!',
 	'mp-welcome-logged-in' => 'Hallo $1',
 	'mp-requests-title' => 'Anfroagen',
