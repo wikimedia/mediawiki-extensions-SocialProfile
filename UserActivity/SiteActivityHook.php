@@ -7,16 +7,10 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( "Not a valid entry point.\n" );
 }
 
-// Avoid unstubbing $wgParser on setHook() too early on modern (1.12+) MW versions, as per r35980
-if ( defined( 'MW_SUPPORTS_PARSERFIRSTCALLINIT' ) ) {
-	$wgHooks['ParserFirstCallInit'][] = 'wfSiteActivity';
-} else {
-	$wgExtensionFunctions[] = 'wfSiteActivity';
-}
 
-function wfSiteActivity() {
-	global $wgParser;
-	$wgParser->setHook( 'siteactivity', 'getSiteActivity' );
+$wgHooks['ParserFirstCallInit'][] = 'wfSiteActivity';
+function wfSiteActivity( &$parser ) {
+	$parser->setHook( 'siteactivity', 'getSiteActivity' );
 	return true;
 }
 

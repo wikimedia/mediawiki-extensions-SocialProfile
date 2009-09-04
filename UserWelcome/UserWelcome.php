@@ -11,12 +11,7 @@
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
-// Avoid unstubbing $wgParser on setHook() too early on modern (1.12+) MW versions, as per r35980
-if ( defined( 'MW_SUPPORTS_PARSERFIRSTCALLINIT' ) ) {
-	$wgHooks['ParserFirstCallInit'][] = 'wfWelcomeUser';
-} else {
-	$wgExtensionFunctions[] = 'wfWelcomeUser';
-}
+$wgHooks['ParserFirstCallInit'][] = 'wfWelcomeUser';
 
 // Extension credits that show up on Special:Version
 $wgExtensionCredits['parserhook'][] = array(
@@ -28,9 +23,9 @@ $wgExtensionCredits['parserhook'][] = array(
 	'url' => 'http://www.mediawiki.org/wiki/Extension:UserWelcome',
 );
 
-function wfWelcomeUser() {
-	global $wgParser, $wgOut, $wgScriptPath;
-	$wgParser->setHook( 'welcomeUser', 'getWelcomeUser' );
+function wfWelcomeUser( &$parser ) {
+	global $wgOut, $wgScriptPath;
+	$parser->setHook( 'welcomeUser', 'getWelcomeUser' );
 	$wgOut->addStyle( $wgScriptPath . '/extensions/SocialProfile/UserWelcome/UserWelcome.css' );
 	return true;
 }
