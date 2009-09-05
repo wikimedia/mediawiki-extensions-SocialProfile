@@ -1495,11 +1495,22 @@ $messages['el'] = array(
 	'ur-already-submitted' => 'Η πρόταση σας έχει αποσταλλεί',
 	'ur-error-page-title' => 'Ωχ!',
 	'ur-error-title' => 'Ουπς, πήρες μια λάθος στροφή!',
+	'ur-error-message-no-user' => 'Δεν μπορούμε να συμπληρώσουμε την πρόταση σας, γιατί δεν υπάρχει χρήστης με αυτό το όνομα.',
 	'ur-main-page' => 'Κύρια σελίδα',
 	'ur-your-profile' => 'Το προφίλ σας',
 	'ur-backlink' => '&lt; Πίσω στο προφίλ του $1',
+	'ur-relationship-count-foes' => 'Ο $1 έχει $2 εχθρ{{PLURAL:$2|ό|ούς}}.
+Θέλετε περισσότερους εχθρούς;
+<a href="$3">Προσκαλέστε τους</a>',
+	'ur-relationship-count-friends' => 'Ο $1 έχει $2 φίλ{{PLURAL:$2|ο|ους}}.
+Θέλετε περισσότερους φίλους;
+<a href="$3">Προσκαλέστε τους</a>',
+	'ur-add-friends' => 'Θέλετε περισσότερους φίλους;
+<a href="$1">Προσκαλέστε τους</a>',
 	'ur-add-friend' => 'Προσθήκη σαν φίλο',
 	'ur-add-foe' => 'Προσθήκη σαν εχθρό',
+	'ur-add-no-user' => 'Κανένας χρήστης δεν έχει επιλεχθεί.
+Παρακαλώ κάντε αίτηση για εχθρούς/φίλους μέσω του σωστού συνδέσμου.',
 	'ur-add-personal-message' => 'Προσθήκη ενός προσωπικού μηνύματος',
 	'ur-remove-relationship-friend' => 'Αφαίρεση ως φίλου',
 	'ur-remove-relationship-foe' => 'Αφαίρεση ως εχθρού',
@@ -1540,6 +1551,8 @@ $messages['el'] = array(
 	'ur-requests-message-friend' => 'Ο <a href="$1">$2</a> θέλει να γίνει φίλος σου.',
 	'ur-accept' => 'Αποδοχή',
 	'ur-reject' => 'Απόρριψη',
+	'ur-no-requests-message' => 'Δεν έχετε καμία αίτηση για προσθήκη φίλου ή εχθρού. 
+Αν θέλετε περισσότερους φίλους, <a href="$1">προσκαλέστε τους!</a>',
 	'ur-requests-added-message-foe' => 'Δέχτηκες τον $1 σαν εχθρό σου.',
 	'ur-requests-added-message-friend' => 'Δέχτηκες τον $1 σαν φίλο σου.',
 	'ur-requests-reject-message-friend' => 'Αρνήθηκες τον $1 σαν φίλο σου.',
@@ -1547,11 +1560,96 @@ $messages['el'] = array(
 	'ur-title-foe' => 'Η λίστα εχθρών του $1',
 	'ur-title-friend' => 'Η λίστα φίλων του $1',
 	'friend_request_subject' => 'Ο $1 σας έχει προσθέσει σαν φίλο στο {{SITENAME}}!',
+	'friend_request_body' => 'Γεια $1.
+
+Ο $2 σας πρόσθεσε σαν φίλο στο {{SITENAME}}. Θέλουμε να σιγουρευτούμε ότι είστε πράγματι φίλοι.
+
+Κάνετε κλικ στον παρακάτω σύνδεσμο για να επιβεβαιώσετε την φιλία σας:
+$3
+
+Ευχαριστούμε
+
+---
+
+Θέλετε να σταματήσετε να λαμβάνετε μηνύματα από εμάς;
+
+Κάντε κλικ στο $4
+και αλλάξτε τις ρυθμίσεις σας έτσι ώστε να απενεργοποιήσετε τις ειδοποιήσεις που λαμβάνετε μέσω ηλεκτρονικού ταχυδρομείου.',
 	'foe_request_subject' => 'Είναι πόλεμος! Ο $1 σας πρόσθεσε ως εχθρό του στο {{SITENAME}}!',
+	'foe_request_body' => '!!FYZZY!!Γεια $1.
+
+Ο $2 δέχτηκε την αίτηση φιλίας στο {{SITENAME}}.
+
+Τσεκάρετε την σελίδα του $2 στο $3
+
+Ευχαριστούμε,
+
+---
+
+Θέλετε να σταματήσετε να λαμβάνετε μηνύματα από εμάς;
+
+Κάντε κλικ στο $4
+και αλλάξετε τις ρυθμίσεις σας έτσι ώστε να απενεργοποιήσετε τις ειδοποιήσεις που λαμβάνετε μέσω ηλεκτρονικού ταχυδρομείου.',
 	'friend_accept_subject' => 'Ο $1 αποδέχθηκε το αίτημα φιλίας σας στο {{SITENAME}}!',
+	'friend_accept_body' => 'Γεια $1.
+
+Ο $2 δέχτηκε την αίτηση φιλίας στο {{SITENAME}}.
+
+Τσεκάρετε την σελίδα του $2 στο $3
+
+Ευχαριστούμε,
+
+---
+
+Θέλετε να σταματήσετε να λαμβάνετε μηνύματα από εμάς;
+
+Κάντε κλικ στο $4
+και αλλάξετε τις ρυθμίσεις σας έτσι ώστε να απενεργοποιήσετε τις ειδοποιήσεις που λαμβάνετε μέσω ηλεκτρονικού ταχυδρομείου.',
 	'foe_accept_subject' => 'Έγινε! Ο $1 αποδέχθηκε το αίτημα εχθρού σας στο {{SITENAME}}!',
+	'foe_accept_body' => 'Γεια $1.
+
+Ο $2 δέχτηκε την αίτηση έχθρας στο {{SITENAME}}.
+
+Τσεκάρετε την σελίδα του $2 στο $3
+
+Ευχαριστούμε,
+
+---
+
+Θέλετε να σταματήσετε να λαμβάνετε μηνύματα από εμάς;
+
+Κάντε κλικ στο $4
+και αλλάξετε τις ρυθμίσεις σας έτσι ώστε να απενεργοποιήσετε τις ειδοποιήσεις που λαμβάνετε μέσω ηλεκτρονικού ταχυδρομείου.',
 	'friend_removed_subject' => 'Ω όχι! Ο $1 σας αφαίρεσε ως φίλο από το {{SITENAME}}!',
+	'friend_removed_body' => '!!FYZZY!!Γεια $1.
+
+Ο $2 δέχτηκε την αίτηση φιλίας στο {{SITENAME}}.
+
+Τσεκάρετε την σελίδα του $2 στο $3
+
+Ευχαριστούμε,
+
+---
+
+Θέλετε να σταματήσετε να λαμβάνετε μηνύματα από εμάς;
+
+Κάντε κλικ στο $4
+και αλλάξετε τις ρυθμίσεις σας έτσι ώστε να απενεργοποιήσετε τις ειδοποιήσεις που λαμβάνετε μέσω ηλεκτρονικού ταχυδρομείου.',
 	'foe_removed_subject' => 'Γούχου! Ο $1 σας αφαίρεσε ως εχθρό από το {{SITENAME}}!',
+	'foe_removed_body' => 'Γεια $1.
+
+Ο $2 δέχτηκε την αίτηση φιλίας στο {{SITENAME}}.
+
+Τσεκάρετε την σελίδα του $2 στο $3
+
+Ευχαριστούμε,
+
+---
+
+Θέλετε να σταματήσετε να λαμβάνετε μηνύματα από εμάς;
+
+Κάντε κλικ στο $4
+και αλλάξετε τις ρυθμίσεις σας έτσι ώστε να απενεργοποιήσετε τις ειδοποιήσεις που λαμβάνετε μέσω ηλεκτρονικού ταχυδρομείου.',
 );
 
 /** Esperanto (Esperanto)
@@ -4876,6 +4974,7 @@ $messages['ps'] = array(
 
 /** Portuguese (Português)
  * @author 555
+ * @author Heldergeovane
  * @author Lijealso
  * @author Malafaya
  * @author Vanessa Sabino
@@ -4920,7 +5019,7 @@ Por favor peça amigos/inimigos através do link correto.',
 	'ur-remove-error-not-loggedin-friend' => 'Você tem que estar logado para remover um amigo.',
 	'ur-remove' => 'Remover',
 	'ur-cancel' => 'Cancelar',
-	'ur-login' => 'Entrar',
+	'ur-login' => 'Autenticar-se',
 	'ur-add-title-foe' => 'Você quer adicionar $1 como seu inimigo?',
 	'ur-add-title-friend' => 'Você quer adicionar $1 como seu amigo?',
 	'ur-add-message-foe' => 'Você está prestes a adicionar $1 como seu inimigo.
@@ -5055,6 +5154,7 @@ e altere suas preferências para desabilitar e-mails de notificação',
 
 /** Brazilian Portuguese (Português do Brasil)
  * @author Eduardo.mps
+ * @author Heldergeovane
  */
 $messages['pt-br'] = array(
 	'viewrelationships' => 'Ver relacionamentos',
@@ -5095,7 +5195,7 @@ Por favor peça amigos/inimigos através da ligação correta.',
 	'ur-remove-error-not-loggedin-friend' => 'Você tem que estar logado para remover um amigo.',
 	'ur-remove' => 'Remover',
 	'ur-cancel' => 'Cancelar',
-	'ur-login' => 'Entrar',
+	'ur-login' => 'Autenticar-se',
 	'ur-add-title-foe' => 'Você quer adicionar $1 como seu inimigo?',
 	'ur-add-title-friend' => 'Você quer adicionar $1 como seu amigo?',
 	'ur-add-message-foe' => 'Você está prestes a adicionar $1 como seu inimigo.

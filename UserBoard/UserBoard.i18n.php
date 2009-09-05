@@ -684,6 +684,7 @@ a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
 /** Greek (Ελληνικά)
  * @author Consta
  * @author Crazymadlover
+ * @author Omnipaedista
  * @author ZaDiak
  */
 $messages['el'] = array(
@@ -727,6 +728,20 @@ $messages['el'] = array(
 	'userboard-time-minutes' => '{{PLURAL:$1|ένα λεπτό|$1 λεπτά}}',
 	'userboard-time-seconds' => '{{PLURAL:$1|ένα δευτερόλεπτο|$1 δευτερόλεπτα}}',
 	'message_received_subject' => 'Ο $1 έγραψε στο πίνακά σας στο {{SITENAME}}',
+	'message_received_body' => 'Γεια $1.
+
+Ο $2 μόλις έγραψε στον πίνακά σας στο {{SITENAME}}.
+
+Τσεκάρετε τον πίνακά σας κάνωντας κλικ εδώ!
+
+$3
+
+---
+
+Θέλετε να σταματήσετε να λαμβάνετε μηνύματα από εμάς;
+
+Κάντε κλικ στο $4
+και αλλάξετε τις ρυθμίσεις σας έτσι ώστε να απενεργοποιήσετε τις ειδοποιήσεις που λαμβάνετε μέσω ηλεκτρονικού ταχυδρομείου.',
 );
 
 /** Esperanto (Esperanto)
