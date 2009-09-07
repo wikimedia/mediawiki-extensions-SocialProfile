@@ -2628,6 +2628,7 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Antur
  * @author Crazymadlover
  * @author DoveBirkoff
  * @author Imre
@@ -2683,6 +2684,7 @@ $messages['es'] = array(
 	'profile-not-provided' => 'No proveído',
 	'populate-user-profile-done' => 'Agregado $1 {{PLURAL:$1|perfil|perfiles}}',
 	'user-board-title' => 'Pizarrón',
+	'user-send-board-blast' => 'Enviar mensaje al Concejo',
 	'user-personal-info-title' => 'Información personal',
 	'user-no-personal-info' => 'Sin información personal',
 	'user-personal-info-real-name' => 'Nombre real',
@@ -4745,14 +4747,14 @@ $messages['ja'] = array(
 	'user-profile-personal-info' => '情報',
 	'user-profile-personal-name' => '名前',
 	'user-profile-personal-email' => 'メールアドレス',
-	'user-profile-personal-email-needs-auth' => '（サイトからの通知を受け取るにはメールアドレスの認証が必要です）',
+	'user-profile-personal-email-needs-auth' => '(サイトからの通知を受け取るにはメールアドレスの認証が必要です)',
 	'user-profile-personal-confirmemail' => 'メールを確認する',
 	'user-profile-personal-location' => '住所',
 	'user-profile-personal-city' => '市町村',
 	'user-profile-personal-country' => '国',
 	'user-profile-personal-hometown' => '出身地',
 	'user-profile-personal-birthday' => '誕生日',
-	'user-profile-personal-birthdate' => '日付 （MM/DD）',
+	'user-profile-personal-birthdate' => '日付 (MM/DD)',
 	'user-profile-personal-aboutme' => '私について',
 	'user-profile-personal-work' => '仕事',
 	'user-profile-personal-occupation' => '職業',

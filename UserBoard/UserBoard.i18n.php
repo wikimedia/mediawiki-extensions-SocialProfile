@@ -400,12 +400,16 @@ $messages['bs'] = array(
 	'boardlinkselectfoes' => 'Odaberi neprijatelje',
 	'boardlinkunselectfoes' => 'Deselektiraj neprijatelje',
 	'boardnofriends' => 'Nemate prijatelja za slanje poruka!',
+	'messagesentsuccess' => 'Vaša poruka je uspješno poslana',
 	'userboard' => 'Korisnička ploča',
 	'userboard_delete' => 'Obriši',
 	'userboard_noexist' => 'Korisnik kojeg pokušavate pogledati ne postoji.',
 	'userboard_backprofile' => 'Nazad na profil korisnika $1',
+	'userboard_backyourprofile' => 'Nazad na Vaš profil',
 	'userboard_confirmdelete' => 'Da li ste sigurni da želite obrisati ovu poruku?',
+	'userboard_sendmessage' => 'Pošalji $1 poruku',
 	'userboard_myboard' => 'Moja ploča',
+	'userboard_posted_ago' => 'poslano prije $1',
 	'userboard_private' => 'privatno',
 	'userboard_public' => 'javno',
 	'userboard_messagetype' => 'Vrsta poruke',
@@ -781,13 +785,18 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Antur
  * @author Crazymadlover
  * @author Imre
  * @author Locos epraix
  * @author Sanbec
  */
 $messages['es'] = array(
+	'boardblastlogintitle' => 'Ud. debe ingresar como usuario para enviar mensajes al Concejo',
+	'boardblastlogintext' => 'Para enviar mensajes al Concejo,
+Ud. debe <a href="index.php?title=Special:UserLogin">ingresar como usuario</a>.',
 	'messagesenttitle' => 'Mensajes enviados',
+	'boardblasttitle' => 'Enviar mensaje al Concejo',
 	'boardblaststep1' => 'Paso 1 - Escribir su mensaje',
 	'boardblastprivatenote' => 'Todos los mensajes serán enviados como mensajes privados',
 	'boardblaststep2' => 'Paso 2 - Seleccionar a quién desea enviar su mensaje',
@@ -800,12 +809,16 @@ $messages['es'] = array(
 	'boardnofriends' => 'No tiene amigos a los que enviar un mensaje!',
 	'messagesentsuccess' => 'Su mensaje fue enviado exitosamente',
 	'userboard' => 'Pizarrón de usuario',
+	'userboard_board-to-board' => 'Concejo a Concejo',
 	'userboard_delete' => 'Borrar',
 	'userboard_noexist' => 'El usuario que trata de ver no existe.',
 	'userboard_yourboard' => 'Tu pizarrón',
 	'userboard_owner' => 'pizarrón de $1',
+	'userboard_yourboardwith' => 'Su Concejo a Concejo con $1',
+	'userboard_otherboardwith' => '$1º Concejo a Concejo con $2',
 	'userboard_backprofile' => 'Regresar al perfil de $1',
 	'userboard_backyourprofile' => 'Regresar a su perfil',
+	'userboard_boardtoboard' => 'Concejo a Concejo',
 	'userboard_confirmdelete' => 'Está seguro que desea borrar este mensaje?',
 	'userboard_sendmessage' => 'Enviar a $1 un mensaje',
 	'userboard_myboard' => 'Mi pizarrón',
@@ -819,6 +832,7 @@ $messages['es'] = array(
 	'userboard_sendbutton' => 'enviar',
 	'userboard_loggedout' => 'Tiene que haber <a href="$1">iniciado sesión</a> para enviar mensajes a otros usuarios.',
 	'userboard_showingmessages' => 'Mostrando {{PLURAL:$4|mensaje $3|mensajes $2-$3}} de {{PLURAL:$1|$1 mensaje|$1 mensajes}}',
+	'right-userboard-delete' => 'Borrar otros mensajes del Concejo',
 	'userboard-time-days' => '{{PLURAL:$1|un día|$1 días}}',
 	'userboard-time-hours' => '{{PLURAL:$1|una hora|$1 horas}}',
 	'userboard-time-minutes' => '{{PLURAL:$1|un minuto|$1 minutos}}',
