@@ -942,6 +942,19 @@ $2 ви премахна от списъка си с неприятели в {{S
 за промяна на настройките и изключване на възможността за оповестяване по е-поща.',
 );
 
+/** Bengali (বাংলা)
+ * @author Bellayet
+ */
+$messages['bn'] = array(
+	'ur-main-page' => 'প্রধান পাতা',
+	'ur-your-profile' => 'আপনার বৃত্তান্ত',
+	'ur-previous' => 'পূর্ববর্তী',
+	'ur-next' => 'পরবর্তী',
+	'ur-remove' => 'অপসারণ',
+	'ur-cancel' => 'বাতিল',
+	'ur-login' => 'প্রবেশ',
+);
+
 /** Bosnian (Bosanski)
  * @author CERminator
  */

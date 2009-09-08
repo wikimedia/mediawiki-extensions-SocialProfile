@@ -162,6 +162,16 @@ $messages['bg'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|нов приятел|нови приятели}}',
 );
 
+/** Bengali (বাংলা)
+ * @author Bellayet
+ */
+$messages['bn'] = array(
+	'mp-welcome-upload' => 'আপলোড',
+	'mp-requests-title' => 'অনুরোধ',
+	'mp-requests-message' => 'আপনার জন্য এই অনুরোধ গুলো রয়েছে।',
+	'mp-request-new-message' => 'নতুন বার্তা',
+);
+
 /** Breton (Brezhoneg)
  * @author Fulup
  */

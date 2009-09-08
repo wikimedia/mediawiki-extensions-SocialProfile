@@ -282,6 +282,13 @@ $messages['bg'] = array(
 Можете да промените настройките си за известяване от следната препратка: $3.',
 );
 
+/** Bengali (বাংলা)
+ * @author Bellayet
+ */
+$messages['bn'] = array(
+	'right-updatepoints' => 'সম্পাদনা সংখ্যা হালনাগাদ করো',
+);
+
 /** Bosnian (Bosanski)
  * @author CERminator
  */

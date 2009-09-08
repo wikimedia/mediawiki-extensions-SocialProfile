@@ -508,6 +508,22 @@ $messages['bg'] = array(
 	'g-remove' => 'Премахване',
 );
 
+/** Bengali (বাংলা)
+ * @author Bellayet
+ */
+$messages['bn'] = array(
+	'g-go-back' => 'ফিরে যান',
+	'g-large' => 'বিশাল',
+	'g-main-page' => 'প্রধান পাতা',
+	'g-medium' => 'মধ্যম',
+	'g-new' => 'নতুন',
+	'g-next' => 'পরবর্তী',
+	'g-previous' => 'পূর্ববর্তী',
+	'g-remove' => 'অপসারণ',
+	'g-small' => 'ছোট',
+	'g-your-profile' => 'আপনার বৃত্তান্ত',
+);
+
 /** Bosnian (Bosanski)
  * @author CERminator
  */

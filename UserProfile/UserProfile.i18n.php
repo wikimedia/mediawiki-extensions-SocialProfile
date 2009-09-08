@@ -1395,6 +1395,17 @@ $messages['bg'] = array(
 	'right-avatarremove' => 'Премахване на потребителски аватари',
 );
 
+/** Bengali (বাংলা)
+ * @author Bellayet
+ */
+$messages['bn'] = array(
+	'user-time-ago' => '$1 আগে',
+	'user-awards-title' => 'পদক',
+	'user-gifts-title' => 'উপহার',
+	'user-view-all' => 'সব দেখাও',
+	'user-upload-image' => 'চিত্র আপলোড',
+);
+
 /** Breton (Brezhoneg)
  * @author Fulup
  */

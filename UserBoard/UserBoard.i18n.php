@@ -380,9 +380,11 @@ $3
 );
 
 /** Bengali (বাংলা)
+ * @author Bellayet
  * @author Zaheen
  */
 $messages['bn'] = array(
+	'boardlinkselectall' => 'সমস্ত নির্বাচন করুন',
 	'userboard_delete' => 'মুছে ফেলা হোক',
 );
 
