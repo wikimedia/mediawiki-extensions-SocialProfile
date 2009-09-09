@@ -1393,7 +1393,10 @@ $5
 $messages['km'] = array(
 	'ga-addnew' => '+ បន្ថែម​អំណោយ​ថ្មី​',
 	'ga-back-gift-list' => 'ត្រឡប់ទៅកាន់បញ្ជីអំណោយ​',
+	'ga-create-gift' => 'បង្កើត​អំណោយ',
+	'ga-created' => 'អំណោយ​ត្រូវ​បាន​បង្កើត​',
 	'ga-currentimage' => 'រូបភាពបច្ចុប្បន្ន',
+	'ga-gift' => 'អំណោយ​',
 	'ga-large' => 'ធំ​',
 	'ga-medium' => 'មធ្យម​',
 	'ga-new' => 'ថ្មី​',
