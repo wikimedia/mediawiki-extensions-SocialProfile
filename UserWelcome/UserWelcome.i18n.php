@@ -917,6 +917,13 @@ $messages['pl'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|nowy przyjaciel|nowych przyjaciół}}',
 );
 
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'userwelcome-desc' => "A gionta ël tag <tt>&lt;welcomeUser&gt;</tt> për visualisé anformassion sossiaj spëssìfiche dl'utent a j'utent intrà",
+);
+
 /** Pashto (پښتو)
  * @author Ahmed-Najib-Biabani-Ibrahimkhel
  */
@@ -1276,6 +1283,14 @@ $messages['tr'] = array(
 	'mp-request-new-gift' => '$1 yeni {{PLURAL:$1|hediye|hediye}}',
 	'mp-request-new-foe' => '$1 yeni {{PLURAL:$1|düşman|düşman}}',
 	'mp-request-new-friend' => '$1 yeni {{PLURAL:$1|arkadaş|arkadaş}}',
+);
+
+/** Veps (Vepsan kel')
+ * @author Игорь Бродский
+ */
+$messages['vep'] = array(
+	'mp-welcome-upload' => 'Jügutoitta',
+	'mp-welcome-edit' => 'Redaktiruida',
 );
 
 /** Vietnamese (Tiếng Việt)

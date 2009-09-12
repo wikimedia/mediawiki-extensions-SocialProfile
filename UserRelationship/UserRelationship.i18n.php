@@ -1551,6 +1551,10 @@ $messages['el'] = array(
 	'ur-login' => 'Σύνδεση',
 	'ur-add-title-foe' => 'Θες να προσθέσεις τον $1 ως εχθρό σου;',
 	'ur-add-title-friend' => 'Θέλετε να προσθέσετε τον $1 ως φίλο σας;',
+	'ur-add-message-foe' => 'Πρόκειται να προσθέσετε τον $1 ως εχθρό.
+Θα ειδοποιήσουμε τον $1 για να επιβεβαιώσει την έχθρα σας.',
+	'ur-add-message-friend' => 'Πρόκειται να προσθέσετε τον $1 ως φίλο. 
+Θα ειδοποιήσουμε τον $1 για να επιβεβαιώσει την φιλία σας.',
 	'ur-add-button-foe' => 'Προσθήκη ως εχθρού',
 	'ur-add-button-friend' => 'Προσθήκη ως φίλου',
 	'ur-add-sent-title-foe' => 'Στείλαμε την πρόταση εχθρού σας στον $1!',
@@ -6424,6 +6428,7 @@ $messages['ug-latn'] = array(
  */
 $messages['vep'] = array(
 	'ur-main-page' => 'Pälehtpol’',
+	'ur-add-friend' => 'Ližata sebranikan',
 	'ur-add-personal-message' => 'Ližata personaline tedotuz',
 	'ur-previous' => 'edel.',
 	'ur-next' => "jäl'gh.",

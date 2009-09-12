@@ -1956,6 +1956,16 @@ $messages['tr'] = array(
 	'top-fans-points' => 'puan',
 );
 
+/** Veps (Vepsan kel')
+ * @author Игорь Бродский
+ */
+$messages['vep'] = array(
+	'top-fans-bad-field-title' => 'Oi!',
+	'top-fans-stats-vote-count' => "{{PLURAL:$1|Än'|Än't}}",
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Redakcii|Redakcijad}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Sebranik|Sebranikad}}',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
  */

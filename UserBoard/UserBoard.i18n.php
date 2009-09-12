@@ -2852,6 +2852,14 @@ $messages['tr'] = array(
 	'userboard_nextpage' => 'sonraki',
 );
 
+/** Veps (Vepsan kel')
+ * @author Игорь Бродский
+ */
+$messages['vep'] = array(
+	'userboard_nextpage' => "jäl'ghine",
+	'userboard_prevpage' => 'edeline',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
  */

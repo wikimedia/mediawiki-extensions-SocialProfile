@@ -3754,8 +3754,13 @@ $messages['vep'] = array(
 	'g-gift' => 'lahj',
 	'g-gift-name' => 'lahjan nimi',
 	'g-give-gift' => 'Anda lahj',
+	'g-give-separator' => 'vai',
 	'g-large' => "Sur'",
 	'g-list-title' => '$1-kävutajan lahjoiden nimikirjutez',
+	'g-new' => "uz'",
+	'g-next' => "Jäl'ghine",
+	'g-previous' => 'Edeline',
+	'g-small' => "Pen'",
 );
 
 /** Vietnamese (Tiếng Việt)

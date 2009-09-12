@@ -2353,6 +2353,7 @@ $messages['tr'] = array(
  * @author Игорь Бродский
  */
 $messages['vep'] = array(
+	'ga-choosefile' => 'Valiče fail:',
 	'ga-gift' => 'lahj',
 	'ga-gift-given-count' => 'Nece lahj om anttud $1 {{PLURAL:$1|kerd|kerdad}}',
 	'ga-gift-title' => '$1-kävutajan "$2"',
@@ -2367,6 +2368,7 @@ $messages['vep'] = array(
 	'ga-new' => "Uz'",
 	'ga-next' => "Jäl'gh.",
 	'ga-previous' => 'Edel.',
+	'ga-small' => "Pen'",
 );
 
 /** Vietnamese (Tiếng Việt)
