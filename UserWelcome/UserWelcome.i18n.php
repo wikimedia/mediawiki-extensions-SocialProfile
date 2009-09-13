@@ -922,6 +922,19 @@ $messages['pl'] = array(
  */
 $messages['pms'] = array(
 	'userwelcome-desc' => "A gionta ël tag <tt>&lt;welcomeUser&gt;</tt> për visualisé anformassion sossiaj spëssìfiche dl'utent a j'utent intrà",
+	'mp-userlevels-link' => 'Livej utent',
+	'mp-welcome-upload' => 'Caria',
+	'mp-welcome-edit' => 'Modìfica',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|pont|pont}}',
+	'mp-welcome-needed-points' => 'Për passé a <b><a href="$1">$2</a></b> vagna <i>$3</i> {{PLURAL:$3|àutr pont|àutri pont}}!',
+	'mp-welcome-logged-in' => 'Cerea $1',
+	'mp-requests-title' => 'Arceste',
+	'mp-requests-message' => "It l'has l'arcesta ch'i ven.",
+	'mp-request-new-message' => 'messagi neuv',
+	'mp-request-new-award' => '$1 neuv {{PLURAL:$1|premi|premi}}',
+	'mp-request-new-gift' => '$1 neuv {{PLURAL:$1|regal|regaj}}',
+	'mp-request-new-foe' => '$1 neuv {{PLURAL:$1|nemis|nemis}}',
+	'mp-request-new-friend' => '$1 neuv {{PLURAL:$1|amis|amis}}',
 );
 
 /** Pashto (پښتو)

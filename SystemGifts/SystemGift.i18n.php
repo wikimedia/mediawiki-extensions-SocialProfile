@@ -580,6 +580,7 @@ $messages['el'] = array(
 	'ga-error-message-invalid-link' => 'Ο σύνδεσμος που δώσατε δεν είναι έγκυρος.',
 	'ga-error-message-no-user' => 'Ο χρήστης που προσπαθείτε να δείτε δεν υπάρχει.',
 	'ga-error-title' => 'Ουπς, πήρες μια λάθος στροφή!',
+	'ga-file-instructions' => 'Η εικόνα σας πρέπει να ειναι jpeg, png ή gif (όχι κινούμενα gif) και πρέπει να είναι λιγότερο από 100kb σε μέγεθος.',
 	'ga-gift' => 'δώρο',
 	'ga-gift-given-count' => 'Αυτό το δώρο έχει δοθεί $1 {{PLURAL:$1|φορά|φορές}}',
 	'ga-gift-title' => '"$2" του $1',
