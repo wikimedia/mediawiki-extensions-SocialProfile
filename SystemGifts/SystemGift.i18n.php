@@ -2268,6 +2268,7 @@ $messages['te'] = array(
 	'ga-giftname' => 'బహుమతి పేరు',
 	'ga-gifttype' => 'బహుమతి రకం',
 	'ga-goback' => 'వెనక్కి వెళ్ళు',
+	'ga-new' => 'కొత్త',
 	'ga-next' => 'తర్వాతి',
 	'ga-previous' => 'గత',
 );
