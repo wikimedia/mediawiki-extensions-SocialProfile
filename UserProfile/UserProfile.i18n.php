@@ -4362,13 +4362,58 @@ Klikń <a href="$1">sem</a>, zo by so přizjewił abo klikń <a href="$2">sem</a
 
 /** Hungarian (Magyar)
  * @author Dani
+ * @author Glanthor Reviol
  * @author Tgr
  */
 $messages['hu'] = array(
+	'user-awards-title' => 'Díjak',
+	'user-upload-image' => 'Kép feltöltése',
 	'user-watchlist' => 'Figyelőlistám',
+	'user-send-gift' => 'Ajándék küldése',
+	'user-contributions' => 'Közreműködések',
+	'user-stats-title' => 'Statisztika',
+	'user-friends-title' => 'Barátok',
+	'user-foes-title' => 'Ellenségek',
+	'other-info-movies' => 'Filmek',
+	'other-info-tv' => 'TV',
+	'other-info-music' => 'Zene',
+	'other-info-books' => 'Könyvek',
+	'other-info-video-games' => 'Videojátékok',
+	'other-info-magazines' => 'Magazinok',
+	'user-personal-info-hometown' => 'Szülőváros',
+	'user-personal-info-birthday' => 'Születésnap',
+	'user-personal-info-occupation' => 'Foglalkozás',
+	'user-personal-info-websites' => 'Weboldalak',
+	'user-personal-info-schools' => 'Iskolák',
+	'user-personal-info-about-me' => 'Rólam',
+	'user-profile-personal-name' => 'Név',
+	'user-profile-personal-email' => 'E-mail cím',
+	'user-profile-personal-city' => 'Város',
+	'user-profile-personal-country' => 'Ország',
+	'user-profile-personal-hometown' => 'Szülőváros',
+	'user-profile-personal-birthday' => 'Születésnap',
+	'user-profile-personal-birthdate' => 'Dátum (HH/NN)',
+	'user-profile-personal-aboutme' => 'Rólam',
+	'user-profile-personal-work' => 'Munka',
+	'user-profile-personal-occupation' => 'Foglalkozás',
+	'user-profile-personal-schools' => 'Iskolák',
+	'user-profile-personal-web' => 'Web',
+	'user-profile-personal-websites' => 'Weboldalak',
+	'user-profile-interests-movies' => 'Filmek',
+	'user-profile-interests-tv' => 'TV',
+	'user-profile-interests-music' => 'Zene',
+	'user-profile-interests-books' => 'Könyvek',
+	'user-profile-interests-magazines' => 'Magazinok',
+	'user-profile-interests-videogames' => 'Videojátékok',
+	'user-profile-interests-eats' => 'Ételek',
+	'user-profile-sports-sport' => 'Sport',
+	'user-profile-sports-notloggedintitle' => 'Hoppá!',
 	'user-profile-picture-large' => 'Nagy',
 	'user-profile-picture-medium' => 'Közepes',
 	'user-profile-picture-small' => 'Kicsi',
+	'user-profile-goback' => 'Menj vissza',
+	'user-profile-userlevels-link' => 'Felhasználói szintek',
+	'user-no-images' => 'Nincsenek képek feltöltve',
 );
 
 /** Armenian (Հայերեն)

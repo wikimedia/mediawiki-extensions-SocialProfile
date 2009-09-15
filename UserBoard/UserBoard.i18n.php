@@ -698,6 +698,7 @@ $messages['el'] = array(
 	'boardblasttitle' => 'Αποστολή του πίνακα σε ριπή',
 	'boardblaststep1' => 'Βήμα 1 - Γράψτε το μήνυμά σας',
 	'boardblastprivatenote' => 'Όλα τα μηνύματα θα σταλλούν ως προσωπικά μηνύματα',
+	'boardblaststep2' => 'Βήμα 2 - Επιλέξτε σε ποιον θέλετε να στείλετε το μήνυμα σας',
 	'boardlinkselectall' => 'Επιλογή όλων',
 	'boardlinkunselectall' => 'Αποεπιλογή όλων',
 	'boardlinkselectfriends' => 'Επιλογή φίλων',

@@ -562,6 +562,17 @@ $messages['hsb'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|nowy přećel|nowaj přećelej|nowi přećeljo|nowych přećelow}}',
 );
 
+/** Hungarian (Magyar)
+ * @author Glanthor Reviol
+ */
+$messages['hu'] = array(
+	'mp-userlevels-link' => 'Felhasználói szintek',
+	'mp-welcome-upload' => 'Feltöltés',
+	'mp-welcome-edit' => 'Szerkesztés',
+	'mp-welcome-logged-in' => 'Szia $1',
+	'mp-request-new-message' => 'új üzenet',
+);
+
 /** Interlingua (Interlingua)
  * @author McDutchie
  */

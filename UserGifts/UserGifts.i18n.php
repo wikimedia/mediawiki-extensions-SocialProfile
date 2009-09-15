@@ -1814,6 +1814,20 @@ a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
 	'right-giftadmin' => 'Nowe dary wutworić a eksistowace wobdźěłać',
 );
 
+/** Hungarian (Magyar)
+ * @author Glanthor Reviol
+ */
+$messages['hu'] = array(
+	'giftmanager-public' => 'nyilvános',
+	'giftmanager-private' => 'privát',
+	'g-choose-file' => 'Válassz fájlt:',
+	'g-cancel' => 'Mégse',
+	'g-created-by' => 'készítette',
+	'g-gift' => 'ajándék',
+	'g-gift-name' => 'ajándék neve',
+	'g-give-gift' => 'Ajándék küldése',
+);
+
 /** Interlingua (Interlingua)
  * @author McDutchie
  */

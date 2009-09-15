@@ -539,6 +539,13 @@ $messages['vec'] = array(
 	'yui-desc' => 'Na serie de utilità e controli, scriti in JavaScript',
 );
 
+/** Veps (Vepsan kel')
+ * @author Игорь Бродский
+ */
+$messages['vep'] = array(
+	'yui-desc' => 'JavaScriptal kirjutadud azegišt',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Vinhtantran
  */

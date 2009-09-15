@@ -981,6 +981,13 @@ Klikń na $3
 a změn swoje nastajenja, zo by e-mejlowe zdźělenki znjemóžnił.',
 );
 
+/** Hungarian (Magyar)
+ * @author Glanthor Reviol
+ */
+$messages['hu'] = array(
+	'top-fans-bad-field-title' => 'Hupsz!',
+);
+
 /** Interlingua (Interlingua)
  * @author McDutchie
  */

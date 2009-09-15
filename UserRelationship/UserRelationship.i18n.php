@@ -3107,10 +3107,17 @@ a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
 
 /** Hungarian (Magyar)
  * @author Bdamokos
+ * @author Glanthor Reviol
  */
 $messages['hu'] = array(
 	'ur-error-page-title' => 'Upsz!',
 	'ur-main-page' => 'Kezdőlap',
+	'ur-previous' => 'előző',
+	'ur-next' => 'következő',
+	'ur-remove' => 'Eltávolítás',
+	'ur-cancel' => 'Mégse',
+	'ur-login' => 'Bejelentkezés',
+	'ur-add-error-message-pending-request-title' => 'Türelem!',
 );
 
 /** Interlingua (Interlingua)
