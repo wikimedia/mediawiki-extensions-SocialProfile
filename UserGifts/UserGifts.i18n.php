@@ -1826,6 +1826,13 @@ $messages['hu'] = array(
 	'g-gift' => 'ajándék',
 	'g-gift-name' => 'ajándék neve',
 	'g-give-gift' => 'Ajándék küldése',
+	'g-go-back' => 'Visszalépés',
+	'g-large' => 'Nagy',
+	'g-medium' => 'Közepes',
+	'g-new' => 'új',
+	'g-next' => 'Következő',
+	'g-previous' => 'Előző',
+	'g-small' => 'Kicsi',
 );
 
 /** Interlingua (Interlingua)

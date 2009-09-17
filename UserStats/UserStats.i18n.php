@@ -986,6 +986,7 @@ a změn swoje nastajenja, zo by e-mejlowe zdźělenki znjemóžnił.',
  */
 $messages['hu'] = array(
 	'top-fans-bad-field-title' => 'Hupsz!',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|szerkesztés|szerkesztés}}',
 );
 
 /** Interlingua (Interlingua)

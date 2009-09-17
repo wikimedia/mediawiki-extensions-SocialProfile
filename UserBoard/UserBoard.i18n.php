@@ -1361,6 +1361,25 @@ Klikń na $4
 a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
 );
 
+/** Hungarian (Magyar)
+ * @author Glanthor Reviol
+ */
+$messages['hu'] = array(
+	'messagesenttitle' => 'Elküldött üzenetek',
+	'boardlinkselectall' => 'Mind kijelölése',
+	'boardlinkunselectall' => 'Összes kijelölés megszüntetése',
+	'boardlinkselectfriends' => 'Barátok kijelölése',
+	'boardlinkunselectfriends' => 'Barátok kijelölésének megszüntetése',
+	'boardlinkselectfoes' => 'Ellenségek kijelölése',
+	'boardlinkunselectfoes' => 'Ellenségek kijelölésének megszüntetése',
+	'userboard_delete' => 'Törlés',
+	'userboard_private' => 'privát',
+	'userboard_public' => 'nyilvános',
+	'userboard_nextpage' => 'következő',
+	'userboard_prevpage' => 'előző',
+	'userboard_sendbutton' => 'küldés',
+);
+
 /** Interlingua (Interlingua)
  * @author McDutchie
  */

@@ -1185,6 +1185,29 @@ a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
 	'right-awardsmanage' => 'Nowe myta wutworić a eksistowace wobdźěłać',
 );
 
+/** Hungarian (Magyar)
+ * @author Glanthor Reviol
+ */
+$messages['hu'] = array(
+	'ga-addnew' => '+ Új ajándék hozzáadása',
+	'ga-back-gift-list' => 'Vissza az ajándékok listájához',
+	'ga-choosefile' => 'Fájl kiválasztása:',
+	'ga-create-gift' => 'Ajándék készítése',
+	'ga-giftname' => 'ajándék neve',
+	'ga-gifttype' => 'ajándék típusa',
+	'ga-goback' => 'Visszalépés',
+	'ga-large' => 'Nagy',
+	'ga-medium' => 'Közepes',
+	'ga-mediumlarge' => 'Középnagy',
+	'ga-new' => 'Új',
+	'ga-next' => 'Következő',
+	'ga-previous' => 'Előző',
+	'ga-small' => 'Kicsi',
+	'ga-title' => '$1 díjai',
+	'ga-uploadsuccess' => 'Sikeres feltöltés',
+	'ga-viewlist' => 'Ajándékok listájának megtekintése',
+);
+
 /** Interlingua (Interlingua)
  * @author McDutchie
  */

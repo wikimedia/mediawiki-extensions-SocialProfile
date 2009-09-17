@@ -4411,7 +4411,7 @@ $messages['hu'] = array(
 	'user-profile-picture-large' => 'Nagy',
 	'user-profile-picture-medium' => 'Közepes',
 	'user-profile-picture-small' => 'Kicsi',
-	'user-profile-goback' => 'Menj vissza',
+	'user-profile-goback' => 'Visszalépés',
 	'user-profile-userlevels-link' => 'Felhasználói szintek',
 	'user-no-images' => 'Nincsenek képek feltöltve',
 );
