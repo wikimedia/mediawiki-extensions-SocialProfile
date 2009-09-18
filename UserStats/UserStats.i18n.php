@@ -1560,6 +1560,7 @@ $3',
 );
 
 /** Portuguese (Português)
+ * @author Giro720
  * @author Vanessa Sabino
  * @author Waldir
  */
@@ -1594,6 +1595,7 @@ $messages['pt'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Presente recebido|Presentes recebidos}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Presente enviado|Presentes enviados}}',
 	'right-updatepoints' => 'Atualizar contadores de edição',
+	'level-advanced-to' => 'avançado ao nível <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Você agora é um "$1" em {{SITENAME}}!',
 	'level-advance-body' => 'Oi $1:
 

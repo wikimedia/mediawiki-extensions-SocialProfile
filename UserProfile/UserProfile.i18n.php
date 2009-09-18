@@ -4380,6 +4380,7 @@ $messages['hu'] = array(
 	'other-info-books' => 'Könyvek',
 	'other-info-video-games' => 'Videojátékok',
 	'other-info-magazines' => 'Magazinok',
+	'user-personal-info-real-name' => 'Valódi név',
 	'user-personal-info-hometown' => 'Szülőváros',
 	'user-personal-info-birthday' => 'Születésnap',
 	'user-personal-info-occupation' => 'Foglalkozás',
