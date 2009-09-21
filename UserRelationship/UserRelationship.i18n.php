@@ -3112,12 +3112,29 @@ a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
 $messages['hu'] = array(
 	'ur-error-page-title' => 'Upsz!',
 	'ur-main-page' => 'Kezdőlap',
+	'ur-your-profile' => 'A profilod',
+	'ur-relationship-count-foes' => '$1 felhasználónak {{PLURAL:$2|egy|$2}} ellensége van.
+Szeretnél több ellenséget?
+<a href="$3">Hívd meg őket.</a>',
+	'ur-relationship-count-friends' => '$1 felhasználónak {{PLURAL:$2|egy|$2}} barátja van.
+Szeretnél több barátot?
+<a href="$3">Hívd meg őket.</a>',
+	'ur-add-friend' => 'Hozzáadás mint barát',
+	'ur-add-foe' => 'Hozzáadás mint ellenség',
+	'ur-add-personal-message' => 'Személyes üzenet hozzáadása',
+	'ur-remove-relationship-friend' => 'Eltávolítás a barátok közül',
+	'ur-remove-relationship-foe' => 'Eltávolítás az ellenségek közül',
+	'ur-give-gift' => 'Ajándék küldése',
 	'ur-previous' => 'előző',
 	'ur-next' => 'következő',
 	'ur-remove' => 'Eltávolítás',
 	'ur-cancel' => 'Mégse',
 	'ur-login' => 'Bejelentkezés',
+	'ur-add-button-foe' => 'Hozzáadás ellenségként',
+	'ur-add-button-friend' => 'Hozzáadás barátként',
 	'ur-add-error-message-pending-request-title' => 'Türelem!',
+	'ur-accept' => 'Elfogadás',
+	'ur-reject' => 'Visszautasítás',
 );
 
 /** Interlingua (Interlingua)

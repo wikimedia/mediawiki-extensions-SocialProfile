@@ -985,7 +985,15 @@ a změn swoje nastajenja, zo by e-mejlowe zdźělenki znjemóžnił.',
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
+	'user-stats-alltime-title' => 'Minden idők legtöbb pontjai',
+	'user-stats-weekly-title' => 'Legtöbb pontok a héten',
+	'user-stats-monthly-title' => 'Legtöbb pontok a hónapban',
+	'top-fans-total-points-link' => 'Összes pontok',
+	'top-fans-weekly-points-link' => 'Pontok ezen a héten',
+	'top-fans-monthly-points-link' => 'Pontok ebben a hónapban',
+	'top-fans-points' => 'pont',
 	'top-fans-bad-field-title' => 'Hupsz!',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Szavazat|Szavazat}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|szerkesztés|szerkesztés}}',
 );
 
