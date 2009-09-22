@@ -3805,11 +3805,12 @@ un donn en Dinge Ennstellunge affschallde, dat
 De e-mail jescheck kriß.',
 );
 
-/** Cornish (Kernewek)
+/** Cornish (Kernowek)
+ * @author Kernoweger
  * @author Kw-Moon
  */
 $messages['kw'] = array(
-	'ur-main-page' => 'Pednfolen',
+	'ur-main-page' => 'Pennfolen',
 	'ur-cancel' => 'Hedhi',
 );
 
