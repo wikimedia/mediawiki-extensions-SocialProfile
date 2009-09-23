@@ -2920,6 +2920,7 @@ $messages['vo'] = array(
  */
 $messages['yi'] = array(
 	'userboard_delete' => 'אויסמעקן',
+	'userboard_private' => 'פריוואַט',
 );
 
 /** Simplified Chinese (‪中文(简体)‬)

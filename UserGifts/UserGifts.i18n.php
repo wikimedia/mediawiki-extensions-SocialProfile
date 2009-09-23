@@ -1818,21 +1818,36 @@ a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
+	'giftmanager' => 'Ajándékkezelő',
+	'giftmanager-access' => 'ajándék elérése',
+	'giftmanager-description' => 'ajándék leírása',
+	'giftmanager-giftimage' => 'ajándék képe',
+	'giftmanager-image' => 'kép hozzáadása/lecserélése',
 	'giftmanager-public' => 'nyilvános',
 	'giftmanager-private' => 'privát',
 	'g-choose-file' => 'Válassz fájlt:',
 	'g-cancel' => 'Mégse',
+	'g-create-gift' => 'Ajándék készítése',
 	'g-created-by' => 'készítette',
+	'g-current-image' => 'Jelenlegi kép',
 	'g-gift' => 'ajándék',
 	'g-gift-name' => 'ajándék neve',
 	'g-give-gift' => 'Ajándék küldése',
+	'g-give-list-select' => 'válassz ki egy barátot',
+	'g-give-separator' => 'vagy',
 	'g-go-back' => 'Visszalépés',
 	'g-large' => 'Nagy',
+	'g-list-title' => '$1 ajándéklistája',
+	'g-main-page' => 'Kezdőlap',
 	'g-medium' => 'Közepes',
+	'g-mediumlarge' => 'Középnagy',
 	'g-new' => 'új',
 	'g-next' => 'Következő',
 	'g-previous' => 'Előző',
+	'g-remove' => 'Eltávolítás',
+	'g-send-gift' => 'Ajándék küldése',
 	'g-small' => 'Kicsi',
+	'right-giftadmin' => 'Új ajándékok készítése és meglevők szerkesztése',
 );
 
 /** Interlingua (Interlingua)
@@ -3797,6 +3812,7 @@ $messages['vi'] = array(
  * @author פוילישער
  */
 $messages['yi'] = array(
+	'giftmanager-private' => 'פריוואט',
 	'g-give-separator' => 'אדער',
 	'g-large' => 'גרויס',
 	'g-main-page' => 'הויפט בלאט',

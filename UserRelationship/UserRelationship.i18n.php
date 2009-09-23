@@ -6536,6 +6536,13 @@ Begolös stadi flena/neflena medü yüm verätik.',
 	'foe_request_subject' => 'Krigö! Geban: $1 eläükon oli as neflen in {{SITENAME}}!',
 );
 
+/** Yiddish (ייִדיש)
+ * @author פוילישער
+ */
+$messages['yi'] = array(
+	'ur-login' => 'אַרײַנלאגירן',
+);
+
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Gzdavidwong
  * @author PhiLiP

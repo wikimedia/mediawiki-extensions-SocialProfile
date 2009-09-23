@@ -9384,7 +9384,10 @@ $messages['vo'] = array(
  */
 $messages['yi'] = array(
 	'user-count-separator' => '$1 פֿון $2',
+	'user-stats-title' => 'סטאַטיסטיק',
+	'user-stats-edits' => '{{PLURAL:$1|רעדאַקטירונג|רעדאַקטירונגען}}',
 	'user-profile-section-preferences' => 'פרעפֿערענצן',
+	'user-profile-personal-name' => 'נאָמען',
 );
 
 /** Chinese (China) (‪中文(中国大陆)‬)
