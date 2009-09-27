@@ -1029,6 +1029,7 @@ $messages['roa-tara'] = array(
 	'mp-welcome-upload' => 'Careche',
 	'mp-welcome-edit' => 'Cange',
 	'mp-welcome-logged-in' => 'Cià $1',
+	'mp-request-new-message' => 'messagge nuève',
 );
 
 /** Russian (Русский)
