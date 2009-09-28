@@ -1373,11 +1373,19 @@ $messages['hu'] = array(
 	'boardlinkselectfoes' => 'Ellenségek kijelölése',
 	'boardlinkunselectfoes' => 'Ellenségek kijelölésének megszüntetése',
 	'userboard_delete' => 'Törlés',
+	'userboard_noexist' => 'A megtekinteni próbált felhasználó nem létezik.',
+	'userboard_sendmessage' => 'Üzenet küldése $1 részére',
 	'userboard_private' => 'privát',
 	'userboard_public' => 'nyilvános',
+	'userboard_messagetype' => 'Üzenet típusa',
 	'userboard_nextpage' => 'következő',
 	'userboard_prevpage' => 'előző',
+	'userboard_nomessages' => 'Nincsenek üzenetek.',
 	'userboard_sendbutton' => 'küldés',
+	'userboard-time-days' => '{{PLURAL:$1|egy|$1}} nap',
+	'userboard-time-hours' => '{{PLURAL:$1|egy|$1}} óra',
+	'userboard-time-minutes' => '{{PLURAL:$1|egy|$1}} perc',
+	'userboard-time-seconds' => '{{PLURAL:$1|egy|$1}} másodperc',
 );
 
 /** Interlingua (Interlingua)

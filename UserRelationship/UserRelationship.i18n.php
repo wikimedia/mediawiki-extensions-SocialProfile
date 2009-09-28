@@ -3110,6 +3110,8 @@ a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
+	'viewrelationships' => 'Kapcsolat megtekintése',
+	'viewrelationshiprequests' => 'Kapcsolati kérések',
 	'ur-error-page-title' => 'Upsz!',
 	'ur-main-page' => 'Kezdőlap',
 	'ur-your-profile' => 'A profilod',
@@ -3132,9 +3134,15 @@ Szeretnél több barátot?
 	'ur-login' => 'Bejelentkezés',
 	'ur-add-button-foe' => 'Hozzáadás ellenségként',
 	'ur-add-button-friend' => 'Hozzáadás barátként',
+	'ur-add-error-message-yourself' => 'Nem lehetsz saját magad ellensége vagy barátja.',
+	'ur-add-error-message-existing-relationship-foe' => 'Már ellenségek vagytok $1 felhasználóval.',
+	'ur-add-error-message-existing-relationship-friend' => 'Már barátok vagytok $1 felhasználóval.',
 	'ur-add-error-message-pending-request-title' => 'Türelem!',
+	'ur-requests-message-foe' => '<a href="$1">$2</a> az ellenséged akar lenni.',
+	'ur-requests-message-friend' => '<a href="$1">$2</a> a barátod szeretne lenni.',
 	'ur-accept' => 'Elfogadás',
 	'ur-reject' => 'Visszautasítás',
+	'ur-requests-added-message-friend' => '$1 felhasználót hozzáadtad a barátaidhoz.',
 );
 
 /** Interlingua (Interlingua)

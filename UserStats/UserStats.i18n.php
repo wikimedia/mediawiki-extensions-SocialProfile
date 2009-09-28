@@ -993,8 +993,19 @@ $messages['hu'] = array(
 	'top-fans-monthly-points-link' => 'Pontok ebben a hónapban',
 	'top-fans-points' => 'pont',
 	'top-fans-bad-field-title' => 'Hupsz!',
+	'top-fans-bad-field-message' => 'A megadott statisztika nem létezik.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Szavazat|Szavazat}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|havi győzelmek|havi győzelmek}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|heti győzelmek|heti győzelmek}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|szerkesztés|szerkesztés}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|megjegyzés|megjegyzés}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|barát|barát}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|ellenség|ellenség}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|publikált vélemény|publikált vélemény}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|vélemény|vélemény}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1||fogadott ajándékok|fogadott ajándékok}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|küldött ajándékok|küldött ajándékok}}',
+	'right-updatepoints' => 'Szerkesztésszámláló frissítése',
 );
 
 /** Interlingua (Interlingua)
