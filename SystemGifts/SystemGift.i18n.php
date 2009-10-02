@@ -320,6 +320,33 @@ $messages['bg'] = array(
 	'ga-currentimage' => 'Текуща картинка',
 );
 
+/** Breton (Brezhoneg)
+ * @author Fohanno
+ */
+$messages['br'] = array(
+	'ga-addnew' => '+ Ouzhpennañ ur prof nevez',
+	'ga-back-edit-gift' => 'Distreiñ da aozañ ar prof-mañ',
+	'ga-back-gift-list' => 'Distreiñ da roll ar profoù',
+	'ga-choosefile' => 'Dibab ur restr :',
+	'ga-create-gift' => 'Krouiñ ur prof',
+	'ga-created' => 'Krouet eo bet ar prof',
+	'ga-error-message-invalid-link' => "Direizh eo al liamm hoc'h eus ebarzhet.",
+	'ga-gift' => 'prof',
+	'ga-giftdesc' => 'deskrivadur ar prof',
+	'ga-giftimage' => 'skeudenn eus ar prof',
+	'ga-giftname' => 'anv ar prof',
+	'ga-gifttype' => 'seurt prof',
+	'ga-goback' => 'Distreiñ',
+	'ga-img' => "ouzhpennañ / erlec'hiañ ar skeudenn",
+	'ga-large' => 'Bras',
+	'ga-new' => 'Nevez',
+	'ga-previous' => 'Kent',
+	'ga-saved' => 'Enrollet eo bet ar prof',
+	'ga-small' => 'Bihan',
+	'ga-threshold' => 'treuzoù',
+	'ga-viewlist' => 'Gwelet roll ar profoù',
+);
+
 /** Bosnian (Bosanski)
  * @author CERminator
  */

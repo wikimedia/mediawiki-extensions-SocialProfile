@@ -1409,10 +1409,12 @@ $messages['bn'] = array(
 );
 
 /** Breton (Brezhoneg)
+ * @author Fohanno
  * @author Fulup
  */
 $messages['br'] = array(
 	'populateuserprofiles' => 'Leuniañ profiloù an implijerien',
+	'user-time-ago' => '$1 zo',
 	'user-awards-title' => 'Prizioù',
 	'user-gifts-title' => 'Profoù',
 	'user-count-separator' => '$1 diwar $2',
@@ -1485,7 +1487,15 @@ $messages['br'] = array(
 	'user-recent-activity-network-update' => 'en/he deus postet ur soñj',
 	'user-recent-system-gift' => 'zo bet priziet',
 	'user-profile-update-notloggedin-title' => "Dibosupl degas kemmoù en ho profil ma n'oc'h ket luget",
+	'user-profile-update-saved' => 'Enrollet eo bet ho profil',
 	'user-profile-update-profile' => 'profil',
+	'user-profile-default-country' => 'Stadoù-Unanet',
+	'user-profile-points' => '$1 {{PLURAL:$1|poent|poents}}',
+	'user-profile-section-personal' => 'Titouroù personel',
+	'user-profile-section-interests' => 'Titouroù all',
+	'user-profile-section-picture' => 'Avatar',
+	'user-profile-section-preferences' => 'Penndibaboù',
+	'user-profile-personal-info' => 'Titouroù',
 	'user-profile-personal-name' => 'Anv',
 	'user-profile-personal-email' => 'Postel',
 	'user-profile-personal-email-needs-auth' => "(Ret eo d'ho postel bezañ bet gwiriekaet mar fell deoc'h resev kemennoù a-berzh al lec'hienn)",
@@ -1501,6 +1511,41 @@ $messages['br'] = array(
 	'user-profile-personal-occupation' => 'Implij',
 	'user-profile-personal-education' => 'Deskadurezh',
 	'user-profile-personal-schools' => 'Skolioù',
+	'user-profile-personal-places' => "Lec'hioù",
+	'user-profile-personal-placeslived' => "Lec'hioù ma'm eus bevet",
+	'user-profile-personal-web' => 'Web',
+	'user-profile-personal-websites' => "Lec'hiennoù web",
+	'user-profile-interests-entertainment' => 'Diduamant',
+	'user-profile-interests-movies' => 'Filmoù',
+	'user-profile-interests-music' => 'Sonerezh',
+	'user-profile-interests-books' => 'Levrioù',
+	'user-profile-interests-magazines' => 'Kelaouennoù',
+	'user-profile-interests-videogames' => "C'hoarioù video",
+	'user-profile-interests-drinks' => 'Evajoù',
+	'user-profile-preferences-emails-personalmessage' => 'Pa vez kaset ur gemennadenn bersonel',
+	'user-profile-preferences-emails-gift' => 'Pa resevit ur prof',
+	'user-profile-update-button' => 'Hizivaat',
+	'user-profile-tidbits-title' => 'Madigoù',
+	'user-profile-sports-sport' => 'Sport',
+	'user-profile-sports-notloggedintitle' => 'Hopola !',
+	'user-profile-picture-title' => 'Kas ho skeudenn',
+	'user-profile-picture-yourpicture' => 'Ho skeudenn',
+	'user-profile-picture-large' => 'Bras',
+	'user-profile-picture-small' => 'Bihan',
+	'user-profile-picture-uploaddifferent' => 'Kas ur skeudenn disheñvel',
+	'user-profile-picture-choosepicture' => 'Dibab ho skeudenn',
+	'user-profile-goback' => 'Distreiñ',
+	'user-no-images' => "N'eus bet kaset skeudenn ebet",
+	'edit-profile-title' => 'Aozañ ho profil',
+	'user-page-link' => 'Pajenn implijer',
+	'user-social-profile-link' => 'Profil sokial',
+	'user-wiki-link' => 'Pajenn implijer wiki',
+	'removeavatar' => 'Lemel an avatar',
+	'givegift' => 'Reiñ ur prof',
+	'viewgifts' => 'Gwelet ar profoù',
+	'viewsystemgifts' => 'Gwelet ar garedonoù',
+	'avatarupload-removeavatar' => 'Lemel an avatar',
+	'user-profile-picture-log' => 'avatar',
 );
 
 /** Bosnian (Bosanski)
@@ -2091,7 +2136,7 @@ Klick <a href="$1">hier</a> um dich anzumelden oder klicke <a href="$2">hier</a>
 	'user-profile-picture-log' => 'Avatar',
 	'user-profile-picture-log-entry' => 'Neuer Avatar hochgeladen',
 	'user-profile-picture-log-delete-entry' => 'Avatar von $1 gelöscht',
-	'right-avatarremove' => 'Entferne das Avatar des Benutzers',
+	'right-avatarremove' => 'Avatar eines Benutzers entfernen',
 );
 
 /** German (formal address) (Deutsch (Sie-Form))

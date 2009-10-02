@@ -306,7 +306,7 @@ $messages['ar'] = array(
 	'ur-remove-error-not-loggedin-foe' => 'يجب أن تكون مسجل الدخول لإزالة عدو.',
 	'ur-remove-error-not-loggedin-friend' => 'يجب أن تكون مسجل الدخول لإزالة صديق.',
 	'ur-remove' => 'أزل',
-	'ur-cancel' => 'إلغاء',
+	'ur-cancel' => 'ألغِ',
 	'ur-login' => 'دخول',
 	'ur-add-title-foe' => 'هل تريد إضافة $1 كعدوك؟',
 	'ur-add-title-friend' => 'هل تريد إضافة $1 كصديقك؟',
@@ -953,6 +953,41 @@ $messages['bn'] = array(
 	'ur-remove' => 'অপসারণ',
 	'ur-cancel' => 'বাতিল',
 	'ur-login' => 'প্রবেশ',
+);
+
+/** Breton (Brezhoneg)
+ * @author Fohanno
+ */
+$messages['br'] = array(
+	'viewrelationships' => 'Gwelet an darempred',
+	'viewrelationshiprequests' => 'Gwelet ar goulennoù daremprediñ',
+	'ur-already-submitted' => 'Kaset eo bet ho koulenn',
+	'ur-error-page-title' => 'Hopala !',
+	'ur-main-page' => 'Pajenn degemer',
+	'ur-your-profile' => 'Ho profil',
+	'ur-add-friend' => 'Ouzhpennañ evel mignon',
+	'ur-add-foe' => 'Ouzhpennañ evel enebour',
+	'ur-add-personal-message' => 'Ouzhpennañ ur gemennadenn bersonel',
+	'ur-remove-relationship-friend' => 'Lemel evel mignon',
+	'ur-remove-relationship-foe' => 'Lemel evel enebour',
+	'ur-give-gift' => 'Reiñ ur prof',
+	'ur-previous' => 'kent',
+	'ur-next' => 'da-heul',
+	'ur-remove-error-message-no-relationship' => "N'hoc'h eus darempred ebet gant $1.",
+	'ur-remove-error-message-remove-yourself' => "Ne c'hallit ket ho lemel hoc'h-unan.",
+	'ur-remove' => 'Lemel',
+	'ur-cancel' => 'Nullañ',
+	'ur-login' => 'Kevreañ',
+	'ur-add-button-foe' => 'Ouzhpennañ evel enebour',
+	'ur-add-button-friend' => 'Ouzhpennañ evel mignon',
+	'ur-add-error-message-pending-request-title' => 'Ho pezet pasianted !',
+	'ur-requests-title' => 'Goulennoù daremprediñ',
+	'ur-accept' => 'Asantiñ',
+	'ur-reject' => 'Disteurel',
+	'ur-requests-added-message-friend' => "Ouzhpennet hoc'h eus $1 evel mignon.",
+	'ur-title-foe' => 'Roll enebourien $1',
+	'ur-title-friend' => 'Roll mignoned $1',
+	'friend_request_subject' => "$1 en deus hoc'h ouzhpennet evel mignon war {{SITENAME}} !",
 );
 
 /** Bosnian (Bosanski)

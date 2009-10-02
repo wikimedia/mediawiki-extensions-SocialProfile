@@ -388,6 +388,34 @@ $messages['bn'] = array(
 	'userboard_delete' => 'মুছে ফেলা হোক',
 );
 
+/** Breton (Brezhoneg)
+ * @author Fohanno
+ */
+$messages['br'] = array(
+	'messagesenttitle' => 'Kemennadennoù kaset',
+	'boardblastprivatenote' => "An holl gemennadennoù a vo kaset deoc'h evel kemennadennoù prevez",
+	'boardlinkselectall' => 'Diuzañ pep tra',
+	'boardlinkunselectall' => 'Diziuzañ pep tra',
+	'boardlinkselectfriends' => 'Diuzañ mignoned',
+	'boardlinkunselectfriends' => 'Diziuzañ mignoned',
+	'boardlinkselectfoes' => 'Diuzañ enebourien',
+	'boardlinkunselectfoes' => 'Diziuzañ enebourien',
+	'messagesentsuccess' => 'Kaset eo bet ho kemennadenn',
+	'userboard_delete' => 'Dilemel',
+	'userboard_backprofile' => 'Distreiñ da brofil $1',
+	'userboard_backyourprofile' => "Distreiñ d'ho profil",
+	'userboard_confirmdelete' => "Ha sur oc'h hoc'h eus c'hoant da zilemel ar gemennadenn-mañ ?",
+	'userboard_sendmessage' => 'Kas ur gemennadenn da $1',
+	'userboard_posted_ago' => 'kaset $1 zo',
+	'userboard_private' => 'prevez',
+	'userboard_public' => 'foran',
+	'userboard_messagetype' => 'Seurt kemennadenn',
+	'userboard_nextpage' => 'da-heul',
+	'userboard_prevpage' => 'kent',
+	'userboard_nomessages' => 'Kemennadenn ebet',
+	'userboard_sendbutton' => 'kas',
+);
+
 /** Bosnian (Bosanski)
  * @author CERminator
  */

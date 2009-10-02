@@ -173,15 +173,19 @@ $messages['bn'] = array(
 );
 
 /** Breton (Brezhoneg)
+ * @author Fohanno
  * @author Fulup
  */
 $messages['br'] = array(
+	'mp-welcome-upload' => 'Kas',
+	'mp-welcome-edit' => 'Aozañ',
 	'mp-welcome-logged-in' => 'Salud $1',
 	'mp-requests-title' => 'Goulennoù',
 	'mp-requests-message' => 'Setu aze ho koulennoù',
 	'mp-request-new-message' => 'Kemennadenn nevez',
 	'mp-request-new-award' => '$1 priz {{PLURAL:$1|nevez|nevez}}',
 	'mp-request-new-gift' => '$1 {{PLURAL:$1|prof|prof}} nevez',
+	'mp-request-new-foe' => '$1 {{PLURAL:$1|enebour|enebourien}} nevez',
 );
 
 /** Bosnian (Bosanski)

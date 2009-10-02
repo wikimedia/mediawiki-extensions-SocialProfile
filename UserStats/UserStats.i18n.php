@@ -289,6 +289,22 @@ $messages['bn'] = array(
 	'right-updatepoints' => 'সম্পাদনা সংখ্যা হালনাগাদ করো',
 );
 
+/** Breton (Brezhoneg)
+ * @author Fohanno
+ */
+$messages['br'] = array(
+	'top-fans-weekly-points-link' => 'Poentoù er sizhun-mañ',
+	'top-fans-monthly-points-link' => 'Poentoù er miz-mañ',
+	'top-fans-points' => 'poentoù',
+	'top-fans-bad-field-title' => 'Chaous !',
+	'top-fans-bad-field-message' => "N'eus ket eus ar stadegenn diferet.",
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Mouezh|Mouezh}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Mignon|Mignon}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Enebour|Enebour}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|prof resevet|prof resevet}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|prof kaset|prof kaset}}',
+);
+
 /** Bosnian (Bosanski)
  * @author CERminator
  */
@@ -2004,10 +2020,10 @@ $messages['vi'] = array(
 	'top-fans-monthly-points-link' => 'Số điểm tháng này',
 	'top-fans-points' => 'điểm',
 	'top-fans-bad-field-title' => 'Oái!',
-	'top-fans-stats-vote-count' => 'Lá phiếu',
-	'top-fans-stats-edit-count' => 'Sửa đổi',
-	'top-fans-stats-friends-count' => 'Người bạn',
-	'top-fans-stats-opinions-created' => 'Ý kiến',
+	'top-fans-stats-vote-count' => 'Lá phiếu{{PLURAL:$1||}}',
+	'top-fans-stats-edit-count' => 'Lần sửa đổi{{PLURAL:$1||}}',
+	'top-fans-stats-friends-count' => 'Người bạn{{PLURAL:$1||}}',
+	'top-fans-stats-opinions-created' => 'Ý kiến{{PLURAL:$1||}}',
 	'right-updatepoints' => 'Cập nhật số lần sửa đổi',
 );
 
