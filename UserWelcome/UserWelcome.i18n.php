@@ -573,11 +573,20 @@ $messages['hsb'] = array(
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
+	'userwelcome-desc' => '<tt>&lt;welcomeUser&gt;</tt> tag felhasználó-specifikus társasági információk megjelenítéséhez a bejelentkezett felhasználóknak',
 	'mp-userlevels-link' => 'Felhasználói szintek',
 	'mp-welcome-upload' => 'Feltöltés',
 	'mp-welcome-edit' => 'Szerkesztés',
+	'mp-welcome-points' => '$1 pont',
+	'mp-welcome-needed-points' => 'Még <i>$3</i> pontot kell szerezned a továbblépéshez ide: <b><a href="$1">$2</a></b>!',
 	'mp-welcome-logged-in' => 'Szia $1',
+	'mp-requests-title' => 'Kérelmek',
+	'mp-requests-message' => 'Az alábbi kérelmeid vannak.',
 	'mp-request-new-message' => 'új üzenet',
+	'mp-request-new-award' => '$1 új díj',
+	'mp-request-new-gift' => '$1 új ajándék',
+	'mp-request-new-foe' => '$1 új ellenség',
+	'mp-request-new-friend' => '$1 új barát',
 );
 
 /** Interlingua (Interlingua)

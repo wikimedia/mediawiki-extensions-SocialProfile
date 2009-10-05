@@ -393,7 +393,9 @@ $messages['bn'] = array(
  */
 $messages['br'] = array(
 	'messagesenttitle' => 'Kemennadennoù kaset',
+	'boardblaststep1' => 'Pazenn 1 - Skrivit ho kemennadenn',
 	'boardblastprivatenote' => "An holl gemennadennoù a vo kaset deoc'h evel kemennadennoù prevez",
+	'boardblaststep2' => "Pazenn 2 - Diuzit da biv hoc'h eus c'hoant da gas ho kemennadenn",
 	'boardlinkselectall' => 'Diuzañ pep tra',
 	'boardlinkunselectall' => 'Diziuzañ pep tra',
 	'boardlinkselectfriends' => 'Diuzañ mignoned',
@@ -401,11 +403,19 @@ $messages['br'] = array(
 	'boardlinkselectfoes' => 'Diuzañ enebourien',
 	'boardlinkunselectfoes' => 'Diziuzañ enebourien',
 	'messagesentsuccess' => 'Kaset eo bet ho kemennadenn',
+	'userboard' => 'Taolenn an implijer',
+	'userboard_board-to-board' => 'Taolenn-ouzh-taolenn',
 	'userboard_delete' => 'Dilemel',
+	'userboard_noexist' => "N'eus ket eus an implijer emaoc'h o klask gwelet.",
+	'userboard_yourboard' => 'Ho taolenn',
+	'userboard_owner' => 'Taolenn $1',
+	'userboard_yourboardwith' => 'Ho taolenn-ouzh-taolenn gant $1',
 	'userboard_backprofile' => 'Distreiñ da brofil $1',
 	'userboard_backyourprofile' => "Distreiñ d'ho profil",
+	'userboard_boardtoboard' => 'Taolenn-ouzh-taolenn',
 	'userboard_confirmdelete' => "Ha sur oc'h hoc'h eus c'hoant da zilemel ar gemennadenn-mañ ?",
 	'userboard_sendmessage' => 'Kas ur gemennadenn da $1',
+	'userboard_myboard' => 'Ma zaolenn',
 	'userboard_posted_ago' => 'kaset $1 zo',
 	'userboard_private' => 'prevez',
 	'userboard_public' => 'foran',
@@ -414,6 +424,12 @@ $messages['br'] = array(
 	'userboard_prevpage' => 'kent',
 	'userboard_nomessages' => 'Kemennadenn ebet',
 	'userboard_sendbutton' => 'kas',
+	'right-userboard-delete' => "Dilemel ar c'hemennadennoù gant implijerien all",
+	'userboard-time-days' => '{{PLURAL:$1|un deiz|$1 deiz}}',
+	'userboard-time-hours' => '{{PLURAL:$1|un eurvezh|$1 eurvezh}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|ur vunutenn|$1 munutenn}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|un eilenn|$1 eilenn}}',
+	'message_received_subject' => '$1 en deus skrivet war ho taolenn war {{SITENAME}}',
 );
 
 /** Bosnian (Bosanski)

@@ -293,16 +293,30 @@ $messages['bn'] = array(
  * @author Fohanno
  */
 $messages['br'] = array(
+	'user-stats-alltime-title' => 'Niver uhelañ a boentoù a-viskoazh',
+	'user-stats-weekly-title' => 'Poentoù uhelañ er sizhun-mañ',
+	'user-stats-monthly-title' => 'Poentoù uhelañ er miz-mañ',
+	'top-fans-total-points-link' => 'Hollad ar poentoù',
 	'top-fans-weekly-points-link' => 'Poentoù er sizhun-mañ',
 	'top-fans-monthly-points-link' => 'Poentoù er miz-mañ',
 	'top-fans-points' => 'poentoù',
 	'top-fans-bad-field-title' => 'Chaous !',
 	'top-fans-bad-field-message' => "N'eus ket eus ar stadegenn diferet.",
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Mouezh|Mouezh}}',
+	'top-fans-stats-monthly-winner-count' => "{{PLURAL:$1|Trec'h er miz|Trec'h er miz}}",
+	'top-fans-stats-weekly-winner-count' => "{{PLURAL:$1|Trec'h er sizhun|Trec'h er sizhun}}",
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Aozadenn|Aozadenn}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Evezhiadenn|Evezhiadenn}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Dave|Dave}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Mignon|Mignon}}',
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|Enebour|Enebour}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Meno embannet|Meno embannet}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Meno|Meno}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|prof resevet|prof resevet}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|prof kaset|prof kaset}}',
+	'right-updatepoints' => "Hizivaat ar c'honter aozadennoù",
+	'level-advanced-to' => 'zo aet war-raok d\'al live <span style="font-weight:800;">$1</span>',
+	'level-advance-subject' => "Bremañ ez oc'h un « $1 » war {{SITENAME}} !",
 );
 
 /** Bosnian (Bosanski)
@@ -1004,10 +1018,14 @@ $messages['hu'] = array(
 	'user-stats-alltime-title' => 'Minden idők legtöbb pontjai',
 	'user-stats-weekly-title' => 'Legtöbb pontok a héten',
 	'user-stats-monthly-title' => 'Legtöbb pontok a hónapban',
+	'topusers' => 'Vezető felhasználók',
+	'top-fans-by-points-nav-header' => 'Vezető rajongók',
+	'top-fans-by-category-nav-header' => 'Vezetők kategória szerint',
 	'top-fans-total-points-link' => 'Összes pontok',
 	'top-fans-weekly-points-link' => 'Pontok ezen a héten',
 	'top-fans-monthly-points-link' => 'Pontok ebben a hónapban',
 	'top-fans-points' => 'pont',
+	'top-fans-by-category-title' => 'Vezetők összesen $1',
 	'top-fans-bad-field-title' => 'Hupsz!',
 	'top-fans-bad-field-message' => 'A megadott statisztika nem létezik.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Szavazat|Szavazat}}',
@@ -1015,13 +1033,32 @@ $messages['hu'] = array(
 	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|heti győzelmek|heti győzelmek}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|szerkesztés|szerkesztés}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|megjegyzés|megjegyzés}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Ajánlás|Ajánlás}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|barát|barát}}',
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|ellenség|ellenség}}',
 	'top-fans-stats-opinions-published' => '{{PLURAL:$1|publikált vélemény|publikált vélemény}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|vélemény|vélemény}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Felfelé tartott hüvelykujj|Több felfelé tartott hüvelykujj}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Lefelé tartott hüvelykujj|Több lefelé tartott hüvelykujj}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Felfelé tartott hüvelykujjat mutattak|Több felfelé tartott hüvelykujjat mutattak}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Lefelé tartott hüvelykujjat mutattak|Több lefelé tartott hüvelykujjat mutattak}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1||fogadott ajándékok|fogadott ajándékok}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|küldött ajándékok|küldött ajándékok}}',
 	'right-updatepoints' => 'Szerkesztésszámláló frissítése',
+	'level-advanced-to' => 'előlépett a(z) <span style="font-weight:800;">$1</span> szintre',
+	'level-advance-subject' => 'Mostantól „$1” vagy a {{SITENAME}} oldalon!',
+	'level-advance-body' => 'Kedves $1!
+
+$2 lettél a {{SITENAME}} oldalon!
+
+Gratulálunk,
+a {{SITENAME}} csapata
+
+~~
+Szeretnéd ha nem zaklatnánk több e-maillel?
+
+Kattints a linkre: $3
+és tiltsd le az e-mail értesítéseket a beállításaidban',
 );
 
 /** Interlingua (Interlingua)
