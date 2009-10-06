@@ -30,6 +30,7 @@ $messages['en'] = array(
 /** Message documentation (Message documentation)
  * @author Bennylin
  * @author Darth Kule
+ * @author EugeneZelenko
  * @author Fryed-peach
  * @author Purodha
  * @author Siebrand
@@ -39,7 +40,7 @@ $messages['qqq'] = array(
 	'mp-userlevels-link' => 'This is the help page...e.g. English default is Help:User Levels. You can define a new help page with this message.',
 	'mp-welcome-upload' => '{{Identical|Upload}}',
 	'mp-welcome-edit' => '{{Identical|Edit}}',
-	'mp-request-new-message' => '{{Identical|Message}}',
+	'mp-request-new-message' => '{{Identical|New messages}}',
 );
 
 /** Afrikaans (Afrikaans)

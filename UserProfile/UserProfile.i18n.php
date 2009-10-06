@@ -3381,6 +3381,7 @@ $messages['fi'] = array(
 
 /** French (Français)
  * @author Crochet.david
+ * @author Damouns
  * @author Grondin
  * @author IAlex
  * @author McDutchie
