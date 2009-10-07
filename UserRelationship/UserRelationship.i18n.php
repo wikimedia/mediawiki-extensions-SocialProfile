@@ -978,6 +978,8 @@ C\'hoant hoc\'h eus da gaout muioc\'h a vignoned ?
 <a href="$1">Pedit anezho</a>',
 	'ur-add-friend' => 'Ouzhpennañ evel mignon',
 	'ur-add-foe' => 'Ouzhpennañ evel enebour',
+	'ur-add-no-user' => "N'eus implijer diuzet ebet.
+Goulennit mignoned pe enebourien dre al liamm reizh, mar plij.",
 	'ur-add-personal-message' => 'Ouzhpennañ ur gemennadenn bersonel',
 	'ur-remove-relationship-friend' => 'Lemel evel mignon',
 	'ur-remove-relationship-foe' => 'Lemel evel enebour',
