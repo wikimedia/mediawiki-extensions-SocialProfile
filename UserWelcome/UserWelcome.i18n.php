@@ -178,10 +178,12 @@ $messages['bn'] = array(
  * @author Fulup
  */
 $messages['br'] = array(
+	'userwelcome-desc' => 'Ouzhpennañ ur valizenn <tt>&lt;welcomeUser&gt;</tt> evit diskwel titouroù sokial a denn da bep implijer evit an implijerien kevreet',
 	'mp-userlevels-link' => 'Liveoù an implijer',
 	'mp-welcome-upload' => 'Kas',
 	'mp-welcome-edit' => 'Aozañ',
 	'mp-welcome-points' => '$1 {{PLURAL:$1|poent}}',
+	'mp-welcome-needed-points' => 'Evit mont war-raok war-du <b><a href="$1">$2</a></b> gounezit <i>$3</i> {{PLURAL:$3|poent|poent}} ouzhpenn !',
 	'mp-welcome-logged-in' => 'Salud $1',
 	'mp-requests-title' => 'Goulennoù',
 	'mp-requests-message' => 'Setu aze ho koulennoù',

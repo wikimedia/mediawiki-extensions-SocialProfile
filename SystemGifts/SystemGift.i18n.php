@@ -330,12 +330,14 @@ $messages['br'] = array(
 	'ga-back-gift-list' => 'Distreiñ da roll ar profoù',
 	'ga-back-link' => '<a href="$1">< Distreiñ da brofil $2</a>',
 	'ga-choosefile' => 'Dibab ur restr :',
+	'ga-count' => '$1 en deus $2 {{PLURAL:$2|garedon|garedon}}.',
 	'ga-create-gift' => 'Krouiñ ur prof',
 	'ga-created' => 'Krouet eo bet ar prof',
 	'ga-currentimage' => 'Skeudenn red',
 	'ga-error-message-invalid-link' => "Direizh eo al liamm hoc'h eus ebarzhet.",
 	'ga-error-message-no-user' => "N'eus ket eus an implijer emaoc'h o klask gwelet.",
 	'ga-error-title' => "Hopala, kemeret hoc'h eus un hent fall !",
+	'ga-file-instructions' => "Ret eo d'ho skeudenn bezañ er furmad jpeg, png pe gif (n'eo ket gif bev), ha ret eo d'he ment bezañ dindan 100 ko.",
 	'ga-gift' => 'prof',
 	'ga-gift-given-count' => 'Roet eo bet ar prof-mañ $1 {{PLURAL:$1|wech|gwech}}',
 	'ga-gift-title' => '« $2 »  $1',
@@ -360,6 +362,29 @@ $messages['br'] = array(
 	'ga-uploadsuccess' => 'Kaset eo bet mat',
 	'ga-viewlist' => 'Gwelet roll ar profoù',
 	'system_gift_received_subject' => "Resevet hoc'h eus ar garedon $1 war {{SITENAME}} !",
+	'system_gift_received_body' => "Salud deoc'h, \$1.
+
+Emaoc'h o paouez resev ar garedon \$2 war {{SITENAME}} !
+
+\"\$3\"
+
+Klikit war al liamm amañ dindan evit gwelet ho trofe !
+
+\$4
+
+Emichañs e plijo deoc'h !
+
+Trugarez deoc'h,
+
+
+Skipailh {{SITENAME}} 
+
+---
+
+C'hoant hoc'h eus da baouez da resev posteloù diganimp ?
+
+Klikit war \$5
+ha cheñchit hoc'h arventennoù evit diweredekaat ar c'hemenn dra bostel.",
 	'right-awardsmanage' => 'Krouiñ hag aozañ garedonoù',
 );
 

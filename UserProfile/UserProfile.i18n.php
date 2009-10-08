@@ -1538,6 +1538,8 @@ Klikit <a href="$1">amañ</a> evit kevreañ pe klikit <a href="$2">amañ</a> evi
 	'user-profile-preferences-emails-weekly' => 'Resev an hizivadennoù dre bostel bep sizhun',
 	'user-profile-update-button' => 'Hizivaat',
 	'user-profile-tidbits-title' => 'Madigoù',
+	'user-profile-tidbits-favmoment' => 'Gwellañ koulzad sport',
+	'user-profile-tidbits-worstmoment' => 'Gwashañ koulzad sport',
 	'user-profile-tidbits-favathlete' => 'Atletour gwellañ-karet ha perak',
 	'user-profile-tidbits-leastfavathlete' => 'Atletour karet an nebeutañ ha perak',
 	'user-profile-sports-sport' => 'Sport',
@@ -1557,6 +1559,7 @@ Klikit <a href="$1">amañ</a> evit kevreañ pe klikit <a href="$2">amañ</a> evi
 	'user-profile-picture-uploaddifferent' => 'Kas ur skeudenn disheñvel',
 	'user-profile-picture-currentimage' => 'Skeudenn red',
 	'user-profile-picture-choosepicture' => 'Dibab ho skeudenn',
+	'user-profile-picture-picsize' => "Ret eo d'ho skeudenn bezañ er furmad jpeg, png pe gif, ha ret eo d'he ment bezañ dindan 100 ko.",
 	'user-profile-goback' => 'Distreiñ',
 	'user-profile-userlevels-link' => 'Liveoù an implijer',
 	'user-no-images' => "N'eus bet kaset skeudenn ebet",
@@ -1564,8 +1567,14 @@ Klikit <a href="$1">amañ</a> evit kevreañ pe klikit <a href="$2">amañ</a> evi
 	'user-page-link' => 'Pajenn implijer',
 	'user-social-profile-link' => 'Profil sokial',
 	'user-wiki-link' => 'Pajenn implijer wiki',
+	'update_profile_nav' => '* Special:UpdateProfile|Titouroù personel
+* Special:UpdateProfile/personal|Titouroù all
+* Special:UpdateProfile/custom|Titouroù personelaet
+* Special:UploadAvatar|Avatar
+* Special:UpdateProfile/preferences|Penndibaboù',
 	'user-type-toggle-old' => 'Implijout ar bajenn implijer wiki',
 	'user-type-toggle-new' => 'Implijout ur bajenn implijer sokial',
+	'user-board-login-message' => 'Ret eo deoc\'h bezañ <a href="$1">kevreet</a> evit kas kemennadennoù d\'an implijerien all',
 	'removeavatar' => 'Lemel an avatar',
 	'givegift' => 'Reiñ ur prof',
 	'viewgifts' => 'Gwelet ar profoù',
@@ -1577,6 +1586,7 @@ Klikit <a href="$1">amañ</a> evit kevreañ pe klikit <a href="$2">amañ</a> evi
 	'profilelogpage' => 'Deizlevr kemmoù ar profil implijer',
 	'profilelogpagetext' => 'Setu amañ deizlevr an aozadennoù er profil implijer',
 	'avatarlogpage' => 'Deizlevr kas avatar',
+	'avatarlogpagetext' => "Setu amañ deizlevr ar c'hasadennoù avatarioù gant an implijerien",
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'en deus kaset un avatar nevez',
 	'user-profile-picture-log-delete-entry' => 'en deus dilamet avatar $1',

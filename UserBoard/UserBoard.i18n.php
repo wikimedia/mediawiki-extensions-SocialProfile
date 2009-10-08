@@ -392,7 +392,11 @@ $messages['bn'] = array(
  * @author Fohanno
  */
 $messages['br'] = array(
+	'boardblastlogintitle' => "Ret eo deoc'h bezañ kevreet evit kas un darzhadenn daolenn",
+	'boardblastlogintext' => 'Evit kas tarzhadennoù taolenn
+e rankit bezañ <a href="index.php?title=Special:UserLogin">kevreet</a>.',
 	'messagesenttitle' => 'Kemennadennoù kaset',
+	'boardblasttitle' => 'Kas un darzhadenn daolenn',
 	'boardblaststep1' => 'Pazenn 1 - Skrivit ho kemennadenn',
 	'boardblastprivatenote' => "An holl gemennadennoù a vo kaset deoc'h evel kemennadennoù prevez",
 	'boardblaststep2' => "Pazenn 2 - Diuzit da biv hoc'h eus c'hoant da gas ho kemennadenn",
@@ -402,6 +406,8 @@ $messages['br'] = array(
 	'boardlinkunselectfriends' => 'Diziuzañ mignoned',
 	'boardlinkselectfoes' => 'Diuzañ enebourien',
 	'boardlinkunselectfoes' => 'Diziuzañ enebourien',
+	'boardsendbutton' => 'Kas un darzhadenn daolenn',
+	'boardnofriends' => "N'hoc'h eus mignon ebet da gas ar gemennadenn dezhañ !",
 	'messagesentsuccess' => 'Kaset eo bet ho kemennadenn',
 	'userboard' => 'Taolenn an implijer',
 	'userboard_board-to-board' => 'Taolenn-ouzh-taolenn',
@@ -410,6 +416,7 @@ $messages['br'] = array(
 	'userboard_yourboard' => 'Ho taolenn',
 	'userboard_owner' => 'Taolenn $1',
 	'userboard_yourboardwith' => 'Ho taolenn-ouzh-taolenn gant $1',
+	'userboard_otherboardwith' => 'Taolenn-ouzh-taolenn $1 gant $2',
 	'userboard_backprofile' => 'Distreiñ da brofil $1',
 	'userboard_backyourprofile' => "Distreiñ d'ho profil",
 	'userboard_boardtoboard' => 'Taolenn-ouzh-taolenn',
@@ -424,12 +431,28 @@ $messages['br'] = array(
 	'userboard_prevpage' => 'kent',
 	'userboard_nomessages' => 'Kemennadenn ebet',
 	'userboard_sendbutton' => 'kas',
+	'userboard_loggedout' => 'Ret eo deoc\'h bezañ <a href="$1">kevreet</a> evit kas kemennadennoù d\'an implijerien all.',
+	'userboard_showingmessages' => 'O tiskouez {{PLURAL:$4|kemennadenn$3|kemennadenn$2-$3}} diwar {{PLURAL:$1|$1 gemennadenn|$1 kemennadenn}}',
 	'right-userboard-delete' => "Dilemel ar c'hemennadennoù gant implijerien all",
 	'userboard-time-days' => '{{PLURAL:$1|un deiz|$1 deiz}}',
 	'userboard-time-hours' => '{{PLURAL:$1|un eurvezh|$1 eurvezh}}',
 	'userboard-time-minutes' => '{{PLURAL:$1|ur vunutenn|$1 munutenn}}',
 	'userboard-time-seconds' => '{{PLURAL:$1|un eilenn|$1 eilenn}}',
 	'message_received_subject' => '$1 en deus skrivet war ho taolenn war {{SITENAME}}',
+	'message_received_body' => "Salud deoc'h, $1.
+
+Emañ $2 o paouez skrivañ war ho taolenn war {{SITENAME}} !
+
+Klikit war al liamm amañ dindan evit gwelet ho taolenn !
+
+$3
+
+---
+
+C'hoant hoc'h eus da baouez da resev posteloù diganimp ?
+
+Klikit war $4
+ha cheñchit hoc'h arventennoù evit diweredekaat ar c'hemenn dre bostel.",
 );
 
 /** Bosnian (Bosanski)

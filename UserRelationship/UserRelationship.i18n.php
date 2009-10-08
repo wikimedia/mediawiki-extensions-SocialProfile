@@ -1034,6 +1034,8 @@ Ho kemenn a raimp pa vo kadarnaet ho koulenn gant $1.",
 	'ur-requests-message-friend' => '<a href="$1">$2</a> a fell dezhañ bezañ ho mignon.',
 	'ur-accept' => 'Asantiñ',
 	'ur-reject' => 'Disteurel',
+	'ur-no-requests-message' => "N'hoc'h eus ket goulennoù mignoniezh pe enebouriezh.
+Ma fell deoc'h kaout muioc'h a vignoned, <a href=\"\$1\">pedit anezho !</a>",
 	'ur-requests-added-message-foe' => "Ouzhpennet hoc'h eus $1 evel enebour.",
 	'ur-requests-added-message-friend' => "Ouzhpennet hoc'h eus $1 evel mignon.",
 	'ur-requests-reject-message-friend' => "Distaolet hoc'h eus $1 evel mignon.",
@@ -1041,11 +1043,96 @@ Ho kemenn a raimp pa vo kadarnaet ho koulenn gant $1.",
 	'ur-title-foe' => 'Roll enebourien $1',
 	'ur-title-friend' => 'Roll mignoned $1',
 	'friend_request_subject' => "$1 en deus hoc'h ouzhpennet evel mignon war {{SITENAME}} !",
+	'friend_request_body' => "Salud deoc'h, $1 :
+
+$2 en deus ho lakaet da vignon war {{SITENAME}}. C'hoant hon eus da vezañ sur ez oc'h mignoned ho-taou.
+
+Klikit war al liamm-mañ evit kadarnaat ho mignoniezh, mar plij :
+$3
+
+Trugarez deoc'h.
+
+---
+
+C'hoant hoc'h eus da baouez da resev posteloù diganimp ?
+
+Klikit war $4
+ha cheñchit hoc'h arventennoù evit diweredekaat ar c'hemenn dre bostel.",
 	'foe_request_subject' => "Digor eo ar brezel ! $1 en deus hoc'h ouzhpennet d'e enebourien war {{SITENAME}}!",
+	'foe_request_body' => "Salud deoc'h, $1.
+
+Emañ $2 o paouez ho lakaat da enebour war {{SITENAME}}. C'hoant hon eus da vezañ sur ez oc'h enebourien touet.
+
+Klikit war al liamm-mañ, mar plij, evit kadarnaat hoc'h enebouriezh.
+
+$3
+
+Trugarez deoc'h
+
+---
+
+C'hoant hoc'h eus da baouez da resev posteloù diganimp ?
+
+Klikit war $4
+ha cheñchit hoc'h arventennoù evit diweredekaat ar c'hemenn dre bostel.",
 	'friend_accept_subject' => "$1 en deus asantet d'ho koulenn mignoniezh war {{SITENAME}} !",
+	'friend_accept_body' => "Salud deoc'h, $1.
+
+$2 en deus asantet d'ho koulenn mignoniezh war  {{SITENAME}} !
+
+Kit da welet pajenn $2 e $3
+
+Trugarez deoc'h,
+
+---
+
+C'hoant hoc'h eus da baouez da resev posteloù diganimp ?
+
+Klikit war $4
+ha cheñchit hoc'h arventennoù evit diweredekaat ar c'hemenn dre bostel.",
 	'foe_accept_subject' => "Graet eo ! $1 en deus asantet d'ho koulenn enebouriezh war {{SITENAME}} !",
+	'foe_accept_body' => "Salud deoc'h, $1.
+
+$2 en deus asantet d'ho koulenn enebouriezh war  {{SITENAME}} !
+
+Kit da welet pajenn $2 e $3
+
+Trugarez deoc'h,
+
+---
+
+C'hoant hoc'h eus da baouez da resev posteloù diganimp ?
+
+Klikit war $4
+ha cheñchit hoc'h arventennoù evit diweredekaat ar c'hemenn dre bostel.",
 	'friend_removed_subject' => 'Satordallik ! $1 en deus ho lmaet eus e vignoned war {{SITENAME}} !',
+	'friend_removed_body' => "Salud deoc'h, $1.
+
+$2 en deus ho lamet eus e vignoned war  {{SITENAME}} !
+
+Trugarez deoc'h,
+
+---
+
+C'hoant hoc'h eus da baouez da resev posteloù diganimp ?
+
+Klikit war $4
+ha cheñchit hoc'h arventennoù evit diweredekaat ar c'hemenn dre bostel.",
 	'foe_removed_subject' => 'You ! $1 en deus ho lamet eus e enebourien war {{SITENAME}} !',
+	'foe_removed_body' => "Salud deoc'h, $1.
+
+$2 en deus ho lamet eus e enebourien war {{SITENAME}}!
+
+Marteze e teuot da vezañ mignoned ?
+
+Trugarez deoc'h
+
+---
+
+C'hoant hoc'h eus da baouez da resev posteloù diganimp ?
+
+Klikit war $4
+ha cheñchit hoc'h arventennoù evit diweredekaat ar c'hemenn dre bostel.",
 );
 
 /** Bosnian (Bosanski)

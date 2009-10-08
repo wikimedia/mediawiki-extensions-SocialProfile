@@ -549,6 +549,8 @@ $messages['br'] = array(
 	'g-create-gift' => 'Krouiñ ur prof',
 	'g-created-by' => 'krouet gant',
 	'g-current-image' => 'Skeudenn red',
+	'g-delete-message' => "Ha sur oc'h hoc'h eus c'hoant da zilemel ar prof « $1 » ? 
+Dilamet e vo ivez evit ar re o deus e resevet.",
 	'g-description-title' => 'Prof « $2 » a-berzh $1',
 	'g-error-do-not-own' => "N'eo ket deoc'h ar prof-mañ.",
 	'g-error-message-blocked' => "Stanket oc'h evit bremañ ha ne c'hallit ket reiñ profoù",
@@ -557,6 +559,7 @@ $messages['br'] = array(
 	'g-error-message-no-user' => "N'eus ket eus an implijer emaoc'h o klask gwelet.",
 	'g-error-message-to-yourself' => "Ne c'hallit ket reiñ ur prof deoc'h-c'hwi hoc'h-unan.",
 	'g-error-title' => "Hopala, kemeret hoc'h eus un hent fall !",
+	'g-file-instructions' => "Ret eo d'ho skeudenn bezañ er furmad jpeg, png pe gif (gif n'eo ket bev) ha ne c'hall ket he ment bezañ ouzhpenn 100 ko.",
 	'g-from' => 'eus <a href="$1">$2</a>',
 	'g-gift' => 'prof',
 	'g-gift-name' => 'anv ar prof',
@@ -602,6 +605,27 @@ Ken aes-se eo.',
 	'g-viewgiftlist' => 'Gwelet roll ar profoù',
 	'g-your-profile' => 'Ho profil',
 	'gift_received_subject' => "$1 en deus kaset deoc'h ar prof $2 war {{SITENAME}} !",
+	'gift_received_body' => "Salud deoc'h, $1.
+
+Emañ $2 o paouez kas ar prof $3 deoc'h war {{SITENAME}}.
+
+C'hoant hoc'h eus da lenn an notenn zo bet lezet gant $2 evidoc'h ha da welet ho prof ?  Klikit war al liamm amañ dindan :
+
+$4
+
+Emichañs e plijo deoc'h !
+
+Trugarez deoc'h,
+
+
+Skipailh {{SITENAME}}
+
+---
+
+C'hoant hoc'h eus da baouez da resev posteloù diganimp ?
+
+Klikit war $5
+ha cheñchit hoc'h arventennoù evit diweredekaat ar c'hemenn dre bostel.",
 	'right-giftadmin' => 'Krouiñ pe aozañ profoù',
 );
 
@@ -2416,6 +2440,7 @@ $messages['lb'] = array(
 	'g-back-link' => '< Zréck op dem $1 seng Säit',
 	'g-choose-file' => 'Fichier wielen:',
 	'g-cancel' => 'Ofbriechen',
+	'g-count' => '$1 huet  $2 {{PLURAL:$2|Cadeau|Cadeauen}}.',
 	'g-create-gift' => 'Cadeau uleeën',
 	'g-created-by' => 'ugeluecht vum',
 	'g-current-image' => 'Aktuellt Bild',

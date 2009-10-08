@@ -296,10 +296,14 @@ $messages['br'] = array(
 	'user-stats-alltime-title' => 'Niver uhelañ a boentoù a-viskoazh',
 	'user-stats-weekly-title' => 'Poentoù uhelañ er sizhun-mañ',
 	'user-stats-monthly-title' => 'Poentoù uhelañ er miz-mañ',
+	'topusers' => 'Ar re wellañ eus an implijerien',
+	'top-fans-by-points-nav-header' => 'Ar re wellañ eus ar re entanet',
+	'top-fans-by-category-nav-header' => 'Ar re wellañ dre rummad',
 	'top-fans-total-points-link' => 'Hollad ar poentoù',
 	'top-fans-weekly-points-link' => 'Poentoù er sizhun-mañ',
 	'top-fans-monthly-points-link' => 'Poentoù er miz-mañ',
 	'top-fans-points' => 'poentoù',
+	'top-fans-by-category-title' => 'Ar re wellañ a-fet $1',
 	'top-fans-bad-field-title' => 'Chaous !',
 	'top-fans-bad-field-message' => "N'eus ket eus ar stadegenn diferet.",
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Mouezh|Mouezh}}',
@@ -312,11 +316,28 @@ $messages['br'] = array(
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|Enebour|Enebour}}',
 	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Meno embannet|Meno embannet}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Meno|Meno}}',
+	'top-fans-stats-comment-score-positive-rec' => "{{PLURAL:$1|Meud d'an nec'h|Meud d'an nec'h}}",
+	'top-fans-stats-comment-score-negative-rec' => "{{PLURAL:$1|Meud d'an traoñ|Meud d'an traoñ}}",
+	'top-fans-stats-comment-score-positive-given' => "{{PLURAL:$1|Meud d'an nec'h roet|Meud d'an nec'h roet}}",
+	'top-fans-stats-comment-score-negative-given' => "{{PLURAL:$1|Meud d'an traoñ roet|Meud d'an traoñ roet}}",
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|prof resevet|prof resevet}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|prof kaset|prof kaset}}',
 	'right-updatepoints' => "Hizivaat ar c'honter aozadennoù",
 	'level-advanced-to' => 'zo aet war-raok d\'al live <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => "Bremañ ez oc'h un « $1 » war {{SITENAME}} !",
+	'level-advance-body' => "Salud deoc'h, \$1.
+
+Bez' hoc'h eus un \"\$2\" war {{SITENAME}} bremañ !
+
+Gourc'hemennoù,
+
+Skipailh {{SITENAME}} 
+
+---
+C'hoant hoc'h eus da baouez da resev posteloù diganimp ?
+
+Klikit war \$3
+ha cheñchit hoc'h arventennoù evit diweredekaat ar c'hemenn dre bosteloù.",
 );
 
 /** Bosnian (Bosanski)
