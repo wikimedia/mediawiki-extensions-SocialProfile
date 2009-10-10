@@ -123,6 +123,13 @@ $messages['am'] = array(
 	'userboard_nextpage' => 'ቀጥሎ',
 );
 
+/** Aragonese (Aragonés)
+ * @author Juanpabl
+ */
+$messages['an'] = array(
+	'userboard_delete' => 'Borrar',
+);
+
 /** Arabic (العربية)
  * @author Alnokta
  * @author Meno25
