@@ -419,6 +419,13 @@ $messages['ru'] = array(
 	'yui-desc' => 'Набор написанных на JavaScript инструментов и управляющих элементов',
 );
 
+/** Yakut (Саха тыла)
+ * @author HalanTul
+ */
+$messages['sah'] = array(
+	'yui-desc' => 'JavaScript көмөтүнэн оҥоһуллубут үнүстүрүмүөннэр уонна салайар элэмиэннэр',
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */
