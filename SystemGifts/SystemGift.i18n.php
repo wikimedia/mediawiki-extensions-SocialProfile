@@ -1266,6 +1266,7 @@ $messages['hu'] = array(
 	'ga-giftname' => 'ajándék neve',
 	'ga-gifttype' => 'ajándék típusa',
 	'ga-goback' => 'Visszalépés',
+	'ga-img' => 'kép hozzáadása/cseréje',
 	'ga-large' => 'Nagy',
 	'ga-medium' => 'Közepes',
 	'ga-mediumlarge' => 'Középnagy',
