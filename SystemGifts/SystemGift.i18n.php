@@ -1257,7 +1257,9 @@ a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
+	'systemgiftmanager' => 'Rendszerajándékok kezelése',
 	'ga-addnew' => '+ Új ajándék hozzáadása',
+	'ga-back-edit-gift' => 'Vissza ezen ajándék szerkesztéséhez',
 	'ga-back-gift-list' => 'Vissza az ajándékok listájához',
 	'ga-choosefile' => 'Fájl kiválasztása:',
 	'ga-create-gift' => 'Ajándék készítése',
@@ -1273,10 +1275,12 @@ $messages['hu'] = array(
 	'ga-new' => 'Új',
 	'ga-next' => 'Következő',
 	'ga-previous' => 'Előző',
+	'ga-saved' => 'Az ajándék elmentve',
 	'ga-small' => 'Kicsi',
 	'ga-title' => '$1 díjai',
 	'ga-uploadsuccess' => 'Sikeres feltöltés',
 	'ga-viewlist' => 'Ajándékok listájának megtekintése',
+	'right-awardsmanage' => 'Új díjak készítése vagy meglevők szerkesztése',
 );
 
 /** Interlingua (Interlingua)
