@@ -5664,6 +5664,7 @@ Klickt <a href="$1">hei</a> fir Iech anzeloggen oder klickt <a href="$2">hei</a>
 	'user-profile-preferences-emails-level' => 'Wann Dir e Niveau weiderkommt',
 	'user-profile-preferences-emails-weekly' => 'Wéichentlech Aktualisatioun per E-Mail',
 	'user-profile-update-button' => 'Aktualiséieren',
+	'user-profile-tidbits-favmoment' => 'Léiwste Sportsevenementer',
 	'user-profile-tidbits-favathlete' => 'Lieblings-Sportler a firwat',
 	'user-profile-sports-sport' => 'Sport',
 	'user-profile-sports-title' => 'Ännert Äre léiwste Sportveräiner',
