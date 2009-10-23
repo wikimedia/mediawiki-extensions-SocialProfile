@@ -1824,7 +1824,9 @@ De e-mail jescheck kriß.',
  * @author Robby
  */
 $messages['lb'] = array(
+	'boardblastlogintitle' => 'Dir musst ageloggt si fir Messagen a grousser Zuel op Panneauen ze schécken',
 	'messagesenttitle' => 'Geschéckte Messagen',
+	'boardblasttitle' => "Messagen a grousser Zuel op d'Panneaue schécken",
 	'boardblaststep1' => '1. Schrëtt: Schreiwt äre Message',
 	'boardblastprivatenote' => 'All Message ginn als privat Message verschéckt',
 	'boardblaststep2' => '2. Schrëtt: Wielt aus wien Dir äre Message schöcke wellt',
@@ -1834,6 +1836,7 @@ $messages['lb'] = array(
 	'boardlinkunselectfriends' => 'Aus der Lëscht vun de Frënn ewechhuelen',
 	'boardlinkselectfoes' => 'Géigner auswielen',
 	'boardlinkunselectfoes' => 'Géigner net auswielen',
+	'boardsendbutton' => "Messagen a grousser Zuel op d'Panneaue schécken",
 	'boardnofriends' => 'Dir hutt keng Frënn deenen dir ee Message schécke kënnt!',
 	'messagesentsuccess' => 'Äre Noriicht gouf geschéckt',
 	'userboard' => 'Benotzerpanneau',

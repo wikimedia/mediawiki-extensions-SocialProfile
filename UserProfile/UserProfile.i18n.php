@@ -5690,6 +5690,11 @@ Klickt <a href="$1">hei</a> fir Iech anzeloggen oder klickt <a href="$2">hei</a>
 	'user-page-link' => 'Benotzersäit',
 	'user-social-profile-link' => 'Soziale Profil',
 	'user-wiki-link' => 'Wiki Benotzersäit',
+	'update_profile_nav' => '* Special:UpdateProfile|Perséinlech Informatiounen
+* Special:UpdateProfile/personal|Aner Informatiounen
+* Special:UpdateProfile/custom|Eegen Informatiounen
+* Special:UploadAvatar|Avatar
+* Special:UpdateProfile/preferences|Astellungen',
 	'user-type-toggle-old' => "Benotzt d'Wiki-Benotzersäit",
 	'user-type-toggle-new' => 'Sozial-Benotzersäit benotzen',
 	'user-board-login-message' => 'Dir musst <a href="$1">ageloggt si</a> fir anere Benotzer e Message ze schécken',

@@ -1191,10 +1191,12 @@ Molimo zahtjevajte prijatelje/neprijatelje preko ispravnog linka.',
 	'ur-accept' => 'Prihvati',
 	'ur-reject' => 'Odbij',
 	'ur-requests-reject-message-friend' => 'Odbili ste $1 kao Vašeg prijatelja.',
+	'ur-requests-reject-message-foe' => 'Odbili ste $1 kao Vašeg neprijatelja.',
 	'ur-title-foe' => 'Spisak neprijatelja korisnika $1',
 	'ur-title-friend' => 'Spisak prijatelja korisnika $1',
 	'foe_request_subject' => 'Rat je! $1 je dodao Vas kao neprijatelja na {{SITENAME}}!',
 	'friend_removed_subject' => 'O ne! $1 je uklonio Vas kao prijatelja na {{SITENAME}}!',
+	'foe_removed_subject' => 'Super! $1 je uklonio Vas kao neprijatelja na {{SITENAME}}!',
 );
 
 /** Catalan (Català)
