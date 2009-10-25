@@ -131,7 +131,7 @@ $messages['ar'] = array(
 	'ga-giftimage' => 'صورة الهدية',
 	'ga-giftname' => 'اسم الهدية',
 	'ga-gifttype' => 'نوع الهدية',
-	'ga-goback' => 'رجوع',
+	'ga-goback' => 'ارجع',
 	'ga-imagesbelow' => 'بالأسفل صورك التي سيتم استخدامها في الموقع',
 	'ga-img' => 'أضف/استبدل الصورة',
 	'ga-large' => 'كبير',
@@ -1261,13 +1261,25 @@ $messages['hu'] = array(
 	'ga-addnew' => '+ Új ajándék hozzáadása',
 	'ga-back-edit-gift' => 'Vissza ezen ajándék szerkesztéséhez',
 	'ga-back-gift-list' => 'Vissza az ajándékok listájához',
+	'ga-back-link' => '<a href="$1">< vissza $2 profiljára</a>',
 	'ga-choosefile' => 'Fájl kiválasztása:',
+	'ga-count' => '$1 felhasználónak $2 díja van.',
 	'ga-create-gift' => 'Ajándék készítése',
+	'ga-created' => 'Az ajándék elkészült',
+	'ga-currentimage' => 'Jelenlegi kép',
+	'ga-error-message-invalid-link' => 'A megadott hivatkozás érvénytelen.',
+	'ga-error-message-no-user' => 'A felhasználó, akit meg próbáltál tekinteni nem létezik.',
+	'ga-error-title' => 'Hoppá, eltévedtél!',
+	'ga-file-instructions' => 'A képnek jpeg, png vagy (nem animált) gif formátumúnak, és 100 KB-nál kisebb méretűnek kell lennie.',
+	'ga-gift' => 'ajándék',
+	'ga-gift-given-count' => 'Ezt az ajándékot $1 alkalommal adták át.',
+	'ga-gift-title' => '$1 „$2” ajándéka',
 	'ga-giftdesc' => 'ajándék leírása',
 	'ga-giftimage' => 'ajándék képe',
 	'ga-giftname' => 'ajándék neve',
 	'ga-gifttype' => 'ajándék típusa',
 	'ga-goback' => 'Visszalépés',
+	'ga-imagesbelow' => 'Alább láthatóak a képeid, amelyek használatban lesznek az oldalon',
 	'ga-img' => 'kép hozzáadása/cseréje',
 	'ga-large' => 'Nagy',
 	'ga-medium' => 'Közepes',
@@ -1275,11 +1287,36 @@ $messages['hu'] = array(
 	'ga-new' => 'Új',
 	'ga-next' => 'Következő',
 	'ga-previous' => 'Előző',
+	'ga-recent-recipients-award' => 'A többiek, akik a közelmúltban megkapták e díjat',
 	'ga-saved' => 'Az ajándék elmentve',
 	'ga-small' => 'Kicsi',
+	'ga-threshold' => 'küszöb',
 	'ga-title' => '$1 díjai',
 	'ga-uploadsuccess' => 'Sikeres feltöltés',
 	'ga-viewlist' => 'Ajándékok listájának megtekintése',
+	'system_gift_received_subject' => 'Megkaptad a(z) $1 díjat a(z) {{SITENAME}} oldalon!',
+	'system_gift_received_body' => 'Szia $1!
+
+Épp most kaptad meg a(z) $2 díjat a(z) {{SITENAME}} oldalon!
+
+„$3”
+
+Kattints alant, hogy megnézd!
+
+$4
+
+Reméljük tetszeni fog!
+
+Köszönettel,
+
+A(z) {{SITENAME}} oldal csapata
+
+
+~~
+Szeretnéd ha nem zaklatnánk több e-maillel?
+
+Kattints a linkre: $5
+és tiltsd le az e-mail értesítéseket a beállításaidban',
 	'right-awardsmanage' => 'Új díjak készítése vagy meglevők szerkesztése',
 );
 
