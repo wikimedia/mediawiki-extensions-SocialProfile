@@ -2758,6 +2758,7 @@ $messages['eo'] = array(
  * @author Imre
  * @author Locos epraix
  * @author Sanbec
+ * @author Translationista
  */
 $messages['es'] = array(
 	'populateuserprofiles' => 'Perfiles de usuario populares',
@@ -2786,6 +2787,7 @@ $messages['es'] = array(
 	'user-stats-recruits' => '{{PLURAL:$1|Voluntario|Voluntarios}}',
 	'user-stats-poll-votes' => '{{PLURAL:$1|voto|votos}} de encuesta',
 	'user-stats-quiz-points' => '{{PLURAL:$1|punto|puntos}} de concurso',
+	'user-stats-pick-points' => 'Elíjelos',
 	'other-info-title' => 'Otra información',
 	'user-friends-title' => 'Amigos',
 	'user-foes-title' => 'Enemigos',
