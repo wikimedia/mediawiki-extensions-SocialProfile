@@ -438,6 +438,7 @@ Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.
  * @author Jon Harald Søby
  * @author Meno25
  * @author Purodha
+ * @author Translationista
  */
 $messages['qqq'] = array(
 	'user-count-separator' => '$1 and $2 are numbers of users.',
@@ -445,6 +446,7 @@ $messages['qqq'] = array(
 	'user-add-friend' => '{{Identical|Add as friend}}',
 	'user-add-foe' => '{{Identical|Add as foe}}',
 	'user-stats-title' => '{{Identical|Statistics}}',
+	'user-stats-picture-game-votes' => ' Juego de imágenes {{PLURAL:$1|voto|votos}}',
 	'other-info-title' => '{{Identical|Other information}}',
 	'other-info-movies' => '{{Identical|Movies}}',
 	'other-info-tv' => '{{Identical|TV}}',
@@ -2786,8 +2788,9 @@ $messages['es'] = array(
 	'user-stats-comments' => '{{PLURAL:$1|Edición|Ediciones}}',
 	'user-stats-recruits' => '{{PLURAL:$1|Voluntario|Voluntarios}}',
 	'user-stats-poll-votes' => '{{PLURAL:$1|voto|votos}} de encuesta',
+	'user-stats-picture-game-votes' => ' Juego de imágenes {{PLURAL:$1|voto|votos}}',
 	'user-stats-quiz-points' => '{{PLURAL:$1|punto|puntos}} de concurso',
-	'user-stats-pick-points' => 'Elíjelos',
+	'user-stats-pick-points' => 'Elíjelos {{PLURAL:$1|punto|puntos}}',
 	'other-info-title' => 'Otra información',
 	'user-friends-title' => 'Amigos',
 	'user-foes-title' => 'Enemigos',
@@ -2809,8 +2812,8 @@ $messages['es'] = array(
 	'profile-updated-personal' => 'Actualizar su información',
 	'profile-not-provided' => 'No proveído',
 	'populate-user-profile-done' => 'Agregado $1 {{PLURAL:$1|perfil|perfiles}}',
-	'user-board-title' => 'Pizarrón',
-	'user-send-board-blast' => 'Enviar mensaje al Concejo',
+	'user-board-title' => 'Tablón',
+	'user-send-board-blast' => 'Enviar mensaje a varios tablones',
 	'user-personal-info-title' => 'Información personal',
 	'user-no-personal-info' => 'Sin información personal',
 	'user-personal-info-real-name' => 'Nombre real',

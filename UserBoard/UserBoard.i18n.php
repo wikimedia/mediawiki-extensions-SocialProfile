@@ -80,9 +80,12 @@ and change your settings to disable email notifications.'
  * @author Fryed-peach
  * @author Jon Harald Søby
  * @author Purodha
+ * @author Translationista
  * @author Umherirrender
  */
 $messages['qqq'] = array(
+	'boardblastlogintitle' => 'As I understand it, it is a sort of board tool to leave messages. Is it?
+http://www.mediawiki.org/wiki/Extension:SocialProfile#Board_Blast',
 	'userboard_delete' => '{{Identical|Delete}}',
 	'userboard_private' => '{{Identical|Private}}',
 	'userboard_nextpage' => '{{Identical|Next}}',
@@ -869,38 +872,40 @@ $messages['eo'] = array(
  * @author Imre
  * @author Locos epraix
  * @author Sanbec
+ * @author Translationista
  */
 $messages['es'] = array(
-	'boardblastlogintitle' => 'Ud. debe ingresar como usuario para enviar mensajes al Concejo',
-	'boardblastlogintext' => 'Para enviar mensajes al Concejo,
+	'boardblastlogintitle' => 'Ud. debe ingresar como usuario para enviar mensajes a otros tablones',
+	'boardblastlogintext' => 'Para enviar mensajes,
 Ud. debe <a href="index.php?title=Special:UserLogin">ingresar como usuario</a>.',
 	'messagesenttitle' => 'Mensajes enviados',
-	'boardblasttitle' => 'Enviar mensaje al Concejo',
-	'boardblaststep1' => 'Paso 1 - Escribir su mensaje',
+	'boardblasttitle' => 'Enviar mensaje a otros tablones',
+	'boardblaststep1' => 'Paso 1 - Escribe tu mensaje',
 	'boardblastprivatenote' => 'Todos los mensajes serán enviados como mensajes privados',
-	'boardblaststep2' => 'Paso 2 - Seleccionar a quién desea enviar su mensaje',
+	'boardblaststep2' => 'Paso 2 - Selecciona a quién deseas enviar el mensaje',
 	'boardlinkselectall' => 'Seleccionar todo',
 	'boardlinkunselectall' => 'Deseleccionar todo',
 	'boardlinkselectfriends' => 'Seleccionar amigos',
 	'boardlinkunselectfriends' => 'Deseleccionar amigos',
 	'boardlinkselectfoes' => 'Seleccionar enemigos',
 	'boardlinkunselectfoes' => 'Deseleccionar enemigos',
-	'boardnofriends' => 'No tiene amigos a los que enviar un mensaje!',
-	'messagesentsuccess' => 'Su mensaje fue enviado exitosamente',
-	'userboard' => 'Pizarrón de usuario',
-	'userboard_board-to-board' => 'Concejo a Concejo',
+	'boardsendbutton' => 'Enviar mensaje',
+	'boardnofriends' => '¡No tienes amigos a los que enviar un mensaje!',
+	'messagesentsuccess' => 'Tu mensaje fue enviado exitosamente',
+	'userboard' => 'Tablón del usuario',
+	'userboard_board-to-board' => 'Tablón a tablón',
 	'userboard_delete' => 'Borrar',
-	'userboard_noexist' => 'El usuario que trata de ver no existe.',
-	'userboard_yourboard' => 'Tu pizarrón',
-	'userboard_owner' => 'pizarrón de $1',
-	'userboard_yourboardwith' => 'Su Concejo a Concejo con $1',
-	'userboard_otherboardwith' => '$1º Concejo a Concejo con $2',
+	'userboard_noexist' => 'El usuario que tratas de ver no existe.',
+	'userboard_yourboard' => 'Tu tablón',
+	'userboard_owner' => 'tablón de $1',
+	'userboard_yourboardwith' => 'Tu tablón a tablón con $1',
+	'userboard_otherboardwith' => 'Tablón de $1con $2',
 	'userboard_backprofile' => 'Regresar al perfil de $1',
-	'userboard_backyourprofile' => 'Regresar a su perfil',
-	'userboard_boardtoboard' => 'Concejo a Concejo',
-	'userboard_confirmdelete' => 'Está seguro que desea borrar este mensaje?',
+	'userboard_backyourprofile' => 'Regresar a tu perfil',
+	'userboard_boardtoboard' => 'Tablón a tablón',
+	'userboard_confirmdelete' => '¿Seguro que deseas borrar este mensaje?',
 	'userboard_sendmessage' => 'Enviar a $1 un mensaje',
-	'userboard_myboard' => 'Mi pizarrón',
+	'userboard_myboard' => 'Mi tablón',
 	'userboard_posted_ago' => 'Enviado hace $1',
 	'userboard_private' => 'privado',
 	'userboard_public' => 'público',
@@ -909,28 +914,28 @@ Ud. debe <a href="index.php?title=Special:UserLogin">ingresar como usuario</a>.'
 	'userboard_prevpage' => 'anterior',
 	'userboard_nomessages' => 'Sin mensajes.',
 	'userboard_sendbutton' => 'enviar',
-	'userboard_loggedout' => 'Tiene que haber <a href="$1">iniciado sesión</a> para enviar mensajes a otros usuarios.',
+	'userboard_loggedout' => 'Tienes que haber <a href="$1">iniciado sesión</a> para enviar mensajes a otros usuarios.',
 	'userboard_showingmessages' => 'Mostrando {{PLURAL:$4|mensaje $3|mensajes $2-$3}} de {{PLURAL:$1|$1 mensaje|$1 mensajes}}',
 	'right-userboard-delete' => 'Borrar otros mensajes del Concejo',
 	'userboard-time-days' => '{{PLURAL:$1|un día|$1 días}}',
 	'userboard-time-hours' => '{{PLURAL:$1|una hora|$1 horas}}',
 	'userboard-time-minutes' => '{{PLURAL:$1|un minuto|$1 minutos}}',
 	'userboard-time-seconds' => '{{PLURAL:$1|un segundo|$1 segundos}}',
-	'message_received_subject' => '$1 escribió en tu pizarrón en {{SITENAME}}',
-	'message_received_body' => 'Hola $1.
+	'message_received_subject' => '$1 escribió en tu tablón en {{SITENAME}}',
+	'message_received_body' => 'Hola, $1.
 
-$2 acaba de escribir en tu pizarrón en{{SITENAME}}!
+$2 acaba de escribir en tu tablón en {{SITENAME}}!
 
-Haz click debajo para verificar tu pizarrón!
+¡Haz click debajo para revisar tu tablón!
 
 $3
 
 ---
 
-Hey, deseas dejar de recibir correos electrónicos de nosotros?
+Hey, ¿deseas dejar de recibir correos electrónicos de nosotros?
 
 Haz click en $4
-y cambia tus configuraciones para dehabilitar notificaciones por correo electrónico.',
+y cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.',
 );
 
 /** Basque (Euskara)
