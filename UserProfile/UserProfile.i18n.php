@@ -4469,6 +4469,7 @@ $messages['hu'] = array(
 	'populateuserprofiles' => 'Felhasználói profilok feltöltése',
 	'user-awards-title' => 'Díjak',
 	'user-gifts-title' => 'Ajándékok',
+	'user-count-separator' => '$1 (összesen $2)',
 	'user-view-all' => 'Összes megjelenítése',
 	'user-upload-image' => 'Kép feltöltése',
 	'user-edit-this' => 'Szerkesztés',
