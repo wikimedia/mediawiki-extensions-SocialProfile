@@ -2977,6 +2977,7 @@ $messages['eu'] = array(
 	'user-stats-edits' => '{{PLURAL:$1|Aldaketa|Aldaketak}}',
 	'user-stats-votes' => '{{PLURAL:$1|Bozka|Bozkak}}',
 	'user-stats-comments' => '{{PLURAL:$1|Iruzkina|Iruzkinak}}',
+	'other-info-title' => 'Bestelako informazioa',
 	'user-friends-title' => 'Lagunak',
 	'user-foes-title' => 'Etsaiak',
 	'other-info-movies' => 'Filmeak',
