@@ -3291,6 +3291,7 @@ a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
 
 /** Hungarian (Magyar)
  * @author Bdamokos
+ * @author Dani
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
@@ -3342,6 +3343,9 @@ Légyszíves a helyes hivatkozást használva kérj barátokat/ellenségeket.',
 	'ur-add-title-friend' => 'Fel szeretnéd venni $1 felhasználót a barátaid listájára?',
 	'ur-add-button-foe' => 'Hozzáadás ellenségként',
 	'ur-add-button-friend' => 'Hozzáadás barátként',
+	'ur-add-sent-title-friend' => 'Elküldtük a barátkérődet $1 részére!',
+	'ur-add-error-message-no-user' => 'A felhasználó, akit hozzá akartál adni, nem létezik.',
+	'ur-add-error-message-blocked' => 'Jelenleg blokkolva vagy, így nem adhatsz hozzá barátokat vagy ellenségeket.',
 	'ur-add-error-message-yourself' => 'Nem lehetsz saját magad ellensége vagy barátja.',
 	'ur-add-error-message-existing-relationship-foe' => 'Már ellenségek vagytok $1 felhasználóval.',
 	'ur-add-error-message-existing-relationship-friend' => 'Már barátok vagytok $1 felhasználóval.',
@@ -3361,6 +3365,9 @@ Ha szeretnél több barátot, <a href="$1">hívd meg őket!</a>',
 	'ur-requests-reject-message-foe' => 'Elutasítottad $1 felhasználó felvételét az ellenségeid közé.',
 	'ur-title-foe' => '$1 ellenségeinek listája',
 	'ur-title-friend' => '$1 barátainak listája',
+	'foe_request_subject' => 'Háború! $1 ellenségeként jelölt meg a(z) {{SITENAME}} wikin!',
+	'friend_accept_subject' => '$1 elfogadta a barátkérődet a(z) {{SITENAME}} wikin!',
+	'foe_accept_subject' => '$1 elfogadta, hogy ellensége vagy a(z) {{SITENAME}} wikin!',
 );
 
 /** Interlingua (Interlingua)
@@ -6671,6 +6678,13 @@ $messages['tr'] = array(
  */
 $messages['ug-latn'] = array(
 	'ur-login' => 'Kirish',
+);
+
+/** Ukrainian (Українська)
+ * @author Prima klasy4na
+ */
+$messages['uk'] = array(
+	'ur-next' => 'наступний',
 );
 
 /** Veps (Vepsan kel')

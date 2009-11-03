@@ -1920,6 +1920,7 @@ a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
 );
 
 /** Hungarian (Magyar)
+ * @author Dani
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
@@ -1959,11 +1960,22 @@ Ez törölni fogja azoktól a felhasználóktól is, akik eddig megkapták.',
 	'g-gift' => 'ajándék',
 	'g-gift-name' => 'ajándék neve',
 	'g-give-gift' => 'Ajándék küldése',
+	'g-give-all' => 'Szeretnél ajándékot adni $1 felhasználónak?
+Csak válassz egyet az alábbi ajándékokból, és kattints az „Ajándék küldése” gombra.
+Ilyen egyszerű.',
 	'g-give-all-message-title' => 'Üzenet hozzáadása',
 	'g-give-all-title' => 'Ajándék küldése neki: $1',
+	'g-give-enter-friend-title' => 'Ha tudod a felhasználó nevét, írd be alább',
+	'g-given' => 'Ezt az ajándékot már {{PLURAL:$1|egy|$1}} alkalommal adták oda',
+	'g-give-list-friends-title' => 'Válassz valakit a barátaid listájáról',
 	'g-give-list-select' => 'válassz ki egy barátot',
 	'g-give-separator' => 'vagy',
+	'g-give-no-user-message' => 'Az ajándékok és díjak remek módjai barátaid elismerésének!',
+	'g-give-no-user-title' => 'Kinek szeretnél ajándékot küldeni?',
+	'g-give-to-user-title' => '„$1” ajándék elküldése $2 részére',
+	'g-give-to-user-message' => '<a href="$2">Más ajándékot</a>? szeretnél küldeni $1 részére?',
 	'g-go-back' => 'Visszalépés',
+	'g-imagesbelow' => 'Alább láthatóak a képed, melyek használva lesznek az oldalon',
 	'g-large' => 'Nagy',
 	'g-list-title' => '$1 ajándéklistája',
 	'g-main-page' => 'Kezdőlap',
@@ -1974,15 +1986,39 @@ Ez törölni fogja azoktól a felhasználóktól is, akik eddig megkapták.',
 	'g-previous' => 'Előző',
 	'g-remove' => 'Eltávolítás',
 	'g-remove-gift' => 'Ajándék eltávolítása',
+	'g-remove-message' => 'Biztosan el szeretnéd távolítani a(z) „$1” ajándékot?',
+	'g-recent-recipients' => 'Mások, akik a közelmúltban megkapták ezt az ajándékot',
+	'g-remove-success-title' => 'Sikeresen eltávolítottad a(z) „$1” ajándékot',
 	'g-remove-success-message' => 'A(z) „$1” ajándék eltávolítva.',
 	'g-remove-title' => 'Eltávolítod ezt: „$1”?',
 	'g-send-gift' => 'Ajándék küldése',
 	'g-select-a-friend' => 'válassz egy barátot',
+	'g-sent-title' => 'Ajándékot küldtél $1 részére',
+	'g-sent-message' => 'A következő ajándékot küldted el $1 részére.',
 	'g-small' => 'Kicsi',
 	'g-to-another' => 'Átadás valaki másnak',
 	'g-uploadsuccess' => 'Sikeres feltöltés',
 	'g-viewgiftlist' => 'Ajándéklista megjelenítése',
 	'g-your-profile' => 'A profilod',
+	'gift_received_subject' => '$1 $2 ajándékot küldött neked a(z) {{SITENAME}} wikin!',
+	'gift_received_body' => 'Szia, $1!
+
+$2 épp most küldött neked $3 ajándékot a(z) {{SITENAME}} wikin.
+
+Meg szeretnéd nézni az ajándékodat, és a megjegyzést, amit $2 fűzött hozzá? Csak kattints az alábbi linkre:
+
+$4
+
+Reméljük tetszeni fog!
+
+Köszönettel:
+a(z) {{SITENAME}} csapata
+
+~~
+Szeretnéd ha nem zaklatnánk több e-maillel?
+
+Kattints a linkre: $5
+és tiltsd le az e-mail értesítéseket a beállításaidban',
 	'right-giftadmin' => 'Új ajándékok készítése és meglevők szerkesztése',
 );
 
@@ -3920,6 +3956,13 @@ at baguhin ang mga pagtatakda mo upang huwag nang paganahin ang mga pagpapabatid
 $messages['tr'] = array(
 	'g-large' => 'Büyük',
 	'g-main-page' => 'Ana sayfa',
+);
+
+/** Ukrainian (Українська)
+ * @author Prima klasy4na
+ */
+$messages['uk'] = array(
+	'g-next' => 'Наступний',
 );
 
 /** Veps (Vepsan kel')

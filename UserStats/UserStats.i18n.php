@@ -2059,6 +2059,13 @@ $messages['tr'] = array(
 	'top-fans-points' => 'puan',
 );
 
+/** Ukrainian (Українська)
+ * @author Prima klasy4na
+ */
+$messages['uk'] = array(
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Редагування|Редагувань}}',
+);
+
 /** Veps (Vepsan kel')
  * @author Игорь Бродский
  */

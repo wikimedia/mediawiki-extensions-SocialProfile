@@ -2486,6 +2486,13 @@ $messages['tr'] = array(
 	'ga-small' => 'Küçük',
 );
 
+/** Ukrainian (Українська)
+ * @author Prima klasy4na
+ */
+$messages['uk'] = array(
+	'ga-next' => 'Наступний',
+);
+
 /** Veps (Vepsan kel')
  * @author Игорь Бродский
  */

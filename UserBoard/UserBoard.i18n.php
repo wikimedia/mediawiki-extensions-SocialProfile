@@ -3007,6 +3007,13 @@ $messages['tr'] = array(
 	'userboard_nextpage' => 'sonraki',
 );
 
+/** Ukrainian (Українська)
+ * @author Prima klasy4na
+ */
+$messages['uk'] = array(
+	'userboard_nextpage' => 'наступна',
+);
+
 /** Veps (Vepsan kel')
  * @author Игорь Бродский
  */

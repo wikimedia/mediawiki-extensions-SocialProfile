@@ -1329,6 +1329,13 @@ $messages['tr'] = array(
 	'mp-request-new-friend' => '$1 yeni {{PLURAL:$1|arkadaş|arkadaş}}',
 );
 
+/** Ukrainian (Українська)
+ * @author Prima klasy4na
+ */
+$messages['uk'] = array(
+	'mp-welcome-edit' => 'Змінити',
+);
+
 /** Veps (Vepsan kel')
  * @author Игорь Бродский
  */
