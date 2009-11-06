@@ -573,10 +573,11 @@ $messages['hsb'] = array(
 );
 
 /** Hungarian (Magyar)
+ * @author Dani
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
-	'userwelcome-desc' => '<tt>&lt;welcomeUser&gt;</tt> tag felhasználó-specifikus társasági információk megjelenítéséhez a bejelentkezett felhasználóknak',
+	'userwelcome-desc' => '<tt>&lt;welcomeUser&gt;</tt> tag felhasználó-specifikus közösségi információk megjelenítéséhez a bejelentkezett felhasználóknak',
 	'mp-userlevels-link' => 'Felhasználói szintek',
 	'mp-welcome-upload' => 'Feltöltés',
 	'mp-welcome-edit' => 'Szerkesztés',

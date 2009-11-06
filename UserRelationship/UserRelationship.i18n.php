@@ -3296,8 +3296,8 @@ a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
  */
 $messages['hu'] = array(
 	'viewrelationships' => 'Kapcsolat megtekintése',
-	'viewrelationshiprequests' => 'Kapcsolati kérések',
-	'ur-already-submitted' => 'A kérelmed elküldve',
+	'viewrelationshiprequests' => 'Jelölések megtekintése',
+	'ur-already-submitted' => 'A kérelmed el lett küldve',
 	'ur-error-page-title' => 'Upsz!',
 	'ur-error-title' => 'Hupsz, eltévedtél!',
 	'ur-error-message-no-user' => 'Nem tudjuk teljesíteni a kérésed, mert nem létezik ilyen nevű felhasználó.',
@@ -3312,10 +3312,10 @@ Szeretnél több barátot?
 <a href="$3">Hívd meg őket.</a>',
 	'ur-add-friends' => '  Szeretnél több barátot?
 <a href="$1">Hívd meg őket</a>',
-	'ur-add-friend' => 'Hozzáadás mint barát',
-	'ur-add-foe' => 'Hozzáadás mint ellenség',
+	'ur-add-friend' => 'Hozzáadás barátként',
+	'ur-add-foe' => 'Hozzáadás ellenségként',
 	'ur-add-no-user' => 'Nincs felhasználó kiválasztva.
-Légyszíves a helyes hivatkozást használva kérj barátokat/ellenségeket.',
+Légyszíves a helyes hivatkozást használva jelölj barátokat/ellenségeket.',
 	'ur-add-personal-message' => 'Személyes üzenet hozzáadása',
 	'ur-remove-relationship-friend' => 'Eltávolítás a barátok közül',
 	'ur-remove-relationship-foe' => 'Eltávolítás az ellenségek közül',
@@ -3323,17 +3323,17 @@ Légyszíves a helyes hivatkozást használva kérj barátokat/ellenségeket.',
 	'ur-previous' => 'előző',
 	'ur-next' => 'következő',
 	'ur-remove-relationship-title-foe' => 'Valóban el szeretnéd távolítani $1 felhasználót az ellenségeid közül?',
-	'ur-remove-relationship-title-confirm-foe' => 'Eltávolítottad $1 felhasználót a barátaid közül',
+	'ur-remove-relationship-title-confirm-foe' => 'Eltávolítottad $1 felhasználót az ellenségeid közül',
 	'ur-remove-relationship-title-friend' => 'Valóban el szeretnéd távolítani $1 felhasználót a barátaid közül?',
 	'ur-remove-relationship-title-confirm-friend' => 'Eltávolítottad $1 felhasználót a barátaid közül',
-	'ur-remove-relationship-message-foe' => 'Kérted $1 eltávolítását az ellenségeid közül, kattints „$2” a megerősítéshez.',
+	'ur-remove-relationship-message-foe' => 'Ha biztosan el szeretnéd $1 felhasználót távolítani az ellenségeid közül, kattints a(z) „$2” gombra a megerősítéshez.',
 	'ur-remove-relationship-message-confirm-foe' => 'Sikeresen eltávolítottad $1 felhasználót az ellenségeid listájáról.',
-	'ur-remove-relationship-message-friend' => 'Kérted $1 eltávolítását a barátaid közül, kattints „$2” a megerősítéshez.',
+	'ur-remove-relationship-message-friend' => 'Ha biztosan el szeretnéd $1 felhasználót távolítani a barátaid közül, kattints a(z) „$2” gombra a megerősítéshez.',
 	'ur-remove-relationship-message-confirm-friend' => 'Sikeresen eltávolítottad $1 felhasználót a barátaid listájáról.',
 	'ur-remove-error-message-no-relationship' => 'Nincs kapcsolatod $1 felhasználóval.',
-	'ur-remove-error-message-remove-yourself' => 'Nem tudod eltávolítani saját magadat.',
-	'ur-remove-error-message-pending-foe-request' => 'Függőben lévő ellenség-kérelmed van $1 felhasználóval.',
-	'ur-remove-error-message-pending-friend-request' => 'Függőben lévő barát-kérelmed van $1 felhasználóval.',
+	'ur-remove-error-message-remove-yourself' => 'Saját magadat nem tudod eltávolítani.',
+	'ur-remove-error-message-pending-foe-request' => 'Függőben lévő ellenségnek jelölésed van $1 felhasználóval.',
+	'ur-remove-error-message-pending-friend-request' => 'Függőben lévő barátnak jelölésed van $1 felhasználóval.',
 	'ur-remove-error-not-loggedin-foe' => 'Be kell jelentkezned ellenség eltávolításához a listáról.',
 	'ur-remove-error-not-loggedin-friend' => 'Be kell jelentkezned barát eltávolításához a listáról.',
 	'ur-remove' => 'Eltávolítás',
@@ -3341,33 +3341,125 @@ Légyszíves a helyes hivatkozást használva kérj barátokat/ellenségeket.',
 	'ur-login' => 'Bejelentkezés',
 	'ur-add-title-foe' => 'Fel szeretnéd venni $1 felhasználót az ellenségeid listájára?',
 	'ur-add-title-friend' => 'Fel szeretnéd venni $1 felhasználót a barátaid listájára?',
+	'ur-add-message-foe' => '$1 felhasználót ellenségednek szeretnéd jelölni.
+Értesíteni fogjuk őt az ellenszenvedről.',
+	'ur-add-message-friend' => '$1 felhasználót barátodnak szeretnéd jelölni.
+Értesíteni fogjuk őt a barátságodról.',
 	'ur-add-button-foe' => 'Hozzáadás ellenségként',
 	'ur-add-button-friend' => 'Hozzáadás barátként',
+	'ur-add-sent-title-foe' => 'Elküldtük az ellenségnek jelölésedet $1 részére!',
 	'ur-add-sent-title-friend' => 'Elküldtük a barátkérődet $1 részére!',
+	'ur-add-sent-message-foe' => 'Értesítettük $1 felhasználót, hogy ellenségének jelölted.
+Ha $1 megerősíti a jelölést, értesítünk téged e-mailben.',
+	'ur-add-sent-message-friend' => 'Értesítettük $1 felhasználót, hogy barátodnak jelölted.
+Ha $1 megerősíti a jelölést, értesítünk téged e-mailben.',
 	'ur-add-error-message-no-user' => 'A felhasználó, akit hozzá akartál adni, nem létezik.',
-	'ur-add-error-message-blocked' => 'Jelenleg blokkolva vagy, így nem adhatsz hozzá barátokat vagy ellenségeket.',
+	'ur-add-error-message-blocked' => 'Jelenleg blokkolva vagy, így nem vehetsz fel barátokat vagy ellenségeket.',
 	'ur-add-error-message-yourself' => 'Nem lehetsz saját magad ellensége vagy barátja.',
 	'ur-add-error-message-existing-relationship-foe' => 'Már ellenségek vagytok $1 felhasználóval.',
 	'ur-add-error-message-existing-relationship-friend' => 'Már barátok vagytok $1 felhasználóval.',
 	'ur-add-error-message-pending-request-title' => 'Türelem!',
+	'ur-add-error-message-pending-friend-request' => '$1 barátodnak jelölt, amit még nem erősítettél meg.
+Értesítjük őt, amint megerősítetted a jelölést.',
+	'ur-add-error-message-pending-foe-request' => '$1 ellenségének jelölt, amit még nem erősítettél meg.
+Értesítjük őt, amint megerősítetted a jelölést.',
 	'ur-add-error-message-not-loggedin-foe' => 'Be kell jelentkezned ellenség hozzáadásához',
-	'ur-add-error-message-not-loggedin-friend' => 'Be kell jelentkezned ellenség hozzáadásához',
+	'ur-add-error-message-not-loggedin-friend' => 'Be kell jelentkezned barát hozzáadásához',
 	'ur-requests-title' => 'Függő kapcsolatok',
 	'ur-requests-message-foe' => '<a href="$1">$2</a> az ellenséged akar lenni.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> a barátod szeretne lenni.',
 	'ur-accept' => 'Elfogadás',
 	'ur-reject' => 'Visszautasítás',
-	'ur-no-requests-message' => 'Nincsenek függő ellenség vagy barát kapcsolataid.
-Ha szeretnél több barátot, <a href="$1">hívd meg őket!</a>',
+	'ur-no-requests-message' => 'Nincsenek függő jelöléseid.
+Ha több barátot szeretnél, <a href="$1">hívd meg őket!</a>',
 	'ur-requests-added-message-foe' => '$1 felvéve az ellenségeid közé.',
 	'ur-requests-added-message-friend' => '$1 felhasználót hozzáadtad a barátaidhoz.',
 	'ur-requests-reject-message-friend' => 'Elutasítottad $1 felhasználó felvételét a barátaid közé.',
 	'ur-requests-reject-message-foe' => 'Elutasítottad $1 felhasználó felvételét az ellenségeid közé.',
 	'ur-title-foe' => '$1 ellenségeinek listája',
 	'ur-title-friend' => '$1 barátainak listája',
-	'foe_request_subject' => 'Háború! $1 ellenségeként jelölt meg a(z) {{SITENAME}} wikin!',
+	'friend_request_subject' => '$1 barátjának jelölt a(z) {{SITENAME}} wikin!',
+	'friend_request_body' => 'Szia, $1!
+
+$2 felvett barátjának a(z) {{SITENAME}} wikin. Szeretnénk biztosan tudni, hogy tényleg barátok vagytok.
+
+Kattints a következő hivatkozásra a barátság megerősítéséhez:
+$3
+
+Köszönjük
+
+---
+Szeretnéd, ha nem zaklatnánk több e-maillel?
+
+Kattints a következő hivatkozásra: $4
+és tiltsd le az e-mailes értesítéseket a beállításaidban.',
+	'foe_request_subject' => 'Háború! $1 ellenségnek jelölt a(z) {{SITENAME}} wikin!',
+	'foe_request_body' => 'Szia, $1!
+
+$2 felvett az ellenségei közé a(z) {{SITENAME}} wikin. Szeretnénk biztosan tudni, hogy tényleg halálos ellenségek vagytok, vagy legalább valami nézeteltérésetek van.
+
+Kattints a következő hivatkozásra az ellenszenv megerősítéséhez:
+$3
+
+Köszönjük
+
+---
+Szeretnéd, ha nem zaklatnánk több e-maillel?
+
+Kattints a következő hivatkozásra: $4
+és tiltsd le az e-mailes értesítéseket a beállításaidban.',
 	'friend_accept_subject' => '$1 elfogadta a barátkérődet a(z) {{SITENAME}} wikin!',
+	'friend_accept_body' => 'Szia, $1!
+
+$2 elfogadta a barátnak jelölésedet a(z) {{SITENAME}} wikin!
+
+$2 lapját itt tekintheted meg: $3
+
+Köszönjük
+
+---
+Szeretnéd, ha nem zaklatnánk több e-maillel?
+
+Kattints a következő hivatkozásra: $4
+és tiltsd le az e-mailes értesítéseket a beállításaidban.',
 	'foe_accept_subject' => '$1 elfogadta, hogy ellensége vagy a(z) {{SITENAME}} wikin!',
+	'foe_accept_body' => 'Szia, $1!
+
+$2 elfogadta az ellenségnek jelölésedet a(z) {{SITENAME}} wikin!
+
+$2 lapját itt tekintheted meg: $3
+
+Köszönjük
+
+---
+Szeretnéd, ha nem zaklatnánk több e-maillel?
+
+Kattints a következő hivatkozásra: $4
+és tiltsd le az e-mailes értesítéseket a beállításaidban.',
+	'friend_removed_subject' => 'Jaj, ne! $1 eltávolított a barátjai közül a(z) {{SITENAME}} wikin!',
+	'friend_removed_body' => 'Szia, $1!
+
+$2 eltávolított a barátai közül a(z) {{SITENAME}} wikin!
+
+Köszönjük
+
+---
+Szeretnéd, ha nem zaklatnánk több e-maillel?
+
+Kattints a következő hivatkozásra: $4
+és tiltsd le az e-mailes értesítéseket a beállításaidban.',
+	'foe_removed_subject' => 'Hurrá! $1 eltávolított az ellenségei közül a(z) {{SITENAME}} wikin!',
+	'foe_removed_body' => 'Szia, $1!
+
+$2 eltávolított az ellenségei közül a(z) {{SITENAME}} wikin!
+
+Köszönjük
+
+---
+Szeretnéd, ha nem zaklatnánk több e-maillel?
+
+Kattints a következő hivatkozásra: $4
+és tiltsd le az e-mailes értesítéseket a beállításaidban.',
 );
 
 /** Interlingua (Interlingua)

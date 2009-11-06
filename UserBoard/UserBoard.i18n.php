@@ -1441,14 +1441,15 @@ a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
 );
 
 /** Hungarian (Magyar)
+ * @author Dani
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
-	'boardblastlogintitle' => 'Be kell jelentkezned hírek küldéséhez.',
-	'boardblastlogintext' => 'Ahhoz hogy tudj híreket küldeni,
+	'boardblastlogintitle' => 'Bejegyzés küldéséhez be kell jelentkezned.',
+	'boardblastlogintext' => 'Ahhoz hogy tudj bejegyzéseket küldeni,
 <a href="index.php?title=Special:UserLogin">be kell jelentkezned</a>.',
 	'messagesenttitle' => 'Elküldött üzenetek',
-	'boardblasttitle' => 'Hír küldése',
+	'boardblasttitle' => 'Bejegyzés küldése',
 	'boardblaststep1' => '1. lépés – írd meg az üzeneted',
 	'boardblastprivatenote' => 'Minden üzenet privát üzenetként lesz elküldve',
 	'boardblaststep2' => '2. lépés – válaszd ki, kinek szeretnéd elküldeni az üzenetet',
@@ -1458,23 +1459,23 @@ $messages['hu'] = array(
 	'boardlinkunselectfriends' => 'Barátok kijelölésének megszüntetése',
 	'boardlinkselectfoes' => 'Ellenségek kijelölése',
 	'boardlinkunselectfoes' => 'Ellenségek kijelölésének megszüntetése',
-	'boardsendbutton' => 'Hír küldése hirdetőfalra',
+	'boardsendbutton' => 'Bejegyzés elküldése az üzenőfalra',
 	'boardnofriends' => 'Nincsenek barátaid, akiknek üzenetet küldhetnél!',
 	'messagesentsuccess' => 'Az üzeneted sikeresen elküldve',
-	'userboard' => 'Hirdetőfal',
-	'userboard_board-to-board' => 'Hirdetőfaltól-hirdetőfalig',
+	'userboard' => 'Üzenőfal',
+	'userboard_board-to-board' => 'Üzenőfaltól-üzenőfalig',
 	'userboard_delete' => 'Törlés',
 	'userboard_noexist' => 'A megtekinteni próbált felhasználó nem létezik.',
-	'userboard_yourboard' => 'Saját hirdetőfalad',
-	'userboard_owner' => '$1 hirdetőfala',
-	'userboard_yourboardwith' => 'Hirdetőfalak közti beszélgetésed vele: $1',
-	'userboard_otherboardwith' => '$1 hirdetőfalak közti beszélgetése vele: $2',
+	'userboard_yourboard' => 'Saját üzenőfalad',
+	'userboard_owner' => '$1 üzenőfala',
+	'userboard_yourboardwith' => 'Üzenőfalak közti beszélgetésed vele: $1',
+	'userboard_otherboardwith' => '$1 üzenőfalak közti beszélgetése vele: $2',
 	'userboard_backprofile' => 'Vissza $1 profiljára',
 	'userboard_backyourprofile' => 'Vissza a profilodra',
-	'userboard_boardtoboard' => 'Hirdetőfal-beszélgetés',
+	'userboard_boardtoboard' => 'Üzenőfal-beszélgetés',
 	'userboard_confirmdelete' => 'Biztos vagy benne, hogy törölni szeretnéd ezt az üzenetet?',
 	'userboard_sendmessage' => 'Üzenet küldése $1 részére',
-	'userboard_myboard' => 'Saját hirdetőfalam',
+	'userboard_myboard' => 'Saját üzenőfalam',
 	'userboard_posted_ago' => 'beküldve: $1',
 	'userboard_private' => 'privát',
 	'userboard_public' => 'nyilvános',
@@ -1483,23 +1484,23 @@ $messages['hu'] = array(
 	'userboard_prevpage' => 'előző',
 	'userboard_nomessages' => 'Nincsenek üzenetek.',
 	'userboard_sendbutton' => 'küldés',
-	'userboard_loggedout' => '<a href="$1">Be kell jelentkezned</a> üzenetek küldéséhez más felhasználóknak.',
+	'userboard_loggedout' => 'Ha más felhasználók számára szeretnél üzenetet küldeni, <a href="$1">be kell jelentkezned</a>.',
 	'userboard_showingmessages' => '{{PLURAL:$4|$3 üzenet|$2 – $3 üzenetek}} megjelenítése (összesen: $1)',
-	'right-userboard-delete' => 'mások hirdetőfal-üzeneteinek törlése',
-	'userboard-time-days' => '{{PLURAL:$1|egy|$1}} nap',
-	'userboard-time-hours' => '{{PLURAL:$1|egy|$1}} óra',
-	'userboard-time-minutes' => '{{PLURAL:$1|egy|$1}} perc',
-	'userboard-time-seconds' => '{{PLURAL:$1|egy|$1}} másodperc',
+	'right-userboard-delete' => 'mások üzenőfalas üzeneteinek törlése',
+	'userboard-time-days' => '{{PLURAL:$1|egy|$1}} nappal',
+	'userboard-time-hours' => '{{PLURAL:$1|egy|$1}} órával',
+	'userboard-time-minutes' => '{{PLURAL:$1|egy|$1}} perccel',
+	'userboard-time-seconds' => '{{PLURAL:$1|egy|$1}} másodperccel',
 	'message_received_subject' => '$1 írt a hirdetőfaladra a(z) {{SITENAME}} oldalon',
 	'message_received_body' => 'Szia $1!
 
-$2 írt a hirdetőfaladra a(z) {{SITENAME}} oldalon!
+$2 írt az üzenőfaladra a(z) {{SITENAME}} wikin!
 
-Kattints alább a hirdetőfalad megtekintéséhez.
+Kattints alábbi hivatkozásra az üzenőfalad megtekintéséhez.
 
 $3
 
-~~
+---
 Szeretnéd ha nem zaklatnánk több e-maillel?
 
 Kattints a linkre: $4

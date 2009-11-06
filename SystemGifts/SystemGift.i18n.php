@@ -1254,6 +1254,7 @@ a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
 );
 
 /** Hungarian (Magyar)
+ * @author Dani
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
@@ -1279,7 +1280,7 @@ $messages['hu'] = array(
 	'ga-giftname' => 'ajándék neve',
 	'ga-gifttype' => 'ajándék típusa',
 	'ga-goback' => 'Visszalépés',
-	'ga-imagesbelow' => 'Alább láthatóak a képeid, amelyek használatban lesznek az oldalon',
+	'ga-imagesbelow' => 'Alább láthatóak a képeid, amelyek használva lesznek az oldalon',
 	'ga-img' => 'kép hozzáadása/cseréje',
 	'ga-large' => 'Nagy',
 	'ga-medium' => 'Közepes',
@@ -1391,6 +1392,7 @@ e disactiva in tu preferentias le notificationes per e-mail.',
 /** Indonesian (Bahasa Indonesia)
  * @author Bennylin
  * @author Irwangatot
+ * @author IvanLanin
  * @author Kandar
  */
 $messages['id'] = array(
@@ -1438,23 +1440,23 @@ Anda baru menerima $2 penghargaan di {{SITENAME}}!
 
 "$3"
 
-Click dibawah untuk mengetahui jenis piala anda!
+Klik di bawah untuk mengetahui jenis penghargaan Anda!
 
 $4
 
-Kami harap anda menyukainya!
+Kami harap Anda menyukainya!
 
-Trim\'s,
+Terima kasih,
 
 
 {{SITENAME}} tim
 
 ---
 
-Ingin berhenti mendapatkan surat-e dari kami?
+Ingin berhenti mendapatkan surel dari kami?
 
-Click $5
-dan ubah setting anda untuk menonaktifkan notifikasi surat-e.',
+Klik $5
+dan ubah setting anda untuk menonaktifkan notifikasi surel.',
 	'right-awardsmanage' => 'Buat baru dan sunting penghargaan yang ada',
 );
 

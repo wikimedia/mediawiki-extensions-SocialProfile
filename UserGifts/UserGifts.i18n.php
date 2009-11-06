@@ -1926,7 +1926,7 @@ a změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił.',
 $messages['hu'] = array(
 	'giftmanager' => 'Ajándékkezelő',
 	'giftmanager-addgift' => '+ új ajándék hozzáadása',
-	'giftmanager-access' => 'ajándék elérése',
+	'giftmanager-access' => 'hozzáférés az ajándékhoz',
 	'giftmanager-description' => 'ajándék leírása',
 	'giftmanager-giftimage' => 'ajándék képe',
 	'giftmanager-image' => 'kép hozzáadása/lecserélése',
@@ -1952,7 +1952,7 @@ Ez törölni fogja azoktól a felhasználóktól is, akik eddig megkapták.',
 	'g-error-message-blocked' => 'Jelenleg blokkolva vagy, és nem adhatsz ajándékokat',
 	'g-error-message-invalid-link' => 'A megadott hivatkozás érvénytelen',
 	'g-error-message-login' => 'Be kell jelentkezned ajándékok küldéséhez',
-	'g-error-message-no-user' => 'A felhasználó, akit meg próbáltál nézni nem létezik.',
+	'g-error-message-no-user' => 'A felhasználó, akit meg próbáltál nézni, nem létezik.',
 	'g-error-message-to-yourself' => 'Nem adhatsz ajándékot saját magadnak.',
 	'g-error-title' => 'Hoppá, eltévedtél!',
 	'g-file-instructions' => 'A képnek jpeg, png vagy (nem animált) gif formátumúnak, és 100 KB-nál kisebb méretűnek kell lennie.',
@@ -1973,14 +1973,14 @@ Ilyen egyszerű.',
 	'g-give-no-user-message' => 'Az ajándékok és díjak remek módjai barátaid elismerésének!',
 	'g-give-no-user-title' => 'Kinek szeretnél ajándékot küldeni?',
 	'g-give-to-user-title' => '„$1” ajándék elküldése $2 részére',
-	'g-give-to-user-message' => '<a href="$2">Más ajándékot</a>? szeretnél küldeni $1 részére?',
+	'g-give-to-user-message' => '<a href="$2">Más ajándékot</a> szeretnél küldeni $1 részére?',
 	'g-go-back' => 'Visszalépés',
 	'g-imagesbelow' => 'Alább láthatóak a képed, melyek használva lesznek az oldalon',
 	'g-large' => 'Nagy',
 	'g-list-title' => '$1 ajándéklistája',
 	'g-main-page' => 'Kezdőlap',
 	'g-medium' => 'Közepes',
-	'g-mediumlarge' => 'Középnagy',
+	'g-mediumlarge' => 'Közepesen nagy',
 	'g-new' => 'új',
 	'g-next' => 'Következő',
 	'g-previous' => 'Előző',
@@ -2003,7 +2003,7 @@ Ilyen egyszerű.',
 	'gift_received_subject' => '$1 $2 ajándékot küldött neked a(z) {{SITENAME}} wikin!',
 	'gift_received_body' => 'Szia, $1!
 
-$2 épp most küldött neked $3 ajándékot a(z) {{SITENAME}} wikin.
+$2 épp most küldte neked a(z) $3 ajándékot a(z) {{SITENAME}} wikin.
 
 Meg szeretnéd nézni az ajándékodat, és a megjegyzést, amit $2 fűzött hozzá? Csak kattints az alábbi linkre:
 
@@ -2014,7 +2014,7 @@ Reméljük tetszeni fog!
 Köszönettel:
 a(z) {{SITENAME}} csapata
 
-~~
+---
 Szeretnéd ha nem zaklatnánk több e-maillel?
 
 Kattints a linkre: $5
@@ -2127,6 +2127,7 @@ e cambia tu configurationes pro disactivar le notificationes in e-mail.',
 /** Indonesian (Bahasa Indonesia)
  * @author Bennylin
  * @author Irwangatot
+ * @author IvanLanin
  * @author Kandar
  */
 $messages['id'] = array(
@@ -2207,27 +2208,27 @@ Sangat mudah.',
 	'g-viewgiftlist' => 'Lihat daftar hadiah',
 	'g-your-profile' => 'Profil anda',
 	'gift_received_subject' => '$1 telah mengirimi anda hadiah $2 di {{SITENAME}}!',
-	'gift_received_body' => "Hai $1.
+	'gift_received_body' => 'Hai $1.
 
-$2 baru saja mengirim anda hadiah $3 pada {{SITENAME}}.
+$2 baru saja mengirim Anda hadiah $3 pada {{SITENAME}}.
 
-Ingin membaca catatan $2 tinggalkan untuk anda dan lihat hadiah anda? Click pranala di bawah:
+Ingin membaca catatan $2 tinggalkan untuk anda dan lihat hadiah Anda? Klik pranala di bawah:
 
 $4
 
-Kami harap anda senang!
+Kami harap Anda senang!
 
-Trim's,
+Terima kasih,
 
 
 Tim {{SITENAME}} 
 
 ---
 
-Hai, ingin berhenti mendapatkan surat-e dari kami?
+Hai, ingin berhenti mendapatkan surel dari kami?
 
-Click $5
-dan ubah seting untuk nonaktifkan notifikasi surat-e.",
+Klik $5
+dan ubah seting untuk nonaktifkan notifikasi surel.',
 	'right-giftadmin' => 'Buat baru dan sunting hadiah yang sudah ada',
 );
 
