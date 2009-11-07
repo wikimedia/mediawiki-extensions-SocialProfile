@@ -1577,6 +1577,7 @@ e disactiva in tu preferentias le notificationes per e-mail.',
 /** Indonesian (Bahasa Indonesia)
  * @author Bennylin
  * @author Irwangatot
+ * @author IvanLanin
  * @author Kandar
  */
 $messages['id'] = array(
@@ -1627,20 +1628,20 @@ anda diharuskan untuk <a href="index.php?title=Special:UserLogin">masuk log</a>.
 	'userboard-time-minutes' => '{{PLURAL:$1|semenit|$1 menit}}',
 	'userboard-time-seconds' => '{{PLURAL:$1|sedetik|$1 detik}}',
 	'message_received_subject' => '$1 menulis pada papan anda di {{SITENAME}}',
-	'message_received_body' => 'Hei $1.
+	'message_received_body' => 'Hai $1.
 
-$2 baru menulis di papan anda pada {{SITENAME}}!
+$2 baru menulis di papan Anda pada {{SITENAME}}!
 
-Click dibawah untuk mengetahuai papan anda!
+Klik di bawah untuk memeriksa papan Anda!
 
 $3
 
 ---
 
-Hey, ingin berhenti menerima surat-e dari kami?
+Hey, ingin berhenti menerima surel dari kami?
 
-Click $4
-dan ubah setting anda untuk menonaktifkan notifikasi surat-e.',
+Klik $4
+dan ubah setting anda untuk menonaktifkan notifikasi surel.',
 );
 
 /** Ido (Ido)
@@ -2383,6 +2384,7 @@ $messages['ps'] = array(
 
 /** Portuguese (Português)
  * @author Giro720
+ * @author Hamilton Abreu
  * @author Lijealso
  * @author Malafaya
  * @author Vanessa Sabino
@@ -2428,7 +2430,7 @@ Clique <a href="index.php?title=Special:UserLogin">aqui para logar</a>',
 	'userboard_prevpage' => 'anterior',
 	'userboard_nomessages' => 'Sem mensagens.',
 	'userboard_sendbutton' => 'enviar',
-	'userboard_loggedout' => 'Você precida estar <a href="$1">logado</a> para enviar mensagens a outros usuários.',
+	'userboard_loggedout' => 'Precisa de <a href="$1">autenticar-se</a> para enviar mensagens a outros utilizadores.',
 	'userboard_showingmessages' => 'Mostrando {{PLURAL:$4|mensagem $3|mensagens $2-$3}} de {{PLURAL:$1|$1 mensagem|$1 mensagens}}',
 	'right-userboard-delete' => 'Eliminar mensagens no mural de outros',
 	'userboard-time-days' => '{{PLURAL:$1|um dia|$1 dias}}',

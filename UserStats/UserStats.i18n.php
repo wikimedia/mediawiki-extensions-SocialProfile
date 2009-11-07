@@ -1655,6 +1655,7 @@ $3',
 
 /** Portuguese (Português)
  * @author Giro720
+ * @author Hamilton Abreu
  * @author Vanessa Sabino
  * @author Waldir
  */
@@ -1662,7 +1663,7 @@ $messages['pt'] = array(
 	'user-stats-alltime-title' => 'Mais pontos de todo o tempo',
 	'user-stats-weekly-title' => 'Mais pontos esta semana',
 	'user-stats-monthly-title' => 'Mais pontos deste mês',
-	'topusers' => 'Usuários top',
+	'topusers' => 'Utilizadores de topo',
 	'top-fans-by-points-nav-header' => 'Fãs top',
 	'top-fans-by-category-nav-header' => 'Top por categoria',
 	'top-fans-total-points-link' => 'Pontos totais',

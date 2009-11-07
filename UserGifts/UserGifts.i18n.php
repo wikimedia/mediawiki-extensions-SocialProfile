@@ -3069,6 +3069,7 @@ i zmień ustawienia dla powiadomień email.',
 );
 
 /** Portuguese (Português)
+ * @author Hamilton Abreu
  * @author Malafaya
  * @author Vanessa Sabino
  * @author Waldir
@@ -3086,7 +3087,7 @@ $messages['pt'] = array(
 	'giftmanager-private' => 'privado',
 	'giftmanager-view' => 'Ver Lista de Presentes',
 	'g-add-message' => 'Adicionar Mensagem',
-	'g-back-edit-gift' => 'Volar para Editar Este Presente',
+	'g-back-edit-gift' => 'Voltar para editar este presente',
 	'g-back-gift-list' => 'Voltar para Lista de Presentes',
 	'g-back-link' => '< Voltar para página de $1',
 	'g-choose-file' => 'Escolher Arquivo:',
@@ -3095,7 +3096,8 @@ $messages['pt'] = array(
 	'g-create-gift' => 'Presente criado',
 	'g-created-by' => 'criado por',
 	'g-current-image' => 'Imagem Atual',
-	'g-delete-message' => 'Você tem certeza de que quer excluir o presente "$1"? Isto também irá excluí-lo que usuários que podem tê-lo recebido.',
+	'g-delete-message' => 'Tem a certeza de que quer eliminar o presente "$1"?
+Isto irá também retirá-lo aos utilizadores que o tenham recebido.',
 	'g-description-title' => 'presente "$2" de $1',
 	'g-error-do-not-own' => 'Você não possui este presente.',
 	'g-error-message-blocked' => 'Você está bloqueado atualmente e não pode dar presentes',

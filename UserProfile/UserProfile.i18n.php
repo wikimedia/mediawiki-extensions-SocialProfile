@@ -7196,6 +7196,7 @@ $messages['ps'] = array(
 );
 
 /** Portuguese (Português)
+ * @author Hamilton Abreu
  * @author Jorge Morais
  * @author Lijealso
  * @author Malafaya
@@ -7204,7 +7205,7 @@ $messages['ps'] = array(
  * @author Waldir
  */
 $messages['pt'] = array(
-	'populateuserprofiles' => 'Popular perfil de usuários',
+	'populateuserprofiles' => 'Preencher perfis de utilizador',
 	'user-time-ago' => '$1 atrás',
 	'user-awards-title' => 'Prêmios',
 	'user-gifts-title' => 'Presentes',
@@ -7365,7 +7366,7 @@ Clique <a href="$1">aqui</a> para logar ou clique <a href="$2">aqui</a> para se 
 * Special:UpdateProfile/preferences|Preferências',
 	'user-type-toggle-old' => 'Usar página wiki de utilizador',
 	'user-type-toggle-new' => 'Usar página social de utilizador',
-	'user-board-login-message' => 'Você precisa estar <a href="$1">logado</a> para enviar mensagens para outros usuários',
+	'user-board-login-message' => 'Precisa de <a href="$1">autenticar-se</a> para enviar mensagens a outros utilizadores',
 	'removeavatar' => 'Remover avatar',
 	'givegift' => 'Dar presente',
 	'viewgifts' => 'Ver presentes',
