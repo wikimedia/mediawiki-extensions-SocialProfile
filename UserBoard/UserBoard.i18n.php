@@ -3014,6 +3014,7 @@ $messages['tr'] = array(
  * @author Prima klasy4na
  */
 $messages['uk'] = array(
+	'userboard_delete' => 'Вилучити',
 	'userboard_nextpage' => 'наступна',
 );
 

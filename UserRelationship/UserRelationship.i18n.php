@@ -6777,6 +6777,7 @@ $messages['ug-latn'] = array(
  */
 $messages['uk'] = array(
 	'ur-next' => 'наступний',
+	'ur-remove' => 'Вилучити',
 );
 
 /** Veps (Vepsan kel')
