@@ -64,6 +64,13 @@ $messages['bg'] = array(
 	'yui-desc' => 'Набор от инструменти и контроли, написани на Джаваскрипт',
 );
 
+/** Bengali (বাংলা)
+ * @author Bellayet
+ */
+$messages['bn'] = array(
+	'yui-desc' => 'ইউটিলিটি এবং কন্ট্রোলের একটি গুচ্ছ, যা জাভাস্ক্রিপ্টে লেখা হয়েছে',
+);
+
 /** Breton (Brezhoneg)
  * @author Fulup
  */

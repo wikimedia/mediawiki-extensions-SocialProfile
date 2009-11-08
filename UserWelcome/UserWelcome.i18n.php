@@ -336,13 +336,14 @@ $messages['el'] = array(
 );
 
 /** Esperanto (Esperanto)
+ * @author Michawiki
  * @author Yekrats
  */
 $messages['eo'] = array(
 	'mp-userlevels-link' => 'Uzulaj niveloj',
 	'mp-welcome-upload' => 'Alŝuti',
 	'mp-welcome-edit' => 'Redakti',
-	'mp-welcome-points' => '$1 poentoj',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|poento|poentoj}}',
 	'mp-welcome-needed-points' => 'Pliniveligi al <b><a href="$1">$2</a></b> gajnu <i>$3</i> {{PLURAL:$3|plian poenton|pliajn poentojn}}!',
 	'mp-welcome-logged-in' => 'Saluton $1',
 	'mp-requests-title' => 'Petoj',

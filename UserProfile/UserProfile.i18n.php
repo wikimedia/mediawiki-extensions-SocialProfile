@@ -2582,6 +2582,7 @@ $messages['el'] = array(
 
 /** Esperanto (Esperanto)
  * @author Melancholie
+ * @author Michawiki
  * @author Yekrats
  */
 $messages['eo'] = array(
@@ -2608,7 +2609,7 @@ $messages['eo'] = array(
 	'user-stats-edits' => '{{PLURAL:$1|Redakto|Redaktoj}}',
 	'user-stats-votes' => '{{PLURAL:$1|Voĉdono|Voĉdonoj}}',
 	'user-stats-comments' => '{{PLURAL:$1|Komento|Komentoj}}',
-	'user-stats-recruits' => 'Varbitoj',
+	'user-stats-recruits' => '{{PLURAL:$1|Varbito|Varbitoj}}',
 	'other-info-title' => 'Alia informo',
 	'user-friends-title' => 'Amikoj',
 	'user-foes-title' => 'Malamikoj',
@@ -6930,8 +6931,10 @@ $messages['os'] = array(
 $messages['pdc'] = array(
 	'user-watchlist' => 'Mei Watsch-Lischt',
 	'user-stats-title' => 'Nummere',
+	'other-info-books' => 'Bicher',
 	'user-profile-section-preferences' => 'paerseenlich Profil',
 	'user-profile-personal-name' => 'Naame',
+	'user-profile-interests-books' => 'Bicher',
 	'user-profile-picture-small' => 'Glee',
 	'user-page-link' => 'Yuuser-Blatt',
 );
