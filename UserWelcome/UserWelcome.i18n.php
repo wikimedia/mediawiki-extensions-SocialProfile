@@ -1336,6 +1336,7 @@ $messages['tr'] = array(
  */
 $messages['uk'] = array(
 	'mp-welcome-edit' => 'Змінити',
+	'mp-request-new-message' => 'нове повідомлення',
 );
 
 /** Veps (Vepsan kel')
