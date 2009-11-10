@@ -447,6 +447,16 @@ $messages['arc'] = array(
 	'ur-error-page-title' => 'ܐܘܝ!',
 	'ur-main-page' => 'ܦܐܬܐ ܪܫܝܬܐ',
 	'ur-your-profile' => 'ܠܦܦܐ ܕܝܠܟ',
+	'ur-add-friend' => 'ܐܘܣܦ ܐܝܟ ܚܒܪܐ',
+	'ur-add-foe' => 'ܐܘܣܦ ܐܝܟ ܒܥܠܕܒܒܐ',
+	'ur-remove-relationship-friend' => 'ܠܚܝ ܐܝܟ ܚܒܪܐ',
+	'ur-remove-relationship-foe' => 'ܠܚܝ ܐܝܟ ܒܥܠܕܒܒܐ',
+	'ur-remove-relationship-title-confirm-foe' => 'ܠܚܐ ܐܢܬ  $1 ܐܝܟ ܒܥܠܕܒܒܟ',
+	'ur-remove-relationship-title-confirm-friend' => 'ܠܚܐ ܐܢܬ  $1 ܐܝܟ ܚܒܪܟ',
+	'ur-remove-error-message-remove-yourself' => 'ܠܐ ܡܨܐ ܐܢܬ ܠܠܚܝܐ ܕܢܦܫܟ',
+	'ur-remove' => 'ܠܚܝ',
+	'ur-cancel' => 'ܒܛܘܠ',
+	'ur-login' => 'ܥܘܠ',
 );
 
 /** Egyptian Spoken Arabic (مصرى)

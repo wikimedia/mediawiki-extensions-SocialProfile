@@ -149,6 +149,13 @@ $messages['ar'] = array(
 وغير إعداداتك لتعديل إخطارات البريد الإلكتروني.',
 );
 
+/** Aramaic (ܐܪܡܝܐ)
+ * @author Basharh
+ */
+$messages['arc'] = array(
+	'top-fans-points' => 'ܢܘܩܙ̈ܐ',
+);
+
 /** Egyptian Spoken Arabic (مصرى)
  * @author Ghaly
  * @author Meno25
@@ -865,7 +872,7 @@ $messages['gl'] = array(
 	'right-updatepoints' => 'Actualizar o contador de edicións',
 	'level-advanced-to' => 'avanzou ata o nivel <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Agora é un "$1" en {{SITENAME}}!',
-	'level-advance-body' => 'Ola, $1:
+	'level-advance-body' => 'Ola $1:
 
 Agora é un "$2" en {{SITENAME}}!
 
@@ -1599,6 +1606,13 @@ Volètz arrestar de recebre de corrièrs electronics de nòstra part ?
 
 Clicatz $3
 e modificatz vòstres paramètres en desactivant las notificacions per corrièr electronic.",
+);
+
+/** Deitsch (Deitsch)
+ * @author Xqt
+ */
+$messages['pdc'] = array(
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Anmaerricking|Anmaerrickinge}}',
 );
 
 /** Polish (Polski)

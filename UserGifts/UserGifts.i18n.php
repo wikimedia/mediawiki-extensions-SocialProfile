@@ -273,6 +273,8 @@ $4
  */
 $messages['arc'] = array(
 	'g-main-page' => 'ܦܐܬܐ ܪܫܝܬܐ',
+	'g-remove' => 'ܠܚܝ',
+	'g-remove-title' => 'ܠܚܝ "$1"؟',
 );
 
 /** Egyptian Spoken Arabic (مصرى)

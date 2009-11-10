@@ -99,6 +99,10 @@ $messages['arc'] = array(
 	'mp-userlevels-link' => 'ܫܘܝ̈ܐ ܕܡܦܠܚܢ̈ܐ',
 	'mp-welcome-upload' => 'ܐܣܩ',
 	'mp-welcome-edit' => 'ܫܚܠܦ',
+	'mp-welcome-logged-in' => 'ܫܠܡܐ $1',
+	'mp-request-new-message' => 'ܐܓܪܬܐ ܚܕܬܐ',
+	'mp-request-new-foe' => '$1 ܚܕܬܐ {{PLURAL:$1|ܒܥܠܕܒܒܐ|ܒܥܠܕܒܒ̈ܐ}}',
+	'mp-request-new-friend' => '$1 ܚܕܬܐ {{PLURAL:$1|ܚܒܪܐ|ܚܒܪ̈ܐ}}',
 );
 
 /** Egyptian Spoken Arabic (مصرى)
@@ -488,7 +492,7 @@ $messages['gl'] = array(
 	'mp-welcome-edit' => 'Editar',
 	'mp-welcome-points' => '$1 {{PLURAL:$1|punto|puntos}}',
 	'mp-welcome-needed-points' => 'Para avanzar a <b><a href="$1">$2</a></b>, gañe <i>$3</i> {{PLURAL:$3|punto|puntos}} máis!',
-	'mp-welcome-logged-in' => 'Ola, $1',
+	'mp-welcome-logged-in' => 'Ola $1',
 	'mp-requests-title' => 'Solicitudes',
 	'mp-requests-message' => 'Ten as seguintes solicitudes.',
 	'mp-request-new-message' => 'mensaxes novas',
