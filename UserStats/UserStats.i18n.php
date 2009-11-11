@@ -887,6 +887,13 @@ Faga clic $3
 e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
 );
 
+/** Ancient Greek (Ἀρχαία ἑλληνικὴ)
+ * @author Crazymadlover
+ */
+$messages['grc'] = array(
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Σχόλιον|Σχόλια}}',
+);
+
 /** Swiss German (Alemannisch)
  * @author Als-Holder
  */
