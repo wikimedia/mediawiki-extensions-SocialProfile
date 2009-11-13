@@ -2025,6 +2025,7 @@ $messages['ps'] = array(
 );
 
 /** Portuguese (Português)
+ * @author Hamilton Abreu
  * @author Malafaya
  * @author Vanessa Sabino
  * @author Waldir
@@ -2067,14 +2068,14 @@ $messages['pt'] = array(
 	'ga-title' => 'Presentes de $1',
 	'ga-uploadsuccess' => 'Upload bem sucedido',
 	'ga-viewlist' => 'Ver Lista de Presentes',
-	'system_gift_received_subject' => 'Você recebeu o prêmio $1 em {{SITENAME}}!',
-	'system_gift_received_body' => 'Oi $1:
+	'system_gift_received_subject' => 'Recebeu o prêmio $1 na {{SITENAME}}!',
+	'system_gift_received_body' => 'Olá $1,
 
-Você acaba de receber o prêmio $2 em {{SITENAME}}!
+Acaba de receber o prêmio $2 na {{SITENAME}}!
 
 "$3"
 
-Clique abaixo para ver sua estante de troféis!
+Clique abaixo para ver a sua estante de troféus!
 
 $4
 
@@ -2083,14 +2084,14 @@ Esperamos que tenha gostado!
 Obrigado,
 
 
-O Time de {{SITENAME}}
+A equipa da {{SITENAME}}
 
 ---
 
-Ei, quer parer de receber e-mails de nós?
+Olhe, quer parar de receber os nossos e-mails?
 
 Clique $5
-e altere suas preferências para desabilitar e-mails de notificação.',
+e altere as suas preferências para desactivar as notificações por e-mail.',
 	'right-awardsmanage' => 'Crie novos e edite galardões existentes',
 );
 

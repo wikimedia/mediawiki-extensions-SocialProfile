@@ -3151,12 +3151,12 @@ Isto irá também retirá-lo aos utilizadores que o tenham recebido.',
 	'g-uploadsuccess' => 'Upload bem sucedido',
 	'g-viewgiftlist' => 'Ver Lista de Presentes',
 	'g-your-profile' => 'Seu Perfil',
-	'gift_received_subject' => '$1 enviou para você o Presente $2 Gift em {{SITENAME}}!',
-	'gift_received_body' => 'Oi $1:
+	'gift_received_subject' => '$1 enviou-lhe o presente $2 na {{SITENAME}}!',
+	'gift_received_body' => 'Olá $1,
 
-$2 acabou de enviar o presente $3 em {{SITENAME}}.
+$2 acabou de enviar-lhe o presente $3 na {{SITENAME}}.
 
-Quer ler o recado que $2 deixou e ver seu presente? Clique no link abaixo:
+Quer ler o recado que $2 deixou e ver o seu presente? Clique na ligação abaixo:
 
 $4
 
@@ -3165,14 +3165,14 @@ Esperamos que tenha gostado!
 Obrigado,
 
 
-O Time de {{SITENAME}}
+A equipa da {{SITENAME}}
 
 ---
 
-Ei, quer parer de receber e-mails de nós?
+Olhe, quer parar de receber os nossos e-mails?
 
 Clique $5
-e altere suas preferências para desabilitar e-mails de notificação.',
+e altere as suas preferências para desactivar as notificações por e-mail.',
 	'right-giftadmin' => 'Crie novas e edite ofertas existentes',
 );
 

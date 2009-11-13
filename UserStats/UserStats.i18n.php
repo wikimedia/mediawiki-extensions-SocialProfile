@@ -1712,20 +1712,20 @@ $messages['pt'] = array(
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Presente enviado|Presentes enviados}}',
 	'right-updatepoints' => 'Atualizar contadores de edição',
 	'level-advanced-to' => 'avançado ao nível <span style="font-weight:800;">$1</span>',
-	'level-advance-subject' => 'Você agora é um "$1" em {{SITENAME}}!',
-	'level-advance-body' => 'Oi $1:
+	'level-advance-subject' => 'Agora é um "$1" na {{SITENAME}}!',
+	'level-advance-body' => 'Olá $1,
 
-Você agora é um "$2" em {{SITENAME}}!
+Agora é um "$2" na {{SITENAME}}!
 
 Parabéns,
 
-O Time de {{SITENAME}}
+A equipa da {{SITENAME}}
 
 ---
-Ei, quer parar de receber e-mails de nós?
+Olhe, quer parar de receber os nossos e-mails?
 
 Clique $3
-e altere suas preferências para desabilitar e-mails de notificação',
+e altere as suas preferências para desactivar as notificações por e-mail.',
 );
 
 /** Brazilian Portuguese (Português do Brasil)

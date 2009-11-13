@@ -5355,6 +5355,7 @@ $messages['ps'] = array(
 
 /** Portuguese (Português)
  * @author 555
+ * @author Hamilton Abreu
  * @author Heldergeovane
  * @author Lijealso
  * @author Malafaya
@@ -5440,28 +5441,28 @@ Se você quer mais amigos, <a href="$1">convide-os!</a>',
 	'ur-requests-reject-message-foe' => 'Você rejeitou $1 como seu inimigo.',
 	'ur-title-foe' => 'lista de inimigos de $1',
 	'ur-title-friend' => 'lista de amigos de $1',
-	'friend_request_subject' => '$1 adicionou você como amigo em {{SITENAME}}!',
-	'friend_request_body' => 'Oi $1:
+	'friend_request_subject' => '$1 adicionou-o como amigo na {{SITENAME}}!',
+	'friend_request_body' => 'Olá $1,
 
-$2 adicionou você como amigo em {{SITENAME}}. Queremos ter certeza de que vocês são realmente amigos.
+$2 adicionou-o como amigo na {{SITENAME}}. Queremos ter a certeza de que são realmente amigos.
 
-Por favor clique neste link para confirmar sua amizade:
+Por favor, clique nesta ligação para confirmar a vossa amizade:
 $3
 
 Obrigado
 
 ---
 
-Ei, quer parar de receber e-mails de nós?
+Olhe, quer parar de receber os nossos e-mails?
 
 Clique $4
-e altere suas preferências para desabilitar e-mails de notificação.',
-	'foe_request_subject' => 'É guerra! $1 adicionou você como inimigo em {{SITENAME}}!',
-	'foe_request_body' => 'Hi $1:
+e altere as suas preferências para desactivar as notificações por e-mail.',
+	'foe_request_subject' => 'É a guerra! $1 adicionou-o como inimigo na {{SITENAME}}!',
+	'foe_request_body' => 'Olá $1,
 
-$2 acabou de listá-lo como inimigo em {{SITENAME}}. Queremos ter certeza de que vocês realmente são inimigos mortais ou pelo menos estão tendo uma discussão.
+$2 acabou de listá-lo como inimigo na {{SITENAME}}. Queremos ter certeza de que são realmente inimigos mortais ou pelo menos que tiveram um desentendimento.
 
-Por favor clique neste link para confirmar o rancor.
+Por favor, clique nesta ligação para confirmar o rancor.
 
 $3
 
@@ -5469,14 +5470,14 @@ Obrigado
 
 ---
 
-Ei, quer parar de receber e-mails de nós?
+Olhe, quer parar de receber os nossos e-mails?
 
 Clique $4
-e altere suas preferências para desabilitar e-mails de notificação.',
-	'friend_accept_subject' => '$1 aceitou você como amigo em {{SITENAME}}!',
-	'friend_accept_body' => 'Oi $1:
+e altere as suas preferências para desactivar as notificações por e-mail.',
+	'friend_accept_subject' => '$1 aceitou-o como amigo na {{SITENAME}}!',
+	'friend_accept_body' => 'Olá $1,
 
-$2 aceitou você como amigo em {{SITENAME}}!
+$2 aceitou-o como amigo na {{SITENAME}}!
 
 Veja a página de $2 em $3
 
@@ -5484,14 +5485,14 @@ Obrigado,
 
 ---
 
-Ei, quer parar de receber e-mails de nós?
+Olhe, quer parar de receber os nossos e-mails?
 
 Clique $4
-e altere suas preferências para desabilitar e-mails de notificação.',
-	'foe_accept_subject' => '$1 aceitou você como inimigo em {{SITENAME}}!',
-	'foe_accept_body' => 'Oi $1:
+e altere as suas preferências para desactivar as notificações por e-mail.',
+	'foe_accept_subject' => '$1 aceitou-o como inimigo na {{SITENAME}}!',
+	'foe_accept_body' => 'Olá $1,
 
-$2 aceitou você como inimigo em {{SITENAME}}!
+$2 aceitou-o como inimigo na {{SITENAME}}!
 
 Veja a página de $2 em $3
 
@@ -5499,38 +5500,38 @@ Obrigado,
 
 ---
 
-Ei, quer parar de receber e-mails de nós?
+Olhe, quer parar de receber os nossos e-mails?
 
 Clique $4
-e altere suas preferências para desabilitar e-mails de notificação',
-	'friend_removed_subject' => 'Ah não! $1 removeu você como amigo em {{SITENAME}}!',
-	'friend_removed_body' => 'Oi $1:
+e altere as suas preferências para desactivar as notificações por e-mail.',
+	'friend_removed_subject' => 'Oh não! $1 removeu-o como amigo na {{SITENAME}}!',
+	'friend_removed_body' => 'Olá $1,
 
-$2 removeu você como amigo em {{SITENAME}}!
+$2 removeu-o como amigo na {{SITENAME}}!
 
 Obrigado,
 
 ---
 
-Ei, quer parar de receber e-mails de nós?
+Olhe, quer parar de receber os nossos e-mails?
 
 Clique $4
-e altere suas preferências para desabilitar e-mails de notificação',
-	'foe_removed_subject' => 'Eba! $1 removeu você como inimigo em {{SITENAME}}!',
-	'foe_removed_body' => 'Oi $1:
+e altere as suas preferências para desactivar as notificações por e-mail.',
+	'foe_removed_subject' => 'Eh pá! $1 removeu-o como inimigo na {{SITENAME}}!',
+	'foe_removed_body' => 'Olá $1,
 
-	$2 removeu você como inimigo em {{SITENAME}}!
+$2 remove-o como inimigo na {{SITENAME}}!
 
-Talvez vocês estejam no caminho de tornarem-se amigos?
+Será que estão a caminho de tornar-se amigos?
 
 Obrigado,
 
 ---
 
-Ei, quer parar de receber e-mails de nós?
+Olhe, quer parar de receber os nossos e-mails?
 
 Clique $4
-e altere suas preferências para desabilitar e-mails de notificação',
+e altere as suas preferências para desactivar as notificações por e-mail.',
 );
 
 /** Brazilian Portuguese (Português do Brasil)

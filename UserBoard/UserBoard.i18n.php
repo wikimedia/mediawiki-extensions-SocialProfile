@@ -2437,21 +2437,21 @@ Clique <a href="index.php?title=Special:UserLogin">aqui para logar</a>',
 	'userboard-time-hours' => '{{PLURAL:$1|uma hora|$1 horas}}',
 	'userboard-time-minutes' => '{{PLURAL:$1|um minuto|$1 minutos}}',
 	'userboard-time-seconds' => '{{PLURAL:$1|um segundo|$1 segundos}}',
-	'message_received_subject' => '$1 escreveu em seu mural em {{SITENAME}}',
-	'message_received_body' => 'Oi $1:
+	'message_received_subject' => '$1 escreveu no seu mural na {{SITENAME}}',
+	'message_received_body' => 'Olá $1,
 
-$2 acabou de escrever em seu mural em {{SITENAME}}!
+$2 acabou de escrever no seu mural na {{SITENAME}}!
 
-Clique abaixo para ver seu mural!
+Clique abaixo para ver o seu mural!
 
 $3
 
 ---
 
-Ei, quer parar de receber e-mails de nós?
+Olhe, quer parar de receber os nossos e-mails?
 
 Clique $4
-e altere suas preferênciar para desabilidar e-mails de notificação.',
+e altere as suas preferênciar para desactivar as notificações por e-mail.',
 );
 
 /** Brazilian Portuguese (Português do Brasil)
