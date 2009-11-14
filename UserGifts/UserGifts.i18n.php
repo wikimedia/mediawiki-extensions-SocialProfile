@@ -4012,6 +4012,7 @@ $messages['zh-hans'] = array(
 	'giftmanager-access' => '礼品访问',
 	'giftmanager-giftimage' => '礼品图像',
 	'giftmanager-public' => '公共的',
+	'g-go-back' => '后退',
 	'g-large' => '大',
 	'g-medium' => '中',
 	'g-small' => '小',

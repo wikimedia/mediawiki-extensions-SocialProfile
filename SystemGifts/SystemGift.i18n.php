@@ -2542,6 +2542,7 @@ $messages['vi'] = array(
  * @author PhiLiP
  */
 $messages['zh-hans'] = array(
+	'ga-goback' => '后退',
 	'ga-large' => '大',
 	'ga-medium' => '中',
 	'ga-small' => '小',

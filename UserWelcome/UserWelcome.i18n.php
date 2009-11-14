@@ -177,6 +177,26 @@ $messages['bn'] = array(
 	'mp-request-new-message' => 'নতুন বার্তা',
 );
 
+/** Bishnupria Manipuri (ইমার ঠার/বিষ্ণুপ্রিয়া মণিপুরী)
+ * @author Usingha
+ */
+$messages['bpy'] = array(
+	'userwelcome-desc' => '<tt>&lt;welcomeUser&gt;</tt> টেগ এগ লেপকরা আকুরার বারে পৌ দেখা দিতই হুদ্দা হমাসি আতাকুরার কা',
+	'mp-userlevels-link' => 'আতাকুরার থাকহান',
+	'mp-welcome-upload' => 'আপলোড',
+	'mp-welcome-edit' => 'পতা',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|পয়েন্ট|পয়েন্ট}}',
+	'mp-welcome-needed-points' => 'এহাত যাগা  <b><a href="$1">$2</a></b> আরাকউ <i>$3</i> বপকরে {{PLURAL:$3|পয়েন্ট|পয়েন্ট}} পানার কা!',
+	'mp-welcome-logged-in' => 'হ্যালো $1',
+	'mp-requests-title' => 'হেইচাহানি',
+	'mp-requests-message' => 'তরতা তলর হেইচাহানি আসে।',
+	'mp-request-new-message' => 'নুৱা পৌ',
+	'mp-request-new-award' => '$1 নুৱা {{PLURAL:$1|থাপাক|থাপাকহানি}}',
+	'mp-request-new-gift' => '$1 নুৱা {{PLURAL:$1|খুত্তল|খুত্তলহানি}}',
+	'mp-request-new-foe' => '$1 নুৱা {{PLURAL:$1|ফ|ফওস}}',
+	'mp-request-new-friend' => '$1 নুৱা {{PLURAL:$1|মারূপ|মারূপগি}}',
+);
+
 /** Breton (Brezhoneg)
  * @author Fohanno
  * @author Fulup
