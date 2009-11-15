@@ -1,6 +1,7 @@
 <?php
-if ( !defined( 'MEDIAWIKI' ) )
+if ( !defined( 'MEDIAWIKI' ) ) {
 	die();
+}
 /**
  * Display User Board messages for a user
  *
@@ -10,8 +11,6 @@ if ( !defined( 'MEDIAWIKI' ) )
  * @copyright Copyright © 2007, Wikia Inc.
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
-
-$wgUserBoard = true;
 
 class SpecialViewUserBoard extends SpecialPage {
 
@@ -54,8 +53,9 @@ class SpecialViewUserBoard extends SpecialPage {
 		/**
 		 * If no user is set in the URL, we assume its the current user
 		 */
-		if ( !$user_name )
+		if ( !$user_name ) {
 			$user_name = $wgUser->getName();
+		}
 		$user_id = User::idFromName( $user_name );
 		$user = Title::makeTitle( NS_USER, $user_name );
 		$user_safe = str_replace( '&', '%26', $user_name );
@@ -75,10 +75,12 @@ class SpecialViewUserBoard extends SpecialPage {
 		}
 
 		/**
-		* Config for the page
-		*/
+		 * Config for the page
+		 */
 		$per_page = $ub_messages_show;
-		if ( !$page || !is_numeric( $page ) ) $page = 1;
+		if ( !$page || !is_numeric( $page ) ) {
+			$page = 1;
+		}
 
 		$b = new UserBoard();
 		$ub_messages = $b->getUserBoardMessages( $user_id, $user_id_2, $ub_messages_show, $page );
@@ -87,7 +89,12 @@ class SpecialViewUserBoard extends SpecialPage {
 			$stats = new UserStats( $user_id, $user_name );
 			$stats_data = $stats->getUserStats();
 			$total = $stats_data['user_board'];
-			if ( $wgUser->getName() == $user_name ) $total = $total + $stats_data['user_board_priv'];
+			// If user is viewing their own board or is allowed to delete
+			// others' board messages, show the total count of board messages
+			// to them (public + private messages)
+			if ( $wgUser->getName() == $user_name || $wgUser->isAllowed( 'userboard-delete' ) ) {
+				$total = $total + $stats_data['user_board_priv'];
+			}
 		} else {
 			$total = $b->getUserBoardToBoardCount( $user_id, $user_id_2 );
 		}
@@ -113,15 +120,15 @@ class SpecialViewUserBoard extends SpecialPage {
 		$output .= "<script type=\"text/javascript\">/*<![CDATA[*/
 			var _DELETE_CONFIRM = \"" . wfMsg( 'userboard_confirmdelete' ) . "\";
 			var posted = 0;
-			function send_message(){
-				if( document.getElementById('message').value && !posted ){
+			function send_message() {
+				if( document.getElementById('message').value && !posted ) {
 					posted = 1;
 					encodedName = encodeURIComponent( document.getElementById('user_name_to').value );
 					encodedMsg = encodeURIComponent( document.getElementById('message').value );
 					sajax_request_type = 'POST';
-					sajax_do_call( 'wfSendBoardMessage', [ encodedName, encodedMsg, {$per_page} ], function( originalRequest ){
+					sajax_do_call( 'wfSendBoardMessage', [ encodedName, encodedMsg, {$per_page} ], function( originalRequest ) {
 							posted = 0;
-							if( document.getElementById('user_name_from').value ){ //its a board to board
+							if( document.getElementById('user_name_from').value ) { // its a board to board
 								user_1 = document.getElementById('user_name_from').value;
 								user_2 = document.getElementById('user_name_to').value;
 							} else {
@@ -136,10 +143,10 @@ class SpecialViewUserBoard extends SpecialPage {
 				}
 			}
 
-			function delete_message( id ){
-				if( confirm( _DELETE_CONFIRM ) ){
+			function delete_message( id ) {
+				if( confirm( _DELETE_CONFIRM ) ) {
 					sajax_request_type = 'POST';
-					sajax_do_call( 'wfDeleteBoardMessage', [ id ], function( originalRequest ){
+					sajax_do_call( 'wfDeleteBoardMessage', [ id ], function( originalRequest ) {
 						window.location.reload();
 					});
 				}
@@ -161,31 +168,39 @@ class SpecialViewUserBoard extends SpecialPage {
 
 		if ( $total ) {
 			$output .= '<div class="user-page-message-top">
-			<span class="user-page-message-count" style="font-size:11px;color:#666666;">' . wfMsg( 'userboard_showingmessages', $total, $start, $end, $end - $start + 1 ) . ".</span> {$board_to_board}</span>
+			<span class="user-page-message-count" style="font-size:11px;color:#666666;">'
+				. wfMsg( 'userboard_showingmessages', $total, $start, $end, $end - $start + 1 ) .
+			".</span> {$board_to_board}</span>
 			</div>";
 		}
 
 		/**
 		 * Build next/prev nav
 		 */
-		if ( $user_id_2 ) $qs = "&conv={$user_safe_2}";
+		if ( $user_id_2 ) {
+			$qs = "&conv={$user_safe_2}";
+		}
 		$numofpages = $total / $per_page;
 
 		if ( $numofpages > 1 ) {
 			$output .= '<div class="page-nav">';
 			if ( $page > 1 ) {
-				$output .= "<a href=\"" . $wgScriptPath . "/index.php?title=Special:UserBoard&user={$user_safe}&page=" . ( $page - 1 ) . "{$qs}\">" . wfMsg( 'userboard_prevpage' ) . '</a>';
+				$output .= '<a href="' . $wgScriptPath . "/index.php?title=Special:UserBoard&user={$user_safe}&page=" . ( $page - 1 ) . "{$qs}\">" . wfMsg( 'userboard_prevpage' ) . '</a>';
 			}
 
-			if ( ( $total % $per_page ) != 0 ) $numofpages++;
+			if ( ( $total % $per_page ) != 0 ) {
+				$numofpages++;
+			}
 			if ( $numofpages >= 9 && $page < $total ) {
 				$numofpages = 9 + $page;
-				if ( $numofpages >= ( $total / $per_page ) ) $numofpages = ( $total / $per_page ) + 1;
+				if ( $numofpages >= ( $total / $per_page ) ) {
+					$numofpages = ( $total / $per_page ) + 1;
+				}
 			}
 
 			for ( $i = 1; $i <= $numofpages; $i++ ) {
 				if ( $i == $page ) {
-					$output .= ( $i . " " );
+					$output .= ( $i . ' ' );
 				} else {
 					$output .= '<a href="' . $wgScriptPath . "/index.php?title=Special:UserBoard&user={$user_safe}&page=$i{$qs}\">$i</a> ";
 				}
@@ -219,7 +234,7 @@ class SpecialViewUserBoard extends SpecialPage {
 			// only let them post to admins
 			$user_to = User::newFromId( $user_id );
 			$user_to->loadFromId();
-			// if( !$user_to->isAllowed('delete') ){
+			// if( !$user_to->isAllowed( 'delete' ) ) {
 				$can_post = false;
 			// }
 		}
@@ -278,7 +293,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				// $max_link_text_length = 75;
 
 				// had global function to cut link text if too long and no breaks
-				// $ub_message_text = preg_replace_callback( "/(<a[^>]*>)(.*?)(<\/a>)/i",'cut_link_text',$ub_message["message_text"]);
+				// $ub_message_text = preg_replace_callback( "/(<a[^>]*>)(.*?)(<\/a>)/i", 'cut_link_text', $ub_message['message_text'] );
 				$ub_message_text = $ub_message['message_text'];
 
 				$output .= "<div class=\"user-board-message\" style=\"width:550px\">
@@ -305,11 +320,10 @@ class SpecialViewUserBoard extends SpecialPage {
 				</div>";
 			}
 		} else {
-			$invite_title = Title::makeTitle( NS_SPECIAL, 'InviteContacts' );
-			# $invite_title = SpecialPage::getTitleFor( 'InviteContacts' );
+			$invite_title = SpecialPage::getTitleFor( 'InviteContacts' );
 			$output .= '<p>' . wfMsg( 'userboard_nomessages', $invite_title->escapeFullURL() ) . '</p>';
-
 		}
+
 		$output .= '</div>';
 
 		$wgOut->addHTML( $output );

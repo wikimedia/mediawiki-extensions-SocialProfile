@@ -115,8 +115,9 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 				$output .= "<div class=\"blast-" . ( ( $relationship['type'] == 1 ) ? 'friend' : 'foe' ) . "-unselected\" id=\"user-{$relationship["user_id"]}\" onclick=\"javascript:toggle_user({$relationship["user_id"]})\">
 						{$relationship["user_name"]}
 					</div>";
-					if ( $x == count( $relationships ) || $x != 1 && $x % $per_row == 0 )
+					if ( $x == count( $relationships ) || $x != 1 && $x % $per_row == 0 ) {
 						$output .= '<div class="cleared"></div>';
+					}
 				$x++;
 			}
 		} else {

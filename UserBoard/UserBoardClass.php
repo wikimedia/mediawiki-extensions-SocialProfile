@@ -33,7 +33,8 @@ class UserBoard {
 		$user_name_from = stripslashes( $user_name_from );
 		$user_name_to = stripslashes( $user_name_to );
 
-		$dbw->insert( 'user_board',
+		$dbw->insert(
+			'user_board',
 			array(
 				'ub_user_id_from' => $user_id_from,
 				'ub_user_name_from' => $user_name_from,
@@ -41,7 +42,7 @@ class UserBoard {
 				'ub_user_name' => $user_name_to,
 				'ub_message' => $message,
 				'ub_type' => $message_type,
-				'ub_date' => date( "Y-m-d H:i:s" ),
+				'ub_date' => date( 'Y-m-d H:i:s' ),
 			),
 			__METHOD__
 		);
@@ -74,8 +75,6 @@ class UserBoard {
 	 * @param $user_from Mixed: the user name of the person who wrote the board message
 	 */
 	public function sendBoardNotificationEmail( $user_id_to, $user_from ) {
-		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
-
 		$user = User::newFromId( $user_id_to );
 		$user->loadFromId();
 
@@ -83,6 +82,7 @@ class UserBoard {
 		if ( $user->isEmailConfirmed() && $user->getIntOption( 'notifymessage', 1 ) ) {
 			$board_link = SpecialPage::getTitleFor( 'UserBoard' );
 			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
+			wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 			$subject = wfMsgExt( 'message_received_subject', 'parsemag',
 				$user_from
 			);
@@ -125,8 +125,8 @@ class UserBoard {
 		$key = wfMemcKey( 'user', 'newboardmessage', $user_id );
 		// $dbw = wfGetDB( DB_MASTER );
 		$new_count = 0;
-		// $s = $dbw->selectRow( 'user_board', array( 'count(*) AS count' ), array( 'ug_user_id_to' => $user_id, 'ug_status' => 1 ), __METHOD__ );
-		// if ( $s !== false )$new_gift_count = $s->count;
+		// $s = $dbw->selectRow( 'user_board', array( 'COUNT(*) AS count' ), array( 'ug_user_id_to' => $user_id, 'ug_status' => 1 ), __METHOD__ );
+		// if ( $s !== false ) $new_count = $s->count;
 
 		$wgMemc->set( $key, $new_count );
 
@@ -153,7 +153,12 @@ class UserBoard {
 	 */
 	public function doesUserOwnMessage( $user_id, $ub_id ) {
 		$dbw = wfGetDB( DB_MASTER );
-		$s = $dbw->selectRow( 'user_board', array( 'ub_user_id' ), array( 'ub_id' => $ub_id ), __METHOD__ );
+		$s = $dbw->selectRow(
+			'user_board',
+			array( 'ub_user_id' ),
+			array( 'ub_id' => $ub_id ),
+			__METHOD__
+		);
 		if ( $s !== false ) {
 			if ( $user_id == $s->ub_user_id ) {
 				return true;
@@ -169,10 +174,18 @@ class UserBoard {
 	public function deleteMessage( $ub_id ) {
 		if ( $ub_id ) {
 			$dbw = wfGetDB( DB_MASTER );
-			$s = $dbw->selectRow( 'user_board', array( 'ub_user_id', 'ub_user_name', 'ub_type' ), array( 'ub_id' => $ub_id ), __METHOD__ );
+			$s = $dbw->selectRow(
+				'user_board',
+				array( 'ub_user_id', 'ub_user_name', 'ub_type' ),
+				array( 'ub_id' => $ub_id ),
+				__METHOD__
+			);
 			if ( $s !== false ) {
-
-				$dbw->delete( 'user_board', array( 'ub_id' => $ub_id ), __METHOD__ );
+				$dbw->delete(
+					'user_board',
+					array( 'ub_id' => $ub_id ),
+					__METHOD__
+				);
 
 				$stats = new UserStatsTrack( $s->ub_user_id, $s->ub_user_name );
 				if ( $s->ub_type == 0 ) {
@@ -185,12 +198,14 @@ class UserBoard {
 	}
 
 	public function getUserBoardMessages( $user_id, $user_id_2 = 0, $limit = 0, $page = 0 ) {
-		global $wgUser, $wgOut, $wgTitle, $wgDBprefix;
+		global $wgUser, $wgOut, $wgTitle;
 		$dbr = wfGetDB( DB_SLAVE );
 
 		if ( $limit > 0 ) {
 			$limitvalue = 0;
-			if ( $page ) $limitvalue = $page * $limit - ( $limit );
+			if ( $page ) {
+				$limitvalue = $page * $limit - ( $limit );
+			}
 			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
 		}
 
@@ -212,12 +227,12 @@ class UserBoard {
 
 		$sql = "SELECT ub_id, ub_user_id_from, ub_user_name_from, ub_user_id, ub_user_name,
 			ub_message,UNIX_TIMESTAMP(ub_date) AS unix_time,ub_type
-			FROM " . $wgDBprefix . "user_board
+			FROM {$dbr->tableName( 'user_board' )}
 			WHERE {$user_sql}
 			ORDER BY ub_id DESC
 			{$limit_sql}";
 
-		$res = $dbr->query( $sql );
+		$res = $dbr->query( $sql, __METHOD__ );
 		$messages = array();
 		while ( $row = $dbr->fetchObject( $res ) ) {
 			$parser = new Parser();
@@ -239,7 +254,7 @@ class UserBoard {
 	}
 
 	public function getUserBoardToBoardCount( $user_id, $user_id_2 ) {
-		global $wgOut, $wgUser, $wgDBprefix;
+		global $wgUser;
 		$dbr = wfGetDB( DB_SLAVE );
 
 		$user_sql = " ( (ub_user_id={$user_id} AND ub_user_id_from={$user_id_2}) OR
@@ -249,10 +264,10 @@ class UserBoard {
 			$user_sql .= " AND ub_type = 0 ";
 		}
 		$sql = "SELECT count(*) AS the_count
-			FROM " . $wgDBprefix . "user_board
+			FROM {$dbr->tableName( 'user_board' )}
 			WHERE {$user_sql}";
 
-		$res = $dbr->query( $sql );
+		$res = $dbr->query( $sql, __METHOD__ );
 		$row = $dbr->fetchObject( $res );
 		if ( $row ) {
 			$count = $row->the_count;
@@ -292,7 +307,7 @@ class UserBoard {
 
 				# $max_link_text_length = 50;
 				$message_text = $message['message_text'];
-				# $message_text = preg_replace_callback( "/(<a[^>]*>)(.*?)(<\/a>)/i",'cut_link_text',$message["message_text"]);
+				# $message_text = preg_replace_callback( "/(<a[^>]*>)(.*?)(<\/a>)/i", 'cut_link_text', $message['message_text'] );
 
 				$output .= "<div class=\"user-board-message\" >
 					<div class=\"user-board-message-from\">
@@ -317,7 +332,7 @@ class UserBoard {
 					</div>
 				</div>";
 			}
-		} else if ( $wgUser->getName() == $wgTitle->getText() ) {
+		} elseif ( $wgUser->getName() == $wgTitle->getText() ) {
 			$output .= '<div class="no-info-container">'
 				. wfMsgHtml( 'userboard_nomessages' ) .
 			'</div>';
@@ -371,7 +386,9 @@ class UserBoard {
 		if ( $time[$timeabrv] > 0 ) {
 			$timeStr = wfMsgExt( "userboard-time-{$timename}", 'parsemag', $time[$timeabrv] );
 		}
-		if ( $timeStr ) $timeStr .= ' ';
+		if ( $timeStr ) {
+			$timeStr .= ' ';
+		}
 		return $timeStr;
 	}
 
@@ -391,9 +408,13 @@ class UserBoard {
 		if ( $timeStr < 2 ) {
 			$timeStr .= $timeStrH;
 			$timeStr .= $timeStrM;
-			if ( !$timeStr ) $timeStr .= $timeStrS;
+			if ( !$timeStr ) {
+				$timeStr .= $timeStrS;
+			}
 		}
-		if ( !$timeStr ) $timeStr = wfMsgExt( 'userboard-time-seconds', 'parsemag', 1 );
+		if ( !$timeStr ) {
+			$timeStr = wfMsgExt( 'userboard-time-seconds', 'parsemag', 1 );
+		}
 		return $timeStr;
 	}
 }
