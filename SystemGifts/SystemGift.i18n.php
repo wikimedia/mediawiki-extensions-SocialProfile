@@ -700,6 +700,7 @@ $4
 );
 
 /** Esperanto (Esperanto)
+ * @author Lucas
  * @author Yekrats
  */
 $messages['eo'] = array(
@@ -713,6 +714,7 @@ $messages['eo'] = array(
 	'ga-gift' => 'donaco',
 	'ga-gift-title' => '"$2" de $1',
 	'ga-gifttype' => 'donaca speco',
+	'ga-goback' => 'Reen',
 	'ga-large' => 'Granda',
 	'ga-medium' => 'Meza',
 	'ga-mediumlarge' => 'Mezgranda',
@@ -2031,29 +2033,29 @@ $messages['ps'] = array(
  * @author Waldir
  */
 $messages['pt'] = array(
-	'systemgiftmanager' => 'Gerenciador do Sistema de Presentes',
-	'ga-addnew' => '+ Adicionar Novo Presente',
-	'ga-back-edit-gift' => 'Voltar para Editar Este Presente',
-	'ga-back-gift-list' => 'Voltar para Lista de Presentes',
-	'ga-back-link' => '<a href="$1">< Voltar para Perfil de $2</a>',
-	'ga-choosefile' => 'Escolher Arquivo:',
-	'ga-count' => '$1 tem $2 {{PLURAL:$2|prêmio|prêmios}}.',
-	'ga-create-gift' => 'Criar presente',
-	'ga-created' => 'O presente foi criado',
-	'ga-currentimage' => 'Imagem Atual',
-	'ga-error-message-invalid-link' => 'O link que você colocou é inválido.',
-	'ga-error-message-no-user' => 'O utilizador que você está tentando ver não existe.',
-	'ga-error-title' => 'Ops, você entrou no lugar errado!',
-	'ga-file-instructions' => 'Sua imagem precisa ser um jpeg, png or gif (sem gifs animados), e precisa ter tamanho menor que 100kb.',
-	'ga-gift' => 'presente',
-	'ga-gift-given-count' => 'Este presente foi dado a $1 {{PLURAL:$1|vez|vezes}}',
+	'systemgiftmanager' => 'Administrador do sistema de prendas',
+	'ga-addnew' => '+ Adicionar nova prenda',
+	'ga-back-edit-gift' => 'Voltar para editar esta prenda',
+	'ga-back-gift-list' => 'Voltar à lista de prendas',
+	'ga-back-link' => '<a href="$1">< Voltar ao perfil de $2</a>',
+	'ga-choosefile' => 'Escolher ficheiro:',
+	'ga-count' => '$1 tem {{PLURAL:$2|um prémio|$2 prémios}}.',
+	'ga-create-gift' => 'Criar prenda',
+	'ga-created' => 'A prenda foi criada',
+	'ga-currentimage' => 'Imagem actual',
+	'ga-error-message-invalid-link' => 'A ligação que forneceu é inválida.',
+	'ga-error-message-no-user' => 'O utilizador que está tentando ver não existe.',
+	'ga-error-title' => 'Ui, virou na curva errada!',
+	'ga-file-instructions' => 'A imagem tem de ser um jpeg, png or gif (sem gifs animados) e ter um tamanho inferior a 100KB.',
+	'ga-gift' => 'prenda',
+	'ga-gift-given-count' => 'Esta prenda foi dada {{PLURAL:$1|uma vez|$1 vezes}}',
 	'ga-gift-title' => '"$2" de $1',
-	'ga-giftdesc' => 'descrição do presente',
-	'ga-giftimage' => 'imagem do presente',
-	'ga-giftname' => 'nome do presente',
-	'ga-gifttype' => 'tipo do presente',
+	'ga-giftdesc' => 'descrição da prenda',
+	'ga-giftimage' => 'imagem da prenda',
+	'ga-giftname' => 'nome da prenda',
+	'ga-gifttype' => 'tipo da prenda',
 	'ga-goback' => 'Voltar',
-	'ga-imagesbelow' => 'Abaixo estão suas imagens que serão usadas no site',
+	'ga-imagesbelow' => 'Abaixo estão as suas imagens que serão usadas no sítio',
 	'ga-img' => 'adicionar/substituir imagem',
 	'ga-large' => 'Grande',
 	'ga-medium' => 'Médio',
@@ -2061,17 +2063,17 @@ $messages['pt'] = array(
 	'ga-new' => 'Novo',
 	'ga-next' => 'Próximo',
 	'ga-previous' => 'Anterior',
-	'ga-recent-recipients-award' => 'Outros ganhadores recentes deste prêmio',
-	'ga-saved' => 'Este presente foi salvo',
+	'ga-recent-recipients-award' => 'Outros ganhadores recentes deste prémio',
+	'ga-saved' => 'Esta prenda foi gravada',
 	'ga-small' => 'Pequeno',
 	'ga-threshold' => 'threshold',
-	'ga-title' => 'Presentes de $1',
+	'ga-title' => 'prémios de $1',
 	'ga-uploadsuccess' => 'Upload bem sucedido',
-	'ga-viewlist' => 'Ver Lista de Presentes',
-	'system_gift_received_subject' => 'Recebeu o prêmio $1 na {{SITENAME}}!',
+	'ga-viewlist' => 'Ver lista de prendas',
+	'system_gift_received_subject' => 'Recebeu o prémio $1 na {{SITENAME}}!',
 	'system_gift_received_body' => 'Olá $1,
 
-Acaba de receber o prêmio $2 na {{SITENAME}}!
+Acaba de receber o prémio $2 na {{SITENAME}}!
 
 "$3"
 
@@ -2092,7 +2094,7 @@ Olhe, quer parar de receber os nossos e-mails?
 
 Clique $5
 e altere as suas preferências para desactivar as notificações por e-mail.',
-	'right-awardsmanage' => 'Crie novos e edite galardões existentes',
+	'right-awardsmanage' => 'Criar novos prémios e editar os existentes',
 );
 
 /** Brazilian Portuguese (Português do Brasil)

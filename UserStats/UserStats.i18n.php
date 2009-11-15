@@ -641,10 +641,12 @@ $messages['eo'] = array(
  * @author Crazymadlover
  * @author Imre
  * @author Sanbec
+ * @author Translationista
  */
 $messages['es'] = array(
-	'user-stats-weekly-title' => 'Mayor puntaje semanal',
-	'user-stats-monthly-title' => 'Mayor puntaje mensual',
+	'user-stats-alltime-title' => 'Mayor puntuación de la historia',
+	'user-stats-weekly-title' => 'Mayor puntuación de esta semana',
+	'user-stats-monthly-title' => 'Mayor puntuación de este mes',
 	'topusers' => 'Usuarios top',
 	'top-fans-by-points-nav-header' => 'Fans top',
 	'top-fans-by-category-nav-header' => 'Máximo por categoría',
@@ -1708,8 +1710,8 @@ $messages['pt'] = array(
 	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Polegar para baixo|Polegares para baixo}}',
 	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Polegar para cima dado|Polegares para cima dados}}n',
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Polegar para baixo dado|Polegares para baixo dados}}',
-	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Presente recebido|Presentes recebidos}}',
-	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Presente enviado|Presentes enviados}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Prenda recebida|Prendas recebidas}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Prenda enviada|Prendas enviadas}}',
 	'right-updatepoints' => 'Atualizar contadores de edição',
 	'level-advanced-to' => 'avançado ao nível <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Agora é um "$1" na {{SITENAME}}!',

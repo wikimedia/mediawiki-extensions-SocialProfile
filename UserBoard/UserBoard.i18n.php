@@ -1865,6 +1865,7 @@ De e-mail jescheck kriß.',
  */
 $messages['lb'] = array(
 	'boardblastlogintitle' => 'Dir musst ageloggt si fir Messagen a grousser Zuel op Panneauen ze schécken',
+	'boardblastlogintext' => 'Fir d\'Fonctioun "board blast" ze benotze musst Dir <a href="index.php?title=Special:UserLogin">ageloggt</a> sinn.',
 	'messagesenttitle' => 'Geschéckte Messagen',
 	'boardblasttitle' => "Messagen a grousser Zuel op d'Panneaue schécken",
 	'boardblaststep1' => '1. Schrëtt: Schreiwt äre Message',
@@ -1909,6 +1910,20 @@ $messages['lb'] = array(
 	'userboard-time-minutes' => '{{PLURAL:$1|eng Minutt|$1 Minutten}}',
 	'userboard-time-seconds' => '{{PLURAL:$1|eng Sekonn|$1 Sekonnen}}',
 	'message_received_subject' => 'De(n) $1 huet op äre Panneau op {{SITENAME}} geschriwwen',
+	'message_received_body' => 'Salut $1.
+
+$2 huet elo grad op Äre Panneau op {{SITENAME}} geschriwwen!
+
+Klickt hei ënnendrënenr fir Ären Tableau ze kucken!
+
+$3
+
+---
+
+Wëllt Dir keng Maile méi vun eis kréien?
+
+Klickt $4
+an ännert Är Astellunge fir E-Mail-Noriichten auszeschalten.',
 );
 
 /** Lithuanian (Lietuvių)
@@ -2391,41 +2406,41 @@ $messages['ps'] = array(
  * @author Waldir
  */
 $messages['pt'] = array(
-	'boardblastlogintitle' => 'Você precisa estar logado para enviar recados',
-	'boardblastlogintext' => 'Você precisa estar logado para enviar recados.
-Clique <a href="index.php?title=Special:UserLogin">aqui para logar</a>',
-	'messagesenttitle' => 'Mensagens Enviadas',
+	'boardblastlogintitle' => 'Tem de estar autenticado para enviar recados',
+	'boardblastlogintext' => 'Para enviar recados tem de
+<a href="index.php?title=Special:UserLogin">autenticar-se</a>.',
+	'messagesenttitle' => 'Mensagens enviadas',
 	'boardblasttitle' => 'Enviar recado',
 	'boardblaststep1' => 'Passo 1 - Escreva a sua mensagem',
-	'boardblastprivatenote' => 'Todas mensagens serão enviadas como mensagens privadas',
-	'boardblaststep2' => 'Passo 2 - Seleccione a quem deseja enviar a sua mensagem',
+	'boardblastprivatenote' => 'Todas as mensagens serão enviadas como mensagens privadas',
+	'boardblaststep2' => 'Passo 2 - Seleccione a quem deseja enviar a mensagem',
 	'boardlinkselectall' => 'Seleccionar tudo',
-	'boardlinkunselectall' => 'Desseleccionar tudo',
+	'boardlinkunselectall' => 'Não seleccionar nada',
 	'boardlinkselectfriends' => 'Seleccionar amigos',
-	'boardlinkunselectfriends' => 'Desseleccionar amigos',
+	'boardlinkunselectfriends' => 'Não seleccionar amigos',
 	'boardlinkselectfoes' => 'Seleccionar inimigos',
-	'boardlinkunselectfoes' => 'Desseleccionar inimigos',
+	'boardlinkunselectfoes' => 'Não seleccionar inimigos',
 	'boardsendbutton' => 'Enviar recado',
-	'boardnofriends' => 'Você não tem amigos para enviar uma mensagem!',
-	'messagesentsuccess' => 'Sua mensagem foi enviada com sucesso',
+	'boardnofriends' => 'Não tem amigos a quem enviar uma mensagem!',
+	'messagesentsuccess' => 'A sua mensagem foi enviada com sucesso',
 	'userboard' => 'Mural do utilizador',
 	'userboard_board-to-board' => 'Mural-para-mural',
 	'userboard_delete' => 'Remover',
-	'userboard_noexist' => 'O utilizador que você está tentando ver não existe.',
-	'userboard_yourboard' => 'Seu mural',
+	'userboard_noexist' => 'O utilizador que está tentando ver não existe.',
+	'userboard_yourboard' => 'O seu mural',
 	'userboard_owner' => 'Mural de $1',
-	'userboard_yourboardwith' => 'Seu mural-para-mural com $1',
+	'userboard_yourboardwith' => 'O seu mural-para-mural com $1',
 	'userboard_otherboardwith' => 'Mural-para-mural de $1 com $2',
-	'userboard_backprofile' => 'Voltar para perfil de $1',
-	'userboard_backyourprofile' => 'Voltar para seu perfil',
+	'userboard_backprofile' => 'Voltar ao perfil de $1',
+	'userboard_backyourprofile' => 'Voltar ao seu perfil',
 	'userboard_boardtoboard' => 'Mural-para-mural',
-	'userboard_confirmdelete' => 'Tem certeza de que você uqer excluir essa mensagem?',
-	'userboard_sendmessage' => 'Enviar uma mensagem para $1',
-	'userboard_myboard' => 'Meu mural',
+	'userboard_confirmdelete' => 'Tem a certeza de que quer eliminar essa mensagem?',
+	'userboard_sendmessage' => 'Enviar uma mensagem a $1',
+	'userboard_myboard' => 'O meu mural',
 	'userboard_posted_ago' => 'enviado há $1',
 	'userboard_private' => 'privado',
 	'userboard_public' => 'público',
-	'userboard_messagetype' => 'Tipo de Mensagem',
+	'userboard_messagetype' => 'Tipo de mensagem',
 	'userboard_nextpage' => 'próxima',
 	'userboard_prevpage' => 'anterior',
 	'userboard_nomessages' => 'Sem mensagens.',
