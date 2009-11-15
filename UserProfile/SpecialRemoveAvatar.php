@@ -5,7 +5,7 @@ class RemoveAvatar extends SpecialPage {
 	/**
 	 * Constructor
 	 */
-	function __construct() {
+	public function __construct() {
 		parent::__construct( 'RemoveAvatar'/*class*/, 'avatarremove'/*restriction*/ );
 	}
 
@@ -126,7 +126,7 @@ class RemoveAvatar extends SpecialPage {
 		$files = glob( $wgUploadDirectory . '/avatars/' . $wgDBname . '_' . $id .  '_' . $size . "*" );
 		$img = basename( $files[0] );
 		if ( $img && $img[0] ) {
-			unlink( $wgUploadDirectory . '/avatars/' .  $img );
+			unlink( $wgUploadDirectory . '/avatars/' . $img );
 		}
 
 		// clear cache

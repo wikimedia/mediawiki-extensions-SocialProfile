@@ -10,7 +10,7 @@
  * @ingroup Extensions
  */
 class wAvatar {
-	var $user_name = NULL;
+	var $user_name = null;
 	var $user_id;
 	var $avatar_type = 0;
 
@@ -19,15 +19,17 @@ class wAvatar {
 	 * @param $userid Integer: user's internal ID number
 	 * @param $size String: 's' for small, 'm' for medium, 'ml' for medium-large and 'l' for large
 	 */
-	function wAvatar( $userid, $size ) {
+	function __construct( $userid, $size ) {
 		$this->user_id = $userid;
 		$this->avatar_size = $size;
 	}
 
 	/**
 	 * Fetches the avatar image's name from the filesystem
-	 * @return Avatar image's file name (i.e. default_l.gif or wikidb_3_l.jpg; first part for non-default images is the
-	 *		database name, second part is the user's ID number and third part is the letter for image size (s, m, ml or l)
+	 * @return Avatar image's file name (i.e. default_l.gif or wikidb_3_l.jpg;
+	 *			first part for non-default images is the database name, second
+	 *			part is the user's ID number and third part is the letter for
+	 *			image size (s, m, ml or l)
 	 */
 	function getAvatarImage() {
 		global $wgDBname, $wgUploadDirectory, $wgMemc;
@@ -35,8 +37,8 @@ class wAvatar {
 		$key = wfMemcKey( 'user', 'profile', 'avatar', $this->user_id, $this->avatar_size );
 		$data = $wgMemc->get( $key );
 
+		// Load from memcached if possible
 		if ( $data ) {
-			// wfDebug("Loaded avatar filename from cache\n");
 			$avatar_filename = $data;
 		} else {
 			$files = glob( $wgUploadDirectory . '/avatars/' . $wgDBname . '_' . $this->user_id .  '_' . $this->avatar_size . "*" );

@@ -51,10 +51,11 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update( 'user_profile',
-			array( /* SET */
-			'up_type' => $user_page_type
-			), array( /* WHERE */
-			'up_user_id' => $wgUser->getID()
+			/* SET */array(
+				'up_type' => $user_page_type
+			),
+			/* WHERE */array(
+				'up_user_id' => $wgUser->getID()
 			), __METHOD__
 		);
 

@@ -50,8 +50,9 @@ $wgHooks['ArticleFromTitle'][] = 'wfUserProfileFromTitle';
 function wfUserProfileFromTitle( &$title, &$article ) {
 	global $wgRequest, $wgOut, $wgHooks, $wgUserPageChoice, $wgUserProfileScripts;
 
-	if ( strpos( $title->getText(), '/' ) === false && ( NS_USER == $title->getNamespace() || NS_USER_PROFILE == $title->getNamespace() ) ) {
-
+	if ( strpos( $title->getText(), '/' ) === false &&
+		( NS_USER == $title->getNamespace() || NS_USER_PROFILE == $title->getNamespace() )
+	) {
 		$show_user_page = false;
 		if ( $wgUserPageChoice ) {
 			$profile = new UserProfile( $title->getText() );
@@ -91,35 +92,3 @@ function wfUserProfileMarkUncacheable( $parser, &$limitReport ) {
 	$parser->disableCache();
 	return true;
 }
-
-/*
-//testing new hooks
-$wgHooks['UserProfileBeginLeft'][] = 'wfUserProfileBeginTest';
-function wfUserProfileBeginTest($user_profile) {
-	global $wgOut;
-	//$wgOut->addHTML("this was inserted at the left beginning from the hook [profile:{$user_profile->user_name}]");
-	return true;
-}
-
-//testing new hooks
-$wgHooks['UserProfileEndLeft'][] = 'wfUserProfileBeginTest2';
-function wfUserProfileBeginTest2($user_profile) {
-	global $wgOut;
-	//$wgOut->addHTML("this was inserted at the left end from the hook [profile:{$user_profile->user_name}]");
-	return true;
-}
-//testing new hooks
-$wgHooks['UserProfileBeginRight'][] = 'wfUserProfileBeginTest3';
-function wfUserProfileBeginTest3($user_profile) {
-	global $wgOut;
-	//$wgOut->addHTML("this was inserted at the right beginning from the hook [profile:{$user_profile->user_name}]");
-	return true;
-}
-//testing new hooks
-$wgHooks['UserProfileEndRight'][] = 'wfUserProfileBeginTest4';
-function wfUserProfileBeginTest4($user_profile) {
-	global $wgOut;
-	//$wgOut->addHTML("this was inserted at the right end from the hook [profile:{$user_profile->user_name}]");
-	return true;
-}
-*/

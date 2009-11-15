@@ -2,15 +2,15 @@
  * JavaScript functions used by UserProfile
  */
 var posted = 0;
-function send_message(){
-	if( document.getElementById('message').value && !posted ){
+function send_message() {
+	if( document.getElementById('message').value && !posted ) {
 		posted = 1;
 		sajax_request_type = 'POST';
 		sajax_do_call( 'wfSendBoardMessage', [
 			document.getElementById('user_name_to').value,
 			encodeURIComponent( document.getElementById('message').value ),
 			document.getElementById('message_type').value,
-			10 ], function( originalRequest ){
+			10 ], function( originalRequest ) {
 				document.getElementById('user-page-board').innerHTML = originalRequest.responseText;
 				posted = 0;
 				document.getElementById('message').value = '';
@@ -19,10 +19,10 @@ function send_message(){
 	}
 }
 
-function delete_message( id ){
-	if( confirm( 'Are you sure you want to delete this message?' ) ){
+function delete_message( id ) {
+	if( confirm( 'Are you sure you want to delete this message?' ) ) {
 		sajax_request_type = 'POST';
-		sajax_do_call( 'wfDeleteBoardMessage', [ id ], function( originalRequest ){
+		sajax_do_call( 'wfDeleteBoardMessage', [ id ], function( originalRequest ) {
 			window.location.reload();
 		} );
 	}
@@ -33,12 +33,12 @@ var replaceID = 0;
 var replaceSrc = '';
 var oldHtml = '';
 
-function showUploadFrame(){
+function showUploadFrame() {
 	document.getElementById( 'upload-container' ).style['display'] = 'block';
 	document.getElementById( 'upload-container' ).style['visibility'] = 'visible';
 }
 
-function uploadError( message ){
+function uploadError( message ) {
 	document.getElementById('mini-gallery-' + replaceID).innerHTML = oldHtml;
 	document.getElementById('upload-frame-errors').innerHTML = message;
 	document.getElementById('imageUpload-frame').src = 'index.php?title=Special:MiniAjaxUpload&wpThumbWidth=75';
@@ -47,19 +47,19 @@ function uploadError( message ){
 	document.getElementById( 'upload-container' ).style['visibility'] = 'visible';
 }
 
-function textError( message ){
+function textError( message ) {
 	document.getElementById( 'upload-frame-errors' ).innerHTML = message;
 	document.getElementById( 'upload-frame-errors' ).style['display'] = 'block';
 	document.getElementById( 'upload-frame-errors' ).style['visibility'] = 'visible';
 }
 
-function completeImageUpload(){
+function completeImageUpload() {
 	document.getElementById( 'upload-frame-errors' ).style['display'] = 'none';
 	document.getElementById( 'upload-frame-errors' ).style['visibility'] = 'hidden';
 	document.getElementById('upload-frame-errors').innerHTML = '';
 	oldHtml = document.getElementById('mini-gallery-' + replaceID).innerHTML;
 
-	for( x = 7; x > 0; x-- ){
+	for( x = 7; x > 0; x-- ) {
 		document.getElementById('mini-gallery-' + (x) ).innerHTML = document.getElementById('mini-gallery-' + (x-1) ).innerHTML.replace('slideShowLink('+(x-1)+')','slideShowLink('+(x)+')');
 	}
 	document.getElementById('mini-gallery-0').innerHTML = '<a><img height="75" width="75" src="http://images.wikia.com/common/wikiany/images/ajax-loader-white.gif" alt="" /></a>';
@@ -72,7 +72,7 @@ function completeImageUpload(){
 	document.getElementById( 'pictures-containers' ).style['visibility'] = 'visible';
 }
 
-function uploadComplete( imgSrc, imgName, imgDesc ){
+function uploadComplete( imgSrc, imgName, imgDesc ) {
 	replaceSrc = imgSrc;
 
 	document.getElementById('upload-frame-errors').innerHTML = '';
@@ -92,7 +92,7 @@ function uploadComplete( imgSrc, imgName, imgDesc ){
 	document.getElementById('imageUpload-frame').src = 'index.php?title=Special:MiniAjaxUpload&wpThumbWidth=75&extra=' + numReplaces;
 }
 
-function slideShowLink( id ){
+function slideShowLink( id ) {
 	//window.location = 'index.php?title=Special:UserSlideShow&user=' + __slideshow_user + '&picture=' + ( numReplaces + id );
 	window.location = 'Image:' + id;
 }
@@ -101,6 +101,6 @@ function doHover( divID ) {
 	$El(divID).setStyle('backgroundColor', '#4B9AF6');
 }
 
-function endHover( divID ){
+function endHover( divID ) {
 	$El(divID).setStyle('backgroundColor', '');
 }

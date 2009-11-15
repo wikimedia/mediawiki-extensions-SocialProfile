@@ -66,7 +66,8 @@ class UserProfile {
 			$params['LIMIT'] = '5';
 			$row = $dbr->selectRow( 'user_profile',
 				'*',
-				array( 'up_user_id' => $this->user_id ), __METHOD__,
+				array( 'up_user_id' => $this->user_id ),
+				__METHOD__,
 				$params
 			);
 
@@ -152,7 +153,9 @@ class UserProfile {
 		// Check if user has an avatar
 		$this->profile_fields_count++;
 		$avatar = new wAvatar( $wgUser->getID(), 'l' );
-		if ( strpos( $avatar->getAvatarImage(), 'default_' ) === false ) $complete_count++;
+		if ( strpos( $avatar->getAvatarImage(), 'default_' ) === false ) {
+			$complete_count++;
+		}
 
 		return round( $complete_count / $this->profile_fields_count * 100 );
 	}
