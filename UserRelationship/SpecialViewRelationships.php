@@ -55,15 +55,21 @@ class SpecialViewRelationships extends SpecialPage {
 		/**
 		 * Set up config for page / default values
 		 */
-		if ( !$page || !is_numeric( $page ) ) $page = 1;
-		if ( !$rel_type || !is_numeric( $rel_type ) ) $rel_type = 1;
+		if ( !$page || !is_numeric( $page ) ) {
+			$page = 1;
+		}
+		if ( !$rel_type || !is_numeric( $rel_type ) ) {
+			$rel_type = 1;
+		}
 		$per_page = 50;
 		$per_row = 2;
 
 		/**
 		 * If no user is set in the URL, we assume its the current user
 		 */
-		if ( !$user_name ) $user_name = $wgUser->getName();
+		if ( !$user_name ) {
+			$user_name = $wgUser->getName();
+		}
 		$user_id = User::idFromName( $user_name );
 		$user = Title::makeTitle( NS_USER, $user_name );
 
@@ -174,7 +180,9 @@ class SpecialViewRelationships extends SpecialPage {
 				</div>';
 
 				$output .= '</div>';
-				if ( $x == count( $relationships ) || $x != 1 && $x % $per_row == 0 ) $output .= '<div class="cleared"></div>';
+				if ( $x == count( $relationships ) || $x != 1 && $x % $per_row == 0 ) {
+					$output .= '<div class="cleared"></div>';
+				}
 				$x++;
 			}
 		}

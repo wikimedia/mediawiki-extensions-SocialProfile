@@ -54,7 +54,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 			$_SESSION['alreadysubmitted'] = false;
 			$output = '';
 
-			$output .= $wgOut->setPagetitle( wfMsg( 'ur-requests-title' ) );
+			$wgOut->setPageTitle( wfMsg( 'ur-requests-title' ) );
 			$requests = $rel->getRequestList( 0 );
 
 			if ( $requests ) {

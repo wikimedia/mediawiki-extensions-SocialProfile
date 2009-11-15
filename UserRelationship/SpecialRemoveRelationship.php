@@ -35,6 +35,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 
 		$usertitle = Title::newFromDBkey( $wgRequest->getVal( 'user' ) );
 		if ( !$usertitle ) {
+			$wgOut->setPageTitle( wfMsgHtml( 'ur-error-title' ) );
 			$wgOut->addWikiText( wfMsgNoTrans( 'ur-add-no-user' ) );
 			return false;
 		}
@@ -55,8 +56,9 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			$pending = wfMsg( 'ur-remove-error-message-pending-foe-request', $this->user_name_to );
 		}
 
+		$out = '';
 		if ( $wgUser->getID() == $this->user_id_to ) {
-			$out .= $wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
+			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
 			$out .= '<div class="relationship-error-message">
 				' . wfMsg( 'ur-remove-error-message-remove-yourself' ) . '
 			</div>
@@ -68,9 +70,8 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			$out .= '</div>';
 
 			$wgOut->addHTML( $out );
-		} else if ( $this->relationship_type == false ) {
-
-			$out .= $wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
+		} elseif ( $this->relationship_type == false ) {
+			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
 			$out .= '<div class="relationship-error-message">
 				' . wfMsg( 'ur-remove-error-message-no-relationship', $this->user_name_to ) . '
 			</div>
@@ -82,8 +83,8 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			$out .= '</div>';
 
 			$wgOut->addHTML( $out );
-		} else if ( UserRelationship::userHasRequestByID( $this->user_id_to, $wgUser->getID() ) == true ) {
-			$out .= $wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
+		} elseif ( UserRelationship::userHasRequestByID( $this->user_id_to, $wgUser->getID() ) == true ) {
+			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
 			$out .= '<div class="relationship-error-message">
 				' . $pending . '
 			</div>
@@ -95,8 +96,8 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			$out .= '</div>';
 
 			$wgOut->addHTML( $out );
-		} else if ( $wgUser->getID() == 0 ) {
-			$out .= $wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
+		} elseif ( $wgUser->getID() == 0 ) {
+			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
 			$out .= '<div class="relationship-error-message">
 				' . $error . '
 			</div>
@@ -118,7 +119,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 				$avatar = new wAvatar( $this->user_id_to, 'l' );
 				$avatar_img = '<img src="' . $wgUploadPath . '/avatars/' . $avatar->getAvatarImage() . '" alt="" border="" />';
 
-				$out .= $wgOut->setPagetitle( $confirmtitle );
+				$wgOut->setPageTitle( $confirmtitle );
 				$out .= "<div class=\"relationship-action\">
 					{$avatar_img}
 					" . $confirmmsg . "
@@ -157,7 +158,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			$title = wfMsg( 'ur-remove-relationship-title-foe', $this->user_name_to );
 			$remove = wfMsg( 'ur-remove-relationship-message-foe', $this->user_name_to, wfMsg( 'ur-remove' ) );
 		}
-		$form .= $wgOut->setPageTitle( $title );
+		$wgOut->setPageTitle( $title );
 		$form .= "<form action=\"\" method=\"post\" enctype=\"multipart/form-data\" name=\"form1\">
 			<div class=\"relationship-action\">
 			{$avatar_img}
