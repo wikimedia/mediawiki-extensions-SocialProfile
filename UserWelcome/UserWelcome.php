@@ -5,28 +5,35 @@
  *
  * @file
  * @ingroup Extensions
- * @author Wikia, Inc.
- * @version 1.0
+ * @author David Pean <david.pean@gmail.com>
+ * @author Jack Phoenix <jack@countervandalism.net>
+ * @version 1.2
  * @link http://www.mediawiki.org/wiki/Extension:UserWelcome Documentation
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
-$wgHooks['ParserFirstCallInit'][] = 'wfWelcomeUser';
+if( !defined( 'MEDIAWIKI' ) ) {
+	die( "This is not a valid entry point.\n" );
+}
 
 // Extension credits that show up on Special:Version
 $wgExtensionCredits['parserhook'][] = array(
 	'name' => 'UserWelcome',
-	'version' => '1.1',
-	'author' => 'Wikia New York Team',
+	'version' => '1.2',
+	'author' => array( 'David Pean', 'Jack Phoenix' ),
 	'description' => 'Adds <tt>&lt;welcomeUser&gt;</tt> tag to display user-specific social info to logged-in users',
 	'description-msg' => 'userwelcome-desc',
 	'url' => 'http://www.mediawiki.org/wiki/Extension:UserWelcome',
 );
 
+$wgHooks['ParserFirstCallInit'][] = 'wfWelcomeUser';
+/**
+ * Register <welcomeUser /> tag with the parser
+ * @param $parser Object: instance of Parser
+ * @return true
+ */
 function wfWelcomeUser( &$parser ) {
-	global $wgOut, $wgScriptPath;
 	$parser->setHook( 'welcomeUser', 'getWelcomeUser' );
-	$wgOut->addStyle( $wgScriptPath . '/extensions/SocialProfile/UserWelcome/UserWelcome.css' );
 	return true;
 }
 
@@ -41,8 +48,11 @@ function getWelcomeUser( $input, $args, $parser ) {
 }
 
 function getWelcome() {
-	global $wgUser, $wgUploadPath;
+	global $wgUser, $wgOut, $wgScriptPath, $wgUploadPath;
 	wfLoadExtensionMessages( 'UserWelcome' );
+
+	// Add CSS
+	$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserWelcome/UserWelcome.css' );
 
 	// Get stats and user level
 	$stats = new UserStats( $wgUser->getID(), $wgUser->getName() );
