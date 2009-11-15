@@ -82,7 +82,7 @@ class UserStatsTrack {
 	 * @param $user_id Integer: ID number of the user that we want to track stats for
 	 * @param $user_name Mixed: user's name; if not supplied, then the user ID will be used to get the user name from DB.
 	 */
-	function UserStatsTrack( $user_id, $user_name = '' ) {
+	function __construct( $user_id, $user_name = '' ) {
 		global $wgUserStatsPointValues;
 
 		$this->user_id = $user_id;
@@ -102,7 +102,12 @@ class UserStatsTrack {
 	 */
 	function initStatsTrack() {
 		$dbr = wfGetDB( DB_SLAVE );
-		$s = $dbr->selectRow( 'user_stats', array( 'stats_user_id' ), array( 'stats_user_id' => $this->user_id ), __METHOD__ );
+		$s = $dbr->selectRow(
+			'user_stats',
+			array( 'stats_user_id' ),
+			array( 'stats_user_id' => $this->user_id ),
+			__METHOD__
+		);
 
 		if ( $s === false ) {
 			$this->addStatRecord();
@@ -150,8 +155,12 @@ class UserStatsTrack {
 
 			// update weekly/monthly points
 			if ( isset( $this->point_values[$field] ) && !empty( $this->point_values[$field] ) ) {
-				if ( $wgUserStatsTrackWeekly ) $this->updateWeeklyPoints( $this->point_values[$field] );
-				if ( $wgUserStatsTrackMonthly ) $this->updateMonthlyPoints( $this->point_values[$field] );
+				if ( $wgUserStatsTrackWeekly ) {
+					$this->updateWeeklyPoints( $this->point_values[$field] );
+				}
+				if ( $wgUserStatsTrackMonthly ) {
+					$this->updateMonthlyPoints( $this->point_values[$field] );
+				}
 			}
 
 			if ( $wgSystemGifts ) {
@@ -193,10 +202,12 @@ class UserStatsTrack {
 
 			if ( $this->point_values[$field] ) {
 				$this->updateTotalPoints();
-				if ( $wgUserStatsTrackWeekly )
+				if ( $wgUserStatsTrackWeekly ) {
 					$this->updateWeeklyPoints( 0 - ( $this->point_values[$field] ) );
-				if ( $wgUserStatsTrackMonthly )
+				}
+				if ( $wgUserStatsTrackMonthly ) {
 					$this->updateMonthlyPoints( 0 - ( $this->point_values[$field] ) );
+				}
 			}
 
 			$this->clearCache();
@@ -212,7 +223,7 @@ class UserStatsTrack {
 			$sql .= "(SELECT COUNT(*) AS CommentCount FROM {$dbw->tableName( 'Comments' )} WHERE  Comment_user_id = " . $this->user_id;
 			$sql .= ")";
 			$sql .= " WHERE stats_user_id = " . $this->user_id;
-			$res = $dbw->query( $sql );
+			$res = $dbw->query( $sql, __METHOD__ );
 
 			$this->clearCache();
 		}
@@ -227,7 +238,7 @@ class UserStatsTrack {
 			$sql .= "(SELECT COUNT(*) AS CommentCount FROM {$dbw->tableName( 'Comments_block' )} WHERE cb_user_id_blocked = " . $this->user_id;
 			$sql .= ")";
 			$sql .= " WHERE stats_user_id = " . $this->user_id;
-			$res = $dbw->query( $sql );
+			$res = $dbw->query( $sql, __METHOD__ );
 
 			$this->clearCache();
 		}
@@ -246,7 +257,7 @@ class UserStatsTrack {
 			$sql .= "(SELECT count(*) AS EditsCount FROM {$dbr->tableName( 'revision' )} WHERE rev_user = {$this->user_id} ";
 			$sql .=	 ")";
 			$sql .= " WHERE stats_user_id = " . $this->user_id;
-			$res = $dbw->query( $sql );
+			$res = $dbw->query( $sql, __METHOD__ );
 
 			$this->clearCache();
 		}
@@ -261,7 +272,7 @@ class UserStatsTrack {
 			$sql .= "(SELECT count(*) AS VoteCount FROM {$dbw->tableName( 'Vote' )} WHERE vote_user_id = {$this->user_id} ";
 			$sql .= ")";
 			$sql .= " WHERE stats_user_id = " . $this->user_id;
-			$res = $dbw->query( $sql );
+			$res = $dbw->query( $sql, __METHOD__ );
 
 			$this->clearCache();
 		}
@@ -281,7 +292,7 @@ class UserStatsTrack {
 			SELECT CommentID FROM {$dbw->tableName( 'Comments' )} WHERE Comment_user_id = " . $this->user_id . ") AND Comment_Vote_Score=" . $vote_type;
 			$sql .= ")";
 			$sql .= " WHERE stats_user_id = " . $this->user_id;
-			$res = $dbw->query( $sql );
+			$res = $dbw->query( $sql, __METHOD__ );
 
 			$this->clearCache();
 		}
@@ -292,32 +303,34 @@ class UserStatsTrack {
 		if ( !$wgUser->isAnon() && $this->user_id ) {
 			$ctg = 'Opinions by User ' . ( $this->user_name );
 			$parser = new Parser();
-			$CtgTitle = Title::newFromText( $parser->transformMsg( trim( $ctg ), $wgOut->parserOptions() ) );
-			$CtgTitle = $CtgTitle->getDBkey();
+			$ctgTitle = Title::newFromText( $parser->transformMsg( trim( $ctg ), $wgOut->parserOptions() ) );
+			$ctgTitle = $ctgTitle->getDBkey();
 			$dbw = wfGetDB( DB_MASTER );
 			$sql = "UPDATE {$dbw->tableName( 'user_stats' )} SET stats_opinions_created=";
-			$sql .= "(SELECT count(*) AS CreatedOpinions FROM {$dbw->tableName( 'page' )} INNER JOIN {$dbw->tableName( 'categorylinks' )} ON page_id = cl_from WHERE  (cl_to) = " . $dbw->addQuotes( $CtgTitle ) . " ";
+			$sql .= "(SELECT count(*) AS CreatedOpinions FROM {$dbw->tableName( 'page' )} INNER JOIN {$dbw->tableName( 'categorylinks' )} ON page_id = cl_from WHERE  (cl_to) = " . $dbw->addQuotes( $ctgTitle ) . " ";
 			$sql .= ")";
 			$sql .= " WHERE stats_user_id = " . $this->user_id;
 
-			$res = $dbw->query( $sql );
+			$res = $dbw->query( $sql, __METHOD__ );
 
 			$this->clearCache();
 		}
 	}
 
 	function updatePublishedOpinionsCount() {
-		global $wgUser, $wgOut;
+		global $wgOut;
 		$parser = new Parser();
 		$dbw = wfGetDB( DB_MASTER );
 		$ctg = 'Opinions by User ' . ( $this->user_name );
-		$CtgTitle = Title::newFromText( $parser->transformMsg( trim( $ctg ), $wgOut->parserOptions() ) );
-		$CtgTitle = $CtgTitle->getDBkey();
+		$ctgTitle = Title::newFromText( $parser->transformMsg( trim( $ctg ), $wgOut->parserOptions() ) );
+		$ctgTitle = $ctgTitle->getDBkey();
 		$sql = "UPDATE {$dbw->tableName( 'user_stats' )} SET stats_opinions_published = ";
-		$sql .= "(SELECT count(*) AS PromotedOpinions FROM {$dbw->tableName( 'page' )} INNER JOIN {$dbw->tableName( 'categorylinks' )} ON page_id = cl_from INNER JOIN published_page ON page_id=published_page_id WHERE  (cl_to) = " . $dbw->addQuotes( $CtgTitle ) . " AND published_type=1 " . " " . $timeSQL;
+		$sql .= "(SELECT count(*) AS PromotedOpinions FROM {$dbw->tableName( 'page' )} INNER JOIN {$dbw->tableName( 'categorylinks' )} ON page_id = cl_from
+			INNER JOIN published_page ON page_id=published_page_id
+			WHERE  (cl_to) = " . $dbw->addQuotes( $ctgTitle ) . " AND published_type=1 " . " " . $timeSQL;
 		$sql .= ")";
 		$sql .= " WHERE stats_user_id = " . $this->user_id;
-		$res = $dbw->query( $sql );
+		$res = $dbw->query( $sql, __METHOD__ );
 
 		$this->clearCache();
 	}
@@ -340,7 +353,7 @@ class UserStatsTrack {
 						r_user_id = {$this->user_id} AND r_type={$rel_type}
 					)
 				WHERE stats_user_id = {$this->user_id}";
-			$res = $dbw->query( $sql );
+			$res = $dbw->query( $sql, __METHOD__ );
 		}
 	}
 
@@ -357,7 +370,7 @@ class UserStatsTrack {
 					)
 				WHERE stats_user_id = {$this->user_id}";
 
-			$res = $dbw->query( $sql );
+			$res = $dbw->query( $sql, __METHOD__ );
 		}
 	}
 
@@ -374,7 +387,7 @@ class UserStatsTrack {
 					)
 				WHERE stats_user_id = {$this->user_id} ";
 
-			$res = $dbw->query( $sql );
+			$res = $dbw->query( $sql, __METHOD__ );
 		}
 	}
 
@@ -388,13 +401,17 @@ class UserStatsTrack {
 					)
 				WHERE stats_user_id = {$this->user_id} ";
 
-			$res = $dbw->query( $sql );
+			$res = $dbw->query( $sql, __METHOD__ );
 		}
 	}
 
 	public function updateWeeklyPoints( $points ) {
 		$dbw = wfGetDB( DB_MASTER );
-		$res = $dbw->select( 'user_points_weekly', 'up_user_id', array( "up_user_id = {$this->user_id}" ), __METHOD__ );
+		$res = $dbw->select( 'user_points_weekly',
+			'up_user_id',
+			array( "up_user_id = {$this->user_id}" ),
+			__METHOD__
+		);
 		$row = $dbw->fetchObject( $res );
 
 		if ( !$row ) {
@@ -419,7 +436,11 @@ class UserStatsTrack {
 
 	public function updateMonthlyPoints( $points ) {
 		$dbw = wfGetDB( DB_MASTER );
-		$res = $dbw->select( 'user_points_monthly', 'up_user_id', array( "up_user_id = {$this->user_id}" ), __METHOD__ );
+		$res = $dbw->select( 'user_points_monthly',
+			'up_user_id',
+			array( "up_user_id = {$this->user_id}" ),
+			__METHOD__
+		);
 		$row = $dbw->fetchObject( $res );
 		if ( !$row ) {
 			$this->addMonthly();
@@ -445,8 +466,9 @@ class UserStatsTrack {
 	public function updateTotalPoints() {
 		global $wgEnableFacebook, $wgUserLevels;
 
-		if ( $this->user_id == 0 )
+		if ( $this->user_id == 0 ) {
 			return '';
+		}
 
 		$stats_data = array();
 		if ( is_array( $wgUserLevels ) ) {
@@ -461,7 +483,11 @@ class UserStatsTrack {
 		}
 
 		$dbw = wfGetDB( DB_MASTER );
-		$res = $dbw->select( 'user_stats', '*', array( "stats_user_id = {$this->user_id}" ), __METHOD__ );
+		$res = $dbw->select( 'user_stats',
+			'*',
+			array( "stats_user_id = {$this->user_id}" ),
+			__METHOD__
+		);
 		$row = $dbw->fetchObject( $res );
 		if ( $row ) {
 			// recaculate point total
@@ -474,7 +500,12 @@ class UserStatsTrack {
 				}
 			}
 			if ( $wgEnableFacebook ) {
-				$s = $dbw->selectRow( 'fb_link_view_opinions', array( 'fb_user_id', 'fb_user_session_key' ), array( 'fb_user_id_wikia' => $this->user_id ), __METHOD__ );
+				$s = $dbw->selectRow(
+					'fb_link_view_opinions',
+					array( 'fb_user_id', 'fb_user_session_key' ),
+					array( 'fb_user_id_wikia' => $this->user_id ),
+					__METHOD__
+				);
 				if ( $s !== false ) {
 					$new_total_points += $this->point_values['facebook'];
 				}
@@ -575,7 +606,7 @@ class UserStats {
 		wfDebug( "Got user stats for {$this->user_name} from DB\n" );
 		$dbr = wfGetDB( DB_MASTER );
 		$sql = "SELECT * FROM {$dbr->tableName( 'user_stats' )} WHERE stats_user_id = {$this->user_id} LIMIT 0,1";
-		$res = $dbr->query( $sql );
+		$res = $dbr->query( $sql, __METHOD__ );
 		$row = $dbr->fetchObject( $res );
 		$stats['edits'] = number_format( isset( $row->stats_edit_count ) ? $row->stats_edit_count : 0 );
 		$stats['votes'] = number_format( isset( $row->stats_vote_count ) ? $row->stats_vote_count : 0 );
@@ -618,7 +649,9 @@ class UserStats {
 
 		if ( $limit > 0 ) {
 			$limitvalue = 0;
-			if ( $page ) $limitvalue = $page * $limit - ( $limit );
+			if ( $page ) {
+				$limitvalue = $page * $limit - ( $limit );
+			}
 			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
 		}
 
@@ -629,7 +662,7 @@ class UserStats {
 			{$limit_sql}";
 
 		$list = array();
-		$res = $dbr->query( $sql );
+		$res = $dbr->query( $sql, __METHOD__ );
 		while ( $row = $dbr->fetchObject( $res ) ) {
 			$list[] = array(
 				'user_id' => $row->stats_user_id,
@@ -645,7 +678,9 @@ class UserStats {
 
 		if ( $limit > 0 ) {
 			$limitvalue = 0;
-			if ( $page ) $limitvalue = $page * $limit - ( $limit );
+			if ( $page ) {
+				$limitvalue = $page * $limit - ( $limit );
+			}
 			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
 		}
 		if ( $period == 'monthly' ) {
@@ -660,7 +695,7 @@ class UserStats {
 			{$limit_sql}";
 
 		$list = array();
-		$res = $dbr->query( $sql );
+		$res = $dbr->query( $sql, __METHOD__ );
 		while ( $row = $dbr->fetchObject( $res ) ) {
 			$list[] = array(
 				'user_id' => $row->up_user_id,
@@ -676,16 +711,18 @@ class UserStats {
 
 		if ( $limit > 0 ) {
 			$limitvalue = 0;
-			if ( $page ) $limitvalue = $page * $limit - ( $limit );
+			if ( $page ) {
+				$limitvalue = $page * $limit - ( $limit );
+			}
 			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
 		}
 
 		if ( $condition == 1 ) {
-			$op = ">";
-			$sort = "ASC";
+			$op = '>';
+			$sort = 'ASC';
 		} else {
-			$op = "<";
-			$sort = "DESC";
+			$op = '<';
+			$sort = 'DESC';
 		}
 		$sql = "SELECT stats_user_id, stats_user_name, stats_total_points
 			FROM {$dbr->tableName( 'user_stats' )}
@@ -695,7 +732,7 @@ class UserStats {
 			{$limit_sql}";
 
 		$list = array();
-		$res = $dbr->query( $sql );
+		$res = $dbr->query( $sql, __METHOD__ );
 		while ( $row = $dbr->fetchObject( $res ) ) {
 			$list[] = array(
 				'user_id' => $row->stats_user_id,
@@ -771,8 +808,8 @@ class UserEmailTrack {
 	/**
 	 * @param $type Integer: one of the following:
 		1 = Invite - Email Contacts sucker
-		2 = Invite -CVS Contacts importer
-		3 = Invite -Manually Address enter
+		2 = Invite - CVS Contacts importer
+		3 = Invite - Manually Address enter
 		4 = Invite to Read - Manually Address enter
 		5 = Invite to Edit - Manually Address enter
 		6 = Invite to Rate - Manually Address enter
@@ -789,7 +826,7 @@ class UserEmailTrack {
 					'ue_type' => $type,
 					'ue_count' => $count,
 					'ue_page_title' => $page_title,
-					'ue_date' => date( "Y-m-d H:i:s" ),
+					'ue_date' => date( 'Y-m-d H:i:s' ),
 				), __METHOD__
 			);
 		}

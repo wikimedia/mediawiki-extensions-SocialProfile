@@ -21,7 +21,7 @@ class TopUsersPoints extends SpecialPage {
 		wfLoadExtensionMessages( 'SocialProfileUserStats' );
 
 		// Load CSS
-		$wgOut->addStyle( '../..' . $wgScriptPath . '/extensions/SocialProfile/UserStats/TopList.css' );
+		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStats/TopList.css' );
 
 		$wgOut->setPageTitle( wfMsg( 'user-stats-alltime-title' ) );
 
@@ -42,9 +42,11 @@ class TopUsersPoints extends SpecialPage {
 			$params['ORDER BY'] = 'stats_total_points DESC';
 			$params['LIMIT'] = $count;
 			$dbr = wfGetDB( DB_SLAVE );
-			$res = $dbr->select( 'user_stats',
+			$res = $dbr->select(
+				'user_stats',
 				array( 'stats_user_id', 'stats_user_name', 'stats_total_points' ),
-				array( 'stats_user_id <> 0' ), __METHOD__,
+				array( 'stats_user_id <> 0' ),
+				__METHOD__,
 				$params
 			);
 			$loop = 0;
@@ -87,7 +89,6 @@ class TopUsersPoints extends SpecialPage {
 		}
 
 		foreach ( $lines as $line ) {
-
 			if ( strpos( $line, '*' ) !== 0 ) {
 				continue;
 			} else {
@@ -97,16 +98,16 @@ class TopUsersPoints extends SpecialPage {
 				$out .= "<p> <a href=\"" . $by_category_title->escapeFullURL( "stat={$stat}" ) . "\">{$link_text}</a></p>";
 			}
 		}
+
 		$out .= '</div>';
 
 		$x = 1;
 		$out .= '<div class="top-users">';
 
 		foreach ( $user_list as $user ) {
-
 			$user_title = Title::makeTitle( NS_USER, $user['user_name'] );
 			$avatar = new wAvatar( $user['user_id'], 'm' );
-			$CommentIcon = $avatar->getAvatarImage();
+			$commentIcon = $avatar->getAvatarImage();
 
 			// Break list into sections based on User Level if it's defined for this site
 			if ( is_array( $wgUserLevels ) ) {
@@ -121,14 +122,15 @@ class TopUsersPoints extends SpecialPage {
 
 			$out .= "<div class=\"top-fan-row\">
 				<span class=\"top-fan-num\">{$x}.</span><span class=\"top-fan\">
-				<img src='{$wgUploadPath}/avatars/" . $CommentIcon . "' alt='' border='' /> <a href='" . $user_title->escapeFullURL() . "' >" . $user['user_name'] . "</a>
-				</span>";
+				<img src='{$wgUploadPath}/avatars/" . $commentIcon . "' alt='' border='' /> <a href='" . $user_title->escapeFullURL() . "' >" . $user['user_name'] . '</a>
+				</span>';
 
 			$out .= '<span class="top-fan-points"><b>' . number_format( $user['points'] ) . '</b> ' . wfMsg( 'top-fans-points' ) . '</span>';
 			$out .= '<div class="cleared"></div>';
 			$out .= '</div>';
 			$x++;
 		}
+
 		$out .= '</div><div class="cleared"></div>';
 		$wgOut->addHTML( $out );
 	}

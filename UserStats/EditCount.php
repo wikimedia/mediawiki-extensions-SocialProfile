@@ -10,24 +10,30 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgHooks['NewRevisionFromEditComplete'][] = 'incEditCount';
 
 function incEditCount( &$article, $revision, $baseRevId ) {
-	global $wgUser, $wgTitle, $wgNamespacesForEditPoints;
+	global $wgUser, $wgNamespacesForEditPoints;
 
 	// only keep tally for allowable namespaces
-	if ( !is_array( $wgNamespacesForEditPoints ) || in_array( $wgTitle->getNamespace(), $wgNamespacesForEditPoints ) ) {
+	if (
+		!is_array( $wgNamespacesForEditPoints ) ||
+		in_array( $title->getNamespace(), $wgNamespacesForEditPoints )
+	) {
 		$stats = new UserStatsTrack( $wgUser->getID(), $wgUser->getName() );
 		$stats->incStatField( 'edit' );
 	}
+
 	return true;
 }
 
 $wgHooks['ArticleDelete'][] = 'removeDeletedEdits';
 
 function removeDeletedEdits( &$article, &$user, &$reason ) {
-	global $wgTitle, $wgNamespacesForEditPoints;
+	global $wgNamespacesForEditPoints;
 
 	// only keep tally for allowable namespaces
-	if ( !is_array( $wgNamespacesForEditPoints ) || in_array( $wgTitle->getNamespace(), $wgNamespacesForEditPoints ) ) {
-
+	if (
+		!is_array( $wgNamespacesForEditPoints ) ||
+		in_array( $title->getNamespace(), $wgNamespacesForEditPoints )
+	) {
 		$dbr = wfGetDB( DB_MASTER );
 		$res = $dbr->select( 'revision',
 			array( 'rev_user_text', 'rev_user', 'COUNT(*) AS the_count' ),
@@ -40,6 +46,7 @@ function removeDeletedEdits( &$article, &$user, &$reason ) {
 			$stats->decStatField( 'edit', $row->the_count );
 		}
 	}
+
 	return true;
 }
 
@@ -49,8 +56,10 @@ function restoreDeletedEdits( &$title, $new ) {
 	global $wgNamespacesForEditPoints;
 
 	// only keep tally for allowable namespaces
-	if ( !is_array( $wgNamespacesForEditPoints ) || in_array( $title->getNamespace(), $wgNamespacesForEditPoints ) ) {
-
+	if (
+		!is_array( $wgNamespacesForEditPoints ) ||
+		in_array( $title->getNamespace(), $wgNamespacesForEditPoints )
+	) {
 		$dbr = wfGetDB( DB_MASTER );
 		$res = $dbr->select( 'revision',
 			array( 'rev_user_text', 'rev_user', 'COUNT(*) AS the_count' ),
@@ -63,5 +72,6 @@ function restoreDeletedEdits( &$title, $new ) {
 			$stats->incStatField( 'edit', $row->the_count );
 		}
 	}
+
 	return true;
 }
