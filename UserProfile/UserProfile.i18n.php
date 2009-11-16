@@ -5775,6 +5775,7 @@ Klickt <a href="$1">hei</a> fir Iech anzeloggen oder klickt <a href="$2">hei</a>
 	'user-profile-sports-notloggedintext' => 'Dir musst ageloggt sinn fir äre Profil änneren ze kënnen.',
 	'user-profile-sports-teamremoved' => 'Är Equipe gouf ewechgeholl',
 	'user-profile-sports-teamsaved' => 'Är Equipe goufe gespäichert',
+	'user-profile-sports-addmore' => 'Méi Sportarten/Equippen derbäisetzen',
 	'user-profile-picture-title' => 'Ärt Bild eroplueden',
 	'user-profile-picture-yourpicture' => 'Ärt Bild',
 	'user-profile-picture-yourpicturestext' => 'Hei ënnedrënner sinn déi Biller déi op Ärem Profil, Ären Netzwierk-Säiten a bäi Äre Bemierkunge gewise ginn.',
