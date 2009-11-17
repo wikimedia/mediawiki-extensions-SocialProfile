@@ -6370,11 +6370,13 @@ Klik <a href="$1">hier</a> om u aan te melden of klik <a href="$2">hier</a> om e
 );
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+ * @author Gunnernett
  * @author Harald Khan
  * @author Jon Harald Søby
  */
 $messages['nn'] = array(
 	'populateuserprofiles' => 'Folkeset brukarprofilar',
+	'user-time-ago' => '$1 sidan',
 	'user-awards-title' => 'Utmerkingar',
 	'user-gifts-title' => 'Gåver',
 	'user-count-separator' => '$1 av $2',

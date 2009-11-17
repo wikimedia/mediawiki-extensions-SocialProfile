@@ -1201,6 +1201,13 @@ Klik $3
 dan ganti seting Anda untuk mematikan pemberitahuan lewat surel.',
 );
 
+/** Ido (Ido)
+ * @author Malafaya
+ */
+$messages['io'] = array(
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Redaktajo|Redaktaji}}',
+);
+
 /** Italian (Italiano)
  * @author Darth Kule
  */
