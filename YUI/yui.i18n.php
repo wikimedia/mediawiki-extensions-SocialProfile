@@ -433,6 +433,13 @@ $messages['sah'] = array(
 	'yui-desc' => 'JavaScript көмөтүнэн оҥоһуллубут үнүстүрүмүөннэр уонна салайар элэмиэннэр',
 );
 
+/** Sinhala (සිංහල)
+ * @author Calcey
+ */
+$messages['si'] = array(
+	'yui-desc' => 'JavaScript මඟින් ලියන ලද,උපයෝගිතා හා පාලක කට්ටලයක්',
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */
