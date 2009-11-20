@@ -339,6 +339,13 @@ $messages['nds-nl'] = array(
 	'yui-desc' => 'Een verzameling hulpmiddels en besturingselementen in Java',
 );
 
+/** Nepali (नेपाली)
+ * @author सरोज कुमार ढकाल
+ */
+$messages['ne'] = array(
+	'yui-desc' => 'JavaScriptमा लेखिएको औजारहरु र नियन्त्रणहरुको समूह',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
