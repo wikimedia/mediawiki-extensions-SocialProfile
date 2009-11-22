@@ -5747,6 +5747,7 @@ $messages['ro'] = array(
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
+	'ur-error-page-title' => 'Cè cumbenate!',
 	'ur-main-page' => 'Pàgene Prengepàle',
 	'ur-your-profile' => "'U profile tue",
 	'ur-give-gift' => "Fa 'nu riele",

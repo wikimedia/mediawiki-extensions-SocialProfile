@@ -2181,6 +2181,15 @@ $messages['ro'] = array(
 	'ga-small' => 'Mic',
 );
 
+/** Tarandíne (Tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'ga-choosefile' => "Scacchie 'u file:",
+	'ga-gift' => 'riale',
+	'ga-new' => 'Nuève',
+);
+
 /** Russian (Русский)
  * @author Ferrer
  * @author Innv

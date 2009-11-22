@@ -1071,9 +1071,11 @@ $messages['ro'] = array(
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
+	'mp-userlevels-link' => "Levèlle de l'utende",
 	'mp-welcome-upload' => 'Careche',
 	'mp-welcome-edit' => 'Cange',
 	'mp-welcome-logged-in' => 'Cià $1',
+	'mp-requests-title' => 'Richieste',
 	'mp-request-new-message' => 'messagge nuève',
 );
 

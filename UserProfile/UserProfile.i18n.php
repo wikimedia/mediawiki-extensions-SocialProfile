@@ -7718,6 +7718,7 @@ $messages['ro'] = array(
  */
 $messages['roa-tara'] = array(
 	'populateuserprofiles' => "Jnghie le profile de l'utende",
+	'user-time-ago' => '$1 fà',
 	'user-awards-title' => 'Premie',
 	'user-gifts-title' => 'Riele',
 	'user-count-separator' => '$1 de $2',
@@ -7757,6 +7758,8 @@ $messages['roa-tara'] = array(
 	'custom-no-info' => "Nisciune 'mbormazione personalizzate",
 	'user-personal-info-real-name' => 'Nome vere',
 	'user-personal-info-birthday' => 'Sciurne de nascita',
+	'user-personal-info-occupation' => 'Fatìe',
+	'user-personal-info-websites' => 'Site web',
 	'user-personal-info-schools' => 'Scole',
 	'user-recent-activity-gift-sent' => "Manne 'nu riele a",
 	'user-profile-update-profile' => 'profile',
