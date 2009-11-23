@@ -101,7 +101,7 @@ $messages['arc'] = array(
 	'mp-welcome-edit' => 'ܫܚܠܦ',
 	'mp-welcome-logged-in' => 'ܫܠܡܐ $1',
 	'mp-request-new-message' => 'ܐܓܪܬܐ ܚܕܬܐ',
-	'mp-request-new-foe' => '$1 ܚܕܬܐ {{PLURAL:$1|ܒܥܠܕܒܒܐ|ܒܥܠܕܒܒ̈ܐ}}',
+	'mp-request-new-foe' => '$1 ܚܕܬܐ {{PLURAL:$1|ܒܥܠܕܒܒܐ|ܒܥܠܕ̈ܒܒܐ}}',
 	'mp-request-new-friend' => '$1 ܚܕܬܐ {{PLURAL:$1|ܚܒܪܐ|ܚܒܪ̈ܐ}}',
 );
 

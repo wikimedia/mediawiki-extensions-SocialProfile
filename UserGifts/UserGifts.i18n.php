@@ -3738,6 +3738,7 @@ $messages['te'] = array(
 	'giftmanager-private' => 'అంతరంగికం',
 	'g-cancel' => 'రద్దు',
 	'g-count' => '$1 కి $2 {{PLURAL:$2|బహుమతి ఉంది|బహుమతులు ఉన్నాయి}}.',
+	'g-from' => '<a href="$1">$2</a> నుండి',
 	'g-gift' => 'బహుమతి',
 	'g-gift-name' => 'బహుమతి పేరు',
 	'g-give-separator' => 'లేదా',

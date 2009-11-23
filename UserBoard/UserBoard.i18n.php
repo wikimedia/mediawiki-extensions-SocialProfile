@@ -2863,6 +2863,10 @@ $messages['te'] = array(
 	'userboard_prevpage' => 'క్రితం',
 	'userboard_nomessages' => 'సందేశాలు లేవు.',
 	'userboard_sendbutton' => 'పంపించు',
+	'userboard-time-days' => '{{PLURAL:$1|ఒక రోజు|$1 రోజులు}}',
+	'userboard-time-hours' => '{{PLURAL:$1|ఒక గంట|$1 గంటలు}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|ఒక నిమిషం|$1 నిమిషాలు}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|ఒక క్షణం|$1 క్షణాలు}}',
 );
 
 /** Tetum (Tetun)
