@@ -657,6 +657,7 @@ $messages['bs'] = array(
 	'g-current-image' => 'Trenutna slika',
 	'g-description-title' => 'Poklon $2 korisnika $1',
 	'g-error-do-not-own' => 'Vi ne posjedujete ovaj poklon.',
+	'g-error-message-no-user' => 'Korisnik kojeg pokušavate vidjeti ne postoji.',
 	'g-error-message-to-yourself' => 'Ne možete poslati poklon samom sebi.',
 	'g-from' => 'iz <a href="$1">$2</a>',
 	'g-gift' => 'poklon',
