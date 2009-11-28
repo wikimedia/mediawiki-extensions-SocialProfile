@@ -5377,8 +5377,8 @@ $messages['pt'] = array(
 	'ur-add-friends' => ' Quer mais amigos? <a href="$1">Convide-os</a>',
 	'ur-add-friend' => 'Adicionar como amigo',
 	'ur-add-foe' => 'Adicionar como inimigo',
-	'ur-add-no-user' => 'Nenhum utilizador selecionado.
-Por favor peça amigos/inimigos através do link correto.',
+	'ur-add-no-user' => 'Nenhum utilizador seleccionado.
+Por favor peça amigos/inimigos através da ligação correcta.',
 	'ur-add-personal-message' => 'Adicionar uma mensagem pessoal',
 	'ur-remove-relationship-friend' => 'Remover como amigo',
 	'ur-remove-relationship-foe' => 'Remover como inimigo',
