@@ -948,6 +948,7 @@ $messages['os'] = array(
  * @author Xqt
  */
 $messages['pdc'] = array(
+	'mp-welcome-upload' => 'Ufflaade',
 	'mp-welcome-edit' => 'Ennere',
 	'mp-welcome-logged-in' => 'Heiya $1',
 );
