@@ -195,3 +195,25 @@ require_once( "{$wgUserProfileDirectory}/UserProfile.php" ); // Profile page con
 require_once( "$IP/extensions/SocialProfile/UserGifts/Gifts.php" ); // UserGifts (user-to-user gifting functionality) loader file
 require_once( "$IP/extensions/SocialProfile/SystemGifts/SystemGifts.php" ); // SystemGifts (awards functionality) loader file
 require_once( "$IP/extensions/SocialProfile/UserActivity/UserActivity.php" ); // UserActivity - recent social changes
+
+# Schema changes
+$wgHooks['LoadExtensionSchemaUpdates'][] = 'efSocialProfileSchemaUpdates';
+
+function efSocialProfileSchemaUpdates() {
+	global $wgExtNewTables, $wgDBtype;
+	$dir = dirname( __FILE__ );
+	if( $wgDBtype == 'mysql' ) {
+		// Initial install tables
+		$wgExtNewTables[] = array( 'user_board', "$dir/UserBoard/user_board.sql" );
+		$wgExtNewTables[] = array( 'user_profile', "$dir/UserProfile/user_profile.sql" );
+		$wgExtNewTables[] = array( 'user_stats', "$dir/UserStats/user_stats.sql" );
+		$wgExtNewTables[] = array( 'user_relationship',	"$dir/UserRelationship/user_relationship.sql" );
+		$wgExtNewTables[] = array( 'user_relationship_request', "$dir/UserRelationship/user_relationship.sql" );
+		$wgExtNewTables[] = array( 'user_system_gift', "$dir/SystemGifts/systemgifts.sql" );
+		$wgExtNewTables[] = array( 'system_gift', "$dir/SystemGifts/systemgifts.sql" );
+		$wgExtNewTables[] = array( 'user_gift', "$dir/UserGifts/usergifts.sql" );
+		$wgExtNewTables[] = array( 'gift', "$dir/UserGifts/usergifts.sql" );
+		$wgExtNewTables[] = array( 'user_system_messages', "$dir/UserSystemMessages/user_system_messages.sql" );
+	}
+	return true;
+}
