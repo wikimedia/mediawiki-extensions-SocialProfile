@@ -10,12 +10,12 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgHooks['NewRevisionFromEditComplete'][] = 'incEditCount';
 
 function incEditCount( &$article, $revision, $baseRevId ) {
-	global $wgUser, $wgNamespacesForEditPoints;
+	global $wgUser, $wgTitle, $wgNamespacesForEditPoints;
 
 	// only keep tally for allowable namespaces
 	if (
 		!is_array( $wgNamespacesForEditPoints ) ||
-		in_array( $title->getNamespace(), $wgNamespacesForEditPoints )
+		in_array( $wgTitle->getNamespace(), $wgNamespacesForEditPoints )
 	) {
 		$stats = new UserStatsTrack( $wgUser->getID(), $wgUser->getName() );
 		$stats->incStatField( 'edit' );
@@ -27,12 +27,12 @@ function incEditCount( &$article, $revision, $baseRevId ) {
 $wgHooks['ArticleDelete'][] = 'removeDeletedEdits';
 
 function removeDeletedEdits( &$article, &$user, &$reason ) {
-	global $wgNamespacesForEditPoints;
+	global $wgTitle, $wgNamespacesForEditPoints;
 
 	// only keep tally for allowable namespaces
 	if (
 		!is_array( $wgNamespacesForEditPoints ) ||
-		in_array( $title->getNamespace(), $wgNamespacesForEditPoints )
+		in_array( $wgTitle->getNamespace(), $wgNamespacesForEditPoints )
 	) {
 		$dbr = wfGetDB( DB_MASTER );
 		$res = $dbr->select( 'revision',
