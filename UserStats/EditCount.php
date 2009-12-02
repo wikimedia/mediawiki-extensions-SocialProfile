@@ -9,7 +9,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 $wgHooks['NewRevisionFromEditComplete'][] = 'incEditCount';
 
-function incEditCount( &$article, $revision, $baseRevId ) {
+function incEditCount( $article, $revision, $baseRevId ) {
 	global $wgUser, $wgTitle, $wgNamespacesForEditPoints;
 
 	// only keep tally for allowable namespaces

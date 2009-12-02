@@ -10,7 +10,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 	}
 
 	function updateMainEditsCount() {
-		global $wgOut, $wgUser;
+		global $wgOut, $wgUser, $wgNamespacesForEditPoints;
 
 		$wgOut->setPageTitle( 'Update Edit Counts' );
 
@@ -19,11 +19,24 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 			return false;
 		}
 
+		$whereConds = array();
+		$whereConds[] = 'rev_user <> 0';
+		// If points are given out for editing non-main namespaces, take that
+		// into account too.
+		if (
+			isset( $wgNamespacesForEditPoints ) &&
+			is_array( $wgNamespacesForEditPoints )
+		) {
+			foreach( $wgNamespacesForEditPoints as $pointNamespace ) {
+				$whereConds[] = 'page_namespace = ' . (int) $pointNamespace;
+			}
+		}
+
 		$dbw = wfGetDB( DB_MASTER );
 		$res = $dbw->select(
 			array( 'revision', 'page' ),
 			array( 'rev_user_text', 'rev_user', 'COUNT(*) AS the_count' ),
-			array( 'page_namespace = 0', 'rev_user <> 0' ),
+			$whereConds,
 			__METHOD__,
 			array( 'GROUP BY' => 'rev_user_text' ),
 			array( 'page' => array( 'INNER JOIN', 'page_id = rev_page' ) )
@@ -39,7 +52,12 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 				$edit_count = 0;
 			}
 
-			$s = $dbw->selectRow( 'user_stats', array( 'stats_user_id' ), array( 'stats_user_id' => $row->rev_user ), __METHOD__ );
+			$s = $dbw->selectRow(
+				'user_stats',
+				array( 'stats_user_id' ),
+				array( 'stats_user_id' => $row->rev_user ),
+				__METHOD__
+			);
 			if ( !$s->stats_user_id ) {
 				$dbw->insert( 'user_stats',
 					array(
