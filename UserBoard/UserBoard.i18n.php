@@ -2463,10 +2463,10 @@ $3
 
 ---
 
-Olhe, quer parar de receber os nossos e-mails?
+Olhe, quer parar de receber as nossas mensagens?
 
 Clique $4
-e altere as suas preferênciar para desactivar as notificações por e-mail.',
+e altere as suas preferências para desactivar as notificações por correio electrónico.',
 );
 
 /** Brazilian Portuguese (Português do Brasil)

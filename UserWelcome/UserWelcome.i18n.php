@@ -1008,6 +1008,7 @@ $messages['ps'] = array(
 );
 
 /** Portuguese (Português)
+ * @author Hamilton Abreu
  * @author Lijealso
  * @author Malafaya
  * @author Waldir
@@ -1021,7 +1022,7 @@ $messages['pt'] = array(
 	'mp-welcome-needed-points' => 'Para avançar para <b><a href="$1">$2</a></b>, ganhe mais <i>$3</i> {{PLURAL:$3|ponto|pontos}}!',
 	'mp-welcome-logged-in' => 'Olá, $1',
 	'mp-requests-title' => 'Pedidos',
-	'mp-requests-message' => 'Você tem os seguinte pedidos.',
+	'mp-requests-message' => 'Tem os seguinte pedidos.',
 	'mp-request-new-message' => 'nova mensagem',
 	'mp-request-new-award' => '$1 {{PLURAL:$1|novo galardão|novos galardões}}',
 	'mp-request-new-gift' => '$1 {{PLURAL:$1|nova prenda|novas prendas}}',

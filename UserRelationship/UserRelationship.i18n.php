@@ -5385,60 +5385,60 @@ Por favor peça amigos/inimigos através da ligação correcta.',
 	'ur-give-gift' => 'Dar uma prenda',
 	'ur-previous' => 'ant',
 	'ur-next' => 'prox',
-	'ur-remove-relationship-title-foe' => 'Você quer remover $1 como seu inimigo?',
-	'ur-remove-relationship-title-confirm-foe' => 'Você removeu $1 como seu inimigo',
-	'ur-remove-relationship-title-friend' => 'Você quer remover $1 como seu amigo?',
-	'ur-remove-relationship-title-confirm-friend' => 'Você removeu $1 como seu amigo',
-	'ur-remove-relationship-message-foe' => 'Você pediu para remover $1 como seu inimigo, pressione "$2" para confirmar.',
-	'ur-remove-relationship-message-confirm-foe' => 'Você removeu $1 como seu inimigo com sucesso.',
-	'ur-remove-relationship-message-friend' => 'Você pediu para remover $1 como seu amigo, pressione "$2" para confirmar.',
-	'ur-remove-relationship-message-confirm-friend' => 'Você removeu $1 como seu amigo com sucesso.',
-	'ur-remove-error-message-no-relationship' => 'Você não possui um relacionamento com $1.',
-	'ur-remove-error-message-remove-yourself' => 'Você não pode remover a si mesmo.',
-	'ur-remove-error-message-pending-foe-request' => 'Você tem um pedido de inimizade pendente com $1.',
-	'ur-remove-error-message-pending-friend-request' => 'Você tem um pedido de amizade pendente com $1.',
-	'ur-remove-error-not-loggedin-foe' => 'Você tem que estar logado para remover um inimigo.',
-	'ur-remove-error-not-loggedin-friend' => 'Você tem que estar logado para remover um amigo.',
+	'ur-remove-relationship-title-foe' => 'Quer remover $1 como seu inimigo?',
+	'ur-remove-relationship-title-confirm-foe' => 'Removeu $1 como seu inimigo',
+	'ur-remove-relationship-title-friend' => 'Quer remover $1 como seu amigo?',
+	'ur-remove-relationship-title-confirm-friend' => 'Removeu $1 como seu amigo',
+	'ur-remove-relationship-message-foe' => 'Pediu para remover $1 como seu inimigo, pressione "$2" para confirmar.',
+	'ur-remove-relationship-message-confirm-foe' => 'Removeu $1 como seu inimigo com sucesso.',
+	'ur-remove-relationship-message-friend' => 'Pediu para remover $1 como seu amigo, pressione "$2" para confirmar.',
+	'ur-remove-relationship-message-confirm-friend' => 'Removeu $1 como seu amigo com sucesso.',
+	'ur-remove-error-message-no-relationship' => 'Não possui um relacionamento com $1.',
+	'ur-remove-error-message-remove-yourself' => 'Não se pode remover a si mesmo.',
+	'ur-remove-error-message-pending-foe-request' => 'Tem um pedido de inimizade pendente com $1.',
+	'ur-remove-error-message-pending-friend-request' => 'Tem um pedido de amizade pendente com $1.',
+	'ur-remove-error-not-loggedin-foe' => 'Tem de estar autenticado para remover um inimigo.',
+	'ur-remove-error-not-loggedin-friend' => 'Tem de estar autenticado para remover um amigo.',
 	'ur-remove' => 'Remover',
 	'ur-cancel' => 'Cancelar',
 	'ur-login' => 'Autenticar-se',
-	'ur-add-title-foe' => 'Você quer adicionar $1 como seu inimigo?',
-	'ur-add-title-friend' => 'Você quer adicionar $1 como seu amigo?',
-	'ur-add-message-foe' => 'Você está prestes a adicionar $1 como seu inimigo.
-Nós iremos notificar $1 para confirmar seu rancor.',
-	'ur-add-message-friend' => 'Você está prestes a adicionar $1 como seu amigo.
-Nós iremos notificar $1 para confirmar sua amizade.',
+	'ur-add-title-foe' => 'Quer adicionar $1 como seu inimigo?',
+	'ur-add-title-friend' => 'Quer adicionar $1 como seu amigo?',
+	'ur-add-message-foe' => 'Está prestes a adicionar $1 como seu inimigo.
+Vamos notificar $1 para confirmar o seu rancor.',
+	'ur-add-message-friend' => 'Está prestes a adicionar $1 como seu amigo.
+Vamos notificar $1 para confirmar a sua amizade.',
 	'ur-add-button-foe' => 'Adicionar como inimigo',
 	'ur-add-button-friend' => 'Adicionar como amigo',
-	'ur-add-sent-title-foe' => 'Nós enviamos seu pedido de inimizade para $1!',
-	'ur-add-sent-title-friend' => 'Nós enviamos seu pedido de amizade para $1!',
-	'ur-add-sent-message-foe' => 'Seu pedido de inimizade foi enviado para $1 para confirmação.
-Se $1 confirmar seu pedido, você irá receber um e-mail',
-	'ur-add-sent-message-friend' => 'Seu pedido de amizade foi enviado para $1 para confirmação.
-Se $1 confirmar seu pedido, você irá receber um e-mail',
+	'ur-add-sent-title-foe' => 'Enviamos o seu pedido de inimizade para $1!',
+	'ur-add-sent-title-friend' => 'Enviamos o seu pedido de amizade para $1!',
+	'ur-add-sent-message-foe' => 'O seu pedido de inimizade foi enviado para $1 para confirmação.
+Se $1 confirmar o pedido, receberá uma notificação por correio electrónico',
+	'ur-add-sent-message-friend' => 'O seu pedido de amizade foi enviado para $1 para confirmação.
+Se $1 confirmar o pedido, receberá uma notificação por correio electrónico',
 	'ur-add-error-message-no-user' => 'O utilizador que pretende adicionar não existe.',
-	'ur-add-error-message-blocked' => 'Você está bloqueado atualmente e não pode adicionar amigos ou inimigos.',
-	'ur-add-error-message-yourself' => 'Você não pode adicionar a si mesmo como amigo ou inimigo.',
-	'ur-add-error-message-existing-relationship-foe' => 'Você já é inimigo de $1.',
-	'ur-add-error-message-existing-relationship-friend' => 'Você já é amigo de $1.',
+	'ur-add-error-message-blocked' => 'Neste momento está bloqueado e não pode adicionar amigos nem inimigos.',
+	'ur-add-error-message-yourself' => 'Não pode adicionar-se a si mesmo como amigo nem inimigo.',
+	'ur-add-error-message-existing-relationship-foe' => 'Já é inimigo de $1.',
+	'ur-add-error-message-existing-relationship-friend' => 'Já é amigo de $1.',
 	'ur-add-error-message-pending-request-title' => 'Paciência!',
-	'ur-add-error-message-pending-friend-request' => 'Você tem um pedido de amizade pendente com $1.
-Nós iremos notificar você quando $1 confirmar seu pedido.',
-	'ur-add-error-message-pending-foe-request' => 'Você tem um pedido de inimizade pendente com $1.
-Nós iremos notificar você quando $1 confirmar seu pedido.',
-	'ur-add-error-message-not-loggedin-foe' => 'Você precisa estar logado para adicionar um inimigo',
-	'ur-add-error-message-not-loggedin-friend' => 'Você precisa estar logado para adicionar um amigo',
+	'ur-add-error-message-pending-friend-request' => 'Tem um pedido de amizade pendente com $1.
+Vamos notificá-lo quando $1 confirmar o seu pedido.',
+	'ur-add-error-message-pending-foe-request' => 'Tem um pedido de inimizade pendente com $1.
+Vamos notificá-lo quando $1 confirmar o seu pedido.',
+	'ur-add-error-message-not-loggedin-foe' => 'É preciso ter-se autenticado para adicionar um inimigo',
+	'ur-add-error-message-not-loggedin-friend' => 'É preciso ter-se autenticado para adicionar um amigo',
 	'ur-requests-title' => 'Pedidos de relacionamento',
 	'ur-requests-message-foe' => '<a href="$1">$2</a> quer ser seu inimigo.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> quer ser seu amigo.',
 	'ur-accept' => 'Aceitar',
 	'ur-reject' => 'Rejeitar',
-	'ur-no-requests-message' => 'Você não ter pedidos de amizade ou inimizade.
-Se você quer mais amigos, <a href="$1">convide-os!</a>',
-	'ur-requests-added-message-foe' => 'Você adicionou $1 como seu inimigo.',
-	'ur-requests-added-message-friend' => 'Você adicionou $1 como seu amigo.',
-	'ur-requests-reject-message-friend' => 'Você rejeitou $1 como seu amigo.',
-	'ur-requests-reject-message-foe' => 'Você rejeitou $1 como seu inimigo.',
+	'ur-no-requests-message' => 'Não tem pedidos de amizade ou inimizade.
+Se quer ter mais amigos, <a href="$1">convide-os!</a>',
+	'ur-requests-added-message-foe' => 'Adicionou $1 como inimigo.',
+	'ur-requests-added-message-friend' => 'Adicionou $1 como amigo.',
+	'ur-requests-reject-message-friend' => 'Rejeitou $1 como amigo.',
+	'ur-requests-reject-message-foe' => 'Rejeitou $1 como inimigo.',
 	'ur-title-foe' => 'lista de inimigos de $1',
 	'ur-title-friend' => 'lista de amigos de $1',
 	'friend_request_subject' => '$1 adicionou-o como amigo na {{SITENAME}}!',
@@ -5453,10 +5453,10 @@ Obrigado
 
 ---
 
-Olhe, quer parar de receber os nossos e-mails?
+Olhe, quer parar de receber as nossas mensagens?
 
 Clique $4
-e altere as suas preferências para desactivar as notificações por e-mail.',
+e altere as suas preferências para desactivar as notificações por correio electrónico.',
 	'foe_request_subject' => 'É a guerra! $1 adicionou-o como inimigo na {{SITENAME}}!',
 	'foe_request_body' => 'Olá $1,
 
@@ -5470,10 +5470,10 @@ Obrigado
 
 ---
 
-Olhe, quer parar de receber os nossos e-mails?
+Olhe, quer parar de receber as nossas mensagens?
 
 Clique $4
-e altere as suas preferências para desactivar as notificações por e-mail.',
+e altere as suas preferências para desactivar as notificações por correio electrónico.',
 	'friend_accept_subject' => '$1 aceitou-o como amigo na {{SITENAME}}!',
 	'friend_accept_body' => 'Olá $1,
 
@@ -5485,10 +5485,10 @@ Obrigado,
 
 ---
 
-Olhe, quer parar de receber os nossos e-mails?
+Olhe, quer parar de receber as nossas mensagens?
 
 Clique $4
-e altere as suas preferências para desactivar as notificações por e-mail.',
+e altere as suas preferências para desactivar as notificações por correio electrónico.',
 	'foe_accept_subject' => '$1 aceitou-o como inimigo na {{SITENAME}}!',
 	'foe_accept_body' => 'Olá $1,
 
@@ -5500,10 +5500,10 @@ Obrigado,
 
 ---
 
-Olhe, quer parar de receber os nossos e-mails?
+Olhe, quer parar de receber as nossas mensagens?
 
 Clique $4
-e altere as suas preferências para desactivar as notificações por e-mail.',
+e altere as suas preferências para desactivar as notificações por correio electrónico.',
 	'friend_removed_subject' => 'Oh não! $1 removeu-o como amigo na {{SITENAME}}!',
 	'friend_removed_body' => 'Olá $1,
 
@@ -5513,10 +5513,10 @@ Obrigado,
 
 ---
 
-Olhe, quer parar de receber os nossos e-mails?
+Olhe, quer parar de receber as nossas mensagens?
 
 Clique $4
-e altere as suas preferências para desactivar as notificações por e-mail.',
+e altere as suas preferências para desactivar as notificações por correio electrónico.',
 	'foe_removed_subject' => 'Eh pá! $1 removeu-o como inimigo na {{SITENAME}}!',
 	'foe_removed_body' => 'Olá $1,
 
@@ -5528,10 +5528,10 @@ Obrigado,
 
 ---
 
-Olhe, quer parar de receber os nossos e-mails?
+Olhe, quer parar de receber as nossas mensagens?
 
 Clique $4
-e altere as suas preferências para desactivar as notificações por e-mail.',
+e altere as suas preferências para desactivar as notificações por correio electrónico.',
 );
 
 /** Brazilian Portuguese (Português do Brasil)

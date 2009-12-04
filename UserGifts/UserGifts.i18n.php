@@ -3172,10 +3172,10 @@ A equipa da {{SITENAME}}
 
 ---
 
-Olhe, quer parar de receber os nossos e-mails?
+Olhe, quer parar de receber as nossas mensagens?
 
 Clique $5
-e altere as suas preferências para desactivar as notificações por e-mail.',
+e altere as suas preferências para desactivar as notificações por correio electrónico.',
 	'right-giftadmin' => 'Crie novas prendas e edite as existentes',
 );
 

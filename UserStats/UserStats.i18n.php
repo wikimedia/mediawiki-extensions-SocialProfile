@@ -1719,7 +1719,7 @@ $messages['pt'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Polegar para baixo dado|Polegares para baixo dados}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Prenda recebida|Prendas recebidas}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Prenda enviada|Prendas enviadas}}',
-	'right-updatepoints' => 'Atualizar contadores de edição',
+	'right-updatepoints' => 'Actualizar contadores de edições',
 	'level-advanced-to' => 'avançado ao nível <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Agora é um "$1" na {{SITENAME}}!',
 	'level-advance-body' => 'Olá $1,
@@ -1731,10 +1731,10 @@ Parabéns,
 A equipa da {{SITENAME}}
 
 ---
-Olhe, quer parar de receber os nossos e-mails?
+Olhe, quer parar de receber as nossas mensagens?
 
 Clique $3
-e altere as suas preferências para desactivar as notificações por e-mail.',
+e altere as suas preferências para desactivar as notificações por correio electrónico.',
 );
 
 /** Brazilian Portuguese (Português do Brasil)
