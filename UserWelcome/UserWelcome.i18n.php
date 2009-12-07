@@ -241,10 +241,11 @@ $messages['bs'] = array(
 /** Catalan (Català)
  * @author Paucabot
  * @author Solde
+ * @author Ssola
  */
 $messages['ca'] = array(
 	'mp-welcome-upload' => 'Carrega',
-	'mp-welcome-edit' => 'Edita',
+	'mp-welcome-edit' => 'Modifica',
 	'mp-welcome-logged-in' => 'Hola $1',
 	'mp-request-new-message' => 'nou missatge',
 );

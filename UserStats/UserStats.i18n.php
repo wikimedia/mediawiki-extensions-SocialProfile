@@ -400,6 +400,7 @@ i promijenite Vaše postavke da bi onemogućili e-mail obavještenja.',
 
 /** Catalan (Català)
  * @author Solde
+ * @author Ssola
  */
 $messages['ca'] = array(
 	'top-fans-total-points-link' => 'Punts totals',
@@ -408,7 +409,7 @@ $messages['ca'] = array(
 	'top-fans-points' => 'punts',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Vot|Vots}}',
 	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Guany mensual|Guanys mensuals}}',
-	'top-fans-stats-edit-count' => '{{PLURAL:$1|Edició|Edicions}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Modificació|Modificacions}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Comentari|Comentaris}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinió|Opinions}}',
 );

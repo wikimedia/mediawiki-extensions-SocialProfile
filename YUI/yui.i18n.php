@@ -296,6 +296,13 @@ $messages['lt'] = array(
 	'yui-desc' => 'Rinkinys naudmenų ir nustatymų, parašytų JavaScript',
 );
 
+/** Latvian (Latviešu)
+ * @author FnTmLV
+ */
+$messages['lv'] = array(
+	'yui-desc' => 'Palīgrīku un kontroļu kopums, rakstīts JavaScript valodā',
+);
+
 /** Macedonian (Македонски)
  * @author Bjankuloski06
  * @author Brest

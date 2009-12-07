@@ -3649,17 +3649,184 @@ e disactiva in tu preferentias le notificationes per e-mail.',
 
 /** Indonesian (Bahasa Indonesia)
  * @author Bennylin
+ * @author Farras
  * @author Irwangatot
  */
 $messages['id'] = array(
+	'viewrelationships' => 'Lihat hubungan',
+	'viewrelationshiprequests' => 'Lihat permintaan hubungan',
+	'ur-already-submitted' => 'Permintaan Anda telah dikirim',
+	'ur-error-page-title' => 'Ups!',
+	'ur-error-title' => 'Ups, Anda mengambil jalan yang salah!',
+	'ur-error-message-no-user' => 'Kami tak bisa memenuhi permintaan Anda, karena tidak ada pengguna dengan nama ini.',
 	'ur-main-page' => 'Halaman utama',
+	'ur-your-profile' => 'Profil Anda',
+	'ur-backlink' => '&lt; Kembali ke profile $1',
+	'ur-relationship-count-foes' => '$1 memiliki $2 {{PLURAL:$2|musuh|musuh}}.
+Ingin lebih banyak musuh?
+<a href="$3">Undang mereka.</a>',
+	'ur-relationship-count-friends' => '$1 memiliki $2 {{PLURAL:$2|teman|teman}}.
+Ingin lebih banyak teman?
+<a href="$3">Undang mereka.</a>',
+	'ur-add-friends' => '  Ingin lebih banyak teman?
+<a href="$1">Undang mereka</a>',
 	'ur-add-friend' => 'Tambahkan teman',
 	'ur-add-foe' => 'Tambahkan musuh',
+	'ur-add-no-user' => 'Tidak ada pengguna yang dipilih.
+Minta permintaan pertemanan/permusuhan melalui pranala yang benar.',
+	'ur-add-personal-message' => 'Tambahkan pesan pribadi',
+	'ur-remove-relationship-friend' => 'Hapus sebagai teman',
+	'ur-remove-relationship-foe' => 'Hapus sebagai musuh',
+	'ur-give-gift' => 'Beri hadiah',
 	'ur-previous' => 'sebelumnya',
 	'ur-next' => 'selanjutnya',
+	'ur-remove-relationship-title-foe' => 'Apakah Anda ingin menghapus $1 sebagai musuh Anda?',
+	'ur-remove-relationship-title-confirm-foe' => 'Anda telah menghapus $1 sebagai musuh Anda',
+	'ur-remove-relationship-title-friend' => 'Apakah Anda ingin menghapus $1 sebagai teman Anda?',
+	'ur-remove-relationship-title-confirm-friend' => 'Anda telah menghapus $1 sebagai teman Anda',
+	'ur-remove-relationship-message-foe' => 'Anda telah meminta menghapus $1 sebagai musuh Anda, tekan "$2" untuk mengkonfirmasi.',
+	'ur-remove-relationship-message-confirm-foe' => 'Anda berhasil menghapus $1 sebagai musuh Anda.',
+	'ur-remove-relationship-message-friend' => 'Anda telah meminta menghapus $1 sebagai teman Anda, tekan "$2" untuk mengkonfirmasi.',
+	'ur-remove-relationship-message-confirm-friend' => 'Anda berhasil menghapus $1 sebagai teman Anda.',
+	'ur-remove-error-message-no-relationship' => 'Anda tak memiliki hubungan dengan $1.',
+	'ur-remove-error-message-remove-yourself' => 'Anda tak dapat menghapus diri sendiri.',
+	'ur-remove-error-message-pending-foe-request' => 'Anda memiliki permintaan permusuhan tertunda dengan $1.',
+	'ur-remove-error-message-pending-friend-request' => 'Anda memiliki permintaan pertemanan tertunda dengan $1.',
+	'ur-remove-error-not-loggedin-foe' => 'Anda harus masuk log untuk menghapus musuh.',
+	'ur-remove-error-not-loggedin-friend' => 'Anda harus masuk log untuk menghapus teman.',
 	'ur-remove' => 'Hapus',
 	'ur-cancel' => 'Batalkan',
 	'ur-login' => 'Masuk log',
+	'ur-add-title-foe' => 'Apakah Anda ingin menambahkan $1 sebagai musuh Anda?',
+	'ur-add-title-friend' => 'Apakah Anda ingin menambahkan $1 sebagai teman Anda?',
+	'ur-add-message-foe' => 'Anda akan menambahkan $1 sebagai musuh Anda.
+Kami akan memberitahu $1 untuk mengkonfirmasi permusuhan Anda.',
+	'ur-add-message-friend' => 'Anda akan menambahkan $1 sebagai teman Anda.
+Kami akan memberitahu $1 untuk mengkonfirmasi pertemanan Anda.',
+	'ur-add-button-foe' => 'Tambahkan sebagai musuh',
+	'ur-add-button-friend' => 'Tambahkan sebagai teman',
+	'ur-add-sent-title-foe' => 'Kami telah mengirimkan permintaan permusuhan Anda ke $1!',
+	'ur-add-sent-title-friend' => 'Kami telah mengirimkan permintaan pertemanan Anda ke $1!',
+	'ur-add-sent-message-foe' => 'Permintaan permusuhan Anda telah dikirim ke $1 untuk konfirmasi.
+Apabila $1 mengkonfirmasi permintaan Anda, Anda akan menerima surel pemberitahuan.',
+	'ur-add-sent-message-friend' => 'Permintaan pertemanan Anda telah dikirim ke $1 untuk konfirmasi.
+Apabila $1 mengkonfirmasi permintaan Anda, Anda akan menerima surel pemberitahuan.',
+	'ur-add-error-message-no-user' => 'Pengguna yang Anda tambahkan tidak ada.',
+	'ur-add-error-message-blocked' => 'Anda sedang diblokir dan tak dapat menambahkan teman atau musuh.',
+	'ur-add-error-message-yourself' => 'Anda tak dapat menambahkan diri sendiri sebagai teman atau musuh.',
+	'ur-add-error-message-existing-relationship-foe' => 'Anda telah bermusuhan dengan $1.',
+	'ur-add-error-message-existing-relationship-friend' => 'Anda telah berteman dengan $1.',
+	'ur-add-error-message-pending-request-title' => 'Bersabarlah!',
+	'ur-add-error-message-pending-friend-request' => 'Anda memiliki permintaan pertemanan tertunda dengan $1.
+Kami akan memberitahu Anda apabila $1 mengkonfirmasi permintaan Anda.',
+	'ur-add-error-message-pending-foe-request' => 'Anda memiliki permintaan permusuhan tertunda dengan $1.
+Kami akan memberitahu Anda apabila $1 mengkonfirmasi permintaan Anda.',
+	'ur-add-error-message-not-loggedin-foe' => 'Anda harus masuk log untuk menambahkan musuh',
+	'ur-add-error-message-not-loggedin-friend' => 'Anda harus masuk log untuk menambahkan teman',
+	'ur-requests-title' => 'Permintaan hubungan',
+	'ur-requests-message-foe' => '<a href="$1">$2</a> ingin menjadi musuh Anda.',
+	'ur-requests-message-friend' => '<a href="$1">$2</a> ingin menjadi teman Anda.',
+	'ur-accept' => 'Terima',
+	'ur-reject' => 'Tolak',
+	'ur-no-requests-message' => 'Anda tidak memiliki permintaan pertemanan atau permusuhan.
+Apabila Anda ingin lebih banyak teman, <a href="$1">undang mereka!</a>',
+	'ur-requests-added-message-foe' => 'Anda telah menambahkan $1 sebagai musuh Anda.',
+	'ur-requests-added-message-friend' => 'Anda telah menambahkan $1 sebagai teman Anda.',
+	'ur-requests-reject-message-friend' => 'Anda telah menolak $1 sebagai teman Anda.',
+	'ur-requests-reject-message-foe' => 'Anda telah menolak $1 sebagai musuh Anda.',
+	'ur-title-foe' => 'Daftar musuh $1',
+	'ur-title-friend' => 'Daftar teman $1',
+	'friend_request_subject' => '$1 telah menambahkan Anda sebagai teman di {{SITENAME}}!',
+	'friend_request_body' => 'Hai $1.
+
+$2 telah menambahkan Anda sebagai teman di {{SITENAME}}. Kami ingin meyakinkan bahwa kalian berteman.
+
+Klik pranala berikut untuk mengkonfirmasi pertemanan Anda:
+$3
+
+Terima kasih
+
+---
+
+Hei, ingin berhenti menerima surel dari kami?
+
+Klik $4
+dan ubah pengaturan Anda untuk menghentikan pemberitahuan surel.',
+	'foe_request_subject' => 'Ada perang! $1 telah menambahkan Anda sebagai teman di {{SITENAME}}!',
+	'foe_request_body' => 'Hai $1.
+
+$2 telah menerima Anda sebagai musuh di {{SITENAME}}. Kami ini memastikan bahwa kalian bermusuhan.
+
+Klik pranala berikut untuk mengkonfirmasi permusuhan.
+
+$3
+
+Terima kasih
+
+---
+
+Hei, ingin berhenti menerima surel dari kami?
+
+Klik $4
+dan ubah pengaturan Anda untuk menghentikan pemberitahuan surel.',
+	'friend_accept_subject' => '$1 telah menerima permintaan pertemanan Anda di {{SITENAME}}!',
+	'friend_accept_body' => 'Hai $1.
+
+$2 telah menerima permintaan pertemanan Anda di {{SITENAME}}!
+
+Lihat halaman $2 di $3
+
+Terima kasih,
+
+---
+
+Hei, ingin berhenti menerima surel dari kami?
+
+Klik $4
+dan ubah pengaturan Anda untuk menghentikan pemberitahuan surel.',
+	'foe_accept_subject' => 'Sudah dimulai! $1 telah menerima permintaan permusuhan Anda di {{SITENAME}}!',
+	'foe_accept_body' => 'Hai $1.
+
+$2 telah menerima permintaan permusuhan Anda di {{SITENAME}}!
+
+Lihat halaman $2 di $3
+
+Terima kasih
+
+---
+
+Hei, ingin berhenti menerima surel dari kami?
+
+Klik $4
+dan ubah pengaturan Anda untuk menghentikan pemberitahuan surel.',
+	'friend_removed_subject' => 'Oh tidak! $1 telah menghapus Anda sebagai teman di {{SITENAME}}!',
+	'friend_removed_body' => 'Hai $1.
+
+$2 telah menghapus Anda sebagai teman di {{SITENAME}}!
+
+Terima kasih
+
+---
+
+Hei, ingin berhenti menerima surel dari kami?
+
+Klik $4
+dan ubah pengaturan Anda untuk menghentikan pemberitahuan surel.',
+	'foe_removed_subject' => 'Akhirnya! $1 telah menghapus Anda sebagai musuh di {{SITENAME}}!',
+	'foe_removed_body' => 'Hai $1.
+
+$2 telah menghapus Anda sebagai musuh di {{SITENAME}}!
+
+Mungkin kalian berdua akan segera berteman?
+
+Terima kasih
+
+---
+
+Hei, ingin berhenti menerima surel dari kami?
+
+Klik $4
+dan ubah pengaturan Anda untuk menghentikan pemberitahuan surel.',
 );
 
 /** Ido (Ido)
