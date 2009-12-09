@@ -1751,6 +1751,7 @@ $messages['bs'] = array(
  * @author Paucabot
  * @author SMP
  * @author Solde
+ * @author Ssola
  */
 $messages['ca'] = array(
 	'user-time-ago' => 'Fa $1',
@@ -1763,7 +1764,7 @@ $messages['ca'] = array(
 	'user-remove-friend' => 'Elimina com a amic',
 	'user-contributions' => 'Contribucions',
 	'user-stats-title' => 'Estadístiques',
-	'user-stats-edits' => '{{PLURAL:$1|edició|edicions}}',
+	'user-stats-edits' => '{{PLURAL:$1|Modificació|Modificacions}}',
 	'user-stats-votes' => '{{PLURAL:$1|vot|vots}}',
 	'user-stats-comments' => '{{PLURAL:$1|comentari|comentaris}}',
 	'other-info-title' => 'Altra informació',

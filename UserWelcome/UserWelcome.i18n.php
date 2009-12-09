@@ -664,6 +664,7 @@ $messages['id'] = array(
  */
 $messages['io'] = array(
 	'mp-welcome-points' => '$1 punti',
+	'mp-request-new-message' => 'nova mesajo',
 );
 
 /** Italian (Italiano)
