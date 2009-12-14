@@ -1684,6 +1684,15 @@ Jeżeli nie chcesz otrzymywać od nas więcej wiadomości, kliknij na poniższy 
 $3',
 );
 
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'user-stats-alltime-title' => 'Pi gran pontegi ëd tùit ij temp',
+	'user-stats-weekly-title' => 'Pi gran pontegi dë sta sman-a-sì',
+	'user-stats-monthly-title' => 'Pi gran pontegi dë sto meis-sì',
+);
+
 /** Portuguese (Português)
  * @author Giro720
  * @author Hamilton Abreu
