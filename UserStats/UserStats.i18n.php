@@ -1412,6 +1412,25 @@ Klickt $3
 an ännert Är Astellungen a schalt den E-Mai-Benoriichtungssystem aus.',
 );
 
+/** Macedonian (Македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'top-fans-points' => 'поени',
+	'top-fans-bad-field-title' => 'Упс!',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Глас|Гласа}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Уредување|Уредувања}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Коментар|Коментари}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Пријател|Пријатели}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Непријател|Непријатели}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Објавено мислење|Објавени мислења}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Глас за|Гласови за}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Глас против|Гласови против}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Испратен подарок|Испратени подароци}}',
+	'right-updatepoints' => 'Обновување на бројачот на уредуваања',
+	'level-advance-subject' => 'Сега сте „$1“ на {{SITENAME}}!',
+);
+
 /** Nahuatl (Nāhuatl)
  * @author Fluence
  */
@@ -1691,6 +1710,48 @@ $messages['pms'] = array(
 	'user-stats-alltime-title' => 'Pi gran pontegi ëd tùit ij temp',
 	'user-stats-weekly-title' => 'Pi gran pontegi dë sta sman-a-sì',
 	'user-stats-monthly-title' => 'Pi gran pontegi dë sto meis-sì',
+	'topusers' => 'Utent an testa',
+	'top-fans-by-points-nav-header' => 'Tifos an testa',
+	'top-fans-by-category-nav-header' => 'An testa për categorìa',
+	'top-fans-total-points-link' => 'Pont totaj',
+	'top-fans-weekly-points-link' => 'Pont sta sman-a-sì',
+	'top-fans-monthly-points-link' => 'Pont sto meis-sì',
+	'top-fans-points' => 'pont',
+	'top-fans-by-category-title' => 'An testa dzora tut $1',
+	'top-fans-bad-field-title' => 'Oops!',
+	'top-fans-bad-field-message' => 'Lë stat spessifià a esist pa.',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Vot|Vot}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Vinsidor dël meis|Vinsidor dël meis}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Vinsidor dla sman-a|Vinsidor dla sman-a}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Modìfica|Modìfiche}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Coment|Coment}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Arferiment|Arferiment}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Amis|Amis}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Nemis|Nemis}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Opinion publicà|Opinion publicà}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinion|Opinion}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Pòles su|Pòles su}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Pòles giù|Pòles giù}}',
+	'top-fans-stats-comment-score-positive-given' => "{{PLURAL:$1|Pòles ch'a s'àussa|Pòles ch'a s'àussa}}",
+	'top-fans-stats-comment-score-negative-given' => "{{PLURAL:$1|Pòles ch'as bassa|Pòles ch'as bassa}}",
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Regal arseivù|Regal arseivù}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Regal mandà|Regal mandà}}',
+	'right-updatepoints' => 'Modìfica ij contor ëd le modìfiche',
+	'level-advanced-to' => 'avansà al livel <span style="font-weight:800;">$1</span>',
+	'level-advance-subject' => 'Ades it ses a "$1" dzora {{SITENAME}}!',
+	'level-advance-body' => 'Cerea $1.
+
+Adess it ses un "$2" dzora {{SITENAME}}!
+
+Congratulassion,
+
+L\'echip ëd {{SITENAME}}
+
+---
+Hei, it veus-to pi nen arsèive e-mail da noiàutri?
+
+Sgnaca $3
+e cambia toe ampostassion për disabilité le notìfiche e-mail.',
 );
 
 /** Portuguese (Português)
