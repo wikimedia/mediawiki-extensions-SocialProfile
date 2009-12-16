@@ -1704,25 +1704,26 @@ $3',
 );
 
 /** Piedmontese (Piemontèis)
+ * @author Borichèt
  * @author Dragonòt
  */
 $messages['pms'] = array(
 	'user-stats-alltime-title' => 'Pi gran pontegi ëd tùit ij temp',
 	'user-stats-weekly-title' => 'Pi gran pontegi dë sta sman-a-sì',
-	'user-stats-monthly-title' => 'Pi gran pontegi dë sto meis-sì',
+	'user-stats-monthly-title' => 'Pi gran pontegi dë sto mèis-sì',
 	'topusers' => 'Utent an testa',
 	'top-fans-by-points-nav-header' => 'Tifos an testa',
 	'top-fans-by-category-nav-header' => 'An testa për categorìa',
 	'top-fans-total-points-link' => 'Pont totaj',
 	'top-fans-weekly-points-link' => 'Pont sta sman-a-sì',
-	'top-fans-monthly-points-link' => 'Pont sto meis-sì',
+	'top-fans-monthly-points-link' => 'Pont sto mèis-sì',
 	'top-fans-points' => 'pont',
 	'top-fans-by-category-title' => 'An testa dzora tut $1',
-	'top-fans-bad-field-title' => 'Oops!',
-	'top-fans-bad-field-message' => 'Lë stat spessifià a esist pa.',
+	'top-fans-bad-field-title' => 'Contacc!',
+	'top-fans-bad-field-message' => 'Lë stat spessificà a esist pa.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Vot|Vot}}',
-	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Vinsidor dël meis|Vinsidor dël meis}}',
-	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Vinsidor dla sman-a|Vinsidor dla sman-a}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Vincitor dël mèis|Vincitor dël mèis}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Vincitor dla sman-a|Vincitor dla sman-a}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Modìfica|Modìfiche}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Coment|Coment}}',
 	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Arferiment|Arferiment}}',
@@ -1734,11 +1735,11 @@ $messages['pms'] = array(
 	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Pòles giù|Pòles giù}}',
 	'top-fans-stats-comment-score-positive-given' => "{{PLURAL:$1|Pòles ch'a s'àussa|Pòles ch'a s'àussa}}",
 	'top-fans-stats-comment-score-negative-given' => "{{PLURAL:$1|Pòles ch'as bassa|Pòles ch'as bassa}}",
-	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Regal arseivù|Regal arseivù}}',
-	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Regal mandà|Regal mandà}}',
-	'right-updatepoints' => 'Modìfica ij contor ëd le modìfiche',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Cadò arseivù|Cadò arseivù}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Cadò mandà|Cadò mandà}}',
+	'right-updatepoints' => 'Modìfica ij conteur ëd le modìfiche',
 	'level-advanced-to' => 'avansà al livel <span style="font-weight:800;">$1</span>',
-	'level-advance-subject' => 'Ades it ses a "$1" dzora {{SITENAME}}!',
+	'level-advance-subject' => 'Adess it ses a "$1" dzora {{SITENAME}}!',
 	'level-advance-body' => 'Cerea $1.
 
 Adess it ses un "$2" dzora {{SITENAME}}!
@@ -1748,10 +1749,10 @@ Congratulassion,
 L\'echip ëd {{SITENAME}}
 
 ---
-Hei, it veus-to pi nen arsèive e-mail da noiàutri?
+Scota, veus-to pi nen arsèive ëd mëssagi ëd pòsta eletrònica da nojàutri?
 
 Sgnaca $3
-e cambia toe ampostassion për disabilité le notìfiche e-mail.',
+e cambia toe ampostassion për disabilité le notìfiche an pòsta eletrònica.',
 );
 
 /** Portuguese (Português)
