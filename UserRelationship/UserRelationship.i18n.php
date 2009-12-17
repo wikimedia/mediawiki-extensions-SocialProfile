@@ -4414,6 +4414,14 @@ $messages['mhr'] = array(
 	'ur-cancel' => 'Чараш',
 );
 
+/** Macedonian (Македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'ur-error-page-title' => 'Упс!',
+	'ur-error-title' => 'Упс! Свртевте на погрешно место!',
+);
+
 /** Malayalam (മലയാളം)
  * @author Shijualex
  */

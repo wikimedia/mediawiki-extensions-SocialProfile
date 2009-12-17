@@ -1416,19 +1416,51 @@ an ännert Är Astellungen a schalt den E-Mai-Benoriichtungssystem aus.',
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
+	'user-stats-alltime-title' => 'Највеќе поени на сите времиња',
+	'user-stats-weekly-title' => 'Највеќе поени за неделава',
+	'user-stats-monthly-title' => 'Највеќе поени за месецов',
+	'topusers' => 'Најдобри корисници',
+	'top-fans-by-points-nav-header' => 'Најдобри обожаватели',
+	'top-fans-by-category-nav-header' => 'Најдобри по категорија',
+	'top-fans-total-points-link' => 'Вкупно поени',
+	'top-fans-weekly-points-link' => 'Поени за неделава',
+	'top-fans-monthly-points-link' => 'Поени за овој месец',
 	'top-fans-points' => 'поени',
+	'top-fans-by-category-title' => 'Севкупно најдобри $1',
 	'top-fans-bad-field-title' => 'Упс!',
+	'top-fans-bad-field-message' => 'Назначената статистика не постои.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Глас|Гласа}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Месечна победа|Месечни победи}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Неделна победа|Неделни победи}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Уредување|Уредувања}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Коментар|Коментари}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Упатување|Упатувања}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Пријател|Пријатели}}',
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|Непријател|Непријатели}}',
 	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Објавено мислење|Објавени мислења}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Мислење|Мислења}}',
 	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Глас за|Гласови за}}',
 	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Глас против|Гласови против}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Дадени глас за|Дадени гласови за}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Даден глас против|Дадени гласови против}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Добиен подарок|Добиени подароци}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Испратен подарок|Испратени подароци}}',
 	'right-updatepoints' => 'Обновување на бројачот на уредуваања',
+	'level-advanced-to' => 'прејде на ниво <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Сега сте „$1“ на {{SITENAME}}!',
+	'level-advance-body' => 'Здраво $1.
+
+Сега сте „$2“ на {{SITENAME}}!
+
+Честитаме,
+
+Екипата на {{SITENAME}}
+
+---
+Ако сакате повеќе да не примате писма од нас:
+
+Кликнете $3
+и во вашите прилагодувања оневозможете известувања по е-пошта.',
 );
 
 /** Nahuatl (Nāhuatl)

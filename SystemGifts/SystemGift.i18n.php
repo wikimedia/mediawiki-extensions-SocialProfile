@@ -2010,6 +2010,74 @@ i zmień ustawienia, aby wyłączyć powiadomienia e-mail.',
 	'right-awardsmanage' => 'Tworzenie nowych oraz edytowanie istniejących nagród',
 );
 
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'systemgiftmanager' => 'Gestor dël sistema ëd regaj',
+	'ga-addnew' => '+ Gionta un neuv regal',
+	'ga-back-edit-gift' => 'André a modifiché sto regal-sì',
+	'ga-back-gift-list' => 'André a la lista dij regaj',
+	'ga-back-link' => '<a href="$1">< André al profil ëd $2</a>',
+	'ga-choosefile' => 'Sern file:',
+	'ga-count' => "$1 a l'ha $2 {{PLURAL:$2|premi|premi}}.",
+	'ga-create-gift' => 'Crea regal',
+	'ga-created' => "Ël regal a l'é stàit creà",
+	'ga-currentimage' => 'Figura corenta',
+	'ga-error-message-invalid-link' => "Ël colegament ch'it l'has anserì a l'é pa bon.",
+	'ga-error-message-no-user' => "L'utent ch'it l'has provà a vardé a esist pa.",
+	'ga-error-title' => "Woops, it l'has pià un brut gir!",
+	'ga-file-instructions' => 'Toa figura a deuv esse na jpeg, png o gif (gif pa animà), e a deuv esse men che 100kb an dimension.',
+	'ga-gift' => 'regal',
+	'ga-gift-given-count' => "Sto regal-sì a l'é stàit dàit $1 {{PLURAL:$1|vira|vire}}",
+	'ga-gift-title' => '"$2" ëd $1',
+	'ga-giftdesc' => 'descrission dël regal',
+	'ga-giftimage' => 'figura dël regal',
+	'ga-giftname' => 'nòm dël regal',
+	'ga-gifttype' => 'sòrt ëd regal',
+	'ga-goback' => 'Va andré',
+	'ga-imagesbelow' => 'Sota a-i é tor figure che a saran dovrà an sël sit',
+	'ga-img' => 'gionta/cambia figura',
+	'ga-large' => 'Gròss',
+	'ga-medium' => 'Medi',
+	'ga-mediumlarge' => 'Medi-gròss',
+	'ga-new' => 'Neuv',
+	'ga-next' => "D'apress",
+	'ga-previous' => 'Prima',
+	'ga-recent-recipients-award' => 'Àutr ressent reseividor dë sto premi-sì',
+	'ga-saved' => "Ël regal a l'é stàit salvà",
+	'ga-small' => 'Cit',
+	'ga-threshold' => 'seuja',
+	'ga-title' => 'premi ëd $1',
+	'ga-uploadsuccess' => 'Carià da bin',
+	'ga-viewlist' => 'Varda la lista dij regaj',
+	'system_gift_received_subject' => "It l'has arseivù ël premi $1 an dzora a {{SITENAME}}!",
+	'system_gift_received_body' => 'Cerea $1.
+
+It l\'has pen-e arseivù ël premi $2 an dzora {{SITENAME}}!
+
+"$3"
+
+Sgnaca sota për controlé tò trofeo!
+
+$4
+
+I speroma ch\'at piasa!
+
+Mersì,
+
+
+L\'echip {{SITENAME}}
+
+---
+
+Hei, it veus-to pa pi arseive emails da noiàutri?
+
+Sgnaca $5
+e cambia toe ampostassion për disabilité le notìfiche email.',
+	'right-awardsmanage' => "Crea neuv premi e modìfica j'esistent",
+);
+
 /** Pashto (پښتو)
  * @author Ahmed-Najib-Biabani-Ibrahimkhel
  */
