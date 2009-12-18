@@ -2011,50 +2011,51 @@ i zmień ustawienia, aby wyłączyć powiadomienia e-mail.',
 );
 
 /** Piedmontese (Piemontèis)
+ * @author Borichèt
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'systemgiftmanager' => 'Gestor dël sistema ëd regaj',
-	'ga-addnew' => '+ Gionta un neuv regal',
-	'ga-back-edit-gift' => 'André a modifiché sto regal-sì',
-	'ga-back-gift-list' => 'André a la lista dij regaj',
+	'systemgiftmanager' => 'Gestor dël sistema ëd cadò',
+	'ga-addnew' => '+ Gionta un cadò neuv',
+	'ga-back-edit-gift' => 'André a modifiché sto cadò-sì',
+	'ga-back-gift-list' => 'André a la lista dij cadò',
 	'ga-back-link' => '<a href="$1">< André al profil ëd $2</a>',
-	'ga-choosefile' => 'Sern file:',
+	'ga-choosefile' => "Serne l'archivi:",
 	'ga-count' => "$1 a l'ha $2 {{PLURAL:$2|premi|premi}}.",
-	'ga-create-gift' => 'Crea regal',
-	'ga-created' => "Ël regal a l'é stàit creà",
+	'ga-create-gift' => 'Crea cadò',
+	'ga-created' => "Ël cadò a l'é stàit creà",
 	'ga-currentimage' => 'Figura corenta',
 	'ga-error-message-invalid-link' => "Ël colegament ch'it l'has anserì a l'é pa bon.",
 	'ga-error-message-no-user' => "L'utent ch'it l'has provà a vardé a esist pa.",
-	'ga-error-title' => "Woops, it l'has pià un brut gir!",
+	'ga-error-title' => "Contacc, a l'é rivaje un brut colp!",
 	'ga-file-instructions' => 'Toa figura a deuv esse na jpeg, png o gif (gif pa animà), e a deuv esse men che 100kb an dimension.',
-	'ga-gift' => 'regal',
-	'ga-gift-given-count' => "Sto regal-sì a l'é stàit dàit $1 {{PLURAL:$1|vira|vire}}",
+	'ga-gift' => 'cadò',
+	'ga-gift-given-count' => "Sto cadò-sì a l'é stàit fàit $1 {{PLURAL:$1|vira|vire}}",
 	'ga-gift-title' => '"$2" ëd $1',
-	'ga-giftdesc' => 'descrission dël regal',
-	'ga-giftimage' => 'figura dël regal',
-	'ga-giftname' => 'nòm dël regal',
-	'ga-gifttype' => 'sòrt ëd regal',
+	'ga-giftdesc' => 'descrission dël cadò',
+	'ga-giftimage' => 'figura dël cadò',
+	'ga-giftname' => 'nòm dël cadò',
+	'ga-gifttype' => 'sòrt ëd cadò',
 	'ga-goback' => 'Va andré',
-	'ga-imagesbelow' => 'Sota a-i é tor figure che a saran dovrà an sël sit',
+	'ga-imagesbelow' => 'Sota a-i son soe figure che a saran dovrà an sël sit',
 	'ga-img' => 'gionta/cambia figura',
 	'ga-large' => 'Gròss',
 	'ga-medium' => 'Medi',
 	'ga-mediumlarge' => 'Medi-gròss',
 	'ga-new' => 'Neuv',
-	'ga-next' => "D'apress",
+	'ga-next' => 'Dapress',
 	'ga-previous' => 'Prima',
-	'ga-recent-recipients-award' => 'Àutr ressent reseividor dë sto premi-sì',
-	'ga-saved' => "Ël regal a l'é stàit salvà",
+	'ga-recent-recipients-award' => "Àutri che ëd recent a l'han arseivù sto premi-sì",
+	'ga-saved' => "Ël cadò a l'é stàit salvà",
 	'ga-small' => 'Cit',
 	'ga-threshold' => 'seuja',
 	'ga-title' => 'premi ëd $1',
 	'ga-uploadsuccess' => 'Carià da bin',
-	'ga-viewlist' => 'Varda la lista dij regaj',
-	'system_gift_received_subject' => "It l'has arseivù ël premi $1 an dzora a {{SITENAME}}!",
+	'ga-viewlist' => 'Varda la lista dij cadò',
+	'system_gift_received_subject' => "It l'has arseivù ël premi $1 dzora a {{SITENAME}}!",
 	'system_gift_received_body' => 'Cerea $1.
 
-It l\'has pen-e arseivù ël premi $2 an dzora {{SITENAME}}!
+It l\'has pen-e arseivù ël premi $2 dzora {{SITENAME}}!
 
 "$3"
 
@@ -2071,10 +2072,10 @@ L\'echip {{SITENAME}}
 
 ---
 
-Hei, it veus-to pa pi arseive emails da noiàutri?
+Scota, veus-to pa pi arseive mëssagi ëd pòsta eletrònica da noiàutri?
 
 Sgnaca $5
-e cambia toe ampostassion për disabilité le notìfiche email.',
+e cambia toe ampostassion për disabilité le notìfiche an pòsta eletrònica.',
 	'right-awardsmanage' => "Crea neuv premi e modìfica j'esistent",
 );
 
