@@ -39,22 +39,27 @@ class SystemGiftManager extends SpecialPage {
 		}
 
 		// Add CSS
-		$wgOut->addStyle( $wgSystemGiftsScripts . '/SystemGift.css' );
+		$wgOut->addExtensionStyle( $wgSystemGiftsScripts . '/SystemGift.css' );
 
 		if ( $wgRequest->wasPosted() ) {
 			$g = new SystemGifts();
 
 			if ( !( $_POST['id'] ) ) {
 				$gift_id = $g->addGift(
-					$wgRequest->getVal( 'gift_name' ), $wgRequest->getVal( 'gift_description' ),
-					$wgRequest->getVal( 'gift_category' ), $wgRequest->getVal( 'gift_threshold' )
+					$wgRequest->getVal( 'gift_name' ),
+					$wgRequest->getVal( 'gift_description' ),
+					$wgRequest->getVal( 'gift_category' ),
+					$wgRequest->getVal( 'gift_threshold' )
 				);
 				$wgOut->addHTML( '<span class="view-status">' . wfMsg( 'ga-created' ) . '</span><br /><br />' );
 			} else {
 				$gift_id = $wgRequest->getVal( 'id' );
-				$g->updateGift( $gift_id,
-					$wgRequest->getVal( 'gift_name' ), $wgRequest->getVal( 'gift_description' ),
-					$wgRequest->getVal( 'gift_category' ), $wgRequest->getVal( 'gift_threshold' )
+				$g->updateGift(
+					$gift_id,
+					$wgRequest->getVal( 'gift_name' ),
+					$wgRequest->getVal( 'gift_description' ),
+					$wgRequest->getVal( 'gift_category' ),
+					$wgRequest->getVal( 'gift_threshold' )
 				);
 				$wgOut->addHTML( '<span class="view-status">' . wfMsg( 'ga-saved' ) . '</span><br /><br />' );
 			}
@@ -79,8 +84,8 @@ class SystemGiftManager extends SpecialPage {
 		if ( $gifts ) {
 			foreach ( $gifts as $gift ) {
 				$output .= '<div class="Item">
-						<a href="' . $wgScriptPath . '/index.php?title=Special:SystemGiftManager&amp;id=' . $gift['id'] . '">' . $gift['gift_name'] . '</a>
-					</div>' . "\n";
+					<a href="' . $wgScriptPath . '/index.php?title=Special:SystemGiftManager&amp;id=' . $gift['id'] . '">' . $gift['gift_name'] . '</a>
+				</div>' . "\n";
 			}
 		}
 		return '<div id="views">' . $output . '</div>';
@@ -91,7 +96,9 @@ class SystemGiftManager extends SpecialPage {
 
 		$form = '<div><b><a href="' . $wgScriptPath . '/index.php?title=Special:SystemGiftManager">' . wfMsg( 'ga-viewlist' ) . '</a></b></div>';
 
-		if ( $gift_id ) $gift = SystemGifts::getGift( $gift_id );
+		if ( $gift_id ) {
+			$gift = SystemGifts::getGift( $gift_id );
+		}
 
 		$form .= '<form action="" method="post" enctype="multipart/form-data" name="gift">
 		<table border="0" cellpadding="5" cellspacing="0" width="500">
