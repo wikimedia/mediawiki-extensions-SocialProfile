@@ -1659,6 +1659,10 @@ $messages['lb'] = array(
  */
 $messages['mk'] = array(
 	'systemgiftmanager' => 'Раководител со системски подароци',
+	'ga-giftimage' => 'слика на подарокот',
+	'ga-giftname' => 'име на подарокот',
+	'ga-gifttype' => 'тип на подарок',
+	'ga-goback' => 'Назад',
 );
 
 /** Dutch (Nederlands)
