@@ -2495,6 +2495,7 @@ un donn Ding Enshtellunge ändere, öm kei Meffeilunge meih övver e-mail ze kri
 $messages['lb'] = array(
 	'giftmanager' => "Cadeau's-Verwaltung",
 	'giftmanager-addgift' => '+ En neie Cadeau derbäisetzen',
+	'giftmanager-access' => 'Zougang zu de Cadeauen',
 	'giftmanager-description' => 'Beschreiwung vum Cadeau',
 	'giftmanager-giftimage' => 'Bild vum Cadeau',
 	'giftmanager-image' => 'Bild derbäisetzen/ersetzen',
@@ -2569,6 +2570,27 @@ Et ass esou einfach.',
 	'g-viewgiftlist' => 'Lëscht vun de Cadeaue kucken',
 	'g-your-profile' => 'Äre Profil',
 	'gift_received_subject' => 'De Benotzer $1 huet Iech de Cadeau $2 op {{SITENAME}} gemaach!',
+	'gift_received_body' => "Salut $1.
+
+De Benotzer $2 Huet Iech eclo grad de Cadeau $3 op {{SITENAME}} geschéckt.
+
+Wëllt Dir de Message den de Benotzer $2 Iech hannerlooss huet and Äre Cadeau gesinn?  Da klickt op de lInk hei ënnendrënner:
+
+$4
+
+Mir hoffen e gefällt Iech!
+
+Merci,
+
+
+D'Equipe vu(n) {{SITENAME}}
+
+---
+
+Wëllt Dir keng E-Maile méi vun eis kréien?
+
+Klickt op $5
+an ännert Är Astellunge fir d'E-Mail-Notifikatioun auszeschalten.",
 	'right-giftadmin' => 'Nei Cadeauen uleeën a bestoender änneren',
 );
 
