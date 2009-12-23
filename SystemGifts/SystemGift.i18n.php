@@ -2248,9 +2248,16 @@ $messages['ro'] = array(
 	'ga-currentimage' => 'Imaginii curente',
 	'ga-error-message-invalid-link' => 'Legătura introdusă este incorectă.',
 	'ga-gift' => 'cadou',
+	'ga-giftimage' => 'imaginea cadoului',
+	'ga-giftname' => 'numele cadoului',
+	'ga-gifttype' => 'tipul cadoului',
+	'ga-goback' => 'Reveniţi',
 	'ga-large' => 'Mare',
 	'ga-medium' => 'Mediu',
 	'ga-mediumlarge' => 'Mediu-mare',
+	'ga-new' => 'Nou',
+	'ga-next' => 'Următorul',
+	'ga-previous' => 'Anteriorul',
 	'ga-small' => 'Mic',
 );
 
@@ -2486,6 +2493,7 @@ $messages['sr-el'] = array(
  * @author Veeven
  */
 $messages['te'] = array(
+	'ga-gift-given-count' => 'ఈ బహుమతిని {{PLURAL:$1|ఒకసారి|$1 సార్లు}} ఇచ్చారు',
 	'ga-giftdesc' => 'బహుమతి వివరణ',
 	'ga-giftname' => 'బహుమతి పేరు',
 	'ga-gifttype' => 'బహుమతి రకం',
@@ -2565,8 +2573,15 @@ at baguhin ang mga pagtatakda mo upang huwag nang paganahin ang mga pagpapabatid
 
 /** Turkish (Türkçe)
  * @author Karduelis
+ * @author Vito Genovese
  */
 $messages['tr'] = array(
+	'ga-choosefile' => 'Dosya seç:',
+	'ga-gift' => 'hediye',
+	'ga-giftdesc' => 'hediye açıklaması',
+	'ga-giftimage' => 'hediye resmi',
+	'ga-giftname' => 'hediye adı',
+	'ga-gifttype' => 'hediye türü',
 	'ga-large' => 'Büyük',
 	'ga-new' => 'Yeni',
 	'ga-next' => 'Sonraki',

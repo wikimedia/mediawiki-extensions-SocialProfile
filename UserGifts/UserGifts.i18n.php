@@ -2817,35 +2817,80 @@ og endra innstillingane dine for å slå av e-postmeldingar.',
  * @author Simny
  */
 $messages['no'] = array(
+	'giftmanager' => 'Gavebehandler',
+	'giftmanager-addgift' => '+ Legg til ny gave',
+	'giftmanager-access' => 'gavetilgang',
+	'giftmanager-description' => 'gavebeskrivelse',
 	'giftmanager-giftimage' => 'gavebilde',
+	'giftmanager-image' => 'legg til/erstatt bilde',
+	'giftmanager-giftcreated' => 'Gaven har blitt opprettet',
+	'giftmanager-giftsaved' => 'Gaven har blitt lagret',
+	'giftmanager-public' => 'offentlig',
+	'giftmanager-private' => 'privat',
+	'giftmanager-view' => 'Se gaveliste',
 	'g-add-message' => 'Legg til en melding',
+	'g-back-edit-gift' => 'Tilbake for å endre av gaven',
+	'g-back-gift-list' => 'Tilbake til gavelisten',
+	'g-back-link' => '< Tilbake til siden til $1',
 	'g-choose-file' => 'Velg fil:',
 	'g-cancel' => 'Avbryt',
+	'g-count' => '$1 har {{PLURAL:$2|én gave|$2 gaver}}.',
 	'g-create-gift' => 'Opprett gave',
 	'g-created-by' => 'opprettet av',
 	'g-current-image' => 'Nåværende bilde',
+	'g-delete-message' => 'Er du sikker på at du vil slette gaven «$1»?
+Dette vil også slette den fra brukere som kanskje allerede har fått den.',
+	'g-description-title' => 'Gaven «$2» til $1',
 	'g-error-do-not-own' => 'Du eier ikke denne gava.',
+	'g-error-message-blocked' => 'Du er for tiden blokkert og kan ikke gi gaver',
+	'g-error-message-invalid-link' => 'Lenken du oppga er ugyldig.',
+	'g-error-message-login' => 'Du må være innlogget for å gi gaver',
 	'g-error-message-no-user' => 'Brukeren som du ønsker å se finnes ikke.',
+	'g-error-message-to-yourself' => 'Du kan ikke gi gaver til degselv.',
 	'g-error-title' => 'Oi da, der svingte du feil!',
+	'g-file-instructions' => 'Bildet digg må være en jpeg, png eller gif (ingen animerte gif-filer) og må være mindre enn 100kb.',
+	'g-from' => 'fra <a href="$1">$2</a>',
 	'g-gift' => 'gave',
 	'g-gift-name' => 'gavenavn',
 	'g-give-gift' => 'Gi ei gave',
 	'g-give-all' => 'Ønsker du å gi $1 ei gave? 
 Bare klikk på en av gavene nedenfor og trykk deretter på «Send gave». 
 Så enkelt er det.',
+	'g-give-all-message-title' => 'Legg til en melding',
 	'g-give-all-title' => 'Gi en gave til $1',
 	'g-give-enter-friend-title' => 'Hvis du kjenner navnet på brukeren, skriv det inn under.',
+	'g-given' => 'Denne gaven har blitt gitt {{PLURAL:$1|én gang|$1 ganger}}',
+	'g-give-list-friends-title' => 'Velg fra din liste over venner',
 	'g-give-list-select' => 'velg en venn',
 	'g-give-separator' => 'eller',
+	'g-give-no-user-message' => 'Gaver og utmerkelser er en flott måte å vise at du setter pris på vennene dine!',
+	'g-give-no-user-title' => 'Hvem vil du gi en gave til?',
+	'g-give-to-user-title' => 'Send gaven «$1» til $2',
+	'g-give-to-user-message' => 'Vil du gi $1 en <a href="$2">annen gave</a>?',
 	'g-go-back' => 'Tilbake',
+	'g-imagesbelow' => 'Under er dine bilde som vil bli brukt på denne siden',
 	'g-large' => 'Stort',
+	'g-list-title' => 'Gavelisten til $1',
 	'g-main-page' => 'Hovedside',
+	'g-medium' => 'Medium',
+	'g-mediumlarge' => 'Medium-stor',
 	'g-new' => 'ny',
+	'g-next' => 'Neste',
+	'g-previous' => 'Forrige',
 	'g-remove' => 'Fjern',
+	'g-remove-gift' => 'Fjern denne gaven',
+	'g-remove-message' => 'Er du sikker på at du vil fjerne gaven «$1»?',
+	'g-recent-recipients' => 'Andre som nylig mottok denne gaven',
+	'g-remove-success-title' => 'Du har fjernet gaven «$1»',
+	'g-remove-title' => 'Fjern «$1»?',
 	'g-send-gift' => 'Send gave',
 	'g-select-a-friend' => 'velg en venn',
 	'g-sent-title' => 'Du har har sendt ei gave til $1',
+	'g-sent-message' => 'Du har sendt følgende gave til $1.',
+	'g-small' => 'Liten',
 	'g-to-another' => 'Gi til noen andre',
+	'g-uploadsuccess' => 'Vellykket opplasting',
+	'g-viewgiftlist' => 'Se gavelisten',
 	'g-your-profile' => 'Profilen din',
 	'gift_received_subject' => '$1 har send deg gava «$2» på {{SITENAME}}!',
 	'gift_received_body' => 'Hei $1.
@@ -2868,6 +2913,7 @@ Vil du ikke lenger motta e-poster fra oss?
 
 Klikk på $5
 og forandre på dine instillinger for å slå av e-postmeldinger.',
+	'right-giftadmin' => 'Opprett ny og endre eksisterende gaver',
 );
 
 /** Occitan (Occitan)
@@ -3313,6 +3359,9 @@ e altere suas preferências para desabilitar e-mails de notificação.',
 $messages['ro'] = array(
 	'giftmanager-public' => 'public',
 	'giftmanager-private' => 'privat',
+	'g-choose-file' => 'Alegeţi fişierul:',
+	'g-cancel' => 'Revocare',
+	'g-create-gift' => 'Creaţi cadou',
 	'g-created-by' => 'creat de',
 	'g-current-image' => 'Imagine actuală',
 	'g-error-do-not-own' => 'Nu deţineţi acest cadou.',
@@ -3751,6 +3800,16 @@ I već će biti poslat.',
 	'gift_received_subject' => '$1 Vam je poslao/la poklon $2 na {{SITENAME}}!',
 );
 
+/** Swedish (Svenska)
+ * @author Per
+ */
+$messages['sv'] = array(
+	'g-new' => 'ny',
+	'g-next' => 'Nästa',
+	'g-previous' => 'Föregående',
+	'g-remove-title' => 'Ta bort "$1"?',
+);
+
 /** Telugu (తెలుగు)
  * @author Kiranmayee
  * @author Veeven
@@ -3772,6 +3831,7 @@ $messages['te'] = array(
 	'g-next' => 'తర్వాతి',
 	'g-previous' => 'గత',
 	'g-remove' => 'తొలగించు',
+	'g-remove-title' => '"$1"ని తొలగించాలా?',
 );
 
 /** Thai (ไทย)
@@ -3983,10 +4043,30 @@ at baguhin ang mga pagtatakda mo upang huwag nang paganahin ang mga pagpapabatid
 
 /** Turkish (Türkçe)
  * @author Karduelis
+ * @author Vito Genovese
  */
 $messages['tr'] = array(
+	'giftmanager' => 'Hediye yöneticisi',
+	'giftmanager-access' => 'hediye erişimi',
+	'giftmanager-giftimage' => 'hediye resmi',
+	'giftmanager-giftcreated' => 'Hediye oluşturuldu',
+	'giftmanager-giftsaved' => 'Hediye kaydedildi',
+	'giftmanager-view' => 'Hediye listesini gör',
+	'g-current-image' => 'Mevcut resim',
+	'g-error-do-not-own' => 'Bu hediyeye sahip değilsiniz.',
+	'g-error-message-blocked' => 'Şu an engellenmiş durumdasınız ve hediye vermeniz mümkün değil',
+	'g-error-message-invalid-link' => 'Girdiğiniz bağlantı geçersiz.',
+	'g-error-message-to-yourself' => 'Kendinize hediye veremezsiniz.',
+	'g-gift' => 'hediye',
+	'g-gift-name' => 'hediye adı',
+	'g-give-all-message-title' => 'Bir mesaj ekle',
+	'g-give-list-select' => 'bir arkadaş seç',
+	'g-give-separator' => 'ya da',
 	'g-large' => 'Büyük',
 	'g-main-page' => 'Ana sayfa',
+	'g-new' => 'yeni',
+	'g-viewgiftlist' => 'Hediye listesini gör',
+	'g-your-profile' => 'Profiliniz',
 );
 
 /** Ukrainian (Українська)

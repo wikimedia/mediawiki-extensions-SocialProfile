@@ -140,8 +140,8 @@ $messages['an'] = array(
  */
 $messages['ar'] = array(
 	'boardblastlogintitle' => 'ينبغي أن تكون مسجلًا الدخول لترسل بورد بلاست',
-	'boardblastlogintext' => 'يجب أن تكون مسجلًا الدخول لترسل بورد بلاست.
-اضغط <a href="index.php?title=Special:UserLogin">هنا لتُسجّل الدخول</a>',
+	'boardblastlogintext' => 'لإرسال بورد بلاست،
+يجب أن تكون <a href="index.php?title=Special:UserLogin">مسجل الدخول</a>.',
 	'messagesenttitle' => 'الرسائل تم إرسالها',
 	'boardblasttitle' => 'أرسل بورد بلاست',
 	'boardblaststep1' => 'خطوة 1 - اكتب رسالتك',
@@ -180,6 +180,7 @@ $messages['ar'] = array(
 	'userboard_sendbutton' => 'إرسال',
 	'userboard_loggedout' => 'يجب أن تكون <a href="$1">مُسجلًا الدخول</a> لترسل رسائل إلى المستخدمين الآخرين.',
 	'userboard_showingmessages' => 'يعرض {{PLURAL:$4||الرسالة $3|الرسالتين $2-$3|الرسائل $2-$3}} من أصل {{PLURAL:$1||رسالة واحدة|رسالتين|$1 رسائل|$1 رسالة}}',
+	'right-userboard-delete' => 'حذف رسائل حائط الآخرين',
 	'userboard-time-days' => '{{PLURAL:$1||يوم واحد|يومان|$1 أيام|$1 يومًا|$1 يوم}}',
 	'userboard-time-hours' => '{{PLURAL:$1||ساعة واحد|ساعتان|$1 ساعات|$1 ساعة}}',
 	'userboard-time-minutes' => '{{PLURAL:$1||دقيقة واحدة|دقيقتان|$1 دقائق|$1 دقيقة}}',
@@ -2375,6 +2376,73 @@ $messages['pl'] = array(
 	'message_received_subject' => '$1 napisał na Twoim forum na {{GRAMMAR:MS.lp|{{SITENAME}}}}',
 );
 
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'boardblastlogintitle' => 'It deuve esse intrà për mandé ëd board blast',
+	'boardblastlogintext' => 'Per mandé ëd board blast,
+it deuve esse <a href="index.php?title=Special:UserLogin">intrà</a>.',
+	'messagesenttitle' => 'Messagi spedì',
+	'boardblasttitle' => 'Manda un board blast',
+	'boardblaststep1' => 'Pass 1 - Scriv tò messagi',
+	'boardblastprivatenote' => 'Tùit ij messagi a saran mandà com messagi privà',
+	'boardblaststep2' => 'Step 2 - Selession-a a chi it veule mandé tò messagi',
+	'boardlinkselectall' => 'Selession-a tut',
+	'boardlinkunselectall' => 'Deselession-a tut',
+	'boardlinkselectfriends' => 'Selession-a amis',
+	'boardlinkunselectfriends' => 'Deselession-a amis',
+	'boardlinkselectfoes' => 'Selession-a nemis',
+	'boardlinkunselectfoes' => 'Deselession-a nemis',
+	'boardsendbutton' => 'Manda un board blast',
+	'boardnofriends' => "It l'has pa d'amis da mandeje un messagi!",
+	'messagesentsuccess' => "Tò messagi a l'é stàit mandà da bin",
+	'userboard' => "Board ëd l'utent",
+	'userboard_board-to-board' => 'Da board a board',
+	'userboard_delete' => 'Scansela',
+	'userboard_noexist' => "L'utent ch'i të stas provand a visualisé a esit pa.",
+	'userboard_yourboard' => 'Tò board',
+	'userboard_owner' => 'Board ëd $1',
+	'userboard_yourboardwith' => 'Tò board a board cn $1',
+	'userboard_otherboardwith' => 'Ël board a borad ëd $1 con $2',
+	'userboard_backprofile' => 'André al profil ëd $1',
+	'userboard_backyourprofile' => 'André a tò profil',
+	'userboard_boardtoboard' => 'board a board',
+	'userboard_confirmdelete' => 'It ses-to sicur ëd vorèj scanselé sto messagi-sì?',
+	'userboard_sendmessage' => 'Manda a $1 un messagi',
+	'userboard_myboard' => 'Mè board',
+	'userboard_posted_ago' => 'Spedì $1 fa',
+	'userboard_private' => 'privà',
+	'userboard_public' => 'Pùblich',
+	'userboard_messagetype' => 'Tipo messagi',
+	'userboard_nextpage' => "d'apress",
+	'userboard_prevpage' => 'prima',
+	'userboard_nomessages' => 'Gnun messagi.',
+	'userboard_sendbutton' => 'manda',
+	'userboard_loggedout' => 'It deuve esse <a href="$1">intrà</a> për spedì messagi a d\'àutr utent.',
+	'userboard_showingmessages' => 'Mosté {{PLURAL:$4|messagi $3|messagi $2-$3}} ëd {{PLURAL:$1|$1 messagi|$1 messagi}}',
+	'right-userboard-delete' => 'Scansela àutr messagi dël board',
+	'userboard-time-days' => '{{PLURAL:$1|un di|$1 di}}',
+	'userboard-time-hours' => '{{PLURAL:$1|one ora|$1 ore}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|na minuta|$1 minute}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|un second|$1 second}}',
+	'message_received_subject' => "$1 a l'ha scrivù ans tò board dzora {{SITENAME}}",
+	'message_received_body' => "Cerea $1.
+
+$2 a l'ha pen-e scrivute ans tò board dzora {{SITENAME}}!
+
+Sgnaca sota për controlé tò board!
+
+$3
+
+---
+
+Hei, it veus-to pa pi arseive e-mail da noi?
+
+Sgnaca $4
+e cambia ij tò gust për disabilité la notìfica dle email.",
+);
+
 /** Pashto (پښتو)
  * @author Ahmed-Najib-Biabani-Ibrahimkhel
  */
@@ -3021,12 +3089,21 @@ at baguhin ang mga katakdaan upang huwag nang paganahin ang pagpapabatid na pang
 
 /** Turkish (Türkçe)
  * @author Karduelis
+ * @author Vito Genovese
  */
 $messages['tr'] = array(
 	'messagesenttitle' => 'Mesaj gönder',
+	'boardlinkselectall' => 'Tümünü seç',
+	'boardlinkselectfriends' => 'Arkadaş seç',
+	'userboard' => 'Kullanıcı panosu',
 	'userboard_delete' => 'Sil',
+	'userboard_yourboard' => 'Panonuz',
 	'userboard_messagetype' => 'Mesaj tipi',
 	'userboard_nextpage' => 'sonraki',
+	'userboard-time-days' => '{{PLURAL:$1|bir gün|$1 gün}}',
+	'userboard-time-hours' => '{{PLURAL:$1|bir saat|$1 saat}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|bir dakika|$1 dakika}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|bir saniye|$1 saniye}}',
 );
 
 /** Ukrainian (Українська)
