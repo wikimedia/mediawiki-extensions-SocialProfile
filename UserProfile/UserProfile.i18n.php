@@ -867,7 +867,7 @@ $messages['arc'] = array(
  */
 $messages['arz'] = array(
 	'populateuserprofiles' => 'أشهر ملفات اليوزرز',
-	'user-time-ago' => 'مضى',
+	'user-time-ago' => '$1 مضى',
 	'user-awards-title' => 'جوائز',
 	'user-gifts-title' => 'منح',
 	'user-count-separator' => '$1 من $2',
@@ -9714,6 +9714,13 @@ $messages['ug-arab'] = array(
  */
 $messages['ug-latn'] = array(
 	'user-profile-personal-email' => 'Élxet',
+);
+
+/** Ukrainian (Українська)
+ * @author Prima klasy4na
+ */
+$messages['uk'] = array(
+	'user-profile-personal-city' => 'Місто',
 );
 
 /** Veps (Vepsan kel')

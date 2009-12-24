@@ -2126,10 +2126,19 @@ y cambie sus configuraciones para deshabilitar notificaciones por correo electr�
 );
 
 /** Estonian (Eesti)
+ * @author Avjoska
  * @author Silvar
  */
 $messages['et'] = array(
 	'ur-main-page' => 'Esileht',
+	'ur-add-friend' => 'Lisa sõbraks',
+	'ur-give-gift' => 'Anna kingitus',
+	'ur-previous' => 'eelm.',
+	'ur-next' => 'järgm.',
+	'ur-add-button-friend' => 'Lisa sõbraks',
+	'ur-add-error-message-existing-relationship-friend' => 'Sa oled kasutajaga §1 juba sõber.',
+	'ur-add-error-message-pending-request-title' => 'Kannatust!',
+	'ur-add-error-message-not-loggedin-friend' => 'Sõbra lisamiseks pead olema sisse logitud',
 );
 
 /** Basque (Euskara)

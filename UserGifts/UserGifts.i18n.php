@@ -1213,8 +1213,14 @@ y cambia tus configuraciones para deshabilitar notificaciones por correo electr�
  * @author Silvar
  */
 $messages['et'] = array(
+	'giftmanager-addgift' => '+ Lisa uus kingitus',
+	'giftmanager-description' => 'kingituse kirjeldus',
+	'giftmanager-giftimage' => 'kingituse pilt',
+	'giftmanager-giftcreated' => 'Kingitus on loodud',
+	'giftmanager-giftsaved' => 'Kingitus on salvestatud',
 	'giftmanager-public' => 'avalik',
 	'giftmanager-private' => 'privaatne',
+	'giftmanager-view' => 'Vaata kingituste nimekirja',
 	'g-add-message' => 'Lisa teade',
 	'g-error-message-to-yourself' => 'Endale ei saa kingitust teha.',
 	'g-gift' => 'kingitus',
@@ -1226,6 +1232,9 @@ Nii lihtne see ongi.',
 	'g-give-list-select' => 'vali sõber',
 	'g-give-separator' => 'või',
 	'g-main-page' => 'Esileht',
+	'g-new' => 'uus',
+	'g-next' => 'Järgm.',
+	'g-previous' => 'Eelm.',
 );
 
 /** Basque (Euskara)
@@ -2882,6 +2891,7 @@ Så enkelt er det.',
 	'g-remove-message' => 'Er du sikker på at du vil fjerne gaven «$1»?',
 	'g-recent-recipients' => 'Andre som nylig mottok denne gaven',
 	'g-remove-success-title' => 'Du har fjernet gaven «$1»',
+	'g-remove-success-message' => 'Gaven «$1» har blitt fjernet.',
 	'g-remove-title' => 'Fjern «$1»?',
 	'g-send-gift' => 'Send gave',
 	'g-select-a-friend' => 'velg en venn',

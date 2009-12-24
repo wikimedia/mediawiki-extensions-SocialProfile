@@ -2203,6 +2203,7 @@ $messages['tr'] = array(
  */
 $messages['uk'] = array(
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Редагування|Редагувань}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Коментар|Коментарі}}',
 );
 
 /** Veps (Vepsan kel')

@@ -208,8 +208,8 @@ $3
  */
 $messages['arz'] = array(
 	'boardblastlogintitle' => 'أنت ينبغى أن تكون مسجل الدخول لترسل بورد بلاست',
-	'boardblastlogintext' => 'أنت يجب أن تكون مسجل الدخول لترسل بورد بلاست.
-اضغط <a href="index.php?title=Special:UserLogin">هنا لتسجيل الدخول</a>',
+	'boardblastlogintext' => 'لإرسال بورد بلاست،
+يجب أن تكون <a href="index.php?title=Special:UserLogin">مسجل الدخول</a>.',
 	'messagesenttitle' => 'الرسائل تم إرسالها',
 	'boardblasttitle' => 'أرسل بورد بلاست',
 	'boardblaststep1' => 'خطوة 1 - اكتب رسالتك',
@@ -2377,70 +2377,71 @@ $messages['pl'] = array(
 );
 
 /** Piedmontese (Piemontèis)
+ * @author Borichèt
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'boardblastlogintitle' => 'It deuve esse intrà për mandé ëd board blast',
-	'boardblastlogintext' => 'Per mandé ëd board blast,
-it deuve esse <a href="index.php?title=Special:UserLogin">intrà</a>.',
-	'messagesenttitle' => 'Messagi spedì',
-	'boardblasttitle' => 'Manda un board blast',
-	'boardblaststep1' => 'Pass 1 - Scriv tò messagi',
-	'boardblastprivatenote' => 'Tùit ij messagi a saran mandà com messagi privà',
-	'boardblaststep2' => 'Step 2 - Selession-a a chi it veule mandé tò messagi',
+	'boardblastlogintitle' => 'A dev esse intrà ant ël sistema për mandé là tàula an ramà',
+	'boardblastlogintext' => 'Per mandé dle tàule an ramà,
+a dev esse <a href="index.php?title=Special:UserLogin">intrà ant ël sistema</a>.',
+	'messagesenttitle' => 'Mëssagi spedì',
+	'boardblasttitle' => 'Manda na tàula an ramà',
+	'boardblaststep1' => 'Pass 1 - Scriv tò mëssagi',
+	'boardblastprivatenote' => 'Tùit ij mëssagi a saran mandà com mëssagi privà',
+	'boardblaststep2' => 'Step 2 - Selession-a a chi it veule mandé tò mëssagi',
 	'boardlinkselectall' => 'Selession-a tut',
 	'boardlinkunselectall' => 'Deselession-a tut',
 	'boardlinkselectfriends' => 'Selession-a amis',
 	'boardlinkunselectfriends' => 'Deselession-a amis',
 	'boardlinkselectfoes' => 'Selession-a nemis',
 	'boardlinkunselectfoes' => 'Deselession-a nemis',
-	'boardsendbutton' => 'Manda un board blast',
-	'boardnofriends' => "It l'has pa d'amis da mandeje un messagi!",
-	'messagesentsuccess' => "Tò messagi a l'é stàit mandà da bin",
-	'userboard' => "Board ëd l'utent",
-	'userboard_board-to-board' => 'Da board a board',
-	'userboard_delete' => 'Scansela',
-	'userboard_noexist' => "L'utent ch'i të stas provand a visualisé a esit pa.",
-	'userboard_yourboard' => 'Tò board',
-	'userboard_owner' => 'Board ëd $1',
-	'userboard_yourboardwith' => 'Tò board a board cn $1',
-	'userboard_otherboardwith' => 'Ël board a borad ëd $1 con $2',
+	'boardsendbutton' => 'Manda la tàula an ramà',
+	'boardnofriends' => "It l'has pa d'amis da mandeje 'd mëssagi!",
+	'messagesentsuccess' => "Tò mëssagi a l'é stàit mandà da bin",
+	'userboard' => "Quàder ëd l'utent",
+	'userboard_board-to-board' => 'Da quàder a quàder',
+	'userboard_delete' => 'Scancela',
+	'userboard_noexist' => "L'utent ch'it ses an camin ch'it sërche ëd visualisé a esit pa.",
+	'userboard_yourboard' => 'Tò quàder',
+	'userboard_owner' => 'Quàder ëd $1',
+	'userboard_yourboardwith' => 'Tò da quàder a quàder con $1',
+	'userboard_otherboardwith' => 'Ël da quàder a quàder ëd $1 con $2',
 	'userboard_backprofile' => 'André al profil ëd $1',
 	'userboard_backyourprofile' => 'André a tò profil',
-	'userboard_boardtoboard' => 'board a board',
-	'userboard_confirmdelete' => 'It ses-to sicur ëd vorèj scanselé sto messagi-sì?',
-	'userboard_sendmessage' => 'Manda a $1 un messagi',
-	'userboard_myboard' => 'Mè board',
+	'userboard_boardtoboard' => 'Da quàder a quàder',
+	'userboard_confirmdelete' => 'É-lo sicur ëd vorèj scancelé sto mëssagi-sì?',
+	'userboard_sendmessage' => 'Manda un mëssagi a $1',
+	'userboard_myboard' => 'Mè quàder',
 	'userboard_posted_ago' => 'Spedì $1 fa',
 	'userboard_private' => 'privà',
 	'userboard_public' => 'Pùblich',
-	'userboard_messagetype' => 'Tipo messagi',
-	'userboard_nextpage' => "d'apress",
+	'userboard_messagetype' => 'Tipo ëd mëssagi',
+	'userboard_nextpage' => 'dapress',
 	'userboard_prevpage' => 'prima',
-	'userboard_nomessages' => 'Gnun messagi.',
+	'userboard_nomessages' => 'Gnun mëssagi.',
 	'userboard_sendbutton' => 'manda',
-	'userboard_loggedout' => 'It deuve esse <a href="$1">intrà</a> për spedì messagi a d\'àutr utent.',
-	'userboard_showingmessages' => 'Mosté {{PLURAL:$4|messagi $3|messagi $2-$3}} ëd {{PLURAL:$1|$1 messagi|$1 messagi}}',
-	'right-userboard-delete' => 'Scansela àutr messagi dël board',
+	'userboard_loggedout' => 'A dev esse <a href="$1">intrà ant ël sistema</a> për spedì dij mëssagi a d\'àutr utent.',
+	'userboard_showingmessages' => 'Vision {{PLURAL:$4|dël mëssagi $3|dij mëssagi $2-$3}} ëd {{PLURAL:$1|$1 mëssagi|$1 mëssagi}}',
+	'right-userboard-delete' => "Scancela ij mëssagi d'àutri utent",
 	'userboard-time-days' => '{{PLURAL:$1|un di|$1 di}}',
 	'userboard-time-hours' => '{{PLURAL:$1|one ora|$1 ore}}',
 	'userboard-time-minutes' => '{{PLURAL:$1|na minuta|$1 minute}}',
 	'userboard-time-seconds' => '{{PLURAL:$1|un second|$1 second}}',
-	'message_received_subject' => "$1 a l'ha scrivù ans tò board dzora {{SITENAME}}",
+	'message_received_subject' => "$1 a l'ha scrivù su tò quàder dzora {{SITENAME}}",
 	'message_received_body' => "Cerea $1.
 
-$2 a l'ha pen-e scrivute ans tò board dzora {{SITENAME}}!
+$2 a l'ha pen-e scrivuje su sò quàder dzora {{SITENAME}}!
 
-Sgnaca sota për controlé tò board!
+Ch'a sgnaca sota për controlé sò quàder!
 
 $3
 
 ---
 
-Hei, it veus-to pa pi arseive e-mail da noi?
+Ch'a scota, veul-lo pa pi arseive mëssagi an pòsta eletrònica da noi?
 
-Sgnaca $4
-e cambia ij tò gust për disabilité la notìfica dle email.",
+Ch'a gnaca $4
+e ch'a cambia ij sò gust për disabilité la notìfica dij mëssagi an pòsta eletrònica.",
 );
 
 /** Pashto (پښتو)
