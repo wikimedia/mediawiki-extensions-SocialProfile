@@ -4126,22 +4126,53 @@ $messages['yi'] = array(
  */
 $messages['zh-hans'] = array(
 	'giftmanager-access' => '礼品访问',
+	'giftmanager-description' => '礼物说明',
 	'giftmanager-giftimage' => '礼品图像',
+	'giftmanager-image' => '加入／替换图片',
 	'giftmanager-public' => '公共的',
+	'giftmanager-view' => '检视礼物清单',
+	'g-back-gift-list' => '回到礼物清单',
+	'g-choose-file' => '选择档案：',
 	'g-cancel' => '取消',
+	'g-error-message-to-yourself' => '您不能送礼物给自己。',
+	'g-gift' => '礼物',
+	'g-gift-name' => '送礼物',
+	'g-give-gift' => '礼物名称',
+	'g-give-all-title' => '送礼物给$1',
+	'g-give-list-friends-title' => '在您的朋友清单中选择',
+	'g-give-list-select' => '选择一位朋友',
+	'g-give-separator' => '或',
+	'g-give-no-user-title' => '您想送礼物给哪人?',
 	'g-go-back' => '后退',
 	'g-large' => '大',
+	'g-list-title' => '$1的礼物清单',
+	'g-main-page' => '主页',
 	'g-medium' => '中',
+	'g-mediumlarge' => '中至大',
+	'g-remove' => '移除',
+	'g-remove-gift' => '移除这份礼物',
+	'g-remove-title' => '移除「$1」?',
+	'g-send-gift' => '传送礼物',
+	'g-select-a-friend' => '选择一位朋友',
+	'g-sent-title' => '您已传送礼物给$1',
+	'g-sent-message' => '您已传送以下礼物给$1。',
 	'g-small' => '小',
+	'g-uploadsuccess' => '上载成功',
+	'g-viewgiftlist' => '检视礼物清单',
+	'g-your-profile' => '您的个人资料',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)
+ * @author Liangent
+ * @author Mark85296341
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
+	'giftmanager-access' => '禮品訪問',
 	'giftmanager-description' => '禮物說明',
-	'giftmanager-giftimage' => '禮物圖像',
-	'giftmanager-image' => '加入／替換圖像',
+	'giftmanager-giftimage' => '禮物圖片',
+	'giftmanager-image' => '加入／替換圖片',
+	'giftmanager-public' => '公共的',
 	'giftmanager-view' => '檢視禮物清單',
 	'g-back-gift-list' => '回到禮物清單',
 	'g-choose-file' => '選擇檔案：',
@@ -4155,6 +4186,7 @@ $messages['zh-hant'] = array(
 	'g-give-list-select' => '選擇一位朋友',
 	'g-give-separator' => '或',
 	'g-give-no-user-title' => '您想送禮物給哪人?',
+	'g-go-back' => '後退',
 	'g-large' => '大',
 	'g-list-title' => '$1的禮物清單',
 	'g-main-page' => '主頁',

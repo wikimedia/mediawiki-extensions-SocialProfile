@@ -557,7 +557,7 @@ $3
 هل تريد التوقف عن تلقى رسائل بريد إلكترونى مننا؟
 
 اضغط $4
-وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
+وغير إعداداتك لتعطيل إخطارات البريد الإلكترونى.',
 	'foe_request_subject' => 'إنها الحرب! $1 أضافك كعدو فى {{SITENAME}}!',
 	'foe_request_body' => 'مرحبا $1:
 
@@ -574,7 +574,7 @@ $3
 هل تريد التوقف عن تلقى رسائل بريد إلكترونى مننا؟
 
 اضغط $4
-وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
+وغير إعداداتك لتعطيل إخطارات البريد الإلكترونى.',
 	'friend_accept_subject' => '$1 قبل طلب صداقتك فى {{SITENAME}}!',
 	'friend_accept_body' => 'مرحبا $1:
 
@@ -589,7 +589,7 @@ $2 قبل طلب صداقتك فى {{SITENAME}}!
 هل تريد التوقف عن تلقى رسائل بريد إلكترونى مننا؟
 
 اضغط $4
-وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
+وغير إعداداتك لتعطيل إخطارات البريد الإلكترونى.',
 	'foe_accept_subject' => 'إنه يعمل! $1 قبل طلب عداوتك فى {{SITENAME}}!',
 	'foe_accept_body' => 'مرحبا $1:
 
@@ -604,7 +604,7 @@ $2 قبل طلب عداوتك فى {{SITENAME}}!
 هل تريد التوقف عن تلقى رسائل بريد إلكترونى مننا؟
 
 اضغط $4
-وغير إعداداتك لتعطيل إخطارات البريد الإكتروني.',
+وغير إعداداتك لتعطيل إخطارات البريد الإكترونى.',
 	'friend_removed_subject' => 'كلا! أزالك $1 كصديق على {{SITENAME}}!',
 	'friend_removed_body' => 'مرحبا $1:
 
@@ -617,7 +617,7 @@ $2 أزالك كصديق فى {{SITENAME}}!
 هل تريد التوقف عن تلقى رسائل بريد إلكترونى مننا؟
 
 اضغط $4
-وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
+وغير إعداداتك لتعطيل إخطارات البريد الإلكترونى.',
 	'foe_removed_subject' => 'هاه! $1 أزالك كعدو فى {{SITENAME}}!',
 	'foe_removed_body' => 'مرحبا $1:
 
@@ -632,7 +632,7 @@ $2 أزالك كعدو فى {{SITENAME}}!
 هل تريد التوقف عن تلقى رسائل بريد إلكترونى مننا؟
 
 اضغط $4
-وغير إعداداتك لتعطيل إخطارات البريد الإكتروني.',
+وغير إعداداتك لتعطيل إخطارات البريد الإكترونى.',
 );
 
 /** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
@@ -1490,6 +1490,8 @@ Wir werden $1 davon informieren, wenn Sie seine Anfrage bestätigen.',
 	'ur-requests-reject-message-foe' => 'Sie haben $1 als Ihren Feind zurückgewiesen.',
 	'friend_request_subject' => '{{SITENAME}}: $1 hat Sie als Freund hinzugefügt!',
 	'foe_request_subject' => '{{SITENAME}}: Kriegserklärung! $1 hat Sie als Feind hinzugefügt!',
+	'friend_accept_subject' => '{{SITENAME}}: $1 hat Ihre Freundschaftsanfrage bestätigt!',
+	'foe_accept_subject' => '{{SITENAME}}: $1 hat Ihre Feind-Anfrage bestätigt!',
 	'friend_removed_subject' => '{{SITENAME}}: Oh nein! $1 hat seine Freundschaft zu Ihnen beendet!',
 	'friend_removed_body' => 'Hi $1:
 
@@ -7082,15 +7084,44 @@ $messages['yi'] = array(
 
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Gzdavidwong
+ * @author Liangent
  * @author PhiLiP
  * @author Wrightbus
  */
 $messages['zh-hans'] = array(
+	'ur-already-submitted' => '您的请求经已传送',
+	'ur-main-page' => '主页',
+	'ur-your-profile' => '您的个人资料',
+	'ur-backlink' => '&lt; 回到$1的个人资料',
+	'ur-relationship-count-foes' => '$1已经有$2位仇敌了。
+想要多些仇敌吗?
+<a href="$3">邀请他们。</a>',
+	'ur-relationship-count-friends' => '$1已经有$2位朋友了。
+想要多些朋友吗?
+<a href="$3">邀请他们。</a>',
+	'ur-add-friend' => '加入成为朋友',
+	'ur-add-foe' => '加入成为仇敌',
+	'ur-remove-relationship-friend' => '从朋友清单移除',
+	'ur-remove-relationship-foe' => '从仇敌清单移除',
+	'ur-give-gift' => '送礼物',
+	'ur-remove-relationship-title-foe' => '您要把$1从仇敌清单中移除吗?',
+	'ur-remove-relationship-title-confirm-foe' => '您已把$1从仇敌清单中移除',
+	'ur-remove-relationship-title-friend' => '您要把$1从朋友清单中移除吗?',
+	'ur-remove-relationship-title-confirm-friend' => '您已把$1从朋友清单中移除',
+	'ur-remove-error-message-remove-yourself' => '您不能移除自己。',
 	'ur-remove' => '移除',
 	'ur-cancel' => '取消',
 	'ur-login' => '登录',
+	'ur-add-title-foe' => '您要把$1加入成为仇敌吗?',
+	'ur-add-title-friend' => '您要把$1加入成为朋友吗?',
+	'ur-add-button-foe' => '加入成为仇敌',
+	'ur-add-button-friend' => '加入成为朋友',
 	'ur-accept' => '接受',
 	'ur-reject' => '拒绝',
+	'ur-title-foe' => '$1的仇敌清单',
+	'ur-title-friend' => '$1的朋友清单',
+	'friend_request_subject' => '$1已在{{SITENAME}}把您加入成为朋友！',
+	'friend_removed_subject' => '哎唷！$1已在{{SITENAME}}把您从朋友清单移除了!',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)

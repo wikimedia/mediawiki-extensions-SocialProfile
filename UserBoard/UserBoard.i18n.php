@@ -262,7 +262,7 @@ $3
 هل تريد التوقف عن تلقى رسائل بريد إلكترونى مننا؟
 
 اضغط $4
-وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
+وغير إعداداتك لتعطيل إخطارات البريد الإلكترونى.',
 );
 
 /** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
@@ -3168,10 +3168,16 @@ $messages['yi'] = array(
 
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Gzdavidwong
+ * @author Liangent
  * @author PhiLiP
  */
 $messages['zh-hans'] = array(
+	'boardlinkselectall' => '选择全部',
+	'boardlinkselectfriends' => '选择朋友',
+	'boardlinkselectfoes' => '选择仇敌',
 	'userboard_delete' => '删除',
+	'userboard_posted_ago' => '在$1前张贴',
+	'userboard_nomessages' => '没有信息。',
 	'userboard_sendbutton' => '发送',
 );
 

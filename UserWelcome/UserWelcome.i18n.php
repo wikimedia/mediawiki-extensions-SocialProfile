@@ -1451,9 +1451,11 @@ $messages['zh-hans'] = array(
 
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Gzdavidwong
+ * @author Liangent
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
+	'mp-userlevels-link' => '用戶等級',
 	'mp-welcome-upload' => '上載',
 	'mp-welcome-edit' => '編輯',
 	'mp-welcome-logged-in' => '$1，您好',

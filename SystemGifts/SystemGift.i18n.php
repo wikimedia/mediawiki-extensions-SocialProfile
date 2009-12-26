@@ -1659,10 +1659,67 @@ $messages['lb'] = array(
  */
 $messages['mk'] = array(
 	'systemgiftmanager' => 'Раководител со системски подароци',
+	'ga-addnew' => '+ Додај нов подарок',
+	'ga-back-edit-gift' => 'Назад кон уредувањето на овој подарок',
+	'ga-back-gift-list' => 'Назад кон листата на подароци',
+	'ga-back-link' => '<a href="$1">< Назад кон профилот на $2</a>',
+	'ga-choosefile' => 'Одберете податотека:',
+	'ga-count' => '$1 има $2 {{PLURAL:$2|награда|награди}}.',
+	'ga-create-gift' => 'Создај подарок',
+	'ga-created' => 'Подарокот е создаден',
+	'ga-currentimage' => 'Моментална слика',
+	'ga-error-message-invalid-link' => 'Внесената врска е неважечка.',
+	'ga-error-message-no-user' => 'Корисникот кој сакате да го видите не постои.',
+	'ga-error-title' => 'Упс, направивте погрешен потег!',
+	'ga-file-instructions' => 'Сликата мора да биде од типот jpeg, png или gif (но не анимиран gif), и мора да биде помала од 100кб.',
+	'ga-gift' => 'подарок',
+	'ga-gift-given-count' => 'Овој подарок досега е подаруван $1 {{PLURAL:$1|пат|пати}}',
+	'ga-gift-title' => '„$2“ на $1',
+	'ga-giftdesc' => 'опис на подарокот',
 	'ga-giftimage' => 'слика на подарокот',
 	'ga-giftname' => 'име на подарокот',
 	'ga-gifttype' => 'тип на подарок',
 	'ga-goback' => 'Назад',
+	'ga-imagesbelow' => 'Подолу се наоѓаат сликите коишто ќе се користат на веб-страницата',
+	'ga-img' => 'додај/замени слика',
+	'ga-large' => 'Голем',
+	'ga-medium' => 'Среден',
+	'ga-mediumlarge' => 'Средно-голем',
+	'ga-new' => 'Нов',
+	'ga-next' => 'Следен',
+	'ga-previous' => 'Претходен',
+	'ga-recent-recipients-award' => 'Други скорешни добитници на оваа награда',
+	'ga-saved' => 'Подарокот е зачуван',
+	'ga-small' => 'Мал',
+	'ga-threshold' => 'праг',
+	'ga-title' => 'Наградите на $1',
+	'ga-uploadsuccess' => 'Подигањето е успешно',
+	'ga-viewlist' => 'Види листа на подароци',
+	'system_gift_received_subject' => 'Ја добивте наградата $1 на {{SITENAME}}!',
+	'system_gift_received_body' => 'Здраво $1.
+
+Штотуку ја добивте наградата $2 на {{SITENAME}}!
+
+„$3“
+
+Кликнете подолу за да си ја видите витрината со трофеи!
+
+$4
+
+Се надеваме дека Ви се допаѓа!
+
+Благодариме,
+
+
+Екипата на {{SITENAME}}
+
+---
+
+Сакате повеќе да не добивате е-пошта од нас?
+
+Кликнете на $5
+и изменете си ги нагодувањата за да оневозможите известувања по е-пошта.',
+	'right-awardsmanage' => 'Создавање на нови и уредување на постоечки награди',
 );
 
 /** Dutch (Nederlands)
@@ -2638,23 +2695,36 @@ $messages['vi'] = array(
 );
 
 /** Simplified Chinese (‪中文(简体)‬)
+ * @author Liangent
  * @author PhiLiP
  */
 $messages['zh-hans'] = array(
+	'ga-giftdesc' => '礼物说明',
+	'ga-giftimage' => '礼物图片',
+	'ga-giftname' => '礼物名称',
+	'ga-gifttype' => '礼物种类',
 	'ga-goback' => '后退',
 	'ga-large' => '大',
 	'ga-medium' => '中',
 	'ga-small' => '小',
+	'ga-uploadsuccess' => '上载成功',
+	'ga-viewlist' => '检视礼物清单',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)
+ * @author Liangent
+ * @author Mark85296341
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
 	'ga-giftdesc' => '禮物說明',
-	'ga-giftimage' => '禮物圖像',
+	'ga-giftimage' => '禮物圖片',
 	'ga-giftname' => '禮物名稱',
 	'ga-gifttype' => '禮物種類',
+	'ga-goback' => '後退',
+	'ga-large' => '大',
+	'ga-medium' => '中',
+	'ga-small' => '小',
 	'ga-uploadsuccess' => '上載成功',
 	'ga-viewlist' => '檢視禮物清單',
 );

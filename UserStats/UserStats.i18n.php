@@ -203,7 +203,7 @@ $messages['arz'] = array(
 هل تريد التوقف عن تلقى رسائل بريد إلكترونى منا؟
 
 اضغط $3
-وغير إعداداتك لتعديل إخطارات البريد الإلكتروني.',
+وغير إعداداتك لتعديل إخطارات البريد الإلكترونى.',
 );
 
 /** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
@@ -2247,6 +2247,20 @@ $messages['vo'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Legivot pegetöl|Legivots pegetöl}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Legivot pesedöl|Legivots pesedöl}}',
 	'level-advance-subject' => 'Anu binol „$1“ in {{SITENAME}}!',
+);
+
+/** Simplified Chinese (‪中文(简体)‬)
+ * @author Liangent
+ */
+$messages['zh-hans'] = array(
+	'top-fans-stats-edit-count' => '$1次编辑',
+	'top-fans-stats-friends-count' => '$1名朋友',
+	'top-fans-stats-foe-count' => '$1名仇敌',
+	'top-fans-stats-opinions-created' => '$1个意见',
+	'top-fans-stats-gifts-rec-count' => '已收到礼物',
+	'top-fans-stats-gifts-sent-count' => '已传送礼物',
+	'right-updatepoints' => '更新编辑次数',
+	'level-advanced-to' => '已升至第<span style="font-weight:800;">$1</span>级',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)
