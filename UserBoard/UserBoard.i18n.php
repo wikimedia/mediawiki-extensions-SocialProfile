@@ -2973,6 +2973,33 @@ $messages['tg-cyrl'] = array(
 	'userboard_sendbutton' => 'фирист',
 );
 
+/** Tajik (Latin) (Тоҷикӣ (Latin))
+ * @author Liangent
+ */
+$messages['tg-latn'] = array(
+	'messagesenttitle' => 'Pajomhoi firistoda şudand',
+	'boardblaststep1' => 'Qadami 1 - Pajomi xudro navised',
+	'boardblastprivatenote' => 'Hamai pajomho cun pajomhoi şaxsī firistoda xohand şud',
+	'boardblaststep2' => 'Qadami 2 - Ba şaxse, ki pajom firistodan mexohed intixob kuned',
+	'boardnofriends' => 'Şumo jagon dūste baroi firistodani pajom nadored!',
+	'messagesentsuccess' => 'Pajomi şumo bo muvaffaqijat firistoda şud',
+	'userboard' => 'Lavhai korbar',
+	'userboard_delete' => 'Hazf',
+	'userboard_noexist' => 'Korbare ki şumo kuşişi didan karda istodaed vuçud nadorad.',
+	'userboard_yourboard' => 'Lavhai Şumo',
+	'userboard_owner' => 'Lavhai $1',
+	'userboard_yourboardwith' => 'Lavha-ba-lavhai şumo bo $1',
+	'userboard_otherboardwith' => 'Lavha-ba-lavhai $1 bo $2',
+	'userboard_boardtoboard' => 'Lavha-ba-lavha',
+	'userboard_sendmessage' => 'Ba $1 pajome firist',
+	'userboard_myboard' => 'Lavhai Man',
+	'userboard_messagetype' => "Nav'i pajom",
+	'userboard_nextpage' => "ba'dī",
+	'userboard_prevpage' => 'qablī',
+	'userboard_nomessages' => 'Pajƣome nest.',
+	'userboard_sendbutton' => 'firist',
+);
+
 /** Thai (ไทย)
  * @author Octahedron80
  * @author Woraponboonkerd

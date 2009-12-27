@@ -6783,6 +6783,122 @@ $4-ро клик кунед
 ва тарҷиҳоти худро бо ғайрифаъол кардани огоҳсозии тариқи почтаи электронӣ тағйир диҳед.',
 );
 
+/** Tajik (Latin) (Тоҷикӣ (Latin))
+ * @author Liangent
+ */
+$messages['tg-latn'] = array(
+	'ur-main-page' => 'Sahifai Aslī',
+	'ur-your-profile' => 'Namojai şumo',
+	'ur-add-friends' => ' Beştar dūston mexohed? <a href="$1">Onhoro da\'vat kuned</a>',
+	'ur-add-friend' => 'Cun dūst ilova kuned',
+	'ur-add-foe' => 'Cun harif ilova kuned',
+	'ur-give-gift' => 'Hadja dihed',
+	'ur-previous' => 'qablī',
+	'ur-next' => "ba'dī",
+	'ur-remove-error-message-no-relationship' => 'Şumo munosibate bo $1 nadored.',
+	'ur-remove-error-message-remove-yourself' => 'Şumo xudro nametavoned pok kuned.',
+	'ur-remove' => 'Hazf',
+	'ur-cancel' => 'Laƣv',
+	'ur-login' => 'Vurud kuned',
+	'ur-add-error-message-no-user' => 'Korbari şumo kūşişi ilova kardani hasted vuçud nadorad.',
+	'ur-add-error-message-yourself' => 'Şumo xudro nametavoned cun dūst jo harif ilova kuned.',
+	'ur-add-error-message-pending-request-title' => 'Sabr!',
+	'ur-requests-title' => 'Darxosthoi irtibot',
+	'ur-accept' => 'Paziruftan',
+	'ur-reject' => 'Rad kardan',
+	'friend_request_subject' => '$1 şumoro cun dūstaş dar {{SITENAME}} ilova kard!',
+	'friend_request_body' => "Salom $1:
+
+$2 şumoro hamcun dūst dar {{SITENAME}} ilova kard.  Mo mexohem mutmain boşem, ki şumo dar haqiqat dūston hasted.
+
+Lutfan in pajvandro bo tasdiq kardani dūstiji xud paxş kuned:
+$3
+
+Taşakkur
+
+---
+
+Hoj, ojo şumo mexohed ba darjoft kardani nomahoi elektronī az mo xotima bidihed?
+
+$4-ro klik kuned
+va tarçihoti xudro bo ƣajrifa'ol kardani ogohsoziji tariqi poctai elektronī taƣjir dihed.",
+	'foe_request_subject' => "In nizo' ast! $1 şumoro hamcun duşmani xud dar {{SITENAME}} ilova kard!",
+	'foe_request_body' => "Salom $1:
+
+$2 şumoro hamcun duşmani xud dar {{SITENAME}} ilova kard. Mo mexohem mutmain boşem, ki şumo dar haqiqat duşmanoni aşadī hasted jo haddi aqal munozira dored.
+
+Lutfan in pajvandro bo tasdiq kardani rost naomadani munosibati dūstonaaton paxş kuned: $3
+
+$3
+
+Taşakkur
+
+---
+
+Hoj, ojo şumo mexohed ba darjoft kardani nomahoi elektronī az mo xotima bidihed?
+
+$4-ro klik kuned va tarçihoti xudro bo ƣajrifa'ol kardani ogohsoziji tariqi poctai elektronī taƣjir dihed.",
+	'friend_accept_subject' => '$1 darxosti dūstiji şumoro dar {{SITENAME}} qabul kard!',
+	'friend_accept_body' => "Salom $1:
+
+$2 darxosti dūstşaviji şumoro dar {{SITENAME}} qabul kard!
+
+Sahifai $2-ro dar $3 nigared
+
+Taşakkur,
+
+---
+
+Hoj, ojo şumo mexohed ba darjoft kardani nomahoi elektronī az mo xotima bidihed?
+
+$4-ro klik kuned
+va tarçihoti xudro bo ƣajrifa'ol kardani ogohsoziji tariqi poctai elektronī taƣjir dihed.",
+	'foe_accept_subject' => 'Ana tamom! $1 darxosti harifiji şumoro dar {{SITENAME}} qabul kard!',
+	'foe_accept_body' => "Salom $1:
+
+$2 darxosti duşmaniji şumoro dar {{SITENAME}} qabul kard!
+
+Sahifai $2-ro dar $3 nigared
+
+Taşakkur,
+
+---
+
+Hoj, ojo şumo mexohed ba darjoft kardani nomahoi elektronī az mo xotima bidihed?
+
+$4-ro klik kuned
+va tarçihoti xudro bo ƣajrifa'ol kardani ogohsoziji tariqi poctai elektronī taƣjir dihed.",
+	'friend_removed_subject' => 'Vah! $1 şumoro hamcun dūst dar {{SITENAME}} pok kard!',
+	'friend_removed_body' => "Salom $1:
+
+$2 şumoro hamcun dūst dar {{SITENAME}} pok kard!
+
+Taşakkur
+
+---
+
+Hoj, ojo şumo mexohed ba darjoft kardani nomahoi elektronī az mo xotima bidihed?
+
+$4-ro klik kuned
+va tarçihoti xudro bo ƣajrifa'ol kardani ogohsoziji tariqi poctai elektronī taƣjir dihed.",
+	'foe_removed_subject' => 'Uhu! $1 şumoro hamcun duşmani xud dar {{SITENAME}} pok kard!',
+	'foe_removed_body' => "Salom $1:
+
+$2 şumoro hamcun duşmani xud dar  {{SITENAME}} pok kard!
+
+Şojad şumo hardu dar rohi dūst şudan boşed?
+
+Taşakkur
+
+---
+
+
+Hoj, ojo şumo mexohed ba darjoft kardani nomahoi elektronī az mo xotima bidihed?
+
+$4-ro klik kuned
+va tarçihoti xudro bo ƣajrifa'ol kardani ogohsoziji tariqi poctai elektronī taƣjir dihed.",
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  */

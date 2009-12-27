@@ -539,6 +539,13 @@ $messages['tg-cyrl'] = array(
 	'yui-desc' => 'Маҷмӯъи барномаҳои судманд ва танзимот, ки дар ҶаваСкрипт навишта шудаанд',
 );
 
+/** Tajik (Latin) (Тоҷикӣ (Latin))
+ * @author Liangent
+ */
+$messages['tg-latn'] = array(
+	'yui-desc' => "Maçmū'i barnomahoi sudmand va tanzimot, ki dar ÇavaSkript navişta şudaand",
+);
+
 /** Thai (ไทย)
  * @author Octahedron80
  */
