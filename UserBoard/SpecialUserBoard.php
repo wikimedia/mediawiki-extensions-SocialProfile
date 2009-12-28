@@ -125,8 +125,9 @@ class SpecialViewUserBoard extends SpecialPage {
 					posted = 1;
 					encodedName = encodeURIComponent( document.getElementById('user_name_to').value );
 					encodedMsg = encodeURIComponent( document.getElementById('message').value );
+					messageType = document.getElementById('message_type').value;
 					sajax_request_type = 'POST';
-					sajax_do_call( 'wfSendBoardMessage', [ encodedName, encodedMsg, {$per_page} ], function( originalRequest ) {
+					sajax_do_call( 'wfSendBoardMessage', [ encodedName, encodedMsg, messageType, {$per_page} ], function( originalRequest ) {
 							posted = 0;
 							if( document.getElementById('user_name_from').value ) { // its a board to board
 								user_1 = document.getElementById('user_name_from').value;
