@@ -939,6 +939,26 @@ Haz click en $4
 y cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.',
 );
 
+/** Estonian (Eesti)
+ * @author Avjoska
+ * @author Pikne
+ */
+$messages['et'] = array(
+	'messagesenttitle' => 'Sõnumid saadetud',
+	'boardlinkselectall' => 'Vali kõik',
+	'boardlinkselectfriends' => 'Vali sõbrad',
+	'boardlinkselectfoes' => 'Vali vaenlased',
+	'boardnofriends' => 'Sul ei ole sõpru, kellele sõnumit saata!',
+	'userboard_delete' => 'Kustuta',
+	'userboard_backyourprofile' => 'Tagasi oma profiili juurde',
+	'userboard_confirmdelete' => 'Kas Sa oled kindel, et soovid seda sõnumit kustutada?',
+	'userboard_private' => 'erasõnum',
+	'userboard_public' => 'avalik',
+	'userboard_messagetype' => 'Sõnumi tüüp',
+	'userboard_nextpage' => 'järgmine',
+	'userboard_prevpage' => 'eelmine',
+);
+
 /** Basque (Euskara)
  * @author An13sa
  * @author Kobazulo
@@ -1939,6 +1959,73 @@ $messages['lt'] = array(
  */
 $messages['mhr'] = array(
 	'userboard_delete' => 'Шӧраш',
+);
+
+/** Macedonian (Македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'boardblastlogintitle' => 'Мора да сте најавени за да испраќате изјави на таблата',
+	'boardblastlogintext' => 'За да праќате изјави на таблата,
+мора прво да бидете <a href="index.php?title=Special:UserLogin">најавени</a>.',
+	'messagesenttitle' => 'Пораките се испратени',
+	'boardblasttitle' => 'Испрати изјава на таблата',
+	'boardblaststep1' => 'Чекор 1 - Напишете ја пораката',
+	'boardblastprivatenote' => 'Сите пораки ќе бидат испратени како приватни',
+	'boardblaststep2' => 'Чекор 2 - Изберете кому сакате да ја испратите пораката',
+	'boardlinkselectall' => 'Избери сè',
+	'boardlinkunselectall' => 'Тргни избор',
+	'boardlinkselectfriends' => 'Избери пријатели',
+	'boardlinkunselectfriends' => 'Тргни избор на пријатели',
+	'boardlinkselectfoes' => 'Избери непријатели',
+	'boardlinkunselectfoes' => 'Тргни избор на непријатели',
+	'boardsendbutton' => 'Испрати изјава на таблата',
+	'boardnofriends' => 'Немате пријатели на кои можете да им испраќате пораки!',
+	'messagesentsuccess' => 'Пораката ви е успешно испратена',
+	'userboard' => 'Корисничка табла',
+	'userboard_board-to-board' => 'Од табла на табла',
+	'userboard_delete' => 'Избриши',
+	'userboard_noexist' => 'Корисникот којшто сакате да го видите не постои.',
+	'userboard_yourboard' => 'Вашата табла',
+	'userboard_owner' => 'Таблата на $1',
+	'userboard_yourboardwith' => 'Вашата од табла на табла со $1',
+	'userboard_otherboardwith' => 'Од табла на табла на $1 со $2',
+	'userboard_backprofile' => 'Назад кон профилот на $1',
+	'userboard_backyourprofile' => 'Назад кон вашиот профил',
+	'userboard_boardtoboard' => 'Од табла на табла',
+	'userboard_confirmdelete' => 'Дали сте сигурни дека сакате да ја избришете оваа порака?',
+	'userboard_sendmessage' => 'Испрати порака на $1',
+	'userboard_myboard' => 'Мојата табла',
+	'userboard_posted_ago' => 'испратена пред $1',
+	'userboard_private' => 'приватна',
+	'userboard_public' => 'јавна',
+	'userboard_messagetype' => 'Тип на порака',
+	'userboard_nextpage' => 'следни',
+	'userboard_prevpage' => 'претходни',
+	'userboard_nomessages' => 'Нема пораки.',
+	'userboard_sendbutton' => 'испрати',
+	'userboard_loggedout' => 'Мора да сте <a href="$1">најавени</a> за да можете да испраќате пораки до други корисници.',
+	'userboard_showingmessages' => 'Приказ на {{PLURAL:$4|порака $3|пораки $2-$3}} од {{PLURAL:$1|$1 порака|$1 пораки}}',
+	'right-userboard-delete' => 'Бришење на пораки на туѓи табли',
+	'userboard-time-days' => '{{PLURAL:$1|еден ден|$1 дена}}',
+	'userboard-time-hours' => '{{PLURAL:$1|еден час|$1 часа}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|една минута|$1 минути}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|една секунда|$1 секунди}}',
+	'message_received_subject' => '$1 ви пиша на вашата табла на {{SITENAME}}',
+	'message_received_body' => 'Здраво $1.
+
+$2 штотуку Ви пиша на Вашата табла на {{SITENAME}}!
+
+Кликнете подолу за да ја проверите пораката!
+
+$3
+
+---
+
+Сакате повеќе да не добивате известувања од нас?
+
+Кликнете на $4
+и во нагодувањата оневозможете известувања по е-пошта.',
 );
 
 /** Malayalam (മലയാളം)
@@ -3051,6 +3138,13 @@ $messages['th'] = array(
 	'userboard-time-hours' => '{{PLURAL:$1|1 ชั่วโมง|$1 ชั่วโมง}}',
 	'userboard-time-minutes' => '{{PLURAL:$1|1 นาที|$1 นาที}}',
 	'userboard-time-seconds' => '{{PLURAL:$1|1 วินาที|$1 วินาที}}',
+);
+
+/** Turkmen (Türkmençe)
+ * @author Hanberke
+ */
+$messages['tk'] = array(
+	'userboard_delete' => 'Öçür',
 );
 
 /** Tagalog (Tagalog)

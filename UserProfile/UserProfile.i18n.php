@@ -1755,6 +1755,8 @@ $messages['bs'] = array(
  */
 $messages['ca'] = array(
 	'user-time-ago' => 'Fa $1',
+	'user-gifts-title' => 'Regals',
+	'user-count-separator' => '$1 de $2',
 	'user-upload-image' => 'Carrega imatge',
 	'user-edit-this' => 'Edita',
 	'user-edit-profile' => 'Edita perfil',
@@ -1834,7 +1836,12 @@ $messages['ca'] = array(
 	'user-profile-tidbits-favathlete' => 'Atleta preferit i perquè',
 	'user-profile-sports-sport' => 'Esport',
 	'user-profile-picture-yourpicture' => 'La vostra imatge',
+	'user-profile-picture-large' => 'Llarg',
+	'user-profile-picture-medlarge' => 'Mitjà-llarg',
+	'user-profile-picture-medium' => 'Mitjà',
+	'user-profile-picture-small' => 'Petit',
 	'user-profile-picture-uploaddifferent' => 'Carrega una imatge diferent',
+	'user-profile-picture-currentimage' => 'Imatge actual',
 	'user-page-link' => "Pàgina d'usuari",
 );
 
@@ -2962,11 +2969,99 @@ Haz click <a href="$1">aquí</a> para iniciar sesión o click <a href="$2">aquí
 );
 
 /** Estonian (Eesti)
+ * @author Avjoska
+ * @author Pikne
  * @author WikedKentaur
  */
 $messages['et'] = array(
+	'user-time-ago' => '$1 tagasi',
+	'user-awards-title' => 'Auhinnad',
+	'user-gifts-title' => 'Kingitused',
+	'user-view-all' => 'Vaata kõiki',
+	'user-upload-image' => 'Laadi pilt üles',
+	'user-edit-this' => 'Redigeeri seda',
+	'user-edit-profile' => 'Redigeeri profiili',
 	'user-watchlist' => 'Jälgimisloend',
+	'user-add-friend' => 'Lisa sõbraks',
+	'user-add-foe' => 'Lisa vaenlaseks',
+	'user-remove-friend' => 'Eemalda sõprade hulgast',
+	'user-remove-foe' => 'Eemalda vaenlaste hulgast',
+	'user-send-message' => 'Saada sõnum',
+	'user-send-gift' => 'Saada kingitus',
+	'user-contributions' => 'Kaastöö',
+	'user-stats-title' => 'Arvandmestik',
+	'other-info-title' => 'Muu teave',
+	'user-friends-title' => 'Sõbrad',
+	'user-foes-title' => 'Vaenlased',
+	'other-info-movies' => 'Filmid',
+	'other-info-tv' => 'TV',
+	'other-info-music' => 'Muusika',
+	'other-info-books' => 'Raamatud',
+	'other-info-video-games' => 'Videomängud',
+	'other-info-magazines' => 'Ajakirjad',
+	'other-info-drinks' => 'Joogid',
+	'profile-updated-personal' => 'Uuenda profiili',
+	'user-personal-info-title' => 'Isikuteave',
+	'user-personal-info-real-name' => 'Pärisnimi',
+	'user-personal-info-location' => 'Asukoht',
+	'user-personal-info-hometown' => 'Kodulinn',
+	'user-personal-info-birthday' => 'Sünnipäev',
+	'user-personal-info-places-lived' => 'Kohad, kus olen elanud',
+	'user-personal-info-schools' => 'Koolid',
+	'user-personal-info-about-me' => 'Minu kohta',
+	'user-recent-activity-edit' => 'Redigeeris lehte',
+	'user-recent-activity-gift-sent' => 'Kingitus saadetud kasutajale',
+	'user-recent-activity-gift-rec' => 'Sai kingituse kasutajalt',
+	'user-recent-activity-friend' => 'On nüüd sõber kasutajaga',
+	'user-recent-activity-foe' => 'On nüüd vaenlane kasutajaga',
+	'user-recent-activity-user-message' => 'Saatis sõnumi kasutajale',
+	'user-profile-update-saved' => 'Sinu profiil on salvestatud',
+	'user-profile-default-country' => 'Eesti',
+	'user-profile-section-personal' => 'Isikuteave',
+	'user-profile-section-interests' => 'Muu teave',
 	'user-profile-section-preferences' => 'Eelistused',
+	'user-profile-personal-info' => 'Teave',
+	'user-profile-personal-name' => 'Nimi',
+	'user-profile-personal-email' => 'E-post',
+	'user-profile-personal-confirmemail' => 'Kinnita e-post',
+	'user-profile-personal-location' => 'Asukoht',
+	'user-profile-personal-city' => 'Linn',
+	'user-profile-personal-country' => 'Riik',
+	'user-profile-personal-hometown' => 'Kodulinn',
+	'user-profile-personal-birthday' => 'Sünnipäev',
+	'user-profile-personal-birthdate' => 'Kuupäev (KK/PP)',
+	'user-profile-personal-aboutme' => 'Minu kohta',
+	'user-profile-personal-education' => 'Haridus',
+	'user-profile-personal-schools' => 'Koolid',
+	'user-profile-personal-placeslived' => 'Kohad, kus olen elanud',
+	'user-profile-interests-entertainment' => 'Meelelahutus',
+	'user-profile-interests-movies' => 'Filmid',
+	'user-profile-interests-tv' => 'TV',
+	'user-profile-interests-music' => 'Muusika',
+	'user-profile-interests-books' => 'Raamatud',
+	'user-profile-interests-videogames' => 'Videomängud',
+	'user-profile-interests-eats' => 'Söök',
+	'user-profile-interests-drinks' => 'Joogid',
+	'user-profile-update-button' => 'Uuenda',
+	'user-profile-tidbits-favathlete' => 'Lemmiksportlane ja põhjendus',
+	'user-profile-sports-sport' => 'Sport',
+	'user-profile-sports-notloggedintitle' => 'Ups!',
+	'user-profile-sports-notloggedintext' => 'Profiili redigeerimiseks pead olema sisse loginud.',
+	'user-profile-picture-title' => 'Laadi oma pilt üles',
+	'user-profile-picture-yourpicture' => 'Sinu pilt',
+	'user-profile-picture-large' => 'Suur',
+	'user-profile-picture-medium' => 'Keskmine',
+	'user-profile-picture-small' => 'Väike',
+	'user-profile-picture-uploaddifferent' => 'Lae üles teistsugune pilt',
+	'user-profile-picture-currentimage' => 'Praegune pilt',
+	'user-profile-picture-choosepicture' => 'Vali pilt',
+	'user-profile-userlevels-link' => 'Kasutaja tasemed',
+	'user-page-link' => 'Kasutaja lehekülg',
+	'user-social-profile-link' => 'Sotsiaalne profiil',
+	'user-wiki-link' => 'Viki kasutajaleht',
+	'givegift' => 'Anna kingitus',
+	'viewgifts' => 'Vaata kingitusi',
+	'viewsystemgifts' => 'Vaata auhindu',
 );
 
 /** Basque (Euskara)
@@ -9518,6 +9613,13 @@ $messages['th'] = array(
 	'user-profile-picture-log-entry' => 'อัปโหลดอวาต้าใหม่',
 	'user-profile-picture-log-delete-entry' => 'ลบอวาต้าของ $1',
 	'right-avatarremove' => 'ลบอวาต้าของผู้ใช้',
+);
+
+/** Turkmen (Türkmençe)
+ * @author Hanberke
+ */
+$messages['tk'] = array(
+	'user-profile-personal-name' => 'At',
 );
 
 /** Tagalog (Tagalog)

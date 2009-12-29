@@ -456,6 +456,22 @@ i promijenite Vaše postavke onemogućavajući obavještenja putem emaila.',
 	'right-awardsmanage' => 'Pravljenje novih i uređivanje postojećih nagrada',
 );
 
+/** Catalan (Català)
+ * @author Solde
+ */
+$messages['ca'] = array(
+	'ga-giftdesc' => 'descripció del regal',
+	'ga-giftimage' => 'imatge del regal',
+	'ga-giftname' => 'nom del regal',
+	'ga-gifttype' => 'tipus de regal',
+	'ga-large' => 'Llarg',
+	'ga-medium' => 'Mitjà',
+	'ga-mediumlarge' => 'Mitjà-llarg',
+	'ga-new' => 'Nou',
+	'ga-next' => 'Següent',
+	'ga-previous' => 'Anterior',
+);
+
 /** Sorani (Arabic script) (‫کوردی (عەرەبی)‬)
  * @author Marmzok
  */
@@ -794,6 +810,30 @@ Hey, Deseas no recibir más correos de nosotros?
 Haz click en $5
 y cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.',
 	'right-awardsmanage' => 'Crear nuevo y editar premios existentes',
+);
+
+/** Estonian (Eesti)
+ * @author Avjoska
+ */
+$messages['et'] = array(
+	'ga-choosefile' => 'Vali fail:',
+	'ga-create-gift' => 'Loo kingitus',
+	'ga-created' => 'Kingitus on loodud',
+	'ga-currentimage' => 'Praegune pilt',
+	'ga-gift' => 'kingitus',
+	'ga-giftdesc' => 'kingituse kirjeldus',
+	'ga-giftimage' => 'kingituse pilt',
+	'ga-giftname' => 'kingituse nimi',
+	'ga-gifttype' => 'kingituse tüüp',
+	'ga-goback' => 'Tagasi',
+	'ga-img' => 'lisa/vaheta pilt',
+	'ga-large' => 'Suur',
+	'ga-medium' => 'Keskmine',
+	'ga-new' => 'Uus',
+	'ga-next' => 'Järgmine',
+	'ga-previous' => 'Eelmine',
+	'ga-saved' => 'Kingitus on salvestatud',
+	'ga-small' => 'Väike',
 );
 
 /** Basque (Euskara)

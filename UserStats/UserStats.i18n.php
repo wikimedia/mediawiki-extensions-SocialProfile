@@ -411,6 +411,7 @@ $messages['ca'] = array(
 	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Guany mensual|Guanys mensuals}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Modificació|Modificacions}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Comentari|Comentaris}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Amic|Amics}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinió|Opinions}}',
 );
 
@@ -690,6 +691,18 @@ Hey, Desea no recibir correos electrónicos de nosotros?
 
 Haga click en  $3
 y cambie sus configuraciones para deshabilitar notificaciones por correo electrónico.',
+);
+
+/** Estonian (Eesti)
+ * @author Avjoska
+ */
+$messages['et'] = array(
+	'topusers' => 'Tippkasutajad',
+	'top-fans-by-points-nav-header' => 'Tippfännid',
+	'top-fans-weekly-points-link' => 'Punkte sel nädalal',
+	'top-fans-monthly-points-link' => 'Punkte sel kuul',
+	'top-fans-points' => 'punktid',
+	'top-fans-bad-field-title' => 'Ups!',
 );
 
 /** Basque (Euskara)
@@ -2134,6 +2147,13 @@ $messages['te'] = array(
 
 $3 ని నొక్కి
 ఈ-మెయిలు గమనింపులని అచేతనం చేసుకునేందుకు అమరికలని మార్చుకోండి.',
+);
+
+/** Turkmen (Türkmençe)
+ * @author Hanberke
+ */
+$messages['tk'] = array(
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Özgerdiş|Özgerdiş}}',
 );
 
 /** Tagalog (Tagalog)

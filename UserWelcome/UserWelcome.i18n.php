@@ -1320,6 +1320,13 @@ $messages['th'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|เพื่อน|เพื่อน}}ใหม่',
 );
 
+/** Turkmen (Türkmençe)
+ * @author Hanberke
+ */
+$messages['tk'] = array(
+	'mp-welcome-edit' => 'Redaktirle',
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  */
