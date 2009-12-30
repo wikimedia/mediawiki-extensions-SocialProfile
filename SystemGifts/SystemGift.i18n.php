@@ -464,12 +464,16 @@ $messages['ca'] = array(
 	'ga-giftimage' => 'imatge del regal',
 	'ga-giftname' => 'nom del regal',
 	'ga-gifttype' => 'tipus de regal',
+	'ga-goback' => 'Torna enrerra',
 	'ga-large' => 'Llarg',
 	'ga-medium' => 'Mitjà',
 	'ga-mediumlarge' => 'Mitjà-llarg',
 	'ga-new' => 'Nou',
 	'ga-next' => 'Següent',
 	'ga-previous' => 'Anterior',
+	'ga-small' => 'Petit',
+	'ga-threshold' => 'llindar',
+	'ga-title' => 'Premis de $1',
 );
 
 /** Sorani (Arabic script) (‫کوردی (عەرەبی)‬)
@@ -2673,16 +2677,67 @@ at baguhin ang mga pagtatakda mo upang huwag nang paganahin ang mga pagpapabatid
  * @author Vito Genovese
  */
 $messages['tr'] = array(
+	'systemgiftmanager' => 'Sistem hediye yöneticisi',
+	'ga-addnew' => '+ Yeni hediye ekle',
+	'ga-back-edit-gift' => 'Bu hediyeyi düzenlemeye geri dön',
+	'ga-back-gift-list' => 'Hediye listesine geri dön',
+	'ga-back-link' => '<a href="$1">< $2 adlı kullanıcının profiline geri dön</a>',
 	'ga-choosefile' => 'Dosya seç:',
+	'ga-count' => '$1, $2 {{PLURAL:$2|ödüle|ödüle}} sahip.',
+	'ga-create-gift' => 'Hediye oluştur',
+	'ga-created' => 'Hediye oluşturuldu',
+	'ga-currentimage' => 'Mevcut resim',
+	'ga-error-message-invalid-link' => 'Girdiğiniz bağlantı geçersiz.',
+	'ga-error-message-no-user' => 'Görmeye çalıştığınız kullanıcı mevcut değil.',
+	'ga-error-title' => 'Hay Allah, yanlış işlem yaptınız!',
+	'ga-file-instructions' => 'Resminiz jpeg, png veya gif (animasyonlu gif dosyaları hariç) formatında ve 100kb altı boyutta olmalıdır.',
 	'ga-gift' => 'hediye',
+	'ga-gift-given-count' => 'Bu hediye $1 {{PLURAL:$1|kez|kez}} verildi',
+	'ga-gift-title' => '$1 adlı kullanıcının "$2" hediyesi',
 	'ga-giftdesc' => 'hediye açıklaması',
 	'ga-giftimage' => 'hediye resmi',
 	'ga-giftname' => 'hediye adı',
 	'ga-gifttype' => 'hediye türü',
+	'ga-goback' => 'Geri dön',
+	'ga-imagesbelow' => 'Sitede kullanılacak resimleriniz aşağıdadır',
+	'ga-img' => 'resim ekle/değiştir',
 	'ga-large' => 'Büyük',
+	'ga-medium' => 'Orta',
+	'ga-mediumlarge' => 'Orta-büyük',
 	'ga-new' => 'Yeni',
 	'ga-next' => 'Sonraki',
+	'ga-previous' => 'Önceki',
+	'ga-recent-recipients-award' => 'Bu ödülün diğer yakın zamanlı alıcıları',
+	'ga-saved' => 'Hediye kaydedildi',
 	'ga-small' => 'Küçük',
+	'ga-threshold' => 'eşik',
+	'ga-title' => '$1 adlı kullanıcının ödülleri',
+	'ga-uploadsuccess' => 'Yükleme başarılı',
+	'ga-viewlist' => 'Hediye listesini gör',
+	'system_gift_received_subject' => '{{SITENAME}} üzerinde $1 ödülü aldınız!',
+	'system_gift_received_body' => 'Merhaba $1.
+
+{{SITENAME}} üzerinde $2 ödülünü aldınız!
+
+"$3"
+
+Ödül dolabınızı kontrol etmek için aşağıya tıklayın!
+
+$4
+
+Umarız hoşunuza gider!
+
+Teşekkürler,
+
+{{SITENAME}} ekibi
+
+---
+
+Hey, bizden e-posta alımını durdurmak ister misiniz?
+
+$5 bağlantısına tıklayın
+ve e-posta bildirimlerini devre dışı bırakmak için ayarlarınızı değiştirin.',
+	'right-awardsmanage' => 'Yeni ödül oluşturur ve mevcut ödülleri düzenler',
 );
 
 /** Ukrainian (Українська)

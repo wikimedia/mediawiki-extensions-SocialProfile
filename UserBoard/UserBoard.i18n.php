@@ -508,6 +508,9 @@ $messages['bs'] = array(
  * @author Solde
  */
 $messages['ca'] = array(
+	'messagesenttitle' => 'Missatges enviats',
+	'boardlinkselectall' => "Selecciona'ls tots",
+	'boardlinkselectfriends' => 'Selecciona amics',
 	'userboard_delete' => 'Elimina',
 	'userboard_private' => 'privat',
 	'userboard_public' => 'públic',
@@ -864,6 +867,8 @@ $messages['eo'] = array(
 	'userboard_sendbutton' => 'sendi',
 	'userboard_loggedout' => 'Vi devas <a href="$1">ensaluti</a> por afiŝi mesaĝojn al aliaj uzantoj.',
 	'userboard_showingmessages' => 'Montrante {{PLURAL:$4|mesaĝon|mesaĝojn $2-$3}} el {{PLURAL:$1|$1 mesaĝo|$1 mesaĝoj}}',
+	'userboard-time-days' => '{{PLURAL:$1|unu tago|$1 tagoj}}',
+	'userboard-time-hours' => '{{PLURAL:$1|unu horo|$1 horoj}}',
 	'message_received_subject' => '$1 skribis en via afiŝejon en {{SITENAME}}',
 );
 
@@ -3214,18 +3219,67 @@ at baguhin ang mga katakdaan upang huwag nang paganahin ang pagpapabatid na pang
  * @author Vito Genovese
  */
 $messages['tr'] = array(
+	'boardblastlogintitle' => 'Pano gönderisi için oturum açmış olmanız gerekiyor',
+	'boardblastlogintext' => 'Pano seri gönderisi göndermek için,
+<a href="index.php?title=Special:UserLogin">oturum açmış</a> olmalısınız.',
 	'messagesenttitle' => 'Mesaj gönder',
+	'boardblasttitle' => 'Pano seri gönderisi gönder',
+	'boardblaststep1' => '1. Adım - Mesajınızı yazın',
+	'boardblastprivatenote' => 'Tüm mesajlar özel mesaj olarak gönderilecek',
+	'boardblaststep2' => '2. Adım - Mesajınızı göndermek istediğiniz kişiyi seçin',
 	'boardlinkselectall' => 'Tümünü seç',
+	'boardlinkunselectall' => 'Tümünün seçimini kaldır',
 	'boardlinkselectfriends' => 'Arkadaş seç',
+	'boardlinkunselectfriends' => 'Arkadaşların seçimini kaldır',
+	'boardlinkselectfoes' => 'Düşmanları seçin',
+	'boardlinkunselectfoes' => 'Düşmanların seçimini kaldır',
+	'boardsendbutton' => 'Pano seri gönderisi gönder',
+	'boardnofriends' => 'Mesaj gönderebilecek bir arkadaşınız yok!',
+	'messagesentsuccess' => 'Mesajınız başarıyla gönderildi',
 	'userboard' => 'Kullanıcı panosu',
+	'userboard_board-to-board' => 'Panodan panoya',
 	'userboard_delete' => 'Sil',
+	'userboard_noexist' => 'Görmeye çalıştığınız kullanıcı mevcut değil.',
 	'userboard_yourboard' => 'Panonuz',
+	'userboard_owner' => '$1 adlı kullanıcının panosu',
+	'userboard_yourboardwith' => '$1 ile panodan panoya mesajlarınız',
+	'userboard_otherboardwith' => '$1 ile $2 arasındaki panodan panoya mesajlaşma',
+	'userboard_backprofile' => '$1 adlı kullanıcının profiline geri dön',
+	'userboard_backyourprofile' => 'Profilinize geri dönün',
+	'userboard_boardtoboard' => 'Panodan panoya',
+	'userboard_confirmdelete' => 'Bu mesajı silmek istediğinizden emin misiniz?',
+	'userboard_sendmessage' => '$1 adlı kullanıcıya bir mesaj gönder',
+	'userboard_myboard' => 'Panom',
+	'userboard_posted_ago' => '$1 önce gönderildi',
+	'userboard_private' => 'özel',
+	'userboard_public' => 'herkese açık',
 	'userboard_messagetype' => 'Mesaj tipi',
 	'userboard_nextpage' => 'sonraki',
+	'userboard_prevpage' => 'önceki',
+	'userboard_nomessages' => 'Mesaj yok.',
+	'userboard_sendbutton' => 'gönder',
+	'userboard_loggedout' => 'Diğer kullanıcılara mesaj göndermek için <a href="$1">oturum açmış olmanız</a> gerekmektedir.',
+	'userboard_showingmessages' => '{{PLURAL:$1|$1 mesajdan|$1 mesajdan}} {{PLURAL:$4|$3. numaralı mesaj|$2-$3 arası mesajlar}} görüntüleniyor',
+	'right-userboard-delete' => 'Diğerlerinin pano mesajlarını siler',
 	'userboard-time-days' => '{{PLURAL:$1|bir gün|$1 gün}}',
 	'userboard-time-hours' => '{{PLURAL:$1|bir saat|$1 saat}}',
 	'userboard-time-minutes' => '{{PLURAL:$1|bir dakika|$1 dakika}}',
 	'userboard-time-seconds' => '{{PLURAL:$1|bir saniye|$1 saniye}}',
+	'message_received_subject' => '$1 adlı kullanıcı {{SITENAME}} üzerinde panonuza yazı yazdı',
+	'message_received_body' => 'Merhaba $1.
+
+$2, {{SITENAME}} üzerinde panonuza yazı yazdı!
+
+Panonuzu kontrol etmek için aşağıya tıklayın!
+
+$3
+
+---
+
+Hey, bizden e-posta alımını durdurmak ister misiniz?
+
+$4 bağlantısına tıklayın
+ve e-posta bildirimlerini devre dışı bırakmak için ayarlarınızı değiştirin.',
 );
 
 /** Ukrainian (Українська)

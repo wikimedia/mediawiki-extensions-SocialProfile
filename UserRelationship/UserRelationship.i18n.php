@@ -7292,16 +7292,182 @@ at baguhin ang mga katakdaan mo upang huwag gumana/umandar ang mga pagpapabatid 
 /** Turkish (Türkçe)
  * @author Joseph
  * @author Karduelis
+ * @author Vito Genovese
  */
 $messages['tr'] = array(
+	'viewrelationships' => 'İlişkiyi gör',
+	'viewrelationshiprequests' => 'İlişki isteklerini gör',
+	'ur-already-submitted' => 'İsteğiniz gönderildi',
+	'ur-error-page-title' => 'Hay Allah!',
+	'ur-error-title' => 'Hay Allah, yanlış yaptınız!',
+	'ur-error-message-no-user' => 'İsteğinizi tamamlayamıyoruz, zira bu isimde bir kullanıcı mevcut değil.',
 	'ur-main-page' => 'Ana sayfa',
 	'ur-your-profile' => 'Profiliniz',
+	'ur-backlink' => '&lt; $1 adlı kullanıcının profiline dönüş',
+	'ur-relationship-count-foes' => '$1, $2 {{PLURAL:$2|düşmana|düşmana}} sahip.
+Daha fazla düşman ister misiniz?
+<a href="$3"<Davet edin.</a>',
+	'ur-relationship-count-friends' => '$1, $2 {{PLURAL:$2|arkadaşa|arkadaşa}} sahip.
+Daha fazla arkadaş ister misiniz?
+<a href="$3"<Davet edin.</a>',
+	'ur-add-friends' => '  Daha fazla arkadaş ister misiniz?
+<a href="$1"<Davet edin.</a>',
+	'ur-add-friend' => 'Arkadaş olarak ekle',
+	'ur-add-foe' => 'Düşman olarak ekle',
+	'ur-add-no-user' => 'Hiçbir kullanıcı seçilmedi.
+Lütfen doğru bağlantı ile arkadaş/düşman talep edin.',
+	'ur-add-personal-message' => 'Kişisel bir mesaj ekle',
+	'ur-remove-relationship-friend' => 'Arkadaşlıktan çıkar',
+	'ur-remove-relationship-foe' => 'Düşmanlıktan çıkar',
+	'ur-give-gift' => 'Bir hediye ver',
 	'ur-previous' => 'önceki',
 	'ur-next' => 'sonraki',
+	'ur-remove-relationship-title-foe' => '$1 adlı kullanıcıyı düşmanlığınızdan çıkarmak istiyor musunuz?',
+	'ur-remove-relationship-title-confirm-foe' => '$1 adlı kullanıcıyı düşmanlığınızdan çıkardınız',
+	'ur-remove-relationship-title-friend' => '$1 adlı kullanıcıyı arkadaşlığınızdan çıkarmak istiyor musunuz?',
+	'ur-remove-relationship-title-confirm-friend' => '$1 adlı kullanıcıyı arkadaşlığınızdan çıkardınız',
+	'ur-remove-relationship-message-foe' => '$1 adlı kullanıcıyı düşmanlıktan çıkarma isteğinde bulundunuz, onaylamak için "$2" düğmesine basın.',
+	'ur-remove-relationship-message-confirm-foe' => '$1 adlı kullanıcıyı başarıyla düşmanlarınızdan çıkardınız.',
+	'ur-remove-relationship-message-friend' => '$1 adlı kullanıcıyı arkadaşlığınızdan çıkarma isteğinde bulundunuz, onaylamak için "$2" düğmesine basın.',
+	'ur-remove-relationship-message-confirm-friend' => '$1 adlı kullanıcıyı başarıyla arkadaşlıktan çıkardınız.',
+	'ur-remove-error-message-no-relationship' => '$1 ile bir ilişkiniz yok.',
+	'ur-remove-error-message-remove-yourself' => 'Kendinizi kaldıramazsınız.',
+	'ur-remove-error-message-pending-foe-request' => '$1 için bekleyen bir düşmanlık isteğiniz var.',
+	'ur-remove-error-message-pending-friend-request' => '$1 için bekleyen bir arkadaşlık isteğiniz var.',
+	'ur-remove-error-not-loggedin-foe' => 'Düşmanı kaldırmak için oturum açmış olmasınız.',
+	'ur-remove-error-not-loggedin-friend' => 'Arkadaşı kaldırmak için oturum açmış olmalısınız.',
 	'ur-remove' => 'Kaldır',
 	'ur-cancel' => 'İptal',
+	'ur-login' => 'Oturum aç',
+	'ur-add-title-foe' => '$1 adlı kullanıcıyı düşmanınız olarak eklemek ister misiniz?',
+	'ur-add-title-friend' => '$1 adlı kullanıcıyı arkadaşınız olarak eklemek ister misiniz?',
+	'ur-add-message-foe' => '$1 adlı kullanıcıyı düşmanınız olarak eklemek üzeresiniz.
+$1 adlı kullanıcıyı garezinizi doğrulaması için bilgilendireceğiz.',
+	'ur-add-message-friend' => '$1 adlı kullanıcıyı arkadaşınız olarak eklemek üzeresiniz.
+$1 adlı kullanıcıyı arkadaşlığınızı doğrulaması için bilgilendireceğiz.',
+	'ur-add-button-foe' => 'Düşman olarak ekle',
+	'ur-add-button-friend' => 'Arkadaş olarak ekle',
+	'ur-add-sent-title-foe' => '$1 adlı kullanıcıya düşmanlık isteğinizi gönderdik!',
+	'ur-add-sent-title-friend' => '$1 adlı kullanıcıya arkadaşlık isteğinizi gönderdik!',
+	'ur-add-sent-message-foe' => 'Düşmanlık isteğiniz, onay için $1 adlı kullanıcıya gönderildi.
+$1 adlı kullanıcının isteğinizi onaylaması halinde bir takip e-postası alacaksınız',
+	'ur-add-sent-message-friend' => 'Arkadaşlık isteğiniz, onay için $1 adlı kullanıcıya gönderildi.
+$1 adlı kullanıcının isteğinizi onaylaması halinde bir takip e-postası alacaksınız',
+	'ur-add-error-message-no-user' => 'Eklemeye çalıştığınız kullanıcı mevcut değil.',
+	'ur-add-error-message-blocked' => 'Halihazırda engellenmiş durumdasınız ve arkadaş veya düşman ekleyemezsiniz.',
+	'ur-add-error-message-yourself' => 'Kendinizi arkadaş ya da düşman olarak ekleyemezsiniz.',
+	'ur-add-error-message-existing-relationship-foe' => '$1 ile zaten düşmansınız.',
+	'ur-add-error-message-existing-relationship-friend' => '$1 ile zaten arkadaşsınız.',
+	'ur-add-error-message-pending-request-title' => 'Sabır!',
+	'ur-add-error-message-pending-friend-request' => '$1 için bekleyen bir arkadaşlık isteğiniz var.
+$1 isteğinizi doğruladığında sizi bilgilendireceğiz.',
+	'ur-add-error-message-pending-foe-request' => '$1 için bekleyen bir düşmanlık isteğiniz var.
+$1 isteğinizi doğruladığında sizi bilgilendireceğiz.',
+	'ur-add-error-message-not-loggedin-foe' => 'Düşman eklemek için oturum açmış olmasınız',
+	'ur-add-error-message-not-loggedin-friend' => 'Arkadaş eklemek için oturum açmış olmasınız',
+	'ur-requests-title' => 'İlişki istekleri',
+	'ur-requests-message-foe' => '<a href="$1">$2</a> düşmanınız olmak istiyor.',
+	'ur-requests-message-friend' => '<a href="$1">$2</a> arkadaşınız olmak istiyor.',
 	'ur-accept' => 'Onayla',
 	'ur-reject' => 'Reddet',
+	'ur-no-requests-message' => 'Arkadaşlık ya da düşmanlık isteğiniz yok.
+Daha fazla arkadaş istiyorsanız, <a href="$1">davet edin!</a>',
+	'ur-requests-added-message-foe' => '$1 adlı kullanıcıyı düşmanınız olarak eklediniz.',
+	'ur-requests-added-message-friend' => '$1 adlı kullanıcıyı arkadaşınız olarak eklediniz.',
+	'ur-requests-reject-message-friend' => '$1 adlı kullanıcının arkadaşlık isteğini reddettiniz.',
+	'ur-requests-reject-message-foe' => '$1 adlı kullanıcının düşmanlık isteğini reddettiniz.',
+	'ur-title-foe' => '$1 adlı kullanıcının düşman listesi',
+	'ur-title-friend' => '$1 adlı kullanıcının arkadaş listesi',
+	'friend_request_subject' => '$1 adlı kullanıcı {{SITENAME}} üzerinde sizi arkadaş olarak ekledi!',
+	'friend_request_body' => 'Merhaba $1.
+
+$2 sizi {{SITENAME}} üzerinde arkadaş olarak ekledi. Gerçekten arkadaş olduğunuzdan emin olmak istiyoruz.
+
+Lütfen arkadaşlığınızı onaylamak için bu bağlantıya tıklayın:
+$3
+
+Teşekkürler
+
+----
+
+Hey, bizden e-posta alımını durdurmak ister misiniz?
+
+$4 bağlantısına tıklayın
+ve e-posta bildirimlerini devre dışı bırakmak için ayarlarınızı değiştirin.',
+	'foe_request_subject' => 'Bu savaş demek! $1 sizi {{SITENAME}} üzerinde düşman olarak ekledi!',
+	'foe_request_body' => 'Merhaba $1.
+
+$2 sizi {{SITENAME}} üzerinde düşman olarak ekledi. Gerçekten ölümüne düşman olduğunuzdan ya da en azından bir tartışma yaşadığınızdan emin olmak istiyoruz.
+
+Lütfen bu garezi onaylamak için bu bağlantıya tıklayın:
+$3
+
+Teşekkürler
+
+----
+
+Hey, bizden e-posta alımını durdurmak ister misiniz?
+
+$4 bağlantısına tıklayın
+ve e-posta bildirimlerini devre dışı bırakmak için ayarlarınızı değiştirin.',
+	'friend_accept_subject' => '$1, {{SITENAME}} üzerinden gönderdiğiniz arkadaşlık isteğinizi kabul etti!',
+	'friend_accept_body' => 'Merhaba $1.
+
+$2 {{SITENAME}} arkadaşlık isteğinizi kabul etti!
+
+$2 adlı kullanıcının sayfasını ziyaret edin: $3
+
+Teşekkürler,
+
+----
+
+Hey, bizden e-posta alımını durdurmak ister misiniz?
+
+$4 bağlantısına tıklayın
+ve e-posta bildirimlerini devre dışı bırakmak için ayarlarınızı değiştirin.',
+	'foe_accept_subject' => 'Haydi bakalım! $1 {{SITENAME}} üzerinde düşmanlık isteğinizi kabul etti!',
+	'foe_accept_body' => 'Merhaba $1.
+
+$2 {{SITENAME}} düşmanlık isteğinizi kabul etti!
+
+$2 adlı kullanıcının sayfasını ziyaret edin: $3
+
+Teşekkürler,
+
+----
+
+Hey, bizden e-posta alımını durdurmak ister misiniz?
+
+$4 bağlantısına tıklayın
+ve e-posta bildirimlerini devre dışı bırakmak için ayarlarınızı değiştirin.',
+	'friend_removed_subject' => 'Ah hayır! $1 {{SITENAME}} üzerinde sizi arkadaşlıktan çıkardı!',
+	'friend_removed_body' => 'Merhaba $1.
+
+$2 {{SITENAME}} üzerinde sizi arkadaşlıktan çıkardı!
+
+Teşekkürler
+
+----
+
+Hey, bizden e-posta alımını durdurmak ister misiniz?
+
+$4 bağlantısına tıklayın
+ve e-posta bildirimlerini devre dışı bırakmak için ayarlarınızı değiştirin.',
+	'foe_removed_subject' => 'Yaşasın! $1 {{SITENAME}} üzerinde sizi düşmanlıktan çıkardı!',
+	'foe_removed_body' => 'Merhaba $1.
+
+$2 {{SITENAME}} üzerinde sizi düşmanlıktan çıkardı!
+
+İkiniz belki de arkadaş olma yolundasınızdır?
+
+Teşekkürler
+
+----
+
+Hey, bizden e-posta alımını durdurmak ister misiniz?
+
+$4 bağlantısına tıklayın
+ve e-posta bildirimlerini devre dışı bırakmak için ayarlarınızı değiştirin.',
 );
 
 /** Uighur (Latin) (Uyghurche‎ / ئۇيغۇرچە (Latin))

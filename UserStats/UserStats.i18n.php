@@ -2207,15 +2207,53 @@ at baguhin ang mga pagtatakda mo upang huwag nang paganahin ang mga pagpapabatid
 
 /** Turkish (Türkçe)
  * @author Joseph
+ * @author Vito Genovese
  */
 $messages['tr'] = array(
 	'user-stats-alltime-title' => 'Tüm zamanların en çok puanı',
 	'user-stats-weekly-title' => 'Bu hafta en çok puan',
 	'user-stats-monthly-title' => 'Bu ay en çok puan',
+	'topusers' => 'En önemli kullanıcılar',
+	'top-fans-by-points-nav-header' => 'En önemli hayranlar',
+	'top-fans-by-category-nav-header' => 'Kategoriye göre en önemliler',
 	'top-fans-total-points-link' => 'Toplam puan',
 	'top-fans-weekly-points-link' => 'Bu haftadaki puanlar',
 	'top-fans-monthly-points-link' => 'Bu ayki puanlar',
 	'top-fans-points' => 'puan',
+	'top-fans-by-category-title' => 'En önemli genel $1',
+	'top-fans-bad-field-title' => 'Hay aksi!',
+	'top-fans-bad-field-message' => 'Belirtilen istatistik mevcut değil.',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Oy|Oylar}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Aylık kazanç|Aylık kazançlar}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Haftalık kazanç|Haftalık kazançlar}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Değişiklik|Değişiklikler}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Yorum|Yorumlar}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Başvuru|Başvurular}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Arkadaş|Arkadaşlar}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Düşman|Düşmanlar}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Yayınlanan fikir|Yayınlanan fikirler}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Fikir|Fikirler}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Beğeni|Beğeni}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Beğenmeme|Beğenmeme}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Beğen|Beğen}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Beğenilmedi|Beğenilmedi}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Alınan hediye|Alınan hediyeler}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Gönderilen hediye|Gönderilen hediyeler}}',
+	'right-updatepoints' => 'Değişiklik sayılarını günceller',
+	'level-advanced-to' => '<span style="font-weight:800;">$1</span> seviyesine yükseldi',
+	'level-advance-subject' => 'Artık {{SITENAME}} bünyesinde "$1" statüsündesiniz!',
+	'level-advance-body' => 'Merhaba $1.
+
+Artık {{SITENAME}} bünyesinde "$2" statüsündesiniz!
+
+Tebrikler,
+
+{{SITENAME}} ekibi
+
+---
+Hey, bizden e-posta alımı durdurmak ister misiniz?
+
+$3 bağlantısına tıklayın ve e-posta bildirimlerini devre dışı bırakmak için ayarlarınızı değiştirin.',
 );
 
 /** Ukrainian (Українська)

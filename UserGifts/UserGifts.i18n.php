@@ -713,7 +713,9 @@ $messages['ca'] = array(
 	'g-remove' => 'Elimina',
 	'g-remove-gift' => 'Elimina aquest regal',
 	'g-send-gift' => 'Envia un regal',
+	'g-select-a-friend' => 'selecciona un amic',
 	'g-small' => 'Petit',
+	'g-your-profile' => 'El teu perfil',
 );
 
 /** Sorani (Arabic script) (‫کوردی (عەرەبی)‬)
@@ -1078,6 +1080,8 @@ $messages['eo'] = array(
 	'giftmanager-giftsaved' => 'La donaco estis konservita',
 	'giftmanager-public' => 'publika',
 	'giftmanager-private' => 'privata',
+	'g-add-message' => 'Aldoni mesaĝon',
+	'g-back-link' => '< Reiri al paĝo de $1',
 	'g-choose-file' => 'Elekti dosieron:',
 	'g-cancel' => 'Nuligi',
 	'g-count' => '$1 havas $2 {{PLURAL:$2|donacon|donacojn}}.',
@@ -1085,6 +1089,7 @@ $messages['eo'] = array(
 	'g-created-by' => 'kreita de',
 	'g-current-image' => 'Nuna bildo',
 	'g-description-title' => 'Donaco "$2" de $1',
+	'g-from' => 'de <a href="$1">$2</a>',
 	'g-gift' => 'donaco',
 	'g-gift-name' => 'donaca nomo',
 	'g-give-all-message-title' => 'Aldoni mesaĝon',
@@ -4177,26 +4182,103 @@ at baguhin ang mga pagtatakda mo upang huwag nang paganahin ang mga pagpapabatid
  */
 $messages['tr'] = array(
 	'giftmanager' => 'Hediye yöneticisi',
+	'giftmanager-addgift' => '+ Yeni hediye ekle',
 	'giftmanager-access' => 'hediye erişimi',
+	'giftmanager-description' => 'hediye tanımı',
 	'giftmanager-giftimage' => 'hediye resmi',
+	'giftmanager-image' => 'resim ekle/değiştir',
 	'giftmanager-giftcreated' => 'Hediye oluşturuldu',
 	'giftmanager-giftsaved' => 'Hediye kaydedildi',
+	'giftmanager-public' => 'herkese açık',
+	'giftmanager-private' => 'özel',
 	'giftmanager-view' => 'Hediye listesini gör',
+	'g-add-message' => 'Bir mesaj ekle',
+	'g-back-edit-gift' => 'Bu hediyeyi düzenlemeye geri dön',
+	'g-back-gift-list' => 'Hediye listesine geri dön',
+	'g-back-link' => '< $1 adlı kullanıcının sayfasına dön',
+	'g-choose-file' => 'Dosya seç:',
+	'g-cancel' => 'İptal',
+	'g-count' => '$1, $2 {{PLURAL:$2|hediyeye|hediyeye}} sahip.',
+	'g-create-gift' => 'Hediye oluştur',
+	'g-created-by' => 'oluşturan:',
 	'g-current-image' => 'Mevcut resim',
+	'g-delete-message' => '"$1" hediyesini silmek istediğinizden emin misiniz?
+Aynı zamanda bu ödülü almış olan kullanıcılardan da silinecek.',
+	'g-description-title' => '$1 tarafından verilen "$2" hediyesi',
 	'g-error-do-not-own' => 'Bu hediyeye sahip değilsiniz.',
 	'g-error-message-blocked' => 'Şu an engellenmiş durumdasınız ve hediye vermeniz mümkün değil',
 	'g-error-message-invalid-link' => 'Girdiğiniz bağlantı geçersiz.',
+	'g-error-message-login' => 'Hediye vermek için oturum açmalısınız',
+	'g-error-message-no-user' => 'Görüntülemeye çalıştığınız kullanıcı mevcut değil.',
 	'g-error-message-to-yourself' => 'Kendinize hediye veremezsiniz.',
+	'g-error-title' => 'Hay Allah, yanlış bir işlem yaptınız!',
+	'g-file-instructions' => "Resminiz jpeg, png veya gif (animasyonlu gif dosyaları hariç) olmalı ve boyutu 100kb'ın altında olmalı.",
+	'g-from' => '<a href="$1">$2</a> adlı kullanıcıdan',
 	'g-gift' => 'hediye',
 	'g-gift-name' => 'hediye adı',
+	'g-give-gift' => 'Hediye ver',
+	'g-give-all' => '$1 adlı kullanıcıya hediye vermek ister misiniz?
+Sadece aşağıdaki hediyelerden birine tıklayın ve "Hediye gönder" seçeneğine tıklayın.
+Bu kadar kolay.',
 	'g-give-all-message-title' => 'Bir mesaj ekle',
+	'g-give-all-title' => '$1 adlı kullanıcıya hediye ver',
+	'g-give-enter-friend-title' => 'Kullanıcının adını biliyorsanız, aşağıya girin',
+	'g-given' => 'Bu hediye $1 {{PLURAL:$1|kez|kez}} verildi',
+	'g-give-list-friends-title' => 'Arkadaş listenizden seçin',
 	'g-give-list-select' => 'bir arkadaş seç',
 	'g-give-separator' => 'ya da',
+	'g-give-no-user-message' => 'Hediye ve ödüller arkadaşlarınıza teşekkür etmek için harika bir yol!',
+	'g-give-no-user-title' => 'Hediyeyi kime vermek istersiniz?',
+	'g-give-to-user-title' => '$2 adlı kullanıcıya "$1" hediyesini gönder',
+	'g-give-to-user-message' => '$1 adlı kullanıcıya <a href="$2">farklı bir hediye</a> vermek ister misiniz?',
+	'g-go-back' => 'Geri git',
+	'g-imagesbelow' => 'Sitede kullanılacak resimleriniz aşağıdadır',
 	'g-large' => 'Büyük',
+	'g-list-title' => '$1 adlı kullanıcının hediye listesi',
 	'g-main-page' => 'Ana sayfa',
+	'g-medium' => 'Orta',
+	'g-mediumlarge' => 'Orta-büyük',
 	'g-new' => 'yeni',
+	'g-next' => 'Sonraki',
+	'g-previous' => 'Önceki',
+	'g-remove' => 'Kaldır',
+	'g-remove-gift' => 'Bu hediyeyi kaldır',
+	'g-remove-message' => '"$1" hediyesini kaldırmak istediğinizden emin misiniz?',
+	'g-recent-recipients' => 'Bu hediyenin diğer yakın zamanlı alıcıları',
+	'g-remove-success-title' => '"$1" hediyesini başarıyla kaldırdınız',
+	'g-remove-success-message' => '"$1" hediyesi kaldırıldı.',
+	'g-remove-title' => '"$1" hediyesini kaldırmak ister misiniz?',
+	'g-send-gift' => 'Hediye gönder',
+	'g-select-a-friend' => 'bir arkadaş seç',
+	'g-sent-title' => '$1 adlı kullanıcıya bir hediye gönderdiniz',
+	'g-sent-message' => 'Aşağıdaki hediyeyi $1 adlı kullanıcıya gönderdiniz.',
+	'g-small' => 'Küçük',
+	'g-to-another' => 'Başkasına ver',
+	'g-uploadsuccess' => 'Yükleme başarılı',
 	'g-viewgiftlist' => 'Hediye listesini gör',
 	'g-your-profile' => 'Profiliniz',
+	'gift_received_subject' => '$1 size {{SITENAME}} üzerinde $2 hediyesini gönderdi!',
+	'gift_received_body' => 'Merhaba $1.
+
+$2 size {{SITENAME}} üzerinde $3 hediyesini gönderdi.
+
+$2 tarafından sizin için bırakılan notu okumak ve hediyenizi görmek ister misiniz? Aşağıdaki bağlantıya tıklayın:
+
+$4
+
+Umarım hoşunuza gider!
+
+Teşekkürler,
+
+{{SITENAME}} ekibi
+
+---
+
+Hey, bizden e-posta alımını durdurmak ister misiniz?
+
+$5 bağlantısına tıklayın
+ve e-posta bildirimlerini devre dışı bırakmak için ayarlarınızı değiştirin.',
+	'right-giftadmin' => 'Yeni hediye oluşturur ve mevcut hediyeleri düzenler',
 );
 
 /** Ukrainian (Українська)
