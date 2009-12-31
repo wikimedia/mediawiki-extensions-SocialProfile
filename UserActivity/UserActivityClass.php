@@ -26,13 +26,11 @@ class UserActivity {
 	var $show_system_gifts = 1;
 	var $show_system_messages = 1;
 	var $show_messages_sent = 1;
-	var $show_network_updates = 0;
 
 	/**
 	 * Constructor
-	 * @private
 	 */
-	/* private */ function __construct( $username, $filter, $item_max ) {
+	public function __construct( $username, $filter, $item_max ) {
 		if ( $username ) {
 			$title1 = Title::newFromDBkey( $username );
 			$this->user_name = $title1->getText();
@@ -46,10 +44,18 @@ class UserActivity {
 	}
 
 	private function setFilter( $filter ) {
-		if ( strtoupper( $filter ) == 'USER' ) $this->show_current_user = true;
-		if ( strtoupper( $filter ) == 'FRIENDS' ) $this->rel_type = 1;
-		if ( strtoupper( $filter ) == 'FOES' ) $this->rel_type = 2;
-		if ( strtoupper( $filter ) == 'ALL' ) $this->show_all = true;
+		if ( strtoupper( $filter ) == 'USER' ) {
+			$this->show_current_user = true;
+		}
+		if ( strtoupper( $filter ) == 'FRIENDS' ) {
+			$this->rel_type = 1;
+		}
+		if ( strtoupper( $filter ) == 'FOES' ) {
+			$this->rel_type = 2;
+		}
+		if ( strtoupper( $filter ) == 'ALL' ) {
+			$this->show_all = true;
+		}
 	}
 
 	public function setActivityToggle( $name, $value ) {
@@ -69,14 +75,19 @@ class UserActivity {
 			$user_sql = " WHERE rc_user = {$this->user_id}";
 		}
 
-		$sql = "SELECT UNIX_TIMESTAMP(rc_timestamp) AS item_date, rc_title, rc_user, rc_user_text, rc_comment, rc_id, rc_minor, rc_new,
+		$sql = "SELECT UNIX_TIMESTAMP(rc_timestamp) AS item_date, rc_title,
+				rc_user, rc_user_text, rc_comment, rc_id, rc_minor, rc_new,
 				rc_namespace, rc_cur_id, rc_this_oldid, rc_last_oldid
 			FROM {$dbr->tableName( 'recentchanges' )}
 			{$rel_sql} {$user_sql}
 			ORDER BY rc_id DESC LIMIT 0," . $this->item_max;
-		$res = $dbr->query( $sql );
+		$res = $dbr->query( $sql, __METHOD__ );
 
 		while ( $row = $dbr->fetchObject( $res ) ) {
+			// Special pages aren't editable, so ignore 'em
+			if ( $row->rc_namespace == NS_SPECIAL ) {
+				continue;
+			}
 			$title = Title::makeTitle( $row->rc_namespace, $row->rc_title );
 			$this->items_grouped['edit'][$title->getPrefixedText()]['users'][$row->rc_user_text][] = array(
 				'id' => 0,
@@ -93,7 +104,6 @@ class UserActivity {
 
 			// set last timestamp
 			$this->items_grouped['edit'][$title->getPrefixedText()]['timestamp'] = $row->item_date;
-			// $this->items['edits'][$title->getPrefixedText()]['displayed'] = 0;
 
 			$this->items[] = array(
 				'id' => 0,
@@ -120,17 +130,21 @@ class UserActivity {
 
 		$rel_sql = '';
 		$user_sql = '';
-		if ( $this->rel_type )
+		if ( $this->rel_type ) {
 			$rel_sql = " AND vote_user_id IN (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type}) ";
-		if ( $this->show_current_user )
+		}
+		if ( $this->show_current_user ) {
 			$user_sql = " AND vote_user_id = {$this->user_id}";
+		}
 
-		$sql = "SELECT UNIX_TIMESTAMP(vote_date) AS item_date, username, page_title, vote_count, comment_count, vote_ip, vote_user_id
+		$sql = "SELECT UNIX_TIMESTAMP(vote_date) AS item_date, username,
+					page_title, vote_count, comment_count, vote_ip,
+					vote_user_id
 			FROM {$dbr->tableName( 'Vote' )} v, {$dbr->tableName( 'page' )} p
 			WHERE v.vote_page_id=p.page_id
 			{$rel_sql} {$user_sql}
 			ORDER BY vote_date DESC LIMIT 0," . $this->item_max;
-		$res = $dbr->query( $sql );
+		$res = $dbr->query( $sql, __METHOD__ );
 		while ( $row = $dbr->fetchObject( $res ) ) {
 			$username = $row->username;
 			$this->items[] = array(
@@ -167,17 +181,19 @@ class UserActivity {
 			$user_sql = "AND Comment_user_id = {$this->user_id}";
 		}
 
-		$sql = "SELECT UNIX_TIMESTAMP(comment_date) AS item_date, Comment_Username, Comment_IP, page_title, Comment_Text, Comment_user_id, page_namespace, CommentID
+		$sql = "SELECT UNIX_TIMESTAMP(comment_date) AS item_date,
+					Comment_Username, Comment_IP, page_title, Comment_Text,
+					Comment_user_id, page_namespace, CommentID
 			FROM {$dbr->tableName( 'Comments' )} c, {$dbr->tableName( 'page' )} p
 			WHERE c.comment_page_id=p.page_id
 			{$rel_sql} {$user_sql}
 			ORDER BY comment_date DESC LIMIT 0," . $this->item_max;
 
-		$res = $dbr->query( $sql );
-		global $wgFilterComments;
+		$res = $dbr->query( $sql, __METHOD__ );
 		while ( $row = $dbr->fetchObject( $res ) ) {
 			$show_comment = true;
 
+			global $wgFilterComments;
 			if ( $wgFilterComments ) {
 				if ( $row->vote_count <= 4 ) {
 					$show_comment = false;
@@ -224,16 +240,21 @@ class UserActivity {
 		$rel_sql = '';
 		$user_sql = '';
 
-		if( $this->rel_type )
+		if( $this->rel_type ) {
 			$rel_sql = "WHERE ug_user_id_to IN (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type})";
-		if( $this->show_current_user )
+		}
+		if( $this->show_current_user ) {
 			$user_sql = "WHERE ug_user_id_from = {$this->user_id}";
+		}
 
-		$sql = "SELECT ug_id, ug_user_id_from, ug_user_name_from, ug_user_id_to, ug_user_name_to, UNIX_TIMESTAMP(ug_date) AS item_date,gift_name, gift_id
-			FROM {$dbr->tableName( 'user_gift' )} INNER JOIN {$dbr->tableName( 'gift' )} ON gift_id = ug_gift_id
+		$sql = "SELECT ug_id, ug_user_id_from, ug_user_name_from,
+					ug_user_id_to, ug_user_name_to,
+					UNIX_TIMESTAMP(ug_date) AS item_date, gift_name, gift_id
+			FROM {$dbr->tableName( 'user_gift' )}
+			INNER JOIN {$dbr->tableName( 'gift' )} ON gift_id = ug_gift_id
 			{$rel_sql} {$user_sql}
 			ORDER BY ug_id DESC LIMIT 0,{$this->item_max}";
-		$res = $dbr->query( $sql );
+		$res = $dbr->query( $sql, __METHOD__ );
 		while ( $row = $dbr->fetchObject( $res ) ) {
 			$this->items[] = array(
 				'id' => $row->ug_id,
@@ -263,11 +284,14 @@ class UserActivity {
 			$user_sql = "WHERE ug_user_id_to = {$this->user_id}";
 		}
 
-		$sql = "SELECT ug_id, ug_user_id_from, ug_user_name_from, ug_user_id_to, ug_user_name_to, UNIX_TIMESTAMP(ug_date) AS item_date,gift_name, gift_id
-			FROM {$dbr->tableName( 'user_gift' )} INNER JOIN {$dbr->tableName( 'gift' )} ON gift_id = ug_gift_id
+		$sql = "SELECT ug_id, ug_user_id_from, ug_user_name_from,
+					ug_user_id_to, ug_user_name_to,
+					UNIX_TIMESTAMP(ug_date) AS item_date, gift_name, gift_id
+			FROM {$dbr->tableName( 'user_gift' )}
+			INNER JOIN {$dbr->tableName( 'gift' )} ON gift_id = ug_gift_id
 			{$rel_sql} {$user_sql}
 			ORDER BY ug_id DESC LIMIT 0,{$this->item_max}";
-		$res = $dbr->query( $sql );
+		$res = $dbr->query( $sql, __METHOD__ );
 		while ( $row = $dbr->fetchObject( $res ) ) {
 			global $wgUploadPath;
 			$user_title = Title::makeTitle( NS_USER, $row->ug_user_name_to );
@@ -276,8 +300,11 @@ class UserActivity {
 			$gift_image = '<img src="' . $wgUploadPath . '/awards/' . Gifts::getGiftImage( $row->gift_id, 'm' ) . '" border="0" alt="" />';
 			$view_gift_link = SpecialPage::getTitleFor( 'ViewGift' );
 
-			$html = wfMsg( 'useractivity-gift' ) . ' ' .   "<a href=\"{$user_title_from->escapeFullURL()}\" rel=\"nofollow\">{$user_title_from->getText()}</a>
-			<div class=\"item\">
+			$html = wfMsg( 'useractivity-gift',
+				"<b><a href=\"{$user_title->escapeFullURL()}\">{$row->ug_user_name_to}</a></b>",
+				"<a href=\"{$user_title_from->escapeFullURL()}\">{$user_title_from->getText()}</a>"
+			) .
+			"<div class=\"item\">
 				<a href=\"" . $view_gift_link->escapeFullURL( 'gift_id=' . $row->ug_id ) . "\" rel=\"nofollow\">
 					{$gift_image}
 					{$row->gift_name}
@@ -287,7 +314,7 @@ class UserActivity {
 			$this->activityLines[] = array(
 				'type' => 'gift-rec',
 				'timestamp' => $row->item_date,
-				'data' => "<b><a href=\"{$user_title->escapeFullURL()}\">{$row->ug_user_name_to}</a></b> {$html}"
+				'data' => ' ' . $html
 			);
 
 			$this->items[] = array(
@@ -318,20 +345,22 @@ class UserActivity {
 			$user_sql = "WHERE sg_user_id = {$this->user_id}";
 		}
 
-		$sql = "SELECT sg_id, sg_user_id, sg_user_name, UNIX_TIMESTAMP(sg_date) AS item_date,gift_name, gift_id
-			FROM {$dbr->tableName( 'user_system_gift' )} INNER JOIN {$dbr->tableName( 'system_gift' )} ON gift_id = sg_gift_id
+		$sql = "SELECT sg_id, sg_user_id, sg_user_name,
+					UNIX_TIMESTAMP(sg_date) AS item_date, gift_name, gift_id
+			FROM {$dbr->tableName( 'user_system_gift' )}
+			INNER JOIN {$dbr->tableName( 'system_gift' )} ON gift_id = sg_gift_id
 			{$rel_sql} {$user_sql}
 			ORDER BY sg_id DESC LIMIT 0,{$this->item_max}";
-		$res = $dbr->query( $sql );
+		$res = $dbr->query( $sql, __METHOD__ );
 		while ( $row = $dbr->fetchObject( $res ) ) {
 			global $wgUploadPath;
 			$user_title = Title::makeTitle( NS_USER, $row->sg_user_name );
 			$system_gift_image = '<img src="' . $wgUploadPath . '/awards/' . SystemGifts::getGiftImage( $row->gift_id, 'm' ) . '" border="0" alt="" />';
 			$system_gift_link = SpecialPage::getTitleFor( 'ViewSystemGift' );
 
-			$html = wfMsg( 'useractivity-award' ) . "
-			<div class=\"item\">
-				<a href=\"" . $system_gift_link->escapeFullURL( 'gift_id=' . $row->sg_id ) . "\" rel=\"nofollow\">
+			$html = wfMsg( 'useractivity-award', "<b><a href=\"{$user_title->escapeFullURL()}\">{$row->sg_user_name}</a></b>" ) .
+			'<div class="item">
+				<a href="' . $system_gift_link->escapeFullURL( 'gift_id=' . $row->sg_id ) . "\" rel=\"nofollow\">
 					{$system_gift_image}
 					{$row->gift_name}
 				</a>
@@ -340,7 +369,7 @@ class UserActivity {
 			$this->activityLines[] = array(
 				'type' => 'system_gift',
 				'timestamp' => $row->item_date,
-				'data' => "<b><a href=\"{$user_title->escapeFullURL()}\">{$row->sg_user_name}</a></b> {$html}"
+				'data' => ' ' . $html
 			);
 
 			$this->items[] = array(
@@ -374,7 +403,7 @@ class UserActivity {
 			FROM {$dbr->tableName( 'user_relationship' )}
 			{$rel_sql} {$user_sql}
 			ORDER BY r_id DESC LIMIT 0,{$this->item_max}";
-		$res = $dbr->query( $sql );
+		$res = $dbr->query( $sql, __METHOD__ );
 
 		while ( $row = $dbr->fetchObject( $res ) ) {
 			if ( $row->r_type == 1 ) {
@@ -384,10 +413,10 @@ class UserActivity {
 			}
 
 			$user_name_short = substr( $row->r_user_name, 0, 25 );
-			if ( $row->r_user_name != $user_name_short )
+			if ( $row->r_user_name != $user_name_short ) {
 				$user_name_short .= '...';
+			}
 
-			// $title = Title::makeTitle( $row->page_namespace, $row->page_title );
 			$this->items_grouped[$r_type][$row->r_user_name_relation]['users'][$row->r_user_name][] = array(
 				'id' => $row->r_id,
 				'type' => $r_type,
@@ -432,13 +461,20 @@ class UserActivity {
 			$user_sql = " ub_user_id_from = {$this->user_id} AND";
 		}
 
-		$sql = "SELECT ub_id, ub_user_id, ub_user_name, ub_user_id_from, ub_user_name_from, UNIX_TIMESTAMP(ub_date) AS item_date, ub_message
+		$sql = "SELECT ub_id, ub_user_id, ub_user_name, ub_user_id_from,
+				ub_user_name_from, UNIX_TIMESTAMP(ub_date) AS item_date,
+				ub_message
 			FROM {$dbr->tableName( 'user_board' )} WHERE
 			{$rel_sql} {$user_sql}  ub_type=0
 			ORDER BY ub_id DESC LIMIT 0,{$this->item_max}";
 
-		$res = $dbr->query( $sql );
+		$res = $dbr->query( $sql, __METHOD__ );
 		while ( $row = $dbr->fetchObject( $res ) ) {
+			// Ignore nonexistent (for example, renamed) users
+			$uid = User::idFromName( $row->ub_user_name );
+			if ( !$uid ) {
+				continue;
+			}
 
 			$this->items_grouped['user_message'][stripslashes( $row->ub_user_name )]['users'][stripslashes( $row->ub_user_name_from )][] = array(
 				'id' => $row->ub_id,
@@ -488,16 +524,17 @@ class UserActivity {
 			FROM {$dbr->tableName( 'user_system_messages' )}
 			{$rel_sql} {$user_sql}
 			ORDER BY um_id DESC LIMIT 0,{$this->item_max}";
-		$res = $dbr->query( $sql );
+		$res = $dbr->query( $sql, __METHOD__ );
 		while ( $row = $dbr->fetchObject( $res ) ) {
 			$user_title = Title::makeTitle( NS_USER, $row->um_user_name );
 			$user_name_short = substr( $row->um_user_name, 0, 15 );
-			if ( $row->um_user_name != $user_name_short )
+			if ( $row->um_user_name != $user_name_short ) {
 				$user_name_short .= '...';
+			}
 			$this->activityLines[] = array(
 				'type' => 'system_message',
 				'timestamp' => $row->item_date,
-				'data' => "<b><a href=\"{$user_title->escapeFullURL()}\">{$user_name_short}</a></b> {$row->um_message}"
+				'data' => ' ' . "<b><a href=\"{$user_title->escapeFullURL()}\">{$user_name_short}</a></b> {$row->um_message}"
 			);
 
 			$this->items[] = array(
@@ -512,67 +549,6 @@ class UserActivity {
 				'new' => '0',
 				'minor' => 0
 			);
-		}
-	}
-
-	/**
-	 * Retrieves sport network updates from the database (for ArmchairGM)
-	 */
-	private function setNetworkUpdates() {
-		$dbr = wfGetDB( DB_SLAVE );
-		if ( $this->rel_type )
-			$rel_sql = " WHERE us_user_id IN (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type} )";
-		if ( $this->show_current_user )
-			$user_sql = " WHERE us_user_id = {$this->user_id}";
-		$sql = "SELECT us_id, us_user_id, us_user_name, us_text, UNIX_TIMESTAMP(us_date) AS item_date,
-			us_sport_id, us_team_id
-			FROM {$dbr->tableName( 'user_status' )}
-			{$rel_sql} {$user_sql}
-			ORDER BY us_id DESC LIMIT 0,{$this->item_max}";
-		$res = $dbr->query( $sql );
-		while ( $row = $dbr->fetchObject( $res ) ) {
-			if ( $row->us_team_id ) {
-				$team = SportsTeams::getTeam( $row->us_team_id );
-				$network_name = $team['name'];
-			} else {
-				$sport = SportsTeams::getSport( $row->us_sport_id );
-				$network_name = $sport['name'];
-			}
-			$this->items[] = array(
-				'id' => $row->us_id,
-				'type' => 'network_update',
-				'timestamp' => $row->item_date,
-				'pagetitle' => '',
-				'namespace' => '',
-				'username' => $row->us_user_name,
-				'userid' => $row->us_user_id,
-				'comment' => $row->us_text,
-				'sport_id' => $row->us_sport_id,
-				'team_id' => $row->us_team_id,
-				'network' => $network_name
-			);
-
-			$user_title = Title::makeTitle( NS_USER, $row->us_user_name );
-			$user_name_short = substr( $row->us_user_name, 0, 15 );
-			if ( $row->us_user_name != $user_name_short )
-				$user_name_short .= '...';
-			$page_link = '<a href="' . SportsTeams::getNetworkURL( $row->us_sport_id, $row->us_team_id ) . "\" rel=\"nofollow\">{$network_name}</a> ";
-			$network_image = SportsTeams::getLogo( $row->us_sport_id, $row->us_team_id, 's' );
-
-			$html = wfMsg( 'useractivity-network-thought', $page_link ) . '
-					<div class="item">
-						<a href="' . SportsTeams::getNetworkURL( $row->us_sport_id, $row->us_team_id ) . "\" rel=\"nofollow\">
-							{$network_image}
-							\"{$row->us_text}\"
-						</a>
-					</div>";
-
-			$this->activityLines[] = array(
-				'type' => 'network_update',
-				'timestamp' => $row->item_date,
-				'data' => "<b><a href=\"{$user_title->escapeFullURL()}\">{$user_name_short}</a></b> {$html}"
-			);
-
 		}
 	}
 
@@ -621,43 +597,66 @@ class UserActivity {
 		return $this->items;
 	}
 
-	public function getNetworkUpdates() {
-		$this->setNetworkUpdates();
-		return $this->items;
-	}
-
 	public function getActivityList() {
-		if ( $this->show_edits ) $this->setEdits();
-		if ( $this->show_votes ) $this->setVotes();
-		if ( $this->show_comments ) $this->setComments();
-		if ( $this->show_gifts_sent ) $this->setGiftsSent();
-		if ( $this->show_gifts_rec ) $this->setGiftsRec();
-		if ( $this->show_relationships ) $this->setRelationships();
-		if ( $this->show_system_messages ) $this->getSystemMessages();
-		if ( $this->show_system_gifts ) $this->getSystemGiftsRec();
-		if ( $this->show_messages_sent ) $this->getMessagesSent();
-		if ( $this->show_network_updates ) $this->getNetworkUpdates();
+		if ( $this->show_edits ) {
+			$this->setEdits();
+		}
+		if ( $this->show_votes ) {
+			$this->setVotes();
+		}
+		if ( $this->show_comments ) {
+			$this->setComments();
+		}
+		if ( $this->show_gifts_sent ) {
+			$this->setGiftsSent();
+		}
+		if ( $this->show_gifts_rec ) {
+			$this->setGiftsRec();
+		}
+		if ( $this->show_relationships ) {
+			$this->setRelationships();
+		}
+		if ( $this->show_system_messages ) {
+			$this->getSystemMessages();
+		}
+		if ( $this->show_system_gifts ) {
+			$this->getSystemGiftsRec();
+		}
+		if ( $this->show_messages_sent ) {
+			$this->getMessagesSent();
+		}
 
-		if ( $this->items )
+		if ( $this->items ) {
 			usort( $this->items, array( 'UserActivity', 'sortItems' ) );
+		}
 		return $this->items;
 	}
 
 	public function getActivityListGrouped() {
 		$this->getActivityList();
 
-		if ( $this->show_edits ) $this->simplifyPageActivity( 'edit' );
-		if ( $this->show_comments ) $this->simplifyPageActivity( 'comment' );
-		if ( $this->show_relationships ) $this->simplifyPageActivity( 'friend' );
-		if ( $this->show_relationships ) $this->simplifyPageActivity( 'foe' );
-		if ( $this->show_messages_sent ) $this->simplifyPageActivity( 'user_message' );
-		// if( $this->show_system_messages ) $this->simplifyPageActivity( 'system_messages', false );
+		if ( $this->show_edits ) {
+			$this->simplifyPageActivity( 'edit' );
+		}
+		if ( $this->show_comments ) {
+			$this->simplifyPageActivity( 'comment' );
+		}
+		if ( $this->show_relationships ) {
+			$this->simplifyPageActivity( 'friend' );
+		}
+		if ( $this->show_relationships ) {
+			$this->simplifyPageActivity( 'foe' );
+		}
+		if ( $this->show_messages_sent ) {
+			$this->simplifyPageActivity( 'user_message' );
+		}
 
 		if ( !isset( $this->activityLines ) ) {
 			$this->activityLines = array();
 		}
-		if ( isset( $this->activityLines ) && is_array( $this->activityLines ) )
+		if ( isset( $this->activityLines ) && is_array( $this->activityLines ) ) {
 			usort( $this->activityLines, array( 'UserActivity', 'sortItems' ) );
+		}
 		return $this->activityLines;
 	}
 
@@ -689,12 +688,11 @@ class UserActivity {
 				$count_actions = count( $action );
 
 				if ( $has_page && !isset( $this->displayed[$type][$page_name] ) ) {
-
-					$this->displayed[ $type ][ $page_name ] = 1;
+					$this->displayed[$type][$page_name] = 1;
 
 					$pages .= " <a href=\"{$page_title->escapeFullURL()}\">{$page_name}</a>";
 					if ( $count_users == 1 && $count_actions > 1 ) {
-						$pages .= " ($count_actions " . wfMsg( "useractivity-group-{$type}" ) . ")";
+						$pages .= ' (' . wfMsgExt( "useractivity-group-{$type}", 'parsemag', $count_actions ) . ')';
 					}
 					$pages_count++;
 				}
@@ -703,25 +701,31 @@ class UserActivity {
 				// see if we can stack any other singles
 				if ( $count_users == 1 ) {
 					foreach ( $this->items_grouped[$type] as $page_name2 => $page_data2 ) {
-
-						if ( !isset( $this->displayed[$type][$page_name2] ) && count( $page_data2['users'] ) == 1  ) {
-
+						if ( !isset( $this->displayed[$type][$page_name2] ) &&
+							count( $page_data2['users'] ) == 1
+						) {
 							foreach ( $page_data2['users'] as $user_name2 => $action2 ) {
-
 								if ( $user_name2 == $user_name && $pages_count < 5 ) {
 									$count_actions2 = count( $action2 );
 
-									if ( $type == 'friend' || $type == 'foe' || $type == 'user_message' ) {
+									if (
+										$type == 'friend' ||
+										$type == 'foe' ||
+										$type == 'user_message'
+									) {
 										$page_title2 = Title::newFromText( 'User:' . $page_name2 );
 									} else {
 										$page_title2 = Title::newFromText( $page_name2 );
 									}
 
-									if ( $pages )
-										$pages .= ", ";
-									$pages .= ( ( $page_title2 instanceOf Title ) ? " <a href=\"{$page_title2->escapeFullURL()}\">{$page_name2}</a>" : '' );
+									if ( $pages ) {
+										$pages .= ', ';
+									}
+									if ( $page_title2 instanceof Title ) {
+										$pages .= " <a href=\"{$page_title2->escapeFullURL()}\">{$page_name2}</a>";
+									}
 									if ( $count_actions2 > 1 ) {
-										$pages .= " ($count_actions2 " . wfMsg( "useractivity-group-{$type}" ) . ")";
+										$pages .= ' (' . wfMsg( "useractivity-group-{$type}", $count_actions2 ) . ')';
 									}
 									$pages_count++;
 
@@ -734,15 +738,18 @@ class UserActivity {
 
 				$user_index++;
 
-				if ( $users && $count_users > 2 )
+				if ( $users && $count_users > 2 ) {
 					$users .= ', ';
-				if ( $user_index ==  $count_users && $count_users > 1 )
+				}
+				if ( $user_index ==  $count_users && $count_users > 1 ) {
 					$users .= wfMsg( 'and' );
+				}
 
 				$user_title = Title::makeTitle( NS_USER, $user_name );
 				$user_name_short = substr( $user_name, 0, 15 );
-				if ( $user_name != $user_name_short )
+				if ( $user_name != $user_name_short ) {
 					$user_name_short .= '...';
+				}
 
 				$users .= " <b><a href=\"{$user_title->escapeFullURL()}\">{$user_name_short}</a></b>";
 			}
@@ -750,7 +757,10 @@ class UserActivity {
 				$this->activityLines[] = array(
 					'type' => $type,
 					'timestamp' => $page_data['timestamp'],
-					'data' => $users . ' ' . wfMsgExt( "useractivity-{$type}", 'parsemag', $pages_count, $count_users ) . $pages
+					'data' => wfMsgExt(
+						"useractivity-{$type}", 'parsemag',
+						$users, $count_users, $pages, $pages_count
+					)
 				);
 			}
 		}
@@ -772,18 +782,12 @@ class UserActivity {
 				return 'addedFriendIcon.png';
 			case 'foe':
 				return 'addedFoeIcon.png';
-			case 'challenge_sent':
-				return 'challengeIcon.png';
-			case 'challenge_rec':
-				return 'challengeIcon.png';
 			case 'system_message':
 				return 'challengeIcon.png';
 			case 'system_gift':
 				return 'awardIcon.png';
 			case 'user_message':
 				return 'emailIcon.gif';
-			case 'network_update':
-				return 'note.gif';
 		}
 	}
 
@@ -791,10 +795,10 @@ class UserActivity {
 		if ( !$comment ) {
 			return '';
 		} else {
-			$comment = str_replace( "<", "&lt;", $comment );
-			$comment = str_replace( ">", "&gt;", $comment );
-			$comment = str_replace( "&", "%26", $comment );
-			$comment = str_replace( "%26quot;", "\"", $comment );
+			$comment = str_replace( '<', '&lt;', $comment );
+			$comment = str_replace( '>', '&gt;', $comment );
+			$comment = str_replace( '&', '%26', $comment );
+			$comment = str_replace( '%26quot;', "\"", $comment );
 		}
 		$preview = substr( $comment, 0, 75 );
 		if ( $preview != $comment ) {
@@ -803,10 +807,10 @@ class UserActivity {
 		return stripslashes( $preview );
 	}
 
-	private static function sortItems( $x, $y ){
-		if( $x['timestamp'] == $y['timestamp'] ){
+	private static function sortItems( $x, $y ) {
+		if( $x['timestamp'] == $y['timestamp'] ) {
 			return 0;
-		} else if ( $x['timestamp'] > $y['timestamp'] ) {
+		} elseif ( $x['timestamp'] > $y['timestamp'] ) {
 			return - 1;
 		} else {
 			return 1;

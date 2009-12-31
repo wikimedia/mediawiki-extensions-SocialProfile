@@ -15,7 +15,7 @@ class UserHome extends SpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgUser, $wgOut, $wgRequest, $wgSitename, $wgScriptPath;
+		global $wgUser, $wgOut, $wgRequest, $wgScriptPath;
 
 		wfLoadExtensionMessages( 'UserActivity' );
 
@@ -30,42 +30,60 @@ class UserHome extends SpecialPage {
 		$rel_type = $wgRequest->getVal( 'rel_type' );
 		$item_type = $wgRequest->getVal( 'item_type' );
 
-		if ( !$rel_type ) $rel_type = 1;
-		if ( !$item_type ) $item_type = 'all';
+		if ( !$rel_type ) {
+			$rel_type = 1;
+		}
+		if ( !$item_type ) {
+			$item_type = 'all';
+		}
 
-		if ( $item_type == 'edits' || $item_type == 'all' ) $edits = 1;
-		if ( $item_type == 'votes' || $item_type == 'all' ) $votes = 0;
-		if ( $item_type == 'comments' || $item_type == 'all' ) $comments = 1;
-		if ( $item_type == 'gifts' || $item_type == 'all' ) $gifts = 1;
-		if ( $item_type == 'relationships' || $item_type == 'all' ) $relationships = 1;
-		if ( $item_type == 'advancements' || $item_type == 'all' ) $messages = 1;
-		if ( $item_type == 'awards' || $item_type == 'all' ) $system_gifts = 1;
-		if ( $item_type == 'messages' || $item_type == 'all' ) $messages_sent = 1;
-		if ( $item_type == 'thoughts' || $item_type == 'all' ) $network_updates = 1;
+		if ( $item_type == 'edits' || $item_type == 'all' ) {
+			$edits = 1;
+		}
+		if ( $item_type == 'votes' || $item_type == 'all' ) {
+			$votes = 0;
+		}
+		if ( $item_type == 'comments' || $item_type == 'all' ) {
+			$comments = 1;
+		}
+		if ( $item_type == 'gifts' || $item_type == 'all' ) {
+			$gifts = 1;
+		}
+		if ( $item_type == 'relationships' || $item_type == 'all' ) {
+			$relationships = 1;
+		}
+		if ( $item_type == 'advancements' || $item_type == 'all' ) {
+			$messages = 1;
+		}
+		if ( $item_type == 'awards' || $item_type == 'all' ) {
+			$system_gifts = 1;
+		}
+		if ( $item_type == 'messages' || $item_type == 'all' ) {
+			$messages_sent = 1;
+		}
 
 		/*
 		$output .= '<div class="user-home-links-container">
-		<h2>' . wfMsg('useractivity-filter') . '</h2>
+		<h2>' . wfMsg( 'useractivity-filter' ) . '</h2>
 		<div class="user-home-links">';
 
 		$lines = explode( "\n", wfMsgForContent( 'useractivity-filter' ) );
 		foreach( $lines as $line ) {
-
-			if( strpos($line, '*') !== 0 ){
+			if( strpos( $line, '*' ) !== 0 ) {
 				continue;
 			} else {
-				$line = explode( '|' , trim($line, '* '), 3 );
+				$line = explode( '|' , trim( $line, '* ' ), 3 );
 				$filter = $line[0];
 				$link_text = $line[1];
 				$link_image = $line[2];
-				$output .= "<a href=\"" . $this_title->escapeFullURL("item_type={$filter}") . "\">
-					<img src=\"{$wgScriptPath}/extensions/SocialProfile/images/" . UserActivity::getTypeIcon($link_image) . "\"/>{$link_text}
+				$output .= '<a href="' . $this_title->escapeFullURL( "item_type={$filter}" ) . "\">
+					<img src=\"{$wgScriptPath}/extensions/SocialProfile/images/" . UserActivity::getTypeIcon( $link_image ) . "\"/>
+					{$link_text}
 				</a>";
 			}
-
 		}
 
-			$output .= '<a href="' . $this_title->escapeFullURL() . '">' . wfMsg( 'useractivity-all' ) . '</a>
+		$output .= '<a href="' . $this_title->escapeFullURL() . '">' . wfMsg( 'useractivity-all' ) . '</a>
 			</div>
 		 </div>
 		*/
@@ -82,11 +100,6 @@ class UserHome extends SpecialPage {
 		$rel->setActivityToggle( 'show_system_gifts', $system_gifts );
 		$rel->setActivityToggle( 'show_messages_sent', $messages_sent );
 
-		// An extra toggle for ArmchairGM
-		if ( $wgSitename == 'ArmchairGM' ) {
-			$rel->setActivityToggle( 'show_network_updates', $network_updates );
-		}
-
 		/**
 		 * Get all relationship activity
 		 */
@@ -97,15 +110,17 @@ class UserHome extends SpecialPage {
 			$x = 1;
 
 			foreach ( $activity as $item ) {
-
 				if ( $x < 40 ) {
-
-					if ( ( ( count( $activity ) > 40 ) && ( $x == 39 ) ) || ( ( count( $activity ) < 40 ) && ( $x == ( count( $activity ) - 1 ) ) ) ) {
+					if (
+						( ( count( $activity ) > 40 ) && ( $x == 39 ) ) ||
+						( ( count( $activity ) < 40 ) && ( $x == ( count( $activity ) - 1 ) ) )
+					) {
 						$border_fix = ' border-fix';
 					}
 
+					$typeIcon = UserActivity::getTypeIcon( $item['type'] );
 					$output .= "<div class=\"user-home-activity{$border_fix}\">
-						<img src=\"{$wgScriptPath}/extensions/SocialProfile/images/" . UserActivity::getTypeIcon( $item['type'] ) . "\" alt=\"\" border=\"0\" />
+						<img src=\"{$wgScriptPath}/extensions/SocialProfile/images/" . $typeIcon . "\" alt=\"\" border=\"0\" />
 						{$item["data"]}
 					</div>";
 					$x++;

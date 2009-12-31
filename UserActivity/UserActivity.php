@@ -4,7 +4,7 @@
  *
  * @file
  * @ingroup Extensions
- * @version 1.0
+ * @version 1.1
  * @author Aaron Wright <aaron.wright@gmail.com>
  * @author David Pean <david.pean@gmail.com>
  * @author Jack Phoenix <jack@countervandalism.net>
@@ -22,9 +22,9 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 // Extension credits that will show up on Special:Version
 $wgExtensionCredits['specialpage'][] = array(
 	'name' => 'UserActivity',
-	'version' => '1.0',
-	'description' => "Shows users' social activity",
+	'version' => '1.1',
 	'author' => array( 'Aaron Wright', 'David Pean', 'Jack Phoenix' ),
+	'description' => "Shows users' social activity",
 	'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile'
 );
 
