@@ -1324,6 +1324,7 @@ $messages['th'] = array(
  * @author Hanberke
  */
 $messages['tk'] = array(
+	'mp-welcome-upload' => 'Ýükle',
 	'mp-welcome-edit' => 'Redaktirle',
 );
 

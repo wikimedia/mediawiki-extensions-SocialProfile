@@ -1444,6 +1444,10 @@ und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
 $messages['de-formal'] = array(
 	'ur-already-submitted' => 'Ihre Anfrage wurde gesendet',
 	'ur-your-profile' => 'Ihr Profil',
+	'ur-relationship-count-foes' => '$1 hat {{PLURAL:$2|einen Feind|$2 Feinde}}. Sie möchten mehr Feinde? <a href="$3">Laden Sie sie ein.</a>',
+	'ur-relationship-count-friends' => '$1 hat {{PLURAL:$2|einen Freund|$2 Freunde}}. Sie wollen mehr Freunde? <a href="$3">Laden Sie sie ein.</a>',
+	'ur-add-friends' => '  Sie möchten mehr Freunde haben? 
+<a href="$1">Laden Sie sie ein …</a>',
 	'ur-add-no-user' => 'Kein Benutzer ausgewählt.
 Bitte wählen Sie die Freunde/Feinde durch den richtigen Link.',
 	'ur-remove-relationship-title-foe' => 'Sie möchten $1 aus Ihrer Feindesliste löschen?',
@@ -1491,9 +1495,62 @@ Wir werden $1 davon informieren, wenn Sie seine Anfrage bestätigen.',
 	'ur-requests-reject-message-friend' => 'Sie haben $1 als Ihren Freund zurückgewiesen.',
 	'ur-requests-reject-message-foe' => 'Sie haben $1 als Ihren Feind zurückgewiesen.',
 	'friend_request_subject' => '{{SITENAME}}: $1 hat Sie als Freund hinzugefügt!',
+	'friend_request_body' => 'Hi $1:
+
+$2 hat Sie in {{SITENAME}} als Freund hinzugefügt. Wir wollen sicher gehen, dass Sie beide wirklich Freunde sind.
+
+Bitte klicken Sie den folgenden Link um Ihre Freundschaft zu bestätigen:
+$3
+
+---
+
+Hm, Sie wollen keine E-Mails mehr von uns bekommen?
+
+Klicken Sie $4
+und ändern Sie Ihre Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
 	'foe_request_subject' => '{{SITENAME}}: Kriegserklärung! $1 hat Sie als Feind hinzugefügt!',
+	'foe_request_body' => 'Hi $1:
+
+$2 hat Sie in {{SITENAME}} als Feind hinzugefügt. Wir wollen sicher gehen, dass Sie beide wirklich tödliche Feinde sind oder sich wenigstens ein wenig streiten.
+
+Bitte klicken Sie den folgenden Link um Ihre Feindschaft zu bestätigen:
+
+$3
+
+---
+
+Hm, Sie wollen keine E-Mails mehr von uns bekommen?
+
+Klicken Sie $4
+und ändern Sie Ihre Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
 	'friend_accept_subject' => '{{SITENAME}}: $1 hat Ihre Freundschaftsanfrage bestätigt!',
+	'friend_accept_body' => 'Hi $1:
+
+$2 hat Ihre Freundschaftsanfrage in {{SITENAME}} bestätigt!
+
+Siehe $2s Seite hier: $3
+
+Danke
+
+---
+
+Hm, Sie wollen keine E-Mails mehr von uns bekommen?
+
+Klicken Sie $4
+und ändern Sie Ihre Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
 	'foe_accept_subject' => '{{SITENAME}}: $1 hat Ihre Feind-Anfrage bestätigt!',
+	'foe_accept_body' => 'Hi $1:
+
+$2 hat Ihre Feind-Anfrage in {{SITENAME}} bestätigt!
+
+Siehe $2s Seite hier: $3
+
+---
+
+Hm, Sie wollen keine E-Mails mehr von uns bekommen?
+
+Klicken Sie $4
+und ändern Sie Ihre Einstellungen, um E-Mail-Benachrichtigungen auszuschalten.',
 	'friend_removed_subject' => '{{SITENAME}}: Oh nein! $1 hat seine Freundschaft zu Ihnen beendet!',
 	'friend_removed_body' => 'Hi $1:
 

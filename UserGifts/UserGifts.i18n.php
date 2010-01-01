@@ -3939,6 +3939,10 @@ I već će biti poslat.',
  * @author Per
  */
 $messages['sv'] = array(
+	'g-error-message-to-yourself' => 'Du kan inte ge en gåva till dig själv.',
+	'g-gift' => 'gåva',
+	'g-gift-name' => 'gåvonamn',
+	'g-give-gift' => 'Ge en gåva',
 	'g-new' => 'ny',
 	'g-next' => 'Nästa',
 	'g-previous' => 'Föregående',
