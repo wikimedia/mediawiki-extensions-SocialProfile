@@ -8866,6 +8866,7 @@ $messages['su'] = array(
  * @author Lokal Profil
  * @author M.M.S.
  * @author Najami
+ * @author Per
  */
 $messages['sv'] = array(
 	'populateuserprofiles' => 'Befolka användar profiler',
@@ -9031,8 +9032,8 @@ Klicka <a href="$1">här</a> för att logga in eller klicka <a href="$2">här</a
 	'user-type-toggle-new' => 'Använd social användarsida',
 	'user-board-login-message' => 'Du måste vara <a href="$1">inloggad</a> för att skicka meddelanden till andra användare',
 	'removeavatar' => 'Ta bort avatar',
-	'givegift' => 'Ge en gåva',
-	'viewgifts' => 'Visa gåvor',
+	'givegift' => 'Ge en present',
+	'viewgifts' => 'Visa presenter',
 	'viewsystemgifts' => 'Visa priser',
 	'avatarupload-removeavatar' => 'Ta bort avatar',
 	'avatarupload-currentavatar' => 'Nuvarande avatar för $1',

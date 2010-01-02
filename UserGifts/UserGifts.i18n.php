@@ -3274,6 +3274,14 @@ i zmień ustawienia dla powiadomień email.',
 	'right-giftadmin' => 'Tworzenie nowych oraz edytowanie istniejących prezentów',
 );
 
+/** Piedmontese (Piemontèis)
+ * @author Borichèt
+ */
+$messages['pms'] = array(
+	'giftmanager' => 'Mansé dij cadò',
+	'giftmanager-addgift' => '+ Gionté un cadò neuv',
+);
+
 /** Portuguese (Português)
  * @author Hamilton Abreu
  * @author Malafaya
@@ -3939,14 +3947,60 @@ I već će biti poslat.',
  * @author Per
  */
 $messages['sv'] = array(
-	'g-error-message-to-yourself' => 'Du kan inte ge en gåva till dig själv.',
-	'g-gift' => 'gåva',
-	'g-gift-name' => 'gåvonamn',
-	'g-give-gift' => 'Ge en gåva',
+	'giftmanager' => 'Presenthanterare',
+	'giftmanager-addgift' => '+ Lägg till en ny present',
+	'giftmanager-description' => 'presentbeskrivning',
+	'giftmanager-giftimage' => 'presentbild',
+	'giftmanager-image' => 'lägg till/ersätt bild',
+	'giftmanager-giftcreated' => 'Presenten har skapats',
+	'giftmanager-giftsaved' => 'Presenten har sparats',
+	'giftmanager-public' => 'offentlig',
+	'giftmanager-private' => 'privat',
+	'giftmanager-view' => 'Se presentlista',
+	'g-add-message' => 'Lägg till ett meddelande',
+	'g-back-edit-gift' => 'Tillbaka för att ändra denna present',
+	'g-back-gift-list' => 'Tillbaka till presentlista',
+	'g-back-link' => '< Tillbaka till $1s sida',
+	'g-choose-file' => 'Välj fil:',
+	'g-cancel' => 'Avbryt',
+	'g-create-gift' => 'Skapa present',
+	'g-created-by' => 'skapad av',
+	'g-current-image' => 'Nuvarande bild',
+	'g-delete-message' => 'Är du säker på att du vill radera presenten "$1"?
+Den kommer också att raderas från de användare som har fått den.',
+	'g-error-do-not-own' => 'Du äger inte denna present.',
+	'g-error-message-invalid-link' => 'Länken du angav är ogiltig.',
+	'g-error-message-login' => 'Du måste vara inloggad för att ge presenter',
+	'g-error-message-to-yourself' => 'Du kan inte ge en present till dig själv.',
+	'g-from' => 'från <a href="$1">$2</a>',
+	'g-gift' => 'present',
+	'g-gift-name' => 'presentnamn',
+	'g-give-gift' => 'Ge en present',
+	'g-give-all-message-title' => 'Lägg till ett meddelande',
+	'g-give-all-title' => 'Ge en present till $1',
+	'g-given' => 'Denna present har delats ut $1 {{PLURAL:$1|gång|gånger}}',
+	'g-give-list-select' => 'välj en vän',
+	'g-give-separator' => 'eller',
+	'g-go-back' => 'Gå tillbaka',
+	'g-large' => 'Stor',
 	'g-new' => 'ny',
 	'g-next' => 'Nästa',
 	'g-previous' => 'Föregående',
+	'g-remove' => 'Ta bort',
+	'g-remove-gift' => 'Ta bort denna present',
+	'g-remove-success-title' => 'Du har framgångsrikt tagit bort presenten "$1"',
 	'g-remove-title' => 'Ta bort "$1"?',
+	'g-send-gift' => 'Skicka present',
+	'g-select-a-friend' => 'välj en vän',
+	'g-sent-title' => 'Du har skickat en present till $1',
+	'g-sent-message' => 'Du har skickat följande present till $1.',
+	'g-small' => 'Liten',
+	'g-to-another' => 'Ge till någon annan',
+	'g-uploadsuccess' => 'Uppladdningen lyckades',
+	'g-viewgiftlist' => 'Visa presentlista',
+	'g-your-profile' => 'Din profil',
+	'gift_received_subject' => '$1 har skickat presenten $2 till dig på {{SITENAME}}!',
+	'right-giftadmin' => 'Skapa nya och ändra existerande presenter',
 );
 
 /** Telugu (తెలుగు)

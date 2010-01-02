@@ -6718,6 +6718,7 @@ $messages['ss'] = array(
  * @author Gabbe.g
  * @author M.M.S.
  * @author Najami
+ * @author Per
  */
 $messages['sv'] = array(
 	'viewrelationships' => 'Visa relationer',
@@ -6766,6 +6767,7 @@ Vi kommer skicka $1 ett meddelande för att bekräfta fiendeskapet.',
 Vi kommer skicka $1 ett meddelande för att bekräfta vänskapet.',
 	'ur-add-button-foe' => 'Lägg till som fiende',
 	'ur-add-button-friend' => 'Lägg till som vän',
+	'ur-add-sent-title-foe' => 'Vi har skickat din fiendeförfrågan till $1!',
 	'ur-add-sent-title-friend' => 'Vi har skickat din vänskapsförfrågning till $1!',
 	'ur-add-error-message-no-user' => 'Användaren du prövade att lägga till finns inte.',
 	'ur-add-error-message-blocked' => 'Du är blockerad, och kan inte lägga till vänner eller fiender.',
@@ -6773,6 +6775,8 @@ Vi kommer skicka $1 ett meddelande för att bekräfta vänskapet.',
 	'ur-add-error-message-existing-relationship-foe' => 'Du är redan fiende med $1.',
 	'ur-add-error-message-existing-relationship-friend' => 'Du är redan vän med $1.',
 	'ur-add-error-message-pending-request-title' => 'Var tålmodig...',
+	'ur-add-error-message-pending-friend-request' => 'Du har en väntande vänförfrågan hos $1.
+Vi kommer ge dig ett besked när $1 bekräftar din begäran.',
 	'ur-add-error-message-not-loggedin-foe' => 'Du måste vara inloggad för att lägga till en fiende',
 	'ur-add-error-message-not-loggedin-friend' => 'Du måste vara inloggad för att lägga till en vän',
 	'ur-requests-title' => 'Relationsefterfrågningar',

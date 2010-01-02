@@ -74,6 +74,39 @@ $messages['ar'] = array(
 	'useractivity-user_message' => '$1 {{PLURAL:$4|أرسل رسالة إلى|أرسل رسائل إلى}} $3',
 );
 
+/** Breton (Brezhoneg)
+ * @author Y-M D
+ */
+$messages['br'] = array(
+	'useractivity' => 'Obererezh ar mignoned',
+	'useractivity-award' => '$1 en deus resevet ur garedon',
+	'useractivity-all' => 'Gwelet pep tra',
+	'useractivity-edit' => '$1 en deus kemmet {{PLURAL:$4|ar bajenn|ar bajennoù}} da heul : $3',
+	'useractivity-foe' => 'Bremañ ez eo $1 {{PLURAL:$2|enebour|enebourien}} da $3',
+	'useractivity-friend' => 'Bremañ ez eo $1 {{PLURAL:$2|mignon|mignoned}} gant $3',
+	'useractivity-gift' => '$1 en deus resevet ur prof a-berzh $2',
+	'useractivity-group-edit' => "{{PLURAL:$1|ur c'hemm|$1 kemm}}",
+	'useractivity-group-comment' => '{{PLURAL:$1|un evezhiadenn|$1 evezhiadenn}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|ur gemennadenn|$1 kemennadenn}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|ur mignon|$1 mignon}}',
+	'useractivity-siteactivity' => "Obererezh al lec'hienn",
+	'useractivity-title' => 'Oberezh ar mignoned',
+	'useractivity-user_message' => '$1 en deus kaset {{PLURAL:$4|ur gemennadenn|kemennadennoù}} da $3',
+);
+
+/** Lower Sorbian (Dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'useractivity' => 'Aktiwita pśijaśelow',
+	'useractivity-award' => '$1 jo myto dostał.',
+	'useractivity-all' => 'Wšykno se woglědaś',
+	'useractivity-edit' => '$1 {{PLURAL:$4|jo bok wobźěłał|jo slědujucej boka wobźěłał|jo slědujuce boki wobźěłał|jo slědujuce boki wobźěłał}}: $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|jo něnto njepśijaśel wót|stej něnto njepśijaśela wót|su něnto njepśijaśele wót|su něnto njepśijaśele wót}} $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|jo něnto pśijaśel wót|stej něnto pśijaśela|su něnto pśijaśele wót|su něnto pśijaśele wót}} $3',
+	'useractivity-gift' => '$1 jo dóstał dar wót $2',
+);
+
 /** Finnish (Suomi)
  * @author Jack Phoenix <jack@countervandalism.net>
  */
@@ -101,11 +134,11 @@ $messages['fi'] = array(
 $messages['fr'] = array(
 	'useractivity' => 'Activité des amis',
 	'useractivity-award' => '$1 a reçu une récompense',
-	'useractivity-all' => 'Gwelet pep tra',
+	'useractivity-all' => 'Tout voir',
 	'useractivity-edit' => '$1 a modifié {{PLURAL:$4|la page|les pages suivantes :}} $3',
 	'useractivity-foe' => '$1 {{PLURAL:$2|est maintenant ennemi|sont maintenant ennemis}} avec $3',
 	'useractivity-friend' => '$1 {{PLURAL:$2|est maintenant ami avec|sont maintenant amis avec}} $3',
-	'useractivity-gift' => '$1 en deus resevet ur prof a-berzh $2',
+	'useractivity-gift' => '$1 a reçu un cadeau de la part de $2',
 	'useractivity-group-edit' => '$1 {{PLURAL:$1|modification|modifications}}',
 	'useractivity-group-comment' => '$1 {{PLURAL:$1|commentaire|commentaires}}',
 	'useractivity-group-user_message' => '$1 {{PLURAL:$1|message|messages}}',
@@ -113,6 +146,46 @@ $messages['fr'] = array(
 	'useractivity-siteactivity' => 'Activité du site',
 	'useractivity-title' => 'Activité des amis',
 	'useractivity-user_message' => '$1 a envoyé {{PLURAL:$4|un message|des messages}} à $3',
+);
+
+/** Galician (Galego)
+ * @author Toliño
+ */
+$messages['gl'] = array(
+	'useractivity' => 'Actividade dos amigos',
+	'useractivity-award' => '$1 recibiu un premio',
+	'useractivity-all' => 'Ver todos',
+	'useractivity-edit' => '$1 editou {{PLURAL:$4|a páxina|as seguintes páxinas:}} $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|é agora inimigo de|son agora inimigos de}} $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|é agora amigo de|son agora amigos de}} $3',
+	'useractivity-gift' => '$1 recibiu un agasallo de $2',
+	'useractivity-group-edit' => '{{PLURAL:$1|unha edición|$1 edicións}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|un comentario|$1 comentarios}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|unha mensaxe|$1 mensaxes}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|un amigo|$1 amigos}}',
+	'useractivity-siteactivity' => 'Actividade do sitio',
+	'useractivity-title' => 'Actividade dos amigos',
+	'useractivity-user_message' => '$1 enviou {{PLURAL:$4|unha mensaxe|mensaxes}} a $3',
+);
+
+/** Upper Sorbian (Hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'useractivity' => 'Aktiwita přećelow',
+	'useractivity-award' => '$1 je myto dóstał',
+	'useractivity-all' => 'Wšě sej wobhladać',
+	'useractivity-edit' => '$1 {{PLURAL:$4|wobdźěła stronu|wobdźěła slědowacej stronje|wobdźěła slědowace strony|wobdźěła slědowace strony}} $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|je nětko njepřećel wot|staj nětko njepřećelej wot|su nětko njepřećeljo wot|su nětko njepřećeljo wot}} $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|je nětko přećel wot|staj nětko přećeljo wot|su nětko přećeljo wot|su nětko přećeljo wot}} $3',
+	'useractivity-gift' => '$1 dósta dar wot $2',
+	'useractivity-group-edit' => '{{PLURAL:$1|jedna změna|$1 změnje|$1 změny|$1 změnow}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|jedyn komentar|$1 komentaraj|$1 komentary|$1 komentarow}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|jedna zdźělenka|$1 zdźělence|$1 zdźělenki|$1 zdźělenkow}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|jedyn přećel|$1 přećelej|$1 přećeljo|$1 přećelow}}',
+	'useractivity-siteactivity' => 'Aktiwita sydła',
+	'useractivity-title' => 'Aktiwita přećelow',
+	'useractivity-user_message' => '$1 {{PLURAL:$4|pósła powěsć na|pósła powěsći na|pósła powěsć na|pósła powěsće na}} $3',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
@@ -172,6 +245,45 @@ $messages['nl'] = array(
 	'useractivity-user_message' => '$1 heeft {{PLURAL:$4|een bericht|berichten}} verzonden aan $3',
 );
 
+/** Piedmontese (Piemontèis)
+ * @author Borichèt
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'useractivity' => "Atività dj'amis",
+	'useractivity-award' => "$1 a l'ha arsèivù un premi",
+	'useractivity-all' => 'Varda tut',
+	'useractivity-edit' => "$1 a l'ha modificà {{PLURAL:$4|la pàgina|le pàgine sì-dapress:}} $3",
+	'useractivity-foe' => "$1 {{PLURAL:$2|a l'é adess nemis con|a son adess nemis con}} $3",
+	'useractivity-friend' => "$1 {{PLURAL:$2|a l'é adess amis con|a son adess amis con}} $3",
+	'useractivity-gift' => "$1 a l'ha arseivù un cadò da $2",
+	'useractivity-group-edit' => '{{PLURAL:$1|na modìfica|$1 modìfiche}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|un coment|$1 coment}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|un mëssagi|$1 mëssagi}}',
+	'useractivity-group-friend' => "{{PLURAL:$1|n'amis|$1 amis}}",
+	'useractivity-siteactivity' => 'Atività dël sit',
+	'useractivity-title' => "Atività dj'amis",
+	'useractivity-user_message' => "$1 {{PLURAL:$4|a l'ha mandà un messagi a|a l'ha mandà ëd messagi a}} $3",
+);
+
+/** Pashto (پښتو)
+ * @author Ahmed-Najib-Biabani-Ibrahimkhel
+ */
+$messages['ps'] = array(
+	'useractivity-siteactivity' => 'د وېبځي فعاليت',
+	'useractivity-title' => 'د ملګري فعاليت',
+);
+
+/** Portuguese (Português)
+ * @author Luckas Blade
+ */
+$messages['pt'] = array(
+	'useractivity-group-edit' => '{{PLURAL:$1|uma edição|$1 edições}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|um comentário|$1 comentários}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|uma mensagem|$1 mensagens}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|um amigo|$1 amigos}}',
+);
+
 /** Brazilian Portuguese (Português do Brasil)
  * @author Luckas Blade
  */
@@ -182,6 +294,14 @@ $messages['pt-br'] = array(
 	'useractivity-group-comment' => '{{PLURAL:$1|um comentário|$1 comentários}}',
 	'useractivity-group-user_message' => '{{PLURAL:$1|uma mensagem|$1 mensagens}}',
 	'useractivity-group-friend' => '{{PLURAL:$1|um amigo|$1 amigos}}',
+);
+
+/** Swedish (Svenska)
+ * @author Per
+ */
+$messages['sv'] = array(
+	'useractivity-all' => 'Visa alla',
+	'useractivity-gift' => '$1 fick en present från $2',
 );
 
 /** Telugu (తెలుగు)

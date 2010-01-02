@@ -2589,6 +2589,39 @@ $messages['sr-el'] = array(
 	'ga-viewlist' => 'Pogledaj spisak poklona',
 );
 
+/** Swedish (Svenska)
+ * @author Per
+ */
+$messages['sv'] = array(
+	'ga-addnew' => '+ lägg till en ny present',
+	'ga-back-gift-list' => 'Tillbaka till presentlista',
+	'ga-choosefile' => 'Välj fil:',
+	'ga-count' => '$1 har $2 {{PLURAL:$2|utmärkelse|utmärkelser}}.',
+	'ga-create-gift' => 'Skapa present',
+	'ga-created' => 'Presenten har skapats',
+	'ga-currentimage' => 'Nuvarande bild',
+	'ga-error-message-invalid-link' => 'Länken du angav är ogiltig.',
+	'ga-gift' => 'present',
+	'ga-gift-title' => '$1s "$2"',
+	'ga-giftdesc' => 'beskrivning av present',
+	'ga-giftimage' => 'presentbild',
+	'ga-giftname' => 'presentnamn',
+	'ga-gifttype' => 'presenttyp',
+	'ga-goback' => 'Gå tillbaka',
+	'ga-img' => 'lägg till/byt ut bild',
+	'ga-large' => 'Stor',
+	'ga-new' => 'Ny',
+	'ga-next' => 'Nästa',
+	'ga-previous' => 'Föregående',
+	'ga-recent-recipients-award' => 'Andra som nyligen fick denna utmärkelse',
+	'ga-saved' => 'Presenten har sparats',
+	'ga-small' => 'Liten',
+	'ga-threshold' => 'tröskel',
+	'ga-title' => '$1s utmärkelser',
+	'ga-viewlist' => 'Visa presentlista',
+	'right-awardsmanage' => 'Skapa nya och ändra existerande utmärkelser',
+);
+
 /** Telugu (తెలుగు)
  * @author Kiranmayee
  * @author Veeven
