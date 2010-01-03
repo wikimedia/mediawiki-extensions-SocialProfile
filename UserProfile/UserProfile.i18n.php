@@ -5911,7 +5911,7 @@ $messages['lb'] = array(
 	'user-recent-system-gift' => 'Huet e Präis kritt',
 	'user-profile-update-notloggedin-title' => 'Dir kënnt äre Profil net änneren wann dir net ageloggt sidd',
 	'user-profile-update-notloggedin-text' => 'Dir kënnt Äre Profil net änneren wann dir net ageloggt sidd.
-Klickt <a href="$1">hei</a> fir Iech anzeloggen oder klickt <a href="$2">hei</a> Fir Iech unzemellen.',
+Klickt <a href="$1">hei</a> fir Iech anzeloggen oder klickt <a href="$2">hei</a> fir Iech unzemellen.',
 	'user-profile-update-saved' => 'Äre Profil gouf ofgespäichert',
 	'user-profile-update-log-section' => 'Abschnitt änneren',
 	'user-profile-update-profile' => 'Profil',

@@ -105,6 +105,13 @@ $messages['dsb'] = array(
 	'useractivity-foe' => '$1 {{PLURAL:$2|jo něnto njepśijaśel wót|stej něnto njepśijaśela wót|su něnto njepśijaśele wót|su něnto njepśijaśele wót}} $3',
 	'useractivity-friend' => '$1 {{PLURAL:$2|jo něnto pśijaśel wót|stej něnto pśijaśela|su něnto pśijaśele wót|su něnto pśijaśele wót}} $3',
 	'useractivity-gift' => '$1 jo dóstał dar wót $2',
+	'useractivity-group-edit' => '{{PLURAL:$1|jadna změna|$1 změnje|$1 změny|$1 změnow}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|jaden komentar|$1 komentara|$1 komentary|$1 komentarow}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|jadna powěźeńka|$1 powěźeńce|$1 powěźeńki|$1 powěźeńkow}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|jaden pśijaśel|$1 pśijaśela|$1 pśijaśele|$1 pśijaśelow}}',
+	'useractivity-siteactivity' => 'Aktiwita sedła',
+	'useractivity-title' => 'Aktiwita pśijaśelow',
+	'useractivity-user_message' => '$1 {{PLURAL:$4|jo pósłał powěźeńku na|jo pósłał powěźeńce|jo pósłał powěźeńki|jo pósłał powěźeńki}} k $3',
 );
 
 /** Finnish (Suomi)
@@ -188,6 +195,20 @@ $messages['hsb'] = array(
 	'useractivity-user_message' => '$1 {{PLURAL:$4|pósła powěsć na|pósła powěsći na|pósła powěsć na|pósła powěsće na}} $3',
 );
 
+/** Ripoarisch (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'useractivity' => 'Wat de Frünnde aam donn sin',
+	'useractivity-all' => 'Alles aanzeije',
+	'useractivity-group-edit' => '{{PLURAL:$1|Ein Änderong|$1 Änderonge|Kein Änderong}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|Ein Aanmärkong|$1 Aanmärkonge|Kein Aanmärkonge}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|Ein Nohreesch|$1 Nohreeschte|Kein Nohreesch}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|Eine Fründ|$1 Fründe|Keine Fründ}}',
+	'useractivity-siteactivity' => 'Wat op dä ßait loß es',
+	'useractivity-title' => 'Wat de Frünnde donn',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
@@ -196,12 +217,15 @@ $messages['lb'] = array(
 	'useractivity-award' => '$1 huet eng Auszeechnung kritt',
 	'useractivity-all' => 'Alles weisen',
 	'useractivity-edit' => '$1 huet dës {{PLURAL:$4|Säit|Säite}} geännert: $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|ass elo e Feind|sinn elo Feinde}} vum $3',
 	'useractivity-friend' => '$1 {{PLURAL:$2|ass elo e Frënd vum|sinn elo Frënn vum}} $3',
 	'useractivity-gift' => '$1 huet e Cadeau vum $2 kritt',
 	'useractivity-group-edit' => '{{PLURAL:$1|eng Ännerung|$1 Ännerungen}}',
 	'useractivity-group-comment' => '{{PLURAL:$1|eng Bemierkung|$1 Bemierkungen}}',
 	'useractivity-group-user_message' => '{{PLURAL:$1|ee Message|$1 Messagen}}',
 	'useractivity-group-friend' => '{{PLURAL:$1|ee Frënd|$1 Frënn}}',
+	'useractivity-siteactivity' => 'Aktivitéit um Site',
+	'useractivity-title' => 'Aktivitéit vun de Frënn',
 	'useractivity-user_message' => '$1 huet dem $3 {{PLURAL:$4|ee Message|Message}} geschéckt',
 );
 
@@ -275,13 +299,24 @@ $messages['ps'] = array(
 );
 
 /** Portuguese (Português)
+ * @author Hamilton Abreu
  * @author Luckas Blade
  */
 $messages['pt'] = array(
+	'useractivity' => 'Actividade dos amigos',
+	'useractivity-award' => '$1 recebeu um prémio',
+	'useractivity-all' => 'Ver todos',
+	'useractivity-edit' => '$1 {{PLURAL:$4|editou a página|editou as seguintes páginas:}} $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|é agora inimigo de|são agora inimigos de}} $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|é agora amigo de|são agora amigos de}} $3',
+	'useractivity-gift' => '$1 recebeu uma prenda de $2',
 	'useractivity-group-edit' => '{{PLURAL:$1|uma edição|$1 edições}}',
 	'useractivity-group-comment' => '{{PLURAL:$1|um comentário|$1 comentários}}',
 	'useractivity-group-user_message' => '{{PLURAL:$1|uma mensagem|$1 mensagens}}',
 	'useractivity-group-friend' => '{{PLURAL:$1|um amigo|$1 amigos}}',
+	'useractivity-siteactivity' => 'Actividade no site',
+	'useractivity-title' => 'Actividade dos amigos',
+	'useractivity-user_message' => '$1 {{PLURAL:$4|enviou uma mensagem para|enviou mensagens para}} $3',
 );
 
 /** Brazilian Portuguese (Português do Brasil)
