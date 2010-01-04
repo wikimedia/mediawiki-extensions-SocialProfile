@@ -3276,10 +3276,105 @@ i zmień ustawienia dla powiadomień email.',
 
 /** Piedmontese (Piemontèis)
  * @author Borichèt
+ * @author Dragonòt
  */
 $messages['pms'] = array(
 	'giftmanager' => 'Mansé dij cadò',
 	'giftmanager-addgift' => '+ Gionté un cadò neuv',
+	'giftmanager-access' => 'acess al cadò',
+	'giftmanager-description' => 'descrission dël cadò',
+	'giftmanager-giftimage' => 'figura dël cadò',
+	'giftmanager-image' => 'gionta/rimpiassa plancia',
+	'giftmanager-giftcreated' => "Ël cadò a l'é stàit creà",
+	'giftmanager-giftsaved' => "Ël cadò a l'é stàit salvà",
+	'giftmanager-public' => 'pùblich',
+	'giftmanager-private' => 'privà',
+	'giftmanager-view' => 'Visualisé la lista dij cadò',
+	'g-add-message' => 'Gionta un mëssagi',
+	'g-back-edit-gift' => 'André për modifiché ës cadò-sì',
+	'g-back-gift-list' => 'André a la lista dij cadò',
+	'g-back-link' => '< André a la pàgina ëd $1',
+	'g-choose-file' => "Serne l'archivi:",
+	'g-cancel' => 'Scancelé',
+	'g-count' => "$1 a l'ha $2 {{PLURAL:$2|cadò|cadò}}.",
+	'g-create-gift' => 'Creé un cadò',
+	'g-created-by' => 'creà da',
+	'g-current-image' => 'Figura corenta',
+	'g-delete-message' => 'É-lo sigur ëd vorèj scancelé ël cadò "$1"?
+Sòn a lo scancelërà ëdcò da j\'utent che a l\'han arseivulo.',
+	'g-description-title' => 'Cadò $2 da la part ëd $1',
+	'g-error-do-not-own' => "A l'ha pa sto cadò-sì.",
+	'g-error-message-blocked' => "A l'é blocà al moment e a peul pa fé ëd cadò",
+	'g-error-message-invalid-link' => "Ël colegament ch'it l'has anserì a l'é pa bon.",
+	'g-error-message-login' => 'A deuv intré ant ël sistema për fé dij cadò',
+	'g-error-message-no-user' => "L'utent ch'it l'has provà a visualisé a esist pa.",
+	'g-error-message-to-yourself' => 'A peul pa fesse un cadò da sol.',
+	'g-error-title' => "Contacc, a l'é andaje mal!",
+	'g-file-instructions' => 'Toa figura a deuv esse na jpeg, png o gif (gif pa animà), e a deuv esse meno ëd 100kb an dimension.',
+	'g-from' => 'da <a href="$1">$2</a>',
+	'g-gift' => 'cadò',
+	'g-gift-name' => 'nòm dël cadò',
+	'g-give-gift' => 'Fa un cadò',
+	'g-give-all' => 'Veul-lo feje un cadò a $1?
+A basta mach ësgnaché ansima a un dij cadò sì-sota e sgnaché "mandé ël cadò".
+A l\'é bel fé.',
+	'g-give-all-message-title' => 'Gionté un mëssagi.',
+	'g-give-all-title' => 'Feje un cadò a $1.',
+	'g-give-enter-friend-title' => "S'a conòss ël nòm ëd l'utent, ch'a lo scriva sì-sota",
+	'g-given' => "Ës cadò a l'é stàit dàit $1 {{PLURAL:$1|vira|vire}}",
+	'g-give-list-friends-title' => "Selession-a da toa lista d'amis",
+	'g-give-list-select' => "selession-a n'amis",
+	'g-give-separator' => 'o',
+	'g-give-no-user-message' => "Cadò e premi a son na gran manera d'arcompensé ij sò amis!",
+	'g-give-no-user-title' => 'A chi a vorërìa feje un cadò?',
+	'g-give-to-user-title' => 'Mandé ël cadò "$1" a $2',
+	'g-give-to-user-message' => 'Veul-lo feje a $1 un <a href="$2">cadò diferent</a>?',
+	'g-go-back' => 'Va andré',
+	'g-imagesbelow' => "Sota a-i son toe figure ch'a saran dovrà an sël sit",
+	'g-large' => 'Gròss',
+	'g-list-title' => 'Lista dij cadò ëd $1',
+	'g-main-page' => 'Pàgina prinsipal',
+	'g-medium' => 'Medi',
+	'g-mediumlarge' => 'Gròss-medi',
+	'g-new' => 'neuv',
+	'g-next' => 'Dapress',
+	'g-previous' => 'Prima',
+	'g-remove' => 'Gava',
+	'g-remove-gift' => 'Gavé sto cadò-sì',
+	'g-remove-message' => 'É-lo sigur ëd vorèj gavé ël cadò "$1"?',
+	'g-recent-recipients' => "Àutri ch'a l'han arseivù ëd recent ës cadò",
+	'g-remove-success-title' => 'A l\'ha gavà da bin ël cadò "$1"',
+	'g-remove-success-message' => 'Ël cadò "$1" a l\'é stàit gavà.',
+	'g-remove-title' => 'Gavé "$1"?',
+	'g-send-gift' => 'Mandé ël cadò',
+	'g-select-a-friend' => "ch'a selession-a n'amis",
+	'g-sent-title' => "A l'ha mandà un cadò a $1",
+	'g-sent-message' => "A l'ha mandà ël cadò sì-sota a $1.",
+	'g-small' => 'Cit',
+	'g-to-another' => "Delo a cheidun d'àutri",
+	'g-uploadsuccess' => 'Carià da bin',
+	'g-viewgiftlist' => 'Vëdde la lista dij cadò',
+	'g-your-profile' => 'Tò profil',
+	'gift_received_subject' => "$1 a l'ha mandaje ël cadò $2 dzora a {{SITENAME}}!",
+	'gift_received_body' => "Cerea $1.
+
+$2 a l'ha pen-a mandaje ël cadò $3 dzora a {{SITENAME}}.
+
+Veul-lo lese le nòte che $2 a l'ha lassaje e vardé sò cadò? Ch'a sgnaca l'anliura sota:
+
+$4
+
+I speroma ch'a-j piasa!
+
+L'echip ëd {{SITENAME}}
+
+---
+
+Ch'a scota, veul-lo pa pi arsèive ëd mëssagi da noiàutri?
+
+Ch'a sgnaca $5
+e ch'a cambia ij sò gust për disabilité le notìfiche an pòsta eletrònica.",
+	'right-giftadmin' => 'Creé ëd cadò neuv e modifiché coj esistent',
 );
 
 /** Portuguese (Português)

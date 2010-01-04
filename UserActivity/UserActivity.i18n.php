@@ -100,6 +100,18 @@ $messages['br'] = array(
 	'useractivity-user_message' => '$1 en deus kaset {{PLURAL:$4|ur gemennadenn|kemennadennoù}} da $3',
 );
 
+/** Bosnian (Bosanski)
+ * @author CERminator
+ */
+$messages['bs'] = array(
+	'useractivity' => 'Aktivnost prijatelja',
+	'useractivity-award' => '$1 je dobio nagradu',
+	'useractivity-all' => 'Pogledajte sve',
+	'useractivity-group-edit' => '{{PLURAL:$1|jedna izmjena|$1 izmjene|$1 izmjena}}',
+	'useractivity-siteactivity' => 'Aktivnosti na stranici',
+	'useractivity-title' => 'Aktivnosti prijatelja',
+);
+
 /** Lower Sorbian (Dolnoserbski)
  * @author Michawiki
  */
@@ -199,6 +211,13 @@ $messages['hsb'] = array(
 	'useractivity-siteactivity' => 'Aktiwita sydła',
 	'useractivity-title' => 'Aktiwita přećelow',
 	'useractivity-user_message' => '$1 {{PLURAL:$4|pósła powěsć na|pósła powěsći na|pósła powěsć na|pósła powěsće na}} $3',
+);
+
+/** Japanese (日本語)
+ * @author Hosiryuhosi
+ */
+$messages['ja'] = array(
+	'useractivity-all' => 'すべて表示',
 );
 
 /** Ripoarisch (Ripoarisch)
@@ -335,6 +354,23 @@ $messages['pt-br'] = array(
 	'useractivity-group-comment' => '{{PLURAL:$1|um comentário|$1 comentários}}',
 	'useractivity-group-user_message' => '{{PLURAL:$1|uma mensagem|$1 mensagens}}',
 	'useractivity-group-friend' => '{{PLURAL:$1|um amigo|$1 amigos}}',
+);
+
+/** Russian (Русский)
+ * @author Kv75
+ */
+$messages['ru'] = array(
+	'useractivity' => 'Действия друзей',
+	'useractivity-award' => '$1 получил награду',
+	'useractivity-all' => 'Смотреть все',
+	'useractivity-edit' => '$1 отредактировал {{PLURAL:$4|страницу|следующие страницы:}} $3',
+	'useractivity-gift' => '$1 получил подарок от $2',
+	'useractivity-group-edit' => '$1 {{PLURAL:$1|правка|правки|правок}}',
+	'useractivity-group-comment' => '$1 {{PLURAL:$1|комментарий|комментария|комментариев}}',
+	'useractivity-group-user_message' => '$1 {{PLURAL:$1|сообщение|сообщения|сообщений}}',
+	'useractivity-group-friend' => '$1 {{PLURAL:$1|друг|друга|друзей}}',
+	'useractivity-title' => 'Действия друзей',
+	'useractivity-user_message' => '$1 отправил {{PLURAL:$4|сообщение|сообщения}} $3',
 );
 
 /** Swedish (Svenska)
