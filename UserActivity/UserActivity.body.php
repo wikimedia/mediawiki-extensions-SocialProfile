@@ -1,7 +1,6 @@
 <?php
 
 class UserHome extends SpecialPage {
-
 	/**
 	 * Constructor
 	 */
@@ -61,32 +60,6 @@ class UserHome extends SpecialPage {
 		if ( $item_type == 'messages' || $item_type == 'all' ) {
 			$messages_sent = 1;
 		}
-
-		/*
-		$output .= '<div class="user-home-links-container">
-		<h2>' . wfMsg( 'useractivity-filter' ) . '</h2>
-		<div class="user-home-links">';
-
-		$lines = explode( "\n", wfMsgForContent( 'useractivity-filter' ) );
-		foreach( $lines as $line ) {
-			if( strpos( $line, '*' ) !== 0 ) {
-				continue;
-			} else {
-				$line = explode( '|' , trim( $line, '* ' ), 3 );
-				$filter = $line[0];
-				$link_text = $line[1];
-				$link_image = $line[2];
-				$output .= '<a href="' . $this_title->escapeFullURL( "item_type={$filter}" ) . "\">
-					<img src=\"{$wgScriptPath}/extensions/SocialProfile/images/" . UserActivity::getTypeIcon( $link_image ) . "\"/>
-					{$link_text}
-				</a>";
-			}
-		}
-
-		$output .= '<a href="' . $this_title->escapeFullURL() . '">' . wfMsg( 'useractivity-all' ) . '</a>
-			</div>
-		 </div>
-		*/
 
 		$output .= '<div class="user-home-feed">';
 

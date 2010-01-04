@@ -16,24 +16,30 @@ $messages['en'] = array(
 	'useractivity' => "Friends' activity",
 	'useractivity-award' => '$1 received an award',
 	'useractivity-all' => 'View all',
-	#'useractivity-comment' => '{{PLURAL:$1|commented on the page|commented on the following pages: }}',
-	#'useractivity-commentedpage' => 'commented on the page',
-	'useractivity-edit' => '$1 {{PLURAL:$4|edited the page|edited the following pages:}} $3',
-	'useractivity-foe' => '$1 {{PLURAL:$2|is now foes with|are now foes with}} $3',
-	'useractivity-friend' => '$1 {{PLURAL:$2|is now friends with|are now friends with}} $3',
-	'useractivity-gift' => '$1 received a gift from $2',
-	#'useractivity-gift-sent' => 'sent a gift to',
-	'useractivity-group-edit' => '{{PLURAL:$1|one edit|$1 edits}}',
-	'useractivity-group-comment' => '{{PLURAL:$1|one comment|$1 comments}}',
-	'useractivity-group-user_message' => '{{PLURAL:$1|one message|$1 messages}}',
-	'useractivity-group-friend' => '{{PLURAL:$1|one friend|$1 friends}}',
-	#'useractivity-filter' => 'Filter',
+	'useractivity-edit' => '$1 {{PLURAL:$4|edited the page|edited the following pages:}} $3', // Supports GENDER for the editor ($1) as $6 if $1 is one user.
+	'useractivity-foe' => '$1 {{PLURAL:$2|is now foes with|are now foes with}} $3', // Supports GENDER for $1 as $6 if $1 is one user.
+	'useractivity-friend' => '$1 {{PLURAL:$2|is now friends with|are now friends with}} $3', // Supports GENDER for the $1 as $6 if $1 is one user.
+	'useractivity-gift' => '$1 received a gift from $2', // Supports GENDER for the editor ($1) as $6 if $1 is one user.
+	'useractivity-group-edit' => '{{PLURAL:$1|one edit|$1 edits}}', // Supports GENDER for the one having made edits as $2
+	'useractivity-group-comment' => '{{PLURAL:$1|one comment|$1 comments}}', // Supports GENDER for the one having made comments as $2
+	'useractivity-group-user_message' => '{{PLURAL:$1|one message|$1 messages}}', // Supports GENDER for the one having messages as $2
+	'useractivity-group-friend' => '{{PLURAL:$1|one friend|$1 friends}}', // Supports GENDER for the one having friends as $2
 	'useractivity-siteactivity' => 'Site activity',
 	'useractivity-title' => "Friends' activity",
-	'useractivity-user_message' => '$1 {{PLURAL:$4|sent a message to|sent messages to}} $3',
-	#'useractivity-votedpage' => 'voted for the page',
+	'useractivity-user_message' => '$1 {{PLURAL:$4|sent a message to|sent messages to}} $3', // Supports GENDER for the sender ($1) as $6 if $1 is one user.
 );
 
+$messages['qqq'] = array(
+	'useractivity-edit' => 'Supports GENDER for the editor ($1) as $6 if $1 is one user.',
+	'useractivity-foe' => 'Supports GENDER for $1 as $6 if $1 is one user.',
+	'useractivity-friend' => 'Supports GENDER for the $1 as $6 if $1 is one user.',
+	'useractivity-gift' => 'Supports GENDER for the editor ($1) as $6 if $1 is one user.',
+	'useractivity-group-edit' => 'Supports GENDER for the one having made edits as $2',
+	'useractivity-group-comment' => 'Supports GENDER for the one having made comments as $2',
+	'useractivity-group-user_message' => 'Supports GENDER for the one having messages as $2',
+	'useractivity-group-friend' => 'Supports GENDER for the one having friends as $2',
+	'useractivity-user_message' => 'Supports GENDER for the sender ($1) as $6 if $1 is one user.',
+);
 /** Afrikaans (Afrikaans)
  * @author Naudefj
  */

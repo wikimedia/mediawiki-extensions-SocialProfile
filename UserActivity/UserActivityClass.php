@@ -84,7 +84,7 @@ class UserActivity {
 		$res = $dbr->query( $sql, __METHOD__ );
 
 		while ( $row = $dbr->fetchObject( $res ) ) {
-			// Special pages aren't editable, so ignore 'em
+			// Special pages aren't editable, so ignore them
 			if ( $row->rc_namespace == NS_SPECIAL ) {
 				continue;
 			}
@@ -670,7 +670,7 @@ class UserActivity {
 			$pages = '';
 
 			if ( $type == 'friend' || $type == 'foe' || $type == 'user_message' ) {
-				$page_title = Title::newFromText( 'User:' . $page_name );
+				$page_title = Title::newFromText( $page_name, NS_USER );
 			} else {
 				$page_title = Title::newFromText( $page_name );
 			}
@@ -679,8 +679,11 @@ class UserActivity {
 			$user_index = 0;
 			$pages_count = 0;
 
-			foreach ( $page_data['users'] as $user_name => $action ) {
+			// Init empty variable to be used later on for GENDER processing
+			// if the event is only for one user.
+			$userNameForGender = '';
 
+			foreach ( $page_data['users'] as $user_name => $action ) {
 				if ( $page_data['timestamp'] < $this->three_days_ago ) {
 					continue;
 				}
@@ -692,7 +695,8 @@ class UserActivity {
 
 					$pages .= " <a href=\"{$page_title->escapeFullURL()}\">{$page_name}</a>";
 					if ( $count_users == 1 && $count_actions > 1 ) {
-						$pages .= ' (' . wfMsgExt( "useractivity-group-{$type}", 'parsemag', $count_actions ) . ')';
+						$pages .= wfMsg( 'word-separator' );
+						$pages .= wfMsg( 'parentheses', wfMsgExt( "useractivity-group-{$type}", 'parsemag', $count_actions, $user_name ) );
 					}
 					$pages_count++;
 				}
@@ -700,6 +704,7 @@ class UserActivity {
 				// Single user on this action,
 				// see if we can stack any other singles
 				if ( $count_users == 1 ) {
+					$userNameForGender = $user_name;
 					foreach ( $this->items_grouped[$type] as $page_name2 => $page_data2 ) {
 						if ( !isset( $this->displayed[$type][$page_name2] ) &&
 							count( $page_data2['users'] ) == 1
@@ -713,7 +718,7 @@ class UserActivity {
 										$type == 'foe' ||
 										$type == 'user_message'
 									) {
-										$page_title2 = Title::newFromText( 'User:' . $page_name2 );
+										$page_title2 = Title::newFromText( $page_name2, NS_USER );
 									} else {
 										$page_title2 = Title::newFromText( $page_name2 );
 									}
@@ -739,7 +744,7 @@ class UserActivity {
 				$user_index++;
 
 				if ( $users && $count_users > 2 ) {
-					$users .= ', ';
+					$users .= wfMsg( 'comma-separator' );
 				}
 				if ( $user_index ==  $count_users && $count_users > 1 ) {
 					$users .= wfMsg( 'and' );
@@ -748,7 +753,7 @@ class UserActivity {
 				$user_title = Title::makeTitle( NS_USER, $user_name );
 				$user_name_short = substr( $user_name, 0, 15 );
 				if ( $user_name != $user_name_short ) {
-					$user_name_short .= '...';
+					$user_name_short .= wfMsg( 'ellipsis' );
 				}
 
 				$users .= " <b><a href=\"{$user_title->escapeFullURL()}\">{$user_name_short}</a></b>";
@@ -758,8 +763,9 @@ class UserActivity {
 					'type' => $type,
 					'timestamp' => $page_data['timestamp'],
 					'data' => wfMsgExt(
-						"useractivity-{$type}", 'parsemag',
-						$users, $count_users, $pages, $pages_count
+						"useractivity-{$type}",
+						'parsemag',
+						$users, $count_users, $pages, $pages_count, $userNameForGender
 					)
 				);
 			}
