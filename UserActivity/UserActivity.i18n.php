@@ -132,6 +132,22 @@ $messages['dsb'] = array(
 	'useractivity-user_message' => '$1 {{PLURAL:$4|jo pósłał powěźeńku na|jo pósłał powěźeńce|jo pósłał powěźeńki|jo pósłał powěźeńki}} k $3',
 );
 
+/** Spanish (Español)
+ * @author Translationista
+ */
+$messages['es'] = array(
+	'useractivity' => 'Actividad de amigos',
+	'useractivity-award' => '$1 ha recibido un premio',
+	'useractivity-all' => 'Ver todo',
+	'useractivity-edit' => '$1 {{PLURAL:$4|ha editado la página|ha editado las siguientes páginas:}} $3',
+	'useractivity-gift' => '$1 ha recibido un regalo de $2',
+	'useractivity-group-edit' => '{{PLURAL:$1|una edición|$1 ediciones}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|un comentario|$1 comentarios}}',
+	'useractivity-siteactivity' => 'Actividad del sitio',
+	'useractivity-title' => 'Actividad de amigos',
+	'useractivity-user_message' => '$1 {{PLURAL:$4|ha enviado un mensaje a |ha enviado mensajes a}} $3',
+);
+
 /** Finnish (Suomi)
  * @author Jack Phoenix <jack@countervandalism.net>
  */

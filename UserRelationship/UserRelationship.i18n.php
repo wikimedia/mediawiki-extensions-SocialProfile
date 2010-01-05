@@ -5789,171 +5789,172 @@ i zmień ustawienia, wyłączając powiadomienia e-mail.',
 );
 
 /** Piedmontese (Piemontèis)
+ * @author Borichèt
  * @author Dragonòt
  */
 $messages['pms'] = array(
 	'viewrelationships' => 'Visualisa relassion',
 	'viewrelationshiprequests' => 'Visualisa arceste ëd relassion',
 	'ur-already-submitted' => "Toa arcesta a l'é stàita mandà",
-	'ur-error-page-title' => 'Woops!',
-	'ur-error-title' => "Whoops, a l'é tocate un brut vir!",
-	'ur-error-message-no-user' => 'I podoma pa completé toa arcesta, përchè a-i esist pa gnon utent con sto nòm-sì.',
-	'ur-main-page' => 'Pagina prinsipal',
+	'ur-error-page-title' => 'Contacc!',
+	'ur-error-title' => "Contacc, a l'é andaje mal!",
+	'ur-error-message-no-user' => 'I podoma pa completé soa arcesta, përchè a-i é gnun utent con sto nòm-sì.',
+	'ur-main-page' => 'Intrada',
 	'ur-your-profile' => 'Tò profil',
 	'ur-backlink' => '&lt; André al profil ëd $1',
 	'ur-relationship-count-foes' => '$1 a l\'ha $2 {{PLURAL:$2|nemis|nemis}}.
-It veus-to pi amis?
-<a href="$3">Anvit-je.</a>',
+Ancor ëd pì?
+<a href="$3">Anviteje.</a>',
 	'ur-relationship-count-friends' => '$1 a l\'ha $2 {{PLURAL:$2|amis|amis}}.
-It veus-to pi amis?
-<a href="$3">Anvit-je.</a>',
-	'ur-add-friends' => 'It veus-to pi amis?
-<a href="$1">Anvit-je</a>',
+Ancor pì d\'amis?
+<a href="$3">Anviteje.</a>',
+	'ur-add-friends' => 'Veul-lo pi d\'amis?
+<a href="$1">Anviteje</a>',
 	'ur-add-friend' => "Gionta n'amis",
 	'ur-add-foe' => 'Gionta un nemis',
-	'ur-add-no-user' => 'Pa gnun utent selessionà.
-Për piasì ciama amis/nemis con ël colegament giust.',
-	'ur-add-personal-message' => 'Gionta un messagi përsonal',
+	'ur-add-no-user' => "Gnun utent selessionà.
+Për piasì ch'a ciama amis/nemis con ël colegament giust.",
+	'ur-add-personal-message' => 'Gionté un mëssagi përsonal',
 	'ur-remove-relationship-friend' => "Gava n'amis",
 	'ur-remove-relationship-foe' => 'Gava un nemis',
-	'ur-give-gift' => 'Dà un regal',
+	'ur-give-gift' => 'Fé un cadò',
 	'ur-previous' => 'prima',
-	'ur-next' => "d'apress",
-	'ur-remove-relationship-title-foe' => 'It veus-to gavé $1 da tò nemis?',
+	'ur-next' => 'dapress',
+	'ur-remove-relationship-title-foe' => 'Veus-lo gavé $1 da sò nemis?',
 	'ur-remove-relationship-title-confirm-foe' => "It l'has gavà $1 da tò nemis",
-	'ur-remove-relationship-title-friend' => 'It veus-to gavé $1 da tò amis?',
+	'ur-remove-relationship-title-friend' => 'Veul-lo gavé $1 da sò amis?',
 	'ur-remove-relationship-title-confirm-friend' => "It l'has gavà $1 da tò amis",
-	'ur-remove-relationship-message-foe' => 'It l\'has ciamà ëd gavé $1 da tò nemis, sgnaca "$2" për confërmé.',
+	'ur-remove-relationship-message-foe' => 'A l\'ha ciamà ëd gavé $1 da sò nemis, ch\'a sgnaca "$2" për confirmé.',
 	'ur-remove-relationship-message-confirm-foe' => "It l'has gavà da bin $1 da tò nemis.",
-	'ur-remove-relationship-message-friend' => 'It l\'has ciamà ëd gavé $1 da tò amis, sgnaca "$2" për confërmé.',
+	'ur-remove-relationship-message-friend' => 'A l\'ha ciamà ëd gavé $1 da sò amis, ch\'a sgnaca "$2" për confirmé.',
 	'ur-remove-relationship-message-confirm-friend' => "It l'has gavà $1 da bin da tò amis.",
 	'ur-remove-error-message-no-relationship' => "It l'has pa relassion con $1.",
 	'ur-remove-error-message-remove-yourself' => 'It peule pa gavé ti midem.',
-	'ur-remove-error-message-pending-foe-request' => "It l'has n'arcesta pendenta ëd nemis cn $1.",
+	'ur-remove-error-message-pending-foe-request' => "A l'has n'arcesta ëd nemis an cors con $1.",
 	'ur-remove-error-message-pending-friend-request' => "It l'has n'arcesta pendenta d'amis con $1.",
-	'ur-remove-error-not-loggedin-foe' => 'It deuve intré për gavé un nemis.',
-	'ur-remove-error-not-loggedin-friend' => "It deuve intré për gavé n'amis.",
+	'ur-remove-error-not-loggedin-foe' => 'A deuv intré ant ël sistema për gavé un nemis.',
+	'ur-remove-error-not-loggedin-friend' => "A deuv esse intrà ant ël sistema për gavé n'amis.",
 	'ur-remove' => 'Gava',
-	'ur-cancel' => 'Scansela',
+	'ur-cancel' => 'Scancela',
 	'ur-login' => 'Intra',
-	'ur-add-title-foe' => 'It veus-to gionté $1 com tò nemis?',
-	'ur-add-title-friend' => 'It veus-to ginté $1 com tò amis?',
-	'ur-add-message-foe' => 'I të stas për gionté $1 com tò nemis.
-I notificheroma a $1 ëd continué la vòst rusa.',
-	'ur-add-message-friend' => 'I të stas giontand $1 com tò amis.
-I notificheroma a $1 për confërmé vòsta amicissia.',
+	'ur-add-title-foe' => 'Veul-lo gionté $1 com sò nemis?',
+	'ur-add-title-friend' => 'Veul-lo gionté $1 com sò amis?',
+	'ur-add-message-foe' => "A l'é an sël pont ëd gionté $1 com sò nemis.
+I notifichëroma a $1 për confirmé vòstra rusa.",
+	'ur-add-message-friend' => "A l'é an sël pont ëd gionté $1 com sò amis.
+I notifichëroma a $1 për confirmé vòsta amicissia.",
 	'ur-add-button-foe' => 'Gionta com nemis',
 	'ur-add-button-friend' => 'Gionta com amis',
 	'ur-add-sent-title-foe' => "I l'oma mandà toa arcesta ëd nemis a $1!",
 	'ur-add-sent-title-friend' => "I l'oma mandà toa arcesta d'amis a $1!",
-	'ur-add-sent-message-foe' => "Toa arcesta ëd nemis a l'é stàita mandà a $1 për conferma.
-Se $1 a conferma toa arcesta, it arseivras n'e-mail ëd conferma",
-	'ur-add-sent-message-friend' => "Toa arcesta d'amis a l'é stàita mandà a $1 për conferma.
-Se $1 a confërmrà toa arcesta, it arseivras n'e-mail ëd conferma",
+	'ur-add-sent-message-foe' => "Soa arcesta ëd nemis a l'é stàita mandà a $1 për conferma.
+Se $1 a conferma soa arcesta, chiel a arseivrà na conferma për pòsta eletrònica.",
+	'ur-add-sent-message-friend' => "Soa arcesta d'amis a l'é stàita mandà a $1 për conferma.
+Se $1 a confirmrà soa arcesta, chiel a arseivrà la comunicassion an pòsta eletrònica",
 	'ur-add-error-message-no-user' => "L'utent ch'it preuve a gionté a esist pa.",
 	'ur-add-error-message-blocked' => 'It ses blocà al moment e it peule pa gionté amis o nemis.',
 	'ur-add-error-message-yourself' => 'It peule pa gionté ti midem com amis o nemis.',
 	'ur-add-error-message-existing-relationship-foe' => 'It ses già nemis con $1.',
 	'ur-add-error-message-existing-relationship-friend' => 'It ses già amis con $1.',
 	'ur-add-error-message-pending-request-title' => 'Passiensa!',
-	'ur-add-error-message-pending-friend-request' => "It l'has n'arcesta pendenta d'amis con $1.
-It notificheroma quand $1 a conferma toa arcesta.",
-	'ur-add-error-message-pending-foe-request' => "It l'has n'arcesta pendenta ëd nemis con $1.
-It notificheroma quand $1 a conferma toa arcesta.",
-	'ur-add-error-message-not-loggedin-foe' => 'It deuve esse intrà për gionté un nemis',
-	'ur-add-error-message-not-loggedin-friend' => "It deuve esse intrà për ginté n'amis",
+	'ur-add-error-message-pending-friend-request' => "A l'ha n'arcesta d'amis an cors con $1.
+I-j notifichëroma quand $1 a conferma soa arcesta.",
+	'ur-add-error-message-pending-foe-request' => "A l'ha n'arcesta ëd nemis an cors con $1.
+I-j notifichëroma quand $1 a conferma soa arcesta.",
+	'ur-add-error-message-not-loggedin-foe' => 'A deuv esse intrà ant ël sistema për gionté un nemis',
+	'ur-add-error-message-not-loggedin-friend' => "A deuv esse intrà ant ël sistema për gionté n'amis",
 	'ur-requests-title' => 'Arceste ëd relassion',
 	'ur-requests-message-foe' => '<a href="$1">$2</a> a veul esse tò nemis.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> a veul esse tò amis.',
-	'ur-accept' => 'Asseta',
+	'ur-accept' => 'Aceté',
 	'ur-reject' => 'Arfuda',
-	'ur-no-requests-message' => 'It l\'has pa gnun-e arceste d\'amis o ëd nemis.
-S\'it veule pi amis, <a href="$1">anvit-je!</a>',
+	'ur-no-requests-message' => "A l'ha gnun-e arceste d'amis o ëd nemis.
+S'a veul pi d'amis, <a href=\"\$1\">ch'a j'anvita!</a>",
 	'ur-requests-added-message-foe' => "It l'has giontà $1 com tò nemis.",
 	'ur-requests-added-message-friend' => "It l'has giontà $1 com tò amis.",
 	'ur-requests-reject-message-friend' => "It l'has arfudà $1 com tò amis.",
 	'ur-requests-reject-message-foe' => "It l'has arfudà $1 com tò nemis.",
 	'ur-title-foe' => 'Lista dij nemis ëd $1',
 	'ur-title-friend' => "Lista dj'amis ëd $1",
-	'friend_request_subject' => "$1 a l'ha giontate com n'amis an dzora a {{SITENAME}}!",
+	'friend_request_subject' => "$1 a l'ha giontalo tanme amis dzora a {{SITENAME}}!",
 	'friend_request_body' => "Cerea $1.
 
-$2 a l'ha giontate cm amis an dzora a {{SITENAME}}. I voroma sicurete che adess voi doi i seve amis.
+$2 a l'ha giontalo com amis dzora a {{SITENAME}}. I voroma esse sigur che adess voi doi i seve amis.
 
-Për piasì sgnaca sto colegament-sì për confërmé vòsta amicissia:
+Për piasì ch'a sgnaca st'anliura-sì për confirmé vòsta amicissia:
 $3
 
 Mersì
 
 ---
 
-Hei, it veus-to pa pi arseive e-mail da noi?
+Ch'a scota, veul-lo pa pi arsèive ëd mëssagi da noi?
 
-Sgnaca $4
-e cambia toe ampostassin për disabilité le notìfiche e-mail.",
-	'foe_request_subject' => "A l'é la guèra! $1 a l'ha giontate com nemis an dzora a {{SITENAME}}!",
+Ch'a sgnaca $4
+e ch'a cambia soe ampostassion për disabilité le notìfiche për pòsta eletrònica.",
+	'foe_request_subject' => "A l'é la guèra! $1 a l'ha giontalo com nemis ansima a {{SITENAME}}!",
 	'foe_request_body' => "Cerea $1.
 
-$2 a l'ha pen-e listate com un nemis an dzora a {{SITENAME}}. I voroma sicurete che adess voi doi i seve nemis mortaj e almanch i l'eve na custion.
+$2 a l'ha pen-a butalo com nemis dzora a {{SITENAME}}. I voroma esse sigur che adess voi doi i seve nemis mortaj o almanch i l'eve na rusa.
 
-Për piasì sgnaca sto colegament-sì për confërmé vòsta rusa:
+Për piasì ch'a sgnaca st'anliura-sì për confirmé vòsta rusa:
 $3
 
 Mersì
 
 ---
 
-Hei, it veus-to pa pi arseive e-mail da noi?
+Ch'a scota, veul-lo pa pi arsèive ëd mëssagi da noi?
 
-Sgnaca $4
-e cambia toe ampostassion për disabilité le notìfiche e-mail.",
-	'friend_accept_subject' => "$1 a l'ha assetà toa arcesta d'amis an dzora a {{SITENAME}}!",
+Ch'a sgnaca $4
+e ch'a cambia soe ampostassion për disabilité le notìfiche an pòsta eletrònica.",
+	'friend_accept_subject' => "$1 a l'ha acetà soa arcesta d'amis dzora a {{SITENAME}}!",
 	'friend_accept_body' => "Cerea $1.
 
-$2 a l'ha assetà toa arcesta d'amis an dzora {{SITENAME}}!
+$2 a l'ha acetà soa arcesta d'amis dzora {{SITENAME}}!
 
-Contròla la pàgina ëd $2 a $3
+Ch'a contròla la pàgina ëd $2 a $3
 
 Mersì
 
 ---
 
-Hei, it veus-to pa pi arseive e-mail da noi?
+Ch'a scota, veul-lo pa pi arsèive ëd mëssagi da noi?
 
-Sgnaca $4
-e cambia toe ampostassin për disabilité le notìfiche e-mail.",
-	'foe_accept_subject' => "A l'é anvisch! $1 a l'ha assetà toa arcesta ëd nemis an dzora a {{SITENAME}}!",
+Ch'a sgnaca $4
+e ch'a cambia soe ampostassion për disabilité le notìfiche për pòsta eletrònica.",
+	'foe_accept_subject' => "Bele fàit! $1 a l'ha acetà soa arcesta ëd nemis dzora a {{SITENAME}}!",
 	'foe_accept_body' => "Cerea $1.
 
-$2 a l'ha assetà toa arcesta ëd nemis an dzora a {{SITENAME}}!
+$2 a l'ha acetà soa arcesta ëd nemis dzora a {{SITENAME}}!
 
-Contròla la pàgina ëd $2 a $3
+Ch'a contròla la pàgina ëd $2 a $3
 
 Mersì
 
 ---
 
-Hei, it veus-to pa pi arseive e-mail da noi?
+Ch'a scota, veul-lo pa pi arsèive ëd mëssagi da noi?
 
-Sgnaca $4
-e cambia toe ampostassion për disabilité le notìfiche e-mail.",
-	'friend_removed_subject' => "Oh nò! $1 a l'ha gavate da amis an dzora a {{SITENAME}}!",
+Ch'a sgnaca $4
+e ch'a cambia soe ampostassion për disabilité le notìfiche për pòsta eletrònica.",
+	'friend_removed_subject' => "Oh nò! $1 a l'ha gavalo da amis dzora a {{SITENAME}}!",
 	'friend_removed_body' => "Cerea $1.
 
-$2 a l'ha gavate da amis an dzora a {{SITENAME}}.
+$2 a l'ha gavalo da amis dzora a {{SITENAME}}.
 
 Mersì
 
 ---
 
-Hei, it veus-to pa pi arseive e-mail da noi?
+Ch'a scota, veul-lo pa pi arsèive ëd mëssagi da noi?
 
-Sgnaca $4
-e cambia toe ampostassion për disabilité le notìfiche e-mail.",
-	'foe_removed_subject' => "Woohoo! $1 a l'ha gavate da nemis an dzora a {{SITENAME}}!",
+Ch'a sgnaca $4
+e ch'a cambia soe ampostassion për disabilité le notìfiche për pòsta eletrònica.",
+	'foe_removed_subject' => "Contacc! $1 a l'ha gavalo da nemis dzora a {{SITENAME}}!",
 	'foe_removed_body' => "Cerea $1.
 
-$2 a l'ha gavate da nemis an dzora a {{SITENAME}}.
+$2 a l'ha gavalo da nemis dzora a {{SITENAME}}.
 
 Miraco voi doi i seve an sla stra dë vnì amis?
 
@@ -5961,10 +5962,10 @@ Mersì
 
 ---
 
-Hei, it veus-to pa pi arseive e-mail da noi?
+Ch'a scota, veul-lo pa pi arsèive e-mail da noi?
 
-Sgnaca $4
-e cambia toe ampostassion për disabilité le notìfiche e-mail.",
+Ch'a sgnaca $4
+e ch'a cambia toe ampostassion për disabilité le notìfiche an pòsta eletrònica.",
 );
 
 /** Pashto (پښتو)
