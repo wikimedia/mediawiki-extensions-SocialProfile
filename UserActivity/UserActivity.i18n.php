@@ -140,9 +140,11 @@ $messages['es'] = array(
 	'useractivity-award' => '$1 ha recibido un premio',
 	'useractivity-all' => 'Ver todo',
 	'useractivity-edit' => '$1 {{PLURAL:$4|ha editado la página|ha editado las siguientes páginas:}} $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|se ha enemistado de|se han enemistado de}} $3',
 	'useractivity-gift' => '$1 ha recibido un regalo de $2',
 	'useractivity-group-edit' => '{{PLURAL:$1|una edición|$1 ediciones}}',
 	'useractivity-group-comment' => '{{PLURAL:$1|un comentario|$1 comentarios}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|un mensaje|$1 mensajes}}',
 	'useractivity-siteactivity' => 'Actividad del sitio',
 	'useractivity-title' => 'Actividad de amigos',
 	'useractivity-user_message' => '$1 {{PLURAL:$4|ha enviado un mensaje a |ha enviado mensajes a}} $3',
@@ -207,6 +209,26 @@ $messages['gl'] = array(
 	'useractivity-siteactivity' => 'Actividade do sitio',
 	'useractivity-title' => 'Actividade dos amigos',
 	'useractivity-user_message' => '$1 enviou {{PLURAL:$4|unha mensaxe|mensaxes}} a $3',
+);
+
+/** Swiss German (Alemannisch)
+ * @author Als-Holder
+ */
+$messages['gsw'] = array(
+	'useractivity' => 'Aktivitet vu dr Frynd',
+	'useractivity-award' => '$1 het e Uuszeichnig ibercuu',
+	'useractivity-all' => 'Alli aaluege',
+	'useractivity-edit' => '$1 {{PLURAL:$4|het die Syte bearbeitet|het die Syte bearbeitet:}} $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|isch jetz e Fynd zuet|sin jetz Fynd zue}} $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|isch jetz e Frynd zue|sin jetz Frynd zue}} $3',
+	'useractivity-gift' => '$1 het e Gschänk vu $2 iberchuu',
+	'useractivity-group-edit' => '{{PLURAL:$1|Ei Änderig|$1 Änderige}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|Ei Aamerkig|$1 Aamerkige}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|Ei Nochricht|$1 Nochrichte}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|Ei Frynd|$1 Frynd}}',
+	'useractivity-siteactivity' => 'Syteaktivitet',
+	'useractivity-title' => 'Aktivitet vu dr Frynd',
+	'useractivity-user_message' => '$1 {{PLURAL:$4|het e Nochricht gschickt an|het Nochrichte gschickt an}} $3',
 );
 
 /** Upper Sorbian (Hornjoserbsce)
@@ -374,17 +396,21 @@ $messages['pt-br'] = array(
 
 /** Russian (Русский)
  * @author Kv75
+ * @author Александр Сигачёв
  */
 $messages['ru'] = array(
 	'useractivity' => 'Действия друзей',
 	'useractivity-award' => '$1 получил награду',
 	'useractivity-all' => 'Смотреть все',
 	'useractivity-edit' => '$1 отредактировал {{PLURAL:$4|страницу|следующие страницы:}} $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|враждует сейчас с|враждуют сейчас с}} $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|дружит сейчас с|дружат сейчас с}} $3',
 	'useractivity-gift' => '$1 получил подарок от $2',
 	'useractivity-group-edit' => '$1 {{PLURAL:$1|правка|правки|правок}}',
 	'useractivity-group-comment' => '$1 {{PLURAL:$1|комментарий|комментария|комментариев}}',
 	'useractivity-group-user_message' => '$1 {{PLURAL:$1|сообщение|сообщения|сообщений}}',
 	'useractivity-group-friend' => '$1 {{PLURAL:$1|друг|друга|друзей}}',
+	'useractivity-siteactivity' => 'Активность сайта',
 	'useractivity-title' => 'Действия друзей',
 	'useractivity-user_message' => '$1 отправил {{PLURAL:$4|сообщение|сообщения}} $3',
 );
