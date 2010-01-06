@@ -127,13 +127,17 @@ class UserProfilePage extends Article {
 		$stats = new UserStats( $user_id, $user_name );
 		$stats_data = $stats->getUserStats();
 
-		$total_value = $stats_data['edits'] . $stats_data['votes'] . $stats_data['comments'] . $stats_data['recruits'] . $stats_data['poll_votes'] . $stats_data['picture_game_votes'] . $stats_data['quiz_points'];
+		$total_value = $stats_data['edits'] . $stats_data['votes'] .
+						$stats_data['comments'] . $stats_data['recruits'] .
+						$stats_data['poll_votes'] .
+						$stats_data['picture_game_votes'] .
+						$stats_data['quiz_points'];
 
 		if ( $total_value != 0 ) {
 			$output .= '<div class="user-section-heading">
-				<div class="user-section-title">
-					' . wfMsg( 'user-stats-title' ) . '
-				</div>
+				<div class="user-section-title">'
+					. wfMsg( 'user-stats-title' ) .
+				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">
 					</div>
@@ -151,8 +155,9 @@ class UserProfilePage extends Article {
 				$this->getUserStatsRow( wfMsgExt( 'user-stats-poll-votes', 'parsemag', $stats_data['poll_votes'] ), $stats_data['poll_votes'] ) .
 				$this->getUserStatsRow( wfMsgExt( 'user-stats-picture-game-votes', 'parsemag', $stats_data['picture_game_votes'] ), $stats_data['picture_game_votes'] ) .
 				$this->getUserStatsRow( wfMsgExt( 'user-stats-quiz-points', 'parsemag', $stats_data['quiz_points'] ), $stats_data['quiz_points'] );
-				if ( $stats_data['currency'] != '10,000' )
+				if ( $stats_data['currency'] != '10,000' ) {
 					$output .= $this->getUserStatsRow( wfMsgExt( 'user-stats-pick-points', 'parsemag', $stats_data['currency'] ), $stats_data['currency'] );
+				}
 			$output .= '</div>';
 		}
 
@@ -219,24 +224,31 @@ class UserProfilePage extends Article {
 			$location .= $profile_data['location_country'];
 		}
 
-		if ( $location == ', ' ) $location = '';
+		if ( $location == ', ' ) {
+			$location = '';
+		}
 
 		$hometown = $profile_data['hometown_city'] . ', ' . $profile_data['hometown_state'];
 		if ( $profile_data['hometown_country'] != 'United States' ) {
 			$hometown = '';
 			$hometown .= $profile_data['hometown_country'];
 		}
-		if ( $hometown == ', ' ) $hometown = '';
+		if ( $hometown == ', ' ) {
+			$hometown = '';
+		}
 
-		$joined_data = $profile_data['real_name'] . $location . $hometown . $profile_data['birthday'] . $profile_data['occupation'] . $profile_data['websites'] . $profile_data['places_lived'] . $profile_data['schools'] . $profile_data['about'];
+		$joined_data = $profile_data['real_name'] . $location . $hometown .
+						$profile_data['birthday'] . $profile_data['occupation'] .
+						$profile_data['websites'] . $profile_data['places_lived'] .
+						$profile_data['schools'] . $profile_data['about'];
 		$edit_info_link = SpecialPage::getTitleFor( 'UpdateProfile' );
 
 		$output = '';
 		if ( $joined_data ) {
 			$output .= '<div class="user-section-heading">
-				<div class="user-section-title">
-					' . wfMsg( 'user-personal-info-title' ) . '
-				</div>
+				<div class="user-section-title">'
+					. wfMsg( 'user-personal-info-title' ) .
+				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">';
 					if ( $wgUser->getName() == $user_name ) {
@@ -260,9 +272,9 @@ class UserProfilePage extends Article {
 			'</div>';
 		} elseif ( $wgUser->getName() == $user_name ) {
 			$output .= '<div class="user-section-heading">
-				<div class="user-section-title">
-					' . wfMsg( 'user-personal-info-title' ) . '
-				</div>
+				<div class="user-section-title">'
+					. wfMsg( 'user-personal-info-title' ) .
+				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">
 						<a href="' . $edit_info_link->escapeFullURL() . '">'
@@ -273,9 +285,9 @@ class UserProfilePage extends Article {
 				</div>
 			</div>
 			<div class="cleared"></div>
-			<div class="no-info-container">
-				' . wfMsg( 'user-no-personal-info' ) . '
-			</div>';
+			<div class="no-info-container">'
+				. wfMsg( 'user-no-personal-info' ) .
+			'</div>';
 		}
 
 		return $output;
@@ -294,15 +306,16 @@ class UserProfilePage extends Article {
 		}
 		$profile_data = $this->profile_data;
 
-		$joined_data = $profile_data['custom_1'] . $profile_data['custom_2'] . $profile_data['custom_3'] . $profile_data['custom_4'];
+		$joined_data = $profile_data['custom_1'] . $profile_data['custom_2'] .
+						$profile_data['custom_3'] . $profile_data['custom_4'];
 		$edit_info_link = SpecialPage::getTitleFor( 'UpdateProfile' );
 
 		$output = '';
 		if ( $joined_data ) {
 			$output .= '<div class="user-section-heading">
-				<div class="user-section-title">
-					' . wfMsg( 'custom-info-title' ) . '
-				</div>
+				<div class="user-section-title">'
+					. wfMsg( 'custom-info-title' ) .
+				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">';
 						if ( $wgUser->getName() == $user_name ) {
@@ -321,22 +334,22 @@ class UserProfilePage extends Article {
 			'</div>';
 		} elseif ( $wgUser->getName() == $user_name ) {
 			$output .= '<div class="user-section-heading">
-				<div class="user-section-title">
-					' . wfMsg( 'custom-info-title' ) . '
-				</div>
+				<div class="user-section-title">'
+					. wfMsg( 'custom-info-title' ) .
+				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">
-						<a href="' . $edit_info_link->escapeFullURL() . '/custom">
-							' . wfMsg( 'user-edit-this' ) . '
-						</a>
+						<a href="' . $edit_info_link->escapeFullURL() . '/custom">'
+							. wfMsg( 'user-edit-this' ) .
+						'</a>
 					</div>
 					<div class="cleared"></div>
 				</div>
 			</div>
 			<div class="cleared"></div>
-			<div class="no-info-container">
-				' . wfMsg( 'custom-no-info' ) . '
-			</div>';
+			<div class="no-info-container">'
+				. wfMsg( 'custom-no-info' ) .
+			'</div>';
 		}
 
 		return $output;
@@ -357,16 +370,20 @@ class UserProfilePage extends Article {
 			$this->profile_data = $profile->getProfile();
 		}
 		$profile_data = $this->profile_data;
-		$joined_data = $profile_data['movies'] . $profile_data['tv'] . $profile_data['music'] . $profile_data['books'] . $profile_data['video_games'] . $profile_data['magazines'] . $profile_data['drinks'] . $profile_data['snacks'];
+		$joined_data = $profile_data['movies'] . $profile_data['tv'] .
+						$profile_data['music'] . $profile_data['books'] .
+						$profile_data['video_games'] .
+						$profile_data['magazines'] . $profile_data['drinks'] .
+						$profile_data['snacks'];
 		$edit_info_link = SpecialPage::getTitleFor( 'UpdateProfile' );
 
 		$output = '';
 		if ( $joined_data ) {
 
 			$output .= '<div class="user-section-heading">
-				<div class="user-section-title">
-					' . wfMsg( 'other-info-title' ) . '
-				</div>
+				<div class="user-section-title">'
+					. wfMsg( 'other-info-title' ) .
+				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">';
 						if ( $wgUser->getName() == $user_name ) {
@@ -390,9 +407,9 @@ class UserProfilePage extends Article {
 
 		} elseif ( $wgUser->getName() == $user_name ) {
 			$output .= '<div class="user-section-heading">
-				<div class="user-section-title">
-					' . wfMsg( 'other-info-title' ) . '
-				</div>
+				<div class="user-section-title">'
+					. wfMsg( 'other-info-title' ) .
+				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">
 						<a href="' . $edit_info_link->escapeFullURL() . '/personal">' . wfMsg( 'user-edit-this' ) . '</a>
@@ -401,9 +418,9 @@ class UserProfilePage extends Article {
 				</div>
 			</div>
 			<div class="cleared"></div>
-			<div class="no-info-container">
-				' . wfMsg( 'other-no-info' ) . '
-			</div>';
+			<div class="no-info-container">'
+				. wfMsg( 'other-no-info' ) .
+			'</div>';
 		}
 		return $output;
 	}
@@ -644,13 +661,17 @@ class UserProfilePage extends Article {
 
 					// Chop down username that gets displayed
 					$user_name = mb_substr( $friend['user_name'], 0, 9 );
-					if ( $user_name != $friend['user_name'] ) $user_name .= '..';
+					if ( $user_name != $friend['user_name'] ) {
+						$user_name .= '..';
+					}
 
 					$output .= "<a href=\"" . $user->escapeFullURL() . "\" title=\"{$friend["user_name"]}\" rel=\"nofollow\">
 						{$avatar_img}<br />
 						{$user_name}
 					</a>";
-					if ( $x == count( $friends ) || $x != 1 && $x % $per_row == 0 ) $output .= '<div class="cleared"></div>';
+					if ( $x == count( $friends ) || $x != 1 && $x % $per_row == 0 ) {
+						$output .= '<div class="cleared"></div>';
+					}
 					$x++;
 				}
 			$output .= '</div>';
@@ -686,9 +707,9 @@ class UserProfilePage extends Article {
 
 		if ( $activity ) {
 			$output .= '<div class="user-section-heading">
-				<div class="user-section-title">
-					' . wfMsg( 'user-recent-activity-title' ) . '
-				</div>
+				<div class="user-section-title">'
+					. wfMsg( 'user-recent-activity-title' ) .
+				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">
 					</div>
@@ -711,12 +732,14 @@ class UserProfilePage extends Article {
 				$user_title = Title::makeTitle( NS_USER, $item['username'] );
 				$user_title_2 = Title::makeTitle( NS_USER, $item['comment'] );
 
-				if ( $user_title_2 )
+				if ( $user_title_2 ) {
 					$user_link_2 = '<a href="' . $user_title_2->escapeFullURL() . '" rel="nofollow">' . $item['comment'] . '</a>';
+				}
 
 				$comment_url = '';
-				if ( $item['type'] == 'comment' )
+				if ( $item['type'] == 'comment' ) {
 					$comment_url = "#comment-{$item["id"]}";
+				}
 
 				$page_link = '<b><a href="' . $title->escapeFullURL() . "{$comment_url}\">" . $title->getPrefixedText() . '</a></b> ';
 				$b = new UserBoard(); // Easier than porting the time-related functions here
@@ -792,14 +815,6 @@ class UserProfilePage extends Article {
 								\"{$item["namespace"]}\"
 								</div>";
 						break;
-					/*case 'network_update':
-						$page_link = '' . $item['network'] . '</a> ';
-						$network_image = SportsTeams::getLogo( $item['sport_id'], $item['team_id'], 's' );
-						$item_html .= wfMsg( 'user-recent-activity-network-update' ) . '
-								<div class="item">
-									<a href="' . SportsTeams::getNetworkURL( $item['sport_id'], $item['team_id'] ) . "\" rel=\"nofollow\">{$network_image} \"{$item["comment"]}\"</a>
-								</div>";
-						break;*/
 					}
 
 					$item_html .= '</div>';
@@ -874,13 +889,6 @@ class UserProfilePage extends Article {
 				}
 			}
 
-			/*$by_type = '';
-			if( isset( $items_html_type['network_update'] ) && is_array( $items_html_type['network_update'] ) ) {
-				foreach( $items_html_type['network_update'] as $item ){
-					$by_type .= $item;
-				}
-			}*/
-
 		}
 
 		return $output;
@@ -921,16 +929,15 @@ class UserProfilePage extends Article {
 		$per_row = 4;
 
 		if ( $gifts ) {
-
 			$output .= '<div class="user-section-heading">
 				<div class="user-section-title">
 					' . wfMsg( 'user-gifts-title' ) . '
 				</div>
 				<div class="user-section-actions">
 					<div class="action-right">';
-						if ( $gift_count > 4 ) {
-							$output .= '<a href="' . $gift_link->escapeFullURL( 'user=' . $user_safe ) . '" rel="nofollow">' . wfMsg( 'user-view-all' ) . '</a>';
-						}
+					if ( $gift_count > 4 ) {
+						$output .= '<a href="' . $gift_link->escapeFullURL( 'user=' . $user_safe ) . '" rel="nofollow">' . wfMsg( 'user-view-all' ) . '</a>';
+					}
 					$output .= '</div>
 					<div class="action-left">';
 						if ( $gift_count > 4 ) {
@@ -948,7 +955,6 @@ class UserProfilePage extends Article {
 				$x = 1;
 
 				foreach ( $gifts as $gift ) {
-
 					if ( $gift['status'] == 1 && $user_name == $wgUser->getName() ) {
 						$g->clearUserGiftStatus( $gift['id'] );
 						$wgMemc->delete( $key );
@@ -1008,14 +1014,14 @@ class UserProfilePage extends Article {
 			$x = 1;
 
 			$output .= '<div class="user-section-heading">
-				<div class="user-section-title">
-					' . wfMsg( 'user-awards-title' ) . '
-				</div>
+				<div class="user-section-title">'
+					. wfMsg( 'user-awards-title' ) .
+				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">';
-						if ( $system_gift_count > 4 ) {
-							$output .= '<a href="' . $system_gift_link->escapeFullURL( 'user=' . $user_name ) . '" rel="nofollow">' . wfMsg( 'user-view-all' ) . '</a>';
-						}
+					if ( $system_gift_count > 4 ) {
+						$output .= '<a href="' . $system_gift_link->escapeFullURL( 'user=' . $user_name ) . '" rel="nofollow">' . wfMsg( 'user-view-all' ) . '</a>';
+					}
 					$output .= '</div>
 					<div class="action-left">';
 						if ( $system_gift_count > 4 ) {
@@ -1031,7 +1037,6 @@ class UserProfilePage extends Article {
 			<div class="user-gift-container">';
 
 				foreach ( $system_gifts as $gift ) {
-
 					if ( $gift['status'] == 1 && $user_name == $wgUser->getName() ) {
 						$sg->clearUserGiftStatus( $gift['id'] );
 						$wgMemc->delete( $sg_key );
@@ -1091,9 +1096,9 @@ class UserProfilePage extends Article {
 		}
 
 		$output .= '<div class="user-section-heading">
-			<div class="user-section-title">
-				' . wfMsg( 'user-board-title' ) . '
-			</div>
+			<div class="user-section-title">'
+				. wfMsg( 'user-board-title' ) .
+			'</div>
 			<div class="user-section-actions">
 				<div class="action-right">';
 					if ( $wgUser->getName() == $user_name ) {
@@ -1138,9 +1143,9 @@ class UserProfilePage extends Article {
 					</div>';
 			} else {
 				$login_link = SpecialPage::getTitleFor( 'Userlogin' );
-				$output .= '<div class="user-page-message-form">
-					' . wfMsg( 'user-board-login-message', $login_link->escapeFullURL() ) . '
-				</div>';
+				$output .= '<div class="user-page-message-form">'
+					. wfMsg( 'user-board-login-message', $login_link->escapeFullURL() ) .
+				'</div>';
 			}
 		}
 		$output .= '<div id="user-page-board">';
@@ -1192,11 +1197,10 @@ class UserProfilePage extends Article {
 		$per_row = 1;
 
 		if ( $fanboxes ) {
-
 			$output .= '<div class="user-section-heading">
-				<div class="user-section-title">
-					' . wfMsg( 'user-fanbox-title' ) . '
-				</div>
+				<div class="user-section-title">'
+					. wfMsg( 'user-fanbox-title' ) .
+				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">';
 						if ( $fanbox_count > 10 ) {
