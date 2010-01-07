@@ -253,9 +253,18 @@ $messages['hsb'] = array(
 
 /** Japanese (日本語)
  * @author Hosiryuhosi
+ * @author 青子守歌
  */
 $messages['ja'] = array(
+	'useractivity' => '友達の活動度',
 	'useractivity-all' => 'すべて表示',
+	'useractivity-gift' => '$1が$2からのギフトを受け取りました',
+	'useractivity-group-edit' => '{{PLURAL:$1|$1回の編集}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|$1コのコメント}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|$1コのメッセージ}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|$1人の友達}}',
+	'useractivity-siteactivity' => 'サイトの活動度',
+	'useractivity-title' => '友達の活動度',
 );
 
 /** Ripoarisch (Ripoarisch)
@@ -330,6 +339,26 @@ $messages['nl'] = array(
 	'useractivity-siteactivity' => 'Siteactiviteit',
 	'useractivity-title' => 'Acitiviteit van vrienden',
 	'useractivity-user_message' => '$1 heeft {{PLURAL:$4|een bericht|berichten}} verzonden aan $3',
+);
+
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Nghtwlkr
+ */
+$messages['no'] = array(
+	'useractivity' => 'Venners aktivitet',
+	'useractivity-award' => '$1 mottok en pris',
+	'useractivity-all' => 'Vis alt',
+	'useractivity-edit' => '$1 {{PLURAL:$4|redigerte siden|redigerte følgende sider:}} $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|er nå en fiende av|er nå en fiende av}} $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|er nå en venn av|er nå en venn av}} $3',
+	'useractivity-gift' => '$1 fikk en gave av $2',
+	'useractivity-group-edit' => '{{PLURAL:$1|én redigering|$1 redigeringer}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|én kommentar|$1 kommentarer}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|én beskjed|$1 beskjeder}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|én venn|$1 venner}}',
+	'useractivity-siteactivity' => 'Sideaktivitet',
+	'useractivity-title' => 'Venners aktivitet',
+	'useractivity-user_message' => '$1 {{PLURAL:$4|sendte en beskjed til|sendte flere beskjeder til}} $3',
 );
 
 /** Piedmontese (Piemontèis)
