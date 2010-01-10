@@ -2593,7 +2593,9 @@ $messages['sr-el'] = array(
  * @author Per
  */
 $messages['sv'] = array(
+	'systemgiftmanager' => 'Systempresentförvaltare',
 	'ga-addnew' => '+ lägg till en ny present',
+	'ga-back-edit-gift' => 'Tillbaka för att ändra denna present',
 	'ga-back-gift-list' => 'Tillbaka till presentlista',
 	'ga-choosefile' => 'Välj fil:',
 	'ga-count' => '$1 har $2 {{PLURAL:$2|utmärkelse|utmärkelser}}.',
@@ -2601,6 +2603,8 @@ $messages['sv'] = array(
 	'ga-created' => 'Presenten har skapats',
 	'ga-currentimage' => 'Nuvarande bild',
 	'ga-error-message-invalid-link' => 'Länken du angav är ogiltig.',
+	'ga-error-message-no-user' => 'Användaren du försöker titta på existerar inte.',
+	'ga-error-title' => 'Oj, du gick visst fel!',
 	'ga-gift' => 'present',
 	'ga-gift-title' => '$1s "$2"',
 	'ga-giftdesc' => 'beskrivning av present',

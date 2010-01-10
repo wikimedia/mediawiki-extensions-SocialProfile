@@ -6949,6 +6949,8 @@ Vi kommer skicka $1 ett meddelande för att bekräfta vänskapet.',
 	'ur-add-button-friend' => 'Lägg till som vän',
 	'ur-add-sent-title-foe' => 'Vi har skickat din fiendeförfrågan till $1!',
 	'ur-add-sent-title-friend' => 'Vi har skickat din vänskapsförfrågning till $1!',
+	'ur-add-sent-message-friend' => 'Din vänskaps begäran har skickats till $1 för godkännande.
+Om $1 godkänner din begäran kommer du få ett uppföljningsmeddelande',
 	'ur-add-error-message-no-user' => 'Användaren du prövade att lägga till finns inte.',
 	'ur-add-error-message-blocked' => 'Du är blockerad, och kan inte lägga till vänner eller fiender.',
 	'ur-add-error-message-yourself' => 'Du kan inte lägga till dig själv som vän eller fiende.',

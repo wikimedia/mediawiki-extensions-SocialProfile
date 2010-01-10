@@ -449,7 +449,15 @@ $messages['ru'] = array(
  */
 $messages['sv'] = array(
 	'useractivity-all' => 'Visa alla',
+	'useractivity-foe' => '$1 {{PLURAL:$2|är nu en fiende till|är nu fiender till}} $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|är nu en vän med|är nu vänner med}} $3',
 	'useractivity-gift' => '$1 fick en present från $2',
+	'useractivity-group-edit' => '{{PLURAL:$1|en redigering|$1 redigeringar}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|en kommentar|$1 kommentarer}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|ett meddelande|$1 meddelanden}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|en vän|$1 vänner}}',
+	'useractivity-siteactivity' => 'Sajtaktivitet',
+	'useractivity-title' => 'Vänners aktivitet',
 );
 
 /** Telugu (తెలుగు)
