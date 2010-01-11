@@ -80,6 +80,24 @@ $messages['ar'] = array(
 	'useractivity-user_message' => '$1 {{PLURAL:$4|أرسل رسالة إلى|أرسل رسائل إلى}} $3',
 );
 
+/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+ * @author EugeneZelenko
+ * @author Jim-by
+ */
+$messages['be-tarask'] = array(
+	'useractivity' => 'Актыўнасьць сяброў',
+	'useractivity-award' => '$1 атрымаў узнагароду',
+	'useractivity-all' => 'Паказаць усё',
+	'useractivity-edit' => '$1 рэдагаваў {{PLURAL:$4|старонку|наступныя старонкі:}} $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|варагуе|варагуюць}} зараз з $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|сябруе|сябруюць}} зараз з $3',
+	'useractivity-gift' => '$1 атрымаў падарунак ад $2',
+	'useractivity-group-edit' => '$1 {{PLURAL:$1|рэдагаваньне|рэдагаваньні|рэдагаваньняў}}',
+	'useractivity-group-comment' => '$1 {{PLURAL:$1|камэнтар|камэнтары|камэнтараў}}',
+	'useractivity-group-user_message' => '$1 {{PLURAL:$1|паведамленьне|паведамленьні|паведамленьняў}}',
+	'useractivity-group-friend' => '$1 {{PLURAL:$1|сябар|сябры|сяброў}}',
+);
+
 /** Breton (Brezhoneg)
  * @author Y-M D
  */
