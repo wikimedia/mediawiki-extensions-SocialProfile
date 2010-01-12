@@ -2095,6 +2095,7 @@ $messages['sv'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Fådd present|Fådda presenter}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Skickad present|Skickade presenter}}',
 	'right-updatepoints' => 'Uppdatera redigeringsräknare',
+	'level-advanced-to' => 'avancerat till nivå <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Du är nu en "$1" på {{SITENAME}}!',
 	'level-advance-body' => 'Hej $1!
 

@@ -96,6 +96,9 @@ $messages['be-tarask'] = array(
 	'useractivity-group-comment' => '$1 {{PLURAL:$1|камэнтар|камэнтары|камэнтараў}}',
 	'useractivity-group-user_message' => '$1 {{PLURAL:$1|паведамленьне|паведамленьні|паведамленьняў}}',
 	'useractivity-group-friend' => '$1 {{PLURAL:$1|сябар|сябры|сяброў}}',
+	'useractivity-siteactivity' => 'Актыўнасьць на сайце',
+	'useractivity-title' => 'Актыўнасьць сяброў',
+	'useractivity-user_message' => '$1 {{GENDER:$6|даслаў|даслала}} {{PLURAL:$4|паведамленьне|паведамленьні}} $3',
 );
 
 /** Breton (Brezhoneg)
@@ -151,6 +154,7 @@ $messages['dsb'] = array(
 );
 
 /** Spanish (Español)
+ * @author Peter17
  * @author Translationista
  */
 $messages['es'] = array(
@@ -163,6 +167,7 @@ $messages['es'] = array(
 	'useractivity-group-edit' => '{{PLURAL:$1|una edición|$1 ediciones}}',
 	'useractivity-group-comment' => '{{PLURAL:$1|un comentario|$1 comentarios}}',
 	'useractivity-group-user_message' => '{{PLURAL:$1|un mensaje|$1 mensajes}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|un amigo|$1 amigos}}',
 	'useractivity-siteactivity' => 'Actividad del sitio',
 	'useractivity-title' => 'Actividad de amigos',
 	'useractivity-user_message' => '$1 {{PLURAL:$4|ha enviado un mensaje a |ha enviado mensajes a}} $3',
@@ -489,5 +494,25 @@ $messages['te'] = array(
 	'useractivity-group-comment' => '{{PLURAL:$1|ఒక వ్యాఖ్య|$1 వ్యాఖ్యలు}}',
 	'useractivity-group-user_message' => '{{PLURAL:$1|ఒక సందేశం|$1 సందేశాలు}}',
 	'useractivity-group-friend' => '{{PLURAL:$1|ఒక స్నేహితుడు|$1 స్నేహితులు}}',
+);
+
+/** Simplified Chinese (‪中文(简体)‬)
+ * @author Gaoxuewei
+ */
+$messages['zh-hans'] = array(
+	'useractivity' => '好友动态',
+	'useractivity-award' => '$1获得了一个奖励',
+	'useractivity-all' => '查看全部',
+	'useractivity-edit' => '$1{{PLURAL:$4|编辑了页面|编辑了如下页面：}}$3',
+	'useractivity-foe' => '$1{{PLURAL:$2|现在与|现在与}}$3成为仇敌',
+	'useractivity-friend' => '$1{{PLURAL:$2|现在与|现在与}}$3成为好友',
+	'useractivity-gift' => '$1收到了一份来自$2的礼物',
+	'useractivity-group-edit' => '{{PLURAL:$1|1次编辑|$1次编辑}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|1个评论|$1个评论}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|1条留言|$1条留言}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|1位好友|$1位好友}}',
+	'useractivity-siteactivity' => '站点动态',
+	'useractivity-title' => '好友动态',
+	'useractivity-user_message' => '$1向$3{{PLURAL:$4|发送了1条信息|发送了信息}}',
 );
 
