@@ -6949,6 +6949,8 @@ Vi kommer skicka $1 ett meddelande för att bekräfta vänskapet.',
 	'ur-add-button-friend' => 'Lägg till som vän',
 	'ur-add-sent-title-foe' => 'Vi har skickat din fiendeförfrågan till $1!',
 	'ur-add-sent-title-friend' => 'Vi har skickat din vänskapsförfrågning till $1!',
+	'ur-add-sent-message-foe' => 'Din fiendeförfrågan har skickats till $1 för bekräftelse.
+Om $1 bekräftar din förfrågan kommer du att få ett e-post meddelande',
 	'ur-add-sent-message-friend' => 'Din vänskaps begäran har skickats till $1 för godkännande.
 Om $1 godkänner din begäran kommer du få ett uppföljningsmeddelande',
 	'ur-add-error-message-no-user' => 'Användaren du prövade att lägga till finns inte.',
@@ -6959,6 +6961,8 @@ Om $1 godkänner din begäran kommer du få ett uppföljningsmeddelande',
 	'ur-add-error-message-pending-request-title' => 'Var tålmodig...',
 	'ur-add-error-message-pending-friend-request' => 'Du har en väntande vänförfrågan hos $1.
 Vi kommer ge dig ett besked när $1 bekräftar din begäran.',
+	'ur-add-error-message-pending-foe-request' => 'Du har en väntande fiendeförfrågan hos $1.
+Vi kommer ge dig besked när $1 bekräftar din begäran.',
 	'ur-add-error-message-not-loggedin-foe' => 'Du måste vara inloggad för att lägga till en fiende',
 	'ur-add-error-message-not-loggedin-friend' => 'Du måste vara inloggad för att lägga till en vän',
 	'ur-requests-title' => 'Relationsefterfrågningar',

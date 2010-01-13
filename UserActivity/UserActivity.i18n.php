@@ -471,6 +471,8 @@ $messages['ru'] = array(
  * @author Per
  */
 $messages['sv'] = array(
+	'useractivity' => 'Vänners aktivitet',
+	'useractivity-award' => '$1 {{PLURAL:$4|skickade ett meddelande till|skickade meddelanden till}} $3',
 	'useractivity-all' => 'Visa alla',
 	'useractivity-foe' => '$1 {{PLURAL:$2|är nu en fiende till|är nu fiender till}} $3',
 	'useractivity-friend' => '$1 {{PLURAL:$2|är nu en vän med|är nu vänner med}} $3',

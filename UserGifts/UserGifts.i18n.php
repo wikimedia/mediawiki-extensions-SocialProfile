@@ -4077,6 +4077,9 @@ Den kommer också att raderas från de användare som har fått den.',
 	'g-gift' => 'present',
 	'g-gift-name' => 'presentnamn',
 	'g-give-gift' => 'Ge en present',
+	'g-give-all' => 'Vill du ge $1 en present?
+Klicka bara på en av presenterna nedan och sedan på "Skicka present"
+Så enkelt är det.',
 	'g-give-all-message-title' => 'Lägg till ett meddelande',
 	'g-give-all-title' => 'Ge en present till $1',
 	'g-give-enter-friend-title' => 'Om du vet namnet på användaren, skriv in det här nedanför',

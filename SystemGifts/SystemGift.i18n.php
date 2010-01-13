@@ -2606,6 +2606,7 @@ $messages['sv'] = array(
 	'ga-error-message-no-user' => 'Användaren du försöker titta på existerar inte.',
 	'ga-error-title' => 'Oj, du gick visst fel!',
 	'ga-gift' => 'present',
+	'ga-gift-given-count' => 'Presenten har delats ut $1 {{PLURAL:$1|gång|gånger}}',
 	'ga-gift-title' => '$1s "$2"',
 	'ga-giftdesc' => 'beskrivning av present',
 	'ga-giftimage' => 'presentbild',
