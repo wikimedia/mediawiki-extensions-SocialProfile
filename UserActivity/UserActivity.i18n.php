@@ -274,6 +274,16 @@ $messages['hsb'] = array(
 	'useractivity-user_message' => '$1 {{PLURAL:$4|pósła powěsć na|pósła powěsći na|pósła powěsć na|pósła powěsće na}} $3',
 );
 
+/** Hungarian (Magyar)
+ * @author Glanthor Reviol
+ */
+$messages['hu'] = array(
+	'useractivity-award' => '$1 kapott egy díjat',
+	'useractivity-all' => 'Összes megjelenítése',
+	'useractivity-gift' => '$1 ajándékot kapott $2 felhasználótól',
+	'useractivity-group-edit' => '{{PLURAL:$1|egy szerkesztés|$1 szerkesztés}}',
+);
+
 /** Japanese (日本語)
  * @author Hosiryuhosi
  * @author 青子守歌
