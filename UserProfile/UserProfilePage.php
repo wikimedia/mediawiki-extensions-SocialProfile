@@ -218,10 +218,22 @@ class UserProfilePage extends Article {
 		}
 		$profile_data = $this->profile_data;
 
+		$defaultCountry = wfMsgForContent( 'user-profile-default-country' );
+
 		$location = $profile_data['location_city'] . ', ' . $profile_data['location_state'];
-		if ( $profile_data['location_country'] != 'United States' ) {
-			$location = '';
-			$location .= $profile_data['location_country'];
+		if ( $profile_data['location_country'] != $defaultCountry ) {
+			if ( $profile_data['location_city'] && $profile_data['location_state'] ) { // city AND state
+				$location = $profile_data['location_city'] . ', ' .
+							$profile_data['location_state'] . ', ' .
+							$profile_data['location_country'];
+			} elseif ( $profile_data['location_city'] && !$profile_data['location_state'] ) { // city, but no state
+				$location = $profile_data['location_city'] . ', ' . $profile_data['location_country'];
+			} elseif ( $profile_data['location_state'] && !$profile_data['location_city'] ) { // state, but no city
+				$location = $profile_data['location_state'] . ', ' . $profile_data['location_country'];
+			} else {
+				$location = '';
+				$location .= $profile_data['location_country'];
+			}
 		}
 
 		if ( $location == ', ' ) {
@@ -229,10 +241,21 @@ class UserProfilePage extends Article {
 		}
 
 		$hometown = $profile_data['hometown_city'] . ', ' . $profile_data['hometown_state'];
-		if ( $profile_data['hometown_country'] != 'United States' ) {
-			$hometown = '';
-			$hometown .= $profile_data['hometown_country'];
+		if ( $profile_data['hometown_country'] != $defaultCountry ) {
+			if ( $profile_data['hometown_city'] && $profile_data['hometown_state'] ) { // city AND state
+				$hometown = $profile_data['hometown_city'] . ', ' .
+							$profile_data['hometown_state'] . ', ' .
+							$profile_data['hometown_country'];
+			} elseif ( $profile_data['hometown_city'] && !$profile_data['hometown_state'] ) { // city, but no state
+				$hometown = $profile_data['hometown_city'] . ', ' . $profile_data['hometown_country'];
+			} elseif ( $profile_data['hometown_state'] && !$profile_data['hometown_city'] ) { // state, but no city
+				$hometown = $profile_data['hometown_state'] . ', ' . $profile_data['hometown_country'];
+			} else {
+				$hometown = '';
+				$hometown .= $profile_data['hometown_country'];
+			}
 		}
+
 		if ( $hometown == ', ' ) {
 			$hometown = '';
 		}
