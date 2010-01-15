@@ -498,6 +498,7 @@ $messages['bs'] = array(
 	'userboard_nomessages' => 'Nema poruka.',
 	'userboard_sendbutton' => 'pošalji',
 	'userboard_loggedout' => 'Morate biti <a href="$1">prijavljeni</a> da biste mogli slati poruke drugim korisnicima.',
+	'userboard_showingmessages' => 'Prikazujem {{PLURAL:$4|poruku $3|poruke $2-$3}} od {{PLURAL:$1|$1 poruku|$1 poruke|$1 poruka}}',
 	'userboard-time-days' => '{{PLURAL:$1|jedan dan|$1 dana}}',
 	'userboard-time-hours' => '{{PLURAL:$1|jedan sat|$1 sata|$1 sati}}',
 	'userboard-time-minutes' => '{{PLURAL:$1|jedna minuta|$1 minute|$1 minuta}}',
