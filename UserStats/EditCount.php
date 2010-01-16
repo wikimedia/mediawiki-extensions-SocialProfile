@@ -35,13 +35,14 @@ function removeDeletedEdits( &$article, &$user, &$reason ) {
 		in_array( $wgTitle->getNamespace(), $wgNamespacesForEditPoints )
 	) {
 		$dbr = wfGetDB( DB_MASTER );
-		$res = $dbr->select( 'revision',
+		$res = $dbr->select(
+			'revision',
 			array( 'rev_user_text', 'rev_user', 'COUNT(*) AS the_count' ),
 			array( 'rev_page' => $article->getID(), 'rev_user <> 0' ),
 			__METHOD__,
 			array( 'GROUP BY' => 'rev_user_text' )
 		);
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			$stats = new UserStatsTrack( $row->rev_user, $row->rev_user_text );
 			$stats->decStatField( 'edit', $row->the_count );
 		}
@@ -61,13 +62,14 @@ function restoreDeletedEdits( &$title, $new ) {
 		in_array( $title->getNamespace(), $wgNamespacesForEditPoints )
 	) {
 		$dbr = wfGetDB( DB_MASTER );
-		$res = $dbr->select( 'revision',
+		$res = $dbr->select(
+			'revision',
 			array( 'rev_user_text', 'rev_user', 'COUNT(*) AS the_count' ),
 			array( 'rev_page' => $title->getArticleID(), 'rev_user <> 0' ),
 			__METHOD__,
 			array( 'GROUP BY' => 'rev_user_text' )
 		);
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			$stats = new UserStatsTrack( $row->rev_user, $row->rev_user_text );
 			$stats->incStatField( 'edit', $row->the_count );
 		}

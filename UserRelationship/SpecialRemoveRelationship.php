@@ -59,9 +59,9 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 		$out = '';
 		if ( $wgUser->getID() == $this->user_id_to ) {
 			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
-			$out .= '<div class="relationship-error-message">
-				' . wfMsg( 'ur-remove-error-message-remove-yourself' ) . '
-			</div>
+			$out .= '<div class="relationship-error-message">'
+				. wfMsg( 'ur-remove-error-message-remove-yourself' ) .
+			'</div>
 			<div>
 				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" size="20" onclick=\'window.location="index.php?title=' . wfMsgForContent( 'mainpage' ) . '"\' />';
 			if ( $wgUser->isLoggedIn() ) {
@@ -72,9 +72,9 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			$wgOut->addHTML( $out );
 		} elseif ( $this->relationship_type == false ) {
 			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
-			$out .= '<div class="relationship-error-message">
-				' . wfMsg( 'ur-remove-error-message-no-relationship', $this->user_name_to ) . '
-			</div>
+			$out .= '<div class="relationship-error-message">'
+				. wfMsg( 'ur-remove-error-message-no-relationship', $this->user_name_to ) .
+			'</div>
 			<div>
 				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" size="20" onclick=\'window.location="index.php?title="' . wfMsgForContent( 'mainpage' ) . '"\' />';
 			if ( $wgUser->isLoggedIn() ) {
@@ -98,9 +98,9 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			$wgOut->addHTML( $out );
 		} elseif ( $wgUser->getID() == 0 ) {
 			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
-			$out .= '<div class="relationship-error-message">
-				' . $error . '
-			</div>
+			$out .= '<div class="relationship-error-message">'
+				. $error .
+			'</div>
 			<div>
 				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" size="20" onclick=\'window.location="index.php?title="' . wfMsgForContent( 'mainpage' ) . '"\' />';
 			if ( $wgUser->isLoggedIn() ) {
@@ -162,8 +162,8 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 		$form .= "<form action=\"\" method=\"post\" enctype=\"multipart/form-data\" name=\"form1\">
 			<div class=\"relationship-action\">
 			{$avatar_img}
-			" . $remove . '
-			<div class="relationship-buttons">
+			" . $remove .
+			'<div class="relationship-buttons">
 				<input type="hidden" name="user" value="' . addslashes( $this->user_name_to ) . '" />
 				<input type="button" class="site-button" value="' . wfMsg( 'ur-remove' ) . '" size="20" onclick="document.form1.submit()" />
 				<input type="button" class="site-button" value="' . wfMsg( 'ur-cancel' ) . '" size="20" onclick="history.go(-1)" />

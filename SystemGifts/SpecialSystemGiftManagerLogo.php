@@ -204,7 +204,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			if ( ( $this->mUploadSize > 102400 ) ) {
 				# TODO: Format $wgUploadSizeWarning to something that looks better than the raw byte
 				# value, perhaps add GB,MB and KB suffixes?
-				$warning .= '<li>' . wfMsg( 'largefile',	102400, $this->mUploadSize ) . '</li>';
+				$warning .= '<li>' . wfMsg( 'largefile', 102400, $this->mUploadSize ) . '</li>';
 			}
 			if ( $this->mUploadSize == 0 ) {
 				$warning .= '<li>' . wfMsg( 'emptyfile' ) . '</li>';

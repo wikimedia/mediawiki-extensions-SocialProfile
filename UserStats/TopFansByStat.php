@@ -64,7 +64,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 				__METHOD__,
 				$params
 			);
-			while ( $row = $dbr->fetchObject( $res ) ) {
+			foreach ( $res as $row ) {
 				$user_list[] = array(
 					'user_id' => $row->stats_user_id,
 					'user_name' => $row->stats_user_name,
@@ -130,12 +130,12 @@ class TopFansByStat extends UnlistedSpecialPage {
 			$out .= '<div class="top-fan-row">
 				<span class="top-fan-num">' . $x . '.</span>
 				<span class="top-fan">
-				<img src="' . $wgUploadPath . '/avatars/' . $commentIcon . '" alt="" border="" />
-				<a href="' . $user_title->escapeFullURL() . '">' . $user_name . '</a>
+					<img src="' . $wgUploadPath . '/avatars/' . $commentIcon . '" alt="" border="" />
+					<a href="' . $user_title->escapeFullURL() . '">' . $user_name . '</a>
 				</span>
-				<span class="top-fan-points"><b>' . $statistics_row . '</b> ' . $lowercase_statistics_name . '</span>';
-			$out .= '<div class="cleared"></div>';
-			$out .= '</div>';
+				<span class="top-fan-points"><b>' . $statistics_row . '</b> ' . $lowercase_statistics_name . '</span>
+				<div class="cleared"></div>
+			</div>';
 			$x++;
 		}
 		$out .= '</div><div class="cleared"></div>';

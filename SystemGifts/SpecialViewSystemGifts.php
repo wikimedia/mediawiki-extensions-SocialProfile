@@ -78,13 +78,13 @@ class ViewSystemGifts extends SpecialPage {
 		 */
 		$output .= $wgOut->setPageTitle( wfMsg( 'ga-title', $rel->user_name ) );
 
-		$output .= '<div class="back-links">
-			' . wfMsg( 'ga-back-link', $wgUser->getUserPage()->escapeFullURL(), $rel->user_name ) . '
-		</div>';
+		$output .= '<div class="back-links">'
+			. wfMsg( 'ga-back-link', $wgUser->getUserPage()->escapeFullURL(), $rel->user_name ) .
+		'</div>';
 
-		$output .= '<div class="ga-count">
-			' . wfMsgExt( 'ga-count', 'parsemag', $rel->user_name, $total ) . '
-		</div>';
+		$output .= '<div class="ga-count">'
+			. wfMsgExt( 'ga-count', 'parsemag', $rel->user_name, $total ) .
+		'</div>';
 
 		// Safelinks
 		$view_system_gift_link = SpecialPage::getTitleFor( 'ViewSystemGift' );

@@ -78,9 +78,9 @@ class SpecialViewRelationships extends SpecialPage {
 		 */
 		if ( $user_id == 0 ) {
 			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
-			$out .= '<div class="relationship-error-message">
-				' . wfMsg( 'ur-error-message-no-user' ) . '
-			</div>
+			$out .= '<div class="relationship-error-message">'
+				. wfMsg( 'ur-error-message-no-user' ) .
+			'</div>
 			<div class="relationship-request-buttons">
 				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" onclick=\'window.location="index.php?title=' . wfMsgForContent( 'mainpage' ) . '"\' />';
 				if ( $wgUser->isLoggedIn() ) {
@@ -169,7 +169,7 @@ class SpecialViewRelationships extends SpecialPage {
 						'<a href="' . $add_relationship_link->escapeFullURL( 'user=' . $user_safe . '&rel_type=2' ) . '">' . wfMsg( 'ur-add-foe' ) . '</a>',
 						''
 					) );
-				} else if ( $user_name == $wgUser->getName() ) {
+				} elseif ( $user_name == $wgUser->getName() ) {
 					$output .= '<a href="' . $remove_relationship_link->escapeFullURL( 'user=' . $user_safe ) . '">' . $rem . '</a>';
 					$output .= wfMsgExt( 'pipe-separator', 'escapenoentities' );
 				}
@@ -201,9 +201,15 @@ class SpecialViewRelationships extends SpecialPage {
 				$output .= '<a href="' . $page_link->escapeFullURL( 'user=' . $user_name . '&rel_type=' . $rel_type . '&page=' . ( $page - 1 ) ) . '">' . wfMsg( 'ur-previous' ) . '</a> ';
 			}
 
-			if ( ( $total % $per_page ) != 0 ) $numofpages++;
-			if ( $numofpages >= 9 && $page < $total ) $numofpages = 9 + $page;
-			if ( $numofpages >= ( $total / $per_page ) ) $numofpages = ( $total / $per_page ) + 1;
+			if ( ( $total % $per_page ) != 0 ) {
+				$numofpages++;
+			}
+			if ( $numofpages >= 9 && $page < $total ) {
+				$numofpages = 9 + $page;
+			}
+			if ( $numofpages >= ( $total / $per_page ) ) {
+				$numofpages = ( $total / $per_page ) + 1;
+			}
 
 			for ( $i = 1; $i <= $numofpages; $i++ ) {
 				if ( $i == $page ) {

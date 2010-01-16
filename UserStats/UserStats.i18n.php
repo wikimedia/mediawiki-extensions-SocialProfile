@@ -9,7 +9,8 @@
 $messages = array();
 
 /** English
- * @author Wikia, Inc.
+ * @author Aaron Wright
+ * @author David Pean
  */
 $messages['en'] = array(
 	'user-stats-alltime-title' => 'All-time most points',

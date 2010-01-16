@@ -1,6 +1,7 @@
 <?php
-if ( !defined( 'MEDIAWIKI' ) )
+if ( !defined( 'MEDIAWIKI' ) ) {
 	die();
+}
 /**
  * Four classes for tracking users' social activity
  *	UserStatsTrack: main class, used by most other SocialProfile components
@@ -119,13 +120,15 @@ class UserStatsTrack {
 	 */
 	function addStatRecord() {
 		$dbw = wfGetDB( DB_MASTER );
-		$dbw->insert( 'user_stats',
+		$dbw->insert(
+			'user_stats',
 			array(
 				'stats_year_id' => 0,
 				'stats_user_id' => $this->user_id,
 				'stats_user_name' => $this->user_name,
 				'stats_total_points' => 1000
-			), __METHOD__
+			),
+			__METHOD__
 		);
 	}
 
@@ -144,7 +147,8 @@ class UserStatsTrack {
 		global $wgUser, $wgMemc, $wgSystemGifts, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgUserStatsPointValues;
 		if ( !$wgUser->isAllowed( 'bot' ) && !$wgUser->isAnon() && $this->stats_fields[$field] ) {
 			$dbw = wfGetDB( DB_MASTER );
-			$dbw->update( 'user_stats',
+			$dbw->update(
+				'user_stats',
 				array( $this->stats_fields[$field] . '=' . $this->stats_fields[$field] . "+{$val}" ),
 				array( 'stats_user_id' => $this->user_id  ),
 				__METHOD__
@@ -164,7 +168,12 @@ class UserStatsTrack {
 			}
 
 			if ( $wgSystemGifts ) {
-				$s = $dbw->selectRow( 'user_stats', array( $this->stats_fields[$field] ), array( 'stats_user_id' => $this->user_id ), __METHOD__ );
+				$s = $dbw->selectRow(
+					'user_stats',
+					array( $this->stats_fields[$field] ),
+					array( 'stats_user_id' => $this->user_id ),
+					__METHOD__
+				);
 				$stat_field = $this->stats_fields[$field];
 				$field_count = $s->$stat_field;
 
@@ -194,7 +203,8 @@ class UserStatsTrack {
 		global $wgUser, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
 		if ( !$wgUser->isAllowed( 'bot' ) && !$wgUser->isAnon() && $this->stats_fields[$field] ) {
 			$dbw = wfGetDB( DB_MASTER );
-			$dbw->update( 'user_stats',
+			$dbw->update(
+				'user_stats',
 				array( $this->stats_fields[$field] . '=' . $this->stats_fields[$field] . "-{$val}" ),
 				array( 'stats_user_id' => $this->user_id ),
 				__METHOD__
@@ -307,9 +317,11 @@ class UserStatsTrack {
 			$ctgTitle = $ctgTitle->getDBkey();
 			$dbw = wfGetDB( DB_MASTER );
 			$sql = "UPDATE {$dbw->tableName( 'user_stats' )} SET stats_opinions_created=";
-			$sql .= "(SELECT count(*) AS CreatedOpinions FROM {$dbw->tableName( 'page' )} INNER JOIN {$dbw->tableName( 'categorylinks' )} ON page_id = cl_from WHERE  (cl_to) = " . $dbw->addQuotes( $ctgTitle ) . " ";
-			$sql .= ")";
-			$sql .= " WHERE stats_user_id = " . $this->user_id;
+			$sql .= "(SELECT count(*) AS CreatedOpinions FROM {$dbw->tableName( 'page' )}
+						INNER JOIN {$dbw->tableName( 'categorylinks' )} ON page_id = cl_from
+						WHERE (cl_to) = " . $dbw->addQuotes( $ctgTitle ) . ' ';
+			$sql .= ')';
+			$sql .= ' WHERE stats_user_id = ' . $this->user_id;
 
 			$res = $dbw->query( $sql, __METHOD__ );
 
@@ -327,9 +339,9 @@ class UserStatsTrack {
 		$sql = "UPDATE {$dbw->tableName( 'user_stats' )} SET stats_opinions_published = ";
 		$sql .= "(SELECT count(*) AS PromotedOpinions FROM {$dbw->tableName( 'page' )} INNER JOIN {$dbw->tableName( 'categorylinks' )} ON page_id = cl_from
 			INNER JOIN published_page ON page_id=published_page_id
-			WHERE  (cl_to) = " . $dbw->addQuotes( $ctgTitle ) . " AND published_type=1 " . " " . $timeSQL;
-		$sql .= ")";
-		$sql .= " WHERE stats_user_id = " . $this->user_id;
+			WHERE  (cl_to) = " . $dbw->addQuotes( $ctgTitle ) . ' AND published_type=1';
+		$sql .= ')';
+		$sql .= ' WHERE stats_user_id = ' . $this->user_id;
 		$res = $dbw->query( $sql, __METHOD__ );
 
 		$this->clearCache();
@@ -397,7 +409,7 @@ class UserStatsTrack {
 			$dbw = wfGetDB( DB_MASTER );
 			$sql = "UPDATE LOW_PRIORITY {$dbw->tableName( 'user_stats' )} SET stats_referrals_completed=
 					(SELECT COUNT(*) AS thecount FROM {$dbw->tableName( 'user_register_track' )} WHERE
-						ur_user_id_referral = {$this->user_id} AND ur_user_name_referral<>'DNL'
+						ur_user_id_referral = {$this->user_id}
 					)
 				WHERE stats_user_id = {$this->user_id} ";
 
@@ -407,7 +419,8 @@ class UserStatsTrack {
 
 	public function updateWeeklyPoints( $points ) {
 		$dbw = wfGetDB( DB_MASTER );
-		$res = $dbw->select( 'user_points_weekly',
+		$res = $dbw->select(
+			'user_points_weekly',
 			'up_user_id',
 			array( "up_user_id = {$this->user_id}" ),
 			__METHOD__
@@ -417,7 +430,8 @@ class UserStatsTrack {
 		if ( !$row ) {
 			$this->addWeekly();
 		}
-		$dbw->update( 'user_points_weekly',
+		$dbw->update(
+			'user_points_weekly',
 			array( 'up_points=up_points+' . $points ),
 			array( 'up_user_id' => $this->user_id ),
 			__METHOD__
@@ -426,17 +440,20 @@ class UserStatsTrack {
 
 	public function addWeekly() {
 		$dbw = wfGetDB( DB_MASTER );
-		$dbw->insert( 'user_points_weekly',
+		$dbw->insert(
+			'user_points_weekly',
 			array(
 				'up_user_id' => $this->user_id,
 				'up_user_name' => $this->user_name
-			), __METHOD__
+			),
+			__METHOD__
 		);
 	}
 
 	public function updateMonthlyPoints( $points ) {
 		$dbw = wfGetDB( DB_MASTER );
-		$res = $dbw->select( 'user_points_monthly',
+		$res = $dbw->select(
+			'user_points_monthly',
 			'up_user_id',
 			array( "up_user_id = {$this->user_id}" ),
 			__METHOD__
@@ -446,7 +463,8 @@ class UserStatsTrack {
 			$this->addMonthly();
 		}
 
-		$dbw->update( 'user_points_monthly',
+		$dbw->update(
+			'user_points_monthly',
 			array( 'up_points=up_points+' . $points ),
 			array( 'up_user_id' => $this->user_id ),
 			__METHOD__
@@ -455,11 +473,13 @@ class UserStatsTrack {
 
 	public function addMonthly() {
 		$dbw = wfGetDB( DB_MASTER );
-		$dbw->insert( 'user_points_monthly',
+		$dbw->insert(
+			'user_points_monthly',
 			array(
 				'up_user_id' => $this->user_id,
 				'up_user_name' => $this->user_name
-			), __METHOD__
+			),
+			__METHOD__
 		);
 	}
 
@@ -483,7 +503,8 @@ class UserStatsTrack {
 		}
 
 		$dbw = wfGetDB( DB_MASTER );
-		$res = $dbw->select( 'user_stats',
+		$res = $dbw->select(
+			'user_stats',
 			'*',
 			array( "stats_user_id = {$this->user_id}" ),
 			__METHOD__
@@ -511,7 +532,8 @@ class UserStatsTrack {
 				}
 			}
 
-			$dbw->update( 'user_stats',
+			$dbw->update(
+				'user_stats',
 				array( 'stats_total_points' => $new_total_points ),
 				array( 'stats_user_id' => $this->user_id ),
 				__METHOD__
@@ -779,8 +801,14 @@ class UserLevel {
 	public function getLevelName() { return $this->level_name; }
 	public function getLevelNumber() { return $this->level_number; }
 	public function getNextLevelName() { return $this->next_level_name; }
-	public function getPointsNeededToAdvance() { return number_format( $this->next_level_points_needed ); }
-	public function getLevelMinimum() { return $this->levels[$this->level_name]; }
+
+	public function getPointsNeededToAdvance() {
+		return number_format( $this->next_level_points_needed );
+	}
+
+	public function getLevelMinimum() {
+		return $this->levels[$this->level_name];
+	}
 }
 
 /**
@@ -819,7 +847,8 @@ class UserEmailTrack {
 	public function track_email( $type, $count, $page_title = '' ) {
 		if ( $this->user_id > 0 ) {
 			$dbw = wfGetDB( DB_MASTER );
-			$dbw->insert( 'user_email_track',
+			$dbw->insert(
+				'user_email_track',
 				array(
 					'ue_user_id' => $this->user_id,
 					'ue_user_name' => $this->user_name,
@@ -827,7 +856,8 @@ class UserEmailTrack {
 					'ue_count' => $count,
 					'ue_page_title' => $page_title,
 					'ue_date' => date( 'Y-m-d H:i:s' ),
-				), __METHOD__
+				),
+				__METHOD__
 			);
 		}
 	}

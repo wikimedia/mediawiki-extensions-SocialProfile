@@ -47,13 +47,15 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 		$this->user_name_to = $usertitle->getText();
 		$this->user_id_to = User::idFromName( $this->user_name_to );
 		$this->relationship_type = $wgRequest->getVal( 'rel_type' );
-		if ( !$this->relationship_type || !is_numeric( $this->relationship_type ) ) $this->relationship_type = 1;
+		if ( !$this->relationship_type || !is_numeric( $this->relationship_type ) ) {
+			$this->relationship_type = 1;
+		}
 
 		if ( ( $wgUser->getID() == $this->user_id_to ) && ( $wgUser->getID() != 0 ) ) {
 			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
-			$out .= '<div class="relationship-error-message">
-				' . wfMsg( 'ur-add-error-message-yourself' ) . '
-			</div>
+			$out .= '<div class="relationship-error-message">'
+				. wfMsg( 'ur-add-error-message-yourself' ) .
+			'</div>
 			<div>
 				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" size="20" onclick=\'window.location="index.php?title="' . wfMsgForContent( 'mainpage' ) . '"\' />';
 			 	if ( $wgUser->isLoggedIn() ) {
@@ -65,9 +67,9 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 
 		} elseif ( $wgUser->isBlocked() ) {
 			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
-			$out .= '<div class="relationship-error-message">
-				' . wfMsg( 'ur-add-error-message-blocked' ) . '
-			</div>
+			$out .= '<div class="relationship-error-message">'
+				. wfMsg( 'ur-add-error-message-blocked' ) .
+			'</div>
 			<div>
 				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" size="20" onclick=\'window.location="index.php?title="' . wfMsgForContent( 'mainpage' ) . '"\' />';
 			 	if ( $wgUser->isLoggedIn() ) {
@@ -79,9 +81,9 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 
 		} elseif ( $this->user_id_to == 0 ) {
 			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
-			$out .= '<div class="relationship-error-message">
-				' . wfMsg( 'ur-add-error-message-no-user' ) . '
-			</div>
+			$out .= '<div class="relationship-error-message">'
+				. wfMsg( 'ur-add-error-message-no-user' ) .
+			'</div>
 			<div>
 				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" size="20" onclick=\'window.location="index.php?title="' . wfMsgForContent( 'mainpage' ) . '"\' />';
 				if ( $wgUser->isLoggedIn() ) {
@@ -155,9 +157,9 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 
 			$out = '';
 			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
-			$out .= '<div class="relationship-error-message">
-				' . $error . '
-			</div>
+			$out .= '<div class="relationship-error-message">'
+				. $error .
+			'</div>
 			<div>
 				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" size="20" onclick=\'window.location="index.php?title="' . wfMsgForContent( 'mainpage' ) . '"\' />
 				<input type="button" class="site-button" value="' . wfMsg( 'ur-login' ) . '" size="20" onclick="window.location=\'' . $login_link->escapeFullURL() . '\'" />';
@@ -230,12 +232,12 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 		$form .= "<form action=\"\" method=\"post\" enctype=\"multipart/form-data\" name=\"form1\">
 			<div class=\"relationship-action\">
 			{$avatar_img}
-			" . $add . '
-			<div class="cleared"></div>
+			" . $add .
+			'<div class="cleared"></div>
 			</div>
-			<div class="relationship-textbox-title">
-			' . wfMsg( 'ur-add-personal-message' ) . '
-			</div>
+			<div class="relationship-textbox-title">'
+			. wfMsg( 'ur-add-personal-message' ) .
+			'</div>
 			<textarea name="message" id="message" rows="3" cols="50"></textarea>
 			<div class="relationship-buttons">
 				<input type="button" class="site-button" value="' . $button . '" size="20" onclick="document.form1.submit()" />

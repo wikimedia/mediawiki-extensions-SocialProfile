@@ -25,7 +25,9 @@ class TopFansRecent extends UnlistedSpecialPage {
 		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStats/TopList.css' );
 		$period = $wgRequest->getVal( 'period' );
 
-		if ( !$period ) $period = 'weekly';
+		if ( !$period ) {
+			$period = 'weekly';
+		}
 
 		if ( $period == 'weekly' ) {
 			$wgOut->setPageTitle( wfMsg( 'user-stats-weekly-title' ) );
@@ -56,7 +58,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 				__METHOD__,
 				$params
 			);
-			while ( $row = $dbr->fetchObject( $res ) ) {
+			foreach ( $res as $row ) {
 				$user_list[] = array(
 					'user_id' => $row->up_user_id,
 					'user_name' => $row->up_user_name,
@@ -67,8 +69,8 @@ class TopFansRecent extends UnlistedSpecialPage {
 		}
 
 		// Top nav bar
-		$top_title = Title::makeTitle( NS_SPECIAL, 'TopUsers' );
-		$recent_title = Title::makeTitle( NS_SPECIAL, 'TopUsersRecent' );
+		$top_title = SpecialPage::getTitleFor( 'TopUsers' );
+		$recent_title = SpecialPage::getTitleFor( 'TopUsersRecent' );
 
 		$out .= '<div class="top-fan-nav">
 			<h1>' . wfMsg( 'top-fans-by-points-nav-header' ) . '</h1>
@@ -114,8 +116,8 @@ class TopFansRecent extends UnlistedSpecialPage {
 			$out .= '<div class="top-fan-row">
 				<span class="top-fan-num">' . $x . '.</span>
 				<span class="top-fan">
-				<img src="' . $wgUploadPath . '/avatars/' . $commentIcon . '" alt="" border="" />
-				<a href="' . $user_title->escapeFullURL() . '" >' . $user['user_name'] . '</a>
+					<img src="' . $wgUploadPath . '/avatars/' . $commentIcon . '" alt="" border="" />
+					<a href="' . $user_title->escapeFullURL() . '" >' . $user['user_name'] . '</a>
 				</span>';
 
 			$out .= '<span class="top-fan-points"><b>' . number_format( $user['points'] ) . '</b> ' . wfMsg( 'top-fans-points' ) . '</span>';

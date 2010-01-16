@@ -41,8 +41,8 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 			array( 'GROUP BY' => 'rev_user_text' ),
 			array( 'page' => array( 'INNER JOIN', 'page_id = rev_page' ) )
 		);
-		while ( $row = $dbw->fetchObject( $res ) ) {
 
+		foreach ( $res as $row ) {
 			$user = User::newFromId( $row->rev_user );
 			$user->loadFromId();
 
@@ -59,18 +59,21 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 				__METHOD__
 			);
 			if ( !$s->stats_user_id ) {
-				$dbw->insert( 'user_stats',
+				$dbw->insert(
+					'user_stats',
 					array(
 						'stats_year_id' => 0,
 						'stats_user_id' => $row->rev_user,
 						'stats_user_name' => $row->rev_user_text,
 						'stats_total_points' => 1000
-					), __METHOD__
+					),
+					__METHOD__
 				);
 			}
 			$wgOut->addHTML( "<p>Updating {$row->rev_user_text} with {$edit_count} edits</p>" );
 
-			$dbw->update( 'user_stats',
+			$dbw->update(
+				'user_stats',
 				array( 'stats_edit_count = ' . $edit_count ),
 				array( 'stats_user_id' => $row->rev_user ),
 				__METHOD__
@@ -80,7 +83,6 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 			// clear stats cache for current user
 			$key = wfMemcKey( 'user', 'stats', $row->rev_user );
 			$wgMemc->delete( $key );
-
 		}
 	}
 
@@ -97,14 +99,15 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 		global $wgUserLevels;
 		$wgUserLevels = '';
 
-		$res = $dbr->select( 'user_stats',
+		$res = $dbr->select(
+			'user_stats',
 			array( 'stats_user_id', 'stats_user_name', 'stats_total_points' ),
 			array(),
 			__METHOD__,
 			array( 'ORDER BY' => 'stats_user_name' )
 		);
 		$out = '';
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			$x++;
 			$stats = new UserStatsTrack( $row->stats_user_id, $row->stats_user_name );
 			$stats->updateTotalPoints();

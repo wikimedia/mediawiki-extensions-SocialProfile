@@ -50,7 +50,7 @@ class TopUsersPoints extends SpecialPage {
 				$params
 			);
 			$loop = 0;
-			while ( $row = $dbr->fetchObject( $res ) ) {
+			foreach ( $res as $row ) {
 				$user = User::newFromId( $row->stats_user_id );
 				if ( !$user->isBlocked() ) {
 					$user_list[] = array(
@@ -60,12 +60,14 @@ class TopUsersPoints extends SpecialPage {
 					);
 					$loop++;
 				}
-				if ( $loop >= 50 ) break;
+				if ( $loop >= 50 ) {
+					break;
+				}
 			}
 			$wgMemc->set( $key, $user_list, 60 * 5 );
 		}
 
-		$recent_title = Title::makeTitle( NS_SPECIAL, 'TopUsersRecent' );
+		$recent_title = SpecialPage::getTitleFor( 'TopUsersRecent' );
 
 		$out = '<div class="top-fan-nav">
 			<h1>' . wfMsg( 'top-fans-by-points-nav-header' ) . '</h1>
@@ -80,7 +82,7 @@ class TopUsersPoints extends SpecialPage {
 		}
 
 		// Build nav of stats by category based on MediaWiki:Topfans-by-category
-		$by_category_title = Title::makeTitle( NS_SPECIAL, 'TopFansByStatistic' );
+		$by_category_title = SpecialPage::getTitleFor( 'TopFansByStatistic' );
 
 		$lines = explode( "\n", wfMsgForContent( 'topfans-by-category' ) );
 
@@ -95,7 +97,7 @@ class TopUsersPoints extends SpecialPage {
 				$line = explode( '|' , trim( $line, '* ' ), 2 );
 				$stat = $line[0];
 				$link_text = $line[1];
-				$out .= "<p> <a href=\"" . $by_category_title->escapeFullURL( "stat={$stat}" ) . "\">{$link_text}</a></p>";
+				$out .= '<p> <a href="' . $by_category_title->escapeFullURL( "stat={$stat}" ) . "\">{$link_text}</a></p>";
 			}
 		}
 
@@ -121,8 +123,9 @@ class TopUsersPoints extends SpecialPage {
 			}
 
 			$out .= "<div class=\"top-fan-row\">
-				<span class=\"top-fan-num\">{$x}.</span><span class=\"top-fan\">
-				<img src='{$wgUploadPath}/avatars/" . $commentIcon . "' alt='' border='' /> <a href='" . $user_title->escapeFullURL() . "' >" . $user['user_name'] . '</a>
+				<span class=\"top-fan-num\">{$x}.</span>
+				<span class=\"top-fan\">
+					<img src='{$wgUploadPath}/avatars/" . $commentIcon . "' alt='' border='' /> <a href='" . $user_title->escapeFullURL() . "'>" . $user['user_name'] . '</a>
 				</span>';
 
 			$out .= '<span class="top-fan-points"><b>' . number_format( $user['points'] ) . '</b> ' . wfMsg( 'top-fans-points' ) . '</span>';
