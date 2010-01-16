@@ -34,8 +34,8 @@ var replaceSrc = '';
 var oldHtml = '';
 
 function showUploadFrame() {
-	document.getElementById( 'upload-container' ).style['display'] = 'block';
-	document.getElementById( 'upload-container' ).style['visibility'] = 'visible';
+	document.getElementById( 'upload-container' ).style.display = 'block';
+	document.getElementById( 'upload-container' ).style.visibility = 'visible';
 }
 
 function uploadError( message ) {
@@ -43,33 +43,34 @@ function uploadError( message ) {
 	document.getElementById('upload-frame-errors').innerHTML = message;
 	document.getElementById('imageUpload-frame').src = 'index.php?title=Special:MiniAjaxUpload&wpThumbWidth=75';
 
-	document.getElementById( 'upload-container' ).style['display'] = 'block';
-	document.getElementById( 'upload-container' ).style['visibility'] = 'visible';
+	document.getElementById( 'upload-container' ).style.display = 'block';
+	document.getElementById( 'upload-container' ).style.visibility = 'visible';
 }
 
 function textError( message ) {
 	document.getElementById( 'upload-frame-errors' ).innerHTML = message;
-	document.getElementById( 'upload-frame-errors' ).style['display'] = 'block';
-	document.getElementById( 'upload-frame-errors' ).style['visibility'] = 'visible';
+	document.getElementById( 'upload-frame-errors' ).style.display = 'block';
+	document.getElementById( 'upload-frame-errors' ).style.visibility = 'visible';
 }
 
 function completeImageUpload() {
-	document.getElementById( 'upload-frame-errors' ).style['display'] = 'none';
-	document.getElementById( 'upload-frame-errors' ).style['visibility'] = 'hidden';
+	document.getElementById( 'upload-frame-errors' ).style.display = 'none';
+	document.getElementById( 'upload-frame-errors' ).style.visibility = 'hidden';
 	document.getElementById('upload-frame-errors').innerHTML = '';
 	oldHtml = document.getElementById('mini-gallery-' + replaceID).innerHTML;
 
 	for( x = 7; x > 0; x-- ) {
-		document.getElementById('mini-gallery-' + (x) ).innerHTML = document.getElementById('mini-gallery-' + (x-1) ).innerHTML.replace('slideShowLink('+(x-1)+')','slideShowLink('+(x)+')');
+		document.getElementById('mini-gallery-' + ( x ) ).innerHTML =
+			document.getElementById('mini-gallery-' + ( x - 1 ) ).innerHTML.replace( 'slideShowLink(' + ( x - 1 ) + ')','slideShowLink(' + ( x ) + ')' );
 	}
 	document.getElementById('mini-gallery-0').innerHTML = '<a><img height="75" width="75" src="http://images.wikia.com/common/wikiany/images/ajax-loader-white.gif" alt="" /></a>';
 
 	if( document.getElementById( 'no-pictures-containers' ) ) {
-		document.getElementById( 'no-pictures-containers' ).style['display'] = 'none';
-		document.getElementById( 'no-pictures-containers' ).style['visibility'] = 'hidden';
+		document.getElementById( 'no-pictures-containers' ).style.display = 'none';
+		document.getElementById( 'no-pictures-containers' ).style.visibility = 'hidden';
 	}
-	document.getElementById( 'pictures-containers' ).style['display'] = 'block';
-	document.getElementById( 'pictures-containers' ).style['visibility'] = 'visible';
+	document.getElementById( 'pictures-containers' ).style.display = 'block';
+	document.getElementById( 'pictures-containers' ).style.visibility = 'visible';
 }
 
 function uploadComplete( imgSrc, imgName, imgDesc ) {
