@@ -284,6 +284,26 @@ $messages['hu'] = array(
 	'useractivity-group-edit' => '{{PLURAL:$1|egy szerkesztés|$1 szerkesztés}}',
 );
 
+/** Interlingua (Interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'useractivity' => 'Activitate de amicos',
+	'useractivity-award' => '$1 ha recipite un premio',
+	'useractivity-all' => 'Vider toto',
+	'useractivity-edit' => '$1 modificava {{PLURAL:$4|le pagina|le sequente paginas:}} $3',
+	'useractivity-foe' => '$1 es ora {{PLURAL:$2|inimico|inimicos}} de $3',
+	'useractivity-friend' => '$1 es ora {{PLURAL:$2|amico|amicos}} de $3',
+	'useractivity-gift' => '$1 ha recipite un presente de $2',
+	'useractivity-group-edit' => '{{PLURAL:$1|un modification|$1 modificationes}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|un commento|$1 commentos}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|un message|$1 messages}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|un amico|$1 amicos}}',
+	'useractivity-siteactivity' => 'Activitate del sito',
+	'useractivity-title' => 'Activitate de amicos',
+	'useractivity-user_message' => '$1 ha inviate {{PLURAL:$4|un message|messages}} a $3',
+);
+
 /** Japanese (日本語)
  * @author Hosiryuhosi
  * @author 青子守歌
