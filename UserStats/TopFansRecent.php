@@ -23,7 +23,13 @@ class TopFansRecent extends UnlistedSpecialPage {
 
 		// Load CSS
 		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStats/TopList.css' );
-		$period = $wgRequest->getVal( 'period' );
+
+		$periodFromRequest = $wgRequest->getVal( 'period' );
+		if ( $periodFromRequest == 'weekly' ) {
+			$period = 'weekly';
+		} elseif ( $periodFromRequest == 'monthly' ) {
+			$period = 'monthly';
+		}
 
 		if ( !$period ) {
 			$period = 'weekly';
@@ -52,7 +58,8 @@ class TopFansRecent extends UnlistedSpecialPage {
 			$params['LIMIT'] = $count;
 
 			$dbr = wfGetDB( DB_SLAVE );
-			$res = $dbr->select( "user_points_{$period}",
+			$res = $dbr->select(
+				"user_points_{$period}",
 				array( 'up_user_id', 'up_user_name', 'up_points' ),
 				array( 'up_user_id <> 0' ),
 				__METHOD__,
@@ -92,8 +99,8 @@ class TopFansRecent extends UnlistedSpecialPage {
 		if ( count( $lines ) > 0 ) {
 			$out .= '<h1 style="margin-top:15px !important;">' . wfMsg( 'top-fans-by-category-nav-header' ) . '</h1>';
 		}
-		foreach ( $lines as $line ) {
 
+		foreach ( $lines as $line ) {
 			if ( strpos( $line, '*' ) !== 0 ) {
 				continue;
 			} else {

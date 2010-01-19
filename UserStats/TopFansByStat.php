@@ -24,11 +24,10 @@ class TopFansByStat extends UnlistedSpecialPage {
 		// Load CSS
 		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStats/TopList.css' );
 
-		$statistic = $wgRequest->getVal( 'stat' );
-		$column = "stats_{$statistic}";
-		$stat_name_friendly = wfMsg( "top-fans-stats-{$statistic}" );
-
 		$dbr = wfGetDB( DB_SLAVE );
+
+		$statistic = $dbr->strencode( trim( $wgRequest->getVal( 'stat' ) ) );
+		$column = "stats_{$statistic}";
 
 		// Error if the querystring value does not match our stat column
 		if ( !$dbr->fieldExists( 'user_stats', $column ) ) {
@@ -37,8 +36,10 @@ class TopFansByStat extends UnlistedSpecialPage {
 			return false;
 		}
 
+		// Fix i18n message key
+		$fixedStatistic = str_replace( '_', '-', $statistic );
 		// Set page title
-		$wgOut->setPageTitle( wfMsg( 'top-fans-by-category-title', $stat_name_friendly ) );
+		$wgOut->setPageTitle( wfMsg( 'top-fans-by-category-title-' . $fixedStatistic ) );
 
 		$count = 50;
 
@@ -58,7 +59,8 @@ class TopFansByStat extends UnlistedSpecialPage {
 			$params['LIMIT'] = $count;
 
 			$dbr = wfGetDB( DB_SLAVE );
-			$res = $dbr->select( 'user_stats',
+			$res = $dbr->select(
+				'user_stats',
 				array( 'stats_user_id', 'stats_user_name', $column ),
 				array( 'stats_user_id <> 0', "{$column} > 0" ),
 				__METHOD__,
@@ -112,7 +114,11 @@ class TopFansByStat extends UnlistedSpecialPage {
 		$out .= '<div class="top-users">';
 
 		foreach ( $user_list as $user ) {
-			$user_name = ( $user['user_name'] == substr( $user['user_name'] , 0, 22 ) ) ? $user['user_name'] : ( substr( $user['user_name'] , 0, 22 ) . '...' );
+			if ( $user['user_name'] == substr( $user['user_name'], 0, 22 ) ) {
+				$user_name = $user['user_name'];
+			} else {
+				$user_name = substr( $user['user_name'], 0, 22 ) . wfMsg( 'ellipsis' );
+			}
 			$user_title = Title::makeTitle( NS_USER, $user['user_name'] );
 			$avatar = new wAvatar( $user['user_id'], 'm' );
 			$commentIcon = $avatar->getAvatarImage();
@@ -123,8 +129,9 @@ class TopFansByStat extends UnlistedSpecialPage {
 				$statistics_row = number_format( $row->opinion_average, 2 );
 				$lowercase_statistics_name = 'percent';
 			} else {
+				global $wgLang;
 				$statistics_row = number_format( $user['stat'] );
-				$lowercase_statistics_name = strtolower( wfMsgExt( "top-fans-stats-{$statistic}", 'parsemag', $user['stat'] ) );
+				$lowercase_statistics_name = $wgLang->lc( wfMsgExt( "top-fans-stats-{$fixedStatistic}", 'parsemag', $user['stat'] ) );
 			}
 
 			$out .= '<div class="top-fan-row">
