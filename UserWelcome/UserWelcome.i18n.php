@@ -845,7 +845,7 @@ $messages['nds-nl'] = array(
 	'mp-userlevels-link' => "Gebrukersnivo's",
 	'mp-welcome-upload' => 'Bestand toevoegen',
 	'mp-welcome-edit' => 'Bewark',
-	'mp-welcome-points' => '$1 punten',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|punt|punten}}',
 	'mp-welcome-needed-points' => 'Um te promoveren naor <b><a href="$1">$2</a></b> mu-j nog <i>$3</i> {{PLURAL:$3|punte|punten}} verdienen!',
 	'mp-welcome-logged-in' => 'Huj $1',
 	'mp-requests-title' => 'Anvragen',

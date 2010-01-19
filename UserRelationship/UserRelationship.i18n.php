@@ -4724,6 +4724,13 @@ $messages['ml'] = array(
 	'friend_accept_subject' => '{{SITENAME}} സം‌രംഭത്തിലുള്ള താങ്കളുടെ സൗഹൃദ അഭ്യര്‍ത്ഥന $1 സ്വീകരിച്ചു!',
 );
 
+/** Mongolian (Монгол)
+ * @author Chinneeb
+ */
+$messages['mn'] = array(
+	'ur-login' => 'Нэвтрэх',
+);
+
 /** Marathi (मराठी)
  * @author Kaustubh
  * @author Mahitgar
