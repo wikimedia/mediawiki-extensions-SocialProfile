@@ -3329,7 +3329,6 @@ Pursa <a href="$1">aquina</a> p\'abril la tu cuenta, u <a href="$2">aquina</a> p
 /** Finnish (Suomi)
  * @author Cimon Avaro
  * @author Crt
- * @author Jack Phoenix
  * @author Jack Phoenix <jack@countervandalism.net>
  * @author Str4nd
  */
@@ -3437,7 +3436,7 @@ $messages['fi'] = array(
 	'user-profile-personal-websites' => 'Nettisivut',
 	'user-profile-interests-entertainment' => 'Viihde',
 	'user-profile-interests-movies' => 'Elokuvat',
-	'user-profile-interests-tv' => 'tv',
+	'user-profile-interests-tv' => 'TV',
 	'user-profile-interests-music' => 'Musiikki',
 	'user-profile-interests-books' => 'Kirjat',
 	'user-profile-interests-magazines' => 'Lehdet',
