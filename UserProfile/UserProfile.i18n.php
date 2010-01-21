@@ -3329,6 +3329,7 @@ Pursa <a href="$1">aquina</a> p\'abril la tu cuenta, u <a href="$2">aquina</a> p
 /** Finnish (Suomi)
  * @author Cimon Avaro
  * @author Crt
+ * @author Jack Phoenix
  * @author Jack Phoenix <jack@countervandalism.net>
  * @author Str4nd
  */
