@@ -29,17 +29,24 @@ $messages['en'] = array(
 	'useractivity-user_message' => '$1 {{PLURAL:$4|sent a message to|sent messages to}} $3', // Supports GENDER for the sender ($1) as $6 if $1 is one user.
 );
 
+/** Message documentation (Message documentation)
+ * @author EugeneZelenko
+ * @author Naudefj
+ */
 $messages['qqq'] = array(
 	'useractivity-edit' => 'Supports GENDER for the editor ($1) as $6 if $1 is one user.',
 	'useractivity-foe' => 'Supports GENDER for $1 as $6 if $1 is one user.',
 	'useractivity-friend' => 'Supports GENDER for the $1 as $6 if $1 is one user.',
 	'useractivity-gift' => 'Supports GENDER for the editor ($1) as $6 if $1 is one user.',
 	'useractivity-group-edit' => 'Supports GENDER for the one having made edits as $2',
-	'useractivity-group-comment' => 'Supports GENDER for the one having made comments as $2',
-	'useractivity-group-user_message' => 'Supports GENDER for the one having messages as $2',
+	'useractivity-group-comment' => 'Supports GENDER for the one having made comments as $2
+{{Identical|Comment}}',
+	'useractivity-group-user_message' => 'Supports GENDER for the one having messages as $2
+{{Identical|Message}}',
 	'useractivity-group-friend' => 'Supports GENDER for the one having friends as $2',
 	'useractivity-user_message' => 'Supports GENDER for the sender ($1) as $6 if $1 is one user.',
 );
+
 /** Afrikaans (Afrikaans)
  * @author Naudefj
  */
@@ -372,6 +379,13 @@ $messages['mk'] = array(
 	'useractivity-siteactivity' => 'Активност на веб-страницата',
 	'useractivity-title' => 'Активности на пријателите',
 	'useractivity-user_message' => '$1 {{PLURAL:$4|испрати порака на|испрати пораки на}} $3',
+);
+
+/** Mongolian (Монгол)
+ * @author Chinneeb
+ */
+$messages['mn'] = array(
+	'useractivity-group-comment' => '{{PLURAL:$1|нэг сэтгэгдэл|$1 сэтгэгдэл}}',
 );
 
 /** Dutch (Nederlands)
