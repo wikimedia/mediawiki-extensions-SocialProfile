@@ -7316,6 +7316,7 @@ $messages['pdc'] = array(
 	'user-profile-section-preferences' => 'paerseenlich Profil',
 	'user-profile-personal-name' => 'Naame',
 	'user-profile-interests-books' => 'Bicher',
+	'user-profile-picture-large' => 'Gross',
 	'user-profile-picture-small' => 'Glee',
 	'user-page-link' => 'Yuuser-Blatt',
 );

@@ -2043,6 +2043,7 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
  * @author Xqt
  */
 $messages['pdc'] = array(
+	'ga-large' => 'Gross',
 	'ga-new' => 'Nei',
 	'ga-next' => 'Neegscht',
 	'ga-small' => 'Glee',

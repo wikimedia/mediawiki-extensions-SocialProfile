@@ -3165,6 +3165,7 @@ $messages['os'] = array(
  */
 $messages['pdc'] = array(
 	'g-give-separator' => 'odder',
+	'g-large' => 'Gross',
 	'g-main-page' => 'Haaptblatt',
 	'g-new' => 'nei',
 	'g-next' => 'Neegscht',
