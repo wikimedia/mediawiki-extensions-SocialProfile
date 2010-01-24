@@ -542,6 +542,17 @@ $messages['te'] = array(
 	'useractivity-group-friend' => '{{PLURAL:$1|ఒక స్నేహితుడు|$1 స్నేహితులు}}',
 );
 
+/** Turkish (Türkçe)
+ * @author Joseph
+ */
+$messages['tr'] = array(
+	'useractivity' => 'Arkadaşların etkinliği',
+	'useractivity-award' => '$1 bir ödül aldı',
+	'useractivity-all' => 'Hepsini gör',
+	'useractivity-siteactivity' => 'Site etkinliği',
+	'useractivity-title' => 'Arkadaşların etkinliği',
+);
+
 /** Ukrainian (Українська)
  * @author Prima klasy4na
  */
