@@ -83,7 +83,7 @@ class UserActivity {
 			ORDER BY rc_id DESC LIMIT 0," . $this->item_max;
 		$res = $dbr->query( $sql, __METHOD__ );
 
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			// Special pages aren't editable, so ignore them
 			if ( $row->rc_namespace == NS_SPECIAL ) {
 				continue;
@@ -145,7 +145,7 @@ class UserActivity {
 			{$rel_sql} {$user_sql}
 			ORDER BY vote_date DESC LIMIT 0," . $this->item_max;
 		$res = $dbr->query( $sql, __METHOD__ );
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			$username = $row->username;
 			$this->items[] = array(
 				'id' => 0,
@@ -190,7 +190,7 @@ class UserActivity {
 			ORDER BY comment_date DESC LIMIT 0," . $this->item_max;
 
 		$res = $dbr->query( $sql, __METHOD__ );
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			$show_comment = true;
 
 			global $wgFilterComments;
@@ -255,7 +255,7 @@ class UserActivity {
 			{$rel_sql} {$user_sql}
 			ORDER BY ug_id DESC LIMIT 0,{$this->item_max}";
 		$res = $dbr->query( $sql, __METHOD__ );
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			$this->items[] = array(
 				'id' => $row->ug_id,
 				'type' => 'gift-sent',
@@ -292,7 +292,7 @@ class UserActivity {
 			{$rel_sql} {$user_sql}
 			ORDER BY ug_id DESC LIMIT 0,{$this->item_max}";
 		$res = $dbr->query( $sql, __METHOD__ );
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			global $wgUploadPath;
 			$user_title = Title::makeTitle( NS_USER, $row->ug_user_name_to );
 			$user_title_from = Title::makeTitle( NS_USER, $row->ug_user_name_from );
@@ -352,7 +352,7 @@ class UserActivity {
 			{$rel_sql} {$user_sql}
 			ORDER BY sg_id DESC LIMIT 0,{$this->item_max}";
 		$res = $dbr->query( $sql, __METHOD__ );
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			global $wgUploadPath;
 			$user_title = Title::makeTitle( NS_USER, $row->sg_user_name );
 			$system_gift_image = '<img src="' . $wgUploadPath . '/awards/' . SystemGifts::getGiftImage( $row->gift_id, 'm' ) . '" border="0" alt="" />';
@@ -405,7 +405,7 @@ class UserActivity {
 			ORDER BY r_id DESC LIMIT 0,{$this->item_max}";
 		$res = $dbr->query( $sql, __METHOD__ );
 
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			if ( $row->r_type == 1 ) {
 				$r_type = 'friend';
 			} else {
@@ -469,7 +469,7 @@ class UserActivity {
 			ORDER BY ub_id DESC LIMIT 0,{$this->item_max}";
 
 		$res = $dbr->query( $sql, __METHOD__ );
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			// Ignore nonexistent (for example, renamed) users
 			$uid = User::idFromName( $row->ub_user_name );
 			if ( !$uid ) {
@@ -525,7 +525,7 @@ class UserActivity {
 			{$rel_sql} {$user_sql}
 			ORDER BY um_id DESC LIMIT 0,{$this->item_max}";
 		$res = $dbr->query( $sql, __METHOD__ );
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			$user_title = Title::makeTitle( NS_USER, $row->um_user_name );
 			$user_name_short = substr( $row->um_user_name, 0, 15 );
 			if ( $row->um_user_name != $user_name_short ) {
