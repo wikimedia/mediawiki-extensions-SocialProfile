@@ -827,6 +827,7 @@ ja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.',
  * @author Cedric31
  * @author Crochet.david
  * @author Grondin
+ * @author IAlex
  * @author McDutchie
  */
 $messages['fr'] = array(
@@ -840,6 +841,15 @@ $messages['fr'] = array(
 	'top-fans-weekly-points-link' => 'Points de cette semaine',
 	'top-fans-monthly-points-link' => 'Points de ce mois-ci',
 	'top-fans-points' => 'points',
+	'top-fans-by-category-title-edit-count' => 'Meilleur nombre de modifications global',
+	'top-fans-by-category-title-friends-count' => "Meilleur nombre d'amis global",
+	'top-fans-by-category-title-foe-count' => "Meilleur nombre d'ennemis global",
+	'top-fans-by-category-title-gifts-rec-count' => 'Meilleur nombre de cadeaux reçus global',
+	'top-fans-by-category-title-gifts-sent-count' => 'Meilleur nombre de cadeaux envoyés global',
+	'top-fans-by-category-title-vote-count' => 'Meilleur nombre de votes global',
+	'top-fans-by-category-title-comment-count' => 'Meilleur nombre de commentaires global',
+	'top-fans-by-category-title-monthly-winner-count' => 'Meilleur nombre de gains par mois global',
+	'top-fans-by-category-title-weekly-winner-count' => 'Meilleur nombre de gain par semaine global',
 	'top-fans-bad-field-title' => 'Zut !',
 	'top-fans-bad-field-message' => 'La statistique indiquée n’existe pas.',
 	'top-fans-stats-vote-count' => 'Vote{{PLURAL:$1||s}}',
