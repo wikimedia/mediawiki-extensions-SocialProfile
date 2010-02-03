@@ -659,6 +659,15 @@ $messages['id'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1||}}kawan baru',
 );
 
+/** Igbo (Igbo)
+ * @author Ukabia
+ */
+$messages['ig'] = array(
+	'mp-welcome-edit' => 'Rüwa',
+	'mp-welcome-logged-in' => 'Kedú $1',
+	'mp-request-new-message' => 'ókò ohúrù',
+);
+
 /** Ido (Ido)
  * @author Malafaya
  */

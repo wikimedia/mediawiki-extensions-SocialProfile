@@ -5137,6 +5137,13 @@ Klik <a href="$1">di sini</a> untuk masuk log atau klik <a href="$2">di sini</a>
 	'right-avatarremove' => 'Menghapus avatar pengguna',
 );
 
+/** Igbo (Igbo)
+ * @author Ukabia
+ */
+$messages['ig'] = array(
+	'user-contributions' => 'Ihe ndetù bárá úrụ',
+);
+
 /** Italian (Italiano)
  * @author Darth Kule
  */
