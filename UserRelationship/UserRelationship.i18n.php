@@ -3921,6 +3921,14 @@ Klik $4
 dan ubah pengaturan Anda untuk menghentikan pemberitahuan surel.',
 );
 
+/** Igbo (Igbo)
+ * @author Ukabia
+ */
+$messages['ig'] = array(
+	'ur-error-page-title' => 'Ewóo!',
+	'foe_removed_subject' => 'O ho! $1 wefuru gi ka onye iro na {{SITENAME}}!',
+);
+
 /** Ido (Ido)
  * @author Malafaya
  */

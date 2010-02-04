@@ -5141,6 +5141,12 @@ Klik <a href="$1">di sini</a> untuk masuk log atau klik <a href="$2">di sini</a>
  * @author Ukabia
  */
 $messages['ig'] = array(
+	'user-time-ago' => '$1 gafèrè',
+	'user-gifts-title' => 'Onyenyé',
+	'user-count-separator' => '¢1 nke $2',
+	'user-view-all' => 'Hü haníle',
+	'user-upload-avatar' => 'Tinyé éjé gi elú',
+	'user-meet-people' => 'Hü ndi madu',
 	'user-contributions' => 'Ihe ndetù bárá úrụ',
 );
 

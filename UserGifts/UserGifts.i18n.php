@@ -2271,6 +2271,13 @@ dan ubah seting untuk nonaktifkan notifikasi surel.',
 	'right-giftadmin' => 'Buat baru dan sunting hadiah yang sudah ada',
 );
 
+/** Igbo (Igbo)
+ * @author Ukabia
+ */
+$messages['ig'] = array(
+	'g-large' => 'Ukwu',
+);
+
 /** Italian (Italiano)
  * @author Darth Kule
  */

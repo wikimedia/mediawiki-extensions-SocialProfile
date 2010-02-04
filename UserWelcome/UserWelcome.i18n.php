@@ -663,9 +663,10 @@ $messages['id'] = array(
  * @author Ukabia
  */
 $messages['ig'] = array(
+	'mp-welcome-upload' => 'Tinyé elú',
 	'mp-welcome-edit' => 'Rüwa',
 	'mp-welcome-logged-in' => 'Kedú $1',
-	'mp-request-new-message' => 'ókò ohúrù',
+	'mp-request-new-message' => 'ozi ohúrù',
 );
 
 /** Ido (Ido)

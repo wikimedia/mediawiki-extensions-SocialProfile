@@ -1506,6 +1506,13 @@ dan ubah setting anda untuk menonaktifkan notifikasi surel.',
 	'right-awardsmanage' => 'Buat baru dan sunting penghargaan yang ada',
 );
 
+/** Igbo (Igbo)
+ * @author Ukabia
+ */
+$messages['ig'] = array(
+	'ga-small' => 'Ntàkiri',
+);
+
 /** Japanese (日本語)
  * @author Aotake
  * @author Fryed-peach
