@@ -268,6 +268,13 @@ $messages['km'] = array(
 	'yui-desc' => 'ការកំណត់​នៃ​ឧបករណ៍ប្រើប្រាស់ និង​គ្រប់គ្រង ត្រូវ​បាន​សរសេរ​នៅក្នុង JavaScript',
 );
 
+/** Karachay-Balkar (Къарачай-Малкъар)
+ * @author Къарачайлы
+ */
+$messages['krc'] = array(
+	'yui-desc' => 'JavaScript-де джазылгъан интструменле бла джюрютюучю элементлени джыйымы',
+);
+
 /** Ripoarisch (Ripoarisch)
  * @author Purodha
  */
