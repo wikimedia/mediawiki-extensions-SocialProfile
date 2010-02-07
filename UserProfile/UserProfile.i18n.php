@@ -7528,6 +7528,16 @@ Kliknij <a href="$1">tutaj</a> aby się zalogować lub <a href="$2">tutaj</a> je
 	'right-avatarremove' => 'Usuwanie portretów użytkowników',
 );
 
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'populateuserprofiles' => 'Vemp profil utent',
+	'user-time-ago' => '$1 fà',
+	'user-awards-title' => 'Premi',
+	'user-gifts-title' => 'Regaj',
+);
+
 /** Pashto (پښتو)
  * @author Ahmed-Najib-Biabani-Ibrahimkhel
  */

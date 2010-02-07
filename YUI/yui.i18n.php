@@ -269,10 +269,11 @@ $messages['km'] = array(
 );
 
 /** Karachay-Balkar (Къарачай-Малкъар)
+ * @author Iltever
  * @author Къарачайлы
  */
 $messages['krc'] = array(
-	'yui-desc' => 'JavaScript-де джазылгъан интструменле бла джюрютюучю элементлени джыйымы',
+	'yui-desc' => 'JavaScript-де джазылгъан интструментле бла джюрютюучю элементлени джыйымы',
 );
 
 /** Ripoarisch (Ripoarisch)
