@@ -7529,13 +7529,14 @@ Kliknij <a href="$1">tutaj</a> aby się zalogować lub <a href="$2">tutaj</a> je
 );
 
 /** Piedmontese (Piemontèis)
+ * @author Borichèt
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'populateuserprofiles' => 'Vemp profil utent',
-	'user-time-ago' => '$1 fà',
+	'populateuserprofiles' => "Ampinì ij profij d'utent",
+	'user-time-ago' => '$1 fa',
 	'user-awards-title' => 'Premi',
-	'user-gifts-title' => 'Regaj',
+	'user-gifts-title' => 'Cadò',
 );
 
 /** Pashto (پښتو)
