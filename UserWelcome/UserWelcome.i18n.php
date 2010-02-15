@@ -1451,6 +1451,13 @@ $messages['wo'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|xarit bu bees|xarit yu yees}}',
 );
 
+/** Yiddish (ייִדיש)
+ * @author פוילישער
+ */
+$messages['yi'] = array(
+	'mp-welcome-edit' => 'רעדאַקטירן',
+);
+
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Gzdavidwong
  * @author Liangent

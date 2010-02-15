@@ -2466,6 +2466,13 @@ $messages['vo'] = array(
 	'level-advance-subject' => 'Anu binol „$1“ in {{SITENAME}}!',
 );
 
+/** Yiddish (ייִדיש)
+ * @author פוילישער
+ */
+$messages['yi'] = array(
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|רעדאַקטירונג|רעדאַקטירונגען}}',
+);
+
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Liangent
  */
