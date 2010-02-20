@@ -118,7 +118,7 @@ class GiftManager extends SpecialPage {
 		global $wgScriptPath;
 		wfLoadExtensionMessages( 'UserGifts' );
 		$output = ''; // Prevent E_NOTICE
-		// FIXME: undefined variable page
+		$page = 0;
 		$per_page = 10;
 		$gifts = Gifts::getManagedGiftList( $per_page, $page );
 		if ( $gifts ) {
@@ -150,14 +150,13 @@ class GiftManager extends SpecialPage {
 
 		$form .= '<form action="" method="post" enctype="multipart/form-data" name="gift">';
 		$form .= '<table border="0" cellpadding="5" cellspacing="0" width="500">';
-		// FIXME: undefined variable gift (twice)
 		$form .= '<tr>
 		<td width="200" class="view-form">' . wfMsg( 'g-gift-name' ) . '</td>
-		<td width="695"><input type="text" size="45" class="createbox" name="gift_name" value="' . $gift['gift_name'] . '"/></td>
+		<td width="695"><input type="text" size="45" class="createbox" name="gift_name" value="' . ( isset( $gift['gift_name'] ) ? $gift['gift_name'] : '' ) . '"/></td>
 		</tr>
 		<tr>
 		<td width="200" class="view-form" valign="top">' . wfMsg( 'giftmanager-description' ) . '</td>
-		<td width="695"><textarea class="createbox" name="gift_description" rows="2" cols="30">' . $gift['gift_description'] . '</textarea></td>
+		<td width="695"><textarea class="createbox" name="gift_description" rows="2" cols="30">' . ( isset( $gift['gift_description'] ) ? $gift['gift_description'] : '' ) . '</textarea></td>
 		</tr>';
 		if ( $gift_id ) {
 			$creator = Title::makeTitle( NS_USER, $gift['creator_user_name'] );
@@ -186,21 +185,25 @@ class GiftManager extends SpecialPage {
 			$gift_image = '<img src="' . $wgUploadPath . '/awards/' . Gifts::getGiftImage( $gift_id, 'l' ) . '" border="0" alt="' . wfMsg( 'g-gift' ) . '" />';
 			$form .= '<tr>
 			<td width="200" class="view-form" valign="top">' . wfMsg( 'giftmanager-giftimage' ) . '</td>
-			<td width="695">' . $gift_image . '
-			<p>
+			<td width="695">' . $gift_image .
+			'<p>
 			<a href="' . $wgScriptPath . '/index.php?title=Special:GiftManagerLogo&gift_id=' . $gift_id . '">' . wfMsg( 'giftmanager-image' ) . '</a>
 			</td>
 			</tr>';
 		}
 
-		// FIXME: undefined variable gift (twice)
-		$form .= '
-		<tr>
-		<td colspan="2">
-		<input type="hidden" name="id" value="' . $gift['gift_id'] . '" />
-		<input type="button" class="createbox" value="' . ( ( $gift['gift_id'] ) ? wfMsg( 'edit' ) : wfMsg( 'g-create-gift' ) ) . '" size="20" onclick="document.gift.submit()" />
-		<input type="button" class="createbox" value="' . wfMsg( 'cancel' ) . '" size="20" onclick="history.go(-1)" />
-		</td>
+		if ( isset( $gift['gift_id'] ) ) {
+			$button = wfMsg( 'edit' );
+		} else {
+			$button = wfMsg( 'g-create-gift' );
+		}
+
+		$form .= '<tr>
+			<td colspan="2">
+				<input type="hidden" name="id" value="' . ( isset( $gift['gift_id'] ) ? $gift['gift_id'] : '' ) . '" />
+				<input type="button" class="createbox" value="' . $button . '" size="20" onclick="document.gift.submit()" />
+				<input type="button" class="createbox" value="' . wfMsg( 'cancel' ) . '" size="20" onclick="history.go(-1)" />
+			</td>
 		</tr>
 		</table>
 

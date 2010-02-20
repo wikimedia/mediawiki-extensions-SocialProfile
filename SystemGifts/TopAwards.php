@@ -77,31 +77,29 @@ class TopAwards extends UnlistedSpecialPage {
 		$output .= '</div>';
 		$output .= '<div class="top-awards">';
 
-		while ( $row = $dbr->fetchObject( $res ) ) {
-
+		foreach ( $res as $row ) {
 			$user_name = $row->sg_user_name;
 			$user_id = $row->sg_user_id;
 			$avatar = new wAvatar( $user_id, 'm' );
 			$top_gift = $row->top_gift;
 			$gift_name = number_format( $top_gift ) . " {$categories[$category_number][category_name]}" . ( ( $top_gift > 1 ) ? 's' : '' ) . " Milestone";
 
-				if ( $gift_name !== $gift_name_check ) {
-					$x = 1;
-					$output .= "<div class=\"top-award-title\">
-						{$gift_name}
-					</div>";
-				}  else {
-					$x++;
-				}
+			if ( $gift_name !== $gift_name_check ) {
+				$x = 1;
+				$output .= "<div class=\"top-award-title\">
+					{$gift_name}
+				</div>";
+			} else {
+				$x++;
+			}
 
-				$output .= "<div class=\"top-award\">
+			$output .= "<div class=\"top-award\">
 					<span class=\"top-award-number\">{$x}.</span>
 					{$avatar->getAvatarURL()}
 					<a href=\"" . $wgScriptPath . "/index.php?title=User:{$row->sg_user_name}\">{$user_name}</a>
 				</div>";
 
-				$gift_name_check = $gift_name;
-
+			$gift_name_check = $gift_name;
 		}
 
 		$output .= '</div>
