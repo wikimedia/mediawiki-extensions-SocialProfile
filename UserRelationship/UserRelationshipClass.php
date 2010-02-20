@@ -3,7 +3,7 @@
  * Functions for managing relationship data
  */
 class UserRelationship {
-	 /**#@+
+	/**#@+
 	 * @private
 	 */
 	var $user_id;
@@ -24,7 +24,8 @@ class UserRelationship {
 		$user_id_to = User::idFromName( $user_to );
 		$dbw = wfGetDB( DB_MASTER );
 
-		$dbw->insert( 'user_relationship_request',
+		$dbw->insert(
+			'user_relationship_request',
 			array(
 				'ur_user_id_from' => $this->user_id,
 				'ur_user_name_from' => $this->user_name,
@@ -32,21 +33,23 @@ class UserRelationship {
 				'ur_user_name_to' => $user_to,
 				'ur_type' => $type,
 				'ur_message' => $message,
-				'ur_date' => date( "Y-m-d H:i:s" )
+				'ur_date' => date( 'Y-m-d H:i:s' )
 			), __METHOD__
 		);
 		$request_id = $dbw->insertId();
 
 		$this->incNewRequestCount( $user_id_to, $type );
 
-		if ( $email ) $this->sendRelationshipRequestEmail( $user_id_to, $this->user_name, $type );
+		if ( $email ) {
+			$this->sendRelationshipRequestEmail( $user_id_to, $this->user_name, $type );
+		}
 		return $request_id;
 	}
 
 	public function sendRelationshipRequestEmail( $user_id_to, $user_from, $type ) {
 		$user = User::newFromId( $user_id_to );
 		$user->loadFromDatabase();
-		if ( $user->getEmail() && $user->getIntOption( 'notifyfriendrequest', 1 ) ) { // if($user->isEmailConfirmed() && $user->getIntOption("notifyfriendrequest",1)){
+		if ( $user->getEmail() && $user->getIntOption( 'notifyfriendrequest', 1 ) ) {
 			$request_link = SpecialPage::getTitleFor( 'ViewRelationshipRequests' );
 			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
 			if ( $type == 1 ) {
@@ -77,7 +80,7 @@ class UserRelationship {
 	public function sendRelationshipAcceptEmail( $user_id_to, $user_from, $type ) {
 		$user = User::newFromId( $user_id_to );
 		$user->loadFromDatabase();
-		if ( $user->getEmail() && $user->getIntOption( 'notifyfriendrequest', 1 ) ) { // if($user->isEmailConfirmed() && $user->getIntOption("notifyfriendrequest",1)){
+		if ( $user->getEmail() && $user->getIntOption( 'notifyfriendrequest', 1 ) ) {
 			$user_link = Title::makeTitle( NS_USER, $user_from );
 			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
 			if ( $type == 1 ) {
@@ -140,7 +143,8 @@ class UserRelationship {
 		global $wgMemc;
 
 		$dbw = wfGetDB( DB_MASTER );
-		$s = $dbw->selectRow( 'user_relationship_request',
+		$s = $dbw->selectRow(
+			'user_relationship_request',
 			array( 'ur_user_id_from', 'ur_user_name_from', 'ur_type' ),
 			array( 'ur_id' => $relationship_request_id ),
 			__METHOD__
@@ -155,26 +159,30 @@ class UserRelationship {
 				return '';
 			}
 
-			$dbw->insert( 'user_relationship',
+			$dbw->insert(
+				'user_relationship',
 				array(
 					'r_user_id' => $this->user_id,
 					'r_user_name' => $this->user_name,
 					'r_user_id_relation' => $ur_user_id_from,
 					'r_user_name_relation' => $ur_user_name_from,
 					'r_type' => $ur_type,
-					'r_date' => date( "Y-m-d H:i:s" )
-				), __METHOD__
+					'r_date' => date( 'Y-m-d H:i:s' )
+				),
+				__METHOD__
 			);
 
-			$dbw->insert( 'user_relationship',
+			$dbw->insert(
+				'user_relationship',
 				array(
 					'r_user_id' => $ur_user_id_from,
 					'r_user_name' => $ur_user_name_from,
 					'r_user_id_relation' => $this->user_id,
 					'r_user_name_relation' => $this->user_name,
 					'r_type' => $ur_type,
-					'r_date' => date( "Y-m-d H:i:s" )
-				), __METHOD__
+					'r_date' => date( 'Y-m-d H:i:s' )
+				),
+				__METHOD__
 			);
 
 			$stats = new UserStatsTrack( $this->user_id, $this->user_name );
@@ -191,7 +199,9 @@ class UserRelationship {
 				$stats->incStatField( 'foe' );
 			}
 
-			if ( $email ) $this->sendRelationshipAcceptEmail( $ur_user_id_from, $this->user_name, $ur_type );
+			if ( $email ) {
+				$this->sendRelationshipAcceptEmail( $ur_user_id_from, $this->user_name, $ur_type );
+			}
 
 			$wgMemc->delete( wfMemcKey( 'relationship', 'profile', "{$this->user_id}-{$ur_type}" ) );
 			$wgMemc->delete( wfMemcKey( 'relationship', 'profile', "{$ur_user_id_from}-{$ur_type}" ) );
@@ -210,8 +220,16 @@ class UserRelationship {
 		}
 		// must delete record for each user involved in relationship
 		$dbw = wfGetDB( DB_MASTER );
-		$dbw->delete( 'user_relationship', array( 'r_user_id' => $user1, 'r_user_id_relation' => $user2 ), __METHOD__ );
-		$dbw->delete( 'user_relationship', array( 'r_user_id' => $user2, 'r_user_id_relation' => $user1 ), __METHOD__ );
+		$dbw->delete(
+			'user_relationship',
+			array( 'r_user_id' => $user1, 'r_user_id_relation' => $user2 ),
+			__METHOD__
+		);
+		$dbw->delete(
+			'user_relationship',
+			array( 'r_user_id' => $user2, 'r_user_id_relation' => $user1 ),
+			__METHOD__
+		);
 
 		$wgMemc->delete( wfMemcKey( 'relationship', 'profile', "{$user1}-1" ) );
 		$wgMemc->delete( wfMemcKey( 'relationship', 'profile', "{$user2}-1" ) );
@@ -235,12 +253,17 @@ class UserRelationship {
 		$this->decNewRequestCount( $this->user_id, $request[0]['rel_type'] );
 
 		$dbw = wfGetDB( DB_MASTER );
-		$dbw->delete( 'user_relationship_request', array( 'ur_id' => $id ), __METHOD__ );
+		$dbw->delete(
+			'user_relationship_request',
+			array( 'ur_id' => $id ),
+			__METHOD__
+		);
 	}
 
 	public function updateRelationshipRequestStatus( $relationship_request_id, $status ) {
 		$dbw = wfGetDB( DB_MASTER );
-		$dbw->update( 'user_relationship_request',
+		$dbw->update(
+			'user_relationship_request',
 			/* SET */array( 'ur_status' => $status ),
 			/* WHERE */array( 'ur_id' => $relationship_request_id ),
 			__METHOD__
@@ -249,7 +272,12 @@ class UserRelationship {
 
 	public function verifyRelationshipRequest( $relationship_request_id ) {
 		$dbw = wfGetDB( DB_MASTER );
-		$s = $dbw->selectRow( 'user_relationship_request', array( 'ur_user_id_to' ), array( 'ur_id' => $relationship_request_id ), __METHOD__ );
+		$s = $dbw->selectRow(
+			'user_relationship_request',
+			array( 'ur_user_id_to' ),
+			array( 'ur_id' => $relationship_request_id ),
+			__METHOD__
+		);
 		if ( $s !== false ) {
 			if ( $this->user_id == $s->ur_user_id_to ) {
 				return true;
@@ -260,7 +288,12 @@ class UserRelationship {
 
 	static function getUserRelationshipByID( $user1, $user2 ) {
 		$dbw = wfGetDB( DB_MASTER );
-		$s = $dbw->selectRow( 'user_relationship', array( 'r_type' ), array( 'r_user_id' => $user1, 'r_user_id_relation' => $user2 ), __METHOD__ );
+		$s = $dbw->selectRow(
+			'user_relationship',
+			array( 'r_type' ),
+			array( 'r_user_id' => $user1, 'r_user_id_relation' => $user2 ),
+			__METHOD__
+		);
 		if ( $s !== false ) {
 			return $s->r_type;
 		} else {
@@ -270,7 +303,16 @@ class UserRelationship {
 
 	static function userHasRequestByID( $user1, $user2 ) {
 		$dbw = wfGetDB( DB_MASTER );
-		$s = $dbw->selectRow( 'user_relationship_request', array( 'ur_type' ), array( 'ur_user_id_to' => $user1, 'ur_user_id_from' => $user2, 'ur_status' => 0 ), __METHOD__ );
+		$s = $dbw->selectRow(
+			'user_relationship_request',
+			array( 'ur_type' ),
+			array(
+				'ur_user_id_to' => $user1,
+				'ur_user_id_from' => $user2,
+				'ur_status' => 0
+			),
+			__METHOD__
+		);
 		if ( $s === false ) {
 			return false;
 		} else {
@@ -280,12 +322,16 @@ class UserRelationship {
 
 	public function getRequest( $id ) {
 		$dbr = wfGetDB( DB_MASTER );
-		$res = $dbr->select( 'user_relationship_request',
-			array( 'ur_id', 'ur_user_id_from', 'ur_user_name_from', 'ur_type', 'ur_message', 'ur_date' ),
+		$res = $dbr->select(
+			'user_relationship_request',
+			array(
+				'ur_id', 'ur_user_id_from', 'ur_user_name_from', 'ur_type',
+				'ur_message', 'ur_date'
+			),
 			array( "ur_id = {$id}" ),
 			__METHOD__
 		);
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			if ( $row->ur_type == 1 ) {
 				$type_name = 'Friend';
 			} else {
@@ -304,20 +350,32 @@ class UserRelationship {
 	}
 
 	public function getRequestList( $status, $limit = 0 ) {
-		global $wgDBprefix;
 		$dbr = wfGetDB( DB_MASTER );
 
-		$limit_sql = $limit > 0 ? " LIMIT 0,{$limit} " : '';
+		$options = array();
 
-		$sql = "SELECT ur_id, ur_user_id_from, ur_user_name_from, ur_type, ur_message, ur_date
-			FROM " . $wgDBprefix . "user_relationship_request
-			WHERE ur_user_id_to = {$this->user_id} AND ur_status = {$status}
-			{$limit_sql}
-			ORDER BY ur_id DESC";
-		$res = $dbr->query( $sql );
+		if ( $limit > 0 ) {
+			$options['OFFSET'] = 0;
+			$options['LIMIT'] = $limit;
+		}
+
+		$options['ORDER BY'] = 'ur_id DESC';
+		$res = $dbr->select(
+			'user_relationship_request',
+			array(
+				'ur_id', 'ur_user_id_from', 'ur_user_name_from', 'ur_type',
+				'ur_message', 'ur_date'
+			),
+			array(
+				"ur_user_id_to = {$this->user_id}",
+				"ur_status = {$status}"
+			),
+			__METHOD__,
+			$options
+		);
 
 		$requests = array();
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			if ( $row->ur_type == 1 ) {
 				$type_name = 'Friend';
 			} else {
@@ -354,8 +412,19 @@ class UserRelationship {
 		$key = wfMemcKey( 'user_relationship', 'open_request', $rel_type, $user_id );
 		$dbr = wfGetDB( DB_SLAVE );
 		$request_count = 0;
-		$s = $dbr->selectRow( 'user_relationship_request', array( 'count(*) AS count' ), array( 'ur_user_id_to' => $user_id, 'ur_status' => 0, 'ur_type' => $rel_type ), __METHOD__ );
-		if ( $s !== false ) $request_count = $s->count;
+		$s = $dbr->selectRow(
+			'user_relationship_request',
+			array( 'COUNT(*) AS count' ),
+			array(
+				'ur_user_id_to' => $user_id,
+				'ur_status' => 0,
+				'ur_type' => $rel_type
+			),
+			__METHOD__
+		);
+		if ( $s !== false ) {
+			$request_count = $s->count;
+		}
 
 		$wgMemc->set( $key, $request_count );
 
@@ -366,7 +435,6 @@ class UserRelationship {
 		global $wgMemc;
 		$key = wfMemcKey( 'user_relationship', 'open_request', $rel_type, $user_id );
 		$data = $wgMemc->get( $key );
-		// $wgMemc->delete( $key );
 		if ( $data != '' ) {
 			wfDebug( "Got open request count of $data (type={$rel_type}) for id $user_id from cache\n" );
 			return $data;
@@ -377,7 +445,9 @@ class UserRelationship {
 		$data = self::getOpenRequestCountCache( $user_id, $rel_type );
 
 		if ( $data != '' ) {
-			if ( $data == - 1 ) $data = 0;
+			if ( $data == - 1 ) {
+				$data = 0;
+			}
 			$count = $data;
 		} else {
 			$count = self::getOpenRequestCountDB( $user_id, $rel_type );
@@ -388,29 +458,33 @@ class UserRelationship {
 	public function getRelationshipList( $type = 0, $limit = 0, $page = 0 ) {
 		$dbr = wfGetDB( DB_SLAVE );
 
+		$where = array();
+		$options = array();
+		$where['r_user_id'] = $this->user_id;
+		if ( $type ) {
+			$where['r_type'] = $type;
+		}
 		if ( $limit > 0 ) {
 			$limitvalue = 0;
-			if ( $page ) $limitvalue = $page * $limit - ( $limit );
-			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
-		} else {
-			$limit_sql = '';
+			if ( $page ) {
+				$limitvalue = $page * $limit - ( $limit );
+			}
+			$options['LIMIT'] = $limit;
+			$options['OFFSET'] = $limitvalue;
 		}
+		$res = $dbr->select(
+			'user_relationship',
+			array(
+				'r_id', 'r_user_id_relation', 'r_user_name_relation', 'r_date',
+				'r_type'
+			),
+			$where,
+			__METHOD__,
+			$options
+		);
 
-		if ( $type ) {
-			$type_sql = " AND r_type = {$type} ";
-		} else {
-			$type_sql = '';
-		}
-
-		$sql = "SELECT r_id, r_user_id_relation, r_user_name_relation, r_date, r_type
-			FROM {$dbr->tableName( 'user_relationship' )}
-			WHERE r_user_id = {$this->user_id} $type_sql
-			ORDER BY r_user_name_relation
-			{$limit_sql}";
-
-		$res = $dbr->query( $sql );
 		$requests = array();
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			$requests[] = array(
 				'id' => $row->r_id,
 				'timestamp' => ( $row->r_date ),
@@ -426,15 +500,19 @@ class UserRelationship {
 	public function getRelationshipIDs( $type ) {
 		$dbr = wfGetDB( DB_SLAVE );
 
-		$sql = "SELECT r_id, r_user_id_relation, r_user_name_relation, r_date
-			FROM {$dbr->tableName( 'user_relationship' )}
-			WHERE r_user_id = {$this->user_id} AND r_type = {$type}
-			ORDER BY r_user_name_relation
-			{$limit_sql}";
+		$res = $dbr->select(
+			'user_relationship',
+			array(
+				'r_id', 'r_user_id_relation',
+				'r_user_name_relation', 'r_date'
+			),
+			array( "r_user_id = {$this->user_id}", "r_type = {$type}" ),
+			__METHOD__,
+			array( 'ORDER BY' => 'r_user_name_relation' )
+		);
 
 		$rel = array();
-		$res = $dbr->query( $sql );
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			$rel[] = $row->r_user_id_relation;
 		}
 		return $rel;
@@ -443,11 +521,13 @@ class UserRelationship {
 	static function getRelationshipCountByUsername( $user_name ) {
 		$dbr = wfGetDB( DB_SLAVE );
 		$user_id = User::idFromName( $user_name );
-		$sql = "SELECT rs_friend_count, rs_foe_count
-			FROM {$dbr->tableName( 'user_relationship_stats' )}
-			WHERE rs_user_id = {$user_id}
-			LIMIT 0,1";
-		$res = $dbr->query( $sql );
+		$res = $dbr->select(
+			'user_relationship_stats',
+			array( 'rs_friend_count', 'rs_foe_count' ),
+			array( "rs_user_id = {$user_id}" ),
+			__METHOD__,
+			array( 'LIMIT' => 1, 'OFFSET' => 0 )
+		);
 		$row = $dbr->fetchObject( $res );
 		$friend_count = 0;
 		$foe_count = 0;
