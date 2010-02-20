@@ -15,7 +15,7 @@ class PopulateAwards extends UnlistedSpecialPage {
 	 * @param $gift_category Mixed: parameter passed to the page or null
 	 */
 	public function execute( $gift_category ) {
-		global $wgUser, $wgOut, $wgMemc;
+		global $wgUser, $wgOut, $wgUserLevels;
 
 		# If the user doesn't have the required 'awardsmanage' permission, display an error
 		if ( !$wgUser->isAllowed( 'awardsmanage' ) ) {
@@ -35,7 +35,6 @@ class PopulateAwards extends UnlistedSpecialPage {
 			return;
 		}
 
-		global $wgUserLevels;
 		$wgUserLevels = '';
 
 		$g = new SystemGifts();
