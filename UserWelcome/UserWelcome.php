@@ -22,7 +22,6 @@ $wgExtensionCredits['parserhook'][] = array(
 	'name' => 'UserWelcome',
 	'version' => '1.2',
 	'author' => array( 'David Pean', 'Jack Phoenix' ),
-	'description' => 'Adds <tt>&lt;welcomeUser&gt;</tt> tag to display user-specific social info to logged-in users',
 	'descriptionmsg' => 'userwelcome-desc',
 	'url' => 'http://www.mediawiki.org/wiki/Extension:UserWelcome',
 );

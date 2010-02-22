@@ -13,7 +13,6 @@ $wgExtensionCredits['other'][] = array(
 	'author' => 'Yahoo! Inc.',
 	'version' => '2.7.0',
 	'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile',
-	'description' => 'A set of utilities and controls, written in JavaScript',
 	'descriptionmsg' => 'yui-desc',
 );
 
