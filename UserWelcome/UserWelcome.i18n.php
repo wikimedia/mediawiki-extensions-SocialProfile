@@ -777,6 +777,26 @@ $messages['ko'] = array(
 	'mp-request-new-message' => '새 메시지',
 );
 
+/** Karachay-Balkar (Къарачай-Малкъар)
+ * @author Iltever
+ */
+$messages['krc'] = array(
+	'userwelcome-desc' => 'Регистрацияны ётген къошулуучула социал информацияны кёрюрча <tt>&lt;welcomeUser&gt;</tt> тегни къошады',
+	'mp-userlevels-link' => 'Къошулуучуланы дараджалары',
+	'mp-welcome-upload' => 'Джюкле',
+	'mp-welcome-edit' => 'Тюзет',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|балл|балл}}',
+	'mp-welcome-needed-points' => '<b><a href="$1">$2</a></b>-гъа кёчер ючюн энтда <i>$3</i> {{PLURAL:$3|балл|балл}} керекди!',
+	'mp-welcome-logged-in' => 'Сау кел, $1',
+	'mp-requests-title' => 'Сапаришле',
+	'mp-requests-message' => 'Сорууларыгъыз барды.',
+	'mp-request-new-message' => 'джангы билдириу',
+	'mp-request-new-award' => '$1 джангы {{PLURAL:$1|награда|награда}}',
+	'mp-request-new-gift' => '$1 джангы {{PLURAL:$1|саугъа|саугъа}}',
+	'mp-request-new-foe' => '$1 джангы {{PLURAL:$1|джау|джау}}',
+	'mp-request-new-friend' => '$1 джангы {{PLURAL:$1|тенг|тенг}}',
+);
+
 /** Ripoarisch (Ripoarisch)
  * @author Purodha
  */
