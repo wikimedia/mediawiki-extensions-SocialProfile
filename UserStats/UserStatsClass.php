@@ -685,7 +685,7 @@ class UserStats {
 
 		$list = array();
 		$res = $dbr->query( $sql, __METHOD__ );
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			$list[] = array(
 				'user_id' => $row->stats_user_id,
 				'user_name' => $row->stats_user_name,
@@ -718,7 +718,7 @@ class UserStats {
 
 		$list = array();
 		$res = $dbr->query( $sql, __METHOD__ );
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			$list[] = array(
 				'user_id' => $row->up_user_id,
 				'user_name' => $row->up_user_name,
@@ -755,7 +755,7 @@ class UserStats {
 
 		$list = array();
 		$res = $dbr->query( $sql, __METHOD__ );
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			$list[] = array(
 				'user_id' => $row->stats_user_id,
 				'user_name' => $row->stats_user_name,
