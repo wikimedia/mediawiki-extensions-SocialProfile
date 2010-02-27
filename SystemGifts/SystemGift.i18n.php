@@ -2204,7 +2204,10 @@ $messages['ps'] = array(
 	'ga-giftimage' => 'د ډالۍ انځور',
 	'ga-giftname' => 'د ډالۍ نوم',
 	'ga-new' => 'نوی',
+	'ga-next' => 'راتلونکی',
+	'ga-previous' => 'پخوانی',
 	'ga-saved' => 'ډالۍ مو خوندي شوه',
+	'ga-small' => 'وړوکی',
 	'ga-viewlist' => 'د ډاليو لړليک کتل',
 );
 

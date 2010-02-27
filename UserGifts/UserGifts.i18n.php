@@ -3385,6 +3385,23 @@ e ch'a cambia ij sò gust për disabilité le notìfiche an pòsta eletrònica."
 	'right-giftadmin' => 'Creé ëd cadò neuv e modifiché coj esistent',
 );
 
+/** Pashto (پښتو)
+ * @author Ahmed-Najib-Biabani-Ibrahimkhel
+ */
+$messages['ps'] = array(
+	'giftmanager-view' => 'د ډاليو لړليک کتل',
+	'g-add-message' => 'يو پيغام ورسره کول',
+	'g-choose-file' => 'دوتنه ټاکل:',
+	'g-gift' => 'ډالۍ',
+	'g-gift-name' => 'د ډالۍ نوم',
+	'g-give-gift' => 'ډالۍ ورکول',
+	'g-next' => 'راتلونکی',
+	'g-previous' => 'پخوانی',
+	'g-send-gift' => 'ډالۍ لېږل',
+	'g-viewgiftlist' => 'د ډاليو لړليک کتل',
+	'g-your-profile' => 'ستاسې پېژنليک',
+);
+
 /** Portuguese (Português)
  * @author Hamilton Abreu
  * @author Malafaya

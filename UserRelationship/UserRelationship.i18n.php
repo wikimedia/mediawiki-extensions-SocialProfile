@@ -5989,9 +5989,9 @@ e ch'a cambia toe ampostassion për disabilité le notìfiche an pòsta eletròn
 $messages['ps'] = array(
 	'viewrelationships' => 'اړيکې کتل',
 	'viewrelationshiprequests' => 'د اړيکو غوښتنې کتل',
-	'ur-already-submitted' => 'ستاسو غوښتنه ولېږل شوه',
+	'ur-already-submitted' => 'ستاسې غوښتنه ولېږل شوه',
 	'ur-main-page' => 'لومړی مخ',
-	'ur-your-profile' => 'ستاسو پېژنليک',
+	'ur-your-profile' => 'ستاسې پېژنليک',
 	'ur-add-friend' => 'خپل په ملګرو کې ورګډول',
 	'ur-previous' => 'پخوانی',
 	'ur-next' => 'راتلونکي',

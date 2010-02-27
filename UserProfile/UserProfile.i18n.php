@@ -7717,7 +7717,9 @@ Sgnaché <a href="$1">ambelessì</a> për intré ant ël sistema o sgnaché <a h
  * @author Ahmed-Najib-Biabani-Ibrahimkhel
  */
 $messages['ps'] = array(
+	'user-gifts-title' => 'ډالۍ',
 	'user-view-all' => 'ټول کتل',
+	'user-edit-this' => 'دا سمول',
 	'user-watchlist' => 'زما کتنلړليک',
 	'user-meet-people' => 'د خلکو سره ليدل',
 	'user-add-friend' => 'خپل په ملګرو کې ورګډول',
@@ -7742,7 +7744,7 @@ $messages['ps'] = array(
 	'user-personal-info-schools' => 'ښوونځي',
 	'user-personal-info-about-me' => 'زما په اړه',
 	'user-recent-activity-gift-sent' => 'يو چا ته يوه ډالۍ لېږل',
-	'user-profile-update-saved' => 'ستاسو پېژنليک په برياليتوب سره خوندي شو',
+	'user-profile-update-saved' => 'ستاسې پېژنليک په برياليتوب سره خوندي شو',
 	'user-profile-update-profile' => 'پېژنليک',
 	'user-profile-default-country' => 'متحده ايالتونه',
 	'user-profile-section-personal' => 'ځاني مالومات',

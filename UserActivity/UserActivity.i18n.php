@@ -454,6 +454,7 @@ $messages['pms'] = array(
  * @author Ahmed-Najib-Biabani-Ibrahimkhel
  */
 $messages['ps'] = array(
+	'useractivity-all' => 'ټول کتل',
 	'useractivity-siteactivity' => 'د وېبځي فعاليت',
 	'useractivity-title' => 'د ملګري فعاليت',
 );
