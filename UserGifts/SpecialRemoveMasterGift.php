@@ -16,7 +16,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	 */
 	function deleteImage( $id, $size ) {
 		global $wgUploadDirectory;
-		$files = glob( $wgUploadDirectory . '/awards/' . $id .  "_{$size}*" );
+		$files = glob( $wgUploadDirectory . '/awards/' . $id . "_{$size}*" );
 		if ( $files && $files[0] ) {
 			$img = basename( $files[0] );
 			unlink( $wgUploadDirectory . '/awards/' .  $img );
@@ -48,11 +48,11 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgUser, $wgOut, $wgRequest, $wgUploadPath, $wgUserGiftsScripts;
+		global $wgUser, $wgOut, $wgRequest, $wgUserGiftsScripts;
 		wfLoadExtensionMessages( 'UserGifts' );
 
 		// Add CSS
-		$wgOut->addStyle( '../..' . $wgUserGiftsScripts . '/UserGifts.css' );
+		$wgOut->addExtensionStyle( $wgUserGiftsScripts . '/UserGifts.css' );
 
 		// Check for permissions
 		if ( $wgUser->isAnon() || !$this->canUserManage() ) {
@@ -86,9 +86,9 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 			$out = '<div class="back-links">
 				<a href="' . SpecialPage::getTitleFor( 'GiftManager' )->escapeFullURL() . '">' . wfMsg( 'g-viewgiftlist' ) . '</a>
 			</div>
-			<div class="g-container">
-				' . wfMsg( 'g-remove-success-message', $gift['gift_name'] ) . '
-				<div class="cleared"></div>
+			<div class="g-container">'
+				. wfMsg( 'g-remove-success-message', $gift['gift_name'] ) .
+				'<div class="cleared"></div>
 			</div>';
 
 			$wgOut->addHTML( $out );
@@ -103,7 +103,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	 * @return HTML output
 	 */
 	function displayForm() {
-		global $wgUser, $wgOut, $wgUploadPath;
+		global $wgOut, $wgUploadPath;
 
 		$gift = Gifts::getGift( $this->gift_id );
 
@@ -114,12 +114,12 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 			<a href="' . SpecialPage::getTitleFor( 'GiftManager' )->escapeFullURL() . '">' . wfMsg( 'g-viewgiftlist' ) . '</a>
 		</div>
 		<form action="" method="post" enctype="multipart/form-data" name="form1">
-			<div class="g-remove-message">
-				' . wfMsg( 'g-delete-message', $gift['gift_name'] ) . '
-			</div>
-			<div class="g-container">
-				' . $gift_image . '
-				<div class="g-name">' . $gift['gift_name'] . '</div>
+			<div class="g-remove-message">'
+				. wfMsg( 'g-delete-message', $gift['gift_name'] ) .
+			'</div>
+			<div class="g-container">'
+				. $gift_image .
+				'<div class="g-name">' . $gift['gift_name'] . '</div>
 			</div>
 			<div class="cleared"></div>
 			<div class="g-buttons">

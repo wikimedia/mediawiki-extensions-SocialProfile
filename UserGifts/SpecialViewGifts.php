@@ -18,7 +18,7 @@ class ViewGifts extends SpecialPage {
 		global $wgUser, $wgOut, $wgRequest, $wgMemc, $wgUploadPath, $wgUserGiftsScripts;
 		wfLoadExtensionMessages( 'UserGifts' );
 
-		$wgOut->addStyle( '../..' . $wgUserGiftsScripts . '/UserGifts.css' );
+		$wgOut->addExtensionStyle( $wgUserGiftsScripts . '/UserGifts.css' );
 
 		$user_name = $wgRequest->getVal( 'user' );
 		$page =  $wgRequest->getVal( 'page' );
@@ -28,7 +28,7 @@ class ViewGifts extends SpecialPage {
 		 * It will automatically return them to the ViewGifts page
 		 */
 		if ( $wgUser->getID() == 0 && $user_name == '' ) {
-			$login = SpecialPage::getTitleFor( 'UserLogin' );
+			$login = SpecialPage::getTitleFor( 'Userlogin' );
 			$wgOut->redirect( $login->escapeFullURL( 'returnto=Special:ViewGifts' ) );
 			return false;
 		}
@@ -36,7 +36,9 @@ class ViewGifts extends SpecialPage {
 		/**
 		 * If no user is set in the URL, we assume its the current user
 		 */
-		if ( !$user_name ) $user_name = $wgUser->getName();
+		if ( !$user_name ) {
+			$user_name = $wgUser->getName();
+		}
 		$user_id = User::idFromName( $user_name );
 		$user = Title::makeTitle( NS_USER, $user_name );
 		$user_safe = urlencode( $user_name );
@@ -54,16 +56,18 @@ class ViewGifts extends SpecialPage {
 		 * Config for the page
 		 */
 		$per_page = 10;
-		if ( !$page || !is_numeric( $page ) ) $page = 1;
+		if ( !$page || !is_numeric( $page ) ) {
+			$page = 1;
+		}
 		$per_row = 2;
 
 		/**
-		 * Get all Gifts for this user into the array
+		 * Get all gifts for this user into the array
 		 */
 		$rel = new UserGifts( $user_name );
 
 		$gifts = $rel->getUserGiftList( 0, $per_page, $page );
-		$total = $rel->getGiftCountByUsername( $user_name ); // count($relationships);
+		$total = $rel->getGiftCountByUsername( $user_name );
 
 		$relationship = UserRelationship::getUserRelationshipByID( $user_id, $wgUser->getID() );
 
@@ -72,15 +76,16 @@ class ViewGifts extends SpecialPage {
 		 */
 		$output = $wgOut->setPageTitle( wfMsg( 'g-list-title', $rel->user_name ) );
 
-		$output .= '<div class="back-links"><a href="' . $user->getFullURL() . '">
-			' . wfMsg( 'g-back-link', $rel->user_name ) . '</a>
+		$output .= '<div class="back-links">
+			<a href="' . $user->getFullURL() . '">'
+				. wfMsg( 'g-back-link', $rel->user_name ) .
+			'</a>
 		</div>
-		<div class="g-count">
-			' . wfMsgExt( 'g-count', 'parsemag', $rel->user_name, $total ) . '
-		</div>';
+		<div class="g-count">'
+			. wfMsgExt( 'g-count', 'parsemag', $rel->user_name, $total ) .
+		'</div>';
 
 		if ( $gifts ) {
-
 			$x = 1;
 
 			// Safe links
@@ -89,47 +94,48 @@ class ViewGifts extends SpecialPage {
 			$remove_gift_link = SpecialPage::getTitleFor( 'RemoveGift' );
 
 			foreach ( $gifts as $gift ) {
-
 				$giftname_length = strlen( $gift['gift_name'] );
 				$giftname_space = stripos( $gift['gift_name'], ' ' );
 
 				if ( ( $giftname_space == false || $giftname_space >= "30" ) && $giftname_length > 30 ) {
-					$gift_name_display = substr( $gift['gift_name'], 0, 30 ) . " " . substr( $gift['gift_name'], 30, 50 );
+					$gift_name_display = substr( $gift['gift_name'], 0, 30 ) . ' ' . substr( $gift['gift_name'], 30, 50 );
 				} else {
 					$gift_name_display = $gift['gift_name'];
-				} ;
+				}
 
 				$user_from = Title::makeTitle( NS_USER, $gift['user_name_from'] );
-				$gift_image = "<img src=\"{$wgUploadPath}/awards/" . Gifts::getGiftImage( $gift['gift_id'], 'l' ) . "\" border=\"0\" alt=\"\"/>";
+				$gift_image = "<img src=\"{$wgUploadPath}/awards/" . Gifts::getGiftImage( $gift['gift_id'], 'l' ) . '" border="0" alt="" />';
 
 				$output .= '<div class="g-item">
 					<a href="' . $view_gift_link->escapeFullURL( 'gift_id=' . $gift['id'] ) . '">' . $gift_image . '</a>
 					<div class="g-title">
 						<a href="' . $view_gift_link->escapeFullURL( 'gift_id=' . $gift['id'] ) . '">' . $gift_name_display . '</a>';
-						if ( $gift['status'] == 1 ) {
-							if ( $user_name == $wgUser->getName() ) {
-								$rel->clearUserGiftStatus( $gift['id'] );
-								$rel->decNewGiftCount( $wgUser->getID() );
-							}
-							$output .= '<span class="g-new">' . wfMsg( 'g-new' ) . '</span>';
-						}
-					$output .= '</div>';
+				if ( $gift['status'] == 1 ) {
+					if ( $user_name == $wgUser->getName() ) {
+						$rel->clearUserGiftStatus( $gift['id'] );
+						$rel->decNewGiftCount( $wgUser->getID() );
+					}
+					$output .= '<span class="g-new">' . wfMsg( 'g-new' ) . '</span>';
+				}
+				$output .= '</div>';
 
-					$output .= '<div class="g-from">
-						' . wfMsg( 'g-from', $user_from->escapeFullURL(), $gift['user_name_from'] ) . '
-					</div>
+				$output .= '<div class="g-from">'
+					. wfMsg( 'g-from', $user_from->escapeFullURL(), $gift['user_name_from'] ) .
+				'</div>
 					<div class="g-actions">
 						<a href="' . $give_gift_link->escapeFullURL( 'gift_id=' . $gift['gift_id'] ) . '">' . wfMsg( 'g-to-another' ) . '</a>';
-					if ( $rel->user_name == $wgUser->getName() ) {
-						$output .= '&nbsp;';
-						$output .= wfMsgExt( 'pipe-separator' , 'escapenoentities' );
-						$output .= '&nbsp;';
-						$output .= '<a href="' . $remove_gift_link->escapeFullURL( 'gift_id=' . $gift['id'] ) . '">' . wfMsg( 'g-remove-gift' ) . '</a>';
-					}
+				if ( $rel->user_name == $wgUser->getName() ) {
+					$output .= '&nbsp;';
+					$output .= wfMsgExt( 'pipe-separator' , 'escapenoentities' );
+					$output .= '&nbsp;';
+					$output .= '<a href="' . $remove_gift_link->escapeFullURL( 'gift_id=' . $gift['id'] ) . '">' . wfMsg( 'g-remove-gift' ) . '</a>';
+				}
 				$output .= '</div>
 					<div class="cleared"></div>';
 				$output .= '</div>';
-				if ( $x == count( $gifts ) || $x != 1 && $x % $per_row == 0 ) $output .= '<div class="cleared"></div>';
+				if ( $x == count( $gifts ) || $x != 1 && $x % $per_row == 0 ) {
+					$output .= '<div class="cleared"></div>';
+				}
 
 				$x++;
 			}
@@ -148,15 +154,21 @@ class ViewGifts extends SpecialPage {
 				$output .= '<a href="' . $page_link->escapeFullURL( 'user=' . $user_name . '&rel_type=' . $rel_type . '&page=' . ( $page - 1 ) ) . '">' . wfMsg( 'g-previous' ) . '</a> ';
 			}
 
-			if ( ( $total % $per_page ) != 0 ) $numofpages++;
-			if ( $numofpages >= 9 && $page < $total ) $numofpages = 9 + $page;
-			if ( $numofpages >= ( $total / $per_page ) ) $numofpages = ( $total / $per_page ) + 1;
+			if ( ( $total % $per_page ) != 0 ) {
+				$numofpages++;
+			}
+			if ( $numofpages >= 9 && $page < $total ) {
+				$numofpages = 9 + $page;
+			}
+			if ( $numofpages >= ( $total / $per_page ) ) {
+				$numofpages = ( $total / $per_page ) + 1;
+			}
 
 			for ( $i = 1; $i <= $numofpages; $i++ ) {
 				if ( $i == $page ) {
-					$output .= ( $i . " " );
+					$output .= ( $i . ' ' );
 				} else {
-					$output .= "<a href=\"" . $page_link->escapeFullURL( 'user=' . $user_name . '&rel_type=' . $rel_type . '&page=' . $i ) . "\">$i</a> ";
+					$output .= '<a href="' . $page_link->escapeFullURL( 'user=' . $user_name . '&rel_type=' . $rel_type . '&page=' . $i ) . "\">$i</a> ";
 				}
 			}
 

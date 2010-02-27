@@ -18,7 +18,7 @@ class RemoveGift extends UnlistedSpecialPage {
 		global $wgUser, $wgOut, $wgRequest, $wgMemc, $wgUploadPath, $wgUserGiftsScripts;
 		wfLoadExtensionMessages( 'UserGifts' );
 
-		$wgOut->addStyle( '../..' . $wgUserGiftsScripts . '/UserGifts.css' );
+		$wgOut->addExtensionStyle( $wgUserGiftsScripts . '/UserGifts.css' );
 
 		$this->gift_id = $wgRequest->getVal( 'gift_id' );
 		$rel = new UserGifts( $wgUser->getName() );
@@ -36,7 +36,6 @@ class RemoveGift extends UnlistedSpecialPage {
 
 		$gift = $rel->getUserGift( $this->gift_id );
 		if ( $wgRequest->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
-
 			$_SESSION['alreadysubmitted'] = true;
 
 			$user_page_link = Title::makeTitle( NS_USER, $wgUser->getName() );
@@ -53,9 +52,9 @@ class RemoveGift extends UnlistedSpecialPage {
 			$out = '<div class="back-links">
 				<a href="' . $wgUser->getUserPage()->escapeFullURL() . '">' . wfMsg( 'g-back-link', $gift['user_name_to'] ) . '</a>
 			</div>
-			<div class="g-container">
-				' . $gift_image . wfMsg( 'g-remove-success-message', $gift['name'] ) . '
-				<div class="cleared"></div>
+			<div class="g-container">'
+				. $gift_image . wfMsg( 'g-remove-success-message', $gift['name'] ) .
+				'<div class="cleared"></div>
 			</div>
 			<div class="g-buttons">
 				<input type="button" class="site-button" value="' . wfMsg( 'g-main-page' ) . '" size="20" onclick="window.location=\'index.php?title=' . wfMsgForContent( 'mainpage' ) . '\'" />
@@ -86,17 +85,17 @@ class RemoveGift extends UnlistedSpecialPage {
 			<a href="' . $wgUser->getUserPage()->escapeFullURL() . '">' . wfMsg( 'g-back-link', $gift['user_name_to'] ) . '</a>
 		</div>
 		<form action="" method="post" enctype="multipart/form-data" name="form1">
-			<div class="g-remove-message">
-				' . wfMsg( 'g-remove-message', $gift['name'] ) . '
-			</div>
-			<div class="g-container">
-				' . $gift_image . '
-				<div class="g-name">' . $gift['name'] . '</div>
+			<div class="g-remove-message">'
+				. wfMsg( 'g-remove-message', $gift['name'] ) .
+			'</div>
+			<div class="g-container">'
+				. $gift_image .
+				'<div class="g-name">' . $gift['name'] . '</div>
 				<div class="g-from">' . wfMsg( 'g-from', $user->escapeFullURL(), $gift['user_name_from'] ) . '</div>';
-				if ( $gift['message'] ) {
-					$output .= '<div class="g-user-message">' . $gift['message'] . '</div>';
-				}
-			$output .= '</div>
+		if ( $gift['message'] ) {
+			$output .= '<div class="g-user-message">' . $gift['message'] . '</div>';
+		}
+		$output .= '</div>
 			<div class="cleared"></div>
 			<div class="g-buttons">
 				<input type="hidden" name="user" value="' . addslashes( $gift['user_name_from'] ) . '">

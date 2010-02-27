@@ -18,7 +18,7 @@ class ViewGift extends UnlistedSpecialPage {
 		global $wgUser, $wgOut, $wgRequest, $wgUploadPath, $wgUserGiftsScripts;
 		wfLoadExtensionMessages( 'UserGifts' );
 
-		$wgOut->addStyle( '../..' . $wgUserGiftsScripts . '/UserGifts.css' );
+		$wgOut->addExtensionStyle( $wgUserGiftsScripts . '/UserGifts.css' );
 
 		$user_name = ''; // Prevent E_NOTICE
 
@@ -41,7 +41,6 @@ class ViewGift extends UnlistedSpecialPage {
 		$dbr = wfGetDB( DB_SLAVE );
 
 		if ( $gift ) {
-
 			if ( $gift['status'] == 1 ) {
 				if ( $gift['user_name_to'] == $wgUser->getName() ) {
 					$g = new UserGifts( $gift['user_name_to'] );
@@ -50,11 +49,19 @@ class ViewGift extends UnlistedSpecialPage {
 				}
 			}
 
-			$res = $dbr->select( 'user_gift',
+			$res = $dbr->select(
+				'user_gift',
 				array( 'DISTINCT ug_user_name_to', 'ug_user_id_to', 'ug_date' ),
-				array( 'ug_gift_id' => $gift['gift_id'], "ug_user_name_to<>'" . addslashes( $gift['user_name_to'] ) . "'" ),
+				array(
+					'ug_gift_id' => $gift['gift_id'],
+					"ug_user_name_to<>'" . addslashes( $gift['user_name_to'] ) . "'"
+				),
 				__METHOD__,
-				array( 'GROUP BY' => 'ug_user_name_to', 'ORDER BY' => 'ug_date DESC', 'LIMIT' => 6 )
+				array(
+					'GROUP BY' => 'ug_user_name_to',
+					'ORDER BY' => 'ug_date DESC',
+					'LIMIT' => 6
+				)
 			);
 
 			$output = $wgOut->setPageTitle( wfMsgExt( 'g-description-title', 'parsemag', $gift['user_name_to'], $gift['name'] ) );
@@ -78,42 +85,41 @@ class ViewGift extends UnlistedSpecialPage {
 
 			$gift_image = '<img src="' . $wgUploadPath . '/awards/' . Gifts::getGiftImage( $gift['gift_id'], 'l' ) . '" border="0" alt="" />';
 
-				$output .= '<div class="g-description">'
-					. $gift_image . '
-					<div class="g-name">' . $gift['name'] . '</div>
+			$output .= '<div class="g-description">'
+					. $gift_image .
+					'<div class="g-name">' . $gift['name'] . '</div>
 					<div class="g-timestamp">(' . $gift['timestamp'] . ')</div>
 					<div class="g-from">' . wfMsg( 'g-from', $user->escapeFullURL(), $gift['user_name_from'] ) . '</div>';
-					if ( $message ) {
-						$output .= '<div class="g-user-message">' . $message . '</div>';
-					}
-					$output .= '<div class="cleared"></div>
+			if ( $message ) {
+				$output .= '<div class="g-user-message">' . $message . '</div>';
+			}
+			$output .= '<div class="cleared"></div>
 					<div class="g-describe">' . $gift['description'] . '</div>
 					<div class="g-actions">
 						<a href="' . $give_gift_link->escapeFullURL( 'gift_id=' . $gift['gift_id'] ) . '">' . wfMsg( 'g-to-another' ) . '</a>';
-						if ( $gift['user_name_to'] == $wgUser->getName() ) {
-							$output .= '&nbsp';
-							$output .= wfMsgExt( 'pipe-separator' , 'escapenoentities' );
-							$output .= '&nbsp;';
-							$output .= '<a href="' . $remove_gift_link->escapeFullURL( 'gift_id=' . $gift['id'] ) . '">' . wfMsg( 'g-remove-gift' ) . '</a>';
-						}
-					$output .= '</div>
+			if ( $gift['user_name_to'] == $wgUser->getName() ) {
+					$output .= '&nbsp';
+					$output .= wfMsgExt( 'pipe-separator' , 'escapenoentities' );
+					$output .= '&nbsp;';
+					$output .= '<a href="' . $remove_gift_link->escapeFullURL( 'gift_id=' . $gift['id'] ) . '">' . wfMsg( 'g-remove-gift' ) . '</a>';
+			}
+			$output .= '</div>
 				</div>';
 
-				$output .= '<div class="g-recent">
+			$output .= '<div class="g-recent">
 					<div class="g-recent-title">' . wfMsg( 'g-recent-recipients' ) . '</div>
 					<div class="g-gift-count">' . wfMsgExt( 'g-given', 'parsemag', $gift['gift_count'] ) . '</div>';
 
-					while ( $row = $dbr->fetchObject( $res ) ) {
+			foreach ( $res as $row ) {
+				$user_to_id = $row->ug_user_id_to;
+				$avatar = new wAvatar( $user_to_id, 'ml' );
+				$user_name_link = Title::makeTitle( NS_USER, $row->ug_user_name_to );
 
-						$user_to_id = $row->ug_user_id_to;
-						$avatar = new wAvatar( $user_to_id, 'ml' );
-						$user_name_link = Title::makeTitle( NS_USER, $row->ug_user_name_to );
-
-						$output .= "<a href=\"" . $user_name_link->escapeFullURL() . "\">
-							{$avatar->getAvatarURL()}
-						</a>";
-					}
-					$output .= '<div class="cleared"></div>
+				$output .= '<a href="' . $user_name_link->escapeFullURL() . "\">
+					{$avatar->getAvatarURL()}
+				</a>";
+			}
+			$output .= '<div class="cleared"></div>
 				</div>
 			</div>';
 
