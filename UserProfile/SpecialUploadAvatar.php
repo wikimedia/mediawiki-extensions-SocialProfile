@@ -7,8 +7,6 @@
  *
  * Requirements: Need writable directory $wgUploadPath/avatars
  *
- * TODO: Completely rewrite this garbage page
- *
  * @file
  * @ingroup Extensions
  * @author David Pean <david.pean@gmail.com>
@@ -24,12 +22,11 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 */
 	public function __construct( $request = null ) {
 		global $wgRequest;
-		
+
 		SpecialPage::__construct( 'UploadAvatar', 'upload' );
 		$this->loadRequest( is_null( $request ) ? $wgRequest : $request );
-		
 	}
-	
+
 	/**
 	 * Let the parent handle most of the request, but specify the Upload
 	 * class ourselves
@@ -49,18 +46,18 @@ class SpecialUploadAvatar extends SpecialUpload {
 	public function execute( $params ) {
 		global $wgRequest, $wgOut, $wgUser, $wgUserProfileScripts;
 
-		$wgOut->setHTMLTitle( wfMsg( 'pagetitle', wfMsg( 'user-profile-picture-title' ) ) );
 		$wgOut->addExtensionStyle( $wgUserProfileScripts . '/UserProfile.css' );
 		parent::execute( $params );
-		
+		$wgOut->setPageTitle( wfMsg( 'user-profile-picture-title' ) );
+
 		if ( $this->mUploadSuccessful ) {
 			// Cancel redirect
 			$wgOut->redirect( '' );
-			
+
 			$this->showSuccess( $this->mUpload->mExtension );
 		}
 	}
-	
+
 	/**
 	 * Show some text and linkage on successful upload.
 	 * @access private
@@ -79,8 +76,6 @@ class SpecialUploadAvatar extends SpecialUpload {
 			$wgUser->getUserPage(),
 			wfMsgForContent( 'user-profile-picture-log-entry' )
 		);
-
-		$ext = 'jpg';
 
 		$output = '<h1>' . wfMsg( 'user-profile-picture-title' ) . '</h1>';
 		$output .= UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-picture' ) );
@@ -123,7 +118,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 
 		$wgOut->addHTML( $output );
 	}
-	
+
 	/**
 	 * Displays the main upload form, optionally with a highlighted
 	 * error message up at the top.
@@ -165,11 +160,11 @@ class SpecialUploadAvatar extends SpecialUpload {
 
 		if ( $wgUseCopyrightUpload ) {
 			$source = "
-				<td align='right' nowrap='nowrap'>" . wfMsg ( 'filestatus' ) . ":</td>
+				<td align='right' nowrap='nowrap'>" . wfMsg( 'filestatus' ) . ":</td>
 				<td><input tabindex='3' type='text' name=\"wpUploadCopyStatus\" value=\"" .
 				htmlspecialchars( $this->mUploadCopyStatus ) . "\" size='40' /></td>
 				</tr><tr>
-				<td align='right'>" . wfMsg ( 'filesource' ) . ":</td>
+				<td align='right'>" . wfMsg( 'filesource' ) . ":</td>
 				<td><input tabindex='4' type='text' name='wpUploadSource' value=\"" .
 				htmlspecialchars( $this->mUploadSource ) . "\" style='width:100px' /></td>
 				";
@@ -220,7 +215,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 
 		return $output;
 	}
-	
+
 	function getAvatar( $size ) {
 		global $wgUser, $wgDBname, $wgUploadDirectory, $wgUploadPath;
 		$files = glob( $wgUploadDirectory . '/avatars/' . $wgDBname . '_' . $wgUser->getID() . '_' . $size . "*" );
@@ -232,7 +227,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 
 class UploadAvatar extends UploadFromFile {
 	public $mExtension;
-	
+
 	function createThumbnail( $imageSrc, $imageInfo, $imgDest, $thumbWidth ) {
 		list( $origWidth, $origHeight, $typeCode ) =  $imageInfo;
 
@@ -262,7 +257,6 @@ class UploadAvatar extends UploadFromFile {
 		global $wgUploadDirectory, $wgOut, $wgUser, $wgDBname;
 
         $this->avatarUploadDirectory = $wgUploadDirectory . '/avatars';
-
 
 		$imageInfo = getimagesize( $this->mTempPath );
 		switch ( $imageInfo[2] ) {
@@ -350,27 +344,27 @@ class UploadAvatar extends UploadFromFile {
 		$this->mExtension = $ext;
 		return Status::newGood();
 	}
-	
+
 	/**
-	 * Don't verify the upload, since it all dangerous stuff is killed by 
+	 * Don't verify the upload, since it all dangerous stuff is killed by
 	 * making thumbnails
 	 */
 	public function verifyUpload() {
 		return array( 'status' => self::OK );
 	}
+
 	/**
 	 * Only needed for the redirect; needs fixage
 	 */
 	public function getTitle() {
 		return Title::makeTitle( NS_FILE, 'Avatar.jpg' );
 	}
+
 	/**
 	 * We don't overwrite stuff, so don't care
 	 */
 	public function checkWarnings() {
 		return array();
 	}
-	
-	
 
 }
