@@ -23,7 +23,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 	public function __construct( $request = null ) {
 		global $wgRequest;
 
-		SpecialPage::__construct( 'UploadAvatar', 'upload' );
+		SpecialPage::__construct( 'UploadAvatar', 'upload', false/* listed? */ );
 		$this->loadRequest( is_null( $request ) ? $wgRequest : $request );
 	}
 
