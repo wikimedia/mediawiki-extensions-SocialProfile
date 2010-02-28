@@ -1515,7 +1515,7 @@ Eis Felicitatiounen!
 D\'Equipe vu(n) {{SITENAME}}
 
 --
-Wëllt dir keng E-Maile méi vun eis kréien?
+Wëllt Dir keng E-Maile méi vun eis kréien?
 
 Klickt $3
 an ännert Är Astellungen a schalt den E-Mai-Benoriichtungssystem aus.',
