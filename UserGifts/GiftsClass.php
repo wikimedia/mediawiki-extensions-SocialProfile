@@ -1,7 +1,8 @@
 <?php
 /**
  * Gifts class
- * Functions for managing individual social gifts (add to/fetch/remove from database etc.)
+ * Functions for managing individual social gifts
+ * (add to/fetch/remove from database etc.)
  */
 class Gifts {
 
@@ -35,11 +36,12 @@ class Gifts {
 
 		$dbw = wfGetDB( DB_MASTER );
 
-		$dbw->insert( 'gift',
+		$dbw->insert(
+			'gift',
 			array(
 				'gift_name' => $gift_name,
 				'gift_description' => $gift_description,
-				'gift_createdate' => date( "Y-m-d H:i:s" ),
+				'gift_createdate' => date( 'Y-m-d H:i:s' ),
 				'gift_creator_user_id' => $wgUser->getID(),
 				'gift_creator_user_name' => $wgUser->getName(),
 				'gift_access' => $gift_access,
@@ -74,15 +76,22 @@ class Gifts {
 	 * @return Gift information, including ID number, name, description, creator's user name and ID and gift access
 	 */
 	static function getGift( $id ) {
-		if ( !is_numeric( $id ) )
+		if ( !is_numeric( $id ) ) {
 			return '';
+		}
 		$dbr = wfGetDB( DB_SLAVE );
-		$sql = "SELECT gift_id, gift_name, gift_description,
-			gift_creator_user_id, gift_creator_user_name, gift_access
-			FROM {$dbr->tableName( 'gift' )} WHERE gift_id = {$id} LIMIT 0,1";
-		$res = $dbr->query( $sql );
+		$res = $dbr->select(
+			'gift',
+			array(
+				'gift_id', 'gift_name', 'gift_description',
+				'gift_creator_user_id', 'gift_creator_user_name', 'gift_access'
+			),
+			array( "gift_id = {$id}" ),
+			__METHOD__,
+			array( 'LIMIT' => 1, 'OFFSET' => 0 )
+		);
 		$row = $dbr->fetchObject( $res );
-		$gift = '';
+		$gift = array();
 		if ( $row ) {
 			$gift['gift_id'] = $row->gift_id;
 			$gift['gift_name'] = $row->gift_name;
@@ -110,22 +119,31 @@ class Gifts {
 		global $wgUser;
 
 		$dbr = wfGetDB( DB_SLAVE );
+		$params = array();
 
 		if ( $limit > 0 ) {
 			$limitvalue = 0;
-			if ( $page ) $limitvalue = $page * $limit - ( $limit );
-			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
+			if ( $page ) {
+				$limitvalue = $page * $limit - ( $limit );
+			}
+			$params['LIMIT'] = $limit;
+			$params['OFFSET'] = $limitvalue;
 		}
 
-		$sql = "SELECT gift_id,gift_createdate,gift_name,gift_description,gift_given_count
-			FROM {$dbr->tableName( 'gift' )}
-			WHERE gift_access=0 OR gift_creator_user_id = {$wgUser->getID()}
-			ORDER BY {$order}
-			{$limit_sql}";
+		$params['ORDER BY'] = $order;
+		$res = $dbr->select(
+			'gift',
+			array(
+				'gift_id', 'gift_createdate', 'gift_name', 'gift_description',
+				'gift_given_count'
+			),
+			array( "gift_access = 0 OR gift_creator_user_id = {$wgUser->getID()}" ),
+			__METHOD__,
+			$params
+		);
 
-		$res = $dbr->query( $sql );
 		$gifts = array();
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			$gifts[] = array(
 				'id' => $row->gift_id,
 				'timestamp' => ( $row->gift_createdate ),
@@ -143,24 +161,32 @@ class Gifts {
 
 		$where = ''; // Prevent E_NOTICE
 		$params['ORDER BY'] = 'gift_createdate';
-		if ( $limit )
+		if ( $limit ) {
 			$params['LIMIT'] = $limit;
+		}
 
-		// If the user isn't in giftadmin group and isn't allowed to delete pages, only show them the gifts they've created
-		if ( !in_array( 'giftadmin', ( $wgUser->getGroups() ) ) && !$wgUser->isAllowed( 'delete' ) ) {
+		// If the user isn't allowed to perform administrative tasks to gifts
+		// and isn't allowed to delete pages, only show them the gifts they've
+		// created
+		if ( !$wgUser->isAllowed( 'giftadmin' ) && !$wgUser->isAllowed( 'delete' ) ) {
 			$where = array( 'gift_creator_user_id' => $wgUser->getID() );
 		}
 
 		$dbr = wfGetDB( DB_SLAVE );
-		$res = $dbr->select( 'gift',
-			array( 'gift_id', 'gift_createdate', 'gift_name', 'gift_description', 'gift_given_count',
-				'gift_access', 'gift_creator_user_id', 'gift_creator_user_name' ),
-			$where, __METHOD__,
+		$res = $dbr->select(
+			'gift',
+			array(
+				'gift_id', 'gift_createdate', 'gift_name', 'gift_description',
+				'gift_given_count', 'gift_access', 'gift_creator_user_id',
+				'gift_creator_user_name'
+			),
+			$where,
+			__METHOD__,
 			$params
 		);
 
 		$gifts = array();
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			$gifts[] = array(
 				'id' => $row->gift_id,
 				'timestamp' => ( $row->gift_createdate ),
@@ -175,16 +201,30 @@ class Gifts {
 	static function getCustomCreatedGiftCount( $user_id ) {
 		$dbr = wfGetDB( DB_SLAVE );
 		$gift_count = 0;
-		$s = $dbr->selectRow( 'gift', array( 'count(*) AS count' ), array( 'gift_creator_user_id' => $user_id ), __METHOD__ );
-		if ( $s !== false ) $gift_count = $s->count;
+		$s = $dbr->selectRow(
+			'gift',
+			array( 'COUNT(*) AS count' ),
+			array( 'gift_creator_user_id' => $user_id ),
+			__METHOD__
+		);
+		if ( $s !== false ) {
+			$gift_count = $s->count;
+		}
 		return $gift_count;
 	}
 
 	static function getGiftCount() {
 		$dbr = wfGetDB( DB_SLAVE );
 		$gift_count = 0;
-		$s = $dbr->selectRow( 'gift', array( 'count(*) AS count' ), array( 'gift_given_count' => $gift_count ), __METHOD__ );
-		if ( $s !== false ) $gift_count = $s->count;
+		$s = $dbr->selectRow(
+			'gift',
+			array( 'COUNT(*) AS count' ),
+			array( 'gift_given_count' => $gift_count ),
+			__METHOD__
+		);
+		if ( $s !== false ) {
+			$gift_count = $s->count;
+		}
 		return $gift_count;
 	}
 }
