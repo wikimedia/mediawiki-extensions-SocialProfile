@@ -17,13 +17,14 @@ class UserSystemMessage {
 		$user_id = User::idFromName( $user_name );
 		$dbw = wfGetDB( DB_MASTER );
 
-		$dbw->insert( 'user_system_messages',
+		$dbw->insert(
+			'user_system_messages',
 			array(
 				'um_user_id' => $user_id,
 				'um_user_name' => $user_name,
 				'um_type' => $type,
 				'um_message' => $message,
-				'um_date' => date( "Y-m-d H:i:s" ),
+				'um_date' => date( 'Y-m-d H:i:s' ),
 			), __METHOD__
 		);
 		$dbw->commit();
@@ -50,36 +51,31 @@ class UserSystemMessage {
 	public function getMessageList( $type, $limit = 0, $page = 0 ) {
 		$dbw = wfGetDB( DB_MASTER );
 
-		$limit_sql = '';
 		if ( $limit > 0 ) {
 			$limitvalue = 0;
-			if ( $page )
+			if ( $page ) {
 				$limitvalue = $page * $limit - ( $limit );
-			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
-			# $params['LIMIT'] = $limitvalue;
+			}
+			$params['LIMIT'] = $limit;
+			$params['OFFSET'] = $limitvalue;
 		}
 
-/*		$params['ORDER BY'] = 'ug_id DESC';
-		$res = $dbw->select( array( 'user_gift', 'gift' ),
+		$params['ORDER BY'] = 'ug_id DESC';
+		$res = $dbw->select(
+			array( 'user_gift', 'gift' ),
 			array(
-				'ug_id', 'ug_user_id_from', 'ug_user_name_from', 'ug_gift_id', 'ug_date', 'ug_status',
-				'gift_name', 'gift_description', 'gift_given_count'
+				'ug_id', 'ug_user_id_from', 'ug_user_name_from', 'ug_gift_id',
+				'ug_date', 'ug_status', 'gift_name', 'gift_description',
+				'gift_given_count'
 			),
-			array( 'ug_user_id_to' => $this->user_id ),
+			array( "ug_user_id_to = {$this->user_id}" ),
 			__METHOD__,
 			$params,
 			array( 'gift' => array( 'INNER JOIN', 'ug_gift_id = gift_id' ) )
-		);*/
-		$sql = "SELECT ug_id, ug_user_id_from, ug_user_name_from, ug_gift_id, ug_date, ug_status,
-			gift_name, gift_description, gift_given_count
-			FROM {$dbw->tableName( 'user_gift' )} INNER JOIN {$dbw->tableName( 'gift' )} ON ug_gift_id=gift_id
-			WHERE ug_user_id_to = {$this->user_id}
-			ORDER BY ug_id DESC
-			{$limit_sql}";
+		);
 
-		$res = $dbw->query( $sql );
 		$requests = array();
-		while ( $row = $dbw->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			$requests[] = array(
 				'id' => $row->ug_id,
 				'gift_id' => $row->ug_gift_id,
