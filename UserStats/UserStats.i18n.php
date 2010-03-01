@@ -1485,6 +1485,7 @@ $messages['lb'] = array(
 	'top-fans-points' => 'Punkten',
 	'top-fans-by-category-title-edit-count' => 'héichsten Zuel vu globalen Ännerungen',
 	'top-fans-by-category-title-friends-count' => 'Héichst Zuel vu globale Frënn',
+	'top-fans-by-category-title-foe-count' => 'mat de meeschte Feinden',
 	'top-fans-bad-field-title' => 'Ups!',
 	'top-fans-bad-field-message' => 'Déi gefrote Statistik gëtt et net.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Stëmm|Stëmmen}}',
