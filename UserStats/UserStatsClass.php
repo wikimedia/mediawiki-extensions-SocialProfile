@@ -37,7 +37,9 @@ $wgUserStatsPointValues['quiz_created'] = 0;
 $wgNamespacesForEditPoints = array( 0 );
 
 class UserStatsTrack {
+
 	// for referencing purposes
+	// key: statistic name in wgUserStatsPointValues -> database column name
 	var $stats_fields = array(
 		'edit' => 'stats_edit_count',
 		'vote' => 'stats_vote_count',
