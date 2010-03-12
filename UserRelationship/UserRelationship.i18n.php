@@ -4736,6 +4736,7 @@ $messages['ml'] = array(
  * @author Chinneeb
  */
 $messages['mn'] = array(
+	'ur-main-page' => 'Нүүр хуудас',
 	'ur-login' => 'Нэвтрэх',
 );
 

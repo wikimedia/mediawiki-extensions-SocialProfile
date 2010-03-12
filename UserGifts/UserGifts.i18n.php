@@ -2749,6 +2749,13 @@ $4
 	'right-giftadmin' => 'Создајте нови и уредете постоечки подароци',
 );
 
+/** Mongolian (Монгол)
+ * @author Chinneeb
+ */
+$messages['mn'] = array(
+	'g-main-page' => 'Нүүр хуудас',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  * @author Tvdm
