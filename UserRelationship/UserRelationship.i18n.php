@@ -2229,6 +2229,7 @@ $messages['et'] = array(
  */
 $messages['eu'] = array(
 	'ur-already-submitted' => 'Zure eskaera bidali da',
+	'ur-error-page-title' => 'Iepa!',
 	'ur-error-message-no-user' => 'Ezin dugu zure eskaera bete, ez dago izen hori duen erabiltzailerik.',
 	'ur-main-page' => 'Azala',
 	'ur-your-profile' => 'Zure perfila',

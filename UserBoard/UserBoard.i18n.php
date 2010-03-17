@@ -2035,12 +2035,13 @@ $3
 );
 
 /** Malayalam (മലയാളം)
+ * @author Praveenp
  * @author Shijualex
  */
 $messages['ml'] = array(
 	'messagesenttitle' => 'സന്ദേശങ്ങള്‍ അയച്ചു',
 	'boardblaststep1' => 'ഘട്ടം 1 - താങ്കളുടെ സന്ദേശം എഴുതുക',
-	'boardblastprivatenote' => 'എല്ല സന്ദേശങ്ങളും സ്വകാര്യസന്ദേശങ്ങളായി അയക്കും.',
+	'boardblastprivatenote' => 'എല്ലാ സന്ദേശങ്ങളും സ്വകാര്യസന്ദേശങ്ങളായി അയക്കും.',
 	'boardblaststep2' => 'ഘട്ടം 3- സന്ദേശം കിട്ടേണ്ട ആളിനെ തിരഞ്ഞെടുക്കുക',
 	'boardlinkselectall' => 'എല്ലാം തിരഞ്ഞെടുക്കുക',
 	'boardlinkunselectall' => 'എല്ലാം സ്വതന്ത്രമാക്കുക',

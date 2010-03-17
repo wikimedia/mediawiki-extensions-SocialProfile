@@ -3165,6 +3165,7 @@ $messages['eu'] = array(
 	'user-profile-tidbits-leastfavathlete' => 'Gutxien gogokoen duzun atleta eta zergatia',
 	'user-profile-sports-sport' => 'Kirola',
 	'user-profile-sports-title' => 'Editatu zure kirol eta talderik gogokoenak',
+	'user-profile-sports-notloggedintitle' => 'Iepa!',
 	'user-profile-sports-notloggedintext' => 'Zure perfila aldatzeko saioa hasi behar duzu.',
 	'user-profile-sports-teamremoved' => 'Zure taldea ezabatu da',
 	'user-profile-sports-teamsaved' => 'Zure taldeak gorde egin dira',

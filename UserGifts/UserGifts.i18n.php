@@ -1265,6 +1265,7 @@ Nii lihtne see ongi.',
 );
 
 /** Basque (Euskara)
+ * @author An13sa
  * @author Kobazulo
  */
 $messages['eu'] = array(
@@ -1278,12 +1279,14 @@ $messages['eu'] = array(
 	'g-add-message' => 'Mezu bat erantsi',
 	'g-back-gift-list' => 'Itzuli oparien zerrendara',
 	'g-back-link' => '< Itzuli $1(r)en orrialdera',
+	'g-cancel' => 'Utzi',
 	'g-count' => '$1-(e)k {{PLURAL:$2|opari bat du|$2 opari ditu}}.',
 	'g-create-gift' => 'Oparia sortu',
 	'g-gift' => 'oparia',
 	'g-give-gift' => 'Oparia eman',
 	'g-give-list-select' => 'hautatu lagun bat',
 	'g-give-separator' => 'edo',
+	'g-go-back' => 'Atzera joan',
 	'g-new' => 'berria',
 	'g-next' => 'Hurrengoa',
 	'g-previous' => 'Aurrekoa',
