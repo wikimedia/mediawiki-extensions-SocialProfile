@@ -980,6 +980,7 @@ a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
 
 /** Greek (Ελληνικά)
  * @author Crazymadlover
+ * @author Lou
  * @author Omnipaedista
  * @author ZaDiak
  */
@@ -1007,7 +1008,9 @@ $messages['el'] = array(
 	'g-current-image' => 'Τωρινή εικόνα',
 	'g-description-title' => 'Το δώρο του $1 "$2"',
 	'g-error-do-not-own' => 'Δεν σου ανήκει αυτό το δώρο.',
+	'g-error-message-invalid-link' => 'Ο σύνδεσμος που δώσατε είναι άκυρος.',
 	'g-error-message-login' => 'Πρέπει να συνδεθείτε για να δώσετε δώρα',
+	'g-error-message-no-user' => 'Ο χρήστης που προσπαθείτε να δείτε δεν υπάρχει.',
 	'g-error-message-to-yourself' => 'Δεν μπορείς να δώσεις ένα δώρο στον εαυτό σου.',
 	'g-error-title' => 'Ουπς, πήρες μια λάθος στροφή!',
 	'g-from' => 'από <a href="$1">$2</a>',
@@ -1016,12 +1019,14 @@ $messages['el'] = array(
 	'g-give-gift' => 'Δώστε δώρο',
 	'g-give-all-message-title' => 'Προσθήκη ενός μηνύματος',
 	'g-give-all-title' => 'Δώστε ένα δώρο στόν $1',
+	'g-give-enter-friend-title' => 'Εάν γνωρίζετε το όνομα του χρήστη, πληκτρολογήστε το παρακάτω',
 	'g-give-list-friends-title' => 'Επιλογή από τη λίστα φίλων σας',
 	'g-give-list-select' => 'επιλέξτε έναν φίλο',
 	'g-give-separator' => 'ή',
 	'g-give-no-user-title' => 'Σε ποιον θα θέλατε να δώσετε ένα δώρο;',
 	'g-give-to-user-title' => 'Αποστολή του δώρου "$1" στον $2',
 	'g-go-back' => 'Πήγαινε πίσω',
+	'g-imagesbelow' => 'Ακολουθούν οι εικόνες σας που θα χρησιμοποιηθούν στην ιστοσελίδα',
 	'g-large' => 'Μεγάλος',
 	'g-list-title' => 'Η λίστα δώρων του $1',
 	'g-main-page' => 'Κύρια σελίδα',
