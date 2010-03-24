@@ -4199,6 +4199,13 @@ $messages['km'] = array(
 	'friend_request_subject' => '$1 បានបន្ថែមអ្នក ជា មិត្តភក្តិ លើ {{SITENAME}}!',
 );
 
+/** Kannada (ಕನ್ನಡ)
+ * @author Nayvik
+ */
+$messages['kn'] = array(
+	'ur-login' => 'ಲಾಗ್ ಇನ್',
+);
+
 /** Krio (Krio)
  * @author Jose77
  */
