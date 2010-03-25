@@ -5,9 +5,9 @@
  *
  * @file
  * @ingroup Extensions
+ * @version 1.3
  * @author David Pean <david.pean@gmail.com>
  * @author Jack Phoenix <jack@countervandalism.net>
- * @version 1.2
  * @link http://www.mediawiki.org/wiki/Extension:UserWelcome Documentation
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
@@ -20,7 +20,7 @@ if( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'UserWelcome',
-	'version' => '1.2',
+	'version' => '1.3',
 	'author' => array( 'David Pean', 'Jack Phoenix' ),
 	'descriptionmsg' => 'userwelcome-desc',
 	'url' => 'http://www.mediawiki.org/wiki/Extension:UserWelcome',
@@ -60,9 +60,8 @@ function getWelcome() {
 	$user_level = new UserLevel( $stats_data['points'] );
 
 	// Safe links
-	$level_link = Title::makeTitle( NS_HELP, wfMsgHtml( 'mp-userlevels-link' ) );
+	$level_link = Title::makeTitle( NS_HELP, wfMsgForContent( 'mp-userlevels-link' ) );
 	$avatar_link = SpecialPage::getTitleFor( 'UploadAvatar' );
-	$invite_link = Title::makeTitle( NS_SPECIAL, 'InviteContacts' );
 
 	// Make an avatar
 	$avatar = new wAvatar( $wgUser->getID(), 'l' );
@@ -88,10 +87,15 @@ function getWelcome() {
 			</div>
 			<div class="cleared"></div>
 			<div class="needed-points">
-				<br />
-				' . wfMsgExt( 'mp-welcome-needed-points', 'parsemag', $level_link->escapeFullURL(),
-					$user_level->getNextLevelName(), $user_level->getPointsNeededToAdvance() ) . '
-			</div>
+				<br />'
+				. wfMsgExt(
+					'mp-welcome-needed-points',
+					'parsemag',
+					$level_link->escapeFullURL(),
+					$user_level->getNextLevelName(),
+					$user_level->getPointsNeededToAdvance()
+				) .
+			'</div>
 		</div>';
 	}
 
@@ -106,7 +110,8 @@ function getRequests() {
 	wfLoadExtensionMessages( 'UserWelcome' );
 
 	// Get requests
-	$requests = getNewMessagesLink() . getRelationshipRequestLink() . getNewGiftLink() . getNewSystemGiftLink();
+	$requests = getNewMessagesLink() . getRelationshipRequestLink() .
+				getNewGiftLink() . getNewSystemGiftLink();
 
 	$output = '';
 	if ( $requests ) {
@@ -129,7 +134,6 @@ function getRelationshipRequestLink() {
 	$foe_request_count = UserRelationship::getOpenRequestCount( $wgUser->getID(), 2 );
 	$relationship_request_link = SpecialPage::getTitleFor( 'ViewRelationshipRequests' );
 
-	$rel_title = SpecialPage::getTitleFor( 'ViewRelationshipRequests' );
 	$output = '';
 
 	if ( $friend_request_count ) {
@@ -160,7 +164,9 @@ function getNewGiftLink() {
 	if ( $gift_count ) {
 		$output .= '<p>
 			<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/icon_package_get.gif" alt="" border="0" />
-			<a href="' . $gifts_title->escapeFullURL() . '" rel="nofollow">' . wfMsgExt( 'mp-request-new-gift', 'parsemag', $gift_count ) . '</a>
+			<a href="' . $gifts_title->escapeFullURL() . '" rel="nofollow">'
+				. wfMsgExt( 'mp-request-new-gift', 'parsemag', $gift_count ) .
+			'</a>
 		</p>';
 	}
 	return $output;
@@ -176,7 +182,9 @@ function getNewSystemGiftLink() {
 	if ( $gift_count ) {
 		$output .= '<p>
 			<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/awardIcon.png" alt="" border="0" />
-			<a href="' . $gifts_title->escapeFullURL() . '" rel="nofollow">' . wfMsgExt( 'mp-request-new-award', 'parsemag', $gift_count ) . '</a>
+			<a href="' . $gifts_title->escapeFullURL() . '" rel="nofollow">'
+				. wfMsgExt( 'mp-request-new-award', 'parsemag', $gift_count ) .
+			'</a>
 		</p>';
 	}
 
@@ -191,8 +199,10 @@ function getNewMessagesLink() {
 	if ( $new_messages ) {
 		$board_link = SpecialPage::getTitleFor( 'UserBoard' );
 		$output .= '<p>
-			<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/emailIcon.gif" alt="email icon" border="" />
-			<a href="' . $board_link->escapeFullURL() . '" rel="nofollow">' . wfMsg( 'mp-request-new-message' ) . '</a>
+			<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/emailIcon.gif" alt="" border="" />
+			<a href="' . $board_link->escapeFullURL() . '" rel="nofollow">'
+				. wfMsg( 'mp-request-new-message' ) .
+			'</a>
 		</p>';
 	}
 	return $output;
