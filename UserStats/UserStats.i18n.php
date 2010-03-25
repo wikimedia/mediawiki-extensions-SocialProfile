@@ -843,6 +843,7 @@ ja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.',
  * @author Grondin
  * @author IAlex
  * @author McDutchie
+ * @author Urhixidur
  */
 $messages['fr'] = array(
 	'user-stats-alltime-title' => 'Points les plus élevés toutes périodes confondues',
@@ -856,8 +857,8 @@ $messages['fr'] = array(
 	'top-fans-monthly-points-link' => 'Points de ce mois-ci',
 	'top-fans-points' => 'points',
 	'top-fans-by-category-title-edit-count' => 'Meilleur nombre de modifications global',
-	'top-fans-by-category-title-friends-count' => "Meilleur nombre d'amis global",
-	'top-fans-by-category-title-foe-count' => "Meilleur nombre d'ennemis global",
+	'top-fans-by-category-title-friends-count' => 'Meilleur nombre d’amis global',
+	'top-fans-by-category-title-foe-count' => 'Meilleur nombre d’ennemis global',
 	'top-fans-by-category-title-gifts-rec-count' => 'Meilleur nombre de cadeaux reçus global',
 	'top-fans-by-category-title-gifts-sent-count' => 'Meilleur nombre de cadeaux envoyés global',
 	'top-fans-by-category-title-vote-count' => 'Meilleur nombre de votes global',

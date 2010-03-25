@@ -1070,10 +1070,11 @@ ja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.',
  * @author Crochet.david
  * @author Grondin
  * @author IAlex
+ * @author Urhixidur
  */
 $messages['fr'] = array(
 	'boardblastlogintitle' => 'Vous devez être connecté pour envoyer le tableau en rafale',
-	'boardblastlogintext' => 'Pour envoyer des tableau en rafales,
+	'boardblastlogintext' => 'Pour envoyer des tableaux en rafales,
 vous devez <a href="index.php?title=Special:UserLogin">être connecté</a>.',
 	'messagesenttitle' => 'Messages envoyés',
 	'boardblasttitle' => 'Envoyer le tableau en rafale',

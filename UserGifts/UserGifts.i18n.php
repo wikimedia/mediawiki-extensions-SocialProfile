@@ -1416,6 +1416,7 @@ ja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.',
  * @author Crochet.david
  * @author IAlex
  * @author PieRRoMaN
+ * @author Urhixidur
  * @author Verdy p
  */
 $messages['fr'] = array(
@@ -1454,7 +1455,7 @@ $messages['fr'] = array(
 	'g-gift' => 'cadeau',
 	'g-gift-name' => 'nom du cadeau',
 	'g-give-gift' => 'Donner le cadeau',
-	'g-give-all' => 'Envie de donner un cadeau à $1 ? Cliquez sur un cadeau ci-dessous et cliquez ensuite sur « Envoyer le cadeau ». C’est facile.',
+	'g-give-all' => 'Envie de donner un cadeau à $1 ? Cliquez sur un cadeau ci-dessous et cliquez ensuite sur « {{int:g-send-gift}} ». C’est facile.',
 	'g-give-all-message-title' => 'Ajouter un message',
 	'g-give-all-title' => 'Donner un cadeau à $1',
 	'g-give-enter-friend-title' => 'Si vous connaissez le nom de l’utilisateur, entrez-le ci-dessous',

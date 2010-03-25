@@ -10212,7 +10212,27 @@ $messages['ug-latn'] = array(
  * @author Prima klasy4na
  */
 $messages['uk'] = array(
+	'user-time-ago' => '$1 тому',
+	'user-upload-image' => 'Завантажити зображення',
+	'user-upload-avatar' => 'Завантажити аватар',
+	'user-watchlist' => 'Мій список спостереження',
+	'user-contributions' => 'Внесок',
+	'user-stats-title' => 'Статистика',
+	'user-stats-edits' => '{{PLURAL:$1|Редагування|Редагування|Редагувань}}',
+	'other-info-title' => 'Інша інформація',
+	'user-personal-info-title' => 'Особиста інформація',
+	'user-personal-info-real-name' => "Справжнє ім'я",
+	'user-personal-info-birthday' => 'День народження',
+	'user-personal-info-about-me' => 'Про мене',
+	'user-recent-activity-title' => 'Останні дії',
+	'user-profile-update-log-section' => 'змінив розділ',
+	'user-profile-section-personal' => 'Особиста інформація',
+	'user-profile-section-interests' => 'Інша інформація',
+	'user-profile-section-picture' => 'Аватар',
 	'user-profile-personal-city' => 'Місто',
+	'user-profile-personal-birthday' => 'День народження',
+	'user-profile-personal-aboutme' => 'Про мене',
+	'user-profile-picture-log' => 'аватар',
 );
 
 /** Veps (Vepsan kel')
