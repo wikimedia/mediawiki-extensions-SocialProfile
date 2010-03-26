@@ -3291,7 +3291,12 @@ ve e-posta bildirimlerini devre dışı bırakmak için ayarlarınızı değişt
  */
 $messages['uk'] = array(
 	'userboard_delete' => 'Вилучити',
+	'userboard_posted_ago' => 'написано $1 тому',
 	'userboard_nextpage' => 'наступна',
+	'userboard-time-days' => '$1 {{PLURAL:$1|день|дні|днів}}',
+	'userboard-time-hours' => '$1 {{PLURAL:$1|година|години|годин}}',
+	'userboard-time-minutes' => '$1 {{PLURAL:$1|хвилина|хвилини|хвилин}}',
+	'userboard-time-seconds' => '$1 {{PLURAL:$1|секунда|секунди|секунд}}',
 );
 
 /** Veps (Vepsan kel')
