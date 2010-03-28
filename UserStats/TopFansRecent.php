@@ -31,7 +31,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 			$period = 'monthly';
 		}
 
-		if ( !$period ) {
+		if ( !isset( $period ) ) {
 			$period = 'weekly';
 		}
 
@@ -79,7 +79,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 		$top_title = SpecialPage::getTitleFor( 'TopUsers' );
 		$recent_title = SpecialPage::getTitleFor( 'TopUsersRecent' );
 
-		$out .= '<div class="top-fan-nav">
+		$out = '<div class="top-fan-nav">
 			<h1>' . wfMsg( 'top-fans-by-points-nav-header' ) . '</h1>
 			<p><a href="' . $top_title->escapeFullURL() . '">' . wfMsg( 'top-fans-total-points-link' ) . '</a></p>';
 
