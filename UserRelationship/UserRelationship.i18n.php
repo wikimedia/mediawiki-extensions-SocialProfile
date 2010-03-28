@@ -4203,6 +4203,7 @@ $messages['km'] = array(
  * @author Nayvik
  */
 $messages['kn'] = array(
+	'ur-main-page' => 'ಮುಖ್ಯ ಪುಟ',
 	'ur-login' => 'ಲಾಗ್ ಇನ್',
 );
 

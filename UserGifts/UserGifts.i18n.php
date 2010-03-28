@@ -2435,6 +2435,13 @@ $messages['km'] = array(
 	'g-your-profile' => 'ប្រវត្តិរូប​របស់​អ្នក​',
 );
 
+/** Kannada (ಕನ್ನಡ)
+ * @author Nayvik
+ */
+$messages['kn'] = array(
+	'g-main-page' => 'ಮುಖ್ಯ ಪುಟ',
+);
+
 /** Ripoarisch (Ripoarisch)
  * @author Purodha
  */
