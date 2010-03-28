@@ -105,6 +105,7 @@ class TopUsersPoints extends SpecialPage {
 
 		$x = 1;
 		$out .= '<div class="top-users">';
+		$last_level = '';
 
 		foreach ( $user_list as $user ) {
 			$user_title = Title::makeTitle( NS_USER, $user['user_name'] );
