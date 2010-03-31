@@ -3458,11 +3458,11 @@ Isto irá também retirá-la aos utilizadores que a tenham recebido.',
 	'g-description-title' => 'prenda "$2" de $1',
 	'g-error-do-not-own' => 'Esta prenda não lhe pertence.',
 	'g-error-message-blocked' => 'Está bloqueado e não pode dar prendas',
-	'g-error-message-invalid-link' => 'A ligação que forneceu é inválida.',
+	'g-error-message-invalid-link' => 'O link que forneceu é inválido.',
 	'g-error-message-login' => 'Tem de estar autenticado para dar prendas',
 	'g-error-message-no-user' => 'O utilizador que está tentando ver não existe.',
 	'g-error-message-to-yourself' => 'Não pode dar prendas a si próprio.',
-	'g-error-title' => 'Ui, virou na curva errada!',
+	'g-error-title' => 'Ui, enganou-se no caminho!',
 	'g-file-instructions' => 'A imagem tem de ser um jpeg, png or gif (sem gifs animados) e ter tamanho inferior a 100KB.',
 	'g-from' => 'de <a href="$1">$2</a>',
 	'g-gift' => 'prenda',
@@ -3513,7 +3513,7 @@ Clique numa das prendas abaixo e depois em "Enviar prenda".
 
 $2 acabou de enviar-lhe a prenda $3 na {{SITENAME}}.
 
-Quer ler o recado que $2 deixou e ver a sua prenda? Clique na ligação abaixo:
+Quer ler o recado que $2 deixou e ver a sua prenda? Clique no link abaixo:
 
 $4
 

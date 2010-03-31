@@ -6025,8 +6025,8 @@ $messages['pt'] = array(
 	'viewrelationships' => 'Ver relacionamentos',
 	'viewrelationshiprequests' => 'Ver pedidos de relacionamentos',
 	'ur-already-submitted' => 'O seu pedido foi enviado',
-	'ur-error-page-title' => 'Ops!',
-	'ur-error-title' => 'Ui, virou na curva errada!',
+	'ur-error-page-title' => 'Ui!',
+	'ur-error-title' => 'Ui, enganou-se no caminho!',
 	'ur-error-message-no-user' => 'Não podemos processar o seu pedido, porque não existe um utilizador com esse nome.',
 	'ur-main-page' => 'Página principal',
 	'ur-your-profile' => 'O seu perfil',
@@ -6034,41 +6034,41 @@ $messages['pt'] = array(
 	'ur-relationship-count-foes' => '$1 tem $2 {{PLURAL:$2|inimigo|inimigos}}. Quer mais inimigos? <a href="$3">Convide-os.</a>',
 	'ur-relationship-count-friends' => '$1 tem $2 {{PLURAL:$2|amigo|amigos}}. Quer mais amigos? <a href="$3">Convide-os.</a>',
 	'ur-add-friends' => ' Quer mais amigos? <a href="$1">Convide-os</a>',
-	'ur-add-friend' => 'Adicionar como amigo',
-	'ur-add-foe' => 'Adicionar como inimigo',
-	'ur-add-no-user' => 'Nenhum utilizador seleccionado.
-Por favor peça amigos/inimigos através da ligação correcta.',
+	'ur-add-friend' => 'Adicionar aos amigos',
+	'ur-add-foe' => 'Adicionar aos inimigos',
+	'ur-add-no-user' => 'Nenhum utilizador foi seleccionado.
+Por favor peça amigos/inimigos através do link correcto.',
 	'ur-add-personal-message' => 'Adicionar uma mensagem pessoal',
-	'ur-remove-relationship-friend' => 'Remover como amigo',
-	'ur-remove-relationship-foe' => 'Remover como inimigo',
+	'ur-remove-relationship-friend' => 'Remover dos amigos',
+	'ur-remove-relationship-foe' => 'Remover dos inimigos',
 	'ur-give-gift' => 'Dar uma prenda',
 	'ur-previous' => 'ant',
 	'ur-next' => 'prox',
-	'ur-remove-relationship-title-foe' => 'Quer remover $1 como seu inimigo?',
-	'ur-remove-relationship-title-confirm-foe' => 'Removeu $1 como seu inimigo',
-	'ur-remove-relationship-title-friend' => 'Quer remover $1 como seu amigo?',
-	'ur-remove-relationship-title-confirm-friend' => 'Removeu $1 como seu amigo',
-	'ur-remove-relationship-message-foe' => 'Pediu para remover $1 como seu inimigo, pressione "$2" para confirmar.',
-	'ur-remove-relationship-message-confirm-foe' => 'Removeu $1 como seu inimigo com sucesso.',
-	'ur-remove-relationship-message-friend' => 'Pediu para remover $1 como seu amigo, pressione "$2" para confirmar.',
-	'ur-remove-relationship-message-confirm-friend' => 'Removeu $1 como seu amigo com sucesso.',
+	'ur-remove-relationship-title-foe' => 'Quer remover $1 dos seus inimigos?',
+	'ur-remove-relationship-title-confirm-foe' => 'Removeu $1 dos seus inimigos',
+	'ur-remove-relationship-title-friend' => 'Quer remover $1 dos seus amigos?',
+	'ur-remove-relationship-title-confirm-friend' => 'Removeu $1 dos seus amigos',
+	'ur-remove-relationship-message-foe' => 'Pediu para remover $1 dos seus inimigos, pressione "$2" para confirmar.',
+	'ur-remove-relationship-message-confirm-foe' => 'Removeu com sucesso $1 dos seus inimigos.',
+	'ur-remove-relationship-message-friend' => 'Pediu para remover $1 dos seus amigos, pressione "$2" para confirmar.',
+	'ur-remove-relationship-message-confirm-friend' => 'Removeu com sucesso $1 dos seus amigos.',
 	'ur-remove-error-message-no-relationship' => 'Não possui um relacionamento com $1.',
 	'ur-remove-error-message-remove-yourself' => 'Não se pode remover a si mesmo.',
-	'ur-remove-error-message-pending-foe-request' => 'Tem um pedido de inimizade pendente com $1.',
-	'ur-remove-error-message-pending-friend-request' => 'Tem um pedido de amizade pendente com $1.',
+	'ur-remove-error-message-pending-foe-request' => 'Tem um pedido de inimizade pendente de $1.',
+	'ur-remove-error-message-pending-friend-request' => 'Tem um pedido de amizade pendente de $1.',
 	'ur-remove-error-not-loggedin-foe' => 'Tem de estar autenticado para remover um inimigo.',
 	'ur-remove-error-not-loggedin-friend' => 'Tem de estar autenticado para remover um amigo.',
 	'ur-remove' => 'Remover',
 	'ur-cancel' => 'Cancelar',
 	'ur-login' => 'Autenticar-se',
-	'ur-add-title-foe' => 'Quer adicionar $1 como seu inimigo?',
-	'ur-add-title-friend' => 'Quer adicionar $1 como seu amigo?',
-	'ur-add-message-foe' => 'Está prestes a adicionar $1 como seu inimigo.
+	'ur-add-title-foe' => 'Quer adicionar $1 aos seus inimigos?',
+	'ur-add-title-friend' => 'Quer adicionar $1 aos seus amigos?',
+	'ur-add-message-foe' => 'Está prestes a adicionar $1 aos seus inimigos.
 Vamos notificar $1 para confirmar o seu rancor.',
-	'ur-add-message-friend' => 'Está prestes a adicionar $1 como seu amigo.
+	'ur-add-message-friend' => 'Está prestes a adicionar $1 aos seus amigos.
 Vamos notificar $1 para confirmar a sua amizade.',
-	'ur-add-button-foe' => 'Adicionar como inimigo',
-	'ur-add-button-friend' => 'Adicionar como amigo',
+	'ur-add-button-foe' => 'Adicionar aos inimigos',
+	'ur-add-button-friend' => 'Adicionar aos amigos',
 	'ur-add-sent-title-foe' => 'Enviamos o seu pedido de inimizade para $1!',
 	'ur-add-sent-title-friend' => 'Enviamos o seu pedido de amizade para $1!',
 	'ur-add-sent-message-foe' => 'O seu pedido de inimizade foi enviado para $1 para confirmação.
@@ -6077,7 +6077,7 @@ Se $1 confirmar o pedido, receberá uma notificação por correio electrónico',
 Se $1 confirmar o pedido, receberá uma notificação por correio electrónico',
 	'ur-add-error-message-no-user' => 'O utilizador que pretende adicionar não existe.',
 	'ur-add-error-message-blocked' => 'Neste momento está bloqueado e não pode adicionar amigos nem inimigos.',
-	'ur-add-error-message-yourself' => 'Não pode adicionar-se a si mesmo como amigo nem inimigo.',
+	'ur-add-error-message-yourself' => 'Não pode adicionar-se aos amigos ou inimigos.',
 	'ur-add-error-message-existing-relationship-foe' => 'Já é inimigo de $1.',
 	'ur-add-error-message-existing-relationship-friend' => 'Já é amigo de $1.',
 	'ur-add-error-message-pending-request-title' => 'Paciência!',
@@ -6094,18 +6094,18 @@ Vamos notificá-lo quando $1 confirmar o seu pedido.',
 	'ur-reject' => 'Rejeitar',
 	'ur-no-requests-message' => 'Não tem pedidos de amizade ou inimizade.
 Se quer ter mais amigos, <a href="$1">convide-os!</a>',
-	'ur-requests-added-message-foe' => 'Adicionou $1 como inimigo.',
-	'ur-requests-added-message-friend' => 'Adicionou $1 como amigo.',
+	'ur-requests-added-message-foe' => 'Adicionou $1 aos inimigos.',
+	'ur-requests-added-message-friend' => 'Adicionou $1 aos amigos.',
 	'ur-requests-reject-message-friend' => 'Rejeitou $1 como amigo.',
 	'ur-requests-reject-message-foe' => 'Rejeitou $1 como inimigo.',
 	'ur-title-foe' => 'lista de inimigos de $1',
 	'ur-title-friend' => 'lista de amigos de $1',
-	'friend_request_subject' => '$1 adicionou-o como amigo na {{SITENAME}}!',
+	'friend_request_subject' => '$1 adicionou-o aos amigos na {{SITENAME}}!',
 	'friend_request_body' => 'Olá $1,
 
-$2 adicionou-o como amigo na {{SITENAME}}. Queremos ter a certeza de que são realmente amigos.
+$2 adicionou-o aos amigos na {{SITENAME}}. Queremos ter a certeza de que são realmente amigos.
 
-Por favor, clique nesta ligação para confirmar a vossa amizade:
+Por favor, clique neste link para confirmar a vossa amizade:
 $3
 
 Obrigado
@@ -6116,12 +6116,12 @@ Olhe, quer parar de receber as nossas mensagens?
 
 Clique $4
 e altere as suas preferências para desactivar as notificações por correio electrónico.',
-	'foe_request_subject' => 'É a guerra! $1 adicionou-o como inimigo na {{SITENAME}}!',
+	'foe_request_subject' => 'É a guerra! $1 adicionou-o aos inimigos na {{SITENAME}}!',
 	'foe_request_body' => 'Olá $1,
 
 $2 acabou de listá-lo como inimigo na {{SITENAME}}. Queremos ter certeza de que são realmente inimigos mortais ou pelo menos que tiveram um desentendimento.
 
-Por favor, clique nesta ligação para confirmar o rancor.
+Por favor, clique neste link para confirmar o rancor.
 
 $3
 
@@ -6133,7 +6133,7 @@ Olhe, quer parar de receber as nossas mensagens?
 
 Clique $4
 e altere as suas preferências para desactivar as notificações por correio electrónico.',
-	'friend_accept_subject' => '$1 aceitou-o como amigo na {{SITENAME}}!',
+	'friend_accept_subject' => '$1 aceitou o seu pedido de amizade na {{SITENAME}}!',
 	'friend_accept_body' => 'Olá $1,
 
 $2 aceitou-o como amigo na {{SITENAME}}!
@@ -6148,7 +6148,7 @@ Olhe, quer parar de receber as nossas mensagens?
 
 Clique $4
 e altere as suas preferências para desactivar as notificações por correio electrónico.',
-	'foe_accept_subject' => '$1 aceitou-o como inimigo na {{SITENAME}}!',
+	'foe_accept_subject' => '$1 aceitou o seu pedido de inimizade na {{SITENAME}}!',
 	'foe_accept_body' => 'Olá $1,
 
 $2 aceitou-o como inimigo na {{SITENAME}}!
@@ -6163,10 +6163,10 @@ Olhe, quer parar de receber as nossas mensagens?
 
 Clique $4
 e altere as suas preferências para desactivar as notificações por correio electrónico.',
-	'friend_removed_subject' => 'Oh não! $1 removeu-o como amigo na {{SITENAME}}!',
+	'friend_removed_subject' => 'Oh não! $1 removeu-o dos amigos na {{SITENAME}}!',
 	'friend_removed_body' => 'Olá $1,
 
-$2 removeu-o como amigo na {{SITENAME}}!
+$2 removeu-o dos amigos na {{SITENAME}}!
 
 Obrigado,
 
@@ -6176,10 +6176,10 @@ Olhe, quer parar de receber as nossas mensagens?
 
 Clique $4
 e altere as suas preferências para desactivar as notificações por correio electrónico.',
-	'foe_removed_subject' => 'Eh pá! $1 removeu-o como inimigo na {{SITENAME}}!',
+	'foe_removed_subject' => 'É pá! $1 removeu-o dos amigos na {{SITENAME}}!',
 	'foe_removed_body' => 'Olá $1,
 
-$2 remove-o como inimigo na {{SITENAME}}!
+$2 remove-o dos inimigos na {{SITENAME}}!
 
 Será que estão a caminho de tornar-se amigos?
 

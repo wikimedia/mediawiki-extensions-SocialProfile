@@ -1046,7 +1046,7 @@ $messages['ps'] = array(
  * @author Waldir
  */
 $messages['pt'] = array(
-	'userwelcome-desc' => 'Adiciona a marca <tt>&lt;welcomeUser&gt;</tt> para apresentar informação social específica do utilizador, para utilizadores autenticados',
+	'userwelcome-desc' => 'Adiciona a etiqueta <tt>&lt;welcomeUser&gt;</tt> para apresentar informação social específica do utilizador a utilizadores autenticados',
 	'mp-userlevels-link' => 'Níveis de utilizador',
 	'mp-welcome-upload' => 'Carregar',
 	'mp-welcome-edit' => 'Editar',
