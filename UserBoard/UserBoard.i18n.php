@@ -2560,6 +2560,10 @@ $messages['ps'] = array(
 	'userboard_prevpage' => 'پخوانی',
 	'userboard_nomessages' => 'هېڅ کوم پيغام نشته.',
 	'userboard_sendbutton' => 'لېږل',
+	'userboard-time-days' => '{{PLURAL:$1|يوه ورځ|$1 ورځې}}',
+	'userboard-time-hours' => 'PLURAL:$1|يو ساعت|$1 ساعتونه}}',
+	'userboard-time-minutes' => 'PLURAL:$1|يوه دقيقه|$1 دقيقې}}',
+	'userboard-time-seconds' => 'PLURAL:$1|يوه ثانيه|$1 ثانيې}}',
 );
 
 /** Portuguese (Português)

@@ -6003,13 +6003,18 @@ $messages['ps'] = array(
 	'ur-main-page' => 'لومړی مخ',
 	'ur-your-profile' => 'ستاسې پېژنليک',
 	'ur-add-friend' => 'خپل په ملګرو کې ورګډول',
+	'ur-give-gift' => 'يوه ډالۍ ورکول',
 	'ur-previous' => 'پخوانی',
 	'ur-next' => 'راتلونکي',
 	'ur-remove' => 'غورځول',
 	'ur-login' => 'ننوتل',
+	'ur-add-button-foe' => 'د سيال په توګه ورګډول',
+	'ur-add-button-friend' => 'د ملګري په توګه ورګډول',
 	'ur-requests-title' => 'د اړيکو غوښتنې',
 	'ur-accept' => 'منل',
 	'ur-reject' => 'ردول',
+	'ur-title-foe' => 'د $1 د سيالانو لړليک',
+	'ur-title-friend' => 'د $1 ملګرو لړليک',
 );
 
 /** Portuguese (Português)
