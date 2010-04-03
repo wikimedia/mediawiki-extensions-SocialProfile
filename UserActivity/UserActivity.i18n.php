@@ -314,10 +314,12 @@ $messages['ia'] = array(
 
 /** Japanese (日本語)
  * @author Hosiryuhosi
+ * @author Naohiro19
  * @author 青子守歌
  */
 $messages['ja'] = array(
 	'useractivity' => '友達の活動度',
+	'useractivity-award' => '$1が賞を受賞しました',
 	'useractivity-all' => 'すべて表示',
 	'useractivity-gift' => '$1が$2からのギフトを受け取りました',
 	'useractivity-group-edit' => '{{PLURAL:$1|$1回の編集}}',
