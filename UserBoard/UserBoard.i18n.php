@@ -2040,7 +2040,7 @@ $3
  * @author Shijualex
  */
 $messages['ml'] = array(
-	'messagesenttitle' => 'സന്ദേശങ്ങള്‍ അയച്ചു',
+	'messagesenttitle' => 'സന്ദേശങ്ങൾ അയച്ചു',
 	'boardblaststep1' => 'ഘട്ടം 1 - താങ്കളുടെ സന്ദേശം എഴുതുക',
 	'boardblastprivatenote' => 'എല്ലാ സന്ദേശങ്ങളും സ്വകാര്യസന്ദേശങ്ങളായി അയക്കും.',
 	'boardblaststep2' => 'ഘട്ടം 3- സന്ദേശം കിട്ടേണ്ട ആളിനെ തിരഞ്ഞെടുക്കുക',
@@ -2049,17 +2049,17 @@ $messages['ml'] = array(
 	'boardlinkselectfriends' => 'കൂട്ടുകാരെ തിരഞ്ഞെടുക്കുക',
 	'boardlinkunselectfriends' => 'കൂട്ടുകാരെ ഒഴിവാക്കുക',
 	'userboard_delete' => 'മായ്ക്കുക',
-	'userboard_confirmdelete' => 'ഈ സന്ദേശം ഒഴിവാക്കണമെന്നു താങ്കള്‍ക്ക് ഉറപ്പാണോ?',
+	'userboard_confirmdelete' => 'ഈ സന്ദേശം ഒഴിവാക്കണമെന്നു താങ്കൾക്ക് ഉറപ്പാണോ?',
 	'userboard_sendmessage' => '$1-നു സന്ദേശം അയക്കുക',
-	'userboard_posted_ago' => '$1കള്‍ക്ക് മുന്‍പ് പോസ്റ്റ് ചെയ്തത്',
+	'userboard_posted_ago' => '$1കൾക്ക് മുൻപ് പോസ്റ്റ് ചെയ്തത്',
 	'userboard_private' => 'സ്വകാര്യം',
 	'userboard_public' => 'പരസ്യമായത്',
 	'userboard_nextpage' => 'അടുത്തത്',
-	'userboard_prevpage' => 'മുന്‍പുള്ളത്',
+	'userboard_prevpage' => 'മുൻപുള്ളത്',
 	'userboard_nomessages' => 'സന്ദേശങ്ങളില്ല.',
 	'userboard_sendbutton' => 'അയക്കൂ',
-	'userboard_loggedout' => 'മറ്റുള്ള ഉപയോക്താക്കള്‍ക്ക് സന്ദേശം ഇടാന്‍ താങ്കള്‍ <a href="$1">ലോഗിന്‍</a> ചെയ്തിരിക്കണം.',
-	'userboard_showingmessages' => '$2-$3 ന്റെ {{PLURAL:$1|$1 സന്ദേശം|$1 സന്ദേശങ്ങള്‍}} കാണിക്കുന്നു',
+	'userboard_loggedout' => 'മറ്റുള്ള ഉപയോക്താക്കൾക്ക് സന്ദേശം ഇടാൻ താങ്കൾ <a href="$1">ലോഗിൻ</a> ചെയ്തിരിക്കണം.',
+	'userboard_showingmessages' => '$2-$3 ന്റെ {{PLURAL:$1|$1 സന്ദേശം|$1 സന്ദേശങ്ങൾ}} കാണിക്കുന്നു',
 );
 
 /** Marathi (मराठी)

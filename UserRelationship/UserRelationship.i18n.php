@@ -4722,23 +4722,23 @@ $2 ве отстрани од листата на непријатели на {{
  * @author Shijualex
  */
 $messages['ml'] = array(
-	'ur-main-page' => 'പ്രധാന താള്‍',
-	'ur-add-friends' => 'കൂടുതല്‍ സുഹൃത്തുക്കളെ വേണോ? <a href="$1">ക്ഷണിക്കുക</a>',
-	'ur-add-friend' => 'സുഹൃത്തായി ചേര്‍ക്കുക',
-	'ur-previous' => 'മുന്‍പുള്ളത്',
+	'ur-main-page' => 'പ്രധാന താൾ',
+	'ur-add-friends' => 'കൂടുതൽ സുഹൃത്തുക്കളെ വേണോ? <a href="$1">ക്ഷണിക്കുക</a>',
+	'ur-add-friend' => 'സുഹൃത്തായി ചേർക്കുക',
+	'ur-previous' => 'മുൻപുള്ളത്',
 	'ur-next' => 'അടുത്തത്',
-	'ur-remove-error-message-no-relationship' => 'താങ്കള്‍ക്ക് $1മായി ബന്ധം സ്ഥാപിച്ചിട്ടില്ല.',
-	'ur-remove-error-message-remove-yourself' => 'താങ്കള്‍ക്ക് താങ്കളെത്തന്നെ ഒഴിവാക്കാന്‍ പറ്റില്ല.',
+	'ur-remove-error-message-no-relationship' => 'താങ്കൾക്ക് $1മായി ബന്ധം സ്ഥാപിച്ചിട്ടില്ല.',
+	'ur-remove-error-message-remove-yourself' => 'താങ്കൾക്ക് താങ്കളെത്തന്നെ ഒഴിവാക്കാൻ പറ്റില്ല.',
 	'ur-remove' => 'നീക്കം ചെയ്യുക',
 	'ur-cancel' => 'റദ്ദാക്കുക',
-	'ur-login' => 'ലോഗിന്‍',
-	'ur-add-error-message-no-user' => 'താങ്കള്‍ ചേര്‍ക്കുവാന്‍ ശ്രമിക്കുന്ന ഉപയോക്താവ് നിലവിലില്ല.',
+	'ur-login' => 'ലോഗിൻ',
+	'ur-add-error-message-no-user' => 'താങ്കൾ ചേർക്കുവാൻ ശ്രമിക്കുന്ന ഉപയോക്താവ് നിലവിലില്ല.',
 	'ur-add-error-message-pending-request-title' => 'കാത്തിരിക്കൂ!',
 	'ur-accept' => 'സ്വീകരിക്കുക',
 	'ur-reject' => 'നിരാകരിക്കുക',
 	'ur-title-friend' => '$1ന്റെ സുഹൃത്തുക്കളുടെ പട്ടിക',
-	'friend_request_subject' => '$1 താങ്കളെ {{SITENAME}} സം‌രംഭത്തില്‍ സുഹൃത്തായി ചേര്‍ത്തിരിക്കുന്നു!',
-	'friend_accept_subject' => '{{SITENAME}} സം‌രംഭത്തിലുള്ള താങ്കളുടെ സൗഹൃദ അഭ്യര്‍ത്ഥന $1 സ്വീകരിച്ചു!',
+	'friend_request_subject' => '$1 താങ്കളെ {{SITENAME}} സം‌രംഭത്തിൽ സുഹൃത്തായി ചേർത്തിരിക്കുന്നു!',
+	'friend_accept_subject' => '{{SITENAME}} സം‌രംഭത്തിലുള്ള താങ്കളുടെ സൗഹൃദ അഭ്യർത്ഥന $1 സ്വീകരിച്ചു!',
 );
 
 /** Mongolian (Монгол)
