@@ -1684,7 +1684,15 @@ $messages['io'] = array(
  * @author Darth Kule
  */
 $messages['it'] = array(
+	'messagesenttitle' => 'Messaggio inviato',
+	'boardlinkselectall' => 'Seleziona tutte',
 	'userboard_delete' => 'Cancella',
+	'userboard_private' => 'privata',
+	'userboard_public' => 'pubblico',
+	'userboard_nextpage' => 'succ',
+	'userboard_prevpage' => 'prec',
+	'userboard_nomessages' => 'Non vi sono nuovi messaggi.',
+	'userboard_sendbutton' => 'invia',
 );
 
 /** Japanese (日本語)
@@ -2148,7 +2156,7 @@ $messages['nah'] = array(
 $messages['nl'] = array(
 	'boardblastlogintitle' => 'U moet aangemeld zijn om berichten naar meerdere gebruikers te kunnen verzenden',
 	'boardblastlogintext' => 'U moet <a href="index.php?title=Special:UserLogin"aanmelden</a> om berichten naar meerdere gebruikers te kunnen verzenden.',
-	'messagesenttitle' => 'Berichten verstuurd',
+	'messagesenttitle' => 'Berichten verzonden',
 	'boardblasttitle' => 'Bericht aan meerdere gebruikers verzenden',
 	'boardblaststep1' => 'Stap 1: uw bericht schrijven',
 	'boardblastprivatenote' => 'Alle berichten worden verzonden als privéberichten',

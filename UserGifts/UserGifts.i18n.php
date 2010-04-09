@@ -507,7 +507,12 @@ $messages['bg'] = array(
 	'g-give-all-message-title' => 'Добавяне на съобщение',
 	'g-give-list-select' => 'избиране на приятел',
 	'g-give-separator' => 'или',
+	'g-large' => 'Голяма',
+	'g-medium' => 'Средна',
+	'g-next' => 'Следваща',
+	'g-previous' => 'Предишна',
 	'g-remove' => 'Премахване',
+	'g-small' => 'Малка',
 );
 
 /** Bengali (বাংলা)
@@ -2291,7 +2296,17 @@ $messages['ig'] = array(
  * @author Darth Kule
  */
 $messages['it'] = array(
+	'giftmanager-public' => 'pubblico',
+	'giftmanager-private' => 'privata',
 	'g-cancel' => 'Annulla',
+	'g-give-separator' => 'o',
+	'g-large' => 'Grande',
+	'g-medium' => 'Medio',
+	'g-new' => 'nuovo',
+	'g-next' => 'Succ',
+	'g-previous' => 'Prec',
+	'g-remove' => 'Rimuovi',
+	'g-small' => 'Piccolo',
 );
 
 /** Japanese (日本語)

@@ -318,6 +318,12 @@ $messages['bg'] = array(
 	'ga-addnew' => '+ Добавяне на нов подарък',
 	'ga-choosefile' => 'Избиране на файл:',
 	'ga-currentimage' => 'Текуща картинка',
+	'ga-large' => 'Голяма',
+	'ga-medium' => 'Средна',
+	'ga-new' => 'Нова',
+	'ga-next' => 'Следваща',
+	'ga-previous' => 'Предишна',
+	'ga-small' => 'Малка',
 );
 
 /** Breton (Brezhoneg)
@@ -1511,6 +1517,17 @@ dan ubah setting anda untuk menonaktifkan notifikasi surel.',
  */
 $messages['ig'] = array(
 	'ga-small' => 'Ntàkiri',
+);
+
+/** Italian (Italiano) */
+$messages['it'] = array(
+	'ga-goback' => 'Indietro',
+	'ga-large' => 'Grande',
+	'ga-medium' => 'Medio',
+	'ga-new' => 'Nuovo',
+	'ga-next' => 'Succ',
+	'ga-previous' => 'Prec',
+	'ga-small' => 'Piccolo',
 );
 
 /** Japanese (日本語)

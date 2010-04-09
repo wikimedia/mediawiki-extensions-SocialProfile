@@ -5155,11 +5155,31 @@ $messages['ig'] = array(
  * @author Darth Kule
  */
 $messages['it'] = array(
+	'user-contributions' => 'Contributi',
+	'user-stats-title' => 'Statistiche',
+	'other-info-books' => 'Libri',
+	'profile-not-provided' => 'Non fornito',
 	'user-personal-info-real-name' => 'Nome vero',
+	'user-personal-info-location' => 'Ubicazione',
+	'user-personal-info-occupation' => 'Occupazione:',
+	'user-profile-update-profile' => 'profilo',
+	'user-profile-default-country' => 'Stati Uniti',
+	'user-profile-section-picture' => 'Immagine',
+	'user-profile-section-preferences' => 'Preferenze',
+	'user-profile-personal-info' => 'Informazioni',
 	'user-profile-personal-name' => 'Nome',
 	'user-profile-personal-email' => 'Indirizzo e-mail',
 	'user-profile-personal-birthdate' => 'Data (MM/GG)',
+	'user-profile-personal-occupation' => 'Occupazione',
+	'user-profile-interests-books' => 'Libri',
+	'user-profile-preferences-emails' => 'Notifica via e-mail',
+	'user-profile-update-button' => 'Aggiorna',
 	'user-profile-picture-large' => 'Grande',
+	'user-profile-picture-medium' => 'Medio',
+	'user-profile-picture-small' => 'Piccolo',
+	'user-profile-goback' => 'Indietro',
+	'user-page-link' => 'Pagina utente',
+	'user-profile-picture-log' => 'immagine',
 );
 
 /** Japanese (日本語)

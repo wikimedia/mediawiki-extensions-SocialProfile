@@ -3943,7 +3943,11 @@ $messages['io'] = array(
  */
 $messages['it'] = array(
 	'ur-main-page' => 'Pagina principale',
+	'ur-remove' => 'Rimuovi',
 	'ur-cancel' => 'Annulla',
+	'ur-login' => 'Esegui il login',
+	'ur-accept' => 'Accetta',
+	'ur-reject' => 'Rifiuta',
 );
 
 /** Japanese (日本語)
