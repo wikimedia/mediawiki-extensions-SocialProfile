@@ -140,6 +140,12 @@ $messages['bs'] = array(
 	'useractivity-title' => 'Aktivnosti prijatelja',
 );
 
+/** German (Deutsch) */
+$messages['de'] = array(
+	'useractivity-group-comment' => '{{PLURAL:$1|ein Kommentar|$1 Kommentare}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|ein Freund|$1 Freunde}}',
+);
+
 /** Lower Sorbian (Dolnoserbski)
  * @author Michawiki
  */
@@ -313,6 +319,7 @@ $messages['ia'] = array(
 );
 
 /** Japanese (日本語)
+ * @author Aotake
  * @author Hosiryuhosi
  * @author Naohiro19
  * @author 青子守歌
@@ -321,6 +328,9 @@ $messages['ja'] = array(
 	'useractivity' => '友達の活動度',
 	'useractivity-award' => '$1が賞を受賞しました',
 	'useractivity-all' => 'すべて表示',
+	'useractivity-edit' => '$1 {{PLURAL:$4|ページを編集|以下のページを編集:}} $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|は次の人と敵対しています|は次の人々と敵対しています}} $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|は次の人と友好関係にあります|は次の人々と友好関係にあります}} $3',
 	'useractivity-gift' => '$1が$2からのギフトを受け取りました',
 	'useractivity-group-edit' => '{{PLURAL:$1|$1回の編集}}',
 	'useractivity-group-comment' => '{{PLURAL:$1|$1コのコメント}}',
@@ -328,6 +338,7 @@ $messages['ja'] = array(
 	'useractivity-group-friend' => '{{PLURAL:$1|$1人の友達}}',
 	'useractivity-siteactivity' => 'サイトの活動度',
 	'useractivity-title' => '友達の活動度',
+	'useractivity-user_message' => '$1 {{PLURAL:$2|は次の人にメッセージを送りました|は次の人々にメッセージを送りました}} $3',
 );
 
 /** Ripoarisch (Ripoarisch)
@@ -429,6 +440,11 @@ $messages['no'] = array(
 	'useractivity-siteactivity' => 'Sideaktivitet',
 	'useractivity-title' => 'Venners aktivitet',
 	'useractivity-user_message' => '$1 {{PLURAL:$4|sendte en beskjed til|sendte flere beskjeder til}} $3',
+);
+
+/** Polish (Polski) */
+$messages['pl'] = array(
+	'useractivity-all' => 'Pokaż wszystko',
 );
 
 /** Piedmontese (Piemontèis)

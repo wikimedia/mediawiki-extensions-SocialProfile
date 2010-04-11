@@ -3357,6 +3357,7 @@ $messages['fi'] = array(
 	'user-stats-title' => 'Tilastot',
 	'user-stats-edits' => '{{PLURAL:$1|Muokkaus|Muokkauksia}}',
 	'user-stats-votes' => '{{PLURAL:$1|Ääni|Ääniä}}',
+	'user-stats-comments' => '{{PLURAL:$1|Kommentti|Kommenttia}}',
 	'user-stats-recruits' => '{{PLURAL:$1|Rekrytoitu|Rekrytoitua}}',
 	'other-info-title' => 'Muut tiedot',
 	'user-friends-title' => 'Ystävät',
