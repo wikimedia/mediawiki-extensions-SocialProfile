@@ -8005,6 +8005,7 @@ Clique <a href="$1">aqui</a> para se autenticar ou <a href="$2">aqui</a> para se
  * @author Eduardo.mps
  * @author Heldergeovane
  * @author Jorge Morais
+ * @author Malafaya
  */
 $messages['pt-br'] = array(
 	'populateuserprofiles' => 'Popular perfil de utilizadores',
@@ -8158,16 +8159,16 @@ Clique <a href="$1">aqui</a> para se autenticar ou clique <a href="$2">aqui</a> 
 	'user-profile-userlevels-link' => 'Níveis de utilizador',
 	'user-no-images' => 'Nenhuma imagem carregada',
 	'edit-profile-title' => 'Edite seu perfil',
-	'user-page-link' => 'Página de utilizador',
+	'user-page-link' => 'Página de usuário',
 	'user-social-profile-link' => 'Perfil Social',
-	'user-wiki-link' => 'Página wiki de utilizador',
+	'user-wiki-link' => 'Página wiki de usuário',
 	'update_profile_nav' => '* Special:UpdateProfile|Informação pessoal
 * Special:UpdateProfile/personal|Outras informações
 * Special:UpdateProfile/custom|Informação personalizada
 * Special:UploadAvatar|Avatar
 * Special:UpdateProfile/preferences|Preferências',
-	'user-type-toggle-old' => 'Usar página wiki de utilizador',
-	'user-type-toggle-new' => 'Usar página social de utilizador',
+	'user-type-toggle-old' => 'Usar página wiki de usuário',
+	'user-type-toggle-new' => 'Usar página social de usuário',
 	'user-board-login-message' => 'Você precisa estar <a href="$1">autenticado</a> para enviar mensagens para outros utilizadores',
 	'removeavatar' => 'Remover avatar',
 	'givegift' => 'Dar presente',
