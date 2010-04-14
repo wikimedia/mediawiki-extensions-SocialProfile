@@ -292,10 +292,16 @@ $messages['hsb'] = array(
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
+	'useractivity' => 'Barátok aktivitása',
 	'useractivity-award' => '$1 kapott egy díjat',
 	'useractivity-all' => 'Összes megjelenítése',
 	'useractivity-gift' => '$1 ajándékot kapott $2 felhasználótól',
 	'useractivity-group-edit' => '{{PLURAL:$1|egy szerkesztés|$1 szerkesztés}}',
+	'useractivity-group-comment' => '$1 hozzászólás',
+	'useractivity-group-user_message' => '$1 üzenet',
+	'useractivity-group-friend' => '$1 barát',
+	'useractivity-siteactivity' => 'Oldal aktivitás',
+	'useractivity-title' => 'Barátok aktivitása',
 );
 
 /** Interlingua (Interlingua)

@@ -29,6 +29,13 @@ $messages['af'] = array(
 	'yui-desc' => 'Versameling hulpmiddels en kontroles wat in JavaScript geskryf is',
 );
 
+/** Old English (Anglo-Saxon)
+ * @author Wōdenhelm
+ */
+$messages['ang'] = array(
+	'yui-desc' => 'Missenliċu tōl ƿriten on JavaScript',
+);
+
 /** Arabic (العربية)
  * @author Meno25
  */
