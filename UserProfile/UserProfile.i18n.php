@@ -8598,6 +8598,33 @@ $messages['ru'] = array(
 	'right-avatarremove' => 'Удаление аватар участников',
 );
 
+/** Rusyn (русиньскый язык)
+ * @author Gazeb
+ */
+$messages['rue'] = array(
+	'user-profile-personal-location' => 'Місце',
+	'user-profile-personal-city' => 'Місто',
+	'user-profile-personal-country' => 'Країна',
+	'user-profile-personal-hometown' => 'Домашнє місто',
+	'user-profile-personal-birthday' => 'День народжіня',
+	'user-profile-personal-birthdate' => 'Датум (MM/DD)',
+	'user-profile-personal-aboutme' => 'О мі',
+	'user-profile-personal-education' => 'Едукація',
+	'user-profile-personal-schools' => 'Школы',
+	'user-profile-personal-places' => 'Місця',
+	'user-profile-personal-placeslived' => 'Місця де єм жыв',
+	'user-profile-personal-web' => 'веб',
+	'user-profile-personal-websites' => 'Вебовы порталы',
+	'user-profile-interests-entertainment' => 'Забава',
+	'user-profile-interests-movies' => 'Філмы',
+	'user-profile-interests-tv' => 'ТВ',
+	'user-profile-interests-music' => 'Музика',
+	'user-profile-interests-books' => 'Книгы',
+	'user-profile-interests-videogames' => 'Відео-гры',
+	'user-profile-interests-eats' => 'Їдла',
+	'user-profile-interests-drinks' => 'Питя',
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */

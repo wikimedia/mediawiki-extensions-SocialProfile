@@ -140,10 +140,24 @@ $messages['bs'] = array(
 	'useractivity-title' => 'Aktivnosti prijatelja',
 );
 
-/** German (Deutsch) */
+/** German (Deutsch)
+ * @author Kghbln
+ */
 $messages['de'] = array(
+	'useractivity' => 'Aktivitäten des Freundes',
+	'useractivity-award' => '$1 erhielt eine Auszeichnung',
+	'useractivity-all' => 'Alle anzeigen',
+	'useractivity-edit' => '$1 {{PLURAL:$4|bearbeitete die Seite|bearbeitete die folgenden Seiten:}} $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|ist nun Gegner von|sind nun Gegner von}} $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|ist nun Freund von|sind nun Freunde von}} $3',
+	'useractivity-gift' => '$1 erhielt ein Geschenk von $2',
+	'useractivity-group-edit' => '{{PLURAL:$1|eine Bearbeitung|$1 Bearbeitungen}}',
 	'useractivity-group-comment' => '{{PLURAL:$1|ein Kommentar|$1 Kommentare}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|eine Nachricht|$1 Nachrichten}}',
 	'useractivity-group-friend' => '{{PLURAL:$1|ein Freund|$1 Freunde}}',
+	'useractivity-siteactivity' => 'Aktivität auf der Seite',
+	'useractivity-title' => 'Aktivitäten des Freundes',
+	'useractivity-user_message' => '$1 {{PLURAL:$4|sandte eine Nachricht an|sandte Nachrichten an}} $3',
 );
 
 /** Lower Sorbian (Dolnoserbski)
