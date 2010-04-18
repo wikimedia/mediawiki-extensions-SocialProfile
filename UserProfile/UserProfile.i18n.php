@@ -2026,6 +2026,7 @@ $messages['da'] = array(
  * @author Melancholie
  * @author Purodha
  * @author Revolus
+ * @author The Evil IP address
  * @author Tim 'Avatar' Bartel
  * @author Umherirrender
  */
@@ -2162,7 +2163,7 @@ Klick <a href="$1">hier</a> um dich anzumelden oder klicke <a href="$2">hier</a>
 	'user-profile-sports-sport' => 'Sport',
 	'user-profile-sports-title' => 'Bearbeite deine Lieblings-Sportarten und -Teams',
 	'user-profile-sports-notloggedintitle' => 'Uuups!',
-	'user-profile-sports-notloggedintext' => 'Du musst angemeldet sein um dein Profil zu bearbeiten.',
+	'user-profile-sports-notloggedintext' => 'Du musst angemeldet sein, um dein Profil zu bearbeiten.',
 	'user-profile-sports-teamremoved' => 'Dein Team wurde entfernt',
 	'user-profile-sports-teamsaved' => 'Deine Teams wurden gespeichert',
 	'user-profile-sports-addmore' => 'Weitere Sportarten/Teams hinzufügen',
@@ -3737,7 +3738,7 @@ $messages['ga'] = array(
  * @author Toliño
  */
 $messages['gl'] = array(
-	'populateuserprofiles' => 'Perfiles de usuario populares',
+	'populateuserprofiles' => 'Perfís de usuario populares',
 	'user-time-ago' => 'hai $1',
 	'user-awards-title' => 'Premios',
 	'user-gifts-title' => 'Agasallos',
@@ -3785,7 +3786,7 @@ $messages['gl'] = array(
 	'custom-no-info' => 'Non hai información personalizada',
 	'profile-updated-personal' => 'Actualizar o seu perfil',
 	'profile-not-provided' => 'Non proporcionado',
-	'populate-user-profile-done' => '{{PLURAL:$1|Engadiuse un perfil|Engadíronse $1 perfiles}}',
+	'populate-user-profile-done' => '{{PLURAL:$1|Engadiuse un perfil|Engadíronse $1 perfís}}',
 	'user-board-title' => 'Taboleiro',
 	'user-send-board-blast' => 'Enviar un recado',
 	'user-personal-info-title' => 'Información persoal',
