@@ -628,6 +628,7 @@ $messages['am'] = array(
  * @author Juanpabl
  */
 $messages['an'] = array(
+	'user-profile-section-preferences' => 'Preferencias',
 	'user-profile-personal-name' => 'Nombre',
 	'user-profile-personal-birthdate' => 'Calendata (MM/DD)',
 );
