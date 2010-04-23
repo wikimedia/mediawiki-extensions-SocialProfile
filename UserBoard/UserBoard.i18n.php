@@ -1821,6 +1821,13 @@ $messages['km'] = array(
 	'userboard-time-seconds' => '{{PLURAL:$1|មួយ​វិនាទី|$1 វិនាទី}}',
 );
 
+/** Kannada (ಕನ್ನಡ)
+ * @author Nayvik
+ */
+$messages['kn'] = array(
+	'userboard_delete' => 'ಅಳಿಸು',
+);
+
 /** Krio (Krio)
  * @author Jose77
  */

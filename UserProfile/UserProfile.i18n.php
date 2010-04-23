@@ -4898,7 +4898,7 @@ Clicca <a href="$1">hic</a> pro aperir un session o clicca <a href="$2">hic</a> 
 	'user-profile-preferences-emails-gift' => 'Quando tu recipe un dono',
 	'user-profile-preferences-emails-level' => 'Quando tu avantia un nivello',
 	'user-profile-preferences-emails-weekly' => 'Reciper actualisationes septimanal in e-mail',
-	'user-profile-update-button' => 'Actualisation',
+	'user-profile-update-button' => 'Actualisar',
 	'user-profile-tidbits-title' => 'Miscellanea',
 	'user-profile-tidbits-favmoment' => 'Momento favorite de sport',
 	'user-profile-tidbits-worstmoment' => 'Momento pessime de sport',

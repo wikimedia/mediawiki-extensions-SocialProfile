@@ -361,6 +361,13 @@ $messages['ja'] = array(
 	'useractivity-user_message' => '$1 {{PLURAL:$2|は次の人にメッセージを送りました|は次の人々にメッセージを送りました}} $3',
 );
 
+/** Kannada (ಕನ್ನಡ)
+ * @author Nayvik
+ */
+$messages['kn'] = array(
+	'useractivity-group-user_message' => '{{PLURAL:$1|ಒಂದು ಸಂದೇಶ|$1 ಸಂದೇಶಗಳು}}',
+);
+
 /** Ripoarisch (Ripoarisch)
  * @author Purodha
  */
