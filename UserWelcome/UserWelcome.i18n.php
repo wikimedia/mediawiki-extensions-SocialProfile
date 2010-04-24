@@ -625,7 +625,7 @@ $messages['hu'] = array(
 $messages['ia'] = array(
 	'userwelcome-desc' => 'Adde le etiquetta <tt>&lt;welcomeUser&gt;</tt> pro monstrar informationes social specific a cata usator al usatores que ha aperite un session',
 	'mp-userlevels-link' => 'Nivellos de usator',
-	'mp-welcome-upload' => 'Cargar',
+	'mp-welcome-upload' => 'Incargar',
 	'mp-welcome-edit' => 'Modificar',
 	'mp-welcome-points' => '$1 {{PLURAL:$1|puncto|punctos}}',
 	'mp-welcome-needed-points' => 'Pro avantiar verso <b><a href="$1">$2</a></b> gania <i>$3</i> plus {{PLURAL:$3|puncto|punctos}}!',
