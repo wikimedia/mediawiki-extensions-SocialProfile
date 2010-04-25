@@ -375,7 +375,7 @@ $messages['kn'] = array(
 	'useractivity-group-user_message' => '{{PLURAL:$1|ಒಂದು ಸಂದೇಶ|$1 ಸಂದೇಶಗಳು}}',
 );
 
-/** Ripoarisch (Ripoarisch)
+/** Colognian (Ripoarisch)
  * @author Purodha
  */
 $messages['ksh'] = array(

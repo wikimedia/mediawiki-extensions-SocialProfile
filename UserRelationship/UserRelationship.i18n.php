@@ -4226,7 +4226,7 @@ $messages['krj'] = array(
 	'ur-cancel' => 'Kanselar',
 );
 
-/** Ripoarisch (Ripoarisch)
+/** Colognian (Ripoarisch)
  * @author Purodha
  */
 $messages['ksh'] = array(
@@ -4420,7 +4420,7 @@ un donn en Dinge Ennstellunge affschallde, dat
 De e-mail jescheck kriß.',
 );
 
-/** Cornish (Kernowek)
+/** Cornish (Kernewek)
  * @author Kernoweger
  * @author Kw-Moon
  */

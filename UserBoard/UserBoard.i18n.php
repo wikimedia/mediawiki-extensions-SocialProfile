@@ -1835,7 +1835,7 @@ $messages['kri'] = array(
 	'userboard_delete' => 'Dilit',
 );
 
-/** Ripoarisch (Ripoarisch)
+/** Colognian (Ripoarisch)
  * @author Purodha
  */
 $messages['ksh'] = array(

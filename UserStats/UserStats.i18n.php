@@ -1477,7 +1477,7 @@ $messages['km'] = array(
 និង​ផ្លាស់ប្ដូរ​ការកំណត់​របស់​អ្នក ដើម្បី​បិទ​មិន​ទទួល​សេចក្ដីជូនដំណឹង​តាម​អ៊ីមែល​។',
 );
 
-/** Ripoarisch (Ripoarisch)
+/** Colognian (Ripoarisch)
  * @author Purodha
  */
 $messages['ksh'] = array(

@@ -2457,7 +2457,7 @@ $messages['kn'] = array(
 	'g-main-page' => 'ಮುಖ್ಯ ಪುಟ',
 );
 
-/** Ripoarisch (Ripoarisch)
+/** Colognian (Ripoarisch)
  * @author Purodha
  */
 $messages['ksh'] = array(

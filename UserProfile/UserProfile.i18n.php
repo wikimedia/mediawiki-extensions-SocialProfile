@@ -2214,6 +2214,7 @@ Klick <a href="$1">hier</a> um dich anzumelden oder klicke <a href="$2">hier</a>
 
 /** German (formal address) (Deutsch (Sie-Form))
  * @author Imre
+ * @author The Evil IP address
  */
 $messages['de-formal'] = array(
 	'profile-updated-personal' => 'Ihr Profil aktualisieren',
@@ -2223,7 +2224,7 @@ Klicken Sie <a href="$1">hier</a> um sich anzumelden oder klicken Sie <a href="$
 	'user-profile-update-saved' => 'Ihr Profil wurde gespeichert',
 	'user-profile-personal-email-needs-auth' => '(Ihre E-Mail-Adresse muss bestätigt sein, damit Sie Benachrichtigungen erhalten können)',
 	'user-profile-sports-title' => 'Bearbeiten Sie Ihre Lieblings-Sportarten und -Teams',
-	'user-profile-sports-notloggedintext' => 'Sie müssen angemeldet sein um Ihr Profil zu bearbeiten.',
+	'user-profile-sports-notloggedintext' => 'Sie müssen angemeldet sein, um Ihr Profil zu bearbeiten.',
 	'user-profile-sports-teamremoved' => 'Ihr Team wurde entfernt',
 	'user-profile-sports-teamsaved' => 'Ihre Teams wurden gespeichert',
 	'user-profile-picture-title' => 'Ihr Bild hochladen',
@@ -3364,7 +3365,7 @@ $messages['fi'] = array(
 	'user-friends-title' => 'Ystävät',
 	'user-foes-title' => 'Viholliset',
 	'other-info-movies' => 'Elokuvat',
-	'other-info-tv' => 'TV',
+	'other-info-tv' => 'tv',
 	'other-info-music' => 'Musiikki',
 	'other-info-books' => 'Kirjat',
 	'other-info-video-games' => 'Videopelit',
@@ -5683,7 +5684,7 @@ $messages['krj'] = array(
 	'user-profile-personal-email' => 'E-mail',
 );
 
-/** Ripoarisch (Ripoarisch)
+/** Colognian (Ripoarisch)
  * @author Purodha
  */
 $messages['ksh'] = array(

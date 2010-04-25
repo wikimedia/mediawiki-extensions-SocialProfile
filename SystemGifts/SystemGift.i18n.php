@@ -1613,7 +1613,7 @@ $messages['km'] = array(
 	'ga-small' => 'តូច​',
 );
 
-/** Ripoarisch (Ripoarisch)
+/** Colognian (Ripoarisch)
  * @author Purodha
  */
 $messages['ksh'] = array(

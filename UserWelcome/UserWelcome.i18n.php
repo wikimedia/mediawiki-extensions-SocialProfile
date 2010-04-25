@@ -797,7 +797,7 @@ $messages['krc'] = array(
 	'mp-request-new-friend' => '$1 джангы {{PLURAL:$1|тенг|тенг}}',
 );
 
-/** Ripoarisch (Ripoarisch)
+/** Colognian (Ripoarisch)
  * @author Purodha
  */
 $messages['ksh'] = array(
