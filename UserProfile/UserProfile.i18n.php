@@ -3332,7 +3332,6 @@ Pursa <a href="$1">aquina</a> p\'abril la tu cuenta, u <a href="$2">aquina</a> p
 /** Finnish (Suomi)
  * @author Cimon Avaro
  * @author Crt
- * @author Jack Phoenix
  * @author Jack Phoenix <jack@countervandalism.net>
  * @author Str4nd
  */
@@ -3359,13 +3358,13 @@ $messages['fi'] = array(
 	'user-stats-title' => 'Tilastot',
 	'user-stats-edits' => '{{PLURAL:$1|Muokkaus|Muokkauksia}}',
 	'user-stats-votes' => '{{PLURAL:$1|Ääni|Ääniä}}',
-	'user-stats-comments' => '{{PLURAL:$1|Kommentti|Kommenttia}}',
-	'user-stats-recruits' => '{{PLURAL:$1|Rekrytoitu|Rekrytoitua}}',
+	'user-stats-comments' => '{{PLURAL:$1|Kommentti|Kommentteja}}',
+	'user-stats-recruits' => '{{PLURAL:$1|Rekrytoitu|Rekrytoituja}}',
 	'other-info-title' => 'Muut tiedot',
 	'user-friends-title' => 'Ystävät',
 	'user-foes-title' => 'Viholliset',
 	'other-info-movies' => 'Elokuvat',
-	'other-info-tv' => 'tv',
+	'other-info-tv' => 'TV',
 	'other-info-music' => 'Musiikki',
 	'other-info-books' => 'Kirjat',
 	'other-info-video-games' => 'Videopelit',
