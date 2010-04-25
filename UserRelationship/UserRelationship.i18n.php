@@ -6032,7 +6032,7 @@ $messages['ps'] = array(
  */
 $messages['pt'] = array(
 	'viewrelationships' => 'Ver relacionamentos',
-	'viewrelationshiprequests' => 'Ver pedidos de relacionamentos',
+	'viewrelationshiprequests' => 'Ver pedidos de relacionamento',
 	'ur-already-submitted' => 'O seu pedido foi enviado',
 	'ur-error-page-title' => 'Ui!',
 	'ur-error-title' => 'Ui, enganou-se no caminho!',

@@ -5956,6 +5956,7 @@ Klickt <a href="$1">hei</a> fir Iech anzeloggen oder klickt <a href="$2">hei</a>
 	'user-profile-points' => '$1 {{PLURAL:$1|Punkt|Punkten}}',
 	'user-profile-section-personal' => 'Perséinlech Informatiounen',
 	'user-profile-section-sportsteams' => 'Reseauen aktualiséieren',
+	'user-profile-section-custom' => 'personaliséiert Informatioun',
 	'user-profile-section-interests' => 'Aner Informatiounen',
 	'user-profile-section-picture' => 'Avatar',
 	'user-profile-section-preferences' => 'Astellungen',
