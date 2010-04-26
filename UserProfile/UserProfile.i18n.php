@@ -3333,6 +3333,7 @@ Pursa <a href="$1">aquina</a> p\'abril la tu cuenta, u <a href="$2">aquina</a> p
 /** Finnish (Suomi)
  * @author Cimon Avaro
  * @author Crt
+ * @author Jack Phoenix
  * @author Jack Phoenix <jack@countervandalism.net>
  * @author Str4nd
  */
@@ -3365,7 +3366,7 @@ $messages['fi'] = array(
 	'user-friends-title' => 'Ystävät',
 	'user-foes-title' => 'Viholliset',
 	'other-info-movies' => 'Elokuvat',
-	'other-info-tv' => 'tv',
+	'other-info-tv' => 'TV',
 	'other-info-music' => 'Musiikki',
 	'other-info-books' => 'Kirjat',
 	'other-info-video-games' => 'Videopelit',
