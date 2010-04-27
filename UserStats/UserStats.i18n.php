@@ -453,6 +453,7 @@ $messages['cs'] = array(
 );
 
 /** German (Deutsch)
+ * @author Kghbln
  * @author MF-Warburg
  * @author Melancholie
  * @author Purodha
@@ -470,6 +471,20 @@ $messages['de'] = array(
 	'top-fans-weekly-points-link' => 'Punkte diese Woche',
 	'top-fans-monthly-points-link' => 'Punkte diesen Monat',
 	'top-fans-points' => 'Punkte',
+	'top-fans-by-category-title-edit-count' => 'Meiste Bearbeitungen insgesamt',
+	'top-fans-by-category-title-friends-count' => 'Meiste Freunde insgesamt',
+	'top-fans-by-category-title-foe-count' => 'Meiste Gegner insgesamt',
+	'top-fans-by-category-title-gifts-rec-count' => 'Meiste Auszeichnungen insgesamt erhalten',
+	'top-fans-by-category-title-gifts-sent-count' => 'Meiste Auszeichnungen insgesamt vergeben',
+	'top-fans-by-category-title-vote-count' => 'Meiste abgegebene Stimmen insgesamt',
+	'top-fans-by-category-title-comment-count' => 'Meiste abgegebene Bemerkungen insgesamt',
+	'top-fans-by-category-title-referrals-count' => 'Meiste Diskussionsverweise insgesamt',
+	'top-fans-by-category-title-comment-score-positive-rec' => 'Meiste Zustimmungen insgesamt',
+	'top-fans-by-category-title-comment-score-negative-rec' => 'Meiste Ablehnungen insgesamt',
+	'top-fans-by-category-title-comment-score-positive-given' => 'Meiste Zustimmungen insgesamt vergeben',
+	'top-fans-by-category-title-comment-score-negative-given' => 'Meiste Ablehnungen insgesamt vergeben',
+	'top-fans-by-category-title-monthly-winner-count' => 'Meiste Monatssiege insgesamt',
+	'top-fans-by-category-title-weekly-winner-count' => 'Meiste Wochensiege insgesamt',
 	'top-fans-bad-field-title' => 'Hoppla!',
 	'top-fans-bad-field-message' => 'Die angegebene Statistik existiert nicht.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Stimme|Stimmen}}',
@@ -1475,6 +1490,13 @@ $messages['km'] = array(
 
 សូម​ចុច $3
 និង​ផ្លាស់ប្ដូរ​ការកំណត់​របស់​អ្នក ដើម្បី​បិទ​មិន​ទទួល​សេចក្ដីជូនដំណឹង​តាម​អ៊ីមែល​។',
+);
+
+/** Kannada (ಕನ್ನಡ)
+ * @author Nayvik
+ */
+$messages['kn'] = array(
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|ಸಂಪಾದನೆ|ಸಂಪಾದನೆಗಳು}}',
 );
 
 /** Colognian (Ripoarisch)

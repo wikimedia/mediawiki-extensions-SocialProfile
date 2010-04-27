@@ -764,6 +764,13 @@ $messages['km'] = array(
 	'mp-request-new-friend' => '{{PLURAL:$1|មិត្តភ័ក្ដិ|មិត្តភ័ក្ដិ}}ថ្មី $1',
 );
 
+/** Kannada (ಕನ್ನಡ)
+ * @author Nayvik
+ */
+$messages['kn'] = array(
+	'mp-welcome-edit' => 'ಸಂಪಾದಿಸಿ',
+);
+
 /** Korean (한국어)
  * @author Klutzy
  * @author Yknok29
