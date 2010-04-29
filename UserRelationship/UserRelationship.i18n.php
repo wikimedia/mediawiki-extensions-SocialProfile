@@ -2188,6 +2188,7 @@ y cambie sus configuraciones para deshabilitar notificaciones por correo electr�
 
 /** Estonian (Eesti)
  * @author Avjoska
+ * @author Hendrik
  * @author Pikne
  * @author Silvar
  */
@@ -2218,7 +2219,7 @@ $messages['et'] = array(
 	'ur-add-title-friend' => 'Kas soovid lisada kasutaja $1 oma sõbraks?',
 	'ur-add-button-foe' => 'Lisa vaenlaseks',
 	'ur-add-button-friend' => 'Lisa sõbraks',
-	'ur-add-error-message-existing-relationship-friend' => 'Sa oled kasutajaga §1 juba sõber.',
+	'ur-add-error-message-existing-relationship-friend' => 'Sa oled kasutajaga $1 juba sõber.',
 	'ur-add-error-message-pending-request-title' => 'Kannatust!',
 	'ur-add-error-message-not-loggedin-friend' => 'Sõbra lisamiseks pead olema sisse logitud',
 );
