@@ -631,6 +631,7 @@ $messages['an'] = array(
 	'user-profile-section-preferences' => 'Preferencias',
 	'user-profile-personal-name' => 'Nombre',
 	'user-profile-personal-birthdate' => 'Calendata (MM/DD)',
+	'user-page-link' => "Pachina d'usuario",
 );
 
 /** Arabic (العربية)

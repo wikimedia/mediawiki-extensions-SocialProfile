@@ -112,6 +112,13 @@ $messages['am'] = array(
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|ጠላት|ጠላቶች}}',
 );
 
+/** Aragonese (Aragonés)
+ * @author Juanpabl
+ */
+$messages['an'] = array(
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Edición|Edicions}}',
+);
+
 /** Arabic (العربية)
  * @author Meno25
  * @author OsamaK
