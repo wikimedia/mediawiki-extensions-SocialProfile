@@ -476,6 +476,13 @@ $messages['sk'] = array(
 	'yui-desc' => 'Sada nástrojov napísaných v JavaScripte',
 );
 
+/** Slovenian (Slovenščina)
+ * @author Dbc334
+ */
+$messages['sl'] = array(
+	'yui-desc' => 'Zbirka pripomočkov in kontrolnikov, napisanih v JavaScriptu',
+);
+
 /** Lower Silesian (Schläsch)
  * @author Jonny84
  */
