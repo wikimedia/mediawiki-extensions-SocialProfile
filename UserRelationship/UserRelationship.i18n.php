@@ -259,6 +259,13 @@ $messages['am'] = array(
 	'ur-add-error-message-pending-request-title' => 'ትዕግሥት!',
 );
 
+/** Aragonese (Aragonés)
+ * @author Juanpabl
+ */
+$messages['an'] = array(
+	'ur-cancel' => 'Cancelar',
+);
+
 /** Arabic (العربية)
  * @author Alnokta
  * @author Meno25

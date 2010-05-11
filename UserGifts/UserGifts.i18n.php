@@ -164,6 +164,13 @@ $messages['af'] = array(
 	'g-small' => 'Klein',
 );
 
+/** Aragonese (Aragonés)
+ * @author Juanpabl
+ */
+$messages['an'] = array(
+	'g-cancel' => 'Cancelar',
+);
+
 /** Arabic (العربية)
  * @author Ciphers
  * @author Meno25

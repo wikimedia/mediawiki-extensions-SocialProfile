@@ -1613,6 +1613,13 @@ $messages['km'] = array(
 	'ga-small' => 'តូច​',
 );
 
+/** Kannada (ಕನ್ನಡ)
+ * @author Nayvik
+ */
+$messages['kn'] = array(
+	'ga-new' => 'ಹೊಸ',
+);
+
 /** Colognian (Ripoarisch)
  * @author Purodha
  */
