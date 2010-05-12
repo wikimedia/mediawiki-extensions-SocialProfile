@@ -3105,6 +3105,7 @@ og forandre på dine instillinger for å slå av e-postmeldinger.',
 
 /** Occitan (Occitan)
  * @author Cedric31
+ * @author Jfblanc
  */
 $messages['oc'] = array(
 	'giftmanager' => 'Gestionari de presents',
@@ -3133,7 +3134,7 @@ $messages['oc'] = array(
 	'g-error-do-not-own' => 'Possedètz pas aqueste present.',
 	'g-error-message-blocked' => 'Sètz blocat(ada) e doncas, podètz pas donar de presents',
 	'g-error-message-invalid-link' => "Lo ligam qu'avètz provesit es invalid.",
-	'g-error-message-login' => 'Vos cal vos connectar per donar de presents',
+	'g-error-message-login' => 'Vos cal connectar per donar de presents',
 	'g-error-message-no-user' => "L'utilizaire qu'ensajatz de veire existís pas.",
 	'g-error-message-to-yourself' => 'Podètz pas vos donar un present a vos meteis.',
 	'g-error-title' => 'Ops, avètz pres un marrit torn !',
