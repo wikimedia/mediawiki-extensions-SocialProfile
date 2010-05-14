@@ -4115,6 +4115,7 @@ I već će biti poslat.',
 );
 
 /** Swedish (Svenska)
+ * @author Dafer45
  * @author Per
  */
 $messages['sv'] = array(
@@ -4171,6 +4172,7 @@ Så enkelt är det.',
 	'g-large' => 'Stor',
 	'g-list-title' => '$1s presentlista',
 	'g-main-page' => 'Huvudsidan',
+	'g-medium' => 'Medium',
 	'g-new' => 'ny',
 	'g-next' => 'Nästa',
 	'g-previous' => 'Föregående',
