@@ -11,7 +11,7 @@ $messages = array();
  * @author Wikia, Inc.
  */
 $messages['en'] = array(
-	'userwelcome-desc' => 'Adds <tt>&lt;welcomeUser&gt;</tt> tag to display user-specific social info to logged-in users',
+	'userwelcome-desc' => 'Adds <code>&lt;welcomeUser&gt;</code> tag to display user-specific social info to logged-in users',
 	'mp-userlevels-link' => 'User levels', // This is the help page...e.g. English default is Help:User Levels -- you can define a new help page with this msg.
 	'mp-welcome-upload' => 'Upload',
 	'mp-welcome-edit' => 'Edit',
@@ -76,7 +76,7 @@ $messages['an'] = array(
  * @author OsamaK
  */
 $messages['ar'] = array(
-	'userwelcome-desc' => 'يضيف وسم <tt>&lt;welcomeUser&gt;</tt> لعرض معلومات اجتماعية خاصة بالمستخدم للمستخدمين المسجلين',
+	'userwelcome-desc' => 'يضيف وسم <code>&lt;welcomeUser&gt;</code> لعرض معلومات اجتماعية خاصة بالمستخدم للمستخدمين المسجلين',
 	'mp-userlevels-link' => 'مستويات المستخدم',
 	'mp-welcome-upload' => 'رفع',
 	'mp-welcome-edit' => 'عدل',
@@ -110,7 +110,7 @@ $messages['arc'] = array(
  * @author Meno25
  */
 $messages['arz'] = array(
-	'userwelcome-desc' => 'يضيف وسم <tt>&lt;welcomeUser&gt;</tt> لعرض معلومات اجتماعية خاصة باليوزر لليوزرز المسجلين',
+	'userwelcome-desc' => 'يضيف وسم <code>&lt;welcomeUser&gt;</code> لعرض معلومات اجتماعية خاصة باليوزر لليوزرز المسجلين',
 	'mp-userlevels-link' => 'مستويات اليوزر',
 	'mp-welcome-upload' => 'رفع',
 	'mp-welcome-edit' => 'عدل',
@@ -132,7 +132,7 @@ $messages['arz'] = array(
  * @author Red Winged Duck
  */
 $messages['be-tarask'] = array(
-	'userwelcome-desc' => 'Дадае тэг <tt>&lt;welcomeUser&gt;</tt>, каб паказваць сацыяльную інфармацыю пра ўдзельніка іншым зарэгістраваным удзельнікам',
+	'userwelcome-desc' => 'Дадае тэг <code>&lt;welcomeUser&gt;</code>, каб паказваць сацыяльную інфармацыю пра ўдзельніка іншым зарэгістраваным удзельнікам',
 	'mp-userlevels-link' => 'Узроўні ўдзельніка',
 	'mp-welcome-upload' => 'Загрузіць',
 	'mp-welcome-edit' => 'Рэдагаваць',
@@ -152,7 +152,7 @@ $messages['be-tarask'] = array(
  * @author DCLXVI
  */
 $messages['bg'] = array(
-	'userwelcome-desc' => 'Добавя етикет <tt>&lt;welcomeUser&gt;</tt> за показване на специфична социална потребителска информация за влезлите потребители',
+	'userwelcome-desc' => 'Добавя етикет <code>&lt;welcomeUser&gt;</code> за показване на специфична социална потребителска информация за влезлите потребители',
 	'mp-userlevels-link' => 'Потребителски рангове',
 	'mp-welcome-upload' => 'Качване',
 	'mp-welcome-edit' => 'Редактиране',
@@ -181,7 +181,7 @@ $messages['bn'] = array(
  * @author Usingha
  */
 $messages['bpy'] = array(
-	'userwelcome-desc' => '<tt>&lt;welcomeUser&gt;</tt> টেগ এগ লেপকরা আকুরার বারে পৌ দেখা দিতই হুদ্দা হমাসি আতাকুরার কা',
+	'userwelcome-desc' => '<code>&lt;welcomeUser&gt;</code> টেগ এগ লেপকরা আকুরার বারে পৌ দেখা দিতই হুদ্দা হমাসি আতাকুরার কা',
 	'mp-userlevels-link' => 'আতাকুরার থাকহান',
 	'mp-welcome-upload' => 'আপলোড',
 	'mp-welcome-edit' => 'পতা',
@@ -202,7 +202,7 @@ $messages['bpy'] = array(
  * @author Fulup
  */
 $messages['br'] = array(
-	'userwelcome-desc' => 'Ouzhpennañ ur valizenn <tt>&lt;welcomeUser&gt;</tt> evit diskwel titouroù sokial a denn da bep implijer evit an implijerien kevreet',
+	'userwelcome-desc' => 'Ouzhpennañ ur valizenn <code>&lt;welcomeUser&gt;</code> evit diskwel titouroù sokial a denn da bep implijer evit an implijerien kevreet',
 	'mp-userlevels-link' => 'Liveoù an implijer',
 	'mp-welcome-upload' => 'Kas',
 	'mp-welcome-edit' => 'Aozañ',
@@ -222,7 +222,7 @@ $messages['br'] = array(
  * @author CERminator
  */
 $messages['bs'] = array(
-	'userwelcome-desc' => 'Dodaje <tt>&lt;dobrodoslicaKorisnik&gt;</tt> posebnu oznaku logiranim korisnicima sa posebnim socijalnim informacijama',
+	'userwelcome-desc' => 'Dodaje <code>&lt;welcomeUser&gt;</code> posebnu oznaku logiranim korisnicima sa posebnim socijalnim informacijama',
 	'mp-userlevels-link' => 'Nivoi korisnika',
 	'mp-welcome-upload' => 'Postavljanje',
 	'mp-welcome-edit' => 'Izmjena',
@@ -265,7 +265,7 @@ $messages['ckb-arab'] = array(
  * @author Matěj Grabovský
  */
 $messages['cs'] = array(
-	'userwelcome-desc' => 'Přidává značku <tt>&lt;welcomeUser&gt;</tt> pro zobrazování sociálních informací specifických pro uživatele (pro přihlášené uživatele)',
+	'userwelcome-desc' => 'Přidává značku <code>&lt;welcomeUser&gt;</code> pro zobrazování sociálních informací specifických pro uživatele (pro přihlášené uživatele)',
 	'mp-userlevels-link' => 'Urovně uživatelů',
 	'mp-welcome-upload' => 'Nahrát soubor',
 	'mp-welcome-edit' => 'Upravit',
@@ -288,7 +288,7 @@ $messages['cs'] = array(
  * @author Revolus
  */
 $messages['de'] = array(
-	'userwelcome-desc' => 'Fügt ein <tt>&lt;welcomeUser&gt;</tt>-Tag hinzu, mit dem man benutzerspezifische soziale Informationen eingeloggten Benutzern zeigen kann',
+	'userwelcome-desc' => 'Fügt ein <code>&lt;welcomeUser&gt;</code>-Tag hinzu, mit dem man benutzerspezifische soziale Informationen eingeloggten Benutzern zeigen kann',
 	'mp-userlevels-link' => 'Benutzerebenen',
 	'mp-welcome-upload' => 'Hochladen',
 	'mp-welcome-edit' => 'Bearbeiten',
@@ -316,7 +316,7 @@ $messages['de-formal'] = array(
  * @author Michawiki
  */
 $messages['dsb'] = array(
-	'userwelcome-desc' => 'Pśidawa toflicku <tt>&lt;welcomeUser&gt;</tt> za zwobraznjenje wužywarjeju specifiske socialne informacije pśizjawjonych wužywarjow',
+	'userwelcome-desc' => 'Pśidawa toflicku <code>&lt;welcomeUser&gt;</code> za zwobraznjenje wužywarjeju specifiske socialne informacije pśizjawjonych wužywarjow',
 	'mp-userlevels-link' => 'Wužywarske rowniny',
 	'mp-welcome-upload' => 'Nagraś',
 	'mp-welcome-edit' => 'Wobźěłaś',
@@ -387,7 +387,7 @@ $messages['eo'] = array(
  * @author Sanbec
  */
 $messages['es'] = array(
-	'userwelcome-desc' => 'Añade la etiqueta <tt>&lt;welcomeUser&gt;</tt> para mostrar información social específica de cada usuario a los usuarios registrados',
+	'userwelcome-desc' => 'Añade la etiqueta <code>&lt;welcomeUser&gt;</code> para mostrar información social específica de cada usuario a los usuarios registrados',
 	'mp-userlevels-link' => 'Niveles de usuario',
 	'mp-welcome-upload' => 'Subir',
 	'mp-welcome-edit' => 'Editar',
@@ -444,7 +444,7 @@ $messages['eu'] = array(
  * @author Nike
  */
 $messages['fi'] = array(
-	'userwelcome-desc' => 'Lisää <tt>&lt;welcomeUser&gt;</tt>-elementin käyttäjäkohtaisten sosiaalisten tietojen näyttämiseen.',
+	'userwelcome-desc' => 'Lisää <code>&lt;welcomeUser&gt;</code>-elementin käyttäjäkohtaisten sosiaalisten tietojen näyttämiseen.',
 	'mp-userlevels-link' => 'Käyttäjätasot',
 	'mp-welcome-upload' => 'Tallenna',
 	'mp-welcome-edit' => 'Muokkaa',
@@ -467,7 +467,7 @@ $messages['fi'] = array(
  * @author IAlex
  */
 $messages['fr'] = array(
-	'userwelcome-desc' => 'Ajoute une balise <tt>&lt;welcomeUser&gt;</tt> pour afficher des informations sociales spécifiques à chaque utilisateur aux utilisateurs enregistrés',
+	'userwelcome-desc' => 'Ajoute une balise <code>&lt;welcomeUser&gt;</code> pour afficher des informations sociales spécifiques à chaque utilisateur aux utilisateurs enregistrés',
 	'mp-userlevels-link' => 'Niveaux de l’utilisateur',
 	'mp-welcome-upload' => 'Télécharger',
 	'mp-welcome-edit' => 'Modifier',
@@ -507,7 +507,7 @@ $messages['ga'] = array(
  * @author Toliño
  */
 $messages['gl'] = array(
-	'userwelcome-desc' => 'Engade a etiqueta <tt>&lt;welcomeUser&gt;</tt> para amosar información social específica a un usuario rexistrado',
+	'userwelcome-desc' => 'Engade a etiqueta <code>&lt;welcomeUser&gt;</code> para amosar información social específica a un usuario rexistrado',
 	'mp-userlevels-link' => 'Niveis de usuario',
 	'mp-welcome-upload' => 'Cargar',
 	'mp-welcome-edit' => 'Editar',
@@ -534,7 +534,7 @@ $messages['grc'] = array(
  * @author Als-Holder
  */
 $messages['gsw'] = array(
-	'userwelcome-desc' => 'Fiegt e <tt>&lt;welcomeUser&gt;</tt>-Tag dezue, wu mer aagmäldete Benutzer benutzerspezifischi soziali Informatione demit cha zeige',
+	'userwelcome-desc' => 'Fiegt e <code>&lt;welcomeUser&gt;</code>-Tag dezue, wu mer aagmäldete Benutzer benutzerspezifischi soziali Informatione demit cha zeige',
 	'mp-userlevels-link' => 'Benutzerebene',
 	'mp-welcome-upload' => 'Uffelade',
 	'mp-welcome-edit' => 'Bearbeite',
@@ -562,7 +562,7 @@ $messages['haw'] = array(
  * @author YaronSh
  */
 $messages['he'] = array(
-	'userwelcome-desc' => 'הוספת תגית <tt>&lt;welcomeUser&gt;</tt> כדי להציג, למשתמשים רשומים בלבד, נתונים חברתיים לפי משתמש',
+	'userwelcome-desc' => 'הוספת תגית <code>&lt;welcomeUser&gt;</code> כדי להציג, למשתמשים רשומים בלבד, נתונים חברתיים לפי משתמש',
 	'mp-userlevels-link' => 'רמות המשתמשים',
 	'mp-welcome-upload' => 'העלאה',
 	'mp-welcome-edit' => 'עריכה',
@@ -582,7 +582,7 @@ $messages['he'] = array(
  * @author Michawiki
  */
 $messages['hsb'] = array(
-	'userwelcome-desc' => 'Přidawa tafličku <tt>&lt;welcomeUser&gt;</tt> za zwobraznjenje wužiwarjej specifiske socialne informacije přizjewjenych wužiwarjow',
+	'userwelcome-desc' => 'Přidawa tafličku <code>&lt;welcomeUser&gt;</code> za zwobraznjenje wužiwarjej specifiske socialne informacije přizjewjenych wužiwarjow',
 	'mp-userlevels-link' => 'Wužiwarske runiny',
 	'mp-welcome-upload' => 'Nahrać',
 	'mp-welcome-edit' => 'Wobdźěłać',
@@ -603,7 +603,7 @@ $messages['hsb'] = array(
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
-	'userwelcome-desc' => '<tt>&lt;welcomeUser&gt;</tt> tag felhasználó-specifikus közösségi információk megjelenítéséhez a bejelentkezett felhasználóknak',
+	'userwelcome-desc' => '<code>&lt;welcomeUser&gt;</code> tag felhasználó-specifikus közösségi információk megjelenítéséhez a bejelentkezett felhasználóknak',
 	'mp-userlevels-link' => 'Felhasználói szintek',
 	'mp-welcome-upload' => 'Feltöltés',
 	'mp-welcome-edit' => 'Szerkesztés',
@@ -623,7 +623,7 @@ $messages['hu'] = array(
  * @author McDutchie
  */
 $messages['ia'] = array(
-	'userwelcome-desc' => 'Adde le etiquetta <tt>&lt;welcomeUser&gt;</tt> pro monstrar informationes social specific a cata usator al usatores que ha aperite un session',
+	'userwelcome-desc' => 'Adde le etiquetta <code>&lt;welcomeUser&gt;</code> pro monstrar informationes social specific a cata usator al usatores que ha aperite un session',
 	'mp-userlevels-link' => 'Nivellos de usator',
 	'mp-welcome-upload' => 'Incargar',
 	'mp-welcome-edit' => 'Modificar',
@@ -643,7 +643,7 @@ $messages['ia'] = array(
  * @author Bennylin
  */
 $messages['id'] = array(
-	'userwelcome-desc' => 'Menambahkan tag <tt>&lt;welcomeUser&gt;</tt> untuk menampilkan info sosial pengguna kepada pengguna yang masuk log',
+	'userwelcome-desc' => 'Menambahkan tag <code>&lt;welcomeUser&gt;</code> untuk menampilkan info sosial pengguna kepada pengguna yang masuk log',
 	'mp-userlevels-link' => 'Tingkat pengguna',
 	'mp-welcome-upload' => 'Memuat',
 	'mp-welcome-edit' => 'Sunting',
@@ -681,7 +681,7 @@ $messages['io'] = array(
  * @author Darth Kule
  */
 $messages['it'] = array(
-	'userwelcome-desc' => 'Aggiunge il tag <tt>&lt;welcomeUser&gt;</tt> per visualizzare informazioni sociali specifiche per ciascun utente per gli utenti registrati',
+	'userwelcome-desc' => 'Aggiunge il tag <code>&lt;welcomeUser&gt;</code> per visualizzare informazioni sociali specifiche per ciascun utente per gli utenti registrati',
 	'mp-userlevels-link' => 'Livelli utente',
 	'mp-welcome-upload' => 'Carica',
 	'mp-welcome-edit' => 'Modifica',
@@ -702,7 +702,7 @@ $messages['it'] = array(
  * @author Hosiryuhosi
  */
 $messages['ja'] = array(
-	'userwelcome-desc' => 'ログイン利用者に利用者ごとの情報を表示させる<tt>&lt;welcomeUser&gt;</tt>タグを追加する',
+	'userwelcome-desc' => 'ログイン利用者に利用者ごとの情報を表示させる<code>&lt;welcomeUser&gt;</code>タグを追加する',
 	'mp-userlevels-link' => '利用者レベル',
 	'mp-welcome-upload' => 'アップロード',
 	'mp-welcome-edit' => '編集',
@@ -722,7 +722,7 @@ $messages['ja'] = array(
  * @author Pras
  */
 $messages['jv'] = array(
-	'userwelcome-desc' => 'Nambahaké tag <tt>&lt;welcomeUser&gt;</tt> kanggo nuduhaké info sosial mligi-panganggo marang panganggo sing mlebu log',
+	'userwelcome-desc' => 'Nambahaké tag <code>&lt;welcomeUser&gt;</code> kanggo nuduhaké info sosial mligi-panganggo marang panganggo sing mlebu log',
 	'mp-userlevels-link' => 'Tataran panganggo',
 	'mp-welcome-upload' => 'Unggah',
 	'mp-welcome-edit' => 'Sunting',
@@ -776,7 +776,7 @@ $messages['kn'] = array(
  * @author Yknok29
  */
 $messages['ko'] = array(
-	'userwelcome-desc' => '<tt>&lt;welcomeUser&gt;</tt> 태그를 통해 로그인한 사용자에게 개별적인 정보를 보여주는 기능',
+	'userwelcome-desc' => '<code>&lt;welcomeUser&gt;</code> 태그를 통해 로그인한 사용자에게 개별적인 정보를 보여주는 기능',
 	'mp-userlevels-link' => '사용자 레벨',
 	'mp-welcome-upload' => '올리기',
 	'mp-welcome-edit' => '편집',
@@ -788,7 +788,7 @@ $messages['ko'] = array(
  * @author Iltever
  */
 $messages['krc'] = array(
-	'userwelcome-desc' => 'Регистрацияны ётген къошулуучула социал информацияны кёрюрча <tt>&lt;welcomeUser&gt;</tt> тегни къошады',
+	'userwelcome-desc' => 'Регистрацияны ётген къошулуучула социал информацияны кёрюрча <code>&lt;welcomeUser&gt;</code> тегни къошады',
 	'mp-userlevels-link' => 'Къошулуучуланы дараджалары',
 	'mp-welcome-upload' => 'Джюкле',
 	'mp-welcome-edit' => 'Тюзет',
@@ -808,7 +808,7 @@ $messages['krc'] = array(
  * @author Purodha
  */
 $messages['ksh'] = array(
-	'userwelcome-desc' => 'Deit dä Befäähl <tt lang="en">&lt;welcomeUser&gt;</tt> en et Wiki, öm bestemmpte Saache övver de Metmaacher un sing Schmölzjes aanzezeije, wann hä ennjelogg eß.',
+	'userwelcome-desc' => 'Deit dä Befäähl <code>&lt;welcomeUser&gt;</code> en et Wiki, öm bestemmpte Saache övver de Metmaacher un sing Schmölzjes aanzezeije, wann hä ennjelogg eß.',
 	'mp-userlevels-link' => 'Ebene för Metmaacher',
 	'mp-welcome-upload' => 'Huhlaade',
 	'mp-welcome-edit' => 'Ändere',
@@ -828,7 +828,7 @@ $messages['ksh'] = array(
  * @author Robby
  */
 $messages['lb'] = array(
-	'userwelcome-desc' => 'Setzt e <tt>&lt;welcomeUser&gt;</tt> Tag derbäi fir den ageloggte Benotzer  benotzerspezifesch Sozialinformatiounen vun anere Benotzer ze weisen.',
+	'userwelcome-desc' => 'Setzt e <code>&lt;welcomeUser&gt;</code> Tag derbäi fir den ageloggte Benotzer  benotzerspezifesch Sozialinformatiounen vun anere Benotzer ze weisen.',
 	'mp-userlevels-link' => 'Benotzerniveauen',
 	'mp-welcome-upload' => 'Eroplueden',
 	'mp-welcome-edit' => 'Änneren',
@@ -849,7 +849,7 @@ $messages['lb'] = array(
  * @author Brest
  */
 $messages['mk'] = array(
-	'userwelcome-desc' => 'Додава ознака <tt>&lt;welcomeUser&gt;</tt> за приказ на кориснички друштвени информации на најавени корисници',
+	'userwelcome-desc' => 'Додава ознака <code>&lt;welcomeUser&gt;</code> за приказ на кориснички друштвени информации на најавени корисници',
 	'mp-userlevels-link' => 'Кориснички нивоа',
 	'mp-welcome-upload' => 'Подигнување',
 	'mp-welcome-edit' => 'Уреди',
@@ -878,7 +878,7 @@ $messages['nah'] = array(
  * @author Servien
  */
 $messages['nds-nl'] = array(
-	'userwelcome-desc' => 'Zet de tag <tt>&lt;welcomeUser&gt;</tt> derbie um gebrukerspecefieke sociale infermasie over an-emelde gebrukers te laoten zien',
+	'userwelcome-desc' => 'Zet de tag <code>&lt;welcomeUser&gt;</code> derbie um gebrukerspecefieke sociale infermasie over an-emelde gebrukers te laoten zien',
 	'mp-userlevels-link' => "Gebrukersnivo's",
 	'mp-welcome-upload' => 'Bestand toevoegen',
 	'mp-welcome-edit' => 'Bewark',
@@ -899,7 +899,7 @@ $messages['nds-nl'] = array(
  * @author Siebrand
  */
 $messages['nl'] = array(
-	'userwelcome-desc' => 'Voegt de tag <tt>&lt;welcomeUser&gt;</tt> toe om gebruikerspecifieke sociale informatie over aangemelde gebruikers weer te geven',
+	'userwelcome-desc' => 'Voegt de tag <code>&lt;welcomeUser&gt;</code> toe om gebruikerspecifieke sociale informatie over aangemelde gebruikers weer te geven',
 	'mp-userlevels-link' => 'Gebruikersniveaus',
 	'mp-welcome-upload' => 'Uploaden',
 	'mp-welcome-edit' => 'Bewerken',
@@ -920,7 +920,7 @@ $messages['nl'] = array(
  * @author Harald Khan
  */
 $messages['nn'] = array(
-	'userwelcome-desc' => 'Legg til <tt>&lt;welcomeUser&gt;</tt>-taggen for å vise brukarspesifisert sosial informasjon for innlogga brukarar',
+	'userwelcome-desc' => 'Legg til <code>&lt;welcomeUser&gt;</code>-taggen for å vise brukarspesifisert sosial informasjon for innlogga brukarar',
 	'mp-userlevels-link' => 'Brukarnivå',
 	'mp-welcome-upload' => 'Last opp',
 	'mp-welcome-edit' => 'Endre',
@@ -940,7 +940,7 @@ $messages['nn'] = array(
  * @author Nghtwlkr
  */
 $messages['no'] = array(
-	'userwelcome-desc' => 'Legger til <tt>&lt;welcomeUser&gt;</tt>-merkelappen for å vise brukerspesifisert sosial informasjon for innloggede brukere',
+	'userwelcome-desc' => 'Legger til <code>&lt;welcomeUser&gt;</code>-merkelappen for å vise brukerspesifisert sosial informasjon for innloggede brukere',
 	'mp-userlevels-link' => 'Brukernivå',
 	'mp-welcome-upload' => 'Last opp',
 	'mp-welcome-edit' => 'Rediger',
@@ -960,7 +960,7 @@ $messages['no'] = array(
  * @author Cedric31
  */
 $messages['oc'] = array(
-	'userwelcome-desc' => "Apond una balisa <tt>&lt;welcomeUser&gt;</tt> per afichar d'informacions socialas especificas a cada utilizaire als utilizaires enregistrats",
+	'userwelcome-desc' => "Apond una balisa <code>&lt;welcomeUser&gt;</code> per afichar d'informacions socialas especificas a cada utilizaire als utilizaires enregistrats",
 	'mp-userlevels-link' => "Nivèls de l'utilizaire",
 	'mp-welcome-upload' => 'Telecargar',
 	'mp-welcome-edit' => 'Modificar',
@@ -997,7 +997,7 @@ $messages['pdc'] = array(
  * @author Sp5uhe
  */
 $messages['pl'] = array(
-	'userwelcome-desc' => 'Dodaje znacznik <tt>&lt;welcomeUser&gt;</tt> wyświetlający zalogowanym użytkownikom informacje o innych użytkownikach służące do utrzymywania kontaktów towarzyskich',
+	'userwelcome-desc' => 'Dodaje znacznik <code>&lt;welcomeUser&gt;</code> wyświetlający zalogowanym użytkownikom informacje o innych użytkownikach służące do utrzymywania kontaktów towarzyskich',
 	'mp-userlevels-link' => 'Poziomy użytkownika',
 	'mp-welcome-upload' => 'Prześlij',
 	'mp-welcome-edit' => 'Edytuj',
@@ -1017,7 +1017,7 @@ $messages['pl'] = array(
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'userwelcome-desc' => "A gionta ël tag <tt>&lt;welcomeUser&gt;</tt> për visualisé anformassion sossiaj spëssìfiche dl'utent a j'utent intrà",
+	'userwelcome-desc' => "A gionta ël tag <code>&lt;welcomeUser&gt;</code> për visualisé anformassion sossiaj spëssìfiche dl'utent a j'utent intrà",
 	'mp-userlevels-link' => 'Livej utent',
 	'mp-welcome-upload' => 'Caria',
 	'mp-welcome-edit' => 'Modìfica',
@@ -1053,7 +1053,7 @@ $messages['ps'] = array(
  * @author Waldir
  */
 $messages['pt'] = array(
-	'userwelcome-desc' => 'Adiciona a etiqueta <tt>&lt;welcomeUser&gt;</tt> para apresentar informação social específica do utilizador a utilizadores autenticados',
+	'userwelcome-desc' => 'Adiciona a etiqueta <code>&lt;welcomeUser&gt;</code> para apresentar informação social específica do utilizador a utilizadores autenticados',
 	'mp-userlevels-link' => 'Níveis de utilizador',
 	'mp-welcome-upload' => 'Carregar',
 	'mp-welcome-edit' => 'Editar',
@@ -1073,7 +1073,7 @@ $messages['pt'] = array(
  * @author Eduardo.mps
  */
 $messages['pt-br'] = array(
-	'userwelcome-desc' => 'Adiciona a marca <tt>&lt;welcomeUser&gt;</tt> para apresentar informação social específica do utilizador, para utilizadores autenticados',
+	'userwelcome-desc' => 'Adiciona a marca <code>&lt;welcomeUser&gt;</code> para apresentar informação social específica do utilizador, para utilizadores autenticados',
 	'mp-userlevels-link' => 'Níveis de utilizador',
 	'mp-welcome-upload' => 'Carregar',
 	'mp-welcome-edit' => 'Editar',
@@ -1126,7 +1126,7 @@ $messages['roa-tara'] = array(
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
-	'userwelcome-desc' => 'Добавляет тег <tt>&lt;welcomeUser&gt;</tt> для отображения зарегистрированным участникам социальной информации',
+	'userwelcome-desc' => 'Добавляет тег <code>&lt;welcomeUser&gt;</code> для отображения зарегистрированным участникам социальной информации',
 	'mp-userlevels-link' => 'Уровни участников',
 	'mp-welcome-upload' => 'Загрузить',
 	'mp-welcome-edit' => 'Править',
@@ -1147,7 +1147,7 @@ $messages['ru'] = array(
  * @author Mahitgar
  */
 $messages['sa'] = array(
-	'userwelcome-desc' => '<tt>&lt;सदस्यस्वागत&gt;</tt> चिह्नं योजयति यस्मात् सदस्यविशिष्टा सामाजिक-सूचना प्रवेशित-सदस्येभ्यः प्रदर्श्यते',
+	'userwelcome-desc' => '<code>&lt;welcomeUser&gt;</code> चिह्नं योजयति यस्मात् सदस्यविशिष्टा सामाजिक-सूचना प्रवेशित-सदस्येभ्यः प्रदर्श्यते',
 	'mp-userlevels-link' => 'सदस्य-स्तराः',
 	'mp-welcome-upload' => 'उद्भारयतु',
 	'mp-welcome-edit' => 'सम्पादयतु',
@@ -1168,7 +1168,7 @@ $messages['sa'] = array(
  * @author නන්දිමිතුරු
  */
 $messages['si'] = array(
-	'userwelcome-desc' => 'පරිශීලක-විශේෂී සමාජීය තොරතුරු ප්‍රදක්ෂීණා කෙරුම සඳහා, ප්‍රවිෂ්ට-වූ පරිශීලකයන්ට <tt>&lt;welcomeUser&gt;</tt> ටැගය එකතු කෙරෙයි',
+	'userwelcome-desc' => 'පරිශීලක-විශේෂී සමාජීය තොරතුරු ප්‍රදක්ෂීණා කෙරුම සඳහා, ප්‍රවිෂ්ට-වූ පරිශීලකයන්ට <code>&lt;welcomeUser&gt;</code> ටැගය එකතු කෙරෙයි',
 	'mp-userlevels-link' => 'පරිශීලක මට්ටම්',
 	'mp-welcome-upload' => 'උඩුගත කිරීම',
 	'mp-welcome-edit' => 'සංස්කරණය',
@@ -1188,7 +1188,7 @@ $messages['si'] = array(
  * @author Helix84
  */
 $messages['sk'] = array(
-	'userwelcome-desc' => 'Pridáva značku <tt>&lt;welcomeUser&gt;</tt> na zobrazovanie sociálnych informácií špecifických pre používateľa (pre prihlásených používateľov)',
+	'userwelcome-desc' => 'Pridáva značku <code>&lt;welcomeUser&gt;</code> na zobrazovanie sociálnych informácií špecifických pre používateľa (pre prihlásených používateľov)',
 	'mp-userlevels-link' => 'Úrovne používateľov',
 	'mp-welcome-upload' => 'Nahrať súbor',
 	'mp-welcome-edit' => 'Upraviť',
@@ -1242,7 +1242,7 @@ $messages['sr-el'] = array(
  * @author Pyt
  */
 $messages['stq'] = array(
-	'userwelcome-desc' => 'Föiget n <tt>&lt;welcomeUser&gt;</tt>-Tag bietou, wiermäd me benutserspezifiske sozioale Informatione fon ienloggede Benutsere wiese kon',
+	'userwelcome-desc' => 'Föiget n <code>&lt;welcomeUser&gt;</code>-Tag bietou, wiermäd me benutserspezifiske sozioale Informatione fon ienloggede Benutsere wiese kon',
 	'mp-userlevels-link' => 'Benutser-Ieuwenen',
 	'mp-welcome-upload' => 'Hoochleede',
 	'mp-welcome-edit' => 'Beoarbaidje',
@@ -1262,7 +1262,7 @@ $messages['stq'] = array(
  * @author Najami
  */
 $messages['sv'] = array(
-	'userwelcome-desc' => 'Lägger till <tt>&lt;welcomeUser&gt;</tt>-taggen för att visa användarspecifierad social information för inloggade användare',
+	'userwelcome-desc' => 'Lägger till <code>&lt;welcomeUser&gt;</code>-taggen för att visa användarspecifierad social information för inloggade användare',
 	'mp-userlevels-link' => 'Användarnivåer',
 	'mp-welcome-upload' => 'Ladda upp',
 	'mp-welcome-edit' => 'Redigera',
@@ -1282,7 +1282,7 @@ $messages['sv'] = array(
  * @author Lajsikonik
  */
 $messages['szl'] = array(
-	'userwelcome-desc' => 'Dodej <tt>&lt;welcomeUser&gt;</tt> tag do pokozańo dedykowanym specyficznymu użytkowńikowi informacyjům socyjolnym lů zalogowanych użytkowńikůw',
+	'userwelcome-desc' => 'Dodej <code>&lt;welcomeUser&gt;</code> tag do pokozańo dedykowanym specyficznymu użytkowńikowi informacyjům socyjolnym lů zalogowanych użytkowńikůw',
 	'mp-userlevels-link' => 'Poźůmy użytkowńika',
 	'mp-welcome-upload' => 'Wćepńij',
 	'mp-welcome-edit' => 'Sprowjej',
@@ -1302,7 +1302,7 @@ $messages['szl'] = array(
  * @author Ulmo
  */
 $messages['ta'] = array(
-	'userwelcome-desc' => 'புகுபதிகை செய்த பயனர்களுக்கு அவர்கட்குரிய சமூக தகவல்களை காட்டுவதற்காக <tt>&lt;welcomeUser&gt;</tt> இணையை சேர்க்கின்றது.',
+	'userwelcome-desc' => 'புகுபதிகை செய்த பயனர்களுக்கு அவர்கட்குரிய சமூக தகவல்களை காட்டுவதற்காக <code>&lt;welcomeUser&gt;</code> இணையை சேர்க்கின்றது.',
 	'mp-userlevels-link' => 'பயனர் நிலைகள்',
 	'mp-welcome-upload' => 'பதிவேற்று',
 	'mp-welcome-edit' => 'தொகு',
@@ -1341,7 +1341,7 @@ $messages['te'] = array(
  * @author Woraponboonkerd
  */
 $messages['th'] = array(
-	'userwelcome-desc' => 'เพิ่มแท็ก <tt>&lt;welcomeUser&gt;</tt> เพื่อแสดงข้อมูลทางสังคมที่ผู้ใช้กำหนดแก่ผู้ใช้คนอื่นๆ ที่ได้ลงชื่อเข้าใช้แล้ว',
+	'userwelcome-desc' => 'เพิ่มแท็ก <code>&lt;welcomeUser&gt;</code> เพื่อแสดงข้อมูลทางสังคมที่ผู้ใช้กำหนดแก่ผู้ใช้คนอื่นๆ ที่ได้ลงชื่อเข้าใช้แล้ว',
 	'mp-userlevels-link' => 'ระดับผู้ใช้',
 	'mp-welcome-upload' => 'อัปโหลด',
 	'mp-welcome-edit' => 'แก้ไข',
@@ -1369,7 +1369,7 @@ $messages['tk'] = array(
  * @author AnakngAraw
  */
 $messages['tl'] = array(
-	'userwelcome-desc' => 'Nagdaragdag ng tatak na <tt>&lt;maligayangpagdatingTagagamit&gt;</tt> upang maipakita sa nakalagda/nakatalang mga tagagamit ang kabatirang panlipunang (impormasyon) tumutukoy sa   partikular na tagagamit',
+	'userwelcome-desc' => 'Nagdaragdag ng tatak na <code>&lt;welcomeUser&gt;</code> upang maipakita sa nakalagda/nakatalang mga tagagamit ang kabatirang panlipunang (impormasyon) tumutukoy sa   partikular na tagagamit',
 	'mp-userlevels-link' => 'Mga antas na pangtagagamit',
 	'mp-welcome-upload' => 'Ikarga',
 	'mp-welcome-edit' => 'Baguhin',
@@ -1390,7 +1390,7 @@ $messages['tl'] = array(
  * @author Karduelis
  */
 $messages['tr'] = array(
-	'userwelcome-desc' => 'Kullanıcıya-özgü sosyal bilgileri giriş yapmış kullanıcılara göstermek için <tt>&lt;welcomeUser&gt;</tt> etiketini ekler',
+	'userwelcome-desc' => 'Kullanıcıya-özgü sosyal bilgileri giriş yapmış kullanıcılara göstermek için <code>&lt;welcomeUser&gt;</code> etiketini ekler',
 	'mp-userlevels-link' => 'Kullanıcı seviyeleri',
 	'mp-welcome-upload' => 'Yükle',
 	'mp-welcome-edit' => 'Düzenle',
@@ -1427,7 +1427,7 @@ $messages['vep'] = array(
  * @author Vinhtantran
  */
 $messages['vi'] = array(
-	'userwelcome-desc' => 'Thêm thẻ <tt>&lt;welcomeUser&gt;</tt> để hiển thị thông tin cá nhân cho những thành viên đăng ký',
+	'userwelcome-desc' => 'Thêm thẻ <code>&lt;welcomeUser&gt;</code> để hiển thị thông tin cá nhân cho những thành viên đăng ký',
 	'mp-userlevels-link' => 'Cấp thành viên',
 	'mp-welcome-upload' => 'Tải lên',
 	'mp-welcome-edit' => 'Sửa đổi',
