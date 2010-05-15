@@ -2571,6 +2571,7 @@ un donn Ding Enshtellunge ändere, öm kei Meffeilunge meih övver e-mail ze kri
 );
 
 /** Luxembourgish (Lëtzebuergesch)
+ * @author Les Meloures
  * @author Robby
  */
 $messages['lb'] = array(
@@ -2605,7 +2606,7 @@ Et gëtt dann och bäi de Benotzer geläscht déi e kritt hunn.',
 	'g-error-message-no-user' => 'De Benotzer deen Dir versicht ze kucken gëtt et net.',
 	'g-error-message-to-yourself' => 'Dir kënnt Iech net selwer e Cadeau maachen.',
 	'g-error-title' => 'Oups, do ass eppes schief gaang!',
-	'g-file-instructions' => 'Ärt Bild muss e jpeg, png oder gif (keng animéiert Gifen) sinn, a muss manner wéi 100KB grouss sinn.',
+	'g-file-instructions' => 'Äert Bild muss e jpeg, png oder gif (keng animéiert Gifen) sinn, a muss manner wéi 100KB grouss sinn.',
 	'g-from' => 'vum <a href="$1">$2</a>',
 	'g-gift' => 'Cadeau',
 	'g-gift-name' => 'Numm vum Cadeau',

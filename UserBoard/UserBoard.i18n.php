@@ -2564,6 +2564,7 @@ $messages['ps'] = array(
 	'boardlinkunselectall' => 'ټول ناټاکل',
 	'boardlinkselectfriends' => 'ملګري ټاکل',
 	'boardlinkunselectfriends' => 'ملګري ناټاکل',
+	'boardlinkselectfoes' => 'سيالان ټاکل',
 	'boardnofriends' => 'تاسې تر اوسه پورې هېڅ کوم ملګری نلری چې پيغام ورولېږۍ!',
 	'messagesentsuccess' => 'ستاسې پيغام په برياليتوب سره ولېږل شو.',
 	'userboard_delete' => 'ړنګول',
@@ -2576,9 +2577,9 @@ $messages['ps'] = array(
 	'userboard_nomessages' => 'هېڅ کوم پيغام نشته.',
 	'userboard_sendbutton' => 'لېږل',
 	'userboard-time-days' => '{{PLURAL:$1|يوه ورځ|$1 ورځې}}',
-	'userboard-time-hours' => 'PLURAL:$1|يو ساعت|$1 ساعتونه}}',
-	'userboard-time-minutes' => 'PLURAL:$1|يوه دقيقه|$1 دقيقې}}',
-	'userboard-time-seconds' => 'PLURAL:$1|يوه ثانيه|$1 ثانيې}}',
+	'userboard-time-hours' => '{{PLURAL:$1|يو ساعت|$1 ساعتونه}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|يوه دقيقه|$1 دقيقې}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|يوه ثانيه|$1 ثانيې}}',
 );
 
 /** Portuguese (Português)
