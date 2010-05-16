@@ -7863,6 +7863,13 @@ Begolös stadi flena/neflena medü yüm verätik.',
 	'foe_request_subject' => 'Krigö! Geban: $1 eläükon oli as neflen in {{SITENAME}}!',
 );
 
+/** Kalmyk (Хальмг)
+ * @author Huuchin
+ */
+$messages['xal'] = array(
+	'ur-main-page' => 'Нүр халх',
+);
+
 /** Yiddish (ייִדיש)
  * @author פוילישער
  */

@@ -4563,6 +4563,13 @@ $messages['vi'] = array(
 	'g-cancel' => 'Hủy bỏ',
 );
 
+/** Kalmyk (Хальмг)
+ * @author Huuchin
+ */
+$messages['xal'] = array(
+	'g-main-page' => 'Нүр халх',
+);
+
 /** Yiddish (ייִדיש)
  * @author פוילישער
  */

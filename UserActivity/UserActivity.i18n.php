@@ -316,6 +316,9 @@ $messages['hu'] = array(
 	'useractivity' => 'Barátok aktivitása',
 	'useractivity-award' => '$1 kapott egy díjat',
 	'useractivity-all' => 'Összes megjelenítése',
+	'useractivity-edit' => '$1 szerkesztette a következő {{PLURAL:$4|lapot|lapokat}}: $3',
+	'useractivity-foe' => '$1 és $3 mostantól ellenségek',
+	'useractivity-friend' => '$1 és $3 mostantól barátok',
 	'useractivity-gift' => '$1 ajándékot kapott $2 felhasználótól',
 	'useractivity-group-edit' => '{{PLURAL:$1|egy szerkesztés|$1 szerkesztés}}',
 	'useractivity-group-comment' => '$1 hozzászólás',
@@ -323,6 +326,7 @@ $messages['hu'] = array(
 	'useractivity-group-friend' => '$1 barát',
 	'useractivity-siteactivity' => 'Oldal aktivitás',
 	'useractivity-title' => 'Barátok aktivitása',
+	'useractivity-user_message' => '$1 {{PLURAL:$4|üzenetet|üzeneteket}} küldött neki: $3',
 );
 
 /** Interlingua (Interlingua)
