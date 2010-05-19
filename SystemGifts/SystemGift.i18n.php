@@ -2379,15 +2379,15 @@ e altere suas preferências para desabilitar e-mails de notificação.',
  * @author KlaudiuMihaila
  */
 $messages['ro'] = array(
-	'ga-choosefile' => 'Alegeţi fişier:',
-	'ga-create-gift' => 'Creaţi un cadou',
+	'ga-choosefile' => 'Alegeți fișier:',
+	'ga-create-gift' => 'Creați un cadou',
 	'ga-currentimage' => 'Imaginii curente',
 	'ga-error-message-invalid-link' => 'Legătura introdusă este incorectă.',
 	'ga-gift' => 'cadou',
 	'ga-giftimage' => 'imaginea cadoului',
 	'ga-giftname' => 'numele cadoului',
 	'ga-gifttype' => 'tipul cadoului',
-	'ga-goback' => 'Reveniţi',
+	'ga-goback' => 'Reveniți',
 	'ga-large' => 'Mare',
 	'ga-medium' => 'Mediu',
 	'ga-mediumlarge' => 'Mediu-mare',

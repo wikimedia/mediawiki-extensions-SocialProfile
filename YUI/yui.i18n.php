@@ -438,7 +438,7 @@ $messages['pt-br'] = array(
  * @author KlaudiuMihaila
  */
 $messages['ro'] = array(
-	'yui-desc' => 'O serie de utilitzare şi controale, în JavaScript',
+	'yui-desc' => 'O serie de utilitzare și controale, în JavaScript',
 );
 
 /** Tarandíne (Tarandíne)
