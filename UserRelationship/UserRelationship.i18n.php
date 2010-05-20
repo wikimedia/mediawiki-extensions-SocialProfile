@@ -247,6 +247,61 @@ $messages['af'] = array(
 	'ur-reject' => 'Verwerp',
 );
 
+/** Gheg Albanian (Gegë)
+ * @author Mdupont
+ */
+$messages['aln'] = array(
+	'ur-add-button-friend' => 'Shto si mik',
+	'ur-add-sent-title-foe' => 'Ne kemi dërguar kërkesën tuaj armik tek $1!',
+	'ur-add-sent-title-friend' => 'Ne kemi dërguar kërkesën tuaj mik tek $1!',
+	'ur-add-sent-message-foe' => 'armik Kërkesa juaj u dërgua tek $1 për konfirmim. Në qoftë se $1 e konfirmon kërkesën tuaj, ju do të merrni një vazhdimësi e-mail',
+	'ur-add-sent-message-friend' => 'Miku Kërkesa juaj u dërgua tek $1 për konfirmim. Në qoftë se $1  e konfirmon kërkesën tuaj, ju do të merrni një vazhdimësi e-mail',
+	'ur-add-error-message-no-user' => 'Perdoruesi jeni duke u përpjekur për të shtuar nuk ekziston.',
+	'ur-add-error-message-blocked' => 'Ju jeni bllokuar për momentin dhe nuk mund të shtoni miqtë apo armiqtë.',
+	'ur-add-error-message-yourself' => 'Ju nuk mund të shtoni veten si një mik apo armik.',
+	'ur-add-error-message-existing-relationship-foe' => 'Ju jeni tashmë kundërshtarët me $1.',
+	'ur-add-error-message-existing-relationship-friend' => 'Ju jeni tashmë miq me $1.',
+	'ur-add-error-message-pending-request-title' => 'Durimi!',
+	'ur-add-error-message-pending-friend-request' => "Ju keni një mik kërkesën në pritje me $1. Ne do t'ju njoftojë kur $1  konfirmon kërkesën tuaj.",
+	'ur-add-error-message-pending-foe-request' => "Ju keni një armik kërkesën në pritje me $1. Ne do t'ju njoftojë kur $1  konfirmon kërkesën tuaj.",
+	'ur-add-error-message-not-loggedin-foe' => 'Ju duhet të keni hyrë brenda për të shtuar një armik',
+	'ur-add-error-message-not-loggedin-friend' => 'Ju duhet të keni hyrë brenda për të shtuar një mik',
+	'ur-requests-title' => 'kërkesat Lidhja',
+	'ur-requests-message-foe' => '<a href="$1">$2</a> do të jetë armik tuaj.',
+	'ur-requests-message-friend' => '<a href="$1">$2</a> do të jetë miku juaj.',
+	'ur-accept' => 'Pranoj',
+	'ur-reject' => 'Refuzoj',
+	'ur-no-requests-message' => 'Ju nuk keni mik apo armik kërkesa. Nëse ju doni më shumë miq, <a href="$1">të ftuar ata!</a>',
+	'ur-requests-added-message-foe' => 'Ju keni shtuar $1 si armik tuaj.',
+	'ur-requests-added-message-friend' => 'Ju keni shtuar $1 si miku juaj.',
+	'ur-requests-reject-message-friend' => 'Ju keni hedhur poshtë $1 si miku juaj.',
+	'ur-requests-reject-message-foe' => 'Ju keni hedhur poshtë $1 si armik tuaj.',
+	'ur-title-foe' => 'Lista e $1 është armik',
+	'ur-title-friend' => 'listë e $1 mik',
+	'friend_request_subject' => '$1 ka shtuar ju si një mik në {{SITENAME}}!',
+	'friend_request_body' => 'Hi $1. $2 ka shtuar ju si një mik në {{SITENAME}}. Ne duam të sigurohemi që ju të dy të vërtetë janë miq. Ju lutemi të klikoni këtë link për të konfirmuar miqësinë tuaj: $3 Thanks --- Hej, dua të ndaluar marrjen e e-mail nga ne? Kliko $4 dhe për të ndryshuar parametrat tuaj të çaktivizoni e-mail njoftime .',
+	'foe_request_subject' => 'Është e luftës! $1 ka shtuar ju si një armik në {{SITENAME}}!',
+	'foe_request_body' => 'Hi $1. $2 shënuar vetëm ju si një armik në {{SITENAME}}. Ne duam të sigurohemi që ju të dy të vërtetë janë armiq, ose së paku njeri që ka një argument. Ju lutemi të klikoni këtë link për të konfirmuar ndeshjen e armiqësi.
+
+$3
+
+FLM
+
+ --- Hej, dua të ndaluar marrjen e e-mail nga ne? Kliko $4 dhe ndryshim parametrat tuaj të çaktivizoni e-mail njoftime.',
+	'friend_accept_subject' => '$1 ka pranuar kërkesën tuaj mik në {{SITENAME}}!',
+	'friend_accept_body' => 'Tung $1.
+
+$2 e ka pranuar mik kërkesën tuaj në {{SITENAME}}! Check out 2 e faqe në $3 Thanks $, --- Hej, dua të ndaluar marrjen e e-mail nga ne? Kliko $4 dhe ndryshoni parametrat tuaj të çaktivizoni e e-mail njoftime.',
+	'foe_accept_subject' => 'Është më! $1 ka pranuar kërkesën tuaj armik në {{SITENAME}}!',
+	'foe_accept_body' => 'Hi $1. $2 e ka pranuar armik kërkesën tuaj në {{SITENAME}}! Shiko $2 për faqen në $3
+
+Thanks --- Hej, dua të ndaluar marrjen e e-mail nga ne? Kliko $4 dhe ndryshoni parametrat tuaj të çaktivizoni e- njoftime mail.',
+	'friend_removed_subject' => 'Oh jo! $1 ka hequr ju si një mik në {{SITENAME}}!',
+	'friend_removed_body' => 'Hi $1. $2 ka hequr ju si një mik në {{SITENAME}}! Faleminderit --- Hej, dua të ndaluar marrjen e e-mail nga ne? Kliko $4 dhe ndryshoni parametrat tuaj të çaktivizoni e-mail njoftime.',
+	'foe_removed_subject' => 'Woohoo! $1 ka hequr ju si një armik në {{SITENAME}}!',
+	'foe_removed_body' => "Hi $1. $2 ka hequr ju si një armik në {{SITENAME}}! Ndoshta ju dy jeni në rrugën tuaj për t'u bërë miq? Thanks --- Hej, dua të ndaluar marrjen e e-mail nga ne? Kliko $4 dhe ndryshoni parametrat tuaj të çaktivizoni e-mail njoftime.",
+);
+
 /** Amharic (አማርኛ)
  * @author Codex Sinaiticus
  */
@@ -2663,7 +2718,7 @@ $messages['gl'] = array(
 	'ur-error-message-no-user' => 'Non podemos completar a súa petición porque non existe ningún usuario con ese nome.',
 	'ur-main-page' => 'Portada',
 	'ur-your-profile' => 'O seu perfil',
-	'ur-backlink' => '&lt; Voltar ao perfil de $1',
+	'ur-backlink' => '&lt; Volver ao perfil de $1',
 	'ur-relationship-count-foes' => '$1 ten $2 {{PLURAL:$2|inimigo|inimigos}}. Quere máis inimigos? <a href="$3">Invíteos.</a>',
 	'ur-relationship-count-friends' => '$1 ten $2 {{PLURAL:$2|amigo|amigos}}. Quere máis amigos? <a href="$3">Invíteos.</a>',
 	'ur-add-friends' => '  Quere máis amigos? <a href="$1">Invíteos</a>',

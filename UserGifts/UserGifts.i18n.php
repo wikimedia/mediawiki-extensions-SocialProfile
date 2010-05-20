@@ -164,6 +164,47 @@ $messages['af'] = array(
 	'g-small' => 'Klein',
 );
 
+/** Gheg Albanian (Gegë)
+ * @author Mdupont
+ */
+$messages['aln'] = array(
+	'giftmanager' => 'menaxher Gifts',
+	'giftmanager-addgift' => '+ Shto dhuratë të reja',
+	'giftmanager-access' => 'qasje dhuratë',
+	'giftmanager-description' => 'Përshkrimi dhuratë',
+	'giftmanager-giftimage' => 'image dhuratë',
+	'giftmanager-image' => 'shtoni / zëvendësojë imazhin',
+	'giftmanager-giftcreated' => 'Dhuratë është krijuar',
+	'giftmanager-giftsaved' => 'Dhuratë u ruajt',
+	'giftmanager-public' => 'publik',
+	'giftmanager-private' => 'privat',
+	'giftmanager-view' => 'Lista Shiko dhuratë',
+	'g-add-message' => 'Shto një mesazh',
+	'g-back-edit-gift' => 'Prapa te redaktoni këtë dhuratë',
+	'g-back-gift-list' => 'Kthehu tek lista dhuratë',
+	'g-back-link' => '<Kthehu tek $1 për faqe',
+	'g-choose-file' => 'Zgjidhni skedar:',
+	'g-cancel' => 'Anuloj',
+	'g-count' => '$1 ka $2 {{PLURAL:$2|dhuratë|dhurata}}.',
+	'g-create-gift' => 'dhuratë Krijo',
+	'g-created-by' => 'krijuar nga',
+	'g-current-image' => 'imazhin e tanishme',
+	'g-delete-message' => 'A jeni i sigurt se doni te fshini dhuratë "$1"? Kjo gjithashtu do të fshijë atë nga përdoruesit të cilët mund të kenë marrë atë.',
+	'g-description-title' => '$1 është dhuratë "$2"',
+	'g-error-do-not-own' => 'Ju nuk zotërojnë këtë dhuratë.',
+	'g-error-message-blocked' => 'Ju jeni bllokuar për momentin dhe nuk mund të japin dhurata',
+	'g-error-message-invalid-link' => 'Lidhje e keni futur është i pavlefshëm.',
+	'g-error-message-login' => 'Ju duhet të hyni-në për të dhënë dhurata',
+	'g-error-message-no-user' => 'Perdoruesi jeni duke u përpjekur për të parë nuk ekziston.',
+	'g-error-message-to-yourself' => 'Ju nuk mund të japë një dhuratë për veten.',
+	'g-error-title' => 'Woops, ju mori një kthesë të gabuar!',
+	'g-file-instructions' => 'Imazhi yt duhet të jetë një jpeg, png ose gif (pa animuar gifs), dhe duhet të jetë më pak se 100kb në madhësi.',
+	'g-from' => 'nga <a href="$1">$2</a>',
+	'g-gift' => 'dhuratë',
+	'g-gift-name' => 'Emri dhuratë',
+	'g-give-gift' => 'Jepni dhuratë',
+);
+
 /** Aragonese (Aragonés)
  * @author Juanpabl
  */
@@ -1562,9 +1603,9 @@ $messages['gl'] = array(
 	'giftmanager-private' => 'privado',
 	'giftmanager-view' => 'Ver a lista de agasallos',
 	'g-add-message' => 'Engadir unha mensaxe',
-	'g-back-edit-gift' => 'Voltar á edición deste agasallo',
-	'g-back-gift-list' => 'Voltar á lista de agasallos',
-	'g-back-link' => '< Voltar á páxina de $1',
+	'g-back-edit-gift' => 'Volver á edición deste agasallo',
+	'g-back-gift-list' => 'Volver á lista de agasallos',
+	'g-back-link' => '< Volver á páxina de $1',
 	'g-choose-file' => 'Elixir o ficheiro:',
 	'g-cancel' => 'Cancelar',
 	'g-count' => '$1 ten {{PLURAL:$2|un agasallo|$2 agasallos}}.',
@@ -1597,7 +1638,7 @@ $messages['gl'] = array(
 	'g-give-no-user-title' => 'A quen quere agasallar?',
 	'g-give-to-user-title' => 'Enviar o agasallo "$1" a $2',
 	'g-give-to-user-message' => 'Quere darlle a $1 un <a href="$2">agasallo diferente</a>?',
-	'g-go-back' => 'Voltar',
+	'g-go-back' => 'Volver',
 	'g-imagesbelow' => 'Embaixo están as súas imaxes, que serán usadas no sitio',
 	'g-large' => 'Grande',
 	'g-list-title' => 'Lista de agasallos de $1',

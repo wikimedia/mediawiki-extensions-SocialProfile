@@ -594,6 +594,38 @@ $messages['af'] = array(
 	'user-profile-picture-log' => 'avatar',
 );
 
+/** Gheg Albanian (Gegë)
+ * @author Mdupont
+ */
+$messages['aln'] = array(
+	'populateuserprofiles' => 'përdorues profile rrituni',
+	'user-time-ago' => '$1 më parë',
+	'user-awards-title' => 'Çmimet',
+	'user-gifts-title' => 'Gifts',
+	'user-count-separator' => '$1 prej $2',
+	'user-view-all' => 'Shiko të gjitha',
+	'user-upload-image' => 'Upload image',
+	'user-edit-this' => 'Redaktoni',
+	'user-edit-profile' => 'Ndrysho profilin',
+	'user-upload-avatar' => 'Post Ngarko',
+	'user-watchlist' => 'lista mbikqyrëse e mia',
+	'givegift' => 'Jepni një dhuratë',
+	'viewgifts' => 'dhurata Shiko',
+	'viewsystemgifts' => 'Shiko',
+	'avatarupload-removeavatar' => 'Post Hiq',
+	'avatarupload-currentavatar' => "$1's avatar tanishme",
+	'avatarupload-removesuccess' => 'Re u hoq me sukses',
+	'avatarupload-removeanother' => 'Hiq një tjetër',
+	'profilelogpage' => 'Profili i përdoruesit redakto log',
+	'profilelogpagetext' => 'Ky është një regjistër i profilit të përdoruesit redaktimeve',
+	'avatarlogpage' => 'Avatar upload log',
+	'avatarlogpagetext' => 'Ky është një regjistër i Ngarkimet avatar përdorues',
+	'user-profile-picture-log' => 'avatar',
+	'user-profile-picture-log-entry' => 'ngarkuar avatar reja',
+	'user-profile-picture-log-delete-entry' => "fshihet Post $1's",
+	'right-avatarremove' => "avatars user's Hiq",
+);
+
 /** Amharic (አማርኛ)
  * @author Codex Sinaiticus
  */
