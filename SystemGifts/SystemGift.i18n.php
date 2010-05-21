@@ -2074,6 +2074,8 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
  * @author Xqt
  */
 $messages['pdc'] = array(
+	'ga-back-link' => '<a href="$1">< Zerrick zur Uffstelling vun $2</a>',
+	'ga-goback' => 'geh zerrick',
 	'ga-large' => 'Gross',
 	'ga-new' => 'Nei',
 	'ga-next' => 'Neegscht',

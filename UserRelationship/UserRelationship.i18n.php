@@ -3990,6 +3990,8 @@ dan ubah pengaturan Anda untuk menghentikan pemberitahuan surel.',
  */
 $messages['ig'] = array(
 	'ur-error-page-title' => 'Ewóo!',
+	'ur-cancel' => 'Emekwàlà',
+	'ur-login' => 'Banyé',
 	'foe_removed_subject' => 'O ho! $1 wefuru gi ka onye iro na {{SITENAME}}!',
 );
 

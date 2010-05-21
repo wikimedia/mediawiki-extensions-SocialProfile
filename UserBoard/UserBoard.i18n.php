@@ -1672,6 +1672,11 @@ Klik $4
 dan ubah setting anda untuk menonaktifkan notifikasi surel.',
 );
 
+/** Igbo (Igbo) */
+$messages['ig'] = array(
+	'userboard_delete' => 'Gbakashia',
+);
+
 /** Ido (Ido)
  * @author Malafaya
  */
@@ -2431,7 +2436,10 @@ $messages['os'] = array(
  */
 $messages['pdc'] = array(
 	'userboard_delete' => 'Lösche',
+	'userboard_private' => 'private',
 	'userboard_nextpage' => 'neegscht',
+	'userboard-time-days' => '{{PLURAL:$1|een Daag|$1 Daag}}',
+	'userboard-time-hours' => '{{PLURAL:$1|ee Schtund|$1 Schtunde}}',
 );
 
 /** Polish (Polski)

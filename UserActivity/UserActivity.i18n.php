@@ -480,6 +480,13 @@ $messages['no'] = array(
 	'useractivity-user_message' => '$1 {{PLURAL:$4|sendte en beskjed til|sendte flere beskjeder til}} $3',
 );
 
+/** Deitsch (Deitsch)
+ * @author Xqt
+ */
+$messages['pdc'] = array(
+	'useractivity-group-comment' => '{{PLURAL:$1|ee Anmaerricking|$1 Anmaerrickinge}}',
+);
+
 /** Polish (Polski) */
 $messages['pl'] = array(
 	'useractivity-all' => 'Pokaż wszystko',

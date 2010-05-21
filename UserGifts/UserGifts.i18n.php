@@ -2337,6 +2337,7 @@ dan ubah seting untuk nonaktifkan notifikasi surel.',
  * @author Ukabia
  */
 $messages['ig'] = array(
+	'g-cancel' => 'Emekwàlà',
 	'g-large' => 'Ukwu',
 );
 
@@ -3259,7 +3260,12 @@ $messages['os'] = array(
  * @author Xqt
  */
 $messages['pdc'] = array(
+	'giftmanager-public' => 'public',
+	'giftmanager-private' => 'private',
+	'g-back-link' => 'Zerrick zur Uffstelling vun $1',
+	'g-from' => 'vun <a href="$1">$2</a>',
 	'g-give-separator' => 'odder',
+	'g-go-back' => 'Geh zerrick',
 	'g-large' => 'Gross',
 	'g-main-page' => 'Haaptblatt',
 	'g-new' => 'nei',
