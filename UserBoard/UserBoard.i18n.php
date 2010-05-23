@@ -3189,8 +3189,8 @@ $messages['tk'] = array(
  */
 $messages['tl'] = array(
 	'boardblastlogintitle' => 'Dapat na nakalagda ka muna upang makapagpadala ng mga pitadang pampisara',
-	'boardblastlogintext' => 'Dapat na nakalagda ka muna upang makapagpadala ng mga pitadang pampisara.
-Pindutin <a href="index.php?title=Special:UserLogin">dito upang makalagda</a>',
+	'boardblastlogintext' => 'Upang makapagpadala ng mga pitadang pampisara, 
+dapat na <a href="index.php?title=Special:UserLogin">nakalagda ka muna</a>.',
 	'messagesenttitle' => 'Naipadala na ang mga mensahe',
 	'boardblasttitle' => 'Ipadala ang pitadang pampisara',
 	'boardblaststep1' => 'Hakbang 1 - Isulat ang mensahe mo',
