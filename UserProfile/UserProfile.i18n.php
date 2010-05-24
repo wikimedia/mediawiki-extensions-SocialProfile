@@ -9958,6 +9958,7 @@ $messages['tk'] = array(
  */
 $messages['tl'] = array(
 	'populateuserprofiles' => 'Panahanan (lagyan ng laman) ang mga talaang pangkatangian ng tagagamit',
+	'user-time-ago' => '$1 ang nakalipas',
 	'user-awards-title' => 'Mga gantimpala',
 	'user-gifts-title' => 'Mga handog',
 	'user-count-separator' => '$1 ng $2',
