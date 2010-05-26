@@ -16,7 +16,6 @@ class GiveGift extends SpecialPage {
 	 */
 	public function execute( $par ) {
 		global $wgUser, $wgOut, $wgRequest, $wgMemc, $wgUploadPath, $wgUserGiftsScripts;
-		wfLoadExtensionMessages( 'UserGifts' );
 
 		$output = ''; // Prevent E_NOTICE
 

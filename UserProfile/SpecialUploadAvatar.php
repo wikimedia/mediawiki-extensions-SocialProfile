@@ -65,8 +65,6 @@ class SpecialUploadAvatar extends SpecialUpload {
 	function showSuccess( $ext ) {
 		global $wgUser, $wgOut, $wgContLang, $wgDBname, $wgUploadPath, $wgUploadAvatarInRecentChanges;
 
-		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
-
 		$log = new LogPage( wfMsgForContent( 'user-profile-picture-log' ) );
 		if ( !$wgUploadAvatarInRecentChanges ) {
 			$log->updateRecentChanges = false;
@@ -173,8 +171,6 @@ class SpecialUploadAvatar extends SpecialUpload {
 		$watchChecked = $wgUser->getOption( 'watchdefault' )
 			? 'checked="checked"'
 			: '';
-
-		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
 
 		$output = '<h1>' . wfMsg( 'user-profile-picture-title' ) . '</h1>';
 		$output .= UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-picture' ) );

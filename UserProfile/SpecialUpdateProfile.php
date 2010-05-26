@@ -46,8 +46,6 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		global $wgUser, $wgOut, $wgRequest, $wgUserProfileScripts, $wgUpdateProfileInRecentChanges, $wgSupressPageTitle;
 		$wgSupressPageTitle = true;
 
-		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
-
 		$wgOut->setHTMLTitle( wfMsg( 'pagetitle', wfMsg( 'edit-profile-title' ) ) );
 
 		// This feature is only available for logged-in users.
@@ -348,8 +346,6 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$websites = $s->up_websites;
 		}
 
-		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
-
 		if ( !$location_country ) {
 			$location_country = wfMsgForContent( 'user-profile-default-country' );
 		}
@@ -545,8 +541,6 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$drinks = $s->up_drinks;
 		}
 
-		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
-
 		$wgOut->setPageTitle( wfMsg( 'user-profile-section-interests' ) );
 		$form = UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-interests' ) );
 		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">
@@ -607,8 +601,6 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	function displayPreferencesForm() {
 		global $wgUser, $wgOut;
 
-		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
-
 		// @todo If the checkboxes are in front of the option, this would look more like Special:Preferences
 		$wgOut->setPageTitle( wfMsg( 'user-profile-section-preferences' ) );
 		$form = UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-preferences' ) );
@@ -667,8 +659,6 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$custom3 = $s->up_custom_3;
 			$custom4 = $s->up_custom_4;
 		}
-
-		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
 
 		$wgOut->setHTMLTitle( wfMsg( 'pagetitle', wfMsg( 'user-profile-tidbits-title' ) ) );
 		$form = '<h1>' . wfMsg( 'user-profile-tidbits-title' ) . '</h1>';

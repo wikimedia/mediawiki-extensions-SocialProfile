@@ -62,7 +62,6 @@ class UserSystemGifts {
 		$user = User::newFromId( $user_id_to );
 		$user->loadFromDatabase();
 		if ( $user->isEmailConfirmed() && $user->getIntOption( 'notifygift', 1 ) ) {
-			wfLoadExtensionMessages( 'SystemGifts' );
 			$gifts_link = SpecialPage::getTitleFor( 'ViewSystemGifts' );
 			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
 			$subject = wfMsgExt( 'system_gift_received_subject', 'parsemag',

@@ -49,7 +49,6 @@ function getWelcomeUser( $input, $args, $parser ) {
 
 function getWelcome() {
 	global $wgUser, $wgOut, $wgScriptPath, $wgUploadPath;
-	wfLoadExtensionMessages( 'UserWelcome' );
 
 	// Add CSS
 	$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserWelcome/UserWelcome.css' );
@@ -107,8 +106,6 @@ function getWelcome() {
 }
 
 function getRequests() {
-	wfLoadExtensionMessages( 'UserWelcome' );
-
 	// Get requests
 	$requests = getNewMessagesLink() . getRelationshipRequestLink() .
 				getNewGiftLink() . getNewSystemGiftLink();
@@ -129,7 +126,6 @@ function getRequests() {
 
 function getRelationshipRequestLink() {
 	global $wgUser, $wgScriptPath;
-	wfLoadExtensionMessages( 'UserWelcome' );
 	$friend_request_count = UserRelationship::getOpenRequestCount( $wgUser->getID(), 1 );
 	$foe_request_count = UserRelationship::getOpenRequestCount( $wgUser->getID(), 2 );
 	$relationship_request_link = SpecialPage::getTitleFor( 'ViewRelationshipRequests' );
@@ -157,7 +153,6 @@ function getRelationshipRequestLink() {
 
 function getNewGiftLink() {
 	global $wgUser, $wgScriptPath;
-	wfLoadExtensionMessages( 'UserWelcome' );
 	$gift_count = UserGifts::getNewGiftCount( $wgUser->getID() );
 	$gifts_title = SpecialPage::getTitleFor( 'ViewGifts' );
 	$output = '';
@@ -174,7 +169,6 @@ function getNewGiftLink() {
 
 function getNewSystemGiftLink() {
 	global $wgUser, $wgScriptPath;
-	wfLoadExtensionMessages( 'UserWelcome' );
 	$gift_count = UserSystemGifts::getNewSystemGiftCount( $wgUser->getID() );
 	$gifts_title = SpecialPage::getTitleFor( 'ViewSystemGifts' );
 	$output = '';
@@ -193,7 +187,6 @@ function getNewSystemGiftLink() {
 
 function getNewMessagesLink() {
 	global $wgUser, $wgScriptPath;
-	wfLoadExtensionMessages( 'UserWelcome' );
 	$new_messages = UserBoard::getNewMessageCount( $wgUser->getID() );
 	$output = '';
 	if ( $new_messages ) {

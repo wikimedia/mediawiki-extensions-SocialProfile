@@ -29,7 +29,6 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 	public function execute( $params ) {
 		global $wgUser, $wgOut, $wgRequest, $wgUploadPath, $wgUserRelationshipScripts;
 
-		wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
 		$this->setHeaders();
 
 		$wgOut->addExtensionStyle( $wgUserRelationshipScripts . '/UserRelationship.css' );
@@ -210,7 +209,6 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 	 */
 	function displayForm() {
 		global $wgOut, $wgUploadPath;
-		wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
 
 		$form = '';
 

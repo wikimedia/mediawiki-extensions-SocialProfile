@@ -405,7 +405,6 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	 */
 	function showSuccess( $status ) {
 		global $wgUser, $wgOut, $wgUploadPath, $wgScriptPath, $wgLang;
-		wfLoadExtensionMessages( 'SystemGifts' );
 		$ext = 'jpg';
 
 		$output = '<h2>' . wfMsg( 'ga-uploadsuccess' ) . '</h2>';
@@ -457,7 +456,6 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	 */
 	function uploadError( $error ) {
 		global $wgOut;
-		wfLoadExtensionMessages( 'SystemGifts' );
 		$sub = wfMsg( 'uploadwarning' );
 		$wgOut->addHTML( "<h2>{$sub}</h2>\n" );
 		$wgOut->addHTML( "<h4 class='error'>{$error}</h4>\n" );
@@ -534,7 +532,6 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	function mainUploadForm( $msg = '' ) {
 		global $wgOut, $wgUser, $wgLang, $wgUploadDirectory, $wgRequest;
 		global $wgUseCopyrightUpload;
-		wfLoadExtensionMessages( 'SystemGifts' );
 
 		$cols = intval( $wgUser->getOption( 'cols' ) );
 		$ew = $wgUser->getOption( 'editwidth' );

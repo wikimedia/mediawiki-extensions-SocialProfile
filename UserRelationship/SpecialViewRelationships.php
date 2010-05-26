@@ -28,8 +28,6 @@ class SpecialViewRelationships extends SpecialPage {
 	public function execute( $params ) {
 		global $wgUser, $wgOut, $wgRequest, $wgUserRelationshipScripts, $wgLang;
 
-		wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
-
 		$wgOut->addExtensionStyle( $wgUserRelationshipScripts . '/UserRelationship.css' );
 
 		$output = '';

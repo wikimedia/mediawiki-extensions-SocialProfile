@@ -16,7 +16,6 @@ class ViewGift extends UnlistedSpecialPage {
 	 */
 	public function execute( $par ) {
 		global $wgUser, $wgOut, $wgRequest, $wgUploadPath, $wgUserGiftsScripts;
-		wfLoadExtensionMessages( 'UserGifts' );
 
 		$wgOut->addExtensionStyle( $wgUserGiftsScripts . '/UserGifts.css' );
 

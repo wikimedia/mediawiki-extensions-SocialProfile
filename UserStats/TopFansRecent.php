@@ -18,9 +18,6 @@ class TopFansRecent extends UnlistedSpecialPage {
 		global $wgRequest, $wgUser, $wgOut, $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly,
 		$wgUserLevels, $wgUploadPath, $wgScriptPath;
 
-		// Read in localisation messages
-		wfLoadExtensionMessages( 'SocialProfileUserStats' );
-
 		// Load CSS
 		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStats/TopList.css' );
 

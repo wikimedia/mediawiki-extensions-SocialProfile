@@ -550,7 +550,6 @@ class UserStatsTrack {
 				// Check if user advanced on this update
 				if ( $level_number_after > $level_number_before ) {
 					$m = new UserSystemMessage();
-					wfLoadExtensionMessages( 'SocialProfileUserStats' );
 					$m->addMessage( $this->user_name, 2, wfMsgForContent( 'level-advanced-to', $user_level->getLevelName() ) );
 					$m->sendAdvancementNotificationEmail( $this->user_id, $user_level->getLevelName() );
 				}
