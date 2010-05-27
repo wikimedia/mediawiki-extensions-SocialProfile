@@ -149,14 +149,15 @@ $messages['bs'] = array(
 
 /** German (Deutsch)
  * @author Kghbln
+ * @author The Evil IP address
  */
 $messages['de'] = array(
 	'useractivity' => 'Aktivitäten des Freundes',
 	'useractivity-award' => '$1 erhielt eine Auszeichnung',
 	'useractivity-all' => 'Alle anzeigen',
 	'useractivity-edit' => '$1 {{PLURAL:$4|bearbeitete die Seite|bearbeitete die folgenden Seiten:}} $3',
-	'useractivity-foe' => '$1 {{PLURAL:$2|ist nun Gegner von|sind nun Gegner von}} $3',
-	'useractivity-friend' => '$1 {{PLURAL:$2|ist nun Freund von|sind nun Freunde von}} $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|ist nun {{GENDER:$6|Gegner|Gegnerin|Gegner}} von|sind nun Gegner von}} $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|ist nun {{GENDER:$6|Freund|Freundin|Freund}} von|sind nun Freunde von}} $3',
 	'useractivity-gift' => '$1 erhielt ein Geschenk von $2',
 	'useractivity-group-edit' => '{{PLURAL:$1|eine Bearbeitung|$1 Bearbeitungen}}',
 	'useractivity-group-comment' => '{{PLURAL:$1|ein Kommentar|$1 Kommentare}}',
