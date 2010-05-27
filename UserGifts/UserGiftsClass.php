@@ -68,6 +68,8 @@ class UserGifts {
 	}
 
 	public function sendGiftNotificationEmail( $user_id_to, $user_from, $gift_id, $type ) {
+		wfLoadExtensionMessages( 'UserGifts' );
+
 		$gift = Gifts::getGift( $gift_id );
 		$user = User::newFromId( $user_id_to );
 		$user->loadFromDatabase();

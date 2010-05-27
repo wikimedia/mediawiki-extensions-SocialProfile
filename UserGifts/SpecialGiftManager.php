@@ -16,6 +16,7 @@ class GiftManager extends SpecialPage {
 	 */
 	public function execute( $par ) {
 		global $wgUser, $wgOut, $wgRequest, $wgScriptPath, $wgUserGiftsScripts;
+		wfLoadExtensionMessages( 'UserGifts' );
 
 		$wgOut->setPageTitle( wfMsg( 'giftmanager' ) );
 
@@ -115,6 +116,7 @@ class GiftManager extends SpecialPage {
 
 	function displayGiftList() {
 		global $wgScriptPath;
+		wfLoadExtensionMessages( 'UserGifts' );
 		$output = ''; // Prevent E_NOTICE
 		$page = 0;
 		$per_page = 10;
@@ -132,6 +134,7 @@ class GiftManager extends SpecialPage {
 
 	function displayForm( $gift_id ) {
 		global $wgUser, $wgOut, $wgScriptPath;
+		wfLoadExtensionMessages( 'UserGifts' );
 
 		if ( !$gift_id && !$this->canUserCreateGift() ) {
 			return $this->displayGiftList();

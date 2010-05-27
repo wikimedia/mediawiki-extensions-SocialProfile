@@ -30,6 +30,8 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$wgOut->addExtensionStyle( $wgUserBoardScripts . '/BoardBlast.css' );
 		$wgOut->addScriptFile( $wgUserBoardScripts . '/BoardBlast.js' );
 
+		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
+
 		$output = '';
 
 		// This feature is available only to logged-in users.
@@ -70,6 +72,8 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 
 		$stats = new UserStats( $wgUser->getID(), $wgUser->getName() );
 		$stats_data = $stats->getUserStats();
+
+		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 
 		$output = '<div class="board-blast-message-form">
 				<h2>' . wfMsg( 'boardblaststep1' ) . '</h2>

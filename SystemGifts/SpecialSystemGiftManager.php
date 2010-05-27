@@ -16,6 +16,7 @@ class SystemGiftManager extends SpecialPage {
 	 */
 	public function execute( $par ) {
 		global $wgUser, $wgOut, $wgRequest, $wgScriptPath, $wgSystemGiftsScripts;
+		wfLoadExtensionMessages( 'SystemGifts' );
 
 		$wgOut->setPageTitle( wfMsg( 'systemgiftmanager' ) );
 

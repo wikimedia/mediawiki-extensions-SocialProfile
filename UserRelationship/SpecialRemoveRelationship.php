@@ -28,6 +28,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 	public function execute( $params ) {
 		global $wgUser, $wgOut, $wgRequest, $wgUploadPath, $wgUserRelationshipScripts;
 
+		wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
 		$this->setHeaders();
 
 		$wgOut->addExtensionStyle( $wgUserRelationshipScripts . '/UserRelationship.css' );
@@ -144,6 +145,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 	 */
 	function displayForm() {
 		global $wgOut, $wgUploadPath;
+		wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
 
 		$form = '';
 		$avatar = new wAvatar( $this->user_id_to, 'l' );

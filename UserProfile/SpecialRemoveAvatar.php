@@ -16,6 +16,7 @@ class RemoveAvatar extends SpecialPage {
 	 */
 	public function execute( $user ) {
 		global $wgUser, $wgOut, $wgRequest, $wgUploadAvatarInRecentChanges;
+		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
 
 		$this->title = SpecialPage::getTitleFor( 'RemoveAvatar' );
 

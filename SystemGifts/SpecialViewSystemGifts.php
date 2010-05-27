@@ -16,6 +16,7 @@ class ViewSystemGifts extends SpecialPage {
 	 */
 	public function execute( $par ) {
 		global $wgUser, $wgOut, $wgRequest, $wgMemc, $wgUploadPath, $wgSystemGiftsScripts;
+		wfLoadExtensionMessages( 'SystemGifts' );
 
 		$wgOut->addExtensionStyle( $wgSystemGiftsScripts . '/SystemGift.css' );
 

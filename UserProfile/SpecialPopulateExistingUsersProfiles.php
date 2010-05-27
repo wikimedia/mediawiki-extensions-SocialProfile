@@ -69,6 +69,7 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 			}
 		}
 
+		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
 		$wgOut->addHTML( wfMsgExt( 'populate-user-profile-done', 'parsemag', $count ) );
 	}
 }

@@ -16,6 +16,7 @@ class ViewGifts extends SpecialPage {
 	 */
 	public function execute( $par ) {
 		global $wgUser, $wgOut, $wgRequest, $wgMemc, $wgUploadPath, $wgUserGiftsScripts;
+		wfLoadExtensionMessages( 'UserGifts' );
 
 		$wgOut->addExtensionStyle( $wgUserGiftsScripts . '/UserGifts.css' );
 

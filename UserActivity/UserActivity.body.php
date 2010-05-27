@@ -16,6 +16,8 @@ class UserHome extends SpecialPage {
 	public function execute( $par ) {
 		global $wgUser, $wgOut, $wgRequest, $wgScriptPath;
 
+		wfLoadExtensionMessages( 'UserActivity' );
+
 		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserActivity/UserActivity.css' );
 
 		$wgOut->setPageTitle( wfMsg( 'useractivity-title' ) );

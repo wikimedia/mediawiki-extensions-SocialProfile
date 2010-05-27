@@ -25,6 +25,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 	 */
 	public function execute( $params ) {
 		global $wgUser, $wgOut, $wgRequest, $wgUserRelationshipScripts;
+		wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
 
 		/**
 		 * Redirect Non-logged in users to Login Page

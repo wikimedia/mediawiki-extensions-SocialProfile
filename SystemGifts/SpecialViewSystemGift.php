@@ -16,6 +16,7 @@ class ViewSystemGift extends UnlistedSpecialPage {
 	 */
 	public function execute( $par ) {
 		global $wgUser, $wgOut, $wgRequest, $wgUploadPath, $wgSystemGiftsScripts;
+		wfLoadExtensionMessages( 'SystemGifts' );
 
 		$wgOut->addExtensionStyle( $wgSystemGiftsScripts . '/SystemGift.css' );
 

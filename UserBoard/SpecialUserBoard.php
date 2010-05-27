@@ -29,6 +29,8 @@ class SpecialViewUserBoard extends SpecialPage {
 	public function execute( $params ) {
 		global $wgUser, $wgOut, $wgRequest, $wgScriptPath, $wgUserBoardScripts;
 
+		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
+
 		// Add CSS
 		$wgOut->addExtensionStyle( $wgUserBoardScripts . '/UserBoard.css' );
 

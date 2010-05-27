@@ -14,6 +14,7 @@ class UserRelationship {
 	 * @private
 	 */
 	/* private */ function __construct( $username ) {
+		wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
 		$title1 = Title::newFromDBkey( $username );
 		$this->user_name = $title1->getText();
 		$this->user_id = User::idFromName( $this->user_name );
