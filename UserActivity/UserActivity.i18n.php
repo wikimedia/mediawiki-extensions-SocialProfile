@@ -612,6 +612,26 @@ $messages['te'] = array(
 	'useractivity-group-friend' => '{{PLURAL:$1|ఒక స్నేహితుడు|$1 స్నేహితులు}}',
 );
 
+/** Tagalog (Tagalog)
+ * @author AnakngAraw
+ */
+$messages['tl'] = array(
+	'useractivity' => 'Galaw ng mga kaibigan',
+	'useractivity-award' => 'Nakatanggap ng isang gantimpala si $1',
+	'useractivity-all' => 'Tingnan lahat',
+	'useractivity-edit' => 'Si $1 ay {{PLURAL:$4|nagbago ng pahinang|nagbago ng sumusunod na mga pahina:}} $3',
+	'useractivity-foe' => 'Si(na) $1 ay {{PLURAL:$2|ay kaaway na ngayon ni|ay mga kaaway na ngayon ni}} $3',
+	'useractivity-friend' => 'Si(na) $1 ay {{PLURAL:$2|kaibigan na ngayon ni|ay mga kaibigan na ngayon ni}} $3',
+	'useractivity-gift' => 'Nakatanggap si $1 ng regalo mula kay $2',
+	'useractivity-group-edit' => '{{PLURAL:$1|isang pagbabago|$1 mga pagbabago}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|isang puna|$1 mga puna}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|isang mensahe|$1 mga mensahe}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|isang kaibigan|$1 mga kaibigan}}',
+	'useractivity-siteactivity' => 'Galaw sa sityo',
+	'useractivity-title' => 'Galaw ng mga kaibigan',
+	'useractivity-user_message' => 'Si $1 ay {{PLURAL:$4|nagpadala ng isang mensahe kay|nagpadala ng mga mensahe kay}} $3',
+);
+
 /** Turkish (Türkçe)
  * @author Joseph
  */
