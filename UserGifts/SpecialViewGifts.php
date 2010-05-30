@@ -125,9 +125,9 @@ class ViewGifts extends SpecialPage {
 					<div class="g-actions">
 						<a href="' . $give_gift_link->escapeFullURL( 'gift_id=' . $gift['gift_id'] ) . '">' . wfMsg( 'g-to-another' ) . '</a>';
 				if ( $rel->user_name == $wgUser->getName() ) {
-					$output .= '&nbsp;';
+					$output .= '&#160;';
 					$output .= wfMsgExt( 'pipe-separator' , 'escapenoentities' );
-					$output .= '&nbsp;';
+					$output .= '&#160;';
 					$output .= '<a href="' . $remove_gift_link->escapeFullURL( 'gift_id=' . $gift['id'] ) . '">' . wfMsg( 'g-remove-gift' ) . '</a>';
 				}
 				$output .= '</div>

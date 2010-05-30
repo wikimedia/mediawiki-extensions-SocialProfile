@@ -444,8 +444,8 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$output .= '<tr><td><input type="button" onclick="javascript:history.go(-1)" value="' . wfMsg( 'g-go-back' ) . '"></td></tr>';
 
 		$output .= $wgLang->pipeList( array(
-			'<tr><td><a href="' . $wgScriptPath . '/index.php?title=Special:GiftManager">' . wfMsg( 'g-back-gift-list' ) . '</a>&nbsp;',
-			'&nbsp;<a href="' . $wgScriptPath . '/index.php?title=Special:GiftManager&amp;id=' . $this->gift_id . '">' . wfMsg( 'g-back-edit-gift' ) . '</a></td></tr>'
+			'<tr><td><a href="' . $wgScriptPath . '/index.php?title=Special:GiftManager">' . wfMsg( 'g-back-gift-list' ) . '</a>&#160;',
+			'&#160;<a href="' . $wgScriptPath . '/index.php?title=Special:GiftManager&amp;id=' . $this->gift_id . '">' . wfMsg( 'g-back-edit-gift' ) . '</a></td></tr>'
 		) );
 		$output .= '</table>';
 		$wgOut->addHTML( $output );
