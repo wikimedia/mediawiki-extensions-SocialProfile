@@ -2864,6 +2864,13 @@ $messages['vi'] = array(
 	'ga-uploadsuccess' => 'Đã tải lên thành công',
 );
 
+/** Yiddish (ייִדיש)
+ * @author פוילישער
+ */
+$messages['yi'] = array(
+	'ga-choosefile' => 'קלויבט טעקע:',
+);
+
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Liangent
  * @author PhiLiP
