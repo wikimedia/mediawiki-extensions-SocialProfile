@@ -1037,6 +1037,7 @@ $messages['pms'] = array(
  * @author Ahmed-Najib-Biabani-Ibrahimkhel
  */
 $messages['ps'] = array(
+	'mp-welcome-upload' => 'پورته کول',
 	'mp-welcome-edit' => 'سمون',
 	'mp-welcome-logged-in' => '$1 سلامونه',
 	'mp-requests-title' => 'غوښتنې',

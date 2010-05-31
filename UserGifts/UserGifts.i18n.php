@@ -2504,6 +2504,7 @@ $messages['km'] = array(
  */
 $messages['kn'] = array(
 	'g-main-page' => 'ಮುಖ್ಯ ಪುಟ',
+	'g-new' => 'ಹೊಸ',
 );
 
 /** Colognian (Ripoarisch)
