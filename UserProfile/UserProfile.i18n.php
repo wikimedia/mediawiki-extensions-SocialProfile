@@ -545,6 +545,7 @@ $messages['af'] = array(
 	'custom-info-title' => 'Vrye inligting',
 	'user-personal-info-title' => 'Persoonlike inligting',
 	'user-personal-info-real-name' => 'Regte naam',
+	'user-personal-info-location' => 'Ligging',
 	'user-personal-info-hometown' => 'Woonplek',
 	'user-personal-info-birthday' => 'Verjaarsdag',
 	'user-personal-info-occupation' => 'Beroep',
@@ -3366,10 +3367,12 @@ Pursa <a href="$1">aquina</a> p\'abril la tu cuenta, u <a href="$2">aquina</a> p
 );
 
 /** Finnish (Suomi)
+ * @author Centerlink
  * @author Cimon Avaro
  * @author Crt
  * @author Jack Phoenix
  * @author Jack Phoenix <jack@countervandalism.net>
+ * @author Nike
  * @author Str4nd
  */
 $messages['fi'] = array(
@@ -3397,6 +3400,10 @@ $messages['fi'] = array(
 	'user-stats-votes' => '{{PLURAL:$1|Ääni|Ääniä}}',
 	'user-stats-comments' => '{{PLURAL:$1|Kommentti|Kommentteja}}',
 	'user-stats-recruits' => '{{PLURAL:$1|Rekrytoitu|Rekrytoituja}}',
+	'user-stats-poll-votes' => 'Äänestyksen {{PLURAL:$1|ääni|äänet}}',
+	'user-stats-picture-game-votes' => 'Kuvapelissä {{PLURAL:$1|ääni|ääntä}}',
+	'user-stats-quiz-points' => 'Visailussa {{PLURAL:$1|piste|pistettä}}',
+	'user-stats-pick-points' => 'Poimi ne {{PLURAL:$1|piste|pistettä}}',
 	'other-info-title' => 'Muut tiedot',
 	'user-friends-title' => 'Ystävät',
 	'user-foes-title' => 'Viholliset',

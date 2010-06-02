@@ -826,6 +826,7 @@ eta alda itzazu ezarpenak e-posta bidezko jakinarazpenak ezgaitzeko.',
 );
 
 /** Finnish (Suomi)
+ * @author Centerlink
  * @author Cimon Avaro
  * @author Jack Phoenix <jack@countervandalism.net>
  * @author Str4nd
@@ -862,12 +863,15 @@ $messages['fi'] = array(
 	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|viikottainen voitto|viikottaista voittoa}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|muokkaus|muokkausta}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|kommentti|kommenttia}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Viite|Viitteet}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|ystävä|ystävää}}',
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|vihollinen|vihollista}}',
 	'top-fans-stats-opinions-published' => '{{PLURAL:$1|julkaistu mielipide|julkaistua mielipidettä}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|mielipide|mielipidettä}}',
 	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|peukalo ylös|peukaloa ylös}}',
 	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|peukalo alas|peukaloa alas}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Tykkäät|Tykkäävät}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Et pidä|Eivät pidä}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|saatu lahja|saatua lahjaa}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|lähetetty lahja|lähetettyä lahjaa}}',
 	'right-updatepoints' => 'Päivittää muokkausmääriä',

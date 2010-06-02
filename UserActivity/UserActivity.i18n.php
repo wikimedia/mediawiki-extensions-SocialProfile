@@ -210,13 +210,14 @@ $messages['es'] = array(
 );
 
 /** Finnish (Suomi)
+ * @author Centerlink
  * @author Jack Phoenix <jack@countervandalism.net>
  */
 $messages['fi'] = array(
 	'useractivity' => 'Ystävien aktiivisuus',
 	'useractivity-award' => '$1 sai palkinnon',
 	'useractivity-all' => 'Katso kaikki',
-	'useractivity-edit' => '$1 {{PLURAL:$2|muokkasi|muokkasivat}} {{PLURAL:$4|sivua|seuraavia sivuja:}} $3',
+	'useractivity-edit' => '$1 {{PLURAL:$4|muokkasi|muokkasivat seuraavaa|seuraavia sivua|sivuja:}} $3',
 	'useractivity-foe' => '$1 {{PLURAL:$2|on nyt vihollinen|ovat nyt vihollisia}} {{PLURAL:$3|käyttäjälle|käyttäjille}} $3',
 	'useractivity-friend' => '$1 {{PLURAL:$2|on nyt ystävä|ovat nyt ystäviä}} {{PLURAL:$3|käyttäjälle|käyttäjille}} $3',
 	'useractivity-gift' => '$1 sai lahjan käyttäjältä $2',
