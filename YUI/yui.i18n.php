@@ -113,6 +113,13 @@ $messages['cs'] = array(
 	'yui-desc' => 'Sada nástrojů napsaných v JavaScriptu.',
 );
 
+/** Welsh (Cymraeg)
+ * @author (vinny)
+ */
+$messages['cy'] = array(
+	'yui-desc' => 'Mae set o cyfleustodau a rheolaethau, a ysgrifennwyd yn JavaScript',
+);
+
 /** Danish (Dansk)
  * @author Masz
  */
