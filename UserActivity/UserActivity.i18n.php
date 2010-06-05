@@ -583,6 +583,24 @@ $messages['ru'] = array(
 	'useractivity-user_message' => '$1 отправил {{PLURAL:$4|сообщение|сообщения}} $3',
 );
 
+/** Serbian Cyrillic ekavian (Српски (ћирилица))
+ * @author Михајло Анђелковић
+ */
+$messages['sr-ec'] = array(
+	'useractivity' => 'Активност пријатеља',
+	'useractivity-award' => '$1 је примио/ла награду',
+	'useractivity-all' => 'Види све',
+	'useractivity-foe' => '$1 је сада непријатељ са $3',
+	'useractivity-friend' => '$1 је сада пријатељ са $3',
+	'useractivity-gift' => '$1 је примио/ла поклон од $2',
+	'useractivity-group-edit' => '{{PLURAL:$1|једна|$1}} измена',
+	'useractivity-group-comment' => '{{PLURAL:$1|један коментар|$1 коментара}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|једна|$1}} порука',
+	'useractivity-group-friend' => '{{PLURAL:$1|један пријатељ|$1 пријатеља}}',
+	'useractivity-siteactivity' => 'Активност сајта',
+	'useractivity-title' => 'Активност пријатеља',
+);
+
 /** Swedish (Svenska)
  * @author Per
  */

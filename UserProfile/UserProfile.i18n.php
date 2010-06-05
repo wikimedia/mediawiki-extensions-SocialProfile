@@ -9031,12 +9031,14 @@ $messages['sr-ec'] = array(
 	'viewsystemgifts' => 'Погледајте награде',
 	'avatarupload-removeavatar' => 'Обришите аватар',
 	'avatarupload-currentavatar' => 'Тренутни аватар од $1',
+	'avatarupload-removeanother' => 'Обриши други',
 	'profilelogpage' => 'Историја мењања профила',
 	'profilelogpagetext' => 'Ово је историја мењања профила',
 	'avatarlogpage' => 'Историја слања аватара',
 	'avatarlogpagetext' => 'Ово је историја слања корисничких аватара',
 	'user-profile-picture-log' => 'аватар',
 	'user-profile-picture-log-entry' => 'послао нови аватар',
+	'user-profile-picture-log-delete-entry' => 'обрисан аватар од $1',
 	'right-avatarremove' => 'Брисање корисничких аватара',
 );
 

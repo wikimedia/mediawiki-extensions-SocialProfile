@@ -2912,6 +2912,7 @@ a zmeňte svoje nastavenia na vypnutie upozornení emailom.',
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
+	'messagesenttitle' => 'Поруке послате',
 	'boardblaststep1' => 'Први корак - Напишите Вашу поруку',
 	'boardblastprivatenote' => 'Све поруке ће бити послате као приватне поруке',
 	'boardblaststep2' => 'Корак 2 - Назначите коме желите да пожаљете поруку',
@@ -2922,6 +2923,7 @@ $messages['sr-ec'] = array(
 	'boardlinkselectfoes' => 'Означи непријатеље',
 	'boardlinkunselectfoes' => 'Скини ознаке са непријатеља',
 	'boardnofriends' => 'Немате пријатеља којима бисте послали поруку!',
+	'userboard_delete' => 'Брисање',
 	'userboard_backprofile' => 'Повратак на профил од $1',
 	'userboard_backyourprofile' => 'Повратак на Ваш профил',
 	'userboard_sendmessage' => 'Пошаљи поруку кориснику $1',
