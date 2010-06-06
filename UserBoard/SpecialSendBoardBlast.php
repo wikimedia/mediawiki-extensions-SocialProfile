@@ -79,10 +79,10 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 				<h2>' . wfMsg( 'boardblaststep1' ) . '</h2>
 				<form method="post" name="blast" action="">
 					<input type="hidden" name="ids" id="ids" />
-					<div class="blast-message-text">
-						' . wfMsg( 'boardblastprivatenote' ) . '
-					</div>
-					<textarea name="message" id="message" cols="63" rows="4"/></textarea>
+					<div class="blast-message-text">'
+						. wfMsg( 'boardblastprivatenote' ) .
+					'</div>
+					<textarea name="message" id="message" cols="63" rows="4"></textarea>
 				</form>
 		</div>
 		<div class="blast-nav">
@@ -112,12 +112,12 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$per_row = 3;
 		if ( count( $relationships ) > 0 ) {
 			foreach ( $relationships as $relationship ) {
-				$output .= "<div class=\"blast-" . ( ( $relationship['type'] == 1 ) ? 'friend' : 'foe' ) . "-unselected\" id=\"user-{$relationship["user_id"]}\" onclick=\"javascript:toggle_user({$relationship["user_id"]})\">
-						{$relationship["user_name"]}
+				$output .= '<div class="blast-' . ( ( $relationship['type'] == 1 ) ? 'friend' : 'foe' ) . "-unselected\" id=\"user-{$relationship['user_id']}\" onclick=\"javascript:toggle_user({$relationship['user_id']})\">
+						{$relationship['user_name']}
 					</div>";
-					if ( $x == count( $relationships ) || $x != 1 && $x % $per_row == 0 ) {
-						$output .= '<div class="cleared"></div>';
-					}
+				if ( $x == count( $relationships ) || $x != 1 && $x % $per_row == 0 ) {
+					$output .= '<div class="cleared"></div>';
+				}
 				$x++;
 			}
 		} else {
