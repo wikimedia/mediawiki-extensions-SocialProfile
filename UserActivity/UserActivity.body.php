@@ -22,8 +22,6 @@ class UserHome extends SpecialPage {
 
 		$wgOut->setPageTitle( wfMsg( 'useractivity-title' ) );
 
-		$this_title = SpecialPage::getTitleFor( 'UserActivity' );
-
 		$output = '';
 
 		$rel_type = $wgRequest->getVal( 'rel_type' );
@@ -94,7 +92,7 @@ class UserHome extends SpecialPage {
 					$typeIcon = UserActivity::getTypeIcon( $item['type'] );
 					$output .= "<div class=\"user-home-activity{$border_fix}\">
 						<img src=\"{$wgScriptPath}/extensions/SocialProfile/images/" . $typeIcon . "\" alt=\"\" border=\"0\" />
-						{$item["data"]}
+						{$item['data']}
 					</div>";
 					$x++;
 				}

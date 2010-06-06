@@ -77,7 +77,8 @@ class UserActivity {
 
 		$sql = "SELECT UNIX_TIMESTAMP(rc_timestamp) AS item_date, rc_title,
 				rc_user, rc_user_text, rc_comment, rc_id, rc_minor, rc_new,
-				rc_namespace, rc_cur_id, rc_this_oldid, rc_last_oldid
+				rc_namespace, rc_cur_id, rc_this_oldid, rc_last_oldid,
+				rc_log_action
 			FROM {$dbr->tableName( 'recentchanges' )}
 			{$rel_sql} {$user_sql}
 			ORDER BY rc_id DESC LIMIT 0," . $this->item_max;
@@ -85,7 +86,9 @@ class UserActivity {
 
 		foreach ( $res as $row ) {
 			// Special pages aren't editable, so ignore them
-			if ( $row->rc_namespace == NS_SPECIAL ) {
+			// And blocking a vandal should not be counted as editing said
+			// vandal's user page...
+			if ( $row->rc_namespace == NS_SPECIAL || $row->rc_log_action != null ) {
 				continue;
 			}
 			$title = Title::makeTitle( $row->rc_namespace, $row->rc_title );
