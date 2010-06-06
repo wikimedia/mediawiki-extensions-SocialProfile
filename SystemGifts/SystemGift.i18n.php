@@ -2146,7 +2146,7 @@ zespół {{GRAMMAR:D.lp|{{SITENAME}}}}
 Nie chcesz otrzymywać wiadomości?
 
 Kliknij $5
-i zmień ustawienia, aby wyłączyć powiadomienia e-mail.',
+i zmień ustawienia, aby wyłączyć powiadomienia e‐mail.',
 	'right-awardsmanage' => 'Tworzenie nowych oraz edytowanie istniejących nagród',
 );
 

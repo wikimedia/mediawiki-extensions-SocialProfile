@@ -7568,7 +7568,7 @@ Kliknij <a href="$1">tutaj</a> aby się zalogować lub <a href="$2">tutaj</a> je
 	'user-profile-preferences-emails-friendfoe' => 'Gdy inny użytkownik stanie się Twoim przyjacielem lub wrogiem',
 	'user-profile-preferences-emails-gift' => 'Gdy otrzymasz prezent',
 	'user-profile-preferences-emails-level' => 'Przy awansie na wyższy poziom',
-	'user-profile-preferences-emails-weekly' => 'Przesyłaj cotygodniowe aktualizacje e-mail',
+	'user-profile-preferences-emails-weekly' => 'Przesyłaj cotygodniowe aktualizacje e‐mail',
 	'user-profile-update-button' => 'Uaktualnij',
 	'user-profile-tidbits-title' => 'Ciekawostki',
 	'user-profile-tidbits-favmoment' => 'Ulubione wydarzenie sportowe',

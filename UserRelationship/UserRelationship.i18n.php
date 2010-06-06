@@ -5761,9 +5761,9 @@ Poprosimy $1 o potwierdzenie nawiązania znajomości.',
 	'ur-add-sent-title-foe' => 'Wysłano informację, że chcesz być wrogiem dla $1!',
 	'ur-add-sent-title-friend' => 'Wysłano informację, że chcesz być znajomym dla $1!',
 	'ur-add-sent-message-foe' => 'Prośba o ustalenie statusu wroga została wysłana do $1.
-Jeśli $1 ją potwierdzi, otrzymasz powiadomienie e-mail',
+Jeśli $1 ją potwierdzi, otrzymasz powiadomienie e‐mail',
 	'ur-add-sent-message-friend' => 'Prośba o ustalenie statusu znajomego została wysłana do $1.
-Jeśli $1 ją potwierdzi, otrzymasz powiadomienie e-mail',
+Jeśli $1 ją potwierdzi, otrzymasz powiadomienie e‐mail',
 	'ur-add-error-message-no-user' => 'Użytkownik, którego próbujesz dodać, nie istnieje.',
 	'ur-add-error-message-blocked' => 'Jesteś zablokowany i nie możesz dodawać nowych znajomych i wrogów.',
 	'ur-add-error-message-yourself' => 'Nie możesz dodać samego siebie jako przyjaciela lub wroga.',
@@ -5804,7 +5804,7 @@ Dziękujemy
 Nie chcesz już od nas maili?
 
 Kliknij $4
-i zmień swoje ustawienia, wyłączając powiadomienia e-mail.',
+i zmień swoje ustawienia, wyłączając powiadomienia e‐mail.',
 	'foe_request_subject' => 'Wojna! $1 dodał Cię do wrogów na {{GRAMMAR:MS.lp|{{sitename}}}}!',
 	'foe_request_body' => 'Witaj $1.
 
@@ -5821,7 +5821,7 @@ Dziękujemy
 Nie chcesz już od nas maili?
 
 Kliknij $4
-i zmień swoje ustawienia, wyłączając powiadomienia e-mail.',
+i zmień swoje ustawienia, wyłączając powiadomienia e‐mail.',
 	'friend_accept_subject' => '$1 zaakceptował Twoją prośbę o nawiązanie znajomości na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
 	'friend_accept_body' => 'Witaj $1.
 
@@ -5836,7 +5836,7 @@ Dziękujemy,
 Nie chcesz otrzymywać od nas maili?
 
 Kliknij $4
-i zmień ustawienia, wyłączając powiadomienia e-mail.',
+i zmień ustawienia, wyłączając powiadomienia e‐mail.',
 	'foe_accept_subject' => '$1 zaakceptował Twoją prośbę o status wroga na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
 	'foe_accept_body' => 'Witaj $1.
 
@@ -5851,7 +5851,7 @@ Dziękujemy
 Nie chcesz otrzymywać od nas maili?
 
 Kliknij $4
-i zmień ustawienia, wyłączając powiadomienia e-mail.',
+i zmień ustawienia, wyłączając powiadomienia e‐mail.',
 	'friend_removed_subject' => 'Och nie! $1 usunął Cię z listy przyjaciół na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
 	'friend_removed_body' => 'Witaj $1.
 
@@ -5864,7 +5864,7 @@ Dziękujemy
 Nie chcesz otrzymywać od nas maili?
 
 Kliknij $4
-i zmień ustawienia, wyłączając powiadomienia e-mail.',
+i zmień ustawienia, wyłączając powiadomienia e‐mail.',
 	'foe_removed_subject' => 'Hej! $1 usunął Cię z listy wrogów na {{GRAMMAR:MS.lp|{{SITENAME}}}}!',
 	'foe_removed_body' => 'Witaj $1.
 
@@ -5879,7 +5879,7 @@ Dziękujemy
 Nie chcesz otrzymywać od nas maili?
 
 Kliknij $4
-i zmień ustawienia, wyłączając powiadomienia e-mail.',
+i zmień ustawienia, wyłączając powiadomienia e‐mail.',
 );
 
 /** Piedmontese (Piemontèis)
