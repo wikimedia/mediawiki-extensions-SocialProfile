@@ -2,6 +2,7 @@
 /**
  * Internationalization file for SystemGifts extension.
  *
+ * @file
  * @ingroup Extensions
  */
 

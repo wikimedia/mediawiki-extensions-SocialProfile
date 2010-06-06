@@ -2,6 +2,7 @@
 /**
  * Internationalization file for UserWelcome extension.
  *
+ * @file
  * @ingroup Extensions
  */
 
