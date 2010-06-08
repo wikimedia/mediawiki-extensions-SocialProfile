@@ -152,7 +152,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 
 		$iw = wfMsg( 'ignorewarning' );
 
-		$titleObj = Title::makeTitle( NS_SPECIAL, 'Upload' );
+		$titleObj = SpecialPage::getTitleFor( 'Upload' );
 		$action = $titleObj->escapeLocalURL();
 
 		$encDestFile = htmlspecialchars( $this->mDesiredDestName );
@@ -256,7 +256,7 @@ class UploadAvatar extends UploadFromFile {
 	public function performUpload( $comment, $pageText, $watch, $user ) {
 		global $wgUploadDirectory, $wgOut, $wgUser, $wgDBname;
 
-        $this->avatarUploadDirectory = $wgUploadDirectory . '/avatars';
+		$this->avatarUploadDirectory = $wgUploadDirectory . '/avatars';
 
 		$imageInfo = getimagesize( $this->mTempPath );
 		switch ( $imageInfo[2] ) {
@@ -366,5 +366,4 @@ class UploadAvatar extends UploadFromFile {
 	public function checkWarnings() {
 		return array();
 	}
-
 }
