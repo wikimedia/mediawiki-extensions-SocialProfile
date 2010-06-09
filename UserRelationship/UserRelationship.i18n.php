@@ -1018,13 +1018,24 @@ $2 ви премахна от списъка си с неприятели в {{S
  * @author Bellayet
  */
 $messages['bn'] = array(
+	'viewrelationships' => 'সম্পর্ক দেখাও',
+	'viewrelationshiprequests' => 'সম্পর্কের অনুরোধ দেখাও',
 	'ur-main-page' => 'প্রধান পাতা',
 	'ur-your-profile' => 'আপনার বৃত্তান্ত',
+	'ur-add-friend' => 'বন্ধু হিসেবে যোগ করুন',
+	'ur-add-foe' => 'শত্রু হিসেবে যোগ করুন',
+	'ur-remove-relationship-friend' => 'বন্ধুকে ত্যাগ করুন',
+	'ur-remove-relationship-foe' => 'শত্রুকে ত্যাগ করুন',
+	'ur-give-gift' => 'উপহার দিন',
 	'ur-previous' => 'পূর্ববর্তী',
 	'ur-next' => 'পরবর্তী',
 	'ur-remove' => 'অপসারণ',
 	'ur-cancel' => 'বাতিল',
 	'ur-login' => 'প্রবেশ',
+	'ur-add-button-foe' => 'শত্রু হিসেবে যোগ করুন',
+	'ur-add-button-friend' => 'বন্ধু হিসেবে যোগ করুন',
+	'ur-accept' => 'গ্রহণ',
+	'ur-reject' => 'প্রত্যাখান',
 );
 
 /** Breton (Brezhoneg)
