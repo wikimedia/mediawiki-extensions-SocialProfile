@@ -44,6 +44,13 @@ $messages['qqq'] = array(
 	'mp-request-new-message' => '{{Identical|New messages}}',
 );
 
+/** Moroccan Spoken Arabic (Maġribi)
+ * @author Enzoreg
+ */
+$messages['ary'] = array(
+	'mp-request-new-message' => 'méṣaj jdid',
+);
+
 /** Afrikaans (Afrikaans)
  * @author Naudefj
  */

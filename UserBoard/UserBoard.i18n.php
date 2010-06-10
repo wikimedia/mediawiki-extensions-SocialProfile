@@ -2942,6 +2942,7 @@ $messages['sr-ec'] = array(
  * @author Michaello
  */
 $messages['sr-el'] = array(
+	'messagesenttitle' => 'Poruke poslate',
 	'boardblaststep1' => 'Prvi korak - Napišite Vašu poruku',
 	'boardblastprivatenote' => 'Sve poruke će biti poslate kao privatne poruke',
 	'boardblaststep2' => 'Korak 2 - Naznačite kome želite da požaljete poruku',
@@ -2952,6 +2953,7 @@ $messages['sr-el'] = array(
 	'boardlinkselectfoes' => 'Označi neprijatelje',
 	'boardlinkunselectfoes' => 'Skini oznake sa neprijatelja',
 	'boardnofriends' => 'Nemate prijatelja kojima biste poslali poruku!',
+	'userboard_delete' => 'Brisanje',
 	'userboard_backprofile' => 'Povratak na profil od $1',
 	'userboard_backyourprofile' => 'Povratak na Vaš profil',
 	'userboard_sendmessage' => 'Pošalji poruku korisniku $1',

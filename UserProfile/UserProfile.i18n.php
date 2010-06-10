@@ -9185,12 +9185,14 @@ Kliknite <a href="$1">ovde</a> da se ulogujete ili kliknite <a href="$2">here</a
 	'viewsystemgifts' => 'Pogledajte nagrade',
 	'avatarupload-removeavatar' => 'Obrišite avatar',
 	'avatarupload-currentavatar' => 'Trenutni avatar od $1',
+	'avatarupload-removeanother' => 'Obriši drugi',
 	'profilelogpage' => 'Istorija menjanja profila',
 	'profilelogpagetext' => 'Ovo je istorija menjanja profila',
 	'avatarlogpage' => 'Istorija slanja avatara',
 	'avatarlogpagetext' => 'Ovo je istorija slanja korisničkih avatara',
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'poslao novi avatar',
+	'user-profile-picture-log-delete-entry' => 'obrisan avatar od $1',
 	'right-avatarremove' => 'Brisanje korisničkih avatara',
 );
 
