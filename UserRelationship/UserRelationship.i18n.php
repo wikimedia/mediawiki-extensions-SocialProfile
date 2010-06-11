@@ -6892,6 +6892,21 @@ Kliknite na $4
 a vypnite upozornenia emailov vo svojich nastaveniach.',
 );
 
+/** Slovenian (Slovenščina)
+ * @author Dbc334
+ */
+$messages['sl'] = array(
+	'ur-error-page-title' => 'Upsala!',
+	'ur-main-page' => 'Glavna stran',
+	'ur-your-profile' => 'Vaš profil',
+	'ur-give-gift' => 'Podari darilo',
+	'ur-previous' => 'prejšnji',
+	'ur-next' => 'naslednji',
+	'ur-remove' => 'Odstrani',
+	'ur-cancel' => 'Prekliči',
+	'ur-login' => 'Prijava',
+);
+
 /** Serbian Cyrillic ekavian (Српски (ћирилица))
  * @author Sasa Stefanovic
  * @author Михајло Анђелковић

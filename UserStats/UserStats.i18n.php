@@ -2341,6 +2341,13 @@ Kliknite na $3
 a vypnite v svojich nastaveniach upozornenia emailom.',
 );
 
+/** Slovenian (Slovenščina)
+ * @author Dbc334
+ */
+$messages['sl'] = array(
+	'top-fans-bad-field-title' => 'Ups!',
+);
+
 /** Swedish (Svenska)
  * @author Boivie
  * @author Najami
