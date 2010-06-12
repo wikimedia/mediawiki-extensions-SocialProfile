@@ -526,6 +526,13 @@ $messages['akz'] = array(
 	'user-profile-section-preferences' => 'Nàasi istimáppìilaana',
 );
 
+/** Abkhazian (Аҧсуа)
+ * @author Temuri rajavi
+ */
+$messages['ab'] = array(
+	'user-watchlist' => 'Ашклаҧшра асна',
+);
+
 /** Afrikaans (Afrikaans)
  * @author Arnobarnard
  * @author Naudefj

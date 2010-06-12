@@ -2936,6 +2936,10 @@ $messages['sr-ec'] = array(
 	'userboard_nomessages' => 'Нема порука.',
 	'userboard_sendbutton' => 'пошаљи',
 	'userboard_loggedout' => 'Морате бити <a href="$1">улоговани</a> да бисте слали поруке другим корисницима.',
+	'userboard-time-days' => '{{PLURAL:$1|један дан|$1 дана}}',
+	'userboard-time-hours' => '{{PLURAL:$1|један сат|$1 сата|$1 сата|$1 сата|$1 сати}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|једна минута|$1 минуте|$1 минуте|$1 минуте|$1 минута}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|једна секунда|$1 секунде|$1 секунде|$1 секунде|$1 секунди}}',
 );
 
 /** Serbian Latin ekavian (Srpski (latinica))

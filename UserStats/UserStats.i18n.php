@@ -2348,6 +2348,31 @@ $messages['sl'] = array(
 	'top-fans-bad-field-title' => 'Ups!',
 );
 
+/** Serbian Cyrillic ekavian (Српски (ћирилица))
+ * @author Михајло Анђелковић
+ */
+$messages['sr-ec'] = array(
+	'top-fans-total-points-link' => 'Укупно поена',
+	'top-fans-weekly-points-link' => 'Поена ове недеље',
+	'top-fans-monthly-points-link' => 'Поена овог месеца',
+	'top-fans-points' => 'поена',
+	'top-fans-bad-field-title' => 'Упс!',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Глас|Гласа|Гласа|Гласа|Гласова}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Недељна победа|Недељних победа}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|измена|измена}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Коментар|Коментара}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Пријатељ|Пријатеља}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Непријатељ|Непријатеља}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Објављно мишљење|Објављена мишљења|Објављена мишљења|Објављена мишљења|Објављених мишљења}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Опција|Опције|Опције|Опције|Опција}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Палац нагоре|Палчева нагоре}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Палац надоле|Палаца надоле}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Палац нагоре дат|Палаца нагоре дато}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Палац надоле дат|Палаца надоле дато}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Поклон примљен|Поклона примљено}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Поклон послат|Поклона послато}}',
+);
+
 /** Swedish (Svenska)
  * @author Boivie
  * @author Najami
