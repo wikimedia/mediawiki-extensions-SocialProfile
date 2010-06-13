@@ -2970,6 +2970,10 @@ $messages['sr-el'] = array(
 	'userboard_nomessages' => 'Nema poruka.',
 	'userboard_sendbutton' => 'pošalji',
 	'userboard_loggedout' => 'Morate biti <a href="$1">ulogovani</a> da biste slali poruke drugim korisnicima.',
+	'userboard-time-days' => '{{PLURAL:$1|jedan dan|$1 dana}}',
+	'userboard-time-hours' => '{{PLURAL:$1|jedan sat|$1 sata|$1 sata|$1 sata|$1 sati}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|jedna minuta|$1 minute|$1 minute|$1 minute|$1 minuta}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|jedna sekunda|$1 sekunde|$1 sekunde|$1 sekunde|$1 sekundi}}',
 );
 
 /** Swedish (Svenska)

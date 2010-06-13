@@ -2373,6 +2373,29 @@ $messages['sr-ec'] = array(
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Поклон послат|Поклона послато}}',
 );
 
+/** Serbian Latin ekavian (Srpski (latinica)) */
+$messages['sr-el'] = array(
+	'top-fans-total-points-link' => 'Ukupno poena',
+	'top-fans-weekly-points-link' => 'Poena ove nedelje',
+	'top-fans-monthly-points-link' => 'Poena ovog meseca',
+	'top-fans-points' => 'poena',
+	'top-fans-bad-field-title' => 'Ups!',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Glas|Glasa|Glasa|Glasa|Glasova}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Nedeljna pobeda|Nedeljnih pobeda}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|izmena|izmena}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Komentar|Komentara}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Prijatelj|Prijatelja}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Neprijatelj|Neprijatelja}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Objavljno mišljenje|Objavljena mišljenja|Objavljena mišljenja|Objavljena mišljenja|Objavljenih mišljenja}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opcija|Opcije|Opcije|Opcije|Opcija}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Palac nagore|Palčeva nagore}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Palac nadole|Palaca nadole}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Palac nagore dat|Palaca nagore dato}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Palac nadole dat|Palaca nadole dato}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Poklon primljen|Poklona primljeno}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Poklon poslat|Poklona poslato}}',
+);
+
 /** Swedish (Svenska)
  * @author Boivie
  * @author Najami
