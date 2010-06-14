@@ -631,6 +631,13 @@ $messages['vi'] = array(
 	'yui-desc' => 'Tập hợp các dụng cụ và trình điều khiển được viết bằng JavaScript',
 );
 
+/** Yiddish (ייִדיש)
+ * @author פוילישער
+ */
+$messages['yi'] = array(
+	'yui-desc' => 'א זאַמלונג ווערגצייג און קאנטראלעס, געשריבן אין JavaScript',
+);
+
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Gaoxuewei
  */

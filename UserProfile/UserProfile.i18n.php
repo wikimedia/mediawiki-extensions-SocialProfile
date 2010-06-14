@@ -3965,7 +3965,7 @@ $messages['gl'] = array(
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'cargou un novo avatar',
 	'user-profile-picture-log-delete-entry' => 'borrou o avatar de $1',
-	'right-avatarremove' => 'Eliminar os avatares do usuario',
+	'right-avatarremove' => 'Eliminar os avatares dun usuario',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)

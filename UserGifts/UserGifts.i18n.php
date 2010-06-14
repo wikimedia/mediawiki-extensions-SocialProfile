@@ -4698,6 +4698,7 @@ $messages['xal'] = array(
 $messages['yi'] = array(
 	'giftmanager-private' => 'פריוואט',
 	'g-choose-file' => 'קלויבט טעקע:',
+	'g-created-by' => 'געשאַפֿן דורך',
 	'g-give-separator' => 'אדער',
 	'g-large' => 'גרויס',
 	'g-main-page' => 'הויפט בלאט',
