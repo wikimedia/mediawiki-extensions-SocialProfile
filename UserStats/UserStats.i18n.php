@@ -2127,6 +2127,7 @@ e altere as suas preferências para desactivar as notificações por correio ele
 
 /** Brazilian Portuguese (Português do Brasil)
  * @author Eduardo.mps
+ * @author Giro720
  */
 $messages['pt-br'] = array(
 	'user-stats-alltime-title' => 'Mais pontos de todo o tempo',
@@ -2139,6 +2140,9 @@ $messages['pt-br'] = array(
 	'top-fans-weekly-points-link' => 'Pontos esta semana',
 	'top-fans-monthly-points-link' => 'Pontos este mês',
 	'top-fans-points' => 'pontos',
+	'top-fans-by-category-title-edit-count' => 'Com maior quantidade global de edições',
+	'top-fans-by-category-title-friends-count' => 'Com maior quantidade global de amigos',
+	'top-fans-by-category-title-foe-count' => 'Com maior quantidade global de inimigos',
 	'top-fans-bad-field-title' => 'Ops!',
 	'top-fans-bad-field-message' => 'O status especificado não existe.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Voto|Votos}}',
