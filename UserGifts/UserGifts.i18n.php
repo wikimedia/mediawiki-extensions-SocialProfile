@@ -111,6 +111,8 @@ Hey, want to stop getting emails from us?
 
 Click $5
 and change your settings to disable email notifications.',
+	// For Special:ListGroupRights
+	'right-giftadmin' => 'Create new and edit existing gifts',
 );
 
 /** Message documentation (Message documentation)
