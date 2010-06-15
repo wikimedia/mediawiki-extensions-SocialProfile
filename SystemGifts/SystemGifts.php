@@ -1,7 +1,6 @@
 <?php
 
 $wgAvailableRights[] = 'awardsmanage';
-$wgGroupPermissions['awardsmanage']['awardsmanage'] = true;
 $wgGroupPermissions['staff']['awardsmanage'] = true;
 $wgGroupPermissions['sysop']['awardsmanage'] = true;
 
