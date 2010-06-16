@@ -548,18 +548,24 @@ $messages['pt'] = array(
 
 /** Brazilian Portuguese (Português do Brasil)
  * @author Danielsouzat
+ * @author Giro720
  * @author Luckas Blade
  */
 $messages['pt-br'] = array(
 	'useractivity' => 'Atividade dos amigos',
+	'useractivity-award' => '$1 recebeu um prêmio',
 	'useractivity-all' => 'Ver tudo',
 	'useractivity-edit' => '$1 {{PLURAL:$4|editou a página|editou as seguintes páginas:}} $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|é agora inimigo de|são agora inimigos de}} $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|é agora amigo de|são agora amigos de}} $3',
 	'useractivity-gift' => '$1 recebeu um presente de $2',
 	'useractivity-group-edit' => '{{PLURAL:$1|uma edição|$1 edições}}',
 	'useractivity-group-comment' => '{{PLURAL:$1|um comentário|$1 comentários}}',
 	'useractivity-group-user_message' => '{{PLURAL:$1|uma mensagem|$1 mensagens}}',
 	'useractivity-group-friend' => '{{PLURAL:$1|um amigo|$1 amigos}}',
+	'useractivity-siteactivity' => 'Atividade no site',
 	'useractivity-title' => 'Atividade dos amigos',
+	'useractivity-user_message' => '$1 {{PLURAL:$4|enviou uma mensagem para|enviou mensagens para}} $3',
 );
 
 /** Russian (Русский)
