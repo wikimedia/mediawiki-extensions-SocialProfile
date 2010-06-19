@@ -47,7 +47,7 @@ class UserBoard {
 			__METHOD__
 		);
 
-		// Send Email (if user is not writing on own board)
+		// Send e-mail notification (if user is not writing on own board)
 		if ( $user_id_from != $user_id_to ) {
 			$this->sendBoardNotificationEmail( $user_id_to, $user_name_from );
 			$this->incNewMessageCount( $user_id_to );
@@ -234,7 +234,7 @@ class UserBoard {
 
 		$res = $dbr->query( $sql, __METHOD__ );
 		$messages = array();
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			$parser = new Parser();
 			$message_text = $parser->parse( $row->ub_message, $wgTitle, $wgOut->parserOptions(), true );
 			$message_text = $message_text->getText();
@@ -298,29 +298,28 @@ class UserBoard {
 				}
 				if ( $wgUser->getName() == $message['user_name'] || $wgUser->isAllowed( 'userboard-delete' ) ) {
 					$delete_link = "<span class=\"user-board-red\">
-							<a href=\"javascript:void(0);\" onclick=\"javascript:delete_message({$message["id"]})\">" . wfMsgHtml( 'userboard_delete' ) . "</a>
-						</span>";
+							<a href=\"javascript:void(0);\" onclick=\"javascript:delete_message({$message['id']})\">" . wfMsgHtml( 'userboard_delete' ) . '</a>
+						</span>';
 				}
 				if ( $message['type'] == 1 ) {
 					$message_type_label = '(' . wfMsgHtml( 'userboard_private' ) . ')';
 				}
 
-				# $max_link_text_length = 50;
 				$message_text = $message['message_text'];
 				# $message_text = preg_replace_callback( "/(<a[^>]*>)(.*?)(<\/a>)/i", 'cut_link_text', $message['message_text'] );
 
-				$output .= "<div class=\"user-board-message\" >
+				$output .= "<div class=\"user-board-message\">
 					<div class=\"user-board-message-from\">
-					<a href=\"{$user->escapeFullURL()}\" title=\"{$message["user_name_from"]}\">{$message["user_name_from"]}</a> {$message_type_label}
+					<a href=\"{$user->escapeFullURL()}\" title=\"{$message['user_name_from']}\">{$message['user_name_from']}</a> {$message_type_label}
 					</div>
-					<div class=\"user-board-message-time\">
-						" . wfMsgHtml( 'userboard_posted_ago', $this->getTimeAgo( $message['timestamp'] ) ) . "
-					</div>
+					<div class=\"user-board-message-time\">"
+						. wfMsgHtml( 'userboard_posted_ago', $this->getTimeAgo( $message['timestamp'] ) ) .
+					"</div>
 					<div class=\"user-board-message-content\">
 						<div class=\"user-board-message-image\">
-							<a href=\"{$user->escapeFullURL()}\" title=\"{$message["user_name_from"]}\">{$avatar->getAvatarURL()}</a>
+							<a href=\"{$user->escapeFullURL()}\" title=\"{$message['user_name_from']}\">{$avatar->getAvatarURL()}</a>
 						</div>
-						<div class=\"user-board-message-body\" >
+						<div class=\"user-board-message-body\">
 							{$message_text}
 						</div>
 						<div class=\"cleared\"></div>

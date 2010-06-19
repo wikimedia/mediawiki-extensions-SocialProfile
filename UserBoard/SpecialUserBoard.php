@@ -251,7 +251,7 @@ class SpecialViewUserBoard extends SpecialPage {
 						<option value="1">' . wfMsg( 'userboard_private' ) . '</option>
 					</select>
 					<p>
-					<textarea name="message" id="message" cols="63" rows="4"/></textarea>
+					<textarea name="message" id="message" cols="63" rows="4"></textarea>
 
 					<div class="user-page-message-box-button">
 						<input type="button" value="' . wfMsg( 'userboard_sendbutton' ) . '" class="site-button" onclick="javascript:send_message();" />
@@ -260,9 +260,9 @@ class SpecialViewUserBoard extends SpecialPage {
 				</div>';
 			} else {
 				$login_link = SpecialPage::getTitleFor( 'Userlogin' );
-				$output .= '<div class="user-page-message-form">
-						' . wfMsg( 'userboard_loggedout', $login_link->escapeFullURL() ) . '
-						</div>';
+				$output .= '<div class="user-page-message-form">'
+					. wfMsg( 'userboard_loggedout', $login_link->escapeFullURL() ) .
+				'</div>';
 			}
 		}
 		$output .= '<div id="user-page-board">';
@@ -284,14 +284,12 @@ class SpecialViewUserBoard extends SpecialPage {
 				}
 				if ( $wgUser->getName() == $ub_message['user_name'] || $wgUser->isAllowed( 'userboard-delete' ) ) {
 					$delete_link = "<span class=\"user-board-red\">
-						<a href=\"javascript:void(0);\" onclick=\"javascript:delete_message({$ub_message["id"]})\">" . wfMsg( 'userboard_delete' ) . "</a>
-					</span>";
+						<a href=\"javascript:void(0);\" onclick=\"javascript:delete_message({$ub_message['id']})\">" . wfMsg( 'userboard_delete' ) . '</a>
+					</span>';
 				}
 				if ( $ub_message['type'] == 1 ) {
 					$ub_message_type_label = '(' . wfMsg( 'userboard_private' ) . ')';
 				}
-				// global $max_link_text_length;
-				// $max_link_text_length = 75;
 
 				// had global function to cut link text if too long and no breaks
 				// $ub_message_text = preg_replace_callback( "/(<a[^>]*>)(.*?)(<\/a>)/i", 'cut_link_text', $ub_message['message_text'] );
@@ -299,16 +297,16 @@ class SpecialViewUserBoard extends SpecialPage {
 
 				$output .= "<div class=\"user-board-message\" style=\"width:550px\">
 					<div class=\"user-board-message-from\">
-							<a href=\"{$user->escapeFullURL()}\" title=\"{$ub_message["user_name_from"]}}\">{$ub_message["user_name_from"]} </a> {$ub_message_type_label}
+							<a href=\"{$user->escapeFullURL()}\" title=\"{$ub_message['user_name_from']}}\">{$ub_message['user_name_from']} </a> {$ub_message_type_label}
 					</div>
-					<div class=\"user-board-message-time\">
-						" . wfMsgHtml( 'userboard_posted_ago', $b->getTimeAgo( $ub_message['timestamp'] ) ) . "
-					</div>
+					<div class=\"user-board-message-time\">"
+						. wfMsgHtml( 'userboard_posted_ago', $b->getTimeAgo( $ub_message['timestamp'] ) ) .
+					"</div>
 					<div class=\"user-board-message-content\">
 						<div class=\"user-board-message-image\">
-							<a href=\"{$user->escapeFullURL()}\" title=\"{$ub_message["user_name_from"]}\">{$avatar->getAvatarURL()}</a>
+							<a href=\"{$user->escapeFullURL()}\" title=\"{$ub_message['user_name_from']}\">{$avatar->getAvatarURL()}</a>
 						</div>
-						<div class=\"user-board-message-body\" >
+						<div class=\"user-board-message-body\">
 							{$ub_message_text}
 						</div>
 						<div class=\"cleared\"></div>
