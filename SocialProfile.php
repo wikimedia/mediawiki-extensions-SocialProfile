@@ -3,13 +3,14 @@
  * Protect against register_globals vulnerabilities.
  * This line must be present before any global variable is referenced.
  */
-if ( !defined( 'MEDIAWIKI' ) )
+if ( !defined( 'MEDIAWIKI' ) ) {
 	die();
+}
 
 /**
  * This is the *main* (but certainly not the only) loader file for SocialProfile extension.
  *
- * For more info about SocialProfile, please see the README file that was included with SocialProfile.
+ * For more info about SocialProfile, please see http://www.mediawiki.org/wiki/Extension:SocialProfile.
  */
 $dir = dirname( __FILE__ ) . '/';
 
@@ -93,7 +94,7 @@ $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'SocialProfile',
 	'author' => array( 'Aaron Wright', 'David Pean', 'Jack Phoenix' ),
-	'version' => '1.4',
+	'version' => '1.5',
 	'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile',
 	'description' => 'A set of Social Tools for MediaWiki',
 );
@@ -190,7 +191,6 @@ $wgUserProfileScripts = "$wgScriptPath/extensions/SocialProfile/UserProfile";
 $wgUserRelationshipScripts = "$wgScriptPath/extensions/SocialProfile/UserRelationship";
 
 // Loader files
-require_once( "$IP/extensions/SocialProfile/YUI/YUI.php" ); // YUI stand-alone library
 require_once( "{$wgUserProfileDirectory}/UserProfile.php" ); // Profile page configuration loader file
 require_once( "$IP/extensions/SocialProfile/UserGifts/Gifts.php" ); // UserGifts (user-to-user gifting functionality) loader file
 require_once( "$IP/extensions/SocialProfile/SystemGifts/SystemGifts.php" ); // SystemGifts (awards functionality) loader file
@@ -217,3 +217,48 @@ function efSocialProfileSchemaUpdates() {
 	}
 	return true;
 }
+
+/*
+// For Renameuser extension
+$wgHooks['RenameUserSQL'][] = 'efSystemGiftsOnUserRename';
+$wgHooks['RenameUserSQL'][] = 'efUserBoardOnUserRename';
+$wgHooks['RenameUserSQL'][] = 'efUserGiftsOnUserRename';
+$wgHooks['RenameUserSQL'][] = 'efUserRelationshipOnUserRename';
+$wgHooks['RenameUserSQL'][] = 'efUserStatsOnUserRename';
+$wgHooks['RenameUserSQL'][] = 'efUserSystemMessagesOnUserRename';
+
+function efSystemGiftsOnUserRename( $renameUserSQL ) {
+	$renameUserSQL->tables['user_system_gift'] = array( 'sg_user_name', 'sg_user_id' );
+	return true;
+}
+
+function efUserBoardOnUserRename( $renameUserSQL ) {
+	$renameUserSQL->tables['user_board'] = array( 'ub_user_name_from', 'ub_user_id_from' );
+	return true;
+}
+
+function efUserGiftsOnUserRename( $renameUserSQL ) {
+	$renameUserSQL->tables['user_gift'] = array( 'ug_user_name_to', 'ug_user_id_to' );
+	$renameUserSQL->tables['gift'] = array( 'gift_creator_user_name', 'gift_creator_user_id' );
+	return true;
+}
+
+function efUserRelationshipOnUserRename( $renameUserSQL ) {
+	// <fixme> This sucks and only updates half of the rows...wtf?
+	$renameUserSQL->tables['user_relationship'] = array( 'r_user_name_relation', 'r_user_id_relation' );
+	$renameUserSQL->tables['user_relationship'] = array( 'r_user_name', 'r_user_id' );
+	// </fixme>
+	$renameUserSQL->tables['user_relationship_request'] = array( 'ur_user_name_from', 'ur_user_id_from' );
+	return true;
+}
+
+function efUserStatsOnUserRename( $renameUserSQL ) {
+	$renameUserSQL->tables['user_stats'] = array( 'stats_user_name', 'stats_user_id' );
+	return true;
+}
+
+function efUserSystemMessagesOnUserRename( $renameUserSQL ) {
+	$renameUserSQL->tables['user_system_messages'] = array( 'um_user_name', 'um_user_id' );
+	return true;
+}
+*/

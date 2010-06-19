@@ -8,6 +8,8 @@ function requestResponse( response, id ) {
 	sajax_request_type = 'POST';
 	sajax_do_call( 'wfRelationshipRequestResponse', [ response, id ], function( request ) {
 		document.getElementById( 'request_action_' + id ).innerHTML = request.responseText;
-		YAHOO.widget.Effects.Appear( 'request_action_' + id, { duration:2.0 } );
+		jQuery( '#request_action_' + id ).fadeIn( 2000 );
+		document.getElementById( 'request_action_' + id ).style.display = 'block';
+		document.getElementById( 'request_action_' + id ).style.visibility = 'visible';
 	} );
 }

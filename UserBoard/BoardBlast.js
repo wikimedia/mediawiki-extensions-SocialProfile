@@ -1,27 +1,27 @@
 function toggle_user( user_id ) {
-	if( YAHOO.util.Dom.hasClass( 'user-' + user_id, 'blast-friend-selected' ) ) {
-		YAHOO.util.Dom.replaceClass( 'user-' + user_id, 'blast-friend-selected', 'blast-friend-unselected' );
-	} else if( YAHOO.util.Dom.hasClass( 'user-' + user_id, 'blast-friend-unselected' ) ) {
-		YAHOO.util.Dom.replaceClass( 'user-' + user_id, 'blast-friend-unselected', 'blast-friend-selected' );
+	if( jQuery( '#user-' + user_id ).hasClass( 'blast-friend-selected' ) ) {
+		jQuery( '#user-' + user_id ).removeClass( 'blast-friend-selected' ).addClass( 'blast-friend-unselected' );
+	} else if( jQuery( '#user-' + user_id ).hasClass( 'blast-friend-unselected' ) ) {
+		jQuery( '#user-' + user_id ).removeClass( 'blast-friend-unselected' ).addClass( 'blast-friend-selected' );
 	}
 
-	if( YAHOO.util.Dom.hasClass( 'user-' + user_id, 'blast-foe-selected' ) ) {
-		YAHOO.util.Dom.replaceClass( 'user-' + user_id, 'blast-foe-selected', 'blast-foe-unselected' );
-	} else if( YAHOO.util.Dom.hasClass( 'user-' + user_id, 'blast-foe-unselected' ) ) {
-		YAHOO.util.Dom.replaceClass( 'user-' + user_id, 'blast-foe-selected', 'blast-foe-unselected' );
+	if( jQuery( '#user-' + user_id ).hasClass( 'blast-foe-selected' ) ) {
+		jQuery( '#user-' + user_id ).removeClass( 'blast-foe-selected' ).addClass( 'blast-foe-unselected' );
+	} else if( jQuery( '#user-' + user_id ).hasClass( 'blast-foe-unselected' ) ) {
+		jQuery( '#user-' + user_id ).removeClass( 'blast-foe-unselected' ).addClass( 'blast-foe-selected' );
 	}
 }
 
 function toggle_type( method, on, off ) {
-	list = YAHOO.util.Dom.getElementsByClassName( ( ( method == 1 ) ? off : on ), 'div', 'blast-friends-list' );
+	list = jQuery( '#blast-friends-list div.' + ( ( method == 1 ) ? off : on ) );
 
 	for( x = 0; x <= list.length - 1; x++ ) {
 		el = list[x];
-		if( YAHOO.util.Dom.hasClass( el, on ) || YAHOO.util.Dom.hasClass( el, off ) ) {
+		if( jQuery( el ).hasClass( on ) || jQuery( el ).hasClass( off ) ) {
 			if( method == 1 ) {
-				YAHOO.util.Dom.replaceClass( el, off, on );
+				jQuery( el ).removeClass( off ).addClass( on );
 			} else {
-				YAHOO.util.Dom.replaceClass( el, on, off );
+				jQuery( el ).removeClass( on ).addClass( off );
 			}
 		}
 	}
@@ -54,7 +54,7 @@ function send_messages() {
 	selected = 0;
 	user_ids_to = '';
 
-	list = YAHOO.util.Dom.getElementsByClassName( 'blast-friend-selected', 'div', 'blast-friends-list' );
+	list = jQuery( '#blast-friends-list div.blast-friend-selected' );
 	for( x = 0; x <= list.length - 1; x++ ) {
 		el = list[x];
 		selected++;
@@ -62,7 +62,7 @@ function send_messages() {
 		user_ids_to += ( ( user_ids_to ) ? ',' : '' ) + user_id;
 	}
 
-	list = YAHOO.util.Dom.getElementsByClassName( 'blast-foe-selected', 'div', 'blast-friends-list' );
+	list = jQuery( '#blast-friends-list div.blast-foe-selected' );
 	for( x = 0; x <= list.length - 1; x++ ) {
 		el = list[x];
 		selected++;
@@ -76,16 +76,16 @@ function send_messages() {
 		return 0;
 	}
 
-	if( !document.getElementById('message').value ) {
+	if( !document.getElementById( 'message' ).value ) {
 		alert( 'Please enter a message' );
 		submitted = 0;
 		return 0;
 	}
 
-	document.getElementById('ids').value = user_ids_to;
+	document.getElementById( 'ids' ).value = user_ids_to;
 
 	document.blast.message.style.color = '#ccc';
 	document.blast.message.readOnly = true;
-	document.getElementById('blast-friends-list').innerHTML = 'Sending messages...';
+	document.getElementById( 'blast-friends-list' ).innerHTML = 'Sending messages...';
 	document.blast.submit();
 }

@@ -3,21 +3,21 @@ var selected_gift = 0;
 function selectGift( id ) {
 	// Un-select previously selected gift
 	if( selected_gift ) {
-		YAHOO.util.Dom.removeClass( 'give_gift_' + selected_gift, 'g-give-all-selected' );
+		jQuery( '#give_gift_' + selected_gift ).removeClass( 'g-give-all-selected' );
 	}
 
 	// Select new gift
-	YAHOO.util.Dom.addClass( 'give_gift_' + id, 'g-give-all-selected' );
+	jQuery( '#give_gift_' + id ).addClass( 'g-give-all-selected' );
 
 	selected_gift = id;
 }
 
 function highlightGift( id ) {
-	YAHOO.util.Dom.addClass( 'give_gift_' + id, 'g-give-all-highlight' );
+	jQuery( '#give_gift_' + id ).addClass( 'g-give-all-highlight' );
 }
 
 function unHighlightGift( id ) {
-	YAHOO.util.Dom.removeClass( 'give_gift_' + id, 'g-give-all-highlight' );
+	jQuery( '#give_gift_' + id ).removeClass( 'g-give-all-highlight' );
 }
 
 function sendGift() {
