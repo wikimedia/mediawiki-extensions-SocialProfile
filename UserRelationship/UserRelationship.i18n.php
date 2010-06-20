@@ -6912,10 +6912,13 @@ $messages['sl'] = array(
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
+	'ur-already-submitted' => 'Ваш захтев је послат',
+	'ur-error-page-title' => 'Упс!',
 	'ur-main-page' => 'Главна страна',
 	'ur-your-profile' => 'Ваш профил',
 	'ur-add-friend' => 'Додај као пријатеља',
 	'ur-add-foe' => 'Додај као непријатеља',
+	'ur-add-personal-message' => 'Додај личну поруку',
 	'ur-remove-relationship-friend' => 'Обриши као пријатеља',
 	'ur-remove-relationship-foe' => 'Обриши као непријатеља',
 	'ur-give-gift' => 'Пошаљи поклон',
@@ -6931,6 +6934,8 @@ $messages['sr-ec'] = array(
 	'ur-remove-relationship-message-confirm-friend' => 'Успешно сте обрисали $1 са Вашег списка пријатеља.',
 	'ur-remove-error-message-no-relationship' => 'Нисте ни у каквом односу са $1.',
 	'ur-remove-error-message-remove-yourself' => 'Не можете да обришете себе.',
+	'ur-remove-error-message-pending-foe-request' => 'На чекању имате захтев за непријатељство са $1.',
+	'ur-remove-error-message-pending-friend-request' => 'На чекању имате захтев за пријтељство са $1.',
 	'ur-remove-error-not-loggedin-foe' => 'Морате бити улоговани да бисте уклонили некога са Вашег списка непријатеља.',
 	'ur-remove-error-not-loggedin-friend' => 'Морате бити улоговани да бисте некога обрисали са списка пријатеља.',
 	'ur-remove' => 'Уклони',
