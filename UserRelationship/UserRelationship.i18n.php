@@ -6969,10 +6969,13 @@ $messages['sr-ec'] = array(
  * @author Michaello
  */
 $messages['sr-el'] = array(
+	'ur-already-submitted' => 'Vaš zahtev je poslat',
+	'ur-error-page-title' => 'Ups!',
 	'ur-main-page' => 'Glavna strana',
 	'ur-your-profile' => 'Vaš profil',
 	'ur-add-friend' => 'Dodaj kao prijatelja',
 	'ur-add-foe' => 'Dodaj kao neprijatelja',
+	'ur-add-personal-message' => 'Dodaj ličnu poruku',
 	'ur-remove-relationship-friend' => 'Obriši kao prijatelja',
 	'ur-remove-relationship-foe' => 'Obriši kao neprijatelja',
 	'ur-give-gift' => 'Pošalji poklon',
@@ -6988,6 +6991,8 @@ $messages['sr-el'] = array(
 	'ur-remove-relationship-message-confirm-friend' => 'Uspešno ste obrisali $1 sa Vašeg spiska prijatelja.',
 	'ur-remove-error-message-no-relationship' => 'Niste ni u kakvom odnosu sa $1.',
 	'ur-remove-error-message-remove-yourself' => 'Ne možete da obrišete sebe.',
+	'ur-remove-error-message-pending-foe-request' => 'Na čekanju imate zahtev za neprijateljstvo sa $1.',
+	'ur-remove-error-message-pending-friend-request' => 'Na čekanju imate zahtev za prijteljstvo sa $1.',
 	'ur-remove-error-not-loggedin-foe' => 'Morate biti ulogovani da biste uklonili nekoga sa Vašeg spiska neprijatelja.',
 	'ur-remove-error-not-loggedin-friend' => 'Morate biti ulogovani da biste nekoga obrisali sa spiska prijatelja.',
 	'ur-remove' => 'Ukloni',
