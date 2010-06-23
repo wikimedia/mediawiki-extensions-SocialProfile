@@ -3892,6 +3892,18 @@ $4
 	'right-giftadmin' => 'создание новых и правка существующих подарков',
 );
 
+/** Rusyn (русиньскый язык)
+ * @author Gazeb
+ */
+$messages['rue'] = array(
+	'g-main-page' => 'Головна сторінка',
+	'g-medium' => 'Середнїй',
+	'g-new' => 'нове',
+	'g-next' => 'Далшый',
+	'g-previous' => 'Попереднїй',
+	'g-remove' => 'Одстранити',
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */

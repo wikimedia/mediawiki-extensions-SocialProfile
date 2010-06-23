@@ -2842,6 +2842,24 @@ $3
 и измените ваши настройки, отключив отправку уведомлений.',
 );
 
+/** Rusyn (русиньскый язык)
+ * @author Gazeb
+ */
+$messages['rue'] = array(
+	'boardlinkselectall' => 'Выбрати вшыткы',
+	'boardlinkunselectall' => 'Зрушыти выбер',
+	'boardlinkselectfriends' => 'Выбрати камаратів',
+	'boardlinkunselectfriends' => 'Зрушыти выбер камаратів',
+	'userboard_private' => 'пріватне',
+	'userboard_nextpage' => 'далша',
+	'userboard_prevpage' => 'попередня',
+	'userboard_sendbutton' => 'послати',
+	'userboard-time-days' => '$1 {{PLURAL:$1|день|днї|днїв}}',
+	'userboard-time-hours' => '$1 {{PLURAL:$1|година|годины|годин}}',
+	'userboard-time-minutes' => '$1 {{PLURAL:$1|минута|минуты|минут}}',
+	'userboard-time-seconds' => '$1 {{PLURAL:$1|секунда|секунды|секунд}}',
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */
