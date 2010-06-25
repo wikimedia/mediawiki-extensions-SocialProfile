@@ -7892,7 +7892,7 @@ $messages['ps'] = array(
 	'user-profile-picture-large' => 'لوی',
 	'user-profile-picture-small' => 'وړوکی',
 	'user-profile-picture-choosepicture' => 'خپل انځور مو وټاکۍ',
-	'user-page-link' => 'د کارونکي پاڼه',
+	'user-page-link' => 'کارن مخ',
 	'givegift' => 'يوه ډالۍ ورکول',
 	'viewgifts' => 'ډالۍ کتل',
 );
