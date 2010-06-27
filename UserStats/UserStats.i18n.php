@@ -2058,6 +2058,14 @@ Sgnaca $3
 e cambia toe ampostassion për disabilité le notìfiche an pòsta eletrònica.',
 );
 
+/** Pashto (پښتو)
+ * @author Ahmed-Najib-Biabani-Ibrahimkhel
+ */
+$messages['ps'] = array(
+	'topusers' => 'د سر کارنان',
+	'top-fans-by-points-nav-header' => 'د سر مينه وال',
+);
+
 /** Portuguese (Português)
  * @author Giro720
  * @author Hamilton Abreu

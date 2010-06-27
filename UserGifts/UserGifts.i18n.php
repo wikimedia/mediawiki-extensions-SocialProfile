@@ -3494,10 +3494,12 @@ $messages['ps'] = array(
 	'g-give-gift' => 'ډالۍ ورکول',
 	'g-give-all-message-title' => 'يو پيغام ورګډول',
 	'g-give-list-select' => 'يو ملګری ټاکل',
+	'g-large' => 'لوی',
 	'g-new' => 'نوی',
 	'g-next' => 'راتلونکی',
 	'g-previous' => 'پخوانی',
 	'g-send-gift' => 'ډالۍ لېږل',
+	'g-small' => 'وړوکی',
 	'g-viewgiftlist' => 'د ډاليو لړليک کتل',
 	'g-your-profile' => 'ستاسې پېژنليک',
 );
