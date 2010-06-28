@@ -686,6 +686,7 @@ ha cheñchit hoc'h arventennoù evit diweredekaat ar c'hemenn dre bostel.",
 
 /** Bosnian (Bosanski)
  * @author CERminator
+ * @author Palapa
  */
 $messages['bs'] = array(
 	'giftmanager' => 'Upravljanje poklonima',
@@ -736,6 +737,7 @@ $messages['bs'] = array(
 	'g-send-gift' => 'Pošalji poklon',
 	'g-select-a-friend' => 'odaberite prijatelja',
 	'g-small' => 'Malo',
+	'g-to-another' => 'Daj nekome drugom',
 	'g-uploadsuccess' => 'Postavljanje uspješno',
 	'g-viewgiftlist' => 'Pogledaj spisak poklona',
 	'g-your-profile' => 'Vaš profil',
@@ -3898,12 +3900,15 @@ $4
  * @author Gazeb
  */
 $messages['rue'] = array(
+	'g-give-separator' => 'або',
+	'g-large' => 'Великый',
 	'g-main-page' => 'Головна сторінка',
 	'g-medium' => 'Середнїй',
 	'g-new' => 'нове',
 	'g-next' => 'Далшый',
 	'g-previous' => 'Попереднїй',
 	'g-remove' => 'Одстранити',
+	'g-small' => 'Маленькый',
 );
 
 /** Slovak (Slovenčina)

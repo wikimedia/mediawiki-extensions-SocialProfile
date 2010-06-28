@@ -2850,6 +2850,7 @@ $messages['rue'] = array(
 	'boardlinkunselectall' => 'Зрушыти выбер',
 	'boardlinkselectfriends' => 'Выбрати камаратів',
 	'boardlinkunselectfriends' => 'Зрушыти выбер камаратів',
+	'userboard_delete' => 'Вымазати',
 	'userboard_private' => 'пріватне',
 	'userboard_nextpage' => 'далша',
 	'userboard_prevpage' => 'попередня',

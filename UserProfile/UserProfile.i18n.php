@@ -1649,6 +1649,7 @@ Klikit <a href="$1">amañ</a> evit kevreañ pe klikit <a href="$2">amañ</a> evi
 
 /** Bosnian (Bosanski)
  * @author CERminator
+ * @author Palapa
  */
 $messages['bs'] = array(
 	'user-time-ago' => 'prije $1',
@@ -1785,9 +1786,12 @@ $messages['bs'] = array(
 	'user-social-profile-link' => 'Društveni profil',
 	'user-wiki-link' => 'Wiki korisnička stranica',
 	'user-board-login-message' => 'Morate biti <a href="$1">prijavljeni</a> da biste slali poruke drugim korisnicima',
+	'removeavatar' => 'Ukloni avatara',
 	'givegift' => 'Pošalji poklon',
 	'viewgifts' => 'Vidi poklone',
 	'viewsystemgifts' => 'Vidi nagrade',
+	'avatarupload-removeavatar' => 'Ukloni avatara',
+	'avatarupload-removesuccess' => 'Avatar je uspješno uklonjen',
 	'avatarupload-removeanother' => 'Ukloni slijedeći',
 );
 
@@ -8779,6 +8783,11 @@ $messages['rue'] = array(
 	'user-profile-interests-videogames' => 'Відео-гры',
 	'user-profile-interests-eats' => 'Їдла',
 	'user-profile-interests-drinks' => 'Питя',
+	'user-profile-picture-large' => 'Великый',
+	'user-profile-picture-medlarge' => 'Середнїй - великый',
+	'user-profile-picture-medium' => 'Середнїй',
+	'user-profile-picture-small' => 'Маленькый',
+	'user-page-link' => 'Сторінка хоснователя',
 );
 
 /** Slovak (Slovenčina)

@@ -1151,6 +1151,14 @@ $messages['ru'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|новый друг|новых друга|новых друзей}}',
 );
 
+/** Rusyn (русиньскый язык)
+ * @author Gazeb
+ */
+$messages['rue'] = array(
+	'mp-welcome-logged-in' => 'Агой $1',
+	'mp-requests-title' => 'Пожадавкы',
+);
+
 /** Sanskrit (संस्कृत)
  * @author Hemant wikikosh1
  * @author Mahitgar

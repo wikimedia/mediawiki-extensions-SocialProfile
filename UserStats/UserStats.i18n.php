@@ -2314,6 +2314,16 @@ $messages['ru'] = array(
 и измените настройки отправки уведомлений по эл. почте.',
 );
 
+/** Rusyn (русиньскый язык)
+ * @author Gazeb
+ */
+$messages['rue'] = array(
+	'topusers' => 'Най хоснователї',
+	'top-fans-by-points-nav-header' => 'Най фанушікы',
+	'top-fans-by-category-nav-header' => 'Най подля катеґорії',
+	'top-fans-bad-field-title' => 'Уупс!',
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */
