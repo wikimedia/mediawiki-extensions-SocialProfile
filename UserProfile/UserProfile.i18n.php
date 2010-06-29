@@ -10724,6 +10724,13 @@ $messages['yi'] = array(
 	'user-count-separator' => '$1 פֿון $2',
 	'user-stats-title' => 'סטאַטיסטיק',
 	'user-stats-edits' => '{{PLURAL:$1|רעדאַקטירונג|רעדאַקטירונגען}}',
+	'other-info-music' => 'מוזיק',
+	'other-info-books' => 'ביכער',
+	'other-info-video-games' => 'ווידעא־שפילן',
+	'other-info-magazines' => 'צײַטשריפֿטן',
+	'other-info-snacks' => 'נאַש',
+	'other-info-drinks' => 'געטראַנקען',
+	'other-no-info' => 'קיין אנדערע אינפֿאָרמאַציע',
 	'user-profile-section-preferences' => 'פרעפֿערענצן',
 	'user-profile-personal-name' => 'נאָמען',
 );

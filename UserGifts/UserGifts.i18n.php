@@ -4053,6 +4053,9 @@ To ga bo odstranilo tudi od uporabnikov, ki so ga morda prejeli.',
 	'g-gift' => 'darilo',
 	'g-gift-name' => 'ime darila',
 	'g-give-gift' => 'Podari darilo',
+	'g-give-all' => 'Želite $1 podariti darilo?
+Samo izberite eno od spodnjih daril in kliknite »Pošlji darilo«.
+Tako preprosto je.',
 	'g-give-all-message-title' => 'Dodaj sporočilo',
 	'g-give-all-title' => 'Podari darilo $1',
 	'g-give-enter-friend-title' => 'Če veste ime uporabnika, ga vnesite spodaj',
