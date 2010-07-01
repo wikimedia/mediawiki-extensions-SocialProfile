@@ -658,7 +658,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 */
 	function verify( $tmpfile, $extension ) {
 		# magically determine mime type
-		$magic = & wfGetMimeMagic();
+		$magic = MimeMagic::singleton();
 		$mime = $magic->guessMimeType( $tmpfile, false );
 
 		# check mime type, if desired
@@ -703,7 +703,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 * @return bool
 	 */
 	function verifyExtension( $mime, $extension ) {
-		$magic = & wfGetMimeMagic();
+		$magic = MimeMagic::singleton();
 
 		if ( !$mime || $mime == 'unknown' || $mime == 'unknown/unknown' )
 			if ( !$magic->isRecognizableExtension( $extension ) ) {
