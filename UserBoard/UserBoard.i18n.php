@@ -769,6 +769,11 @@ Klikni na $4
 a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
 );
 
+/** Ewe (Eʋegbe) */
+$messages['ee'] = array(
+	'userboard_delete' => 'Tutui',
+);
+
 /** Greek (Ελληνικά)
  * @author Consta
  * @author Crazymadlover

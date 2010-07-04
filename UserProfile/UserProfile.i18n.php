@@ -2472,6 +2472,7 @@ Klikni <a href="$1">sem</a>, aby se pśizjawił abo klikni <a href="$2">sem</a>,
  */
 $messages['ee'] = array(
 	'user-profile-section-preferences' => 'Didiwo',
+	'user-profile-personal-birthdate' => 'Ŋkeke (DD/ŊŊ)',
 );
 
 /** Greek (Ελληνικά)

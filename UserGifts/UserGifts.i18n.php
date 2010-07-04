@@ -4707,6 +4707,11 @@ $messages['vi'] = array(
 	'g-cancel' => 'Hủy bỏ',
 );
 
+/** Wu (吴语) */
+$messages['wuu'] = array(
+	'g-cancel' => '取消',
+);
+
 /** Kalmyk (Хальмг)
  * @author Huuchin
  */

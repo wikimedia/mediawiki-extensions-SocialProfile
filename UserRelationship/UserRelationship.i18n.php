@@ -7978,6 +7978,11 @@ Begolös stadi flena/neflena medü yüm verätik.',
 	'foe_request_subject' => 'Krigö! Geban: $1 eläükon oli as neflen in {{SITENAME}}!',
 );
 
+/** Wu (吴语) */
+$messages['wuu'] = array(
+	'ur-cancel' => '取消',
+);
+
 /** Kalmyk (Хальмг)
  * @author Huuchin
  */

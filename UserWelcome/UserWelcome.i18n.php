@@ -344,6 +344,7 @@ $messages['dsb'] = array(
  * @author Natsubee
  */
 $messages['ee'] = array(
+	'mp-welcome-edit' => 'Trɔ asi le eŋu',
 	'mp-requests-title' => 'Babiawo',
 	'mp-request-new-message' => 'du yeye',
 );
