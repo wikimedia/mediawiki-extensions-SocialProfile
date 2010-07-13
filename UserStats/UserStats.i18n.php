@@ -2064,6 +2064,10 @@ e cambia toe ampostassion për disabilité le notìfiche an pòsta eletrònica.'
 $messages['ps'] = array(
 	'topusers' => 'د سر کارنان',
 	'top-fans-by-points-nav-header' => 'د سر مينه وال',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|رايه|رايې}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|تبصره|تبصرې}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|ملګری|ملګري}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|سيال|سيالان}}',
 );
 
 /** Portuguese (Português)
