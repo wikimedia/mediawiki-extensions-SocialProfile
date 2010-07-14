@@ -1540,7 +1540,7 @@ $messages['br'] = array(
 	'user-recent-activity-user-message' => 'en/he deus kaset ur gemennadenn da',
 	'user-recent-activity-network-update' => 'en/he deus postet ur soñj',
 	'user-recent-system-gift' => 'zo bet priziet',
-	'user-profile-update-notloggedin-title' => "Dibosupl degas kemmoù en ho profil ma n'oc'h ket luget",
+	'user-profile-update-notloggedin-title' => "Dibosupl degas kemmoù en ho profil ma n'oc'h ket kevreet",
 	'user-profile-update-notloggedin-text' => 'Ne c\'hallit ket aozañ ho profil hep bezañ kevreet.
 Klikit <a href="$1">amañ</a> evit kevreañ pe klikit <a href="$2">amañ</a> evit en em enskrivañ.',
 	'user-profile-update-saved' => 'Enrollet eo bet ho profil',
