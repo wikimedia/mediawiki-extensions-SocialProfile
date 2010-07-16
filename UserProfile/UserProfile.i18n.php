@@ -4905,7 +4905,7 @@ $messages['ia'] = array(
 	'user-recent-activity-network-update' => 'Ha publicate un pensamento',
 	'user-recent-system-gift' => 'Recipeva un premio',
 	'user-profile-update-notloggedin-title' => 'Non pote modificar tu profilo sin session aperte',
-	'user-profile-update-notloggedin-text' => 'Tu debe identificar te pro poter modificar tu profilo.
+	'user-profile-update-notloggedin-text' => 'Tu debe authenticar te pro poter modificar tu profilo.
 Clicca <a href="$1">hic</a> pro aperir un session o clicca <a href="$2">hic</a> pro crear un conto.',
 	'user-profile-update-saved' => 'Tu profilo ha essite immagazinate',
 	'user-profile-update-log-section' => 'cambiava section',
