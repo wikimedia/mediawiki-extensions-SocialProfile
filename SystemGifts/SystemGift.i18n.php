@@ -2481,6 +2481,21 @@ $4
 	'right-awardsmanage' => 'создание новых и правка существующих наград',
 );
 
+/** Rusyn (русиньскый язык)
+ * @author Gazeb
+ */
+$messages['rue'] = array(
+	'ga-back-link' => '<a href="$1">< Назад на $2\'s профіл</a>',
+	'ga-choosefile' => 'Выбрати файл:',
+	'ga-large' => 'Великый',
+	'ga-medium' => 'Середнїй',
+	'ga-mediumlarge' => 'Середнїй - великый',
+	'ga-new' => 'Новый',
+	'ga-next' => 'Далшый',
+	'ga-previous' => 'Попереднїй',
+	'ga-small' => 'Маленькый',
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */

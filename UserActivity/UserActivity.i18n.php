@@ -593,7 +593,13 @@ $messages['ru'] = array(
  * @author Gazeb
  */
 $messages['rue'] = array(
+	'useractivity' => 'Актівіты приятелїв',
+	'useractivity-award' => '$1 дістав оцінїня',
 	'useractivity-all' => 'Видїти вшытко',
+	'useractivity-gift' => '$1 дістав подарунок од $2',
+	'useractivity-group-comment' => '$1 {{PLURAL:$1|коментарь|коментарї|коментарів}}',
+	'useractivity-siteactivity' => 'Актівіта сайту',
+	'useractivity-title' => 'Актівіты приятелїв',
 );
 
 /** Serbian Cyrillic ekavian (Српски (ћирилица))

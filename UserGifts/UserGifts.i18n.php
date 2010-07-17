@@ -3900,7 +3900,14 @@ $4
  * @author Gazeb
  */
 $messages['rue'] = array(
+	'g-choose-file' => 'Выбрати файл:',
+	'g-cancel' => 'Сторно',
+	'g-gift' => 'подарунок',
+	'g-gift-name' => 'мено подарунку',
+	'g-give-gift' => 'Дати подарунок',
+	'g-give-list-select' => 'выбрати приятеля',
 	'g-give-separator' => 'або',
+	'g-go-back' => 'Назад',
 	'g-large' => 'Великый',
 	'g-main-page' => 'Головна сторінка',
 	'g-medium' => 'Середнїй',
@@ -3909,6 +3916,7 @@ $messages['rue'] = array(
 	'g-previous' => 'Попереднїй',
 	'g-remove' => 'Одстранити',
 	'g-small' => 'Маленькый',
+	'g-your-profile' => 'Ваш профіл',
 );
 
 /** Slovak (Slovenčina)
