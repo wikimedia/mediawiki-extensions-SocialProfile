@@ -82,7 +82,6 @@ class UserBoard {
 		if ( $user->isEmailConfirmed() && $user->getIntOption( 'notifymessage', 1 ) ) {
 			$board_link = SpecialPage::getTitleFor( 'UserBoard' );
 			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
-			wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 			$subject = wfMsgExt( 'message_received_subject', 'parsemag',
 				$user_from
 			);
@@ -280,7 +279,6 @@ class UserBoard {
 
 		$output = ''; // Prevent E_NOTICE
 		$messages = $this->getUserBoardMessages( $user_id, $user_id_2, $count, $page );
-		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 		if ( $messages ) {
 
 			foreach ( $messages as $message ) {
@@ -380,7 +378,6 @@ class UserBoard {
 	}
 
 	public function getTimeOffset( $time, $timeabrv, $timename ) {
-		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 		$timeStr = '';
 		if ( $time[$timeabrv] > 0 ) {
 			$timeStr = wfMsgExt( "userboard-time-{$timename}", 'parsemag', $time[$timeabrv] );

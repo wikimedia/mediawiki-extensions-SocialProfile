@@ -115,9 +115,6 @@ class UserProfilePage extends Article {
 	function getUserStats( $user_id, $user_name ) {
 		global $wgUserProfileDisplay;
 
-		// Load messages, we're gonna need 'em
-		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
-
 		if ( $wgUserProfileDisplay['stats'] == false ) {
 			return '';
 		}
@@ -177,9 +174,6 @@ class UserProfilePage extends Article {
 	function getProfileSection( $label, $value, $required = true ) {
 		global $wgUser, $wgTitle, $wgOut;
 
-		// Load messages, we're gonna need 'em
-		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
-
 		$output = '';
 		if ( $value || $required ) {
 			if ( !$value ) {
@@ -199,9 +193,6 @@ class UserProfilePage extends Article {
 
 	function getPersonalInfo( $user_id, $user_name ) {
 		global $wgUser, $wgUserProfileDisplay;
-
-		// Load messages, we're gonna need 'em
-		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
 
 		if ( $wgUserProfileDisplay['personal'] == false ) {
 			return '';
@@ -381,9 +372,6 @@ class UserProfilePage extends Article {
 	function getInterests( $user_name ) {
 		global $wgUser, $wgUserProfileDisplay;
 
-		// Load messages, we're gonna need 'em
-		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
-
 		if ( $wgUserProfileDisplay['interests'] == false ) {
 			return '';
 		}
@@ -450,9 +438,6 @@ class UserProfilePage extends Article {
 
 	function getProfileTop( $user_id, $user_name ) {
 		global $wgTitle, $wgUser, $wgUploadPath, $wgLang;
-
-		// Load messages, we're gonna need 'em
-		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
 
 		$stats = new UserStats( $user_id, $user_name );
 		$stats_data = $stats->getUserStats();
@@ -609,9 +594,6 @@ class UserProfilePage extends Article {
 	function getRelationships( $user_name, $rel_type ) {
 		global $wgMemc, $wgUser, $wgUserProfileDisplay, $wgUploadPath;
 
-		// Load messages, we're gonna need 'em
-		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
-
 		// If not enabled in site settings, don't display
 		if ( $rel_type == 1 ) {
 			if ( $wgUserProfileDisplay['friends'] == false ) {
@@ -713,8 +695,6 @@ class UserProfilePage extends Article {
 		if ( $wgUserProfileDisplay['activity'] == false ) {
 			return '';
 		}
-
-		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
 
 		$output = '';
 
@@ -920,9 +900,6 @@ class UserProfilePage extends Article {
 	function getGifts( $user_name ) {
 		global $wgUser, $wgMemc, $wgUserProfileDisplay, $wgUploadPath;
 
-		// Load messages, we're gonna need 'em
-		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
-
 		// If not enabled in site settings, don't display
 		if ( $wgUserProfileDisplay['gifts'] == false ) {
 			return '';
@@ -1003,9 +980,6 @@ class UserProfilePage extends Article {
 
 	function getAwards( $user_name ) {
 		global $wgUser, $wgMemc, $wgUserProfileDisplay, $wgUploadPath;
-
-		// Load messages, we're gonna need 'em
-		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
 
 		// If not enabled in site settings, don't display
 		if ( $wgUserProfileDisplay['awards'] == false ) {
@@ -1088,9 +1062,6 @@ class UserProfilePage extends Article {
 	function getUserBoard( $user_id, $user_name ) {
 		global $wgUser, $wgOut, $wgUserProfileDisplay, $wgUserProfileScripts;
 
-		// Load messages, we're gonna need 'em
-		wfLoadExtensionMessages( 'SocialProfileUserProfile' );
-
 		if ( $user_id == 0 ) {
 			return '';
 		}
@@ -1150,8 +1121,6 @@ class UserProfilePage extends Article {
 
 		if ( $wgUser->getName() !== $user_name ) {
 			if ( $wgUser->isLoggedIn() && !$wgUser->isBlocked() ) {
-				// Some nice message in a other part of the extension :)
-				wfLoadExtensionMessages( 'SocialProfileUserBoard' );
 				$output .= '<div class="user-page-message-form">
 						<input type="hidden" id="user_name_to" name="user_name_to" value="' . addslashes( $user_name ) . '" />
 						<span style="color:#797979;">' . wfMsgHtml( 'userboard_messagetype' ) . '</span>
@@ -1193,8 +1162,6 @@ class UserProfilePage extends Article {
 
 		$wgOut->addScriptFile( $wgFanBoxScripts . '/FanBoxes.js' );
 		$wgOut->addExtensionStyle( $wgFanBoxScripts . '/FanBoxes.css' );
-
-		wfLoadExtensionMessages( 'FanBox' );
 
 		$output = '';
 		$f = new UserFanBoxes( $user_name );

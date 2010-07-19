@@ -16,7 +16,6 @@ class RemoveGift extends UnlistedSpecialPage {
 	 */
 	public function execute( $par ) {
 		global $wgUser, $wgOut, $wgRequest, $wgMemc, $wgUploadPath, $wgUserGiftsScripts;
-		wfLoadExtensionMessages( 'UserGifts' );
 
 		$wgOut->addExtensionStyle( $wgUserGiftsScripts . '/UserGifts.css' );
 

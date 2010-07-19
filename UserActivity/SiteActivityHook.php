@@ -28,8 +28,6 @@ function getSiteActivity( $input, $args, $parser ) {
 	// so that <siteactivity limit=5 /> will return 5 items instead of 4...
 	$fixedLimit = $limit + 1;
 
-	wfLoadExtensionMessages( 'UserActivity' );
-
 	$key = wfMemcKey( 'site_activity', 'all', $fixedLimit );
 	$data = $wgMemc->get( $key );
 	if ( !$data ) {

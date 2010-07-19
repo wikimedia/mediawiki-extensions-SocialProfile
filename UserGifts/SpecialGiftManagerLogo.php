@@ -417,7 +417,6 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 */
 	function showSuccess( $status ) {
 		global $wgOut, $wgUploadPath, $wgScriptPath, $wgLang;
-		wfLoadExtensionMessages( 'UserGifts' );
 		$ext = 'jpg';
 
 		$output = '<h2>' . wfMsg( 'g-uploadsuccess' ) . '</h2>';
@@ -457,7 +456,6 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 */
 	function uploadError( $error ) {
 		global $wgOut;
-		wfLoadExtensionMessages( 'UserGifts' );
 		$sub = wfMsg( 'uploadwarning' );
 		$wgOut->addHTML( "<h2>{$sub}</h2>\n" );
 		$wgOut->addHTML( "<h4 class='error'>{$error}</h4>\n" );
@@ -533,7 +531,6 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 */
 	function mainUploadForm( $msg = '' ) {
 		global $wgOut, $wgUser, $wgUseCopyrightUpload;
-		wfLoadExtensionMessages( 'UserGifts' );
 
 		if ( !$this->canUserManage() ) {
 			$wgOut->errorpage( 'error', 'badaccess' );

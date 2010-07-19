@@ -8,8 +8,6 @@ function wfRelationshipRequestResponse( $response, $request_id ) {
 	global $wgUser;
 	$out = '';
 
-	wfLoadExtensionMessages( 'SocialProfileUserRelationship' );
-
 	$rel = new UserRelationship( $wgUser->getName() );
 	if ( $rel->verifyRelationshipRequest( $request_id ) == true ) {
 		$request = $rel->getRequest( $request_id );

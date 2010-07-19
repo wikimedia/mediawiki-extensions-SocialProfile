@@ -17,9 +17,6 @@ class TopUsersPoints extends SpecialPage {
 	public function execute( $par ) {
 		global $wgOut, $wgScriptPath, $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgUserLevels, $wgUploadPath;
 
-		// Read in localisation messages
-		wfLoadExtensionMessages( 'SocialProfileUserStats' );
-
 		// Load CSS
 		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStats/TopList.css' );
 

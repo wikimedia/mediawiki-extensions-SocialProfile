@@ -30,8 +30,6 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$wgOut->addExtensionStyle( $wgUserBoardScripts . '/BoardBlast.css' );
 		$wgOut->addScriptFile( $wgUserBoardScripts . '/BoardBlast.js' );
 
-		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
-
 		$output = '';
 
 		// This feature is available only to logged-in users.

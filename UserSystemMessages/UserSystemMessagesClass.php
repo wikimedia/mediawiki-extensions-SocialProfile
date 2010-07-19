@@ -98,7 +98,6 @@ class UserSystemMessage {
 	 * @param $level Mixed: name of the level that the user advanced to
 	 */
 	public function sendAdvancementNotificationEmail( $user_id_to, $level ) {
-		wfLoadExtensionMessages( 'SocialProfileUserStats' );
 		$user = User::newFromId( $user_id_to );
 		$user->loadFromDatabase();
 		if ( $user->isEmailConfirmed() && $user->getIntOption( 'notifyhonorifics', 1 ) ) {
