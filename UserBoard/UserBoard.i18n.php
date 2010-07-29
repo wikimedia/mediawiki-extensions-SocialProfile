@@ -2443,6 +2443,7 @@ $messages['pdc'] = array(
 	'userboard_delete' => 'Lösche',
 	'userboard_private' => 'private',
 	'userboard_nextpage' => 'neegscht',
+	'userboard_sendbutton' => 'schicke',
 	'userboard-time-days' => '{{PLURAL:$1|een Daag|$1 Daag}}',
 	'userboard-time-hours' => '{{PLURAL:$1|ee Schtund|$1 Schtunde}}',
 );
