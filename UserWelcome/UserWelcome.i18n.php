@@ -55,8 +55,11 @@ $messages['ary'] = array(
  * @author Naudefj
  */
 $messages['af'] = array(
+	'mp-userlevels-link' => 'Gebruikersvlakke',
 	'mp-welcome-upload' => 'Oplaai',
 	'mp-welcome-edit' => 'Wysig',
+	'mp-welcome-logged-in' => 'Hallo $1',
+	'mp-requests-title' => 'Versoeke',
 	'mp-request-new-message' => 'nuwe boodskap',
 );
 

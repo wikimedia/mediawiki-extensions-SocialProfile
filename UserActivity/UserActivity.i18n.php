@@ -521,6 +521,9 @@ $messages['pms'] = array(
  */
 $messages['ps'] = array(
 	'useractivity-all' => 'ټول کتل',
+	'useractivity-group-edit' => '{{PLURAL:$1|يو سمون|$1 سمونونه}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|يو پيغام|$1 پيغامونه}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|يو ملګری|$1 ملګري}}',
 	'useractivity-siteactivity' => 'د وېبځي فعاليت',
 	'useractivity-title' => 'د ملګري فعاليت',
 );

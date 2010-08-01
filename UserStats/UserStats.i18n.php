@@ -92,16 +92,50 @@ $messages['qqq'] = array(
  * @author Naudefj
  */
 $messages['af'] = array(
+	'user-stats-alltime-title' => 'Meeste punte alle tye',
+	'user-stats-weekly-title' => 'Meeste punte hierdie week',
 	'user-stats-monthly-title' => 'Meeste punte die maand',
 	'topusers' => 'Topgebruikers',
+	'top-fans-by-category-nav-header' => 'Top per kategorie',
 	'top-fans-total-points-link' => 'Puntetotaal',
 	'top-fans-weekly-points-link' => 'Punte die week',
 	'top-fans-monthly-points-link' => 'Punte die maand',
 	'top-fans-points' => 'punte',
+	'top-fans-by-category-title-vote-count' => 'Ranglys totaal aantal stemme',
 	'top-fans-bad-field-title' => 'Oeps!',
+	'top-fans-bad-field-message' => 'Die gespesifiseerde statistiek bestaan nie.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Stem|Stemme}}',
+	'top-fans-stats-monthly-winner-count' => 'Maandelikse {{PLURAL:$1|oorwinning|oorwinnings}}',
+	'top-fans-stats-weekly-winner-count' => 'Weeklikse {{PLURAL:$1|oorwinning|oorwinnings}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Wysiging|Wysigings}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Opmerking|Opmerkings}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Verwysing|Verwysings}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Vriend|Vriende}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Vyand|Vyande}}',
+	'top-fans-stats-opinions-published' => 'Gepubliseerde {{PLURAL:$1|mening|menings}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Mening|Menings}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Duim|Duime}} omhoog',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Duim|Duime}} omlaag',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Duim|Duime}} omhoog uitgedeel',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Duim|Duime}} omlaag uitgedeel',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Geskenk|Geskenke}} ontvang',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Geskenk|Geskenke}} gestuur',
+	'right-updatepoints' => 'Opdateer aantal wysigings',
+	'level-advanced-to' => 'is gepromoveer tot vlak <span style="font-weight:800;">$1</span>',
+	'level-advance-subject' => 'U is nou "$1" op {{SITENAME}}',
+	'level-advance-body' => 'Hallo $1.
+
+U is nou "$2" op {{SITENAME}}!
+
+Veels geluk.
+
+Die span van {{SITENAME}}
+
+---
+Wil u nie langer e-posse van ons ontvang nie?
+
+Klik $3
+en wysig u instellings om e-posboodskappe te deaktiveer.',
 );
 
 /** Amharic (አማርኛ)
@@ -2065,6 +2099,7 @@ $messages['ps'] = array(
 	'topusers' => 'د سر کارنان',
 	'top-fans-by-points-nav-header' => 'د سر مينه وال',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|رايه|رايې}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|سمون|سمونونه}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|تبصره|تبصرې}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|ملګری|ملګري}}',
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|سيال|سيالان}}',
