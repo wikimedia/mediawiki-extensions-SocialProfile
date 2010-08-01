@@ -1317,7 +1317,7 @@ $messages['ch'] = array(
 /** Sorani (Arabic script) (‫کوردی (عەرەبی)‬)
  * @author Marmzok
  */
-$messages['ckb-arab'] = array(
+$messages['ckb'] = array(
 	'viewrelationships' => 'دیتنی پەیوەندی',
 	'viewrelationshiprequests' => 'دیتنی داخوازیەکانی پەیوەندی',
 	'ur-already-submitted' => 'داخوازیەکەت ناردرا',

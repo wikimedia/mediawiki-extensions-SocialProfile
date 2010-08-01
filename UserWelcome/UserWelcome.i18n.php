@@ -261,7 +261,7 @@ $messages['ca'] = array(
 /** Sorani (Arabic script) (‫کوردی (عەرەبی)‬)
  * @author Marmzok
  */
-$messages['ckb-arab'] = array(
+$messages['ckb'] = array(
 	'mp-userlevels-link' => 'ئاستەکانی بەکارهێنەر',
 	'mp-welcome-upload' => 'بارکردن',
 	'mp-welcome-edit' => 'دەستکاری کردن',

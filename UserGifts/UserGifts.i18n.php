@@ -776,7 +776,7 @@ $messages['ca'] = array(
 /** Sorani (Arabic script) (‫کوردی (عەرەبی)‬)
  * @author Marmzok
  */
-$messages['ckb-arab'] = array(
+$messages['ckb'] = array(
 	'g-go-back' => 'گەڕانەوە بۆ دواوە',
 );
 
