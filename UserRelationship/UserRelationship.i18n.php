@@ -2086,6 +2086,7 @@ Se vi volas pliajn amikojn, <a href="$1">invitu ilin!</a>',
 
 /** Spanish (Español)
  * @author Crazymadlover
+ * @author Dferg
  * @author DoveBirkoff
  * @author Feten7
  * @author Imre
@@ -2154,7 +2155,7 @@ Si $1 confirma tu solicitud, recibirás un segundo e-mail',
 	'ur-add-error-message-yourself' => 'No puede agregarse a sí mismo como amigo o enemigo.',
 	'ur-add-error-message-existing-relationship-foe' => 'Ustedes ya son enemigos con $1.',
 	'ur-add-error-message-existing-relationship-friend' => 'Ustedes ya son amigos con $1.',
-	'ur-add-error-message-pending-request-title' => 'Paciencia!',
+	'ur-add-error-message-pending-request-title' => '¡Paciencia!',
 	'ur-add-error-message-pending-friend-request' => 'Usted tiene una solucitud de amigo pendiente con $1.
 Le notificaremos cuando $1 confirme su solicitud.',
 	'ur-add-error-message-pending-foe-request' => 'Usted tiene una solucitud de enemigo pendiente con $1.

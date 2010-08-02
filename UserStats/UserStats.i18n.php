@@ -747,6 +747,7 @@ $messages['eo'] = array(
 /** Spanish (Español)
  * @author Antur
  * @author Crazymadlover
+ * @author Dferg
  * @author Imre
  * @author Sanbec
  * @author Translationista
@@ -799,14 +800,14 @@ $messages['es'] = array(
 	'level-advance-subject' => '¡Ahora eres un «$1» en {{SITENAME}}!',
 	'level-advance-body' => 'Hola $1.
 
-Usted es ahora un "$2" en {{SITENAME}}!
+¡Usted es ahora un "$2" en {{SITENAME}}!
 
-Felicitaciones,
+Felicidades,
 
-El  Equipo {{SITENAME}}
+El  equipo de {{SITENAME}}
 
 ---
-Hey, Desea no recibir correos electrónicos de nosotros?
+¿Desea no recibir más correos electrónicos de nosotros?
 
 Haga click en  $3
 y cambie sus configuraciones para deshabilitar notificaciones por correo electrónico.',
