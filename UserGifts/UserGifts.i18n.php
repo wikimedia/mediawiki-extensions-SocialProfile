@@ -2339,7 +2339,7 @@ dan ubah seting untuk nonaktifkan notifikasi surel.',
  * @author Ukabia
  */
 $messages['ig'] = array(
-	'g-cancel' => 'Emekwàlà',
+	'g-cancel' => 'Kàchá',
 	'g-large' => 'Ukwu',
 );
 
