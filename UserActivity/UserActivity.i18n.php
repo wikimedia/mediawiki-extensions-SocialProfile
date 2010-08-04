@@ -387,6 +387,7 @@ $messages['kn'] = array(
  */
 $messages['ksh'] = array(
 	'useractivity' => 'Wat de Frünnde aam donn sin',
+	'useractivity-award' => '$1 hät en Ußzeichnung krääje',
 	'useractivity-all' => 'Alles aanzeije',
 	'useractivity-group-edit' => '{{PLURAL:$1|Ein Änderong|$1 Änderonge|Kein Änderong}}',
 	'useractivity-group-comment' => '{{PLURAL:$1|Ein Aanmärkong|$1 Aanmärkonge|Kein Aanmärkonge}}',

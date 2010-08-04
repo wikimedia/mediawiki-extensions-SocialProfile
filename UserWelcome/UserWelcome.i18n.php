@@ -675,7 +675,7 @@ $messages['id'] = array(
  * @author Ukabia
  */
 $messages['ig'] = array(
-	'mp-welcome-upload' => 'Tinyé elú',
+	'mp-welcome-upload' => 'Tinyénélú',
 	'mp-welcome-edit' => 'Rüwa',
 	'mp-welcome-logged-in' => 'Kedú $1',
 	'mp-request-new-message' => 'ozi ohúrù',
