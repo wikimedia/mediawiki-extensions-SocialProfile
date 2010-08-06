@@ -1312,6 +1312,11 @@ Druck $4
 un ändere Dyyni Yystellige go E-Mail-Benochrichtigunge abstelle.',
 );
 
+/** Hausa (هَوُسَ) */
+$messages['ha'] = array(
+	'userboard_delete' => 'Soke',
+);
+
 /** Hakka (Hak-kâ-fa)
  * @author Hakka
  */

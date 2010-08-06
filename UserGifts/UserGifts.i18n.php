@@ -1813,6 +1813,11 @@ un ändere Dyyni Yystellige go d E-Mail-Benochrichtigunge verhindere.',
 	'right-giftadmin' => 'Leg neji Gschänk aa un bearbeit sonigi, wu s scho het',
 );
 
+/** Hausa (هَوُسَ) */
+$messages['ha'] = array(
+	'g-cancel' => 'Soke',
+);
+
 /** Hebrew (עברית)
  * @author Rotemliss
  * @author YaronSh

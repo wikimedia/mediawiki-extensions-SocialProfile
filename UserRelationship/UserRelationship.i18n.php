@@ -3077,6 +3077,11 @@ Druck $4
 un ändere Dyyni Yystellige go d E-Mail-Benochrichtigunge abschalte.',
 );
 
+/** Hausa (هَوُسَ) */
+$messages['ha'] = array(
+	'ur-cancel' => 'Soke',
+);
+
 /** Hakka (Hak-kâ-fa)
  * @author Hakka
  */
