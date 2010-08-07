@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * A special page for privileged users to remove other users' avatars.
+ *
+ * @file
+ * @ingroup Extensions
+ */
 class RemoveAvatar extends SpecialPage {
 
 	/**
@@ -19,25 +24,25 @@ class RemoveAvatar extends SpecialPage {
 
 		$this->title = SpecialPage::getTitleFor( 'RemoveAvatar' );
 
-		# If the user isn't logged in, display an error
+		// If the user isn't logged in, display an error
 		if ( !$wgUser->isLoggedIn() ) {
 			$this->displayRestrictionError();
 			return;
 		}
 
-		# If the user doesn't have 'avatarremove' permission, display an error
+		// If the user doesn't have 'avatarremove' permission, display an error
 		if ( !$wgUser->isAllowed( 'avatarremove' ) ) {
 			$this->displayRestrictionError();
 			return;
 		}
 
-		# Show a message if the database is in read-only mode
+		// Show a message if the database is in read-only mode
 		if ( wfReadOnly() ) {
 			$wgOut->readOnlyPage();
 			return;
 		}
 
-		# If user is blocked, s/he doesn't need to access this page
+		// If user is blocked, s/he doesn't need to access this page
 		if ( $wgUser->isBlocked() ) {
 			$wgOut->blockedPage();
 			return;
@@ -82,10 +87,11 @@ class RemoveAvatar extends SpecialPage {
 
 	/**
 	 * Show the form for retrieving a user's current avatar
+	 * @return HTML
 	 */
-	function showUserForm() {
-		$output = '<form method="get" name="avatar" action="">'
-				. Xml::hidden( 'title', $this->getTitle() ) .
+	private function showUserForm() {
+		$output = '<form method="get" name="avatar" action="">' .
+				Xml::hidden( 'title', $this->getTitle() ) .
 				'<b>' . wfMsg( 'username' ) . '</b>
 				<input type="text" name="user" />
 				<input type="submit" value="' . wfMsg( 'search' ) . '" />
@@ -95,8 +101,10 @@ class RemoveAvatar extends SpecialPage {
 
 	/**
 	 * Shows the requested user's current avatar and the button for deleting it
+	 *
+	 * @param $user_name String: name of the user whose avatars we want to delete
 	 */
-	function showUserAvatar( $user_name ) {
+	private function showUserAvatar( $user_name ) {
 		$user_name = str_replace( '_', ' ', $user_name ); // replace underscores with spaces
 		$user_id = User::idFromName( $user_name );
 
@@ -115,15 +123,17 @@ class RemoveAvatar extends SpecialPage {
 	/**
 	 * Deletes all of the requested user's avatar images from the filesystem
 	 *
-	 * @param $id Int: user ID
-	 * @param $size Int: size of the avatar image to delete (small, medium or large).
+	 * @param $id Integer: user ID
+	 * @param $size String: size of the avatar image to delete (small, medium or large).
 	 * 			Doesn't really matter since we're just going to blast 'em all.
 	 */
-	function deleteImage( $id, $size ) {
+	private function deleteImage( $id, $size ) {
 		global $wgUploadDirectory, $wgDBname, $wgMemc;
 		$avatar = new wAvatar( $id, $size );
 		$files = glob( $wgUploadDirectory . '/avatars/' . $wgDBname . '_' . $id .  '_' . $size . "*" );
+		wfSuppressWarnings();
 		$img = basename( $files[0] );
+		wfRestoreWarnings();
 		if ( $img && $img[0] ) {
 			unlink( $wgUploadDirectory . '/avatars/' . $img );
 		}
