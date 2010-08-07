@@ -773,11 +773,12 @@ $messages['ca'] = array(
 	'g-your-profile' => 'El teu perfil',
 );
 
-/** Sorani (Arabic script) (‫کوردی (عەرەبی)‬)
+/** Sorani (کوردی)
  * @author Marmzok
  */
 $messages['ckb'] = array(
 	'g-go-back' => 'گەڕانەوە بۆ دواوە',
+	'g-next' => 'پاش',
 );
 
 /** German (Deutsch)
@@ -2234,6 +2235,7 @@ e cambia tu configurationes pro disactivar le notificationes in e-mail.',
 
 /** Indonesian (Bahasa Indonesia)
  * @author Bennylin
+ * @author Farras
  * @author Irwangatot
  * @author IvanLanin
  * @author Kandar
@@ -2299,7 +2301,7 @@ Sangat mudah.',
 	'g-new' => 'baru',
 	'g-next' => 'Selanjutnya',
 	'g-previous' => 'Sebelumnya',
-	'g-remove' => 'Singkirkan',
+	'g-remove' => 'Hapus',
 	'g-remove-gift' => 'Singkirkan hadiah ini',
 	'g-remove-message' => 'Anda yakin ingin menyingkirkan hadiah "$1"?',
 	'g-recent-recipients' => 'Penerima hadiah yang sama baru-baru ini',

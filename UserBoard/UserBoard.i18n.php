@@ -521,6 +521,11 @@ $messages['ca'] = array(
 	'userboard_sendbutton' => 'envia',
 );
 
+/** Sorani (کوردی) */
+$messages['ckb'] = array(
+	'userboard_delete' => 'سڕینەوە',
+);
+
 /** Czech (Česky)
  * @author Matěj Grabovský
  */
