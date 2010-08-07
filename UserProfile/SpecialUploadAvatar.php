@@ -1,8 +1,9 @@
 <?php
 /**
- * A special page for uploading Avatars
- * This page is a big hack -- its just the image upload page with some changes to
- * upload the actual avatar files.  The avatars are not held as MediaWiki images, but
+ * A special page for uploading avatars
+ * This page is a big hack -- it's just the image upload page with some changes
+ * to upload the actual avatar files.
+ * The avatars are not held as MediaWiki images, but
  * rather based on the user_id and in multiple sizes
  *
  * Requirements: Need writable directory $wgUploadPath/avatars
@@ -60,10 +61,11 @@ class SpecialUploadAvatar extends SpecialUpload {
 
 	/**
 	 * Show some text and linkage on successful upload.
-	 * @access private
+	 *
+	 * @param $ext String: file extension (gif, jpg or png)
 	 */
-	function showSuccess( $ext ) {
-		global $wgUser, $wgOut, $wgContLang, $wgDBname, $wgUploadPath, $wgUploadAvatarInRecentChanges;
+	private function showSuccess( $ext ) {
+		global $wgUser, $wgOut, $wgDBname, $wgUploadPath, $wgUploadAvatarInRecentChanges;
 
 		$log = new LogPage( wfMsgForContent( 'user-profile-picture-log' ) );
 		if ( !$wgUploadAvatarInRecentChanges ) {
@@ -121,8 +123,10 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 * Displays the main upload form, optionally with a highlighted
 	 * error message up at the top.
 	 *
-	 * @param string $msg as HTML
-	 * @access private
+	 * @param $msg String: error message as HTML
+	 * @param $sessionKey String: session key in case this is a stashed upload
+	 * @param $hideIgnoreWarning Boolean: whether to hide "ignore warning" check box
+	 * @return HTML output
 	 */
 	protected function getUploadForm( $message = '', $sessionKey = '', $hideIgnoreWarning = false ) {
 		global $wgOut, $wgUser, $wgLang, $wgUploadDirectory, $wgRequest, $wgUseCopyrightUpload;
@@ -212,6 +216,13 @@ class SpecialUploadAvatar extends SpecialUpload {
 		return $output;
 	}
 
+	/**
+	 * Gets an avatar image with the specified size
+	 *
+	 * @param $size String: size of the image ('s' for small, 'm' for medium,
+	 * 'ml' for medium-large and 'l' for large)
+	 * @return String: full img HTML tag
+	 */
 	function getAvatar( $size ) {
 		global $wgUser, $wgDBname, $wgUploadDirectory, $wgUploadPath;
 		$files = glob( $wgUploadDirectory . '/avatars/' . $wgDBname . '_' . $wgUser->getID() . '_' . $size . "*" );
