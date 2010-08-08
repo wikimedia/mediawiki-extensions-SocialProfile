@@ -4703,6 +4703,11 @@ $messages['uk'] = array(
 	'g-next' => 'Наступний',
 );
 
+/** Urdu (اردو) */
+$messages['ur'] = array(
+	'g-cancel' => 'منسوخ',
+);
+
 /** Veps (Vepsan kel')
  * @author Игорь Бродский
  */

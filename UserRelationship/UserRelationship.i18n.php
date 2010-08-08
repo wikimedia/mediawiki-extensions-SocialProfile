@@ -7906,6 +7906,11 @@ $messages['uk'] = array(
 	'ur-remove' => 'Вилучити',
 );
 
+/** Urdu (اردو) */
+$messages['ur'] = array(
+	'ur-cancel' => 'منسوخ',
+);
+
 /** Veps (Vepsan kel')
  * @author Triple-ADHD-AS
  * @author Игорь Бродский
