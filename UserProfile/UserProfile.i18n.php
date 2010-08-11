@@ -673,6 +673,7 @@ $messages['an'] = array(
 	'user-profile-section-preferences' => 'Preferencias',
 	'user-profile-personal-name' => 'Nombre',
 	'user-profile-personal-birthdate' => 'Calendata (MM/DD)',
+	'user-profile-picture-small' => 'Chicota',
 	'user-page-link' => "Pachina d'usuario",
 );
 

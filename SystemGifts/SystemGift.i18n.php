@@ -106,6 +106,13 @@ $messages['af'] = array(
 	'ga-small' => 'Klein',
 );
 
+/** Aragonese (Aragonés)
+ * @author Juanpabl
+ */
+$messages['an'] = array(
+	'ga-small' => 'Chicot',
+);
+
 /** Arabic (العربية)
  * @author Meno25
  * @author OsamaK

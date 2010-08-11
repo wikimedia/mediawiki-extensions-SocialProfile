@@ -210,6 +210,7 @@ $messages['aln'] = array(
  */
 $messages['an'] = array(
 	'g-cancel' => 'Cancelar',
+	'g-small' => 'Chicot',
 );
 
 /** Arabic (العربية)
