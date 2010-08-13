@@ -490,7 +490,7 @@ $messages['ca'] = array(
 	'ga-title' => 'Premis de $1',
 );
 
-/** Sorani (Arabic script) (‫کوردی (عەرەبی)‬)
+/** Sorani (کوردی)
  * @author Marmzok
  */
 $messages['ckb'] = array(

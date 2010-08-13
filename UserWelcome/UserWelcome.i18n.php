@@ -261,7 +261,7 @@ $messages['ca'] = array(
 	'mp-request-new-message' => 'nou missatge',
 );
 
-/** Sorani (Arabic script) (‫کوردی (عەرەبی)‬)
+/** Sorani (کوردی)
  * @author Marmzok
  */
 $messages['ckb'] = array(

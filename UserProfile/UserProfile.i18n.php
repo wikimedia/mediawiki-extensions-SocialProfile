@@ -1895,7 +1895,7 @@ $messages['ca'] = array(
 	'user-page-link' => "Pàgina d'usuari",
 );
 
-/** Sorani (Arabic script) (‫کوردی (عەرەبی)‬)
+/** Sorani (کوردی)
  * @author Marmzok
  */
 $messages['ckb'] = array(
@@ -10431,7 +10431,7 @@ $messages['ug-arab'] = array(
 	'user-profile-personal-email' => 'ئېلخەت',
 );
 
-/** Uighur (Latin) (Uyghurche‎ / ئۇيغۇرچە (Latin))
+/** Uighur (Latin) (ئۇيغۇرچە / Uyghurche‎ (Latin))
  * @author Jose77
  */
 $messages['ug-latn'] = array(
