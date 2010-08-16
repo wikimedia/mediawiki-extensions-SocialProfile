@@ -352,6 +352,26 @@ $messages['ia'] = array(
 	'useractivity-user_message' => '$1 ha inviate {{PLURAL:$4|un message|messages}} a $3',
 );
 
+/** Indonesian (Bahasa Indonesia)
+ * @author Farras
+ */
+$messages['id'] = array(
+	'useractivity' => 'Aktivitas teman',
+	'useractivity-award' => '$1 menerima penghargaan',
+	'useractivity-all' => 'Lihat semua',
+	'useractivity-edit' => '$1 {{PLURAL:$4|menyunting halaman|menyunting halaman berikut:}} $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|sekarang bermusuhan dengan|sekarang bermusuhan dengan}} $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|sekarang berteman dengan|sekarang berteman dengan}} $3',
+	'useractivity-gift' => '$1 menerima hadiah dari $2',
+	'useractivity-group-edit' => '{{PLURAL:$1|satu suntingan|$1 suntingan}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|satu komentar|$1 komentar}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|satu pesan|$1 pesan}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|satu teman|$1 teman}}',
+	'useractivity-siteactivity' => 'Aktivitas situs',
+	'useractivity-title' => 'Aktivitas teman',
+	'useractivity-user_message' => '$1 {{PLURAL:$4|mengirimkan pesan ke|mengirimkan pesan ke}} $3',
+);
+
 /** Japanese (日本語)
  * @author Aotake
  * @author Hosiryuhosi

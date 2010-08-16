@@ -514,6 +514,7 @@ $messages['cs'] = array(
  * @author Melancholie
  * @author Purodha
  * @author Revolus
+ * @author The Evil IP address
  * @author Umherirrender
  */
 $messages['de'] = array(
@@ -561,7 +562,7 @@ $messages['de'] = array(
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Geschenk gemacht|Geschenke gemacht}}',
 	'right-updatepoints' => 'Beiträgszähler aktualisieren',
 	'level-advanced-to' => 'erweitert auf Level <span style="font-weight:800;">$1</span>',
-	'level-advance-subject' => 'Du bist jetzt „$1“ auf {{SITENAME}}!',
+	'level-advance-subject' => '[{{SITENAME}}] Du bist jetzt „$1“!',
 	'level-advance-body' => 'Hallo $1,
 
 Du bist jetzt ein „$2“ bei {{SITENAME}}!
@@ -1383,6 +1384,7 @@ e disactiva in tu preferentias le notificationes per e-mail.',
 
 /** Indonesian (Bahasa Indonesia)
  * @author Bennylin
+ * @author Farras
  */
 $messages['id'] = array(
 	'user-stats-alltime-title' => 'Poin terbanyak sepanjang masa',
@@ -1395,6 +1397,20 @@ $messages['id'] = array(
 	'top-fans-weekly-points-link' => 'Poin minggu ini',
 	'top-fans-monthly-points-link' => 'Poin bulan ini',
 	'top-fans-points' => 'poin',
+	'top-fans-by-category-title-edit-count' => 'Suntingan keseluruhan teratas',
+	'top-fans-by-category-title-friends-count' => 'Teman keseluruhan teratas',
+	'top-fans-by-category-title-foe-count' => 'Musuh keseluruhan teratas',
+	'top-fans-by-category-title-gifts-rec-count' => 'Hadiah diterima keseluruhan teratas',
+	'top-fans-by-category-title-gifts-sent-count' => 'Hadiah terkirim keseluruhan teratas',
+	'top-fans-by-category-title-vote-count' => 'Suara keseluruhan teratas',
+	'top-fans-by-category-title-comment-count' => 'Komentar keseluruhan teratas',
+	'top-fans-by-category-title-referrals-count' => 'Saran keseluruhan teratas',
+	'top-fans-by-category-title-comment-score-positive-rec' => 'Jempol naik keseluruhan teratas',
+	'top-fans-by-category-title-comment-score-negative-rec' => 'Jempol turun keseluruhan teratas',
+	'top-fans-by-category-title-comment-score-positive-given' => 'Hadiah jempol naik keseluruhan teratas',
+	'top-fans-by-category-title-comment-score-negative-given' => 'Hadiah jempol turun keseluruhan teratas',
+	'top-fans-by-category-title-monthly-winner-count' => 'Pemenang bulanan keseluruhan teratas',
+	'top-fans-by-category-title-weekly-winner-count' => 'Pemenang mingguan keseluruhan teratas',
 	'top-fans-bad-field-title' => 'Oh tidak!',
 	'top-fans-bad-field-message' => 'Statistik yang diminta tidak ada.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1||}}Suara',
@@ -2425,6 +2441,8 @@ $messages['sl'] = array(
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
+	'topusers' => 'Најбољи корисници',
+	'top-fans-by-points-nav-header' => 'Највећи фанови',
 	'top-fans-total-points-link' => 'Укупно поена',
 	'top-fans-weekly-points-link' => 'Поена ове недеље',
 	'top-fans-monthly-points-link' => 'Поена овог месеца',

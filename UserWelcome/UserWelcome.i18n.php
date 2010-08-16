@@ -1125,12 +1125,20 @@ $messages['ro'] = array(
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
+	'userwelcome-desc' => "Aggiunge 'u tag <code>&lt;welcomeUser&gt;</code> pe vedè le 'mbormaziune sociale de l'utende specifeche e de le utinde collegate",
 	'mp-userlevels-link' => "Levèlle de l'utende",
 	'mp-welcome-upload' => 'Careche',
 	'mp-welcome-edit' => 'Cange',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|punde|punde}}',
+	'mp-welcome-needed-points' => 'Pe scè nnande a <b><a href="$1">$2</a></b> guadagne <i>$3</i> cchiù {{PLURAL:$3|punde|punde}}!',
 	'mp-welcome-logged-in' => 'Cià $1',
 	'mp-requests-title' => 'Richieste',
+	'mp-requests-message' => 'Tu è le richieste seguende.',
 	'mp-request-new-message' => 'messagge nuève',
+	'mp-request-new-award' => '$1 {{PLURAL:$1|premie|premie}} nuève',
+	'mp-request-new-gift' => '$1 {{PLURAL:$1|riale|riale}} nuève',
+	'mp-request-new-foe' => '$1 {{PLURAL:$1|meniche|nemice}} nuève',
+	'mp-request-new-friend' => '$1 {{PLURAL:$1|amiche|amice}} nuève',
 );
 
 /** Russian (Русский)

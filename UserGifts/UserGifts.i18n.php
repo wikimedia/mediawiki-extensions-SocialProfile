@@ -787,6 +787,7 @@ $messages['ckb'] = array(
  * @author Imre
  * @author Jorges
  * @author Purodha
+ * @author The Evil IP address
  * @author Umherirrender
  */
 $messages['de'] = array(
@@ -863,7 +864,7 @@ $messages['de'] = array(
 	'g-uploadsuccess' => 'Hochladen erfolgreich',
 	'g-viewgiftlist' => 'Geschenkeliste ansehen',
 	'g-your-profile' => 'Dein Profil',
-	'gift_received_subject' => '$1 hat dir das $2-Geschenk auf {{SITENAME}} gesendet!',
+	'gift_received_subject' => '[{{SITENAME}}] $1 hat dir das $2-Geschenk gesendet!',
 	'gift_received_body' => 'Hallo $1,
 
 $2 hat dir eben das $3-Geschenk auf {{SITENAME}} gesendet!

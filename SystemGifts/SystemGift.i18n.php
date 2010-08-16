@@ -498,6 +498,7 @@ $messages['ckb'] = array(
 );
 
 /** German (Deutsch)
+ * @author The Evil IP address
  * @author Umherirrender
  */
 $messages['de'] = array(
@@ -538,7 +539,7 @@ $messages['de'] = array(
 	'ga-title' => 'Auszeichnungen von $1',
 	'ga-uploadsuccess' => 'Hochladen erfolgreich',
 	'ga-viewlist' => 'Geschenkeliste ansehen',
-	'system_gift_received_subject' => 'Du hast die $1-Auszeichnung auf {{SITENAME}} erhalten!',
+	'system_gift_received_subject' => '[{{SITENAME}}] Du hast die $1-Auszeichnung erhalten!',
 	'system_gift_received_body' => 'Hallo $1,
 
 du hast eben die $2-Auszeichnung auf {{SITENAME}} erhalten!
