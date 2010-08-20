@@ -1328,6 +1328,7 @@ $messages['szl'] = array(
 );
 
 /** Tamil (தமிழ்)
+ * @author TRYPPN
  * @author Ulmo
  */
 $messages['ta'] = array(
@@ -1335,7 +1336,7 @@ $messages['ta'] = array(
 	'mp-userlevels-link' => 'பயனர் நிலைகள்',
 	'mp-welcome-upload' => 'பதிவேற்று',
 	'mp-welcome-edit' => 'தொகு',
-	'mp-welcome-points' => '$1 புள்ளிகள்',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|புள்ளி|புள்ளிகள்}}',
 	'mp-welcome-needed-points' => '<b><a href="$1">$2</a></b> இற்கு முன்னேறிச்செல்ல <i>$3</i> {{PLURAL:$3|புள்ளி|புள்ளிகள்}} ஈட்டுக!',
 	'mp-welcome-logged-in' => 'வணக்கம் $1',
 	'mp-requests-title' => 'கோரிக்கைகள்',

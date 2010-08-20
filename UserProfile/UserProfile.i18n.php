@@ -7207,6 +7207,17 @@ $messages['no'] = array(
 	'right-avatarremove' => 'Fjern brukerens avatarer',
 );
 
+/** Northern Sotho (Sesotho sa Leboa)
+ * @author Mohau
+ */
+$messages['nso'] = array(
+	'user-count-separator' => '$1 ya $2',
+	'user-friends-title' => 'Bagwera',
+	'user-foes-title' => 'Manaba',
+	'other-info-books' => 'Dipuku',
+	'other-info-drinks' => 'Dino',
+);
+
 /** Occitan (Occitan)
  * @author Cedric31
  */
