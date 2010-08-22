@@ -10668,6 +10668,7 @@ $messages['vi'] = array(
  * @author Smeira
  */
 $messages['vo'] = array(
+	'user-time-ago' => 'bü $1',
 	'user-gifts-title' => 'Legivots',
 	'user-count-separator' => '$1 se $2',
 	'user-view-all' => 'Logön vali',
@@ -10682,7 +10683,7 @@ $messages['vo'] = array(
 	'user-send-gift' => 'Sedön legivoti',
 	'user-contributions' => 'Keblünots',
 	'user-stats-title' => 'Statits',
-	'user-stats-comments' => 'Küpets',
+	'user-stats-comments' => '{{PLURAL:$1|Küpet|Küpets}}',
 	'other-info-title' => 'Nüns votik',
 	'user-friends-title' => 'Flens',
 	'user-foes-title' => 'Neflens',
