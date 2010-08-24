@@ -503,7 +503,15 @@ $messages['frp'] = array(
 	'mp-userlevels-link' => 'Nivéls a l’utilisator',
 	'mp-welcome-upload' => 'Tèlèchargiér',
 	'mp-welcome-edit' => 'Changiér',
+	'mp-welcome-points' => '$1 pouent{{PLURAL:$1||s}}',
+	'mp-welcome-logged-in' => 'Benvegnua $1',
 	'mp-requests-title' => 'Requétes',
+	'mp-requests-message' => 'Vos avéd cetes requétes.',
+	'mp-request-new-message' => 'mèssâjo novél',
+	'mp-request-new-award' => '$1 prix novél{{PLURAL:$1||s}}',
+	'mp-request-new-gift' => '$1 {{PLURAL:$1|present novél|presents novéls}}',
+	'mp-request-new-foe' => '$1 {{PLURAL:$1|novél ènemi|novéls ènemis}}',
+	'mp-request-new-friend' => '$1 {{PLURAL:$1|novél ami|novéls amis}}',
 );
 
 /** Irish (Gaeilge)

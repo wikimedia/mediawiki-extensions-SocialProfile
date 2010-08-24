@@ -2572,6 +2572,13 @@ a zmeňte svoje nastavenia týkajúce sa upozornení emailom.',
 	'right-awardsmanage' => 'Vytvárať nové alebo upravovať existujúce ocenenia',
 );
 
+/** Slovenian (Slovenščina)
+ * @author Dbc334
+ */
+$messages['sl'] = array(
+	'ga-goback' => 'Pojdi nazaj',
+);
+
 /** Serbian Cyrillic ekavian (Српски (ћирилица))
  * @author Михајло Анђелковић
  */

@@ -2710,11 +2710,55 @@ et modifiez vos préférences pour désactiver les notifications par courriel.',
 
 /** Franco-Provençal (Arpetan)
  * @author Cedric31
+ * @author ChrisPtDe
  */
 $messages['frp'] = array(
+	'viewrelationships' => 'Vêre les relacions',
+	'viewrelationshiprequests' => 'Vêre les requétes de les relacions',
+	'ur-already-submitted' => 'Voutra requéta at étâ mandâ',
+	'ur-error-page-title' => 'Chancro !',
+	'ur-main-page' => 'Reçua',
+	'ur-your-profile' => 'Voutres enformacions',
+	'ur-backlink' => '&lt; Retôrn de vers les enformacions de $1',
+	'ur-relationship-count-foes' => '$1 at $2 ènemi{{PLURAL:$2||s}}.
+Nen voléd-vos adés més ?
+<a href="$3">Envitâd-los !</a>',
+	'ur-relationship-count-friends' => '$1 at $2 ami{{PLURAL:$2||s}}.
+Nen voléd-vos adés més ?
+<a href="$3">Envitâd-los !</a>',
+	'ur-add-friends' => 'Voléd-vos més d’amis ?
+<a href="$1">Envitâd-los !</a>',
+	'ur-add-friend' => 'Apondre coment ami',
+	'ur-add-foe' => 'Apondre coment ènemi',
+	'ur-add-personal-message' => 'Apondre un mèssâjo a sè',
+	'ur-remove-relationship-friend' => 'Enlevar coment ami',
+	'ur-remove-relationship-foe' => 'Enlevar coment ènemi',
+	'ur-give-gift' => 'Mandar un present',
+	'ur-previous' => 'devant',
+	'ur-next' => 'aprés',
 	'ur-remove' => 'Enlevar',
 	'ur-cancel' => 'Anular',
 	'ur-login' => 'Branchement',
+	'ur-add-button-foe' => 'Apondre coment ènemi',
+	'ur-add-button-friend' => 'Apondre coment ami',
+	'ur-add-error-message-pending-request-title' => 'Pacience !',
+	'ur-requests-title' => 'Requétes de relacions',
+	'ur-requests-message-foe' => '<a href="$1">$2</a> vôt étre voutron ènemi.',
+	'ur-requests-message-friend' => '<a href="$1">$2</a> vôt étre voutron ami.',
+	'ur-accept' => 'Accèptar',
+	'ur-reject' => 'Refusar',
+	'ur-requests-added-message-foe' => 'Vos éd apondu $1 coment voutron ènemi.',
+	'ur-requests-added-message-friend' => 'Vos éd apondu $1 coment voutron ami.',
+	'ur-requests-reject-message-friend' => 'Vos éd refusâ $1 coment voutron ami.',
+	'ur-requests-reject-message-foe' => 'Vos éd refusâ $1 coment voutron ènemi.',
+	'ur-title-foe' => 'Lista ux ènemis a $1',
+	'ur-title-friend' => 'Lista ux amis a $1',
+	'friend_request_subject' => '$1 vos at apondu coment un ami dessus {{SITENAME}} !',
+	'foe_request_subject' => 'O est la guèrra ! $1 vos at apondu coment un ènemi dessus {{SITENAME}} !',
+	'friend_accept_subject' => '$1 at accèptâ voutra requéta en amitiêt dessus {{SITENAME}} !',
+	'foe_accept_subject' => 'O est fêt ! $1 at accèptâ voutra dècllaracion de guèrra dessus {{SITENAME}} !',
+	'friend_removed_subject' => 'Chancro ! $1 vos at enlevâ de la lista a sos amis dessus {{SITENAME}} !',
+	'foe_removed_subject' => 'Crenom ! $1 vos at enlevâ de la lista a sos ènemis dessus {{SITENAME}} !',
 );
 
 /** Western Frisian (Frysk)
@@ -4516,7 +4560,7 @@ De e-mail jescheck kriß.',
  */
 $messages['kw'] = array(
 	'ur-main-page' => 'Pennfolen',
-	'ur-cancel' => 'Hedhi',
+	'ur-cancel' => 'Hedhy',
 );
 
 /** Luxembourgish (Lëtzebuergesch)

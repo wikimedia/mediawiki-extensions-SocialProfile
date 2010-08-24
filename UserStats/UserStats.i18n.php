@@ -1003,7 +1003,23 @@ et modifiez vos paramètres en désactivant les notifications par courriel.',
  */
 $messages['frp'] = array(
 	'top-fans-points' => 'pouents',
+	'top-fans-bad-field-title' => 'Crenom !',
+	'top-fans-stats-vote-count' => 'Voto{{PLURAL:$1||s}}',
+	'top-fans-stats-monthly-winner-count' => 'Victouère{{PLURAL:$1||s}} du mês',
+	'top-fans-stats-weekly-winner-count' => 'Victouère{{PLURAL:$1||s}} de la semana',
 	'top-fans-stats-edit-count' => 'changement{{PLURAL:$1||s}}',
+	'top-fans-stats-comment-count' => 'Comentèro{{PLURAL:$1||s}}',
+	'top-fans-stats-referrals-completed' => 'Recomandacion{{PLURAL:$1||s}}',
+	'top-fans-stats-friends-count' => 'Ami{{PLURAL:$1||s}}',
+	'top-fans-stats-foe-count' => 'Ènemi{{PLURAL:$1||s}}',
+	'top-fans-stats-opinions-published' => 'Avis publeyê{{PLURAL:$1||s}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Avis|Avis}}',
+	'top-fans-stats-comment-score-positive-rec' => 'Bravô{{PLURAL:$1||s}}',
+	'top-fans-stats-comment-score-negative-rec' => 'Zérô{{PLURAL:$1||s}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Bravô balyê|Bravôs balyês}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Zérô balyê|Zérôs balyês}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Present reçu|Presents reçus}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Present mandâ|Presents mandâs}}',
 );
 
 /** Galician (Galego)
