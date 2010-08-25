@@ -6690,6 +6690,7 @@ $messages['myv'] = array(
 
 /** Nahuatl (Nāhuatl)
  * @author Fluence
+ * @author Ricardo gs
  */
 $messages['nah'] = array(
 	'user-view-all' => 'Tiquinttāz mochīntīn',
@@ -6698,7 +6699,7 @@ $messages['nah'] = array(
 	'user-add-friend' => 'Ticcēntilīz quemeh mocnīuh',
 	'user-contributions' => 'Ītlahcuilōl',
 	'user-stats-title' => 'Tlapōhualiztli',
-	'user-stats-edits' => 'Tlapatlaliztli',
+	'user-stats-edits' => '{{PLURAL:$1|Tlapatlaliztli|Tlapatlaliztli}}',
 	'other-info-title' => 'Occē tlanōnōtzaliztli',
 	'user-friends-title' => 'Icnīuhtli',
 	'other-info-movies' => 'Īxiptlayōlli',
