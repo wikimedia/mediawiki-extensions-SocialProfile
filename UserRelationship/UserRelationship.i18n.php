@@ -2733,7 +2733,7 @@ Nen voléd-vos adés més ?
 	'ur-add-personal-message' => 'Apondre un mèssâjo a sè',
 	'ur-remove-relationship-friend' => 'Enlevar coment ami',
 	'ur-remove-relationship-foe' => 'Enlevar coment ènemi',
-	'ur-give-gift' => 'Mandar un present',
+	'ur-give-gift' => 'Balyér un present',
 	'ur-previous' => 'devant',
 	'ur-next' => 'aprés',
 	'ur-remove' => 'Enlevar',

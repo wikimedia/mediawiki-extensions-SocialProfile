@@ -252,6 +252,26 @@ $messages['fr'] = array(
 	'useractivity-user_message' => '$1 a envoyé {{PLURAL:$4|un message|des messages}} à $3',
 );
 
+/** Franco-Provençal (Arpetan)
+ * @author ChrisPtDe
+ */
+$messages['frp'] = array(
+	'useractivity' => 'Activitât ux amis',
+	'useractivity-award' => '$1 at reçu un prix',
+	'useractivity-all' => 'Vêre tot',
+	'useractivity-edit' => '$1 at changiê {{PLURAL:$4|la pâge|cetes pâges :}} $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|est ora ènemi|sont ora ènemis}} avouéc $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|est ora ami|sont ora amis}} avouéc $3',
+	'useractivity-gift' => '$1 at reçu un present de $2',
+	'useractivity-group-edit' => '$1 changement{{PLURAL:$1||s}}',
+	'useractivity-group-comment' => '$1 comentèro{{PLURAL:$1||s}}',
+	'useractivity-group-user_message' => '$1 mèssâjo{{PLURAL:$1||s}}',
+	'useractivity-group-friend' => '$1 ami{{PLURAL:$1||s}}',
+	'useractivity-siteactivity' => 'Activitât du seto',
+	'useractivity-title' => 'Activitât ux amis',
+	'useractivity-user_message' => '$1 at mandâ {{PLURAL:$4|un mèssâjo|des mèssâjos}} a $3',
+);
+
 /** Galician (Galego)
  * @author Toliño
  */

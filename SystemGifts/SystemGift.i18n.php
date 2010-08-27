@@ -1022,10 +1022,33 @@ et modifiez vos préférences pour désactiver les notifications par courriel.',
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
+	'systemgiftmanager' => 'Sistèmo d’administracion de presents',
+	'ga-addnew' => '+ Apondre un present novél',
+	'ga-back-edit-gift' => 'Tornar u changement de ceti present',
+	'ga-back-gift-list' => 'Tornar a la lista des presents',
+	'ga-choosefile' => 'Chouèsir lo fichiér :',
+	'ga-count' => '$1 at {{PLURAL:$2|yon prix|$2 prix}}.',
+	'ga-create-gift' => 'Fâre un present',
+	'ga-created' => 'Lo present at étâ fêt',
+	'ga-currentimage' => 'Émâge d’ora',
+	'ga-gift' => 'present',
+	'ga-gift-given-count' => 'Ceti present at étâ balyê {{PLURAL:$1|yon côp|$1 côps}}',
+	'ga-gift-title' => '« $2 » a $1',
+	'ga-giftdesc' => 'dèscripcion du present',
+	'ga-giftimage' => 'émâge du present',
+	'ga-giftname' => 'nom du present',
+	'ga-gifttype' => 'tipo de present',
+	'ga-goback' => 'Tornar',
+	'ga-img' => 'apondre / remplaciér l’émâge',
 	'ga-large' => 'Grant',
+	'ga-medium' => 'Moyen',
+	'ga-mediumlarge' => 'Moyen-grant',
 	'ga-new' => 'Novél',
 	'ga-next' => 'Aprés',
+	'ga-previous' => 'Devant',
 	'ga-small' => 'Petiôt',
+	'ga-title' => 'Prix a $1',
+	'ga-viewlist' => 'Vêre la lista des presents',
 );
 
 /** Galician (Galego)
