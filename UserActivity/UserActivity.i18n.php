@@ -528,7 +528,7 @@ $messages['no'] = array(
  * @author Xqt
  */
 $messages['pdc'] = array(
-	'useractivity-group-comment' => '{{PLURAL:$1|ee Anmaerricking|$1 Anmaerrickinge}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|ee Aamaericking|$1 Aamaerickinge}}',
 );
 
 /** Polish (Polski) */

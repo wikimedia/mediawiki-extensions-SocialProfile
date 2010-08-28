@@ -2006,7 +2006,7 @@ e modificatz vòstres paramètres en desactivant las notificacions per corrièr 
  * @author Xqt
  */
 $messages['pdc'] = array(
-	'top-fans-stats-comment-count' => '{{PLURAL:$1|Anmaerricking|Anmaerrickinge}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Aamaericking|Aamaerickinge}}',
 );
 
 /** Polish (Polski)
