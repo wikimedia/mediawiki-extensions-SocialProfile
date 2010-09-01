@@ -10894,6 +10894,7 @@ $messages['vo'] = array(
  */
 $messages['yi'] = array(
 	'user-count-separator' => '$1 פֿון $2',
+	'user-view-all' => 'באַקוקן אַלע',
 	'user-stats-title' => 'סטאַטיסטיק',
 	'user-stats-edits' => '{{PLURAL:$1|רעדאַקטירונג|רעדאַקטירונגען}}',
 	'other-info-music' => 'מוזיק',
