@@ -2047,7 +2047,7 @@ $messages['cs'] = array(
  * @author ОйЛ
  */
 $messages['cu'] = array(
-	'user-watchlist' => 'Моꙗ́ блюдє́ниꙗ',
+	'user-watchlist' => 'моꙗ́ блюдє́ниꙗ',
 	'user-personal-info-real-name' => 'и́стиньно и́мѧ',
 	'user-profile-section-preferences' => 'строи',
 	'user-page-link' => 'по́льꙃєватєл҄ь',
