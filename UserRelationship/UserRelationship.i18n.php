@@ -508,7 +508,7 @@ $2 أزالك كعدو في {{SITENAME}}!
 $messages['arc'] = array(
 	'ur-error-page-title' => 'ܐܘܝ!',
 	'ur-main-page' => 'ܦܐܬܐ ܪܫܝܬܐ',
-	'ur-your-profile' => 'ܠܦܦܐ ܕܝܠܟ',
+	'ur-your-profile' => 'ܦܘܓܪܦܐ ܕܝܠܟ',
 	'ur-add-friend' => 'ܐܘܣܦ ܐܝܟ ܚܒܪܐ',
 	'ur-add-foe' => 'ܐܘܣܦ ܐܝܟ ܒܥܠܕܒܒܐ',
 	'ur-remove-relationship-friend' => 'ܠܚܝ ܐܝܟ ܚܒܪܐ',
