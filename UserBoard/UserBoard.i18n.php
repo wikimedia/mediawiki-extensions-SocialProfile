@@ -2491,6 +2491,7 @@ $messages['pdc'] = array(
  */
 $messages['pl'] = array(
 	'boardblastlogintitle' => 'Musisz się zalogować, aby pisać ogłoszenia na forum',
+	'boardblastlogintext' => 'Aby wysłać ogłoszenie musisz <a href="index.php?title=Special:UserLogin">zalogować się</a>.',
 	'messagesenttitle' => 'Wiadomości zostały wysłane',
 	'boardblasttitle' => 'Wyślij ogłoszenie',
 	'boardblaststep1' => 'Krok 1 – Napisz wiadomość',
@@ -2527,12 +2528,28 @@ $messages['pl'] = array(
 	'userboard_prevpage' => 'poprz.',
 	'userboard_nomessages' => 'Brak wiadomości.',
 	'userboard_sendbutton' => 'wyślij',
+	'userboard_loggedout' => 'Musisz <a href="$1">zalogować się</a> aby wysłać wiadomość do innego użytkownika.',
+	'userboard_showingmessages' => 'Pokazano {{PLURAL:$4|wiadomość $3|wiadomości $2‐$3}} z $1',
 	'right-userboard-delete' => 'Usuwanie z forum ogłoszeń wstawionych przez innych',
 	'userboard-time-days' => '{{PLURAL:$1|jeden dzień|$1 dni}}',
 	'userboard-time-hours' => '{{PLURAL:$1|jedną godzinę|$1 godziny|$1 godzin}}',
 	'userboard-time-minutes' => '{{PLURAL:$1|jedną minutę|$1 minuty|$1 minut}}',
 	'userboard-time-seconds' => '{{PLURAL:$1|jedną sekundę|$1 sekundy|$1 sekund}}',
 	'message_received_subject' => '$1 napisał na Twoim forum na {{GRAMMAR:MS.lp|{{SITENAME}}}}',
+	'message_received_body' => 'Witaj $1.
+
+$2 napisał do Ciebie na {{GRAMMAR:MS.lp|{{SITENAME}}}}!
+
+Kliknij poniżej aby sprawdzić swoje forum!
+
+$3
+
+---
+
+Nie chcesz otrzymywać od nas maili?
+
+Kliknij $4
+i zmień ustawienia, wyłączając powiadomienia e‐mail.',
 );
 
 /** Piedmontese (Piemontèis)
