@@ -497,6 +497,16 @@ $messages['ckb'] = array(
 	'ga-goback' => 'گەڕانەوە بۆ دواوە',
 );
 
+/** Czech (Česky) */
+$messages['cs'] = array(
+	'ga-large' => 'Velká',
+	'ga-medium' => 'Střední',
+	'ga-new' => 'Nová',
+	'ga-next' => 'Další',
+	'ga-previous' => 'Předchozí',
+	'ga-small' => 'Malá',
+);
+
 /** German (Deutsch)
  * @author The Evil IP address
  * @author Umherirrender
@@ -2939,6 +2949,9 @@ $messages['zh-hans'] = array(
 	'ga-goback' => '后退',
 	'ga-large' => '大',
 	'ga-medium' => '中',
+	'ga-new' => '新的',
+	'ga-next' => '下一个',
+	'ga-previous' => '前页',
 	'ga-small' => '小',
 	'ga-uploadsuccess' => '上载成功',
 	'ga-viewlist' => '检视礼物清单',

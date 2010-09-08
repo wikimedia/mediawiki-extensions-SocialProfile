@@ -782,6 +782,20 @@ $messages['ckb'] = array(
 	'g-next' => 'پاش',
 );
 
+/** Czech (Česky) */
+$messages['cs'] = array(
+	'giftmanager-public' => 'veřejné',
+	'giftmanager-private' => 'privátní',
+	'g-go-back' => 'Zpět',
+	'g-large' => 'Velká',
+	'g-medium' => 'Střední',
+	'g-new' => 'nová',
+	'g-next' => 'Další',
+	'g-previous' => 'Předchozí',
+	'g-remove' => 'Odstranit',
+	'g-small' => 'Malá',
+);
+
 /** German (Deutsch)
  * @author Als-Holder
  * @author Imre
@@ -4834,6 +4848,9 @@ $messages['zh-hans'] = array(
 	'g-main-page' => '主页',
 	'g-medium' => '中',
 	'g-mediumlarge' => '中至大',
+	'g-new' => '新',
+	'g-next' => '下一个',
+	'g-previous' => '前页',
 	'g-remove' => '移除',
 	'g-remove-gift' => '移除这份礼物',
 	'g-remove-title' => '移除「$1」?',

@@ -1331,6 +1331,15 @@ $messages['ckb'] = array(
 	'ur-reject' => 'پەسەند نەکردن',
 );
 
+/** Czech (Česky) */
+$messages['cs'] = array(
+	'ur-previous' => 'předchozí',
+	'ur-next' => 'další',
+	'ur-remove' => 'Odstranit',
+	'ur-cancel' => 'Storno',
+	'ur-login' => 'Přihlásit',
+);
+
 /** Church Slavic (Словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
  * @author ОйЛ
  */
@@ -8086,6 +8095,8 @@ $messages['zh-hans'] = array(
 	'ur-remove-relationship-friend' => '从朋友清单移除',
 	'ur-remove-relationship-foe' => '从仇敌清单移除',
 	'ur-give-gift' => '送礼物',
+	'ur-previous' => '先前',
+	'ur-next' => '后继',
 	'ur-remove-relationship-title-foe' => '您要把$1从仇敌清单中移除吗?',
 	'ur-remove-relationship-title-confirm-foe' => '您已把$1从仇敌清单中移除',
 	'ur-remove-relationship-title-friend' => '您要把$1从朋友清单中移除吗?',

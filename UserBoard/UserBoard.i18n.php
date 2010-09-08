@@ -3505,6 +3505,10 @@ $messages['zh-hans'] = array(
 	'boardlinkselectfoes' => '选择仇敌',
 	'userboard_delete' => '删除',
 	'userboard_posted_ago' => '在$1前张贴',
+	'userboard_private' => '私有',
+	'userboard_public' => '公开',
+	'userboard_nextpage' => '后继',
+	'userboard_prevpage' => '先前',
 	'userboard_nomessages' => '没有信息。',
 	'userboard_sendbutton' => '发送',
 );

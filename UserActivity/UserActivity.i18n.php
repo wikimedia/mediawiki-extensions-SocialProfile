@@ -147,6 +147,11 @@ $messages['bs'] = array(
 	'useractivity-title' => 'Aktivnosti prijatelja',
 );
 
+/** Czech (Česky) */
+$messages['cs'] = array(
+	'useractivity-all' => 'Zobrazit všechny',
+);
+
 /** German (Deutsch)
  * @author Kghbln
  * @author The Evil IP address

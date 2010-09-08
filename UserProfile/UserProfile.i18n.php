@@ -473,6 +473,7 @@ $messages['qqq'] = array(
 	'user-profile-section-interests' => '{{Identical|Other information}}',
 	'user-profile-section-picture' => '{{Identical|Avatar}}',
 	'user-profile-section-preferences' => '{{Identical|Preferences}}',
+	'user-profile-personal-info' => '{{Identical|Info}}',
 	'user-profile-personal-name' => '{{Identical|Name}}',
 	'user-profile-personal-email' => '{{Identical|E-mail}}',
 	'user-profile-personal-location' => '{{Identical|Location}}',
@@ -1977,6 +1978,7 @@ $messages['cs'] = array(
 	'user-send-message' => 'Poslat zprávu',
 	'user-send-gift' => 'Poslat dárek',
 	'user-contributions' => 'Příspěvky',
+	'user-stats-title' => 'Statistika',
 	'other-info-title' => 'Jiné informace',
 	'user-friends-title' => 'Přatelé',
 	'user-foes-title' => 'Nepřátelé',
@@ -2041,6 +2043,14 @@ $messages['cs'] = array(
 	'user-profile-personal-country' => 'Země',
 	'user-profile-personal-hometown' => 'Město',
 	'user-profile-personal-birthday' => 'Narozeniny',
+	'user-profile-personal-occupation' => 'Povolání',
+	'user-profile-interests-movies' => 'Filmy',
+	'user-profile-update-button' => 'Aktualizovat',
+	'user-profile-picture-large' => 'Velká',
+	'user-profile-picture-medium' => 'Střední',
+	'user-profile-picture-small' => 'Malá',
+	'user-profile-goback' => 'Zpět',
+	'user-page-link' => 'Uživatelská stránka',
 );
 
 /** Church Slavic (Словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
