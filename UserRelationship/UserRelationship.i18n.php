@@ -6775,16 +6775,16 @@ $2 удалил вас из списка недругов на {{SITENAME}}!
 и измените ваши настройки, отключив отправку уведомлений по электронной почте.',
 );
 
-/** Rusyn (русиньскый язык)
+/** Rusyn (Русиньскый)
  * @author Gazeb
  */
 $messages['rue'] = array(
 	'ur-main-page' => 'Головна сторінка',
-	'ur-add-friend' => 'Придати як камарата',
+	'ur-add-friend' => 'Придати як приятеля',
 	'ur-previous' => 'попереднїй',
 	'ur-next' => 'далшый',
 	'ur-cancel' => 'Зрушыти',
-	'ur-add-button-friend' => 'Придати як камарата',
+	'ur-add-button-friend' => 'Придати як приятеля',
 	'ur-accept' => 'Підтвердити',
 );
 
@@ -7943,6 +7943,14 @@ Hey, bizden e-posta alımını durdurmak ister misiniz?
 
 $4 bağlantısına tıklayın
 ve e-posta bildirimlerini devre dışı bırakmak için ayarlarınızı değiştirin.',
+);
+
+/** Tatar (Cyrillic) (Татарча/Tatarça (Cyrillic))
+ * @author Ильнар
+ */
+$messages['tt-cyrl'] = array(
+	'ur-main-page' => 'Баш бит',
+	'ur-your-profile' => 'Сезнең профиль',
 );
 
 /** Uighur (Latin) (ئۇيغۇرچە / Uyghurche‎ (Latin))

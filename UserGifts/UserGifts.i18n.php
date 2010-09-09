@@ -4759,6 +4759,20 @@ ve e-posta bildirimlerini devre dışı bırakmak için ayarlarınızı değişt
 	'right-giftadmin' => 'Yeni hediye oluşturur ve mevcut hediyeleri düzenler',
 );
 
+/** Tatar (Cyrillic) (Татарча/Tatarça (Cyrillic))
+ * @author Ильнар
+ */
+$messages['tt-cyrl'] = array(
+	'g-main-page' => 'Баш бит',
+	'g-medium' => 'Урта',
+	'g-mediumlarge' => 'Уртача зур',
+	'g-new' => 'яңа',
+	'g-next' => 'Киләсе',
+	'g-previous' => 'Алдагы',
+	'g-remove' => 'Бетерү',
+	'g-remove-gift' => 'Бу бүләкне бетерү',
+);
+
 /** Ukrainian (Українська)
  * @author Prima klasy4na
  */

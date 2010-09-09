@@ -8867,14 +8867,14 @@ $messages['ru'] = array(
 	'right-avatarremove' => 'Удаление аватар участников',
 );
 
-/** Rusyn (русиньскый язык)
+/** Rusyn (Русиньскый)
  * @author Gazeb
  */
 $messages['rue'] = array(
 	'user-stats-title' => 'Штатістіка',
 	'other-info-title' => 'Іншы інформації',
-	'user-friends-title' => 'Камаратя',
-	'user-foes-title' => 'Некамаратя',
+	'user-friends-title' => 'Приятелї',
+	'user-foes-title' => 'Неприятелї',
 	'other-info-movies' => 'Філмы',
 	'other-info-tv' => 'ТВ',
 	'other-info-music' => 'Музика',
@@ -8912,8 +8912,8 @@ $messages['rue'] = array(
 	'user-recent-activity-comment' => 'Коментовав сторінку',
 	'user-recent-activity-gift-sent' => 'Послав подарунок',
 	'user-recent-activity-gift-rec' => 'Дістав подарунок од',
-	'user-recent-activity-friend' => 'Теперь є камарат з',
-	'user-recent-activity-foe' => 'Теперь  є некамарат з',
+	'user-recent-activity-friend' => 'Теперь є приятель з',
+	'user-recent-activity-foe' => 'Теперь  є неприятель з',
 	'user-recent-activity-user-message' => 'Послав повідомлїня',
 	'user-recent-activity-network-update' => 'Послав думку',
 	'user-recent-system-gift' => 'Дістав оцінїня',

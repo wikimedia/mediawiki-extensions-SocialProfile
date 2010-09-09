@@ -2900,14 +2900,14 @@ $3
 и измените ваши настройки, отключив отправку уведомлений.',
 );
 
-/** Rusyn (русиньскый язык)
+/** Rusyn (Русиньскый)
  * @author Gazeb
  */
 $messages['rue'] = array(
 	'boardlinkselectall' => 'Выбрати вшыткы',
 	'boardlinkunselectall' => 'Зрушыти выбер',
-	'boardlinkselectfriends' => 'Выбрати камаратів',
-	'boardlinkunselectfriends' => 'Зрушыти выбер камаратів',
+	'boardlinkselectfriends' => 'Выбрати приятелїв',
+	'boardlinkunselectfriends' => 'Зрушыти выбер приятелїв',
 	'boardlinkselectfoes' => 'Выбрати неприятелїв',
 	'boardlinkunselectfoes' => 'Зрушыти выбер неприятелїв',
 	'boardsendbutton' => 'Послати повідомлїня фора',
