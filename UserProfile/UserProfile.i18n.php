@@ -8262,6 +8262,7 @@ Clique <a href="$1">aqui</a> para se autenticar ou <a href="$2">aqui</a> para se
 
 /** Brazilian Portuguese (Português do Brasil)
  * @author Eduardo.mps
+ * @author Giro720
  * @author Heldergeovane
  * @author Jorge Morais
  * @author Malafaya
@@ -8348,7 +8349,7 @@ Clique <a href="$1">aqui</a> para se autenticar ou clique <a href="$2">aqui</a> 
 	'user-profile-update-profile' => 'perfil',
 	'user-profile-default-country' => 'Brasil',
 	'user-profile-points' => '$1 {{PLURAL:$1|ponto|pontos}}',
-	'user-profile-section-personal' => 'Informação pessoal',
+	'user-profile-section-personal' => 'Informações pessoais',
 	'user-profile-section-sportsteams' => 'Time esportivo',
 	'user-profile-section-custom' => 'Informação personalizada',
 	'user-profile-section-interests' => 'Outras informações',
