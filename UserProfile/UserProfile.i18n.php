@@ -2668,6 +2668,7 @@ $messages['el'] = array(
 );
 
 /** Esperanto (Esperanto)
+ * @author LyzTyphone
  * @author Melancholie
  * @author Michawiki
  * @author Yekrats
@@ -2682,7 +2683,7 @@ $messages['eo'] = array(
 	'user-upload-image' => 'Alŝuti bildon',
 	'user-edit-this' => 'Redaktu ĉi tion',
 	'user-edit-profile' => 'Redakti preferojn',
-	'user-upload-avatar' => 'Alŝutu avataron',
+	'user-upload-avatar' => 'Alŝuti vizaĝbildon',
 	'user-watchlist' => 'Mia atentaro',
 	'user-meet-people' => 'Renkonti homojn',
 	'user-add-friend' => 'Aldonu kiel amikon',
