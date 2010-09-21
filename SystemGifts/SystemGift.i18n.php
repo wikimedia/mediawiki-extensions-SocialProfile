@@ -576,11 +576,12 @@ und ändere deine Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
 );
 
 /** German (formal address) (Deutsch (Sie-Form))
+ * @author The Evil IP address
  * @author Umherirrender
  */
 $messages['de-formal'] = array(
 	'ga-error-message-no-user' => 'Der Benutzer, den Sie anschauen möchten, existiert nicht.',
-	'system_gift_received_subject' => 'Sie haben die $1-Auszeichnung auf {{SITENAME}} erhalten!',
+	'system_gift_received_subject' => '[{{SITENAME}}]Sie haben die $1-Auszeichnung erhalten!',
 	'system_gift_received_body' => 'Hallo $1,
 
 Sie haben eben die $2-Auszeichnung auf {{SITENAME}} erhalten!
@@ -2522,7 +2523,7 @@ $4
 	'right-awardsmanage' => 'создание новых и правка существующих наград',
 );
 
-/** Rusyn (русиньскый язык)
+/** Rusyn (Русиньскый)
  * @author Gazeb
  */
 $messages['rue'] = array(

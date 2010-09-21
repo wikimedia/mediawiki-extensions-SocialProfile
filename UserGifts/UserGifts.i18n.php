@@ -904,6 +904,7 @@ und ändere deine Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
 
 /** German (formal address) (Deutsch (Sie-Form))
  * @author Imre
+ * @author The Evil IP address
  * @author Umherirrender
  */
 $messages['de-formal'] = array(
@@ -923,7 +924,7 @@ $messages['de-formal'] = array(
 	'g-sent-title' => 'Sie haben ein Geschenk an $1 gesendet',
 	'g-sent-message' => 'Sie haben die folgenden Geschenke an $1 gesendet.',
 	'g-your-profile' => 'Ihr Profil',
-	'gift_received_subject' => '$1 hat Ihnen das $2-Geschenk auf {{SITENAME}} gesendet!',
+	'gift_received_subject' => '[{{SITENAME}}] $1 hat Ihnen das $2-Geschenk gesendet!',
 	'gift_received_body' => 'Hallo $1,
 
 $2 hat Ihnen eben das $3-Geschenk auf {{SITENAME}} gesendet!
@@ -3969,7 +3970,7 @@ $4
 	'right-giftadmin' => 'создание новых и правка существующих подарков',
 );
 
-/** Rusyn (русиньскый язык)
+/** Rusyn (Русиньскый)
  * @author Gazeb
  */
 $messages['rue'] = array(

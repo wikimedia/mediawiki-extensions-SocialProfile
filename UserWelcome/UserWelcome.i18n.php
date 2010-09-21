@@ -1171,7 +1171,7 @@ $messages['ru'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|новый друг|новых друга|новых друзей}}',
 );
 
-/** Rusyn (русиньскый язык)
+/** Rusyn (Русиньскый)
  * @author Gazeb
  */
 $messages['rue'] = array(

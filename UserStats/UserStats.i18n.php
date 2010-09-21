@@ -578,9 +578,10 @@ und ändere deine Einstellungen, um die E-Mail-Benachrichtigungen abzustellen.',
 
 /** German (formal address) (Deutsch (Sie-Form))
  * @author Imre
+ * @author The Evil IP address
  */
 $messages['de-formal'] = array(
-	'level-advance-subject' => 'Sie sind jetzt „$1“ auf {{SITENAME}}!',
+	'level-advance-subject' => '[{{SITENAME}}] Sie sind jetzt „$1“!',
 	'level-advance-body' => 'Guten Tag $1,
 
 Sie sind jetzt ein „$2“ bei {{SITENAME}}!
@@ -2386,7 +2387,7 @@ $messages['ru'] = array(
 и измените настройки отправки уведомлений по эл. почте.',
 );
 
-/** Rusyn (русиньскый язык)
+/** Rusyn (Русиньскый)
  * @author Gazeb
  */
 $messages['rue'] = array(

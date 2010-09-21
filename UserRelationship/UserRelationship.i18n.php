@@ -1529,23 +1529,24 @@ und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
 
 /** German (formal address) (Deutsch (Sie-Form))
  * @author Imre
+ * @author The Evil IP address
  * @author Umherirrender
  */
 $messages['de-formal'] = array(
 	'ur-already-submitted' => 'Ihre Anfrage wurde gesendet',
 	'ur-your-profile' => 'Ihr Profil',
 	'ur-relationship-count-foes' => '$1 hat {{PLURAL:$2|einen Feind|$2 Feinde}}. Sie möchten mehr Feinde? <a href="$3">Laden Sie sie ein.</a>',
-	'ur-relationship-count-friends' => '$1 hat {{PLURAL:$2|einen Freund|$2 Freunde}}. Sie wollen mehr Freunde? <a href="$3">Laden Sie sie ein.</a>',
+	'ur-relationship-count-friends' => '$1 hat {{PLURAL:$2|einen Freund|$2 Freunde}}. Sie möchten mehr Freunde? <a href="$3">Laden Sie sie ein.</a>',
 	'ur-add-friends' => '  Sie möchten mehr Freunde haben? 
 <a href="$1">Laden Sie sie ein …</a>',
 	'ur-add-no-user' => 'Kein Benutzer ausgewählt.
 Bitte wählen Sie die Freunde/Feinde durch den richtigen Link.',
 	'ur-remove-relationship-title-foe' => 'Sie möchten $1 aus Ihrer Feindesliste löschen?',
-	'ur-remove-relationship-title-confirm-foe' => 'Sie haben $1 aus Ihrer Feindesliste gelöscht',
+	'ur-remove-relationship-title-confirm-foe' => 'Sie haben $1 aus Ihrer Feindesliste entfernt',
 	'ur-remove-relationship-title-friend' => 'Sie möchten $1 aus Ihrer Freundesliste entfernen?',
-	'ur-remove-relationship-title-confirm-friend' => 'Sie haben $1 aus Ihrer Freundesliste gelöscht',
+	'ur-remove-relationship-title-confirm-friend' => 'Sie haben $1 aus Ihrer Freundesliste entfernt',
 	'ur-remove-relationship-message-foe' => 'Sie wollen $1 aus Ihrer Feindesliste entfernen? Drücken Sie „$2“ zum Bestätigen.',
-	'ur-remove-relationship-message-confirm-foe' => 'Sie haben erfolgreich $1 aus Ihrer Feindesliste gelöscht.',
+	'ur-remove-relationship-message-confirm-foe' => 'Sie haben erfolgreich $1 aus Ihrer Feindesliste entfernt.',
 	'ur-remove-relationship-message-friend' => 'Sie wollen $1 aus Ihrer Freundesliste entfernen? Drücken Sie „$2“ zum Bestätigen.',
 	'ur-remove-relationship-message-confirm-friend' => 'Sie haben $1 erfolgreich aus Ihrer Freundesliste entfernt.',
 	'ur-remove-error-message-no-relationship' => '$1 steht in keiner Beziehung zu Ihnen.',
@@ -1582,9 +1583,9 @@ Wir werden $1 davon informieren, wenn Sie seine Anfrage bestätigen.',
 	'ur-no-requests-message' => 'Sie haben keine Freund- oder Feindschaftsanfragen. Wenn Sie mehr Freunde haben möchten, <a href="$1">laden Sie sie ein!</a>',
 	'ur-requests-added-message-foe' => 'Sie haben $1 zu Ihrer Feindesliste hinzugefügt.',
 	'ur-requests-added-message-friend' => 'Sie haben $1 zu Ihrer Freundesliste hinzugefügt.',
-	'ur-requests-reject-message-friend' => 'Sie haben $1 als Ihren Freund zurückgewiesen.',
-	'ur-requests-reject-message-foe' => 'Sie haben $1 als Ihren Feind zurückgewiesen.',
-	'friend_request_subject' => '{{SITENAME}}: $1 hat Sie als Freund hinzugefügt!',
+	'ur-requests-reject-message-friend' => 'Sie haben $1 als Ihren Freund abgelehnt.',
+	'ur-requests-reject-message-foe' => 'Sie haben $1 als Ihren Feind abgelehnt.',
+	'friend_request_subject' => '[{{SITENAME}}] $1 hat Sie als Freund hinzugefügt!',
 	'friend_request_body' => 'Hi $1:
 
 $2 hat Sie in {{SITENAME}} als Freund hinzugefügt. Wir wollen sicher gehen, dass Sie beide wirklich Freunde sind.
@@ -1598,7 +1599,7 @@ Hm, Sie wollen keine E-Mails mehr von uns bekommen?
 
 Klicken Sie $4
 und ändern Sie Ihre Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
-	'foe_request_subject' => '{{SITENAME}}: Kriegserklärung! $1 hat Sie als Feind hinzugefügt!',
+	'foe_request_subject' => '[{{SITENAME}}] Kriegserklärung! $1 hat Sie als Feind hinzugefügt!',
 	'foe_request_body' => 'Hi $1:
 
 $2 hat Sie in {{SITENAME}} als Feind hinzugefügt. Wir wollen sicher gehen, dass Sie beide wirklich tödliche Feinde sind oder sich wenigstens ein wenig streiten.
@@ -1613,7 +1614,7 @@ Hm, Sie wollen keine E-Mails mehr von uns bekommen?
 
 Klicken Sie $4
 und ändern Sie Ihre Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
-	'friend_accept_subject' => '{{SITENAME}}: $1 hat Ihre Freundschaftsanfrage bestätigt!',
+	'friend_accept_subject' => '[{{SITENAME}}] $1 hat Ihre Freundschaftsanfrage bestätigt!',
 	'friend_accept_body' => 'Hi $1:
 
 $2 hat Ihre Freundschaftsanfrage in {{SITENAME}} bestätigt!
@@ -1628,7 +1629,7 @@ Hm, Sie wollen keine E-Mails mehr von uns bekommen?
 
 Klicken Sie $4
 und ändern Sie Ihre Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
-	'foe_accept_subject' => '{{SITENAME}}: $1 hat Ihre Feind-Anfrage bestätigt!',
+	'foe_accept_subject' => '[{{SITENAME}}] $1 hat Ihre Feind-Anfrage bestätigt!',
 	'foe_accept_body' => 'Hi $1:
 
 $2 hat Ihre Feind-Anfrage in {{SITENAME}} bestätigt!
@@ -1641,7 +1642,7 @@ Hm, Sie wollen keine E-Mails mehr von uns bekommen?
 
 Klicken Sie $4
 und ändern Sie Ihre Einstellungen, um E-Mail-Benachrichtigungen auszuschalten.',
-	'friend_removed_subject' => '{{SITENAME}}: Oh nein! $1 hat seine Freundschaft zu Ihnen beendet!',
+	'friend_removed_subject' => '[{{SITENAME}}] Oh nein! $1 hat seine Freundschaft zu Ihnen beendet!',
 	'friend_removed_body' => 'Hi $1:
 
 $2 hat seine Freundschaft zu Ihnen in {{SITENAME}} beendet!
@@ -1652,7 +1653,7 @@ Hm, Sie wollen keine E-Mails mehr von uns bekommen?
 
 Klicken Sie $4
 und ändern Sie Ihre Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
-	'foe_removed_subject' => '{{SITENAME}}: Hey! $1 hat seine Feindschaft zu Ihnen beendet!',
+	'foe_removed_subject' => '[{{SITENAME}}] Hey! $1 hat seine Feindschaft zu Ihnen beendet!',
 	'foe_removed_body' => 'Hi $1:
 
 $2 hat seine Feindschaft zu Ihnen in {{SITENAME}} beendet!
