@@ -536,9 +536,24 @@ $messages['pdc'] = array(
 	'useractivity-group-comment' => '{{PLURAL:$1|ee Aamaericking|$1 Aamaerickinge}}',
 );
 
-/** Polish (Polski) */
+/** Polish (Polski)
+ * @author Sp5uhe
+ */
 $messages['pl'] = array(
+	'useractivity' => 'Aktywność przyjaciół',
+	'useractivity-award' => '$1 otrzymał nagrodę',
 	'useractivity-all' => 'Pokaż wszystko',
+	'useractivity-edit' => '$1 {{PLURAL:$4|{{GENDER:$6|edytował|edytowała|edytował}}|edytowali}} strony: $3',
+	'useractivity-foe' => '{{PLURAL:}}$1 oraz $3 są obecnie wrogami',
+	'useractivity-friend' => '{{PLURAL:}}$1 oraz $3 są obecnie przyjaciółmi',
+	'useractivity-gift' => '$1 {{GENDER:$6|otrzymał|otrzymała|otrzymali}} prezent od $2',
+	'useractivity-group-edit' => '{{GRAMMAR:$2|{{PLURAL:$1|raz edytował|$1 razy edytował}}|{{PLURAL:$1|raz edytowała|$1 razy edytowała}}|{{PLURAL:$1|raz edytowali|$1 razy edytowali}}}}',
+	'useractivity-group-comment' => '{{GRAMMAR:$2|{{PLURAL:$1|raz skomentował|$1 razy skomentował}}|{{PLURAL:$1|raz skomentowała|$1 razy skomentowała}}|{{PLURAL:$1|raz skomentowali|$1 razy skomentowali}}}}',
+	'useractivity-group-user_message' => '{{GRAMMAR:$2|{{PLURAL:$1|wysłał jedną wiadomość|wysłał $1 wiadomości}}|{{PLURAL:$1|wysłała jedną wiadomość|wysłała $1 wiadomości}}|{{PLURAL:$1|wysłali po jednej wiadomość|wysłali po $1 wiadomości}}}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|ma jednego przyjaciela|ma $1 przyjaciół}}',
+	'useractivity-siteactivity' => 'Aktywność witryny',
+	'useractivity-title' => 'Aktywność przyjaciół',
+	'useractivity-user_message' => '$1 {{GENDER:$6|wysłał|wysłała|wysłali}} {{PLURAL:$4|wiadomość do|wiadomości do}} $3',
 );
 
 /** Piedmontese (Piemontèis)
