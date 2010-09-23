@@ -3143,6 +3143,18 @@ Vill du inte ta emot fler e-postmeddelanden från oss?
 Klicka på $4 och ändra dina inställningar för att slå av e-postbesked.',
 );
 
+/** Tamil (தமிழ்)
+ * @author TRYPPN
+ */
+$messages['ta'] = array(
+	'userboard_delete' => 'நீக்கவும்',
+	'userboard_private' => 'தனிப்பட்ட',
+	'userboard_public' => 'பொதுவான',
+	'userboard_nextpage' => 'அடுத்தது',
+	'userboard_nomessages' => 'செய்திகள் இல்லை.',
+	'userboard_sendbutton' => 'அனுப்பு',
+);
+
 /** Telugu (తెలుగు)
  * @author Veeven
  */
