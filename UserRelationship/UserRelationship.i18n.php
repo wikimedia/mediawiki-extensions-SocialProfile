@@ -3749,7 +3749,7 @@ Per favor requesta amicos/inimicos via le ligamine correcte.',
 	'ur-remove-error-not-loggedin-friend' => 'Tu debe aperir un session pro poter remover un amico.',
 	'ur-remove' => 'Remover',
 	'ur-cancel' => 'Cancellar',
-	'ur-login' => 'Aperir un session',
+	'ur-login' => 'Aperir session',
 	'ur-add-title-foe' => 'Vole tu adder $1 como tu inimico?',
 	'ur-add-title-friend' => 'Vole tu adder $1 como tu amico?',
 	'ur-add-message-foe' => 'Tu es super le puncto de adder $1 como tu inimico.
