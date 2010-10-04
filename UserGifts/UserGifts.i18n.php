@@ -3015,6 +3015,7 @@ Klik op $5 en wijzig uw instellingen om e-mailwaarschuwingen uit te schakelen.',
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
  * @author Harald Khan
+ * @author Ranveig
  */
 $messages['nn'] = array(
 	'giftmanager' => 'Gåvehandsamar',
@@ -3041,7 +3042,7 @@ $messages['nn'] = array(
 	'g-delete-message' => 'Er du sikker på at du vil sletta gåva «$1»? Dette vil òg sletta ho frå brukaren som kanskje har fått ho.',
 	'g-description-title' => 'gåva «$2» til $1',
 	'g-error-do-not-own' => 'Du eig ikkje denne gåva.',
-	'g-error-message-blocked' => 'Du er på noverande tidspunkt blokkert og kan ikkje senda gåver.',
+	'g-error-message-blocked' => 'Du er nett no blokkert og kan ikkje senda gåver.',
 	'g-error-message-invalid-link' => 'Lenkja du oppgav er ugyldig.',
 	'g-error-message-login' => 'Du lyt vera innlogga for å kunna gje gåver.',
 	'g-error-message-no-user' => 'Brukaren du ynskjer å sjå finst ikkje.',
