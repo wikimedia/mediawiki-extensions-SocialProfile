@@ -1654,6 +1654,7 @@ Klikit <a href="$1">amañ</a> evit kevreañ pe klikit <a href="$2">amañ</a> evi
  * @author Palapa
  */
 $messages['bs'] = array(
+	'populateuserprofiles' => 'Popuni korisničke profile',
 	'user-time-ago' => 'prije $1',
 	'user-awards-title' => 'Nagrade',
 	'user-gifts-title' => 'Pokloni',
@@ -1662,6 +1663,7 @@ $messages['bs'] = array(
 	'user-upload-image' => 'Postavi sliku',
 	'user-edit-this' => 'Izmijeni ovo',
 	'user-edit-profile' => 'Uredi profil',
+	'user-upload-avatar' => 'Pošalji avatar',
 	'user-watchlist' => 'Moj spisak praćenja',
 	'user-meet-people' => 'Upoznaj ljude',
 	'user-add-friend' => 'Dodaj kao prijatelja',
@@ -1675,6 +1677,9 @@ $messages['bs'] = array(
 	'user-stats-edits' => '{{PLURAL:$1|Izmjena|Izmjene|Izmjena}}',
 	'user-stats-votes' => '{{PLURAL:$1|Glas|Glasa|Glasova}}',
 	'user-stats-comments' => '{{PLURAL:$1|Komentar|Komentari}}',
+	'user-stats-recruits' => '{{PLURAL:$1|Novi član|Novi članovi}}',
+	'user-stats-poll-votes' => 'Anketa {{PLURAL:$1|glas|glasa|glasova}}',
+	'user-stats-picture-game-votes' => 'Slikovna igra {{PLURAL:$1|glas|glasa|glasovima}}',
 	'user-stats-quiz-points' => 'Kviz {{PLURAL:$1|bod|bodovi}}',
 	'other-info-title' => 'Ostale informacije',
 	'user-friends-title' => 'Prijatelji',
@@ -5859,10 +5864,12 @@ $messages['km'] = array(
 $messages['kn'] = array(
 	'other-info-music' => 'ಸಂಗೀತ',
 	'other-info-books' => 'ಪುಸ್ತಕಗಳು',
+	'user-personal-info-title' => 'ವೈಯುಕ್ತಿಕ ಮಾಹಿತಿ',
 	'user-personal-info-birthday' => 'ಹುಟ್ಟುಹಬ್ಬ',
 	'user-personal-info-occupation' => 'ವೃತ್ತಿ',
 	'user-personal-info-schools' => 'ಶಾಲೆಗಳು',
 	'user-personal-info-about-me' => 'ನನ್ನ ಬಗ್ಗೆ',
+	'user-profile-section-personal' => 'ವೈಯುಕ್ತಿಕ ಮಾಹಿತಿ',
 	'user-profile-personal-info' => 'ಮಾಹಿತಿ',
 	'user-profile-personal-name' => 'ಹೆಸರು',
 	'user-profile-personal-email' => 'ಇ-ಅಂಚೆ',
@@ -10918,6 +10925,7 @@ $messages['yi'] = array(
 	'other-no-info' => 'קיין אנדערע אינפֿאָרמאַציע',
 	'user-profile-section-preferences' => 'פרעפֿערענצן',
 	'user-profile-personal-name' => 'נאָמען',
+	'user-profile-goback' => 'צוריקגיין',
 );
 
 /** Chinese (China) (‪中文(中国大陆)‬)

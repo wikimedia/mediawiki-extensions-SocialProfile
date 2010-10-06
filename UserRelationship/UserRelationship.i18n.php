@@ -8079,6 +8079,7 @@ $messages['xal'] = array(
  * @author פוילישער
  */
 $messages['yi'] = array(
+	'ur-cancel' => 'אַנולירן',
 	'ur-login' => 'אַרײַנלאגירן',
 );
 
