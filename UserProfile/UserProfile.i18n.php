@@ -9687,6 +9687,42 @@ $messages['szl'] = array(
 	'user-profile-personal-name' => 'Mjano',
 );
 
+/** Tamil (தமிழ்)
+ * @author TRYPPN
+ */
+$messages['ta'] = array(
+	'user-upload-image' => 'படத்தை பதிவேற்று',
+	'user-edit-this' => 'இதனைத் தொகுக்கவும்',
+	'user-watchlist' => 'என் கவனிப்புப் பட்டியல்',
+	'user-contributions' => 'பங்களிப்புக்கள்',
+	'user-stats-title' => 'புள்ளிவிவரங்கள்',
+	'user-personal-info-real-name' => 'உண்மைப் பெயர்',
+	'user-personal-info-location' => 'இடம்',
+	'user-personal-info-hometown' => 'சொந்த ஊர்',
+	'user-personal-info-birthday' => 'பிறந்த நாள்',
+	'user-personal-info-schools' => 'பள்ளிக்கூடங்கள்',
+	'user-profile-section-preferences' => 'விருப்பங்கள்',
+	'user-profile-personal-info' => 'தகவல்',
+	'user-profile-personal-name' => 'பெயர்',
+	'user-profile-personal-email' => 'மின்னஞ்சல்',
+	'user-profile-personal-confirmemail' => 'மின்னஞ்சலை உறுதிசெய்யவும்',
+	'user-profile-personal-location' => 'இடம்',
+	'user-profile-personal-city' => 'நகரம்',
+	'user-profile-personal-country' => 'நாடு',
+	'user-profile-personal-hometown' => 'சொந்த ஊர்',
+	'user-profile-personal-birthday' => 'பிறந்த நாள்',
+	'user-profile-personal-birthdate' => 'தேதி (MM/DD)',
+	'user-profile-personal-work' => 'வேலை (பணி)',
+	'user-profile-personal-occupation' => 'தொழில்',
+	'user-profile-personal-schools' => 'பள்ளிக்கூடங்கள்',
+	'user-profile-personal-places' => 'இடங்கள்',
+	'user-profile-personal-placeslived' => 'நான் வாழ்ந்த இடங்கள்',
+	'user-profile-picture-large' => 'பெரிய',
+	'user-profile-picture-medlarge' => 'நடுத்தரம் - பெரிய',
+	'user-profile-picture-medium' => 'நடுத்தரம்',
+	'user-profile-picture-small' => 'சிறிய',
+);
+
 /** Telugu (తెలుగు)
  * @author Kiranmayee
  * @author Veeven
