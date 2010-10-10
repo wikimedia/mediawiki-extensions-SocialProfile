@@ -1520,6 +1520,7 @@ $messages['wo'] = array(
  * @author פוילישער
  */
 $messages['yi'] = array(
+	'mp-welcome-upload' => 'אַרויפֿלאָדן',
 	'mp-welcome-edit' => 'רעדאַקטירן',
 );
 

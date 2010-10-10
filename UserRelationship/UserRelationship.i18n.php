@@ -4608,7 +4608,7 @@ Maacht Ufroe fir Frënn/Géigner mat dem richtege Link.',
 	'ur-remove-relationship-message-friend' => 'Dir hutt ugefrot fir de Benotzer $1 als Äre Frënd ewechzehuelen, dréckt "$2" fir ze confirméieren.',
 	'ur-remove-relationship-message-confirm-friend' => 'Dir hutt de Benotzer $1 als Äre Frënd ewechgeholl.',
 	'ur-remove-error-message-no-relationship' => 'Dir hutt keng Relatioun mam $1',
-	'ur-remove-error-message-remove-yourself' => 'Dir kënnt iech net selwer ewechhuelen.',
+	'ur-remove-error-message-remove-yourself' => 'Dir kënnt Iech net selwer ewechhuelen.',
 	'ur-remove-error-message-pending-foe-request' => 'Dir hutt eng oppe Géigner-Ufro mam Benotzer $1.',
 	'ur-remove-error-message-pending-friend-request' => 'Dir hutt eng oppe Frënd-Ufro mam Benozer $1.',
 	'ur-remove-error-not-loggedin-foe' => 'Dir musst ageloggt si fir e Géigner ewechzehuelen.',
@@ -8079,6 +8079,7 @@ $messages['xal'] = array(
  * @author פוילישער
  */
 $messages['yi'] = array(
+	'ur-main-page' => 'הויפּט בלאַט',
 	'ur-cancel' => 'אַנולירן',
 	'ur-login' => 'אַרײַנלאגירן',
 );

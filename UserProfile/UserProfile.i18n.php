@@ -10966,7 +10966,9 @@ $messages['yi'] = array(
 	'other-no-info' => 'קיין אנדערע אינפֿאָרמאַציע',
 	'user-profile-section-preferences' => 'פרעפֿערענצן',
 	'user-profile-personal-name' => 'נאָמען',
+	'user-profile-interests-eats' => 'עסן',
 	'user-profile-goback' => 'צוריקגיין',
+	'user-page-link' => 'באַניצער בלאַט',
 );
 
 /** Chinese (China) (‪中文(中国大陆)‬)
