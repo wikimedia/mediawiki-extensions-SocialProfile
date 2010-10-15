@@ -7300,6 +7300,19 @@ $messages['szl'] = array(
 	'ur-main-page' => 'Přodńo zajta',
 );
 
+/** Tamil (தமிழ்)
+ * @author TRYPPN
+ */
+$messages['ta'] = array(
+	'ur-previous' => 'முந்தைய',
+	'ur-next' => 'அடுத்தது',
+	'ur-remove' => 'நீக்குக',
+	'ur-cancel' => 'விட்டுவிடு',
+	'ur-login' => 'புகுபதிகை',
+	'ur-accept' => 'ஒத்துக்கொள்',
+	'ur-reject' => 'ஒதுக்கித் தள்ளு',
+);
+
 /** Telugu (తెలుగు)
  * @author Veeven
  */
