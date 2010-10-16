@@ -4352,6 +4352,7 @@ $messages['km'] = array(
  */
 $messages['kn'] = array(
 	'ur-main-page' => 'ಮುಖ್ಯ ಪುಟ',
+	'ur-cancel' => 'ರದ್ದು ಮಾಡು',
 	'ur-login' => 'ಲಾಗ್ ಇನ್',
 );
 
@@ -4894,6 +4895,7 @@ $messages['ml'] = array(
  */
 $messages['mn'] = array(
 	'ur-main-page' => 'Нүүр хуудас',
+	'ur-cancel' => 'Цуцлах',
 	'ur-login' => 'Нэвтрэх',
 );
 

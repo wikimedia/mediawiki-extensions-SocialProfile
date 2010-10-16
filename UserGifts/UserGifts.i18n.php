@@ -2576,6 +2576,7 @@ $messages['km'] = array(
  * @author Nayvik
  */
 $messages['kn'] = array(
+	'g-cancel' => 'ರದ್ದು ಮಾಡು',
 	'g-main-page' => 'ಮುಖ್ಯ ಪುಟ',
 	'g-new' => 'ಹೊಸ',
 );
