@@ -29,7 +29,11 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 	public function execute( $params ) {
 		global $wgUser, $wgOut, $wgRequest, $wgUploadPath, $wgUserRelationshipScripts;
 
-		$this->setHeaders();
+		// Can't use $this->setHeaders(); here because then it'll set the page
+		// title to <removerelationship> and we don't want that, we'll be
+		// messing with the page title later on in the code
+		$wgOut->setArticleRelated( false );
+		$wgOut->setRobotPolicy( 'noindex,nofollow' );
 
 		$wgOut->addExtensionStyle( $wgUserRelationshipScripts . '/UserRelationship.css' );
 
@@ -178,10 +182,10 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				$out = '';
 
 				if ( $this->relationship_type == 1 ) {
-					$out .= $wgOut->setPageTitle( wfMsg( 'ur-add-sent-title-friend', $this->user_name_to ) );
+					$wgOut->setPageTitle( wfMsg( 'ur-add-sent-title-friend', $this->user_name_to ) );
 					$sent = wfMsg( 'ur-add-sent-message-friend', $this->user_name_to );
 				} else {
-					$out .= $wgOut->setPageTitle( wfMsg( 'ur-add-sent-title-foe', $this->user_name_to ) );
+					$wgOut->setPageTitle( wfMsg( 'ur-add-sent-title-foe', $this->user_name_to ) );
 					$sent = wfMsg( 'ur-add-sent-message-foe', $this->user_name_to );
 				}
 

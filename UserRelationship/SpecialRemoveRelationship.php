@@ -28,7 +28,11 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 	public function execute( $params ) {
 		global $wgUser, $wgOut, $wgRequest, $wgUploadPath, $wgUserRelationshipScripts;
 
-		$this->setHeaders();
+		// Can't use $this->setHeaders(); here because then it'll set the page
+		// title to <removerelationship> and we don't want that, we'll be
+		// messing with the page title later on in the code
+		$wgOut->setArticleRelated( false );
+		$wgOut->setRobotPolicy( 'noindex,nofollow' );
 
 		$wgOut->addExtensionStyle( $wgUserRelationshipScripts . '/UserRelationship.css' );
 
