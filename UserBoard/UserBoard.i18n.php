@@ -2271,6 +2271,7 @@ en wijzig uw instellingen om e-mailberichten uit te schakelen.',
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
  * @author Harald Khan
  * @author Jon Harald Søby
+ * @author Nghtwlkr
  */
 $messages['nn'] = array(
 	'boardblastlogintitle' => 'Du må logga inn for kunna senda meldingar',
@@ -2314,6 +2315,10 @@ $messages['nn'] = array(
 	'userboard_loggedout' => 'Du må vera <a href="$1">innlogga</a> for å senda meldingar til andre brukarar.',
 	'userboard_showingmessages' => 'Syner {{PLURAL:$4|melding $3|meldingane $2&ndash;$3}} av {{PLURAL:$1|éi melding|$1 meldingar}} totalt',
 	'right-userboard-delete' => 'Sletta andre sine meldingar',
+	'userboard-time-days' => '{{PLURAL:$1|éin dag|$1 dagar}}',
+	'userboard-time-hours' => '{{PLURAL:$1|éin time|$1 timar}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|eitt minutt|$1 minutt}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|eitt sekund|$1 sekund}}',
 	'message_received_subject' => '$1 skreiv på diskusjonssida di på {{SITENAME}}',
 	'message_received_body' => 'Hei, $1.
 

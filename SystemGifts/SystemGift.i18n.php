@@ -336,6 +336,7 @@ $messages['bg'] = array(
 
 /** Breton (Brezhoneg)
  * @author Fohanno
+ * @author Fulup
  */
 $messages['br'] = array(
 	'systemgiftmanager' => 'Reizhiad merañ ar profoù',
@@ -366,7 +367,7 @@ $messages['br'] = array(
 	'ga-medium' => 'Etre',
 	'ga-mediumlarge' => 'Etre-bras',
 	'ga-new' => 'Nevez',
-	'ga-next' => 'Da-heul',
+	'ga-next' => "War-lerc'h",
 	'ga-previous' => 'Kent',
 	'ga-recent-recipients-award' => 'Degemererien all eus ar garedon-mañ',
 	'ga-saved' => 'Enrollet eo bet ar prof',

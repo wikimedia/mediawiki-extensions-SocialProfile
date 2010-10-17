@@ -582,6 +582,7 @@ $messages['bn'] = array(
 
 /** Breton (Brezhoneg)
  * @author Fohanno
+ * @author Fulup
  */
 $messages['br'] = array(
 	'giftmanager' => 'Merour ar profoù',
@@ -642,7 +643,7 @@ Ken aes-se eo.',
 	'g-medium' => 'Etre',
 	'g-mediumlarge' => 'Etre-bras',
 	'g-new' => 'nevez',
-	'g-next' => 'Da-heul',
+	'g-next' => "War-lerc'h",
 	'g-previous' => 'Kent',
 	'g-remove' => 'Lemel',
 	'g-remove-gift' => 'Lemel ar prof-mañ',
@@ -3016,6 +3017,7 @@ Klik op $5 en wijzig uw instellingen om e-mailwaarschuwingen uit te schakelen.',
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
  * @author Harald Khan
+ * @author Nghtwlkr
  * @author Ranveig
  */
 $messages['nn'] = array(
@@ -3035,7 +3037,7 @@ $messages['nn'] = array(
 	'g-back-gift-list' => 'Attende til gåvelista',
 	'g-back-link' => '< attende til sida til $1',
 	'g-choose-file' => 'Vel fil:',
-	'g-cancel' => 'Avrbyt',
+	'g-cancel' => 'Avbryt',
 	'g-count' => '$1 har $2 {{PLURAL:$2|éi gåva|gåver}}.',
 	'g-create-gift' => 'Opprett gåva',
 	'g-created-by' => 'oppretta av',
@@ -4179,6 +4181,27 @@ Tako preprosto je.',
 	'g-viewgiftlist' => 'Ogled seznama daril',
 	'g-your-profile' => 'Vaš profil',
 	'gift_received_subject' => '$1 vam je poslal darilo $2 na {{GRAMMAR:dative|{{SITENAME}}}}!',
+	'gift_received_body' => '$1, pozdravljen(-a).
+
+$2 vam je pravkar poslal(-a) darilo $3 na {{SITENAME}}.
+
+Želite prebrati sporočilo, ki vam ga je pustil $2, in si ogledati darilo?   Kliknite spodnjo povezavo:
+
+$4
+
+Upamo, da vam je všeč!
+
+Hvala,
+
+
+Ekipa {{SITENAME}}
+
+---
+
+Hej, ne želiš več prejemati e-pošte od nas?
+
+Klikni $5
+in spremeni svoje nastavitve za onemogočitev e-poštnih obvestil.',
 	'right-giftadmin' => 'Ustvarjanje novih in urejanje obstoječih daril',
 );
 

@@ -509,6 +509,14 @@ $messages['nl'] = array(
 	'useractivity-user_message' => '$1 heeft {{PLURAL:$4|een bericht|berichten}} verzonden aan $3',
 );
 
+/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+ * @author Nghtwlkr
+ */
+$messages['nn'] = array(
+	'useractivity-group-comment' => '{{PLURAL:$1|éin kommentar|$1 kommentarar}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|éi melding|$1 meldingar}}',
+);
+
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Nghtwlkr
  */
