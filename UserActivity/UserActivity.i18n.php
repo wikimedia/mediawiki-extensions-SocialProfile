@@ -317,6 +317,16 @@ $messages['gsw'] = array(
 	'useractivity-user_message' => '$1 {{PLURAL:$4|het e Nochricht gschickt an|het Nochrichte gschickt an}} $3',
 );
 
+/** Hebrew (עברית)
+ * @author YaronSh
+ */
+$messages['he'] = array(
+	'useractivity' => 'פעילות החברים',
+	'useractivity-all' => 'הצגת הכול',
+	'useractivity-siteactivity' => 'פעילות באתר',
+	'useractivity-title' => 'פעילות החברים',
+);
+
 /** Upper Sorbian (Hornjoserbsce)
  * @author Michawiki
  */
