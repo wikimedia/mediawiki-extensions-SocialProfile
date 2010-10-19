@@ -17,7 +17,9 @@ class UserBoard {
 	}
 
 	/**
-	 * Sends a user board message to another user
+	 * Sends a user board message to another user.
+	 * Performs the insertion to user_board table, sends e-mail notification
+	 * (if appliable), and increases social statistics as appropriate.
 	 *
 	 * @param $user_id_from Integer: user ID of the sender
 	 * @param $user_name_from Mixed: user name of the sender
@@ -95,18 +97,39 @@ class UserBoard {
 		}
 	}
 
+	/**
+	 * Increase the amount of new messages for $user_id
+	 *
+	 * @param $user_id Integer: user ID for the user whose message count we're
+	 *							going to increase.
+	 */
 	public function incNewMessageCount( $user_id ) {
 		global $wgMemc;
 		$key = wfMemcKey( 'user', 'newboardmessage', $user_id );
 		$wgMemc->incr( $key );
 	}
 
+	/**
+	 * Clear the new board messages counter for the user with ID = $user_id.
+	 * This is done by setting the value of the memcached key to 0.
+	 *
+	 * @param $user_id Integer: user ID for the user whose message count we're
+	 *							going to clear.
+	 */
 	static function clearNewMessageCount( $user_id ) {
 		global $wgMemc;
 		$key = wfMemcKey( 'user', 'newboardmessage', $user_id );
 		$wgMemc->set( $key, 0 );
 	}
 
+	/**
+	 * Get the amount of new board messages for the user with ID = $user_id
+	 * from memcached. If successful, returns the amount of new messages.
+	 *
+	 * @param $user_id Integer: user ID for the user whose messages we're going
+	 *							to fetch.
+	 * @return Integer: amount of new messages
+	 */
 	static function getNewMessageCountCache( $user_id ) {
 		global $wgMemc;
 		$key = wfMemcKey( 'user', 'newboardmessage', $user_id );
@@ -117,21 +140,50 @@ class UserBoard {
 		}
 	}
 
+	/**
+	 * Get the amount of new board messages for the user with ID = $user_id
+	 * from the database.
+	 *
+	 * @param $user_id Integer: user ID for the user whose messages we're going
+	 *							to fetch.
+	 * @return Integer: amount of new messages
+	 */
 	static function getNewMessageCountDB( $user_id ) {
 		wfDebug( "Got new message count for id $user_id from DB\n" );
 
 		global $wgMemc;
 		$key = wfMemcKey( 'user', 'newboardmessage', $user_id );
-		// $dbw = wfGetDB( DB_MASTER );
 		$new_count = 0;
-		// $s = $dbw->selectRow( 'user_board', array( 'COUNT(*) AS count' ), array( 'ug_user_id_to' => $user_id, 'ug_status' => 1 ), __METHOD__ );
-		// if ( $s !== false ) $new_count = $s->count;
+		/* @todo FIXME: why is this commented out? This obviously should be
+		enabled, because without this, this function is basically identical
+		to clearNewMessagesCount...
+		$dbw = wfGetDB( DB_MASTER );
+		$s = $dbw->selectRow(
+			'user_board',
+			array( 'COUNT(*) AS count' ),
+			array( 'ug_user_id_to' => $user_id, 'ug_status' => 1 ),
+			__METHOD__
+		);
+		if ( $s !== false ) {
+			$new_count = $s->count;
+		}
+		*/
 
 		$wgMemc->set( $key, $new_count );
 
 		return $new_count;
 	}
 
+	/**
+	 * Get the amount of new board messages for the user with ID = $user_id.
+	 * First tries cache (memcached) and if that succeeds, returns the cached
+	 * data. If that fails, the count is fetched from the database.
+	 * UserWelcome.php calls this function.
+	 *
+	 * @param $user_id Integer: user ID for the user whose messages we're going
+	 *							to fetch.
+	 * @return Integer: amount of new messages
+	 */
 	static function getNewMessageCount( $user_id ) {
 		global $wgMemc;
 		$data = self::getNewMessageCountCache( $user_id );
@@ -145,7 +197,9 @@ class UserBoard {
 	}
 
 	/**
-	 * Checks if the user with ID number $user_id owns the board message with the ID number $ub_id
+	 * Checks if the user with ID number $user_id owns the board message with
+	 * the ID number $ub_id.
+	 *
 	 * @param $user_id Integer: user ID number
 	 * @param $ub_id Integer: user board message ID number
 	 * @return Boolean: true if user owns the message, otherwise false
@@ -167,7 +221,10 @@ class UserBoard {
 	}
 
 	/**
-	 * Deletes a user board message from the database
+	 * Deletes a user board message from the database and decreases social
+	 * statistics as appropriate (either 'user_board_count' or
+	 * 'user_board_count_priv' is decreased by one).
+	 *
 	 * @param $ub_id Integer: ID number of the board message that we want to delete
 	 */
 	public function deleteMessage( $ub_id ) {
@@ -338,17 +395,37 @@ class UserBoard {
 		return $output;
 	}
 
+	/**
+	 * Get the escaped full URL to Special:SendBoardBlast.
+	 * This is just a silly wrapper function.
+	 *
+	 * @return String: escaped full URL to Special:SendBoardBlast
+	 */
 	static function getBoardBlastURL() {
 		$title = SpecialPage::getTitleFor( 'SendBoardBlast' );
 		return $title->escapeFullURL();
 	}
 
+	/**
+	 * Get the user board URL for $user_name.
+	 *
+	 * @param $user_name Mixed: name of the user whose user board URL we're
+	 *							going to get.
+	 * @return String: escaped full URL to the user board page
+	 */
 	static function getUserBoardURL( $user_name ) {
 		$title = SpecialPage::getTitleFor( 'UserBoard' );
 		$user_name = str_replace( '&', '%26', $user_name );
 		return $title->escapeFullURL( 'user=' . $user_name );
 	}
 
+	/**
+	 * Get the board-to-board URL for the users $user_name_1 and $user_name_2.
+	 *
+	 * @param $user_name_1 Mixed: name of the first user
+	 * @param $user_name_2 Mixed: name of the second user
+	 * @return String: escaped full URL to the board-to-board conversation
+	 */
 	static function getUserBoardToBoardURL( $user_name_1, $user_name_2 ) {
 		$title = SpecialPage::getTitleFor( 'UserBoard' );
 		$user_name_1 = str_replace( '&', '%26', $user_name_1 );
@@ -390,6 +467,7 @@ class UserBoard {
 
 	/**
 	 * Gets the time how long ago the given board message was posted
+	 *
 	 * @param $time
 	 * @return $timeStr Mixed: time, such as "20 days" or "11 hours"
 	 */
