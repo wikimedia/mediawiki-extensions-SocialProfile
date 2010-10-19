@@ -132,7 +132,7 @@ function getRelationshipRequestLink() {
 
 	$output = '';
 
-	if ( $friend_request_count ) {
+	if ( $friend_request_count > 0 ) {
 		$output .= '<p>
 			<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/addedFriendIcon.png" alt="" border="0" />
 			<a href="' . $relationship_request_link->escapeFullURL() . '" rel="nofollow">'
@@ -140,8 +140,8 @@ function getRelationshipRequestLink() {
 		</p>';
 	}
 
-	if ( $foe_request_count ) {
-		  $output .= '<p>
+	if ( $foe_request_count > 0 ) {
+		$output .= '<p>
 			<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/addedFoeIcon.png" alt="" border="0" />
 			<a href="' . $relationship_request_link->escapeFullURL() . '" rel="nofollow">'
 			. wfMsgExt( 'mp-request-new-foe', 'parsemag', $foe_request_count ) . '</a>
@@ -156,7 +156,7 @@ function getNewGiftLink() {
 	$gift_count = UserGifts::getNewGiftCount( $wgUser->getID() );
 	$gifts_title = SpecialPage::getTitleFor( 'ViewGifts' );
 	$output = '';
-	if ( $gift_count ) {
+	if ( $gift_count > 0 ) {
 		$output .= '<p>
 			<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/icon_package_get.gif" alt="" border="0" />
 			<a href="' . $gifts_title->escapeFullURL() . '" rel="nofollow">'
@@ -173,7 +173,7 @@ function getNewSystemGiftLink() {
 	$gifts_title = SpecialPage::getTitleFor( 'ViewSystemGifts' );
 	$output = '';
 
-	if ( $gift_count ) {
+	if ( $gift_count > 0 ) {
 		$output .= '<p>
 			<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/awardIcon.png" alt="" border="0" />
 			<a href="' . $gifts_title->escapeFullURL() . '" rel="nofollow">'
@@ -189,7 +189,7 @@ function getNewMessagesLink() {
 	global $wgUser, $wgScriptPath;
 	$new_messages = UserBoard::getNewMessageCount( $wgUser->getID() );
 	$output = '';
-	if ( $new_messages ) {
+	if ( $new_messages > 0 ) {
 		$board_link = SpecialPage::getTitleFor( 'UserBoard' );
 		$output .= '<p>
 			<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/emailIcon.gif" alt="" border="" />
