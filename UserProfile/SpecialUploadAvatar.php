@@ -49,7 +49,6 @@ class SpecialUploadAvatar extends SpecialUpload {
 
 		$wgOut->addExtensionStyle( $wgUserProfileScripts . '/UserProfile.css' );
 		parent::execute( $params );
-		$wgOut->setPageTitle( wfMsg( 'user-profile-picture-title' ) );
 
 		if ( $this->mUploadSuccessful ) {
 			// Cancel redirect
@@ -77,7 +76,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 			wfMsgForContent( 'user-profile-picture-log-entry' )
 		);
 
-		$output = '<h1>' . wfMsg( 'user-profile-picture-title' ) . '</h1>';
+		$output = '<h1>' . wfMsg( 'uploadavatar' ) . '</h1>';
 		$output .= UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-picture' ) );
 		$output .= '<div class="profile-info">';
 		$output .= '<p class="profile-update-title">' . wfMsg( 'user-profile-picture-yourpicture' ) . '</p>';
@@ -176,7 +175,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 			? 'checked="checked"'
 			: '';
 
-		$output = '<h1>' . wfMsg( 'user-profile-picture-title' ) . '</h1>';
+		$output = '<h1>' . wfMsg( 'uploadavatar' ) . '</h1>';
 		$output .= UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-picture' ) );
 		$output .= '<div class="profile-info">';
 
