@@ -1702,6 +1702,7 @@ $messages['bs'] = array(
 	'profile-updated-personal' => 'Ažurirajte svoj profil',
 	'profile-not-provided' => 'Nije navedeno',
 	'populate-user-profile-done' => '$1 {{PLURAL:$1|profil dodan|profila dodano}}',
+	'user-send-board-blast' => 'Poslati vijest',
 	'user-personal-info-title' => 'Lične informacije',
 	'user-no-personal-info' => 'Nema ličnih informacija',
 	'user-personal-info-real-name' => 'Pravo ime',
@@ -1797,14 +1798,18 @@ $messages['bs'] = array(
 	'user-page-link' => 'Korisnička stranica',
 	'user-social-profile-link' => 'Društveni profil',
 	'user-wiki-link' => 'Wiki korisnička stranica',
+	'user-type-toggle-old' => 'Koristi korisničku stranicu na wiki',
 	'user-board-login-message' => 'Morate biti <a href="$1">prijavljeni</a> da biste slali poruke drugim korisnicima',
 	'removeavatar' => 'Ukloni avatara',
 	'givegift' => 'Pošalji poklon',
 	'viewgifts' => 'Vidi poklone',
 	'viewsystemgifts' => 'Vidi nagrade',
 	'avatarupload-removeavatar' => 'Ukloni avatara',
+	'avatarupload-currentavatar' => 'Trenutni avatar od $1',
 	'avatarupload-removesuccess' => 'Avatar je uspješno uklonjen',
 	'avatarupload-removeanother' => 'Ukloni slijedeći',
+	'user-profile-picture-log' => 'avatar',
+	'user-profile-picture-log-entry' => 'postavio novi avatar',
 );
 
 /** Catalan (Català)
@@ -10670,6 +10675,7 @@ $messages['ug-latn'] = array(
 
 /** Ukrainian (Українська)
  * @author Prima klasy4na
+ * @author Тест
  */
 $messages['uk'] = array(
 	'user-time-ago' => '$1 тому',
@@ -10690,6 +10696,7 @@ $messages['uk'] = array(
 	'user-profile-section-interests' => 'Інша інформація',
 	'user-profile-section-picture' => 'Аватар',
 	'user-profile-personal-city' => 'Місто',
+	'user-profile-personal-country' => 'Країна',
 	'user-profile-personal-birthday' => 'День народження',
 	'user-profile-personal-aboutme' => 'Про мене',
 	'user-profile-picture-log' => 'аватар',
