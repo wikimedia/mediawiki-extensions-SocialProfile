@@ -2885,9 +2885,18 @@ ve e-posta bildirimlerini devre dışı bırakmak için ayarlarınızı değişt
 
 /** Ukrainian (Українська)
  * @author Prima klasy4na
+ * @author Тест
  */
 $messages['uk'] = array(
+	'ga-choosefile' => 'Виберіть файл:',
+	'ga-goback' => 'Назад',
+	'ga-img' => 'додати/замінити зображення',
+	'ga-large' => 'Великий',
+	'ga-medium' => 'Середній',
+	'ga-new' => 'Новий',
 	'ga-next' => 'Наступний',
+	'ga-previous' => 'Попередній',
+	'ga-small' => 'Малий',
 );
 
 /** Veps (Vepsan kel')

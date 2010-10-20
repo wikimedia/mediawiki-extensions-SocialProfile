@@ -4801,9 +4801,18 @@ $messages['tt-cyrl'] = array(
 
 /** Ukrainian (Українська)
  * @author Prima klasy4na
+ * @author Тест
  */
 $messages['uk'] = array(
+	'g-cancel' => 'Скасувати',
+	'g-go-back' => 'Назад',
+	'g-large' => 'Великий',
+	'g-main-page' => 'Головна сторінка',
+	'g-medium' => 'Середній',
+	'g-new' => 'новий',
 	'g-next' => 'Наступний',
+	'g-previous' => 'Попередній',
+	'g-small' => 'Малий',
 );
 
 /** Urdu (اردو) */

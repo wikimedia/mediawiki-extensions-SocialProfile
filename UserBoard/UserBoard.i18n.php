@@ -3449,11 +3449,18 @@ ve e-posta bildirimlerini devre dışı bırakmak için ayarlarınızı değişt
 
 /** Ukrainian (Українська)
  * @author Prima klasy4na
+ * @author Тест
  */
 $messages['uk'] = array(
+	'boardlinkselectall' => 'Обрати всі',
 	'userboard_delete' => 'Вилучити',
 	'userboard_posted_ago' => 'написано $1 тому',
+	'userboard_public' => 'публічне',
+	'userboard_messagetype' => 'Тип повідомлення',
 	'userboard_nextpage' => 'наступна',
+	'userboard_prevpage' => 'попередній',
+	'userboard_nomessages' => 'Немає повідомлень.',
+	'userboard_sendbutton' => 'надіслати',
 	'userboard-time-days' => '$1 {{PLURAL:$1|день|дні|днів}}',
 	'userboard-time-hours' => '$1 {{PLURAL:$1|година|години|годин}}',
 	'userboard-time-minutes' => '$1 {{PLURAL:$1|хвилина|хвилини|хвилин}}',

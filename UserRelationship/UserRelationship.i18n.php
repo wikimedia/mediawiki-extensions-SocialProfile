@@ -7978,10 +7978,14 @@ $messages['ug-latn'] = array(
 
 /** Ukrainian (Українська)
  * @author Prima klasy4na
+ * @author Тест
  */
 $messages['uk'] = array(
+	'ur-main-page' => 'Головна сторінка',
+	'ur-previous' => 'попередній',
 	'ur-next' => 'наступний',
 	'ur-remove' => 'Вилучити',
+	'ur-cancel' => 'Скасувати',
 );
 
 /** Urdu (اردو) */
