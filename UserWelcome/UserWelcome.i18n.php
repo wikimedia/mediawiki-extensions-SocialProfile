@@ -1446,8 +1446,10 @@ $messages['tr'] = array(
 
 /** Ukrainian (Українська)
  * @author Prima klasy4na
+ * @author Тест
  */
 $messages['uk'] = array(
+	'mp-welcome-upload' => 'Завантажити',
 	'mp-welcome-edit' => 'Змінити',
 	'mp-request-new-message' => 'нове повідомлення',
 );

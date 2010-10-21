@@ -1099,6 +1099,14 @@ $messages['bcc'] = array(
 	'populate-user-profile-done' => 'پروفایل $1 هور بوت',
 );
 
+/** Belarusian (Беларуская)
+ * @author Тест
+ */
+$messages['be'] = array(
+	'user-stats-title' => 'Статыстыка',
+	'user-profile-personal-city' => 'Горад',
+);
+
 /** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
  * @author EugeneZelenko
  * @author Jim-by
@@ -6283,6 +6291,35 @@ Avatar',
 $messages['lt'] = array(
 	'populate-user-profile-done' => 'Pridėta $1 profiliai',
 	'user-profile-personal-name' => 'Vardas',
+);
+
+/** Latvian (Latviešu)
+ * @author GreenZeb
+ */
+$messages['lv'] = array(
+	'user-profile-picture-large' => 'Liela',
+	'user-profile-picture-medlarge' => 'Vidēji liela',
+	'user-profile-picture-medium' => 'Vidēja',
+	'user-profile-picture-small' => 'Maza',
+	'user-profile-picture-uploaddifferent' => 'Augšupielādēt citu attēlu',
+	'user-profile-picture-currentimage' => 'Pašreizējais attēls',
+	'user-profile-picture-choosepicture' => 'Izvēlieties savu attēlu',
+	'user-profile-picture-picsize' => 'Jūsu attēlam ir jābūt ar jpeg, png vai gif paplašinājumu un tam jābūt mazākam par 100KB.',
+	'user-profile-goback' => 'Doties atpakaļ',
+	'user-profile-userlevels-link' => 'Lietotāju līmeņi',
+	'user-no-images' => 'Nav augšupielādēts neviens attēls',
+	'edit-profile-title' => 'Izmainīt savu profilu',
+	'user-page-link' => 'Lietotāja lapa',
+	'user-social-profile-link' => 'Sociālais profils',
+	'user-wiki-link' => 'Vikipēdijas lietotājlapa',
+	'update_profile_nav' => ' * Special:UpdateProfile|Personīgā informācija
+* Special:UpdateProfile/personal|Cita informācija
+* Special:UpdateProfile/custom|dažādota informācija
+* Special:UploadAvatar|Iemiesojums
+* Special:UpdateProfile/preferences|Iestatījumi',
+	'user-type-toggle-old' => 'Izmantot Vikipēdijas lietotājlapu',
+	'user-type-toggle-new' => 'Izmantot sociālo lietotājlapu',
+	'user-board-login-message' => 'Jums ir jābūt <a href="$1">iegājušam</a>, lai sūtītu ziņojumus citiem lietotājiem',
 );
 
 /** Eastern Mari (Олык Марий)
