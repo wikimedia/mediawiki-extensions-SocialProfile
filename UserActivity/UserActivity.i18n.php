@@ -788,6 +788,7 @@ $messages['tr'] = array(
 $messages['uk'] = array(
 	'useractivity-all' => 'Переглянути все',
 	'useractivity-group-edit' => '$1 {{PLURAL:$1|редагування|редагування|редагувань}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|один коментар|$1 коментарі|$1 коментарів}}',
 	'useractivity-user_message' => '$1 {{GENDER:$6|відправив|відправила}} {{PLURAL:$4|повідомлення|повідомлення|повідомлень}} $3',
 );
 

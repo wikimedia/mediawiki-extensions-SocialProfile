@@ -2737,7 +2737,9 @@ $messages['sv'] = array(
  * @author Veeven
  */
 $messages['te'] = array(
+	'ga-choosefile' => 'దస్త్రాన్ని ఎంచుకోండి:',
 	'ga-gift-given-count' => 'ఈ బహుమతిని {{PLURAL:$1|ఒకసారి|$1 సార్లు}} ఇచ్చారు',
+	'ga-gift-title' => '$1 యొక్క "$2"',
 	'ga-giftdesc' => 'బహుమతి వివరణ',
 	'ga-giftname' => 'బహుమతి పేరు',
 	'ga-gifttype' => 'బహుమతి రకం',

@@ -4457,6 +4457,7 @@ $messages['te'] = array(
 	'giftmanager-description' => 'బహుమతి వివరణ',
 	'giftmanager-public' => 'బహిరంగం',
 	'giftmanager-private' => 'అంతరంగికం',
+	'g-back-link' => '< తిరిగి $1 యొక్క పుటకి',
 	'g-cancel' => 'రద్దు',
 	'g-count' => '$1 కి $2 {{PLURAL:$2|బహుమతి ఉంది|బహుమతులు ఉన్నాయి}}.',
 	'g-from' => '<a href="$1">$2</a> నుండి',
@@ -4471,6 +4472,7 @@ $messages['te'] = array(
 	'g-previous' => 'గత',
 	'g-remove' => 'తొలగించు',
 	'g-remove-title' => '"$1"ని తొలగించాలా?',
+	'g-uploadsuccess' => 'ఎక్కింపు విజయవంతం',
 );
 
 /** Thai (ไทย)
