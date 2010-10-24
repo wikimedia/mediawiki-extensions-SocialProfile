@@ -6522,7 +6522,7 @@ $messages['mk'] = array(
  * @author Shijualex
  */
 $messages['ml'] = array(
-	'user-time-ago' => 'മുൻപ്',
+	'user-time-ago' => '$1 പഴയത്',
 	'user-view-all' => 'എല്ലാം കാണുക',
 	'user-upload-image' => 'ചിത്രം അപ്‌ലോഡ് ചെയ്യുക',
 	'user-edit-this' => 'ഇതു തിരുത്തുക',
@@ -9786,7 +9786,7 @@ $messages['te'] = array(
 	'user-add-foe' => 'శత్రువుగా చేర్చు',
 	'user-remove-friend' => 'స్నేహితునిగా తొలగించు',
 	'user-remove-foe' => 'శత్రువుగా తొలగించు',
-	'user-send-message' => 'ఓ సందేశం పంపండి',
+	'user-send-message' => 'ఓ సందేశాన్ని పంపించండి',
 	'user-send-gift' => 'ఓ బహుమతి పంపించండి',
 	'user-contributions' => 'రచనలు',
 	'user-stats-title' => 'గణాంకాలు',

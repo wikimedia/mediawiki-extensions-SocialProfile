@@ -94,6 +94,13 @@ $messages['ar'] = array(
 	'useractivity-user_message' => '$1 {{PLURAL:$4|أرسل رسالة إلى|أرسل رسائل إلى}} $3',
 );
 
+/** Aramaic (ܐܪܡܝܐ)
+ * @author Basharh
+ */
+$messages['arc'] = array(
+	'useractivity-all' => 'ܚܙܝ ܟܠ',
+);
+
 /** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
  * @author EugeneZelenko
  * @author Jim-by
@@ -239,6 +246,7 @@ $messages['fi'] = array(
 
 /** French (Français)
  * @author IAlex
+ * @author Verdy p
  * @author Y-M D
  */
 $messages['fr'] = array(
@@ -247,10 +255,10 @@ $messages['fr'] = array(
 	'useractivity-all' => 'Tout voir',
 	'useractivity-edit' => '$1 a modifié {{PLURAL:$4|la page|les pages suivantes :}} $3',
 	'useractivity-foe' => '$1 {{PLURAL:$2|est maintenant ennemi|sont maintenant ennemis}} avec $3',
-	'useractivity-friend' => '$1 {{PLURAL:$2|est maintenant ami avec|sont maintenant amis avec}} $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|est maintenant ami|sont maintenant amis}} avec $3',
 	'useractivity-gift' => '$1 a reçu un cadeau de la part de $2',
 	'useractivity-group-edit' => '$1 {{PLURAL:$1|modification|modifications}}',
-	'useractivity-group-comment' => '$1 {{PLURAL:$1|commentaire|commentaires}}',
+	'useractivity-group-comment' => '$1 commentaire{{PLURAL:$1||s}}',
 	'useractivity-group-user_message' => '$1 {{PLURAL:$1|message|messages}}',
 	'useractivity-group-friend' => '$1 {{PLURAL:$1|ami|amis}}',
 	'useractivity-siteactivity' => 'Activité du site',

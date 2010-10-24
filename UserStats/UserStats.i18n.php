@@ -745,11 +745,19 @@ $messages['eo'] = array(
 	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Semajna venko|Semajnaj venkoj}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Redakto|Redaktoj}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Komento|Komentoj}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Referenco|Referencoj}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Amiko|Amikoj}}',
 	'top-fans-stats-foe-count' => '{{PLURAL:$1|Malamiko|Malamikoj}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Eldonita opinio|Eldonitaj opinioj}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Opinio|Opinioj}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Dikfingro supre|Dikfingroj supre}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Dikfingro malsupre|Dikfingroj malsupre}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Dikfingro supren donita|Dikfingroj supren donitaj}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Dikfingro malsupren donita|Dikfingroj malsupren donitaj}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Donaco ricevita|Donacoj ricevita}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Donaco sendita|Donacoj senditaj}}',
+	'right-updatepoints' => 'Ĝisdatigi nombradon de redaktoj',
+	'level-advanced-to' => 'rangiĝis al nivelo <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Vi nun estas "$1" en {{SITENAME}}!',
 );
 
@@ -2739,8 +2747,10 @@ $3 bağlantısına tıklayın ve e-posta bildirimlerini devre dışı bırakmak 
 
 /** Ukrainian (Українська)
  * @author Prima klasy4na
+ * @author Тест
  */
 $messages['uk'] = array(
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Голос|Голоси|Голосів}}',
 	'top-fans-stats-edit-count' => '{{PLURAL:$1|Редагування|Редагувань}}',
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Коментар|Коментарі}}',
 );

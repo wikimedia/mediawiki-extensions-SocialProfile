@@ -182,6 +182,31 @@ $4
 	'right-awardsmanage' => 'إنشاء جوائز جديدة وتعديل الموجودة',
 );
 
+/** Aramaic (ܐܪܡܝܐ)
+ * @author Basharh
+ */
+$messages['arc'] = array(
+	'ga-addnew' => '+ ܐܘܣܦ ܕܫܢܐ ܚܕܬܐ',
+	'ga-choosefile' => 'ܓܒܝ ܠܦܦܐ:',
+	'ga-count' => '$1 ܐܝܬ ܠܗ $2 {{PLURAL:$2|ܫܘܟܢܐ|ܫܘܟܢ̈ܐ}}.',
+	'ga-create-gift' => 'ܒܪܝ ܕܫܢܐ',
+	'ga-currentimage' => 'ܨܘܪܬܐ ܗܫܝܬܐ',
+	'ga-gift' => 'ܕܫܢܐ',
+	'ga-giftdesc' => 'ܫܘܡܗܐ ܕܕܫܢܐ',
+	'ga-giftimage' => 'ܨܘܪܬܐ ܕܕܫܢܐ',
+	'ga-giftname' => 'ܫܡܐ ܕܕܫܢܐ',
+	'ga-gifttype' => 'ܐܕܫܐ ܕܕܫܢܐ',
+	'ga-large' => 'ܪܒܬܐ',
+	'ga-medium' => 'ܡܨܥܝܬܐ',
+	'ga-mediumlarge' => 'ܡܨܥܝܬܐ - ܪܒܬܐ',
+	'ga-new' => 'ܚܕܬܐ',
+	'ga-next' => 'ܒܬܪ',
+	'ga-previous' => 'ܩܕܡ',
+	'ga-small' => 'ܙܥܘܪܬܐ',
+	'ga-uploadsuccess' => 'ܐܣܩܬܐ ܕܠܦܦܐ ܢܨܚ',
+	'ga-viewlist' => 'ܚܙܝ ܡܟܬܒܘܬܐ ܕܕ̈ܫܢܐ',
+);
+
 /** Egyptian Spoken Arabic (مصرى)
  * @author Meno25
  */
@@ -2738,15 +2763,21 @@ $messages['sv'] = array(
  */
 $messages['te'] = array(
 	'ga-choosefile' => 'దస్త్రాన్ని ఎంచుకోండి:',
+	'ga-gift' => 'బహుమతి',
 	'ga-gift-given-count' => 'ఈ బహుమతిని {{PLURAL:$1|ఒకసారి|$1 సార్లు}} ఇచ్చారు',
 	'ga-gift-title' => '$1 యొక్క "$2"',
 	'ga-giftdesc' => 'బహుమతి వివరణ',
+	'ga-giftimage' => 'బహుమతి చిత్రం',
 	'ga-giftname' => 'బహుమతి పేరు',
 	'ga-gifttype' => 'బహుమతి రకం',
 	'ga-goback' => 'వెనక్కి వెళ్ళు',
 	'ga-new' => 'కొత్త',
 	'ga-next' => 'తర్వాతి',
 	'ga-previous' => 'గత',
+	'ga-title' => '$1 యొక్క పురస్కారాలు',
+	'ga-uploadsuccess' => 'ఎక్కింపు విజయవంతం',
+	'ga-viewlist' => 'బహుమతుల జాబితాని చూడండి',
+	'system_gift_received_subject' => '{{SITENAME}}లో మీకు $1 పురస్కారం లభించింది!',
 );
 
 /** Tagalog (Tagalog)

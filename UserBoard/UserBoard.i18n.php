@@ -202,6 +202,22 @@ $3
 وغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.',
 );
 
+/** Aramaic (ܐܪܡܝܐ)
+ * @author Basharh
+ */
+$messages['arc'] = array(
+	'userboard_delete' => 'ܫܘܦ',
+	'userboard_private' => 'ܦܪܨܘܦܝܐ',
+	'userboard_messagetype' => 'ܐܕܫܐ ܕܐܓܪܬܐ',
+	'userboard_nextpage' => 'ܒܬܪ',
+	'userboard_prevpage' => 'ܩܕܡ',
+	'userboard_nomessages' => 'ܠܝܬ ܐܓܪ̈ܬܐ',
+	'userboard-time-days' => '{{PLURAL:$1|ܚܕ ܝܘܡܐ|$1 ܝܘܡܬ̈ܐ}}',
+	'userboard-time-hours' => '{{PLURAL:$1|ܚܕܐ ܫܥܬܐ|$1 ܫܥܬ̈ܐ}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|ܚܕܐ ܩܛܝܢܬܐ|$1 ܩܛܝܢ̈ܬܐ}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|ܚܕ ܪܦܦܐ|$1 ܪ̈ܦܦܐ}}',
+);
+
 /** Egyptian Spoken Arabic (مصرى)
  * @author Ghaly
  * @author Meno25
