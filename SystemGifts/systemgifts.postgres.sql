@@ -8,8 +8,8 @@ CREATE TABLE user_system_gift (
   sg_status    INTEGER                DEFAULT 1,
   sg_date      TIMESTAMPTZ  NOT NULL  DEFAULT now()
 );
-CREATE INDEX sg_gift_id ON user_system_gift(sg_gift_id);
-CREATE INDEX sg_user_id ON user_system_gift(sg_user_id);
+CREATE INDEX social_profile_usg_gift_id ON user_system_gift(sg_gift_id);
+CREATE INDEX social_profile_usg_user_id ON user_system_gift(sg_user_id);
 
 CREATE TABLE system_gift (
   gift_id           SERIAL       PRIMARY KEY,
@@ -20,5 +20,5 @@ CREATE TABLE system_gift (
   gift_threshold    INTEGER                DEFAULT 0,
   gift_createdate   TIMESTAMPTZ  NOT NULL  DEFAULT now()
 );
-CREATE INDEX system_gift_category ON system_gift(gift_category);
-CREATE INDEX system_gift_threshold ON system_gift(gift_threshold);
+CREATE INDEX social_profile_sg_category ON system_gift(gift_category);
+CREATE INDEX social_profile_sg_threshold ON system_gift(gift_threshold);
