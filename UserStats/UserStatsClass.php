@@ -778,7 +778,9 @@ class UserLevel {
 		global $wgUserLevels;
 		$this->levels = $wgUserLevels;
 		$this->points = (int)str_replace( ',', '', $points );
-		if ( $this->levels ) $this->setLevel();
+		if ( $this->levels ) {
+			$this->setLevel();
+		}
 	}
 
 	private function setLevel() {
