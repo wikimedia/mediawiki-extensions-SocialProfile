@@ -73,16 +73,16 @@ $specialPageAliases['bs'] = array(
 
 /** German (Deutsch) */
 $specialPageAliases['de'] = array(
-	'AddRelationship' => array( 'Verbindung hinzufügen' ),
-	'PopulateUserProfiles' => array( 'Populäre Profile' ),
-	'RemoveAvatar' => array( 'Avatar entfernen' ),
-	'RemoveRelationship' => array( 'Verbindung entfernen' ),
+	'AddRelationship' => array( 'Verbindung_hinzufügen' ),
+	'PopulateUserProfiles' => array( 'Populäre_Profile' ),
+	'RemoveAvatar' => array( 'Avatar_entfernen' ),
+	'RemoveRelationship' => array( 'Verbindung_entfernen' ),
 	'TopUsers' => array( 'Top-Benutzer' ),
-	'TopUsersRecent' => array( 'Letzte Top-Benutzer' ),
-	'UpdateProfile' => array( 'Profil aktualisieren' ),
-	'UploadAvatar' => array( 'Avatar hochladen' ),
-	'ViewRelationshipRequests' => array( 'Verbindungsgesuche betrachten' ),
-	'ViewRelationships' => array( 'Verbindungen betrachten' ),
+	'TopUsersRecent' => array( 'Letzte_Top-Benutzer' ),
+	'UpdateProfile' => array( 'Profil_aktualisieren' ),
+	'UploadAvatar' => array( 'Avatar_hochladen' ),
+	'ViewRelationshipRequests' => array( 'Verbindungsgesuche_betrachten' ),
+	'ViewRelationships' => array( 'Verbindungen_betrachten' ),
 );
 
 /** Persian (فارسی) */
@@ -104,7 +104,7 @@ $specialPageAliases['fa'] = array(
 /** Finnish (Suomi) */
 $specialPageAliases['fi'] = array(
 	'RemoveAvatar' => array( 'Poista_avatar' ),
-	'UpdateProfile' => array( 'Päivitä käyttäjäprofiili' ),
+	'UpdateProfile' => array( 'Päivitä_käyttäjäprofiili' ),
 	'UploadAvatar' => array( 'Lataa_avatar' ),
 );
 
@@ -146,21 +146,21 @@ $specialPageAliases['hu'] = array(
 
 /** Interlingua (Interlingua) */
 $specialPageAliases['ia'] = array(
-	'AddRelationship' => array( 'Adder relation' ),
-	'PopulateUserProfiles' => array( 'Impler profilos de usatores' ),
-	'RemoveAvatar' => array( 'Remover avatar' ),
-	'RemoveRelationship' => array( 'Remover relation' ),
-	'SendBoardBlast' => array( 'Inviar colpo de tabuliero' ),
-	'TopFansByStatistic' => array( 'Admiratores supreme per statistica' ),
-	'TopUsers' => array( 'Usatores supreme' ),
-	'TopUsersRecent' => array( 'Usatores supreme recente' ),
-	'ToggleUserPage' => array( 'Cambiar pagina de usator' ),
-	'UpdateEditCounts' => array( 'Actualisar numeros de modificationes' ),
-	'UpdateProfile' => array( 'Actualisar profilos' ),
-	'UploadAvatar' => array( 'Cargar avatar' ),
-	'UserBoard' => array( 'Tabuliero de usator' ),
-	'ViewRelationshipRequests' => array( 'Vider requestas de relation' ),
-	'ViewRelationships' => array( 'Vider relationes' ),
+	'AddRelationship' => array( 'Adder_relation' ),
+	'PopulateUserProfiles' => array( 'Impler_profilos_de_usatores' ),
+	'RemoveAvatar' => array( 'Remover_avatar' ),
+	'RemoveRelationship' => array( 'Remover_relation' ),
+	'SendBoardBlast' => array( 'Inviar_colpo_de_tabuliero' ),
+	'TopFansByStatistic' => array( 'Admiratores_supreme_per_statistica' ),
+	'TopUsers' => array( 'Usatores_supreme' ),
+	'TopUsersRecent' => array( 'Usatores_supreme_recente' ),
+	'ToggleUserPage' => array( 'Cambiar_pagina_de_usator' ),
+	'UpdateEditCounts' => array( 'Actualisar_numeros_de_modificationes' ),
+	'UpdateProfile' => array( 'Actualisar_profilos' ),
+	'UploadAvatar' => array( 'Cargar_avatar' ),
+	'UserBoard' => array( 'Tabuliero_de_usator' ),
+	'ViewRelationshipRequests' => array( 'Vider_requestas_de_relation' ),
+	'ViewRelationships' => array( 'Vider_relationes' ),
 );
 
 /** Italian (Italiano) */
@@ -197,7 +197,7 @@ $specialPageAliases['km'] = array(
 $specialPageAliases['ko'] = array(
 	'RemoveAvatar' => array( '아바타제거' ),
 	'UploadAvatar' => array( '아바타올리기' ),
-	'UserBoard' => array( '사용자 게시판' ),
+	'UserBoard' => array( '사용자게시판' ),
 );
 
 /** Luxembourgish (Lëtzebuergesch) */
@@ -232,13 +232,13 @@ $specialPageAliases['mk'] = array(
 
 /** Malayalam (മലയാളം) */
 $specialPageAliases['ml'] = array(
-	'AddRelationship' => array( 'ബന്ധം കൊടുക്കുക' ),
-	'RemoveAvatar' => array( 'അവതാരം ഒഴിവാക്കുക' ),
-	'RemoveRelationship' => array( 'ബന്ധം ഒഴിവാക്കുക' ),
+	'AddRelationship' => array( 'ബന്ധം_കൊടുക്കുക' ),
+	'RemoveAvatar' => array( 'അവതാരം_ഒഴിവാക്കുക' ),
+	'RemoveRelationship' => array( 'ബന്ധം_ഒഴിവാക്കുക' ),
 	'TopUsers' => array( 'ഉന്നത‌‌ഉപയോക്താക്കൾ' ),
 	'UpdateEditCounts' => array( 'തിരുത്തലുകളുടെയെണ്ണംപുതുക്കുക' ),
 	'UploadAvatar' => array( 'അപ്‌‌ലോഡ്അവതാരം' ),
-	'ViewRelationships' => array( 'ബന്ധങ്ങൾ കാണുക' ),
+	'ViewRelationships' => array( 'ബന്ധങ്ങൾ_കാണുക' ),
 );
 
 /** Marathi (मराठी) */
