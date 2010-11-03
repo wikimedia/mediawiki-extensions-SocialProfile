@@ -7986,6 +7986,7 @@ $messages['uk'] = array(
 	'ur-next' => 'наступний',
 	'ur-remove' => 'Вилучити',
 	'ur-cancel' => 'Скасувати',
+	'ur-login' => 'Увійти',
 );
 
 /** Urdu (اردو) */
