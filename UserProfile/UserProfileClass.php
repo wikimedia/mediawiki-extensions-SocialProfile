@@ -122,7 +122,7 @@ class UserProfile {
 			$month = $dob[1];
 			$day = $dob[2];
 			return date( "F jS", mktime( 0, 0, 0, $month, $day ) );
-			r//eturn $day . ' ' . $wgLang->getMonthNameGen( $month );
+			//return $day . ' ' . $wgLang->getMonthNameGen( $month );
 		}
 		return $birthday;
 	}
