@@ -117,13 +117,12 @@ class UserProfile {
 	}
 
 	function formatBirthday( $birthday ) {
-		global $wgLang;
 		$dob = explode( '-', $birthday );
 		if ( count( $dob ) == 3 ) {
 			$month = $dob[1];
 			$day = $dob[2];
 			return date( "F jS", mktime( 0, 0, 0, $month, $day ) );
-			return $day . ' ' . $wgLang->getMonthNameGen( $month );
+			r//eturn $day . ' ' . $wgLang->getMonthNameGen( $month );
 		}
 		return $birthday;
 	}
