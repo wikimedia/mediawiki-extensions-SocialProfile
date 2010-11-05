@@ -83,7 +83,8 @@ class UserStatsTrack {
 	/**
 	 * Constructor
 	 * @param $user_id Integer: ID number of the user that we want to track stats for
-	 * @param $user_name Mixed: user's name; if not supplied, then the user ID will be used to get the user name from DB.
+	 * @param $user_name Mixed: user's name; if not supplied, then the user ID
+	 * 							will be used to get the user name from DB.
 	 */
 	function __construct( $user_id, $user_name = '' ) {
 		global $wgUserStatsPointValues;
@@ -145,8 +146,14 @@ class UserStatsTrack {
 		$wgMemc->delete( $key );
 	}
 
+	/**
+	 * Increase a given social statistic field by $val.
+	 *
+	 * @param $field String: field name in user_stats database table
+	 * @param $val Integer: increase $field by this amount, defaults to 1
+	 */
 	function incStatField( $field, $val = 1 ) {
-		global $wgUser, $wgMemc, $wgSystemGifts, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgUserStatsPointValues;
+		global $wgUser, $wgMemc, $wgSystemGifts, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
 		if ( !$wgUser->isAllowed( 'bot' ) && !$wgUser->isAnon() && $this->stats_fields[$field] ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$dbw->update(
@@ -169,38 +176,42 @@ class UserStatsTrack {
 				}
 			}
 
-			if ( $wgSystemGifts ) {
-				$s = $dbw->selectRow(
-					'user_stats',
-					array( $this->stats_fields[$field] ),
-					array( 'stats_user_id' => $this->user_id ),
-					__METHOD__
-				);
-				$stat_field = $this->stats_fields[$field];
-				$field_count = $s->$stat_field;
+			$s = $dbw->selectRow(
+				'user_stats',
+				array( $this->stats_fields[$field] ),
+				array( 'stats_user_id' => $this->user_id ),
+				__METHOD__
+			);
+			$stat_field = $this->stats_fields[$field];
+			$field_count = $s->$stat_field;
 
-				$key = wfMemcKey( 'system_gift', 'id', $field . '-' . $field_count );
-				$data = $wgMemc->get( $key );
+			$key = wfMemcKey( 'system_gift', 'id', $field . '-' . $field_count );
+			$data = $wgMemc->get( $key );
 
-				if ( $data ) {
-					wfDebug( "Got system gift id from cache\n" );
-					$system_gift_id = $data;
-				} else {
-					$g = new SystemGifts();
-					$system_gift_id = $g->doesGiftExistForThreshold( $field, $field_count );
-					if ( $system_gift_id ) {
-						$wgMemc->set( $key, $system_gift_id, 60 * 30 );
-					}
+			if ( $data ) {
+				wfDebug( "Got system gift ID from cache\n" );
+				$systemGiftID = $data;
+			} else {
+				$g = new SystemGifts();
+				$systemGiftID = $g->doesGiftExistForThreshold( $field, $field_count );
+				if ( $systemGiftID ) {
+					$wgMemc->set( $key, $systemGiftID, 60 * 30 );
 				}
+			}
 
-				if ( $system_gift_id ) {
-					$sg = new UserSystemGifts( $this->user_name );
-					$sg->sendSystemGift( $system_gift_id );
-				}
+			if ( $systemGiftID ) {
+				$sg = new UserSystemGifts( $this->user_name );
+				$sg->sendSystemGift( $systemGiftID );
 			}
 		}
 	}
 
+	/**
+	 * Decrease a given social statistic field by $val.
+	 *
+	 * @param $field String: field name in user_stats database table
+	 * @param $val Integer: decrease $field by this amount, defaults to 1
+	 */
 	function decStatField( $field, $val = 1 ) {
 		global $wgUser, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
 		if ( !$wgUser->isAllowed( 'bot' ) && !$wgUser->isAnon() && $this->stats_fields[$field] ) {
@@ -232,7 +243,7 @@ class UserStatsTrack {
 			$dbw = wfGetDB( DB_MASTER );
 			$sql = "UPDATE {$dbw->tableName( 'user_stats' )} SET ";
 			$sql .= 'stats_comment_count=';
-			$sql .= "(SELECT COUNT(*) AS CommentCount FROM {$dbw->tableName( 'Comments' )} WHERE  Comment_user_id = " . $this->user_id;
+			$sql .= "(SELECT COUNT(*) AS CommentCount FROM {$dbw->tableName( 'Comments' )} WHERE Comment_user_id = " . $this->user_id;
 			$sql .= ")";
 			$sql .= " WHERE stats_user_id = " . $this->user_id;
 			$res = $dbw->query( $sql, __METHOD__ );
@@ -290,20 +301,27 @@ class UserStatsTrack {
 		}
 	}
 
-	function updateCommentScoreRec( $vote_type ) {
+	/**
+	 * Updates the comment scores for the current user.
+	 *
+	 * @param $voteType Integer: if 1, sets the amount of positive comment
+	 * 							scores, else sets the amount of negative
+	 * 							comment scores
+	 */
+	function updateCommentScoreRec( $voteType ) {
 		global $wgUser;
 		if ( $this->user_id != 0 ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$sql = "UPDATE {$dbw->tableName( 'user_stats' )} SET ";
-			if ( $vote_type == 1 ) {
-				$sql  .= 'stats_comment_score_positive_rec=';
+			if ( $voteType == 1 ) {
+				$sql .= 'stats_comment_score_positive_rec=';
 			} else {
-				$sql  .= 'stats_comment_score_negative_rec=';
+				$sql .= 'stats_comment_score_negative_rec=';
 			}
 			$sql .= "(SELECT COUNT(*) AS CommentVoteCount FROM {$dbw->tableName( 'Comments_Vote' )} WHERE Comment_Vote_ID IN (
-			SELECT CommentID FROM {$dbw->tableName( 'Comments' )} WHERE Comment_user_id = " . $this->user_id . ") AND Comment_Vote_Score=" . $vote_type;
-			$sql .= ")";
-			$sql .= " WHERE stats_user_id = " . $this->user_id;
+			SELECT CommentID FROM {$dbw->tableName( 'Comments' )} WHERE Comment_user_id = " . $this->user_id . ") AND Comment_Vote_Score=" . $voteType;
+			$sql .= ')';
+			$sql .= ' WHERE stats_user_id = ' . $this->user_id;
 			$res = $dbw->query( $sql, __METHOD__ );
 
 			$this->clearCache();
@@ -350,21 +368,23 @@ class UserStatsTrack {
 	}
 
 	/**
-	 * Updates the amount of relationships (friends or foes) if the user isn't an anon
-	 * @param $rel_type Integer: 1 for updating friends
+	 * Updates the amount of relationships (friends or foes) if the user isn't
+	 * an anonymous one.
+	 *
+	 * @param $relType Integer: 1 for updating friends
 	 */
-	function updateRelationshipCount( $rel_type ) {
+	function updateRelationshipCount( $relType ) {
 		global $wgUser;
 		if ( !$wgUser->isAnon() ) {
 			$dbw = wfGetDB( DB_MASTER );
-			if ( $rel_type == 1 ) {
+			if ( $relType == 1 ) {
 				$col = 'stats_friends_count';
 			} else {
 				$col = 'stats_foe_count';
 			}
 			$sql = "UPDATE LOW_PRIORITY {$dbw->tableName( 'user_stats' )} SET {$col}=
 					(SELECT COUNT(*) AS rel_count FROM {$dbw->tableName( 'user_relationship' )} WHERE
-						r_user_id = {$this->user_id} AND r_type={$rel_type}
+						r_user_id = {$this->user_id} AND r_type={$relType}
 					)
 				WHERE stats_user_id = {$this->user_id}";
 			$res = $dbw->query( $sql, __METHOD__ );
@@ -440,6 +460,10 @@ class UserStatsTrack {
 		);
 	}
 
+	/**
+	 * Adds a record about the current user to the user_points_weekly database
+	 * table.
+	 */
 	public function addWeekly() {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->insert(
@@ -473,6 +497,10 @@ class UserStatsTrack {
 		);
 	}
 
+	/**
+	 * Adds a record about the current user to the user_points_monthly database
+	 * table.
+	 */
 	public function addMonthly() {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->insert(
@@ -485,6 +513,11 @@ class UserStatsTrack {
 		);
 	}
 
+	/**
+	 * Updates the total amount of points the user has.
+	 *
+	 * @return Array
+	 */
 	public function updateTotalPoints() {
 		global $wgEnableFacebook, $wgUserLevels;
 
@@ -615,7 +648,7 @@ class UserStats {
 		$key = wfMemcKey( 'user', 'stats', $this->user_id );
 		$data = $wgMemc->get( $key );
 		if ( $data ) {
-			wfDebug( "Got user stats  for {$this->user_name} from cache\n" );
+			wfDebug( "Got user stats for {$this->user_name} from cache\n" );
 			return $data;
 		}
 	}
@@ -628,8 +661,16 @@ class UserStats {
 
 		wfDebug( "Got user stats for {$this->user_name} from DB\n" );
 		$dbr = wfGetDB( DB_MASTER );
-		$sql = "SELECT * FROM {$dbr->tableName( 'user_stats' )} WHERE stats_user_id = {$this->user_id} LIMIT 0,1";
-		$res = $dbr->query( $sql, __METHOD__ );
+		$res = $dbr->select(
+			'user_stats',
+			'*',
+			array( 'stats_user_id' => $this->user_id ),
+			__METHOD__,
+			array(
+				'LIMIT' => 1,
+				'OFFSET' => 0
+			)
+		);
 		$row = $dbr->fetchObject( $res );
 		$stats['edits'] = number_format( isset( $row->stats_edit_count ) ? $row->stats_edit_count : 0 );
 		$stats['votes'] = number_format( isset( $row->stats_vote_count ) ? $row->stats_vote_count : 0 );
@@ -667,25 +708,28 @@ class UserStats {
 		return $stats;
 	}
 
+	/**
+	 * Get the list of top users, based on social statistics.
+	 *
+	 * @param $limit Integer: LIMIT for SQL query, defaults to 10
+	 * @return Array: list of top users, contains the user IDs, names and
+	 * 					amount of points the user has
+	 */
 	static function getTopFansList( $limit = 10 ) {
 		$dbr = wfGetDB( DB_MASTER );
 
-		if ( $limit > 0 ) {
-			$limitvalue = 0;
-			if ( $page ) {
-				$limitvalue = $page * $limit - ( $limit );
-			}
-			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
-		}
-
-		$sql = "SELECT stats_user_id, stats_user_name, stats_total_points
-			FROM {$dbr->tableName( 'user_stats' )}
-			WHERE stats_user_id <> 0
-			ORDER BY stats_total_points DESC
-			{$limit_sql}";
+		$res = $dbr->select(
+			'user_stats',
+			array( 'stats_user_id', 'stats_user_name', 'stats_total_points' ),
+			array( 'stats_user_id <> 0' ),
+			__METHOD__,
+			array(
+				'ORDER BY' => 'stats_total_points DESC',
+				'LIMIT' => $limit
+			)
+		);
 
 		$list = array();
-		$res = $dbr->query( $sql, __METHOD__ );
 		foreach ( $res as $row ) {
 			$list[] = array(
 				'user_id' => $row->stats_user_id,
@@ -696,29 +740,33 @@ class UserStats {
 		return $list;
 	}
 
+	/**
+	 * Get the top users for a given period.
+	 *
+	 * @param $limit Integer: LIMIT for SQL query, defaults to 10
+	 * @param $period String: period for which we're getting the top users, can
+	 *							be either 'weekly' or 'monthly'
+	 * @return Array: list of top users
+	 */
 	static function getTopFansListPeriod( $limit = 10, $period = 'weekly' ) {
-		$dbr = wfGetDB( DB_SLAVE );
-
-		if ( $limit > 0 ) {
-			$limitvalue = 0;
-			if ( $page ) {
-				$limitvalue = $page * $limit - ( $limit );
-			}
-			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
-		}
 		if ( $period == 'monthly' ) {
-			$points_table = 'user_points_monthly';
+			$pointsTable = 'user_points_monthly';
 		} else {
-			$points_table = 'user_points_weekly';
+			$pointsTable = 'user_points_weekly';
 		}
-		$sql = "SELECT up_user_id, up_user_name, up_points
-			FROM {$points_table}
-			WHERE up_user_id <> 0
-			ORDER BY up_points DESC
-			{$limit_sql}";
+		$dbr = wfGetDB( DB_SLAVE );
+		$res = $dbr->select(
+			$pointsTable,
+			array( 'up_user_id', 'up_user_name', 'up_points' ),
+			array( 'up_user_id <> 0' ),
+			__METHOD__,
+			array(
+				'ORDER BY' => 'up_points DESC',
+				'LIMIT' => $limit
+			)
+		);
 
 		$list = array();
-		$res = $dbr->query( $sql, __METHOD__ );
 		foreach ( $res as $row ) {
 			$list[] = array(
 				'user_id' => $row->up_user_id,
@@ -729,17 +777,20 @@ class UserStats {
 		return $list;
 	}
 
+	/**
+	 * Gets the amount of friends relative to points.
+	 *
+	 * @param $user_id Integer: user ID
+	 * @param $points Integer:
+	 * @param $limit Integer: LIMIT for SQL queries, defaults to 3
+	 * @param $condition Integer: if 1, the query operator for ORDER BY clause
+	 *								will be set to > and the results are
+	 *								ordered in ascending order, otherwise it'll
+	 * 								be set to < and results are ordered in
+	 *								descending order
+	 * @return Array
+	 */
 	static function getFriendsRelativeToPoints( $user_id, $points, $limit = 3, $condition = 1 ) {
-		$dbr = wfGetDB( DB_SLAVE );
-
-		if ( $limit > 0 ) {
-			$limitvalue = 0;
-			if ( $page ) {
-				$limitvalue = $page * $limit - ( $limit );
-			}
-			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
-		}
-
 		if ( $condition == 1 ) {
 			$op = '>';
 			$sort = 'ASC';
@@ -747,15 +798,26 @@ class UserStats {
 			$op = '<';
 			$sort = 'DESC';
 		}
-		$sql = "SELECT stats_user_id, stats_user_name, stats_total_points
-			FROM {$dbr->tableName( 'user_stats' )}
-			INNER JOIN {$dbr->tableName( 'user_relationship' )} ON stats_user_id = r_user_id_relation
-			WHERE r_user_id = {$user_id} AND stats_total_points {$op} {$points}
-			ORDER BY stats_total_points {$sort}
-			{$limit_sql}";
-
+		$dbr = wfGetDB( DB_SLAVE );
+		$res = $dbr->select(
+			array( 'user_stats', 'user_relationship' ),
+			array( 'stats_user_id', 'stats_user_name', 'stats_total_points' ),
+			array(
+				'r_user_id' => $user_id,
+				"stats_total_points {$op} {$points}"
+			),
+			__METHOD__,
+			array(
+				'ORDER BY' => "stats_total_points {$sort}",
+				'LIMIT' => $limit
+			),
+			array(
+				'user_relationship' => array(
+					'INNER JOIN', 'stats_user_id = r_user_id_relation'
+				)
+			)
+		);
 		$list = array();
-		$res = $dbr->query( $sql, __METHOD__ );
 		foreach ( $res as $row ) {
 			$list[] = array(
 				'user_id' => $row->stats_user_id,
@@ -838,12 +900,12 @@ class UserEmailTrack {
 
 	/**
 	 * @param $type Integer: one of the following:
-		1 = Invite - Email Contacts sucker
-		2 = Invite - CVS Contacts importer
-		3 = Invite - Manually Address enter
-		4 = Invite to Read - Manually Address enter
-		5 = Invite to Edit - Manually Address enter
-		6 = Invite to Rate - Manually Address enter
+	 * 						1 = Invite - Email Contacts sucker
+	 * 						2 = Invite - CVS Contacts importer
+	 * 						3 = Invite - Manually Address enter
+	 * 						4 = Invite to Read - Manually Address enter
+	 * 						5 = Invite to Edit - Manually Address enter
+	 * 						6 = Invite to Rate - Manually Address enter
 	 * @param $count
 	 * @param $page_title
 	 */
