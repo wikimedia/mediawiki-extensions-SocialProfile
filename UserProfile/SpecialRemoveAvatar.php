@@ -91,7 +91,7 @@ class RemoveAvatar extends SpecialPage {
 	 */
 	private function showUserForm() {
 		$output = '<form method="get" name="avatar" action="">' .
-				Xml::hidden( 'title', $this->getTitle() ) .
+				Html::hidden( 'title', $this->getTitle() ) .
 				'<b>' . wfMsg( 'username' ) . '</b>
 				<input type="text" name="user" />
 				<input type="submit" value="' . wfMsg( 'search' ) . '" />
