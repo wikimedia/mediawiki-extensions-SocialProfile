@@ -1361,7 +1361,7 @@ $messages['ta'] = array(
  */
 $messages['te'] = array(
 	'mp-userlevels-link' => 'వాడుకరి స్థాయిలు',
-	'mp-welcome-upload' => 'ఎగుమతిచేయి',
+	'mp-welcome-upload' => 'ఎక్కింపు',
 	'mp-welcome-edit' => 'మార్చు',
 	'mp-welcome-points' => '$1 {{PLURAL:$1|పాయింటు|పాయింట్లు}}',
 	'mp-welcome-logged-in' => 'హలో $1',
