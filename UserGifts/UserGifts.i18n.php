@@ -132,6 +132,7 @@ $messages['qqq'] = array(
 	'g-description-title' => '{{gender}}
 * $1 is a user name
 * $2 is the name of a gift',
+	'g-give-separator' => '{{Identical|Or}}',
 	'g-go-back' => '{{Identical|Go back}}',
 	'g-large' => '{{Identical|Large}}',
 	'g-main-page' => '{{Identical|Main page}}',
