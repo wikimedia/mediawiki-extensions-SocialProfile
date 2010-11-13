@@ -6233,6 +6233,7 @@ Klickt <a href="$1">hei</a> fir Iech anzeloggen oder klickt <a href="$2">hei</a>
 	'user-profile-tidbits-favmoment' => 'Léiwste Sportsevenementer',
 	'user-profile-tidbits-worstmoment' => 'Schlëmmsten Ament am Sport',
 	'user-profile-tidbits-favathlete' => 'Lieblings-Sportler a firwat',
+	'user-profile-tidbits-leastfavathlete' => 'Sportler deen een net gär huet a firwat',
 	'user-profile-sports-sport' => 'Sport',
 	'user-profile-sports-title' => 'Ännert Äre léiwste Sportveräiner',
 	'user-profile-sports-notloggedintitle' => 'Ups!',
