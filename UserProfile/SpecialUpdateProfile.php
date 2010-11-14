@@ -228,6 +228,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$month = $dob[0];
 			$day = $dob[1];
 			$birthday_date = $year . '-' . $month . '-' . $day;
+		} else {
+			$birthday_date = '';
 		}
 		return ( $birthday_date );
 	}
@@ -239,6 +241,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$month = $dob[1];
 			$day = $dob[2];
 			$birthday_date = $month . '/' . $day; // . '/' . $year;
+		} else {
+			$birthday_date = '';
 		}
 		return $birthday_date;
 	}
