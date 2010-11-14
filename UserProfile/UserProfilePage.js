@@ -3,7 +3,7 @@
  */
 var posted = 0;
 function send_message() {
-	var userTo = document.getElementById( 'user_name_to' ).value;
+	var userTo = decodeURIComponent( wgTitle ); //document.getElementById( 'user_name_to' ).value;
 	var encMsg = encodeURIComponent( document.getElementById( 'message' ).value );
 	var msgType = document.getElementById( 'message_type' ).value;
 	if( document.getElementById( 'message' ).value && !posted ) {
