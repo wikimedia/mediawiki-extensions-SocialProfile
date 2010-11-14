@@ -183,8 +183,8 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		if ( !$this->mStashed ) {
 			$veri = $this->verify( $this->mUploadTempName, $finalExt );
 
-			if ( $veri !== true ) { // it's a wiki error...
-				return $this->uploadError( $veri->toString() );
+			if ( !$veri->isGood() ) {
+				return $this->uploadError( $wgOut->parse( $veri->getWikiText() ) );
 			}
 		}
 
@@ -663,7 +663,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	 *
 	 * @param string $tmpfile the full path opf the temporary file to verify
 	 * @param string $extension The filename extension that the file is to be served with
-	 * @return mixed true of the file is verified, a WikiError object otherwise.
+	 * @return Status object
 	 */
 	function verify( $tmpfile, $extension ) {
 		# magically determine mime type
@@ -675,20 +675,20 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		if ( $wgVerifyMimeType ) {
 			# check mime type against file extension
 			if ( !$this->verifyExtension( $mime, $extension ) ) {
-				return new WikiErrorMsg( 'uploadcorrupt' );
+				return Status::newFatal( 'uploadcorrupt' );
 			}
 
 			# check mime type blacklist
 			global $wgMimeTypeBlacklist;
 			if ( isset( $wgMimeTypeBlacklist ) && !is_null( $wgMimeTypeBlacklist )
 				&& $this->checkFileExtension( $mime, $wgMimeTypeBlacklist ) ) {
-				return new WikiErrorMsg( 'badfiletype', htmlspecialchars( $mime ) );
+				return Status::newFatal( 'badfiletype', htmlspecialchars( $mime ) );
 			}
 		}
 
 		# check for htmlish code and javascript
 		if ( $this->detectScript( $tmpfile, $mime ) ) {
-			return new WikiErrorMsg( 'uploadscripted' );
+			return Status::newFatal( 'uploadscripted' );
 		}
 
 		/**
@@ -696,11 +696,11 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		 */
 		$virus = $this->detectVirus( $tmpfile );
 		if ( $virus ) {
-			return new WikiErrorMsg( 'uploadvirus', htmlspecialchars( $virus ) );
+			return Status::newFatal( 'uploadvirus', htmlspecialchars( $virus ) );
 		}
 
 		wfDebug( __METHOD__ . ": all clear; passing.\n" );
-		return true;
+		return Status::newGood();
 	}
 
 	/**
