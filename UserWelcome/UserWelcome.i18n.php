@@ -873,8 +873,8 @@ $messages['mk'] = array(
 	'mp-userlevels-link' => 'Кориснички нивоа',
 	'mp-welcome-upload' => 'Подигнување',
 	'mp-welcome-edit' => 'Уреди',
-	'mp-welcome-points' => '$1 {{PLURAL:$1|поен|поени}}',
-	'mp-welcome-needed-points' => 'За да напредувате до <b><a href="$1">$2</a></b> заработете повеќе од <i>$3</i> {{PLURAL:$3|поен|поени}}!',
+	'mp-welcome-points' => '$1 {{PLURAL:$1|бод|бода}}',
+	'mp-welcome-needed-points' => 'За да напредувате до <b><a href="$1">$2</a></b> заработете повеќе од <i>$3</i> {{PLURAL:$3|бод|бода}}!',
 	'mp-welcome-logged-in' => 'Добредојдовте $1',
 	'mp-requests-title' => 'Барања',
 	'mp-requests-message' => 'Вие ги имате следниве барања.',
@@ -1010,6 +1010,13 @@ $messages['pdc'] = array(
 	'mp-welcome-upload' => 'Ufflaade',
 	'mp-welcome-edit' => 'Ennere',
 	'mp-welcome-logged-in' => 'Heiya $1',
+);
+
+/** Pfälzisch (Pfälzisch)
+ * @author Xqt
+ */
+$messages['pfl'] = array(
+	'mp-welcome-edit' => 'Bearwaide',
 );
 
 /** Polish (Polski)

@@ -1714,16 +1714,16 @@ an ännert Är Astellungen a schalt den E-Mai-Benoriichtungssystem aus.',
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
-	'user-stats-alltime-title' => 'Највеќе поени на сите времиња',
-	'user-stats-weekly-title' => 'Највеќе поени за неделава',
-	'user-stats-monthly-title' => 'Највеќе поени за месецов',
+	'user-stats-alltime-title' => 'Највеќе бодови на сите времиња',
+	'user-stats-weekly-title' => 'Највеќе бодови за неделава',
+	'user-stats-monthly-title' => 'Највеќе бодови за месецов',
 	'topusers' => 'Најкотирани корисници',
 	'top-fans-by-points-nav-header' => 'Најкотирани обожаватели',
 	'top-fans-by-category-nav-header' => 'Најкотирани по категорија',
-	'top-fans-total-points-link' => 'Вкупно поени',
-	'top-fans-weekly-points-link' => 'Поени за неделава',
-	'top-fans-monthly-points-link' => 'Поени за овој месец',
-	'top-fans-points' => 'поени',
+	'top-fans-total-points-link' => 'Вкупно бодови',
+	'top-fans-weekly-points-link' => 'Бодови за неделава',
+	'top-fans-monthly-points-link' => 'Бодови за овој месец',
+	'top-fans-points' => 'бода',
 	'top-fans-by-category-title-edit-count' => 'Најкотирани вкупни уредувања',
 	'top-fans-by-category-title-friends-count' => 'Најкотирани вкупни пријатели',
 	'top-fans-by-category-title-foe-count' => 'Најкотирани вкупни непријатели',
@@ -2023,6 +2023,13 @@ e modificatz vòstres paramètres en desactivant las notificacions per corrièr 
  */
 $messages['pdc'] = array(
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Aamaericking|Aamaerickinge}}',
+);
+
+/** Pfälzisch (Pfälzisch)
+ * @author Xqt
+ */
+$messages['pfl'] = array(
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Bearwaidung|Bearwaidunge}}',
 );
 
 /** Polish (Polski)
