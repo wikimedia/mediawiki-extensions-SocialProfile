@@ -5386,6 +5386,7 @@ $messages['ig'] = array(
 );
 
 /** Italian (Italiano)
+ * @author Beta16
  * @author Darth Kule
  */
 $messages['it'] = array(
@@ -5403,6 +5404,7 @@ $messages['it'] = array(
 	'user-profile-personal-info' => 'Informazioni',
 	'user-profile-personal-name' => 'Nome',
 	'user-profile-personal-email' => 'Indirizzo e-mail',
+	'user-profile-personal-country' => 'Nazione',
 	'user-profile-personal-birthdate' => 'Data (MM/GG)',
 	'user-profile-personal-occupation' => 'Occupazione',
 	'user-profile-interests-books' => 'Libri',
@@ -7670,6 +7672,13 @@ $messages['pdc'] = array(
  */
 $messages['pdt'] = array(
 	'user-page-link' => 'Bruckersied',
+);
+
+/** Pfälzisch (Pfälzisch)
+ * @author Xqt
+ */
+$messages['pfl'] = array(
+	'user-page-link' => 'Benutzersaid',
 );
 
 /** Polish (Polski)
