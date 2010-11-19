@@ -32,6 +32,7 @@ class GiveGift extends SpecialPage {
 		$this->user_name_to = $usertitle->getText();
 		$this->user_id_to = User::idFromName( $this->user_name_to );
 		$gift_id = $wgRequest->getVal( 'gift_id' );
+		$out = '';
 
 		if ( $wgUser->getID() == $this->user_id_to ) {
 			$wgOut->setPageTitle( wfMsg( 'g-error-title' ) );
