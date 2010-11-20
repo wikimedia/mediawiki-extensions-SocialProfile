@@ -5190,6 +5190,7 @@ Clicca <a href="$1">hic</a> pro aperir un session o clicca <a href="$2">hic</a> 
  * @author Bennylin
  * @author Farras
  * @author Irwangatot
+ * @author IvanLanin
  */
 $messages['id'] = array(
 	'populateuserprofiles' => 'Buat profil pengguna',
@@ -5202,7 +5203,7 @@ $messages['id'] = array(
 	'user-edit-this' => 'Sunting ini',
 	'user-edit-profile' => 'Sunting profil',
 	'user-upload-avatar' => 'Muatkan avatar',
-	'user-watchlist' => 'Daftar pantauan saya',
+	'user-watchlist' => 'Daftar pantauan',
 	'user-meet-people' => 'Temui orang lain',
 	'user-add-friend' => 'Tambahkan teman',
 	'user-add-foe' => 'Tambahkan musuh',

@@ -477,11 +477,12 @@ $messages['fi'] = array(
  * @author Crochet.david
  * @author Grondin
  * @author IAlex
+ * @author Verdy p
  */
 $messages['fr'] = array(
 	'userwelcome-desc' => 'Ajoute une balise <code>&lt;welcomeUser&gt;</code> pour afficher des informations sociales spécifiques à chaque utilisateur aux utilisateurs enregistrés',
 	'mp-userlevels-link' => 'Niveaux de l’utilisateur',
-	'mp-welcome-upload' => 'Télécharger',
+	'mp-welcome-upload' => 'Téléverser',
 	'mp-welcome-edit' => 'Modifier',
 	'mp-welcome-points' => '$1 point{{PLURAL:$1||s}}',
 	'mp-welcome-needed-points' => 'Avancer vers <b><a href="$1">$2</a></b> gagne <i>$3</i> point{{PLURAL:$3||s}} en plus !',
