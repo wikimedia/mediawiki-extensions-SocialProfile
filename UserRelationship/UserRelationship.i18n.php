@@ -2545,6 +2545,7 @@ ja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.',
  * @author Grondin
  * @author IAlex
  * @author McDutchie
+ * @author Verdy p
  * @author Zetud
  */
 $messages['fr'] = array(
@@ -2572,7 +2573,7 @@ En vouloir encore plus ?
 	'ur-remove-relationship-foe' => 'Enlever comme ennemi',
 	'ur-give-gift' => 'Envoyer un cadeau',
 	'ur-previous' => 'préc.',
-	'ur-next' => 'suiv.',
+	'ur-next' => 'suivant',
 	'ur-remove-relationship-title-foe' => 'Voulez-vouz enlever $1 comme votre ennemi ?',
 	'ur-remove-relationship-title-confirm-foe' => 'Vous avez enlevé $1 de vos ennemis',
 	'ur-remove-relationship-title-friend' => 'Voulez-vous enlever $1 comme votre ami ?',

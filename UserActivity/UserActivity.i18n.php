@@ -123,13 +123,14 @@ $messages['be-tarask'] = array(
 );
 
 /** Breton (Brezhoneg)
+ * @author Fulup
  * @author Y-M D
  */
 $messages['br'] = array(
-	'useractivity' => 'Obererezh ar mignoned',
+	'useractivity' => 'Obererezh ar vignoned',
 	'useractivity-award' => '$1 en deus resevet ur garedon',
 	'useractivity-all' => 'Gwelet pep tra',
-	'useractivity-edit' => '$1 en deus kemmet {{PLURAL:$4|ar bajenn|ar bajennoù}} da heul : $3',
+	'useractivity-edit' => '$1 en deus kemmet {{PLURAL:$4|ar bajenn|ar pajennoù}} da heul : $3',
 	'useractivity-foe' => 'Bremañ ez eo $1 {{PLURAL:$2|enebour|enebourien}} da $3',
 	'useractivity-friend' => 'Bremañ ez eo $1 {{PLURAL:$2|mignon|mignoned}} gant $3',
 	'useractivity-gift' => '$1 en deus resevet ur prof a-berzh $2',
@@ -138,7 +139,7 @@ $messages['br'] = array(
 	'useractivity-group-user_message' => '{{PLURAL:$1|ur gemennadenn|$1 kemennadenn}}',
 	'useractivity-group-friend' => '{{PLURAL:$1|ur mignon|$1 mignon}}',
 	'useractivity-siteactivity' => "Obererezh al lec'hienn",
-	'useractivity-title' => 'Oberezh ar mignoned',
+	'useractivity-title' => 'Obererezh ar vignoned',
 	'useractivity-user_message' => '$1 en deus kaset {{PLURAL:$4|ur gemennadenn|kemennadennoù}} da $3',
 );
 
@@ -151,8 +152,12 @@ $messages['bs'] = array(
 	'useractivity-all' => 'Pogledajte sve',
 	'useractivity-gift' => '$1 primio poklon od $2',
 	'useractivity-group-edit' => '{{PLURAL:$1|jedna izmjena|$1 izmjene|$1 izmjena}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|jedan komentar|$1 komentara}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|jedna poruka|$1 poruke|$1 poruka}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|jedan prijatelj|$1 prijatelja}}',
 	'useractivity-siteactivity' => 'Aktivnosti na stranici',
 	'useractivity-title' => 'Aktivnosti prijatelja',
+	'useractivity-user_message' => '$1 {{PLURAL:$4|je poslao poruku|je poslao poruke}} $3',
 );
 
 /** Czech (Česky) */
