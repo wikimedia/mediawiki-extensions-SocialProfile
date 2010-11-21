@@ -215,7 +215,7 @@ function efSocialProfileSchemaUpdates( $updater = null ) {
 			$wgExtNewTables[] = array( 'user_gift', "$dir/UserGifts/usergifts.sql" );
 			$wgExtNewTables[] = array( 'gift', "$dir/UserGifts/usergifts.sql" );
 			$wgExtNewTables[] = array( 'user_system_messages', "$dir/UserSystemMessages/user_system_messages.sql" );
-		} elseif( $wgDBtype == 'postgresql' ) {
+		} elseif( $wgDBtype == 'postgres' ) {
 			$wgExtNewTables[] = array( 'user_board', "$dir/UserBoard/user_board.postgres.sql" );
 			$wgExtNewTables[] = array( 'user_profile', "$dir/UserProfile/user_profile.postgres.sql" );
 			$wgExtNewTables[] = array( 'user_stats', "$dir/UserStats/user_stats.postgres.sql" );
@@ -250,7 +250,7 @@ function efSocialProfileSchemaUpdates( $updater = null ) {
 				"$dir/UserGifts/usergifts.sql", true ) );
 			$updater->addExtensionUpdate( array( 'addTable', 'user_system_messages',
 				"$dir/UserSystemMessages/user_system_messages.sql", true ) );
-		} elseif ( $updater->getDB()->getType() == 'postgresql' ) {
+		} elseif ( $updater->getDB()->getType() == 'postgres' ) {
 			$updater->addExtensionUpdate( array( 'addTable', 'user_board',
 				"$dir/UserBoard/user_board.postgres.sql", true ) );
 			$updater->addExtensionUpdate( array( 'addTable', 'user_profile',
