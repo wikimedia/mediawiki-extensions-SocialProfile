@@ -7679,6 +7679,7 @@ $messages['pdt'] = array(
  * @author Xqt
  */
 $messages['pfl'] = array(
+	'user-stats-title' => 'Schdadischdike',
 	'user-page-link' => 'Benutzersaid',
 );
 
