@@ -872,7 +872,7 @@ $messages['lb'] = array(
 $messages['mk'] = array(
 	'userwelcome-desc' => 'Додава ознака <code>&lt;welcomeUser&gt;</code> за приказ на кориснички друштвени информации на најавени корисници',
 	'mp-userlevels-link' => 'Кориснички нивоа',
-	'mp-welcome-upload' => 'Подигнување',
+	'mp-welcome-upload' => 'Подигни',
 	'mp-welcome-edit' => 'Уреди',
 	'mp-welcome-points' => '$1 {{PLURAL:$1|бод|бода}}',
 	'mp-welcome-needed-points' => 'За да напредувате до <b><a href="$1">$2</a></b> заработете повеќе од <i>$3</i> {{PLURAL:$3|бод|бода}}!',
