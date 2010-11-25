@@ -287,7 +287,6 @@ class UserBoard {
 			WHERE {$user_sql}
 			ORDER BY ub_id DESC
 			{$limit_sql}";
-
 		$res = $dbr->query( $sql, __METHOD__ );
 		$messages = array();
 		foreach ( $res as $row ) {

@@ -3,7 +3,7 @@
 --
 
 CREATE TABLE /*$wgDBprefix*/user_profile (
-  `up_user_id` int(5) NOT NULL default '0',
+  `up_user_id` int(5) NOT NULL PRIMARY KEY default '0',
   `up_location_city` varchar(255) default NULL,
   `up_location_state` varchar(100) default NULL,
   `up_location_country` varchar(255) default NULL,
@@ -34,6 +34,5 @@ CREATE TABLE /*$wgDBprefix*/user_profile (
   `up_custom_4` text,
   `up_custom_5` text,
   `up_last_seen` datetime default NULL,
-  `up_type` int(5) NOT NULL default '1',
-  PRIMARY KEY  (`up_user_id`)
+  `up_type` int(5) NOT NULL default '1'
 ) DEFAULT CHARSET=utf8;

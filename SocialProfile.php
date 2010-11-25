@@ -199,80 +199,36 @@ require_once( "$IP/extensions/SocialProfile/UserActivity/UserActivity.php" ); //
 # Schema changes
 $wgHooks['LoadExtensionSchemaUpdates'][] = 'efSocialProfileSchemaUpdates';
 
+function efSocialProfileDBUpdate( $updater, $label, $file ) {
+	if ( $updater === null ) {
+		global $wgExtNewTables;
+
+		$wgExtNewTables[] = array( $label, $file );
+	} else {
+		$updater->addExtensionUpdate( array( 'addTable', $label, $file, true ) );
+	}
+}
+
 function efSocialProfileSchemaUpdates( $updater = null ) {
 	$dir = dirname( __FILE__ );
-	if ( $updater === null ) {
-		global $wgExtNewTables, $wgDBtype;
-		if ( $wgDBtype == 'mysql' ) {
-			// Initial install tables
-			$wgExtNewTables[] = array( 'user_board', "$dir/UserBoard/user_board.sql" );
-			$wgExtNewTables[] = array( 'user_profile', "$dir/UserProfile/user_profile.sql" );
-			$wgExtNewTables[] = array( 'user_stats', "$dir/UserStats/user_stats.sql" );
-			$wgExtNewTables[] = array( 'user_relationship',	"$dir/UserRelationship/user_relationship.sql" );
-			$wgExtNewTables[] = array( 'user_relationship_request', "$dir/UserRelationship/user_relationship.sql" );
-			$wgExtNewTables[] = array( 'user_system_gift', "$dir/SystemGifts/systemgifts.sql" );
-			$wgExtNewTables[] = array( 'system_gift', "$dir/SystemGifts/systemgifts.sql" );
-			$wgExtNewTables[] = array( 'user_gift', "$dir/UserGifts/usergifts.sql" );
-			$wgExtNewTables[] = array( 'gift', "$dir/UserGifts/usergifts.sql" );
-			$wgExtNewTables[] = array( 'user_system_messages', "$dir/UserSystemMessages/user_system_messages.sql" );
-		} elseif( $wgDBtype == 'postgres' ) {
-			$wgExtNewTables[] = array( 'user_board', "$dir/UserBoard/user_board.postgres.sql" );
-			$wgExtNewTables[] = array( 'user_profile', "$dir/UserProfile/user_profile.postgres.sql" );
-			$wgExtNewTables[] = array( 'user_stats', "$dir/UserStats/user_stats.postgres.sql" );
-			$wgExtNewTables[] = array( 'user_relationship',	"$dir/UserRelationship/user_relationship.postgres.sql" );
-			$wgExtNewTables[] = array( 'user_relationship_request', "$dir/UserRelationship/user_relationship.postgres.sql" );
-			$wgExtNewTables[] = array( 'user_system_gift', "$dir/SystemGifts/systemgifts.postgres.sql" );
-			$wgExtNewTables[] = array( 'system_gift', "$dir/SystemGifts/systemgifts.postgres.sql" );
-			$wgExtNewTables[] = array( 'user_gift', "$dir/UserGifts/usergifts.postgres.sql" );
-			$wgExtNewTables[] = array( 'gift', "$dir/UserGifts/usergifts.postgres.sql" );
-			$wgExtNewTables[] = array( 'user_system_messages', "$dir/UserSystemMessages/user_system_messages.postgres.sql" );
-		}
-	} else {
-		if ( $updater->getDB()->getType() == 'mysql' ) {
-			// Initial install tables
-			$updater->addExtensionUpdate( array( 'addTable', 'user_board',
-				"$dir/UserBoard/user_board.sql", true ) );
-			$updater->addExtensionUpdate( array( 'addTable', 'user_profile',
-				"$dir/UserProfile/user_profile.sql", true ) );
-			$updater->addExtensionUpdate( array( 'addTable', 'user_stats',
-				"$dir/UserStats/user_stats.sql", true ) );
-			$updater->addExtensionUpdate( array( 'addTable', 'user_relationship',
-				"$dir/UserRelationship/user_relationship.sql", true ) );
-			$updater->addExtensionUpdate( array( 'addTable', 'user_relationship_request',
-				"$dir/UserRelationship/user_relationship.sql", true ) );
-			$updater->addExtensionUpdate( array( 'addTable', 'user_system_gift',
-				"$dir/SystemGifts/systemgifts.sql", true ) );
-			$updater->addExtensionUpdate( array( 'addTable', 'system_gift',
-				"$dir/SystemGifts/systemgifts.sql", true ) );
-			$updater->addExtensionUpdate( array( 'addTable', 'user_gift',
-				"$dir/UserGifts/usergifts.sql", true ) );
-			$updater->addExtensionUpdate( array( 'addTable', 'gift',
-				"$dir/UserGifts/usergifts.sql", true ) );
-			$updater->addExtensionUpdate( array( 'addTable', 'user_system_messages',
-				"$dir/UserSystemMessages/user_system_messages.sql", true ) );
-		} elseif ( $updater->getDB()->getType() == 'postgres' ) {
-			$updater->addExtensionUpdate( array( 'addTable', 'user_board',
-				"$dir/UserBoard/user_board.postgres.sql", true ) );
-			$updater->addExtensionUpdate( array( 'addTable', 'user_profile',
-				"$dir/UserProfile/user_profile.postgres.sql", true ) );
-			$updater->addExtensionUpdate( array( 'addTable', 'user_stats',
-				"$dir/UserStats/user_stats.postgres.sql", true ) );
-			$updater->addExtensionUpdate( array( 'addTable', 'user_relationship',
-				"$dir/UserRelationship/user_relationship.postgres.sql", true ) );
-			$updater->addExtensionUpdate( array( 'addTable', 'user_relationship_request',
-				"$dir/UserRelationship/user_relationship.postgres.sql", true ) );
-			$updater->addExtensionUpdate( array( 'addTable', 'user_system_gift',
-				"$dir/SystemGifts/systemgifts.postgres.sql", true ) );
-			$updater->addExtensionUpdate( array( 'addTable', 'system_gift',
-				"$dir/SystemGifts/systemgifts.postgres.sql", true ) );
-			$updater->addExtensionUpdate( array( 'addTable', 'user_gift',
-				"$dir/UserGifts/usergifts.postgres.sql", true ) );
-			$updater->addExtensionUpdate( array( 'addTable', 'gift',
-				"$dir/UserGifts/usergifts.postgres.sql", true ) );
-			$updater->addExtensionUpdate( array( 'addTable', 'user_system_messages',
-				"$dir/UserSystemMessages/user_system_messages.postgres.sql", true ) );
-		}
+	$dbExt = "";
+	global $wgExtNewTables, $wgDBtype;
+
+	if ( $wgDBtype == 'postgres' ) {
+		$dbExt = '.postgres';
 	}
+
+	efSocialProfileDBUpdate( $updater, 'user_board', "$dir/UserBoard/user_board$dbExt.sql" );
+	efSocialProfileDBUpdate( $updater, 'user_profile', "$dir/UserProfile/user_profile$dbExt.sql" );
+	efSocialProfileDBUpdate( $updater, 'user_stats', "$dir/UserStats/user_stats$dbExt.sql" );
+	efSocialProfileDBUpdate( $updater, 'user_relationship',	"$dir/UserRelationship/user_relationship$dbExt.sql" );
+	efSocialProfileDBUpdate( $updater, 'user_relationship_request', "$dir/UserRelationship/user_relationship$dbExt.sql" );
+	efSocialProfileDBUpdate( $updater, 'user_system_gift', "$dir/SystemGifts/systemgifts$dbExt.sql" );
+	efSocialProfileDBUpdate( $updater, 'system_gift', "$dir/SystemGifts/systemgifts$dbExt.sql" );
+	efSocialProfileDBUpdate( $updater, 'user_gift', "$dir/UserGifts/usergifts$dbExt.sql" );
+	efSocialProfileDBUpdate( $updater, 'gift', "$dir/UserGifts/usergifts$dbExt.sql" );
+	efSocialProfileDBUpdate( $updater, 'user_system_messages', "$dir/UserSystemMessages/user_system_messages$dbExt.sql" );
+
 	return true;
 }
 
