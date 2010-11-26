@@ -282,7 +282,7 @@ class UserBoard {
 		}
 
 		$sql = "SELECT ub_id, ub_user_id_from, ub_user_name_from, ub_user_id, ub_user_name,
-			ub_message,UNIX_TIMESTAMP(ub_date) AS unix_time,ub_type
+			ub_message,{$dbr->unixTimestamp( 'ub_date' )} AS unix_time,ub_type
 			FROM {$dbr->tableName( 'user_board' )}
 			WHERE {$user_sql}
 			ORDER BY ub_id DESC

@@ -75,7 +75,7 @@ class UserActivity {
 			$user_sql = " WHERE rc_user = {$this->user_id}";
 		}
 
-		$sql = "SELECT UNIX_TIMESTAMP(rc_timestamp) AS item_date, rc_title,
+		$sql = "SELECT {$dbr->unixTimestamp( 'rc_timestamp' )} AS item_date, rc_title,
 				rc_user, rc_user_text, rc_comment, rc_id, rc_minor, rc_new,
 				rc_namespace, rc_cur_id, rc_this_oldid, rc_last_oldid,
 				rc_log_action
@@ -140,7 +140,7 @@ class UserActivity {
 			$user_sql = " AND vote_user_id = {$this->user_id}";
 		}
 
-		$sql = "SELECT UNIX_TIMESTAMP(vote_date) AS item_date, username,
+		$sql = "SELECT {$dbr->unixTimestamp( 'vote_date' )} AS item_date, username,
 					page_title, vote_count, comment_count, vote_ip,
 					vote_user_id
 			FROM {$dbr->tableName( 'Vote' )} v, {$dbr->tableName( 'page' )} p
@@ -184,7 +184,7 @@ class UserActivity {
 			$user_sql = "AND Comment_user_id = {$this->user_id}";
 		}
 
-		$sql = "SELECT UNIX_TIMESTAMP(comment_date) AS item_date,
+		$sql = "SELECT {$dbr->unixTimestamp( 'comment_date' )} AS item_date,
 					Comment_Username, Comment_IP, page_title, Comment_Text,
 					Comment_user_id, page_namespace, CommentID
 			FROM {$dbr->tableName( 'Comments' )} c, {$dbr->tableName( 'page' )} p
@@ -252,7 +252,7 @@ class UserActivity {
 
 		$sql = "SELECT ug_id, ug_user_id_from, ug_user_name_from,
 					ug_user_id_to, ug_user_name_to,
-					UNIX_TIMESTAMP(ug_date) AS item_date, gift_name, gift_id
+					{$dbr->unixTimestamp( 'ug_date' )} AS item_date, gift_name, gift_id
 			FROM {$dbr->tableName( 'user_gift' )}
 			INNER JOIN {$dbr->tableName( 'gift' )} ON gift_id = ug_gift_id
 			{$rel_sql} {$user_sql}
@@ -289,7 +289,7 @@ class UserActivity {
 
 		$sql = "SELECT ug_id, ug_user_id_from, ug_user_name_from,
 					ug_user_id_to, ug_user_name_to,
-					UNIX_TIMESTAMP(ug_date) AS item_date, gift_name, gift_id
+					{$dbr->unixTimestamp( 'ug_date' )} AS item_date, gift_name, gift_id
 			FROM {$dbr->tableName( 'user_gift' )}
 			INNER JOIN {$dbr->tableName( 'gift' )} ON gift_id = ug_gift_id
 			{$rel_sql} {$user_sql}
@@ -349,7 +349,7 @@ class UserActivity {
 		}
 
 		$sql = "SELECT sg_id, sg_user_id, sg_user_name,
-					UNIX_TIMESTAMP(sg_date) AS item_date, gift_name, gift_id
+					{$dbr->unixTimestamp( 'sg_date' )} AS item_date, gift_name, gift_id
 			FROM {$dbr->tableName( 'user_system_gift' )}
 			INNER JOIN {$dbr->tableName( 'system_gift' )} ON gift_id = sg_gift_id
 			{$rel_sql} {$user_sql}
@@ -402,7 +402,9 @@ class UserActivity {
 		} else {
 			$user_sql = '';
 		}
-		$sql = "SELECT r_id, r_user_id, r_user_name, r_user_id_relation, r_user_name_relation, r_type, UNIX_TIMESTAMP(r_date) AS item_date
+		$sql = "SELECT r_id, r_user_id, r_user_name, r_user_id_relation,
+					r_user_name_relation, r_type,
+					{$dbr->unixTimestamp( 'r_date' )} AS item_date
 			FROM {$dbr->tableName( 'user_relationship' )}
 			{$rel_sql} {$user_sql}
 			ORDER BY r_id DESC LIMIT 0,{$this->item_max}";
@@ -465,7 +467,8 @@ class UserActivity {
 		}
 
 		$sql = "SELECT ub_id, ub_user_id, ub_user_name, ub_user_id_from,
-				ub_user_name_from, UNIX_TIMESTAMP(ub_date) AS item_date,
+				ub_user_name_from,
+				{$dbr->unixTimestamp( 'ub_date' )} AS item_date,
 				ub_message
 			FROM {$dbr->tableName( 'user_board' )} WHERE
 			{$rel_sql} {$user_sql}  ub_type=0
@@ -523,7 +526,8 @@ class UserActivity {
 			$user_sql = " WHERE um_user_id = {$this->user_id}";
 		}
 
-		$sql = "SELECT um_id, um_user_id, um_user_name, um_type, um_message, UNIX_TIMESTAMP(um_date) AS item_date
+		$sql = "SELECT um_id, um_user_id, um_user_name, um_type, um_message,
+					{$dbr->unixTimestamp( 'um_date' )} AS item_date
 			FROM {$dbr->tableName( 'user_system_messages' )}
 			{$rel_sql} {$user_sql}
 			ORDER BY um_id DESC LIMIT 0,{$this->item_max}";
