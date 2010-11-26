@@ -385,17 +385,17 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			<div class="cleared"></div>
 			<p class="profile-update-unit-left">' . wfMsg( 'user-profile-personal-email' ) . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="email" id="email" value="' . $email . '"/>';
-			if ( !$wgUser->mEmailAuthenticated ) {
-				$confirm = SpecialPage::getTitleFor( 'Confirmemail' );
-				$form .= " <a href=\"{$confirm->getFullURL()}\">" . wfMsg( 'user-profile-personal-confirmemail' ) . '</a>';
-			}
-			$form .= '</p>
+		if ( !$wgUser->mEmailAuthenticated ) {
+			$confirm = SpecialPage::getTitleFor( 'Confirmemail' );
+			$form .= " <a href=\"{$confirm->getFullURL()}\">" . wfMsg( 'user-profile-personal-confirmemail' ) . '</a>';
+		}
+		$form .= '</p>
 			<div class="cleared"></div>';
-			if ( !$wgUser->mEmailAuthenticated ) {
-				$form .= '<p class="profile-update-unit-left"></p>
+		if ( !$wgUser->mEmailAuthenticated ) {
+			$form .= '<p class="profile-update-unit-left"></p>
 				<p class="profile-update-unit-small">' . wfMsg( 'user-profile-personal-email-needs-auth' ) . '</p>';
-			}
-			$form .= '<div class="cleared"></div>
+		}
+		$form .= '<div class="cleared"></div>
 		</div>
 		<div class="cleared"></div>';
 
@@ -405,13 +405,13 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			<p class="profile-update-unit"><input type="text" size="25" name="location_city" id="location_city" value="' . ( isset( $location_city ) ? $location_city : '' ) . '" /></p>
 			<div class="cleared"></div>
 			<p class="profile-update-unit-left" id="location_state_label">' . wfMsg( 'user-profile-personal-country' ) . '</p>';
-			$form .= '<p class="profile-update-unit">';
-			$form .= '<span id="location_state_form">';
-		 	$form .= "</span>
-		 		<script type=\"text/javascript\">
+		$form .= '<p class="profile-update-unit">';
+		$form .= '<span id="location_state_form">';
+		$form .= "</span>
+				<script type=\"text/javascript\">
 					displaySection(\"location_state\",\"" . $location_country . "\",\"" . ( isset( $location_state ) ? $location_state : '' ) . "\");
 				</script>";
-		 	$form .= "<select name=\"location_country\" id=\"location_country\" onchange=\"displaySection('location_state',this.value,'')\"><option></option>";
+		$form .= "<select name=\"location_country\" id=\"location_country\" onchange=\"displaySection('location_state',this.value,'')\"><option></option>";
 
 		foreach ( $countries as $country ) {
 			$form .= "<option value=\"{$country}\"" . ( ( $country == $location_country ) ? ' selected="selected"' : '' ) . ">";
@@ -548,60 +548,66 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$wgOut->setPageTitle( wfMsg( 'user-profile-section-interests' ) );
 		$form = UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-interests' ) );
 		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">
-			<div class="profile-info clearfix">';
-		$form .= "<div class=\"profile-update\">
-			<p class=\"profile-update-title\">" . wfMsg( 'user-profile-interests-entertainment' ) . "</p>
-			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-interests-movies' ) . "</p>
-			<p class=\"profile-update-unit\">
-				<textarea name=\"movies\" id=\"movies\" rows=\"3\" cols=\"75\">{$movies}</textarea>
+			<div class="profile-info clearfix">
+			<div class="profile-update">
+			<p class="profile-update-title">' . wfMsg( 'user-profile-interests-entertainment' ) . '</p>
+			<p class="profile-update-unit-left">' . wfMsg( 'user-profile-interests-movies' ) . '</p>
+			<p class="profile-update-unit">
+				<textarea name="movies" id="movies" rows="3" cols="75">' . ( isset( $movies ) ? $movies : '' ) . '</textarea>
 			</p>
-			<div class=\"cleared\"></div>
-			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-interests-tv' ) . "</p>
-			<p class=\"profile-update-unit\">
-				<textarea name=\"tv\" id=\"tv\" rows=\"3\" cols=\"75\">{$tv}</textarea>
-				</p>
-			<div class=\"cleared\"></div>
-			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-interests-music' ) . "</p>
-			<p class=\"profile-update-unit\">
-				<textarea name=\"music\" id=\"music\" rows=\"3\" cols=\"75\">{$music}</textarea>
+			<div class="cleared"></div>
+			<p class="profile-update-unit-left">' . wfMsg( 'user-profile-interests-tv' ) . '</p>
+			<p class="profile-update-unit">
+				<textarea name="tv" id="tv" rows="3" cols="75">' . ( isset( $tv ) ? $tv : '' ) . '</textarea>
 			</p>
-			<div class=\"cleared\"></div>
-			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-interests-books' ) . "</p>
-			<p class=\"profile-update-unit\">
-				<textarea name=\"books\" id=\"books\" rows=\"3\" cols=\"75\">{$books}</textarea>
+			<div class="cleared"></div>
+			<p class="profile-update-unit-left">' . wfMsg( 'user-profile-interests-music' ) . '</p>
+			<p class="profile-update-unit">
+				<textarea name="music" id="music" rows="3" cols="75">' . ( isset( $music ) ? $music : '' ) . '</textarea>
 			</p>
-			<div class=\"cleared\"></div>
-			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-interests-magazines' ) . "</p>
-			<p class=\"profile-update-unit\">
-				<textarea name=\"magazines\" id=\"magazines\" rows=\"3\" cols=\"75\">{$magazines}</textarea>
+			<div class="cleared"></div>
+			<p class="profile-update-unit-left">' . wfMsg( 'user-profile-interests-books' ) . '</p>
+			<p class="profile-update-unit">
+				<textarea name="books" id="books" rows="3" cols="75">' . ( isset( $books ) ? $books : '' ) . '</textarea>
 			</p>
-			<div class=\"cleared\"></div>
-			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-interests-videogames' ) . "</p>
-			<p class=\"profile-update-unit\">
-				<textarea name=\"videogames\" id=\"videogames\" rows=\"3\" cols=\"75\">{$videogames}</textarea>
+			<div class="cleared"></div>
+			<p class="profile-update-unit-left">' . wfMsg( 'user-profile-interests-magazines' ) . '</p>
+			<p class="profile-update-unit">
+				<textarea name="magazines" id="magazines" rows="3" cols="75">' . ( isset( $magazines ) ? $magazines : '' ) . '</textarea>
 			</p>
-			<div class=\"cleared\"></div>
+			<div class="cleared"></div>
+			<p class="profile-update-unit-left">' . wfMsg( 'user-profile-interests-videogames' ) . '</p>
+			<p class="profile-update-unit">
+				<textarea name="videogames" id="videogames" rows="3" cols="75">' . ( isset( $videogames ) ? $videogames : '' ) . '</textarea>
+			</p>
+			<div class="cleared"></div>
 			</div>
-			<div class=\"profile-info clearfix\">
-			<p class=\"profile-update-title\">" . wfMsg( 'user-profile-interests-eats' ) . "</p>
-			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-interests-foodsnacks' ) . "</p>
-			<p class=\"profile-update-unit\">
-				<textarea name=\"snacks\" id=\"snacks\" rows=\"3\" cols=\"75\">{$snacks}</textarea>
+			<div class="profile-info clearfix">
+			<p class="profile-update-title">' . wfMsg( 'user-profile-interests-eats' ) . '</p>
+			<p class="profile-update-unit-left">' . wfMsg( 'user-profile-interests-foodsnacks' ) . '</p>
+			<p class="profile-update-unit">
+				<textarea name="snacks" id="snacks" rows="3" cols="75">' . ( isset( $snacks ) ? $snacks : '' ) . '</textarea>
 			</p>
-			<div class=\"cleared\"></div>
-			<p class=\"profile-update-unit-left\">" . wfMsg( 'user-profile-interests-drinks' ) . "</p>
-			<p class=\"profile-update-unit\">
-				<textarea name=\"drinks\" id=\"drinks\" rows=\"3\" cols=\"75\">{$drinks}</textarea>
+			<div class="cleared"></div>
+			<p class="profile-update-unit-left">' . wfMsg( 'user-profile-interests-drinks' ) . '</p>
+			<p class="profile-update-unit">
+				<textarea name="drinks" id="drinks" rows="3" cols="75">' . ( isset( $drinks ) ? $drinks : '' ) . '</textarea>
 			</p>
-			<div class=\"cleared\"></div>
+			<div class="cleared"></div>
 			</div>
-			<input type=\"button\" class=\"site-button\" value=" . wfMsg( 'user-profile-update-button' ) . " size=\"20\" onclick=\"document.profile.submit()\" />
+			<input type="button" class="site-button" value="' . wfMsg( 'user-profile-update-button' ) . '" size="20" onclick="document.profile.submit()" />
 			</div>
-			</form>";
+		</form>';
 
 		return $form;
 	}
 
+	/**
+	 * Displays the form for toggling notifications related to social tools
+	 * (e-mail me when someone friends/foes me, send me a gift, etc.)
+	 *
+	 * @return HTML
+	 */
 	function displayPreferencesForm() {
 		global $wgUser, $wgOut;
 
@@ -674,28 +680,28 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 					<div id="profile-update-custom1">
 					<p class="profile-update-unit-left">' . wfMsgForContent( 'custom-info-field1' ) . '</p>
 					<p class="profile-update-unit">
-						<textarea name="custom1" id="fav_moment" rows="3" cols="75">' . $custom1 . '</textarea>
+						<textarea name="custom1" id="fav_moment" rows="3" cols="75">' . ( isset( $custom1 ) ? $custom1 : '' ) . '</textarea>
 					</p>
 					</div>
 					<div class="cleared"></div>
 					<div id="profile-update-custom2">
 					<p class="profile-update-unit-left">' . wfMsgForContent( 'custom-info-field2' ) . '</p>
 					<p class="profile-update-unit">
-						<textarea name="custom2" id="least_moment" rows="3" cols="75">' . $custom2 . '</textarea>
+						<textarea name="custom2" id="least_moment" rows="3" cols="75">' . ( isset( $custom2 ) ? $custom2 : '' ) . '</textarea>
 					</p>
 					</div>
 					<div class="cleared"></div>
 					<div id="profile-update-custom3">
 					<p class="profile-update-unit-left">' . wfMsgForContent( 'custom-info-field3' ) . '</p>
 					<p class="profile-update-unit">
-						<textarea name="custom3" id="fav_athlete" rows="3" cols="75">' . $custom3 . '</textarea>
+						<textarea name="custom3" id="fav_athlete" rows="3" cols="75">' . ( isset( $custom3 ) ? $custom3 : '' ) . '</textarea>
 					</p>
 					</div>
 					<div class="cleared"></div>
 					<div id="profile-update-custom4">
 					<p class="profile-update-unit-left">' . wfMsgForContent( 'custom-info-field4' ) . '</p>
 					<p class="profile-update-unit">
-						<textarea name="custom4" id="least_fav_athlete" rows="3" cols="75">' . $custom4 . '</textarea>
+						<textarea name="custom4" id="least_fav_athlete" rows="3" cols="75">' . ( isset( $custom4 ) ? $custom4 : '' ) . '</textarea>
 					</p>
 					</div>
 					<div class="cleared"></div>
