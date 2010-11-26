@@ -1,23 +1,26 @@
 <?php
+/**
+ * A special page for updating users' point counts.
+ *
+ * @file
+ * @ingroup Extensions
+ */
 
 class UpdateEditCounts extends UnlistedSpecialPage {
 
 	/**
-	 * Constructor
+	 * Constructor -- set up the new special page
 	 */
 	public function __construct() {
-		parent::__construct( 'UpdateEditCounts' );
+		parent::__construct( 'UpdateEditCounts', 'updatepoints' );
 	}
 
+	/**
+	 * Perform the queries necessary to update the social point counts and
+	 * purge memcached entries.
+	 */
 	function updateMainEditsCount() {
-		global $wgOut, $wgUser, $wgNamespacesForEditPoints;
-
-		$wgOut->setPageTitle( 'Update Edit Counts' );
-
-		if ( !$wgUser->isAllowed( 'updatepoints' ) ) {
-			$wgOut->errorpage( 'error', 'badaccess' );
-			return false;
-		}
+		global $wgOut, $wgNamespacesForEditPoints;
 
 		$whereConds = array();
 		$whereConds[] = 'rev_user <> 0';
@@ -47,9 +50,9 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 			$user->loadFromId();
 
 			if ( !$user->isAllowed( 'bot' ) ) {
-				$edit_count = $row->the_count;
+				$editCount = $row->the_count;
 			} else {
-				$edit_count = 0;
+				$editCount = 0;
 			}
 
 			$s = $dbw->selectRow(
@@ -58,7 +61,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 				array( 'stats_user_id' => $row->rev_user ),
 				__METHOD__
 			);
-			if ( !$s->stats_user_id ) {
+			if ( !$s->stats_user_id || $s === false ) {
 				$dbw->insert(
 					'user_stats',
 					array(
@@ -70,11 +73,11 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 					__METHOD__
 				);
 			}
-			$wgOut->addHTML( "<p>Updating {$row->rev_user_text} with {$edit_count} edits</p>" );
+			$wgOut->addHTML( "<p>Updating {$row->rev_user_text} with {$editCount} edits</p>" );
 
 			$dbw->update(
 				'user_stats',
-				array( 'stats_edit_count = ' . $edit_count ),
+				array( 'stats_edit_count = ' . $editCount ),
 				array( 'stats_user_id' => $row->rev_user ),
 				__METHOD__
 			);
@@ -92,14 +95,31 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgUser, $wgOut;
-		$dbr = wfGetDB( DB_MASTER );
+		global $wgOut, $wgUser;
+
+		$wgOut->setPageTitle( 'Update Edit Counts' );
+
+		// Check permissions -- we must be allowed to access this special page
+		// before we can run any database queries
+		if ( !$wgUser->isAllowed( 'updatepoints' ) ) {
+			$wgOut->errorpage( 'error', 'badaccess' );
+			return false;
+		}
+
+		// And obviously the database needs to be writable before we start
+		// running INSERT/UPDATE queries against it...
+		if( wfReadOnly() ) {
+			$wgOut->readOnlyPage();
+			return;
+		}
+
+		$dbw = wfGetDB( DB_MASTER );
 		$this->updateMainEditsCount();
 
 		global $wgUserLevels;
 		$wgUserLevels = '';
 
-		$res = $dbr->select(
+		$res = $dbw->select(
 			'user_stats',
 			array( 'stats_user_id', 'stats_user_name', 'stats_total_points' ),
 			array(),
@@ -107,9 +127,13 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 			array( 'ORDER BY' => 'stats_user_name' )
 		);
 		$out = '';
+		$x = 0;
 		foreach ( $res as $row ) {
 			$x++;
-			$stats = new UserStatsTrack( $row->stats_user_id, $row->stats_user_name );
+			$stats = new UserStatsTrack(
+				$row->stats_user_id,
+				$row->stats_user_name
+			);
 			$stats->updateTotalPoints();
 		}
 		$out = "Updated stats for <b>{$x}</b> users";
