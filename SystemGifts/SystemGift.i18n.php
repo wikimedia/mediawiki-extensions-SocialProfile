@@ -2147,7 +2147,7 @@ $messages['pdc'] = array(
 	'ga-goback' => 'geh zerrick',
 	'ga-large' => 'Gross',
 	'ga-new' => 'Nei',
-	'ga-next' => 'Neegscht',
+	'ga-next' => 'Neegschte',
 	'ga-small' => 'Glee',
 );
 

@@ -5776,7 +5776,7 @@ $messages['os'] = array(
  */
 $messages['pdc'] = array(
 	'ur-main-page' => 'Haaptblatt',
-	'ur-next' => 'neegscht',
+	'ur-next' => 'neegschte',
 	'ur-login' => 'Kumm nei',
 );
 

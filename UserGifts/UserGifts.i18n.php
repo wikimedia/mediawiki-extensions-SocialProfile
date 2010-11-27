@@ -3379,7 +3379,7 @@ $messages['pdc'] = array(
 	'g-large' => 'Gross',
 	'g-main-page' => 'Haaptblatt',
 	'g-new' => 'nei',
-	'g-next' => 'Neegscht',
+	'g-next' => 'Neegschte',
 	'g-small' => 'glee',
 );
 
