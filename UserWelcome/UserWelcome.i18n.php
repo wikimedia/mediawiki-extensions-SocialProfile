@@ -450,6 +450,16 @@ $messages['eu'] = array(
 	'mp-request-new-friend' => '{{PLURAL:$1|Lagun berri bat|$1 lagun berri}}',
 );
 
+/** Persian (فارسی)
+ * @author Mjbmr
+ */
+$messages['fa'] = array(
+	'mp-welcome-upload' => 'بارگذاری',
+	'mp-welcome-edit' => 'ویرایش',
+	'mp-requests-title' => 'درخواست‌ها',
+	'mp-request-new-message' => 'پیام جدید',
+);
+
 /** Finnish (Suomi)
  * @author Crt
  * @author Jack Phoenix

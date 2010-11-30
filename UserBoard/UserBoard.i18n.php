@@ -1023,6 +1023,21 @@ $messages['eu'] = array(
 	'userboard-time-seconds' => '{{PLURAL:$1|segundo bat|$1 segundo}}',
 );
 
+/** Persian (فارسی)
+ * @author Mjbmr
+ */
+$messages['fa'] = array(
+	'messagesenttitle' => 'پیام‌ها ارسال شدند',
+	'boardlinkselectall' => 'انتخاب همه',
+	'userboard_delete' => 'حذف',
+	'userboard_private' => 'خصوصی',
+	'userboard_public' => 'عمومی',
+	'userboard_nextpage' => 'بعدی',
+	'userboard_prevpage' => 'قبلی',
+	'userboard_nomessages' => 'پيامى وجود ندارد.',
+	'userboard_sendbutton' => 'ارسال',
+);
+
 /** Finnish (Suomi)
  * @author Crt
  * @author Jack Phoenix
@@ -2502,6 +2517,13 @@ $messages['pdc'] = array(
 	'userboard_sendbutton' => 'schicke',
 	'userboard-time-days' => '{{PLURAL:$1|een Daag|$1 Daag}}',
 	'userboard-time-hours' => '{{PLURAL:$1|ee Schtund|$1 Schtunde}}',
+);
+
+/** Pfälzisch (Pfälzisch)
+ * @author Xqt
+ */
+$messages['pfl'] = array(
+	'userboard_nextpage' => 'negschte',
 );
 
 /** Polish (Polski)

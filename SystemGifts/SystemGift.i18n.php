@@ -914,6 +914,36 @@ $messages['eu'] = array(
 	'ga-viewlist' => 'Oparien zerrenda ikusi',
 );
 
+/** Persian (فارسی)
+ * @author Mjbmr
+ */
+$messages['fa'] = array(
+	'systemgiftmanager' => 'سامانه مدیریت هدیه',
+	'ga-addnew' => '+ افزودن هدیه جدید',
+	'ga-back-edit-gift' => 'بازگشت به ویرایش این هدیه',
+	'ga-back-gift-list' => 'بازگشت به فهرست هدیه',
+	'ga-choosefile' => 'انتخاب پرونده:',
+	'ga-create-gift' => 'ایجاد هدیه',
+	'ga-currentimage' => 'تصویر کنونی',
+	'ga-gift' => 'هدیه',
+	'ga-giftdesc' => 'توضیحات هدیه',
+	'ga-giftimage' => 'تصویر هدیه',
+	'ga-giftname' => 'نام هدیه',
+	'ga-gifttype' => 'نوع هدیه',
+	'ga-goback' => 'بازگشت به عقب',
+	'ga-img' => 'افزودن/جایگزین تصویر',
+	'ga-large' => 'بزرگ',
+	'ga-medium' => 'متوسط',
+	'ga-mediumlarge' => 'متوسط-بزرگ',
+	'ga-new' => 'جدید',
+	'ga-next' => 'بعدی',
+	'ga-previous' => 'قبلی',
+	'ga-saved' => 'هدیه ذخیره شده است',
+	'ga-small' => 'کوچک',
+	'ga-uploadsuccess' => 'بارگذاری موفق',
+	'ga-viewlist' => 'مشاهده فهرست هدیه',
+);
+
 /** Finnish (Suomi)
  * @author Crt
  * @author Jack Phoenix
@@ -2149,6 +2179,13 @@ $messages['pdc'] = array(
 	'ga-new' => 'Nei',
 	'ga-next' => 'Neegschte',
 	'ga-small' => 'Glee',
+);
+
+/** Pfälzisch (Pfälzisch)
+ * @author Xqt
+ */
+$messages['pfl'] = array(
+	'ga-next' => 'Negschte',
 );
 
 /** Polish (Polski)

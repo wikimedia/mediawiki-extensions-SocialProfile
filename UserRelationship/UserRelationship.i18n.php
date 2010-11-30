@@ -2368,6 +2368,18 @@ Lagun gehiagorik nahi?
 	'ur-title-friend' => '$1-(r)en lagun zerrenda',
 );
 
+/** Persian (فارسی)
+ * @author Mjbmr
+ */
+$messages['fa'] = array(
+	'ur-main-page' => 'صفحهٔ اصلی',
+	'ur-previous' => 'قبلی',
+	'ur-next' => 'بعدی',
+	'ur-remove' => 'حذف',
+	'ur-cancel' => 'انصراف',
+	'ur-login' => 'ورود',
+);
+
 /** Finnish (Suomi)
  * @author Jack Phoenix <jack@countervandalism.net>
  */
@@ -5778,6 +5790,13 @@ $messages['pdc'] = array(
 	'ur-main-page' => 'Haaptblatt',
 	'ur-next' => 'neegschte',
 	'ur-login' => 'Kumm nei',
+);
+
+/** Pfälzisch (Pfälzisch)
+ * @author Xqt
+ */
+$messages['pfl'] = array(
+	'ur-next' => 'negschte',
 );
 
 /** Polish (Polski)

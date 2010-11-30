@@ -227,6 +227,13 @@ $messages['es'] = array(
 	'useractivity-user_message' => '$1 {{PLURAL:$4|ha enviado un mensaje a |ha enviado mensajes a}} $3',
 );
 
+/** Persian (فارسی)
+ * @author Mjbmr
+ */
+$messages['fa'] = array(
+	'useractivity-all' => 'مشاهده همه',
+);
+
 /** Finnish (Suomi)
  * @author Centerlink
  * @author Jack Phoenix <jack@countervandalism.net>

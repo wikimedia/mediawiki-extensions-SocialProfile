@@ -1412,6 +1412,29 @@ $messages['eu'] = array(
 	'g-your-profile' => 'Zure profila',
 );
 
+/** Persian (فارسی)
+ * @author Mjbmr
+ */
+$messages['fa'] = array(
+	'giftmanager-public' => 'عمومی',
+	'giftmanager-private' => 'خصوصی',
+	'g-choose-file' => 'انتخاب پرونده:',
+	'g-cancel' => 'انصراف',
+	'g-give-all-message-title' => 'افزودن یک پیام',
+	'g-give-separator' => 'یا',
+	'g-go-back' => 'بازگشت به عقب',
+	'g-large' => 'بزرگ',
+	'g-main-page' => 'صفحهٔ اصلی',
+	'g-medium' => 'متوسط',
+	'g-mediumlarge' => 'متوسط-بزرگ',
+	'g-new' => 'جدید',
+	'g-next' => 'بعدی',
+	'g-previous' => 'قبلی',
+	'g-remove' => 'حذف',
+	'g-small' => 'کوچک',
+	'g-your-profile' => 'نمایهٔ شما',
+);
+
 /** Finnish (Suomi)
  * @author Crt
  * @author Jack Phoenix
@@ -3381,6 +3404,13 @@ $messages['pdc'] = array(
 	'g-new' => 'nei',
 	'g-next' => 'Neegschte',
 	'g-small' => 'glee',
+);
+
+/** Pfälzisch (Pfälzisch)
+ * @author Xqt
+ */
+$messages['pfl'] = array(
+	'g-next' => 'Negschte',
 );
 
 /** Polish (Polski)

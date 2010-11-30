@@ -3414,6 +3414,48 @@ Pursa <a href="$1">aquina</a> p\'abril la tu cuenta, u <a href="$2">aquina</a> p
 	'user-profile-picture-log' => 'avatal',
 );
 
+/** Persian (فارسی)
+ * @author Mjbmr
+ */
+$messages['fa'] = array(
+	'user-view-all' => 'نمایش همه',
+	'user-send-message' => 'ارسال یک پیام',
+	'user-stats-title' => 'آمار',
+	'other-info-title' => 'اطلاعات دیگر',
+	'user-friends-title' => 'دوستان',
+	'other-info-books' => 'کتاب‌ها',
+	'other-info-video-games' => 'بازی‌های ویدئویی',
+	'other-info-magazines' => 'مجله‌ها',
+	'custom-info-title' => 'اطلاعات سفارشی',
+	'custom-info-field1' => 'سفارشی ۱',
+	'custom-info-field2' => 'سفارشی ۲',
+	'custom-info-field3' => 'سفارشی ۳',
+	'custom-info-field4' => 'سفارشی ۴',
+	'user-personal-info-title' => 'اطلاعات شخصی',
+	'user-personal-info-about-me' => 'دربارهٔ من',
+	'user-profile-personal-info' => 'اطلاعات',
+	'user-profile-personal-name' => 'نام',
+	'user-profile-personal-location' => 'مکان',
+	'user-profile-personal-city' => 'شهر',
+	'user-profile-personal-country' => 'کشور',
+	'user-profile-personal-birthday' => 'زاد روز',
+	'user-profile-personal-aboutme' => 'دربارهٔ من',
+	'user-profile-personal-education' => 'آموزش',
+	'user-profile-personal-web' => 'وب',
+	'user-profile-personal-websites' => 'وب‌گاه',
+	'user-profile-interests-entertainment' => 'سرگرمی',
+	'user-profile-interests-tv' => 'تلویزیون',
+	'user-profile-interests-music' => 'موسیقی',
+	'user-profile-update-button' => 'به روز رسانی',
+	'user-profile-sports-sport' => 'ورزش',
+	'user-profile-picture-yourpicture' => 'تصویر شما',
+	'user-profile-picture-large' => 'بزرگ',
+	'user-profile-picture-medlarge' => 'متوسط - بزرگ',
+	'user-profile-picture-medium' => 'متوسط',
+	'user-profile-picture-small' => 'کوچک',
+	'user-profile-picture-currentimage' => 'تصویر کنونی',
+);
+
 /** Finnish (Suomi)
  * @author Centerlink
  * @author Cimon Avaro
