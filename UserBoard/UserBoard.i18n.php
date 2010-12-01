@@ -2984,6 +2984,16 @@ $messages['rue'] = array(
 	'userboard-time-seconds' => '$1 {{PLURAL:$1|секунда|секунды|секунд}}',
 );
 
+/** Yakut (Саха тыла)
+ * @author HalanTul
+ */
+$messages['sah'] = array(
+	'boardlinkselectall' => 'Барытын тал',
+	'boardlinkunselectall' => 'Барытын талыыны суох гын',
+	'boardlinkselectfriends' => 'Доҕоттору тал',
+	'boardlinkunselectfriends' => 'Доҕоттору киллэримэ',
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */
