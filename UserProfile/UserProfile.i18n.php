@@ -5467,6 +5467,7 @@ $messages['it'] = array(
  * @author Fryed-peach
  * @author Gzdavidwong
  * @author Hosiryuhosi
+ * @author 青子守歌
  */
 $messages['ja'] = array(
 	'populateuserprofiles' => '利用者プロフィールを入力する',
@@ -5557,7 +5558,7 @@ $messages['ja'] = array(
 	'user-profile-section-preferences' => '個人設定',
 	'user-profile-personal-info' => '情報',
 	'user-profile-personal-name' => '名前',
-	'user-profile-personal-email' => 'メールアドレス',
+	'user-profile-personal-email' => '電子メール',
 	'user-profile-personal-email-needs-auth' => '(サイトからの通知を受け取るにはメールアドレスの認証が必要です)',
 	'user-profile-personal-confirmemail' => 'メールを確認する',
 	'user-profile-personal-location' => '住所',
