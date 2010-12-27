@@ -2076,6 +2076,19 @@ $messages['cs'] = array(
 	'user-page-link' => 'Uživatelská stránka',
 );
 
+/** Kashubian (Kaszëbsczi)
+ * @author Byulent
+ */
+$messages['csb'] = array(
+	'other-info-tv' => 'TV',
+	'other-info-music' => 'Mùzyka',
+	'user-profile-personal-name' => 'Miono',
+	'user-profile-personal-email' => 'E-mail',
+	'user-profile-personal-city' => 'Miasto',
+	'user-profile-personal-country' => 'Krój',
+	'user-page-link' => 'Starna brëkòwnika',
+);
+
 /** Church Slavic (Словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
  * @author ОйЛ
  */
