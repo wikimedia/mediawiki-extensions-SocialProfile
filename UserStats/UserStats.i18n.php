@@ -2824,6 +2824,7 @@ $messages['yi'] = array(
 );
 
 /** Simplified Chinese (‪中文(简体)‬)
+ * @author Hydra
  * @author Liangent
  */
 $messages['zh-hans'] = array(
@@ -2831,8 +2832,8 @@ $messages['zh-hans'] = array(
 	'top-fans-stats-friends-count' => '$1名朋友',
 	'top-fans-stats-foe-count' => '$1名仇敌',
 	'top-fans-stats-opinions-created' => '$1个意见',
-	'top-fans-stats-gifts-rec-count' => '已收到礼物',
-	'top-fans-stats-gifts-sent-count' => '已传送礼物',
+	'top-fans-stats-gifts-rec-count' => '接获的$1礼物',
+	'top-fans-stats-gifts-sent-count' => '发送的$1礼物',
 	'right-updatepoints' => '更新编辑次数',
 	'level-advanced-to' => '已升至第<span style="font-weight:800;">$1</span>级',
 );
