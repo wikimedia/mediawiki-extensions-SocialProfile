@@ -9281,6 +9281,7 @@ $messages['sl'] = array(
 );
 
 /** Serbian Cyrillic ekavian (Српски (ћирилица))
+ * @author Rancher
  * @author Sasa Stefanovic
  * @author Михајло Анђелковић
  */
@@ -9302,7 +9303,7 @@ $messages['sr-ec'] = array(
 	'user-send-message' => 'Пошаљи поруку',
 	'user-send-gift' => 'Пошаљи поклон',
 	'user-contributions' => 'Доприноси',
-	'user-stats-title' => 'Статистике',
+	'user-stats-title' => 'Статистика',
 	'user-stats-edits' => '{{PLURAL:$1|Измена|Измене}}',
 	'user-stats-votes' => '{{PLURAL:$1|Глас|Гласова}}',
 	'user-stats-comments' => '{{PLURAL:$1|Коментар|Коментара}}',
