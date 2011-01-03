@@ -4268,13 +4268,14 @@ in spremeni svoje nastavitve za onemogočitev e-poštnih obvestil.',
 );
 
 /** Serbian Cyrillic ekavian (Српски (ћирилица))
+ * @author Rancher
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
 	'giftmanager' => 'Менаџер за поклоне',
 	'giftmanager-addgift' => '+ Пошаљи нови поклон',
 	'giftmanager-access' => 'приступ поклонима',
-	'giftmanager-description' => 'опис покона',
+	'giftmanager-description' => 'опис поклона',
 	'giftmanager-giftimage' => 'слика поклона',
 	'giftmanager-image' => 'додај/замени слику',
 	'giftmanager-giftcreated' => 'Поклон је направљен',
