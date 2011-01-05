@@ -231,6 +231,8 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	}
 
 	function createThumbnail( $imageSrc, $ext, $imgDest, $thumbWidth ) {
+		global $wgImageMagickConvertCommand;
+
 		list( $origWidth, $origHeight, $typeCode ) = getimagesize( $imageSrc );
 
 		if ( $origWidth < $thumbWidth ) {
@@ -238,16 +240,29 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		}
 		$thumbHeight = ( $thumbWidth * $origHeight / $origWidth );
 		if ( $thumbHeight < $thumbWidth ) {
-			$border = " -bordercolor white -border	0x" . ( ( $thumbWidth - $thumbHeight ) / 2 );
+			$border = ' -bordercolor white -border	0x' . ( ( $thumbWidth - $thumbHeight ) / 2 );
 		}
 		if ( $typeCode == 2 ) {
-			exec( 'convert -size ' . $thumbWidth . 'x' . $thumbWidth . ' -resize ' . $thumbWidth . '  -quality 100 ' . $border . ' ' . $imageSrc . ' ' . $this->avatarUploadDirectory . '/sg_' . $imgDest . '.jpg' );
+			exec(
+				$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' .
+				$thumbWidth . ' -resize ' . $thumbWidth . '  -quality 100 ' .
+				$border . ' ' . $imageSrc . ' ' .
+				$this->avatarUploadDirectory . '/sg_' . $imgDest . '.jpg'
+			);
 		}
 		if ( $typeCode == 1 ) {
-			exec( 'convert -size ' . $thumbWidth . 'x' . $thumbWidth . ' -resize ' . $thumbWidth . ' ' . $imageSrc . ' ' . $border . ' ' . $this->avatarUploadDirectory . '/sg_' . $imgDest . '.gif' );
+			exec(
+				$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' .
+				$thumbWidth . ' -resize ' . $thumbWidth . ' ' . $imageSrc .
+				' ' . $border . ' ' . $this->avatarUploadDirectory . '/sg_' . $imgDest . '.gif'
+			);
 		}
 		if ( $typeCode == 3 ) {
-			exec( 'convert -size ' . $thumbWidth . 'x' . $thumbWidth . ' -resize ' . $thumbWidth . ' ' . $imageSrc . ' ' . $this->avatarUploadDirectory . '/sg_' . $imgDest . '.png' );
+			exec(
+				$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' .
+				$thumbWidth . ' -resize ' . $thumbWidth . ' ' . $imageSrc .
+				' ' . $this->avatarUploadDirectory . '/sg_' . $imgDest . '.png'
+			);
 		}
 	}
 

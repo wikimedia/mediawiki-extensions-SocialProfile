@@ -235,6 +235,8 @@ class UploadAvatar extends UploadFromFile {
 	public $mExtension;
 
 	function createThumbnail( $imageSrc, $imageInfo, $imgDest, $thumbWidth ) {
+		global $wgImageMagickConvertCommand;
+
 		list( $origWidth, $origHeight, $typeCode ) =  $imageInfo;
 
 		if ( $origWidth < $thumbWidth ) {
@@ -246,13 +248,28 @@ class UploadAvatar extends UploadFromFile {
 			$border = ' -bordercolor white  -border  0x' . ( ( $thumbWidth - $thumbHeight ) / 2 );
 		}
 		if ( $typeCode == 2 ) {
-			exec( 'convert -size ' . $thumbWidth . 'x' . $thumbWidth . ' -resize ' . $thumbWidth . ' -crop ' . $thumbWidth . 'x' . $thumbWidth . '+0+0   -quality 100 ' . $border . ' ' . $imageSrc . ' ' . $this->avatarUploadDirectory . '/' . $imgDest . '.jpg' );
+			exec(
+				$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' . $thumbWidth .
+				' -resize ' . $thumbWidth . ' -crop ' . $thumbWidth . 'x' .
+				$thumbWidth . '+0+0   -quality 100 ' . $border . ' ' .
+				$imageSrc . ' ' . $this->avatarUploadDirectory . '/' . $imgDest . '.jpg'
+			);
 		}
 		if ( $typeCode == 1 ) {
-			exec( 'convert -size ' . $thumbWidth . 'x' . $thumbWidth . ' -resize ' . $thumbWidth . ' -crop ' . $thumbWidth . 'x' . $thumbWidth . '+0+0 ' . $imageSrc . ' ' . $border . ' ' . $this->avatarUploadDirectory . '/' . $imgDest . '.gif' );
+			exec(
+				$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' . $thumbWidth .
+				' -resize ' . $thumbWidth . ' -crop ' . $thumbWidth . 'x' .
+				$thumbWidth . '+0+0 ' . $imageSrc . ' ' . $border . ' ' .
+				$this->avatarUploadDirectory . '/' . $imgDest . '.gif'
+			);
 		}
 		if ( $typeCode == 3 ) {
-			exec( 'convert -size ' . $thumbWidth . 'x' . $thumbWidth . ' -resize ' . $thumbWidth . ' -crop ' . $thumbWidth . 'x' . $thumbWidth . '+0+0 ' . $imageSrc . ' ' . $this->avatarUploadDirectory . '/' . $imgDest . '.png' );
+			exec(
+				$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' . $thumbWidth .
+				' -resize ' . $thumbWidth . ' -crop ' . $thumbWidth . 'x' .
+				$thumbWidth . '+0+0 ' . $imageSrc . ' ' .
+				$this->avatarUploadDirectory . '/' . $imgDest . '.png'
+			);
 		}
 	}
 
