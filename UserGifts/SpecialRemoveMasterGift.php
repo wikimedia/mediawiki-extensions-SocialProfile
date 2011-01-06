@@ -55,7 +55,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 
 		// Check for permissions
 		if ( $wgUser->isAnon() || !$this->canUserManage() ) {
-			$wgOut->errorpage( 'error', 'badaccess' );
+			throw new ErrorPageError( 'error', 'badaccess' );
 		}
 
 		$this->gift_id = $wgRequest->getVal( 'gift_id' );

@@ -108,8 +108,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 
 		/** Check if the user is allowed to upload files */
 		if ( !$wgUser->isAllowed( 'upload' ) ) {
-			$wgOut->errorpage( 'uploadnologin', 'uploadnologintext' );
-			return;
+			throw new ErrorPageError( 'uploadnologin', 'uploadnologintext' );
 		}
 
 		/** Check if the image directory is writeable, this is a common mistake */
@@ -279,7 +278,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	 *					is a PHP-managed upload temporary
 	 */
 	function saveUploadedFile( $saveName, $tempName, $ext ) {
-		global $wgUploadDirectory, $wgOut, $wgUser;
+		global $wgUploadDirectory, $wgUser;
 
 		$dest = $this->avatarUploadDirectory;
 
@@ -344,7 +343,8 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		}
 
 		if ( $type < 0 ) {
-			$wgOut->fileCopyError( $tempName, $stash );
+			# FIXME: undefined variable $stash
+			throw new FatalError( wfMsg( 'filecopyerror', $tempName, $stash ) );
 		}
 		return $type;
 	}
@@ -362,12 +362,11 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	 * @access private
 	 */
 	function saveTempUploadedFile( $saveName, $tempName ) {
-		global $wgOut;
 		$archive = wfImageArchiveDir( $saveName, 'temp' );
 		$stash = $archive . '/' . gmdate( 'YmdHis' ) . '!' . $saveName;
 
 		if ( !move_uploaded_file( $tempName, $stash ) ) {
-			$wgOut->fileCopyError( $tempName, $stash );
+			throw new FatalError( wfMsg( 'filecopyerror', $tempName, $stash ) );
 			return false;
 		}
 
@@ -410,7 +409,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		$success = unlink( $this->mUploadTempName );
 		wfRestoreWarnings();
 		if ( !$success ) {
-			$wgOut->fileDeleteError( $this->mUploadTempName );
+			throw new FatalError( wfMsg( 'filedeleteerror', $this->mUploadTempName ) );
 		}
 	}
 

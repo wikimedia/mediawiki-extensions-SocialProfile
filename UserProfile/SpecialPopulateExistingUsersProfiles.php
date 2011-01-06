@@ -29,7 +29,7 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 		global $wgRequest, $wgOut, $wgUser;
 
 		if ( !in_array( 'staff', $wgUser->getEffectiveGroups() ) ) {
-			$wgOut->errorpage( 'error', 'badaccess' );
+			throw new ErrorPageError( 'error', 'badaccess' );
 			return '';
 		}
 

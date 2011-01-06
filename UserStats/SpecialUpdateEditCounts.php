@@ -102,8 +102,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 		// Check permissions -- we must be allowed to access this special page
 		// before we can run any database queries
 		if ( !$wgUser->isAllowed( 'updatepoints' ) ) {
-			$wgOut->errorpage( 'error', 'badaccess' );
-			return false;
+			throw new ErrorPageError( 'error', 'badaccess' );
 		}
 
 		// And obviously the database needs to be writable before we start

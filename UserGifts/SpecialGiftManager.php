@@ -20,7 +20,7 @@ class GiftManager extends SpecialPage {
 		$wgOut->setPageTitle( wfMsg( 'giftmanager' ) );
 
 		if ( $wgUser->isAnon() || !$this->canUserManage() ) {
-			$wgOut->errorpage( 'error', 'badaccess' );
+			throw new ErrorPageError( 'error', 'badaccess' );
 		}
 
 		$wgOut->addStyle( $wgUserGiftsScripts . '/UserGifts.css' );
@@ -141,7 +141,7 @@ class GiftManager extends SpecialPage {
 		if ( $gift_id ) {
 			$gift = Gifts::getGift( $gift_id );
 			if ( $wgUser->getID() != $gift['creator_user_id'] && ( !in_array( 'giftadmin', $wgUser->getGroups() ) && !$wgUser->isAllowed( 'delete' ) ) ) {
-				$wgOut->errorpage( 'error', 'badaccess' );
+				throw new ErrorPageError( 'error', 'badaccess' );
 			}
 		}
 

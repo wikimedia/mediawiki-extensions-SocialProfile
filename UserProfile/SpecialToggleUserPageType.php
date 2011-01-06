@@ -29,8 +29,7 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 
 		// This feature is only available to logged-in users.
 		if ( !$wgUser->isLoggedIn() ) {
-			$wgOut->errorpage( 'error', 'badaccess' );
-			return '';
+			throw new ErrorPageError( 'error', 'badaccess' );
 		}
 
 		$dbr = wfGetDB( DB_MASTER );

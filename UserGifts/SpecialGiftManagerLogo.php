@@ -105,8 +105,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 
 		/** Various rights checks */
 		if ( !$wgUser->isAllowed( 'upload' ) || $wgUser->isBlocked() ) {
-			$wgOut->errorpage( 'uploadnologin', 'uploadnologintext' );
-			return;
+			throw new ErrorPageError( 'uploadnologin', 'uploadnologintext' );
 		}
 		if ( wfReadOnly() ) {
 			$wgOut->readOnlyPage();
@@ -355,7 +354,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 			// $sql = "UPDATE user set user_avatar = " . $type . " WHERE user_id = " . $wgUser->mId;
 			// $res = $dbw->query($sql);
 		} else {
-			$wgOut->fileCopyError( $tempName, $stash );
+			throw new FatalError( wfMsg( 'filecopyerror', $tempName, $stash ) ); # FIXME: undefined variable $stash
 		}
 		return $type;
 	}
@@ -373,12 +372,11 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 * @access private
 	 */
 	function saveTempUploadedFile( $saveName, $tempName ) {
-		global $wgOut;
 		$archive = wfImageArchiveDir( $saveName, 'temp' );
 		$stash = $archive . '/' . gmdate( 'YmdHis' ) . '!' . $saveName;
 
 		if ( !move_uploaded_file( $tempName, $stash ) ) {
-			$wgOut->fileCopyError( $tempName, $stash );
+			throw new FatalError( wfMsg( 'filecopyerror', $tempName, $stash ) );
 			return false;
 		}
 
@@ -423,7 +421,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$success = unlink( $this->mUploadTempName );
 		wfRestoreWarnings();
 		if ( !$success ) {
-			$wgOut->fileDeleteError( $this->mUploadTempName );
+			throw new FatalError( wfMsg( 'filedeleteerror', $this->mUploadTempName ) );
 		}
 	}
 
@@ -549,7 +547,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		global $wgOut, $wgUser, $wgUseCopyrightUpload;
 
 		if ( !$this->canUserManage() ) {
-			$wgOut->errorpage( 'error', 'badaccess' );
+			throw new ErrorPageError( 'error', 'badaccess' );
 		}
 
 		$cols = intval( $wgUser->getOption( 'cols' ) );
