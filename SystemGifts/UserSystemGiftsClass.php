@@ -320,8 +320,7 @@ class UserSystemGifts {
 			array(
 				'sg_id', 'sg_user_id', 'sg_user_name', 'sg_gift_id', 'sg_date',
 				'sg_status', 'gift_name', 'gift_description',
-				'gift_given_count',
-				"{$dbr->unixTimestamp( 'sg_date' )} AS unix_time"
+				'gift_given_count', 'UNIX_TIMESTAMP(sg_date) AS unix_time'
 			),
 			array( "sg_user_id = {$this->user_id}" ),
 			__METHOD__,

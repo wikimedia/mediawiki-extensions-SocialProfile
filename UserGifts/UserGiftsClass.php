@@ -318,8 +318,7 @@ class UserGifts {
 			array(
 				'ug_id', 'ug_user_id_from', 'ug_user_name_from', 'ug_gift_id',
 				'ug_date', 'ug_status', 'gift_name', 'gift_description',
-				'gift_given_count',
-				"{$dbr->unixTimestamp( 'ug_date' )} AS unix_time"
+				'gift_given_count', 'UNIX_TIMESTAMP(ug_date) AS unix_time'
 			),
 			array( "ug_user_id_to = {$this->user_id}" ),
 			__METHOD__,
@@ -364,8 +363,7 @@ class UserGifts {
 			array(
 				'ug_id', 'ug_user_id_from', 'ug_user_name_from', 'ug_gift_id',
 				'ug_date', 'ug_status', 'gift_name', 'gift_description',
-				'gift_given_count',
-				"{$dbr->unixTimestamp( 'ug_date' )} AS unix_time"
+				'gift_given_count', 'UNIX_TIMESTAMP(ug_date) AS unix_time'
 			),
 			array(),
 			__METHOD__,
