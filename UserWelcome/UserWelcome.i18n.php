@@ -1260,11 +1260,12 @@ $messages['sk'] = array(
 );
 
 /** Serbian Cyrillic ekavian (Српски (ћирилица))
+ * @author Rancher
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
 	'mp-userlevels-link' => 'Кориснички нивои',
-	'mp-welcome-upload' => 'Слање',
+	'mp-welcome-upload' => 'Отпремање',
 	'mp-welcome-edit' => 'Измена',
 	'mp-welcome-points' => '$1 {{PLURAL:$1|поен|поена}}',
 	'mp-welcome-logged-in' => 'Здраво, $1',

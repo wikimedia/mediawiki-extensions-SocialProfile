@@ -1478,7 +1478,7 @@ Kattints a linkre: $5
 $messages['ia'] = array(
 	'systemgiftmanager' => 'Gerente de donos del systema',
 	'ga-addnew' => '+ Adder un nove dono',
-	'ga-back-edit-gift' => 'Retornar verso Modificar iste dono',
+	'ga-back-edit-gift' => 'Retornar a modificar iste dono',
 	'ga-back-gift-list' => 'Retornar al lista de donos',
 	'ga-back-link' => '<a href="$1">< Retornar al profilo de $2</a>',
 	'ga-choosefile' => 'Selige un file:',
@@ -1507,11 +1507,11 @@ $messages['ia'] = array(
 	'ga-next' => 'Proxime',
 	'ga-previous' => 'Previe',
 	'ga-recent-recipients-award' => 'Altere ganiatores recente de iste premio',
-	'ga-saved' => 'Le dono ha essite immagazinate',
+	'ga-saved' => 'Le dono ha essite salveguardate',
 	'ga-small' => 'Parve',
 	'ga-threshold' => 'limine',
 	'ga-title' => 'Le premios de $1',
-	'ga-uploadsuccess' => 'Cargamento succedite',
+	'ga-uploadsuccess' => 'Incargamento succedite',
 	'ga-viewlist' => 'Vider le lista de donos',
 	'system_gift_received_subject' => 'Tu ha recipite le premio $1 in {{SITENAME}}!',
 	'system_gift_received_body' => 'Salute $1.
