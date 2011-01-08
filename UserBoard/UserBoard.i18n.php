@@ -1251,7 +1251,7 @@ debe antes ter <a href="index.php?title=Special:UserLogin">accedido ao sistema</
 	'userboard_backprofile' => 'Volver ao perfil de $1',
 	'userboard_backyourprofile' => 'Volver ao seu perfil',
 	'userboard_boardtoboard' => 'De taboleiro a taboleiro',
-	'userboard_confirmdelete' => 'Está seguro de que quere eliminar esta mensaxe?',
+	'userboard_confirmdelete' => 'Está seguro de querer borrar esta mensaxe?',
 	'userboard_sendmessage' => 'Enviar unha mensaxe a $1',
 	'userboard_myboard' => 'O meu taboleiro',
 	'userboard_posted_ago' => 'publicou hai $1',

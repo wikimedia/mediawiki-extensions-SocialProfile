@@ -215,7 +215,7 @@ $messages['bpy'] = array(
 $messages['br'] = array(
 	'userwelcome-desc' => 'Ouzhpennañ ur valizenn <code>&lt;welcomeUser&gt;</code> evit diskwel titouroù sokial a denn da bep implijer evit an implijerien kevreet',
 	'mp-userlevels-link' => 'Liveoù an implijer',
-	'mp-welcome-upload' => 'Kas',
+	'mp-welcome-upload' => 'Enporzhiañ',
 	'mp-welcome-edit' => 'Aozañ',
 	'mp-welcome-points' => '$1 {{PLURAL:$1|poent}}',
 	'mp-welcome-needed-points' => 'Evit mont war-raok war-du <b><a href="$1">$2</a></b> gounezit <i>$3</i> {{PLURAL:$3|poent|poent}} ouzhpenn !',
