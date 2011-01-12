@@ -1092,6 +1092,13 @@ $messages['arz'] = array(
 	'right-avatarremove' => 'إزالة أفاترات اليوزرات',
 );
 
+/** Azerbaijani (Azərbaycanca)
+ * @author Emperyan
+ */
+$messages['az'] = array(
+	'user-page-link' => 'İstifadəçi səhifəsi',
+);
+
 /** Southern Balochi (بلوچی مکرانی)
  * @author Mostafadaneshvar
  */
@@ -1917,6 +1924,14 @@ $messages['ca'] = array(
 	'user-profile-picture-uploaddifferent' => 'Carrega una imatge diferent',
 	'user-profile-picture-currentimage' => 'Imatge actual',
 	'user-page-link' => "Pàgina d'usuari",
+);
+
+/** Chechen (Нохчийн)
+ * @author Sasan700
+ */
+$messages['ce'] = array(
+	'other-info-books' => 'Жайнаш',
+	'user-profile-interests-books' => 'Жайнаш',
 );
 
 /** Sorani (کوردی)

@@ -537,6 +537,13 @@ $messages['ca'] = array(
 	'userboard_sendbutton' => 'envia',
 );
 
+/** Chechen (Нохчийн)
+ * @author Sasan700
+ */
+$messages['ce'] = array(
+	'userboard_nextpage' => 'кхин',
+);
+
 /** Sorani (کوردی) */
 $messages['ckb'] = array(
 	'userboard_delete' => 'سڕینەوە',
