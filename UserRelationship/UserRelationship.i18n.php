@@ -7023,15 +7023,16 @@ $messages['sl'] = array(
 	'ur-login' => 'Prijava',
 );
 
-/** Serbian Cyrillic ekavian (Српски (ћирилица))
+/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
  * @author Rancher
  * @author Sasa Stefanovic
+ * @author Жељко Тодоровић
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
 	'ur-already-submitted' => 'Ваш захтев је послат',
 	'ur-error-page-title' => 'Упс!',
-	'ur-main-page' => 'Насловна страна',
+	'ur-main-page' => 'Главна страна',
 	'ur-your-profile' => 'Ваш профил',
 	'ur-add-friend' => 'Додај као пријатеља',
 	'ur-add-foe' => 'Додај као непријатеља',
@@ -7057,7 +7058,7 @@ $messages['sr-ec'] = array(
 	'ur-remove-error-not-loggedin-friend' => 'Морате бити улоговани да бисте некога обрисали са списка пријатеља.',
 	'ur-remove' => 'Уклони',
 	'ur-cancel' => 'Откажи',
-	'ur-login' => 'Логовање',
+	'ur-login' => 'Пријава',
 	'ur-add-title-foe' => 'Да ли желите да означите $1 као Вашег непријатеља?',
 	'ur-add-title-friend' => 'Да ли желите да означите $1 као Вашег пријатеља?',
 	'ur-add-button-foe' => 'Означи као непријатеља',

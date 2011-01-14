@@ -4267,8 +4267,9 @@ in spremeni svoje nastavitve za onemogočitev e-poštnih obvestil.',
 	'right-giftadmin' => 'Ustvarjanje novih in urejanje obstoječih daril',
 );
 
-/** Serbian Cyrillic ekavian (Српски (ћирилица))
+/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
  * @author Rancher
+ * @author Жељко Тодоровић
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
@@ -4324,7 +4325,7 @@ $messages['sr-ec'] = array(
 	'g-imagesbelow' => 'Испод се налазе ваше слике које ће бити коришћене на сајту',
 	'g-large' => 'Велико',
 	'g-list-title' => 'списак поклона од $1',
-	'g-main-page' => 'Насловна страна',
+	'g-main-page' => 'Главна страна',
 	'g-medium' => 'Средње',
 	'g-mediumlarge' => 'Средње-велико',
 	'g-new' => 'ново',
