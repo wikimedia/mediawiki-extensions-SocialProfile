@@ -1850,6 +1850,7 @@ a změń swóje nastajenja, aby znjemóžnił e-mailowe zdźělenja.',
 
 /** Greek (Ελληνικά)
  * @author Consta
+ * @author Evropi
  * @author Omnipaedista
  * @author ZaDiak
  */
@@ -1895,7 +1896,7 @@ $messages['el'] = array(
 	'ur-remove-error-not-loggedin-friend' => 'Πρέπει να είσαι συνδεδεμένος για να αφαιρέσεις έναν φίλο.',
 	'ur-remove' => 'Αφαίρεση',
 	'ur-cancel' => 'Ακύρωση',
-	'ur-login' => 'Σύνδεση',
+	'ur-login' => 'Είσοδος',
 	'ur-add-title-foe' => 'Θες να προσθέσεις τον $1 ως εχθρό σου;',
 	'ur-add-title-friend' => 'Θέλετε να προσθέσετε τον $1 ως φίλο σας;',
 	'ur-add-message-foe' => 'Πρόκειται να προσθέσετε τον $1 ως εχθρό.

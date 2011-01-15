@@ -9295,7 +9295,7 @@ $messages['sl'] = array(
 	'user-profile-goback' => 'Pojdi nazaj',
 );
 
-/** Serbian Cyrillic ekavian (Српски (ћирилица))
+/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
  * @author Rancher
  * @author Sasa Stefanovic
  * @author Михајло Анђелковић
@@ -9337,13 +9337,13 @@ $messages['sr-ec'] = array(
 	'other-no-info' => 'Нема других информација',
 	'profile-updated-personal' => 'Ажурирајте Ваш профил',
 	'populate-user-profile-done' => '{{PLURAL:$1|Додат $1 профил|Додато $1 профила}}',
-	'user-personal-info-title' => 'Личне информације',
-	'user-no-personal-info' => 'Без личних информација',
+	'user-personal-info-title' => 'Лични подаци',
+	'user-no-personal-info' => 'Нема личних података',
 	'user-personal-info-real-name' => 'Право име',
 	'user-personal-info-location' => 'Место',
 	'user-personal-info-hometown' => 'Место са сталним пребивалиштем',
 	'user-personal-info-birthday' => 'Рођендан',
-	'user-personal-info-occupation' => 'Окупација',
+	'user-personal-info-occupation' => 'Занимање',
 	'user-personal-info-websites' => 'Вебсајтови',
 	'user-personal-info-places-lived' => 'Места у којима сам живео/ла',
 	'user-personal-info-schools' => 'Школе',
@@ -9374,7 +9374,7 @@ $messages['sr-ec'] = array(
 	'user-profile-section-preferences' => 'Поставке',
 	'user-profile-personal-info' => 'Лични подаци',
 	'user-profile-personal-name' => 'Име',
-	'user-profile-personal-email' => 'Имејл',
+	'user-profile-personal-email' => 'Е-пошта',
 	'user-profile-personal-email-needs-auth' => '(ваш имејл мора бити потврђен, да бисте примали обавештења од сајта)',
 	'user-profile-personal-confirmemail' => 'Потврди имејл',
 	'user-profile-personal-location' => 'Локација',
@@ -9408,7 +9408,7 @@ $messages['sr-ec'] = array(
 	'user-profile-preferences-emails-gift' => 'Када примите поклон',
 	'user-profile-preferences-emails-level' => 'Када напредујете за један ниво',
 	'user-profile-preferences-emails-weekly' => 'Када добијете недељна имејл обавештења',
-	'user-profile-update-button' => 'Актуализуј',
+	'user-profile-update-button' => 'Ажурирај',
 	'user-profile-tidbits-favathlete' => 'Омиљени атлета и зашто',
 	'user-profile-tidbits-leastfavathlete' => 'Најнеомиљенији атлета и зашто',
 	'user-profile-sports-sport' => 'Спорт',
