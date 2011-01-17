@@ -3067,7 +3067,8 @@ Kliknite sem $4
 a zmeňte svoje nastavenia na vypnutie upozornení emailom.',
 );
 
-/** Serbian Cyrillic ekavian (Српски (ћирилица))
+/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
+ * @author Rancher
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
@@ -3075,7 +3076,7 @@ $messages['sr-ec'] = array(
 	'boardblaststep1' => 'Први корак - Напишите Вашу поруку',
 	'boardblastprivatenote' => 'Све поруке ће бити послате као приватне поруке',
 	'boardblaststep2' => 'Корак 2 - Назначите коме желите да пожаљете поруку',
-	'boardlinkselectall' => 'Означи све',
+	'boardlinkselectall' => 'Изабери све',
 	'boardlinkunselectall' => 'Скини ознаке са свега',
 	'boardlinkselectfriends' => 'Означи пријатеље',
 	'boardlinkunselectfriends' => 'Скини ознаке са пријатеља',

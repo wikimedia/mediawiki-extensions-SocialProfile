@@ -697,10 +697,11 @@ $2 أزالك كعدو فى {{SITENAME}}!
 وغير إعداداتك لتعطيل إخطارات البريد الإكترونى.',
 );
 
-/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  * @author Red Winged Duck
+ * @author Wizardist
  */
 $messages['be-tarask'] = array(
 	'viewrelationships' => 'Паказаць адносіны',
@@ -740,7 +741,7 @@ $messages['be-tarask'] = array(
 	'ur-remove-error-not-loggedin-foe' => 'Вам трэба ўвайсьці ў сыстэму, каб выдаляць удзельнікаў са сьпісу ворагаў.',
 	'ur-remove-error-not-loggedin-friend' => 'Вам трэба ўвайсьці ў сыстэму, каб выдаляць удзельнікаў са сьпісу сяброў.',
 	'ur-remove' => 'Выдаліць',
-	'ur-cancel' => 'Адмяніць',
+	'ur-cancel' => 'Скасаваць',
 	'ur-login' => 'Увайсьці ў сыстэму',
 	'ur-add-title-foe' => 'Вы жадаеце дадаць $1 у сьпіс ворагаў?',
 	'ur-add-title-friend' => 'Вы жадаеце дадаць $1 у сьпіс сяброў?',

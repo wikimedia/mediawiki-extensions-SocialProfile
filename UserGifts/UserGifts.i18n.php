@@ -461,10 +461,11 @@ $4
 	'right-giftadmin' => 'إنشاء هدايا جديدة وتعديل الموجودة',
 );
 
-/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  * @author Red Winged Duck
+ * @author Wizardist
  */
 $messages['be-tarask'] = array(
 	'giftmanager' => 'Кіраваньне падарункамі',
@@ -483,7 +484,7 @@ $messages['be-tarask'] = array(
 	'g-back-gift-list' => 'Вярнуцца да сьпісу падарункаў',
 	'g-back-link' => '< Вярнуцца на старонку $1',
 	'g-choose-file' => 'Выбраць файл:',
-	'g-cancel' => 'Адмяніць',
+	'g-cancel' => 'Скасаваць',
 	'g-count' => '$1 мае $2 {{PLURAL:$2|падарунак|падарункі|падарункаў}}.',
 	'g-create-gift' => 'Стварыць падарунак',
 	'g-created-by' => 'створаны',
