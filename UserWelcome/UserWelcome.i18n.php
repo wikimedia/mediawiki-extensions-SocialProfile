@@ -1259,14 +1259,14 @@ $messages['sk'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|nový priateľ|noví priatelia|nových priateľov}}',
 );
 
-/** Serbian Cyrillic ekavian (Српски (ћирилица))
+/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
  * @author Rancher
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
 	'mp-userlevels-link' => 'Кориснички нивои',
 	'mp-welcome-upload' => 'Отпремање',
-	'mp-welcome-edit' => 'Измена',
+	'mp-welcome-edit' => 'Уреди',
 	'mp-welcome-points' => '$1 {{PLURAL:$1|поен|поена}}',
 	'mp-welcome-logged-in' => 'Здраво, $1',
 	'mp-requests-title' => 'Захтеви',
