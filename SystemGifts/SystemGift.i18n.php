@@ -3044,15 +3044,20 @@ $messages['zh-hans'] = array(
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
+	'ga-choosefile' => '選擇檔案：',
+	'ga-error-message-invalid-link' => '您輸入的連結是無效的。',
 	'ga-giftdesc' => '禮物說明',
 	'ga-giftimage' => '禮物圖片',
 	'ga-giftname' => '禮物名稱',
 	'ga-gifttype' => '禮物種類',
-	'ga-goback' => '後退',
+	'ga-goback' => '返回',
+	'ga-img' => '新增/替換圖片',
 	'ga-large' => '大',
 	'ga-medium' => '中',
+	'ga-new' => '新的',
+	'ga-previous' => '上一頁',
 	'ga-small' => '小',
-	'ga-uploadsuccess' => '上載成功',
+	'ga-uploadsuccess' => '上傳成功',
 	'ga-viewlist' => '檢視禮物清單',
 );
 

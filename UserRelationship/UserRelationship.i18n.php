@@ -8173,41 +8173,45 @@ $messages['zh-hans'] = array(
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)
+ * @author Mark85296341
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
-	'ur-already-submitted' => '您的請求經已傳送',
-	'ur-main-page' => '主頁',
-	'ur-your-profile' => '您的個人資料',
-	'ur-backlink' => '&lt; 回到$1的個人資料',
-	'ur-relationship-count-foes' => '$1已經有$2位仇敵了。
-想要多些仇敵嗎?
-<a href="$3">邀請他們。</a>',
-	'ur-relationship-count-friends' => '$1已經有$2位朋友了。
+	'ur-already-submitted' => '您的請求已傳送',
+	'ur-main-page' => '首頁',
+	'ur-your-profile' => '您的個人檔案',
+	'ur-backlink' => '&lt; 返回到 $1 的個人檔案',
+	'ur-relationship-count-foes' => '$1 已經有 $2 位仇人了。
+想要多些仇人嗎?
+<a href=「$3」>邀請他們。</a>',
+	'ur-relationship-count-friends' => '$1 已經有 $2 位朋友了。
 想要多些朋友嗎?
-<a href="$3">邀請他們。</a>',
+<a href=「$3」>邀請他們。</a>',
+	'ur-add-friends' => '希望更多的朋友？ 
+ <a href=「$1」>邀請他們</a>',
 	'ur-add-friend' => '加入成為朋友',
-	'ur-add-foe' => '加入成為仇敵',
-	'ur-remove-relationship-friend' => '從朋友清單移除',
-	'ur-remove-relationship-foe' => '從仇敵清單移除',
+	'ur-add-foe' => '新增為仇人',
+	'ur-remove-relationship-friend' => '從朋友名單中移除',
+	'ur-remove-relationship-foe' => '從仇人名單中移除',
 	'ur-give-gift' => '送禮物',
-	'ur-remove-relationship-title-foe' => '您要把$1從仇敵清單中移除嗎?',
-	'ur-remove-relationship-title-confirm-foe' => '您已把$1從仇敵清單中移除',
-	'ur-remove-relationship-title-friend' => '您要把$1從朋友清單中移除嗎?',
-	'ur-remove-relationship-title-confirm-friend' => '您已把$1從朋友清單中移除',
+	'ur-remove-relationship-title-foe' => '您要把 $1 從仇人名單中移除嗎？',
+	'ur-remove-relationship-title-confirm-foe' => '您已把 $1 從仇人名單中移除',
+	'ur-remove-relationship-title-friend' => '您要把 $1 從朋友名單中移除嗎？',
+	'ur-remove-relationship-title-confirm-friend' => '您已把 $1 從朋友名單中移除',
 	'ur-remove-error-message-remove-yourself' => '您不能移除自己。',
 	'ur-remove' => '移除',
 	'ur-cancel' => '取消',
 	'ur-login' => '登入',
-	'ur-add-title-foe' => '您要把$1加入成為仇敵嗎?',
-	'ur-add-title-friend' => '您要把$1加入成為朋友嗎?',
-	'ur-add-button-foe' => '加入成為仇敵',
-	'ur-add-button-friend' => '加入成為朋友',
+	'ur-add-title-foe' => '您要把 $1 作為你的仇人嗎?',
+	'ur-add-title-friend' => '您要把 $1 作為你的朋友嗎?',
+	'ur-add-button-foe' => '新增為仇人',
+	'ur-add-button-friend' => '新增為朋友',
 	'ur-accept' => '接受',
 	'ur-reject' => '拒絕',
-	'ur-title-foe' => '$1的仇敵清單',
-	'ur-title-friend' => '$1的朋友清單',
-	'friend_request_subject' => '$1已在{{SITENAME}}把您加入成為朋友！',
-	'friend_removed_subject' => '哎唷！$1已在{{SITENAME}}把您從朋友清單移除了!',
+	'ur-title-foe' => '$1 的仇敵名單',
+	'ur-title-friend' => '$1 的朋友名單',
+	'friend_request_subject' => '$1 已在 {{SITENAME}} 把您加入成為朋友！',
+	'friend_removed_subject' => '哦，不！$1 已在 {{SITENAME}} 把您從朋友名單中移除了!',
+	'foe_removed_subject' => '哦，不！$1 已在 {{SITENAME}} 把您從仇人名單中移除了!',
 );
 

@@ -2839,16 +2839,19 @@ $messages['zh-hans'] = array(
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)
+ * @author Mark85296341
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
-	'top-fans-stats-edit-count' => '$1次編輯',
-	'top-fans-stats-friends-count' => '$1名朋友',
-	'top-fans-stats-foe-count' => '$1名仇敵',
-	'top-fans-stats-opinions-created' => '$1個意見',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|投票|投票}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|編輯|次編輯}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|評論|評論}}',
+	'top-fans-stats-friends-count' => '$1 名朋友',
+	'top-fans-stats-foe-count' => '$1 名仇人',
+	'top-fans-stats-opinions-created' => '$1 個意見',
 	'top-fans-stats-gifts-rec-count' => '已收到禮物',
 	'top-fans-stats-gifts-sent-count' => '已傳送禮物',
 	'right-updatepoints' => '更新編輯次數',
-	'level-advanced-to' => '已升至第<span style="font-weight:800;">$1</span>級',
+	'level-advanced-to' => '已升至第 <span style="font-weight:800;">$1</span> 級',
 );
 

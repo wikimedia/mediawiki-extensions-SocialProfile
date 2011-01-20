@@ -835,21 +835,23 @@ $messages['zh-hans'] = array(
 	'useractivity-user_message' => '$1向$3{{PLURAL:$4|发送了1条信息|发送了信息}}',
 );
 
-/** Traditional Chinese (‪中文(繁體)‬) */
+/** Traditional Chinese (‪中文(繁體)‬)
+ * @author Mark85296341
+ */
 $messages['zh-hant'] = array(
 	'useractivity' => '好友動態',
-	'useractivity-award' => '$1獲得了一個獎勵',
-	'useractivity-all' => '查看全部',
-	'useractivity-edit' => '$1{{PLURAL:$4|編輯了頁面|編輯了如下頁面：}}$3',
-	'useractivity-foe' => '$1{{PLURAL:$2|現在與|現在與}}$3成為仇敵',
-	'useractivity-friend' => '$1{{PLURAL:$2|現在與|現在與}}$3成為好友',
-	'useractivity-gift' => '$1收到了一份來自$2的禮物',
-	'useractivity-group-edit' => '{{PLURAL:$1|1次編輯|$1次編輯}}',
-	'useractivity-group-comment' => '{{PLURAL:$1|1個評論|$1個評論}}',
-	'useractivity-group-user_message' => '{{PLURAL:$1|1條留言|$1條留言}}',
-	'useractivity-group-friend' => '{{PLURAL:$1|1位好友|$1位好友}}',
+	'useractivity-award' => '$1 獲得了一個獎勵',
+	'useractivity-all' => '檢視全部',
+	'useractivity-edit' => '$1 {{PLURAL:$4|編輯了頁面|編輯了如下頁面：}}$3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|現在與|現在與}} $3 成為仇人',
+	'useractivity-friend' => '$1 {{PLURAL:$2|現在與|現在與}} $3 成為好友',
+	'useractivity-gift' => '$1 收到了一份來自 $2 的禮物',
+	'useractivity-group-edit' => '{{PLURAL:$1|一次編輯|$1 次編輯}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|一個評論|$1 個評論}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|一則留言|$1 則留言}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|一位好友|$1 位好友}}',
 	'useractivity-siteactivity' => '站點動態',
 	'useractivity-title' => '好友動態',
-	'useractivity-user_message' => '$1向$3{{PLURAL:$4|發送了1條信息|發送了信息}}',
+	'useractivity-user_message' => '$1 向 $3 {{PLURAL:$4|傳送了 1 則訊息|傳送了訊息}}',
 );
 

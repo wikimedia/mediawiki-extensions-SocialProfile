@@ -3594,15 +3594,26 @@ $messages['zh-hans'] = array(
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)
+ * @author Mark85296341
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
+	'boardblaststep1' => '第 1 步 - 編寫您的訊息',
 	'boardlinkselectall' => '選擇全部',
+	'boardlinkunselectall' => '取消所有選擇',
 	'boardlinkselectfriends' => '選擇朋友',
-	'boardlinkselectfoes' => '選擇仇敵',
+	'boardlinkunselectfriends' => '取消選擇朋友',
+	'boardlinkselectfoes' => '選擇仇人',
+	'boardlinkunselectfoes' => '取消選擇的仇人',
 	'userboard_delete' => '刪除',
-	'userboard_posted_ago' => '在$1前張貼',
-	'userboard_nomessages' => '沒有信息。',
+	'userboard_posted_ago' => '在 $1 前發表',
+	'userboard_private' => '私有',
+	'userboard_messagetype' => '訊息類型',
+	'userboard_nomessages' => '沒有訊息。',
 	'userboard_sendbutton' => '傳送',
+	'userboard-time-days' => '{{PLURAL:$1|一天|$1 天}}',
+	'userboard-time-hours' => '{{PLURAL:$1|一小時|$1 小時}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|一分鐘|$1 分鐘}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|一秒|$1 秒}}',
 );
 
