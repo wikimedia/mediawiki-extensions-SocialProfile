@@ -260,7 +260,7 @@ $messages['arz'] = array(
 وغير إعداداتك لتعديل إخطارات البريد الإلكترونى.',
 );
 
-/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  * @author Red Winged Duck
@@ -583,7 +583,7 @@ Klicke $3
 und ändere deine Einstellungen, um die E-Mail-Benachrichtigungen abzustellen.',
 );
 
-/** German (formal address) (Deutsch (Sie-Form))
+/** German (formal address) (‪Deutsch (Sie-Form)‬)
  * @author Imre
  * @author The Evil IP address
  */
@@ -2036,7 +2036,7 @@ $messages['pdc'] = array(
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Aamaericking|Aamaerickinge}}',
 );
 
-/** Pfälzisch (Pfälzisch)
+/** Pälzisch (Pälzisch)
  * @author Xqt
  */
 $messages['pfl'] = array(
@@ -2529,7 +2529,7 @@ $messages['sr-ec'] = array(
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Поклон послат|Поклона послато}}',
 );
 
-/** Serbian Latin ekavian (Srpski (latinica)) */
+/** Serbian Latin ekavian (‪Srpski (latinica)‬) */
 $messages['sr-el'] = array(
 	'top-fans-total-points-link' => 'Ukupno poena',
 	'top-fans-weekly-points-link' => 'Poena ove nedelje',

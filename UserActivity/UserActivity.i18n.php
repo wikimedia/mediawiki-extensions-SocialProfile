@@ -101,7 +101,7 @@ $messages['arc'] = array(
 	'useractivity-all' => 'ܚܙܝ ܟܠ',
 );
 
-/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  */
@@ -727,7 +727,7 @@ $messages['sr-ec'] = array(
 	'useractivity-title' => 'Активност пријатеља',
 );
 
-/** Serbian Latin ekavian (Srpski (latinica)) */
+/** Serbian Latin ekavian (‪Srpski (latinica)‬) */
 $messages['sr-el'] = array(
 	'useractivity' => 'Aktivnost prijatelja',
 	'useractivity-award' => '$1 je primio/la nagradu',

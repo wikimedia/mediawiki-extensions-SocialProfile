@@ -283,7 +283,7 @@ $3
 وغير إعداداتك لتعطيل إخطارات البريد الإلكترونى.',
 );
 
-/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  */
@@ -701,7 +701,7 @@ Klicke $4
 und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
 );
 
-/** German (formal address) (Deutsch (Sie-Form))
+/** German (formal address) (‪Deutsch (Sie-Form)‬)
  * @author Imre
  * @author Umherirrender
  */
@@ -2528,7 +2528,7 @@ $messages['pdc'] = array(
 	'userboard-time-hours' => '{{PLURAL:$1|ee Schtund|$1 Schtunde}}',
 );
 
-/** Pfälzisch (Pfälzisch)
+/** Pälzisch (Pälzisch)
  * @author Xqt
  */
 $messages['pfl'] = array(
@@ -2774,6 +2774,7 @@ e altere as suas preferências para desactivar as notificações por correio ele
 
 /** Brazilian Portuguese (Português do Brasil)
  * @author Eduardo.mps
+ * @author Helder.wiki
  * @author Heldergeovane
  */
 $messages['pt-br'] = array(
@@ -3104,7 +3105,7 @@ $messages['sr-ec'] = array(
 	'userboard-time-seconds' => '{{PLURAL:$1|једна секунда|$1 секунде|$1 секунде|$1 секунде|$1 секунди}}',
 );
 
-/** Serbian Latin ekavian (Srpski (latinica))
+/** Serbian Latin ekavian (‪Srpski (latinica)‬)
  * @author Michaello
  */
 $messages['sr-el'] = array(

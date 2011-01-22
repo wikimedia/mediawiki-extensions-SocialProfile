@@ -937,7 +937,7 @@ und ändere deine Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
 	'right-giftadmin' => 'Neue erstellen und bestehende Geschenke bearbeiten',
 );
 
-/** German (formal address) (Deutsch (Sie-Form))
+/** German (formal address) (‪Deutsch (Sie-Form)‬)
  * @author Imre
  * @author The Evil IP address
  * @author Umherirrender
@@ -3408,7 +3408,7 @@ $messages['pdc'] = array(
 	'g-small' => 'glee',
 );
 
-/** Pfälzisch (Pfälzisch)
+/** Pälzisch (Pälzisch)
  * @author Xqt
  */
 $messages['pfl'] = array(
@@ -4352,7 +4352,7 @@ $messages['sr-ec'] = array(
 	'gift_received_subject' => '$1 Вам је послао/ла поклон $2 на {{SITENAME}}!',
 );
 
-/** Serbian Latin ekavian (Srpski (latinica))
+/** Serbian Latin ekavian (‪Srpski (latinica)‬)
  * @author Michaello
  */
 $messages['sr-el'] = array(

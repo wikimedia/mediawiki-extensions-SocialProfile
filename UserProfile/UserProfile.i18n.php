@@ -1114,7 +1114,7 @@ $messages['be'] = array(
 	'user-profile-personal-city' => 'Горад',
 );
 
-/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  * @author Red Winged Duck
@@ -2322,7 +2322,7 @@ Klicke <a href="$1">hier</a> um dich anzumelden oder klicke <a href="$2">hier</a
 	'right-avatarremove' => 'Avatar eines Benutzers entfernen',
 );
 
-/** German (formal address) (Deutsch (Sie-Form))
+/** German (formal address) (‪Deutsch (Sie-Form)‬)
  * @author Imre
  * @author The Evil IP address
  */
@@ -7747,7 +7747,7 @@ $messages['pdt'] = array(
 	'user-page-link' => 'Bruckersied',
 );
 
-/** Pfälzisch (Pfälzisch)
+/** Pälzisch (Pälzisch)
  * @author Xqt
  */
 $messages['pfl'] = array(
@@ -8403,6 +8403,7 @@ Clique <a href="$1">aqui</a> para se autenticar ou <a href="$2">aqui</a> para se
 /** Brazilian Portuguese (Português do Brasil)
  * @author Eduardo.mps
  * @author Giro720
+ * @author Helder.wiki
  * @author Heldergeovane
  * @author Jorge Morais
  * @author Malafaya
@@ -9371,7 +9372,7 @@ $messages['sr-ec'] = array(
 	'user-profile-section-personal' => 'Лични подаци',
 	'user-profile-section-sportsteams' => 'Ажурирај мреже',
 	'user-profile-section-interests' => 'Интереси',
-	'user-profile-section-picture' => 'Аватар',
+	'user-profile-section-picture' => 'Корисничка сличица',
 	'user-profile-section-preferences' => 'Поставке',
 	'user-profile-personal-info' => 'Лични подаци',
 	'user-profile-personal-name' => 'Име',
@@ -9446,13 +9447,13 @@ $messages['sr-ec'] = array(
 	'profilelogpagetext' => 'Ово је историја мењања профила',
 	'avatarlogpage' => 'Историја слања аватара',
 	'avatarlogpagetext' => 'Ово је историја слања корисничких аватара',
-	'user-profile-picture-log' => 'аватар',
+	'user-profile-picture-log' => 'корисничка сличица',
 	'user-profile-picture-log-entry' => 'послао нови аватар',
 	'user-profile-picture-log-delete-entry' => 'обрисан аватар од $1',
 	'right-avatarremove' => 'Брисање корисничких аватара',
 );
 
-/** Serbian Latin ekavian (Srpski (latinica))
+/** Serbian Latin ekavian (‪Srpski (latinica)‬)
  * @author Michaello
  */
 $messages['sr-el'] = array(

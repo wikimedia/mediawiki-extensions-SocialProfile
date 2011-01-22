@@ -275,7 +275,7 @@ $4
 	'right-awardsmanage' => 'إنشاء جوائز جديدة وتعديل الموجودة',
 );
 
-/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  * @author Red Winged Duck
@@ -601,7 +601,7 @@ und ändere deine Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
 	'right-awardsmanage' => 'Neue erstellen und bestehende Auszeichnungen bearbeiten',
 );
 
-/** German (formal address) (Deutsch (Sie-Form))
+/** German (formal address) (‪Deutsch (Sie-Form)‬)
  * @author The Evil IP address
  * @author Umherirrender
  */
@@ -2181,7 +2181,7 @@ $messages['pdc'] = array(
 	'ga-small' => 'Glee',
 );
 
-/** Pfälzisch (Pfälzisch)
+/** Pälzisch (Pälzisch)
  * @author Xqt
  */
 $messages['pfl'] = array(
@@ -2676,7 +2676,7 @@ $messages['sl'] = array(
 	'ga-goback' => 'Pojdi nazaj',
 );
 
-/** Serbian Cyrillic ekavian (Српски (ћирилица))
+/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
@@ -2716,7 +2716,7 @@ $messages['sr-ec'] = array(
 	'ga-viewlist' => 'Погледај списак поклона',
 );
 
-/** Serbian Latin ekavian (Srpski (latinica))
+/** Serbian Latin ekavian (‪Srpski (latinica)‬)
  * @author Michaello
  */
 $messages['sr-el'] = array(

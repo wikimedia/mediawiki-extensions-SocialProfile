@@ -1528,7 +1528,7 @@ Klicke $4
 und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
 );
 
-/** German (formal address) (Deutsch (Sie-Form))
+/** German (formal address) (‪Deutsch (Sie-Form)‬)
  * @author Imre
  * @author The Evil IP address
  * @author Umherirrender
@@ -4580,7 +4580,7 @@ un donn en Dinge Ennstellunge affschallde, dat
 De e-mail jescheck kriß.',
 );
 
-/** Cornish (Kernewek)
+/** Cornish (Kernowek)
  * @author Kernoweger
  * @author Kw-Moon
  */
@@ -5794,7 +5794,7 @@ $messages['pdc'] = array(
 	'ur-login' => 'Kumm nei',
 );
 
-/** Pfälzisch (Pfälzisch)
+/** Pälzisch (Pälzisch)
  * @author Xqt
  */
 $messages['pfl'] = array(
@@ -6205,6 +6205,7 @@ $messages['ps'] = array(
 /** Portuguese (Português)
  * @author 555
  * @author Hamilton Abreu
+ * @author Helder.wiki
  * @author Heldergeovane
  * @author Lijealso
  * @author Malafaya
@@ -6385,6 +6386,7 @@ e altere as suas preferências para desactivar as notificações por correio ele
 
 /** Brazilian Portuguese (Português do Brasil)
  * @author Eduardo.mps
+ * @author Helder.wiki
  * @author Heldergeovane
  */
 $messages['pt-br'] = array(
@@ -7085,7 +7087,7 @@ $messages['sr-ec'] = array(
 	'ur-title-friend' => 'Списак пријатеља за $1',
 );
 
-/** Serbian Latin ekavian (Srpski (latinica))
+/** Serbian Latin ekavian (‪Srpski (latinica)‬)
  * @author Michaello
  */
 $messages['sr-el'] = array(
