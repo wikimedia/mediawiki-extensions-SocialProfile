@@ -708,13 +708,14 @@ $messages['rue'] = array(
 	'useractivity-title' => 'Актівіты приятелїв',
 );
 
-/** Serbian Cyrillic ekavian (Српски (ћирилица))
+/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
+ * @author Rancher
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
 	'useractivity' => 'Активност пријатеља',
 	'useractivity-award' => '$1 је примио/ла награду',
-	'useractivity-all' => 'Види све',
+	'useractivity-all' => 'Прикажи све',
 	'useractivity-foe' => '$1 {{PLURAL:$2|је сада непријатељ са}} $3',
 	'useractivity-friend' => '$1 {{PLURAL:$2|је сада пријатељ са}} $3',
 	'useractivity-gift' => '$1 је примио/ла поклон од $2',

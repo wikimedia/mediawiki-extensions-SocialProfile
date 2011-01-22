@@ -6932,6 +6932,7 @@ $messages['nds'] = array(
 );
 
 /** Dutch (Nederlands)
+ * @author McDutchie
  * @author Meursault2004
  * @author Siebrand
  * @author Tvdm
@@ -6943,7 +6944,7 @@ $messages['nl'] = array(
 	'user-gifts-title' => 'Cadeaus',
 	'user-count-separator' => '$1 van $2',
 	'user-view-all' => 'Allemaal bekijken',
-	'user-upload-image' => 'Bestand uploaden',
+	'user-upload-image' => 'Afbeelding uploaden',
 	'user-edit-this' => 'Bewerken',
 	'user-edit-profile' => 'Profiel bewerken',
 	'user-upload-avatar' => 'Avatar uploaden',
@@ -9304,7 +9305,7 @@ $messages['sr-ec'] = array(
 	'user-awards-title' => 'Награде',
 	'user-gifts-title' => 'Поклони',
 	'user-count-separator' => '$1 од $2',
-	'user-view-all' => 'Види све',
+	'user-view-all' => 'Прикажи све',
 	'user-upload-image' => 'Пошаљи слику',
 	'user-edit-this' => 'Измени ово',
 	'user-edit-profile' => 'Измени профил',

@@ -123,6 +123,7 @@ and change your settings to disable email notifications.',
  * @author Umherirrender
  */
 $messages['qqq'] = array(
+	'giftmanager-public' => '{{Identical|Public}}',
 	'giftmanager-private' => '{{Identical|Private}}',
 	'g-cancel' => '{{Identical|Cancel}}',
 	'g-count' => "* '''$1''' is a user name

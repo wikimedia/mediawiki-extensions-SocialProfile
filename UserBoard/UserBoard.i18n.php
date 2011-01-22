@@ -77,6 +77,7 @@ and change your settings to disable email notifications.'
 );
 
 /** Message documentation (Message documentation)
+ * @author EugeneZelenko
  * @author Fryed-peach
  * @author Jon Harald Søby
  * @author Purodha
@@ -88,6 +89,7 @@ $messages['qqq'] = array(
 http://www.mediawiki.org/wiki/Extension:SocialProfile#Board_Blast',
 	'userboard_delete' => '{{Identical|Delete}}',
 	'userboard_private' => '{{Identical|Private}}',
+	'userboard_public' => '{{Identical|Public}}',
 	'userboard_nextpage' => '{{Identical|Next}}',
 	'userboard_prevpage' => '{{Identical|Prev}}',
 	'userboard_sendbutton' => '{{Identical|Send}}',

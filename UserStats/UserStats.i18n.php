@@ -2501,7 +2501,8 @@ $messages['sl'] = array(
 	'top-fans-bad-field-title' => 'Ups!',
 );
 
-/** Serbian Cyrillic ekavian (Српски (ћирилица))
+/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
+ * @author Rancher
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
@@ -2510,7 +2511,7 @@ $messages['sr-ec'] = array(
 	'top-fans-total-points-link' => 'Укупно поена',
 	'top-fans-weekly-points-link' => 'Поена ове недеље',
 	'top-fans-monthly-points-link' => 'Поена овог месеца',
-	'top-fans-points' => 'поена',
+	'top-fans-points' => 'бодова',
 	'top-fans-bad-field-title' => 'Упс!',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Глас|Гласа|Гласа|Гласа|Гласова}}',
 	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Недељна победа|Недељних победа}}',
