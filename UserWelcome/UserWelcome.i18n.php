@@ -855,6 +855,13 @@ $messages['ksh'] = array(
 	'mp-request-new-friend' => '{{PLURAL:$1|Eine neue Frünnd|$1 neue Frünnde|Keine neue Frünnd}}',
 );
 
+/** Kurdish (Latin) (Kurdî (Latin))
+ * @author George Animal
+ */
+$messages['ku-latn'] = array(
+	'mp-welcome-logged-in' => 'Silav, $1',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */

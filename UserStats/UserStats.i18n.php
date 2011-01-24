@@ -264,6 +264,7 @@ $messages['arz'] = array(
  * @author EugeneZelenko
  * @author Jim-by
  * @author Red Winged Duck
+ * @author Zedlik
  */
 $messages['be-tarask'] = array(
 	'user-stats-alltime-title' => 'Болей за ўсё пунктаў у гісторыі',
@@ -320,7 +321,7 @@ $messages['be-tarask'] = array(
 Каманда {{SITENAME}}
 
 ---
-Калі Вы не жадаеце болей атрымліваць ад нас лісты па электроннай пошце, націсьніце $3 і зьмяніце Вашыя ўстаноўкі для паведамленьняў.',
+Калі Вы не жадаеце болей атрымліваць ад нас лісты па электроннай пошце, націсьніце $3 і зьмяніце Вашыя налады для паведамленьняў.',
 );
 
 /** Bulgarian (Български)
