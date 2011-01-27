@@ -9436,11 +9436,11 @@ $messages['sr-ec'] = array(
 	'user-no-images' => 'Нема послатих слика',
 	'edit-profile-title' => 'Измените Ваш профил',
 	'user-page-link' => 'Корисничка страна',
-	'removeavatar' => 'Обришите аватар',
+	'removeavatar' => 'Уклони сличицу',
 	'givegift' => 'Дајте поклон',
 	'viewgifts' => 'Прегледајте поклоне',
 	'viewsystemgifts' => 'Погледајте награде',
-	'avatarupload-removeavatar' => 'Обришите аватар',
+	'avatarupload-removeavatar' => 'Уклони сличицу',
 	'avatarupload-currentavatar' => 'Тренутни аватар од $1',
 	'avatarupload-removeanother' => 'Обриши други',
 	'profilelogpage' => 'Историја мењања профила',
@@ -9448,9 +9448,9 @@ $messages['sr-ec'] = array(
 	'avatarlogpage' => 'Историја слања аватара',
 	'avatarlogpagetext' => 'Ово је историја слања корисничких аватара',
 	'user-profile-picture-log' => 'корисничка сличица',
-	'user-profile-picture-log-entry' => 'послао нови аватар',
+	'user-profile-picture-log-entry' => '{{GENDER:|је послао|је послала|посла}} нову сличицу',
 	'user-profile-picture-log-delete-entry' => 'обрисан аватар од $1',
-	'right-avatarremove' => 'Брисање корисничких аватара',
+	'right-avatarremove' => 'Брисање корисничких сличица',
 );
 
 /** Serbian Latin ekavian (‪Srpski (latinica)‬)
