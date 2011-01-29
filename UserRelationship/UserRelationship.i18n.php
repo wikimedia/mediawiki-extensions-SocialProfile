@@ -4884,6 +4884,7 @@ $2 ве отстрани од списокот на непријатели на 
 );
 
 /** Malayalam (മലയാളം)
+ * @author Praveenp
  * @author Shijualex
  */
 $messages['ml'] = array(
@@ -4896,7 +4897,7 @@ $messages['ml'] = array(
 	'ur-remove-error-message-remove-yourself' => 'താങ്കൾക്ക് താങ്കളെത്തന്നെ ഒഴിവാക്കാൻ പറ്റില്ല.',
 	'ur-remove' => 'നീക്കം ചെയ്യുക',
 	'ur-cancel' => 'റദ്ദാക്കുക',
-	'ur-login' => 'ലോഗിൻ',
+	'ur-login' => 'പ്രവേശിക്കുക',
 	'ur-add-error-message-no-user' => 'താങ്കൾ ചേർക്കുവാൻ ശ്രമിക്കുന്ന ഉപയോക്താവ് നിലവിലില്ല.',
 	'ur-add-error-message-pending-request-title' => 'കാത്തിരിക്കൂ!',
 	'ur-accept' => 'സ്വീകരിക്കുക',
