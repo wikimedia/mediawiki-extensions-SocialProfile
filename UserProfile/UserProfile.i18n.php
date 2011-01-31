@@ -9300,6 +9300,7 @@ $messages['sl'] = array(
 /** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
  * @author Rancher
  * @author Sasa Stefanovic
+ * @author Жељко Тодоровић
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
@@ -9311,7 +9312,7 @@ $messages['sr-ec'] = array(
 	'user-edit-this' => 'Измени ово',
 	'user-edit-profile' => 'Измени профил',
 	'user-upload-avatar' => 'Пошаљи аватар',
-	'user-watchlist' => 'Надгледања',
+	'user-watchlist' => 'Списак надгледања',
 	'user-meet-people' => 'Сретни људе',
 	'user-add-friend' => 'Додај као пријатеља',
 	'user-add-foe' => 'Додај као непријатеља',
@@ -9455,6 +9456,7 @@ $messages['sr-ec'] = array(
 
 /** Serbian Latin ekavian (‪Srpski (latinica)‬)
  * @author Michaello
+ * @author Жељко Тодоровић
  */
 $messages['sr-el'] = array(
 	'user-awards-title' => 'Nagrade',
@@ -9465,7 +9467,7 @@ $messages['sr-el'] = array(
 	'user-edit-this' => 'Izmeni ovo',
 	'user-edit-profile' => 'Izmeni profil',
 	'user-upload-avatar' => 'Pošalji avatar',
-	'user-watchlist' => 'Moj spisak nadgledanja',
+	'user-watchlist' => 'Spisak nadgledanja',
 	'user-meet-people' => 'Sretni ljude',
 	'user-add-friend' => 'Dodaj kao prijatelja',
 	'user-add-foe' => 'Dodaj kao neprijatelja',
