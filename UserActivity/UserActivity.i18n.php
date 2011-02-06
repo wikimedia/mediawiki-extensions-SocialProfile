@@ -342,13 +342,24 @@ $messages['gsw'] = array(
 );
 
 /** Hebrew (עברית)
+ * @author Amire80
  * @author YaronSh
  */
 $messages['he'] = array(
 	'useractivity' => 'פעילות החברים',
+	'useractivity-award' => '$1 {{GENDER:$1|קיבל|קיבלה}} פרס',
 	'useractivity-all' => 'הצגת הכול',
+	'useractivity-edit' => '$1 ערך את {{PLURAL:$4|הדף הבא|הדפים הבאים}}: $3',
+	'useractivity-foe' => 'עכשיו $1 {{PLURAL:$2|יריב|יריבים}} של $3',
+	'useractivity-friend' => 'עכשיו $1 {{PLURAL:$2|חבר|חברים}} של $3',
+	'useractivity-gift' => '$1 {{GENDER:$6|קיבל|קיבלה}} מתנה מ־$2',
+	'useractivity-group-edit' => '{{PLURAL:$1|עריכה אחת|$1 עריכות}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|הערה אחת|$1 הערות}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|הודעה אחת|$1 הודעות}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|חבר אחד|$1 חברים}}',
 	'useractivity-siteactivity' => 'פעילות באתר',
 	'useractivity-title' => 'פעילות החברים',
+	'useractivity-user_message' => '$1 {{GENDER:$1|שלח|שלחה}} {{PLURAL:$4|הודעה|הודעות}} אל $3',
 );
 
 /** Upper Sorbian (Hornjoserbsce)

@@ -1173,6 +1173,7 @@ un ändere Dyyi Yystellige go d E-Mail-Benochrichtigunge abzstelle.',
 );
 
 /** Hebrew (עברית)
+ * @author Amire80
  * @author Rotemliss
  * @author YaronSh
  */
@@ -1187,6 +1188,20 @@ $messages['he'] = array(
 	'top-fans-weekly-points-link' => 'נקודות השבוע',
 	'top-fans-monthly-points-link' => 'נקודות החודש',
 	'top-fans-points' => 'נקודות',
+	'top-fans-by-category-title-edit-count' => 'סך הכול עריכות',
+	'top-fans-by-category-title-friends-count' => 'סך הכול חברים',
+	'top-fans-by-category-title-foe-count' => 'סך הכול יריבים',
+	'top-fans-by-category-title-gifts-rec-count' => 'סך הכול מתנות שהתקבלו',
+	'top-fans-by-category-title-gifts-sent-count' => 'סך הכול מתנות שנשלחו',
+	'top-fans-by-category-title-vote-count' => 'סך הכול הצבעות',
+	'top-fans-by-category-title-comment-count' => 'סך הכול הערות',
+	'top-fans-by-category-title-referrals-count' => 'סך הכול הפניות',
+	'top-fans-by-category-title-comment-score-positive-rec' => 'סך הכול המלצות',
+	'top-fans-by-category-title-comment-score-negative-rec' => 'סך הכול גינויים',
+	'top-fans-by-category-title-comment-score-positive-given' => 'סך הכול המלצות שניתנו',
+	'top-fans-by-category-title-comment-score-negative-given' => 'סך הכול גינויים שניתנו',
+	'top-fans-by-category-title-monthly-winner-count' => 'סך הכול ניצחונות חודשיים',
+	'top-fans-by-category-title-weekly-winner-count' => 'סך הכול ניצחונות שבועיים',
 	'top-fans-bad-field-title' => 'אופס!',
 	'top-fans-bad-field-message' => 'הסטטיסטיקה שצוינה אינה קיימת.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|הצבעה|הצבעות}}',
@@ -1643,10 +1658,10 @@ $messages['ksh'] = array(
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Jeschenk|Jeschenke}} jejovve',
 	'right-updatepoints' => 'De Aanzahl Änderunge ändere',
 	'level-advanced-to' => 'opjeschtoof op dat Nivoh <span style="font-weight:800">$1</span>',
-	'level-advance-subject' => 'Do bes jätz ene „$1“ op de {{SITENAME}}!',
+	'level-advance-subject' => 'Do bes jätz ene „$1“ {{GRAMMAR:vum|{{SITENAME}}}}!',
 	'level-advance-body' => 'Hallo $1,
 
-Do bes jetz ene $2 op de {{SITENAME}}!
+Do bes jetz ene $2 {{GRAMMAR:vum|{{SITENAME}}}}!
 
 Hätzlesche Jlöckwonsch fun de janze {{SITENAME}}
 

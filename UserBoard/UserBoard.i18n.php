@@ -1396,34 +1396,35 @@ $messages['hak'] = array(
 );
 
 /** Hebrew (עברית)
+ * @author Amire80
  * @author Rotemliss
  * @author YaronSh
  */
 $messages['he'] = array(
-	'boardblastlogintitle' => 'עליכם לבצע כניסה לחשבון כדי לשלוח מסרים המוניים',
+	'boardblastlogintitle' => 'עליכם להיכנס לחשבון כדי לשלוח מסרים המוניים',
 	'boardblastlogintext' => 'עליכם <a href="index.php?title=Special:UserLogin">להיכנס לחשבון</a> כדי לשלוח מסרים המוניים.',
 	'messagesenttitle' => 'ההודעות נשלחו',
 	'boardblasttitle' => 'שליחת מסר המוני',
-	'boardblaststep1' => 'שלב 1 - כתבו את הודעתכם',
+	'boardblaststep1' => 'שלב 1 – כתבו את הודעתכם',
 	'boardblastprivatenote' => 'כל ההודעות יישלחו כהודעות פרטיות',
-	'boardblaststep2' => 'שלב 2 - בחרו אל מי תרצו לשלוח את ההודעה',
-	'boardlinkselectall' => 'בחרו הכל',
-	'boardlinkunselectall' => 'ביטול בחירת הכל',
+	'boardblaststep2' => 'שלב 2 – בחרו אל מי תרצו לשלוח את ההודעה',
+	'boardlinkselectall' => 'בחרו הכול',
+	'boardlinkunselectall' => 'ביטול בחירת הכול',
 	'boardlinkselectfriends' => 'בחירת חברים',
 	'boardlinkunselectfriends' => 'ביטול בחירת חברים',
 	'boardlinkselectfoes' => 'בחירת יריבים',
 	'boardlinkunselectfoes' => 'ביטול בחירת חברים',
 	'boardsendbutton' => 'שליחת מסר המוני',
-	'boardnofriends' => 'אין לכם חברים אליהם תוכלו לשלוח הודעות!',
+	'boardnofriends' => 'אין לכם חברים שאפשר לשלוח אליהם הודעות!',
 	'messagesentsuccess' => 'הודעתכם נשלחה בהצלחה',
 	'userboard' => 'לוח משתמש',
 	'userboard_board-to-board' => 'לוח־אל־לוח',
 	'userboard_delete' => 'מחיקה',
-	'userboard_noexist' => 'המשתמש בו אתם מנסים לצפות אינו קיים.',
+	'userboard_noexist' => 'המשתמש שאתם מנסים לצפות בו אינו קיים.',
 	'userboard_yourboard' => 'הלוח שלכם',
 	'userboard_owner' => 'הלוח של $1',
 	'userboard_yourboardwith' => 'פגישת הלוח־אל־לוח שלכם עם $1',
-	'userboard_otherboardwith' => 'מפגש הלוח־אל־לוח של $1 עם $2',
+	'userboard_otherboardwith' => 'פגישת הלוח־אל־לוח של $1 עם $2',
 	'userboard_backprofile' => 'חזרה לפרופיל של $1',
 	'userboard_backyourprofile' => 'חזרה לפרופיל שלכם',
 	'userboard_boardtoboard' => 'לוח־אל־לוח',
@@ -1438,7 +1439,7 @@ $messages['he'] = array(
 	'userboard_prevpage' => 'הקודם',
 	'userboard_nomessages' => 'אין הודעות.',
 	'userboard_sendbutton' => 'שליחה',
-	'userboard_loggedout' => 'עליכם <a href="$1">לבצע כניסה לחשבון</a> כדי לשלוח הודעות למשתמשים אחרים.',
+	'userboard_loggedout' => 'עליכם <a href="$1">להיכנס לחשבון</a> כדי לשלוח הודעות למשתמשים אחרים.',
 	'userboard_showingmessages' => 'הצגת {{PLURAL:$4|הודעה $3|הודעות $2-$3}} מתוך {{PLURAL:$1|הודעה אחת|$1 הודעות}}',
 	'right-userboard-delete' => 'מחיקת הודעות לוח שכתבו אחרים',
 	'userboard-time-days' => '{{PLURAL:$1|יום|$1 ימים|יומיים}}',
@@ -1446,7 +1447,7 @@ $messages['he'] = array(
 	'userboard-time-minutes' => '{{PLURAL:$1|דקה|$1 דקות}}',
 	'userboard-time-seconds' => '{{PLURAL:$1|שנייה|$1 שניות}}',
 	'message_received_subject' => '$1 כתב בלוח שלך ב{{grammar:תחילית|{{SITENAME}}}}',
-	'message_received_body' => 'היי $1:
+	'message_received_body' => 'שלום $1:
 
 $2 הרגע כתב בלוח שלכם ב{{grammar:תחילית|{{SITENAME}}}}!
 
@@ -1456,7 +1457,7 @@ $3
 
 ---
 
-היי, מעוניינים להפסיק לקבל מאיתנו הודעות בדוא"ל?
+רוצים להפסיק לקבל מאיתנו הודעות בדוא"ל?
 
 לחצו $4
 ושנו את ההגדרות שלכם כדי לבטל קבלת התרעות בדוא"ל.',
@@ -1900,7 +1901,7 @@ $messages['km'] = array(
 	'userboard_prevpage' => 'មុន',
 	'userboard_nomessages' => 'មិនមានសារទេ។',
 	'userboard_sendbutton' => 'ផ្ញើ',
-	'userboard_loggedout' => 'ដើម្បីបញ្ជូនសារទៅកាន់អ្នកប្រើប្រាស់ផ្សេងៗទៀតបាន អ្នកចាំបាច់ត្រូវតែបាន<a href="$1">ឡុកអ៊ីនចូល</a>។',
+	'userboard_loggedout' => 'ដើម្បីបញ្ជូនសារទៅកាន់អ្នកប្រើប្រាស់ផ្សេងៗទៀតបាន អ្នកចាំបាច់ត្រូវតែបាន<a href="$1">កត់ឈ្មោះចូល</a>។',
 	'userboard-time-days' => '{{PLURAL:$1|មួយថ្ងៃ​|$1 ថ្ងៃ​}}',
 	'userboard-time-hours' => '{{PLURAL:$1|មួយម៉ោង​|$1 ម៉ោង​}}',
 	'userboard-time-minutes' => '{{PLURAL:$1|មួយ​នាទី​|$1 នាទី​}}',
@@ -1971,10 +1972,10 @@ Donn jlich <a href="index.php?title=Special:UserLogin">enlogge</a>.',
 	'userboard-time-hours' => '{{PLURAL:$1|ein Shtundt|$1 Shtunde|kein Shtundt}}',
 	'userboard-time-minutes' => '{{PLURAL:$1|ein Menutt|$1 Menutte|kein Menutt}}',
 	'userboard-time-seconds' => '{{PLURAL:$1|ein Sekund|$1 Sekunde|kein Sekund}}',
-	'message_received_subject' => 'Dä Metmaacher $1 hät jet op Dinge Pinnwand en de {{SITENAME}} jedonn',
+	'message_received_subject' => 'Dä Metmaacher $1 hät jet op Dinge Pinnwand {{GRAMMAR:em|{{SITENAME}}}} jedonn',
 	'message_received_body' => 'Hallo $1,
 
-dä Metmaacher $2 hät jraad op Ding Brett op de {{SITENAME}}
+dä Metmaacher $2 hät jraad op Ding Brett {{GRAMMAR:em|{{SITENAME}}}}
 jeschrevve
 
 Don hee klicke, öm dat ze beloore:

@@ -1943,6 +1943,7 @@ $messages['ha'] = array(
 );
 
 /** Hebrew (עברית)
+ * @author Amire80
  * @author Rotemliss
  * @author YaronSh
  */
@@ -1957,7 +1958,7 @@ $messages['he'] = array(
 	'giftmanager-giftsaved' => 'המתנה נשמרה',
 	'giftmanager-public' => 'ציבורי',
 	'giftmanager-private' => 'פרטי',
-	'giftmanager-view' => 'צפיה ברשימת המתנות',
+	'giftmanager-view' => 'צפייה ברשימת המתנות',
 	'g-add-message' => 'הוספת הודעה',
 	'g-back-edit-gift' => 'חזרה לעריכת מתנה זו',
 	'g-back-gift-list' => 'חזרה לרשימת המתנות',
@@ -1968,16 +1969,16 @@ $messages['he'] = array(
 	'g-create-gift' => 'יצירת מתנה',
 	'g-created-by' => 'נוצרה על ידי',
 	'g-current-image' => 'התמונה הנוכחית',
-	'g-delete-message' => 'האם אתם בטוחים שברצונכם למחוק את המתנה "$1"?
+	'g-delete-message' => 'האם אתם באמת רוצים למחוק את המתנה "$1"?
 פעולה זו תמחק את המתנה גם מהמשתמשים שקיבלו אותה.',
 	'g-description-title' => 'המתנה של $1 "$2"',
 	'g-error-do-not-own' => 'אינכם הבעלים של מתנה זו.',
-	'g-error-message-blocked' => 'הינכם חסומים ואינכם יכולים להעניק מתנות',
+	'g-error-message-blocked' => 'אתם חסומים ואינכם יכולים להעניק מתנות',
 	'g-error-message-invalid-link' => 'הקישור שכתבתם אינו תקין.',
 	'g-error-message-login' => 'עליכם להיכנס לחשבון כדי להעניק מתנות',
-	'g-error-message-no-user' => 'המשתמש בו אתם מנסים לצפות אינו קיים.',
+	'g-error-message-no-user' => 'המשתמש שאתם מנסים לצפות בו אינו קיים.',
 	'g-error-message-to-yourself' => 'אינכם יכולים להעניק מתנה לעצמכם.',
-	'g-error-title' => 'אופס, טעות בפניה!',
+	'g-error-title' => 'אופס, טעות בפנייה!',
 	'g-file-instructions' => 'על תמונתכם להיות מסוג jpeg, png או gif (לא מונפש), ועליה להיות קטנה מ־100 קילו־בייט.',
 	'g-from' => 'מ־<a href="$1">$2</a>',
 	'g-gift' => 'מתנה',
@@ -1985,7 +1986,7 @@ $messages['he'] = array(
 	'g-give-gift' => 'הענקת מתנה',
 	'g-give-all' => 'מעוניינים לתת ל־$1 מתנה?
 פשוט לחצו על אחת מהמתנות שלהלן ולחצו על "שליחת מתנה".
-זה עד כדי כך קל.',
+זה באמת קל.',
 	'g-give-all-message-title' => 'הוספת הודעה',
 	'g-give-all-title' => 'הענקת מתנה ל־$1',
 	'g-give-enter-friend-title' => 'אם אתם יודעים את שם המשתמש, הקלידו אותו בתיבה שלהלן',
@@ -1998,7 +1999,7 @@ $messages['he'] = array(
 	'g-give-to-user-title' => 'שליחת המתנה "$1" ל־$2',
 	'g-give-to-user-message' => 'מעוניינים להעניק ל־$1 <a href="$2">מתנה אחרת</a>?',
 	'g-go-back' => 'חזרה',
-	'g-imagesbelow' => 'להלן תמונותיכם בהן ייעשה שימוש באתר',
+	'g-imagesbelow' => 'להלן תמונותיכם שתשמשנה באתר',
 	'g-large' => 'גדולה',
 	'g-list-title' => 'רשימת המתנות של $1',
 	'g-main-page' => 'הדף הראשי',
@@ -2021,10 +2022,10 @@ $messages['he'] = array(
 	'g-small' => 'קטנה',
 	'g-to-another' => 'העניקו למישהו אחר',
 	'g-uploadsuccess' => 'ההעלאה הושלמה',
-	'g-viewgiftlist' => 'צפיה ברשימת המתנות',
+	'g-viewgiftlist' => 'צפייה ברשימת המתנות',
 	'g-your-profile' => 'הפרופיל שלך',
 	'gift_received_subject' => 'המתנה $2 נשלחה אליך מאת $1 ב{{grammar:תחילית|{{SITENAME}}}}!',
-	'gift_received_body' => 'היי $1.
+	'gift_received_body' => 'שלום $1.
 
 כרגע נשלחה אליכם המתנה $3 מ$2 ב{{grammar:תחילית|{{SITENAME}}}}.
 
@@ -2040,7 +2041,7 @@ $4
 
 ---
 
-היי, מעוניינים להפסיק לקבל מאיתנו הודעות דוא"ל?
+רוצים להפסיק לקבל מאיתנו הודעות דוא"ל?
 
 לחצו על $5
 ושנו את הגדרותיכם כדי לבטל הודעות בדוא"ל.',
@@ -2721,12 +2722,12 @@ un dann donn „{{int:G-send-gift}}“ klecke, esu eijfach es dat.',
 	'g-viewgiftlist' => 'Donn de Leß met Jeschengke aanloore',
 	'g-your-profile' => 'Ding Profil',
 	'gift_received_subject' => '{{GENDER:$1|Dä Metmaacher|De Metmaacheren|Dä Metmaacher|Dat Metmaacherin|-}}
-$1 hät Der en de {{SITENAME}} dat Jeschengk $2 jemaat!',
+$1 hät Der {{GRAMMAR:em|{{SITENAME}}}} dat Jeschengk $2 jemaat!',
 	'gift_received_body' => 'Jooden Daach, $1,
 
-$2 hät Der jrad op de {{SITENAME}} dat Jeschengk $3 jejovve
+{{GENDER:$2|dä|dat|dä Metmaacher|de|dat}} $2 {{GRAMMAR:em|{{SITENAME}}}} hät Der jrad dat Jeschengk $3 jejovve
 
-Wells De lesse, wat dä $2 Der met dämm Jeschengk för en Nohreesch hät zohkumme lohße? Donn op dä Link klekke:
+Wells De lesse, wat {{GENDER:$2|dä|et|dä Metmaacher|de|et}} $2 Der met dämm Jeschengk för en Nohreesch hät zohkumme lohße? Donn op dä Link klekke:
 
 $4
 
@@ -2742,7 +2743,7 @@ De Lück vun de {{SITENAME}}
 Wells De kei e-mail mieh vun uns krijje?
 
 Dann donn op $5 klekke,
-un donn Ding Enshtellunge ändere, öm kei Meffeilunge meih övver e-mail ze krijje.',
+un donn Ding Enshtellunge ändere, öm kei Metteilunge mieh övver e-mail ze krijje.',
 	'right-giftadmin' => 'E neu jeschengk äscahffe, un all de Jeschengke ändere, di ad doo sin.',
 );
 

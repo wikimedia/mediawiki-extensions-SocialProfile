@@ -1271,11 +1271,12 @@ un ändere Dyyni Yystellige go d E-Mail-Benochrichtigunge abstelle.',
 );
 
 /** Hebrew (עברית)
+ * @author Amire80
  * @author Rotemliss
  * @author YaronSh
  */
 $messages['he'] = array(
-	'systemgiftmanager' => 'מנהל מתנות המערכת',
+	'systemgiftmanager' => 'מנהל מתנות מערכתי',
 	'ga-addnew' => '+ הוספת מתנה חדשה',
 	'ga-back-edit-gift' => 'חזרה לעריכת מתנה זו',
 	'ga-back-gift-list' => 'חזרה לרשימת המתנות',
@@ -1286,7 +1287,7 @@ $messages['he'] = array(
 	'ga-created' => 'המתנה נוצרה',
 	'ga-currentimage' => 'התמונה הנוכחית',
 	'ga-error-message-invalid-link' => 'הקישור שכתבתם אינו תקין.',
-	'ga-error-message-no-user' => 'המשתמש בו אתם מנסים לצפות אינו קיים.',
+	'ga-error-message-no-user' => 'המשתמש שאתם מנסים לצפות בו אינו קיים.',
 	'ga-error-title' => 'אופס, טעות בפנייה!',
 	'ga-file-instructions' => 'על תמונתכם להיות מסוג jpeg, מסוג png או מסוג gif (לא מונפש), ועליה להיות קטנה מ־100 קילובייט.',
 	'ga-gift' => 'מתנה',
@@ -1297,14 +1298,14 @@ $messages['he'] = array(
 	'ga-giftname' => 'שם המתנה',
 	'ga-gifttype' => 'סוג המתנה',
 	'ga-goback' => 'חזרה',
-	'ga-imagesbelow' => 'להלן תמונותיכם שתשמשנה אתכם באתר',
-	'ga-img' => 'הוספת/החלפת תמונה',
+	'ga-imagesbelow' => 'להלן תמונותיכם שתשמשנה באתר',
+	'ga-img' => 'הוספה או החלפה של תמונה',
 	'ga-large' => 'גדולה',
 	'ga-medium' => 'בינונית',
 	'ga-mediumlarge' => 'בינונית־גדולה',
-	'ga-new' => 'חדש',
-	'ga-next' => 'הבא',
-	'ga-previous' => 'הקודם',
+	'ga-new' => 'חדשה',
+	'ga-next' => 'הבאה',
+	'ga-previous' => 'הקודמת',
 	'ga-recent-recipients-award' => 'הענקות אחרות של פרס זה לאחרונה',
 	'ga-saved' => 'המתנה נשמרה',
 	'ga-small' => 'קטנה',
@@ -1313,7 +1314,7 @@ $messages['he'] = array(
 	'ga-uploadsuccess' => 'ההעלאה הושלמה בהצלחה',
 	'ga-viewlist' => 'צפייה ברשימת המתנות',
 	'system_gift_received_subject' => 'קיבלתם את פרס ה$1 ב{{grammar:תחילית|{{SITENAME}}}}!',
-	'system_gift_received_body' => 'היי $1.
+	'system_gift_received_body' => 'שלום $1.
 
 הרגע קיבלתם את פרס ה$2 ב{{grammar:תחילית|{{SITENAME}}}}!
 
@@ -1325,13 +1326,13 @@ $4
 
 אנו מקווים שתאהבו אותו!
 
-רב תודות,
+רוב תודות,
 
 צוות {{SITENAME}}
 
 ---
 
-היי, מעוניינים להפסיק לקבל מאיתנו הודעות בדוא"ל?
+רוצים להפסיק לקבל מאיתנו הודעות בדוא"ל?
 
 לחצו על $5
 ושנו את הגדרותיכם לביטול התרעות בדוא"ל',
@@ -1761,10 +1762,10 @@ $messages['ksh'] = array(
 	'ga-title' => 'Dem $1 sing Belohnunge',
 	'ga-uploadsuccess' => 'Dat Huhlaade hät jeflupp',
 	'ga-viewlist' => 'Leß met Jeschenke aanloore',
-	'system_gift_received_subject' => 'Do häs de Belohnung „$1“ op de {{SITENAME}} krääje!',
+	'system_gift_received_subject' => 'Do häs {{GRAMMAR:em|{{SITENAME}}}} de Belohnung „$1“ krääje!',
 	'system_gift_received_body' => 'Joden Daach $1,
 
-Op de {{SITENAME}} häs De jrad de Belohung $2 bekumme!
+{{GRAMMAR:em|{{SITENAME}}}} häs De jrad de Belohung $2 bekumme!
 
 „$3“
 

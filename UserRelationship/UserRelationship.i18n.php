@@ -3170,6 +3170,7 @@ $messages['haw'] = array(
 );
 
 /** Hebrew (עברית)
+ * @author Amire80
  * @author Rotemliss
  * @author YaronSh
  */
@@ -3253,7 +3254,7 @@ $messages['he'] = array(
 	'ur-title-foe' => 'רשימת היריבים של $1',
 	'ur-title-friend' => 'רשימת החברים של $1',
 	'friend_request_subject' => '$1 הוסיף אתכם כחבר ב{{grammar:תחילית|{{SITENAME}}}}!',
-	'friend_request_body' => 'היי $1:
+	'friend_request_body' => 'שלום $1:
 
 $2 הוסיף אתכם כחבר ב{{grammar:תחילית|{{SITENAME}}}}.  רצינו לוודא ששניכם אכן חברים.
 
@@ -3264,14 +3265,14 @@ $3
 
 ---
 
-היי, מעוניינים להפסיק לקבל מאיתנו הודעות דוא"ל?
+רוצים להפסיק לקבל מאיתנו הודעות דוא"ל?
 
 לחצו $4
 ושנו את ההגדרות שלכם כדי לבטל התרעות בדוא"ל.',
 	'foe_request_subject' => 'זוהי מלחמה! $1 הוסיף אתכם כיריב ב{{grammar:תחילית|{{SITENAME}}}}!',
-	'foe_request_body' => 'היי $1:
+	'foe_request_body' => 'שלום $1:
 
-$2 הוסיף אתכם כיריב ב{{grammar:תחילית|{{SITENAME}}}}. רצינו רק לוודא ששניכם אכן אויבים עד המוות או לפחות נמצאים בוויכוח.
+$2 הוסיף אתכם כיריב ב{{grammar:תחילית|{{SITENAME}}}}. רצינו רק לוודא ששניכם אכן יריבים עד המוות או לפחות נמצאים בוויכוח.
 
 אנא לחצו על קישור זה כדי לאמת את שידוך האיבה.
 
@@ -3281,12 +3282,12 @@ $3
 
 ---
 
-היי, מעוניינים להפסיק לקבל מאיתנו הודעות דוא"ל?
+רוצים להפסיק לקבל מאיתנו הודעות דוא"ל?
 
 לחצו $4
 ושנו את ההגדרות שלכם כדי לבטל התרעות בדוא"ל.',
 	'friend_accept_subject' => '$1 קיבל את בקשת החברות שלכם ב{{grammar:תחילית|{{SITENAME}}}}!',
-	'friend_accept_body' => 'היי $1:
+	'friend_accept_body' => 'שלום $1:
 
 $2 קיבל את בקשת החברות שלכם ב{{grammar:תחילית|{{SITENAME}}}}!
 
@@ -3296,12 +3297,12 @@ $2 קיבל את בקשת החברות שלכם ב{{grammar:תחילית|{{SITEN
 
 ---
 
-היי, מעוניינים להפסיק לקבל מאיתנו הודעות דוא"ל?
+רוצים להפסיק לקבל מאיתנו הודעות דוא"ל?
 
 לחצו $4
 ושנו את ההגדרות שלכם כדי לבטל התרעות בדוא"ל.',
 	'foe_accept_subject' => 'המלחמה החלה! $1 קיבל את בקשת היריבות שלכם ב{{grammar:תחילית|{{SITENAME}}}}!',
-	'foe_accept_body' => 'היי $1:
+	'foe_accept_body' => 'שלום $1:
 
 $2 קיבל את בקשת היריבות שלכם ב{{grammar:תחילית|{{SITENAME}}}}!
 
@@ -3311,12 +3312,12 @@ $2 קיבל את בקשת היריבות שלכם ב{{grammar:תחילית|{{SIT
 
 ---
 
-היי, מעוניינים להפסיק לקבל מאיתנו הודעות דוא"ל?
+רוצים להפסיק לקבל מאיתנו הודעות דוא"ל?
 
 לחצו $4
 ושנו את ההגדרות שלכם כדי לבטל התרעות בדוא"ל.',
 	'friend_removed_subject' => 'אבוי! $1 הסיר אתכם כחברו ב{{grammar:תחילית|{{SITENAME}}}}!',
-	'friend_removed_body' => 'היי $1:
+	'friend_removed_body' => 'שלום $1:
 
 $2 הסיר את החברות ביניכם ב{{grammar:תחילית|{{SITENAME}}}}!
 
@@ -3324,12 +3325,12 @@ $2 הסיר את החברות ביניכם ב{{grammar:תחילית|{{SITENAME}}
 
 ---
 
-היי, מעוניינים להפסיק לקבל מאיתנו הודעות דוא"ל?
+רוצים להפסיק לקבל מאיתנו הודעות דוא"ל?
 
 לחצו $4
 ושנו את ההגדרות שלכם כדי לבטל התרעות בדוא"ל.',
 	'foe_removed_subject' => 'ישששש! $1 הסיר אתכם כיריבו ב{{grammar:תחילית|{{SITENAME}}}}!',
-	'foe_removed_body' => 'היי $1:
+	'foe_removed_body' => 'שלום $1:
 
 $2 הסיר אתכם כיריבו ב{{grammar:תחילית|{{SITENAME}}}}!
 
@@ -3339,7 +3340,7 @@ $2 הסיר אתכם כיריבו ב{{grammar:תחילית|{{SITENAME}}}}!
 
 ---
 
-היי, מעוניינים להפסיק לקבל מאיתנו הודעות דוא"ל?
+רוצים להפסיק לקבל מאיתנו הודעות דוא"ל?
 
 לחצו $4
 ושנו את ההגדרות שלכם כדי לבטל התרעות בדוא"ל.',
@@ -4287,6 +4288,7 @@ Yèn panjenengan péngin kanca luwih akèh, <a href="$1">ayo padha diundhang!</a
  * @author Chhorran
  * @author Lovekhmer
  * @author Thearith
+ * @author គីមស៊្រុន
  */
 $messages['km'] = array(
 	'viewrelationships' => 'មើល​ទំនាក់ទំនង',
@@ -4322,7 +4324,7 @@ $messages['km'] = array(
 	'ur-remove-error-message-no-relationship' => 'អ្នក​មិនមាន​ទំនាក់ទំនង​ជាមួយ $1 ទេ​។',
 	'ur-remove-error-message-remove-yourself' => 'អ្នក​មិន​អាច​ដកចេញ​ដោយ​ខ្លួនឯង​បាន​ទេ​?',
 	'ur-remove-error-not-loggedin-foe' => 'អ្នក​ត្រូវតែ​ឡុកអ៊ីនចូល​សិន ដើម្បី​ដក​បច្ចាមិត្ត​ចេញ​។',
-	'ur-remove-error-not-loggedin-friend' => 'អ្នក​ត្រូវតែ​ឡុកអ៊ីនចូល​សិន ដើម្បី​ដក​មិត្តភ័ក្ដិ​ចេញ​។',
+	'ur-remove-error-not-loggedin-friend' => 'អ្នក​ត្រូវតែ​កត់ឈ្មោះចូល​សិន ដើម្បី​ដក​មិត្តភ័ក្ដិ​ចេញ​។',
 	'ur-remove' => 'ដកចេញ',
 	'ur-cancel' => 'បោះបង់',
 	'ur-login' => 'ចូល',
@@ -4344,8 +4346,8 @@ $messages['km'] = array(
 	'ur-add-error-message-existing-relationship-foe' => 'អ្នក​ជា​បច្ចាមិត្ត​រួចហើយ​ជាមួយ $1 ។',
 	'ur-add-error-message-existing-relationship-friend' => 'អ្នក​ជា​មិត្តភ័ក្ដិ​រួចហើយ​ជាមួយ $1 ។',
 	'ur-add-error-message-pending-request-title' => 'ខន្តី អត់ធ្មត់ !',
-	'ur-add-error-message-not-loggedin-foe' => 'អ្នកត្រូវតែ​បានឡុកអ៊ីនចូល ដើម្បី​បន្ថែម​បច្ចាមិត្ត',
-	'ur-add-error-message-not-loggedin-friend' => 'អ្នកត្រូវតែ​បានឡុកអ៊ីនចូល ដើម្បី​បន្ថែម​មិត្តភ័ក្ដិ',
+	'ur-add-error-message-not-loggedin-foe' => 'អ្នកត្រូវតែ​បានកត់ឈ្មោះចូល ដើម្បី​បន្ថែម​បច្ចាមិត្ត',
+	'ur-add-error-message-not-loggedin-friend' => 'អ្នកត្រូវតែ​បានកត់ឈ្មោះចូល ដើម្បី​បន្ថែម​មិត្តភ័ក្ដិ',
 	'ur-requests-title' => 'សំណើ​សុំ​ការ​ទំនាក់ទំនង',
 	'ur-requests-message-foe' => '<a href="$1">$2</a> ចង់​ក្លាយជា​បច្ចាមិត្ត​របស់​អ្នក​។',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> ចង់​ក្លាយជា​មិត្តភ័ក្ដិ​របស់​អ្នក​។',
@@ -4474,11 +4476,11 @@ Wann de mieh dofun hann wells, <a href="$1">donn se einlade!</a>',
 	'ur-requests-reject-message-foe' => 'Do has dä Metmaacher „$1“ als Dinge Feind affjelehnt.',
 	'ur-title-foe' => 'Dem „$1“ sing Feindesleß',
 	'ur-title-friend' => 'Dem „$1“ sing Frünndschaffßleß',
-	'friend_request_subject' => 'Metmaacher „$1“ fun de {{SITENAME}} hät Desch als ene Frünnd opjenomme.',
+	'friend_request_subject' => 'Metmaacher „$1“ {{GRAMMAR:em|{{SITENAME}}}} hät Desch als ene Frünnd opjenomme.',
 	'friend_request_body' => 'Hallo $1,
 
-Dä Metmaacher $2 hät Desch als ene Frünnd enjedrare op de
-{{SITENAME}}.
+Dä Metmaacher $2 {{GRAMMAR:em|{{SITENAME}}}}
+hät Desch als ene Frünnd enjedrare op de.
 Mer wolle jeweß sin, dat Ühr zwei en der Tat Üsch jröhn
 un Frünnde sitt un Üsch winnischstens ligge künnt.
 
@@ -4494,11 +4496,11 @@ Wells De kein e-mail fun uns han? Dann kleck
 $4
 un donn en Dinge Ennstellunge affschallde, dat
 De e-mail jescheck kriß.',
-	'foe_request_subject' => 'Kreesch op de {{SITENAME}} — dä Metmaacher „$1“ hät Desch als ene Feind ennjedraare.',
+	'foe_request_subject' => 'Kreesch {{GRAMMAR:em|{{SITENAME}}}} — dä Metmaacher „$1“ hät Desch als ene Feind ennjedraare.',
 	'foe_request_body' => 'Hallo $1,
 
-Dä Metmaacher $2 hät Desch als ene Feind enjedrare op de
-{{SITENAME}}.
+Dä Metmaacher $2 {{GRAMMAR:em|{{SITENAME}}}} 
+hät Desch als ene Feind enjedrare.
 Mer wolle jeweß sin, dat Ühr zwei en der Tat Üsch net jröhn
 un Dutfeinde sitt udder winnischstens aam Strigge.
 
@@ -4514,11 +4516,11 @@ Wells De kein e-mail fun uns han? Dann kleck
 $4
 un donn en Dinge Ennstellunge affschallde, dat
 De e-mail jescheck kriß.',
-	'friend_accept_subject' => 'Dä Metmaacher „$1“ hät Ding Frünndschaffs-Aanfrooch op de {{SITENAME}} beschtätesch.',
+	'friend_accept_subject' => 'Dä Metmaacher „$1“ {{GRAMMAR:em|{{SITENAME}}}} hät Ding Frünndschaffs-Aanfrooch beschtätesch.',
 	'friend_accept_body' => 'Hallo $1,
 
-Dä Metmaacher $2 hät Desch als ene Fründ bestätesch op de
-{{SITENAME}}.
+Dä Metmaacher $2 {{GRAMMAR:em|{{SITENAME}}}}
+hät Desch als ene Fründ bestätesch.
 Do kann däm sing Metmaacher-Sigg fenge unger däm URL
 $3
 
@@ -4530,11 +4532,11 @@ Wells De kein e-mail fun uns han? Dann kleck
 $4
 un donn en Dinge Ennstellunge affschallde, dat
 De e-mail jescheck kriß.',
-	'foe_accept_subject' => 'Dä Metmaacher „$1“ hät Ding Feindschaffs-Aanfrooch op de {{SITENAME}} beschtätesch.',
+	'foe_accept_subject' => 'Dä Metmaacher „$1“ hät Ding Feindschaffs-Aanfrooch {{GRAMMAR:em|{{SITENAME}}}} beschtätesch.',
 	'foe_accept_body' => 'Hallo $1,
 
-Dä Metmaacher $2 hät Desch als ene Feind bestätesch op de
-{{SITENAME}}.
+Dä Metmaacher $2 {{GRAMMAR:em|{{SITENAME}}}}
+hät Desch als ene Feind bestätesch op de.
 Do kann däm sing Metmaacher-Sigg fenge unger däm URL
 $3
 
@@ -4546,12 +4548,12 @@ Wells De kein e-mail fun uns han? Dann kleck
 $4
 un donn en Dinge Ennstellunge affschallde, dat
 De e-mail jescheck kriß.',
-	'friend_removed_subject' => 'Dä Metmaacher „$1“ hät de Frünndschaff met Dir op de {{SITENAME}} jekündesch.',
+	'friend_removed_subject' => 'Dä Metmaacher „$1“ {{GRAMMAR:em|{{SITENAME}}}} hät de Frünndschaff met Dir jekündesch.',
 	'friend_removed_body' => 'Hallo $1,
 
 Dä Metmaacher $2 hät Der de Frünndschaff jekündesch,
-un Desch och uß singe Fründesleß ußjedraare, op de
-{{SITENAME}}.
+un Desch och uß singe Fründesleß {{GRAMMAR:em|{{SITENAME}}}}
+ußjedraare.
 
 
 Dä, jetz weiß De dat.
@@ -4563,12 +4565,12 @@ Wells De kein e-mail fun uns han? Dann kleck
 $4
 un donn en Dinge Ennstellunge affschallde, dat
 De e-mail jescheck kriß.',
-	'foe_removed_subject' => 'Dä Metmaacher „$1“ hät de Feindschaff met Dir op de {{SITENAME}} jekündesch.',
+	'foe_removed_subject' => 'Dä Metmaacher „$1“ {{GRAMMAR:em|{{SITENAME}}}} hät de Feindschaff met Dir jekündesch.',
 	'foe_removed_body' => 'Hallo $1,
 
 Dä Metmaacher $2 hät Der de Feindschaff jekündesch,
-un Desch och uß singe Feindesleß ußjedraare, op de
-{{SITENAME}}.
+un Desch och uß singe Feindesleß {{GRAMMAR:em|{{SITENAME}}}}
+ußjedraare.
 
 Dä, jetz weiß De dat.
 Dankeschön.
