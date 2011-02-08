@@ -860,6 +860,7 @@ $messages['ksh'] = array(
  */
 $messages['ku-latn'] = array(
 	'mp-welcome-logged-in' => 'Silav, $1',
+	'mp-request-new-message' => 'mesaja nû',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
