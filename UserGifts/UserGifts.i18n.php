@@ -2592,6 +2592,7 @@ $5
 );
 
 /** Khmer (ភាសាខ្មែរ)
+ * @author គីមស៊្រុន
  * @author វ័ណថារិទ្ធ
  */
 $messages['km'] = array(
@@ -2621,6 +2622,7 @@ $messages['km'] = array(
 	'g-list-title' => 'បញ្ជី​អំណោយ​​របស់ $1',
 	'g-main-page' => 'ទំព័រ​ដើម​',
 	'g-medium' => 'មធ្យម​',
+	'g-mediumlarge' => 'ធំគួរសម',
 	'g-new' => 'ថ្មី​',
 	'g-next' => 'បន្ទាប់​',
 	'g-previous' => 'មុន​',

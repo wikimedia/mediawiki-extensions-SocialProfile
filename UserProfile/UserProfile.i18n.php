@@ -5819,6 +5819,7 @@ $messages['km'] = array(
 	'other-info-books' => 'សៀវភៅ',
 	'other-info-video-games' => 'ហ្គេមវីដេអូ',
 	'other-info-magazines' => 'ទស្សនាវដ្តី',
+	'other-info-snacks' => 'ចំណី',
 	'other-info-drinks' => 'ភេសជ្ជៈ',
 	'other-no-info' => 'មិនមាន​ព័ត៌មាន​ផ្សេងទៀត​ទេ',
 	'custom-info-title' => 'ព័ត៌មាន​ផ្ទាល់ខ្លួន',
@@ -5911,8 +5912,9 @@ $messages['km'] = array(
 	'user-profile-sports-addmore' => 'បន្ថែម កីឡា/ក្រុម​',
 	'uploadavatar' => 'ផ្ទុកឡើង​រូបថត​របស់អ្នក',
 	'user-profile-picture-yourpicture' => 'រូបថត​របស់អ្នក',
+	'user-profile-picture-yourpicturestext' => 'ខាងក្រោមនេះជារួមភាពដែលនឹងលេចឡើងលើប្រវត្តិរូប ទំព័របណ្ដាញ និងយោបល់របស់អ្នក។',
 	'user-profile-picture-large' => 'ធំ',
-	'user-profile-picture-medlarge' => 'មធ្យម-ធំ',
+	'user-profile-picture-medlarge' => 'ធំគួរសម',
 	'user-profile-picture-medium' => 'មធ្យម',
 	'user-profile-picture-small' => 'តូច',
 	'user-profile-picture-uploaddifferent' => 'ផ្ទុកឡើង​រូបថត​ផ្សេង',
@@ -5928,7 +5930,7 @@ $messages['km'] = array(
 	'user-wiki-link' => 'ទំព័រ អ្នកប្រើប្រាស់ នៃ វិគី',
 	'update_profile_nav' => '* Special:UpdateProfile|ព័ត៌មាន​ផ្ទាល់ខ្លួន
 * Special:UpdateProfile/personal|ព័ត៌មាន​ដទៃ
-* Special:UpdateProfile/custom|Custom information
+* Special:UpdateProfile/custom|ព័ត៌មានតាមចិត្ត
 * Special:UploadAvatar|អវតារ
 * Special:UpdateProfile/preferences|ចំណង់ចំណូលចិត្ត',
 	'user-type-toggle-old' => 'ប្រើ​ទំព័អ្នប្រើប្រាស់​វិគី',
@@ -5949,6 +5951,7 @@ $messages['km'] = array(
 	'user-profile-picture-log' => 'អវតារ',
 	'user-profile-picture-log-entry' => 'ផ្ទុក​អវតារ​ថ្មី​ឡើង',
 	'user-profile-picture-log-delete-entry' => 'បាន​លុប​អវតារ​របស់ $1',
+	'right-avatarremove' => 'លុបអវតាររបស់អ្នកប្រើប្រាស់',
 );
 
 /** Kannada (ಕನ್ನಡ)
@@ -9457,6 +9460,7 @@ $messages['sr-ec'] = array(
 
 /** Serbian Latin ekavian (‪Srpski (latinica)‬)
  * @author Michaello
+ * @author Rancher
  * @author Жељко Тодоровић
  */
 $messages['sr-el'] = array(
@@ -9502,7 +9506,7 @@ $messages['sr-el'] = array(
 	'user-personal-info-location' => 'Mesto',
 	'user-personal-info-hometown' => 'Mesto sa stalnim prebivalištem',
 	'user-personal-info-birthday' => 'Rođendan',
-	'user-personal-info-occupation' => 'Okupacija',
+	'user-personal-info-occupation' => 'Zanimanje',
 	'user-personal-info-websites' => 'Vebsajtovi',
 	'user-personal-info-places-lived' => 'Mesta u kojima sam živeo/la',
 	'user-personal-info-schools' => 'Škole',

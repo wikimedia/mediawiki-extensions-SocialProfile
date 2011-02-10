@@ -1697,6 +1697,7 @@ $5
 );
 
 /** Khmer (ភាសាខ្មែរ)
+ * @author គីមស៊្រុន
  * @author វ័ណថារិទ្ធ
  */
 $messages['km'] = array(
@@ -1708,6 +1709,7 @@ $messages['km'] = array(
 	'ga-gift' => 'អំណោយ​',
 	'ga-large' => 'ធំ​',
 	'ga-medium' => 'មធ្យម​',
+	'ga-mediumlarge' => 'ធំគួរសម',
 	'ga-new' => 'ថ្មី​',
 	'ga-next' => 'បន្ទាប់​',
 	'ga-previous' => 'មុន​',
