@@ -10606,6 +10606,7 @@ Pindutin <a href="$1">dito</a> para lumagda o pindutin <a href="$2">dito</a> upa
 );
 
 /** Turkish (Türkçe)
+ * @author Emperyan
  * @author Joseph
  * @author Karduelis
  * @author Vito Genovese
@@ -10627,11 +10628,11 @@ $messages['tr'] = array(
 	'user-add-foe' => 'Düşman olarak ekle',
 	'user-remove-friend' => 'Arkadaşlıktan çıkar',
 	'user-remove-foe' => 'Düşmanlıktan çıkar',
-	'user-send-message' => 'Mesaj gönder',
+	'user-send-message' => 'İleti gönder',
 	'user-send-gift' => 'Hediye gönder',
 	'user-contributions' => 'Katkılar',
 	'user-stats-title' => 'İstatistikler',
-	'user-stats-edits' => '{{PLURAL:$1|Edit|Düzenlemeler}}',
+	'user-stats-edits' => '{{PLURAL:$1|Değişiklik|Değişiklikler}}',
 	'user-stats-votes' => '{{PLURAL:$1|Oy|Oylar}}',
 	'user-stats-comments' => '{{PLURAL:$1|Yorum|Yorumlar}}',
 	'user-stats-recruits' => '{{PLURAL:$1|Acemi|Acemiler}}',
@@ -10644,7 +10645,7 @@ $messages['tr'] = array(
 	'user-foes-title' => 'Düşmanlar',
 	'other-info-movies' => 'Filmler',
 	'other-info-tv' => 'TV',
-	'other-info-music' => 'Müzik',
+	'other-info-music' => 'Şarkı',
 	'other-info-books' => 'Kitaplar',
 	'other-info-video-games' => 'Video oyunları',
 	'other-info-magazines' => 'Dergiler',
@@ -10657,7 +10658,7 @@ $messages['tr'] = array(
 	'custom-info-field3' => 'Özel 3',
 	'custom-info-field4' => 'Özel 4',
 	'custom-no-info' => 'Özel bilgi yok',
-	'profile-updated-personal' => 'Profinizi güncelleyin',
+	'profile-updated-personal' => 'Profilinizi güncelleyin',
 	'profile-not-provided' => 'Verilmedi',
 	'populate-user-profile-done' => '$1 {{PLURAL:$1|profil|profil}} eklendi',
 	'user-board-title' => 'Pano',
@@ -10681,7 +10682,7 @@ $messages['tr'] = array(
 	'user-recent-activity-gift-rec' => 'Şu kullanıcıdan bir hediye alındı:',
 	'user-recent-activity-friend' => 'Artık şu kullanıcıyla arkadaş:',
 	'user-recent-activity-foe' => 'Artık şu kullanıcıyla düşman:',
-	'user-recent-activity-user-message' => 'Şu kullanıcıya bir mesaj gönderildi:',
+	'user-recent-activity-user-message' => 'Şu kullanıcıya bir ileti gönderildi:',
 	'user-recent-activity-network-update' => 'Bir düşünce ekledi',
 	'user-recent-system-gift' => 'Bir ödül aldı',
 	'user-profile-update-notloggedin-title' => 'Oturum açmadan profilinizde değişiklik yapamazsınız',
