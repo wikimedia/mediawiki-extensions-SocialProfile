@@ -1930,6 +1930,7 @@ $messages['ca'] = array(
  * @author Sasan700
  */
 $messages['ce'] = array(
+	'user-contributions' => 'Къинхьегам',
 	'other-info-books' => 'Жайнаш',
 	'user-profile-interests-books' => 'Жайнаш',
 );
@@ -9500,7 +9501,7 @@ $messages['sr-el'] = array(
 	'other-no-info' => 'Nema drugih informacija',
 	'profile-updated-personal' => 'Ažurirajte Vaš profil',
 	'populate-user-profile-done' => '{{PLURAL:$1|Dodat $1 profil|Dodato $1 profila}}',
-	'user-personal-info-title' => 'Lične informacije',
+	'user-personal-info-title' => 'Lični podaci',
 	'user-no-personal-info' => 'Bez ličnih informacija',
 	'user-personal-info-real-name' => 'Pravo ime',
 	'user-personal-info-location' => 'Mesto',
@@ -9537,7 +9538,7 @@ Kliknite <a href="$1">ovde</a> da se ulogujete ili kliknite <a href="$2">here</a
 	'user-profile-section-preferences' => 'Podešavanja',
 	'user-profile-personal-info' => 'Lični podaci',
 	'user-profile-personal-name' => 'Ime',
-	'user-profile-personal-email' => 'Imejl',
+	'user-profile-personal-email' => 'E-pošta',
 	'user-profile-personal-email-needs-auth' => '(vaš imejl mora biti potvrđen, da biste primali obaveštenja od sajta)',
 	'user-profile-personal-confirmemail' => 'Potvrdi imejl',
 	'user-profile-personal-location' => 'Lokacija',
@@ -9571,7 +9572,7 @@ Kliknite <a href="$1">ovde</a> da se ulogujete ili kliknite <a href="$2">here</a
 	'user-profile-preferences-emails-gift' => 'Kada primite poklon',
 	'user-profile-preferences-emails-level' => 'Kada napredujete za jedan nivo',
 	'user-profile-preferences-emails-weekly' => 'Kada dobijete nedeljna imejl obaveštenja',
-	'user-profile-update-button' => 'Aktualizuj',
+	'user-profile-update-button' => 'Ažuriraj',
 	'user-profile-tidbits-favathlete' => 'Omiljeni atleta i zašto',
 	'user-profile-tidbits-leastfavathlete' => 'Najneomiljeniji atleta i zašto',
 	'user-profile-sports-sport' => 'Sport',
@@ -11120,6 +11121,8 @@ $messages['yi'] = array(
 	'other-no-info' => 'קיין אנדערע אינפֿאָרמאַציע',
 	'user-profile-section-preferences' => 'פרעפֿערענצן',
 	'user-profile-personal-name' => 'נאָמען',
+	'user-profile-personal-city' => 'שטאָט',
+	'user-profile-personal-country' => 'לאַנד',
 	'user-profile-interests-eats' => 'עסן',
 	'user-profile-goback' => 'צוריקגיין',
 	'user-page-link' => 'באַניצער בלאַט',

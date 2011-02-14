@@ -7093,6 +7093,7 @@ $messages['sr-ec'] = array(
 
 /** Serbian Latin ekavian (‪Srpski (latinica)‬)
  * @author Michaello
+ * @author Rancher
  */
 $messages['sr-el'] = array(
 	'ur-already-submitted' => 'Vaš zahtev je poslat',
@@ -7122,7 +7123,7 @@ $messages['sr-el'] = array(
 	'ur-remove-error-not-loggedin-foe' => 'Morate biti ulogovani da biste uklonili nekoga sa Vašeg spiska neprijatelja.',
 	'ur-remove-error-not-loggedin-friend' => 'Morate biti ulogovani da biste nekoga obrisali sa spiska prijatelja.',
 	'ur-remove' => 'Ukloni',
-	'ur-cancel' => 'Poništi',
+	'ur-cancel' => 'Otkaži',
 	'ur-login' => 'Logovanje',
 	'ur-add-title-foe' => 'Da li želite da označite $1 kao Vašeg neprijatelja?',
 	'ur-add-title-friend' => 'Da li želite da označite $1 kao Vašeg prijatelja?',

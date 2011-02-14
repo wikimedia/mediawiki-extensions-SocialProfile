@@ -4358,6 +4358,7 @@ $messages['sr-ec'] = array(
 
 /** Serbian Latin ekavian (‪Srpski (latinica)‬)
  * @author Michaello
+ * @author Rancher
  */
 $messages['sr-el'] = array(
 	'giftmanager' => 'Menadžer za poklone',
@@ -4376,7 +4377,7 @@ $messages['sr-el'] = array(
 	'g-back-gift-list' => 'Povratak na spisak poklona',
 	'g-back-link' => '< Povratak na stranu $1',
 	'g-choose-file' => 'Izaberite fajl:',
-	'g-cancel' => 'Poništi',
+	'g-cancel' => 'Otkaži',
 	'g-count' => '$1 ima $2 {{PLURAL:$2|poklon|poklona}}.',
 	'g-create-gift' => 'Napravite poklon',
 	'g-created-by' => 'napravio/la',
