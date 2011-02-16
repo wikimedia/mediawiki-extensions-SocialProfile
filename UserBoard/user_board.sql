@@ -12,6 +12,6 @@ CREATE TABLE /*$wgDBprefix*/user_board (
   `ub_type` int(5) default '0',
   `ub_date` datetime default NULL
 ) DEFAULT CHARSET=utf8;
-CREATE INDEX /*i*/ub_user_id ON      /*_*/user_board (ub_user_id),
-CREATE INDEX /*i*/ub_user_id_from ON /*_*/user_board (ub_user_id_from),
-CREATE INDEX /*i*/ub_type ON         /*_*/user_board (ub_type)
+CREATE INDEX /*i*/ub_user_id ON      /*_*/user_board (ub_user_id);
+CREATE INDEX /*i*/ub_user_id_from ON /*_*/user_board (ub_user_id_from);
+CREATE INDEX /*i*/ub_type ON         /*_*/user_board (ub_type);
