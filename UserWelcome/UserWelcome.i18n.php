@@ -1552,6 +1552,8 @@ $messages['wo'] = array(
 $messages['yi'] = array(
 	'mp-welcome-upload' => 'אַרויפֿלאָדן',
 	'mp-welcome-edit' => 'רעדאַקטירן',
+	'mp-request-new-message' => 'נײַע מעלדונג',
+	'mp-request-new-friend' => '$1 {{PLURAL:$1|נײַער|נײַע}} פֿרײַנד',
 );
 
 /** Simplified Chinese (‪中文(简体)‬)

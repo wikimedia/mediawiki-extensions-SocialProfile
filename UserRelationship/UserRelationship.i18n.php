@@ -7353,7 +7353,7 @@ $messages['te'] = array(
 	'viewrelationships' => 'బంధాన్ని చూడండి',
 	'ur-already-submitted' => 'మీ అభ్యర్థనని పంపించాం',
 	'ur-error-message-no-user' => 'మీ అభ్యర్థనని మన్నింపలేము, ఎందుకంటే ఈ పేరుతో వాడుకరులెవరూ లేరు.',
-	'ur-main-page' => 'మొదటి పేజీ',
+	'ur-main-page' => 'మొదటి పుట',
 	'ur-your-profile' => 'మీ ప్రొఫైలు',
 	'ur-add-friends' => ' మరింత మంది మిత్రులు కావాలా? <a href="$1">ఆహ్వానించండి</a>',
 	'ur-add-friend' => 'స్నేహితునిగా చేర్చు',
