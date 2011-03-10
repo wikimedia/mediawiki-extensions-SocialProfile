@@ -3023,10 +3023,14 @@ $messages['yi'] = array(
 );
 
 /** Simplified Chinese (‪中文(简体)‬)
+ * @author Hydra
  * @author Liangent
  * @author PhiLiP
  */
 $messages['zh-hans'] = array(
+	'ga-choosefile' => '选择文件',
+	'ga-create-gift' => '创造礼物',
+	'ga-gift' => '礼物',
 	'ga-giftdesc' => '礼物说明',
 	'ga-giftimage' => '礼物图片',
 	'ga-giftname' => '礼物名称',

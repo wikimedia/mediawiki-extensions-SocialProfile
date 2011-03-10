@@ -11145,6 +11145,7 @@ $messages['zh-cn'] = array(
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Fantasticfears
  * @author Gzdavidwong
+ * @author Hydra
  * @author Liangent
  * @author Onecountry
  * @author PhiLiP
@@ -11220,6 +11221,7 @@ $messages['zh-hans'] = array(
 	'user-profile-personal-places' => '地点',
 	'user-profile-personal-placeslived' => '我曾居住的地方',
 	'user-profile-personal-web' => '网站',
+	'user-profile-personal-websites' => '网站',
 	'user-profile-interests-entertainment' => '娱乐',
 	'user-profile-interests-movies' => '电影',
 	'user-profile-interests-tv' => '电视',
@@ -11228,6 +11230,7 @@ $messages['zh-hans'] = array(
 	'user-profile-interests-magazines' => '杂志',
 	'user-profile-interests-videogames' => '视频游戏',
 	'user-profile-interests-eats' => '食物',
+	'user-profile-interests-foodsnacks' => '食物和点心',
 	'user-profile-interests-drinks' => '饮料',
 	'user-profile-preferences-emails' => '电邮通知',
 	'user-profile-preferences-emails-personalmessage' => '当传送个人讯息时',

@@ -4954,6 +4954,7 @@ $messages['yi'] = array(
 );
 
 /** Simplified Chinese (‪中文(简体)‬)
+ * @author Hydra
  * @author Liangent
  * @author PhiLiP
  */
@@ -4967,6 +4968,7 @@ $messages['zh-hans'] = array(
 	'g-back-gift-list' => '回到礼物清单',
 	'g-choose-file' => '选择档案：',
 	'g-cancel' => '取消',
+	'g-create-gift' => '创造礼物',
 	'g-error-message-to-yourself' => '您不能送礼物给自己。',
 	'g-gift' => '礼物',
 	'g-gift-name' => '送礼物',

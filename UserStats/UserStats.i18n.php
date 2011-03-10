@@ -75,12 +75,14 @@ and change your settings to disable e-mail notifications.'
 
 /** Message documentation (Message documentation)
  * @author Bennylin
+ * @author EugeneZelenko
  * @author Fryed-peach
  * @author McDutchie
  * @author Purodha
  * @author Umherirrender
  */
 $messages['qqq'] = array(
+	'top-fans-points' => '{{Identical|Point}}',
 	'top-fans-by-category-title-gifts-rec-count' => 'Should be "gifts" not "gifs".',
 	'top-fans-stats-vote-count' => '{{Identical|Vote}}',
 	'top-fans-stats-edit-count' => '{{Identical|Edit}}',
