@@ -3791,7 +3791,7 @@ Si $1 confirma tu requesta, tu essera informate de isto in e-mail.',
 Nos te notificara quando $1 confirma tu requesta.',
 	'ur-add-error-message-pending-foe-request' => 'Tu ha un requesta pendente de inimico con $1.
 Nos te notificara quando $1 confirma tu requesta.',
-	'ur-add-error-message-not-loggedin-foe' => 'Tu debe aperir un session pro poter adder un inimico.',
+	'ur-add-error-message-not-loggedin-foe' => 'Tu debe aperir un session pro adder un inimico.',
 	'ur-add-error-message-not-loggedin-friend' => 'Tu debe aperir un session pro poter adder un amico.',
 	'ur-requests-title' => 'Requestas de relation',
 	'ur-requests-message-foe' => '<a href="$1">$2</a> vole esser tu inimico.',
