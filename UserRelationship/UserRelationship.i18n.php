@@ -5777,9 +5777,10 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
 
 /** Oriya (ଓଡ଼ିଆ)
  * @author Jose77
+ * @author Psubhashish
  */
 $messages['or'] = array(
-	'ur-main-page' => 'ପ୍ରଧାନ ପ୍ରୁଷ୍ଟ୍ଆ',
+	'ur-main-page' => 'ମୂଳ ଫରଦ',
 );
 
 /** Ossetic (Иронау)
