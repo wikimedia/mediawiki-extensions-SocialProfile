@@ -2898,6 +2898,7 @@ $messages['eo'] = array(
  * @author Antur
  * @author Crazymadlover
  * @author DoveBirkoff
+ * @author Fitoschido
  * @author Imre
  * @author Locos epraix
  * @author Sanbec
@@ -2914,7 +2915,7 @@ $messages['es'] = array(
 	'user-edit-this' => 'Editar esto',
 	'user-edit-profile' => 'Editar perfil',
 	'user-upload-avatar' => 'Subir avatar',
-	'user-watchlist' => 'Mi lista de vigilancia',
+	'user-watchlist' => 'Mi lista de seguimiento',
 	'user-meet-people' => 'Conocer gente',
 	'user-add-friend' => 'Agregar como amigo',
 	'user-add-foe' => 'Agregar como enemigo',
@@ -6499,7 +6500,7 @@ $messages['mk'] = array(
 	'user-profile-default-country' => 'САД',
 	'user-profile-points' => '$1 {{PLURAL:$1|бод|бода}}',
 	'user-profile-section-personal' => 'Лични информации',
-	'user-profile-section-sportsteams' => 'Ажурирај мрежи',
+	'user-profile-section-sportsteams' => 'Поднови мрежи',
 	'user-profile-section-custom' => 'Кориснички-определени информации',
 	'user-profile-section-interests' => 'Други информации',
 	'user-profile-section-picture' => 'Аватар',
@@ -6540,7 +6541,7 @@ $messages['mk'] = array(
 	'user-profile-preferences-emails-gift' => 'Кога ќе примите подарок',
 	'user-profile-preferences-emails-level' => 'Кога повишување на нивото',
 	'user-profile-preferences-emails-weekly' => 'Добивајте неделни новости по е-пошта',
-	'user-profile-update-button' => 'Ажурирај',
+	'user-profile-update-button' => 'Поднови',
 	'user-profile-tidbits-title' => 'Занимливости',
 	'user-profile-tidbits-favmoment' => 'Омилен спортски момент',
 	'user-profile-tidbits-worstmoment' => 'Најлош спортски момент',
