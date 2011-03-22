@@ -6374,6 +6374,14 @@ $messages['lt'] = array(
 	'user-profile-personal-name' => 'Vardas',
 );
 
+/** Latgalian (Latgaļu)
+ * @author Dark Eagle
+ */
+$messages['ltg'] = array(
+	'user-gifts-title' => 'Duovonys',
+	'user-profile-update-button' => 'Atjaunynuot',
+);
+
 /** Latvian (Latviešu)
  * @author GreenZeb
  */

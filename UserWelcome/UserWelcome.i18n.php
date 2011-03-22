@@ -933,6 +933,13 @@ $messages['nds-nl'] = array(
 	'mp-request-new-friend' => '{{PLURAL:$1|1 nieje vriend|$1 nieje vrienden}}',
 );
 
+/** Nepali (नेपाली)
+ * @author Bhawani Gautam Rhk
+ */
+$messages['ne'] = array(
+	'mp-request-new-message' => 'नयाँ सन्देश',
+);
+
 /** Dutch (Nederlands)
  * @author SPQRobin
  * @author Siebrand
