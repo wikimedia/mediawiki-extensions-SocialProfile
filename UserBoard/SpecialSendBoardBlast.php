@@ -71,7 +71,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$stats = new UserStats( $wgUser->getID(), $wgUser->getName() );
 		$stats_data = $stats->getUserStats();
 
-		wfLoadExtensionMessages( 'SocialProfileUserBoard' );
+		
 
 		$output = '<div class="board-blast-message-form">
 				<h2>' . wfMsg( 'boardblaststep1' ) . '</h2>
