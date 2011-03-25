@@ -1900,6 +1900,13 @@ $4
 	'right-awardsmanage' => 'Создавање на нови и уредување на постоечки награди',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'ga-choosefile' => 'Pilih fail:',
+);
+
 /** Dutch (Nederlands)
  * @author GerardM
  * @author Siebrand

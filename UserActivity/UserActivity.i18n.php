@@ -536,6 +536,13 @@ $messages['mn'] = array(
 	'useractivity-group-comment' => '{{PLURAL:$1|нэг сэтгэгдэл|$1 сэтгэгдэл}}',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'useractivity-group-user_message' => '{{PLURAL:$1|satu pesanan|$1 pesanan}}',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */

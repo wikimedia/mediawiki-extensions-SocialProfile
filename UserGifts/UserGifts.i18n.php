@@ -2974,6 +2974,13 @@ $messages['mn'] = array(
 	'g-main-page' => 'Нүүр хуудас',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'g-choose-file' => 'Pilih fail:',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  * @author Tvdm
