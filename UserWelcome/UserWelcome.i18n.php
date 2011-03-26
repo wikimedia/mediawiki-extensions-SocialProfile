@@ -904,6 +904,13 @@ $messages['mk'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|нов пријател|нови пријатели}}',
 );
 
+/** Mazanderani (مازِرونی)
+ * @author محک
+ */
+$messages['mzn'] = array(
+	'mp-welcome-upload' => 'باربی‌یشتن',
+);
+
 /** Nahuatl (Nāhuatl)
  * @author Fluence
  */

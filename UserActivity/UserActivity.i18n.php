@@ -509,6 +509,23 @@ $messages['lb'] = array(
 	'useractivity-user_message' => '$1 huet dem $3 {{PLURAL:$4|ee Message|Message}} geschéckt',
 );
 
+/** Latgalian (Latgaļu)
+ * @author Dark Eagle
+ */
+$messages['ltg'] = array(
+	'useractivity' => 'Draugu darbeibys',
+	'useractivity-award' => '$1 dabuoja apduovaņu',
+	'useractivity-all' => 'Vērtīs vysys',
+	'useractivity-gift' => '$1 dabuoja duovonu nu $2',
+	'useractivity-group-edit' => '{{PLURAL:$1|vīna puormeja|$1 puormejis}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|vīns komentars|$1 komentari}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|vīns viestejums|$1 viestejumi}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|vīns draugs|$1 draugi}}',
+	'useractivity-siteactivity' => 'Teiklavītys aktivums',
+	'useractivity-title' => 'Draugu darbeibys',
+	'useractivity-user_message' => '$1 nūsyuteja {{PLURAL:$4|viestejumu|viestejumus}} $3',
+);
+
 /** Macedonian (Македонски)
  * @author Bjankuloski06
  */
