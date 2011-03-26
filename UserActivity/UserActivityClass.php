@@ -1,7 +1,6 @@
 <?php
 /**
  * UserActivity class
- * @todo FIXME: database queries should use Database class
  */
 class UserActivity {
 
@@ -58,31 +57,56 @@ class UserActivity {
 		}
 	}
 
+	/**
+	 * Sets the value of class member variable $name to $value.
+	 */
 	public function setActivityToggle( $name, $value ) {
 		$this->$name = $value;
 	}
 
 	private function setEdits() {
 		$dbr = wfGetDB( DB_SLAVE );
-		$rel_sql = '';
-		$user_sql = '';
+
+		$where = array();
 
 		if ( !empty( $this->rel_type ) ) {
-			$rel_sql = " WHERE rc_user IN (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type}) ";
+			$users = $dbr->select(
+				'user_relationship',
+				'r_user_id_relation',
+				array(
+					'r_user_id' => $this->user_id,
+					'r_type' => $this->rel_type
+				),
+				__METHOD__
+			);
+			$userArray = array();
+			foreach ( $users as $user ) {
+				$userArray[] = $user;
+			}
+			$userIDs = implode( ',', $userArray );
+			$where[] = "rc_user IN ($userIDs)";
 		}
 
 		if ( !empty( $this->show_current_user ) ) {
-			$user_sql = " WHERE rc_user = {$this->user_id}";
+			$where['rc_user'] = $this->user_id;
 		}
 
-		$sql = "SELECT UNIX_TIMESTAMP(rc_timestamp) AS item_date, rc_title,
-				rc_user, rc_user_text, rc_comment, rc_id, rc_minor, rc_new,
-				rc_namespace, rc_cur_id, rc_this_oldid, rc_last_oldid,
-				rc_log_action
-			FROM {$dbr->tableName( 'recentchanges' )}
-			{$rel_sql} {$user_sql}
-			ORDER BY rc_id DESC LIMIT 0," . $this->item_max;
-		$res = $dbr->query( $sql, __METHOD__ );
+		$res = $dbr->select(
+			'recentchanges',
+			array(
+				'UNIX_TIMESTAMP(rc_timestamp) AS item_date', 'rc_title',
+				'rc_user', 'rc_user_text', 'rc_comment', 'rc_id', 'rc_minor',
+				'rc_new', 'rc_namespace', 'rc_cur_id', 'rc_this_oldid',
+				'rc_last_oldid', 'rc_log_action'
+			),
+			$where,
+			__METHOD__,
+			array(
+				'ORDER BY' => 'rc_id DESC',
+				'LIMIT' => $this->item_max,
+				'OFFSET' => 0
+			)
+		);
 
 		foreach ( $res as $row ) {
 			// Special pages aren't editable, so ignore them
@@ -131,23 +155,46 @@ class UserActivity {
 			return false;
 		}
 
-		$rel_sql = '';
-		$user_sql = '';
+		$where = array();
+		$where[] = 'vote_page_id = page_id';
+
 		if ( $this->rel_type ) {
-			$rel_sql = " AND vote_user_id IN (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type}) ";
+			$users = $dbr->select(
+				'user_relationship',
+				'r_user_id_relation',
+				array(
+					'r_user_id' => $this->user_id,
+					'r_type' => $this->rel_type
+				),
+				__METHOD__
+			);
+			$userArray = array();
+			foreach ( $users as $user ) {
+				$userArray[] = $user;
+			}
+			$userIDs = implode( ',', $userArray );
+			$where[] = "vote_user_id IN ($userIDs)";
 		}
 		if ( $this->show_current_user ) {
-			$user_sql = " AND vote_user_id = {$this->user_id}";
+			$where['vote_user_id'] = $this->user_id;
 		}
 
-		$sql = "SELECT UNIX_TIMESTAMP(vote_date) AS item_date, username,
-					page_title, vote_count, comment_count, vote_ip,
-					vote_user_id
-			FROM {$dbr->tableName( 'Vote' )} v, {$dbr->tableName( 'page' )} p
-			WHERE v.vote_page_id=p.page_id
-			{$rel_sql} {$user_sql}
-			ORDER BY vote_date DESC LIMIT 0," . $this->item_max;
-		$res = $dbr->query( $sql, __METHOD__ );
+		$res = $dbr->select(
+			array( 'Vote', 'page' ),
+			array(
+				'UNIX_TIMESTAMP(vote_date) AS item_date', 'username',
+				'page_title', 'vote_count', 'comment_count', 'vote_ip',
+				'vote_user_id'
+			),
+			$where,
+			__METHOD__,
+			array(
+				'ORDER BY' => 'vote_date DESC',
+				'LIMIT' => $this->item_max,
+				'OFFSET' => 0
+			)
+		);
+
 		foreach ( $res as $row ) {
 			$username = $row->username;
 			$this->items[] = array(
@@ -173,26 +220,47 @@ class UserActivity {
 			return false;
 		}
 
-		$rel_sql = '';
-		$user_sql = '';
+		$where = array();
+		$where[] = 'comment_page_id = page_id';
 
 		if ( !empty( $this->rel_type ) ) {
-			$rel_sql = "AND Comment_user_id IN (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type})";
+			$users = $dbr->select(
+				'user_relationship',
+				'r_user_id_relation',
+				array(
+					'r_user_id' => $this->user_id,
+					'r_type' => $this->rel_type
+				),
+				__METHOD__
+			);
+			$userArray = array();
+			foreach ( $users as $user ) {
+				$userArray[] = $user;
+			}
+			$userIDs = implode( ',', $userArray );
+			$where[] = "Comment_user_id IN ($userIDs)";
 		}
 
 		if ( !empty( $this->show_current_user ) ) {
-			$user_sql = "AND Comment_user_id = {$this->user_id}";
+			$where['Comment_user_id'] = $this->user_id;
 		}
 
-		$sql = "SELECT UNIX_TIMESTAMP(comment_date) AS item_date,
-					Comment_Username, Comment_IP, page_title, Comment_Text,
-					Comment_user_id, page_namespace, CommentID
-			FROM {$dbr->tableName( 'Comments' )} c, {$dbr->tableName( 'page' )} p
-			WHERE c.comment_page_id=p.page_id
-			{$rel_sql} {$user_sql}
-			ORDER BY comment_date DESC LIMIT 0," . $this->item_max;
+		$res = $dbr->select(
+			array( 'Comments', 'page' ),
+			array(
+				'UNIX_TIMESTAMP(comment_date) AS item_date',
+				'Comment_Username', 'Comment_IP', 'page_title', 'Comment_Text',
+				'Comment_user_id', 'page_namespace', 'CommentID'
+			),
+			$where,
+			__METHOD__,
+			array(
+				'ORDER BY' => 'comment_date DESC',
+				'LIMIT' => $this->item_max,
+				'OFFSET' => 0
+			)
+		);
 
-		$res = $dbr->query( $sql, __METHOD__ );
 		foreach ( $res as $row ) {
 			$show_comment = true;
 
@@ -240,24 +308,48 @@ class UserActivity {
 
 	private function setGiftsSent() {
 		$dbr = wfGetDB( DB_SLAVE );
-		$rel_sql = '';
-		$user_sql = '';
+
+		$where = array();
 
 		if( $this->rel_type ) {
-			$rel_sql = "WHERE ug_user_id_to IN (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type})";
-		}
-		if( $this->show_current_user ) {
-			$user_sql = "WHERE ug_user_id_from = {$this->user_id}";
+			$users = $dbr->select(
+				'user_relationship',
+				'r_user_id_relation',
+				array(
+					'r_user_id' => $this->user_id,
+					'r_type' => $this->rel_type
+				),
+				__METHOD__
+			);
+			$userArray = array();
+			foreach ( $users as $user ) {
+				$userArray[] = $user;
+			}
+			$userIDs = implode( ',', $userArray );
+			$where[] = "ug_user_id_to IN ($userIDs)";
 		}
 
-		$sql = "SELECT ug_id, ug_user_id_from, ug_user_name_from,
-					ug_user_id_to, ug_user_name_to,
-					UNIX_TIMESTAMP(ug_date) AS item_date, gift_name, gift_id
-			FROM {$dbr->tableName( 'user_gift' )}
-			INNER JOIN {$dbr->tableName( 'gift' )} ON gift_id = ug_gift_id
-			{$rel_sql} {$user_sql}
-			ORDER BY ug_id DESC LIMIT 0,{$this->item_max}";
-		$res = $dbr->query( $sql, __METHOD__ );
+		if( $this->show_current_user ) {
+			$where['ug_user_id_from'] = $this->user_id;
+		}
+
+		$res = $dbr->select(
+			array( 'user_gift', 'gift' ),
+			array(
+				'ug_id', 'ug_user_id_from', 'ug_user_name_from',
+				'ug_user_id_to', 'ug_user_name_to',
+				'UNIX_TIMESTAMP(ug_date) AS item_date', 'gift_name', 'gift_id'
+			),
+			$where,
+			__METHOD__,
+			array(
+				'ORDER BY' => 'ug_id DESC',
+				'LIMIT' => $this->item_max,
+				'OFFSET' => 0
+			),
+			array( 'gift' => array( 'INNER JOIN', 'gift_id = ug_gift_id' ) )
+		);
+
 		foreach ( $res as $row ) {
 			$this->items[] = array(
 				'id' => $row->ug_id,
@@ -276,31 +368,56 @@ class UserActivity {
 
 	private function setGiftsRec() {
 		$dbr = wfGetDB( DB_SLAVE );
-		$rel_sql = '';
-		$user_sql = '';
+
+		$where = array();
 
 		if ( !empty( $this->rel_type ) ) {
-			$rel_sql = "WHERE ug_user_id_to in (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type} )";
+			$users = $dbr->select(
+				'user_relationship',
+				'r_user_id_relation',
+				array(
+					'r_user_id' => $this->user_id,
+					'r_type' => $this->rel_type
+				),
+				__METHOD__
+			);
+			$userArray = array();
+			foreach ( $users as $user ) {
+				$userArray[] = $user;
+			}
+			$userIDs = implode( ',', $userArray );
+			$where[] = "ug_user_id_to IN ($userIDs)";
 		}
 
 		if ( !empty( $this->show_current_user ) ) {
-			$user_sql = "WHERE ug_user_id_to = {$this->user_id}";
+			$where['ug_user_id_to'] = $this->user_id;
 		}
 
-		$sql = "SELECT ug_id, ug_user_id_from, ug_user_name_from,
-					ug_user_id_to, ug_user_name_to,
-					UNIX_TIMESTAMP(ug_date) AS item_date, gift_name, gift_id
-			FROM {$dbr->tableName( 'user_gift' )}
-			INNER JOIN {$dbr->tableName( 'gift' )} ON gift_id = ug_gift_id
-			{$rel_sql} {$user_sql}
-			ORDER BY ug_id DESC LIMIT 0,{$this->item_max}";
-		$res = $dbr->query( $sql, __METHOD__ );
+		$res = $dbr->select(
+			array( 'user_gift', 'gift' ),
+			array(
+				'ug_id', 'ug_user_id_from', 'ug_user_name_from',
+				'ug_user_id_to', 'ug_user_name_to',
+				'UNIX_TIMESTAMP(ug_date) AS item_date', 'gift_name', 'gift_id'
+			),
+			$where,
+			__METHOD__,
+			array(
+				'ORDER BY' => 'ug_id DESC',
+				'LIMIT' => $this->item_max,
+				'OFFSET' => 0
+			),
+			array( 'gift' => array( 'INNER JOIN', 'gift_id = ug_gift_id' ) )
+		);
+
 		foreach ( $res as $row ) {
 			global $wgUploadPath;
 			$user_title = Title::makeTitle( NS_USER, $row->ug_user_name_to );
 			$user_title_from = Title::makeTitle( NS_USER, $row->ug_user_name_from );
 
-			$gift_image = '<img src="' . $wgUploadPath . '/awards/' . Gifts::getGiftImage( $row->gift_id, 'm' ) . '" border="0" alt="" />';
+			$gift_image = '<img src="' . $wgUploadPath . '/awards/' .
+				Gifts::getGiftImage( $row->gift_id, 'm' ) .
+				'" border="0" alt="" />';
 			$view_gift_link = SpecialPage::getTitleFor( 'ViewGift' );
 
 			$html = wfMsg( 'useractivity-gift',
@@ -337,28 +454,53 @@ class UserActivity {
 
 	private function setSystemGiftsRec() {
 		$dbr = wfGetDB( DB_SLAVE );
-		$rel_sql = '';
-		$user_sql = '';
+
+		$where = array();
 
 		if ( !empty( $this->rel_type ) ) {
-			$rel_sql = "WHERE sg_user_id in (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type} )";
+			$users = $dbr->select(
+				'user_relationship',
+				'r_user_id_relation',
+				array(
+					'r_user_id' => $this->user_id,
+					'r_type' => $this->rel_type
+				),
+				__METHOD__
+			);
+			$userArray = array();
+			foreach ( $users as $user ) {
+				$userArray[] = $user;
+			}
+			$userIDs = implode( ',', $userArray );
+			$where[] = "sg_user_id IN ($userIDs)";
 		}
 
 		if ( !empty( $this->show_current_user ) ) {
-			$user_sql = "WHERE sg_user_id = {$this->user_id}";
+			$where['sg_user_id'] = $this->user_id;
 		}
 
-		$sql = "SELECT sg_id, sg_user_id, sg_user_name,
-					UNIX_TIMESTAMP(sg_date) AS item_date, gift_name, gift_id
-			FROM {$dbr->tableName( 'user_system_gift' )}
-			INNER JOIN {$dbr->tableName( 'system_gift' )} ON gift_id = sg_gift_id
-			{$rel_sql} {$user_sql}
-			ORDER BY sg_id DESC LIMIT 0,{$this->item_max}";
-		$res = $dbr->query( $sql, __METHOD__ );
+		$res = $dbr->select(
+			array( 'user_system_gift', 'system_gift' ),
+			array(
+				'sg_id', 'sg_user_id', 'sg_user_name',
+				'UNIX_TIMESTAMP(sg_date) AS item_date', 'gift_name', 'gift_id'
+			),
+			$where,
+			__METHOD__,
+			array(
+				'ORDER BY' => 'sg_id DESC',
+				'LIMIT' => $this->item_max,
+				'OFFSET' => 0
+			),
+			array( 'system_gift' => array( 'INNER JOIN', 'gift_id = sg_gift_id' ) )
+		);
+
 		foreach ( $res as $row ) {
 			global $wgUploadPath;
 			$user_title = Title::makeTitle( NS_USER, $row->sg_user_name );
-			$system_gift_image = '<img src="' . $wgUploadPath . '/awards/' . SystemGifts::getGiftImage( $row->gift_id, 'm' ) . '" border="0" alt="" />';
+			$system_gift_image = '<img src="' . $wgUploadPath . '/awards/' .
+				SystemGifts::getGiftImage( $row->gift_id, 'm' ) .
+				'" border="0" alt="" />';
 			$system_gift_link = SpecialPage::getTitleFor( 'ViewSystemGift' );
 
 			$html = wfMsg( 'useractivity-award', "<b><a href=\"{$user_title->escapeFullURL()}\">{$row->sg_user_name}</a></b>" ) .
@@ -392,23 +534,46 @@ class UserActivity {
 
 	private function setRelationships() {
 		$dbr = wfGetDB( DB_SLAVE );
+
+		$where = array();
+
 		if ( !empty( $this->rel_type ) ) {
-			$rel_sql = "WHERE r_user_id in (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type} )";
-		} else {
-			$rel_sql = '';
+			$users = $dbr->select(
+				'user_relationship',
+				'r_user_id_relation',
+				array(
+					'r_user_id' => $this->user_id,
+					'r_type' => $this->rel_type
+				),
+				__METHOD__
+			);
+			$userArray = array();
+			foreach ( $users as $user ) {
+				$userArray[] = $user;
+			}
+			$userIDs = implode( ',', $userArray );
+			$where[] = "r_user_id IN ($userIDs)";
 		}
+
 		if ( !empty( $this->show_current_user ) ) {
-			$user_sql = "WHERE r_user_id = {$this->user_id}";
-		} else {
-			$user_sql = '';
+			$where['r_user_id'] = $this->user_id;
 		}
-		$sql = "SELECT r_id, r_user_id, r_user_name, r_user_id_relation,
-					r_user_name_relation, r_type,
-					UNIX_TIMESTAMP(r_date) AS item_date
-			FROM {$dbr->tableName( 'user_relationship' )}
-			{$rel_sql} {$user_sql}
-			ORDER BY r_id DESC LIMIT 0,{$this->item_max}";
-		$res = $dbr->query( $sql, __METHOD__ );
+
+		$res = $dbr->select(
+			'user_relationship',
+			array(
+				'r_id', 'r_user_id', 'r_user_name', 'r_user_id_relation',
+				'r_user_name_relation', 'r_type',
+				'UNIX_TIMESTAMP(r_date) AS item_date'
+			),
+			$where,
+			__METHOD__,
+			array(
+				'ORDER BY' => 'r_id DESC',
+				'LIMIT' => $this->item_max,
+				'OFFSET' => 0
+			)
+		);
 
 		foreach ( $res as $row ) {
 			if ( $row->r_type == 1 ) {
@@ -419,7 +584,7 @@ class UserActivity {
 
 			$user_name_short = substr( $row->r_user_name, 0, 25 );
 			if ( $row->r_user_name != $user_name_short ) {
-				$user_name_short .= '...';
+				$user_name_short .= wfMsg( 'ellipsis' );
 			}
 
 			$this->items_grouped[$r_type][$row->r_user_name_relation]['users'][$row->r_user_name][] = array(
@@ -455,26 +620,49 @@ class UserActivity {
 
 	private function setMessagesSent() {
 		$dbr = wfGetDB( DB_SLAVE );
-		$rel_sql = '';
-		$user_sql = '';
+
+		$where = array();
+		// We do *not* want to display private messages...
+		$where['ub_type'] = 0;
 
 		if ( !empty( $this->rel_type ) ) {
-			$rel_sql = " ub_user_id_from IN (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type} ) AND";
+			$users = $dbr->select(
+				'user_relationship',
+				'r_user_id_relation',
+				array(
+					'r_user_id' => $this->user_id,
+					'r_type' => $this->rel_type
+				),
+				__METHOD__
+			);
+			$userArray = array();
+			foreach ( $users as $user ) {
+				$userArray[] = $user;
+			}
+			$userIDs = implode( ',', $userArray );
+			$where[] = "ub_user_id_from IN ($userIDs)";
 		}
 
 		if ( !empty( $this->show_current_user ) ) {
-			$user_sql = " ub_user_id_from = {$this->user_id} AND";
+			$where['ub_user_id_from'] = $this->user_id;
 		}
 
-		$sql = "SELECT ub_id, ub_user_id, ub_user_name, ub_user_id_from,
-				ub_user_name_from,
-				UNIX_TIMESTAMP(ub_date) AS item_date,
-				ub_message
-			FROM {$dbr->tableName( 'user_board' )} WHERE
-			{$rel_sql} {$user_sql}  ub_type=0
-			ORDER BY ub_id DESC LIMIT 0,{$this->item_max}";
+		$res = $dbr->select(
+			'user_board',
+			array(
+				'ub_id', 'ub_user_id', 'ub_user_name', 'ub_user_id_from',
+				'ub_user_name_from', 'UNIX_TIMESTAMP(ub_date) AS item_date',
+				'ub_message'
+			),
+			$where,
+			__METHOD__,
+			array(
+				'ORDER BY' => 'ub_id DESC',
+				'LIMIT' => $this->item_max,
+				'OFFSET' => 0
+			)
+		);
 
-		$res = $dbr->query( $sql, __METHOD__ );
 		foreach ( $res as $row ) {
 			// Ignore nonexistent (for example, renamed) users
 			$uid = User::idFromName( $row->ub_user_name );
@@ -482,21 +670,23 @@ class UserActivity {
 				continue;
 			}
 
-			$this->items_grouped['user_message'][stripslashes( $row->ub_user_name )]['users'][stripslashes( $row->ub_user_name_from )][] = array(
+			$to = stripslashes( $row->ub_user_name );
+			$from = stripslashes( $row->ub_user_name_from );
+			$this->items_grouped['user_message'][$to]['users'][$from][] = array(
 				'id' => $row->ub_id,
 				'type' => 'user_message',
 				'timestamp' => $row->item_date,
 				'pagetitle' => '',
 				'namespace' => '',
-				'username' => stripslashes( $row->ub_user_name_from ),
+				'username' => $from,
 				'userid' => $row->ub_user_id_from,
-				'comment' => stripslashes( $row->ub_user_name ),
+				'comment' => $to,
 				'minor' => 0,
 				'new' => 0
 			);
 
 			// set last timestamp
-			$this->items_grouped['user_message'][stripslashes( $row->ub_user_name )]['timestamp'] = $row->item_date;
+			$this->items_grouped['user_message'][$to]['timestamp'] = $row->item_date;
 
 			$this->items[] = array(
 				'id' => $row->ub_id,
@@ -504,9 +694,9 @@ class UserActivity {
 				'timestamp' => $row->item_date,
 				'pagetitle' => '',
 				'namespace' => $this->fixItemComment( $row->ub_message ),
-				'username' => stripslashes( $row->ub_user_name_from ),
+				'username' => $from,
 				'userid' => $row->ub_user_id_from,
-				'comment' => stripslashes( $row->ub_user_name ),
+				'comment' => $to,
 				'new' => '0',
 				'minor' => 0
 			);
@@ -515,28 +705,51 @@ class UserActivity {
 
 	private function setSystemMessages() {
 		$dbr = wfGetDB( DB_SLAVE );
-		$rel_sql = '';
-		$user_sql = '';
+
+		$where = array();
 
 		if ( !empty( $this->rel_type ) ) {
-			$rel_sql = " WHERE um_user_id in (SELECT r_user_id_relation FROM {$dbr->tableName( 'user_relationship' )} WHERE r_user_id={$this->user_id} AND r_type={$this->rel_type} )";
+			$users = $dbr->select(
+				'user_relationship',
+				'r_user_id_relation',
+				array(
+					'r_user_id' => $this->user_id,
+					'r_type' => $this->rel_type
+				),
+				__METHOD__
+			);
+			$userArray = array();
+			foreach ( $users as $user ) {
+				$userArray[] = $user;
+			}
+			$userIDs = implode( ',', $userArray );
+			$where[] = "um_user_id IN ($userIDs)";
 		}
 
 		if ( !empty( $this->show_current_user ) ) {
-			$user_sql = " WHERE um_user_id = {$this->user_id}";
+			$where['um_user_id'] = $this->user_id;
 		}
 
-		$sql = "SELECT um_id, um_user_id, um_user_name, um_type, um_message,
-					UNIX_TIMESTAMP(um_date) AS item_date
-			FROM {$dbr->tableName( 'user_system_messages' )}
-			{$rel_sql} {$user_sql}
-			ORDER BY um_id DESC LIMIT 0,{$this->item_max}";
-		$res = $dbr->query( $sql, __METHOD__ );
+		$res = $dbr->select(
+			'user_system_messages',
+			array(
+				'um_id', 'um_user_id', 'um_user_name', 'um_type', 'um_message',
+				'UNIX_TIMESTAMP(um_date) AS item_date'
+			),
+			$where,
+			__METHOD__,
+			array(
+				'ORDER BY' => 'um_id DESC',
+				'LIMIT' => $this->item_max,
+				'OFFSET' => 0
+			)
+		);
+
 		foreach ( $res as $row ) {
 			$user_title = Title::makeTitle( NS_USER, $row->um_user_name );
 			$user_name_short = substr( $row->um_user_name, 0, 15 );
 			if ( $row->um_user_name != $user_name_short ) {
-				$user_name_short .= '...';
+				$user_name_short .= wfMsg( 'ellipsis' );
 			}
 			$this->activityLines[] = array(
 				'type' => 'system_message',
@@ -703,7 +916,12 @@ class UserActivity {
 					$pages .= " <a href=\"{$page_title->escapeFullURL()}\">{$page_name}</a>";
 					if ( $count_users == 1 && $count_actions > 1 ) {
 						$pages .= wfMsg( 'word-separator' );
-						$pages .= wfMsg( 'parentheses', wfMsgExt( "useractivity-group-{$type}", 'parsemag', $count_actions, $user_name ) );
+						$pages .= wfMsg( 'parentheses', wfMsgExt(
+							"useractivity-group-{$type}",
+							'parsemag',
+							$count_actions,
+							$user_name
+						) );
 					}
 					$pages_count++;
 				}
@@ -737,7 +955,9 @@ class UserActivity {
 										$pages .= " <a href=\"{$page_title2->escapeFullURL()}\">{$page_name2}</a>";
 									}
 									if ( $count_actions2 > 1 ) {
-										$pages .= ' (' . wfMsg( "useractivity-group-{$type}", $count_actions2 ) . ')';
+										$pages .= ' (' . wfMsg(
+											"useractivity-group-{$type}", $count_actions2
+										) . ')';
 									}
 									$pages_count++;
 
@@ -772,7 +992,8 @@ class UserActivity {
 					'data' => wfMsgExt(
 						"useractivity-{$type}",
 						'parsemag',
-						$users, $count_users, $pages, $pages_count, $userNameForGender
+						$users, $count_users, $pages, $pages_count,
+						$userNameForGender
 					)
 				);
 			}
@@ -811,11 +1032,11 @@ class UserActivity {
 			$comment = str_replace( '<', '&lt;', $comment );
 			$comment = str_replace( '>', '&gt;', $comment );
 			$comment = str_replace( '&', '%26', $comment );
-			$comment = str_replace( '%26quot;', "\"", $comment );
+			$comment = str_replace( '%26quot;', '"', $comment );
 		}
 		$preview = substr( $comment, 0, 75 );
 		if ( $preview != $comment ) {
-			$preview .= '...';
+			$preview .= wfMsg( 'ellipsis' );
 		}
 		return stripslashes( $preview );
 	}
