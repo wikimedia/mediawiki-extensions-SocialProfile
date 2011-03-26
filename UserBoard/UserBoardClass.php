@@ -255,49 +255,40 @@ class UserBoard {
 
 	public function getUserBoardMessages( $user_id, $user_id_2 = 0, $limit = 0, $page = 0 ) {
 		global $wgUser, $wgOut, $wgTitle;
-
 		$dbr = wfGetDB( DB_SLAVE );
 
-		$where = array();
-		$limitvalue = 0;
-		if ( $limit > 0 && $page ) {
-			$limitvalue = $page * $limit - ( $limit );
+		if ( $limit > 0 ) {
+			$limitvalue = 0;
+			if ( $page ) {
+				$limitvalue = $page * $limit - ( $limit );
+			}
+			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
 		}
 
 		if ( $user_id_2 ) {
-			$where[] = "( (ub_user_id={$user_id} AND ub_user_id_from={$user_id_2}) OR
+			$user_sql = "( (ub_user_id={$user_id} AND ub_user_id_from={$user_id_2}) OR
 					(ub_user_id={$user_id_2} AND ub_user_id_from={$user_id}) )";
 			if ( !( $user_id == $wgUser->getID() || $user_id_2 == $wgUser->getID() ) ) {
-				$where['ub_type'] = 0;
+				$user_sql .= " AND ub_type = 0 ";
 			}
 		} else {
-			$where['ub_user_id'] = $user_id;
+			$user_sql = "ub_user_id = {$user_id}";
 			if ( $user_id != $wgUser->getID() ) {
-				$where['ub_type'] = 0;
+				$user_sql .= " AND ub_type = 0 ";
 			}
 			if ( $wgUser->isLoggedIn() ) {
-				$where[] = " OR (ub_user_id={$user_id} AND ub_user_id_from={$wgUser->getID()}) ";
+				$user_sql .= " OR (ub_user_id={$user_id} AND ub_user_id_from={$wgUser->getID() }) ";
 			}
 		}
 
-		$res = $dbr->select(
-			'user_board',
-			array(
-				'ub_id', 'ub_user_id_from', 'ub_user_name_from', 'ub_user_id',
-				'ub_user_name', 'ub_message',
-				'UNIX_TIMESTAMP(ub_date) AS unix_time', 'ub_type'
-			),
-			$where,
-			__METHOD__,
-			array(
-				'ORDER BY' => 'ub_id DESC',
-				'LIMIT' => $limitvalue,
-				'OFFSET' => $limit
-			)
-		);
-
+		$sql = "SELECT ub_id, ub_user_id_from, ub_user_name_from, ub_user_id, ub_user_name,
+			ub_message,UNIX_TIMESTAMP(ub_date) AS unix_time,ub_type
+			FROM {$dbr->tableName( 'user_board' )}
+			WHERE {$user_sql}
+			ORDER BY ub_id DESC
+			{$limit_sql}";
+		$res = $dbr->query( $sql, __METHOD__ );
 		$messages = array();
-
 		foreach ( $res as $row ) {
 			$parser = new Parser();
 			$message_text = $parser->parse( $row->ub_message, $wgTitle, $wgOut->parserOptions(), true );
@@ -314,7 +305,6 @@ class UserBoard {
 				'type' => $row->ub_type
 			);
 		}
-
 		return $messages;
 	}
 
@@ -322,26 +312,21 @@ class UserBoard {
 		global $wgUser;
 		$dbr = wfGetDB( DB_SLAVE );
 
-		$where = array();
-		$where = " ( (ub_user_id={$user_id} AND ub_user_id_from={$user_id_2}) OR
+		$user_sql = " ( (ub_user_id={$user_id} AND ub_user_id_from={$user_id_2}) OR
 					(ub_user_id={$user_id_2} AND ub_user_id_from={$user_id}) )";
 
 		if ( !( $user_id == $wgUser->getID() || $user_id_2 == $wgUser->getID() ) ) {
-			$where['ub_type'] = 0;
+			$user_sql .= " AND ub_type = 0 ";
 		}
+		$sql = "SELECT count(*) AS the_count
+			FROM {$dbr->tableName( 'user_board' )}
+			WHERE {$user_sql}";
 
-		$res = $dbr->select(
-			'user_board',
-			'COUNT(*) AS the_count',
-			$where,
-			__METHOD__
-		);
-
+		$res = $dbr->query( $sql, __METHOD__ );
 		$row = $dbr->fetchObject( $res );
 		if ( $row ) {
 			$count = $row->the_count;
 		}
-
 		return $count;
 	}
 
@@ -362,17 +347,12 @@ class UserBoard {
 				$delete_link = '';
 
 				if ( $wgUser->getName() != $message['user_name_from'] ) {
-					$board_to_board = '<a href="' . UserBoard::getUserBoardToBoardURL(
-						$message['user_name'],
-						$message['user_name_from']
-					) . '">' . wfMsgHtml( 'userboard_board-to-board' ) . '</a>';
-					$board_link = '<a href="' . UserBoard::getUserBoardURL( $message['user_name_from'] ) . '">' .
-						wfMsgHtml( 'userboard_sendmessage', $message['user_name_from'] ) . '</a>';
+					$board_to_board = '<a href="' . UserBoard::getUserBoardToBoardURL( $message['user_name'], $message['user_name_from'] ) . '">' . wfMsgHtml( 'userboard_board-to-board' ) . '</a>';
+					$board_link = '<a href="' . UserBoard::getUserBoardURL( $message['user_name_from'] ) . '">' . wfMsgHtml( 'userboard_sendmessage', $message['user_name_from'] ) . '</a>';
 				}
 				if ( $wgUser->getName() == $message['user_name'] || $wgUser->isAllowed( 'userboard-delete' ) ) {
 					$delete_link = "<span class=\"user-board-red\">
-							<a href=\"javascript:void(0);\" onclick=\"javascript:delete_message({$message['id']})\">" .
-							wfMsgHtml( 'userboard_delete' ) . '</a>
+							<a href=\"javascript:void(0);\" onclick=\"javascript:delete_message({$message['id']})\">" . wfMsgHtml( 'userboard_delete' ) . '</a>
 						</span>';
 				}
 				if ( $message['type'] == 1 ) {
