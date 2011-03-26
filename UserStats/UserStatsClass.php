@@ -237,31 +237,57 @@ class UserStatsTrack {
 		}
 	}
 
+	/**
+	 * Update the amount of comments the user has submitted.
+	 * Comment count is fetched from the Comments table, which is introduced by
+	 * the extension with the same name.
+	 */
 	function updateCommentCount() {
 		global $wgUser;
 		if ( !$wgUser->isAnon() ) {
 			$dbw = wfGetDB( DB_MASTER );
-			$sql = "UPDATE {$dbw->tableName( 'user_stats' )} SET ";
-			$sql .= 'stats_comment_count=';
-			$sql .= "(SELECT COUNT(*) AS CommentCount FROM {$dbw->tableName( 'Comments' )} WHERE Comment_user_id = " . $this->user_id;
-			$sql .= ")";
-			$sql .= " WHERE stats_user_id = " . $this->user_id;
-			$res = $dbw->query( $sql, __METHOD__ );
+			$comments = $dbw->select(
+				'Comments',
+				'COUNT(*) AS CommentCount',
+				array( 'Comment_user_id' => $this->user_id ),
+				__METHOD__
+			);
+			$res = $dbw->update(
+				'user_stats',
+				array(
+					'stats_comment_count' => $comments->CommentCount
+				),
+				array( 'stats_user_id' => $this->user_id ),
+				__METHOD__
+			);
 
 			$this->clearCache();
 		}
 	}
 
+	/**
+	 * Update the amount of times the user has been added into someone's
+	 * comment ignore list by fetching data from the Comments_block table,
+	 * which is introduced by the Comments extension.
+	 */
 	function updateCommentIgnored() {
 		global $wgUser;
 		if ( !$wgUser->isAnon() ) {
 			$dbw = wfGetDB( DB_MASTER );
-			$sql = "UPDATE {$dbw->tableName( 'user_stats' )} SET ";
-			$sql .= 'stats_comment_blocked=';
-			$sql .= "(SELECT COUNT(*) AS CommentCount FROM {$dbw->tableName( 'Comments_block' )} WHERE cb_user_id_blocked = " . $this->user_id;
-			$sql .= ")";
-			$sql .= " WHERE stats_user_id = " . $this->user_id;
-			$res = $dbw->query( $sql, __METHOD__ );
+			$blockedComments = $dbw->select(
+				'Comments_block',
+				'COUNT(*) AS CommentCount',
+				array( 'cb_user_id_blocked' => $this->user_id ),
+				__METHOD__
+			);
+			$res = $dbw->update(
+				'user_stats',
+				array(
+					'stats_comment_blocked' => $blockedComments->CommentCount
+				),
+				array( 'stats_user_id' => $this->user_id ),
+				__METHOD__
+			);
 
 			$this->clearCache();
 		}
@@ -275,27 +301,46 @@ class UserStatsTrack {
 		global $wgUser;
 		if ( !$wgUser->isAnon() ) {
 			$dbw = wfGetDB( DB_MASTER );
-			$sql = "UPDATE {$dbw->tableName( 'user_stats' )} SET ";
-			$sql .= 'stats_edit_count=';
-			$sql .= "(SELECT count(*) AS EditsCount FROM {$dbr->tableName( 'revision' )} WHERE rev_user = {$this->user_id} ";
-			$sql .=	 ")";
-			$sql .= " WHERE stats_user_id = " . $this->user_id;
-			$res = $dbw->query( $sql, __METHOD__ );
+			$edits = $dbw->select(
+				'revision',
+				'COUNT(*) AS EditsCount',
+				array( 'rev_user' => $this->user_id ),
+				__METHOD__
+			);
+			$res = $dbw->update(
+				'user_stats',
+				array(
+					'stats_edit_count' => $edits->EditsCount
+				),
+				array( 'stats_user_id' => $this->user_id ),
+				__METHOD__
+			);
 
 			$this->clearCache();
 		}
 	}
 
+	/**
+	 * Update the amount of votes for a given user.
+	 * Vote count is fetched from the Vote table, which is introduced
+	 * by a separate extension.
+	 */
 	function updateVoteCount() {
 		global $wgUser;
 		if ( !$wgUser->isAnon() ) {
 			$dbw = wfGetDB( DB_MASTER );
-			$sql = "UPDATE {$dbw->tableName( 'user_stats' )} SET ";
-			$sql .= 'stats_vote_count=';
-			$sql .= "(SELECT count(*) AS VoteCount FROM {$dbw->tableName( 'Vote' )} WHERE vote_user_id = {$this->user_id} ";
-			$sql .= ")";
-			$sql .= " WHERE stats_user_id = " . $this->user_id;
-			$res = $dbw->query( $sql, __METHOD__ );
+			$votes = $dbw->select(
+				'Vote',
+				'COUNT(*) AS VoteCount',
+				array( 'vote_user_id' => $this->user_id ),
+				__METHOD__
+			);
+			$res = $dbw->update(
+				'user_stats',
+				array( 'stats_vote_count' => $votes->VoteCount ),
+				array( 'stats_user_id' => $this->user_id ),
+				__METHOD__
+			);
 
 			$this->clearCache();
 		}
@@ -309,60 +354,120 @@ class UserStatsTrack {
 	 * 							comment scores
 	 */
 	function updateCommentScoreRec( $voteType ) {
-		global $wgUser;
 		if ( $this->user_id != 0 ) {
 			$dbw = wfGetDB( DB_MASTER );
-			$sql = "UPDATE {$dbw->tableName( 'user_stats' )} SET ";
+
 			if ( $voteType == 1 ) {
-				$sql .= 'stats_comment_score_positive_rec=';
+				$columnName = 'stats_comment_score_positive_rec';
 			} else {
-				$sql .= 'stats_comment_score_negative_rec=';
+				$columnName = 'stats_comment_score_negative_rec';
 			}
-			$sql .= "(SELECT COUNT(*) AS CommentVoteCount FROM {$dbw->tableName( 'Comments_Vote' )} WHERE Comment_Vote_ID IN (
-			SELECT CommentID FROM {$dbw->tableName( 'Comments' )} WHERE Comment_user_id = " . $this->user_id . ") AND Comment_Vote_Score=" . $voteType;
-			$sql .= ')';
-			$sql .= ' WHERE stats_user_id = ' . $this->user_id;
-			$res = $dbw->query( $sql, __METHOD__ );
+
+			$commentIDs = $dbw->select(
+				'Comments',
+				'CommentID',
+				array( 'Comment_user_id' => $voteType ),
+				__METHOD__
+			);
+
+			$ids = array();
+			foreach ( $commentIDs as $commentID ) {
+				$ids[] = $commentID;
+			}
+
+			$comments = $dbw->select(
+				'Comments_Vote',
+				'COUNT(*) AS CommentVoteCount',
+				array(
+					'Comment_Vote_ID IN ' . implode( ',', $ids ),
+					'Comment_Vote_Score' => $voteType
+				),
+				__METHOD__
+			);
+
+			$res = $dbw->update(
+				'user_stats',
+				array( $columnName => $comments->CommentVoteCount ),
+				array( 'stats_user_id' => $this->user_id ),
+				__METHOD__
+			);
 
 			$this->clearCache();
 		}
 	}
 
+	/**
+	 * Updates the amount of created opinions by the current user.
+	 * Currently this is ugly, unused and a leftover from ArmchairGM days.
+	 */
 	function updateCreatedOpinionsCount() {
 		global $wgUser, $wgOut;
 		if ( !$wgUser->isAnon() && $this->user_id ) {
 			$ctg = 'Opinions by User ' . ( $this->user_name );
 			$parser = new Parser();
-			$ctgTitle = Title::newFromText( $parser->transformMsg( trim( $ctg ), $wgOut->parserOptions() ) );
+			$ctgTitle = Title::newFromText(
+				$parser->transformMsg( trim( $ctg ), $wgOut->parserOptions() )
+			);
 			$ctgTitle = $ctgTitle->getDBkey();
 			$dbw = wfGetDB( DB_MASTER );
-			$sql = "UPDATE {$dbw->tableName( 'user_stats' )} SET stats_opinions_created=";
-			$sql .= "(SELECT count(*) AS CreatedOpinions FROM {$dbw->tableName( 'page' )}
-						INNER JOIN {$dbw->tableName( 'categorylinks' )} ON page_id = cl_from
-						WHERE (cl_to) = " . $dbw->addQuotes( $ctgTitle ) . ' ';
-			$sql .= ')';
-			$sql .= ' WHERE stats_user_id = ' . $this->user_id;
 
-			$res = $dbw->query( $sql, __METHOD__ );
+			$opinions = $dbw->select(
+				array( 'page', 'categorylinks' ),
+				array( 'COUNT(*) AS CreatedOpinions' ),
+				array( 'cl_to' => $ctgTitle ),
+				__METHOD__,
+				array(),
+				array(
+					'categorylinks' => array( 'INNER JOIN', 'page_id = cl_from' ),
+				)
+			);
+
+			$res = $dbw->update(
+				'user_stats',
+				array( 'stats_opinions_created' => $opinions->CreatedOpinions ),
+				array( 'stats_user_id' => $this->user_id ),
+				__METHOD__
+			);
 
 			$this->clearCache();
 		}
 	}
 
+	/**
+	 * Updates the amount of published opinions by the current user.
+	 * Currently this is ugly, unused and a leftover from ArmchairGM days.
+	 */
 	function updatePublishedOpinionsCount() {
 		global $wgOut;
+
 		$parser = new Parser();
 		$dbw = wfGetDB( DB_MASTER );
 		$ctg = 'Opinions by User ' . ( $this->user_name );
-		$ctgTitle = Title::newFromText( $parser->transformMsg( trim( $ctg ), $wgOut->parserOptions() ) );
+		$ctgTitle = Title::newFromText(
+			$parser->transformMsg( trim( $ctg ), $wgOut->parserOptions() )
+		);
 		$ctgTitle = $ctgTitle->getDBkey();
-		$sql = "UPDATE {$dbw->tableName( 'user_stats' )} SET stats_opinions_published = ";
-		$sql .= "(SELECT count(*) AS PromotedOpinions FROM {$dbw->tableName( 'page' )} INNER JOIN {$dbw->tableName( 'categorylinks' )} ON page_id = cl_from
-			INNER JOIN published_page ON page_id=published_page_id
-			WHERE  (cl_to) = " . $dbw->addQuotes( $ctgTitle ) . ' AND published_type=1';
-		$sql .= ')';
-		$sql .= ' WHERE stats_user_id = ' . $this->user_id;
-		$res = $dbw->query( $sql, __METHOD__ );
+
+		$opinions = $dbw->select(
+			array( 'page', 'categorylinks', 'published_page' ),
+			array( 'COUNT(*) AS PromotedOpinions' ),
+			array( 'cl_to' => $ctgTitle, 'published_type' => 1 ),
+			__METHOD__,
+			array(),
+			array(
+				'categorylinks' => array( 'INNER JOIN', 'page_id = cl_from' ),
+				'published_page' => array(
+					'INNER JOIN', 'page_id = published_page_id'
+				),
+			)
+		);
+
+		$res = $dbw->update(
+			'user_stats',
+			array( 'stats_opinions_published' => $opinions->PromotedOpinions ),
+			array( 'stats_user_id' => $this->user_id ),
+			__METHOD__
+		);
 
 		$this->clearCache();
 	}
@@ -382,60 +487,88 @@ class UserStatsTrack {
 			} else {
 				$col = 'stats_foe_count';
 			}
-			$sql = "UPDATE LOW_PRIORITY {$dbw->tableName( 'user_stats' )} SET {$col}=
-					(SELECT COUNT(*) AS rel_count FROM {$dbw->tableName( 'user_relationship' )} WHERE
-						r_user_id = {$this->user_id} AND r_type={$relType}
-					)
-				WHERE stats_user_id = {$this->user_id}";
-			$res = $dbw->query( $sql, __METHOD__ );
+			$relationships = $dbw->select(
+				'user_relationship',
+				'COUNT(*) AS rel_count',
+				array( 'r_user_id' => $this->user_id, 'r_type' => $relType ),
+				__METHOD__
+			);
+			$res = $dbw->update(
+				'user_stats',
+				array( $col => $relationships->rel_count ),
+				array( 'stats_user_id' => $this->user_id ),
+				__METHOD__,
+				array( 'LOW_PRIORITY' )
+			);
 		}
 	}
 
 	/**
-	 * Updates the amount of received gifts if the user isn't an anon
+	 * Updates the amount of received gifts if the user isn't an anon.
 	 */
 	function updateGiftCountRec() {
 		global $wgUser;
 		if ( !$wgUser->isAnon() ) {
 			$dbw = wfGetDB( DB_MASTER );
-			$sql = "UPDATE LOW_PRIORITY {$dbw->tableName( 'user_stats' )} SET stats_gifts_rec_count=
-					(SELECT COUNT(*) AS gift_count FROM {$dbw->tableName( 'user_gift' )} WHERE
-						ug_user_id_to = {$this->user_id}
-					)
-				WHERE stats_user_id = {$this->user_id}";
-
-			$res = $dbw->query( $sql, __METHOD__ );
+			$gifts = $dbw->select(
+				'user_gift',
+				'COUNT(*) AS gift_count',
+				array( 'ug_user_id_to' => $this->user_id ),
+				__METHOD__
+			);
+			$res = $dbw->update(
+				'user_stats',
+				array( 'stats_gifts_rec_count' => $gifts->gift_count ),
+				array( 'stats_user_id' => $this->user_id ),
+				__METHOD__,
+				array( 'LOW_PRIORITY' )
+			);
 		}
 	}
 
 	/**
-	 * Updates the amount of sent gifts if the user isn't an anon
+	 * Updates the amount of sent gifts if the user isn't an anon.
 	 */
 	function updateGiftCountSent() {
 		global $wgUser;
 		if ( !$wgUser->isAnon() ) {
 			$dbw = wfGetDB( DB_MASTER );
-			$sql = "UPDATE LOW_PRIORITY {$dbw->tableName( 'user_stats' )} SET stats_gifts_sent_count=
-					(SELECT COUNT(*) AS gift_count FROM {$dbw->tableName( 'user_gift' )} WHERE
-						ug_user_id_from = {$this->user_id}
-					)
-				WHERE stats_user_id = {$this->user_id} ";
-
-			$res = $dbw->query( $sql, __METHOD__ );
+			$gifts = $dbw->select(
+				'user_gift',
+				'COUNT(*) AS gift_count',
+				array( 'ug_user_id_from' => $this->user_id ),
+				__METHOD__
+			);
+			$res = $dbw->update(
+				'user_stats',
+				array( 'stats_gifts_sent_count' => $gifts->gift_count ),
+				array( 'stats_user_id' => $this->user_id ),
+				__METHOD__,
+				array( 'LOW_PRIORITY' )
+			);
 		}
 	}
 
+	/**
+	 * Update the amount of users our user has referred to the wiki.
+	 */
 	public function updateReferralComplete() {
 		global $wgUser;
 		if ( !$wgUser->isAnon() ) {
 			$dbw = wfGetDB( DB_MASTER );
-			$sql = "UPDATE LOW_PRIORITY {$dbw->tableName( 'user_stats' )} SET stats_referrals_completed=
-					(SELECT COUNT(*) AS thecount FROM {$dbw->tableName( 'user_register_track' )} WHERE
-						ur_user_id_referral = {$this->user_id}
-					)
-				WHERE stats_user_id = {$this->user_id} ";
-
-			$res = $dbw->query( $sql, __METHOD__ );
+			$referrals = $dbw->select(
+				'user_register_track',
+				'COUNT(*) AS thecount',
+				array( 'ur_user_id_referral' => $this->user_id ),
+				__METHOD__
+			);
+			$res = $dbw->update(
+				'user_stats',
+				array( 'stats_referrals_completed' => $referrals->thecount ),
+				array( 'stats_user_id' => $this->user_id ),
+				__METHOD__,
+				array( 'LOW_PRIORITY' )
+			);
 		}
 	}
 
