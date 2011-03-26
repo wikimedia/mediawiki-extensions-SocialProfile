@@ -81,10 +81,16 @@ class TopUsersPoints extends SpecialPage {
 		// Build nav of stats by category based on MediaWiki:Topfans-by-category
 		$by_category_title = SpecialPage::getTitleFor( 'TopFansByStatistic' );
 
-		$lines = explode( "\n", wfMsgForContent( 'topfans-by-category' ) );
+		$byCategoryMessage = wfMsgForContent( 'topfans-by-category' );
+		$lines = explode( "\n", $byCategoryMessage );
 
-		if ( count( $lines ) > 0 ) {
-			$out .= '<h1 style="margin-top:15px !important;">' . wfMsg( 'top-fans-by-category-nav-header' ) . '</h1>';
+		if (
+			count( $lines ) > 0 &&
+			!wfEmptyMsg( 'topfans-by-category', $byCategoryMessage )
+		)
+		{
+			$out .= '<h1 style="margin-top:15px !important;">' .
+				wfMsg( 'top-fans-by-category-nav-header' ) . '</h1>';
 		}
 
 		foreach ( $lines as $line ) {
