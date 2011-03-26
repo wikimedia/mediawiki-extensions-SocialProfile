@@ -3,12 +3,27 @@
  * Class to access profile data for a user
  */
 class UserProfile {
+	/**
+	 * @var Integer: the current user's user ID. Set in the constructor.
+	 */
 	var $user_id;
+
+	/**
+	 * @var String: the current user's user name. Set in the constructor.
+	 */
 	var $user_name;
+
+	/** unused, remove me? */
 	var $profile;
 
+	/**
+	 * @var Integer: used in getProfileComplete()
+	 */
 	var $profile_fields_count;
 
+	/**
+	 * @var Array: array of valid profile fields; used in getProfileComplete()
+	 */
 	var $profile_fields = array(
 		'real_name',
 		'location_city',
@@ -32,6 +47,10 @@ class UserProfile {
 		'custom_4',
 		'email'
 	);
+
+	/**
+	 * @var Array: unused, remove me?
+	 */
 	var $profile_missing = array();
 
 	/**
@@ -44,6 +63,11 @@ class UserProfile {
 		$this->user_id = User::idFromName( $this->user_name );
 	}
 
+	/**
+	 * Deletes the memcached key for $user_id.
+	 *
+	 * @param $user_id Integer: user ID number
+	 */
 	static function clearCache( $user_id ) {
 		global $wgMemc;
 
@@ -51,6 +75,12 @@ class UserProfile {
 		$wgMemc->delete( $key );
 	}
 
+	/**
+	 * Loads social profile info for the current user.
+	 * First tries fetching the info from memcached and if that fails, queries
+	 * the database.
+	 * Fetched info is cached in memcached.
+	 */
 	public function getProfile() {
 		global $wgMemc;
 
@@ -63,12 +93,12 @@ class UserProfile {
 		} else {
 			wfDebug( "Got user profile info for {$this->user_name} from DB\n" );
 			$dbr = wfGetDB( DB_SLAVE );
-			$params['LIMIT'] = '5';
-			$row = $dbr->selectRow( 'user_profile',
+			$row = $dbr->selectRow(
+				'user_profile',
 				'*',
 				array( 'up_user_id' => $this->user_id ),
 				__METHOD__,
-				$params
+				array( 'LIMIT' => 5 )
 			);
 
 			if ( $row ) {
@@ -116,17 +146,30 @@ class UserProfile {
 		return $profile;
 	}
 
+	/**
+	 * Format the user's birthday.
+	 *
+	 * @param $birthday String: birthday in YYYY-MM-DD format
+	 * @return String: formatted birthday
+	 */
 	function formatBirthday( $birthday ) {
 		$dob = explode( '-', $birthday );
 		if ( count( $dob ) == 3 ) {
 			$month = $dob[1];
 			$day = $dob[2];
-			return date( "F jS", mktime( 0, 0, 0, $month, $day ) );
+			return date( 'F jS', mktime( 0, 0, 0, $month, $day ) );
 			//return $day . ' ' . $wgLang->getMonthNameGen( $month );
 		}
 		return $birthday;
 	}
 
+	/**
+	 * Get the user's birthday year by exploding the given birthday in three
+	 * parts and returning the first one.
+	 *
+	 * @param $birthday String: birthday in YYYY-MM-DD format
+	 * @return String: birthyear or '00'
+	 */
 	function getBirthdayYear( $birthday ) {
 		$dob = explode( '-', $birthday );
 		if ( count( $dob ) == 3 ) {
@@ -135,6 +178,13 @@ class UserProfile {
 		return '00';
 	}
 
+	/**
+	 * How many % of this user's profile is complete?
+	 * Currently unused, I think that this might've been used in some older
+	 * ArmchairGM code, but this looks useful enough to be kept around.
+	 *
+	 * @return Integer
+	 */
 	public function getProfileComplete() {
 		global $wgUser;
 
@@ -149,7 +199,7 @@ class UserProfile {
 			$this->profile_fields_count++;
 		}
 
-		// Check if user has an avatar
+		// Check if the user has a non-default avatar
 		$this->profile_fields_count++;
 		$avatar = new wAvatar( $wgUser->getID(), 'l' );
 		if ( strpos( $avatar->getAvatarImage(), 'default_' ) === false ) {
@@ -162,8 +212,8 @@ class UserProfile {
 	static function getEditProfileNav( $current_nav ) {
 		$lines = explode( "\n", wfMsgForContent( 'update_profile_nav' ) );
 		$output = '<div class="profile-tab-bar">';
-		foreach ( $lines as $line ) {
 
+		foreach ( $lines as $line ) {
 			if ( strpos( $line, '*' ) !== 0 ) {
 				continue;
 			} else {
@@ -176,6 +226,7 @@ class UserProfile {
 				</div>";
 			}
 		}
+
 		$output .= '<div class="cleared"></div></div>';
 
 		return $output;
