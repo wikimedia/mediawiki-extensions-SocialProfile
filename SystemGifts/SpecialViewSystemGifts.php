@@ -1,9 +1,15 @@
 <?php
+/**
+ * A special page to view the list of system gifts (awards) a user has.
+ *
+ * @file
+ * @ingroup Extensions
+ */
 
 class ViewSystemGifts extends SpecialPage {
 
 	/**
-	 * Constructor
+	 * Constructor -- set up the new special page
 	 */
 	public function __construct() {
 		parent::__construct( 'ViewSystemGifts' );
@@ -91,21 +97,26 @@ class ViewSystemGifts extends SpecialPage {
 		if ( $gifts ) {
 			$x = 1;
 			foreach ( $gifts as $gift ) {
-				$gift_image = "<img src=\"{$wgUploadPath}/awards/" . SystemGifts::getGiftImage( $gift['gift_id'], 'ml' ) . "\" border=\"0\" alt=\"\" />";
+				$gift_image = "<img src=\"{$wgUploadPath}/awards/" .
+					SystemGifts::getGiftImage( $gift['gift_id'], 'ml' ) .
+					'" border="0" alt="" />';
 
 				$output .= "<div class=\"ga-item\">
 					{$gift_image}
-					<a href=\"" . $view_system_gift_link->escapeFullURL( 'gift_id=' . $gift['id'] ) . "\">{$gift["gift_name"]}</a>";
+					<a href=\"" .
+						$view_system_gift_link->escapeFullURL( 'gift_id=' . $gift['id'] ) .
+						"\">{$gift['gift_name']}</a>";
 
-					if ( $gift['status'] == 1 ) {
-						if ( $user_name == $wgUser->getName() ) {
-							$rel->clearUserGiftStatus( $gift['id'] );
-							$rel->decNewSystemGiftCount( $wgUser->getID() );
-						}
-						$output .= '<span class="ga-new">' . wfMsg( 'ga-new' ) . '</span>';
+				if ( $gift['status'] == 1 ) {
+					if ( $user_name == $wgUser->getName() ) {
+						$rel->clearUserGiftStatus( $gift['id'] );
+						$rel->decNewSystemGiftCount( $wgUser->getID() );
 					}
+					$output .= '<span class="ga-new">' .
+						wfMsg( 'ga-new' ) . '</span>';
+				}
 
-					$output .= '<div class="cleared"></div>
+				$output .= '<div class="cleared"></div>
 				</div>';
 				if ( $x == count( $gifts ) || $x != 1 && $x % $per_row == 0 ) {
 					$output .= '<div class="cleared"></div>';
@@ -125,7 +136,10 @@ class ViewSystemGifts extends SpecialPage {
 		if ( $numofpages > 1 ) {
 			$output .= '<div class="page-nav">';
 			if ( $page > 1 ) {
-				$output .= '<a href="' . $page_link->escapeFullURL( 'user=' . $user_name . '&rel_type=' . $rel_type . '&page=' . ( $page - 1 ) ) . '">' . wfMsg( 'ga-previous' ) . '</a> ';
+				$output .= '<a href="' . $page_link->escapeFullURL(
+					'user=' . $user_name . '&rel_type=' . $rel_type .
+					'&page=' . ( $page - 1 ) ) . '">' .
+					wfMsg( 'ga-previous' ) . '</a> ';
 			}
 
 			if ( ( $total % $per_page ) != 0 ) {
@@ -142,12 +156,17 @@ class ViewSystemGifts extends SpecialPage {
 				if ( $i == $page ) {
 					$output .= ( $i . ' ' );
 				} else {
-					$output .= '<a href="' . $page_link->escapeFullURL( 'user=' . $user_name . '&rel_type=' . $rel_type . '&page=' . $i ) . "\">$i</a> ";
+					$output .= '<a href="' . $page_link->escapeFullURL(
+						'user=' . $user_name . '&rel_type=' . $rel_type .
+						'&page=' . $i ) . "\">$i</a> ";
 				}
 			}
 
 			if ( ( $total - ( $per_page * $page ) ) > 0 ) {
-				$output .= ' <a href="' . $page_link->escapeFullURL( 'user=' . $user_name . '&rel_type=' . $rel_type . '&page=' . ( $page + 1 ) ) . '">' . wfMsg( 'ga-next' ) . '</a>';
+				$output .= ' <a href="' . $page_link->escapeFullURL(
+					'user=' . $user_name . '&rel_type=' . $rel_type .
+					'&page=' . ( $page + 1 ) ) . '">' . wfMsg( 'ga-next' ) .
+				'</a>';
 			}
 			$output .= '</div>';
 		}

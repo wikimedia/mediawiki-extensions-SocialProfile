@@ -65,6 +65,15 @@ class UserSystemGifts {
 		return $sg_gift_id;
 	}
 
+	/**
+	 * Sends notification e-mail to the user with the ID $user_id_to whenever
+	 * they get a new system gift (award) if their e-mail address is confirmed
+	 * and they have opted in to these notifications on their social
+	 * preferences.
+	 *
+	 * @param $user_id_to Integer: user ID of the recipient
+	 * @param $gift_id Integer: system gift ID number
+	 */
 	public function sendGiftNotificationEmail( $user_id_to, $gift_id ) {
 		$gift = SystemGifts::getGift( $gift_id );
 		$user = User::newFromId( $user_id_to );
@@ -75,8 +84,13 @@ class UserSystemGifts {
 			$subject = wfMsgExt( 'system_gift_received_subject', 'parsemag',
 				$gift['gift_name']
 			);
+			if ( trim( $user->getRealName() ) ) {
+				$name = $user->getRealName();
+			} else {
+				$name = $user->getName();
+			}
 			$body = wfMsgExt( 'system_gift_received_body', 'parsemag',
-				( ( trim( $user->getRealName() ) ) ? $user->getRealName() : $user->getName() ),
+				$name,
 				$gift['gift_name'],
 				$gift['gift_description'],
 				$gifts_link->getFullURL(),
@@ -87,6 +101,14 @@ class UserSystemGifts {
 		}
 	}
 
+	/**
+	 * Checks if the user with the ID $user_id has the system gift with the ID
+	 * $gift_id by querying the user_system_gift table.
+	 *
+	 * @param $user_id Integer: user ID
+	 * @param $gift_id Integer: system gift ID
+	 * @return Boolean: true if the user has the gift, otherwise false
+	 */
 	public function doesUserHaveGift( $user_id, $gift_id ) {
 		$dbr = wfGetDB( DB_SLAVE );
 		$s = $dbr->selectRow(
@@ -305,14 +327,21 @@ class UserSystemGifts {
 		return $new_gift_count;
 	}
 
+	/**
+	 * Get the list of this user's system gifts.
+	 *
+	 * @param $type Unused
+	 * @param $limit Integer: LIMIT for the SQL query
+	 * @param $page Integer: if greater than 0, used to build the OFFSET for
+	 *                       the SQL query
+	 * @return Array: array of system gift information
+	 */
 	public function getUserGiftList( $type, $limit = 0, $page = 0 ) {
 		$dbr = wfGetDB( DB_SLAVE );
 
 		$limitvalue = 0;
-		if ( $limit > 0 ) {
-			if ( $page ) {
-				$limitvalue = $page * $limit - ( $limit );
-			}
+		if ( $limit > 0 && $page ) {
+			$limitvalue = $page * $limit - ( $limit );
 		}
 
 		$res = $dbr->select(

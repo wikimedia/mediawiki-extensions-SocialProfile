@@ -28,6 +28,12 @@ class UserActivity {
 
 	/**
 	 * Constructor
+	 *
+	 * @param $username String: username (usually $wgUser's username)
+	 * @param $filter String: passed to setFilter(); can be either 'user',
+	 *                        'friends', 'foes' or 'all', depending on what
+	 *                        kind of information is wanted
+	 * @param $item_max Integer: maximum amount of items to display in the feed
 	 */
 	public function __construct( $username, $filter, $item_max ) {
 		if ( $username ) {
@@ -64,6 +70,10 @@ class UserActivity {
 		$this->$name = $value;
 	}
 
+	/**
+	 * Get recent edits from the recentchanges table and set them in the
+	 * appropriate class member variables.
+	 */
 	private function setEdits() {
 		$dbr = wfGetDB( DB_SLAVE );
 
@@ -147,6 +157,10 @@ class UserActivity {
 		}
 	}
 
+	/**
+	 * Get recent votes from the Vote table (provided by VoteNY extension) and
+	 * set them in the appropriate class member variables.
+	 */
 	private function setVotes() {
 		$dbr = wfGetDB( DB_SLAVE );
 
@@ -212,6 +226,10 @@ class UserActivity {
 		}
 	}
 
+	/**
+	 * Get recent comments from the Comments table (provided by the Comments
+	 * extension) and set them in the appropriate class member variables.
+	 */
 	private function setComments() {
 		$dbr = wfGetDB( DB_SLAVE );
 
@@ -306,6 +324,10 @@ class UserActivity {
 		}
 	}
 
+	/**
+	 * Get recently sent user-to-user gifts from the user_gift and gift tables
+	 * and set them in the appropriate class member variables.
+	 */
 	private function setGiftsSent() {
 		$dbr = wfGetDB( DB_SLAVE );
 
@@ -366,6 +388,10 @@ class UserActivity {
 		}
 	}
 
+	/**
+	 * Get recently received user-to-user gifts from the user_gift and gift
+	 * tables and set them in the appropriate class member variables.
+	 */
 	private function setGiftsRec() {
 		$dbr = wfGetDB( DB_SLAVE );
 
@@ -452,6 +478,11 @@ class UserActivity {
 		}
 	}
 
+	/**
+	 * Get recently received system gifts (awards) from the user_system_gift
+	 * and system_gift tables and set them in the appropriate class member
+	 * variables.
+	 */
 	private function setSystemGiftsRec() {
 		$dbr = wfGetDB( DB_SLAVE );
 
@@ -532,6 +563,10 @@ class UserActivity {
 		}
 	}
 
+	/**
+	 * Get recent changes in user relationships from the user_relationship
+	 * table and set them in the appropriate class member variables.
+	 */
 	private function setRelationships() {
 		$dbr = wfGetDB( DB_SLAVE );
 
@@ -618,6 +653,10 @@ class UserActivity {
 		}
 	}
 
+	/**
+	 * Get recently sent public user board messages from the user_board table
+	 * and set them in the appropriate class member variables.
+	 */
 	private function setMessagesSent() {
 		$dbr = wfGetDB( DB_SLAVE );
 
@@ -703,6 +742,11 @@ class UserActivity {
 		}
 	}
 
+	/**
+	 * Get recent system messages (i.e. "User Foo advanced to level Bar") from
+	 * the user_system_messages table and set them in the appropriate class
+	 * member variables.
+	 */
 	private function setSystemMessages() {
 		$dbr = wfGetDB( DB_SLAVE );
 
@@ -880,6 +924,10 @@ class UserActivity {
 		return $this->activityLines;
 	}
 
+	/**
+	 * @param $type String: activity type, such as 'friend' or 'foe' or 'edit'
+	 * @param $has_page Boolean: true by default
+	 */
 	function simplifyPageActivity( $type, $has_page = true ) {
 		if ( !isset( $this->items_grouped[$type] ) || !is_array( $this->items_grouped[$type] ) ) {
 			return '';
@@ -1000,6 +1048,13 @@ class UserActivity {
 		}
 	}
 
+	/**
+	 * Get the correct icon for the given activity type.
+	 *
+	 * @param $type String: activity type, such as 'edit' or 'friend' (etc.)
+	 * @return String: image file name (images are located in SocialProfile's
+	 *                 images/ directory)
+	 */
 	static function getTypeIcon( $type ) {
 		switch( $type ) {
 			case 'edit':
@@ -1025,6 +1080,15 @@ class UserActivity {
 		}
 	}
 
+	/**
+	 * "Fixes" a comment (such as a recent changes edit summary) by converting
+	 * certain characters (such as the ampersand) into their encoded
+	 * equivalents and, if necessary, truncates the comment and finally applies
+	 * stripslashes() to the comment.
+	 *
+	 * @param $comment String: comment to "fix"
+	 * @return String: "fixed" comment
+	 */
 	function fixItemComment( $comment ) {
 		if ( !$comment ) {
 			return '';
@@ -1041,11 +1105,20 @@ class UserActivity {
 		return stripslashes( $preview );
 	}
 
+	/**
+	 * Compares the timestamps of two given objects to decide how to sort them.
+	 * Called by getActivityList() and getActivityListGrouped().
+	 *
+	 * @param $x Object
+	 * @param $y Object
+	 * @return Integer: 0 if the timestamps are the same, -1 if $x's timestamp
+	 *                  is greater than $y's, else 1
+	 */
 	private static function sortItems( $x, $y ) {
 		if( $x['timestamp'] == $y['timestamp'] ) {
 			return 0;
 		} elseif ( $x['timestamp'] > $y['timestamp'] ) {
-			return - 1;
+			return -1;
 		} else {
 			return 1;
 		}

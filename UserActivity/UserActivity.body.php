@@ -1,8 +1,16 @@
 <?php
+/**
+ * Special:UserActivity - a special page for showing recent social activity
+ * The class is called "UserHome" because the "UserActivity" class is at
+ * UserActivityClass.php.
+ *
+ * @file
+ * @ingroup Extensions
+ */
 
 class UserHome extends SpecialPage {
 	/**
-	 * Constructor
+	 * Constructor -- set up the new special page
 	 */
 	public function __construct() {
 		parent::__construct( 'UserActivity' );
@@ -32,6 +40,7 @@ class UserHome extends SpecialPage {
 			$item_type = 'all';
 		}
 
+		// If not otherwise specified, display everything but votes in the feed
 		if ( $item_type == 'edits' || $item_type == 'all' ) {
 			$edits = 1;
 		}

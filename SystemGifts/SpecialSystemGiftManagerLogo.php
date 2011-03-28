@@ -1,4 +1,12 @@
 <?php
+/**
+ * A special page to upload images for system gifts (awards).
+ * This is mostly copied from an old version of Special:Upload and changed a
+ * bit.
+ *
+ * @file
+ * @ingroup Extensions
+ */
 
 class SystemGiftManagerLogo extends UnlistedSpecialPage {
 
@@ -11,7 +19,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	var $gift_id;
 
 	/**
-	 * Constructor
+	 * Constructor -- set up the new special page
 	 */
 	public function __construct() {
 		parent::__construct( 'SystemGiftManagerLogo' );
@@ -25,19 +33,19 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	public function execute( $par ) {
 		global $wgRequest, $wgOut, $wgUser;
 
-		# If the user doesn't have the required 'awardsmanage' permission, display an error
+		// If the user doesn't have the required 'awardsmanage' permission, display an error
 		if ( !$wgUser->isAllowed( 'awardsmanage' ) ) {
 			$wgOut->permissionRequired( 'awardsmanage' );
 			return;
 		}
 
-		# Show a message if the database is in read-only mode
+		// Show a message if the database is in read-only mode
 		if ( wfReadOnly() ) {
 			$wgOut->readOnlyPage();
 			return;
 		}
 
-		# If user is blocked, s/he doesn't need to access this page
+		// If user is blocked, s/he doesn't need to access this page
 		if ( $wgUser->isBlocked() ) {
 			$wgOut->blockedPage();
 			return;

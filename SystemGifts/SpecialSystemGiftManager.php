@@ -1,9 +1,16 @@
 <?php
+/**
+ * Special:SystemGiftManager -- a special page to create new system gifts
+ * (awards)
+ *
+ * @file
+ * @ingroup Extensions
+ */
 
 class SystemGiftManager extends SpecialPage {
 
 	/**
-	 * Constructor
+	 * Constructor -- set up the new special page
 	 */
 	public function __construct() {
 		parent::__construct( 'SystemGiftManager'/*class*/, 'awardsmanage'/*restriction*/ );
@@ -19,19 +26,19 @@ class SystemGiftManager extends SpecialPage {
 
 		$wgOut->setPageTitle( wfMsg( 'systemgiftmanager' ) );
 
-		# If the user doesn't have the required 'awardsmanage' permission, display an error
+		// If the user doesn't have the required 'awardsmanage' permission, display an error
 		if ( !$wgUser->isAllowed( 'awardsmanage' ) ) {
 			$wgOut->permissionRequired( 'awardsmanage' );
 			return;
 		}
 
-		# Show a message if the database is in read-only mode
+		// Show a message if the database is in read-only mode
 		if ( wfReadOnly() ) {
 			$wgOut->readOnlyPage();
 			return;
 		}
 
-		# If user is blocked, s/he doesn't need to access this page
+		// If user is blocked, s/he doesn't need to access this page
 		if ( $wgUser->isBlocked() ) {
 			$wgOut->blockedPage();
 			return;
@@ -43,14 +50,18 @@ class SystemGiftManager extends SpecialPage {
 		if ( $wgRequest->wasPosted() ) {
 			$g = new SystemGifts();
 
-			if ( !( $_POST['id'] ) ) {
+			if ( !( $_POST['id'] ) ) { // @todo FIXME/CHECKME: why $_POST? Why not $wgRequest?
+				// Add the new system gift to the database
 				$gift_id = $g->addGift(
 					$wgRequest->getVal( 'gift_name' ),
 					$wgRequest->getVal( 'gift_description' ),
 					$wgRequest->getVal( 'gift_category' ),
 					$wgRequest->getVal( 'gift_threshold' )
 				);
-				$wgOut->addHTML( '<span class="view-status">' . wfMsg( 'ga-created' ) . '</span><br /><br />' );
+				$wgOut->addHTML(
+					'<span class="view-status">' . wfMsg( 'ga-created' ) .
+					'</span><br /><br />'
+				);
 			} else {
 				$gift_id = $wgRequest->getVal( 'id' );
 				$g->updateGift(
@@ -60,7 +71,10 @@ class SystemGiftManager extends SpecialPage {
 					$wgRequest->getVal( 'gift_category' ),
 					$wgRequest->getVal( 'gift_threshold' )
 				);
-				$wgOut->addHTML( '<span class="view-status">' . wfMsg( 'ga-saved' ) . '</span><br /><br />' );
+				$wgOut->addHTML(
+					'<span class="view-status">' . wfMsg( 'ga-saved' ) .
+					'</span><br /><br />'
+				);
 			}
 			$g->update_system_gifts();
 			$wgOut->addHTML( $this->displayForm( $gift_id ) );
@@ -69,7 +83,11 @@ class SystemGiftManager extends SpecialPage {
 			if ( $gift_id || $wgRequest->getVal( 'method' ) == 'edit' ) {
 				$wgOut->addHTML( $this->displayForm( $gift_id ) );
 			} else {
-				$wgOut->addHTML( '<div><b><a href="' . $wgScriptPath . '/index.php?title=Special:SystemGiftManager&amp;method=edit">' . wfMsg( 'ga-addnew' ) . '</a></b></div>' );
+				$wgOut->addHTML(
+					'<div><b><a href="' . $wgScriptPath .
+						'/index.php?title=Special:SystemGiftManager&amp;method=edit">' .
+						wfMsg( 'ga-addnew' ) . '</a></b></div>'
+				);
 				$wgOut->addHTML( $this->displayGiftList() );
 			}
 		}

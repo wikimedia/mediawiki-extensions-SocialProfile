@@ -1,9 +1,15 @@
 <?php
+/**
+ * A special page to view an individual system gift (award).
+ *
+ * @file
+ * @ingroup Extensions
+ */
 
 class ViewSystemGift extends UnlistedSpecialPage {
 
 	/**
-	 * Constructor
+	 * Constructor -- set up the new special page
 	 */
 	public function __construct() {
 		parent::__construct( 'ViewSystemGift' );
@@ -22,6 +28,8 @@ class ViewSystemGift extends UnlistedSpecialPage {
 		$output = ''; // Prevent E_NOTICE
 		$user_name = ''; // Prevent E_NOTICE
 
+		// If gift ID wasn't passed in the URL parameters or if it's not
+		// numeric, display an error message
 		$gift_id = $wgRequest->getVal( 'gift_id' );
 		if ( !$gift_id || !is_numeric( $gift_id ) ) {
 			$wgOut->setPageTitle( wfMsg( 'ga-error-title' ) );
@@ -29,13 +37,13 @@ class ViewSystemGift extends UnlistedSpecialPage {
 			return false;
 		}
 
+		// We assume the current user by default
 		if ( !$user_name ) {
 			$user_name = $wgUser->getName();
 		}
+
 		$gift = UserSystemGifts::getUserGift( $gift_id );
 		$id = User::idFromName( $user_name );
-
-		$user_safe = urlencode( $gift['user_name'] );
 
 		if ( $gift ) {
 			if ( $gift['status'] == 1 ) {
@@ -68,14 +76,17 @@ class ViewSystemGift extends UnlistedSpecialPage {
 
 			$output .= $wgOut->setPageTitle( wfMsg( 'ga-gift-title', $gift['user_name'], $gift['name'] ) );
 
+			$profileURL = Title::makeTitle( NS_USER, $gift['user_name'] )->escapeFullURL();
 			$output .= '<div class="back-links">'
-				. wfMsg( 'ga-back-link', Title::makeTitle( NS_USER, $gift['user_name'] )->escapeFullURL(), $gift['user_name'] ) .
+				. wfMsg( 'ga-back-link', $profileURL, $gift['user_name'] ) .
 			'</div>';
 
 			$message = $wgOut->parse( trim( $gift['description'] ), false );
 			$output .= '<div class="ga-description-container">';
 
-			$gift_image = "<img src=\"{$wgUploadPath}/awards/" . SystemGifts::getGiftImage( $gift['gift_id'], 'l' ) . '" border="0" alt=""/>';
+			$gift_image = "<img src=\"{$wgUploadPath}/awards/" .
+				SystemGifts::getGiftImage( $gift['gift_id'], 'l' ) .
+				'" border="0" alt=""/>';
 
 			$output .= "<div class=\"ga-description\">
 					{$gift_image}

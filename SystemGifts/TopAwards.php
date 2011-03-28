@@ -1,9 +1,16 @@
 <?php
+/**
+ * Special:TopAwards -- a special page to show the awards with the most
+ * recipients (I think)
+ *
+ * @file
+ * @ingroup Extensions
+ */
 
 class TopAwards extends UnlistedSpecialPage {
 
 	/**
-	 * Constructor
+	 * Constructor -- set up the new special page
 	 */
 	public function __construct() {
 		parent::__construct( 'TopAwards' );
@@ -32,7 +39,7 @@ class TopAwards extends UnlistedSpecialPage {
 		);
 
 		// Set title
-		if ( !( $category_number ) or $category_number > 4 ) {
+		if ( !( $category_number ) || $category_number > 4 ) {
 			$category_number = 0;
 			$page_category = $categories[$category_number]['category_name'];
 		} else {
@@ -43,7 +50,10 @@ class TopAwards extends UnlistedSpecialPage {
 		$dbr = wfGetDB( DB_SLAVE );
 		$res = $dbr->select(
 			array( 'user_system_gift', 'system_gift' ),
-			array( 'sg_user_name', 'sg_user_id', 'gift_category', 'MAX(gift_threshold) AS top_gift' ),
+			array(
+				'sg_user_name', 'sg_user_id', 'gift_category',
+				'MAX(gift_threshold) AS top_gift'
+			),
 			array(
 				"gift_category = {$categories[$category_number]['category_id']}",
 				"gift_threshold > {$categories[$category_number]['category_threshold']}"
@@ -62,17 +72,16 @@ class TopAwards extends UnlistedSpecialPage {
 		$output = '<div class="top-awards-navigation">
 			<h1>Award Categories</h1>';
 
-			$nav_x = 0;
+		$nav_x = 0;
 
-			foreach ( $categories as $award_type ) {
-
-				if ( $nav_x == $category_number ) {
-					$output .= "<p><b>{$award_type['category_name']}s</b></p>";
-				} else {
-					$output .= "<p><a href=\"" . $wgScriptPath . "/index.php?title=Special:TopAwards&category={$nav_x}\">{$award_type['category_name']}s</a></p>";
-				}
-				$nav_x++;
+		foreach ( $categories as $award_type ) {
+			if ( $nav_x == $category_number ) {
+				$output .= "<p><b>{$award_type['category_name']}s</b></p>";
+			} else {
+				$output .= "<p><a href=\"" . $wgScriptPath . "/index.php?title=Special:TopAwards&category={$nav_x}\">{$award_type['category_name']}s</a></p>";
 			}
+			$nav_x++;
+		}
 
 		$output .= '</div>';
 		$output .= '<div class="top-awards">';
@@ -82,7 +91,9 @@ class TopAwards extends UnlistedSpecialPage {
 			$user_id = $row->sg_user_id;
 			$avatar = new wAvatar( $user_id, 'm' );
 			$top_gift = $row->top_gift;
-			$gift_name = number_format( $top_gift ) . " {$categories[$category_number][category_name]}" . ( ( $top_gift > 1 ) ? 's' : '' ) . " Milestone";
+			$gift_name = number_format( $top_gift ) .
+				" {$categories[$category_number][category_name]}" .
+				( ( $top_gift > 1 ) ? 's' : '' ) . " Milestone";
 
 			if ( $gift_name !== $gift_name_check ) {
 				$x = 1;
@@ -93,10 +104,14 @@ class TopAwards extends UnlistedSpecialPage {
 				$x++;
 			}
 
+			$userLink = $wgUser->getSkin()->link(
+				Title::makeTitle( NS_USER, $row->sg_user_name ),
+				$user_name
+			);
 			$output .= "<div class=\"top-award\">
 					<span class=\"top-award-number\">{$x}.</span>
 					{$avatar->getAvatarURL()}
-					<a href=\"" . $wgScriptPath . "/index.php?title=User:{$row->sg_user_name}\">{$user_name}</a>
+					{$userLink}
 				</div>";
 
 			$gift_name_check = $gift_name;
