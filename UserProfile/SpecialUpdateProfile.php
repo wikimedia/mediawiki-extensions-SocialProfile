@@ -287,7 +287,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$user = $wgUser;
 		}
 
-		$this->initProfile();
+		$this->initProfile( $user );
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update(
 			'user_profile',
@@ -328,7 +328,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$user = $wgUser;
 		}
 
-		$this->initProfile();
+		$this->initProfile( $user );
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update(
 			'user_profile',
@@ -358,7 +358,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$user = $wgUser;
 		}
 
-		$this->initProfile();
+		$this->initProfile( $user );
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update(
 			'user_profile',
