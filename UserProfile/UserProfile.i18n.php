@@ -1118,6 +1118,7 @@ $messages['be'] = array(
  * @author EugeneZelenko
  * @author Jim-by
  * @author Red Winged Duck
+ * @author Zedlik
  */
 $messages['be-tarask'] = array(
 	'populateuserprofiles' => 'Запаўненьне зьвестак пра ўдзельніка',
@@ -1206,7 +1207,7 @@ $messages['be-tarask'] = array(
 	'user-profile-section-custom' => 'Нестандартная інфармацыя',
 	'user-profile-section-interests' => 'Іншая інфармацыя',
 	'user-profile-section-picture' => 'Аватара',
-	'user-profile-section-preferences' => 'Устаноўкі',
+	'user-profile-section-preferences' => 'Налады',
 	'user-profile-personal-info' => 'Інфармацыя',
 	'user-profile-personal-name' => 'Імя',
 	'user-profile-personal-email' => 'Адрас электроннай пошты',
@@ -1278,7 +1279,7 @@ $messages['be-tarask'] = array(
 * Special:UpdateProfile/personal|Іншыя зьвесткі
 * Special:UpdateProfile/custom|Нестандартная зьвесткі
 * Special:UploadAvatar|Аватара
-* Special:UpdateProfile/preferences|Устаноўкі',
+* Special:UpdateProfile/preferences|Налады',
 	'user-type-toggle-old' => 'Выкарыстоўваць вікі-старонку ўдзельніка',
 	'user-type-toggle-new' => 'Выкарыстоўваць сацыяльную старонку ўдзельніка',
 	'user-board-login-message' => 'Вам неабходна <a href="$1">ўвайсьці ў сыстэму</a>, каб дасылаць паведамленьні іншым удзельнікам',
