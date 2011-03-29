@@ -2,8 +2,10 @@
 /**
  * wAvatar class - used to display avatars
  * Example usage:
+ * @code
  *	$avatar = new wAvatar( $wgUser->getID(), 'l' );
  *	$wgOut->addHTML( $avatar->getAvatarURL() );
+ * @endcode
  * This would display the current user's largest avatar on the page.
  *
  * @file
@@ -19,8 +21,8 @@ class wAvatar {
 	 * @param $userid Integer: user's internal ID number
 	 * @param $size String: 's' for small, 'm' for medium, 'ml' for medium-large and 'l' for large
 	 */
-	function __construct( $userid, $size ) {
-		$this->user_id = $userid;
+	function __construct( $userId, $size ) {
+		$this->user_id = $userId;
 		$this->avatar_size = $size;
 	}
 
