@@ -1,51 +1,20 @@
 <?php
 /**
- * A special page to allow users to update their social profile
+ * A special page to allow privileged users to update others' social profiles
  *
  * @file
  * @ingroup Extensions
- * @author David Pean <david.pean@gmail.com>
- * @copyright Copyright © 2007, Wikia Inc.
+ * @author Frozen Wind <tuxlover684@gmail.com>
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
-class SpecialUpdateProfile extends UnlistedSpecialPage {
+class SpecialEditProfile extends SpecialUpdateProfile {
 
 	/**
 	 * Constructor
 	 */
 	public function __construct() {
-		parent::__construct( 'UpdateProfile' );
-	}
-
-	/**
-	 * Initialize the user_profile records for a given user (either $wgUser
-	 * or someone else; only Special:EditProfile sets the $user parameter).
-	 *
-	 * @param $user Object: User object; null by default (=$wgUser)
-	 */
-	function initProfile( $user = null ) {
-		global $wgUser;
-
-		if ( is_null( $user ) ) {
-			$user = $wgUser;
-		}
-
-		$dbw = wfGetDB( DB_MASTER );
-		$s = $dbw->selectRow(
-			'user_profile',
-			array( 'up_user_id' ),
-			array( 'up_user_id' => $user->getID() ),
-			__METHOD__
-		);
-		if ( $s === false ) {
-			$dbw = wfGetDB( DB_MASTER );
-			$dbw->insert(
-				'user_profile',
-				array( 'up_user_id' => $user->getID() ),
-				__METHOD__
-			);
-		}
+		SpecialPage::__construct( 'EditProfile', 'editothersprofiles' );
 	}
 
 	/**
@@ -53,11 +22,11 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 *
 	 * @param $section Mixed: parameter passed to the page or null
 	 */
-	public function execute( $section ) {
-		global $wgUser, $wgOut, $wgRequest, $wgUserProfileScripts, $wgUpdateProfileInRecentChanges, $wgSupressPageTitle;
+	public function execute( $par ) {
+		global $wgUser, $wgOut, $wgRequest, $wgUserProfileScripts, $wgScriptPath, $wgUpdateProfileInRecentChanges, $wgSupressPageTitle;
 		$wgSupressPageTitle = true;
 
-		$wgOut->setHTMLTitle( wfMsg( 'pagetitle', wfMsg( 'edit-profile-title' ) ) );
+		$wgOut->setHTMLTitle( wfMsg( 'pagetitle', wfMsg( 'edit-profiles-title' ) ) );
 
 		// This feature is only available for logged-in users.
 		if ( !$wgUser->isLoggedIn() ) {
@@ -83,309 +52,111 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			return;
 		}
 
+		// Are we even allowed to do this?
+		if ( !$wgUser->isAllowed( 'editothersprofiles' ) ) {
+			$wgOut->permissionRequired( 'editothersprofiles' );
+			return;
+		}
+
 		// Add CSS & JS
 		$wgOut->addExtensionStyle( $wgUserProfileScripts . '/UserProfile.css' );
 		$wgOut->addScriptFile( $wgUserProfileScripts . '/UpdateProfile.js' );
 
- 		if ( $wgRequest->wasPosted() ) {
-			if ( !$section ) {
-				$section = 'basic';
-			}
-			switch( $section ) {
-				case 'basic':
-					$this->saveProfileBasic();
-					$this->saveSettings_basic();
-					break;
-				case 'personal':
-					$this->saveProfilePersonal();
-					break;
-				case 'custom':
-					$this->saveProfileCustom();
-					break;
-				case 'preferences':
-					$this->saveSettings_pref();
-					break;
-			}
+		// Get the user's name from the wpUser URL parameter
+		$userFromRequest = $wgRequest->getText( 'wpUser' );
 
-			UserProfile::clearCache( $wgUser->getID() );
+		// If the wpUser parameter isn't set but a parameter was passed to the
+		// special page, use the given parameter instead
+		if ( !$userFromRequest && $par ) {
+			$userFromRequest = $par;
+		}
+
+		// Still not set? Just give up and show the "search for a user" form...
+		if ( !$userFromRequest ) {
+			$wgOut->addHTML( $this->createUserInputForm() );
+			return;
+		}
+
+		$target = User::newFromName( $userFromRequest );
+
+		if ( !$target || $target->getID() == 0 ) {
+			$wgOut->addHTML( wfMsg( 'nosuchusershort', htmlspecialchars( $userFromRequest ) ) );
+			$wgOut->addHTML( $this->createUserInputForm() );
+			return;
+		}
+
+ 		if ( $wgRequest->wasPosted() ) {
+			$this->saveProfileBasic( $target );
+			$this->saveSettings_basic( $target );
+			$this->saveProfilePersonal( $target );
+			$this->saveProfileCustom( $target );
+
+			UserProfile::clearCache( $target->getID() );
 
 			$log = new LogPage( wfMsgForContent( 'user-profile-update-profile' ) );
 			if ( !$wgUpdateProfileInRecentChanges ) {
 				$log->updateRecentChanges = false;
 			}
 			$log->addEntry(
-				wfMsgForContent( 'user-profile-update-profile' ),
-				$wgUser->getUserPage(),
-				wfMsgForContent( 'user-profile-update-log-section' ) .
-					" '{$section}'"
+				wfMsgForContent( 'user-profile-edit-profile',
+					array( '[[User:' . $target->getName() . ']]' ) ),
+				$target->getUserPage(),
+				''
 			);
 			$wgOut->addHTML(
 				'<span class="profile-on">' .
-				wfMsg( 'user-profile-update-saved' ) .
+				wfMsg( 'user-profile-edit-profile-update-saved' ) .
 				'</span><br /><br />'
 			);
 
 			// create the user page if it doesn't exist yet
-			$title = Title::makeTitle( NS_USER, $wgUser->getName() );
+			$title = Title::makeTitle( NS_USER, $target->getName() );
 			$article = new Article( $title );
 			if ( !$article->exists() ) {
 				$article->doEdit( '', 'create user page', EDIT_SUPPRESS_RC );
 			}
 		}
 
-		if ( !$section ) {
-			$section = 'basic';
-		}
-		switch( $section ) {
-			case 'basic':
-				$wgOut->addHTML( $this->displayBasicForm( $wgUser ) );
-				break;
-			case 'personal':
-				$wgOut->addHTML( $this->displayPersonalForm( $wgUser ) );
-				break;
-			case 'custom':
-				$wgOut->addHTML( $this->displayCustomForm( $wgUser ) );
-				break;
-			case 'preferences':
-				$wgOut->addHTML( $this->displayPreferencesForm() );
-				break;
-		}
+		$wgOut->addHTML( $this->displayBasicForm( $target ) );
+		$wgOut->addHTML( $this->displayPersonalForm( $target ) );
+		$wgOut->addHTML( $this->displayCustomForm( $target ) );
 	}
 
-	/**
-	 * Save basic settings about the user (real name, e-mail address) into the
-	 * database.
-	 *
-	 * @param $user Object: this parameter is unused but required to stop
-	 *                      E_STRICT bitching because Special:EditProfile
-	 *                      extends this class to reduce the amount of code
-	 *                      duplication
-	 */
-	function saveSettings_basic( $user ) {
+	function createUserInputForm() {
+		$actionUrl = $this->getTitle()->getLocalURL( '' );
+		$form = Xml::openElement( 'fieldset' ) .
+				Xml::openElement( 'form',
+				array(
+					'id' => 'mw-socialprofile-edit-profile-userform',
+					'method' => 'get',
+					'action' => $actionUrl
+				)
+			) . Xml::label( wfMsg( 'username' ), 'mw-socialprofile-user' ) .
+			Xml::input( 'wpUser', 60, '', array(
+				'tabindex' => '1',
+				'id' => 'mw-socialprofile-user',
+				'maxlength' => '200'
+			) ) .
+			Xml::submitButton( wfMsg( 'edit' ), array( 'id' => 'mw-namespaces-submit' ) ) .
+			Xml::closeElement( 'table' ) . Xml::closeElement( 'form' ) .
+			Xml::closeElement( 'fieldset' );
+		return $form;
+	}
+
+	function saveSettings_basic( $tar ) {
 		global $wgUser, $wgRequest, $wgEmailAuthentication;
 
-		$wgUser->setRealName( $wgRequest->getVal( 'real_name' ) );
-		$wgUser->setEmail( $wgRequest->getVal( 'email' ) );
+		$tar->setRealName( $wgRequest->getVal( 'real_name' ) );
+		$tar->setEmail( $wgRequest->getVal( 'email' ) );
 
-		if ( $wgUser->getEmail() != $wgRequest->getVal( 'email' ) ) {
+		if ( $tar->getEmail() != $wgRequest->getVal( 'email' ) ) {
 			$wgUser->mEmailAuthenticated = null; # but flag as "dirty" = unauthenticated
 		}
 
-		if ( $wgEmailAuthentication && !$wgUser->isEmailConfirmed() ) {
-			# Mail a temporary password to the dirty address.
-			# User can come back through the confirmation URL to re-enable email.
-			$result = $wgUser->sendConfirmationMail();
-			if ( WikiError::isError( $result ) ) {
-				$error = wfMsg( 'mailerror', htmlspecialchars( $result->getMessage() ) );
-			} else {
-				$error = wfMsg( 'eauthentsent', $wgUser->getName() );
-			}
-		}
-		$wgUser->saveSettings();
+		$tar->saveSettings();
 	}
 
-	/**
-	 * Save social preferences into the database.
-	 */
-	function saveSettings_pref() {
-		global $wgUser, $wgOut, $wgRequest, $wgSitename;
-
-		$notify_friend = $wgRequest->getVal( 'notify_friend' );
-		$notify_gift = $wgRequest->getVal( 'notify_gift' );
-		$notify_challenge = $wgRequest->getVal( 'notify_challenge' );
-		$notify_honorifics = $wgRequest->getVal( 'notify_honorifics' );
-		$notify_message = $wgRequest->getVal( 'notify_message' );
-		if ( $notify_friend == '' ) {
-			$notify_friend = 0;
-		}
-		if ( $notify_gift == '' ) {
-			$notify_gift = 0;
-		}
-		if ( $notify_challenge == '' ) {
-			$notify_challenge = 0;
-		}
-		if ( $notify_honorifics == '' ) {
-			$notify_honorifics = 0;
-		}
-		if ( $notify_message == '' ) {
-			$notify_message = 0;
-		}
-		$wgUser->setOption( 'notifygift', $notify_gift );
-		$wgUser->setOption( 'notifyfriendrequest', $notify_friend );
-		$wgUser->setOption( 'notifychallenge', $notify_challenge );
-		$wgUser->setOption( 'notifyhonorifics', $notify_honorifics );
-		$wgUser->setOption( 'notifymessage', $notify_message );
-		$wgUser->saveSettings();
-		// This code is mostly related to ArmchairGM, however can be fixed to be used for others.
-		if ( $wgSitename == 'ArmchairGM' ) {
-			$dbw = wfGetDB( DB_MASTER );
-			// If the user wants a weekly email, we'll put some info about that to the user_mailing_list table
-			if ( $wgRequest->getVal( 'weeklyemail' ) == 1 ) {
-				$s = $dbw->selectRow(
-					'user_mailing_list',
-					array( 'um_user_id' ),
-					array( 'um_user_id' => $wgUser->getID() ),
-					__METHOD__
-				);
-				if ( $s === false ) {
-					$dbw->insert(
-						'user_mailing_list',
-						array(
-							'um_user_id' => $wgUser->getID(),
-							'um_user_name' => $wgUser->getName(),
-						),
-						__METHOD__
-					);
-				}
-			} else {
-				// Otherwise, just delete the entry.
-				$dbw->delete(
-					'user_mailing_list',
-					array( 'um_user_id' => $wgUser->getID() ),
-					__METHOD__
-				);
-			}
-		}
-	}
-
-	function formatBirthdayDB( $birthday ) {
-		$dob = explode( '/', $birthday );
-		if ( count( $dob ) == 2 ) {
-			$year = 2007;
-			$month = $dob[0];
-			$day = $dob[1];
-			$birthday_date = $year . '-' . $month . '-' . $day;
-		} else {
-			$birthday_date = '';
-		}
-		return ( $birthday_date );
-	}
-
-	function formatBirthday( $birthday ) {
-		$dob = explode( '-', $birthday );
-		if ( count( $dob ) == 3 ) {
-			$year = 0000;
-			$month = $dob[1];
-			$day = $dob[2];
-			$birthday_date = $month . '/' . $day; // . '/' . $year;
-		} else {
-			$birthday_date = '';
-		}
-		return $birthday_date;
-	}
-
-	/**
-	 * Save the basic user profile info fields into the database.
-	 * The $user parameter is only passed by Special:EditProfile.
-	 *
-	 * @param $user Object: User object, null by default (=$wgUser)
-	 */
-	function saveProfileBasic( $user = null ) {
-		global $wgUser, $wgMemc, $wgRequest, $wgSitename;
-
-		if ( is_null( $user ) ) {
-			$user = $wgUser;
-		}
-
-		$this->initProfile();
-		$dbw = wfGetDB( DB_MASTER );
-		$dbw->update(
-			'user_profile',
-		/* SET */array(
-				'up_location_city' => $wgRequest->getVal( 'location_city' ),
-				'up_location_state' => $wgRequest->getVal( 'location_state' ),
-				'up_location_country' => $wgRequest->getVal( 'location_country' ),
-
-				'up_hometown_city' => $wgRequest->getVal( 'hometown_city' ),
-				'up_hometown_state' => $wgRequest->getVal( 'hometown_state' ),
-				'up_hometown_country' => $wgRequest->getVal( 'hometown_country' ),
-
-				'up_birthday' => $this->formatBirthdayDB( $wgRequest->getVal( 'birthday' ) ),
-				'up_about' => $wgRequest->getVal( 'about' ),
-				'up_occupation' => $wgRequest->getVal( 'occupation' ),
-				'up_schools' => $wgRequest->getVal( 'schools' ),
-				'up_places_lived' => $wgRequest->getVal( 'places' ),
-				'up_websites' => $wgRequest->getVal( 'websites' ),
-				'up_relationship' => $wgRequest->getVal( 'relationship' )
-			),
-			/* WHERE */array( 'up_user_id' => $user->getID() ),
-			__METHOD__
-		);
-		$wgMemc->delete( wfMemcKey( 'user', 'profile', 'info', $user->getID() ) );
-	}
-
-	/**
-	 * Save the four custom (site-specific) user profile fields into the
-	 * database.
-	 * The $user parameter is only passed by Special:EditProfile.
-	 *
-	 * @param $user Object: User object, null by default (=$wgUser)
-	 */
-	function saveProfileCustom( $user = null ) {
-		global $wgUser, $wgMemc, $wgRequest;
-
-		if ( is_null( $user ) ) {
-			$user = $wgUser;
-		}
-
-		$this->initProfile();
-		$dbw = wfGetDB( DB_MASTER );
-		$dbw->update(
-			'user_profile',
-			/* SET */array(
-				'up_custom_1' => $wgRequest->getVal( 'custom1' ),
-				'up_custom_2' => $wgRequest->getVal( 'custom2' ),
-				'up_custom_3' => $wgRequest->getVal( 'custom3' ),
-				'up_custom_4' => $wgRequest->getVal( 'custom4' )
-			),
-			/* WHERE */array( 'up_user_id' => $user->getID() ),
-			__METHOD__
-		);
-		$wgMemc->delete( wfMemcKey( 'user', 'profile', 'info', $user->getID() ) );
-	}
-
-	/**
-	 * Save the user's personal info (interests, such as favorite music or
-	 * TV programs or video games, etc.) into the database.
-	 * The $user parameter is only passed by Special:EditProfile.
-	 *
-	 * @param $user Object: User object, null by default (=$wgUser)
-	 */
-	function saveProfilePersonal( $user = null ) {
-		global $wgUser, $wgMemc, $wgRequest;
-
-		if ( is_null( $user ) ) {
-			$user = $wgUser;
-		}
-
-		$this->initProfile();
-		$dbw = wfGetDB( DB_MASTER );
-		$dbw->update(
-			'user_profile',
-			/* SET */array(
-				'up_companies' => $wgRequest->getVal( 'companies' ),
-				'up_movies' => $wgRequest->getVal( 'movies' ),
-				'up_music' => $wgRequest->getVal( 'music' ),
-				'up_tv' => $wgRequest->getVal( 'tv' ),
-				'up_books' => $wgRequest->getVal( 'books' ),
-				'up_magazines' => $wgRequest->getVal( 'magazines' ),
-				'up_video_games' => $wgRequest->getVal( 'videogames' ),
-				'up_snacks' => $wgRequest->getVal( 'snacks' ),
-				'up_drinks' => $wgRequest->getVal( 'drinks' )
-			),
-			/* WHERE */array( 'up_user_id' => $user->getID() ),
-			__METHOD__
-		);
-		$wgMemc->delete( wfMemcKey( 'user', 'profile', 'info', $user->getID() ) );
-	}
-
-	/**
-	 * @param $user Object: this parameter is unused but required to stop
-	 *                      E_STRICT bitching because Special:EditProfile
-	 *                      extends this class to reduce the amount of code
-	 *                      duplication
-	 */
-	function displayBasicForm( $user ) {
+	function displayBasicForm( $tar ) {
 		global $wgRequest, $wgUser, $wgOut;
 
 		$dbr = wfGetDB( DB_MASTER );
@@ -396,7 +167,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 				'up_birthday', 'up_occupation', 'up_about', 'up_schools',
 				'up_places_lived', 'up_websites'
 			),
-			array( 'up_user_id' => $wgUser->getID() ),
+			array( 'up_user_id' => $tar->getID() ),
 			__METHOD__
 		);
 
@@ -425,7 +196,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$s = $dbr->selectRow(
 			'user',
 			array( 'user_real_name', 'user_email', 'user_email_authenticated' ),
-			array( 'user_id' => $wgUser->getID() ),
+			array( 'user_id' => $tar->getID() ),
 			__METHOD__
 		);
 
@@ -440,8 +211,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		array_shift( $countries );
 
 		$wgOut->setPageTitle( wfMsg( 'edit-profile-title' ) );
-		$form = UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-personal' ) );
-		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">';
+		//$form = UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-personal' ) );
+		$form = '<form action="" method="post" enctype="multipart/form-data" name="profile">';
 		$form .= '<div class="profile-info clearfix">';
 		$form .= '<div class="profile-update">
 			<p class="profile-update-title">' . wfMsg( 'user-profile-personal-info' ) . '</p>
@@ -450,7 +221,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			<div class="cleared"></div>
 			<p class="profile-update-unit-left">' . wfMsg( 'user-profile-personal-email' ) . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="email" id="email" value="' . $email . '"/>';
-		if ( !$wgUser->mEmailAuthenticated ) {
+		if ( !$tar->mEmailAuthenticated ) {
 			$confirm = SpecialPage::getTitleFor( 'Confirmemail' );
 			$form .= " <a href=\"{$confirm->getFullURL()}\">" . wfMsg( 'user-profile-personal-confirmemail' ) . '</a>';
 		}
@@ -571,21 +342,12 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		</div>
 		<div class="cleared"></div>';
 
-		$form .= '
-			<input type="button" class="site-button" value="' . wfMsg( 'user-profile-update-button' ) . '" size="20" onclick="document.profile.submit()" />
-			</div>
-		</form>';
+		$form .= '</div>';
 
 		return $form;
 	}
 
-	/**
-	 * @param $user Object: this parameter is unused but required to stop
-	 *                      E_STRICT bitching because Special:EditProfile
-	 *                      extends this class to reduce the amount of code
-	 *                      duplication
-	 */
-	function displayPersonalForm( $user ) {
+	function displayPersonalForm( $tar ) {
 		global $wgRequest, $wgUser, $wgOut;
 
 		$dbr = wfGetDB( DB_MASTER );
@@ -596,7 +358,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 				'up_tv', 'up_music', 'up_books', 'up_video_games',
 				'up_magazines', 'up_snacks', 'up_drinks'
 			),
-			array( 'up_user_id' => $wgUser->getID() ),
+			array( 'up_user_id' => $tar->getID() ),
 			__METHOD__
 		);
 
@@ -617,9 +379,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		}
 
 		$wgOut->setPageTitle( wfMsg( 'user-profile-section-interests' ) );
-		$form = UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-interests' ) );
-		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">
-			<div class="profile-info clearfix">
+		//$form = UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-interests' ) );
+		$form = '<div class="profile-info clearfix">
 			<div class="profile-update">
 			<p class="profile-update-title">' . wfMsg( 'user-profile-interests-entertainment' ) . '</p>
 			<p class="profile-update-unit-left">' . wfMsg( 'user-profile-interests-movies' ) . '</p>
@@ -666,66 +427,16 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			</p>
 			<div class="cleared"></div>
 			</div>
-			<input type="button" class="site-button" value="' . wfMsg( 'user-profile-update-button' ) . '" size="20" onclick="document.profile.submit()" />
-			</div>
-		</form>';
+			</div>';
 
 		return $form;
 	}
 
 	/**
-	 * Displays the form for toggling notifications related to social tools
-	 * (e-mail me when someone friends/foes me, send me a gift, etc.)
-	 *
-	 * @return HTML
-	 */
-	function displayPreferencesForm() {
-		global $wgUser, $wgOut;
-
-		// @todo If the checkboxes are in front of the option, this would look more like Special:Preferences
-		$wgOut->setPageTitle( wfMsg( 'user-profile-section-preferences' ) );
-		$form = UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-preferences' ) );
-		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">';
-		$form .= '<div class="profile-info clearfix">
-			<div class="profile-update">
-				<p class="profile-update-title">' . wfMsg( 'user-profile-preferences-emails' ) . '</p>
-				<p class="profile-update-row">'
-					. wfMsg( 'user-profile-preferences-emails-personalmessage' ) .
-					' <input type="checkbox" size="25" name="notify_message" id="notify_message" value="1"' . ( ( $wgUser->getIntOption( 'notifymessage', 1 ) == 1 ) ? 'checked' : '' ) . '/>
-				</p>
-				<p class="profile-update-row">'
-					. wfMsg( 'user-profile-preferences-emails-friendfoe' ) .
-					' <input type="checkbox" size="25" class="createbox" name="notify_friend" id="notify_friend" value="1" ' . ( ( $wgUser->getIntOption( 'notifyfriendrequest', 1 ) == 1 ) ? 'checked' : '' ) . '/>
-				</p>
-				<p class="profile-update-row">'
-					. wfMsg( 'user-profile-preferences-emails-gift' ) .
-					' <input type="checkbox" size="25" name="notify_gift" id="notify_gift" value="1" ' . ( ( $wgUser->getIntOption( 'notifygift', 1 ) == 1 ) ? 'checked' : '' ) . '/>
-				</p>
-
-				<p class="profile-update-row">'
-					. wfMsg( 'user-profile-preferences-emails-level' ) .
-					' <input type="checkbox" size="25" name="notify_honorifics" id="notify_honorifics" value="1"' . ( ( $wgUser->getIntOption( 'notifyhonorifics', 1 ) == 1 ) ? 'checked' : '' ) . '/>
-				</p>';
-
-		$form .= '</div>
-			<div class="cleared"></div>';
-		$form .= '<input type="button" class="site-button" value="' . wfMsg( 'user-profile-update-button' ) . '" size="20" onclick="document.profile.submit()" />
-			</form>';
-		$form .= '</div>';
-
-		return $form;
-	}
-
-	/**
-	 * Displays the form for editing custom (site-specific) information.
-	 *
-	 * @param $user Object: this parameter is unused but required to stop
-	 *                      E_STRICT bitching because Special:EditProfile
-	 *                      extends this class to reduce the amount of code
-	 *                      duplication
+	 * Displays the form for editing custom (site-specific) information
 	 * @return $form Mixed: HTML output
 	 */
-	function displayCustomForm( $user ) {
+	function displayCustomForm( $tar ) {
 		global $wgRequest, $wgUser, $wgOut;
 
 		$dbr = wfGetDB( DB_MASTER );
@@ -735,7 +446,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 				'up_custom_1', 'up_custom_2', 'up_custom_3', 'up_custom_4',
 				'up_custom_5'
 			),
-			array( 'up_user_id' => $wgUser->getID() ),
+			array( 'up_user_id' => $tar->getID() ),
 			__METHOD__
 		);
 
@@ -748,9 +459,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		$wgOut->setHTMLTitle( wfMsg( 'pagetitle', wfMsg( 'user-profile-tidbits-title' ) ) );
 		$form = '<h1>' . wfMsg( 'user-profile-tidbits-title' ) . '</h1>';
-		$form .= UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-custom' ) );
-		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">
-		 	<div class="profile-info clearfix">
+		//$form = UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-custom' ) );
+		$form = '<div class="profile-info clearfix">
 				<div class="profile-update">
 					<p class="profile-update-title">' . wfMsgForContent( 'user-profile-tidbits-title' ) . '</p>
 					<div id="profile-update-custom1">
@@ -782,9 +492,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 					</div>
 					<div class="cleared"></div>
 				</div>
-			<input type="button" class="site-button" value="' . wfMsg( 'user-profile-update-button' ) . '" size="20" onclick="document.profile.submit()" />
-			</div>
-		</form>';
+			<input type="submit" value="' . wfMsg( 'user-profile-update-button' ) . '" />
+			</form></div>';
 
 		return $form;
 	}

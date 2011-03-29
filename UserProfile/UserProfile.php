@@ -23,7 +23,9 @@ $wgUpdateProfileInRecentChanges = false; // Show a log entry in recent changes w
 $wgUploadAvatarInRecentChanges = false; // Same as above, but for avatar uploading
 
 $wgAvailableRights[] = 'avatarremove';
+$wgAvailableRights[] = 'editothersprofiles';
 $wgGroupPermissions['sysop']['avatarremove'] = true;
+$wgGroupPermissions['staff']['editothersprofiles'] = true;
 
 # Add new log types for profile edits and avatar uploads
 global $wgLogTypes, $wgLogNames, $wgLogHeaders, $wgLogActions;

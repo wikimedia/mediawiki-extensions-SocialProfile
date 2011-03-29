@@ -13,6 +13,7 @@ $messages = array();
  * @author David Pean
  */
 $messages['en'] = array(
+	'editprofile' => "Edit other users' profiles",
 	'populateuserprofiles' => 'Populate user profiles',
 	'user-time-ago' => '$1 ago',
 	'user-awards-title' => 'Awards',
@@ -90,6 +91,7 @@ $messages['en'] = array(
 	'user-profile-update-notloggedin-text' => 'You cannot edit your profile without being logged in.
 Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.',
 	'user-profile-update-saved' => 'Your profile has been saved',
+	'user-profile-edit-profile-update-saved' => 'The user\'s profile was successfully saved',
 	'user-profile-update-log-section' => 'changed section',
 	'user-profile-update-profile' => 'profile',
 	'user-profile-default-country' => 'United States',
@@ -164,6 +166,7 @@ Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.
 	'user-profile-userlevels-link' => 'User levels',
 	'user-no-images' => 'No images uploaded',
 	'edit-profile-title' => 'Edit your profile',
+	'edit-profiles-title' => 'Edit profiles',
 	'user-page-link' => 'User page',
 	'user-social-profile-link' => 'Social profile',
 	'user-wiki-link' => 'Wiki userpage',
@@ -186,6 +189,7 @@ Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.
 	'profilelogpage' => 'User profile edit log',
 	'profilelogpagetext' => 'This is a log of user profile edits',
 	'profilelogentry' => '', # For compatibility, don't translate this,
+	'user-profile-edit-profile' => "edited $1's profile",
 	'avatarlogpage' => 'Avatar upload log',
 	'avatarlogpagetext' => 'This is a log of user avatar uploads',
 	'avatarlogentry' => '', # For compatibility, don't translate this
@@ -429,6 +433,7 @@ Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.
 *Zimbabwe',
 	// For Special:ListGroupRights
 	'right-avatarremove' => "Remove user's avatars",
+	'right-editothersprofiles' => "Update other users' social profiles",
 );
 
 /** Message documentation (Message documentation)
