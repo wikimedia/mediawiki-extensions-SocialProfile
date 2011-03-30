@@ -1311,7 +1311,7 @@ $messages['be-tarask'] = array(
  */
 $messages['bg'] = array(
 	'populateuserprofiles' => 'Създаване на потребителските профили',
-	'user-time-ago' => 'преди',
+	'user-time-ago' => 'преди $1',
 	'user-awards-title' => 'Награди',
 	'user-gifts-title' => 'Подаръци',
 	'user-count-separator' => '$1 от $2',
@@ -4048,6 +4048,7 @@ $messages['ga'] = array(
  * @author Toliño
  */
 $messages['gl'] = array(
+	'editprofile' => 'Editar os perfís doutros usuarios',
 	'populateuserprofiles' => 'Perfís de usuario populares',
 	'user-time-ago' => 'hai $1',
 	'user-awards-title' => 'Premios',
@@ -4124,6 +4125,7 @@ $messages['gl'] = array(
 	'user-profile-update-notloggedin-title' => 'Non pode editar o seu perfil sen ter accedido ao sistema',
 	'user-profile-update-notloggedin-text' => 'Non pode editar o seu perfil sen ter accedido ao sistema.  Faga clic <a href="$1">aquí</a> para acceder ou faga clic <a href="$2">aquí</a> para rexistrarse.',
 	'user-profile-update-saved' => 'Gardouse o seu perfil',
+	'user-profile-edit-profile-update-saved' => 'O perfil do usuario gardouse correctamente',
 	'user-profile-update-log-section' => 'cambiou a sección',
 	'user-profile-update-profile' => 'perfil',
 	'user-profile-default-country' => 'Estados Unidos',
@@ -4198,6 +4200,7 @@ $messages['gl'] = array(
 	'user-profile-userlevels-link' => 'Niveis de usuario',
 	'user-no-images' => 'Ningunha imaxe foi cargada',
 	'edit-profile-title' => 'Editar o seu perfil',
+	'edit-profiles-title' => 'Editar os perfís',
 	'user-page-link' => 'Páxina de usuario',
 	'user-social-profile-link' => 'Perfil social',
 	'user-wiki-link' => 'Páxina de usuario do wiki',
@@ -4219,12 +4222,14 @@ $messages['gl'] = array(
 	'avatarupload-removeanother' => 'Eliminar outro',
 	'profilelogpage' => 'Rexistro de edicións do perfil de usuario',
 	'profilelogpagetext' => 'Este é un rexistro de edicións do perfil de usuario',
+	'user-profile-edit-profile' => 'editou o perfil de $1',
 	'avatarlogpage' => 'Rexistro de carga de avatares',
 	'avatarlogpagetext' => 'Este é un rexistro de cargas de avatares de usuario',
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'cargou un novo avatar',
 	'user-profile-picture-log-delete-entry' => 'borrou o avatar de $1',
 	'right-avatarremove' => 'Eliminar os avatares dun usuario',
+	'right-editothersprofiles' => 'Actualizar os perfís sociais doutros usuarios',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)
