@@ -3,25 +3,28 @@
  * UserSystemMessage class
  * Used to send "You have advanced to level [fill in this]" messages
  * to users when User Levels is activated ($wgUserLevels is defined)
+ *
+ * @file
+ * @ingroup Extensions
  */
 class UserSystemMessage {
 
 	/**
 	 * Adds the message into the database
 	 *
-	 * @param $user_name Mixed: the name of the user who's receiving the message
+	 * @param $userName Mixed: the name of the user who's receiving the message
 	 * @param $type Integer: 0 by default
 	 * @param $message Mixed: message to be sent out
 	 */
-	public function addMessage( $user_name, $type, $message ) {
-		$user_id = User::idFromName( $user_name );
+	public function addMessage( $userName, $type, $message ) {
+		$userId = User::idFromName( $userName );
 		$dbw = wfGetDB( DB_MASTER );
 
 		$dbw->insert(
 			'user_system_messages',
 			array(
-				'um_user_id' => $user_id,
-				'um_user_name' => $user_name,
+				'um_user_id' => $userId,
+				'um_user_name' => $userName,
 				'um_type' => $type,
 				'um_message' => $message,
 				'um_date' => date( 'Y-m-d H:i:s' ),
@@ -36,7 +39,11 @@ class UserSystemMessage {
 	 */
 	static function deleteMessage( $um_id ) {
 		$dbw = wfGetDB( DB_MASTER );
-		$dbw->delete( 'user_system_messages', array( 'um_id' => $um_id ), __METHOD__ );
+		$dbw->delete(
+			'user_system_messages',
+			array( 'um_id' => $um_id ),
+			__METHOD__
+		);
 		$dbw->commit();
 	}
 
@@ -88,27 +95,31 @@ class UserSystemMessage {
 				'gift_given_count' => $row->gift_given_count
 			);
 		}
+
 		return $requests;
 	}
 
 	/**
 	 * Sends out the "you have advanced to level [fill in this]" messages to the users
 	 *
-	 * @param $user_id_to Integer: user ID of the receiver
+	 * @param $userIdTo Integer: user ID of the receiver
 	 * @param $level Mixed: name of the level that the user advanced to
 	 */
-	public function sendAdvancementNotificationEmail( $user_id_to, $level ) {
-		$user = User::newFromId( $user_id_to );
+	public function sendAdvancementNotificationEmail( $userIdTo, $level ) {
+		$user = User::newFromId( $userIdTo );
 		$user->loadFromDatabase();
 		if ( $user->isEmailConfirmed() && $user->getIntOption( 'notifyhonorifics', 1 ) ) {
-			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
-			$subject = wfMsgExt( 'level-advance-subject', 'parsemag',
-				$level
-			);
+			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
+			$subject = wfMsgExt( 'level-advance-subject', 'parsemag', $level );
+			if ( trim( $user->getRealName() ) ) {
+				$name = $user->getRealName();
+			} else {
+				$name = $user->getName();
+			}
 			$body = wfMsgExt( 'level-advance-body', 'parsemag',
-				( ( trim( $user->getRealName() ) ) ? $user->getRealName() : $user->getName() ),
+				$name,
 				$level,
-				$update_profile_link->getFullURL()
+				$updateProfileLink->getFullURL()
 			);
 			$user->sendMail( $subject, $body );
 		}
