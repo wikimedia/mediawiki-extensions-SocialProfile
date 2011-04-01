@@ -19,8 +19,20 @@ class UserRelationship {
 		$this->user_id = User::idFromName( $this->user_name );
 	}
 
-	public function addRelationshipRequest( $user_to, $type, $message, $email = true ) {
-		$user_id_to = User::idFromName( $user_to );
+	/**
+	 * Add a relationship request to the database.
+	 *
+	 * @param $user_to String: user name of the recipient of the relationship
+	 *                         request
+	 * @param $type Integer: 1 for friend request, 2 (or anything else than 1)
+	 *                       for foe request
+	 * @param $message String: user-supplied message to to the recipient; may
+	 *                         be empty
+	 * @param $email Boolean: send out email to the recipient of the request?
+	 * @return Integer: ID of the new relationship request
+	 */
+	public function addRelationshipRequest( $userTo, $type, $message, $email = true ) {
+		$userIdTo = User::idFromName( $userTo );
 		$dbw = wfGetDB( DB_MASTER );
 
 		$dbw->insert(
@@ -28,124 +40,172 @@ class UserRelationship {
 			array(
 				'ur_user_id_from' => $this->user_id,
 				'ur_user_name_from' => $this->user_name,
-				'ur_user_id_to' => $user_id_to,
-				'ur_user_name_to' => $user_to,
+				'ur_user_id_to' => $userIdTo,
+				'ur_user_name_to' => $userTo,
 				'ur_type' => $type,
 				'ur_message' => $message,
 				'ur_date' => date( 'Y-m-d H:i:s' )
 			), __METHOD__
 		);
-		$request_id = $dbw->insertId();
+		$requestId = $dbw->insertId();
 
-		$this->incNewRequestCount( $user_id_to, $type );
+		$this->incNewRequestCount( $userIdTo, $type );
 
 		if ( $email ) {
-			$this->sendRelationshipRequestEmail( $user_id_to, $this->user_name, $type );
+			$this->sendRelationshipRequestEmail( $userIdTo, $this->user_name, $type );
 		}
-		return $request_id;
+
+		return $requestId;
 	}
 
-	public function sendRelationshipRequestEmail( $user_id_to, $user_from, $type ) {
-		$user = User::newFromId( $user_id_to );
+	/**
+	 * Send e-mail about a new relationship request to the user whose user ID
+	 * is $userIdTo if they have opted in for these notification e-mails.
+	 *
+	 * @param $userIdTo Integer: user ID of the recipient
+	 * @param $userFrom String: name of the user who requested the relationship
+	 * @param $type Integer: 1 for friend request, 2 (or anything else than 1)
+	 *                       for foe request
+	 */
+	public function sendRelationshipRequestEmail( $userIdTo, $userFrom, $type ) {
+		$user = User::newFromId( $userIdTo );
 		$user->loadFromDatabase();
 		if ( $user->getEmail() && $user->getIntOption( 'notifyfriendrequest', 1 ) ) {
-			$request_link = SpecialPage::getTitleFor( 'ViewRelationshipRequests' );
-			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
+			$requestLink = SpecialPage::getTitleFor( 'ViewRelationshipRequests' );
+			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
+			if ( trim( $user->getRealName() ) ) {
+				$name = $user->getRealName();
+			} else {
+				$name = $user->getName();
+			}
 			if ( $type == 1 ) {
 				$subject = wfMsgExt( 'friend_request_subject', 'parsemag',
-					$user_from
+					$userFrom
 				);
 				$body = wfMsgExt( 'friend_request_body', 'parsemag',
-					( ( trim( $user->getRealName() ) ) ? $user->getRealName() : $user->getName() ),
-					$user_from,
-					$request_link->getFullURL(),
-					$update_profile_link->getFullURL()
+					$name,
+					$userFrom,
+					$requestLink->getFullURL(),
+					$updateProfileLink->getFullURL()
 				);
 			} else {
 				$subject = wfMsgExt( 'foe_request_subject', 'parsemag',
-					$user_from
+					$userFrom
 				);
 				$body = wfMsgExt( 'foe_request_body', 'parsemag',
-					( ( trim( $user->getRealName() ) ) ? $user->getRealName() : $user->getName() ),
-					$user_from,
-					$request_link->getFullURL(),
-					$update_profile_link->getFullURL()
+					$name,
+					$userFrom,
+					$requestLink->getFullURL(),
+					$updateProfileLink->getFullURL()
 				);
 			}
 			$user->sendMail( $subject, $body );
 		}
 	}
 
-	public function sendRelationshipAcceptEmail( $user_id_to, $user_from, $type ) {
-		$user = User::newFromId( $user_id_to );
+	/**
+	 * Send an e-mail to the user whose user ID is $userIdTo about a new user
+	 * relationship.
+	 *
+	 * @param $userIdTo Integer: user ID of the recipient of the e-mail
+	 * @param $userFrom String: name of the user who removed the relationship
+	 * @param $type Integer: 1 for friend, 2 (or anything else but 1) for foe
+	 */
+	public function sendRelationshipAcceptEmail( $userIdTo, $userFrom, $type ) {
+		$user = User::newFromId( $userIdTo );
 		$user->loadFromDatabase();
 		if ( $user->getEmail() && $user->getIntOption( 'notifyfriendrequest', 1 ) ) {
-			$user_link = Title::makeTitle( NS_USER, $user_from );
-			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
+			$userLink = Title::makeTitle( NS_USER, $userFrom );
+			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
+			if ( trim( $user->getRealName() ) {
+				$name = $user->getRealName();
+			} else {
+				$name = $user->getName();
+			}
 			if ( $type == 1 ) {
 				$subject = wfMsgExt( 'friend_accept_subject', 'parsemag',
-					$user_from
+					$userFrom
 				);
 				$body = wfMsgExt( 'friend_accept_body', 'parsemag',
-					( ( trim( $user->getRealName() ) ) ? $user->getRealName() : $user->getName() ),
-					$user_from,
-					$user_link->getFullURL(),
-					$update_profile_link->getFullURL()
+					$name,
+					$userFrom,
+					$userLink->getFullURL(),
+					$updateProfileLink->getFullURL()
 				);
 			} else {
 				$subject = wfMsgExt( 'foe_accept_subject', 'parsemag',
-					$user_from
+					$userFrom
 				);
 				$body = wfMsgExt( 'foe_accept_body', 'parsemag',
-					( ( trim( $user->getRealName() ) ) ? $user->getRealName() : $user->getName() ),
-					$user_from,
-					$user_link->getFullURL(),
-					$update_profile_link->getFullURL()
+					$name,
+					$userFrom,
+					$userLink->getFullURL(),
+					$updateProfileLink->getFullURL()
 				);
 			}
 			$user->sendMail( $subject, $body );
 		}
 	}
 
-	public function sendRelationshipRemoveEmail( $user_id_to, $user_from, $type ) {
-		$user = User::newFromId( $user_id_to );
+	/**
+	 * Send an e-mail to the user whose user ID is $userIdTo about a removed
+	 * relationship.
+	 *
+	 * @param $userIdTo Integer: user ID of the recipient of the e-mail
+	 * @param $userFrom String: name of the user who removed the relationship
+	 * @param $type Integer: 1 for friend, 2 (or anything else but 1) for foe
+	 */
+	public function sendRelationshipRemoveEmail( $userIdTo, $userFrom, $type ) {
+		$user = User::newFromId( $userIdTo );
 		$user->loadFromDatabase();
 		if ( $user->isEmailConfirmed() && $user->getIntOption( 'notifyfriendrequest', 1 ) ) {
-			$user_link = Title::makeTitle( NS_USER, $user_from );
-			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
+			$userLink = Title::makeTitle( NS_USER, $userFrom );
+			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
+			if ( trim( $user->getRealName() ) {
+				$name = $user->getRealName();
+			} else {
+				$name = $user->getName();
+			}
 			if ( $type == 1 ) {
 				$subject = wfMsgExt( 'friend_removed_subject', 'parsemag',
-					$user_from
+					$userFrom
 				);
 				$body = wfMsgExt( 'friend_removed_body', 'parsemag',
-					( ( trim( $user->getRealName() ) ) ? $user->getRealName() : $user->getName() ),
-					$user_from,
-					$user_link->getFullURL(),
-					$update_profile_link->getFullURL()
+					$name,
+					$userFrom,
+					$userLink->getFullURL(),
+					$updateProfileLink->getFullURL()
 				);
 			} else {
 				$subject = wfMsgExt( 'foe_removed_subject', 'parsemag',
-					$user_from
+					$userFrom
 				);
 				$body = wfMsgExt( 'foe_removed_body', 'parsemag',
-					( ( trim( $user->getRealName() ) ) ? $user->getRealName() : $user->getName() ),
-					$user_from,
-					$user_link->getFullURL(),
-					$update_profile_link->getFullURL()
+					$name,
+					$userFrom,
+					$userLink->getFullURL(),
+					$updateProfileLink->getFullURL()
 				);
 			}
 			$user->sendMail( $subject, $body );
 		}
 	}
 
-	public function addRelationship( $relationship_request_id, $email = true ) {
+	/**
+	 * Add a new relationship to the database.
+	 *
+	 * @param $relationshipRequestId Integer: relationship request ID number
+	 * @param $email Boolean: send out email to the recipient of the request?
+	 * @return Boolean: true if successful, otherwise false
+	 */
+	public function addRelationship( $relationshipRequestId, $email = true ) {
 		global $wgMemc;
 
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(
 			'user_relationship_request',
 			array( 'ur_user_id_from', 'ur_user_name_from', 'ur_type' ),
-			array( 'ur_id' => $relationship_request_id ),
+			array( 'ur_id' => $relationshipRequestId ),
 			__METHOD__
 		);
 
@@ -202,6 +262,7 @@ class UserRelationship {
 				$this->sendRelationshipAcceptEmail( $ur_user_id_from, $this->user_name, $ur_type );
 			}
 
+			// Purge caches
 			$wgMemc->delete( wfMemcKey( 'relationship', 'profile', "{$this->user_id}-{$ur_type}" ) );
 			$wgMemc->delete( wfMemcKey( 'relationship', 'profile', "{$ur_user_id_from}-{$ur_type}" ) );
 
@@ -211,12 +272,19 @@ class UserRelationship {
 		}
 	}
 
+	/**
+	 * Remove a relationship between two users and clear caches afterwards.
+	 *
+	 * @param $user1 Integer: user ID of the first user
+	 * @param $user2 Integer: user ID of the second user
+	 */
 	public function removeRelationshipByUserID( $user1, $user2 ) {
 		global $wgUser, $wgMemc;
 
 		if ( $user1 != $wgUser->getID() && $user2 != $wgUser->getID() ) {
 			return false; // only logged in user should be able to delete
 		}
+
 		// must delete record for each user involved in relationship
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->delete(
@@ -247,6 +315,11 @@ class UserRelationship {
 		$stats->clearCache();
 	}
 
+	/**
+	 * Delete a user relationship request from the database.
+	 *
+	 * @param $id Integer: relationship request ID number
+	 */
 	public function deleteRequest( $id ) {
 		$request = $this->getRequest( $id );
 		$this->decNewRequestCount( $this->user_id, $request[0]['rel_type'] );
@@ -259,22 +332,33 @@ class UserRelationship {
 		);
 	}
 
-	public function updateRelationshipRequestStatus( $relationship_request_id, $status ) {
+	/**
+	 * @param $relationshipRequestId Integer: relationship request ID number
+	 * @param $status
+	 */
+	public function updateRelationshipRequestStatus( $relationshipRequestId, $status ) {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update(
 			'user_relationship_request',
 			/* SET */array( 'ur_status' => $status ),
-			/* WHERE */array( 'ur_id' => $relationship_request_id ),
+			/* WHERE */array( 'ur_id' => $relationshipRequestId ),
 			__METHOD__
 		);
 	}
 
-	public function verifyRelationshipRequest( $relationship_request_id ) {
+	/**
+	 * Make sure that there is a pending user relationship request with the
+	 * given ID.
+	 *
+	 * @param $relationshipRequestId Integer: relationship request ID number
+	 * @return bool
+	 */
+	public function verifyRelationshipRequest( $relationshipRequestId ) {
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(
 			'user_relationship_request',
 			array( 'ur_user_id_to' ),
-			array( 'ur_id' => $relationship_request_id ),
+			array( 'ur_id' => $relationshipRequestId ),
 			__METHOD__
 		);
 		if ( $s !== false ) {
@@ -285,6 +369,11 @@ class UserRelationship {
 		return false;
 	}
 
+	/**
+	 * @param $user1 Integer:
+	 * @param $user2 Integer:
+	 * @return Mixed: integer or boolean false
+	 */
 	static function getUserRelationshipByID( $user1, $user2 ) {
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(
@@ -300,6 +389,11 @@ class UserRelationship {
 		}
 	}
 
+	/**
+	 * @param $user1 Integer: user ID of the recipient of the request
+	 * @param $user2 Integer: user ID of the sender of the request
+	 * @return bool
+	 */
 	static function userHasRequestByID( $user1, $user2 ) {
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(
@@ -319,6 +413,13 @@ class UserRelationship {
 		}
 	}
 
+	/**
+	 * Get an individual user relationship request via its ID.
+	 *
+	 * @param $id Integer: relationship request ID
+	 * @return Array: array containing relationship request info, such as its
+	 *                ID, type, requester, etc.
+	 */
 	public function getRequest( $id ) {
 		$dbr = wfGetDB( DB_MASTER );
 		$res = $dbr->select(
@@ -330,24 +431,33 @@ class UserRelationship {
 			array( "ur_id = {$id}" ),
 			__METHOD__
 		);
+
 		foreach ( $res as $row ) {
 			if ( $row->ur_type == 1 ) {
-				$type_name = 'Friend';
+				$typeName = 'Friend';
 			} else {
-				$type_name = 'Foe';
+				$typeName = 'Foe';
 			}
 			$request[] = array(
 				'id' => $row->ur_id,
 				'rel_type' => $row->ur_type,
-				'type' => $type_name,
+				'type' => $typeName,
 				'timestamp' => ( $row->ur_date ),
 				'user_id_from' => $row->ur_user_id_from,
 				'user_name_from' => $row->ur_user_name_from
 			);
 		}
+
 		return $request;
 	}
 
+	/**
+	 * Get the list of open relationship requests.
+	 *
+	 * @param $status Integer:
+	 * @param $limit Integer: used as the LIMIT in the SQL query
+	 * @return Array: array of open relationship requests
+	 */
 	public function getRequestList( $status, $limit = 0 ) {
 		$dbr = wfGetDB( DB_MASTER );
 
@@ -389,71 +499,120 @@ class UserRelationship {
 				'user_name_from' => $row->ur_user_name_from
 			);
 		}
+
 		return $requests;
 	}
 
-	private function incNewRequestCount( $user_id, $rel_type ) {
+	/**
+	 * Increase the amount of open relationship requests for a user.
+	 *
+	 * @param $userId Integer: user ID for whom to get the requests
+	 * @param $relType Integer: 1 for friends, 2 (or anything else but 1) for foes
+	 */
+	private function incNewRequestCount( $userId, $relType ) {
 		global $wgMemc;
-		$key = wfMemcKey( 'user_relationship', 'open_request', $rel_type, $user_id );
+		$key = wfMemcKey( 'user_relationship', 'open_request', $relType, $userId );
 		$wgMemc->incr( $key );
 	}
 
-	private function decNewRequestCount( $user_id, $rel_type ) {
+	/**
+	 * Decrease the amount of open relationship requests for a user.
+	 *
+	 * @param $userId Integer: user ID for whom to get the requests
+	 * @param $relType Integer: 1 for friends, 2 (or anything else but 1) for foes
+	 */
+	private function decNewRequestCount( $userId, $relType ) {
 		global $wgMemc;
-		$key = wfMemcKey( 'user_relationship', 'open_request', $rel_type, $user_id );
+		$key = wfMemcKey( 'user_relationship', 'open_request', $relType, $userId );
 		$wgMemc->decr( $key );
 	}
 
-	static function getOpenRequestCountDB( $user_id, $rel_type ) {
-		wfDebug( "Got open request count (type={$rel_type}) for id $user_id from DB\n" );
-
+	/**
+	 * Get the amount of open user relationship requests for a user from the
+	 * database and cache it.
+	 *
+	 * @param $userId Integer: user ID for whom to get the requests
+	 * @param $relType Integer: 1 for friends, 2 (or anything else but 1) for foes
+	 * @return Integer
+	 */
+	static function getOpenRequestCountDB( $userId, $relType ) {
 		global $wgMemc;
-		$key = wfMemcKey( 'user_relationship', 'open_request', $rel_type, $user_id );
+
+		wfDebug( "Got open request count (type={$relType}) for id $userId from DB\n" );
+
+		$key = wfMemcKey( 'user_relationship', 'open_request', $relType, $userId );
 		$dbr = wfGetDB( DB_SLAVE );
-		$request_count = 0;
+		$requestCount = 0;
+
 		$s = $dbr->selectRow(
 			'user_relationship_request',
 			array( 'COUNT(*) AS count' ),
 			array(
-				'ur_user_id_to' => $user_id,
+				'ur_user_id_to' => $userId,
 				'ur_status' => 0,
-				'ur_type' => $rel_type
+				'ur_type' => $relType
 			),
 			__METHOD__
 		);
+
 		if ( $s !== false ) {
-			$request_count = $s->count;
+			$requestCount = $s->count;
 		}
 
-		$wgMemc->set( $key, $request_count );
+		$wgMemc->set( $key, $requestCount );
 
-		return $request_count;
+		return $requestCount;
 	}
 
-	static function getOpenRequestCountCache( $user_id, $rel_type ) {
+	/**
+	 * Get the amount of open user relationship requests from cache.
+	 *
+	 * @param $userId Integer: user ID for whom to get the requests
+	 * @param $relType Integer: 1 for friends, 2 (or anything else but 1) for foes
+	 * @return Integer
+	 */
+	static function getOpenRequestCountCache( $userId, $relType ) {
 		global $wgMemc;
-		$key = wfMemcKey( 'user_relationship', 'open_request', $rel_type, $user_id );
+		$key = wfMemcKey( 'user_relationship', 'open_request', $relType, $userId );
 		$data = $wgMemc->get( $key );
 		if ( $data != '' ) {
-			wfDebug( "Got open request count of $data (type={$rel_type}) for id $user_id from cache\n" );
+			wfDebug( "Got open request count of $data (type={$relType}) for id $userId from cache\n" );
 			return $data;
 		}
 	}
 
-	static function getOpenRequestCount( $user_id, $rel_type ) {
-		$data = self::getOpenRequestCountCache( $user_id, $rel_type );
+	/**
+	 * Get the amount of open user relationship requests; first tries cache,
+	 * and if that fails, fetches the count from the database.
+	 *
+	 * @param $userId Integer: user ID for whom to get the requests
+	 * @param $relType Integer: 1 for friends, 2 (or anything else but 1) for foes
+	 * @return Integer
+	 */
+	static function getOpenRequestCount( $userId, $relType ) {
+		$data = self::getOpenRequestCountCache( $userId, $relType );
 
 		if ( $data != '' ) {
-			if ( $data == - 1 ) {
+			if ( $data == -1 ) {
 				$data = 0;
 			}
 			$count = $data;
 		} else {
-			$count = self::getOpenRequestCountDB( $user_id, $rel_type );
+			$count = self::getOpenRequestCountDB( $userId, $relType );
 		}
+
 		return $count;
 	}
 
+	/**
+	 * Get the relationship list for the current user.
+	 *
+	 * @param $type Integer: 1 for friends, 2 (or anything else but 1) for foes
+	 * @param $limit Integer: used as the LIMIT in the SQL query
+	 * @param $page Integer: if greater than 0, will be used to calculate the
+	 *                       OFFSET for the SQL query
+	 * @return Array: array of relationship information
+	 */
 	public function getRelationshipList( $type = 0, $limit = 0, $page = 0 ) {
 		$dbr = wfGetDB( DB_SLAVE );
 
@@ -496,6 +655,12 @@ class UserRelationship {
 		return $requests;
 	}
 
+	/**
+	 * Get the relationship IDs for the current user.
+	 *
+	 * @param $type Integer: 1 for friends, 2 (or anything else but 1) for foes
+	 * @return Array: array of relationship ID numbers
+	 */
 	public function getRelationshipIDs( $type ) {
 		$dbr = wfGetDB( DB_SLAVE );
 
@@ -514,28 +679,36 @@ class UserRelationship {
 		foreach ( $res as $row ) {
 			$rel[] = $row->r_user_id_relation;
 		}
+
 		return $rel;
 	}
 
-	static function getRelationshipCountByUsername( $user_name ) {
+	/**
+	 * Get the amount of friends and foes a user has from the
+	 * user_relationship_stats database table.
+	 *
+	 * @param $userName String: name of the user whose stats we're looking up
+	 * @return Array: array containing the amount of friends and foes
+	 */
+	static function getRelationshipCountByUsername( $userName ) {
 		$dbr = wfGetDB( DB_SLAVE );
-		$user_id = User::idFromName( $user_name );
+		$userId = User::idFromName( $userName );
 		$res = $dbr->select(
 			'user_relationship_stats',
 			array( 'rs_friend_count', 'rs_foe_count' ),
-			array( "rs_user_id = {$user_id}" ),
+			array( "rs_user_id = {$userId}" ),
 			__METHOD__,
 			array( 'LIMIT' => 1, 'OFFSET' => 0 )
 		);
 		$row = $dbr->fetchObject( $res );
-		$friend_count = 0;
-		$foe_count = 0;
+		$friendCount = 0;
+		$foeCount = 0;
 		if ( $row ) {
-			$friend_count = $row->rs_friend_count;
-			$foe_count = $row->rs_foe_count;
+			$friendCount = $row->rs_friend_count;
+			$foeCount = $row->rs_foe_count;
 		}
-		$stats['friend_count'] = $friend_count;
-		$stats['foe_count'] = $foe_count;
+		$stats['friend_count'] = $friendCount;
+		$stats['foe_count'] = $foeCount;
 		return $stats;
 	}
 }
