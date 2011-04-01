@@ -81,9 +81,9 @@ class SpecialViewRelationships extends SpecialPage {
 			'</div>
 			<div class="relationship-request-buttons">
 				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" onclick=\'window.location="index.php?title=' . wfMsgForContent( 'mainpage' ) . '"\' />';
-				if ( $wgUser->isLoggedIn() ) {
-					$out .= '<input type="button" class="site-button" value="' . wfMsg( 'ur-your-profile' ) . '" onclick=\'window.location="' . $wgUser->getUserPage()->escapeFullURL() . '"\' />';
-				}
+			if ( $wgUser->isLoggedIn() ) {
+				$out .= '<input type="button" class="site-button" value="' . wfMsg( 'ur-your-profile' ) . '" onclick=\'window.location="' . $wgUser->getUserPage()->escapeFullURL() . '"\' />';
+			}
 			$out .= '</div>';
 			$wgOut->addHTML( $out );
 			return false;
@@ -101,7 +101,7 @@ class SpecialViewRelationships extends SpecialPage {
 		$foe_count = $stats_data['foe_count'];
 
 		$back_link = Title::makeTitle( NS_USER, $rel->user_name );
-		$invite_contacts_link = SpecialPage::getTitleFor( 'InviteContacts' );
+		$inviteContactsLink = SpecialPage::getTitleFor( 'InviteContacts' );
 
 		if ( $rel_type == 1 ) {
 			$output .= $wgOut->setPageTitle( wfMsg( 'ur-title-friend', $rel->user_name ) );
@@ -110,9 +110,14 @@ class SpecialViewRelationships extends SpecialPage {
 			$output .= '<div class="back-links">
 			<a href="' . $back_link->escapeFullURL() . '">' . wfMsg( 'ur-backlink', $rel->user_name ) . '</a>
 		</div>
-		<div class="relationship-count">'
-		. wfMsgExt( 'ur-relationship-count-friends', 'parsemag', $rel->user_name, $total, $invite_contacts_link->escapeFullURL() ) .
-		'</div>';
+		<div class="relationship-count">' .
+			wfMsgExt(
+				'ur-relationship-count-friends',
+				'parsemag',
+				$rel->user_name,
+				$total,
+				$inviteContactsLink->escapeFullURL()
+			) . '</div>';
 		} else {
 			$output .= $wgOut->setPageTitle( wfMsg( 'ur-title-foe', $rel->user_name ) );
 			$total = $foe_count;
@@ -121,17 +126,23 @@ class SpecialViewRelationships extends SpecialPage {
 			<a href="' . $back_link->escapeFullURL() . '">' . wfMsg( 'ur-backlink', $rel->user_name ) . '</a>
 		</div>
 		<div class="relationship-count">'
-			. wfMsgExt( 'ur-relationship-count-foes', 'parsemag', $rel->user_name, $total, $invite_contacts_link->escapeFullURL() ) .
-		'</div>';
+			. wfMsgExt(
+				'ur-relationship-count-foes',
+				'parsemag',
+				$rel->user_name,
+				$total,
+				$inviteContactsLink->escapeFullURL()
+			) . '</div>';
 		}
 
 		if ( $relationships ) {
-
 			$x = 1;
 
 			foreach ( $relationships as $relationship ) {
-
-				$indivRelationship = UserRelationship::getUserRelationshipByID( $relationship['user_id'], $wgUser->getID() );
+				$indivRelationship = UserRelationship::getUserRelationshipByID(
+					$relationship['user_id'],
+					$wgUser->getID()
+				);
 
 				// Safe titles
 				$user = Title::makeTitle( NS_USER, $relationship['user_name'] );
@@ -152,7 +163,7 @@ class SpecialViewRelationships extends SpecialPage {
 					$user_name_display = substr( $relationship['user_name'], 0, 30 ) . ' ' . substr( $relationship['user_name'], 30, 50 );
 				} else {
 					$user_name_display = $relationship['user_name'];
-				} ;
+				}
 
 				$output .= "<div class=\"relationship-item\">
 					<a href=\"{$user->escapeFullURL()}\">{$avatar_img}</a>

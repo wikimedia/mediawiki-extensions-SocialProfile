@@ -1,6 +1,7 @@
 <?php
 /**
- * A special page for viewing open relationship requests for the current logged in user
+ * A special page for viewing open relationship requests for the current
+ * logged-in user
  *
  * @file
  * @ingroup Extensions
@@ -33,7 +34,9 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		if ( $wgUser->getID() == 0 ) {
 			$wgOut->setPageTitle( wfMsg( 'ur-error-page-title' ) );
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
-			$wgOut->redirect( $login->getFullURL( 'returnto=Special:ViewRelationshipRequests' ) );
+			$wgOut->redirect(
+				$login->getFullURL( 'returnto=Special:ViewRelationshipRequests' )
+			);
 			return false;
 		}
 
@@ -46,8 +49,14 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 
 		if ( count( $_POST ) && $_SESSION['alreadysubmitted'] == false ) {
 			$_SESSION['alreadysubmitted'] = true;
-			$rel->addRelationshipRequest( $this->user_name_to, $this->relationship_type, $_POST['message'] );
-			$out = '<br /><span class="title">' . wfMsg( 'ur-already-submitted' ) . '</span><br /><br />';
+			$rel->addRelationshipRequest(
+				$this->user_name_to,
+				$this->relationship_type,
+				$_POST['message']
+			);
+			$out = '<br /><span class="title">' .
+				wfMsg( 'ur-already-submitted' ) .
+				'</span><br /><br />';
 			$wgOut->addHTML( $out );
 		} else {
 			$_SESSION['alreadysubmitted'] = false;
@@ -57,27 +66,33 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 			$requests = $rel->getRequestList( 0 );
 
 			if ( $requests ) {
-
 				foreach ( $requests as $request ) {
-
 					$user_from = Title::makeTitle( NS_USER, $request['user_name_from'] );
 					$avatar = new wAvatar( $request['user_id_from'], 'l' );
 					$avatar_img = $avatar->getAvatarURL();
 
 					if ( $request['type'] == 'Foe' ) {
-						$msg = wfMsg( 'ur-requests-message-foe', $user_from->escapeFullURL(), $request['user_name_from'] );
+						$msg = wfMsg(
+							'ur-requests-message-foe',
+							$user_from->escapeFullURL(),
+							$request['user_name_from']
+						);
 					} else {
-						$msg = wfMsg( 'ur-requests-message-friend', $user_from->escapeFullURL(), $request['user_name_from'] );
+						$msg = wfMsg(
+							'ur-requests-message-friend',
+							$user_from->escapeFullURL(),
+							$request['user_name_from']
+						);
 					}
 
 					$message = $wgOut->parse( trim( $request['message'] ), false );
 
-					$output .= "<div class=\"relationship-action black-text\" id=\"request_action_{$request["id"]}\">
+					$output .= "<div class=\"relationship-action black-text\" id=\"request_action_{$request['id']}\">
 					  	{$avatar_img}" . $msg;
-						if ( $request['message'] ) {
-							$output .= '<div class="relationship-message">' . $message . '</div>';
-						}
-						$output .= '<div class="cleared"></div>
+					if ( $request['message'] ) {
+						$output .= '<div class="relationship-message">' . $message . '</div>';
+					}
+					$output .= '<div class="cleared"></div>
 						<div class="relationship-buttons">
 							<input type="button" class="site-button" value="' . wfMsg( 'ur-accept' ) . '" onclick="javascript:requestResponse(1,' . $request['id'] . ')" />
 							<input type="button" class="site-button" value="' . wfMsg( 'ur-reject' ) . '" onclick="javascript:requestResponse(-1,' . $request['id'] . ')" />
@@ -85,8 +100,8 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 					</div>';
 				}
 			} else {
-				$invite_link = SpecialPage::getTitleFor( 'InviteContacts' );
-				$output = wfMsg( 'ur-no-requests-message', $invite_link->escapeFullURL() );
+				$inviteLink = SpecialPage::getTitleFor( 'InviteContacts' );
+				$output = wfMsg( 'ur-no-requests-message', $inviteLink->escapeFullURL() );
 			}
 			$wgOut->addHTML( $output );
 		}

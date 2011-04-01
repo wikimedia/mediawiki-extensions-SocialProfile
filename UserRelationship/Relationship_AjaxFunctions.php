@@ -4,38 +4,38 @@
  */
 
 $wgAjaxExportList[] = 'wfRelationshipRequestResponse';
-function wfRelationshipRequestResponse( $response, $request_id ) {
+function wfRelationshipRequestResponse( $response, $requestId ) {
 	global $wgUser;
 	$out = '';
 
 	$rel = new UserRelationship( $wgUser->getName() );
-	if ( $rel->verifyRelationshipRequest( $request_id ) == true ) {
-		$request = $rel->getRequest( $request_id );
+	if ( $rel->verifyRelationshipRequest( $requestId ) == true ) {
+		$request = $rel->getRequest( $requestId );
 		$user_name_from = $request[0]['user_name_from'];
 		$user_id_from = User::idFromName( $user_name_from );
 		$rel_type = strtolower( $request[0]['type'] );
 
 		$response = ( isset( $_POST['response' ] ) ) ? $_POST['response'] : $response;
-		$rel->updateRelationshipRequestStatus( $request_id, $response );
+		$rel->updateRelationshipRequestStatus( $requestId, $response );
 
 		$avatar = new wAvatar( $user_id_from, 'l' );
 		$avatar_img = $avatar->getAvatarURL();
 
 		if ( $response == 1 ) {
-			$rel->addRelationship( $request_id );
+			$rel->addRelationship( $requestId );
 			$out .= "<div class=\"relationship-action red-text\">
-				{$avatar_img}
-				" . wfMsg( "ur-requests-added-message-{$rel_type}", $user_name_from ) . '
-				<div class="cleared"></div>
+				{$avatar_img}" .
+					wfMsg( "ur-requests-added-message-{$rel_type}", $user_name_from ) .
+				'<div class="cleared"></div>
 			</div>';
 		} else {
 			$out .= "<div class=\"relationship-action red-text\">
-				{$avatar_img}
-				" . wfMsg( "ur-requests-reject-message-{$rel_type}", $user_name_from ) . '
-				<div class="cleared"></div>
+				{$avatar_img}" .
+					wfMsg( "ur-requests-reject-message-{$rel_type}", $user_name_from ) .
+				'<div class="cleared"></div>
 			</div>';
 		}
-		$rel->deleteRequest( $request_id );
+		$rel->deleteRequest( $requestId );
 	}
 	return $out;
 }
