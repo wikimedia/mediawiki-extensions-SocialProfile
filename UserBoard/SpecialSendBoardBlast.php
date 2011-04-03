@@ -36,8 +36,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		// This feature is available only to logged-in users.
 		if ( !$wgUser->isLoggedIn() ) {
 			$wgOut->setPageTitle( wfMsg( 'boardblastlogintitle' ) );
-			$output = wfMsgExt( 'boardblastlogintext', 'parse' );
-			$wgOut->addHTML( $output );
+			$wgOut->addWikiMsg( 'boardblastlogintext' );
 			return '';
 		}
 
