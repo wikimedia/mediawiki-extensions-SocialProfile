@@ -117,7 +117,7 @@ class UserRelationship {
 		if ( $user->getEmail() && $user->getIntOption( 'notifyfriendrequest', 1 ) ) {
 			$userLink = Title::makeTitle( NS_USER, $userFrom );
 			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
-			if ( trim( $user->getRealName() ) {
+			if ( trim( $user->getRealName() ) ) {
 				$name = $user->getRealName();
 			} else {
 				$name = $user->getName();
@@ -161,7 +161,7 @@ class UserRelationship {
 		if ( $user->isEmailConfirmed() && $user->getIntOption( 'notifyfriendrequest', 1 ) ) {
 			$userLink = Title::makeTitle( NS_USER, $userFrom );
 			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
-			if ( trim( $user->getRealName() ) {
+			if ( trim( $user->getRealName() ) ) {
 				$name = $user->getRealName();
 			} else {
 				$name = $user->getName();
