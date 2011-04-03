@@ -9,13 +9,13 @@
 $messages = array();
 
 /** English
- * @author Wikia, Inc.
+ * @author Aaron Wright
+ * @author David Pean
  * @author Purodha
  */
 $messages['en'] = array(
 	'boardblastlogintitle' => 'You must be logged in to send board blasts',
-	'boardblastlogintext' => 'In order to send board blasts,
-you must be <a href="index.php?title=Special:UserLogin">logged in</a>.',
+	'boardblastlogintext' => 'In order to send board blasts, you must be [[Special:UserLogin|logged in]].',
 	'messagesenttitle' => 'Messages sent',
 	'boardblasttitle' => 'Send board blast',
 	'boardblaststep1' => 'Step 1 - Write your message',

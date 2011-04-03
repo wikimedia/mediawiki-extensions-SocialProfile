@@ -1,6 +1,7 @@
 <?php
 /**
- * A special page to allow users to send a mass board message by selecting from a list of their friends and foes
+ * A special page to allow users to send a mass board message by selecting from
+ * a list of their friends and foes
  *
  * @file
  * @ingroup Extensions
@@ -35,7 +36,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		// This feature is available only to logged-in users.
 		if ( !$wgUser->isLoggedIn() ) {
 			$wgOut->setPageTitle( wfMsg( 'boardblastlogintitle' ) );
-			$output = wfMsg( 'boardblastlogintext' );
+			$output = wfMsgExt( 'boardblastlogintext', 'parse' );
 			$wgOut->addHTML( $output );
 			return '';
 		}
@@ -50,7 +51,14 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 				$user = User::newFromId( $user_id );
 				$user->loadFromId();
 				$user_name = $user->getName();
-				$b->sendBoardMessage( $wgUser->getID(), $wgUser->getName(), $user_id, $user_name, $wgRequest->getVal( 'message' ), 1 );
+				$b->sendBoardMessage(
+					$wgUser->getID(),
+					$wgUser->getName(),
+					$user_id,
+					$user_name,
+					$wgRequest->getVal( 'message' ),
+					1
+				);
 				$count++;
 			}
 			$output .= wfMsg( 'messagesentsuccess' );
@@ -70,8 +78,8 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 
 		$stats = new UserStats( $wgUser->getID(), $wgUser->getName() );
 		$stats_data = $stats->getUserStats();
-
-		
+		$friendCount = $stats_data['friend_count'];
+		$foeCount = $stats_data['foe_count'];
 
 		$output = '<div class="board-blast-message-form">
 				<h2>' . wfMsg( 'boardblaststep1' ) . '</h2>
@@ -89,16 +97,16 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 					<a href="javascript:void(0);" onclick="javascript:select_all()">' . wfMsg( 'boardlinkselectall' ) . '</a> -
 					<a href="javascript:void(0);" onclick="javascript:unselect_all()">' . wfMsg( 'boardlinkunselectall' ) . '</a> ';
 
-					if ( $stats_data['friend_count'] > 0 && $stats_data['foe_count'] > 0 ) {
-						$output .= '- <a href="javascript:void(0);" onclick="javascript:toggle_friends(1)">' . wfMsg( 'boardlinkselectfriends' ) . '</a> -';
-						$output .= '<a href="javascript:void(0);" onclick="javascript:toggle_friends(0)">' . wfMsg( 'boardlinkunselectfriends' ) . '</a>';
-					}
+		if ( $friendCount > 0 && $foeCount > 0 ) {
+			$output .= '- <a href="javascript:void(0);" onclick="javascript:toggle_friends(1)">' . wfMsg( 'boardlinkselectfriends' ) . '</a> -';
+			$output .= '<a href="javascript:void(0);" onclick="javascript:toggle_friends(0)">' . wfMsg( 'boardlinkunselectfriends' ) . '</a>';
+		}
 
-					if ( $stats_data['foe_count'] > 0 && $stats_data['friend_count'] > 0 ) {
-						$output .= '- <a href="javascript:void(0);" onclick="javascript:toggle_foes(1)">' . wfMsg( 'boardlinkselectfoes' ) . '</a> -';
-						$output .= '<a href="javascript:void(0);" onclick="javascript:toggle_foes(0)">' . wfMsg( 'boardlinkunselectfoes' ) . '</a>';
-					}
-				$output .= '</div>
+		if ( $foeCount > 0 && $friendCount > 0 ) {
+			$output .= '- <a href="javascript:void(0);" onclick="javascript:toggle_foes(1)">' . wfMsg( 'boardlinkselectfoes' ) . '</a> -';
+			$output .= '<a href="javascript:void(0);" onclick="javascript:toggle_foes(0)">' . wfMsg( 'boardlinkunselectfoes' ) . '</a>';
+		}
+		$output .= '</div>
 		</div>';
 
 		$rel = new UserRelationship( $wgUser->getName() );
@@ -110,7 +118,13 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$per_row = 3;
 		if ( count( $relationships ) > 0 ) {
 			foreach ( $relationships as $relationship ) {
-				$output .= '<div class="blast-' . ( ( $relationship['type'] == 1 ) ? 'friend' : 'foe' ) . "-unselected\" id=\"user-{$relationship['user_id']}\" onclick=\"javascript:toggle_user({$relationship['user_id']})\">
+				if ( $relationship['type'] == 1 ) {
+					$class = 'friend';
+				} else {
+					$class = 'foe';
+				}
+				$id = $relationship['user_id'];
+				$output .= '<div class="blast-' . $class . "-unselected\" id=\"user-{$id}\" onclick=\"javascript:toggle_user({$id})\">
 						{$relationship['user_name']}
 					</div>";
 				if ( $x == count( $relationships ) || $x != 1 && $x % $per_row == 0 ) {
@@ -129,6 +143,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$output .= '<div class="blast-message-box-button">
 			<input type="button" value="' . wfMsg( 'boardsendbutton' ) . '" class="site-button" onclick="javascript:send_messages();" />
 		</div>';
+
 		return $output;
 	}
 }
