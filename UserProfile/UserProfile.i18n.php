@@ -1127,6 +1127,7 @@ $messages['be'] = array(
  * @author Zedlik
  */
 $messages['be-tarask'] = array(
+	'editprofile' => 'Рэдагаваць профілі іншых удзельнікаў',
 	'populateuserprofiles' => 'Запаўненьне зьвестак пра ўдзельніка',
 	'user-time-ago' => '$1 таму',
 	'user-awards-title' => 'Узнагароды',
@@ -1307,6 +1308,7 @@ $messages['be-tarask'] = array(
 	'user-profile-picture-log-entry' => 'загрузіў новую аватару',
 	'user-profile-picture-log-delete-entry' => 'выдалена аватара $1',
 	'right-avatarremove' => 'Выдаліць аватары ўдзельніка',
+	'right-editothersprofiles' => 'абнаўленьне сацыяльных профіляў іншых удзельнікаў',
 );
 
 /** Bulgarian (Български)
@@ -1678,6 +1680,7 @@ Klikit <a href="$1">amañ</a> evit kevreañ pe klikit <a href="$2">amañ</a> evi
  * @author Palapa
  */
 $messages['bs'] = array(
+	'editprofile' => 'Uređivanje profila drugih korisnika',
 	'populateuserprofiles' => 'Popuni korisničke profile',
 	'user-time-ago' => 'prije $1',
 	'user-awards-title' => 'Nagrade',
@@ -1705,6 +1708,7 @@ $messages['bs'] = array(
 	'user-stats-poll-votes' => 'Anketa {{PLURAL:$1|glas|glasa|glasova}}',
 	'user-stats-picture-game-votes' => 'Slikovna igra {{PLURAL:$1|glas|glasa|glasovima}}',
 	'user-stats-quiz-points' => 'Kviz {{PLURAL:$1|bod|bodovi}}',
+	'user-stats-pick-points' => 'Odabir {{PLURAL:$1|boda|boda|bodova}}',
 	'other-info-title' => 'Ostale informacije',
 	'user-friends-title' => 'Prijatelji',
 	'user-foes-title' => 'Neprijatelji',
@@ -1726,6 +1730,7 @@ $messages['bs'] = array(
 	'profile-updated-personal' => 'Ažurirajte svoj profil',
 	'profile-not-provided' => 'Nije navedeno',
 	'populate-user-profile-done' => '$1 {{PLURAL:$1|profil dodan|profila dodano}}',
+	'user-board-title' => 'Tabla',
 	'user-send-board-blast' => 'Poslati vijest',
 	'user-personal-info-title' => 'Lične informacije',
 	'user-no-personal-info' => 'Nema ličnih informacija',
@@ -1749,7 +1754,11 @@ $messages['bs'] = array(
 	'user-recent-activity-user-message' => 'Poslao/la poruku za',
 	'user-recent-activity-network-update' => 'ima poslana mišljenja',
 	'user-recent-system-gift' => 'Dobio je nagradu',
+	'user-profile-update-notloggedin-title' => 'Ne možete uređivati vaš profil bez prijave',
+	'user-profile-update-notloggedin-text' => 'Ne možete uređivati vaš profil bez prijave.
+Kliknite <a href="$1">ovdje</a> za prijavu ili kliknite <a href="$2">ovdje</a> da se registrirate.',
 	'user-profile-update-saved' => 'Vaš profil je sačuvan',
+	'user-profile-edit-profile-update-saved' => 'Korisnički profil je uspješno spremljen',
 	'user-profile-update-log-section' => 'promijenjena sekcija',
 	'user-profile-update-profile' => 'profil',
 	'user-profile-default-country' => 'Sjedinjene Američke Države',
@@ -1763,6 +1772,7 @@ $messages['bs'] = array(
 	'user-profile-personal-info' => 'Informacije',
 	'user-profile-personal-name' => 'Ime',
 	'user-profile-personal-email' => 'E-mail',
+	'user-profile-personal-email-needs-auth' => '(vaš e-mail treba biti potvrđen da može dobijati obavještenja sa stranice)',
 	'user-profile-personal-confirmemail' => 'Potvrdite e-mail',
 	'user-profile-personal-location' => 'Lokacija',
 	'user-profile-personal-city' => 'Grad',
@@ -1791,9 +1801,12 @@ $messages['bs'] = array(
 	'user-profile-interests-drinks' => 'Pića',
 	'user-profile-preferences-emails' => 'Obavještenja putem e-maila',
 	'user-profile-preferences-emails-personalmessage' => 'Kada pošaljem ličnu poruku',
+	'user-profile-preferences-emails-friendfoe' => 'Kada vas drugi korisnik doda među prijatelje ili neprijatelje',
 	'user-profile-preferences-emails-gift' => 'Kada primim poklon',
 	'user-profile-preferences-emails-level' => 'Kada napredujem na slijedeći nivo',
+	'user-profile-preferences-emails-weekly' => 'Dobijanje sedmičnih ažuriranja e-mailom',
 	'user-profile-update-button' => 'Ažurirano',
+	'user-profile-tidbits-title' => 'Zanimljivosti',
 	'user-profile-tidbits-favmoment' => 'Omiljeni sportski događaji',
 	'user-profile-tidbits-worstmoment' => 'Najgori sportski događaji',
 	'user-profile-tidbits-favathlete' => 'Omiljeni sportista i zašto',
@@ -1807,6 +1820,7 @@ $messages['bs'] = array(
 	'user-profile-sports-addmore' => 'Dodaj više sportova/ekipa',
 	'uploadavatar' => 'Postavite Vašu sliku',
 	'user-profile-picture-yourpicture' => 'Vaša slika',
+	'user-profile-picture-yourpicturestext' => 'Ispod su slike koje će se pojaviti na vašem profilu, stranicama mreže i na vašim komentarima.',
 	'user-profile-picture-large' => 'Velika',
 	'user-profile-picture-medlarge' => 'Srednje - velika',
 	'user-profile-picture-medium' => 'Srednja',
@@ -1819,10 +1833,17 @@ $messages['bs'] = array(
 	'user-profile-userlevels-link' => 'Korisnički nivoi',
 	'user-no-images' => 'Nijedna slika nije postavljena',
 	'edit-profile-title' => 'Uredite Vaš profil',
+	'edit-profiles-title' => 'Uređivanje profila',
 	'user-page-link' => 'Korisnička stranica',
 	'user-social-profile-link' => 'Društveni profil',
 	'user-wiki-link' => 'Wiki korisnička stranica',
+	'update_profile_nav' => '* Special:UpdateProfile|Lični podaci
+* Special:UpdateProfile/personal|Drugi podaci
+* Special:UpdateProfile/custom|Podešeni podaci
+* Special:UploadAvatar|Avatar
+* Special:UpdateProfile/preferences|Postavke',
 	'user-type-toggle-old' => 'Koristi korisničku stranicu na wiki',
+	'user-type-toggle-new' => 'Koristi društvenu korisničku stranicu',
 	'user-board-login-message' => 'Morate biti <a href="$1">prijavljeni</a> da biste slali poruke drugim korisnicima',
 	'removeavatar' => 'Ukloni avatara',
 	'givegift' => 'Pošalji poklon',
@@ -1832,8 +1853,16 @@ $messages['bs'] = array(
 	'avatarupload-currentavatar' => 'Trenutni avatar od $1',
 	'avatarupload-removesuccess' => 'Avatar je uspješno uklonjen',
 	'avatarupload-removeanother' => 'Ukloni slijedeći',
+	'profilelogpage' => 'Zapisnik uređivanja korisničkog profila',
+	'profilelogpagetext' => 'Ovo je zapisnik uređivanja korisničkog profila',
+	'user-profile-edit-profile' => 'je uredio $1 profil',
+	'avatarlogpage' => 'Zapisnik postavljanja avatara',
+	'avatarlogpagetext' => 'Ovo je zapisnik postavljanja korisničkih avatara',
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'postavio novi avatar',
+	'user-profile-picture-log-delete-entry' => 'je obrisao avatar od $1',
+	'right-avatarremove' => 'Uklanjanje korisničkih avatara',
+	'right-editothersprofiles' => 'Ažuriranje društvenih profila drugih korisnika',
 );
 
 /** Catalan (Català)
@@ -1945,12 +1974,13 @@ $messages['ce'] = array(
 );
 
 /** Sorani (کوردی)
+ * @author Asoxor
  * @author Marmzok
  */
 $messages['ckb'] = array(
 	'user-awards-title' => 'خەڵاتەکان',
 	'user-gifts-title' => 'پێشکەشیەکان',
-	'user-view-all' => 'دیتنی هەموو',
+	'user-view-all' => 'ھەموویان ببینە',
 	'user-upload-image' => 'بارکردنی وێنە',
 	'user-edit-this' => 'دەستکاری کردنی ئەمە',
 	'user-send-message' => 'ناردنی پەیامێک',

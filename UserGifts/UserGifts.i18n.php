@@ -2641,6 +2641,7 @@ $messages['kn'] = array(
 	'g-cancel' => 'ರದ್ದು ಮಾಡು',
 	'g-main-page' => 'ಮುಖ್ಯ ಪುಟ',
 	'g-new' => 'ಹೊಸ',
+	'g-next' => 'ಮುಂದಿನ',
 );
 
 /** Colognian (Ripoarisch)
