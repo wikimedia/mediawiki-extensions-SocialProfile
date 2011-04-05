@@ -2018,7 +2018,7 @@ De e-mail jescheck kriß.',
  */
 $messages['lb'] = array(
 	'boardblastlogintitle' => 'Dir musst ageloggt si fir Messagen a grousser Zuel op Panneauen ze schécken',
-	'boardblastlogintext' => 'Fir d\'Fonctioun "board blast" ze benotze musst Dir <a href="index.php?title=Special:UserLogin">ageloggt</a> sinn.',
+	'boardblastlogintext' => 'Fir d\'Fonctioun "board blast" ze benotze musst Dir [[Special:UserLogin|ageloggt sinn]].',
 	'messagesenttitle' => 'Geschéckte Messagen',
 	'boardblasttitle' => "Messagen a grousser Zuel op d'Panneaue schécken",
 	'boardblaststep1' => '1. Schrëtt: Schreiwt äre Message',
@@ -2734,8 +2734,7 @@ $messages['ps'] = array(
  */
 $messages['pt'] = array(
 	'boardblastlogintitle' => 'Tem de estar autenticado para enviar recados',
-	'boardblastlogintext' => 'Para enviar recados tem de
-<a href="index.php?title=Special:UserLogin">autenticar-se</a>.',
+	'boardblastlogintext' => 'Para enviar recados tem de [[Special:UserLogin|autenticar-se]].',
 	'messagesenttitle' => 'Mensagens enviadas',
 	'boardblasttitle' => 'Enviar recado',
 	'boardblaststep1' => 'Passo 1 - Escreva a sua mensagem',
