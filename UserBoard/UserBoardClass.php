@@ -149,11 +149,12 @@ class UserBoard {
 	 * @return Integer: amount of new messages
 	 */
 	static function getNewMessageCountDB( $user_id ) {
+		global $wgMemc;
+
 		wfDebug( "Got new message count for id $user_id from DB\n" );
 
-		global $wgMemc;
 		$key = wfMemcKey( 'user', 'newboardmessage', $user_id );
-		$new_count = 0;
+		$newCount = 0;
 		/* @todo FIXME: why is this commented out? This obviously should be
 		enabled, because without this, this function is basically identical
 		to clearNewMessagesCount...
@@ -165,13 +166,13 @@ class UserBoard {
 			__METHOD__
 		);
 		if ( $s !== false ) {
-			$new_count = $s->count;
+			$newCount = $s->count;
 		}
 		*/
 
-		$wgMemc->set( $key, $new_count );
+		$wgMemc->set( $key, $newCount );
 
-		return $new_count;
+		return $newCount;
 	}
 
 	/**
@@ -185,7 +186,6 @@ class UserBoard {
 	 * @return Integer: amount of new messages
 	 */
 	static function getNewMessageCount( $user_id ) {
-		global $wgMemc;
 		$data = self::getNewMessageCountCache( $user_id );
 
 		if ( $data != '' ) {
@@ -253,6 +253,19 @@ class UserBoard {
 		}
 	}
 
+	/**
+	 * Get the user board messages for the user with the ID $user_id.
+	 *
+	 * @todo FIXME: rewrite this function to be compatible with non-MySQL DBMS
+	 * @param $user_id Integer: user ID number
+	 * @param $user_id_2 Integer: user ID number of the second user; only used
+	 *                            in board-to-board stuff
+	 * @param $limit Integer: used to build the LIMIT and OFFSET for the SQL
+	 *                        query
+	 * @param $page Integer: used to build the LIMIT and OFFSET for the SQL
+	 *                       query
+	 * @return Array: array of user board messages
+	 */
 	public function getUserBoardMessages( $user_id, $user_id_2 = 0, $limit = 0, $page = 0 ) {
 		global $wgUser, $wgOut, $wgTitle;
 		$dbr = wfGetDB( DB_SLAVE );
@@ -269,12 +282,12 @@ class UserBoard {
 			$user_sql = "( (ub_user_id={$user_id} AND ub_user_id_from={$user_id_2}) OR
 					(ub_user_id={$user_id_2} AND ub_user_id_from={$user_id}) )";
 			if ( !( $user_id == $wgUser->getID() || $user_id_2 == $wgUser->getID() ) ) {
-				$user_sql .= " AND ub_type = 0 ";
+				$user_sql .= ' AND ub_type = 0 ';
 			}
 		} else {
 			$user_sql = "ub_user_id = {$user_id}";
 			if ( $user_id != $wgUser->getID() ) {
-				$user_sql .= " AND ub_type = 0 ";
+				$user_sql .= ' AND ub_type = 0 ';
 			}
 			if ( $wgUser->isLoggedIn() ) {
 				$user_sql .= " OR (ub_user_id={$user_id} AND ub_user_id_from={$wgUser->getID() }) ";
@@ -308,17 +321,27 @@ class UserBoard {
 		return $messages;
 	}
 
+	/**
+	 * Get the amount of board-to-board messages sent between the users whose
+	 * IDs are $user_id and $user_id_2.
+	 *
+	 * @todo FIXME: rewrite this function to be compatible with non-MySQL DBMS
+	 * @param $user_id Integer: user ID of the first user
+	 * @param $user_id_2 Integer: user ID of the second user
+	 * @return Integer: the amount of board-to-board messages
+	 */
 	public function getUserBoardToBoardCount( $user_id, $user_id_2 ) {
 		global $wgUser;
+
 		$dbr = wfGetDB( DB_SLAVE );
 
 		$user_sql = " ( (ub_user_id={$user_id} AND ub_user_id_from={$user_id_2}) OR
 					(ub_user_id={$user_id_2} AND ub_user_id_from={$user_id}) )";
 
 		if ( !( $user_id == $wgUser->getID() || $user_id_2 == $wgUser->getID() ) ) {
-			$user_sql .= " AND ub_type = 0 ";
+			$user_sql .= ' AND ub_type = 0 ';
 		}
-		$sql = "SELECT count(*) AS the_count
+		$sql = "SELECT COUNT(*) AS the_count
 			FROM {$dbr->tableName( 'user_board' )}
 			WHERE {$user_sql}";
 
@@ -336,7 +359,6 @@ class UserBoard {
 		$output = ''; // Prevent E_NOTICE
 		$messages = $this->getUserBoardMessages( $user_id, $user_id_2, $count, $page );
 		if ( $messages ) {
-
 			foreach ( $messages as $message ) {
 				$user = Title::makeTitle( NS_USER, $message['user_name_from'] );
 				$avatar = new wAvatar( $message['user_id_from'], 'm' );
@@ -347,12 +369,15 @@ class UserBoard {
 				$delete_link = '';
 
 				if ( $wgUser->getName() != $message['user_name_from'] ) {
-					$board_to_board = '<a href="' . UserBoard::getUserBoardToBoardURL( $message['user_name'], $message['user_name_from'] ) . '">' . wfMsgHtml( 'userboard_board-to-board' ) . '</a>';
-					$board_link = '<a href="' . UserBoard::getUserBoardURL( $message['user_name_from'] ) . '">' . wfMsgHtml( 'userboard_sendmessage', $message['user_name_from'] ) . '</a>';
+					$board_to_board = '<a href="' . UserBoard::getUserBoardToBoardURL( $message['user_name'], $message['user_name_from'] ) . '">' .
+						wfMsgHtml( 'userboard_board-to-board' ) . '</a>';
+					$board_link = '<a href="' . UserBoard::getUserBoardURL( $message['user_name_from'] ) . '">' .
+						wfMsgHtml( 'userboard_sendmessage', $message['user_name_from'] ) . '</a>';
 				}
 				if ( $wgUser->getName() == $message['user_name'] || $wgUser->isAllowed( 'userboard-delete' ) ) {
 					$delete_link = "<span class=\"user-board-red\">
-							<a href=\"javascript:void(0);\" onclick=\"javascript:delete_message({$message['id']})\">" . wfMsgHtml( 'userboard_delete' ) . '</a>
+							<a href=\"javascript:void(0);\" onclick=\"javascript:delete_message({$message['id']})\">" .
+								wfMsgHtml( 'userboard_delete' ) . '</a>
 						</span>';
 				}
 				if ( $message['type'] == 1 ) {
@@ -386,8 +411,8 @@ class UserBoard {
 				</div>";
 			}
 		} elseif ( $wgUser->getName() == $wgTitle->getText() ) {
-			$output .= '<div class="no-info-container">'
-				. wfMsgHtml( 'userboard_nomessages' ) .
+			$output .= '<div class="no-info-container">' .
+				wfMsgHtml( 'userboard_nomessages' ) .
 			'</div>';
 
 		}
