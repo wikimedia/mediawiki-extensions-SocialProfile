@@ -82,18 +82,23 @@ class UserGifts {
 		$user = User::newFromId( $user_id_to );
 		$user->loadFromDatabase();
 		if ( $user->isEmailConfirmed() && $user->getIntOption( 'notifygift', 1 ) ) {
-			$gifts_link = SpecialPage::getTitleFor( 'ViewGifts' );
-			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
+			$giftsLink = SpecialPage::getTitleFor( 'ViewGifts' );
+			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
+			if ( trim( $user->getRealName() ) ) {
+				$name = $user->getRealName();
+			} else {
+				$name = $user->getName();
+			}
 			$subject = wfMsgExt( 'gift_received_subject', 'parsemag',
 				$user_from,
 				$gift['gift_name']
 			);
 			$body = wfMsgExt( 'gift_received_body', 'parsemag',
-				( ( trim( $user->getRealName() ) ) ? $user->getRealName() : $user->getName() ),
+				$name,
 				$user_from,
 				$gift['gift_name'],
-				$gifts_link->getFullURL(),
-				$update_profile_link->getFullURL()
+				$giftsLink->getFullURL(),
+				$updateProfileLink->getFullURL()
 			);
 
 			$user->sendMail( $subject, $body );
@@ -283,7 +288,7 @@ class UserGifts {
 		global $wgMemc;
 		$key = wfMemcKey( 'user_gifts', 'new_count', $user_id );
 		$dbr = wfGetDB( DB_SLAVE );
-		$new_gift_count = 0;
+		$newGiftCount = 0;
 		$s = $dbr->selectRow(
 			'user_gift',
 			array( 'COUNT(*) AS count' ),
@@ -291,12 +296,12 @@ class UserGifts {
 			__METHOD__
 		);
 		if ( $s !== false ) {
-			$new_gift_count = $s->count;
+			$newGiftCount = $s->count;
 		}
 
-		$wgMemc->set( $key, $new_gift_count );
+		$wgMemc->set( $key, $newGiftCount );
 
-		return $new_gift_count;
+		return $newGiftCount;
 	}
 
 	public function getUserGiftList( $type, $limit = 0, $page = 0 ) {
@@ -407,24 +412,24 @@ class UserGifts {
 	/**
 	 * Gets the amount of gifts a user has.
 	 *
-	 * @param $user_name Mixed: username whose gift count we're looking up
+	 * @param $userName Mixed: username whose gift count we're looking up
 	 * @return Integer: amount of gifts the specified user has
 	 */
-	static function getGiftCountByUsername( $user_name ) {
+	static function getGiftCountByUsername( $userName ) {
 		$dbr = wfGetDB( DB_SLAVE );
-		$user_id = User::idFromName( $user_name );
+		$userId = User::idFromName( $userName );
 		$res = $dbr->select(
 			'user_gift',
 			'COUNT(*) AS count',
-			array( "ug_user_id_to = {$user_id}" ),
+			array( "ug_user_id_to = {$userId}" ),
 			__METHOD__,
 			array( 'LIMIT' => 1, 'OFFSET' => 0 )
 		);
 		$row = $dbr->fetchObject( $res );
-		$gift_count = 0;
+		$giftCount = 0;
 		if ( $row ) {
-			$gift_count = $row->count;
+			$giftCount = $row->count;
 		}
-		return $gift_count;
+		return $giftCount;
 	}
 }
