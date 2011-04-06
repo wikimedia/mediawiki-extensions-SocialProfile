@@ -26,24 +26,17 @@ class ViewSystemGift extends UnlistedSpecialPage {
 		$wgOut->addExtensionStyle( $wgSystemGiftsScripts . '/SystemGift.css' );
 
 		$output = ''; // Prevent E_NOTICE
-		$user_name = ''; // Prevent E_NOTICE
 
 		// If gift ID wasn't passed in the URL parameters or if it's not
 		// numeric, display an error message
-		$gift_id = $wgRequest->getVal( 'gift_id' );
-		if ( !$gift_id || !is_numeric( $gift_id ) ) {
+		$giftId = $wgRequest->getInt( 'gift_id' );
+		if ( !$giftId || !is_numeric( $giftId ) ) {
 			$wgOut->setPageTitle( wfMsg( 'ga-error-title' ) );
 			$wgOut->addHTML( wfMsg( 'ga-error-message-invalid-link' ) );
 			return false;
 		}
 
-		// We assume the current user by default
-		if ( !$user_name ) {
-			$user_name = $wgUser->getName();
-		}
-
-		$gift = UserSystemGifts::getUserGift( $gift_id );
-		$id = User::idFromName( $user_name );
+		$gift = UserSystemGifts::getUserGift( $giftId );
 
 		if ( $gift ) {
 			if ( $gift['status'] == 1 ) {
@@ -74,22 +67,22 @@ class ViewSystemGift extends UnlistedSpecialPage {
 				)
 			);
 
-			$output .= $wgOut->setPageTitle( wfMsg( 'ga-gift-title', $gift['user_name'], $gift['name'] ) );
+			$wgOut->setPageTitle( wfMsg( 'ga-gift-title', $gift['user_name'], $gift['name'] ) );
 
 			$profileURL = Title::makeTitle( NS_USER, $gift['user_name'] )->escapeFullURL();
-			$output .= '<div class="back-links">'
-				. wfMsg( 'ga-back-link', $profileURL, $gift['user_name'] ) .
+			$output .= '<div class="back-links">' .
+				wfMsg( 'ga-back-link', $profileURL, $gift['user_name'] ) .
 			'</div>';
 
 			$message = $wgOut->parse( trim( $gift['description'] ), false );
 			$output .= '<div class="ga-description-container">';
 
-			$gift_image = "<img src=\"{$wgUploadPath}/awards/" .
+			$giftImage = "<img src=\"{$wgUploadPath}/awards/" .
 				SystemGifts::getGiftImage( $gift['gift_id'], 'l' ) .
 				'" border="0" alt=""/>';
 
 			$output .= "<div class=\"ga-description\">
-					{$gift_image}
+					{$giftImage}
 					<div class=\"ga-name\">{$gift['name']}</div>
 					<div class=\"ga-timestamp\">({$gift['timestamp']})</div>
 					<div class=\"ga-description-message\">\"{$message}\"</div>";
@@ -97,19 +90,23 @@ class ViewSystemGift extends UnlistedSpecialPage {
 				</div>';
 
 			$output .= '<div class="ga-recent">
-					<div class="ga-recent-title">'
-						. wfMsg( 'ga-recent-recipients-award' ) .
+					<div class="ga-recent-title">' .
+						wfMsg( 'ga-recent-recipients-award' ) .
 					'</div>
-					<div class="ga-gift-count">'
-						. wfMsgExt( 'ga-gift-given-count', 'parsemag', $gift['gift_count'] ) .
+					<div class="ga-gift-count">' .
+						wfMsgExt(
+							'ga-gift-given-count',
+							'parsemag',
+							$gift['gift_count']
+						) .
 					'</div>';
 
 			foreach ( $res as $row ) {
-				$user_to_id = $row->sg_user_id;
-				$avatar = new wAvatar( $user_to_id, 'ml' );
-				$user_name_link = Title::makeTitle( NS_USER, $row->sg_user_name );
+				$userToId = $row->sg_user_id;
+				$avatar = new wAvatar( $userToId, 'ml' );
+				$userNameLink = Title::makeTitle( NS_USER, $row->sg_user_name );
 
-				$output .= '<a href="' . $user_name_link->escapeFullURL() . "\">
+				$output .= '<a href="' . $userNameLink->escapeFullURL() . "\">
 					{$avatar->getAvatarURL()}
 				</a>";
 			}
@@ -119,7 +116,6 @@ class ViewSystemGift extends UnlistedSpecialPage {
 			</div>';
 
 			$wgOut->addHTML( $output );
-
 		} else {
 			$wgOut->setPageTitle( wfMsg( 'ga-error-title' ) );
 			$wgOut->addHTML( wfMsg( 'ga-error-message-invalid-link' ) );

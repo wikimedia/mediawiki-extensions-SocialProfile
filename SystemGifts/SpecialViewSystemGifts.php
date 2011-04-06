@@ -21,7 +21,7 @@ class ViewSystemGifts extends SpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgUser, $wgOut, $wgRequest, $wgMemc, $wgUploadPath, $wgSystemGiftsScripts;
+		global $wgUser, $wgOut, $wgRequest, $wgUploadPath, $wgSystemGiftsScripts;
 
 		$wgOut->addExtensionStyle( $wgSystemGiftsScripts . '/SystemGift.css' );
 
@@ -41,14 +41,12 @@ class ViewSystemGifts extends SpecialPage {
 		}
 
 		/**
-		 * If no user is set in the URL, we assume its the current user
+		 * If no user is set in the URL, we assume it's the current user
 		 */
 		if ( !$user_name ) {
 			$user_name = $wgUser->getName();
 		}
 		$user_id = User::idFromName( $user_name );
-		$user = Title::makeTitle( NS_USER, $user_name );
-		$user_safe = urlencode( $user_name );
 
 		/**
 		 * Error message for username that does not exist (from URL)
@@ -76,19 +74,20 @@ class ViewSystemGifts extends SpecialPage {
 		$gifts = $rel->getUserGiftList( 0, $per_page, $page );
 		$total = $rel->getGiftCountByUsername( $user_name );
 
-		$relationship = UserRelationship::getUserRelationshipByID( $user_id, $wgUser->getID() );
-
 		/**
 		 * Show gift count for user
 		 */
-		$output .= $wgOut->setPageTitle( wfMsg( 'ga-title', $rel->user_name ) );
+		$wgOut->setPageTitle( wfMsg( 'ga-title', $rel->user_name ) );
 
-		$output .= '<div class="back-links">'
-			. wfMsg( 'ga-back-link', $wgUser->getUserPage()->escapeFullURL(), $rel->user_name ) .
-		'</div>';
+		$output .= '<div class="back-links">' .
+			wfMsg(
+				'ga-back-link',
+				$wgUser->getUserPage()->escapeFullURL(),
+				$rel->user_name
+			) . '</div>';
 
-		$output .= '<div class="ga-count">'
-			. wfMsgExt( 'ga-count', 'parsemag', $rel->user_name, $total ) .
+		$output .= '<div class="ga-count">' .
+			wfMsgExt( 'ga-count', 'parsemag', $rel->user_name, $total ) .
 		'</div>';
 
 		// Safelinks
@@ -137,8 +136,7 @@ class ViewSystemGifts extends SpecialPage {
 			$output .= '<div class="page-nav">';
 			if ( $page > 1 ) {
 				$output .= '<a href="' . $page_link->escapeFullURL(
-					'user=' . $user_name . '&rel_type=' . $rel_type .
-					'&page=' . ( $page - 1 ) ) . '">' .
+					'user=' . $user_name . '&page=' . ( $page - 1 ) ) . '">' .
 					wfMsg( 'ga-previous' ) . '</a> ';
 			}
 
@@ -157,15 +155,14 @@ class ViewSystemGifts extends SpecialPage {
 					$output .= ( $i . ' ' );
 				} else {
 					$output .= '<a href="' . $page_link->escapeFullURL(
-						'user=' . $user_name . '&rel_type=' . $rel_type .
-						'&page=' . $i ) . "\">$i</a> ";
+						'user=' . $user_name . '&page=' . $i ) . "\">$i</a> ";
 				}
 			}
 
 			if ( ( $total - ( $per_page * $page ) ) > 0 ) {
 				$output .= ' <a href="' . $page_link->escapeFullURL(
-					'user=' . $user_name . '&rel_type=' . $rel_type .
-					'&page=' . ( $page + 1 ) ) . '">' . wfMsg( 'ga-next' ) .
+					'user=' . $user_name . '&page=' . ( $page + 1 ) ) . '">' .
+					wfMsg( 'ga-next' ) .
 				'</a>';
 			}
 			$output .= '</div>';
