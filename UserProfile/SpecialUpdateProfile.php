@@ -61,13 +61,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		// This feature is only available for logged-in users.
 		if ( !$wgUser->isLoggedIn() ) {
-			$wgOut->setPageTitle( wfMsgForContent( 'user-profile-update-notloggedin-title' ) );
-			$wgOut->addHTML(
-				wfMsgForContent( 'user-profile-update-notloggedin-text',
-					SpecialPage::getTitleFor( 'Userlogin' )->escapeFullURL(),
-					SpecialPage::getTitleFor( 'Userlogin', 'signup' )->escapeFullURL()
-				)
-			);
+			$wgOut->setPageTitle( wfMsg( 'user-profile-update-notloggedin-title' ) );
+			$wgOut->addWikiMsg( 'user-profile-update-notloggedin-text' );
 			return;
 		}
 

@@ -89,7 +89,7 @@ $messages['en'] = array(
 	'user-recent-system-gift' => 'Received an award',
 	'user-profile-update-notloggedin-title' => 'Cannot edit your profile without being logged in',
 	'user-profile-update-notloggedin-text' => 'You cannot edit your profile without being logged in.
-Click <a href="$1">here</a> to login or click <a href="$2">here</a> to register.',
+Click [[Special:UserLogin|here]] to login or click [[Special:UserLogin/signup|here]] to register.',
 	'user-profile-update-saved' => 'Your profile has been saved',
 	'user-profile-edit-profile-update-saved' => 'The user\'s profile was successfully saved',
 	'user-profile-update-log-section' => 'changed section',
