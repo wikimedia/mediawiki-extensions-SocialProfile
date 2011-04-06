@@ -56,7 +56,7 @@ class RemoveAvatar extends SpecialPage {
 
 		// If the request was POSTed, then delete the avatar
 		if ( $wgRequest->wasPosted() ) {
-			$user_id = $wgRequest->getVal( 'user_id' );
+			$user_id = $wgRequest->getInt( 'user_id' );
 			$user_deleted = User::newFromId( $user_id );
 			$user_deleted->loadFromDatabase();
 
@@ -74,8 +74,13 @@ class RemoveAvatar extends SpecialPage {
 				$wgUser->getUserPage(),
 				wfMsg( 'user-profile-picture-log-delete-entry', $user_deleted->getName() )
 			);
-			$wgOut->addHTML( '<div>' . wfMsg( 'avatarupload-removesuccess' ) . '</div>' );
-			$wgOut->addHTML( '<div><a href="' . $this->title->escapeFullURL() . '">' . wfMsg( 'avatarupload-removeanother' ) . '</a></div>' );
+			$wgOut->addHTML(
+				'<div>' . wfMsg( 'avatarupload-removesuccess' ) . '</div>'
+			);
+			$wgOut->addHTML(
+				'<div><a href="' . $this->title->escapeFullURL() . '">' .
+					wfMsg( 'avatarupload-removeanother' ) . '</a></div>'
+			);
 		} else {
 			if ( $user ) {
 				$wgOut->addHTML( $this->showUserAvatar( $user ) );
@@ -129,6 +134,7 @@ class RemoveAvatar extends SpecialPage {
 	 */
 	private function deleteImage( $id, $size ) {
 		global $wgUploadDirectory, $wgDBname, $wgMemc;
+
 		$avatar = new wAvatar( $id, $size );
 		$files = glob( $wgUploadDirectory . '/avatars/' . $wgDBname . '_' . $id .  '_' . $size . "*" );
 		wfSuppressWarnings();

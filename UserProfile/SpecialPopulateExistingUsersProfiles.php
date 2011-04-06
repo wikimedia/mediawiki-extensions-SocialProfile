@@ -14,7 +14,7 @@
 class SpecialPopulateUserProfiles extends SpecialPage {
 
 	/**
-	 * Constructor
+	 * Constructor -- set up the new special page
 	 */
 	public function __construct() {
 		parent::__construct( 'PopulateUserProfiles' );
@@ -26,11 +26,24 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 	 * @param $params Mixed: parameter(s) passed to the page or null
 	 */
 	public function execute( $params ) {
-		global $wgRequest, $wgOut, $wgUser;
+		global $wgOut, $wgUser;
 
+		// Check permissions
 		if ( !in_array( 'staff', $wgUser->getEffectiveGroups() ) ) {
 			throw new ErrorPageError( 'error', 'badaccess' );
 			return '';
+		}
+
+		// Show a message if the database is in read-only mode
+		if ( wfReadOnly() ) {
+			$wgOut->readOnlyPage();
+			return;
+		}
+
+		// If user is blocked, they don't need to access this page
+		if ( $wgUser->isBlocked() ) {
+			$wgOut->blockedPage();
+			return;
 		}
 
 		$dbw = wfGetDB( DB_MASTER );
@@ -43,7 +56,7 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 
 		$count = 0; // To avoid an annoying PHP notice
 
-		while ( $row = $dbw->fetchObject( $res ) ) {
+		foreach( $res as $row ) {
 			$user_name_title = Title::newFromDBkey( $row->page_title );
 			$user_name = $user_name_title->getText();
 			$user_id = User::idFromName( $user_name );

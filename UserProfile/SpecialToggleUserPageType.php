@@ -13,7 +13,7 @@
 class SpecialToggleUserPage extends UnlistedSpecialPage {
 
 	/**
-	 * Constructor
+	 * Constructor -- set up the new special page
 	 */
 	public function __construct() {
 		parent::__construct( 'ToggleUserPage' );
@@ -25,15 +25,26 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 	 * @param $params Mixed: parameter(s) passed to the page or null
 	 */
 	public function execute( $params ) {
-		global $wgRequest, $wgOut, $wgUser, $wgMemc;
+		global $wgOut, $wgUser, $wgMemc;
 
 		// This feature is only available to logged-in users.
 		if ( !$wgUser->isLoggedIn() ) {
 			throw new ErrorPageError( 'error', 'badaccess' );
 		}
 
+		// Show a message if the database is in read-only mode
+		if ( wfReadOnly() ) {
+			$wgOut->readOnlyPage();
+			return;
+		}
+
 		$dbr = wfGetDB( DB_MASTER );
-		$s = $dbr->selectRow( 'user_profile', array( 'up_user_id' ), array( 'up_user_id' => $wgUser->getID() ), __METHOD__ );
+		$s = $dbr->selectRow(
+			'user_profile',
+			array( 'up_user_id' ),
+			array( 'up_user_id' => $wgUser->getID() ),
+			__METHOD__
+		);
 		if ( $s === false ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$dbw->insert( 'user_profile',
