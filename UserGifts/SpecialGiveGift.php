@@ -1,4 +1,10 @@
 <?php
+/**
+ * Special:GiveGift -- a special page for sending out user-to-user gifts
+ *
+ * @file
+ * @ingroup Extensions
+ */
 
 class GiveGift extends SpecialPage {
 
@@ -8,7 +14,6 @@ class GiveGift extends SpecialPage {
 	public function __construct() {
 		parent::__construct( 'GiveGift' );
 	}
-
 
 	/**
 	 * Show the special page
@@ -23,16 +28,16 @@ class GiveGift extends SpecialPage {
 		$wgOut->addScriptFile( $wgUserGiftsScripts . '/UserGifts.js' );
 		$wgOut->addExtensionStyle( $wgUserGiftsScripts . '/UserGifts.css' );
 
-		$usertitle = Title::newFromDBkey( $wgRequest->getVal( 'user' ) );
-		if ( !$usertitle ) {
+		$userTitle = Title::newFromDBkey( $wgRequest->getVal( 'user' ) );
+		if ( !$userTitle ) {
 			$wgOut->addHTML( $this->displayFormNoUser() );
 			return false;
 		}
 
 		$user_title = Title::makeTitle( NS_USER, $wgRequest->getVal( 'user' ) );
-		$this->user_name_to = $usertitle->getText();
+		$this->user_name_to = $userTitle->getText();
 		$this->user_id_to = User::idFromName( $this->user_name_to );
-		$gift_id = $wgRequest->getVal( 'gift_id' );
+		$giftId = $wgRequest->getInt( 'gift_id' );
 		$out = '';
 
 		if ( $wgUser->getID() === $this->user_id_to ) {
@@ -51,16 +56,14 @@ class GiveGift extends SpecialPage {
 			$out .= wfMsg( 'g-error-message-login' );
 			$wgOut->addHTML( $out );
 		} else {
-
 			$gift = new UserGifts( $wgUser->getName() );
 
 			if ( $wgRequest->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
-
 				$_SESSION['alreadysubmitted'] = true;
 
 				$ug_gift_id = $gift->sendGift(
 					$this->user_name_to,
-					$wgRequest->getVal( 'gift_id' ),
+					$wgRequest->getInt( 'gift_id' ),
 					0,
 					$wgRequest->getVal( 'message' )
 				);
@@ -72,12 +75,12 @@ class GiveGift extends SpecialPage {
 				$data = $wgMemc->get( $key );
 
 				// check to see if this type of gift is in the unique list
-				$last_unique_gifts = $data;
+				$lastUniqueGifts = $data;
 				$found = 1;
 
-				if ( is_array( $last_unique_gifts ) ) {
-					foreach ( $last_unique_gifts as $last_unique_gift ) {
-						if ( $wgRequest->getVal( 'gift_id' ) == $last_unique_gift['gift_id'] ) {
+				if ( is_array( $lastUniqueGifts ) ) {
+					foreach ( $lastUniqueGifts as $lastUniqueGift ) {
+						if ( $wgRequest->getInt( 'gift_id' ) == $lastUniqueGift['gift_id'] ) {
 							$found = 0;
 						}
 					}
@@ -85,38 +88,44 @@ class GiveGift extends SpecialPage {
 
 				if ( $found ) {
 					// add new unique to array
-					$last_unique_gifts[] = array(
+					$lastUniqueGifts[] = array(
 						'id' => $ug_gift_id,
-						'gift_id' => $wgRequest->getVal( 'gift_id' )
+						'gift_id' => $wgRequest->getInt( 'gift_id' )
 					);
 
 					// remove oldest value
-					if ( count( $last_unique_gifts ) > 4 ) {
-						array_shift( $last_unique_gifts );
+					if ( count( $lastUniqueGifts ) > 4 ) {
+						array_shift( $lastUniqueGifts );
 					}
 
 					// reset the cache
-					$wgMemc->set( $key, $last_unique_gifts );
+					$wgMemc->set( $key, $lastUniqueGifts );
 				}
 
 				$sent_gift = UserGifts::getUserGift( $ug_gift_id );
-				$gift_image = '<img src="' . $wgUploadPath . '/awards/' . Gifts::getGiftImage( $sent_gift['gift_id'], 'l' ) . '" border="0" alt="" />';
+				$gift_image = '<img src="' . $wgUploadPath . '/awards/' . 
+					Gifts::getGiftImage( $sent_gift['gift_id'], 'l' ) .
+					'" border="0" alt="" />';
 
 				$output .= $wgOut->setPageTitle( wfMsg( 'g-sent-title', $this->user_name_to ) );
 
 				$output .= '<div class="back-links">
-					<a href="' . $user_title->escapeFullURL() . '">' . wfMsg( 'g-back-link', $this->user_name_to ) . '</a>
+					<a href="' . $user_title->escapeFullURL() . '">' .
+						wfMsg( 'g-back-link', $this->user_name_to ) .
+					'</a>
 				</div>
-				<div class="g-message">'
-					. wfMsg( 'g-sent-message', $this->user_name_to ) .
+				<div class="g-message">' .
+					wfMsg( 'g-sent-message', $this->user_name_to ) .
 				'</div>
-				<div class="g-container">'
-					. $gift_image .
+				<div class="g-container">' .
+					$gift_image .
 				'<div class="g-title">' . $sent_gift['name'] . '</div>';
-					if ( $sent_gift['message'] ) {
-						$output .= '<div class="g-user-message">' . $sent_gift['message'] . '</div>';
-					}
-					$output .= '</div>
+				if ( $sent_gift['message'] ) {
+					$output .= '<div class="g-user-message">' .
+						$sent_gift['message'] .
+					'</div>';
+				}
+				$output .= '</div>
 				<div class="cleared"></div>
 				<div class="g-buttons">
 					<input type="button" class="site-button" value="' . wfMsg( 'g-main-page' ) . '" size="20" onclick="window.location=\'index.php?title=' . wfMsgForContent( 'mainpage' ) . '\'" />
@@ -127,7 +136,7 @@ class GiveGift extends SpecialPage {
 			} else {
 				$_SESSION['alreadysubmitted'] = false;
 
-				if ( $gift_id ) {
+				if ( $giftId ) {
 					$wgOut->addHTML( $this->displayFormSingle() );
 				} else {
 					$wgOut->addHTML( $this->displayFormAll() );
@@ -136,18 +145,24 @@ class GiveGift extends SpecialPage {
 		}
 	}
 
+	/**
+	 * Display the form for sending out a single gift.
+	 * Relies on the gift_id URL parameter and bails out if it's not there.
+	 *
+	 * @return String: HTML
+	 */
 	function displayFormSingle() {
 		global $wgUser, $wgOut, $wgRequest, $wgUploadPath;
 
-		$gift_id = $wgRequest->getVal( 'gift_id' );
+		$giftId = $wgRequest->getInt( 'gift_id' );
 
-		if ( !$gift_id || !is_numeric( $gift_id ) ) {
+		if ( !$giftId || !is_numeric( $giftId ) ) {
 			$wgOut->setPageTitle( wfMsg( 'g-error-title' ) );
 			$wgOut->addHTML( wfMsg( 'g-error-message-invalid-link' ) );
 			return false;
 		}
 
-		$gift = Gifts::getGift( $gift_id );
+		$gift = Gifts::getGift( $giftId );
 
 		if ( empty( $gift ) ) {
 			return false;
@@ -159,28 +174,35 @@ class GiveGift extends SpecialPage {
 
 		// Safe titles
 		$user = Title::makeTitle( NS_USER, $this->user_name_to );
-		$give_gift_link = SpecialPage::getTitleFor( 'GiveGift' );
+		$giveGiftLink = SpecialPage::getTitleFor( 'GiveGift' );
 
 		$wgOut->setPageTitle( wfMsg( 'g-give-to-user-title', $gift['gift_name'], $this->user_name_to ) );
 
-		$gift_image = "<img id=\"gift_image_{$gift['gift_id']}\" src=\"{$wgUploadPath}/awards/" . Gifts::getGiftImage( $gift['gift_id'], 'l' ) . '" border="0" alt="" />';
+		$gift_image = "<img id=\"gift_image_{$gift['gift_id']}\" src=\"{$wgUploadPath}/awards/" .
+			Gifts::getGiftImage( $gift['gift_id'], 'l' ) .
+			'" border="0" alt="" />';
 
 		$output = '<form action="" method="post" enctype="multipart/form-data" name="gift">
-			<div class="g-message">'
-				. wfMsg( 'g-give-to-user-message', $this->user_name_to, $give_gift_link->escapeFullURL( 'user=' . $this->user_name_to ) ) .
-			"</div>
+			<div class="g-message">' .
+				wfMsg(
+					'g-give-to-user-message',
+					$this->user_name_to,
+					$giveGiftLink->escapeFullURL( 'user=' . $this->user_name_to )
+				) . "</div>
 			<div id=\"give_gift_{$gift['gift_id']}\" class=\"g-container\">
 				{$gift_image}
 				<div class=\"g-title\">{$gift['gift_name']}</div>";
-				if ( $gift['gift_description'] ) {
-					$output .= '<div class="g-describe">' . $gift['gift_description'] . '</div>';
-				}
-			$output .= '</div>
+		if ( $gift['gift_description'] ) {
+			$output .= '<div class="g-describe">' .
+				$gift['gift_description'] .
+			'</div>';
+		}
+		$output .= '</div>
 			<div class="cleared"></div>
 			<div class="g-add-message">' . wfMsg( 'g-add-message' ) . '</div>
 			<textarea name="message" id="message" rows="4" cols="50"></textarea>
 			<div class="g-buttons">
-				<input type="hidden" name="gift_id" value="' . $gift_id . '" />
+				<input type="hidden" name="gift_id" value="' . $giftId . '" />
 				<input type="hidden" name="user_name" value="' . addslashes( $this->user_name_to ) . '" />
 				<input type="button" class="site-button" value="' . wfMsg( 'g-send-gift' ) . '" size="20" onclick="document.gift.submit()" />
 				<input type="button" class="site-button" value="' . wfMsg( 'g-cancel' ) . '" size="20" onclick="history.go(-1)" />
@@ -190,35 +212,61 @@ class GiveGift extends SpecialPage {
 		return $output;
 	}
 
+	/**
+	 * Display the form for giving out a gift to a user when there was no user
+	 * parameter in the URL.
+	 *
+	 * @return String: HTML
+	 */
 	function displayFormNoUser() {
 		global $wgUser, $wgOut, $wgRequest, $wgFriendingEnabled;
 
 		$output = $wgOut->setPageTitle( wfMsg( 'g-give-no-user-title' ) );
 
+		// @todo FIXME: $wgRequest->getVal()...seriously?
+		// Seems that this should use the proper MW function (maybe
+		// $this->getTitle()->getFullURL() or something) instead.
+		// Maybe that's the reason why I (and other people) frequently have
+		// problems with this special page.
+		// --Jack Phoenix <jack@countervandalism.net>, 6 April 2011
 		$output .= '<form action="" method="get" enctype="multipart/form-data" name="gift">
 			<input type="hidden" name="title" value="' . $wgRequest->getVal( 'title' ) . '" />
-			<div class="g-message">' . wfMsg( 'g-give-no-user-message' ) . '</div>
+			<div class="g-message">' .
+				wfMsg( 'g-give-no-user-message' ) .
+			'</div>
 			<div class="g-give-container">';
 
+			// If friending is enabled, build a dropdown menu of the user's
+			// friends
 			if ( $wgFriendingEnabled ) {
 				$rel = new UserRelationship( $wgUser->getName() );
 				$friends = $rel->getRelationshipList( 1 );
 
 				if ( $friends ) {
-					$output .= '<div class="g-give-title">' . wfMsg( 'g-give-list-friends-title' ) . '</div>
+					$output .= '<div class="g-give-title">' .
+						wfMsg( 'g-give-list-friends-title' ) .
+					'</div>
 					<div class="g-gift-select">
 						<select onchange="javascript:chooseFriend(this.value)">
-						<option value="#" selected="selected">' . wfMsg( 'g-select-a-friend' ) . '</option>';
+						<option value="#" selected="selected">' .
+							wfMsg( 'g-select-a-friend' ) .
+						'</option>';
 					foreach ( $friends as $friend ) {
-						$output .= '<option value="' . urlencode( $friend['user_name'] ) . '">' . $friend['user_name'] . '</option>';
+						$output .= '<option value="' . urlencode( $friend['user_name'] ) . '">' .
+							$friend['user_name'] .
+						'</option>';
 					}
 					$output .= '</select>
 					</div>
-					<div class="g-give-separator">' . wfMsg( 'g-give-separator' ) . '</div>';
+					<div class="g-give-separator">' .
+						wfMsg( 'g-give-separator' ) .
+					'</div>';
 				}
 			}
 
-			$output .= '<div class="g-give-title">' . wfMsg( 'g-give-enter-friend-title' ) . '</div>
+			$output .= '<div class="g-give-title">' .
+				wfMsg( 'g-give-enter-friend-title' ) .
+			'</div>
 			<div class="g-give-textbox">
 				<input type="text" width="85" name="user" value="" />
 				<input class="site-button" type="button" value="' . wfMsg( 'g-give-gift' ) . '" onclick="document.gift.submit()" />
@@ -233,7 +281,7 @@ class GiveGift extends SpecialPage {
 		global $wgUser, $wgOut, $wgRequest, $wgGiveGiftPerRow, $wgUploadPath;
 		$user = Title::makeTitle( NS_USER, $this->user_name_to );
 
-		$page = $wgRequest->getVal( 'page' );
+		$page = $wgRequest->getInt( 'page' );
 		if ( !$page || !is_numeric( $page ) ) {
 			$page = 1;
 		}
@@ -252,25 +300,29 @@ class GiveGift extends SpecialPage {
 			$wgOut->setPageTitle( wfMsg( 'g-give-all-title', $this->user_name_to ) );
 
 			$output .= '<div class="back-links">
-				<a href="' . $user->escapeFullURL() . '">' . wfMsg( 'g-back-link', $this->user_name_to ) . '</a>
+				<a href="' . $user->escapeFullURL() . '">' .
+					wfMsg( 'g-back-link', $this->user_name_to ) .
+				'</a>
 			</div>
-			<div class="g-message">
-				' . wfMsg( 'g-give-all', $this->user_name_to ) . '
-			</div>
+			<div class="g-message">' .
+				wfMsg( 'g-give-all', $this->user_name_to ) .
+			'</div>
 			<form action="" method="post" enctype="multipart/form-data" name="gift">';
 
 			$x = 1;
 
 			foreach ( $gifts as $gift ) {
-				$gift_image = "<img id=\"gift_image_{$gift['id']}\" src=\"{$wgUploadPath}/awards/" . Gifts::getGiftImage( $gift['id'], 'l' ) . '" border="0" alt="" />';
+				$gift_image = "<img id=\"gift_image_{$gift['id']}\" src=\"{$wgUploadPath}/awards/" .
+					Gifts::getGiftImage( $gift['id'], 'l' ) .
+					'" border="0" alt="" />';
 
 				$output .= "<div onclick=\"selectGift({$gift['id']})\" onmouseover=\"highlightGift({$gift['id']})\" onmouseout=\"unHighlightGift({$gift['id']})\" id=\"give_gift_{$gift['id']}\" class=\"g-give-all\">
 					{$gift_image}
 					<div class=\"g-title g-blue\">{$gift['gift_name']}</div>";
-					if ( $gift['gift_description'] ) {
-						$output .= "<div class=\"g-describe\">{$gift['gift_description']}</div>";
-					}
-					$output .= '<div class="cleared"></div>
+				if ( $gift['gift_description'] ) {
+					$output .= "<div class=\"g-describe\">{$gift['gift_description']}</div>";
+				}
+				$output .= '<div class="cleared"></div>
 				</div>';
 				if ( $x == count( $gifts ) || $x != 1 && $x % $per_row == 0 ) {
 					$output .= '<div class="cleared"></div>';
@@ -281,14 +333,14 @@ class GiveGift extends SpecialPage {
 			/**
 			 * Build next/prev nav
 			 */
-			$give_gift_link = SpecialPage::getTitleFor( 'GiveGift' );
+			$giveGiftLink = SpecialPage::getTitleFor( 'GiveGift' );
 
 			$numofpages = $total / $per_page;
 			$user_safe = urlencode( $user->getText() );
 			if ( $numofpages > 1 ) {
 				$output .= '<div class="page-nav">';
 				if ( $page > 1 ) {
-					$output .= '<a href="' . $give_gift_link->escapeFullURL( 'user=' . $user_safe . '&page=' . ( $page - 1 ) ) . '">' . wfMsg( 'g-previous' ) . '</a> ';
+					$output .= '<a href="' . $giveGiftLink->escapeFullURL( 'user=' . $user_safe . '&page=' . ( $page - 1 ) ) . '">' . wfMsg( 'g-previous' ) . '</a> ';
 				}
 
 				if ( ( $total % $per_page ) != 0 ) {
@@ -301,12 +353,12 @@ class GiveGift extends SpecialPage {
 					if ( $i == $page ) {
 						$output .= ( $i . ' ' );
 					} else {
-						$output .= '<a href="' . $give_gift_link->escapeFullURL( 'user=' . $user_safe . '&page=' . $i ) . "\">$i</a> ";
+						$output .= '<a href="' . $giveGiftLink->escapeFullURL( 'user=' . $user_safe . '&page=' . $i ) . "\">$i</a> ";
 					}
 				}
 
 				if ( ( $total - ( $per_page * $page ) ) > 0 ) {
-					$output .= ' <a href="' . $give_gift_link->escapeFullURL( 'user=' . $user_safe . '&page=' . ( $page + 1 ) ) . '">' . wfMsg( 'g-next' ) . '</a>';
+					$output .= ' <a href="' . $giveGiftLink->escapeFullURL( 'user=' . $user_safe . '&page=' . ( $page + 1 ) ) . '">' . wfMsg( 'g-next' ) . '</a>';
 				}
 				$output .= '</div>';
 			}
@@ -314,7 +366,9 @@ class GiveGift extends SpecialPage {
 			/**
 			 * Build next/prev nav
 			 */
-			$output .= '<div class="g-give-all-message-title">' . wfMsg( 'g-give-all-message-title' ) . '</div>
+			$output .= '<div class="g-give-all-message-title">' .
+				wfMsg( 'g-give-all-message-title' ) .
+			'</div>
 				<textarea name="message" id="message" rows="4" cols="50"></textarea>
 				<div class="g-buttons">
 					<input type="hidden" name="gift_id" value="0" />
