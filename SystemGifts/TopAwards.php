@@ -27,7 +27,7 @@ class TopAwards extends UnlistedSpecialPage {
 		// Variables
 		$gift_name_check = '';
 		$x = 0;
-		$category_number = $wgRequest->getVal( 'category' );
+		$category_number = $wgRequest->getInt( 'category' );
 
 		// System gift class array
 		$categories = array(
@@ -67,7 +67,7 @@ class TopAwards extends UnlistedSpecialPage {
 		$wgOut->setPageTitle( "Top Awards - {$page_category} Milestones" );
 
 		// Add CSS
-		$wgOut->addStyle( $wgSystemGiftsScripts . '/SystemGift.css' );
+		$wgOut->addExtensionStyle( $wgSystemGiftsScripts . '/SystemGift.css' );
 
 		$output = '<div class="top-awards-navigation">
 			<h1>Award Categories</h1>';
