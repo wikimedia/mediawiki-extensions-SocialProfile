@@ -2688,6 +2688,7 @@ $messages['sl'] = array(
 );
 
 /** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
+ * @author Rancher
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
@@ -2715,7 +2716,7 @@ $messages['sr-ec'] = array(
 	'ga-img' => 'додај/замени слику',
 	'ga-large' => 'Велико',
 	'ga-medium' => 'Средње',
-	'ga-mediumlarge' => 'Средње-велико',
+	'ga-mediumlarge' => 'Средње – велико',
 	'ga-new' => 'Ново',
 	'ga-next' => 'Следеће',
 	'ga-previous' => 'Претходно',
