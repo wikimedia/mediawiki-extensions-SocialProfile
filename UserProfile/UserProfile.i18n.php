@@ -6813,7 +6813,7 @@ $messages['mr'] = array(
 	'user-recent-system-gift' => 'एक पुरस्कार मिळाला',
 	'user-profile-update-notloggedin-title' => 'प्रवेश केल्याशिवाय प्रोफाइल बदलता येत नाही',
 	'user-profile-update-notloggedin-text' => 'दाखल झाल्याशिवाय आपण आपली प्रोफाइल संपादीत करू शकणार नाही.
-दाखल होण्याकरिता[[Special:UserLogin| येथे  < / a >टिचकी मारा अथवा नवीन नोंदणीकरिता  [[Special:UserLogin/signup|येथे < / a > टिचकी मारा.',
+दाखल होण्याकरिता[[Special:UserLogin| येथे ]] टिचकी मारा अथवा नवीन नोंदणीकरिता  [[Special:UserLogin/signup|येथे]] टिचकी मारा.',
 	'user-profile-update-saved' => 'तुमचे प्रोफाइल बदललेले आहे',
 	'user-profile-update-log-section' => 'विभाग बदललेला आहे',
 	'user-profile-update-profile' => 'प्रोफाइल',

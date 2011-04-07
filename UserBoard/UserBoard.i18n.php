@@ -2914,8 +2914,7 @@ $messages['roa-tara'] = array(
  */
 $messages['ru'] = array(
 	'boardblastlogintitle' => 'Нужно представиться системе',
-	'boardblastlogintext' => 'Чтобы отправлять высказывания на доски,
-вы должны <a href="index.php?title=Special:UserLogin">войти в систему</a>.',
+	'boardblastlogintext' => 'Чтобы отправлять высказывания на доски, вы должны [[Special:UserLogin|войти в систему]]',
 	'messagesenttitle' => 'Сообщение отправлено',
 	'boardblasttitle' => 'Отправка высказывания на доску',
 	'boardblaststep1' => 'Шаг 1 - Напишите ваше сообщение',
