@@ -2246,7 +2246,7 @@ $messages['de'] = array(
 	'user-personal-info-places-lived' => 'Orte, wo ich gewohnt habe',
 	'user-personal-info-schools' => 'Schulen',
 	'user-personal-info-about-me' => 'Über mich',
-	'user-recent-activity-title' => 'Letzte Aktivitäten',
+	'user-recent-activity-title' => 'Letzte Aktivität',
 	'user-recent-activity-edit' => 'Bearbeitung der Seite',
 	'user-recent-activity-vote' => 'Bewertung der Seite',
 	'user-recent-activity-comment' => 'Kommentar über die Seite',
@@ -8920,6 +8920,7 @@ $messages['roa-tara'] = array(
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
+	'editprofile' => 'Править профили других участников',
 	'populateuserprofiles' => 'Заполнение профилей участников',
 	'user-time-ago' => '$1 назад',
 	'user-awards-title' => 'Награды',
@@ -8996,6 +8997,7 @@ $messages['ru'] = array(
 	'user-profile-update-notloggedin-title' => 'Невозможно редактировать свой профиль, не представившись системе',
 	'user-profile-update-notloggedin-text' => 'Вы не можете редактировать свой профиль, не представившись системе. Нажмите [[Special:UserLogin|здесь]], чтобы представиться, или [[Special:UserLogin/signup|здесь]], чтобы зарегистрироваться.',
 	'user-profile-update-saved' => 'Ваш профиль сохранён',
+	'user-profile-edit-profile-update-saved' => 'Профиль участника был успешно сохранён',
 	'user-profile-update-log-section' => 'изменил раздел',
 	'user-profile-update-profile' => 'профиль',
 	'user-profile-default-country' => 'США',
@@ -9070,6 +9072,7 @@ $messages['ru'] = array(
 	'user-profile-userlevels-link' => 'Уровни участника',
 	'user-no-images' => 'изображения не загружены',
 	'edit-profile-title' => 'Править ваш профиль',
+	'edit-profiles-title' => 'Изменение профилей',
 	'user-page-link' => 'Страница участника',
 	'user-social-profile-link' => 'Социальный профиль',
 	'user-wiki-link' => 'Вики-страница',
@@ -9091,12 +9094,14 @@ $messages['ru'] = array(
 	'avatarupload-removeanother' => 'Удалить другой',
 	'profilelogpage' => 'Журнал редактирования личных страниц',
 	'profilelogpagetext' => 'Это журнал редактирования личных страниц',
+	'user-profile-edit-profile' => 'изменил профиль $1',
 	'avatarlogpage' => 'Журнал загрузки аватар',
 	'avatarlogpagetext' => 'Это журнал загрузок аватар участников',
 	'user-profile-picture-log' => 'аватар',
 	'user-profile-picture-log-entry' => 'загрузил новую аватару',
 	'user-profile-picture-log-delete-entry' => 'удалил аватару $1',
 	'right-avatarremove' => 'Удаление аватар участников',
+	'right-editothersprofiles' => 'обновление социальных профилей других участников',
 );
 
 /** Rusyn (Русиньскый)

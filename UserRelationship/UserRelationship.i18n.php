@@ -1255,15 +1255,25 @@ Molimo zahtjevajte prijatelje/neprijatelje preko ispravnog linka.',
 	'ur-remove-relationship-title-confirm-foe' => 'Ukonili ste $1 kao neprijatelja',
 	'ur-remove-relationship-title-friend' => 'Da li želite ukloniti $1 kao Vašeg prijatelja?',
 	'ur-remove-relationship-title-confirm-friend' => 'Uklonili ste $1 kao prijatelja',
+	'ur-remove-relationship-message-foe' => 'Tražili ste da uklonite $1 kao vašeg neprijatelja, kliknite "$2" da potvrdite.',
 	'ur-remove-relationship-message-confirm-foe' => 'Uspješno ste uklonili $1 kao Vašeg neprijatelja.',
+	'ur-remove-relationship-message-friend' => 'Zahtijevali ste da uklonite $1 kao vašeg prijatelja, kliknite "$2" da potvrdite.',
+	'ur-remove-relationship-message-confirm-friend' => 'Uspješno ste uklonili $1 kao Vašeg prijatelja.',
 	'ur-remove-error-message-no-relationship' => 'Nemate vezu sa $1.',
 	'ur-remove-error-message-remove-yourself' => 'Ne možete ukloniti samog sebe.',
+	'ur-remove-error-message-pending-foe-request' => 'Imate na čekanju zahtjev za neprijateljstvo sa $1.',
+	'ur-remove-error-message-pending-friend-request' => 'Imate na čekanju zahtjev za prijateljstvo sa $1.',
 	'ur-remove-error-not-loggedin-foe' => 'Morate biti prijavljeni da biste uklonili neprijatelja.',
+	'ur-remove-error-not-loggedin-friend' => 'Morate biti prijavljeni da biste uklonili prijatelja.',
 	'ur-remove' => 'Ukloni',
 	'ur-cancel' => 'Odustani',
 	'ur-login' => 'Prijava',
 	'ur-add-title-foe' => 'Da li želite dodati $1 kao Vašeg neprijatelja?',
 	'ur-add-title-friend' => 'Da li želite dodati $1 kao svog prijatelja?',
+	'ur-add-message-foe' => 'Dodat ćete $1 kao vašeg neprijatelja.
+Mi ćemo obavijestiti $1 da potvrdi vašu mržnju.',
+	'ur-add-message-friend' => 'Dodat ćete $1 kao vašeg prijatelja.
+Mi ćemo obavijestiti $1 da potvrdi vaše prijateljstvo.',
 	'ur-add-button-foe' => 'Dodaj kao neprijatelja',
 	'ur-add-button-friend' => 'Dodaj kao prijatelja',
 	'ur-add-error-message-yourself' => 'Ne možete dodati sebe ni kao prijatelja ni kao neprijatelja.',
@@ -1271,6 +1281,7 @@ Molimo zahtjevajte prijatelje/neprijatelje preko ispravnog linka.',
 	'ur-add-error-message-existing-relationship-friend' => 'Već ste prijatelj sa $1.',
 	'ur-add-error-message-pending-request-title' => 'Strpljenja!',
 	'ur-add-error-message-not-loggedin-foe' => 'Morate biti prijavljeni da biste dodali neprijatelja',
+	'ur-add-error-message-not-loggedin-friend' => 'Morate biti prijavljeni da biste dodali prijatelja',
 	'ur-requests-title' => 'Zahtjevi za vezu',
 	'ur-requests-message-foe' => '<a href="$1">$2</a> želi da bude Vaš neprijatelj.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> želi da bude Vaš prijatelj.',
@@ -1280,6 +1291,21 @@ Molimo zahtjevajte prijatelje/neprijatelje preko ispravnog linka.',
 	'ur-requests-reject-message-foe' => 'Odbili ste $1 kao Vašeg neprijatelja.',
 	'ur-title-foe' => 'Spisak neprijatelja korisnika $1',
 	'ur-title-friend' => 'Spisak prijatelja korisnika $1',
+	'friend_request_body' => 'Zdravo $1.
+
+$2 je vas dodao kao vašeg prijatelja na {{SITENAME}}. Želimo da zaista utvrdimo da li ste vi prijatelji.
+
+Molimo kliknite na ovaj link da potvrdite vaše prijateljstvo:
+$3
+
+Hvala
+
+---
+
+Hej, da li želite da prestanete dobijati e-mailove od nas?
+
+Kliknite $4
+i promijeniti vaše postavke da onemogućite e-mail obavještenja.',
 	'foe_request_subject' => 'Rat je! $1 je dodao Vas kao neprijatelja na {{SITENAME}}!',
 	'friend_removed_subject' => 'O ne! $1 je uklonio Vas kao prijatelja na {{SITENAME}}!',
 	'foe_removed_subject' => 'Super! $1 je uklonio Vas kao neprijatelja na {{SITENAME}}!',

@@ -1951,7 +1951,7 @@ $messages['kri'] = array(
 $messages['ksh'] = array(
 	'boardblastlogintitle' => 'Do moß enjelogg sin, öm Nohreechte verschecke ze künne',
 	'boardblastlogintext' => 'Do moß enjelogg sin, öm Nohreechte verschecke ze künne.
-Donn jlich <a href="index.php?title=Special:UserLogin">enlogge</a>.',
+Donn diräk [[Special:UserLogin|enlogge]].',
 	'messagesenttitle' => 'Nohreechte verscheck',
 	'boardblasttitle' => 'Nohreesch verschecke',
 	'boardblaststep1' => 'Eetste Schrett — Don Ding Nohreesch schriive',
