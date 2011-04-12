@@ -55,6 +55,8 @@ class SpecialUploadAvatar extends SpecialUpload {
 			$wgOut->redirect( '' );
 
 			$this->showSuccess( $this->mUpload->mExtension );
+			// Run a hook on avatar change
+			wfRunHooks( 'NewAvatarUploaded', array( $wgUser ) );
 		}
 	}
 
@@ -229,6 +231,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 			return "<img src=\"{$wgUploadPath}/avatars/" . basename( $files[0] ) . '" alt="" border="0" />';
 		}
 	}
+
 }
 
 class UploadAvatar extends UploadFromFile {

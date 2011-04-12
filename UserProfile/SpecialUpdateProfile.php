@@ -284,28 +284,34 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		$this->initProfile( $user );
 		$dbw = wfGetDB( DB_MASTER );
+		$basicProfileData = array(
+			'up_location_city' => $wgRequest->getVal( 'location_city' ),
+			'up_location_state' => $wgRequest->getVal( 'location_state' ),
+			'up_location_country' => $wgRequest->getVal( 'location_country' ),
+
+			'up_hometown_city' => $wgRequest->getVal( 'hometown_city' ),
+			'up_hometown_state' => $wgRequest->getVal( 'hometown_state' ),
+			'up_hometown_country' => $wgRequest->getVal( 'hometown_country' ),
+
+			'up_birthday' => $this->formatBirthdayDB( $wgRequest->getVal( 'birthday' ) ),
+			'up_about' => $wgRequest->getVal( 'about' ),
+			'up_occupation' => $wgRequest->getVal( 'occupation' ),
+			'up_schools' => $wgRequest->getVal( 'schools' ),
+			'up_places_lived' => $wgRequest->getVal( 'places' ),
+			'up_websites' => $wgRequest->getVal( 'websites' ),
+			'up_relationship' => $wgRequest->getVal( 'relationship' )
+		);
 		$dbw->update(
 			'user_profile',
-		/* SET */array(
-				'up_location_city' => $wgRequest->getVal( 'location_city' ),
-				'up_location_state' => $wgRequest->getVal( 'location_state' ),
-				'up_location_country' => $wgRequest->getVal( 'location_country' ),
-
-				'up_hometown_city' => $wgRequest->getVal( 'hometown_city' ),
-				'up_hometown_state' => $wgRequest->getVal( 'hometown_state' ),
-				'up_hometown_country' => $wgRequest->getVal( 'hometown_country' ),
-
-				'up_birthday' => $this->formatBirthdayDB( $wgRequest->getVal( 'birthday' ) ),
-				'up_about' => $wgRequest->getVal( 'about' ),
-				'up_occupation' => $wgRequest->getVal( 'occupation' ),
-				'up_schools' => $wgRequest->getVal( 'schools' ),
-				'up_places_lived' => $wgRequest->getVal( 'places' ),
-				'up_websites' => $wgRequest->getVal( 'websites' ),
-				'up_relationship' => $wgRequest->getVal( 'relationship' )
-			),
+			/* SET */$basicProfileData,
 			/* WHERE */array( 'up_user_id' => $user->getID() ),
 			__METHOD__
 		);
+		// BasicProfileChanged hook
+		$basicProfileData['up_name'] = $wgRequest->getVal( 'real_name' );
+		$basicProfileData['up_email'] = $wgRequest->getVal( 'email' );
+		wfRunHooks( 'BasicProfileChanged', array( $user, $basicProfileData ) );
+		// end of the hook
 		$wgMemc->delete( wfMemcKey( 'user', 'profile', 'info', $user->getID() ) );
 	}
 
@@ -355,22 +361,26 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		$this->initProfile( $user );
 		$dbw = wfGetDB( DB_MASTER );
+		$interestsData = array(
+			'up_companies' => $wgRequest->getVal( 'companies' ),
+			'up_movies' => $wgRequest->getVal( 'movies' ),
+			'up_music' => $wgRequest->getVal( 'music' ),
+			'up_tv' => $wgRequest->getVal( 'tv' ),
+			'up_books' => $wgRequest->getVal( 'books' ),
+			'up_magazines' => $wgRequest->getVal( 'magazines' ),
+			'up_video_games' => $wgRequest->getVal( 'videogames' ),
+			'up_snacks' => $wgRequest->getVal( 'snacks' ),
+			'up_drinks' => $wgRequest->getVal( 'drinks' )
+		);
 		$dbw->update(
 			'user_profile',
-			/* SET */array(
-				'up_companies' => $wgRequest->getVal( 'companies' ),
-				'up_movies' => $wgRequest->getVal( 'movies' ),
-				'up_music' => $wgRequest->getVal( 'music' ),
-				'up_tv' => $wgRequest->getVal( 'tv' ),
-				'up_books' => $wgRequest->getVal( 'books' ),
-				'up_magazines' => $wgRequest->getVal( 'magazines' ),
-				'up_video_games' => $wgRequest->getVal( 'videogames' ),
-				'up_snacks' => $wgRequest->getVal( 'snacks' ),
-				'up_drinks' => $wgRequest->getVal( 'drinks' )
-			),
+			/* SET */$interestsData,
 			/* WHERE */array( 'up_user_id' => $user->getID() ),
 			__METHOD__
 		);
+		// PersonalInterestsChanged hook
+		wfRunHooks( 'PersonalInterestsChanged', array( $user, $interestsData ) );
+		// end of the hook
 		$wgMemc->delete( wfMemcKey( 'user', 'profile', 'info', $user->getID() ) );
 	}
 
