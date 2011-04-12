@@ -2792,7 +2792,7 @@ Et gëtt dann och bäi de Benotzer geläscht déi e kritt hunn.',
 	'g-gift-name' => 'Numm vum Cadeau',
 	'g-give-gift' => 'E Cadeau maachen',
 	'g-give-all' => 'Wëllt Dir dem $1 e Cadeau maachen?
-Klickt just op e vun de Cadeauen ënnedrënner a klickt op "Cadeau schécken".
+Klickt just op e vun de Cadeauen ënnendrënner a klickt op "Cadeau schécken".
 Et ass esou einfach.',
 	'g-give-all-message-title' => 'Eng Noriicht derbäisetzen',
 	'g-give-all-title' => 'Dem $1 e Cadeau maachen',

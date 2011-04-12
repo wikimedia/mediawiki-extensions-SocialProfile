@@ -6383,7 +6383,7 @@ Klickt [[Special:UserLogin|hei]] fir Iech anzeloggen oder klickt [[Special:UserL
 	'user-profile-sports-addmore' => 'Méi Sportarten/Equippen derbäisetzen',
 	'uploadavatar' => 'Äert Bild eroplueden',
 	'user-profile-picture-yourpicture' => 'Äert Bild',
-	'user-profile-picture-yourpicturestext' => 'Hei ënnedrënner sinn déi Biller déi op Ärem Profil, Ären Netzwierk-Säiten a bäi Äre Bemierkunge gewise ginn.',
+	'user-profile-picture-yourpicturestext' => 'Hei ënnendrënner sinn déi Biller déi op Ärem Profil, Ären Netzwierk-Säiten a bäi Äre Bemierkunge gewise ginn.',
 	'user-profile-picture-large' => 'Grouss',
 	'user-profile-picture-medlarge' => 'Mëttel - Grouss',
 	'user-profile-picture-medium' => 'Duerchschnëttlech',

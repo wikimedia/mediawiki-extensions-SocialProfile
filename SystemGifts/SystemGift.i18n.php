@@ -1789,6 +1789,7 @@ un donn en Dinge Ensstellunge de Nohrechte övver e-mail affschallde.',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
+ * @author Les Meloures
  * @author Robby
  */
 $messages['lb'] = array(
@@ -1813,7 +1814,7 @@ $messages['lb'] = array(
 	'ga-giftname' => 'Numm vum Cadeau',
 	'ga-gifttype' => 'Typ vu Cadeau',
 	'ga-goback' => 'Zréckgoen',
-	'ga-imagesbelow' => 'Hei ënnedrënner sinn Är Biller déi um Site benotzt werte ginn',
+	'ga-imagesbelow' => 'Hei ënnendrënner sinn Är Biller déi um Site benotzt wäerte ginn',
 	'ga-img' => 'Bild derbäisetzen/ersetzen',
 	'ga-large' => 'Grouss',
 	'ga-medium' => 'Mëttel',
