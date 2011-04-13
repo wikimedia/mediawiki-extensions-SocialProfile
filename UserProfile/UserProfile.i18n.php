@@ -453,6 +453,7 @@ $messages['qqq'] = array(
 	'user-stats-title' => '{{Identical|Statistics}}',
 	'user-stats-picture-game-votes' => ' Juego de imágenes {{PLURAL:$1|voto|votos}}',
 	'other-info-title' => '{{Identical|Other information}}',
+	'user-friends-title' => '{{Identical|Friend}}',
 	'other-info-movies' => '{{Identical|Movies}}',
 	'other-info-tv' => '{{Identical|TV}}',
 	'other-info-music' => '{{Identical|Music}}',
@@ -1495,6 +1496,7 @@ $messages['bn'] = array(
  * @author Y-M D
  */
 $messages['br'] = array(
+	'editprofile' => 'Kemmoù profiloù an implijerien all',
 	'populateuserprofiles' => 'Leuniañ profiloù an implijerien',
 	'user-time-ago' => '$1 zo',
 	'user-awards-title' => 'Prizioù',
@@ -1572,6 +1574,7 @@ $messages['br'] = array(
 	'user-profile-update-notloggedin-text' => "Ne c'hallit ket aozañ ho profil hep bezañ kevreet.
 Klikit [[Special:UserLogin|amañ]] evit kevreañ pe klikit [[Special:UserLogin/signup|amañ]] evit en em enskrivañ.",
 	'user-profile-update-saved' => 'Enrollet eo bet ho profil',
+	'user-profile-edit-profile-update-saved' => 'Enrollet eo bet profil an implijer ervat',
 	'user-profile-update-log-section' => 'kevrenn kemmet',
 	'user-profile-update-profile' => 'profil',
 	'user-profile-default-country' => 'Stadoù-Unanet',
@@ -1646,6 +1649,7 @@ Klikit [[Special:UserLogin|amañ]] evit kevreañ pe klikit [[Special:UserLogin/s
 	'user-profile-userlevels-link' => 'Liveoù an implijer',
 	'user-no-images' => "N'eus bet kaset skeudenn ebet",
 	'edit-profile-title' => 'Aozañ ho profil',
+	'edit-profiles-title' => 'Kemmañ ar profil',
 	'user-page-link' => 'Pajenn implijer',
 	'user-social-profile-link' => 'Profil sokial',
 	'user-wiki-link' => 'Pajenn implijer wiki',
@@ -1667,12 +1671,14 @@ Klikit [[Special:UserLogin|amañ]] evit kevreañ pe klikit [[Special:UserLogin/s
 	'avatarupload-removeanother' => 'Lemel unan all',
 	'profilelogpage' => 'Deizlevr kemmoù ar profil implijer',
 	'profilelogpagetext' => 'Setu amañ deizlevr an aozadennoù er profil implijer',
+	'user-profile-edit-profile' => 'Kemmet eo bet profil $1',
 	'avatarlogpage' => 'Deizlevr kas avatar',
 	'avatarlogpagetext' => "Setu amañ deizlevr ar c'hasadennoù avatarioù gant an implijerien",
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'en deus kaset un avatar nevez',
 	'user-profile-picture-log-delete-entry' => 'en deus dilamet avatar $1',
 	'right-avatarremove' => 'Lemel avatarioù an implijer',
+	'right-editothersprofiles' => 'Hizivaat profiloù sokial implijerien all',
 );
 
 /** Bosnian (Bosanski)
