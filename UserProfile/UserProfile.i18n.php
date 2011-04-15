@@ -2592,6 +2592,7 @@ $messages['ee'] = array(
 /** Greek (Ελληνικά)
  * @author Consta
  * @author Crazymadlover
+ * @author Evropi
  * @author Omnipaedista
  * @author ZaDiak
  */
@@ -2678,7 +2679,7 @@ $messages['el'] = array(
 	'user-profile-section-sportsteams' => 'Ενημέρωση δικτύων',
 	'user-profile-section-custom' => 'Συνήθεις πληροφορίες',
 	'user-profile-section-interests' => 'Άλλες πληροφορίες',
-	'user-profile-section-picture' => 'Ἀβαταρ',
+	'user-profile-section-picture' => 'Εικόνα',
 	'user-profile-section-preferences' => 'Προτιμήσεις',
 	'user-profile-personal-info' => 'Πληροφορία',
 	'user-profile-personal-name' => 'Όνομα',
