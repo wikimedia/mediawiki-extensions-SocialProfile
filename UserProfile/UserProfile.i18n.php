@@ -1303,6 +1303,7 @@ $messages['be-tarask'] = array(
 	'avatarupload-removeanother' => 'Выдаліць іншую',
 	'profilelogpage' => 'Журнал зьменаў профілю ўдзельніка',
 	'profilelogpagetext' => 'Гэта журнал зьменаў профілю ўдзельніка',
+	'user-profile-edit-profile' => 'зьмяніў профіль $1',
 	'avatarlogpage' => 'Журнал загружаных аватараў',
 	'avatarlogpagetext' => 'Гэта журнал загрузак аватараў удзельніка',
 	'user-profile-picture-log' => 'аватара',
@@ -6068,6 +6069,7 @@ $messages['krj'] = array(
  * @author Purodha
  */
 $messages['ksh'] = array(
+	'editprofile' => 'Aan anderlücks Profile jet ändere',
 	'populateuserprofiles' => 'De Metmaacher ier Profile met Date fölle',
 	'user-time-ago' => 'vür $1',
 	'user-awards-title' => 'Belohnunge un Ußzeichnunge',
@@ -6145,6 +6147,7 @@ $messages['ksh'] = array(
 	'user-profile-update-notloggedin-text' => 'Do kanns Ding Profil ne ändere, sulang De nit ennjelogg beß.
 Donn [[Special:UserLogin|enlogge]] udder [[Special:UserLogin/signup|Desch aanmellde]].',
 	'user-profile-update-saved' => 'Ding Profil es avjespeichert.',
+	'user-profile-edit-profile-update-saved' => 'Däm Metmaacher sing Profil es jeseshert.',
 	'user-profile-update-log-section' => 'ene Afschnet jändert',
 	'user-profile-update-profile' => 'Profil',
 	'user-profile-default-country' => 'Dütschland',
@@ -6219,6 +6222,7 @@ Donn [[Special:UserLogin|enlogge]] udder [[Special:UserLogin/signup|Desch aanmel
 	'user-profile-userlevels-link' => 'Medmaacher-Shtuhfe',
 	'user-no-images' => 'Kein Belder huhjelade',
 	'edit-profile-title' => 'Don Ding Profil beärbeide',
+	'edit-profiles-title' => 'Profile ändere',
 	'user-page-link' => 'Matmaachersigg',
 	'user-social-profile-link' => 'Profil-Sigg',
 	'user-wiki-link' => 'Metmaachersigg em Wiki',
@@ -6241,6 +6245,7 @@ Donn [[Special:UserLogin|enlogge]] udder [[Special:UserLogin/signup|Desch aanmel
 	'profilelogpage' => 'Metmaacher-Profil-Logboch',
 	'profilelogpagetext' => 'Dat hee es et Logboch vun de Metmaacher ier Änderunge aan iere Profile',
 	'profilelogentry' => '-',
+	'user-profile-edit-profile' => 'hät {{GENDER:$1|däm|dem|däm Metmaacher|dä|däm}} $1 {{GENDER:$1|sing|sing|sing|ier|sing}} Profil jeändert.',
 	'avatarlogpage' => 'Logboch vum Avataa Huhlahde',
 	'avatarlogpagetext' => 'Dat hee es et Logboch vun de Metmaacher iere Avataa Huhladerei',
 	'avatarlogentry' => '-',
@@ -6248,6 +6253,7 @@ Donn [[Special:UserLogin|enlogge]] udder [[Special:UserLogin/signup|Desch aanmel
 	'user-profile-picture-log-entry' => 'Neue Avataa huhjelaade',
 	'user-profile-picture-log-delete-entry' => 'däm $1 singe Avataa fottjeschmeße',
 	'right-avatarremove' => 'Enem Metmaacher sing Avataare fott schmiiße',
+	'right-editothersprofiles' => 'Andere Metmaacher ier Profile ändere',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
