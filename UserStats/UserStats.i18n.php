@@ -83,7 +83,7 @@ and change your settings to disable e-mail notifications.'
  */
 $messages['qqq'] = array(
 	'top-fans-points' => '{{Identical|Point}}',
-	'top-fans-by-category-title-gifts-rec-count' => 'Should be "gifts" not "gifs".',
+	'top-fans-by-category-title-gifts-rec-count' => '',
 	'top-fans-stats-vote-count' => '{{Identical|Vote}}',
 	'top-fans-stats-edit-count' => '{{Identical|Edit}}',
 	'top-fans-stats-comment-count' => '{{Identical|Comment}}',
@@ -1647,6 +1647,20 @@ $messages['ksh'] = array(
 	'top-fans-weekly-points-link' => 'Punkte diß Woch',
 	'top-fans-monthly-points-link' => 'Punkte disse Mohnd',
 	'top-fans-points' => 'Punkte',
+	'top-fans-by-category-title-edit-count' => 'De miehßte Änderonge enßjesamp',
+	'top-fans-by-category-title-friends-count' => 'De miehßte Fründe enßjesamp',
+	'top-fans-by-category-title-foe-count' => 'De miehßte Feinde enßjesamp',
+	'top-fans-by-category-title-gifts-rec-count' => 'De miehßte Jeschengke enßjesamp krääje',
+	'top-fans-by-category-title-gifts-sent-count' => 'De miehßte Geschengke enßjesamp verdeilt',
+	'top-fans-by-category-title-vote-count' => 'De miehßte Shtemme enßjesamp',
+	'top-fans-by-category-title-comment-count' => 'De miehßte Kommentaare enßjesamp',
+	'top-fans-by-category-title-referrals-count' => 'De miehßte Lengks enßjesamp',
+	'top-fans-by-category-title-comment-score-positive-rec' => 'De miehßte „Duume erop“ enßjesamp krääje',
+	'top-fans-by-category-title-comment-score-negative-rec' => 'De miehßte „Duume eraf“ enßjesamp krääje',
+	'top-fans-by-category-title-comment-score-positive-given' => 'De miehßte Duume noh bovve enßjesamp verdeilt',
+	'top-fans-by-category-title-comment-score-negative-given' => 'De miehßte Duume noh unge enßjesamp verdeilt',
+	'top-fans-by-category-title-monthly-winner-count' => 'De miehßte Jewenne en enem Mohnd enßjesamp',
+	'top-fans-by-category-title-weekly-winner-count' => 'De miehßte Jewenne en ene Woch enßjesamp',
 	'top-fans-bad-field-title' => 'Hoppalla!',
 	'top-fans-bad-field-message' => 'De aanjejovve Statistik jidd_et nit.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Stemm|Stemme}}',
@@ -1828,6 +1842,7 @@ $messages['nah'] = array(
 );
 
 /** Dutch (Nederlands)
+ * @author Purodha
  * @author Siebrand
  * @author Tvdm
  */
@@ -1849,7 +1864,8 @@ $messages['nl'] = array(
 	'top-fans-by-category-title-gifts-sent-count' => 'Ranglijst totaal aantal verstuurde presentjes',
 	'top-fans-by-category-title-vote-count' => 'Ranglijst totaal aantal stemmen',
 	'top-fans-by-category-title-comment-count' => 'Ranglijst totaal aantal opmerkingen',
-	'top-fans-by-category-title-referrals-count' => 'Ranglijst totaal aantal vrienden',
+	'top-fans-by-category-title-referrals-count' => 'Ranglijst totaal aantal vrienden
+',
 	'top-fans-by-category-title-comment-score-positive-rec' => 'Ranglijst totaal aantal schouderklopjes',
 	'top-fans-by-category-title-comment-score-negative-rec' => 'Ranglijst totaal aantal duimen omlaag',
 	'top-fans-by-category-title-comment-score-positive-given' => 'Ranglijst totaal aantal schouderklopjes gegeven',

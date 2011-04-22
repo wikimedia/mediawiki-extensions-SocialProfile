@@ -3738,6 +3738,7 @@ $messages['fi'] = array(
  * @author Verdy p
  */
 $messages['fr'] = array(
+	'editprofile' => "Modifier le profil d'autres utilisateurs",
 	'populateuserprofiles' => 'Meubler les profils utilisateurs',
 	'user-time-ago' => 'Il y a $1',
 	'user-awards-title' => 'Récompenses',
@@ -3815,6 +3816,7 @@ $messages['fr'] = array(
 	'user-profile-update-notloggedin-text' => 'Vous ne pouvez pas modifier votre profil si vous n’êtes pas connecté.
 Cliquez [[Special:UserLogin|ici]] pour vous connecter ou alors [[Special:UserLogin/signup|là]] pour vous enregistrer.',
 	'user-profile-update-saved' => 'Votre profil a été sauvegardé',
+	'user-profile-edit-profile-update-saved' => "Le profil de l'utilisateur a été sauvegardé avec succès",
 	'user-profile-update-log-section' => 'section changée',
 	'user-profile-update-profile' => 'profil',
 	'user-profile-default-country' => 'États-Unis',
@@ -3889,6 +3891,7 @@ Cliquez [[Special:UserLogin|ici]] pour vous connecter ou alors [[Special:UserLog
 	'user-profile-userlevels-link' => 'Niveaux de l’utilisateur',
 	'user-no-images' => 'Aucune image téléversée',
 	'edit-profile-title' => 'Modifier votre profil',
+	'edit-profiles-title' => 'Modifier les profils',
 	'user-page-link' => 'Page utilisateur',
 	'user-social-profile-link' => 'Profil social',
 	'user-wiki-link' => 'Page utilisateur du wiki',
@@ -3910,12 +3913,14 @@ Cliquez [[Special:UserLogin|ici]] pour vous connecter ou alors [[Special:UserLog
 	'avatarupload-removeanother' => 'Enlever un autre',
 	'profilelogpage' => 'Journal des modifications du profil utilisateur',
 	'profilelogpagetext' => 'Voici le journal des modifications du profil utilisateur',
+	'user-profile-edit-profile' => 'a modifié le profil de $1',
 	'avatarlogpage' => 'Journal des téléversements d’avatar',
 	'avatarlogpagetext' => 'Voici le journal des téléversements d’avatar utilisateur',
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'a téléversé un nouvel avatar',
 	'user-profile-picture-log-delete-entry' => 'a supprimé l’avatar de $1',
 	'right-avatarremove' => 'Supprimer les avatars d’un utilisateur',
+	'right-editothersprofiles' => "Mettre à jour le profil social d'autres utilisateurs",
 );
 
 /** Franco-Provençal (Arpetan)

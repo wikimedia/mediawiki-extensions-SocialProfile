@@ -477,16 +477,19 @@ $messages['kn'] = array(
  */
 $messages['ksh'] = array(
 	'useractivity' => 'Wat de Frünnde aam donn sin',
-	'useractivity-award' => '$1 hät en Ußzeichnung krääje',
+	'useractivity-award' => '{{GENDER:$1|Dä|Et|Dä Metmaacher|De|Dat}} $1 hät en Ußzeichnung krääje.',
 	'useractivity-all' => 'Alles aanzeije',
-	'useractivity-gift' => '$1 hät e Jeschenk vum $2 krääje.',
+	'useractivity-edit' => '{{PLURAL:$2|{{GENDER:$6|Dä|Et|Dä Metmaacher|De|Dat}} $1 hät|$1 han|Keine hät}} {{PLURAL:$4|di Sigg|de Sigge|kein Sigg}} $3 beärbeidt.',
+	'useractivity-foe' => '{{PLURAL:$2|{{GENDER:$6|Dä|Et|Dä Metmaacher|De|Dat}} $1 es jäz {{GENDER:$6|ene Feind|en Feinden|ene Feind|en Feinden|ene Feind}}|$1 sen jäz Feinde|Keine es jät}} {{GENDER:$3|vum|vum|vum Metmaacher|vun dä|vum}} $3',
+	'useractivity-friend' => '{{PLURAL:$2|{{GENDER:$6|Dä|Et|Dä Metmaacher|De|Dat}} $1 es jäz {{GENDER:$6|ene Fründ|en Fründin|ene Fründ|en Fründin|ene Fründ}}|$1 sen jäz Fründe|Keine es jät}} {{GENDER:$3|vum|vum|vum Metmaacher|vun dä|vum}} $3',
+	'useractivity-gift' => '{{PLURAL:$2|{{GENDER:$6|Dä|Et|Dä Metmaacher|De|Dat}} $1 hät|$1 han|Keine hät}} e Jeschenk {{GENDER:$2|vum|vum|vum Metmaacher|vun dä|vum}} $2 krääje.',
 	'useractivity-group-edit' => '{{PLURAL:$1|Ein Änderong|$1 Änderonge|Kein Änderong}}',
 	'useractivity-group-comment' => '{{PLURAL:$1|Ein Aanmärkong|$1 Aanmärkonge|Kein Aanmärkonge}}',
 	'useractivity-group-user_message' => '{{PLURAL:$1|Ein Nohreesch|$1 Nohreeschte|Kein Nohreesch}}',
 	'useractivity-group-friend' => '{{PLURAL:$1|Eine Fründ|$1 Fründe|Keine Fründ}}',
 	'useractivity-siteactivity' => 'Wat op dä ßait loß es',
 	'useractivity-title' => 'Wat de Frünnde donn',
-	'useractivity-user_message' => '$1 {{PLURAL:$4|hät en Nohreesch|hät Nohreeschte|kein Nohreesch}} aan $3 jescheck',
+	'useractivity-user_message' => '{{GENDER:$1|Dä|Et|Dä Metmaacher|De|Dat}} $1 {{PLURAL:$4|hät en Nohreesch|hät Nohreeschte|kein Nohreesch}} aan {{GENDER:$6|der|et|dä Metmaacher|de|dat}} $3 jescheck',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
