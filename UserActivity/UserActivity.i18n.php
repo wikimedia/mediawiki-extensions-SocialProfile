@@ -76,11 +76,12 @@ $messages['an'] = array(
 
 /** Arabic (العربية)
  * @author Meno25
+ * @author OsamaK
  */
 $messages['ar'] = array(
 	'useractivity' => 'نشاط الأصدقاء',
 	'useractivity-award' => '$1 تلقى جائزة',
-	'useractivity-all' => 'عرض الكل',
+	'useractivity-all' => 'اعرض الكل',
 	'useractivity-edit' => '$1 {{PLURAL:$4|عدل الصفحة|عدل الصفحات التالية:}} $3',
 	'useractivity-foe' => '$1 {{PLURAL:$2|هو الآن عدو مع|هم الآن أعداء مع}} $3',
 	'useractivity-friend' => '$1 {{PLURAL:$2|هو الآن صديق مع|هم الآن أصدقاء مع}} $3',

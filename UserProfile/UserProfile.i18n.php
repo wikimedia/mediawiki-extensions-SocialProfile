@@ -746,9 +746,9 @@ $messages['ar'] = array(
 	'user-personal-info-real-name' => 'الاسم الحقيقي',
 	'user-personal-info-location' => 'الموقع',
 	'user-personal-info-hometown' => 'بلد المنشأ',
-	'user-personal-info-birthday' => 'يوم الميلاد',
+	'user-personal-info-birthday' => 'عيد الميلاد',
 	'user-personal-info-occupation' => 'الوظيفة',
-	'user-personal-info-websites' => 'مواقع الويب',
+	'user-personal-info-websites' => 'مواقع الوب',
 	'user-personal-info-places-lived' => 'أماكن أقمت فيها',
 	'user-personal-info-schools' => 'مدارس',
 	'user-personal-info-about-me' => 'حولي',
@@ -786,7 +786,7 @@ $messages['ar'] = array(
 	'user-profile-personal-city' => 'مدينة',
 	'user-profile-personal-country' => 'بلد',
 	'user-profile-personal-hometown' => 'بلد المنشأ',
-	'user-profile-personal-birthday' => 'يوم الميلاد',
+	'user-profile-personal-birthday' => 'عيد الميلاد',
 	'user-profile-personal-birthdate' => 'تاريخ (شش/يي)',
 	'user-profile-personal-aboutme' => 'حولي',
 	'user-profile-personal-work' => 'عمل',
@@ -10544,6 +10544,7 @@ $messages['tk'] = array(
  * @author AnakngAraw
  */
 $messages['tl'] = array(
+	'editprofile' => 'Baguhin ang mga balangkas ng ibang mga tagagamit',
 	'populateuserprofiles' => 'Panahanan (lagyan ng laman) ang mga talaang pangkatangian ng tagagamit',
 	'user-time-ago' => '$1 ang nakalipas',
 	'user-awards-title' => 'Mga gantimpala',
@@ -10621,6 +10622,7 @@ $messages['tl'] = array(
 	'user-profile-update-notloggedin-text' => 'Hindi mo mababago ang iyong talaang pangkatangian kung hindi ka pa nakalagda.
 Pindutin [[Special:UserLogin|dito]] para lumagda o pindutin [[Special:UserLogin/signup|dito]] upang makapagpatala/magparehistro.',
 	'user-profile-update-saved' => 'Nasagip na ang iyong talaang pangkatangian',
+	'user-profile-edit-profile-update-saved' => 'Matagumpay na nasagip ang balangkas ng tagagamit',
 	'user-profile-update-log-section' => 'binago/nabago ang seksyon',
 	'user-profile-update-profile' => 'talaang pangkatangian',
 	'user-profile-default-country' => 'Nagkakaisang mga Estado (Estados Unidos)',
@@ -10695,6 +10697,7 @@ Pindutin [[Special:UserLogin|dito]] para lumagda o pindutin [[Special:UserLogin/
 	'user-profile-userlevels-link' => 'Mga kaantasan ng tagagamit',
 	'user-no-images' => 'Walang naikargang mga larawan',
 	'edit-profile-title' => 'Baguhin ang iyong talaang pangkatangian',
+	'edit-profiles-title' => 'Baguhin ang mga balangkas',
 	'user-page-link' => 'Pahina ng tagagamit',
 	'user-social-profile-link' => 'Panlipunang talaan ng katangian',
 	'user-wiki-link' => 'Pahina ng tagagamit na pang-Wiki',
@@ -10716,12 +10719,14 @@ Pindutin [[Special:UserLogin|dito]] para lumagda o pindutin [[Special:UserLogin/
 	'avatarupload-removeanother' => 'Tanggalian ang isa pa/iba pa',
 	'profilelogpage' => 'Talaan ng mga pagbabago sa talaang pangkatangian ng tagagamit',
 	'profilelogpagetext' => 'Isa itong talaan ng mga pagbabago sa talaang pangkatangian ng tagagamit',
+	'user-profile-edit-profile' => 'binago ang balangkas ni $1',
 	'avatarlogpage' => 'Talaan ng pagkarga ng huwaran (abatar)',
 	'avatarlogpagetext' => 'Isa itong talaan ng mga pagkarga ng huwaran (abatar) ng tagagamit',
 	'user-profile-picture-log' => 'huwaran (abatar)',
 	'user-profile-picture-log-entry' => 'nagkarga ng bagong huwaran (abatar)',
 	'user-profile-picture-log-delete-entry' => 'binura ang huwaran (abatar) ni $1',
 	'right-avatarremove' => 'Tanggalin ang mga huwaran (abatar) ng tagagamit',
+	'right-editothersprofiles' => 'Isapanahon ang mga balangkas na panlipunan ng ibang tagagamit',
 );
 
 /** Turkish (Türkçe)

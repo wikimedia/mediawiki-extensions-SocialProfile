@@ -1864,8 +1864,7 @@ $messages['nl'] = array(
 	'top-fans-by-category-title-gifts-sent-count' => 'Ranglijst totaal aantal verstuurde presentjes',
 	'top-fans-by-category-title-vote-count' => 'Ranglijst totaal aantal stemmen',
 	'top-fans-by-category-title-comment-count' => 'Ranglijst totaal aantal opmerkingen',
-	'top-fans-by-category-title-referrals-count' => 'Ranglijst totaal aantal vrienden
-',
+	'top-fans-by-category-title-referrals-count' => 'Ranglijst totaal aantal vrienden',
 	'top-fans-by-category-title-comment-score-positive-rec' => 'Ranglijst totaal aantal schouderklopjes',
 	'top-fans-by-category-title-comment-score-negative-rec' => 'Ranglijst totaal aantal duimen omlaag',
 	'top-fans-by-category-title-comment-score-positive-given' => 'Ranglijst totaal aantal schouderklopjes gegeven',
