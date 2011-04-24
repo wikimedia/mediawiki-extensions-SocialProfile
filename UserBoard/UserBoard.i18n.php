@@ -1976,7 +1976,7 @@ Donn diräk [[Special:UserLogin|enlogge]].',
 	'userboard_backprofile' => 'Retuur noh däm Metmaacher $1 singem Profil',
 	'userboard_backyourprofile' => 'Retuur noh Dingem eije Profil',
 	'userboard_boardtoboard' => 'Pinnwand-zo-Pinnwand Klaaf',
-	'userboard_confirmdelete' => 'Wells De die Nohreesch werklech fottschmieße?',
+	'userboard_confirmdelete' => 'Wells De heh di Nohreesch verhaftesh fottschmieße?',
 	'userboard_sendmessage' => 'Scheck däm Metmaacher $1 en Nohreesch',
 	'userboard_myboard' => 'Ming Pinnwand',
 	'userboard_posted_ago' => 'för $1 jespeichert',
@@ -2246,6 +2246,13 @@ $3
 
 $4 वर टिचकी मारा
 आणि विपत्र(ईमेल) सूचना अक्षम करण्याकरिता सुविधेत बदल करा.',
+);
+
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'userboard_nextpage' => 'berikutnya',
 );
 
 /** Erzya (Эрзянь)

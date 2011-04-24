@@ -6920,9 +6920,13 @@ $messages['mr'] = array(
 );
 
 /** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
  * @author Kurniasan
  */
 $messages['ms'] = array(
+	'user-personal-info-location' => 'Lokasi',
+	'user-profile-personal-location' => 'Lokasi',
+	'user-profile-personal-birthdate' => 'Tarikh (MM/DD)',
 	'user-profile-goback' => 'Pergi balik',
 	'user-profile-userlevels-link' => 'Tahap-tahap pengguna',
 	'user-no-images' => 'Tiada imej yang dimuat naik',

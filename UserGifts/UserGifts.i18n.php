@@ -2980,6 +2980,7 @@ $messages['mn'] = array(
  */
 $messages['ms'] = array(
 	'g-choose-file' => 'Pilih fail:',
+	'g-next' => 'Berikutnya',
 );
 
 /** Dutch (Nederlands)

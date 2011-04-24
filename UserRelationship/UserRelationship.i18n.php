@@ -5074,6 +5074,13 @@ $2 ने तुम्हांला {{SITENAME}} वर मित्र म्
 व इमेल सूचनांच्या तुमच्या पसंती बदला.',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'ur-next' => 'berikutnya',
+);
+
 /** Maltese (Malti)
  * @author Roderick Mallia
  */

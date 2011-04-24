@@ -1906,6 +1906,7 @@ $4
  */
 $messages['ms'] = array(
 	'ga-choosefile' => 'Pilih fail:',
+	'ga-next' => 'Berikutnya',
 );
 
 /** Dutch (Nederlands)
