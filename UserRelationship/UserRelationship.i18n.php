@@ -5813,7 +5813,7 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
  * @author Psubhashish
  */
 $messages['or'] = array(
-	'ur-main-page' => 'ମୂଳ ଫରଦ',
+	'ur-main-page' => 'ପ୍ରଧାନ ପୃଷ୍ଠା',
 );
 
 /** Ossetic (Иронау)

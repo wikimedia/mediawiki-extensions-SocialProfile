@@ -8053,6 +8053,7 @@ Kliknij [[Special:UserLogin|tutaj]] aby się zalogować lub [[Special:UserLogin/
  * @author Dragonòt
  */
 $messages['pms'] = array(
+	'editprofile' => "Modifiché ij profij d'àutri utent",
 	'populateuserprofiles' => "Ampinì ij profij d'utent",
 	'user-time-ago' => '$1 fa',
 	'user-awards-title' => 'Premi',
@@ -8130,6 +8131,7 @@ $messages['pms'] = array(
 	'user-profile-update-notloggedin-text' => 'A peule pa modifiché sò profil sensa esse intrà ant ël sistema.
 Sgnaché [[Special:UserLogin|ambelessì]] për intré ant ël sistema o sgnaché [[Special:UserLogin/signup|ambelessì]] për argistresse.',
 	'user-profile-update-saved' => "Tò profil a l'é stàit salvà.",
+	'user-profile-edit-profile-update-saved' => "Ël profil utent a l'é stàit salvà da bin",
 	'user-profile-update-log-section' => 'session cangià',
 	'user-profile-update-profile' => 'profil',
 	'user-profile-default-country' => 'Stat Unì',
@@ -8204,6 +8206,7 @@ Sgnaché [[Special:UserLogin|ambelessì]] për intré ant ël sistema o sgnaché
 	'user-profile-userlevels-link' => "Livej dl'utent",
 	'user-no-images' => 'Pa gnun-e figure carià',
 	'edit-profile-title' => 'Modìfica tò profil',
+	'edit-profiles-title' => 'Modifiché ij profij',
 	'user-page-link' => 'Pàgina utent',
 	'user-social-profile-link' => 'Profil social',
 	'user-wiki-link' => 'Pàgina utent dla wiki',
@@ -8225,12 +8228,14 @@ Sgnaché [[Special:UserLogin|ambelessì]] për intré ant ël sistema o sgnaché
 	'avatarupload-removeanother' => "Gavne n'àutr",
 	'profilelogpage' => 'Registr dle modìfiche dël profil utent',
 	'profilelogpagetext' => "Cost-sì a l'é un registr ëd le modìfiche dël profil utent",
+	'user-profile-edit-profile' => 'modificà ël profil ëd $1',
 	'avatarlogpage' => "Registr ëd caria dl'avatar",
 	'avatarlogpagetext' => "Cost-sì a l'é un registr dij cariament dl'avatar utent",
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'carià avatar neuv',
 	'user-profile-picture-log-delete-entry' => "a l'ha scancelà l'avatar ëd $1",
 	'right-avatarremove' => "Gava avatar ëd l'utent",
+	'right-editothersprofiles' => "Modifiché ij profij sociaj d'autr utent",
 );
 
 /** Pashto (پښتو)

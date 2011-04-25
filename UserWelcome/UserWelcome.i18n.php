@@ -89,7 +89,7 @@ $messages['an'] = array(
 $messages['ar'] = array(
 	'userwelcome-desc' => 'يضيف وسم <code>&lt;welcomeUser&gt;</code> لعرض معلومات اجتماعية خاصة بالمستخدم للمستخدمين المسجلين',
 	'mp-userlevels-link' => 'مستويات المستخدم',
-	'mp-welcome-upload' => 'رفع',
+	'mp-welcome-upload' => 'ارفع',
 	'mp-welcome-edit' => 'عدل',
 	'mp-welcome-points' => '{{PLURAL:$1|لا نقاط|نقطة واحدة|نقطتان|$1 نقاط|$1 نقطة}}',
 	'mp-welcome-needed-points' => 'للتقدم <b><a href="$1">$2</a></b> لاستحقاق {{PLURAL:$3||نقطة واحدة إضافية|نقطتان إضافيتان|<i>$3</i> نقاط إضافية|<i>$3</i> نقطة إضافية}}!',
