@@ -5810,10 +5810,13 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
 
 /** Oriya (ଓଡ଼ିଆ)
  * @author Jose77
+ * @author Odisha1
  * @author Psubhashish
  */
 $messages['or'] = array(
 	'ur-main-page' => 'ପ୍ରଧାନ ପୃଷ୍ଠା',
+	'ur-previous' => 'ଆଗ',
+	'ur-next' => 'ପରେ',
 );
 
 /** Ossetic (Иронау)

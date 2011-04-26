@@ -2539,6 +2539,14 @@ Clicatz $4
 e modificatz vòstres paramètres per desactivar las notificacions dels corrièrs electronics.",
 );
 
+/** Oriya (ଓଡ଼ିଆ)
+ * @author Odisha1
+ */
+$messages['or'] = array(
+	'userboard_nextpage' => 'ପରେ',
+	'userboard_prevpage' => 'ଆଗ',
+);
+
 /** Ossetic (Иронау)
  * @author Amikeco
  */
@@ -3611,7 +3619,9 @@ $messages['yi'] = array(
  */
 $messages['zh-hans'] = array(
 	'boardlinkselectall' => '选择全部',
+	'boardlinkunselectall' => '取消选择所有',
 	'boardlinkselectfriends' => '选择朋友',
+	'boardlinkunselectfriends' => '取消选择朋友',
 	'boardlinkselectfoes' => '选择仇敌',
 	'userboard_delete' => '删除',
 	'userboard_posted_ago' => '在$1前张贴',

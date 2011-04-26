@@ -1547,6 +1547,7 @@ ja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.',
 /** French (Français)
  * @author Crochet.david
  * @author IAlex
+ * @author Od1n
  * @author PieRRoMaN
  * @author Urhixidur
  * @author Verdy p
@@ -1576,7 +1577,7 @@ $messages['fr'] = array(
 	'g-delete-message' => 'Êtes-vous certain{{GENDER:||e|(e)}} de vouloir supprimer le cadeau « $1 » ? Ceci va également le supprimer des utilisateurs qui l’ont reçu.',
 	'g-description-title' => 'Cadeau « $2 » de la part de $1',
 	'g-error-do-not-own' => 'Vous ne possédez pas ce cadeau.',
-	'g-error-message-blocked' => 'Vous êtes bloqué{{GENDER:||e|(e)}} et ne pouvez donc pas donner des cadeaux',
+	'g-error-message-blocked' => 'Vous êtes bloqué{{GENDER:||e|(e)}} et ne pouvez donc pas donner de cadeaux',
 	'g-error-message-invalid-link' => 'Le lien que vous avez fourni est invalide.',
 	'g-error-message-login' => 'Vous devez vous connecter pour donner des cadeaux',
 	'g-error-message-no-user' => 'L’utilisateur que vous essayez de voir n’existe pas.',
@@ -3397,6 +3398,16 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
 	'right-giftadmin' => "Crear de presents novèls e modificar los qu'existisson",
 );
 
+/** Oriya (ଓଡ଼ିଆ)
+ * @author Odisha1
+ */
+$messages['or'] = array(
+	'g-next' => 'ପରେ',
+	'g-previous' => 'ଆଗ',
+	'g-remove' => 'ବାହାର କରିବା',
+	'g-remove-title' => 'ବାହାର କରିବା "$1"?',
+);
+
 /** Ossetic (Иронау)
  * @author Amikeco
  */
@@ -4978,6 +4989,7 @@ $messages['zh-hans'] = array(
 	'g-choose-file' => '选择档案：',
 	'g-cancel' => '取消',
 	'g-create-gift' => '创造礼物',
+	'g-current-image' => '当前图像',
 	'g-error-message-to-yourself' => '您不能送礼物给自己。',
 	'g-gift' => '礼物',
 	'g-gift-name' => '送礼物',
@@ -5007,6 +5019,7 @@ $messages['zh-hans'] = array(
 	'g-uploadsuccess' => '上载成功',
 	'g-viewgiftlist' => '检视礼物清单',
 	'g-your-profile' => '您的个人资料',
+	'right-giftadmin' => '创建新的和编辑现有的礼物',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)

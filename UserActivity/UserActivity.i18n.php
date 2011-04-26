@@ -530,6 +530,26 @@ $messages['ltg'] = array(
 	'useractivity-user_message' => '$1 nūsyuteja {{PLURAL:$4|viestejumu|viestejumus}} $3',
 );
 
+/** Latvian (Latviešu)
+ * @author GreenZeb
+ */
+$messages['lv'] = array(
+	'useractivity' => 'Draugu aktivitāte',
+	'useractivity-award' => '$1 saņēma balvu',
+	'useractivity-all' => 'Skatīt visu',
+	'useractivity-edit' => '$1 {{PLURAL:$4|rediģēja lapu|rediģēja šādas lapas:}} $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|tagad ir ienaidnieks ar|tagad ir ienaidnieki ar}} $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|tagad ir draugs ar|tagad ir draugi ar}} $3',
+	'useractivity-gift' => '$1 saņēma dāvanu no $2',
+	'useractivity-group-edit' => '{{PLURAL:$1|viens labojums|$1 labojumi}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|viens komentārs|$1 komentāri}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|viens ziņojums|$1 ziņojumi}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|viens draugs|$1 draugi}}',
+	'useractivity-siteactivity' => 'Aktivitāte vietnē',
+	'useractivity-title' => 'Draugu aktivitāte',
+	'useractivity-user_message' => '$1 {{PLURAL:$4|nosūtīja ziņu|nosūtīja ziņas uz}} $3',
+);
+
 /** Macedonian (Македонски)
  * @author Bjankuloski06
  */

@@ -7790,6 +7790,13 @@ $messages['oc'] = array(
 	'right-avatarremove' => "Levar d'avatars d'utilizaires",
 );
 
+/** Oriya (ଓଡ଼ିଆ)
+ * @author Odisha1
+ */
+$messages['or'] = array(
+	'user-profile-personal-email' => 'ଇ-ମେଲ',
+);
+
 /** Ossetic (Иронау)
  * @author Amikeco
  */
