@@ -4556,6 +4556,7 @@ $messages['haw'] = array(
  * @author YaronSh
  */
 $messages['he'] = array(
+	'editprofile' => 'לערוך פרופילים של משתמשים אחרים',
 	'populateuserprofiles' => 'אכלוס פרופילי משתמשים',
 	'user-time-ago' => 'לפני $1',
 	'user-awards-title' => 'פרסים',
@@ -4633,6 +4634,7 @@ $messages['he'] = array(
 	'user-profile-update-notloggedin-text' => 'לא תוכלו לערוך את הפרופיל מבלי לבצע כניסה לחשבון.
 לחצו [[Special:UserLogin|כאן]] כדי להיכנס לחשבון או [[Special:UserLogin/signup|כאן]] כדי להרשם.',
 	'user-profile-update-saved' => 'הפרופיל שלכם נשמר',
+	'user-profile-edit-profile-update-saved' => 'פרופיל המשתמש הזה שמר בהצלחה',
 	'user-profile-update-log-section' => 'קטע שהשתנה',
 	'user-profile-update-profile' => 'פרופיל',
 	'user-profile-default-country' => 'ארצות הברית',
@@ -4707,6 +4709,7 @@ $messages['he'] = array(
 	'user-profile-userlevels-link' => 'רמות המשתמשים',
 	'user-no-images' => 'לא הועלו תמונות',
 	'edit-profile-title' => 'עריכת הפרופיל',
+	'edit-profiles-title' => 'לערוך פרופילים',
 	'user-page-link' => 'דף המשתמש',
 	'user-social-profile-link' => 'הפרופיל הקהילתי',
 	'user-wiki-link' => 'דף המשתמש של הוויקי',
@@ -4728,12 +4731,14 @@ $messages['he'] = array(
 	'avatarupload-removeanother' => 'הסרת נוספת',
 	'profilelogpage' => 'יומן עריכות פרופיל המשתמש',
 	'profilelogpagetext' => 'זהו יומן העריכות של פרופיל המשתמש',
+	'user-profile-edit-profile' => 'ערך את הפרופיל של $1',
 	'avatarlogpage' => 'יומן העלאות תמונת המשתמש',
 	'avatarlogpagetext' => 'זהו יומן העלאות תמונת המשתמש',
 	'user-profile-picture-log' => 'תמונת משתמש',
 	'user-profile-picture-log-entry' => 'הועלתה תמונת משתמש חדשה',
 	'user-profile-picture-log-delete-entry' => 'מחק את תמונת המשתמש של $1',
 	'right-avatarremove' => 'הסרת תמונות משתמש',
+	'right-editothersprofiles' => 'לעדכן פרופילים חברתיים של משתמשים אחרים',
 );
 
 /** Hindi (हिन्दी)
@@ -5339,6 +5344,7 @@ Clicca [[Special:UserLogin|hic]] pro aperir un session o clicca [[Special:UserLo
  * @author IvanLanin
  */
 $messages['id'] = array(
+	'editprofile' => 'Sunting profil pengguna lain',
 	'populateuserprofiles' => 'Buat profil pengguna',
 	'user-time-ago' => '$1 yang lalu',
 	'user-awards-title' => 'Penghargaan',
@@ -5416,6 +5422,7 @@ $messages['id'] = array(
 	'user-profile-update-notloggedin-text' => 'Anda tidak bisa menyunting profil Anda tanpa masuk log.
 Klik [[Special:UserLogin|di sini]] untuk masuk log atau klik [[Special:UserLogin/signup|di sini]] untuk mendaftar.',
 	'user-profile-update-saved' => 'Profil Anda telah disimpan',
+	'user-profile-edit-profile-update-saved' => 'Profil pengguna berhasil disimpan',
 	'user-profile-update-log-section' => 'mengubah bagian',
 	'user-profile-update-profile' => 'profil',
 	'user-profile-default-country' => 'Amerika Serikat',
@@ -5490,6 +5497,7 @@ Klik [[Special:UserLogin|di sini]] untuk masuk log atau klik [[Special:UserLogin
 	'user-profile-userlevels-link' => 'Tingkat pengguna',
 	'user-no-images' => 'Tidak ada foto yang diunggah',
 	'edit-profile-title' => 'Sunting profil Anda',
+	'edit-profiles-title' => 'Sunting profil',
 	'user-page-link' => 'Halaman pengguna',
 	'user-social-profile-link' => 'Profil sosial',
 	'user-wiki-link' => 'Halaman pengguna wiki',
@@ -5511,12 +5519,14 @@ Klik [[Special:UserLogin|di sini]] untuk masuk log atau klik [[Special:UserLogin
 	'avatarupload-removeanother' => 'Hapus yang lain',
 	'profilelogpage' => 'Log penyuntingan profil pengguna',
 	'profilelogpagetext' => 'Ini adalah log penyuntingan profil pengguna',
+	'user-profile-edit-profile' => 'menyunting profil $1',
 	'avatarlogpage' => 'Log pengunggahan avatar',
 	'avatarlogpagetext' => 'Ini adalah log pengunggahan avatar',
 	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'memuat avatar baru',
 	'user-profile-picture-log-delete-entry' => 'menghapus avatar $1',
 	'right-avatarremove' => 'Menghapus avatar pengguna',
+	'right-editothersprofiles' => 'Perbarui profil sosial pengguna lain',
 );
 
 /** Igbo (Igbo)

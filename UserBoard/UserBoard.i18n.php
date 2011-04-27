@@ -1425,7 +1425,7 @@ $messages['hak'] = array(
  */
 $messages['he'] = array(
 	'boardblastlogintitle' => 'עליכם להיכנס לחשבון כדי לשלוח מסרים המוניים',
-	'boardblastlogintext' => 'עליכם <a href="index.php?title=Special:UserLogin">להיכנס לחשבון</a> כדי לשלוח מסרים המוניים.',
+	'boardblastlogintext' => 'כדי לשלוח מסרים המוניים, עליכם [[Special:UserLogin|להיכנס לחשבון]].',
 	'messagesenttitle' => 'ההודעות נשלחו',
 	'boardblasttitle' => 'שליחת מסר המוני',
 	'boardblaststep1' => 'שלב 1 – כתבו את הודעתכם',
