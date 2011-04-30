@@ -7372,12 +7372,13 @@ $messages['szl'] = array(
 
 /** Tamil (தமிழ்)
  * @author TRYPPN
+ * @author செல்வா
  */
 $messages['ta'] = array(
 	'ur-previous' => 'முந்தைய',
 	'ur-next' => 'அடுத்தது',
 	'ur-remove' => 'நீக்குக',
-	'ur-cancel' => 'விட்டுவிடு',
+	'ur-cancel' => 'செய்யாமல் விடுக',
 	'ur-login' => 'புகுபதிகை',
 	'ur-accept' => 'ஒத்துக்கொள்',
 	'ur-reject' => 'ஒதுக்கித் தள்ளு',
@@ -7433,6 +7434,7 @@ $messages['te'] = array(
 $messages['tet'] = array(
 	'ur-main-page' => 'Pájina Mahuluk',
 	'ur-next' => 'oinmai',
+	'ur-remove' => 'Hasai',
 	'ur-cancel' => 'Para',
 );
 

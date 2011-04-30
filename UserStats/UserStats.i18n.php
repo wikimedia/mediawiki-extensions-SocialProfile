@@ -2683,6 +2683,13 @@ $3 ని నొక్కి
 ఈ-మెయిలు గమనింపులని అచేతనం చేసుకునేందుకు అమరికలని మార్చుకోండి.',
 );
 
+/** Tetum (Tetun)
+ * @author MF-Warburg
+ */
+$messages['tet'] = array(
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Edisaun|Edisaun}}',
+);
+
 /** Turkmen (Türkmençe)
  * @author Hanberke
  */

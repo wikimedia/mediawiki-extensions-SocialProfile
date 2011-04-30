@@ -1416,6 +1416,13 @@ $messages['te'] = array(
 	'mp-request-new-friend' => '$1 కొత్త {{PLURAL:$1|మిత్రుడు|మిత్రులు}}',
 );
 
+/** Tetum (Tetun)
+ * @author MF-Warburg
+ */
+$messages['tet'] = array(
+	'mp-welcome-edit' => 'Edita',
+);
+
 /** Thai (ไทย)
  * @author Manop
  * @author Woraponboonkerd
