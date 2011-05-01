@@ -1482,6 +1482,7 @@ $messages['bg'] = array(
 
 /** Bengali (বাংলা)
  * @author Bellayet
+ * @author Wikitanvir
  */
 $messages['bn'] = array(
 	'user-time-ago' => '$1 আগে',
@@ -1489,6 +1490,59 @@ $messages['bn'] = array(
 	'user-gifts-title' => 'উপহার',
 	'user-view-all' => 'সব দেখাও',
 	'user-upload-image' => 'চিত্র আপলোড',
+	'user-edit-this' => 'এটি সম্পাদনা করো',
+	'user-edit-profile' => 'প্রোফাইল সম্পাদনা',
+	'user-upload-avatar' => 'অ্যাভাটার আপলোড',
+	'user-watchlist' => 'আমার নজর তালিকা',
+	'user-meet-people' => 'মানুষের সাথে সাক্ষাৎ করুন',
+	'user-add-friend' => 'বন্ধু হিসেবে যোগ করুন',
+	'user-add-foe' => 'শত্রু হিসেবে যোগ করুন',
+	'user-remove-friend' => 'বন্ধু হিসেবে বাদ দিন',
+	'user-remove-foe' => 'শত্রু হিসেবে বাদ দিন',
+	'user-send-message' => 'একটি বার্তা প্রেরণ করো',
+	'user-send-gift' => 'উপহার প্রেরণ করো',
+	'user-contributions' => 'অবদানসমূহ',
+	'user-stats-title' => 'পরিসংখ্যান',
+	'user-stats-edits' => '{{PLURAL:$1|সম্পাদনা|সম্পাদনাসমূহ}}',
+	'user-stats-votes' => '{{PLURAL:$1|ভোট|ভোটসমূহ}}',
+	'user-stats-comments' => '{{PLURAL:$1|মন্তব্য|মন্তব্যসমূহ}}',
+	'other-info-title' => 'অন্যান্য তথ্য',
+	'user-friends-title' => 'বন্ধু',
+	'user-foes-title' => 'শত্রু',
+	'other-info-movies' => 'চলচ্চিত্র',
+	'other-info-tv' => 'টিভি',
+	'other-info-music' => 'সঙ্গীত',
+	'other-info-books' => 'বই',
+	'other-info-video-games' => 'ভিডিও গেম',
+	'other-info-magazines' => 'ম্যাগাজিন',
+	'other-info-snacks' => 'হালকা খাবার',
+	'other-info-drinks' => 'পানীয়',
+	'other-no-info' => 'অন্য কোনো তথ্য নেই',
+	'custom-info-title' => 'স্বনির্ধারিত তথ্যাদি',
+	'custom-info-field1' => 'স্বনির্ধারিত ১',
+	'custom-info-field2' => 'স্বনির্ধারিত ২',
+	'custom-info-field3' => 'স্বনির্ধারিত ৩',
+	'custom-info-field4' => 'স্বনির্ধারিত ৪',
+	'custom-no-info' => 'কোনো স্বনির্ধারিত তথ্য নেই',
+	'profile-updated-personal' => 'আপনার প্রোফাইল হালনাগাদ করুন',
+	'profile-not-provided' => 'দেয়া হয়নি',
+	'user-board-title' => 'বোর্ড',
+	'user-personal-info-title' => 'ব্যক্তিগত তথ্য',
+	'user-no-personal-info' => 'কোনো ব্যক্তিগত তথ্য নয়',
+	'user-personal-info-real-name' => 'প্রকৃত নাম',
+	'user-personal-info-location' => 'অবস্থান',
+	'user-personal-info-birthday' => 'জন্মতারিখ',
+	'user-personal-info-occupation' => 'পেশা',
+	'user-personal-info-websites' => 'ওয়েবসাইট',
+	'user-personal-info-places-lived' => 'যেসকল স্থানে বাস করেছি',
+	'user-personal-info-schools' => 'স্কুল',
+	'user-personal-info-about-me' => 'আমার সম্পর্কে',
+	'user-recent-activity-title' => 'সাম্প্রতিক ব্যস্ততা',
+	'user-recent-activity-edit' => 'এই পাতাটি সম্পাদনা করো',
+	'user-recent-activity-vote' => 'এই পাতার জন্য ভোট দাও',
+	'user-recent-activity-comment' => 'যে পাতায় মন্তব্য করেছিলাম',
+	'user-profile-section-picture' => 'অ্যাভাটার',
+	'user-profile-section-preferences' => 'পছন্দ',
 );
 
 /** Breton (Brezhoneg)
@@ -6857,6 +6911,7 @@ $messages['ml'] = array(
 );
 
 /** Marathi (मराठी)
+ * @author Htt
  * @author Kaustubh
  * @author Mahitgar
  */
@@ -6938,7 +6993,7 @@ $messages['mr'] = array(
 	'user-profile-section-preferences' => 'पसंती',
 	'user-profile-personal-info' => 'माहिती',
 	'user-profile-personal-name' => 'नाव',
-	'user-profile-personal-email' => 'इ-मेल',
+	'user-profile-personal-email' => 'विपत्र',
 	'user-profile-personal-confirmemail' => 'इ-मेल प्रमाणित करा',
 	'user-profile-personal-location' => 'ठिकाण',
 	'user-profile-personal-city' => 'शहर',

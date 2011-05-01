@@ -601,17 +601,45 @@ $messages['bg'] = array(
 
 /** Bengali (বাংলা)
  * @author Bellayet
+ * @author Wikitanvir
  */
 $messages['bn'] = array(
+	'giftmanager-description' => 'উপহারের বিবরণ',
+	'giftmanager-giftimage' => 'উপহারের ছবি',
+	'giftmanager-image' => 'ছবি যোগ/প্রতিস্থাপন',
+	'giftmanager-giftcreated' => 'উপহারটি তৈরি করা হয়েছে',
+	'giftmanager-giftsaved' => 'উপহারটি সংরক্ষিত হয়েছে',
+	'giftmanager-public' => 'সর্বসাধারণের',
+	'giftmanager-private' => 'ব্যক্তিগত',
+	'giftmanager-view' => 'উপহারের তালিকা দেখাও',
+	'g-add-message' => 'একটি বার্তা যোগ করো',
+	'g-choose-file' => 'ফাইল পছন্দ করুন:',
+	'g-cancel' => 'বাতিল',
+	'g-create-gift' => 'উপহার তৈরি করুন',
+	'g-created-by' => 'তৈরি করেছেন',
+	'g-current-image' => 'বর্তমান ছবি',
+	'g-gift' => 'উপহার',
+	'g-gift-name' => 'উপহারের নাম',
+	'g-give-gift' => 'উপহার দিন',
+	'g-give-all-message-title' => 'একটি বার্তা যোগ করো',
+	'g-give-all-title' => '$1-কে একটি উপহার দিন',
+	'g-give-list-select' => 'একজন বন্ধু নির্বাচন করুন',
+	'g-give-separator' => 'অথবা',
 	'g-go-back' => 'ফিরে যান',
 	'g-large' => 'বিশাল',
 	'g-main-page' => 'প্রধান পাতা',
 	'g-medium' => 'মধ্যম',
+	'g-mediumlarge' => 'মধ্যম-বড়',
 	'g-new' => 'নতুন',
 	'g-next' => 'পরবর্তী',
 	'g-previous' => 'পূর্ববর্তী',
 	'g-remove' => 'অপসারণ',
+	'g-remove-gift' => 'এই উপহারটি অপসারণ করো',
+	'g-send-gift' => 'উপহার প্রেরণ করো',
+	'g-select-a-friend' => 'একজন বন্ধু নির্বাচন করুন',
+	'g-sent-title' => 'আপনি $1-এর কাছে একটি উপহার পাঠিয়েছেন',
 	'g-small' => 'ছোট',
+	'g-viewgiftlist' => 'উপহারের তালিকা দেখাও',
 	'g-your-profile' => 'আপনার বৃত্তান্ত',
 );
 

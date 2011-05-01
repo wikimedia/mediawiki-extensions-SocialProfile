@@ -411,11 +411,24 @@ $3
 
 /** Bengali (বাংলা)
  * @author Bellayet
+ * @author Wikitanvir
  * @author Zaheen
  */
 $messages['bn'] = array(
+	'messagesenttitle' => 'বার্তা প্রেরিত',
 	'boardlinkselectall' => 'সমস্ত নির্বাচন করুন',
+	'boardlinkunselectall' => 'সমস্ত নির্বাচন বাতিল করুন',
+	'boardlinkselectfriends' => 'বন্ধু নির্বাচন',
+	'userboard_board-to-board' => 'বোর্ড-থেকে-বোর্ডে',
 	'userboard_delete' => 'মুছে ফেলা হোক',
+	'userboard_yourboard' => 'আপনার বোর্ড',
+	'userboard_private' => 'ব্যক্তিগত',
+	'userboard_public' => 'সর্বসাধারণের',
+	'userboard_messagetype' => 'বার্তার ধরন',
+	'userboard_nextpage' => 'পরবর্তী',
+	'userboard_prevpage' => 'পূর্ববর্তী',
+	'userboard_nomessages' => 'কোনো নতুন বার্তা নেই।',
+	'userboard_sendbutton' => 'প্রেরণ',
 );
 
 /** Breton (Brezhoneg)

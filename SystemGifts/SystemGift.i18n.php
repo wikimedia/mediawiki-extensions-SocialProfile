@@ -360,6 +360,30 @@ $messages['bg'] = array(
 	'ga-small' => 'Малка',
 );
 
+/** Bengali (বাংলা)
+ * @author Wikitanvir
+ */
+$messages['bn'] = array(
+	'ga-choosefile' => 'ফাইল পছন্দ করুন:',
+	'ga-gift' => 'উপহার',
+	'ga-giftdesc' => 'উপহারের বিবরণ',
+	'ga-giftimage' => 'উপহারের ছবি',
+	'ga-giftname' => 'উপহারের নাম',
+	'ga-gifttype' => 'উপহারের ধরন',
+	'ga-goback' => 'ফিরে যাও',
+	'ga-large' => 'বড়',
+	'ga-medium' => 'মধ্যম',
+	'ga-mediumlarge' => 'মধ্যম-বড়',
+	'ga-new' => 'নতুন',
+	'ga-next' => 'পরবর্তী',
+	'ga-previous' => 'পূর্ববর্তী',
+	'ga-small' => 'ছোট',
+	'ga-uploadsuccess' => 'আপলোড সফল',
+	'ga-viewlist' => 'উপহারের তালিকা দেখাও',
+	'system_gift_received_subject' => 'আপনি {{SITENAME}} সাইটে $1 পুরস্কার লাভ করেছেন!',
+	'right-awardsmanage' => 'নতুন তৈরি এবং ইতিমধ্যেই থাকা পুরস্কারসমূহ সম্পাদনা করো',
+);
+
 /** Breton (Brezhoneg)
  * @author Fohanno
  * @author Fulup

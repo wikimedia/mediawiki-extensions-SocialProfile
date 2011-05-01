@@ -123,6 +123,17 @@ $messages['be-tarask'] = array(
 	'useractivity-user_message' => '$1 {{GENDER:$6|даслаў|даслала}} {{PLURAL:$4|паведамленьне|паведамленьні}} $3',
 );
 
+/** Bengali (বাংলা)
+ * @author Wikitanvir
+ */
+$messages['bn'] = array(
+	'useractivity' => 'বন্ধুদের সক্রিয়তা',
+	'useractivity-award' => '$1 একটি পুরস্কার লাভ করেছেন',
+	'useractivity-all' => 'সব দেখাও',
+	'useractivity-siteactivity' => 'সাইটের সক্রিয়তা',
+	'useractivity-title' => 'বন্ধুদের সক্রিয়তা',
+);
+
 /** Breton (Brezhoneg)
  * @author Fulup
  * @author Y-M D
