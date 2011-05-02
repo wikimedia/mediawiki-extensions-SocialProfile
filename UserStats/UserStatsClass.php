@@ -969,6 +969,16 @@ class UserLevel {
 	var $level_number = 0;
 	var $level_name;
 
+	/**
+	 * @var String: name of the next level
+	 */
+	var $next_level_name;
+
+	/**
+	 * @var Integer: amount of points needed to reach the next level
+	 */
+	var $next_level_points_needed;
+
 	/* private */ function __construct( $points ) {
 		global $wgUserLevels;
 		$this->levels = $wgUserLevels;
