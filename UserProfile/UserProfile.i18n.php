@@ -2209,7 +2209,7 @@ $messages['csb'] = array(
  * @author ОйЛ
  */
 $messages['cu'] = array(
-	'user-watchlist' => 'моꙗ́ блюдє́ниꙗ',
+	'user-watchlist' => 'моꙗ блюдєниꙗ',
 	'user-personal-info-real-name' => 'и́стиньно и́мѧ',
 	'user-profile-section-preferences' => 'строи',
 	'user-page-link' => 'по́льꙃєватєл҄ь',
