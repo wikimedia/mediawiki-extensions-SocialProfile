@@ -462,6 +462,14 @@ $4
 	'right-giftadmin' => 'إنشاء هدايا جديدة وتعديل الموجودة',
 );
 
+/** Azerbaijani (Azərbaycanca)
+ * @author Cekli829
+ */
+$messages['az'] = array(
+	'g-new' => 'yeni',
+	'g-small' => 'Kiçik',
+);
+
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by

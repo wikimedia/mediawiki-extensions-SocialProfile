@@ -275,6 +275,13 @@ $4
 	'right-awardsmanage' => 'إنشاء جوائز جديدة وتعديل الموجودة',
 );
 
+/** Azerbaijani (Azərbaycanca)
+ * @author Cekli829
+ */
+$messages['az'] = array(
+	'ga-new' => 'Yeni',
+);
+
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by

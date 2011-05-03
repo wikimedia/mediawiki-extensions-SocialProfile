@@ -1099,9 +1099,18 @@ $messages['arz'] = array(
 );
 
 /** Azerbaijani (Azərbaycanca)
+ * @author Cekli829
  * @author Emperyan
  */
 $messages['az'] = array(
+	'other-info-tv' => 'TV',
+	'other-info-music' => 'Musiqi',
+	'other-info-books' => 'Kitablar',
+	'user-profile-interests-tv' => 'TV',
+	'user-profile-interests-music' => 'Musiqi',
+	'user-profile-interests-books' => 'Kitablar',
+	'user-profile-sports-sport' => 'İdman',
+	'user-profile-picture-small' => 'Kiçik',
 	'user-page-link' => 'İstifadəçi səhifəsi',
 );
 
