@@ -2069,6 +2069,13 @@ Clicatz $3
 e modificatz vòstres paramètres en desactivant las notificacions per corrièr electronic.",
 );
 
+/** Oriya (ଓଡ଼ିଆ)
+ * @author Psubhashish
+ */
+$messages['or'] = array(
+	'top-fans-bad-field-title' => 'ଓଃ!',
+);
+
 /** Deitsch (Deitsch)
  * @author Xqt
  */
