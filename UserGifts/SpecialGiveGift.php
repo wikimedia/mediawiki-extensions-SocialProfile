@@ -219,19 +219,13 @@ class GiveGift extends SpecialPage {
 	 * @return String: HTML
 	 */
 	function displayFormNoUser() {
-		global $wgUser, $wgOut, $wgRequest, $wgFriendingEnabled;
+		global $wgUser, $wgOut, $wgFriendingEnabled;
 
-		$output = $wgOut->setPageTitle( wfMsg( 'g-give-no-user-title' ) );
+		$wgOut->setPageTitle( wfMsg( 'g-give-no-user-title' ) );
 
-		// @todo FIXME: $wgRequest->getVal()...seriously?
-		// Seems that this should use the proper MW function (maybe
-		// $this->getTitle()->getFullURL() or something) instead.
-		// Maybe that's the reason why I (and other people) frequently have
-		// problems with this special page.
-		// --Jack Phoenix <jack@countervandalism.net>, 6 April 2011
-		$output .= '<form action="" method="get" enctype="multipart/form-data" name="gift">
-			<input type="hidden" name="title" value="' . $wgRequest->getVal( 'title' ) . '" />
-			<div class="g-message">' .
+		$output = '<form action="" method="get" enctype="multipart/form-data" name="gift">' .
+			Xml::hidden( 'title', $this->getTitle() ) .
+			'<div class="g-message">' .
 				wfMsg( 'g-give-no-user-message' ) .
 			'</div>
 			<div class="g-give-container">';
@@ -248,13 +242,13 @@ class GiveGift extends SpecialPage {
 					'</div>
 					<div class="g-gift-select">
 						<select onchange="javascript:chooseFriend(this.value)">
-						<option value="#" selected="selected">' .
-							wfMsg( 'g-select-a-friend' ) .
-						'</option>';
+							<option value="#" selected="selected">' .
+								wfMsg( 'g-select-a-friend' ) .
+							'</option>';
 					foreach ( $friends as $friend ) {
 						$output .= '<option value="' . urlencode( $friend['user_name'] ) . '">' .
 							$friend['user_name'] .
-						'</option>';
+						'</option>' . "\n";
 					}
 					$output .= '</select>
 					</div>
@@ -340,7 +334,8 @@ class GiveGift extends SpecialPage {
 			if ( $numofpages > 1 ) {
 				$output .= '<div class="page-nav">';
 				if ( $page > 1 ) {
-					$output .= '<a href="' . $giveGiftLink->escapeFullURL( 'user=' . $user_safe . '&page=' . ( $page - 1 ) ) . '">' . wfMsg( 'g-previous' ) . '</a> ';
+					$output .= '<a href="' . $giveGiftLink->escapeFullURL( 'user=' . $user_safe . '&page=' . ( $page - 1 ) ) . '">' .
+						wfMsg( 'g-previous' ) . '</a> ';
 				}
 
 				if ( ( $total % $per_page ) != 0 ) {
@@ -358,7 +353,8 @@ class GiveGift extends SpecialPage {
 				}
 
 				if ( ( $total - ( $per_page * $page ) ) > 0 ) {
-					$output .= ' <a href="' . $giveGiftLink->escapeFullURL( 'user=' . $user_safe . '&page=' . ( $page + 1 ) ) . '">' . wfMsg( 'g-next' ) . '</a>';
+					$output .= ' <a href="' . $giveGiftLink->escapeFullURL( 'user=' . $user_safe . '&page=' . ( $page + 1 ) ) . '">' .
+						wfMsg( 'g-next' ) . '</a>';
 				}
 				$output .= '</div>';
 			}
