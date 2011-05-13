@@ -7082,7 +7082,9 @@ $messages['mr'] = array(
  * @author Kurniasan
  */
 $messages['ms'] = array(
+	'other-info-title' => 'Maklumat lain',
 	'user-personal-info-location' => 'Lokasi',
+	'user-profile-section-interests' => 'Maklumat lain',
 	'user-profile-personal-location' => 'Lokasi',
 	'user-profile-personal-birthdate' => 'Tarikh (MM/DD)',
 	'user-profile-goback' => 'Pergi balik',
