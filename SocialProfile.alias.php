@@ -31,6 +31,7 @@ $specialPageAliases['en'] = array(
 /** Arabic (العربية) */
 $specialPageAliases['ar'] = array(
 	'AddRelationship' => array( 'إضافة_علاقة' ),
+	'EditProfile' => array( 'تعديل_الملف' ),
 	'PopulateUserProfiles' => array( 'ملء_ملفات_المستخدمين' ),
 	'RemoveAvatar' => array( 'إزالة_أفاتر' ),
 	'RemoveRelationship' => array( 'إزالة_علاقة' ),
@@ -140,9 +141,27 @@ $specialPageAliases['hsb'] = array(
 	'ViewRelationships' => array( 'Poćahi sej wobhladać' ),
 );
 
+/** Haitian (Kreyòl ayisyen) */
+$specialPageAliases['ht'] = array(
+	'AddRelationship' => array( 'AjouteRelasyon' ),
+	'PopulateUserProfiles' => array( 'MetePwofilItilizatè' ),
+	'RemoveAvatar' => array( 'RetireAvata' ),
+	'RemoveRelationship' => array( 'RetireRelasyon' ),
+	'TopFansByStatistic' => array( 'PiGwoFanatikPaEstatistik' ),
+	'TopUsers' => array( 'PiGwoItilizatè' ),
+	'TopUsersRecent' => array( 'PiGwoItilizatèResan' ),
+	'ToggleUserPage' => array( 'BalansePajItilizatè' ),
+	'UpdateEditCounts' => array( 'MeteNonmModifikasyonAjou' ),
+	'UpdateProfile' => array( 'MetePwofilAjou' ),
+	'UploadAvatar' => array( 'ChajeAvata' ),
+	'UserBoard' => array( 'TabloItilizatè' ),
+	'ViewRelationshipRequests' => array( 'GadeRekètLyen' ),
+	'ViewRelationships' => array( 'GadeLyen' ),
+);
+
 /** Hungarian (Magyar) */
 $specialPageAliases['hu'] = array(
-	'UserBoard' => array( 'Felhasználói üzenőfal' ),
+	'UserBoard' => array( 'Felhasználói_üzenőfal' ),
 );
 
 /** Interlingua (Interlingua) */
@@ -189,6 +208,13 @@ $specialPageAliases['ja'] = array(
 	'ViewRelationships' => array( '関係申請の表示' ),
 );
 
+/** Georgian (ქართული) */
+$specialPageAliases['ka'] = array(
+	'TopUsers' => array( 'საუკეთესო_მომხმარებლები' ),
+	'UpdateProfile' => array( 'პროფილის_განახლება' ),
+	'UploadAvatar' => array( 'ავატარის_ატვირთვა' ),
+);
+
 /** Khmer (ភាសាខ្មែរ) */
 $specialPageAliases['km'] = array(
 	'TopUsers' => array( 'អ្នកប្រើប្រាស់សកម្មបំផុត' ),
@@ -204,6 +230,7 @@ $specialPageAliases['ko'] = array(
 /** Luxembourgish (Lëtzebuergesch) */
 $specialPageAliases['lb'] = array(
 	'AddRelationship' => array( 'Relatioun_derbäisetzen' ),
+	'EditProfile' => array( 'Profil_änneren' ),
 	'PopulateUserProfiles' => array( 'Benotzerprofiler_ausfëllen' ),
 	'RemoveAvatar' => array( 'Avatar_ewechhuelen' ),
 	'RemoveRelationship' => array( 'Relatioun_ewechhuelen' ),
@@ -221,8 +248,15 @@ $specialPageAliases['lb'] = array(
 /** Macedonian (Македонски) */
 $specialPageAliases['mk'] = array(
 	'AddRelationship' => array( 'ДодајВрска' ),
+	'EditProfile' => array( 'УредиПрофил' ),
+	'PopulateUserProfiles' => array( 'ПополниКорисничкиПрофили' ),
 	'RemoveAvatar' => array( 'ИзбришиАватар' ),
 	'RemoveRelationship' => array( 'ИзбришиРелација' ),
+	'SendBoardBlast' => array( 'ИстакниНаТаблата' ),
+	'TopFansByStatistic' => array( 'НајкотираниОбожавателиПоСтатистика' ),
+	'TopUsers' => array( 'НајкотираниКорисници' ),
+	'TopUsersRecent' => array( 'СкорешниНајкотираниКорисници' ),
+	'ToggleUserPage' => array( 'ПрефлиКорисничкаСтраница' ),
 	'UpdateEditCounts' => array( 'ОбновиГоБројачотНаУредувања' ),
 	'UpdateProfile' => array( 'ОбновиГоПрофилот' ),
 	'UploadAvatar' => array( 'ПодигниАватар' ),
@@ -283,6 +317,7 @@ $specialPageAliases['nds-nl'] = array(
 /** Dutch (Nederlands) */
 $specialPageAliases['nl'] = array(
 	'AddRelationship' => array( 'RelatieToevoegen' ),
+	'EditProfile' => array( 'ProfielBewerken' ),
 	'PopulateUserProfiles' => array( 'GebruikersprofielenVullen' ),
 	'RemoveAvatar' => array( 'AvatarVerwijderen' ),
 	'RemoveRelationship' => array( 'RelatieVerwijderen' ),
@@ -301,16 +336,16 @@ $specialPageAliases['nl'] = array(
 
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬) */
 $specialPageAliases['no'] = array(
-	'AddRelationship' => array( 'Legg til relasjon' ),
-	'PopulateUserProfiles' => array( 'Instansier brukerprofiler' ),
-	'RemoveAvatar' => array( 'Fjern profilbilde' ),
-	'RemoveRelationship' => array( 'Fjern relasjon' ),
-	'UpdateEditCounts' => array( 'Oppdater redigeringsantall' ),
-	'UpdateProfile' => array( 'Oppdater profil' ),
-	'UploadAvatar' => array( 'Oppdater profilbilde' ),
+	'AddRelationship' => array( 'Legg_til_relasjon' ),
+	'PopulateUserProfiles' => array( 'Instansier_brukerprofiler' ),
+	'RemoveAvatar' => array( 'Fjern_profilbilde' ),
+	'RemoveRelationship' => array( 'Fjern_relasjon' ),
+	'UpdateEditCounts' => array( 'Oppdater_redigeringsantall' ),
+	'UpdateProfile' => array( 'Oppdater_profil' ),
+	'UploadAvatar' => array( 'Oppdater_profilbilde' ),
 	'UserBoard' => array( 'Brukerstyre' ),
-	'ViewRelationshipRequests' => array( 'Vis relasjonsforespørsel' ),
-	'ViewRelationships' => array( 'Vis relasjoner' ),
+	'ViewRelationshipRequests' => array( 'Vis_relasjonsforespørsel' ),
+	'ViewRelationships' => array( 'Vis_relasjoner' ),
 );
 
 /** Pashto (پښتو) */
@@ -335,6 +370,18 @@ $specialPageAliases['sk'] = array(
 	'UserBoard' => array( 'PoužívateľskéFórum' ),
 	'ViewRelationshipRequests' => array( 'ZobraziťŽiadostiOVzťah' ),
 	'ViewRelationships' => array( 'ZobraziťVzťahy' ),
+);
+
+/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬) */
+$specialPageAliases['sr-ec'] = array(
+	'AddRelationship' => array( 'Додај_везу' ),
+	'RemoveAvatar' => array( 'Уклони_сличицу' ),
+	'RemoveRelationship' => array( 'Уклони_везу' ),
+	'TopUsers' => array( 'Топ_корисници' ),
+	'UpdateEditCounts' => array( 'Ажурирај_број_измена' ),
+	'UpdateProfile' => array( 'Ажурирај_профил' ),
+	'ViewRelationshipRequests' => array( 'Прикажи_захтеве_везе' ),
+	'ViewRelationships' => array( 'Прикажи_везу' ),
 );
 
 /** Swahili (Kiswahili) */
