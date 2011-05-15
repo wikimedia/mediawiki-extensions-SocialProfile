@@ -93,10 +93,10 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 				$log->updateRecentChanges = false;
 			}
 			$log->addEntry(
-				wfMsgForContent( 'user-profile-edit-profile',
-					array( '[[User:' . $target->getName() . ']]' ) ),
+				'profile',
 				$target->getUserPage(),
-				''
+				wfMsgForContent( 'user-profile-edit-profile',
+					array( '[[User:' . $target->getName() . ']]' ) )
 			);
 			$wgOut->addHTML(
 				'<span class="profile-on">' .
