@@ -1241,17 +1241,18 @@ $messages['sa'] = array(
 );
 
 /** Sinhala (සිංහල)
+ * @author Singhalawap
  * @author දසනැබළයෝ
  * @author නන්දිමිතුරු
  */
 $messages['si'] = array(
-	'userwelcome-desc' => 'පරිශීලක-විශේෂී සමාජීය තොරතුරු ප්‍රදක්ෂීණා කෙරුම සඳහා, ප්‍රවිෂ්ට-වූ පරිශීලකයන්ට <code>&lt;welcomeUser&gt;</code> ටැගය එකතු කෙරෙයි',
+	'userwelcome-desc' => 'පිවිසුනු පරිශීලකයන්ට පරිශීලක-විශේෂිත සමාජීය තොරතුරු පෙන්වීම සඳහා <code>&lt;welcomeUser&gt;</code> ටැගය එකතු කෙරෙයි',
 	'mp-userlevels-link' => 'පරිශීලක මට්ටම්',
 	'mp-welcome-upload' => 'උඩුගත කිරීම',
 	'mp-welcome-edit' => 'සංස්කරණය',
 	'mp-welcome-points' => '{{PLURAL:$1|එක් ලකුණක්|ලකුණු $1 ක්}}',
 	'mp-welcome-needed-points' => '<b><a href="$1">$2</a></b> වෙත උසස් වීමට,තවත් <i>$3</i> {{PLURAL:$3|ලකුණක්|ලකුණු ගණනක්}} උපයා ගන්න!',
-	'mp-welcome-logged-in' => 'සැරදේ $1',
+	'mp-welcome-logged-in' => 'ආයුබෝවන් $1',
 	'mp-requests-title' => 'ඉල්ලීම්',
 	'mp-requests-message' => 'පහත ඉල්ලීම් ඔබ වෙත යොමු වී ඇත.',
 	'mp-request-new-message' => 'නව පණිවුඩය',

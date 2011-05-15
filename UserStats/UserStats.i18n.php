@@ -2491,6 +2491,13 @@ $messages['rue'] = array(
 	'top-fans-bad-field-title' => 'Уупс!',
 );
 
+/** Sinhala (සිංහල)
+ * @author Singhalawap
+ */
+$messages['si'] = array(
+	'top-fans-bad-field-title' => 'අයියෝ !',
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */

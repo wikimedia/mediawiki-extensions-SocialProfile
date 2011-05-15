@@ -847,6 +847,7 @@ $messages['ee'] = array(
 /** Greek (Ελληνικά)
  * @author Consta
  * @author Crazymadlover
+ * @author Evropi
  * @author Omnipaedista
  * @author ZaDiak
  */
@@ -886,7 +887,7 @@ $messages['el'] = array(
 	'userboard_nextpage' => 'επομ',
 	'userboard_prevpage' => 'προηγ',
 	'userboard_nomessages' => 'Κανένα μήνυμα.',
-	'userboard_sendbutton' => 'Αποστολή',
+	'userboard_sendbutton' => 'αποστολή',
 	'userboard_loggedout' => 'Πρέπει να είστε <a href="$1">συνδεδεμένος</a> για να δημοσιεύσετε μηνύματα σε άλλους χρήστες.',
 	'right-userboard-delete' => 'Διαγραφή μηνυμάτων πίνακα άλλων',
 	'userboard-time-days' => '{{PLURAL:$1|μια μέρα|$1 μέρες}}',
