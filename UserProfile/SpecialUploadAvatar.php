@@ -68,12 +68,12 @@ class SpecialUploadAvatar extends SpecialUpload {
 	private function showSuccess( $ext ) {
 		global $wgUser, $wgOut, $wgDBname, $wgUploadPath, $wgUploadAvatarInRecentChanges;
 
-		$log = new LogPage( wfMsgForContent( 'user-profile-picture-log' ) );
+		$log = new LogPage( 'avatar' );
 		if ( !$wgUploadAvatarInRecentChanges ) {
 			$log->updateRecentChanges = false;
 		}
 		$log->addEntry(
-			wfMsgForContent( 'user-profile-picture-log' ),
+			'avatar',
 			$wgUser->getUserPage(),
 			wfMsgForContent( 'user-profile-picture-log-entry' )
 		);

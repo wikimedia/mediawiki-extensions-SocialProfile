@@ -88,7 +88,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 
 			UserProfile::clearCache( $target->getID() );
 
-			$log = new LogPage( wfMsgForContent( 'user-profile-update-profile' ) );
+			$log = new LogPage( 'profile' );
 			if ( !$wgUpdateProfileInRecentChanges ) {
 				$log->updateRecentChanges = false;
 			}

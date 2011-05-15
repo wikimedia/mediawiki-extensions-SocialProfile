@@ -104,12 +104,12 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 			UserProfile::clearCache( $wgUser->getID() );
 
-			$log = new LogPage( wfMsgForContent( 'user-profile-update-profile' ) );
+			$log = new LogPage( 'profile' );
 			if ( !$wgUpdateProfileInRecentChanges ) {
 				$log->updateRecentChanges = false;
 			}
 			$log->addEntry(
-				wfMsgForContent( 'user-profile-update-profile' ),
+				'profile',
 				$wgUser->getUserPage(),
 				wfMsgForContent( 'user-profile-update-log-section' ) .
 					" '{$section}'"

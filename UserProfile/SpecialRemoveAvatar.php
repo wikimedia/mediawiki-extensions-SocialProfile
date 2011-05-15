@@ -65,12 +65,12 @@ class RemoveAvatar extends SpecialPage {
 			$this->deleteImage( $user_id, 'l' );
 			$this->deleteImage( $user_id, 'ml' );
 
-			$log = new LogPage( wfMsgForContent( 'user-profile-picture-log' ) );
+			$log = new LogPage( 'avatar' );
 			if ( !$wgUploadAvatarInRecentChanges ) {
 				$log->updateRecentChanges = false;
 			}
 			$log->addEntry(
-				wfMsg( 'user-profile-picture-log' ),
+				'avatar',
 				$wgUser->getUserPage(),
 				wfMsg( 'user-profile-picture-log-delete-entry', $user_deleted->getName() )
 			);

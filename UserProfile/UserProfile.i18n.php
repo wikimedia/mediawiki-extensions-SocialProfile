@@ -93,7 +93,6 @@ Click [[Special:UserLogin|here]] to login or click [[Special:UserLogin/signup|he
 	'user-profile-update-saved' => 'Your profile has been saved',
 	'user-profile-edit-profile-update-saved' => 'The user\'s profile was successfully saved',
 	'user-profile-update-log-section' => 'changed section',
-	'user-profile-update-profile' => 'profile',
 	'user-profile-default-country' => 'United States',
 	'user-profile-points' => '$1 {{PLURAL:$1|point|points}}',
 	'user-profile-section-personal' => 'Personal information',
@@ -193,7 +192,6 @@ Click [[Special:UserLogin|here]] to login or click [[Special:UserLogin/signup|he
 	'avatarlogpage' => 'Avatar upload log',
 	'avatarlogpagetext' => 'This is a log of user avatar uploads',
 	'avatarlogentry' => '', # For compatibility, don't translate this
-	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'uploaded new avatar',
 	'user-profile-picture-log-delete-entry' => 'deleted $1\'s avatar',
 	'userprofile-country-list' => '
