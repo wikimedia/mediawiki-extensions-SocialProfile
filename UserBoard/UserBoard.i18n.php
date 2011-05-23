@@ -3193,10 +3193,11 @@ $messages['sr-el'] = array(
  * @author Jon Harald Søby
  * @author M.M.S.
  * @author Najami
+ * @author WikiPhoenix
  */
 $messages['sv'] = array(
 	'boardblastlogintitle' => 'Du måste vara inloggad för att sända meddelanden',
-	'boardblastlogintext' => 'Du måste vara inloggad för att skicka meddelanden. Klicka <a href="index.php?title=Special:UserLogin">här för att logga in</a>',
+	'boardblastlogintext' => 'För att kunna skicka meddelanden måste du vara [[Special:UserLogin|inloggad]].',
 	'messagesenttitle' => 'Sända meddelanden',
 	'boardblasttitle' => 'Sänd meddelande',
 	'boardblaststep1' => 'Steg 1 - Skriv ditt meddelande',
