@@ -1031,9 +1031,10 @@ $messages['oc'] = array(
 
 /** Ossetic (Иронау)
  * @author Amikeco
+ * @author Bouron
  */
 $messages['os'] = array(
-	'mp-welcome-edit' => 'Баив',
+	'mp-welcome-edit' => 'Ивын',
 );
 
 /** Deitsch (Deitsch)
