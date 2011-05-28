@@ -1145,8 +1145,11 @@ $messages['frp'] = array(
 	'ga-new' => 'Novél',
 	'ga-next' => 'Aprés',
 	'ga-previous' => 'Devant',
+	'ga-saved' => 'Lo present at étâ sôvâ',
 	'ga-small' => 'Petiôt',
+	'ga-threshold' => 'lendâr',
 	'ga-title' => 'Prix a $1',
+	'ga-uploadsuccess' => 'Tèlèchargement reussi',
 	'ga-viewlist' => 'Vêre la lista des presents',
 );
 

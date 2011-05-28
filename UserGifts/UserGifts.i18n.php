@@ -1738,8 +1738,10 @@ $messages['frp'] = array(
 	'g-remove-title' => 'Enlevar « $1 » ?',
 	'g-send-gift' => 'Mandar lo present',
 	'g-select-a-friend' => 'chouèsésséd un ami',
+	'g-sent-title' => 'Vos éd mandâ lo present a $1',
 	'g-small' => 'Petiôt',
 	'g-to-another' => 'Balyér a quârqu’un d’ôtro',
+	'g-uploadsuccess' => 'Tèlèchargement reussi',
 	'g-viewgiftlist' => 'Vêre la lista des presents',
 );
 
