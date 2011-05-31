@@ -5009,6 +5009,7 @@ $messages['yi'] = array(
 	'g-large' => 'גרויס',
 	'g-main-page' => 'הויפט בלאט',
 	'g-new' => 'נײַ',
+	'g-next' => 'נעקסט',
 );
 
 /** Simplified Chinese (‪中文(简体)‬)

@@ -1046,6 +1046,8 @@ $messages['frp'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Zérô balyê|Zérôs balyês}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Present reçu|Presents reçus}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Present mandâ|Presents mandâs}}',
+	'level-advanced-to' => 'at avanciê vers lo nivél <span style="font-weight:800;">$1</span>',
+	'level-advance-subject' => 'Vos avéd dês ora un « $1 » dessus {{SITENAME}} !',
 );
 
 /** Galician (Galego)

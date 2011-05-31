@@ -3627,6 +3627,7 @@ $messages['vo'] = array(
 $messages['yi'] = array(
 	'userboard_delete' => 'אויסמעקן',
 	'userboard_private' => 'פריוואַט',
+	'userboard_nextpage' => 'נעקסט',
 );
 
 /** Simplified Chinese (‪中文(简体)‬)
