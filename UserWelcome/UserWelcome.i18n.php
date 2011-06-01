@@ -180,9 +180,11 @@ $messages['bg'] = array(
 
 /** Bengali (বাংলা)
  * @author Bellayet
+ * @author Usarker
  */
 $messages['bn'] = array(
 	'mp-welcome-upload' => 'আপলোড',
+	'mp-welcome-edit' => 'সম্পাদনা',
 	'mp-requests-title' => 'অনুরোধ',
 	'mp-requests-message' => 'আপনার জন্য এই অনুরোধ গুলো রয়েছে।',
 	'mp-request-new-message' => 'নতুন বার্তা',
