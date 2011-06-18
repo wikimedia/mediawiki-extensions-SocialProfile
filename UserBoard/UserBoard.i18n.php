@@ -2664,7 +2664,7 @@ i zmień ustawienia, wyłączając powiadomienia e‐mail.',
  */
 $messages['pms'] = array(
 	'boardblastlogintitle' => 'A dev esse intrà ant ël sistema për mandé là tàula an ramà',
-	'boardblastlogintext' => 'Per mandé dle tàule an ramà, a dev esse [[Special:UserLogin|intrà ant ël sistema]].',
+	'boardblastlogintext' => 'Per mandé dle tàule a ramà, a dev esse [[Special:UserLogin|intrà ant ël sistema]].',
 	'messagesenttitle' => 'Mëssagi spedì',
 	'boardblasttitle' => 'Manda na tàula an ramà',
 	'boardblaststep1' => 'Pass 1 - Scriv tò mëssagi',
