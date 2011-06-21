@@ -559,10 +559,13 @@ class UserProfilePage extends Article {
 				<div id="profile-title">' .
 					$user_name .
 				'</div>';
+		// Get the user's status message, if the UserStatus feature is enabled
 		if ( $wgEnableUserStatus ) {
-                    $user_status = $this->getStatus($this->user_id);
-                    $output .='<div id="user-status-block">'.$user_status.'</div>';
-                }
+			$userStatus = $this->getStatus( $this->user_id );
+			$output .= '<div id="user-status-block">' . $userStatus . '</div>';
+		}
+		// Show the user's level and the amount of points they have if
+		// UserLevels has been configured
 		if ( $wgUserLevels ) {
 			$output .= '<div id="points-level">
 					<a href="' . $level_link->escapeFullURL() . '">' .
