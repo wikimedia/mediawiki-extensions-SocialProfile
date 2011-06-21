@@ -49,6 +49,7 @@ $wgAutoloadClasses['TopFansByStat'] = $dir . 'UserStats/TopFansByStat.php';
 $wgAutoloadClasses['TopFansRecent'] = $dir . 'UserStats/TopFansRecent.php';
 $wgAutoloadClasses['TopUsersPoints'] = $dir . 'UserStats/TopUsers.php';
 $wgAutoloadClasses['wAvatar'] = $dir . 'UserProfile/AvatarClass.php';
+$wgAutoloadClasses['UserStatusClass'] = $dir . 'UserStatus/UserStatusClass.php';
 
 // New special pages
 $wgSpecialPages['AddRelationship'] = 'SpecialAddRelationship';
@@ -79,6 +80,7 @@ $wgSpecialPageGroups['ViewRelationships'] = 'users';
 // Necessary AJAX functions
 require_once( "$IP/extensions/SocialProfile/UserBoard/UserBoard_AjaxFunctions.php" );
 require_once( "$IP/extensions/SocialProfile/UserRelationship/Relationship_AjaxFunctions.php" );
+require_once( "$IP/extensions/SocialProfile/UserStatus/UserStatus_AjaxFunctions.php" );
 
 // What to display on social profile pages by default?
 $wgUserProfileDisplay['board'] = true;
@@ -230,6 +232,7 @@ function efSocialProfileSchemaUpdates( $updater = null ) {
 	efSocialProfileDBUpdate( $updater, 'user_gift', "$dir/UserGifts/usergifts$dbExt.sql" );
 	efSocialProfileDBUpdate( $updater, 'gift', "$dir/UserGifts/usergifts$dbExt.sql" );
 	efSocialProfileDBUpdate( $updater, 'user_system_messages', "$dir/UserSystemMessages/user_system_messages$dbExt.sql" );
+	efSocialProfileDBUpdate( $updater, 'user_status', "$dir/UserStatus/userstatus$dbExt.sql" );
 
 	return true;
 }

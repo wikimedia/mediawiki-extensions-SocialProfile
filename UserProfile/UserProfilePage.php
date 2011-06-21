@@ -507,6 +507,7 @@ class UserProfilePage extends Article {
 		$profile_data = $this->profile_data;
 
 		// Variables and other crap
+		$user_status = $this->getStatus($this->user_id);
 		$page_title = $wgTitle->getText();
 		$title_parts = explode( '/', $page_title );
 		$user = $title_parts[0];
@@ -559,6 +560,7 @@ class UserProfilePage extends Article {
 				<div id="profile-title">' .
 					$user_name .
 				'</div>';
+		$output .='<div id="user-status-block">'.$user_status.'</div>';
 		if ( $wgUserLevels ) {
 			$output .= '<div id="points-level">
 					<a href="' . $level_link->escapeFullURL() . '">' .
@@ -1484,5 +1486,24 @@ class UserProfilePage extends Article {
 
 		return $output;
 	}
+	
+	function getStatus($user_id){
+        global $wgUser;
+            
+        $us_class = new UserStatusClass($user_id);
+        $user_status_array = $us_class->getStatus($user_id);
+        if (empty($user_status_array))
+            $buf = '' ;
+        else
+            $buf=$user_status_array['us_status'];
+
+        // Only owners of the page can change statuses
+        if ( $wgUser->getId() == $user_id || $user_id == 0 )
+            $us ="<script>toShowMode('$buf','$user_id');</script>";
+        else 
+            $us = $buf;
+
+        return $us;
+    }
 
 }
