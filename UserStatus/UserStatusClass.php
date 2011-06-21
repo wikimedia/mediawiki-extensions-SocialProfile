@@ -4,7 +4,7 @@ class UserStatusClass {
     
 	/* private */ function __construct($u_id) {
                 global $wgOut, $wgScriptPath;
-                $wgOut->addScriptFile($wgScriptPath.'/extensions/SocialProfile/UserStatus/UserStatus.js' );  //Does not work
+                $wgOut->addScriptFile($wgScriptPath.'/extensions/SocialProfile/UserStatus/UserStatus.js' );
 	}
     
     public function getStatus($u_id) {
@@ -79,19 +79,19 @@ class UserStatusClass {
         }
         if ($mode=='select') return $history;  
         if ($mode=='insert'){
-            $currentStuts = $this->getStatus($u_id);
+            $currentStatus = $this->getStatus($u_id);
 
             if ($i < 4) {
                 $dbw->insert(
                         'user_status_history',
                         /* SET */ array(
                         'ush_user_id' => $u_id,
-                        'ush_status' => $currentStuts['us_status']), __METHOD__
+                        'ush_status' => $currentStatus['us_status']), __METHOD__
                 );
             } else {
                 $dbw->update(
                         'user_status_history',
-                        /* SET */ array('ush_status' => $currentStuts['us_status']), 
+                        /* SET */ array('ush_status' => $currentStatus['us_status']), 
                         /*WHERE*/ array('ush_user_id' => $u_id,
                                   'ush_timestamp' => $history[0]['ush_timestamp']),
                                   __METHOD__);
@@ -100,5 +100,3 @@ class UserStatusClass {
         }
     }
 }
-
-?>

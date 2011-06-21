@@ -493,7 +493,7 @@ class UserProfilePage extends Article {
 	 */
 	function getProfileTop( $user_id, $user_name ) {
 		global $wgTitle, $wgUser, $wgUploadPath, $wgLang;
-		global $wgUserLevels;
+		global $wgUserLevels, $wgEnableUserStatus;
 
 		$stats = new UserStats( $user_id, $user_name );
 		$stats_data = $stats->getUserStats();
@@ -506,8 +506,7 @@ class UserProfilePage extends Article {
 		}
 		$profile_data = $this->profile_data;
 
-		// Variables and other crap
-		$user_status = $this->getStatus($this->user_id);
+		// Variables and other crap                
 		$page_title = $wgTitle->getText();
 		$title_parts = explode( '/', $page_title );
 		$user = $title_parts[0];
@@ -560,7 +559,10 @@ class UserProfilePage extends Article {
 				<div id="profile-title">' .
 					$user_name .
 				'</div>';
-		$output .='<div id="user-status-block">'.$user_status.'</div>';
+		if ( $wgEnableUserStatus ) {
+                    $user_status = $this->getStatus($this->user_id);
+                    $output .='<div id="user-status-block">'.$user_status.'</div>';
+                }
 		if ( $wgUserLevels ) {
 			$output .= '<div id="points-level">
 					<a href="' . $level_link->escapeFullURL() . '">' .

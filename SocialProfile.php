@@ -93,6 +93,9 @@ $wgUserBoard = true;
 // Whether to enable friending or not -- this doesn't do very much actually, so don't rely on it
 $wgFriendingEnabled = true;
 
+// Should we enable UserStatus feature (currently is under development)
+$wgEnableUserStatus = false;
+
 // Extension credits that show up on Special:Version
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
