@@ -7078,6 +7078,7 @@ $messages['mr'] = array(
  * @author Kurniasan
  */
 $messages['ms'] = array(
+	'user-stats-title' => 'Statistik',
 	'other-info-title' => 'Maklumat lain',
 	'user-personal-info-location' => 'Lokasi',
 	'user-profile-section-interests' => 'Maklumat lain',
@@ -7951,6 +7952,7 @@ $messages['oc'] = array(
  */
 $messages['or'] = array(
 	'user-profile-personal-email' => 'ଇ-ମେଲ',
+	'user-page-link' => 'ବ୍ୟବାହରକାରୀଙ୍କର ପୃଷ୍ଠା',
 );
 
 /** Ossetic (Иронау)
