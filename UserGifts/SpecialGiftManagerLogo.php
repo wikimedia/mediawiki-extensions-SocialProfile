@@ -24,7 +24,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 */
 	public function execute( $par ) {
 		global $wgRequest;
-		$this->gift_id = $wgRequest->getVal( 'gift_id' );
+		$this->gift_id = $wgRequest->getInt( 'gift_id' );
 		$this->initLogo( $wgRequest );
 		$this->executeLogo();
 	}
@@ -51,7 +51,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 			# GET requests just give the main form; no data except wpDestfile.
 			return;
 		}
-		$this->gift_id = $request->getVal( 'gift_id' );
+		$this->gift_id = $request->getInt( 'gift_id' );
 		$this->mIgnoreWarning = $request->getCheck( 'wpIgnoreWarning' );
 		$this->mReUpload = $request->getCheck( 'wpReUpload' );
 		$this->mUpload = $request->getCheck( 'wpUpload' );
@@ -296,6 +296,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$this->createThumbnail( $tempName, $ext, $this->gift_id . '_m', 30 );
 		$this->createThumbnail( $tempName, $ext, $this->gift_id . '_s', 16 );
 
+		$type = 0;
 		if ( $ext == 'JPG' && is_file( $this->avatarUploadDirectory . '/' . $this->gift_id . '_l.jpg' ) ) {
 			$type = 2;
 		}
@@ -349,13 +350,10 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 			}
 		}
 
-		if ( $type > 0 ) {
-			// $dbw = wfGetDB( DB_MASTER );
-			// $sql = "UPDATE user set user_avatar = " . $type . " WHERE user_id = " . $wgUser->mId;
-			// $res = $dbw->query($sql);
-		} else {
+		if ( $type === 0 ) {
 			throw new FatalError( wfMsg( 'filecopyerror', $tempName, $stash ) ); # FIXME: undefined variable $stash
 		}
+
 		return $type;
 	}
 
@@ -430,7 +428,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 * @access private
 	 */
 	function showSuccess( $status ) {
-		global $wgOut, $wgUploadPath, $wgScriptPath, $wgLang;
+		global $wgOut, $wgUploadPath, $wgLang;
 		$ext = 'jpg';
 
 		$output = '<h2>' . wfMsg( 'g-uploadsuccess' ) . '</h2>';
@@ -456,9 +454,12 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		<td><img src="' . $wgUploadPath . '/awards/' . $this->gift_id . '_s.' . $ext . '?ts' . rand()  . '"></td></tr>';
 		$output .= '<tr><td><input type="button" onclick="javascript:history.go(-1)" value="' . wfMsg( 'g-go-back' ) . '"></td></tr>';
 
+		$giftManager = SpecialPage::getTitleFor( 'GiftManager' );
 		$output .= $wgLang->pipeList( array(
-			'<tr><td><a href="' . $wgScriptPath . '/index.php?title=Special:GiftManager">' . wfMsg( 'g-back-gift-list' ) . '</a>&#160;',
-			'&#160;<a href="' . $wgScriptPath . '/index.php?title=Special:GiftManager&amp;id=' . $this->gift_id . '">' . wfMsg( 'g-back-edit-gift' ) . '</a></td></tr>'
+			'<tr><td><a href="' . $giftManager->escapeFullURL() . '">' .
+				wfMsg( 'g-back-gift-list' ) . '</a>&#160;',
+			'&#160;<a href="' . $giftManager->escapeFullURL( 'id=' . $this->gift_id ) .
+				'">' . wfMsg( 'g-back-edit-gift' ) . '</a></td></tr>'
 		) );
 		$output .= '</table>';
 		$wgOut->addHTML( $output );
@@ -598,8 +599,11 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		global $wgUploadPath;
 		$gift_image = Gifts::getGiftImage( $this->gift_id, 'l' );
 		if ( $gift_image != '' ) {
-			$output = '<table><tr><td style="color:#666666;font-weight:800">' . wfMsg( 'g-current-image' ) . '</td></tr>';
-			$output .= '<tr><td><img src="' . $wgUploadPath . '/images/awards/' . $gift_image . '" border="0" alt="' . wfMsg( 'g-gift' ) . '" /></td></tr></table><br />';
+			$output = '<table><tr><td style="color:#666666;font-weight:800">' .
+				wfMsg( 'g-current-image' ) . '</td></tr>';
+			$output .= '<tr><td><img src="' . $wgUploadPath .
+				'/images/awards/' . $gift_image . '" border="0" alt="' .
+				wfMsg( 'g-gift' ) . '" /></td></tr></table><br />';
 		}
 		$wgOut->addHTML( $output );
 

@@ -19,7 +19,7 @@ class RemoveGift extends UnlistedSpecialPage {
 
 		$wgOut->addExtensionStyle( $wgUserGiftsScripts . '/UserGifts.css' );
 
-		$this->gift_id = $wgRequest->getVal( 'gift_id' );
+		$this->gift_id = $wgRequest->getInt( 'gift_id' );
 		$rel = new UserGifts( $wgUser->getName() );
 
 		if ( !$this->gift_id || !is_numeric( $this->gift_id ) ) {
@@ -27,6 +27,7 @@ class RemoveGift extends UnlistedSpecialPage {
 			$wgOut->addHTML( wfMsg( 'g-error-message-invalid-link' ) );
 			return false;
 		}
+
 		if ( $rel->doesUserOwnGift( $wgUser->getID(), $this->gift_id ) == false ) {
 			$wgOut->setPageTitle( wfMsg( 'g-error-title' ) );
 			$wgOut->addHTML( wfMsg( 'g-error-do-not-own' ) );
@@ -44,15 +45,18 @@ class RemoveGift extends UnlistedSpecialPage {
 				$rel->deleteGift( $this->gift_id );
 			}
 
-			$gift_image = '<img src="' . $wgUploadPath . '/awards/' . Gifts::getGiftImage( $gift['gift_id'], 'l' ) . '" border="0" alt="" />';
+			$gift_image = '<img src="' . $wgUploadPath . '/awards/' .
+				Gifts::getGiftImage( $gift['gift_id'], 'l' ) .
+				'" border="0" alt="" />';
 
 			$wgOut->setPageTitle( wfMsg( 'g-remove-success-title', $gift['name'] ) );
 
 			$out = '<div class="back-links">
-				<a href="' . $wgUser->getUserPage()->escapeFullURL() . '">' . wfMsg( 'g-back-link', $gift['user_name_to'] ) . '</a>
+				<a href="' . $wgUser->getUserPage()->escapeFullURL() . '">' .
+					wfMsg( 'g-back-link', $gift['user_name_to'] ) . '</a>
 			</div>
-			<div class="g-container">'
-				. $gift_image . wfMsg( 'g-remove-success-message', $gift['name'] ) .
+			<div class="g-container">' .
+				$gift_image . wfMsg( 'g-remove-success-message', $gift['name'] ) .
 				'<div class="cleared"></div>
 			</div>
 			<div class="g-buttons">
@@ -77,22 +81,32 @@ class RemoveGift extends UnlistedSpecialPage {
 		$rel = new UserGifts( $wgUser->getName() );
 		$gift = $rel->getUserGift( $this->gift_id );
 		$user = Title::makeTitle( NS_USER, $gift['user_name_from'] );
-		$gift_image = '<img src="' . $wgUploadPath . '/awards/' . Gifts::getGiftImage( $gift['gift_id'], 'l' ) . '" border="0" alt="gift" />';
+		$gift_image = '<img src="' . $wgUploadPath . '/awards/' .
+			Gifts::getGiftImage( $gift['gift_id'], 'l' ) .
+			'" border="0" alt="gift" />';
 
-		$output = $wgOut->setPageTitle( wfMsg( 'g-remove-title', $gift['name'] ) );
-		$output .= '<div class="back-links">
-			<a href="' . $wgUser->getUserPage()->escapeFullURL() . '">' . wfMsg( 'g-back-link', $gift['user_name_to'] ) . '</a>
+		$wgOut->setPageTitle( wfMsg( 'g-remove-title', $gift['name'] ) );
+
+		$output = '<div class="back-links">
+			<a href="' . $wgUser->getUserPage()->escapeFullURL() . '">' .
+				wfMsg( 'g-back-link', $gift['user_name_to'] ) . '</a>
 		</div>
 		<form action="" method="post" enctype="multipart/form-data" name="form1">
-			<div class="g-remove-message">'
-				. wfMsg( 'g-remove-message', $gift['name'] ) .
+			<div class="g-remove-message">' .
+				wfMsg( 'g-remove-message', $gift['name'] ) .
 			'</div>
-			<div class="g-container">'
-				. $gift_image .
+			<div class="g-container">' .
+				$gift_image .
 				'<div class="g-name">' . $gift['name'] . '</div>
-				<div class="g-from">' . wfMsg( 'g-from', $user->escapeFullURL(), $gift['user_name_from'] ) . '</div>';
+				<div class="g-from">' .
+					wfMsg(
+						'g-from',
+						$user->escapeFullURL(),
+						$gift['user_name_from']
+					) . '</div>';
 		if ( $gift['message'] ) {
-			$output .= '<div class="g-user-message">' . $gift['message'] . '</div>';
+			$output .= '<div class="g-user-message">' .
+				$gift['message'] . '</div>';
 		}
 		$output .= '</div>
 			<div class="cleared"></div>
