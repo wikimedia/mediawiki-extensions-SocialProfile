@@ -11,8 +11,10 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 
 	/**
 	 * Deletes a gift image from $wgUploadDirectory/awards/
+	 *
 	 * @param $id Integer: internal ID number of the gift whose image we want to delete
-	 * @param $size String: size of the image to delete (s for small, m for medium, ml for medium-large and l for large)
+	 * @param $size String: size of the image to delete (s for small, m for
+	 *                      medium, ml for medium-large and l for large)
 	 */
 	function deleteImage( $id, $size ) {
 		global $wgUploadDirectory;
@@ -25,8 +27,10 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 
 	/**
 	 * Checks if a user is allowed to remove gifts.
-	 * @return false by default or if the user is blocked, true if user has 'delete' permission or
-	 *		is a member of giftadmin group
+	 *
+	 * @return Boolean: false by default or if the user is blocked, true if
+	 *                  user has 'delete' permission or is a member of the
+	 *                  giftadmin group
 	 */
 	function canUserManage() {
 		global $wgUser;
@@ -58,7 +62,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 			throw new ErrorPageError( 'error', 'badaccess' );
 		}
 
-		$this->gift_id = $wgRequest->getVal( 'gift_id' );
+		$this->gift_id = $wgRequest->getInt( 'gift_id' );
 
 		if ( !$this->gift_id || !is_numeric( $this->gift_id ) ) {
 			$wgOut->setPageTitle( wfMsg( 'g-error-title' ) );
@@ -72,8 +76,16 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 			$dbw = wfGetDB( DB_MASTER );
 			$gift = Gifts::getGift( $this->gift_id );
 
-			$dbw->delete( 'gift', array( 'gift_id' => $this->gift_id ), __METHOD__ );
-			$dbw->delete( 'user_gift', array( 'ug_gift_id' => $this->gift_id ), __METHOD__ );
+			$dbw->delete(
+				'gift',
+				array( 'gift_id' => $this->gift_id ),
+				__METHOD__
+			);
+			$dbw->delete(
+				'user_gift',
+				array( 'ug_gift_id' => $this->gift_id ),
+				__METHOD__
+			);
 
 			$this->deleteImage( $this->gift_id, 's' );
 			$this->deleteImage( $this->gift_id, 'm' );
@@ -85,8 +97,8 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 			$out = '<div class="back-links">
 				<a href="' . SpecialPage::getTitleFor( 'GiftManager' )->escapeFullURL() . '">' . wfMsg( 'g-viewgiftlist' ) . '</a>
 			</div>
-			<div class="g-container">'
-				. wfMsg( 'g-remove-success-message', $gift['gift_name'] ) .
+			<div class="g-container">' .
+				wfMsg( 'g-remove-success-message', $gift['gift_name'] ) .
 				'<div class="cleared"></div>
 			</div>';
 
@@ -99,25 +111,30 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 
 	/**
 	 * Displays the main form for removing a gift permanently
-	 * @return HTML output
+	 *
+	 * @return String: HTML output
 	 */
 	function displayForm() {
 		global $wgOut, $wgUploadPath;
 
 		$gift = Gifts::getGift( $this->gift_id );
 
-		$gift_image = '<img src="' . $wgUploadPath . '/awards/' . Gifts::getGiftImage( $this->gift_id, 'l' ) . '" border="0" alt="gift" />';
+		$gift_image = '<img src="' . $wgUploadPath . '/awards/' .
+			Gifts::getGiftImage( $this->gift_id, 'l' ) .
+			'" border="0" alt="gift" />';
 
-		$output = $wgOut->setPageTitle( wfMsg( 'g-remove-title', $gift['gift_name'] ) );
-		$output .= '<div class="back-links">
-			<a href="' . SpecialPage::getTitleFor( 'GiftManager' )->escapeFullURL() . '">' . wfMsg( 'g-viewgiftlist' ) . '</a>
+		$wgOut->setPageTitle( wfMsg( 'g-remove-title', $gift['gift_name'] ) );
+
+		$output = '<div class="back-links">
+			<a href="' . SpecialPage::getTitleFor( 'GiftManager' )->escapeFullURL() . '">' .
+				wfMsg( 'g-viewgiftlist' ) . '</a>
 		</div>
 		<form action="" method="post" enctype="multipart/form-data" name="form1">
-			<div class="g-remove-message">'
-				. wfMsg( 'g-delete-message', $gift['gift_name'] ) .
+			<div class="g-remove-message">' .
+				wfMsg( 'g-delete-message', $gift['gift_name'] ) .
 			'</div>
-			<div class="g-container">'
-				. $gift_image .
+			<div class="g-container">' .
+				$gift_image .
 				'<div class="g-name">' . $gift['gift_name'] . '</div>
 			</div>
 			<div class="cleared"></div>
