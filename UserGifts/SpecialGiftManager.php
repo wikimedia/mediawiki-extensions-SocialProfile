@@ -15,35 +15,61 @@ class GiftManager extends SpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgUser, $wgOut, $wgRequest, $wgScriptPath, $wgUserGiftsScripts;
+		global $wgUser, $wgOut, $wgRequest, $wgUserGiftsScripts;
 
 		$wgOut->setPageTitle( wfMsg( 'giftmanager' ) );
 
+		// Make sure that the user is logged in and that they can use this
+		// special page
 		if ( $wgUser->isAnon() || !$this->canUserManage() ) {
 			throw new ErrorPageError( 'error', 'badaccess' );
 		}
 
-		$wgOut->addStyle( $wgUserGiftsScripts . '/UserGifts.css' );
+		// Add CSS
+		$wgOut->addExtensionStyle( $wgUserGiftsScripts . '/UserGifts.css' );
 
 		if ( count( $_POST ) ) {
 			if ( !( $_POST['id'] ) ) {
-				$gift_id = Gifts::addGift( $_POST['gift_name'], $_POST['gift_description'], $_POST['access'] );
-				$wgOut->addHTML( '<span class="view-status">' . wfMsg( 'giftmanager-giftcreated' ) . '</span><br /><br />' );
+				$giftId = Gifts::addGift(
+					$_POST['gift_name'],
+					$_POST['gift_description'],
+					intval( $_POST['access'] )
+				);
+				$wgOut->addHTML(
+					'<span class="view-status">' .
+					wfMsg( 'giftmanager-giftcreated' ) .
+					'</span><br /><br />'
+				);
 			} else {
-				$gift_id = $_POST['id'];
-				Gifts::updateGift( $gift_id, $_POST['gift_name'], $_POST['gift_description'], $_POST['access'] );
-				$wgOut->addHTML( '<span class="view-status">' . wfMsg( 'giftmanager-giftsaved' ) . '</span><br /><br />' );
+				$giftId = intval( $_POST['id'] );
+				Gifts::updateGift(
+					$giftId,
+					$_POST['gift_name'],
+					$_POST['gift_description'],
+					intval( $_POST['access'] )
+				);
+				$wgOut->addHTML(
+					'<span class="view-status">' .
+					wfMsg( 'giftmanager-giftsaved' ) .
+					'</span><br /><br />'
+				);
 			}
 
-			$wgOut->addHTML( $this->displayForm( $gift_id ) );
+			$wgOut->addHTML( $this->displayForm( $giftId ) );
 		} else {
-			$gift_id = $wgRequest->getVal( 'id' );
-			if ( $gift_id || $wgRequest->getVal( 'method' ) == 'edit' ) {
-				$wgOut->addHTML( $this->displayForm( $gift_id ) );
+			$giftId = $wgRequest->getInt( 'id' );
+			if ( $giftId || $wgRequest->getVal( 'method' ) == 'edit' ) {
+				$wgOut->addHTML( $this->displayForm( $giftId ) );
 			} else {
+				// If the user is allowed to create new gifts, show the
+				// "add a gift" link to them
 				if ( $this->canUserCreateGift() ) {
-					$wgOut->addHTML( '<div><b><a href="' . $wgScriptPath . '/index.php?title=Special:GiftManager&amp;method=edit">'
-									. wfMsg( 'giftmanager-addgift' ) . '</a></b></div>' );
+					$wgOut->addHTML(
+						'<div><b><a href="' .
+						$this->getTitle()->escapeFullURL( 'method=edit' ) .
+						'">' . wfMsg( 'giftmanager-addgift' ) .
+						'</a></b></div>'
+					);
 				}
 				$wgOut->addHTML( $this->displayGiftList() );
 			}
@@ -66,7 +92,11 @@ class GiftManager extends SpecialPage {
 			return true;
 		}
 
-		if ( $wgUser->isAllowed( 'giftadmin' ) || in_array( 'giftadmin', $wgUser->getGroups() ) ) {
+		if (
+			$wgUser->isAllowed( 'giftadmin' ) ||
+			in_array( 'giftadmin', $wgUser->getGroups() )
+		)
+		{
 			return true;
 		}
 
@@ -85,7 +115,11 @@ class GiftManager extends SpecialPage {
 			return false;
 		}
 
-		if ( $wgUser->isAllowed( 'giftadmin' ) || in_array( 'giftadmin', $wgUser->getGroups() ) ) {
+		if (
+			$wgUser->isAllowed( 'giftadmin' ) ||
+			in_array( 'giftadmin', $wgUser->getGroups() )
+		)
+		{
 			return true;
 		}
 
@@ -105,42 +139,69 @@ class GiftManager extends SpecialPage {
 			return false;
 		}
 
-		$created_count = Gifts::getCustomCreatedGiftCount( $wgUser->getID() );
-		if ( $wgUser->isAllowed( 'giftadmin' ) || in_array( 'giftadmin', ( $wgUser->getGroups() ) ) || ( $wgMaxCustomUserGiftCount > 0 && $created_count < $wgMaxCustomUserGiftCount ) ) {
+		$createdCount = Gifts::getCustomCreatedGiftCount( $wgUser->getID() );
+		if (
+			$wgUser->isAllowed( 'giftadmin' ) ||
+			in_array( 'giftadmin', ( $wgUser->getGroups() ) ) ||
+			( $wgMaxCustomUserGiftCount > 0 && $createdCount < $wgMaxCustomUserGiftCount )
+		)
+		{
 			return true;
 		} else {
 			return false;
 		}
 	}
 
+	/**
+	 * Display the text list of all existing gifts and a delete link to users
+	 * who are allowed to delete gifts.
+	 *
+	 * @return String: HTML
+	 */
 	function displayGiftList() {
-		global $wgScriptPath;
 		$output = ''; // Prevent E_NOTICE
 		$page = 0;
 		$per_page = 10;
 		$gifts = Gifts::getManagedGiftList( $per_page, $page );
 		if ( $gifts ) {
 			foreach ( $gifts as $gift ) {
+				$deleteLink = '';
+				if ( $this->canUserDelete() ) {
+					$deleteLink = '<a href="' .
+						SpecialPage::getTitleFor( 'RemoveMasterGift' )->escapeFullURL( "gift_id={$gift['id']}" ) .
+						'" style="font-size:10px; color:red;">' .
+						wfMsg( 'delete' ) . '</a>';
+				}
+
 				$output .= '<div class="Item">
-				<a href="' . $wgScriptPath . '/index.php?title=Special:GiftManager&amp;id=' . $gift['id'] . '">' . $gift['gift_name'] . '</a> ' .
-				( ( $this->canUserDelete() ) ? '<a href="' . SpecialPage::getTitleFor( 'RemoveMasterGift' )->escapeFulLURL( "gift_id={$gift["id"]}" ) . '" style="font-size:10px; color:red;">' . wfMsg( 'delete' ) . '</a>' : '' )
-				. "</div>\n";
+				<a href="' . $this->getTitle()->escapeFullURL( "id={$gift['id']}" ) . '">' .
+					$gift['gift_name'] . '</a> ' .
+					$deleteLink . "</div>\n";
 			}
 		}
 		return '<div id="views">' . $output . '</div>';
 	}
 
 	function displayForm( $gift_id ) {
-		global $wgUser, $wgOut, $wgScriptPath;
+		global $wgUser;
 
 		if ( !$gift_id && !$this->canUserCreateGift() ) {
 			return $this->displayGiftList();
 		}
-		$form = '<div><b><a href="' . $wgScriptPath . '/index.php?title=Special:GiftManager">' . wfMsg( 'giftmanager-view' ) . '</a></b></div>';
+
+		$form = '<div><b><a href="' . $this->getTitle()->escapeFullURL() .
+			'">' . wfMsg( 'giftmanager-view' ) . '</a></b></div>';
 
 		if ( $gift_id ) {
 			$gift = Gifts::getGift( $gift_id );
-			if ( $wgUser->getID() != $gift['creator_user_id'] && ( !in_array( 'giftadmin', $wgUser->getGroups() ) && !$wgUser->isAllowed( 'delete' ) ) ) {
+			if (
+				$wgUser->getID() != $gift['creator_user_id'] &&
+				(
+					!in_array( 'giftadmin', $wgUser->getGroups() ) &&
+					!$wgUser->isAllowed( 'delete' )
+				)
+			)
+			{
 				throw new ErrorPageError( 'error', 'badaccess' );
 			}
 		}
@@ -149,20 +210,27 @@ class GiftManager extends SpecialPage {
 		$form .= '<table border="0" cellpadding="5" cellspacing="0" width="500">';
 		$form .= '<tr>
 		<td width="200" class="view-form">' . wfMsg( 'g-gift-name' ) . '</td>
-		<td width="695"><input type="text" size="45" class="createbox" name="gift_name" value="' . ( isset( $gift['gift_name'] ) ? $gift['gift_name'] : '' ) . '"/></td>
+		<td width="695"><input type="text" size="45" class="createbox" name="gift_name" value="' .
+			( isset( $gift['gift_name'] ) ? $gift['gift_name'] : '' ) . '"/></td>
 		</tr>
 		<tr>
 		<td width="200" class="view-form" valign="top">' . wfMsg( 'giftmanager-description' ) . '</td>
-		<td width="695"><textarea class="createbox" name="gift_description" rows="2" cols="30">' . ( isset( $gift['gift_description'] ) ? $gift['gift_description'] : '' ) . '</textarea></td>
+		<td width="695"><textarea class="createbox" name="gift_description" rows="2" cols="30">' .
+			( isset( $gift['gift_description'] ) ? $gift['gift_description'] : '' ) . '</textarea></td>
 		</tr>';
 		if ( $gift_id ) {
 			$creator = Title::makeTitle( NS_USER, $gift['creator_user_name'] );
 			$form .= '<tr>
-			<td class="view-form">' . wfMsgExt( 'g-created-by', 'parsemag', $gift['creator_user_name'] ) . '</td>
-			<td><a href="' . $creator->escapeFullURL() . '">' . $gift['creator_user_name'] . '</a></td>
+			<td class="view-form">' .
+				wfMsgExt( 'g-created-by', 'parsemag', $gift['creator_user_name'] ) .
+			'</td>
+			<td><a href="' . $creator->escapeFullURL() . '">' .
+				$gift['creator_user_name'] . '</a></td>
 			</tr>';
 		}
-		global $wgUploadPath;
+
+		// If the user isn't in the gift admin group, they can only create
+		// private gifts
 		if ( !in_array( 'giftadmin', $wgUser->getGroups() ) ) {
 			$form .= '<input type="hidden" name="access" value="1" />';
 		} else {
@@ -171,20 +239,29 @@ class GiftManager extends SpecialPage {
 				<td class="view-form">' . wfMsg( 'giftmanager-access' ) . '</td>
 				<td>
 				<select name="access">
-					<option value="0"' . ( ( $gift['access'] == 0 ) ? ' selected="selected"' : '' ) . '>' . wfMsg( 'giftmanager-public' ) . '</option>
-					<option value="1"' . ( ( $gift['access'] == 1 ) ? ' selected="selected"' : '' ) . '>' . wfMsg( 'giftmanager-private' ) . '</option>
+					<option value="0"' . ( ( $gift['access'] == 0 ) ? ' selected="selected"' : '' ) . '>' .
+						wfMsg( 'giftmanager-public' ) .
+					'</option>
+					<option value="1"' . ( ( $gift['access'] == 1 ) ? ' selected="selected"' : '' ) . '>' .
+						wfMsg( 'giftmanager-private' ) .
+					'</option>
 				</select>
 				</td>
 			</tr>';
 		}
 
 		if ( $gift_id ) {
-			$gift_image = '<img src="' . $wgUploadPath . '/awards/' . Gifts::getGiftImage( $gift_id, 'l' ) . '" border="0" alt="' . wfMsg( 'g-gift' ) . '" />';
+			global $wgUploadPath;
+			$gml = SpecialPage::getTitleFor( 'GiftManagerLogo' );
+			$gift_image = '<img src="' . $wgUploadPath . '/awards/' .
+				Gifts::getGiftImage( $gift_id, 'l' ) . '" border="0" alt="' .
+				wfMsg( 'g-gift' ) . '" />';
 			$form .= '<tr>
 			<td width="200" class="view-form" valign="top">' . wfMsg( 'giftmanager-giftimage' ) . '</td>
 			<td width="695">' . $gift_image .
 			'<p>
-			<a href="' . $wgScriptPath . '/index.php?title=Special:GiftManagerLogo&gift_id=' . $gift_id . '">' . wfMsg( 'giftmanager-image' ) . '</a>
+			<a href="' . $gml->escapeFullURL( 'gift_id=' . $gift_id ) . '">' .
+				wfMsg( 'giftmanager-image' ) . '</a>
 			</td>
 			</tr>';
 		}
