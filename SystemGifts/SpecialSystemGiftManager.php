@@ -22,7 +22,7 @@ class SystemGiftManager extends SpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgUser, $wgOut, $wgRequest, $wgScriptPath, $wgSystemGiftsScripts;
+		global $wgUser, $wgOut, $wgRequest, $wgSystemGiftsScripts;
 
 		$wgOut->setPageTitle( wfMsg( 'systemgiftmanager' ) );
 
@@ -56,20 +56,20 @@ class SystemGiftManager extends SpecialPage {
 					$wgRequest->getVal( 'gift_name' ),
 					$wgRequest->getVal( 'gift_description' ),
 					$wgRequest->getVal( 'gift_category' ),
-					$wgRequest->getVal( 'gift_threshold' )
+					$wgRequest->getInt( 'gift_threshold' )
 				);
 				$wgOut->addHTML(
 					'<span class="view-status">' . wfMsg( 'ga-created' ) .
 					'</span><br /><br />'
 				);
 			} else {
-				$gift_id = $wgRequest->getVal( 'id' );
+				$gift_id = $wgRequest->getInt( 'id' );
 				$g->updateGift(
 					$gift_id,
 					$wgRequest->getVal( 'gift_name' ),
 					$wgRequest->getVal( 'gift_description' ),
 					$wgRequest->getVal( 'gift_category' ),
-					$wgRequest->getVal( 'gift_threshold' )
+					$wgRequest->getInt( 'gift_threshold' )
 				);
 				$wgOut->addHTML(
 					'<span class="view-status">' . wfMsg( 'ga-saved' ) .
@@ -79,13 +79,13 @@ class SystemGiftManager extends SpecialPage {
 			$g->update_system_gifts();
 			$wgOut->addHTML( $this->displayForm( $gift_id ) );
 		} else {
-			$gift_id = $wgRequest->getVal( 'id' );
+			$gift_id = $wgRequest->getInt( 'id' );
 			if ( $gift_id || $wgRequest->getVal( 'method' ) == 'edit' ) {
 				$wgOut->addHTML( $this->displayForm( $gift_id ) );
 			} else {
 				$wgOut->addHTML(
-					'<div><b><a href="' . $wgScriptPath .
-						'/index.php?title=Special:SystemGiftManager&amp;method=edit">' .
+					'<div><b><a href="' .
+					$this->getTitle()->escapeFullURL( 'method=edit' ) . '">' .
 						wfMsg( 'ga-addnew' ) . '</a></b></div>'
 				);
 				$wgOut->addHTML( $this->displayGiftList() );
@@ -94,7 +94,6 @@ class SystemGiftManager extends SpecialPage {
 	}
 
 	function displayGiftList() {
-		global $wgScriptPath;
 		$output = ''; // Prevent E_NOTICE
 		$page = 0;
 		$per_page = 50;
@@ -102,7 +101,8 @@ class SystemGiftManager extends SpecialPage {
 		if ( $gifts ) {
 			foreach ( $gifts as $gift ) {
 				$output .= '<div class="Item">
-					<a href="' . $wgScriptPath . '/index.php?title=Special:SystemGiftManager&amp;id=' . $gift['id'] . '">' . $gift['gift_name'] . '</a>
+					<a href="' . $this->getTitle()->escapeFullURL( 'id=' . $gift['id'] ) . '">' .
+						$gift['gift_name'] . '</a>
 				</div>' . "\n";
 			}
 		}
@@ -110,9 +110,10 @@ class SystemGiftManager extends SpecialPage {
 	}
 
 	function displayForm( $gift_id ) {
-		global $wgUploadPath, $wgScriptPath;
+		global $wgUploadPath;
 
-		$form = '<div><b><a href="' . $wgScriptPath . '/index.php?title=Special:SystemGiftManager">' . wfMsg( 'ga-viewlist' ) . '</a></b></div>';
+		$form = '<div><b><a href="' . $this->getTitle()->escapeFullURL() .
+			'">' . wfMsg( 'ga-viewlist' ) . '</a></b></div>';
 
 		if ( $gift_id ) {
 			$gift = SystemGifts::getGift( $gift_id );
@@ -145,15 +146,20 @@ class SystemGiftManager extends SpecialPage {
 			</tr>
 		<tr>
 			<td width="200" class="view-form">' . wfMsg( 'ga-threshold' ) . '</td>
-			<td width="695"><input type="text" size="25" class="createbox" name="gift_threshold" value="' . ( isset( $gift['gift_threshold'] ) ? $gift['gift_threshold'] : '' ) . '"/></td>
+			<td width="695"><input type="text" size="25" class="createbox" name="gift_threshold" value="' .
+				( isset( $gift['gift_threshold'] ) ? $gift['gift_threshold'] : '' ) . '"/></td>
 		</tr>';
 
 		if ( $gift_id ) {
-			$gift_image = '<img src="' . $wgUploadPath . '/awards/' . SystemGifts::getGiftImage( $gift_id, 'l' ) . '" border="0" alt="gift" />';
+			$sgml = SpecialPage::getTitleFor( 'SystemGiftManagerLogo' );
+			$gift_image = '<img src="' . $wgUploadPath . '/awards/'
+				SystemGifts::getGiftImage( $gift_id, 'l' ) .
+				'" border="0" alt="gift" />';
 			$form .= '<tr>
 			<td width="200" class="view-form" valign="top">' . wfMsg( 'ga-giftimage' ) . '</td>
 			<td width="695">' . $gift_image .
-			'<a href="' . $wgScriptPath . '/index.php?title=Special:SystemGiftManagerLogo&gift_id=' . $gift_id . '">' . wfMsg( 'ga-img' ) . '</a>
+			'<a href="' . $sgml->escapeFullURL( 'gift_id=' . $gift_id ) . '">' .
+				wfMsg( 'ga-img' ) . '</a>
 			</td>
 			</tr>';
 		}
@@ -163,6 +169,7 @@ class SystemGiftManager extends SpecialPage {
 		} else {
 			$button = wfMsg( 'ga-create-gift' );
 		}
+
 		$form .= '<tr>
 		<td colspan="2">
 			<input type="hidden" name="id" value="' . ( isset( $gift['gift_id'] ) ? $gift['gift_id'] : '' ) . '" />

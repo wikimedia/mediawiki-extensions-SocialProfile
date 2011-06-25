@@ -27,7 +27,7 @@ class ViewSystemGifts extends SpecialPage {
 
 		$output = '';
 		$user_name = $wgRequest->getVal( 'user' );
-		$page = $wgRequest->getVal( 'page' );
+		$page = $wgRequest->getInt( 'page', 1 );
 
 		/**
 		 * Redirect Non-logged in users to Login Page
@@ -61,9 +61,6 @@ class ViewSystemGifts extends SpecialPage {
 		* Config for the page
 		*/
 		$per_page = 10;
-		if ( !$page || !is_numeric( $page ) ) {
-			$page = 1;
-		}
 		$per_row = 2;
 
 		/**

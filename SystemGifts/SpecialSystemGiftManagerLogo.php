@@ -51,7 +51,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			return;
 		}
 
-		$this->gift_id = $wgRequest->getVal( 'gift_id' );
+		$this->gift_id = $wgRequest->getInt( 'gift_id' );
 		$this->initLogo( $wgRequest );
 		$this->executeLogo();
 	}
@@ -63,7 +63,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			# GET requests just give the main form; no data except wpDestfile.
 			return;
 		}
-		$this->gift_id = $request->getVal( 'gift_id' );
+		$this->gift_id = $request->getInt( 'gift_id' );
 		$this->mIgnoreWarning = $request->getCheck( 'wpIgnoreWarning' );
 		$this->mReUpload = $request->getCheck( 'wpReUpload' );
 		$this->mUpload = $request->getCheck( 'wpUpload' );
@@ -426,7 +426,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	 * @access private
 	 */
 	function showSuccess( $status ) {
-		global $wgUser, $wgOut, $wgUploadPath, $wgScriptPath, $wgLang;
+		global $wgUser, $wgOut, $wgUploadPath, $wgLang;
 		$ext = 'jpg';
 
 		$output = '<h2>' . wfMsg( 'ga-uploadsuccess' ) . '</h2>';
@@ -464,9 +464,12 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			</td>
 		</tr>';
 
+		$systemGiftManager = SpecialPage::getTitleFor( 'SystemGiftManager' );
 		$output .= $wgLang->pipeList( array(
-			'<tr><td><a href="' . $wgScriptPath . '/index.php?title=Special:SystemGiftManager">' . wfMsg( 'ga-back-gift-list' ) . '</a>&#160;',
-			'&#160;<a href="' . $wgScriptPath . '/index.php?title=Special:SystemGiftManager&amp;id=' . $this->gift_id . '">' . wfMsg( 'ga-back-edit-gift' ) . '</a></td></tr>'
+			'<tr><td><a href="' . $systemGiftManager->escapeFullURL() . '">' .
+				wfMsg( 'ga-back-gift-list' ) . '</a>&#160;',
+			'&#160;<a href="' . $systemGiftManager->escapeFullURL( 'id=' . $this->gift_id ) . '">' .
+				wfMsg( 'ga-back-edit-gift' ) . '</a></td></tr>'
 		) );
 		$output .= '</table>';
 		$wgOut->addHTML( $output );
@@ -563,7 +566,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			$ew = '';
 		}
 
-		if ( '' != $msg ) {
+		if ( $msg != '' ) {
 			$sub = wfMsg( 'uploaderror' );
 			$wgOut->addHTML( "<h2>{$sub}</h2>\n" .
 				"<h4 class='error'>{$msg}</h4>\n" );
@@ -623,7 +626,8 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	<table border="0">
 		<tr>
 
-			<td style="color:#666666;font-weight:800">' . wfMsg( 'ga-file-instructions' ) . wfMsg( 'ga-choosefile' ) . '<br />
+			<td style="color:#666666;font-weight:800">' .
+				wfMsg( 'ga-file-instructions' ) . wfMsg( 'ga-choosefile' ) . '<br />
 				<input tabindex="1" type="file" name="wpUploadFile" id="wpUploadFile" style="width:100px" />
 			</td>
 		</tr>
