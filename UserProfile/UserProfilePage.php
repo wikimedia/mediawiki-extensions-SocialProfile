@@ -865,6 +865,8 @@ class UserProfilePage extends Article {
 							UserActivity::getTypeIcon( $item['type'] ) . '" alt="" border="0" />';
 				}
 
+				$viewGift = SpecialPage::getTitleFor( 'ViewGift' );
+
 				switch( $item['type'] ) {
 					case 'edit':
 						$item_html .= wfMsg( 'user-recent-activity-edit' ) . " {$page_link} {$item_time}
@@ -889,7 +891,7 @@ class UserProfilePage extends Article {
 							'" border="0" alt="" />';
 						$item_html .= wfMsg( 'user-recent-activity-gift-sent' ) . " {$user_link_2} {$item_time}
 						<div class=\"item\">
-							<a href=\"" . $wgScriptPath . "/index.php?title=Special:ViewGift&gift_id={$item['id']}\" rel=\"nofollow\">
+							<a href=\"" . $viewGift->escapeFullURL( "gift_id={$item['id']}" ) . "\" rel=\"nofollow\">
 								{$gift_image}
 								{$item['pagetitle']}
 							</a>
@@ -901,9 +903,9 @@ class UserProfilePage extends Article {
 							'" border="0" alt="" />';
 						$item_html .= wfMsg( 'user-recent-activity-gift-rec' ) . " {$user_link_2} {$item_time}</span>
 								<div class=\"item\">
-									<a href=\"" . $wgScriptPath . "/index.php?title=Special:ViewGift&gift_id={$item['id']}\" rel=\"nofollow\">
+									<a href=\"" . $viewGift->escapeFullURL( "gift_id={$item['id']}" ) . "\" rel=\"nofollow\">
 										{$gift_image}
-										{$item["pagetitle"]}
+										{$item['pagetitle']}
 									</a>
 								</div>";
 						break;
@@ -911,9 +913,10 @@ class UserProfilePage extends Article {
 						$gift_image = "<img src=\"{$wgUploadPath}/awards/" .
 							SystemGifts::getGiftImage( $item['namespace'], 'm' ) .
 							'" border="0" alt="" />';
+						$viewSystemGift = SpecialPage::getTitleFor( 'ViewSystemGift' );
 						$item_html .= wfMsg( 'user-recent-system-gift' ) . " {$item_time}
 								<div class=\"user-home-item-gift\">
-									<a href=\"" . $wgScriptPath . "/index.php?title=Special:ViewSystemGift&gift_id={$item['id']}\" rel=\"nofollow\">
+									<a href=\"" . $viewSystemGift->escapeFullURL( "gift_id={$item['id']}" ) . "\" rel=\"nofollow\">
 										{$gift_image}
 										{$item['pagetitle']}
 									</a>
