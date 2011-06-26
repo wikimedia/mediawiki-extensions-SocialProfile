@@ -506,7 +506,7 @@ class UserProfilePage extends Article {
 		}
 		$profile_data = $this->profile_data;
 
-		// Variables and other crap                
+		// Variables and other crap
 		$page_title = $wgTitle->getText();
 		$title_parts = explode( '/', $page_title );
 		$user = $title_parts[0];
@@ -1494,24 +1494,26 @@ class UserProfilePage extends Article {
 
 		return $output;
 	}
-	
-	function getStatus($user_id){
-        global $wgUser;
-            
-        $us_class = new UserStatusClass($user_id);
-        $user_status_array = $us_class->getStatus($user_id);
-        if (empty($user_status_array))
-            $buf = '' ;
-        else
-            $buf=$user_status_array['us_status'];
 
-        // Only owners of the page can change statuses
-        if ( $wgUser->getId() == $user_id || $user_id == 0 )
-            $us ="<script>toShowMode('$buf','$user_id');</script>";
-        else 
-            $us = $buf;
+	function getStatus( $userId ) {
+		global $wgUser;
 
-        return $us;
-    }
+		$us_class = new UserStatusClass( $userId );
+		$user_status_array = $us_class->getStatus( $userId );
+		if ( empty( $user_status_array ) ) {
+			$buf = '';
+		} else {
+			$buf = $user_status_array['us_status'];
+		}
+
+		// Only owners of the page can change statuses
+		if ( $wgUser->getId() == $userId || $userId == 0 ) {
+			$us = "<script>toShowMode('$buf','$userId');</script>";
+		} else {
+			$us = $buf;
+		}
+
+		return $us;
+	}
 
 }
