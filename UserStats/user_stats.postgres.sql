@@ -43,5 +43,7 @@ CREATE TABLE user_stats (
   stats_quiz_questions_correct         INTEGER           DEFAULT 0,
   stats_quiz_points                    INTEGER           DEFAULT 0,
   stats_quiz_questions_created         INTEGER           DEFAULT 0,
-  stats_quiz_questions_correct_percent FLOAT             DEFAULT 0
+  stats_quiz_questions_correct_percent FLOAT             DEFAULT 0,
+  stats_links_submitted                INTEGER  NOT NULL DEFAULT 0,
+  stats_links_approved                 INTEGER  NOT NULL DEFAULT 0
 );

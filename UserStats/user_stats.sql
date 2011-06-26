@@ -2,9 +2,9 @@
 -- Table structure for table `user_stats`
 --
 
-CREATE TABLE /*$wgDBprefix*/user_stats (
+CREATE TABLE /*_*/user_stats (
   `stats_year_id` int(2) NOT NULL default '0',
-  `stats_user_id` int(11) NOT NULL default '0',
+  `stats_user_id` int(11) NOT NULL default '0' PRIMARY KEY,
   `stats_user_name` varchar(255) NOT NULL default '',
   `stats_user_image_count` int(11) NOT NULL default '0',
   `stats_comment_count` int(11) NOT NULL default '0',
@@ -46,5 +46,6 @@ CREATE TABLE /*$wgDBprefix*/user_stats (
   `stats_quiz_points` int(11) default '0',
   `stats_quiz_questions_created` int(11) default '0',
   `stats_quiz_questions_correct_percent` float default '0',
-  PRIMARY KEY  (`stats_user_id`)
+  `stats_links_submitted` int(11) NOT NULL default '0',
+  `stats_links_approved` int(11) NOT NULL default '0'
 )  DEFAULT CHARSET=utf8;
