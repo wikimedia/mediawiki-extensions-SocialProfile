@@ -45,7 +45,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 * @param $params Mixed: parameter(s) passed to the page or null
 	 */
 	public function execute( $params ) {
-		global $wgRequest, $wgOut, $wgUser, $wgUserProfileScripts;
+		global $wgOut, $wgUser, $wgUserProfileScripts;
 
 		$wgOut->addExtensionStyle( $wgUserProfileScripts . '/UserProfile.css' );
 		parent::execute( $params );
@@ -81,30 +81,39 @@ class SpecialUploadAvatar extends SpecialUpload {
 		$output = '<h1>' . wfMsg( 'uploadavatar' ) . '</h1>';
 		$output .= UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-picture' ) );
 		$output .= '<div class="profile-info">';
-		$output .= '<p class="profile-update-title">' . wfMsg( 'user-profile-picture-yourpicture' ) . '</p>';
+		$output .= '<p class="profile-update-title">' .
+			wfMsg( 'user-profile-picture-yourpicture' ) . '</p>';
 		$output .= '<p>' . wfMsg( 'user-profile-picture-yourpicturestext' ) . '</p>';
 
 		$output .= '<table cellspacing="0" cellpadding="0" style="margin-top:20px;">';
 		$output .= '<tr>
-			<td valign="top" style="color:#797979;font-size:12px;font-weight:bold;padding-bottom:20px;">' . wfMsg( 'user-profile-picture-large' ) . '</td>
+			<td valign="top" style="color:#797979;font-size:12px;font-weight:bold;padding-bottom:20px;">' .
+				wfMsg( 'user-profile-picture-large' ) .
+			'</td>
 			<td style="padding-bottom:20px;">
 				<img src="' . $wgUploadPath . '/avatars/' . $wgDBname . '_' . $wgUser->mId . '_l.' . $ext . '?ts=' . rand() . '" alt="" border="0" />
 			</td>
 		</tr>';
 		$output .= '<tr>
-			<td valign="top" style="color:#797979;font-size:12px;font-weight:bold;padding-bottom:20px;">' . wfMsg( 'user-profile-picture-medlarge' ) . '</td>
+			<td valign="top" style="color:#797979;font-size:12px;font-weight:bold;padding-bottom:20px;">' .
+				wfMsg( 'user-profile-picture-medlarge' ) .
+			'</td>
 			<td style="padding-bottom:20px;">
 				<img src="' . $wgUploadPath . '/avatars/' . $wgDBname . '_' . $wgUser->mId . '_ml.' . $ext . '?ts=' . rand() . '" alt="" border="0" />
 			</td>
 		</tr>';
 		$output .= '<tr>
-			<td valign="top" style="color:#797979;font-size:12px;font-weight:bold;padding-bottom:20px;">' . wfMsg( 'user-profile-picture-medium' ) . '</td>
+			<td valign="top" style="color:#797979;font-size:12px;font-weight:bold;padding-bottom:20px;">' .
+				wfMsg( 'user-profile-picture-medium' ) .
+			'</td>
 			<td style="padding-bottom:20px;">
 				<img src="' . $wgUploadPath . '/avatars/' . $wgDBname . '_' . $wgUser->mId . '_m.' . $ext . '?ts=' . rand() . '" alt="" border="0" />
 			</td>
 		</tr>';
 		$output .= '<tr>
-			<td valign="top" style="color:#797979;font-size:12px;font-weight:bold;padding-bottom:20px;">' . wfMsg( 'user-profile-picture-small' ) . '</td>
+			<td valign="top" style="color:#797979;font-size:12px;font-weight:bold;padding-bottom:20px;">' .
+				wfMsg( 'user-profile-picture-small' ) .
+			'</td>
 			<td style="padding-bottom:20px;">
 				<img src="' . $wgUploadPath . '/avatars/' . $wgDBname . '_' . $wgUser->mId . '_s.' . $ext . '?ts' . rand() . '" alt="" border="0" />
 			</td>
@@ -130,35 +139,17 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 * @return HTML output
 	 */
 	protected function getUploadForm( $message = '', $sessionKey = '', $hideIgnoreWarning = false ) {
-		global $wgOut, $wgUser, $wgLang, $wgUploadDirectory, $wgRequest, $wgUseCopyrightUpload;
+		global $wgOut, $wgUser, $wgUseCopyrightUpload;
 
-		$cols = intval( $wgUser->getOption( 'cols' ) );
-		$ew = $wgUser->getOption( 'editwidth' );
-		if ( $ew ) {
-			$ew = ' style="width:100%"';
-		} else {
-			$ew = '';
-		}
-
-		if ( '' != $message ) {
+		if ( $message != '' ) {
 			$sub = wfMsg( 'uploaderror' );
 			$wgOut->addHTML( "<h2>{$sub}</h2>\n" .
 				"<h4 class='error'>{$message}</h4>\n" );
 		}
 		$sk = $wgUser->getSkin();
 
-		$sourcefilename = wfMsg( 'sourcefilename' );
-		$destfilename = wfMsg( 'destfilename' );
-
-		$fd = wfMsg( 'filedesc' );
 		$ulb = wfMsg( 'uploadbtn' );
 
-		$iw = wfMsg( 'ignorewarning' );
-
-		$titleObj = SpecialPage::getTitleFor( 'Upload' );
-		$action = $titleObj->escapeLocalURL();
-
-		$encDestFile = htmlspecialchars( $this->mDesiredDestName );
 		$source = null;
 
 		if ( $wgUseCopyrightUpload ) {
@@ -172,10 +163,6 @@ class SpecialUploadAvatar extends SpecialUpload {
 				htmlspecialchars( $this->mUploadSource ) . "\" style='width:100px' /></td>
 				";
 		}
-
-		$watchChecked = $wgUser->getOption( 'watchdefault' )
-			? 'checked="checked"'
-			: '';
 
 		$output = '<h1>' . wfMsg( 'uploadavatar' ) . '</h1>';
 		$output .= UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-picture' ) );
@@ -198,8 +185,12 @@ class SpecialUploadAvatar extends SpecialUpload {
 			<table border="0">
 				<tr>
 					<td>
-						<p class="profile-update-title">' . wfMsg( 'user-profile-picture-choosepicture' ) . '</p>
-						<p style="margin-bottom:10px;">' . wfMsg( 'user-profile-picture-picsize' ) . '</p>
+						<p class="profile-update-title">' .
+							wfMsg( 'user-profile-picture-choosepicture' ) .
+						'</p>
+						<p style="margin-bottom:10px;">' .
+							wfMsg( 'user-profile-picture-picsize' ) .
+						'</p>
 						<input tabindex="1" type="file" name="wpUploadFile" id="wpUploadFile" size="36"/>
 						</td>
 				</tr>
@@ -226,9 +217,13 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 */
 	function getAvatar( $size ) {
 		global $wgUser, $wgDBname, $wgUploadDirectory, $wgUploadPath;
-		$files = glob( $wgUploadDirectory . '/avatars/' . $wgDBname . '_' . $wgUser->getID() . '_' . $size . "*" );
+		$files = glob(
+			$wgUploadDirectory . '/avatars/' . $wgDBname . '_' .
+			$wgUser->getID() . '_' . $size . "*"
+		);
 		if ( isset( $files[0] ) && $files[0] ) {
-			return "<img src=\"{$wgUploadPath}/avatars/" . basename( $files[0] ) . '" alt="" border="0" />';
+			return "<img src=\"{$wgUploadPath}/avatars/" .
+				basename( $files[0] ) . '" alt="" border="0" />';
 		}
 	}
 
@@ -280,7 +275,7 @@ class UploadAvatar extends UploadFromFile {
 	 * Create the thumbnails and delete old files
 	 */
 	public function performUpload( $comment, $pageText, $watch, $user ) {
-		global $wgUploadDirectory, $wgOut, $wgUser, $wgDBname;
+		global $wgUploadDirectory, $wgUser, $wgDBname, $wgMemc;
 
 		$this->avatarUploadDirectory = $wgUploadDirectory . '/avatars';
 
@@ -354,7 +349,7 @@ class UploadAvatar extends UploadFromFile {
 				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_ml.png' );
 			}
 		}
-		global $wgMemc;
+
 		$key = wfMemcKey( 'user', 'profile', 'avatar', $wgUser->getID(), 's' );
 		$data = $wgMemc->delete( $key );
 
