@@ -2,7 +2,7 @@
 -- Table structure for table `user_board`
 --
 
-CREATE TABLE /*$wgDBprefix*/user_board (
+CREATE TABLE /*_*/user_board (
   `ub_id` int(11) PRIMARY KEY auto_increment,
   `ub_user_id` int(11) NOT NULL default '0',
   `ub_user_name` varchar(255) NOT NULL default '',

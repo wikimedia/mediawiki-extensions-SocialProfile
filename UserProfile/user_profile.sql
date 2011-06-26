@@ -2,7 +2,7 @@
 -- Table structure for table `user_profile`
 --
 
-CREATE TABLE /*$wgDBprefix*/user_profile (
+CREATE TABLE /*_*/user_profile (
   `up_user_id` int(5) NOT NULL PRIMARY KEY default '0',
   `up_location_city` varchar(255) default NULL,
   `up_location_state` varchar(100) default NULL,

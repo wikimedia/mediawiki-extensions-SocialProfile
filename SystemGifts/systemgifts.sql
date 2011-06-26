@@ -1,4 +1,4 @@
-CREATE TABLE /*$wgDBprefix*/user_system_gift (
+CREATE TABLE /*_*/user_system_gift (
   `sg_id` int(11) NOT NULL PRIMARY KEY auto_increment,
   `sg_gift_id` int(5) unsigned NOT NULL default '0',
   `sg_user_id` int(11) unsigned NOT NULL default '0',
@@ -9,7 +9,7 @@ CREATE TABLE /*$wgDBprefix*/user_system_gift (
 CREATE INDEX /*i*/sg_user_id    ON /*_*/user_system_gift (`sg_user_id`);
 CREATE INDEX /*i*/sg_gift_id    ON /*_*/user_system_gift (`sg_gift_id`);
 
-CREATE TABLE /*$wgDBprefix*/system_gift (
+CREATE TABLE /*_*/system_gift (
   `gift_id` int(11) NOT NULL PRIMARY KEY auto_increment,
   `gift_name` varchar(255) NOT NULL default '',
   `gift_description` text,

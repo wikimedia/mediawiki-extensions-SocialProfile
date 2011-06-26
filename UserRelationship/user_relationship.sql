@@ -2,7 +2,7 @@
 -- Table structure for table `user_relationship`
 --
 
-CREATE TABLE /*$wgDBprefix*/user_relationship (
+CREATE TABLE /*_*/user_relationship (
   `r_id` int(11) PRIMARY KEY auto_increment,
   `r_user_id` int(5) unsigned NOT NULL default '0',
   `r_user_name` varchar(255) NOT NULL default '',
@@ -18,7 +18,7 @@ CREATE INDEX /*i*/r_user_id_relation ON /*_*/user_relationship (`r_user_id_relat
 -- Table structure for table `user_relationship_request`
 --
 
-CREATE TABLE /*$wgDBprefix*/user_relationship_request (
+CREATE TABLE /*_*/user_relationship_request (
   `ur_id` int(11) PRIMARY KEY auto_increment,
   `ur_user_id_from` int(5) unsigned NOT NULL default '0',
   `ur_user_name_from` varchar(255) NOT NULL default '',
@@ -30,4 +30,4 @@ CREATE TABLE /*$wgDBprefix*/user_relationship_request (
   `ur_date` datetime default NULL
 ) DEFAULT CHARSET=utf8;
 CREATE INDEX /*i*/ur_user_id_from ON /*_*/user_relationship_request (`ur_user_id_from`);
-CREATE INDEX /*I*/ur_user_id_to   ON /*_*/user_relationship_request (`ur_user_id_to`);
+CREATE INDEX /*i*/ur_user_id_to   ON /*_*/user_relationship_request (`ur_user_id_to`);
