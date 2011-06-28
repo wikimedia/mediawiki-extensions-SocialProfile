@@ -8,7 +8,9 @@ class UserStatusClass {
 
 	/* private */ function __construct( $u_id ) {
 		global $wgOut, $wgScriptPath;
+                $wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStatus/UserStatus.css' );
 		$wgOut->addScriptFile( $wgScriptPath . '/extensions/SocialProfile/UserStatus/UserStatus.js' );
+                
 	}
 
 	public function getStatus( $u_id ) {
@@ -100,7 +102,7 @@ class UserStatusClass {
 			'*',
 			array( 'ush_user_id' => $u_id ),
 			__METHOD__,
-			array( 'ORDER BY' => 'ush_timestamp ASC' )
+			array( 'ORDER BY' => 'ush_timestamp' )
 		);
 
 		$i = 0;
