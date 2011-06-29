@@ -3019,6 +3019,8 @@ $messages['mn'] = array(
  */
 $messages['ms'] = array(
 	'g-choose-file' => 'Pilih fail:',
+	'g-cancel' => 'Batalkan',
+	'g-give-separator' => 'atau',
 	'g-next' => 'Berikutnya',
 );
 

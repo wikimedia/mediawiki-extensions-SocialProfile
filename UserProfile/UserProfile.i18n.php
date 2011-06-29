@@ -7082,7 +7082,9 @@ $messages['ms'] = array(
 	'other-info-title' => 'Maklumat lain',
 	'user-personal-info-location' => 'Lokasi',
 	'user-profile-section-interests' => 'Maklumat lain',
+	'user-profile-personal-name' => 'Nama',
 	'user-profile-personal-location' => 'Lokasi',
+	'user-profile-personal-country' => 'Negara',
 	'user-profile-personal-birthdate' => 'Tarikh (MM/DD)',
 	'user-profile-goback' => 'Pergi balik',
 	'user-profile-userlevels-link' => 'Tahap-tahap pengguna',
@@ -8879,6 +8881,7 @@ $messages['rif'] = array(
 );
 
 /** Romanian (Română)
+ * @author Danutz
  * @author Firilacroco
  * @author KlaudiuMihaila
  */
@@ -8889,7 +8892,7 @@ $messages['ro'] = array(
 	'user-gifts-title' => 'Cadouri',
 	'user-count-separator' => '$1 din $2',
 	'user-view-all' => 'Vedeți toate',
-	'user-upload-image' => 'Încărcați imagine',
+	'user-upload-image' => 'Încărcare imagine',
 	'user-edit-this' => 'Editați aceasta',
 	'user-edit-profile' => 'Editare profil',
 	'user-upload-avatar' => 'Încărcați avatar',
@@ -8940,7 +8943,6 @@ $messages['ro'] = array(
 	'user-recent-system-gift' => 'A primit un premiu',
 	'user-profile-update-saved' => 'Profilul dvs. a fost salvat',
 	'user-profile-update-log-section' => 'schimbat secțiune',
-	'user-profile-update-profile' => 'profil',
 	'user-profile-default-country' => 'Statele Unite',
 	'user-profile-points' => '$1 {{PLURAL:$1|punct|puncte}}',
 	'user-profile-section-personal' => 'Informații personale',
@@ -9001,7 +9003,6 @@ $messages['ro'] = array(
 	'viewgifts' => 'Vedeți cadouri',
 	'viewsystemgifts' => 'Vedeți premii',
 	'avatarupload-removeavatar' => 'Elimină avatar',
-	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-delete-entry' => 'șters avatarul utilizatorului $1',
 );
 

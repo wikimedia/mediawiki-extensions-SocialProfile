@@ -5080,6 +5080,7 @@ $2 ने तुम्हांला {{SITENAME}} वर मित्र म्
 $messages['ms'] = array(
 	'ur-next' => 'berikutnya',
 	'ur-remove' => 'Buang',
+	'ur-login' => 'Log masuk',
 );
 
 /** Maltese (Malti)
