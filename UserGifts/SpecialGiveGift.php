@@ -224,7 +224,7 @@ class GiveGift extends SpecialPage {
 		$wgOut->setPageTitle( wfMsg( 'g-give-no-user-title' ) );
 
 		$output = '<form action="" method="get" enctype="multipart/form-data" name="gift">' .
-			Xml::hidden( 'title', $this->getTitle() ) .
+			Html::hidden( 'title', $this->getTitle() ) .
 			'<div class="g-message">' .
 				wfMsg( 'g-give-no-user-message' ) .
 			'</div>
