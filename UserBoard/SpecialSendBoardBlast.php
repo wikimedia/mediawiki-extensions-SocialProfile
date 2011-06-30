@@ -93,17 +93,23 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		<div class="blast-nav">
 				<h2>' . wfMsg( 'boardblaststep2' ) . '</h2>
 				<div class="blast-nav-links">
-					<a href="javascript:void(0);" onclick="javascript:select_all()">' . wfMsg( 'boardlinkselectall' ) . '</a> -
-					<a href="javascript:void(0);" onclick="javascript:unselect_all()">' . wfMsg( 'boardlinkunselectall' ) . '</a> ';
+					<a href="javascript:void(0);" onclick="javascript:BoardBlast.selectAll()">' .
+						wfMsg( 'boardlinkselectall' ) . '</a> -
+					<a href="javascript:void(0);" onclick="javascript:BoardBlast.unselectAll()">' .
+						wfMsg( 'boardlinkunselectall' ) . '</a> ';
 
 		if ( $friendCount > 0 && $foeCount > 0 ) {
-			$output .= '- <a href="javascript:void(0);" onclick="javascript:toggle_friends(1)">' . wfMsg( 'boardlinkselectfriends' ) . '</a> -';
-			$output .= '<a href="javascript:void(0);" onclick="javascript:toggle_friends(0)">' . wfMsg( 'boardlinkunselectfriends' ) . '</a>';
+			$output .= '- <a href="javascript:void(0);" onclick="javascript:BoardBlast.toggleFriends(1)">' .
+				wfMsg( 'boardlinkselectfriends' ) . '</a> -';
+			$output .= '<a href="javascript:void(0);" onclick="javascript:BoardBlast.toggleFriends(0)">' .
+				wfMsg( 'boardlinkunselectfriends' ) . '</a>';
 		}
 
 		if ( $foeCount > 0 && $friendCount > 0 ) {
-			$output .= '- <a href="javascript:void(0);" onclick="javascript:toggle_foes(1)">' . wfMsg( 'boardlinkselectfoes' ) . '</a> -';
-			$output .= '<a href="javascript:void(0);" onclick="javascript:toggle_foes(0)">' . wfMsg( 'boardlinkunselectfoes' ) . '</a>';
+			$output .= '- <a href="javascript:void(0);" onclick="javascript:BoardBlast.toggleFoes(1)">' .
+				wfMsg( 'boardlinkselectfoes' ) . '</a> -';
+			$output .= '<a href="javascript:void(0);" onclick="javascript:BoardBlast.toggleFoes(0)">' .
+				wfMsg( 'boardlinkunselectfoes' ) . '</a>';
 		}
 		$output .= '</div>
 		</div>';
@@ -123,7 +129,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 					$class = 'foe';
 				}
 				$id = $relationship['user_id'];
-				$output .= '<div class="blast-' . $class . "-unselected\" id=\"user-{$id}\" onclick=\"javascript:toggle_user({$id})\">
+				$output .= '<div class="blast-' . $class . "-unselected\" id=\"user-{$id}\" onclick=\"javascript:BoardBlast.toggleUser({$id})\">
 						{$relationship['user_name']}
 					</div>";
 				if ( $x == count( $relationships ) || $x != 1 && $x % $per_row == 0 ) {
@@ -140,7 +146,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 			<div class="cleared"></div>';
 
 		$output .= '<div class="blast-message-box-button">
-			<input type="button" value="' . wfMsg( 'boardsendbutton' ) . '" class="site-button" onclick="javascript:send_messages();" />
+			<input type="button" value="' . wfMsg( 'boardsendbutton' ) . '" class="site-button" onclick="javascript:BoardBlast.sendMessages();" />
 		</div>';
 
 		return $output;
