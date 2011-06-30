@@ -152,7 +152,7 @@ class SystemGiftManager extends SpecialPage {
 
 		if ( $gift_id ) {
 			$sgml = SpecialPage::getTitleFor( 'SystemGiftManagerLogo' );
-			$gift_image = '<img src="' . $wgUploadPath . '/awards/'
+			$gift_image = '<img src="' . $wgUploadPath . '/awards/' .
 				SystemGifts::getGiftImage( $gift_id, 'l' ) .
 				'" border="0" alt="gift" />';
 			$form .= '<tr>
