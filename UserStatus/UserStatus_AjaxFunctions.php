@@ -23,7 +23,9 @@ function wfGetHistory( $u_id ) {
         $output='<table>';
         /*Under construction*/
         foreach ($historyArray as $row ) {
-            $output .= '<tr><td id="status-history-time">'.$row['ush_timestamp'].' </td><td> '.$row['ush_status'].'</td></tr>';
+            $output .= '<tr><td id="status-history-time">'.$row['ush_timestamp'].' </td>';
+            $output .= '<td><a href="javascript:fromHistoryToStatus(\''.$row['ush_status'].'\');">'
+                       .$row['ush_status'].'</a></td></tr>';
         }
         $output.='</table>';
 	return $output;

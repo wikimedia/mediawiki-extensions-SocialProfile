@@ -8,8 +8,8 @@ function toShowMode( status, id ) {
 function toEditMode( status, id ) {
 	var editbar = '<input id="user-status-input" type="text" value="' + status + '">';
 	editbar += ' <a href="javascript:saveStatus(' + id + ');">Save</a>';
-	editbar += ' <a href="javascript:toShowMode(\'' + status + '\',' + id + ');">Cancel</a>';
 	editbar += ' <a href="javascript:useHistory(' + id + ');">History</a>';
+	editbar += ' <a href="javascript:toShowMode(\'' + status + '\',' + id + ');">Cancel</a>';
 	document.getElementById( 'user-status-block' ).innerHTML = editbar;
 }
 
@@ -43,4 +43,9 @@ function closeStatusHistory() {
         var hBlock = document.getElementById('status-history-block');
         hBlock.parentNode.removeChild(hBlock);
         historyOpened = false;
+}
+
+function fromHistoryToStatus(str)
+{
+        document.getElementById('user-status-input').value = str;
 }
