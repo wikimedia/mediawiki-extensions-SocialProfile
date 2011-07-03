@@ -2597,7 +2597,7 @@ $messages['pfl'] = array(
  */
 $messages['pl'] = array(
 	'boardblastlogintitle' => 'Musisz się zalogować, aby pisać ogłoszenia na forum',
-	'boardblastlogintext' => 'Aby wysłać ogłoszenie musisz <a href="index.php?title=Special:UserLogin">zalogować się</a>.',
+	'boardblastlogintext' => 'Wysłać ogłoszenie możesz dopiero po [[Special:UserLogin|zalogowaniu się]].',
 	'messagesenttitle' => 'Wiadomości zostały wysłane',
 	'boardblasttitle' => 'Wyślij ogłoszenie',
 	'boardblaststep1' => 'Krok 1 – Napisz wiadomość',
