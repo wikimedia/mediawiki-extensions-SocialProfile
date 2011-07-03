@@ -94,7 +94,7 @@ $wgUserBoard = true;
 $wgFriendingEnabled = true;
 
 // Should we enable UserStatus feature (currently is under development)
-$wgEnableUserStatus = false;
+$wgEnableUserStatus = true;
 
 // Extension credits that show up on Special:Version
 $wgExtensionCredits['other'][] = array(

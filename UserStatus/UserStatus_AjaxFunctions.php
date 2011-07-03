@@ -11,7 +11,7 @@ function wfSaveStatus( $u_id, $status ) {
 	$buf = $user_status_array['us_status'];
 	$us = $buf;
 	// @todo FIXME: i18n
-	$us .= " <a href=\"javascript:toEditMode('$buf','$u_id');\">Edit</a>";
+	$us .= " <a href=\"javascript:UserStatus.toEditMode('$buf','$u_id');\">Edit</a>";
 	return $us;
 }
 
@@ -24,7 +24,7 @@ function wfGetHistory( $u_id ) {
         /*Under construction*/
         foreach ($historyArray as $row ) {
             $output .= '<tr><td id="status-history-time">'.$row['ush_timestamp'].' </td>';
-            $output .= '<td><a href="javascript:fromHistoryToStatus(\''.$row['ush_status'].'\');">'
+            $output .= '<td><a href="javascript:UserStatus.fromHistoryToStatus(\''.$row['ush_status'].'\');">'
                        .$row['ush_status'].'</a></td></tr>';
         }
         $output.='</table>';
