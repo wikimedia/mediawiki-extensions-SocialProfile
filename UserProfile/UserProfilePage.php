@@ -1508,7 +1508,7 @@ class UserProfilePage extends Article {
 
 		// Only owners of the page can change statuses
 		if ( $wgUser->getId() == $userId || $userId == 0 ) {
-			$us = "<script>toShowMode('$buf','$userId');</script>";
+			$us = "<script>UserStatus.toShowMode('$buf','$userId');</script>";
 		} else {
 			$us = $buf;
 		}

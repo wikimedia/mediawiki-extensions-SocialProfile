@@ -19,6 +19,7 @@ $wgExtensionMessagesFiles['SocialProfileUserBoard'] = $dir . 'UserBoard/UserBoar
 $wgExtensionMessagesFiles['SocialProfileUserProfile'] = $dir . 'UserProfile/UserProfile.i18n.php';
 $wgExtensionMessagesFiles['SocialProfileUserRelationship'] = $dir . 'UserRelationship/UserRelationship.i18n.php';
 $wgExtensionMessagesFiles['SocialProfileUserStats'] = $dir . 'UserStats/UserStats.i18n.php';
+$wgExtensionMessagesFiles['SocialProfileUserStatus'] = $dir . 'UserStatus/UserStatus.i18n.php';
 
 $wgExtensionAliasesFiles['SocialProfile'] = $dir . 'SocialProfile.alias.php';
 
@@ -94,7 +95,7 @@ $wgUserBoard = true;
 $wgFriendingEnabled = true;
 
 // Should we enable UserStatus feature (currently is under development)
-$wgEnableUserStatus = true;
+$wgEnableUserStatus = false;
 
 // Extension credits that show up on Special:Version
 $wgExtensionCredits['other'][] = array(
