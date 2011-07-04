@@ -15,7 +15,7 @@ $messages['en'] = array(
 	'userstatus-edit' => "Edit",
 	'userstatus-save' => "Save",
 	'userstatus-cancel' => "Cancel",
-	'userstatus-history' => "Hisory",
+	'userstatus-history' => "History",
 );
 
 /** Russian (Русский)
