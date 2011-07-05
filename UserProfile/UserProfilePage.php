@@ -1324,7 +1324,6 @@ class UserProfilePage extends Article {
 
 		$output = '';
 		$f = new UserFanBoxes( $user_name );
-		$user_safe = ( $user_name );
 
 		// Try cache
 		/*
@@ -1349,15 +1348,15 @@ class UserProfilePage extends Article {
 
 		if ( $fanboxes ) {
 			$output .= '<div class="user-section-heading">
-				<div class="user-section-title">'
-					. wfMsg( 'user-fanbox-title' ) .
+				<div class="user-section-title">' .
+					wfMsg( 'user-fanbox-title' ) .
 				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">';
 			// If there are more than ten fanboxes, display a "View all" link
 			// instead of listing them all on the profile page
 			if ( $fanbox_count > 10 ) {
-				$output .= '<a href="' . $fanbox_link->escapeFullURL( 'user=' . $user_safe ) . '" rel="nofollow">' .
+				$output .= '<a href="' . $fanbox_link->escapeFullURL( 'user=' . $user_name ) . '" rel="nofollow">' .
 					wfMsg( 'user-view-all' ) . '</a>';
 			}
 			$output .= '</div>
@@ -1385,7 +1384,13 @@ class UserProfilePage extends Article {
 					$fantag_image_width = 45;
 					$fantag_image_height = 53;
 					$fantag_image = wfFindFile( $fanbox['fantag_image_name'] );
-					$fantag_image_url = $fantag_image->createThumb( $fantag_image_width, $fantag_image_height );
+					$fantag_image_url = '';
+					if ( is_object( $fantag_image ) ) {
+						$fantag_image_url = $fantag_image->createThumb(
+							$fantag_image_width,
+							$fantag_image_height
+						);
+					}
 					$fantag_image_tag = '<img alt="" src="' . $fantag_image_url . '" />';
 				}
 
@@ -1393,11 +1398,15 @@ class UserProfilePage extends Article {
 					$fantag_leftside = $fantag_image_tag;
 				} else {
 					$fantag_leftside = $fanbox['fantag_left_text'];
-					$fantag_leftside = $tagParser->parse( $fantag_leftside, $wgTitle, $wgOut->parserOptions(), false );
+					$fantag_leftside = $tagParser->parse(
+						$fantag_leftside, $wgTitle,
+						$wgOut->parserOptions(), false
+					);
 					$fantag_leftside = $fantag_leftside->getText();
 				}
 
 				$leftfontsize = '10px';
+				$rightfontsize = '11px';
 				if ( $fanbox['fantag_left_textsize'] == 'mediumfont' ) {
 					$leftfontsize = '11px';
 				}
@@ -1417,7 +1426,9 @@ class UserProfilePage extends Article {
 				// Get permalink
 				$fantag_title = Title::makeTitle( NS_FANTAG, $fanbox['fantag_title'] );
 				$right_text = $fanbox['fantag_right_text'];
-				$right_text = $tagParser->parse( $right_text, $wgTitle, $wgOut->parserOptions(), false );
+				$right_text = $tagParser->parse(
+					$right_text, $wgTitle, $wgOut->parserOptions(), false
+				);
 				$right_text = $right_text->getText();
 
 				// Output fanboxes
@@ -1425,7 +1436,7 @@ class UserProfilePage extends Article {
 					<div class=\"individual-fanbox\" id=\"individualFanbox" . $fanbox['fantag_id'] . "\">
 						<div class=\"show-message-container-profile\" id=\"show-message-container" . $fanbox['fantag_id'] . "\">
 							<a class=\"perma\" style=\"font-size:8px; color:" . $fanbox['fantag_right_textcolor'] . "\" href=\"" . $fantag_title->escapeFullURL() . "\" title=\"{$fanbox['fantag_title']}\">" . wfMsg( 'fanbox-perma' ) . "</a>
-							<table class=\"fanBoxTableProfile\" onclick=\"javascript:openFanBoxPopup('fanboxPopUpBox{$fanbox['fantag_id']}', 'individualFanbox{$fanbox['fantag_id']}')\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">
+							<table class=\"fanBoxTableProfile\" onclick=\"javascript:FanBoxes.openFanBoxPopup('fanboxPopUpBox{$fanbox['fantag_id']}', 'individualFanbox{$fanbox['fantag_id']}')\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">
 								<tr>
 									<td id=\"fanBoxLeftSideOutputProfile\" style=\"color:" . $fanbox['fantag_left_textcolor'] . "; font-size:$leftfontsize\" bgcolor=\"" . $fanbox['fantag_left_bgcolor'] . "\">" . $fantag_leftside . "</td>
 									<td id=\"fanBoxRightSideOutputProfile\" style=\"color:" . $fanbox['fantag_right_textcolor'] . "; font-size:$rightfontsize\" bgcolor=\"" . $fanbox['fantag_right_bgcolor'] . "\">" . $right_text . "</td>
@@ -1443,8 +1454,8 @@ class UserProfilePage extends Article {
 								</tr>
 								<tr>
 									<td align=\"center\">
-										<input type=\"button\" value=\"" . wfMsg( 'fanbox-add' ) . "\" size=\"10\" onclick=\"closeFanboxAdd('fanboxPopUpBox{$fanbox['fantag_id']}', 'individualFanbox{$fanbox['fantag_id']}'); showAddRemoveMessageUserPage(1, {$fanbox['fantag_id']}, 'show-addremove-message-half')\" />
-										<input type=\"button\" value=\"" . wfMsg( 'cancel' ) . "\" size=\"10\" onclick=\"closeFanboxAdd('fanboxPopUpBox{$fanbox['fantag_id']}', 'individualFanbox{$fanbox['fantag_id']}')\" />
+										<input type=\"button\" value=\"" . wfMsg( 'fanbox-add' ) . "\" size=\"10\" onclick=\"FanBoxes.closeFanboxAdd('fanboxPopUpBox{$fanbox['fantag_id']}', 'individualFanbox{$fanbox['fantag_id']}'); FanBoxes.showAddRemoveMessageUserPage(1, {$fanbox['fantag_id']}, 'show-addremove-message-half')\" />
+										<input type=\"button\" value=\"" . wfMsg( 'cancel' ) . "\" size=\"10\" onclick=\"FanBoxes.closeFanboxAdd('fanboxPopUpBox{$fanbox['fantag_id']}', 'individualFanbox{$fanbox['fantag_id']}')\" />
 									</td>
 								</tr>
 							</table>
@@ -1457,8 +1468,8 @@ class UserProfilePage extends Article {
 								</tr>
 								<tr>
 									<td align=\"center\">
-										<input type=\"button\" value=\"" . wfMsg( 'fanbox-remove' ) . "\" size=\"10\" onclick=\"closeFanboxAdd('fanboxPopUpBox{$fanbox['fantag_id']}', 'individualFanbox{$fanbox['fantag_id']}'); showAddRemoveMessageUserPage(2, {$fanbox['fantag_id']}, 'show-addremove-message-half')\" />
-										<input type=\"button\" value=\"" . wfMsg( 'cancel' ) . "\" size=\"10\" onclick=\"closeFanboxAdd('fanboxPopUpBox{$fanbox['fantag_id']}', 'individualFanbox{$fanbox['fantag_id']}')\" />
+										<input type=\"button\" value=\"" . wfMsg( 'fanbox-remove' ) . "\" size=\"10\" onclick=\"FanBoxes.closeFanboxAdd('fanboxPopUpBox{$fanbox['fantag_id']}', 'individualFanbox{$fanbox['fantag_id']}'); FanBoxes.showAddRemoveMessageUserPage(2, {$fanbox['fantag_id']}, 'show-addremove-message-half')\" />
+										<input type=\"button\" value=\"" . wfMsg( 'cancel' ) . "\" size=\"10\" onclick=\"FanBoxes.closeFanboxAdd('fanboxPopUpBox{$fanbox['fantag_id']}', 'individualFanbox{$fanbox['fantag_id']}')\" />
 									</td>
 								</tr>
 							</table>
@@ -1478,7 +1489,7 @@ class UserProfilePage extends Article {
 							</tr>
 							<tr>
 								<td align=\"center\">
-									<input type=\"button\" value=\"" . wfMsg( 'cancel' ) . "\" size=\"10\" onclick=\"closeFanboxAdd('fanboxPopUpBox{$fanbox['fantag_id']}', 'individualFanbox{$fanbox['fantag_id']}')\" />
+									<input type=\"button\" value=\"" . wfMsg( 'cancel' ) . "\" size=\"10\" onclick=\"FanBoxes.closeFanboxAdd('fanboxPopUpBox{$fanbox['fantag_id']}', 'individualFanbox{$fanbox['fantag_id']}')\" />
 								</td>
 							</tr>
 						</table>
