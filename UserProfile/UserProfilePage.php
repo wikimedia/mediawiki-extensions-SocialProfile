@@ -94,6 +94,7 @@ class UserProfilePage extends Article {
 
 		$wgOut->addHTML( $this->getPersonalInfo( $this->user_id, $this->user_name ) );
 		$wgOut->addHTML( $this->getActivity( $this->user_name ) );
+		$wgOut->addHTML( $this->getCasualGames( $this->user_id, $this->user_name ) );
 		$wgOut->addHTML( $this->getUserBoard( $this->user_id, $this->user_name ) );
 
 		if ( !wfRunHooks( 'UserProfileEndRight', array( &$this ) ) ) {
@@ -182,6 +183,287 @@ class UserProfilePage extends Article {
 					$stats_data['currency']
 				);
 			}
+			$output .= '</div>';
+		}
+
+		return $output;
+	}
+
+	/**
+	 * Get three of the polls the user has created and cache the data in
+	 * memcached.
+	 *
+	 * @return Array
+	 */
+	function getUserPolls() {
+		global $wgMemc;
+
+		$polls = array();
+
+		// Try cache
+		$key = wfMemcKey( 'user', 'profile', 'polls', $this->user_id );
+		$data = $wgMemc->get( $key );
+
+		if( $data ) {
+			wfDebug( "Got profile polls for user {$this->user_id} from cache\n" );
+			$polls = $data;
+		} else {
+			wfDebug( "Got profile polls for user {$this->user_id} from DB\n" );
+			$dbr = wfGetDB( DB_SLAVE );
+			$res = $dbr->select(
+				array( 'poll_question', 'page' ),
+				array(
+					'page_title', 'UNIX_TIMESTAMP(poll_date) AS poll_date'
+				),
+				/*where*/ array( 'poll_user_id' => $this->user_id ),
+				__METHOD__,
+				array( 'ORDER BY' => 'poll_id DESC', 'LIMIT' => 3 ),
+				array( 'page' => array( 'INNER JOIN', 'page_id = poll_page_id' ) )
+			);
+			foreach( $res as $row ) {
+				$polls[] = array(
+					'title' => $row->page_title,
+					'timestamp' => $row->poll_date
+				);
+			}
+			$wgMemc->set( $key, $polls );
+		}
+		return $polls;
+	}
+
+	/**
+	 * Get three of the quiz games the user has created and cache the data in
+	 * memcached.
+	 *
+	 * @return Array
+	 */
+	function getUserQuiz() {
+		global $wgMemc;
+
+		$quiz = array();
+
+		// Try cache
+		$key = wfMemcKey( 'user', 'profile', 'quiz', $this->user_id );
+		$data = $wgMemc->get( $key );
+
+		if( $data ) {
+			wfDebug( "Got profile quizzes for user {$this->user_id} from cache\n" );
+			$quiz = $data;
+		} else {
+			wfDebug( "Got profile quizzes for user {$this->user_id} from DB\n" );
+			$dbr = wfGetDB( DB_SLAVE );
+			$res = $dbr->select(
+				'quizgame_questions',
+				array(
+					'q_id', 'q_text', 'UNIX_TIMESTAMP(q_date) AS quiz_date'
+				),
+				array(
+					'q_user_id' => $this->user_id,
+					'q_flag' => 0 // the same as QUIZGAME_FLAG_NONE
+				),
+				__METHOD__,
+				array(
+					'ORDER BY' => 'q_id DESC',
+					'LIMIT' => 3
+				)
+			);
+			foreach( $res as $row ) {
+				$quiz[] = array(
+					'id' => $row->q_id,
+					'text' => $row->q_text,
+					'timestamp' => $row->quiz_date
+				);
+			}
+			$wgMemc->set( $key, $quiz );
+		}
+
+		return $quiz;
+	}
+
+	/**
+	 * Get three of the picture games the user has created and cache the data
+	 * in memcached.
+	 *
+	 * @return Array
+	 */
+	function getUserPicGames() {
+		global $wgMemc;
+
+		$pics = array();
+
+		// Try cache
+		$key = wfMemcKey( 'user', 'profile', 'picgame', $this->user_id );
+		$data = $wgMemc->get( $key );
+		if( $data ) {
+			wfDebug( "Got profile picgames for user {$this->user_id} from cache\n" );
+			$pics = $data;
+		} else {
+			wfDebug( "Got profile picgames for user {$this->user_id} from DB\n" );
+			$dbr = wfGetDB( DB_SLAVE );
+			$res = $dbr->select(
+				'picturegame_images',
+				array(
+					'id', 'title', 'img1', 'img2',
+					'UNIX_TIMESTAMP(pg_date) AS pic_game_date'
+				),
+				array(
+					'userid' => $this->user_id,
+					'flag' => 0 // PICTUREGAME_FLAG_NONE
+				),
+				__METHOD__,
+				array(
+					'ORDER BY' => 'id DESC',
+					'LIMIT' => 3
+				)
+			);
+			foreach( $res as $row ) {
+				$pics[] = array(
+					'id' => $row->id,
+					'title' => $row->title,
+					'img1' => $row->img1,
+					'img2' => $row->img2,
+					'timestamp' => $row->pic_game_date
+				);
+			}
+			$wgMemc->set( $key, $pics );
+		}
+
+		return $pics;
+	}
+
+	/**
+	 * Get the casual games (polls, quizzes and picture games) that the user
+	 * has created if $wgUserProfileDisplay['games'] is set to true and the
+	 * PictureGame, PollNY and QuizGame extensions have been installed.
+	 *
+	 * @param $user_id Integer: user ID number
+	 * @param $user_name String: user name
+	 * @return String: HTML or nothing if this feature isn't enabled
+	 */
+	function getCasualGames( $user_id, $user_name ) {
+		global $wgUser, $wgTitle, $wgOut, $wgUserProfileDisplay;
+
+		if ( $wgUserProfileDisplay['games'] == false ) {
+			return '';
+		}
+
+		$output = '';
+
+		// Safe titles
+		$quiz_title = SpecialPage::getTitleFor( 'QuizGameHome' );
+		$pic_game_title = SpecialPage::getTitleFor( 'PictureGameHome' );
+
+		// Combine the queries
+		$combined_array = array();
+
+		$quizzes = $this->getUserQuiz();
+		foreach( $quizzes as $quiz ) {
+			$combined_array[] = array(
+				'type' => 'Quiz',
+				'id' => $quiz['id'],
+				'text' => $quiz['text'],
+				'timestamp' => $quiz['timestamp']
+			);
+		}
+
+		$polls = $this->getUserPolls();
+		foreach( $polls as $poll ) {
+			$combined_array[] = array(
+				'type' => 'Poll',
+				'title' => $poll['title'],
+				'timestamp' => $poll['timestamp']
+			);
+		}
+
+		$pics = $this->getUserPicGames();
+		foreach( $pics as $pic ) {
+			$combined_array[] = array(
+				'type' => 'Picture Game',
+				'id' => $pic['id'],
+				'title' => $pic['title'],
+				'img1' => $pic['img1'],
+				'img2' => $pic['img2'],
+				'timestamp' => $pic['timestamp']
+			);
+		}
+
+		usort( $combined_array, array( 'UserProfilePage', 'sortItems' ) );
+
+		if ( count( $combined_array ) > 0 ) {
+			$output .= '<div class="user-section-heading">
+				<div class="user-section-title">' .
+					wfMsg('casual-games-title').'
+				</div>
+				<div class="user-section-actions">
+					<div class="action-right">
+					</div>
+					<div class="action-left">
+					</div>
+					<div class="cleared"></div>
+				</div>
+			</div>
+			<div class="cleared"></div>
+			<div class="casual-game-container">';
+
+			$x = 1;
+
+			foreach( $combined_array as $item ) {
+				$output .= ( ( $x == 1 ) ? '<p class="item-top">' : '<p>' );
+
+				if ( $item['type'] == 'Poll' ) {
+					$ns = ( defined( 'NS_POLL' ) ? NS_POLL : 300 );
+					$poll_title = Title::makeTitle( $ns, $item['title'] );
+					$casual_game_title = wfMsg( 'casual-game-poll' );
+					$output .= '<a href="' . $poll_title->escapeFullURL() .
+						"\" rel=\"nofollow\">
+							{$poll_title->getText()}
+						</a>
+						<span class=\"item-small\">{$casual_game_title}</span>";
+				}
+
+				if ( $item['type'] == 'Quiz' ) {
+					$casual_game_title = wfMsg( 'casual-game-quiz' );
+					$output .= '<a href="' .
+						$quiz_title->escapeFullURL( 'questionGameAction=renderPermalink&permalinkID=' . $item['id'] ) .
+						"\" rel=\"nofollow\">
+							{$item['text']}
+						</a>
+						<span class=\"item-small\">{$casual_game_title}</span>";
+				}
+
+				if ( $item['type'] == 'Picture Game' ) {
+					if( $item['img1'] != '' && $item['img2'] != '' ) {
+						$image_1 = $image_2 = '';
+						$render_1 = wfFindFile( $item['img1'] );
+						if ( is_object( $render_1 ) ) {
+							$thumb_1 = $render_1->getThumbnail( 25 );
+							$image_1 = $thumb_1->toHtml();
+						}
+
+						$render_2 = wfFindFile( $item['img2'] );
+						if ( is_object( $render_2 ) ) {
+							$thumb_2 = $render_2->getThumbnail( 25 );
+							$image_2 = $thumb_2->toHtml();
+						}
+
+						$casual_game_title = wfMsg( 'casual-game-picture-game' );
+
+						$output .= '<a href="' .
+							$pic_game_title->escapeFullURL( 'picGameAction=renderPermalink&id=' . $item['id'] ) .
+							"\" rel=\"nofollow\">
+								{$image_1}
+								{$image_2}
+								{$item['title']}
+							</a>
+							<span class=\"item-small\">{$casual_game_title}</span>";
+					}
+				}
+
+				$output .= '</p>';
+
+				$x++;
+			}
+
 			$output .= '</div>';
 		}
 
