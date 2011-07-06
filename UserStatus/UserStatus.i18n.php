@@ -18,6 +18,27 @@ $messages['en'] = array(
 	'userstatus-history' => "History",
 );
 
+/** Message documentation (Message documentation)
+ * @author EugeneZelenko
+ */
+$messages['qqq'] = array(
+	'userstatus-edit' => '{{Identical|Edit}}',
+	'userstatus-save' => '{{Identical|Save}}',
+	'userstatus-cancel' => '{{Identical|Cancel}}',
+	'userstatus-history' => '{{Identical|History}}',
+);
+
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+ * @author EugeneZelenko
+ * @author Wizardist
+ */
+$messages['be-tarask'] = array(
+	'userstatus-edit' => 'Рэдагаваць',
+	'userstatus-save' => 'Захаваць',
+	'userstatus-cancel' => 'Скасаваць',
+	'userstatus-history' => 'Гісторыя',
+);
+
 /** German (Deutsch)
  * @author Kghbln
  */
@@ -56,6 +77,16 @@ $messages['mk'] = array(
 	'userstatus-save' => 'Зачувај',
 	'userstatus-cancel' => 'Откажи',
 	'userstatus-history' => 'Историја',
+);
+
+/** Dutch (Nederlands)
+ * @author SPQRobin
+ */
+$messages['nl'] = array(
+	'userstatus-edit' => 'Bewerken',
+	'userstatus-save' => 'Opslaan',
+	'userstatus-cancel' => 'Annuleren',
+	'userstatus-history' => 'Geschiedenis',
 );
 
 /** Portuguese (Português)
