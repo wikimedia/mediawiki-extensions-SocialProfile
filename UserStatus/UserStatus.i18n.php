@@ -49,6 +49,16 @@ $messages['de'] = array(
 	'userstatus-history' => 'Versionen',
 );
 
+/** Franco-Provençal (Arpetan)
+ * @author ChrisPtDe
+ */
+$messages['frp'] = array(
+	'userstatus-edit' => 'Changiér',
+	'userstatus-save' => 'Encartar',
+	'userstatus-cancel' => 'Anular',
+	'userstatus-history' => 'Historico',
+);
+
 /** Galician (Galego)
  * @author Toliño
  */
@@ -57,6 +67,16 @@ $messages['gl'] = array(
 	'userstatus-save' => 'Gardar',
 	'userstatus-cancel' => 'Cancelar',
 	'userstatus-history' => 'Historial',
+);
+
+/** Hebrew (עברית)
+ * @author Amire80
+ */
+$messages['he'] = array(
+	'userstatus-edit' => 'עריכה',
+	'userstatus-save' => 'שמירה',
+	'userstatus-cancel' => 'ביטול',
+	'userstatus-history' => 'היסטוריה',
 );
 
 /** Interlingua (Interlingua)

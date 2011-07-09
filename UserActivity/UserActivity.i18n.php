@@ -890,6 +890,7 @@ $messages['uk'] = array(
 
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Gaoxuewei
+ * @author Xiaomingyan
  */
 $messages['zh-hans'] = array(
 	'useractivity' => '好友动态',
@@ -901,7 +902,7 @@ $messages['zh-hans'] = array(
 	'useractivity-gift' => '$1收到了一份来自$2的礼物',
 	'useractivity-group-edit' => '{{PLURAL:$1|1次编辑|$1次编辑}}',
 	'useractivity-group-comment' => '{{PLURAL:$1|1个评论|$1个评论}}',
-	'useractivity-group-user_message' => '{{PLURAL:$1|1条留言|$1条留言}}',
+	'useractivity-group-user_message' => '$1条信息',
 	'useractivity-group-friend' => '{{PLURAL:$1|1位好友|$1位好友}}',
 	'useractivity-siteactivity' => '站点动态',
 	'useractivity-title' => '好友动态',

@@ -2268,6 +2268,7 @@ $4 वर टिचकी मारा
  * @author Anakmalaysia
  */
 $messages['ms'] = array(
+	'userboard_delete' => 'Hapuskan',
 	'userboard_nextpage' => 'berikutnya',
 );
 
