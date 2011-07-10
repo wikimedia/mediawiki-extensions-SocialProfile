@@ -15,8 +15,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgRequest, $wgUser, $wgOut, $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly,
-		$wgUserLevels, $wgUploadPath, $wgScriptPath;
+		global $wgRequest, $wgUser, $wgOut, $wgMemc, $wgUploadPath, $wgScriptPath;
 
 		// Load CSS
 		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStats/TopList.css' );
@@ -78,35 +77,41 @@ class TopFansRecent extends UnlistedSpecialPage {
 
 		$out = '<div class="top-fan-nav">
 			<h1>' . wfMsg( 'top-fans-by-points-nav-header' ) . '</h1>
-			<p><a href="' . $top_title->escapeFullURL() . '">' . wfMsg( 'top-fans-total-points-link' ) . '</a></p>';
+			<p><a href="' . $top_title->escapeFullURL() . '">' .
+				wfMsg( 'top-fans-total-points-link' ) . '</a></p>';
 
 		if ( $period == 'weekly' ) {
-			$out .= '<p><a href="' . $recent_title->escapeFullURL( 'period=monthly' ) . '">' . wfMsg( 'top-fans-monthly-points-link' ) . '</a><p>
+			$out .= '<p><a href="' . $recent_title->escapeFullURL( 'period=monthly' ) . '">' .
+				wfMsg( 'top-fans-monthly-points-link' ) . '</a><p>
 			<p><b>' . wfMsg( 'top-fans-weekly-points-link' ) . '</b></p>';
 		} else {
 			$out .= '<p><b>' . wfMsg( 'top-fans-monthly-points-link' ) . '</b><p>
-			<p><a href="' . $recent_title->escapeFullURL( 'period=weekly' ) . '">' . wfMsg( 'top-fans-weekly-points-link' ) . '</a></p>';
+			<p><a href="' . $recent_title->escapeFullURL( 'period=weekly' ) . '">' .
+				wfMsg( 'top-fans-weekly-points-link' ) . '</a></p>';
 		}
 
 		// Build nav of stats by category based on MediaWiki:Topfans-by-category
 		$by_category_title = SpecialPage::getTitleFor( 'TopFansByStatistic' );
-		$nav = array();
+		$message = wfMsgForContent( 'topfans-by-category' );
 
-		$lines = explode( "\n", wfMsgForContent( 'topfans-by-category' ) );
-		if ( count( $lines ) > 0 ) {
-			$out .= '<h1 style="margin-top:15px !important;">' . wfMsg( 'top-fans-by-category-nav-header' ) . '</h1>';
-		}
+		if ( !wfEmptyMsg( 'topfans-by-category', $message ) ) {
+			$out .= '<h1 style="margin-top:15px !important;">' .
+				wfMsg( 'top-fans-by-category-nav-header' ) . '</h1>';
 
-		foreach ( $lines as $line ) {
-			if ( strpos( $line, '*' ) !== 0 ) {
-				continue;
-			} else {
-				$line = explode( '|', trim( $line, '* ' ), 2 );
-				$stat = $line[0];
-				$link_text = $line[1];
-				$out .= '<p><a href="' . $by_category_title->escapeFullURL( "stat={$stat}" ) . '">' . $link_text . '</a></p>';
+			$lines = explode( "\n", $message );
+			foreach ( $lines as $line ) {
+				if ( strpos( $line, '*' ) !== 0 ) {
+					continue;
+				} else {
+					$line = explode( '|', trim( $line, '* ' ), 2 );
+					$stat = $line[0];
+					$link_text = $line[1];
+					$statURL = $by_category_title->escapeFullURL( "stat={$stat}" );
+					$out .= '<p><a href="' . $statURL . '">' . $link_text . '</a></p>';
+				}
 			}
 		}
+
 		$out .= '</div>';
 
 		$x = 1;
@@ -115,20 +120,23 @@ class TopFansRecent extends UnlistedSpecialPage {
 		foreach ( $user_list as $user ) {
 			$user_title = Title::makeTitle( NS_USER, $user['user_name'] );
 			$avatar = new wAvatar( $user['user_id'], 'm' );
-			$commentIcon = $avatar->getAvatarImage();
+			$avatarImage = $avatar->getAvatarImage();
 
 			$out .= '<div class="top-fan-row">
 				<span class="top-fan-num">' . $x . '.</span>
 				<span class="top-fan">
-					<img src="' . $wgUploadPath . '/avatars/' . $commentIcon . '" alt="" border="" />
+					<img src="' . $wgUploadPath . '/avatars/' . $avatarImage . '" alt="" border="" />
 					<a href="' . $user_title->escapeFullURL() . '" >' . $user['user_name'] . '</a>
 				</span>';
 
-			$out .= '<span class="top-fan-points"><b>' . number_format( $user['points'] ) . '</b> ' . wfMsg( 'top-fans-points' ) . '</span>';
+			$out .= '<span class="top-fan-points"><b>' .
+				number_format( $user['points'] ) . '</b> ' .
+				wfMsg( 'top-fans-points' ) . '</span>';
 			$out .= '<div class="cleared"></div>';
 			$out .= '</div>';
 			$x++;
 		}
+
 		$out .= '</div><div class="cleared"></div>';
 		$wgOut->addHTML( $out );
 	}

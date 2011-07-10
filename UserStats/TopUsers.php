@@ -71,36 +71,35 @@ class TopUsersPoints extends SpecialPage {
 			<p><b>' . wfMsg( 'top-fans-total-points-link' ) . '</b></p>';
 
 		if ( $wgUserStatsTrackWeekly ) {
-			$out .= '<p><a href="' . $recent_title->escapeFullURL( 'period=monthly' ) . '">' . wfMsg( 'top-fans-monthly-points-link' ) . '</a></p>';
+			$out .= '<p><a href="' . $recent_title->escapeFullURL( 'period=monthly' ) . '">' .
+				wfMsg( 'top-fans-monthly-points-link' ) . '</a></p>';
 		}
 
 		if ( $wgUserStatsTrackMonthly ) {
-			$out .= '<p><a href="' . $recent_title->escapeFullURL( 'period=weekly' ) . '">' . wfMsg( 'top-fans-weekly-points-link' ) . '</a></p>';
+			$out .= '<p><a href="' . $recent_title->escapeFullURL( 'period=weekly' ) . '">' .
+				wfMsg( 'top-fans-weekly-points-link' ) . '</a></p>';
 		}
 
 		// Build nav of stats by category based on MediaWiki:Topfans-by-category
 		$by_category_title = SpecialPage::getTitleFor( 'TopFansByStatistic' );
 
 		$byCategoryMessage = wfMsgForContent( 'topfans-by-category' );
-		$lines = explode( "\n", $byCategoryMessage );
 
-		if (
-			count( $lines ) > 0 &&
-			!wfEmptyMsg( 'topfans-by-category', $byCategoryMessage )
-		)
-		{
+		if ( !wfEmptyMsg( 'topfans-by-category', $byCategoryMessage ) ) {
 			$out .= '<h1 style="margin-top:15px !important;">' .
 				wfMsg( 'top-fans-by-category-nav-header' ) . '</h1>';
-		}
 
-		foreach ( $lines as $line ) {
-			if ( strpos( $line, '*' ) !== 0 ) {
-				continue;
-			} else {
-				$line = explode( '|' , trim( $line, '* ' ), 2 );
-				$stat = $line[0];
-				$link_text = $line[1];
-				$out .= '<p> <a href="' . $by_category_title->escapeFullURL( "stat={$stat}" ) . "\">{$link_text}</a></p>";
+			$lines = explode( "\n", $byCategoryMessage );
+			foreach ( $lines as $line ) {
+				if ( strpos( $line, '*' ) !== 0 ) {
+					continue;
+				} else {
+					$line = explode( '|' , trim( $line, '* ' ), 2 );
+					$stat = $line[0];
+					$link_text = $line[1];
+					$statURL = $by_category_title->escapeFullURL( "stat={$stat}" );
+					$out .= '<p> <a href="' . $statURL . "\">{$link_text}</a></p>";
+				}
 			}
 		}
 

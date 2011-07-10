@@ -15,8 +15,8 @@ class TopFansByStat extends UnlistedSpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgRequest, $wgUser, $wgOut, $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly,
-			$wgUserLevels, $wgUploadPath, $wgScriptPath;
+		global $wgRequest, $wgUser, $wgOut, $wgMemc, $wgUploadPath, $wgScriptPath;
+		global $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
 
 		// Load CSS
 		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStats/TopList.css' );
@@ -26,7 +26,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 		$statistic = $dbr->strencode( trim( $wgRequest->getVal( 'stat' ) ) );
 		$column = "stats_{$statistic}";
 
-		// Error if the querystring value does not match our stat column
+		// Error if the query string value does not match our stat column
 		if ( !$dbr->fieldExists( 'user_stats', $column ) ) {
 			$wgOut->setPageTitle( wfMsg( 'top-fans-bad-field-title' ) );
 			$wgOut->addHTML( wfMsg( 'top-fans-bad-field-message' ) );
@@ -35,6 +35,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 
 		// Fix i18n message key
 		$fixedStatistic = str_replace( '_', '-', $statistic );
+
 		// Set page title
 		$wgOut->setPageTitle( wfMsg( 'top-fans-by-category-title-' . $fixedStatistic ) );
 
@@ -79,34 +80,40 @@ class TopFansByStat extends UnlistedSpecialPage {
 
 		$out = '<div class="top-fan-nav">
 			<h1>' . wfMsg( 'top-fans-by-points-nav-header' ) . '</h1>
-			<p><a href="' . $top_title->escapeFullURL() . '">' . wfMsg( 'top-fans-total-points-link' ) . '</a></p>';
+			<p><a href="' . $top_title->escapeFullURL() . '">' .
+				wfMsg( 'top-fans-total-points-link' ) . '</a></p>';
 
 		if ( $wgUserStatsTrackWeekly ) {
-			$out .= '<p><a href="' . $recent_title->escapeFullURL( 'period=monthly' ) . '">' . wfMsg( 'top-fans-monthly-points-link' ) . '</a><p>';
+			$out .= '<p><a href="' . $recent_title->escapeFullURL( 'period=monthly' ) . '">' .
+				wfMsg( 'top-fans-monthly-points-link' ) . '</a><p>';
 		}
 		if ( $wgUserStatsTrackMonthly ) {
-			$out .= '<p><a href="' . $recent_title->escapeFullURL( 'period=weekly' ) . '">' . wfMsg( 'top-fans-weekly-points-link' ) . '</a></p>';
+			$out .= '<p><a href="' . $recent_title->escapeFullURL( 'period=weekly' ) . '">' .
+				wfMsg( 'top-fans-weekly-points-link' ) . '</a></p>';
 		}
 
 		// Build nav of stats by category based on MediaWiki:Topfans-by-category
-		$out .= '<h1 style="margin-top:15px !important;">' . wfMsg( 'top-fans-by-category-nav-header' ) . '</h1>';
+		$message = wfMsgForContent( 'topfans-by-category' );
 
-		$by_category_title = SpecialPage::getTitleFor( 'TopFansByStatistic' );
-		$nav = array();
+		if ( !wfEmptyMsg( 'topfans-by-category', $message ) ) {
+			$out .= '<h1 style="margin-top:15px !important;">' .
+				wfMsg( 'top-fans-by-category-nav-header' ) . '</h1>';
 
-		$lines = explode( "\n", wfMsgForContent( 'topfans-by-category' ) );
-		foreach ( $lines as $line ) {
-			if ( strpos( $line, '*' ) !== 0 ) {
-				continue;
-			} else {
-				$line = explode( '|', trim( $line, '* ' ), 2 );
-				$stat = $line[0];
-				$link_text = $line[1];
-				$out .= '<p><a href="' . $by_category_title->escapeFullURL( "stat={$stat}" ) . '">' . $link_text . '</a></p>';
+			$lines = explode( "\n", $message );
+			foreach ( $lines as $line ) {
+				if ( strpos( $line, '*' ) !== 0 ) {
+					continue;
+				} else {
+					$line = explode( '|', trim( $line, '* ' ), 2 );
+					$stat = $line[0];
+					$link_text = $line[1];
+					$statURL = $this->getTitle()->escapeFullURL( "stat={$stat}" );
+					$out .= '<p><a href="' . $statURL . '">' . $link_text . '</a></p>';
+				}
 			}
 		}
-		$out .= '</div>';
 
+		$out .= '</div>';
 		$x = 1;
 		$out .= '<div class="top-users">';
 
@@ -128,7 +135,11 @@ class TopFansByStat extends UnlistedSpecialPage {
 			} else {
 				global $wgLang;
 				$statistics_row = number_format( $user['stat'] );
-				$lowercase_statistics_name = $wgLang->lc( wfMsgExt( "top-fans-stats-{$fixedStatistic}", 'parsemag', $user['stat'] ) );
+				$lowercase_statistics_name = $wgLang->lc( wfMsgExt(
+					"top-fans-stats-{$fixedStatistic}",
+					'parsemag',
+					$user['stat']
+				) );
 			}
 
 			$out .= '<div class="top-fan-row">
@@ -142,6 +153,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 			</div>';
 			$x++;
 		}
+
 		$out .= '</div><div class="cleared"></div>';
 		$wgOut->addHTML( $out );
 	}
