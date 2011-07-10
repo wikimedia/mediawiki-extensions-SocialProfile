@@ -56,6 +56,7 @@ $messages['en'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Gift received|Gifts received}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Gift sent|Gifts sent}}',
 	'right-updatepoints' => 'Update edit counts',
+	'right-generatetopusersreport' => 'Generate top users reports',
 	'level-advanced-to' => 'advanced to level <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'You are now a "$1" on {{SITENAME}}!',
 	'level-advance-body' => 'Hi $1.
@@ -70,7 +71,22 @@ The {{SITENAME}} team
 Hey, want to stop getting e-mails from us?
 
 Click $3
-and change your settings to disable e-mail notifications.'
+and change your settings to disable e-mail notifications.',
+	// Special:GenerateTopUsersReport
+	'generatetopusersreport' => 'Generate Top Users Report',
+	'user-stats-weekly-winners' => 'Weekly {{PLURAL:$1|Winner|Winners}}',
+	'user-stats-monthly-winners' => 'Monthly {{PLURAL:$1|Winner|Winners}}',
+	'user-stats-weekly-win-congratulations' => 'Congratulations to the following {{PLURAL:$1|user|users}}, who earned a weekly win and $2 extra points!',
+	'user-stats-monthly-win-congratulations' => 'Congratulations to the following {{PLURAL:$1|user|users}}, who earned a monthly win and $2 extra points!',
+	'user-stats-full-top' => 'Full Top $1',
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' points",
+	'user-stats-report-points' => "'''$1''' points",
+	'user-stats-report-generation-note' => 'this page was generated automatically',
+	'user-stats-report-weekly-edit-summary' => 'automated weekly user report',
+	'user-stats-report-monthly-edit-summary' => 'automated monthly user report',
+	'user-stats-report-weekly-page-title' => 'Weekly User Points Report ($1)',
+	'user-stats-report-monthly-page-title' => 'Monthly User Points Report ($1)',
+	'user-stats-report-error-variable-not-set' => 'The variable $wgUserStatsPointValues[\'points_winner_$1\'] must have a value greater than 0 in LocalSettings.php!',
 );
 
 /** Message documentation (Message documentation)
@@ -937,6 +953,7 @@ $messages['fi'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|saatu lahja|saatua lahjaa}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|lähetetty lahja|lähetettyä lahjaa}}',
 	'right-updatepoints' => 'Päivittää muokkausmääriä',
+	'right-generatetopusersreport' => 'Luoda huippukäyttäjäraportteja',
 	'level-advanced-to' => 'pääsi tasolle <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Olet nyt "$1" {{GRAMMAR:inessive|{{SITENAME}}}}!',
 	'level-advance-body' => 'Hei $1:
@@ -952,6 +969,20 @@ Hei, etkö enää halua saada sähköpostia meiltä?
 
 Napsauta $3
 ja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.',
+	'generatetopusersreport' => 'Luo raportti huippukäyttäjistä',
+	'user-stats-weekly-winners' => 'Viikon {{PLURAL:$1|voittaja|voittajat}}',
+	'user-stats-monthly-winners' => 'Kuukauden {{PLURAL:$1|voittaja|voittajat}}',
+	'user-stats-weekly-win-congratulations' => 'Onnittelumme {{PLURAL:$1|seuraavalle käyttäjälle, joka sai|seuraaville käyttäjille, jotka saivat}} viikottaisen voiton ja $2 lisäpistettä!',
+	'user-stats-monthly-win-congratulations' => 'Onnittelumme {{PLURAL:$1|seuraavalle käyttäjälle, joka sai|seuraaville käyttäjille, jotka saivat}} kuukausittaisen voiton ja $2 lisäpistettä!',
+	'user-stats-full-top' => 'Täysi huippukäyttäjien top $1 -lista',
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' pistettä",
+	'user-stats-report-points' => "'''$1''' pistettä",
+	'user-stats-report-generation-note' => 'tämä sivu luotiin automaattisesti',
+	'user-stats-report-weekly-edit-summary' => 'automatisoitu viikottainen käyttäjäraportti',
+	'user-stats-report-monthly-edit-summary' => 'automatisoitu kuukausittainen käyttäjäraportti',
+	'user-stats-report-weekly-page-title' => 'Viikottainen raportti käyttäjien pisteistä ($1)',
+	'user-stats-report-monthly-page-title' => 'Kuukausittainen raportti käyttäjien pisteistä ($1)',
+	'user-stats-report-error-variable-not-set' => 'Muuttujan $wgUserStatsPointValues[\'points_winner_$1\'] arvo LocalSettings.php-tiedostossa tulee olla suurempi kuin 0!',
 );
 
 /** French (Français)
