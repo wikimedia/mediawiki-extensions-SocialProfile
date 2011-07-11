@@ -15,7 +15,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgRequest, $wgUser, $wgOut, $wgMemc, $wgUploadPath, $wgScriptPath;
+		global $wgRequest, $wgLang, $wgOut, $wgMemc, $wgUploadPath, $wgScriptPath;
 		global $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
 
 		// Load CSS
@@ -118,11 +118,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 		$out .= '<div class="top-users">';
 
 		foreach ( $user_list as $user ) {
-			if ( $user['user_name'] == substr( $user['user_name'], 0, 22 ) ) {
-				$user_name = $user['user_name'];
-			} else {
-				$user_name = substr( $user['user_name'], 0, 22 ) . wfMsg( 'ellipsis' );
-			}
+			$user_name = $wgLang->truncate( $user['user_name'], 22 );
 			$user_title = Title::makeTitle( NS_USER, $user['user_name'] );
 			$avatar = new wAvatar( $user['user_id'], 'm' );
 			$commentIcon = $avatar->getAvatarImage();

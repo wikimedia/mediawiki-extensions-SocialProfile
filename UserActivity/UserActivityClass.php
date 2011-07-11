@@ -568,6 +568,8 @@ class UserActivity {
 	 * table and set them in the appropriate class member variables.
 	 */
 	private function setRelationships() {
+		global $wgLang;
+
 		$dbr = wfGetDB( DB_SLAVE );
 
 		$where = array();
@@ -617,10 +619,7 @@ class UserActivity {
 				$r_type = 'foe';
 			}
 
-			$user_name_short = substr( $row->r_user_name, 0, 25 );
-			if ( $row->r_user_name != $user_name_short ) {
-				$user_name_short .= wfMsg( 'ellipsis' );
-			}
+			$user_name_short = $wgLang->truncate( $row->r_user_name, 25 );
 
 			$this->items_grouped[$r_type][$row->r_user_name_relation]['users'][$row->r_user_name][] = array(
 				'id' => $row->r_id,
@@ -748,6 +747,8 @@ class UserActivity {
 	 * member variables.
 	 */
 	private function setSystemMessages() {
+		global $wgLang;
+
 		$dbr = wfGetDB( DB_SLAVE );
 
 		$where = array();
@@ -791,10 +792,8 @@ class UserActivity {
 
 		foreach ( $res as $row ) {
 			$user_title = Title::makeTitle( NS_USER, $row->um_user_name );
-			$user_name_short = substr( $row->um_user_name, 0, 15 );
-			if ( $row->um_user_name != $user_name_short ) {
-				$user_name_short .= wfMsg( 'ellipsis' );
-			}
+			$user_name_short = $wgLang->truncate( $row->um_user_name, 15 );
+
 			$this->activityLines[] = array(
 				'type' => 'system_message',
 				'timestamp' => $row->item_date,
@@ -929,6 +928,8 @@ class UserActivity {
 	 * @param $has_page Boolean: true by default
 	 */
 	function simplifyPageActivity( $type, $has_page = true ) {
+		global $wgLang;
+
 		if ( !isset( $this->items_grouped[$type] ) || !is_array( $this->items_grouped[$type] ) ) {
 			return '';
 		}
@@ -1026,10 +1027,7 @@ class UserActivity {
 				}
 
 				$user_title = Title::makeTitle( NS_USER, $user_name );
-				$user_name_short = substr( $user_name, 0, 15 );
-				if ( $user_name != $user_name_short ) {
-					$user_name_short .= wfMsg( 'ellipsis' );
-				}
+				$user_name_short = $wgLang->truncate( $user_name, 15 );
 
 				$users .= " <b><a href=\"{$user_title->escapeFullURL()}\">{$user_name_short}</a></b>";
 			}
@@ -1090,6 +1088,7 @@ class UserActivity {
 	 * @return String: "fixed" comment
 	 */
 	function fixItemComment( $comment ) {
+		global $wgLang;
 		if ( !$comment ) {
 			return '';
 		} else {
@@ -1098,10 +1097,7 @@ class UserActivity {
 			$comment = str_replace( '&', '%26', $comment );
 			$comment = str_replace( '%26quot;', '"', $comment );
 		}
-		$preview = substr( $comment, 0, 75 );
-		if ( $preview != $comment ) {
-			$preview .= wfMsg( 'ellipsis' );
-		}
+		$preview = $wgLang->truncate( $comment, 75 );
 		return stripslashes( $preview );
 	}
 
