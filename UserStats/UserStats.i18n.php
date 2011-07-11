@@ -554,9 +554,9 @@ $messages['de'] = array(
 	'user-stats-alltime-title' => 'Am meisten Punkte (gesamt)',
 	'user-stats-weekly-title' => 'Am meisten Punkte diese Woche',
 	'user-stats-monthly-title' => 'Am meisten Punkte diesen Monat',
-	'topusers' => 'Top-Benutzer',
-	'top-fans-by-points-nav-header' => 'Top-Fans',
-	'top-fans-by-category-nav-header' => 'Top-per-Kategorie',
+	'topusers' => 'Aktivste Benutzer',
+	'top-fans-by-points-nav-header' => 'Aktivste Fans',
+	'top-fans-by-category-nav-header' => 'Aktivste nach Kategorie',
 	'top-fans-total-points-link' => 'Gesamtpunktzahl',
 	'top-fans-weekly-points-link' => 'Punkte diese Woche',
 	'top-fans-monthly-points-link' => 'Punkte diesen Monat',
@@ -584,7 +584,7 @@ $messages['de'] = array(
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Kommentar|Kommentare}}',
 	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Empfehlung|Empfehlungen}}',
 	'top-fans-stats-friends-count' => '{{PLURAL:$1|Freund|Freunde}}',
-	'top-fans-stats-foe-count' => '{{PLURAL:$1|Gegner/Feind|Gegner/Feinde}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Wi­der­sa­cher|Wi­der­sa­cher}}',
 	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Veröffentlichte Meinung|Veröffentlichte Meinungen}}',
 	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Meinung|Meinungen}}',
 	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Daumen nach oben|Daumen nach oben}}',
@@ -594,6 +594,7 @@ $messages['de'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Geschenk erhalten|Geschenke erhalten}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Geschenk gemacht|Geschenke gemacht}}',
 	'right-updatepoints' => 'Beiträgszähler aktualisieren',
+	'right-generatetopusersreport' => 'Berichte zu den aktivsten Benutzern generieren',
 	'level-advanced-to' => 'erweitert auf Level <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => '[{{SITENAME}}] Du bist jetzt „$1“!',
 	'level-advance-body' => 'Hallo $1,
@@ -607,6 +608,20 @@ Du willst gar keine E-Mails mehr von uns bekommen?
 
 Klicke $3
 und ändere deine Einstellungen, um die E-Mail-Benachrichtigungen abzustellen.',
+	'generatetopusersreport' => 'Bericht zu den aktivsten Benutzern generieren',
+	'user-stats-weekly-winners' => '{{PLURAL:$1|Wochensieger|Wochensieger}}',
+	'user-stats-monthly-winners' => '{{PLURAL:$1|Monatssieger|Monatssieger}}',
+	'user-stats-weekly-win-congratulations' => 'Herzlichen Glückwunsch {{PLURAL:$1|dem folgenden Benutzer, der den Wochensieg errungen und $2 Zusatzpunkte erhalten hat.|den folgenden Benutzern, die den Wochensieg errungen und $2 Zusatzpunkte erhalten haben.}}',
+	'user-stats-monthly-win-congratulations' => 'Herzlichen Glückwunsch {{PLURAL:$1|dem folgenden Benutzer, der den Monatssieg errungen und $2 Zusatzpunkte erhalten hat.|den folgenden Benutzern, die den Monatssieg errungen und $2 Zusatzpunkte erhalten haben.}}',
+	'user-stats-full-top' => 'Vollständige Bestenliste $1',
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' Punkte",
+	'user-stats-report-points' => "'''$1''' Punkte",
+	'user-stats-report-generation-note' => 'Diese Seite wurde automatisch generiert.',
+	'user-stats-report-weekly-edit-summary' => 'automatisierter wöchentlicher Benutzerbericht',
+	'user-stats-report-monthly-edit-summary' => 'automatisierter monatlicher Benutzerbericht',
+	'user-stats-report-weekly-page-title' => 'Wöchentlicher Benutzerpunktebericht ($1)',
+	'user-stats-report-monthly-page-title' => 'Monatlicher Benutzerpunktebericht ($1)',
+	'user-stats-report-error-variable-not-set' => 'Für den Parameter $wgUserStatsPointValues[\'points_winner_$1\'] in der Datei LocalSettings.php muss ein Wert größer als 0 angegeben sein.',
 );
 
 /** German (formal address) (‪Deutsch (Sie-Form)‬)
@@ -2316,6 +2331,7 @@ $messages['pt'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Prenda recebida|Prendas recebidas}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Prenda enviada|Prendas enviadas}}',
 	'right-updatepoints' => 'Actualizar contadores de edições',
+	'right-generatetopusersreport' => 'Gerar relatórios dos utilizadores de topo',
 	'level-advanced-to' => 'avançou para o nível <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Agora é um "$1" na {{SITENAME}}!',
 	'level-advance-body' => 'Olá $1,
@@ -2331,6 +2347,15 @@ Olhe, quer parar de receber as nossas mensagens?
 
 Clique $3
 e altere as suas preferências para desactivar as notificações por correio electrónico.',
+	'generatetopusersreport' => 'Gerar Relatórios dos Utilizadores de Topo',
+	'user-stats-weekly-winners' => '{{PLURAL:$1|Vencedor|Vencedores}} da Semana',
+	'user-stats-monthly-winners' => '{{PLURAL:$1|Vencedor|Vencedores}} do Mês',
+	'user-stats-weekly-win-congratulations' => 'Parabéns {{PLURAL:$1|ao seguinte utilizador, que obteve|aos seguintes utilizadores, que obtiveram}} uma vitória da semana e $2 pontos extra!',
+	'user-stats-monthly-win-congratulations' => 'Parabéns {{PLURAL:$1|ao seguinte utilizador, que obteve|aos seguintes utilizadores, que obtiveram}} uma vitória do mês e $2 pontos extra!',
+	'user-stats-full-top' => 'Top $1 Completo',
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' pontos",
+	'user-stats-report-points' => "'''$1''' pontos",
+	'user-stats-report-generation-note' => 'esta página foi gerada automaticamente',
 );
 
 /** Brazilian Portuguese (Português do Brasil)

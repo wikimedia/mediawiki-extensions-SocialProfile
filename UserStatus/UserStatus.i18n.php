@@ -89,6 +89,16 @@ $messages['ia'] = array(
 	'userstatus-history' => 'Historia',
 );
 
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
+$messages['lb'] = array(
+	'userstatus-edit' => 'Änneren',
+	'userstatus-save' => 'Späicheren',
+	'userstatus-cancel' => 'Ofbriechen',
+	'userstatus-history' => 'Versiounen',
+);
+
 /** Macedonian (Македонски)
  * @author Bjankuloski06
  */
