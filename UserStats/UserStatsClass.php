@@ -379,7 +379,7 @@ class UserStatsTrack {
 				'Comments_Vote',
 				'COUNT(*) AS CommentVoteCount',
 				array(
-					'Comment_Vote_ID IN (' . implode( ',', $ids ) . ')',
+					'Comment_Vote_ID' => $ids,
 					'Comment_Vote_Score' => $voteType
 				),
 				__METHOD__
