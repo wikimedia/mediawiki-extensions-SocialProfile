@@ -48,6 +48,7 @@ $messages['de'] = array(
 	'userstatus-save' => 'Speichern',
 	'userstatus-cancel' => 'Abbrechen',
 	'userstatus-history' => 'Versionen',
+	'userstatus-letters-left' => 'Buchstaben noch',
 );
 
 /** Franco-Provençal (Arpetan)
@@ -148,7 +149,7 @@ $messages['uk'] = array(
 	'userstatus-edit' => 'Редагувати',
 	'userstatus-save' => 'Зберегти',
 	'userstatus-cancel' => 'Відмінити',
-	'userstatus-history' => 'Історія',
+	'userstatus-history' => 'символів залишилось',
 	'userstatus-history' => 'символів залишилось',
 );
 

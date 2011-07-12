@@ -282,6 +282,7 @@ $messages['arz'] = array(
  * @author EugeneZelenko
  * @author Jim-by
  * @author Red Winged Duck
+ * @author Wizardist
  * @author Zedlik
  */
 $messages['be-tarask'] = array(
@@ -328,6 +329,7 @@ $messages['be-tarask'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Атрыманы падарунак|Атрыманыя падарункі|Атрыманых падарункаў}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Дасланы падарунак|Дасланыя падарункі|Дасланых падарункаў}}',
 	'right-updatepoints' => 'абнаўленьне колькасьці рэдагаваньняў',
+	'right-generatetopusersreport' => 'ствараць справаздачы па лепшых удзельніках',
 	'level-advanced-to' => 'палепшаны да ўзроўню <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Цяпер Вы ў групе «$1» у {{SITENAME}}!',
 	'level-advance-body' => 'Прывітаньне, $1:
@@ -340,6 +342,10 @@ $messages['be-tarask'] = array(
 
 ---
 Калі Вы не жадаеце болей атрымліваць ад нас лісты па электроннай пошце, націсьніце $3 і зьмяніце Вашыя налады для паведамленьняў.',
+	'generatetopusersreport' => 'Стварыць справаздачу па лепшых удзельніках',
+	'user-stats-weekly-winners' => 'Штотыднёвы{{PLURAL:$1|&#32;пераможца|я пераможцы}}',
+	'user-stats-monthly-winners' => 'Штомесячны{{PLURAL:$1|&#32;пераможца|я пераможцы}}',
+	'user-stats-weekly-win-congratulations' => 'Віншуем наступн{{PLURAL:$1|ага ўдзельніка|ых удзельнікаў}}, якія сталі пераможцамі тыдню і зарабілі $2 {{PLURAL:$2|дадатковае ачко|дадатковыя ачкі|дадатковых ачкоў}}!',
 );
 
 /** Bulgarian (Български)
@@ -1855,6 +1861,7 @@ $messages['mk'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Добиен подарок|Добиени подароци}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Испратен подарок|Испратени подароци}}',
 	'right-updatepoints' => 'Подновување на бројачот на уредуваања',
+	'right-generatetopusersreport' => 'Создавање на извештаи за корисници-предводници',
 	'level-advanced-to' => 'прејде на ниво <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Сега сте „$1“ на {{SITENAME}}!',
 	'level-advance-body' => 'Здраво $1.
@@ -1870,6 +1877,20 @@ $messages['mk'] = array(
 
 Кликнете $3
 и во вашите прилагодувања оневозможете известувања по е-пошта.',
+	'generatetopusersreport' => 'Создај извештај за корисници-предводници',
+	'user-stats-weekly-winners' => '{{PLURAL:$1|Победник|Победници}} за неделава',
+	'user-stats-monthly-winners' => '{{PLURAL:$1|Победник|Победници}} за месецов',
+	'user-stats-weekly-win-congratulations' => '{{PLURAL:$1|Му честитаме на следниов корисник за неговиот успех неделава|Им честитаме на следниве корисници за нивниот успех неделава}} и освоените $2 дополнителни бодови!',
+	'user-stats-monthly-win-congratulations' => '{{PLURAL:$1|Му честитаме на следниов корисник за неговиот успех месецов|Им честитаме на следниве корисници за нивниот успех месецов}} и освоените $2 дополнителни бодови!',
+	'user-stats-full-top' => 'Сите $1 предводници',
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' бода",
+	'user-stats-report-points' => "'''$1''' бода",
+	'user-stats-report-generation-note' => 'оваа страница е автоматски создадена',
+	'user-stats-report-weekly-edit-summary' => 'автоматизиран неделен кориснички извештај',
+	'user-stats-report-monthly-edit-summary' => 'автоматизиран месечен кориснички извештај',
+	'user-stats-report-weekly-page-title' => 'Неделен извештај за короснички бодови ($1)',
+	'user-stats-report-monthly-page-title' => 'Месечен извештај за короснички бодови ($1)',
+	'user-stats-report-error-variable-not-set' => 'Променливата $wgUserStatsPointValues[\'points_winner_$1\'] мора да има вредност поголема од 0 во LocalSettings.php!',
 );
 
 /** Mongolian (Монгол)
@@ -2356,6 +2377,11 @@ e altere as suas preferências para desactivar as notificações por correio ele
 	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' pontos",
 	'user-stats-report-points' => "'''$1''' pontos",
 	'user-stats-report-generation-note' => 'esta página foi gerada automaticamente',
+	'user-stats-report-weekly-edit-summary' => 'relatório de utilizadores semanal automatizado',
+	'user-stats-report-monthly-edit-summary' => 'relatório de utilizadores mensal automatizado',
+	'user-stats-report-weekly-page-title' => 'Relatório Semanal de Pontos dos Utilizadores ($1)',
+	'user-stats-report-monthly-page-title' => 'Relatório Mensal de Pontos dos Utilizadores ($1)',
+	'user-stats-report-error-variable-not-set' => 'A variável $wgUserStatsPointValues[\'points_winner_$1\'] tem de ter um valor maior do que 0 no ficheiro LocalSettings.php!',
 );
 
 /** Brazilian Portuguese (Português do Brasil)
