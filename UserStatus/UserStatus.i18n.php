@@ -12,10 +12,11 @@ $messages = array();
  * @author Yevhenii Vlasenko
  */
 $messages['en'] = array(
-	'userstatus-edit' => "Edit",
-	'userstatus-save' => "Save",
-	'userstatus-cancel' => "Cancel",
-	'userstatus-history' => "History",
+	'userstatus-edit' => 'Edit',
+	'userstatus-save' => 'Save',
+	'userstatus-cancel' => 'Cancel',
+	'userstatus-history' => 'History',
+	'userstatus-letters-left' => 'letters left',
 );
 
 /** Message documentation (Message documentation)
@@ -137,6 +138,7 @@ $messages['ru'] = array(
 	'userstatus-save' => 'Сохранить',
 	'userstatus-cancel' => 'Отмена',
 	'userstatus-history' => 'История',
+	'userstatus-letters-left' => 'символов осталось',
 );
 
 /** Ukrainian (Українська)
@@ -147,5 +149,6 @@ $messages['uk'] = array(
 	'userstatus-save' => 'Зберегти',
 	'userstatus-cancel' => 'Відмінити',
 	'userstatus-history' => 'Історія',
+	'userstatus-history' => 'символів залишилось',
 );
 

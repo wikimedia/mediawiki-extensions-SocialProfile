@@ -1,16 +1,30 @@
 var UserStatus = {
 	historyOpened : false,
-
+	maxStatusLength : 70,
+	
 	toShowMode: function( status, id ) {
 		document.getElementById( 'user-status-block' ).innerHTML = status;
-		document.getElementById( 'user-status-block' ).innerHTML += ' <a href="javascript:UserStatus.toEditMode(\'' + status + '\',' + id + ');">Edit</a>';
+		document.getElementById( 'user-status-block' ).innerHTML += '<br> <a id="us-link" href="javascript:UserStatus.toEditMode(\'' + status + '\',' + id + ');">Edit</a>';
+	},
+	
+    usLettersLeft: function() {
+		var len = this.maxStatusLength - document.getElementById('user-status-input').value.length;
+		if ( len < 0  ) {
+			var usBlock = document.getElementById('user-status-input');
+			document.getElementById('user-status-input').value = usBlock.value.slice(0,this.maxStatusLength);
+			len++;
+		}
+		document.getElementById('status-letter-count').innerHTML =len + " "+_US_LETTERS;
 	},
     
 	toEditMode: function( status, id ) {
-		var editbar = '<input id="user-status-input" type="text" value="' + status + '">';
-		editbar += ' <a href="javascript:UserStatus.saveStatus(' + id + ');">Save</a>';
-		editbar += ' <a href="javascript:UserStatus.useHistory(' + id + ');">History</a>';
-		editbar += ' <a href="javascript:UserStatus.toShowMode(\'' + status + '\',' + id + ');">Cancel</a>';
+		var editbar = '<input id="user-status-input" type="text" size="50" value="' + 
+					status + '" onkeyup="javascript:UserStatus.usLettersLeft();">';
+		editbar += '<br> <div id="status-bar">';
+		editbar += '<a id="us-link" href="javascript:UserStatus.saveStatus(' + id + ');">'+_US_SAVE+'</a>';
+		editbar += ' <a id="us-link" href="javascript:UserStatus.useHistory(' + id + ');">'+_US_HISTORY+'</a>';
+		editbar += ' <a id="us-link" href="javascript:UserStatus.toShowMode(\'' + status + '\',' + id + ');">'+_US_CANCEL+'</a>';
+		editbar += '<span id="status-letter-count"></span></div>';
 		document.getElementById( 'user-status-block' ).innerHTML = editbar;
 	},
     

@@ -8,7 +8,7 @@ class UserStatusClass {
 
 	/* private */ function __construct( $u_id ) {
 		global $wgOut, $wgScriptPath;
-                $wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStatus/UserStatus.css' );
+		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStatus/UserStatus.css' );
 		$wgOut->addScriptFile( $wgScriptPath . '/extensions/SocialProfile/UserStatus/UserStatus.js' );
                 
 	}
@@ -45,9 +45,9 @@ class UserStatusClass {
 	 * @param $message String: user-supplied status message
 	 */
 	public function setStatus( $u_id, $message ) {
-		if ( mb_strlen( $message ) > 140 ) { // change
+		if (( mb_strlen( $message ) > 70 ) || ( mb_strlen( $message ) < 1 ))  {
 			// ERROR. Message length is too long
-			// @todo Communicate failure to the end-user somehow...
+			// @todo Communicate failure to the end-user somehow... 
 			return;
 		}
 
