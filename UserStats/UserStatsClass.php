@@ -366,20 +366,20 @@ class UserStatsTrack {
 			$commentIDs = $dbw->select(
 				'Comments',
 				'CommentID',
-				array( 'Comment_user_id' => $voteType ),
+				array( 'Comment_user_id' => $this->user_id ),
 				__METHOD__
 			);
 
 			$ids = array();
 			foreach ( $commentIDs as $commentID ) {
-				$ids[] = $commentID;
+				$ids[] = $commentID->CommentID;
 			}
 
-			$comments = $dbw->select(
+			$comments = $dbw->selectField(
 				'Comments_Vote',
 				'COUNT(*) AS CommentVoteCount',
 				array(
-					'Comment_Vote_ID IN ' . implode( ',', $ids ),
+					'Comment_Vote_ID IN (' . implode( ',', $ids ) . ')',
 					'Comment_Vote_Score' => $voteType
 				),
 				__METHOD__
@@ -387,7 +387,7 @@ class UserStatsTrack {
 
 			$res = $dbw->update(
 				'user_stats',
-				array( $columnName => $comments->CommentVoteCount ),
+				array( $columnName => $comments ),
 				array( 'stats_user_id' => $this->user_id ),
 				__METHOD__
 			);
