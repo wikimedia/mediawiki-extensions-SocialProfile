@@ -40,6 +40,16 @@ $messages['be-tarask'] = array(
 	'userstatus-history' => 'Гісторыя',
 );
 
+/** Bulgarian (Български)
+ * @author DCLXVI
+ */
+$messages['bg'] = array(
+	'userstatus-edit' => 'Редактиране',
+	'userstatus-save' => 'Съхраняване',
+	'userstatus-cancel' => 'Отказване',
+	'userstatus-history' => 'История',
+);
+
 /** German (Deutsch)
  * @author Kghbln
  */
@@ -89,6 +99,7 @@ $messages['ia'] = array(
 	'userstatus-save' => 'Salveguardar',
 	'userstatus-cancel' => 'Cancellar',
 	'userstatus-history' => 'Historia',
+	'userstatus-letters-left' => 'litteras restante',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
@@ -109,6 +120,7 @@ $messages['mk'] = array(
 	'userstatus-save' => 'Зачувај',
 	'userstatus-cancel' => 'Откажи',
 	'userstatus-history' => 'Историја',
+	'userstatus-letters-left' => 'преостанати букви',
 );
 
 /** Dutch (Nederlands)
@@ -129,6 +141,7 @@ $messages['pt'] = array(
 	'userstatus-save' => 'Gravar',
 	'userstatus-cancel' => 'Cancelar',
 	'userstatus-history' => 'Histórico',
+	'userstatus-letters-left' => 'letras restantes',
 );
 
 /** Russian (Русский)
@@ -149,7 +162,6 @@ $messages['uk'] = array(
 	'userstatus-edit' => 'Редагувати',
 	'userstatus-save' => 'Зберегти',
 	'userstatus-cancel' => 'Відмінити',
-	'userstatus-history' => 'символів залишилось',
 	'userstatus-history' => 'символів залишилось',
 );
 

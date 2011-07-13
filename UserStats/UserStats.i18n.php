@@ -329,7 +329,7 @@ $messages['be-tarask'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Атрыманы падарунак|Атрыманыя падарункі|Атрыманых падарункаў}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Дасланы падарунак|Дасланыя падарункі|Дасланых падарункаў}}',
 	'right-updatepoints' => 'абнаўленьне колькасьці рэдагаваньняў',
-	'right-generatetopusersreport' => 'ствараць справаздачы па лепшых удзельніках',
+	'right-generatetopusersreport' => 'стварэньне справаздач пра лепшых удзельніках',
 	'level-advanced-to' => 'палепшаны да ўзроўню <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Цяпер Вы ў групе «$1» у {{SITENAME}}!',
 	'level-advance-body' => 'Прывітаньне, $1:
@@ -342,10 +342,10 @@ $messages['be-tarask'] = array(
 
 ---
 Калі Вы не жадаеце болей атрымліваць ад нас лісты па электроннай пошце, націсьніце $3 і зьмяніце Вашыя налады для паведамленьняў.',
-	'generatetopusersreport' => 'Стварыць справаздачу па лепшых удзельніках',
-	'user-stats-weekly-winners' => 'Штотыднёвы{{PLURAL:$1|&#32;пераможца|я пераможцы}}',
-	'user-stats-monthly-winners' => 'Штомесячны{{PLURAL:$1|&#32;пераможца|я пераможцы}}',
-	'user-stats-weekly-win-congratulations' => 'Віншуем наступн{{PLURAL:$1|ага ўдзельніка|ых удзельнікаў}}, якія сталі пераможцамі тыдню і зарабілі $2 {{PLURAL:$2|дадатковае ачко|дадатковыя ачкі|дадатковых ачкоў}}!',
+	'generatetopusersreport' => 'Стварыць справаздачу пра лепшых удзельніках',
+	'user-stats-weekly-winners' => '{{PLURAL:$1|Штотыднёвы пераможца|Штотыднёвыя пераможцы}}',
+	'user-stats-monthly-winners' => '{{PLURAL:$1|Штомесячны пераможца|Штомесячныя пераможцы}}',
+	'user-stats-weekly-win-congratulations' => 'Віншуем {{PLURAL:$1|наступнага ўдзельніка, які стаў пераможцам тыдню і зарабіў|наступных удзельнікаў, якія сталі пераможцамі тыдню і зарабілі}} $2 {{PLURAL:$2|дадатковае ачко|дадатковыя ачкі|дадатковых ачкоў}}!',
 );
 
 /** Bulgarian (Български)
@@ -1476,6 +1476,7 @@ $messages['ia'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Dono|Donos}} recipite',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Dono|Donos}} inviate',
 	'right-updatepoints' => 'Actualisar le contator de modificationes',
+	'right-generatetopusersreport' => 'Generar reportos del usatores le plus active',
 	'level-advanced-to' => 'avantiava verso le nivello <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Tu es ora un "$1" in {{SITENAME}}!',
 	'level-advance-body' => 'Salute $1,
@@ -1491,6 +1492,20 @@ Tu non vole reciper plus e-mail de nos?
 
 Clicca $3
 e disactiva in tu preferentias le notificationes per e-mail.',
+	'generatetopusersreport' => 'Generar reporto del usatores le plus active',
+	'user-stats-weekly-winners' => 'Le {{PLURAL:$1|ganiator|ganiatores}} del septimana',
+	'user-stats-monthly-winners' => 'Le {{PLURAL:$1|ganiator|ganiatores}} del mense',
+	'user-stats-weekly-win-congratulations' => 'Felicitationes al sequente {{PLURAL:$1|usator|usatores}} que meritava un ganio septimanal e $2 punctos extra!',
+	'user-stats-monthly-win-congratulations' => 'Felicitationes al sequente {{PLURAL:$1|usator|usatores}} que meritava un ganio mensual e $2 punctos extra!',
+	'user-stats-full-top' => 'Le top $1 complete',
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' punctos",
+	'user-stats-report-points' => "'''$1''' punctos",
+	'user-stats-report-generation-note' => 'iste pagina ha essite generate automaticamente',
+	'user-stats-report-weekly-edit-summary' => 'reporto de usator septimanal automatic',
+	'user-stats-report-monthly-edit-summary' => 'reporto de usator mensual automatic',
+	'user-stats-report-weekly-page-title' => 'Reporto de punctos de usator septimanal ($1)',
+	'user-stats-report-monthly-page-title' => 'Reporto de punctos de usator mensual ($1)',
+	'user-stats-report-error-variable-not-set' => 'Le variabile $wgUserStatsPointValues[\'points_winner_$1\'] debe haber un valor superior a 0 in LocalSettings.php!',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -1912,6 +1927,7 @@ $messages['nah'] = array(
 
 /** Dutch (Nederlands)
  * @author Purodha
+ * @author SPQRobin
  * @author Siebrand
  * @author Tvdm
  */
@@ -1974,6 +1990,11 @@ Wilt u niet langer e-mails van ons ontvangen?
 
 Klik $3
 en wijzig uw instellingen om e-mailberichten uit te schakelen.",',
+	'user-stats-weekly-winners' => 'Wekelijkse {{PLURAL:$1|winnaar|winnaars}}',
+	'user-stats-monthly-winners' => 'Maandelijkse {{PLURAL:$1|winnaar|winnaars}}',
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' punten",
+	'user-stats-report-points' => "'''$1''' punten",
+	'user-stats-report-generation-note' => 'Deze pagina is automatisch gegenereerd',
 );
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)

@@ -7217,6 +7217,7 @@ $messages['nds'] = array(
 /** Dutch (Nederlands)
  * @author McDutchie
  * @author Meursault2004
+ * @author SPQRobin
  * @author Siebrand
  * @author Tvdm
  */
@@ -7250,6 +7251,7 @@ $messages['nl'] = array(
 	'user-stats-picture-game-votes' => '{{PLURAL:$1|Stem|Stemmen}} bij afbeeldingenspelletjes',
 	'user-stats-quiz-points' => '{{PLURAL:$1|Quizpunt|Quizpunten}}',
 	'user-stats-pick-points' => "{{PLURAL:$1|Pick 'em-punt|Pick 'em-punten}}",
+	'casual-game-quiz' => 'Quiz',
 	'other-info-title' => 'Overige informatie',
 	'user-friends-title' => 'Vrienden',
 	'user-foes-title' => 'Tegenstanders',
@@ -7301,7 +7303,6 @@ Klik [[Special:UserLogin|hier]] om u aan te melden of klik [[Special:UserLogin/s
 	'user-profile-update-saved' => 'Uw profiel is opgeslagen',
 	'user-profile-edit-profile-update-saved' => 'Het gebruikersprofiel is opgeslagen',
 	'user-profile-update-log-section' => 'onderdeel gewijzigd',
-	'user-profile-update-profile' => 'profiel',
 	'user-profile-default-country' => 'Verenigde Staten',
 	'user-profile-points' => '$1 {{PLURAL:$1|punt|punten}}',
 	'user-profile-section-personal' => 'Persoonlijke gegevens',
@@ -7399,7 +7400,6 @@ Klik [[Special:UserLogin|hier]] om u aan te melden of klik [[Special:UserLogin/s
 	'user-profile-edit-profile' => 'heeft het profiel van $1 bewerkt',
 	'avatarlogpage' => 'Uploadlogboek avatars',
 	'avatarlogpagetext' => 'Dit logboek bevat uploads van avatars',
-	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'nieuwe avatar uploaden',
 	'user-profile-picture-log-delete-entry' => 'heeft de avatar van $1 verwijderd',
 	'right-avatarremove' => 'Avatars van gebruikers verwijderen',
