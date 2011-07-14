@@ -1793,9 +1793,20 @@ class UserProfilePage extends Article {
 		} else {
 			$buf = $user_status_array['us_status'];
 		}
-
+	
 		// Only owners of the page can change statuses
-		if ( $wgUser->getId() == $userId || $userId == 0 ) {
+		if ( $wgUser->getId() == $userId ) {
+			if ( $wgUser->isBlocked() ) {
+				$us = 'You are blocked';
+				return false;
+			}
+
+			// Database operations require write mode
+			if ( wfReadOnly() ) {
+				$us = 'Database is in ReadOnly mode';
+				return;
+			}
+			
 			$us = "<script>UserStatus.toShowMode('$buf','$userId');</script>";
 		} else {
 			$us = $buf;
