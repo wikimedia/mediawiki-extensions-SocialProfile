@@ -2130,6 +2130,7 @@ Se vi volas pliajn amikojn, <a href="$1">invitu ilin!</a>',
  * @author DoveBirkoff
  * @author Feten7
  * @author Imre
+ * @author Mor
  * @author Sanbec
  */
 $messages['es'] = array(
@@ -2154,14 +2155,14 @@ Desea más amigos?
 	'ur-add-no-user' => 'Ningún usuario seleccionado.
 Por favor solicite amigos/enemigos a través del enlace correcto.',
 	'ur-add-personal-message' => 'Agregar un mensaje personal',
-	'ur-remove-relationship-friend' => 'Remover como amigo',
-	'ur-remove-relationship-foe' => 'Remover como enemigo',
+	'ur-remove-relationship-friend' => 'Quitar como amigo',
+	'ur-remove-relationship-foe' => 'Quitar como enemigo',
 	'ur-give-gift' => 'Dar un regalo',
 	'ur-previous' => 'anterior',
 	'ur-next' => 'próximo',
-	'ur-remove-relationship-title-foe' => 'Desea remover $1 como su enemigo?',
+	'ur-remove-relationship-title-foe' => '¿Desea quitar a $1 como su enemigo?',
 	'ur-remove-relationship-title-confirm-foe' => 'Ha removido $1 como su enemigo',
-	'ur-remove-relationship-title-friend' => 'Desea remover $1 como su amigo?',
+	'ur-remove-relationship-title-friend' => '¿Desea quitar a $1 como su amigo?',
 	'ur-remove-relationship-title-confirm-friend' => 'Ha removido $1 como su amigo',
 	'ur-remove-relationship-message-foe' => 'Usted ha solicitado remover $1 como su enemigo, presione "$2" para confirmar.',
 	'ur-remove-relationship-message-confirm-foe' => 'Ha removido exitosamente $1 como su enemigo.',
@@ -2172,7 +2173,7 @@ Por favor solicite amigos/enemigos a través del enlace correcto.',
 	'ur-remove-error-message-pending-foe-request' => 'Usted tiene pendiente una solicitud de enemigo con $1.',
 	'ur-remove-error-message-pending-friend-request' => 'Usted tiene pendiente una solicitud de amigo con $1.',
 	'ur-remove-error-not-loggedin-foe' => 'Debes haber iniciado sesión para eliminar un enemigo.',
-	'ur-remove-error-not-loggedin-friend' => 'Debes haber iniciado sesión para remover un amigo.',
+	'ur-remove-error-not-loggedin-friend' => 'Debes haber iniciado sesión para quitar un amigo.',
 	'ur-remove' => 'Eliminar',
 	'ur-cancel' => 'Cancelar',
 	'ur-login' => 'Entrar',

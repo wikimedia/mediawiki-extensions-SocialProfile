@@ -3023,6 +3023,7 @@ $messages['eo'] = array(
  * @author Fitoschido
  * @author Imre
  * @author Locos epraix
+ * @author Mor
  * @author Sanbec
  * @author Translationista
  */
@@ -3041,8 +3042,8 @@ $messages['es'] = array(
 	'user-meet-people' => 'Conocer gente',
 	'user-add-friend' => 'Agregar como amigo',
 	'user-add-foe' => 'Agregar como enemigo',
-	'user-remove-friend' => 'Remover como amigo',
-	'user-remove-foe' => 'Remover como enemigo',
+	'user-remove-friend' => 'Quitar como amigo',
+	'user-remove-foe' => 'Quitar como enemigo',
 	'user-send-message' => 'Enviar un mensaje',
 	'user-send-gift' => 'Enviar un regalo',
 	'user-contributions' => 'Contribuciones',
@@ -3105,7 +3106,6 @@ $messages['es'] = array(
 Haz click [[Special:UserLogin|aquí]] para iniciar sesión o click [[Special:UserLogin/signup|aquí]] para registrarte.',
 	'user-profile-update-saved' => 'Su perfil ha sido grabado',
 	'user-profile-update-log-section' => 'Sección cambiada',
-	'user-profile-update-profile' => 'perfil',
 	'user-profile-default-country' => 'Estados Unidos',
 	'user-profile-points' => '$1 {{PLURAL:$1|punto|puntos}}',
 	'user-profile-section-personal' => 'Información personal',
@@ -3189,22 +3189,21 @@ Haz click [[Special:UserLogin|aquí]] para iniciar sesión o click [[Special:Use
 	'user-type-toggle-old' => 'Usar pagina de usuario wiki',
 	'user-type-toggle-new' => 'Usar página de usuario social',
 	'user-board-login-message' => 'Tiene que haber <a href="$1">iniciado sesión</a> para enviar mensajes a otros usuarios.',
-	'removeavatar' => 'Remover avatar',
+	'removeavatar' => 'Quitar avatar',
 	'givegift' => 'Dar un regalo',
 	'viewgifts' => 'Ver regalos',
 	'viewsystemgifts' => 'Ver premios',
-	'avatarupload-removeavatar' => 'Remover avatar',
+	'avatarupload-removeavatar' => 'Quitar avatar',
 	'avatarupload-currentavatar' => 'Avatar actual de $1',
 	'avatarupload-removesuccess' => 'El avatar ha sido exitosamente removido',
-	'avatarupload-removeanother' => 'Remover otro',
+	'avatarupload-removeanother' => 'Quitar otro',
 	'profilelogpage' => 'Registro de edición de perfil de usuario',
 	'profilelogpagetext' => 'Este es un registro de ediciones de perfil de usuario',
 	'avatarlogpage' => 'Registro de cargas de avatar',
 	'avatarlogpagetext' => 'Este es un registro de cargas de avatar de usuario',
-	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'nuevo avatar cargado',
 	'user-profile-picture-log-delete-entry' => 'borrado avatar de $1',
-	'right-avatarremove' => 'Remover avatares de usuario',
+	'right-avatarremove' => 'Quitar los avatares del usuario',
 );
 
 /** Estonian (Eesti)

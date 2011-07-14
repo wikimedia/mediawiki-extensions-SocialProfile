@@ -1268,6 +1268,7 @@ $messages['eo'] = array(
 
 /** Spanish (Español)
  * @author Crazymadlover
+ * @author Mor
  */
 $messages['es'] = array(
 	'giftmanager' => 'Administrador de regalos',
@@ -1330,13 +1331,13 @@ Es fácil.',
 	'g-new' => 'nuevo',
 	'g-next' => 'Próximo',
 	'g-previous' => 'Anterior',
-	'g-remove' => 'Remover',
-	'g-remove-gift' => 'Remover este regalo',
-	'g-remove-message' => 'Está usted seguro de querer remover el regalo "$1"?',
+	'g-remove' => 'Quitar',
+	'g-remove-gift' => 'Quitar este regalo',
+	'g-remove-message' => '¿Está seguro de que desea quitar el regalo "$1"?',
 	'g-recent-recipients' => 'Otros receptores recientes de este regalo',
 	'g-remove-success-title' => 'Usted ha removido exitosamente el regalo "$1"',
 	'g-remove-success-message' => 'El regalo "$1" ha sido removido.',
-	'g-remove-title' => 'Remover "$1"?',
+	'g-remove-title' => '¿Quitar "$1"?',
 	'g-send-gift' => 'Enviar regalo',
 	'g-select-a-friend' => 'seleccione un amigo',
 	'g-sent-title' => 'Ha enviado un regalo a $1',

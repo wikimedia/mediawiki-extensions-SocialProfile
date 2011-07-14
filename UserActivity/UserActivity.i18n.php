@@ -222,6 +222,7 @@ $messages['dsb'] = array(
 );
 
 /** Spanish (Español)
+ * @author Mor
  * @author Peter17
  * @author Translationista
  */
@@ -231,7 +232,7 @@ $messages['es'] = array(
 	'useractivity-all' => 'Ver todo',
 	'useractivity-edit' => '$1 {{PLURAL:$4|ha editado la página|ha editado las siguientes páginas:}} $3',
 	'useractivity-foe' => '$1 {{PLURAL:$2|se ha enemistado de|se han enemistado de}} $3',
-	'useractivity-friend' => '$1 {{PLURAL:$2|se ha|se han}}amistado con  $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|es ahora amigos|son ahora amigos}} de  $3',
 	'useractivity-gift' => '$1 ha recibido un regalo de $2',
 	'useractivity-group-edit' => '{{PLURAL:$1|una edición|$1 ediciones}}',
 	'useractivity-group-comment' => '{{PLURAL:$1|un comentario|$1 comentarios}}',

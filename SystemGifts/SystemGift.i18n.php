@@ -834,6 +834,7 @@ $messages['eo'] = array(
 
 /** Spanish (Español)
  * @author Crazymadlover
+ * @author Mor
  */
 $messages['es'] = array(
 	'systemgiftmanager' => 'Administrador de sistema de regalos',
@@ -846,9 +847,9 @@ $messages['es'] = array(
 	'ga-create-gift' => 'Crear regalo',
 	'ga-created' => 'El regalo ha sido creado',
 	'ga-currentimage' => 'Imagen actual',
-	'ga-error-message-invalid-link' => 'El vínculo que ha ingresado es inválido.',
+	'ga-error-message-invalid-link' => 'El enlace que ha introducido no es válido.',
 	'ga-error-message-no-user' => 'El usuario que está tratando de ver no existe',
-	'ga-error-title' => 'Woops, usted tomó un turno equivocado!',
+	'ga-error-title' => '¡Ups, usted tomó un giro equivocado!',
 	'ga-file-instructions' => 'Tu imagen debe ser un jpeg, png o gif (no gif animado), y debe ser menor que 100kb en tamaño.',
 	'ga-gift' => 'regalo',
 	'ga-gift-given-count' => 'Este regalo ha sido enviado $1 {{PLURAL:$1|vez|veces}}',
@@ -876,24 +877,24 @@ $messages['es'] = array(
 	'system_gift_received_subject' => 'Usted ha recibido el premio $1 en {{SITENAME}}!',
 	'system_gift_received_body' => 'Hola $1.
 
-Acabas de haber recibido el premio $2 en {{SITENAME}}!
+Acabas de recibir el premio $2 en {{SITENAME}}!
 
 "$3"
 
-Haz click abajo para chequear tu trofeo!
+¡Haz click abajo para ver tu vitrina de trofeos!
 
 $4
 
-Esperamos que te guste!
+¡Esperamos que te guste!
 
 Gracias,
 
 
-El equipo {{SITENAME}}
+El equipo de {{SITENAME}}
 
 ---
 
-Hey, Deseas no recibir más correos de nosotros?
+Hey, ¿Deseas dejar de recibir correos nuestros?
 
 Haz click en $5
 y cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.',

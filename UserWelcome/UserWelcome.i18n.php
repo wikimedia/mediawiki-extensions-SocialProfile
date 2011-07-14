@@ -79,6 +79,7 @@ $messages['am'] = array(
  * @author Juanpabl
  */
 $messages['an'] = array(
+	'mp-welcome-upload' => 'Cargar',
 	'mp-welcome-edit' => 'Editar',
 );
 
@@ -398,6 +399,7 @@ $messages['eo'] = array(
  * @author Crazymadlover
  * @author Fluence
  * @author Imre
+ * @author Mor
  * @author Sanbec
  */
 $messages['es'] = array(
@@ -409,7 +411,7 @@ $messages['es'] = array(
 	'mp-welcome-needed-points' => 'Avanzar para <b><a href="$1">$2</a></b> ganar <i>$3</i> más {{PLURAL:$3|punto|puntos}}!',
 	'mp-welcome-logged-in' => 'Hola $1',
 	'mp-requests-title' => 'Solicitudes',
-	'mp-requests-message' => 'Usted tien las siguientes solicitudes.',
+	'mp-requests-message' => 'Tiene las siguientes solicitudes.',
 	'mp-request-new-message' => 'nuevo mensaje',
 	'mp-request-new-award' => '$1 nuevos {{PLURAL:$1|premio|premios}}',
 	'mp-request-new-gift' => '$1 nuevos {{PLURAL:$1|regalo|regalos}}',
