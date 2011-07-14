@@ -45,6 +45,7 @@ class UserStatusClass {
 	 * @param $message String: user-supplied status message
 	 */
 	public function setStatus( $u_id, $message ) {
+		$message = trim($message);
 		if (( mb_strlen( $message ) > 70 ) || ( mb_strlen( $message ) < 1 ))  {
 			// ERROR. Message length is too long
 			// @todo Communicate failure to the end-user somehow... 

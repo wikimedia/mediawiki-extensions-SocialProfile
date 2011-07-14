@@ -21,7 +21,9 @@ function wfGetHistory( $u_id ) {
 	$historyArray = $us_class->useStatusHistory('select', $u_id);
 		$output='<table id="user-status-history">';
 		foreach ($historyArray as $row ) {
-            $output .= '<tr><td id="status-history-time">'.$row['ush_timestamp'].' </td>';
+			$time = DateTime::createFromFormat('Y-m-d H:i:s',$row['ush_timestamp']);
+		
+            $output .= '<tr><td id="status-history-time">'.date_format($time, 'j M G:i').' </td>';
             $output .= '<td><a href="javascript:UserStatus.fromHistoryToStatus(\''.$row['ush_status'].'\');">'
                        .$row['ush_status'].'</a></td></tr>';
 		}
