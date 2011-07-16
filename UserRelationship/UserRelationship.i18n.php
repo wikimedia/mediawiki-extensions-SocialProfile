@@ -2167,7 +2167,7 @@ Por favor solicite amigos/enemigos a través del enlace correcto.',
 	'ur-remove-relationship-message-foe' => 'Usted ha solicitado remover $1 como su enemigo, presione "$2" para confirmar.',
 	'ur-remove-relationship-message-confirm-foe' => 'Ha removido exitosamente $1 como su enemigo.',
 	'ur-remove-relationship-message-friend' => 'Usted ha solicitado remover $1 como su amigo, presione "$2" para confirmar.',
-	'ur-remove-relationship-message-confirm-friend' => 'Ha removido exitosamente $1 como su amigo.',
+	'ur-remove-relationship-message-confirm-friend' => 'Ha eliminadoo exitosamente $1 como su amigo.',
 	'ur-remove-error-message-no-relationship' => 'No tiene una relación con $1.',
 	'ur-remove-error-message-remove-yourself' => 'No puede removerse a sí mismo.',
 	'ur-remove-error-message-pending-foe-request' => 'Usted tiene pendiente una solicitud de enemigo con $1.',
@@ -2279,33 +2279,34 @@ Hey, Desea no recibir correos electrónicos de nosotros?
 
 Haga click en $4
 y cambie sus configuraciones para deshabilitar notificaciones por correo electrónico.',
-	'friend_removed_subject' => 'Oh no! $1 lo ha removido como un amigo en {{SITENAME}}!',
+	'friend_removed_subject' => '¡Oh, no! ¡$1 le ha quitado como amigo en {{SITENAME}}!',
 	'friend_removed_body' => 'Hola $1.
 
-$2 te ha removido como un amigo en {{SITENAME}}!
+¡$2 te ha quitado como amigo en {{SITENAME}}!
 
 Gracias
 
 ---
 
-Hey, Desea no recibir correos electrónicos de nosotros?
+Hey, ¿deseas dejar de recibir mensajes de correo electrónico nuestros?
 
-Haga click en $4',
-	'foe_removed_subject' => 'Woohoo! $1 lo ha removido como un enemigo en {{SITENAME}}!',
+Haz click en $4
+y cambia tus configuraciones para deshabilitar las notificaciones por correo electrónico.',
+	'foe_removed_subject' => '¡Yuju! ¡$1 lo ha eliminado como enemigo en {{SITENAME}}!',
 	'foe_removed_body' => 'Hola $1.
 
-$2 te ha removido como un enemigo en {{SITENAME}}!
+¡$2 te ha quitado como enemigo en {{SITENAME}}!
 
-Acaso entre ustedes dos haya una manera de llegar a ser amigos?
+¿Tal vez estais en camino de convertiros en amigos?
 
 Gracias
 
 ---
 
-Hey, Desea no recibir correos electrónicos de nosotros?
+Hey, ¿deseas dejar de recibir correos electrónicos nuestros?
 
-Haga click en $4
-y cambie sus configuraciones para deshabilitar notificaciones por correo electrónico.',
+Haz click en $4
+y cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.',
 );
 
 /** Estonian (Eesti)

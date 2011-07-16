@@ -123,6 +123,13 @@ $messages['mk'] = array(
 	'userstatus-letters-left' => 'преостанати букви',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'userstatus-save' => 'Simpan',
+);
+
 /** Dutch (Nederlands)
  * @author SPQRobin
  */
