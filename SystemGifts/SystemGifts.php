@@ -1,7 +1,7 @@
 <?php
 
 global $IP, $wgScriptPath, $wgAutoloadClasses, $wgAvailableRights, $wgGroupPermissions,
-	$wgSpecialPages, $wgExtenstionMessagesFiles;
+	$wgSpecialPages, $wgExtensionMessagesFiles;
 
 $wgAvailableRights[] = 'awardsmanage';
 $wgGroupPermissions['staff']['awardsmanage'] = true;
