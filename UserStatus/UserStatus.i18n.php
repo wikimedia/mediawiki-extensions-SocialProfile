@@ -17,6 +17,8 @@ $messages['en'] = array(
 	'userstatus-cancel' => 'Cancel',
 	'userstatus-history' => 'History',
 	'userstatus-letters-left' => 'letters left',
+	'userstatus-blocked' => 'You are blocked',
+	'userstatus-readonly' => 'The database is locked',
 );
 
 /** Message documentation (Message documentation)
@@ -169,6 +171,7 @@ $messages['uk'] = array(
 	'userstatus-edit' => 'Редагувати',
 	'userstatus-save' => 'Зберегти',
 	'userstatus-cancel' => 'Відмінити',
-	'userstatus-history' => 'символів залишилось',
+	'userstatus-history' => 'Історія',
+	'userstatus-letters-left' => 'символів залишилось',
 );
 

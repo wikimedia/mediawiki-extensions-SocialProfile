@@ -4,7 +4,7 @@ var UserStatus = {
 	
 	toShowMode: function( status, id ) {
 		document.getElementById( 'user-status-block' ).innerHTML = status;
-		document.getElementById( 'user-status-block' ).innerHTML += '<br> <a id="us-link" href="javascript:UserStatus.toEditMode(\'' + status + '\',' + id + ');">Edit</a>';
+		document.getElementById( 'user-status-block' ).innerHTML += '<br> <a id="us-link" href="javascript:UserStatus.toEditMode(\'' + status + '\',' + id + ');">'+_US_EDIT+'</a>';
 	},
 	
     usLettersLeft: function() {

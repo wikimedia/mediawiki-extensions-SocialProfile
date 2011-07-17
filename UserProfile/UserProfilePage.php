@@ -1797,22 +1797,18 @@ class UserProfilePage extends Article {
 		// Only owners of the page can change statuses
 		if ( $wgUser->getId() == $userId ) {
 			if ( $wgUser->isBlocked() ) {
-				$us = 'You are blocked';
-				return false;
+				return wfMsg('userstatus-blocked');
 			}
 
 			// Database operations require write mode
 			if ( wfReadOnly() ) {
-				$us = 'Database is in ReadOnly mode';
-				return;
+				return wfMsg('userstatus-readonly');
 			}
 			
-			$us = "<script>UserStatus.toShowMode('$buf','$userId');</script>";
+			return "<script>UserStatus.toShowMode('$buf','$userId');</script>";
 		} else {
-			$us = $buf;
+			return $buf;
 		}
-
-		return $us;
 	}
 
 }
