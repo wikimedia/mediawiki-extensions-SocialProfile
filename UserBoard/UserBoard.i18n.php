@@ -2561,7 +2561,7 @@ e modificatz vòstres paramètres per desactivar las notificacions dels corrièr
  * @author Odisha1
  */
 $messages['or'] = array(
-	'userboard_nextpage' => 'ପରେ',
+	'userboard_nextpage' => 'ପରବର୍ତ୍ତୀ',
 	'userboard_prevpage' => 'ଆଗ',
 );
 

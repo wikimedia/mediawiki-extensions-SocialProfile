@@ -3443,7 +3443,7 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
  * @author Odisha1
  */
 $messages['or'] = array(
-	'g-next' => 'ପରେ',
+	'g-next' => 'ପରବର୍ତ୍ତୀ',
 	'g-previous' => 'ଆଗ',
 	'g-remove' => 'ବାହାର କରିବା',
 	'g-remove-title' => 'ବାହାର କରିବା "$1"?',

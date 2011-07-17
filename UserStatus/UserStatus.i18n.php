@@ -112,6 +112,7 @@ $messages['lb'] = array(
 	'userstatus-save' => 'Späicheren',
 	'userstatus-cancel' => 'Ofbriechen',
 	'userstatus-history' => 'Versiounen',
+	'userstatus-letters-left' => 'Buschtawen iwwreg',
 );
 
 /** Macedonian (Македонски)
