@@ -94,6 +94,10 @@ class UserProfilePage extends Article {
 
 		$wgOut->addHTML( $this->getPersonalInfo( $this->user_id, $this->user_name ) );
 		$wgOut->addHTML( $this->getActivity( $this->user_name ) );
+		// Hook for BlogPage
+		if ( !wfRunHooks( 'UserProfileRightSideAfterActivity', array( $this ) ) ) {
+			wfDebug( __METHOD__ . ": UserProfileRightSideAfterActivity hook messed up profile!\n" );
+		}
 		$wgOut->addHTML( $this->getCasualGames( $this->user_id, $this->user_name ) );
 		$wgOut->addHTML( $this->getUserBoard( $this->user_id, $this->user_name ) );
 
