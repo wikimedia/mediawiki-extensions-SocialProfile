@@ -61,6 +61,15 @@ $messages['de'] = array(
 	'userstatus-cancel' => 'Abbrechen',
 	'userstatus-history' => 'Versionen',
 	'userstatus-letters-left' => 'Buchstaben noch',
+	'userstatus-blocked' => 'Du wurdest gesperrt',
+	'userstatus-readonly' => 'Die Datenbank ist gesperrt',
+);
+
+/** German (formal address) (‪Deutsch (Sie-Form)‬)
+ * @author Kghbln
+ */
+$messages['de-formal'] = array(
+	'userstatus-blocked' => 'Sie wurden gesperrt',
 );
 
 /** Franco-Provençal (Arpetan)
@@ -102,6 +111,8 @@ $messages['ia'] = array(
 	'userstatus-cancel' => 'Cancellar',
 	'userstatus-history' => 'Historia',
 	'userstatus-letters-left' => 'litteras restante',
+	'userstatus-blocked' => 'Tu es blocate',
+	'userstatus-readonly' => 'Le base de datos es blocate',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
@@ -124,6 +135,8 @@ $messages['mk'] = array(
 	'userstatus-cancel' => 'Откажи',
 	'userstatus-history' => 'Историја',
 	'userstatus-letters-left' => 'преостанати букви',
+	'userstatus-blocked' => 'Блокирани сте',
+	'userstatus-readonly' => 'Базата е заклучена',
 );
 
 /** Malay (Bahasa Melayu)
@@ -152,6 +165,8 @@ $messages['pt'] = array(
 	'userstatus-cancel' => 'Cancelar',
 	'userstatus-history' => 'Histórico',
 	'userstatus-letters-left' => 'letras restantes',
+	'userstatus-blocked' => 'A sua conta está bloqueada',
+	'userstatus-readonly' => 'A base de dados está bloqueada',
 );
 
 /** Russian (Русский)
