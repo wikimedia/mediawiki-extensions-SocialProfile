@@ -50,6 +50,13 @@ $messages['en'] = array(
 	'ga-title' => '$1\'s awards',
 	'ga-uploadsuccess' => 'Upload successful',
 	'ga-viewlist' => 'View gift list',
+	'ga-cancel' => 'Cancel',
+	'ga-remove' => 'Remove',
+	'ga-remove-title' => 'Remove "$1"?',
+	'ga-delete-message' => 'Are you sure you want to delete the gift "$1"?
+This will also delete it from users who may have received it.',
+	'ga-remove-success-title' => 'You have successfully removed the gift "$1"',
+	'ga-remove-success-message' => 'The gift "$1" has been removed.',
 	'system_gift_received_subject' => 'You have received the $1 award on {{SITENAME}}!',
 	'system_gift_received_body' => 'Hi $1.
 
@@ -1019,6 +1026,13 @@ $messages['fi'] = array(
 	'ga-title' => 'Käyttäjän $1 palkinnot',
 	'ga-uploadsuccess' => 'Tallentaminen onnistui',
 	'ga-viewlist' => 'Katso lahjalista',
+	'ga-cancel' => 'Peruuta',
+	'ga-remove' => 'Poista',
+	'ga-remove-title' => 'Poista "$1"?',
+	'ga-delete-message' => 'Oletko varma, että haluat poistaa lahjan "$1"?
+Tämä poistaa sen myös käyttäjiltä, jotka ovat saattaneet saada sen.',
+	'ga-remove-success-title' => 'Olet onnistuneesti poistanut lahjan "$1"',
+	'ga-remove-success-message' => 'Lahja "$1" on poistettu.',
 	'system_gift_received_subject' => 'Olet saanut palkinnon $1 {{GRAMMAR:inessive|{{SITENAME}}}}!',
 	'system_gift_received_body' => 'Hei $1:
 

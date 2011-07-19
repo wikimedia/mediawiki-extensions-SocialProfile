@@ -93,17 +93,33 @@ class SystemGiftManager extends SpecialPage {
 		}
 	}
 
+	/**
+	 * Display the text list of all existing system gifts and a delete link to
+	 * users who are allowed to delete gifts.
+	 *
+	 * @return String: HTML
+	 */
 	function displayGiftList() {
+		global $wgUser;
 		$output = ''; // Prevent E_NOTICE
 		$page = 0;
 		$per_page = 50;
 		$gifts = SystemGifts::getGiftList( $per_page, $page );
 		if ( $gifts ) {
 			foreach ( $gifts as $gift ) {
+				$deleteLink = '';
+				if ( $wgUser->isAllowed( 'awardsmanage' ) ) {
+					$removePage = SpecialPage::getTitleFor( 'RemoveMasterSystemGift' );
+					$deleteLink = '<a href="' .
+						$removePage->escapeFullURL( "gift_id={$gift['id']}" ) .
+						'" style="font-size:10px; color:red;">' .
+						wfMsg( 'delete' ) . '</a>';
+				}
+
 				$output .= '<div class="Item">
 					<a href="' . $this->getTitle()->escapeFullURL( 'id=' . $gift['id'] ) . '">' .
-						$gift['gift_name'] . '</a>
-				</div>' . "\n";
+						$gift['gift_name'] . '</a> ' .
+						$deleteLink . '</div>' . "\n";
 			}
 		}
 		return '<div id="views">' . $output . '</div>';

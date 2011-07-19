@@ -193,3 +193,21 @@
 	font-weight: bold;
 	text-decoration: none;
 }
+
+/* Special:RemoveMasterSystemGift */
+.ga-container {
+	margin: 15px 0px 0px 0px;
+}
+
+.ga-container img {
+	border: 1px solid #dcdcdc;
+	background-color: #fff;
+	padding: 3px;
+	display: block;
+	float: left;
+	margin: 0px 10px 0px 0px;
+}
+
+.ga-buttons {
+	padding: 15px 0px 0px 0px;
+}

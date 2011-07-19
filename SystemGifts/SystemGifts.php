@@ -29,6 +29,9 @@ $wgSpecialPages['SystemGiftManager'] = 'SystemGiftManager';
 $wgAutoloadClasses['SystemGiftManagerLogo'] = "{$wgSystemGiftsDirectory}/SpecialSystemGiftManagerLogo.php";
 $wgSpecialPages['SystemGiftManagerLogo'] = 'SystemGiftManagerLogo';
 
+$wgAutoloadClasses['RemoveMasterSystemGift'] = "{$wgSystemGiftsDirectory}/SpecialRemoveMasterSystemGift.php";
+$wgSpecialPages['RemoveMasterSystemGift'] = 'RemoveMasterSystemGift';
+
 $wgAutoloadClasses['PopulateAwards'] = "{$wgSystemGiftsDirectory}/SpecialPopulateAwards.php";
 $wgSpecialPages['PopulateAwards'] = 'PopulateAwards';
 
