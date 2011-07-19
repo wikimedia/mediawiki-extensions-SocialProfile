@@ -210,8 +210,7 @@ class SpecialViewUserBoard extends SpecialPage {
 
 		if ( $wgUser->isBlocked() ) {
 			// only let them post to admins
-			$user_to = User::newFromId( $user_id );
-			$user_to->loadFromId();
+			//$user_to = User::newFromId( $user_id );
 			// if( !$user_to->isAllowed( 'delete' ) ) {
 				$can_post = false;
 			// }

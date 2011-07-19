@@ -58,7 +58,6 @@ class RemoveAvatar extends SpecialPage {
 		if ( $wgRequest->wasPosted() ) {
 			$user_id = $wgRequest->getInt( 'user_id' );
 			$user_deleted = User::newFromId( $user_id );
-			$user_deleted->loadFromDatabase();
 
 			$this->deleteImage( $user_id, 's' );
 			$this->deleteImage( $user_id, 'm' );
