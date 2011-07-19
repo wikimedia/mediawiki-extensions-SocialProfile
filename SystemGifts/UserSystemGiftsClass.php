@@ -53,7 +53,7 @@ class UserSystemGifts {
 			__METHOD__
 		);
 		$sg_gift_id = $dbw->insertId();
-		$this->incGiftGivenCount( $gift_id );
+		self::incGiftGivenCount( $gift_id );
 
 		// Add to new gift count cache for receiving user
 		$this->incNewSystemGiftCount( $this->user_id );
