@@ -1100,6 +1100,8 @@ $messages['frp'] = array(
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Present mandâ|Presents mandâs}}',
 	'level-advanced-to' => 'at avanciê vers lo nivél <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Vos avéd dês ora un « $1 » dessus {{SITENAME}} !',
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' pouents",
+	'user-stats-report-points' => "'''$1''' pouents",
 );
 
 /** Galician (Galego)

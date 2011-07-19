@@ -2408,7 +2408,7 @@ Klicke [[Special:UserLogin|hier]] um dich anzumelden oder klicke [[Special:UserL
 	'user-profile-picture-uploaddifferent' => 'Ein anderes Bild hochladen',
 	'user-profile-picture-currentimage' => 'Aktuelles Bild',
 	'user-profile-picture-choosepicture' => 'Wähle dein Bild',
-	'user-profile-picture-picsize' => 'Dein Bild muss eine jpeg-, png- oder gif-Datei sein, die weniger als 100kb groß ist.',
+	'user-profile-picture-picsize' => 'Das Bild muss ein „JPEG“, „PNG“ oder „GIF“ sein sowie eine Dateigröße unter 100 KB haben.',
 	'user-profile-goback' => 'Zurück',
 	'user-profile-userlevels-link' => 'Benutzerebenen',
 	'user-no-images' => 'Keine Bilder hochgeladen',

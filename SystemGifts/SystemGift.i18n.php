@@ -573,11 +573,12 @@ $messages['cs'] = array(
 );
 
 /** German (Deutsch)
+ * @author Kghbln
  * @author The Evil IP address
  * @author Umherirrender
  */
 $messages['de'] = array(
-	'systemgiftmanager' => 'Systemgeschenke-Verwaltung',
+	'systemgiftmanager' => 'Verwaltung der Systemgeschenke',
 	'ga-addnew' => '+ Neues Geschenk hinzufügen',
 	'ga-back-edit-gift' => 'Zurück zur Geschenkbearbeitung',
 	'ga-back-gift-list' => 'Zurück zur Geschenkeliste',
@@ -590,7 +591,7 @@ $messages['de'] = array(
 	'ga-error-message-invalid-link' => 'Der eingegebende Link ist ungültig.',
 	'ga-error-message-no-user' => 'Der Benutzer, den du anschauen möchtest, existiert nicht.',
 	'ga-error-title' => 'Ops, da ging etwas schief!',
-	'ga-file-instructions' => 'Das Bild muss ein „jpeg“, „png“, „gif“ (kein animiertes) sein, und eine Dateigröße kleiner als 100 kb haben.',
+	'ga-file-instructions' => 'Das Bild muss ein „JPEG“, „PNG“ oder ein nicht animiertes „GIF“ sein sowie eine Dateigröße unter 100 KB haben.',
 	'ga-gift' => 'Geschenk',
 	'ga-gift-given-count' => 'Dieses Geschenk wurde {{PLURAL:$1|einmal|$1 mal}} ausgegeben',
 	'ga-gift-title' => '„$2“ von $1',
@@ -600,7 +601,7 @@ $messages['de'] = array(
 	'ga-gifttype' => 'Geschenkart',
 	'ga-goback' => 'gehe zurück',
 	'ga-imagesbelow' => 'Hier drunter folgen alle Bilder, die auf dieser Seite genutzt werden',
-	'ga-img' => 'Bild hinzufügen / entfernen',
+	'ga-img' => 'Bild hinzufügen/ entfernen',
 	'ga-large' => 'Groß',
 	'ga-medium' => 'Mittel',
 	'ga-mediumlarge' => 'Mittelgroß',
@@ -614,6 +615,13 @@ $messages['de'] = array(
 	'ga-title' => 'Auszeichnungen von $1',
 	'ga-uploadsuccess' => 'Hochladen erfolgreich',
 	'ga-viewlist' => 'Geschenkeliste ansehen',
+	'ga-cancel' => 'Abbrechen',
+	'ga-remove' => 'Entfernen',
+	'ga-remove-title' => '„$1“ entfernen?',
+	'ga-delete-message' => 'Bist du dir sicher, das du das Geschenk „$1“ löschen möchtest?
+Dies wird es auch bei Benutzern löschen, die es bereits erhalten haben.',
+	'ga-remove-success-title' => 'Du hast das Geschenk „$1“ erfolgreich entfernt.',
+	'ga-remove-success-message' => 'Das Geschenk „$1“ wurde entfernt.',
 	'system_gift_received_subject' => '[{{SITENAME}}] Du hast die $1-Auszeichnung erhalten!',
 	'system_gift_received_body' => 'Hallo $1,
 
@@ -641,11 +649,15 @@ und ändere deine Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
 );
 
 /** German (formal address) (‪Deutsch (Sie-Form)‬)
+ * @author Kghbln
  * @author The Evil IP address
  * @author Umherirrender
  */
 $messages['de-formal'] = array(
 	'ga-error-message-no-user' => 'Der Benutzer, den Sie anschauen möchten, existiert nicht.',
+	'ga-delete-message' => 'Sind Sie sich sicher, das Sie das Geschenk „$1“ löschen möchten?
+Dies wird es auch bei Benutzern löschen, die es bereits erhalten haben.',
+	'ga-remove-success-title' => 'Sie haben das Geschenk „$1“ erfolgreich entfernt.',
 	'system_gift_received_subject' => '[{{SITENAME}}]Sie haben die $1-Auszeichnung erhalten!',
 	'system_gift_received_body' => 'Hallo $1,
 

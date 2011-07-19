@@ -154,6 +154,8 @@ $messages['nl'] = array(
 	'userstatus-save' => 'Opslaan',
 	'userstatus-cancel' => 'Annuleren',
 	'userstatus-history' => 'Geschiedenis',
+	'userstatus-blocked' => 'U bent geblokkeerd',
+	'userstatus-readonly' => 'De database is vergrendeld',
 );
 
 /** Portuguese (Português)

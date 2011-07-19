@@ -872,6 +872,7 @@ $messages['cs'] = array(
  * @author Als-Holder
  * @author Imre
  * @author Jorges
+ * @author Kghbln
  * @author Purodha
  * @author The Evil IP address
  * @author Umherirrender
@@ -898,7 +899,8 @@ $messages['de'] = array(
 	'g-create-gift' => 'Geschenk erstellen',
 	'g-created-by' => 'erstellt von',
 	'g-current-image' => 'Aktuelles Bild',
-	'g-delete-message' => 'Bist du dir sicher, das du das Geschenk „$1“ löschen möchest? Dies wird es auch bei Benutzern löschen, die es bereits empfangen haben.',
+	'g-delete-message' => 'Bist du dir sicher, das du das Geschenk „$1“ löschen möchtest?
+Dies wird es auch bei Benutzern löschen, die es bereits erhalten haben.',
 	'g-description-title' => 'Geschenk „$2“ von $1',
 	'g-error-do-not-own' => 'Du besitzt dieses Geschenk nicht.',
 	'g-error-message-blocked' => 'Du bist aktuell gesperrt und kannst keine Geschenke vergeben',
@@ -907,7 +909,7 @@ $messages['de'] = array(
 	'g-error-message-no-user' => 'Der Benutzer, den du anschauen möchtest, existiert nicht.',
 	'g-error-message-to-yourself' => 'Du kannst dir selber keine Geschenke geben.',
 	'g-error-title' => 'Oops, da ging etwas schief!',
-	'g-file-instructions' => 'Das Bild muss ein „jpeg“, „png“, „gif“ (kein animiertes) sein, und eine Dateigröße kleiner als 100 kb haben.',
+	'g-file-instructions' => 'Das Bild muss ein „JPEG“, „PNG“ oder ein nicht animiertes „GIF“ sein sowie eine Dateigröße unter 100 KB haben.',
 	'g-from' => 'von <a href="$1">$2</a>',
 	'g-gift' => 'Geschenk',
 	'g-gift-name' => 'Geschenkname',
@@ -976,11 +978,13 @@ und ändere deine Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
 
 /** German (formal address) (‪Deutsch (Sie-Form)‬)
  * @author Imre
+ * @author Kghbln
  * @author The Evil IP address
  * @author Umherirrender
  */
 $messages['de-formal'] = array(
-	'g-delete-message' => 'Sind Sie sich sicher, das Sie das Geschenk „$1“ löschen möchten? Dies wird es auch bei Benutzern löschen, die es bereits empfangen haben.',
+	'g-delete-message' => 'Sind Sie sich sicher, das Sie das Geschenk „$1“ löschen möchten?
+Dies wird es auch bei Benutzern löschen, die es bereits erhalten haben.',
 	'g-error-do-not-own' => 'Sie besitzen dieses Geschenk nicht.',
 	'g-error-message-blocked' => 'Sie sind aktuell gesperrt und können keine Geschenke vergeben',
 	'g-error-message-login' => 'Sie müssen sich anmelden um Geschenke zu vergeben',
