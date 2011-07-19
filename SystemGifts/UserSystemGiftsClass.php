@@ -384,13 +384,14 @@ class UserSystemGifts {
 	 * Update the counter that tracks how many times a system gift has been
 	 * given out.
 	 *
-	 * @param $gift_id Integer: ID number of the system gift that we're tracking
+	 * @param $giftId Integer: ID number of the system gift that we're tracking
 	 */
-	private function incGiftGivenCount( $gift_id ) {
+	public static function incGiftGivenCount( $giftId ) {
 		$dbw = wfGetDB( DB_MASTER );
-		$dbw->update( 'system_gift',
-			array( 'gift_given_count=gift_given_count+1' ),
-			array( 'gift_id' => $gift_id ),
+		$dbw->update(
+			'system_gift',
+			array( 'gift_given_count = gift_given_count + 1' ),
+			array( 'gift_id' => $giftId ),
 			__METHOD__
 		);
 	}

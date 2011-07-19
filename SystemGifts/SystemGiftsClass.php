@@ -52,7 +52,7 @@ class SystemGifts {
 			array( 'ORDER BY' => 'gift_category, gift_threshold ASC' )
 		);
 
-		$x = 1;
+		$x = 0;
 		foreach ( $res as $row ) {
 			if ( $row->gift_category ) {
 				$res2 = $dbw->select(
@@ -82,6 +82,9 @@ class SystemGifts {
 
 						$sg_key = wfMemcKey( 'user', 'profile', 'system_gifts', "{$row2->stats_user_id}" );
 						$wgMemc->delete( $sg_key );
+
+						// Update counters (bug #27981)
+						UserSystemGifts::incGiftGivenCount( $row->gift_id );
 
 						$wgOut->addHTML( $row2->stats_user_name . ' got ' . $row->gift_name . '<br />' );
 						$x++;

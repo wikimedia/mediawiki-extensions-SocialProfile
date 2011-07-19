@@ -89,7 +89,11 @@ class ViewSystemGift extends UnlistedSpecialPage {
 			$output .= '<div class="cleared"></div>
 				</div>';
 
-			$output .= '<div class="ga-recent">
+			// If someone else in addition to the current user has gotten this
+			// award, then and only then show the "Other recipients of this
+			// award" header and the list of avatars
+			if ( $gift['gift_count'] > 1 ) {
+				$output .= '<div class="ga-recent">
 					<div class="ga-recent-title">' .
 						wfMsg( 'ga-recent-recipients-award' ) .
 					'</div>
@@ -101,19 +105,21 @@ class ViewSystemGift extends UnlistedSpecialPage {
 						) .
 					'</div>';
 
-			foreach ( $res as $row ) {
-				$userToId = $row->sg_user_id;
-				$avatar = new wAvatar( $userToId, 'ml' );
-				$userNameLink = Title::makeTitle( NS_USER, $row->sg_user_name );
+				foreach ( $res as $row ) {
+					$userToId = $row->sg_user_id;
+					$avatar = new wAvatar( $userToId, 'ml' );
+					$userNameLink = Title::makeTitle( NS_USER, $row->sg_user_name );
 
-				$output .= '<a href="' . $userNameLink->escapeFullURL() . "\">
+					$output .= '<a href="' . $userNameLink->escapeFullURL() . "\">
 					{$avatar->getAvatarURL()}
 				</a>";
+				}
+
+				$output .= '<div class="cleared"></div>
+				</div>'; // .ga-recent
 			}
 
-			$output .= '<div class="cleared"></div>
-				</div>
-			</div>';
+			$output .= '</div>';
 
 			$wgOut->addHTML( $output );
 		} else {
