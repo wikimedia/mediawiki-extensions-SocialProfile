@@ -208,6 +208,7 @@ class UserSystemGifts {
 			array( 'system_gift' => array( 'INNER JOIN', 'sg_gift_id = gift_id' ) )
 		);
 		$row = $dbr->fetchObject( $res );
+		$gift = array();
 		if ( $row ) {
 			$gift['id'] = $row->sg_id;
 			$gift['user_id'] = $row->sg_user_id;
