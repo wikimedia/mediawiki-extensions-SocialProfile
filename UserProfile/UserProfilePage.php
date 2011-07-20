@@ -778,7 +778,7 @@ class UserProfilePage extends Article {
 	 * @param $user_name String: user name
 	 */
 	function getProfileTop( $user_id, $user_name ) {
-		global $wgTitle, $wgUser, $wgUploadPath, $wgLang;
+		global $wgTitle, $wgUser, $wgLang;
 		global $wgUserLevels, $wgEnableUserStatus;
 
 		$stats = new UserStats( $user_id, $user_name );
@@ -834,10 +834,8 @@ class UserProfilePage extends Article {
 			</div>';
 		}
 
-		$output .= '<div id="profile-image">
-			<img src="' . $wgUploadPath . '/avatars/' .
-				$avatar->getAvatarImage() . '" alt="" border="0" />
-		</div>';
+		$output .= '<div id="profile-image">' . $avatar->getAvatarURL() .
+			'</div>';
 
 		$output .= '<div id="profile-right">';
 
@@ -939,7 +937,7 @@ class UserProfilePage extends Article {
 	 * @return String: HTML
 	 */
 	function getProfileImage( $user_name ) {
-		global $wgUser, $wgUploadPath;
+		global $wgUser;
 
 		$avatar = new wAvatar( $this->user_id, 'l' );
 		$avatarTitle = SpecialPage::getTitleFor( 'UploadAvatar' );
@@ -951,14 +949,12 @@ class UserProfilePage extends Article {
 			} else {
 				$caption = 'new image';
 			}
-			$output .= '<a href="' . $avatarTitle->escapeFullURL() . '" rel="nofollow">
-					<img src="' . $wgUploadPath . '/avatars/' .
-						$avatar->getAvatarImage() . '" alt="" border="0" /><br />
+			$output .= '<a href="' . $avatarTitle->escapeFullURL() . '" rel="nofollow">' .
+						$avatar->getAvatarURL() . '<br />
 					(' . $caption . ')
 				</a>';
 		} else {
-			$output .= '<img src="' . $wgUploadPath . '/avatars/' .
-				$avatar->getAvatarImage() . '" alt="" border="0" />';
+			$output .= $avatar->getAvatarURL();
 		}
 		$output .= '</div>';
 
@@ -974,7 +970,7 @@ class UserProfilePage extends Article {
 	 *                           foes
 	 */
 	function getRelationships( $user_name, $rel_type ) {
-		global $wgMemc, $wgUser, $wgUserProfileDisplay, $wgUploadPath;
+		global $wgMemc, $wgUser, $wgUserProfileDisplay, $wgLang;
 
 		// If not enabled in site settings, don't display
 		if ( $rel_type == 1 ) {
@@ -1044,17 +1040,12 @@ class UserProfilePage extends Article {
 			foreach ( $friends as $friend ) {
 				$user = Title::makeTitle( NS_USER, $friend['user_name'] );
 				$avatar = new wAvatar( $friend['user_id'], 'ml' );
-				$avatar_img = '<img src="' . $wgUploadPath . '/avatars/' .
-					$avatar->getAvatarImage() . '" alt="" border="0" />';
 
 				// Chop down username that gets displayed
-				$user_name = mb_substr( $friend['user_name'], 0, 9 );
-				if ( $user_name != $friend['user_name'] ) {
-					$user_name .= '..';
-				}
+				$user_name = $wgLang->truncate( $friend['user_name'], 9, '..' );
 
 				$output .= "<a href=\"" . $user->escapeFullURL() . "\" title=\"{$friend['user_name']}\" rel=\"nofollow\">
-					{$avatar_img}<br />
+					{$avatar->getAvatarURL()}<br />
 					{$user_name}
 				</a>";
 
@@ -1801,18 +1792,18 @@ class UserProfilePage extends Article {
 		} else {
 			$buf = $user_status_array['us_status'];
 		}
-	
+
 		// Only owners of the page can change statuses
 		if ( $wgUser->getId() == $userId ) {
 			if ( $wgUser->isBlocked() ) {
-				return wfMsg('userstatus-blocked');
+				return wfMsg( 'userstatus-blocked' );
 			}
 
 			// Database operations require write mode
 			if ( wfReadOnly() ) {
-				return wfMsg('userstatus-readonly');
+				return wfMsg( 'userstatus-readonly' );
 			}
-			
+
 			return "<script>UserStatus.toShowMode('$buf','$userId');</script>";
 		} else {
 			return $buf;
