@@ -850,7 +850,11 @@ class UserProfilePage extends Article {
 		if ( $wgUserLevels ) {
 			$output .= '<div id="points-level">
 					<a href="' . $level_link->escapeFullURL() . '">' .
-						wfMsgExt( 'user-profile-points', 'parsemag', $stats_data['points'] ) .
+						wfMsgExt(
+							'user-profile-points',
+							'parsemag',
+							$wgLang->formatNum( $stats_data['points'] )
+						) .
 					'</a>
 					</div>
 					<div id="honorific-level">
