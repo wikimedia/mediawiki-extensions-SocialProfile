@@ -3745,7 +3745,7 @@ $messages['pt'] = array(
 	'g-create-gift' => 'Criar prenda',
 	'g-created-by' => 'criada por',
 	'g-current-image' => 'Imagem actual',
-	'g-delete-message' => 'Tem a certeza que deseja eliminar a prenda "$1"?
+	'g-delete-message' => 'Tem a certeza de que deseja eliminar a prenda "$1"?
 Isto irá também retirá-la aos utilizadores que a tenham recebido.',
 	'g-description-title' => 'prenda "$2" de $1',
 	'g-error-do-not-own' => 'Esta prenda não lhe pertence.',
@@ -3788,7 +3788,7 @@ Clique numa das prendas abaixo e depois em "Enviar prenda".
 	'g-remove-gift' => 'Remover esta prenda',
 	'g-remove-message' => 'Tem a certeza de que deseja remover a prenda "$1"?',
 	'g-recent-recipients' => 'Outros que receberam esta prenda recentemente',
-	'g-remove-success-title' => 'Removeu com sucesso a prenda "$1"',
+	'g-remove-success-title' => 'Removeu a prenda "$1"',
 	'g-remove-success-message' => 'A prenda "$1" foi removida.',
 	'g-remove-title' => 'Remover "$1"?',
 	'g-send-gift' => 'Enviar prenda',

@@ -640,20 +640,38 @@ $messages['de'] = array(
 Dies wird es auch bei Benutzern löschen, die es bereits erhalten haben.',
 	'ga-remove-success-title' => 'Du hast das Geschenk „$1“ erfolgreich entfernt.',
 	'ga-remove-success-message' => 'Das Geschenk „$1“ wurde entfernt.',
+	'topawards' => 'Auszeichnungen',
+	'topawards-edit-title' => 'Auszeichnungen - Meilensteine beim Bearbeiten',
+	'topawards-vote-title' => 'Auszeichnungen - Meilensteine beim Abstimmen',
+	'topawards-comment-title' => 'Auszeichnungen - Meilensteine beim Kommentieren',
+	'topawards-recruit-title' => 'Auszeichnungen - Meilensteine beim Anwerben',
+	'topawards-friend-title' => 'Auszeichnungen - Meilensteine bei Freunden',
+	'topawards-award-categories' => 'Auszeichnungskategorien',
+	'topawards-edits' => 'Bearbeitungen',
+	'topawards-votes' => 'Stimmen',
+	'topawards-comments' => 'Kommentare',
+	'topawards-recruits' => 'Anwerbungen',
+	'topawards-friends' => 'Freunde',
+	'topawards-edit-milestone' => '{{PLURAL:$1|$1 Bearbeitung|$1 Bearbeitungen}}-Meilenstein,',
+	'topawards-vote-milestone' => '{{PLURAL:$1|$1 Stimme|$1 Stimmen}}-Meilenstein',
+	'topawards-comment-milestone' => '{{PLURAL:$1|$1 Kommentar|$1 Kommentare}}-Meilenstein',
+	'topawards-recruit-milestone' => '{{PLURAL:$1|$1 Anwerbung|$1 Anwerbungen}}-Meilenstein',
+	'topawards-friend-milestone' => '{{PLURAL:$1|$1 Freund|$1 Freunde}}-Meilenstein',
+	'topawards-empty' => 'Entweder wurden für diese Auszeichnungskategorie noch keine Auszeichnungen konfiguriert, oder es hat noch niemand eine dieser Auszeichnungen erhalten.',
 	'system_gift_received_subject' => '[{{SITENAME}}] Du hast die $1-Auszeichnung erhalten!',
 	'system_gift_received_body' => 'Hallo $1,
 
-du hast eben die $2-Auszeichnung auf {{SITENAME}} erhalten!
+du hast soeben die $2-Auszeichnung auf {{SITENAME}} erhalten!
 
 „$3“
 
-Klicke nachfolgend um deine Trophäe anzusehen!
+Klicke auf den nachfolgenden Link, um deine Trophäe anzusehen:
 
 $4
 
-Wir hoffen, es gefällt dir!
+Wir hoffen, sie gefällt dir!
 
-Danke,
+Vielen Dank und viele Grüße,
 
 Das {{SITENAME}}-Team
 
@@ -662,7 +680,7 @@ Das {{SITENAME}}-Team
 Du möchtest keine E-Mails von uns erhalten?
 
 Klicke $5
-und ändere deine Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
+und ändere deine Einstellungen so, dass E-Mail-Benachrichtigung deaktiviert sind.',
 	'right-awardsmanage' => 'Neue erstellen und bestehende Auszeichnungen bearbeiten',
 );
 
@@ -679,17 +697,17 @@ Dies wird es auch bei Benutzern löschen, die es bereits erhalten haben.',
 	'system_gift_received_subject' => '[{{SITENAME}}]Sie haben die $1-Auszeichnung erhalten!',
 	'system_gift_received_body' => 'Hallo $1,
 
-Sie haben eben die $2-Auszeichnung auf {{SITENAME}} erhalten!
+Sie haben soeben die $2-Auszeichnung auf {{SITENAME}} erhalten!
 
 „$3“
 
-Klicken Sie nachfolgend um Ihre Trophäe anzusehen!
+Klicken Sie auf den nachfolgenden Link, um Ihre Trophäe anzusehen:
 
 $4
 
-Wir hoffen, es gefällt Ihnen!
+Wir hoffen, sie gefällt Ihnen!
 
-Danke,
+Vielen Dank und viele Grüße,
 
 Das {{SITENAME}}-Team
 
@@ -698,7 +716,7 @@ Das {{SITENAME}}-Team
 Sie möchten keine E-Mails von uns erhalten?
 
 Klicken Sie $5
-und änderen Sie Ihre Einstellungen auf deaktivierte E-Mail-Benachrichtigung.',
+und ändern Sie Ihre Einstellungen so, dass E-Mail-Benachrichtigung deaktiviert sind.',
 );
 
 /** Lower Sorbian (Dolnoserbski)
@@ -1594,6 +1612,30 @@ $messages['ia'] = array(
 	'ga-title' => 'Le premios de $1',
 	'ga-uploadsuccess' => 'Incargamento succedite',
 	'ga-viewlist' => 'Vider le lista de donos',
+	'ga-cancel' => 'Cancellar',
+	'ga-remove' => 'Remover',
+	'ga-remove-title' => 'Remover "$1"?',
+	'ga-delete-message' => 'Es tu secur que tu vole deler le dono "$1"? Isto va equalmente deler lo de omne usator qui lo ha recipite.',
+	'ga-remove-success-title' => 'Tu ha removite le dono "$1" con successo',
+	'ga-remove-success-message' => 'Le dono "$1" ha essite removite.',
+	'topawards' => 'Top de premios',
+	'topawards-edit-title' => 'Top de premios - Successos de modification',
+	'topawards-vote-title' => 'Top de premios - Successos de votation',
+	'topawards-comment-title' => 'Top de premios - Successos de commento',
+	'topawards-recruit-title' => 'Top de premios - Successos de recrutamento',
+	'topawards-friend-title' => 'Top de premios - Successos de amicitate',
+	'topawards-award-categories' => 'Categorias de premio',
+	'topawards-edits' => 'Modificationes',
+	'topawards-votes' => 'Votos',
+	'topawards-comments' => 'Commentos',
+	'topawards-recruits' => 'Recrutas',
+	'topawards-friends' => 'Amicos',
+	'topawards-edit-milestone' => 'Successo de $1 {{PLURAL:$1|modification|modificationes}}',
+	'topawards-vote-milestone' => 'Successo de $1 {{PLURAL:$1|voto|votos}}',
+	'topawards-comment-milestone' => 'Successo de $1 {{PLURAL:$1|commento|commentos}}',
+	'topawards-recruit-milestone' => 'Successo de $1 {{PLURAL:$1|recruta|recrutas}}',
+	'topawards-friend-milestone' => 'Successo de $1 {{PLURAL:$1|amico|amicos}}',
+	'topawards-empty' => 'O il non ha premios configurate pro iste categoria, o nemo ha ancora recipite iste premios.',
 	'system_gift_received_subject' => 'Tu ha recipite le premio $1 in {{SITENAME}}!',
 	'system_gift_received_body' => 'Salute $1.
 
@@ -1953,6 +1995,13 @@ $messages['mk'] = array(
 	'ga-title' => 'Наградите на $1',
 	'ga-uploadsuccess' => 'Подигањето е успешно',
 	'ga-viewlist' => 'Прикажи список на подароци',
+	'ga-cancel' => 'Откажи',
+	'ga-remove' => 'Отстрани',
+	'ga-remove-title' => 'Да го отстранам „$1“?',
+	'ga-delete-message' => 'Дали сте сигурни дека сакате да го избришете подарокот „$1“?
+Со ова истиот ќе биде избришан и кај корисниците кои го имаат примено.',
+	'ga-remove-success-title' => 'Успешно го отстранивте подарокот „$1“',
+	'ga-remove-success-message' => 'Подарокот „$1“ е отстранет.',
 	'system_gift_received_subject' => 'Ја добивте наградата $1 на {{SITENAME}}!',
 	'system_gift_received_body' => 'Здраво $1.
 
@@ -2481,6 +2530,13 @@ $messages['pt'] = array(
 	'ga-title' => 'prémios de $1',
 	'ga-uploadsuccess' => 'Carregamento com sucesso',
 	'ga-viewlist' => 'Ver lista de prendas',
+	'ga-cancel' => 'Cancelar',
+	'ga-remove' => 'Remover',
+	'ga-remove-title' => 'Remover "$1"?',
+	'ga-delete-message' => 'Tem a certeza de que deseja eliminar a prenda "$1"?
+Isto irá também retirá-la aos utilizadores que a tenham recebido.',
+	'ga-remove-success-title' => 'Removeu a prenda "$1"',
+	'ga-remove-success-message' => 'A prenda "$1" foi removida.',
 	'system_gift_received_subject' => 'Recebeu o prémio $1 na {{SITENAME}}!',
 	'system_gift_received_body' => 'Olá $1,
 

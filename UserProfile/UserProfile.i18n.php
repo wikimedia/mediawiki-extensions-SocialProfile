@@ -6945,7 +6945,7 @@ $messages['mr'] = array(
 	'user-view-all' => 'सर्व पहा',
 	'user-upload-image' => 'चित्र चढवा',
 	'user-edit-this' => 'याचे संपादन करा',
-	'user-edit-profile' => 'प्रोफाइल संपादा',
+	'user-edit-profile' => 'पसंती संपादा',
 	'user-upload-avatar' => 'अवतार चढवा',
 	'user-watchlist' => 'माझी पहार्‍याची सूची',
 	'user-meet-people' => 'लोकांना भेटा',
@@ -7006,7 +7006,6 @@ $messages['mr'] = array(
 दाखल होण्याकरिता[[Special:UserLogin| येथे ]] टिचकी मारा अथवा नवीन नोंदणीकरिता  [[Special:UserLogin/signup|येथे]] टिचकी मारा.',
 	'user-profile-update-saved' => 'तुमचे प्रोफाइल बदललेले आहे',
 	'user-profile-update-log-section' => 'विभाग बदललेला आहे',
-	'user-profile-update-profile' => 'प्रोफाइल',
 	'user-profile-default-country' => 'युनायटेड स्टेट्स',
 	'user-profile-section-personal' => 'वैयक्तिक माहिती',
 	'user-profile-section-sportsteams' => 'नेटवर्क वाढवा',
@@ -7075,7 +7074,7 @@ $messages['mr'] = array(
 	'user-profile-picture-picsize' => 'तुमचे चित्र jpeg, png, किंवा gif यापैकी एक असले पाहिजे तसेच १०० केबी पेक्षा कमी आकाराचे पाहिजे.',
 	'user-profile-goback' => 'मागे जा',
 	'user-no-images' => 'चित्रे चढविलेली नाहीत',
-	'edit-profile-title' => 'तुमचे प्रोफाइल संपादा',
+	'edit-profile-title' => 'तुमची पसंती संपादा',
 	'user-page-link' => 'सदस्य पान',
 	'user-social-profile-link' => 'सार्वजनिक प्रोफाइल',
 	'user-wiki-link' => 'विकि सदस्य पान',
@@ -7087,7 +7086,6 @@ $messages['mr'] = array(
 	'user-type-toggle-old' => 'विकि सदस्य पान वापरा',
 	'user-type-toggle-new' => 'सार्वजनिक सदस्यपान वापरा',
 	'user-board-login-message' => 'इतर सदस्यांना संदेश पाठविण्यासाठी तुम्ही <a href="$1">प्रवेश केलेला असणे</a> आवश्यक आहे.',
-	'user-profile-picture-log' => 'अवतार',
 	'user-profile-picture-log-entry' => 'नवीन अवतार चढविला',
 );
 
