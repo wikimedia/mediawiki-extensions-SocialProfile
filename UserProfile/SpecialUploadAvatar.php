@@ -78,6 +78,8 @@ class SpecialUploadAvatar extends SpecialUpload {
 			wfMsgForContent( 'user-profile-picture-log-entry' )
 		);
 
+		$uid = $wgUser->getId();
+
 		$output = '<h1>' . wfMsg( 'uploadavatar' ) . '</h1>';
 		$output .= UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-picture' ) );
 		$output .= '<div class="profile-info">';
@@ -91,7 +93,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 				wfMsg( 'user-profile-picture-large' ) .
 			'</td>
 			<td style="padding-bottom:20px;">
-				<img src="' . $wgUploadPath . '/avatars/' . $wgDBname . '_' . $wgUser->mId . '_l.' . $ext . '?ts=' . rand() . '" alt="" border="0" />
+				<img src="' . $wgUploadPath . '/avatars/' . $wgDBname . '_' . $uid . '_l.' . $ext . '?ts=' . rand() . '" alt="" border="0" />
 			</td>
 		</tr>';
 		$output .= '<tr>
@@ -99,7 +101,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 				wfMsg( 'user-profile-picture-medlarge' ) .
 			'</td>
 			<td style="padding-bottom:20px;">
-				<img src="' . $wgUploadPath . '/avatars/' . $wgDBname . '_' . $wgUser->mId . '_ml.' . $ext . '?ts=' . rand() . '" alt="" border="0" />
+				<img src="' . $wgUploadPath . '/avatars/' . $wgDBname . '_' . $uid . '_ml.' . $ext . '?ts=' . rand() . '" alt="" border="0" />
 			</td>
 		</tr>';
 		$output .= '<tr>
@@ -107,7 +109,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 				wfMsg( 'user-profile-picture-medium' ) .
 			'</td>
 			<td style="padding-bottom:20px;">
-				<img src="' . $wgUploadPath . '/avatars/' . $wgDBname . '_' . $wgUser->mId . '_m.' . $ext . '?ts=' . rand() . '" alt="" border="0" />
+				<img src="' . $wgUploadPath . '/avatars/' . $wgDBname . '_' . $uid . '_m.' . $ext . '?ts=' . rand() . '" alt="" border="0" />
 			</td>
 		</tr>';
 		$output .= '<tr>
@@ -115,7 +117,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 				wfMsg( 'user-profile-picture-small' ) .
 			'</td>
 			<td style="padding-bottom:20px;">
-				<img src="' . $wgUploadPath . '/avatars/' . $wgDBname . '_' . $wgUser->mId . '_s.' . $ext . '?ts' . rand() . '" alt="" border="0" />
+				<img src="' . $wgUploadPath . '/avatars/' . $wgDBname . '_' . $uid . '_s.' . $ext . '?ts=' . rand() . '" alt="" border="0" />
 			</td>
 		</tr>';
 		$output .= '<tr>
@@ -235,7 +237,7 @@ class UploadAvatar extends UploadFromFile {
 	function createThumbnail( $imageSrc, $imageInfo, $imgDest, $thumbWidth ) {
 		global $wgImageMagickConvertCommand;
 
-		list( $origWidth, $origHeight, $typeCode ) =  $imageInfo;
+		list( $origWidth, $origHeight, $typeCode ) = $imageInfo;
 
 		if ( $origWidth < $thumbWidth ) {
 			$thumbWidth = $origWidth;
@@ -296,70 +298,74 @@ class UploadAvatar extends UploadFromFile {
 
 		$dest = $this->avatarUploadDirectory;
 
-		$avatar = new wAvatar( $wgUser->getID(), 'l' );
+		$uid = $wgUser->getId();
+		$avatar = new wAvatar( $uid, 'l' );
+		// If this is the user's first custom avatar, update statistics (in
+		// case if we want to give out some points to the user for uploading
+		// their first avatar)
 		if ( strpos( $avatar->getAvatarImage(), 'default_' ) !== false ) {
-			$stats = new UserStatsTrack( $wgUser->getID(), $wgUser->getName() );
+			$stats = new UserStatsTrack( $uid, $wgUser->getName() );
 			$stats->incStatField( 'user_image' );
 		}
 
-		$this->createThumbnail( $this->mTempPath, $imageInfo, $wgDBname . '_' . $wgUser->mId . '_l', 75 );
-		$this->createThumbnail( $this->mTempPath, $imageInfo, $wgDBname . '_' . $wgUser->mId . '_ml', 50 );
-		$this->createThumbnail( $this->mTempPath, $imageInfo, $wgDBname . '_' . $wgUser->mId . '_m', 30 );
-		$this->createThumbnail( $this->mTempPath, $imageInfo, $wgDBname . '_' . $wgUser->mId . '_s', 16 );
+		$this->createThumbnail( $this->mTempPath, $imageInfo, $wgDBname . '_' . $uid . '_l', 75 );
+		$this->createThumbnail( $this->mTempPath, $imageInfo, $wgDBname . '_' . $uid . '_ml', 50 );
+		$this->createThumbnail( $this->mTempPath, $imageInfo, $wgDBname . '_' . $uid . '_m', 30 );
+		$this->createThumbnail( $this->mTempPath, $imageInfo, $wgDBname . '_' . $uid . '_s', 16 );
 
 		if ( $ext != 'jpg' ) {
-			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_s.jpg' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_s.jpg' );
+			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_s.jpg' ) ) {
+				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_s.jpg' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_m.jpg' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_m.jpg' );
+			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_m.jpg' ) ) {
+				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_m.jpg' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_l.jpg' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_l.jpg' );
+			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_l.jpg' ) ) {
+				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_l.jpg' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_ml.jpg' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_ml.jpg' );
+			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_ml.jpg' ) ) {
+				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_ml.jpg' );
 			}
 		}
 		if ( $ext != 'gif' ) {
-			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_s.gif' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_s.gif' );
+			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_s.gif' ) ) {
+				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_s.gif' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_m.gif' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_m.gif' );
+			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_m.gif' ) ) {
+				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_m.gif' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_l.gif' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_l.gif' );
+			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_l.gif' ) ) {
+				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_l.gif' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_ml.gif' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_ml.gif' );
+			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_ml.gif' ) ) {
+				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_ml.gif' );
 			}
 		}
 		if ( $ext != 'png' ) {
-			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_s.png' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_s.png' );
+			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_s.png' ) ) {
+				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_s.png' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_m.png' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_m.png' );
+			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_m.png' ) ) {
+				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_m.png' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_l.png' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_l.png' );
+			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_l.png' ) ) {
+				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_l.png' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_ml.png' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $wgUser->mId . '_ml.png' );
+			if ( is_file( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_ml.png' ) ) {
+				unlink( $this->avatarUploadDirectory . '/' . $wgDBname . '_' . $uid . '_ml.png' );
 			}
 		}
 
-		$key = wfMemcKey( 'user', 'profile', 'avatar', $wgUser->getID(), 's' );
+		$key = wfMemcKey( 'user', 'profile', 'avatar', $uid, 's' );
 		$data = $wgMemc->delete( $key );
 
-		$key = wfMemcKey( 'user', 'profile', 'avatar', $wgUser->getID(), 'm' );
+		$key = wfMemcKey( 'user', 'profile', 'avatar', $uid, 'm' );
 		$data = $wgMemc->delete( $key );
 
-		$key = wfMemcKey( 'user', 'profile', 'avatar', $wgUser->getID() , 'l' );
+		$key = wfMemcKey( 'user', 'profile', 'avatar', $uid , 'l' );
 		$data = $wgMemc->delete( $key );
 
-		$key = wfMemcKey( 'user', 'profile', 'avatar', $wgUser->getID() , 'ml' );
+		$key = wfMemcKey( 'user', 'profile', 'avatar', $uid, 'ml' );
 		$data = $wgMemc->delete( $key );
 
 		$this->mExtension = $ext;
