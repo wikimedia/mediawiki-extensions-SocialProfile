@@ -5,7 +5,7 @@
  *
  * @file
  * @ingroup Extensions
- * @version 1.3
+ * @version 1.3.1
  * @author David Pean <david.pean@gmail.com>
  * @author Jack Phoenix <jack@countervandalism.net>
  * @link http://www.mediawiki.org/wiki/Extension:UserWelcome Documentation
@@ -20,7 +20,7 @@ if( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'UserWelcome',
-	'version' => '1.3',
+	'version' => '1.3.1',
 	'author' => array( 'David Pean', 'Jack Phoenix' ),
 	'descriptionmsg' => 'userwelcome-desc',
 	'url' => 'http://www.mediawiki.org/wiki/Extension:UserWelcome',
@@ -30,7 +30,7 @@ $wgHooks['ParserFirstCallInit'][] = 'wfWelcomeUser';
 /**
  * Register <welcomeUser /> tag with the parser
  * @param $parser Object: instance of Parser
- * @return true
+ * @return Boolean: true
  */
 function wfWelcomeUser( &$parser ) {
 	$parser->setHook( 'welcomeUser', 'getWelcomeUser' );
@@ -48,7 +48,7 @@ function getWelcomeUser( $input, $args, $parser ) {
 }
 
 function getWelcome() {
-	global $wgUser, $wgOut, $wgScriptPath, $wgUploadPath;
+	global $wgUser, $wgOut, $wgScriptPath, $wgLang;
 
 	// Add CSS
 	$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserWelcome/UserWelcome.css' );
@@ -69,7 +69,8 @@ function getWelcome() {
 	$output = '<div class="mp-welcome-logged-in">
 	<h2>' . wfMsg( 'mp-welcome-logged-in', $wgUser->getName() ) . '</h2>
 	<div class="mp-welcome-image">
-	<a href="' . $wgUser->getUserPage()->escapeFullURL() . '" rel="nofollow"><img src="' . $wgUploadPath . '/avatars/' . $avatar->getAvatarImage() . '" alt="" border="0"/></a>';
+	<a href="' . $wgUser->getUserPage()->escapeFullURL() . '" rel="nofollow">' .
+		$avatar->getAvatarURL() . '</a>';
 	if ( strpos( $avatar->getAvatarImage(), 'default_' ) !== false ) {
 		$output .= '<div><a href="' . $avatar_link->escapeFullURL() . '" rel="nofollow">' . wfMsg( 'mp-welcome-upload' ) . '</a></div>';
 	} else {
@@ -81,7 +82,12 @@ function getWelcome() {
 	if ( $wgUserLevels ) {
 		$output .= '<div class="mp-welcome-points">
 			<div class="points-and-level">
-				<div class="total-points">' . wfMsgExt( 'mp-welcome-points', 'parsemag', $stats_data['points'] ) . '</div>
+				<div class="total-points">' .
+					wfMsgExt(
+						'mp-welcome-points',
+						'parsemag',
+						$wgLang->formatNum( $stats_data['points'] )
+					) . '</div>
 				<div class="honorific-level"><a href="' . $level_link->escapeFullURL() . '">(' . $user_level->getLevelName() . ')</a></div>
 			</div>
 			<div class="cleared"></div>
