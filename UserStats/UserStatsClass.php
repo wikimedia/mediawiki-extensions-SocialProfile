@@ -475,6 +475,8 @@ class UserStatsTrack {
 	/**
 	 * Updates the amount of relationships (friends or foes) if the user isn't
 	 * an anonymous one.
+	 * This is called by UserRelationship::removeRelationshipByUserID(), which
+	 * in turn is called when removing friends or foes.
 	 *
 	 * @param $relType Integer: 1 for updating friends
 	 */
@@ -487,7 +489,7 @@ class UserStatsTrack {
 			} else {
 				$col = 'stats_foe_count';
 			}
-			$relationships = $dbw->select(
+			$relationships = $dbw->selectField(
 				'user_relationship',
 				'COUNT(*) AS rel_count',
 				array( 'r_user_id' => $this->user_id, 'r_type' => $relType ),
@@ -495,7 +497,7 @@ class UserStatsTrack {
 			);
 			$res = $dbw->update(
 				'user_stats',
-				array( $col => $relationships->rel_count ),
+				array( $col => $relationships ),
 				array( 'stats_user_id' => $this->user_id ),
 				__METHOD__,
 				array( 'LOW_PRIORITY' )
