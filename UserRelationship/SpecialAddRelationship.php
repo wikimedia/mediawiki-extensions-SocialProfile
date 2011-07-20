@@ -27,7 +27,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 	 * @param $params Mixed: parameter(s) passed to the page or null
 	 */
 	public function execute( $params ) {
-		global $wgUser, $wgOut, $wgRequest, $wgUploadPath, $wgUserRelationshipScripts;
+		global $wgUser, $wgOut, $wgRequest, $wgUserRelationshipScripts;
 
 		// Can't use $this->setHeaders(); here because then it'll set the page
 		// title to <removerelationship> and we don't want that, we'll be
@@ -105,14 +105,12 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 			}
 
 			$avatar = new wAvatar( $this->user_id_to, 'l' );
-			$avatar_img = '<img src="' . $wgUploadPath . '/avatars/' .
-				$avatar->getAvatarImage() . '" alt="" border="0" />';
 
 			$out = '';
 			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
 
 			$out .= "<div class=\"relationship-action\">
-				{$avatar_img}
+				{$avatar->getAvatarURL()}
 				" . $error . "
 				<div class=\"relationship-buttons\">
 					<input type=\"button\" class=\"site-button\" value=\"" . wfMsg( 'ur-main-page' ) . "\" size=\"20\" onclick=\"window.location='index.php?title=" . wfMsgForContent( 'mainpage' ) . "'\"/>
@@ -132,13 +130,11 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 			}
 
 			$avatar = new wAvatar( $this->user_id_to, 'l' );
-			$avatar_img = '<img src="' . $wgUploadPath . '/avatars/' .
-				$avatar->getAvatarImage() . '" alt="" border="0" />';
 
 			$out = '';
 			$wgOut->setPageTitle( wfMsg( 'ur-add-error-message-pending-request-title' ) );
 			$out .= "<div class=\"relationship-action\">
-				{$avatar_img}
+				{$avatar->getAvatarURL()}
 				" . $error . "
 				<div class=\"relationship-buttons\">
 					<input type=\"button\" class=\"site-button\" value=\"" . wfMsg( 'ur-main-page' ) . "\" size=\"20\" onclick=\"window.location='index.php?title=" . wfMsgForContent( 'mainpage' ) . "'\"/>
@@ -179,8 +175,6 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				$rel = $rel->addRelationshipRequest( $this->user_name_to, $this->relationship_type, $wgRequest->getVal( 'message' ) );
 
 				$avatar = new wAvatar( $this->user_id_to, 'l' );
-				$avatar_img = '<img src="' . $wgUploadPath . '/avatars/' .
-					$avatar->getAvatarImage() . '" alt="" border="0" />';
 
 				$out = '';
 
@@ -193,7 +187,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				}
 
 				$out .= "<div class=\"relationship-action\">
-					{$avatar_img}
+					{$avatar->getAvatarURL()}
 					" . $sent . "
 					<div class=\"relationship-buttons\">
 						<input type=\"button\" class=\"site-button\" value=\"" . wfMsg( 'ur-main-page' ) . "\" size=\"20\" onclick=\"window.location='index.php?title=" . wfMsgForContent( 'mainpage' ) . "'\"/>
@@ -215,7 +209,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 	 * @return $form Mixed: HTML code for the form
 	 */
 	function displayForm() {
-		global $wgOut, $wgUploadPath;
+		global $wgOut;
 
 		if ( $this->relationship_type == 1 ) {
 			$wgOut->setPageTitle( wfMsg( 'ur-add-title-friend', $this->user_name_to ) );
@@ -228,12 +222,10 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 		}
 
 		$avatar = new wAvatar( $this->user_id_to, 'l' );
-		$avatar_img = '<img src="' . $wgUploadPath . '/avatars/' .
-			$avatar->getAvatarImage() . '" alt="" border="0" />';
 
 		$form = "<form action=\"\" method=\"post\" enctype=\"multipart/form-data\" name=\"form1\">
 			<div class=\"relationship-action\">
-			{$avatar_img}
+			{$avatar->getAvatarURL()}
 			" . $add .
 			'<div class="cleared"></div>
 			</div>
