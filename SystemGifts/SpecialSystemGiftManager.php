@@ -148,16 +148,18 @@ class SystemGiftManager extends SpecialPage {
 			<tr>
 				<td width="200" class="view-form">' . wfMsg( 'ga-gifttype' ) . '</td>
 				<td width="695">
-					<select name="gift_category">';
+					<select name="gift_category">' . "\n";
 			$g = new SystemGifts();
 			foreach ( $g->categories as $category => $id ) {
 				$sel = '';
 				if ( isset( $gift['gift_category'] ) && $gift['gift_category'] == $id ) {
 					$sel = ' selected="selected"';
 				}
-				$form .= '<option' . $sel . " value=\"{$id}\">{$category}</option>";
+				$indent = "\t\t\t\t\t\t";
+				$form .= $indent . '<option' . $sel .
+					" value=\"{$id}\">{$category}</option>\n";
 			}
-			$form .= '</select>
+			$form .= "\t\t\t\t\t" . '</select>
 				</td>
 			</tr>
 		<tr>
