@@ -70,9 +70,6 @@ class ViewGift extends UnlistedSpecialPage {
 			$removeGiftLink = SpecialPage::getTitleFor( 'RemoveGift' );
 			$giveGiftLink = SpecialPage::getTitleFor( 'GiveGift' );
 
-			$avatar = new wAvatar( $gift['user_id_from'], 's' );
-			$avatar_img = '<img src="' . $wgUploadPath . '/avatars/' .
-				$avatar->getAvatarImage() . '" alt="" border="0" />';
 			$giftImage = '<img src="' . $wgUploadPath . '/awards/' .
 				Gifts::getGiftImage( $gift['gift_id'], 'l' ) .
 				'" border="0" alt="" />';
@@ -80,8 +77,8 @@ class ViewGift extends UnlistedSpecialPage {
 			$message = $wgOut->parse( trim( $gift['message'] ), false );
 
 			$output .= '<div class="g-description-container">';
-			$output .= '<div class="g-description">'
-					. $giftImage .
+			$output .= '<div class="g-description">' .
+					$giftImage .
 					'<div class="g-name">' . $gift['name'] . '</div>
 					<div class="g-timestamp">(' . $gift['timestamp'] . ')</div>
 					<div class="g-from">' . wfMsg(
@@ -98,9 +95,7 @@ class ViewGift extends UnlistedSpecialPage {
 						<a href="' . $giveGiftLink->escapeFullURL( 'gift_id=' . $gift['gift_id'] ) . '">' .
 							wfMsg( 'g-to-another' ) . '</a>';
 			if ( $gift['user_name_to'] == $wgUser->getName() ) {
-				$output .= '&nbsp';
 				$output .= wfMsgExt( 'pipe-separator', 'escapenoentities' );
-				$output .= '&#160;';
 				$output .= '<a href="' . $removeGiftLink->escapeFullURL( 'gift_id=' . $gift['id'] ) . '">' .
 					wfMsg( 'g-remove-gift' ) . '</a>';
 			}
