@@ -15,7 +15,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgRequest, $wgUser, $wgOut, $wgMemc, $wgUploadPath, $wgScriptPath;
+		global $wgRequest, $wgUser, $wgOut, $wgMemc, $wgScriptPath;
 
 		// Load CSS
 		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStats/TopList.css' );
@@ -120,13 +120,13 @@ class TopFansRecent extends UnlistedSpecialPage {
 		foreach ( $user_list as $user ) {
 			$user_title = Title::makeTitle( NS_USER, $user['user_name'] );
 			$avatar = new wAvatar( $user['user_id'], 'm' );
-			$avatarImage = $avatar->getAvatarImage();
+			$avatarImage = $avatar->getAvatarURL();
 
 			$out .= '<div class="top-fan-row">
 				<span class="top-fan-num">' . $x . '.</span>
-				<span class="top-fan">
-					<img src="' . $wgUploadPath . '/avatars/' . $avatarImage . '" alt="" border="" />
-					<a href="' . $user_title->escapeFullURL() . '" >' . $user['user_name'] . '</a>
+				<span class="top-fan">' .
+					$avatarImage .
+					'<a href="' . $user_title->escapeFullURL() . '" >' . $user['user_name'] . '</a>
 				</span>';
 
 			$out .= '<span class="top-fan-points"><b>' .

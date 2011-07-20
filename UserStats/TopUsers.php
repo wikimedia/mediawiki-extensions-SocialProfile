@@ -15,7 +15,7 @@ class TopUsersPoints extends SpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgOut, $wgScriptPath, $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgUserLevels, $wgUploadPath;
+		global $wgOut, $wgScriptPath, $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgUserLevels;
 
 		// Load CSS
 		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStats/TopList.css' );
@@ -112,7 +112,7 @@ class TopUsersPoints extends SpecialPage {
 		foreach ( $user_list as $user ) {
 			$user_title = Title::makeTitle( NS_USER, $user['user_name'] );
 			$avatar = new wAvatar( $user['user_id'], 'm' );
-			$commentIcon = $avatar->getAvatarImage();
+			$commentIcon = $avatar->getAvatarURL();
 
 			// Break list into sections based on User Level if it's defined for this site
 			if ( is_array( $wgUserLevels ) ) {
@@ -128,7 +128,8 @@ class TopUsersPoints extends SpecialPage {
 			$out .= "<div class=\"top-fan-row\">
 				<span class=\"top-fan-num\">{$x}.</span>
 				<span class=\"top-fan\">
-					<img src='{$wgUploadPath}/avatars/" . $commentIcon . "' alt='' border='' /> <a href='" . $user_title->escapeFullURL() . "'>" . $user['user_name'] . '</a>
+					{$commentIcon} <a href='" . $user_title->escapeFullURL() . "'>" .
+						$user['user_name'] . '</a>
 				</span>';
 
 			$out .= '<span class="top-fan-points"><b>' . number_format( $user['points'] ) . '</b> ' . wfMsg( 'top-fans-points' ) . '</span>';

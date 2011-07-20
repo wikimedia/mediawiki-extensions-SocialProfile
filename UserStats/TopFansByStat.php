@@ -15,7 +15,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgRequest, $wgLang, $wgOut, $wgMemc, $wgUploadPath, $wgScriptPath;
+		global $wgRequest, $wgLang, $wgOut, $wgMemc, $wgScriptPath;
 		global $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
 
 		// Load CSS
@@ -121,7 +121,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 			$user_name = $wgLang->truncate( $user['user_name'], 22 );
 			$user_title = Title::makeTitle( NS_USER, $user['user_name'] );
 			$avatar = new wAvatar( $user['user_id'], 'm' );
-			$commentIcon = $avatar->getAvatarImage();
+			$commentIcon = $avatar->getAvatarURL();
 
 			// Stats row
 			// TODO: opinion_average isn't currently working, so it's not enabled in menus
@@ -140,9 +140,9 @@ class TopFansByStat extends UnlistedSpecialPage {
 
 			$out .= '<div class="top-fan-row">
 				<span class="top-fan-num">' . $x . '.</span>
-				<span class="top-fan">
-					<img src="' . $wgUploadPath . '/avatars/' . $commentIcon . '" alt="" border="" />
-					<a href="' . $user_title->escapeFullURL() . '">' . $user_name . '</a>
+				<span class="top-fan">' .
+					$commentIcon .
+					'<a href="' . $user_title->escapeFullURL() . '">' . $user_name . '</a>
 				</span>
 				<span class="top-fan-points"><b>' . $statistics_row . '</b> ' . $lowercase_statistics_name . '</span>
 				<div class="cleared"></div>
