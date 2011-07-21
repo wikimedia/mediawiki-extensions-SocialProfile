@@ -200,6 +200,7 @@ $messages['de'] = array(
 	'useractivity-siteactivity' => 'Aktivität auf der Seite',
 	'useractivity-title' => 'Aktivitäten des Freundes',
 	'useractivity-user_message' => '$1 {{PLURAL:$4|sandte eine Nachricht an|sandte Nachrichten an}} $3',
+	'useractivity-comment' => '$1 {{PLURAL:$4|kommentierte die Seite|kommentierte die folgenden Seiten:}} $3',
 );
 
 /** Lower Sorbian (Dolnoserbski)
@@ -375,6 +376,7 @@ $messages['he'] = array(
 	'useractivity-siteactivity' => 'פעילות באתר',
 	'useractivity-title' => 'פעילות החברים',
 	'useractivity-user_message' => '$1 {{GENDER:$1|שלח|שלחה}} {{PLURAL:$4|הודעה|הודעות}} אל $3',
+	'useractivity-comment' => '$1 הגיב על {{PLURAL:$4|הדף|הדפים הבאים:}} $3',
 );
 
 /** Upper Sorbian (Hornjoserbsce)
