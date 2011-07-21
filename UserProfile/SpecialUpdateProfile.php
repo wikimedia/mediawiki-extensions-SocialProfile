@@ -89,7 +89,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			switch( $section ) {
 				case 'basic':
 					$this->saveProfileBasic( $wgUser );
-					$this->saveSettings_basic();
+					$this->saveSettings_basic( $wgUser );
 					break;
 				case 'personal':
 					$this->saveProfilePersonal( $wgUser );
