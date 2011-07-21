@@ -27,6 +27,7 @@ $messages['en'] = array(
 	'useractivity-siteactivity' => 'Site activity',
 	'useractivity-title' => "Friends' activity",
 	'useractivity-user_message' => '$1 {{PLURAL:$4|sent a message to|sent messages to}} $3', // Supports GENDER for the sender ($1) as $6 if $1 is one user.
+	'useractivity-comment' => '$1 {{PLURAL:$4|commented on the page|commented on the following pages:}} $3',
 );
 
 /** Message documentation (Message documentation)
@@ -259,9 +260,9 @@ $messages['fi'] = array(
 	'useractivity' => 'Ystävien aktiivisuus',
 	'useractivity-award' => '$1 sai palkinnon',
 	'useractivity-all' => 'Katso kaikki',
-	'useractivity-edit' => '$1 muokkasi {{PLURAL:$4|sivua|sivuja:}} $3',
-	'useractivity-foe' => '$1 {{PLURAL:$2|on nyt vihollinen|ovat nyt vihollisia}} {{PLURAL:$3|käyttäjälle|käyttäjille}} $3',
-	'useractivity-friend' => '$1 {{PLURAL:$2|on nyt ystävä|ovat nyt ystäviä}} {{PLURAL:$3|käyttäjälle|käyttäjille}} $3',
+	'useractivity-edit' => '$1 {{PLURAL:$2|muokkasi|muokkasivat}} {{PLURAL:$4|sivua|sivuja:}} $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|on nyt vihollinen|ovat nyt vihollisia}} {{PLURAL:$4|käyttäjälle|käyttäjille}} $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|on nyt ystävä|ovat nyt ystäviä}} {{PLURAL:$4|käyttäjälle|käyttäjille}} $3',
 	'useractivity-gift' => '$1 sai lahjan käyttäjältä $2',
 	'useractivity-group-edit' => '{{PLURAL:$1|yksi muokkaus|$1 muokkausta}}',
 	'useractivity-group-comment' => '{{PLURAL:$1|yksi kommentti|$1 kommenttia}}',
@@ -270,6 +271,7 @@ $messages['fi'] = array(
 	'useractivity-siteactivity' => 'Sivuston aktiivisuus',
 	'useractivity-title' => 'Ystävien aktiivisuus',
 	'useractivity-user_message' => '$1 {{PLURAL:$4|lähetti viestin käyttäjälle|lähetti viestejä käyttäjille}} $3',
+	'useractivity-comment' => '$1 {{PLURAL:$2|kommentoi|kommentoivat}} {{PLURAL:$4|sivua|sivuja}}: $3',
 );
 
 /** French (Français)

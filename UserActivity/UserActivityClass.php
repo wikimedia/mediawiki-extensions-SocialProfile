@@ -1029,7 +1029,8 @@ class UserActivity {
 				$user_title = Title::makeTitle( NS_USER, $user_name );
 				$user_name_short = $wgLang->truncate( $user_name, 15 );
 
-				$users .= " <b><a href=\"{$user_title->escapeFullURL()}\">{$user_name_short}</a></b>";
+				$safeTitle = htmlspecialchars( $user_title->getText() );
+				$users .= " <b><a href=\"{$user_title->escapeFullURL()}\" title=\"{$safeTitle}\">{$user_name_short}</a></b>";
 			}
 			if ( $pages || $has_page == false ) {
 				$this->activityLines[] = array(
