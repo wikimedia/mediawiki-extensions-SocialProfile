@@ -81,12 +81,13 @@ class GenerateTopUsersReport extends SpecialPage {
 
 		$user_count = $wgRequest->getInt( 'user_count', 10 );
 
-		// @todo FIXME: this is rather US-specific...
 		if( $period == 'weekly' ) {
-			$period_title = date( 'm/d/Y', strtotime( '-1 week' ) ) . '-' .
-				date( 'm/d/Y', time() );
+			$period_title = $wgContLang->date( wfTimestamp( TS_MW, strtotime( '-1 week' ) ) ) .
+				'-' . $wgContLang->date( wfTimestampNow() );
 		} elseif ( $period == 'monthly' ) {
-			$period_title = date( 'M Y', strtotime( '-1 month' ) );
+			$date = getdate(); // It's a PHP core function
+			$period_title = $wgContLang->getMonthName( $date['mon'] - 1 ) .
+				' ' . $date['year'];
 		}
 
 		$dbw = wfGetDB( DB_MASTER );
@@ -98,6 +99,8 @@ class GenerateTopUsersReport extends SpecialPage {
 			__METHOD__,
 			array( 'ORDER BY' => 'up_points DESC', 'LIMIT' => $user_count )
 		);
+
+		$last_rank = 0;
 
 		// Initial run is a special case
 		if ( $dbw->numRows( $res ) <= 0 ) {
@@ -201,7 +204,7 @@ class GenerateTopUsersReport extends SpecialPage {
 			"user-stats-{$period}-win-congratulations",
 			array( 'parsemag', 'content' ),
 			$winner_count,
-			$wgUserStatsPointValues["points_winner_{$period}"]
+			$wgContLang->formatNum( $wgUserStatsPointValues["points_winner_{$period}"] )
 		) . "\n\n";
 		$pageContent .= "=={$winners}==\n\n<br />\n";
 
@@ -213,7 +216,7 @@ class GenerateTopUsersReport extends SpecialPage {
 				'user-stats-report-row',
 				$user['rank'],
 				$user['user_name'],
-				number_format( $user['points'] )
+				$wgContLang->formatNum( $user['points'] )
 			) . "\n\n";
 
 			$out .= "<div class=\"top-fan-row\">
@@ -223,7 +226,7 @@ class GenerateTopUsersReport extends SpecialPage {
 
 			$out .= '<span class="top-fan-points">' . wfMsgWikiHtml(
 				'user-stats-report-points',
-				number_format( $user['points'] )
+				$wgContLang->formatNum( $user['points'] )
 			) . '</span>
 		</div>';
 		}

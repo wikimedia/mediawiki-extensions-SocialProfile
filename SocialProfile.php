@@ -24,6 +24,8 @@ $wgExtensionMessagesFiles['SocialProfileUserStatus'] = $dir . 'UserStatus/UserSt
 $wgExtensionAliasesFiles['SocialProfile'] = $dir . 'SocialProfile.alias.php';
 
 // Classes to be autoloaded
+$wgAutoloadClasses['GenerateTopUsersReport'] = $dir . 'UserStats/GenerateTopUsersReport.php';
+
 $wgAutoloadClasses['SpecialAddRelationship'] = $dir . 'UserRelationship/SpecialAddRelationship.php';
 $wgAutoloadClasses['SpecialBoardBlast'] = $dir . 'UserBoard/SpecialSendBoardBlast.php';
 $wgAutoloadClasses['SpecialEditProfile'] = $dir . 'UserProfile/SpecialEditProfile.php';
@@ -55,6 +57,7 @@ $wgAutoloadClasses['UserStatusClass'] = $dir . 'UserStatus/UserStatusClass.php';
 // New special pages
 $wgSpecialPages['AddRelationship'] = 'SpecialAddRelationship';
 $wgSpecialPages['EditProfile'] = 'SpecialEditProfile';
+$wgSpecialPages['GenerateTopUsersReport'] = 'GenerateTopUsersReport';
 $wgSpecialPages['PopulateUserProfiles'] = 'SpecialPopulateUserProfiles';
 $wgSpecialPages['RemoveAvatar'] = 'RemoveAvatar';
 $wgSpecialPages['RemoveRelationship'] = 'SpecialRemoveRelationship';

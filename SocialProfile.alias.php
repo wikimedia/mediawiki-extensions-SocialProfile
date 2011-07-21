@@ -12,6 +12,7 @@ $specialPageAliases = array();
 $specialPageAliases['en'] = array(
 	'AddRelationship' => array( 'AddRelationship' ),
 	'EditProfile' => array( 'EditProfile' ),
+	'GenerateTopUsersReport' => array( 'GenerateTopUsersReport' ),
 	'PopulateUserProfiles' => array( 'PopulateUserProfiles' ),
 	'RemoveAvatar' => array( 'RemoveAvatar' ),
 	'RemoveRelationship' => array( 'RemoveRelationship' ),
