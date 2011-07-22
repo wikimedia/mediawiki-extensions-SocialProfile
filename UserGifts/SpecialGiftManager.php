@@ -25,6 +25,12 @@ class GiftManager extends SpecialPage {
 			throw new ErrorPageError( 'error', 'badaccess' );
 		}
 
+		// Show a message if the database is in read-only mode
+		if ( wfReadOnly() ) {
+			$wgOut->readOnlyPage();
+			return;
+		}
+
 		// Add CSS
 		$wgOut->addExtensionStyle( $wgUserGiftsScripts . '/UserGifts.css' );
 
