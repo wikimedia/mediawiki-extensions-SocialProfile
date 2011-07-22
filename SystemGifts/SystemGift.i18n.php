@@ -2065,6 +2065,7 @@ $messages['ms'] = array(
 
 /** Dutch (Nederlands)
  * @author GerardM
+ * @author SPQRobin
  * @author Siebrand
  * @author Tvdm
  */
@@ -2106,6 +2107,11 @@ $messages['nl'] = array(
 	'ga-title' => 'Prijzen van $1',
 	'ga-uploadsuccess' => 'Uploaden voltooid',
 	'ga-viewlist' => 'Giftenlijst weergeven',
+	'ga-cancel' => 'Annuleren',
+	'topawards-edits' => 'Bewerkingen',
+	'topawards-votes' => 'Stemmen',
+	'topawards-comments' => 'Opmerkingen',
+	'topawards-friends' => 'Vrienden',
 	'system_gift_received_subject' => 'U hebt de $1-prijs gekregen op {{SITENAME}}!',
 	'system_gift_received_body' => 'Hallo $1,
 

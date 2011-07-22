@@ -437,6 +437,7 @@ $messages['ia'] = array(
 	'useractivity-siteactivity' => 'Activitate del sito',
 	'useractivity-title' => 'Activitate de amicos',
 	'useractivity-user_message' => '$1 ha inviate {{PLURAL:$4|un message|messages}} a $3',
+	'useractivity-comment' => '$1 commentava le {{PLURAL:$4|pagina|sequente paginas:}} $3',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -584,6 +585,7 @@ $messages['mk'] = array(
 	'useractivity-siteactivity' => 'Активност на мрежното место',
 	'useractivity-title' => 'Активности на пријателите',
 	'useractivity-user_message' => '$1 {{PLURAL:$4|испрати порака на|испрати пораки на}} $3',
+	'useractivity-comment' => '$1 {{PLURAL:$4|коментираше на страницата|коментираше на следниве страници:}} $3',
 );
 
 /** Mongolian (Монгол)
@@ -727,6 +729,7 @@ $messages['pt'] = array(
 	'useractivity-siteactivity' => 'Actividade no site',
 	'useractivity-title' => 'Actividade dos amigos',
 	'useractivity-user_message' => '$1 {{PLURAL:$4|enviou uma mensagem para|enviou mensagens para}} $3',
+	'useractivity-comment' => '$1 {{PLURAL:$4|comentou a página|comentou as seguintes páginas:}} $3',
 );
 
 /** Brazilian Portuguese (Português do Brasil)

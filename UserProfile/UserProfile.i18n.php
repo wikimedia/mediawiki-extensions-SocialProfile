@@ -8318,9 +8318,8 @@ $messages['pms'] = array(
 	'user-profile-update-notloggedin-text' => 'A peule pa modifiché sò profil sensa esse intrà ant ël sistema.
 Sgnaché [[Special:UserLogin|ambelessì]] për intré ant ël sistema o sgnaché [[Special:UserLogin/signup|ambelessì]] për argistresse.',
 	'user-profile-update-saved' => "Tò profil a l'é stàit salvà.",
-	'user-profile-edit-profile-update-saved' => "Ël profil utent a l'é stàit salvà da bin",
+	'user-profile-edit-profile-update-saved' => "Ël profil ëd l'utent a l'é stàit salvà për da bin",
 	'user-profile-update-log-section' => 'session cangià',
-	'user-profile-update-profile' => 'profil',
 	'user-profile-default-country' => 'Stat Unì',
 	'user-profile-points' => '$1 {{PLURAL:$1|pont|pont}}',
 	'user-profile-section-personal' => 'Anformassion përsonaj',
@@ -8418,7 +8417,6 @@ Sgnaché [[Special:UserLogin|ambelessì]] për intré ant ël sistema o sgnaché
 	'user-profile-edit-profile' => 'modificà ël profil ëd $1',
 	'avatarlogpage' => "Registr ëd caria dl'avatar",
 	'avatarlogpagetext' => "Cost-sì a l'é un registr dij cariament dl'avatar utent",
-	'user-profile-picture-log' => 'avatar',
 	'user-profile-picture-log-entry' => 'carià avatar neuv',
 	'user-profile-picture-log-delete-entry' => "a l'ha scancelà l'avatar ëd $1",
 	'right-avatarremove' => "Gava avatar ëd l'utent",
