@@ -1,5 +1,4 @@
 var UserStatus = {
-	historyOpened : false,
 	maxStatusLength : 70,
 	
 	toShowMode: function( status, id ) {
@@ -35,29 +34,20 @@ var UserStatus = {
 	},
 
 	useHistory: function( id ){
-		if (this.historyOpened) {
-			this.closeStatusHistory();
-		} else {
-			this.openStatusHistory(id);
-		}
-	},
-
-	openStatusHistory: function( id ) {  
 		var historyBlock = document.getElementById('status-history-block');
 		if(historyBlock===null) {
 			var statusBlock = document.getElementById('user-status-block');
 			historyBlock = document.createElement('div');
 			historyBlock.id = 'status-history-block';
 			statusBlock.appendChild(historyBlock);
+			sajax_do_call( 'wfGetHistory', [id], historyBlock );
 		}
-		this.historyOpened = true;
-		sajax_do_call( 'wfGetHistory', [id], historyBlock );
-	},
-
-	closeStatusHistory: function() {
-		var hBlock = document.getElementById('status-history-block');
-		hBlock.parentNode.removeChild(hBlock);
-		this.historyOpened = false;
+		
+		if (historyBlock.style.display == "block") {
+			historyBlock.style.display = "none";
+		} else {
+			historyBlock.style.display = "block";
+		}
 	},
 
 	fromHistoryToStatus: function( str ) {
