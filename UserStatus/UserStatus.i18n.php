@@ -80,6 +80,7 @@ $messages['frp'] = array(
 	'userstatus-save' => 'Encartar',
 	'userstatus-cancel' => 'Anular',
 	'userstatus-history' => 'Historico',
+	'userstatus-readonly' => 'La bâsa de balyês est vèrrolyê',
 );
 
 /** Galician (Galego)
@@ -154,6 +155,7 @@ $messages['nl'] = array(
 	'userstatus-save' => 'Opslaan',
 	'userstatus-cancel' => 'Annuleren',
 	'userstatus-history' => 'Geschiedenis',
+	'userstatus-letters-left' => 'tekens over',
 	'userstatus-blocked' => 'U bent geblokkeerd',
 	'userstatus-readonly' => 'De database is vergrendeld',
 );

@@ -1997,6 +1997,7 @@ en wijzig uw instellingen om e-mailberichten uit te schakelen.",',
 	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' punten",
 	'user-stats-report-points' => "'''$1''' punten",
 	'user-stats-report-generation-note' => 'Deze pagina is automatisch gegenereerd',
+	'user-stats-report-error-variable-not-set' => 'De variabele $wgUserStatsPointValues[\'points_winner_$1\'] moet een waarde groter dan 0 hebben in LocalSettings.php!',
 );
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
