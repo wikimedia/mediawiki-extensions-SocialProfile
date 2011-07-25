@@ -1,5 +1,12 @@
 <?php
-
+/**
+ * A special page to upload images for gifts.
+ * This is mostly copied from an old version of Special:Upload and changed a
+ * bit.
+ *
+ * @file
+ * @ingroup Extensions
+ */
 class GiftManagerLogo extends UnlistedSpecialPage {
 
 	var $mUploadFile, $mUploadDescription, $mIgnoreWarning;
@@ -37,7 +44,11 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		}
 
 		$gift = Gifts::getGift( $this->gift_id );
-		if ( $wgUser->getID() == $gift['creator_user_id'] || in_array( 'giftadmin', $wgUser->getGroups() ) ) {
+		if (
+			$wgUser->getID() == $gift['creator_user_id'] ||
+			in_array( 'giftadmin', $wgUser->getGroups() )
+		)
+		{
 			return true;
 		}
 
@@ -205,13 +216,12 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 
 			global $wgUploadSizeWarning;
 			if ( $wgUploadSizeWarning && ( $this->mUploadSize > $wgUploadSizeWarning ) ) {
-
 				$skin = $wgUser->getSkin();
 				$wsize = $skin->formatSize( $wgUploadSizeWarning );
 				$asize = $skin->formatSize( $this->mUploadSize );
 				$warning .= '<li>' . wfMsgHtml( 'large-file', $wsize, $asize ) . '</li>';
-
 			}
+
 			if ( $this->mUploadSize == 0 ) {
 				$warning .= '<li>' . wfMsg( 'emptyfile' ) . '</li>';
 			}
@@ -229,7 +239,11 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		 * Try actually saving the thing...
 		 * It will show an error form on failure.
 		 */
-		$status = $this->saveUploadedFile( $this->mUploadSaveName, $this->mUploadTempName, strtoupper( $fullExt ) );
+		$status = $this->saveUploadedFile(
+			$this->mUploadSaveName,
+			$this->mUploadTempName,
+			strtoupper( $fullExt )
+		);
 
 		if ( $status > 0 ) {
 			$this->showSuccess( $status );
@@ -237,38 +251,94 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	}
 
 	function createThumbnail( $imageSrc, $ext, $imgDest, $thumbWidth ) {
-		global $wgImageMagickConvertCommand;
+		global $wgUseImageMagick, $wgImageMagickConvertCommand;
 
 		list( $origWidth, $origHeight, $typeCode ) = getimagesize( $imageSrc );
 
-		if ( $origWidth < $thumbWidth ) {
-			$thumbWidth = $origWidth;
-		}
-		$thumbHeight = ( $thumbWidth * $origHeight / $origWidth );
-		if ( $thumbHeight < $thumbWidth ) {
-			$border = ' -bordercolor white -border 0x' . ( ( $thumbWidth - $thumbHeight ) / 2 );
-		}
-		if ( $typeCode == 2 ) {
-			exec(
-				$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' .
-				$thumbWidth . ' -resize ' . $thumbWidth . '  -quality 100 ' .
-				$border . ' ' . $imageSrc . ' ' .
-				$this->avatarUploadDirectory . '/' . $imgDest . '.jpg'
+		if ( $wgUseImageMagick ) { // ImageMagick is enabled
+			if ( $origWidth < $thumbWidth ) {
+				$thumbWidth = $origWidth;
+			}
+			$thumbHeight = ( $thumbWidth * $origHeight / $origWidth );
+			if ( $thumbHeight < $thumbWidth ) {
+				$border = ' -bordercolor white -border 0x' . ( ( $thumbWidth - $thumbHeight ) / 2 );
+			}
+			if ( $typeCode == 2 ) {
+				exec(
+					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' .
+					$thumbWidth . ' -resize ' . $thumbWidth . '  -quality 100 ' .
+					$border . ' ' . $imageSrc . ' ' .
+					$this->avatarUploadDirectory . '/' . $imgDest . '.jpg'
+				);
+			}
+			if ( $typeCode == 1 ) {
+				exec(
+					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' .
+					$thumbWidth . ' -resize ' . $thumbWidth . ' ' . $imageSrc .
+					' ' . $border . ' ' .
+					$this->avatarUploadDirectory . '/' . $imgDest . '.gif'
+				);
+			}
+			if ( $typeCode == 3 ) {
+				exec(
+					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' .
+					$thumbWidth . ' -resize ' . $thumbWidth . ' ' . $imageSrc .
+					' ' . $this->avatarUploadDirectory . '/' . $imgDest . '.png'
+				);
+			}
+		} else { // ImageMagick is not enabled, so fall back to PHP's GD library
+			// Get the image size, used in calculations later.
+			switch( $typeCode ) {
+				case '1':
+					$fullImage = imagecreatefromgif( $imageSrc );
+					$ext = 'gif';
+					break;
+				case '2':
+					$fullImage = imagecreatefromjpeg( $imageSrc );
+					$ext = 'jpg';
+					break;
+				case '3':
+					$fullImage = imagecreatefrompng( $imageSrc );
+					$ext = 'png';
+					break;
+			}
+
+			$scale = ( $thumbWidth / $origWidth );
+
+			// Create our thumbnail size, so we can resize to this, and save it.
+			$tnImage = imagecreatetruecolor(
+				$origWidth * $scale,
+				$origHeight * $scale
 			);
-		}
-		if ( $typeCode == 1 ) {
-			exec(
-				$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' .
-				$thumbWidth . ' -resize ' . $thumbWidth . ' ' . $imageSrc .
-				' ' . $border . ' ' .
-				$this->avatarUploadDirectory . '/' . $imgDest . '.gif'
+
+			// Resize the image.
+			imagecopyresampled(
+				$tnImage,
+				$fullImage,
+				0, 0, 0, 0,
+				$origWidth * $scale,
+				$origHeight * $scale,
+				$origWidth,
+				$origHeight
 			);
-		}
-		if ( $typeCode == 3 ) {
-			exec(
-				$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' .
-				$thumbWidth . ' -resize ' . $thumbWidth . ' ' . $imageSrc .
-				' ' . $this->avatarUploadDirectory . '/' . $imgDest . '.png'
+
+			// Create a new image thumbnail.
+			if ( $typeCode == 1 ) {
+				imagegif( $tnImage, $imageSrc );
+			} elseif ( $typeCode == 2 ) {
+				imagejpeg( $tnImage, $imageSrc );
+			} elseif ( $typeCode == 3 ) {
+				imagepng( $tnImage, $imageSrc );
+			}
+
+			// Clean up.
+			imagedestroy( $fullImage );
+			imagedestroy( $tnImage );
+
+			// Copy the thumb
+			copy(
+				$imageSrc,
+				$this->avatarUploadDirectory . '/' . $imgDest . '.' . $ext
 			);
 		}
 	}

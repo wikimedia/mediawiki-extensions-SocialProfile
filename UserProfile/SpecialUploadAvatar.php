@@ -235,40 +235,98 @@ class UploadAvatar extends UploadFromFile {
 	public $mExtension;
 
 	function createThumbnail( $imageSrc, $imageInfo, $imgDest, $thumbWidth ) {
-		global $wgImageMagickConvertCommand;
+		global $wgUseImageMagick, $wgImageMagickConvertCommand;
 
-		list( $origWidth, $origHeight, $typeCode ) = $imageInfo;
+		if ( $wgUseImageMagick ) { // ImageMagick is enabled
+			list( $origWidth, $origHeight, $typeCode ) = $imageInfo;
 
-		if ( $origWidth < $thumbWidth ) {
-			$thumbWidth = $origWidth;
-		}
-		$thumbHeight = ( $thumbWidth * $origHeight / $origWidth );
-		$border = ' -bordercolor white  -border  0x';
-		if ( $thumbHeight < $thumbWidth ) {
-			$border = ' -bordercolor white  -border  0x' . ( ( $thumbWidth - $thumbHeight ) / 2 );
-		}
-		if ( $typeCode == 2 ) {
-			exec(
-				$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' . $thumbWidth .
-				' -resize ' . $thumbWidth . ' -crop ' . $thumbWidth . 'x' .
-				$thumbWidth . '+0+0   -quality 100 ' . $border . ' ' .
-				$imageSrc . ' ' . $this->avatarUploadDirectory . '/' . $imgDest . '.jpg'
+			if ( $origWidth < $thumbWidth ) {
+				$thumbWidth = $origWidth;
+			}
+			$thumbHeight = ( $thumbWidth * $origHeight / $origWidth );
+			$border = ' -bordercolor white  -border  0x';
+			if ( $thumbHeight < $thumbWidth ) {
+				$border = ' -bordercolor white  -border  0x' . ( ( $thumbWidth - $thumbHeight ) / 2 );
+			}
+			if ( $typeCode == 2 ) {
+				exec(
+					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' . $thumbWidth .
+					' -resize ' . $thumbWidth . ' -crop ' . $thumbWidth . 'x' .
+					$thumbWidth . '+0+0   -quality 100 ' . $border . ' ' .
+					$imageSrc . ' ' . $this->avatarUploadDirectory . '/' . $imgDest . '.jpg'
+				);
+			}
+			if ( $typeCode == 1 ) {
+				exec(
+					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' . $thumbWidth .
+					' -resize ' . $thumbWidth . ' -crop ' . $thumbWidth . 'x' .
+					$thumbWidth . '+0+0 ' . $imageSrc . ' ' . $border . ' ' .
+					$this->avatarUploadDirectory . '/' . $imgDest . '.gif'
+				);
+			}
+			if ( $typeCode == 3 ) {
+				exec(
+					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' . $thumbWidth .
+					' -resize ' . $thumbWidth . ' -crop ' . $thumbWidth . 'x' .
+					$thumbWidth . '+0+0 ' . $imageSrc . ' ' .
+					$this->avatarUploadDirectory . '/' . $imgDest . '.png'
+				);
+			}
+		} else { // ImageMagick is not enabled, so fall back to PHP's GD library
+			// Get the image size, used in calculations later.
+			list( $origWidth, $origHeight, $typeCode ) = getimagesize( $imageSrc );
+
+			switch( $typeCode ) {
+				case '1':
+					$fullImage = imagecreatefromgif( $imageSrc );
+					$ext = 'gif';
+					break;
+				case '2':
+					$fullImage = imagecreatefromjpeg( $imageSrc );
+					$ext = 'jpg';
+					break;
+				case '3':
+					$fullImage = imagecreatefrompng( $imageSrc );
+					$ext = 'png';
+					break;
+			}
+
+			$scale = ( $thumbWidth / $origWidth );
+
+			// Create our thumbnail size, so we can resize to this, and save it.
+			$tnImage = imagecreatetruecolor(
+				$origWidth * $scale,
+				$origHeight * $scale
 			);
-		}
-		if ( $typeCode == 1 ) {
-			exec(
-				$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' . $thumbWidth .
-				' -resize ' . $thumbWidth . ' -crop ' . $thumbWidth . 'x' .
-				$thumbWidth . '+0+0 ' . $imageSrc . ' ' . $border . ' ' .
-				$this->avatarUploadDirectory . '/' . $imgDest . '.gif'
+
+			// Resize the image.
+			imagecopyresampled(
+				$tnImage,
+				$fullImage,
+				0, 0, 0, 0,
+				$origWidth * $scale,
+				$origHeight * $scale,
+				$origWidth,
+				$origHeight
 			);
-		}
-		if ( $typeCode == 3 ) {
-			exec(
-				$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' . $thumbWidth .
-				' -resize ' . $thumbWidth . ' -crop ' . $thumbWidth . 'x' .
-				$thumbWidth . '+0+0 ' . $imageSrc . ' ' .
-				$this->avatarUploadDirectory . '/' . $imgDest . '.png'
+
+			// Create a new image thumbnail.
+			if ( $typeCode == 1 ) {
+				imagegif( $tnImage, $imageSrc );
+			} elseif ( $typeCode == 2 ) {
+				imagejpeg( $tnImage, $imageSrc );
+			} elseif ( $typeCode == 3 ) {
+				imagepng( $tnImage, $imageSrc );
+			}
+
+			// Clean up.
+			imagedestroy( $fullImage );
+			imagedestroy( $tnImage );
+
+			// Copy the thumb
+			copy(
+				$imageSrc,
+				$this->avatarUploadDirectory . '/' . $imgDest . '.' . $ext
 			);
 		}
 	}
