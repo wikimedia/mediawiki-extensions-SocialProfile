@@ -23,9 +23,10 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 	 */
 	function deleteImage( $id, $size ) {
 		global $wgUploadDirectory;
-		$files = glob( $wgUploadDirectory . '/awards/' . $id . "_{$size}*" );
+		$files = glob( $wgUploadDirectory . '/awards/sg_' . $id . "_{$size}*" );
 		if ( $files && $files[0] ) {
 			$img = basename( $files[0] );
+			// $img already contains the sg_ prefix
 			unlink( $wgUploadDirectory . '/awards/' .  $img );
 		}
 	}
