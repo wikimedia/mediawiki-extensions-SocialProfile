@@ -928,18 +928,18 @@ $messages['nah'] = array(
  * @author Servien
  */
 $messages['nds-nl'] = array(
-	'userwelcome-desc' => 'Zet de tag <code>&lt;welcomeUser&gt;</code> derbie um gebrukerspecefieke sociale infermasie over an-emelde gebrukers te laoten zien',
+	'userwelcome-desc' => 'Zet de tag <code>&lt;welcomeUser&gt;</code> derbie um gebrukerspesifieke sociale informasie over an-emelde gebrukers te laoten zien',
 	'mp-userlevels-link' => "Gebrukersnivo's",
-	'mp-welcome-upload' => 'Bestand toevoegen',
+	'mp-welcome-upload' => 'Bestaand derbie doon',
 	'mp-welcome-edit' => 'Bewark',
 	'mp-welcome-points' => '$1 {{PLURAL:$1|punt|punten}}',
-	'mp-welcome-needed-points' => 'Um te promoveren naor <b><a href="$1">$2</a></b> mu-j nog <i>$3</i> {{PLURAL:$3|punte|punten}} verdienen!',
+	'mp-welcome-needed-points' => 'Um te promoveren naor <b><a href="$1">$2</a></b> mö\'j nog <i>$3</i> {{PLURAL:$3|punte|punten}} verdienen!',
 	'mp-welcome-logged-in' => 'Huj $1',
 	'mp-requests-title' => 'Anvragen',
-	'mp-requests-message' => 'Je hemmen de volgende anvragen.',
-	'mp-request-new-message' => 'niej berich',
+	'mp-requests-message' => 'Je hebben de volgende anvragen.',
+	'mp-request-new-message' => 'niej bericht',
 	'mp-request-new-award' => '{{PLURAL:$1|1 nieje pries|$1 nieje priezen}}',
-	'mp-request-new-gift' => "{{PLURAL:$1|1 niej kedo|$1 nieje kedo's}}",
+	'mp-request-new-gift' => "{{PLURAL:$1|1 niej kado|$1 nieje kado's}}",
 	'mp-request-new-foe' => '{{PLURAL:$1|1 nieje viejanen|$1 nieje viejanen}}',
 	'mp-request-new-friend' => '{{PLURAL:$1|1 nieje vriend|$1 nieje vrienden}}',
 );

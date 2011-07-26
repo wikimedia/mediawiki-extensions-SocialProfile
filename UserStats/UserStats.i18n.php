@@ -1829,6 +1829,11 @@ Wëllt Dir keng E-Maile méi vun eis kréien?
 
 Klickt $3
 an ännert Är Astellungen a schalt den E-Mai-Benoriichtungssystem aus.',
+	'user-stats-weekly-winners' => '{{PLURAL:$1|Gewënner|Gewënner}} vun der Woch',
+	'user-stats-monthly-winners' => '{{PLURAL:$1|Gewënner|Gewënner}} vum Mount',
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' Punkten",
+	'user-stats-report-points' => "'''$1''' Punkten",
+	'user-stats-report-generation-note' => 'Dës Säit gouf automatesch generéiert',
 );
 
 /** Macedonian (Македонски)

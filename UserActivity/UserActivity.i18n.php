@@ -528,6 +528,7 @@ $messages['lb'] = array(
 	'useractivity-siteactivity' => 'Aktivitéit um Site',
 	'useractivity-title' => 'Aktivitéit vun de Frënn',
 	'useractivity-user_message' => '$1 huet dem $3 {{PLURAL:$4|ee Message|Message}} geschéckt',
+	'useractivity-comment' => '$1 huet dës {{PLURAL:$4|Säit|Säite}} kommentéiert: $3',
 );
 
 /** Latgalian (Latgaļu)

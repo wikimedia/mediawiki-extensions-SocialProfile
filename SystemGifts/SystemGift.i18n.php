@@ -2110,6 +2110,9 @@ $messages['nl'] = array(
 	'ga-cancel' => 'Annuleren',
 	'ga-remove' => 'Verwijderen',
 	'ga-remove-title' => '"$1" verwijderen?',
+	'ga-delete-message' => 'Weet u zeker dat u de gift "$1" wilt verwijderen?
+Dit zal hem ook verwijderen van gebruikers die hem ontvangen hebben.',
+	'ga-remove-success-message' => 'De gift "$1" is verwijderd.',
 	'topawards-edits' => 'Bewerkingen',
 	'topawards-votes' => 'Stemmen',
 	'topawards-comments' => 'Opmerkingen',
