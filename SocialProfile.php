@@ -21,6 +21,7 @@ $wgExtensionMessagesFiles['SocialProfileUserRelationship'] = $dir . 'UserRelatio
 $wgExtensionMessagesFiles['SocialProfileUserStats'] = $dir . 'UserStats/UserStats.i18n.php';
 $wgExtensionMessagesFiles['SocialProfileUserStatus'] = $dir . 'UserStatus/UserStatus.i18n.php';
 
+$wgExtensionMessagesFiles['SocialProfileNamespaces'] = $dir . 'SocialProfile.namespaces.php';
 $wgExtensionAliasesFiles['SocialProfile'] = $dir . 'SocialProfile.alias.php';
 
 // Classes to be autoloaded
@@ -222,8 +223,8 @@ function efSocialProfileDBUpdate( $updater, $label, $file ) {
 
 function efSocialProfileSchemaUpdates( $updater = null ) {
 	$dir = dirname( __FILE__ );
-	$dbExt = "";
-	global $wgExtNewTables, $wgDBtype;
+	$dbExt = '';
+	global $wgDBtype;
 
 	if ( $wgDBtype == 'postgres' ) {
 		$dbExt = '.postgres';
@@ -288,3 +289,35 @@ function efUserSystemMessagesOnUserRename( $renameUserSQL ) {
 	return true;
 }
 */
+
+if( !defined( 'NS_USER_WIKI' ) ) {
+	define( 'NS_USER_WIKI', 200 );
+}
+
+if( !defined( 'NS_USER_WIKI_TALK' ) ) {
+	define( 'NS_USER_WIKI_TALK', 201 );
+}
+
+if( !defined( 'NS_USER_PROFILE' ) ) {
+	define( 'NS_USER_PROFILE', 202 );
+}
+
+if( !defined( 'NS_USER_PROFILE_TALK' ) ) {
+	define( 'NS_USER_PROFILE_TALK', 203 );
+}
+
+$wgHooks['CanonicalNamespaces'][] = 'wfSocialProfileRegisterCanonicalNamespaces';
+/**
+ * Register the canonical names for our custom namespaces and their talkspaces.
+ *
+ * @param $list Array: array of namespace numbers with corresponding
+ *                     canonical names
+ * @return Boolean: true
+ */
+function wfSocialProfileRegisterCanonicalNamespaces( &$list ) {
+	$list[NS_USER_WIKI] = 'UserWiki';
+	$list[NS_USER_WIKI_TALK] = 'UserWiki_talk';
+	$list[NS_USER_PROFILE] = 'User_profile';
+	$list[NS_USER_PROFILE_TALK] = 'User_profile_talk';
+	return true;
+}
