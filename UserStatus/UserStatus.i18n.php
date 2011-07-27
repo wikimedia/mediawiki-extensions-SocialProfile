@@ -125,6 +125,8 @@ $messages['lb'] = array(
 	'userstatus-cancel' => 'Ofbriechen',
 	'userstatus-history' => 'Versiounen',
 	'userstatus-letters-left' => 'Buschtawen iwwreg',
+	'userstatus-blocked' => 'Dir sidd gespaart',
+	'userstatus-readonly' => "D'Datebank ass gespaart",
 );
 
 /** Macedonian (Македонски)
