@@ -147,6 +147,7 @@ $messages['mk'] = array(
  */
 $messages['ms'] = array(
 	'userstatus-save' => 'Simpan',
+	'userstatus-cancel' => 'Batalkan',
 );
 
 /** Dutch (Nederlands)
