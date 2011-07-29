@@ -4611,6 +4611,14 @@ un donn en Dinge Ennstellunge affschallde, dat
 De e-mail jescheck kriß.',
 );
 
+/** Kurdish (Latin) (Kurdî (Latin))
+ * @author Welathêja
+ */
+$messages['ku-latn'] = array(
+	'ur-main-page' => 'Destpêk',
+	'ur-cancel' => 'Betal bike',
+);
+
 /** Cornish (Kernowek)
  * @author Kernoweger
  * @author Kw-Moon

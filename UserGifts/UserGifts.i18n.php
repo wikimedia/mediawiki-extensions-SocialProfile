@@ -3453,11 +3453,12 @@ $messages['or'] = array(
 	'g-remove-title' => 'ବାହାର କରିବା "$1"?',
 );
 
-/** Ossetic (Иронау)
+/** Ossetic (Ирон)
  * @author Amikeco
+ * @author Bouron
  */
 $messages['os'] = array(
-	'g-cancel' => 'Нæ бæззы',
+	'g-cancel' => 'Ныууадзын',
 );
 
 /** Deitsch (Deitsch)

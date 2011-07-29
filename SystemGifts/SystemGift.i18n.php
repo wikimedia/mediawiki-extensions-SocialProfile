@@ -1917,6 +1917,13 @@ un donn en Dinge Ensstellunge de Nohrechte övver e-mail affschallde.',
 	'right-awardsmanage' => 'Belohnunge ändere udder neu aanlööje',
 );
 
+/** Kurdish (Latin) (Kurdî (Latin))
+ * @author Welathêja
+ */
+$messages['ku-latn'] = array(
+	'ga-new' => 'Nû',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Les Meloures
  * @author Robby

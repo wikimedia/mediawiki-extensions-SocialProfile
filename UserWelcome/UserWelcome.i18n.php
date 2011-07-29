@@ -861,8 +861,10 @@ $messages['ksh'] = array(
 
 /** Kurdish (Latin) (Kurdî (Latin))
  * @author George Animal
+ * @author Welathêja
  */
 $messages['ku-latn'] = array(
+	'mp-welcome-edit' => 'Biguherîne',
 	'mp-welcome-logged-in' => 'Silav, $1',
 	'mp-request-new-message' => 'mesaja nû',
 );

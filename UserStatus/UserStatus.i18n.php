@@ -116,6 +116,17 @@ $messages['ia'] = array(
 	'userstatus-readonly' => 'Le base de datos es blocate',
 );
 
+/** Kurdish (Latin) (Kurdî (Latin))
+ * @author Welathêja
+ */
+$messages['ku-latn'] = array(
+	'userstatus-edit' => 'Biguherîne',
+	'userstatus-save' => 'Tomar bike',
+	'userstatus-cancel' => 'Betal bike',
+	'userstatus-history' => 'dîrok',
+	'userstatus-blocked' => 'Tu hatî astengkirin',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */

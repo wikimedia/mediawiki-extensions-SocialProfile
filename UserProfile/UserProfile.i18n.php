@@ -6349,6 +6349,20 @@ Donn [[Special:UserLogin|enlogge]] udder [[Special:UserLogin/signup|Desch aanmel
 	'right-editothersprofiles' => 'Andere Metmaacher ier Profile ändere',
 );
 
+/** Kurdish (Latin) (Kurdî (Latin))
+ * @author Welathêja
+ */
+$messages['ku-latn'] = array(
+	'other-info-tv' => 'TV',
+	'other-info-music' => 'Muzîk',
+	'user-profile-personal-name' => 'Nav',
+	'user-profile-personal-location' => 'Cîh',
+	'user-profile-personal-city' => 'Bajar',
+	'user-profile-personal-country' => 'Welat',
+	'user-profile-interests-tv' => 'TV',
+	'user-profile-interests-music' => 'Muzîk',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Les Meloures
  * @author Robby
@@ -6381,6 +6395,7 @@ $messages['lb'] = array(
 	'user-stats-picture-game-votes' => 'Bildspill-{{PLURAL:$1|Stëmm|Stëmmen}}',
 	'user-stats-quiz-points' => '{{PLURAL:$1|Punkt|Punkten}} am Quiz',
 	'user-stats-pick-points' => '{{PLURAL:$1|Punkt|Punkte}} fonnt',
+	'casual-game-quiz' => 'Quiz',
 	'other-info-title' => 'Aner Informatiounen',
 	'user-friends-title' => 'Frënn',
 	'user-foes-title' => 'Géigner',
@@ -6430,7 +6445,6 @@ $messages['lb'] = array(
 Klickt [[Special:UserLogin|hei]] fir Iech anzeloggen oder klickt [[Special:UserLogin/signup|hei]] fir Iech unzemellen.',
 	'user-profile-update-saved' => 'Äre Profil gouf ofgespäichert',
 	'user-profile-update-log-section' => 'Abschnitt änneren',
-	'user-profile-update-profile' => 'Profil',
 	'user-profile-default-country' => 'Lëtzebuerg',
 	'user-profile-points' => '$1 {{PLURAL:$1|Punkt|Punkten}}',
 	'user-profile-section-personal' => 'Perséinlech Informatiounen',
@@ -6525,8 +6539,6 @@ Klickt [[Special:UserLogin|hei]] fir Iech anzeloggen oder klickt [[Special:UserL
 	'profilelogpagetext' => 'Dëst ass eng Lëscht vun Ännerunge vu Benotzerprofiler',
 	'avatarlogpage' => 'Logbuch vun den Avataren déi eropgelued goufen',
 	'avatarlogpagetext' => "Dëst ass d'Logbuch vun den eropgluedene Benotzer-Avataren",
-	'user-profile-picture-log' => '
-Avatar',
 	'user-profile-picture-log-entry' => 'huet ee neien Avatar eropgelueden',
 	'user-profile-picture-log-delete-entry' => 'huet dem $1 säin Avatar geläscht',
 	'right-avatarremove' => 'Benotzeravataren ewechhuelen',
