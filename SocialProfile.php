@@ -101,7 +101,8 @@ $wgFriendingEnabled = true;
 
 // Should we enable UserStatus feature (currently is under development)
 $wgEnableUserStatus = false;
-
+// Permission to delete other Users' Status Messages
+$wgGroupPermissions['sysop']['delete-status-update'] = true;
 // Extension credits that show up on Special:Version
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,

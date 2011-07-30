@@ -13,12 +13,13 @@ class SpecialUserStatus extends UnlistedSpecialPage {
 	}
 
 	public function execute( $params ) {
-		global $wgOut;
-		
-		$output = "Enter username: <input type=\"text\"  id=\"us-name-input\"> ";
-		$output .= "<input type=\"button\" value=\"Find\" onclick=\"javascript:UserStatus.specialGetHistory();\">";
-		$output .= "<div id=\"us-special\"> </div>";
-		$wgOut->addHTML($output);
+		global $wgOut,$wgUser;
+		if ( $wgUser->isAllowed( 'delete-status-update' ) ) {
+			$output = "Enter username: <input type=\"text\"  id=\"us-name-input\"> ";
+			$output .= "<input type=\"button\" value=\"Find\" onclick=\"javascript:UserStatus.specialGetHistory();\">";
+			$output .= "<div id=\"us-special\"> </div>";
+			$wgOut->addHTML($output);
+		}
 		return;
 	}
 	
