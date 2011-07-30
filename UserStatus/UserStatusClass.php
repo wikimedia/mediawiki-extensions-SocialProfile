@@ -1,16 +1,15 @@
 <?php
 /**
  * Class to manipulate user-specific status messages.
- *
+ * 
  * @file
  */
 class UserStatusClass {
 
-	/* private */ function __construct( $u_id ) {
+	/* private */ function __construct() {
 		global $wgOut, $wgScriptPath;
 		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStatus/UserStatus.css' );
 		$wgOut->addScriptFile( $wgScriptPath . '/extensions/SocialProfile/UserStatus/UserStatus.js' );
-                
 	}
 
 	public function getStatus( $u_id ) {
@@ -29,6 +28,7 @@ class UserStatusClass {
 		} else {
 			foreach ( $res as $row ) {
 				$message = array(
+					'us_id' => $row->us_id,
 					'us_user_id' => $row->us_user_id,
 					'us_status' => htmlspecialchars( $row->us_status ),
 				);
@@ -36,6 +36,12 @@ class UserStatusClass {
 		}
 
 		return $message;
+	}
+		
+	public function removeStatus( $status_id ) {
+		$dbr = wfGetDB( DB_MASTER );
+		$dbr->delete('user_status', array( 'us_id' => $status_id ), __METHOD__);
+		return;
 	}
 
 	/**
@@ -48,7 +54,6 @@ class UserStatusClass {
 		$message = trim($message);
 		if (( mb_strlen( $message ) > 70 ) || ( mb_strlen( $message ) < 1 ))  {
 			// ERROR. Message length is too long
-			// @todo Communicate failure to the end-user somehow... 
 			return;
 		}
 
@@ -116,6 +121,7 @@ class UserStatusClass {
 				'ush_user_id' => $row->ush_user_id,
 				'ush_timestamp' => $row->ush_timestamp,
 				'ush_status' => $row->ush_status,
+				'ush_likes' => $row->ush_likes,
 			);
 		}
 
@@ -150,5 +156,11 @@ class UserStatusClass {
 			}
 			return;
 		}
+	}
+	
+	public function removeHistoryStatus( $status_id ) {
+		$dbr = wfGetDB( DB_MASTER );
+		$dbr->delete('user_status_history', array( 'ush_id' => $status_id ), __METHOD__);
+		return;
 	}
 }

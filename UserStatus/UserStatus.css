@@ -1,5 +1,5 @@
 #status-box {
-	width : 400px;
+	width : 440px;
 	padding: 0px;
 	margin: 0px;
 }
@@ -34,6 +34,7 @@
 #user-status-history {
 	background-color: orange;
 	color: white;
+	text-align: left;
 }
 
 #user-status-history a {
@@ -54,4 +55,8 @@
 #status-bar {
 	margin-left: 20px;
 	text-align: left;
+}
+
+#like-status a {
+	text-decoration: none;
 }

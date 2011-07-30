@@ -1785,7 +1785,7 @@ class UserProfilePage extends Article {
 	function getStatus( $userId ) {
 		global $wgUser;
 
-		$us_class = new UserStatusClass( $userId );
+		$us_class = new UserStatusClass();
 		$user_status_array = $us_class->getStatus( $userId );
 		if ( empty( $user_status_array ) ) {
 			$buf = '';
@@ -1806,7 +1806,7 @@ class UserProfilePage extends Article {
 
 			return "<script>UserStatus.toShowMode('$buf','$userId');</script>";
 		} else {
-			return $buf;
+			return $buf."<script>UserStatus.publicHistoryButton('$userId');</script>";
 		}
 	}
 

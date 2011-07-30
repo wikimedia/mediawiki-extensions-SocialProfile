@@ -15,6 +15,10 @@ var UserStatus = {
 		}
 		document.getElementById('status-letter-count').innerHTML =len + " "+_US_LETTERS;
 	},
+	
+	publicHistoryButton: function( id ) {
+		document.getElementById( 'user-status-block' ).innerHTML += '<br> <a id="us-link" href="javascript:UserStatus.useHistory(' + id + ');">'+_US_HISTORY+'</a>';
+	},
     
 	toEditMode: function( status, id ) {
 		var editbar = '<input id="user-status-input" type="text" size="50" value="' + 
@@ -52,5 +56,23 @@ var UserStatus = {
 
 	fromHistoryToStatus: function( str ) {
 		document.getElementById('user-status-input').value = str;
+	},
+	
+	specialGetHistory: function() {
+		var us_name = document.getElementById("us-name-input").value;
+		var block = document.getElementById("us-special");
+		sajax_do_call( 'SpecialGetStatusByName', [us_name], block );
+	},
+	
+	specialHistoryDelete: function(id) {
+		var block = document.getElementById("us-special");
+			sajax_do_call( 'SpecialHistoryDelete', [id], block );
+			this.specialGetHistory();
+	},
+	
+	specialStatusDelete: function(id) {
+		var block = document.getElementById("us-special");
+			sajax_do_call( 'SpecialStatusDelete', [id], block );
+			this.specialGetHistory();
 	}
 };

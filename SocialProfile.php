@@ -38,7 +38,7 @@ $wgAutoloadClasses['SpecialUploadAvatar'] = $dir . 'UserProfile/SpecialUploadAva
 $wgAutoloadClasses['SpecialViewRelationshipRequests'] = $dir . 'UserRelationship/SpecialViewRelationshipRequests.php';
 $wgAutoloadClasses['SpecialViewRelationships'] = $dir . 'UserRelationship/SpecialViewRelationships.php';
 $wgAutoloadClasses['SpecialViewUserBoard'] = $dir . 'UserBoard/SpecialUserBoard.php';
-
+$wgAutoloadClasses['SpecialUserStatus'] = $dir . 'UserStatus/SpecialUserStatus.php';
 $wgAutoloadClasses['RemoveAvatar'] = $dir . 'UserProfile/SpecialRemoveAvatar.php';
 $wgAutoloadClasses['UpdateEditCounts'] = $dir . 'UserStats/SpecialUpdateEditCounts.php';
 $wgAutoloadClasses['UserBoard'] = $dir . 'UserBoard/UserBoardClass.php';
@@ -73,6 +73,7 @@ $wgSpecialPages['UploadAvatar'] = 'SpecialUploadAvatar';
 $wgSpecialPages['UserBoard'] = 'SpecialViewUserBoard';
 $wgSpecialPages['ViewRelationshipRequests'] = 'SpecialViewRelationshipRequests';
 $wgSpecialPages['ViewRelationships'] = 'SpecialViewRelationships';
+$wgSpecialPages['UserStatus'] = 'SpecialUserStatus';
 
 // Special page groups for MW 1.13+
 $wgSpecialPageGroups['AddRelationship'] = 'users';
