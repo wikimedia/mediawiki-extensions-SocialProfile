@@ -25,6 +25,7 @@ $specialPageAliases['en'] = array(
 	'UpdateProfile' => array( 'UpdateProfile' ),
 	'UploadAvatar' => array( 'UploadAvatar' ),
 	'UserBoard' => array( 'UserBoard' ),
+	'UserStatus' => array( 'UserStatus' ),
 	'ViewRelationshipRequests' => array( 'ViewRelationshipRequests' ),
 	'ViewRelationships' => array( 'ViewRelationships' ),
 );
