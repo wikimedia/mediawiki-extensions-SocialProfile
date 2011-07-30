@@ -19,6 +19,7 @@ $messages['en'] = array(
 	'userstatus-letters-left' => 'letters left',
 	'userstatus-blocked' => 'You are blocked',
 	'userstatus-readonly' => 'The database is locked',
+	'right-delete-status-update' => "Delete other users' status messages",
 );
 
 /** Message documentation (Message documentation)
