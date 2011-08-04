@@ -699,7 +699,7 @@ $messages['id'] = array(
  */
 $messages['ig'] = array(
 	'mp-welcome-upload' => 'Tinyénélú',
-	'mp-welcome-edit' => 'Rüwa',
+	'mp-welcome-edit' => 'Mèzi',
 	'mp-welcome-logged-in' => 'Kedú $1',
 	'mp-request-new-message' => 'ozi ohúrù',
 );
@@ -1287,6 +1287,22 @@ $messages['sk'] = array(
 	'mp-request-new-gift' => '$1 {{PLURAL:$1|nový dar|nové dary|nových darov}}',
 	'mp-request-new-foe' => '$1 {{PLURAL:$1|nový nepriateľ|noví nepriatelia|nových nepriateľov}}',
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|nový priateľ|noví priatelia|nových priateľov}}',
+);
+
+/** Somali (Soomaaliga)
+ * @author Maax
+ */
+$messages['so'] = array(
+	'mp-userlevels-link' => 'Darajada Isticmaalaha',
+	'mp-welcome-upload' => 'Soo geli',
+	'mp-welcome-logged-in' => 'Salaan $1',
+	'mp-requests-title' => 'Codsiyaasha',
+	'mp-requests-message' => 'Waxaa heesataa codsiyaashaan soo socota.',
+	'mp-request-new-message' => 'fariin cusub',
+	'mp-request-new-award' => '$1 cusub {{PLURAL:$1|abaal marin|abaal marino}}',
+	'mp-request-new-gift' => '$1 cusub {{PLURAL:$1|hadiyad|hadiyado}}',
+	'mp-request-new-foe' => '$1 cusub {{PLURAL:$1|cadow|cadow}}',
+	'mp-request-new-friend' => '$1 cusub {{PLURAL:$1|saaxiib|saaxiibo}}',
 );
 
 /** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)

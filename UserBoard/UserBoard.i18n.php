@@ -1793,9 +1793,11 @@ Klik $4
 dan ubah setting anda untuk menonaktifkan notifikasi surel.',
 );
 
-/** Igbo (Igbo) */
+/** Igbo (Igbo)
+ * @author Ukabia
+ */
 $messages['ig'] = array(
-	'userboard_delete' => 'Gbakashia',
+	'userboard_delete' => 'Kàcha',
 );
 
 /** Ido (Ido)

@@ -64,6 +64,7 @@ $messages['de'] = array(
 	'userstatus-letters-left' => 'Buchstaben noch',
 	'userstatus-blocked' => 'Du wurdest gesperrt',
 	'userstatus-readonly' => 'Die Datenbank ist gesperrt',
+	'right-delete-status-update' => 'Löschen von Statusmeldungen anderer Benutzer',
 );
 
 /** German (formal address) (‪Deutsch (Sie-Form)‬)
@@ -94,6 +95,13 @@ $messages['gl'] = array(
 	'userstatus-history' => 'Historial',
 );
 
+/** Ancient Greek (Ἀρχαία ἑλληνικὴ)
+ * @author Crazymadlover
+ */
+$messages['grc'] = array(
+	'userstatus-cancel' => 'Ἀκυροῦν',
+);
+
 /** Hebrew (עברית)
  * @author Amire80
  */
@@ -115,6 +123,7 @@ $messages['ia'] = array(
 	'userstatus-letters-left' => 'litteras restante',
 	'userstatus-blocked' => 'Tu es blocate',
 	'userstatus-readonly' => 'Le base de datos es blocate',
+	'right-delete-status-update' => 'Deler le messages de stato de altere usatores',
 );
 
 /** Kurdish (Latin) (Kurdî (Latin))
@@ -152,6 +161,7 @@ $messages['mk'] = array(
 	'userstatus-letters-left' => 'преостанати букви',
 	'userstatus-blocked' => 'Блокирани сте',
 	'userstatus-readonly' => 'Базата е заклучена',
+	'right-delete-status-update' => 'Бришење на туѓи статусни пораки',
 );
 
 /** Malay (Bahasa Melayu)
@@ -186,6 +196,7 @@ $messages['pt'] = array(
 	'userstatus-letters-left' => 'letras restantes',
 	'userstatus-blocked' => 'A sua conta está bloqueada',
 	'userstatus-readonly' => 'A base de dados está bloqueada',
+	'right-delete-status-update' => 'Eliminar as mensagens de estado dos outros utilizadores',
 );
 
 /** Russian (Русский)
