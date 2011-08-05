@@ -93,6 +93,8 @@ $messages['gl'] = array(
 	'userstatus-save' => 'Gardar',
 	'userstatus-cancel' => 'Cancelar',
 	'userstatus-history' => 'Historial',
+	'userstatus-blocked' => 'Está bloqueado',
+	'userstatus-readonly' => 'A base de datos está bloqueada',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)

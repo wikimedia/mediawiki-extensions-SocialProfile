@@ -1166,6 +1166,7 @@ Quere deixar de recibir correos electrónicos nosos?
 
 Faga clic $3
 e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
+	'user-stats-report-points' => "'''$1''' puntos",
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)
@@ -2218,7 +2219,7 @@ $messages['pl'] = array(
 	'top-fans-by-category-title-comment-score-negative-given' => 'Dał najwięcej kciuków do dołu',
 	'top-fans-by-category-title-monthly-winner-count' => 'Najwięcej zwycięstw w miesiącu',
 	'top-fans-by-category-title-weekly-winner-count' => 'Najwięcej zwycięstw w tygodniu',
-	'top-fans-bad-field-title' => 'Oops!',
+	'top-fans-bad-field-title' => 'Oj!',
 	'top-fans-bad-field-message' => 'Brak takiej statystyki.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Głos|Głosy}}',
 	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Zwycięzca miesiąca|Zwycięzcy miesiąca}}',

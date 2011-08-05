@@ -1265,6 +1265,14 @@ $messages['gl'] = array(
 	'ga-title' => 'Premios de $1',
 	'ga-uploadsuccess' => 'Carga exitosa',
 	'ga-viewlist' => 'Ver a lista dos agasallos',
+	'ga-cancel' => 'Cancelar',
+	'ga-remove' => 'Eliminar',
+	'ga-remove-title' => 'Quere eliminar "$1"?',
+	'topawards-edits' => 'Edicións',
+	'topawards-votes' => 'Votos',
+	'topawards-comments' => 'Comentarios',
+	'topawards-recruits' => 'Recrutas',
+	'topawards-friends' => 'Amigos',
 	'system_gift_received_subject' => 'Recibiu o premio $1 en {{SITENAME}}!',
 	'system_gift_received_body' => 'Ola $1:
 
