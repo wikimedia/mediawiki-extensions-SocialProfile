@@ -27,7 +27,7 @@ function wfRegisterTopUsersTag( &$parser ) {
 }
 
 /**
- * Get comments of the day -- five newest comments within the last 24 hours
+ * Get the given amount of top users for the given timeframe.
  *
  * @return String: HTML
  */
