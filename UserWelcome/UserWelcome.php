@@ -141,16 +141,16 @@ function getRelationshipRequestLink() {
 	if ( $friend_request_count > 0 ) {
 		$output .= '<p>
 			<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/addedFriendIcon.png" alt="" border="0" />
-			<a href="' . $relationship_request_link->escapeFullURL() . '" rel="nofollow">'
-			. wfMsgExt( 'mp-request-new-friend', 'parsemag', $friend_request_count ) . '</a>
+			<span class="profile-on"><a href="' . $relationship_request_link->escapeFullURL() . '" rel="nofollow">'
+			. wfMsgExt( 'mp-request-new-friend', 'parsemag', $friend_request_count ) . '</a></span>
 		</p>';
 	}
 
 	if ( $foe_request_count > 0 ) {
 		$output .= '<p>
 			<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/addedFoeIcon.png" alt="" border="0" />
-			<a href="' . $relationship_request_link->escapeFullURL() . '" rel="nofollow">'
-			. wfMsgExt( 'mp-request-new-foe', 'parsemag', $foe_request_count ) . '</a>
+			<span class="profile-on"><a href="' . $relationship_request_link->escapeFullURL() . '" rel="nofollow">'
+			. wfMsgExt( 'mp-request-new-foe', 'parsemag', $foe_request_count ) . '</a></span>
 		</p>';
 	}
 
@@ -165,9 +165,9 @@ function getNewGiftLink() {
 	if ( $gift_count > 0 ) {
 		$output .= '<p>
 			<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/icon_package_get.gif" alt="" border="0" />
-			<a href="' . $gifts_title->escapeFullURL() . '" rel="nofollow">'
+			<span class="profile-on"><a href="' . $gifts_title->escapeFullURL() . '" rel="nofollow">'
 				. wfMsgExt( 'mp-request-new-gift', 'parsemag', $gift_count ) .
-			'</a>
+			'</a></span>
 		</p>';
 	}
 	return $output;
@@ -182,9 +182,9 @@ function getNewSystemGiftLink() {
 	if ( $gift_count > 0 ) {
 		$output .= '<p>
 			<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/awardIcon.png" alt="" border="0" />
-			<a href="' . $gifts_title->escapeFullURL() . '" rel="nofollow">'
+			<span class="profile-on"><a href="' . $gifts_title->escapeFullURL() . '" rel="nofollow">'
 				. wfMsgExt( 'mp-request-new-award', 'parsemag', $gift_count ) .
-			'</a>
+			'</a></span>
 		</p>';
 	}
 
@@ -199,9 +199,9 @@ function getNewMessagesLink() {
 		$board_link = SpecialPage::getTitleFor( 'UserBoard' );
 		$output .= '<p>
 			<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/emailIcon.gif" alt="" border="" />
-			<a href="' . $board_link->escapeFullURL() . '" rel="nofollow">'
+			<span class="profile-on"><a href="' . $board_link->escapeFullURL() . '" rel="nofollow">'
 				. wfMsg( 'mp-request-new-message' ) .
-			'</a>
+			'</a></span>
 		</p>';
 	}
 	return $output;
