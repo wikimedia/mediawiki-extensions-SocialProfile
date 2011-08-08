@@ -4391,6 +4391,7 @@ $messages['grc'] = array(
 	'user-profile-personal-city' => 'Πόλις',
 	'user-profile-personal-country' => 'Χώρα',
 	'user-profile-personal-birthday' => 'Γεννέθλια ἡμερομηνία:',
+	'user-profile-personal-birthdate' => 'Ἡμερομηνία (ΜΜ/ΗΗ)',
 	'user-profile-personal-work' => 'Ἔργον',
 	'user-profile-personal-schools' => 'Σχολεῖα',
 	'user-profile-personal-places' => 'Τόποι',
@@ -4411,7 +4412,6 @@ $messages['grc'] = array(
 	'user-profile-picture-medium' => 'Μέσον',
 	'user-profile-picture-small' => 'Σμικρόν',
 	'user-page-link' => 'Δέλτος χρωμένου',
-	'user-profile-picture-log' => 'ἐνσάρκωμα',
 );
 
 /** Swiss German (Alemannisch)
