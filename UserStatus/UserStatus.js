@@ -2,8 +2,11 @@ var UserStatus = {
 	maxStatusLength : 70,
 	
 	toShowMode: function( status, id ) {
-		document.getElementById( 'user-status-block' ).innerHTML = status;
-		document.getElementById( 'user-status-block' ).innerHTML += '<br> <a id="us-link" href="javascript:UserStatus.toEditMode(\'' + status + '\',' + id + ');">'+_US_EDIT+'</a>';
+		var str = this.returnJS(status);
+		document.getElementById( 'user-status-block' ).innerHTML = str;
+		document.getElementById( 'user-status-block' ).innerHTML += '<br> \n\
+					<a id="us-link"	href="javascript:UserStatus.toEditMode(\'' + 
+					status + '\',' + id + ');">'+_US_EDIT+'</a>';
 	},
 	
     usLettersLeft: function() {
@@ -22,7 +25,7 @@ var UserStatus = {
     
 	toEditMode: function( status, id ) {
 		var editbar = '<input id="user-status-input" type="text" size="50" value="' + 
-					status + '" onkeyup="javascript:UserStatus.usLettersLeft();">';
+					this.returnJS(status) + '" onkeyup="javascript:UserStatus.usLettersLeft();">';
 		editbar += '<br> <div id="status-bar">';
 		editbar += '<a id="us-link" href="javascript:UserStatus.saveStatus(' + id + ');">'+_US_SAVE+'</a>';
 		editbar += ' <a id="us-link" href="javascript:UserStatus.useHistory(' + id + ');">'+_US_HISTORY+'</a>';
@@ -30,11 +33,25 @@ var UserStatus = {
 		editbar += '<span id="status-letter-count"></span></div>';
 		document.getElementById( 'user-status-block' ).innerHTML = editbar;
 	},
-    
+	
+	parseJS:function ( str ) {
+		var patt=/'/g;
+		var s = str.replace(patt, "@q;");
+		return s;
+	},
+	
+	returnJS:function ( str ) {
+
+		var pt= /@q;/gi;
+		var s = str.replace(pt, "'");
+		return s;
+	},
+
 	saveStatus: function( id ) {
 		var div = document.getElementById( 'user-status-block' );
 		var ustext = document.getElementById( 'user-status-input' ).value;
-		sajax_do_call( 'wfSaveStatus', [id, ustext], div );
+		var ust = this.parseJS(ustext);
+		sajax_do_call( 'wfSaveStatus', [id, ust], div );
 	},
 
 	useHistory: function( id ){
@@ -55,7 +72,7 @@ var UserStatus = {
 	},
 
 	fromHistoryToStatus: function( str ) {
-		document.getElementById('user-status-input').value = str;
+		document.getElementById('user-status-input').value = this.returnJS(str);
 	},
 	
 	specialGetHistory: function() {
@@ -66,13 +83,13 @@ var UserStatus = {
 	
 	specialHistoryDelete: function(id) {
 		var block = document.getElementById("us-special");
-			sajax_do_call( 'SpecialHistoryDelete', [id], block );
-			this.specialGetHistory();
+		sajax_do_call( 'SpecialHistoryDelete', [id], block );
+		this.specialGetHistory();
 	},
 	
 	specialStatusDelete: function(id) {
 		var block = document.getElementById("us-special");
-			sajax_do_call( 'SpecialStatusDelete', [id], block );
-			this.specialGetHistory();
+		sajax_do_call( 'SpecialStatusDelete', [id], block );
+		this.specialGetHistory();
 	}
 };

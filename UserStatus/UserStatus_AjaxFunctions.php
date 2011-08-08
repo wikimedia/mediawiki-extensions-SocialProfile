@@ -9,7 +9,7 @@ function wfSaveStatus( $u_id, $status ) {
 	$us_class->setStatus( $u_id, $status );
 	$user_status_array = $us_class->getStatus( $u_id );
 	$buf = $user_status_array['us_status'];
-	$us = $buf;
+	$us =  str_replace("@q;","'",$buf);
 	$us .= "<br> <a id=\"us-link\" href=\"javascript:UserStatus.toEditMode('$buf','$u_id');\">".wfMsg('userstatus-edit')."</a>";
 	return $us;
 }
@@ -25,7 +25,7 @@ function wfGetHistory( $u_id ) {
 		
             $output .= '<tr><td width="60" id="status-history-time">'.date_format($time, 'j M G:i').' </td>';
             $output .= '<td width="360"><a href="javascript:UserStatus.fromHistoryToStatus(\''.$row['ush_status'].'\');">'
-                       .$row['ush_status'].'</a></td>';
+                       .str_replace("@q;","'",$row['ush_status']).'</a></td>';
 			//$output .='<td width="20" id="like-status"> <a href="javascript:UserStatus.likeIt('.$row['ush_id'].')" title="I like it!" >&#9829;</a>  '.$row['ush_likes'].'</td></tr>';
 		}
 	$output.='</table>';

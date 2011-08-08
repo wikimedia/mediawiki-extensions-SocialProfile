@@ -10,6 +10,7 @@ class UserStatusClass {
 		global $wgOut, $wgScriptPath;
 		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStatus/UserStatus.css' );
 		$wgOut->addScriptFile( $wgScriptPath . '/extensions/SocialProfile/UserStatus/UserStatus.js' );
+		$wgOut->addHTML("<span id=\"temp_var\" style=\"display: none\"></span>");
 	}
 
 	public function getStatus( $u_id ) {
@@ -52,7 +53,8 @@ class UserStatusClass {
 	 */
 	public function setStatus( $u_id, $message ) {
 		$message = trim($message);
-		if (( mb_strlen( $message ) > 70 ) || ( mb_strlen( $message ) < 1 ))  {
+		if (( mb_strlen( $message ) > 90 ) || ( mb_strlen( $message ) < 1 ))  {
+			// INFO. Letter limit is 70, but here is 90, for special characters.
 			// ERROR. Message length is too long
 			return;
 		}
@@ -131,7 +133,7 @@ class UserStatusClass {
 
 		if ( $mode == 'insert' ) {
 			$currentStatus = $this->getStatus( $u_id );
-
+			
 			if ( $i < 4 ) {
 				$dbw->insert(
 					'user_status_history',
