@@ -2,10 +2,11 @@ var UserStatus = {
 	maxStatusLength : 70,
 	
 	toShowMode: function( status, id ) {
-		var str = this.returnJS(status);
-		document.getElementById( 'user-status-block' ).innerHTML = str;
-		document.getElementById( 'user-status-block' ).innerHTML += '<br> \n\
-					<a id="us-link"	href="javascript:UserStatus.toEditMode(\'' + 
+		var textNode = document.createTextNode (this.returnJS(status));
+		var textContainer = document.getElementById( 'user-status-block' );
+		textContainer.innerHTML = "";
+        textContainer.appendChild (textNode);
+		textContainer.innerHTML += '<br> <a id="us-link"	href="javascript:UserStatus.toEditMode(\'' + 
 					status + '\',' + id + ');">'+_US_EDIT+'</a>';
 	},
 	
@@ -35,16 +36,27 @@ var UserStatus = {
 	},
 	
 	parseJS:function ( str ) {
-		var patt=/'/g;
-		var s = str.replace(patt, "@q;");
-		return s;
+		var chars = Array( "<", ">", "\"", "'");
+		var replacements = Array( "@l;", "@r;", "@dq;", "@q;");
+		for (var i=0; i<chars.length; i++) {
+			var reg = new RegExp(chars[i], "gi");
+			if(reg.test(str)) {
+				str = str.replace(reg, replacements[i]);
+			}
+		}
+		return str;
 	},
 	
 	returnJS:function ( str ) {
-
-		var pt= /@q;/gi;
-		var s = str.replace(pt, "'");
-		return s;
+		var chars = Array( "<", ">", "\"", "'");
+		var replacements = Array( "@l;", "@r;", "@dq;", "@q;");
+		for (var i=0; i<chars.length; i++) {
+			var reg = new RegExp(replacements[i], "gi");
+			if(reg.test(str)) {
+				str = str.replace(reg, chars[i]);
+			}
+		}
+		return str;
 	},
 
 	saveStatus: function( id ) {

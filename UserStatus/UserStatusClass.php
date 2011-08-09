@@ -10,7 +10,6 @@ class UserStatusClass {
 		global $wgOut, $wgScriptPath;
 		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStatus/UserStatus.css' );
 		$wgOut->addScriptFile( $wgScriptPath . '/extensions/SocialProfile/UserStatus/UserStatus.js' );
-		$wgOut->addHTML("<span id=\"temp_var\" style=\"display: none\"></span>");
 	}
 
 	public function getStatus( $u_id ) {
@@ -164,5 +163,17 @@ class UserStatusClass {
 		$dbr = wfGetDB( DB_MASTER );
 		$dbr->delete('user_status_history', array( 'ush_id' => $status_id ), __METHOD__);
 		return;
+	}
+	
+	public function usHTMLcharacters( $str ) {
+		$regexp = array( "@q;", "@dq;", "@l;", "@r;" );
+		$replacement = array ("'",  "\"",  "<",  ">" );
+		
+		$newstr=$str;
+		for ($i=0; $i<count($regexp);$i++) {
+			$newstr = str_replace($regexp[$i],$replacement[$i],$newstr);
+		}
+		
+		return $newstr;
 	}
 }

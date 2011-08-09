@@ -8,9 +8,8 @@ function wfSaveStatus( $u_id, $status ) {
 	$us_class = new UserStatusClass();
 	$us_class->setStatus( $u_id, $status );
 	$user_status_array = $us_class->getStatus( $u_id );
-	$buf = $user_status_array['us_status'];
-	$us =  str_replace("@q;","'",$buf);
-	$us .= "<br> <a id=\"us-link\" href=\"javascript:UserStatus.toEditMode('$buf','$u_id');\">".wfMsg('userstatus-edit')."</a>";
+	$us = htmlspecialchars($us_class->usHTMLcharacters($user_status_array['us_status']));
+	$us .= "<br> <a id=\"us-link\" href=\"javascript:UserStatus.toEditMode('".($user_status_array['us_status'])."','$u_id');\">".wfMsg('userstatus-edit')."</a>";
 	return $us;
 }
 
@@ -22,11 +21,11 @@ function wfGetHistory( $u_id ) {
 		$output='<table id="user-status-history">';
 		foreach ($historyArray as $row ) {
 			$time = DateTime::createFromFormat('Y-m-d H:i:s',$row['ush_timestamp']);
-		
+			$us = htmlspecialchars($us_class->usHTMLcharacters($row['ush_status']));
+			
             $output .= '<tr><td width="60" id="status-history-time">'.date_format($time, 'j M G:i').' </td>';
-            $output .= '<td width="360"><a href="javascript:UserStatus.fromHistoryToStatus(\''.$row['ush_status'].'\');">'
-                       .str_replace("@q;","'",$row['ush_status']).'</a></td>';
-			//$output .='<td width="20" id="like-status"> <a href="javascript:UserStatus.likeIt('.$row['ush_id'].')" title="I like it!" >&#9829;</a>  '.$row['ush_likes'].'</td></tr>';
+            $output .= '<td width="360"><a href="javascript:UserStatus.fromHistoryToStatus(\''.$us.'\');">'
+                       .$us.'</a></td>';
 		}
 	$output.='</table>';
 	return $output;
