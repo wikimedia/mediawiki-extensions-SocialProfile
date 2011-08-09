@@ -1,7 +1,7 @@
 <?php
 /**
  * Class to manipulate user-specific status messages.
- * 
+ *
  * @file
  */
 class UserStatusClass {
@@ -30,17 +30,21 @@ class UserStatusClass {
 				$message = array(
 					'us_id' => $row->us_id,
 					'us_user_id' => $row->us_user_id,
-					'us_status' => htmlspecialchars( $row->us_status ),
+					'us_status' => $row->us_status,
 				);
 			}
 		}
 
 		return $message;
 	}
-		
+
 	public function removeStatus( $status_id ) {
-		$dbr = wfGetDB( DB_MASTER );
-		$dbr->delete('user_status', array( 'us_id' => $status_id ), __METHOD__);
+		$dbw = wfGetDB( DB_MASTER );
+		$dbw->delete(
+			'user_status',
+			array( 'us_id' => $status_id ),
+			__METHOD__
+		);
 		return;
 	}
 
@@ -51,8 +55,8 @@ class UserStatusClass {
 	 * @param $message String: user-supplied status message
 	 */
 	public function setStatus( $u_id, $message ) {
-		$message = trim($message);
-		if (( mb_strlen( $message ) > 90 ) || ( mb_strlen( $message ) < 1 ))  {
+		$message = trim( $message );
+		if ( ( mb_strlen( $message ) > 90 ) || ( mb_strlen( $message ) < 1 ) ) {
 			// INFO. Letter limit is 70, but here is 90, for special characters.
 			// ERROR. Message length is too long
 			return;
@@ -122,7 +126,7 @@ class UserStatusClass {
 				'ush_user_id' => $row->ush_user_id,
 				'ush_timestamp' => $row->ush_timestamp,
 				'ush_status' => $row->ush_status,
-				'ush_likes' => $row->ush_likes,
+				'ush_likes' => ( isset( $row->ush_likes ) ? $row->ush_likes : 0 ),
 			);
 		}
 
@@ -132,7 +136,7 @@ class UserStatusClass {
 
 		if ( $mode == 'insert' ) {
 			$currentStatus = $this->getStatus( $u_id );
-			
+
 			if ( $i < 4 ) {
 				$dbw->insert(
 					'user_status_history',
@@ -158,22 +162,14 @@ class UserStatusClass {
 			return;
 		}
 	}
-	
+
 	public function removeHistoryStatus( $status_id ) {
-		$dbr = wfGetDB( DB_MASTER );
-		$dbr->delete('user_status_history', array( 'ush_id' => $status_id ), __METHOD__);
+		$dbw = wfGetDB( DB_MASTER );
+		$dbw->delete(
+			'user_status_history',
+			array( 'ush_id' => $status_id ),
+			__METHOD__
+		);
 		return;
-	}
-	
-	public function usHTMLcharacters( $str ) {
-		$regexp = array( "@q;", "@dq;", "@l;", "@r;" );
-		$replacement = array ("'",  "\"",  "<",  ">" );
-		
-		$newstr=$str;
-		for ($i=0; $i<count($regexp);$i++) {
-			$newstr = str_replace($regexp[$i],$replacement[$i],$newstr);
-		}
-		
-		return $newstr;
 	}
 }

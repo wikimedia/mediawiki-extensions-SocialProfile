@@ -1,31 +1,31 @@
 #status-box {
-	width : 440px;
+	width: 440px;
 	padding: 0px;
 	margin: 0px;
 }
 
 #status-box-top {
-	overflow:visible;
+	overflow: visible;
 	margin-left: 34px;
 	width: 30px;
-	height:24px;
-	background-color:orange;	
+	height: 24px;
+	background-color: orange;
 	background-image: url('../images/status-corner.png');
 }
 
 #status-box-content {
-	background-color:orange;
-	padding:10px;
+	background-color: orange;
+	padding: 10px;
 	border-radius: 22px;
 	/*height: 38px;*/
 }
 
-#user-status-block {
+#user-status-block, #status-edit-controls {
 	text-align: center;
 	color: white;
 }
 
-#us-link {
+.us-link {
 	color: white;
 	font-size: 8pt;
 	text-decoration: underline;
@@ -47,7 +47,7 @@
 }
 
 #status-letter-count {
-	float:right;
+	float: right;
 	margin-right: 20px;
 	font-size: 8pt;
 }

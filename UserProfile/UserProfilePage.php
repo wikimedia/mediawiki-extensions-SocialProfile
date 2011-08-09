@@ -1782,32 +1782,4 @@ class UserProfilePage extends Article {
 		return $output;
 	}
 
-	function getStatus( $userId ) {
-		global $wgUser;
-
-		$us_class = new UserStatusClass();
-		$user_status_array = $us_class->getStatus( $userId );
-		if ( empty( $user_status_array ) ) {
-			$buf = '';
-		} else {
-			$buf = $user_status_array['us_status'];
-		}
-
-		// Only owners of the page can change statuses
-		if ( $wgUser->getId() == $userId ) {
-			if ( $wgUser->isBlocked() ) {
-				return wfMsg( 'userstatus-blocked' );
-			}
-
-			// Database operations require write mode
-			if ( wfReadOnly() ) {
-				return wfMsg( 'userstatus-readonly' );
-			}
-
-			return "<script>UserStatus.toShowMode('$buf','$userId');</script>";
-		} else {
-			return $buf."<script>UserStatus.publicHistoryButton('$userId');</script>";
-		}
-	}
-
 }
