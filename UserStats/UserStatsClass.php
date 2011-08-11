@@ -406,7 +406,7 @@ class UserStatsTrack {
 			$ctg = 'Opinions by User ' . ( $this->user_name );
 			$parser = new Parser();
 			$ctgTitle = Title::newFromText(
-				$parser->transformMsg( trim( $ctg ), $wgOut->parserOptions() )
+				$parser->preprocess( trim( $ctg ), $wgOut->getTitle(), $wgOut->parserOptions() )
 			);
 			$ctgTitle = $ctgTitle->getDBkey();
 			$dbw = wfGetDB( DB_MASTER );
@@ -444,7 +444,7 @@ class UserStatsTrack {
 		$dbw = wfGetDB( DB_MASTER );
 		$ctg = 'Opinions by User ' . ( $this->user_name );
 		$ctgTitle = Title::newFromText(
-			$parser->transformMsg( trim( $ctg ), $wgOut->parserOptions() )
+			$parser->preprocess( trim( $ctg ), $wgOut->getTitle(), $wgOut->parserOptions() )
 		);
 		$ctgTitle = $ctgTitle->getDBkey();
 
