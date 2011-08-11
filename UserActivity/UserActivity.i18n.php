@@ -600,7 +600,17 @@ $messages['mn'] = array(
  * @author Anakmalaysia
  */
 $messages['ms'] = array(
+	'useractivity' => 'Kegiatan kawan',
+	'useractivity-award' => '$1 menerima satu anugerah',
+	'useractivity-all' => 'Lihat semua',
+	'useractivity-edit' => '$1 {{PLURAL:$4|menyunting laman|menyunting laman-laman berikut:}} $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|kini bermusuhan dengan|kini bermusuhan dengan}} $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|kini berkawan dengan|kini berkawan dengan}} $3',
+	'useractivity-gift' => '$1 menerima hadiah daripada $2',
+	'useractivity-group-edit' => '{{PLURAL:$1|satu suntingan|$1 suntingan}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|satu komen|$1 komen}}',
 	'useractivity-group-user_message' => '{{PLURAL:$1|satu pesanan|$1 pesanan}}',
+	'useractivity-group-friend' => '{{PLURAL: $1|seorang kawan|$1 kawan}}',
 );
 
 /** Dutch (Nederlands)

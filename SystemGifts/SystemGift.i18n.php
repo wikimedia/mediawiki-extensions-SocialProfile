@@ -2074,8 +2074,93 @@ $4
  * @author Anakmalaysia
  */
 $messages['ms'] = array(
+	'systemgiftmanager' => 'Pengurus hadian sistem',
+	'ga-addnew' => '+ Tambah hadiah baru',
+	'ga-back-edit-gift' => 'Kembali kepada menyunting hadiah ini',
+	'ga-back-gift-list' => 'Kembali ke senarai hadiah',
+	'ga-back-link' => '<a href="$1">< Kembali ke profil $2</a>',
 	'ga-choosefile' => 'Pilih fail:',
+	'ga-count' => '$1 ada $2 anugerah',
+	'ga-create-gift' => 'Cipta hadiah',
+	'ga-created' => 'Hadiah sudah dicipta',
+	'ga-currentimage' => 'Imej semasa',
+	'ga-error-message-invalid-link' => 'Pautan yang anda berikan itu tidak sah.',
+	'ga-error-message-no-user' => 'Pengguna yang anda cuba melihat itu tidak wujud.',
+	'ga-error-title' => 'Eh, tersilap arah!',
+	'ga-file-instructions' => 'Imej anda mestilah jpeg, png atau gif (bukan gif animasi), dan saiznya kurang daripada 100KB.',
+	'ga-gift' => 'hadiah',
+	'ga-gift-given-count' => 'Hadiah ini telah diberikan $1 kali',
+	'ga-gift-title' => '"$2" $1',
+	'ga-giftdesc' => 'keterangan hadiah',
+	'ga-giftimage' => 'imej hadiah',
+	'ga-giftname' => 'nama hadiah',
+	'ga-gifttype' => 'jenis hadiah',
+	'ga-goback' => 'Kembali',
+	'ga-imagesbelow' => 'Berikut ialah imej-imej anda yang akan digunakan di tapak ini',
+	'ga-img' => 'tambah/ganti imej',
+	'ga-large' => 'Besar',
+	'ga-medium' => 'Sederhana',
+	'ga-mediumlarge' => 'Sederhana besar',
+	'ga-new' => 'Baru',
 	'ga-next' => 'Berikutnya',
+	'ga-previous' => 'Sebelumnya',
+	'ga-recent-recipients-award' => 'Penerima terkini lain anugerah ini',
+	'ga-saved' => 'Hadiah sudah disimpan',
+	'ga-small' => 'Kecil',
+	'ga-threshold' => 'ambang',
+	'ga-title' => 'Anugerah $1',
+	'ga-uploadsuccess' => 'Muat naik berjaya',
+	'ga-viewlist' => 'Lihat senarai hadiah',
+	'ga-cancel' => 'Batalkan',
+	'ga-remove' => 'Buang',
+	'ga-remove-title' => 'Nak buang "$1"?',
+	'ga-delete-message' => 'Adakah anda benar-benar ingin membuang hadiah "$1"?
+Dengan ini, hadiah ini juga akan terpadam daripada pengguna-pengguna yang menerimanya.',
+	'ga-remove-success-title' => 'Anda berjaya membuang hadiah "$1"',
+	'ga-remove-success-message' => 'Hadiah "$1" telah digugurkan.',
+	'topawards' => 'Anugerah Terunggul',
+	'topawards-edit-title' => 'Anugerah Terunggul - Pencapaian Penyuntingan',
+	'topawards-vote-title' => 'Anugerah Terunggul - Pencapaian Pengundian',
+	'topawards-comment-title' => 'Anugerah Terunggul - Pencapaian Komen',
+	'topawards-recruit-title' => 'Anugerah Terunggul - Pencapaian Perekrutan',
+	'topawards-friend-title' => 'Anugerah Terunggul - Pencapaian Persahabatan',
+	'topawards-award-categories' => 'Kategori Anugerah',
+	'topawards-edits' => 'Suntingan',
+	'topawards-votes' => 'Undian',
+	'topawards-comments' => 'Komen',
+	'topawards-recruits' => 'Rekrut',
+	'topawards-friends' => 'Kawan',
+	'topawards-edit-milestone' => 'Pencapaian $1 Suntingan',
+	'topawards-vote-milestone' => 'Pencapaian $1 Undian',
+	'topawards-comment-milestone' => 'Pencapaian $1 Komen',
+	'topawards-recruit-milestone' => 'Pencapaian $1 Rekrut',
+	'topawards-friend-milestone' => 'Pencapaian $1 Kawan',
+	'topawards-empty' => 'Sama ada anugerah belum dikonfigurasi untuk kategori anugerah ini, ataupun belum ada sesiapa yang menerima anugerah itu.',
+	'system_gift_received_subject' => 'Anda telah menerima anugerah $1 di {{SITENAME}}!',
+	'system_gift_received_body' => 'Kepada $1.
+
+Anda baru menerima anugerah $2 di {{SITENAME}}!
+
+"$3"
+
+Klik di bawah untuk melihat piala anda!
+
+$4
+
+Semoga anda menyukainya!
+
+Ihsan,
+
+
+Pasukan {{SITENAME}}
+
+---
+
+Adakah anda tidak mahu menerima e-mel daripada kami?
+
+Klik $5
+dan tukar tetapan anda untuk mematikan pemberitahuan e-mel.',
+	'right-awardsmanage' => 'Mencipta anugerah baru dan menyunting anugerah sedia ada',
 );
 
 /** Dutch (Nederlands)

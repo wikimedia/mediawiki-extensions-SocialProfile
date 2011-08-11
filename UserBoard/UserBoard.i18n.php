@@ -1233,6 +1233,7 @@ et modifiez vos paramètres pour désactiver les notifications des courriels.',
 $messages['frp'] = array(
 	'messagesenttitle' => 'Mèssâjos mandâs',
 	'boardblasttitle' => 'Mandar lo tablô per a-côp',
+	'boardblaststep1' => 'Ètapa 1 - Ècrîde voutron mèssâjo',
 	'boardlinkselectall' => 'Chouèsir tot',
 	'boardlinkselectfriends' => 'Chouèsir los amis',
 	'boardlinkselectfoes' => 'Chouèsir los ènemis',
@@ -2272,7 +2273,19 @@ $4 वर टिचकी मारा
  */
 $messages['ms'] = array(
 	'userboard_delete' => 'Hapuskan',
+	'userboard_yourboard' => 'Papan anda',
+	'userboard_owner' => 'Papan $1',
+	'userboard_myboard' => 'Papan saya',
+	'userboard_posted_ago' => 'dikirim $1 lalu',
+	'userboard_private' => 'tertutup',
+	'userboard_public' => 'umum',
+	'userboard_messagetype' => 'Jenis pesanan',
 	'userboard_nextpage' => 'berikutnya',
+	'userboard_prevpage' => 'akhir',
+	'userboard-time-days' => '{{PLURAL:$1|sehari|$1 hari}}',
+	'userboard-time-hours' => '{{PLURAL:$1|sejam|$1 jam}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|seminit|$1 minit}}',
+	'userboard-time-seconds' => '{{PLURAL: $1|sesaat|$1 saat}}',
 );
 
 /** Erzya (Эрзянь)

@@ -170,8 +170,14 @@ $messages['mk'] = array(
  * @author Anakmalaysia
  */
 $messages['ms'] = array(
+	'userstatus-edit' => 'Sunting',
 	'userstatus-save' => 'Simpan',
 	'userstatus-cancel' => 'Batalkan',
+	'userstatus-history' => 'Sejarah',
+	'userstatus-letters-left' => 'huruf lagi',
+	'userstatus-blocked' => 'Anda disekat',
+	'userstatus-readonly' => 'Pangkalan data dikunci',
+	'right-delete-status-update' => 'Padamkan pesanan status pengguna-pengguna lain',
 );
 
 /** Dutch (Nederlands)

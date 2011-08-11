@@ -3023,10 +3023,18 @@ $messages['mn'] = array(
  * @author Anakmalaysia
  */
 $messages['ms'] = array(
+	'giftmanager' => 'Pengurus hadiah',
 	'g-choose-file' => 'Pilih fail:',
 	'g-cancel' => 'Batalkan',
+	'g-count' => '$1 ada $2 hadiah.',
 	'g-give-separator' => 'atau',
+	'g-go-back' => 'Kembali',
+	'g-large' => 'Besar',
+	'g-medium' => 'Sederhana',
+	'g-new' => 'baru',
 	'g-next' => 'Berikutnya',
+	'g-previous' => 'Sebelumnya',
+	'g-small' => 'Kecil',
 );
 
 /** Dutch (Nederlands)

@@ -910,6 +910,23 @@ $messages['mk'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|нов пријател|нови пријатели}}',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'mp-userlevels-link' => 'Tahap pengguna',
+	'mp-welcome-edit' => 'Sunting',
+	'mp-welcome-points' => '$1 mata',
+	'mp-welcome-logged-in' => 'Apa khabar, $1',
+	'mp-requests-title' => 'Permintaan',
+	'mp-requests-message' => 'Anda ada permintaan berikut.',
+	'mp-request-new-message' => 'pesanan baru',
+	'mp-request-new-award' => '$1 anugerah baru',
+	'mp-request-new-gift' => '$1 anugerah baru',
+	'mp-request-new-foe' => '$1 musuh baru',
+	'mp-request-new-friend' => '$1 kawan baru',
+);
+
 /** Mazanderani (مازِرونی)
  * @author محک
  */

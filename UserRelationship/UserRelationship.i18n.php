@@ -5088,6 +5088,7 @@ $2 ने तुम्हांला {{SITENAME}} वर मित्र म्
  * @author Anakmalaysia
  */
 $messages['ms'] = array(
+	'ur-previous' => 'sebelumnya',
 	'ur-next' => 'berikutnya',
 	'ur-remove' => 'Buang',
 	'ur-cancel' => 'Batalkan',

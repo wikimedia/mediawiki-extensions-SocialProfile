@@ -1923,6 +1923,40 @@ $messages['mn'] = array(
 	'top-fans-stats-comment-count' => '{{PLURAL:$1|Сэтгэгдэл|Сэтгэгдлүүд}}',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'top-fans-bad-field-title' => 'Harap maaf',
+	'top-fans-bad-field-message' => 'Statistik yang dinyatakan tidak wujud.',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Undian|Undian}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Kemenangan bulanan|Kemenangan bulanan}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Kemenangan mingguan|Kemenangan mingguan}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Suntingan|Suntingan}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Komen|Komen}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Rujukan|Rujukan}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Kawan|Kawan}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Musuh|Musuh}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Pendapat tersiar|Pendapat tersiar}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Pendapat|Pendapat}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Suka|Suka}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Tak suka|Tak suka}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Undian suka|Undian suka}} yang diberikan',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Undian tak suka|Undian tak suka}} yang diberikan',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Hadiah diterima|Hadiah diterima}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Hadiah dihantar|Hadiah dihantar}}',
+	'right-updatepoints' => 'Mengemas kini kiraan suntingan',
+	'right-generatetopusersreport' => 'Menjana laporan pengguna terunggul',
+	'level-advanced-to' => 'maju ke tahap <span style="font-weight:800;">$1</span>',
+	'level-advance-subject' => 'Kini, anda seorang "$1" di {{SITENAME}}!',
+	'generatetopusersreport' => 'Jana Laporan Pengguna Terunggul',
+	'user-stats-weekly-winners' => '{{PLURAL:$1|Pemenang|Pemenang}} Mingguan',
+	'user-stats-monthly-winners' => '{{PLURAL:$1|Pemenang|Pemenang}} Bulanan',
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' mata",
+	'user-stats-report-weekly-page-title' => 'Laporan Mata Pengguna Mingguan ($1)',
+	'user-stats-report-monthly-page-title' => 'Laporan Mata Pengguna Bulanan ($1)',
+);
+
 /** Nahuatl (Nāhuatl)
  * @author Fluence
  */
