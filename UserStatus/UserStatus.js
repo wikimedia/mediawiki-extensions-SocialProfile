@@ -36,6 +36,10 @@ var UserStatus = {
 	toEditMode: function() {
 		jQuery( '#user-status-block' ).hide();
 		jQuery( '#status-edit-controls' ).show();
+		// If the history div is (still) present, hide it
+		if ( jQuery( '#status-history-block' ) ) {
+			jQuery( '#status-history-block' ).hide();
+		}
 	},
 
 	/**
