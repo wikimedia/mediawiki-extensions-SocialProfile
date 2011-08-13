@@ -1832,9 +1832,12 @@ Klickt $3
 an ännert Är Astellungen a schalt den E-Mai-Benoriichtungssystem aus.',
 	'user-stats-weekly-winners' => '{{PLURAL:$1|Gewënner|Gewënner}} vun der Woch',
 	'user-stats-monthly-winners' => '{{PLURAL:$1|Gewënner|Gewënner}} vum Mount',
+	'user-stats-full-top' => 'Komplett Top $1',
 	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' Punkten",
 	'user-stats-report-points' => "'''$1''' Punkten",
 	'user-stats-report-generation-note' => 'Dës Säit gouf automatesch generéiert',
+	'user-stats-report-weekly-edit-summary' => 'automatesche Benotzer-Rapport pro Woch',
+	'user-stats-report-monthly-edit-summary' => 'automatesche Benotzer-Rapport pro Mount',
 );
 
 /** Macedonian (Македонски)

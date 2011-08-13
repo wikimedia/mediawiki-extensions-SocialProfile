@@ -150,6 +150,7 @@ $messages['lb'] = array(
 	'userstatus-letters-left' => 'Buschtawen iwwreg',
 	'userstatus-blocked' => 'Dir sidd gespaart',
 	'userstatus-readonly' => "D'Datebank ass gespaart",
+	'right-delete-status-update' => 'Status-Message vun anere Benotzer läschen',
 );
 
 /** Macedonian (Македонски)
