@@ -158,6 +158,11 @@ class UserStatusClass {
 					),
 					__METHOD__
 				);
+				$dbw->delete(
+					'user_status_likes',
+					array( 'usl_status_id' => $history[0]['ush_id'] ),
+					__METHOD__
+				);
 			}
 			return;
 		}
@@ -170,6 +175,50 @@ class UserStatusClass {
 			array( 'ush_id' => $status_id ),
 			__METHOD__
 		);
+		$dbw->delete(
+			'user_status_likes',
+			array( 'usl_status_id' => $status_id ),
+			__METHOD__
+		);
 		return;
+	}
+	
+	public function likeCount( $status_id ) {
+		$dbr = wfGetDB( DB_SLAVE );
+		$statusLikes = $dbr->select(
+			'user_status_likes',
+			'*',
+			array( 'usl_status_id' => $status_id ),
+			__METHOD__
+		);
+		
+		return $dbr->numRows( $statusLikes );
+	}
+	
+	public function likeStatus( $liker_id, $status_id ) {
+		$dbw = wfGetDB( DB_MASTER );
+		$statusLikes = $dbw->select(
+			'user_status_likes',
+			'*',
+			array(
+				'usl_status_id' => $status_id, 
+				'usl_user_id' => $liker_id,
+			),
+			__METHOD__
+		);
+		
+		$i = $dbw->numRows( $statusLikes );
+		
+		if ( $i==0 ) {
+			$dbw->insert(
+				'user_status_likes',
+				array(
+					'usl_status_id' => $status_id,
+					'usl_user_id' => $liker_id,
+				),
+				__METHOD__
+			);
+		}
+		return (string)$this->likeCount($status_id).' &#9829;';
 	}
 }

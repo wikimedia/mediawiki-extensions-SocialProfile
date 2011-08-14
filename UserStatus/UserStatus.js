@@ -25,7 +25,7 @@ var UserStatus = {
 
 	publicHistoryButton: function( id ) {
 		document.getElementById( 'user-status-block' ).innerHTML +=
-			'<br /> <a id="us-link" href="javascript:UserStatus.useHistory(' + id + ');">' + _US_HISTORY + '</a>';
+			'<br /> <a class="us-link" href="javascript:UserStatus.useHistory(' + id + ');">' + _US_HISTORY + '</a>';
 	},
 
 	/**
@@ -78,13 +78,15 @@ var UserStatus = {
 			historyBlock = document.createElement( 'div' );
 			historyBlock.id = 'status-history-block';
 			statusBlock.appendChild( historyBlock );
-			sajax_do_call( 'wfGetHistory', [id], historyBlock );
 		}
-
-		if ( jQuery( '#status-history-block' ).is( 'visible' ) ) {
-			jQuery( '#status-history-block' ).hide();
+		
+		if ( historyBlock.style.display == "block" ) {
+			historyBlock.style.display = "none";
 		} else {
-			jQuery( '#status-history-block' ).show();
+			//This call should be here, as it fixes bug, 
+			//when history does not change after first status save
+			sajax_do_call( 'wfGetHistory', [id], historyBlock );
+			historyBlock.style.display = "block";
 		}
 	},
 
@@ -98,6 +100,11 @@ var UserStatus = {
 	insertStatusFromHistory: function( statusId ) {
 		document.getElementById( 'user-status-input' ).value =
 			jQuery( '#status-history-entry-' + statusId ).text();
+	},
+	
+	like: function( userID, messageID ) {
+		var div = document.getElementById( 'like-status-' + messageID );
+		sajax_do_call( 'wfStatusLike', [userID, messageID], div );
 	},
 
 	specialGetHistory: function() {

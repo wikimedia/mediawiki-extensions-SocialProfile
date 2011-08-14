@@ -45,24 +45,28 @@ function wfGetHistory( $u_id ) {
 	} else {
 		foreach ( $historyArray as $row ) {
 			$us = htmlspecialchars( $row['ush_status'] );
-			$statusId = intval( $row['ush_id'] );
-
+			$status_id = intval( $row['ush_id'] );
+			$status_likes = $us_class->likeCount( $status_id );
 			$href = '';
 			// We can only *view* other user's past status updates, we cannot
 			// do anything with them...so don't bother generating the href
 			// attribute when we're not viewing our own profile
 			if ( $u_id == $wgUser->getId() ) {
-				$href = ' href="javascript:UserStatus.insertStatusFromHistory(' . $statusId .
+				$href = ' href="javascript:UserStatus.insertStatusFromHistory(' . $status_id .
 					');"';
 			}
-
+			
 			$output .= '<tr>
 				<td width="60" id="status-history-time">' .
 					$wgLang->timeanddate( wfTimestamp( TS_MW, $row['ush_timestamp'] ), true ) .
 				'</td>
 				<td width="360">
-					<a id="status-history-entry-' . $statusId . '"' . $href . '>'.
-						$us . '</a>
+					<a id="status-history-entry-' . $status_id . '"' . $href . '>'. $us . '</a>
+				</td>
+				<td width="30" id="like-status">
+				<span id="like-status-' . $status_id . '" >' . $status_likes . '<span>
+					<a href="javascript:UserStatus.like(' . $wgUser->getId() . ',' . $status_id .
+						');">&#9829;</a>
 				</td>
 			</tr>';
 		}
@@ -71,6 +75,14 @@ function wfGetHistory( $u_id ) {
 	$output .= '</table>';
 
 	return $output;
+}
+
+$wgAjaxExportList[] = 'wfStatusLike';
+
+function wfStatusLike ( $u_id, $status_id ) {
+	$us_class = new UserStatusClass();
+	$count = $us_class->likeStatus( $u_id, $status_id );
+	return $count;	
 }
 
 $wgAjaxExportList[] = 'SpecialGetStatusByName';
