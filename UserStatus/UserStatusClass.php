@@ -183,16 +183,15 @@ class UserStatusClass {
 		return;
 	}
 	
-	public function likeCount( $status_id ) {
+	public function getLikeCount( $status_id ) {
 		$dbr = wfGetDB( DB_SLAVE );
-		$statusLikes = $dbr->select(
-			'user_status_likes',
-			'*',
-			array( 'usl_status_id' => $status_id ),
-			__METHOD__
-		);
-		
-		return $dbr->numRows( $statusLikes );
+		$count = (int)$dbr->selectField( 
+			'user_status_likes', 
+			'COUNT(*) AS count', 
+			array( 'usl_status_id' => $status_id ), 
+			__METHOD__ 
+		); 
+		return $count;
 	}
 	
 	public function likeStatus( $liker_id, $status_id ) {
@@ -219,6 +218,6 @@ class UserStatusClass {
 				__METHOD__
 			);
 		}
-		return (string)$this->likeCount($status_id).' &#9829;';
+		return (string)$this->getLikeCount($status_id).' &#9829;';
 	}
 }

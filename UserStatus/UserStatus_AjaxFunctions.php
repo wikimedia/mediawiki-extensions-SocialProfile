@@ -46,7 +46,7 @@ function wfGetHistory( $u_id ) {
 		foreach ( $historyArray as $row ) {
 			$us = htmlspecialchars( $row['ush_status'] );
 			$status_id = intval( $row['ush_id'] );
-			$status_likes = $us_class->likeCount( $status_id );
+			$status_likes = $us_class->getLikeCount( $status_id );
 			$href = '';
 			// We can only *view* other user's past status updates, we cannot
 			// do anything with them...so don't bother generating the href
