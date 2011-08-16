@@ -208,14 +208,14 @@ class GenerateTopUsersReport extends SpecialPage {
 		) . "\n\n";
 		$pageContent .= "=={$winners}==\n\n<br />\n";
 
-		$pageContent .= '==' . wfMsgForContent( 'user-stats-full-top', $user_count ) . "==\n\n";
+		$pageContent .= '==' . wfMsgForContent( 'user-stats-full-top', $wgContLang->formatNum( $user_count ) ) . "==\n\n";
 
 		foreach( $users as $user ) {
 			$userTitle = Title::makeTitle( NS_USER, $user['user_name'] );
 			$pageContent .= wfMsgExt(
 				'user-stats-report-row',
 				array( 'content', 'parsemag' ),
-				$user['rank'],
+				$wgContLang->formatNum( $user['rank'] ),
 				$user['user_name'],
 				$wgContLang->formatNum( $user['points'] )
 			) . "\n\n";
