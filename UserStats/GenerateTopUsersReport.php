@@ -212,8 +212,9 @@ class GenerateTopUsersReport extends SpecialPage {
 
 		foreach( $users as $user ) {
 			$userTitle = Title::makeTitle( NS_USER, $user['user_name'] );
-			$pageContent .= wfMsgForContent(
+			$pageContent .= wfMsgExt(
 				'user-stats-report-row',
+				array( 'content', 'parsemag' ),
 				$user['rank'],
 				$user['user_name'],
 				$wgContLang->formatNum( $user['points'] )
@@ -224,8 +225,9 @@ class GenerateTopUsersReport extends SpecialPage {
 				$userTitle->getFullURL() . "' >" . $user['user_name'] . "</a>
 			</span>";
 
-			$out .= '<span class="top-fan-points">' . wfMsgWikiHtml(
+			$out .= '<span class="top-fan-points">' . wfMsgExt(
 				'user-stats-report-points',
+				array( 'content', 'parsemag' ),
 				$wgContLang->formatNum( $user['points'] )
 			) . '</span>
 		</div>';
