@@ -183,7 +183,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * Save social preferences into the database.
 	 */
 	function saveSettings_pref() {
-		global $wgUser, $wgOut, $wgRequest, $wgSitename;
+		global $wgUser, $wgRequest;
 
 		$notify_friend = $wgRequest->getVal( 'notify_friend' );
 		$notify_gift = $wgRequest->getVal( 'notify_gift' );
@@ -211,36 +211,9 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$wgUser->setOption( 'notifyhonorifics', $notify_honorifics );
 		$wgUser->setOption( 'notifymessage', $notify_message );
 		$wgUser->saveSettings();
-		// This code is mostly related to ArmchairGM, however can be fixed to be used for others.
-		if ( $wgSitename == 'ArmchairGM' ) {
-			$dbw = wfGetDB( DB_MASTER );
-			// If the user wants a weekly email, we'll put some info about that to the user_mailing_list table
-			if ( $wgRequest->getVal( 'weeklyemail' ) == 1 ) {
-				$s = $dbw->selectRow(
-					'user_mailing_list',
-					array( 'um_user_id' ),
-					array( 'um_user_id' => $wgUser->getID() ),
-					__METHOD__
-				);
-				if ( $s === false ) {
-					$dbw->insert(
-						'user_mailing_list',
-						array(
-							'um_user_id' => $wgUser->getID(),
-							'um_user_name' => $wgUser->getName(),
-						),
-						__METHOD__
-					);
-				}
-			} else {
-				// Otherwise, just delete the entry.
-				$dbw->delete(
-					'user_mailing_list',
-					array( 'um_user_id' => $wgUser->getID() ),
-					__METHOD__
-				);
-			}
-		}
+
+		// Allow extensions like UserMailingList do their magic here
+		wfRunHooks( 'SpecialUpdateProfile::saveSettings_pref', array( $this, $wgRequest ) );
 	}
 
 	function formatBirthdayDB( $birthday ) {
@@ -711,6 +684,9 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 					. wfMsg( 'user-profile-preferences-emails-level' ) .
 					' <input type="checkbox" size="25" name="notify_honorifics" id="notify_honorifics" value="1"' . ( ( $wgUser->getIntOption( 'notifyhonorifics', 1 ) == 1 ) ? 'checked' : '' ) . '/>
 				</p>';
+
+		// Allow extensions (like UserMailingList) to add new checkboxes
+		wfRunHooks( 'SpecialUpdateProfile::displayPreferencesForm', array( $this, &$form ) );
 
 		$form .= '</div>
 			<div class="cleared"></div>';
