@@ -183,6 +183,12 @@ class UserStatusClass {
 		return;
 	}
 	
+	/**
+	 * Method that get the number of people that liked $status_id status.
+	 *
+	 * @param $status_id Integer: ID number of status
+	 * @return Integer: count of "likes" that status have.
+	 */
 	public function getLikeCount( $status_id ) {
 		$dbr = wfGetDB( DB_SLAVE );
 		$count = (int)$dbr->selectField( 
@@ -194,6 +200,14 @@ class UserStatusClass {
 		return $count;
 	}
 	
+	/**
+	 * Method that controlls and adds "like"s <3
+	 *
+	 * @param $liker_id Integer: ID number of user who liked the status
+	 * @param $status_id Integer: ID number of status that was liked
+	 * 
+	 * @return Integer: count of "likes" that current status have
+	 */
 	public function likeStatus( $liker_id, $status_id ) {
 		$dbw = wfGetDB( DB_MASTER );
 		$statusLikes = $dbw->select(
@@ -210,6 +224,15 @@ class UserStatusClass {
 		
 		if ( $i==0 ) {
 			$dbw->insert(
+				'user_status_likes',
+				array(
+					'usl_status_id' => $status_id,
+					'usl_user_id' => $liker_id,
+				),
+				__METHOD__
+			);
+		} else {
+			$dbw->delete(
 				'user_status_likes',
 				array(
 					'usl_status_id' => $status_id,
