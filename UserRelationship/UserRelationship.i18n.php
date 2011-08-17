@@ -5833,7 +5833,7 @@ $messages['or'] = array(
 	'ur-next' => 'ପରବର୍ତ୍ତୀ',
 );
 
-/** Ossetic (Иронау)
+/** Ossetic (Ирон)
  * @author Amikeco
  */
 $messages['os'] = array(

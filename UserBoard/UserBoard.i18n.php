@@ -747,7 +747,7 @@ und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
  */
 $messages['de-formal'] = array(
 	'boardblastlogintitle' => 'Sie müssen angemeldet sein, um Nachrichten versenden zu können',
-	'boardblastlogintext' => 'Sie müssen <a href="index.php?title=Special:UserLogin">angemeldet</a> sein, um Nachrichten versenden zu können.',
+	'boardblastlogintext' => 'Sie müssen [[Special:UserLogin|angemeldet]] sein, um Nachrichten versenden zu können.',
 	'boardblaststep1' => 'Schritt 1: Schreiben Sie Ihre Nachricht',
 	'boardblaststep2' => 'Schritt 2: Wählen Sie aus, wem Sie die Nachrichte schicken wollen',
 	'boardnofriends' => 'Sie haben keine Freunde, denen Sie eine Nachricht senden könnten!',
@@ -1663,8 +1663,7 @@ Kattints a linkre: $4
  */
 $messages['ia'] = array(
 	'boardblastlogintitle' => 'Tu debe aperir un session pro poter inviar colpos de tabuliero',
-	'boardblastlogintext' => 'Pro poter inviar colpos de tabuliero,
-tu debe <a href="index.php?title=Special:UserLogin">aperir un session</a>.',
+	'boardblastlogintext' => 'Pro poter inviar colpos de tabuliero, tu debe [[Special:UserLogin|aperir un session]].',
 	'messagesenttitle' => 'Messages inviate',
 	'boardblasttitle' => 'Inviar colpo de tabuliero',
 	'boardblaststep1' => 'Passo 1 - Scribe tu message',
@@ -2580,7 +2579,7 @@ $messages['or'] = array(
 	'userboard_prevpage' => 'ଆଗ',
 );
 
-/** Ossetic (Иронау)
+/** Ossetic (Ирон)
  * @author Amikeco
  */
 $messages['os'] = array(
@@ -3062,7 +3061,7 @@ $messages['rue'] = array(
 	'userboard-time-seconds' => '$1 {{PLURAL:$1|секунда|секунды|секунд}}',
 );
 
-/** Yakut (Саха тыла)
+/** Sakha (Саха тыла)
  * @author HalanTul
  */
 $messages['sah'] = array(

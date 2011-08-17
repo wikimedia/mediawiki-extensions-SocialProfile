@@ -33,6 +33,7 @@ $messages['en'] = array(
 /** Message documentation (Message documentation)
  * @author EugeneZelenko
  * @author Naudefj
+ * @author Siebrand
  */
 $messages['qqq'] = array(
 	'useractivity-edit' => 'Supports GENDER for the editor ($1) as $6 if $1 is one user.',
@@ -46,6 +47,10 @@ $messages['qqq'] = array(
 {{Identical|Message}}',
 	'useractivity-group-friend' => 'Supports GENDER for the one having friends as $2',
 	'useractivity-user_message' => 'Supports GENDER for the sender ($1) as $6 if $1 is one user.',
+	'useractivity-comment' => 'Parameters:
+* $1 is a username
+* $3 is a list of pages
+* $4 is the number of elements in $3; used for PLURAL.',
 );
 
 /** Afrikaans (Afrikaans)
@@ -631,6 +636,7 @@ $messages['nl'] = array(
 	'useractivity-siteactivity' => 'Siteactiviteit',
 	'useractivity-title' => 'Acitiviteit van vrienden',
 	'useractivity-user_message' => '$1 heeft {{PLURAL:$4|een bericht|berichten}} verzonden aan $3',
+	'useractivity-comment' => "$1 heeft opmerkingen geplaatst bij de {{PLURAL:$4|pagina|volgende pagina's:}} $3",
 );
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)

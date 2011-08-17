@@ -105,6 +105,7 @@ and change your settings to disable email notifications.',
 
 /** Message documentation (Message documentation)
  * @author Fryed-peach
+ * @author Siebrand
  * @author Umherirrender
  */
 $messages['qqq'] = array(
@@ -115,6 +116,18 @@ $messages['qqq'] = array(
 	'ga-next' => '{{Identical|Next}}',
 	'ga-previous' => '{{Identical|Prev}}',
 	'ga-small' => '{{Identical|Small}}',
+	'ga-remove-success-title' => 'Parameters:
+* $1 is a gift name.',
+	'topawards-edit-milestone' => 'Parameters:
+* $1 is a number; also used for PLURAL.',
+	'topawards-vote-milestone' => 'Parameters:
+* $1 is a number; also used for PLURAL.',
+	'topawards-comment-milestone' => 'Parameters:
+* $1 is a number; also used for PLURAL.',
+	'topawards-recruit-milestone' => 'Parameters:
+* $1 is a number; also used for PLURAL.',
+	'topawards-friend-milestone' => 'Parameters:
+* $1 is a number; also used for PLURAL.',
 	'right-awardsmanage' => '{{doc-right|awardsmanage}}',
 );
 
@@ -1110,6 +1123,7 @@ ja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.',
 
 /** French (Français)
  * @author Crochet.david
+ * @author Hashar
  * @author IAlex
  * @author PieRRoMaN
  * @author Verdy p
@@ -1152,6 +1166,8 @@ $messages['fr'] = array(
 	'ga-title' => 'Prix de $1',
 	'ga-uploadsuccess' => 'Téléchargement effectué avec succès',
 	'ga-viewlist' => 'Voir la liste des cadeaux',
+	'topawards-edits' => 'Éditions',
+	'topawards-votes' => 'Votes',
 	'system_gift_received_subject' => 'Vous avez reçu le prix $1 sur {{SITENAME}} !',
 	'system_gift_received_body' => 'Bonjour $1,
 
@@ -2212,11 +2228,26 @@ $messages['nl'] = array(
 	'ga-remove-title' => '"$1" verwijderen?',
 	'ga-delete-message' => 'Weet u zeker dat u de gift "$1" wilt verwijderen?
 Dit zal hem ook verwijderen van gebruikers die hem ontvangen hebben.',
+	'ga-remove-success-title' => 'U hebt de gift "$1" verwijderd.',
 	'ga-remove-success-message' => 'De gift "$1" is verwijderd.',
+	'topawards' => 'Toplijst onderscheidingen',
+	'topawards-edit-title' => 'Toplijst onderscheidingen - Mijlpalen bewerkingen',
+	'topawards-vote-title' => 'Toplijst onderscheidingen - Mijlpalen stemmen',
+	'topawards-comment-title' => 'Toplijst onderscheidingen - Mijlpalen opmerkingen',
+	'topawards-recruit-title' => 'Toplijst onderscheidingen - Mijlpalen recruitering',
+	'topawards-friend-title' => 'Toplijst onderscheidingen - Mijlpalen vrienden',
+	'topawards-award-categories' => 'Categorieën voor onderscheidingen',
 	'topawards-edits' => 'Bewerkingen',
 	'topawards-votes' => 'Stemmen',
 	'topawards-comments' => 'Opmerkingen',
+	'topawards-recruits' => 'Rekruten',
 	'topawards-friends' => 'Vrienden',
+	'topawards-edit-milestone' => 'Mijlpaal {{PLURAL:$1|Eén bewerking|$1 bewerkingen}}',
+	'topawards-vote-milestone' => 'Mijlpaal {{PLURAL:$1|Eén stem|$1 stemmen}}',
+	'topawards-comment-milestone' => 'Mijlpaal {{PLURAL:$1|Eén opmerking|$1 opmerkingen}}',
+	'topawards-recruit-milestone' => 'Mijlpaal {{PLURAL:$1|Eén rekruut|$1 rekruten}}',
+	'topawards-friend-milestone' => 'Mijlpaal {{PLURAL:$1|Eén vriend|$1 vrienden}}',
+	'topawards-empty' => 'Er zijn geen onderscheidingen voor deze categorie of niemand heeft de onderscheiding nog ontvangen.',
 	'system_gift_received_subject' => 'U hebt de $1-prijs gekregen op {{SITENAME}}!',
 	'system_gift_received_body' => 'Hallo $1,
 

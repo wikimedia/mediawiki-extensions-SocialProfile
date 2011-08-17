@@ -95,6 +95,7 @@ and change your settings to disable e-mail notifications.',
  * @author Fryed-peach
  * @author McDutchie
  * @author Purodha
+ * @author Siebrand
  * @author Umherirrender
  */
 $messages['qqq'] = array(
@@ -104,6 +105,24 @@ $messages['qqq'] = array(
 	'top-fans-stats-edit-count' => '{{Identical|Edit}}',
 	'top-fans-stats-comment-count' => '{{Identical|Comment}}',
 	'right-updatepoints' => '{{doc-right|updatepoints}}',
+	'user-stats-weekly-win-congratulations' => 'Parameters:
+* $1 is a number of winning users; used for PLURAL
+* $2 is a number of extra points; used for PLURAL.',
+	'user-stats-monthly-win-congratulations' => 'Parameters:
+* $1 is a number of winning users; used for PLURAL
+* $2 is a number of extra points; used for PLURAL.',
+	'user-stats-full-top' => 'Parameters:
+* $1 is a number (for example: Full Top 20).',
+	'user-stats-report-row' => 'Parameters:
+* $1 is a rank number
+* $2 is a username
+* $3 is a number of points; used for PLURAL.',
+	'user-stats-report-points' => 'Parameters:
+* $1 is a number of points; used for PLURAL.',
+	'user-stats-report-weekly-page-title' => 'Parameters:
+* $1 is a localised timestamp',
+	'user-stats-report-monthly-page-title' => 'Parameters:
+* $1 is a localised timestamp',
 );
 
 /** Afrikaans (Afrikaans)
@@ -617,11 +636,11 @@ und ändere deine Einstellungen, um die E-Mail-Benachrichtigungen abzustellen.',
 	'generatetopusersreport' => 'Bericht zu den aktivsten Benutzern generieren',
 	'user-stats-weekly-winners' => '{{PLURAL:$1|Wochensieger|Wochensieger}}',
 	'user-stats-monthly-winners' => '{{PLURAL:$1|Monatssieger|Monatssieger}}',
-	'user-stats-weekly-win-congratulations' => 'Herzlichen Glückwunsch {{PLURAL:$1|dem folgenden Benutzer, der den Wochensieg errungen und $2 Zusatzpunkte erhalten hat.|den folgenden Benutzern, die den Wochensieg errungen und $2 Zusatzpunkte erhalten haben.}}',
-	'user-stats-monthly-win-congratulations' => 'Herzlichen Glückwunsch {{PLURAL:$1|dem folgenden Benutzer, der den Monatssieg errungen und $2 Zusatzpunkte erhalten hat.|den folgenden Benutzern, die den Monatssieg errungen und $2 Zusatzpunkte erhalten haben.}}',
+	'user-stats-weekly-win-congratulations' => 'Herzlichen Glückwunsch {{PLURAL:$1|dem folgenden Benutzer, der den Wochensieg errungen und {{PLURAL:$2|Zusatzpunkt|Zusatzpunkte}} erhalten hat.|den folgenden Benutzern, die den Wochensieg errungen und {{PLURAL:$2|Zusatzpunkt|Zusatzpunkte}} erhalten haben.}}',
+	'user-stats-monthly-win-congratulations' => 'Herzlichen Glückwunsch {{PLURAL:$1|dem folgenden Benutzer, der den Monatssieg errungen und {{PLURAL:$2|Zusatzpunkt|Zusatzpunkte}} erhalten hat.|den folgenden Benutzern, die den Monatssieg errungen und {{PLURAL:$2|Zusatzpunkt|Zusatzpunkte}} erhalten haben.}}',
 	'user-stats-full-top' => 'Vollständige Bestenliste $1',
-	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' Punkte",
-	'user-stats-report-points' => "'''$1''' Punkte",
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' {{PLURAL:$3|Punkt|Punkte}}",
+	'user-stats-report-points' => "'''$1'''  {{PLURAL:$1|Punkt|Punkte}}",
 	'user-stats-report-generation-note' => 'Diese Seite wurde automatisch generiert.',
 	'user-stats-report-weekly-edit-summary' => 'automatisierter wöchentlicher Benutzerbericht',
 	'user-stats-report-monthly-edit-summary' => 'automatisierter monatlicher Benutzerbericht',
@@ -1010,6 +1029,7 @@ ja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.',
  * @author Cedric31
  * @author Crochet.david
  * @author Grondin
+ * @author Hashar
  * @author IAlex
  * @author McDutchie
  * @author Urhixidur
@@ -1073,6 +1093,10 @@ Voulez-vous arrêter de recevoir des courriels de notre part ?
 
 Cliquez $3
 et modifiez vos paramètres en désactivant les notifications par courriel.',
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' points",
+	'user-stats-report-points' => "'''$1''' points",
+	'user-stats-report-weekly-edit-summary' => 'Rapport utilisateur hebdomadaire',
+	'user-stats-report-monthly-edit-summary' => 'Rapport utilisateur mensuel',
 );
 
 /** Franco-Provençal (Arpetan)
@@ -2020,6 +2044,7 @@ $messages['nl'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Cadeautje|Cadeautjes}} ontvangen',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Cadeautje|Cadeautjes}} gestuurd',
 	'right-updatepoints' => 'Bewerkingstellers bijwerken',
+	'right-generatetopusersreport' => 'Topgebruikersrapportages aanmaken',
 	'level-advanced-to' => 'is gepromoveerd tot niveau tot niveau <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'U bent nu "$1" op {{SITENAME}}',
 	'level-advance-body' => 'Hallo $1.
@@ -2035,11 +2060,19 @@ Wilt u niet langer e-mails van ons ontvangen?
 
 Klik $3
 en wijzig uw instellingen om e-mailberichten uit te schakelen.",',
+	'generatetopusersreport' => 'Topgebruikersrapportage aanmaken',
 	'user-stats-weekly-winners' => 'Wekelijkse {{PLURAL:$1|winnaar|winnaars}}',
 	'user-stats-monthly-winners' => 'Maandelijkse {{PLURAL:$1|winnaar|winnaars}}',
-	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' punten",
-	'user-stats-report-points' => "'''$1''' punten",
+	'user-stats-weekly-win-congratulations' => 'Felicitaties aan de volgende {{PLURAL:$1|gebruiker|gebruikers}} die deze week gewonnen {{PLURAL:$1|heeft|hebben}} en $2 extra {{PLURAL:$2|punt|punten}} {{PLURAL:$1|verdient|verdienen}}!',
+	'user-stats-monthly-win-congratulations' => 'Felicitaties aan de volgende {{PLURAL:$1|gebruiker|gebruikers}} die deze maand gewonnen {{PLURAL:$1|heeft|hebben}} en $2 extra {{PLURAL:$2|punt|punten}} {{PLURAL:$1|verdient|verdienen}}!',
+	'user-stats-full-top' => 'Volledige top $1',
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' {{PLURAL:$3|punt|punten}}!",
+	'user-stats-report-points' => "'''$1''' {{PLURAL:$1|punt|punten}}!",
 	'user-stats-report-generation-note' => 'Deze pagina is automatisch gegenereerd',
+	'user-stats-report-weekly-edit-summary' => 'automatische wekelijkse gebruikersrapportage',
+	'user-stats-report-monthly-edit-summary' => 'automatische maandelijkse gebruikersrapportage',
+	'user-stats-report-weekly-page-title' => 'Wekelijkse gebruikerspuntenrapportage ($1)',
+	'user-stats-report-monthly-page-title' => 'Maandelijkse gebruikerspuntenrapportage ($1)',
 	'user-stats-report-error-variable-not-set' => 'De variabele $wgUserStatsPointValues[\'points_winner_$1\'] moet een waarde groter dan 0 hebben in LocalSettings.php!',
 );
 

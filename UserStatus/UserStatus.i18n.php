@@ -74,6 +74,31 @@ $messages['de-formal'] = array(
 	'userstatus-blocked' => 'Sie wurden gesperrt',
 );
 
+/** Spanish (Español)
+ * @author Fitoschido
+ */
+$messages['es'] = array(
+	'userstatus-edit' => 'Editar',
+	'userstatus-save' => 'Guardar',
+	'userstatus-cancel' => 'Cancelar',
+	'userstatus-history' => 'Historial',
+	'userstatus-letters-left' => 'letras quedan',
+	'userstatus-blocked' => 'Estás bloqueado',
+	'userstatus-readonly' => 'La base de datos está bloqueada',
+	'right-delete-status-update' => 'Eliminar mensajes de estado de otros usuarios',
+);
+
+/** French (Français)
+ * @author Hashar
+ */
+$messages['fr'] = array(
+	'userstatus-save' => 'Sauver',
+	'userstatus-cancel' => 'Annuler',
+	'userstatus-history' => 'Historique',
+	'userstatus-blocked' => 'Vous êtes bloqué',
+	'userstatus-readonly' => 'La base de données est bloquée',
+);
+
 /** Franco-Provençal (Arpetan)
  * @author ChrisPtDe
  */
@@ -183,6 +208,7 @@ $messages['ms'] = array(
 
 /** Dutch (Nederlands)
  * @author SPQRobin
+ * @author Siebrand
  */
 $messages['nl'] = array(
 	'userstatus-edit' => 'Bewerken',
@@ -192,6 +218,7 @@ $messages['nl'] = array(
 	'userstatus-letters-left' => 'tekens over',
 	'userstatus-blocked' => 'U bent geblokkeerd',
 	'userstatus-readonly' => 'De database is vergrendeld',
+	'right-delete-status-update' => 'Statusberichten van andere gebruikers verwijderen',
 );
 
 /** Portuguese (Português)

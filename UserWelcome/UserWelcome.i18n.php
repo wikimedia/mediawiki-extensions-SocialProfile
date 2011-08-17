@@ -964,6 +964,7 @@ $messages['nds-nl'] = array(
 );
 
 /** Nepali (नेपाली)
+ * @author Bhawani Gautam
  * @author Bhawani Gautam Rhk
  */
 $messages['ne'] = array(
@@ -1052,7 +1053,7 @@ $messages['oc'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|amic novèl|amics novèls}}',
 );
 
-/** Ossetic (Иронау)
+/** Ossetic (Ирон)
  * @author Amikeco
  * @author Bouron
  */
