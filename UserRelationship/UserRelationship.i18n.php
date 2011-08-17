@@ -2129,6 +2129,7 @@ Se vi volas pliajn amikojn, <a href="$1">invitu ilin!</a>',
  * @author Dferg
  * @author DoveBirkoff
  * @author Feten7
+ * @author Fitoschido
  * @author Imre
  * @author Mor
  * @author Sanbec
@@ -2176,7 +2177,7 @@ Por favor solicite amigos/enemigos a través del enlace correcto.',
 	'ur-remove-error-not-loggedin-friend' => 'Debes haber iniciado sesión para quitar un amigo.',
 	'ur-remove' => 'Eliminar',
 	'ur-cancel' => 'Cancelar',
-	'ur-login' => 'Entrar',
+	'ur-login' => 'Iniciar sesión',
 	'ur-add-title-foe' => 'Desea agregar $1 como su enemigo?',
 	'ur-add-title-friend' => '¿Deseas agregar a $1 como amigo tuyo?',
 	'ur-add-message-foe' => 'Estás a punto de añadir $1 como tu enemigo

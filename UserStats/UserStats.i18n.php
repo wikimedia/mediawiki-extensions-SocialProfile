@@ -831,6 +831,7 @@ $messages['eo'] = array(
  * @author Antur
  * @author Crazymadlover
  * @author Dferg
+ * @author Fitoschido
  * @author Imre
  * @author Sanbec
  * @author Translationista
@@ -860,7 +861,7 @@ $messages['es'] = array(
 	'top-fans-by-category-title-comment-score-negative-given' => 'Con mayor cantidad global de no aprobados dados',
 	'top-fans-by-category-title-monthly-winner-count' => 'Con mayor cantidad global mensual de éxitos',
 	'top-fans-by-category-title-weekly-winner-count' => 'Con mayor cantidad global semanal de éxitos',
-	'top-fans-bad-field-title' => 'Oops!',
+	'top-fans-bad-field-title' => '¡Vaya!',
 	'top-fans-bad-field-message' => 'La estadística especificada no existe.',
 	'top-fans-stats-vote-count' => '{{PLURAL:$1|Voto|Votos}}',
 	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|victoria mensual|Victorias mensuales}}',
@@ -1857,8 +1858,8 @@ an ännert Är Astellungen a schalt den E-Mai-Benoriichtungssystem aus.',
 	'user-stats-weekly-winners' => '{{PLURAL:$1|Gewënner|Gewënner}} vun der Woch',
 	'user-stats-monthly-winners' => '{{PLURAL:$1|Gewënner|Gewënner}} vum Mount',
 	'user-stats-full-top' => 'Komplett Top $1',
-	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' Punkten",
-	'user-stats-report-points' => "'''$1''' Punkten",
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' {{PLURAL:$3|Punkt|Pukten}}",
+	'user-stats-report-points' => "'''$1''' {{PLURAL:$1|Punkt|Punkten}}",
 	'user-stats-report-generation-note' => 'Dës Säit gouf automatesch generéiert',
 	'user-stats-report-weekly-edit-summary' => 'automatesche Benotzer-Rapport pro Woch',
 	'user-stats-report-monthly-edit-summary' => 'automatesche Benotzer-Rapport pro Mount',
@@ -1930,11 +1931,11 @@ $messages['mk'] = array(
 	'generatetopusersreport' => 'Создај извештај за корисници-предводници',
 	'user-stats-weekly-winners' => '{{PLURAL:$1|Победник|Победници}} за неделава',
 	'user-stats-monthly-winners' => '{{PLURAL:$1|Победник|Победници}} за месецов',
-	'user-stats-weekly-win-congratulations' => '{{PLURAL:$1|Му честитаме на следниов корисник за неговиот успех неделава|Им честитаме на следниве корисници за нивниот успех неделава}} и освоените $2 дополнителни бодови!',
-	'user-stats-monthly-win-congratulations' => '{{PLURAL:$1|Му честитаме на следниов корисник за неговиот успех месецов|Им честитаме на следниве корисници за нивниот успех месецов}} и освоените $2 дополнителни бодови!',
+	'user-stats-weekly-win-congratulations' => '{{PLURAL:$1|Му честитаме на следниов корисник|Им честитаме на следниве корисници}} за освоената неделна победа и {{PLURAL:$2|дополнителниот $2 бод|дополнителните $2 бода}}!!',
+	'user-stats-monthly-win-congratulations' => '{{PLURAL:$1|Му честитаме на следниов корисник|Им честитаме на следниве корисници}} за освоената месечна победа и {{PLURAL:$2|дополнителниот $2 бод|дополнителните $2 бода}}!!',
 	'user-stats-full-top' => 'Сите $1 предводници',
-	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' бода",
-	'user-stats-report-points' => "'''$1''' бода",
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' {{PLURAL:$3|бод|бода}}!",
+	'user-stats-report-points' => "'''$1''' {{PLURAL:$1|бод|бода}}!",
 	'user-stats-report-generation-note' => 'оваа страница е автоматски создадена',
 	'user-stats-report-weekly-edit-summary' => 'автоматизиран неделен кориснички извештај',
 	'user-stats-report-monthly-edit-summary' => 'автоматизиран месечен кориснички извештај',

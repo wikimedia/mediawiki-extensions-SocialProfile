@@ -246,7 +246,7 @@ $messages['ru'] = array(
 	'userstatus-letters-left' => 'символов осталось',
 	'userstatus-blocked' => 'Вы заблокированы',
 	'userstatus-readonly' => 'База данных в режиме чтения',
-	'right-delete-status-update' => "Удалять статусы других пользователей",
+	'right-delete-status-update' => 'Удалять статусы других пользователей',
 );
 
 /** Ukrainian (Українська)
@@ -260,6 +260,6 @@ $messages['uk'] = array(
 	'userstatus-letters-left' => 'символів залишилось',
 	'userstatus-blocked' => 'Ви заблоковані',
 	'userstatus-readonly' => 'База данних у режимі читання',
-	'right-delete-status-update' => "Видаляти статуси інших користувачів",
+	'right-delete-status-update' => 'Видаляти статуси інших користувачів',
 );
 
