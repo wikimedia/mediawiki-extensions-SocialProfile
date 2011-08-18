@@ -243,6 +243,8 @@ function efSocialProfileSchemaUpdates( $updater = null ) {
 	efSocialProfileDBUpdate( $updater, 'gift', "$dir/UserGifts/usergifts$dbExt.sql" );
 	efSocialProfileDBUpdate( $updater, 'user_system_messages', "$dir/UserSystemMessages/user_system_messages$dbExt.sql" );
 	efSocialProfileDBUpdate( $updater, 'user_status', "$dir/UserStatus/userstatus$dbExt.sql" );
+	efSocialProfileDBUpdate( $updater, 'user_status_history', "$dir/UserStatus/userstatus$dbExt.sql" );
+	efSocialProfileDBUpdate( $updater, 'user_status_likes', "$dir/UserStatus/userstatus$dbExt.sql" );
 
 	return true;
 }
