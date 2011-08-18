@@ -60,6 +60,9 @@ $messages['bg'] = array(
  * @author Kghbln
  */
 $messages['de'] = array(
+	'userstatus' => 'Statusaktualisierungen löschen',
+	'userstatus-enter-username' => 'Benutzername eingeben:',
+	'userstatus-find' => 'Finden',
 	'userstatus-edit' => 'Bearbeiten',
 	'userstatus-save' => 'Speichern',
 	'userstatus-cancel' => 'Abbrechen',
