@@ -11,7 +11,7 @@ function wfSaveStatus( $u_id, $status ) {
 
 	// Would probably be best to pass an edit token here, like most other MW
 	// forms do
-	if ( $u_id == $wgUser->getId() ) {
+	if ( $u_id == $wgUser->getId() && !wfReadOnly() ) {
 		// Decode what we encoded in JS, UserStatus.saveStatus; this is safe
 		// because the Database class that UserStatusClass uses for its DB queries
 		// will do all the escaping for us.
@@ -41,7 +41,7 @@ function wfGetHistory( $u_id ) {
 	$output = '<table id="user-status-history">';
 
 	if ( empty( $historyArray ) ) {
-		$output .= 'No status history.';
+		$output .= '<tr><td>No status history.</td></tr>';
 	} else {
 		foreach ( $historyArray as $row ) {
 			$us = htmlspecialchars( $row['ush_status'] );
@@ -55,19 +55,27 @@ function wfGetHistory( $u_id ) {
 				$href = ' href="javascript:UserStatus.insertStatusFromHistory(' . $status_id .
 					');"';
 			}
-			
+
+			$likeSymbol = '&#9829;';
+			// Don't allow 1) the owner of the status update or 2) anonymous
+			// users to like the status
+			if ( !( $wgUser->getId() == $u_id ) && $wgUser->isLoggedIn() ) {
+				$likeSymbol = '<a href="javascript:UserStatus.like(' .
+					$wgUser->getId() . ',' . $status_id . ');">&#9829;</a>';
+			}
+
 			$output .= '<tr>
 				<td width="60" id="status-history-time">' .
 					$wgLang->timeanddate( wfTimestamp( TS_MW, $row['ush_timestamp'] ), true ) .
 				'</td>
 				<td width="360">
-					<a id="status-history-entry-' . $status_id . '"' . $href . '>'. $us . '</a>
+					<a id="status-history-entry-' . $status_id . '"' . $href .
+						'>' . $us . '</a>
 				</td>
 				<td width="30" id="like-status">
-				<span id="like-status-' . $status_id . '" >' . $status_likes . '<span>
-					<a href="javascript:UserStatus.like(' . $wgUser->getId() . ',' . $status_id .
-						');">&#9829;</a>
-				</td>
+				<span id="like-status-' . $status_id . '" >' . $status_likes .
+					'<span>' . $likeSymbol .
+				'</td>
 			</tr>';
 		}
 	}
@@ -79,10 +87,17 @@ function wfGetHistory( $u_id ) {
 
 $wgAjaxExportList[] = 'wfStatusLike';
 
-function wfStatusLike ( $u_id, $status_id ) {
-	$us_class = new UserStatusClass();
-	$count = $us_class->likeStatus( $u_id, $status_id );
-	return $count;	
+function wfStatusLike( $u_id, $status_id ) {
+	global $wgUser;
+	// Only logged-in users should be able to like people's statuses
+	// @todo CHECKME: maybe we should introduce a new permission for liking
+	// status updates and then use isAllowed( 'our-new-permission' ) here
+	// instead of isLoggedIn()?
+	if ( $wgUser->isLoggedIn() && $wgUser->getId() !== $u_id && !wfReadOnly() ) {
+		$us_class = new UserStatusClass();
+		$count = $us_class->likeStatus( $u_id, $status_id );
+		return $count;
+	}
 }
 
 $wgAjaxExportList[] = 'SpecialGetStatusByName';
@@ -101,8 +116,8 @@ function SpecialGetStatusByName( $user_name ) {
 		if ( !empty( $currentStatus ) ) {
 			$output .="CURRENT STATUS:<br />
 						<input id=\"ush_delete\" type=\"button\" value=\"Delete\"
-						onclick=\"javascript:UserStatus.specialStatusDelete('".$currentStatus['us_id']."');\">"
-						.$currentStatus['us_status'] . '<br /><br />';
+						onclick=\"javascript:UserStatus.specialStatusDelete('" . $currentStatus['us_id'] . "');\">"
+						. $currentStatus['us_status'] . '<br /><br />';
 		}
 
 		$output .= 'HISTORY:<br />';
@@ -113,8 +128,8 @@ function SpecialGetStatusByName( $user_name ) {
 		} else {
 			foreach ( $userHistory as $row ) {
 				$output .= "<input id=\"ush_delete\" type=\"button\" value=\"Delete\"
-							onclick=\"javascript:UserStatus.specialHistoryDelete('".$row['ush_id']."');\">"
-							.$row['ush_timestamp']." - ".$row['ush_status']." <br />";
+							onclick=\"javascript:UserStatus.specialHistoryDelete('" . $row['ush_id'] . "');\">"
+							. $row['ush_timestamp'] . ' - ' . $row['ush_status'] . ' <br />';
 			}
 		}
 	}
@@ -135,17 +150,12 @@ function SpecialStatusDelete( $id ) {
 	return '';
 }
 
-$wgHooks['MakeGlobalVariablesScript'][] = 'addJSGlobals';
+$wgHooks['MakeGlobalVariablesScript'][] = 'wfUserStatusAddJSGlobals';
 
-function addJSGlobals( $vars ) {
-	$vars['_US_EDIT'] = wfMsg( 'userstatus-edit' );
-	$vars['_US_SAVE'] = wfMsg( 'userstatus-save' );
-	$vars['_US_CANCEL'] = wfMsg( 'userstatus-cancel' );
-	$vars['_US_HISTORY'] = wfMsg( 'userstatus-history' );
+function wfUserStatusAddJSGlobals( $vars ) {
 	$vars['_US_LETTERS'] = wfMsg( 'userstatus-letters-left' );
 	return true;
 }
-
 
 $wgHooks['UserProfileBeginRight'][] = 'wfUserProfileStatusOutput';
 
@@ -192,11 +202,22 @@ function wfUserProfileStatusOutput( $user_profile ) {
 			}
 		}
 
+		$publicHistoryLink = '';
+		// Public history link to the masses (i.e. everyone who is not the
+		// owner of the profile; the owner has a history link in the edit links
+		// below)
+		if ( !( $user_profile->user_id == $wgUser->getId() ) ) {
+			$publicHistoryLink = '<br /> <a class="us-link" href="javascript:UserStatus.useHistory(' .
+				$user_profile->user_id . ');">' .
+				wfMsg( 'userstatus-history' ) . '</a>';
+		}
+
 		$output = '<div id="status-box">
 					<div id="status-box-top"></div>
 						<div id="status-box-content">
 							<div id="user-status-block">' .
 								htmlspecialchars( $userStatus ) . $editLink .
+								$publicHistoryLink .
 							'</div>';
 
 		// No need to show the editing controls to anyone else except the owner
@@ -217,9 +238,6 @@ function wfUserProfileStatusOutput( $user_profile ) {
 									<span id="status-letter-count"></span>
 								</div>
 							</div><!-- #status-edit-controls -->';
-		} else {
-			// Public history link to the masses
-			$output .= "<script>UserStatus.publicHistoryButton('{$user_profile->user_id}');</script>";
 		}
 
 		$output .= '</div>

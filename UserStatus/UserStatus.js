@@ -23,11 +23,6 @@ var UserStatus = {
 		document.getElementById( 'status-letter-count' ).innerHTML = len + ' ' + _US_LETTERS;
 	},
 
-	publicHistoryButton: function( id ) {
-		document.getElementById( 'user-status-block' ).innerHTML +=
-			'<br /> <a class="us-link" href="javascript:UserStatus.useHistory(' + id + ');">' + _US_HISTORY + '</a>';
-	},
-
 	/**
 	 * Enter the edit mode by hiding the current status message and displaying
 	 * the hidden input field which allows the user to enter a new status
@@ -79,14 +74,14 @@ var UserStatus = {
 			historyBlock.id = 'status-history-block';
 			statusBlock.appendChild( historyBlock );
 		}
-		
-		if ( historyBlock.style.display == "block" ) {
-			historyBlock.style.display = "none";
+
+		if ( historyBlock.style.display == 'block' ) {
+			historyBlock.style.display = 'none';
 		} else {
-			//This call should be here, as it fixes bug, 
-			//when history does not change after first status save
+			// This call should be here, as it fixes bug,
+			// when history does not change after first status save
 			sajax_do_call( 'wfGetHistory', [id], historyBlock );
-			historyBlock.style.display = "block";
+			historyBlock.style.display = 'block';
 		}
 	},
 
@@ -101,7 +96,7 @@ var UserStatus = {
 		document.getElementById( 'user-status-input' ).value =
 			jQuery( '#status-history-entry-' + statusId ).text();
 	},
-	
+
 	like: function( userID, messageID ) {
 		var div = document.getElementById( 'like-status-' + messageID );
 		sajax_do_call( 'wfStatusLike', [userID, messageID], div );
