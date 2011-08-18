@@ -27,18 +27,30 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 	public function execute( $params ) {
 		global $wgRequest, $wgOut, $wgUser, $wgUserBoardScripts;
 
-		// Add CSS & JS
-		$wgOut->addExtensionStyle( $wgUserBoardScripts . '/BoardBlast.css' );
-		$wgOut->addScriptFile( $wgUserBoardScripts . '/BoardBlast.js' );
-
-		$output = '';
-
 		// This feature is available only to logged-in users.
 		if ( !$wgUser->isLoggedIn() ) {
 			$wgOut->setPageTitle( wfMsg( 'boardblastlogintitle' ) );
 			$wgOut->addWikiMsg( 'boardblastlogintext' );
 			return '';
 		}
+
+		// Is the database locked?
+		if( wfReadOnly() ) {
+			$wgOut->readOnlyPage();
+			return false;
+		}
+
+		// Blocked through Special:Block? No access for you!
+		if( $wgUser->isBlocked() ) {
+			$wgOut->blockedPage( false );
+			return false;
+		}
+
+		// Add CSS & JS
+		$wgOut->addExtensionStyle( $wgUserBoardScripts . '/BoardBlast.css' );
+		$wgOut->addScriptFile( $wgUserBoardScripts . '/BoardBlast.js' );
+
+		$output = '';
 
 		if ( $wgRequest->wasPosted() ) {
 			$wgOut->setPageTitle( wfMsg( 'messagesenttitle' ) );
