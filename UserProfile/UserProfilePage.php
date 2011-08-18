@@ -779,7 +779,7 @@ class UserProfilePage extends Article {
 	 */
 	function getProfileTop( $user_id, $user_name ) {
 		global $wgTitle, $wgUser, $wgLang;
-		global $wgUserLevels, $wgEnableUserStatus;
+		global $wgUserLevels;
 
 		$stats = new UserStats( $user_id, $user_name );
 		$stats_data = $stats->getUserStats();
