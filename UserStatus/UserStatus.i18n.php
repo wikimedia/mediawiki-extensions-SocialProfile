@@ -12,6 +12,9 @@ $messages = array();
  * @author Yevhenii Vlasenko
  */
 $messages['en'] = array(
+	'userstatus' => 'Delete status updates',
+	'userstatus-enter-username' => 'Enter username:',
+	'userstatus-find' => 'Find',
 	'userstatus-edit' => 'Edit',
 	'userstatus-save' => 'Save',
 	'userstatus-cancel' => 'Cancel',
