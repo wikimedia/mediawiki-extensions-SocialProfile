@@ -188,6 +188,9 @@ $messages['lb'] = array(
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
+	'userstatus' => 'Избриши поднови на статус',
+	'userstatus-enter-username' => 'Внесете корисничко име:',
+	'userstatus-find' => 'Најди',
 	'userstatus-edit' => 'Уреди',
 	'userstatus-save' => 'Зачувај',
 	'userstatus-cancel' => 'Откажи',
