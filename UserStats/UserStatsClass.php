@@ -223,7 +223,7 @@ class UserStatsTrack {
 				__METHOD__
 			);
 
-			if ( $this->point_values[$field] ) {
+			if ( !empty( $this->point_values[$field] ) ) {
 				$this->updateTotalPoints();
 				if ( $wgUserStatsTrackWeekly ) {
 					$this->updateWeeklyPoints( 0 - ( $this->point_values[$field] ) );
