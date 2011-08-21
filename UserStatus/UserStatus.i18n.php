@@ -220,6 +220,9 @@ $messages['ms'] = array(
  * @author Siebrand
  */
 $messages['nl'] = array(
+	'userstatus' => 'Statusupdates verwijderen',
+	'userstatus-enter-username' => 'Voer een gebruikersnaam in:',
+	'userstatus-find' => 'Zoeken',
 	'userstatus-edit' => 'Bewerken',
 	'userstatus-save' => 'Opslaan',
 	'userstatus-cancel' => 'Annuleren',

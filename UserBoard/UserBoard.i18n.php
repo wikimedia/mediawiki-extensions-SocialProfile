@@ -2205,6 +2205,7 @@ $messages['ml'] = array(
 );
 
 /** Marathi (मराठी)
+ * @author Htt
  * @author Kaustubh
  * @author Mahitgar
  */
@@ -2242,7 +2243,7 @@ $messages['mr'] = array(
 	'userboard_myboard' => 'माझे बोर्ड',
 	'userboard_posted_ago' => '$1 पूर्वी पाठविला',
 	'userboard_private' => 'खासगी',
-	'userboard_public' => 'सार्वजनीक',
+	'userboard_public' => 'सार्वजनिक',
 	'userboard_messagetype' => 'संदेश प्रकार',
 	'userboard_nextpage' => 'पुढील',
 	'userboard_prevpage' => 'मागे',
