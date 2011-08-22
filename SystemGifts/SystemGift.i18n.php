@@ -1125,6 +1125,7 @@ ja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.',
  * @author Crochet.david
  * @author Hashar
  * @author IAlex
+ * @author Od1n
  * @author PieRRoMaN
  * @author Verdy p
  */
@@ -1168,6 +1169,7 @@ $messages['fr'] = array(
 	'ga-viewlist' => 'Voir la liste des cadeaux',
 	'topawards-edits' => 'Éditions',
 	'topawards-votes' => 'Votes',
+	'topawards-comments' => 'Commentaires',
 	'system_gift_received_subject' => 'Vous avez reçu le prix $1 sur {{SITENAME}} !',
 	'system_gift_received_body' => 'Bonjour $1,
 
