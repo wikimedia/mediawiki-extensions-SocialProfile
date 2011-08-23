@@ -174,6 +174,8 @@ $messages['ku-latn'] = array(
  * @author Robby
  */
 $messages['lb'] = array(
+	'userstatus-enter-username' => 'Benotzernumm uginn:',
+	'userstatus-find' => 'Fannen',
 	'userstatus-edit' => 'Änneren',
 	'userstatus-save' => 'Späicheren',
 	'userstatus-cancel' => 'Ofbriechen',

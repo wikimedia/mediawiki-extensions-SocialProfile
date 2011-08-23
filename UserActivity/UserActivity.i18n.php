@@ -842,11 +842,13 @@ $messages['sr-el'] = array(
 
 /** Swedish (Svenska)
  * @author Per
+ * @author WikiPhoenix
  */
 $messages['sv'] = array(
 	'useractivity' => 'Vänners aktivitet',
-	'useractivity-award' => '$1 {{PLURAL:$4|skickade ett meddelande till|skickade meddelanden till}} $3',
+	'useractivity-award' => '$1 fick en utmärkelse',
 	'useractivity-all' => 'Visa alla',
+	'useractivity-edit' => '$1 {{PLURAL:$4|redigerade sidan|redigerade följande sidor:}} $3',
 	'useractivity-foe' => '$1 {{PLURAL:$2|är nu en fiende till|är nu fiender till}} $3',
 	'useractivity-friend' => '$1 {{PLURAL:$2|är nu en vän med|är nu vänner med}} $3',
 	'useractivity-gift' => '$1 fick en present från $2',
@@ -856,6 +858,8 @@ $messages['sv'] = array(
 	'useractivity-group-friend' => '{{PLURAL:$1|en vän|$1 vänner}}',
 	'useractivity-siteactivity' => 'Sajtaktivitet',
 	'useractivity-title' => 'Vänners aktivitet',
+	'useractivity-user_message' => '$1 {{PLURAL:$4|skickade ett meddelande till|skickade meddelande till}} $3',
+	'useractivity-comment' => '$1 {{PLURAL:$4|kommenterade på sidan|kommenterade på följande sidor:}} $3',
 );
 
 /** Telugu (తెలుగు)
