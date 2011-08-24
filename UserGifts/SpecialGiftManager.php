@@ -237,18 +237,24 @@ class GiftManager extends SpecialPage {
 
 		// If the user isn't in the gift admin group, they can only create
 		// private gifts
-		if ( !in_array( 'giftadmin', $wgUser->getGroups() ) ) {
+		if ( !$wgUser->isAllowed( 'giftadmin' ) ) {
 			$form .= '<input type="hidden" name="access" value="1" />';
 		} else {
-			// FIXME: undefined variable gift (twice)
+			$publicSelected = $privateSelected = '';
+			if ( isset( $gift['access'] ) && $gift['access'] == 0 ) {
+				$publicSelected = ' selected="selected"';
+			}
+			if ( isset( $gift['access'] ) && $gift['access'] == 1 ) {
+				$privateSelected = ' selected="selected"';
+			}
 			$form .= '<tr>
 				<td class="view-form">' . wfMsg( 'giftmanager-access' ) . '</td>
 				<td>
 				<select name="access">
-					<option value="0"' . ( ( $gift['access'] == 0 ) ? ' selected="selected"' : '' ) . '>' .
+					<option value="0"' . $publicSelected . '>' .
 						wfMsg( 'giftmanager-public' ) .
 					'</option>
-					<option value="1"' . ( ( $gift['access'] == 1 ) ? ' selected="selected"' : '' ) . '>' .
+					<option value="1"' . $privateSelected . '>' .
 						wfMsg( 'giftmanager-private' ) .
 					'</option>
 				</select>
