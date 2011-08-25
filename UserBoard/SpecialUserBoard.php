@@ -146,7 +146,7 @@ class SpecialViewUserBoard extends SpecialPage {
 			$output .= '<div class="user-page-message-top">
 			<span class="user-page-message-count" style="font-size:11px;color:#666666;">'
 				. wfMsg( 'userboard_showingmessages', $total, $start, $end, $end - $start + 1 ) .
-			".</span> {$board_to_board}</span>
+			"</span> {$board_to_board}
 			</div>";
 		}
 

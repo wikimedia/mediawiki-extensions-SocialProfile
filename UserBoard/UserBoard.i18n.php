@@ -53,7 +53,7 @@ $messages['en'] = array(
 	'userboard_nomessages' => 'No messages.',
 	'userboard_sendbutton' => 'send',
 	'userboard_loggedout' => 'You must be <a href="$1">logged in</a> to post messages to other users.',
-	'userboard_showingmessages' => 'Showing {{PLURAL:$4|message $3|messages $2-$3}} of {{PLURAL:$1|$1 message|$1 messages}}',
+	'userboard_showingmessages' => 'Showing {{PLURAL:$4|message $3|messages $2-$3}} of {{PLURAL:$1|$1 message|$1 messages}}.',
 	'right-userboard-delete' => "Delete others' board messages",
 	'userboard-time-days' => '{{PLURAL:$1|one day|$1 days}}',
 	'userboard-time-hours' => '{{PLURAL:$1|one hour|$1 hours}}',
