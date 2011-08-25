@@ -1125,8 +1125,8 @@ $messages['frp'] = array(
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Present mandâ|Presents mandâs}}',
 	'level-advanced-to' => 'at avanciê vers lo nivél <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Vos avéd dês ora un « $1 » dessus {{SITENAME}} !',
-	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' pouents",
-	'user-stats-report-points' => "'''$1''' pouents",
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' pouent{{PLURAL:$3||s}} !",
+	'user-stats-report-points' => "'''$1''' pouent{{PLURAL:$1||s}} !",
 );
 
 /** Galician (Galego)
@@ -1191,7 +1191,7 @@ Quere deixar de recibir correos electrónicos nosos?
 
 Faga clic $3
 e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
-	'user-stats-report-points' => "'''$1''' puntos",
+	'user-stats-report-points' => "'''$1''' {{PLURAL:$1|punto|puntos}}",
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)

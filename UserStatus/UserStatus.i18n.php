@@ -109,10 +109,13 @@ $messages['fr'] = array(
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
+	'userstatus-enter-username' => 'Buchiéd un nom d’utilisator :',
+	'userstatus-find' => 'Rechèrchiér',
 	'userstatus-edit' => 'Changiér',
 	'userstatus-save' => 'Encartar',
 	'userstatus-cancel' => 'Anular',
 	'userstatus-history' => 'Historico',
+	'userstatus-blocked' => 'Vos éte blocâ',
 	'userstatus-readonly' => 'La bâsa de balyês est vèrrolyê',
 );
 
@@ -120,12 +123,17 @@ $messages['frp'] = array(
  * @author Toliño
  */
 $messages['gl'] = array(
+	'userstatus' => 'Borrar as actualizacións do estado',
+	'userstatus-enter-username' => 'Escriba un nome de usuario:',
+	'userstatus-find' => 'Atopar',
 	'userstatus-edit' => 'Editar',
 	'userstatus-save' => 'Gardar',
 	'userstatus-cancel' => 'Cancelar',
 	'userstatus-history' => 'Historial',
+	'userstatus-letters-left' => 'letras restantes',
 	'userstatus-blocked' => 'Está bloqueado',
 	'userstatus-readonly' => 'A base de datos está bloqueada',
+	'right-delete-status-update' => 'Borrar as mensaxes de estado doutros usuarios',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)

@@ -340,6 +340,7 @@ $messages['gl'] = array(
 	'useractivity-siteactivity' => 'Actividade do sitio',
 	'useractivity-title' => 'Actividade dos amigos',
 	'useractivity-user_message' => '$1 enviou {{PLURAL:$4|unha mensaxe|mensaxes}} a $3',
+	'useractivity-comment' => '$1 comentou {{PLURAL:$4|na páxina|nas seguintes páxinas:}} $3',
 );
 
 /** Swiss German (Alemannisch)
