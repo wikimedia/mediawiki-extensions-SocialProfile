@@ -28,6 +28,16 @@ $wgAvailableRights[] = 'editothersprofiles';
 $wgGroupPermissions['sysop']['avatarremove'] = true;
 $wgGroupPermissions['staff']['editothersprofiles'] = true;
 
+// ResourceLoader support for MediaWiki 1.17+
+// Modules for Special:EditProfile/Special:UpdateProfile
+$wgResourceModules['ext.userProfile.updateProfile'] = array(
+	'styles' => 'UserProfile.css',
+	'scripts' => 'UpdateProfile.js',
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'SocialProfile/UserProfile',
+	'position' => 'top'
+);
+
 # Add new log types for profile edits and avatar uploads
 global $wgLogTypes, $wgLogNames, $wgLogHeaders, $wgLogActions;
 $wgLogTypes[]                    = 'profile';

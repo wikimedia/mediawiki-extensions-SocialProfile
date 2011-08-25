@@ -55,7 +55,11 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 
 		// Add CSS & JS
 		$wgOut->addExtensionStyle( $wgUserProfileScripts . '/UserProfile.css' );
-		$wgOut->addScriptFile( $wgUserProfileScripts . '/UpdateProfile.js' );
+		if ( defined( 'MW_SUPPORTS_RESOURCE_MODULES' ) ) {
+			$wgOut->addModuleScripts( 'ext.userProfile.updateProfile' );
+		} else {
+			$wgOut->addScriptFile( $wgUserProfileScripts . '/UpdateProfile.js' );
+		}
 
 		// Get the user's name from the wpUser URL parameter
 		$userFromRequest = $wgRequest->getText( 'wpUser' );

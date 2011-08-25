@@ -80,7 +80,11 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		// Add CSS & JS
 		$wgOut->addExtensionStyle( $wgUserProfileScripts . '/UserProfile.css' );
-		$wgOut->addScriptFile( $wgUserProfileScripts . '/UpdateProfile.js' );
+		if ( defined( 'MW_SUPPORTS_RESOURCE_MODULES' ) ) {
+			$wgOut->addModuleScripts( 'ext.userProfile.updateProfile' );
+		} else {
+			$wgOut->addScriptFile( $wgUserProfileScripts . '/UpdateProfile.js' );
+		}
 
  		if ( $wgRequest->wasPosted() ) {
 			if ( !$section ) {
