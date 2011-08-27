@@ -184,7 +184,7 @@ $messages['ar'] = array(
 	'userboard_showingmessages' => 'يعرض {{PLURAL:$4||الرسالة $3|الرسالتين $2-$3|الرسائل $2-$3}} من أصل {{PLURAL:$1||رسالة واحدة|رسالتين|$1 رسائل|$1 رسالة}}',
 	'right-userboard-delete' => 'حذف رسائل حائط الآخرين',
 	'userboard-time-days' => '{{PLURAL:$1||يوم واحد|يومان|$1 أيام|$1 يومًا|$1 يوم}}',
-	'userboard-time-hours' => '{{PLURAL:$1||ساعة واحد|ساعتان|$1 ساعات|$1 ساعة}}',
+	'userboard-time-hours' => '{{PLURAL:$1||ساعة واحدة|ساعتان|$1 ساعات|$1 ساعة}}',
 	'userboard-time-minutes' => '{{PLURAL:$1||دقيقة واحدة|دقيقتان|$1 دقائق|$1 دقيقة}}',
 	'userboard-time-seconds' => '{{PLURAL:$1||ثانية واحدة|ثانيتان|$1 ثوانٍ|$1 ثانية}}',
 	'message_received_subject' => '$1 كتب على مجلسك في {{SITENAME}}',
@@ -416,7 +416,7 @@ $3
  */
 $messages['bn'] = array(
 	'messagesenttitle' => 'বার্তা প্রেরিত',
-	'boardlinkselectall' => 'সমস্ত নির্বাচন করুন',
+	'boardlinkselectall' => 'সবগুলো নির্বাচন',
 	'boardlinkunselectall' => 'সমস্ত নির্বাচন বাতিল করুন',
 	'boardlinkselectfriends' => 'বন্ধু নির্বাচন',
 	'userboard_board-to-board' => 'বোর্ড-থেকে-বোর্ডে',

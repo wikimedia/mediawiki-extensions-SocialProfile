@@ -182,6 +182,7 @@ $messages['ku-latn'] = array(
  * @author Robby
  */
 $messages['lb'] = array(
+	'userstatus' => 'Aktualisatioune vum Statut läschen',
 	'userstatus-enter-username' => 'Benotzernumm uginn:',
 	'userstatus-find' => 'Fannen',
 	'userstatus-edit' => 'Änneren',
