@@ -1286,6 +1286,10 @@ $messages['gl'] = array(
 	'ga-cancel' => 'Cancelar',
 	'ga-remove' => 'Eliminar',
 	'ga-remove-title' => 'Quere eliminar "$1"?',
+	'ga-delete-message' => 'Está seguro de querer eliminar o agasallo "$1"?
+Isto tamén o borrará dos usuarios que o recibiron.',
+	'ga-remove-success-title' => 'Eliminou con éxito o agasallo "$1"',
+	'ga-remove-success-message' => 'O agasallo "$1" foi eliminado.',
 	'topawards-edits' => 'Edicións',
 	'topawards-votes' => 'Votos',
 	'topawards-comments' => 'Comentarios',
@@ -2853,6 +2857,7 @@ $messages['roa-tara'] = array(
 );
 
 /** Russian (Русский)
+ * @author Alexandr Efremov
  * @author Ferrer
  * @author Innv
  * @author Александр Сигачёв
@@ -2895,6 +2900,7 @@ $messages['ru'] = array(
 	'ga-title' => 'Награды $1',
 	'ga-uploadsuccess' => 'Загрузка успешно завершена',
 	'ga-viewlist' => 'Просмотр списка подарков',
+	'ga-cancel' => 'Отмена',
 	'system_gift_received_subject' => 'Вы получили награду $1 на {{SITENAME}}!',
 	'system_gift_received_body' => 'Здравствуйте, $1.
 

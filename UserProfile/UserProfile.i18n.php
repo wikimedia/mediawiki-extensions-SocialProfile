@@ -4147,6 +4147,7 @@ $messages['gl'] = array(
 	'user-time-ago' => 'hai $1',
 	'user-awards-title' => 'Premios',
 	'user-gifts-title' => 'Agasallos',
+	'user-fanbox-title' => 'Caixas para afeccionados',
 	'user-count-separator' => '$1 de $2',
 	'user-view-all' => 'Ver todo',
 	'user-upload-image' => 'Cargar unha imaxe',
@@ -4171,6 +4172,10 @@ $messages['gl'] = array(
 	'user-stats-picture-game-votes' => '{{PLURAL:$1|Voto|Votos}} da imaxe do xogo',
 	'user-stats-quiz-points' => '{{PLURAL:$1|Punto|Puntos}} do concurso',
 	'user-stats-pick-points' => '{{PLURAL:$1|Punto|Puntos}} que obtiven',
+	'casual-games-title' => 'Xogos casuais',
+	'casual-game-quiz' => 'Cuestionario',
+	'casual-game-poll' => 'Enquisa',
+	'casual-game-picture-game' => 'Xogo de imaxes',
 	'other-info-title' => 'Outra información',
 	'user-friends-title' => 'Amigos',
 	'user-foes-title' => 'Inimigos',
@@ -6318,6 +6323,7 @@ $messages['ku-latn'] = array(
  * @author Robby
  */
 $messages['lb'] = array(
+	'editprofile' => 'Anere Benotzer hir Profiler änneren',
 	'populateuserprofiles' => 'Benotzerprofiler completéieren',
 	'user-time-ago' => 'viru(n) $1',
 	'user-awards-title' => 'Präisser',
@@ -6346,6 +6352,7 @@ $messages['lb'] = array(
 	'user-stats-quiz-points' => '{{PLURAL:$1|Punkt|Punkten}} am Quiz',
 	'user-stats-pick-points' => '{{PLURAL:$1|Punkt|Punkte}} fonnt',
 	'casual-game-quiz' => 'Quiz',
+	'casual-game-poll' => 'Ëmfro',
 	'other-info-title' => 'Aner Informatiounen',
 	'user-friends-title' => 'Frënn',
 	'user-foes-title' => 'Géigner',
@@ -6394,6 +6401,7 @@ $messages['lb'] = array(
 	'user-profile-update-notloggedin-text' => 'Dir kënnt Äre Profil net änneren wann dir net ageloggt sidd.
 Klickt [[Special:UserLogin|hei]] fir Iech anzeloggen oder klickt [[Special:UserLogin/signup|hei]] fir Iech unzemellen.',
 	'user-profile-update-saved' => 'Äre Profil gouf ofgespäichert',
+	'user-profile-edit-profile-update-saved' => 'De Benotzerprofil gouf gespäichert',
 	'user-profile-update-log-section' => 'Abschnitt änneren',
 	'user-profile-default-country' => 'Lëtzebuerg',
 	'user-profile-points' => '$1 {{PLURAL:$1|Punkt|Punkten}}',
@@ -6466,6 +6474,7 @@ Klickt [[Special:UserLogin|hei]] fir Iech anzeloggen oder klickt [[Special:UserL
 	'user-profile-userlevels-link' => 'Benotzerniveauen',
 	'user-no-images' => 'Kee Bild eropgelueden',
 	'edit-profile-title' => 'Äre Profil änneren',
+	'edit-profiles-title' => 'Profiler änneren',
 	'user-page-link' => 'Benotzersäit',
 	'user-social-profile-link' => 'Soziale Profil',
 	'user-wiki-link' => 'Wiki Benotzersäit',
@@ -6492,6 +6501,7 @@ Klickt [[Special:UserLogin|hei]] fir Iech anzeloggen oder klickt [[Special:UserL
 	'user-profile-picture-log-entry' => 'huet ee neien Avatar eropgelueden',
 	'user-profile-picture-log-delete-entry' => 'huet dem $1 säin Avatar geläscht',
 	'right-avatarremove' => 'Benotzeravataren ewechhuelen',
+	'right-editothersprofiles' => 'Anere Benotzer hir sozial Profiler aktualiséieren',
 );
 
 /** Lithuanian (Lietuvių)

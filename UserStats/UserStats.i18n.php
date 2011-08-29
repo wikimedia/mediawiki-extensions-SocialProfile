@@ -1191,7 +1191,9 @@ Quere deixar de recibir correos electrónicos nosos?
 
 Faga clic $3
 e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' {{PLURAL:$3|punto|puntos}}!",
 	'user-stats-report-points' => "'''$1''' {{PLURAL:$1|punto|puntos}}",
+	'user-stats-report-generation-note' => 'esta páxina foi xerada automaticamente',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)
