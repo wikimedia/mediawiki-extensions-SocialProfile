@@ -281,6 +281,7 @@ $messages['fi'] = array(
 );
 
 /** French (Français)
+ * @author Gomoko
  * @author IAlex
  * @author Verdy p
  * @author Y-M D
@@ -300,6 +301,7 @@ $messages['fr'] = array(
 	'useractivity-siteactivity' => 'Activité du site',
 	'useractivity-title' => 'Activité des amis',
 	'useractivity-user_message' => '$1 a envoyé {{PLURAL:$4|un message|des messages}} à $3',
+	'useractivity-comment' => '$1 a fait des commentaires sur {{PLURAL:$4|la page|les pages:}} $3',
 );
 
 /** Franco-Provençal (Arpetan)

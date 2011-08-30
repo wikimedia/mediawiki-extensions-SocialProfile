@@ -95,14 +95,21 @@ $messages['es'] = array(
 );
 
 /** French (Français)
+ * @author Gomoko
  * @author Hashar
  */
 $messages['fr'] = array(
+	'userstatus' => 'Supprimer les mises à jour de statut',
+	'userstatus-enter-username' => "Entrez le nom de l'utilisateur:",
+	'userstatus-find' => 'Trouver',
+	'userstatus-edit' => 'Modifier',
 	'userstatus-save' => 'Sauver',
 	'userstatus-cancel' => 'Annuler',
 	'userstatus-history' => 'Historique',
+	'userstatus-letters-left' => 'lettres à gauche',
 	'userstatus-blocked' => 'Vous êtes bloqué',
 	'userstatus-readonly' => 'La base de données est bloquée',
+	'right-delete-status-update' => 'Supprimer les messages de statut des autres utilisateurs',
 );
 
 /** Franco-Provençal (Arpetan)
