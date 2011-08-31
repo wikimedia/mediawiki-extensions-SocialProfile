@@ -1029,6 +1029,7 @@ ja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.',
 /** French (Français)
  * @author Cedric31
  * @author Crochet.david
+ * @author Gomoko
  * @author Grondin
  * @author Hashar
  * @author IAlex
@@ -1079,6 +1080,7 @@ $messages['fr'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|cadeau reçu|cadeaux reçus}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|cadeau envoyé|cadeaux envoyés}}',
 	'right-updatepoints' => 'Mise à jour du compteur d’éditions',
+	'right-generatetopusersreport' => 'Générer les rapports des utilisateurs principaux',
 	'level-advanced-to' => 'a avancé vers le niveau <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Vous avez désormais un « $1 » sur {{SITENAME}} !',
 	'level-advance-body' => 'Salut $1 :
@@ -1094,10 +1096,20 @@ Voulez-vous arrêter de recevoir des courriels de notre part ?
 
 Cliquez $3
 et modifiez vos paramètres en désactivant les notifications par courriel.',
-	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' points",
-	'user-stats-report-points' => "'''$1''' points",
+	'generatetopusersreport' => 'Générer le rapport des utilisateurs principaux',
+	'user-stats-weekly-winners' => '{{PLURAL:$1|Gagnant de la semaine|Gagnants de la semaine}}',
+	'user-stats-monthly-winners' => '{{PLURAL:$1|Gagnant|Gagnants}} du mois',
+	'user-stats-weekly-win-congratulations' => "Félicitations {{PLURAL:$1|à l'utilisateur suivant|aux utilisateurs suivants}}, qui {{PLURAL:$1|a|ont}} gagné un prix hebdomadaire et $2 {{PLURAL:$2|point supplémentaire|points supplémentaires}}!",
+	'user-stats-monthly-win-congratulations' => "Félicitations {{PLURAL:$1|à l'utilisateur suivant|aux utilisateurs suivants}}, qui {{PLURAL:$1|a|ont}} gagné un prix mensuel et $2 {{PLURAL:$2|point supplémentaire|points supplémentaires}}!",
+	'user-stats-full-top' => 'Top $1 complet',
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' {{PLURAL:$3|point|points}}!",
+	'user-stats-report-points' => "'''$1''' {{PLURAL:$1|point|points}}!",
+	'user-stats-report-generation-note' => 'cette page a été générée automatiquement',
 	'user-stats-report-weekly-edit-summary' => 'Rapport utilisateur hebdomadaire',
 	'user-stats-report-monthly-edit-summary' => 'Rapport utilisateur mensuel',
+	'user-stats-report-weekly-page-title' => 'Rapport hebdomadaire des points utilisateur ($1)',
+	'user-stats-report-monthly-page-title' => 'Rapport mensuel des points utilisateur ($1)',
+	'user-stats-report-error-variable-not-set' => 'La variable $wgUserStatsPointValues[\'points_winner_$1\'] doit avoir une valeur supérieure à 0 dans LocalSettings.php!',
 );
 
 /** Franco-Provençal (Arpetan)

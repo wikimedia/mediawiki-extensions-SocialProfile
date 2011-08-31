@@ -3767,6 +3767,7 @@ $messages['fi'] = array(
 /** French (Français)
  * @author Crochet.david
  * @author Damouns
+ * @author Gomoko
  * @author Grondin
  * @author IAlex
  * @author McDutchie
@@ -3779,6 +3780,7 @@ $messages['fr'] = array(
 	'user-time-ago' => 'Il y a $1',
 	'user-awards-title' => 'Récompenses',
 	'user-gifts-title' => 'Cadeaux',
+	'user-fanbox-title' => 'Fanbox',
 	'user-count-separator' => '$1 sur $2',
 	'user-view-all' => 'Tout voir',
 	'user-upload-image' => 'Importer une image',
@@ -3803,6 +3805,10 @@ $messages['fr'] = array(
 	'user-stats-picture-game-votes' => 'Vote{{PLURAL:$1||s}} pour le jeu d’images',
 	'user-stats-quiz-points' => 'Point{{PLURAL:$1||s}} au quiz',
 	'user-stats-pick-points' => '{{PLURAL:$1|Point trouvé|Points trouvés}}',
+	'casual-games-title' => 'Jeux occasionnels',
+	'casual-game-quiz' => 'Question-réponse',
+	'casual-game-poll' => 'Sondage',
+	'casual-game-picture-game' => "Jeu d'image",
 	'other-info-title' => 'Autres informations',
 	'user-friends-title' => 'Amis',
 	'user-foes-title' => 'Ennemis',

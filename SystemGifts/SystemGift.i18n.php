@@ -1123,6 +1123,7 @@ ja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.',
 
 /** French (Français)
  * @author Crochet.david
+ * @author Gomoko
  * @author Hashar
  * @author IAlex
  * @author Od1n
@@ -1167,9 +1168,31 @@ $messages['fr'] = array(
 	'ga-title' => 'Prix de $1',
 	'ga-uploadsuccess' => 'Téléchargement effectué avec succès',
 	'ga-viewlist' => 'Voir la liste des cadeaux',
+	'ga-cancel' => 'Annuler',
+	'ga-remove' => 'Supprimer',
+	'ga-remove-title' => 'Supprimer "$1"?',
+	'ga-delete-message' => 'Êtes-vous sûrs de vouloir supprimer le cadeau "$1"?
+Cela le supprimera aussi pour les utilisateurs qui l\'auraient reçu.',
+	'ga-remove-success-title' => 'Vous avez bien supprimé le cadeau "$1"',
+	'ga-remove-success-message' => 'Le cadeau "$1" a été supprimé.',
+	'topawards' => 'Premiers prix',
+	'topawards-edit-title' => 'Premiers prix - Modifier les jalons',
+	'topawards-vote-title' => 'Premiers prix - Voter pour les jalons',
+	'topawards-comment-title' => 'Premiers prix - Commenter les jalons',
+	'topawards-recruit-title' => 'Premiers prix - Recruter des jalons',
+	'topawards-friend-title' => 'Premiers prix - Jalons amis',
+	'topawards-award-categories' => 'Catégories de prix',
 	'topawards-edits' => 'Éditions',
 	'topawards-votes' => 'Votes',
 	'topawards-comments' => 'Commentaires',
+	'topawards-recruits' => 'Recrues',
+	'topawards-friends' => 'Amis',
+	'topawards-edit-milestone' => '{{PLURAL:$1|$1 modification|$1 modifications}} des jalons',
+	'topawards-vote-milestone' => '{{PLURAL:$1|$1 vote|$1 votes}} pour le jalon',
+	'topawards-comment-milestone' => '{{PLURAL:$1|$1 commentaire|$1 commentaires}} pour le jalon',
+	'topawards-recruit-milestone' => '{{PLURAL:$1|$1 recrue|$1 recrues}} pour le jalon',
+	'topawards-friend-milestone' => '{{PLURAL:$1|$1 ami|$1 amis}} pour le jalon',
+	'topawards-empty' => "Soit il n'y a aucun prix configuré  pour cette catégorie, soit personne n'a encore obtenu ces prix.",
 	'system_gift_received_subject' => 'Vous avez reçu le prix $1 sur {{SITENAME}} !',
 	'system_gift_received_body' => 'Bonjour $1,
 
