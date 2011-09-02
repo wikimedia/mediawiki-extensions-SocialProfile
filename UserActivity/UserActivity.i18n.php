@@ -793,6 +793,7 @@ $messages['ru'] = array(
 	'useractivity-siteactivity' => 'Активность сайта',
 	'useractivity-title' => 'Действия друзей',
 	'useractivity-user_message' => '$1 отправил {{PLURAL:$4|сообщение|сообщения}} $3',
+	'useractivity-comment' => '$1 {{PLURAL:$4|прокомментировал страницу|прокомментировал следующие страницы:}} $3',
 );
 
 /** Rusyn (Русиньскый)
