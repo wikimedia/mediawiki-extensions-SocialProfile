@@ -37,13 +37,21 @@ $messages['qqq'] = array(
 
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
+ * @author Renessaince
  * @author Wizardist
  */
 $messages['be-tarask'] = array(
+	'userstatus' => 'Выдаліць абнаўленьні статусу',
+	'userstatus-enter-username' => 'Увядзіце імя ўдзельніка:',
+	'userstatus-find' => 'Знайсьці',
 	'userstatus-edit' => 'Рэдагаваць',
 	'userstatus-save' => 'Захаваць',
 	'userstatus-cancel' => 'Скасаваць',
 	'userstatus-history' => 'Гісторыя',
+	'userstatus-letters-left' => 'сымбаляў засталося',
+	'userstatus-blocked' => 'Вы заблякаваныя',
+	'userstatus-readonly' => 'База зьвестак заблякаваная',
+	'right-delete-status-update' => 'Выдаляць статусы іншых карыстальнікаў',
 );
 
 /** Bulgarian (Български)

@@ -1126,6 +1126,7 @@ $messages['be'] = array(
  * @author EugeneZelenko
  * @author Jim-by
  * @author Red Winged Duck
+ * @author Renessaince
  * @author Wizardist
  * @author Zedlik
  */
@@ -1135,6 +1136,7 @@ $messages['be-tarask'] = array(
 	'user-time-ago' => '$1 таму',
 	'user-awards-title' => 'Узнагароды',
 	'user-gifts-title' => 'Падарункі',
+	'user-fanbox-title' => 'Скрынкі заўзятараў',
 	'user-count-separator' => '$1 з $2',
 	'user-view-all' => 'Праглядзець усё',
 	'user-upload-image' => 'Загрузіць выяву',
@@ -1159,6 +1161,10 @@ $messages['be-tarask'] = array(
 	'user-stats-picture-game-votes' => '{{PLURAL:$1|Голас у|Галасы ў|Галасоў у}} гульні з выявамі',
 	'user-stats-quiz-points' => '{{PLURAL:$1|Экзамэнацыйны пункт|Экзамэнацыйныя пункты|Экзамэнацыйных пунктаў}}',
 	'user-stats-pick-points' => '{{PLURAL:$1|Атрыманы пункт|Атрыманыя пункты|Атрыманых пунктаў}}',
+	'casual-games-title' => 'Выпадковыя гульні',
+	'casual-game-quiz' => 'Віктарына',
+	'casual-game-poll' => 'Апытаньне',
+	'casual-game-picture-game' => 'Малюнкавая гульня',
 	'other-info-title' => 'Іншая інфармацыя',
 	'user-friends-title' => 'Сябры',
 	'user-foes-title' => 'Ворагі',

@@ -324,6 +324,7 @@ $messages['az'] = array(
  * @author EugeneZelenko
  * @author Jim-by
  * @author Red Winged Duck
+ * @author Renessaince
  * @author Zedlik
  */
 $messages['be-tarask'] = array(
@@ -364,6 +365,31 @@ $messages['be-tarask'] = array(
 	'ga-title' => 'Узнагароды $1',
 	'ga-uploadsuccess' => 'Пасьпяховая загрузка',
 	'ga-viewlist' => 'Паказаць сьпіс падарункаў',
+	'ga-cancel' => 'Скасаваць',
+	'ga-remove' => 'Выдаліць',
+	'ga-remove-title' => 'Выдаліць «$1»?',
+	'ga-delete-message' => 'Вы ўпэўненыя, што жадаеце выдаліць падарунак «$1»?
+Ён будзе выдалены і ва ўдзельнікаў, якія маглі яго атрымаць.',
+	'ga-remove-success-title' => 'Вы пасьпяхова выдалілі падарунак «$1»',
+	'ga-remove-success-message' => 'Падарунак «$1» быў выдалены.',
+	'topawards' => 'Найлепшыя ўзнагароды',
+	'topawards-edit-title' => 'Найлепшыя ўзнагароды — эпахальныя рэдагаваньні',
+	'topawards-vote-title' => 'Найлепшыя ўзнагароды — эпахальныя галасаваньні',
+	'topawards-comment-title' => 'Найлепшыя ўзнагароды — эпахальныя камэнтары',
+	'topawards-recruit-title' => 'Найлепшыя ўзнагароды — эпахальныя пачаткоўцы',
+	'topawards-friend-title' => 'Найлепшыя ўзнагароды — эпахальныя сябры',
+	'topawards-award-categories' => 'Катэгорыі ўзнагародаў',
+	'topawards-edits' => 'Рэдагаваньні',
+	'topawards-votes' => 'Галасы',
+	'topawards-comments' => 'Камэнтары',
+	'topawards-recruits' => 'Пачаткоўцы',
+	'topawards-friends' => 'Сябры',
+	'topawards-edit-milestone' => '{{PLURAL:$1|$1 эпахальнае рэдагаваньне|$1 эпахальныя рэдагаваньні|$1 эпахальных рэдагаваньняў}}',
+	'topawards-vote-milestone' => '{{PLURAL:$1|$1 эпахальнае галасаваньне|$1 эпахальныя галасаваньні|$1 эпахальных галасаваньняў}}',
+	'topawards-comment-milestone' => '{{PLURAL:$1|$1 эпахальны камэнтар|$1 эпахальныя камэнтары|$1 эпахальных камэнтароў}}',
+	'topawards-recruit-milestone' => '{{PLURAL:$1|$1 эпахальны навічок|$1 эпахальныя навічкі|$1 эпахальных навічкоў}}',
+	'topawards-friend-milestone' => '{{PLURAL:$1|$1 эпахальны сябар|$1 эпахальныя сябры|$1 эпахальных сяброў}}',
+	'topawards-empty' => 'Альбо для гэтае катэгорыі ўзнагародаў няма сканфігураваных узнагародаў, альбо ніхто яшчэ не атрымоўваў гэтыя ўзнагароды.',
 	'system_gift_received_subject' => 'Вы атрымалі ўзнагароду $1 у {{GRAMMAR:месны|{{SITENAME}}}}!',
 	'system_gift_received_body' => 'Прывітаньне, $1.
 

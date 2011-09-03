@@ -111,6 +111,7 @@ $messages['arc'] = array(
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
+ * @author Renessaince
  */
 $messages['be-tarask'] = array(
 	'useractivity' => 'Актыўнасьць сяброў',
@@ -127,6 +128,7 @@ $messages['be-tarask'] = array(
 	'useractivity-siteactivity' => 'Актыўнасьць на сайце',
 	'useractivity-title' => 'Актыўнасьць сяброў',
 	'useractivity-user_message' => '$1 {{GENDER:$6|даслаў|даслала}} {{PLURAL:$4|паведамленьне|паведамленьні}} $3',
+	'useractivity-comment' => '$1 камэнтаваў на {{PLURAL:$4|старонцы|наступных старонках:}} $3',
 );
 
 /** Bengali (বাংলা)

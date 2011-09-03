@@ -301,6 +301,7 @@ $messages['arz'] = array(
  * @author EugeneZelenko
  * @author Jim-by
  * @author Red Winged Duck
+ * @author Renessaince
  * @author Wizardist
  * @author Zedlik
  */
@@ -365,6 +366,16 @@ $messages['be-tarask'] = array(
 	'user-stats-weekly-winners' => '{{PLURAL:$1|Штотыднёвы пераможца|Штотыднёвыя пераможцы}}',
 	'user-stats-monthly-winners' => '{{PLURAL:$1|Штомесячны пераможца|Штомесячныя пераможцы}}',
 	'user-stats-weekly-win-congratulations' => 'Віншуем {{PLURAL:$1|наступнага ўдзельніка, які стаў пераможцам тыдню і зарабіў|наступных удзельнікаў, якія сталі пераможцамі тыдню і зарабілі}} $2 {{PLURAL:$2|дадатковае ачко|дадатковыя ачкі|дадатковых ачкоў}}!',
+	'user-stats-monthly-win-congratulations' => 'Віншуем {{PLURAL:$1|наступнага ўдзельніка, які стаў пераможцам месяцу і зарабіў|наступных удзельнікаў, якія сталі пераможцамі месяцу і зарабілі}} $2 {{PLURAL:$2|дадатковае ачко|дадатковыя ачкі|дадатковых ачкоў}}!',
+	'user-stats-full-top' => 'Поўны сьпіс лепшых $1',
+	'user-stats-report-row' => "($1) [[User:$2|$2]] — '''$3''' {{PLURAL:$3|ачко|ачкі|ачкоў}}!",
+	'user-stats-report-points' => "'''$1''' {{PLURAL:$1|пункт|пункты|пунктаў}}!",
+	'user-stats-report-generation-note' => 'гэтая старонка была згенэраваная аўтаматычна',
+	'user-stats-report-weekly-edit-summary' => 'аўтаматычны штотыднёвы пратакол удзельнікаў',
+	'user-stats-report-monthly-edit-summary' => 'аўтаматычны штомесячны пратакол удзельнікаў',
+	'user-stats-report-weekly-page-title' => 'Штотыднёвы пратакол пунктаў удзельнікаў ($1)',
+	'user-stats-report-monthly-page-title' => 'Штомесячны пратакол пунктаў удзельнікаў ($1)',
+	'user-stats-report-error-variable-not-set' => 'Зьменная $wgUserStatsPointValues[\'points_winner_$1\'] павінна мець значэньне, большае за 0, у LocalSettings.php!',
 );
 
 /** Bulgarian (Български)
