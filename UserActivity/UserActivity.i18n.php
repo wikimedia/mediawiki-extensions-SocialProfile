@@ -474,6 +474,7 @@ $messages['id'] = array(
  * @author Aotake
  * @author Hosiryuhosi
  * @author Naohiro19
+ * @author Schu
  * @author 青子守歌
  */
 $messages['ja'] = array(
@@ -491,6 +492,7 @@ $messages['ja'] = array(
 	'useractivity-siteactivity' => 'サイトの活動度',
 	'useractivity-title' => '友達の活動度',
 	'useractivity-user_message' => '$1 {{PLURAL:$2|は次の人にメッセージを送りました|は次の人々にメッセージを送りました}} $3',
+	'useractivity-comment' => '$1 {{PLURAL:$4|はページにコメントしました|は次にあげるページにコメントしました :}} $3',
 );
 
 /** Kannada (ಕನ್ನಡ)

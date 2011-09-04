@@ -1828,10 +1828,11 @@ $messages['it'] = array(
  * @author Fievarsty
  * @author Fryed-peach
  * @author Gzdavidwong
+ * @author Schu
  */
 $messages['ja'] = array(
 	'boardblastlogintitle' => '一斉メッセージを送るにはログインする必要があります',
-	'boardblastlogintext' => '一斉メッセージを送るには<a href="index.php?title=Special:UserLogin">ログイン</a>する必要があります。',
+	'boardblastlogintext' => '一斉メッセージを送るには [[Special:UserLogin|ログイン]]する必要があります。',
 	'messagesenttitle' => 'メッセージを送る',
 	'boardblasttitle' => '一斉メッセージの送信',
 	'boardblaststep1' => 'ステップ1 - メッセージを書きます',
