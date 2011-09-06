@@ -720,6 +720,7 @@ $messages['pms'] = array(
 	'useractivity-siteactivity' => 'Atività dël sit',
 	'useractivity-title' => "Atività dj'amis",
 	'useractivity-user_message' => "$1 {{PLURAL:$4|a l'ha mandà un messagi a|a l'ha mandà ëd messagi a}} $3",
+	'useractivity-comment' => "$1 a l'ha comentà {{PLURAL:$4|la pàgina|le pàgine sì-dapress:}} $3",
 );
 
 /** Pashto (پښتو)
