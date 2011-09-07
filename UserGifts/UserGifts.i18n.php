@@ -1748,6 +1748,9 @@ $messages['frp'] = array(
 	'g-to-another' => 'Balyér a quârqu’un d’ôtro',
 	'g-uploadsuccess' => 'Tèlèchargement reussi',
 	'g-viewgiftlist' => 'Vêre la lista des presents',
+	'g-your-profile' => 'Voutron profil',
+	'gift_received_subject' => '$1 vos at mandâ lo present $2 dessus {{SITENAME}} !',
+	'right-giftadmin' => 'Fâre ou ben changiér des presents',
 );
 
 /** Western Frisian (Frysk)

@@ -2773,7 +2773,7 @@ $messages['frp'] = array(
 	'ur-already-submitted' => 'Voutra requéta at étâ mandâ',
 	'ur-error-page-title' => 'Chancro !',
 	'ur-main-page' => 'Reçua',
-	'ur-your-profile' => 'Voutres enformacions',
+	'ur-your-profile' => 'Voutron profil',
 	'ur-backlink' => '&lt; Retôrn de vers les enformacions de $1',
 	'ur-relationship-count-foes' => '$1 at $2 ènemi{{PLURAL:$2||s}}.
 Nen voléd-vos adés més ?
