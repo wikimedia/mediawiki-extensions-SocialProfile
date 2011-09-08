@@ -29,6 +29,7 @@ $messages['en'] = array(
  * @author EugeneZelenko
  */
 $messages['qqq'] = array(
+	'userstatus-find' => '{{Identical|Find}}',
 	'userstatus-edit' => '{{Identical|Edit}}',
 	'userstatus-save' => '{{Identical|Save}}',
 	'userstatus-cancel' => '{{Identical|Cancel}}',
@@ -51,7 +52,7 @@ $messages['be-tarask'] = array(
 	'userstatus-letters-left' => 'сымбаляў засталося',
 	'userstatus-blocked' => 'Вы заблякаваныя',
 	'userstatus-readonly' => 'База зьвестак заблякаваная',
-	'right-delete-status-update' => 'Выдаляць статусы іншых карыстальнікаў',
+	'right-delete-status-update' => 'выдаленьне статусаў іншых удзельнікаў',
 );
 
 /** Bulgarian (Български)

@@ -371,11 +371,11 @@ $messages['be-tarask'] = array(
 	'user-stats-report-row' => "($1) [[User:$2|$2]] — '''$3''' {{PLURAL:$3|ачко|ачкі|ачкоў}}!",
 	'user-stats-report-points' => "'''$1''' {{PLURAL:$1|пункт|пункты|пунктаў}}!",
 	'user-stats-report-generation-note' => 'гэтая старонка была згенэраваная аўтаматычна',
-	'user-stats-report-weekly-edit-summary' => 'аўтаматычны штотыднёвы пратакол удзельнікаў',
-	'user-stats-report-monthly-edit-summary' => 'аўтаматычны штомесячны пратакол удзельнікаў',
-	'user-stats-report-weekly-page-title' => 'Штотыднёвы пратакол пунктаў удзельнікаў ($1)',
-	'user-stats-report-monthly-page-title' => 'Штомесячны пратакол пунктаў удзельнікаў ($1)',
-	'user-stats-report-error-variable-not-set' => 'Зьменная $wgUserStatsPointValues[\'points_winner_$1\'] павінна мець значэньне, большае за 0, у LocalSettings.php!',
+	'user-stats-report-weekly-edit-summary' => 'аўтаматычная штотыднёвая справаздача удзельнікаў',
+	'user-stats-report-monthly-edit-summary' => 'аўтаматычная штомесячная справаздача ўдзельнікаў',
+	'user-stats-report-weekly-page-title' => 'Штотыднёвая справаздача пунктаў удзельнікаў ($1)',
+	'user-stats-report-monthly-page-title' => 'Штомесячная справаздача пунктаў удзельнікаў ($1)',
+	'user-stats-report-error-variable-not-set' => 'Зьменная $wgUserStatsPointValues[\'points_winner_$1\'] у LocalSettings.php павінна мець значэньне, большае за 0!',
 );
 
 /** Bulgarian (Български)
@@ -1199,6 +1199,7 @@ $messages['gl'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Agasallo recibido|Agasallos recibidos}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Agasallo enviado|Agasallos enviados}}',
 	'right-updatepoints' => 'Actualizar o contador de edicións',
+	'right-generatetopusersreport' => 'Xerar informes dos principais usuarios',
 	'level-advanced-to' => 'avanzou ata o nivel <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Agora é un "$1" en {{SITENAME}}!',
 	'level-advance-body' => 'Ola $1:
@@ -1214,9 +1215,20 @@ Quere deixar de recibir correos electrónicos nosos?
 
 Faga clic $3
 e troque as súas configuracións para deshabilitar as notificacións por correo electrónico.',
+	'generatetopusersreport' => 'Xerar o informe dos principais usuarios',
+	'user-stats-weekly-winners' => '{{PLURAL:$1|Gañador|Gañadores}} da semana',
+	'user-stats-monthly-winners' => '{{PLURAL:$1|Gañador|Gañadores}} do mes',
+	'user-stats-weekly-win-congratulations' => 'Parabéns {{PLURAL:$1|ao seguinte usuario|aos seguintes usuarios}}, que {{PLURAL:$1|gañou|gañaron}} un premio semanal e $2 {{PLURAL:$2|punto adicional|puntos adicionais}}!',
+	'user-stats-monthly-win-congratulations' => 'Parabéns {{PLURAL:$1|ao seguinte usuario|aos seguintes usuarios}}, que {{PLURAL:$1|gañou|gañaron}} un premio mensual e $2 {{PLURAL:$2|punto adicional|puntos adicionais}}!',
+	'user-stats-full-top' => 'Os $1 primeiros',
 	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' {{PLURAL:$3|punto|puntos}}!",
 	'user-stats-report-points' => "'''$1''' {{PLURAL:$1|punto|puntos}}",
 	'user-stats-report-generation-note' => 'esta páxina foi xerada automaticamente',
+	'user-stats-report-weekly-edit-summary' => 'informe de usuarios semanal automático',
+	'user-stats-report-monthly-edit-summary' => 'informe de usuarios mensual automático',
+	'user-stats-report-weekly-page-title' => 'Informe semanal de puntos dos usuarios ($1)',
+	'user-stats-report-monthly-page-title' => 'Informe mensual de puntos dos usuarios ($1)',
+	'user-stats-report-error-variable-not-set' => 'A variable $wgUserStatsPointValues[\'points_winner_$1\'] debe ter un valor maior que 0 en LocalSettings.php!',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)
@@ -1548,11 +1560,11 @@ e disactiva in tu preferentias le notificationes per e-mail.',
 	'generatetopusersreport' => 'Generar reporto del usatores le plus active',
 	'user-stats-weekly-winners' => 'Le {{PLURAL:$1|ganiator|ganiatores}} del septimana',
 	'user-stats-monthly-winners' => 'Le {{PLURAL:$1|ganiator|ganiatores}} del mense',
-	'user-stats-weekly-win-congratulations' => 'Felicitationes al sequente {{PLURAL:$1|usator|usatores}} que meritava un ganio septimanal e $2 punctos extra!',
-	'user-stats-monthly-win-congratulations' => 'Felicitationes al sequente {{PLURAL:$1|usator|usatores}} que meritava un ganio mensual e $2 punctos extra!',
+	'user-stats-weekly-win-congratulations' => 'Felicitationes al sequente {{PLURAL:$1|usator|usatores}} que meritava un ganio septimanal e $2 {{PLURAL:$2|puncto|punctos}} extra!',
+	'user-stats-monthly-win-congratulations' => 'Felicitationes al sequente {{PLURAL:$1|usator|usatores}} que meritava un ganio mensual e $2 {{PLURAL:$2|puncto|punctos}} extra!',
 	'user-stats-full-top' => 'Le top $1 complete',
-	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' punctos",
-	'user-stats-report-points' => "'''$1''' punctos",
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' {{PLURAL:$3|puncto|punctos}}",
+	'user-stats-report-points' => "'''$1''' {{PLURAL:$1|puncto|punctos}}!",
 	'user-stats-report-generation-note' => 'iste pagina ha essite generate automaticamente',
 	'user-stats-report-weekly-edit-summary' => 'reporto de usator septimanal automatic',
 	'user-stats-report-monthly-edit-summary' => 'reporto de usator mensual automatic',
