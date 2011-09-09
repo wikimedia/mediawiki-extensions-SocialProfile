@@ -138,6 +138,16 @@ $messages['arz'] = array(
 	'mp-request-new-friend' => '$1 {{PLURAL:$1|صديق|صديق}} جديد',
 );
 
+/** Azerbaijani (Azərbaycanca)
+ * @author Cekli829
+ */
+$messages['az'] = array(
+	'mp-welcome-logged-in' => 'Salam $1',
+	'mp-request-new-message' => 'yeni ismarıc',
+	'mp-request-new-award' => '$1 yeni {{PLURAL:$1|mükafat|mükafat}}',
+	'mp-request-new-friend' => '$1 yeni {{PLURAL:$1|dost|dost}}',
+);
+
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by

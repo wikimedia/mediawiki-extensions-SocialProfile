@@ -317,7 +317,18 @@ $4
  * @author Cekli829
  */
 $messages['az'] = array(
+	'ga-large' => 'Böyük',
+	'ga-medium' => 'Orta',
 	'ga-new' => 'Yeni',
+	'ga-next' => 'Növbəti',
+	'ga-small' => 'Kiçik',
+	'ga-cancel' => 'İmtina',
+	'ga-remove' => 'Çıxar',
+	'ga-remove-title' => 'Çıxar "$1"?',
+	'topawards-edits' => 'Redaktələr',
+	'topawards-votes' => 'Səslər',
+	'topawards-comments' => 'Şərhlər',
+	'topawards-friends' => 'Dostlar',
 );
 
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
@@ -384,12 +395,12 @@ $messages['be-tarask'] = array(
 	'topawards-comments' => 'Камэнтары',
 	'topawards-recruits' => 'Пачаткоўцы',
 	'topawards-friends' => 'Сябры',
-	'topawards-edit-milestone' => '{{PLURAL:$1|$1 эпахальнае рэдагаваньне|$1 эпахальныя рэдагаваньні|$1 эпахальных рэдагаваньняў}}',
-	'topawards-vote-milestone' => '{{PLURAL:$1|$1 эпахальнае галасаваньне|$1 эпахальныя галасаваньні|$1 эпахальных галасаваньняў}}',
-	'topawards-comment-milestone' => '{{PLURAL:$1|$1 эпахальны камэнтар|$1 эпахальныя камэнтары|$1 эпахальных камэнтароў}}',
-	'topawards-recruit-milestone' => '{{PLURAL:$1|$1 эпахальны навічок|$1 эпахальныя навічкі|$1 эпахальных навічкоў}}',
-	'topawards-friend-milestone' => '{{PLURAL:$1|$1 эпахальны сябар|$1 эпахальныя сябры|$1 эпахальных сяброў}}',
-	'topawards-empty' => 'Альбо для гэтае катэгорыі ўзнагародаў няма сканфігураваных узнагародаў, альбо ніхто яшчэ не атрымоўваў гэтыя ўзнагароды.',
+	'topawards-edit-milestone' => '$1 {{PLURAL:$1|эпахальнае рэдагаваньне|эпахальныя рэдагаваньні|эпахальных рэдагаваньняў}}',
+	'topawards-vote-milestone' => '$1 {{PLURAL:$1|эпахальнае галасаваньне|эпахальныя галасаваньні|эпахальных галасаваньняў}}',
+	'topawards-comment-milestone' => '$1 {{PLURAL:$1|эпахальны камэнтар|эпахальныя камэнтары|эпахальных камэнтараў}}',
+	'topawards-recruit-milestone' => '$1 {{PLURAL:$1|эпахальны навічок|эпахальныя навічкі|эпахальных навічкоў}}',
+	'topawards-friend-milestone' => '$1 {{PLURAL:$1|эпахальны сябар|эпахальныя сябры|эпахальных сяброў}}',
+	'topawards-empty' => 'Для гэтай катэгорыі ўзнагародаў няма наладжаных узнагародаў, альбо ніхто яшчэ не атрымоўваў гэтыя ўзнагароды.',
 	'system_gift_received_subject' => 'Вы атрымалі ўзнагароду $1 у {{GRAMMAR:месны|{{SITENAME}}}}!',
 	'system_gift_received_body' => 'Прывітаньне, $1.
 

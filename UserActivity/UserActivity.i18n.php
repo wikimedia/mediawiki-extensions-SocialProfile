@@ -108,6 +108,13 @@ $messages['arc'] = array(
 	'useractivity-all' => 'ܚܙܝ ܟܠ',
 );
 
+/** Azerbaijani (Azərbaycanca)
+ * @author Cekli829
+ */
+$messages['az'] = array(
+	'useractivity-all' => 'Hamısına bax',
+);
+
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
@@ -128,7 +135,7 @@ $messages['be-tarask'] = array(
 	'useractivity-siteactivity' => 'Актыўнасьць на сайце',
 	'useractivity-title' => 'Актыўнасьць сяброў',
 	'useractivity-user_message' => '$1 {{GENDER:$6|даслаў|даслала}} {{PLURAL:$4|паведамленьне|паведамленьні}} $3',
-	'useractivity-comment' => '$1 камэнтаваў на {{PLURAL:$4|старонцы|наступных старонках:}} $3',
+	'useractivity-comment' => '$1 {{GENDER:$1|камэнтаваў|камэнтавала}} на {{PLURAL:$4|старонцы|наступных старонках:}} $3',
 );
 
 /** Bengali (বাংলা)

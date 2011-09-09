@@ -283,6 +283,17 @@ $3
 وغير إعداداتك لتعطيل إخطارات البريد الإلكترونى.',
 );
 
+/** Azerbaijani (Azərbaycanca)
+ * @author Cekli829
+ */
+$messages['az'] = array(
+	'boardlinkselectall' => 'Hamısını seç',
+	'userboard_delete' => 'Sil',
+	'userboard_public' => 'ictimai',
+	'userboard_nextpage' => 'növbəti',
+	'userboard_sendbutton' => 'göndər',
+);
+
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
@@ -672,6 +683,7 @@ $messages['da'] = array(
 
 /** German (Deutsch)
  * @author Als-Holder
+ * @author Kghbln
  * @author MF-Warburg
  * @author Purodha
  * @author Raimond Spekking
@@ -706,7 +718,7 @@ $messages['de'] = array(
 	'userboard_backprofile' => 'Zurück zu $1s Profil',
 	'userboard_backyourprofile' => 'Zurück zu deinem Profil',
 	'userboard_boardtoboard' => 'Pinnwand-Diskussion',
-	'userboard_confirmdelete' => 'Diese Nachricht wirklich löschen?',
+	'userboard_confirmdelete' => 'Soll diese Nachricht tatsächlich gelöscht werden?',
 	'userboard_sendmessage' => 'Schicke $1 eine Nachricht',
 	'userboard_myboard' => 'Meine Pinnwand',
 	'userboard_posted_ago' => 'vor $1 geschickt',

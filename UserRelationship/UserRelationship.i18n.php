@@ -697,6 +697,15 @@ $2 أزالك كعدو فى {{SITENAME}}!
 وغير إعداداتك لتعطيل إخطارات البريد الإكترونى.',
 );
 
+/** Azerbaijani (Azərbaycanca)
+ * @author Cekli829
+ */
+$messages['az'] = array(
+	'ur-next' => 'növbəti',
+	'ur-cancel' => 'İmtina',
+	'ur-login' => 'Loqin',
+);
+
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by

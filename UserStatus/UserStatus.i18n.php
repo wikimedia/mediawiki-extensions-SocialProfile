@@ -36,6 +36,16 @@ $messages['qqq'] = array(
 	'userstatus-history' => '{{Identical|History}}',
 );
 
+/** Azerbaijani (Azərbaycanca)
+ * @author Cekli829
+ */
+$messages['az'] = array(
+	'userstatus-edit' => 'Redaktə',
+	'userstatus-save' => 'Qeyd et',
+	'userstatus-cancel' => 'İmtina',
+	'userstatus-history' => 'Tarixçə',
+);
+
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Renessaince
@@ -173,6 +183,9 @@ $messages['he'] = array(
  * @author McDutchie
  */
 $messages['ia'] = array(
+	'userstatus' => 'Deler actualisationes de stato',
+	'userstatus-enter-username' => 'Entra nomine de usator:',
+	'userstatus-find' => 'Cercar',
 	'userstatus-edit' => 'Modificar',
 	'userstatus-save' => 'Salveguardar',
 	'userstatus-cancel' => 'Cancellar',

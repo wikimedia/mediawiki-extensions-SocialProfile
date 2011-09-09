@@ -466,7 +466,11 @@ $4
  * @author Cekli829
  */
 $messages['az'] = array(
+	'giftmanager-public' => 'ictimai',
+	'g-cancel' => 'İmtina',
+	'g-medium' => 'Orta',
 	'g-new' => 'yeni',
+	'g-next' => 'Növbəti',
 	'g-small' => 'Kiçik',
 );
 
