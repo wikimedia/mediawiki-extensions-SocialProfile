@@ -104,6 +104,7 @@ and change your settings to disable email notifications.',
 );
 
 /** Message documentation (Message documentation)
+ * @author EugeneZelenko
  * @author Fryed-peach
  * @author Siebrand
  * @author Umherirrender
@@ -116,8 +117,14 @@ $messages['qqq'] = array(
 	'ga-next' => '{{Identical|Next}}',
 	'ga-previous' => '{{Identical|Prev}}',
 	'ga-small' => '{{Identical|Small}}',
+	'ga-cancel' => '{{Identical|Cancel}}',
+	'ga-remove' => '{{Identical|Remove}}',
 	'ga-remove-success-title' => 'Parameters:
 * $1 is a gift name.',
+	'topawards-edits' => '{{Identical|Edit}}',
+	'topawards-votes' => '{{Identical|Vote}}',
+	'topawards-comments' => '{{Identical|Comment}}',
+	'topawards-friends' => '{{Identical|Friend}}',
 	'topawards-edit-milestone' => 'Parameters:
 * $1 is a number; also used for PLURAL.',
 	'topawards-vote-milestone' => 'Parameters:
@@ -387,13 +394,13 @@ $messages['be-tarask'] = array(
 	'topawards-edit-title' => 'Найлепшыя ўзнагароды — эпахальныя рэдагаваньні',
 	'topawards-vote-title' => 'Найлепшыя ўзнагароды — эпахальныя галасаваньні',
 	'topawards-comment-title' => 'Найлепшыя ўзнагароды — эпахальныя камэнтары',
-	'topawards-recruit-title' => 'Найлепшыя ўзнагароды — эпахальныя пачаткоўцы',
+	'topawards-recruit-title' => 'Найлепшыя ўзнагароды — эпахальныя навічкі',
 	'topawards-friend-title' => 'Найлепшыя ўзнагароды — эпахальныя сябры',
 	'topawards-award-categories' => 'Катэгорыі ўзнагародаў',
 	'topawards-edits' => 'Рэдагаваньні',
 	'topawards-votes' => 'Галасы',
 	'topawards-comments' => 'Камэнтары',
-	'topawards-recruits' => 'Пачаткоўцы',
+	'topawards-recruits' => 'Навічкі',
 	'topawards-friends' => 'Сябры',
 	'topawards-edit-milestone' => '$1 {{PLURAL:$1|эпахальнае рэдагаваньне|эпахальныя рэдагаваньні|эпахальных рэдагаваньняў}}',
 	'topawards-vote-milestone' => '$1 {{PLURAL:$1|эпахальнае галасаваньне|эпахальныя галасаваньні|эпахальных галасаваньняў}}',
