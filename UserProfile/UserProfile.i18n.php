@@ -1939,6 +1939,7 @@ Kliknite [[Special:UserLogin|ovdje]] za prijavu ili kliknite [[Special:UserLogin
 );
 
 /** Catalan (Català)
+ * @author BroOk
  * @author Loupeter
  * @author Paucabot
  * @author SMP
@@ -1951,7 +1952,7 @@ $messages['ca'] = array(
 	'user-count-separator' => '$1 de $2',
 	'user-upload-image' => 'Carrega imatge',
 	'user-edit-this' => 'Edita',
-	'user-edit-profile' => 'Edita perfil',
+	'user-edit-profile' => 'Edita el perfil',
 	'user-upload-avatar' => 'Carrega avatar',
 	'user-watchlist' => 'Llista de seguiment',
 	'user-add-friend' => 'Afegeix com a amic',
