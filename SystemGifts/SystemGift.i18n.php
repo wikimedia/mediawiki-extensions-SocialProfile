@@ -1273,6 +1273,7 @@ $messages['frp'] = array(
 	'ga-addnew' => '+ Apondre un present novél',
 	'ga-back-edit-gift' => 'Tornar u changement de ceti present',
 	'ga-back-gift-list' => 'Tornar a la lista des presents',
+	'ga-back-link' => '<a href="$1">< Tornar u profil de $2</a>',
 	'ga-choosefile' => 'Chouèsir lo fichiér :',
 	'ga-count' => '$1 at {{PLURAL:$2|yon prix|$2 prix}}.',
 	'ga-create-gift' => 'Fâre un present',
