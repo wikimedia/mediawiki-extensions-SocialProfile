@@ -273,6 +273,13 @@ $messages['nl'] = array(
 	'right-delete-status-update' => 'Statusberichten van andere gebruikers verwijderen',
 );
 
+/** Oriya (ଓଡ଼ିଆ)
+ * @author Psubhashish
+ */
+$messages['or'] = array(
+	'userstatus-cancel' => 'ନାକଚ',
+);
+
 /** Portuguese (Português)
  * @author Hamilton Abreu
  */
