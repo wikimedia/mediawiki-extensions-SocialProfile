@@ -2595,9 +2595,10 @@ e modificatz vòstres paramètres per desactivar las notificacions dels corrièr
 
 /** Oriya (ଓଡ଼ିଆ)
  * @author Odisha1
+ * @author Psubhashish
  */
 $messages['or'] = array(
-	'userboard_nextpage' => 'ପରବର୍ତ୍ତୀ',
+	'userboard_nextpage' => 'ପର',
 	'userboard_prevpage' => 'ଆଗ',
 );
 

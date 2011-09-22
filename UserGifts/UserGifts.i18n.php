@@ -3460,9 +3460,10 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
 
 /** Oriya (ଓଡ଼ିଆ)
  * @author Odisha1
+ * @author Psubhashish
  */
 $messages['or'] = array(
-	'g-next' => 'ପରବର୍ତ୍ତୀ',
+	'g-next' => 'ପର',
 	'g-previous' => 'ଆଗ',
 	'g-remove' => 'ବାହାର କରିବା',
 	'g-remove-title' => 'ବାହାର କରିବା "$1"?',

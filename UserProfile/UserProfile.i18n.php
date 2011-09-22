@@ -8015,11 +8015,12 @@ $messages['oc'] = array(
 );
 
 /** Oriya (ଓଡ଼ିଆ)
+ * @author Ansumang
  * @author Odisha1
  */
 $messages['or'] = array(
 	'user-profile-personal-email' => 'ଇ-ମେଲ',
-	'user-page-link' => 'ବ୍ୟବାହରକାରୀଙ୍କର ପୃଷ୍ଠା',
+	'user-page-link' => 'ବ୍ୟବହାରକାରୀଙ୍କର ପୃଷ୍ଠା',
 );
 
 /** Ossetic (Ирон)

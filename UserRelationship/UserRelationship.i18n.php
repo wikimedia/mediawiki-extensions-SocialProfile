@@ -5840,7 +5840,7 @@ e modificatz vòstras preferéncias per desactivar las notificacions per corriè
 $messages['or'] = array(
 	'ur-main-page' => 'ପ୍ରଧାନ ପୃଷ୍ଠା',
 	'ur-previous' => 'ଆଗ',
-	'ur-next' => 'ପରବର୍ତ୍ତୀ',
+	'ur-next' => 'ପର',
 	'ur-cancel' => 'ନାକଚ',
 );
 
