@@ -75,6 +75,19 @@ $messages['bg'] = array(
 	'userstatus-history' => 'История',
 );
 
+/** Breton (Brezhoneg)
+ * @author Y-M D
+ */
+$messages['br'] = array(
+	'userstatus-enter-username' => 'Lakait anv an implijer :',
+	'userstatus-find' => 'Klask',
+	'userstatus-edit' => 'Kemmañ',
+	'userstatus-save' => 'Enrollañ',
+	'userstatus-cancel' => 'Nullañ',
+	'userstatus-history' => 'Istor',
+	'userstatus-blocked' => "Stanket oc'h",
+);
+
 /** German (Deutsch)
  * @author Kghbln
  */

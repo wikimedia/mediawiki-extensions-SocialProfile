@@ -1596,6 +1596,7 @@ $messages['br'] = array(
 	'user-stats-picture-game-votes' => "{{PLURAL:$1|Vot|Vot}} evit ar c'hoari skeudennoù",
 	'user-stats-quiz-points' => "{{PLURAL:$1|Poent|Poent}} er c'hwiz",
 	'user-stats-pick-points' => '{{PLURAL:$1|Poent|Poent}} kavet',
+	'casual-game-poll' => 'Sontadeg',
 	'other-info-title' => 'Titouroù all',
 	'user-friends-title' => 'Mignoned',
 	'user-foes-title' => 'Enebourien',

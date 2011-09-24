@@ -476,6 +476,7 @@ $messages['bn'] = array(
 /** Breton (Brezhoneg)
  * @author Fohanno
  * @author Fulup
+ * @author Y-M D
  */
 $messages['br'] = array(
 	'systemgiftmanager' => 'Reizhiad merañ ar profoù',
@@ -515,6 +516,13 @@ $messages['br'] = array(
 	'ga-title' => 'Garedon $1',
 	'ga-uploadsuccess' => 'Kaset eo bet mat',
 	'ga-viewlist' => 'Gwelet roll ar profoù',
+	'ga-cancel' => 'Nullañ',
+	'ga-remove' => 'Dilemel',
+	'ga-remove-title' => 'Dilemel "$1" ?',
+	'topawards-edits' => 'Kemmoù',
+	'topawards-votes' => 'Mouezhioù',
+	'topawards-comments' => 'Evezhiadennoù',
+	'topawards-friends' => 'Mignoned',
 	'system_gift_received_subject' => "Resevet hoc'h eus ar garedon $1 war {{SITENAME}} !",
 	'system_gift_received_body' => "Salud deoc'h, \$1.
 
@@ -676,7 +684,7 @@ $messages['de'] = array(
 	'ga-gifttype' => 'Geschenkart',
 	'ga-goback' => 'gehe zurück',
 	'ga-imagesbelow' => 'Hier drunter folgen alle Bilder, die auf dieser Seite genutzt werden',
-	'ga-img' => 'Bild hinzufügen/ entfernen',
+	'ga-img' => 'Bild hinzufügen/entfernen',
 	'ga-large' => 'Groß',
 	'ga-medium' => 'Mittel',
 	'ga-mediumlarge' => 'Mittelgroß',
