@@ -447,6 +447,7 @@ Click [[Special:UserLogin|here]] to login or click [[Special:UserLogin/signup|he
  * @author Meno25
  * @author Purodha
  * @author Translationista
+ * @author Umherirrender
  */
 $messages['qqq'] = array(
 	'user-count-separator' => '$1 and $2 are numbers of users.',
@@ -505,6 +506,7 @@ $messages['qqq'] = array(
 	'user-profile-goback' => '{{Identical|Go back}}',
 	'user-page-link' => '{{Identical|User page}}',
 	'right-avatarremove' => '{{doc-right|avatarremove}}',
+	'right-editothersprofiles' => '{{doc-right|editothersprofiles}}',
 );
 
 /** Karelian (Karjala)

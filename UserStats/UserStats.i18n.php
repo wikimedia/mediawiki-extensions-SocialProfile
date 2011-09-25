@@ -105,6 +105,7 @@ $messages['qqq'] = array(
 	'top-fans-stats-edit-count' => '{{Identical|Edit}}',
 	'top-fans-stats-comment-count' => '{{Identical|Comment}}',
 	'right-updatepoints' => '{{doc-right|updatepoints}}',
+	'right-generatetopusersreport' => '{{doc-right|generatetopusersreport}}',
 	'user-stats-weekly-win-congratulations' => 'Parameters:
 * $1 is a number of winning users; used for PLURAL
 * $2 is a number of extra points; used for PLURAL.',

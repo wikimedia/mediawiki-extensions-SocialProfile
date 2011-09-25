@@ -27,6 +27,7 @@ $messages['en'] = array(
 
 /** Message documentation (Message documentation)
  * @author EugeneZelenko
+ * @author Umherirrender
  */
 $messages['qqq'] = array(
 	'userstatus-find' => '{{Identical|Find}}',
@@ -34,6 +35,7 @@ $messages['qqq'] = array(
 	'userstatus-save' => '{{Identical|Save}}',
 	'userstatus-cancel' => '{{Identical|Cancel}}',
 	'userstatus-history' => '{{Identical|History}}',
+	'right-delete-status-update' => '{{doc-right|delete-status-update}}',
 );
 
 /** Azerbaijani (Azərbaycanca)
