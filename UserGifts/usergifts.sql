@@ -9,7 +9,7 @@ CREATE TABLE /*_*/user_gift (
   `ug_type` int(2) default NULL,
   `ug_message` varchar(255) default NULL,
   `ug_date` datetime default NULL
-) ENGINE=InnoDB;
+) /*$wgDBTableOptions*/;
 CREATE INDEX /*i*/ug_user_id_from ON /*_*/user_gift (`ug_user_id_from`);
 CREATE INDEX /*i*/ug_user_id_to   ON /*_*/user_gift (`ug_user_id_to`);
 
@@ -22,4 +22,4 @@ CREATE TABLE /*_*/gift (
   `gift_description` text,
   `gift_given_count` int(5) default '0',
   `gift_createdate` datetime default NULL
-) ENGINE=InnoDB;
+) /*$wgDBTableOptions*/;

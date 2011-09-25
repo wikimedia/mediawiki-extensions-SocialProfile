@@ -10,7 +10,7 @@ CREATE TABLE /*_*/user_relationship (
   `r_user_name_relation` varchar(255) NOT NULL default '',
   `r_type` int(2) default NULL,
   `r_date` datetime default NULL
-) DEFAULT CHARSET=utf8;
+) /*$wgDBTableOptions*/;
 CREATE INDEX /*i*/r_user_id          ON /*_*/user_relationship (`r_user_id`);
 CREATE INDEX /*i*/r_user_id_relation ON /*_*/user_relationship (`r_user_id_relation`);
 
@@ -28,6 +28,6 @@ CREATE TABLE /*_*/user_relationship_request (
   `ur_type` int(2) default NULL,
   `ur_message` varchar(255) default NULL,
   `ur_date` datetime default NULL
-) DEFAULT CHARSET=utf8;
+) /*$wgDBTableOptions*/;
 CREATE INDEX /*i*/ur_user_id_from ON /*_*/user_relationship_request (`ur_user_id_from`);
 CREATE INDEX /*i*/ur_user_id_to   ON /*_*/user_relationship_request (`ur_user_id_to`);

@@ -48,4 +48,4 @@ CREATE TABLE /*_*/user_stats (
   `stats_quiz_questions_correct_percent` float default '0',
   `stats_links_submitted` int(11) NOT NULL default '0',
   `stats_links_approved` int(11) NOT NULL default '0'
-)  DEFAULT CHARSET=utf8;
+) /*$wgDBTableOptions*/;

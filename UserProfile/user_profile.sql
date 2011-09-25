@@ -35,4 +35,4 @@ CREATE TABLE /*_*/user_profile (
   `up_custom_5` text,
   `up_last_seen` datetime default NULL,
   `up_type` int(5) NOT NULL default '1'
-) DEFAULT CHARSET=utf8;
+) /*$wgDBTableOptions*/;

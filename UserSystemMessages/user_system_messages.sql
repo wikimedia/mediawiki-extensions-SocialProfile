@@ -5,5 +5,5 @@ CREATE TABLE /*_*/user_system_messages (
   `um_message` varchar(255) NOT NULL default '',
   `um_type` int(5) default '0',
   `um_date` datetime default NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) /*$wgDBTableOptions*/;
 CREATE INDEX /*i*/up_user_id ON /*_*/user_system_messages (`um_user_id`);
