@@ -1334,7 +1334,7 @@ $messages['gl'] = array(
 	'userboard_nomessages' => 'Ningunha mensaxe.',
 	'userboard_sendbutton' => 'enviar',
 	'userboard_loggedout' => 'Debe <a href="$1">acceder ao sistema</a> para deixar mensaxes a outros usuarios.',
-	'userboard_showingmessages' => 'Amosando {{PLURAL:$4|ata a mensaxe $3|as mensaxes da $2 á $3}} dun total {{PLURAL:$1|dunha mensaxe|de $1 mensaxes}}',
+	'userboard_showingmessages' => 'Mostrando {{PLURAL:$4|ata a mensaxe $3|as mensaxes da $2 á $3}} dun total {{PLURAL:$1|dunha mensaxe|de $1 mensaxes}}.',
 	'right-userboard-delete' => 'Borrar o taboleiro de mensaxes doutros',
 	'userboard-time-days' => '{{PLURAL:$1|un día|$1 días}}',
 	'userboard-time-hours' => '{{PLURAL:$1|unha hora|$1 horas}}',
