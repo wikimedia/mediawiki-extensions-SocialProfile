@@ -527,6 +527,7 @@ $messages['ksh'] = array(
 	'useractivity-siteactivity' => 'Wat op dä ßait loß es',
 	'useractivity-title' => 'Wat de Frünnde donn',
 	'useractivity-user_message' => '{{GENDER:$1|Dä|Et|Dä Metmaacher|De|Dat}} $1 {{PLURAL:$4|hät en Nohreesch|hät Nohreeschte|kein Nohreesch}} aan {{GENDER:$6|der|et|dä Metmaacher|de|dat}} $3 jescheck',
+	'useractivity-comment' => '{{GENDER:$1|Dä|Et|Dä Metmaacher|De|Dat}} $1 hät en Röckmäldong hergerlohße för {{PLURAL:$4|di Sigg|de Sigge|kein Sigg}} $3',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
