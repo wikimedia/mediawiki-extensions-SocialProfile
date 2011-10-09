@@ -4336,7 +4336,7 @@ $messages['gl'] = array(
 	'user-no-images' => 'Ningunha imaxe foi cargada',
 	'edit-profile-title' => 'Editar o seu perfil',
 	'edit-profiles-title' => 'Editar os perfís',
-	'user-page-link' => 'Páxina de usuario',
+	'user-page-link' => 'Páxina de {{GENDER:{{BASEPAGENAME}}|usuario|usuaria}}',
 	'user-social-profile-link' => 'Perfil social',
 	'user-wiki-link' => 'Páxina de usuario do wiki',
 	'update_profile_nav' => '* Special:UpdateProfile|Información persoal
@@ -9641,7 +9641,7 @@ $messages['sl'] = array(
 	'user-profile-goback' => 'Pojdi nazaj',
 );
 
-/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
  * @author Rancher
  * @author Sasa Stefanovic
  * @author Жељко Тодоровић
@@ -9667,9 +9667,9 @@ $messages['sr-ec'] = array(
 	'user-send-message' => 'Пошаљи поруку',
 	'user-send-gift' => 'Пошаљи поклон',
 	'user-contributions' => 'Прилози',
-	'user-stats-title' => 'Статистика',
+	'user-stats-title' => 'Статистике',
 	'user-stats-edits' => '{{PLURAL:$1|Измена|Измене}}',
-	'user-stats-votes' => '{{PLURAL:$1|Глас|Гласова}}',
+	'user-stats-votes' => '{{PLURAL:$1|Глас|Гласа|Гласова}}',
 	'user-stats-comments' => '{{PLURAL:$1|Коментар|Коментара}}',
 	'user-stats-recruits' => '{{PLURAL:$1|Регрут|Регрута}}',
 	'other-info-title' => 'Други подаци',
