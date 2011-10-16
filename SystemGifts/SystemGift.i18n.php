@@ -1441,6 +1441,7 @@ $messages['grc'] = array(
 );
 
 /** Swiss German (Alemannisch)
+ * @author Als-Chlämens
  * @author Als-Holder
  */
 $messages['gsw'] = array(
@@ -1481,6 +1482,30 @@ $messages['gsw'] = array(
 	'ga-title' => 'Uuszeichnige vu $1',
 	'ga-uploadsuccess' => 'Erfolgryych uffeglade',
 	'ga-viewlist' => 'Gschänklischt bschaue',
+	'ga-cancel' => 'Abbräche',
+	'ga-remove' => 'Usenee',
+	'ga-remove-title' => '„$1“ usenee?',
+	'ga-delete-message' => 'Bisch sicher, ass Du s Gschenk "$1" witt lesche? Derno wird s au bi Benutzer glescht, wu s scho iberchu hän.',
+	'ga-remove-success-title' => 'Du hesch s Gschänk "$1" erfolgryych usegnu.',
+	'ga-remove-success-message' => 'S Gschänk "$1" isch usegnu wore.',
+	'topawards' => 'Usszeichnige',
+	'topawards-edit-title' => 'Usszeichnige - Meilestai bim Bearbeite',
+	'topawards-vote-title' => 'Usszeichnige - Meilestai bim Abstimme',
+	'topawards-comment-title' => 'Usszeichnige - Meilestai bim Kommentiere',
+	'topawards-recruit-title' => 'Usszeichnige - Meilestai bim Anwerbe',
+	'topawards-friend-title' => 'Usszeichnige - Meilestai bim Fründ mache',
+	'topawards-award-categories' => 'Usszeichnigskategorie',
+	'topawards-edits' => 'Bearbeitige',
+	'topawards-votes' => 'Stimme',
+	'topawards-comments' => 'Kommentar',
+	'topawards-recruits' => 'Aawerbige',
+	'topawards-friends' => 'Fründ',
+	'topawards-edit-milestone' => '{{PLURAL:$1|$1 Bearbeitigs|$1 Bearbeitige}}-Meilestai,',
+	'topawards-vote-milestone' => '{{PLURAL:$1|$1 Stimm|$1 Stimme}}-Meilestai',
+	'topawards-comment-milestone' => '{{PLURAL:$1|$1 Kommentar|$1 Kommentar}}-Meilestai',
+	'topawards-recruit-milestone' => '{{PLURAL:$1|$1 Aawerbig|$1 Aawerbige}}-Meilestai',
+	'topawards-friend-milestone' => '{{PLURAL:$1|$1 Fründ|$1 Fründ}}-Meilestai',
+	'topawards-empty' => "Entweder git's für nie Usszeichnigskategori no kei Usszeichnige, oder es het no niemer eini vo dänne Usszeichnige übercho.",
 	'system_gift_received_subject' => 'Du hesch d $1 Uuszeichnig iberchu uf {{SITENAME}}!',
 	'system_gift_received_body' => 'Sali $1:
 

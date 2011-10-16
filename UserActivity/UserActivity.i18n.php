@@ -355,6 +355,7 @@ $messages['gl'] = array(
 );
 
 /** Swiss German (Alemannisch)
+ * @author Als-Chlämens
  * @author Als-Holder
  */
 $messages['gsw'] = array(
@@ -372,6 +373,7 @@ $messages['gsw'] = array(
 	'useractivity-siteactivity' => 'Syteaktivitet',
 	'useractivity-title' => 'Aktivitet vu dr Frynd',
 	'useractivity-user_message' => '$1 {{PLURAL:$4|het e Nochricht gschickt an|het Nochrichte gschickt an}} $3',
+	'useractivity-comment' => '$1 {{PLURAL:$4|het die Syte kommentiert|het die Syte kommentiert:}} $3',
 );
 
 /** Hebrew (עברית)
@@ -631,6 +633,10 @@ $messages['ms'] = array(
 	'useractivity-group-comment' => '{{PLURAL:$1|satu komen|$1 komen}}',
 	'useractivity-group-user_message' => '{{PLURAL:$1|satu pesanan|$1 pesanan}}',
 	'useractivity-group-friend' => '{{PLURAL: $1|seorang kawan|$1 kawan}}',
+	'useractivity-siteactivity' => 'Kegiatan tapak',
+	'useractivity-title' => 'Kegiatan rakan',
+	'useractivity-user_message' => '$1 {{PLURAL:$4|menghantar satu pesanan kepada|menghantar pesanan-pesanan kepada}} $3',
+	'useractivity-comment' => '$1 {{PLURAL:$4|mengulas laman|mengulas laman-laman berikut:}} $3',
 );
 
 /** Dutch (Nederlands)

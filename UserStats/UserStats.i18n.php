@@ -1240,6 +1240,7 @@ $messages['grc'] = array(
 );
 
 /** Swiss German (Alemannisch)
+ * @author Als-Chlämens
  * @author Als-Holder
  */
 $messages['gsw'] = array(
@@ -1286,6 +1287,7 @@ $messages['gsw'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Gschänk iberchu|Gschänk inerchu}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Gschänk gmacht|Gschänk gmacht}}',
 	'right-updatepoints' => 'Bearbeitigszeller aktualisiere',
+	'right-generatetopusersreport' => 'Bericht über di aktivste Benutzern generiere',
 	'level-advanced-to' => 'furtgschritte zum Level <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => 'Du bisch jetz „$1“ uf {{SITENAME}}!',
 	'level-advance-body' => 'Sali $1,
@@ -1299,6 +1301,20 @@ Du witt gar kei E-Mail vu uns iberchu?
 
 Druck $3
 un ändere Dyyi Yystellige go d E-Mail-Benochrichtigunge abzstelle.',
+	'generatetopusersreport' => 'Bericht über di aktivste Benutzern generiere',
+	'user-stats-weekly-winners' => '{{PLURAL:$1|Wuchesiiger|Wuchesiiger}}',
+	'user-stats-monthly-winners' => '{{PLURAL:$1|Monetssiiger|Monetssiiger}}',
+	'user-stats-weekly-win-congratulations' => 'Härzliche Glickwunsch aa {{PLURAL:$1|de Benutzer, wo de Wuchesiig errunge un {{PLURAL:$2|Zuesatzpunkt|Zuesatzpinkt}} erhalte het.|e Benutzer, wo de Wuchesiig errunge un {{PLURAL:$2|Zuesatzpunkt|Zuesatzpinkt}} erhalte hen.}}',
+	'user-stats-monthly-win-congratulations' => 'Härzliche Glickwunsch aa {{PLURAL:$1|de Benutzer, wo de Monetsiig errunge un {{PLURAL:$2|Zuesatzpunkt|Zuesatzpinkt}} erhalte het.|e Benutzer, wo de Monetsiig errunge un {{PLURAL:$2|Zuesatzpunkt|Zuesatzpinkt}} erhalte hen.}}',
+	'user-stats-full-top' => 'Alli Top $1',
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' {{PLURAL:$3|Punkt|Pünkt}}",
+	'user-stats-report-points' => '$1 {{PLURAL:$1|Punkt|Pinkt}}',
+	'user-stats-report-generation-note' => 'Die Syte isch automatisch generiert worde.',
+	'user-stats-report-weekly-edit-summary' => 'automatisierter wöchentlicher Benutzerbericht',
+	'user-stats-report-monthly-edit-summary' => 'automatisierter monatlicher Benutzerbericht',
+	'user-stats-report-weekly-page-title' => 'Wöchentlicher Benutzerpunktbericht ($1)',
+	'user-stats-report-monthly-page-title' => 'Monatlicher Benutzerpunktebericht ($1)',
+	'user-stats-report-error-variable-not-set' => 'Für de Parameter $wgUserStatsPointValues[\'points_winner_$1\'] in de Datei LocalSettings.php muess en Wärt größer wie 0 aagee sy.',
 );
 
 /** Hebrew (עברית)

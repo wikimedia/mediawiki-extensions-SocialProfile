@@ -184,6 +184,23 @@ $messages['grc'] = array(
 	'userstatus-cancel' => 'Ἀκυροῦν',
 );
 
+/** Swiss German (Alemannisch)
+ * @author Als-Chlämens
+ */
+$messages['gsw'] = array(
+	'userstatus' => 'Statusaktualisierige lösche',
+	'userstatus-enter-username' => 'Benutzername yygee:',
+	'userstatus-find' => 'Finde',
+	'userstatus-edit' => 'Bearbeite',
+	'userstatus-save' => 'Spyychere',
+	'userstatus-cancel' => 'Abbräche',
+	'userstatus-history' => 'Versione',
+	'userstatus-letters-left' => 'Buechstabe, wo no übrig sin',
+	'userstatus-blocked' => 'Du bisch gsperrt worde',
+	'userstatus-readonly' => 'D Datebank isch gsperrt',
+	'right-delete-status-update' => 'Lösch d Statusmäldige vo andre Benutzer',
+);
+
 /** Hebrew (עברית)
  * @author Amire80
  */

@@ -1378,12 +1378,12 @@ $messages['grc'] = array(
 );
 
 /** Swiss German (Alemannisch)
+ * @author Als-Chlämens
  * @author Als-Holder
  */
 $messages['gsw'] = array(
 	'boardblastlogintitle' => 'Du muesch aagmäldet syy zum Nochrichte verschicke z chenne',
-	'boardblastlogintext' => 'Go Nochrichte chenne verschicke,
-muesch <a href="index.php?title=Special:UserLogin">aagmäldet syy</a>',
+	'boardblastlogintext' => 'Du muesch [[Special:UserLogin|aagmolde]] sy, zume Noochrichte z verschicke.',
 	'messagesenttitle' => 'Nochrichte gschickt',
 	'boardblasttitle' => 'Nochricht schicke',
 	'boardblaststep1' => 'Schritt 1: Schryb Dyyni Nochricht',

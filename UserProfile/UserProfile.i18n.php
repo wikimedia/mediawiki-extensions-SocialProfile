@@ -4425,13 +4425,16 @@ $messages['grc'] = array(
 );
 
 /** Swiss German (Alemannisch)
+ * @author Als-Chlämens
  * @author Als-Holder
  */
 $messages['gsw'] = array(
+	'editprofile' => 'D Benutzerprofil vo andre Benutzer bearbeite',
 	'populateuserprofiles' => 'Benutzerprofil vervollständige',
 	'user-time-ago' => 'syt $1',
 	'user-awards-title' => 'Uuszeichnige',
 	'user-gifts-title' => 'Gschänk',
+	'user-fanbox-title' => 'Fan-Chäschtli',
 	'user-count-separator' => '$1 vu $2',
 	'user-view-all' => 'Alli aazeige',
 	'user-upload-image' => 'Bild uffelade',
@@ -4456,6 +4459,10 @@ $messages['gsw'] = array(
 	'user-stats-picture-game-votes' => 'Bildspiil {{PLURAL:$1|Stimm|Stimme}}',
 	'user-stats-quiz-points' => 'Quiz {{PLURAL:$1|Punkt|Pinkt}}',
 	'user-stats-pick-points' => 'Suech ene {{PLURAL:$1|ne Punkt|Pinkt}} uus',
+	'casual-games-title' => 'Spiil zum Zitvertryyb',
+	'casual-game-quiz' => 'Quiz',
+	'casual-game-poll' => 'Abstimmig',
+	'casual-game-picture-game' => 'Bilderspiil',
 	'other-info-title' => 'Wyteri Informatione',
 	'user-friends-title' => 'Frynd',
 	'user-foes-title' => 'Fynd',
@@ -4505,6 +4512,7 @@ $messages['gsw'] = array(
 	'user-profile-update-notloggedin-text' => 'Du chasch Dyy Profil nit bearbeite ohni aagmäldet z syy.
 Druck [[Special:UserLogin|doo ]] go Di aamälde oder [[Special:UserLogin/signup|doo]] go ne Benutzerkonto aalege.',
 	'user-profile-update-saved' => 'Dyy Profil isch gspycheret wore',
+	'user-profile-edit-profile-update-saved' => 'S Benutzerprofil isch erfolgryych gspyychert worde',
 	'user-profile-update-log-section' => 'Abschnitt gänderet',
 	'user-profile-default-country' => 'Dytschland',
 	'user-profile-points' => '$1 {{PLURAL:$1|Punkt|Pinkt}}',
@@ -4578,6 +4586,7 @@ Druck [[Special:UserLogin|doo ]] go Di aamälde oder [[Special:UserLogin/signup|
 	'user-profile-userlevels-link' => 'Benutzerebene',
 	'user-no-images' => 'Kei Bilder uffeglade',
 	'edit-profile-title' => 'Profil bearbeite',
+	'edit-profiles-title' => 'Profil bearbeite',
 	'user-page-link' => 'Benutzersyte',
 	'user-social-profile-link' => 'Profilsyte',
 	'user-wiki-link' => 'Wiki-Benutzersyte',
@@ -4599,11 +4608,13 @@ Druck [[Special:UserLogin|doo ]] go Di aamälde oder [[Special:UserLogin/signup|
 	'avatarupload-removeanother' => 'No ein lesche',
 	'profilelogpage' => 'Logbuech vu dr Benutzerprofiländerige',
 	'profilelogpagetext' => 'Des isch e Logbuech vu dr Änderige an Benutzerprofil',
+	'user-profile-edit-profile' => 's Profil vo $1 isch bearbeitet worde',
 	'avatarlogpage' => 'Logbuech vu dr uffegladene Avatar',
 	'avatarlogpagetext' => 'Des isch e Logbuech vu dr uffegladene Benutzer-Avatar',
 	'user-profile-picture-log-entry' => 'Neje Avatar uffelade',
 	'user-profile-picture-log-delete-entry' => 'Avatar vu $1 isch glescht wore',
 	'right-avatarremove' => 'Nimm dr Avatar vum Benutzer use',
+	'right-editothersprofiles' => 'D Benutzerprofil vo andre Benutzer aktualisiere',
 );
 
 /** Gujarati (ગુજરાતી)
