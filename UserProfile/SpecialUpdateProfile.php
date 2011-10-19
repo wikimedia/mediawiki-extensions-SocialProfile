@@ -86,7 +86,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$wgOut->addScriptFile( $wgUserProfileScripts . '/UpdateProfile.js' );
 		}
 
- 		if ( $wgRequest->wasPosted() ) {
+		if ( $wgRequest->wasPosted() ) {
 			if ( !$section ) {
 				$section = 'basic';
 			}
@@ -194,6 +194,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$notify_challenge = $wgRequest->getVal( 'notify_challenge' );
 		$notify_honorifics = $wgRequest->getVal( 'notify_honorifics' );
 		$notify_message = $wgRequest->getVal( 'notify_message' );
+		$show_year_of_birth = $wgRequest->getVal( 'show_year_of_birth', 0 );
 		if ( $notify_friend == '' ) {
 			$notify_friend = 0;
 		}
@@ -214,6 +215,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$wgUser->setOption( 'notifychallenge', $notify_challenge );
 		$wgUser->setOption( 'notifyhonorifics', $notify_honorifics );
 		$wgUser->setOption( 'notifymessage', $notify_message );
+		$wgUser->setOption( 'showyearofbirth', $show_year_of_birth );
 		$wgUser->saveSettings();
 
 		// Allow extensions like UserMailingList do their magic here
@@ -222,8 +224,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 	function formatBirthdayDB( $birthday ) {
 		$dob = explode( '/', $birthday );
-		if ( count( $dob ) == 2 ) {
-			$year = 2007;
+		if ( count( $dob ) == 2 || count( $dob ) == 3 ) {
+			$year = isset( $dob[2] ) ? $dob[2] : 2007;
 			$month = $dob[0];
 			$day = $dob[1];
 			$birthday_date = $year . '-' . $month . '-' . $day;
@@ -233,13 +235,16 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		return ( $birthday_date );
 	}
 
-	function formatBirthday( $birthday ) {
+	function formatBirthday( $birthday, $showYOB = false ) {
 		$dob = explode( '-', $birthday );
 		if ( count( $dob ) == 3 ) {
-			$year = 0000;
 			$month = $dob[1];
 			$day = $dob[2];
-			$birthday_date = $month . '/' . $day; // . '/' . $year;
+			$birthday_date = $month . '/' . $day;
+			if ( $showYOB ) {
+				$year = $dob[0];
+				$birthday_date .= '/' . $year;
+			}
 		} else {
 			$birthday_date = '';
 		}
@@ -382,6 +387,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			__METHOD__
 		);
 
+		$showYOB = true;
 		if ( $s !== false ) {
 			$location_city = $s->up_location_city;
 			$location_state = $s->up_location_state;
@@ -391,7 +397,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$hometown_city = $s->up_hometown_city;
 			$hometown_state = $s->up_hometown_state;
 			$hometown_country = $s->up_hometown_country;
-			$birthday = $this->formatBirthday( $s->up_birthday );
+			$showYOB = $wgUser->getIntOption( 'showyearofbirth', !isset( $s->up_birthday ) ) == 1;
+			$birthday = $this->formatBirthday( $s->up_birthday, $showYOB );
 			$schools = $s->up_schools;
 			$places = $s->up_places_lived;
 			$websites = $s->up_websites;
@@ -498,8 +505,13 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		$form .= '<div class="profile-update">
 			<p class="profile-update-title">' . wfMsg( 'user-profile-personal-birthday' ) . '</p>
-			<p class="profile-update-unit-left">' . wfMsg( 'user-profile-personal-birthdate' ) . '</p>
-			<p class="profile-update-unit"><input type="text" size="25" name="birthday" id="birthday" value="' . ( isset( $birthday ) ? $birthday : '' ) . '" /></p>
+			<p class="profile-update-unit-left" id="birthday-format">' .
+				wfMsg( $showYOB ? 'user-profile-personal-birthdate-with-year' : 'user-profile-personal-birthdate' ) .
+			'</p>
+			<p class="profile-update-unit"><input type="text"' .
+			( $showYOB ? ' class="long-birthday"' : null ) .
+			' size="25" name="birthday" id="birthday" value="' .
+			( isset( $birthday ) ? $birthday : '' ) . '" /></p>
 			<div class="cleared"></div>
 		</div><div class="cleared"></div>';
 
@@ -662,7 +674,17 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * @return HTML
 	 */
 	function displayPreferencesForm() {
-		global $wgUser, $wgOut;
+		global $wgRequest, $wgUser, $wgOut;
+
+		$dbr = wfGetDB( DB_MASTER );
+		$s = $dbr->selectRow(
+			'user_profile',
+			array( 'up_birthday' ),
+			array( 'up_user_id' => $wgUser->getID() ),
+			__METHOD__
+		);
+
+		$showYOB = isset( $s, $s->up_birthday ) ? false : true;
 
 		// @todo If the checkboxes are in front of the option, this would look more like Special:Preferences
 		$wgOut->setPageTitle( wfMsg( 'user-profile-section-preferences' ) );
@@ -688,6 +710,14 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 					. wfMsg( 'user-profile-preferences-emails-level' ) .
 					' <input type="checkbox" size="25" name="notify_honorifics" id="notify_honorifics" value="1"' . ( ( $wgUser->getIntOption( 'notifyhonorifics', 1 ) == 1 ) ? 'checked' : '' ) . '/>
 				</p>';
+
+		$form .= '<p class="profile-update-title">' .
+			wfMsg( 'user-profile-preferences-miscellaneous' ) .
+			'</p>
+			<p class="profile-update-row">' .
+				wfMsg( 'user-profile-preferences-miscellaneous-show-year-of-birth' ) .
+				' <input type="checkbox" size="25" name="show_year_of_birth" id="show_year_of_birth" value="1"' . ( ( $wgUser->getIntOption( 'showyearofbirth', $showYOB ) == 1 ) ? 'checked' : '' ) . '/>
+			</p>';
 
 		// Allow extensions (like UserMailingList) to add new checkboxes
 		wfRunHooks( 'SpecialUpdateProfile::displayPreferencesForm', array( $this, &$form ) );
@@ -735,7 +765,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$form = '<h1>' . wfMsg( 'user-profile-tidbits-title' ) . '</h1>';
 		$form .= UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-custom' ) );
 		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">
-		 	<div class="profile-info clearfix">
+			<div class="profile-info clearfix">
 				<div class="profile-update">
 					<p class="profile-update-title">' . wfMsgForContent( 'user-profile-tidbits-title' ) . '</p>
 					<div id="profile-update-custom1">

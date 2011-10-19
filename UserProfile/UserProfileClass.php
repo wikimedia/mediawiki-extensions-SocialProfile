@@ -84,6 +84,9 @@ class UserProfile {
 	public function getProfile() {
 		global $wgMemc;
 
+		$user = User::newFromId( $this->user_id );
+		$user->loadFromId();
+
 		// Try cache first
 		$key = wfMemcKey( 'user', 'profile', 'info', $this->user_id );
 		$data = $wgMemc->get( $key );
@@ -107,13 +110,15 @@ class UserProfile {
 				$profile['user_page_type'] = 1;
 				$profile['user_id'] = 0;
 			}
+			$showYOB = $user->getIntOption( 'showyearofbirth', !isset( $row->up_birthday ) ) == 1;
+			$issetUpBirthday = isset( $row->up_birthday ) ? $row->up_birthday : '';
 			$profile['location_city'] = isset( $row->up_location_city ) ? $row->up_location_city : '';
 			$profile['location_state'] = isset( $row->up_location_state ) ? $row->up_location_state : '';
 			$profile['location_country'] = isset( $row->up_location_country ) ? $row->up_location_country : '';
 			$profile['hometown_city'] = isset( $row->up_hometown_city ) ? $row->up_hometown_city : '';
 			$profile['hometown_state'] = isset( $row->up_hometown_state ) ?  $row->up_hometown_state : '';
 			$profile['hometown_country'] = isset( $row->up_hometown_country ) ? $row->up_hometown_country : '';
-			$profile['birthday'] = $this->formatBirthday( isset( $row->up_birthday ) ? $row->up_birthday : '' );
+			$profile['birthday'] = $this->formatBirthday( $issetUpBirthday, $showYOB);
 
 			$profile['about'] = isset( $row->up_about ) ? $row->up_about : '';
 			$profile['places_lived'] = isset( $row->up_places_lived ) ? $row->up_places_lived : '';
@@ -138,8 +143,6 @@ class UserProfile {
 			$wgMemc->set( $key, $profile );
 		}
 
-		$user = User::newFromId( $this->user_id );
-		$user->loadFromId();
 		$profile['real_name'] = $user->getRealName();
 		$profile['email'] = $user->getEmail();
 
@@ -152,12 +155,16 @@ class UserProfile {
 	 * @param $birthday String: birthday in YYYY-MM-DD format
 	 * @return String: formatted birthday
 	 */
-	function formatBirthday( $birthday ) {
+	function formatBirthday( $birthday, $showYear = true ) {
 		$dob = explode( '-', $birthday );
 		if ( count( $dob ) == 3 ) {
 			$month = $dob[1];
 			$day = $dob[2];
-			return date( 'F jS', mktime( 0, 0, 0, $month, $day ) );
+			if ( !$showYear ) {
+				return date( 'F jS', mktime( 0, 0, 0, $month, $day ) );
+			}
+			$year = $dob[0];
+			return date( 'F jS, Y', mktime( 0, 0, 0, $month, $day, $year ) );
 			//return $day . ' ' . $wgLang->getMonthNameGen( $month );
 		}
 		return $birthday;

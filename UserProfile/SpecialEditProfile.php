@@ -179,7 +179,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			$hometown_city = $s->up_hometown_city;
 			$hometown_state = $s->up_hometown_state;
 			$hometown_country = $s->up_hometown_country;
-			$birthday = $this->formatBirthday( $s->up_birthday );
+			$birthday = $this->formatBirthday( $s->up_birthday, true );
 			$schools = $s->up_schools;
 			$places = $s->up_places_lived;
 			$websites = $s->up_websites;
@@ -286,8 +286,8 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 
 		$form .= '<div class="profile-update">
 			<p class="profile-update-title">' . wfMsg( 'user-profile-personal-birthday' ) . '</p>
-			<p class="profile-update-unit-left">' . wfMsg( 'user-profile-personal-birthdate' ) . '</p>
-			<p class="profile-update-unit"><input type="text" size="25" name="birthday" id="birthday" value="' . ( isset( $birthday ) ? $birthday : '' ) . '" /></p>
+			<p class="profile-update-unit-left">' . wfMsg( 'user-profile-personal-birthdate-with-year' ) . '</p>
+			<p class="profile-update-unit"><input type="text" class="long-birthday" size="25" name="birthday" id="birthday" value="' . ( isset( $birthday ) ? $birthday : '' ) . '" /></p>
 			<div class="cleared"></div>
 		</div><div class="cleared"></div>';
 

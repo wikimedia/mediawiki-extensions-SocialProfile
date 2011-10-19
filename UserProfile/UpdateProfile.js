@@ -41,3 +41,13 @@ function displaySection( id, country, section ) {
 
 	document.getElementById( id + '_form' ).innerHTML = section_select;
 }
+
+mw.loader.using( 'jquery.ui.datepicker', function() {
+	jQuery( function( jQuery ) {
+		jQuery( '#birthday' ).datepicker({
+			changeYear: true,
+			yearRange: '1930:c',
+			dateFormat: jQuery( '#birthday' ).hasClass( 'long-birthday' ) ? 'mm/dd/yy' : 'mm/dd'
+		});
+	});
+});
