@@ -78,6 +78,7 @@ $messages['bg'] = array(
 );
 
 /** Breton (Brezhoneg)
+ * @author Fulup
  * @author Y-M D
  */
 $messages['br'] = array(
@@ -88,6 +89,7 @@ $messages['br'] = array(
 	'userstatus-cancel' => 'Nullañ',
 	'userstatus-history' => 'Istor',
 	'userstatus-blocked' => "Stanket oc'h",
+	'userstatus-readonly' => 'Prennet eo an diaz roadennoù',
 );
 
 /** German (Deutsch)
