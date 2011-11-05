@@ -4,11 +4,21 @@
  * This line must be present before any global variable is referenced.
  */
 if ( !defined( 'MEDIAWIKI' ) ) {
-	die();
+	die(
+		'This is the setup file for the SocialProfile extension to MediaWiki.' .
+		'Please see http://www.mediawiki.org/wiki/Extension:SocialProfile for' .
+		' more information about this extension.'
+	);
 }
 
 /**
- * This is the *main* (but certainly not the only) loader file for SocialProfile extension.
+ * This is the loader file for the SocialProfile extension. You should include
+ * this file in your wiki's LocalSettings.php to activate SocialProfile.
+ *
+ * If you want to use the UserWelcome extension (bundled with SocialProfile),
+ * the <topusers /> tag or the user levels feature, there are some other files
+ * you will need to include in LocalSettings.php. The online manual has more
+ * details about this.
  *
  * For more info about SocialProfile, please see http://www.mediawiki.org/wiki/Extension:SocialProfile.
  */
@@ -210,9 +220,26 @@ require_once( "$IP/extensions/SocialProfile/UserGifts/Gifts.php" ); // UserGifts
 require_once( "$IP/extensions/SocialProfile/SystemGifts/SystemGifts.php" ); // SystemGifts (awards functionality) loader file
 require_once( "$IP/extensions/SocialProfile/UserActivity/UserActivity.php" ); // UserActivity - recent social changes
 
-# Schema changes
+// Hooked functions
+$wgHooks['CanonicalNamespaces'][] = 'wfSocialProfileRegisterCanonicalNamespaces';
 $wgHooks['LoadExtensionSchemaUpdates'][] = 'efSocialProfileSchemaUpdates';
 
+/**
+ * Register the canonical names for our custom namespaces and their talkspaces.
+ *
+ * @param $list Array: array of namespace numbers with corresponding
+ *                     canonical names
+ * @return Boolean: true
+ */
+function wfSocialProfileRegisterCanonicalNamespaces( &$list ) {
+	$list[NS_USER_WIKI] = 'UserWiki';
+	$list[NS_USER_WIKI_TALK] = 'UserWiki_talk';
+	$list[NS_USER_PROFILE] = 'User_profile';
+	$list[NS_USER_PROFILE_TALK] = 'User_profile_talk';
+	return true;
+}
+
+// Schema changes
 function efSocialProfileDBUpdate( $updater, $label, $file ) {
 	if ( $updater === null ) {
 		global $wgExtNewTables;
@@ -224,9 +251,10 @@ function efSocialProfileDBUpdate( $updater, $label, $file ) {
 }
 
 function efSocialProfileSchemaUpdates( $updater = null ) {
+	global $wgDBtype;
+
 	$dir = dirname( __FILE__ );
 	$dbExt = '';
-	global $wgDBtype;
 
 	if ( $wgDBtype == 'postgres' ) {
 		$dbExt = '.postgres';
@@ -308,20 +336,4 @@ if( !defined( 'NS_USER_PROFILE' ) ) {
 
 if( !defined( 'NS_USER_PROFILE_TALK' ) ) {
 	define( 'NS_USER_PROFILE_TALK', 203 );
-}
-
-$wgHooks['CanonicalNamespaces'][] = 'wfSocialProfileRegisterCanonicalNamespaces';
-/**
- * Register the canonical names for our custom namespaces and their talkspaces.
- *
- * @param $list Array: array of namespace numbers with corresponding
- *                     canonical names
- * @return Boolean: true
- */
-function wfSocialProfileRegisterCanonicalNamespaces( &$list ) {
-	$list[NS_USER_WIKI] = 'UserWiki';
-	$list[NS_USER_WIKI_TALK] = 'UserWiki_talk';
-	$list[NS_USER_PROFILE] = 'User_profile';
-	$list[NS_USER_PROFILE_TALK] = 'User_profile_talk';
-	return true;
 }
