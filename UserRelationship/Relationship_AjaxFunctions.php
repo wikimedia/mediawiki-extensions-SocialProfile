@@ -16,7 +16,7 @@ function wfRelationshipRequestResponse( $response, $requestId ) {
 		$rel_type = strtolower( $request[0]['type'] );
 
 		$response = ( isset( $_POST['response' ] ) ) ? $_POST['response'] : $response;
-		$rel->updateRelationshipRequestStatus( $requestId, $response );
+		$rel->updateRelationshipRequestStatus( $requestId, intval( $response ) );
 
 		$avatar = new wAvatar( $user_id_from, 'l' );
 		$avatar_img = $avatar->getAvatarURL();
@@ -37,5 +37,6 @@ function wfRelationshipRequestResponse( $response, $requestId ) {
 		}
 		$rel->deleteRequest( $requestId );
 	}
+
 	return $out;
 }
