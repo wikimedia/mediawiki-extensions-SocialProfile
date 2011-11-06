@@ -9,22 +9,19 @@ class UserActivity {
 	 * Please use the accessor functions
 	 */
 
-	/**#@+
-	 * @private
-	 */
-	var $user_id;       # Text form (spaces not underscores) of the main part
-	var $user_name;		# Text form (spaces not underscores) of the main part
-	var $items;         # Text form (spaces not underscores) of the main part
-	var $rel_type;
-	var $show_edits = 1;
-	var $show_votes = 0;
-	var $show_comments = 1;
-	var $show_relationships = 1;
-	var $show_gifts_sent = 0;
-	var $show_gifts_rec = 1;
-	var $show_system_gifts = 1;
-	var $show_system_messages = 1;
-	var $show_messages_sent = 1;
+	private $user_id;       # Text form (spaces not underscores) of the main part
+	private $user_name;		# Text form (spaces not underscores) of the main part
+	private $items;         # Text form (spaces not underscores) of the main part
+	private $rel_type;
+	private $show_edits = 1;
+	private $show_votes = 0;
+	private $show_comments = 1;
+	private $show_relationships = 1;
+	private $show_gifts_sent = 0;
+	private $show_gifts_rec = 1;
+	private $show_system_gifts = 1;
+	private $show_system_messages = 1;
+	private $show_messages_sent = 1;
 
 	/**
 	 * Constructor
@@ -94,7 +91,9 @@ class UserActivity {
 				$userArray[] = $user;
 			}
 			$userIDs = implode( ',', $userArray );
-			$where[] = "rc_user IN ($userIDs)";
+			if ( !empty( $userIDs ) ) {
+				$where[] = "rc_user IN ($userIDs)";
+			}
 		}
 
 		if ( !empty( $this->show_current_user ) ) {
@@ -187,7 +186,9 @@ class UserActivity {
 				$userArray[] = $user;
 			}
 			$userIDs = implode( ',', $userArray );
-			$where[] = "vote_user_id IN ($userIDs)";
+			if ( !empty( $userIDs ) ) {
+				$where[] = "vote_user_id IN ($userIDs)";
+			}
 		}
 		if ( $this->show_current_user ) {
 			$where['vote_user_id'] = $this->user_id;
@@ -256,7 +257,9 @@ class UserActivity {
 				$userArray[] = $user;
 			}
 			$userIDs = implode( ',', $userArray );
-			$where[] = "Comment_user_id IN ($userIDs)";
+			if ( !empty( $userIDs ) ) {
+				$where[] = "Comment_user_id IN ($userIDs)";
+			}
 		}
 
 		if ( !empty( $this->show_current_user ) ) {
@@ -348,7 +351,9 @@ class UserActivity {
 				$userArray[] = $user;
 			}
 			$userIDs = implode( ',', $userArray );
-			$where[] = "ug_user_id_to IN ($userIDs)";
+			if ( !empty( $userIDs ) ) {
+				$where[] = "ug_user_id_to IN ($userIDs)";
+			}
 		}
 
 		if( $this->show_current_user ) {
@@ -412,7 +417,9 @@ class UserActivity {
 				$userArray[] = $user;
 			}
 			$userIDs = implode( ',', $userArray );
-			$where[] = "ug_user_id_to IN ($userIDs)";
+			if ( !empty( $userIDs ) ) {
+				$where[] = "ug_user_id_to IN ($userIDs)";
+			}
 		}
 
 		if ( !empty( $this->show_current_user ) ) {
@@ -484,6 +491,8 @@ class UserActivity {
 	 * variables.
 	 */
 	private function setSystemGiftsRec() {
+		global $wgUploadPath;
+
 		$dbr = wfGetDB( DB_SLAVE );
 
 		$where = array();
@@ -503,7 +512,9 @@ class UserActivity {
 				$userArray[] = $user;
 			}
 			$userIDs = implode( ',', $userArray );
-			$where[] = "sg_user_id IN ($userIDs)";
+			if ( !empty( $userIDs ) ) {
+				$where[] = "sg_user_id IN ($userIDs)";
+			}
 		}
 
 		if ( !empty( $this->show_current_user ) ) {
@@ -527,7 +538,6 @@ class UserActivity {
 		);
 
 		foreach ( $res as $row ) {
-			global $wgUploadPath;
 			$user_title = Title::makeTitle( NS_USER, $row->sg_user_name );
 			$system_gift_image = '<img src="' . $wgUploadPath . '/awards/' .
 				SystemGifts::getGiftImage( $row->gift_id, 'm' ) .
@@ -589,7 +599,9 @@ class UserActivity {
 				$userArray[] = $user;
 			}
 			$userIDs = implode( ',', $userArray );
-			$where[] = "r_user_id IN ($userIDs)";
+			if ( !empty( $userIDs ) ) {
+				$where[] = "r_user_id IN ($userIDs)";
+			}
 		}
 
 		if ( !empty( $this->show_current_user ) ) {
@@ -678,7 +690,9 @@ class UserActivity {
 				$userArray[] = $user;
 			}
 			$userIDs = implode( ',', $userArray );
-			$where[] = "ub_user_id_from IN ($userIDs)";
+			if ( !empty( $userIDs ) ) {
+				$where[] = "ub_user_id_from IN ($userIDs)";
+			}
 		}
 
 		if ( !empty( $this->show_current_user ) ) {
@@ -768,7 +782,9 @@ class UserActivity {
 				$userArray[] = $user;
 			}
 			$userIDs = implode( ',', $userArray );
-			$where[] = "um_user_id IN ($userIDs)";
+			if ( !empty( $userIDs ) ) {
+				$where[] = "um_user_id IN ($userIDs)";
+			}
 		}
 
 		if ( !empty( $this->show_current_user ) ) {
