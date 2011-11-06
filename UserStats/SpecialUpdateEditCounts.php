@@ -73,7 +73,14 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 					__METHOD__
 				);
 			}
-			$wgOut->addHTML( "<p>Updating {$row->rev_user_text} with {$editCount} edits</p>" );
+			$wgOut->addHTML(
+				wfMsgExt(
+					'updateeditcounts-updating',
+					'parsemag',
+					$row->rev_user_text,
+					$editCount
+				)
+			);
 
 			$dbw->update(
 				'user_stats',
@@ -97,8 +104,6 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 	public function execute( $par ) {
 		global $wgOut, $wgUser;
 
-		$wgOut->setPageTitle( 'Update Edit Counts' );
-
 		// Check permissions -- we must be allowed to access this special page
 		// before we can run any database queries
 		if ( !$wgUser->isAllowed( 'updatepoints' ) ) {
@@ -111,6 +116,9 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 			$wgOut->readOnlyPage();
 			return;
 		}
+
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
 
 		$dbw = wfGetDB( DB_MASTER );
 		$this->updateMainEditsCount();
@@ -125,7 +133,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 			__METHOD__,
 			array( 'ORDER BY' => 'stats_user_name' )
 		);
-		$out = '';
+
 		$x = 0;
 		foreach ( $res as $row ) {
 			$x++;
@@ -135,7 +143,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 			);
 			$stats->updateTotalPoints();
 		}
-		$out = "Updated stats for <b>{$x}</b> users";
-		$wgOut->addHTML( $out );
+
+		$wgOut->addHTML( wfMsgExt( 'updateeditcounts-updated', 'parsemag', $x ) );
 	}
 }

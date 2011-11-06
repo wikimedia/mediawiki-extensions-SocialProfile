@@ -581,7 +581,7 @@ class UserStatsTrack {
 		global $wgEnableFacebook, $wgUserLevels;
 
 		if ( $this->user_id == 0 ) {
-			return '';
+			return array();
 		}
 
 		$stats_data = array();
@@ -775,7 +775,7 @@ class UserStats {
 	 * 					amount of points the user has
 	 */
 	static function getTopFansList( $limit = 10 ) {
-		$dbr = wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_SLAVE );
 
 		$res = $dbr->select(
 			'user_stats',

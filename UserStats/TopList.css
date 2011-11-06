@@ -73,7 +73,13 @@
 	width: 200px;
 	padding: 5px;
 }
+
 .top-fan-nav a {
 	font-weight: bold;
 	text-decoration: none;
+}
+
+/* A "Top users by category" <h1> on Special:TopFansByStatistics and Special:TopUsersRecent */
+.top-title {
+	margin-top: 15px !important;
 }

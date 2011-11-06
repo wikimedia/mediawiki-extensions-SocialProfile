@@ -7,8 +7,19 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( "This is not a valid entry point.\n" );
 }
 
+/**
+ * For the UserLevels (points) functionality to work, you will need to
+ * define $wgUserLevels and require_once() this file in your wiki's
+ * LocalSettings.php file.
+ */
 $wgHooks['NewRevisionFromEditComplete'][] = 'incEditCount';
+$wgHooks['ArticleDelete'][] = 'removeDeletedEdits';
+$wgHooks['ArticleUndelete'][] = 'restoreDeletedEdits';
 
+/**
+ * Updates user's points after they've made an edit in a namespace that is
+ * listed in the $wgNamespacesForEditPoints array.
+ */
 function incEditCount( $article, $revision, $baseRevId ) {
 	global $wgUser, $wgNamespacesForEditPoints;
 
@@ -24,8 +35,10 @@ function incEditCount( $article, $revision, $baseRevId ) {
 	return true;
 }
 
-$wgHooks['ArticleDelete'][] = 'removeDeletedEdits';
-
+/**
+ * Updates user's points after a page in a namespace that is listed in the
+ * $wgNamespacesForEditPoints array that they've edited has been deleted.
+ */
 function removeDeletedEdits( &$article, &$user, &$reason ) {
 	global $wgNamespacesForEditPoints;
 
@@ -51,8 +64,11 @@ function removeDeletedEdits( &$article, &$user, &$reason ) {
 	return true;
 }
 
-$wgHooks['ArticleUndelete'][] = 'restoreDeletedEdits';
-
+/**
+ * Updates user's points after a page in a namespace that is listed in the
+ * $wgNamespacesForEditPoints array that they've edited has been restored after
+ * it was originally deleted.
+ */
 function restoreDeletedEdits( &$title, $new ) {
 	global $wgNamespacesForEditPoints;
 

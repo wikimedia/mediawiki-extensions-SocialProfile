@@ -95,7 +95,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 		$message = wfMsgForContent( 'topfans-by-category' );
 
 		if ( !wfEmptyMsg( 'topfans-by-category', $message ) ) {
-			$out .= '<h1 style="margin-top:15px !important;">' .
+			$out .= '<h1 class="top-title">' .
 				wfMsg( 'top-fans-by-category-nav-header' ) . '</h1>';
 
 			$lines = explode( "\n", $message );

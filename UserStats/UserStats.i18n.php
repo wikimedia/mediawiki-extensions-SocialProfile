@@ -72,6 +72,10 @@ Hey, want to stop getting e-mails from us?
 
 Click $3
 and change your settings to disable e-mail notifications.',
+	// Special:UpdateEditCounts
+	'updateeditcounts' => 'Update Edit Counts',
+	'updateeditcounts-updated' => "Updated stats for '''$1''' {{PLURAL:$1|user|users}}",
+	'updateeditcounts-updating' => 'Updating $1 with $2 {{PLURAL:$2|edit|edits}}',
 	// Special:GenerateTopUsersReport
 	'generatetopusersreport' => 'Generate Top Users Report',
 	'user-stats-weekly-winners' => 'Weekly {{PLURAL:$1|Winner|Winners}}',

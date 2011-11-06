@@ -56,7 +56,6 @@ class TopFansByStat extends UnlistedSpecialPage {
 			$params['ORDER BY'] = "{$column} DESC";
 			$params['LIMIT'] = $count;
 
-			$dbr = wfGetDB( DB_SLAVE );
 			$res = $dbr->select(
 				'user_stats',
 				array( 'stats_user_id', 'stats_user_name', $column ),
@@ -96,7 +95,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 		$message = wfMsgForContent( 'topfans-by-category' );
 
 		if ( !wfEmptyMsg( 'topfans-by-category', $message ) ) {
-			$out .= '<h1 style="margin-top:15px !important;">' .
+			$out .= '<h1 class="top-title">' .
 				wfMsg( 'top-fans-by-category-nav-header' ) . '</h1>';
 
 			$lines = explode( "\n", $message );

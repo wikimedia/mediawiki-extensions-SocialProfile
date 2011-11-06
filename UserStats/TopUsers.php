@@ -57,7 +57,7 @@ class TopUsersPoints extends SpecialPage {
 					);
 					$loop++;
 				}
-				if ( $loop >= 50 ) {
+				if ( $loop >= $realcount ) {
 					break;
 				}
 			}

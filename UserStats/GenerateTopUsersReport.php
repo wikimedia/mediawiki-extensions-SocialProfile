@@ -79,6 +79,8 @@ class GenerateTopUsersReport extends SpecialPage {
 		// Add CSS
 		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStats/TopList.css' );
 
+		// Used as the LIMIT for SQL queries; basically, show this many users
+		// in the generated reports.
 		$user_count = $wgRequest->getInt( 'user_count', 10 );
 
 		if( $period == 'weekly' ) {
@@ -101,6 +103,10 @@ class GenerateTopUsersReport extends SpecialPage {
 		);
 
 		$last_rank = 0;
+		$last_total = 0;
+		$x = 1;
+
+		$users = array();
 
 		// Initial run is a special case
 		if ( $dbw->numRows( $res ) <= 0 ) {
@@ -122,11 +128,6 @@ class GenerateTopUsersReport extends SpecialPage {
 
 			$out = '<div class="top-users">';
 
-			$last_total = 0;
-			$x = 1;
-
-			$users = array();
-
 			foreach( $res as $row ) {
 				if( $row->stats_total_points == $last_total ) {
 					$rank = $last_rank;
@@ -145,11 +146,6 @@ class GenerateTopUsersReport extends SpecialPage {
 			}
 		} else {
 			$out = '<div class="top-users">';
-
-			$last_total = 0;
-			$x = 1;
-
-			$users = array();
 
 			foreach( $res as $row ) {
 				if( $row->up_points == $last_total ) {
