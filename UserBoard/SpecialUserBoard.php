@@ -144,8 +144,8 @@ class SpecialViewUserBoard extends SpecialPage {
 
 		if ( $total ) {
 			$output .= '<div class="user-page-message-top">
-			<span class="user-page-message-count" style="font-size:11px;color:#666666;">'
-				. wfMsg( 'userboard_showingmessages', $total, $start, $end, $end - $start + 1 ) .
+			<span class="user-page-message-count">' .
+				wfMsg( 'userboard_showingmessages', $total, $start, $end, $end - $start + 1 ) .
 			"</span> {$board_to_board}
 			</div>";
 		}
@@ -221,7 +221,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				$output .= '<div class="user-page-message-form">
 					<input type="hidden" id="user_name_to" name="user_name_to" value="' . $user_name_to . '"/>
 					<input type="hidden" id="user_name_from" name="user_name_from" value="' . $user_name_from . '"/>
-					<span style="color:#797979;">' . wfMsg( 'userboard_messagetype' ) . ' </span>
+					<span class="user-board-message-type">' . wfMsg( 'userboard_messagetype' ) . ' </span>
 					<select id="message_type">
 						<option value="0">' . wfMsg( 'userboard_public' ) . '</option>
 						<option value="1">' . wfMsg( 'userboard_private' ) . '</option>
@@ -285,7 +285,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				// $ub_message_text = preg_replace_callback( "/(<a[^>]*>)(.*?)(<\/a>)/i", 'cut_link_text', $ub_message['message_text'] );
 				$ub_message_text = $ub_message['message_text'];
 
-				$output .= "<div class=\"user-board-message\" style=\"width:550px\">
+				$output .= "<div class=\"user-board-message\">
 					<div class=\"user-board-message-from\">
 							<a href=\"{$user->escapeFullURL()}\" title=\"{$ub_message['user_name_from']}}\">{$ub_message['user_name_from']} </a> {$ub_message_type_label}
 					</div>

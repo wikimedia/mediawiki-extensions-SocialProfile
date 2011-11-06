@@ -37,6 +37,7 @@
 .user-board-message {
 	border: 1px solid #D4DFD7;
 	margin: 0px 0px 15px 0px;
+	width: 550px;
 }
 
 .user-board-message-from {
@@ -101,4 +102,13 @@ select#message_type {
 
 .user-page-message-form textarea {
 	width: 80%;
+}
+
+.user-page-message-count {
+	color: #666666;
+	font-size: 11px;
+}
+
+.user-board-message-type {
+	color: #797979;
 }

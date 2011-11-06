@@ -3,18 +3,11 @@
  * Functions for managing user board data
  */
 class UserBoard {
-	/**#@+
-	 * @private
-	 */
-	var $user_id;
-	var $user_name;
 
 	/**
 	 * Constructor
-	 * @private
 	 */
-	/* private */ function __construct() {
-	}
+	public function __construct() {}
 
 	/**
 	 * Sends a user board message to another user.
@@ -155,9 +148,6 @@ class UserBoard {
 
 		$key = wfMemcKey( 'user', 'newboardmessage', $user_id );
 		$newCount = 0;
-		/* @todo FIXME: why is this commented out? This obviously should be
-		enabled, because without this, this function is basically identical
-		to clearNewMessagesCount...
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(
 			'user_board',
@@ -168,7 +158,6 @@ class UserBoard {
 		if ( $s !== false ) {
 			$newCount = $s->count;
 		}
-		*/
 
 		$wgMemc->set( $key, $newCount );
 
@@ -205,8 +194,8 @@ class UserBoard {
 	 * @return Boolean: true if user owns the message, otherwise false
 	 */
 	public function doesUserOwnMessage( $user_id, $ub_id ) {
-		$dbw = wfGetDB( DB_MASTER );
-		$s = $dbw->selectRow(
+		$dbr = wfGetDB( DB_SLAVE );
+		$s = $dbr->selectRow(
 			'user_board',
 			array( 'ub_user_id' ),
 			array( 'ub_id' => $ub_id ),
@@ -391,8 +380,8 @@ class UserBoard {
 					<div class=\"user-board-message-from\">
 					<a href=\"{$user->escapeFullURL()}\" title=\"{$message['user_name_from']}\">{$message['user_name_from']}</a> {$message_type_label}
 					</div>
-					<div class=\"user-board-message-time\">"
-						. wfMsgHtml( 'userboard_posted_ago', $this->getTimeAgo( $message['timestamp'] ) ) .
+					<div class=\"user-board-message-time\">" .
+						wfMsgHtml( 'userboard_posted_ago', $this->getTimeAgo( $message['timestamp'] ) ) .
 					"</div>
 					<div class=\"user-board-message-content\">
 						<div class=\"user-board-message-image\">
