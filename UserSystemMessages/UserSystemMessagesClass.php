@@ -16,7 +16,7 @@ class UserSystemMessage {
 	 * @param $type Integer: 0 by default
 	 * @param $message Mixed: message to be sent out
 	 */
-	public function addMessage( $userName, $type, $message ) {
+	public function addMessage( $userName, $type = 0, $message ) {
 		$userId = User::idFromName( $userName );
 		$dbw = wfGetDB( DB_MASTER );
 
@@ -56,7 +56,7 @@ class UserSystemMessage {
 	 * @return $requests
 	 */
 	public function getMessageList( $type, $limit = 0, $page = 0 ) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_SLAVE );
 
 		if ( $limit > 0 ) {
 			$limitvalue = 0;
@@ -68,7 +68,7 @@ class UserSystemMessage {
 		}
 
 		$params['ORDER BY'] = 'ug_id DESC';
-		$res = $dbw->select(
+		$res = $dbr->select(
 			array( 'user_gift', 'gift' ),
 			array(
 				'ug_id', 'ug_user_id_from', 'ug_user_name_from', 'ug_gift_id',
