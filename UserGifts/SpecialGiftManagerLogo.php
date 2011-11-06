@@ -9,13 +9,13 @@
  */
 class GiftManagerLogo extends UnlistedSpecialPage {
 
-	var $mUploadFile, $mUploadDescription, $mIgnoreWarning;
-	var $mUploadSaveName, $mUploadTempName, $mUploadSize, $mUploadOldVersion;
-	var $mUploadCopyStatus, $mUploadSource, $mReUpload, $mAction, $mUpload;
-	var $mOname, $mSessionKey, $mStashed, $mDestFile;
-	var $avatarUploadDirectory;
-	var $fileExtensions;
-	var $gift_id;
+	public $mUploadFile, $mUploadDescription, $mIgnoreWarning;
+	public $mUploadSaveName, $mUploadTempName, $mUploadSize, $mUploadOldVersion;
+	public $mUploadCopyStatus, $mUploadSource, $mReUpload, $mAction, $mUpload;
+	public $mOname, $mSessionKey, $mStashed, $mDestFile;
+	public $avatarUploadDirectory;
+	public $fileExtensions;
+	public $gift_id;
 
 	/**
 	 * Constructor

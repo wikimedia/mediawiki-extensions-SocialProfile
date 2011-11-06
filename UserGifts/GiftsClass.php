@@ -7,23 +7,9 @@
 class Gifts {
 
 	/**
-	 * All member variables should be considered private
-	 * Please use the accessor functions
-	 */
-
-	/**#@+
-	 * @private
-	 */
-	var $user_id;			# Text form (spaces not underscores) of the main part
-	var $user_name;			# Text form (spaces not underscores) of the main part
-
-	/**
 	 * Constructor
-	 * @private
 	 */
-	/* private */ function __construct() {
-
-	}
+	public function __construct() {}
 
 	/**
 	 * Adds a gift to the database
@@ -203,7 +189,7 @@ class Gifts {
 		$gift_count = 0;
 		$s = $dbr->selectRow(
 			'gift',
-			array( 'COUNT(*) AS count' ),
+			array( 'COUNT(gift_id) AS count' ),
 			array( 'gift_creator_user_id' => $user_id ),
 			__METHOD__
 		);
@@ -218,7 +204,7 @@ class Gifts {
 		$gift_count = 0;
 		$s = $dbr->selectRow(
 			'gift',
-			array( 'COUNT(*) AS count' ),
+			array( 'COUNT(gift_id) AS count' ),
 			array( 'gift_given_count' => $gift_count ),
 			__METHOD__
 		);

@@ -34,12 +34,12 @@ class GiftManager extends SpecialPage {
 		// Add CSS
 		$wgOut->addExtensionStyle( $wgUserGiftsScripts . '/UserGifts.css' );
 
-		if ( count( $_POST ) ) {
-			if ( !( $_POST['id'] ) ) {
+		if ( $wgRequest->wasPosted() ) {
+			if ( !$wgRequest->getInt( 'id' ) ) {
 				$giftId = Gifts::addGift(
-					$_POST['gift_name'],
-					$_POST['gift_description'],
-					intval( $_POST['access'] )
+					$wgRequest->getVal( 'gift_name' ),
+					$wgRequest->getVal( 'gift_description' ),
+					$wgRequest->getInt( 'access' )
 				);
 				$wgOut->addHTML(
 					'<span class="view-status">' .
@@ -47,12 +47,12 @@ class GiftManager extends SpecialPage {
 					'</span><br /><br />'
 				);
 			} else {
-				$giftId = intval( $_POST['id'] );
+				$giftId = $wgRequest->getInt( 'id' );
 				Gifts::updateGift(
 					$giftId,
-					$_POST['gift_name'],
-					$_POST['gift_description'],
-					intval( $_POST['access'] )
+					$wgRequest->getVal( 'gift_name' ),
+					$wgRequest->getVal( 'gift_description' ),
+					$wgRequest->getInt( 'access' )
 				);
 				$wgOut->addHTML(
 					'<span class="view-status">' .

@@ -5,22 +5,13 @@
  */
 class UserGifts {
 
-	/**
-	 * All member variables should be considered private
-	 * Please use the accessor functions
-	 */
-
-	/**#@+
-	 * @private
-	 */
-	var $user_id; # Text form (spaces not underscores) of the main part
-	var $user_name; # Text form (spaces not underscores) of the main part
+	private $user_id; # Text form (spaces not underscores) of the main part
+	private $user_name; # Text form (spaces not underscores) of the main part
 
 	/**
 	 * Constructor
-	 * @private
 	 */
-	/* private */ function __construct( $username ) {
+	public function __construct( $username ) {
 		$title1 = Title::newFromDBkey( $username );
 		$this->user_name = $title1->getText();
 		$this->user_id = User::idFromName( $this->user_name );
