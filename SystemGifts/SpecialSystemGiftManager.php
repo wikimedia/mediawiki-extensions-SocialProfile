@@ -50,7 +50,7 @@ class SystemGiftManager extends SpecialPage {
 		if ( $wgRequest->wasPosted() ) {
 			$g = new SystemGifts();
 
-			if ( !( $_POST['id'] ) ) { // @todo FIXME/CHECKME: why $_POST? Why not $wgRequest?
+			if ( !$wgRequest->getInt( 'id' ) ) {
 				// Add the new system gift to the database
 				$gift_id = $g->addGift(
 					$wgRequest->getVal( 'gift_name' ),
@@ -101,10 +101,12 @@ class SystemGiftManager extends SpecialPage {
 	 */
 	function displayGiftList() {
 		global $wgUser;
+
 		$output = ''; // Prevent E_NOTICE
 		$page = 0;
 		$per_page = 50;
 		$gifts = SystemGifts::getGiftList( $per_page, $page );
+
 		if ( $gifts ) {
 			foreach ( $gifts as $gift ) {
 				$deleteLink = '';
@@ -122,6 +124,7 @@ class SystemGiftManager extends SpecialPage {
 						$deleteLink . '</div>' . "\n";
 			}
 		}
+
 		return '<div id="views">' . $output . '</div>';
 	}
 

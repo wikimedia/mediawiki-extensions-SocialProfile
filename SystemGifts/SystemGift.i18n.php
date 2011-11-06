@@ -57,6 +57,8 @@ $messages['en'] = array(
 This will also delete it from users who may have received it.',
 	'ga-remove-success-title' => 'You have successfully removed the gift "$1"',
 	'ga-remove-success-message' => 'The gift "$1" has been removed.',
+	'ga-user-got-awards' => '$1 got $2',
+	'ga-awards-given-out' => '{{PLURAL:$1|One award|$1 awards}} were given out',
 	'topawards' => 'Top Awards',
 	'topawards-edit-title' => 'Top Awards - Edit Milestones',
 	'topawards-vote-title' => 'Top Awards - Vote Milestones',
@@ -1146,6 +1148,8 @@ $messages['fi'] = array(
 Tämä poistaa sen myös käyttäjiltä, jotka ovat saattaneet saada sen.',
 	'ga-remove-success-title' => 'Olet onnistuneesti poistanut lahjan "$1"',
 	'ga-remove-success-message' => 'Lahja "$1" on poistettu.',
+	'ga-user-got-awards' => '$1 sai palkinnon $2',
+	'ga-awards-given-out' => '{{PLURAL:$1|Yksi palkinto|$1 palkintoa}} jaettiin',
 	'system_gift_received_subject' => 'Olet saanut palkinnon $1 {{GRAMMAR:inessive|{{SITENAME}}}}!',
 	'system_gift_received_body' => 'Hei $1:
 

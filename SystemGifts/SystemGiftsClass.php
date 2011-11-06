@@ -8,7 +8,7 @@ class SystemGifts {
 	 * All member variables should be considered private
 	 * Please use the accessor functions
 	 */
-	var $categories = array(
+	private $categories = array(
 		'edit' => 1,
 		'vote' => 2,
 		'comment' => 3,
@@ -24,13 +24,6 @@ class SystemGifts {
 		'points_winner_monthly' => 13,
 		'quiz_points' => 14
 	);
-
-	/**
-	 * Constructor
-	 * @private
-	 */
-	/* private */ function __construct() {
-	}
 
 	/**
 	 * Adds awards for all registered users, updates statistics and purges
@@ -86,13 +79,17 @@ class SystemGifts {
 						// Update counters (bug #27981)
 						UserSystemGifts::incGiftGivenCount( $row->gift_id );
 
-						$wgOut->addHTML( $row2->stats_user_name . ' got ' . $row->gift_name . '<br />' );
+						$wgOut->addHTML( wfMsg(
+							'ga-user-got-awards',
+							$row2->stats_user_name,
+							$row->gift_name
+						) . '<br />' );
 						$x++;
 					}
 				}
 			}
 		}
-		$wgOut->addHTML( "{$x} awards were given out" );
+		$wgOut->addHTML( wfMsgExt( 'ga-awards-given-out', 'parsemag', $x ) );
 	}
 
 	/**
@@ -170,11 +167,12 @@ class SystemGifts {
 
 	public function doesGiftExistForThreshold( $category, $threshold ) {
 		$dbr = wfGetDB( DB_SLAVE );
-		wfSuppressWarnings();
-		// Can cause notices like "Notice: Undefined index: user_image" after
-		// a user has uploaded their (first) avatar
-		$awardCategory = $this->categories[$category];
-		wfRestoreWarnings();
+
+		$awardCategory = 0;
+		if ( isset( $this->categories[$category] ) ) {
+			$awardCategory = $this->categories[$category];
+		}
+
 		$s = $dbr->selectRow(
 			'system_gift',
 			array( 'gift_id' ),
@@ -184,6 +182,7 @@ class SystemGifts {
 			),
 			__METHOD__
 		);
+
 		if ( $s === false ) {
 			return false;
 		} else {

@@ -10,13 +10,13 @@
 
 class SystemGiftManagerLogo extends UnlistedSpecialPage {
 
-	var $mUploadFile, $mUploadDescription, $mIgnoreWarning;
-	var $mUploadSaveName, $mUploadTempName, $mUploadSize, $mUploadOldVersion;
-	var $mUploadCopyStatus, $mUploadSource, $mReUpload, $mAction, $mUpload;
-	var $mOname, $mSessionKey, $mStashed, $mDestFile;
-	var $avatarUploadDirectory;
-	var $fileExtensions;
-	var $gift_id;
+	public $mUploadFile, $mUploadDescription, $mIgnoreWarning;
+	public $mUploadSaveName, $mUploadTempName, $mUploadSize, $mUploadOldVersion;
+	public $mUploadCopyStatus, $mUploadSource, $mReUpload, $mAction, $mUpload;
+	public $mOname, $mSessionKey, $mStashed, $mDestFile;
+	public $avatarUploadDirectory;
+	public $fileExtensions;
+	public $gift_id;
 
 	/**
 	 * Constructor -- set up the new special page
@@ -412,9 +412,9 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		}
 
 		if ( $type < 0 ) {
-			# FIXME: undefined variable $stash
-			throw new FatalError( wfMsg( 'filecopyerror', $tempName, $stash ) );
+			throw new FatalError( wfMsg( 'filecopyerror', $tempName, /*$stash*/'' ) );
 		}
+
 		return $type;
 	}
 
