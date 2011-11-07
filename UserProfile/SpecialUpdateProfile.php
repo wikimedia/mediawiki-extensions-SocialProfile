@@ -39,7 +39,6 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			__METHOD__
 		);
 		if ( $s === false ) {
-			$dbw = wfGetDB( DB_MASTER );
 			$dbw->insert(
 				'user_profile',
 				array( 'up_user_id' => $user->getID() ),
@@ -222,7 +221,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		wfRunHooks( 'SpecialUpdateProfile::saveSettings_pref', array( $this, $wgRequest ) );
 	}
 
-	function formatBirthdayDB( $birthday ) {
+	public static function formatBirthdayDB( $birthday ) {
 		$dob = explode( '/', $birthday );
 		if ( count( $dob ) == 2 || count( $dob ) == 3 ) {
 			$year = isset( $dob[2] ) ? $dob[2] : 2007;
@@ -235,7 +234,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		return ( $birthday_date );
 	}
 
-	function formatBirthday( $birthday, $showYOB = false ) {
+	public static function formatBirthday( $birthday, $showYOB = false ) {
 		$dob = explode( '-', $birthday );
 		if ( count( $dob ) == 3 ) {
 			$month = $dob[1];
@@ -275,7 +274,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			'up_hometown_state' => $wgRequest->getVal( 'hometown_state' ),
 			'up_hometown_country' => $wgRequest->getVal( 'hometown_country' ),
 
-			'up_birthday' => $this->formatBirthdayDB( $wgRequest->getVal( 'birthday' ) ),
+			'up_birthday' => self::formatBirthdayDB( $wgRequest->getVal( 'birthday' ) ),
 			'up_about' => $wgRequest->getVal( 'about' ),
 			'up_occupation' => $wgRequest->getVal( 'occupation' ),
 			'up_schools' => $wgRequest->getVal( 'schools' ),
@@ -375,7 +374,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	function displayBasicForm( $user ) {
 		global $wgRequest, $wgUser, $wgOut;
 
-		$dbr = wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_SLAVE );
 		$s = $dbr->selectRow( 'user_profile',
 			array(
 				'up_location_city', 'up_location_state', 'up_location_country',
@@ -398,7 +397,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$hometown_state = $s->up_hometown_state;
 			$hometown_country = $s->up_hometown_country;
 			$showYOB = $wgUser->getIntOption( 'showyearofbirth', !isset( $s->up_birthday ) ) == 1;
-			$birthday = $this->formatBirthday( $s->up_birthday, $showYOB );
+			$birthday = self::formatBirthday( $s->up_birthday, $showYOB );
 			$schools = $s->up_schools;
 			$places = $s->up_places_lived;
 			$websites = $s->up_websites;
@@ -473,7 +472,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		}
 
 		$form .= '</select>';
-			$form .= '</p>
+		$form .= '</p>
 			<div class="cleared"></div>
 		</div>
 		<div class="cleared"></div>';
@@ -582,8 +581,9 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	function displayPersonalForm( $user ) {
 		global $wgRequest, $wgUser, $wgOut;
 
-		$dbr = wfGetDB( DB_MASTER );
-		$s = $dbr->selectRow( 'user_profile',
+		$dbr = wfGetDB( DB_SLAVE );
+		$s = $dbr->selectRow(
+			'user_profile',
 			array(
 				'up_about', 'up_places_lived', 'up_websites', 'up_relationship',
 				'up_occupation', 'up_companies', 'up_schools', 'up_movies',
@@ -676,7 +676,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	function displayPreferencesForm() {
 		global $wgRequest, $wgUser, $wgOut;
 
-		$dbr = wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_SLAVE );
 		$s = $dbr->selectRow(
 			'user_profile',
 			array( 'up_birthday' ),

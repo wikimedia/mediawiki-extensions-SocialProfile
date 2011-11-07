@@ -22,13 +22,13 @@ countries[0] = {
 
 function displaySection( id, country, section ) {
 	country_id = -1;
-	for( x = 0; x <= countries.length-1; x++ ) {
+	for( var x = 0; x <= countries.length-1; x++ ) {
 		if( country == countries[x].country ) {
 			country_id = x;
 		}
 	}
 
-	section_select = '';
+	var section_select = '';
 	if( countries[country_id] ) {
 		document.getElementById( id + '_label' ).innerHTML = countries[country_id].name;
 		section_select += '<select class="profile-form" name="' + id + '" id="' + id + '"><option></option>';

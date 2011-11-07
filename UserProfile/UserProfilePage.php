@@ -11,12 +11,12 @@
 
 class UserProfilePage extends Article {
 
-	var $title = null;
+	public $title = null;
 
 	/**
 	 * Constructor
 	 */
-	function __construct( &$title ) {
+	function __construct( $title ) {
 		global $wgUser;
 		parent::__construct( $title );
 		$this->user_name = $title->getText();
@@ -219,7 +219,7 @@ class UserProfilePage extends Article {
 				array(
 					'page_title', 'UNIX_TIMESTAMP(poll_date) AS poll_date'
 				),
-				/*where*/ array( 'poll_user_id' => $this->user_id ),
+				/* WHERE */array( 'poll_user_id' => $this->user_id ),
 				__METHOD__,
 				array( 'ORDER BY' => 'poll_id DESC', 'LIMIT' => 3 ),
 				array( 'page' => array( 'INNER JOIN', 'page_id = poll_page_id' ) )
@@ -516,10 +516,7 @@ class UserProfilePage extends Article {
 		$user_level = new UserLevel( $stats_data['points'] );
 		$level_link = Title::makeTitle( NS_HELP, wfMsgForContent( 'user-profile-userlevels-link' ) );
 
-		if ( !$this->profile_data ) {
-			$profile = new UserProfile( $user_name );
-			$this->profile_data = $profile->getProfile();
-		}
+		$this->initializeProfileData( $user_name );
 		$profile_data = $this->profile_data;
 
 		$defaultCountry = wfMsgForContent( 'user-profile-default-country' );
@@ -636,10 +633,7 @@ class UserProfilePage extends Article {
 			return '';
 		}
 
-		if ( !$this->profile_data ) {
-			$profile = new UserProfile( $user_name );
-			$this->profile_data = $profile->getProfile();
-		}
+		$this->initializeProfileData( $user_name );
 
 		$profile_data = $this->profile_data;
 
@@ -707,10 +701,7 @@ class UserProfilePage extends Article {
 			return '';
 		}
 
-		if ( !$this->profile_data ) {
-			$profile = new UserProfile( $user_name );
-			$this->profile_data = $profile->getProfile();
-		}
+		$this->initializeProfileData( $user_name );
 
 		$profile_data = $this->profile_data;
 		$joined_data = $profile_data['movies'] . $profile_data['tv'] .
@@ -747,7 +738,7 @@ class UserProfilePage extends Article {
 				$this->getProfileSection( wfMsg( 'other-info-snacks' ), $profile_data['snacks'], false ) .
 				$this->getProfileSection( wfMsg( 'other-info-drinks' ), $profile_data['drinks'], false ) .
 			'</div>';
-		} elseif ( $wgUser->getName() == $user_name ) {
+		} elseif ( $this->isOwner() ) {
 			$output .= '<div class="user-section-heading">
 				<div class="user-section-title">' .
 					wfMsg( 'other-info-title' ) .
@@ -786,10 +777,7 @@ class UserProfilePage extends Article {
 		$user_level = new UserLevel( $stats_data['points'] );
 		$level_link = Title::makeTitle( NS_HELP, wfMsgForContent( 'user-profile-userlevels-link' ) );
 
-		if ( !$this->profile_data ) {
-			$profile = new UserProfile( $user_name );
-			$this->profile_data = $profile->getProfile();
-		}
+		$this->initializeProfileData( $user_name );
 		$profile_data = $this->profile_data;
 
 		// Variables and other crap
@@ -942,7 +930,7 @@ class UserProfilePage extends Article {
 		$avatar = new wAvatar( $this->user_id, 'l' );
 		$avatarTitle = SpecialPage::getTitleFor( 'UploadAvatar' );
 
-		$output .= '<div class="profile-image">';
+		$output = '<div class="profile-image">';
 		if ( $wgUser->getName() == $this->user_name ) {
 			if ( strpos( $avatar->getAvatarImage(), 'default_' ) != false ) {
 				$caption = 'upload image';
@@ -1234,63 +1222,6 @@ class UserProfilePage extends Article {
 				$by_type .= $item;
 			}
 			$output .= "<div id=\"recent-all\">$by_type</div>";
-
-			$by_type = '';
-			if ( isset( $items_html_type['edit'] ) && is_array( $items_html_type['edit'] ) ) {
-				foreach ( $items_html_type['edit'] as $item ) {
-					$by_type .= $item;
-				}
-			}
-
-			$by_type = '';
-			if ( isset( $items_html_type['comment'] ) && is_array( $items_html_type['comment'] ) ) {
-				foreach ( $items_html_type['comment'] as $item ) {
-					$by_type .= $item;
-				}
-			}
-
-			$by_type = '';
-			if ( isset( $items_html_type['gift-sent'] ) && is_array( $items_html_type['gift-sent'] ) ) {
-				foreach ( $items_html_type['gift-sent'] as $item ) {
-					$by_type .= $item;
-				}
-			}
-
-			$by_type = '';
-			if ( isset( $items_html_type['gift-rec'] ) && is_array( $items_html_type['gift-rec'] ) ) {
-				foreach ( $items_html_type['gift-rec'] as $item ) {
-					$by_type .= $item;
-				}
-			}
-
-			$by_type = '';
-			if ( isset( $items_html_type['system_gift'] ) && is_array( $items_html_type['system_gift'] ) ) {
-				foreach ( $items_html_type['system_gift'] as $item ) {
-					$by_type .= $item;
-				}
-			}
-
-			$by_type = '';
-			if ( isset( $items_html_type['friend'] ) && is_array( $items_html_type['friend'] ) ) {
-				foreach ( $items_html_type['friend'] as $item ) {
-					$by_type .= $item;
-				}
-			}
-
-			$by_type = '';
-			if ( isset( $items_html_type['foe'] ) && is_array( $items_html_type['foe'] ) ) {
-				foreach ( $items_html_type['foe'] as $item ) {
-					$by_type .= $item;
-				}
-			}
-
-			$by_type = '';
-			if ( isset( $items_html_type['system_message'] ) && is_array( $items_html_type['system_message'] ) ) {
-				foreach ( $items_html_type['system_message'] as $item ) {
-					$by_type .= $item;
-				}
-			}
-
 		}
 
 		return $output;
@@ -1548,7 +1479,7 @@ class UserProfilePage extends Article {
 			if ( $wgUser->isLoggedIn() && !$wgUser->isBlocked() ) {
 				$output .= '<div class="user-page-message-form">
 						<input type="hidden" id="user_name_to" name="user_name_to" value="' . addslashes( $user_name ) . '" />
-						<span style="color:#797979;">' .
+						<span class="profile-board-message-type">' .
 							wfMsgHtml( 'userboard_messagetype' ) .
 						'</span>
 						<select id="message_type">
@@ -1782,4 +1713,10 @@ class UserProfilePage extends Article {
 		return $output;
 	}
 
+	private function initializeProfileData( $username ) {
+		if ( !$this->profile_data ) {
+			$profile = new UserProfile( $username );
+			$this->profile_data = $profile->getProfile();
+		}
+	}
 }

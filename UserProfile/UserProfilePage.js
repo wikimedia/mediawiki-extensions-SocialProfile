@@ -58,7 +58,7 @@ function completeImageUpload() {
 	document.getElementById( 'upload-frame-errors' ).innerHTML = '';
 	oldHtml = document.getElementById( 'mini-gallery-' + replaceID ).innerHTML;
 
-	for( x = 7; x > 0; x-- ) {
+	for( var x = 7; x > 0; x-- ) {
 		document.getElementById( 'mini-gallery-' + ( x ) ).innerHTML =
 			document.getElementById( 'mini-gallery-' + ( x - 1 ) ).innerHTML.replace( 'slideShowLink(' + ( x - 1 ) + ')','slideShowLink(' + ( x ) + ')' );
 	}

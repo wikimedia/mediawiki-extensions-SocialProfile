@@ -38,19 +38,18 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 			return;
 		}
 
-		$dbr = wfGetDB( DB_MASTER );
-		$s = $dbr->selectRow(
+		$dbw = wfGetDB( DB_MASTER );
+		$s = $dbw->selectRow(
 			'user_profile',
 			array( 'up_user_id' ),
 			array( 'up_user_id' => $wgUser->getID() ),
 			__METHOD__
 		);
 		if ( $s === false ) {
-			$dbw = wfGetDB( DB_MASTER );
-			$dbw->insert( 'user_profile',
-				array(
-					'up_user_id' => $wgUser->getID()
-				), __METHOD__
+			$dbw->insert(
+				'user_profile',
+				array( 'up_user_id' => $wgUser->getID() ),
+				__METHOD__
 			);
 		}
 
@@ -59,8 +58,8 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 
 		$user_page_type = ( ( $profile_data['user_page_type'] == 1 ) ? 0 : 1 );
 
-		$dbw = wfGetDB( DB_MASTER );
-		$dbw->update( 'user_profile',
+		$dbw->update(
+			'user_profile',
 			/* SET */array(
 				'up_type' => $user_page_type
 			),

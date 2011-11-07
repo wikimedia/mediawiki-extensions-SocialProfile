@@ -12,9 +12,9 @@
  * @ingroup Extensions
  */
 class wAvatar {
-	var $user_name = null;
-	var $user_id;
-	var $avatar_type = 0;
+	public $user_name = null;
+	public $user_id;
+	public $avatar_type = 0;
 
 	/**
 	 * Constructor

@@ -652,3 +652,8 @@
 	color: #fff;
 	font-weight: bold;
 }
+
+/* The text "Message type" on the left side of the message type selector on profile page */
+.profile-board-message-type {
+	color: #797979;
+}

@@ -158,7 +158,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 	function displayBasicForm( $tar ) {
 		global $wgRequest, $wgUser, $wgOut;
 
-		$dbr = wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_SLAVE );
 		$s = $dbr->selectRow( 'user_profile',
 			array(
 				'up_location_city', 'up_location_state', 'up_location_country',
@@ -179,7 +179,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			$hometown_city = $s->up_hometown_city;
 			$hometown_state = $s->up_hometown_state;
 			$hometown_country = $s->up_hometown_country;
-			$birthday = $this->formatBirthday( $s->up_birthday, true );
+			$birthday = self::formatBirthday( $s->up_birthday, true );
 			$schools = $s->up_schools;
 			$places = $s->up_places_lived;
 			$websites = $s->up_websites;
@@ -254,7 +254,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		}
 
 		$form .= '</select>';
-			$form .= '</p>
+		$form .= '</p>
 			<div class="cleared"></div>
 		</div>
 		<div class="cleared"></div>';
@@ -349,7 +349,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 	function displayPersonalForm( $tar ) {
 		global $wgRequest, $wgUser, $wgOut;
 
-		$dbr = wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_SLAVE );
 		$s = $dbr->selectRow( 'user_profile',
 			array(
 				'up_about', 'up_places_lived', 'up_websites', 'up_relationship',
@@ -438,7 +438,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 	function displayCustomForm( $tar ) {
 		global $wgRequest, $wgUser, $wgOut;
 
-		$dbr = wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_SLAVE );
 		$s = $dbr->selectRow(
 			'user_profile',
 			array(

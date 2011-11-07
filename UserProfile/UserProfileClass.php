@@ -6,25 +6,25 @@ class UserProfile {
 	/**
 	 * @var Integer: the current user's user ID. Set in the constructor.
 	 */
-	var $user_id;
+	public $user_id;
 
 	/**
 	 * @var String: the current user's user name. Set in the constructor.
 	 */
-	var $user_name;
+	public $user_name;
 
 	/** unused, remove me? */
-	var $profile;
+	public $profile;
 
 	/**
 	 * @var Integer: used in getProfileComplete()
 	 */
-	var $profile_fields_count;
+	public $profile_fields_count;
 
 	/**
 	 * @var Array: array of valid profile fields; used in getProfileComplete()
 	 */
-	var $profile_fields = array(
+	public $profile_fields = array(
 		'real_name',
 		'location_city',
 		'hometown_city',
@@ -51,7 +51,7 @@ class UserProfile {
 	/**
 	 * @var Array: unused, remove me?
 	 */
-	var $profile_missing = array();
+	public $profile_missing = array();
 
 	/**
 	 * Constructor
@@ -118,7 +118,7 @@ class UserProfile {
 			$profile['hometown_city'] = isset( $row->up_hometown_city ) ? $row->up_hometown_city : '';
 			$profile['hometown_state'] = isset( $row->up_hometown_state ) ?  $row->up_hometown_state : '';
 			$profile['hometown_country'] = isset( $row->up_hometown_country ) ? $row->up_hometown_country : '';
-			$profile['birthday'] = $this->formatBirthday( $issetUpBirthday, $showYOB);
+			$profile['birthday'] = $this->formatBirthday( $issetUpBirthday, $showYOB );
 
 			$profile['about'] = isset( $row->up_about ) ? $row->up_about : '';
 			$profile['places_lived'] = isset( $row->up_places_lived ) ? $row->up_places_lived : '';
