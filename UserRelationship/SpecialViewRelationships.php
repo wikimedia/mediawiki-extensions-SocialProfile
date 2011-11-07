@@ -43,7 +43,7 @@ class SpecialViewRelationships extends SpecialPage {
 		 * Redirect Non-logged in users to Login Page
 		 * It will automatically return them to the ViewRelationships page
 		 */
-		if ( $wgUser->getID() == 0 && $user_name == '' ) {
+		if ( !$wgUser->isLoggedIn() && $user_name == '' ) {
 			$wgOut->setPageTitle( wfMsg( 'ur-error-page-title' ) );
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
 			$wgOut->redirect( $login->escapeFullURL( 'returnto=Special:ViewRelationships' ) );
@@ -69,14 +69,14 @@ class SpecialViewRelationships extends SpecialPage {
 			$user_name = $wgUser->getName();
 		}
 		$user_id = User::idFromName( $user_name );
-		$user = Title::makeTitle( NS_USER, $user_name );
+		$userPage = Title::makeTitle( NS_USER, $user_name );
 
 		/**
 		 * Error message for username that does not exist (from URL)
 		 */
 		if ( $user_id == 0 ) {
 			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
-			$out .= '<div class="relationship-error-message">' .
+			$out = '<div class="relationship-error-message">' .
 				wfMsg( 'ur-error-message-no-user' ) .
 			'</div>
 			<div class="relationship-request-buttons">
@@ -149,7 +149,7 @@ class SpecialViewRelationships extends SpecialPage {
 				);
 
 				// Safe titles
-				$user = Title::makeTitle( NS_USER, $relationship['user_name'] );
+				$userPage = Title::makeTitle( NS_USER, $relationship['user_name'] );
 				$addRelationshipLink = SpecialPage::getTitleFor( 'AddRelationship' );
 				$removeRelationshipLink = SpecialPage::getTitleFor( 'RemoveRelationship' );
 				$giveGiftLink = SpecialPage::getTitleFor( 'GiveGift' );
@@ -171,10 +171,10 @@ class SpecialViewRelationships extends SpecialPage {
 				}
 
 				$output .= "<div class=\"relationship-item\">
-					<a href=\"{$user->escapeFullURL()}\">{$avatar_img}</a>
+					<a href=\"{$userPage->escapeFullURL()}\">{$avatar_img}</a>
 					<div class=\"relationship-info\">
 						<div class=\"relationship-name\">
-							<a href=\"{$user->escapeFullURL()}\">{$user_name_display}</a>
+							<a href=\"{$userPage->escapeFullURL()}\">{$user_name_display}</a>
 						</div>
 					<div class=\"relationship-actions\">";
 				if ( $indivRelationship == false ) {

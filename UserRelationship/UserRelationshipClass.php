@@ -3,17 +3,13 @@
  * Functions for managing relationship data
  */
 class UserRelationship {
-	/**#@+
-	 * @private
-	 */
-	var $user_id;
-	var $user_name;
+	private $user_id;
+	private $user_name;
 
 	/**
 	 * Constructor
-	 * @private
 	 */
-	/* private */ function __construct( $username ) {
+	public function __construct( $username ) {
 		$title1 = Title::newFromDBkey( $username );
 		$this->user_name = $title1->getText();
 		$this->user_id = User::idFromName( $this->user_name );
@@ -365,8 +361,8 @@ class UserRelationship {
 	 * @return bool
 	 */
 	public function verifyRelationshipRequest( $relationshipRequestId ) {
-		$dbw = wfGetDB( DB_MASTER );
-		$s = $dbw->selectRow(
+		$dbr = wfGetDB( DB_SLAVE );
+		$s = $dbr->selectRow(
 			'user_relationship_request',
 			array( 'ur_user_id_to' ),
 			array( 'ur_id' => $relationshipRequestId ),
@@ -386,8 +382,8 @@ class UserRelationship {
 	 * @return Mixed: integer or boolean false
 	 */
 	static function getUserRelationshipByID( $user1, $user2 ) {
-		$dbw = wfGetDB( DB_MASTER );
-		$s = $dbw->selectRow(
+		$dbr = wfGetDB( DB_SLAVE );
+		$s = $dbr->selectRow(
 			'user_relationship',
 			array( 'r_type' ),
 			array( 'r_user_id' => $user1, 'r_user_id_relation' => $user2 ),
@@ -406,8 +402,8 @@ class UserRelationship {
 	 * @return bool
 	 */
 	static function userHasRequestByID( $user1, $user2 ) {
-		$dbw = wfGetDB( DB_MASTER );
-		$s = $dbw->selectRow(
+		$dbr = wfGetDB( DB_SLAVE );
+		$s = $dbr->selectRow(
 			'user_relationship_request',
 			array( 'ur_type' ),
 			array(
@@ -432,7 +428,7 @@ class UserRelationship {
 	 *                ID, type, requester, etc.
 	 */
 	public function getRequest( $id ) {
-		$dbr = wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_SLAVE );
 		$res = $dbr->select(
 			'user_relationship_request',
 			array(
@@ -470,7 +466,7 @@ class UserRelationship {
 	 * @return Array: array of open relationship requests
 	 */
 	public function getRequestList( $status, $limit = 0 ) {
-		$dbr = wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_SLAVE );
 
 		$options = array();
 

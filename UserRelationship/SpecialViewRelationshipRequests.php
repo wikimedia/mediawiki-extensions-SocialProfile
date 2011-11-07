@@ -31,7 +31,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		 * Redirect Non-logged in users to Login Page
 		 * It will automatically return them to the ViewRelationshipRequests page
 		 */
-		if ( $wgUser->getID() == 0 ) {
+		if ( !$wgUser->isLoggedIn() ) {
 			$wgOut->setPageTitle( wfMsg( 'ur-error-page-title' ) );
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
 			$wgOut->redirect(
@@ -47,7 +47,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		$friend_request_count = $rel->getOpenRequestCount( $wgUser->getID(), 1 );
 		$foe_request_count = $rel->getOpenRequestCount( $wgUser->getID(), 2 );
 
-		if ( count( $_POST ) && $_SESSION['alreadysubmitted'] == false ) {
+		if ( $wgRequest->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
 			$_SESSION['alreadysubmitted'] = true;
 			$rel->addRelationshipRequest(
 				$this->user_name_to,

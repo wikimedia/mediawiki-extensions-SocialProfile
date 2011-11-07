@@ -53,6 +53,10 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 		if ( !$this->relationship_type || !is_numeric( $this->relationship_type ) ) {
 			$this->relationship_type = 1;
 		}
+		$hasRelationship = UserRelationship::getUserRelationshipByID(
+			$this->user_id_to,
+			$wgUser->getID()
+		);
 
 		if ( ( $wgUser->getID() == $this->user_id_to ) && ( $wgUser->getID() != 0 ) ) {
 			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
@@ -96,9 +100,9 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 
 			$wgOut->addHTML( $out );
 
-		} elseif ( UserRelationship::getUserRelationshipByID( $this->user_id_to, $wgUser->getID() ) >= 1 ) {
+		} elseif ( $hasRelationship >= 1 ) {
 
-			if ( UserRelationship::getUserRelationshipByID( $this->user_id_to, $wgUser->getID() ) == 1 ) {
+			if ( $hasRelationship == 1 ) {
 				$error = wfMsg( 'ur-add-error-message-existing-relationship-friend', $this->user_name_to );
 			} else {
 				$error = wfMsg( 'ur-add-error-message-existing-relationship-foe', $this->user_name_to );
