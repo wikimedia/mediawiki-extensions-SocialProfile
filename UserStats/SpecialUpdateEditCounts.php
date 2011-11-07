@@ -73,13 +73,10 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 					__METHOD__
 				);
 			}
-			$wgOut->addHTML(
-				wfMsgExt(
-					'updateeditcounts-updating',
-					'parsemag',
-					$row->rev_user_text,
-					$editCount
-				)
+			$wgOut->addWikiMsg(
+				'updateeditcounts-updating',
+				$row->rev_user_text,
+				$editCount
 			);
 
 			$dbw->update(
@@ -144,6 +141,6 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 			$stats->updateTotalPoints();
 		}
 
-		$wgOut->addHTML( wfMsgExt( 'updateeditcounts-updated', 'parsemag', $x ) );
+		$wgOut->addWikiMsg( 'updateeditcounts-updated', $x );
 	}
 }
