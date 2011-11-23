@@ -4,8 +4,8 @@
  */
 class UserSystemGifts {
 
-	private $user_id;		# Text form (spaces not underscores) of the main part
-	private $user_name;		# Text form (spaces not underscores) of the main part
+	public $user_id;		# Text form (spaces not underscores) of the main part
+	public $user_name;		# Text form (spaces not underscores) of the main part
 
 	/**
 	 * Constructor

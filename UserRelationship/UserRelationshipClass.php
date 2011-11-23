@@ -3,8 +3,8 @@
  * Functions for managing relationship data
  */
 class UserRelationship {
-	private $user_id;
-	private $user_name;
+	public $user_id;
+	public $user_name;
 
 	/**
 	 * Constructor
