@@ -148,6 +148,7 @@ class UserBoard {
 
 		$key = wfMemcKey( 'user', 'newboardmessage', $user_id );
 		$newCount = 0;
+		/* 
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(
 			'user_board',
@@ -158,6 +159,7 @@ class UserBoard {
 		if ( $s !== false ) {
 			$newCount = $s->count;
 		}
+		*/
 
 		$wgMemc->set( $key, $newCount );
 
