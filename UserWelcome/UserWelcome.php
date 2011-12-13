@@ -23,7 +23,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'version' => '1.3.1',
 	'author' => array( 'David Pean', 'Jack Phoenix' ),
 	'descriptionmsg' => 'userwelcome-desc',
-	'url' => 'http://www.mediawiki.org/wiki/Extension:UserWelcome',
+	'url' => 'https://www.mediawiki.org/wiki/Extension:UserWelcome',
 );
 
 $wgHooks['ParserFirstCallInit'][] = 'wfWelcomeUser';

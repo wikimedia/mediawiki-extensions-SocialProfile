@@ -47,7 +47,7 @@ $wgExtensionCredits['specialpage'][] = array(
 	'version' => '1.0',
 	'description' => 'Adds a special page to administrate available gifts and add new ones',
 	'author' => array( 'Aaron Wright', 'David Pean' ),
-	'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile'
+	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile'
 );
 
 $wgExtensionCredits['specialpage'][] = array(
@@ -55,7 +55,7 @@ $wgExtensionCredits['specialpage'][] = array(
 	'version' => '1.0',
 	'description' => 'Adds a special page to upload new gift images',
 	'author' => array( 'Aaron Wright', 'David Pean' ),
-	'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile'
+	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile'
 );
 
 $wgExtensionCredits['specialpage'][] = array(
@@ -63,7 +63,7 @@ $wgExtensionCredits['specialpage'][] = array(
 	'version' => '1.0',
 	'description' => 'Adds a special page to give out gifts to your friends/foes',
 	'author' => array( 'Aaron Wright', 'David Pean' ),
-	'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile'
+	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile'
 );
 
 $wgExtensionCredits['specialpage'][] = array(
@@ -71,26 +71,26 @@ $wgExtensionCredits['specialpage'][] = array(
 	'version' => '1.0',
 	'description' => 'Adds a special page to remove gifts',
 	'author' => array( 'Aaron Wright', 'David Pean' ),
-	'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile'
+	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile'
 );
 $wgExtensionCredits['specialpage'][] = array(
 	'name' => 'RemoveMasterGift',
 	'version' => '1.0',
 	'description' => 'Adds a special page to delete gifts from the database',
 	'author' => array( 'Aaron Wright', 'David Pean' ),
-	'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile'
+	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile'
 );
 $wgExtensionCredits['specialpage'][] = array(
 	'name' => 'ViewGift',
 	'version' => '1.0',
 	'description' => 'Adds a special page to view given gifts',
 	'author' => array( 'Aaron Wright', 'David Pean' ),
-	'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile'
+	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile'
 );
 $wgExtensionCredits['specialpage'][] = array(
 	'name' => 'ViewGifts',
 	'version' => '1.0',
 	'description' => 'Adds a special page to view given gifts',
 	'author' => array( 'Aaron Wright', 'David Pean' ),
-	'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile'
+	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile'
 );

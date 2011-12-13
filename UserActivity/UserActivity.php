@@ -25,7 +25,7 @@ $wgExtensionCredits['specialpage'][] = array(
 	'version' => '1.1',
 	'author' => array( 'Aaron Wright', 'David Pean', 'Jack Phoenix' ),
 	'description' => "Shows users' social activity",
-	'url' => 'http://www.mediawiki.org/wiki/Extension:SocialProfile'
+	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile'
 );
 
 // Set up the new special page
