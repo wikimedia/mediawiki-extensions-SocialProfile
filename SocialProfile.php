@@ -32,7 +32,7 @@ $wgExtensionMessagesFiles['SocialProfileUserStats'] = $dir . 'UserStats/UserStat
 $wgExtensionMessagesFiles['SocialProfileUserStatus'] = $dir . 'UserStatus/UserStatus.i18n.php';
 
 $wgExtensionMessagesFiles['SocialProfileNamespaces'] = $dir . 'SocialProfile.namespaces.php';
-$wgExtensionAliasesFiles['SocialProfile'] = $dir . 'SocialProfile.alias.php';
+$wgExtensionMessagesFiles['SocialProfileAlias'] = $dir . 'SocialProfile.alias.php';
 
 // Classes to be autoloaded
 $wgAutoloadClasses['GenerateTopUsersReport'] = $dir . 'UserStats/GenerateTopUsersReport.php';
