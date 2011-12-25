@@ -351,7 +351,7 @@ $specialPageAliases['nl'] = array(
 );
 
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬) */
-$specialPageAliases['no'] = array(
+$specialPageAliases['nb'] = array(
 	'AddRelationship' => array( 'Legg_til_relasjon' ),
 	'PopulateUserProfiles' => array( 'Instansier_brukerprofiler' ),
 	'RemoveAvatar' => array( 'Fjern_profilbilde' ),

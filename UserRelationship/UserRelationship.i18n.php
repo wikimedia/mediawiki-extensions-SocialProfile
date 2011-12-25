@@ -5499,7 +5499,7 @@ Trykk $4 og endra innstillingane dine for å slå av meldingar gjennom e-post.',
  * @author Harald Khan
  * @author Jon Harald Søby
  */
-$messages['no'] = array(
+$messages['nb'] = array(
 	'viewrelationships' => 'Vis forbindelse',
 	'viewrelationshiprequests' => 'Vis forespørsler om forbindelse',
 	'ur-already-submitted' => 'Forespørselen din har blitt sendt',

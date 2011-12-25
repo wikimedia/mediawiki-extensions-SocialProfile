@@ -2484,7 +2484,7 @@ og endra innstillingane dine for å slå av e-postmeldingar.',
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Simny
  */
-$messages['no'] = array(
+$messages['nb'] = array(
 	'systemgiftmanager' => 'Systemgaveforvalter',
 	'ga-addnew' => '+ legg til en ny presang',
 	'ga-back-edit-gift' => 'Tilbake til endring av gaven',

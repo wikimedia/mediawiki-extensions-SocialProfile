@@ -3254,7 +3254,7 @@ og endra innstillingane dine for å slå av e-postmeldingar.',
  * @author Nghtwlkr
  * @author Simny
  */
-$messages['no'] = array(
+$messages['nb'] = array(
 	'giftmanager' => 'Gavebehandler',
 	'giftmanager-addgift' => '+ Legg til ny gave',
 	'giftmanager-access' => 'gavetilgang',

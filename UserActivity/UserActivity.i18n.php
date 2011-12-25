@@ -671,7 +671,7 @@ $messages['nn'] = array(
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Nghtwlkr
  */
-$messages['no'] = array(
+$messages['nb'] = array(
 	'useractivity' => 'Venners aktivitet',
 	'useractivity-award' => '$1 mottok en pris',
 	'useractivity-all' => 'Vis alt',

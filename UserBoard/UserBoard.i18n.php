@@ -2464,7 +2464,7 @@ Trykk $4 og endra innstillingane dine for å slå av meldingar gjennom e-post.',
  * @author Jon Harald Søby
  * @author Nghtwlkr
  */
-$messages['no'] = array(
+$messages['nb'] = array(
 	'boardblastlogintitle' => 'Du må være logget inn for å sende meldinger',
 	'boardblastlogintext' => 'For å kunne sende meldinger må du være <a href="index.php?title=Special:UserLogin">logget inn</a>.',
 	'messagesenttitle' => 'Sendte beskjeder',

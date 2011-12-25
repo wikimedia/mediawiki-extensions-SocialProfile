@@ -1026,7 +1026,7 @@ $messages['nn'] = array(
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Nghtwlkr
  */
-$messages['no'] = array(
+$messages['nb'] = array(
 	'userwelcome-desc' => 'Legger til <code>&lt;welcomeUser&gt;</code>-merkelappen for å vise brukerspesifisert sosial informasjon for innloggede brukere',
 	'mp-userlevels-link' => 'Brukernivå',
 	'mp-welcome-upload' => 'Last opp',

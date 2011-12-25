@@ -7685,7 +7685,7 @@ Trykk [[Special:UserLogin|her]] for å loggå inn eller [[Special:UserLogin/sign
  * @author Laaknor
  * @author Nghtwlkr
  */
-$messages['no'] = array(
+$messages['nb'] = array(
 	'populateuserprofiles' => 'Befolk brukerprofiler',
 	'user-time-ago' => '$1 siden',
 	'user-awards-title' => 'Utmerkelser',

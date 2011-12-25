@@ -2187,7 +2187,7 @@ og endra innstillingane dine for å slå av e-postmeldingar.',
  * @author Jon Harald Søby
  * @author Nghtwlkr
  */
-$messages['no'] = array(
+$messages['nb'] = array(
 	'user-stats-alltime-title' => 'Flest poeng noensinne',
 	'user-stats-weekly-title' => 'Flest poeng denne uka',
 	'user-stats-monthly-title' => 'Flest poeng denne måneden',
