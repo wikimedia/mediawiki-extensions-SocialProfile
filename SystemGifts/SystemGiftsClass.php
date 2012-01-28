@@ -26,6 +26,14 @@ class SystemGifts {
 	);
 
 	/**
+	 * Accessor for the private $categories variable; used by
+	 * SpecialSystemGiftManager.php at least.
+	 */
+	public function getCategories() {
+		return $this->categories;
+	}
+
+	/**
 	 * Adds awards for all registered users, updates statistics and purges
 	 * caches.
 	 * Special:PopulateAwards calls this function

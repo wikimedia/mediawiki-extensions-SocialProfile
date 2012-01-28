@@ -153,7 +153,7 @@ class SystemGiftManager extends SpecialPage {
 				<td width="695">
 					<select name="gift_category">' . "\n";
 			$g = new SystemGifts();
-			foreach ( $g->categories as $category => $id ) {
+			foreach ( $g->getCategories() as $category => $id ) {
 				$sel = '';
 				if ( isset( $gift['gift_category'] ) && $gift['gift_category'] == $id ) {
 					$sel = ' selected="selected"';
