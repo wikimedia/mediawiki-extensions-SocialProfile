@@ -88,7 +88,7 @@ class GenerateTopUsersReport extends SpecialPage {
 				'-' . $wgContLang->date( wfTimestampNow() );
 		} elseif ( $period == 'monthly' ) {
 			$date = getdate(); // It's a PHP core function
-			$period_title = $wgContLang->getMonthName( $date['mon'] - 1 ) .
+			$period_title = $wgContLang->getMonthName( $date['mon'] ) .
 				' ' . $date['year'];
 		}
 
