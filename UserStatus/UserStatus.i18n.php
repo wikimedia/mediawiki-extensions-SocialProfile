@@ -117,9 +117,13 @@ $messages['de-formal'] = array(
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Fitoschido
  */
 $messages['es'] = array(
+	'userstatus' => 'Eliminar las actualizaciones de estado',
+	'userstatus-enter-username' => 'Introduzca un nombre de usuario:',
+	'userstatus-find' => 'Encontrar',
 	'userstatus-edit' => 'Editar',
 	'userstatus-save' => 'Guardar',
 	'userstatus-cancel' => 'Cancelar',

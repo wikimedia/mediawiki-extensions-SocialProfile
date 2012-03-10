@@ -1550,7 +1550,7 @@ $messages['hr'] = array(
  */
 $messages['hsb'] = array(
 	'boardblastlogintitle' => 'Dyrbiš přizjewjeny być, zo by forumowe powěsće pósłał',
-	'boardblastlogintext' => 'Dyrbiš <a href="index.php?title=Special:UserLogin">přizjewjeny</a> być, zo by forumowe powěsće pósłał.',
+	'boardblastlogintext' => 'Dyrbiš [[Special:UserLogin|přizjewjeny]] być, zo by forumowe powěsće pósłał.',
 	'messagesenttitle' => 'Powěsće pósłane',
 	'boardblasttitle' => 'Forumowu powěsć pósłać',
 	'boardblaststep1' => 'Krok 1 - Napisaj swoju powěsć',
@@ -2326,6 +2326,73 @@ $messages['nah'] = array(
 	'userboard_sendbutton' => 'ticquihuāz',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Harald Khan
+ * @author Jon Harald Søby
+ * @author Nghtwlkr
+ */
+$messages['nb'] = array(
+	'boardblastlogintitle' => 'Du må være logget inn for å sende meldinger',
+	'boardblastlogintext' => 'For å kunne sende meldinger må du være <a href="index.php?title=Special:UserLogin">logget inn</a>.',
+	'messagesenttitle' => 'Sendte beskjeder',
+	'boardblasttitle' => 'Send melding',
+	'boardblaststep1' => 'Steg 1 &ndash; skriv beskjeden din',
+	'boardblastprivatenote' => 'Alle meldinger vil være private',
+	'boardblaststep2' => 'Steg 2 &ndash; velg hvem du vil sende meldingen til',
+	'boardlinkselectall' => 'Merk alle',
+	'boardlinkunselectall' => 'Fjern all merking',
+	'boardlinkselectfriends' => 'Merk venner',
+	'boardlinkunselectfriends' => 'Fjern merking av venner',
+	'boardlinkselectfoes' => 'Merk fiender',
+	'boardlinkunselectfoes' => 'Fjern merking av fiender',
+	'boardsendbutton' => 'Send melding',
+	'boardnofriends' => 'Du har ingen venner å sende beskjed til.',
+	'messagesentsuccess' => 'Beskjeden din ble sendt',
+	'userboard' => 'Brukerdiskusjon',
+	'userboard_board-to-board' => 'Brukerdiskusjon',
+	'userboard_delete' => 'Slett',
+	'userboard_noexist' => 'Brukeren du prøver å se finnes ikke.',
+	'userboard_yourboard' => 'Din diskusjonsside',
+	'userboard_owner' => 'Diskusjonssiden til $1',
+	'userboard_yourboardwith' => 'Din delte diskusjonsside med $1',
+	'userboard_otherboardwith' => 'Delt diskusjonsside mellom $1 og $2',
+	'userboard_backprofile' => 'Tilbake til profilen til $1',
+	'userboard_backyourprofile' => 'Tilbake til profilen din',
+	'userboard_boardtoboard' => 'Delt diskusjonsside',
+	'userboard_confirmdelete' => 'Er du sikker på at du vil slette denne beskjeden?',
+	'userboard_sendmessage' => 'Send en beskjed til $1',
+	'userboard_myboard' => 'Min diskusjonsside',
+	'userboard_posted_ago' => 'postet $1 siden',
+	'userboard_private' => 'privat',
+	'userboard_public' => 'offentlig',
+	'userboard_messagetype' => 'Beskjedtype',
+	'userboard_nextpage' => 'neste',
+	'userboard_prevpage' => 'forrige',
+	'userboard_nomessages' => 'Ingen beskjeder.',
+	'userboard_sendbutton' => 'send',
+	'userboard_loggedout' => 'Du må være <a href="$1">logget inn</a> for å sende beskjeder til andre brukere.',
+	'userboard_showingmessages' => 'Viser {{PLURAL:$4|melding $3|meldingene $2&ndash;$3}} av {{PLURAL:$1|$1 melding|$1 meldinger}}',
+	'right-userboard-delete' => 'Slett andres meldinger',
+	'userboard-time-days' => '{{PLURAL:$1|én dag|$1 dager}}',
+	'userboard-time-hours' => '{{PLURAL:$1|én time|$1 timer}}',
+	'userboard-time-minutes' => '{{PLURAL:$1|ett minutt|$1 minutt}}',
+	'userboard-time-seconds' => '{{PLURAL:$1|ett sekund|$1 sekund}}',
+	'message_received_subject' => '$1 har skrevet på diskusjonssiden din på {{SITENAME}}',
+	'message_received_body' => 'Hei, $1.
+
+$2 har skrevet på diskusjonssiden din på {{SITENAME}}.
+
+Følg lenken nedenfor for å se diskusjonssiden din.
+
+$3
+
+---
+
+Vil du ikke motta flere e-poster fra oss?
+
+Klikk $4 og endre innstillingene dine for å slå av e-postbeskjeder.',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
@@ -2457,73 +2524,6 @@ $3
 Vil du ikkje motta fleire e-postar frå oss?
 
 Trykk $4 og endra innstillingane dine for å slå av meldingar gjennom e-post.',
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Harald Khan
- * @author Jon Harald Søby
- * @author Nghtwlkr
- */
-$messages['nb'] = array(
-	'boardblastlogintitle' => 'Du må være logget inn for å sende meldinger',
-	'boardblastlogintext' => 'For å kunne sende meldinger må du være <a href="index.php?title=Special:UserLogin">logget inn</a>.',
-	'messagesenttitle' => 'Sendte beskjeder',
-	'boardblasttitle' => 'Send melding',
-	'boardblaststep1' => 'Steg 1 &ndash; skriv beskjeden din',
-	'boardblastprivatenote' => 'Alle meldinger vil være private',
-	'boardblaststep2' => 'Steg 2 &ndash; velg hvem du vil sende meldingen til',
-	'boardlinkselectall' => 'Merk alle',
-	'boardlinkunselectall' => 'Fjern all merking',
-	'boardlinkselectfriends' => 'Merk venner',
-	'boardlinkunselectfriends' => 'Fjern merking av venner',
-	'boardlinkselectfoes' => 'Merk fiender',
-	'boardlinkunselectfoes' => 'Fjern merking av fiender',
-	'boardsendbutton' => 'Send melding',
-	'boardnofriends' => 'Du har ingen venner å sende beskjed til.',
-	'messagesentsuccess' => 'Beskjeden din ble sendt',
-	'userboard' => 'Brukerdiskusjon',
-	'userboard_board-to-board' => 'Brukerdiskusjon',
-	'userboard_delete' => 'Slett',
-	'userboard_noexist' => 'Brukeren du prøver å se finnes ikke.',
-	'userboard_yourboard' => 'Din diskusjonsside',
-	'userboard_owner' => 'Diskusjonssiden til $1',
-	'userboard_yourboardwith' => 'Din delte diskusjonsside med $1',
-	'userboard_otherboardwith' => 'Delt diskusjonsside mellom $1 og $2',
-	'userboard_backprofile' => 'Tilbake til profilen til $1',
-	'userboard_backyourprofile' => 'Tilbake til profilen din',
-	'userboard_boardtoboard' => 'Delt diskusjonsside',
-	'userboard_confirmdelete' => 'Er du sikker på at du vil slette denne beskjeden?',
-	'userboard_sendmessage' => 'Send en beskjed til $1',
-	'userboard_myboard' => 'Min diskusjonsside',
-	'userboard_posted_ago' => 'postet $1 siden',
-	'userboard_private' => 'privat',
-	'userboard_public' => 'offentlig',
-	'userboard_messagetype' => 'Beskjedtype',
-	'userboard_nextpage' => 'neste',
-	'userboard_prevpage' => 'forrige',
-	'userboard_nomessages' => 'Ingen beskjeder.',
-	'userboard_sendbutton' => 'send',
-	'userboard_loggedout' => 'Du må være <a href="$1">logget inn</a> for å sende beskjeder til andre brukere.',
-	'userboard_showingmessages' => 'Viser {{PLURAL:$4|melding $3|meldingene $2&ndash;$3}} av {{PLURAL:$1|$1 melding|$1 meldinger}}',
-	'right-userboard-delete' => 'Slett andres meldinger',
-	'userboard-time-days' => '{{PLURAL:$1|én dag|$1 dager}}',
-	'userboard-time-hours' => '{{PLURAL:$1|én time|$1 timer}}',
-	'userboard-time-minutes' => '{{PLURAL:$1|ett minutt|$1 minutt}}',
-	'userboard-time-seconds' => '{{PLURAL:$1|ett sekund|$1 sekund}}',
-	'message_received_subject' => '$1 har skrevet på diskusjonssiden din på {{SITENAME}}',
-	'message_received_body' => 'Hei, $1.
-
-$2 har skrevet på diskusjonssiden din på {{SITENAME}}.
-
-Følg lenken nedenfor for å se diskusjonssiden din.
-
-$3
-
----
-
-Vil du ikke motta flere e-poster fra oss?
-
-Klikk $4 og endre innstillingene dine for å slå av e-postbeskjeder.',
 );
 
 /** Occitan (Occitan)

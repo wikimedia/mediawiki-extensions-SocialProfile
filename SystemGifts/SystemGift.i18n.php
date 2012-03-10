@@ -707,6 +707,8 @@ $messages['de'] = array(
 Dies wird es auch bei Benutzern löschen, die es bereits erhalten haben.',
 	'ga-remove-success-title' => 'Du hast das Geschenk „$1“ erfolgreich entfernt.',
 	'ga-remove-success-message' => 'Das Geschenk „$1“ wurde entfernt.',
+	'ga-user-got-awards' => '$1 erhielt $2',
+	'ga-awards-given-out' => '{{PLURAL:$1|Eine Auszeichnung|$1 Auszeichnungen}} wurden vergeben',
 	'topawards' => 'Auszeichnungen',
 	'topawards-edit-title' => 'Auszeichnungen - Meilensteine beim Bearbeiten',
 	'topawards-vote-title' => 'Auszeichnungen - Meilensteine beim Abstimmen',
@@ -955,6 +957,7 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Crazymadlover
  * @author Mor
  */
@@ -996,6 +999,33 @@ $messages['es'] = array(
 	'ga-title' => 'premios de $1',
 	'ga-uploadsuccess' => 'Carga exitosa',
 	'ga-viewlist' => 'Ver lista de regalos',
+	'ga-cancel' => 'Cancelar',
+	'ga-remove' => 'Eliminar',
+	'ga-remove-title' => '¿Eliminar "$1"?',
+	'ga-delete-message' => '¿Está seguro de que desea eliminar el regalo "$1"?
+También lo eliminará de los usuarios que puedan haberlo recibido.',
+	'ga-remove-success-title' => 'Se ha eliminado correctamente el regalo "$1"',
+	'ga-remove-success-message' => 'El regalo "$1" se ha eliminado.',
+	'ga-user-got-awards' => '$1 consiguió $2',
+	'ga-awards-given-out' => '{{PLURAL:$1|Recibió un premio|Recibieron $1  premios}}',
+	'topawards' => 'Grandes premios',
+	'topawards-edit-title' => 'Grandes premios - Metas de edición',
+	'topawards-vote-title' => 'Grandes premios - Metas de votos',
+	'topawards-comment-title' => 'Grandes premios - Metas de comentarios',
+	'topawards-recruit-title' => 'Grandes premios - Metas de reclutamiento',
+	'topawards-friend-title' => 'Grandes premios - Metas de amigos',
+	'topawards-award-categories' => 'Categorías de premios',
+	'topawards-edits' => 'Ediciones',
+	'topawards-votes' => 'Votos',
+	'topawards-comments' => 'Comentarios',
+	'topawards-recruits' => 'Reclutas',
+	'topawards-friends' => 'Amigos',
+	'topawards-edit-milestone' => 'Meta {{PLURAL:$1|de una edición|de $1 ediciones}}',
+	'topawards-vote-milestone' => 'Meta {{PLURAL:$1|de un voto|de $1 votos}}',
+	'topawards-comment-milestone' => 'Meta {{PLURAL:$1|de un comentario|de $1 comentarios}}',
+	'topawards-recruit-milestone' => 'Meta {{PLURAL:$1|de un recluta|de $1 reclutas}}',
+	'topawards-friend-milestone' => 'Meta {{PLURAL:$1|de un amigo|de $1 amigos}}',
+	'topawards-empty' => 'No están configurados los premios para esta categoría de premio, o bien nadie ha conseguido todavía esos premios.',
 	'system_gift_received_subject' => 'Usted ha recibido el premio $1 en {{SITENAME}}!',
 	'system_gift_received_body' => 'Hola $1.
 
@@ -1788,6 +1818,8 @@ $messages['ia'] = array(
 	'ga-delete-message' => 'Es tu secur que tu vole deler le dono "$1"? Isto va equalmente deler lo de omne usator qui lo ha recipite.',
 	'ga-remove-success-title' => 'Tu ha removite le dono "$1" con successo',
 	'ga-remove-success-message' => 'Le dono "$1" ha essite removite.',
+	'ga-user-got-awards' => '$1 ganiava $2',
+	'ga-awards-given-out' => '{{PLURAL:$1|Un premio|$1 premios}} esseva attribuite',
 	'topawards' => 'Top de premios',
 	'topawards-edit-title' => 'Top de premios - Successos de modification',
 	'topawards-vote-title' => 'Top de premios - Successos de votation',
@@ -2179,6 +2211,8 @@ $messages['mk'] = array(
 Со ова истиот ќе биде избришан и кај корисниците кои го имаат примено.',
 	'ga-remove-success-title' => 'Успешно го отстранивте подарокот „$1“',
 	'ga-remove-success-message' => 'Подарокот „$1“ е отстранет.',
+	'ga-user-got-awards' => '$1 доби $2',
+	'ga-awards-given-out' => '{{PLURAL:$1|Доделена е една награда|Доделени се $1 награди}}',
 	'topawards' => 'Предводнички награди',
 	'topawards-edit-title' => 'Предводнички награди - Важни чекори - Уредување',
 	'topawards-vote-title' => 'Предводнички награди - Важни чекори - Гласање',
@@ -2315,6 +2349,73 @@ Adakah anda tidak mahu menerima e-mel daripada kami?
 Klik $5
 dan tukar tetapan anda untuk mematikan pemberitahuan e-mel.',
 	'right-awardsmanage' => 'Mencipta anugerah baru dan menyunting anugerah sedia ada',
+);
+
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Simny
+ */
+$messages['nb'] = array(
+	'systemgiftmanager' => 'Systemgaveforvalter',
+	'ga-addnew' => '+ legg til en ny presang',
+	'ga-back-edit-gift' => 'Tilbake til endring av gaven',
+	'ga-back-gift-list' => 'Tilbake til gavelista',
+	'ga-back-link' => '<a href="$1">< tilbake til $2s profil </a>',
+	'ga-choosefile' => 'Velg fil:',
+	'ga-count' => '$1 har {{PLURAL:$2|én utmerkelse|$2 utmerkelser}}.',
+	'ga-create-gift' => 'opprett gave',
+	'ga-created' => 'Gaven har blitt opprettet',
+	'ga-currentimage' => 'Nåværende bilde',
+	'ga-error-message-invalid-link' => 'Lenken du oppga er ugyldig.',
+	'ga-error-message-no-user' => 'Brukeren du ønsker å se finnes ikke.',
+	'ga-error-title' => 'Oi, du svingte feil!',
+	'ga-file-instructions' => 'Bildet ditt må være et jpeg, png, eller gif (ingen animerte gif-filer), og ha en størrelse på mindre en 100 kb.',
+	'ga-gift' => 'gave',
+	'ga-gift-given-count' => 'Denne gaven har blitt gitt {{PLURAL:$1|én gang|$1 ganger}}',
+	'ga-gift-title' => '$1s «$2»',
+	'ga-giftdesc' => 'beskrivelse av gave',
+	'ga-giftimage' => 'gavebilde',
+	'ga-giftname' => 'gavenavn',
+	'ga-gifttype' => 'gavetype',
+	'ga-goback' => 'Gå tilbake',
+	'ga-imagesbelow' => 'Under er bildene dine som vil bli brukt på sida.',
+	'ga-img' => 'legg til/erstatt bilde',
+	'ga-large' => 'Stort',
+	'ga-medium' => 'Middels',
+	'ga-mediumlarge' => 'middels stort',
+	'ga-new' => 'Ny',
+	'ga-next' => 'Neste',
+	'ga-previous' => 'Forrige',
+	'ga-recent-recipients-award' => 'Andre som nylig mottok denne utmerkelsen',
+	'ga-saved' => 'Gaven har blitt lagret',
+	'ga-small' => 'Lite',
+	'ga-threshold' => 'terskel',
+	'ga-title' => '$1s utmerkelser',
+	'ga-uploadsuccess' => 'Opplasting vellykket',
+	'ga-viewlist' => 'Se gavelista',
+	'system_gift_received_subject' => 'Du har mottatt utmerkelsen $1 på {{SITENAME}}!',
+	'system_gift_received_body' => 'Hei $1.
+
+Du har akkurat mottatt en $2-utmerkelse på {{SITENAME}}!
+
+«$3»
+
+Klikk under for å se trofeet ditt!
+
+$4
+
+Vi håper du liker det!
+
+Takk,
+
+{{SITENAME}}-laget
+
+---
+
+Vil du ikke lenger motta e-poster fra oss?
+
+Klikk $5
+og forandre dine innstillinger for å slå av e-postbeskjeder.',
+	'right-awardsmanage' => 'Opprett nye og endre eksisterende utmerkelser',
 );
 
 /** Dutch (Nederlands)
@@ -2479,73 +2580,6 @@ Vil du ikkje lenger motta e-postar frå oss?
 Trykk $5
 og endra innstillingane dine for å slå av e-postmeldingar.',
 	'right-awardsmanage' => 'Opprett nye og endra eksisterande utmerkingar',
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Simny
- */
-$messages['nb'] = array(
-	'systemgiftmanager' => 'Systemgaveforvalter',
-	'ga-addnew' => '+ legg til en ny presang',
-	'ga-back-edit-gift' => 'Tilbake til endring av gaven',
-	'ga-back-gift-list' => 'Tilbake til gavelista',
-	'ga-back-link' => '<a href="$1">< tilbake til $2s profil </a>',
-	'ga-choosefile' => 'Velg fil:',
-	'ga-count' => '$1 har {{PLURAL:$2|én utmerkelse|$2 utmerkelser}}.',
-	'ga-create-gift' => 'opprett gave',
-	'ga-created' => 'Gaven har blitt opprettet',
-	'ga-currentimage' => 'Nåværende bilde',
-	'ga-error-message-invalid-link' => 'Lenken du oppga er ugyldig.',
-	'ga-error-message-no-user' => 'Brukeren du ønsker å se finnes ikke.',
-	'ga-error-title' => 'Oi, du svingte feil!',
-	'ga-file-instructions' => 'Bildet ditt må være et jpeg, png, eller gif (ingen animerte gif-filer), og ha en størrelse på mindre en 100 kb.',
-	'ga-gift' => 'gave',
-	'ga-gift-given-count' => 'Denne gaven har blitt gitt {{PLURAL:$1|én gang|$1 ganger}}',
-	'ga-gift-title' => '$1s «$2»',
-	'ga-giftdesc' => 'beskrivelse av gave',
-	'ga-giftimage' => 'gavebilde',
-	'ga-giftname' => 'gavenavn',
-	'ga-gifttype' => 'gavetype',
-	'ga-goback' => 'Gå tilbake',
-	'ga-imagesbelow' => 'Under er bildene dine som vil bli brukt på sida.',
-	'ga-img' => 'legg til/erstatt bilde',
-	'ga-large' => 'Stort',
-	'ga-medium' => 'Middels',
-	'ga-mediumlarge' => 'middels stort',
-	'ga-new' => 'Ny',
-	'ga-next' => 'Neste',
-	'ga-previous' => 'Forrige',
-	'ga-recent-recipients-award' => 'Andre som nylig mottok denne utmerkelsen',
-	'ga-saved' => 'Gaven har blitt lagret',
-	'ga-small' => 'Lite',
-	'ga-threshold' => 'terskel',
-	'ga-title' => '$1s utmerkelser',
-	'ga-uploadsuccess' => 'Opplasting vellykket',
-	'ga-viewlist' => 'Se gavelista',
-	'system_gift_received_subject' => 'Du har mottatt utmerkelsen $1 på {{SITENAME}}!',
-	'system_gift_received_body' => 'Hei $1.
-
-Du har akkurat mottatt en $2-utmerkelse på {{SITENAME}}!
-
-«$3»
-
-Klikk under for å se trofeet ditt!
-
-$4
-
-Vi håper du liker det!
-
-Takk,
-
-{{SITENAME}}-laget
-
----
-
-Vil du ikke lenger motta e-poster fra oss?
-
-Klikk $5
-og forandre dine innstillinger for å slå av e-postbeskjeder.',
-	'right-awardsmanage' => 'Opprett nye og endre eksisterende utmerkelser',
 );
 
 /** Occitan (Occitan)

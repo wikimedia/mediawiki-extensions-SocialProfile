@@ -235,9 +235,11 @@ $messages['dsb'] = array(
 	'useractivity-siteactivity' => 'Aktiwita sedła',
 	'useractivity-title' => 'Aktiwita pśijaśelow',
 	'useractivity-user_message' => '$1 {{PLURAL:$4|jo pósłał powěźeńku na|jo pósłał powěźeńce|jo pósłał powěźeńki|jo pósłał powěźeńki}} k $3',
+	'useractivity-comment' => '$1 jo na {{PLURAL:$4|boku komentěrował|slědujucyma bokoma komentěrował|slědujucych bokach komentěrował|slědujucych bokach komentěrował}}: $3',
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Mor
  * @author Peter17
  * @author Translationista
@@ -257,6 +259,7 @@ $messages['es'] = array(
 	'useractivity-siteactivity' => 'Actividad del sitio',
 	'useractivity-title' => 'Actividad de amigos',
 	'useractivity-user_message' => '$1 {{PLURAL:$4|ha enviado un mensaje a |ha enviado mensajes a}} $3',
+	'useractivity-comment' => '$1 hizo comentarios sobre {{PLURAL:$4|la página|las siguientes páginas}}: $3',
 );
 
 /** Persian (فارسی)
@@ -416,6 +419,7 @@ $messages['hsb'] = array(
 	'useractivity-siteactivity' => 'Aktiwita sydła',
 	'useractivity-title' => 'Aktiwita přećelow',
 	'useractivity-user_message' => '$1 {{PLURAL:$4|pósła powěsć na|pósła powěsći na|pósła powěsć na|pósła powěsće na}} $3',
+	'useractivity-comment' => '$1 je na {{PLURAL:$4|stronje komentował|slědowacymaj stronomaj|slědowacych stronach komentował|slědowacych stronach komentował}}: $3',
 );
 
 /** Hungarian (Magyar)
@@ -639,6 +643,26 @@ $messages['ms'] = array(
 	'useractivity-comment' => '$1 {{PLURAL:$4|mengulas laman|mengulas laman-laman berikut:}} $3',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Nghtwlkr
+ */
+$messages['nb'] = array(
+	'useractivity' => 'Venners aktivitet',
+	'useractivity-award' => '$1 mottok en pris',
+	'useractivity-all' => 'Vis alt',
+	'useractivity-edit' => '$1 {{PLURAL:$4|redigerte siden|redigerte følgende sider:}} $3',
+	'useractivity-foe' => '$1 {{PLURAL:$2|er nå en fiende av|er nå en fiende av}} $3',
+	'useractivity-friend' => '$1 {{PLURAL:$2|er nå en venn av|er nå en venn av}} $3',
+	'useractivity-gift' => '$1 fikk en gave av $2',
+	'useractivity-group-edit' => '{{PLURAL:$1|én redigering|$1 redigeringer}}',
+	'useractivity-group-comment' => '{{PLURAL:$1|én kommentar|$1 kommentarer}}',
+	'useractivity-group-user_message' => '{{PLURAL:$1|én beskjed|$1 beskjeder}}',
+	'useractivity-group-friend' => '{{PLURAL:$1|én venn|$1 venner}}',
+	'useractivity-siteactivity' => 'Sideaktivitet',
+	'useractivity-title' => 'Venners aktivitet',
+	'useractivity-user_message' => '$1 {{PLURAL:$4|sendte en beskjed til|sendte flere beskjeder til}} $3',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
@@ -666,26 +690,6 @@ $messages['nl'] = array(
 $messages['nn'] = array(
 	'useractivity-group-comment' => '{{PLURAL:$1|éin kommentar|$1 kommentarar}}',
 	'useractivity-group-user_message' => '{{PLURAL:$1|éi melding|$1 meldingar}}',
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Nghtwlkr
- */
-$messages['nb'] = array(
-	'useractivity' => 'Venners aktivitet',
-	'useractivity-award' => '$1 mottok en pris',
-	'useractivity-all' => 'Vis alt',
-	'useractivity-edit' => '$1 {{PLURAL:$4|redigerte siden|redigerte følgende sider:}} $3',
-	'useractivity-foe' => '$1 {{PLURAL:$2|er nå en fiende av|er nå en fiende av}} $3',
-	'useractivity-friend' => '$1 {{PLURAL:$2|er nå en venn av|er nå en venn av}} $3',
-	'useractivity-gift' => '$1 fikk en gave av $2',
-	'useractivity-group-edit' => '{{PLURAL:$1|én redigering|$1 redigeringer}}',
-	'useractivity-group-comment' => '{{PLURAL:$1|én kommentar|$1 kommentarer}}',
-	'useractivity-group-user_message' => '{{PLURAL:$1|én beskjed|$1 beskjeder}}',
-	'useractivity-group-friend' => '{{PLURAL:$1|én venn|$1 venner}}',
-	'useractivity-siteactivity' => 'Sideaktivitet',
-	'useractivity-title' => 'Venners aktivitet',
-	'useractivity-user_message' => '$1 {{PLURAL:$4|sendte en beskjed til|sendte flere beskjeder til}} $3',
 );
 
 /** Deitsch (Deitsch)

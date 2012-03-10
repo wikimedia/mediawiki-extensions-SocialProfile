@@ -634,7 +634,7 @@ $messages['de'] = array(
 	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Gegebener Daumen nach unten|Gegebene Daumen nach unten}}',
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Geschenk erhalten|Geschenke erhalten}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Geschenk gemacht|Geschenke gemacht}}',
-	'right-updatepoints' => 'Beiträgszähler aktualisieren',
+	'right-updatepoints' => 'Beitragszähler aktualisieren',
 	'right-generatetopusersreport' => 'Berichte zu den aktivsten Benutzern generieren',
 	'level-advanced-to' => 'erweitert auf Level <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => '[{{SITENAME}}] Du bist jetzt „$1“!',
@@ -649,6 +649,9 @@ Du willst gar keine E-Mails mehr von uns bekommen?
 
 Klicke $3
 und ändere deine Einstellungen, um die E-Mail-Benachrichtigungen abzustellen.',
+	'updateeditcounts' => 'Beitragszähler aktualisieren',
+	'updateeditcounts-updated' => "Aktualisierte die Statistiken für '''$1''' {{PLURAL:$1|Benutzer|Benutzer}}",
+	'updateeditcounts-updating' => 'Aktualisierung von $1 mit $2 {{PLURAL:$2|Bearbeitung|Bearbeitungen}}',
 	'generatetopusersreport' => 'Bericht zu den aktivsten Benutzern generieren',
 	'user-stats-weekly-winners' => '{{PLURAL:$1|Wochensieger|Wochensieger}}',
 	'user-stats-monthly-winners' => '{{PLURAL:$1|Monatssieger|Monatssieger}}',
@@ -845,6 +848,7 @@ $messages['eo'] = array(
 
 /** Spanish (Español)
  * @author Antur
+ * @author Armando-Martin
  * @author Crazymadlover
  * @author Dferg
  * @author Fitoschido
@@ -896,6 +900,7 @@ $messages['es'] = array(
 	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Regalo recibido|Regalos recibidos}}',
 	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Regalo enviado|Regalos enviados}}',
 	'right-updatepoints' => 'Actualizar conteos de ediciones',
+	'right-generatetopusersreport' => 'Generar informes de los usuarios principales',
 	'level-advanced-to' => 'avanzó a nivel <span style="font-weight:800;">$1</span>',
 	'level-advance-subject' => '¡Ahora eres un «$1» en {{SITENAME}}!',
 	'level-advance-body' => 'Hola $1.
@@ -911,6 +916,23 @@ El  equipo de {{SITENAME}}
 
 Haga click en  $3
 y cambie sus configuraciones para deshabilitar notificaciones por correo electrónico.',
+	'updateeditcounts' => 'Actualizar la estadística de ediciones',
+	'updateeditcounts-updated' => "Estadísticas actualizadas para '''$1''' {{PLURAL:$1|usuario|usuarios}}",
+	'updateeditcounts-updating' => 'Actualizando  $1 con  $2 {{PLURAL:$2|edición|ediciones}}',
+	'generatetopusersreport' => 'Generar informe de los usuarios principales',
+	'user-stats-weekly-winners' => '{{PLURAL:$1|Ganador|Ganadores}} de la semana',
+	'user-stats-monthly-winners' => '{{PLURAL:$1|Ganador|Ganadores}} del mes',
+	'user-stats-weekly-win-congratulations' => '¡Felicitaciones {{PLURAL:$1|al siguiente usuario que obtuvo|a los siguientes usuarios que obtuvieron}}, una victoria semanal y  $2  {{PLURAL:$2| punto |puntos}}extra!',
+	'user-stats-monthly-win-congratulations' => '¡Felicitaciones {{PLURAL:$1|al siguiente usuario que obtuvo|a los siguientes usuarios que obtuvieron}}, una victoria mensual y  $2  {{PLURAL:$2| punto |puntos}}extra!',
+	'user-stats-full-top' => 'Los $1 primeros',
+	'user-stats-report-row' => "($1) [[User:$2|$2]] - '''$3''' {{PLURAL:$3|punto|puntos}}!",
+	'user-stats-report-points' => "'''$1''' {{PLURAL:$1|punto|puntos}}",
+	'user-stats-report-generation-note' => 'Esta página se ha generado automáticamente',
+	'user-stats-report-weekly-edit-summary' => 'informe de usuarios semanal automático',
+	'user-stats-report-monthly-edit-summary' => 'informe de usuarios mensual automático',
+	'user-stats-report-weekly-page-title' => 'Informe semanal de puntos de los usuarios ($1)',
+	'user-stats-report-monthly-page-title' => 'Informe mensual de puntos de los usuarios ($1)',
+	'user-stats-report-error-variable-not-set' => '¡La variable $wgUserStatsPointValues[\'points_winner_$1\'] debe tener un valor mayor que 0 en LocalSettings.php!',
 );
 
 /** Estonian (Eesti)
@@ -1578,6 +1600,9 @@ Tu non vole reciper plus e-mail de nos?
 
 Clicca $3
 e disactiva in tu preferentias le notificationes per e-mail.',
+	'updateeditcounts' => 'Actualisar numeros de modificationes',
+	'updateeditcounts-updated' => "Statisticas actualisate pro '''$1''' {{PLURAL:$1|usator|usatores}}",
+	'updateeditcounts-updating' => 'Actualisante $1 con $2 {{PLURAL:$2|modification|modificationes}}',
 	'generatetopusersreport' => 'Generar reporto del usatores le plus active',
 	'user-stats-weekly-winners' => 'Le {{PLURAL:$1|ganiator|ganiatores}} del septimana',
 	'user-stats-monthly-winners' => 'Le {{PLURAL:$1|ganiator|ganiatores}} del mense',
@@ -1986,6 +2011,9 @@ $messages['mk'] = array(
 
 Кликнете $3
 и во вашите прилагодувања оневозможете известувања по е-пошта.',
+	'updateeditcounts' => 'Поднови бр-ви. на уредувања',
+	'updateeditcounts-updated' => "Подновени статистики за '''$1''' {{PLURAL:$1|корисник|корисници}}",
+	'updateeditcounts-updating' => 'Подновувам $1 со $2 {{PLURAL:$2|уредување|уредувања}}',
 	'generatetopusersreport' => 'Создај извештај за корисници-предводници',
 	'user-stats-weekly-winners' => '{{PLURAL:$1|Победник|Победници}} за неделава',
 	'user-stats-monthly-winners' => '{{PLURAL:$1|Победник|Победници}} за месецов',
@@ -2051,6 +2079,70 @@ $messages['nah'] = array(
 	'top-fans-by-points-nav-header' => 'Huēyi fans',
 	'top-fans-by-category-nav-header' => 'Huēyi neneuhcāyōcopa',
 	'top-fans-bad-field-title' => '¡Ō!',
+);
+
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Jon Harald Søby
+ * @author Nghtwlkr
+ */
+$messages['nb'] = array(
+	'user-stats-alltime-title' => 'Flest poeng noensinne',
+	'user-stats-weekly-title' => 'Flest poeng denne uka',
+	'user-stats-monthly-title' => 'Flest poeng denne måneden',
+	'topusers' => 'Beste brukere',
+	'top-fans-by-points-nav-header' => 'Beste tilhengere',
+	'top-fans-by-category-nav-header' => 'Beste per kategori',
+	'top-fans-total-points-link' => 'Poeng totalt',
+	'top-fans-weekly-points-link' => 'Poeng denne uka',
+	'top-fans-monthly-points-link' => 'Poeng denne måneden',
+	'top-fans-points' => 'poeng',
+	'top-fans-by-category-title-edit-count' => 'Topp antall redigeringer',
+	'top-fans-by-category-title-friends-count' => 'Topp antall venner',
+	'top-fans-by-category-title-foe-count' => 'Topp antall fiender',
+	'top-fans-by-category-title-gifts-rec-count' => 'Topp antall mottatte gaver',
+	'top-fans-by-category-title-gifts-sent-count' => 'Topp antall sendte gaver',
+	'top-fans-by-category-title-vote-count' => 'Topp antall stemmer',
+	'top-fans-by-category-title-comment-count' => 'Topp antall kommentarer',
+	'top-fans-by-category-title-referrals-count' => 'Topp antall henvisninger',
+	'top-fans-by-category-title-comment-score-positive-rec' => 'Topp antall tommelen opp',
+	'top-fans-by-category-title-comment-score-negative-rec' => 'Topp antall tommelen ned',
+	'top-fans-by-category-title-comment-score-positive-given' => 'Topp antall gitt tommelen opp',
+	'top-fans-by-category-title-comment-score-negative-given' => 'Topp antall gitt tommelen ned',
+	'top-fans-by-category-title-monthly-winner-count' => 'Topp antall månedlige seire',
+	'top-fans-by-category-title-weekly-winner-count' => 'Topp antall ukentlige seire',
+	'top-fans-bad-field-title' => 'Ups!',
+	'top-fans-bad-field-message' => 'Den valgte statistikken finnes ikke.',
+	'top-fans-stats-vote-count' => '{{PLURAL:$1|Stemme|Stemmer}}',
+	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Månedlig seier|Månedlige seire}}',
+	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Ukentlig seier|Ukentlige seire}}',
+	'top-fans-stats-edit-count' => '{{PLURAL:$1|Redigering|Redigeringer}}',
+	'top-fans-stats-comment-count' => '{{PLURAL:$1|Kommentar|Kommentarer}}',
+	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Referering|Refereringer}}',
+	'top-fans-stats-friends-count' => '{{PLURAL:$1|Venn|Venner}}',
+	'top-fans-stats-foe-count' => '{{PLURAL:$1|Fiende|Fiender}}',
+	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Publisert mening|Publiserte meninger}}',
+	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Mening|Meninger}}',
+	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Tommel opp|Tomler opp}}',
+	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Tommel ned|Tomler ned}}',
+	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Tommel opp gitt|Tomler opp gitt}}',
+	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Tommel ned gitt|Tomler ned gitt}}',
+	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Gave mottatt|Gaver mottatt}}',
+	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Gave|Gaver}} sendt',
+	'right-updatepoints' => 'Oppdater redigeringsteller',
+	'level-advanced-to' => 'avanserte til nivå <span style="font-weight:800;">$1</span>',
+	'level-advance-subject' => 'Du er nå $1 på {{SITENAME}}.',
+	'level-advance-body' => 'Hei, $1.
+
+Du er nå $2 på {{SITENAME}}.
+
+Gratulerer,
+{{SITENAME}}-teamet
+
+----
+Vil du ikke lenger motta e-poster fra oss?
+
+Klikk $3
+og endre innstillingene dine for å slå av e-postmeldinger.',
 );
 
 /** Dutch (Nederlands)
@@ -2181,70 +2273,6 @@ Vil du ikkje lenger motta e-postar frå oss?
 
 Trykk $3
 og endra innstillingane dine for å slå av e-postmeldingar.',
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Jon Harald Søby
- * @author Nghtwlkr
- */
-$messages['nb'] = array(
-	'user-stats-alltime-title' => 'Flest poeng noensinne',
-	'user-stats-weekly-title' => 'Flest poeng denne uka',
-	'user-stats-monthly-title' => 'Flest poeng denne måneden',
-	'topusers' => 'Beste brukere',
-	'top-fans-by-points-nav-header' => 'Beste tilhengere',
-	'top-fans-by-category-nav-header' => 'Beste per kategori',
-	'top-fans-total-points-link' => 'Poeng totalt',
-	'top-fans-weekly-points-link' => 'Poeng denne uka',
-	'top-fans-monthly-points-link' => 'Poeng denne måneden',
-	'top-fans-points' => 'poeng',
-	'top-fans-by-category-title-edit-count' => 'Topp antall redigeringer',
-	'top-fans-by-category-title-friends-count' => 'Topp antall venner',
-	'top-fans-by-category-title-foe-count' => 'Topp antall fiender',
-	'top-fans-by-category-title-gifts-rec-count' => 'Topp antall mottatte gaver',
-	'top-fans-by-category-title-gifts-sent-count' => 'Topp antall sendte gaver',
-	'top-fans-by-category-title-vote-count' => 'Topp antall stemmer',
-	'top-fans-by-category-title-comment-count' => 'Topp antall kommentarer',
-	'top-fans-by-category-title-referrals-count' => 'Topp antall henvisninger',
-	'top-fans-by-category-title-comment-score-positive-rec' => 'Topp antall tommelen opp',
-	'top-fans-by-category-title-comment-score-negative-rec' => 'Topp antall tommelen ned',
-	'top-fans-by-category-title-comment-score-positive-given' => 'Topp antall gitt tommelen opp',
-	'top-fans-by-category-title-comment-score-negative-given' => 'Topp antall gitt tommelen ned',
-	'top-fans-by-category-title-monthly-winner-count' => 'Topp antall månedlige seire',
-	'top-fans-by-category-title-weekly-winner-count' => 'Topp antall ukentlige seire',
-	'top-fans-bad-field-title' => 'Ups!',
-	'top-fans-bad-field-message' => 'Den valgte statistikken finnes ikke.',
-	'top-fans-stats-vote-count' => '{{PLURAL:$1|Stemme|Stemmer}}',
-	'top-fans-stats-monthly-winner-count' => '{{PLURAL:$1|Månedlig seier|Månedlige seire}}',
-	'top-fans-stats-weekly-winner-count' => '{{PLURAL:$1|Ukentlig seier|Ukentlige seire}}',
-	'top-fans-stats-edit-count' => '{{PLURAL:$1|Redigering|Redigeringer}}',
-	'top-fans-stats-comment-count' => '{{PLURAL:$1|Kommentar|Kommentarer}}',
-	'top-fans-stats-referrals-completed' => '{{PLURAL:$1|Referering|Refereringer}}',
-	'top-fans-stats-friends-count' => '{{PLURAL:$1|Venn|Venner}}',
-	'top-fans-stats-foe-count' => '{{PLURAL:$1|Fiende|Fiender}}',
-	'top-fans-stats-opinions-published' => '{{PLURAL:$1|Publisert mening|Publiserte meninger}}',
-	'top-fans-stats-opinions-created' => '{{PLURAL:$1|Mening|Meninger}}',
-	'top-fans-stats-comment-score-positive-rec' => '{{PLURAL:$1|Tommel opp|Tomler opp}}',
-	'top-fans-stats-comment-score-negative-rec' => '{{PLURAL:$1|Tommel ned|Tomler ned}}',
-	'top-fans-stats-comment-score-positive-given' => '{{PLURAL:$1|Tommel opp gitt|Tomler opp gitt}}',
-	'top-fans-stats-comment-score-negative-given' => '{{PLURAL:$1|Tommel ned gitt|Tomler ned gitt}}',
-	'top-fans-stats-gifts-rec-count' => '{{PLURAL:$1|Gave mottatt|Gaver mottatt}}',
-	'top-fans-stats-gifts-sent-count' => '{{PLURAL:$1|Gave|Gaver}} sendt',
-	'right-updatepoints' => 'Oppdater redigeringsteller',
-	'level-advanced-to' => 'avanserte til nivå <span style="font-weight:800;">$1</span>',
-	'level-advance-subject' => 'Du er nå $1 på {{SITENAME}}.',
-	'level-advance-body' => 'Hei, $1.
-
-Du er nå $2 på {{SITENAME}}.
-
-Gratulerer,
-{{SITENAME}}-teamet
-
-----
-Vil du ikke lenger motta e-poster fra oss?
-
-Klikk $3
-og endre innstillingene dine for å slå av e-postmeldinger.',
 );
 
 /** Occitan (Occitan)
