@@ -22,17 +22,15 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 * Constructor
 	 */
 	public function __construct( $request = null ) {
-		global $wgRequest;
-
 		SpecialPage::__construct( 'UploadAvatar', 'upload', false/* listed? */ );
-		$this->loadRequest( is_null( $request ) ? $wgRequest : $request );
 	}
 
 	/**
 	 * Let the parent handle most of the request, but specify the Upload
 	 * class ourselves
 	 */
-	protected function loadRequest( $request ) {
+	protected function loadRequest() {
+		$request = $this->getRequest();
 		parent::loadRequest( $request );
 		$this->mUpload = new UploadAvatar();
 		$this->mUpload->initializeFromRequest( $request );
@@ -45,18 +43,19 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 * @param $params Mixed: parameter(s) passed to the page or null
 	 */
 	public function execute( $params ) {
-		global $wgOut, $wgUser, $wgUserProfileScripts;
+		global $wgUserProfileScripts;
 
-		$wgOut->addExtensionStyle( $wgUserProfileScripts . '/UserProfile.css' );
+		$out = $this->getOutput();
+		$out->addExtensionStyle( $wgUserProfileScripts . '/UserProfile.css' );
 		parent::execute( $params );
 
 		if ( $this->mUploadSuccessful ) {
 			// Cancel redirect
-			$wgOut->redirect( '' );
+			$out->redirect( '' );
 
 			$this->showSuccess( $this->mUpload->mExtension );
 			// Run a hook on avatar change
-			wfRunHooks( 'NewAvatarUploaded', array( $wgUser ) );
+			wfRunHooks( 'NewAvatarUploaded', array( $this->getUser() ) );
 		}
 	}
 
@@ -66,19 +65,20 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 * @param $ext String: file extension (gif, jpg or png)
 	 */
 	private function showSuccess( $ext ) {
-		global $wgUser, $wgOut, $wgDBname, $wgUploadPath, $wgUploadAvatarInRecentChanges;
+		global $wgDBname, $wgUploadPath, $wgUploadAvatarInRecentChanges;
 
+		$user = $this->getUser();
 		$log = new LogPage( 'avatar' );
 		if ( !$wgUploadAvatarInRecentChanges ) {
 			$log->updateRecentChanges = false;
 		}
 		$log->addEntry(
 			'avatar',
-			$wgUser->getUserPage(),
+			$user->getUserPage(),
 			wfMsgForContent( 'user-profile-picture-log-entry' )
 		);
 
-		$uid = $wgUser->getId();
+		$uid = $user->getId();
 
 		$output = '<h1>' . wfMsg( 'uploadavatar' ) . '</h1>';
 		$output .= UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-picture' ) );
@@ -128,7 +128,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 		$output .= '</table>';
 		$output .= '</div>';
 
-		$wgOut->addHTML( $output );
+		$this->getOutput()->addHTML( $output );
 	}
 
 	/**
@@ -141,14 +141,13 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 * @return HTML output
 	 */
 	protected function getUploadForm( $message = '', $sessionKey = '', $hideIgnoreWarning = false ) {
-		global $wgOut, $wgUser, $wgUseCopyrightUpload;
+		global $wgUseCopyrightUpload;
 
 		if ( $message != '' ) {
 			$sub = wfMsg( 'uploaderror' );
-			$wgOut->addHTML( "<h2>{$sub}</h2>\n" .
+			$this->getOutput()->addHTML( "<h2>{$sub}</h2>\n" .
 				"<h4 class='error'>{$message}</h4>\n" );
 		}
-		$sk = $wgUser->getSkin();
 
 		$ulb = wfMsg( 'uploadbtn' );
 
@@ -183,8 +182,16 @@ class SpecialUploadAvatar extends SpecialUpload {
 			</table>';
 		}
 
-		$output .= '<form id="upload" method="post" enctype="multipart/form-data" action="">
-			<table border="0">
+		$output .= '<form id="upload" method="post" enctype="multipart/form-data" action="">';
+		// The following two lines are delicious copypasta from HTMLForm.php,
+		// function getHiddenFields() and they are required; wpEditToken is, as
+		// of MediaWiki 1.19, checked _unconditionally_ in
+		// SpecialUpload::loadRequest() and having the hidden title doesn't
+		// hurt either
+		// @see https://bugzilla.wikimedia.org/show_bug.cgi?id=30953
+		$output .= Html::hidden( 'wpEditToken', $this->getUser()->getEditToken(), array( 'id' => 'wpEditToken' ) ) . "\n";
+		$output .= Html::hidden( 'title', $this->getTitle()->getPrefixedText() ) . "\n";
+		$output .= '<table border="0">
 				<tr>
 					<td>
 						<p class="profile-update-title">' .
@@ -218,10 +225,10 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 * @return String: full img HTML tag
 	 */
 	function getAvatar( $size ) {
-		global $wgUser, $wgDBname, $wgUploadDirectory, $wgUploadPath;
+		global $wgDBname, $wgUploadDirectory, $wgUploadPath;
 		$files = glob(
 			$wgUploadDirectory . '/avatars/' . $wgDBname . '_' .
-			$wgUser->getID() . '_' . $size . "*"
+			$this->getUser()->getID() . '_' . $size . '*'
 		);
 		if ( isset( $files[0] ) && $files[0] ) {
 			return "<img src=\"{$wgUploadPath}/avatars/" .
@@ -335,7 +342,7 @@ class UploadAvatar extends UploadFromFile {
 	 * Create the thumbnails and delete old files
 	 */
 	public function performUpload( $comment, $pageText, $watch, $user ) {
-		global $wgUploadDirectory, $wgUser, $wgDBname, $wgMemc;
+		global $wgUploadDirectory, $wgDBname, $wgMemc;
 
 		$this->avatarUploadDirectory = $wgUploadDirectory . '/avatars';
 
@@ -356,13 +363,13 @@ class UploadAvatar extends UploadFromFile {
 
 		$dest = $this->avatarUploadDirectory;
 
-		$uid = $wgUser->getId();
+		$uid = $user->getId();
 		$avatar = new wAvatar( $uid, 'l' );
 		// If this is the user's first custom avatar, update statistics (in
 		// case if we want to give out some points to the user for uploading
 		// their first avatar)
 		if ( strpos( $avatar->getAvatarImage(), 'default_' ) !== false ) {
-			$stats = new UserStatsTrack( $uid, $wgUser->getName() );
+			$stats = new UserStatsTrack( $uid, $user->getName() );
 			$stats->incStatField( 'user_image' );
 		}
 
