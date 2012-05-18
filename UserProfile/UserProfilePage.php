@@ -440,13 +440,13 @@ class UserProfilePage extends Article {
 						$image_1 = $image_2 = '';
 						$render_1 = wfFindFile( $item['img1'] );
 						if ( is_object( $render_1 ) ) {
-							$thumb_1 = $render_1->getThumbnail( 25 );
+							$thumb_1 = $render_1->transform( array( 'width' =>  25 ) );
 							$image_1 = $thumb_1->toHtml();
 						}
 
 						$render_2 = wfFindFile( $item['img2'] );
 						if ( is_object( $render_2 ) ) {
-							$thumb_2 = $render_2->getThumbnail( 25 );
+							$thumb_2 = $render_2->transform( array( 'width' =>  25 ) );
 							$image_2 = $thumb_2->toHtml();
 						}
 
