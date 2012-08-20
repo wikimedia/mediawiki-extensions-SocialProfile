@@ -445,7 +445,6 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 
 		if ( !move_uploaded_file( $tempName, $stash ) ) {
 			throw new FatalError( wfMsg( 'filecopyerror', $tempName, $stash ) );
-			return false;
 		}
 
 		return $stash;

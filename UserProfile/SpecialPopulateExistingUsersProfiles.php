@@ -31,7 +31,6 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 		// Check permissions
 		if ( !in_array( 'staff', $wgUser->getEffectiveGroups() ) ) {
 			throw new ErrorPageError( 'error', 'badaccess' );
-			return '';
 		}
 
 		// Show a message if the database is in read-only mode
