@@ -11,7 +11,36 @@
 
 class UserProfilePage extends Article {
 
+	/**
+	 * @var Title
+	 */
 	public $title = null;
+
+	/**
+	 * @var String: user name of the user whose profile we're viewing
+	 */
+	public $user_name;
+
+	/**
+	 * @var Integer: user ID of the user whose profile we're viewing
+	 */
+	public $user_id;
+
+	/**
+	 * @var User: User object representing the user whose profile we're viewing
+	 */
+	public $user;
+
+	/**
+	 * @var Boolean: is the current user the owner of the profile page?
+	 */
+	public $is_owner;
+
+	/**
+	 * @var Array: user profile data (interests, etc.) for the user whose
+	 * profile we're viewing
+	 */
+	public $profile_data;
 
 	/**
 	 * Constructor
@@ -30,6 +59,13 @@ class UserProfilePage extends Article {
 		$this->profile_data = $profile->getProfile();
 	}
 
+	/**
+	 * Is the current user the owner of the profile page?
+	 * In other words, is the current user's username the same as that of the
+	 * profile's owner's?
+	 *
+	 * @return Boolean
+	 */
 	function isOwner() {
 		return $this->is_owner;
 	}
@@ -1713,6 +1749,12 @@ class UserProfilePage extends Article {
 		return $output;
 	}
 
+	/**
+	 * Initialize UserProfile data for the given user if that hasn't been done
+	 * already.
+	 *
+	 * @param $username String: name of the user whose profile data to initialize
+	 */
 	private function initializeProfileData( $username ) {
 		if ( !$this->profile_data ) {
 			$profile = new UserProfile( $username );
