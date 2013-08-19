@@ -1448,7 +1448,7 @@ class UserProfilePage extends Article {
 	 * @param $user_name String: user name
 	 */
 	function getUserBoard( $user_id, $user_name ) {
-		global $wgUser, $wgOut, $wgUserProfileDisplay, $wgUserProfileScripts;
+		global $wgUser, $wgOut, $wgUserProfileDisplay;
 
 		// Anonymous users cannot have user boards
 		if ( $user_id == 0 ) {
@@ -1463,7 +1463,8 @@ class UserProfilePage extends Article {
 
 		$output = ''; // Prevent E_NOTICE
 
-		$wgOut->addScriptFile( $wgUserProfileScripts . '/UserProfilePage.js' );
+		// Add JS
+		$wgOut->addModules( 'ext.socialprofile.userprofile.js' );
 
 		$rel = new UserRelationship( $user_name );
 		$friends = $rel->getRelationshipList( 1, 4 );
@@ -1526,9 +1527,9 @@ class UserProfilePage extends Article {
 								wfMsgHtml( 'userboard_private' ) .
 							'</option>
 						</select><p>
-						<textarea name="message" id="message" cols="43" rows="4"/></textarea>
+						<textarea name="message" id="message" cols="43" rows="4"></textarea>
 						<div class="user-page-message-box-button">
-							<input type="button" value="' . wfMsg( 'userboard_sendbutton' ) . '" class="site-button" onclick="javascript:send_message();" />
+							<input type="button" value="' . wfMsg( 'userboard_sendbutton' ) . '" class="site-button" />
 						</div>
 					</div>';
 			} else {

@@ -15,33 +15,40 @@ class RemoveGift extends UnlistedSpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgUser, $wgOut, $wgRequest, $wgMemc, $wgUploadPath, $wgUserGiftsScripts;
+		global $wgMemc, $wgUploadPath;
 
-		$wgOut->addExtensionStyle( $wgUserGiftsScripts . '/UserGifts.css' );
+		$out = $this->getOutput();
+		$request = $this->getRequest();
+		$user = $this->getUser();
 
-		$this->gift_id = $wgRequest->getInt( 'gift_id' );
-		$rel = new UserGifts( $wgUser->getName() );
+		// Add CSS
+		$out->addModules( 'ext.socialprofile.usergifts.css' );
 
+		$this->gift_id = $request->getInt( 'gift_id' );
+		$rel = new UserGifts( $user->getName() );
+
+		// Make sure that we have a gift ID, can't do anything without that
 		if ( !$this->gift_id || !is_numeric( $this->gift_id ) ) {
-			$wgOut->setPageTitle( wfMsg( 'g-error-title' ) );
-			$wgOut->addHTML( wfMsg( 'g-error-message-invalid-link' ) );
+			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
+			$out->addHTML( $this->msg( 'g-error-message-invalid-link' )->plain() );
 			return false;
 		}
 
-		if ( $rel->doesUserOwnGift( $wgUser->getID(), $this->gift_id ) == false ) {
-			$wgOut->setPageTitle( wfMsg( 'g-error-title' ) );
-			$wgOut->addHTML( wfMsg( 'g-error-do-not-own' ) );
+		// And also ensure that we're not trying to delete *someone else's* gift(s)...
+		if ( $rel->doesUserOwnGift( $user->getID(), $this->gift_id ) == false ) {
+			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
+			$out->addHTML( $this->msg( 'g-error-do-not-own' )->plain() );
 			return false;
 		}
 
 		$gift = $rel->getUserGift( $this->gift_id );
-		if ( $wgRequest->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
+		if ( $request->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
 			$_SESSION['alreadysubmitted'] = true;
 
-			$user_page_link = Title::makeTitle( NS_USER, $wgUser->getName() );
+			$user_page_link = Title::makeTitle( NS_USER, $user->getName() );
 
-			if ( $rel->doesUserOwnGift( $wgUser->getID(), $this->gift_id ) == true ) {
-				$wgMemc->delete( wfMemcKey( 'user', 'profile', 'gifts', $wgUser->getID() ) );
+			if ( $rel->doesUserOwnGift( $user->getID(), $this->gift_id ) == true ) {
+				$wgMemc->delete( wfMemcKey( 'user', 'profile', 'gifts', $user->getID() ) );
 				$rel->deleteGift( $this->gift_id );
 			}
 
@@ -49,25 +56,25 @@ class RemoveGift extends UnlistedSpecialPage {
 				Gifts::getGiftImage( $gift['gift_id'], 'l' ) .
 				'" border="0" alt="" />';
 
-			$wgOut->setPageTitle( wfMsg( 'g-remove-success-title', $gift['name'] ) );
+			$out->setPageTitle( $this->msg( 'g-remove-success-title', $gift['name'] )->parse() );
 
 			$out = '<div class="back-links">
-				<a href="' . $wgUser->getUserPage()->escapeFullURL() . '">' .
-					wfMsg( 'g-back-link', $gift['user_name_to'] ) . '</a>
+				<a href="' . $user->getUserPage()->escapeFullURL() . '">' .
+					$this->msg( 'g-back-link', $gift['user_name_to'] )->parse() . '</a>
 			</div>
 			<div class="g-container">' .
-				$gift_image . wfMsg( 'g-remove-success-message', $gift['name'] ) .
+				$gift_image . $this->msg( 'g-remove-success-message', $gift['name'] )->parse() .
 				'<div class="cleared"></div>
 			</div>
 			<div class="g-buttons">
-				<input type="button" class="site-button" value="' . wfMsg( 'g-main-page' ) . '" size="20" onclick="window.location=\'index.php?title=' . wfMsgForContent( 'mainpage' ) . '\'" />
-				<input type="button" class="site-button" value="' . wfMsg( 'g-your-profile' ) . '" size="20" onclick="window.location=\'' . $user_page_link->escapeFullURL() . '\'" />
+				<input type="button" class="site-button" value="' . $this->msg( 'g-main-page' )->plain() . '" size="20" onclick="window.location=\'index.php?title=' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '\'" />
+				<input type="button" class="site-button" value="' . $this->msg( 'g-your-profile' )->plain() . '" size="20" onclick="window.location=\'' . $user_page_link->escapeFullURL() . '\'" />
 			</div>';
 
-			$wgOut->addHTML( $out );
+			$out->addHTML( $out );
 		} else {
 			$_SESSION['alreadysubmitted'] = false;
-			$wgOut->addHTML( $this->displayForm() );
+			$out->addHTML( $this->displayForm() );
 		}
 	}
 
@@ -76,44 +83,45 @@ class RemoveGift extends UnlistedSpecialPage {
 	 * @return HTML output
 	 */
 	function displayForm() {
-		global $wgUser, $wgOut, $wgUploadPath;
+		global $wgUploadPath;
 
-		$rel = new UserGifts( $wgUser->getName() );
+		$currentUser = $this->getUser();
+		$rel = new UserGifts( $currentUser->getName() );
 		$gift = $rel->getUserGift( $this->gift_id );
 		$user = Title::makeTitle( NS_USER, $gift['user_name_from'] );
 		$gift_image = '<img src="' . $wgUploadPath . '/awards/' .
 			Gifts::getGiftImage( $gift['gift_id'], 'l' ) .
 			'" border="0" alt="gift" />';
 
-		$wgOut->setPageTitle( wfMsg( 'g-remove-title', $gift['name'] ) );
+		$this->getOutput()->setPageTitle( $this->msg( 'g-remove-title', $gift['name'] )->parse() );
 
 		$output = '<div class="back-links">
-			<a href="' . $wgUser->getUserPage()->escapeFullURL() . '">' .
-				wfMsg( 'g-back-link', $gift['user_name_to'] ) . '</a>
+			<a href="' . $currentUser->getUserPage()->escapeFullURL() . '">' .
+				$this->msg( 'g-back-link', $gift['user_name_to'] )->parse() . '</a>
 		</div>
 		<form action="" method="post" enctype="multipart/form-data" name="form1">
 			<div class="g-remove-message">' .
-				wfMsg( 'g-remove-message', $gift['name'] ) .
+				$this->msg( 'g-remove-message', $gift['name'] )->parse() .
 			'</div>
 			<div class="g-container">' .
 				$gift_image .
 				'<div class="g-name">' . $gift['name'] . '</div>
 				<div class="g-from">' .
-					wfMsg(
+					$this->msg(
 						'g-from',
 						$user->escapeFullURL(),
 						$gift['user_name_from']
-					) . '</div>';
+					)->parse() . '</div>';
 		if ( $gift['message'] ) {
 			$output .= '<div class="g-user-message">' .
 				$gift['message'] . '</div>';
 		}
 		$output .= '</div>
 			<div class="cleared"></div>
-			<div class="g-buttons">
-				<input type="hidden" name="user" value="' . addslashes( $gift['user_name_from'] ) . '">
-				<input type="button" class="site-button" value="' . wfMsg( 'g-remove' ) . '" size="20" onclick="document.form1.submit()" />
-				<input type="button" class="site-button" value="' . wfMsg( 'g-cancel' ) . '" size="20" onclick="history.go(-1)" />
+			<div class="g-buttons">' .
+				Html::hidden( 'user', $gift['user_name_from'] ) .
+				'<input type="button" class="site-button" value="' . $this->msg( 'g-remove' )->plain() . '" size="20" onclick="document.form1.submit()" />
+				<input type="button" class="site-button" value="' . $this->msg( 'g-cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
 			</div>
 		</form>';
 

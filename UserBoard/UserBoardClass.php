@@ -77,15 +77,13 @@ class UserBoard {
 		if ( $user->isEmailConfirmed() && $user->getIntOption( 'notifymessage', 1 ) ) {
 			$board_link = SpecialPage::getTitleFor( 'UserBoard' );
 			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
-			$subject = wfMsgExt( 'message_received_subject', 'parsemag',
-				$user_from
-			);
-			$body = wfMsgExt( 'message_received_body', 'parsemag',
+			$subject = wfMessage( 'message_received_subject', $user_from )->parse();
+			$body = wfMessage( 'message_received_body',
 				$user->getName(),
 				$user_from,
 				$board_link->escapeFullURL(),
 				$update_profile_link->escapeFullURL()
-			);
+			)->parse();
 			$user->sendMail( $subject, $body );
 		}
 	}
@@ -148,7 +146,7 @@ class UserBoard {
 
 		$key = wfMemcKey( 'user', 'newboardmessage', $user_id );
 		$newCount = 0;
-		/* 
+		/*
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(
 			'user_board',
@@ -184,6 +182,7 @@ class UserBoard {
 		} else {
 			$count = self::getNewMessageCountDB( $user_id );
 		}
+
 		return $count;
 	}
 
@@ -292,7 +291,9 @@ class UserBoard {
 			ORDER BY ub_id DESC
 			{$limit_sql}";
 		$res = $dbr->query( $sql, __METHOD__ );
+
 		$messages = array();
+
 		foreach ( $res as $row ) {
 			$parser = new Parser();
 			$message_text = $parser->parse( $row->ub_message, $wgTitle, $wgOut->parserOptions(), true );
@@ -309,6 +310,7 @@ class UserBoard {
 				'type' => $row->ub_type
 			);
 		}
+
 		return $messages;
 	}
 
@@ -338,9 +340,11 @@ class UserBoard {
 
 		$res = $dbr->query( $sql, __METHOD__ );
 		$row = $dbr->fetchObject( $res );
+
 		if ( $row ) {
 			$count = $row->the_count;
 		}
+
 		return $count;
 	}
 
@@ -349,6 +353,7 @@ class UserBoard {
 
 		$output = ''; // Prevent E_NOTICE
 		$messages = $this->getUserBoardMessages( $user_id, $user_id_2, $count, $page );
+
 		if ( $messages ) {
 			foreach ( $messages as $message ) {
 				$user = Title::makeTitle( NS_USER, $message['user_name_from'] );
@@ -361,18 +366,18 @@ class UserBoard {
 
 				if ( $wgUser->getName() != $message['user_name_from'] ) {
 					$board_to_board = '<a href="' . UserBoard::getUserBoardToBoardURL( $message['user_name'], $message['user_name_from'] ) . '">' .
-						wfMsgHtml( 'userboard_board-to-board' ) . '</a>';
+						wfMessage( 'userboard_board-to-board' )->plain() . '</a>';
 					$board_link = '<a href="' . UserBoard::getUserBoardURL( $message['user_name_from'] ) . '">' .
-						wfMsgHtml( 'userboard_sendmessage', $message['user_name_from'] ) . '</a>';
+						wfMessage( 'userboard_sendmessage', $message['user_name_from'] )->parse() . '</a>';
 				}
 				if ( $wgUser->getName() == $message['user_name'] || $wgUser->isAllowed( 'userboard-delete' ) ) {
 					$delete_link = "<span class=\"user-board-red\">
-							<a href=\"javascript:void(0);\" onclick=\"javascript:delete_message({$message['id']})\">" .
-								wfMsgHtml( 'userboard_delete' ) . '</a>
+							<a href=\"javascript:void(0);\" data-message-id=\"{$message['id']}\">" .
+								wfMessage( 'userboard_delete' )->plain() . '</a>
 						</span>';
 				}
 				if ( $message['type'] == 1 ) {
-					$message_type_label = '(' . wfMsgHtml( 'userboard_private' ) . ')';
+					$message_type_label = '(' . wfMessage( 'userboard_private' )->plain() . ')';
 				}
 
 				$message_text = $message['message_text'];
@@ -383,7 +388,7 @@ class UserBoard {
 					<a href=\"{$user->escapeFullURL()}\" title=\"{$message['user_name_from']}\">{$message['user_name_from']}</a> {$message_type_label}
 					</div>
 					<div class=\"user-board-message-time\">" .
-						wfMsgHtml( 'userboard_posted_ago', $this->getTimeAgo( $message['timestamp'] ) ) .
+						wfMessage( 'userboard_posted_ago', $this->getTimeAgo( $message['timestamp'] ) )->parse() .
 					"</div>
 					<div class=\"user-board-message-content\">
 						<div class=\"user-board-message-image\">
@@ -403,10 +408,11 @@ class UserBoard {
 			}
 		} elseif ( $wgUser->getName() == $wgTitle->getText() ) {
 			$output .= '<div class="no-info-container">' .
-				wfMsgHtml( 'userboard_nomessages' ) .
+				wfMessage( 'userboard_nomessages' )->parse() .
 			'</div>';
 
 		}
+
 		return $output;
 	}
 
@@ -472,7 +478,7 @@ class UserBoard {
 	public function getTimeOffset( $time, $timeabrv, $timename ) {
 		$timeStr = '';
 		if ( $time[$timeabrv] > 0 ) {
-			$timeStr = wfMsgExt( "userboard-time-{$timename}", 'parsemag', $time[$timeabrv] );
+			$timeStr = wfMessage( "userboard-time-{$timename}", $time[$timeabrv] )->parse();
 		}
 		if ( $timeStr ) {
 			$timeStr .= ' ';
@@ -502,7 +508,7 @@ class UserBoard {
 			}
 		}
 		if ( !$timeStr ) {
-			$timeStr = wfMsgExt( 'userboard-time-seconds', 'parsemag', 1 );
+			$timeStr = wfMessage( 'userboard-time-seconds', 1 )->parse();
 		}
 		return $timeStr;
 	}

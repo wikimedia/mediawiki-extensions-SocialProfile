@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'MEDIAWIKI' ) ) {
+	die();
+}
+
 global $IP, $wgScriptPath, $wgAutoloadClasses, $wgAvailableRights, $wgGroupPermissions,
 	$wgSpecialPages, $wgExtensionMessagesFiles;
 
@@ -8,7 +12,6 @@ $wgGroupPermissions['staff']['awardsmanage'] = true;
 $wgGroupPermissions['sysop']['awardsmanage'] = true;
 
 $wgSystemGiftsDirectory = "$IP/extensions/SocialProfile/SystemGifts";
-$wgSystemGiftsScripts = "$wgScriptPath/extensions/SocialProfile/SystemGifts";
 
 $wgAutoloadClasses['SystemGifts'] = "{$wgSystemGiftsDirectory}/SystemGiftsClass.php";
 $wgAutoloadClasses['UserSystemGifts'] = "{$wgSystemGiftsDirectory}/UserSystemGiftsClass.php";
@@ -35,4 +38,13 @@ $wgSpecialPages['RemoveMasterSystemGift'] = 'RemoveMasterSystemGift';
 $wgAutoloadClasses['PopulateAwards'] = "{$wgSystemGiftsDirectory}/SpecialPopulateAwards.php";
 $wgSpecialPages['PopulateAwards'] = 'PopulateAwards';
 
+// i18n
 $wgExtensionMessagesFiles['SystemGifts'] = $wgSystemGiftsDirectory . '/SystemGift.i18n.php';
+
+// Register the CSS with ResourceLoader
+$wgResourceModules['ext.socialprofile.systemgifts.css'] = array(
+	'styles' => 'SystemGifts.css',
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'SocialProfile/SystemGifts',
+	'position' => 'top'
+);

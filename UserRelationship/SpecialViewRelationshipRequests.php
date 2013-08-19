@@ -25,44 +25,48 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 	 * @param $params Mixed: parameter(s) passed to the page or null
 	 */
 	public function execute( $params ) {
-		global $wgUser, $wgOut, $wgRequest, $wgUserRelationshipScripts;
+		$out = $this->getOutput();
+		$user = $this->getUser();
 
 		/**
-		 * Redirect Non-logged in users to Login Page
+		 * Redirect anonymous users to the login page
 		 * It will automatically return them to the ViewRelationshipRequests page
 		 */
-		if ( !$wgUser->isLoggedIn() ) {
-			$wgOut->setPageTitle( wfMsg( 'ur-error-page-title' ) );
+		if ( !$user->isLoggedIn() ) {
+			$out->setPageTitle( $this->msg( 'ur-error-page-title' )->plain() );
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
-			$wgOut->redirect(
+			$out->redirect(
 				$login->getFullURL( 'returnto=Special:ViewRelationshipRequests' )
 			);
 			return false;
 		}
 
-		$wgOut->addScriptFile( $wgUserRelationshipScripts . '/UserRelationship.js' );
-		$wgOut->addExtensionStyle( $wgUserRelationshipScripts . '/UserRelationship.css' );
+		// Add CSS & JS
+		$out->addModules( array(
+			'ext.socialprofile.userrelationship.css',
+			'ext.socialprofile.userrelationship.js'
+		) );
 
-		$rel = new UserRelationship( $wgUser->getName() );
-		$friend_request_count = $rel->getOpenRequestCount( $wgUser->getID(), 1 );
-		$foe_request_count = $rel->getOpenRequestCount( $wgUser->getID(), 2 );
+		$rel = new UserRelationship( $user->getName() );
+		$friend_request_count = $rel->getOpenRequestCount( $user->getID(), 1 );
+		$foe_request_count = $rel->getOpenRequestCount( $user->getID(), 2 );
 
-		if ( $wgRequest->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
+		if ( $this->getRequest()->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
 			$_SESSION['alreadysubmitted'] = true;
 			$rel->addRelationshipRequest(
 				$this->user_name_to,
 				$this->relationship_type,
 				$_POST['message']
 			);
-			$out = '<br /><span class="title">' .
-				wfMsg( 'ur-already-submitted' ) .
+			$output = '<br /><span class="title">' .
+				$this->msg( 'ur-already-submitted' )->plain() .
 				'</span><br /><br />';
-			$wgOut->addHTML( $out );
+			$out->addHTML( $output );
 		} else {
 			$_SESSION['alreadysubmitted'] = false;
 			$output = '';
 
-			$wgOut->setPageTitle( wfMsg( 'ur-requests-title' ) );
+			$out->setPageTitle( $this->msg( 'ur-requests-title' )->plain() );
 			$requests = $rel->getRequestList( 0 );
 
 			if ( $requests ) {
@@ -72,20 +76,20 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 					$avatar_img = $avatar->getAvatarURL();
 
 					if ( $request['type'] == 'Foe' ) {
-						$msg = wfMsg(
+						$msg = $this->msg(
 							'ur-requests-message-foe',
 							$user_from->escapeFullURL(),
 							$request['user_name_from']
-						);
+						)->text();
 					} else {
-						$msg = wfMsg(
+						$msg = $this->msg(
 							'ur-requests-message-friend',
 							$user_from->escapeFullURL(),
 							$request['user_name_from']
-						);
+						)->text();
 					}
 
-					$message = $wgOut->parse( trim( $request['message'] ), false );
+					$message = $out->parse( trim( $request['message'] ), false );
 
 					$output .= "<div class=\"relationship-action black-text\" id=\"request_action_{$request['id']}\">
 					  	{$avatar_img}" . $msg;
@@ -94,16 +98,16 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 					}
 					$output .= '<div class="cleared"></div>
 						<div class="relationship-buttons">
-							<input type="button" class="site-button" value="' . wfMsg( 'ur-accept' ) . '" onclick="javascript:requestResponse(1,' . $request['id'] . ')" />
-							<input type="button" class="site-button" value="' . wfMsg( 'ur-reject' ) . '" onclick="javascript:requestResponse(-1,' . $request['id'] . ')" />
+							<input type="button" class="site-button" value="' . $this->msg( 'ur-accept' )->plain() . '" data-response="1" />
+							<input type="button" class="site-button" value="' . $this->msg( 'ur-reject' )->plain() . '" data-response="-1" />
 						</div>
 					</div>';
 				}
 			} else {
-				$inviteLink = SpecialPage::getTitleFor( 'InviteContacts' );
-				$output = wfMsg( 'ur-no-requests-message', $inviteLink->escapeFullURL() );
+				$output = $this->msg( 'ur-no-requests-message' )->parse();
 			}
-			$wgOut->addHTML( $output );
+
+			$out->addHTML( $output );
 		}
 	}
 }

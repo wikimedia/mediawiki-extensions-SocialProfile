@@ -22,20 +22,25 @@ class ViewGifts extends SpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgUser, $wgOut, $wgRequest, $wgUploadPath, $wgUserGiftsScripts;
+		global $wgUploadPath;
 
-		$wgOut->addExtensionStyle( $wgUserGiftsScripts . '/UserGifts.css' );
+		$out = $this->getOutput();
+		$request = $this->getRequest();
+		$currentUser = $this->getUser();
 
-		$user_name = $wgRequest->getVal( 'user' );
-		$page = $wgRequest->getInt( 'page', 1 );
+		// Add CSS
+		$out->addModules( 'ext.socialprofile.usergifts.css' );
+
+		$user_name = $request->getVal( 'user' );
+		$page = $request->getInt( 'page', 1 );
 
 		/**
 		 * Redirect Non-logged in users to Login Page
 		 * It will automatically return them to the ViewGifts page
 		 */
-		if ( $wgUser->getID() == 0 && $user_name == '' ) {
+		if ( $currentUser->getID() == 0 && $user_name == '' ) {
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
-			$wgOut->redirect( $login->escapeFullURL( 'returnto=Special:ViewGifts' ) );
+			$out->redirect( $login->escapeFullURL( 'returnto=Special:ViewGifts' ) );
 			return false;
 		}
 
@@ -43,7 +48,7 @@ class ViewGifts extends SpecialPage {
 		 * If no user is set in the URL, we assume it's the current user
 		 */
 		if ( !$user_name ) {
-			$user_name = $wgUser->getName();
+			$user_name = $currentUser->getName();
 		}
 		$user_id = User::idFromName( $user_name );
 		$user = Title::makeTitle( NS_USER, $user_name );
@@ -52,8 +57,8 @@ class ViewGifts extends SpecialPage {
 		 * Error message for username that does not exist (from URL)
 		 */
 		if ( $user_id == 0 ) {
-			$wgOut->setPageTitle( wfMsg( 'g-error-title' ) );
-			$wgOut->addHTML( wfMsg( 'g-error-message-no-user' ) );
+			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
+			$out->addHTML( $this->msg( 'g-error-message-no-user' )->plain() );
 			return false;
 		}
 
@@ -74,15 +79,15 @@ class ViewGifts extends SpecialPage {
 		/**
 		 * Show gift count for user
 		 */
-		$wgOut->setPageTitle( wfMsg( 'g-list-title', $rel->user_name ) );
+		$out->setPageTitle( $this->msg( 'g-list-title', $rel->user_name )->parse() );
 
 		$output = '<div class="back-links">
 			<a href="' . $user->getFullURL() . '">' .
-				wfMsg( 'g-back-link', $rel->user_name ) .
+				$this->msg( 'g-back-link', $rel->user_name )->parse() .
 			'</a>
 		</div>
 		<div class="g-count">' .
-			wfMsgExt( 'g-count', 'parsemag', $rel->user_name, $total ) .
+			$this->msg( 'g-count', $rel->user_name, $total )->parse() .
 		'</div>';
 
 		if ( $gifts ) {
@@ -118,29 +123,29 @@ class ViewGifts extends SpecialPage {
 							$gift_name_display .
 						'</a>';
 				if ( $gift['status'] == 1 ) {
-					if ( $user_name == $wgUser->getName() ) {
+					if ( $user_name == $currentUser->getName() ) {
 						$rel->clearUserGiftStatus( $gift['id'] );
-						$rel->decNewGiftCount( $wgUser->getID() );
+						$rel->decNewGiftCount( $currentUser->getID() );
 					}
 					$output .= '<span class="g-new">' .
-						wfMsg( 'g-new' ) .
+						$this->msg( 'g-new' )->plain() .
 					'</span>';
 				}
 				$output .= '</div>';
 
 				$output .= '<div class="g-from">' .
-					wfMsg( 'g-from', $user_from->escapeFullURL(), $gift['user_name_from'] ) .
+					$this->msg( 'g-from', $user_from->escapeFullURL(), $gift['user_name_from'] )->text() .
 				'</div>
 					<div class="g-actions">
 						<a href="' . $giveGiftLink->escapeFullURL( 'gift_id=' . $gift['gift_id'] ) . '">' .
-							wfMsg( 'g-to-another' ) .
+							$this->msg( 'g-to-another' )->plain() .
 						'</a>';
-				if ( $rel->user_name == $wgUser->getName() ) {
+				if ( $rel->user_name == $currentUser->getName() ) {
 					$output .= '&#160;';
-					$output .= wfMsgExt( 'pipe-separator', 'escapenoentities' );
+					$output .= $this->msg( 'pipe-separator' )->escaped();
 					$output .= '&#160;';
 					$output .= '<a href="' . $removeGiftLink->escapeFullURL( 'gift_id=' . $gift['id'] ) . '">' .
-						wfMsg( 'g-remove-gift' ) . '</a>';
+						$this->msg( 'g-remove-gift' )->plain() . '</a>';
 				}
 				$output .= '</div>
 					<div class="cleared"></div>';
@@ -158,13 +163,20 @@ class ViewGifts extends SpecialPage {
 		 */
 		$numofpages = $total / $per_page;
 
-		$pageLink = SpecialPage::getTitleFor( 'ViewGifts' );
+		$pageLink = $this->getTitle();
 
 		if ( $numofpages > 1 ) {
 			$output .= '<div class="page-nav">';
 			if ( $page > 1 ) {
-				$output .= '<a href="' . $pageLink->escapeFullURL( 'user=' . $user_name . '&page=' . ( $page - 1 ) ) . '">' .
-					wfMsg( 'g-previous' ) . '</a> ';
+				$output .= Linker::link(
+					$pageLink
+					$this->msg( 'g-previous' )->plain(),
+					array(),
+					array(
+						'user' => $user_name,
+						'page' => ( $page - 1 )
+					)
+				) . $this->msg( 'word-separator' )->plain();
 			}
 
 			if ( ( $total % $per_page ) != 0 ) {
@@ -181,17 +193,33 @@ class ViewGifts extends SpecialPage {
 				if ( $i == $page ) {
 					$output .= ( $i . ' ' );
 				} else {
-					$output .= '<a href="' . $pageLink->escapeFullURL( 'user=' . $user_name . '&page=' . $i ) . "\">$i</a> ";
+					$output .= Linker::link(
+						$pageLink
+						$i,
+						array(),
+						array(
+							'user' => $user_name,
+							'page' => $i
+						)
+					) . $this->msg( 'word-separator' )->plain();
 				}
 			}
 
 			if ( ( $total - ( $per_page * $page ) ) > 0 ) {
-				$output .= ' <a href="' . $pageLink->escapeFullURL( 'user=' . $user_name . '&page=' . ( $page + 1 ) ) . '">' .
-					wfMsg( 'g-next' ) . '</a>';
+				$output .= $this->msg( 'word-separator' )->plain() .
+					Linker::link(
+						$pageLink
+						$this->msg( 'g-next' )->plain(),
+						array(),
+						array(
+							'user' => $user_name,
+							'page' => ( $page + 1 )
+						)
+					);
 			}
 			$output .= '</div>';
 		}
 
-		$wgOut->addHTML( $output );
+		$out->addHTML( $output );
 	}
 }

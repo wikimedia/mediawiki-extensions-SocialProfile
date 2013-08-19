@@ -25,69 +25,73 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 	 * @param $params Mixed: parameter(s) passed to the page or null
 	 */
 	public function execute( $params ) {
-		global $wgRequest, $wgOut, $wgUser, $wgUserBoardScripts;
+		$out = $this->getOutput();
+		$request = $this->getRequest();
+		$user = $this->getUser();
 
 		// This feature is available only to logged-in users.
-		if ( !$wgUser->isLoggedIn() ) {
-			$wgOut->setPageTitle( wfMsg( 'boardblastlogintitle' ) );
-			$wgOut->addWikiMsg( 'boardblastlogintext' );
+		if ( !$user->isLoggedIn() ) {
+			$out->setPageTitle( $this->msg( 'boardblastlogintitle' )->plain() );
+			$out->addWikiMsg( 'boardblastlogintext' );
 			return '';
 		}
 
 		// Is the database locked?
-		if( wfReadOnly() ) {
-			$wgOut->readOnlyPage();
+		if ( wfReadOnly() ) {
+			$out->readOnlyPage();
 			return false;
 		}
 
 		// Blocked through Special:Block? No access for you!
-		if( $wgUser->isBlocked() ) {
-			$wgOut->blockedPage( false );
+		if ( $user->isBlocked() ) {
+			$out->blockedPage( false );
 			return false;
 		}
 
 		// Add CSS & JS
-		$wgOut->addExtensionStyle( $wgUserBoardScripts . '/BoardBlast.css' );
-		$wgOut->addScriptFile( $wgUserBoardScripts . '/BoardBlast.js' );
+		$out->addModules( array(
+			'ext.socialprofile.userboard.boardblast.css',
+			'ext.socialprofile.userboard.boardblast.js',
+		) );
 
 		$output = '';
 
-		if ( $wgRequest->wasPosted() ) {
-			$wgOut->setPageTitle( wfMsg( 'messagesenttitle' ) );
+		if ( $request->wasPosted() ) {
+			$out->setPageTitle( $this->msg( 'messagesenttitle' )->plain() );
 			$b = new UserBoard();
 
 			$count = 0;
-			$user_ids_to = explode( ',', $wgRequest->getVal( 'ids' ) );
+			$user_ids_to = explode( ',', $request->getVal( 'ids' ) );
 			foreach ( $user_ids_to as $user_id ) {
 				$user = User::newFromId( $user_id );
 				$user->loadFromId();
 				$user_name = $user->getName();
 				$b->sendBoardMessage(
-					$wgUser->getID(),
-					$wgUser->getName(),
+					$user->getID(),
+					$user->getName(),
 					$user_id,
 					$user_name,
-					$wgRequest->getVal( 'message' ),
+					$request->getVal( 'message' ),
 					1
 				);
 				$count++;
 			}
-			$output .= wfMsg( 'messagesentsuccess' );
+			$output .= $this->msg( 'messagesentsuccess' )->plain();
 		} else {
-			$wgOut->setPageTitle( wfMsg( 'boardblasttitle' ) );
+			$out->setPageTitle( $this->msg( 'boardblasttitle' )->plain() );
 			$output .= $this->displayForm();
 		}
 
-		$wgOut->addHTML( $output );
+		$out->addHTML( $output );
 	}
 
 	/**
 	 * Displays the form for sending board blasts
 	 */
 	function displayForm() {
-		global $wgUser;
+		$user = $this->getUser();
 
-		$stats = new UserStats( $wgUser->getID(), $wgUser->getName() );
+		$stats = new UserStats( $user->getID(), $user->getName() );
 		$stats_data = $stats->getUserStats();
 		$friendCount = $stats_data['friend_count'];
 		$foeCount = $stats_data['foe_count'];
@@ -105,28 +109,28 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		<div class="blast-nav">
 				<h2>' . wfMsg( 'boardblaststep2' ) . '</h2>
 				<div class="blast-nav-links">
-					<a href="javascript:void(0);" onclick="javascript:BoardBlast.selectAll()">' .
+					<a href="javascript:void(0);" class="blast-select-all-link">' .
 						wfMsg( 'boardlinkselectall' ) . '</a> -
-					<a href="javascript:void(0);" onclick="javascript:BoardBlast.unselectAll()">' .
+					<a href="javascript:void(0);" class="blast-unselect-all-link">' .
 						wfMsg( 'boardlinkunselectall' ) . '</a> ';
 
 		if ( $friendCount > 0 && $foeCount > 0 ) {
-			$output .= '- <a href="javascript:void(0);" onclick="javascript:BoardBlast.toggleFriends(1)">' .
+			$output .= '- <a href="javascript:void(0);" class="blast-select-friends-link">' .
 				wfMsg( 'boardlinkselectfriends' ) . '</a> -';
-			$output .= '<a href="javascript:void(0);" onclick="javascript:BoardBlast.toggleFriends(0)">' .
+			$output .= '<a href="javascript:void(0);" class="blast-unselect-friends-link">' .
 				wfMsg( 'boardlinkunselectfriends' ) . '</a>';
 		}
 
 		if ( $foeCount > 0 && $friendCount > 0 ) {
-			$output .= '- <a href="javascript:void(0);" onclick="javascript:BoardBlast.toggleFoes(1)">' .
+			$output .= '- <a href="javascript:void(0);" class="blast-select-foes-link">' .
 				wfMsg( 'boardlinkselectfoes' ) . '</a> -';
-			$output .= '<a href="javascript:void(0);" onclick="javascript:BoardBlast.toggleFoes(0)">' .
+			$output .= '<a href="javascript:void(0);" class="blast-unselect-foes-link">' .
 				wfMsg( 'boardlinkunselectfoes' ) . '</a>';
 		}
 		$output .= '</div>
 		</div>';
 
-		$rel = new UserRelationship( $wgUser->getName() );
+		$rel = new UserRelationship( $user->getName() );
 		$relationships = $rel->getRelationshipList();
 
 		$output .= '<div id="blast-friends-list" class="blast-friends-list">';
@@ -141,7 +145,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 					$class = 'foe';
 				}
 				$id = $relationship['user_id'];
-				$output .= '<div class="blast-' . $class . "-unselected\" id=\"user-{$id}\" onclick=\"javascript:BoardBlast.toggleUser({$id})\">
+				$output .= '<div class="blast-' . $class . "-unselected\" id=\"user-{$id}\">
 						{$relationship['user_name']}
 					</div>";
 				if ( $x == count( $relationships ) || $x != 1 && $x % $per_row == 0 ) {
@@ -158,7 +162,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 			<div class="cleared"></div>';
 
 		$output .= '<div class="blast-message-box-button">
-			<input type="button" value="' . wfMsg( 'boardsendbutton' ) . '" class="site-button" onclick="javascript:BoardBlast.sendMessages();" />
+			<input type="button" value="' . wfMsg( 'boardsendbutton' ) . '" class="site-button" />
 		</div>';
 
 		return $output;

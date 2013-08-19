@@ -33,13 +33,13 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	 *                  giftadmin group
 	 */
 	function canUserManage() {
-		global $wgUser;
+		$user = $this->getUser();
 
-		if ( $wgUser->isBlocked() ) {
+		if ( $user->isBlocked() ) {
 			return false;
 		}
 
-		if ( $wgUser->isAllowed( 'delete' ) || in_array( 'giftadmin', $wgUser->getGroups() ) ) {
+		if ( $user->isAllowed( 'delete' ) || in_array( 'giftadmin', $user->getGroups() ) ) {
 			return true;
 		}
 
@@ -52,25 +52,26 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgUser, $wgOut, $wgRequest, $wgUserGiftsScripts;
+		$out = $this->getOutput();
+		$request = $this->getRequest();
 
 		// Add CSS
-		$wgOut->addExtensionStyle( $wgUserGiftsScripts . '/UserGifts.css' );
+		$out->addModules( 'ext.socialprofile.usergifts.css' );
 
 		// Check for permissions
-		if ( $wgUser->isAnon() || !$this->canUserManage() ) {
+		if ( $this->getUser()->isAnon() || !$this->canUserManage() ) {
 			throw new ErrorPageError( 'error', 'badaccess' );
 		}
 
-		$this->gift_id = $wgRequest->getInt( 'gift_id' );
+		$this->gift_id = $request->getInt( 'gift_id' );
 
 		if ( !$this->gift_id || !is_numeric( $this->gift_id ) ) {
-			$wgOut->setPageTitle( wfMsg( 'g-error-title' ) );
-			$wgOut->addHTML( wfMsg( 'g-error-message-invalid-link' ) );
+			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
+			$out->addHTML( $this->msg( 'g-error-message-invalid-link' )->plain() );
 			return false;
 		}
 
-		if ( $wgRequest->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
+		if ( $request->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
 			$_SESSION['alreadysubmitted'] = true;
 
 			$dbw = wfGetDB( DB_MASTER );
@@ -92,20 +93,21 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 			$this->deleteImage( $this->gift_id, 'l' );
 			$this->deleteImage( $this->gift_id, 'ml' );
 
-			$wgOut->setPageTitle( wfMsg( 'g-remove-success-title', $gift['gift_name'] ) );
+			$out->setPageTitle( $this->msg( 'g-remove-success-title', $gift['gift_name'] )->parse() );
 
 			$out = '<div class="back-links">
-				<a href="' . SpecialPage::getTitleFor( 'GiftManager' )->escapeFullURL() . '">' . wfMsg( 'g-viewgiftlist' ) . '</a>
+				<a href="' . SpecialPage::getTitleFor( 'GiftManager' )->escapeFullURL() . '">' .
+					$this->msg( 'g-viewgiftlist' )->plain() . '</a>
 			</div>
 			<div class="g-container">' .
-				wfMsg( 'g-remove-success-message', $gift['gift_name'] ) .
+				$this->msg( 'g-remove-success-message', $gift['gift_name'] )->parse() .
 				'<div class="cleared"></div>
 			</div>';
 
-			$wgOut->addHTML( $out );
+			$out->addHTML( $out );
 		} else {
 			$_SESSION['alreadysubmitted'] = false;
-			$wgOut->addHTML( $this->displayForm() );
+			$out->addHTML( $this->displayForm() );
 		}
 	}
 
@@ -115,7 +117,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	 * @return String: HTML output
 	 */
 	function displayForm() {
-		global $wgOut, $wgUploadPath;
+		global $wgUploadPath;
 
 		$gift = Gifts::getGift( $this->gift_id );
 
@@ -123,15 +125,15 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 			Gifts::getGiftImage( $this->gift_id, 'l' ) .
 			'" border="0" alt="gift" />';
 
-		$wgOut->setPageTitle( wfMsg( 'g-remove-title', $gift['gift_name'] ) );
+		$this->getOutput()->setPageTitle( $this->msg( 'g-remove-title', $gift['gift_name'] )->parse() );
 
 		$output = '<div class="back-links">
 			<a href="' . SpecialPage::getTitleFor( 'GiftManager' )->escapeFullURL() . '">' .
-				wfMsg( 'g-viewgiftlist' ) . '</a>
+				$this->msg( 'g-viewgiftlist' )->plain() . '</a>
 		</div>
 		<form action="" method="post" enctype="multipart/form-data" name="form1">
 			<div class="g-remove-message">' .
-				wfMsg( 'g-delete-message', $gift['gift_name'] ) .
+				$this->msg( 'g-delete-message', $gift['gift_name'] )->parse() .
 			'</div>
 			<div class="g-container">' .
 				$gift_image .
@@ -139,8 +141,8 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 			</div>
 			<div class="cleared"></div>
 			<div class="g-buttons">
-				<input type="button" class="site-button" value="' . wfMsg( 'g-remove' ) . '" size="20" onclick="document.form1.submit()" />
-				<input type="button" class="site-button" value="' . wfMsg( 'g-cancel' ) . '" size="20" onclick="history.go(-1)" />
+				<input type="button" class="site-button" value="' . $this->msg( 'g-remove' )->plain() . '" size="20" onclick="document.form1.submit()" />
+				<input type="button" class="site-button" value="' . $this->msg( 'g-cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
 			</div>
 		</form>';
 

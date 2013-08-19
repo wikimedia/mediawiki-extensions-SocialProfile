@@ -21,14 +21,8 @@ $messages['en'] = array(
 	'ur-main-page' => 'Main page',
 	'ur-your-profile' => 'Your profile',
 	'ur-backlink' => '&lt; Back to $1\'s profile',
-	'ur-relationship-count-foes' => '$1 has $2 {{PLURAL:$2|foe|foes}}.
-Want more foes?
-<a href="$3">Invite them.</a>',
-	'ur-relationship-count-friends' => '$1 has $2 {{PLURAL:$2|friend|friends}}.
-Want more friends?
-<a href="$3">Invite them.</a>',
-	'ur-add-friends' => ' Want more friends?
-<a href="$1">Invite them</a>',
+	'ur-relationship-count-foes' => '$1 has $2 {{PLURAL:$2|foe|foes}}.',
+	'ur-relationship-count-friends' => '$1 has $2 {{PLURAL:$2|friend|friends}}.',
 	'ur-add-friend' => 'Add as friend',
 	'ur-add-foe' => 'Add as foe',
 	'ur-add-no-user' => 'No user selected.
@@ -87,8 +81,7 @@ We will notify you when $1 confirms your request.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> wants to be your friend.',
 	'ur-accept' => 'Accept',
 	'ur-reject' => 'Reject',
-	'ur-no-requests-message' => 'You have no friend or foe requests.
-If you want more friends, <a href="$1">invite them!</a>',
+	'ur-no-requests-message' => 'You have no friend or foe requests.',
 	'ur-requests-added-message-foe' => 'You have added $1 as your foe.',
 	'ur-requests-added-message-friend' => 'You have added $1 as your friend.',
 	'ur-requests-reject-message-friend' => 'You have rejected $1 as your friend.',
@@ -271,7 +264,7 @@ $messages['aln'] = array(
 	'ur-requests-message-friend' => '<a href="$1">$2</a> do të jetë miku juaj.',
 	'ur-accept' => 'Pranoj',
 	'ur-reject' => 'Refuzoj',
-	'ur-no-requests-message' => 'Ju nuk keni mik apo armik kërkesa. Nëse ju doni më shumë miq, <a href="$1">të ftuar ata!</a>',
+	'ur-no-requests-message' => 'Ju nuk keni mik apo armik kërkesa.',
 	'ur-requests-added-message-foe' => 'Ju keni shtuar $1 si armik tuaj.',
 	'ur-requests-added-message-friend' => 'Ju keni shtuar $1 si miku juaj.',
 	'ur-requests-reject-message-friend' => 'Ju keni hedhur poshtë $1 si miku juaj.',
@@ -336,13 +329,8 @@ $messages['ar'] = array(
 	'ur-main-page' => 'الصفحة الرئيسية',
 	'ur-your-profile' => 'ملفك',
 	'ur-backlink' => '&lt; رجوع إلى ملف $1',
-	'ur-relationship-count-foes' => '{{PLURAL:$2|ليس ل$1 أي أعداء|ل$1 عدو واحد|ل$1 عدوان|ل$1 $2 أعداء|ل$1 $2 عدوًا|ل$1 $2 عدو}}.
-أتريد المزيد من الأعداء؟
-<a href="$3">ادعهم.</a>',
-	'ur-relationship-count-friends' => '{{PLURAL:$2|ليس ل$1 أي أصدقاء|ل$1 صديق واحد|ل$1 صديقان|ل$1 $2 أصدقاء|ل$1 $2 صديقًا|ل$1 $2 عدو}}.
-أتريد المزيد من الأصدقاء؟
-<a href="$3">ادعهم.</a>',
-	'ur-add-friends' => '  تريد المزيد من الأصدقاء؟ <a href="$1">أدعهم</a>',
+	'ur-relationship-count-foes' => '{{PLURAL:$2|ليس ل$1 أي أعداء|ل$1 عدو واحد|ل$1 عدوان|ل$1 $2 أعداء|ل$1 $2 عدوًا|ل$1 $2 عدو}}.',
+	'ur-relationship-count-friends' => '{{PLURAL:$2|ليس ل$1 أي أصدقاء|ل$1 صديق واحد|ل$1 صديقان|ل$1 $2 أصدقاء|ل$1 $2 صديقًا|ل$1 $2 عدو}}.',
 	'ur-add-friend' => 'أضف كصديق',
 	'ur-add-foe' => 'أضف كعدو',
 	'ur-add-no-user' => 'لا مستخدم تم اختياره.
@@ -401,8 +389,7 @@ $messages['ar'] = array(
 	'ur-requests-message-friend' => '<a href="$1">$2</a> يريد أن يكون صديقك.',
 	'ur-accept' => 'قبول',
 	'ur-reject' => 'رفض',
-	'ur-no-requests-message' => 'ليس لديك طلبات صداقة أو عداوة.
-لو أنك تريد المزيد من الأصدقاء، <a href="$1">ادعوهم!</a>',
+	'ur-no-requests-message' => 'ليس لديك طلبات صداقة أو عداوة.',
 	'ur-requests-added-message-foe' => 'أنت أضفت $1 كعدوك.',
 	'ur-requests-added-message-friend' => 'أنت أضفت $1 كصديقك.',
 	'ur-requests-reject-message-friend' => 'أنت رفضت $1 كصديقك.',
@@ -535,9 +522,8 @@ $messages['arz'] = array(
 	'ur-main-page' => 'الصفحة الرئيسية',
 	'ur-your-profile' => 'ملفك',
 	'ur-backlink' => '&lt; رجوع إلى ملف $1',
-	'ur-relationship-count-foes' => '$1 لديه $2 {{PLURAL:$2|عدو|عدو}}. تريد المزيد من الأعداء؟ <a href="$3">ادعهم.</a>',
-	'ur-relationship-count-friends' => '$1 لديه $2 {{PLURAL:$2|صديق|صديق}}. تريد المزيد من الأصدقاء؟ <a href="$3">ادعهم.</a>',
-	'ur-add-friends' => '  تريد المزيد من الأصدقاء؟ <a href="$1">أدعهم</a>',
+	'ur-relationship-count-foes' => '$1 لديه $2 {{PLURAL:$2|عدو|عدو}}. تريد المزيد من ',
+	'ur-relationship-count-friends' => '$1 لديه $2 {{PLURAL:$2|صديق|صديق}}. تريد المزيد من',
 	'ur-add-friend' => 'أضف كصديق',
 	'ur-add-foe' => 'أضف كعدو',
 	'ur-add-no-user' => 'و لا يوزر تم اختياره.
@@ -596,8 +582,7 @@ $messages['arz'] = array(
 	'ur-requests-message-friend' => '<a href="$1">$2</a> يريد أن يكون صديقك.',
 	'ur-accept' => 'قبول',
 	'ur-reject' => 'رفض',
-	'ur-no-requests-message' => 'ليس لديك طلبات صداقة أو عداوة.
-لو أنك تريد المزيد من الأصدقاء، <a href="$1">ادعوهم!</a>',
+	'ur-no-requests-message' => 'ليس لديك طلبات صداقة أو عداوة.',
 	'ur-requests-added-message-foe' => 'أنت أضفت $1 كعدوك.',
 	'ur-requests-added-message-friend' => 'أنت أضفت $1 كصديقك.',
 	'ur-requests-reject-message-friend' => 'أنت رفضت $1 كصديقك.',
@@ -723,9 +708,8 @@ $messages['be-tarask'] = array(
 	'ur-main-page' => 'Галоўная старонка',
 	'ur-your-profile' => 'Ваш профіль',
 	'ur-backlink' => '&lt; Вярнуцца да профілю $1',
-	'ur-relationship-count-foes' => '$1 мае $2 {{PLURAL:$2|ворага|ворагі|ворагаў}}. Калі жадаеце мець болей ворагаў, <a href="$3">запрасіце іх.</a>',
-	'ur-relationship-count-friends' => '$1 мае $2 {{PLURAL:$2|сябра|сябры|сяброў}}. Калі жадаеце мець болей сяброў, <a href="$3">запрасіце іх.</a>',
-	'ur-add-friends' => '  Жадаеце мець болей сяброў? <a href="$1">Запрасіце іх</a>',
+	'ur-relationship-count-foes' => '$1 мае $2 {{PLURAL:$2|ворага|ворагі|ворагаў}}.',
+	'ur-relationship-count-friends' => '$1 мае $2 {{PLURAL:$2|сябра|сябры|сяброў}}.',
 	'ur-add-friend' => 'Дадаць як сябра',
 	'ur-add-foe' => 'Дадаць як ворага',
 	'ur-add-no-user' => 'Удзельнік ня выбраны.
@@ -784,8 +768,7 @@ $messages['be-tarask'] = array(
 	'ur-requests-message-friend' => '<a href=«$1»>$2</a> жадае быць Вашым сябрам.',
 	'ur-accept' => 'Згадзіцца',
 	'ur-reject' => 'Адмовіць',
-	'ur-no-requests-message' => 'Ня маеце запытаў на сяброўства альбо варожасьць.
-Калі Вы жадаеце мець болей сяброў, <a href="$1">запрасіце іх!</a>',
+	'ur-no-requests-message' => 'Ня маеце запытаў на сяброўства альбо варожасьць.',
 	'ur-requests-added-message-foe' => 'Вы дадалі $1 як ворага.',
 	'ur-requests-added-message-friend' => 'Вы дадалі $1 як сябра.',
 	'ur-requests-reject-message-friend' => 'Вы адмовілі $1 у сяброўстве.',
@@ -891,9 +874,8 @@ $messages['bg'] = array(
 	'ur-main-page' => 'Начална страница',
 	'ur-your-profile' => 'Моят профил',
 	'ur-backlink' => '&lt; Обратно към профила на $1',
-	'ur-relationship-count-foes' => '$1 има $2 {{PLURAL:$2|неприятел|неприятели}}. Искате още? <a href="$3">Поканете ги.</a>',
-	'ur-relationship-count-friends' => '$1 има $2 {{PLURAL:$2|приятел|приятели}}. Искате още? <a href="$3">Поканете ги.</a>',
-	'ur-add-friends' => '  Искате повече приятели? <a href="$1">Поканете ги!</a>',
+	'ur-relationship-count-foes' => '$1 има $2 {{PLURAL:$2|неприятел|неприятели}}.',
+	'ur-relationship-count-friends' => '$1 има $2 {{PLURAL:$2|приятел|приятели}}.',
 	'ur-add-friend' => 'Добавяне в приятели',
 	'ur-add-foe' => 'Добавяне в неприятели',
 	'ur-add-no-user' => 'Не е посочен потребител.
@@ -949,8 +931,7 @@ $messages['bg'] = array(
 	'ur-requests-message-friend' => '<a href="$1">$2</a> иска да бъдете приятели.',
 	'ur-accept' => 'Приемане',
 	'ur-reject' => 'Отказване',
-	'ur-no-requests-message' => 'Нямате заявки за приятелства или неприятелства.
-Ако искате да имате повече приятели, можете да ги <a href="$1">поканите!</a>',
+	'ur-no-requests-message' => 'Нямате заявки за приятелства или неприятелства.',
 	'ur-requests-added-message-foe' => 'Добавихте $1 като свой неприятел.',
 	'ur-requests-added-message-friend' => 'Добавихте $1 като свой приятел.',
 	'ur-requests-reject-message-friend' => 'Отказахте на $1 да бъдете приятели.',
@@ -1062,14 +1043,8 @@ $messages['br'] = array(
 	'ur-main-page' => 'Pajenn degemer',
 	'ur-your-profile' => 'Ho profil',
 	'ur-backlink' => '&lt; Distreiñ da brofil $1',
-	'ur-relationship-count-foes' => '$1 en deus $2 {{PLURAL:$2|enebour|enebour}}.
-C\'hoant hoc\'h eus da gaout muioc\'h a enebourien ?
-<a href="$3">Pedit anezho.</a>',
-	'ur-relationship-count-friends' => '$1 en deus $2 {{PLURAL:$2|mignon|mignon}}.
-C\'hoant hoc\'h eus da gaout muioc\'h a vignoned ?
-<a href="$3">Pedit anezho.</a>',
-	'ur-add-friends' => 'Muioc\'h a vignoned ho po ?
-<a href="$1">Pedit anezho</a>',
+	'ur-relationship-count-foes' => '$1 en deus $2 {{PLURAL:$2|enebour|enebour}}.',
+	'ur-relationship-count-friends' => '$1 en deus $2 {{PLURAL:$2|mignon|mignon}}.',
 	'ur-add-friend' => 'Ouzhpennañ evel mignon',
 	'ur-add-foe' => 'Ouzhpennañ evel enebour',
 	'ur-add-no-user' => "N'eus implijer diuzet ebet.
@@ -1128,8 +1103,7 @@ Ho kemenn a raimp pa vo kadarnaet ho koulenn gant $1.",
 	'ur-requests-message-friend' => '<a href="$1">$2</a> a fell dezhañ bezañ ho mignon.',
 	'ur-accept' => 'Asantiñ',
 	'ur-reject' => 'Disteurel',
-	'ur-no-requests-message' => "N'hoc'h eus ket goulennoù mignoniezh pe enebouriezh.
-Ma fell deoc'h kaout muioc'h a vignoned, <a href=\"\$1\">pedit anezho !</a>",
+	'ur-no-requests-message' => "N'hoc'h eus ket goulennoù mignoniezh pe enebouriezh.",
 	'ur-requests-added-message-foe' => "Ouzhpennet hoc'h eus $1 evel enebour.",
 	'ur-requests-added-message-friend' => "Ouzhpennet hoc'h eus $1 evel mignon.",
 	'ur-requests-reject-message-friend' => "Distaolet hoc'h eus $1 evel mignon.",
@@ -1242,14 +1216,8 @@ $messages['bs'] = array(
 	'ur-main-page' => 'Početna stranica',
 	'ur-your-profile' => 'Vaš profil',
 	'ur-backlink' => '&lt; Nazad na profil korisnika $1',
-	'ur-relationship-count-foes' => '$1 ima $2 {{PLURAL:$2|neprijatelja|neprijatelja}}.
-Želite više neprijatelja?
-<a href="$3">Pozovite ih.</a>',
-	'ur-relationship-count-friends' => '$1 ima $2 {{PLURAL:$2|prijatelja|prijatelja}}.
-Želite više prijatelja?
-<a href="$3">Pozovite ih.</a>',
-	'ur-add-friends' => '  Želite još prijatelja?
-<a href="$1">Pozovite ih</a>',
+	'ur-relationship-count-foes' => '$1 ima $2 {{PLURAL:$2|neprijatelja|neprijatelja}}.',
+	'ur-relationship-count-friends' => '$1 ima $2 {{PLURAL:$2|prijatelja|prijatelja}}.',
 	'ur-add-friend' => 'Dodaj kao prijatelja',
 	'ur-add-foe' => 'Dodaj kao neprijatelja',
 	'ur-add-no-user' => 'Nije odabran korisnik.
@@ -1413,9 +1381,8 @@ $messages['de'] = array(
 	'ur-main-page' => 'Hauptseite',
 	'ur-your-profile' => 'Dein Profil',
 	'ur-backlink' => '&lt; Zurück zum Profil von $1',
-	'ur-relationship-count-foes' => '$1 hat {{PLURAL:$2|einen Feind|$2 Feinde}}. Du möchtest mehr Feinde? <a href="$3">Lade sie ein.</a>',
-	'ur-relationship-count-friends' => '$1 hat {{PLURAL:$2|einen Freund|$2 Freunde}}. Du möchtest mehr Freunde? <a href="$3">Lade sie ein.</a>',
-	'ur-add-friends' => ' Du möchtest mehr Freunde haben? <a href="$1">Lade sie ein …</a>',
+	'ur-relationship-count-foes' => '$1 hat {{PLURAL:$2|einen Feind|$2 Feinde}}.',
+	'ur-relationship-count-friends' => '$1 hat {{PLURAL:$2|einen Freund|$2 Freunde}}.',
 	'ur-add-friend' => 'Als Freund hinzufügen',
 	'ur-add-foe' => 'Als Feind hinzufügen',
 	'ur-add-no-user' => 'Kein Benutzer ausgewählt.
@@ -1474,7 +1441,7 @@ Wir werden $1 davon informieren, wenn du seine Anfrage bestätigst.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> möchte dein Freund sein.',
 	'ur-accept' => 'Annehmen',
 	'ur-reject' => 'Ablehnen',
-	'ur-no-requests-message' => 'Du hast keine Freund- oder Feind-Anfrage. Wenn du mehr Freunde haben möchtest, <a href="$1">Lade sie ein …</a>',
+	'ur-no-requests-message' => 'Du hast keine Freund- oder Feind-Anfrage.',
 	'ur-requests-added-message-foe' => 'Du hast $1 zu deiner Feindesliste hinzugefügt.',
 	'ur-requests-added-message-friend' => 'Du hast $1 zu deiner Freundesliste hinzugefügt.',
 	'ur-requests-reject-message-friend' => 'Du hast $1 als deinen Freund abgelehnt.',
@@ -1572,10 +1539,8 @@ und ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.',
 $messages['de-formal'] = array(
 	'ur-already-submitted' => 'Ihre Anfrage wurde gesendet',
 	'ur-your-profile' => 'Ihr Profil',
-	'ur-relationship-count-foes' => '$1 hat {{PLURAL:$2|einen Feind|$2 Feinde}}. Sie möchten mehr Feinde? <a href="$3">Laden Sie sie ein.</a>',
-	'ur-relationship-count-friends' => '$1 hat {{PLURAL:$2|einen Freund|$2 Freunde}}. Sie möchten mehr Freunde? <a href="$3">Laden Sie sie ein.</a>',
-	'ur-add-friends' => '  Sie möchten mehr Freunde haben? 
-<a href="$1">Laden Sie sie ein …</a>',
+	'ur-relationship-count-foes' => '$1 hat {{PLURAL:$2|einen Feind|$2 Feinde}}.',
+	'ur-relationship-count-friends' => '$1 hat {{PLURAL:$2|einen Freund|$2 Freunde}}.',
 	'ur-add-no-user' => 'Kein Benutzer ausgewählt.
 Bitte wählen Sie die Freunde/Feinde durch den richtigen Link.',
 	'ur-remove-relationship-title-foe' => 'Sie möchten $1 aus Ihrer Feindesliste löschen?',
@@ -1617,7 +1582,7 @@ Wir werden $1 davon informieren, wenn Sie seine Anfrage bestätigen.',
 	'ur-add-error-message-not-loggedin-friend' => 'Sie müssen angemeldet sein, um einen Freund hinzuzufügen',
 	'ur-requests-message-foe' => '<a href="$1">$2</a> möchte Ihr Feind sein.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> möchte Ihr Freund sein.',
-	'ur-no-requests-message' => 'Sie haben keine Freund- oder Feindschaftsanfragen. Wenn Sie mehr Freunde haben möchten, <a href="$1">laden Sie sie ein!</a>',
+	'ur-no-requests-message' => 'Sie haben keine Freund- oder Feindschaftsanfragen.',
 	'ur-requests-added-message-foe' => 'Sie haben $1 zu Ihrer Feindesliste hinzugefügt.',
 	'ur-requests-added-message-friend' => 'Sie haben $1 zu Ihrer Freundesliste hinzugefügt.',
 	'ur-requests-reject-message-friend' => 'Sie haben $1 als Ihren Freund abgelehnt.',
@@ -1718,14 +1683,8 @@ $messages['dsb'] = array(
 	'ur-main-page' => 'Głowny bok',
 	'ur-your-profile' => 'Twój profil',
 	'ur-backlink' => '&lt; Slědk k profiloju wužywarja $1',
-	'ur-relationship-count-foes' => '$1 ma $2 {{PLURAL:$2|njepśijaśela|njepśijaśelowu|njepśijaśelow|njepśijaśelow}}.
-Coš dalšnych njepśijaśelow?
-<a href="$3">Pśepšos jich.</a>',
-	'ur-relationship-count-friends' => '$1 ma $2 {{PLURAL:$2|pśijaśela|pśijaśelowu|pśijaśelow|pśijaśelow}}.
-Coš dalšnych pśijaśelow?
-<a href="$3">Pśepšos jich.</a>',
-	'ur-add-friends' => 'Coš dalšnych pśijaśelow?
-<a href="$1">Pśepšos jich</a>',
+	'ur-relationship-count-foes' => '$1 ma $2 {{PLURAL:$2|njepśijaśela|njepśijaśelowu|njepśijaśelow|njepśijaśelow}}.',
+	'ur-relationship-count-friends' => '$1 ma $2 {{PLURAL:$2|pśijaśela|pśijaśelowu|pśijaśelow|pśijaśelow}}.',
 	'ur-add-friend' => 'Ako pśijaśela pśidaś',
 	'ur-add-foe' => 'Ako njepśijaśela pśidaś',
 	'ur-add-no-user' => 'Žeden wužywaŕ wubrany.
@@ -1784,8 +1743,7 @@ Buźomy śi informěrowaś, gaž $1 wobkšuśijo twójo napšašowanje.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> co twój pśijaśel byś.',
 	'ur-accept' => 'Akceptěrowaś',
 	'ur-reject' => 'Wótpokazaś',
-	'ur-no-requests-message' => 'Njamaš žedne pśijaśelske abo njepśijaśelske napšašowanja.
-Jolic coš wěcej pśijaśelow, <a href="$1">pśepros jich!</a>',
+	'ur-no-requests-message' => 'Njamaš žedne pśijaśelske abo njepśijaśelske napšašowanja.',
 	'ur-requests-added-message-foe' => 'Sy pśidał $1 ako swójogo njepśijaśela.',
 	'ur-requests-added-message-friend' => 'Sy pśidał $1 ako swójogo pśijaśela.',
 	'ur-requests-reject-message-friend' => 'Sy wótpokazał $1 ako swójogo pśijaśela.',
@@ -1901,14 +1859,8 @@ $messages['el'] = array(
 	'ur-main-page' => 'Κύρια σελίδα',
 	'ur-your-profile' => 'Το προφίλ σας',
 	'ur-backlink' => '&lt; Πίσω στο προφίλ του $1',
-	'ur-relationship-count-foes' => 'Ο $1 έχει $2 εχθρ{{PLURAL:$2|ό|ούς}}.
-Θέλετε περισσότερους εχθρούς;
-<a href="$3">Προσκαλέστε τους</a>',
-	'ur-relationship-count-friends' => 'Ο $1 έχει $2 φίλ{{PLURAL:$2|ο|ους}}.
-Θέλετε περισσότερους φίλους;
-<a href="$3">Προσκαλέστε τους</a>',
-	'ur-add-friends' => 'Θέλετε περισσότερους φίλους;
-<a href="$1">Προσκαλέστε τους</a>',
+	'ur-relationship-count-foes' => 'Ο $1 έχει $2 εχθρ{{PLURAL:$2|ό|ούς}}.',
+	'ur-relationship-count-friends' => 'Ο $1 έχει $2 φίλ{{PLURAL:$2|ο|ους}}.',
 	'ur-add-friend' => 'Προσθήκη σαν φίλο',
 	'ur-add-foe' => 'Προσθήκη σαν εχθρό',
 	'ur-add-no-user' => 'Κανένας χρήστης δεν έχει επιλεχθεί.
@@ -1938,7 +1890,7 @@ $messages['el'] = array(
 	'ur-add-title-friend' => 'Θέλετε να προσθέσετε τον $1 ως φίλο σας;',
 	'ur-add-message-foe' => 'Πρόκειται να προσθέσετε τον $1 ως εχθρό.
 Θα ειδοποιήσουμε τον $1 για να επιβεβαιώσει την έχθρα σας.',
-	'ur-add-message-friend' => 'Πρόκειται να προσθέσετε τον $1 ως φίλο. 
+	'ur-add-message-friend' => 'Πρόκειται να προσθέσετε τον $1 ως φίλο.
 Θα ειδοποιήσουμε τον $1 για να επιβεβαιώσει την φιλία σας.',
 	'ur-add-button-foe' => 'Προσθήκη ως εχθρού',
 	'ur-add-button-friend' => 'Προσθήκη ως φίλου',
@@ -1957,8 +1909,7 @@ $messages['el'] = array(
 	'ur-requests-message-friend' => 'Ο <a href="$1">$2</a> θέλει να γίνει φίλος σου.',
 	'ur-accept' => 'Αποδοχή',
 	'ur-reject' => 'Απόρριψη',
-	'ur-no-requests-message' => 'Δεν έχετε καμία αίτηση για προσθήκη φίλου ή εχθρού. 
-Αν θέλετε περισσότερους φίλους, <a href="$1">προσκαλέστε τους!</a>',
+	'ur-no-requests-message' => 'Δεν έχετε καμία αίτηση για προσθήκη φίλου ή εχθρού.',
 	'ur-requests-added-message-foe' => 'Δέχτηκες τον $1 σαν εχθρό σου.',
 	'ur-requests-added-message-friend' => 'Δέχτηκες τον $1 σαν φίλο σου.',
 	'ur-requests-reject-message-friend' => 'Αρνήθηκες τον $1 σαν φίλο σου.',
@@ -1984,7 +1935,7 @@ $3
 	'foe_request_subject' => 'Είναι πόλεμος! Ο $1 σας πρόσθεσε ως εχθρό του στο {{SITENAME}}!',
 	'foe_request_body' => 'Γεια $1.
 
-Ο $2 σας πρόσθεσε ως εχθρό στο {{SITENAME}}. Θέλουμε να σιγουρευτούμε ότι εσείς οι δύο είστε πράγματι θανάσιμοι εχθροί ή ότι τουλάχιστον έχετε κάποια διαφωνία. 
+Ο $2 σας πρόσθεσε ως εχθρό στο {{SITENAME}}. Θέλουμε να σιγουρευτούμε ότι εσείς οι δύο είστε πράγματι θανάσιμοι εχθροί ή ότι τουλάχιστον έχετε κάποια διαφωνία.
 
 Κάντε κλικ παρακάτω για να επιβεβαιώσετε τον κακεντρεχή ανταγωνισμό.
 
@@ -2069,8 +2020,7 @@ $messages['eo'] = array(
 	'ur-main-page' => 'Ĉefpaĝo',
 	'ur-your-profile' => 'Via profilo',
 	'ur-backlink' => '&lt; Reiri al profilo de $1',
-	'ur-relationship-count-foes' => '$1 havas $2 {{PLURAL:$2|malamikon|malamikojn}}. Ĉu vi volas pli multaj malamikojn? <a href="$3">Inviti ilin.</a>',
-	'ur-add-friends' => ' Ĉu vi volas pli multajn amikojn? <a href="$1">Inviti ilin</a>',
+	'ur-relationship-count-foes' => '$1 havas $2 {{PLURAL:$2|malamikon|malamikojn}}.',
 	'ur-add-friend' => 'Amiko',
 	'ur-add-foe' => 'Aldoni kiel malamikon',
 	'ur-add-personal-message' => 'Aldoni personan mesaĝon',
@@ -2119,8 +2069,7 @@ Se $1 konfirmus vian peton, vi ricevus pluan retpoŝton.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> volas esti via amiko.',
 	'ur-accept' => 'Akceptu',
 	'ur-reject' => 'Malakceptu',
-	'ur-no-requests-message' => 'Vi havas neniujn petojn de amikeco aŭ malamikeco
-Se vi volas pliajn amikojn, <a href="$1">invitu ilin!</a>',
+	'ur-no-requests-message' => 'Vi havas neniujn petojn de amikeco aŭ malamikeco',
 	'ur-requests-added-message-foe' => 'Vi aldonis $1 kiel vian malamikon.',
 	'ur-requests-added-message-friend' => 'Vi aldonis $1 kiel vian amikon.',
 	'ur-requests-reject-message-friend' => 'Vi malakceptis $1 kiel vian amikon.',
@@ -2153,13 +2102,8 @@ $messages['es'] = array(
 	'ur-main-page' => 'Página principal',
 	'ur-your-profile' => 'Su perfil',
 	'ur-backlink' => "&lt; Regresar a $1's perfil",
-	'ur-relationship-count-foes' => '$1 tiene $2 {{PLURAL:$2|enemigo|enemigos}}.
-Desea más enemigos?
-<a href="$3">Invítelos.</a>',
-	'ur-relationship-count-friends' => '$1 tiene $2 {{PLURAL:$2|amigo|amigos}}.
-Desea más amigos?
-<a href="$3">Invítelos.</a>',
-	'ur-add-friends' => '  Desea más amigos? <a href="$1">Invítelos</a>',
+	'ur-relationship-count-foes' => '$1 tiene $2 {{PLURAL:$2|enemigo|enemigos}}.',
+	'ur-relationship-count-friends' => '$1 tiene $2 {{PLURAL:$2|amigo|amigos}}.',
 	'ur-add-friend' => 'Agregar como amigo',
 	'ur-add-foe' => 'Agregar como enemigo',
 	'ur-add-no-user' => 'Ningún usuario seleccionado.
@@ -2218,8 +2162,7 @@ Le notificaremos cuando $1 confirme su solicitud.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> desea ser su amigo.',
 	'ur-accept' => 'Aceptar',
 	'ur-reject' => 'Rechazar',
-	'ur-no-requests-message' => 'No tiene solicitudes de amigo o enemigo.
-Si usted desea más amigos, <a href="$1">invítelos!</a>',
+	'ur-no-requests-message' => 'No tiene solicitudes de amigo o enemigo.',
 	'ur-requests-added-message-foe' => 'Usted ha agregado a $1 como su enemigo.',
 	'ur-requests-added-message-friend' => 'Usted ha agregado a $1 como su amigo.',
 	'ur-requests-reject-message-friend' => 'Usted ha rechazado a $1 como su amigo.',
@@ -2368,13 +2311,8 @@ $messages['eu'] = array(
 	'ur-main-page' => 'Azala',
 	'ur-your-profile' => 'Zure perfila',
 	'ur-backlink' => '&lt; $1(r)en profilera itzuli',
-	'ur-relationship-count-foes' => '$1(e)k {{PLURAL:$2|etsai $2 du|$2 etsai ditu}}.
-Etsai gehiagorik nahi?
-<a href="$3">Gonbida itzazu.</a>',
-	'ur-relationship-count-friends' => '$1(e)k {{PLURAL:$2|lagun $2 du|$2 lagun ditu}}.
-Lagun gehiagorik nahi?
-<a href="$3">Gonbida itzazu.</a>',
-	'ur-add-friends' => 'Lagun gehiago nahi? <a href="$1">Gonbida itzazu</a>',
+	'ur-relationship-count-foes' => '$1(e)k {{PLURAL:$2|etsai $2 du|$2 etsai ditu}}.',
+	'ur-relationship-count-friends' => '$1(e)k {{PLURAL:$2|lagun $2 du|$2 lagun ditu}}.',
 	'ur-add-friend' => 'Lagun bezala gehitu',
 	'ur-add-foe' => 'Etsai bezala gehitu',
 	'ur-add-personal-message' => 'Mezu pertsonala bidali',
@@ -2402,7 +2340,7 @@ Lagun gehiagorik nahi?
 	'ur-requests-message-friend' => '<a href="$1">$2(e)k</a> zure laguna izan nahi du.',
 	'ur-accept' => 'Onartu',
 	'ur-reject' => 'Deuseztu',
-	'ur-no-requests-message' => 'Ez duzu ez lagun ez etsai eskaerarik. Lagun gehiago izan nahi badituzu, <a href="$1">gonbida itzazu!</a>',
+	'ur-no-requests-message' => 'Ez duzu ez lagun ez etsai eskaerarik.',
 	'ur-requests-added-message-foe' => '$1 zure etsai bezala gehitu duzu.',
 	'ur-requests-added-message-friend' => '$1 zure lagun bezala gehitu duzu.',
 	'ur-title-foe' => '$1(r)en etsai zerrenda',
@@ -2434,9 +2372,8 @@ $messages['fi'] = array(
 	'ur-main-page' => 'Etusivu',
 	'ur-your-profile' => 'Profiilisi',
 	'ur-backlink' => '&lt; Takaisin käyttäjän $1 profiiliin',
-	'ur-relationship-count-foes' => 'Käyttäjällä $1 on $2 {{PLURAL:$2|vihollinen|vihollista}}. Haluatko lisää vihollisia? <a href="$3">Kutsu heidät.</a>',
-	'ur-relationship-count-friends' => 'Käyttäjällä $1 on $2 {{PLURAL:$2|ystävä|ystävää}}. Haluatko lisää ystäviä? <a href="$3">Kutsu heidät.</a>',
-	'ur-add-friends' => ' Haluatko lisää ystäviä? <a href="$1">Kutsu heidät</a>',
+	'ur-relationship-count-foes' => 'Käyttäjällä $1 on $2 {{PLURAL:$2|vihollinen|vihollista}}.',
+	'ur-relationship-count-friends' => 'Käyttäjällä $1 on $2 {{PLURAL:$2|ystävä|ystävää}}.',
 	'ur-add-friend' => 'Lisää ystäväksi',
 	'ur-add-foe' => 'Lisää viholliseksi',
 	'ur-add-no-user' => 'Käyttäjää ei valittu. Teethän ystävyys-/vihollisuuspyynnöt oikean linkin kautta.',
@@ -2494,7 +2431,7 @@ Ilmoitamme sinulle, kun $1 vahvistaa pyyntösi.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> haluaa olla ystäväsi.',
 	'ur-accept' => 'Hyväksy',
 	'ur-reject' => 'Hylkää',
-	'ur-no-requests-message' => 'Sinulla ei ole ystävä- tai vihollispyyntöjä. Jos haluat lisää ystäviä, <a href="$1">kutsu heidät!</a>',
+	'ur-no-requests-message' => 'Sinulla ei ole ystävä- tai vihollispyyntöjä.',
 	'ur-requests-added-message-foe' => 'Olet lisännyt käyttäjän $1 viholliseksesi.',
 	'ur-requests-added-message-friend' => 'Olet lisännyt käyttäjän $1 ystäväksesi.',
 	'ur-requests-reject-message-friend' => 'Olet hylännyt käyttäjän $1 ystävähakemuksen.',
@@ -2611,13 +2548,8 @@ $messages['fr'] = array(
 	'ur-main-page' => 'Accueil',
 	'ur-your-profile' => 'Votre profile',
 	'ur-backlink' => '&lt; retour vers le profil de $1',
-	'ur-relationship-count-foes' => '$1 a $2 ennemi{{PLURAL:$2||s}}.
-En vouloir encore plus ?
-<a href="$3">Inviter les.</a>',
-	'ur-relationship-count-friends' => '$1 a $2 ami{{PLURAL:$2||s}}.
-En vouloir encore plus ?
-<a href="$3">Inviter les.</a>',
-	'ur-add-friends' => 'Vouloir plus d’amis ? <a href="$1">Inviter les</a>.',
+	'ur-relationship-count-foes' => '$1 a $2 ennemi{{PLURAL:$2||s}}.',
+	'ur-relationship-count-friends' => '$1 a $2 ami{{PLURAL:$2||s}}.',
 	'ur-add-friend' => 'Ajouter comme ami',
 	'ur-add-foe' => 'Ajouter comme ennemi',
 	'ur-add-no-user' => 'Aucun utilisateur sélectionné. Veuillez requérir des amis ou des ennemis au travers du lien correct.',
@@ -2675,7 +2607,7 @@ Nous vous notifierons si $1 confirme votre requête.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> veut être votre ami.',
 	'ur-accept' => 'Accepter',
 	'ur-reject' => 'Rejeter',
-	'ur-no-requests-message' => 'Vous n’avez aucune requête en ami ou ennemi. Si vous désirez plus d’amis, <a href="$1">invitez les !</a>',
+	'ur-no-requests-message' => 'Vous n’avez aucune requête en ami ou ennemi.',
 	'ur-requests-added-message-foe' => 'Vous avez ajouté $1 en tant qu’ennemi.',
 	'ur-requests-added-message-friend' => 'Vous avez ajouté $1 en tant qu’ami.',
 	'ur-requests-reject-message-friend' => 'Vous avez refusé $1 en tant qu’ami.',
@@ -2784,14 +2716,8 @@ $messages['frp'] = array(
 	'ur-main-page' => 'Reçua',
 	'ur-your-profile' => 'Voutron profil',
 	'ur-backlink' => '&lt; Retôrn de vers les enformacions de $1',
-	'ur-relationship-count-foes' => '$1 at $2 ènemi{{PLURAL:$2||s}}.
-Nen voléd-vos adés més ?
-<a href="$3">Envitâd-los !</a>',
-	'ur-relationship-count-friends' => '$1 at $2 ami{{PLURAL:$2||s}}.
-Nen voléd-vos adés més ?
-<a href="$3">Envitâd-los !</a>',
-	'ur-add-friends' => 'Voléd-vos més d’amis ?
-<a href="$1">Envitâd-los !</a>',
+	'ur-relationship-count-foes' => '$1 at $2 ènemi{{PLURAL:$2||s}}.',
+	'ur-relationship-count-friends' => '$1 at $2 ami{{PLURAL:$2||s}}.',
 	'ur-add-friend' => 'Apondre coment ami',
 	'ur-add-foe' => 'Apondre coment ènemi',
 	'ur-add-personal-message' => 'Apondre un mèssâjo a sè',
@@ -2847,9 +2773,8 @@ $messages['gl'] = array(
 	'ur-main-page' => 'Portada',
 	'ur-your-profile' => 'O seu perfil',
 	'ur-backlink' => '&lt; Volver ao perfil de $1',
-	'ur-relationship-count-foes' => '$1 ten $2 {{PLURAL:$2|inimigo|inimigos}}. Quere máis inimigos? <a href="$3">Invíteos.</a>',
-	'ur-relationship-count-friends' => '$1 ten $2 {{PLURAL:$2|amigo|amigos}}. Quere máis amigos? <a href="$3">Invíteos.</a>',
-	'ur-add-friends' => '  Quere máis amigos? <a href="$1">Invíteos</a>',
+	'ur-relationship-count-foes' => '$1 ten $2 {{PLURAL:$2|inimigo|inimigos}}.',
+	'ur-relationship-count-friends' => '$1 ten $2 {{PLURAL:$2|amigo|amigos}}.',
 	'ur-add-friend' => 'Engadir como amigo',
 	'ur-add-foe' => 'Engadir como inimigo',
 	'ur-add-no-user' => 'Non foi seleccionado ningún usuario.
@@ -2908,7 +2833,7 @@ Notificarémoslle cando $1 a confirme.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> quere ser o seu amigo.',
 	'ur-accept' => 'Aceptar',
 	'ur-reject' => 'Rexeitar',
-	'ur-no-requests-message' => 'Non ten solicitudes de amigo ou inimigo.  Se quere máis amigos, <a href=$1">invíteos!</a>',
+	'ur-no-requests-message' => 'Non ten solicitudes de amigo ou inimigo.',
 	'ur-requests-added-message-foe' => 'Engadiu a $1 como o seu inimigo.',
 	'ur-requests-added-message-friend' => 'Engadiu a $1 como o seu amigo.',
 	'ur-requests-reject-message-friend' => 'Rexeitou a $1 como o seu amigo.',
@@ -3033,9 +2958,8 @@ $messages['gsw'] = array(
 	'ur-main-page' => 'Hauptsyte',
 	'ur-your-profile' => 'Dyy Profil',
 	'ur-backlink' => '&lt; Zrugg zum Profil vu $1',
-	'ur-relationship-count-foes' => '$1 het {{PLURAL:$2|ei Fynd|$2 Fynd}}. Witt meh Fynd? <a href="$3">Lad si yy.</a>',
-	'ur-relationship-count-friends' => '$1 het {{PLURAL:$2|ei Frynd|$2 Frynde}}. Witt meh Frynd? <a href="$3">Lad si yy.</a>',
-	'ur-add-friends' => 'Witt meh Frynd? <a href="$1">Lad si yy.</a>',
+	'ur-relationship-count-foes' => '$1 het {{PLURAL:$2|ei Fynd|$2 Fynd}}.',
+	'ur-relationship-count-friends' => '$1 het {{PLURAL:$2|ei Frynd|$2 Frynde}}.',
 	'ur-add-friend' => 'As Frynd zuefiege',
 	'ur-add-foe' => 'As Fynd zuefiege',
 	'ur-add-no-user' => 'Kei Benutzer uusgwehlt.
@@ -3094,7 +3018,7 @@ Mir informiere $1, wänn Du syyni Aafrog bstätigsch.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> wet Dyy Frynd syy.',
 	'ur-accept' => 'Aaneh',
 	'ur-reject' => 'Ablähne',
-	'ur-no-requests-message' => 'Du hesch kei Frynd- oder Fynd-Aafrog. Wänn Du meh Frynd witt haa, <a href="$1">Lad si yy!</a>',
+	'ur-no-requests-message' => 'Du hesch kei Frynd- oder Fynd-Aafrog.',
 	'ur-requests-added-message-foe' => 'Du hesch $1 in Dyyni Fyndlischt yygnuh.',
 	'ur-requests-added-message-friend' => 'Du hesch $1 in Dyyni Fryndlischt yynegnuh.',
 	'ur-requests-reject-message-friend' => 'Du hesch $1 as Frynd zrugg gwise.',
@@ -3222,9 +3146,8 @@ $messages['he'] = array(
 	'ur-main-page' => 'עמוד ראשי',
 	'ur-your-profile' => 'הפרופיל שלכם',
 	'ur-backlink' => '&lt; חזרה לפרופיל של $1',
-	'ur-relationship-count-foes' => 'ל־$1 יש {{PLURAL:$2|יריב אחד|$2 יריבים}}. מעוניינים ביריבים נוספים? <a href="$3">הזמינו אותם.</a>',
-	'ur-relationship-count-friends' => 'ל־$1 יש {{PLURAL:$2|חבר אחד|$2 חברים}}. מעוניינים בחברים נוספים? <a href="$3">הזמינו אותם.</a>',
-	'ur-add-friends' => '  מעוניינים בחברים נוספים? <a href="$1">הזמינו אותם</a>',
+	'ur-relationship-count-foes' => 'ל־$1 יש {{PLURAL:$2|יריב אחד|$2 יריבים}}. מעוניי',
+	'ur-relationship-count-friends' => 'ל־$1 יש {{PLURAL:$2|חבר אחד|$2 חברים}}. מעוניינ',
 	'ur-add-friend' => 'הוספה כחבר',
 	'ur-add-foe' => 'הוספה כיריב',
 	'ur-add-no-user' => 'לא נבחרו משתמשים.
@@ -3283,8 +3206,7 @@ $messages['he'] = array(
 	'ur-requests-message-friend' => '<a href="$1">$2</a> מעונין להיות חברכם.',
 	'ur-accept' => 'אישור',
 	'ur-reject' => 'דחייה',
-	'ur-no-requests-message' => 'אין לכם בקשות חברות או יריבות.
-אם ברצונכם בחברים נוספים, <a href="$1">הזמינו אותם!</a>',
+	'ur-no-requests-message' => 'אין לכם בקשות חברות או יריבות.',
 	'ur-requests-added-message-foe' => 'הוספתם את $1 כיריבכם.',
 	'ur-requests-added-message-friend' => 'הוספתם את $1 כחברכם.',
 	'ur-requests-reject-message-friend' => 'דחיתם את בקשת $1 להיות חברכם.',
@@ -3422,14 +3344,8 @@ $messages['hsb'] = array(
 	'ur-main-page' => 'Hłowna strona',
 	'ur-your-profile' => 'Twój profil',
 	'ur-backlink' => '&lt; Wróćo k profilej wužiwarja $1',
-	'ur-relationship-count-foes' => '$1 ma $2 {{PLURAL:$2|njepřećela|njepřećelow|njepřećelow|njepřećelow}}.
-Chceš dalšich njepřećelow?
-<a href="$3">Přeproš jich.</a>',
-	'ur-relationship-count-friends' => '$1 ma $2 {{PLURAL:$2|přećela|přećelow|přećelow|přećelow}}.
-Coš dalšich přećelow?
-<a href="$3">Přeproš jich.</a>',
-	'ur-add-friends' => 'Coš dalšich přećelow?
-<a href="$1">Přeproš jich</a>',
+	'ur-relationship-count-foes' => '$1 ma $2 {{PLURAL:$2|njepřećela|njepřećelow|njepřećelow|njepřećelow}}.',
+	'ur-relationship-count-friends' => '$1 ma $2 {{PLURAL:$2|přećela|přećelow|přećelow|přećelow}}.',
 	'ur-add-friend' => 'Jako přećela přidać',
 	'ur-add-foe' => 'Jako njepřećela přidać',
 	'ur-add-no-user' => 'Žadyn wužiwar wubrany.
@@ -3488,8 +3404,7 @@ Budźemy će informować, hdyž $1 twoje naprašowanje wobkruća.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> chce twój přećel być.',
 	'ur-accept' => 'Akceptować',
 	'ur-reject' => 'Wotpokazać',
-	'ur-no-requests-message' => 'Nimaš žane přećelske abo njepřećelske naprašowanja.
-Jeli chceš wjace přećelow, <a href="$1">přeproš jich!</a>',
+	'ur-no-requests-message' => 'Nimaš žane přećelske abo njepřećelske naprašowanja.',
 	'ur-requests-added-message-foe' => 'Sy $1 jako swojeho njepřećela přidał.',
 	'ur-requests-added-message-friend' => 'Sy $1 jako swojeho přećela přidał.',
 	'ur-requests-reject-message-friend' => 'Sy $1 jako swojeho přećela wotpokazał.',
@@ -3604,14 +3519,8 @@ $messages['hu'] = array(
 	'ur-main-page' => 'Kezdőlap',
 	'ur-your-profile' => 'A profilod',
 	'ur-backlink' => '&lt; vissza $1 profiljára',
-	'ur-relationship-count-foes' => '$1 felhasználónak {{PLURAL:$2|egy|$2}} ellensége van.
-Szeretnél több ellenséget?
-<a href="$3">Hívd meg őket.</a>',
-	'ur-relationship-count-friends' => '$1 felhasználónak {{PLURAL:$2|egy|$2}} barátja van.
-Szeretnél több barátot?
-<a href="$3">Hívd meg őket.</a>',
-	'ur-add-friends' => '  Szeretnél több barátot?
-<a href="$1">Hívd meg őket</a>',
+	'ur-relationship-count-foes' => '$1 felhasználónak {{PLURAL:$2|egy|$2}} ellensége van.',
+	'ur-relationship-count-friends' => '$1 felhasználónak {{PLURAL:$2|egy|$2}} barátja van.',
 	'ur-add-friend' => 'Hozzáadás barátként',
 	'ur-add-foe' => 'Hozzáadás ellenségként',
 	'ur-add-no-user' => 'Nincs felhasználó kiválasztva.
@@ -3670,8 +3579,7 @@ Ha $1 megerősíti a jelölést, értesítünk téged e-mailben.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> a barátod szeretne lenni.',
 	'ur-accept' => 'Elfogadás',
 	'ur-reject' => 'Visszautasítás',
-	'ur-no-requests-message' => 'Nincsenek függő jelöléseid.
-Ha több barátot szeretnél, <a href="$1">hívd meg őket!</a>',
+	'ur-no-requests-message' => 'Nincsenek függő jelöléseid.',
 	'ur-requests-added-message-foe' => '$1 felvéve az ellenségeid közé.',
 	'ur-requests-added-message-friend' => '$1 felhasználót hozzáadtad a barátaidhoz.',
 	'ur-requests-reject-message-friend' => 'Elutasítottad $1 felhasználó felvételét a barátaid közé.',
@@ -3775,9 +3683,8 @@ $messages['ia'] = array(
 	'ur-main-page' => 'Pagina principal',
 	'ur-your-profile' => 'Tu profilo',
 	'ur-backlink' => '&lt; Retornar al profilo de $1',
-	'ur-relationship-count-foes' => '$1 ha $2 {{PLURAL:$2|inimico|inimicos}}. Vole plus inimicos? <a href="$3">Invita les.</a>',
-	'ur-relationship-count-friends' => '$1 ha $2 {{PLURAL:$2|amico|amicos}}. Vole plus amicos? <a href="$3">Invita les.</a>',
-	'ur-add-friends' => ' Vole plus amicos? <a href="$1">Invita les</a>',
+	'ur-relationship-count-foes' => '$1 ha $2 {{PLURAL:$2|inimico|inimicos}}.',
+	'ur-relationship-count-friends' => '$1 ha $2 {{PLURAL:$2|amico|amicos}}.',
 	'ur-add-friend' => 'Adder como amico',
 	'ur-add-foe' => 'Adder como inimico',
 	'ur-add-no-user' => 'Nulle usator seligite.
@@ -3836,8 +3743,7 @@ Nos te notificara quando $1 confirma tu requesta.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> vole esser tu amico.',
 	'ur-accept' => 'Acceptar',
 	'ur-reject' => 'Rejectar',
-	'ur-no-requests-message' => 'Tu non ha requestas de amico o inimico.
-Si tu vole plus amicos, <a href="$1">invita les!</a>',
+	'ur-no-requests-message' => 'Tu non ha requestas de amico o inimico.',
 	'ur-requests-added-message-foe' => 'Tu ha addite $1 como inimico.',
 	'ur-requests-added-message-friend' => 'Tu ha addite $1 como amico.',
 	'ur-requests-reject-message-friend' => 'Tu ha rejectate $1 como amico.',
@@ -3952,14 +3858,8 @@ $messages['id'] = array(
 	'ur-main-page' => 'Halaman utama',
 	'ur-your-profile' => 'Profil Anda',
 	'ur-backlink' => '&lt; Kembali ke profile $1',
-	'ur-relationship-count-foes' => '$1 memiliki $2 {{PLURAL:$2|musuh|musuh}}.
-Ingin lebih banyak musuh?
-<a href="$3">Undang mereka.</a>',
-	'ur-relationship-count-friends' => '$1 memiliki $2 {{PLURAL:$2|teman|teman}}.
-Ingin lebih banyak teman?
-<a href="$3">Undang mereka.</a>',
-	'ur-add-friends' => '  Ingin lebih banyak teman?
-<a href="$1">Undang mereka</a>',
+	'ur-relationship-count-foes' => '$1 memiliki $2 {{PLURAL:$2|musuh|musuh}}.',
+	'ur-relationship-count-friends' => '$1 memiliki $2 {{PLURAL:$2|teman|teman}}.',
 	'ur-add-friend' => 'Tambahkan teman',
 	'ur-add-foe' => 'Tambahkan musuh',
 	'ur-add-no-user' => 'Tidak ada pengguna yang dipilih.
@@ -4018,8 +3918,7 @@ Kami akan memberitahu Anda apabila $1 mengkonfirmasi permintaan Anda.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> ingin menjadi teman Anda.',
 	'ur-accept' => 'Terima',
 	'ur-reject' => 'Tolak',
-	'ur-no-requests-message' => 'Anda tidak memiliki permintaan pertemanan atau permusuhan.
-Apabila Anda ingin lebih banyak teman, <a href="$1">undang mereka!</a>',
+	'ur-no-requests-message' => 'Anda tidak memiliki permintaan pertemanan atau permusuhan.',
 	'ur-requests-added-message-foe' => 'Anda telah menambahkan $1 sebagai musuh Anda.',
 	'ur-requests-added-message-friend' => 'Anda telah menambahkan $1 sebagai teman Anda.',
 	'ur-requests-reject-message-friend' => 'Anda telah menolak $1 sebagai teman Anda.',
@@ -4164,9 +4063,8 @@ $messages['ja'] = array(
 	'ur-main-page' => 'メインページ',
 	'ur-your-profile' => 'あなたのプロファイル',
 	'ur-backlink' => '&lt; $1のプロファイルに戻る',
-	'ur-relationship-count-foes' => '$1には$2人の{{PLURAL:$2|敵}}がいます。敵を増やしますか？<a href="$3">招待する。</a>',
-	'ur-relationship-count-friends' => '$1には$2人の{{PLURAL:$2|友人}}がいます。友人を増やしますか？<a href="$3">招待する。</a>',
-	'ur-add-friends' => '友人を増やしますか？<a href="$1">招待する。</a>',
+	'ur-relationship-count-foes' => '$1には$2人の{{PLURAL:$2|敵}}がいます。',
+	'ur-relationship-count-friends' => '$1には$2人の{{PLURAL:$2|友人}}がいます。',
 	'ur-add-friend' => '友人として追加',
 	'ur-add-foe' => '敵として追加',
 	'ur-add-no-user' => '利用者が選択されていません。正しいリンクを使って友人/敵申請を行ってください。',
@@ -4218,7 +4116,7 @@ $messages['ja'] = array(
 	'ur-requests-message-friend' => '<a href="$1">$2</a> があなたの友人になりたがっています。',
 	'ur-accept' => '承認',
 	'ur-reject' => '却下',
-	'ur-no-requests-message' => '申請中の敵や友人はありません。友人を増やしたければ<a href="$1">招待してください！</a>',
+	'ur-no-requests-message' => '申請中の敵や友人はありません。',
 	'ur-requests-added-message-foe' => '$1を敵に追加しました。',
 	'ur-requests-added-message-friend' => '$1を友人に追加しました。',
 	'ur-requests-reject-message-friend' => '$1の友人申請を却下しました。',
@@ -4315,8 +4213,7 @@ $messages['jv'] = array(
 	'ur-add-error-message-pending-request-title' => 'Tulung sabar sadélok.',
 	'ur-accept' => 'Tampa',
 	'ur-reject' => 'Tulak',
-	'ur-no-requests-message' => 'Panjenengan ora duwé panyuwunan kanca utawa mungsuh.
-Yèn panjenengan péngin kanca luwih akèh, <a href="$1">ayo padha diundhang!</a>',
+	'ur-no-requests-message' => 'Panjenengan ora duwé panyuwunan kanca utawa mungsuh.',
 	'foe_request_subject' => 'Saiki perang! $1 wis nambahaké panjenengan minangka mungsuh ing {{SITENAME}}!',
 	'friend_removed_subject' => 'Adhuh! $1 njabel status panjenengan minangka kanca ing {{SITENAME}}!',
 	'foe_removed_subject' => 'Horé! $1 wis njabel status panjenengan minangka mungsuh ing {{SITENAME}}!',
@@ -4339,7 +4236,6 @@ $messages['km'] = array(
 	'ur-backlink' => '&lt; ត្រឡប់​ទៅ ព័ត៌មានផ្ទាល់ខ្លួន របស់ $1',
 	'ur-relationship-count-foes' => '$1 មាន $2 {{PLURAL:$2|បច្ចាមិត្ត|បច្ចាមិត្ត}}​។ ត្រូវការ​បច្ចាមិត្ត​បន្ថែម​ឬ​? <a href="$3">អញ្ជើញ​ពួកគេ​។</a>',
 	'ur-relationship-count-friends' => '$1 មាន $2 {{PLURAL:$2|មិត្តភ័ក្ដិ|មិត្តភ័ក្ដិ}}​។ ត្រូវការ​មិត្តភ័ក្ដិ​បន្ថែម​ឬ​? <a href="$3">អញ្ជើញ​ពួកគេ​។</a>',
-	'ur-add-friends' => 'ត្រូវការ​មិត្តភ័ក្ដិ​បន្ថែម​ឬ? <a href="$1">អញ្ជើញ​ពួកគេ</a>',
 	'ur-add-friend' => 'បន្ថែម​ជា​មិត្តភ័ក្ដិ',
 	'ur-add-foe' => 'បន្ថែម​ជា​បច្ចាមិត្ត',
 	'ur-add-no-user' => 'គ្មាន​អ្នកប្រើប្រាស់​ត្រូវ​បាន​ជ្រើស​ទេ​។
@@ -4391,9 +4287,7 @@ $messages['km'] = array(
 	'ur-requests-message-friend' => '<a href="$1">$2</a> ចង់​ក្លាយជា​មិត្តភ័ក្ដិ​របស់​អ្នក​។',
 	'ur-accept' => 'ព្រមទទួល',
 	'ur-reject' => 'ច្រានចោល',
-	'ur-no-requests-message' => 'អ្នក​មិនមាន​សំណើសុំ​ជា​មិត្តភ័ក្ដិ ឬ បច្ចាមិត្ត​ទេ​។
-
-ប្រសិនបើ អ្នក​ត្រូវការ​មិត្តភ័ក្ដិ​បន្ថែម​ទៀត, <a href="$1">ចូរ​អញ្ជើញ​ពួកគេ!</a>',
+	'ur-no-requests-message' => 'អ្នក​មិនមាន​សំណើសុំ​ជា​មិត្តភ័ក្ដិ ឬ បច្ចាមិត្ត​ទេ​។',
 	'ur-requests-added-message-foe' => 'អ្នក​បាន​បន្ថែម $1 ជា​បច្ចាមិត្ត​របស់​អ្នក​ហើយ​។',
 	'ur-requests-added-message-friend' => 'អ្នក​បាន​បន្ថែម $1 ជា​មិត្តភ័ក្ដិ​របស់​អ្នក​ហើយ​។',
 	'ur-requests-reject-message-friend' => 'អ្នក​បាន​ច្រានចោល $1 ជា​មិត្តភ័ក្ដិ​របស់​អ្នក​ហើយ​។',
@@ -4440,14 +4334,8 @@ $messages['ksh'] = array(
 	'ur-main-page' => 'Houpsigg',
 	'ur-your-profile' => 'Ding Profil',
 	'ur-backlink' => '← zerök op däm $1 sing Profil',
-	'ur-relationship-count-foes' => 'Dä Metmaacher „$1“ hät {{PLURAL:$2|eine Feind|$2 Feinde|keine Feind}}.
-Wells mieh Feinde?
-<a href="$3">Donn se ennlade!.</a>',
-	'ur-relationship-count-friends' => 'Dä Metmaacher „$1“ hät {{PLURAL:$2|eine Frünnd|$2 Frünnde|keine Frünnd}}.
-Wells mieh Frünnde?
-<a href="$3">Donn se ennlade!.</a>',
-	'ur-add-friends' => ' De wells mieh Frünnde han?
-<a href="$1">Don se enlade!</a>',
+	'ur-relationship-count-foes' => 'Dä Metmaacher „$1“ hät {{PLURAL:$2|eine Feind|$2 Feinde|keine Feind}}.',
+	'ur-relationship-count-friends' => 'Dä Metmaacher „$1“ hät {{PLURAL:$2|eine Frünnd|$2 Frünnde|keine Frünnd}}.',
 	'ur-add-friend' => 'Als Dinge Frünnd endraare',
 	'ur-add-foe' => 'Als Dinge Feind endraare',
 	'ur-add-no-user' => 'Keine Metmaacher usjesoht.
@@ -4506,8 +4394,7 @@ Do kreß Bescheid, wann hä udder it se bestätesch.',
 	'ur-requests-message-friend' => 'Dä Metmaacher <a href="$1">$2</a> well Dinge Fründ sinn.',
 	'ur-accept' => 'Aannemme',
 	'ur-reject' => 'Afflehne',
-	'ur-no-requests-message' => 'Do häß kein Frunndschaffs- udder Feintschaffts-Aanfrore.
-Wann de mieh dofun hann wells, <a href="$1">donn se einlade!</a>',
+	'ur-no-requests-message' => 'Do häß kein Frunndschaffs- udder Feintschaffts-Aanfrore.',
 	'ur-requests-added-message-foe' => 'Do has dä Metmaacher „$1“ als Dinge Feind.',
 	'ur-requests-added-message-friend' => 'Do has dä Metmaacher „$1“ als Dinge Frünnd.',
 	'ur-requests-reject-message-friend' => 'Do has dä Metmaacher „$1“ als Dinge Frünnd affjelehnt.',
@@ -4537,7 +4424,7 @@ De e-mail jescheck kriß.',
 	'foe_request_subject' => 'Kreesch {{GRAMMAR:em|{{SITENAME}}}} — dä Metmaacher „$1“ hät Desch als ene Feind ennjedraare.',
 	'foe_request_body' => 'Hallo $1,
 
-Dä Metmaacher $2 {{GRAMMAR:em|{{SITENAME}}}} 
+Dä Metmaacher $2 {{GRAMMAR:em|{{SITENAME}}}}
 hät Desch als ene Feind enjedrare.
 Mer wolle jeweß sin, dat Ühr zwei en der Tat Üsch net jröhn
 un Dutfeinde sitt udder winnischstens aam Strigge.
@@ -4651,9 +4538,8 @@ $messages['lb'] = array(
 	'ur-main-page' => 'Haaptsäit',
 	'ur-your-profile' => 'Äre Profil',
 	'ur-backlink' => '&lt; Zréck op de Profil vum $1',
-	'ur-relationship-count-foes' => '$1 huet $2 {{PLURAL:$2|Géigner|Géigner}}. Wëllt Dir méi Géigner? a href="$3">Invitéiert se.</a>',
-	'ur-relationship-count-friends' => '$1 huet $2 {{PLURAL:$2|Frënd|Frënn}}. Wëllt Dir méi Frënn? <a href="$3">Invitéiert se.</a>',
-	'ur-add-friends' => ' Wëllt Dir méi Frënn? <a href="$1">Invitéiert se</a>',
+	'ur-relationship-count-foes' => '$1 huet $2 {{PLURAL:$2|Géigner|Géigner}}.',
+	'ur-relationship-count-friends' => '$1 huet $2 {{PLURAL:$2|Frënd|Frënn}}.',
 	'ur-add-friend' => 'Als Frënd derbäisetzen',
 	'ur-add-foe' => 'Als Géigner derbäisetzen',
 	'ur-add-no-user' => 'Kee Benotzer ausgewielt.
@@ -4712,8 +4598,7 @@ Mir informéieren Iech datt mir Iech informéiere wann de Benotzer $1 Är Ufro c
 	'ur-requests-message-friend' => '<a href="$1">$2</a> wëllt Äre Frënd sinn.',
 	'ur-accept' => 'Akzeptéieren',
 	'ur-reject' => 'Refuséieren',
-	'ur-no-requests-message' => 'Dir hutt keng Ufroen fir Frënn oder Géigner.
-Wann Dir méi Frënn wellt <a href="$1">invitéiert se!</a>',
+	'ur-no-requests-message' => 'Dir hutt keng Ufroen fir Frënn oder Géigner.',
 	'ur-requests-added-message-foe' => 'Dir hutt de Benotzer $1 als Äre Géigner derbäigesat.',
 	'ur-requests-added-message-friend' => 'Dir hutt de Benotzer $1 als Frënd derbäigesat.',
 	'ur-requests-reject-message-friend' => 'Dir hutt de Benotzer $1 als Äre Frënd refuséiert.',
@@ -4764,14 +4649,8 @@ $messages['mk'] = array(
 	'ur-main-page' => 'Главна страница',
 	'ur-your-profile' => 'Вашиот профил',
 	'ur-backlink' => '&lt; Назад кон профилот на $1',
-	'ur-relationship-count-foes' => '$1 има $2 {{PLURAL:$2|непријател|непријатели}}.
-Сакате уште непријатели?
-<a href="$3">Поканете ги.</a>',
-	'ur-relationship-count-friends' => '$1 има $2 {{PLURAL:$2|пријател|пријатели}}.
-Сакате уште пријатели?
-<a href="$3">Поканете ги.</a>',
-	'ur-add-friends' => '  Сакате уште пријатели?
-<a href="$1">Поканете ги</a>',
+	'ur-relationship-count-foes' => '$1 има $2 {{PLURAL:$2|непријател|непријатели}}.',
+	'ur-relationship-count-friends' => '$1 има $2 {{PLURAL:$2|пријател|пријатели}}.',
 	'ur-add-friend' => 'Додај во пријатели',
 	'ur-add-foe' => 'Додај во непријатели',
 	'ur-add-no-user' => 'Нема избрано корисник.
@@ -4830,8 +4709,7 @@ $messages['mk'] = array(
 	'ur-requests-message-friend' => '<a href="$1">$2</a> сака да бидете пријатели.',
 	'ur-accept' => 'Прифати',
 	'ur-reject' => 'Одбиј',
-	'ur-no-requests-message' => 'Немате барања за пријателство или непријателство.
-Ако сакате уште пријатели, <a href="$1">поканете ги!</a>',
+	'ur-no-requests-message' => 'Немате барања за пријателство или непријателство.',
 	'ur-requests-added-message-foe' => 'Го додадовте $1 како непријател.',
 	'ur-requests-added-message-friend' => 'Го додадовте $1 како пријател.',
 	'ur-requests-reject-message-friend' => 'Одбивте да бидете пријатели со $1.',
@@ -4937,7 +4815,6 @@ $2 ве отстрани од списокот на непријатели на 
  */
 $messages['ml'] = array(
 	'ur-main-page' => 'പ്രധാന താൾ',
-	'ur-add-friends' => 'കൂടുതൽ സുഹൃത്തുക്കളെ വേണോ? <a href="$1">ക്ഷണിക്കുക</a>',
 	'ur-add-friend' => 'സുഹൃത്തായി ചേർക്കുക',
 	'ur-previous' => 'മുൻപുള്ളത്',
 	'ur-next' => 'അടുത്തത്',
@@ -4977,7 +4854,6 @@ $messages['mr'] = array(
 	'ur-main-page' => 'मुखपृष्ठ',
 	'ur-your-profile' => 'तुमचे प्रोफाइल',
 	'ur-backlink' => '&lt; $1च्या प्रोफाइलकडे परत',
-	'ur-add-friends' => 'अजून मित्र पाहिजेत? <a href="$1">त्यांना बोलवा</a>',
 	'ur-add-friend' => 'मित्र म्हणून वाढवा',
 	'ur-add-foe' => 'शत्रू म्हणून वाढवा',
 	'ur-add-no-user' => 'सदस्य निवडलेला नाही.
@@ -4998,8 +4874,7 @@ $messages['mr'] = array(
 	'ur-requests-title' => 'नाते मागण्या',
 	'ur-accept' => 'स्विकारा',
 	'ur-reject' => 'अव्हेर',
-	'ur-no-requests-message' => 'तुम्हाला एकही शत्रू अथवा मित्र मागणी आलेली नाही.
-जर तुम्हाला अजून मित्र हवे असतील, तर <a href="$1">त्यांना बोलवा!</a>',
+	'ur-no-requests-message' => 'तुम्हाला एकही शत्रू अथवा मित्र मागणी आलेली नाही.',
 	'ur-title-foe' => '$1ची शत्रू यादी',
 	'ur-title-friend' => '$1ची मित्र यादी',
 	'friend_request_subject' => '$1 ने {{SITENAME}} वर तुम्हाला मित्र म्हणून वाढविलेले आहे!',
@@ -5169,13 +5044,8 @@ $messages['nl'] = array(
 	'ur-main-page' => 'Hoofdpagina',
 	'ur-your-profile' => 'Uw profiel',
 	'ur-backlink' => "&lt; Terug naar $1's profiel",
-	'ur-relationship-count-foes' => '$1 heeft $2 {{PLURAL:$2|tegenstander|tegenstanders}}.
-Behoefte aan meer tegenstanders?
-<a href="$3">Nodig ze uit</a>.',
-	'ur-relationship-count-friends' => '$1 heeft $2 {{PLURAL:$2|vriend|vrienden}}.
-Behoefte aan meer vrienden?
-<a href="$3">Nodig ze uit</a>.',
-	'ur-add-friends' => 'Wilt u meer vrienden? <a href="$1">Nodig ze uit</a>',
+	'ur-relationship-count-foes' => '$1 heeft $2 {{PLURAL:$2|tegenstander|tegenstanders}}.',
+	'ur-relationship-count-friends' => '$1 heeft $2 {{PLURAL:$2|vriend|vrienden}}.',
 	'ur-add-friend' => 'Als vriend toevoegen',
 	'ur-add-foe' => 'Als tegenstander toevoegen',
 	'ur-add-no-user' => 'Er is geen gebruiker geselecteerd.
@@ -5236,7 +5106,7 @@ U wordt op de hoogte gesteld als $1 uw verzoek bevestigt.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> wil uw vriend zijn.',
 	'ur-accept' => 'Aanvaarden',
 	'ur-reject' => 'Weigeren',
-	'ur-no-requests-message' => 'U hebt geen uitstaande verzoeken voor vrienden of tegenstanders. Als u meer vrienden wilt, <a href="$1">nodig ze dan uit!</a>',
+	'ur-no-requests-message' => 'U hebt geen uitstaande verzoeken voor vrienden of tegenstanders.',
 	'ur-requests-added-message-foe' => 'U hebt $1 toegevoegd als tegenstander.',
 	'ur-requests-added-message-friend' => 'U hebt $1 toegevoegd als uw vriend.',
 	'ur-requests-reject-message-friend' => 'U hebt $1 geweigerd als vriend.',
@@ -5343,9 +5213,8 @@ $messages['nn'] = array(
 	'ur-main-page' => 'Hovudside',
 	'ur-your-profile' => 'Profilen din',
 	'ur-backlink' => '&lt; Attende til profilen til $1',
-	'ur-relationship-count-foes' => '$1 har $2 {{PLURAL:$2|fiende|fiendar}}. Ynskjer du fleire fiendar? <a href="$3">Inviter dei.</a>',
-	'ur-relationship-count-friends' => '$1 har $2 {{PLURAL:$2|venn|venner}}. Ynskjer du fleire venner? <a href="$3">Inviter dei.</a>',
-	'ur-add-friends' => ' Ynskjer du fleire venner? <a href="$1">Inviter dei</a>',
+	'ur-relationship-count-foes' => '$1 har $2 {{PLURAL:$2|fiende|fiendar}}.',
+	'ur-relationship-count-friends' => '$1 har $2 {{PLURAL:$2|venn|venner}}.',
 	'ur-add-friend' => 'Legg til som venn',
 	'ur-add-foe' => 'Legg til som fiende',
 	'ur-add-no-user' => 'Ingen brukar valt.
@@ -5404,8 +5273,7 @@ Me vil gje deg ei melding når $1 stadfestar førespurnaden din.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> ynskjer å bli venn med deg.',
 	'ur-accept' => 'Godta',
 	'ur-reject' => 'Avslå',
-	'ur-no-requests-message' => 'Du har ingen førespurnader om korkje vennskap eller fiendskap.
-Om du vil ha fleire venner, <a href="$1">inviter dei</a>!',
+	'ur-no-requests-message' => 'Du har ingen førespurnader om korkje vennskap eller fiendskap.',
 	'ur-requests-added-message-foe' => 'Du har lagt til $1 som fiende.',
 	'ur-requests-added-message-friend' => 'Du har lagt til $1 som venn.',
 	'ur-requests-reject-message-friend' => 'Du avslo førespurnaden om vennskap frå $1.',
@@ -5509,9 +5377,8 @@ $messages['nb'] = array(
 	'ur-main-page' => 'Hovedside',
 	'ur-your-profile' => 'Profilen din',
 	'ur-backlink' => '&lt; Tilbake til profilen til $1',
-	'ur-relationship-count-foes' => '$1 har $2 {{PLURAL:$2|fiende|fiender}}. Flere fiender? <a href="$3">Inviter dem.</a>',
-	'ur-relationship-count-friends' => '$1 har $2 {{PLURAL:$2|venn|venner}}. Flere venner? <a href="$3">Inviter dem.</a>',
-	'ur-add-friends' => 'Vil du ha flere venner? <a href="$1">Inviter dem</a>',
+	'ur-relationship-count-foes' => '$1 har $2 {{PLURAL:$2|fiende|fiender}}.',
+	'ur-relationship-count-friends' => '$1 har $2 {{PLURAL:$2|venn|venner}}.',
 	'ur-add-friend' => 'Legg til som venn',
 	'ur-add-foe' => 'Legg til som fiende',
 	'ur-add-no-user' => 'Ingen bruker valgt. Vennligst legg til venner eller fiender med den korrekte lenken.',
@@ -5569,7 +5436,7 @@ Vi vil gi deg en melding når $1 bekrefter forespørselen din.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> ønsker å bli venn med deg.',
 	'ur-accept' => 'Godta',
 	'ur-reject' => 'Avvis',
-	'ur-no-requests-message' => 'Du har ingen venne- eller fiendeforespørsler. Om du vil ha flere venner, <a href="$1">inviter dem</a>!',
+	'ur-no-requests-message' => 'Du har ingen venne- eller fiendeforespørsler.',
 	'ur-requests-added-message-foe' => 'Du har lagt til $1 som fiende.',
 	'ur-requests-added-message-friend' => 'Du har lagt til $1 som venn.',
 	'ur-requests-reject-message-friend' => 'Du har avvist venneforespørselen fra $1.',
@@ -5673,9 +5540,8 @@ $messages['oc'] = array(
 	'ur-main-page' => 'Acuèlh',
 	'ur-your-profile' => 'Vòstre perfil',
 	'ur-backlink' => '&lt; retorn cap al perfil de $1',
-	'ur-relationship-count-foes' => '$1 a $2 {{PLURAL:$2|enemic|enemics}}. Ne volètz encara mai ? <a href="$3">Convidatz-los.</a>',
-	'ur-relationship-count-friends' => '$1 a $2 {{PLURAL:$2|amic|amics}}. Ne volètz encara mai ? <a href="$3">Convidatz-los.</a>',
-	'ur-add-friends' => 'Volètz mai d’amics ? <a href="$1">Invitatz-los !</a>.',
+	'ur-relationship-count-foes' => '$1 a $2 {{PLURAL:$2|enemic|enemics}}.',
+	'ur-relationship-count-friends' => '$1 a $2 {{PLURAL:$2|amic|amics}}.',
 	'ur-add-friend' => 'Apondre coma amic',
 	'ur-add-foe' => 'Apondre coma enemic',
 	'ur-add-no-user' => "Cap d'utilizaire pas seleccionat. Requerissètz d'amics o d'enemics a travèrs del ligam corrècte.",
@@ -5733,7 +5599,7 @@ Vos notificarem se $1 confirma vòstra requèsta.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> vòl èsser vòstre amic.',
 	'ur-accept' => 'Acceptar',
 	'ur-reject' => 'Regetar',
-	'ur-no-requests-message' => 'Avètz pas cap de requèsta en amic o enemic. Se desiratz mai d\'amics, <a href="$1">invitatz-los !</a>',
+	'ur-no-requests-message' => 'Avètz pas cap de requèsta en amic o enemic.',
 	'ur-requests-added-message-foe' => 'Avètz apondut $1 a la lista de vòstres enemics.',
 	'ur-requests-added-message-friend' => 'Avètz apondut $1 a la lista de vòstres amics.',
 	'ur-requests-reject-message-friend' => 'Avètz refusat $1 en tant qu’amic.',
@@ -5885,13 +5751,8 @@ $messages['pl'] = array(
 	'ur-main-page' => 'Strona główna',
 	'ur-your-profile' => 'Twój profil',
 	'ur-backlink' => '&lt; Powrót do profilu $1',
-	'ur-relationship-count-foes' => '$1 ma $2 {{PLURAL:$2|wroga|wrogów}}.
-Chcesz mieć więcej wrogów?
-<a href="$3">Zaproś ich.</a>',
-	'ur-relationship-count-friends' => '$1 ma $2 {{PLURAL:$2|znajomego|znajomych}}.
-Chcesz mieć więcej znajomych?
-<a href="$3">Zaproś ich.</a>',
-	'ur-add-friends' => '  Chcesz mieć więcej przyjaciół? <a href="$1">Zaproś ich</a>',
+	'ur-relationship-count-foes' => '$1 ma $2 {{PLURAL:$2|wroga|wrogów}}.',
+	'ur-relationship-count-friends' => '$1 ma $2 {{PLURAL:$2|znajomego|znajomych}}.',
 	'ur-add-friend' => 'Dodaj do przyjaciół',
 	'ur-add-foe' => 'Dodaj do wrogów',
 	'ur-add-no-user' => 'Nie wybrano żadnego użytkownika.
@@ -5950,8 +5811,7 @@ Powiadomimy Cię, jeśli $1 potwierdzi prośbę.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> chce zostać Twoim znajomym.',
 	'ur-accept' => 'Zaakceptuj',
 	'ur-reject' => 'Odrzuć',
-	'ur-no-requests-message' => 'Nie masz zaproszeń do przyjaźni oraz zgłoszeń od wrogów.
-Jeśli chcesz mieć więcej przyjaciół <a href="$1">zaproś ich!</a>',
+	'ur-no-requests-message' => 'Nie masz zaproszeń do przyjaźni oraz zgłoszeń od wrogów.',
 	'ur-requests-added-message-foe' => 'Dodałeś $1 jako swojego wroga.',
 	'ur-requests-added-message-friend' => 'Dodałeś $1 jako swojego przyjaciela.',
 	'ur-requests-reject-message-friend' => 'Odrzuciłeś $1 jako swojego przyjaciela.',
@@ -6065,14 +5925,8 @@ $messages['pms'] = array(
 	'ur-main-page' => 'Intrada',
 	'ur-your-profile' => 'Tò profil',
 	'ur-backlink' => '&lt; André al profil ëd $1',
-	'ur-relationship-count-foes' => '$1 a l\'ha $2 {{PLURAL:$2|nemis|nemis}}.
-Ancor ëd pì?
-<a href="$3">Anviteje.</a>',
-	'ur-relationship-count-friends' => '$1 a l\'ha $2 {{PLURAL:$2|amis|amis}}.
-Ancor pì d\'amis?
-<a href="$3">Anviteje.</a>',
-	'ur-add-friends' => 'Veul-lo pi d\'amis?
-<a href="$1">Anviteje</a>',
+	'ur-relationship-count-foes' => '$1 a l\'ha $2 {{PLURAL:$2|nemis|nemis}}.',
+	'ur-relationship-count-friends' => '$1 a l\'ha $2 {{PLURAL:$2|amis|amis}}.',
 	'ur-add-friend' => "Gionta n'amis",
 	'ur-add-foe' => 'Gionta un nemis',
 	'ur-add-no-user' => "Gnun utent selessionà.
@@ -6131,8 +5985,7 @@ I-j notifichëroma quand $1 a conferma soa arcesta.",
 	'ur-requests-message-friend' => '<a href="$1">$2</a> a veul esse tò amis.',
 	'ur-accept' => 'Aceté',
 	'ur-reject' => 'Arfuda',
-	'ur-no-requests-message' => "A l'ha gnun-e arceste d'amis o ëd nemis.
-S'a veul pi d'amis, <a href=\"\$1\">ch'a j'anvita!</a>",
+	'ur-no-requests-message' => "A l'ha gnun-e arceste d'amis o ëd nemis.",
 	'ur-requests-added-message-foe' => "It l'has giontà $1 com tò nemis.",
 	'ur-requests-added-message-friend' => "It l'has giontà $1 com tò amis.",
 	'ur-requests-reject-message-friend' => "It l'has arfudà $1 com tò amis.",
@@ -6288,9 +6141,8 @@ $messages['pt'] = array(
 	'ur-main-page' => 'Página principal',
 	'ur-your-profile' => 'O seu perfil',
 	'ur-backlink' => '&lt; Voltar ao perfil de $1',
-	'ur-relationship-count-foes' => '$1 tem $2 {{PLURAL:$2|inimigo|inimigos}}. Quer mais inimigos? <a href="$3">Convide-os.</a>',
-	'ur-relationship-count-friends' => '$1 tem $2 {{PLURAL:$2|amigo|amigos}}. Quer mais amigos? <a href="$3">Convide-os.</a>',
-	'ur-add-friends' => ' Quer mais amigos? <a href="$1">Convide-os</a>',
+	'ur-relationship-count-foes' => '$1 tem $2 {{PLURAL:$2|inimigo|inimigos}}.',
+	'ur-relationship-count-friends' => '$1 tem $2 {{PLURAL:$2|amigo|amigos}}.',
 	'ur-add-friend' => 'Adicionar aos amigos',
 	'ur-add-foe' => 'Adicionar aos inimigos',
 	'ur-add-no-user' => 'Nenhum utilizador foi seleccionado.
@@ -6349,8 +6201,7 @@ Vamos notificá-lo quando $1 confirmar o seu pedido.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> quer ser seu amigo.',
 	'ur-accept' => 'Aceitar',
 	'ur-reject' => 'Rejeitar',
-	'ur-no-requests-message' => 'Não tem pedidos de amizade ou inimizade.
-Se quer ter mais amigos, <a href="$1">convide-os!</a>',
+	'ur-no-requests-message' => 'Não tem pedidos de amizade ou inimizade.',
 	'ur-requests-added-message-foe' => 'Adicionou $1 aos inimigos.',
 	'ur-requests-added-message-friend' => 'Adicionou $1 aos amigos.',
 	'ur-requests-reject-message-friend' => 'Rejeitou $1 como amigo.',
@@ -6465,9 +6316,8 @@ $messages['pt-br'] = array(
 	'ur-main-page' => 'Página principal',
 	'ur-your-profile' => 'Seu perfil',
 	'ur-backlink' => '&lt; Voltar ao perfil de $1',
-	'ur-relationship-count-foes' => '$1 tem $2 {{PLURAL:$2|inimigo|inimigos}}. Quer mais inimigos? <a href="$3">Convide-os.</a>',
-	'ur-relationship-count-friends' => '$1 tem $2 {{PLURAL:$2|amigo|amigos}}. Quer mais amigos? <a href="$3">Convide-os.</a>',
-	'ur-add-friends' => '  Quer mais amigos? <a href="$1">Convide-os</a>',
+	'ur-relationship-count-foes' => '$1 tem $2 {{PLURAL:$2|inimigo|inimigos}}.',
+	'ur-relationship-count-friends' => '$1 tem $2 {{PLURAL:$2|amigo|amigos}}.',
 	'ur-add-friend' => 'Adicionar como amigo',
 	'ur-add-foe' => 'Adicionar como inimigo',
 	'ur-add-no-user' => 'Nenhum utilizador selecionado.
@@ -6526,8 +6376,7 @@ Nós iremos notificar você quando $1 confirmar seu pedido.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> quer ser seu amigo.',
 	'ur-accept' => 'Aceitar',
 	'ur-reject' => 'Rejeitar',
-	'ur-no-requests-message' => 'Você não tem pedidos de amizade ou inimizade.
-Se você quer mais amigos, <a href="$1">convide-os!</a>',
+	'ur-no-requests-message' => 'Você não tem pedidos de amizade ou inimizade.',
 	'ur-requests-added-message-foe' => 'Você adicionou $1 como seu inimigo.',
 	'ur-requests-added-message-friend' => 'Você adicionou $1 como seu amigo.',
 	'ur-requests-reject-message-friend' => 'Você rejeitou $1 como seu amigo.',
@@ -6702,14 +6551,8 @@ $messages['ru'] = array(
 	'ur-main-page' => 'Заглавная страница',
 	'ur-your-profile' => 'Ваш профиль',
 	'ur-backlink' => '&lt; Вернуться к профилю $1',
-	'ur-relationship-count-foes' => '$1 имеет $2 {{PLURAL:$2|недруга|недругов|недругов}}.
-Недостаточно?
-<a href="$3">Пригласите их.</a>',
-	'ur-relationship-count-friends' => '$1 имеет $2 {{PLURAL:$2|друга|друга|друзей}}.
-Хотите больше друзей?
-<a href="$3">Пригласите их.</a>',
-	'ur-add-friends' => '  Хотите больше друзей?
-<a href="$1">Пригласите их</a>',
+	'ur-relationship-count-foes' => '$1 имеет $2 {{PLURAL:$2|недруга|недругов|недругов}}.',
+	'ur-relationship-count-friends' => '$1 имеет $2 {{PLURAL:$2|друга|друга|друзей}}.',
 	'ur-add-friend' => 'Добавить в друзья',
 	'ur-add-foe' => 'Добавить в недруги',
 	'ur-add-no-user' => 'Участник не выбран.
@@ -6768,8 +6611,7 @@ $messages['ru'] = array(
 	'ur-requests-message-friend' => '<a href="$1">$2</a> хочет быть вашим другом.',
 	'ur-accept' => 'Принять',
 	'ur-reject' => 'Отклонить',
-	'ur-no-requests-message' => 'Вы не имеете запросов друзей или недругов.
-Если вы ищете ещё друзей, <a href="$1">приглашайте их!</a>',
+	'ur-no-requests-message' => 'Вы не имеете запросов друзей или недругов.',
 	'ur-requests-added-message-foe' => 'Вы добавили $1 как вашего недруга.',
 	'ur-requests-added-message-friend' => 'Вы добавили $1 как вашего друга.',
 	'ur-requests-reject-message-friend' => 'Вы отклонили $1 как вашего друга.',
@@ -6916,9 +6758,8 @@ $messages['sk'] = array(
 	'ur-main-page' => 'Hlavná stránka',
 	'ur-your-profile' => 'Váš profil',
 	'ur-backlink' => '&lt; Späť na profil $1',
-	'ur-relationship-count-foes' => '$1 má $2 {{PLURAL:$2|nepriateľa|nepriateľov}}. Chcete viac nepriateľov? <a href="$3">Pozvite ich.</a>',
-	'ur-relationship-count-friends' => '$1 má $2 {{PLURAL:$2|priateľa|priateľov}}. Chcete viac priateľov? <a href="$3">Pozvite ich.</a>',
-	'ur-add-friends' => 'Chcete viac priateľov? <a href="$1">Pozvite ich</a>',
+	'ur-relationship-count-foes' => '$1 má $2 {{PLURAL:$2|nepriateľa|nepriateľov}}.',
+	'ur-relationship-count-friends' => '$1 má $2 {{PLURAL:$2|priateľa|priateľov}}.',
 	'ur-add-friend' => 'Pridať ako priateľa',
 	'ur-add-foe' => 'Pridať ako nepriateľa',
 	'ur-add-no-user' => 'Nebol vybraný žiadny používateľ. Prosím, žiadajte o priateľov/nepriateľov použitím správneho odkazu.',
@@ -6976,8 +6817,7 @@ Upozorníme vás, keď $1 potvrdí vašu žiadosť.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> chce byť váš priateľ.',
 	'ur-accept' => 'Prijať',
 	'ur-reject' => 'Odmietnuť',
-	'ur-no-requests-message' => 'Nemáte žiadosti o vytvorenie vzťahu priateľ či nepriateľ.
-Ak chcete viac priateľov, <a href="$1">pozvite ich!</a>',
+	'ur-no-requests-message' => 'Nemáte žiadosti o vytvorenie vzťahu priateľ či nepriateľ.',
 	'ur-requests-added-message-foe' => 'Pridali ste $1 medzi svojich nepriateľov.',
 	'ur-requests-added-message-friend' => 'Pridali ste $1 medzi svojich priateľov.',
 	'ur-requests-reject-message-friend' => 'Odmietli ste pridať $1 medzi svojich priateľov.',
@@ -7234,9 +7074,8 @@ $messages['sv'] = array(
 	'ur-main-page' => 'Huvudsida',
 	'ur-your-profile' => 'Din profil',
 	'ur-backlink' => '&lt; Tillbaka till $1s profil',
-	'ur-relationship-count-foes' => '$1 har $2 {{PLURAL:$2|fiende|fiender}}. Vill du ha fler fiender? <a href="$3">Bjud in dem.</a>',
-	'ur-relationship-count-friends' => '$1 har $2 {{PLURAL:$2|vän|vänner}}. Vill du ha flera vänner? <a href="$3">Bjud in dem.</a>',
-	'ur-add-friends' => 'Vill du ha mer vänner? <a href="$1">Bjud in dom</a>',
+	'ur-relationship-count-foes' => '$1 har $2 {{PLURAL:$2|fiende|fiender}}.',
+	'ur-relationship-count-friends' => '$1 har $2 {{PLURAL:$2|vän|vänner}}.',
 	'ur-add-friend' => 'Lägg till som vän',
 	'ur-add-foe' => 'Lägg till som fiende',
 	'ur-add-no-user' => 'Ingen användare väljd. Var god lägg till vänner eller fiender med den korrekta länken.',
@@ -7294,7 +7133,7 @@ Vi kommer ge dig besked när $1 bekräftar din begäran.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> vill bli din vän.',
 	'ur-accept' => 'Acceptera',
 	'ur-reject' => 'Avslå',
-	'ur-no-requests-message' => 'Du har inga vän- eller fiendeefterfrågningar. Om du vill ha mer vänner, <a href="$1">bjud in dom</a>!',
+	'ur-no-requests-message' => 'Du har inga vän- eller fiendeefterfrågningar.',
 	'ur-requests-added-message-foe' => 'Du har lagt till $1 som din fiende.',
 	'ur-requests-added-message-friend' => 'Du har lagt till $1 som din vän.',
 	'ur-requests-reject-message-friend' => 'Du har avvisat $1 som din vän.',
@@ -7418,7 +7257,6 @@ $messages['te'] = array(
 	'ur-error-message-no-user' => 'మీ అభ్యర్థనని మన్నింపలేము, ఎందుకంటే ఈ పేరుతో వాడుకరులెవరూ లేరు.',
 	'ur-main-page' => 'మొదటి పుట',
 	'ur-your-profile' => 'మీ ప్రొఫైలు',
-	'ur-add-friends' => ' మరింత మంది మిత్రులు కావాలా? <a href="$1">ఆహ్వానించండి</a>',
 	'ur-add-friend' => 'స్నేహితునిగా చేర్చు',
 	'ur-add-foe' => 'శత్రువుగా చేర్చు',
 	'ur-add-personal-message' => 'ఒక వ్యక్తిగత సందేశాన్ని చేర్చండి',
@@ -7446,7 +7284,7 @@ $messages['te'] = array(
 	'ur-requests-title' => 'సంబంధ అభ్యర్థనలు',
 	'ur-accept' => 'అంగీకరించు',
 	'ur-reject' => 'తిరస్కరించు',
-	'ur-no-requests-message' => 'మీకు మిత్రుత్వ లేదా శత్రుత్వ అభ్యర్థనలు లేవు. మీకు మరింత మంది స్నేహితులు కావాలంటే, <a href="$1">వారిని ఆహ్వానించండి!</a>',
+	'ur-no-requests-message' => 'మీకు మిత్రుత్వ లేదా శత్రుత్వ అభ్యర్థనలు లేవు.',
 	'ur-requests-reject-message-friend' => 'మీరు $1ని మీ స్నేహితునిగా తిరస్కరించారు.',
 	'ur-title-foe' => '$1 యొక్క శతృవుల జాబితా',
 	'ur-title-friend' => '$1 యొక్క మిత్రుల జాబితా',
@@ -7469,7 +7307,6 @@ $messages['tet'] = array(
 $messages['tg-cyrl'] = array(
 	'ur-main-page' => 'Саҳифаи Аслӣ',
 	'ur-your-profile' => 'Намояи шумо',
-	'ur-add-friends' => ' Бештар дӯстон мехоҳед? <a href="$1">Онҳоро даъват кунед</a>',
 	'ur-add-friend' => 'Чун дӯст илова кунед',
 	'ur-add-foe' => 'Чун ҳариф илова кунед',
 	'ur-give-gift' => 'Ҳадя диҳед',
@@ -7585,7 +7422,6 @@ $4-ро клик кунед
 $messages['tg-latn'] = array(
 	'ur-main-page' => 'Sahifai Aslī',
 	'ur-your-profile' => 'Namojai şumo',
-	'ur-add-friends' => ' Beştar dūston mexohed? <a href="$1">Onhoro da\'vat kuned</a>',
 	'ur-add-friend' => 'Cun dūst ilova kuned',
 	'ur-add-foe' => 'Cun harif ilova kuned',
 	'ur-give-gift' => 'Hadja dihed',
@@ -7715,9 +7551,8 @@ $messages['tl'] = array(
 	'ur-main-page' => 'Pangunahing pahina',
 	'ur-your-profile' => 'Talaang pangkatangian ng sarili mo',
 	'ur-backlink' => '&lt; Magbalik sa talaang pangkatangian ni $1',
-	'ur-relationship-count-foes' => 'Si $1 ay mayroong $2 {{PLURAL:$2|katunggali|mga katunggali}}. Nais mo ba magkaroon ng mas marami pang mga katunggali? <a href="$3">Anyayahan sila.</a>',
-	'ur-relationship-count-friends' => 'Si $1 ay mayroong $2 {{PLURAL:$2|kaibigan|mga kaibigan}}. Nais mo bang magkaroon ng mas marami pang mga kaibigan? <a href="$3">Anyayahan sila.</a>',
-	'ur-add-friends' => '  Nais mo bang magkaroon ng mas marami pang mga kaibigan? <a href="$1">Anyayahan sila</a>',
+	'ur-relationship-count-foes' => 'Si $1 ay mayroong $2 {{PLURAL:$2|katunggali|mga katunggali}}.',
+	'ur-relationship-count-friends' => 'Si $1 ay mayroong $2 {{PLURAL:$2|kaibigan|mga kaibigan}}.',
 	'ur-add-friend' => 'Idagdag bilang kaibigan',
 	'ur-add-foe' => 'Idagdag bilang katunggali',
 	'ur-add-no-user' => 'Walang napiling tagagamit.
@@ -7775,8 +7610,7 @@ Padadalhan ka namin ng pabatid kapat tiniyak na ni $1 ang kahilingan mo.',
 	'ur-requests-message-friend' => 'Nais ni <a href="$1">$2</a> na maging kaibigan mo.',
 	'ur-accept' => 'Tanggapin',
 	'ur-reject' => 'Tanggihan',
-	'ur-no-requests-message' => 'Wala kang mga kahilingang pangpakikipagkaibigan at pangpakikipagkatunggali/
-Kung nais mong magkaroon ng mas marami pang mga kaibigan, <a href="$1">anyayahan sila!</a>',
+	'ur-no-requests-message' => 'Wala kang mga kahilingang pangpakikipagkaibigan at pangpakikipagkatunggali/',
 	'ur-requests-added-message-foe' => 'Idinagdag mo si $1 bilang kaibigan mo.',
 	'ur-requests-added-message-friend' => 'Idinagdag mo si $1 bilang kaibigan mo.',
 	'ur-requests-reject-message-friend' => 'Tinanggihan mo si $1 bilang kaibigan mo.',
@@ -7890,14 +7724,8 @@ $messages['tr'] = array(
 	'ur-main-page' => 'Ana sayfa',
 	'ur-your-profile' => 'Profiliniz',
 	'ur-backlink' => '&lt; $1 adlı kullanıcının profiline dönüş',
-	'ur-relationship-count-foes' => '$1, $2 {{PLURAL:$2|düşmana|düşmana}} sahip.
-Daha fazla düşman ister misiniz?
-<a href="$3"<Davet edin.</a>',
-	'ur-relationship-count-friends' => '$1, $2 {{PLURAL:$2|arkadaşa|arkadaşa}} sahip.
-Daha fazla arkadaş ister misiniz?
-<a href="$3"<Davet edin.</a>',
-	'ur-add-friends' => '  Daha fazla arkadaş ister misiniz?
-<a href="$1"<Davet edin.</a>',
+	'ur-relationship-count-foes' => '$1, $2 {{PLURAL:$2|düşmana|düşmana}} sahip.',
+	'ur-relationship-count-friends' => '$1, $2 {{PLURAL:$2|arkadaşa|arkadaşa}} sahip.',
 	'ur-add-friend' => 'Arkadaş olarak ekle',
 	'ur-add-foe' => 'Düşman olarak ekle',
 	'ur-add-no-user' => 'Hiçbir kullanıcı seçilmedi.
@@ -7956,8 +7784,7 @@ $1 isteğinizi doğruladığında sizi bilgilendireceğiz.',
 	'ur-requests-message-friend' => '<a href="$1">$2</a> arkadaşınız olmak istiyor.',
 	'ur-accept' => 'Onayla',
 	'ur-reject' => 'Reddet',
-	'ur-no-requests-message' => 'Arkadaşlık ya da düşmanlık isteğiniz yok.
-Daha fazla arkadaş istiyorsanız, <a href="$1">davet edin!</a>',
+	'ur-no-requests-message' => 'Arkadaşlık ya da düşmanlık isteğiniz yok.',
 	'ur-requests-added-message-foe' => '$1 adlı kullanıcıyı düşmanınız olarak eklediniz.',
 	'ur-requests-added-message-friend' => '$1 adlı kullanıcıyı arkadaşınız olarak eklediniz.',
 	'ur-requests-reject-message-friend' => '$1 adlı kullanıcının arkadaşlık isteğini reddettiniz.',
@@ -8133,9 +7960,8 @@ $messages['vo'] = array(
 	'ur-error-message-no-user' => 'No kanobs ledunön begi olik, bi no dabinon gebani labü nem at.',
 	'ur-main-page' => 'Cifapad',
 	'ur-your-profile' => 'Profül olik',
-	'ur-relationship-count-foes' => 'Geban: $1 labon {{PLURAL:$2|nefleni|neflenis}} $2. Vilol-li neflenis mödikum? <a href="$3">Vüdolös onis.</a>',
-	'ur-relationship-count-friends' => 'Geban: $1 labon {{PLURAL:$2|fleni|flenis}} $2. Vilol-mi flenis mödikum? <a href="$3">Vüdolös onis.</a>',
-	'ur-add-friends' => '   Vilol-li flenis pluik? <a href="$1">Vüdolös onis</a>',
+	'ur-relationship-count-foes' => 'Geban: $1 labon {{PLURAL:$2|nefleni|neflenis}} $2.',
+	'ur-relationship-count-friends' => 'Geban: $1 labon {{PLURAL:$2|fleni|flenis}} $2.',
 	'ur-add-friend' => 'Läükön as flen',
 	'ur-add-foe' => 'Läükön as neflen',
 	'ur-add-no-user' => 'Geban nonik pevälon.
@@ -8210,12 +8036,8 @@ $messages['zh-hans'] = array(
 	'ur-main-page' => '主页',
 	'ur-your-profile' => '您的个人资料',
 	'ur-backlink' => '&lt; 回到$1的个人资料',
-	'ur-relationship-count-foes' => '$1已经有$2位仇敌了。
-想要多些仇敌吗?
-<a href="$3">邀请他们。</a>',
-	'ur-relationship-count-friends' => '$1已经有$2位朋友了。
-想要多些朋友吗?
-<a href="$3">邀请他们。</a>',
+	'ur-relationship-count-foes' => '$1已经有$2位仇敌了。',
+	'ur-relationship-count-friends' => '$1已经有$2位朋友了。',
 	'ur-add-friend' => '加入成为朋友',
 	'ur-add-foe' => '加入成为仇敌',
 	'ur-remove-relationship-friend' => '从朋友清单移除',
@@ -8252,14 +8074,8 @@ $messages['zh-hant'] = array(
 	'ur-main-page' => '首頁',
 	'ur-your-profile' => '您的個人檔案',
 	'ur-backlink' => '&lt; 返回到 $1 的個人檔案',
-	'ur-relationship-count-foes' => '$1 已經有 $2 位仇人了。
-想要多些仇人嗎?
-<a href=「$3」>邀請他們。</a>',
-	'ur-relationship-count-friends' => '$1 已經有 $2 位朋友了。
-想要多些朋友嗎?
-<a href=「$3」>邀請他們。</a>',
-	'ur-add-friends' => '希望更多的朋友？ 
- <a href=「$1」>邀請他們</a>',
+	'ur-relationship-count-foes' => '$1 已經有 $2 位仇人了。',
+	'ur-relationship-count-friends' => '$1 已經有 $2 位朋友了。',
 	'ur-add-friend' => '加入成為朋友',
 	'ur-add-foe' => '新增為仇人',
 	'ur-remove-relationship-friend' => '從朋友名單中移除',

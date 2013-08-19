@@ -19,44 +19,46 @@ class RemoveAvatar extends SpecialPage {
 	 *
 	 * @param $user Mixed: parameter passed to the page or null
 	 */
-	public function execute( $user ) {
-		global $wgUser, $wgOut, $wgRequest, $wgUploadAvatarInRecentChanges;
+	public function execute( $par ) {
+		global $wgUploadAvatarInRecentChanges;
 
-		$this->title = SpecialPage::getTitleFor( 'RemoveAvatar' );
+		$out = $this->getOutput();
+		$request = $this->getRequest();
+		$user = $this->getUser();
 
 		// If the user isn't logged in, display an error
-		if ( !$wgUser->isLoggedIn() ) {
+		if ( !$user->isLoggedIn() ) {
 			$this->displayRestrictionError();
 			return;
 		}
 
 		// If the user doesn't have 'avatarremove' permission, display an error
-		if ( !$wgUser->isAllowed( 'avatarremove' ) ) {
+		if ( !$user->isAllowed( 'avatarremove' ) ) {
 			$this->displayRestrictionError();
 			return;
 		}
 
 		// Show a message if the database is in read-only mode
 		if ( wfReadOnly() ) {
-			$wgOut->readOnlyPage();
+			$out->readOnlyPage();
 			return;
 		}
 
 		// If user is blocked, s/he doesn't need to access this page
-		if ( $wgUser->isBlocked() ) {
-			$wgOut->blockedPage();
+		if ( $user->isBlocked() ) {
+			$out->blockedPage();
 			return;
 		}
 
-		$wgOut->setPageTitle( wfMsg( 'avatarupload-removeavatar' ) );
+		$out->setPageTitle( $this->msg( 'avatarupload-removeavatar' )->plain() );
 
-		if ( $wgRequest->getVal( 'user' ) != '' ) {
-			$wgOut->redirect( $this->title->getFullURL() . '/' . $wgRequest->getVal( 'user' ) );
+		if ( $request->getVal( 'user' ) != '' ) {
+			$out->redirect( $this->getTitle()->getFullURL() . '/' . $request->getVal( 'user' ) );
 		}
 
 		// If the request was POSTed, then delete the avatar
-		if ( $wgRequest->wasPosted() ) {
-			$user_id = $wgRequest->getInt( 'user_id' );
+		if ( $request->wasPosted() ) {
+			$user_id = $request->getInt( 'user_id' );
 			$user_deleted = User::newFromId( $user_id );
 
 			$this->deleteImage( $user_id, 's' );
@@ -70,21 +72,25 @@ class RemoveAvatar extends SpecialPage {
 			}
 			$log->addEntry(
 				'avatar',
-				$wgUser->getUserPage(),
-				wfMsg( 'user-profile-picture-log-delete-entry', $user_deleted->getName() )
+				$user->getUserPage(),
+				$this->msg( 'user-profile-picture-log-delete-entry', $user_deleted->getName() )
+					->inContentLanguage()->text()
 			);
-			$wgOut->addHTML(
-				'<div>' . wfMsg( 'avatarupload-removesuccess' ) . '</div>'
+			$out->addHTML(
+				'<div>' .
+				$this->msg( 'avatarupload-removesuccess' )->plain() .
+				'</div>'
 			);
-			$wgOut->addHTML(
-				'<div><a href="' . $this->title->escapeFullURL() . '">' .
-					wfMsg( 'avatarupload-removeanother' ) . '</a></div>'
+			$out->addHTML(
+				'<div><a href="' . $this->getTitle()->escapeFullURL() . '">' .
+					$this->msg( 'avatarupload-removeanother' )->plain() .
+				'</a></div>'
 			);
 		} else {
-			if ( $user ) {
-				$wgOut->addHTML( $this->showUserAvatar( $user ) );
+			if ( $par ) {
+				$out->addHTML( $this->showUserAvatar( $par ) );
 			} else {
-				$wgOut->addHTML( $this->showUserForm() );
+				$out->addHTML( $this->showUserForm() );
 			}
 		}
 	}
@@ -96,9 +102,9 @@ class RemoveAvatar extends SpecialPage {
 	private function showUserForm() {
 		$output = '<form method="get" name="avatar" action="">' .
 				Html::hidden( 'title', $this->getTitle() ) .
-				'<b>' . wfMsg( 'username' ) . '</b>
+				'<b>' . $this->msg( 'username' )->plain() . '</b>
 				<input type="text" name="user" />
-				<input type="submit" value="' . wfMsg( 'search' ) . '" />
+				<input type="submit" value="' . $this->msg( 'search' )->plain() . '" />
 			</form>';
 		return $output;
 	}
@@ -114,12 +120,12 @@ class RemoveAvatar extends SpecialPage {
 
 		$avatar = new wAvatar( $user_id, 'l' );
 
-		$output = '<div><b>' . wfMsg( 'avatarupload-currentavatar', $user_name ) . '</b></div>';
+		$output = '<div><b>' . $this->msg( 'avatarupload-currentavatar', $user_name )->parse() . '</b></div>';
 		$output .= "<div>{$avatar->getAvatarURL()}</div>";
 		$output .= '<div><form method="post" name="avatar" action="">
 				<input type="hidden" name="user_id" value="' . $user_id . '" />
 				<br />
-				<input type="submit" value="' . wfMsg( 'delete' ) . '" />
+				<input type="submit" value="' . $this->msg( 'delete' )->plain() . '" />
 			</form></div>';
 		return $output;
 	}

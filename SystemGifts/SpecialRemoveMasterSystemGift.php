@@ -37,38 +37,40 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgUser, $wgOut, $wgRequest, $wgSystemGiftsScripts;
+		$out = $this->getOutput();
+		$request = $this->getRequest();
+		$user = $this->getUser();
 
 		// If the user doesn't have the required 'awardsmanage' permission, display an error
-		if ( !$wgUser->isAllowed( 'awardsmanage' ) ) {
-			$wgOut->permissionRequired( 'awardsmanage' );
+		if ( !$user->isAllowed( 'awardsmanage' ) ) {
+			$out->permissionRequired( 'awardsmanage' );
 			return;
 		}
 
 		// Show a message if the database is in read-only mode
 		if ( wfReadOnly() ) {
-			$wgOut->readOnlyPage();
+			$out->readOnlyPage();
 			return;
 		}
 
 		// If user is blocked, s/he doesn't need to access this page
-		if ( $wgUser->isBlocked() ) {
-			$wgOut->blockedPage();
+		if ( $user->isBlocked() ) {
+			$out->blockedPage();
 			return;
 		}
 
 		// Add CSS
-		$wgOut->addExtensionStyle( $wgSystemGiftsScripts . '/SystemGift.css' );
+		$out->addModules( 'ext.socialprofile.systemgifts.css' );
 
-		$this->gift_id = $wgRequest->getInt( 'gift_id', $par );
+		$this->gift_id = $request->getInt( 'gift_id', $par );
 
 		if ( !$this->gift_id || !is_numeric( $this->gift_id ) ) {
-			$wgOut->setPageTitle( wfMsg( 'ga-error-title' ) );
-			$wgOut->addHTML( wfMsg( 'ga-error-message-invalid-link' ) );
+			$out->setPageTitle( $this->msg( 'ga-error-title' )->plain() );
+			$out->addHTML( $this->msg( 'ga-error-message-invalid-link' )->plain() );
 			return false;
 		}
 
-		if ( $wgRequest->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
+		if ( $request->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
 			$_SESSION['alreadysubmitted'] = true;
 
 			$dbw = wfGetDB( DB_MASTER );
@@ -90,21 +92,21 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 			$this->deleteImage( $this->gift_id, 'l' );
 			$this->deleteImage( $this->gift_id, 'ml' );
 
-			$wgOut->setPageTitle( wfMsg( 'ga-remove-success-title', $gift['gift_name'] ) );
+			$out->setPageTitle( $this->msg( 'ga-remove-success-title', $gift['gift_name'] )->plain() );
 
-			$out = '<div class="back-links">
+			$output = '<div class="back-links">
 				<a href="' . SpecialPage::getTitleFor( 'SystemGiftManager' )->escapeFullURL() . '">' .
-					wfMsg( 'ga-viewlist' ) . '</a>
+					$this->msg( 'ga-viewlist' )->plain() . '</a>
 			</div>
 			<div class="ga-container">' .
-				wfMsg( 'ga-remove-success-message', $gift['gift_name'] ) .
+				$this->msg( 'ga-remove-success-message', $gift['gift_name'] )->plain() .
 				'<div class="cleared"></div>
 			</div>';
 
-			$wgOut->addHTML( $out );
+			$out->addHTML( $output );
 		} else {
 			$_SESSION['alreadysubmitted'] = false;
-			$wgOut->addHTML( $this->displayForm() );
+			$out->addHTML( $this->displayForm() );
 		}
 	}
 
@@ -114,7 +116,7 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 	 * @return String: HTML output
 	 */
 	function displayForm() {
-		global $wgOut, $wgUploadPath;
+		global $wgUploadPath;
 
 		$gift = SystemGifts::getGift( $this->gift_id );
 
@@ -122,15 +124,15 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 			SystemGifts::getGiftImage( $this->gift_id, 'l' ) .
 			'" border="0" alt="gift" />';
 
-		$wgOut->setPageTitle( wfMsg( 'ga-remove-title', $gift['gift_name'] ) );
+		$this->getOutput()->setPageTitle( $this->msg( 'ga-remove-title', $gift['gift_name'] )->plain() );
 
 		$output = '<div class="back-links">
 			<a href="' . SpecialPage::getTitleFor( 'SystemGiftManager' )->escapeFullURL() . '">' .
-				wfMsg( 'ga-viewlist' ) . '</a>
+				$this->msg( 'ga-viewlist' )->plain() . '</a>
 		</div>
 		<form action="" method="post" enctype="multipart/form-data" name="form1">
 			<div class="ga-remove-message">' .
-				wfMsg( 'ga-delete-message', $gift['gift_name'] ) .
+				$this->msg( 'ga-delete-message', $gift['gift_name'] ) .
 			'</div>
 			<div class="ga-container">' .
 				$giftImage .
@@ -138,8 +140,8 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 			</div>
 			<div class="cleared"></div>
 			<div class="ga-buttons">
-				<input type="button" class="site-button" value="' . wfMsg( 'ga-remove' ) . '" size="20" onclick="document.form1.submit()" />
-				<input type="button" class="site-button" value="' . wfMsg( 'ga-cancel' ) . '" size="20" onclick="history.go(-1)" />
+				<input type="button" class="site-button" value="' . $this->msg( 'ga-remove' )->plain() . '" size="20" onclick="document.form1.submit()" />
+				<input type="button" class="site-button" value="' . $this->msg( 'ga-cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
 			</div>
 		</form>';
 

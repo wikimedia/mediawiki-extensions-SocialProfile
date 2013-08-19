@@ -43,10 +43,12 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 * @param $params Mixed: parameter(s) passed to the page or null
 	 */
 	public function execute( $params ) {
-		global $wgUserProfileScripts;
-
 		$out = $this->getOutput();
-		$out->addExtensionStyle( $wgUserProfileScripts . '/UserProfile.css' );
+
+		// Add CSS
+		$out->addModules( 'ext.socialprofile.userprofile.css' );
+
+		// Let the parent class do most of the heavy lifting.
 		parent::execute( $params );
 
 		if ( $this->mUploadSuccessful ) {
@@ -75,22 +77,22 @@ class SpecialUploadAvatar extends SpecialUpload {
 		$log->addEntry(
 			'avatar',
 			$user->getUserPage(),
-			wfMsgForContent( 'user-profile-picture-log-entry' )
+			$this->msg( 'user-profile-picture-log-entry' )->inContentLanguage()->text()
 		);
 
 		$uid = $user->getId();
 
-		$output = '<h1>' . wfMsg( 'uploadavatar' ) . '</h1>';
-		$output .= UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-picture' ) );
+		$output = '<h1>' . $this->msg( 'uploadavatar' )->plain() . '</h1>';
+		$output .= UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-picture' )->plain() );
 		$output .= '<div class="profile-info">';
 		$output .= '<p class="profile-update-title">' .
-			wfMsg( 'user-profile-picture-yourpicture' ) . '</p>';
-		$output .= '<p>' . wfMsg( 'user-profile-picture-yourpicturestext' ) . '</p>';
+			$this->msg( 'user-profile-picture-yourpicture' )->plain() . '</p>';
+		$output .= '<p>' . $this->msg( 'user-profile-picture-yourpicturestext' )->plain() . '</p>';
 
 		$output .= '<table cellspacing="0" cellpadding="0" style="margin-top:20px;">';
 		$output .= '<tr>
 			<td valign="top" style="color:#797979;font-size:12px;font-weight:bold;padding-bottom:20px;">' .
-				wfMsg( 'user-profile-picture-large' ) .
+				$this->msg( 'user-profile-picture-large' )->plain() .
 			'</td>
 			<td style="padding-bottom:20px;">
 				<img src="' . $wgUploadPath . '/avatars/' . $wgDBname . '_' . $uid . '_l.' . $ext . '?ts=' . rand() . '" alt="" border="0" />
@@ -98,7 +100,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 		</tr>';
 		$output .= '<tr>
 			<td valign="top" style="color:#797979;font-size:12px;font-weight:bold;padding-bottom:20px;">' .
-				wfMsg( 'user-profile-picture-medlarge' ) .
+				$this->msg( 'user-profile-picture-medlarge' )->plain() .
 			'</td>
 			<td style="padding-bottom:20px;">
 				<img src="' . $wgUploadPath . '/avatars/' . $wgDBname . '_' . $uid . '_ml.' . $ext . '?ts=' . rand() . '" alt="" border="0" />
@@ -106,7 +108,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 		</tr>';
 		$output .= '<tr>
 			<td valign="top" style="color:#797979;font-size:12px;font-weight:bold;padding-bottom:20px;">' .
-				wfMsg( 'user-profile-picture-medium' ) .
+				$this->msg( 'user-profile-picture-medium' )->plain() .
 			'</td>
 			<td style="padding-bottom:20px;">
 				<img src="' . $wgUploadPath . '/avatars/' . $wgDBname . '_' . $uid . '_m.' . $ext . '?ts=' . rand() . '" alt="" border="0" />
@@ -114,7 +116,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 		</tr>';
 		$output .= '<tr>
 			<td valign="top" style="color:#797979;font-size:12px;font-weight:bold;padding-bottom:20px;">' .
-				wfMsg( 'user-profile-picture-small' ) .
+				$this->msg( 'user-profile-picture-small' )->plain() .
 			'</td>
 			<td style="padding-bottom:20px;">
 				<img src="' . $wgUploadPath . '/avatars/' . $wgDBname . '_' . $uid . '_s.' . $ext . '?ts=' . rand() . '" alt="" border="0" />
@@ -122,7 +124,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 		</tr>';
 		$output .= '<tr>
 			<td>
-				<input type="button" onclick="javascript:history.go(-1)" class="site-button" value="' . wfMsg( 'user-profile-picture-uploaddifferent' ) . '" />
+				<input type="button" onclick="javascript:history.go(-1)" class="site-button" value="' . $this->msg( 'user-profile-picture-uploaddifferent' )->plain() . '" />
 			</td>
 		</tr>';
 		$output .= '</table>';
@@ -144,36 +146,38 @@ class SpecialUploadAvatar extends SpecialUpload {
 		global $wgUseCopyrightUpload;
 
 		if ( $message != '' ) {
-			$sub = wfMsg( 'uploaderror' );
+			$sub = $this->msg( 'uploaderror' )->plain();
 			$this->getOutput()->addHTML( "<h2>{$sub}</h2>\n" .
 				"<h4 class='error'>{$message}</h4>\n" );
 		}
 
-		$ulb = wfMsg( 'uploadbtn' );
+		$ulb = $this->msg( 'uploadbtn' );
 
 		$source = null;
 
 		if ( $wgUseCopyrightUpload ) {
 			$source = "
-				<td align='right' nowrap='nowrap'>" . wfMsg( 'filestatus' ) . ":</td>
+				<td align='right' nowrap='nowrap'>" . $this->msg( 'filestatus' )->plain() . "</td>
 				<td><input tabindex='3' type='text' name=\"wpUploadCopyStatus\" value=\"" .
 				htmlspecialchars( $this->mUploadCopyStatus ) . "\" size='40' /></td>
 				</tr><tr>
-				<td align='right'>" . wfMsg( 'filesource' ) . ":</td>
+				<td align='right'>" . $this->msg( 'filesource' )->plain() . "</td>
 				<td><input tabindex='4' type='text' name='wpUploadSource' value=\"" .
 				htmlspecialchars( $this->mUploadSource ) . "\" style='width:100px' /></td>
 				";
 		}
 
-		$output = '<h1>' . wfMsg( 'uploadavatar' ) . '</h1>';
-		$output .= UserProfile::getEditProfileNav( wfMsg( 'user-profile-section-picture' ) );
+		$output = '<h1>' . $this->msg( 'uploadavatar' )->plain() . '</h1>';
+		$output .= UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-picture' )->plain() );
 		$output .= '<div class="profile-info">';
 
 		if ( $this->getAvatar( 'l' ) != '' ) {
 			$output .= '<table>
 				<tr>
 					<td>
-						<p class="profile-update-title">' . wfMsg( 'user-profile-picture-currentimage' ) . '</p>
+						<p class="profile-update-title">' .
+							$this->msg( 'user-profile-picture-currentimage' )->plain() .
+						'</p>
 					</td>
 				</tr>';
 				$output .= '<tr>
@@ -195,10 +199,10 @@ class SpecialUploadAvatar extends SpecialUpload {
 				<tr>
 					<td>
 						<p class="profile-update-title">' .
-							wfMsg( 'user-profile-picture-choosepicture' ) .
+							$this->msg( 'user-profile-picture-choosepicture' )->plain() .
 						'</p>
 						<p style="margin-bottom:10px;">' .
-							wfMsg( 'user-profile-picture-picsize' ) .
+							$this->msg( 'user-profile-picture-picsize' )->plain() .
 						'</p>
 						<input tabindex="1" type="file" name="wpUploadFile" id="wpUploadFile" size="36"/>
 						</td>

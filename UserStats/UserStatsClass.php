@@ -154,6 +154,7 @@ class UserStatsTrack {
 	 */
 	function incStatField( $field, $val = 1 ) {
 		global $wgUser, $wgMemc, $wgSystemGifts, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
+
 		if ( !$wgUser->isAllowed( 'bot' ) && !$wgUser->isAnon() && $this->stats_fields[$field] ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$dbw->update(
@@ -214,6 +215,7 @@ class UserStatsTrack {
 	 */
 	function decStatField( $field, $val = 1 ) {
 		global $wgUser, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
+
 		if ( !$wgUser->isAllowed( 'bot' ) && !$wgUser->isAnon() && $this->stats_fields[$field] ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$dbw->update(
@@ -244,6 +246,7 @@ class UserStatsTrack {
 	 */
 	function updateCommentCount() {
 		global $wgUser;
+
 		if ( !$wgUser->isAnon() ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$comments = $dbw->select(
@@ -272,6 +275,7 @@ class UserStatsTrack {
 	 */
 	function updateCommentIgnored() {
 		global $wgUser;
+
 		if ( !$wgUser->isAnon() ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$blockedComments = $dbw->select(
@@ -299,6 +303,7 @@ class UserStatsTrack {
 	 */
 	function updateEditCount() {
 		global $wgUser;
+
 		if ( !$wgUser->isAnon() ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$edits = $dbw->select(
@@ -327,6 +332,7 @@ class UserStatsTrack {
 	 */
 	function updateVoteCount() {
 		global $wgUser;
+
 		if ( !$wgUser->isAnon() ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$votes = $dbw->select(
@@ -406,6 +412,7 @@ class UserStatsTrack {
 	 */
 	function updateRelationshipCount( $relType ) {
 		global $wgUser;
+
 		if ( !$wgUser->isAnon() ) {
 			$dbw = wfGetDB( DB_MASTER );
 			if ( $relType == 1 ) {
@@ -434,6 +441,7 @@ class UserStatsTrack {
 	 */
 	function updateGiftCountRec() {
 		global $wgUser;
+
 		if ( !$wgUser->isAnon() ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$gifts = $dbw->select(
@@ -457,6 +465,7 @@ class UserStatsTrack {
 	 */
 	function updateGiftCountSent() {
 		global $wgUser;
+
 		if ( !$wgUser->isAnon() ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$gifts = $dbw->select(
@@ -480,6 +489,7 @@ class UserStatsTrack {
 	 */
 	public function updateReferralComplete() {
 		global $wgUser;
+
 		if ( !$wgUser->isAnon() ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$referrals = $dbw->select(
@@ -639,11 +649,18 @@ class UserStatsTrack {
 				$user_level = new UserLevel( $new_total_points );
 				$level_number_after = $user_level->getLevelNumber();
 
-				// Check if user advanced on this update
+				// Check if the user advanced to a new level on this update
 				if ( $level_number_after > $level_number_before ) {
 					$m = new UserSystemMessage();
-					$m->addMessage( $this->user_name, 2, wfMsgForContent( 'level-advanced-to', $user_level->getLevelName() ) );
-					$m->sendAdvancementNotificationEmail( $this->user_id, $user_level->getLevelName() );
+					$m->addMessage(
+						$this->user_name,
+						2,
+						wfMessage( 'level-advanced-to', $user_level->getLevelName() )->inContentLanguage()->parse()
+					);
+					$m->sendAdvancementNotificationEmail(
+						$this->user_id,
+						$user_level->getLevelName()
+					);
 				}
 			}
 			$this->clearCache();
@@ -796,6 +813,7 @@ class UserStats {
 				'points' => $row->stats_total_points
 			);
 		}
+
 		return $list;
 	}
 
@@ -813,6 +831,7 @@ class UserStats {
 		} else {
 			$pointsTable = 'user_points_weekly';
 		}
+
 		$dbr = wfGetDB( DB_SLAVE );
 		$res = $dbr->select(
 			$pointsTable,
@@ -833,6 +852,7 @@ class UserStats {
 				'points' => $row->up_points
 			);
 		}
+
 		return $list;
 	}
 
@@ -857,6 +877,7 @@ class UserStats {
 			$op = '<';
 			$sort = 'DESC';
 		}
+
 		$dbr = wfGetDB( DB_SLAVE );
 		$res = $dbr->select(
 			array( 'user_stats', 'user_relationship' ),
@@ -876,6 +897,7 @@ class UserStats {
 				)
 			)
 		);
+
 		$list = array();
 		foreach ( $res as $row ) {
 			$list[] = array(
@@ -884,9 +906,11 @@ class UserStats {
 				'points' => $row->stats_total_points
 			);
 		}
+
 		if ( $condition == 1 ) {
 			$list = array_reverse( $list );
 		}
+
 		return $list;
 	}
 }

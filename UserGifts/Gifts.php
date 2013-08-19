@@ -1,4 +1,7 @@
 <?php
+if ( !defined( 'MEDIAWIKI' ) ) {
+	die();
+}
 
 $wgAvailableRights[] = 'giftadmin';
 $wgGroupPermissions['staff']['giftadmin'] = true;
@@ -40,6 +43,20 @@ $wgSpecialPages['RemoveGift'] = 'RemoveGift';
 $wgSpecialPageGroups['RemoveGift'] = 'users';
 
 $wgExtensionMessagesFiles['UserGifts'] = $wgUserGiftsDirectory . '/UserGifts.i18n.php';
+
+// Register the CSS & JS with ResourceLoader
+$wgResourceModules['ext.socialprofile.usergifts.css'] = array(
+	'styles' => 'UserGifts.css',
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'SocialProfile/UserGifts',
+	'position' => 'top'
+);
+
+$wgResourceModules['ext.socialprofile.usergifts.js'] = array(
+	'scripts' => 'UserGifts.js',
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'SocialProfile/UserGifts',
+);
 
 // Credits
 $wgExtensionCredits['specialpage'][] = array(

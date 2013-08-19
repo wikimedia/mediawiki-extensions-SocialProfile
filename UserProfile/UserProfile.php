@@ -29,6 +29,19 @@ $wgGroupPermissions['sysop']['avatarremove'] = true;
 $wgGroupPermissions['staff']['editothersprofiles'] = true;
 
 // ResourceLoader support for MediaWiki 1.17+
+$wgResourceModules['ext.socialprofile.userprofile.css'] = array(
+	'styles' => 'UserProfile.css',
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'SocialProfile/UserProfile',
+	'position' => 'top'
+);
+
+$wgResourceModules['ext.socialprofile.userprofile.js'] = array(
+	'scripts' => 'UserProfilePage.js',
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'SocialProfile/UserProfile',
+);
+
 // Modules for Special:EditProfile/Special:UpdateProfile
 $wgResourceModules['ext.userProfile.updateProfile'] = array(
 	'styles' => 'UserProfile.css',
@@ -61,7 +74,7 @@ $wgHooks['ArticleFromTitle'][] = 'wfUserProfileFromTitle';
  * @return true
  */
 function wfUserProfileFromTitle( &$title, &$article ) {
-	global $wgRequest, $wgOut, $wgHooks, $wgUserPageChoice, $wgUserProfileScripts;
+	global $wgRequest, $wgOut, $wgHooks, $wgUserPageChoice;
 
 	if ( strpos( $title->getText(), '/' ) === false &&
 		( NS_USER == $title->getNamespace() || NS_USER_PROFILE == $title->getNamespace() )
@@ -87,7 +100,7 @@ function wfUserProfileFromTitle( &$title, &$article ) {
 			$wgHooks['ParserLimitReport'][] = 'wfUserProfileMarkUncacheable';
 		}
 
-		$wgOut->addExtensionStyle( $wgUserProfileScripts . '/UserProfile.css' );
+		$wgOut->addModules( 'ext.socialprofile.userprofile.css' );
 
 		$article = new UserProfilePage( $title );
 	}

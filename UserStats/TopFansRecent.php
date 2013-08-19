@@ -15,12 +15,16 @@ class TopFansRecent extends UnlistedSpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgRequest, $wgUser, $wgOut, $wgMemc, $wgScriptPath;
+		global $wgMemc;
+
+		$out = $this->getOutput();
+		$request = $this->getRequest();
+		$user = $this->getUser();
 
 		// Load CSS
-		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStats/TopList.css' );
+		$out->addModules( 'ext.socialprofile.userstats.css' );
 
-		$periodFromRequest = $wgRequest->getVal( 'period' );
+		$periodFromRequest = $request->getVal( 'period' );
 		if ( $periodFromRequest == 'weekly' ) {
 			$period = 'weekly';
 		} elseif ( $periodFromRequest == 'monthly' ) {
@@ -32,10 +36,11 @@ class TopFansRecent extends UnlistedSpecialPage {
 		}
 
 		if ( $period == 'weekly' ) {
-			$wgOut->setPageTitle( wfMsg( 'user-stats-weekly-title' ) );
+			$pageTitle = 'user-stats-weekly-title';
 		} else {
-			$wgOut->setPageTitle( wfMsg( 'user-stats-monthly-title' ) );
+			$pageTitle = 'user-stats-monthly-title';
 		}
+		$out->setPageTitle( $this->msg( $pageTitle )->plain() );
 
 		$count = 50;
 
@@ -44,6 +49,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 		// Try cache
 		$key = wfMemcKey( 'user_stats', $period, 'points', $count );
 		$data = $wgMemc->get( $key );
+
 		if ( $data != '' ) {
 			wfDebug( "Got top users by {$period} points ({$count}) from cache\n" );
 			$user_list = $data;
@@ -61,6 +67,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 				__METHOD__,
 				$params
 			);
+
 			foreach ( $res as $row ) {
 				$user_list[] = array(
 					'user_id' => $row->up_user_id,
@@ -68,6 +75,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 					'points' => $row->up_points
 				);
 			}
+
 			$wgMemc->set( $key, $user_list, 60 * 5 );
 		}
 
@@ -75,30 +83,30 @@ class TopFansRecent extends UnlistedSpecialPage {
 		$top_title = SpecialPage::getTitleFor( 'TopUsers' );
 		$recent_title = SpecialPage::getTitleFor( 'TopUsersRecent' );
 
-		$out = '<div class="top-fan-nav">
-			<h1>' . wfMsg( 'top-fans-by-points-nav-header' ) . '</h1>
+		$output = '<div class="top-fan-nav">
+			<h1>' . $this->msg( 'top-fans-by-points-nav-header' )->plain() . '</h1>
 			<p><a href="' . $top_title->escapeFullURL() . '">' .
-				wfMsg( 'top-fans-total-points-link' ) . '</a></p>';
+				$this->msg( 'top-fans-total-points-link' )->plain() . '</a></p>';
 
 		if ( $period == 'weekly' ) {
-			$out .= '<p><a href="' . $recent_title->escapeFullURL( 'period=monthly' ) . '">' .
-				wfMsg( 'top-fans-monthly-points-link' ) . '</a><p>
-			<p><b>' . wfMsg( 'top-fans-weekly-points-link' ) . '</b></p>';
+			$output .= '<p><a href="' . $recent_title->escapeFullURL( 'period=monthly' ) . '">' .
+				$this->msg( 'top-fans-monthly-points-link' )->plain() . '</a><p>
+			<p><b>' . $this->msg( 'top-fans-weekly-points-link' )->plain() . '</b></p>';
 		} else {
-			$out .= '<p><b>' . wfMsg( 'top-fans-monthly-points-link' ) . '</b><p>
+			$output .= '<p><b>' . $this->msg( 'top-fans-monthly-points-link' )->plain() . '</b><p>
 			<p><a href="' . $recent_title->escapeFullURL( 'period=weekly' ) . '">' .
-				wfMsg( 'top-fans-weekly-points-link' ) . '</a></p>';
+				$this->msg( 'top-fans-weekly-points-link' )->plain() . '</a></p>';
 		}
 
 		// Build nav of stats by category based on MediaWiki:Topfans-by-category
 		$by_category_title = SpecialPage::getTitleFor( 'TopFansByStatistic' );
-		$message = wfMsgForContent( 'topfans-by-category' );
+		$message = $this->msg( 'topfans-by-category' )->inContentLanguage();
 
-		if ( !wfEmptyMsg( 'topfans-by-category', $message ) ) {
-			$out .= '<h1 class="top-title">' .
-				wfMsg( 'top-fans-by-category-nav-header' ) . '</h1>';
+		if ( !$message->isDisabled() ) {
+			$output .= '<h1 class="top-title">' .
+				$this->msg( 'top-fans-by-category-nav-header' )->plain() . '</h1>';
 
-			$lines = explode( "\n", $message );
+			$lines = explode( "\n", $message->text() );
 			foreach ( $lines as $line ) {
 				if ( strpos( $line, '*' ) !== 0 ) {
 					continue;
@@ -107,37 +115,37 @@ class TopFansRecent extends UnlistedSpecialPage {
 					$stat = $line[0];
 					$link_text = $line[1];
 					$statURL = $by_category_title->escapeFullURL( "stat={$stat}" );
-					$out .= '<p><a href="' . $statURL . '">' . $link_text . '</a></p>';
+					$output .= '<p><a href="' . $statURL . '">' . $link_text . '</a></p>';
 				}
 			}
 		}
 
-		$out .= '</div>';
+		$output .= '</div>';
 
 		$x = 1;
-		$out .= '<div class="top-users">';
+		$output .= '<div class="top-users">';
 
 		foreach ( $user_list as $user ) {
 			$user_title = Title::makeTitle( NS_USER, $user['user_name'] );
 			$avatar = new wAvatar( $user['user_id'], 'm' );
 			$avatarImage = $avatar->getAvatarURL();
 
-			$out .= '<div class="top-fan-row">
+			$output .= '<div class="top-fan-row">
 				<span class="top-fan-num">' . $x . '.</span>
 				<span class="top-fan">' .
 					$avatarImage .
 					'<a href="' . $user_title->escapeFullURL() . '" >' . $user['user_name'] . '</a>
 				</span>';
 
-			$out .= '<span class="top-fan-points"><b>' .
-				number_format( $user['points'] ) . '</b> ' .
-				wfMsg( 'top-fans-points' ) . '</span>';
-			$out .= '<div class="cleared"></div>';
-			$out .= '</div>';
+			$output .= '<span class="top-fan-points"><b>' .
+				$this->getLanguage()->formatNum( $user['points'] ) . '</b> ' .
+				$this->msg( 'top-fans-points' )->plain() . '</span>';
+			$output .= '<div class="cleared"></div>';
+			$output .= '</div>';
 			$x++;
 		}
 
-		$out .= '</div><div class="cleared"></div>';
-		$wgOut->addHTML( $out );
+		$output .= '</div><div class="cleared"></div>';
+		$out->addHTML( $output );
 	}
 }

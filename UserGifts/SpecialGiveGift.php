@@ -21,51 +21,54 @@ class GiveGift extends SpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgUser, $wgOut, $wgRequest, $wgMemc, $wgUploadPath, $wgUserGiftsScripts;
+		global $wgMemc, $wgUploadPath;
+
+		$out = $this->getOutput();
+		$request = $this->getRequest();
+		$user = $this->getUser();
 
 		$output = ''; // Prevent E_NOTICE
 
-		$wgOut->addScriptFile( $wgUserGiftsScripts . '/UserGifts.js' );
-		$wgOut->addExtensionStyle( $wgUserGiftsScripts . '/UserGifts.css' );
+		// Add CSS & JS
+		$out->addModules( array(
+			'ext.socialprofile.usergifts.css',
+			'ext.socialprofile.usergifts.js'
+		) );
 
-		$userTitle = Title::newFromDBkey( $wgRequest->getVal( 'user' ) );
+		$userTitle = Title::newFromDBkey( $request->getVal( 'user' ) );
 		if ( !$userTitle ) {
-			$wgOut->addHTML( $this->displayFormNoUser() );
+			$out->addHTML( $this->displayFormNoUser() );
 			return false;
 		}
 
-		$user_title = Title::makeTitle( NS_USER, $wgRequest->getVal( 'user' ) );
+		$user_title = Title::makeTitle( NS_USER, $request->getVal( 'user' ) );
 		$this->user_name_to = $userTitle->getText();
 		$this->user_id_to = User::idFromName( $this->user_name_to );
-		$giftId = $wgRequest->getInt( 'gift_id' );
-		$out = '';
+		$giftId = $request->getInt( 'gift_id' );
 
-		if ( $wgUser->getID() === $this->user_id_to ) {
-			$wgOut->setPageTitle( wfMsg( 'g-error-title' ) );
-			$out .= wfMsg( 'g-error-message-to-yourself' );
-			$wgOut->addHTML( $out );
-		} elseif ( $wgUser->isBlocked() ) {
-			$wgOut->setPageTitle( wfMsg( 'g-error-title' ) );
-			$out .= wfMsg( 'g-error-message-blocked' );
-			$wgOut->addHTML( $out );
+		if ( $user->getID() === $this->user_id_to ) {
+			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
+			$out->addHTML( $this->msg( 'g-error-message-to-yourself' )->plain() );
+		} elseif ( $user->isBlocked() ) {
+			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
+			$out->addHTML( $this->msg( 'g-error-message-blocked' )->plain() );
 		} elseif ( $this->user_id_to == 0 ) {
-			$wgOut->setPageTitle( wfMsg( 'g-error-title' ) );
-			$wgOut->addHTML( wfMsg( 'g-error-message-no-user' ) );
-		} elseif ( $wgUser->getID() == 0 ) {
-			$wgOut->setPageTitle( wfMsg( 'g-error-title' ) );
-			$out .= wfMsg( 'g-error-message-login' );
-			$wgOut->addHTML( $out );
+			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
+			$out->addHTML( $this->msg( 'g-error-message-no-user' )->plain() );
+		} elseif ( $user->getID() == 0 ) {
+			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
+			$out->addHTML( $this->msg( 'g-error-message-login' )->plain() );
 		} else {
-			$gift = new UserGifts( $wgUser->getName() );
+			$gift = new UserGifts( $user->getName() );
 
-			if ( $wgRequest->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
+			if ( $request->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
 				$_SESSION['alreadysubmitted'] = true;
 
 				$ug_gift_id = $gift->sendGift(
 					$this->user_name_to,
-					$wgRequest->getInt( 'gift_id' ),
+					$request->getInt( 'gift_id' ),
 					0,
-					$wgRequest->getVal( 'message' )
+					$request->getVal( 'message' )
 				);
 
 				// clear the cache for the user profile gifts for this user
@@ -80,7 +83,7 @@ class GiveGift extends SpecialPage {
 
 				if ( is_array( $lastUniqueGifts ) ) {
 					foreach ( $lastUniqueGifts as $lastUniqueGift ) {
-						if ( $wgRequest->getInt( 'gift_id' ) == $lastUniqueGift['gift_id'] ) {
+						if ( $request->getInt( 'gift_id' ) == $lastUniqueGift['gift_id'] ) {
 							$found = 0;
 						}
 					}
@@ -90,7 +93,7 @@ class GiveGift extends SpecialPage {
 					// add new unique to array
 					$lastUniqueGifts[] = array(
 						'id' => $ug_gift_id,
-						'gift_id' => $wgRequest->getInt( 'gift_id' )
+						'gift_id' => $request->getInt( 'gift_id' )
 					);
 
 					// remove oldest value
@@ -103,19 +106,19 @@ class GiveGift extends SpecialPage {
 				}
 
 				$sent_gift = UserGifts::getUserGift( $ug_gift_id );
-				$gift_image = '<img src="' . $wgUploadPath . '/awards/' . 
+				$gift_image = '<img src="' . $wgUploadPath . '/awards/' .
 					Gifts::getGiftImage( $sent_gift['gift_id'], 'l' ) .
 					'" border="0" alt="" />';
 
-				$output .= $wgOut->setPageTitle( wfMsg( 'g-sent-title', $this->user_name_to ) );
+				$out->setPageTitle( $this->msg( 'g-sent-title', $this->user_name_to )->parse() );
 
 				$output .= '<div class="back-links">
 					<a href="' . $user_title->escapeFullURL() . '">' .
-						wfMsg( 'g-back-link', $this->user_name_to ) .
+						$this->msg( 'g-back-link', $this->user_name_to )->parse() .
 					'</a>
 				</div>
 				<div class="g-message">' .
-					wfMsg( 'g-sent-message', $this->user_name_to ) .
+					$this->msg( 'g-sent-message', $this->user_name_to )->parse() .
 				'</div>
 				<div class="g-container">' .
 					$gift_image .
@@ -128,18 +131,18 @@ class GiveGift extends SpecialPage {
 				$output .= '</div>
 				<div class="cleared"></div>
 				<div class="g-buttons">
-					<input type="button" class="site-button" value="' . wfMsg( 'g-main-page' ) . '" size="20" onclick="window.location=\'index.php?title=' . wfMsgForContent( 'mainpage' ) . '\'" />
-					<input type="button" class="site-button" value="' . wfMsg( 'g-your-profile' ) . '" size="20" onclick="window.location=\'' . $wgUser->getUserPage()->escapeFullURL() . '\'" />
+					<input type="button" class="site-button" value="' . $this->msg( 'g-main-page' )->plain() . '" size="20" onclick="window.location=\'index.php?title=' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '\'" />
+					<input type="button" class="site-button" value="' . $this->msg( 'g-your-profile' )->plain() . '" size="20" onclick="window.location=\'' . $user->getUserPage()->escapeFullURL() . '\'" />
 				</div>';
 
-				$wgOut->addHTML( $output );
+				$out->addHTML( $output );
 			} else {
 				$_SESSION['alreadysubmitted'] = false;
 
 				if ( $giftId ) {
-					$wgOut->addHTML( $this->displayFormSingle() );
+					$out->addHTML( $this->displayFormSingle() );
 				} else {
-					$wgOut->addHTML( $this->displayFormAll() );
+					$out->addHTML( $this->displayFormAll() );
 				}
 			}
 		}
@@ -152,13 +155,15 @@ class GiveGift extends SpecialPage {
 	 * @return String: HTML
 	 */
 	function displayFormSingle() {
-		global $wgUser, $wgOut, $wgRequest, $wgUploadPath;
+		global $wgUploadPath;
 
-		$giftId = $wgRequest->getInt( 'gift_id' );
+		$out = $this->getOutput();
+
+		$giftId = $this->getRequest()->getInt( 'gift_id' );
 
 		if ( !$giftId || !is_numeric( $giftId ) ) {
-			$wgOut->setPageTitle( wfMsg( 'g-error-title' ) );
-			$wgOut->addHTML( wfMsg( 'g-error-message-invalid-link' ) );
+			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
+			$out->addHTML( $this->msg( 'g-error-message-invalid-link' )->plain() );
 			return false;
 		}
 
@@ -168,7 +173,7 @@ class GiveGift extends SpecialPage {
 			return false;
 		}
 
-		if ( $gift['access'] == 1 && $wgUser->getID() != $gift['creator_user_id'] ) {
+		if ( $gift['access'] == 1 && $this->getUser()->getID() != $gift['creator_user_id'] ) {
 			return $this->displayFormAll();
 		}
 
@@ -176,7 +181,7 @@ class GiveGift extends SpecialPage {
 		$user = Title::makeTitle( NS_USER, $this->user_name_to );
 		$giveGiftLink = SpecialPage::getTitleFor( 'GiveGift' );
 
-		$wgOut->setPageTitle( wfMsg( 'g-give-to-user-title', $gift['gift_name'], $this->user_name_to ) );
+		$out->setPageTitle( $this->msg( 'g-give-to-user-title', $gift['gift_name'], $this->user_name_to )->parse() );
 
 		$gift_image = "<img id=\"gift_image_{$gift['gift_id']}\" src=\"{$wgUploadPath}/awards/" .
 			Gifts::getGiftImage( $gift['gift_id'], 'l' ) .
@@ -184,11 +189,11 @@ class GiveGift extends SpecialPage {
 
 		$output = '<form action="" method="post" enctype="multipart/form-data" name="gift">
 			<div class="g-message">' .
-				wfMsg(
+				$this->msg(
 					'g-give-to-user-message',
 					$this->user_name_to,
 					$giveGiftLink->escapeFullURL( 'user=' . $this->user_name_to )
-				) . "</div>
+				)->text() . "</div>
 			<div id=\"give_gift_{$gift['gift_id']}\" class=\"g-container\">
 				{$gift_image}
 				<div class=\"g-title\">{$gift['gift_name']}</div>";
@@ -199,13 +204,13 @@ class GiveGift extends SpecialPage {
 		}
 		$output .= '</div>
 			<div class="cleared"></div>
-			<div class="g-add-message">' . wfMsg( 'g-add-message' ) . '</div>
+			<div class="g-add-message">' . $this->msg( 'g-add-message' )->plain() . '</div>
 			<textarea name="message" id="message" rows="4" cols="50"></textarea>
 			<div class="g-buttons">
 				<input type="hidden" name="gift_id" value="' . $giftId . '" />
 				<input type="hidden" name="user_name" value="' . addslashes( $this->user_name_to ) . '" />
-				<input type="button" class="site-button" value="' . wfMsg( 'g-send-gift' ) . '" size="20" onclick="document.gift.submit()" />
-				<input type="button" class="site-button" value="' . wfMsg( 'g-cancel' ) . '" size="20" onclick="history.go(-1)" />
+				<input type="button" class="site-button" value="' . $this->msg( 'g-send-gift' )->plain() . '" size="20" onclick="document.gift.submit()" />
+				<input type="button" class="site-button" value="' . $this->msg( 'g-cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
 			</div>
 		</form>';
 
@@ -219,31 +224,31 @@ class GiveGift extends SpecialPage {
 	 * @return String: HTML
 	 */
 	function displayFormNoUser() {
-		global $wgUser, $wgOut, $wgFriendingEnabled;
+		global $wgFriendingEnabled;
 
-		$wgOut->setPageTitle( wfMsg( 'g-give-no-user-title' ) );
+		$this->getOutput()->setPageTitle( $this->msg( 'g-give-no-user-title' )->plain() );
 
 		$output = '<form action="" method="get" enctype="multipart/form-data" name="gift">' .
 			Html::hidden( 'title', $this->getTitle() ) .
 			'<div class="g-message">' .
-				wfMsg( 'g-give-no-user-message' ) .
+				$this->msg( 'g-give-no-user-message' )->plain() .
 			'</div>
 			<div class="g-give-container">';
 
 			// If friending is enabled, build a dropdown menu of the user's
 			// friends
 			if ( $wgFriendingEnabled ) {
-				$rel = new UserRelationship( $wgUser->getName() );
+				$rel = new UserRelationship( $this->getUser()->getName() );
 				$friends = $rel->getRelationshipList( 1 );
 
 				if ( $friends ) {
 					$output .= '<div class="g-give-title">' .
-						wfMsg( 'g-give-list-friends-title' ) .
+						$this->msg( 'g-give-list-friends-title' )->plain() .
 					'</div>
 					<div class="g-gift-select">
-						<select onchange="javascript:chooseFriend(this.value)">
+						<select>
 							<option value="#" selected="selected">' .
-								wfMsg( 'g-select-a-friend' ) .
+								$this->msg( 'g-select-a-friend' )->plain() .
 							'</option>';
 					foreach ( $friends as $friend ) {
 						$output .= '<option value="' . urlencode( $friend['user_name'] ) . '">' .
@@ -253,17 +258,17 @@ class GiveGift extends SpecialPage {
 					$output .= '</select>
 					</div>
 					<div class="g-give-separator">' .
-						wfMsg( 'g-give-separator' ) .
+						$this->msg( 'g-give-separator' )->plain() .
 					'</div>';
 				}
 			}
 
 			$output .= '<div class="g-give-title">' .
-				wfMsg( 'g-give-enter-friend-title' ) .
+				$this->msg( 'g-give-enter-friend-title' )->plain() .
 			'</div>
 			<div class="g-give-textbox">
 				<input type="text" width="85" name="user" value="" />
-				<input class="site-button" type="button" value="' . wfMsg( 'g-give-gift' ) . '" onclick="document.gift.submit()" />
+				<input class="site-button" type="button" value="' . $this->msg( 'g-give-gift' )->plain() . '" onclick="document.gift.submit()" />
 			</div>
 			</div>
 		</form>';
@@ -272,10 +277,13 @@ class GiveGift extends SpecialPage {
 	}
 
 	function displayFormAll() {
-		global $wgUser, $wgOut, $wgRequest, $wgGiveGiftPerRow, $wgUploadPath;
+		global $wgGiveGiftPerRow, $wgUploadPath;
+
+		$out = $this->getOutput();
+
 		$user = Title::makeTitle( NS_USER, $this->user_name_to );
 
-		$page = $wgRequest->getInt( 'page' );
+		$page = $this->getRequest()->getInt( 'page' );
 		if ( !$page || !is_numeric( $page ) ) {
 			$page = 1;
 		}
@@ -291,15 +299,15 @@ class GiveGift extends SpecialPage {
 		$output = '';
 
 		if ( $gifts ) {
-			$wgOut->setPageTitle( wfMsg( 'g-give-all-title', $this->user_name_to ) );
+			$out->setPageTitle( $this->msg( 'g-give-all-title', $this->user_name_to )->parse() );
 
 			$output .= '<div class="back-links">
 				<a href="' . $user->escapeFullURL() . '">' .
-					wfMsg( 'g-back-link', $this->user_name_to ) .
+					$this->msg( 'g-back-link', $this->user_name_to )->parse() .
 				'</a>
 			</div>
 			<div class="g-message">' .
-				wfMsg( 'g-give-all', $this->user_name_to ) .
+				$this->msg( 'g-give-all', $this->user_name_to )->parse() .
 			'</div>
 			<form action="" method="post" enctype="multipart/form-data" name="gift">';
 
@@ -327,15 +335,23 @@ class GiveGift extends SpecialPage {
 			/**
 			 * Build next/prev nav
 			 */
-			$giveGiftLink = SpecialPage::getTitleFor( 'GiveGift' );
+			$giveGiftLink = $this->getTitle();
 
 			$numofpages = $total / $per_page;
-			$user_safe = urlencode( $user->getText() );
+			$user_name = $user->getText();
+
 			if ( $numofpages > 1 ) {
 				$output .= '<div class="page-nav">';
 				if ( $page > 1 ) {
-					$output .= '<a href="' . $giveGiftLink->escapeFullURL( 'user=' . $user_safe . '&page=' . ( $page - 1 ) ) . '">' .
-						wfMsg( 'g-previous' ) . '</a> ';
+					$output .= Linker::link(
+						$giveGiftLink,
+						$this->msg( 'g-previous' )->plain(),
+						array(),
+						array(
+							'user' => $user_name,
+							'page' => ( $page - 1 )
+						)
+					) . $this->msg( 'word-separator' )->plain();
 				}
 
 				if ( ( $total % $per_page ) != 0 ) {
@@ -348,35 +364,52 @@ class GiveGift extends SpecialPage {
 					if ( $i == $page ) {
 						$output .= ( $i . ' ' );
 					} else {
-						$output .= '<a href="' . $giveGiftLink->escapeFullURL( 'user=' . $user_safe . '&page=' . $i ) . "\">$i</a> ";
+						$output .= Linker::link(
+							$giveGiftLink,
+							$i,
+							array(),
+							array(
+								'user' => $user_name,
+								'page' => $i
+							)
+						) . $this->msg( 'word-separator' )->plain();
 					}
 				}
 
 				if ( ( $total - ( $per_page * $page ) ) > 0 ) {
-					$output .= ' <a href="' . $giveGiftLink->escapeFullURL( 'user=' . $user_safe . '&page=' . ( $page + 1 ) ) . '">' .
-						wfMsg( 'g-next' ) . '</a>';
+					$output .= $this->msg( 'word-separator' )->plain() .
+						Linker::link(
+							$giveGiftLink,
+							$this->msg( 'g-next' )->plain(),
+							array(),
+							array(
+								'user' => $user_name,
+								'page' => ( $page + 1 )
+							)
+						);
 				}
 				$output .= '</div>';
 			}
 
 			/**
-			 * Build next/prev nav
+			 * Build the send/cancel buttons and whatnot
 			 */
 			$output .= '<div class="g-give-all-message-title">' .
-				wfMsg( 'g-give-all-message-title' ) .
+				$this->msg( 'g-give-all-message-title' )->plain() .
 			'</div>
 				<textarea name="message" id="message" rows="4" cols="50"></textarea>
 				<div class="g-buttons">
 					<input type="hidden" name="gift_id" value="0" />
 					<input type="hidden" name="user_name" value="' . addslashes( $this->user_name_to ) . '" />
-					<input type="button" class="site-button" value="' . wfMsg( 'g-send-gift' ) . '" size="20" onclick="sendGift()" />
-					<input type="button" class="site-button" value="' . wfMsg( 'g-cancel' ) . '" size="20" onclick="history.go(-1)" />
+					<input type="button" class="site-button" value="' . $this->msg( 'g-send-gift' )->plain() . '" size="20" onclick="sendGift()" />
+					<input type="button" class="site-button" value="' . $this->msg( 'g-cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
 				</div>
 			</form>';
 		} else {
-			$wgOut->setPageTitle( wfMsg( 'g-error-title' ) );
-			$wgOut->addHTML( wfMsg( 'g-error-message-invalid-link' ) );
+			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
+			$out->addHTML( $this->msg( 'g-error-message-invalid-link' )->plain() );
 		}
+
 		return $output;
 	}
 }

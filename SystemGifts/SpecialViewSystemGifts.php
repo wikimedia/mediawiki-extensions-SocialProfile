@@ -21,22 +21,27 @@ class ViewSystemGifts extends SpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgUser, $wgOut, $wgRequest, $wgUploadPath, $wgSystemGiftsScripts;
+		global $wgUploadPath;
 
-		$wgOut->addExtensionStyle( $wgSystemGiftsScripts . '/SystemGift.css' );
+		$out = $this->getOutput();
+		$request = $this->getRequest();
+		$user = $this->getUser();
+
+		// Add CSS
+		$out->addModules( 'ext.socialprofile.systemgifts.css' );
 
 		$output = '';
-		$user_name = $wgRequest->getVal( 'user' );
-		$page = $wgRequest->getInt( 'page', 1 );
+		$user_name = $request->getVal( 'user' );
+		$page = $request->getInt( 'page', 1 );
 
 		/**
 		 * Redirect Non-logged in users to Login Page
 		 * It will automatically return them to the ViewSystemGifts page
 		 */
-		if ( $wgUser->getID() == 0 && $user_name == '' ) {
-			$wgOut->setPageTitle( wfMsg( 'ga-error-title' ) );
+		if ( $user->getID() == 0 && $user_name == '' ) {
+			$out->setPageTitle( $this->msg( 'ga-error-title' )->plain() );
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
-			$wgOut->redirect( $login->escapeFullURL( 'returnto=Special:ViewSystemGifts' ) );
+			$out->redirect( $login->escapeFullURL( 'returnto=Special:ViewSystemGifts' ) );
 			return false;
 		}
 
@@ -44,7 +49,7 @@ class ViewSystemGifts extends SpecialPage {
 		 * If no user is set in the URL, we assume it's the current user
 		 */
 		if ( !$user_name ) {
-			$user_name = $wgUser->getName();
+			$user_name = $user->getName();
 		}
 		$user_id = User::idFromName( $user_name );
 
@@ -52,8 +57,8 @@ class ViewSystemGifts extends SpecialPage {
 		 * Error message for username that does not exist (from URL)
 		 */
 		if ( $user_id == 0 ) {
-			$wgOut->setPageTitle( wfMsg( 'ga-error-title' ) );
-			$wgOut->addHTML( wfMsg( 'ga-error-message-no-user' ) );
+			$out->setPageTitle( $this->msg( 'ga-error-title' )->plain() );
+			$out->addHTML( $this->msg( 'ga-error-message-no-user' )->plain() );
 			return false;
 		}
 
@@ -74,17 +79,17 @@ class ViewSystemGifts extends SpecialPage {
 		/**
 		 * Show gift count for user
 		 */
-		$wgOut->setPageTitle( wfMsg( 'ga-title', $rel->user_name ) );
+		$out->setPageTitle( $this->msg( 'ga-title', $rel->user_name )->parse() );
 
 		$output .= '<div class="back-links">' .
-			wfMsg(
+			$this->msg(
 				'ga-back-link',
-				$wgUser->getUserPage()->escapeFullURL(),
+				$user->getUserPage()->escapeFullURL(),
 				$rel->user_name
-			) . '</div>';
+			)->text() . '</div>';
 
 		$output .= '<div class="ga-count">' .
-			wfMsgExt( 'ga-count', 'parsemag', $rel->user_name, $total ) .
+			$this->msg( 'ga-count', $rel->user_name, $total )->parse() .
 		'</div>';
 
 		// Safelinks
@@ -104,12 +109,12 @@ class ViewSystemGifts extends SpecialPage {
 						"\">{$gift['gift_name']}</a>";
 
 				if ( $gift['status'] == 1 ) {
-					if ( $user_name == $wgUser->getName() ) {
+					if ( $user_name == $user->getName() ) {
 						$rel->clearUserGiftStatus( $gift['id'] );
-						$rel->decNewSystemGiftCount( $wgUser->getID() );
+						$rel->decNewSystemGiftCount( $user->getID() );
 					}
 					$output .= '<span class="ga-new">' .
-						wfMsg( 'ga-new' ) . '</span>';
+						$this->msg( 'ga-new' )->plain() . '</span>';
 				}
 
 				$output .= '<div class="cleared"></div>
@@ -127,14 +132,21 @@ class ViewSystemGifts extends SpecialPage {
 		 */
 		$numofpages = $total / $per_page;
 
-		$page_link = SpecialPage::getTitleFor( 'ViewSystemGifts' );
+		$page_link = $this->getTitle();
 
 		if ( $numofpages > 1 ) {
 			$output .= '<div class="page-nav">';
+
 			if ( $page > 1 ) {
-				$output .= '<a href="' . $page_link->escapeFullURL(
-					'user=' . $user_name . '&page=' . ( $page - 1 ) ) . '">' .
-					wfMsg( 'ga-previous' ) . '</a> ';
+				$output .= Linker::link(
+					$page_link,
+					$this->msg( 'ga-previous' )->plain(),
+					array(),
+					array(
+						'user' => $user_name,
+						'page' => ( $page - 1 )
+					)
+				) . $this->msg( 'word-separator' )->plain();
 			}
 
 			if ( ( $total % $per_page ) != 0 ) {
@@ -151,23 +163,37 @@ class ViewSystemGifts extends SpecialPage {
 				if ( $i == $page ) {
 					$output .= ( $i . ' ' );
 				} else {
-					$output .= '<a href="' . $page_link->escapeFullURL(
-						'user=' . $user_name . '&page=' . $i ) . "\">$i</a> ";
+					$output .= Linker::link(
+						$page_link,
+						$i,
+						array(),
+						array(
+							'user' => $user_name,
+							'page' => $i
+						)
+					) . $this->msg( 'word-separator' )->plain();
 				}
 			}
 
 			if ( ( $total - ( $per_page * $page ) ) > 0 ) {
-				$output .= ' <a href="' . $page_link->escapeFullURL(
-					'user=' . $user_name . '&page=' . ( $page + 1 ) ) . '">' .
-					wfMsg( 'ga-next' ) .
-				'</a>';
+				$output .= $this->msg( 'word-separator' )->plain() .
+					Linker::link(
+						$page_link,
+						$this->msg( 'ga-next' )->plain(),
+						array(),
+						array(
+							'user' => $user_name,
+							'page' => ( $page + 1 )
+						)
+					);
 			}
+
 			$output .= '</div>';
 		}
 
 		/**
-		 * Build next/prev nav
+		 * Output everything
 		 */
-		$wgOut->addHTML( $output );
+		$out->addHTML( $output );
 	}
 }

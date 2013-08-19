@@ -15,14 +15,18 @@ class ViewGift extends UnlistedSpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgUser, $wgOut, $wgRequest, $wgUploadPath, $wgUserGiftsScripts;
+		global $wgUploadPath;
 
-		$wgOut->addExtensionStyle( $wgUserGiftsScripts . '/UserGifts.css' );
+		$out = $this->getOutput();
+		$user = $this->getUser();
 
-		$giftId = $wgRequest->getInt( 'gift_id' );
+		// Add CSS
+		$out->addModules( 'ext.socialprofile.usergifts.css' );
+
+		$giftId = $this->getRequest()->getInt( 'gift_id' );
 		if ( !$giftId || !is_numeric( $giftId ) ) {
-			$wgOut->setPageTitle( wfMsg( 'g-error-title' ) );
-			$wgOut->addHTML( wfMsg( 'g-error-message-invalid-link' ) );
+			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
+			$out->addHTML( $this->msg( 'g-error-message-invalid-link' )->plain() );
 			return false;
 		}
 
@@ -30,10 +34,10 @@ class ViewGift extends UnlistedSpecialPage {
 
 		if ( $gift ) {
 			if ( $gift['status'] == 1 ) {
-				if ( $gift['user_name_to'] == $wgUser->getName() ) {
+				if ( $gift['user_name_to'] == $user->getName() ) {
 					$g = new UserGifts( $gift['user_name_to'] );
 					$g->clearUserGiftStatus( $gift['id'] );
-					$g->decNewGiftCount( $wgUser->getID() );
+					$g->decNewGiftCount( $user->getID() );
 				}
 			}
 
@@ -44,7 +48,7 @@ class ViewGift extends UnlistedSpecialPage {
 				array( 'DISTINCT ug_user_name_to', 'ug_user_id_to', 'ug_date' ),
 				array(
 					'ug_gift_id' => $gift['gift_id'],
-					"ug_user_name_to <> '" . addslashes( $gift['user_name_to'] ) . "'"
+					"ug_user_name_to <> '" . $dbr->addQuotes( $gift['user_name_to'] ) . "'"
 				),
 				__METHOD__,
 				array(
@@ -54,16 +58,16 @@ class ViewGift extends UnlistedSpecialPage {
 				)
 			);
 
-			$wgOut->setPageTitle( wfMsgExt(
+			$out->setPageTitle( $this->msg(
 				'g-description-title',
 				'parsemag',
 				$gift['user_name_to'],
 				$gift['name']
-			) );
+			)->parse() );
 
 			$output = '<div class="back-links">
 				<a href="' . Title::makeTitle( NS_USER, $gift['user_name_to'] )->escapeFullURL() . '">'
-				. wfMsg( 'g-back-link', $gift['user_name_to'] ) . '</a>
+				. $this->msg( 'g-back-link', $gift['user_name_to'] )->parse() . '</a>
 			</div>';
 
 			$user = Title::makeTitle( NS_USER, $gift['user_name_from'] );
@@ -74,18 +78,18 @@ class ViewGift extends UnlistedSpecialPage {
 				Gifts::getGiftImage( $gift['gift_id'], 'l' ) .
 				'" border="0" alt="" />';
 
-			$message = $wgOut->parse( trim( $gift['message'] ), false );
+			$message = $out->parse( trim( $gift['message'] ), false );
 
 			$output .= '<div class="g-description-container">';
 			$output .= '<div class="g-description">' .
 					$giftImage .
 					'<div class="g-name">' . $gift['name'] . '</div>
 					<div class="g-timestamp">(' . $gift['timestamp'] . ')</div>
-					<div class="g-from">' . wfMsg(
+					<div class="g-from">' . $this->msg(
 						'g-from',
 						$user->escapeFullURL(),
 						$gift['user_name_from']
-					) . '</div>';
+					)->text() . '</div>';
 			if ( $message ) {
 				$output .= '<div class="g-user-message">' . $message . '</div>';
 			}
@@ -93,21 +97,21 @@ class ViewGift extends UnlistedSpecialPage {
 					<div class="g-describe">' . $gift['description'] . '</div>
 					<div class="g-actions">
 						<a href="' . $giveGiftLink->escapeFullURL( 'gift_id=' . $gift['gift_id'] ) . '">' .
-							wfMsg( 'g-to-another' ) . '</a>';
-			if ( $gift['user_name_to'] == $wgUser->getName() ) {
-				$output .= wfMsgExt( 'pipe-separator', 'escapenoentities' );
+							$this->msg( 'g-to-another' )->plain() . '</a>';
+			if ( $gift['user_name_to'] == $user->getName() ) {
+				$output .= $this->msg( 'pipe-separator' )->escaped();
 				$output .= '<a href="' . $removeGiftLink->escapeFullURL( 'gift_id=' . $gift['id'] ) . '">' .
-					wfMsg( 'g-remove-gift' ) . '</a>';
+					$this->msg( 'g-remove-gift' )->plain() . '</a>';
 			}
 			$output .= '</div>
 				</div>';
 
 			$output .= '<div class="g-recent">
 					<div class="g-recent-title">' .
-						wfMsg( 'g-recent-recipients' ) .
+						$this->msg( 'g-recent-recipients' )->plain() .
 					'</div>
 					<div class="g-gift-count">' .
-						wfMsgExt( 'g-given', 'parsemag', $gift['gift_count'] ) .
+						$this->msg( 'g-given', $gift['gift_count'] )->parse() .
 					'</div>';
 
 			foreach ( $res as $row ) {
@@ -119,14 +123,15 @@ class ViewGift extends UnlistedSpecialPage {
 					{$avatar->getAvatarURL()}
 				</a>";
 			}
+
 			$output .= '<div class="cleared"></div>
 				</div>
 			</div>';
 
-			$wgOut->addHTML( $output );
+			$out->addHTML( $output );
 		} else {
-			$wgOut->setPageTitle( wfMsg( 'g-error-title' ) );
-			$wgOut->addHTML( wfMsg( 'g-error-message-invalid-link' ) );
+			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
+			$out->addHTML( $this->msg( 'g-error-message-invalid-link' )->plain() );
 		}
 	}
 }

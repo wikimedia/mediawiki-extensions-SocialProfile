@@ -20,16 +20,19 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 	 * purge memcached entries.
 	 */
 	function updateMainEditsCount() {
-		global $wgOut, $wgNamespacesForEditPoints;
+		global $wgNamespacesForEditPoints;
+
+		$out = $this->getOutput();
 
 		$whereConds = array();
 		$whereConds[] = 'rev_user <> 0';
 		// If points are given out for editing non-main namespaces, take that
-		// into account too.
+		// into account, too.
 		if (
 			isset( $wgNamespacesForEditPoints ) &&
 			is_array( $wgNamespacesForEditPoints )
-		) {
+		)
+		{
 			foreach( $wgNamespacesForEditPoints as $pointNamespace ) {
 				$whereConds[] = 'page_namespace = ' . (int) $pointNamespace;
 			}
@@ -73,7 +76,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 					__METHOD__
 				);
 			}
-			$wgOut->addWikiMsg(
+			$out->addWikiMsg(
 				'updateeditcounts-updating',
 				$row->rev_user_text,
 				$editCount
@@ -99,18 +102,18 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgOut, $wgUser;
+		$out = $this->getOutput();
 
 		// Check permissions -- we must be allowed to access this special page
 		// before we can run any database queries
-		if ( !$wgUser->isAllowed( 'updatepoints' ) ) {
+		if ( !$this->getUser()->isAllowed( 'updatepoints' ) ) {
 			throw new ErrorPageError( 'error', 'badaccess' );
 		}
 
 		// And obviously the database needs to be writable before we start
 		// running INSERT/UPDATE queries against it...
-		if( wfReadOnly() ) {
-			$wgOut->readOnlyPage();
+		if ( wfReadOnly() ) {
+			$out->readOnlyPage();
 			return;
 		}
 
@@ -141,6 +144,6 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 			$stats->updateTotalPoints();
 		}
 
-		$wgOut->addWikiMsg( 'updateeditcounts-updated', $x );
+		$out->addWikiMsg( 'updateeditcounts-updated', $x );
 	}
 }

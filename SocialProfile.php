@@ -109,16 +109,18 @@ $wgUserBoard = true;
 // Whether to enable friending or not -- this doesn't do very much actually, so don't rely on it
 $wgFriendingEnabled = true;
 
-// Should we enable UserStatus feature (currently is under development)
+// Should we enable UserStatus feature? (currently is under development)
 $wgEnableUserStatus = false;
+
 // Permission to delete other Users' Status Messages
 $wgGroupPermissions['sysop']['delete-status-update'] = true;
+
 // Extension credits that show up on Special:Version
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'SocialProfile',
 	'author' => array( 'Aaron Wright', 'David Pean', 'Jack Phoenix' ),
-	'version' => '1.5',
+	'version' => '1.6',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile',
 	'description' => 'A set of Social Tools for MediaWiki',
 );
@@ -207,120 +209,80 @@ $wgExtensionCredits['specialpage'][] = array(
 	'description' => 'A special page for viewing all relationships by type',
 );
 
-// Some paths used by the extensions
-$wgUserProfileDirectory = "$IP/extensions/SocialProfile/UserProfile";
-
-$wgUserBoardScripts = "$wgScriptPath/extensions/SocialProfile/UserBoard";
-$wgUserProfileScripts = "$wgScriptPath/extensions/SocialProfile/UserProfile";
-$wgUserRelationshipScripts = "$wgScriptPath/extensions/SocialProfile/UserRelationship";
+// Hooked functions
+// This has to be either here or even earlier on because the loader files mess
+// with the $dir variable...
+$wgAutoloadClasses['SocialProfileHooks'] = $dir . 'SocialProfileHooks.php';
 
 // Loader files
-require_once( "{$wgUserProfileDirectory}/UserProfile.php" ); // Profile page configuration loader file
+require_once( "$IP/extensions/SocialProfile/UserProfile/UserProfile.php" ); // Profile page configuration loader file
 require_once( "$IP/extensions/SocialProfile/UserGifts/Gifts.php" ); // UserGifts (user-to-user gifting functionality) loader file
 require_once( "$IP/extensions/SocialProfile/SystemGifts/SystemGifts.php" ); // SystemGifts (awards functionality) loader file
 require_once( "$IP/extensions/SocialProfile/UserActivity/UserActivity.php" ); // UserActivity - recent social changes
 
-// Hooked functions
-$wgHooks['CanonicalNamespaces'][] = 'wfSocialProfileRegisterCanonicalNamespaces';
-$wgHooks['LoadExtensionSchemaUpdates'][] = 'efSocialProfileSchemaUpdates';
+$wgHooks['CanonicalNamespaces'][] = 'SocialProfileHooks::onCanonicalNamespaces';
+$wgHooks['LoadExtensionSchemaUpdates'][] = 'SocialProfileHooks::onLoadExtensionSchemaUpdates';
+// For the Renameuser extension
+//$wgHooks['RenameUserSQL'][] = 'SocialProfileHooks::onRenameUserSQL';
 
-/**
- * Register the canonical names for our custom namespaces and their talkspaces.
- *
- * @param $list Array: array of namespace numbers with corresponding
- *                     canonical names
- * @return Boolean: true
- */
-function wfSocialProfileRegisterCanonicalNamespaces( &$list ) {
-	$list[NS_USER_WIKI] = 'UserWiki';
-	$list[NS_USER_WIKI_TALK] = 'UserWiki_talk';
-	$list[NS_USER_PROFILE] = 'User_profile';
-	$list[NS_USER_PROFILE_TALK] = 'User_profile_talk';
-	return true;
-}
+// ResourceLoader module definitions for certain components which do not have
+// their own loader file
 
-// Schema changes
-function efSocialProfileDBUpdate( $updater, $label, $file ) {
-	if ( $updater === null ) {
-		global $wgExtNewTables;
+// UserBoard
+$wgResourceModules['ext.socialprofile.userboard.js'] = array(
+	'scripts' => 'UserBoard.js',
+	'messages' => array( 'userboard_confirmdelete' ),
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'SocialProfile/UserBoard',
+);
 
-		$wgExtNewTables[] = array( $label, $file );
-	} else {
-		$updater->addExtensionUpdate( array( 'addTable', $label, $file, true ) );
-	}
-}
+$wgResourceModules['ext.socialprofile.userboard.css'] = array(
+	'styles' => 'UserBoard.css',
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'SocialProfile/UserBoard',
+	'position' => 'top' // just in case
+);
 
-function efSocialProfileSchemaUpdates( $updater = null ) {
-	global $wgDBtype;
+$wgResourceModules['ext.socialprofile.userboard.boardblast.css'] = array(
+	'styles' => 'BoardBlast.css',
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'SocialProfile/UserBoard',
+	'position' => 'top' // just in case
+);
 
-	$dir = dirname( __FILE__ );
-	$dbExt = '';
+$wgResourceModules['ext.socialprofile.userboard.boardblast.js'] = array(
+	'scripts' => 'BoardBlast.js',
+	'messages' => array(
+		'boardblast-js-sending', 'boardblast-js-error-missing-message',
+		'boardblast-js-error-missing-user'
+	),
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'SocialProfile/UserBoard',
+);
 
-	if ( $wgDBtype == 'postgres' ) {
-		$dbExt = '.postgres';
-	}
+// UserRelationship
+$wgResourceModules['ext.socialprofile.userrelationship.css'] = array(
+	'styles' => 'UserRelationship.css',
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'SocialProfile/UserRelationship',
+	'position' => 'top' // just in case
+);
 
-	efSocialProfileDBUpdate( $updater, 'user_board', "$dir/UserBoard/user_board$dbExt.sql" );
-	efSocialProfileDBUpdate( $updater, 'user_profile', "$dir/UserProfile/user_profile$dbExt.sql" );
-	efSocialProfileDBUpdate( $updater, 'user_stats', "$dir/UserStats/user_stats$dbExt.sql" );
-	efSocialProfileDBUpdate( $updater, 'user_relationship',	"$dir/UserRelationship/user_relationship$dbExt.sql" );
-	efSocialProfileDBUpdate( $updater, 'user_relationship_request', "$dir/UserRelationship/user_relationship$dbExt.sql" );
-	efSocialProfileDBUpdate( $updater, 'user_system_gift', "$dir/SystemGifts/systemgifts$dbExt.sql" );
-	efSocialProfileDBUpdate( $updater, 'system_gift', "$dir/SystemGifts/systemgifts$dbExt.sql" );
-	efSocialProfileDBUpdate( $updater, 'user_gift', "$dir/UserGifts/usergifts$dbExt.sql" );
-	efSocialProfileDBUpdate( $updater, 'gift', "$dir/UserGifts/usergifts$dbExt.sql" );
-	efSocialProfileDBUpdate( $updater, 'user_system_messages', "$dir/UserSystemMessages/user_system_messages$dbExt.sql" );
-	efSocialProfileDBUpdate( $updater, 'user_status', "$dir/UserStatus/userstatus$dbExt.sql" );
-	efSocialProfileDBUpdate( $updater, 'user_status_history', "$dir/UserStatus/userstatus$dbExt.sql" );
-	efSocialProfileDBUpdate( $updater, 'user_status_likes', "$dir/UserStatus/userstatus$dbExt.sql" );
+$wgResourceModules['ext.socialprofile.userrelationship.js'] = array(
+	'scripts' => 'UserRelationship.js',
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'SocialProfile/UserRelationship',
+);
 
-	return true;
-}
+// UserStats
+$wgResourceModules['ext.socialprofile.userstats.css'] = array(
+	'styles' => 'TopList.css',
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'SocialProfile/UserStats',
+	'position' => 'top' // just in case
+);
 
-/*
-// For Renameuser extension
-$wgHooks['RenameUserSQL'][] = 'efSystemGiftsOnUserRename';
-$wgHooks['RenameUserSQL'][] = 'efUserBoardOnUserRename';
-$wgHooks['RenameUserSQL'][] = 'efUserGiftsOnUserRename';
-$wgHooks['RenameUserSQL'][] = 'efUserRelationshipOnUserRename';
-$wgHooks['RenameUserSQL'][] = 'efUserStatsOnUserRename';
-$wgHooks['RenameUserSQL'][] = 'efUserSystemMessagesOnUserRename';
-
-function efSystemGiftsOnUserRename( $renameUserSQL ) {
-	$renameUserSQL->tables['user_system_gift'] = array( 'sg_user_name', 'sg_user_id' );
-	return true;
-}
-
-function efUserBoardOnUserRename( $renameUserSQL ) {
-	$renameUserSQL->tables['user_board'] = array( 'ub_user_name_from', 'ub_user_id_from' );
-	return true;
-}
-
-function efUserGiftsOnUserRename( $renameUserSQL ) {
-	$renameUserSQL->tables['user_gift'] = array( 'ug_user_name_to', 'ug_user_id_to' );
-	$renameUserSQL->tables['gift'] = array( 'gift_creator_user_name', 'gift_creator_user_id' );
-	return true;
-}
-
-function efUserRelationshipOnUserRename( $renameUserSQL ) {
-	// <fixme> This sucks and only updates half of the rows...wtf?
-	$renameUserSQL->tables['user_relationship'] = array( 'r_user_name_relation', 'r_user_id_relation' );
-	$renameUserSQL->tables['user_relationship'] = array( 'r_user_name', 'r_user_id' );
-	// </fixme>
-	$renameUserSQL->tables['user_relationship_request'] = array( 'ur_user_name_from', 'ur_user_id_from' );
-	return true;
-}
-
-function efUserStatsOnUserRename( $renameUserSQL ) {
-	$renameUserSQL->tables['user_stats'] = array( 'stats_user_name', 'stats_user_id' );
-	return true;
-}
-
-function efUserSystemMessagesOnUserRename( $renameUserSQL ) {
-	$renameUserSQL->tables['user_system_messages'] = array( 'um_user_name', 'um_user_id' );
-	return true;
-}
-*/
+// End ResourceLoader stuff
 
 if( !defined( 'NS_USER_WIKI' ) ) {
 	define( 'NS_USER_WIKI', 200 );

@@ -29,31 +29,35 @@ class GenerateTopUsersReport extends SpecialPage {
 	 * @param $period String: either weekly or monthly
 	 */
 	public function execute( $period ) {
-		global $wgUser, $wgOut, $wgRequest, $wgContLang, $wgScriptPath;
+		global $wgContLang, $wgUser;
 		global $wgUserStatsPointValues;
 
+		$out = $this->getOutput();
+		$request = $this->getRequest();
+		$user = $this->getUser();
+
 		// Blocked through Special:Block? Tough luck.
-		if( $wgUser->isBlocked() ) {
-			$wgOut->blockedPage( false );
+		if ( $user->isBlocked() ) {
+			$out->blockedPage( false );
 			return false;
 		}
 
 		// Is the database locked or not?
-		if( wfReadOnly() ) {
-			$wgOut->readOnlyPage();
+		if ( wfReadOnly() ) {
+			$out->readOnlyPage();
 			return false;
 		}
 
 		// Check for the correct permission
-		if( !$wgUser->isAllowed( 'generatetopusersreport' ) ) {
-			$wgOut->permissionRequired( 'generatetopusersreport' );
+		if ( !$user->isAllowed( 'generatetopusersreport' ) ) {
+			$out->permissionRequired( 'generatetopusersreport' );
 			return false;
 		}
 
 		// Set the page title, robot policy, etc.
 		$this->setHeaders();
 
-		$period = $wgRequest->getVal( 'period', $period );
+		$period = $request->getVal( 'period', $period );
 
 		// If we don't have a period, default to weekly or else we'll be
 		// hitting a database error because when constructing table names
@@ -66,7 +70,7 @@ class GenerateTopUsersReport extends SpecialPage {
 		// for weekly and/or monthly wins, depending on which report we're
 		// generating here. If not, there's no point in continuing.
 		if ( empty( $wgUserStatsPointValues["points_winner_{$period}"] ) ) {
-			$wgOut->addHTML( wfMsg( 'user-stats-report-error-variable-not-set', $period ) );
+			$out->addHTML( $this->msg( 'user-stats-report-error-variable-not-set', $period )->escaped() );
 			return;
 		}
 
@@ -77,11 +81,11 @@ class GenerateTopUsersReport extends SpecialPage {
 		// display look worse, not better.
 
 		// Add CSS
-		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserStats/TopList.css' );
+		$out->addExtensionStyle( 'ext.socialprofile.userstats.css' );
 
 		// Used as the LIMIT for SQL queries; basically, show this many users
 		// in the generated reports.
-		$user_count = $wgRequest->getInt( 'user_count', 10 );
+		$user_count = $request->getInt( 'user_count', 10 );
 
 		if( $period == 'weekly' ) {
 			$period_title = $wgContLang->date( wfTimestamp( TS_MW, strtotime( '-1 week' ) ) ) .
@@ -126,10 +130,10 @@ class GenerateTopUsersReport extends SpecialPage {
 				)
 			);
 
-			$out = '<div class="top-users">';
+			$output = '<div class="top-users">';
 
-			foreach( $res as $row ) {
-				if( $row->stats_total_points == $last_total ) {
+			foreach ( $res as $row ) {
+				if ( $row->stats_total_points == $last_total ) {
 					$rank = $last_rank;
 				} else {
 					$rank = $x;
@@ -145,10 +149,10 @@ class GenerateTopUsersReport extends SpecialPage {
 				);
 			}
 		} else {
-			$out = '<div class="top-users">';
+			$output = '<div class="top-users">';
 
-			foreach( $res as $row ) {
-				if( $row->up_points == $last_total ) {
+			foreach ( $res as $row ) {
+				if ( $row->up_points == $last_total ) {
 					$rank = $last_rank;
 				} else {
 					$rank = $x;
@@ -176,7 +180,7 @@ class GenerateTopUsersReport extends SpecialPage {
 					// period
 					$stats = new UserStatsTrack( $user['user_id'], $user['user_name'] );
 					$stats->incStatField( "points_winner_{$period}" );
-					if( $winners ) {
+					if ( $winners ) {
 						$winners .= ', ';
 					}
 					$winners .= "[[{$localizedUserNS}:{$user['user_name']}|{$user['user_name']}]]";
@@ -189,43 +193,40 @@ class GenerateTopUsersReport extends SpecialPage {
 		$pageContent = "__NOTOC__\n";
 
 		// For grep: user-stats-weekly-winners, user-stats-monthly-winners
-		$pageContent .= '==' . wfMsgExt(
+		$pageContent .= '==' . $this->msg(
 			"user-stats-{$period}-winners",
-			array( 'parsemag', 'content' ),
-			$winner_count
-		) . "==\n\n";
+		)->numParams( $winner_count )->inContentLanguage()->parse() . "==\n\n";
 
 		// For grep: user-stats-weekly-win-congratulations, user-stats-monthly-win-congratulations
-		$pageContent .= wfMsgExt(
-			"user-stats-{$period}-win-congratulations",
-			array( 'parsemag', 'content' ),
+		$pageContent .= $this->msg(
+			"user-stats-{$period}-win-congratulations"
+		)->numParams(
 			$winner_count,
 			$wgContLang->formatNum( $wgUserStatsPointValues["points_winner_{$period}"] )
-		) . "\n\n";
+		)->inContentLanguage()->parse() . "\n\n";
 		$pageContent .= "=={$winners}==\n\n<br />\n";
 
-		$pageContent .= '==' . wfMsgForContent( 'user-stats-full-top', $wgContLang->formatNum( $user_count ) ) . "==\n\n";
+		$pageContent .= '==' . $this->msg( 'user-stats-full-top' )->numParams(
+			$wgContLang->formatNum( $user_count ) )->inContentLanguage()->parse() . "==\n\n";
 
 		foreach( $users as $user ) {
 			$userTitle = Title::makeTitle( NS_USER, $user['user_name'] );
-			$pageContent .= wfMsgExt(
+			$pageContent .= $this->msg(
 				'user-stats-report-row',
-				array( 'content', 'parsemag' ),
 				$wgContLang->formatNum( $user['rank'] ),
 				$user['user_name'],
 				$wgContLang->formatNum( $user['points'] )
-			) . "\n\n";
+			)->inContentLanguage()->parse() . "\n\n";
 
-			$out .= "<div class=\"top-fan-row\">
+			$output .= "<div class=\"top-fan-row\">
 			<span class=\"top-fan-num\">{$user['rank']}</span><span class=\"top-fan\"> <a href='" .
 				$userTitle->getFullURL() . "' >" . $user['user_name'] . "</a>
 			</span>";
 
-			$out .= '<span class="top-fan-points">' . wfMsgExt(
+			$output .= '<span class="top-fan-points">' . $this->msg(
 				'user-stats-report-points',
-				array( 'content', 'parsemag' ),
 				$wgContLang->formatNum( $user['points'] )
-			) . '</span>
+			)->inContentLanguage()->parse() . '</span>
 		</div>';
 		}
 
@@ -235,24 +236,24 @@ class GenerateTopUsersReport extends SpecialPage {
 		$wgUser->addGroup( 'bot' );
 
 		// Add a note to the page that it was automatically generated
-		$pageContent .= "\n\n''" . wfMsgForContent( 'user-stats-report-generation-note' ) . "''\n\n";
+		$pageContent .= "\n\n''" . $this->msg( 'user-stats-report-generation-note' )->parse() . "''\n\n";
 
 		// Create the Title object that represents the report page
 		// For grep: user-stats-report-weekly-page-title, user-stats-report-monthly-page-title
 		$title = Title::makeTitleSafe(
 			NS_PROJECT,
-			wfMsgForContent( "user-stats-report-{$period}-page-title", $period_title )
+			$this->msg( "user-stats-report-{$period}-page-title", $period_title )->inContentLanguage()->escaped()
 		);
 
 		$article = new Article( $title );
 		// If the article doesn't exist, create it!
 		// @todo Would there be any point in updating a pre-existing article?
 		// I think not, but...
-		if( !$article->exists() ) {
+		if ( !$article->exists() ) {
 			// For grep: user-stats-report-weekly-edit-summary, user-stats-report-monthly-edit-summary
 			$article->doEdit(
 				$pageContent,
-				wfMsgForContent( "user-stats-report-{$period}-edit-summary" )
+				$this->msg( "user-stats-report-{$period}-edit-summary" )->inContentLanguage()->escaped()
 			);
 			$date = date( 'Y-m-d H:i:s' );
 			// Archive points from the weekly/monthly table into the archive
@@ -278,7 +279,7 @@ class GenerateTopUsersReport extends SpecialPage {
 		// Switch the user back
 		$wgUser = $oldUser;
 
-		$out .= '</div>'; // .top-users
-		$wgOut->addHTML( $out );
+		$output .= '</div>'; // .top-users
+		$out->addHTML( $output );
 	}
 }

@@ -22,73 +22,77 @@ class SystemGiftManager extends SpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgUser, $wgOut, $wgRequest, $wgSystemGiftsScripts;
+		$out = $this->getOutput();
+		$request = $this->getRequest();
+		$user = $this->getUser();
 
-		$wgOut->setPageTitle( wfMsg( 'systemgiftmanager' ) );
+		$out->setPageTitle( $this->msg( 'systemgiftmanager' )->plain() );
 
 		// If the user doesn't have the required 'awardsmanage' permission, display an error
-		if ( !$wgUser->isAllowed( 'awardsmanage' ) ) {
-			$wgOut->permissionRequired( 'awardsmanage' );
+		if ( !$user->isAllowed( 'awardsmanage' ) ) {
+			$out->permissionRequired( 'awardsmanage' );
 			return;
 		}
 
 		// Show a message if the database is in read-only mode
 		if ( wfReadOnly() ) {
-			$wgOut->readOnlyPage();
+			$out->readOnlyPage();
 			return;
 		}
 
 		// If user is blocked, s/he doesn't need to access this page
-		if ( $wgUser->isBlocked() ) {
-			$wgOut->blockedPage();
+		if ( $user->isBlocked() ) {
+			$out->blockedPage();
 			return;
 		}
 
 		// Add CSS
-		$wgOut->addExtensionStyle( $wgSystemGiftsScripts . '/SystemGift.css' );
+		$out->addModules( 'ext.socialprofile.systemgifts.css' );
 
-		if ( $wgRequest->wasPosted() ) {
+		if ( $request->wasPosted() ) {
 			$g = new SystemGifts();
 
-			if ( !$wgRequest->getInt( 'id' ) ) {
+			if ( !$request->getInt( 'id' ) ) {
 				// Add the new system gift to the database
 				$gift_id = $g->addGift(
-					$wgRequest->getVal( 'gift_name' ),
-					$wgRequest->getVal( 'gift_description' ),
-					$wgRequest->getVal( 'gift_category' ),
-					$wgRequest->getInt( 'gift_threshold' )
+					$request->getVal( 'gift_name' ),
+					$request->getVal( 'gift_description' ),
+					$request->getVal( 'gift_category' ),
+					$request->getInt( 'gift_threshold' )
 				);
-				$wgOut->addHTML(
-					'<span class="view-status">' . wfMsg( 'ga-created' ) .
+				$out->addHTML(
+					'<span class="view-status">' .
+					$this->msg( 'ga-created' )->plain() .
 					'</span><br /><br />'
 				);
 			} else {
-				$gift_id = $wgRequest->getInt( 'id' );
+				$gift_id = $request->getInt( 'id' );
 				$g->updateGift(
 					$gift_id,
-					$wgRequest->getVal( 'gift_name' ),
-					$wgRequest->getVal( 'gift_description' ),
-					$wgRequest->getVal( 'gift_category' ),
-					$wgRequest->getInt( 'gift_threshold' )
+					$request->getVal( 'gift_name' ),
+					$request->getVal( 'gift_description' ),
+					$request->getVal( 'gift_category' ),
+					$request->getInt( 'gift_threshold' )
 				);
-				$wgOut->addHTML(
-					'<span class="view-status">' . wfMsg( 'ga-saved' ) .
+				$out->addHTML(
+					'<span class="view-status">' .
+					$this->msg( 'ga-saved' )->plain() .
 					'</span><br /><br />'
 				);
 			}
 			$g->update_system_gifts();
-			$wgOut->addHTML( $this->displayForm( $gift_id ) );
+			$out->addHTML( $this->displayForm( $gift_id ) );
 		} else {
-			$gift_id = $wgRequest->getInt( 'id' );
-			if ( $gift_id || $wgRequest->getVal( 'method' ) == 'edit' ) {
-				$wgOut->addHTML( $this->displayForm( $gift_id ) );
+			$gift_id = $request->getInt( 'id' );
+			if ( $gift_id || $request->getVal( 'method' ) == 'edit' ) {
+				$out->addHTML( $this->displayForm( $gift_id ) );
 			} else {
-				$wgOut->addHTML(
+				$out->addHTML(
 					'<div><b><a href="' .
 					$this->getTitle()->escapeFullURL( 'method=edit' ) . '">' .
-						wfMsg( 'ga-addnew' ) . '</a></b></div>'
+						$this->msg( 'ga-addnew' )->plain() . '</a></b></div>'
 				);
-				$wgOut->addHTML( $this->displayGiftList() );
+				$out->addHTML( $this->displayGiftList() );
 			}
 		}
 	}
@@ -100,22 +104,21 @@ class SystemGiftManager extends SpecialPage {
 	 * @return String: HTML
 	 */
 	function displayGiftList() {
-		global $wgUser;
-
 		$output = ''; // Prevent E_NOTICE
 		$page = 0;
 		$per_page = 50;
 		$gifts = SystemGifts::getGiftList( $per_page, $page );
+		$user = $this->getUser();
 
 		if ( $gifts ) {
 			foreach ( $gifts as $gift ) {
 				$deleteLink = '';
-				if ( $wgUser->isAllowed( 'awardsmanage' ) ) {
+				if ( $user->isAllowed( 'awardsmanage' ) ) {
 					$removePage = SpecialPage::getTitleFor( 'RemoveMasterSystemGift' );
 					$deleteLink = '<a href="' .
 						$removePage->escapeFullURL( "gift_id={$gift['id']}" ) .
 						'" style="font-size:10px; color:red;">' .
-						wfMsg( 'delete' ) . '</a>';
+						$this->msg( 'delete' )->plain() . '</a>';
 				}
 
 				$output .= '<div class="Item">
@@ -132,7 +135,7 @@ class SystemGiftManager extends SpecialPage {
 		global $wgUploadPath;
 
 		$form = '<div><b><a href="' . $this->getTitle()->escapeFullURL() .
-			'">' . wfMsg( 'ga-viewlist' ) . '</a></b></div>';
+			'">' . $this->msg( 'ga-viewlist' )->plain() . '</a></b></div>';
 
 		if ( $gift_id ) {
 			$gift = SystemGifts::getGift( $gift_id );
@@ -141,15 +144,15 @@ class SystemGiftManager extends SpecialPage {
 		$form .= '<form action="" method="post" enctype="multipart/form-data" name="gift">
 		<table border="0" cellpadding="5" cellspacing="0" width="500">
 			<tr>
-				<td width="200" class="view-form">' . wfMsg( 'ga-giftname' ) . '</td>
+				<td width="200" class="view-form">' . $this->msg( 'ga-giftname' )->plain() . '</td>
 				<td width="695"><input type="text" size="45" class="createbox" name="gift_name" value="' . ( isset( $gift['gift_name'] ) ? $gift['gift_name'] : '' ) . '"/></td>
 			</tr>
 			<tr>
-				<td width="200" class="view-form" valign="top">' . wfMsg( 'ga-giftdesc' ) . '</td>
+				<td width="200" class="view-form" valign="top">' . $this->msg( 'ga-giftdesc' )->plain() . '</td>
 				<td width="695"><textarea class="createbox" name="gift_description" rows="2" cols="30">' . ( isset( $gift['gift_description'] ) ? $gift['gift_description'] : '' ) . '</textarea></td>
 			</tr>
 			<tr>
-				<td width="200" class="view-form">' . wfMsg( 'ga-gifttype' ) . '</td>
+				<td width="200" class="view-form">' . $this->msg( 'ga-gifttype' )->plain() . '</td>
 				<td width="695">
 					<select name="gift_category">' . "\n";
 			$g = new SystemGifts();
@@ -166,7 +169,7 @@ class SystemGiftManager extends SpecialPage {
 				</td>
 			</tr>
 		<tr>
-			<td width="200" class="view-form">' . wfMsg( 'ga-threshold' ) . '</td>
+			<td width="200" class="view-form">' . $this->msg( 'ga-threshold' )->plain() . '</td>
 			<td width="695"><input type="text" size="25" class="createbox" name="gift_threshold" value="' .
 				( isset( $gift['gift_threshold'] ) ? $gift['gift_threshold'] : '' ) . '"/></td>
 		</tr>';
@@ -177,25 +180,25 @@ class SystemGiftManager extends SpecialPage {
 				SystemGifts::getGiftImage( $gift_id, 'l' ) .
 				'" border="0" alt="gift" />';
 			$form .= '<tr>
-			<td width="200" class="view-form" valign="top">' . wfMsg( 'ga-giftimage' ) . '</td>
+			<td width="200" class="view-form" valign="top">' . $this->msg( 'ga-giftimage' )->plain() . '</td>
 			<td width="695">' . $gift_image .
 			'<a href="' . $sgml->escapeFullURL( 'gift_id=' . $gift_id ) . '">' .
-				wfMsg( 'ga-img' ) . '</a>
+				$this->msg( 'ga-img' )->plain() . '</a>
 			</td>
 			</tr>';
 		}
 
 		if ( isset( $gift['gift_id'] ) ) {
-			$button = wfMsg( 'edit' );
+			$button = $this->msg( 'edit' )->plain();
 		} else {
-			$button = wfMsg( 'ga-create-gift' );
+			$button = $this->msg( 'ga-create-gift' )->plain();
 		}
 
 		$form .= '<tr>
 		<td colspan="2">
 			<input type="hidden" name="id" value="' . ( isset( $gift['gift_id'] ) ? $gift['gift_id'] : '' ) . '" />
 			<input type="button" class="createbox" value="' . $button . '" size="20" onclick="document.gift.submit()" />
-			<input type="button" class="createbox" value="' . wfMsg( 'cancel' ) . '" size="20" onclick="history.go(-1)" />
+			<input type="button" class="createbox" value="' . $this->msg( 'cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
 		</td>
 		</tr>
 		</table>

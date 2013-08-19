@@ -10,8 +10,9 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgHooks['ParserFirstCallInit'][] = 'wfSiteActivity';
 /**
  * Register <siteactivity> hook with the Parser
- * @param $parser Object: instance of Parser
- * @return true
+ *
+ * @param $parser Parser
+ * @return Boolean
  */
 function wfSiteActivity( &$parser ) {
 	$parser->setHook( 'siteactivity', 'getSiteActivity' );
@@ -19,7 +20,7 @@ function wfSiteActivity( &$parser ) {
 }
 
 function getSiteActivity( $input, $args, $parser ) {
-	global $wgMemc, $wgScriptPath;
+	global $wgMemc, $wgExtensionAssetsPath;
 
 	$parser->disableCache();
 
@@ -45,14 +46,14 @@ function getSiteActivity( $input, $args, $parser ) {
 	$output = '';
 	if ( $activity ) {
 		$output .= '<div class="mp-site-activity">
-			<h2>' . wfMsg( 'useractivity-siteactivity' ) . '</h2>';
+			<h2>' . wfMessage( 'useractivity-siteactivity' )->plain() . '</h2>';
 
 		$x = 1;
 		foreach ( $activity as $item ) {
 			if ( $x < $fixedLimit ) {
 				$typeIcon = UserActivity::getTypeIcon( $item['type'] );
 				$output .= '<div class="mp-activity' . ( ( $x == $fixedLimit ) ? ' mp-activity-border-fix' : '' ) . '">
-				<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/' . $typeIcon . '" alt="' . $typeIcon . '" border="0" />'
+				<img src="' . $wgExtensionAssetsPath . '/SocialProfile/images/' . $typeIcon . '" alt="' . $typeIcon . '" border="0" />'
 				. $item['data'] .
 				'</div>';
 				$x++;

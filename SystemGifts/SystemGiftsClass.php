@@ -87,17 +87,18 @@ class SystemGifts {
 						// Update counters (bug #27981)
 						UserSystemGifts::incGiftGivenCount( $row->gift_id );
 
-						$wgOut->addHTML( wfMsg(
+						$wgOut->addHTML( wfMessage(
 							'ga-user-got-awards',
 							$row2->stats_user_name,
 							$row->gift_name
-						) . '<br />' );
+						)->escaped() . '<br />' );
 						$x++;
 					}
 				}
 			}
 		}
-		$wgOut->addHTML( wfMsgExt( 'ga-awards-given-out', 'parsemag', $x ) );
+
+		$wgOut->addHTML( wfMessage( 'ga-awards-given-out' )->numParams( $x )->parse() );
 	}
 
 	/**
@@ -206,7 +207,8 @@ class SystemGifts {
 	 */
 	static function getGift( $id ) {
 		$dbr = wfGetDB( DB_SLAVE );
-		$res = $dbr->select( 'system_gift',
+		$res = $dbr->select(
+			'system_gift',
 			array(
 				'gift_id', 'gift_name', 'gift_description', 'gift_category',
 				'gift_threshold', 'gift_given_count'

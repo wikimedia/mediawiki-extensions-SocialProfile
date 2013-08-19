@@ -21,18 +21,22 @@ class ViewSystemGift extends UnlistedSpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgUser, $wgOut, $wgRequest, $wgUploadPath, $wgSystemGiftsScripts;
+		global $wgUploadPath;
 
-		$wgOut->addExtensionStyle( $wgSystemGiftsScripts . '/SystemGift.css' );
+		$out = $this->getOutput();
+		$user = $this->getUser();
+
+		// Add CSS
+		$out->addModules( 'ext.socialprofile.systemgifts.css' );
 
 		$output = ''; // Prevent E_NOTICE
 
 		// If gift ID wasn't passed in the URL parameters or if it's not
 		// numeric, display an error message
-		$giftId = $wgRequest->getInt( 'gift_id' );
+		$giftId = $this->getRequest()->getInt( 'gift_id' );
 		if ( !$giftId || !is_numeric( $giftId ) ) {
-			$wgOut->setPageTitle( wfMsg( 'ga-error-title' ) );
-			$wgOut->addHTML( wfMsg( 'ga-error-message-invalid-link' ) );
+			$out->setPageTitle( $this->msg( 'ga-error-title' )->plain() );
+			$out->addHTML( $this->msg( 'ga-error-message-invalid-link' )->plain() );
 			return false;
 		}
 
@@ -40,10 +44,10 @@ class ViewSystemGift extends UnlistedSpecialPage {
 
 		if ( $gift ) {
 			if ( $gift['status'] == 1 ) {
-				if ( $gift['user_name'] == $wgUser->getName() ) {
+				if ( $gift['user_name'] == $user->getName() ) {
 					$g = new UserSystemGifts( $gift['user_name'] );
 					$g->clearUserGiftStatus( $gift['id'] );
-					$g->decNewSystemGiftCount( $wgUser->getID() );
+					$g->decNewSystemGiftCount( $user->getID() );
 				}
 			}
 			// DB stuff
@@ -67,14 +71,14 @@ class ViewSystemGift extends UnlistedSpecialPage {
 				)
 			);
 
-			$wgOut->setPageTitle( wfMsg( 'ga-gift-title', $gift['user_name'], $gift['name'] ) );
+			$out->setPageTitle( $this->msg( 'ga-gift-title', $gift['user_name'], $gift['name'] )->parse() );
 
 			$profileURL = Title::makeTitle( NS_USER, $gift['user_name'] )->escapeFullURL();
 			$output .= '<div class="back-links">' .
-				wfMsg( 'ga-back-link', $profileURL, $gift['user_name'] ) .
+				$this->msg( 'ga-back-link', $profileURL, $gift['user_name'] )->parse() .
 			'</div>';
 
-			$message = $wgOut->parse( trim( $gift['description'] ), false );
+			$message = $out->parse( trim( $gift['description'] ), false );
 			$output .= '<div class="ga-description-container">';
 
 			$giftImage = "<img src=\"{$wgUploadPath}/awards/" .
@@ -95,14 +99,14 @@ class ViewSystemGift extends UnlistedSpecialPage {
 			if ( $gift['gift_count'] > 1 ) {
 				$output .= '<div class="ga-recent">
 					<div class="ga-recent-title">' .
-						wfMsg( 'ga-recent-recipients-award' ) .
+						$this->msg( 'ga-recent-recipients-award' )->plain() .
 					'</div>
 					<div class="ga-gift-count">' .
-						wfMsgExt(
-							'ga-gift-given-count',
-							'parsemag',
+						$this->msg(
+							'ga-gift-given-count'
+						)->numParams(
 							$gift['gift_count']
-						) .
+						)->parse() .
 					'</div>';
 
 				foreach ( $res as $row ) {
@@ -121,10 +125,10 @@ class ViewSystemGift extends UnlistedSpecialPage {
 
 			$output .= '</div>';
 
-			$wgOut->addHTML( $output );
+			$out->addHTML( $output );
 		} else {
-			$wgOut->setPageTitle( wfMsg( 'ga-error-title' ) );
-			$wgOut->addHTML( wfMsg( 'ga-error-message-invalid-link' ) );
+			$out->setPageTitle( $this->msg( 'ga-error-title' )->plain() );
+			$out->addHTML( $this->msg( 'ga-error-message-invalid-link' )->plain() );
 		}
 	}
 }

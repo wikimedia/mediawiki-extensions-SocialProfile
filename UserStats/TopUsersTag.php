@@ -6,7 +6,7 @@
  *
  * @file
  * @ingroup Extensions
- * @date 5 August 2011
+ * @date 19 August 2013
  * @author Jack Phoenix <jack@countervandalism.net>
  */
 if ( !defined( 'MEDIAWIKI' ) ) {
@@ -67,7 +67,7 @@ function getTopUsersForTag( $input, $args, $parser ) {
 				<a href=\"{$user->getFullURL()}\">{$avatar->getAvatarURL()}</a>
 				<span class=\"top-fans-user\"><a href=\"{$user->getFullURL()}\">{$fan['user_name']}</a></span>
 				<span class=\"top-fans-points\"><b>+" . $wgLang->formatNum( $fan['points'] ) . '</b> ' .
-				wfMsg( 'top-fans-points' ) . '</span>
+				wfMessage( 'top-fans-points' )->plain() . '</span>
 			</div>';
 		$x++;
 	}

@@ -26,22 +26,23 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 	 * @param $params Mixed: parameter(s) passed to the page or null
 	 */
 	public function execute( $params ) {
-		global $wgOut, $wgUser;
+		$out = $this->getOutput();
+		$user = $this->getUser();
 
 		// Check permissions
-		if ( !in_array( 'staff', $wgUser->getEffectiveGroups() ) ) {
+		if ( !in_array( 'staff', $user->getEffectiveGroups() ) ) {
 			throw new ErrorPageError( 'error', 'badaccess' );
 		}
 
 		// Show a message if the database is in read-only mode
 		if ( wfReadOnly() ) {
-			$wgOut->readOnlyPage();
+			$out->readOnlyPage();
 			return;
 		}
 
 		// If user is blocked, they don't need to access this page
-		if ( $wgUser->isBlocked() ) {
-			$wgOut->blockedPage();
+		if ( $user->isBlocked() ) {
+			$out->blockedPage();
 			return;
 		}
 
@@ -55,7 +56,7 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 
 		$count = 0; // To avoid an annoying PHP notice
 
-		foreach( $res as $row ) {
+		foreach ( $res as $row ) {
 			$user_name_title = Title::newFromDBkey( $row->page_title );
 			$user_name = $user_name_title->getText();
 			$user_id = User::idFromName( $user_name );
@@ -81,6 +82,6 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 			}
 		}
 
-		$wgOut->addHTML( wfMsgExt( 'populate-user-profile-done', 'parsemag', $count ) );
+		$out->addHTML( $this->msg( 'populate-user-profile-done' )->numParams( $count )->parse() );
 	}
 }

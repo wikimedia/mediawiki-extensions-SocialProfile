@@ -27,21 +27,24 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 	 * @param $params Mixed: parameter(s) passed to the page or null
 	 */
 	public function execute( $params ) {
-		global $wgUser, $wgOut, $wgRequest, $wgUserRelationshipScripts;
+		$out = $this->getOutput();
+		$request = $this->getRequest();
+		$currentUser = $this->getUser();
 
 		// Can't use $this->setHeaders(); here because then it'll set the page
 		// title to <removerelationship> and we don't want that, we'll be
 		// messing with the page title later on in the code
-		$wgOut->setArticleRelated( false );
-		$wgOut->setRobotPolicy( 'noindex,nofollow' );
+		$out->setArticleRelated( false );
+		$out->setRobotPolicy( 'noindex,nofollow' );
 
-		$wgOut->addExtensionStyle( $wgUserRelationshipScripts . '/UserRelationship.css' );
+		// Add CSS
+		$out->addModules( 'ext.socialprofile.userrelationship.css' );
 
-		$userTitle = Title::newFromDBkey( $wgRequest->getVal( 'user' ) );
+		$userTitle = Title::newFromDBkey( $request->getVal( 'user' ) );
 
 		if ( !$userTitle ) {
-			$wgOut->setPageTitle( wfMsgHtml( 'ur-error-title' ) );
-			$wgOut->addWikiText( wfMsgNoTrans( 'ur-add-no-user' ) );
+			$out->setPageTitle( wfMsgHtml( 'ur-error-title' ) );
+			$out->addWikiMsg( 'ur-add-no-user' );
 			return false;
 		}
 
@@ -55,103 +58,105 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 		}
 		$hasRelationship = UserRelationship::getUserRelationshipByID(
 			$this->user_id_to,
-			$wgUser->getID()
+			$currentUser->getID()
 		);
 
-		if ( ( $wgUser->getID() == $this->user_id_to ) && ( $wgUser->getID() != 0 ) ) {
-			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
-			$out .= '<div class="relationship-error-message">' .
+		if ( ( $currentUser->getID() == $this->user_id_to ) && ( $currentUser->getID() != 0 ) ) {
+			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
+
+			$output = '<div class="relationship-error-message">' .
 				wfMsg( 'ur-add-error-message-yourself' ) .
 			'</div>
 			<div>
-				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" size="20" onclick=\'window.location="index.php?title="' . wfMsgForContent( 'mainpage' ) . '"\' />';
-			if ( $wgUser->isLoggedIn() ) {
-				$out .= '<input type="button" class="site-button" value="' . wfMsg( 'ur-your-profile' ) . '" size="20" onclick=\'window.location="' . $wgUser->getUserPage()->escapeFullURL() . '"\' />';
+				<input type="button" class="site-button" value="' . $this->msg( 'ur-main-page' )->plain() . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
+			if ( $currentUser->isLoggedIn() ) {
+				$output .= '<input type="button" class="site-button" value="' . $this->msg( 'ur-your-profile' )->plain() . '" size="20" onclick=\'window.location="' . $currentUser->getUserPage()->escapeFullURL() . '"\' />';
 			}
-			$out .= '</div>';
+			$output .= '</div>';
 
-			$wgOut->addHTML( $out );
+			$out->addHTML( $output );
 
-		} elseif ( $wgUser->isBlocked() ) {
-			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
-			$out .= '<div class="relationship-error-message">' .
-				wfMsg( 'ur-add-error-message-blocked' ) .
+		} elseif ( $currentUser->isBlocked() ) {
+			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
+
+			$output = '<div class="relationship-error-message">' .
+				$this->msg( 'ur-add-error-message-blocked' )->plain() .
 			'</div>
 			<div>
-				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" size="20" onclick=\'window.location="index.php?title="' . wfMsgForContent( 'mainpage' ) . '"\' />';
-			if ( $wgUser->isLoggedIn() ) {
-				$out .= '<input type="button" class="site-button" value="' . wfMsg( 'ur-your-profile' ) . '" size="20" onclick=\'window.location="' . $wgUser->getUserPage()->escapeFullURL() . '"\' />';
+				<input type="button" class="site-button" value="' . $this->msg( 'ur-main-page' )->plain() . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
+			if ( $currentUser->isLoggedIn() ) {
+				$output .= '<input type="button" class="site-button" value="' . $this->msg( 'ur-your-profile' )->plain() . '" size="20" onclick=\'window.location="' . $currentUser->getUserPage()->escapeFullURL() . '"\' />';
 			}
-			$out .= '</div>';
+			$output .= '</div>';
 
-			$wgOut->addHTML( $out );
+			$out->addHTML( $output );
 
 		} elseif ( $this->user_id_to == 0 ) {
-			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
-			$out .= '<div class="relationship-error-message">' .
-				wfMsg( 'ur-add-error-message-no-user' ) .
+			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
+
+			$output = '<div class="relationship-error-message">' .
+				$this->msg( 'ur-add-error-message-no-user' )->plain() .
 			'</div>
 			<div>
-				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" size="20" onclick=\'window.location="index.php?title="' . wfMsgForContent( 'mainpage' ) . '"\' />';
-			if ( $wgUser->isLoggedIn() ) {
-				$out .= '<input type="button" class="site-button" value="' . wfMsg( 'ur-your-profile' ) . '" size="20" onclick=\'window.location="' . $wgUser->getUserPage()->escapeFullURL() . '"\' />';
+				<input type="button" class="site-button" value="' . $this->msg( 'ur-main-page' )->plain() . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
+			if ( $currentUser->isLoggedIn() ) {
+				$output .= '<input type="button" class="site-button" value="' . $this->msg( 'ur-your-profile' )->plain() . '" size="20" onclick=\'window.location="' . $currentUser->getUserPage()->escapeFullURL() . '"\' />';
 			}
-			$out .= '</div>';
+			$output .= '</div>';
 
-			$wgOut->addHTML( $out );
+			$out->addHTML( $output );
 
 		} elseif ( $hasRelationship >= 1 ) {
 
 			if ( $hasRelationship == 1 ) {
-				$error = wfMsg( 'ur-add-error-message-existing-relationship-friend', $this->user_name_to );
+				$error = $this->msg( 'ur-add-error-message-existing-relationship-friend', $this->user_name_to )->parse();
 			} else {
-				$error = wfMsg( 'ur-add-error-message-existing-relationship-foe', $this->user_name_to );
+				$error = $this->msg( 'ur-add-error-message-existing-relationship-foe', $this->user_name_to )->parse();
 			}
 
 			$avatar = new wAvatar( $this->user_id_to, 'l' );
 
-			$out = '';
-			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
+			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
 
-			$out .= "<div class=\"relationship-action\">
+			$output = "<div class=\"relationship-action\">
 				{$avatar->getAvatarURL()}
 				" . $error . "
 				<div class=\"relationship-buttons\">
-					<input type=\"button\" class=\"site-button\" value=\"" . wfMsg( 'ur-main-page' ) . "\" size=\"20\" onclick=\"window.location='index.php?title=" . wfMsgForContent( 'mainpage' ) . "'\"/>
-					<input type=\"button\" class=\"site-button\" value=\"" . wfMsg( 'ur-your-profile' ) . "\" size=\"20\" onclick=\"window.location='" . $wgUser->getUserPage()->escapeFullURL() . "'\"/>
+					<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-main-page' )->plain() . "\" size=\"20\" onclick=\"window.location='index.php?title=" . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . "'\"/>
+					<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-your-profile' )->plain() . "\" size=\"20\" onclick=\"window.location='" . $currentUser->getUserPage()->escapeFullURL() . "'\"/>
 				</div>
 				<div class=\"cleared\"></div>
 			</div>";
 
-			$wgOut->addHTML( $out );
+			$out->addHTML( $output );
 
-		} elseif ( UserRelationship::userHasRequestByID( $this->user_id_to, $wgUser->getID() ) == true ) {
+		} elseif ( UserRelationship::userHasRequestByID( $this->user_id_to, $currentUser->getID() ) == true ) {
 
 			if ( $this->relationship_type == 1 ) {
-				$error = wfMsg( 'ur-add-error-message-pending-friend-request', $this->user_name_to );
+				$error = $this->msg( 'ur-add-error-message-pending-friend-request', $this->user_name_to )->parse();
 			} else {
-				$error = wfMsg( 'ur-add-error-message-pending-foe-request', $this->user_name_to );
+				$error = $this->msg( 'ur-add-error-message-pending-foe-request', $this->user_name_to )->parse();
 			}
 
 			$avatar = new wAvatar( $this->user_id_to, 'l' );
 
-			$out = '';
-			$wgOut->setPageTitle( wfMsg( 'ur-add-error-message-pending-request-title' ) );
-			$out .= "<div class=\"relationship-action\">
+			$wgOut->setPageTitle( $this->msg( 'ur-add-error-message-pending-request-title' )->plain() );
+
+			$output = "<div class=\"relationship-action\">
 				{$avatar->getAvatarURL()}
 				" . $error . "
 				<div class=\"relationship-buttons\">
-					<input type=\"button\" class=\"site-button\" value=\"" . wfMsg( 'ur-main-page' ) . "\" size=\"20\" onclick=\"window.location='index.php?title=" . wfMsgForContent( 'mainpage' ) . "'\"/>
-					<input type=\"button\" class=\"site-button\" value=\"" . wfMsg( 'ur-your-profile' ) . "\" size=\"20\" onclick=\"window.location='" . $wgUser->getUserPage()->escapeFullURL() . "'\"/>
+					<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-main-page' )->plain() . "\" size=\"20\" onclick=\"window.location='index.php?title=" . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . "'\"/>
+					<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-your-profile' )->plain() . "\" size=\"20\" onclick=\"window.location='" . $currentUser->getUserPage()->escapeFullURL() . "'\"/>
 				</div>
 				<div class=\"cleared\"></div>
 			</div>";
 
-			$wgOut->addHTML( $out );
-		} elseif ( UserRelationship::userHasRequestByID( $wgUser->getID(), $this->user_id_to ) == true ) {
+			$out->addHTML( $output );
+		} elseif ( UserRelationship::userHasRequestByID( $currentUser->getID(), $this->user_id_to ) == true ) {
 			$relationship_request = SpecialPage::getTitleFor( 'ViewRelationshipRequests' );
-			$wgOut->redirect( $relationship_request->getFullURL() );
-		} elseif ( $wgUser->getID() == 0 ) {
+			$out->redirect( $relationship_request->getFullURL() );
+		} elseif ( $currentUser->getID() == 0 ) {
 			$login_link = SpecialPage::getTitleFor( 'Userlogin' );
 
 			if ( $this->relationship_type == 1 ) {
@@ -160,69 +165,72 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				$error = wfMsg( 'ur-add-error-message-not-loggedin-foe' );
 			}
 
-			$out = '';
-			$wgOut->setPageTitle( wfMsg( 'ur-error-title' ) );
-			$out .= '<div class="relationship-error-message">'
+			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
+
+			$output = '<div class="relationship-error-message">'
 				. $error .
 			'</div>
 			<div>
-				<input type="button" class="site-button" value="' . wfMsg( 'ur-main-page' ) . '" size="20" onclick=\'window.location="index.php?title="' . wfMsgForContent( 'mainpage' ) . '"\' />
-				<input type="button" class="site-button" value="' . wfMsg( 'ur-login' ) . '" size="20" onclick="window.location=\'' . $login_link->escapeFullURL() . '\'" />';
-			$out .= '</div>';
+				<input type="button" class="site-button" value="' . $this->msg( 'ur-main-page' )->plain() . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />
+				<input type="button" class="site-button" value="' . $this->msg( 'ur-login' )->plain() . '" size="20" onclick="window.location=\'' . $login_link->escapeFullURL() . '\'" />';
+			$output .= '</div>';
 
-			$wgOut->addHTML( $out );
+			$out->addHTML( $output );
 		} else {
-			$rel = new UserRelationship( $wgUser->getName() );
+			$rel = new UserRelationship( $currentUser->getName() );
 
-			if ( $wgRequest->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
+			if ( $request->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
 				$_SESSION['alreadysubmitted'] = true;
-				$rel = $rel->addRelationshipRequest( $this->user_name_to, $this->relationship_type, $wgRequest->getVal( 'message' ) );
+				$rel = $rel->addRelationshipRequest(
+					$this->user_name_to,
+					$this->relationship_type,
+					$request->getVal( 'message' )
+				);
 
 				$avatar = new wAvatar( $this->user_id_to, 'l' );
 
-				$out = '';
-
 				if ( $this->relationship_type == 1 ) {
-					$wgOut->setPageTitle( wfMsg( 'ur-add-sent-title-friend', $this->user_name_to ) );
-					$sent = wfMsg( 'ur-add-sent-message-friend', $this->user_name_to );
+					$out->setPageTitle( $this->msg( 'ur-add-sent-title-friend', $this->user_name_to )->parse() );
+					$sent = $this->msg( 'ur-add-sent-message-friend', $this->user_name_to )->parse();
 				} else {
-					$wgOut->setPageTitle( wfMsg( 'ur-add-sent-title-foe', $this->user_name_to ) );
-					$sent = wfMsg( 'ur-add-sent-message-foe', $this->user_name_to );
+					$out->setPageTitle( $this->msg( 'ur-add-sent-title-foe', $this->user_name_to )->parse() );
+					$sent = $this->msg( 'ur-add-sent-message-foe', $this->user_name_to )->parse();
 				}
 
-				$out .= "<div class=\"relationship-action\">
+				$output = "<div class=\"relationship-action\">
 					{$avatar->getAvatarURL()}
 					" . $sent . "
 					<div class=\"relationship-buttons\">
-						<input type=\"button\" class=\"site-button\" value=\"" . wfMsg( 'ur-main-page' ) . "\" size=\"20\" onclick=\"window.location='index.php?title=" . wfMsgForContent( 'mainpage' ) . "'\"/>
-						<input type=\"button\" class=\"site-button\" value=\"" . wfMsg( 'ur-your-profile' ) . "\" size=\"20\" onclick=\"window.location='" . $wgUser->getUserPage()->escapeFullURL() . "'\"/>
+						<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-main-page' )->plain() . "\" size=\"20\" onclick=\"window.location='index.php?title=" . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . "'\"/>
+						<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-your-profile' )->plain() . "\" size=\"20\" onclick=\"window.location='" . $currentUser->getUserPage()->escapeFullURL() . "'\"/>
 					</div>
 					<div class=\"cleared\"></div>
 				</div>";
 
-				$wgOut->addHTML( $out );
+				$out->addHTML( $output );
 			} else {
 				$_SESSION['alreadysubmitted'] = false;
-				$wgOut->addHTML( $this->displayForm() );
+				$out->addHTML( $this->displayForm() );
 			}
 		}
 	}
 
 	/**
 	 * Displays the form for adding a friend or a foe
+	 *
 	 * @return $form Mixed: HTML code for the form
 	 */
 	function displayForm() {
-		global $wgOut;
+		$out = $this->getOutput();
 
 		if ( $this->relationship_type == 1 ) {
-			$wgOut->setPageTitle( wfMsg( 'ur-add-title-friend', $this->user_name_to ) );
-			$add = wfMsg( 'ur-add-message-friend', $this->user_name_to );
-			$button = wfMsg( 'ur-add-button-friend' );
+			$out->setPageTitle( $this->msg( 'ur-add-title-friend', $this->user_name_to )->parse() );
+			$add = $this->msg( 'ur-add-message-friend', $this->user_name_to )->parse();
+			$button = $this->msg( 'ur-add-button-friend' )->plain();
 		} else {
-			$wgOut->setPageTitle( wfMsg( 'ur-add-title-foe', $this->user_name_to ) );
-			$add = wfMsg( 'ur-add-message-foe', $this->user_name_to );
-			$button = wfMsg( 'ur-add-button-foe' );
+			$out->setPageTitle( $this->msg( 'ur-add-title-foe', $this->user_name_to )->parse() );
+			$add = $this->msg( 'ur-add-message-foe', $this->user_name_to )->parse();
+			$button = $this->msg( 'ur-add-button-foe' )->plain();
 		}
 
 		$avatar = new wAvatar( $this->user_id_to, 'l' );
@@ -234,12 +242,12 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 			'<div class="cleared"></div>
 			</div>
 			<div class="relationship-textbox-title">' .
-				wfMsg( 'ur-add-personal-message' ) .
+				$this->msg( 'ur-add-personal-message' )->plain() .
 			'</div>
 			<textarea name="message" id="message" rows="3" cols="50"></textarea>
 			<div class="relationship-buttons">
 				<input type="button" class="site-button" value="' . $button . '" size="20" onclick="document.form1.submit()" />
-				<input type="button" class="site-button" value="' . wfMsg( 'ur-cancel' ) . '" size="20" onclick="history.go(-1)" />
+				<input type="button" class="site-button" value="' . $this->msg( 'ur-cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
 			</div>
 		</form>';
 		return $form;

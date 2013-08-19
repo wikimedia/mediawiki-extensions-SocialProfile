@@ -22,16 +22,21 @@ class UserHome extends SpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgUser, $wgOut, $wgRequest, $wgScriptPath;
+		global $wgExtensionAssetsPath;
 
-		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/SocialProfile/UserActivity/UserActivity.css' );
+		$out = $this->getOutput();
+		$request = $this->getRequest();
+		$user = $this->getUser();
 
-		$wgOut->setPageTitle( wfMsg( 'useractivity-title' ) );
+		// Add CSS
+		$out->addModules( 'ext.socialprofile.useractivity.css' );
+
+		$out->setPageTitle( $this->msg( 'useractivity-title' )->plain() );
 
 		$output = '';
 
-		$rel_type = $wgRequest->getVal( 'rel_type' );
-		$item_type = $wgRequest->getVal( 'item_type' );
+		$rel_type = $request->getVal( 'rel_type' );
+		$item_type = $request->getVal( 'item_type' );
 
 		if ( !$rel_type ) {
 			$rel_type = 1;
@@ -68,7 +73,7 @@ class UserHome extends SpecialPage {
 
 		$output .= '<div class="user-home-feed">';
 
-		$rel = new UserActivity( $wgUser->getName(), ( ( $rel_type == 1 ) ? ' friends' : 'foes' ), 50 );
+		$rel = new UserActivity( $user->getName(), ( ( $rel_type == 1 ) ? ' friends' : 'foes' ), 50 );
 		$rel->setActivityToggle( 'show_edits', $edits );
 		$rel->setActivityToggle( 'show_votes', $votes );
 		$rel->setActivityToggle( 'show_comments', $comments );
@@ -98,7 +103,7 @@ class UserHome extends SpecialPage {
 
 					$typeIcon = UserActivity::getTypeIcon( $item['type'] );
 					$output .= "<div class=\"user-home-activity{$border_fix}\">
-						<img src=\"{$wgScriptPath}/extensions/SocialProfile/images/" . $typeIcon . "\" alt=\"\" border=\"0\" />
+						<img src=\"{$wgExtensionAssetsPath}/SocialProfile/images/" . $typeIcon . "\" alt=\"\" border=\"0\" />
 						{$item['data']}
 					</div>";
 					$x++;
@@ -108,6 +113,6 @@ class UserHome extends SpecialPage {
 
 		$output .= '</div>
 		<div class="cleared"></div>';
-		$wgOut->addHTML( $output );
+		$out->addHTML( $output );
 	}
 }
