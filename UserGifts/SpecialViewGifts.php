@@ -169,7 +169,7 @@ class ViewGifts extends SpecialPage {
 			$output .= '<div class="page-nav">';
 			if ( $page > 1 ) {
 				$output .= Linker::link(
-					$pageLink
+					$pageLink,
 					$this->msg( 'g-previous' )->plain(),
 					array(),
 					array(
@@ -194,7 +194,7 @@ class ViewGifts extends SpecialPage {
 					$output .= ( $i . ' ' );
 				} else {
 					$output .= Linker::link(
-						$pageLink
+						$pageLink,
 						$i,
 						array(),
 						array(
@@ -208,7 +208,7 @@ class ViewGifts extends SpecialPage {
 			if ( ( $total - ( $per_page * $page ) ) > 0 ) {
 				$output .= $this->msg( 'word-separator' )->plain() .
 					Linker::link(
-						$pageLink
+						$pageLink,
 						$this->msg( 'g-next' )->plain(),
 						array(),
 						array(

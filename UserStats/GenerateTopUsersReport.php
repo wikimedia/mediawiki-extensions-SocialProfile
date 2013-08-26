@@ -194,7 +194,7 @@ class GenerateTopUsersReport extends SpecialPage {
 
 		// For grep: user-stats-weekly-winners, user-stats-monthly-winners
 		$pageContent .= '==' . $this->msg(
-			"user-stats-{$period}-winners",
+			"user-stats-{$period}-winners"
 		)->numParams( $winner_count )->inContentLanguage()->parse() . "==\n\n";
 
 		// For grep: user-stats-weekly-win-congratulations, user-stats-monthly-win-congratulations
