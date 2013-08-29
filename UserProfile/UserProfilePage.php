@@ -1557,14 +1557,14 @@ class UserProfilePage extends Article {
 	 * @return String: HTML
 	 */
 	function getFanBoxes( $user_name ) {
-		global $wgOut, $wgUser, $wgTitle, $wgMemc, $wgUserProfileDisplay, $wgFanBoxScripts, $wgEnableUserBoxes;
+		global $wgOut, $wgUser, $wgTitle, $wgMemc, $wgUserProfileDisplay, $wgEnableUserBoxes;
 
 		if ( !$wgEnableUserBoxes || $wgUserProfileDisplay['userboxes'] == false ) {
 			return '';
 		}
 
-		$wgOut->addScriptFile( $wgFanBoxScripts . '/FanBoxes.js' );
-		$wgOut->addExtensionStyle( $wgFanBoxScripts . '/FanBoxes.css' );
+		// Add CSS & JS
+		$wgOut->addModules( 'ext.fanBoxes' );
 
 		$output = '';
 		$f = new UserFanBoxes( $user_name );
@@ -1574,7 +1574,7 @@ class UserProfilePage extends Article {
 		$key = wfMemcKey( 'user', 'profile', 'fanboxes', "{$f->user_id}" );
 		$data = $wgMemc->get( $key );
 
-		if( !$data ) {
+		if ( !$data ) {
 			wfDebug( "Got profile fanboxes for user {$user_name} from DB\n" );
 			$fanboxes = $f->getUserFanboxes( 0, 10 );
 			$wgMemc->set( $key, $fanboxes );
@@ -1593,22 +1593,26 @@ class UserProfilePage extends Article {
 		if ( $fanboxes ) {
 			$output .= '<div class="user-section-heading">
 				<div class="user-section-title">' .
-					wfMsg( 'user-fanbox-title' ) .
+					wfMessage( 'user-fanbox-title' )->plain() .
 				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">';
 			// If there are more than ten fanboxes, display a "View all" link
 			// instead of listing them all on the profile page
 			if ( $fanbox_count > 10 ) {
-				$output .= '<a href="' . $fanbox_link->escapeFullURL( 'user=' . $user_name ) . '" rel="nofollow">' .
-					wfMsg( 'user-view-all' ) . '</a>';
+				$output .= Linker::link(
+					$fanbox_link,
+					wfMessage( 'user-view-all' )->plain(),
+					array(),
+					array( 'user' => $user_name )
+				);
 			}
 			$output .= '</div>
 					<div class="action-left">';
 			if ( $fanbox_count > 10 ) {
-				$output .= wfMsg( 'user-count-separator', '10', $fanbox_count );
+				$output .= wfMessage( 'user-count-separator' )->numParams( 10, $fanbox_count )->parse();
 			} else {
-				$output .= wfMsg( 'user-count-separator', $fanbox_count, $fanbox_count );
+				$output .= wfMessage( 'user-count-separator' )->numParams( $fanbox_count, $fanbox_count )->parse();
 			}
 			$output .= '</div>
 					<div class="cleared"></div>
@@ -1679,8 +1683,8 @@ class UserProfilePage extends Article {
 				$output .= "<div class=\"fanbox-item\">
 					<div class=\"individual-fanbox\" id=\"individualFanbox" . $fanbox['fantag_id'] . "\">
 						<div class=\"show-message-container-profile\" id=\"show-message-container" . $fanbox['fantag_id'] . "\">
-							<a class=\"perma\" style=\"font-size:8px; color:" . $fanbox['fantag_right_textcolor'] . "\" href=\"" . $fantag_title->escapeFullURL() . "\" title=\"{$fanbox['fantag_title']}\">" . wfMsg( 'fanbox-perma' ) . "</a>
-							<table class=\"fanBoxTableProfile\" onclick=\"javascript:FanBoxes.openFanBoxPopup('fanboxPopUpBox{$fanbox['fantag_id']}', 'individualFanbox{$fanbox['fantag_id']}')\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">
+							<a class=\"perma\" style=\"font-size:8px; color:" . $fanbox['fantag_right_textcolor'] . "\" href=\"" . $fantag_title->escapeFullURL() . "\" title=\"{$fanbox['fantag_title']}\">" . wfMessage( 'fanbox-perma' )->plain() . "</a>
+							<table class=\"fanBoxTableProfile\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">
 								<tr>
 									<td id=\"fanBoxLeftSideOutputProfile\" style=\"color:" . $fanbox['fantag_left_textcolor'] . "; font-size:$leftfontsize\" bgcolor=\"" . $fanbox['fantag_left_bgcolor'] . "\">" . $fantag_leftside . "</td>
 									<td id=\"fanBoxRightSideOutputProfile\" style=\"color:" . $fanbox['fantag_right_textcolor'] . "; font-size:$rightfontsize\" bgcolor=\"" . $fanbox['fantag_right_bgcolor'] . "\">" . $right_text . "</td>
@@ -1691,59 +1695,63 @@ class UserProfilePage extends Article {
 
 				if ( $wgUser->isLoggedIn() ) {
 					if ( $check_user_fanbox == 0 ) {
-						$output .= "<div class=\"fanbox-pop-up-box-profile\" id=\"fanboxPopUpBox" . $fanbox['fantag_id'] . "\">
-							<table cellpadding=\"0\" cellspacing=\"0\" align=\"center\">
+						$output .= '<div class="fanbox-pop-up-box-profile" id="fanboxPopUpBox' . $fanbox['fantag_id'] . '">
+							<table cellpadding="0" cellspacing="0" align="center">
 								<tr>
-									<td style=\"font-size:10px\">" . wfMsg( 'fanbox-add-fanbox' ) . "</td>
+									<td style="font-size:10px">' .
+										wfMessage( 'fanbox-add-fanbox' )->plain() .
+									'</td>
 								</tr>
 								<tr>
-									<td align=\"center\">
-										<input type=\"button\" value=\"" . wfMsg( 'fanbox-add' ) . "\" size=\"10\" onclick=\"FanBoxes.closeFanboxAdd('fanboxPopUpBox{$fanbox['fantag_id']}', 'individualFanbox{$fanbox['fantag_id']}'); FanBoxes.showAddRemoveMessageUserPage(1, {$fanbox['fantag_id']}, 'show-addremove-message-half')\" />
-										<input type=\"button\" value=\"" . wfMsg( 'cancel' ) . "\" size=\"10\" onclick=\"FanBoxes.closeFanboxAdd('fanboxPopUpBox{$fanbox['fantag_id']}', 'individualFanbox{$fanbox['fantag_id']}')\" />
+									<td align="center">
+										<input type="button" class="fanbox-add-button-half" value="' . wfMessage( 'fanbox-add' )->plain() . '" size="10" />
+										<input type="button" class="fanbox-cancel-button" value="' . wfMessage( 'cancel' )->plain() . '" size="10" />
 									</td>
 								</tr>
 							</table>
-						</div>";
+						</div>';
 					} else {
-						$output .= "<div class=\"fanbox-pop-up-box-profile\" id=\"fanboxPopUpBox" . $fanbox['fantag_id'] . "\">
-							<table cellpadding=\"0\" cellspacing=\"0\" align=\"center\">
+						$output .= '<div class="fanbox-pop-up-box-profile" id="fanboxPopUpBox' . $fanbox['fantag_id'] . '">
+							<table cellpadding="0" cellspacing="0" align="center">
 								<tr>
-									<td style=\"font-size:10px\">" . wfMsg( 'fanbox-remove-fanbox' ) . "</td>
+									<td style="font-size:10px">' .
+										wfMessage( 'fanbox-remove-fanbox' )->plain() .
+									'</td>
 								</tr>
 								<tr>
-									<td align=\"center\">
-										<input type=\"button\" value=\"" . wfMsg( 'fanbox-remove' ) . "\" size=\"10\" onclick=\"FanBoxes.closeFanboxAdd('fanboxPopUpBox{$fanbox['fantag_id']}', 'individualFanbox{$fanbox['fantag_id']}'); FanBoxes.showAddRemoveMessageUserPage(2, {$fanbox['fantag_id']}, 'show-addremove-message-half')\" />
-										<input type=\"button\" value=\"" . wfMsg( 'cancel' ) . "\" size=\"10\" onclick=\"FanBoxes.closeFanboxAdd('fanboxPopUpBox{$fanbox['fantag_id']}', 'individualFanbox{$fanbox['fantag_id']}')\" />
+									<td align="center">
+										<input type="button" class="fanbox-remove-button-half" value="' . wfMessage( 'fanbox-remove' )->plain() . '" size="10" />
+										<input type="button" class="fanbox-cancel-button" value="' . wfMessage( 'cancel' )->plain() . '" size="10" />
 									</td>
 								</tr>
 							</table>
-						</div>";
+						</div>';
 					}
 				}
 
+				// Show a message to anonymous users, prompting them to log in
 				if ( $wgUser->getID() == 0 ) {
-					$login = SpecialPage::getTitleFor( 'Userlogin' );
-					$output .= "<div class=\"fanbox-pop-up-box-profile\" id=\"fanboxPopUpBox" . $fanbox['fantag_id'] . "\">
-						<table cellpadding=\"0\" cellspacing=\"0\" align=\"center\">
+					$output .= '<div class="fanbox-pop-up-box-profile" id="fanboxPopUpBox' . $fanbox['fantag_id'] . '">
+						<table cellpadding="0" cellspacing="0" align="center">
 							<tr>
-								<td style=\"font-size:10px\">" .
-									wfMsg( 'fanbox-add-fanbox-login' ) .
-									"<a href=\"{$login->getFullURL()}\">" .
-									wfMsg( 'fanbox-login' ) . "</a></td>
+								<td style="font-size:10px">' .
+									wfMessage( 'fanbox-add-fanbox-login' )->parse() .
+								'</td>
 							</tr>
 							<tr>
-								<td align=\"center\">
-									<input type=\"button\" value=\"" . wfMsg( 'cancel' ) . "\" size=\"10\" onclick=\"FanBoxes.closeFanboxAdd('fanboxPopUpBox{$fanbox['fantag_id']}', 'individualFanbox{$fanbox['fantag_id']}')\" />
+								<td align="center">
+									<input type="button" class="fanbox-cancel-button" value="' . wfMessage( 'cancel' )->plain() . '" size="10" />
 								</td>
 							</tr>
 						</table>
-					</div>";
+					</div>';
 				}
 
 				$output .= '</div>';
 
 				$x++;
 			}
+
 			$output .= '</div>';
 		}
 
