@@ -1241,6 +1241,14 @@ class UserProfilePage extends Article {
 								\"{$item['namespace']}\"
 								</div>";
 						break;
+					case 'network_update':
+						$network_image = SportsTeams::getLogo( $item['sport_id'], $item['team_id'], 's' );
+						$item_html .= wfMsg( 'user-recent-activity-network-update' ) .
+								'<div class="item">
+									<a href="' . SportsTeams::getNetworkURL( $item['sport_id'], $item['team_id'] ) .
+									"\" rel=\"nofollow\">{$network_image} \"{$item['comment']}\"</a>
+								</div>";
+						break;
 					}
 
 					$item_html .= '</div>';
