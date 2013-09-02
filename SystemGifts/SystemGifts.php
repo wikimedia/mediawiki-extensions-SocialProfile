@@ -4,7 +4,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die();
 }
 
-global $IP, $wgScriptPath, $wgAutoloadClasses, $wgAvailableRights, $wgGroupPermissions,
+global $IP, $wgAutoloadClasses, $wgAvailableRights, $wgGroupPermissions,
 	$wgSpecialPages, $wgExtensionMessagesFiles;
 
 $wgAvailableRights[] = 'awardsmanage';
@@ -44,7 +44,7 @@ $wgExtensionMessagesFiles['SystemGifts'] = $wgSystemGiftsDirectory . '/SystemGif
 // Register the CSS with ResourceLoader
 $wgResourceModules['ext.socialprofile.systemgifts.css'] = array(
 	'styles' => 'SystemGifts.css',
-	'localBasePath' => dirname( __FILE__ ),
+	'localBasePath' => dirname( __FILE__ ) . '/SystemGifts',
 	'remoteExtPath' => 'SocialProfile/SystemGifts',
 	'position' => 'top'
 );

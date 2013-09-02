@@ -8,7 +8,6 @@ $wgGroupPermissions['staff']['giftadmin'] = true;
 $wgGroupPermissions['sysop']['giftadmin'] = true;
 
 $wgUserGiftsDirectory = "$IP/extensions/SocialProfile/UserGifts";
-$wgUserGiftsScripts = "$wgScriptPath/extensions/SocialProfile/UserGifts";
 
 // Special Pages etc.
 $wgAutoloadClasses['Gifts'] = "{$wgUserGiftsDirectory}/GiftsClass.php";
@@ -47,14 +46,14 @@ $wgExtensionMessagesFiles['UserGifts'] = $wgUserGiftsDirectory . '/UserGifts.i18
 // Register the CSS & JS with ResourceLoader
 $wgResourceModules['ext.socialprofile.usergifts.css'] = array(
 	'styles' => 'UserGifts.css',
-	'localBasePath' => dirname( __FILE__ ),
+	'localBasePath' => dirname( __FILE__ ) . '/UserGifts',
 	'remoteExtPath' => 'SocialProfile/UserGifts',
 	'position' => 'top'
 );
 
 $wgResourceModules['ext.socialprofile.usergifts.js'] = array(
 	'scripts' => 'UserGifts.js',
-	'localBasePath' => dirname( __FILE__ ),
+	'localBasePath' => dirname( __FILE__ ) . '/UserGifts',
 	'remoteExtPath' => 'SocialProfile/UserGifts',
 );
 

@@ -1092,7 +1092,7 @@ class UserProfilePage extends Article {
 	 * @param $user_name String: name of the user whose activity we want to fetch
 	 */
 	function getActivity( $user_name ) {
-		global $wgUser, $wgUserProfileDisplay, $wgScriptPath, $wgUploadPath;
+		global $wgUser, $wgUserProfileDisplay, $wgExtensionAssetsPath, $wgUploadPath;
 
 		// If not enabled in site settings, don't display
 		if ( $wgUserProfileDisplay['activity'] == false ) {
@@ -1157,11 +1157,11 @@ class UserProfilePage extends Article {
 
 				if ( $x < $style_limit ) {
 					$item_html .= '<div class="activity-item">
-						<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/' .
+						<img src="' . $wgExtensionAssetsPath . '/SocialProfile/images/' .
 							UserActivity::getTypeIcon( $item['type'] ) . '" alt="" border="0" />';
 				} else {
 					$item_html .= '<div class="activity-item-bottom">
-						<img src="' . $wgScriptPath . '/extensions/SocialProfile/images/' .
+						<img src="' . $wgExtensionAssetsPath . '/SocialProfile/images/' .
 							UserActivity::getTypeIcon( $item['type'] ) . '" alt="" border="0" />';
 				}
 

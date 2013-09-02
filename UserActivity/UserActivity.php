@@ -40,7 +40,7 @@ $wgSpecialPageGroups['UserActivity'] = 'users';
 // Register the CSS with ResourceLoader
 $wgResourceModules['ext.socialprofile.useractivity.css'] = array(
 	'styles' => 'UserActivity.css',
-	'localBasePath' => dirname( __FILE__ ),
+	'localBasePath' => dirname( __FILE__ ) . '/UserActivity',
 	'remoteExtPath' => 'SocialProfile/UserActivity',
 	'position' => 'top'
 );

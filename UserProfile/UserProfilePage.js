@@ -76,9 +76,12 @@ var UserProfilePage = {
 
 		for ( var x = 7; x > 0; x-- ) {
 			document.getElementById( 'mini-gallery-' + ( x ) ).innerHTML =
-				document.getElementById( 'mini-gallery-' + ( x - 1 ) ).innerHTML.replace( 'slideShowLink(' + ( x - 1 ) + ')','slideShowLink(' + ( x ) + ')' );
+				document.getElementById( 'mini-gallery-' + ( x - 1 ) ).innerHTML.replace( 'slideShowLink(' + ( x - 1 ) + ')', 'slideShowLink(' + ( x ) + ')' );
 		}
-		document.getElementById( 'mini-gallery-0' ).innerHTML = '<a><img height="75" width="75" src="' + wgServer + wgScriptPath + '/extensions/SocialProfile/images/ajax-loader-white.gif" alt="" /></a>';
+		document.getElementById( 'mini-gallery-0' ).innerHTML =
+			'<a><img height="75" width="75" src="' +
+			mw.config.get( 'wgExtensionAssetsPath' ) +
+			'/SocialProfile/images/ajax-loader-white.gif" alt="" /></a>';
 
 		if ( document.getElementById( 'no-pictures-containers' ) ) {
 			document.getElementById( 'no-pictures-containers' ).style.display = 'none';
