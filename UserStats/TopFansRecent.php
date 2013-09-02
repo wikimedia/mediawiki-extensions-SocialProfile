@@ -113,9 +113,23 @@ class TopFansRecent extends UnlistedSpecialPage {
 				} else {
 					$line = explode( '|', trim( $line, '* ' ), 2 );
 					$stat = $line[0];
+
 					$link_text = $line[1];
-					$statURL = $by_category_title->escapeFullURL( "stat={$stat}" );
-					$output .= '<p><a href="' . $statURL . '">' . $link_text . '</a></p>';
+					// Check if the link text is actually the name of a system
+					// message (refs bug #30030)
+					$msgObj = $this->msg( $link_text );
+					if ( !$msgObj->isDisabled() ) {
+						$link_text = $msgObj->parse();
+					}
+
+					$output .= '<p>';
+					$output .= Linker::link(
+						$by_category_title,
+						$link_text,
+						array(),
+						array( 'stat' => $stat )
+					);
+					$output .= '</p>';
 				}
 			}
 		}
