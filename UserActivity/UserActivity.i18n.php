@@ -39,6 +39,7 @@ $messages['en'] = array(
  * @author Siebrand
  */
 $messages['qqq'] = array(
+	'useractivity-award' => '$1 is HTML (a boldened link to the user\'s userpage), $2 is the user\'s username, which can be used for <code><nowiki>{{GENDER}}</nowiki></code> should the need be (i.e. <nowiki>"{{GENDER:$2|$1}} received an award"</nowiki>), otherwise the $2 parameter can be safely omitted',
 	'useractivity-edit' => 'Supports GENDER for the editor ($1) as $6 if $1 is one user.',
 	'useractivity-foe' => 'Supports GENDER for $1 as $6 if $1 is one user.',
 	'useractivity-friend' => 'Supports GENDER for the $1 as $6 if $1 is one user.',

@@ -546,7 +546,11 @@ class UserActivity {
 				'" border="0" alt="" />';
 			$system_gift_link = SpecialPage::getTitleFor( 'ViewSystemGift' );
 
-			$html = wfMsg( 'useractivity-award', "<b><a href=\"{$user_title->escapeFullURL()}\">{$row->sg_user_name}</a></b>" ) .
+			$html = wfMessage(
+				'useractivity-award',
+				"<b><a href=\"{$user_title->escapeFullURL()}\">{$row->sg_user_name}</a></b>",
+				$row->sg_user_name
+			)->text() .
 			'<div class="item">
 				<a href="' . $system_gift_link->escapeFullURL( 'gift_id=' . $row->sg_id ) . "\" rel=\"nofollow\">
 					{$system_gift_image}
