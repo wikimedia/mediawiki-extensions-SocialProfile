@@ -46,14 +46,14 @@ $wgExtensionMessagesFiles['UserGifts'] = $wgUserGiftsDirectory . '/UserGifts.i18
 // Register the CSS & JS with ResourceLoader
 $wgResourceModules['ext.socialprofile.usergifts.css'] = array(
 	'styles' => 'UserGifts.css',
-	'localBasePath' => dirname( __FILE__ ) . '/UserGifts',
+	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'SocialProfile/UserGifts',
 	'position' => 'top'
 );
 
 $wgResourceModules['ext.socialprofile.usergifts.js'] = array(
 	'scripts' => 'UserGifts.js',
-	'localBasePath' => dirname( __FILE__ ) . '/UserGifts',
+	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'SocialProfile/UserGifts',
 );
 

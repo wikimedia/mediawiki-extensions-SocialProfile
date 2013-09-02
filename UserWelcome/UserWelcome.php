@@ -29,7 +29,7 @@ $wgExtensionCredits['parserhook'][] = array(
 // Register the CSS with ResourceLoader
 $wgResourceModules['ext.socialprofile.userwelcome.css'] = array(
 	'styles' => 'UserWelcome.css',
-	'localBasePath' => dirname( __FILE__ ) . '/UserWelcome',
+	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'SocialProfile/UserWelcome',
 	'position' => 'top'
 );

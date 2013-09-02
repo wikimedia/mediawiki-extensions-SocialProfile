@@ -31,14 +31,14 @@ $wgGroupPermissions['staff']['editothersprofiles'] = true;
 // ResourceLoader support for MediaWiki 1.17+
 $wgResourceModules['ext.socialprofile.userprofile.css'] = array(
 	'styles' => 'UserProfile.css',
-	'localBasePath' => dirname( __FILE__ ) . '/UserProfile',
+	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'SocialProfile/UserProfile',
 	'position' => 'top'
 );
 
 $wgResourceModules['ext.socialprofile.userprofile.js'] = array(
 	'scripts' => 'UserProfilePage.js',
-	'localBasePath' => dirname( __FILE__ ) . '/UserProfile',
+	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'SocialProfile/UserProfile',
 );
 
@@ -46,7 +46,7 @@ $wgResourceModules['ext.socialprofile.userprofile.js'] = array(
 $wgResourceModules['ext.userProfile.updateProfile'] = array(
 	'styles' => 'UserProfile.css',
 	'scripts' => 'UpdateProfile.js',
-	'localBasePath' => dirname( __FILE__ ) . '/UserProfile',
+	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'SocialProfile/UserProfile',
 	'position' => 'top'
 );
