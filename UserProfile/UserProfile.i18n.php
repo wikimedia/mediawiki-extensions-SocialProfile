@@ -177,11 +177,11 @@ Click [[Special:UserLogin|here]] to login or click [[Special:UserLogin/signup|he
 	'user-page-link' => 'User page',
 	'user-social-profile-link' => 'Social profile',
 	'user-wiki-link' => 'Wiki userpage',
-	'update_profile_nav' => '* Special:UpdateProfile|Personal information
-* Special:UpdateProfile/personal|Other information
-* Special:UpdateProfile/custom|Custom information
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Preferences',
+	'update_profile_nav' => '* Special:UpdateProfile|user-profile-section-personal
+* Special:UpdateProfile/personal|user-profile-section-interests
+* Special:UpdateProfile/custom|user-profile-section-custom
+* Special:UploadAvatar|user-profile-section-picture
+* Special:UpdateProfile/preferences|user-profile-section-preferences',
 	'user-type-toggle-old' => 'Use wiki userpage',
 	'user-type-toggle-new' => 'Use social userpage',
 	'user-board-login-message' => 'You must be <a href="$1">logged in</a> to post messages to other users',
@@ -843,11 +843,6 @@ $messages['ar'] = array(
 	'user-page-link' => 'صفحة مستخدم',
 	'user-social-profile-link' => 'ملف اجتماعي',
 	'user-wiki-link' => 'صفحة المستخدم على الويكي',
-	'update_profile_nav' => '* Special:UpdateProfile|معلومات شخصية
-* Special:UpdateProfile/personal|معلومات أخرى
-* Special:UpdateProfile/custom|معلومات مخصصة
-* Special:UploadAvatar|أفاتر
-* Special:UpdateProfile/preferences|تفضيلات',
 	'user-type-toggle-old' => 'استعمل صفحة مستخدم الويكي',
 	'user-type-toggle-new' => 'استعمل صفحة مستخدم اجتماعية',
 	'user-board-login-message' => 'أنت يجب أن تكون <a href="$1">مسجل الدخول</a> لإرسال الرسائل إلى المستخدمين الآخرين',
@@ -1068,11 +1063,6 @@ $messages['arz'] = array(
 	'user-page-link' => 'صفحة يوزر',
 	'user-social-profile-link' => 'ملف اجتماعي',
 	'user-wiki-link' => 'صفحة اليوزر على الويكى',
-	'update_profile_nav' => '* Special:UpdateProfile|معلومات شخصية
-* Special:UpdateProfile/personal|معلومات أخرى
-* Special:UpdateProfile/custom|معلومات مخصصة
-* Special:UploadAvatar|أفاتر
-* Special:UpdateProfile/preferences|تفضيلات',
 	'user-type-toggle-old' => 'استعمل صفحة يوزر الويكي',
 	'user-type-toggle-new' => 'استعمل صفحة يوزر اجتماعية',
 	'user-board-login-message' => 'لازم تكون <a href="$1">مسجل الدخول</a> لإرسال الرسائل لليوزرز التانين',
@@ -1309,11 +1299,6 @@ $messages['be-tarask'] = array(
 	'user-page-link' => 'Старонка ўдзельніка',
 	'user-social-profile-link' => 'Сацыяльны профіль',
 	'user-wiki-link' => 'Вікі-старонка ўдзельніка',
-	'update_profile_nav' => '* Special:UpdateProfile|Асабістыя зьвесткі
-* Special:UpdateProfile/personal|Іншыя зьвесткі
-* Special:UpdateProfile/custom|Нестандартная зьвесткі
-* Special:UploadAvatar|Аватара
-* Special:UpdateProfile/preferences|Налады',
 	'user-type-toggle-old' => 'Выкарыстоўваць вікі-старонку ўдзельніка',
 	'user-type-toggle-new' => 'Выкарыстоўваць сацыяльную старонку ўдзельніка',
 	'user-board-login-message' => 'Вам неабходна <a href="$1">ўвайсьці ў сыстэму</a>, каб дасылаць паведамленьні іншым удзельнікам',
@@ -1476,11 +1461,6 @@ $messages['bg'] = array(
 	'user-page-link' => 'Потребителска страница',
 	'user-social-profile-link' => 'Социален профил',
 	'user-wiki-link' => 'Уики потребителска страница',
-	'update_profile_nav' => '* Special:UpdateProfile|Лична информация
-* Special:UpdateProfile/personal|Друга информация
-* Special:UpdateProfile/custom|Допълнителна информация
-* Special:UploadAvatar|Аватар
-* Special:UpdateProfile/preferences|Настройки',
 	'user-type-toggle-old' => 'Използване на потребителската страница от уикито',
 	'user-type-toggle-new' => 'Използване на социалната потребителска страница',
 	'user-board-login-message' => 'За оставяне на съобщения до другите потребители е необходимо <a href="$1">влизане</a> в системата',
@@ -1732,11 +1712,6 @@ Klikit [[Special:UserLogin|amañ]] evit kevreañ pe klikit [[Special:UserLogin/s
 	'user-page-link' => 'Pajenn implijer',
 	'user-social-profile-link' => 'Profil sokial',
 	'user-wiki-link' => 'Pajenn implijer wiki',
-	'update_profile_nav' => '* Special:UpdateProfile|Titouroù personel
-* Special:UpdateProfile/personal|Titouroù all
-* Special:UpdateProfile/custom|Titouroù personelaet
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Penndibaboù',
 	'user-type-toggle-old' => 'Implijout ar bajenn implijer wiki',
 	'user-type-toggle-new' => 'Implijout ur bajenn implijer sokial',
 	'user-board-login-message' => 'Ret eo deoc\'h bezañ <a href="$1">kevreet</a> evit kas kemennadennoù d\'an implijerien all',
@@ -1920,11 +1895,6 @@ Kliknite [[Special:UserLogin|ovdje]] za prijavu ili kliknite [[Special:UserLogin
 	'user-page-link' => 'Korisnička stranica',
 	'user-social-profile-link' => 'Društveni profil',
 	'user-wiki-link' => 'Wiki korisnička stranica',
-	'update_profile_nav' => '* Special:UpdateProfile|Lični podaci
-* Special:UpdateProfile/personal|Drugi podaci
-* Special:UpdateProfile/custom|Podešeni podaci
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Postavke',
 	'user-type-toggle-old' => 'Koristi korisničku stranicu na wiki',
 	'user-type-toggle-new' => 'Koristi društvenu korisničku stranicu',
 	'user-board-login-message' => 'Morate biti <a href="$1">prijavljeni</a> da biste slali poruke drugim korisnicima',
@@ -2428,11 +2398,6 @@ Klicke [[Special:UserLogin|hier]] um dich anzumelden oder klicke [[Special:UserL
 	'user-page-link' => 'Benutzerseite',
 	'user-social-profile-link' => 'Profil-Seite',
 	'user-wiki-link' => 'Wiki-Benutzerseite',
-	'update_profile_nav' => '* Special:UpdateProfile|Persönliche Informationen
-* Special:UpdateProfile/personal|Weitere Informationen
-* Special:UpdateProfile/custom|Eigene Informationen
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Einstellungen',
 	'user-type-toggle-old' => 'Benutze Wiki-Benutzerseite',
 	'user-type-toggle-new' => 'Benutzer Profil-Seite',
 	'user-board-login-message' => 'Du musst <a href="$1">angemeldet sein</a> um Nachrichten an andere Nutzer zu senden',
@@ -2635,11 +2600,6 @@ Klikni [[Special:UserLogin|sem]], aby se pśizjawił abo klikni [[Special:UserLo
 	'user-page-link' => 'Wužywarski bok',
 	'user-social-profile-link' => 'Socialny profil',
 	'user-wiki-link' => 'Wikijowy wužywarski bok',
-	'update_profile_nav' => '* Special:UpdateProfile|Wósobinske informacije
-* Special:UpdateProfile/personal|Druge informacije
-* Special:UpdateProfile/custom|Swójske informacije
-* Special:UploadAvatar|Awatar
-* Special:UpdateProfile/preferences|Nastajenja',
 	'user-type-toggle-old' => 'Wikijowy wužywarski bok wužywaś',
 	'user-type-toggle-new' => 'Socialny wužywarski bok wužywaś',
 	'user-board-login-message' => 'Musyš <a href="$1">pśizjawjony</a> byś, aby pósłał drugim wužywarjam powěsći',
@@ -2824,11 +2784,6 @@ $messages['el'] = array(
 	'user-page-link' => 'Σελίδα χρήστη',
 	'user-social-profile-link' => 'Κοινωνικό προφίλ',
 	'user-wiki-link' => 'Σελίδα χρήστη βίκι',
-	'update_profile_nav' => '* Special:UpdateProfile|Προσωπικές πληροφορίες
-* Special:UpdateProfile/personal|Άλλες πληροφορίες
-* Special:UpdateProfile/custom| Συνήθεις πληροφορίες
-* Special:UploadAvatar|Άβαταρ
-* Special:UpdateProfile/preferences|Προτιμήσεις',
 	'user-type-toggle-old' => 'Χρησιμοποίησε τη βίκι σελίδα χρήστη',
 	'user-type-toggle-new' => 'Χρησιμοποίησε την κοινωνική σελίδα χρήστη',
 	'removeavatar' => 'Αφαίρεση εικόνας',
@@ -2997,11 +2952,6 @@ $messages['eo'] = array(
 	'user-page-link' => 'Paĝo de uzanto',
 	'user-social-profile-link' => 'Socia profilo',
 	'user-wiki-link' => 'Vikia uzanto-paĝo',
-	'update_profile_nav' => '* Special:UpdateProfile|Persona informo
-* Special:UpdateProfile/personal|Alia informo
-* Special:UpdateProfile/custom|Memfara informo
-* Special:UploadAvatar|Avataro
-* Special:UpdateProfile/preferences|Preferoj',
 	'user-type-toggle-old' => 'Uzi vikian uzulpaĝon',
 	'user-type-toggle-new' => 'Uzi socian uzulpaĝon',
 	'user-board-login-message' => 'Vi devas <a href="$1">ensaluti</a> afiŝi mesaĝojn al aliaj uzantoj',
@@ -3198,11 +3148,6 @@ Haz click [[Special:UserLogin|aquí]] para iniciar sesión o click [[Special:Use
 	'user-page-link' => 'Usuario',
 	'user-social-profile-link' => 'Perfil social',
 	'user-wiki-link' => 'Página de usuario wiki',
-	'update_profile_nav' => '* Special:UpdateProfile|Información personal
-* Special:UpdateProfile/personal|Otra información
-* Special:UpdateProfile/custom|Información personalizada
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Preferencias',
 	'user-type-toggle-old' => 'Usar pagina de usuario wiki',
 	'user-type-toggle-new' => 'Usar página de usuario social',
 	'user-board-login-message' => 'Tiene que haber <a href="$1">iniciado sesión</a> para enviar mensajes a otros usuarios.',
@@ -3570,11 +3515,6 @@ Pursa [[Special:UserLogin|aquina]] p'abril la tu cuenta, u [[Special:UserLogin/s
 	'user-page-link' => "Páhina d'usuáriu",
 	'user-social-profile-link' => 'Perfil social',
 	'user-wiki-link' => "Páhina d'usuáriu wiki",
-	'update_profile_nav' => '* Special:UpdateProfile|Enhormación presonal
-* Special:UpdateProfile/personal|Mas enhormación
-* Special:UpdateProfile/custom|Enhormación presonaliçá
-* Special:UploadAvatar|Avatal
-* Special:UpdateProfile/preferences|Preferéncias',
 	'user-type-toggle-old' => "Gastal la páhina d'usuáriu wiki",
 	'user-type-toggle-new' => "Gastal la páhina d'usuáriu social",
 	'user-board-login-message' => 'Ebis estal <a href="$1">rustriu</a> pa envial mensahis a otrus usuárius',
@@ -3784,11 +3724,6 @@ $messages['fi'] = array(
 	'user-page-link' => 'Käyttäjäsivu',
 	'user-social-profile-link' => 'Sosiaalinen profiili',
 	'user-wiki-link' => 'Wikin käyttäjäsivu',
-	'update_profile_nav' => '* Special:UpdateProfile|Henkilökohtaiset tiedot
-* Special:UpdateProfile/personal|Muut tiedot
-* Special:UpdateProfile/custom|Omat tiedot
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Asetukset',
 	'user-type-toggle-old' => 'Käytä wikin käyttäjäsivua',
 	'user-type-toggle-new' => 'Käytä sosiaalista käyttäjäsivua',
 	'user-board-login-message' => 'Sinun tulee olla <a href="$1">sisäänkirjautunut</a> lähettääksesi viestejä toisille käyttäjille',
@@ -3984,11 +3919,6 @@ Cliquez [[Special:UserLogin|ici]] pour vous connecter ou alors [[Special:UserLog
 	'user-page-link' => 'Page utilisateur',
 	'user-social-profile-link' => 'Profil social',
 	'user-wiki-link' => 'Page utilisateur du wiki',
-	'update_profile_nav' => '* Special:UpdateProfile|Informations personnelles
-* Special:UpdateProfile/personal|Autres informations
-* Special:UpdateProfile/custom|Informations locales
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Préférences',
 	'user-type-toggle-old' => 'Utiliser la page utilisateur du wiki',
 	'user-type-toggle-new' => 'Utiliser la page utilisateur social',
 	'user-board-login-message' => 'Vous devez être <a href="$1">connecté</a> pour poster des messages aux autres utilisateurs',
@@ -4368,11 +4298,6 @@ $messages['gl'] = array(
 	'user-page-link' => 'Páxina de {{GENDER:{{BASEPAGENAME}}|usuario|usuaria}}',
 	'user-social-profile-link' => 'Perfil social',
 	'user-wiki-link' => 'Páxina de usuario do wiki',
-	'update_profile_nav' => '* Special:UpdateProfile|Información persoal
-* Special:UpdateProfile/personal|Outra información
-* Special:UpdateProfile/custom|Custom Information
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Preferencias',
 	'user-type-toggle-old' => 'Usar a páxina de usuario do wiki',
 	'user-type-toggle-new' => 'Usar a páxina de usuario social',
 	'user-board-login-message' => 'Debe <a href="$1">acceder ao sistema</a> para deixar mensaxes a outros usuarios',
@@ -4622,11 +4547,6 @@ Druck [[Special:UserLogin|doo ]] go Di aamälde oder [[Special:UserLogin/signup|
 	'user-page-link' => 'Benutzersyte',
 	'user-social-profile-link' => 'Profilsyte',
 	'user-wiki-link' => 'Wiki-Benutzersyte',
-	'update_profile_nav' => '* Special:UpdateProfile|Persenligi Informatione
-* Special:UpdateProfile/personal|Wyteri Informatione
-* Special:UpdateProfile/custom|Eigeni Informatione
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Yystellige',
 	'user-type-toggle-old' => 'Bruuch d Wiki-Benutzersyte',
 	'user-type-toggle-new' => 'Bruuch d Benutzer-Profilsyte',
 	'user-board-login-message' => 'Du muesch <a href="$1">aagmäldet syy</a> go Nochrichte an anderi Nutzer z schicke',
@@ -4840,11 +4760,6 @@ $messages['he'] = array(
 	'user-page-link' => 'דף המשתמש',
 	'user-social-profile-link' => 'הפרופיל הקהילתי',
 	'user-wiki-link' => 'דף המשתמש של הוויקי',
-	'update_profile_nav' => '* Special:UpdateProfile|מידע אישי
-* Special:UpdateProfile/personal|מידע אחר
-* Special:UpdateProfile/custom|מידע מותאם אישית
-* Special:UploadAvatar|תמונת המשתמש
-* Special:UpdateProfile/preferences|העדפות',
 	'user-type-toggle-old' => 'שימוש בדף המשתמש של הוויקי',
 	'user-type-toggle-new' => 'שימוש בדף המשתמש הקהילתי',
 	'user-board-login-message' => 'עליכם <a href="$1">להיכנס לחשבון</a> כדי לשלוח הודעות למשתמשים אחרים',
@@ -5052,11 +4967,6 @@ Klikń [[Special:UserLogin|sem]], zo by so přizjewił abo klikń [[Special:User
 	'user-page-link' => 'Wužiwarska strona',
 	'user-social-profile-link' => 'Socialny profil',
 	'user-wiki-link' => 'Wikijowa wužiwarska strona',
-	'update_profile_nav' => '* Special:UpdateProfile|Wosobinske informacije
-* Special:UpdateProfile/personal|Druhe informacije
-* Special:UpdateProfile/custom|Swójske informacije
-* Special:UploadAvatar|Awatar
-* Special:UpdateProfile/preferences|Nastajenja',
 	'user-type-toggle-old' => 'Wikijowu wužiwarsku stronu wužiwać',
 	'user-type-toggle-new' => 'Socialnu wužiwarsku stronu wužiwać',
 	'user-board-login-message' => 'Dyrbiš <a href="$1">přizjewjeny</a> być, zo by druhim wužiwarjam powěsće pósłał',
@@ -5238,11 +5148,6 @@ Kattints [[Special:UserLogin|ide]] a bejelentkezéshez, vagy [[Special:UserLogin
 	'user-page-link' => 'Felhasználói lap',
 	'user-social-profile-link' => 'Közösségi profil',
 	'user-wiki-link' => 'Wikis felhasználói lap',
-	'update_profile_nav' => '* Special:UpdateProfile|Személyes információk
-* Special:UpdateProfile/personal|További információk
-* Special:UpdateProfile/custom|Egyéni információk
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Beállítások',
 	'user-type-toggle-old' => 'Wikis felhasználói lap használata',
 	'user-type-toggle-new' => 'Közösségi profil-oldal használata',
 	'user-board-login-message' => '<a href="$1">Be kell jelentkezned</a>, ha más felhasználóknak szeretnél üzenetet küldeni',
@@ -5438,11 +5343,6 @@ Clicca [[Special:UserLogin|hic]] pro aperir un session o clicca [[Special:UserLo
 	'user-page-link' => 'Pagina de usator',
 	'user-social-profile-link' => 'Profilo social',
 	'user-wiki-link' => 'Pagina wiki de usator',
-	'update_profile_nav' => '* Special:UpdateProfile|Informationes personal
-* Special:UpdateProfile/personal|Altere informationes
-* Special:UpdateProfile/custom|Informationes personalisate
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Preferentias',
 	'user-type-toggle-old' => 'Usar le pagina wiki del usator',
 	'user-type-toggle-new' => 'Usar le pagina social del usator',
 	'user-board-login-message' => 'Tu debe <a href="$1">aperir un session</a> pro poter inviar messages a altere usatores',
@@ -5628,11 +5528,6 @@ Klik [[Special:UserLogin|di sini]] untuk masuk log atau klik [[Special:UserLogin
 	'user-page-link' => 'Halaman pengguna',
 	'user-social-profile-link' => 'Profil sosial',
 	'user-wiki-link' => 'Halaman pengguna wiki',
-	'update_profile_nav' => '* Special:UpdateProfile|Informasi pribadi
-* Special:UpdateProfile/personal|Informasi lain
-* Special:UpdateProfile/custom|Informasi kustom
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Preferensi',
 	'user-type-toggle-old' => 'Gunakan halaman pengguna wiki',
 	'user-type-toggle-new' => 'Gunakan halaman pengguna sosial',
 	'user-board-login-message' => 'Anda harus <a href="$1">masuk log</a> untuk mengirim pesan ke pengguna lain',
@@ -5860,11 +5755,6 @@ $messages['ja'] = array(
 	'user-page-link' => 'ユーザーページ',
 	'user-social-profile-link' => 'ソーシャルプロフィール',
 	'user-wiki-link' => 'ウィキ ユーザーページ',
-	'update_profile_nav' => '* Special:UpdateProfile|個人情報
-* Special:UpdateProfile/personal|他の情報
-* Special:UpdateProfile/custom|カスタム情報
-* Special:UploadAvatar|アバター
-* Special:UpdateProfile/preferences|個人設定',
 	'user-type-toggle-old' => 'ウィキの利用者ページを使う',
 	'user-type-toggle-new' => 'ソーシャル利用者ページを使用',
 	'user-board-login-message' => '他の利用者にメッセージを投稿するには、<a href="$1">ログイン</a>する必要があります',
@@ -6132,11 +6022,6 @@ $messages['km'] = array(
 	'user-page-link' => 'ទំព័រ​អ្នកប្រើប្រាស់',
 	'user-social-profile-link' => 'ទម្រង់​សង្គម',
 	'user-wiki-link' => 'ទំព័រ អ្នកប្រើប្រាស់ នៃ វិគី',
-	'update_profile_nav' => '* Special:UpdateProfile|ព័ត៌មាន​ផ្ទាល់ខ្លួន
-* Special:UpdateProfile/personal|ព័ត៌មាន​ដទៃ
-* Special:UpdateProfile/custom|ព័ត៌មានតាមចិត្ត
-* Special:UploadAvatar|អវតារ
-* Special:UpdateProfile/preferences|ចំណង់ចំណូលចិត្ត',
 	'user-type-toggle-old' => 'ប្រើ​ទំព័អ្នប្រើប្រាស់​វិគី',
 	'user-type-toggle-new' => 'ប្រើ​ទំព័អ្នប្រើប្រាស់​សង្គម',
 	'user-board-login-message' => 'អ្នក​ត្រូវតែ<a href="$1">កត់ឈ្មោះចូល</a> ដើម្បី​ដាក់ស្នើ​សារ​ទៅកាន់​អ្នកប្រើប្រាស់​ដទៃ',
@@ -6358,11 +6243,6 @@ Donn [[Special:UserLogin|enlogge]] udder [[Special:UserLogin/signup|Desch aanmel
 	'user-page-link' => 'Matmaachersigg',
 	'user-social-profile-link' => 'Profil-Sigg',
 	'user-wiki-link' => 'Metmaachersigg em Wiki',
-	'update_profile_nav' => '* Special:UpdateProfile|Päsönlesch Enfomazjuhne
-* Special:UpdateProfile/personal|Ander Enfomazjuhne
-* Special:UpdateProfile/custom|Eije Enfomazjuhne
-* Special:UploadAvatar|Avataa
-* Special:UpdateProfile/preferences|Vörliebe',
 	'user-type-toggle-old' => 'Dem Wiki sing nomaale Metmaachersigg nämme',
 	'user-type-toggle-new' => 'De Profil-Sigg nämme',
 	'user-board-login-message' => 'Do moß <a href="$1">enjelogg</a> sin, öm Nohreschte för ander Metmaacher ze schecke',
@@ -6561,11 +6441,6 @@ Klickt [[Special:UserLogin|hei]] fir Iech anzeloggen oder klickt [[Special:UserL
 	'user-page-link' => 'Benotzersäit',
 	'user-social-profile-link' => 'Soziale Profil',
 	'user-wiki-link' => 'Wiki Benotzersäit',
-	'update_profile_nav' => '* Special:UpdateProfile|Perséinlech Informatiounen
-* Special:UpdateProfile/personal|Aner Informatiounen
-* Special:UpdateProfile/custom|Eegen Informatiounen
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Astellungen',
 	'user-type-toggle-old' => "Benotzt d'Wiki-Benotzersäit",
 	'user-type-toggle-new' => 'Sozial-Benotzersäit benotzen',
 	'user-board-login-message' => 'Dir musst <a href="$1">ageloggt si</a> fir anere Benotzer e Message ze schécken',
@@ -6706,11 +6581,6 @@ $messages['lv'] = array(
 	'user-page-link' => 'Lietotāja lapa',
 	'user-social-profile-link' => 'Sociālais profils',
 	'user-wiki-link' => 'Vikipēdijas lietotājlapa',
-	'update_profile_nav' => ' * Special:UpdateProfile|Personīgā informācija
-* Special:UpdateProfile/personal|Cita informācija
-* Special:UpdateProfile/custom|dažādota informācija
-* Special:UploadAvatar|Iemiesojums
-* Special:UpdateProfile/preferences|Iestatījumi',
 	'user-type-toggle-old' => 'Izmantot Vikipēdijas lietotājlapu',
 	'user-type-toggle-new' => 'Izmantot sociālo lietotājlapu',
 	'user-board-login-message' => 'Jums ir jābūt <a href="$1">iegājušam</a>, lai sūtītu ziņojumus citiem lietotājiem',
@@ -6895,11 +6765,6 @@ $messages['mk'] = array(
 	'user-page-link' => 'Корисничка страница',
 	'user-social-profile-link' => 'Друштвен профил',
 	'user-wiki-link' => 'Корисничка страница на вики',
-	'update_profile_nav' => '* Special:UpdateProfile|Лични информации
-* Special:UpdateProfile/personal|Други информации
-* Special:UpdateProfile/custom|Кориснички-определени информации
-* Special:UploadAvatar|Аватар
-* Special:UpdateProfile/preferences|Нагодувања',
 	'user-type-toggle-old' => 'Користи корисничка страница од вики',
 	'user-type-toggle-new' => 'Користи ја друштвената корисничка страница',
 	'user-board-login-message' => 'Мора да сте <a href="$1">најавени</a> за да можете да праќате пораки до други корисници',
@@ -6985,11 +6850,6 @@ $messages['ml'] = array(
 	'user-no-images' => 'ചിത്രങ്ങൾ അപ്‌ലോഡ് ചെയ്തിട്ടില്ല',
 	'user-page-link' => 'ഉപയോക്തൃതാൾ',
 	'user-wiki-link' => 'വിക്കി ഉപയോക്തൃതാൾ',
-	'update_profile_nav' => '* Special:UpdateProfile|വ്യക്തിപരമായ വിവരങ്ങൾ
-* Special:UpdateProfile/personal|മറ്റ് വ്യക്തിപരമായ വിവരങ്ങൾ
-* Special:UpdateProfile/custom|മറ്റുള്ള വിവരങ്ങൾ
-* Special:UploadAvatar|അവതാരം
-* Special:UpdateProfile/preferences|ക്രമീകരണങ്ങൾ',
 	'user-type-toggle-old' => 'വിക്കിയിലെ ഉപയോക്തൃതാൾ ഉപയോഗിക്കുക',
 	'user-profile-picture-log-entry' => 'പുതിയ അവതാരം അപ്‌ലോഡ് ചെയ്തിരിക്കുന്നു',
 );
@@ -7139,11 +6999,6 @@ $messages['mr'] = array(
 	'user-page-link' => 'सदस्य पान',
 	'user-social-profile-link' => 'सार्वजनिक प्रोफाइल',
 	'user-wiki-link' => 'विकि सदस्य पान',
-	'update_profile_nav' => '* Special:UpdateProfile|वैयक्तिक माहिती
-* Special:UpdateProfile/personal|इतर माहिती
-* Special:UpdateProfile/custom|स्वरचित माहिती
-* Special:UploadAvatar|अवतार
-* Special:UpdateProfile/preferences|पसंती',
 	'user-type-toggle-old' => 'विकि सदस्य पान वापरा',
 	'user-type-toggle-new' => 'सार्वजनिक सदस्यपान वापरा',
 	'user-board-login-message' => 'इतर सदस्यांना संदेश पाठविण्यासाठी तुम्ही <a href="$1">प्रवेश केलेला असणे</a> आवश्यक आहे.',
@@ -7452,11 +7307,6 @@ $messages['nb'] = array(
 	'user-page-link' => 'Brukerside',
 	'user-social-profile-link' => 'Sosial profil',
 	'user-wiki-link' => 'Brukerside på wikien',
-	'update_profile_nav' => '* Special:UpdateProfile|Personlig informasjon
-* Special:UpdateProfile/personal|Annen informasjon
-* Special:UpdateProfile/custom|Egendefinert informasjon
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Innstillinger',
 	'user-type-toggle-old' => 'Bruk wikibrukerside',
 	'user-type-toggle-new' => 'Bruk sosial brukerside',
 	'user-board-login-message' => 'Du må være <a href="$1">logget inn</a> for å sende beskjeder til andre brukere',
@@ -7665,11 +7515,6 @@ Klik [[Special:UserLogin|hier]] om u aan te melden of klik [[Special:UserLogin/s
 	'user-page-link' => 'Gebruikerspagina',
 	'user-social-profile-link' => 'Sociaal profiel',
 	'user-wiki-link' => 'Wiki gebruikerspagina',
-	'update_profile_nav' => '* Special:UpdateProfile|Persoonlijke informatie
-* Special:UpdateProfile/personal|Overige informatie
-* Special:UpdateProfile/custom|Vrije velden
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Voorkeuren',
 	'user-type-toggle-old' => 'Wiki gebruikerspagina gebruiken',
 	'user-type-toggle-new' => 'Sociale gebruikerspagina gebruiken',
 	'user-board-login-message' => 'U moet <a href="$1">aangemeld</a> zijn om berichten aan andere gebruikers te kunnen versturen',
@@ -7852,11 +7697,6 @@ Trykk [[Special:UserLogin|her]] for å loggå inn eller [[Special:UserLogin/sign
 	'user-page-link' => 'Brukarside',
 	'user-social-profile-link' => 'Sosial profil',
 	'user-wiki-link' => 'Brukarsida på wikien',
-	'update_profile_nav' => '* Special:UpdateProfile|Personleg informasjon
-* Special:UpdateProfile/personal|Annan informasjon
-* Special:UpdateProfile/custom|Eigendefinert informasjon
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Innstillingar',
 	'user-type-toggle-old' => 'Nytt wikibrukarsida',
 	'user-type-toggle-new' => 'Nytt sosial brukarsida',
 	'user-board-login-message' => 'Du må vera <a href="$1">innlogga</a> for å senda meldingar til andre brukarar',
@@ -8044,11 +7884,6 @@ $messages['oc'] = array(
 	'user-page-link' => "Pagina d'utilizaire",
 	'user-social-profile-link' => 'Perfil en societat',
 	'user-wiki-link' => "Pagina d'utilizaire del wiki",
-	'update_profile_nav' => '* Special:UpdateProfile|Entresenhas personalas
-* Special:UpdateProfile/personal|Autras entresenhas
-* Special:UpdateProfile/custom|Entresenhas localas
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Preferéncias',
 	'user-type-toggle-old' => "Utilizar la pagina d'utilizaire del wiki",
 	'user-type-toggle-new' => "Utilizar la pagina d'utilizaire en societat",
 	'user-board-login-message' => 'Vos cal èsser <a href="$1">en sesilha</a> per mandar de messatges als autres utilizaires',
@@ -8308,11 +8143,6 @@ Kliknij [[Special:UserLogin|tutaj]] aby się zalogować lub [[Special:UserLogin/
 	'user-page-link' => 'Strona użytkownika',
 	'user-social-profile-link' => 'Profil społecznościowy',
 	'user-wiki-link' => 'Strona użytkownika wiki',
-	'update_profile_nav' => '* Special:UpdateProfile|Informacje osobiste
-* Special:UpdateProfile/personal|Inne informacje
-* Special:UpdateProfile/custom|Informacje niestandardowe
-* Special:UploadAvatar|Portret
-* Special:UpdateProfile/preferences|Preferencje',
 	'user-type-toggle-old' => 'Użyj strony użytkownika wiki',
 	'user-type-toggle-new' => 'Użyj towarzyskiej strony użytkownika',
 	'user-board-login-message' => 'Musisz być <a href="$1">zalogowany</a>, żeby zostawiać wiadomości innym użytkownikom.',
@@ -8494,11 +8324,6 @@ Sgnaché [[Special:UserLogin|ambelessì]] për intré ant ël sistema o sgnaché
 	'user-page-link' => 'Pàgina utent',
 	'user-social-profile-link' => 'Profil social',
 	'user-wiki-link' => 'Pàgina utent dla wiki',
-	'update_profile_nav' => '* Special:UpdateProfile|Anformassion përsonaj
-* Special:UpdateProfile/personal|Àutre anformassion
-* Special:UpdateProfile/custom|Anformassion locaj
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Mè gust',
 	'user-type-toggle-old' => 'Dovré le pàgine utent dla wiki',
 	'user-type-toggle-new' => 'Dovré la pàgina utent social',
 	'user-board-login-message' => 'A deuv esse <a href="$1">intrà ant ël sistema</a> për spedì dij mëssagi a j\'àutri utent',
@@ -8774,11 +8599,6 @@ Clique [[Special:UserLogin|aqui]] para se autenticar ou [[Special:UserLogin/sign
 	'user-page-link' => 'Página de utilizador',
 	'user-social-profile-link' => 'Perfil social',
 	'user-wiki-link' => 'Página wiki do utilizador',
-	'update_profile_nav' => '* Special:UpdateProfile|Informação pessoal
-* Special:UpdateProfile/personal|Outra informação
-* Special:UpdateProfile/custom|Informação personalizada
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Preferências',
 	'user-type-toggle-old' => 'Usar página wiki do utilizador',
 	'user-type-toggle-new' => 'Usar página social de utilizador',
 	'user-board-login-message' => 'Precisa de <a href="$1">autenticar-se</a> para enviar mensagens a outros utilizadores',
@@ -8963,11 +8783,6 @@ Clique [[Special:UserLogin|aqui]] para se autenticar ou clique [[Special:UserLog
 	'user-page-link' => 'Página de usuário',
 	'user-social-profile-link' => 'Perfil Social',
 	'user-wiki-link' => 'Página wiki de usuário',
-	'update_profile_nav' => '* Special:UpdateProfile|Informação pessoal
-* Special:UpdateProfile/personal|Outras informações
-* Special:UpdateProfile/custom|Informação personalizada
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Preferências',
 	'user-type-toggle-old' => 'Usar página wiki de usuário',
 	'user-type-toggle-new' => 'Usar página social de usuário',
 	'user-board-login-message' => 'Você precisa estar <a href="$1">autenticado</a> para enviar mensagens para outros utilizadores',
@@ -9385,11 +9200,6 @@ $messages['ru'] = array(
 	'user-page-link' => 'Страница участника',
 	'user-social-profile-link' => 'Социальный профиль',
 	'user-wiki-link' => 'Вики-страница',
-	'update_profile_nav' => '* Special:UpdateProfile|Личные сведения
-* Special:UpdateProfile/personal|Другая информация
-* Special:UpdateProfile/custom|Пользовательская информация
-* Special:UploadAvatar|Аватар
-* Special:UpdateProfile/preferences|Настройки',
 	'user-type-toggle-old' => 'Использовать вики-страницу участника',
 	'user-type-toggle-new' => 'Использовать социальную страницу участника',
 	'user-board-login-message' => 'Вы должны <a href="$1">представиться системе</a> чтобы отправлять сообщения другим учсатникам.',
@@ -9664,11 +9474,6 @@ $messages['sk'] = array(
 	'user-page-link' => 'Používateľská stránka',
 	'user-social-profile-link' => 'Spoločenský profil',
 	'user-wiki-link' => 'Používateľská stránka na wiki',
-	'update_profile_nav' => '* Special:UpdateProfile|Osobné informácie
-* Special:UpdateProfile/personal|Ostatné informácie
-* Special:UpdateProfile/custom|Vlastné informácie
-* Special:UploadAvatar|Obrázok
-* Special:UpdateProfile/preferences|nastavenia',
 	'user-type-toggle-old' => 'Použiť používateľskú stránku na wiki',
 	'user-type-toggle-new' => 'Použiť spoločenskú používateľskú stránku',
 	'user-board-login-message' => 'Aby ste mohli posielať správy ostatným používateľom, musíte <a href="$1">sa prihlásiť</a>.',
@@ -10185,11 +9990,6 @@ Klicka [[Special:UserLogin|här]] för att logga in eller klicka [[Special:UserL
 	'user-page-link' => 'Användarsida',
 	'user-social-profile-link' => 'Social profil',
 	'user-wiki-link' => 'Användarsida på wikin',
-	'update_profile_nav' => '* Special:UpdateProfile|Personlig information
-* Special:UpdateProfile/personal|Annan information
-* Special:UpdateProfile/custom|Egendefinierad information
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Inställningar',
 	'user-type-toggle-old' => 'Använd wikianvändarsida',
 	'user-type-toggle-new' => 'Använd social användarsida',
 	'user-board-login-message' => 'Du måste vara <a href="$1">inloggad</a> för att skicka meddelanden till andra användare',
@@ -10379,11 +10179,6 @@ $messages['te'] = array(
 	'user-page-link' => 'వాడుకరి పేజీ',
 	'user-social-profile-link' => 'సాంఘీక ప్రొఫైలు',
 	'user-wiki-link' => 'వికీ వాడుకరిపేజీ',
-	'update_profile_nav' => '* Special:UpdateProfile|వ్యక్తిగత సమాచారం
-* Special:UpdateProfile/personal|ఇతర సమాచారం
-* Special:UpdateProfile/custom|ప్రత్యేక సమాచారం
-* Special:UploadAvatar|అవతారం
-* Special:UpdateProfile/preferences|అభిరుచులు',
 	'user-type-toggle-old' => 'వికీ వాడుకరిపేజీని వాడు',
 	'user-board-login-message' => 'ఇతర వాడుకరులకు సందేశం వ్రాయడానికి మీరు <a href="$1">ప్రవేశించి</a> ఉండాలి',
 	'removeavatar' => 'అవతారాన్ని తొలగించండి',
@@ -10785,11 +10580,6 @@ $messages['th'] = array(
 	'user-page-link' => 'หน้าผู้ใช้',
 	'user-social-profile-link' => 'โปล์ไฟล์ทางสังคม',
 	'user-wiki-link' => 'หน้าผู้ใช้วิกิ',
-	'update_profile_nav' => '* Special:UpdateProfile|ข้อมูลส่วนตัว
-* Special:UpdateProfile/personal|ข้อมูลอื่นๆ
-* Special:UpdateProfile/custom|ข้อมูลเพิ่มเติม
-* Special:UploadAvatar|อวาต้า
-* Special:UpdateProfile/preferences|การตั้งค่า',
 	'user-type-toggle-old' => 'ใช้หน้าผู้ใช้วิกิ',
 	'user-type-toggle-new' => 'ใช้หน้าสังคมผู้ใช้',
 	'user-board-login-message' => 'คุณต้อง<a href="$1">ลงชื่อเข้าใช้</a>เพื่อส่งข้อความให้กับผู้ใช้คนอื่นๆ',
@@ -10977,11 +10767,6 @@ Pindutin [[Special:UserLogin|dito]] para lumagda o pindutin [[Special:UserLogin/
 	'user-page-link' => 'Pahina ng tagagamit',
 	'user-social-profile-link' => 'Panlipunang talaan ng katangian',
 	'user-wiki-link' => 'Pahina ng tagagamit na pang-Wiki',
-	'update_profile_nav' => '* Special:UpdateProfile|Pansariling kabatiran
-* Special:UpdateProfile/personal|Iba pang kabatiran
-* Special:UpdateProfile/custom|Pasadyang kabatiran
-* Special:UploadAvatar|Huwaran (abatar)
-* Special:UpdateProfile/preferences|Mga kagustuhan',
 	'user-type-toggle-old' => 'Gamitin ang pahina ng tagagamit sa wiki',
 	'user-type-toggle-new' => 'Gamitin ang pahina ng tagagamit na panlipunan',
 	'user-board-login-message' => 'Dapat lamang na <a href="$1">nakalagda</a> ka upang makapagtala/makapagpaskil ng mga mensahe sa iba pang mga tagagamit',
@@ -11164,11 +10949,6 @@ Oturum açmak için [[Special:UserLogin|buraya]], kaydolmak için ise [[Special:
 	'user-page-link' => 'Kullanıcı sayfası',
 	'user-social-profile-link' => 'Sosyal profil',
 	'user-wiki-link' => 'Viki kullanıcı sayfası',
-	'update_profile_nav' => '* Special:UpdateProfile|Kişisel bilgiler
-* Special:UpdateProfile/personal|Diğer bilgiler
-* Special:UpdateProfile/custom|Özel bilgiler
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Tercihler',
 	'user-type-toggle-old' => 'Viki kullanıcı sayfasını kullan',
 	'user-type-toggle-new' => 'Sosyal kullanıcı sayfasını kullan',
 	'user-board-login-message' => 'Diğer kullanıcılara mesaj göndermek için <a href="$1">oturum açmış</a> olmalısınız',
@@ -11331,11 +11111,6 @@ $messages['vep'] = array(
 	'user-page-link' => "Kävutajan lehtpol'",
 	'user-social-profile-link' => "Socialine profil'",
 	'user-wiki-link' => "Wiki-lehtpol'",
-	'update_profile_nav' => '* Special:UpdateProfile|Personaližed andmused
-* Special:UpdateProfile/personal|Toižed andmused
-* Special:UpdateProfile/custom|Kävutajan informacii
-* Special:UploadAvatar|Avatar
-* Special:UpdateProfile/preferences|Järgendused',
 	'user-type-toggle-old' => "Kävutada wikin kävutajan lehtpol'",
 	'user-type-toggle-new' => "Kävutada socialine kävutajan lehtpol'",
 	'removeavatar' => 'Heitta avatar poiš',

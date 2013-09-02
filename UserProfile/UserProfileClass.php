@@ -217,7 +217,7 @@ class UserProfile {
 	}
 
 	static function getEditProfileNav( $current_nav ) {
-		$lines = explode( "\n", wfMsgForContent( 'update_profile_nav' ) );
+		$lines = explode( "\n", wfMessage( 'update_profile_nav' )->inContentLanguage()->text() );
 		$output = '<div class="profile-tab-bar">';
 
 		foreach ( $lines as $line ) {
@@ -228,9 +228,15 @@ class UserProfile {
 				$page = Title::newFromText( $line[0] );
 				$link_text = $line[1];
 
-				$output .= '<div class="profile-tab' . ( ( $current_nav == $link_text ) ? '-on' : '' ) . '">
-					<a href="' . $page->escapeFullURL() . "\">{$link_text}</a>
-				</div>";
+				// Maybe it's the name of a system message? (bug #30030)
+				$msgObj = wfMessage( $line[1] );
+				if ( !$msgObj->isDisabled() ) {
+					$link_text = $msgObj->parse();
+				}
+
+				$output .= '<div class="profile-tab' . ( ( $current_nav == $link_text ) ? '-on' : '' ) . '">';
+				$output .= Linker::link( $page, $link_text );
+				$output .= '</div>';
 			}
 		}
 
