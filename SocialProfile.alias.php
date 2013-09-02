@@ -25,7 +25,6 @@ $specialPageAliases['en'] = array(
 	'UpdateProfile' => array( 'UpdateProfile' ),
 	'UploadAvatar' => array( 'UploadAvatar' ),
 	'UserBoard' => array( 'UserBoard' ),
-	'UserStatus' => array( 'UserStatus' ),
 	'ViewRelationshipRequests' => array( 'ViewRelationshipRequests' ),
 	'ViewRelationships' => array( 'ViewRelationships' ),
 );
@@ -47,7 +46,6 @@ $specialPageAliases['ar'] = array(
 	'UpdateProfile' => array( 'تحديث_الملف' ),
 	'UploadAvatar' => array( 'رفع_أفاتر' ),
 	'UserBoard' => array( 'مجلس_المستخدم' ),
-	'UserStatus' => array( 'حالة_المستخدم' ),
 	'ViewRelationshipRequests' => array( 'عرض_طلبات_العلاقات' ),
 	'ViewRelationships' => array( 'عرض_العلاقات' ),
 );
@@ -249,7 +247,6 @@ $specialPageAliases['lb'] = array(
 	'UpdateProfile' => array( 'Profil_eroplueden' ),
 	'UploadAvatar' => array( 'Avatar_eroplueden' ),
 	'UserBoard' => array( 'Benotzer-Panneau' ),
-	'UserStatus' => array( 'Benotzer-Status' ),
 	'ViewRelationshipRequests' => array( 'Ufroe_vu_Relatioune_weisen' ),
 	'ViewRelationships' => array( 'Relatioune_weisen' ),
 );
@@ -271,7 +268,6 @@ $specialPageAliases['mk'] = array(
 	'UpdateProfile' => array( 'ОбновиГоПрофилот' ),
 	'UploadAvatar' => array( 'ПодигниАватар' ),
 	'UserBoard' => array( 'КорисничкаТабла' ),
-	'UserStatus' => array( 'КорисничкиСтатус' ),
 	'ViewRelationshipRequests' => array( 'ПогледајБарањаЗаВрска' ),
 	'ViewRelationships' => array( 'ПогледајВрски' ),
 );
@@ -323,7 +319,6 @@ $specialPageAliases['nds-nl'] = array(
 	'UpdateProfile' => array( 'Profiel_biewarken' ),
 	'UploadAvatar' => array( 'Avatar_derbie_doon' ),
 	'UserBoard' => array( 'Gebrukersbord' ),
-	'UserStatus' => array( 'Gebrukersstaotus' ),
 	'ViewRelationshipRequests' => array( 'Relasieverzeuken_bekieken' ),
 	'ViewRelationships' => array( 'Relasies_bekieken' ),
 );
@@ -345,7 +340,6 @@ $specialPageAliases['nl'] = array(
 	'UpdateProfile' => array( 'ProfielBijwerken' ),
 	'UploadAvatar' => array( 'AvatarUploaden' ),
 	'UserBoard' => array( 'Gebruikersboard' ),
-	'UserStatus' => array( 'Gebruikersstatus' ),
 	'ViewRelationshipRequests' => array( 'RelatieverzoekenBekijken' ),
 	'ViewRelationships' => array( 'RelatiesBekijken' ),
 );

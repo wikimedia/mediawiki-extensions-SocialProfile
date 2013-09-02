@@ -20,7 +20,7 @@ class TopUsersPoints extends SpecialPage {
 		$out = $this->getOutput();
 
 		// Load CSS
-		$out->addExtensionStyle( 'ext.socialprofile.userstats.css' );
+		$out->addModules( 'ext.socialprofile.userstats.css' );
 
 		$out->setPageTitle( $this->msg( 'user-stats-alltime-title' )->plain() );
 

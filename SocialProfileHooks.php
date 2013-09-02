@@ -49,9 +49,6 @@ class SocialProfileHooks {
 		$updater->addExtensionUpdate( array( 'addTable', 'user_gift', "$dir/UserGifts/usergifts$dbExt.sql", true ) );
 		$updater->addExtensionUpdate( array( 'addTable', 'gift', "$dir/UserGifts/usergifts$dbExt.sql", true ) );
 		$updater->addExtensionUpdate( array( 'addTable', 'user_system_messages', "$dir/UserSystemMessages/user_system_messages$dbExt.sql", true ) );
-		$updater->addExtensionUpdate( array( 'addTable', 'user_status', "$dir/UserStatus/userstatus$dbExt.sql", true ) );
-		$updater->addExtensionUpdate( array( 'addTable', 'user_status_history', "$dir/UserStatus/userstatus$dbExt.sql", true ) );
-		$updater->addExtensionUpdate( array( 'addTable', 'user_status_likes', "$dir/UserStatus/userstatus$dbExt.sql", true ) );
 
 		return true;
 	}

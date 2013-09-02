@@ -20,7 +20,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
  * you will need to include in LocalSettings.php. The online manual has more
  * details about this.
  *
- * For more info about SocialProfile, please see http://www.mediawiki.org/wiki/Extension:SocialProfile.
+ * For more info about SocialProfile, please see https://www.mediawiki.org/wiki/Extension:SocialProfile.
  */
 $dir = dirname( __FILE__ ) . '/';
 
@@ -29,7 +29,6 @@ $wgExtensionMessagesFiles['SocialProfileUserBoard'] = $dir . 'UserBoard/UserBoar
 $wgExtensionMessagesFiles['SocialProfileUserProfile'] = $dir . 'UserProfile/UserProfile.i18n.php';
 $wgExtensionMessagesFiles['SocialProfileUserRelationship'] = $dir . 'UserRelationship/UserRelationship.i18n.php';
 $wgExtensionMessagesFiles['SocialProfileUserStats'] = $dir . 'UserStats/UserStats.i18n.php';
-$wgExtensionMessagesFiles['SocialProfileUserStatus'] = $dir . 'UserStatus/UserStatus.i18n.php';
 
 $wgExtensionMessagesFiles['SocialProfileNamespaces'] = $dir . 'SocialProfile.namespaces.php';
 $wgExtensionMessagesFiles['SocialProfileAlias'] = $dir . 'SocialProfile.alias.php';
@@ -48,7 +47,6 @@ $wgAutoloadClasses['SpecialUploadAvatar'] = $dir . 'UserProfile/SpecialUploadAva
 $wgAutoloadClasses['SpecialViewRelationshipRequests'] = $dir . 'UserRelationship/SpecialViewRelationshipRequests.php';
 $wgAutoloadClasses['SpecialViewRelationships'] = $dir . 'UserRelationship/SpecialViewRelationships.php';
 $wgAutoloadClasses['SpecialViewUserBoard'] = $dir . 'UserBoard/SpecialUserBoard.php';
-$wgAutoloadClasses['SpecialUserStatus'] = $dir . 'UserStatus/SpecialUserStatus.php';
 $wgAutoloadClasses['RemoveAvatar'] = $dir . 'UserProfile/SpecialRemoveAvatar.php';
 $wgAutoloadClasses['UpdateEditCounts'] = $dir . 'UserStats/SpecialUpdateEditCounts.php';
 $wgAutoloadClasses['UserBoard'] = $dir . 'UserBoard/UserBoardClass.php';
@@ -63,7 +61,6 @@ $wgAutoloadClasses['TopFansByStat'] = $dir . 'UserStats/TopFansByStat.php';
 $wgAutoloadClasses['TopFansRecent'] = $dir . 'UserStats/TopFansRecent.php';
 $wgAutoloadClasses['TopUsersPoints'] = $dir . 'UserStats/TopUsers.php';
 $wgAutoloadClasses['wAvatar'] = $dir . 'UserProfile/AvatarClass.php';
-$wgAutoloadClasses['UserStatusClass'] = $dir . 'UserStatus/UserStatusClass.php';
 
 // New special pages
 $wgSpecialPages['AddRelationship'] = 'SpecialAddRelationship';
@@ -83,7 +80,6 @@ $wgSpecialPages['UploadAvatar'] = 'SpecialUploadAvatar';
 $wgSpecialPages['UserBoard'] = 'SpecialViewUserBoard';
 $wgSpecialPages['ViewRelationshipRequests'] = 'SpecialViewRelationshipRequests';
 $wgSpecialPages['ViewRelationships'] = 'SpecialViewRelationships';
-$wgSpecialPages['UserStatus'] = 'SpecialUserStatus';
 
 // Special page groups for MW 1.13+
 $wgSpecialPageGroups['AddRelationship'] = 'users';
@@ -96,7 +92,6 @@ $wgSpecialPageGroups['ViewRelationships'] = 'users';
 // Necessary AJAX functions
 require_once( "$IP/extensions/SocialProfile/UserBoard/UserBoard_AjaxFunctions.php" );
 require_once( "$IP/extensions/SocialProfile/UserRelationship/Relationship_AjaxFunctions.php" );
-require_once( "$IP/extensions/SocialProfile/UserStatus/UserStatus_AjaxFunctions.php" );
 
 // What to display on social profile pages by default?
 $wgUserProfileDisplay['board'] = true;
@@ -109,18 +104,12 @@ $wgUserBoard = true;
 // Whether to enable friending or not -- this doesn't do very much actually, so don't rely on it
 $wgFriendingEnabled = true;
 
-// Should we enable UserStatus feature? (currently is under development)
-$wgEnableUserStatus = false;
-
-// Permission to delete other Users' Status Messages
-$wgGroupPermissions['sysop']['delete-status-update'] = true;
-
 // Extension credits that show up on Special:Version
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'SocialProfile',
 	'author' => array( 'Aaron Wright', 'David Pean', 'Jack Phoenix' ),
-	'version' => '1.6',
+	'version' => '1.6.1',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile',
 	'description' => 'A set of Social Tools for MediaWiki',
 );
@@ -232,20 +221,20 @@ $wgHooks['LoadExtensionSchemaUpdates'][] = 'SocialProfileHooks::onLoadExtensionS
 $wgResourceModules['ext.socialprofile.userboard.js'] = array(
 	'scripts' => 'UserBoard.js',
 	'messages' => array( 'userboard_confirmdelete' ),
-	'localBasePath' => dirname( __FILE__ ),
+	'localBasePath' => dirname( __FILE__ ) . '/UserBoard',
 	'remoteExtPath' => 'SocialProfile/UserBoard',
 );
 
 $wgResourceModules['ext.socialprofile.userboard.css'] = array(
 	'styles' => 'UserBoard.css',
-	'localBasePath' => dirname( __FILE__ ),
+	'localBasePath' => dirname( __FILE__ ) . '/UserBoard',
 	'remoteExtPath' => 'SocialProfile/UserBoard',
 	'position' => 'top' // just in case
 );
 
 $wgResourceModules['ext.socialprofile.userboard.boardblast.css'] = array(
 	'styles' => 'BoardBlast.css',
-	'localBasePath' => dirname( __FILE__ ),
+	'localBasePath' => dirname( __FILE__ ) . '/UserBoard',
 	'remoteExtPath' => 'SocialProfile/UserBoard',
 	'position' => 'top' // just in case
 );
@@ -256,28 +245,28 @@ $wgResourceModules['ext.socialprofile.userboard.boardblast.js'] = array(
 		'boardblast-js-sending', 'boardblast-js-error-missing-message',
 		'boardblast-js-error-missing-user'
 	),
-	'localBasePath' => dirname( __FILE__ ),
+	'localBasePath' => dirname( __FILE__ ) . '/UserBoard',
 	'remoteExtPath' => 'SocialProfile/UserBoard',
 );
 
 // UserRelationship
 $wgResourceModules['ext.socialprofile.userrelationship.css'] = array(
 	'styles' => 'UserRelationship.css',
-	'localBasePath' => dirname( __FILE__ ),
+	'localBasePath' => dirname( __FILE__ ) . '/UserRelationship',
 	'remoteExtPath' => 'SocialProfile/UserRelationship',
 	'position' => 'top' // just in case
 );
 
 $wgResourceModules['ext.socialprofile.userrelationship.js'] = array(
 	'scripts' => 'UserRelationship.js',
-	'localBasePath' => dirname( __FILE__ ),
+	'localBasePath' => dirname( __FILE__ ) . '/UserRelationship',
 	'remoteExtPath' => 'SocialProfile/UserRelationship',
 );
 
 // UserStats
 $wgResourceModules['ext.socialprofile.userstats.css'] = array(
 	'styles' => 'TopList.css',
-	'localBasePath' => dirname( __FILE__ ),
+	'localBasePath' => dirname( __FILE__ ) . '/UserStats',
 	'remoteExtPath' => 'SocialProfile/UserStats',
 	'position' => 'top' // just in case
 );

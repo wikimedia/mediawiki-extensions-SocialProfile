@@ -81,7 +81,7 @@ class GenerateTopUsersReport extends SpecialPage {
 		// display look worse, not better.
 
 		// Add CSS
-		$out->addExtensionStyle( 'ext.socialprofile.userstats.css' );
+		$out->addModules( 'ext.socialprofile.userstats.css' );
 
 		// Used as the LIMIT for SQL queries; basically, show this many users
 		// in the generated reports.
