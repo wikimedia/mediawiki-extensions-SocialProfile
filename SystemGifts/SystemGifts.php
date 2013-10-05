@@ -43,7 +43,7 @@ $wgExtensionMessagesFiles['SystemGifts'] = $wgSystemGiftsDirectory . '/SystemGif
 
 // Register the CSS with ResourceLoader
 $wgResourceModules['ext.socialprofile.systemgifts.css'] = array(
-	'styles' => 'SystemGifts.css',
+	'styles' => 'SystemGift.css',
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'SocialProfile/SystemGifts',
 	'position' => 'top'

@@ -75,7 +75,7 @@ class ViewSystemGift extends UnlistedSpecialPage {
 
 			$profileURL = Title::makeTitle( NS_USER, $gift['user_name'] )->escapeFullURL();
 			$output .= '<div class="back-links">' .
-				$this->msg( 'ga-back-link', $profileURL, $gift['user_name'] )->parse() .
+				$this->msg( 'ga-back-link', $profileURL, $gift['user_name'] )->text() .
 			'</div>';
 
 			$message = $out->parse( trim( $gift['description'] ), false );
