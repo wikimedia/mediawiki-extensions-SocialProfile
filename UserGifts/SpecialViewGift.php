@@ -48,7 +48,7 @@ class ViewGift extends UnlistedSpecialPage {
 				array( 'DISTINCT ug_user_name_to', 'ug_user_id_to', 'ug_date' ),
 				array(
 					'ug_gift_id' => $gift['gift_id'],
-					"ug_user_name_to <> '" . $dbr->addQuotes( $gift['user_name_to'] ) . "'"
+					'ug_user_name_to <> ' . $dbr->addQuotes( $gift['user_name_to'] )
 				),
 				__METHOD__,
 				array(
@@ -60,7 +60,6 @@ class ViewGift extends UnlistedSpecialPage {
 
 			$out->setPageTitle( $this->msg(
 				'g-description-title',
-				'parsemag',
 				$gift['user_name_to'],
 				$gift['name']
 			)->parse() );
@@ -70,7 +69,7 @@ class ViewGift extends UnlistedSpecialPage {
 				. $this->msg( 'g-back-link', $gift['user_name_to'] )->parse() . '</a>
 			</div>';
 
-			$user = Title::makeTitle( NS_USER, $gift['user_name_from'] );
+			$sender = Title::makeTitle( NS_USER, $gift['user_name_from'] );
 			$removeGiftLink = SpecialPage::getTitleFor( 'RemoveGift' );
 			$giveGiftLink = SpecialPage::getTitleFor( 'GiveGift' );
 
@@ -87,7 +86,7 @@ class ViewGift extends UnlistedSpecialPage {
 					<div class="g-timestamp">(' . $gift['timestamp'] . ')</div>
 					<div class="g-from">' . $this->msg(
 						'g-from',
-						$user->escapeFullURL(),
+						$sender->escapeFullURL(),
 						$gift['user_name_from']
 					)->text() . '</div>';
 			if ( $message ) {
