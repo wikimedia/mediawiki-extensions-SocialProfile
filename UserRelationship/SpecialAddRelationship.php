@@ -52,7 +52,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 
 		$this->user_name_to = $userTitle->getText();
 		$this->user_id_to = User::idFromName( $this->user_name_to );
-		$this->relationship_type = $wgRequest->getInt( 'rel_type' );
+		$this->relationship_type = $request->getInt( 'rel_type' );
 		if ( !$this->relationship_type || !is_numeric( $this->relationship_type ) ) {
 			$this->relationship_type = 1;
 		}
@@ -140,7 +140,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 
 			$avatar = new wAvatar( $this->user_id_to, 'l' );
 
-			$wgOut->setPageTitle( $this->msg( 'ur-add-error-message-pending-request-title' )->plain() );
+			$out->setPageTitle( $this->msg( 'ur-add-error-message-pending-request-title' )->plain() );
 
 			$output = "<div class=\"relationship-action\">
 				{$avatar->getAvatarURL()}
