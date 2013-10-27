@@ -3,8 +3,8 @@ var UserGifts = {
 
 	selectGift: function( id ) {
 		// Un-select previously selected gift
-		if ( selected_gift ) {
-			jQuery( '#give_gift_' + selected_gift ).removeClass( 'g-give-all-selected' );
+		if ( UserGifts.selected_gift ) {
+			jQuery( '#give_gift_' + UserGifts.selected_gift ).removeClass( 'g-give-all-selected' );
 		}
 
 		// Select new gift
@@ -39,7 +39,32 @@ var UserGifts = {
 };
 
 jQuery( document ).ready( function() {
+	// "Select a friend" dropdown menu
 	jQuery( 'div.g-gift-select select' ).on( 'change', function() {
 		UserGifts.chooseFriend( jQuery( this ).val() );
+	} );
+
+	// Handlers for individual gift images
+	jQuery( 'div[id^=give_gift_]' ).on({
+		'click': function() {
+			UserGifts.selectGift(
+				jQuery( this ).attr( 'id' ).replace( 'give_gift_', '' )
+			);
+		},
+		'mouseout': function() {
+			UserGifts.unHighlightGift(
+				jQuery( this ).attr( 'id' ).replace( 'give_gift_', '' )
+			);
+		},
+		'mouseover': function() {
+			UserGifts.highlightGift(
+				jQuery( this ).attr( 'id' ).replace( 'give_gift_', '' )
+			);
+		},
+	});
+
+	// "Send gift" button
+	jQuery( 'input#send-gift-button' ).on( 'click', function() {
+		UserGifts.sendGift();
 	} );
 } );

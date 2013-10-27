@@ -318,7 +318,7 @@ class GiveGift extends SpecialPage {
 					Gifts::getGiftImage( $gift['id'], 'l' ) .
 					'" border="0" alt="" />';
 
-				$output .= "<div onclick=\"selectGift({$gift['id']})\" onmouseover=\"highlightGift({$gift['id']})\" onmouseout=\"unHighlightGift({$gift['id']})\" id=\"give_gift_{$gift['id']}\" class=\"g-give-all\">
+				$output .= "<div id=\"give_gift_{$gift['id']}\" class=\"g-give-all\">
 					{$gift_image}
 					<div class=\"g-title g-blue\">{$gift['gift_name']}</div>";
 				if ( $gift['gift_description'] ) {
@@ -401,7 +401,7 @@ class GiveGift extends SpecialPage {
 				<div class="g-buttons">
 					<input type="hidden" name="gift_id" value="0" />
 					<input type="hidden" name="user_name" value="' . addslashes( $this->user_name_to ) . '" />
-					<input type="button" class="site-button" value="' . $this->msg( 'g-send-gift' )->plain() . '" size="20" onclick="sendGift()" />
+					<input type="button" id="send-gift-button" class="site-button" value="' . $this->msg( 'g-send-gift' )->plain() . '" size="20" />
 					<input type="button" class="site-button" value="' . $this->msg( 'g-cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
 				</div>
 			</form>';
