@@ -33,6 +33,8 @@ $wgExtensionMessagesFiles['SocialProfileUserStats'] = $dir . 'UserStats/UserStat
 $wgExtensionMessagesFiles['SocialProfileNamespaces'] = $dir . 'SocialProfile.namespaces.php';
 $wgExtensionMessagesFiles['SocialProfileAlias'] = $dir . 'SocialProfile.alias.php';
 
+$wgExtensionMessagesFiles['AvatarMagic'] = $dir . 'UserProfile/Avatar.magic.i18n.php';
+
 // Classes to be autoloaded
 $wgAutoloadClasses['GenerateTopUsersReport'] = $dir . 'UserStats/GenerateTopUsersReport.php';
 
@@ -61,6 +63,7 @@ $wgAutoloadClasses['TopFansByStat'] = $dir . 'UserStats/TopFansByStat.php';
 $wgAutoloadClasses['TopFansRecent'] = $dir . 'UserStats/TopFansRecent.php';
 $wgAutoloadClasses['TopUsersPoints'] = $dir . 'UserStats/TopUsers.php';
 $wgAutoloadClasses['wAvatar'] = $dir . 'UserProfile/AvatarClass.php';
+$wgAutoloadClasses['AvatarParserFunction'] = $dir . 'UserProfile/AvatarParserFunction.php';
 
 // New special pages
 $wgSpecialPages['AddRelationship'] = 'SpecialAddRelationship';
@@ -197,6 +200,13 @@ $wgExtensionCredits['specialpage'][] = array(
 	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile',
 	'description' => 'A special page for viewing all relationships by type',
 );
+$wgExtensionCredits['parserhook'][] = array(
+	'path' => __FILE__,
+	'name' => 'Avatar',
+	'author' => 'Adam Carter',
+	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile',
+	'description' => 'A parser function to get the avatar of a given user',
+);
 
 // Hooked functions
 // This has to be either here or even earlier on because the loader files mess
@@ -211,6 +221,8 @@ require_once( "$IP/extensions/SocialProfile/UserActivity/UserActivity.php" ); //
 
 $wgHooks['CanonicalNamespaces'][] = 'SocialProfileHooks::onCanonicalNamespaces';
 $wgHooks['LoadExtensionSchemaUpdates'][] = 'SocialProfileHooks::onLoadExtensionSchemaUpdates';
+$wgHooks['ParserFirstCallInit'][] = 'AvatarParserFunction::setupAvatarParserFunction';
+
 // For the Renameuser extension
 //$wgHooks['RenameUserSQL'][] = 'SocialProfileHooks::onRenameUserSQL';
 
