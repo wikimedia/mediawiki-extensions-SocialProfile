@@ -71,7 +71,7 @@ class UserProfilePage extends Article {
 	}
 
 	function view() {
-		global $wgOut, $wgTitle;
+		global $wgOut;
 
 		$wgOut->setPageTitle( $this->mTitle->getPrefixedText() );
 
@@ -88,7 +88,7 @@ class UserProfilePage extends Article {
 		// User does not want social profile for User:user_name, so we just
 		// show header + page content
 		if (
-			$wgTitle->getNamespace() == NS_USER &&
+			$this->getTitle()->getNamespace() == NS_USER &&
 			$this->profile_data['user_id'] &&
 			$this->profile_data['user_page_type'] == 0
 		)
@@ -381,7 +381,7 @@ class UserProfilePage extends Article {
 	 * @return String: HTML or nothing if this feature isn't enabled
 	 */
 	function getCasualGames( $user_id, $user_name ) {
-		global $wgUser, $wgTitle, $wgOut, $wgUserProfileDisplay;
+		global $wgUser, $wgOut, $wgUserProfileDisplay;
 
 		if ( $wgUserProfileDisplay['games'] == false ) {
 			return '';
@@ -521,12 +521,12 @@ class UserProfilePage extends Article {
 	}
 
 	function getProfileSection( $label, $value, $required = true ) {
-		global $wgUser, $wgTitle, $wgOut;
+		global $wgUser, $wgOut;
 
 		$output = '';
 		if ( $value || $required ) {
 			if ( !$value ) {
-				if ( $wgUser->getName() == $wgTitle->getText() ) {
+				if ( $wgUser->getName() == $this->getTitle()->getText() ) {
 					$value = wfMsg( 'profile-updated-personal' );
 				} else {
 					$value = wfMsg( 'profile-not-provided' );
@@ -805,7 +805,7 @@ class UserProfilePage extends Article {
 	 * @param $user_name String: user name
 	 */
 	function getProfileTop( $user_id, $user_name ) {
-		global $wgTitle, $wgUser, $wgLang;
+		global $wgUser, $wgLang;
 		global $wgUserLevels;
 
 		$stats = new UserStats( $user_id, $user_name );
@@ -817,7 +817,7 @@ class UserProfilePage extends Article {
 		$profile_data = $this->profile_data;
 
 		// Variables and other crap
-		$page_title = $wgTitle->getText();
+		$page_title = $this->getTitle()->getText();
 		$title_parts = explode( '/', $page_title );
 		$user = $title_parts[0];
 		$id = User::idFromName( $user );
@@ -930,18 +930,18 @@ class UserProfilePage extends Article {
 		$output .= '<a href="' . $contributions->escapeFullURL() . '" rel="nofollow">' . wfMsg( 'user-contributions' ) . '</a> ';
 
 		// Links to User:user_name from User_profile:
-		if ( $wgTitle->getNamespace() == NS_USER_PROFILE && $this->profile_data['user_id'] && $this->profile_data['user_page_type'] == 0 ) {
+		if ( $this->getTitle()->getNamespace() == NS_USER_PROFILE && $this->profile_data['user_id'] && $this->profile_data['user_page_type'] == 0 ) {
 			$output .= '| <a href="' . $user_page->escapeFullURL() . '" rel="nofollow">' .
 				wfMsg( 'user-page-link' ) . '</a> ';
 		}
 
 		// Links to User:user_name from User_profile:
-		if ( $wgTitle->getNamespace() == NS_USER && $this->profile_data['user_id'] && $this->profile_data['user_page_type'] == 0 ) {
+		if ( $this->getTitle()->getNamespace() == NS_USER && $this->profile_data['user_id'] && $this->profile_data['user_page_type'] == 0 ) {
 			$output .= '| <a href="' . $user_social_profile->escapeFullURL() . '" rel="nofollow">' .
 				wfMsg( 'user-social-profile-link' ) . '</a> ';
 		}
 
-		if ( $wgTitle->getNamespace() == NS_USER && ( !$this->profile_data['user_id'] || $this->profile_data['user_page_type'] == 1 ) ) {
+		if ( $this->getTitle()->getNamespace() == NS_USER && ( !$this->profile_data['user_id'] || $this->profile_data['user_page_type'] == 1 ) ) {
 			$output .= '| <a href="' . $user_wiki->escapeFullURL() . '" rel="nofollow">' .
 				wfMsg( 'user-wiki-link' ) . '</a>';
 		}
@@ -1565,7 +1565,7 @@ class UserProfilePage extends Article {
 	 * @return String: HTML
 	 */
 	function getFanBoxes( $user_name ) {
-		global $wgOut, $wgUser, $wgTitle, $wgMemc, $wgUserProfileDisplay, $wgEnableUserBoxes;
+		global $wgOut, $wgUser, $wgMemc, $wgUserProfileDisplay, $wgEnableUserBoxes;
 
 		if ( !$wgEnableUserBoxes || $wgUserProfileDisplay['userboxes'] == false ) {
 			return '';
@@ -1655,7 +1655,7 @@ class UserProfilePage extends Article {
 				} else {
 					$fantag_leftside = $fanbox['fantag_left_text'];
 					$fantag_leftside = $tagParser->parse(
-						$fantag_leftside, $wgTitle,
+						$fantag_leftside, $this->getTitle(),
 						$wgOut->parserOptions(), false
 					);
 					$fantag_leftside = $fantag_leftside->getText();
