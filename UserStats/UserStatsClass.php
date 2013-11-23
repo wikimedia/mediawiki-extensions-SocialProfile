@@ -521,12 +521,14 @@ class UserStatsTrack {
 		if ( !$row ) {
 			$this->addWeekly();
 		}
-		$dbw->update(
-			'user_points_weekly',
-			array( 'up_points=up_points+' . $points ),
-			array( 'up_user_id' => $this->user_id ),
-			__METHOD__
-		);
+		if ( is_int( $points ) ) {
+			$dbw->update(
+				'user_points_weekly',
+				array( 'up_points=up_points+' . $points ),
+				array( 'up_user_id' => $this->user_id ),
+				__METHOD__
+			);
+		}
 	}
 
 	/**
@@ -557,13 +559,14 @@ class UserStatsTrack {
 		if ( !$row ) {
 			$this->addMonthly();
 		}
-
-		$dbw->update(
-			'user_points_monthly',
-			array( 'up_points=up_points+' . $points ),
-			array( 'up_user_id' => $this->user_id ),
-			__METHOD__
-		);
+		if ( is_int( $points ) ) {
+			$dbw->update(
+				'user_points_monthly',
+				array( 'up_points=up_points+' . $points ),
+				array( 'up_user_id' => $this->user_id ),
+				__METHOD__
+			);
+		}
 	}
 
 	/**
