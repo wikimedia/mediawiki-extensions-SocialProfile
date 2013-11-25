@@ -1683,7 +1683,7 @@ class UserProfilePage extends Article {
 				$fantag_title = Title::makeTitle( NS_FANTAG, $fanbox['fantag_title'] );
 				$right_text = $fanbox['fantag_right_text'];
 				$right_text = $tagParser->parse(
-					$right_text, $wgTitle, $wgOut->parserOptions(), false
+					$right_text, $this->getTitle(), $wgOut->parserOptions(), false
 				);
 				$right_text = $right_text->getText();
 
