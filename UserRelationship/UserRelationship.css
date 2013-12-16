@@ -12,6 +12,9 @@
 
 .clearfix { display: inline-block; }
 
+/* Monaco is different */
+.skin-monaco .clearfix { display: block; }
+
 /* Hides from IE-mac \*/
 * html .clearfix { height: 1%; }
 /* End hide from IE-mac */
