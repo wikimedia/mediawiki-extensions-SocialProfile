@@ -112,6 +112,24 @@ and change your settings to disable email notifications.',
  * @author Umherirrender
  */
 $messages['qqq'] = array(
+	'systemgiftmanager' => 'Page title for system git manager pages.',
+	'ga-addnew' => 'Link to gift creation form.',
+	'ga-back-edit-gift' => 'Link to system gift edit screen after upload of gift icon.',
+	'ga-back-gift-list' => 'Link to system gift list after upload of gift icon.', 
+	'ga-back-link' => 'Link back to user profile from Special:ViewSystemGifts. Parameters:
+* $1 is a URL to the user profile.
+* $2 is the current users name.',
+	'ga-choosefile' => 'Button to prompt system upload box to select file to upload as the gift icon.',
+	'ga-count' => 'Parameters:
+* $1 is the username of the current user.
+* $2 is the number of gifts the user has.',
+	'ga-create-gift' => 'Button on gift creation form to write new gift to database.',
+	'ga-created' => 'Message shown to the user to confirm that a gift has been created.',
+	'ga-currentimage' => 'Heading shown above the current icon for a gift on the icon upload page.',
+	'ga-error-message-invalid-link' => 'Message shown to user if they are trying to access a gift that does not exist.',
+	'ga-error-message-no-user' => 'Message shown when the target user does not exist',
+	'ga-file-instructions' => 'Restrictions for the upload of icons, including file types and size limit.',
+	'ga-error-title' => 'Title of error page.',
 	'ga-goback' => '{{Identical|Go back}}',
 	'ga-large' => '{{Identical|Large}}',
 	'ga-medium' => '{{Identical|Medium}}',
@@ -3590,4 +3608,3 @@ $messages['zh-hant'] = array(
 	'ga-uploadsuccess' => '上傳成功',
 	'ga-viewlist' => '檢視禮物清單',
 );
-
