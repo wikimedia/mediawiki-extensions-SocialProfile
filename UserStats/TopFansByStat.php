@@ -131,7 +131,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 
 					$output .= '<p>';
 					$output .= Linker::link(
-						$this->getTitle(),
+						$this->getPageTitle(),
 						$link_text,
 						array(),
 						array( 'stat' => $stat )

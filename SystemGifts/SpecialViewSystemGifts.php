@@ -132,7 +132,7 @@ class ViewSystemGifts extends SpecialPage {
 		 */
 		$numofpages = $total / $per_page;
 
-		$page_link = $this->getTitle();
+		$page_link = $this->getPageTitle();
 
 		if ( $numofpages > 1 ) {
 			$output .= '<div class="page-nav">';

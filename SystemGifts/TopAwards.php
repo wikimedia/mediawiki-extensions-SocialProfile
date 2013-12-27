@@ -141,7 +141,7 @@ class TopAwards extends UnlistedSpecialPage {
 			if ( $nav_x == $category_number ) {
 				$output .= "<p><b>{$msg}</b></p>";
 			} else {
-				$output .= '<p><a href="' . $this->getTitle()->escapeFullURL(
+				$output .= '<p><a href="' . $this->getPageTitle()->escapeFullURL(
 					"category={$nav_x}" ) . "\">{$msg}</a></p>";
 			}
 			$nav_x++;

@@ -229,7 +229,7 @@ class GiveGift extends SpecialPage {
 		$this->getOutput()->setPageTitle( $this->msg( 'g-give-no-user-title' )->plain() );
 
 		$output = '<form action="" method="get" enctype="multipart/form-data" name="gift">' .
-			Html::hidden( 'title', $this->getTitle() ) .
+			Html::hidden( 'title', $this->getPageTitle() ) .
 			'<div class="g-message">' .
 				$this->msg( 'g-give-no-user-message' )->plain() .
 			'</div>
@@ -335,7 +335,7 @@ class GiveGift extends SpecialPage {
 			/**
 			 * Build next/prev nav
 			 */
-			$giveGiftLink = $this->getTitle();
+			$giveGiftLink = $this->getPageTitle();
 
 			$numofpages = $total / $per_page;
 			$user_name = $user->getText();
