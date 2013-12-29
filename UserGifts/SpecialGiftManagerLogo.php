@@ -568,7 +568,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$out->addHTML( "<ul class='warning'>{$warning}</ul><br />\n" );
 
 		$titleObj = SpecialPage::getTitleFor( 'Upload' );
-		$action = $titleObj->escapeLocalURL( 'action=submit' );
+		$action = htmlspecialchars( $titleObj->getLocalURL( 'action=submit' ) );
 
 		if ( $wgUseCopyrightUpload ) {
 			$copyright = "
