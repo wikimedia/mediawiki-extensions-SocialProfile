@@ -114,7 +114,10 @@ class TopAwards extends UnlistedSpecialPage {
 			array( 'system_gift' => array( 'INNER JOIN', 'gift_id=sg_gift_id' ) )
 		);
 
-		// Page title
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
+
+		// Set the correct page title ;)
 		// for grep: topawards-edit-title, topawards-vote-title,
 		// topawards-comment-title, topawards-recruit-title,
 		// topawards-friend-title

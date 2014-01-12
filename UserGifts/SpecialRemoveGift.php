@@ -21,6 +21,9 @@ class RemoveGift extends UnlistedSpecialPage {
 		$request = $this->getRequest();
 		$user = $this->getUser();
 
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
+
 		// Add CSS
 		$out->addModules( 'ext.socialprofile.usergifts.css' );
 

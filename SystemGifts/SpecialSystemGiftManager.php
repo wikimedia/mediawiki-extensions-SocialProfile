@@ -26,7 +26,8 @@ class SystemGiftManager extends SpecialPage {
 		$request = $this->getRequest();
 		$user = $this->getUser();
 
-		$out->setPageTitle( $this->msg( 'systemgiftmanager' )->plain() );
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
 
 		// If the user doesn't have the required 'awardsmanage' permission, display an error
 		if ( !$user->isAllowed( 'awardsmanage' ) ) {

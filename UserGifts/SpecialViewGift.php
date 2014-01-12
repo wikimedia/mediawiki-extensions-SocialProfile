@@ -20,6 +20,9 @@ class ViewGift extends UnlistedSpecialPage {
 		$out = $this->getOutput();
 		$user = $this->getUser();
 
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
+
 		// Add CSS
 		$out->addModules( 'ext.socialprofile.usergifts.css' );
 

@@ -113,6 +113,10 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 
 		$this->avatarUploadDirectory = $wgUploadDirectory . '/awards';
 
+		// Set the robot policies, etc.
+		$out->setArticleRelated( false );
+		$out->setRobotPolicy( 'noindex,nofollow' );
+
 		/** Show an error message if file upload is disabled */
 		if ( !$wgEnableUploads ) {
 			$out->addWikiMsg( 'uploaddisabled' );

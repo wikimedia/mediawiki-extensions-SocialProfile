@@ -28,6 +28,9 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		$out = $this->getOutput();
 		$user = $this->getUser();
 
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
+
 		/**
 		 * Redirect anonymous users to the login page
 		 * It will automatically return them to the ViewRelationshipRequests page

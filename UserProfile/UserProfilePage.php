@@ -847,7 +847,8 @@ class UserProfilePage extends Article {
 
 		if ( $this->isOwner() ) {
 			$toggle_title = SpecialPage::getTitleFor( 'ToggleUserPage' );
-			if ( $this->profile_data['user_page_type'] == 1 ) {
+			// Cast it to an int because PHP is stupid.
+			if ( (int) $profile_data['user_page_type'] == 1 ) {
 				$toggleMessage = wfMsg( 'user-type-toggle-old' );
 			} else {
 				$toggleMessage = wfMsg( 'user-type-toggle-new' );

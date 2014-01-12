@@ -22,6 +22,9 @@ class TopUsersPoints extends SpecialPage {
 		// Load CSS
 		$out->addModules( 'ext.socialprofile.userstats.css' );
 
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
+
 		$out->setPageTitle( $this->msg( 'user-stats-alltime-title' )->plain() );
 
 		$count = 100;

@@ -23,6 +23,9 @@ class GiftManager extends SpecialPage {
 		$request = $this->getRequest();
 		$user = $this->getUser();
 
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
+
 		$out->setPageTitle( $this->msg( 'giftmanager' )->plain() );
 
 		// Make sure that the user is logged in and that they can use this

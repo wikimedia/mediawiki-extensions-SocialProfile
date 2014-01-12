@@ -45,6 +45,10 @@ class PopulateAwards extends UnlistedSpecialPage {
 			return;
 		}
 
+		// Set the robot policies, etc.
+		$out->setArticleRelated( false );
+		$out->setRobotPolicy( 'noindex,nofollow' );
+
 		$wgUserLevels = '';
 
 		$g = new SystemGifts();

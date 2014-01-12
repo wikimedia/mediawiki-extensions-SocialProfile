@@ -31,6 +31,9 @@ class UserHome extends SpecialPage {
 		// Add CSS
 		$out->addModules( 'ext.socialprofile.useractivity.css' );
 
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
+
 		$out->setPageTitle( $this->msg( 'useractivity-title' )->plain() );
 
 		$output = '';

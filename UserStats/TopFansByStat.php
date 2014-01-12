@@ -29,6 +29,9 @@ class TopFansByStat extends UnlistedSpecialPage {
 		$out = $this->getOutput();
 		$request = $this->getRequest();
 
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
+
 		// Load CSS
 		$out->addModules( 'ext.socialprofile.userstats.css' );
 

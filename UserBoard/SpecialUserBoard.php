@@ -28,6 +28,9 @@ class SpecialViewUserBoard extends SpecialPage {
 		$request = $this->getRequest();
 		$currentUser = $this->getUser();
 
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
+
 		// Add CSS & JS
 		$out->addModules( array(
 			'ext.socialprofile.userboard.css',

@@ -21,6 +21,9 @@ class TopFansRecent extends UnlistedSpecialPage {
 		$request = $this->getRequest();
 		$user = $this->getUser();
 
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
+
 		// Load CSS
 		$out->addModules( 'ext.socialprofile.userstats.css' );
 

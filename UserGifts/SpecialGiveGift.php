@@ -29,6 +29,9 @@ class GiveGift extends SpecialPage {
 
 		$output = ''; // Prevent E_NOTICE
 
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
+
 		// Add CSS & JS
 		$out->addModules( array(
 			'ext.socialprofile.usergifts.css',

@@ -35,6 +35,10 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		$request = $this->getRequest();
 		$user = $this->getUser();
 
+		// Set the robot policies, etc.
+		$out->setArticleRelated( false );
+		$out->setRobotPolicy( 'noindex,nofollow' );
+
 		// If the user doesn't have the required 'awardsmanage' permission, display an error
 		if ( !$user->isAllowed( 'awardsmanage' ) ) {
 			$out->permissionRequired( 'awardsmanage' );

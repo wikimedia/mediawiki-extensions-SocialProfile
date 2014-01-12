@@ -31,6 +31,8 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 
 		$wgSupressPageTitle = true;
 
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
 		$out->setHTMLTitle( $this->msg( 'pagetitle',
 			$this->msg( 'edit-profiles-title' )->plain() )->plain() );
 

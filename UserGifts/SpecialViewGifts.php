@@ -28,6 +28,9 @@ class ViewGifts extends SpecialPage {
 		$request = $this->getRequest();
 		$currentUser = $this->getUser();
 
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
+
 		// Add CSS
 		$out->addModules( 'ext.socialprofile.usergifts.css' );
 

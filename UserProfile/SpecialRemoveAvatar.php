@@ -50,6 +50,8 @@ class RemoveAvatar extends SpecialPage {
 			return;
 		}
 
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
 		$out->setPageTitle( $this->msg( 'avatarupload-removeavatar' )->plain() );
 
 		if ( $request->getVal( 'user' ) != '' ) {

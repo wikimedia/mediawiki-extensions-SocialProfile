@@ -59,6 +59,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		$wgSupressPageTitle = true;
 
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
 		$out->setHTMLTitle( $this->msg( 'pagetitle', $this->msg( 'edit-profile-title' )->plain() )->plain() );
 
 		// This feature is only available for logged-in users.

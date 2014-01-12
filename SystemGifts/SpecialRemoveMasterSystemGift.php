@@ -59,6 +59,10 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 			return;
 		}
 
+		// Set the robot policies, etc.
+		$out->setArticleRelated( false );
+		$out->setRobotPolicy( 'noindex,nofollow' );
+
 		// Add CSS
 		$out->addModules( 'ext.socialprofile.systemgifts.css' );
 
