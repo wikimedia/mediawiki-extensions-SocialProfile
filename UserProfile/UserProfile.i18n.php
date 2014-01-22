@@ -8625,7 +8625,6 @@ Clique [[Special:UserLogin|aqui]] para se autenticar ou [[Special:UserLogin/sign
  * @author Eduardo.mps
  * @author Giro720
  * @author Helder.wiki
- * @author Heldergeovane
  * @author Jorge Morais
  * @author Malafaya
  */

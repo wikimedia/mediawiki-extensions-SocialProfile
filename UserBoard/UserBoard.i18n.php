@@ -2870,7 +2870,6 @@ e altere as suas preferências para desactivar as notificações por correio ele
 /** Brazilian Portuguese (Português do Brasil)
  * @author Eduardo.mps
  * @author Helder.wiki
- * @author Heldergeovane
  */
 $messages['pt-br'] = array(
 	'boardblastlogintitle' => 'Você precisa estar autenticado para enviar recados',

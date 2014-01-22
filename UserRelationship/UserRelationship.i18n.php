@@ -6125,7 +6125,6 @@ $messages['ps'] = array(
  * @author 555
  * @author Hamilton Abreu
  * @author Helder.wiki
- * @author Heldergeovane
  * @author Lijealso
  * @author Malafaya
  * @author Vanessa Sabino
@@ -6304,7 +6303,6 @@ e altere as suas preferências para desactivar as notificações por correio ele
 /** Brazilian Portuguese (Português do Brasil)
  * @author Eduardo.mps
  * @author Helder.wiki
- * @author Heldergeovane
  */
 $messages['pt-br'] = array(
 	'viewrelationships' => 'Ver relacionamentos',
