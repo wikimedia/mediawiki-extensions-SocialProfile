@@ -578,7 +578,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		$out->addHTML( "<ul class='warning'>{$warning}</ul><br />\n" );
 
 		$titleObj = SpecialPage::getTitleFor( 'Upload' );
-		$action = $titleObj->escapeLocalURL( 'action=submit' );
+		$action = htmlspecialchars( $titleObj->getLocalURL( 'action=submit' ) );
 
 		if ( $wgUseCopyrightUpload ) {
 			$copyright = "
@@ -631,7 +631,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		$ulb = $this->msg( 'uploadbtn' )->plain();
 
 		$titleObj = SpecialPage::getTitleFor( 'Upload' );
-		$action = $titleObj->escapeLocalURL();
+		$action = htmlspecialchars( $titleObj->getLocalURL() );
 
 		$encDestFile = htmlspecialchars( $this->mDestFile );
 		$source = null;
