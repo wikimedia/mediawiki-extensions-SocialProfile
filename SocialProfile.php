@@ -25,14 +25,14 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $dir = dirname( __FILE__ ) . '/';
 
 // Internationalization files
+$wgExtensionMessagesFiles['SocialProfile'] = $dir . 'SocialProfile.i18n.php';
+$wgExtensionMessagesFiles['SocialProfileAlias'] = $dir . 'SocialProfile.alias.php';
+
 $wgExtensionMessagesFiles['SocialProfileUserBoard'] = $dir . 'UserBoard/UserBoard.i18n.php';
 $wgExtensionMessagesFiles['SocialProfileUserProfile'] = $dir . 'UserProfile/UserProfile.i18n.php';
 $wgExtensionMessagesFiles['SocialProfileUserRelationship'] = $dir . 'UserRelationship/UserRelationship.i18n.php';
 $wgExtensionMessagesFiles['SocialProfileUserStats'] = $dir . 'UserStats/UserStats.i18n.php';
-
 $wgExtensionMessagesFiles['SocialProfileNamespaces'] = $dir . 'SocialProfile.namespaces.php';
-$wgExtensionMessagesFiles['SocialProfileAlias'] = $dir . 'SocialProfile.alias.php';
-
 $wgExtensionMessagesFiles['AvatarMagic'] = $dir . 'UserProfile/Avatar.magic.i18n.php';
 
 // Classes to be autoloaded
@@ -114,7 +114,7 @@ $wgExtensionCredits['other'][] = array(
 	'author' => array( 'Aaron Wright', 'David Pean', 'Jack Phoenix' ),
 	'version' => '1.6.1',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile',
-	'description' => 'A set of Social Tools for MediaWiki',
+	'descriptionmsg' => 'socialprofile-desc',
 );
 $wgExtensionCredits['specialpage'][] = array(
 	'path' => __FILE__,
