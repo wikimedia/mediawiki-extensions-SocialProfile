@@ -224,7 +224,7 @@ $wgHooks['LoadExtensionSchemaUpdates'][] = 'SocialProfileHooks::onLoadExtensionS
 $wgHooks['ParserFirstCallInit'][] = 'AvatarParserFunction::setupAvatarParserFunction';
 
 // For the Renameuser extension
-//$wgHooks['RenameUserSQL'][] = 'SocialProfileHooks::onRenameUserSQL';
+$wgHooks['RenameUserComplete'][] = 'SocialProfileHooks::onRenameUserComplete';
 
 // ResourceLoader module definitions for certain components which do not have
 // their own loader file

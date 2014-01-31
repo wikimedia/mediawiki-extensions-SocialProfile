@@ -58,27 +58,36 @@ class SocialProfileHooks {
 
 	/**
 	 * For integration with the Renameuser extension.
-	 * The hook registration has been commented out for years because, as the
-	 * FIXME below notes, RenameuserSQL doesn't like updating the same table
-	 * twice and I figured it'd be better to let capable sysadmins update data
-	 * manually than to leave the database in a terribly messy condition.
 	 *
-	 * @param $renameUserSQL RenameuserSQL
+	 * @param int $uid User ID
+	 * @param String $oldName old user name
+	 * @param String $newName new user name
 	 * @return Boolean
 	 */
-	public static function onRenameUserSQL( $renameUserSQL ) {
-		$renameUserSQL->tables['user_system_gift'] = array( 'sg_user_name', 'sg_user_id' );
-		$renameUserSQL->tables['user_board'] = array( 'ub_user_name_from', 'ub_user_id_from' );
-		$renameUserSQL->tables['user_gift'] = array( 'ug_user_name_to', 'ug_user_id_to' );
-		$renameUserSQL->tables['gift'] = array( 'gift_creator_user_name', 'gift_creator_user_id' );
-		// <fixme> This sucks and only updates half of the rows...wtf?
-		$renameUserSQL->tables['user_relationship'] = array( 'r_user_name_relation', 'r_user_id_relation' );
-		$renameUserSQL->tables['user_relationship'] = array( 'r_user_name', 'r_user_id' );
-		// </fixme>
-		$renameUserSQL->tables['user_relationship_request'] = array( 'ur_user_name_from', 'ur_user_id_from' );
-		$renameUserSQL->tables['user_stats'] = array( 'stats_user_name', 'stats_user_id' );
-		$renameUserSQL->tables['user_system_messages'] = array( 'um_user_name', 'um_user_id' );
+	public static function onRenameUserComplete( $uid, $oldName, $newName ) {
+		$dbw = wfGetDB( DB_MASTER );
+
+		$tables = array(
+			'user_system_gift' => array( 'sg_user_name', 'sg_user_id' ),
+			'user_board' => array( 'ub_user_name_from', 'ub_user_id_from' ),
+			'user_gift' => array( 'ug_user_name_to', 'ug_user_id_to' ),
+			'gift' => array( 'gift_creator_user_name', 'gift_creator_user_id' ),
+			'user_relationship' => array( 'r_user_name_relation', 'r_user_id_relation' ),
+			'user_relationship' => array( 'r_user_name', 'r_user_id' ),
+			'user_relationship_request' => array( 'ur_user_name_from', 'ur_user_id_from' ),
+			'user_stats' => array( 'stats_user_name', 'stats_user_id' ),
+			'user_system_messages' => array( 'um_user_name', 'um_user_id' ),
+		);
+
+		foreach ( $tables as $table => $data ) {
+			$dbw->update(
+				$table,
+				array( $data[0] => $newName ),
+				array( $data[1] => $uid ),
+				__METHOD__
+			);
+		}
+
 		return true;
 	}
-
 }
