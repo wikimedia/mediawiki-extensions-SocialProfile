@@ -49,14 +49,14 @@ class wAvatar {
 			} else {
 				$avatar_filename = basename( $files[0] ) . '?r=' . filemtime( $files[0] );
 			}
-			$wgMemc->set( $key, $avatar_filename );
+			$wgMemc->set( $key, $avatar_filename, 60 * 60 * 24 ); // cache for 24 hours
 		}
 		return $avatar_filename;
 	}
 
-	/** 
+	/**
 	 * @param Array $extraParams: array of extra parameters to give to the image
-	 * @return String: <img> HTML tag with full path to the avatar image 
+	 * @return String: <img> HTML tag with full path to the avatar image
 	 * */
 	function getAvatarURL( $extraParams = array() ) {
 		global $wgUploadPath;
