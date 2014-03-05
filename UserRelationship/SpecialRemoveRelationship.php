@@ -38,7 +38,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 		// Add CSS
 		$out->addModules( 'ext.socialprofile.userrelationship.css' );
 
-		$usertitle = Title::newFromDBkey( $request->getVal( 'user' ) );
+		$usertitle = Title::newFromDBkey( $this->getRequest()->getVal( 'user' ) );
 		if ( !$usertitle ) {
 			$ot->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
 			$out->addWikiMsg( 'ur-add-no-user' );
