@@ -83,7 +83,7 @@ class UserBoard {
 				$user_from,
 				$board_link->escapeFullURL(),
 				$update_profile_link->escapeFullURL()
-			)->parse();
+			)->text();
 			$user->sendMail( $subject, $body );
 		}
 	}
