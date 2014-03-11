@@ -5,6 +5,7 @@
  * @file
  * @ingroup Extensions
  */
+// @codingStandardsIgnoreFile
 
 $specialPageAliases = array();
 
@@ -53,6 +54,8 @@ $specialPageAliases['ar'] = array(
 /** Egyptian Spoken Arabic (مصرى) */
 $specialPageAliases['arz'] = array(
 	'AddRelationship' => array( 'زود_علاقه' ),
+	'EditProfile' => array( 'تعديل_الملف' ),
+	'GenerateTopUsersReport' => array( 'توليد_تقرير_اعلى_اليوزرات' ),
 	'PopulateUserProfiles' => array( 'املى_فايلات_اليوزرات' ),
 	'RemoveAvatar' => array( 'شيل_Avatar' ),
 	'RemoveRelationship' => array( 'شيل_علاقه' ),
@@ -69,7 +72,7 @@ $specialPageAliases['arz'] = array(
 	'ViewRelationships' => array( 'عرض_العلاقات' ),
 );
 
-/** Bosnian (Bosanski) */
+/** Bosnian (bosanski) */
 $specialPageAliases['bs'] = array(
 	'AddRelationship' => array( 'DodavanjeVeze' ),
 	'ViewRelationships' => array( 'PregledVeza' ),
@@ -79,15 +82,19 @@ $specialPageAliases['bs'] = array(
 $specialPageAliases['de'] = array(
 	'AddRelationship' => array( 'Kontakt_hinzufügen' ),
 	'EditProfile' => array( 'Profil_bearbeiten' ),
+	'GenerateTopUsersReport' => array( 'Top-Benutzer-Bericht_erstellen' ),
 	'PopulateUserProfiles' => array( 'Populäre_Profile' ),
 	'RemoveAvatar' => array( 'Avatar_entfernen' ),
 	'RemoveRelationship' => array( 'Kontakt_entfernen' ),
+	'SendBoardBlast' => array( 'Nachricht_versenden' ),
+	'TopFansByStatistic' => array( 'Top-Fans_nach_Statistiken' ),
 	'TopUsers' => array( 'Top-Benutzer' ),
 	'TopUsersRecent' => array( 'Aktuelle_Top-Benutzer' ),
 	'ToggleUserPage' => array( 'Benutzerseitenumschaltung' ),
 	'UpdateEditCounts' => array( 'Bearbeitungszähler_aktualisieren' ),
 	'UpdateProfile' => array( 'Profil_aktualisieren' ),
 	'UploadAvatar' => array( 'Avatar_hochladen' ),
+	'UserBoard' => array( 'Benutzerboard' ),
 	'ViewRelationshipRequests' => array( 'Kontaktgesuche_ansehen' ),
 	'ViewRelationships' => array( 'Kontakte_ansehen' ),
 );
@@ -109,7 +116,7 @@ $specialPageAliases['fa'] = array(
 	'ViewRelationships' => array( 'نمایش_رابطه‌ها' ),
 );
 
-/** Finnish (Suomi) */
+/** Finnish (suomi) */
 $specialPageAliases['fi'] = array(
 	'RemoveAvatar' => array( 'Poista_avatar' ),
 	'UpdateProfile' => array( 'Päivitä_käyttäjäprofiili' ),
@@ -133,7 +140,7 @@ $specialPageAliases['gsw'] = array(
 	'ViewRelationships' => array( 'Verbindige bschaue' ),
 );
 
-/** Upper Sorbian (Hornjoserbsce) */
+/** Upper Sorbian (hornjoserbsce) */
 $specialPageAliases['hsb'] = array(
 	'AddRelationship' => array( 'Poćah přidać' ),
 	'RemoveAvatar' => array( 'Awatar wotstronić' ),
@@ -165,12 +172,12 @@ $specialPageAliases['ht'] = array(
 	'ViewRelationships' => array( 'GadeLyen' ),
 );
 
-/** Hungarian (Magyar) */
+/** Hungarian (magyar) */
 $specialPageAliases['hu'] = array(
 	'UserBoard' => array( 'Felhasználói_üzenőfal' ),
 );
 
-/** Interlingua (Interlingua) */
+/** Interlingua (interlingua) */
 $specialPageAliases['ia'] = array(
 	'AddRelationship' => array( 'Adder_relation' ),
 	'PopulateUserProfiles' => array( 'Impler_profilos_de_usatores' ),
@@ -189,7 +196,7 @@ $specialPageAliases['ia'] = array(
 	'ViewRelationships' => array( 'Vider_relationes' ),
 );
 
-/** Italian (Italiano) */
+/** Italian (italiano) */
 $specialPageAliases['it'] = array(
 	'UpdateProfile' => array( 'AggiornaProfilo' ),
 	'UploadAvatar' => array( 'CaricaAvatar' ),
@@ -237,10 +244,11 @@ $specialPageAliases['ko'] = array(
 $specialPageAliases['lb'] = array(
 	'AddRelationship' => array( 'Relatioun_derbäisetzen' ),
 	'EditProfile' => array( 'Profil_änneren' ),
+	'GenerateTopUsersReport' => array( 'Lëscht_vun_den_Top-Benotzer_generéieren' ),
 	'PopulateUserProfiles' => array( 'Benotzerprofiler_ausfëllen' ),
 	'RemoveAvatar' => array( 'Avatar_ewechhuelen' ),
 	'RemoveRelationship' => array( 'Relatioun_ewechhuelen' ),
-	'SendBoardBlast' => array( 'Fonctioun_\"Boardblast\"_benotzen' ),
+	'SendBoardBlast' => array( 'Fonctioun_\\\"Boardblast\\\"_benotzen' ),
 	'TopUsers' => array( 'Top-Benotzer' ),
 	'TopUsersRecent' => array( 'Rezent_Top-Benotzer' ),
 	'UpdateEditCounts' => array( 'Zuel_vun_den_Ännerungen_aktualiséieren' ),
@@ -251,7 +259,7 @@ $specialPageAliases['lb'] = array(
 	'ViewRelationships' => array( 'Relatioune_weisen' ),
 );
 
-/** Macedonian (Македонски) */
+/** Macedonian (македонски) */
 $specialPageAliases['mk'] = array(
 	'AddRelationship' => array( 'ДодајВрска' ),
 	'EditProfile' => array( 'УредиПрофил' ),
@@ -302,7 +310,21 @@ $specialPageAliases['mr'] = array(
 	'ViewRelationships' => array( 'नातेपहा' ),
 );
 
-/** Nedersaksisch (Nedersaksisch) */
+/** Norwegian Bokmål (norsk bokmål) */
+$specialPageAliases['nb'] = array(
+	'AddRelationship' => array( 'Legg_til_relasjon' ),
+	'PopulateUserProfiles' => array( 'Instansier_brukerprofiler' ),
+	'RemoveAvatar' => array( 'Fjern_profilbilde' ),
+	'RemoveRelationship' => array( 'Fjern_relasjon' ),
+	'UpdateEditCounts' => array( 'Oppdater_redigeringsantall' ),
+	'UpdateProfile' => array( 'Oppdater_profil' ),
+	'UploadAvatar' => array( 'Oppdater_profilbilde' ),
+	'UserBoard' => array( 'Brukerstyre' ),
+	'ViewRelationshipRequests' => array( 'Vis_relasjonsforespørsel' ),
+	'ViewRelationships' => array( 'Vis_relasjoner' ),
+);
+
+/** Low Saxon (Netherlands) (Nedersaksies) */
 $specialPageAliases['nds-nl'] = array(
 	'AddRelationship' => array( 'Relasie_derbie_doon' ),
 	'EditProfile' => array( 'Profiel_bewarken' ),
@@ -344,21 +366,7 @@ $specialPageAliases['nl'] = array(
 	'ViewRelationships' => array( 'RelatiesBekijken' ),
 );
 
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬) */
-$specialPageAliases['nb'] = array(
-	'AddRelationship' => array( 'Legg_til_relasjon' ),
-	'PopulateUserProfiles' => array( 'Instansier_brukerprofiler' ),
-	'RemoveAvatar' => array( 'Fjern_profilbilde' ),
-	'RemoveRelationship' => array( 'Fjern_relasjon' ),
-	'UpdateEditCounts' => array( 'Oppdater_redigeringsantall' ),
-	'UpdateProfile' => array( 'Oppdater_profil' ),
-	'UploadAvatar' => array( 'Oppdater_profilbilde' ),
-	'UserBoard' => array( 'Brukerstyre' ),
-	'ViewRelationshipRequests' => array( 'Vis_relasjonsforespørsel' ),
-	'ViewRelationships' => array( 'Vis_relasjoner' ),
-);
-
-/** Polish (Polski) */
+/** Polish (polski) */
 $specialPageAliases['pl'] = array(
 	'EditProfile' => array( 'Edytujprofil' ),
 	'RemoveAvatar' => array( 'UsuńAvatar' ),
@@ -369,7 +377,7 @@ $specialPageAliases['ps'] = array(
 	'UpdateProfile' => array( 'پېژنليک تازه کول' ),
 );
 
-/** Slovak (Slovenčina) */
+/** Slovak (slovenčina) */
 $specialPageAliases['sk'] = array(
 	'AddRelationship' => array( 'PridaťVzťah' ),
 	'PopulateUserProfiles' => array( 'NaplniťPoužívateľskéProfily' ),
@@ -388,7 +396,7 @@ $specialPageAliases['sk'] = array(
 	'ViewRelationships' => array( 'ZobraziťVzťahy' ),
 );
 
-/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬) */
+/** Serbian (Cyrillic script) (српски (ћирилица)‎) */
 $specialPageAliases['sr-ec'] = array(
 	'AddRelationship' => array( 'Додај_везу' ),
 	'RemoveAvatar' => array( 'Уклони_сличицу' ),
@@ -400,7 +408,7 @@ $specialPageAliases['sr-ec'] = array(
 	'ViewRelationships' => array( 'Прикажи_везу' ),
 );
 
-/** Swedish (Svenska) */
+/** Swedish (svenska) */
 $specialPageAliases['sv'] = array(
 	'EditProfile' => array( 'Redigera_profil' ),
 );
@@ -450,7 +458,34 @@ $specialPageAliases['tr'] = array(
 	'ViewRelationships' => array( 'İlişkileriGör' ),
 );
 
-/** Traditional Chinese (‪中文(繁體)‬) */
+/** Simplified Chinese (中文（简体）‎) */
+$specialPageAliases['zh-hans'] = array(
+	'AddRelationship' => array( '加入关系' ),
+	'EditProfile' => array( '编辑简介' ),
+	'GenerateTopUsersReport' => array( '生成置顶用户报告' ),
+	'PopulateUserProfiles' => array( '填充用户简介' ),
+	'RemoveAvatar' => array( '移除头像' ),
+	'RemoveRelationship' => array( '移除关系' ),
+	'SendBoardBlast' => array( '递送损坏的董事会' ),
+	'TopFansByStatistic' => array( '统计而出的置顶爱好者' ),
+	'TopUsers' => array( '置顶用户' ),
+	'TopUsersRecent' => array( '置顶用户报告' ),
+	'ToggleUserPage' => array( '开启关闭用户页' ),
+	'UpdateEditCounts' => array( '更新编辑计数' ),
+	'UpdateProfile' => array( '更新简介' ),
+	'UploadAvatar' => array( '更新头像' ),
+	'UserBoard' => array( '用户董事会' ),
+	'ViewRelationshipRequests' => array( '查看关系申请' ),
+	'ViewRelationships' => array( '查看关系' ),
+);
+
+/** Traditional Chinese (中文（繁體）‎) */
 $specialPageAliases['zh-hant'] = array(
-	'EditProfile' => array( '編輯人物簡介' ),
+	'AddRelationship' => array( '加入關聯' ),
+	'EditProfile' => array( '編輯簡介' ),
+	'RemoveAvatar' => array( '移除頭像' ),
+	'RemoveRelationship' => array( '移除關聯' ),
+	'TopUsers' => array( '頂端用戶' ),
+	'UpdateEditCounts' => array( '更新編輯數位' ),
+	'UploadAvatar' => array( '上載頭像' ),
 );
