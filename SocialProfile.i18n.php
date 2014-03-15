@@ -14,3 +14,17 @@ $messages['en'] = array(
 $messages['qqq'] = array(
 	'socialprofile-desc' => '{{desc|name=Social Profile|url=https://www.mediawiki.org/wiki/Extension:SocialProfile}}',
 );
+
+/** Occitan (occitan)
+ * @author Cedric31
+ */
+$messages['oc'] = array(
+	'socialprofile-desc' => 'Un ensemble d’aisinas socialas per MediaWiki',
+);
+
+/** Traditional Chinese (中文（繁體）‎)
+ * @author Liuxinyu970226
+ */
+$messages['zh-hant'] = array(
+	'socialprofile-desc' => '用於MediaWiki的社交工具設定',
+);
