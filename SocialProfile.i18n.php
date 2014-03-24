@@ -15,6 +15,13 @@ $messages['qqq'] = array(
 	'socialprofile-desc' => '{{desc|name=Social Profile|url=https://www.mediawiki.org/wiki/Extension:SocialProfile}}',
 );
 
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'socialprofile-desc' => 'Een set van sociale hulpmiddelen voor MediaWiki',
+);
+
 /** Occitan (occitan)
  * @author Cedric31
  */
