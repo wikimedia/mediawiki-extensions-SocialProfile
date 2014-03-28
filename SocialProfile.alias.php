@@ -488,4 +488,5 @@ $specialPageAliases['zh-hant'] = array(
 	'TopUsers' => array( '頂端用戶' ),
 	'UpdateEditCounts' => array( '更新編輯數位' ),
 	'UploadAvatar' => array( '上載頭像' ),
+	'UserBoard' => array( '用戶理事會' ),
 );
