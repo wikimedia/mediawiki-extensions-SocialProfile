@@ -25,6 +25,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $dir = dirname( __FILE__ ) . '/';
 
 // Internationalization files
+$wgMessagesDirs['SocialProfile'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['SocialProfile'] = $dir . 'SocialProfile.i18n.php';
 $wgExtensionMessagesFiles['SocialProfileAlias'] = $dir . 'SocialProfile.alias.php';
 
@@ -112,7 +113,7 @@ $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'SocialProfile',
 	'author' => array( 'Aaron Wright', 'David Pean', 'Jack Phoenix' ),
-	'version' => '1.6.1',
+	'version' => '1.7.0',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile',
 	'descriptionmsg' => 'socialprofile-desc',
 );
