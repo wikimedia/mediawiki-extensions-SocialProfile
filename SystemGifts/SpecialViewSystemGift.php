@@ -30,7 +30,7 @@ class ViewSystemGift extends UnlistedSpecialPage {
 		$this->setHeaders();
 
 		// Add CSS
-		$out->addModules( 'ext.socialprofile.systemgifts.css' );
+		$out->addModuleStyles( 'ext.socialprofile.systemgifts.css' );
 
 		$output = ''; // Prevent E_NOTICE
 

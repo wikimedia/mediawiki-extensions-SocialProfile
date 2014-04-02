@@ -34,7 +34,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();
 		$out->setHTMLTitle( $this->msg( 'pagetitle',
-			$this->msg( 'edit-profiles-title' )->plain() )->plain() );
+			$this->msg( 'edit-profiles-title' )->plain() )->parse() );
 
 		// This feature is only available for logged-in users.
 		if ( !$user->isLoggedIn() ) {
@@ -62,6 +62,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		}
 
 		// Add CSS & JS
+		$out->addModuleStyles( 'ext.socialprofile.userprofile.css' );
 		$out->addModules( 'ext.userProfile.updateProfile' );
 
 		// Get the user's name from the wpUser URL parameter
@@ -134,7 +135,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 					'method' => 'get',
 					'action' => $actionUrl
 				)
-			) . Xml::label( $this->msg( 'username' )->plain(), 'mw-socialprofile-user' ) .
+			) . Xml::label( $this->msg( 'username' )->parse(), 'mw-socialprofile-user' ) .
 			Xml::input( 'wpUser', 60, '', array(
 				'tabindex' => '1',
 				'id' => 'mw-socialprofile-user',
@@ -462,7 +463,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		}
 
 		$this->getOutput()->setHTMLTitle( $this->msg( 'pagetitle',
-			$this->msg( 'user-profile-tidbits-title' )->plain() )->plain() );
+			$this->msg( 'user-profile-tidbits-title' )->plain() )->parse() );
 		$form = '<h1>' . $this->msg( 'user-profile-tidbits-title' )->plain() . '</h1>';
 		//$form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-custom' )->plain() );
 		$form = '<div class="profile-info clearfix">

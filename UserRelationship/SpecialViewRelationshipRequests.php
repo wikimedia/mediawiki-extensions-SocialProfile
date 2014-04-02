@@ -45,10 +45,8 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		}
 
 		// Add CSS & JS
-		$out->addModules( array(
-			'ext.socialprofile.userrelationship.css',
-			'ext.socialprofile.userrelationship.js'
-		) );
+		$out->addModuleStyles( 'ext.socialprofile.userrelationship.css' );
+		$out->addModules( 'ext.socialprofile.userrelationship.js' );
 
 		$rel = new UserRelationship( $user->getName() );
 		$friend_request_count = $rel->getOpenRequestCount( $user->getID(), 1 );

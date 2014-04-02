@@ -59,7 +59,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 		$this->setHeaders();
 
 		// Add CSS
-		$out->addModules( 'ext.socialprofile.usergifts.css' );
+		$out->addModuleStyles( 'ext.socialprofile.usergifts.css' );
 
 		// Check for permissions
 		if ( $this->getUser()->isAnon() || !$this->canUserManage() ) {

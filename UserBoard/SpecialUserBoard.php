@@ -32,10 +32,8 @@ class SpecialViewUserBoard extends SpecialPage {
 		$this->setHeaders();
 
 		// Add CSS & JS
-		$out->addModules( array(
-			'ext.socialprofile.userboard.css',
-			'ext.socialprofile.userboard.js'
-		) );
+		$out->addModuleStyles( 'ext.socialprofile.userboard.css' );
+		$out->addModules( 'ext.socialprofile.userboard.js' );
 
 		$ub_messages_show = 25;
 		$user_name = $request->getVal( 'user' );

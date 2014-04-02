@@ -33,10 +33,8 @@ class GiveGift extends SpecialPage {
 		$this->setHeaders();
 
 		// Add CSS & JS
-		$out->addModules( array(
-			'ext.socialprofile.usergifts.css',
-			'ext.socialprofile.usergifts.js'
-		) );
+		$out->addModuleStyles( 'ext.socialprofile.usergifts.css' );
+		$out->addModules( 'ext.socialprofile.usergifts.js' );
 
 		$userTitle = Title::newFromDBkey( $request->getVal( 'user' ) );
 		if ( !$userTitle ) {

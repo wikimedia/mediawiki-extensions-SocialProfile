@@ -38,7 +38,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 		$out->setRobotPolicy( 'noindex,nofollow' );
 
 		// Add CSS
-		$out->addModules( 'ext.socialprofile.userrelationship.css' );
+		$out->addModuleStyles( 'ext.socialprofile.userrelationship.css' );
 
 		$userTitle = Title::newFromDBkey( $request->getVal( 'user' ) );
 

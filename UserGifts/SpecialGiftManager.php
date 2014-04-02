@@ -41,7 +41,7 @@ class GiftManager extends SpecialPage {
 		}
 
 		// Add CSS
-		$out->addModules( 'ext.socialprofile.usergifts.css' );
+		$out->addModuleStyles( 'ext.socialprofile.usergifts.css' );
 
 		if ( $request->wasPosted() ) {
 			if ( !$request->getInt( 'id' ) ) {

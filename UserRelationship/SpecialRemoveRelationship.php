@@ -36,7 +36,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 		$out->setRobotPolicy( 'noindex,nofollow' );
 
 		// Add CSS
-		$out->addModules( 'ext.socialprofile.userrelationship.css' );
+		$out->addModuleStyles( 'ext.socialprofile.userrelationship.css' );
 
 		$usertitle = Title::newFromDBkey( $this->getRequest()->getVal( 'user' ) );
 		if ( !$usertitle ) {

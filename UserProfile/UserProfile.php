@@ -44,7 +44,6 @@ $wgResourceModules['ext.socialprofile.userprofile.js'] = array(
 
 // Modules for Special:EditProfile/Special:UpdateProfile
 $wgResourceModules['ext.userProfile.updateProfile'] = array(
-	'styles' => 'UserProfile.css',
 	'scripts' => 'UpdateProfile.js',
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'SocialProfile/UserProfile',
@@ -100,7 +99,7 @@ function wfUserProfileFromTitle( &$title, &$article ) {
 			$wgHooks['ParserLimitReport'][] = 'wfUserProfileMarkUncacheable';
 		}
 
-		$wgOut->addModules( 'ext.socialprofile.userprofile.css' );
+		$wgOut->addModuleStyles( 'ext.socialprofile.userprofile.css' );
 
 		$article = new UserProfilePage( $title );
 	}

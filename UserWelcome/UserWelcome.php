@@ -60,7 +60,7 @@ function getWelcome() {
 	global $wgUser, $wgOut, $wgLang;
 
 	// Add CSS
-	$wgOut->addModules( 'ext.socialprofile.userwelcome.css' );
+	$wgOut->addModuleStyles( 'ext.socialprofile.userwelcome.css' );
 
 	// Get stats and user level
 	$stats = new UserStats( $wgUser->getID(), $wgUser->getName() );

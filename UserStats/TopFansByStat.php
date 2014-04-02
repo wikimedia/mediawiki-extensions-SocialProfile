@@ -33,7 +33,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 		$this->setHeaders();
 
 		// Load CSS
-		$out->addModules( 'ext.socialprofile.userstats.css' );
+		$out->addModuleStyles( 'ext.socialprofile.userstats.css' );
 
 		$dbr = wfGetDB( DB_SLAVE );
 

@@ -48,7 +48,7 @@ class SystemGiftManager extends SpecialPage {
 		}
 
 		// Add CSS
-		$out->addModules( 'ext.socialprofile.systemgifts.css' );
+		$out->addModuleStyles( 'ext.socialprofile.systemgifts.css' );
 
 		if ( $request->wasPosted() ) {
 			$g = new SystemGifts();

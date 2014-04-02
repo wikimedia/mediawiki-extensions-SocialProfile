@@ -25,7 +25,7 @@ class RemoveGift extends UnlistedSpecialPage {
 		$this->setHeaders();
 
 		// Add CSS
-		$out->addModules( 'ext.socialprofile.usergifts.css' );
+		$out->addModuleStyles( 'ext.socialprofile.usergifts.css' );
 
 		$this->gift_id = $request->getInt( 'gift_id' );
 		$rel = new UserGifts( $user->getName() );

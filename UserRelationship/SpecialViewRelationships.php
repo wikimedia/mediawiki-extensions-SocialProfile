@@ -35,7 +35,7 @@ class SpecialViewRelationships extends SpecialPage {
 		$this->setHeaders();
 
 		// Add CSS
-		$out->addModules( 'ext.socialprofile.userrelationship.css' );
+		$out->addModuleStyles( 'ext.socialprofile.userrelationship.css' );
 
 		$output = '';
 

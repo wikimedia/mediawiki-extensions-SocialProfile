@@ -61,7 +61,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();
-		$out->setHTMLTitle( $this->msg( 'pagetitle', $this->msg( 'edit-profile-title' )->plain() )->plain() );
+		$out->setHTMLTitle( $this->msg( 'pagetitle', $this->msg( 'edit-profile-title' )->plain() )->parse() );
 
 		// This feature is only available for logged-in users.
 		if ( !$user->isLoggedIn() ) {
@@ -83,6 +83,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		}
 
 		// Add CSS & JS
+		$out->addModuleStyles( 'ext.socialprofile.userprofile.css' );
 		$out->addModules( 'ext.userProfile.updateProfile' );
 
 		if ( $request->wasPosted() ) {

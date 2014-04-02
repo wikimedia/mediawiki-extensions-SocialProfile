@@ -25,7 +25,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 		$this->setHeaders();
 
 		// Load CSS
-		$out->addModules( 'ext.socialprofile.userstats.css' );
+		$out->addModuleStyles( 'ext.socialprofile.userstats.css' );
 
 		$periodFromRequest = $request->getVal( 'period' );
 		if ( $periodFromRequest == 'weekly' ) {

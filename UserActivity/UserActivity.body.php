@@ -29,7 +29,7 @@ class UserHome extends SpecialPage {
 		$user = $this->getUser();
 
 		// Add CSS
-		$out->addModules( 'ext.socialprofile.useractivity.css' );
+		$out->addModuleStyles( 'ext.socialprofile.useractivity.css' );
 
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();

@@ -24,7 +24,7 @@ class ViewGift extends UnlistedSpecialPage {
 		$this->setHeaders();
 
 		// Add CSS
-		$out->addModules( 'ext.socialprofile.usergifts.css' );
+		$out->addModuleStyles( 'ext.socialprofile.usergifts.css' );
 
 		$giftId = $this->getRequest()->getInt( 'gift_id' );
 		if ( !$giftId || !is_numeric( $giftId ) ) {
