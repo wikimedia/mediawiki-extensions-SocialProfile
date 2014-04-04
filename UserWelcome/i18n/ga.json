@@ -1,0 +1,10 @@
+{
+    "@metadata": {
+        "authors": [
+            "Alison"
+        ]
+    },
+    "mp-welcome-points": "{{PLURAL:$1|point amháin|$1 pointí}}",
+    "mp-requests-title": "Iarratais",
+    "mp-request-new-message": "teachtaireacht nua"
+}

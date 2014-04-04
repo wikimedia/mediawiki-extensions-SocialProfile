@@ -1,0 +1,22 @@
+{
+    "@metadata": {
+        "authors": [
+            "Frokor",
+            "Harald Khan"
+        ]
+    },
+    "userwelcome-desc": "Legg til <code>&lt;welcomeUser&gt;</code>-taggen for å vise brukarspesifisert sosial informasjon for innlogga brukarar",
+    "mp-userlevels-link": "Brukarnivå",
+    "mp-welcome-upload": "Last opp",
+    "mp-welcome-edit": "Endre",
+    "mp-welcome-points": "{{PLURAL:$1|eitt poeng|$1 poeng}}",
+    "mp-welcome-needed-points": "For å avansere for <b><a href=\"$1\">$2</a></b> må du oppnå <i>$3</i> {{PLURAL:$3|poeng|poeng}} til!",
+    "mp-welcome-logged-in": "Hei $1",
+    "mp-requests-title": "Oppmodingar",
+    "mp-requests-message": "Du har følgjande oppmodingar.",
+    "mp-request-new-message": "ny melding",
+    "mp-request-new-award": "$1 {{PLURAL:$1|ny utmerking|nye utmerkingar}}",
+    "mp-request-new-gift": "$1 {{PLURAL:$1|ny gåve|nye gåver}}",
+    "mp-request-new-foe": "$1 {{PLURAL:$1|ny fiende|nye fiendar}}",
+    "mp-request-new-friend": "$1 {{PLURAL:$1|ny ven|nye vener}}"
+}

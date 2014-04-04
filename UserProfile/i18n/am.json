@@ -1,0 +1,31 @@
+{
+    "@metadata": {
+        "authors": [
+            "Codex Sinaiticus"
+        ]
+    },
+    "user-awards-title": "ሽልማቶች",
+    "user-gifts-title": "ስጦታዎች",
+    "user-add-friend": "እንደ ወዳጅ ለመጨምር",
+    "user-add-foe": "እንደ ጠላት ለመጨምር",
+    "user-send-message": "መልዕክት ለመላክ",
+    "user-send-gift": "ስጦታ ለመላክ",
+    "user-friends-title": "ወዳጆች",
+    "user-foes-title": "ጠላቶች",
+    "other-info-music": "ሙዚቃ",
+    "other-info-books": "መጻሕፍት",
+    "other-no-info": "ሌላ መረጃ የለም",
+    "user-personal-info-schools": "ትምህርት ቤቶች",
+    "user-personal-info-about-me": "ስለ እኔ",
+    "user-profile-personal-name": "ስም",
+    "user-profile-personal-email": "ኢ-ሜል",
+    "user-profile-personal-city": "ከተማ",
+    "user-profile-personal-country": "ሀገር",
+    "user-profile-personal-aboutme": "ስለ እኔ",
+    "user-profile-personal-education": "ትምህርት",
+    "user-profile-personal-schools": "ትምህርት ቤቶች",
+    "user-profile-interests-music": "ሙዚቃ",
+    "user-profile-interests-books": "መጻሕፍት",
+    "user-profile-picture-large": "ትልቅ",
+    "user-profile-picture-small": "ትንሽ"
+}

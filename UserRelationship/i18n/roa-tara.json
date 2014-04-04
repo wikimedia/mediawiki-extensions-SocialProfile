@@ -1,0 +1,21 @@
+{
+    "@metadata": {
+        "authors": [
+            "Joetaras"
+        ]
+    },
+    "ur-error-page-title": "Cè cumbenate!",
+    "ur-main-page": "Pàgene Prengepàle",
+    "ur-your-profile": "'U profile tue",
+    "ur-give-gift": "Fa 'nu riele",
+    "ur-previous": "prec",
+    "ur-next": "succ",
+    "ur-remove": "Scangille",
+    "ur-cancel": "Scangille",
+    "ur-login": "Trase",
+    "ur-add-button-friend": "Aggiugne cumme amiche",
+    "ur-add-error-message-pending-request-title": "Pascenze!",
+    "ur-requests-message-friend": "<a href=\"$1\">$2</a> vvò ccu devende amiche tue.",
+    "ur-accept": "Accitte",
+    "ur-reject": "Scitte"
+}

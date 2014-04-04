@@ -47,6 +47,7 @@ function wfWelcomeUser( &$parser ) {
 }
 
 $dir = dirname( __FILE__ ) . '/';
+$wgMessagesDirs['UserWelcome'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['UserWelcome'] = $dir . 'UserWelcome.i18n.php';
 
 function getWelcomeUser( $input, $args, $parser ) {

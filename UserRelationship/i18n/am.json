@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "Codex Sinaiticus"
+        ]
+    },
+    "ur-main-page": "ዋና ገጽ",
+    "ur-add-friend": "እንደ ወዳጅ ለመጨምር",
+    "ur-add-foe": "እንደ ጠላት ለመጨምር",
+    "ur-next": "ቀጥሎ",
+    "ur-add-button-friend": "እንደ ወዳጅ ለመጨምር",
+    "ur-add-error-message-pending-request-title": "ትዕግሥት!"
+}

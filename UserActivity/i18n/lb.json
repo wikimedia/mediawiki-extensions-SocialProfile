@@ -1,0 +1,22 @@
+{
+    "@metadata": {
+        "authors": [
+            "Robby"
+        ]
+    },
+    "useractivity": "Aktivitéit vu Frënn",
+    "useractivity-award": "$1 huet eng Auszeechnung kritt",
+    "useractivity-all": "Alles weisen",
+    "useractivity-edit": "$1 huet dës {{PLURAL:$4|Säit|Säite}} geännert: $3",
+    "useractivity-foe": "$1 {{PLURAL:$2|ass elo e Feind|sinn elo Feinde}} vum $3",
+    "useractivity-friend": "$1 {{PLURAL:$2|ass elo e Frënd vum|sinn elo Frënn vum}} $3",
+    "useractivity-gift": "$1 huet e Cadeau vum $2 kritt",
+    "useractivity-group-edit": "{{PLURAL:$1|eng Ännerung|$1 Ännerungen}}",
+    "useractivity-group-comment": "{{PLURAL:$1|eng Bemierkung|$1 Bemierkungen}}",
+    "useractivity-group-user_message": "{{PLURAL:$1|ee Message|$1 Messagen}}",
+    "useractivity-group-friend": "{{PLURAL:$1|ee Frënd|$1 Frënn}}",
+    "useractivity-siteactivity": "Aktivitéit um Site",
+    "useractivity-title": "Aktivitéit vun de Frënn",
+    "useractivity-user_message": "$1 huet dem $3 {{PLURAL:$4|ee Message|Message}} geschéckt",
+    "useractivity-comment": "$1 huet dës {{PLURAL:$4|Säit|Säite}} kommentéiert: $3"
+}

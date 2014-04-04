@@ -1,0 +1,22 @@
+{
+    "@metadata": {
+        "authors": [
+            "Ghaly",
+            "Meno25"
+        ]
+    },
+    "userwelcome-desc": "يضيف وسم <code>&lt;welcomeUser&gt;</code> لعرض معلومات اجتماعية خاصة باليوزر لليوزرز المسجلين",
+    "mp-userlevels-link": "مستويات اليوزر",
+    "mp-welcome-upload": "رفع",
+    "mp-welcome-edit": "عدل",
+    "mp-welcome-points": "$1 {{PLURAL:$1|نقطة|نقطة}}",
+    "mp-welcome-needed-points": "للتقدم ل <b><a href=\"$1\">$2</a></b> احصل على <i>$3</i> {{PLURAL:$3|نقطه|نقط}} اكتر!",
+    "mp-welcome-logged-in": "مرحبا $1",
+    "mp-requests-title": "طلبات",
+    "mp-requests-message": "لديك الطلبات التالية.",
+    "mp-request-new-message": "رسالة جديدة",
+    "mp-request-new-award": "$1 {{PLURAL:$1|جائزة|جائزة}} جديدة",
+    "mp-request-new-gift": "$1 {{PLURAL:$1|منحة|منحة}} جديدة",
+    "mp-request-new-foe": "$1 {{PLURAL:$1|عدو|عدو}} جديد",
+    "mp-request-new-friend": "$1 {{PLURAL:$1|صديق|صديق}} جديد"
+}

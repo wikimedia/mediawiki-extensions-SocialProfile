@@ -1,0 +1,8 @@
+{
+    "@metadata": {
+        "authors": [
+            "Crazymadlover"
+        ]
+    },
+    "top-fans-stats-comment-count": "{{PLURAL:$1|Σχόλιον|Σχόλια}}"
+}

@@ -1,0 +1,17 @@
+{
+    "@metadata": {
+        "authors": [
+            "Solde"
+        ]
+    },
+    "messagesenttitle": "Missatges enviats",
+    "boardlinkselectall": "Selecciona'ls tots",
+    "boardlinkselectfriends": "Selecciona amics",
+    "userboard_delete": "Elimina",
+    "userboard_private": "privat",
+    "userboard_public": "públic",
+    "userboard_nextpage": "següent",
+    "userboard_prevpage": "ant",
+    "userboard_nomessages": "Cap missatge.",
+    "userboard_sendbutton": "envia"
+}

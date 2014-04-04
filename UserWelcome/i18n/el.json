@@ -1,0 +1,21 @@
+{
+    "@metadata": {
+        "authors": [
+            "Consta",
+            "Omnipaedista",
+            "ZaDiak"
+        ]
+    },
+    "mp-userlevels-link": "Επίπεδα χρήστη",
+    "mp-welcome-upload": "Επιφόρτωση",
+    "mp-welcome-edit": "Επεξεργασία",
+    "mp-welcome-points": "$1 {{PLURAL:$1|βαθμός|βαθμοί}}",
+    "mp-welcome-logged-in": "Γεια σου $1",
+    "mp-requests-title": "Αιτήματα",
+    "mp-requests-message": "Έχετε τα ακόλουθα αιτήματα.",
+    "mp-request-new-message": "νέα μηνύματα",
+    "mp-request-new-award": "$1 {{PLURAL:$1|νέο βραβείο|νέα βραβεία}}",
+    "mp-request-new-gift": "$1 {{PLURAL:$1|νέο δώρο|νέα δώρα}}",
+    "mp-request-new-foe": "$1 {{PLURAL:$1|νέος εχθρός|νέοι εχθροί}}",
+    "mp-request-new-friend": "$1 {{PLURAL:$1|νέος φίλος|νέοι φίλοι}}"
+}

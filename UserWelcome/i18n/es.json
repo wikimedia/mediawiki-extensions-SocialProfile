@@ -1,0 +1,25 @@
+{
+    "@metadata": {
+        "authors": [
+            "Crazymadlover",
+            "Fluence",
+            "Imre",
+            "Mor",
+            "Sanbec"
+        ]
+    },
+    "userwelcome-desc": "Añade la etiqueta <code>&lt;welcomeUser&gt;</code> para mostrar información social específica de cada usuario a los usuarios registrados",
+    "mp-userlevels-link": "Niveles de usuario",
+    "mp-welcome-upload": "Subir",
+    "mp-welcome-edit": "Editar",
+    "mp-welcome-points": "$1 {{PLURAL:$1|punto|puntos}}",
+    "mp-welcome-needed-points": "Avanzar para <b><a href=\"$1\">$2</a></b> ganar <i>$3</i> más {{PLURAL:$3|punto|puntos}}!",
+    "mp-welcome-logged-in": "Hola $1",
+    "mp-requests-title": "Solicitudes",
+    "mp-requests-message": "Tiene las siguientes solicitudes.",
+    "mp-request-new-message": "nuevo mensaje",
+    "mp-request-new-award": "$1 nuevos {{PLURAL:$1|premio|premios}}",
+    "mp-request-new-gift": "$1 nuevos {{PLURAL:$1|regalo|regalos}}",
+    "mp-request-new-foe": "$1 nuevos {{PLURAL:$1|adversario|adversarios}}",
+    "mp-request-new-friend": "$1 {{PLURAL:$1|nuevo amigo|nuevos amigos}}"
+}

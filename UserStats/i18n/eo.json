@@ -1,0 +1,37 @@
+{
+    "@metadata": {
+        "authors": [
+            "Yekrats"
+        ]
+    },
+    "user-stats-alltime-title": "Ĉiame plej granda poentaro",
+    "user-stats-weekly-title": "Plej granda poentaro ĉi-semajne",
+    "user-stats-monthly-title": "Plej granda poentaro ĉi-monate",
+    "topusers": "Plej aktivaj uzantoj",
+    "top-fans-by-points-nav-header": "Plej bonaj fervoruloj",
+    "top-fans-by-category-nav-header": "Plej altaj laŭ kategorio",
+    "top-fans-total-points-link": "Tutaj poentoj",
+    "top-fans-weekly-points-link": "Poentoj dum ĉi tiu semajno",
+    "top-fans-monthly-points-link": "Poentoj dum ĉi tiu monato",
+    "top-fans-points": "poentoj",
+    "top-fans-bad-field-title": "Ho ve!",
+    "top-fans-stats-vote-count": "{{PLURAL:$1|Voĉdono|Voĉdonoj}}",
+    "top-fans-stats-monthly-winner-count": "{{PLURAL:$1|Monata venko|Monataj venkoj}}",
+    "top-fans-stats-weekly-winner-count": "{{PLURAL:$1|Semajna venko|Semajnaj venkoj}}",
+    "top-fans-stats-edit-count": "{{PLURAL:$1|Redakto|Redaktoj}}",
+    "top-fans-stats-comment-count": "{{PLURAL:$1|Komento|Komentoj}}",
+    "top-fans-stats-referrals-completed": "{{PLURAL:$1|Referenco|Referencoj}}",
+    "top-fans-stats-friends-count": "{{PLURAL:$1|Amiko|Amikoj}}",
+    "top-fans-stats-foe-count": "{{PLURAL:$1|Malamiko|Malamikoj}}",
+    "top-fans-stats-opinions-published": "{{PLURAL:$1|Eldonita opinio|Eldonitaj opinioj}}",
+    "top-fans-stats-opinions-created": "{{PLURAL:$1|Opinio|Opinioj}}",
+    "top-fans-stats-comment-score-positive-rec": "{{PLURAL:$1|Dikfingro supre|Dikfingroj supre}}",
+    "top-fans-stats-comment-score-negative-rec": "{{PLURAL:$1|Dikfingro malsupre|Dikfingroj malsupre}}",
+    "top-fans-stats-comment-score-positive-given": "{{PLURAL:$1|Dikfingro supren donita|Dikfingroj supren donitaj}}",
+    "top-fans-stats-comment-score-negative-given": "{{PLURAL:$1|Dikfingro malsupren donita|Dikfingroj malsupren donitaj}}",
+    "top-fans-stats-gifts-rec-count": "{{PLURAL:$1|Donaco ricevita|Donacoj ricevita}}",
+    "top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Donaco sendita|Donacoj senditaj}}",
+    "right-updatepoints": "Ĝisdatigi nombradon de redaktoj",
+    "level-advanced-to": "rangiĝis al nivelo <span style=\"font-weight:800;\">$1</span>",
+    "level-advance-subject": "Vi nun estas \"$1\" en {{SITENAME}}!"
+}

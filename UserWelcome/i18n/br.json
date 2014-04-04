@@ -1,0 +1,22 @@
+{
+    "@metadata": {
+        "authors": [
+            "Fohanno",
+            "Fulup"
+        ]
+    },
+    "userwelcome-desc": "Ouzhpennañ ur valizenn <code>&lt;welcomeUser&gt;</code> evit diskwel titouroù sokial a denn da bep implijer evit an implijerien kevreet",
+    "mp-userlevels-link": "Liveoù an implijer",
+    "mp-welcome-upload": "Enporzhiañ",
+    "mp-welcome-edit": "Aozañ",
+    "mp-welcome-points": "$1 {{PLURAL:$1|poent}}",
+    "mp-welcome-needed-points": "Evit mont war-raok war-du <b><a href=\"$1\">$2</a></b> gounezit <i>$3</i> {{PLURAL:$3|poent|poent}} ouzhpenn !",
+    "mp-welcome-logged-in": "Salud $1",
+    "mp-requests-title": "Goulennoù",
+    "mp-requests-message": "Setu aze ho koulennoù",
+    "mp-request-new-message": "Kemennadenn nevez",
+    "mp-request-new-award": "$1 priz {{PLURAL:$1|nevez|nevez}}",
+    "mp-request-new-gift": "$1 {{PLURAL:$1|prof|prof}} nevez",
+    "mp-request-new-foe": "$1 {{PLURAL:$1|enebour|enebourien}} nevez",
+    "mp-request-new-friend": "$1 {{PLURAL:$1|mignon}} nevez"
+}

@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "Xqt"
+        ]
+    },
+    "ga-back-link": "<a href=\"$1\">< Zerrick zur Uffstelling vun $2</a>",
+    "ga-goback": "geh zerrick",
+    "ga-large": "Gross",
+    "ga-new": "Nei",
+    "ga-next": "Neegschte",
+    "ga-small": "Glee"
+}

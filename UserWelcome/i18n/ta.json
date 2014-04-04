@@ -1,0 +1,22 @@
+{
+    "@metadata": {
+        "authors": [
+            "TRYPPN",
+            "Ulmo"
+        ]
+    },
+    "userwelcome-desc": "புகுபதிகை செய்த பயனர்களுக்கு அவர்கட்குரிய சமூக தகவல்களை காட்டுவதற்காக <code>&lt;welcomeUser&gt;</code> இணையை சேர்க்கின்றது.",
+    "mp-userlevels-link": "பயனர் நிலைகள்",
+    "mp-welcome-upload": "பதிவேற்று",
+    "mp-welcome-edit": "தொகு",
+    "mp-welcome-points": "$1 {{PLURAL:$1|புள்ளி|புள்ளிகள்}}",
+    "mp-welcome-needed-points": "<b><a href=\"$1\">$2</a></b> இற்கு முன்னேறிச்செல்ல <i>$3</i> {{PLURAL:$3|புள்ளி|புள்ளிகள்}} ஈட்டுக!",
+    "mp-welcome-logged-in": "வணக்கம் $1",
+    "mp-requests-title": "கோரிக்கைகள்",
+    "mp-requests-message": "உங்களுக்கு பின்வரும் கோரிக்கைகள் உள்ளன.",
+    "mp-request-new-message": "புதிய செய்தி",
+    "mp-request-new-award": "$1 புதிய {{PLURAL:$1|விருது|விருதுகள்}}",
+    "mp-request-new-gift": "$1 புதிய {{PLURAL:$1|பரிசு|பரிசுகள்}}",
+    "mp-request-new-foe": "$1 புதிய {{PLURAL:$1|பகைவர்|பகைவர்கள்}}",
+    "mp-request-new-friend": "$1 புதிய {{PLURAL:$1|தோழர்|தோழர்கள்}}"
+}

@@ -41,19 +41,20 @@ $wgAutoloadClasses['RemoveGift'] = "{$wgUserGiftsDirectory}/SpecialRemoveGift.ph
 $wgSpecialPages['RemoveGift'] = 'RemoveGift';
 $wgSpecialPageGroups['RemoveGift'] = 'users';
 
+$wgMessagesDirs['UserGifts'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['UserGifts'] = $wgUserGiftsDirectory . '/UserGifts.i18n.php';
 
 // Register the CSS & JS with ResourceLoader
 $wgResourceModules['ext.socialprofile.usergifts.css'] = array(
 	'styles' => 'UserGifts.css',
-	'localBasePath' => dirname( __FILE__ ),
+	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserGifts',
 	'position' => 'top'
 );
 
 $wgResourceModules['ext.socialprofile.usergifts.js'] = array(
 	'scripts' => 'UserGifts.js',
-	'localBasePath' => dirname( __FILE__ ),
+	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserGifts',
 );
 

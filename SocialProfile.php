@@ -22,16 +22,20 @@ if ( !defined( 'MEDIAWIKI' ) ) {
  *
  * For more info about SocialProfile, please see https://www.mediawiki.org/wiki/Extension:SocialProfile.
  */
-$dir = dirname( __FILE__ ) . '/';
+$dir = __DIR__ . '/';
 
 // Internationalization files
 $wgMessagesDirs['SocialProfile'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['SocialProfile'] = $dir . 'SocialProfile.i18n.php';
 $wgExtensionMessagesFiles['SocialProfileAlias'] = $dir . 'SocialProfile.alias.php';
 
+$wgMessagesDirs['SocialProfileUserBoard'] = __DIR__ . '/UserBoard/i18n';
 $wgExtensionMessagesFiles['SocialProfileUserBoard'] = $dir . 'UserBoard/UserBoard.i18n.php';
+$wgMessagesDirs['SocialProfileUserProfile'] = __DIR__ . '/UserProfile/i18n';
 $wgExtensionMessagesFiles['SocialProfileUserProfile'] = $dir . 'UserProfile/UserProfile.i18n.php';
+$wgMessagesDirs['SocialProfileUserRelationship'] = __DIR__ . '/UserRelationship/i18n';
 $wgExtensionMessagesFiles['SocialProfileUserRelationship'] = $dir . 'UserRelationship/UserRelationship.i18n.php';
+$wgMessagesDirs['SocialProfileUserStats'] = __DIR__ . '/UserStats/i18n';
 $wgExtensionMessagesFiles['SocialProfileUserStats'] = $dir . 'UserStats/UserStats.i18n.php';
 $wgExtensionMessagesFiles['SocialProfileNamespaces'] = $dir . 'SocialProfile.namespaces.php';
 $wgExtensionMessagesFiles['AvatarMagic'] = $dir . 'UserProfile/Avatar.magic.i18n.php';
@@ -234,20 +238,20 @@ $wgHooks['RenameUserComplete'][] = 'SocialProfileHooks::onRenameUserComplete';
 $wgResourceModules['ext.socialprofile.userboard.js'] = array(
 	'scripts' => 'UserBoard.js',
 	'messages' => array( 'userboard_confirmdelete' ),
-	'localBasePath' => dirname( __FILE__ ) . '/UserBoard',
+	'localBasePath' => __DIR__ . '/UserBoard',
 	'remoteExtPath' => 'SocialProfile/UserBoard',
 );
 
 $wgResourceModules['ext.socialprofile.userboard.css'] = array(
 	'styles' => 'UserBoard.css',
-	'localBasePath' => dirname( __FILE__ ) . '/UserBoard',
+	'localBasePath' => __DIR__ . '/UserBoard',
 	'remoteExtPath' => 'SocialProfile/UserBoard',
 	'position' => 'top' // just in case
 );
 
 $wgResourceModules['ext.socialprofile.userboard.boardblast.css'] = array(
 	'styles' => 'BoardBlast.css',
-	'localBasePath' => dirname( __FILE__ ) . '/UserBoard',
+	'localBasePath' => __DIR__ . '/UserBoard',
 	'remoteExtPath' => 'SocialProfile/UserBoard',
 	'position' => 'top' // just in case
 );
@@ -258,28 +262,28 @@ $wgResourceModules['ext.socialprofile.userboard.boardblast.js'] = array(
 		'boardblast-js-sending', 'boardblast-js-error-missing-message',
 		'boardblast-js-error-missing-user'
 	),
-	'localBasePath' => dirname( __FILE__ ) . '/UserBoard',
+	'localBasePath' => __DIR__ . '/UserBoard',
 	'remoteExtPath' => 'SocialProfile/UserBoard',
 );
 
 // UserRelationship
 $wgResourceModules['ext.socialprofile.userrelationship.css'] = array(
 	'styles' => 'UserRelationship.css',
-	'localBasePath' => dirname( __FILE__ ) . '/UserRelationship',
+	'localBasePath' => __DIR__ . '/UserRelationship',
 	'remoteExtPath' => 'SocialProfile/UserRelationship',
 	'position' => 'top' // just in case
 );
 
 $wgResourceModules['ext.socialprofile.userrelationship.js'] = array(
 	'scripts' => 'UserRelationship.js',
-	'localBasePath' => dirname( __FILE__ ) . '/UserRelationship',
+	'localBasePath' => __DIR__ . '/UserRelationship',
 	'remoteExtPath' => 'SocialProfile/UserRelationship',
 );
 
 // UserStats
 $wgResourceModules['ext.socialprofile.userstats.css'] = array(
 	'styles' => 'TopList.css',
-	'localBasePath' => dirname( __FILE__ ) . '/UserStats',
+	'localBasePath' => __DIR__ . '/UserStats',
 	'remoteExtPath' => 'SocialProfile/UserStats',
 	'position' => 'top' // just in case
 );

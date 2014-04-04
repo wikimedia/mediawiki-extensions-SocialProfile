@@ -1,0 +1,24 @@
+{
+    "@metadata": {
+        "authors": [
+            "Kiranmayee",
+            "Veeven"
+        ]
+    },
+    "ga-choosefile": "దస్త్రాన్ని ఎంచుకోండి:",
+    "ga-gift": "బహుమతి",
+    "ga-gift-given-count": "ఈ బహుమతిని {{PLURAL:$1|ఒకసారి|$1 సార్లు}} ఇచ్చారు",
+    "ga-gift-title": "$1 యొక్క \"$2\"",
+    "ga-giftdesc": "బహుమతి వివరణ",
+    "ga-giftimage": "బహుమతి చిత్రం",
+    "ga-giftname": "బహుమతి పేరు",
+    "ga-gifttype": "బహుమతి రకం",
+    "ga-goback": "వెనక్కి వెళ్ళు",
+    "ga-new": "కొత్త",
+    "ga-next": "తర్వాతి",
+    "ga-previous": "గత",
+    "ga-title": "$1 యొక్క పురస్కారాలు",
+    "ga-uploadsuccess": "ఎక్కింపు విజయవంతం",
+    "ga-viewlist": "బహుమతుల జాబితాని చూడండి",
+    "system_gift_received_subject": "{{SITENAME}}లో మీకు $1 పురస్కారం లభించింది!"
+}

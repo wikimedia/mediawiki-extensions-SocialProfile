@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "Codex Sinaiticus"
+        ]
+    },
+    "mp-welcome-logged-in": "ጤና ይስጥልኝ፣ $1",
+    "mp-request-new-message": "አዲስ መልዕክት",
+    "mp-request-new-award": "$1 አዲስ {{PLURAL:$1|ሽልማት|ሽልማቶች}}",
+    "mp-request-new-gift": "$1 አዲስ {{PLURAL:$1|ስጦታ|ስጦታዎች}}",
+    "mp-request-new-foe": "$1 አዲስ {{PLURAL:$1|ጠላት|ጠላቶች}}",
+    "mp-request-new-friend": "$1 አዲስ {{PLURAL:$1|ወዳጅ|ወዳጆች}}"
+}
