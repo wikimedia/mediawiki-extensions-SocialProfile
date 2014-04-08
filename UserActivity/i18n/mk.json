@@ -1,0 +1,22 @@
+{
+    "@metadata": {
+        "authors": [
+            "Bjankuloski06"
+        ]
+    },
+    "useractivity": "Активности на пријателите",
+    "useractivity-award": "$1 доби награда",
+    "useractivity-all": "Види ги сите",
+    "useractivity-edit": "$1 {{PLURAL:$4|ја уреди страницата|ги уреди следниве страници:}} $3",
+    "useractivity-foe": "$1 {{PLURAL:$2|стана непријател со|станаа непријатели со}} $3",
+    "useractivity-friend": "$1 {{PLURAL:$2|се спријатели со|се спријателија со}} $3",
+    "useractivity-gift": "$1 прими подарок од $2",
+    "useractivity-group-edit": "{{PLURAL:$1|едно уредување|$1 уредувања}}",
+    "useractivity-group-comment": "{{PLURAL:$1|еден коментар|$1 коментари}}",
+    "useractivity-group-user_message": "{{PLURAL:$1|една порака|$1 пораки}}",
+    "useractivity-group-friend": "{{PLURAL:$1|еден пријател|$1 пријатели}}",
+    "useractivity-siteactivity": "Активност на мрежното место",
+    "useractivity-title": "Активности на пријателите",
+    "useractivity-user_message": "$1 {{PLURAL:$4|испрати порака на|испрати пораки на}} $3",
+    "useractivity-comment": "$1 {{PLURAL:$4|коментираше на страницата|коментираше на следниве страници:}} $3"
+}

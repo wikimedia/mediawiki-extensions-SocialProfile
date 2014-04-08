@@ -39,6 +39,7 @@ $wgAutoloadClasses['PopulateAwards'] = "{$wgSystemGiftsDirectory}/SpecialPopulat
 $wgSpecialPages['PopulateAwards'] = 'PopulateAwards';
 
 // i18n
+$wgMessagesDirs['SystemGifts'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['SystemGifts'] = $wgSystemGiftsDirectory . '/SystemGift.i18n.php';
 
 // Register the CSS with ResourceLoader

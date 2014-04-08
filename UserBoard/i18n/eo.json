@@ -1,0 +1,39 @@
+{
+    "@metadata": {
+        "authors": [
+            "Yekrats"
+        ]
+    },
+    "messagesenttitle": "Mesaĝoj senditaj",
+    "boardblaststep1": "Ŝtupo 1 - Skribu vian mesaĝon",
+    "boardblaststep2": "Ŝtupo 2 - Selektu kiun vi volas alsendi vian mesaĝon",
+    "boardlinkselectall": "Elektu Ĉiujn",
+    "boardlinkunselectall": "Malselektu ĉiujn",
+    "boardlinkselectfriends": "Selektu amikojn",
+    "boardlinkunselectfriends": "Malselektu amikojn",
+    "boardlinkselectfoes": "Selektu malamikojn",
+    "boardlinkunselectfoes": "Malselektu malamikojn",
+    "boardnofriends": "Vi havas neniujn amikojn por alsendi mesaĝon!",
+    "userboard": "Uzula afiŝejo",
+    "userboard_delete": "Forigi",
+    "userboard_yourboard": "Via afiŝejo",
+    "userboard_owner": "Afiŝejo de $1",
+    "userboard_backprofile": "Reiri al profilo de $1",
+    "userboard_backyourprofile": "Reiri vian profilon",
+    "userboard_confirmdelete": "Ĉu ver certas ke vi volas forigi ĉi tiun mesaĝon?",
+    "userboard_sendmessage": "Sendu al $1 mesaĝon",
+    "userboard_myboard": "Mia afiŝejo",
+    "userboard_posted_ago": "afiŝita antaŭ $1",
+    "userboard_private": "privata",
+    "userboard_public": "publika",
+    "userboard_messagetype": "Mesaĝa tipo",
+    "userboard_nextpage": "sekv",
+    "userboard_prevpage": "antaŭ",
+    "userboard_nomessages": "Neniuj mesaĝoj.",
+    "userboard_sendbutton": "sendi",
+    "userboard_loggedout": "Vi devas [[Special:UserLogin|ensaluti]] por afiŝi mesaĝojn al aliaj uzantoj.",
+    "userboard_showingmessages": "Montrante {{PLURAL:$4|mesaĝon|mesaĝojn $2-$3}} el {{PLURAL:$1|$1 mesaĝo|$1 mesaĝoj}}",
+    "userboard-time-days": "{{PLURAL:$1|unu tago|$1 tagoj}}",
+    "userboard-time-hours": "{{PLURAL:$1|unu horo|$1 horoj}}",
+    "message_received_subject": "$1 skribis en via afiŝejon en {{SITENAME}}"
+}

@@ -1,0 +1,21 @@
+{
+    "@metadata": {
+        "authors": [
+            "CERminator"
+        ]
+    },
+    "useractivity": "Aktivnost prijatelja",
+    "useractivity-award": "$1 je dobio nagradu",
+    "useractivity-all": "Pogledajte sve",
+    "useractivity-edit": "$1 {{PLURAL:$4|je uredio stranicu|je uredio slijedeće stranice:}} $3",
+    "useractivity-foe": "$1 {{PLURAL:$2|je sada neprijatelj sa|su sada neprijatelji sa}} $3",
+    "useractivity-friend": "$1 {{PLURAL:$2|je sada prijatelj sa|su sada prijatelji sa}} $3",
+    "useractivity-gift": "$1 primio poklon od $2",
+    "useractivity-group-edit": "{{PLURAL:$1|jedna izmjena|$1 izmjene|$1 izmjena}}",
+    "useractivity-group-comment": "{{PLURAL:$1|jedan komentar|$1 komentara}}",
+    "useractivity-group-user_message": "{{PLURAL:$1|jedna poruka|$1 poruke|$1 poruka}}",
+    "useractivity-group-friend": "{{PLURAL:$1|jedan prijatelj|$1 prijatelja}}",
+    "useractivity-siteactivity": "Aktivnosti na stranici",
+    "useractivity-title": "Aktivnosti prijatelja",
+    "useractivity-user_message": "$1 {{PLURAL:$4|je poslao poruku|je poslao poruke}} $3"
+}

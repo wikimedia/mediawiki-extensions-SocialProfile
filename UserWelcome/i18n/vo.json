@@ -1,0 +1,18 @@
+{
+    "@metadata": {
+        "authors": [
+            "Malafaya",
+            "Smeira"
+        ]
+    },
+    "mp-userlevels-link": "Gebananivods",
+    "mp-welcome-upload": "Löpükön",
+    "mp-welcome-edit": "Redakön",
+    "mp-welcome-logged-in": "Glidis, o $1!",
+    "mp-requests-title": "Begs",
+    "mp-requests-message": "Labol begis sököl.",
+    "mp-request-new-message": "nun nulik",
+    "mp-request-new-gift": "{{PLURAL:$1|Legivot|Legivots}} nulik $1",
+    "mp-request-new-foe": "{{PLURAL:$1|Neflen|Neflens}} nulik $1",
+    "mp-request-new-friend": "{{PLURAL:$1|Flen|Flens}} nulik $1"
+}

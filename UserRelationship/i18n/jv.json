@@ -1,0 +1,24 @@
+{
+    "@metadata": {
+        "authors": [
+            "Meursault2004"
+        ]
+    },
+    "ur-already-submitted": "Panyuwunan panjenengan wis dikirim",
+    "ur-error-title": "Adhuh, panjenengan salah ménggok!",
+    "ur-main-page": "Kaca utama",
+    "ur-your-profile": "Profil panjenengan",
+    "ur-give-gift": "Mènèhi bebungah",
+    "ur-previous": "sadurungé",
+    "ur-next": "sabanjuré",
+    "ur-remove": "Busak",
+    "ur-cancel": "Batal",
+    "ur-login": "Log mlebu",
+    "ur-add-error-message-pending-request-title": "Tulung sabar sadélok.",
+    "ur-accept": "Tampa",
+    "ur-reject": "Tulak",
+    "ur-no-requests-message": "Panjenengan ora duwé panyuwunan kanca utawa mungsuh.",
+    "foe_request_subject": "Saiki perang! $1 wis nambahaké panjenengan minangka mungsuh ing {{SITENAME}}!",
+    "friend_removed_subject": "Adhuh! $1 njabel status panjenengan minangka kanca ing {{SITENAME}}!",
+    "foe_removed_subject": "Horé! $1 wis njabel status panjenengan minangka mungsuh ing {{SITENAME}}!"
+}

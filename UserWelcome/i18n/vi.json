@@ -1,0 +1,22 @@
+{
+    "@metadata": {
+        "authors": [
+            "Minh Nguyen",
+            "Vinhtantran"
+        ]
+    },
+    "userwelcome-desc": "Thêm thẻ <code>&lt;welcomeUser&gt;</code> để hiển thị thông tin cá nhân cho những thành viên đăng ký",
+    "mp-userlevels-link": "Cấp thành viên",
+    "mp-welcome-upload": "Tải lên",
+    "mp-welcome-edit": "Sửa đổi",
+    "mp-welcome-points": "$1 {{PLURAL:$1|điểm|điểm}}",
+    "mp-welcome-needed-points": "Để trở thành <b><a href=\"$1\">$2</a></b>, hãy kiếm thêm <i>$3</i> {{PLURAL:$3|điểm|điểm}} nữa!",
+    "mp-welcome-logged-in": "Chào $1",
+    "mp-requests-title": "Các yêu cầu",
+    "mp-requests-message": "Bạn có các yêu cầu sau.",
+    "mp-request-new-message": "tin nhắn mới",
+    "mp-request-new-award": "$1 {{PLURAL:$1|giải thưởng|giải thưởng}} mới",
+    "mp-request-new-gift": "$1 {{PLURAL:$1|quà tặng|quà tặng}} mới",
+    "mp-request-new-foe": "$1 {{PLURAL:$1|kẻ thù|ker thù}} mới",
+    "mp-request-new-friend": "$1 {{PLURAL:$1|người bạn|người bạn}} mới"
+}

@@ -1,0 +1,26 @@
+{
+    "@metadata": {
+        "authors": [
+            "Basharh"
+        ]
+    },
+    "ga-addnew": "+ ܐܘܣܦ ܕܫܢܐ ܚܕܬܐ",
+    "ga-choosefile": "ܓܒܝ ܠܦܦܐ:",
+    "ga-count": "$1 ܐܝܬ ܠܗ $2 {{PLURAL:$2|ܫܘܟܢܐ|ܫܘܟܢ̈ܐ}}.",
+    "ga-create-gift": "ܒܪܝ ܕܫܢܐ",
+    "ga-currentimage": "ܨܘܪܬܐ ܗܫܝܬܐ",
+    "ga-gift": "ܕܫܢܐ",
+    "ga-giftdesc": "ܫܘܡܗܐ ܕܕܫܢܐ",
+    "ga-giftimage": "ܨܘܪܬܐ ܕܕܫܢܐ",
+    "ga-giftname": "ܫܡܐ ܕܕܫܢܐ",
+    "ga-gifttype": "ܐܕܫܐ ܕܕܫܢܐ",
+    "ga-large": "ܪܒܬܐ",
+    "ga-medium": "ܡܨܥܝܬܐ",
+    "ga-mediumlarge": "ܡܨܥܝܬܐ - ܪܒܬܐ",
+    "ga-new": "ܚܕܬܐ",
+    "ga-next": "ܒܬܪ",
+    "ga-previous": "ܩܕܡ",
+    "ga-small": "ܙܥܘܪܬܐ",
+    "ga-uploadsuccess": "ܐܣܩܬܐ ܕܠܦܦܐ ܢܨܚ",
+    "ga-viewlist": "ܚܙܝ ܡܟܬܒܘܬܐ ܕܕ̈ܫܢܐ"
+}

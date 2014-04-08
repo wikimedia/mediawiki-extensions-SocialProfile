@@ -30,6 +30,7 @@ $wgExtensionCredits['specialpage'][] = array(
 
 // Set up the new special page
 $dir = dirname( __FILE__ ) . '/';
+$wgMessagesDirs['UserActivity'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['UserActivity'] = $dir . 'UserActivity.i18n.php';
 $wgAutoloadClasses['UserActivity'] = $dir . 'UserActivityClass.php';
 $wgAutoloadClasses['UserHome'] = $dir . 'UserActivity.body.php';

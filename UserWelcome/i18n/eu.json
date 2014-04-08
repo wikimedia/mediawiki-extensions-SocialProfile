@@ -1,0 +1,20 @@
+{
+    "@metadata": {
+        "authors": [
+            "An13sa",
+            "Kobazulo"
+        ]
+    },
+    "mp-userlevels-link": "Lankide mailak",
+    "mp-welcome-upload": "Igo",
+    "mp-welcome-edit": "Aldatu",
+    "mp-welcome-points": "$1 {{PLURAL:$1|puntu|puntu}}",
+    "mp-welcome-logged-in": "Kaixo $1",
+    "mp-requests-title": "Eskaerak",
+    "mp-requests-message": "Hurrengo eskaerak dituzu.",
+    "mp-request-new-message": "mezu berria",
+    "mp-request-new-award": "{{PLURAL:$1|Sari berri bat|$1 sari berri}}",
+    "mp-request-new-gift": "{{PLURAL:$1|Opari berri bat|$1 opari berri}}",
+    "mp-request-new-foe": "{{PLURAL:$1|Etsai berri bat|$1 etsai berri}}",
+    "mp-request-new-friend": "{{PLURAL:$1|Lagun berri bat|$1 lagun berri}}"
+}

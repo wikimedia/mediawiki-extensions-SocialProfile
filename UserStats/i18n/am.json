@@ -1,0 +1,9 @@
+{
+    "@metadata": {
+        "authors": [
+            "Codex Sinaiticus"
+        ]
+    },
+    "top-fans-stats-friends-count": "{{PLURAL:$1|ወዳጅ|ወዳጆች}}",
+    "top-fans-stats-foe-count": "{{PLURAL:$1|ጠላት|ጠላቶች}}"
+}

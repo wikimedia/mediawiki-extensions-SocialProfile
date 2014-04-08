@@ -1,0 +1,27 @@
+{
+    "@metadata": {
+        "authors": [
+            "Bennylin",
+            "EugeneZelenko",
+            "Fryed-peach",
+            "McDutchie",
+            "Purodha",
+            "Siebrand",
+            "Umherirrender"
+        ]
+    },
+    "top-fans-points": "{{Identical|Point}}",
+    "top-fans-by-category-title-gifts-rec-count": "",
+    "top-fans-stats-vote-count": "{{Identical|Vote}}",
+    "top-fans-stats-edit-count": "{{Identical|Edit}}",
+    "top-fans-stats-comment-count": "{{Identical|Comment}}",
+    "right-updatepoints": "{{doc-right|updatepoints}}",
+    "right-generatetopusersreport": "{{doc-right|generatetopusersreport}}",
+    "user-stats-weekly-win-congratulations": "Parameters:\n* $1 is a number of winning users; used for PLURAL\n* $2 is a number of extra points; used for PLURAL.",
+    "user-stats-monthly-win-congratulations": "Parameters:\n* $1 is a number of winning users; used for PLURAL\n* $2 is a number of extra points; used for PLURAL.",
+    "user-stats-full-top": "Parameters:\n* $1 is a number (for example: Full Top 20).",
+    "user-stats-report-row": "Parameters:\n* $1 is a rank number\n* $2 is a username\n* $3 is a number of points; used for PLURAL.",
+    "user-stats-report-points": "Parameters:\n* $1 is a number of points; used for PLURAL.",
+    "user-stats-report-weekly-page-title": "Parameters:\n* $1 is a localised timestamp",
+    "user-stats-report-monthly-page-title": "Parameters:\n* $1 is a localised timestamp"
+}

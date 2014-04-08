@@ -1,0 +1,28 @@
+{
+    "@metadata": {
+        "authors": [
+            "EugeneZelenko",
+            "Fryed-peach",
+            "Purodha",
+            "Siebrand",
+            "Umherirrender"
+        ]
+    },
+    "giftmanager-public": "{{Identical|Public}}",
+    "giftmanager-private": "{{Identical|Private}}",
+    "g-cancel": "{{Identical|Cancel}}",
+    "g-count": "* '''$1''' is a user name\n* '''$2''' is his or her count of gifts",
+    "g-created-by": "Complete contents of a cell in a table. The next cell (horizontally) contains the user name of the creator of a gift. {{gender}}\n* (optional) $1 is a user name that is used in the next cell",
+    "g-description-title": "{{gender}}\n* $1 is a user name\n* $2 is the name of a gift",
+    "g-give-separator": "{{Identical|Or}}",
+    "g-go-back": "{{Identical|Go back}}",
+    "g-large": "{{Identical|Large}}",
+    "g-main-page": "{{Identical|Main page}}",
+    "g-medium": "{{Identical|Medium}}",
+    "g-new": "{{Identical|New}}",
+    "g-next": "{{Identical|Next}}",
+    "g-previous": "{{Identical|Prev}}",
+    "g-small": "{{Identical|Small}}",
+    "gift_received_body": "* $1 is a the (real) user name\n* $2 is the giving user's name\n* $3 is the gift name\n* $4 is a link to the given gift\n* $5 is a link to the user preferences",
+    "right-giftadmin": "{{doc-right|giftadmin}}"
+}

@@ -1,0 +1,21 @@
+{
+    "@metadata": {
+        "authors": [
+            "Wikia, Inc."
+        ]
+    },
+    "userwelcome-desc": "Adds <code>&lt;welcomeUser&gt;</code> tag to display user-specific social info to logged-in users",
+    "mp-userlevels-link": "User levels",
+    "mp-welcome-upload": "Upload",
+    "mp-welcome-edit": "Edit",
+    "mp-welcome-points": "$1 {{PLURAL:$1|point|points}}",
+    "mp-welcome-needed-points": "To advance to <b><a href=\"$1\">$2</a></b> earn <i>$3</i> more {{PLURAL:$3|point|points}}!",
+    "mp-welcome-logged-in": "Hello $1",
+    "mp-requests-title": "Requests",
+    "mp-requests-message": "You have the following requests.",
+    "mp-request-new-message": "new message",
+    "mp-request-new-award": "$1 new {{PLURAL:$1|award|awards}}",
+    "mp-request-new-gift": "$1 new {{PLURAL:$1|gift|gifts}}",
+    "mp-request-new-foe": "$1 new {{PLURAL:$1|foe|foes}}",
+    "mp-request-new-friend": "$1 new {{PLURAL:$1|friend|friends}}"
+}

@@ -1,0 +1,14 @@
+{
+    "@metadata": {
+        "authors": [
+            "Ahmed-Najib-Biabani-Ibrahimkhel"
+        ]
+    },
+    "topusers": "د سر کارنان",
+    "top-fans-by-points-nav-header": "د سر مينه وال",
+    "top-fans-stats-vote-count": "{{PLURAL:$1|رايه|رايې}}",
+    "top-fans-stats-edit-count": "{{PLURAL:$1|سمون|سمونونه}}",
+    "top-fans-stats-comment-count": "{{PLURAL:$1|تبصره|تبصرې}}",
+    "top-fans-stats-friends-count": "{{PLURAL:$1|ملګری|ملګري}}",
+    "top-fans-stats-foe-count": "{{PLURAL:$1|سيال|سيالان}}"
+}

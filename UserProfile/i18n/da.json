@@ -1,0 +1,18 @@
+{
+    "@metadata": {
+        "authors": [
+            "Byrial",
+            "Jon Harald Søby"
+        ]
+    },
+    "user-count-separator": "$1 af $2",
+    "other-info-tv": "TV",
+    "user-personal-info-real-name": "Virkeligt navn:",
+    "user-profile-section-preferences": "Indstillinger",
+    "user-profile-personal-name": "Navn",
+    "user-profile-personal-email": "E-mail",
+    "user-profile-personal-city": "By",
+    "user-profile-personal-country": "Land",
+    "user-profile-interests-tv": "TV",
+    "user-page-link": "Brugerside"
+}

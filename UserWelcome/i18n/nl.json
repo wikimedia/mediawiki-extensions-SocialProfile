@@ -1,0 +1,22 @@
+{
+    "@metadata": {
+        "authors": [
+            "SPQRobin",
+            "Siebrand"
+        ]
+    },
+    "userwelcome-desc": "Voegt de tag <code>&lt;welcomeUser&gt;</code> toe om gebruikerspecifieke sociale informatie over aangemelde gebruikers weer te geven",
+    "mp-userlevels-link": "Gebruikersniveaus",
+    "mp-welcome-upload": "Uploaden",
+    "mp-welcome-edit": "Bewerken",
+    "mp-welcome-points": "$1 {{PLURAL:$1|punt|punten}}",
+    "mp-welcome-needed-points": "Om te promoveren naar <b><a href=\"$1\">$2</a></b> moet u nog <i>$3</i> {{PLURAL:$3|punt|punten}} verdienen!",
+    "mp-welcome-logged-in": "Hallo $1",
+    "mp-requests-title": "Aanvragen",
+    "mp-requests-message": "U hebt de volgende aanvragen.",
+    "mp-request-new-message": "nieuw bericht",
+    "mp-request-new-award": "{{PLURAL:$1|1 nieuwe prijs|$1 nieuwe prijzen}}",
+    "mp-request-new-gift": "{{PLURAL:$1|1 nieuw geschenk|$1 nieuwe geschenken}}",
+    "mp-request-new-foe": "{{PLURAL:$1|1 nieuwe vijand|$1 nieuwe vijanden}}",
+    "mp-request-new-friend": "{{PLURAL:$1|1 nieuwe vriend|$1 nieuwe vrienden}}"
+}

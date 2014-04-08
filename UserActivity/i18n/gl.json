@@ -1,0 +1,22 @@
+{
+    "@metadata": {
+        "authors": [
+            "Toliño"
+        ]
+    },
+    "useractivity": "Actividade dos amigos",
+    "useractivity-award": "$1 recibiu un premio",
+    "useractivity-all": "Ver todos",
+    "useractivity-edit": "$1 editou {{PLURAL:$4|a páxina|as seguintes páxinas:}} $3",
+    "useractivity-foe": "$1 {{PLURAL:$2|é agora inimigo de|son agora inimigos de}} $3",
+    "useractivity-friend": "$1 {{PLURAL:$2|é agora amigo de|son agora amigos de}} $3",
+    "useractivity-gift": "$1 recibiu un agasallo de $2",
+    "useractivity-group-edit": "{{PLURAL:$1|unha edición|$1 edicións}}",
+    "useractivity-group-comment": "{{PLURAL:$1|un comentario|$1 comentarios}}",
+    "useractivity-group-user_message": "{{PLURAL:$1|unha mensaxe|$1 mensaxes}}",
+    "useractivity-group-friend": "{{PLURAL:$1|un amigo|$1 amigos}}",
+    "useractivity-siteactivity": "Actividade do sitio",
+    "useractivity-title": "Actividade dos amigos",
+    "useractivity-user_message": "$1 enviou {{PLURAL:$4|unha mensaxe|mensaxes}} a $3",
+    "useractivity-comment": "$1 comentou {{PLURAL:$4|na páxina|nas seguintes páxinas:}} $3"
+}

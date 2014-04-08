@@ -1,0 +1,21 @@
+{
+    "@metadata": {
+        "authors": [
+            "Avjoska",
+            "Pikne"
+        ]
+    },
+    "messagesenttitle": "Sõnumid saadetud",
+    "boardlinkselectall": "Vali kõik",
+    "boardlinkselectfriends": "Vali sõbrad",
+    "boardlinkselectfoes": "Vali vaenlased",
+    "boardnofriends": "Sul ei ole sõpru, kellele sõnumit saata!",
+    "userboard_delete": "Kustuta",
+    "userboard_backyourprofile": "Tagasi oma profiili juurde",
+    "userboard_confirmdelete": "Kas Sa oled kindel, et soovid seda sõnumit kustutada?",
+    "userboard_private": "erasõnum",
+    "userboard_public": "avalik",
+    "userboard_messagetype": "Sõnumi tüüp",
+    "userboard_nextpage": "järgmine",
+    "userboard_prevpage": "eelmine"
+}

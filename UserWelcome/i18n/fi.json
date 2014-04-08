@@ -1,0 +1,23 @@
+{
+    "@metadata": {
+        "authors": [
+            "Crt",
+            "Jack Phoenix",
+            "Nike"
+        ]
+    },
+    "userwelcome-desc": "Lisää <code>&lt;welcomeUser&gt;</code>-elementin käyttäjäkohtaisten sosiaalisten tietojen näyttämiseen.",
+    "mp-userlevels-link": "Käyttäjätasot",
+    "mp-welcome-upload": "Tallenna",
+    "mp-welcome-edit": "Muokkaa",
+    "mp-welcome-points": "$1 {{PLURAL:$1|piste|pistettä}}",
+    "mp-welcome-needed-points": "Päästäksesi tasolle <b><a href=\"$1\">$2</a></b>, ansaitse <i>$3</i> {{PLURAL:$3|piste|pistettä}} lisää!",
+    "mp-welcome-logged-in": "Hei $1",
+    "mp-requests-title": "Pyynnöt",
+    "mp-requests-message": "Sinulla on seuraavat pyynnöt.",
+    "mp-request-new-message": "uusi viesti",
+    "mp-request-new-award": "$1 {{PLURAL:$1|uusi palkinto|uutta palkintoa}}",
+    "mp-request-new-gift": "$1 {{PLURAL:$1|uusi lahja|uutta lahjaa}}",
+    "mp-request-new-foe": "$1 {{PLURAL:$1|uusi vihollinen|uutta vihollista}}",
+    "mp-request-new-friend": "$1 {{PLURAL:$1|uusi ystävä|uutta ystävää}}"
+}

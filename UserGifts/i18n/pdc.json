@@ -1,0 +1,18 @@
+{
+    "@metadata": {
+        "authors": [
+            "Xqt"
+        ]
+    },
+    "giftmanager-public": "public",
+    "giftmanager-private": "private",
+    "g-back-link": "Zerrick zur Uffstelling vun $1",
+    "g-from": "vun <a href=\"$1\">$2</a>",
+    "g-give-separator": "odder",
+    "g-go-back": "Geh zerrick",
+    "g-large": "Gross",
+    "g-main-page": "Haaptblatt",
+    "g-new": "nei",
+    "g-next": "Neegschte",
+    "g-small": "glee"
+}
