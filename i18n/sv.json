@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Lokal Profil"
-        ]
-    },
-    "socialprofile-desc": "En uppsättning sociala verktyg för MediaWiki"
+	"@metadata": {
+		"authors": [
+			"Lokal Profil"
+		]
+	},
+	"socialprofile-desc": "En uppsättning sociala verktyg för MediaWiki"
 }
