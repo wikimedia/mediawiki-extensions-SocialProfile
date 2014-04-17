@@ -99,6 +99,18 @@ $specialPageAliases['de'] = array(
 	'ViewRelationships' => array( 'Kontakte_ansehen' ),
 );
 
+/** Zazaki (Zazaki) */
+$specialPageAliases['diq'] = array(
+	'AddRelationship' => array( 'EleqeDeke' ),
+	'EditProfile' => array( 'ProfiliBıvırne' ),
+	'RemoveAvatar' => array( 'AvatariWedarne' ),
+	'UpdateProfile' => array( 'ProfiliRocaneke' ),
+	'UploadAvatar' => array( 'AvatarBarke' ),
+	'UserBoard' => array( 'DéséKarberi' ),
+	'ViewRelationshipRequests' => array( 'WaştışéEleqiBımocne' ),
+	'ViewRelationships' => array( 'EleqiBımocne' ),
+);
+
 /** Persian (فارسی) */
 $specialPageAliases['fa'] = array(
 	'AddRelationship' => array( 'افزودن_رابطه' ),
