@@ -620,11 +620,13 @@ class UserStatsTrack {
 		if ( $row ) {
 			// recaculate point total
 			$new_total_points = 1000;
-			// FIXME: Invalid argument supplied for foreach()
-			foreach ( $this->point_values as $point_field => $point_value ) {
-				if ( $this->stats_fields[$point_field] ) {
-					$field = $this->stats_fields[$point_field];
-					$new_total_points += $point_value * $row->$field;
+
+			if ( $this->point_values ) {
+				foreach ( $this->point_values as $point_field => $point_value ) {
+					if ( $this->stats_fields[$point_field] ) {
+						$field = $this->stats_fields[$point_field];
+						$new_total_points += $point_value * $row->$field;
+					}
 				}
 			}
 			if ( $wgEnableFacebook ) {
