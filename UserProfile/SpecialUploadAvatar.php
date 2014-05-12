@@ -453,7 +453,7 @@ class UploadAvatar extends UploadFromFile {
 	 * Only needed for the redirect; needs fixage
 	 */
 	public function getTitle() {
-		return Title::makeTitle( NS_FILE, 'Avatar.jpg' );
+		return Title::makeTitle( NS_FILE, 'Avatar-placeholder' . uniqid() . '.jpg' );
 	}
 
 	/**
