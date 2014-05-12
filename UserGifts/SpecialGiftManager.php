@@ -183,7 +183,13 @@ class GiftManager extends SpecialPage {
 	function displayGiftList() {
 		$output = ''; // Prevent E_NOTICE
 		$page = 0;
-		$per_page = 10;
+		/**
+		 * @todo FIXME: this is a dumb hack. The value of this variable used to
+		 * be 10, but then it would display only the *first ten* gifts, as this
+		 * special page seems to lack pagination.
+		 * @see https://www.mediawiki.org/w/index.php?oldid=988111#Gift_administrator_displays_10_gifts_only
+		 */
+		$per_page = 1000;
 		$gifts = Gifts::getManagedGiftList( $per_page, $page );
 		if ( $gifts ) {
 			foreach ( $gifts as $gift ) {
