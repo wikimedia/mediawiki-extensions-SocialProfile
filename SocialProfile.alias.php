@@ -247,9 +247,21 @@ $specialPageAliases['km'] = array(
 
 /** Korean (한국어) */
 $specialPageAliases['ko'] = array(
+	'AddRelationship' => array( '관계추가' ),
+	'EditProfile' => array( '프로필편집' ),
+	'GenerateTopUsersReport' => array( '상위사용자보고서생성' ),
+	'PopulateUserProfiles' => array( '인기사용자프로필' ),
 	'RemoveAvatar' => array( '아바타제거' ),
+	'RemoveRelationship' => array( '관계제거' ),
+	'TopUsers' => array( '상위사용자' ),
+	'TopUsersRecent' => array( '상위사용자최근' ),
+	'ToggleUserPage' => array( '사용자문서전환' ),
+	'UpdateEditCounts' => array( '편집횟수고침' ),
+	'UpdateProfile' => array( '프로필고침' ),
 	'UploadAvatar' => array( '아바타올리기' ),
 	'UserBoard' => array( '사용자게시판' ),
+	'ViewRelationshipRequests' => array( '관계요청보기' ),
+	'ViewRelationships' => array( '관계보기' ),
 );
 
 /** Luxembourgish (Lëtzebuergesch) */
