@@ -253,6 +253,7 @@ $specialPageAliases['ko'] = array(
 	'PopulateUserProfiles' => array( '인기사용자프로필' ),
 	'RemoveAvatar' => array( '아바타제거' ),
 	'RemoveRelationship' => array( '관계제거' ),
+	'TopFansByStatistic' => array( '통계별상위팬' ),
 	'TopUsers' => array( '상위사용자' ),
 	'TopUsersRecent' => array( '상위사용자최근' ),
 	'ToggleUserPage' => array( '사용자문서전환' ),
