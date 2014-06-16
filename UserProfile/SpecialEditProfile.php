@@ -127,7 +127,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 	}
 
 	function createUserInputForm() {
-		$actionUrl = $this->getTitle()->getLocalURL( '' );
+		$actionUrl = $this->getPageTitle()->getLocalURL( '' );
 		$form = Xml::openElement( 'fieldset' ) .
 				Xml::openElement( 'form',
 				array(

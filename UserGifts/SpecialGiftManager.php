@@ -81,7 +81,7 @@ class GiftManager extends SpecialPage {
 				if ( $this->canUserCreateGift() ) {
 					$out->addHTML(
 						'<div><b><a href="' .
-						$this->getTitle()->escapeFullURL( 'method=edit' ) .
+						$this->getPageTitle()->escapeFullURL( 'method=edit' ) .
 						'">' . $this->msg( 'giftmanager-addgift' )->plain() .
 						'</a></b></div>'
 					);
@@ -202,7 +202,7 @@ class GiftManager extends SpecialPage {
 				}
 
 				$output .= '<div class="Item">
-				<a href="' . $this->getTitle()->escapeFullURL( "id={$gift['id']}" ) . '">' .
+				<a href="' . $this->getPageTitle()->escapeFullURL( "id={$gift['id']}" ) . '">' .
 					$gift['gift_name'] . '</a> ' .
 					$deleteLink . "</div>\n";
 			}
@@ -217,7 +217,7 @@ class GiftManager extends SpecialPage {
 			return $this->displayGiftList();
 		}
 
-		$form = '<div><b><a href="' . $this->getTitle()->escapeFullURL() .
+		$form = '<div><b><a href="' . $this->getPageTitle()->escapeFullURL() .
 			'">' . $this->msg( 'giftmanager-view' )->plain() . '</a></b></div>';
 
 		if ( $gift_id ) {

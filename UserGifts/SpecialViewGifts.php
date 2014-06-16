@@ -166,7 +166,7 @@ class ViewGifts extends SpecialPage {
 		 */
 		$numofpages = $total / $per_page;
 
-		$pageLink = $this->getTitle();
+		$pageLink = $this->getPageTitle();
 
 		if ( $numofpages > 1 ) {
 			$output .= '<div class="page-nav">';

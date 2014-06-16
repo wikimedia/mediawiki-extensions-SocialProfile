@@ -194,7 +194,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 		// hurt either
 		// @see https://bugzilla.wikimedia.org/show_bug.cgi?id=30953
 		$output .= Html::hidden( 'wpEditToken', $this->getUser()->getEditToken(), array( 'id' => 'wpEditToken' ) ) . "\n";
-		$output .= Html::hidden( 'title', $this->getTitle()->getPrefixedText() ) . "\n";
+		$output .= Html::hidden( 'title', $this->getPageTitle()->getPrefixedText() ) . "\n";
 		$output .= '<table border="0">
 				<tr>
 					<td>

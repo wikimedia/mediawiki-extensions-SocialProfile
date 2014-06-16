@@ -55,7 +55,7 @@ class RemoveAvatar extends SpecialPage {
 		$out->setPageTitle( $this->msg( 'avatarupload-removeavatar' )->plain() );
 
 		if ( $request->getVal( 'user' ) != '' ) {
-			$out->redirect( $this->getTitle()->getFullURL() . '/' . $request->getVal( 'user' ) );
+			$out->redirect( $this->getPageTitle()->getFullURL() . '/' . $request->getVal( 'user' ) );
 		}
 
 		// If the request was POSTed, then delete the avatar
@@ -84,7 +84,7 @@ class RemoveAvatar extends SpecialPage {
 				'</div>'
 			);
 			$out->addHTML(
-				'<div><a href="' . $this->getTitle()->escapeFullURL() . '">' .
+				'<div><a href="' . $this->getPageTitle()->escapeFullURL() . '">' .
 					$this->msg( 'avatarupload-removeanother' )->plain() .
 				'</a></div>'
 			);
@@ -103,7 +103,7 @@ class RemoveAvatar extends SpecialPage {
 	 */
 	private function showUserForm() {
 		$output = '<form method="get" name="avatar" action="">' .
-				Html::hidden( 'title', $this->getTitle() ) .
+				Html::hidden( 'title', $this->getPageTitle() ) .
 				'<b>' . $this->msg( 'username' )->plain() . '</b>
 				<input type="text" name="user" />
 				<input type="submit" value="' . $this->msg( 'search' )->plain() . '" />

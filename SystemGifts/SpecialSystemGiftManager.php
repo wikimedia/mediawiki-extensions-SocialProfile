@@ -90,7 +90,7 @@ class SystemGiftManager extends SpecialPage {
 			} else {
 				$out->addHTML(
 					'<div><b><a href="' .
-					$this->getTitle()->escapeFullURL( 'method=edit' ) . '">' .
+					$this->getPageTitle()->escapeFullURL( 'method=edit' ) . '">' .
 						$this->msg( 'ga-addnew' )->plain() . '</a></b></div>'
 				);
 				$out->addHTML( $this->displayGiftList() );
@@ -123,7 +123,7 @@ class SystemGiftManager extends SpecialPage {
 				}
 
 				$output .= '<div class="Item">
-					<a href="' . $this->getTitle()->escapeFullURL( 'id=' . $gift['id'] ) . '">' .
+					<a href="' . $this->getPageTitle()->escapeFullURL( 'id=' . $gift['id'] ) . '">' .
 						$gift['gift_name'] . '</a> ' .
 						$deleteLink . '</div>' . "\n";
 			}
@@ -135,7 +135,7 @@ class SystemGiftManager extends SpecialPage {
 	function displayForm( $gift_id ) {
 		global $wgUploadPath;
 
-		$form = '<div><b><a href="' . $this->getTitle()->escapeFullURL() .
+		$form = '<div><b><a href="' . $this->getPageTitle()->escapeFullURL() .
 			'">' . $this->msg( 'ga-viewlist' )->plain() . '</a></b></div>';
 
 		if ( $gift_id ) {

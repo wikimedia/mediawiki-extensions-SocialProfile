@@ -159,7 +159,7 @@ class SpecialViewUserBoard extends SpecialPage {
 			$output .= '<div class="page-nav">';
 			if ( $page > 1 ) {
 				$output .= Linker::link(
-					$this->getTitle(),
+					$this->getPageTitle(),
 					$this->msg( 'userboard_prevpage' )->plain(),
 					array(),
 					array(
@@ -184,7 +184,7 @@ class SpecialViewUserBoard extends SpecialPage {
 					$output .= ( $i . ' ' );
 				} else {
 					$output .= Linker::link(
-						$this->getTitle(),
+						$this->getPageTitle(),
 						$i,
 						array(),
 						array(
@@ -198,7 +198,7 @@ class SpecialViewUserBoard extends SpecialPage {
 			if ( ( $total - ( $per_page * $page ) ) > 0 ) {
 				$output .= $this->msg( 'word-separator' )->plain() .
 					Linker::link(
-					$this->getTitle(),
+					$this->getPageTitle(),
 					$this->msg( 'userboard_nextpage' )->plain(),
 					array(),
 					array(

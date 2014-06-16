@@ -114,14 +114,14 @@ class UserHome extends SpecialPage {
 					}
 
 					$link_image = $line[2];
-					$output .= '<a href="' . $this->getTitle()->escapeFullURL( "item_type={$filter}" ) .
+					$output .= '<a href="' . $this->getPageTitle()->escapeFullURL( "item_type={$filter}" ) .
 						"\"><img src=\"{$wgExtensionAssetsPath}/SocialProfile/images/" .
 						UserActivity::getTypeIcon( $link_image ) . "\"/>{$link_text}</a>";
 				}
 			}
 
 			$output .= Linker::link(
-				$this->getTitle(),
+				$this->getPageTitle(),
 				$this->msg( 'useractivity-all' )->plain()
 			);
 			$output .= '</div>
