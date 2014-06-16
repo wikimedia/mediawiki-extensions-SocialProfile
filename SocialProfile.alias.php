@@ -154,16 +154,18 @@ $specialPageAliases['gsw'] = array(
 
 /** Upper Sorbian (hornjoserbsce) */
 $specialPageAliases['hsb'] = array(
-	'AddRelationship' => array( 'Poćah přidać' ),
-	'RemoveAvatar' => array( 'Awatar wotstronić' ),
-	'RemoveRelationship' => array( 'Poćah wotstronić' ),
-	'TopUsers' => array( 'Najlěpši wužiwarjo' ),
-	'TopUsersRecent' => array( 'Aktualni najlěpši wužiwarjo' ),
-	'ToggleUserPage' => array( 'Wužiwarsku stronu přepinać' ),
-	'UpdateProfile' => array( 'Profil aktualizować' ),
-	'UploadAvatar' => array( 'Awatar nahrać' ),
-	'UserBoard' => array( 'Wužiwarska deska' ),
-	'ViewRelationships' => array( 'Poćahi sej wobhladać' ),
+	'AddRelationship' => array( 'Poćah_přidać' ),
+	'EditProfile' => array( 'Profil_wobdźěłać' ),
+	'RemoveAvatar' => array( 'Awatar_wotstronić' ),
+	'RemoveRelationship' => array( 'Poćah_wotstronić' ),
+	'SendBoardBlast' => array( 'Powěsć_pósłać' ),
+	'TopUsers' => array( 'Najlěpši_wužiwarjo' ),
+	'TopUsersRecent' => array( 'Aktualni_najlěpši_wužiwarjo' ),
+	'ToggleUserPage' => array( 'Wužiwarsku_stronu_přepinać' ),
+	'UpdateProfile' => array( 'Profil_aktualizować' ),
+	'UploadAvatar' => array( 'Awatar_nahrać' ),
+	'UserBoard' => array( 'Wužiwarska_deska' ),
+	'ViewRelationships' => array( 'Poćahi_sej_wobhladać' ),
 );
 
 /** Haitian (Kreyòl ayisyen) */
