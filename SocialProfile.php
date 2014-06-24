@@ -168,7 +168,7 @@ $wgExtensionCredits['specialpage'][] = array(
 	'name' => 'SendBoardBlast',
 	'author' => 'David Pean',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile',
-	'description' => ' A special page to allow users to send a mass board message by selecting from a list of their friends and foes',
+	'description' => 'A special page to allow users to send a mass board message by selecting from a list of their friends and foes',
 );
 $wgExtensionCredits['specialpage'][] = array(
 	'path' => __FILE__,
