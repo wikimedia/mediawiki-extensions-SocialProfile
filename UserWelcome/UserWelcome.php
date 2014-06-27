@@ -79,14 +79,14 @@ function getWelcome() {
 	$output = '<div class="mp-welcome-logged-in">
 	<h2>' . wfMessage( 'mp-welcome-logged-in', $wgUser->getName() )->parse() . '</h2>
 	<div class="mp-welcome-image">
-	<a href="' . $wgUser->getUserPage()->escapeFullURL() . '" rel="nofollow">' .
+	<a href="' . htmlspecialchars( $wgUser->getUserPage()->getFullURL() ) . '" rel="nofollow">' .
 		$avatar->getAvatarURL() . '</a>';
 	if ( strpos( $avatar->getAvatarImage(), 'default_' ) !== false ) {
 		$uploadOrEditMsg = 'mp-welcome-upload';
 	} else {
 		$uploadOrEditMsg = 'mp-welcome-edit';
 	}
-	$output .= '<div><a href="' . $avatar_link->escapeFullURL() . '" rel="nofollow">' .
+	$output .= '<div><a href="' . htmlspecialchars( $avatar_link->getFullURL() ) . '" rel="nofollow">' .
 		wfMessage( $uploadOrEditMsg )->plain() .
 	'</a></div>';
 	$output .= '</div>';
@@ -100,7 +100,7 @@ function getWelcome() {
 						'mp-welcome-points',
 						$wgLang->formatNum( $stats_data['points'] )
 					)->parse() . '</div>
-				<div class="honorific-level"><a href="' . $level_link->escapeFullURL() .
+				<div class="honorific-level"><a href="' . htmlspecialchars( $level_link->getFullURL() ) .
 					'">(' . $user_level->getLevelName() . ')</a></div>
 			</div>
 			<div class="cleared"></div>
@@ -108,7 +108,7 @@ function getWelcome() {
 				<br />'
 				. wfMessage(
 					'mp-welcome-needed-points',
-					$level_link->escapeFullURL(),
+					htmlspecialchars( $level_link->getFullURL() ),
 					$user_level->getNextLevelName(),
 					$user_level->getPointsNeededToAdvance()
 				)->text() .
@@ -154,7 +154,7 @@ function getRelationshipRequestLink() {
 	if ( $friend_request_count > 0 ) {
 		$output .= '<p>
 			<img src="' . $wgExtensionAssetsPath . '/SocialProfile/images/addedFriendIcon.png" alt="" border="0" />
-			<span class="profile-on"><a href="' . $relationship_request_link->escapeFullURL() . '" rel="nofollow">'
+			<span class="profile-on"><a href="' . htmlspecialchars( $relationship_request_link->getFullURL() ) . '" rel="nofollow">'
 			. wfMessage( 'mp-request-new-friend', $friend_request_count )->parse() . '</a></span>
 		</p>';
 	}
@@ -162,7 +162,7 @@ function getRelationshipRequestLink() {
 	if ( $foe_request_count > 0 ) {
 		$output .= '<p>
 			<img src="' . $wgExtensionAssetsPath . '/SocialProfile/images/addedFoeIcon.png" alt="" border="0" />
-			<span class="profile-on"><a href="' . $relationship_request_link->escapeFullURL() . '" rel="nofollow">'
+			<span class="profile-on"><a href="' . htmlspecialchars( $relationship_request_link->getFullURL() ) . '" rel="nofollow">'
 			. wfMessage( 'mp-request-new-foe', $foe_request_count )->parse() . '</a></span>
 		</p>';
 	}
@@ -180,7 +180,7 @@ function getNewGiftLink() {
 	if ( $gift_count > 0 ) {
 		$output .= '<p>
 			<img src="' . $wgExtensionAssetsPath . '/SocialProfile/images/icon_package_get.gif" alt="" border="0" />
-			<span class="profile-on"><a href="' . $gifts_title->escapeFullURL() . '" rel="nofollow">'
+			<span class="profile-on"><a href="' . htmlspecialchars( $gifts_title->getFullURL() ) . '" rel="nofollow">'
 				. wfMessage( 'mp-request-new-gift', $gift_count )->parse() .
 			'</a></span>
 		</p>';
@@ -199,7 +199,7 @@ function getNewSystemGiftLink() {
 	if ( $gift_count > 0 ) {
 		$output .= '<p>
 			<img src="' . $wgExtensionAssetsPath . '/SocialProfile/images/awardIcon.png" alt="" border="0" />
-			<span class="profile-on"><a href="' . $gifts_title->escapeFullURL() . '" rel="nofollow">'
+			<span class="profile-on"><a href="' . htmlspecialchars( $gifts_title->getFullURL() ) . '" rel="nofollow">'
 				. wfMessage( 'mp-request-new-award', $gift_count )->parse() .
 			'</a></span>
 		</p>';
@@ -218,7 +218,7 @@ function getNewMessagesLink() {
 		$board_link = SpecialPage::getTitleFor( 'UserBoard' );
 		$output .= '<p>
 			<img src="' . $wgExtensionAssetsPath . '/SocialProfile/images/emailIcon.gif" alt="" border="" />
-			<span class="profile-on"><a href="' . $board_link->escapeFullURL() . '" rel="nofollow">'
+			<span class="profile-on"><a href="' . htmlspecialchars( $board_link->getFullURL() ) . '" rel="nofollow">'
 				. wfMessage( 'mp-request-new-message' )->plain() .
 			'</a></span>
 		</p>';

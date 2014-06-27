@@ -76,7 +76,7 @@ class ViewSystemGift extends UnlistedSpecialPage {
 
 			$out->setPageTitle( $this->msg( 'ga-gift-title', $gift['user_name'], $gift['name'] )->parse() );
 
-			$profileURL = Title::makeTitle( NS_USER, $gift['user_name'] )->escapeFullURL();
+			$profileURL = htmlspecialchars( Title::makeTitle( NS_USER, $gift['user_name'] )->getFullURL() );
 			$output .= '<div class="back-links">' .
 				$this->msg( 'ga-back-link', $profileURL, $gift['user_name'] )->text() .
 			'</div>';
@@ -117,7 +117,7 @@ class ViewSystemGift extends UnlistedSpecialPage {
 					$avatar = new wAvatar( $userToId, 'ml' );
 					$userNameLink = Title::makeTitle( NS_USER, $row->sg_user_name );
 
-					$output .= '<a href="' . $userNameLink->escapeFullURL() . "\">
+					$output .= '<a href="' . htmlspecialchars( $userNameLink->getFullURL() ) . "\">
 					{$avatar->getAvatarURL()}
 				</a>";
 				}

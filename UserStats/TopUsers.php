@@ -82,12 +82,12 @@ class TopUsersPoints extends SpecialPage {
 			<p><b>' . $this->msg( 'top-fans-total-points-link' )->plain() . '</b></p>';
 
 		if ( $wgUserStatsTrackWeekly ) {
-			$output .= '<p><a href="' . $recent_title->escapeFullURL( 'period=monthly' ) . '">' .
+			$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=monthly' ) ) . '">' .
 				$this->msg( 'top-fans-monthly-points-link' )->plain() . '</a></p>';
 		}
 
 		if ( $wgUserStatsTrackMonthly ) {
-			$output .= '<p><a href="' . $recent_title->escapeFullURL( 'period=weekly' ) . '">' .
+			$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=weekly' ) ) . '">' .
 				$this->msg( 'top-fans-weekly-points-link' )->plain() . '</a></p>';
 		}
 
@@ -153,7 +153,7 @@ class TopUsersPoints extends SpecialPage {
 			$output .= "<div class=\"top-fan-row\">
 				<span class=\"top-fan-num\">{$x}.</span>
 				<span class=\"top-fan\">
-					{$commentIcon} <a href='" . $user_title->escapeFullURL() . "'>" .
+					{$commentIcon} <a href='" . htmlspecialchars( $user_title->getFullURL() ) . "'>" .
 						$user['user_name'] . '</a>
 				</span>';
 

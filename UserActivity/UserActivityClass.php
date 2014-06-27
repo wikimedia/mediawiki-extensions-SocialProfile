@@ -456,11 +456,11 @@ class UserActivity {
 			$view_gift_link = SpecialPage::getTitleFor( 'ViewGift' );
 
 			$html = wfMsg( 'useractivity-gift',
-				"<b><a href=\"{$user_title->escapeFullURL()}\">{$row->ug_user_name_to}</a></b>",
-				"<a href=\"{$user_title_from->escapeFullURL()}\">{$user_title_from->getText()}</a>"
+				"<b><a href=\"{htmlspecialchars( $user_title->getFullURL() )}\">{$row->ug_user_name_to}</a></b>",
+				"<a href=\"{htmlspecialchars( $user_title_from->getFullURL() )}\">{$user_title_from->getText()}</a>"
 			) .
 			"<div class=\"item\">
-				<a href=\"" . $view_gift_link->escapeFullURL( 'gift_id=' . $row->ug_id ) . "\" rel=\"nofollow\">
+				<a href=\"" . htmlspecialchars( $view_gift_link->getFullURL( 'gift_id=' . $row->ug_id ) ) . "\" rel=\"nofollow\">
 					{$gift_image}
 					{$row->gift_name}
 				</a>
@@ -548,11 +548,11 @@ class UserActivity {
 
 			$html = wfMessage(
 				'useractivity-award',
-				"<b><a href=\"{$user_title->escapeFullURL()}\">{$row->sg_user_name}</a></b>",
+				"<b><a href=\"{htmlspecialchars( $user_title->getFullURL() )}\">{$row->sg_user_name}</a></b>",
 				$row->sg_user_name
 			)->text() .
 			'<div class="item">
-				<a href="' . $system_gift_link->escapeFullURL( 'gift_id=' . $row->sg_id ) . "\" rel=\"nofollow\">
+				<a href="' . htmlspecialchars( $system_gift_link->getFullURL( 'gift_id=' . $row->sg_id ) ) . "\" rel=\"nofollow\">
 					{$system_gift_image}
 					{$row->gift_name}
 				</a>
@@ -819,7 +819,7 @@ class UserActivity {
 			$this->activityLines[] = array(
 				'type' => 'system_message',
 				'timestamp' => $row->item_date,
-				'data' => ' ' . "<b><a href=\"{$user_title->escapeFullURL()}\">{$user_name_short}</a></b> {$row->um_message}"
+				'data' => ' ' . "<b><a href=\"{htmlspecialchars( $user_title->getFullURL() )}\">{$user_name_short}</a></b> {$row->um_message}"
 			);
 
 			$this->items[] = array(
@@ -926,7 +926,7 @@ class UserActivity {
 				$row->us_user_name,
 				$user_name_short,
 				$page_link,
-				$user_title->escapeFullURL()
+				htmlspecialchars( $user_title->getFullURL() )
 			)->text() .
 					'<div class="item">
 						<a href="' . SportsTeams::getNetworkURL( $row->us_sport_id, $row->us_team_id ) . "\" rel=\"nofollow\">
@@ -1100,7 +1100,7 @@ class UserActivity {
 				if ( $has_page && !isset( $this->displayed[$type][$page_name] ) ) {
 					$this->displayed[$type][$page_name] = 1;
 
-					$pages .= " <a href=\"{$page_title->escapeFullURL()}\">{$page_name}</a>";
+					$pages .= " <a href=\"{htmlspecialchars( $page_title->getFullURL() )}\">{$page_name}</a>";
 					if ( $count_users == 1 && $count_actions > 1 ) {
 						$pages .= wfMsg( 'word-separator' );
 						$pages .= wfMsg( 'parentheses', wfMsgExt(
@@ -1139,7 +1139,7 @@ class UserActivity {
 										$pages .= ', ';
 									}
 									if ( $page_title2 instanceof Title ) {
-										$pages .= " <a href=\"{$page_title2->escapeFullURL()}\">{$page_name2}</a>";
+										$pages .= " <a href=\"{htmlspecialchars( $page_title2->getFullURL() )}\">{$page_name2}</a>";
 									}
 									if ( $count_actions2 > 1 ) {
 										$pages .= ' (' . wfMsg(
@@ -1168,7 +1168,7 @@ class UserActivity {
 				$user_name_short = $wgLang->truncate( $user_name, 15 );
 
 				$safeTitle = htmlspecialchars( $user_title->getText() );
-				$users .= " <b><a href=\"{$user_title->escapeFullURL()}\" title=\"{$safeTitle}\">{$user_name_short}</a></b>";
+				$users .= " <b><a href=\"{htmlspecialchars( $user_title->getFullURL() )}\" title=\"{$safeTitle}\">{$user_name_short}</a></b>";
 			}
 			if ( $pages || $has_page == false ) {
 				$this->activityLines[] = array(

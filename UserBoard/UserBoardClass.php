@@ -81,8 +81,8 @@ class UserBoard {
 			$body = wfMessage( 'message_received_body',
 				$user->getName(),
 				$user_from,
-				$board_link->escapeFullURL(),
-				$update_profile_link->escapeFullURL()
+				htmlspecialchars( $board_link->getFullURL() ),
+				htmlspecialchars( $update_profile_link->getFullURL() )
 			)->text();
 			$user->sendMail( $subject, $body );
 		}
@@ -385,14 +385,14 @@ class UserBoard {
 
 				$output .= "<div class=\"user-board-message\">
 					<div class=\"user-board-message-from\">
-					<a href=\"{$user->escapeFullURL()}\" title=\"{$message['user_name_from']}\">{$message['user_name_from']}</a> {$message_type_label}
+					<a href=\"{htmlspecialchars( $user->getFullURL() )}\" title=\"{$message['user_name_from']}\">{$message['user_name_from']}</a> {$message_type_label}
 					</div>
 					<div class=\"user-board-message-time\">" .
 						wfMessage( 'userboard_posted_ago', $this->getTimeAgo( $message['timestamp'] ) )->parse() .
 					"</div>
 					<div class=\"user-board-message-content\">
 						<div class=\"user-board-message-image\">
-							<a href=\"{$user->escapeFullURL()}\" title=\"{$message['user_name_from']}\">{$avatar->getAvatarURL()}</a>
+							<a href=\"{htmlspecialchars( $user->getFullURL() )}\" title=\"{$message['user_name_from']}\">{$avatar->getAvatarURL()}</a>
 						</div>
 						<div class=\"user-board-message-body\">
 							{$message_text}
@@ -424,7 +424,7 @@ class UserBoard {
 	 */
 	static function getBoardBlastURL() {
 		$title = SpecialPage::getTitleFor( 'SendBoardBlast' );
-		return $title->escapeFullURL();
+		return htmlspecialchars( $title->getFullURL() );
 	}
 
 	/**
@@ -437,7 +437,7 @@ class UserBoard {
 	static function getUserBoardURL( $user_name ) {
 		$title = SpecialPage::getTitleFor( 'UserBoard' );
 		$user_name = str_replace( '&', '%26', $user_name );
-		return $title->escapeFullURL( 'user=' . $user_name );
+		return htmlspecialchars( $title->getFullURL( 'user=' . $user_name ) );
 	}
 
 	/**
@@ -451,7 +451,7 @@ class UserBoard {
 		$title = SpecialPage::getTitleFor( 'UserBoard' );
 		$user_name_1 = str_replace( '&', '%26', $user_name_1 );
 		$user_name_2 = str_replace( '&', '%26', $user_name_2 );
-		return $title->escapeFullURL( 'user=' . $user_name_1 . '&conv=' . $user_name_2 );
+		return htmlspecialchars( $title->getFullURL( 'user=' . $user_name_1 . '&conv=' . $user_name_2 ) );
 	}
 
 	/**

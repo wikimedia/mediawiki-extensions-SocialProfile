@@ -74,7 +74,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			<div>
 				<input type="button" class="site-button" value="' . $this->msg( 'ur-main-page' )->plain() . '" size="20" onclick=\'window.location="index.php?title=' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
 			if ( $user->isLoggedIn() ) {
-				$output .= '<input type="button" class="site-button" value="' . $this->msg( 'ur-your-profile' )->plain() . '" size="20" onclick=\'window.location="' . $user->getUserPage()->escapeFullURL() . '"\' />';
+				$output .= '<input type="button" class="site-button" value="' . $this->msg( 'ur-your-profile' )->plain() . '" size="20" onclick=\'window.location="' . htmlspecialchars( $user->getUserPage()->getFullURL() ) . '"\' />';
 			}
 			$output .= '</div>';
 
@@ -88,7 +88,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			<div>
 				<input type="button" class="site-button" value="' . $this->msg( 'ur-main-page' )->plain() . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
 			if ( $user->isLoggedIn() ) {
-				$output .= '<input type="button" class="site-button" value="' . $this->msg( 'ur-your-profile' )->plain() . '" size="20" onclick=\'window.location="' . $user->getUserPage()->escapeFullURL() . '"\' />';
+				$output .= '<input type="button" class="site-button" value="' . $this->msg( 'ur-your-profile' )->plain() . '" size="20" onclick=\'window.location="' . htmlspecialchars( $user->getUserPage()->getFullURL() ) . '"\' />';
 			}
 			$output .= '</div>';
 
@@ -102,7 +102,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			<div>
 				<input type="button" class="site-button" value="' . $this->msg( 'ur-main-page' )->plain() . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
 			if ( $user->isLoggedIn() ) {
-				$output .= '<input type="button" class="site-button" value="' . $this->msg( 'ur-your-profile' )->plain() . '" size="20" onclick=\'window.location="' . $user->getUserPage()->escapeFullURL() . '"\' />';
+				$output .= '<input type="button" class="site-button" value="' . $this->msg( 'ur-your-profile' )->plain() . '" size="20" onclick=\'window.location="' . htmlspecialchars( $user->getUserPage()->getFullURL() ) . '"\' />';
 			}
 			$output .= '</div>';
 
@@ -115,7 +115,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			<div>
 				<input type="button" class="site-button" value="' . $this->msg( 'ur-main-page' )->plain() . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
 			if ( $user->isLoggedIn() ) {
-				$output .= '<input type="button" class="site-button" value="' . $this->msg( 'ur-your-profile' )->plain() . '" size="20" onclick=\'window.location="' . $user->getUserPage()->escapeFullURL() . '"\' />';
+				$output .= '<input type="button" class="site-button" value="' . $this->msg( 'ur-your-profile' )->plain() . '" size="20" onclick=\'window.location="' . htmlspecialchars( $user->getUserPage()->getFullURL() ) . '"\' />';
 			}
 			$output .= '</div>';
 
@@ -142,7 +142,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 					$confirmMsg .
 					"<div class=\"relationship-buttons\">
 						<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-main-page' )->plain() . "\" size=\"20\" onclick=\"window.location='index.php?title=" . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . "'\"/>
-						<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-your-profile' )->plain() . "\" size=\"20\" onclick=\"window.location='" . $user->getUserPage()->escapeFullURL() . "'\"/>
+						<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-your-profile' )->plain() . "\" size=\"20\" onclick=\"window.location='" . htmlspecialchars( $user->getUserPage()->getFullURL() ) . "'\"/>
 					</div>
 					<div class=\"cleared\"></div>
 					</div>";

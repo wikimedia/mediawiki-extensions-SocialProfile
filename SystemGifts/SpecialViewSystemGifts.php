@@ -44,7 +44,7 @@ class ViewSystemGifts extends SpecialPage {
 		if ( $user->getID() == 0 && $user_name == '' ) {
 			$out->setPageTitle( $this->msg( 'ga-error-title' )->plain() );
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
-			$out->redirect( $login->escapeFullURL( 'returnto=Special:ViewSystemGifts' ) );
+			$out->redirect( htmlspecialchars( $login->getFullURL( 'returnto=Special:ViewSystemGifts' ) ) );
 			return false;
 		}
 
@@ -87,7 +87,7 @@ class ViewSystemGifts extends SpecialPage {
 		$output .= '<div class="back-links">' .
 			$this->msg(
 				'ga-back-link',
-				$user->getUserPage()->escapeFullURL(),
+				htmlspecialchars( $user->getUserPage()->getFullURL() ),
 				$rel->user_name
 			)->text() . '</div>';
 
@@ -108,7 +108,7 @@ class ViewSystemGifts extends SpecialPage {
 				$output .= "<div class=\"ga-item\">
 					{$gift_image}
 					<a href=\"" .
-						$view_system_gift_link->escapeFullURL( 'gift_id=' . $gift['id'] ) .
+						htmlspecialchars( $view_system_gift_link->getFullURL( 'gift_id=' . $gift['id'] ) ) .
 						"\">{$gift['gift_name']}</a>";
 
 				if ( $gift['status'] == 1 ) {

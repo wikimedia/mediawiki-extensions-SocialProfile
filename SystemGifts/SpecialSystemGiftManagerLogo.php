@@ -534,9 +534,9 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 
 		$systemGiftManager = SpecialPage::getTitleFor( 'SystemGiftManager' );
 		$output .= $this->getLanguage()->pipeList( array(
-			'<tr><td><a href="' . $systemGiftManager->escapeFullURL() . '">' .
+			'<tr><td><a href="' . htmlspecialchars( $systemGiftManager->getFullURL() ) . '">' .
 				$this->msg( 'ga-back-gift-list' )->plain() . '</a>&#160;',
-			'&#160;<a href="' . $systemGiftManager->escapeFullURL( 'id=' . $this->gift_id ) . '">' .
+			'&#160;<a href="' . htmlspecialchars( $systemGiftManager->getFullURL( 'id=' . $this->gift_id ) ) . '">' .
 				$this->msg( 'ga-back-edit-gift' )->plain() . '</a></td></tr>'
 		) );
 		$output .= '</table>';

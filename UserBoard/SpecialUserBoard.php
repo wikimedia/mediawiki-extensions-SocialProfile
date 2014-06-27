@@ -120,7 +120,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		}
 
 		$output = '<div class="user-board-top-links">';
-		$output .= '<a href="' . $user->escapeFullURL() . '">&lt; ' .
+		$output .= '<a href="' . htmlspecialchars( $user->getFullURL() ) . '">&lt; ' .
 			$this->msg( 'userboard_backprofile', $user_name )->parse() . '</a>';
 		$output .= '</div>';
 
@@ -304,14 +304,14 @@ class SpecialViewUserBoard extends SpecialPage {
 
 				$output .= "<div class=\"user-board-message\">
 					<div class=\"user-board-message-from\">
-							<a href=\"{$user->escapeFullURL()}\" title=\"{$ub_message['user_name_from']}}\">{$ub_message['user_name_from']} </a> {$ub_message_type_label}
+							<a href=\"{htmlspecialchars( $user->getFullURL() )}\" title=\"{$ub_message['user_name_from']}}\">{$ub_message['user_name_from']} </a> {$ub_message_type_label}
 					</div>
 					<div class=\"user-board-message-time\">"
 						. $this->msg( 'userboard_posted_ago', $b->getTimeAgo( $ub_message['timestamp'] ) )->parse() .
 					"</div>
 					<div class=\"user-board-message-content\">
 						<div class=\"user-board-message-image\">
-							<a href=\"{$user->escapeFullURL()}\" title=\"{$ub_message['user_name_from']}\">{$avatar->getAvatarURL()}</a>
+							<a href=\"{htmlspecialchars( $user->getFullURL() )}\" title=\"{$ub_message['user_name_from']}\">{$avatar->getAvatarURL()}</a>
 						</div>
 						<div class=\"user-board-message-body\">
 							{$ub_message_text}

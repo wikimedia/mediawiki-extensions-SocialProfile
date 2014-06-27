@@ -528,9 +528,9 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 
 		$giftManager = SpecialPage::getTitleFor( 'GiftManager' );
 		$output .= $this->getLanguage()->pipeList( array(
-			'<tr><td><a href="' . $giftManager->escapeFullURL() . '">' .
+			'<tr><td><a href="' . htmlspecialchars( $giftManager->getFullURL() ) . '">' .
 				$this->msg( 'g-back-gift-list' )->plain() . '</a>&#160;',
-			'&#160;<a href="' . $giftManager->escapeFullURL( 'id=' . $this->gift_id ) .
+			'&#160;<a href="' . htmlspecialchars( $giftManager->getFullURL( 'id=' . $this->gift_id ) ) .
 				'">' . $this->msg( 'g-back-edit-gift' )->plain() . '</a></td></tr>'
 		) );
 		$output .= '</table>';

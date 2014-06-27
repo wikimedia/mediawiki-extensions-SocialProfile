@@ -88,16 +88,16 @@ class TopFansRecent extends UnlistedSpecialPage {
 
 		$output = '<div class="top-fan-nav">
 			<h1>' . $this->msg( 'top-fans-by-points-nav-header' )->plain() . '</h1>
-			<p><a href="' . $top_title->escapeFullURL() . '">' .
+			<p><a href="' . htmlspecialchars( $top_title->getFullURL() ) . '">' .
 				$this->msg( 'top-fans-total-points-link' )->plain() . '</a></p>';
 
 		if ( $period == 'weekly' ) {
-			$output .= '<p><a href="' . $recent_title->escapeFullURL( 'period=monthly' ) . '">' .
+			$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=monthly' ) ) . '">' .
 				$this->msg( 'top-fans-monthly-points-link' )->plain() . '</a><p>
 			<p><b>' . $this->msg( 'top-fans-weekly-points-link' )->plain() . '</b></p>';
 		} else {
 			$output .= '<p><b>' . $this->msg( 'top-fans-monthly-points-link' )->plain() . '</b><p>
-			<p><a href="' . $recent_title->escapeFullURL( 'period=weekly' ) . '">' .
+			<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=weekly' ) ) . '">' .
 				$this->msg( 'top-fans-weekly-points-link' )->plain() . '</a></p>';
 		}
 
@@ -151,7 +151,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 				<span class="top-fan-num">' . $x . '.</span>
 				<span class="top-fan">' .
 					$avatarImage .
-					'<a href="' . $user_title->escapeFullURL() . '" >' . $user['user_name'] . '</a>
+					'<a href="' . htmlspecialchars( $user_title->getFullURL() ) . '" >' . $user['user_name'] . '</a>
 				</span>';
 
 			$output .= '<span class="top-fan-points"><b>' .

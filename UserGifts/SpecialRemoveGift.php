@@ -62,7 +62,7 @@ class RemoveGift extends UnlistedSpecialPage {
 			$out->setPageTitle( $this->msg( 'g-remove-success-title', $gift['name'] )->parse() );
 
 			$out = '<div class="back-links">
-				<a href="' . $user->getUserPage()->escapeFullURL() . '">' .
+				<a href="' . htmlspecialchars( $user->getUserPage()->getFullURL() ) . '">' .
 					$this->msg( 'g-back-link', $gift['user_name_to'] )->parse() . '</a>
 			</div>
 			<div class="g-container">' .
@@ -71,7 +71,7 @@ class RemoveGift extends UnlistedSpecialPage {
 			</div>
 			<div class="g-buttons">
 				<input type="button" class="site-button" value="' . $this->msg( 'g-main-page' )->plain() . '" size="20" onclick="window.location=\'index.php?title=' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '\'" />
-				<input type="button" class="site-button" value="' . $this->msg( 'g-your-profile' )->plain() . '" size="20" onclick="window.location=\'' . $user_page_link->escapeFullURL() . '\'" />
+				<input type="button" class="site-button" value="' . $this->msg( 'g-your-profile' )->plain() . '" size="20" onclick="window.location=\'' . htmlspecialchars( $user_page_link->getFullURL() ) . '\'" />
 			</div>';
 
 			$out->addHTML( $out );
@@ -99,7 +99,7 @@ class RemoveGift extends UnlistedSpecialPage {
 		$this->getOutput()->setPageTitle( $this->msg( 'g-remove-title', $gift['name'] )->parse() );
 
 		$output = '<div class="back-links">
-			<a href="' . $currentUser->getUserPage()->escapeFullURL() . '">' .
+			<a href="' . htmlspecialchars( $currentUser->getUserPage()->getFullURL() ) . '">' .
 				$this->msg( 'g-back-link', $gift['user_name_to'] )->parse() . '</a>
 		</div>
 		<form action="" method="post" enctype="multipart/form-data" name="form1">
@@ -112,7 +112,7 @@ class RemoveGift extends UnlistedSpecialPage {
 				<div class="g-from">' .
 					$this->msg(
 						'g-from',
-						$user->escapeFullURL(),
+						htmlspecialchars( $user->getFullURL() ),
 						$gift['user_name_from']
 					)->parse() . '</div>';
 		if ( $gift['message'] ) {

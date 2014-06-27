@@ -99,7 +99,7 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 			$out->setPageTitle( $this->msg( 'ga-remove-success-title', $gift['gift_name'] )->plain() );
 
 			$output = '<div class="back-links">
-				<a href="' . SpecialPage::getTitleFor( 'SystemGiftManager' )->escapeFullURL() . '">' .
+				<a href="' . htmlspecialchars( SpecialPage::getTitleFor( 'SystemGiftManager' )->getFullURL() ) . '">' .
 					$this->msg( 'ga-viewlist' )->plain() . '</a>
 			</div>
 			<div class="ga-container">' .
@@ -131,7 +131,7 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 		$this->getOutput()->setPageTitle( $this->msg( 'ga-remove-title', $gift['gift_name'] )->plain() );
 
 		$output = '<div class="back-links">
-			<a href="' . SpecialPage::getTitleFor( 'SystemGiftManager' )->escapeFullURL() . '">' .
+			<a href="' . htmlspecialchars( SpecialPage::getTitleFor( 'SystemGiftManager' )->getFullURL() ) . '">' .
 				$this->msg( 'ga-viewlist' )->plain() . '</a>
 		</div>
 		<form action="" method="post" enctype="multipart/form-data" name="form1">

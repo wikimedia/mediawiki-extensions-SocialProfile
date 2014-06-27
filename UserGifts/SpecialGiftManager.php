@@ -81,7 +81,7 @@ class GiftManager extends SpecialPage {
 				if ( $this->canUserCreateGift() ) {
 					$out->addHTML(
 						'<div><b><a href="' .
-						$this->getPageTitle()->escapeFullURL( 'method=edit' ) .
+						htmlspecialchars( $this->getPageTitle()->getFullURL( 'method=edit' ) ) .
 						'">' . $this->msg( 'giftmanager-addgift' )->plain() .
 						'</a></b></div>'
 					);
@@ -196,13 +196,13 @@ class GiftManager extends SpecialPage {
 				$deleteLink = '';
 				if ( $this->canUserDelete() ) {
 					$deleteLink = '<a href="' .
-						SpecialPage::getTitleFor( 'RemoveMasterGift' )->escapeFullURL( "gift_id={$gift['id']}" ) .
+						htmlspecialchars( SpecialPage::getTitleFor( 'RemoveMasterGift' )->getFullURL( "gift_id={$gift['id']}" ) ) .
 						'" style="font-size:10px; color:red;">' .
 						$this->msg( 'delete' )->plain() . '</a>';
 				}
 
 				$output .= '<div class="Item">
-				<a href="' . $this->getPageTitle()->escapeFullURL( "id={$gift['id']}" ) . '">' .
+				<a href="' . htmlspecialchars( $this->getPageTitle()->getFullURL( "id={$gift['id']}" ) ) . '">' .
 					$gift['gift_name'] . '</a> ' .
 					$deleteLink . "</div>\n";
 			}
@@ -217,7 +217,7 @@ class GiftManager extends SpecialPage {
 			return $this->displayGiftList();
 		}
 
-		$form = '<div><b><a href="' . $this->getPageTitle()->escapeFullURL() .
+		$form = '<div><b><a href="' . htmlspecialchars( $this->getPageTitle()->getFullURL() ) .
 			'">' . $this->msg( 'giftmanager-view' )->plain() . '</a></b></div>';
 
 		if ( $gift_id ) {
@@ -252,7 +252,7 @@ class GiftManager extends SpecialPage {
 			<td class="view-form">' .
 				$this->msg( 'g-created-by', $gift['creator_user_name'] )->parse() .
 			'</td>
-			<td><a href="' . $creator->escapeFullURL() . '">' .
+			<td><a href="' . htmlspecialchars( $creator->getFullURL() ) . '">' .
 				$gift['creator_user_name'] . '</a></td>
 			</tr>';
 		}
@@ -294,7 +294,7 @@ class GiftManager extends SpecialPage {
 			<td width="200" class="view-form" valign="top">' . $this->msg( 'giftmanager-giftimage' )->plain() . '</td>
 			<td width="695">' . $gift_image .
 			'<p>
-			<a href="' . $gml->escapeFullURL( 'gift_id=' . $gift_id ) . '">' .
+			<a href="' . htmlspecialchars( $gml->getFullURL( 'gift_id=' . $gift_id ) ) . '">' .
 				$this->msg( 'giftmanager-image' )->plain() . '</a>
 			</td>
 			</tr>';

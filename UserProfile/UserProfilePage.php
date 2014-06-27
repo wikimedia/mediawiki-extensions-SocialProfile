@@ -454,7 +454,7 @@ class UserProfilePage extends Article {
 					$ns = ( defined( 'NS_POLL' ) ? NS_POLL : 300 );
 					$poll_title = Title::makeTitle( $ns, $item['title'] );
 					$casual_game_title = wfMsg( 'casual-game-poll' );
-					$output .= '<a href="' . $poll_title->escapeFullURL() .
+					$output .= '<a href="' . htmlspecialchars( $poll_title->getFullURL() ) .
 						"\" rel=\"nofollow\">
 							{$poll_title->getText()}
 						</a>
@@ -464,7 +464,7 @@ class UserProfilePage extends Article {
 				if ( $item['type'] == 'Quiz' ) {
 					$casual_game_title = wfMsg( 'casual-game-quiz' );
 					$output .= '<a href="' .
-						$quiz_title->escapeFullURL( 'questionGameAction=renderPermalink&permalinkID=' . $item['id'] ) .
+						htmlspecialchars( $quiz_title->getFullURL( 'questionGameAction=renderPermalink&permalinkID=' . $item['id'] ) ) .
 						"\" rel=\"nofollow\">
 							{$item['text']}
 						</a>
@@ -489,7 +489,7 @@ class UserProfilePage extends Article {
 						$casual_game_title = wfMsg( 'casual-game-picture-game' );
 
 						$output .= '<a href="' .
-							$pic_game_title->escapeFullURL( 'picGameAction=renderPermalink&id=' . $item['id'] ) .
+							htmlspecialchars( $pic_game_title->getFullURL( 'picGameAction=renderPermalink&id=' . $item['id'] ) ) .
 							"\" rel=\"nofollow\">
 								{$image_1}
 								{$image_2}
@@ -614,7 +614,7 @@ class UserProfilePage extends Article {
 				<div class="user-section-actions">
 					<div class="action-right">';
 			if ( $wgUser->getName() == $user_name ) {
-				$output .= '<a href="' . $edit_info_link->escapeFullURL() . '">' .
+				$output .= '<a href="' . htmlspecialchars( $edit_info_link->getFullURL() ) . '">' .
 					wfMsg( 'user-edit-this' ) . '</a>';
 			}
 			$output .= '</div>
@@ -640,7 +640,7 @@ class UserProfilePage extends Article {
 				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">
-						<a href="' . $edit_info_link->escapeFullURL() . '">' .
+						<a href="' . htmlspecialchars( $edit_info_link->getFullURL() ) . '">' .
 							wfMsg( 'user-edit-this' ) .
 						'</a>
 					</div>
@@ -686,7 +686,7 @@ class UserProfilePage extends Article {
 				<div class="user-section-actions">
 					<div class="action-right">';
 			if ( $wgUser->getName() == $user_name ) {
-				$output .= '<a href="' . $edit_info_link->escapeFullURL() . '/custom">' .
+				$output .= '<a href="' . htmlspecialchars( $edit_info_link->getFullURL() ) . '/custom">' .
 					wfMsg( 'user-edit-this' ) . '</a>';
 			}
 			$output .= '</div>
@@ -707,7 +707,7 @@ class UserProfilePage extends Article {
 				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">
-						<a href="' . $edit_info_link->escapeFullURL() . '/custom">' .
+						<a href="' . htmlspecialchars( $edit_info_link->getFullURL() ) . '/custom">' .
 							wfMsg( 'user-edit-this' ) .
 						'</a>
 					</div>
@@ -756,7 +756,7 @@ class UserProfilePage extends Article {
 				<div class="user-section-actions">
 					<div class="action-right">';
 			if ( $wgUser->getName() == $user_name ) {
-				$output .= '<a href="' . $edit_info_link->escapeFullURL() . '/personal">' .
+				$output .= '<a href="' . htmlspecialchars( $edit_info_link->getFullURL() ) . '/personal">' .
 					wfMsg( 'user-edit-this' ) . '</a>';
 			}
 			$output .= '</div>
@@ -781,7 +781,7 @@ class UserProfilePage extends Article {
 				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">
-						<a href="' . $edit_info_link->escapeFullURL() . '/personal">' .
+						<a href="' . htmlspecialchars( $edit_info_link->getFullURL() ) . '/personal">' .
 							wfMsg( 'user-edit-this' ) .
 						'</a>
 					</div>
@@ -854,7 +854,7 @@ class UserProfilePage extends Article {
 				$toggleMessage = wfMsg( 'user-type-toggle-new' );
 			}
 			$output .= '<div id="profile-toggle-button">
-				<a href="' . $toggle_title->escapeFullURL() . '" rel="nofollow">' .
+				<a href="' . htmlspecialchars( $toggle_title->getFullURL() ) . '" rel="nofollow">' .
 					$toggleMessage . '</a>
 			</div>';
 		}
@@ -872,7 +872,7 @@ class UserProfilePage extends Article {
 		// UserLevels has been configured
 		if ( $wgUserLevels ) {
 			$output .= '<div id="points-level">
-					<a href="' . $level_link->escapeFullURL() . '">' .
+					<a href="' . htmlspecialchars( $level_link->getFullURL() ) . '">' .
 						wfMsgExt(
 							'user-profile-points',
 							'parsemag',
@@ -881,7 +881,7 @@ class UserProfilePage extends Article {
 					'</a>
 					</div>
 					<div id="honorific-level">
-						<a href="' . $level_link->escapeFullURL() . '" rel="nofollow">(' . $user_level->getLevelName() . ')</a>
+						<a href="' . htmlspecialchars( $level_link->getFullURL() ) . '" rel="nofollow">(' . $user_level->getLevelName() . ')</a>
 					</div>';
 		}
 		$output .= '<div class="cleared"></div>
@@ -890,28 +890,28 @@ class UserProfilePage extends Article {
 
 		if ( $this->isOwner() ) {
 			$output .= $wgLang->pipeList( array(
-				'<a href="' . $update_profile->escapeFullURL() . '">' . wfMsg( 'user-edit-profile' ) . '</a>',
-				'<a href="' . $upload_avatar->escapeFullURL() . '">' . wfMsg( 'user-upload-avatar' ) . '</a>',
-				'<a href="' . $watchlist->escapeFullURL() . '">' . wfMsg( 'user-watchlist' ) . '</a>',
+				'<a href="' . htmlspecialchars( $update_profile->getFullURL() ) . '">' . wfMsg( 'user-edit-profile' ) . '</a>',
+				'<a href="' . htmlspecialchars( $upload_avatar->getFullURL() ) . '">' . wfMsg( 'user-upload-avatar' ) . '</a>',
+				'<a href="' . htmlspecialchars( $watchlist->getFullURL() ) . '">' . wfMsg( 'user-watchlist' ) . '</a>',
 				''
 			) );
 		} elseif ( $wgUser->isLoggedIn() ) {
 			if ( $relationship == false ) {
 				$output .= $wgLang->pipeList( array(
-					'<a href="' . $add_relationship->escapeFullURL( 'user=' . $user_safe . '&rel_type=1' ) . '" rel="nofollow">' . wfMsg( 'user-add-friend' ) . '</a>',
-					'<a href="' . $add_relationship->escapeFullURL( 'user=' . $user_safe . '&rel_type=2' ) . '" rel="nofollow">' . wfMsg( 'user-add-foe' ) . '</a>',
+					'<a href="' . htmlspecialchars( $add_relationship->getFullURL( 'user=' . $user_safe . '&rel_type=1' ) ) . '" rel="nofollow">' . wfMsg( 'user-add-friend' ) . '</a>',
+					'<a href="' . htmlspecialchars( $add_relationship->getFullURL( 'user=' . $user_safe . '&rel_type=2' ) ) . '" rel="nofollow">' . wfMsg( 'user-add-foe' ) . '</a>',
 					''
 				) );
 			} else {
 				if ( $relationship == 1 ) {
 					$output .= $wgLang->pipeList( array(
-						'<a href="' . $remove_relationship->escapeFullURL( 'user=' . $user_safe ) . '">' . wfMsg( 'user-remove-friend' ) . '</a>',
+						'<a href="' . htmlspecialchars( $remove_relationship->getFullURL( 'user=' . $user_safe ) ) . '">' . wfMsg( 'user-remove-friend' ) . '</a>',
 						''
 					) );
 				}
 				if ( $relationship == 2 ) {
 					$output .= $wgLang->pipeList( array(
-						'<a href="' . $remove_relationship->escapeFullURL( 'user=' . $user_safe ) . '">' . wfMsg( 'user-remove-foe' ) . '</a>',
+						'<a href="' . htmlspecialchars( $remove_relationship->getFullURL( 'user=' . $user_safe ) ) . '">' . wfMsg( 'user-remove-foe' ) . '</a>',
 						''
 					) );
 				}
@@ -919,31 +919,31 @@ class UserProfilePage extends Article {
 
 			global $wgUserBoard;
 			if ( $wgUserBoard ) {
-				$output .= '<a href="' . $send_message->escapeFullURL( 'user=' . $wgUser->getName() . '&conv=' . $user_safe ) . '" rel="nofollow">' .
+				$output .= '<a href="' . htmlspecialchars( $send_message->getFullURL( 'user=' . $wgUser->getName() . '&conv=' . $user_safe ) ) . '" rel="nofollow">' .
 					wfMsg( 'user-send-message' ) . '</a>';
 				$output .= wfMsgExt( 'pipe-separator', 'escapenoentities' );
 			}
-			$output .= '<a href="' . $give_gift->escapeFullURL( 'user=' . $user_safe ) . '" rel="nofollow">' .
+			$output .= '<a href="' . htmlspecialchars( $give_gift->getFullURL( 'user=' . $user_safe ) ) . '" rel="nofollow">' .
 				wfMsg( 'user-send-gift' ) . '</a>';
 			$output .= wfMsgExt( 'pipe-separator', 'escapenoentities' );
 		}
 
-		$output .= '<a href="' . $contributions->escapeFullURL() . '" rel="nofollow">' . wfMsg( 'user-contributions' ) . '</a> ';
+		$output .= '<a href="' . htmlspecialchars( $contributions->getFullURL() ) . '" rel="nofollow">' . wfMsg( 'user-contributions' ) . '</a> ';
 
 		// Links to User:user_name from User_profile:
 		if ( $this->getTitle()->getNamespace() == NS_USER_PROFILE && $this->profile_data['user_id'] && $this->profile_data['user_page_type'] == 0 ) {
-			$output .= '| <a href="' . $user_page->escapeFullURL() . '" rel="nofollow">' .
+			$output .= '| <a href="' . htmlspecialchars( $user_page->getFullURL() ) . '" rel="nofollow">' .
 				wfMsg( 'user-page-link' ) . '</a> ';
 		}
 
 		// Links to User:user_name from User_profile:
 		if ( $this->getTitle()->getNamespace() == NS_USER && $this->profile_data['user_id'] && $this->profile_data['user_page_type'] == 0 ) {
-			$output .= '| <a href="' . $user_social_profile->escapeFullURL() . '" rel="nofollow">' .
+			$output .= '| <a href="' . htmlspecialchars( $user_social_profile->getFullURL() ) . '" rel="nofollow">' .
 				wfMsg( 'user-social-profile-link' ) . '</a> ';
 		}
 
 		if ( $this->getTitle()->getNamespace() == NS_USER && ( !$this->profile_data['user_id'] || $this->profile_data['user_page_type'] == 1 ) ) {
-			$output .= '| <a href="' . $user_wiki->escapeFullURL() . '" rel="nofollow">' .
+			$output .= '| <a href="' . htmlspecialchars( $user_wiki->getFullURL() ) . '" rel="nofollow">' .
 				wfMsg( 'user-wiki-link' ) . '</a>';
 		}
 
@@ -974,7 +974,7 @@ class UserProfilePage extends Article {
 			} else {
 				$caption = 'new image';
 			}
-			$output .= '<a href="' . $avatarTitle->escapeFullURL() . '" rel="nofollow">' .
+			$output .= '<a href="' . htmlspecialchars( $avatarTitle->getFullURL() ) . '" rel="nofollow">' .
 						$avatar->getAvatarURL() . '<br />
 					(' . $caption . ')
 				</a>';
@@ -1045,7 +1045,7 @@ class UserProfilePage extends Article {
 				<div class="user-section-actions">
 					<div class="action-right">';
 			if ( intval( str_replace( ',', '', $relationship_count ) ) > 4 ) {
-				$output .= '<a href="' . $view_all_title->escapeFullURL( 'user=' . $user_name . '&rel_type=' . $rel_type ) .
+				$output .= '<a href="' . htmlspecialchars( $view_all_title->getFullURL( 'user=' . $user_name . '&rel_type=' . $rel_type ) ) .
 					'" rel="nofollow">' . wfMsg( 'user-view-all' ) . '</a>';
 			}
 			$output .= '</div>
@@ -1069,7 +1069,7 @@ class UserProfilePage extends Article {
 				// Chop down username that gets displayed
 				$user_name = $wgLang->truncate( $friend['user_name'], 9, '..' );
 
-				$output .= "<a href=\"" . $user->escapeFullURL() . "\" title=\"{$friend['user_name']}\" rel=\"nofollow\">
+				$output .= "<a href=\"" . htmlspecialchars( $user->getFullURL() ) . "\" title=\"{$friend['user_name']}\" rel=\"nofollow\">
 					{$avatar->getAvatarURL()}<br />
 					{$user_name}
 				</a>";
@@ -1140,7 +1140,7 @@ class UserProfilePage extends Article {
 				$user_title_2 = Title::makeTitle( NS_USER, $item['comment'] );
 
 				if ( $user_title_2 ) {
-					$user_link_2 = '<a href="' . $user_title_2->escapeFullURL() .
+					$user_link_2 = '<a href="' . htmlspecialchars( $user_title_2->getFullURL() ) .
 						'" rel="nofollow">' . $item['comment'] . '</a>';
 				}
 
@@ -1149,7 +1149,7 @@ class UserProfilePage extends Article {
 					$comment_url = "#comment-{$item['id']}";
 				}
 
-				$page_link = '<b><a href="' . $title->escapeFullURL() .
+				$page_link = '<b><a href="' . htmlspecialchars( $title->getFullURL() ) .
 					"{$comment_url}\">" . $title->getPrefixedText() . '</a></b> ';
 				$b = new UserBoard(); // Easier than porting the time-related functions here
 				$item_time = '<span class="item-small">' .
@@ -1192,7 +1192,7 @@ class UserProfilePage extends Article {
 							'" border="0" alt="" />';
 						$item_html .= wfMsg( 'user-recent-activity-gift-sent' ) . " {$user_link_2} {$item_time}
 						<div class=\"item\">
-							<a href=\"" . $viewGift->escapeFullURL( "gift_id={$item['id']}" ) . "\" rel=\"nofollow\">
+							<a href=\"" . htmlspecialchars( $viewGift->getFullURL( "gift_id={$item['id']}" ) ) . "\" rel=\"nofollow\">
 								{$gift_image}
 								{$item['pagetitle']}
 							</a>
@@ -1204,7 +1204,7 @@ class UserProfilePage extends Article {
 							'" border="0" alt="" />';
 						$item_html .= wfMsg( 'user-recent-activity-gift-rec' ) . " {$user_link_2} {$item_time}</span>
 								<div class=\"item\">
-									<a href=\"" . $viewGift->escapeFullURL( "gift_id={$item['id']}" ) . "\" rel=\"nofollow\">
+									<a href=\"" . htmlspecialchars( $viewGift->getFullURL( "gift_id={$item['id']}" ) ) . "\" rel=\"nofollow\">
 										{$gift_image}
 										{$item['pagetitle']}
 									</a>
@@ -1217,7 +1217,7 @@ class UserProfilePage extends Article {
 						$viewSystemGift = SpecialPage::getTitleFor( 'ViewSystemGift' );
 						$item_html .= wfMsg( 'user-recent-system-gift' ) . " {$item_time}
 								<div class=\"user-home-item-gift\">
-									<a href=\"" . $viewSystemGift->escapeFullURL( "gift_id={$item['id']}" ) . "\" rel=\"nofollow\">
+									<a href=\"" . htmlspecialchars( $viewSystemGift->getFullURL( "gift_id={$item['id']}" ) ) . "\" rel=\"nofollow\">
 										{$gift_image}
 										{$item['pagetitle']}
 									</a>
@@ -1311,7 +1311,7 @@ class UserProfilePage extends Article {
 				<div class="user-section-actions">
 					<div class="action-right">';
 			if ( $gift_count > 4 ) {
-				$output .= '<a href="' . $gift_link->escapeFullURL( 'user=' . $user_safe ) . '" rel="nofollow">' .
+				$output .= '<a href="' . htmlspecialchars( $gift_link->getFullURL( 'user=' . $user_safe ) ) . '" rel="nofollow">' .
 					wfMsg( 'user-view-all' ) . '</a>';
 			}
 			$output .= '</div>
@@ -1346,7 +1346,7 @@ class UserProfilePage extends Article {
 				if ( $gift['status'] == 1 ) {
 					$class = 'class="user-page-new"';
 				}
-				$output .= '<a href="' . $gift_link->escapeFullURL( 'gift_id=' . $gift['id'] ) . '" ' .
+				$output .= '<a href="' . htmlspecialchars( $gift_link->getFullURL( 'gift_id=' . $gift['id'] ) ) . '" ' .
 					$class . " rel=\"nofollow\">{$gift_image}</a>";
 				if ( $x == count( $gifts ) || $x != 1 && $x % $per_row == 0 ) {
 					$output .= '<div class="cleared"></div>';
@@ -1400,7 +1400,7 @@ class UserProfilePage extends Article {
 				<div class="user-section-actions">
 					<div class="action-right">';
 			if ( $system_gift_count > 4 ) {
-				$output .= '<a href="' . $system_gift_link->escapeFullURL( 'user=' . $user_name ) . '" rel="nofollow">' .
+				$output .= '<a href="' . htmlspecialchars( $system_gift_link->getFullURL( 'user=' . $user_name ) ) . '" rel="nofollow">' .
 					wfMsg( 'user-view-all' ) . '</a>';
 			}
 			$output .= '</div>
@@ -1433,7 +1433,7 @@ class UserProfilePage extends Article {
 				if ( $gift['status'] == 1 ) {
 					$class = 'class="user-page-new"';
 				}
-				$output .= '<a href="' . $gift_link->escapeFullURL( 'gift_id=' . $gift['id'] ) .
+				$output .= '<a href="' . htmlspecialchars( $gift_link->getFullURL( 'gift_id=' . $gift['id'] ) ) .
 					'" ' . $class . " rel=\"nofollow\">
 					{$gift_image}
 				</a>";
@@ -1544,7 +1544,7 @@ class UserProfilePage extends Article {
 			} else {
 				$login_link = SpecialPage::getTitleFor( 'Userlogin' );
 				$output .= '<div class="user-page-message-form">' .
-					wfMsg( 'user-board-login-message', $login_link->escapeFullURL() ) .
+					wfMsg( 'user-board-login-message', htmlspecialchars( $login_link->getFullURL() ) ) .
 				'</div>';
 			}
 		}
@@ -1692,7 +1692,7 @@ class UserProfilePage extends Article {
 				$output .= "<div class=\"fanbox-item\">
 					<div class=\"individual-fanbox\" id=\"individualFanbox" . $fanbox['fantag_id'] . "\">
 						<div class=\"show-message-container-profile\" id=\"show-message-container" . $fanbox['fantag_id'] . "\">
-							<a class=\"perma\" style=\"font-size:8px; color:" . $fanbox['fantag_right_textcolor'] . "\" href=\"" . $fantag_title->escapeFullURL() . "\" title=\"{$fanbox['fantag_title']}\">" . wfMessage( 'fanbox-perma' )->plain() . "</a>
+							<a class=\"perma\" style=\"font-size:8px; color:" . $fanbox['fantag_right_textcolor'] . "\" href=\"" . htmlspecialchars( $fantag_title->getFullURL() ) . "\" title=\"{$fanbox['fantag_title']}\">" . wfMessage( 'fanbox-perma' )->plain() . "</a>
 							<table class=\"fanBoxTableProfile\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">
 								<tr>
 									<td id=\"fanBoxLeftSideOutputProfile\" style=\"color:" . $fanbox['fantag_left_textcolor'] . "; font-size:$leftfontsize\" bgcolor=\"" . $fanbox['fantag_left_bgcolor'] . "\">" . $fantag_leftside . "</td>

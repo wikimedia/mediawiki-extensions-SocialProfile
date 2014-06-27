@@ -43,7 +43,7 @@ class ViewGifts extends SpecialPage {
 		 */
 		if ( $currentUser->getID() == 0 && $user_name == '' ) {
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
-			$out->redirect( $login->escapeFullURL( 'returnto=Special:ViewGifts' ) );
+			$out->redirect( htmlspecialchars( $login->getFullURL( 'returnto=Special:ViewGifts' ) ) );
 			return false;
 		}
 
@@ -118,11 +118,11 @@ class ViewGifts extends SpecialPage {
 					'" border="0" alt="" />';
 
 				$output .= '<div class="g-item">
-					<a href="' . $viewGiftLink->escapeFullURL( 'gift_id=' . $gift['id'] ) . '">' .
+					<a href="' . htmlspecialchars( $viewGiftLink->getFullURL( 'gift_id=' . $gift['id'] ) ) . '">' .
 						$gift_image .
 					'</a>
 					<div class="g-title">
-						<a href="' . $viewGiftLink->escapeFullURL( 'gift_id=' . $gift['id'] ) . '">' .
+						<a href="' . htmlspecialchars( $viewGiftLink->getFullURL( 'gift_id=' . $gift['id'] ) ) . '">' .
 							$gift_name_display .
 						'</a>';
 				if ( $gift['status'] == 1 ) {
@@ -137,17 +137,17 @@ class ViewGifts extends SpecialPage {
 				$output .= '</div>';
 
 				$output .= '<div class="g-from">' .
-					$this->msg( 'g-from', $user_from->escapeFullURL(), $gift['user_name_from'] )->text() .
+					$this->msg( 'g-from', htmlspecialchars( $user_from->getFullURL() ), $gift['user_name_from'] )->text() .
 				'</div>
 					<div class="g-actions">
-						<a href="' . $giveGiftLink->escapeFullURL( 'gift_id=' . $gift['gift_id'] ) . '">' .
+						<a href="' . htmlspecialchars( $giveGiftLink->getFullURL( 'gift_id=' . $gift['gift_id'] ) ) . '">' .
 							$this->msg( 'g-to-another' )->plain() .
 						'</a>';
 				if ( $rel->user_name == $currentUser->getName() ) {
 					$output .= '&#160;';
 					$output .= $this->msg( 'pipe-separator' )->escaped();
 					$output .= '&#160;';
-					$output .= '<a href="' . $removeGiftLink->escapeFullURL( 'gift_id=' . $gift['id'] ) . '">' .
+					$output .= '<a href="' . htmlspecialchars( $removeGiftLink->getFullURL( 'gift_id=' . $gift['id'] ) ) . '">' .
 						$this->msg( 'g-remove-gift' )->plain() . '</a>';
 				}
 				$output .= '</div>

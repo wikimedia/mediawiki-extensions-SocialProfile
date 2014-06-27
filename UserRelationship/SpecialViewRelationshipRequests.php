@@ -79,13 +79,13 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 					if ( $request['type'] == 'Foe' ) {
 						$msg = $this->msg(
 							'ur-requests-message-foe',
-							$user_from->escapeFullURL(),
+							htmlspecialchars( $user_from->getFullURL() ),
 							$request['user_name_from']
 						)->text();
 					} else {
 						$msg = $this->msg(
 							'ur-requests-message-friend',
-							$user_from->escapeFullURL(),
+							htmlspecialchars( $user_from->getFullURL() ),
 							$request['user_name_from']
 						)->text();
 					}

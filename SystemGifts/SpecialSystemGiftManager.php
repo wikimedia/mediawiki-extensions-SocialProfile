@@ -90,7 +90,7 @@ class SystemGiftManager extends SpecialPage {
 			} else {
 				$out->addHTML(
 					'<div><b><a href="' .
-					$this->getPageTitle()->escapeFullURL( 'method=edit' ) . '">' .
+					htmlspecialchars( $this->getPageTitle()->getFullURL( 'method=edit' ) ) . '">' .
 						$this->msg( 'ga-addnew' )->plain() . '</a></b></div>'
 				);
 				$out->addHTML( $this->displayGiftList() );
@@ -117,13 +117,13 @@ class SystemGiftManager extends SpecialPage {
 				if ( $user->isAllowed( 'awardsmanage' ) ) {
 					$removePage = SpecialPage::getTitleFor( 'RemoveMasterSystemGift' );
 					$deleteLink = '<a href="' .
-						$removePage->escapeFullURL( "gift_id={$gift['id']}" ) .
+						htmlspecialchars( $removePage->getFullURL( "gift_id={$gift['id']}" ) ) .
 						'" style="font-size:10px; color:red;">' .
 						$this->msg( 'delete' )->plain() . '</a>';
 				}
 
 				$output .= '<div class="Item">
-					<a href="' . $this->getPageTitle()->escapeFullURL( 'id=' . $gift['id'] ) . '">' .
+					<a href="' . htmlspecialchars( $this->getPageTitle()->getFullURL( 'id=' . $gift['id'] ) ) . '">' .
 						$gift['gift_name'] . '</a> ' .
 						$deleteLink . '</div>' . "\n";
 			}
@@ -135,7 +135,7 @@ class SystemGiftManager extends SpecialPage {
 	function displayForm( $gift_id ) {
 		global $wgUploadPath;
 
-		$form = '<div><b><a href="' . $this->getPageTitle()->escapeFullURL() .
+		$form = '<div><b><a href="' . htmlspecialchars( $this->getPageTitle()->getFullURL() ) .
 			'">' . $this->msg( 'ga-viewlist' )->plain() . '</a></b></div>';
 
 		if ( $gift_id ) {
@@ -183,7 +183,7 @@ class SystemGiftManager extends SpecialPage {
 			$form .= '<tr>
 			<td width="200" class="view-form" valign="top">' . $this->msg( 'ga-giftimage' )->plain() . '</td>
 			<td width="695">' . $gift_image .
-			'<a href="' . $sgml->escapeFullURL( 'gift_id=' . $gift_id ) . '">' .
+			'<a href="' . htmlspecialchars( $sgml->getFullURL( 'gift_id=' . $gift_id ) ) . '">' .
 				$this->msg( 'ga-img' )->plain() . '</a>
 			</td>
 			</tr>';

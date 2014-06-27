@@ -97,15 +97,15 @@ class TopFansByStat extends UnlistedSpecialPage {
 
 		$output = '<div class="top-fan-nav">
 			<h1>' . $this->msg( 'top-fans-by-points-nav-header' )->plain() . '</h1>
-			<p><a href="' . $top_title->escapeFullURL() . '">' .
+			<p><a href="' . htmlspecialchars( $top_title->getFullURL() ) . '">' .
 				$this->msg( 'top-fans-total-points-link' )->plain() . '</a></p>';
 
 		if ( $wgUserStatsTrackWeekly ) {
-			$output .= '<p><a href="' . $recent_title->escapeFullURL( 'period=monthly' ) . '">' .
+			$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=monthly' ) ) . '">' .
 				$this->msg( 'top-fans-monthly-points-link' )->plain() . '</a><p>';
 		}
 		if ( $wgUserStatsTrackMonthly ) {
-			$output .= '<p><a href="' . $recent_title->escapeFullURL( 'period=weekly' ) . '">' .
+			$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=weekly' ) ) . '">' .
 				$this->msg( 'top-fans-weekly-points-link' )->plain() . '</a></p>';
 		}
 
@@ -171,7 +171,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 				<span class="top-fan-num">' . $x . '.</span>
 				<span class="top-fan">' .
 					$commentIcon .
-					'<a href="' . $user_title->escapeFullURL() . '">' . $user_name . '</a>
+					'<a href="' . htmlspecialchars( $user_title->getFullURL() ) . '">' . $user_name . '</a>
 				</span>
 				<span class="top-fan-points"><b>' . $statistics_row . '</b> ' . $lowercase_statistics_name . '</span>
 				<div class="cleared"></div>

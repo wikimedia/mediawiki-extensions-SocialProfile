@@ -84,7 +84,7 @@ class RemoveAvatar extends SpecialPage {
 				'</div>'
 			);
 			$out->addHTML(
-				'<div><a href="' . $this->getPageTitle()->escapeFullURL() . '">' .
+				'<div><a href="' . htmlspecialchars( $this->getPageTitle()->getFullURL() ) . '">' .
 					$this->msg( 'avatarupload-removeanother' )->plain() .
 				'</a></div>'
 			);

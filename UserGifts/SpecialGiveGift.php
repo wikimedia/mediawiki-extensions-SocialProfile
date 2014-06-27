@@ -114,7 +114,7 @@ class GiveGift extends SpecialPage {
 				$out->setPageTitle( $this->msg( 'g-sent-title', $this->user_name_to )->parse() );
 
 				$output .= '<div class="back-links">
-					<a href="' . $user_title->escapeFullURL() . '">' .
+					<a href="' . htmlspecialchars( $user_title->getFullURL() ) . '">' .
 						$this->msg( 'g-back-link', $this->user_name_to )->parse() .
 					'</a>
 				</div>
@@ -133,7 +133,7 @@ class GiveGift extends SpecialPage {
 				<div class="cleared"></div>
 				<div class="g-buttons">
 					<input type="button" class="site-button" value="' . $this->msg( 'g-main-page' )->plain() . '" size="20" onclick="window.location=\'index.php?title=' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '\'" />
-					<input type="button" class="site-button" value="' . $this->msg( 'g-your-profile' )->plain() . '" size="20" onclick="window.location=\'' . $user->getUserPage()->escapeFullURL() . '\'" />
+					<input type="button" class="site-button" value="' . $this->msg( 'g-your-profile' )->plain() . '" size="20" onclick="window.location=\'' . htmlspecialchars( $user->getUserPage()->getFullURL() ) . '\'" />
 				</div>';
 
 				$out->addHTML( $output );
@@ -193,7 +193,7 @@ class GiveGift extends SpecialPage {
 				$this->msg(
 					'g-give-to-user-message',
 					$this->user_name_to,
-					$giveGiftLink->escapeFullURL( 'user=' . $this->user_name_to )
+					htmlspecialchars( $giveGiftLink->getFullURL( 'user=' . $this->user_name_to ) )
 				)->text() . "</div>
 			<div id=\"give_gift_{$gift['gift_id']}\" class=\"g-container\">
 				{$gift_image}
@@ -303,7 +303,7 @@ class GiveGift extends SpecialPage {
 			$out->setPageTitle( $this->msg( 'g-give-all-title', $this->user_name_to )->parse() );
 
 			$output .= '<div class="back-links">
-				<a href="' . $user->escapeFullURL() . '">' .
+				<a href="' . htmlspecialchars( $user->getFullURL() ) . '">' .
 					$this->msg( 'g-back-link', $this->user_name_to )->parse() .
 				'</a>
 			</div>

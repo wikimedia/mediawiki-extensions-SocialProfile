@@ -53,7 +53,7 @@ class SpecialViewRelationships extends SpecialPage {
 		if ( !$user->isLoggedIn() && $user_name == '' ) {
 			$out->setPageTitle( $this->msg( 'ur-error-page-title' )->plain() );
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
-			$out->redirect( $login->escapeFullURL( 'returnto=Special:ViewRelationships' ) );
+			$out->redirect( htmlspecialchars( $login->getFullURL( 'returnto=Special:ViewRelationships' ) ) );
 			return false;
 		}
 
@@ -89,7 +89,7 @@ class SpecialViewRelationships extends SpecialPage {
 			<div class="relationship-request-buttons">
 				<input type="button" class="site-button" value="' . $this->msg( 'ur-main-page' )->plain() . '" onclick=\'window.location="index.php?title=' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
 			if ( $user->isLoggedIn() ) {
-				$output .= '<input type="button" class="site-button" value="' . $this->msg( 'ur-your-profile' )->plain() . '" onclick=\'window.location="' . $user->getUserPage()->escapeFullURL() . '"\' />';
+				$output .= '<input type="button" class="site-button" value="' . $this->msg( 'ur-your-profile' )->plain() . '" onclick=\'window.location="' . htmlspecialchars( $user->getUserPage()->getFullURL() ) . '"\' />';
 			}
 			$output .= '</div>';
 			$out->addHTML( $output );
@@ -116,7 +116,7 @@ class SpecialViewRelationships extends SpecialPage {
 
 			$rem = $this->msg( 'ur-remove-relationship-friend' )->plain();
 			$output .= '<div class="back-links">
-			<a href="' . $back_link->escapeFullURL() . '">' .
+			<a href="' . htmlspecialchars( $back_link->getFullURL() ) . '">' .
 				$this->msg( 'ur-backlink', $rel->user_name )->parse() .
 			'</a>
 		</div>
@@ -134,7 +134,7 @@ class SpecialViewRelationships extends SpecialPage {
 			$rem = $this->msg( 'ur-remove-relationship-foe' )->plain();
 
 			$output .= '<div class="back-links">
-			<a href="' . $back_link->escapeFullURL() . '">' .
+			<a href="' . htmlspecialchars( $back_link->getFullURL() ) . '">' .
 				$this->msg( 'ur-backlink', $rel->user_name )->parse() .
 			'</a>
 		</div>
@@ -176,10 +176,10 @@ class SpecialViewRelationships extends SpecialPage {
 				}
 
 				$output .= "<div class=\"relationship-item\">
-					<a href=\"{$userPage->escapeFullURL()}\">{$avatar_img}</a>
+					<a href=\"{htmlspecialchars( $userPage->getFullURL() )}\">{$avatar_img}</a>
 					<div class=\"relationship-info\">
 						<div class=\"relationship-name\">
-							<a href=\"{$userPage->escapeFullURL()}\">{$user_name_display}</a>
+							<a href=\"{htmlspecialchars( $userPage->getFullURL() )}\">{$user_name_display}</a>
 						</div>
 					<div class=\"relationship-actions\">";
 

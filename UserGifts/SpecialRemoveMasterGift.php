@@ -99,7 +99,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 			$out->setPageTitle( $this->msg( 'g-remove-success-title', $gift['gift_name'] )->parse() );
 
 			$output = '<div class="back-links">
-				<a href="' . SpecialPage::getTitleFor( 'GiftManager' )->escapeFullURL() . '">' .
+				<a href="' . htmlspecialchars( SpecialPage::getTitleFor( 'GiftManager' )->getFullURL() ) . '">' .
 					$this->msg( 'g-viewgiftlist' )->plain() . '</a>
 			</div>
 			<div class="g-container">' .
@@ -131,7 +131,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 		$this->getOutput()->setPageTitle( $this->msg( 'g-remove-title', $gift['gift_name'] )->parse() );
 
 		$output = '<div class="back-links">
-			<a href="' . SpecialPage::getTitleFor( 'GiftManager' )->escapeFullURL() . '">' .
+			<a href="' . htmlspecialchars( SpecialPage::getTitleFor( 'GiftManager' )->getFullURL() ) . '">' .
 				$this->msg( 'g-viewgiftlist' )->plain() . '</a>
 		</div>
 		<form action="" method="post" enctype="multipart/form-data" name="form1">
