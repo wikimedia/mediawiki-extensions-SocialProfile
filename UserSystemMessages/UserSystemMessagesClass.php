@@ -121,7 +121,15 @@ class UserSystemMessage {
 				$level,
 				$updateProfileLink->getFullURL()
 			);
-			$user->sendMail( $subject, $body );
+
+			// The email contains HTML, so actually send it out as such, too.
+			// That's why this no longer uses User::sendMail().
+			// @see https://bugzilla.wikimedia.org/show_bug.cgi?id=68045
+			global $wgPasswordSender;
+			$sender = new MailAddress( $wgPasswordSender,
+				wfMessage( 'emailsender' )->inContentLanguage()->text() );
+			$to = new MailAddress( $user );
+			UserMailer::send( $to, $sender, $subject, $body, null, 'text/html; charset=UTF-8' );
 		}
 	}
 

@@ -16,6 +16,29 @@ class UserRelationship {
 	}
 
 	/**
+	 * Quickie wrapper function for sending out an email as properly rendered
+	 * HTML instead of plaintext.
+	 *
+	 * The functions in this class that call this function used to use
+	 * User::sendMail(), but it was causing the mentioned bug, hence why this
+	 * function had to be introduced.
+	 *
+	 * @see https://bugzilla.wikimedia.org/show_bug.cgi?id=68045
+	 *
+	 * @param User $string User (object) whom to send an email
+	 * @param string $subject Email subject
+	 * @param $string $body Email contents (HTML)
+	 * @return Status object
+	 */
+	public function sendMail( $user, $subject, $body ) {
+		global $wgPasswordSender;
+		$sender = new MailAddress( $wgPasswordSender,
+			wfMessage( 'emailsender' )->inContentLanguage()->text() );
+		$to = new MailAddress( $user );
+		return UserMailer::send( $to, $sender, $subject, $body, null, 'text/html; charset=UTF-8' );
+	}
+
+	/**
 	 * Add a relationship request to the database.
 	 *
 	 * @param $user_to String: user name of the recipient of the relationship
@@ -95,7 +118,8 @@ class UserRelationship {
 					$updateProfileLink->getFullURL()
 				);
 			}
-			$user->sendMail( $subject, $body );
+
+			$this->sendMail( $user, $subject, $body );
 		}
 	}
 
@@ -139,7 +163,7 @@ class UserRelationship {
 					$updateProfileLink->getFullURL()
 				);
 			}
-			$user->sendMail( $subject, $body );
+			$this->sendMail( $user, $subject, $body );
 		}
 	}
 
@@ -183,7 +207,7 @@ class UserRelationship {
 					$updateProfileLink->getFullURL()
 				);
 			}
-			$user->sendMail( $subject, $body );
+			$this->sendMail( $user, $subject, $body );
 		}
 	}
 
