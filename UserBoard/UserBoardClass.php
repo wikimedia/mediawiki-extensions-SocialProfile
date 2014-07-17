@@ -391,16 +391,17 @@ class UserBoard {
 				$message_text = $message['message_text'];
 				# $message_text = preg_replace_callback( "/(<a[^>]*>)(.*?)(<\/a>)/i", 'cut_link_text', $message['message_text'] );
 
+				$sender = htmlspecialchars( $user->getFullURL() );
 				$output .= "<div class=\"user-board-message\">
 					<div class=\"user-board-message-from\">
-					<a href=\"{htmlspecialchars( $user->getFullURL() )}\" title=\"{$message['user_name_from']}\">{$message['user_name_from']}</a> {$message_type_label}
+					<a href=\"{$sender}\" title=\"{$message['user_name_from']}\">{$message['user_name_from']}</a> {$message_type_label}
 					</div>
 					<div class=\"user-board-message-time\">" .
 						wfMessage( 'userboard_posted_ago', $this->getTimeAgo( $message['timestamp'] ) )->parse() .
 					"</div>
 					<div class=\"user-board-message-content\">
 						<div class=\"user-board-message-image\">
-							<a href=\"{htmlspecialchars( $user->getFullURL() )}\" title=\"{$message['user_name_from']}\">{$avatar->getAvatarURL()}</a>
+							<a href=\"{$sender}\" title=\"{$message['user_name_from']}\">{$avatar->getAvatarURL()}</a>
 						</div>
 						<div class=\"user-board-message-body\">
 							{$message_text}
