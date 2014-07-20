@@ -510,10 +510,14 @@ $specialPageAliases['zh-hans'] = array(
 $specialPageAliases['zh-hant'] = array(
 	'AddRelationship' => array( '加入關聯' ),
 	'EditProfile' => array( '編輯簡介' ),
+	'GenerateTopUsersReport' => array( '生成使用者報告頭' ),
+	'PopulateUserProfiles' => array( '填寫使用者資訊' ),
 	'RemoveAvatar' => array( '移除頭像' ),
 	'RemoveRelationship' => array( '移除關聯' ),
-	'TopUsers' => array( '頂端用戶' ),
+	'TopUsers' => array( '前置使用者' ),
+	'TopUsersRecent' => array( '新近前置使用者' ),
+	'ToggleUserPage' => array( '啟閉使用者頁面' ),
 	'UpdateEditCounts' => array( '更新編輯數位' ),
 	'UploadAvatar' => array( '上載頭像' ),
-	'UserBoard' => array( '用戶理事會' ),
+	'UserBoard' => array( '使用者理事會' ),
 );
