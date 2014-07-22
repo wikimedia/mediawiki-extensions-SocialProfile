@@ -456,8 +456,8 @@ class UserActivity {
 			$view_gift_link = SpecialPage::getTitleFor( 'ViewGift' );
 
 			$html = wfMsg( 'useractivity-gift',
-				"<b><a href=\"{htmlspecialchars( $user_title->getFullURL() )}\">{$row->ug_user_name_to}</a></b>",
-				"<a href=\"{htmlspecialchars( $user_title_from->getFullURL() )}\">{$user_title_from->getText()}</a>"
+				'<b><a href="' . htmlspecialchars( $user_title->getFullURL() ) . "\">{$row->ug_user_name_to}</a></b>",
+				'<a href="' . htmlspecialchars( $user_title_from->getFullURL() ) . "\">{$user_title_from->getText()}</a>"
 			) .
 			"<div class=\"item\">
 				<a href=\"" . htmlspecialchars( $view_gift_link->getFullURL( 'gift_id=' . $row->ug_id ) ) . "\" rel=\"nofollow\">
@@ -548,7 +548,7 @@ class UserActivity {
 
 			$html = wfMessage(
 				'useractivity-award',
-				"<b><a href=\"{htmlspecialchars( $user_title->getFullURL() )}\">{$row->sg_user_name}</a></b>",
+				'<b><a href="' . htmlspecialchars( $user_title->getFullURL() ) . "\">{$row->sg_user_name}</a></b>",
 				$row->sg_user_name
 			)->text() .
 			'<div class="item">
@@ -819,7 +819,7 @@ class UserActivity {
 			$this->activityLines[] = array(
 				'type' => 'system_message',
 				'timestamp' => $row->item_date,
-				'data' => ' ' . "<b><a href=\"{htmlspecialchars( $user_title->getFullURL() )}\">{$user_name_short}</a></b> {$row->um_message}"
+				'data' => ' ' . '<b><a href="' . htmlspecialchars( $user_title->getFullURL() ) . "\">{$user_name_short}</a></b> {$row->um_message}"
 			);
 
 			$this->items[] = array(
@@ -1100,7 +1100,7 @@ class UserActivity {
 				if ( $has_page && !isset( $this->displayed[$type][$page_name] ) ) {
 					$this->displayed[$type][$page_name] = 1;
 
-					$pages .= " <a href=\"{htmlspecialchars( $page_title->getFullURL() )}\">{$page_name}</a>";
+					$pages .= ' <a href="' . htmlspecialchars( $page_title->getFullURL() ) . "\">{$page_name}</a>";
 					if ( $count_users == 1 && $count_actions > 1 ) {
 						$pages .= wfMsg( 'word-separator' );
 						$pages .= wfMsg( 'parentheses', wfMsgExt(
@@ -1139,7 +1139,7 @@ class UserActivity {
 										$pages .= ', ';
 									}
 									if ( $page_title2 instanceof Title ) {
-										$pages .= " <a href=\"{htmlspecialchars( $page_title2->getFullURL() )}\">{$page_name2}</a>";
+										$pages .= ' <a href="' . htmlspecialchars( $page_title2->getFullURL() ) . "\">{$page_name2}</a>";
 									}
 									if ( $count_actions2 > 1 ) {
 										$pages .= ' (' . wfMsg(
@@ -1168,7 +1168,7 @@ class UserActivity {
 				$user_name_short = $wgLang->truncate( $user_name, 15 );
 
 				$safeTitle = htmlspecialchars( $user_title->getText() );
-				$users .= " <b><a href=\"{htmlspecialchars( $user_title->getFullURL() )}\" title=\"{$safeTitle}\">{$user_name_short}</a></b>";
+				$users .= ' <b><a href="' . htmlspecialchars( $user_title->getFullURL() ) . "\" title=\"{$safeTitle}\">{$user_name_short}</a></b>";
 			}
 			if ( $pages || $has_page == false ) {
 				$this->activityLines[] = array(
