@@ -40,7 +40,7 @@ class UserStatsTrack {
 
 	// for referencing purposes
 	// key: statistic name in wgUserStatsPointValues -> database column name
-	var $stats_fields = array(
+	public $stats_fields = array(
 		'edit' => 'stats_edit_count',
 		'vote' => 'stats_vote_count',
 		'comment' => 'stats_comment_count',
@@ -921,18 +921,18 @@ class UserStats {
 }
 
 class UserLevel {
-	var $level_number = 0;
-	var $level_name;
+	public $level_number = 0;
+	public $level_name;
 
 	/**
 	 * @var String: name of the next level
 	 */
-	var $next_level_name;
+	public $next_level_name;
 
 	/**
 	 * @var Integer: amount of points needed to reach the next level
 	 */
-	var $next_level_points_needed;
+	public $next_level_points_needed;
 
 	/* private */ function __construct( $points ) {
 		global $wgUserLevels;

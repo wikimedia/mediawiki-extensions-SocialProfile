@@ -16,7 +16,7 @@
  */
 
 class SpecialUploadAvatar extends SpecialUpload {
-	var $avatarUploadDirectory;
+	public $avatarUploadDirectory;
 
 	/**
 	 * Constructor
