@@ -487,14 +487,14 @@ $specialPageAliases['tr'] = array(
 
 /** Simplified Chinese (中文（简体）‎) */
 $specialPageAliases['zh-hans'] = array(
-	'AddRelationship' => array( '加入关系' ),
+	'AddRelationship' => array( '添加关系' ),
 	'EditProfile' => array( '编辑简介' ),
 	'GenerateTopUsersReport' => array( '生成置顶用户报告' ),
 	'PopulateUserProfiles' => array( '填充用户简介' ),
-	'RemoveAvatar' => array( '移除头像' ),
-	'RemoveRelationship' => array( '移除关系' ),
+	'RemoveAvatar' => array( '删除头像' ),
+	'RemoveRelationship' => array( '删除关系' ),
 	'SendBoardBlast' => array( '递送损坏的董事会' ),
-	'TopFansByStatistic' => array( '统计而出的置顶爱好者' ),
+	'TopFansByStatistic' => array( '基于统计结果的置顶爱好者' ),
 	'TopUsers' => array( '置顶用户' ),
 	'TopUsersRecent' => array( '置顶用户报告' ),
 	'ToggleUserPage' => array( '开启关闭用户页' ),
