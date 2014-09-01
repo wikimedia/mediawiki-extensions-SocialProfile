@@ -302,16 +302,17 @@ class SpecialViewUserBoard extends SpecialPage {
 				// $ub_message_text = preg_replace_callback( "/(<a[^>]*>)(.*?)(<\/a>)/i", 'cut_link_text', $ub_message['message_text'] );
 				$ub_message_text = $ub_message['message_text'];
 
+				$userPageURL = htmlspecialchars( $user->getFullURL() );
 				$output .= "<div class=\"user-board-message\">
 					<div class=\"user-board-message-from\">
-							<a href=\"{htmlspecialchars( $user->getFullURL() )}\" title=\"{$ub_message['user_name_from']}}\">{$ub_message['user_name_from']} </a> {$ub_message_type_label}
+							<a href=\"{$userPageURL}\" title=\"{$ub_message['user_name_from']}}\">{$ub_message['user_name_from']} </a> {$ub_message_type_label}
 					</div>
 					<div class=\"user-board-message-time\">"
 						. $this->msg( 'userboard_posted_ago', $b->getTimeAgo( $ub_message['timestamp'] ) )->parse() .
 					"</div>
 					<div class=\"user-board-message-content\">
 						<div class=\"user-board-message-image\">
-							<a href=\"{htmlspecialchars( $user->getFullURL() )}\" title=\"{$ub_message['user_name_from']}\">{$avatar->getAvatarURL()}</a>
+							<a href=\"{$userPageURL}\" title=\"{$ub_message['user_name_from']}\">{$avatar->getAvatarURL()}</a>
 						</div>
 						<div class=\"user-board-message-body\">
 							{$ub_message_text}

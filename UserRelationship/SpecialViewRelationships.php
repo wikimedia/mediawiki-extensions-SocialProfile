@@ -161,6 +161,7 @@ class SpecialViewRelationships extends SpecialPage {
 				$removeRelationshipLink = SpecialPage::getTitleFor( 'RemoveRelationship' );
 				$giveGiftLink = SpecialPage::getTitleFor( 'GiveGift' );
 
+				$userPageURL = htmlspecialchars( $userPage->getFullURL() );
 				$avatar = new wAvatar( $relationship['user_id'], 'ml' );
 
 				$avatar_img = $avatar->getAvatarURL();
@@ -176,10 +177,10 @@ class SpecialViewRelationships extends SpecialPage {
 				}
 
 				$output .= "<div class=\"relationship-item\">
-					<a href=\"{htmlspecialchars( $userPage->getFullURL() )}\">{$avatar_img}</a>
+					<a href=\"{$userPageURL}\">{$avatar_img}</a>
 					<div class=\"relationship-info\">
 						<div class=\"relationship-name\">
-							<a href=\"{htmlspecialchars( $userPage->getFullURL() )}\">{$user_name_display}</a>
+							<a href=\"{$userPageURL}\">{$user_name_display}</a>
 						</div>
 					<div class=\"relationship-actions\">";
 
