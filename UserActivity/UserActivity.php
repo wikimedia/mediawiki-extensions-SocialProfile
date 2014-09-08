@@ -29,11 +29,10 @@ $wgExtensionCredits['specialpage'][] = array(
 );
 
 // Set up the new special page
-$dir = dirname( __FILE__ ) . '/';
 $wgMessagesDirs['UserActivity'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['UserActivity'] = $dir . 'UserActivity.i18n.php';
-$wgAutoloadClasses['UserActivity'] = $dir . 'UserActivityClass.php';
-$wgAutoloadClasses['UserHome'] = $dir . 'UserActivity.body.php';
+$wgExtensionMessagesFiles['UserActivity'] = __DIR__ . '/UserActivity.i18n.php';
+$wgAutoloadClasses['UserActivity'] = __DIR__ . '/UserActivityClass.php';
+$wgAutoloadClasses['UserHome'] = __DIR__ . '/UserActivity.body.php';
 $wgSpecialPages['UserActivity'] = 'UserHome';
 // Special page group for MW 1.13+
 $wgSpecialPageGroups['UserActivity'] = 'users';
@@ -41,7 +40,7 @@ $wgSpecialPageGroups['UserActivity'] = 'users';
 // Register the CSS with ResourceLoader
 $wgResourceModules['ext.socialprofile.useractivity.css'] = array(
 	'styles' => 'UserActivity.css',
-	'localBasePath' => dirname( __FILE__ ),
+	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserActivity',
 	'position' => 'top'
 );

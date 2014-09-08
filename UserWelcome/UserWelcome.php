@@ -29,7 +29,7 @@ $wgExtensionCredits['parserhook'][] = array(
 // Register the CSS with ResourceLoader
 $wgResourceModules['ext.socialprofile.userwelcome.css'] = array(
 	'styles' => 'UserWelcome.css',
-	'localBasePath' => dirname( __FILE__ ),
+	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserWelcome',
 	'position' => 'top'
 );
@@ -46,9 +46,8 @@ function wfWelcomeUser( &$parser ) {
 	return true;
 }
 
-$dir = dirname( __FILE__ ) . '/';
 $wgMessagesDirs['UserWelcome'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['UserWelcome'] = $dir . 'UserWelcome.i18n.php';
+$wgExtensionMessagesFiles['UserWelcome'] = __DIR__ . '/UserWelcome.i18n.php';
 
 function getWelcomeUser( $input, $args, $parser ) {
 	$parser->disableCache();
