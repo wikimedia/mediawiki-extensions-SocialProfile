@@ -699,7 +699,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		}
 
 		# check for htmlish code and javascript
-		if ( UploadBase::detectScript( $tmpfile, $mime ) ) {
+		if ( UploadBase::detectScript( $tmpfile, $mime, $extension ) ) {
 			return Status::newFatal( 'uploadscripted' );
 		}
 
