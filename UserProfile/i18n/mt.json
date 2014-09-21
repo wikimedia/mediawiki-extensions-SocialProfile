@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Chrisportelli",
-            "Roderick Mallia"
-        ]
-    },
-    "user-watchlist": "Li qed insegwi",
-    "user-personal-info-about-me": "Dwari",
-    "user-profile-personal-email": "E-mail",
-    "user-profile-personal-aboutme": "Dwari",
-    "user-page-link": "Paġna tal-utent"
+	"@metadata": {
+		"authors": [
+			"Chrisportelli",
+			"Roderick Mallia"
+		]
+	},
+	"user-watchlist": "Li qed insegwi",
+	"user-personal-info-about-me": "Dwari",
+	"user-profile-personal-email": "E-mail",
+	"user-profile-personal-aboutme": "Dwari",
+	"user-page-link": "Paġna tal-utent"
 }

@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Joseph"
-        ]
-    },
-    "useractivity": "Arkadaşların etkinliği",
-    "useractivity-award": "$1 bir ödül aldı",
-    "useractivity-all": "Hepsini gör",
-    "useractivity-siteactivity": "Site etkinliği",
-    "useractivity-title": "Arkadaşların etkinliği"
+	"@metadata": {
+		"authors": [
+			"Joseph"
+		]
+	},
+	"useractivity": "Arkadaşların etkinliği",
+	"useractivity-award": "$1 bir ödül aldı",
+	"useractivity-all": "Hepsini gör",
+	"useractivity-siteactivity": "Site etkinliği",
+	"useractivity-title": "Arkadaşların etkinliği"
 }

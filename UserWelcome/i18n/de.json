@@ -1,24 +1,24 @@
 {
-    "@metadata": {
-        "authors": [
-            "ChrisiPK",
-            "MF-Warburg",
-            "Melancholie",
-            "Revolus"
-        ]
-    },
-    "userwelcome-desc": "Fügt ein <code>&lt;welcomeUser&gt;</code>-Tag hinzu, mit dem man benutzerspezifische soziale Informationen eingeloggten Benutzern zeigen kann",
-    "mp-userlevels-link": "Benutzerebenen",
-    "mp-welcome-upload": "Hochladen",
-    "mp-welcome-edit": "Bearbeiten",
-    "mp-welcome-points": "$1 {{PLURAL:$1|Punkt|Punkte}}",
-    "mp-welcome-needed-points": "Um <b><a href=\"$1\">$2</a></b> zu werden musst du noch <i>$3</i> {{PLURAL:$3|weiteren Punkt|weitere Punkte}} verdienen!",
-    "mp-welcome-logged-in": "Hallo $1",
-    "mp-requests-title": "Anfragen",
-    "mp-requests-message": "Du hast die folgenden Anfragen.",
-    "mp-request-new-message": "neue Nachricht",
-    "mp-request-new-award": "$1 neue {{PLURAL:$1|Auszeichnung|Auszeichnungen}}",
-    "mp-request-new-gift": "$1 {{PLURAL:$1|neues Geschenk|neue Geschenke}}",
-    "mp-request-new-foe": "$1 {{PLURAL:$1|neuen Gegner/Feind|neue Gegner/Feinde}}",
-    "mp-request-new-friend": "$1 {{PLURAL:$1|neuen Freund|neue Freunde}}"
+	"@metadata": {
+		"authors": [
+			"ChrisiPK",
+			"MF-Warburg",
+			"Melancholie",
+			"Revolus"
+		]
+	},
+	"userwelcome-desc": "Fügt ein <code>&lt;welcomeUser&gt;</code>-Tag hinzu, mit dem man benutzerspezifische soziale Informationen eingeloggten Benutzern zeigen kann",
+	"mp-userlevels-link": "Benutzerebenen",
+	"mp-welcome-upload": "Hochladen",
+	"mp-welcome-edit": "Bearbeiten",
+	"mp-welcome-points": "$1 {{PLURAL:$1|Punkt|Punkte}}",
+	"mp-welcome-needed-points": "Um <b><a href=\"$1\">$2</a></b> zu werden musst du noch <i>$3</i> {{PLURAL:$3|weiteren Punkt|weitere Punkte}} verdienen!",
+	"mp-welcome-logged-in": "Hallo $1",
+	"mp-requests-title": "Anfragen",
+	"mp-requests-message": "Du hast die folgenden Anfragen.",
+	"mp-request-new-message": "neue Nachricht",
+	"mp-request-new-award": "$1 neue {{PLURAL:$1|Auszeichnung|Auszeichnungen}}",
+	"mp-request-new-gift": "$1 {{PLURAL:$1|neues Geschenk|neue Geschenke}}",
+	"mp-request-new-foe": "$1 {{PLURAL:$1|neuen Gegner/Feind|neue Gegner/Feinde}}",
+	"mp-request-new-friend": "$1 {{PLURAL:$1|neuen Freund|neue Freunde}}"
 }

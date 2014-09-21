@@ -1,22 +1,22 @@
 {
-    "@metadata": {
-        "authors": [
-            "Ahmed-Najib-Biabani-Ibrahimkhel"
-        ]
-    },
-    "ga-addnew": "+ نوې ډالۍ ورګډول",
-    "ga-choosefile": "دوتنه ټاکل:",
-    "ga-create-gift": "ډالۍ جوړول",
-    "ga-created": "ډالۍ مو جوړه شوه",
-    "ga-gift": "ډالۍ",
-    "ga-giftimage": "د ډالۍ انځور",
-    "ga-giftname": "د ډالۍ نوم",
-    "ga-goback": "پر شا تلل",
-    "ga-large": "لوی",
-    "ga-new": "نوی",
-    "ga-next": "راتلونکی",
-    "ga-previous": "پخوانی",
-    "ga-saved": "ډالۍ مو خوندي شوه",
-    "ga-small": "وړوکی",
-    "ga-viewlist": "د ډاليو لړليک کتل"
+	"@metadata": {
+		"authors": [
+			"Ahmed-Najib-Biabani-Ibrahimkhel"
+		]
+	},
+	"ga-addnew": "+ نوې ډالۍ ورګډول",
+	"ga-choosefile": "دوتنه ټاکل:",
+	"ga-create-gift": "ډالۍ جوړول",
+	"ga-created": "ډالۍ مو جوړه شوه",
+	"ga-gift": "ډالۍ",
+	"ga-giftimage": "د ډالۍ انځور",
+	"ga-giftname": "د ډالۍ نوم",
+	"ga-goback": "پر شا تلل",
+	"ga-large": "لوی",
+	"ga-new": "نوی",
+	"ga-next": "راتلونکی",
+	"ga-previous": "پخوانی",
+	"ga-saved": "ډالۍ مو خوندي شوه",
+	"ga-small": "وړوکی",
+	"ga-viewlist": "د ډاليو لړليک کتل"
 }

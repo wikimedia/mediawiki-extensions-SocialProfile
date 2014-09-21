@@ -1,16 +1,16 @@
 {
-    "@metadata": {
-        "authors": [
-            "DCLXVI"
-        ]
-    },
-    "ga-addnew": "+ Добавяне на нов подарък",
-    "ga-choosefile": "Избиране на файл:",
-    "ga-currentimage": "Текуща картинка",
-    "ga-large": "Голяма",
-    "ga-medium": "Средна",
-    "ga-new": "Нова",
-    "ga-next": "Следваща",
-    "ga-previous": "Предишна",
-    "ga-small": "Малка"
+	"@metadata": {
+		"authors": [
+			"DCLXVI"
+		]
+	},
+	"ga-addnew": "+ Добавяне на нов подарък",
+	"ga-choosefile": "Избиране на файл:",
+	"ga-currentimage": "Текуща картинка",
+	"ga-large": "Голяма",
+	"ga-medium": "Средна",
+	"ga-new": "Нова",
+	"ga-next": "Следваща",
+	"ga-previous": "Предишна",
+	"ga-small": "Малка"
 }

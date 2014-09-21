@@ -1,17 +1,17 @@
 {
-    "@metadata": {
-        "authors": [
-            "Alison"
-        ]
-    },
-    "custom-info-field1": "Custaim 1",
-    "custom-info-field2": "Custaim 2",
-    "custom-info-field3": "Custaim 3",
-    "custom-info-field4": "Custaim 4",
-    "user-profile-personal-email": "Ríomhphost",
-    "user-profile-personal-city": "Cathair",
-    "user-profile-personal-country": "Tír",
-    "user-profile-personal-birthday": "Breithlá",
-    "user-profile-personal-birthdate": "Dáta (MM/LL)",
-    "user-profile-personal-schools": "Scoileanna"
+	"@metadata": {
+		"authors": [
+			"Alison"
+		]
+	},
+	"custom-info-field1": "Custaim 1",
+	"custom-info-field2": "Custaim 2",
+	"custom-info-field3": "Custaim 3",
+	"custom-info-field4": "Custaim 4",
+	"user-profile-personal-email": "Ríomhphost",
+	"user-profile-personal-city": "Cathair",
+	"user-profile-personal-country": "Tír",
+	"user-profile-personal-birthday": "Breithlá",
+	"user-profile-personal-birthdate": "Dáta (MM/LL)",
+	"user-profile-personal-schools": "Scoileanna"
 }

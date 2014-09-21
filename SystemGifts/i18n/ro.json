@@ -1,24 +1,24 @@
 {
-    "@metadata": {
-        "authors": [
-            "Firilacroco",
-            "KlaudiuMihaila"
-        ]
-    },
-    "ga-choosefile": "Alegeți fișier:",
-    "ga-create-gift": "Creați un cadou",
-    "ga-currentimage": "Imaginii curente",
-    "ga-error-message-invalid-link": "Legătura introdusă este incorectă.",
-    "ga-gift": "cadou",
-    "ga-giftimage": "imaginea cadoului",
-    "ga-giftname": "numele cadoului",
-    "ga-gifttype": "tipul cadoului",
-    "ga-goback": "Reveniți",
-    "ga-large": "Mare",
-    "ga-medium": "Mediu",
-    "ga-mediumlarge": "Mediu-mare",
-    "ga-new": "Nou",
-    "ga-next": "Următorul",
-    "ga-previous": "Anteriorul",
-    "ga-small": "Mic"
+	"@metadata": {
+		"authors": [
+			"Firilacroco",
+			"KlaudiuMihaila"
+		]
+	},
+	"ga-choosefile": "Alegeți fișier:",
+	"ga-create-gift": "Creați un cadou",
+	"ga-currentimage": "Imaginii curente",
+	"ga-error-message-invalid-link": "Legătura introdusă este incorectă.",
+	"ga-gift": "cadou",
+	"ga-giftimage": "imaginea cadoului",
+	"ga-giftname": "numele cadoului",
+	"ga-gifttype": "tipul cadoului",
+	"ga-goback": "Reveniți",
+	"ga-large": "Mare",
+	"ga-medium": "Mediu",
+	"ga-mediumlarge": "Mediu-mare",
+	"ga-new": "Nou",
+	"ga-next": "Următorul",
+	"ga-previous": "Anteriorul",
+	"ga-small": "Mic"
 }

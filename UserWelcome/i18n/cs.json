@@ -1,21 +1,21 @@
 {
-    "@metadata": {
-        "authors": [
-            "Matěj Grabovský"
-        ]
-    },
-    "userwelcome-desc": "Přidává značku <code>&lt;welcomeUser&gt;</code> pro zobrazování sociálních informací specifických pro uživatele (pro přihlášené uživatele)",
-    "mp-userlevels-link": "Urovně uživatelů",
-    "mp-welcome-upload": "Nahrát soubor",
-    "mp-welcome-edit": "Upravit",
-    "mp-welcome-points": "$1 {{PLURAL:$1|bod|body|bodů}}",
-    "mp-welcome-needed-points": "Abyste postoupili na <b><a href=\"$1\">$2</a></b>, udělejte ještě <i>$3</i> {{PLURAL:$3|bod|body|bodů}}!",
-    "mp-welcome-logged-in": "Ahoj $1",
-    "mp-requests-title": "Požadavky",
-    "mp-requests-message": "Máte následující požadavky.",
-    "mp-request-new-message": "nová zpráva",
-    "mp-request-new-award": "$1 {{PLURAL:$1|nové ocenění|nová ocenění|nových ocenění}}",
-    "mp-request-new-gift": "$1 {{PLURAL:$1|nový dárek|nové dárky|nových dárků}}",
-    "mp-request-new-foe": "$1 {{PLURAL:$1|nový nepřítel|noví nepřátelé|nových nepřátel}}",
-    "mp-request-new-friend": "$1 {{PLURAL:$1|nový přítel|noví přátelé|nových přátel}}"
+	"@metadata": {
+		"authors": [
+			"Matěj Grabovský"
+		]
+	},
+	"userwelcome-desc": "Přidává značku <code>&lt;welcomeUser&gt;</code> pro zobrazování sociálních informací specifických pro uživatele (pro přihlášené uživatele)",
+	"mp-userlevels-link": "Urovně uživatelů",
+	"mp-welcome-upload": "Nahrát soubor",
+	"mp-welcome-edit": "Upravit",
+	"mp-welcome-points": "$1 {{PLURAL:$1|bod|body|bodů}}",
+	"mp-welcome-needed-points": "Abyste postoupili na <b><a href=\"$1\">$2</a></b>, udělejte ještě <i>$3</i> {{PLURAL:$3|bod|body|bodů}}!",
+	"mp-welcome-logged-in": "Ahoj $1",
+	"mp-requests-title": "Požadavky",
+	"mp-requests-message": "Máte následující požadavky.",
+	"mp-request-new-message": "nová zpráva",
+	"mp-request-new-award": "$1 {{PLURAL:$1|nové ocenění|nová ocenění|nových ocenění}}",
+	"mp-request-new-gift": "$1 {{PLURAL:$1|nový dárek|nové dárky|nových dárků}}",
+	"mp-request-new-foe": "$1 {{PLURAL:$1|nový nepřítel|noví nepřátelé|nových nepřátel}}",
+	"mp-request-new-friend": "$1 {{PLURAL:$1|nový přítel|noví přátelé|nových přátel}}"
 }

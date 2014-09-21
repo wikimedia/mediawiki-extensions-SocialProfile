@@ -1,20 +1,20 @@
 {
-    "@metadata": {
-        "authors": [
-            "Rancher",
-            "Михајло Анђелковић"
-        ]
-    },
-    "useractivity": "Активност пријатеља",
-    "useractivity-award": "$1 је примио/ла награду",
-    "useractivity-all": "Прикажи све",
-    "useractivity-foe": "$1 {{PLURAL:$2|је сада непријатељ са}} $3",
-    "useractivity-friend": "$1 {{PLURAL:$2|је сада пријатељ са}} $3",
-    "useractivity-gift": "$1 је примио/ла поклон од $2",
-    "useractivity-group-edit": "{{PLURAL:$1|једна измена|$1 измене|$1 измена}}",
-    "useractivity-group-comment": "{{PLURAL:$1|један коментар|$1 коментара|$1 коментара}}",
-    "useractivity-group-user_message": "{{PLURAL:$1|једна|$1}} порука",
-    "useractivity-group-friend": "{{PLURAL:$1|један пријатељ|$1 пријатеља}}",
-    "useractivity-siteactivity": "Активност сајта",
-    "useractivity-title": "Активност пријатеља"
+	"@metadata": {
+		"authors": [
+			"Rancher",
+			"Михајло Анђелковић"
+		]
+	},
+	"useractivity": "Активност пријатеља",
+	"useractivity-award": "$1 је примио/ла награду",
+	"useractivity-all": "Прикажи све",
+	"useractivity-foe": "$1 {{PLURAL:$2|је сада непријатељ са}} $3",
+	"useractivity-friend": "$1 {{PLURAL:$2|је сада пријатељ са}} $3",
+	"useractivity-gift": "$1 је примио/ла поклон од $2",
+	"useractivity-group-edit": "{{PLURAL:$1|једна измена|$1 измене|$1 измена}}",
+	"useractivity-group-comment": "{{PLURAL:$1|један коментар|$1 коментара|$1 коментара}}",
+	"useractivity-group-user_message": "{{PLURAL:$1|једна|$1}} порука",
+	"useractivity-group-friend": "{{PLURAL:$1|један пријатељ|$1 пријатеља}}",
+	"useractivity-siteactivity": "Активност сајта",
+	"useractivity-title": "Активност пријатеља"
 }

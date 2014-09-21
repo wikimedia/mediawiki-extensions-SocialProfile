@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Flrn"
-        ]
-    },
-    "ur-main-page": "Piälehyt",
-    "ur-cancel": "Keskevytä"
+	"@metadata": {
+		"authors": [
+			"Flrn"
+		]
+	},
+	"ur-main-page": "Piälehyt",
+	"ur-cancel": "Keskevytä"
 }

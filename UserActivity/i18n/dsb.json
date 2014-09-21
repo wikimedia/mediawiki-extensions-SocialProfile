@@ -1,22 +1,22 @@
 {
-    "@metadata": {
-        "authors": [
-            "Michawiki"
-        ]
-    },
-    "useractivity": "Aktiwita pśijaśelow",
-    "useractivity-award": "$1 jo myto dostał.",
-    "useractivity-all": "Wšykno se woglědaś",
-    "useractivity-edit": "$1 {{PLURAL:$4|jo bok wobźěłał|jo slědujucej boka wobźěłał|jo slědujuce boki wobźěłał|jo slědujuce boki wobźěłał}}: $3",
-    "useractivity-foe": "$1 {{PLURAL:$2|jo něnto njepśijaśel wót|stej něnto njepśijaśela wót|su něnto njepśijaśele wót|su něnto njepśijaśele wót}} $3",
-    "useractivity-friend": "$1 {{PLURAL:$2|jo něnto pśijaśel wót|stej něnto pśijaśela|su něnto pśijaśele wót|su něnto pśijaśele wót}} $3",
-    "useractivity-gift": "$1 jo dóstał dar wót $2",
-    "useractivity-group-edit": "{{PLURAL:$1|jadna změna|$1 změnje|$1 změny|$1 změnow}}",
-    "useractivity-group-comment": "{{PLURAL:$1|jaden komentar|$1 komentara|$1 komentary|$1 komentarow}}",
-    "useractivity-group-user_message": "{{PLURAL:$1|jadna powěźeńka|$1 powěźeńce|$1 powěźeńki|$1 powěźeńkow}}",
-    "useractivity-group-friend": "{{PLURAL:$1|jaden pśijaśel|$1 pśijaśela|$1 pśijaśele|$1 pśijaśelow}}",
-    "useractivity-siteactivity": "Aktiwita sedła",
-    "useractivity-title": "Aktiwita pśijaśelow",
-    "useractivity-user_message": "$1 {{PLURAL:$4|jo pósłał powěźeńku na|jo pósłał powěźeńce|jo pósłał powěźeńki|jo pósłał powěźeńki}} k $3",
-    "useractivity-comment": "$1 jo na {{PLURAL:$4|boku komentěrował|slědujucyma bokoma komentěrował|slědujucych bokach komentěrował|slědujucych bokach komentěrował}}: $3"
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"useractivity": "Aktiwita pśijaśelow",
+	"useractivity-award": "$1 jo myto dostał.",
+	"useractivity-all": "Wšykno se woglědaś",
+	"useractivity-edit": "$1 {{PLURAL:$4|jo bok wobźěłał|jo slědujucej boka wobźěłał|jo slědujuce boki wobźěłał|jo slědujuce boki wobźěłał}}: $3",
+	"useractivity-foe": "$1 {{PLURAL:$2|jo něnto njepśijaśel wót|stej něnto njepśijaśela wót|su něnto njepśijaśele wót|su něnto njepśijaśele wót}} $3",
+	"useractivity-friend": "$1 {{PLURAL:$2|jo něnto pśijaśel wót|stej něnto pśijaśela|su něnto pśijaśele wót|su něnto pśijaśele wót}} $3",
+	"useractivity-gift": "$1 jo dóstał dar wót $2",
+	"useractivity-group-edit": "{{PLURAL:$1|jadna změna|$1 změnje|$1 změny|$1 změnow}}",
+	"useractivity-group-comment": "{{PLURAL:$1|jaden komentar|$1 komentara|$1 komentary|$1 komentarow}}",
+	"useractivity-group-user_message": "{{PLURAL:$1|jadna powěźeńka|$1 powěźeńce|$1 powěźeńki|$1 powěźeńkow}}",
+	"useractivity-group-friend": "{{PLURAL:$1|jaden pśijaśel|$1 pśijaśela|$1 pśijaśele|$1 pśijaśelow}}",
+	"useractivity-siteactivity": "Aktiwita sedła",
+	"useractivity-title": "Aktiwita pśijaśelow",
+	"useractivity-user_message": "$1 {{PLURAL:$4|jo pósłał powěźeńku na|jo pósłał powěźeńce|jo pósłał powěźeńki|jo pósłał powěźeńki}} k $3",
+	"useractivity-comment": "$1 jo na {{PLURAL:$4|boku komentěrował|slědujucyma bokoma komentěrował|slědujucych bokach komentěrował|slědujucych bokach komentěrował}}: $3"
 }

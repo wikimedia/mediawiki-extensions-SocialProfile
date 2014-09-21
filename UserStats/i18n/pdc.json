@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Xqt"
-        ]
-    },
-    "top-fans-stats-comment-count": "{{PLURAL:$1|Aamaericking|Aamaerickinge}}"
+	"@metadata": {
+		"authors": [
+			"Xqt"
+		]
+	},
+	"top-fans-stats-comment-count": "{{PLURAL:$1|Aamaericking|Aamaerickinge}}"
 }

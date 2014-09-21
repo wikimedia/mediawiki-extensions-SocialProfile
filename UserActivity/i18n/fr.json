@@ -1,25 +1,25 @@
 {
-    "@metadata": {
-        "authors": [
-            "Gomoko",
-            "IAlex",
-            "Verdy p",
-            "Y-M D"
-        ]
-    },
-    "useractivity": "Activité des amis",
-    "useractivity-award": "$1 a reçu une récompense",
-    "useractivity-all": "Tout voir",
-    "useractivity-edit": "$1 a modifié {{PLURAL:$4|la page|les pages suivantes :}} $3",
-    "useractivity-foe": "$1 {{PLURAL:$2|est maintenant ennemi|sont maintenant ennemis}} avec $3",
-    "useractivity-friend": "$1 {{PLURAL:$2|est maintenant ami|sont maintenant amis}} avec $3",
-    "useractivity-gift": "$1 a reçu un cadeau de la part de $2",
-    "useractivity-group-edit": "$1 {{PLURAL:$1|modification|modifications}}",
-    "useractivity-group-comment": "$1 commentaire{{PLURAL:$1||s}}",
-    "useractivity-group-user_message": "$1 {{PLURAL:$1|message|messages}}",
-    "useractivity-group-friend": "$1 {{PLURAL:$1|ami|amis}}",
-    "useractivity-siteactivity": "Activité du site",
-    "useractivity-title": "Activité des amis",
-    "useractivity-user_message": "$1 a envoyé {{PLURAL:$4|un message|des messages}} à $3",
-    "useractivity-comment": "$1 a fait des commentaires sur {{PLURAL:$4|la page|les pages:}} $3"
+	"@metadata": {
+		"authors": [
+			"Gomoko",
+			"IAlex",
+			"Verdy p",
+			"Y-M D"
+		]
+	},
+	"useractivity": "Activité des amis",
+	"useractivity-award": "$1 a reçu une récompense",
+	"useractivity-all": "Tout voir",
+	"useractivity-edit": "$1 a modifié {{PLURAL:$4|la page|les pages suivantes :}} $3",
+	"useractivity-foe": "$1 {{PLURAL:$2|est maintenant ennemi|sont maintenant ennemis}} avec $3",
+	"useractivity-friend": "$1 {{PLURAL:$2|est maintenant ami|sont maintenant amis}} avec $3",
+	"useractivity-gift": "$1 a reçu un cadeau de la part de $2",
+	"useractivity-group-edit": "$1 {{PLURAL:$1|modification|modifications}}",
+	"useractivity-group-comment": "$1 commentaire{{PLURAL:$1||s}}",
+	"useractivity-group-user_message": "$1 {{PLURAL:$1|message|messages}}",
+	"useractivity-group-friend": "$1 {{PLURAL:$1|ami|amis}}",
+	"useractivity-siteactivity": "Activité du site",
+	"useractivity-title": "Activité des amis",
+	"useractivity-user_message": "$1 a envoyé {{PLURAL:$4|un message|des messages}} à $3",
+	"useractivity-comment": "$1 a fait des commentaires sur {{PLURAL:$4|la page|les pages:}} $3"
 }

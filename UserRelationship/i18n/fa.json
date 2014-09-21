@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Mjbmr"
-        ]
-    },
-    "ur-main-page": "صفحهٔ اصلی",
-    "ur-previous": "قبلی",
-    "ur-next": "بعدی",
-    "ur-remove": "حذف",
-    "ur-cancel": "انصراف",
-    "ur-login": "ورود"
+	"@metadata": {
+		"authors": [
+			"Mjbmr"
+		]
+	},
+	"ur-main-page": "صفحهٔ اصلی",
+	"ur-previous": "قبلی",
+	"ur-next": "بعدی",
+	"ur-remove": "حذف",
+	"ur-cancel": "انصراف",
+	"ur-login": "ورود"
 }

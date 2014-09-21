@@ -1,30 +1,30 @@
 {
-    "@metadata": {
-        "authors": [
-            "Solde"
-        ]
-    },
-    "giftmanager-public": "públic",
-    "giftmanager-private": "privat",
-    "g-choose-file": "Escull el fitxer:",
-    "g-cancel": "Cancel·la",
-    "g-create-gift": "Crea un regal",
-    "g-current-image": "Imatge actual",
-    "g-gift": "regal",
-    "g-gift-name": "nom del regal",
-    "g-give-list-select": "selecciona un amic",
-    "g-give-separator": "o",
-    "g-go-back": "Retorna",
-    "g-main-page": "Pàgina principal",
-    "g-medium": "Mitjà",
-    "g-mediumlarge": "Mitjà-alt",
-    "g-new": "nou",
-    "g-next": "Següent",
-    "g-previous": "Ant",
-    "g-remove": "Elimina",
-    "g-remove-gift": "Elimina aquest regal",
-    "g-send-gift": "Envia un regal",
-    "g-select-a-friend": "selecciona un amic",
-    "g-small": "Petit",
-    "g-your-profile": "El teu perfil"
+	"@metadata": {
+		"authors": [
+			"Solde"
+		]
+	},
+	"giftmanager-public": "públic",
+	"giftmanager-private": "privat",
+	"g-choose-file": "Escull el fitxer:",
+	"g-cancel": "Cancel·la",
+	"g-create-gift": "Crea un regal",
+	"g-current-image": "Imatge actual",
+	"g-gift": "regal",
+	"g-gift-name": "nom del regal",
+	"g-give-list-select": "selecciona un amic",
+	"g-give-separator": "o",
+	"g-go-back": "Retorna",
+	"g-main-page": "Pàgina principal",
+	"g-medium": "Mitjà",
+	"g-mediumlarge": "Mitjà-alt",
+	"g-new": "nou",
+	"g-next": "Següent",
+	"g-previous": "Ant",
+	"g-remove": "Elimina",
+	"g-remove-gift": "Elimina aquest regal",
+	"g-send-gift": "Envia un regal",
+	"g-select-a-friend": "selecciona un amic",
+	"g-small": "Petit",
+	"g-your-profile": "El teu perfil"
 }

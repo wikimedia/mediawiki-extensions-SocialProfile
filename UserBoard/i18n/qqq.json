@@ -1,21 +1,21 @@
 {
-    "@metadata": {
-        "authors": [
-            "EugeneZelenko",
-            "Fryed-peach",
-            "Jon Harald Søby",
-            "Purodha",
-            "Translationista",
-            "Umherirrender"
-        ]
-    },
-    "boardblastlogintitle": "As I understand it, it is a sort of board tool to leave messages. Is it?\nhttp://www.mediawiki.org/wiki/Extension:SocialProfile#Board_Blast",
-    "userboard_delete": "{{Identical|Delete}}",
-    "userboard_private": "{{Identical|Private}}",
-    "userboard_public": "{{Identical|Public}}",
-    "userboard_nextpage": "{{Identical|Next}}",
-    "userboard_prevpage": "{{Identical|Prev}}",
-    "userboard_sendbutton": "{{Identical|Send}}",
-    "userboard_showingmessages": "* '''$1''' is the total count of messages\n* '''$2''' is the number of the first message shown\n* '''$3''' is the number of the last message shown\n* '''$4''' is the count of messages acutally shown",
-    "right-userboard-delete": "{{doc-right|userboard-delete}}"
+	"@metadata": {
+		"authors": [
+			"EugeneZelenko",
+			"Fryed-peach",
+			"Jon Harald Søby",
+			"Purodha",
+			"Translationista",
+			"Umherirrender"
+		]
+	},
+	"boardblastlogintitle": "As I understand it, it is a sort of board tool to leave messages. Is it?\nhttp://www.mediawiki.org/wiki/Extension:SocialProfile#Board_Blast",
+	"userboard_delete": "{{Identical|Delete}}",
+	"userboard_private": "{{Identical|Private}}",
+	"userboard_public": "{{Identical|Public}}",
+	"userboard_nextpage": "{{Identical|Next}}",
+	"userboard_prevpage": "{{Identical|Prev}}",
+	"userboard_sendbutton": "{{Identical|Send}}",
+	"userboard_showingmessages": "* '''$1''' is the total count of messages\n* '''$2''' is the number of the first message shown\n* '''$3''' is the number of the last message shown\n* '''$4''' is the count of messages acutally shown",
+	"right-userboard-delete": "{{doc-right|userboard-delete}}"
 }

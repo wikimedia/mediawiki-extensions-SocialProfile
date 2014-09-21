@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Anakmalaysia"
-        ]
-    },
-    "ur-previous": "sebelumnya",
-    "ur-next": "berikutnya",
-    "ur-remove": "Buang",
-    "ur-cancel": "Batalkan",
-    "ur-login": "Log masuk"
+	"@metadata": {
+		"authors": [
+			"Anakmalaysia"
+		]
+	},
+	"ur-previous": "sebelumnya",
+	"ur-next": "berikutnya",
+	"ur-remove": "Buang",
+	"ur-cancel": "Batalkan",
+	"ur-login": "Log masuk"
 }

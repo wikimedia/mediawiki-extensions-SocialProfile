@@ -1,23 +1,23 @@
 {
-    "@metadata": {
-        "authors": [
-            "Borichèt",
-            "Dragonòt"
-        ]
-    },
-    "useractivity": "Atività dj'amis",
-    "useractivity-award": "$1 a l'ha arsèivù un premi",
-    "useractivity-all": "Varda tut",
-    "useractivity-edit": "$1 a l'ha modificà {{PLURAL:$4|la pàgina|le pàgine sì-dapress:}} $3",
-    "useractivity-foe": "$1 {{PLURAL:$2|a l'é adess nemis con|a son adess nemis con}} $3",
-    "useractivity-friend": "$1 {{PLURAL:$2|a l'é adess amis con|a son adess amis con}} $3",
-    "useractivity-gift": "$1 a l'ha arseivù un cadò da $2",
-    "useractivity-group-edit": "{{PLURAL:$1|na modìfica|$1 modìfiche}}",
-    "useractivity-group-comment": "{{PLURAL:$1|un coment|$1 coment}}",
-    "useractivity-group-user_message": "{{PLURAL:$1|un mëssagi|$1 mëssagi}}",
-    "useractivity-group-friend": "{{PLURAL:$1|n'amis|$1 amis}}",
-    "useractivity-siteactivity": "Atività dël sit",
-    "useractivity-title": "Atività dj'amis",
-    "useractivity-user_message": "$1 {{PLURAL:$4|a l'ha mandà un messagi a|a l'ha mandà ëd messagi a}} $3",
-    "useractivity-comment": "$1 a l'ha comentà {{PLURAL:$4|la pàgina|le pàgine sì-dapress:}} $3"
+	"@metadata": {
+		"authors": [
+			"Borichèt",
+			"Dragonòt"
+		]
+	},
+	"useractivity": "Atività dj'amis",
+	"useractivity-award": "$1 a l'ha arsèivù un premi",
+	"useractivity-all": "Varda tut",
+	"useractivity-edit": "$1 a l'ha modificà {{PLURAL:$4|la pàgina|le pàgine sì-dapress:}} $3",
+	"useractivity-foe": "$1 {{PLURAL:$2|a l'é adess nemis con|a son adess nemis con}} $3",
+	"useractivity-friend": "$1 {{PLURAL:$2|a l'é adess amis con|a son adess amis con}} $3",
+	"useractivity-gift": "$1 a l'ha arseivù un cadò da $2",
+	"useractivity-group-edit": "{{PLURAL:$1|na modìfica|$1 modìfiche}}",
+	"useractivity-group-comment": "{{PLURAL:$1|un coment|$1 coment}}",
+	"useractivity-group-user_message": "{{PLURAL:$1|un mëssagi|$1 mëssagi}}",
+	"useractivity-group-friend": "{{PLURAL:$1|n'amis|$1 amis}}",
+	"useractivity-siteactivity": "Atività dël sit",
+	"useractivity-title": "Atività dj'amis",
+	"useractivity-user_message": "$1 {{PLURAL:$4|a l'ha mandà un messagi a|a l'ha mandà ëd messagi a}} $3",
+	"useractivity-comment": "$1 a l'ha comentà {{PLURAL:$4|la pàgina|le pàgine sì-dapress:}} $3"
 }

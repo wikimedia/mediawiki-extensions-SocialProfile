@@ -1,14 +1,14 @@
 {
-    "@metadata": {
-        "authors": [
-            "Klutzy",
-            "Yknok29"
-        ]
-    },
-    "userwelcome-desc": "<code>&lt;welcomeUser&gt;</code> 태그를 통해 로그인한 사용자에게 개별적인 정보를 보여주는 기능",
-    "mp-userlevels-link": "사용자 레벨",
-    "mp-welcome-upload": "올리기",
-    "mp-welcome-edit": "편집",
-    "mp-requests-title": "요청",
-    "mp-request-new-message": "새 메시지"
+	"@metadata": {
+		"authors": [
+			"Klutzy",
+			"Yknok29"
+		]
+	},
+	"userwelcome-desc": "<code>&lt;welcomeUser&gt;</code> 태그를 통해 로그인한 사용자에게 개별적인 정보를 보여주는 기능",
+	"mp-userlevels-link": "사용자 레벨",
+	"mp-welcome-upload": "올리기",
+	"mp-welcome-edit": "편집",
+	"mp-requests-title": "요청",
+	"mp-request-new-message": "새 메시지"
 }

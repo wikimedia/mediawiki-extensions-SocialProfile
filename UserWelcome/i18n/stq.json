@@ -1,21 +1,21 @@
 {
-    "@metadata": {
-        "authors": [
-            "Pyt"
-        ]
-    },
-    "userwelcome-desc": "Föiget n <code>&lt;welcomeUser&gt;</code>-Tag bietou, wiermäd me benutserspezifiske sozioale Informatione fon ienloggede Benutsere wiese kon",
-    "mp-userlevels-link": "Benutser-Ieuwenen",
-    "mp-welcome-upload": "Hoochleede",
-    "mp-welcome-edit": "Beoarbaidje",
-    "mp-welcome-points": "$1 {{PLURAL:$1|Punkt|Punkte}}",
-    "mp-welcome-needed-points": "Uum <b><a href=\"$1\">$2</a></b> tou wäiden moast du noch <i>$3</i> {{PLURAL:$3|wiederen Punkt|wiedere Punkte}} fertjoonje!",
-    "mp-welcome-logged-in": "Hallo $1",
-    "mp-requests-title": "Anfroagen",
-    "mp-requests-message": "Do hääst do foulgjende Anfroagen.",
-    "mp-request-new-message": "näie Ättergjucht",
-    "mp-request-new-award": "$1 näie {{PLURAL:$1|Uutteekenge|Uutteekengen}}",
-    "mp-request-new-gift": "$1 {{PLURAL:$1|näi Geschoank|näie Geschoanke}}",
-    "mp-request-new-foe": "$1 {{PLURAL:$1|näien Fäind|näie Fäinde}}",
-    "mp-request-new-friend": "$1 {{PLURAL:$1|näien Früünd|näie Früünde}}"
+	"@metadata": {
+		"authors": [
+			"Pyt"
+		]
+	},
+	"userwelcome-desc": "Föiget n <code>&lt;welcomeUser&gt;</code>-Tag bietou, wiermäd me benutserspezifiske sozioale Informatione fon ienloggede Benutsere wiese kon",
+	"mp-userlevels-link": "Benutser-Ieuwenen",
+	"mp-welcome-upload": "Hoochleede",
+	"mp-welcome-edit": "Beoarbaidje",
+	"mp-welcome-points": "$1 {{PLURAL:$1|Punkt|Punkte}}",
+	"mp-welcome-needed-points": "Uum <b><a href=\"$1\">$2</a></b> tou wäiden moast du noch <i>$3</i> {{PLURAL:$3|wiederen Punkt|wiedere Punkte}} fertjoonje!",
+	"mp-welcome-logged-in": "Hallo $1",
+	"mp-requests-title": "Anfroagen",
+	"mp-requests-message": "Do hääst do foulgjende Anfroagen.",
+	"mp-request-new-message": "näie Ättergjucht",
+	"mp-request-new-award": "$1 näie {{PLURAL:$1|Uutteekenge|Uutteekengen}}",
+	"mp-request-new-gift": "$1 {{PLURAL:$1|näi Geschoank|näie Geschoanke}}",
+	"mp-request-new-foe": "$1 {{PLURAL:$1|näien Fäind|näie Fäinde}}",
+	"mp-request-new-friend": "$1 {{PLURAL:$1|näien Früünd|näie Früünde}}"
 }

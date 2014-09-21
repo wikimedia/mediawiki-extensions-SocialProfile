@@ -1,21 +1,21 @@
 {
-    "@metadata": {
-        "authors": [
-            "Michawiki"
-        ]
-    },
-    "userwelcome-desc": "Přidawa tafličku <code>&lt;welcomeUser&gt;</code> za zwobraznjenje wužiwarjej specifiske socialne informacije přizjewjenych wužiwarjow",
-    "mp-userlevels-link": "Wužiwarske runiny",
-    "mp-welcome-upload": "Nahrać",
-    "mp-welcome-edit": "Wobdźěłać",
-    "mp-welcome-points": "$1 {{PLURAL:$1|dypk|dypkaj|dypki|dypkow}}",
-    "mp-welcome-needed-points": "Zo by k <b><a href=\"$1\">$2</a></b> postupował, zasłuž <i>$3</i> {{PLURAL:$3|dalši dypk|dalšej dypkaj|dalše dypki|dalšich dypkow}}!",
-    "mp-welcome-logged-in": "Halo $1",
-    "mp-requests-title": "Požadanja",
-    "mp-requests-message": "Maš slědowace požadanja.",
-    "mp-request-new-message": "nowa powěsć",
-    "mp-request-new-award": "$1 {{PLURAL:$1|nowe myto|nowej myće|nowe myta|nowych mytow}}",
-    "mp-request-new-gift": "$1 {{PLURAL:$1|nowy dar|nowej daraj|nowe dary|nowych darow}}",
-    "mp-request-new-foe": "$1 {{PLURAL:$1|nowy přećiwnik|nowaj přećiwnikaj|nowi přećiwnicy|nowych přećiwnikow}}",
-    "mp-request-new-friend": "$1 {{PLURAL:$1|nowy přećel|nowaj přećelej|nowi přećeljo|nowych přećelow}}"
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"userwelcome-desc": "Přidawa tafličku <code>&lt;welcomeUser&gt;</code> za zwobraznjenje wužiwarjej specifiske socialne informacije přizjewjenych wužiwarjow",
+	"mp-userlevels-link": "Wužiwarske runiny",
+	"mp-welcome-upload": "Nahrać",
+	"mp-welcome-edit": "Wobdźěłać",
+	"mp-welcome-points": "$1 {{PLURAL:$1|dypk|dypkaj|dypki|dypkow}}",
+	"mp-welcome-needed-points": "Zo by k <b><a href=\"$1\">$2</a></b> postupował, zasłuž <i>$3</i> {{PLURAL:$3|dalši dypk|dalšej dypkaj|dalše dypki|dalšich dypkow}}!",
+	"mp-welcome-logged-in": "Halo $1",
+	"mp-requests-title": "Požadanja",
+	"mp-requests-message": "Maš slědowace požadanja.",
+	"mp-request-new-message": "nowa powěsć",
+	"mp-request-new-award": "$1 {{PLURAL:$1|nowe myto|nowej myće|nowe myta|nowych mytow}}",
+	"mp-request-new-gift": "$1 {{PLURAL:$1|nowy dar|nowej daraj|nowe dary|nowych darow}}",
+	"mp-request-new-foe": "$1 {{PLURAL:$1|nowy přećiwnik|nowaj přećiwnikaj|nowi přećiwnicy|nowych přećiwnikow}}",
+	"mp-request-new-friend": "$1 {{PLURAL:$1|nowy přećel|nowaj přećelej|nowi přećeljo|nowych přećelow}}"
 }

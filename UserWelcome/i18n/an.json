@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Juanpabl"
-        ]
-    },
-    "mp-welcome-upload": "Cargar",
-    "mp-welcome-edit": "Editar"
+	"@metadata": {
+		"authors": [
+			"Juanpabl"
+		]
+	},
+	"mp-welcome-upload": "Cargar",
+	"mp-welcome-edit": "Editar"
 }

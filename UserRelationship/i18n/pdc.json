@@ -1,10 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Xqt"
-        ]
-    },
-    "ur-main-page": "Haaptblatt",
-    "ur-next": "neegschte",
-    "ur-login": "Kumm nei"
+	"@metadata": {
+		"authors": [
+			"Xqt"
+		]
+	},
+	"ur-main-page": "Haaptblatt",
+	"ur-next": "neegschte",
+	"ur-login": "Kumm nei"
 }

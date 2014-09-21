@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "HalanTul"
-        ]
-    },
-    "boardlinkselectall": "Барытын тал",
-    "boardlinkunselectall": "Барытын талыыны суох гын",
-    "boardlinkselectfriends": "Доҕоттору тал",
-    "boardlinkunselectfriends": "Доҕоттору киллэримэ"
+	"@metadata": {
+		"authors": [
+			"HalanTul"
+		]
+	},
+	"boardlinkselectall": "Барытын тал",
+	"boardlinkunselectall": "Барытын талыыны суох гын",
+	"boardlinkselectfriends": "Доҕоттору тал",
+	"boardlinkunselectfriends": "Доҕоттору киллэримэ"
 }

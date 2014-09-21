@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "Mjbmr"
-        ]
-    },
-    "mp-welcome-upload": "بارگذاری",
-    "mp-welcome-edit": "ویرایش",
-    "mp-requests-title": "درخواست‌ها",
-    "mp-request-new-message": "پیام جدید"
+	"@metadata": {
+		"authors": [
+			"Mjbmr"
+		]
+	},
+	"mp-welcome-upload": "بارگذاری",
+	"mp-welcome-edit": "ویرایش",
+	"mp-requests-title": "درخواست‌ها",
+	"mp-request-new-message": "پیام جدید"
 }

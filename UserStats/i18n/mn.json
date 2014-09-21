@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Chinneeb"
-        ]
-    },
-    "top-fans-stats-comment-count": "{{PLURAL:$1|Сэтгэгдэл|Сэтгэгдлүүд}}"
+	"@metadata": {
+		"authors": [
+			"Chinneeb"
+		]
+	},
+	"top-fans-stats-comment-count": "{{PLURAL:$1|Сэтгэгдэл|Сэтгэгдлүүд}}"
 }

@@ -1,26 +1,26 @@
 {
-    "@metadata": {
-        "authors": [
-            "Aotake",
-            "Hosiryuhosi",
-            "Naohiro19",
-            "Schu",
-            "青子守歌"
-        ]
-    },
-    "useractivity": "友達の活動度",
-    "useractivity-award": "$1が賞を受賞しました",
-    "useractivity-all": "すべて表示",
-    "useractivity-edit": "$1 {{PLURAL:$4|ページを編集|以下のページを編集:}} $3",
-    "useractivity-foe": "$1 {{PLURAL:$2|は次の人と敵対しています|は次の人々と敵対しています}} $3",
-    "useractivity-friend": "$1 {{PLURAL:$2|は次の人と友好関係にあります|は次の人々と友好関係にあります}} $3",
-    "useractivity-gift": "$1が$2からのギフトを受け取りました",
-    "useractivity-group-edit": "{{PLURAL:$1|$1回の編集}}",
-    "useractivity-group-comment": "{{PLURAL:$1|$1コのコメント}}",
-    "useractivity-group-user_message": "{{PLURAL:$1|$1コのメッセージ}}",
-    "useractivity-group-friend": "{{PLURAL:$1|$1人の友達}}",
-    "useractivity-siteactivity": "サイトの活動度",
-    "useractivity-title": "友達の活動度",
-    "useractivity-user_message": "$1 {{PLURAL:$2|は次の人にメッセージを送りました|は次の人々にメッセージを送りました}} $3",
-    "useractivity-comment": "$1 {{PLURAL:$4|はページにコメントしました|は次にあげるページにコメントしました :}} $3"
+	"@metadata": {
+		"authors": [
+			"Aotake",
+			"Hosiryuhosi",
+			"Naohiro19",
+			"Schu",
+			"青子守歌"
+		]
+	},
+	"useractivity": "友達の活動度",
+	"useractivity-award": "$1が賞を受賞しました",
+	"useractivity-all": "すべて表示",
+	"useractivity-edit": "$1 {{PLURAL:$4|ページを編集|以下のページを編集:}} $3",
+	"useractivity-foe": "$1 {{PLURAL:$2|は次の人と敵対しています|は次の人々と敵対しています}} $3",
+	"useractivity-friend": "$1 {{PLURAL:$2|は次の人と友好関係にあります|は次の人々と友好関係にあります}} $3",
+	"useractivity-gift": "$1が$2からのギフトを受け取りました",
+	"useractivity-group-edit": "{{PLURAL:$1|$1回の編集}}",
+	"useractivity-group-comment": "{{PLURAL:$1|$1コのコメント}}",
+	"useractivity-group-user_message": "{{PLURAL:$1|$1コのメッセージ}}",
+	"useractivity-group-friend": "{{PLURAL:$1|$1人の友達}}",
+	"useractivity-siteactivity": "サイトの活動度",
+	"useractivity-title": "友達の活動度",
+	"useractivity-user_message": "$1 {{PLURAL:$2|は次の人にメッセージを送りました|は次の人々にメッセージを送りました}} $3",
+	"useractivity-comment": "$1 {{PLURAL:$4|はページにコメントしました|は次にあげるページにコメントしました :}} $3"
 }

@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Joetaras"
-        ]
-    },
-    "boardlinkselectall": "Selezione tutte",
-    "boardlinkunselectall": "No selezionà nisciune"
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"boardlinkselectall": "Selezione tutte",
+	"boardlinkunselectall": "No selezionà nisciune"
 }

@@ -1,26 +1,26 @@
 {
-    "@metadata": {
-        "authors": [
-            "Centerlink",
-            "Jack Phoenix <jack@countervandalism.net>",
-            "Str4nd"
-        ]
-    },
-    "useractivity": "Ystävien aktiivisuus",
-    "useractivity-award": "$1 sai palkinnon",
-    "useractivity-all": "Katso kaikki",
-    "useractivity-edit": "$1 {{PLURAL:$2|muokkasi|muokkasivat}} {{PLURAL:$4|sivua|sivuja:}} $3",
-    "useractivity-foe": "$1 {{PLURAL:$2|on nyt vihollinen|ovat nyt vihollisia}} {{PLURAL:$4|käyttäjälle|käyttäjille}} $3",
-    "useractivity-filter": "Suodata",
-    "useractivity-friend": "$1 {{PLURAL:$2|on nyt ystävä|ovat nyt ystäviä}} {{PLURAL:$4|käyttäjälle|käyttäjille}} $3",
-    "useractivity-gift": "$1 sai lahjan käyttäjältä $2",
-    "useractivity-group-edit": "{{PLURAL:$1|yksi muokkaus|$1 muokkausta}}",
-    "useractivity-group-comment": "{{PLURAL:$1|yksi kommentti|$1 kommenttia}}",
-    "useractivity-group-user_message": "{{PLURAL:$1|yksi viesti|$1 viestiä}}",
-    "useractivity-group-friend": "{{PLURAL:$1|yksi ystävä|$1 ystävät}}",
-    "useractivity-network-thought": "Käyttäjällä <b><a href=\"$4\">$2</a></b> on ajatus verkostoon $3 liittyen",
-    "useractivity-siteactivity": "Sivuston aktiivisuus",
-    "useractivity-title": "Ystävien aktiivisuus",
-    "useractivity-user_message": "$1 {{PLURAL:$4|lähetti viestin käyttäjälle|lähetti viestejä käyttäjille}} $3",
-    "useractivity-comment": "$1 {{PLURAL:$2|kommentoi|kommentoivat}} {{PLURAL:$4|sivua|sivuja}}: $3"
+	"@metadata": {
+		"authors": [
+			"Centerlink",
+			"Jack Phoenix <jack@countervandalism.net>",
+			"Str4nd"
+		]
+	},
+	"useractivity": "Ystävien aktiivisuus",
+	"useractivity-award": "$1 sai palkinnon",
+	"useractivity-all": "Katso kaikki",
+	"useractivity-edit": "$1 {{PLURAL:$2|muokkasi|muokkasivat}} {{PLURAL:$4|sivua|sivuja:}} $3",
+	"useractivity-foe": "$1 {{PLURAL:$2|on nyt vihollinen|ovat nyt vihollisia}} {{PLURAL:$4|käyttäjälle|käyttäjille}} $3",
+	"useractivity-filter": "Suodata",
+	"useractivity-friend": "$1 {{PLURAL:$2|on nyt ystävä|ovat nyt ystäviä}} {{PLURAL:$4|käyttäjälle|käyttäjille}} $3",
+	"useractivity-gift": "$1 sai lahjan käyttäjältä $2",
+	"useractivity-group-edit": "{{PLURAL:$1|yksi muokkaus|$1 muokkausta}}",
+	"useractivity-group-comment": "{{PLURAL:$1|yksi kommentti|$1 kommenttia}}",
+	"useractivity-group-user_message": "{{PLURAL:$1|yksi viesti|$1 viestiä}}",
+	"useractivity-group-friend": "{{PLURAL:$1|yksi ystävä|$1 ystävät}}",
+	"useractivity-network-thought": "Käyttäjällä <b><a href=\"$4\">$2</a></b> on ajatus verkostoon $3 liittyen",
+	"useractivity-siteactivity": "Sivuston aktiivisuus",
+	"useractivity-title": "Ystävien aktiivisuus",
+	"useractivity-user_message": "$1 {{PLURAL:$4|lähetti viestin käyttäjälle|lähetti viestejä käyttäjille}} $3",
+	"useractivity-comment": "$1 {{PLURAL:$2|kommentoi|kommentoivat}} {{PLURAL:$4|sivua|sivuja}}: $3"
 }

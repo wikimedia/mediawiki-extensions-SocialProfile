@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Juanpabl"
-        ]
-    },
-    "useractivity-group-user_message": "{{PLURAL:$1|un mensache|$1 mensaches}}"
+	"@metadata": {
+		"authors": [
+			"Juanpabl"
+		]
+	},
+	"useractivity-group-user_message": "{{PLURAL:$1|un mensache|$1 mensaches}}"
 }

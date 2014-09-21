@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "Ukabia"
-        ]
-    },
-    "mp-welcome-upload": "Tinyénélú",
-    "mp-welcome-edit": "Mèzi",
-    "mp-welcome-logged-in": "Kedú $1",
-    "mp-request-new-message": "ozi ohúrù"
+	"@metadata": {
+		"authors": [
+			"Ukabia"
+		]
+	},
+	"mp-welcome-upload": "Tinyénélú",
+	"mp-welcome-edit": "Mèzi",
+	"mp-welcome-logged-in": "Kedú $1",
+	"mp-request-new-message": "ozi ohúrù"
 }

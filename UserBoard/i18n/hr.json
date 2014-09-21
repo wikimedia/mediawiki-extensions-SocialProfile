@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Dalibor Bosits"
-        ]
-    },
-    "userboard_delete": "Izbriši"
+	"@metadata": {
+		"authors": [
+			"Dalibor Bosits"
+		]
+	},
+	"userboard_delete": "Izbriši"
 }

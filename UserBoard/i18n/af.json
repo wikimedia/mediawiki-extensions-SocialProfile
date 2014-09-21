@@ -1,15 +1,15 @@
 {
-    "@metadata": {
-        "authors": [
-            "Arnobarnard",
-            "Naudefj"
-        ]
-    },
-    "userboard_delete": "Skrap",
-    "userboard_private": "persoonlik",
-    "userboard_public": "publiek",
-    "userboard_nextpage": "volgende",
-    "userboard_prevpage": "vorige",
-    "userboard_nomessages": "Geen boodskappe.",
-    "userboard_sendbutton": "stuur"
+	"@metadata": {
+		"authors": [
+			"Arnobarnard",
+			"Naudefj"
+		]
+	},
+	"userboard_delete": "Skrap",
+	"userboard_private": "persoonlik",
+	"userboard_public": "publiek",
+	"userboard_nextpage": "volgende",
+	"userboard_prevpage": "vorige",
+	"userboard_nomessages": "Geen boodskappe.",
+	"userboard_sendbutton": "stuur"
 }

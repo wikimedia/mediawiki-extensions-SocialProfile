@@ -1,15 +1,15 @@
 {
-    "@metadata": {
-        "authors": [
-            "Welathêja"
-        ]
-    },
-    "other-info-tv": "TV",
-    "other-info-music": "Muzîk",
-    "user-profile-personal-name": "Nav",
-    "user-profile-personal-location": "Cîh",
-    "user-profile-personal-city": "Bajar",
-    "user-profile-personal-country": "Welat",
-    "user-profile-interests-tv": "TV",
-    "user-profile-interests-music": "Muzîk"
+	"@metadata": {
+		"authors": [
+			"Welathêja"
+		]
+	},
+	"other-info-tv": "TV",
+	"other-info-music": "Muzîk",
+	"user-profile-personal-name": "Nav",
+	"user-profile-personal-location": "Cîh",
+	"user-profile-personal-city": "Bajar",
+	"user-profile-personal-country": "Welat",
+	"user-profile-interests-tv": "TV",
+	"user-profile-interests-music": "Muzîk"
 }

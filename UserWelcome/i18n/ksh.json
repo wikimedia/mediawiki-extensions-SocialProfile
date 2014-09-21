@@ -1,21 +1,21 @@
 {
-    "@metadata": {
-        "authors": [
-            "Purodha"
-        ]
-    },
-    "userwelcome-desc": "Deit dä Befäähl <code>&lt;welcomeUser&gt;</code> en et Wiki, öm bestemmpte Saache övver de Metmaacher un sing Schmölzjes aanzezeije, wann hä ennjelogg eß.",
-    "mp-userlevels-link": "Ebene för Metmaacher",
-    "mp-welcome-upload": "Huhlaade",
-    "mp-welcome-edit": "Ändere",
-    "mp-welcome-points": "{{PLURAL:$1|Eine Pungk|$1 Pungkte|nix}}",
-    "mp-welcome-needed-points": "Öm föraanzekumme op <b><a href=\"$1\">$2</a></b>, donn {{PLURAL:$3|<i>eine</i> Pungk mieh|<i>$3</i> zosätzlijje Pungkte|<i>kein</i> Pungkte dobei}} sammele!",
-    "mp-welcome-logged-in": "Daach $1,",
-    "mp-requests-title": "Wönsch und Aanfroore",
-    "mp-requests-message": "Do häß hee di Wönsch und Aanfroore:",
-    "mp-request-new-message": "Neu Nohreesch",
-    "mp-request-new-award": "{{PLURAL:$1|Ein neu Beloonung|$1 neu Beloonunge|Kein neu Beloonunge!}}",
-    "mp-request-new-gift": "{{PLURAL:$1|Ein neu Jeschengk|$1 neu Jeschengke|Kein neu Jeschengke!}}",
-    "mp-request-new-foe": "{{PLURAL:$1|Eine neue Feind|$1 neu Feinde|Kein neu Feinde!}}",
-    "mp-request-new-friend": "{{PLURAL:$1|Eine neue Frünnd|$1 neue Frünnde|Keine neue Frünnd}}"
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"userwelcome-desc": "Deit dä Befäähl <code>&lt;welcomeUser&gt;</code> en et Wiki, öm bestemmpte Saache övver de Metmaacher un sing Schmölzjes aanzezeije, wann hä ennjelogg eß.",
+	"mp-userlevels-link": "Ebene för Metmaacher",
+	"mp-welcome-upload": "Huhlaade",
+	"mp-welcome-edit": "Ändere",
+	"mp-welcome-points": "{{PLURAL:$1|Eine Pungk|$1 Pungkte|nix}}",
+	"mp-welcome-needed-points": "Öm föraanzekumme op <b><a href=\"$1\">$2</a></b>, donn {{PLURAL:$3|<i>eine</i> Pungk mieh|<i>$3</i> zosätzlijje Pungkte|<i>kein</i> Pungkte dobei}} sammele!",
+	"mp-welcome-logged-in": "Daach $1,",
+	"mp-requests-title": "Wönsch und Aanfroore",
+	"mp-requests-message": "Do häß hee di Wönsch und Aanfroore:",
+	"mp-request-new-message": "Neu Nohreesch",
+	"mp-request-new-award": "{{PLURAL:$1|Ein neu Beloonung|$1 neu Beloonunge|Kein neu Beloonunge!}}",
+	"mp-request-new-gift": "{{PLURAL:$1|Ein neu Jeschengk|$1 neu Jeschengke|Kein neu Jeschengke!}}",
+	"mp-request-new-foe": "{{PLURAL:$1|Eine neue Feind|$1 neu Feinde|Kein neu Feinde!}}",
+	"mp-request-new-friend": "{{PLURAL:$1|Eine neue Frünnd|$1 neue Frünnde|Keine neue Frünnd}}"
 }

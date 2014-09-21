@@ -1,29 +1,29 @@
 {
-    "@metadata": {
-        "authors": [
-            "Firilacroco",
-            "KlaudiuMihaila"
-        ]
-    },
-    "messagesenttitle": "Mesaje trimise",
-    "boardblastprivatenote": "Toate mesajele vor fi trimise ca mesaje private",
-    "boardlinkselectall": "Selectați tot",
-    "boardlinkunselectall": "Deselectați tot",
-    "boardlinkselectfriends": "Selectați prieteni",
-    "boardlinkunselectfriends": "Deselectați prieteni",
-    "boardlinkselectfoes": "Selectați inamici",
-    "boardlinkunselectfoes": "Deselectați inamici",
-    "userboard_delete": "Şterge",
-    "userboard_posted_ago": "postat acum $1",
-    "userboard_private": "privat",
-    "userboard_public": "public",
-    "userboard_messagetype": "Tipul mesajului",
-    "userboard_nextpage": "următorul",
-    "userboard_prevpage": "prec",
-    "userboard_nomessages": "Nici un mesaj.",
-    "userboard_sendbutton": "trimite",
-    "userboard-time-days": "{{PLURAL:$1|o zi|$1 zile}}",
-    "userboard-time-hours": "{{PLURAL:$1|o oră|$1 ore}}",
-    "userboard-time-minutes": "{{PLURAL:$1|un minut|$1 minute}}",
-    "userboard-time-seconds": "{{PLURAL:$1|o secundă|$1 secunde}}"
+	"@metadata": {
+		"authors": [
+			"Firilacroco",
+			"KlaudiuMihaila"
+		]
+	},
+	"messagesenttitle": "Mesaje trimise",
+	"boardblastprivatenote": "Toate mesajele vor fi trimise ca mesaje private",
+	"boardlinkselectall": "Selectați tot",
+	"boardlinkunselectall": "Deselectați tot",
+	"boardlinkselectfriends": "Selectați prieteni",
+	"boardlinkunselectfriends": "Deselectați prieteni",
+	"boardlinkselectfoes": "Selectați inamici",
+	"boardlinkunselectfoes": "Deselectați inamici",
+	"userboard_delete": "Şterge",
+	"userboard_posted_ago": "postat acum $1",
+	"userboard_private": "privat",
+	"userboard_public": "public",
+	"userboard_messagetype": "Tipul mesajului",
+	"userboard_nextpage": "următorul",
+	"userboard_prevpage": "prec",
+	"userboard_nomessages": "Nici un mesaj.",
+	"userboard_sendbutton": "trimite",
+	"userboard-time-days": "{{PLURAL:$1|o zi|$1 zile}}",
+	"userboard-time-hours": "{{PLURAL:$1|o oră|$1 ore}}",
+	"userboard-time-minutes": "{{PLURAL:$1|un minut|$1 minute}}",
+	"userboard-time-seconds": "{{PLURAL:$1|o secundă|$1 secunde}}"
 }

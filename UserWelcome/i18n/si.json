@@ -1,23 +1,23 @@
 {
-    "@metadata": {
-        "authors": [
-            "Singhalawap",
-            "දසනැබළයෝ",
-            "නන්දිමිතුරු"
-        ]
-    },
-    "userwelcome-desc": "පිවිසුනු පරිශීලකයන්ට පරිශීලක-විශේෂිත සමාජීය තොරතුරු පෙන්වීම සඳහා <code>&lt;welcomeUser&gt;</code> ටැගය එකතු කෙරෙයි",
-    "mp-userlevels-link": "පරිශීලක මට්ටම්",
-    "mp-welcome-upload": "උඩුගත කිරීම",
-    "mp-welcome-edit": "සංස්කරණය",
-    "mp-welcome-points": "{{PLURAL:$1|එක් ලකුණක්|ලකුණු $1 ක්}}",
-    "mp-welcome-needed-points": "<b><a href=\"$1\">$2</a></b> වෙත උසස් වීමට,තවත් <i>$3</i> {{PLURAL:$3|ලකුණක්|ලකුණු ගණනක්}} උපයා ගන්න!",
-    "mp-welcome-logged-in": "ආයුබෝවන් $1",
-    "mp-requests-title": "ඉල්ලීම්",
-    "mp-requests-message": "පහත ඉල්ලීම් ඔබ වෙත යොමු වී ඇත.",
-    "mp-request-new-message": "නව පණිවුඩය",
-    "mp-request-new-award": "නව {{PLURAL:$1|සම්මානයක්|සම්මාන $1 ක්}}",
-    "mp-request-new-gift": "නව {{PLURAL:$1|ත්‍යාගයක්|ත්‍යාගයන් $1 ක්}}",
-    "mp-request-new-foe": "නව {{PLURAL:$1|ප්‍රතිමල්ලවයෙක්|ප්‍රතිමල්ලවයන් $1 ක්}}",
-    "mp-request-new-friend": "නව {{PLURAL:$1|මිතුරෙක්|මිතුරන් $1 ක්}}"
+	"@metadata": {
+		"authors": [
+			"Singhalawap",
+			"දසනැබළයෝ",
+			"නන්දිමිතුරු"
+		]
+	},
+	"userwelcome-desc": "පිවිසුනු පරිශීලකයන්ට පරිශීලක-විශේෂිත සමාජීය තොරතුරු පෙන්වීම සඳහා <code>&lt;welcomeUser&gt;</code> ටැගය එකතු කෙරෙයි",
+	"mp-userlevels-link": "පරිශීලක මට්ටම්",
+	"mp-welcome-upload": "උඩුගත කිරීම",
+	"mp-welcome-edit": "සංස්කරණය",
+	"mp-welcome-points": "{{PLURAL:$1|එක් ලකුණක්|ලකුණු $1 ක්}}",
+	"mp-welcome-needed-points": "<b><a href=\"$1\">$2</a></b> වෙත උසස් වීමට,තවත් <i>$3</i> {{PLURAL:$3|ලකුණක්|ලකුණු ගණනක්}} උපයා ගන්න!",
+	"mp-welcome-logged-in": "ආයුබෝවන් $1",
+	"mp-requests-title": "ඉල්ලීම්",
+	"mp-requests-message": "පහත ඉල්ලීම් ඔබ වෙත යොමු වී ඇත.",
+	"mp-request-new-message": "නව පණිවුඩය",
+	"mp-request-new-award": "නව {{PLURAL:$1|සම්මානයක්|සම්මාන $1 ක්}}",
+	"mp-request-new-gift": "නව {{PLURAL:$1|ත්‍යාගයක්|ත්‍යාගයන් $1 ක්}}",
+	"mp-request-new-foe": "නව {{PLURAL:$1|ප්‍රතිමල්ලවයෙක්|ප්‍රතිමල්ලවයන් $1 ක්}}",
+	"mp-request-new-friend": "නව {{PLURAL:$1|මිතුරෙක්|මිතුරන් $1 ක්}}"
 }

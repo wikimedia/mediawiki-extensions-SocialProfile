@@ -1,21 +1,21 @@
 {
-    "@metadata": {
-        "authors": [
-            "Naudefj"
-        ]
-    },
-    "useractivity": "Vriende se aktiwiteit",
-    "useractivity-award": "$1 het 'n prys ontvang",
-    "useractivity-all": "Wys almal",
-    "useractivity-edit": "$1 het die volgende {{PLURAL:$4|bladsy|bladsye}} wysig: $3",
-    "useractivity-foe": "$1 is nou {{PLURAL:$2|'n teenstander|teenstanders}} van $3",
-    "useractivity-friend": "$1 {{PLURAL:$2|is|is}} nou vriende met $3",
-    "useractivity-gift": "$1 het 'n geskenk van $2 ontvang",
-    "useractivity-group-edit": "$1 {{PLURAL:$1|wysiging|wysigings}}",
-    "useractivity-group-comment": "$1 {{PLURAL:$1|opmerking|opmerkings}}",
-    "useractivity-group-user_message": "$1 {{PLURAL:$1|boodskap|boodskappe}}",
-    "useractivity-group-friend": "$1 {{PLURAL:$1|vriend|vriende}}",
-    "useractivity-siteactivity": "Werf-aktiwiteit",
-    "useractivity-title": "Vriende se aktiwiteit",
-    "useractivity-user_message": "$1 het {{PLURAL:$4|'n boodskap|boodskappe}} aan $3 gestuur"
+	"@metadata": {
+		"authors": [
+			"Naudefj"
+		]
+	},
+	"useractivity": "Vriende se aktiwiteit",
+	"useractivity-award": "$1 het 'n prys ontvang",
+	"useractivity-all": "Wys almal",
+	"useractivity-edit": "$1 het die volgende {{PLURAL:$4|bladsy|bladsye}} wysig: $3",
+	"useractivity-foe": "$1 is nou {{PLURAL:$2|'n teenstander|teenstanders}} van $3",
+	"useractivity-friend": "$1 {{PLURAL:$2|is|is}} nou vriende met $3",
+	"useractivity-gift": "$1 het 'n geskenk van $2 ontvang",
+	"useractivity-group-edit": "$1 {{PLURAL:$1|wysiging|wysigings}}",
+	"useractivity-group-comment": "$1 {{PLURAL:$1|opmerking|opmerkings}}",
+	"useractivity-group-user_message": "$1 {{PLURAL:$1|boodskap|boodskappe}}",
+	"useractivity-group-friend": "$1 {{PLURAL:$1|vriend|vriende}}",
+	"useractivity-siteactivity": "Werf-aktiwiteit",
+	"useractivity-title": "Vriende se aktiwiteit",
+	"useractivity-user_message": "$1 het {{PLURAL:$4|'n boodskap|boodskappe}} aan $3 gestuur"
 }

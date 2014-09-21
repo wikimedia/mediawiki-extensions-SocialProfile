@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Nghtwlkr"
-        ]
-    },
-    "useractivity-group-comment": "{{PLURAL:$1|éin kommentar|$1 kommentarar}}",
-    "useractivity-group-user_message": "{{PLURAL:$1|éi melding|$1 meldingar}}"
+	"@metadata": {
+		"authors": [
+			"Nghtwlkr"
+		]
+	},
+	"useractivity-group-comment": "{{PLURAL:$1|éin kommentar|$1 kommentarar}}",
+	"useractivity-group-user_message": "{{PLURAL:$1|éi melding|$1 meldingar}}"
 }

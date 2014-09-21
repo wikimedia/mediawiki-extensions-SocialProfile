@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Chinneeb"
-        ]
-    },
-    "useractivity-group-comment": "{{PLURAL:$1|нэг сэтгэгдэл|$1 сэтгэгдэл}}"
+	"@metadata": {
+		"authors": [
+			"Chinneeb"
+		]
+	},
+	"useractivity-group-comment": "{{PLURAL:$1|нэг сэтгэгдэл|$1 сэтгэгдэл}}"
 }

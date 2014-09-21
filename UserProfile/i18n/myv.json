@@ -1,18 +1,18 @@
 {
-    "@metadata": {
-        "authors": [
-            "Botuzhaleny-sodamo"
-        ]
-    },
-    "user-friends-title": "Оят",
-    "user-foes-title": "Душмант",
-    "other-info-books": "Кинигат",
-    "user-profile-personal-name": "Леметь",
-    "user-profile-personal-country": "Чачи мастор",
-    "user-profile-personal-hometown": "Чачи ош",
-    "user-profile-personal-birthday": "Чачома чи",
-    "user-profile-personal-aboutme": "Эсьтедень",
-    "user-profile-personal-schools": "Школат",
-    "user-profile-picture-large": "Покш",
-    "user-profile-picture-small": "Вишкынька"
+	"@metadata": {
+		"authors": [
+			"Botuzhaleny-sodamo"
+		]
+	},
+	"user-friends-title": "Оят",
+	"user-foes-title": "Душмант",
+	"other-info-books": "Кинигат",
+	"user-profile-personal-name": "Леметь",
+	"user-profile-personal-country": "Чачи мастор",
+	"user-profile-personal-hometown": "Чачи ош",
+	"user-profile-personal-birthday": "Чачома чи",
+	"user-profile-personal-aboutme": "Эсьтедень",
+	"user-profile-personal-schools": "Школат",
+	"user-profile-picture-large": "Покш",
+	"user-profile-picture-small": "Вишкынька"
 }

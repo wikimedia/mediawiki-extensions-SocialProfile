@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Darth Kule"
-        ]
-    },
-    "ur-main-page": "Pagina principale",
-    "ur-remove": "Rimuovi",
-    "ur-cancel": "Annulla",
-    "ur-login": "Esegui il login",
-    "ur-accept": "Accetta",
-    "ur-reject": "Rifiuta"
+	"@metadata": {
+		"authors": [
+			"Darth Kule"
+		]
+	},
+	"ur-main-page": "Pagina principale",
+	"ur-remove": "Rimuovi",
+	"ur-cancel": "Annulla",
+	"ur-login": "Esegui il login",
+	"ur-accept": "Accetta",
+	"ur-reject": "Rifiuta"
 }

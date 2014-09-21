@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Marmzok"
-        ]
-    },
-    "mp-userlevels-link": "ئاستەکانی بەکارهێنەر",
-    "mp-welcome-upload": "بارکردن",
-    "mp-welcome-edit": "دەستکاری کردن",
-    "mp-requests-title": "داواکاریەکان",
-    "mp-request-new-message": "پەیامی نوێ"
+	"@metadata": {
+		"authors": [
+			"Marmzok"
+		]
+	},
+	"mp-userlevels-link": "ئاستەکانی بەکارهێنەر",
+	"mp-welcome-upload": "بارکردن",
+	"mp-welcome-edit": "دەستکاری کردن",
+	"mp-requests-title": "داواکاریەکان",
+	"mp-request-new-message": "پەیامی نوێ"
 }

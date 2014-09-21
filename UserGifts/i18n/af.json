@@ -1,17 +1,17 @@
 {
-    "@metadata": {
-        "authors": [
-            "Naudefj"
-        ]
-    },
-    "giftmanager-private": "privaat",
-    "g-cancel": "Kanselleer",
-    "g-go-back": "Gaan terug",
-    "g-large": "Groot",
-    "g-main-page": "Tuisblad",
-    "g-medium": "Middelmatig",
-    "g-new": "nuut",
-    "g-next": "Volgende",
-    "g-previous": "Vorige",
-    "g-small": "Klein"
+	"@metadata": {
+		"authors": [
+			"Naudefj"
+		]
+	},
+	"giftmanager-private": "privaat",
+	"g-cancel": "Kanselleer",
+	"g-go-back": "Gaan terug",
+	"g-large": "Groot",
+	"g-main-page": "Tuisblad",
+	"g-medium": "Middelmatig",
+	"g-new": "nuut",
+	"g-next": "Volgende",
+	"g-previous": "Vorige",
+	"g-small": "Klein"
 }

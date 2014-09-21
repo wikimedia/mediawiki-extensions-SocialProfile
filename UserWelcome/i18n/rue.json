@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Gazeb"
-        ]
-    },
-    "mp-welcome-logged-in": "Агой $1",
-    "mp-requests-title": "Пожадавкы"
+	"@metadata": {
+		"authors": [
+			"Gazeb"
+		]
+	},
+	"mp-welcome-logged-in": "Агой $1",
+	"mp-requests-title": "Пожадавкы"
 }

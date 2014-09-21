@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "Prima klasy4na",
-            "Тест"
-        ]
-    },
-    "mp-welcome-upload": "Завантажити",
-    "mp-welcome-edit": "Змінити",
-    "mp-request-new-message": "нове повідомлення"
+	"@metadata": {
+		"authors": [
+			"Prima klasy4na",
+			"Тест"
+		]
+	},
+	"mp-welcome-upload": "Завантажити",
+	"mp-welcome-edit": "Змінити",
+	"mp-request-new-message": "нове повідомлення"
 }

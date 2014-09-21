@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "TRYPPN"
-        ]
-    },
-    "userboard_delete": "நீக்கவும்",
-    "userboard_private": "தனிப்பட்ட",
-    "userboard_public": "பொதுவான",
-    "userboard_nextpage": "அடுத்தது",
-    "userboard_nomessages": "செய்திகள் இல்லை.",
-    "userboard_sendbutton": "அனுப்பு"
+	"@metadata": {
+		"authors": [
+			"TRYPPN"
+		]
+	},
+	"userboard_delete": "நீக்கவும்",
+	"userboard_private": "தனிப்பட்ட",
+	"userboard_public": "பொதுவான",
+	"userboard_nextpage": "அடுத்தது",
+	"userboard_nomessages": "செய்திகள் இல்லை.",
+	"userboard_sendbutton": "அனுப்பு"
 }

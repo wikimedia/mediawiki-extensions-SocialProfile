@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "Prima klasy4na",
-            "Тест"
-        ]
-    },
-    "top-fans-stats-vote-count": "{{PLURAL:$1|Голос|Голоси|Голосів}}",
-    "top-fans-stats-edit-count": "{{PLURAL:$1|Редагування|Редагувань}}",
-    "top-fans-stats-comment-count": "{{PLURAL:$1|Коментар|Коментарі}}"
+	"@metadata": {
+		"authors": [
+			"Prima klasy4na",
+			"Тест"
+		]
+	},
+	"top-fans-stats-vote-count": "{{PLURAL:$1|Голос|Голоси|Голосів}}",
+	"top-fans-stats-edit-count": "{{PLURAL:$1|Редагування|Редагувань}}",
+	"top-fans-stats-comment-count": "{{PLURAL:$1|Коментар|Коментарі}}"
 }

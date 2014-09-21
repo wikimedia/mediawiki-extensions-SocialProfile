@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Игорь Бродский"
-        ]
-    },
-    "mp-welcome-upload": "Jügutoitta",
-    "mp-welcome-edit": "Redaktiruida"
+	"@metadata": {
+		"authors": [
+			"Игорь Бродский"
+		]
+	},
+	"mp-welcome-upload": "Jügutoitta",
+	"mp-welcome-edit": "Redaktiruida"
 }

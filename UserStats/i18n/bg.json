@@ -1,23 +1,23 @@
 {
-    "@metadata": {
-        "authors": [
-            "DCLXVI"
-        ]
-    },
-    "user-stats-weekly-title": "Най-много точки тази седмица",
-    "user-stats-monthly-title": "Най-много точки този месец",
-    "topusers": "Топ потребители",
-    "top-fans-by-points-nav-header": "Топ фенове",
-    "top-fans-total-points-link": "Общо точки",
-    "top-fans-weekly-points-link": "Точки тази седмица",
-    "top-fans-monthly-points-link": "Точки този месец",
-    "top-fans-points": "точки",
-    "top-fans-bad-field-title": "Опа!",
-    "top-fans-stats-edit-count": "{{PLURAL:$1|Редакция|Редакции}}",
-    "top-fans-stats-comment-count": "{{PLURAL:$1|Коментар|Коментари}}",
-    "top-fans-stats-friends-count": "{{PLURAL:$1|Приятел|Приятели}}",
-    "top-fans-stats-foe-count": "{{PLURAL:$1|Неприятел|Неприятели}}",
-    "top-fans-stats-opinions-created": "{{PLURAL:$1|Мнение|Мнения}}",
-    "level-advance-subject": "Вече сте „$1“ в {{SITENAME}}!",
-    "level-advance-body": "Привет $1,\n\nВече сте с ранг „$2“ в {{SITENAME}}!\n\nПоздравления,\n\nЕкипът на {{SITENAME}}\n\n---\nНе искате да получавате повече писма от нас?\n\nМожете да промените настройките си за известяване от следната препратка: $3."
+	"@metadata": {
+		"authors": [
+			"DCLXVI"
+		]
+	},
+	"user-stats-weekly-title": "Най-много точки тази седмица",
+	"user-stats-monthly-title": "Най-много точки този месец",
+	"topusers": "Топ потребители",
+	"top-fans-by-points-nav-header": "Топ фенове",
+	"top-fans-total-points-link": "Общо точки",
+	"top-fans-weekly-points-link": "Точки тази седмица",
+	"top-fans-monthly-points-link": "Точки този месец",
+	"top-fans-points": "точки",
+	"top-fans-bad-field-title": "Опа!",
+	"top-fans-stats-edit-count": "{{PLURAL:$1|Редакция|Редакции}}",
+	"top-fans-stats-comment-count": "{{PLURAL:$1|Коментар|Коментари}}",
+	"top-fans-stats-friends-count": "{{PLURAL:$1|Приятел|Приятели}}",
+	"top-fans-stats-foe-count": "{{PLURAL:$1|Неприятел|Неприятели}}",
+	"top-fans-stats-opinions-created": "{{PLURAL:$1|Мнение|Мнения}}",
+	"level-advance-subject": "Вече сте „$1“ в {{SITENAME}}!",
+	"level-advance-body": "Привет $1,\n\nВече сте с ранг „$2“ в {{SITENAME}}!\n\nПоздравления,\n\nЕкипът на {{SITENAME}}\n\n---\nНе искате да получавате повече писма от нас?\n\nМожете да промените настройките си за известяване от следната препратка: $3."
 }

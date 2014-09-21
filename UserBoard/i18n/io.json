@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Malafaya"
-        ]
-    },
-    "userboard_nextpage": "sequanta",
-    "userboard_prevpage": "antea"
+	"@metadata": {
+		"authors": [
+			"Malafaya"
+		]
+	},
+	"userboard_nextpage": "sequanta",
+	"userboard_prevpage": "antea"
 }

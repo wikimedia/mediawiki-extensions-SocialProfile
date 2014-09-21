@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "Jon Harald Søby"
-        ]
-    },
-    "ur-main-page": "Forside",
-    "ur-next": "næste",
-    "ur-cancel": "Afbryd",
-    "ur-login": "Log på"
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"ur-main-page": "Forside",
+	"ur-next": "næste",
+	"ur-cancel": "Afbryd",
+	"ur-login": "Log på"
 }

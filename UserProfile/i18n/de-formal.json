@@ -1,23 +1,23 @@
 {
-    "@metadata": {
-        "authors": [
-            "Imre",
-            "The Evil IP address"
-        ]
-    },
-    "profile-updated-personal": "Ihr Profil aktualisieren",
-    "user-profile-update-notloggedin-title": "Sie können Ihr Profil nicht unangemeldet bearbeiten.",
-    "user-profile-update-notloggedin-text": "Sie können Ihr Profil nicht unangemeldet bearbeiten.\nKlicken Sie [[Special:UserLogin|hier]] um sich anzumelden oder klicken Sie [[Special:UserLogin/signup|hier]] um ein Benutzerkonto zu erstellen.",
-    "user-profile-update-saved": "Ihr Profil wurde gespeichert",
-    "user-profile-personal-email-needs-auth": "(Ihre E-Mail-Adresse muss bestätigt sein, damit Sie Benachrichtigungen erhalten können)",
-    "user-profile-sports-title": "Bearbeiten Sie Ihre Lieblings-Sportarten und -Teams",
-    "user-profile-sports-notloggedintext": "Sie müssen angemeldet sein, um Ihr Profil zu bearbeiten.",
-    "user-profile-sports-teamremoved": "Ihr Team wurde entfernt",
-    "user-profile-sports-teamsaved": "Ihre Teams wurden gespeichert",
-    "uploadavatar": "Ihr Bild hochladen",
-    "user-profile-picture-yourpicture": "Ihr Bild",
-    "user-profile-picture-yourpicturestext": "Unten sind die Bilder, die auf Ihrem Profil, Ihren Netzwerkseiten und bei Ihren Kommentaren angezeigt werden.",
-    "user-profile-picture-choosepicture": "Wählen Sie Ihr Bild",
-    "user-profile-picture-picsize": "Ihr Bild muss eine jpeg-, png- oder gif-Datei sein, die weniger als 100kb groß ist.",
-    "user-board-login-message": "Sie müssen <a href=\"$1\">angemeldet sein</a>, um Nachrichten an andere Nutzer zu senden"
+	"@metadata": {
+		"authors": [
+			"Imre",
+			"The Evil IP address"
+		]
+	},
+	"profile-updated-personal": "Ihr Profil aktualisieren",
+	"user-profile-update-notloggedin-title": "Sie können Ihr Profil nicht unangemeldet bearbeiten.",
+	"user-profile-update-notloggedin-text": "Sie können Ihr Profil nicht unangemeldet bearbeiten.\nKlicken Sie [[Special:UserLogin|hier]] um sich anzumelden oder klicken Sie [[Special:UserLogin/signup|hier]] um ein Benutzerkonto zu erstellen.",
+	"user-profile-update-saved": "Ihr Profil wurde gespeichert",
+	"user-profile-personal-email-needs-auth": "(Ihre E-Mail-Adresse muss bestätigt sein, damit Sie Benachrichtigungen erhalten können)",
+	"user-profile-sports-title": "Bearbeiten Sie Ihre Lieblings-Sportarten und -Teams",
+	"user-profile-sports-notloggedintext": "Sie müssen angemeldet sein, um Ihr Profil zu bearbeiten.",
+	"user-profile-sports-teamremoved": "Ihr Team wurde entfernt",
+	"user-profile-sports-teamsaved": "Ihre Teams wurden gespeichert",
+	"uploadavatar": "Ihr Bild hochladen",
+	"user-profile-picture-yourpicture": "Ihr Bild",
+	"user-profile-picture-yourpicturestext": "Unten sind die Bilder, die auf Ihrem Profil, Ihren Netzwerkseiten und bei Ihren Kommentaren angezeigt werden.",
+	"user-profile-picture-choosepicture": "Wählen Sie Ihr Bild",
+	"user-profile-picture-picsize": "Ihr Bild muss eine jpeg-, png- oder gif-Datei sein, die weniger als 100kb groß ist.",
+	"user-board-login-message": "Sie müssen <a href=\"$1\">angemeldet sein</a>, um Nachrichten an andere Nutzer zu senden"
 }

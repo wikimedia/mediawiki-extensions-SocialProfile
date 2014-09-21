@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "Gazeb"
-        ]
-    },
-    "topusers": "Най хоснователї",
-    "top-fans-by-points-nav-header": "Най фанушікы",
-    "top-fans-by-category-nav-header": "Най подля катеґорії",
-    "top-fans-bad-field-title": "Уупс!"
+	"@metadata": {
+		"authors": [
+			"Gazeb"
+		]
+	},
+	"topusers": "Най хоснователї",
+	"top-fans-by-points-nav-header": "Най фанушікы",
+	"top-fans-by-category-nav-header": "Най подля катеґорії",
+	"top-fans-bad-field-title": "Уупс!"
 }

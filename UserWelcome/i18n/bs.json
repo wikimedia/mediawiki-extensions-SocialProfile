@@ -1,21 +1,21 @@
 {
-    "@metadata": {
-        "authors": [
-            "CERminator"
-        ]
-    },
-    "userwelcome-desc": "Dodaje <code>&lt;welcomeUser&gt;</code> posebnu oznaku logiranim korisnicima sa posebnim socijalnim informacijama",
-    "mp-userlevels-link": "Nivoi korisnika",
-    "mp-welcome-upload": "Postavljanje",
-    "mp-welcome-edit": "Izmjena",
-    "mp-welcome-points": "$1 {{PLURAL:$1|bod|boda|bodova}}",
-    "mp-welcome-needed-points": "Da bi ste napredovali do <b><a href=\"$1\">$2</a></b> trebate još {{PLURAL:$3|$3 bod|$3 boda|$3 bodova}}!",
-    "mp-welcome-logged-in": "Zdravo $1",
-    "mp-requests-title": "Zahtjevi",
-    "mp-requests-message": "Imate slijedeće zahtjeve.",
-    "mp-request-new-message": "nova poruka",
-    "mp-request-new-award": "$1 {{PLURAL:$1|nova nagrada|nove nagrade|novih nagrada}}",
-    "mp-request-new-gift": "$1 {{PLURAL:$1|novi poklon|nova poklona|novih poklona}}",
-    "mp-request-new-foe": "$1 {{PLURAL:$1|novi neprijatelj|nova neprijatelja|novih neprijatelja}}",
-    "mp-request-new-friend": "$1 {{PLURAL:$1|novi prijatelja|nova prijatelja|novih prijatelja}}"
+	"@metadata": {
+		"authors": [
+			"CERminator"
+		]
+	},
+	"userwelcome-desc": "Dodaje <code>&lt;welcomeUser&gt;</code> posebnu oznaku logiranim korisnicima sa posebnim socijalnim informacijama",
+	"mp-userlevels-link": "Nivoi korisnika",
+	"mp-welcome-upload": "Postavljanje",
+	"mp-welcome-edit": "Izmjena",
+	"mp-welcome-points": "$1 {{PLURAL:$1|bod|boda|bodova}}",
+	"mp-welcome-needed-points": "Da bi ste napredovali do <b><a href=\"$1\">$2</a></b> trebate još {{PLURAL:$3|$3 bod|$3 boda|$3 bodova}}!",
+	"mp-welcome-logged-in": "Zdravo $1",
+	"mp-requests-title": "Zahtjevi",
+	"mp-requests-message": "Imate slijedeće zahtjeve.",
+	"mp-request-new-message": "nova poruka",
+	"mp-request-new-award": "$1 {{PLURAL:$1|nova nagrada|nove nagrade|novih nagrada}}",
+	"mp-request-new-gift": "$1 {{PLURAL:$1|novi poklon|nova poklona|novih poklona}}",
+	"mp-request-new-foe": "$1 {{PLURAL:$1|novi neprijatelj|nova neprijatelja|novih neprijatelja}}",
+	"mp-request-new-friend": "$1 {{PLURAL:$1|novi prijatelja|nova prijatelja|novih prijatelja}}"
 }

@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Tomasdd"
-        ]
-    },
-    "populate-user-profile-done": "Pridėta $1 profiliai",
-    "user-profile-personal-name": "Vardas"
+	"@metadata": {
+		"authors": [
+			"Tomasdd"
+		]
+	},
+	"populate-user-profile-done": "Pridėta $1 profiliai",
+	"user-profile-personal-name": "Vardas"
 }

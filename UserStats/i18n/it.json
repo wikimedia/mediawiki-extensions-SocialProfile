@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Darth Kule"
-        ]
-    },
-    "top-fans-stats-edit-count": "{{PLURAL:$1|Modifica|Modifiche}}"
+	"@metadata": {
+		"authors": [
+			"Darth Kule"
+		]
+	},
+	"top-fans-stats-edit-count": "{{PLURAL:$1|Modifica|Modifiche}}"
 }

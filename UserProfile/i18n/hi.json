@@ -1,17 +1,17 @@
 {
-    "@metadata": {
-        "authors": [
-            "Kaustubh"
-        ]
-    },
-    "other-info-title": "अन्य ज़ानकारी",
-    "user-personal-info-title": "वैयक्तिक ज़ानकारी",
-    "user-personal-info-real-name": "असली नाम",
-    "user-profile-section-personal": "वैयक्तिक ज़ानकारी",
-    "user-profile-section-interests": "अन्य ज़ानकारी",
-    "user-profile-personal-name": "नाम",
-    "user-profile-personal-email": "इ-मेल",
-    "user-profile-picture-large": "बडा",
-    "user-profile-picture-medium": "मध्यम",
-    "user-profile-picture-small": "छोटा"
+	"@metadata": {
+		"authors": [
+			"Kaustubh"
+		]
+	},
+	"other-info-title": "अन्य ज़ानकारी",
+	"user-personal-info-title": "वैयक्तिक ज़ानकारी",
+	"user-personal-info-real-name": "असली नाम",
+	"user-profile-section-personal": "वैयक्तिक ज़ानकारी",
+	"user-profile-section-interests": "अन्य ज़ानकारी",
+	"user-profile-personal-name": "नाम",
+	"user-profile-personal-email": "इ-मेल",
+	"user-profile-picture-large": "बडा",
+	"user-profile-picture-medium": "मध्यम",
+	"user-profile-picture-small": "छोटा"
 }

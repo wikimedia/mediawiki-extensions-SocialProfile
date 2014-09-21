@@ -1,21 +1,21 @@
 {
-    "@metadata": {
-        "authors": [
-            "Pras"
-        ]
-    },
-    "userwelcome-desc": "Nambahaké tag <code>&lt;welcomeUser&gt;</code> kanggo nuduhaké info sosial mligi-panganggo marang panganggo sing mlebu log",
-    "mp-userlevels-link": "Tataran panganggo",
-    "mp-welcome-upload": "Unggah",
-    "mp-welcome-edit": "Sunting",
-    "mp-welcome-points": "$1 {{PLURAL:$1|poin|poin}}",
-    "mp-welcome-needed-points": "Kanggo maju menyang <b><a href=\"$1\">$2</a></b> kumpulna <i>$3</i> {{PLURAL:$3|poin|poin}} luwih akèh!",
-    "mp-welcome-logged-in": "Halo $1",
-    "mp-requests-title": "Panyuwunan",
-    "mp-requests-message": "Ana panyuwunan iki marang panjenengan.",
-    "mp-request-new-message": "warta/pesen anyar",
-    "mp-request-new-award": "$1 {{PLURAL:$1|bebungah|bebungah}} anyar",
-    "mp-request-new-gift": "$1 {{PLURAL:$1|pawèwèh|pawèwèh}} anyar",
-    "mp-request-new-foe": "$1 {{PLURAL:$1|lawan|lawan}} anyar",
-    "mp-request-new-friend": "$1 {{PLURAL:$1|kanca|kanca-kanca}} anyar"
+	"@metadata": {
+		"authors": [
+			"Pras"
+		]
+	},
+	"userwelcome-desc": "Nambahaké tag <code>&lt;welcomeUser&gt;</code> kanggo nuduhaké info sosial mligi-panganggo marang panganggo sing mlebu log",
+	"mp-userlevels-link": "Tataran panganggo",
+	"mp-welcome-upload": "Unggah",
+	"mp-welcome-edit": "Sunting",
+	"mp-welcome-points": "$1 {{PLURAL:$1|poin|poin}}",
+	"mp-welcome-needed-points": "Kanggo maju menyang <b><a href=\"$1\">$2</a></b> kumpulna <i>$3</i> {{PLURAL:$3|poin|poin}} luwih akèh!",
+	"mp-welcome-logged-in": "Halo $1",
+	"mp-requests-title": "Panyuwunan",
+	"mp-requests-message": "Ana panyuwunan iki marang panjenengan.",
+	"mp-request-new-message": "warta/pesen anyar",
+	"mp-request-new-award": "$1 {{PLURAL:$1|bebungah|bebungah}} anyar",
+	"mp-request-new-gift": "$1 {{PLURAL:$1|pawèwèh|pawèwèh}} anyar",
+	"mp-request-new-foe": "$1 {{PLURAL:$1|lawan|lawan}} anyar",
+	"mp-request-new-friend": "$1 {{PLURAL:$1|kanca|kanca-kanca}} anyar"
 }

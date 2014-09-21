@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Avjoska"
-        ]
-    },
-    "topusers": "Tippkasutajad",
-    "top-fans-by-points-nav-header": "Tippfännid",
-    "top-fans-weekly-points-link": "Punkte sel nädalal",
-    "top-fans-monthly-points-link": "Punkte sel kuul",
-    "top-fans-points": "punktid",
-    "top-fans-bad-field-title": "Ups!"
+	"@metadata": {
+		"authors": [
+			"Avjoska"
+		]
+	},
+	"topusers": "Tippkasutajad",
+	"top-fans-by-points-nav-header": "Tippfännid",
+	"top-fans-weekly-points-link": "Punkte sel nädalal",
+	"top-fans-monthly-points-link": "Punkte sel kuul",
+	"top-fans-points": "punktid",
+	"top-fans-bad-field-title": "Ups!"
 }

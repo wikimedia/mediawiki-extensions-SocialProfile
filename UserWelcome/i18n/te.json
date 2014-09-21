@@ -1,19 +1,19 @@
 {
-    "@metadata": {
-        "authors": [
-            "Veeven"
-        ]
-    },
-    "mp-userlevels-link": "వాడుకరి స్థాయిలు",
-    "mp-welcome-upload": "ఎక్కింపు",
-    "mp-welcome-edit": "మార్చు",
-    "mp-welcome-points": "$1 {{PLURAL:$1|పాయింటు|పాయింట్లు}}",
-    "mp-welcome-logged-in": "హలో $1",
-    "mp-requests-title": "అభ్యర్థనలు",
-    "mp-requests-message": "మీకై ఈ క్రింది అభ్యర్థనలు ఉన్నాయి.",
-    "mp-request-new-message": "కొత్త సందేశం",
-    "mp-request-new-award": "$1 కొత్త {{PLURAL:$1|అవార్డు|అవార్డులు}}",
-    "mp-request-new-gift": "$1 కొత్త {{PLURAL:$1|బహుమతి|బహుమతులు}}",
-    "mp-request-new-foe": "$1 కొత్త {{PLURAL:$1|శతృవు|శతృవులు}}",
-    "mp-request-new-friend": "$1 కొత్త {{PLURAL:$1|మిత్రుడు|మిత్రులు}}"
+	"@metadata": {
+		"authors": [
+			"Veeven"
+		]
+	},
+	"mp-userlevels-link": "వాడుకరి స్థాయిలు",
+	"mp-welcome-upload": "ఎక్కింపు",
+	"mp-welcome-edit": "మార్చు",
+	"mp-welcome-points": "$1 {{PLURAL:$1|పాయింటు|పాయింట్లు}}",
+	"mp-welcome-logged-in": "హలో $1",
+	"mp-requests-title": "అభ్యర్థనలు",
+	"mp-requests-message": "మీకై ఈ క్రింది అభ్యర్థనలు ఉన్నాయి.",
+	"mp-request-new-message": "కొత్త సందేశం",
+	"mp-request-new-award": "$1 కొత్త {{PLURAL:$1|అవార్డు|అవార్డులు}}",
+	"mp-request-new-gift": "$1 కొత్త {{PLURAL:$1|బహుమతి|బహుమతులు}}",
+	"mp-request-new-foe": "$1 కొత్త {{PLURAL:$1|శతృవు|శతృవులు}}",
+	"mp-request-new-friend": "$1 కొత్త {{PLURAL:$1|మిత్రుడు|మిత్రులు}}"
 }

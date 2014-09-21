@@ -1,14 +1,14 @@
 {
-    "@metadata": {
-        "authors": [
-            "Gazeb"
-        ]
-    },
-    "ur-main-page": "Головна сторінка",
-    "ur-add-friend": "Придати як приятеля",
-    "ur-previous": "попереднїй",
-    "ur-next": "далшый",
-    "ur-cancel": "Зрушыти",
-    "ur-add-button-friend": "Придати як приятеля",
-    "ur-accept": "Підтвердити"
+	"@metadata": {
+		"authors": [
+			"Gazeb"
+		]
+	},
+	"ur-main-page": "Головна сторінка",
+	"ur-add-friend": "Придати як приятеля",
+	"ur-previous": "попереднїй",
+	"ur-next": "далшый",
+	"ur-cancel": "Зрушыти",
+	"ur-add-button-friend": "Придати як приятеля",
+	"ur-accept": "Підтвердити"
 }

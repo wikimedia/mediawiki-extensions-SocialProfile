@@ -1,16 +1,16 @@
 {
-    "@metadata": {
-        "authors": [
-            "פוילישער"
-        ]
-    },
-    "giftmanager-private": "פריוואט",
-    "g-choose-file": "קלויבט טעקע:",
-    "g-cancel": "אַנולירן",
-    "g-created-by": "געשאַפֿן דורך",
-    "g-give-separator": "אדער",
-    "g-large": "גרויס",
-    "g-main-page": "הויפט בלאט",
-    "g-new": "נײַ",
-    "g-next": "נעקסט"
+	"@metadata": {
+		"authors": [
+			"פוילישער"
+		]
+	},
+	"giftmanager-private": "פריוואט",
+	"g-choose-file": "קלויבט טעקע:",
+	"g-cancel": "אַנולירן",
+	"g-created-by": "געשאַפֿן דורך",
+	"g-give-separator": "אדער",
+	"g-large": "גרויס",
+	"g-main-page": "הויפט בלאט",
+	"g-new": "נײַ",
+	"g-next": "נעקסט"
 }

@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "ga-goback": "Indietro",
-    "ga-large": "Grande",
-    "ga-medium": "Medio",
-    "ga-new": "Nuovo",
-    "ga-next": "Succ",
-    "ga-previous": "Prec",
-    "ga-small": "Piccolo"
+	"@metadata": {
+		"authors": []
+	},
+	"ga-goback": "Indietro",
+	"ga-large": "Grande",
+	"ga-medium": "Medio",
+	"ga-new": "Nuovo",
+	"ga-next": "Succ",
+	"ga-previous": "Prec",
+	"ga-small": "Piccolo"
 }

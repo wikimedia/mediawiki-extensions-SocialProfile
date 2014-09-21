@@ -1,21 +1,21 @@
 {
-    "@metadata": {
-        "authors": [
-            "Lajsikonik"
-        ]
-    },
-    "userwelcome-desc": "Dodej <code>&lt;welcomeUser&gt;</code> tag do pokozańo dedykowanym specyficznymu użytkowńikowi informacyjům socyjolnym lů zalogowanych użytkowńikůw",
-    "mp-userlevels-link": "Poźůmy użytkowńika",
-    "mp-welcome-upload": "Wćepńij",
-    "mp-welcome-edit": "Sprowjej",
-    "mp-welcome-points": "$1 půnktůw",
-    "mp-welcome-needed-points": "Coby przyńść ku <b><a href=\"$1\">$2</a></b> zdobůńdź <i>$3</i> wjyncyj {{PLURAL:$3|půnkt|půnktůw}}!",
-    "mp-welcome-logged-in": "Witej $1",
-    "mp-requests-title": "Żůndańo",
-    "mp-requests-message": "Mosz nastympujůnce żůndańa.",
-    "mp-request-new-message": "nowo wjadůmość",
-    "mp-request-new-award": "$1 {{PLURAL:$1|nowo nadgroda|nowe nadgrody}}",
-    "mp-request-new-gift": "$1 {{PLURAL:$1|nowy geszynk|nowe geszynki}}",
-    "mp-request-new-foe": "$1 {{PLURAL:$1|nowy przećiwńik|nowe przećiwńiki}}",
-    "mp-request-new-friend": "$1 {{PLURAL:$1|nowy przijaćel|nowych przijaćeli}}"
+	"@metadata": {
+		"authors": [
+			"Lajsikonik"
+		]
+	},
+	"userwelcome-desc": "Dodej <code>&lt;welcomeUser&gt;</code> tag do pokozańo dedykowanym specyficznymu użytkowńikowi informacyjům socyjolnym lů zalogowanych użytkowńikůw",
+	"mp-userlevels-link": "Poźůmy użytkowńika",
+	"mp-welcome-upload": "Wćepńij",
+	"mp-welcome-edit": "Sprowjej",
+	"mp-welcome-points": "$1 půnktůw",
+	"mp-welcome-needed-points": "Coby przyńść ku <b><a href=\"$1\">$2</a></b> zdobůńdź <i>$3</i> wjyncyj {{PLURAL:$3|půnkt|půnktůw}}!",
+	"mp-welcome-logged-in": "Witej $1",
+	"mp-requests-title": "Żůndańo",
+	"mp-requests-message": "Mosz nastympujůnce żůndańa.",
+	"mp-request-new-message": "nowo wjadůmość",
+	"mp-request-new-award": "$1 {{PLURAL:$1|nowo nadgroda|nowe nadgrody}}",
+	"mp-request-new-gift": "$1 {{PLURAL:$1|nowy geszynk|nowe geszynki}}",
+	"mp-request-new-foe": "$1 {{PLURAL:$1|nowy przećiwńik|nowe przećiwńiki}}",
+	"mp-request-new-friend": "$1 {{PLURAL:$1|nowy przijaćel|nowych przijaćeli}}"
 }

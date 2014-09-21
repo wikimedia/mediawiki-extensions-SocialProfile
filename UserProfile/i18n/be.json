@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Тест"
-        ]
-    },
-    "user-stats-title": "Статыстыка",
-    "user-profile-personal-city": "Горад"
+	"@metadata": {
+		"authors": [
+			"Тест"
+		]
+	},
+	"user-stats-title": "Статыстыка",
+	"user-profile-personal-city": "Горад"
 }

@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Tomasdd"
-        ]
-    },
-    "userboard_delete": "Pašalinti"
+	"@metadata": {
+		"authors": [
+			"Tomasdd"
+		]
+	},
+	"userboard_delete": "Pašalinti"
 }

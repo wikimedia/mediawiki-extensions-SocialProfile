@@ -1,33 +1,33 @@
 {
-    "@metadata": {
-        "authors": [
-            "DCLXVI"
-        ]
-    },
-    "giftmanager-addgift": "+ Добавяне на нов подарък",
-    "giftmanager-description": "описание на подаръка",
-    "giftmanager-image": "добавяне/заменяне на картинката",
-    "giftmanager-giftcreated": "Подаръкът беше създаден",
-    "giftmanager-giftsaved": "Подаръкът беше съхранен",
-    "giftmanager-view": "Преглеждане на списъка с подаръци",
-    "g-add-message": "Добавяне на съобщение",
-    "g-back-link": "< Връщане към страницата на $1",
-    "g-choose-file": "Избиране на файл:",
-    "g-cancel": "Отмяна",
-    "g-count": "$1 има $2 {{PLURAL:$2|подарък|подаръка}}.",
-    "g-created-by": "създаден от",
-    "g-current-image": "Текуща картинка",
-    "g-error-message-login": "За да давате подаръци е необходимо да влезете в системата",
-    "g-from": "от <a href=\"$1\">$2</a>",
-    "g-gift": "подарък",
-    "g-gift-name": "име на подаръка",
-    "g-give-all-message-title": "Добавяне на съобщение",
-    "g-give-list-select": "избиране на приятел",
-    "g-give-separator": "или",
-    "g-large": "Голяма",
-    "g-medium": "Средна",
-    "g-next": "Следваща",
-    "g-previous": "Предишна",
-    "g-remove": "Премахване",
-    "g-small": "Малка"
+	"@metadata": {
+		"authors": [
+			"DCLXVI"
+		]
+	},
+	"giftmanager-addgift": "+ Добавяне на нов подарък",
+	"giftmanager-description": "описание на подаръка",
+	"giftmanager-image": "добавяне/заменяне на картинката",
+	"giftmanager-giftcreated": "Подаръкът беше създаден",
+	"giftmanager-giftsaved": "Подаръкът беше съхранен",
+	"giftmanager-view": "Преглеждане на списъка с подаръци",
+	"g-add-message": "Добавяне на съобщение",
+	"g-back-link": "< Връщане към страницата на $1",
+	"g-choose-file": "Избиране на файл:",
+	"g-cancel": "Отмяна",
+	"g-count": "$1 има $2 {{PLURAL:$2|подарък|подаръка}}.",
+	"g-created-by": "създаден от",
+	"g-current-image": "Текуща картинка",
+	"g-error-message-login": "За да давате подаръци е необходимо да влезете в системата",
+	"g-from": "от <a href=\"$1\">$2</a>",
+	"g-gift": "подарък",
+	"g-gift-name": "име на подаръка",
+	"g-give-all-message-title": "Добавяне на съобщение",
+	"g-give-list-select": "избиране на приятел",
+	"g-give-separator": "или",
+	"g-large": "Голяма",
+	"g-medium": "Средна",
+	"g-next": "Следваща",
+	"g-previous": "Предишна",
+	"g-remove": "Премахване",
+	"g-small": "Малка"
 }

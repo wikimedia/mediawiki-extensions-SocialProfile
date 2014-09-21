@@ -1,22 +1,22 @@
 {
-    "@metadata": {
-        "authors": [
-            "Michawiki"
-        ]
-    },
-    "useractivity": "Aktiwita přećelow",
-    "useractivity-award": "$1 je myto dóstał",
-    "useractivity-all": "Wšě sej wobhladać",
-    "useractivity-edit": "$1 {{PLURAL:$4|wobdźěła stronu|wobdźěła slědowacej stronje|wobdźěła slědowace strony|wobdźěła slědowace strony}} $3",
-    "useractivity-foe": "$1 {{PLURAL:$2|je nětko njepřećel wot|staj nětko njepřećelej wot|su nětko njepřećeljo wot|su nětko njepřećeljo wot}} $3",
-    "useractivity-friend": "$1 {{PLURAL:$2|je nětko přećel wot|staj nětko přećeljo wot|su nětko přećeljo wot|su nětko přećeljo wot}} $3",
-    "useractivity-gift": "$1 dósta dar wot $2",
-    "useractivity-group-edit": "{{PLURAL:$1|jedna změna|$1 změnje|$1 změny|$1 změnow}}",
-    "useractivity-group-comment": "{{PLURAL:$1|jedyn komentar|$1 komentaraj|$1 komentary|$1 komentarow}}",
-    "useractivity-group-user_message": "{{PLURAL:$1|jedna zdźělenka|$1 zdźělence|$1 zdźělenki|$1 zdźělenkow}}",
-    "useractivity-group-friend": "{{PLURAL:$1|jedyn přećel|$1 přećelej|$1 přećeljo|$1 přećelow}}",
-    "useractivity-siteactivity": "Aktiwita sydła",
-    "useractivity-title": "Aktiwita přećelow",
-    "useractivity-user_message": "$1 {{PLURAL:$4|pósła powěsć na|pósła powěsći na|pósła powěsć na|pósła powěsće na}} $3",
-    "useractivity-comment": "$1 je na {{PLURAL:$4|stronje komentował|slědowacymaj stronomaj|slědowacych stronach komentował|slědowacych stronach komentował}}: $3"
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"useractivity": "Aktiwita přećelow",
+	"useractivity-award": "$1 je myto dóstał",
+	"useractivity-all": "Wšě sej wobhladać",
+	"useractivity-edit": "$1 {{PLURAL:$4|wobdźěła stronu|wobdźěła slědowacej stronje|wobdźěła slědowace strony|wobdźěła slědowace strony}} $3",
+	"useractivity-foe": "$1 {{PLURAL:$2|je nětko njepřećel wot|staj nětko njepřećelej wot|su nětko njepřećeljo wot|su nětko njepřećeljo wot}} $3",
+	"useractivity-friend": "$1 {{PLURAL:$2|je nětko přećel wot|staj nětko přećeljo wot|su nětko přećeljo wot|su nětko přećeljo wot}} $3",
+	"useractivity-gift": "$1 dósta dar wot $2",
+	"useractivity-group-edit": "{{PLURAL:$1|jedna změna|$1 změnje|$1 změny|$1 změnow}}",
+	"useractivity-group-comment": "{{PLURAL:$1|jedyn komentar|$1 komentaraj|$1 komentary|$1 komentarow}}",
+	"useractivity-group-user_message": "{{PLURAL:$1|jedna zdźělenka|$1 zdźělence|$1 zdźělenki|$1 zdźělenkow}}",
+	"useractivity-group-friend": "{{PLURAL:$1|jedyn přećel|$1 přećelej|$1 přećeljo|$1 přećelow}}",
+	"useractivity-siteactivity": "Aktiwita sydła",
+	"useractivity-title": "Aktiwita přećelow",
+	"useractivity-user_message": "$1 {{PLURAL:$4|pósła powěsć na|pósła powěsći na|pósła powěsć na|pósła powěsće na}} $3",
+	"useractivity-comment": "$1 je na {{PLURAL:$4|stronje komentował|slědowacymaj stronomaj|slědowacych stronach komentował|slědowacych stronach komentował}}: $3"
 }

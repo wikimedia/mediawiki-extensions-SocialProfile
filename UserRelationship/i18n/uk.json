@@ -1,14 +1,14 @@
 {
-    "@metadata": {
-        "authors": [
-            "Prima klasy4na",
-            "Тест"
-        ]
-    },
-    "ur-main-page": "Головна сторінка",
-    "ur-previous": "попередній",
-    "ur-next": "наступний",
-    "ur-remove": "Вилучити",
-    "ur-cancel": "Скасувати",
-    "ur-login": "Увійти"
+	"@metadata": {
+		"authors": [
+			"Prima klasy4na",
+			"Тест"
+		]
+	},
+	"ur-main-page": "Головна сторінка",
+	"ur-previous": "попередній",
+	"ur-next": "наступний",
+	"ur-remove": "Вилучити",
+	"ur-cancel": "Скасувати",
+	"ur-login": "Увійти"
 }

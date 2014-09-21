@@ -1,26 +1,26 @@
 {
-    "@metadata": {
-        "authors": [
-            "Joetaras"
-        ]
-    },
-    "user-stats-alltime-title": "Cchiù punde da sembre",
-    "user-stats-weekly-title": "Cchiù punde pe sta sumane",
-    "user-stats-monthly-title": "Cchiù punde stu mese",
-    "topusers": "Le megghie utinde",
-    "top-fans-by-points-nav-header": "Le megghie tefuse",
-    "top-fans-by-category-nav-header": "Le megghie pe categorije",
-    "top-fans-total-points-link": "Punde totale",
-    "top-fans-weekly-points-link": "Punde pe sta sumane",
-    "top-fans-monthly-points-link": "Punde pe stu mese",
-    "top-fans-points": "punde",
-    "top-fans-bad-field-title": "Ohhhhh! C'è scritte!",
-    "top-fans-stats-vote-count": "{{PLURAL:$1|'u Vote|le Vote}}",
-    "top-fans-stats-monthly-winner-count": "{{PLURAL:$1|vingita menzile|vingite menzile}}",
-    "top-fans-stats-weekly-winner-count": "{{PLURAL:$1|vingita settimanele|vingite settimanele}}",
-    "top-fans-stats-edit-count": "{{PLURAL:$1|Cangiamende|Cangiaminde}}",
-    "top-fans-stats-comment-count": "{{PLURAL:$1|'u Commende|le Commende}}",
-    "top-fans-stats-referrals-completed": "{{PLURAL:$1|referimende|refereminde}}",
-    "top-fans-stats-friends-count": "{{PLURAL:$1|Amiche|Amice}}",
-    "level-advance-subject": "Tu, mò, si 'nu \"$1\" sus a {{SITENAME}}!"
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"user-stats-alltime-title": "Cchiù punde da sembre",
+	"user-stats-weekly-title": "Cchiù punde pe sta sumane",
+	"user-stats-monthly-title": "Cchiù punde stu mese",
+	"topusers": "Le megghie utinde",
+	"top-fans-by-points-nav-header": "Le megghie tefuse",
+	"top-fans-by-category-nav-header": "Le megghie pe categorije",
+	"top-fans-total-points-link": "Punde totale",
+	"top-fans-weekly-points-link": "Punde pe sta sumane",
+	"top-fans-monthly-points-link": "Punde pe stu mese",
+	"top-fans-points": "punde",
+	"top-fans-bad-field-title": "Ohhhhh! C'è scritte!",
+	"top-fans-stats-vote-count": "{{PLURAL:$1|'u Vote|le Vote}}",
+	"top-fans-stats-monthly-winner-count": "{{PLURAL:$1|vingita menzile|vingite menzile}}",
+	"top-fans-stats-weekly-winner-count": "{{PLURAL:$1|vingita settimanele|vingite settimanele}}",
+	"top-fans-stats-edit-count": "{{PLURAL:$1|Cangiamende|Cangiaminde}}",
+	"top-fans-stats-comment-count": "{{PLURAL:$1|'u Commende|le Commende}}",
+	"top-fans-stats-referrals-completed": "{{PLURAL:$1|referimende|refereminde}}",
+	"top-fans-stats-friends-count": "{{PLURAL:$1|Amiche|Amice}}",
+	"level-advance-subject": "Tu, mò, si 'nu \"$1\" sus a {{SITENAME}}!"
 }

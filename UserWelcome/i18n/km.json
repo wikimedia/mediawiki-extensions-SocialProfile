@@ -1,20 +1,20 @@
 {
-    "@metadata": {
-        "authors": [
-            "Lovekhmer",
-            "Thearith"
-        ]
-    },
-    "mp-userlevels-link": "កម្រិត​អ្នកប្រើប្រាស់",
-    "mp-welcome-upload": "ផ្ទុកឯកសារឡើង",
-    "mp-welcome-edit": "កែប្រែ",
-    "mp-welcome-points": "$1 {{PLURAL:$1|ពិន្ទុ|ពិន្ទុ}}",
-    "mp-welcome-logged-in": "សួរស្តី $1",
-    "mp-requests-title": "សំណើ",
-    "mp-requests-message": "អ្នក​មាន​សំណើ​ដូចខាងក្រោម​។",
-    "mp-request-new-message": "សារថ្មី",
-    "mp-request-new-award": "{{PLURAL:$1|រង្វាន់|រង្វាន់}} ថ្មី $1",
-    "mp-request-new-gift": "{{PLURAL:$1|អំណោយ|អំណោយ}}ថ្មីចំនួន$1",
-    "mp-request-new-foe": "{{PLURAL:$1|បច្ចាមិត្ត|បច្ចាមិត្ត}}ថ្មី $1",
-    "mp-request-new-friend": "{{PLURAL:$1|មិត្តភ័ក្ដិ|មិត្តភ័ក្ដិ}}ថ្មី $1"
+	"@metadata": {
+		"authors": [
+			"Lovekhmer",
+			"Thearith"
+		]
+	},
+	"mp-userlevels-link": "កម្រិត​អ្នកប្រើប្រាស់",
+	"mp-welcome-upload": "ផ្ទុកឯកសារឡើង",
+	"mp-welcome-edit": "កែប្រែ",
+	"mp-welcome-points": "$1 {{PLURAL:$1|ពិន្ទុ|ពិន្ទុ}}",
+	"mp-welcome-logged-in": "សួរស្តី $1",
+	"mp-requests-title": "សំណើ",
+	"mp-requests-message": "អ្នក​មាន​សំណើ​ដូចខាងក្រោម​។",
+	"mp-request-new-message": "សារថ្មី",
+	"mp-request-new-award": "{{PLURAL:$1|រង្វាន់|រង្វាន់}} ថ្មី $1",
+	"mp-request-new-gift": "{{PLURAL:$1|អំណោយ|អំណោយ}}ថ្មីចំនួន$1",
+	"mp-request-new-foe": "{{PLURAL:$1|បច្ចាមិត្ត|បច្ចាមិត្ត}}ថ្មី $1",
+	"mp-request-new-friend": "{{PLURAL:$1|មិត្តភ័ក្ដិ|មិត្តភ័ក្ដិ}}ថ្មី $1"
 }

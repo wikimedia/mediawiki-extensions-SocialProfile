@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Malafaya"
-        ]
-    },
-    "top-fans-stats-edit-count": "{{PLURAL:$1|Redaktajo|Redaktaji}}"
+	"@metadata": {
+		"authors": [
+			"Malafaya"
+		]
+	},
+	"top-fans-stats-edit-count": "{{PLURAL:$1|Redaktajo|Redaktaji}}"
 }

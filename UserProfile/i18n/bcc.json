@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Mostafadaneshvar"
-        ]
-    },
-    "populate-user-profile-done": "پروفایل $1 هور بوت"
+	"@metadata": {
+		"authors": [
+			"Mostafadaneshvar"
+		]
+	},
+	"populate-user-profile-done": "پروفایل $1 هور بوت"
 }

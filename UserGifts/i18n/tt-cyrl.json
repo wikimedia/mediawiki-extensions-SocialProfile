@@ -1,15 +1,15 @@
 {
-    "@metadata": {
-        "authors": [
-            "Ильнар"
-        ]
-    },
-    "g-main-page": "Баш бит",
-    "g-medium": "Урта",
-    "g-mediumlarge": "Уртача зур",
-    "g-new": "яңа",
-    "g-next": "Киләсе",
-    "g-previous": "Алдагы",
-    "g-remove": "Бетерү",
-    "g-remove-gift": "Бу бүләкне бетерү"
+	"@metadata": {
+		"authors": [
+			"Ильнар"
+		]
+	},
+	"g-main-page": "Баш бит",
+	"g-medium": "Урта",
+	"g-mediumlarge": "Уртача зур",
+	"g-new": "яңа",
+	"g-next": "Киләсе",
+	"g-previous": "Алдагы",
+	"g-remove": "Бетерү",
+	"g-remove-gift": "Бу бүләкне бетерү"
 }

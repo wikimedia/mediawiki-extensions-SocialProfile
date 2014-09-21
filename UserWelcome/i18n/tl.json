@@ -1,21 +1,21 @@
 {
-    "@metadata": {
-        "authors": [
-            "AnakngAraw"
-        ]
-    },
-    "userwelcome-desc": "Nagdaragdag ng tatak na <code>&lt;welcomeUser&gt;</code> upang maipakita sa nakalagda/nakatalang mga tagagamit ang kabatirang panlipunang (impormasyon) tumutukoy sa   partikular na tagagamit",
-    "mp-userlevels-link": "Mga antas na pangtagagamit",
-    "mp-welcome-upload": "Ikarga",
-    "mp-welcome-edit": "Baguhin",
-    "mp-welcome-points": "$1 {{PLURAL:$1|puntos|mga puntos}}",
-    "mp-welcome-needed-points": "Upang makasulong patungo sa <b><a href=\"$1\">$2</a></b> umani ng <i>$3</i> karagdagang {{PLURAL:$3|puntos|mga puntos}}!",
-    "mp-welcome-logged-in": "Mabuhay $1",
-    "mp-requests-title": "Mga kahilingan",
-    "mp-requests-message": "Mayroon kang sumusunod na mga kahilingan.",
-    "mp-request-new-message": "bagong mensahe",
-    "mp-request-new-award": "$1 bagong {{PLURAL:$1|gantimpala|mga gantimpala}}",
-    "mp-request-new-gift": "$1 bagong {{PLURAL:$1|handog|mga handog}}",
-    "mp-request-new-foe": "$1 bagong {{PLURAL:$1|katunggali|mga katunggali}}",
-    "mp-request-new-friend": "$1 bagong {{PLURAL:$1|kaibigan|mga kaibigan}}"
+	"@metadata": {
+		"authors": [
+			"AnakngAraw"
+		]
+	},
+	"userwelcome-desc": "Nagdaragdag ng tatak na <code>&lt;welcomeUser&gt;</code> upang maipakita sa nakalagda/nakatalang mga tagagamit ang kabatirang panlipunang (impormasyon) tumutukoy sa   partikular na tagagamit",
+	"mp-userlevels-link": "Mga antas na pangtagagamit",
+	"mp-welcome-upload": "Ikarga",
+	"mp-welcome-edit": "Baguhin",
+	"mp-welcome-points": "$1 {{PLURAL:$1|puntos|mga puntos}}",
+	"mp-welcome-needed-points": "Upang makasulong patungo sa <b><a href=\"$1\">$2</a></b> umani ng <i>$3</i> karagdagang {{PLURAL:$3|puntos|mga puntos}}!",
+	"mp-welcome-logged-in": "Mabuhay $1",
+	"mp-requests-title": "Mga kahilingan",
+	"mp-requests-message": "Mayroon kang sumusunod na mga kahilingan.",
+	"mp-request-new-message": "bagong mensahe",
+	"mp-request-new-award": "$1 bagong {{PLURAL:$1|gantimpala|mga gantimpala}}",
+	"mp-request-new-gift": "$1 bagong {{PLURAL:$1|handog|mga handog}}",
+	"mp-request-new-foe": "$1 bagong {{PLURAL:$1|katunggali|mga katunggali}}",
+	"mp-request-new-friend": "$1 bagong {{PLURAL:$1|kaibigan|mga kaibigan}}"
 }

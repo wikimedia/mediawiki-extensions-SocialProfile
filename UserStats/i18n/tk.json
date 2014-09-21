@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Hanberke"
-        ]
-    },
-    "top-fans-stats-edit-count": "{{PLURAL:$1|Özgerdiş|Özgerdiş}}"
+	"@metadata": {
+		"authors": [
+			"Hanberke"
+		]
+	},
+	"top-fans-stats-edit-count": "{{PLURAL:$1|Özgerdiş|Özgerdiş}}"
 }

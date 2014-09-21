@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "MF-Warburg"
-        ]
-    },
-    "ur-main-page": "Pájina Mahuluk",
-    "ur-next": "oinmai",
-    "ur-remove": "Hasai",
-    "ur-cancel": "Para"
+	"@metadata": {
+		"authors": [
+			"MF-Warburg"
+		]
+	},
+	"ur-main-page": "Pájina Mahuluk",
+	"ur-next": "oinmai",
+	"ur-remove": "Hasai",
+	"ur-cancel": "Para"
 }

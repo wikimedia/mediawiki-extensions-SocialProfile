@@ -1,19 +1,19 @@
 {
-    "@metadata": {
-        "authors": [
-            "MF-Warburg"
-        ]
-    },
-    "user-watchlist": "Ha'u-nia lista hateke",
-    "other-info-music": "Múzika",
-    "other-info-books": "Livru sira",
-    "user-personal-info-about-me": "Kona-ba ha'u",
-    "user-profile-section-preferences": "Preferénsia",
-    "user-profile-personal-name": "Naran",
-    "user-profile-personal-email": "Korreiu eletróniku",
-    "user-profile-personal-city": "Sidade",
-    "user-profile-personal-birthdate": "Tempu (FF/LL)",
-    "user-profile-personal-aboutme": "Kona-ba ha'u",
-    "user-profile-interests-music": "Múzika",
-    "user-profile-interests-books": "Livru sira"
+	"@metadata": {
+		"authors": [
+			"MF-Warburg"
+		]
+	},
+	"user-watchlist": "Ha'u-nia lista hateke",
+	"other-info-music": "Múzika",
+	"other-info-books": "Livru sira",
+	"user-personal-info-about-me": "Kona-ba ha'u",
+	"user-profile-section-preferences": "Preferénsia",
+	"user-profile-personal-name": "Naran",
+	"user-profile-personal-email": "Korreiu eletróniku",
+	"user-profile-personal-city": "Sidade",
+	"user-profile-personal-birthdate": "Tempu (FF/LL)",
+	"user-profile-personal-aboutme": "Kona-ba ha'u",
+	"user-profile-interests-music": "Múzika",
+	"user-profile-interests-books": "Livru sira"
 }

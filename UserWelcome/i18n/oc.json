@@ -1,21 +1,21 @@
 {
-    "@metadata": {
-        "authors": [
-            "Cedric31"
-        ]
-    },
-    "userwelcome-desc": "Apond una balisa <code>&lt;welcomeUser&gt;</code> per afichar d'informacions socialas especificas a cada utilizaire als utilizaires enregistrats",
-    "mp-userlevels-link": "Nivèls de l'utilizaire",
-    "mp-welcome-upload": "Telecargar",
-    "mp-welcome-edit": "Modificar",
-    "mp-welcome-points": "$1 {{PLURAL:$1|punt|punts}}",
-    "mp-welcome-needed-points": "Avançar cap a <b><a href=\"$1\">$2</a></b> ganha <i>$3</i> {{PLURAL:$3|punt|punts}} en mai !",
-    "mp-welcome-logged-in": "Benvenguda $1",
-    "mp-requests-title": "Requèstas",
-    "mp-requests-message": "Avètz las requèstas seguentas.",
-    "mp-request-new-message": "messatge novèl",
-    "mp-request-new-award": "$1 {{PLURAL:$1|prèmi novèl|prèmis novèls}}",
-    "mp-request-new-gift": "$1 {{PLURAL:$1|present novèl|presents novèls}}",
-    "mp-request-new-foe": "$1 {{PLURAL:$1|enemic novèl|enemics novèls}}",
-    "mp-request-new-friend": "$1 {{PLURAL:$1|amic novèl|amics novèls}}"
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"userwelcome-desc": "Apond una balisa <code>&lt;welcomeUser&gt;</code> per afichar d'informacions socialas especificas a cada utilizaire als utilizaires enregistrats",
+	"mp-userlevels-link": "Nivèls de l'utilizaire",
+	"mp-welcome-upload": "Telecargar",
+	"mp-welcome-edit": "Modificar",
+	"mp-welcome-points": "$1 {{PLURAL:$1|punt|punts}}",
+	"mp-welcome-needed-points": "Avançar cap a <b><a href=\"$1\">$2</a></b> ganha <i>$3</i> {{PLURAL:$3|punt|punts}} en mai !",
+	"mp-welcome-logged-in": "Benvenguda $1",
+	"mp-requests-title": "Requèstas",
+	"mp-requests-message": "Avètz las requèstas seguentas.",
+	"mp-request-new-message": "messatge novèl",
+	"mp-request-new-award": "$1 {{PLURAL:$1|prèmi novèl|prèmis novèls}}",
+	"mp-request-new-gift": "$1 {{PLURAL:$1|present novèl|presents novèls}}",
+	"mp-request-new-foe": "$1 {{PLURAL:$1|enemic novèl|enemics novèls}}",
+	"mp-request-new-friend": "$1 {{PLURAL:$1|amic novèl|amics novèls}}"
 }

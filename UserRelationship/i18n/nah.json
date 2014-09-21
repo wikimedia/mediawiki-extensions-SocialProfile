@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Fluence"
-        ]
-    },
-    "ur-main-page": "Calīxatl",
-    "ur-add-friend": "Ticcēntilīz quemeh mocnīuh",
-    "ur-next": "niman",
-    "ur-cancel": "Ticcuepāz",
-    "ur-login": "Timocalaquīz",
-    "ur-add-button-friend": "Ticcēntilīz quemeh mocnīuh"
+	"@metadata": {
+		"authors": [
+			"Fluence"
+		]
+	},
+	"ur-main-page": "Calīxatl",
+	"ur-add-friend": "Ticcēntilīz quemeh mocnīuh",
+	"ur-next": "niman",
+	"ur-cancel": "Ticcuepāz",
+	"ur-login": "Timocalaquīz",
+	"ur-add-button-friend": "Ticcēntilīz quemeh mocnīuh"
 }

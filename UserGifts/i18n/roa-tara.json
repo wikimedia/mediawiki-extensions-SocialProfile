@@ -1,24 +1,24 @@
 {
-    "@metadata": {
-        "authors": [
-            "Joetaras"
-        ]
-    },
-    "giftmanager": "Gestore de le riale",
-    "giftmanager-addgift": "+ Aggiunge 'nu riale nuève",
-    "giftmanager-access": "accede a le riale",
-    "giftmanager-description": "descrizione d'u riale",
-    "giftmanager-giftimage": "immagine d'u riale",
-    "giftmanager-image": "aggiunge/cange 'n'immaggine",
-    "giftmanager-giftcreated": "'U riale ha state ccrejate",
-    "giftmanager-giftsaved": "'U riale ha state reggistrate",
-    "giftmanager-public": "pubbliche",
-    "giftmanager-private": "private",
-    "giftmanager-view": "Vide 'a liste de le riale",
-    "g-add-message": "Aggiunge 'nu messagge",
-    "g-gift": "riale",
-    "g-gift-name": "nome d'u riale",
-    "g-give-gift": "Fà 'u riale",
-    "g-give-separator": "o",
-    "g-go-back": "Tuèrne rrete"
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"giftmanager": "Gestore de le riale",
+	"giftmanager-addgift": "+ Aggiunge 'nu riale nuève",
+	"giftmanager-access": "accede a le riale",
+	"giftmanager-description": "descrizione d'u riale",
+	"giftmanager-giftimage": "immagine d'u riale",
+	"giftmanager-image": "aggiunge/cange 'n'immaggine",
+	"giftmanager-giftcreated": "'U riale ha state ccrejate",
+	"giftmanager-giftsaved": "'U riale ha state reggistrate",
+	"giftmanager-public": "pubbliche",
+	"giftmanager-private": "private",
+	"giftmanager-view": "Vide 'a liste de le riale",
+	"g-add-message": "Aggiunge 'nu messagge",
+	"g-gift": "riale",
+	"g-gift-name": "nome d'u riale",
+	"g-give-gift": "Fà 'u riale",
+	"g-give-separator": "o",
+	"g-go-back": "Tuèrne rrete"
 }

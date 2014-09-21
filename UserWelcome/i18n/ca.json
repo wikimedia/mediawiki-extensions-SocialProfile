@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Paucabot",
-            "Solde",
-            "Ssola"
-        ]
-    },
-    "mp-welcome-upload": "Carrega",
-    "mp-welcome-edit": "Modifica",
-    "mp-welcome-logged-in": "Hola $1",
-    "mp-request-new-message": "nou missatge"
+	"@metadata": {
+		"authors": [
+			"Paucabot",
+			"Solde",
+			"Ssola"
+		]
+	},
+	"mp-welcome-upload": "Carrega",
+	"mp-welcome-edit": "Modifica",
+	"mp-welcome-logged-in": "Hola $1",
+	"mp-request-new-message": "nou missatge"
 }

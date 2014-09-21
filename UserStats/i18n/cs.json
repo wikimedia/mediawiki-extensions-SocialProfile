@@ -1,14 +1,14 @@
 {
-    "@metadata": {
-        "authors": [
-            "Matěj Grabovský"
-        ]
-    },
-    "user-stats-alltime-title": "Nejvíc bodů celkem",
-    "user-stats-weekly-title": "Nejvíc bodů tento týden",
-    "user-stats-monthly-title": "Nejvíc bodů tento měsíc",
-    "topusers": "Nej uživatelé",
-    "top-fans-by-points-nav-header": "Nej fanouškové",
-    "top-fans-by-category-nav-header": "Nej podle kategorie",
-    "top-fans-total-points-link": "Celkem bodů"
+	"@metadata": {
+		"authors": [
+			"Matěj Grabovský"
+		]
+	},
+	"user-stats-alltime-title": "Nejvíc bodů celkem",
+	"user-stats-weekly-title": "Nejvíc bodů tento týden",
+	"user-stats-monthly-title": "Nejvíc bodů tento měsíc",
+	"topusers": "Nej uživatelé",
+	"top-fans-by-points-nav-header": "Nej fanouškové",
+	"top-fans-by-category-nav-header": "Nej podle kategorie",
+	"top-fans-total-points-link": "Celkem bodů"
 }

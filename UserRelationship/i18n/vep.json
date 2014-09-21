@@ -1,17 +1,17 @@
 {
-    "@metadata": {
-        "authors": [
-            "Triple-ADHD-AS",
-            "Игорь Бродский"
-        ]
-    },
-    "ur-main-page": "Pälehtpol’",
-    "ur-add-friend": "Ližata sebranikan",
-    "ur-add-personal-message": "Ližata personaline tedotuz",
-    "ur-previous": "edel.",
-    "ur-next": "jäl'gh.",
-    "ur-remove": "Čuta poiš",
-    "ur-cancel": "Heitta pätand",
-    "ur-login": "Kirjutadas sistemha",
-    "ur-add-error-message-pending-request-title": "Tirpand!"
+	"@metadata": {
+		"authors": [
+			"Triple-ADHD-AS",
+			"Игорь Бродский"
+		]
+	},
+	"ur-main-page": "Pälehtpol’",
+	"ur-add-friend": "Ližata sebranikan",
+	"ur-add-personal-message": "Ližata personaline tedotuz",
+	"ur-previous": "edel.",
+	"ur-next": "jäl'gh.",
+	"ur-remove": "Čuta poiš",
+	"ur-cancel": "Heitta pätand",
+	"ur-login": "Kirjutadas sistemha",
+	"ur-add-error-message-pending-request-title": "Tirpand!"
 }
