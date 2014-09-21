@@ -116,7 +116,7 @@ $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'SocialProfile',
 	'author' => array( 'Aaron Wright', 'David Pean', 'Jack Phoenix' ),
-	'version' => '1.7.0',
+	'version' => '1.7.1',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile',
 	'descriptionmsg' => 'socialprofile-desc',
 );

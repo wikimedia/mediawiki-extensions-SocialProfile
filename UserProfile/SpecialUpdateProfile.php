@@ -51,7 +51,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * @param $section Mixed: parameter passed to the page or null
 	 */
 	public function execute( $section ) {
-		global $wgUpdateProfileInRecentChanges, $wgSupressPageTitle;
+		global $wgUpdateProfileInRecentChanges, $wgUserProfileThresholds, $wgSupressPageTitle;
 
 		$out = $this->getOutput();
 		$request = $this->getRequest();
@@ -80,6 +80,68 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		if ( wfReadOnly() ) {
 			$out->readOnlyPage();
 			return;
+		}
+
+		/**
+		 * Create thresholds based on user stats
+		 */
+		if ( is_array( $wgUserProfileThresholds ) && count( $wgUserProfileThresholds ) > 0 ) {
+			$can_create = true;
+
+			$stats = new UserStats( $user->getId(), $user->getName() );
+			$stats_data = $stats->getUserStats();
+
+			$threshold_reason = '';
+			$thresholdReasons = array();
+			foreach ( $wgUserProfileThresholds as $field => $threshold ) {
+				// If the threshold is greater than the user's amount of whatever
+				// statistic we're looking at, then it means that they can't use
+				// this special page.
+				if ( $stats_data[$field] < $threshold ) {
+					$can_create = false;
+					$threshold_reason .= ( ( $threshold_reason ) ? ', ' : '' ) . "$threshold $field";
+					$thresholdReasons[$threshold] = $field;
+				}
+			}
+
+			// Boo, go away!
+			if ( $can_create == false ) {
+				global $wgSupressPageTitle;
+				$wgSupressPageTitle = false;
+				$out->setPageTitle( $this->msg( 'user-profile-create-threshold-title' )->text() );
+				$thresholdMessages = array();
+				foreach ( $thresholdReasons as $requiredAmount => $reason ) {
+					// Replace underscores with hyphens for consistency in i18n
+					// message names.
+					$reason = str_replace( '_', '-', $reason );
+					/**
+					 * For grep:
+					 * user-profile-create-threshold-edits
+					 * user-profile-create-threshold-votes
+					 * user-profile-create-threshold-comments
+					 * user-profile-create-threshold-comment-score-plus
+					 * user-profile-create-threshold-comment-score-minus
+					 * user-profile-create-threshold-recruits
+					 * user-profile-create-threshold-friend-count
+					 * user-profile-create-threshold-foe-count
+					 * user-profile-create-threshold-weekly-wins
+					 * user-profile-create-threshold-monthly-wins
+					 * user-profile-create-threshold-poll-votes
+					 * user-profile-create-threshold-picture-game-votes
+					 * user-profile-create-threshold-quiz-created
+					 * user-profile-create-threshold-quiz-answered
+					 * user-profile-create-threshold-quiz-correct
+					 * user-profile-create-threshold-quiz-points
+					*/
+					$thresholdMessages[] = $this->msg( 'user-profile-create-threshold-' . $reason )->numParams( $requiredAmount )->parse();
+				}
+				$out->addHTML(
+					$this->msg( 'user-profile-create-threshold-reason',
+						$this->getLanguage()->commaList( $thresholdMessages )
+					)->parse()
+				);
+				return '';
+			}
 		}
 
 		// Add CSS & JS
