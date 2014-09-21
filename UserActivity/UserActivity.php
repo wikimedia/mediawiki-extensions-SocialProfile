@@ -33,8 +33,6 @@ $wgMessagesDirs['UserActivity'] = __DIR__ . '/i18n';
 $wgAutoloadClasses['UserActivity'] = __DIR__ . '/UserActivityClass.php';
 $wgAutoloadClasses['UserHome'] = __DIR__ . '/UserActivity.body.php';
 $wgSpecialPages['UserActivity'] = 'UserHome';
-// Special page group for MW 1.13+
-$wgSpecialPageGroups['UserActivity'] = 'users';
 
 // Register the CSS with ResourceLoader
 $wgResourceModules['ext.socialprofile.useractivity.css'] = array(

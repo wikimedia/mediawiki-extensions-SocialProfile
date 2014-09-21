@@ -10,6 +10,15 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	}
 
 	/**
+	 * Group this special page under the correct header in Special:SpecialPages.
+	 *
+	 * @return string
+	 */
+	function getGroupName() {
+		return 'wiki';
+	}
+
+	/**
 	 * Deletes a gift image from $wgUploadDirectory/awards/
 	 *
 	 * @param $id Integer: internal ID number of the gift whose image we want to delete
