@@ -42,7 +42,6 @@ $wgSpecialPages['RemoveGift'] = 'RemoveGift';
 $wgSpecialPageGroups['RemoveGift'] = 'users';
 
 $wgMessagesDirs['UserGifts'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['UserGifts'] = $wgUserGiftsDirectory . '/UserGifts.i18n.php';
 
 // Register the CSS & JS with ResourceLoader
 $wgResourceModules['ext.socialprofile.usergifts.css'] = array(

@@ -47,7 +47,6 @@ function wfWelcomeUser( &$parser ) {
 }
 
 $wgMessagesDirs['UserWelcome'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['UserWelcome'] = __DIR__ . '/UserWelcome.i18n.php';
 
 function getWelcomeUser( $input, $args, $parser ) {
 	$parser->disableCache();

@@ -5,7 +5,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 global $IP, $wgAutoloadClasses, $wgAvailableRights, $wgGroupPermissions,
-	$wgSpecialPages, $wgExtensionMessagesFiles;
+	$wgSpecialPages;
 
 $wgAvailableRights[] = 'awardsmanage';
 $wgGroupPermissions['staff']['awardsmanage'] = true;
@@ -40,7 +40,6 @@ $wgSpecialPages['PopulateAwards'] = 'PopulateAwards';
 
 // i18n
 $wgMessagesDirs['SystemGifts'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['SystemGifts'] = $wgSystemGiftsDirectory . '/SystemGift.i18n.php';
 
 // Register the CSS with ResourceLoader
 $wgResourceModules['ext.socialprofile.systemgifts.css'] = array(
