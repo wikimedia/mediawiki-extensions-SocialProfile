@@ -25,17 +25,12 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 // Internationalization files
 $wgMessagesDirs['SocialProfile'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['SocialProfile'] = __DIR__ . '/SocialProfile.i18n.php';
 $wgExtensionMessagesFiles['SocialProfileAlias'] = __DIR__ . '/SocialProfile.alias.php';
 
 $wgMessagesDirs['SocialProfileUserBoard'] = __DIR__ . '/UserBoard/i18n';
-$wgExtensionMessagesFiles['SocialProfileUserBoard'] = __DIR__ . '/UserBoard/UserBoard.i18n.php';
 $wgMessagesDirs['SocialProfileUserProfile'] = __DIR__ . '/UserProfile/i18n';
-$wgExtensionMessagesFiles['SocialProfileUserProfile'] = __DIR__ . '/UserProfile/UserProfile.i18n.php';
 $wgMessagesDirs['SocialProfileUserRelationship'] = __DIR__ . '/UserRelationship/i18n';
-$wgExtensionMessagesFiles['SocialProfileUserRelationship'] = __DIR__ . '/UserRelationship/UserRelationship.i18n.php';
 $wgMessagesDirs['SocialProfileUserStats'] = __DIR__ . '/UserStats/i18n';
-$wgExtensionMessagesFiles['SocialProfileUserStats'] = __DIR__ . '/UserStats/UserStats.i18n.php';
 $wgExtensionMessagesFiles['SocialProfileNamespaces'] = __DIR__ . '/SocialProfile.namespaces.php';
 $wgExtensionMessagesFiles['AvatarMagic'] = __DIR__ . '/UserProfile/Avatar.magic.i18n.php';
 
