@@ -22,6 +22,15 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 	}
 
 	/**
+	 * Group this special page under the correct header in Special:SpecialPages.
+	 *
+	 * @return string
+	 */
+	function getGroupName() {
+		return 'users';
+	}
+
+	/**
 	 * Show the special page
 	 *
 	 * @param $params Mixed: parameter(s) passed to the page or null

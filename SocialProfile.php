@@ -83,14 +83,6 @@ $wgSpecialPages['UserBoard'] = 'SpecialViewUserBoard';
 $wgSpecialPages['ViewRelationshipRequests'] = 'SpecialViewRelationshipRequests';
 $wgSpecialPages['ViewRelationships'] = 'SpecialViewRelationships';
 
-// Special page groups for MW 1.13+
-$wgSpecialPageGroups['AddRelationship'] = 'users';
-$wgSpecialPageGroups['RemoveAvatar'] = 'users';
-$wgSpecialPageGroups['RemoveRelationship'] = 'users';
-$wgSpecialPageGroups['UserBoard'] = 'users';
-$wgSpecialPageGroups['ViewRelationshipRequests'] = 'users';
-$wgSpecialPageGroups['ViewRelationships'] = 'users';
-
 // Necessary AJAX functions
 require_once( "$IP/extensions/SocialProfile/UserBoard/UserBoard_AjaxFunctions.php" );
 require_once( "$IP/extensions/SocialProfile/UserRelationship/Relationship_AjaxFunctions.php" );
