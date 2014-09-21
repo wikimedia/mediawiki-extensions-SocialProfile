@@ -20,7 +20,7 @@ class TopUsersPoints extends SpecialPage {
 		$out = $this->getOutput();
 
 		// Load CSS
-		$out->addModules( 'ext.socialprofile.userstats.css' );
+		$out->addModuleStyles( 'ext.socialprofile.userstats.css' );
 
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();
