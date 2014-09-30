@@ -114,14 +114,14 @@ $specialPageAliases['diq'] = array(
 /** Persian (فارسی) */
 $specialPageAliases['fa'] = array(
 	'AddRelationship' => array( 'افزودن_رابطه' ),
-	'EditProfile' => array( 'ویرایش_‍نیمرخ' ),
-	'PopulateUserProfiles' => array( 'تولید_نیمرخ_کاربر' ),
+	'EditProfile' => array( 'ویرایش_نمایه' ),
+	'PopulateUserProfiles' => array( 'تولید_نمایه_کاربر' ),
 	'RemoveAvatar' => array( 'حذف_آواتار' ),
 	'RemoveRelationship' => array( 'حذف_رابطه' ),
 	'TopUsers' => array( 'کاربران_برتر' ),
 	'TopUsersRecent' => array( 'کاربر_برتر_اخیر' ),
 	'UpdateEditCounts' => array( 'تجدید_شمار_ویرایش' ),
-	'UpdateProfile' => array( 'تجدید_نیمرخ' ),
+	'UpdateProfile' => array( 'تجدید_نمایه' ),
 	'UploadAvatar' => array( 'تجدید_آواتار' ),
 	'UserBoard' => array( 'تخته_کاربر' ),
 	'ViewRelationshipRequests' => array( 'نمایش_درخواست_رابطه' ),
