@@ -91,15 +91,17 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$stats = new UserStats( $user->getId(), $user->getName() );
 			$stats_data = $stats->getUserStats();
 
-			$threshold_reason = '';
 			$thresholdReasons = array();
 			foreach ( $wgUserProfileThresholds as $field => $threshold ) {
 				// If the threshold is greater than the user's amount of whatever
 				// statistic we're looking at, then it means that they can't use
 				// this special page.
-				if ( $stats_data[$field] < $threshold ) {
+				// Why, oh why did I want to be so fucking smart with these
+				// field names?! This str_replace() voodoo all over the place is
+				// outright painful.
+				$correctField = str_replace( '-', '_', $field );
+				if ( $stats_data[$correctField] < $threshold ) {
 					$can_create = false;
-					$threshold_reason .= ( ( $threshold_reason ) ? ', ' : '' ) . "$threshold $field";
 					$thresholdReasons[$threshold] = $field;
 				}
 			}
