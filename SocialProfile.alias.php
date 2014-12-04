@@ -130,6 +130,7 @@ $specialPageAliases['fa'] = array(
 
 /** Finnish (suomi) */
 $specialPageAliases['fi'] = array(
+	'EditProfile' => array( 'Muokkaa_profiilia' ),
 	'RemoveAvatar' => array( 'Poista_avatar' ),
 	'UpdateProfile' => array( 'Päivitä_käyttäjäprofiili' ),
 	'UploadAvatar' => array( 'Lataa_avatar' ),
