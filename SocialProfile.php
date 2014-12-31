@@ -98,6 +98,11 @@ $wgUserBoard = true;
 // Whether to enable friending or not -- this doesn't do very much actually, so don't rely on it
 $wgFriendingEnabled = true;
 
+// Prefix SocialProfile will use to store avatars
+// for global avatars on a wikifarm or groups of wikis,
+// set this to something static.
+$wgAvatarKey = $wgDBname;
+
 // Extension credits that show up on Special:Version
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,

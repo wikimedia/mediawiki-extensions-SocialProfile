@@ -149,10 +149,10 @@ class RemoveAvatar extends SpecialPage {
 	 * 			Doesn't really matter since we're just going to blast 'em all.
 	 */
 	private function deleteImage( $id, $size ) {
-		global $wgUploadDirectory, $wgDBname, $wgMemc;
+		global $wgUploadDirectory, $wgAvatarKey, $wgMemc;
 
 		$avatar = new wAvatar( $id, $size );
-		$files = glob( $wgUploadDirectory . '/avatars/' . $wgDBname . '_' . $id .  '_' . $size . "*" );
+		$files = glob( $wgUploadDirectory . '/avatars/' . $wgAvatarKey . '_' . $id .  '_' . $size . "*" );
 		wfSuppressWarnings();
 		$img = basename( $files[0] );
 		wfRestoreWarnings();

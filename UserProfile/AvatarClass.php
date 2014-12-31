@@ -34,7 +34,7 @@ class wAvatar {
 	 *			image size (s, m, ml or l)
 	 */
 	function getAvatarImage() {
-		global $wgDBname, $wgUploadDirectory, $wgMemc;
+		global $wgAvatarKey, $wgUploadDirectory, $wgMemc;
 
 		$key = wfMemcKey( 'user', 'profile', 'avatar', $this->user_id, $this->avatar_size );
 		$data = $wgMemc->get( $key );
@@ -43,7 +43,7 @@ class wAvatar {
 		if ( $data ) {
 			$avatar_filename = $data;
 		} else {
-			$files = glob( $wgUploadDirectory . '/avatars/' . $wgDBname . '_' . $this->user_id .  '_' . $this->avatar_size . "*" );
+			$files = glob( $wgUploadDirectory . '/avatars/' . $wgAvatarKey . '_' . $this->user_id .  '_' . $this->avatar_size . "*" );
 			if ( !isset( $files[0] ) || !$files[0] ) {
 				$avatar_filename = 'default_' . $this->avatar_size . '.gif';
 			} else {
