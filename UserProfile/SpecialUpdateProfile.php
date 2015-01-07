@@ -51,7 +51,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * @param $section Mixed: parameter passed to the page or null
 	 */
 	public function execute( $section ) {
-		global $wgUpdateProfileInRecentChanges, $wgUserProfileThresholds, $wgSupressPageTitle;
+		global $wgUpdateProfileInRecentChanges, $wgUserProfileThresholds, $wgSupressPageTitle, $wgAutoConfirmCount;
 
 		$out = $this->getOutput();
 		$request = $this->getRequest();
@@ -105,6 +105,9 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 					$thresholdReasons[$threshold] = $field;
 				}
 			}
+
+			$hasEqualEditThreshold = ( isset( $wgUserProfileThresholds['edit'] ) && $wgUserProfileThresholds['edit'] == $wgAutoConfirmCount ) ? true : false;
+			$can_create = ( $user->isAllowed( 'createpage' ) && $hasEqualEditThreshold ) ? true : $can_create;
 
 			// Boo, go away!
 			if ( $can_create == false ) {
