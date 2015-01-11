@@ -52,7 +52,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 		$userTitle = Title::newFromDBkey( $request->getVal( 'user' ) );
 
 		if ( !$userTitle ) {
-			$out->setPageTitle( wfMsgHtml( 'ur-error-title' ) );
+			$out->setPageTitle( $this->msg( 'ur-error-title' ) );
 			$out->addWikiMsg( 'ur-add-no-user' );
 			return false;
 		}
@@ -74,7 +74,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
 
 			$output = '<div class="relationship-error-message">' .
-				wfMsg( 'ur-add-error-message-yourself' ) .
+				$this->msg( 'ur-add-error-message-yourself' )->escaped() .
 			'</div>
 			<div>
 				<input type="button" class="site-button" value="' . $this->msg( 'ur-main-page' )->plain() . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
@@ -169,9 +169,9 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 			$login_link = SpecialPage::getTitleFor( 'Userlogin' );
 
 			if ( $this->relationship_type == 1 ) {
-				$error = wfMsg( 'ur-add-error-message-not-loggedin-friend' );
+				$error = $this->msg( 'ur-add-error-message-not-loggedin-friend' )->escaped();
 			} else {
-				$error = wfMsg( 'ur-add-error-message-not-loggedin-foe' );
+				$error = $this->msg( 'ur-add-error-message-not-loggedin-foe' )->escaped();
 			}
 
 			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
@@ -180,8 +180,8 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				. $error .
 			'</div>
 			<div>
-				<input type="button" class="site-button" value="' . $this->msg( 'ur-main-page' )->plain() . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />
-				<input type="button" class="site-button" value="' . $this->msg( 'ur-login' )->plain() . '" size="20" onclick="window.location=\'' . htmlspecialchars( $login_link->getFullURL() ) . '\'" />';
+				<input type="button" class="site-button" value="' . $this->msg( 'ur-main-page' )->escaped() . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />
+				<input type="button" class="site-button" value="' . $this->msg( 'ur-login' )->escaped() . '" size="20" onclick="window.location=\'' . htmlspecialchars( $login_link->getFullURL() ) . '\'" />';
 			$output .= '</div>';
 
 			$out->addHTML( $output );

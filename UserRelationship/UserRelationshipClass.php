@@ -98,25 +98,25 @@ class UserRelationship {
 				$name = $user->getName();
 			}
 			if ( $type == 1 ) {
-				$subject = wfMsgExt( 'friend_request_subject', 'parsemag',
+				$subject = wfMessage( 'friend_request_subject',
 					$userFrom
-				);
-				$body = wfMsgExt( 'friend_request_body', 'parsemag',
+				)->text();
+				$body = wfMessage( 'friend_request_body',
 					$name,
 					$userFrom,
 					$requestLink->getFullURL(),
 					$updateProfileLink->getFullURL()
-				);
+				)->text();
 			} else {
-				$subject = wfMsgExt( 'foe_request_subject', 'parsemag',
+				$subject = wfMessage( 'foe_request_subject',
 					$userFrom
-				);
-				$body = wfMsgExt( 'foe_request_body', 'parsemag',
+				)->text();
+				$body = wfMessage( 'foe_request_body',
 					$name,
 					$userFrom,
 					$requestLink->getFullURL(),
 					$updateProfileLink->getFullURL()
-				);
+				)->text();
 			}
 
 			$this->sendMail( $user, $subject, $body );
@@ -143,25 +143,25 @@ class UserRelationship {
 				$name = $user->getName();
 			}
 			if ( $type == 1 ) {
-				$subject = wfMsgExt( 'friend_accept_subject', 'parsemag',
+				$subject = wfMessage( 'friend_accept_subject',
 					$userFrom
-				);
-				$body = wfMsgExt( 'friend_accept_body', 'parsemag',
+				)->text();
+				$body = wfMessage( 'friend_accept_body',
 					$name,
 					$userFrom,
 					$userLink->getFullURL(),
 					$updateProfileLink->getFullURL()
-				);
+				)->text();
 			} else {
-				$subject = wfMsgExt( 'foe_accept_subject', 'parsemag',
+				$subject = wfMessage( 'foe_accept_subject',
 					$userFrom
-				);
-				$body = wfMsgExt( 'foe_accept_body', 'parsemag',
+				)->text();
+				$body = wfMessage( 'foe_accept_body',
 					$name,
 					$userFrom,
 					$userLink->getFullURL(),
 					$updateProfileLink->getFullURL()
-				);
+				)->text();
 			}
 			$this->sendMail( $user, $subject, $body );
 		}
@@ -187,25 +187,25 @@ class UserRelationship {
 				$name = $user->getName();
 			}
 			if ( $type == 1 ) {
-				$subject = wfMsgExt( 'friend_removed_subject', 'parsemag',
+				$subject = wfMessage( 'friend_removed_subject',
 					$userFrom
-				);
-				$body = wfMsgExt( 'friend_removed_body', 'parsemag',
+				)->text();
+				$body = wfMessage( 'friend_removed_body',
 					$name,
 					$userFrom,
 					$userLink->getFullURL(),
 					$updateProfileLink->getFullURL()
-				);
+				)->text();
 			} else {
-				$subject = wfMsgExt( 'foe_removed_subject', 'parsemag',
+				$subject = wfMessage( 'foe_removed_subject',
 					$userFrom
-				);
-				$body = wfMsgExt( 'foe_removed_body', 'parsemag',
+				)->text();
+				$body = wfMessage( 'foe_removed_body',
 					$name,
 					$userFrom,
 					$userLink->getFullURL(),
 					$updateProfileLink->getFullURL()
-				);
+				)->text();
 			}
 			$this->sendMail( $user, $subject, $body );
 		}

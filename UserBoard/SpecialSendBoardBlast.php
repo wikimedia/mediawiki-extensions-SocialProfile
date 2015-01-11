@@ -98,35 +98,35 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$foeCount = $stats_data['foe_count'];
 
 		$output = '<div class="board-blast-message-form">
-				<h2>' . wfMsg( 'boardblaststep1' ) . '</h2>
+				<h2>' . $this->msg( 'boardblaststep1' )->escaped() . '</h2>
 				<form method="post" name="blast" action="">
 					<input type="hidden" name="ids" id="ids" />
 					<div class="blast-message-text">'
-						. wfMsg( 'boardblastprivatenote' ) .
+						. $this->msg( 'boardblastprivatenote' )->escaped() .
 					'</div>
 					<textarea name="message" id="message" cols="63" rows="4"></textarea>
 				</form>
 		</div>
 		<div class="blast-nav">
-				<h2>' . wfMsg( 'boardblaststep2' ) . '</h2>
+				<h2>' . $this->msg( 'boardblaststep2' )->escaped() . '</h2>
 				<div class="blast-nav-links">
 					<a href="javascript:void(0);" class="blast-select-all-link">' .
-						wfMsg( 'boardlinkselectall' ) . '</a> -
+						$this->msg( 'boardlinkselectall' )->escaped() . '</a> -
 					<a href="javascript:void(0);" class="blast-unselect-all-link">' .
-						wfMsg( 'boardlinkunselectall' ) . '</a> ';
+						$this->msg( 'boardlinkunselectall' )->escaped() . '</a> ';
 
 		if ( $friendCount > 0 && $foeCount > 0 ) {
 			$output .= '- <a href="javascript:void(0);" class="blast-select-friends-link">' .
-				wfMsg( 'boardlinkselectfriends' ) . '</a> -';
+				$this->msg( 'boardlinkselectfriends' )->escaped() . '</a> -';
 			$output .= '<a href="javascript:void(0);" class="blast-unselect-friends-link">' .
-				wfMsg( 'boardlinkunselectfriends' ) . '</a>';
+				$this->msg( 'boardlinkunselectfriends' )->escaped() . '</a>';
 		}
 
 		if ( $foeCount > 0 && $friendCount > 0 ) {
 			$output .= '- <a href="javascript:void(0);" class="blast-select-foes-link">' .
-				wfMsg( 'boardlinkselectfoes' ) . '</a> -';
+				$this->msg( 'boardlinkselectfoes' )->escaped() . '</a> -';
 			$output .= '<a href="javascript:void(0);" class="blast-unselect-foes-link">' .
-				wfMsg( 'boardlinkunselectfoes' ) . '</a>';
+				$this->msg( 'boardlinkunselectfoes' )->escaped() . '</a>';
 		}
 		$output .= '</div>
 		</div>';
@@ -155,7 +155,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 				$x++;
 			}
 		} else {
-			$output .= '<div>' . wfMsg( 'boardnofriends' ) . '</div>';
+			$output .= '<div>' . $this->msg( 'boardnofriends' )->escaped() . '</div>';
 		}
 
 		$output .= '</div>
@@ -163,7 +163,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 			<div class="cleared"></div>';
 
 		$output .= '<div class="blast-message-box-button">
-			<input type="button" value="' . wfMsg( 'boardsendbutton' ) . '" class="site-button" />
+			<input type="button" value="' . $this->msg( 'boardsendbutton' )->escaped() . '" class="site-button" />
 		</div>';
 
 		return $output;

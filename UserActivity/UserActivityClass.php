@@ -455,10 +455,10 @@ class UserActivity {
 				'" border="0" alt="" />';
 			$view_gift_link = SpecialPage::getTitleFor( 'ViewGift' );
 
-			$html = wfMsg( 'useractivity-gift',
+			$html = wfMessage( 'useractivity-gift',
 				'<b><a href="' . htmlspecialchars( $user_title->getFullURL() ) . "\">{$row->ug_user_name_to}</a></b>",
 				'<a href="' . htmlspecialchars( $user_title_from->getFullURL() ) . "\">{$user_title_from->getText()}</a>"
-			) .
+			)->text() .
 			"<div class=\"item\">
 				<a href=\"" . htmlspecialchars( $view_gift_link->getFullURL( 'gift_id=' . $row->ug_id ) ) . "\" rel=\"nofollow\">
 					{$gift_image}
@@ -1102,13 +1102,12 @@ class UserActivity {
 
 					$pages .= ' <a href="' . htmlspecialchars( $page_title->getFullURL() ) . "\">{$page_name}</a>";
 					if ( $count_users == 1 && $count_actions > 1 ) {
-						$pages .= wfMsg( 'word-separator' );
-						$pages .= wfMsg( 'parentheses', wfMsgExt(
+						$pages .= wfMessage( 'word-separator' )->text();
+						$pages .= wfMessage( 'parentheses', wfMessage(
 							"useractivity-group-{$type}",
-							'parsemag',
 							$count_actions,
 							$user_name
-						) );
+						)->text() )->text();
 					}
 					$pages_count++;
 				}
@@ -1142,9 +1141,9 @@ class UserActivity {
 										$pages .= ' <a href="' . htmlspecialchars( $page_title2->getFullURL() ) . "\">{$page_name2}</a>";
 									}
 									if ( $count_actions2 > 1 ) {
-										$pages .= ' (' . wfMsg(
+										$pages .= ' (' . wfMessage(
 											"useractivity-group-{$type}", $count_actions2
-										) . ')';
+										)->text() . ')';
 									}
 									$pages_count++;
 
@@ -1158,10 +1157,10 @@ class UserActivity {
 				$user_index++;
 
 				if ( $users && $count_users > 2 ) {
-					$users .= wfMsg( 'comma-separator' );
+					$users .= wfMessage( 'comma-separator' )->text();
 				}
 				if ( $user_index ==  $count_users && $count_users > 1 ) {
-					$users .= wfMsg( 'and' );
+					$users .= wfMessage( 'and' )->text();
 				}
 
 				$user_title = Title::makeTitle( NS_USER, $user_name );
@@ -1174,12 +1173,11 @@ class UserActivity {
 				$this->activityLines[] = array(
 					'type' => $type,
 					'timestamp' => $page_data['timestamp'],
-					'data' => wfMsgExt(
+					'data' => wfMessage(
 						"useractivity-{$type}",
-						'parsemag',
 						$users, $count_users, $pages, $pages_count,
 						$userNameForGender
-					)
+					)->text()
 				);
 			}
 		}

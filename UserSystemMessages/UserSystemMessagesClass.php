@@ -110,17 +110,17 @@ class UserSystemMessage {
 		$user->loadFromDatabase();
 		if ( $user->isEmailConfirmed() && $user->getIntOption( 'notifyhonorifics', 1 ) ) {
 			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
-			$subject = wfMsgExt( 'level-advance-subject', 'parsemag', $level );
+			$subject = wfMessage( 'level-advance-subject', $level )->text();
 			if ( trim( $user->getRealName() ) ) {
 				$name = $user->getRealName();
 			} else {
 				$name = $user->getName();
 			}
-			$body = wfMsgExt( 'level-advance-body', 'parsemag',
+			$body = wfMessage( 'level-advance-body',
 				$name,
 				$level,
 				$updateProfileLink->getFullURL()
-			);
+			)->text();
 
 			// The email contains HTML, so actually send it out as such, too.
 			// That's why this no longer uses User::sendMail().
