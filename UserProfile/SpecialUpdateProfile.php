@@ -523,7 +523,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-info' )->plain() . '</p>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-name' )->plain() . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="real_name" id="real_name" value="' . $real_name . '"/></p>
-			<div class="visualClear"></div>
+			<div class="visualClear">' . $this->renderEye( 'up_real_name' ) . '</div>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-email' )->plain() . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="email" id="email" value="' . $email . '"/>';
 		if ( !$user->mEmailAuthenticated ) {
@@ -531,7 +531,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$form .= " <a href=\"{$confirm->getFullURL()}\">" . $this->msg( 'user-profile-personal-confirmemail' )->plain() . '</a>';
 		}
 		$form .= '</p>
-			<div class="visualClear"></div>';
+			<div class="visualClear">' . $this->renderEye( 'up_email' ) . '</div>';
 		if ( !$user->mEmailAuthenticated ) {
 			$form .= '<p class="profile-update-unit-left"></p>
 				<p class="profile-update-unit-small">' .
@@ -546,7 +546,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-location' )->plain() . '</p>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-city' )->plain() . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="location_city" id="location_city" value="' . ( isset( $location_city ) ? $location_city : '' ) . '" /></p>
-			<div class="visualClear"></div>
+			<div class="visualClear">' . $this->renderEye( 'up_location_city' ) . '</div>
 			<p class="profile-update-unit-left" id="location_state_label">' . $this->msg( 'user-profile-personal-country' )->plain() . '</p>';
 		$form .= '<p class="profile-update-unit">';
 		$form .= '<span id="location_state_form">';
@@ -563,7 +563,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		$form .= '</select>';
 		$form .= '</p>
-			<div class="visualClear"></div>
+			<div class="visualClear">' . $this->renderEye( 'up_location_country' ) . '</div>
 		</div>
 		<div class="visualClear"></div>';
 
@@ -571,7 +571,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-hometown' )->plain() . '</p>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-city' )->plain() . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="hometown_city" id="hometown_city" value="' . ( isset( $hometown_city ) ? $hometown_city : '' ) . '" /></p>
-			<div class="visualClear"></div>
+			<div class="visualClear">' . $this->renderEye( 'up_hometown_city' ) . '</div>
 			<p class="profile-update-unit-left" id="hometown_state_label">' . $this->msg( 'user-profile-personal-country' )->plain() . '</p>
 			<p class="profile-update-unit">';
 		$form .= '<span id="hometown_state_form">';
@@ -588,7 +588,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		$form .= '</select>';
 		$form .= '</p>
-			<div class="visualClear"></div>
+			<div class="visualClear">' . $this->renderEye( 'up_hometown_country' ) . '</div>
 		</div>
 		<div class="visualClear"></div>';
 
@@ -601,7 +601,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			( $showYOB ? ' class="long-birthday"' : null ) .
 			' size="25" name="birthday" id="birthday" value="' .
 			( isset( $birthday ) ? $birthday : '' ) . '" /></p>
-			<div class="visualClear"></div>
+			<div class="visualClear">' . $this->renderEye( 'up_birthday' ) . '</div>
 		</div><div class="visualClear"></div>';
 
 		$form .= '<div class="profile-update" id="profile-update-personal-aboutme">
@@ -610,7 +610,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			<p class="profile-update-unit">
 				<textarea name="about" id="about" rows="3" cols="75">' . ( isset( $about ) ? $about : '' ) . '</textarea>
 			</p>
-			<div class="visualClear"></div>
+			<div class="visualClear">' . $this->renderEye( 'up_about' ) . '</div>
 		</div>
 		<div class="visualClear"></div>
 
@@ -620,7 +620,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			<p class="profile-update-unit">
 				<textarea name="occupation" id="occupation" rows="2" cols="75">' . ( isset( $occupation ) ? $occupation : '' ) . '</textarea>
 			</p>
-			<div class="visualClear"></div>
+			<div class="visualClear">' . $this->renderEye( 'up_occupation' ) . '</div>
 		</div>
 		<div class="visualClear"></div>
 
@@ -630,7 +630,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			<p class="profile-update-unit">
 				<textarea name="schools" id="schools" rows="2" cols="75">' . ( isset( $schools ) ? $schools : '' ) . '</textarea>
 			</p>
-			<div class="visualClear"></div>
+			<div class="visualClear">' . $this->renderEye( 'up_schools' ) . '</div>
 		</div>
 		<div class="visualClear"></div>
 
@@ -640,7 +640,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			<p class="profile-update-unit">
 				<textarea name="places" id="places" rows="3" cols="75">' . ( isset( $places ) ? $places : '' ) . '</textarea>
 			</p>
-			<div class="visualClear"></div>
+			<div class="visualClear">' . $this->renderEye( 'up_places_lived' ) . '</div>
 		</div>
 		<div class="visualClear"></div>
 
@@ -650,7 +650,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			<p class="profile-update-unit">
 				<textarea name="websites" id="websites" rows="2" cols="75">' . ( isset( $websites ) ? $websites : '' ) . '</textarea>
 			</p>
-			<div class="visualClear"></div>
+			<div class="visualClear">' . $this->renderEye( 'up_websites' ) . '</div>
 		</div>
 		<div class="visualClear"></div>';
 
@@ -699,39 +699,39 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		$form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-interests' )->plain() );
 		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">
-			<div class="profile-info clearfix">
+			<div class="profile-info profile-info-other-info clearfix">
 			<div class="profile-update">
 			<p class="profile-update-title">' . $this->msg( 'user-profile-interests-entertainment' )->plain() . '</p>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-movies' )->plain() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="movies" id="movies" rows="3" cols="75">' . ( isset( $movies ) ? $movies : '' ) . '</textarea>
 			</p>
-			<div class="visualClear"></div>
+			<div class="visualClear">' . $this->renderEye( 'up_movies' ) . '</div>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-tv' )->plain() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="tv" id="tv" rows="3" cols="75">' . ( isset( $tv ) ? $tv : '' ) . '</textarea>
 			</p>
-			<div class="visualClear"></div>
+			<div class="visualClear">' . $this->renderEye( 'up_tv' ) . '</div>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-music' )->plain() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="music" id="music" rows="3" cols="75">' . ( isset( $music ) ? $music : '' ) . '</textarea>
 			</p>
-			<div class="visualClear"></div>
+			<div class="visualClear">' . $this->renderEye( 'up_music' ) . '</div>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-books' )->plain() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="books" id="books" rows="3" cols="75">' . ( isset( $books ) ? $books : '' ) . '</textarea>
 			</p>
-			<div class="visualClear"></div>
+			<div class="visualClear">' . $this->renderEye( 'up_books' ) . '</div>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-magazines' )->plain() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="magazines" id="magazines" rows="3" cols="75">' . ( isset( $magazines ) ? $magazines : '' ) . '</textarea>
 			</p>
-			<div class="visualClear"></div>
+			<div class="visualClear">' . $this->renderEye( 'up_magazines' ) . '</div>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-videogames' )->plain() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="videogames" id="videogames" rows="3" cols="75">' . ( isset( $videogames ) ? $videogames : '' ) . '</textarea>
 			</p>
-			<div class="visualClear"></div>
+			<div class="visualClear">' . $this->renderEye( 'up_video_games' ) . '</div>
 			</div>
 			<div class="profile-info clearfix">
 			<p class="profile-update-title">' . $this->msg( 'user-profile-interests-eats' )->plain() . '</p>
@@ -739,12 +739,12 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			<p class="profile-update-unit">
 				<textarea name="snacks" id="snacks" rows="3" cols="75">' . ( isset( $snacks ) ? $snacks : '' ) . '</textarea>
 			</p>
-			<div class="visualClear"></div>
+			<div class="visualClear">' . $this->renderEye( 'up_snacks' ) . '</div>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-drinks' )->plain() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="drinks" id="drinks" rows="3" cols="75">' . ( isset( $drinks ) ? $drinks : '' ) . '</textarea>
 			</p>
-			<div class="visualClear"></div>
+			<div class="visualClear">' . $this->renderEye( 'up_drinks' ) . '</div>
 			</div>
 			<input type="button" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->plain() . '" size="20" onclick="document.profile.submit()" />
 			</div>
@@ -850,7 +850,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$form = '<h1>' . $this->msg( 'user-profile-tidbits-title' ) . '</h1>';
 		$form .= UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-custom' )->plain() );
 		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">
-			<div class="profile-info clearfix">
+			<div class="profile-info profile-info-custom-info clearfix">
 				<div class="profile-update">
 					<p class="profile-update-title">' . $this->msg( 'user-profile-tidbits-title' )->inContentLanguage()->parse() . '</p>
 					<div id="profile-update-custom1">
@@ -859,33 +859,43 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 						<textarea name="custom1" id="fav_moment" rows="3" cols="75">' . ( isset( $custom1 ) ? $custom1 : '' ) . '</textarea>
 					</p>
 					</div>
-					<div class="visualClear"></div>
+					<div class="visualClear">' . $this->renderEye( 'up_custom_1' ) . '</div>
 					<div id="profile-update-custom2">
 					<p class="profile-update-unit-left">' . $this->msg( 'custom-info-field2' )->inContentLanguage()->parse() . '</p>
 					<p class="profile-update-unit">
 						<textarea name="custom2" id="least_moment" rows="3" cols="75">' . ( isset( $custom2 ) ? $custom2 : '' ) . '</textarea>
 					</p>
 					</div>
-					<div class="visualClear"></div>
+					<div class="visualClear">' . $this->renderEye( 'up_custom_2' ) . '</div>
 					<div id="profile-update-custom3">
 					<p class="profile-update-unit-left">' . $this->msg( 'custom-info-field3' )->inContentLanguage()->parse() . '</p>
 					<p class="profile-update-unit">
 						<textarea name="custom3" id="fav_athlete" rows="3" cols="75">' . ( isset( $custom3 ) ? $custom3 : '' ) . '</textarea>
 					</p>
 					</div>
-					<div class="visualClear"></div>
+					<div class="visualClear">' . $this->renderEye( 'up_custom_3' ) . '</div>
 					<div id="profile-update-custom4">
 					<p class="profile-update-unit-left">' . $this->msg( 'custom-info-field4' )->inContentLanguage()->parse() . '</p>
 					<p class="profile-update-unit">
 						<textarea name="custom4" id="least_fav_athlete" rows="3" cols="75">' . ( isset( $custom4 ) ? $custom4 : '' ) . '</textarea>
 					</p>
 					</div>
-					<div class="visualClear"></div>
+					<div class="visualClear">' . $this->renderEye( 'up_custom_4' ) . '</div>
 				</div>
 			<input type="button" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->plain() . '" size="20" onclick="document.profile.submit()" />
 			</div>
 		</form>';
 
 		return $form;
+	}
+
+	/**
+	 * Renders fields privacy button by field code
+	 *
+	 * @param string $fieldCode Internal field code, such as up_movies for the "Movies" field
+	 * @param int $uid User ID
+	 */
+	function renderEye( $fieldCode, $uid = null ) {
+		return SPUserSecurity::renderEye( $fieldCode, $uid );
 	}
 }

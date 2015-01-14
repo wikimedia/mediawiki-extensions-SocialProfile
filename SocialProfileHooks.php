@@ -44,7 +44,7 @@ class SocialProfileHooks {
 	 * @return Boolean
 	 */
 	public static function onLoadExtensionSchemaUpdates( $updater ) {
-		$dir = dirname( __FILE__ );
+		$dir = __DIR__;
 		$dbExt = '';
 
 		if ( $updater->getDB()->getType() == 'postgres' ) {
@@ -52,6 +52,7 @@ class SocialProfileHooks {
 		}
 
 		$updater->addExtensionUpdate( array( 'addTable', 'user_board', "$dir/UserBoard/user_board$dbExt.sql", true ) );
+		$updater->addExtensionUpdate( array( 'addTable', 'user_fields_privacy', "$dir/UserProfile/user_fields_privacy$dbExt.sql", true ) );
 		$updater->addExtensionUpdate( array( 'addTable', 'user_profile', "$dir/UserProfile/user_profile$dbExt.sql", true ) );
 		$updater->addExtensionUpdate( array( 'addTable', 'user_stats', "$dir/UserStats/user_stats$dbExt.sql", true ) );
 		$updater->addExtensionUpdate( array( 'addTable', 'user_relationship', "$dir/UserRelationship/user_relationship$dbExt.sql", true ) );

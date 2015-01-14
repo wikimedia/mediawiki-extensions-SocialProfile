@@ -686,3 +686,65 @@ table.avatar-success-page td.image-cell img {
 		width: 30% !important;
 	}
 }
+
+/* Privacy */
+.mw-special-UpdateProfile div#mw-content-text .cleared {
+	height: 20px;
+}
+
+.eye-container {
+	width: 130px;
+	height: 20px;
+	/* @embed */
+	background: #a3c2d5 url(../images/eye.png) 0 0 no-repeat;
+	border-radius: 4px;
+	opacity: 0.5;
+	overflow: hidden;
+	position: relative;
+	top: -25px;
+	cursor: pointer;
+	box-shadow: 2px 2px 3px -1px darkgray;
+}
+
+.eye-container:hover {
+	opacity: 1.0;
+}
+
+.eye-container .title {
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+	padding: 0px 0 0 25px;
+}
+
+.eye-container .menu {
+	padding: 10px 0 10px 0;
+}
+
+.eye-container .menu .item {
+	height: 18px;
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+	margin: 4px 0 4px 0;
+	padding: 0 0 0 30px;
+	/* @embed */
+	background: #a3c2d5 url(../images/eye-bw.png) 5px 1px no-repeat;
+}
+
+.eye-container .menu .item:hover {
+	background-color: white;
+	box-shadow: 1px 1px 1px -1px black;
+	color: #a3c2d5;
+}
+
+/*
+.profile-info-other-info .eye-container,.profile-info-custom-info .eye-container,
+#profile-update-personal-aboutme .eye-container,
+#profile-update-personal-work .eye-container,
+#profile-update-personal-education .eye-container,
+#profile-update-personal-places .eye-container,
+#profile-update-personal-web .eye-container {
+	top: -35px !important;
+}
+*/

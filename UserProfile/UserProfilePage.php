@@ -43,6 +43,11 @@ class UserProfilePage extends Article {
 	public $profile_data;
 
 	/**
+	 * @var Array: array of profile fields visible to the user viewing the profile
+	 */
+	public $profile_visible_fields;
+
+	/**
 	 * Constructor
 	 */
 	function __construct( $title ) {
@@ -57,6 +62,7 @@ class UserProfilePage extends Article {
 
 		$profile = new UserProfile( $this->user_name );
 		$this->profile_data = $profile->getProfile();
+		$this->profile_visible_fields = SPUserSecurity::getVisibleFields( $this->user_id, $wgUser->getId() );
 	}
 
 	/**
@@ -566,13 +572,33 @@ class UserProfilePage extends Article {
 				$location = $profile_data['location_city'] . ', ' .
 							$profile_data['location_state'] . ', ' .
 							$profile_data['location_country'];
+				// Privacy
+				$location = '';
+				if ( in_array( 'up_location_city', $this->profile_visible_fields ) ) {
+					$location .= $profile_data['location_city'] . ', ';
+				}
+				$location .= $profile_data['location_state'];
+				if ( in_array( 'up_location_country', $this->profile_visible_fields ) ) {
+					$location .= ', ' . $profile_data['location_country'] . ', ';
+				}
 			} elseif ( $profile_data['location_city'] && !$profile_data['location_state'] ) { // city, but no state
-				$location = $profile_data['location_city'] . ', ' . $profile_data['location_country'];
+				$location = '';
+				if ( in_array( 'up_location_city', $this->profile_visible_fields ) ) {
+					$location .= $profile_data['location_city'] .', ';
+				}
+				if ( in_array( 'up_location_country', $this->profile_visible_fields ) ) {
+					$location .= $profile_data['location_country'];
+				}
 			} elseif ( $profile_data['location_state'] && !$profile_data['location_city'] ) { // state, but no city
-				$location = $profile_data['location_state'] . ', ' . $profile_data['location_country'];
+				$location = $profile_data['location_state'];
+				if ( in_array( 'up_location_country', $this->profile_visible_fields ) ) {
+					$location.= ', ' . $profile_data['location_country'];
+				}
 			} else {
 				$location = '';
-				$location .= $profile_data['location_country'];
+				if ( in_array( 'up_location_country', $this->profile_visible_fields ) ) {
+					$location .= $profile_data['location_country'];
+				}
 			}
 		}
 
@@ -587,13 +613,31 @@ class UserProfilePage extends Article {
 				$hometown = $profile_data['hometown_city'] . ', ' .
 							$profile_data['hometown_state'] . ', ' .
 							$profile_data['hometown_country'];
+				$hometown = '';
+				if ( in_array( 'up_hometown_city', $this->profile_visible_fields ) ) {
+					$hometown .= $profile_data['hometown_city'] . ', ' . $profile_data['hometown_state'];
+				}
+				if ( in_array( 'up_hometown_country', $this->profile_visible_fields ) ) {
+					$hometown .= ', ' . $profile_data['hometown_country'];
+				}
 			} elseif ( $profile_data['hometown_city'] && !$profile_data['hometown_state'] ) { // city, but no state
-				$hometown = $profile_data['hometown_city'] . ', ' . $profile_data['hometown_country'];
+				$hometown = '';
+				if ( in_array( 'up_hometown_city', $this->profile_visible_fields ) ) {
+					$hometown .= $profile_data['hometown_city'] .', ';
+				}
+				if ( in_array( 'up_hometown_country', $this->profile_visible_fields ) ) {
+					$hometown .= $profile_data['hometown_country'];
+				}
 			} elseif ( $profile_data['hometown_state'] && !$profile_data['hometown_city'] ) { // state, but no city
-				$hometown = $profile_data['hometown_state'] . ', ' . $profile_data['hometown_country'];
+				$hometown = $profile_data['hometown_state'];
+				if ( in_array( 'up_hometown_country', $this->profile_visible_fields ) ) {
+					$hometown .= ', ' . $profile_data['hometown_country'];
+				}
 			} else {
 				$hometown = '';
-				$hometown .= $profile_data['hometown_country'];
+				if ( in_array( 'up_hometown_country', $this->profile_visible_fields ) ) {
+					$hometown .= $profile_data['hometown_country'];
+				}
 			}
 		}
 
@@ -606,6 +650,39 @@ class UserProfilePage extends Article {
 						$profile_data['websites'] . $profile_data['places_lived'] .
 						$profile_data['schools'] . $profile_data['about'];
 		$edit_info_link = SpecialPage::getTitleFor( 'UpdateProfile' );
+
+		// Privacy fields holy shit!
+		$personal_output = '';
+		if ( in_array( 'up_real_name', $this->profile_visible_fields ) ) {
+			$personal_output .= $this->getProfileSection( wfMessage( 'user-personal-info-real-name' )->escaped(), $profile_data['real_name'], false );
+		}
+
+		$personal_output .= $this->getProfileSection( wfMessage( 'user-personal-info-location' )->escaped(), $location, false );
+		$personal_output .= $this->getProfileSection( wfMessage( 'user-personal-info-hometown' )->escaped(), $hometown, false );
+
+		if ( in_array( 'up_birthday', $this->profile_visible_fields ) ) {
+			$personal_output .= $this->getProfileSection( wfMessage( 'user-personal-info-birthday' )->escaped(), $profile_data['birthday'], false );
+		}
+
+		if ( in_array( 'up_occupation', $this->profile_visible_fields ) ) {
+			$personal_output .= $this->getProfileSection( wfMessage( 'user-personal-info-occupation' )->escaped(), $profile_data['occupation'], false );
+		}
+
+		if ( in_array( 'up_websites', $this->profile_visible_fields ) ) {
+			$personal_output .= $this->getProfileSection( wfMessage( 'user-personal-info-websites' )->escaped(), $profile_data['websites'], false );
+		}
+
+		if ( in_array( 'up_places_lived', $this->profile_visible_fields ) ) {
+			$personal_output .= $this->getProfileSection( wfMessage( 'user-personal-info-places-lived' )->escaped(), $profile_data['places_lived'], false );
+		}
+
+		if ( in_array( 'up_schools', $this->profile_visible_fields ) ) {
+			$personal_output .= $this->getProfileSection( wfMessage( 'user-personal-info-schools' )->escaped(), $profile_data['schools'], false );
+		}
+
+		if ( in_array( 'up_about', $this->profile_visible_fields ) ) {
+			$personal_output .= $this->getProfileSection( wfMessage( 'user-personal-info-about-me' )->escaped(), $profile_data['about'], false );
+		}
 
 		$output = '';
 		if ( $joined_data ) {
@@ -625,15 +702,7 @@ class UserProfilePage extends Article {
 			</div>
 			<div class="visualClear"></div>
 			<div class="profile-info-container">' .
-				$this->getProfileSection( wfMessage( 'user-personal-info-real-name' )->escaped(), $profile_data['real_name'], false ) .
-				$this->getProfileSection( wfMessage( 'user-personal-info-location' )->escaped(), $location, false ) .
-				$this->getProfileSection( wfMessage( 'user-personal-info-hometown' )->escaped(), $hometown, false ) .
-				$this->getProfileSection( wfMessage( 'user-personal-info-birthday' )->escaped(), $profile_data['birthday'], false ) .
-				$this->getProfileSection( wfMessage( 'user-personal-info-occupation' )->escaped(), $profile_data['occupation'], false ) .
-				$this->getProfileSection( wfMessage( 'user-personal-info-websites' )->escaped(), $profile_data['websites'], false ) .
-				$this->getProfileSection( wfMessage( 'user-personal-info-places-lived' )->escaped(), $profile_data['places_lived'], false ) .
-				$this->getProfileSection( wfMessage( 'user-personal-info-schools' )->escaped(), $profile_data['schools'], false ) .
-				$this->getProfileSection( wfMessage( 'user-personal-info-about-me' )->escaped(), $profile_data['about'], false ) .
+				$personal_output .
 			'</div>';
 		} elseif ( $wgUser->getName() == $user_name ) {
 			$output .= '<div class="user-section-heading">
@@ -679,6 +748,20 @@ class UserProfilePage extends Article {
 						$profile_data['custom_3'] . $profile_data['custom_4'];
 		$edit_info_link = SpecialPage::getTitleFor( 'UpdateProfile' );
 
+		$custom_output = '';
+		if ( in_array( 'up_custom_1', $this->profile_visible_fields ) ) {
+			$custom_output .= $this->getProfileSection( wfMessage( 'custom-info-field1' )->escaped(), $profile_data['custom_1'], false );
+		}
+		if ( in_array( 'up_custom_2', $this->profile_visible_fields ) ) {
+			$custom_output .= $this->getProfileSection( wfMessage( 'custom-info-field2' )->escaped(), $profile_data['custom_2'], false );
+		}
+		if ( in_array( 'up_custom_3', $this->profile_visible_fields ) ) {
+			$custom_output .= $this->getProfileSection( wfMessage( 'custom-info-field3' )->escaped(), $profile_data['custom_3'], false );
+		}
+		if ( in_array( 'up_custom_4', $this->profile_visible_fields ) ) {
+			$custom_output .= $this->getProfileSection( wfMessage( 'custom-info-field4' )->escaped(), $profile_data['custom_4'], false );
+		}
+
 		$output = '';
 		if ( $joined_data ) {
 			$output .= '<div class="user-section-heading">
@@ -697,10 +780,7 @@ class UserProfilePage extends Article {
 			</div>
 			<div class="visualClear"></div>
 			<div class="profile-info-container">' .
-				$this->getProfileSection( wfMessage( 'custom-info-field1' )->escaped(), $profile_data['custom_1'], false ) .
-				$this->getProfileSection( wfMessage( 'custom-info-field2' )->escaped(), $profile_data['custom_2'], false ) .
-				$this->getProfileSection( wfMessage( 'custom-info-field3' )->escaped(), $profile_data['custom_3'], false ) .
-				$this->getProfileSection( wfMessage( 'custom-info-field4' )->escaped(), $profile_data['custom_4'], false ) .
+				$custom_output .
 			'</div>';
 		} elseif ( $wgUser->getName() == $user_name ) {
 			$output .= '<div class="user-section-heading">
@@ -749,6 +829,32 @@ class UserProfilePage extends Article {
 						$profile_data['snacks'];
 		$edit_info_link = SpecialPage::getTitleFor( 'UpdateProfile' );
 
+		$interests_output = '';
+		if ( in_array( 'up_movies', $this->profile_visible_fields ) ) {
+			$interests_output .= $this->getProfileSection( wfMessage( 'other-info-movies' )->escaped(), $profile_data['movies'], false );
+		}
+		if ( in_array( 'up_tv', $this->profile_visible_fields ) ) {
+			$interests_output .= $this->getProfileSection( wfMessage( 'other-info-tv' )->escaped(), $profile_data['tv'], false );
+		}
+		if ( in_array( 'up_music', $this->profile_visible_fields ) ) {
+			$interests_output .= $this->getProfileSection( wfMessage( 'other-info-music' )->escaped(), $profile_data['music'], false );
+		}
+		if ( in_array( 'up_books', $this->profile_visible_fields ) ) {
+			$interests_output .= $this->getProfileSection( wfMessage( 'other-info-books' )->escaped(), $profile_data['books'], false );
+		}
+		if ( in_array( 'up_video_games', $this->profile_visible_fields ) ) {
+			$interests_output .= $this->getProfileSection( wfMessage( 'other-info-video-games' )->escaped(), $profile_data['video_games'], false );
+		}
+		if ( in_array( 'up_magazines', $this->profile_visible_fields ) ) {
+			$interests_output .= $this->getProfileSection( wfMessage( 'other-info-magazines' )->escaped(), $profile_data['magazines'], false );
+		}
+		if ( in_array( 'up_snacks', $this->profile_visible_fields ) ) {
+			$interests_output .= $this->getProfileSection( wfMessage( 'other-info-snacks' )->escaped(), $profile_data['snacks'], false );
+		}
+		if ( in_array( 'up_drinks', $this->profile_visible_fields ) ) {
+			$interests_output .= $this->getProfileSection( wfMessage( 'other-info-drinks' )->escaped(), $profile_data['drinks'], false );
+		}
+
 		$output = '';
 		if ( $joined_data ) {
 			$output .= '<div class="user-section-heading">
@@ -767,14 +873,7 @@ class UserProfilePage extends Article {
 			</div>
 			<div class="visualClear"></div>
 			<div class="profile-info-container">' .
-				$this->getProfileSection( wfMessage( 'other-info-movies' )->escaped(), $profile_data['movies'], false ) .
-				$this->getProfileSection( wfMessage( 'other-info-tv' )->escaped(), $profile_data['tv'], false ) .
-				$this->getProfileSection( wfMessage( 'other-info-music' )->escaped(), $profile_data['music'], false ) .
-				$this->getProfileSection( wfMessage( 'other-info-books' )->escaped(), $profile_data['books'], false ) .
-				$this->getProfileSection( wfMessage( 'other-info-video-games' )->escaped(), $profile_data['video_games'], false ) .
-				$this->getProfileSection( wfMessage( 'other-info-magazines' )->escaped(), $profile_data['magazines'], false ) .
-				$this->getProfileSection( wfMessage( 'other-info-snacks' )->escaped(), $profile_data['snacks'], false ) .
-				$this->getProfileSection( wfMessage( 'other-info-drinks' )->escaped(), $profile_data['drinks'], false ) .
+				$interests_output .
 			'</div>';
 		} elseif ( $this->isOwner() ) {
 			$output .= '<div class="user-section-heading">

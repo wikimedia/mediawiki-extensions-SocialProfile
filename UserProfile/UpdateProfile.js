@@ -52,3 +52,71 @@ mediaWiki.loader.using( 'jquery.ui.datepicker', function() {
 		} );
 	} );
 } );
+
+$( function() {
+	$( '.eye-container' ).on( {
+		'mouseenter': function() {
+			if ( $( this ).css( 'position' ) != 'absolute' ) {
+				var offset = $( this ).offset();
+
+				$( this ).attr( 'link', $( this ).parent() );
+
+				$( 'body' ).append( $( this ) );
+
+				$( this ).css( {
+					position: 'absolute',
+					top: offset.top + 'px',
+					left: offset.left + 'px'
+				} );
+			}
+
+			$( this ).css( {zIndex: 1000} );
+
+			$( this ).animate( {height: 100}, 100 );
+		},
+		'mouseleave': function() {
+			$( this ).animate( {height: 20}, 100 );
+			$( this ).css( {zIndex: 10} );
+		}
+	} );
+
+	$( '.eye-container > .menu > .item' ).on( 'click', function() {
+		$( this ).parent().parent().css( {height: 20} );
+
+		var field_key = $( this ).parent().parent().attr( 'fieldkey' );
+		var priv = $( this ).attr( 'action' );
+		var this_element = $( this ).parent().parent();
+
+		$( this_element ).css( {
+			opacity: 0.3,
+			backgroundImage: 'none',
+			backgroundColor: 'lightgray'
+		} );
+
+		$( this_element ).find( 'div.title' ).html( '...' );
+
+		$.ajax( {
+			type: 'GET',
+			url: mw.util.wikiScript( 'api' ),
+			data: {
+				action: 'smpuserprivacy',
+				format: 'json',
+				method: 'set',
+				'field_key': field_key,
+				privacy: encodeURIComponent( priv )
+			}
+		} ).done( function( data ) {
+			var offset = $( this_element ).offset();
+			$( this_element ).remove();
+			var newEl = $( data.smpuserprivacy.replace );
+
+			$( newEl ).css( {
+				position: 'absolute',
+				top: offset.top + 'px',
+				left: offset.left + 'px'
+			} );
+
+			$( 'body' ).append( $( newEl ) );
+		} );
+	} );
+} );
