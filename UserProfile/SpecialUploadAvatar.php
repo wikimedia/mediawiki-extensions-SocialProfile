@@ -143,12 +143,20 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 * @return HTML output
 	 */
 	protected function getUploadForm( $message = '', $sessionKey = '', $hideIgnoreWarning = false ) {
-		global $wgUseCopyrightUpload;
+		global $wgUseCopyrightUpload, $wgUserProfileDisplay;
+
+		if ( $wgUserProfileDisplay['avatar'] === false ) {
+			$message = $this->msg( 'socialprofile-uploads-disabled' )->plain();
+		}
 
 		if ( $message != '' ) {
 			$sub = $this->msg( 'uploaderror' )->plain();
 			$this->getOutput()->addHTML( "<h2>{$sub}</h2>\n" .
 				"<h4 class='error'>{$message}</h4>\n" );
+		}
+
+		if ( $wgUserProfileDisplay['avatar'] === false ) {
+			return '';
 		}
 
 		$ulb = $this->msg( 'uploadbtn' );

@@ -2,5 +2,6 @@
 	"@metadata": {
 		"authors": []
 	},
-	"socialprofile-desc": "A set of social tools for MediaWiki"
+	"socialprofile-desc": "A set of social tools for MediaWiki",
+	"socialprofile-uploads-disabled": "The avatar upload feature is disabled"
 }

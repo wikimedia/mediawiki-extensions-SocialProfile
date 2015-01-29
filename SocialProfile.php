@@ -93,6 +93,7 @@ require_once( "$IP/extensions/SocialProfile/UserRelationship/Relationship_AjaxFu
 $wgUserProfileDisplay['board'] = true;
 $wgUserProfileDisplay['foes'] = true;
 $wgUserProfileDisplay['friends'] = true;
+$wgUserProfileDisplay['avatar'] = true; // If set to false, disables both avatar display and upload
 
 // Should we display UserBoard-related things on social profile pages?
 $wgUserBoard = true;

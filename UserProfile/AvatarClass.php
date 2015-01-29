@@ -59,13 +59,19 @@ class wAvatar {
 	 * @return String: <img> HTML tag with full path to the avatar image
 	 * */
 	function getAvatarURL( $extraParams = array() ) {
-		global $wgUploadPath;
+		global $wgUploadPath, $wgUserProfileDisplay;
 
 		$defaultParams = array(
 			'src' => "{$wgUploadPath}/avatars/{$this->getAvatarImage()}",
 			'alt' => 'avatar',
 			'border' => '0',
 		);
+
+		if ( $wgUserProfileDisplay['avatar'] === false ) {
+			$defaultParams['src'] = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; // Replace by a white pixel
+			$defaultParams['style'] = 'border-width:0;display:none;';
+		}
+
 		$params = array_merge( $extraParams, $defaultParams );
 
 		return Html::element( 'img', $params, '' );
