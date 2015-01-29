@@ -163,6 +163,7 @@
 	"user-profile-goback": "Go back",
 	"user-profile-userlevels-link": "User levels",
 	"user-profile-create-threshold-title": "Create user profile",
+	"user-profile-create-threshold-only-confirmed-email": "and a confirmed email address",
 	"user-profile-create-threshold-edits": "{{PLURAL:$1|one edit|$1 edits}}",
 	"user-profile-create-threshold-votes": "{{PLURAL:$1|one vote|$1 votes}}",
 	"user-profile-create-threshold-comments": "{{PLURAL:$1|one comment|$1 comments}}",

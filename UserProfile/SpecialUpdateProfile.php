@@ -51,7 +51,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * @param $section Mixed: parameter passed to the page or null
 	 */
 	public function execute( $section ) {
-		global $wgUpdateProfileInRecentChanges, $wgUserProfileThresholds, $wgSupressPageTitle, $wgAutoConfirmCount;
+		global $wgUpdateProfileInRecentChanges, $wgUserProfileThresholds, $wgSupressPageTitle, $wgAutoConfirmCount, $wgEmailConfirmToEdit;
 
 		$out = $this->getOutput();
 		$request = $this->getRequest();
@@ -109,6 +109,11 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$hasEqualEditThreshold = ( isset( $wgUserProfileThresholds['edit'] ) && $wgUserProfileThresholds['edit'] == $wgAutoConfirmCount ) ? true : false;
 			$can_create = ( $user->isAllowed( 'createpage' ) && $hasEqualEditThreshold ) ? true : $can_create;
 
+			// Ensure we enforce profile creation exclusively to members who confirmed their email
+			if ( $user->getEmailAuthenticationTimestamp() === NULL && $wgEmailConfirmToEdit === true ) {
+				$can_create = false;
+			}
+
 			// Boo, go away!
 			if ( $can_create == false ) {
 				global $wgSupressPageTitle;
@@ -131,6 +136,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 					 * user-profile-create-threshold-foe-count
 					 * user-profile-create-threshold-weekly-wins
 					 * user-profile-create-threshold-monthly-wins
+					 * user-profile-create-threshold-only-confirmed-email
 					 * user-profile-create-threshold-poll-votes
 					 * user-profile-create-threshold-picture-game-votes
 					 * user-profile-create-threshold-quiz-created
@@ -139,6 +145,10 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 					 * user-profile-create-threshold-quiz-points
 					*/
 					$thresholdMessages[] = $this->msg( 'user-profile-create-threshold-' . $reason )->numParams( $requiredAmount )->parse();
+				}
+				// Set a useful message of why.
+				if ( $user->getEmailAuthenticationTimestamp() === NULL && $wgEmailConfirmToEdit === true ) {
+						$thresholdMessages[] = $this->msg( 'user-profile-create-threshold-only-confirmed-email' )->text();
 				}
 				$out->addHTML(
 					$this->msg( 'user-profile-create-threshold-reason',
