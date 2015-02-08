@@ -63,7 +63,7 @@ class ViewSystemGift extends UnlistedSpecialPage {
 				),
 				array(
 					"sg_gift_id = {$gift['gift_id']}",
-					"sg_user_name <> '" . $dbr->strencode( $gift['user_name'] ) . "'"
+					'sg_user_name <> ' . $dbr->addQuotes( $gift['user_name'] )
 				),
 				__METHOD__,
 				array(
