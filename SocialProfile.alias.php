@@ -102,11 +102,11 @@ $specialPageAliases['de'] = array(
 /** Zazaki (Zazaki) */
 $specialPageAliases['diq'] = array(
 	'AddRelationship' => array( 'EleqeDeke' ),
-	'EditProfile' => array( 'ProfiliBıvırne' ),
-	'RemoveAvatar' => array( 'AvatariWedarne' ),
-	'UpdateProfile' => array( 'ProfiliRocaneke' ),
-	'UploadAvatar' => array( 'AvatarBarke' ),
-	'UserBoard' => array( 'DéséKarberi' ),
+	'EditProfile' => array( 'ProfiliBıvurne' ),
+	'RemoveAvatar' => array( 'AvatariWedare' ),
+	'UpdateProfile' => array( 'ProfiliRocaneKe' ),
+	'UploadAvatar' => array( 'AvatarBarKe' ),
+	'UserBoard' => array( 'DêsêKarberi' ),
 	'ViewRelationshipRequests' => array( 'WaştışéEleqiBımocne' ),
 	'ViewRelationships' => array( 'EleqiBımocne' ),
 );
