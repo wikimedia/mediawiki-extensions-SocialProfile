@@ -72,6 +72,23 @@ $specialPageAliases['arz'] = array(
 	'ViewRelationships' => array( 'عرض_العلاقات' ),
 );
 
+/** Western Balochi (بلوچی رخشانی) */
+$specialPageAliases['bgn'] = array(
+	'AddRelationship' => array( 'رابیته_ئی_ایزاپه_کورتین' ),
+	'EditProfile' => array( 'نمایگ_ئی_دستکاری_کورتین' ),
+	'PopulateUserProfiles' => array( 'کارمرزوکی_نمایگ_ئی_تولید_کورتین' ),
+	'RemoveAvatar' => array( 'آواتار_ئی_پاک_کورتین' ),
+	'RemoveRelationship' => array( 'رابیته_ئی_پاک_کورتین' ),
+	'TopUsers' => array( 'گیهتیرین_کامرزوکان' ),
+	'TopUsersRecent' => array( 'آخیرین_گیهتیرین_کارمرزوکان' ),
+	'UpdateEditCounts' => array( 'دستکاری_هیسابی_نۆک_کورتین' ),
+	'UpdateProfile' => array( 'نمایگ_ئی_نۆک_کورتین' ),
+	'UploadAvatar' => array( 'آواتار_ئی_نۆک_کورتین' ),
+	'UserBoard' => array( 'کارمرزوک_ئی_تخته' ),
+	'ViewRelationshipRequests' => array( 'رابیته_ئی_درخواست_ئی_نشان_داتین' ),
+	'ViewRelationships' => array( 'رابیته_ئانی_نشان_دایتین' ),
+);
+
 /** Bosnian (bosanski) */
 $specialPageAliases['bs'] = array(
 	'AddRelationship' => array( 'DodavanjeVeze' ),
