@@ -108,7 +108,7 @@ function getWelcome() {
 					'mp-welcome-needed-points',
 					htmlspecialchars( $level_link->getFullURL() ),
 					$user_level->getNextLevelName(),
-					$user_level->getPointsNeededToAdvance()
+					$wgLang->formatNum( $user_level->getPointsNeededToAdvance() )
 				)->text() .
 			'</div>
 		</div>';

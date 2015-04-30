@@ -148,9 +148,11 @@ class UserProfilePage extends Article {
 		$output = ''; // Prevent E_NOTICE
 
 		if ( $value != 0 ) {
+			global $wgLang;
+			$formattedValue = $wgLang->formatNum( $value );
 			$output = "<div>
 					<b>{$label}</b>
-					{$value}
+					{$formattedValue}
 			</div>";
 		}
 
@@ -217,7 +219,7 @@ class UserProfilePage extends Article {
 					wfMessage( 'user-stats-quiz-points', $stats_data['quiz_points'] )->escaped(),
 					$stats_data['quiz_points']
 				);
-			if ( $stats_data['currency'] != '10,000' ) {
+			if ( $stats_data['currency'] != '10000' ) {
 				$output .= $this->getUserStatsRow(
 					wfMessage( 'user-stats-pick-points', $stats_data['currency'] )->escaped(),
 					$stats_data['currency']
@@ -1043,13 +1045,13 @@ class UserProfilePage extends Article {
 				<div class="user-section-title">' . $relationship_title . '</div>
 				<div class="user-section-actions">
 					<div class="action-right">';
-			if ( intval( str_replace( ',', '', $relationship_count ) ) > 4 ) {
+			if ( intval( $relationship_count ) > 4 ) {
 				$output .= '<a href="' . htmlspecialchars( $view_all_title->getFullURL( 'user=' . $user_name . '&rel_type=' . $rel_type ) ) .
 					'" rel="nofollow">' . wfMessage( 'user-view-all' )->escaped() . '</a>';
 			}
 			$output .= '</div>
 					<div class="action-left">';
-			if ( intval( str_replace( ',', '', $relationship_count ) ) > 4 ) {
+			if ( intval( $relationship_count ) > 4 ) {
 				$output .= wfMessage( 'user-count-separator', $per_row, $relationship_count )->escaped();
 			} else {
 				$output .= wfMessage( 'user-count-separator', $relationship_count, $relationship_count )->escaped();

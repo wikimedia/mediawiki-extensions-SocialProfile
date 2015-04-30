@@ -753,35 +753,35 @@ class UserStats {
 			)
 		);
 		$row = $dbr->fetchObject( $res );
-		$stats['edits'] = number_format( isset( $row->stats_edit_count ) ? $row->stats_edit_count : 0 );
-		$stats['votes'] = number_format( isset( $row->stats_vote_count ) ? $row->stats_vote_count : 0 );
-		$stats['comments'] = number_format( isset( $row->stats_comment_count ) ? $row->stats_comment_count : 0 );
-		$stats['comment_score_plus'] = number_format( isset( $row->stats_comment_score_positive_rec ) ? $row->stats_comment_score_positive_rec : 0 );
-		$stats['comment_score_minus'] = number_format( isset( $row->stats_comment_score_negative_rec ) ? $row->stats_comment_score_negative_rec : 0 );
-		$stats['comment_score'] = number_format( $stats['comment_score_plus'] - $stats['comment_score_minus'] );
+		$stats['edits'] = isset( $row->stats_edit_count ) ? $row->stats_edit_count : 0;
+		$stats['votes'] = isset( $row->stats_vote_count ) ? $row->stats_vote_count : 0;
+		$stats['comments'] = isset( $row->stats_comment_count ) ? $row->stats_comment_count : 0;
+		$stats['comment_score_plus'] = isset( $row->stats_comment_score_positive_rec ) ? $row->stats_comment_score_positive_rec : 0;
+		$stats['comment_score_minus'] = isset( $row->stats_comment_score_negative_rec ) ? $row->stats_comment_score_negative_rec : 0;
+		$stats['comment_score'] = ( $stats['comment_score_plus'] - $stats['comment_score_minus'] );
 		$stats['opinions_created'] = isset( $row->stats_opinions_created ) ? $row->stats_opinions_created : 0;
 		$stats['opinions_published'] = isset( $row->stats_opinions_published ) ? $row->stats_opinions_published : 0;
-		$stats['points'] = number_format( isset( $row->stats_total_points ) ? $row->stats_total_points : 0 );
-		$stats['recruits'] = number_format( isset( $row->stats_referrals_completed ) ? $row->stats_referrals_completed : 0 );
-		$stats['challenges_won'] = number_format( isset( $row->stats_challenges_won ) ? $row->stats_challenges_won : 0 );
-		$stats['friend_count'] = number_format( isset( $row->stats_friends_count ) ? $row->stats_friends_count : 0 );
-		$stats['foe_count'] = number_format( isset( $row->stats_foe_count ) ? $row->stats_foe_count : 0 );
-		$stats['user_board'] = number_format( isset( $row->user_board_count ) ? $row->user_board_count : 0 );
-		$stats['user_board_priv'] = number_format( isset( $row->user_board_count_priv ) ? $row->user_board_count_priv : 0 );
-		$stats['user_board_sent'] = number_format( isset( $row->user_board_sent ) ? $row->user_board_sent : 0 );
-		$stats['weekly_wins'] = number_format( isset( $row->stats_weekly_winner_count ) ? $row->stats_weekly_winner_count : 0 );
-		$stats['monthly_wins'] = number_format( isset( $row->stats_monthly_winner_count ) ? $row->stats_monthly_winner_count : 0 );
-		$stats['poll_votes'] = number_format( isset( $row->stats_poll_votes ) ? $row->stats_poll_votes : 0 );
-		$stats['currency'] = number_format( isset( $row->stats_currency ) ? $row->stats_currency : 0 );
-		$stats['picture_game_votes'] = number_format( isset( $row->stats_picturegame_votes ) ? $row->stats_picturegame_votes : 0 );
-		$stats['quiz_created'] = number_format( isset( $row->stats_quiz_questions_created ) ? $row->stats_quiz_questions_created : 0 );
-		$stats['quiz_answered'] = number_format( isset( $row->stats_quiz_questions_answered ) ? $row->stats_quiz_questions_answered : 0 );
-		$stats['quiz_correct'] = number_format( isset( $row->stats_quiz_questions_correct ) ? $row->stats_quiz_questions_correct : 0 );
-		$stats['quiz_points'] = number_format( isset( $row->stats_quiz_points ) ? $row->stats_quiz_points : 0 );
+		$stats['points'] = isset( $row->stats_total_points ) ? $row->stats_total_points : 0;
+		$stats['recruits'] = isset( $row->stats_referrals_completed ) ? $row->stats_referrals_completed : 0;
+		$stats['challenges_won'] = isset( $row->stats_challenges_won ) ? $row->stats_challenges_won : 0;
+		$stats['friend_count'] = isset( $row->stats_friends_count ) ? $row->stats_friends_count : 0;
+		$stats['foe_count'] = isset( $row->stats_foe_count ) ? $row->stats_foe_count : 0;
+		$stats['user_board'] = isset( $row->user_board_count ) ? $row->user_board_count : 0;
+		$stats['user_board_priv'] = isset( $row->user_board_count_priv ) ? $row->user_board_count_priv : 0;
+		$stats['user_board_sent'] = isset( $row->user_board_sent ) ? $row->user_board_sent : 0;
+		$stats['weekly_wins'] = isset( $row->stats_weekly_winner_count ) ? $row->stats_weekly_winner_count : 0;
+		$stats['monthly_wins'] = isset( $row->stats_monthly_winner_count ) ? $row->stats_monthly_winner_count : 0;
+		$stats['poll_votes'] = isset( $row->stats_poll_votes ) ? $row->stats_poll_votes : 0;
+		$stats['currency'] = isset( $row->stats_currency ) ? $row->stats_currency : 0;
+		$stats['picture_game_votes'] = isset( $row->stats_picturegame_votes ) ? $row->stats_picturegame_votes : 0;
+		$stats['quiz_created'] = isset( $row->stats_quiz_questions_created ) ? $row->stats_quiz_questions_created : 0;
+		$stats['quiz_answered'] = isset( $row->stats_quiz_questions_answered ) ? $row->stats_quiz_questions_answered : 0;
+		$stats['quiz_correct'] = isset( $row->stats_quiz_questions_correct ) ? $row->stats_quiz_questions_correct : 0;
+		$stats['quiz_points'] = isset( $row->stats_quiz_points ) ? $row->stats_quiz_points : 0;
 		$stats['quiz_correct_percent'] = number_format( ( isset( $row->stats_quiz_questions_correct_percent ) ? $row->stats_quiz_questions_correct_percent : 0 ) * 100, 2 );
-		$stats['user_status_count'] = number_format( isset( $row->user_status_count ) ? $row->user_status_count : 0 );
+		$stats['user_status_count'] = isset( $row->user_status_count ) ? $row->user_status_count : 0;
 		if ( !$row ) {
-			$stats['points'] = '1,000';
+			$stats['points'] = '1000';
 		}
 
 		$key = wfMemcKey( 'user', 'stats', $this->user_id );
@@ -966,7 +966,7 @@ class UserLevel {
 	public function getNextLevelName() { return $this->next_level_name; }
 
 	public function getPointsNeededToAdvance() {
-		return number_format( $this->next_level_points_needed );
+		return $this->next_level_points_needed;
 	}
 
 	public function getLevelMinimum() {

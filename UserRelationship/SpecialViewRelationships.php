@@ -241,7 +241,7 @@ class SpecialViewRelationships extends SpecialPage {
 		/**
 		 * Build next/prev nav
 		 */
-		$total = intval( str_replace( ',', '', $total ) );
+		$total = intval( $total );
 		$numofpages = $total / $per_page;
 
 		$pageLink = $this->getPageTitle();
