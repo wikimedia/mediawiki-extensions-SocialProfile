@@ -51,7 +51,7 @@ $specialPageAliases['ar'] = array(
 	'ViewRelationships' => array( 'عرض_العلاقات' ),
 );
 
-/** Egyptian Spoken Arabic (مصرى) */
+/** Egyptian Arabic (مصرى) */
 $specialPageAliases['arz'] = array(
 	'AddRelationship' => array( 'زود_علاقه' ),
 	'EditProfile' => array( 'تعديل_الملف' ),
