@@ -57,8 +57,15 @@ class TopUsersPoints extends SpecialPage {
 
 			foreach ( $res as $row ) {
 				$user = User::newFromId( $row->stats_user_id );
+				// Ensure that the user exists for real.
+				// Otherwise we'll be happily displaying entries for users that
+				// once existed by no longer do (account merging is a thing,
+				// sadly), since user_stats entries for users are *not* purged
+				// and/or merged during the account merge process (which is a
+				// different bug with a different extension).
+				$exists = $user->loadFromId();
 
-				if ( !$user->isBlocked() ) {
+				if ( !$user->isBlocked() && $exists ) {
 					$user_list[] = array(
 						'user_id' => $row->stats_user_id,
 						'user_name' => $row->stats_user_name,

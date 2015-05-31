@@ -45,12 +45,13 @@ class TopFansRecent extends UnlistedSpecialPage {
 		}
 		$out->setPageTitle( $this->msg( $pageTitle )->plain() );
 
-		$count = 50;
+		$count = 100;
+		$realCount = 50;
 
 		$user_list = array();
 
 		// Try cache
-		$key = wfMemcKey( 'user_stats', $period, 'points', $count );
+		$key = wfMemcKey( 'user_stats', $period, 'points', $realCount );
 		$data = $wgMemc->get( $key );
 
 		if ( $data != '' ) {
@@ -71,12 +72,30 @@ class TopFansRecent extends UnlistedSpecialPage {
 				$params
 			);
 
+			$loop = 0;
+
 			foreach ( $res as $row ) {
-				$user_list[] = array(
-					'user_id' => $row->up_user_id,
-					'user_name' => $row->up_user_name,
-					'points' => $row->up_points
-				);
+				$u = User::newFromId( $row->up_user_id );
+				// Ensure that the user exists for real.
+				// Otherwise we'll be happily displaying entries for users that
+				// once existed by no longer do (account merging is a thing,
+				// sadly), since user_stats entries for users are *not* purged
+				// and/or merged during the account merge process (which is a
+				// different bug with a different extension).
+				$exists = $u->loadFromId();
+
+				if ( !$u->isBlocked() && $exists ) {
+					$user_list[] = array(
+						'user_id' => $row->up_user_id,
+						'user_name' => $row->up_user_name,
+						'points' => $row->up_points
+					);
+					$loop++;
+				}
+
+				if ( $loop >= $realCount ) {
+					break;
+				}
 			}
 
 			$wgMemc->set( $key, $user_list, 60 * 5 );

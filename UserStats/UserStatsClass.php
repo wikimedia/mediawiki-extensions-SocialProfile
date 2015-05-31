@@ -849,13 +849,31 @@ class UserStats {
 			)
 		);
 
+		$loop = 0;
+
 		$list = array();
 		foreach ( $res as $row ) {
-			$list[] = array(
-				'user_id' => $row->up_user_id,
-				'user_name' => $row->up_user_name,
-				'points' => $row->up_points
-			);
+			$user = User::newFromId( $row->up_user_id );
+			// Ensure that the user exists for real.
+			// Otherwise we'll be happily displaying entries for users that
+			// once existed by no longer do (account merging is a thing,
+			// sadly), since user_stats entries for users are *not* purged
+			// and/or merged during the account merge process (which is a
+			// different bug with a different extension).
+			$exists = $user->loadFromId();
+
+			if ( !$user->isBlocked() && $exists ) {
+				$list[] = array(
+					'user_id' => $row->up_user_id,
+					'user_name' => $row->up_user_name,
+					'points' => $row->up_points
+				);
+				$loop++;
+			}
+
+			if ( $loop >= $limit ) {
+				break;
+			}
 		}
 
 		return $list;
