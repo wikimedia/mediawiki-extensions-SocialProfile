@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Metalhead64"
+			"Metalhead64",
+			"Purodha"
 		]
 	},
-	"socialprofile-desc": "Ergänzt MediaWiki um einen Satz sozialer Werkzeuge",
+	"socialprofile-desc": "Erweitert MediaWiki um einen Satz sozialer Werkzeuge",
 	"socialprofile-uploads-disabled": "Die Funktion zum Hochladen von Avatars ist deaktiviert"
 }
