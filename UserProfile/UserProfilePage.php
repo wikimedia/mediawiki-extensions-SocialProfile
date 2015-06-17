@@ -100,7 +100,7 @@ class UserProfilePage extends Article {
 		// Left side
 		$wgOut->addHTML( '<div id="user-page-left" class="clearfix">' );
 
-		if ( !wfRunHooks( 'UserProfileBeginLeft', array( &$this ) ) ) {
+		if ( !Hooks::run( 'UserProfileBeginLeft', array( &$this ) ) ) {
 			wfDebug( __METHOD__ . ": UserProfileBeginLeft messed up profile!\n" );
 		}
 
@@ -113,7 +113,7 @@ class UserProfilePage extends Article {
 		$wgOut->addHTML( $this->getFanBoxes( $this->user_name ) );
 		$wgOut->addHTML( $this->getUserStats( $this->user_id, $this->user_name ) );
 
-		if ( !wfRunHooks( 'UserProfileEndLeft', array( &$this ) ) ) {
+		if ( !Hooks::run( 'UserProfileEndLeft', array( &$this ) ) ) {
 			wfDebug( __METHOD__ . ": UserProfileEndLeft messed up profile!\n" );
 		}
 
@@ -124,20 +124,20 @@ class UserProfilePage extends Article {
 		// Right side
 		$wgOut->addHTML( '<div id="user-page-right" class="clearfix">' );
 
-		if ( !wfRunHooks( 'UserProfileBeginRight', array( &$this ) ) ) {
+		if ( !Hooks::run( 'UserProfileBeginRight', array( &$this ) ) ) {
 			wfDebug( __METHOD__ . ": UserProfileBeginRight messed up profile!\n" );
 		}
 
 		$wgOut->addHTML( $this->getPersonalInfo( $this->user_id, $this->user_name ) );
 		$wgOut->addHTML( $this->getActivity( $this->user_name ) );
 		// Hook for BlogPage
-		if ( !wfRunHooks( 'UserProfileRightSideAfterActivity', array( $this ) ) ) {
+		if ( !Hooks::run( 'UserProfileRightSideAfterActivity', array( $this ) ) ) {
 			wfDebug( __METHOD__ . ": UserProfileRightSideAfterActivity hook messed up profile!\n" );
 		}
 		$wgOut->addHTML( $this->getCasualGames( $this->user_id, $this->user_name ) );
 		$wgOut->addHTML( $this->getUserBoard( $this->user_id, $this->user_name ) );
 
-		if ( !wfRunHooks( 'UserProfileEndRight', array( &$this ) ) ) {
+		if ( !Hooks::run( 'UserProfileEndRight', array( &$this ) ) ) {
 			wfDebug( __METHOD__ . ": UserProfileEndRight messed up profile!\n" );
 		}
 

@@ -288,9 +288,9 @@ class UserRelationship {
 
 			// Hooks (for Semantic SocialProfile mostly)
 			if ( $ur_type == 1 ) {
-				wfRunHooks( 'NewFriendAccepted', array( $ur_user_name_from, $this->user_name ) );
+				Hooks::run( 'NewFriendAccepted', array( $ur_user_name_from, $this->user_name ) );
 			} else {
-				wfRunHooks( 'NewFoeAccepted', array( $ur_user_name_from, $this->user_name ) );
+				Hooks::run( 'NewFoeAccepted', array( $ur_user_name_from, $this->user_name ) );
 			}
 
 			return true;
@@ -332,7 +332,7 @@ class UserRelationship {
 		$wgMemc->delete( wfMemcKey( 'relationship', 'profile', "{$user2}-2" ) );
 
 		// RelationshipRemovedByUserID hook
-		wfRunHooks( 'RelationshipRemovedByUserID', array( $user1, $user2 ) );
+		Hooks::run( 'RelationshipRemovedByUserID', array( $user1, $user2 ) );
 
 		// Update social statistics for both users
 		$stats = new UserStatsTrack( $user1, '' );

@@ -297,7 +297,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$user->saveSettings();
 
 		// Allow extensions like UserMailingList do their magic here
-		wfRunHooks( 'SpecialUpdateProfile::saveSettings_pref', array( $this, $request ) );
+		Hooks::run( 'SpecialUpdateProfile::saveSettings_pref', array( $this, $request ) );
 	}
 
 	public static function formatBirthdayDB( $birthday ) {
@@ -373,7 +373,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		// BasicProfileChanged hook
 		$basicProfileData['up_name'] = $request->getVal( 'real_name' );
 		$basicProfileData['up_email'] = $request->getVal( 'email' );
-		wfRunHooks( 'BasicProfileChanged', array( $user, $basicProfileData ) );
+		Hooks::run( 'BasicProfileChanged', array( $user, $basicProfileData ) );
 		// end of the hook
 
 		$wgMemc->delete( wfMemcKey( 'user', 'profile', 'info', $user->getID() ) );
@@ -449,7 +449,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		);
 
 		// PersonalInterestsChanged hook
-		wfRunHooks( 'PersonalInterestsChanged', array( $user, $interestsData ) );
+		Hooks::run( 'PersonalInterestsChanged', array( $user, $interestsData ) );
 		// end of the hook
 
 		$wgMemc->delete( wfMemcKey( 'user', 'profile', 'info', $user->getID() ) );
@@ -805,7 +805,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			</p>';
 
 		// Allow extensions (like UserMailingList) to add new checkboxes
-		wfRunHooks( 'SpecialUpdateProfile::displayPreferencesForm', array( $this, &$form ) );
+		Hooks::run( 'SpecialUpdateProfile::displayPreferencesForm', array( $this, &$form ) );
 
 		$form .= '</div>
 			<div class="cleared"></div>';

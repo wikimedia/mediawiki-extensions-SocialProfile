@@ -57,7 +57,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 
 			$this->showSuccess( $this->mUpload->mExtension );
 			// Run a hook on avatar change
-			wfRunHooks( 'NewAvatarUploaded', array( $this->getUser() ) );
+			Hooks::run( 'NewAvatarUploaded', array( $this->getUser() ) );
 		}
 	}
 
