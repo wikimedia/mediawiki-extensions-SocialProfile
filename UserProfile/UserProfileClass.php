@@ -161,10 +161,18 @@ class UserProfile {
 			$month = $dob[1];
 			$day = $dob[2];
 			if ( !$showYear ) {
-				return date( 'F jS', mktime( 0, 0, 0, $month, $day ) );
+				if ( $dob[1] == '00' && $dob[2] == '00' ) {
+					return '';
+				} else {
+					return date( 'F jS', mktime( 0, 0, 0, $month, $day ) );
+				}
 			}
 			$year = $dob[0];
-			return date( 'F jS, Y', mktime( 0, 0, 0, $month, $day, $year ) );
+			if ( $dob[0] == '00' && $dob[1] == '00' && $dob[2] == '00' ) {
+				return '';
+			} else {
+				return date( 'F jS, Y', mktime( 0, 0, 0, $month, $day, $year ) );
+			}
 			//return $day . ' ' . $wgLang->getMonthNameGen( $month );
 		}
 		return $birthday;

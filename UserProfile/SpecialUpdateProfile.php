@@ -303,7 +303,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	public static function formatBirthdayDB( $birthday ) {
 		$dob = explode( '/', $birthday );
 		if ( count( $dob ) == 2 || count( $dob ) == 3 ) {
-			$year = isset( $dob[2] ) ? $dob[2] : 2007;
+			$year = isset( $dob[2] ) ? $dob[2] : '00';
 			$month = $dob[0];
 			$day = $dob[1];
 			$birthday_date = $year . '-' . $month . '-' . $day;
