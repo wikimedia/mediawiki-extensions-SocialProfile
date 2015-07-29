@@ -110,7 +110,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$can_create = ( $user->isAllowed( 'createpage' ) && $hasEqualEditThreshold ) ? true : $can_create;
 
 			// Ensure we enforce profile creation exclusively to members who confirmed their email
-			if ( $user->getEmailAuthenticationTimestamp() === NULL && $wgEmailConfirmToEdit === true ) {
+			if ( $user->getEmailAuthenticationTimestamp() === null && $wgEmailConfirmToEdit === true ) {
 				$can_create = false;
 			}
 
@@ -147,8 +147,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 					$thresholdMessages[] = $this->msg( 'user-profile-create-threshold-' . $reason )->numParams( $requiredAmount )->parse();
 				}
 				// Set a useful message of why.
-				if ( $user->getEmailAuthenticationTimestamp() === NULL && $wgEmailConfirmToEdit === true ) {
-						$thresholdMessages[] = $this->msg( 'user-profile-create-threshold-only-confirmed-email' )->text();
+				if ( $user->getEmailAuthenticationTimestamp() === null && $wgEmailConfirmToEdit === true ) {
+					$thresholdMessages[] = $this->msg( 'user-profile-create-threshold-only-confirmed-email' )->text();
 				}
 				$out->addHTML(
 					$this->msg( 'user-profile-create-threshold-reason',
@@ -160,7 +160,10 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		}
 
 		// Add CSS & JS
-		$out->addModuleStyles( 'ext.socialprofile.userprofile.css' );
+		$out->addModuleStyles( array(
+			'ext.socialprofile.clearfix',
+			'ext.socialprofile.userprofile.css'
+		) );
 		$out->addModules( 'ext.userProfile.updateProfile' );
 
 		if ( $request->wasPosted() ) {

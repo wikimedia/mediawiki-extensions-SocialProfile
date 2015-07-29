@@ -118,9 +118,9 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 		} elseif ( $hasRelationship >= 1 ) {
 
 			if ( $hasRelationship == 1 ) {
-				$error = $this->msg( 'ur-add-error-message-existing-relationship-friend', $this->user_name_to )->parse();
+				$error = $this->msg( 'ur-add-error-message-existing-relationship-friend', $this->user_name_to )->parseAsBlock();
 			} else {
-				$error = $this->msg( 'ur-add-error-message-existing-relationship-foe', $this->user_name_to )->parse();
+				$error = $this->msg( 'ur-add-error-message-existing-relationship-foe', $this->user_name_to )->parseAsBlock();
 			}
 
 			$avatar = new wAvatar( $this->user_id_to, 'l' );
@@ -142,9 +142,9 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 		} elseif ( UserRelationship::userHasRequestByID( $this->user_id_to, $currentUser->getID() ) == true ) {
 
 			if ( $this->relationship_type == 1 ) {
-				$error = $this->msg( 'ur-add-error-message-pending-friend-request', $this->user_name_to )->parse();
+				$error = $this->msg( 'ur-add-error-message-pending-friend-request', $this->user_name_to )->parseAsBlock();
 			} else {
-				$error = $this->msg( 'ur-add-error-message-pending-foe-request', $this->user_name_to )->parse();
+				$error = $this->msg( 'ur-add-error-message-pending-foe-request', $this->user_name_to )->parseAsBlock();
 			}
 
 			$avatar = new wAvatar( $this->user_id_to, 'l' );
@@ -200,10 +200,10 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 
 				if ( $this->relationship_type == 1 ) {
 					$out->setPageTitle( $this->msg( 'ur-add-sent-title-friend', $this->user_name_to )->parse() );
-					$sent = $this->msg( 'ur-add-sent-message-friend', $this->user_name_to )->parse();
+					$sent = $this->msg( 'ur-add-sent-message-friend', $this->user_name_to )->parseAsBlock();
 				} else {
 					$out->setPageTitle( $this->msg( 'ur-add-sent-title-foe', $this->user_name_to )->parse() );
-					$sent = $this->msg( 'ur-add-sent-message-foe', $this->user_name_to )->parse();
+					$sent = $this->msg( 'ur-add-sent-message-foe', $this->user_name_to )->parseAsBlock();
 				}
 
 				$output = "<div class=\"relationship-action\">
@@ -234,11 +234,11 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 
 		if ( $this->relationship_type == 1 ) {
 			$out->setPageTitle( $this->msg( 'ur-add-title-friend', $this->user_name_to )->parse() );
-			$add = $this->msg( 'ur-add-message-friend', $this->user_name_to )->parse();
+			$add = $this->msg( 'ur-add-message-friend', $this->user_name_to )->parseAsBlock();
 			$button = $this->msg( 'ur-add-button-friend' )->plain();
 		} else {
 			$out->setPageTitle( $this->msg( 'ur-add-title-foe', $this->user_name_to )->parse() );
-			$add = $this->msg( 'ur-add-message-foe', $this->user_name_to )->parse();
+			$add = $this->msg( 'ur-add-message-foe', $this->user_name_to )->parseAsBlock();
 			$button = $this->msg( 'ur-add-button-foe' )->plain();
 		}
 

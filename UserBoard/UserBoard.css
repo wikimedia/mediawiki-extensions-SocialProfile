@@ -1,24 +1,3 @@
-.cleared {
-	clear: both;
-}
-
-.clearfix:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
-
-.clearfix { display: inline-block; }
-
-/* Monaco is different */
-.skin-monaco .clearfix { display: block; }
-
-/* Hides from IE-mac \*/
-* html .clearfix { height: 1%; }
-/* End hide from IE-mac */
-
 #user-page-board {
 	margin: 5px 0px 10px 0px;
 }
@@ -114,4 +93,15 @@ select#message_type {
 
 .user-board-message-type {
 	color: #797979;
+}
+
+/* Responsive stuff for mobile devices */
+@media screen and (max-width: 750px) {
+	div.user-board-message {
+		max-width: 100%;
+	}
+	/* Makes long messages wrap sanely */
+	div.user-board-message-body {
+		float: none;
+	}
 }

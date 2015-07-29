@@ -62,7 +62,10 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		}
 
 		// Add CSS & JS
-		$out->addModuleStyles( 'ext.socialprofile.userprofile.css' );
+		$out->addModuleStyles( array(
+			'ext.socialprofile.clearfix',
+			'ext.socialprofile.userprofile.css'
+		) );
 		$out->addModules( 'ext.userProfile.updateProfile' );
 
 		// Get the user's name from the wpUser URL parameter

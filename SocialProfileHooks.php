@@ -9,6 +9,18 @@
 class SocialProfileHooks {
 
 	/**
+	 * Load some responsive CSS on all pages.
+	 *
+	 * @param OutputPage $out
+	 * @param Skin $skin
+	 * @return bool
+	 */
+	public static function onBeforePageDisplay( OutputPage &$out, &$skin ) {
+		$out->addModuleStyles( 'ext.socialprofile.responsive' );
+		return true;
+	}
+
+	/**
 	 * Register the canonical names for our custom namespaces and their talkspaces.
 	 *
 	 * @param $list Array: array of namespace numbers with corresponding

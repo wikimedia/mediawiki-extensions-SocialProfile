@@ -1,24 +1,3 @@
-.cleared {
-	clear: both;
-}
-
-.clearfix:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
-
-.clearfix { display: inline-block; }
-
-/* Monaco is different */
-.skin-monaco .clearfix { display: block; }
-
-/* Hides from IE-mac \*/
-* html .clearfix { height: 1%; }
-/* End hide from IE-mac */
-
 .back-links {
 	margin: 0px 0px 10px 0px;
 }
@@ -118,4 +97,12 @@
 
 .red-text {
 	color: red !important;
+}
+
+/* Responsive stuff for mobile devices */
+@media screen and (max-width: 750px) and (orientation: portrait) {
+	/* "Add/Remove friend/foe" pages */
+	div.relationship-action p {
+		max-width: 60%;
+	}
 }

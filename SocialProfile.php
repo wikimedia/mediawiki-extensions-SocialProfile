@@ -111,7 +111,7 @@ $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'SocialProfile',
 	'author' => array( 'Aaron Wright', 'David Pean', 'Jack Phoenix' ),
-	'version' => '1.7.1',
+	'version' => '1.7.2',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile',
 	'descriptionmsg' => 'socialprofile-desc',
 );
@@ -216,6 +216,7 @@ require_once( "$IP/extensions/SocialProfile/UserGifts/Gifts.php" ); // UserGifts
 require_once( "$IP/extensions/SocialProfile/SystemGifts/SystemGifts.php" ); // SystemGifts (awards functionality) loader file
 require_once( "$IP/extensions/SocialProfile/UserActivity/UserActivity.php" ); // UserActivity - recent social changes
 
+$wgHooks['BeforePageDisplay'][] = 'SocialProfileHooks::onBeforePageDisplay';
 $wgHooks['CanonicalNamespaces'][] = 'SocialProfileHooks::onCanonicalNamespaces';
 $wgHooks['LoadExtensionSchemaUpdates'][] = 'SocialProfileHooks::onLoadExtensionSchemaUpdates';
 $wgHooks['ParserFirstCallInit'][] = 'AvatarParserFunction::setupAvatarParserFunction';
@@ -225,6 +226,21 @@ $wgHooks['RenameUserComplete'][] = 'SocialProfileHooks::onRenameUserComplete';
 
 // ResourceLoader module definitions for certain components which do not have
 // their own loader file
+
+// General
+$wgResourceModules['ext.socialprofile.clearfix'] = array(
+	'styles' => 'clearfix.css',
+	'position' => 'top',
+	'localBasePath' => __DIR__ . '/shared',
+	'remoteExtPath' => 'SocialProfile/shared',
+);
+
+$wgResourceModules['ext.socialprofile.responsive'] = array(
+	'styles' => 'responsive.less',
+	'position' => 'top',
+	'localBasePath' => __DIR__ . '/shared',
+	'remoteExtPath' => 'SocialProfile/shared',
+);
 
 // UserBoard
 $wgResourceModules['ext.socialprofile.userboard.js'] = array(

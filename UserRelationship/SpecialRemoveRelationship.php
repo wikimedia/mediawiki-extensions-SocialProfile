@@ -45,7 +45,10 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 		$out->setRobotPolicy( 'noindex,nofollow' );
 
 		// Add CSS
-		$out->addModuleStyles( 'ext.socialprofile.userrelationship.css' );
+		$out->addModuleStyles( array(
+			'ext.socialprofile.clearfix',
+			'ext.socialprofile.userrelationship.css'
+		) );
 
 		$usertitle = Title::newFromDBkey( $this->getRequest()->getVal( 'user' ) );
 		if ( !$usertitle ) {
@@ -63,12 +66,12 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 
 		if ( $this->relationship_type == 1 ) {
 			$confirmTitle = $this->msg( 'ur-remove-relationship-title-confirm-friend', $this->user_name_to )->parse();
-			$confirmMsg = $this->msg( 'ur-remove-relationship-message-confirm-friend', $this->user_name_to )->parse();
+			$confirmMsg = $this->msg( 'ur-remove-relationship-message-confirm-friend', $this->user_name_to )->parseAsBlock();
 			$error = $this->msg( 'ur-remove-error-not-loggedin-friend' )->plain();
 			$pending = $this->msg( 'ur-remove-error-message-pending-friend-request', $this->user_name_to )->parse();
 		} else {
 			$confirmTitle = $this->msg( 'ur-remove-relationship-title-confirm-foe', $this->user_name_to )->parse();
-			$confirmMsg = $this->msg( 'ur-remove-relationship-message-confirm-foe', $this->user_name_to )->parse();
+			$confirmMsg = $this->msg( 'ur-remove-relationship-message-confirm-foe', $this->user_name_to )->parseAsBlock();
 			$error = $this->msg( 'ur-remove-error-not-loggedin-foe' )->plain();
 			$pending = $this->msg( 'ur-remove-error-message-pending-foe-request', $this->user_name_to )->parse();
 		}
@@ -182,7 +185,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 				'ur-remove-relationship-message-friend',
 				$this->user_name_to,
 				$this->msg( 'ur-remove' )->plain()
-			)->parse();
+			)->parseAsBlock();
 		} else {
 			$title = $this->msg(
 				'ur-remove-relationship-title-foe',
@@ -192,7 +195,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 				'ur-remove-relationship-message-foe',
 				$this->user_name_to,
 				$this->msg( 'ur-remove' )->plain()
-			)->parse();
+			)->parseAsBlock();
 		}
 
 		$this->getOutput()->setPageTitle( $title );

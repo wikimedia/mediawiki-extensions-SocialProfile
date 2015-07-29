@@ -83,3 +83,11 @@
 .top-title {
 	margin-top: 15px !important;
 }
+
+/* Responsive stuff for mobile devices */
+@media screen and (max-width: 750px) {
+	/* Special:TopUsersRecent (etc.) */
+	span.top-fan {
+		max-width: 14em;
+	}
+}

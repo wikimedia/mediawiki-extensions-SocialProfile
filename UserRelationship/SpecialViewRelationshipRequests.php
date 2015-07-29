@@ -53,7 +53,10 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		}
 
 		// Add CSS & JS
-		$out->addModuleStyles( 'ext.socialprofile.userrelationship.css' );
+		$out->addModuleStyles( array(
+			'ext.socialprofile.clearfix',
+			'ext.socialprofile.userrelationship.css'
+		) );
 		$out->addModules( 'ext.socialprofile.userrelationship.js' );
 
 		$rel = new UserRelationship( $user->getName() );

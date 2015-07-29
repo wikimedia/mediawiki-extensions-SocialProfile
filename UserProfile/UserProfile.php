@@ -138,7 +138,10 @@ function wfUserProfileFromTitle( &$title, &$article ) {
 			$wgHooks['ParserLimitReport'][] = 'wfUserProfileMarkUncacheable';
 		}
 
-		$wgOut->addModuleStyles( 'ext.socialprofile.userprofile.css' );
+		$wgOut->addModuleStyles( array(
+			'ext.socialprofile.clearfix',
+			'ext.socialprofile.userprofile.css'
+		) );
 
 		$article = new UserProfilePage( $title );
 	}
