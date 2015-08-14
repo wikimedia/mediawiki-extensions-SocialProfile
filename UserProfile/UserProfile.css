@@ -660,7 +660,6 @@
 @media screen and (max-width: 750px) and (orientation: portrait) {
 	.mw-special-EditProfile textarea,
 	.mw-special-UpdateProfile textarea {
-		min-width: 30%;
-		max-width: 50%;
+		width: 30% !important;
 	}
 }
