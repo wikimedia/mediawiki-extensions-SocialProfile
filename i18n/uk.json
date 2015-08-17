@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Andriykopanytsia"
+			"Andriykopanytsia",
+			"Ата"
 		]
 	},
-	"socialprofile-desc": "Набір соціальних інструментів для MediaWiki"
+	"socialprofile-desc": "Набір соціальних інструментів для MediaWiki",
+	"socialprofile-uploads-disabled": "Функція завантаження аватара вимкнена"
 }
