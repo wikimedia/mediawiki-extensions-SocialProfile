@@ -76,4 +76,13 @@ class wAvatar {
 
 		return Html::element( 'img', $params, '' );
 	}
+
+	/**
+	 * Return a string representation of this avatar object
+	 *
+	 * @return string Representation of this avatar object
+	 */
+	public function __toString() {
+		return $this->getAvatarURL();
+	}
 }
