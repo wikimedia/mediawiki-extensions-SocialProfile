@@ -2,7 +2,7 @@
  * JavaScript used on Special:UpdateProfile
  * Displays the "State" dropdown menu if selected country is the United States
  */
-var countries = new Array();
+var countries = [];
 countries[0] = {
 	country: 'United States',
 	name: 'State',
@@ -22,17 +22,17 @@ countries[0] = {
 
 function displaySection( id, country, section ) {
 	country_id = -1;
-	for( var x = 0; x <= countries.length-1; x++ ) {
-		if( country == countries[x].country ) {
+	for ( var x = 0; x <= countries.length - 1; x++ ) {
+		if ( country == countries[x].country ) {
 			country_id = x;
 		}
 	}
 
 	var section_select = '';
-	if( countries[country_id] ) {
+	if ( countries[country_id] ) {
 		document.getElementById( id + '_label' ).innerHTML = countries[country_id].name;
 		section_select += '<select class="profile-form" name="' + id + '" id="' + id + '"><option></option>';
-		for( x = 0; x <= countries[country_id].sections.length-1; x++ ) {
+		for ( x = 0; x <= countries[country_id].sections.length - 1; x++ ) {
 			section_select += '<option value="' + countries[country_id].sections[x] + '"' +
 				( ( countries[country_id].sections[x] == section ) ? ' selected="selected"' : '' ) + '>' + countries[country_id].sections[x] + '</option>';
 		}
@@ -44,10 +44,10 @@ function displaySection( id, country, section ) {
 
 mw.loader.using( 'jquery.ui.datepicker', function() {
 	jQuery( function( jQuery ) {
-		jQuery( '#birthday' ).datepicker({
+		jQuery( '#birthday' ).datepicker( {
 			changeYear: true,
 			yearRange: '1930:c',
 			dateFormat: jQuery( '#birthday' ).hasClass( 'long-birthday' ) ? 'mm/dd/yy' : 'mm/dd'
-		});
-	});
-});
+		} );
+	} );
+} );
