@@ -19,9 +19,9 @@ SocialProfile is licensed under GNU General Public License 2.0 or later.
 See http://www.gnu.org/copyleft/gpl.html for more details.
 
 ==Bugs==
-Bugs and issues should be reported on the MediaWiki Bugzilla:
+Bugs and issues should be reported on the MediaWiki Phabricator:
 
-https://bugzilla.wikimedia.org/enter_bug.cgi?product=MediaWiki%20extensions&component=SocialProfile
+https://phabricator.wikimedia.org/maniphest/task/create/?projects=MediaWiki-extensions-SocialProfile
 
 It is recommended that you spend a while reading the documentation and
 searching the archived discussions before posting a question - it is
