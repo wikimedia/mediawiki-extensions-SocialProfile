@@ -192,12 +192,12 @@ class TopFansByStat extends UnlistedSpecialPage {
 					'<a href="' . htmlspecialchars( $user_title->getFullURL() ) . '">' . $user_name . '</a>
 				</span>
 				<span class="top-fan-points"><b>' . $statistics_row . '</b> ' . $lowercase_statistics_name . '</span>
-				<div class="cleared"></div>
+				<div class="visualClear"></div>
 			</div>';
 			$x++;
 		}
 
-		$output .= '</div><div class="cleared"></div>';
+		$output .= '</div><div class="visualClear"></div>';
 		$out->addHTML( $output );
 	}
 }

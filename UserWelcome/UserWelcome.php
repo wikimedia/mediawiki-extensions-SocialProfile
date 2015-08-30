@@ -101,7 +101,7 @@ function getWelcome() {
 				<div class="honorific-level"><a href="' . htmlspecialchars( $level_link->getFullURL() ) .
 					'">(' . $user_level->getLevelName() . ')</a></div>
 			</div>
-			<div class="cleared"></div>
+			<div class="visualClear"></div>
 			<div class="needed-points">
 				<br />'
 				. wfMessage(
@@ -114,7 +114,7 @@ function getWelcome() {
 		</div>';
 	}
 
-	$output .= '<div class="cleared"></div>';
+	$output .= '<div class="visualClear"></div>';
 	$output .= getRequests();
 	$output .= '</div>';
 

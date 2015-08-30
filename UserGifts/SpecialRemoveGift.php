@@ -76,7 +76,7 @@ class RemoveGift extends UnlistedSpecialPage {
 			</div>
 			<div class="g-container">' .
 				$gift_image . $this->msg( 'g-remove-success-message', $gift['name'] )->parse() .
-				'<div class="cleared"></div>
+				'<div class="visualClear"></div>
 			</div>
 			<div class="g-buttons">
 				<input type="button" class="site-button" value="' . $this->msg( 'g-main-page' )->plain() . '" size="20" onclick="window.location=\'index.php?title=' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '\'" />
@@ -129,7 +129,7 @@ class RemoveGift extends UnlistedSpecialPage {
 				$gift['message'] . '</div>';
 		}
 		$output .= '</div>
-			<div class="cleared"></div>
+			<div class="visualClear"></div>
 			<div class="g-buttons">' .
 				Html::hidden( 'user', $gift['user_name_from'] ) .
 				'<input type="button" class="site-button" value="' . $this->msg( 'g-remove' )->plain() . '" size="20" onclick="document.form1.submit()" />

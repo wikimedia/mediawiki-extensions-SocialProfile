@@ -93,7 +93,7 @@ class ViewSystemGift extends UnlistedSpecialPage {
 					<div class=\"ga-name\">{$gift['name']}</div>
 					<div class=\"ga-timestamp\">({$gift['timestamp']})</div>
 					<div class=\"ga-description-message\">\"{$message}\"</div>";
-			$output .= '<div class="cleared"></div>
+			$output .= '<div class="visualClear"></div>
 				</div>';
 
 			// If someone else in addition to the current user has gotten this
@@ -122,7 +122,7 @@ class ViewSystemGift extends UnlistedSpecialPage {
 				</a>";
 				}
 
-				$output .= '<div class="cleared"></div>
+				$output .= '<div class="visualClear"></div>
 				</div>'; // .ga-recent
 			}
 

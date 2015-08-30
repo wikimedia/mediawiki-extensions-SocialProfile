@@ -160,10 +160,10 @@ class ViewGifts extends SpecialPage {
 						$this->msg( 'g-remove-gift' )->plain() . '</a>';
 				}
 				$output .= '</div>
-					<div class="cleared"></div>';
+					<div class="visualClear"></div>';
 				$output .= '</div>';
 				if ( $x == count( $gifts ) || $x != 1 && $x % $per_row == 0 ) {
-					$output .= '<div class="cleared"></div>';
+					$output .= '<div class="visualClear"></div>';
 				}
 
 				$x++;

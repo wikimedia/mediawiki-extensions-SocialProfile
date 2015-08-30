@@ -179,7 +179,7 @@ class UserHome extends SpecialPage {
 		}
 
 		$output .= '</div>
-		<div class="cleared"></div>';
+		<div class="visualClear"></div>';
 		$out->addHTML( $output );
 	}
 }

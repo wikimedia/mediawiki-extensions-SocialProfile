@@ -167,12 +167,12 @@ class TopUsersPoints extends SpecialPage {
 			$output .= '<span class="top-fan-points"><b>' .
 				number_format( $user['points'] ) . '</b> ' .
 				$this->msg( 'top-fans-points' )->plain() . '</span>';
-			$output .= '<div class="cleared"></div>';
+			$output .= '<div class="visualClear"></div>';
 			$output .= '</div>';
 			$x++;
 		}
 
-		$output .= '</div><div class="cleared"></div>';
+		$output .= '</div><div class="visualClear"></div>';
 		$out->addHTML( $output );
 	}
 }

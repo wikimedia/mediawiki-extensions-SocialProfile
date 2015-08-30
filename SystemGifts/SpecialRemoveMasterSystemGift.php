@@ -104,7 +104,7 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 			</div>
 			<div class="ga-container">' .
 				$this->msg( 'ga-remove-success-message', $gift['gift_name'] )->plain() .
-				'<div class="cleared"></div>
+				'<div class="visualClear"></div>
 			</div>';
 
 			$out->addHTML( $output );
@@ -142,7 +142,7 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 				$giftImage .
 				'<div class="ga-name">' . $gift['gift_name'] . '</div>
 			</div>
-			<div class="cleared"></div>
+			<div class="visualClear"></div>
 			<div class="ga-buttons">
 				<input type="button" class="site-button" value="' . $this->msg( 'ga-remove' )->plain() . '" size="20" onclick="document.form1.submit()" />
 				<input type="button" class="site-button" value="' . $this->msg( 'ga-cancel' )->plain() . '" size="20" onclick="history.go(-1)" />

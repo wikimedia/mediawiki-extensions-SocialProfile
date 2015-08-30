@@ -120,10 +120,10 @@ class ViewSystemGifts extends SpecialPage {
 						$this->msg( 'ga-new' )->plain() . '</span>';
 				}
 
-				$output .= '<div class="cleared"></div>
+				$output .= '<div class="visualClear"></div>
 				</div>';
 				if ( $x == count( $gifts ) || $x != 1 && $x % $per_row == 0 ) {
-					$output .= '<div class="cleared"></div>';
+					$output .= '<div class="visualClear"></div>';
 				}
 
 				$x++;

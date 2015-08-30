@@ -108,7 +108,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 					if ( $request['message'] ) {
 						$output .= '<div class="relationship-message">' . $message . '</div>';
 					}
-					$output .= '<div class="cleared"></div>
+					$output .= '<div class="visualClear"></div>
 						<div class="relationship-buttons">
 							<input type="button" class="site-button" value="' . $this->msg( 'ur-accept' )->plain() . '" data-response="1" />
 							<input type="button" class="site-button" value="' . $this->msg( 'ur-reject' )->plain() . '" data-response="-1" />

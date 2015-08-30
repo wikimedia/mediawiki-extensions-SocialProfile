@@ -113,7 +113,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 			</div>
 			<div class="g-container">' .
 				$this->msg( 'g-remove-success-message', $gift['gift_name'] )->parse() .
-				'<div class="cleared"></div>
+				'<div class="visualClear"></div>
 			</div>';
 
 			$out->addHTML( $output );
@@ -151,7 +151,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 				$gift_image .
 				'<div class="g-name">' . $gift['gift_name'] . '</div>
 			</div>
-			<div class="cleared"></div>
+			<div class="visualClear"></div>
 			<div class="g-buttons">
 				<input type="button" class="site-button" value="' . $this->msg( 'g-remove' )->plain() . '" size="20" onclick="document.form1.submit()" />
 				<input type="button" class="site-button" value="' . $this->msg( 'g-cancel' )->plain() . '" size="20" onclick="history.go(-1)" />

@@ -104,7 +104,7 @@ class ViewGift extends UnlistedSpecialPage {
 			if ( $message ) {
 				$output .= '<div class="g-user-message">' . $message . '</div>';
 			}
-			$output .= '<div class="cleared"></div>
+			$output .= '<div class="visualClear"></div>
 					<div class="g-describe">' . $gift['description'] . '</div>
 					<div class="g-actions">
 						<a href="' . htmlspecialchars( $giveGiftLink->getFullURL( 'gift_id=' . $gift['gift_id'] ) ) . '">' .
@@ -135,7 +135,7 @@ class ViewGift extends UnlistedSpecialPage {
 				</a>";
 			}
 
-			$output .= '<div class="cleared"></div>
+			$output .= '<div class="visualClear"></div>
 				</div>
 			</div>';
 

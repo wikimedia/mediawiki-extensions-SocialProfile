@@ -26,13 +26,13 @@ function wfRelationshipRequestResponse( $response, $requestId ) {
 			$out .= "<div class=\"relationship-action red-text\">
 				{$avatar_img}" .
 					wfMessage( "ur-requests-added-message-{$rel_type}", $user_name_from )->escaped() .
-				'<div class="cleared"></div>
+				'<div class="visualClear"></div>
 			</div>';
 		} else {
 			$out .= "<div class=\"relationship-action red-text\">
 				{$avatar_img}" .
 					wfMessage( "ur-requests-reject-message-{$rel_type}", $user_name_from )->escaped() .
-				'<div class="cleared"></div>
+				'<div class="visualClear"></div>
 			</div>';
 		}
 		$rel->deleteRequest( $requestId );

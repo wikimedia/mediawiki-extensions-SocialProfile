@@ -156,7 +156,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 						<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-main-page' )->plain() . "\" size=\"20\" onclick=\"window.location='index.php?title=" . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . "'\"/>
 						<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-your-profile' )->plain() . "\" size=\"20\" onclick=\"window.location='" . htmlspecialchars( $user->getUserPage()->getFullURL() ) . "'\"/>
 					</div>
-					<div class=\"cleared\"></div>
+					<div class=\"visualClear\"></div>
 					</div>";
 
 				$out->addHTML( $output );
@@ -209,7 +209,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 				<input type="button" class="site-button" value="' . $this->msg( 'ur-remove' )->plain() . '" size="20" onclick="document.form1.submit()" />
 				<input type="button" class="site-button" value="' . $this->msg( 'ur-cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
 			</div>
-			<div class="cleared"></div>
+			<div class="visualClear"></div>
 			</div>
 
 		</form>';

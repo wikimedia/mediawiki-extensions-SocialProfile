@@ -139,7 +139,7 @@ class GiveGift extends SpecialPage {
 					'</div>';
 				}
 				$output .= '</div>
-				<div class="cleared"></div>
+				<div class="visualClear"></div>
 				<div class="g-buttons">
 					<input type="button" class="site-button" value="' . $this->msg( 'g-main-page' )->plain() . '" size="20" onclick="window.location=\'index.php?title=' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '\'" />
 					<input type="button" class="site-button" value="' . $this->msg( 'g-your-profile' )->plain() . '" size="20" onclick="window.location=\'' . htmlspecialchars( $user->getUserPage()->getFullURL() ) . '\'" />
@@ -213,7 +213,7 @@ class GiveGift extends SpecialPage {
 			'</div>';
 		}
 		$output .= '</div>
-			<div class="cleared"></div>
+			<div class="visualClear"></div>
 			<div class="g-add-message">' . $this->msg( 'g-add-message' )->plain() . '</div>
 			<textarea name="message" id="message" rows="4" cols="50"></textarea>
 			<div class="g-buttons">
@@ -334,10 +334,10 @@ class GiveGift extends SpecialPage {
 				if ( $gift['gift_description'] ) {
 					$output .= "<div class=\"g-describe\">{$gift['gift_description']}</div>";
 				}
-				$output .= '<div class="cleared"></div>
+				$output .= '<div class="visualClear"></div>
 				</div>';
 				if ( $x == count( $gifts ) || $x != 1 && $x % $per_row == 0 ) {
-					$output .= '<div class="cleared"></div>';
+					$output .= '<div class="visualClear"></div>';
 				}
 				$x++;
 			}

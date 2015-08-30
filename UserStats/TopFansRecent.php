@@ -176,12 +176,12 @@ class TopFansRecent extends UnlistedSpecialPage {
 			$output .= '<span class="top-fan-points"><b>' .
 				$this->getLanguage()->formatNum( $user['points'] ) . '</b> ' .
 				$this->msg( 'top-fans-points' )->plain() . '</span>';
-			$output .= '<div class="cleared"></div>';
+			$output .= '<div class="visualClear"></div>';
 			$output .= '</div>';
 			$x++;
 		}
 
-		$output .= '</div><div class="cleared"></div>';
+		$output .= '</div><div class="visualClear"></div>';
 		$out->addHTML( $output );
 	}
 }

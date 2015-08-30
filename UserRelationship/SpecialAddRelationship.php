@@ -134,7 +134,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 					<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-main-page' )->plain() . "\" size=\"20\" onclick=\"window.location='index.php?title=" . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . "'\"/>
 					<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-your-profile' )->plain() . "\" size=\"20\" onclick=\"window.location='" . htmlspecialchars( $currentUser->getUserPage()->getFullURL() ) . "'\"/>
 				</div>
-				<div class=\"cleared\"></div>
+				<div class=\"visualClear\"></div>
 			</div>";
 
 			$out->addHTML( $output );
@@ -158,7 +158,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 					<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-main-page' )->plain() . "\" size=\"20\" onclick=\"window.location='index.php?title=" . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . "'\"/>
 					<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-your-profile' )->plain() . "\" size=\"20\" onclick=\"window.location='" . htmlspecialchars( $currentUser->getUserPage()->getFullURL() ) . "'\"/>
 				</div>
-				<div class=\"cleared\"></div>
+				<div class=\"visualClear\"></div>
 			</div>";
 
 			$out->addHTML( $output );
@@ -213,7 +213,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 						<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-main-page' )->plain() . "\" size=\"20\" onclick=\"window.location='index.php?title=" . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . "'\"/>
 						<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-your-profile' )->plain() . "\" size=\"20\" onclick=\"window.location='" . htmlspecialchars( $currentUser->getUserPage()->getFullURL() ) . "'\"/>
 					</div>
-					<div class=\"cleared\"></div>
+					<div class=\"visualClear\"></div>
 				</div>";
 
 				$out->addHTML( $output );
@@ -248,7 +248,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 			<div class=\"relationship-action\">
 			{$avatar->getAvatarURL()}
 			" . $add .
-			'<div class="cleared"></div>
+			'<div class="visualClear"></div>
 			</div>
 			<div class="relationship-textbox-title">' .
 				$this->msg( 'ur-add-personal-message' )->plain() .

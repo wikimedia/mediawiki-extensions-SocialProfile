@@ -329,7 +329,7 @@ class SpecialViewUserBoard extends SpecialPage {
 						<div class=\"user-board-message-body\">
 							{$ub_message_text}
 						</div>
-						<div class=\"cleared\"></div>
+						<div class=\"visualClear\"></div>
 					</div>
 					<div class=\"user-board-message-links\">
 						{$board_link}

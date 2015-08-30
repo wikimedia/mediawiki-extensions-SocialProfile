@@ -230,12 +230,12 @@ class SpecialViewRelationships extends SpecialPage {
 				);
 
 				$output .= '</div>
-					<div class="cleared"></div>
+					<div class="visualClear"></div>
 				</div>';
 
 				$output .= '</div>';
 				if ( $x == count( $relationships ) || $x != 1 && $x % $per_row == 0 ) {
-					$output .= '<div class="cleared"></div>';
+					$output .= '<div class="visualClear"></div>';
 				}
 				$x++;
 			}
