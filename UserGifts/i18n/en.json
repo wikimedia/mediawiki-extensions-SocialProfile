@@ -79,6 +79,6 @@
 	"g-viewgiftlist": "View gift list",
 	"g-your-profile": "Your profile",
 	"gift_received_subject": "$1 has sent you the $2 gift on {{SITENAME}}!",
-	"gift_received_body": "Hi $1.\n\n$2 just sent you the $3 gift on {{SITENAME}}.\n\nWant to read the note $2 left you and see your gift?   Click the link below:\n\n$4\n\nWe hope you like it!\n\nThanks,\n\n\nThe {{SITENAME}} team\n\n---\n\nHey, want to stop getting emails from us?\n\nClick $5\nand change your settings to disable email notifications.",
+	"gift_received_body": "Hi $1.\n\n$2 just sent you the $3 gift on {{SITENAME}}.\n\nWant to read the note $2 left you and see your gift? Click the link below:\n\n$4\n\nWe hope you like it!\n\nThanks,\n\n\nThe {{SITENAME}} team\n\n---\n\nHey, want to stop getting emails from us?\n\nClick $5\nand change your settings to disable email notifications.",
 	"right-giftadmin": "Create new and edit existing gifts"
 }
