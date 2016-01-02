@@ -50,8 +50,7 @@ class GenerateTopUsersReport extends SpecialPage {
 
 		// Check for the correct permission
 		if ( !$user->isAllowed( 'generatetopusersreport' ) ) {
-			$out->permissionRequired( 'generatetopusersreport' );
-			return false;
+			throw new PermissionsError( 'generatetopusersreport' );
 		}
 
 		// Set the page title, robot policy, etc.

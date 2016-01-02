@@ -57,8 +57,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 
 		// Are we even allowed to do this?
 		if ( !$user->isAllowed( 'editothersprofiles' ) ) {
-			$out->permissionRequired( 'editothersprofiles' );
-			return;
+			throw new PermissionsError( 'editothersprofiles' );
 		}
 
 		// Add CSS & JS
