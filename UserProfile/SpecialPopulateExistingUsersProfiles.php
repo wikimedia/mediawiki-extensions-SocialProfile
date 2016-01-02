@@ -42,8 +42,7 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 
 		// If user is blocked, they don't need to access this page
 		if ( $user->isBlocked() ) {
-			$out->blockedPage();
-			return;
+			throw new UserBlockedError( $user->getBlock() );
 		}
 
 		$dbw = wfGetDB( DB_MASTER );

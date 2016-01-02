@@ -72,8 +72,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		// No need to allow blocked users to access this page, they could abuse it, y'know.
 		if ( $user->isBlocked() ) {
-			$out->blockedPage( false );
-			return false;
+			throw new UserBlockedError( $user->getBlock() );
 		}
 
 		// Database operations require write mode

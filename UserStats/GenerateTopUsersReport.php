@@ -38,8 +38,7 @@ class GenerateTopUsersReport extends SpecialPage {
 
 		// Blocked through Special:Block? Tough luck.
 		if ( $user->isBlocked() ) {
-			$out->blockedPage( false );
-			return false;
+			throw new UserBlockedError( $user->getBlock() );
 		}
 
 		// Is the database locked or not?

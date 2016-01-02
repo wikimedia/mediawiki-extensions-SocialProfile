@@ -47,8 +47,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 
 		// Blocked through Special:Block? No access for you!
 		if ( $user->isBlocked() ) {
-			$out->blockedPage( false );
-			return false;
+			throw new UserBlockedError( $user->getBlock() );
 		}
 
 		// Add CSS & JS
