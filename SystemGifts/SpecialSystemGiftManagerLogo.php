@@ -55,6 +55,9 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			throw new UserBlockedError( $user->getBlock() );
 		}
 
+		// Add CSS
+		$out->addModuleStyles( 'ext.socialprofile.systemgifts.css' );
+
 		$this->gift_id = $this->getRequest()->getInt( 'gift_id' );
 		$this->initLogo();
 		$this->executeLogo();
@@ -507,26 +510,26 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			$ext = 'png';
 		}
 
-		$output .= '<table cellspacing="0" cellpadding="5">
+		$output .= '<table class="ga-upload-success-page">
 		<tr>
-			<td valign="top" style="color:#666666;font-weight:800">' . $this->msg( 'ga-large' )->plain() . '</td>
-			<td><img src="' . $wgUploadPath . '/awards/sg_' . $this->gift_id . '_l.' . $ext . '?ts=' .	rand() . '"></td>
+			<td class="title-cell" valign="top">' . $this->msg( 'ga-large' )->plain() . '</td>
+			<td><img src="' . $wgUploadPath . '/awards/sg_' . $this->gift_id . '_l.' . $ext . '?ts=' .	rand() . '" alt="" /></td>
 		</tr>
 		<tr>
-			<td valign="top" style="color:#666666;font-weight:800">' . $this->msg( 'ga-mediumlarge' )->plain() . '</td>
-			<td><img src="' . $wgUploadPath . '/awards/sg_' . $this->gift_id . '_ml.' . $ext . '?ts=' . rand() . '"></td>
+			<td class="title-cell" valign="top">' . $this->msg( 'ga-mediumlarge' )->plain() . '</td>
+			<td><img src="' . $wgUploadPath . '/awards/sg_' . $this->gift_id . '_ml.' . $ext . '?ts=' . rand() . '" alt="" /></td>
 		</tr>
 		<tr>
-			<td valign="top" style="color:#666666;font-weight:800">' . $this->msg( 'ga-medium' )->plain() . '</td>
-			<td><img src="' . $wgUploadPath . '/awards/sg_' . $this->gift_id . '_m.' . $ext . '?ts=' . rand() . '"></td>
+			<td class="title-cell" valign="top">' . $this->msg( 'ga-medium' )->plain() . '</td>
+			<td><img src="' . $wgUploadPath . '/awards/sg_' . $this->gift_id . '_m.' . $ext . '?ts=' . rand() . '" alt="" /></td>
 		</tr>
 		<tr>
-			<td valign="top" style="color:#666666;font-weight:800">' . $this->msg( 'ga-small' )->plain() . '</td>
-			<td><img src="' . $wgUploadPath . '/awards/sg_' . $this->gift_id . '_s.' . $ext . '?ts' . rand() . '"></td>
+			<td class="title-cell" valign="top">' . $this->msg( 'ga-small' )->plain() . '</td>
+			<td><img src="' . $wgUploadPath . '/awards/sg_' . $this->gift_id . '_s.' . $ext . '?ts' . rand() . '" alt="" /></td>
 		</tr>
 		<tr>
 			<td>
-				<input type="button" onclick="javascript:history.go(-1)" value="' . $this->msg( 'ga-goback' )->plain() . '">
+				<input type="button" onclick="javascript:history.go(-1)" value="' . $this->msg( 'ga-goback' )->plain() . '" />
 			</td>
 		</tr>';
 
@@ -596,7 +599,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		<input type='hidden' name='wpDestFile' value=\"" . htmlspecialchars( $this->mDestFile ) . "\" />
 		<input type='hidden' name='wpWatchthis' value=\"" . htmlspecialchars( intval( $this->mWatchthis ) ) . "\" />
 	{$copyright}
-	<table border='0'>
+	<table>
 		<tr>
 
 			<tr>
@@ -641,8 +644,8 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	htmlspecialchars( $this->mUploadCopyStatus ) . "\" size='40' /></td>
 	</tr><tr>
 	<td align='right'>" . $this->msg( 'filesource' )->plain() . "</td>
-	<td><input tabindex='4' type='text' name='wpUploadSource' value=\"" .
-	htmlspecialchars( $this->mUploadSource ) . "\" style='width:100px' /></td>
+	<td><input tabindex='4' type='text' name='wpUploadSource' id='wpUploadSource' value=\"" .
+	htmlspecialchars( $this->mUploadSource ) . "\" /></td>
 	";
 		}
 
@@ -651,14 +654,14 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		if ( $gift_image != '' ) {
 			$output = '<table>
 				<tr>
-					<td style="color:#666666;font-weight:800">' .
-						$this->msg( 'ga-currentimage' )->plain() . '</td>
+					<td class="title-cell">' .
+						$this->msg( 'ga-currentimage' )->plain() .
+					'</td>
 				</tr>
 				<tr>
 					<td>
 						<img src="' . $wgUploadPath . '/awards/' . $gift_image .
-							'" border="0" alt="' .
-							$this->msg( 'ga-gift' )->plain() . '" />
+							'" alt="' . $this->msg( 'ga-gift' )->plain() . '" />
 					</td>
 				</tr>
 			</table>
@@ -668,12 +671,11 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 
 		$out->addHTML( '
 	<form id="upload" method="post" enctype="multipart/form-data" action="">
-	<table border="0">
+	<table>
 		<tr>
-
-			<td style="color:#666666;font-weight:800">' .
+			<td class="title-cell">' .
 				$this->msg( 'ga-file-instructions' )->escaped() . $this->msg( 'ga-choosefile' )->plain() . '<br />
-				<input tabindex="1" type="file" name="wpUploadFile" id="wpUploadFile" style="width:100px" />
+				<input tabindex="1" type="file" name="wpUploadFile" id="wpUploadFile" />
 			</td>
 		</tr>
 		<tr>' . $source . '</tr>

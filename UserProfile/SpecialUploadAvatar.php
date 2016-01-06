@@ -92,37 +92,37 @@ class SpecialUploadAvatar extends SpecialUpload {
 			$this->msg( 'user-profile-picture-yourpicture' )->plain() . '</p>';
 		$output .= '<p>' . $this->msg( 'user-profile-picture-yourpicturestext' )->plain() . '</p>';
 
-		$output .= '<table cellspacing="0" cellpadding="0" style="margin-top:20px;">';
+		$output .= '<table class="avatar-success-page">';
 		$output .= '<tr>
-			<td valign="top" style="color:#797979;font-size:12px;font-weight:bold;padding-bottom:20px;">' .
+			<td class="title-cell" valign="top">' .
 				$this->msg( 'user-profile-picture-large' )->plain() .
 			'</td>
-			<td style="padding-bottom:20px;">
-				<img src="' . $wgUploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_l.' . $ext . '?ts=' . rand() . '" alt="" border="0" />
+			<td class="image-cell">
+				<img src="' . $wgUploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_l.' . $ext . '?ts=' . rand() . '" alt="" />
 			</td>
 		</tr>';
 		$output .= '<tr>
-			<td valign="top" style="color:#797979;font-size:12px;font-weight:bold;padding-bottom:20px;">' .
+			<td class="title-cell" valign="top">' .
 				$this->msg( 'user-profile-picture-medlarge' )->plain() .
 			'</td>
-			<td style="padding-bottom:20px;">
-				<img src="' . $wgUploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_ml.' . $ext . '?ts=' . rand() . '" alt="" border="0" />
+			<td class="image-cell">
+				<img src="' . $wgUploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_ml.' . $ext . '?ts=' . rand() . '" alt="" />
 			</td>
 		</tr>';
 		$output .= '<tr>
-			<td valign="top" style="color:#797979;font-size:12px;font-weight:bold;padding-bottom:20px;">' .
+			<td class="title-cell" valign="top">' .
 				$this->msg( 'user-profile-picture-medium' )->plain() .
 			'</td>
-			<td style="padding-bottom:20px;">
-				<img src="' . $wgUploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_m.' . $ext . '?ts=' . rand() . '" alt="" border="0" />
+			<td class="image-cell">
+				<img src="' . $wgUploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_m.' . $ext . '?ts=' . rand() . '" alt="" />
 			</td>
 		</tr>';
 		$output .= '<tr>
-			<td valign="top" style="color:#797979;font-size:12px;font-weight:bold;padding-bottom:20px;">' .
+			<td class="title-cell" valign="top">' .
 				$this->msg( 'user-profile-picture-small' )->plain() .
 			'</td>
-			<td style="padding-bottom:20px;">
-				<img src="' . $wgUploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_s.' . $ext . '?ts=' . rand() . '" alt="" border="0" />
+			<td class="image-cell">
+				<img src="' . $wgUploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_s.' . $ext . '?ts=' . rand() . '" alt="" />
 			</td>
 		</tr>';
 		$output .= '<tr>
@@ -173,8 +173,8 @@ class SpecialUploadAvatar extends SpecialUpload {
 				htmlspecialchars( $this->mUploadCopyStatus ) . "\" size='40' /></td>
 				</tr><tr>
 				<td align='right'>" . $this->msg( 'filesource' )->plain() . "</td>
-				<td><input tabindex='4' type='text' name='wpUploadSource' value=\"" .
-				htmlspecialchars( $this->mUploadSource ) . "\" style='width:100px' /></td>
+				<td><input tabindex='4' type='text' name='wpUploadSource' id='wpUploadSource' value=\"" .
+				htmlspecialchars( $this->mUploadSource ) . "\" /></td>
 				";
 		}
 
@@ -206,7 +206,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 		// @see https://bugzilla.wikimedia.org/show_bug.cgi?id=30953
 		$output .= Html::hidden( 'wpEditToken', $this->getUser()->getEditToken(), array( 'id' => 'wpEditToken' ) ) . "\n";
 		$output .= Html::hidden( 'title', $this->getPageTitle()->getPrefixedText() ) . "\n";
-		$output .= '<table border="0">
+		$output .= '<table>
 				<tr>
 					<td>
 						<p class="profile-update-title">' .
@@ -216,7 +216,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 							$this->msg( 'user-profile-picture-picsize' )->plain() .
 						'</p>
 						<input tabindex="1" type="file" name="wpUploadFile" id="wpUploadFile" size="36"/>
-						</td>
+					</td>
 				</tr>
 				<tr>' . $source . '</tr>
 				<tr>

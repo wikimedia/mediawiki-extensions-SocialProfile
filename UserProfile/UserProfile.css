@@ -387,10 +387,6 @@
 	line-height: 9px;
 }
 
-/*.article-title {
-
-}*/
-
 /* Pictures */
 .picture-container-spacer {
 	height: 25px;
@@ -497,6 +493,33 @@
 .user-status-profile-vote a {
 	text-decoration: none;
 	font-size: 9px;
+}
+
+/* Avatar upload page (Special:UploadAvatar) */
+#wpUploadSource {
+	width: 100px;
+}
+
+table.avatar-success-page {
+	border-collapse: collapse;
+	margin-top: 20px;
+	padding: 0;
+}
+
+table.avatar-success-page td.title-cell {
+	color: #797979;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px;
+	padding-bottom: 20px;
+}
+
+table.avatar-success-page td.image-cell {
+	padding-bottom: 20px;
+}
+
+table.avatar-success-page td.image-cell img {
+	border: 0;
 }
 
 /* Update Profile */
