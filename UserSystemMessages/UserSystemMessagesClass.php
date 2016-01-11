@@ -30,7 +30,7 @@ class UserSystemMessage {
 				'um_date' => date( 'Y-m-d H:i:s' ),
 			), __METHOD__
 		);
-		$dbw->commit();
+		$dbw->commit( __METHOD__ );
 	}
 
 	/**
@@ -44,7 +44,7 @@ class UserSystemMessage {
 			array( 'um_id' => $um_id ),
 			__METHOD__
 		);
-		$dbw->commit();
+		$dbw->commit( __METHOD__ );
 	}
 
 	/**
@@ -53,7 +53,7 @@ class UserSystemMessage {
 	 * @param $type Integer: 0 by default
 	 * @param $limit Integer: LIMIT for database queries, 0 by default
 	 * @param $page Integer: 0 by default
-	 * @return $requests
+	 * @return array
 	 */
 	public function getMessageList( $type, $limit = 0, $page = 0 ) {
 		$dbr = wfGetDB( DB_SLAVE );
