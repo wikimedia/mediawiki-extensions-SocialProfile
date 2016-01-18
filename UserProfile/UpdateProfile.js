@@ -2,6 +2,7 @@
  * JavaScript used on Special:UpdateProfile
  * Displays the "State" dropdown menu if selected country is the United States
  */
+/*jshint unused:false*/
 var countries = [];
 countries[0] = {
 	country: 'United States',
@@ -21,9 +22,9 @@ countries[0] = {
 };
 
 function displaySection( id, country, section ) {
-	country_id = -1;
+	var country_id = -1;
 	for ( var x = 0; x <= countries.length - 1; x++ ) {
-		if ( country == countries[x].country ) {
+		if ( country === countries[x].country ) {
 			country_id = x;
 		}
 	}
@@ -34,7 +35,7 @@ function displaySection( id, country, section ) {
 		section_select += '<select class="profile-form" name="' + id + '" id="' + id + '"><option></option>';
 		for ( x = 0; x <= countries[country_id].sections.length - 1; x++ ) {
 			section_select += '<option value="' + countries[country_id].sections[x] + '"' +
-				( ( countries[country_id].sections[x] == section ) ? ' selected="selected"' : '' ) + '>' + countries[country_id].sections[x] + '</option>';
+				( ( countries[country_id].sections[x] === section ) ? ' selected="selected"' : '' ) + '>' + countries[country_id].sections[x] + '</option>';
 		}
 		section_select += '</select>';
 	}
@@ -42,7 +43,7 @@ function displaySection( id, country, section ) {
 	document.getElementById( id + '_form' ).innerHTML = section_select;
 }
 
-mw.loader.using( 'jquery.ui.datepicker', function() {
+mediaWiki.loader.using( 'jquery.ui.datepicker', function() {
 	jQuery( function( jQuery ) {
 		jQuery( '#birthday' ).datepicker( {
 			changeYear: true,

@@ -14,12 +14,12 @@ var UserBoard = {
 				encodedMsg = encodeURIComponent( message ),
 				messageType = document.getElementById( 'message_type' ).value;
 			jQuery.post(
-				mw.util.wikiScript(), {
+				mediaWiki.util.wikiScript(), {
 					action: 'ajax',
 					rs: 'wfSendBoardMessage',
 					rsargs: [encodedName, encodedMsg, messageType, perPage]
 				},
-				function( data ) {
+				function() {
 					UserBoard.posted = 0;
 					var user_1, user_2;
 					if ( sender ) { // it's a board to board
@@ -30,7 +30,7 @@ var UserBoard = {
 						user_2 = '';
 					}
 					var params = ( user_2 ) ? '&conv=' + user_2 : '';
-					var url = mw.config.get( 'wgScriptPath' ) + '/index.php?title=Special:UserBoard&user=' + user_1 + params;
+					var url = mediaWiki.config.get( 'wgScriptPath' ) + '/index.php?title=Special:UserBoard&user=' + user_1 + params;
 					window.location = url;
 				}
 			);
@@ -38,14 +38,14 @@ var UserBoard = {
 	},
 
 	deleteMessage: function( id ) {
-		if ( confirm( mw.msg( 'userboard_confirmdelete' ) ) ) {
+		if ( window.confirm( mediaWiki.msg( 'userboard_confirmdelete' ) ) ) {
 			jQuery.post(
-				mw.util.wikiScript(), {
+				mediaWiki.util.wikiScript(), {
 					action: 'ajax',
 					rs: 'wfDeleteBoardMessage',
 					rsargs: [id]
 				},
-				function( data ) {
+				function() {
 					//window.location.reload();
 					// 1st parent = span.user-board-red
 					// 2nd parent = div.user-board-message-links

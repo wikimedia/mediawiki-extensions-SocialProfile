@@ -1,6 +1,7 @@
 /**
  * JavaScript functions used by UserProfile
  */
+var replaceID;
 var UserProfilePage = {
 	posted: 0,
 	numReplaces: 0,
@@ -9,13 +10,13 @@ var UserProfilePage = {
 	oldHtml: '',
 
 	sendMessage: function() {
-		var userTo = decodeURIComponent( mw.config.get( 'wgTitle' ) ), //document.getElementById( 'user_name_to' ).value;
+		var userTo = decodeURIComponent( mediaWiki.config.get( 'wgTitle' ) ), //document.getElementById( 'user_name_to' ).value;
 			encMsg = encodeURIComponent( document.getElementById( 'message' ).value ),
 			msgType = document.getElementById( 'message_type' ).value;
 		if ( document.getElementById( 'message' ).value && !UserProfilePage.posted ) {
 			UserProfilePage.posted = 1;
 			jQuery.post(
-				mw.util.wikiScript(), {
+				mediaWiki.util.wikiScript(), {
 					action: 'ajax',
 					rs: 'wfSendBoardMessage',
 					rsargs: [userTo, encMsg, msgType, 10]
@@ -30,14 +31,14 @@ var UserProfilePage = {
 	},
 
 	deleteMessage: function( id ) {
-		if ( confirm( 'Are you sure you want to delete this message?' ) ) {
+		if ( window.confirm( 'Are you sure you want to delete this message?' ) ) {
 			jQuery.post(
-				mw.util.wikiScript(), {
+				mediaWiki.util.wikiScript(), {
 					action: 'ajax',
 					rs: 'wfDeleteBoardMessage',
 					rsargs: [id]
 				},
-				function( data ) {
+				function() {
 					//window.location.reload();
 					// 1st parent = span.user-board-red
 					// 2nd parent = div.user-board-message-links
@@ -80,7 +81,7 @@ var UserProfilePage = {
 		}
 		document.getElementById( 'mini-gallery-0' ).innerHTML =
 			'<a><img height="75" width="75" src="' +
-			mw.config.get( 'wgExtensionAssetsPath' ) +
+			mediaWiki.config.get( 'wgExtensionAssetsPath' ) +
 			'/SocialProfile/images/ajax-loader-white.gif" alt="" /></a>';
 
 		if ( document.getElementById( 'no-pictures-containers' ) ) {
@@ -91,13 +92,14 @@ var UserProfilePage = {
 		document.getElementById( 'pictures-containers' ).style.visibility = 'visible';
 	},
 
-	uploadComplete: function( imgSrc, imgName, imgDesc ) {
+	uploadComplete: function( imgSrc, imgName ) {
 		UserProfilePage.replaceSrc = imgSrc;
 
 		document.getElementById( 'upload-frame-errors' ).innerHTML = '';
 
 		//document.getElementById( 'imageUpload-frame' ).onload = function() {
-			var idOffset = -1 - UserProfilePage.numReplaces;
+			// var idOffset = -1 - UserProfilePage.numReplaces;
+			var __image_prefix;
 			//$D.addClass( 'mini-gallery-0', 'mini-gallery' );
 			//document.getElementById('mini-gallery-0').innerHTML = '<a href=\"javascript:slideShowLink(' + idOffset + ')\">' + UserProfilePage.replaceSrc + '</a>';
 			document.getElementById( 'mini-gallery-0' ).innerHTML = '<a href=\"' + __image_prefix + imgName + '\">' + UserProfilePage.replaceSrc + '</a>';

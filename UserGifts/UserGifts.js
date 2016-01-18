@@ -23,7 +23,7 @@ var UserGifts = {
 
 	sendGift: function() {
 		if ( !UserGifts.selected_gift ) {
-			alert( 'Please select a gift' );
+			window.alert( 'Please select a gift' );
 			return false;
 		}
 		document.gift.gift_id.value = UserGifts.selected_gift;
@@ -33,7 +33,7 @@ var UserGifts = {
 	chooseFriend: function( friend ) {
 		// Now, this is a rather nasty hack since the original (commented out below) wouldn't work when $wgScriptPath was set
 		//window.location = window.location + "&user=" + friend;
-		window.location = mw.config.get( 'wgServer' ) + mw.config.get( 'wgScript' ) +
+		window.location = mediaWiki.config.get( 'wgServer' ) + mediaWiki.config.get( 'wgScript' ) +
 			'?title=Special:GiveGift' + '&user=' + friend;
 	}
 };

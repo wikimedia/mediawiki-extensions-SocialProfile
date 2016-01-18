@@ -22,12 +22,12 @@ var BoardBlast = {
 	},
 
 	toggleType: function( method, on, off ) {
-		var list = jQuery( '#blast-friends-list div.' + ( ( method == 1 ) ? off : on ) );
+		var list = jQuery( '#blast-friends-list div.' + ( ( method === 1 ) ? off : on ) );
 
 		for ( var x = 0; x <= list.length - 1; x++ ) {
 			var el = list[x];
 			if ( jQuery( el ).hasClass( on ) || jQuery( el ).hasClass( off ) ) {
-				if ( method == 1 ) {
+				if ( method === 1 ) {
 					jQuery( el ).removeClass( off ).addClass( on );
 				} else {
 					jQuery( el ).removeClass( on ).addClass( off );
@@ -63,7 +63,7 @@ var BoardBlast = {
 	},
 
 	sendMessages: function() {
-		if ( BoardBlast.submitted == 1 ) {
+		if ( BoardBlast.submitted === 1 ) {
 			return 0;
 		}
 
@@ -89,13 +89,13 @@ var BoardBlast = {
 		}
 
 		if ( selected === 0 ) {
-			alert( mw.msg( 'boardblast-js-error-missing-user' ) );
+			window.alert( mediaWiki.msg( 'boardblast-js-error-missing-user' ) );
 			BoardBlast.submitted = 0;
 			return 0;
 		}
 
 		if ( !document.getElementById( 'message' ).value ) {
-			alert( mw.msg( 'boardblast-js-error-missing-message' ) );
+			window.alert( mediaWiki.msg( 'boardblast-js-error-missing-message' ) );
 			BoardBlast.submitted = 0;
 			return 0;
 		}
@@ -104,7 +104,7 @@ var BoardBlast = {
 
 		document.blast.message.style.color = '#ccc';
 		document.blast.message.readOnly = true;
-		document.getElementById( 'blast-friends-list' ).innerHTML = mw.msg( 'boardblast-js-sending' );
+		document.getElementById( 'blast-friends-list' ).innerHTML = mediaWiki.msg( 'boardblast-js-sending' );
 		document.blast.submit();
 	}
 };

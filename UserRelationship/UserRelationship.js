@@ -7,7 +7,7 @@ function requestResponse( response, id ) {
 	document.getElementById( 'request_action_' + id ).style.visibility = 'hidden';
 
 	jQuery.post(
-		mw.util.wikiScript(), {
+		mediaWiki.util.wikiScript(), {
 			action: 'ajax',
 			rs: 'wfRelationshipRequestResponse',
 			rsargs: [response, id]
