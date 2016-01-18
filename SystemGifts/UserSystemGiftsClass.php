@@ -95,7 +95,7 @@ class UserSystemGifts {
 			$sender = new MailAddress( $wgPasswordSender,
 				wfMessage( 'emailsender' )->inContentLanguage()->text() );
 			$to = new MailAddress( $user );
-			UserMailer::send( $to, $sender, $subject, $body, null, 'text/html; charset=UTF-8' );
+			UserMailer::send( $to, $sender, $subject, $body, array( 'contentType' => 'text/html; charset=UTF-8' ) );
 		}
 	}
 
