@@ -13,6 +13,10 @@ class GiftManager extends SpecialPage {
 		parent::__construct( 'GiftManager'/*class*/, 'giftadmin'/*restriction*/ );
 	}
 
+	public function doesWrites() {
+		return true;
+	}
+
 	/**
 	 * Group this special page under the correct header in Special:SpecialPages.
 	 *

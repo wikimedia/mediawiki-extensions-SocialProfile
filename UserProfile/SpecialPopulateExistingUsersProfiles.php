@@ -20,6 +20,10 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 		parent::__construct( 'PopulateUserProfiles' );
 	}
 
+	public function doesWrites() {
+		return true;
+	}
+
 	/**
 	 * Show the special page
 	 *

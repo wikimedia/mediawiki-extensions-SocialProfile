@@ -23,6 +23,10 @@ class GenerateTopUsersReport extends SpecialPage {
 		parent::__construct( 'GenerateTopUsersReport', 'generatetopusersreport' );
 	}
 
+	public function doesWrites() {
+		return true;
+	}
+
 	/**
 	 * Show the special page
 	 *
