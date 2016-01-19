@@ -16,6 +16,10 @@ class SystemGiftManager extends SpecialPage {
 		parent::__construct( 'SystemGiftManager'/*class*/, 'awardsmanage'/*restriction*/ );
 	}
 
+	public function doesWrites() {
+		return true;
+	}
+
 	/**
 	 * Show the special page
 	 *
