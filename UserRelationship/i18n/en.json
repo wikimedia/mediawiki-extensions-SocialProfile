@@ -74,15 +74,15 @@
 	"ur-title-foe": "$1's foe list",
 	"ur-title-friend": "$1's friend list",
 	"friend_request_subject": "$1 has added you as a friend on {{SITENAME}}!",
-	"friend_request_body": "Hi $1.\n\n$2 has added you as a friend on {{SITENAME}}. We want to make sure that you two are actually friends.\n\nPlease click this link to confirm your friendship:\n$3\n\nThanks\n\n---\n\nHey, want to stop getting e-mails from us?\n\nClick $4\nand change your settings to disable e-mail notifications.",
+	"friend_request_body": "Hi $1.\n\n$2 has added you as a friend on {{SITENAME}}. We want to make sure that you two are actually friends.\n\nPlease click this link to confirm your friendship:\n$3\n\nThanks,\n\n\nThe {{SITENAME}} team\n\n---\n\nHey, want to stop getting e-mails from us?\n\nClick $4\nand change your settings to disable e-mail notifications.",
 	"foe_request_subject": "It's war! $1 has added you to as a foe on {{SITENAME}}!",
-	"foe_request_body": "Hi $1.\n\n$2 just listed you as a foe on {{SITENAME}}. We want to make sure that you two are actually mortal enemies or at least having an argument.\n\nPlease click this link to confirm the grudge match.\n\n$3\n\nThanks\n\n---\n\nHey, want to stop getting e-mails from us?\n\nClick $4\nand change your settings to disable e-mail notifications.",
+	"foe_request_body": "Hi $1.\n\n$2 just listed you as a foe on {{SITENAME}}. We want to make sure that you two are actually mortal enemies or at least having an argument.\n\nPlease click this link to confirm the grudge match.\n\n$3\n\nThanks,\n\n\nThe {{SITENAME}} team\n\n---\n\nHey, want to stop getting e-mails from us?\n\nClick $4\nand change your settings to disable e-mail notifications.",
 	"friend_accept_subject": "$1 has accepted your friend request on {{SITENAME}}!",
-	"friend_accept_body": "Hi $1.\n\n$2 has accepted your friend request on {{SITENAME}}!\n\nCheck out $2's page at $3\n\nThanks,\n\n---\n\nHey, want to stop getting e-mails from us?\n\nClick $4\nand change your settings to disable e-mail notifications.",
+	"friend_accept_body": "Hi $1.\n\n$2 has accepted your friend request on {{SITENAME}}!\n\nCheck out $2's page at $3\n\nThanks,\n\n\nThe {{SITENAME}} team\n\n---\n\nHey, want to stop getting e-mails from us?\n\nClick $4\nand change your settings to disable e-mail notifications.",
 	"foe_accept_subject": "It's on! $1 has accepted your foe request on {{SITENAME}}!",
-	"foe_accept_body": "Hi $1.\n\n$2 has accepted your foe request on {{SITENAME}}!\n\nCheck out $2's page at $3\n\nThanks\n\n---\n\nHey, want to stop getting e-mails from us?\n\nClick $4\nand change your settings to disable e-mail notifications.",
+	"foe_accept_body": "Hi $1.\n\n$2 has accepted your foe request on {{SITENAME}}!\n\nCheck out $2's page at $3\n\nThanks,\n\n\nThe {{SITENAME}} team\n\n---\n\nHey, want to stop getting e-mails from us?\n\nClick $4\nand change your settings to disable e-mail notifications.",
 	"friend_removed_subject": "Oh no! $1 has removed you as a friend on {{SITENAME}}!",
-	"friend_removed_body": "Hi $1.\n\n$2 has removed you as a friend on {{SITENAME}}!\n\nThanks\n\n---\n\nHey, want to stop getting e-mails from us?\n\nClick $4\nand change your settings to disable e-mail notifications.",
+	"friend_removed_body": "Hi $1.\n\n$2 has removed you as a friend on {{SITENAME}}!\n\nThanks,\n\n\nThe {{SITENAME}} team\n\n---\n\nHey, want to stop getting e-mails from us?\n\nClick $4\nand change your settings to disable e-mail notifications.",
 	"foe_removed_subject": "Woohoo! $1 has removed you as a foe on {{SITENAME}}!",
-	"foe_removed_body": "Hi $1.\n\n\t$2 has removed you as a foe on {{SITENAME}}!\n\nPerhaps you two are on your way to becoming friends?\n\nThanks\n\n---\n\nHey, want to stop getting e-mails from us?\n\nClick $4\nand change your settings to disable e-mail notifications."
+	"foe_removed_body": "Hi $1.\n\n\t$2 has removed you as a foe on {{SITENAME}}!\n\nPerhaps you two are on your way to becoming friends?\n\nThanks,\n\n\nThe {{SITENAME}} team\n\n---\n\nHey, want to stop getting e-mails from us?\n\nClick $4\nand change your settings to disable e-mail notifications."
 }
