@@ -79,6 +79,7 @@
 	"g-viewgiftlist": "Näytä lahjalista",
 	"g-your-profile": "Profiilisi",
 	"gift_received_subject": "$1 on lähettänyt sinulle lahjan $2 {{GRAMMAR:inessive|{{SITENAME}}}}!",
-	"gift_received_body": "Hei $1:\n\n$2 juuri lähetti sinulle $3-lahjan {{GRAMMAR:inessive|{{SITENAME}}}}.\n\nHaluatko lukea viestin, jonka $2 jätti sinulle ja nähdä lahjasi?   Napsauta linkkiä alapuolella:\n\n$4\n\nToivomme, että pidät siitä!\n\nKiittäen,\n\n\n{{GRAMMAR:genitive|{{SITENAME}}}} tiimi\n\n---\n\nHei, etkö halua enää saada sähköposteja meiltä?\n\nNapsauta $5\nja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.",
+	"gift_received_body_html": "Hei $1:\n\n$2 juuri lähetti sinulle $3-lahjan {{GRAMMAR:inessive|{{SITENAME}}}}.\n\nHaluatko lukea viestin, jonka $2 jätti sinulle ja nähdä lahjasi? Napsauta linkkiä alapuolella:\n\n[[Special:ViewGifts]]\n\nToivomme, että pidät siitä!\n\nKiittäen,\n\n\n{{GRAMMAR:genitive|{{SITENAME}}}} tiimi\n\n---\n\nHei, etkö halua enää saada sähköposteja meiltä?\n\nNapsauta [[Special:UpdateProfile]]\nja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.",
+	"gift_received_body": "Hei $1:\n\n$2 juuri lähetti sinulle $3-lahjan {{GRAMMAR:inessive|{{SITENAME}}}}.\n\nHaluatko lukea viestin, jonka $2 jätti sinulle ja nähdä lahjasi? Napsauta linkkiä alapuolella:\n\n$4\n\nToivomme, että pidät siitä!\n\nKiittäen,\n\n\n{{GRAMMAR:genitive|{{SITENAME}}}} tiimi\n\n---\n\nHei, etkö halua enää saada sähköposteja meiltä?\n\nNapsauta $5\nja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.",
 	"right-giftadmin": "Luoda uusia ja muokata olemassa olevia lahjoja"
 }

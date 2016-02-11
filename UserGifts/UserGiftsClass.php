@@ -87,22 +87,23 @@ class UserGifts {
 				$user_from,
 				$gift['gift_name']
 			)->parse();
-			$body = wfMessage( 'gift_received_body',
-				$name,
-				$user_from,
-				$gift['gift_name'],
-				$giftsLink->getFullURL(),
-				$updateProfileLink->getFullURL()
-			)->parse();
 
-			// The email contains HTML, so actually send it out as such, too.
-			// That's why this no longer uses User::sendMail().
-			// @see https://phabricator.wikimedia.org/T70045
-			global $wgPasswordSender;
-			$sender = new MailAddress( $wgPasswordSender,
-				wfMessage( 'emailsender' )->inContentLanguage()->text() );
-			$to = new MailAddress( $user );
-			UserMailer::send( $to, $sender, $subject, $body, array( 'contentType' => 'text/html; charset=UTF-8' ) );
+			$body = array(
+				'html' => wfMessage( 'gift_received_body_html',
+					$name,
+					$user_from,
+					$gift['gift_name']
+				)->parse(),
+				'text' => wfMessage( 'gift_received_body',
+					$name,
+					$user_from,
+					$gift['gift_name'],
+					$giftsLink->getFullURL(),
+					$updateProfileLink->getFullURL()
+				)->text()
+			);
+
+			$user->sendMail( $subject, $body );
 		}
 	}
 

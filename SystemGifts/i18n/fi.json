@@ -51,6 +51,7 @@
 	"ga-user-got-awards": "$1 sai palkinnon $2",
 	"ga-awards-given-out": "{{PLURAL:$1|Yksi palkinto|$1 palkintoa}} jaettiin",
 	"system_gift_received_subject": "Olet saanut palkinnon $1 {{GRAMMAR:inessive|{{SITENAME}}}}!",
+	"system_gift_received_body_html": "Hei $1:\n\nOlet juuri saanut $2-palkinnon {{GRAMMAR:inessive|{{SITENAME}}}}!\n\n\"$3\"\n\nNapsauta alapuolella olevaa linkkiä tarkistaaksesi palkintorasiasi!\n\n[[Special:ViewSystemGifts]]\n\nToivomme, että pidät siitä!\n\nKiittäen,\n\n\n{{GRAMMAR:genitive|{{SITENAME}}}} tiimi\n\n---\n\nHei, etkö halua enää saada sähköposteja meiltä?\n\nNapsauta [[Special:UpdateProfile]]\nja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.",
 	"system_gift_received_body": "Hei $1:\n\nOlet juuri saanut $2-palkinnon {{GRAMMAR:inessive|{{SITENAME}}}}!\n\n\"$3\"\n\nNapsauta alapuolella olevaa linkkiä tarkistaaksesi palkintorasiasi!\n\n$4\n\nToivomme, että pidät siitä!\n\nKiittäen,\n\n\n{{GRAMMAR:genitive|{{SITENAME}}}} tiimi\n\n---\n\nHei, etkö halua enää saada sähköposteja meiltä?\n\nNapsauta $5\nja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.",
 	"right-awardsmanage": "Luoda uusia ja muokata olemassaolevia palkintoja"
 }

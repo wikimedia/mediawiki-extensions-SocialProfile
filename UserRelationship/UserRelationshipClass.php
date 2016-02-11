@@ -16,29 +16,6 @@ class UserRelationship {
 	}
 
 	/**
-	 * Quickie wrapper function for sending out an email as properly rendered
-	 * HTML instead of plaintext.
-	 *
-	 * The functions in this class that call this function used to use
-	 * User::sendMail(), but it was causing the mentioned bug, hence why this
-	 * function had to be introduced.
-	 *
-	 * @see https://phabricator.wikimedia.org/T70045
-	 *
-	 * @param User $string User (object) whom to send an email
-	 * @param string $subject Email subject
-	 * @param $string $body Email contents (HTML)
-	 * @return Status object
-	 */
-	public function sendMail( $user, $subject, $body ) {
-		global $wgPasswordSender;
-		$sender = new MailAddress( $wgPasswordSender,
-			wfMessage( 'emailsender' )->inContentLanguage()->text() );
-		$to = new MailAddress( $user );
-		return UserMailer::send( $to, $sender, $subject, $body, array( 'contentType' => 'text/html; charset=UTF-8' ) );
-	}
-
-	/**
 	 * Add a relationship request to the database.
 	 *
 	 * @param $user_to String: user name of the recipient of the relationship
@@ -89,37 +66,48 @@ class UserRelationship {
 	public function sendRelationshipRequestEmail( $userIdTo, $userFrom, $type ) {
 		$user = User::newFromId( $userIdTo );
 		$user->loadFromDatabase();
+
 		if ( $user->getEmail() && $user->getIntOption( 'notifyfriendrequest', 1 ) ) {
 			$requestLink = SpecialPage::getTitleFor( 'ViewRelationshipRequests' );
 			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
+
 			if ( trim( $user->getRealName() ) ) {
 				$name = $user->getRealName();
 			} else {
 				$name = $user->getName();
 			}
+
 			if ( $type == 1 ) {
-				$subject = wfMessage( 'friend_request_subject',
-					$userFrom
-				)->text();
-				$body = wfMessage( 'friend_request_body',
-					$name,
-					$userFrom,
-					$requestLink->getFullURL(),
-					$updateProfileLink->getFullURL()
-				)->text();
+				$subject = wfMessage( 'friend_request_subject', $userFrom )->text();
+				$body = array(
+					'html' => wfMessage( 'friend_request_body_html',
+						$name,
+						$userFrom
+					)->parse(),
+					'text' => wfMessage( 'friend_request_body',
+						$name,
+						$userFrom,
+						$requestLink->getFullURL(),
+						$updateProfileLink->getFullURL()
+					)->text()
+				);
 			} else {
-				$subject = wfMessage( 'foe_request_subject',
-					$userFrom
-				)->text();
-				$body = wfMessage( 'foe_request_body',
-					$name,
-					$userFrom,
-					$requestLink->getFullURL(),
-					$updateProfileLink->getFullURL()
-				)->text();
+				$subject = wfMessage( 'foe_request_subject', $userFrom )->text();
+				$body = array(
+					'html' => wfMessage( 'foe_request_body_html',
+						$name,
+						$userFrom
+					)->parse(),
+					'text' => wfMessage( 'foe_request_body',
+						$name,
+						$userFrom,
+						$requestLink->getFullURL(),
+						$updateProfileLink->getFullURL()
+					)->text()
+				);
 			}
 
-			$this->sendMail( $user, $subject, $body );
+			$user->sendMail( $subject, $body );
 		}
 	}
 
@@ -134,36 +122,48 @@ class UserRelationship {
 	public function sendRelationshipAcceptEmail( $userIdTo, $userFrom, $type ) {
 		$user = User::newFromId( $userIdTo );
 		$user->loadFromDatabase();
+
 		if ( $user->getEmail() && $user->getIntOption( 'notifyfriendrequest', 1 ) ) {
 			$userLink = Title::makeTitle( NS_USER, $userFrom );
 			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
+
 			if ( trim( $user->getRealName() ) ) {
 				$name = $user->getRealName();
 			} else {
 				$name = $user->getName();
 			}
+
 			if ( $type == 1 ) {
-				$subject = wfMessage( 'friend_accept_subject',
-					$userFrom
-				)->text();
-				$body = wfMessage( 'friend_accept_body',
-					$name,
-					$userFrom,
-					$userLink->getFullURL(),
-					$updateProfileLink->getFullURL()
-				)->text();
+				$subject = wfMessage( 'friend_accept_subject', $userFrom )->text();
+				$body = array(
+					'html' => wfMessage( 'friend_accept_body_html',
+						$name,
+						$userFrom
+					)->parse(),
+					'text' => wfMessage( 'friend_accept_body',
+						$name,
+						$userFrom,
+						$userLink->getFullURL(),
+						$updateProfileLink->getFullURL()
+					)->text()
+				);
 			} else {
-				$subject = wfMessage( 'foe_accept_subject',
-					$userFrom
-				)->text();
-				$body = wfMessage( 'foe_accept_body',
-					$name,
-					$userFrom,
-					$userLink->getFullURL(),
-					$updateProfileLink->getFullURL()
-				)->text();
+				$subject = wfMessage( 'foe_accept_subject', $userFrom )->text();
+				$body = array(
+					'html' => wfMessage( 'foe_accept_body_html',
+						$name,
+						$userFrom
+					)->parse(),
+					'text' => wfMessage( 'foe_accept_body',
+						$name,
+						$userFrom,
+						$userLink->getFullURL(),
+						$updateProfileLink->getFullURL()
+					)->text()
+				);
 			}
-			$this->sendMail( $user, $subject, $body );
+
+			$user->sendMail( $subject, $body );
 		}
 	}
 
@@ -178,36 +178,48 @@ class UserRelationship {
 	public function sendRelationshipRemoveEmail( $userIdTo, $userFrom, $type ) {
 		$user = User::newFromId( $userIdTo );
 		$user->loadFromDatabase();
+
 		if ( $user->isEmailConfirmed() && $user->getIntOption( 'notifyfriendrequest', 1 ) ) {
 			$userLink = Title::makeTitle( NS_USER, $userFrom );
 			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
+
 			if ( trim( $user->getRealName() ) ) {
 				$name = $user->getRealName();
 			} else {
 				$name = $user->getName();
 			}
+
 			if ( $type == 1 ) {
-				$subject = wfMessage( 'friend_removed_subject',
-					$userFrom
-				)->text();
-				$body = wfMessage( 'friend_removed_body',
-					$name,
-					$userFrom,
-					$userLink->getFullURL(),
-					$updateProfileLink->getFullURL()
-				)->text();
+				$subject = wfMessage( 'friend_removed_subject', $userFrom )->text();
+				$body = array(
+					'html' => wfMessage( 'friend_removed_body_html',
+						$name,
+						$userFrom
+					)->parse(),
+					'text' => wfMessage( 'friend_removed_body',
+						$name,
+						$userFrom,
+						$userLink->getFullURL(),
+						$updateProfileLink->getFullURL()
+					)->text()
+				);
 			} else {
-				$subject = wfMessage( 'foe_removed_subject',
-					$userFrom
-				)->text();
-				$body = wfMessage( 'foe_removed_body',
-					$name,
-					$userFrom,
-					$userLink->getFullURL(),
-					$updateProfileLink->getFullURL()
-				)->text();
+				$subject = wfMessage( 'foe_removed_subject', $userFrom )->text();
+				$body = array(
+					'html' => wfMessage( 'foe_removed_body_html',
+						$name,
+						$userFrom
+					)->parse(),
+					'text' => wfMessage( 'foe_removed_body',
+						$name,
+						$userFrom,
+						$userLink->getFullURL(),
+						$updateProfileLink->getFullURL()
+					)->text()
+				);
 			}
-			$this->sendMail( $user, $subject, $body );
+
+			$user->sendMail( $subject, $body );
 		}
 	}
 
