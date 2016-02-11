@@ -687,12 +687,13 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 * @return Status object
 	 */
 	function verify( $tmpfile, $extension ) {
+		global $wgDisableUploadScriptChecks, $wgVerifyMimeType, $wgMimeTypeBlacklist;
+
 		# magically determine mime type
 		$magic = MimeMagic::singleton();
 		$mime = $magic->guessMimeType( $tmpfile, false );
 
 		# check mime type, if desired
-		global $wgVerifyMimeType;
 		if ( $wgVerifyMimeType ) {
 			# check mime type against file extension
 			if ( !UploadBase::verifyExtension( $mime, $extension ) ) {
@@ -700,16 +701,17 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 			}
 
 			# check mime type blacklist
-			global $wgMimeTypeBlacklist;
 			if ( isset( $wgMimeTypeBlacklist ) && !is_null( $wgMimeTypeBlacklist )
 				&& UploadBase::checkFileExtension( $mime, $wgMimeTypeBlacklist ) ) {
 				return Status::newFatal( 'badfiletype', htmlspecialchars( $mime ) );
 			}
 		}
 
-		# check for htmlish code and javascript
-		if ( UploadBase::detectScript( $tmpfile, $mime, $extension ) ) {
-			return Status::newFatal( 'uploadscripted' );
+		# check for HTML-ish code and JavaScript
+		if ( !$wgDisableUploadScriptChecks ) {
+			if ( UploadBase::detectScript( $tmpfile, $mime, $extension ) ) {
+				return Status::newFatal( 'uploadscripted' );
+			}
 		}
 
 		/**

@@ -203,7 +203,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 		// of MediaWiki 1.19, checked _unconditionally_ in
 		// SpecialUpload::loadRequest() and having the hidden title doesn't
 		// hurt either
-		// @see https://bugzilla.wikimedia.org/show_bug.cgi?id=30953
+		// @see https://phabricator.wikimedia.org/T32953
 		$output .= Html::hidden( 'wpEditToken', $this->getUser()->getEditToken(), array( 'id' => 'wpEditToken' ) ) . "\n";
 		$output .= Html::hidden( 'title', $this->getPageTitle()->getPrefixedText() ) . "\n";
 		$output .= '<table>

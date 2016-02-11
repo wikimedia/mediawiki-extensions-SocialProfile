@@ -23,7 +23,7 @@ class UserRelationship {
 	 * User::sendMail(), but it was causing the mentioned bug, hence why this
 	 * function had to be introduced.
 	 *
-	 * @see https://bugzilla.wikimedia.org/show_bug.cgi?id=68045
+	 * @see https://phabricator.wikimedia.org/T70045
 	 *
 	 * @param User $string User (object) whom to send an email
 	 * @param string $subject Email subject

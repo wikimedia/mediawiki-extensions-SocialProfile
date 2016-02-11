@@ -97,7 +97,7 @@ class UserGifts {
 
 			// The email contains HTML, so actually send it out as such, too.
 			// That's why this no longer uses User::sendMail().
-			// @see https://bugzilla.wikimedia.org/show_bug.cgi?id=68045
+			// @see https://phabricator.wikimedia.org/T70045
 			global $wgPasswordSender;
 			$sender = new MailAddress( $wgPasswordSender,
 				wfMessage( 'emailsender' )->inContentLanguage()->text() );
