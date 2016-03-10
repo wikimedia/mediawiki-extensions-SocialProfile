@@ -53,6 +53,7 @@
 	"right-generatetopusersreport": "Luoda huippukäyttäjäraportteja",
 	"level-advanced-to": "pääsi tasolle <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "Olet nyt \"$1\" {{GRAMMAR:inessive|{{SITENAME}}}}!",
+	"level-advance-body-html": "Hei $1:\n\nOlet nyt \"$2\" {{GRAMMAR:inessive|{{SITENAME}}}}!\n\nOnneksi olkoon,\n\n{{GRAMMAR:genitive|{{SITENAME}}}} tiimi\n\n---\nHei, etkö enää halua saada sähköpostia meiltä?\n\nNapsauta [[Special:UpdateProfile]]\nja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.",
 	"level-advance-body": "Hei $1:\n\nOlet nyt \"$2\" {{GRAMMAR:inessive|{{SITENAME}}}}!\n\nOnneksi olkoon,\n\n{{GRAMMAR:genitive|{{SITENAME}}}} tiimi\n\n---\nHei, etkö enää halua saada sähköpostia meiltä?\n\nNapsauta $3\nja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.",
 	"generatetopusersreport": "Luo raportti huippukäyttäjistä",
 	"user-stats-weekly-winners": "Viikon {{PLURAL:$1|voittaja|voittajat}}",

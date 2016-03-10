@@ -51,6 +51,7 @@
 	"right-generatetopusersreport": "Generate top users reports",
 	"level-advanced-to": "advanced to level <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "You are now a \"$1\" on {{SITENAME}}!",
+	"level-advance-body-html": "Hi $1.\n\nYou are now a \"$2\" on {{SITENAME}}!\n\nCongratulations,\n\nThe {{SITENAME}} team\n\n---\nHey, want to stop getting e-mails from us?\n\nClick [[Special:UpdateProfile]]\nand change your settings to disable e-mail notifications.",
 	"level-advance-body": "Hi $1.\n\nYou are now a \"$2\" on {{SITENAME}}!\n\nCongratulations,\n\nThe {{SITENAME}} team\n\n---\nHey, want to stop getting e-mails from us?\n\nClick $3\nand change your settings to disable e-mail notifications.",
 	"updateeditcounts": "Update Edit Counts",
 	"updateeditcounts-updated": "Updated stats for '''$1''' {{PLURAL:$1|user|users}}",

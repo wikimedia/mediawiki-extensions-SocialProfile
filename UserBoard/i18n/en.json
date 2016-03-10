@@ -55,5 +55,6 @@
 	"userboard-time-minutes": "{{PLURAL:$1|one minute|$1 minutes}}",
 	"userboard-time-seconds": "{{PLURAL:$1|one second|$1 seconds}}",
 	"message_received_subject": "$1 wrote on your board on {{SITENAME}}",
+	"message_received_body_html": "Hi $1.\n\n$2 just wrote on your board on {{SITENAME}}!\n\nClick below to check out your board!\n\n[[Special:UserBoard]]\n\n---\n\nHey, want to stop getting e-mails from us?\n\nClick [[Special:UpdateProfile]]\nand change your settings to disable email notifications.",
 	"message_received_body": "Hi $1.\n\n$2 just wrote on your board on {{SITENAME}}!\n\nClick below to check out your board!\n\n$3\n\n---\n\nHey, want to stop getting e-mails from us?\n\nClick $4\nand change your settings to disable email notifications."
 }
