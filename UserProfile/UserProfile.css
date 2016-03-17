@@ -688,7 +688,7 @@ table.avatar-success-page td.image-cell img {
 }
 
 /* Privacy */
-.mw-special-UpdateProfile div#mw-content-text .cleared {
+.mw-special-UpdateProfile div#mw-content-text .visualClear {
 	height: 20px;
 }
 
@@ -704,6 +704,20 @@ table.avatar-success-page td.image-cell img {
 	top: -25px;
 	cursor: pointer;
 	box-shadow: 2px 2px 3px -1px darkgray;
+}
+
+/** @todo FIXME: this is an awful hack for Special:UpdateProfile (the "personal information" page) */
+div.eye-container[fieldkey="up_real_name"],
+div.eye-container[fieldkey="up_email"],
+div.eye-container[fieldkey="up_location_city"],
+div.eye-container[fieldkey="up_hometown_country"],
+div.eye-container[fieldkey="up_birthday"] {
+	top: 5px;
+}
+
+div.eye-container[fieldkey="up_hometown_city"],
+div.eye-container[fieldkey="up_location_country"] {
+	top: 10px;
 }
 
 .eye-container:hover {
