@@ -19,7 +19,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param $par Mixed: parameter passed to the page or null
+	 * @param @param string|null $par Statistic name, i.e. friends_count or edit_count, etc. (or null)
 	 */
 	public function execute( $par ) {
 		global $wgMemc;
@@ -37,7 +37,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 
 		$dbr = wfGetDB( DB_SLAVE );
 
-		$statistic = trim( $request->getVal( 'stat' ) );
+		$statistic = trim( $request->getVal( 'stat', $par ) );
 		$column = "stats_{$statistic}";
 
 		// Error if the query string value does not match our stat column

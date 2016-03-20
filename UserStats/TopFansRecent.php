@@ -12,7 +12,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param $par Mixed: parameter passed to the page or null
+	 * @param string|null $par Period name, i.e. weekly or monthly (or null)
 	 */
 	public function execute( $par ) {
 		global $wgMemc;
@@ -27,7 +27,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 		// Load CSS
 		$out->addModuleStyles( 'ext.socialprofile.userstats.css' );
 
-		$periodFromRequest = $request->getVal( 'period' );
+		$periodFromRequest = $request->getVal( 'period', $par );
 		if ( $periodFromRequest == 'weekly' ) {
 			$period = 'weekly';
 		} elseif ( $periodFromRequest == 'monthly' ) {
