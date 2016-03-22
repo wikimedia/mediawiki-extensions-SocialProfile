@@ -56,7 +56,7 @@ mediaWiki.loader.using( 'jquery.ui.datepicker', function() {
 $( function() {
 	$( '.eye-container' ).on( {
 		'mouseenter': function() {
-			if ( $( this ).css( 'position' ) != 'absolute' ) {
+			if ( $( this ).css( 'position' ) !== 'absolute' ) {
 				var offset = $( this ).offset();
 
 				$( this ).attr( 'link', $( this ).parent() );
@@ -97,7 +97,7 @@ $( function() {
 
 		$.ajax( {
 			type: 'GET',
-			url: mw.util.wikiScript( 'api' ),
+			url: mediaWiki.util.wikiScript( 'api' ),
 			data: {
 				action: 'smpuserprivacy',
 				format: 'json',
