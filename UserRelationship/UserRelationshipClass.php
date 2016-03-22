@@ -471,7 +471,7 @@ class UserRelationship {
 				'ur_id', 'ur_user_id_from', 'ur_user_name_from', 'ur_type',
 				'ur_message', 'ur_date'
 			),
-			array( "ur_id = {$id}" ),
+			array( 'ur_id' => $id ),
 			__METHOD__
 		);
 
@@ -519,8 +519,8 @@ class UserRelationship {
 				'ur_message', 'ur_date'
 			),
 			array(
-				"ur_user_id_to = {$this->user_id}",
-				"ur_status = {$status}"
+				'ur_user_id_to' => $this->user_id,
+				'ur_status' => $status
 			),
 			__METHOD__,
 			$options
@@ -713,7 +713,7 @@ class UserRelationship {
 				'r_id', 'r_user_id_relation',
 				'r_user_name_relation', 'r_date'
 			),
-			array( "r_user_id = {$this->user_id}", "r_type = {$type}" ),
+			array( 'r_user_id' => $this->user_id, 'r_type' => $type ),
 			__METHOD__,
 			array( 'ORDER BY' => 'r_user_name_relation' )
 		);
@@ -739,7 +739,7 @@ class UserRelationship {
 		$res = $dbr->select(
 			'user_relationship_stats',
 			array( 'rs_friend_count', 'rs_foe_count' ),
-			array( "rs_user_id = {$userId}" ),
+			array( 'rs_user_id' => $userId ),
 			__METHOD__,
 			array( 'LIMIT' => 1, 'OFFSET' => 0 )
 		);
