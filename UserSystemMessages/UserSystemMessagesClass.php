@@ -30,7 +30,6 @@ class UserSystemMessage {
 				'um_date' => date( 'Y-m-d H:i:s' ),
 			), __METHOD__
 		);
-		$dbw->commit( __METHOD__ );
 	}
 
 	/**
@@ -44,7 +43,6 @@ class UserSystemMessage {
 			array( 'um_id' => $um_id ),
 			__METHOD__
 		);
-		$dbw->commit( __METHOD__ );
 	}
 
 	/**
