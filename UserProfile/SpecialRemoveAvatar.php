@@ -104,6 +104,7 @@ class RemoveAvatar extends SpecialPage {
 			if ( $par ) {
 				$out->addHTML( $this->showUserAvatar( $par ) );
 			} else {
+				$out->addModules( 'mediawiki.userSuggest' );
 				$out->addHTML( $this->showUserForm() );
 			}
 		}
@@ -117,7 +118,7 @@ class RemoveAvatar extends SpecialPage {
 		$output = '<form method="get" name="avatar" action="">' .
 				Html::hidden( 'title', $this->getPageTitle() ) .
 				'<b>' . $this->msg( 'username' )->text() . '</b>
-				<input type="text" name="user" />
+				<input type="text" name="user" class="mw-autocomplete-user" />
 				<input type="submit" value="' . $this->msg( 'search' )->plain() . '" />
 			</form>';
 		return $output;

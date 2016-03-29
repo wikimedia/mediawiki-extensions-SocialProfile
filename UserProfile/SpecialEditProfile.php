@@ -77,6 +77,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 
 		// Still not set? Just give up and show the "search for a user" form...
 		if ( !$userFromRequest ) {
+			$out->addModules( 'mediawiki.userSuggest' );
 			$out->addHTML( $this->createUserInputForm() );
 			return;
 		}
@@ -84,6 +85,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		$target = User::newFromName( $userFromRequest );
 
 		if ( !$target || $target->getID() == 0 ) {
+			$out->addModules( 'mediawiki.userSuggest' );
 			$out->addHTML( $this->msg( 'nosuchusershort', htmlspecialchars( $userFromRequest ) )->escaped() );
 			$out->addHTML( $this->createUserInputForm() );
 			return;
@@ -138,6 +140,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 				)
 			) . Xml::label( $this->msg( 'username' )->parse(), 'mw-socialprofile-user' ) .
 			Xml::input( 'wpUser', 60, '', array(
+				'class' => 'mw-autocomplete-user',
 				'tabindex' => '1',
 				'id' => 'mw-socialprofile-user',
 				'maxlength' => '200'
