@@ -82,9 +82,11 @@ class TopFansRecent extends UnlistedSpecialPage {
 				// sadly), since user_stats entries for users are *not* purged
 				// and/or merged during the account merge process (which is a
 				// different bug with a different extension).
+				// Also ignore flagged bot accounts, no point in showing those
+				// in the top lists.
 				$exists = $u->loadFromId();
 
-				if ( !$u->isBlocked() && $exists ) {
+				if ( !$u->isBlocked() && $exists && !$u->isAllowed( 'bot' ) ) {
 					$user_list[] = array(
 						'user_id' => $row->up_user_id,
 						'user_name' => $row->up_user_name,

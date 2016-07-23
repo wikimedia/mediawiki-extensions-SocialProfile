@@ -63,9 +63,11 @@ class TopUsersPoints extends SpecialPage {
 				// sadly), since user_stats entries for users are *not* purged
 				// and/or merged during the account merge process (which is a
 				// different bug with a different extension).
+				// Also ignore flagged bot accounts, no point in showing those
+				// in the top lists.
 				$exists = $user->loadFromId();
 
-				if ( !$user->isBlocked() && $exists ) {
+				if ( !$user->isBlocked() && $exists && !$user->isAllowed( 'bot' ) ) {
 					$user_list[] = array(
 						'user_id' => $row->stats_user_id,
 						'user_name' => $row->stats_user_name,
