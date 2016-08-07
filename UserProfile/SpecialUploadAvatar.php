@@ -362,6 +362,10 @@ class UploadAvatar extends UploadFromFile {
 		$this->avatarUploadDirectory = $wgUploadDirectory . '/avatars';
 
 		$imageInfo = getimagesize( $this->mTempPath );
+		if ( empty( $imageInfo[2] ) ) {
+			return Status::newFatal( 'empty-file' );
+		}
+
 		switch ( $imageInfo[2] ) {
 			case 1:
 				$ext = 'gif';
@@ -373,7 +377,7 @@ class UploadAvatar extends UploadFromFile {
 				$ext = 'png';
 				break;
 			default:
-				return Status::newFatal( 'filetype-banned-type' );
+				return Status::newFatal( 'filetype-banned' );
 		}
 
 		$dest = $this->avatarUploadDirectory;
