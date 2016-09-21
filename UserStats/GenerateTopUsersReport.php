@@ -253,8 +253,8 @@ class GenerateTopUsersReport extends SpecialPage {
 		// I think not, but...
 		if ( !$article->exists() ) {
 			// For grep: user-stats-report-weekly-edit-summary, user-stats-report-monthly-edit-summary
-			$article->doEdit(
-				$pageContent,
+			$article->doEditContent(
+				ContentHandler::makeContent( $pageContent, $title ),
 				$this->msg( "user-stats-report-{$period}-edit-summary" )->inContentLanguage()->escaped()
 			);
 			$date = date( 'Y-m-d H:i:s' );

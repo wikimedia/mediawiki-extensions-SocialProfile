@@ -208,7 +208,11 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$title = Title::makeTitle( NS_USER, $user->getName() );
 			$article = new Article( $title );
 			if ( !$article->exists() ) {
-				$article->doEdit( '', 'create user page', EDIT_SUPPRESS_RC );
+				$article->doEditContent(
+					ContentHandler::makeContent( '', $title ),
+					'create user page',
+					EDIT_SUPPRESS_RC
+				);
 			}
 		}
 

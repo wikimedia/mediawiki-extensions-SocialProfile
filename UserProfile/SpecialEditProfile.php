@@ -118,9 +118,13 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 
 			// create the user page if it doesn't exist yet
 			$title = Title::makeTitle( NS_USER, $target->getName() );
-			$article = new Article( $title );
-			if ( !$article->exists() ) {
-				$article->doEdit( '', 'create user page', EDIT_SUPPRESS_RC );
+			$page = new WikiPage( $title );
+			if ( !$page->exists() ) {
+				$page->doEditContent(
+					ContentHandler::makeContent( '', $title ),
+					'create user page',
+					EDIT_SUPPRESS_RC
+				);
 			}
 		}
 

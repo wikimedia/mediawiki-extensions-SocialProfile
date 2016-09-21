@@ -83,7 +83,10 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 			$user_wiki_title = Title::makeTitle( NS_USER_WIKI, $user->getName() );
 			$user_wiki = new Article( $user_wiki_title );
 			if ( !$user_wiki->exists() ) {
-				$user_wiki->doEdit( $user_page_content, 'import user wiki' );
+				$user_wiki->doEditContent(
+					ContentHandler::makeContent( $user_page_content, $user_wiki_title ),
+					'import user wiki'
+				);
 			}
 		}
 		$title = Title::makeTitle( NS_USER, $user->getName() );
