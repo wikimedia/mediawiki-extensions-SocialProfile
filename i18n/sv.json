@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Lokal Profil"
+			"Lokal Profil",
+			"WikiPhoenix"
 		]
 	},
 	"socialprofile-desc": "En uppsättning sociala verktyg för MediaWiki",
-	"socialprofile-uploads-disabled": "Avatar uppladdningsfunktionen är inaktiverad"
+	"socialprofile-uploads-disabled": "Avatar uppladdningsfunktionen är inaktiverad",
+	"apihelp-smpuserprivacy-param-tuid": "Målanvändare (ID)"
 }

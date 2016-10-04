@@ -6,5 +6,10 @@
 		]
 	},
 	"socialprofile-desc": "Erweitert MediaWiki um einen Satz sozialer Werkzeuge",
-	"socialprofile-uploads-disabled": "Die Funktion zum Hochladen von Avatars ist deaktiviert"
+	"socialprofile-uploads-disabled": "Die Funktion zum Hochladen von Avatars ist deaktiviert",
+	"apihelp-smpuserprivacy-description": "API-Modul zur Festlegung der Sichtbarkeit („Privatsphäre“) eines Profilfeldes",
+	"apihelp-smpuserprivacy-param-method": "Aktion (entweder „get“ oder „set“)",
+	"apihelp-smpuserprivacy-param-field_key": "Zielfeldschlüssel, wie up_movies für das Feld „Filme“",
+	"apihelp-smpuserprivacy-param-privacy": "Neuer Privatsphärenwert (einer der folgenden Werte: public, hidden, friends, foaf)",
+	"apihelp-smpuserprivacy-param-tuid": "Zielbenutzer (Kennung)"
 }
