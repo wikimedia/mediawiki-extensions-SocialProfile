@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Priviet"
+			"Priviet",
+			"Ykhwong"
 		]
 	},
-	"socialprofile-desc": "미디어위키용 소셜 도구 모음"
+	"socialprofile-desc": "미디어위키용 소셜 도구 모음",
+	"apihelp-smpuserprivacy-param-tuid": "대상 사용자 (ID)"
 }
