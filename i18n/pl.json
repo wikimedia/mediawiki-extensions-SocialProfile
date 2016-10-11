@@ -4,5 +4,6 @@
 			"Chrumps"
 		]
 	},
-	"socialprofile-desc": "Zestaw narzędzi społecznościowych dla MediaWiki"
+	"socialprofile-desc": "Zestaw narzędzi społecznościowych dla MediaWiki",
+	"apihelp-smpuserprivacy-param-tuid": "Docelowy użytkownik (identyfikator)"
 }
