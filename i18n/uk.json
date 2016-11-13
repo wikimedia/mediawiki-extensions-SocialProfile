@@ -2,9 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Andriykopanytsia",
-			"Ата"
+			"Ата",
+			"Piramidion"
 		]
 	},
 	"socialprofile-desc": "Набір соціальних інструментів для MediaWiki",
-	"socialprofile-uploads-disabled": "Функція завантаження аватара вимкнена"
+	"socialprofile-uploads-disabled": "Функція завантаження аватара вимкнена",
+	"apihelp-smpuserprivacy-description": "Модуль API для встановлення видимості («приватності») поля профілю",
+	"apihelp-smpuserprivacy-param-method": "Дія (або «get», або «set»)",
+	"apihelp-smpuserprivacy-param-field_key": "Ключ цільового поля, на кшталт up_movies для поля «Фільми»",
+	"apihelp-smpuserprivacy-param-privacy": "Нове значення приватності (одне з таких: public, hidden, friends, foaf)",
+	"apihelp-smpuserprivacy-param-tuid": "Цільовий користувач (ID)"
 }
