@@ -52,7 +52,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 
 		$usertitle = Title::newFromDBkey( $this->getRequest()->getVal( 'user' ) );
 		if ( !$usertitle ) {
-			$ot->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
+			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
 			$out->addWikiMsg( 'ur-add-no-user' );
 			return false;
 		}
