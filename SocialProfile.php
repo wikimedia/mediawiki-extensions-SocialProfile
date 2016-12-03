@@ -31,12 +31,12 @@ $wgMessagesDirs['SocialProfileUserBoard'] = __DIR__ . '/UserBoard/i18n';
 $wgMessagesDirs['SocialProfileUserProfile'] = __DIR__ . '/UserProfile/i18n';
 $wgMessagesDirs['SocialProfileUserRelationship'] = __DIR__ . '/UserRelationship/i18n';
 $wgMessagesDirs['SocialProfileUserStats'] = __DIR__ . '/UserStats/i18n';
+
 $wgExtensionMessagesFiles['SocialProfileNamespaces'] = __DIR__ . '/SocialProfile.namespaces.php';
 $wgExtensionMessagesFiles['AvatarMagic'] = __DIR__ . '/UserProfile/Avatar.magic.i18n.php';
 
 // Classes to be autoloaded
 $wgAutoloadClasses['GenerateTopUsersReport'] = __DIR__ . '/UserStats/GenerateTopUsersReport.php';
-
 $wgAutoloadClasses['SpecialAddRelationship'] = __DIR__ . '/UserRelationship/SpecialAddRelationship.php';
 $wgAutoloadClasses['SpecialBoardBlast'] = __DIR__ . '/UserBoard/SpecialSendBoardBlast.php';
 $wgAutoloadClasses['SpecialEditProfile'] = __DIR__ . '/UserProfile/SpecialEditProfile.php';
@@ -67,9 +67,18 @@ $wgAutoloadClasses['wAvatar'] = __DIR__ . '/UserProfile/AvatarClass.php';
 $wgAutoloadClasses['AvatarParserFunction'] = __DIR__ . '/UserProfile/AvatarParserFunction.php';
 $wgAutoloadClasses['SPUserSecurity'] = __DIR__ . '/UserSecurity/UserSecurityClass.php';
 
-// API module
+// API modules
 $wgAutoloadClasses['ApiUserProfilePrivacy'] = __DIR__ . '/UserProfile/ApiUserProfilePrivacy.php';
 $wgAPIModules['smpuserprivacy'] = 'ApiUserProfilePrivacy';
+
+$wgAutoloadClasses['ApiDeleteUserBoardMessage'] = __DIR__ . '/UserBoard/ApiDeleteUserBoardMessage.php';
+$wgAPIModules['socialprofile-delete-message'] = 'ApiDeleteUserBoardMessage';
+
+$wgAutoloadClasses['ApiSendUserBoardMessage'] = __DIR__ . '/UserBoard/ApiSendUserBoardMessage.php';
+$wgAPIModules['socialprofile-send-message'] = 'ApiSendUserBoardMessage';
+
+$wgAutoloadClasses['ApiRelationshipResponse'] = __DIR__ . '/UserRelationship/ApiRelationshipResponse.php';
+$wgAPIModules['socialprofile-request-response'] = 'ApiRelationshipResponse';
 
 // New special pages
 $wgSpecialPages['AddRelationship'] = 'SpecialAddRelationship';
@@ -89,10 +98,6 @@ $wgSpecialPages['UploadAvatar'] = 'SpecialUploadAvatar';
 $wgSpecialPages['UserBoard'] = 'SpecialViewUserBoard';
 $wgSpecialPages['ViewRelationshipRequests'] = 'SpecialViewRelationshipRequests';
 $wgSpecialPages['ViewRelationships'] = 'SpecialViewRelationships';
-
-// Necessary AJAX functions
-require_once( "$IP/extensions/SocialProfile/UserBoard/UserBoard_AjaxFunctions.php" );
-require_once( "$IP/extensions/SocialProfile/UserRelationship/Relationship_AjaxFunctions.php" );
 
 // What to display on social profile pages by default?
 $wgUserProfileDisplay['board'] = true;
@@ -116,7 +121,7 @@ $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'SocialProfile',
 	'author' => array( 'Aaron Wright', 'David Pean', 'Jack Phoenix' ),
-	'version' => '1.8',
+	'version' => '1.9',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile',
 	'descriptionmsg' => 'socialprofile-desc',
 );
@@ -306,6 +311,7 @@ $wgResourceModules['ext.socialprofile.userrelationship.css'] = array(
 
 $wgResourceModules['ext.socialprofile.userrelationship.js'] = array(
 	'scripts' => 'UserRelationship.js',
+	'dependencies' => 'mediawiki.util',
 	'localBasePath' => __DIR__ . '/UserRelationship',
 	'remoteExtPath' => 'SocialProfile/UserRelationship',
 );

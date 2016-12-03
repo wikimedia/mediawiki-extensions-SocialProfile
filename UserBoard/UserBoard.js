@@ -14,10 +14,12 @@ var UserBoard = {
 				encodedMsg = encodeURIComponent( message ),
 				messageType = document.getElementById( 'message_type' ).value;
 			jQuery.post(
-				mediaWiki.util.wikiScript(), {
-					action: 'ajax',
-					rs: 'wfSendBoardMessage',
-					rsargs: [encodedName, encodedMsg, messageType, perPage]
+				mediaWiki.util.wikiScript( 'api' ), {
+					action: 'socialprofile-send-message',
+					format: 'json',
+					username: encodedName,
+					message: encodedMsg,
+					type: messageType
 				},
 				function() {
 					UserBoard.posted = 0;
@@ -40,10 +42,10 @@ var UserBoard = {
 	deleteMessage: function( id ) {
 		if ( window.confirm( mediaWiki.msg( 'userboard_confirmdelete' ) ) ) {
 			jQuery.post(
-				mediaWiki.util.wikiScript(), {
-					action: 'ajax',
-					rs: 'wfDeleteBoardMessage',
-					rsargs: [id]
+				mediaWiki.util.wikiScript( 'api' ), {
+					action: 'socialprofile-delete-message',
+					format: 'json',
+					'id': id
 				},
 				function() {
 					//window.location.reload();

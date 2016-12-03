@@ -1,7 +1,6 @@
 /**
  * JavaScript functions used by UserProfile
  */
-var replaceID;
 var UserProfilePage = {
 	posted: 0,
 	numReplaces: 0,
@@ -16,27 +15,29 @@ var UserProfilePage = {
 		if ( document.getElementById( 'message' ).value && !UserProfilePage.posted ) {
 			UserProfilePage.posted = 1;
 			jQuery.post(
-				mediaWiki.util.wikiScript(), {
-					action: 'ajax',
-					rs: 'wfSendBoardMessage',
-					rsargs: [userTo, encMsg, msgType, 10]
+				mediaWiki.util.wikiScript( 'api' ), {
+					action: 'socialprofile-send-message',
+					format: 'json',
+					username: userTo,
+					message: encMsg,
+					type: msgType
 				},
 				function( data ) {
-					jQuery( '#user-page-board' ).html( data );
+					jQuery( data.result ).prependTo( '#user-page-board' );
 					UserProfilePage.posted = 0;
-					jQuery( '#message' ).text( '' );
+					jQuery( '#message' ).val( '' );
 				}
 			);
 		}
 	},
 
 	deleteMessage: function( id ) {
-		if ( window.confirm( 'Are you sure you want to delete this message?' ) ) {
+		if ( window.confirm( mediaWiki.msg( 'user-board-confirm-delete' ) ) ) {
 			jQuery.post(
-				mediaWiki.util.wikiScript(), {
-					action: 'ajax',
-					rs: 'wfDeleteBoardMessage',
-					rsargs: [id]
+				mediaWiki.util.wikiScript( 'api' ), {
+					action: 'socialprofile-delete-message',
+					format: 'json',
+					'id': id
 				},
 				function() {
 					//window.location.reload();
@@ -55,7 +56,7 @@ var UserProfilePage = {
 	},
 
 	uploadError: function( message ) {
-		document.getElementById( 'mini-gallery-' + replaceID ).innerHTML = UserProfilePage.oldHtml;
+		document.getElementById( 'mini-gallery-' + UserProfilePage.replaceID ).innerHTML = UserProfilePage.oldHtml;
 		document.getElementById( 'upload-frame-errors' ).innerHTML = message;
 		document.getElementById( 'imageUpload-frame' ).src = 'index.php?title=Special:MiniAjaxUpload&wpThumbWidth=75';
 

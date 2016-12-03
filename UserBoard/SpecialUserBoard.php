@@ -317,7 +317,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				$userPageURL = htmlspecialchars( $user->getFullURL() );
 				$output .= "<div class=\"user-board-message\">
 					<div class=\"user-board-message-from\">
-							<a href=\"{$userPageURL}\" title=\"{$ub_message['user_name_from']}}\">{$ub_message['user_name_from']} </a> {$ub_message_type_label}
+							<a href=\"{$userPageURL}\" title=\"{$ub_message['user_name_from']}\">{$ub_message['user_name_from']} </a> {$ub_message_type_label}
 					</div>
 					<div class=\"user-board-message-time\">"
 						. $this->msg( 'userboard_posted_ago', $b->getTimeAgo( $ub_message['timestamp'] ) )->parse() .

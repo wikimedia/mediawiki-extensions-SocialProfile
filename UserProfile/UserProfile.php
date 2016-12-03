@@ -77,6 +77,8 @@ $wgResourceModules['ext.socialprofile.userprofile.css'] = array(
 
 $wgResourceModules['ext.socialprofile.userprofile.js'] = array(
 	'scripts' => 'UserProfilePage.js',
+	'messages' => array( 'user-board-confirm-delete' ),
+	'dependencies' => 'mediawiki.util',
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserProfile',
 );
