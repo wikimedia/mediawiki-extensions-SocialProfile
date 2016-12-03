@@ -57,5 +57,9 @@
 	"userboard-time-seconds": "{{PLURAL:$1|sekunti|$1 sekuntia}}",
 	"message_received_subject": "$1 kirjoitti keskustelualueellesi {{GRAMMAR:inessive|{{SITENAME}}}}",
 	"message_received_body_html": "Hei $1:\n\n$2 juuri kirjoitti keskustelualueellesi {{GRAMMAR:inessive|{{SITENAME}}}}!\n\nNapsauta alapuolella olevaa linkki tarkistaaksesi keskustelualueesi!\n\n[[Special:UserBoard]]\n\n---\n\nHei, etkö halua enää saada sähköposteja meiltä?\n\nNapsauta [[Special:UpdateProfile]]\nja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.",
-	"message_received_body": "Hei $1:\n\n$2 juuri kirjoitti keskustelualueellesi {{GRAMMAR:inessive|{{SITENAME}}}}!\n\nNapsauta alapuolella olevaa linkki tarkistaaksesi keskustelualueesi!\n\n$3\n\n---\n\nHei, etkö halua enää saada sähköposteja meiltä?\n\nNapsauta $4\nja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä."
+	"message_received_body": "Hei $1:\n\n$2 juuri kirjoitti keskustelualueellesi {{GRAMMAR:inessive|{{SITENAME}}}}!\n\nNapsauta alapuolella olevaa linkki tarkistaaksesi keskustelualueesi!\n\n$3\n\n---\n\nHei, etkö halua enää saada sähköposteja meiltä?\n\nNapsauta $4\nja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.",
+	"echo-category-title-social-msg": "Keskustelualueen viestit",
+	"echo-pref-tooltip-social-msg": "Ilmoita minulle, kun joku jättää viestin keskustelualueelleni.",
+	"notification-social-msg-send": "$1 jätti juuri sinulle viestin.<br /><br />''$2''",
+	"notification-social-msg-send-bundle": "{{PLURAL:$1|Yksi henkilö jätti|$1 henkilöä jättivät|100=99+ henkilöä jättivät}} sinulle viestejä."
 }

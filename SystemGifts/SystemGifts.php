@@ -15,6 +15,7 @@ $wgSystemGiftsDirectory = "$IP/extensions/SocialProfile/SystemGifts";
 
 $wgAutoloadClasses['SystemGifts'] = "{$wgSystemGiftsDirectory}/SystemGiftsClass.php";
 $wgAutoloadClasses['UserSystemGifts'] = "{$wgSystemGiftsDirectory}/UserSystemGiftsClass.php";
+$wgAutoloadClasses['UserSystemGiftsHooks'] = "{$wgSystemGiftsDirectory}/UserSystemGiftsHooks.php";
 
 // Special Pages
 $wgAutoloadClasses['TopAwards'] = "{$wgSystemGiftsDirectory}/TopAwards.php";
@@ -48,3 +49,13 @@ $wgResourceModules['ext.socialprofile.systemgifts.css'] = array(
 	'remoteExtPath' => 'SocialProfile/SystemGifts',
 	'position' => 'top'
 );
+
+// Echo (Notifications) stuff
+$wgAutoloadClasses['EchoUserSystemGiftPresentationModel'] = "{$wgSystemGiftsDirectory}/EchoUserSystemGiftPresentationModel.php";
+
+$wgHooks['BeforeCreateEchoEvent'][] = 'UserSystemGiftsHooks::onBeforeCreateEchoEvent';
+$wgHooks['EchoGetDefaultNotifiedUsers'][] = 'UserSystemGiftsHooks::onEchoGetDefaultNotifiedUsers';
+$wgHooks['EchoGetBundleRules'][] = 'UserSystemGiftsHooks::onEchoGetBundleRules';
+
+$wgDefaultUserOptions['echo-subscriptions-web-social-award'] = true;
+$wgDefaultUserOptions['echo-subscriptions-email-social-award'] = false;

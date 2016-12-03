@@ -51,6 +51,22 @@ class UserRelationship {
 			$this->sendRelationshipRequestEmail( $userIdTo, $this->user_name, $type );
 		}
 
+		if ( class_exists( 'EchoEvent' ) ) {
+			$userFrom = User::newFromId( $this->user_id );
+
+			EchoEvent::create( array(
+				'type' => 'social-rel-add',
+				'agent' => $userFrom,
+				'title' => $userFrom->getUserPage(),
+				'extra' => array(
+					'target' => $userIdTo,
+					'from' => $this->user_id,
+					'rel_type' => $type,
+					'message' => $message
+				)
+			) );
+		}
+
 		return $requestId;
 	}
 
@@ -67,7 +83,8 @@ class UserRelationship {
 		$user = User::newFromId( $userIdTo );
 		$user->loadFromDatabase();
 
-		if ( $user->getEmail() && $user->getIntOption( 'notifyfriendrequest', 1 ) ) {
+		$wantsEmail = class_exists( 'EchoEvent' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-rel' ) : $user->getIntOption( 'notifyfriendrequest', 1 );
+		if ( $user->getEmail() && $wantsEmail ) {
 			$requestLink = SpecialPage::getTitleFor( 'ViewRelationshipRequests' );
 			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
 
@@ -123,7 +140,8 @@ class UserRelationship {
 		$user = User::newFromId( $userIdTo );
 		$user->loadFromDatabase();
 
-		if ( $user->getEmail() && $user->getIntOption( 'notifyfriendrequest', 1 ) ) {
+		$wantsEmail = class_exists( 'EchoEvent' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-rel' ) : $user->getIntOption( 'notifyfriendrequest', 1 );
+		if ( $user->getEmail() && $wantsEmail ) {
 			$userLink = Title::makeTitle( NS_USER, $userFrom );
 			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
 
@@ -179,7 +197,8 @@ class UserRelationship {
 		$user = User::newFromId( $userIdTo );
 		$user->loadFromDatabase();
 
-		if ( $user->isEmailConfirmed() && $user->getIntOption( 'notifyfriendrequest', 1 ) ) {
+		$wantsEmail = class_exists( 'EchoEvent' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-rel' ) : $user->getIntOption( 'notifyfriendrequest', 1 );
+		if ( $user->isEmailConfirmed() && $wantsEmail ) {
 			$userLink = Title::makeTitle( NS_USER, $userFrom );
 			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
 
@@ -297,6 +316,21 @@ class UserRelationship {
 			// Purge caches
 			$wgMemc->delete( wfMemcKey( 'relationship', 'profile', "{$this->user_id}-{$ur_type}" ) );
 			$wgMemc->delete( wfMemcKey( 'relationship', 'profile', "{$ur_user_id_from}-{$ur_type}" ) );
+
+			if ( class_exists( 'EchoEvent' ) ) {
+				$userFrom = User::newFromId( $this->user_id );
+
+				EchoEvent::create( array(
+					'type' => 'social-rel-accept',
+					'agent' => $userFrom,
+					'title' => $userFrom->getUserPage(),
+					'extra' => array(
+						'target' => $ur_user_id_from,
+						'from' => $this->user_id,
+						'rel_type' => $ur_type
+					)
+				) );
+			}
 
 			// Hooks (for Semantic SocialProfile mostly)
 			if ( $ur_type == 1 ) {

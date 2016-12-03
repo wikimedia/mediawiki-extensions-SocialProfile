@@ -71,5 +71,9 @@
 	"system_gift_received_subject": "You have received the $1 award on {{SITENAME}}!",
 	"system_gift_received_body_html": "Hi $1.\n\nYou have just received the $2 award on {{SITENAME}}!\n\n\"$3\"\n\nClick below to check out your trophy case!\n\n[[Special:ViewSystemGifts]]\n\nWe hope you like it!\n\nThanks,\n\n\nThe {{SITENAME}} team\n\n---\n\nHey, want to stop getting emails from us?\n\nClick [[Special:UpdateProfile]]\nand change your settings to disable email notifications.",
 	"system_gift_received_body": "Hi $1.\n\nYou have just received the $2 award on {{SITENAME}}!\n\n\"$3\"\n\nClick below to check out your trophy case!\n\n$4\n\nWe hope you like it!\n\nThanks,\n\n\nThe {{SITENAME}} team\n\n---\n\nHey, want to stop getting emails from us?\n\nClick $5\nand change your settings to disable email notifications.",
+	"echo-category-title-social-award": "Awards",
+	"echo-pref-tooltip-social-award": "Notify me when I receive an award.",
+	"notification-social-award-rec": "You have received a new award: $1.",
+	"notification-social-award-rec-bundle": "You have received {{PLURAL:$1|one new award|$1 new awards}}.",
 	"right-awardsmanage": "Create new and edit existing awards"
 }

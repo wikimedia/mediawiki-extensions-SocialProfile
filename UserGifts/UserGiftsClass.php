@@ -55,6 +55,24 @@ class UserGifts {
 
 		$stats = new UserStatsTrack( $this->user_id, $this->user_name );
 		$stats->incStatField( 'gift_sent' );
+
+		if ( class_exists( 'EchoEvent' ) ) {
+			$userFrom = User::newFromId( $this->user_id );
+
+			EchoEvent::create( array(
+				'type' => 'social-gift-send',
+				'agent' => $userFrom,
+				'extra' => array(
+					'target' => $user_id_to,
+					'from' => $this->user_id,
+					'mastergiftid' => $gift_id,
+					'giftid' => $ug_gift_id,
+					'type' => $type,
+					'message' => $message
+				)
+			) );
+		}
+
 		return $ug_gift_id;
 	}
 
@@ -73,7 +91,8 @@ class UserGifts {
 		$user = User::newFromId( $user_id_to );
 		$user->loadFromDatabase();
 
-		if ( $user->isEmailConfirmed() && $user->getIntOption( 'notifygift', 1 ) ) {
+		$wantsEmail = class_exists( 'EchoEvent' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-gift' ) : $user->getIntOption( 'notifygift', 1 );
+		if ( $user->isEmailConfirmed() && $wantsEmail ) {
 			$giftsLink = SpecialPage::getTitleFor( 'ViewGifts' );
 			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
 

@@ -106,7 +106,9 @@ class UserSystemMessage {
 	public function sendAdvancementNotificationEmail( $userIdTo, $level ) {
 		$user = User::newFromId( $userIdTo );
 		$user->loadFromDatabase();
-		if ( $user->isEmailConfirmed() && $user->getIntOption( 'notifyhonorifics', 1 ) ) {
+
+		$wantsEmail = class_exists( 'EchoEvent' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-level-up' ) : $user->getIntOption( 'notifyhonorifics', 1 );
+		if ( $user->isEmailConfirmed() && $wantsEmail ) {
 			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
 			$subject = wfMessage( 'level-advance-subject', $level )->text();
 			if ( trim( $user->getRealName() ) ) {

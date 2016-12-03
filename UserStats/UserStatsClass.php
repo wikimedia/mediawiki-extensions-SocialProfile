@@ -629,6 +629,7 @@ class UserStatsTrack {
 					}
 				}
 			}
+
 			if ( $wgEnableFacebook ) {
 				$s = $dbw->selectRow(
 					'fb_link_view_opinions',
@@ -666,10 +667,25 @@ class UserStatsTrack {
 						$this->user_id,
 						$user_level->getLevelName()
 					);
+
+					if ( class_exists( 'EchoEvent' ) ) {
+						$userFrom = User::newFromId( $this->user_id );
+
+						EchoEvent::create( array(
+							'type' => 'social-level-up',
+							'agent' => $userFrom,
+							'extra' => array(
+								'notifyAgent' => true,
+								'new-level' => $user_level->getLevelName()
+							)
+						) );
+					}
 				}
 			}
+
 			$this->clearCache();
 		}
+
 		return $stats_data;
 	}
 }

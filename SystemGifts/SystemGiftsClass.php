@@ -68,6 +68,7 @@ class SystemGifts {
 				);
 
 				foreach ( $res2 as $row2 ) {
+					// @todo FIXME: this needs refactoring and badly (see T131016 for details)
 					if ( $this->doesUserHaveGift( $row2->stats_user_id, $row->gift_id ) == false ) {
 						$dbw->insert(
 							'user_system_gift',
@@ -84,7 +85,7 @@ class SystemGifts {
 						$sg_key = wfMemcKey( 'user', 'profile', 'system_gifts', "{$row2->stats_user_id}" );
 						$wgMemc->delete( $sg_key );
 
-						// Update counters (bug #27981)
+						// Update counters (https://phabricator.wikimedia.org/T29981)
 						UserSystemGifts::incGiftGivenCount( $row->gift_id );
 
 						$wgOut->addHTML( wfMessage(

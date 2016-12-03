@@ -52,7 +52,26 @@ class UserSystemGifts {
 		if ( $email && !empty( $sg_gift_id ) ) {
 			$this->sendGiftNotificationEmail( $this->user_id, $gift_id );
 		}
+
+		if ( class_exists( 'EchoEvent' ) ) {
+			$userFrom = User::newFromId( $this->user_id );
+
+			$giftObj = SystemGifts::getGift( $gift_id );
+			EchoEvent::create( array(
+				'type' => 'social-award-rec',
+				'agent' => $userFrom,
+				'extra' => array(
+					'notifyAgent' => true,
+					'target' => $this->user_id,
+					'mastergiftid' => $gift_id,
+					'giftid' => $sg_gift_id,
+					'giftname' => $giftObj['gift_name']
+				)
+			) );
+		}
+
 		$wgMemc->delete( wfMemcKey( 'user', 'profile', 'system_gifts', $this->user_id ) );
+
 		return $sg_gift_id;
 	}
 
@@ -69,7 +88,9 @@ class UserSystemGifts {
 		$gift = SystemGifts::getGift( $gift_id );
 		$user = User::newFromId( $user_id_to );
 		$user->loadFromDatabase();
-		if ( $user->isEmailConfirmed() && $user->getIntOption( 'notifygift', 1 ) ) {
+
+		$wantsEmail = class_exists( 'EchoEvent' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-award' ) : $user->getIntOption( 'notifygift', 1 );
+		if ( $user->isEmailConfirmed() && $wantsEmail ) {
 			$gifts_link = SpecialPage::getTitleFor( 'ViewSystemGifts' );
 			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
 			$subject = wfMessage( 'system_gift_received_subject',

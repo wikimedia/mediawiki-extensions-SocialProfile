@@ -783,8 +783,13 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">';
 		$form .= '<div class="profile-info clearfix">
 			<div class="profile-update">
-				<p class="profile-update-title">' . $this->msg( 'user-profile-preferences-emails' )->plain() . '</p>
-				<p class="profile-update-row">'
+				<p class="profile-update-title">' . $this->msg( 'user-profile-preferences-emails' )->plain() . '</p>';
+		if ( class_exists( 'EchoEvent' ) ) {
+			$form .= '<p class="profile-update-row">' .
+				$this->msg( 'user-profile-preferences-emails-manage' )->parse() .
+				'</p>';
+		} else {
+			$form .= '<p class="profile-update-row">'
 					. $this->msg( 'user-profile-preferences-emails-personalmessage' )->plain() .
 					' <input type="checkbox" size="25" name="notify_message" id="notify_message" value="1"' . ( ( $user->getIntOption( 'notifymessage', 1 ) == 1 ) ? 'checked' : '' ) . '/>
 				</p>
@@ -801,6 +806,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 					. $this->msg( 'user-profile-preferences-emails-level' )->plain() .
 					' <input type="checkbox" size="25" name="notify_honorifics" id="notify_honorifics" value="1"' . ( ( $user->getIntOption( 'notifyhonorifics', 1 ) == 1 ) ? 'checked' : '' ) . '/>
 				</p>';
+		}
 
 		$form .= '<p class="profile-update-title">' .
 			$this->msg( 'user-profile-preferences-miscellaneous' )->plain() .

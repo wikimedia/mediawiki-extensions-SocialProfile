@@ -60,6 +60,21 @@ class UserBoard {
 		$stats = new UserStatsTrack( $user_id_from, $user_name_from );
 		$stats->incStatField( 'user_board_sent' );
 
+		if ( class_exists( 'EchoEvent' ) ) {
+			$userFrom = User::newFromId( $user_id_from );
+
+			EchoEvent::create( array(
+				'type' => 'social-msg-send',
+				'agent' => $userFrom,
+				'extra' => array(
+					'target' => $user_id_to,
+					'from' => $user_id_from,
+					'type' => $message_type,
+					'message' => $message
+				)
+			) );
+		}
+
 		return $dbw->insertId();
 	}
 
@@ -74,7 +89,8 @@ class UserBoard {
 		$user->loadFromId();
 
 		// Send email if user's email is confirmed and s/he's opted in to recieving social notifications
-		if ( $user->isEmailConfirmed() && $user->getIntOption( 'notifymessage', 1 ) ) {
+		$wantsEmail = class_exists( 'EchoEvent' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-rel' ) : $user->getIntOption( 'notifymessage', 1 );
+		if ( $user->isEmailConfirmed() && $wantsEmail ) {
 			$board_link = SpecialPage::getTitleFor( 'UserBoard' );
 			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
 			$subject = wfMessage( 'message_received_subject', $user_from )->parse();

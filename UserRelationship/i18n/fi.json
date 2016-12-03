@@ -49,8 +49,8 @@
 	"ur-add-button-friend": "Lisää ystäväksi",
 	"ur-add-sent-title-foe": "Olemme lähettäneet vihollisuuspyyntösi käyttäjälle $1!",
 	"ur-add-sent-title-friend": "Olemme lähettäneet ystävyyspyyntösi käyttäjälle $1!",
-	"ur-add-sent-message-foe": "Vihollisuuspyyntösi on lähetetty käyttäjälle $1 vahvistusta varten.\nJos $1 vahvistaa pyyntösi, saat sähköpostia aiheesta",
-	"ur-add-sent-message-friend": "Ystävyyspyyntösi on lähetetty käyttäjälle $1 vahvistusta varten.\nJos $1 vahvistaa pyyntösi, saat sähköpostia aiheesta",
+	"ur-add-sent-message-foe": "Vihollisuuspyyntösi on lähetetty käyttäjälle $1 vahvistusta varten.\nJos $1 vahvistaa pyyntösi, saat ilmoituksen aiheesta.",
+	"ur-add-sent-message-friend": "Ystävyyspyyntösi on lähetetty käyttäjälle $1 vahvistusta varten.\nJos $1 vahvistaa pyyntösi, saat ilmoituksen aiheesta.",
 	"ur-add-error-message-no-user": "Käyttäjää, jota koitat lisätä ei ole olemassa.",
 	"ur-add-error-message-blocked": "Olet muokkauseston alaisena etkä voi lisätä ystäviä tai vihollisia.",
 	"ur-add-error-message-yourself": "Et voi lisätä itseäsi ystäväksesi tai viholliseksesi.",
@@ -90,5 +90,14 @@
 	"friend_removed_body": "Hei $1:\n\n$2 on poistanut sinut ystävälistaltaan {{GRAMMAR:inessive|{{SITENAME}}}}!\n\nKiittäen,\n\n\n{{GRAMMAR:genitive|{{SITENAME}}}} tiimi\n\n---\n\nHei, etkö enää halua saada sähköpostia meiltä?\n\nNapsauta $4\nja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.",
 	"foe_removed_subject": "Jippii! $1 on poistanut sinut vihollislistaltaan {{GRAMMAR:inessive|{{SITENAME}}}}!",
 	"foe_removed_body_html": "Hei $1:\n\n$2 on poistanut sinut vihollislistaltaan {{GRAMMAR:inessive|{{SITENAME}}}}!\n\nEhkäpä teistä tulee vielä ystävät?\n\nKiittäen,\n\n\n{{GRAMMAR:genitive|{{SITENAME}}}} tiimi\n\n---\n\nHei, etkö enää halua saada sähköpostia meiltä?\n\nNapsauta [[Special:UpdateProfile]]\nja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.",
-	"foe_removed_body": "Hei $1:\n\n$2 on poistanut sinut vihollislistaltaan {{GRAMMAR:inessive|{{SITENAME}}}}!\n\nEhkäpä teistä tulee vielä ystävät?\n\nKiittäen,\n\n\n{{GRAMMAR:genitive|{{SITENAME}}}} tiimi\n\n---\n\nHei, etkö enää halua saada sähköpostia meiltä?\n\nNapsauta $4\nja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä."
+	"foe_removed_body": "Hei $1:\n\n$2 on poistanut sinut vihollislistaltaan {{GRAMMAR:inessive|{{SITENAME}}}}!\n\nEhkäpä teistä tulee vielä ystävät?\n\nKiittäen,\n\n\n{{GRAMMAR:genitive|{{SITENAME}}}} tiimi\n\n---\n\nHei, etkö enää halua saada sähköpostia meiltä?\n\nNapsauta $4\nja muuta asetuksiasi poistaaksesi sähköposti-ilmoitukset käytöstä.",
+	"echo-category-title-social-rel": "Käyttäjäsuhteiden muutokset",
+	"echo-pref-tooltip-social-rel": "Ilmoita minulle, kun joku lähettää minulle käyttäjäsuhdepyynnön (ystävyyspyyntö tai vihollisuuspyyntö).",
+	"echo-show-social-rel-add-link": "(Ystävyys-/vihollisuuspyyntö)",
+	"notification-social-rel-add-friend": "$1 haluaa olla ystäväsi.<br /><br />''$2''",
+	"notification-social-rel-add-foe": "$1 haluaa olla vihollisesi.<br /><br />''$2''",
+	"notification-social-rel-accept-friend": "Sinusta tuli ystävä käyttäjälle $1.",
+	"notification-social-rel-accept-foe": "Sinusta tuli vihollinen käyttäjälle $1.",
+	"notification-social-rel-accept-email-subject": "$1 on hyväksynyt käyttäjäsuhdepyyntösi!",
+	"notification-social-rel-accept-email-batch-body": "$1 on hyväksynyt käyttäjäsuhdepyyntösi."
 }

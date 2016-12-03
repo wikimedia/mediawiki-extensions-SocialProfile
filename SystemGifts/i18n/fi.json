@@ -53,5 +53,9 @@
 	"system_gift_received_subject": "Olet saanut palkinnon $1 {{GRAMMAR:inessive|{{SITENAME}}}}!",
 	"system_gift_received_body_html": "Hei $1:\n\nOlet juuri saanut $2-palkinnon {{GRAMMAR:inessive|{{SITENAME}}}}!\n\n\"$3\"\n\nNapsauta alapuolella olevaa linkkiä tarkistaaksesi palkintorasiasi!\n\n[[Special:ViewSystemGifts]]\n\nToivomme, että pidät siitä!\n\nKiittäen,\n\n\n{{GRAMMAR:genitive|{{SITENAME}}}} tiimi\n\n---\n\nHei, etkö halua enää saada sähköposteja meiltä?\n\nNapsauta [[Special:UpdateProfile]]\nja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.",
 	"system_gift_received_body": "Hei $1:\n\nOlet juuri saanut $2-palkinnon {{GRAMMAR:inessive|{{SITENAME}}}}!\n\n\"$3\"\n\nNapsauta alapuolella olevaa linkkiä tarkistaaksesi palkintorasiasi!\n\n$4\n\nToivomme, että pidät siitä!\n\nKiittäen,\n\n\n{{GRAMMAR:genitive|{{SITENAME}}}} tiimi\n\n---\n\nHei, etkö halua enää saada sähköposteja meiltä?\n\nNapsauta $5\nja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.",
+	"echo-category-title-social-award": "Palkinnot",
+	"echo-pref-tooltip-social-award": "Ilmoita minulle, kun saan palkinnon.",
+	"notification-social-award-rec": "Olet saanut uuden palkinnon: $1.",
+	"notification-social-award-rec-bundle": "Olet saanut {{PLURAL:$1|yhden uuden palkinnon|$1 uutta palkintoa}}.",
 	"right-awardsmanage": "Luoda uusia ja muokata olemassaolevia palkintoja"
 }
