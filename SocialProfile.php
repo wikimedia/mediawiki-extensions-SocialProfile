@@ -37,6 +37,9 @@ $wgExtensionMessagesFiles['AvatarMagic'] = __DIR__ . '/UserProfile/Avatar.magic.
 
 // Classes to be autoloaded
 $wgAutoloadClasses['GenerateTopUsersReport'] = __DIR__ . '/UserStats/GenerateTopUsersReport.php';
+$wgAutoloadClasses['EchoUserBoardMessagePresentationModel'] = __DIR__ . '/UserBoard/EchoUserBoardMessagePresentationModel.php';
+$wgAutoloadClasses['EchoUserRelationshipPresentationModel'] = __DIR__ . '/UserRelationship/EchoUserRelationshipPresentationModel.php';
+$wgAutoloadClasses['EchoUserLevelAdvancePresentationModel'] = __DIR__ . '/UserStats/EchoUserLevelAdvancePresentationModel.php';
 $wgAutoloadClasses['SpecialAddRelationship'] = __DIR__ . '/UserRelationship/SpecialAddRelationship.php';
 $wgAutoloadClasses['SpecialBoardBlast'] = __DIR__ . '/UserBoard/SpecialSendBoardBlast.php';
 $wgAutoloadClasses['SpecialEditProfile'] = __DIR__ . '/UserProfile/SpecialEditProfile.php';
@@ -52,9 +55,12 @@ $wgAutoloadClasses['SpecialViewUserBoard'] = __DIR__ . '/UserBoard/SpecialUserBo
 $wgAutoloadClasses['RemoveAvatar'] = __DIR__ . '/UserProfile/SpecialRemoveAvatar.php';
 $wgAutoloadClasses['UpdateEditCounts'] = __DIR__ . '/UserStats/SpecialUpdateEditCounts.php';
 $wgAutoloadClasses['UserBoard'] = __DIR__ . '/UserBoard/UserBoardClass.php';
+$wgAutoloadClasses['UserBoardHooks'] = __DIR__ . '/UserBoard/UserBoardHooks.php';
 $wgAutoloadClasses['UserProfile'] = __DIR__ . '/UserProfile/UserProfileClass.php';
 $wgAutoloadClasses['UserProfilePage'] = __DIR__ . '/UserProfile/UserProfilePage.php';
 $wgAutoloadClasses['UserRelationship'] = __DIR__ . '/UserRelationship/UserRelationshipClass.php';
+$wgAutoloadClasses['UserRelationshipHooks'] = __DIR__ . '/UserRelationship/UserRelationshipHooks.php';
+$wgAutoloadClasses['UserStatsHooks'] = __DIR__ . '/UserStats/UserStatsHooks.php';
 $wgAutoloadClasses['UserLevel'] = __DIR__ . '/UserStats/UserStatsClass.php';
 $wgAutoloadClasses['UserStats'] = __DIR__ . '/UserStats/UserStatsClass.php';
 $wgAutoloadClasses['UserStatsTrack'] = __DIR__ . '/UserStats/UserStatsClass.php';
@@ -79,6 +85,29 @@ $wgAPIModules['socialprofile-send-message'] = 'ApiSendUserBoardMessage';
 
 $wgAutoloadClasses['ApiRelationshipResponse'] = __DIR__ . '/UserRelationship/ApiRelationshipResponse.php';
 $wgAPIModules['socialprofile-request-response'] = 'ApiRelationshipResponse';
+
+// Echo (Notifications) stuff
+// UserBoard
+$wgHooks['BeforeCreateEchoEvent'][] = 'UserBoardHooks::onBeforeCreateEchoEvent';
+$wgHooks['EchoGetDefaultNotifiedUsers'][] = 'UserBoardHooks::onEchoGetDefaultNotifiedUsers';
+$wgHooks['EchoGetBundleRules'][] = 'UserBoardHooks::onEchoGetBundleRules';
+
+$wgDefaultUserOptions['echo-subscriptions-web-social-msg'] = true;
+$wgDefaultUserOptions['echo-subscriptions-email-social-msg'] = false;
+
+// UserRelationship
+$wgHooks['BeforeCreateEchoEvent'][] = 'UserRelationshipHooks::onBeforeCreateEchoEvent';
+$wgHooks['EchoGetDefaultNotifiedUsers'][] = 'UserRelationshipHooks::onEchoGetDefaultNotifiedUsers';
+
+$wgDefaultUserOptions['echo-subscriptions-web-social-rel'] = true;
+$wgDefaultUserOptions['echo-subscriptions-email-social-rel'] = false;
+
+// UserStats
+$wgHooks['BeforeCreateEchoEvent'][] = 'UserStatsHooks::onBeforeCreateEchoEvent';
+$wgHooks['EchoGetBundleRules'][] = 'UserStatsHooks::onEchoGetBundleRules';
+
+$wgDefaultUserOptions['echo-subscriptions-web-social-level-up'] = true;
+$wgDefaultUserOptions['echo-subscriptions-email-social-level-up'] = false;
 
 // New special pages
 $wgSpecialPages['AddRelationship'] = 'SpecialAddRelationship';
