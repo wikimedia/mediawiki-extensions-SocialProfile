@@ -224,7 +224,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		$this->getOutput()->setPageTitle( $this->msg( 'edit-profile-title' )->plain() );
 		//$form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-personal' )->plain() );
 		$form = '<form action="" method="post" enctype="multipart/form-data" name="profile">';
-		$form .= '<div class="profile-info clearfix">';
+		$form .= '<div class="profile-info visualClear">';
 		$form .= '<div class="profile-update">
 			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-info' )->plain() . '</p>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-name' )->plain() . '</p>
@@ -394,7 +394,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 
 		$this->getOutput()->setPageTitle( $this->msg( 'user-profile-section-interests' )->plain() );
 		//$form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-interests' )->plain() );
-		$form = '<div class="profile-info clearfix">
+		$form = '<div class="profile-info visualClear">
 			<div class="profile-update">
 			<p class="profile-update-title">' . $this->msg( 'user-profile-interests-entertainment' )->plain() . '</p>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-movies' )->plain() . '</p>
@@ -428,7 +428,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			</p>
 			<div class="visualClear"></div>
 			</div>
-			<div class="profile-info clearfix">
+			<div class="profile-info visualClear">
 			<p class="profile-update-title">' . $this->msg( 'user-profile-interests-eats' )->plain() . '</p>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-foodsnacks' )->plain() . '</p>
 			<p class="profile-update-unit">
@@ -474,7 +474,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			$this->msg( 'user-profile-tidbits-title' )->plain() )->parse() );
 		$form = '<h1>' . $this->msg( 'user-profile-tidbits-title' )->plain() . '</h1>';
 		//$form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-custom' )->plain() );
-		$form = '<div class="profile-info clearfix">
+		$form = '<div class="profile-info visualClear">
 				<div class="profile-update">
 					<p class="profile-update-title">' . $this->msg( 'user-profile-tidbits-title' )->inContentLanguage()->parse() . '</p>
 					<div id="profile-update-custom1">
