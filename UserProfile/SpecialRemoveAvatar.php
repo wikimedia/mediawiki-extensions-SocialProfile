@@ -46,7 +46,7 @@ class RemoveAvatar extends SpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param $user Mixed: parameter passed to the page or null
+	 * @param string|null $par Name of the user whose avatar we're removing
 	 */
 	public function execute( $par ) {
 		$out = $this->getOutput();
@@ -147,6 +147,28 @@ class RemoveAvatar extends SpecialPage {
 			$this->msg( 'user-profile-picture-log-delete-entry', $user_deleted->getName() )
 				->inContentLanguage()->text()
 		);
+	}
+
+	/**
+	 * Return an array of subpages beginning with $search that this special page will accept.
+	 *
+	 * @param string $search Prefix to search for
+	 * @param int $limit Maximum number of results to return (usually 10)
+	 * @param int $offset Number of results to skip (usually 0)
+	 * @return string[] Matching subpages
+	 */
+	public function prefixSearchSubpages( $search, $limit, $offset ) {
+		$user = User::newFromName( $search );
+		if ( !$user ) {
+			// No prefix suggestion for invalid user
+			return [];
+		}
+		if ( $this->getUser()->isAllowed( 'avatarremove' ) ) {
+			// Autocomplete subpage as user list - public to allow caching
+			return UserNamePrefixSearch::search( 'public', $search, $limit, $offset );
+		} else {
+			return [ $this->getUser()->getName() ];
+		}
 	}
 
 	/**

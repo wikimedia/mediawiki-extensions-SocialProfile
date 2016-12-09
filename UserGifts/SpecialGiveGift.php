@@ -40,7 +40,7 @@ class GiveGift extends SpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param $par Mixed: parameter passed to the page or null
+	 * @param string|null $par Name of the user whom to give a gift
 	 */
 	public function execute( $par ) {
 		global $wgMemc, $wgUploadPath;
@@ -61,13 +61,12 @@ class GiveGift extends SpecialPage {
 		] );
 		$out->addModules( 'ext.socialprofile.usergifts.js' );
 
-		$userTitle = Title::newFromDBkey( $request->getVal( 'user' ) );
+		$userTitle = Title::makeTitle( NS_USER, $request->getVal( 'user', $par ) );
 		if ( !$userTitle ) {
 			$out->addHTML( $this->displayFormNoUser() );
 			return false;
 		}
 
-		$user_title = Title::makeTitle( NS_USER, $request->getVal( 'user' ) );
 		$this->user_name_to = $userTitle->getText();
 		$this->user_id_to = User::idFromName( $this->user_name_to );
 		$giftId = $request->getInt( 'gift_id' );
@@ -139,7 +138,7 @@ class GiveGift extends SpecialPage {
 				$out->setPageTitle( $this->msg( 'g-sent-title', $this->user_name_to )->parse() );
 
 				$output .= '<div class="back-links">
-					<a href="' . htmlspecialchars( $user_title->getFullURL() ) . '">' .
+					<a href="' . htmlspecialchars( $userTitle->getFullURL() ) . '">' .
 						$this->msg( 'g-back-link', $this->user_name_to )->parse() .
 					'</a>
 				</div>
@@ -172,6 +171,24 @@ class GiveGift extends SpecialPage {
 				}
 			}
 		}
+	}
+
+	/**
+	 * Return an array of subpages beginning with $search that this special page will accept.
+	 *
+	 * @param string $search Prefix to search for
+	 * @param int $limit Maximum number of results to return (usually 10)
+	 * @param int $offset Number of results to skip (usually 0)
+	 * @return string[] Matching subpages
+	 */
+	public function prefixSearchSubpages( $search, $limit, $offset ) {
+		$user = User::newFromName( $search );
+		if ( !$user ) {
+			// No prefix suggestion for invalid user
+			return [];
+		}
+		// Autocomplete subpage as user list - public to allow caching
+		return UserNamePrefixSearch::search( 'public', $search, $limit, $offset );
 	}
 
 	/**

@@ -10,6 +10,18 @@ class TopFansRecent extends UnlistedSpecialPage {
 	}
 
 	/**
+	 * Return an array of subpages beginning with $search that this special page will accept.
+	 *
+	 * @param string $search Prefix to search for
+	 * @param int $limit Maximum number of results to return (usually 10)
+	 * @param int $offset Number of results to skip (usually 0)
+	 * @return string[] Matching subpages
+	 */
+	public function prefixSearchSubpages( $search, $limit, $offset ) {
+		return [ 'weekly', 'monthly' ];
+	}
+
+	/**
 	 * Show the special page
 	 *
 	 * @param string|null $par Period name, i.e. weekly or monthly (or null)

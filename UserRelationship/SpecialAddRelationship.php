@@ -33,9 +33,9 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param $params Mixed: parameter(s) passed to the page or null
+	 * @param string|null $par Name of the user whom to remove as a friend/foe
 	 */
-	public function execute( $params ) {
+	public function execute( $par ) {
 		$out = $this->getOutput();
 		$request = $this->getRequest();
 		$currentUser = $this->getUser();
@@ -49,7 +49,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 		// Add CSS
 		$out->addModuleStyles( 'ext.socialprofile.userrelationship.css' );
 
-		$userTitle = Title::newFromDBkey( $request->getVal( 'user' ) );
+		$userTitle = Title::newFromDBkey( $request->getVal( 'user', $par ) );
 
 		if ( !$userTitle ) {
 			$out->setPageTitle( $this->msg( 'ur-error-title' ) );
@@ -222,6 +222,24 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				$out->addHTML( $this->displayForm() );
 			}
 		}
+	}
+
+	/**
+	 * Return an array of subpages beginning with $search that this special page will accept.
+	 *
+	 * @param string $search Prefix to search for
+	 * @param int $limit Maximum number of results to return (usually 10)
+	 * @param int $offset Number of results to skip (usually 0)
+	 * @return string[] Matching subpages
+	 */
+	public function prefixSearchSubpages( $search, $limit, $offset ) {
+		$user = User::newFromName( $search );
+		if ( !$user ) {
+			// No prefix suggestion for invalid user
+			return [];
+		}
+		// Autocomplete subpage as user list - public to allow caching
+		return UserNamePrefixSearch::search( 'public', $search, $limit, $offset );
 	}
 
 	/**
