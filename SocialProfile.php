@@ -57,6 +57,7 @@ $wgAutoloadClasses['UpdateEditCounts'] = __DIR__ . '/UserStats/SpecialUpdateEdit
 $wgAutoloadClasses['UserBoard'] = __DIR__ . '/UserBoard/UserBoardClass.php';
 $wgAutoloadClasses['UserBoardHooks'] = __DIR__ . '/UserBoard/UserBoardHooks.php';
 $wgAutoloadClasses['UserProfile'] = __DIR__ . '/UserProfile/UserProfileClass.php';
+$wgAutoloadClasses['UserProfileHooks'] = __DIR__ . '/UserProfile/UserProfileHooks.php';
 $wgAutoloadClasses['UserProfilePage'] = __DIR__ . '/UserProfile/UserProfilePage.php';
 $wgAutoloadClasses['UserRelationship'] = __DIR__ . '/UserRelationship/UserRelationshipClass.php';
 $wgAutoloadClasses['UserRelationshipHooks'] = __DIR__ . '/UserRelationship/UserRelationshipHooks.php';
