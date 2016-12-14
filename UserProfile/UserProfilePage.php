@@ -93,7 +93,7 @@ class UserProfilePage extends Article {
 		}
 
 		$out->addHTML( '<div id="profile-top">' );
-		$out->addHTML( $this->getProfileTop( $this->user_id, $this->user_name ) );
+		$out->addHTML( $this->getProfileHeader( $this->user_id, $this->user_name ) );
 		$out->addHTML( '<div class="visualClear"></div></div>' );
 
 		// User does not want social profile for User:user_name, so we just
@@ -919,7 +919,7 @@ class UserProfilePage extends Article {
 	 * @param $user_id Integer: user ID
 	 * @param $user_name String: user name
 	 */
-	function getProfileTop( $user_id, $user_name ) {
+	function getProfileHeader( $user_id, $user_name ) {
 		global $wgUserLevels;
 
 		$context = $this->getContext();
@@ -963,6 +963,8 @@ class UserProfilePage extends Article {
 		wfDebug( 'profile type: ' . $profile_data['user_page_type'] . "\n" );
 		$output = '';
 
+		// Show the link for changing user page type for the user whose page
+		// it is
 		if ( $this->isOwner() ) {
 			$toggle_title = SpecialPage::getTitleFor( 'ToggleUserPage' );
 			// Cast it to an int because PHP is stupid.
@@ -1009,65 +1011,88 @@ class UserProfilePage extends Article {
 			</div>
 			<div class="profile-actions">';
 
+		$profileLinks = [];
 		if ( $this->isOwner() ) {
-			$output .= $language->pipeList( array(
-				'<a href="' . htmlspecialchars( $update_profile->getFullURL() ) . '">' . wfMessage( 'user-edit-profile' )->escaped() . '</a>',
-				'<a href="' . htmlspecialchars( $upload_avatar->getFullURL() ) . '">' . wfMessage( 'user-upload-avatar' )->escaped() . '</a>',
-				'<a href="' . htmlspecialchars( $watchlist->getFullURL() ) . '">' . wfMessage( 'user-watchlist' )->escaped() . '</a>',
-				''
-			) );
+			$profileLinks['user-edit-profile'] =
+				'<a href="' . htmlspecialchars( $update_profile->getFullURL() ) . '">' . wfMessage( 'user-edit-profile' )->escaped() . '</a>';
+			$profileLinks['user-upload-avatar'] =
+				'<a href="' . htmlspecialchars( $upload_avatar->getFullURL() ) . '">' . wfMessage( 'user-upload-avatar' )->escaped() . '</a>';
+			$profileLinks['user-watchlist'] =
+				'<a href="' . htmlspecialchars( $watchlist->getFullURL() ) . '">' . wfMessage( 'user-watchlist' )->escaped() . '</a>';
 		} elseif ( $userContext->isLoggedIn() ) {
 			if ( $relationship == false ) {
-				$output .= $language->pipeList( array(
-					'<a href="' . htmlspecialchars( $add_relationship->getFullURL( 'user=' . $user_safe . '&rel_type=1' ) ) . '" rel="nofollow">' . wfMessage( 'user-add-friend' )->escaped() . '</a>',
-					'<a href="' . htmlspecialchars( $add_relationship->getFullURL( 'user=' . $user_safe . '&rel_type=2' ) ) . '" rel="nofollow">' . wfMessage( 'user-add-foe' )->escaped() . '</a>',
-					''
-				) );
+				$profileLinks['user-add-friend'] =
+					'<a href="' . htmlspecialchars( $add_relationship->getFullURL( 'user=' . $user_safe . '&rel_type=1' ) ) . '" rel="nofollow">' . wfMessage( 'user-add-friend' )->escaped() . '</a>';
+
+				$profileLinks['user-add-foe'] =
+					'<a href="' . htmlspecialchars( $add_relationship->getFullURL( 'user=' . $user_safe . '&rel_type=2' ) ) . '" rel="nofollow">' . wfMessage( 'user-add-foe' )->escaped() . '</a>';
 			} else {
 				if ( $relationship == 1 ) {
-					$output .= $language->pipeList( array(
-						'<a href="' . htmlspecialchars( $remove_relationship->getFullURL( 'user=' . $user_safe ) ) . '">' . wfMessage( 'user-remove-friend' )->escaped() . '</a>',
-						''
-					) );
+					$profileLinks['user-remove-friend'] =
+						'<a href="' . htmlspecialchars( $remove_relationship->getFullURL( 'user=' . $user_safe ) ) . '">' . wfMessage( 'user-remove-friend' )->escaped() . '</a>';
 				}
 				if ( $relationship == 2 ) {
-					$output .= $language->pipeList( array(
-						'<a href="' . htmlspecialchars( $remove_relationship->getFullURL( 'user=' . $user_safe ) ) . '">' . wfMessage( 'user-remove-foe' )->escaped() . '</a>',
-						''
-					) );
+					$profileLinks['user-remove-foe'] =
+						'<a href="' . htmlspecialchars( $remove_relationship->getFullURL( 'user=' . $user_safe ) ) . '">' . wfMessage( 'user-remove-foe' )->escaped() . '</a>';
 				}
 			}
 
 			global $wgUserBoard;
 			if ( $wgUserBoard ) {
-				$output .= '<a href="' . htmlspecialchars( $send_message->getFullURL( 'user=' . $userContext->getName() . '&conv=' . $user_safe ) ) . '" rel="nofollow">' .
+				$profileLinks['user-send-message'] =
+					'<a href="' . htmlspecialchars( $send_message->getFullURL( 'user=' . $userContext->getName() . '&conv=' . $user_safe ) ) . '" rel="nofollow">' .
 					wfMessage( 'user-send-message' )->escaped() . '</a>';
-				$output .= wfMessage( 'pipe-separator' )->escaped();
 			}
-			$output .= '<a href="' . htmlspecialchars( $give_gift->getFullURL( 'user=' . $user_safe ) ) . '" rel="nofollow">' .
+			$profileLinks['user-send-gift'] =
+				'<a href="' . htmlspecialchars( $give_gift->getFullURL( 'user=' . $user_safe ) ) . '" rel="nofollow">' .
 				wfMessage( 'user-send-gift' )->escaped() . '</a>';
-			$output .= wfMessage( 'pipe-separator' )->escaped();
 		}
 
-		$output .= '<a href="' . htmlspecialchars( $contributions->getFullURL() ) . '" rel="nofollow">' . wfMessage( 'user-contributions' )->escaped() . '</a> ';
+		$profileLinks['user-contributions'] =
+			'<a href="' . htmlspecialchars( $contributions->getFullURL() ) . '" rel="nofollow">' . wfMessage( 'user-contributions' )->escaped() . '</a>';
 
 		// Links to User:user_name from User_profile:
-		if ( $this->getTitle()->getNamespace() == NS_USER_PROFILE && $this->profile_data['user_id'] && $this->profile_data['user_page_type'] == 0 ) {
-			$output .= '| <a href="' . htmlspecialchars( $user_page->getFullURL() ) . '" rel="nofollow">' .
-				wfMessage( 'user-page-link' )->escaped() . '</a> ';
+		if (
+			$this->getTitle()->getNamespace() == NS_USER_PROFILE &&
+			$this->profile_data['user_id'] &&
+			$this->profile_data['user_page_type'] == 0
+		)
+		{
+			$profileLinks['user-page-link'] =
+				'<a href="' . htmlspecialchars( $user_page->getFullURL() ) . '" rel="nofollow">' .
+					wfMessage( 'user-page-link' )->escaped() . '</a>';
 		}
 
 		// Links to User:user_name from User_profile:
-		if ( $this->getTitle()->getNamespace() == NS_USER && $this->profile_data['user_id'] && $this->profile_data['user_page_type'] == 0 ) {
-			$output .= '| <a href="' . htmlspecialchars( $user_social_profile->getFullURL() ) . '" rel="nofollow">' .
-				wfMessage( 'user-social-profile-link' )->escaped() . '</a> ';
+		if (
+			$this->getTitle()->getNamespace() == NS_USER &&
+			$this->profile_data['user_id'] &&
+			$this->profile_data['user_page_type'] == 0
+		)
+		{
+			$profileLinks['user-social-profile-link'] =
+				'<a href="' . htmlspecialchars( $user_social_profile->getFullURL() ) . '" rel="nofollow">' .
+					wfMessage( 'user-social-profile-link' )->escaped() . '</a>';
 		}
 
-		if ( $this->getTitle()->getNamespace() == NS_USER && ( !$this->profile_data['user_id'] || $this->profile_data['user_page_type'] == 1 ) ) {
-			$output .= '| <a href="' . htmlspecialchars( $user_wiki->getFullURL() ) . '" rel="nofollow">' .
-				wfMessage( 'user-wiki-link' )->escaped() . '</a>';
+		if (
+			$this->getTitle()->getNamespace() == NS_USER && (
+				!$this->profile_data['user_id'] ||
+				$this->profile_data['user_page_type'] == 1
+			)
+		)
+		{
+			$profileLinks['user-wiki-link'] =
+				'<a href="' . htmlspecialchars( $user_wiki->getFullURL() ) . '" rel="nofollow">' .
+					wfMessage( 'user-wiki-link' )->escaped() . '</a>';
 		}
 
+		// Provide a hook point for adding links to the profile header
+		// or maybe even removing them
+		// @see https://phabricator.wikimedia.org/T152930
+		Hooks::run( 'UserProfileGetProfileHeaderLinks', array( $this, &$profileLinks ) );
+
+		$output .= $language->pipeList( $profileLinks );
 		$output .= '</div>
 
 		</div>';
