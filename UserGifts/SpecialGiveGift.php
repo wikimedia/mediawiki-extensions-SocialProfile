@@ -241,6 +241,7 @@ class GiveGift extends SpecialPage {
 		global $wgFriendingEnabled;
 
 		$this->getOutput()->setPageTitle( $this->msg( 'g-give-no-user-title' )->plain() );
+		$this->getOutput()->addModules( 'mediawiki.userSuggest' );
 
 		$output = '<form action="" method="get" enctype="multipart/form-data" name="gift">' .
 			Html::hidden( 'title', $this->getPageTitle() ) .
@@ -281,7 +282,7 @@ class GiveGift extends SpecialPage {
 				$this->msg( 'g-give-enter-friend-title' )->plain() .
 			'</div>
 			<div class="g-give-textbox">
-				<input type="text" width="85" name="user" value="" />
+				<input type="text" width="85" name="user" class="mw-autocomplete-user" value="" />
 				<input class="site-button" type="button" value="' . $this->msg( 'g-give-gift' )->plain() . '" onclick="document.gift.submit()" />
 			</div>
 			</div>
