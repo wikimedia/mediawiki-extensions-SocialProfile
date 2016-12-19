@@ -49,6 +49,9 @@ class UserRelationshipHooks {
 		$icons['social-added'] = array(
 			'path' => 'SocialProfile/images/notifications-added.svg'
 		);
+		$icons['gratitude'] = array(
+			'path' => 'SocialProfile/images/gratitude.png'
+		);
 
 		return true;
 	}
