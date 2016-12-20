@@ -123,7 +123,7 @@ class RemoveGift extends UnlistedSpecialPage {
 						'g-from',
 						htmlspecialchars( $user->getFullURL() ),
 						$gift['user_name_from']
-					)->parse() . '</div>';
+					)->text() . '</div>';
 		if ( $gift['message'] ) {
 			$output .= '<div class="g-user-message">' .
 				$gift['message'] . '</div>';
