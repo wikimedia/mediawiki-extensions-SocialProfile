@@ -59,6 +59,6 @@
 	"message_received_body": "Hi $1.\n\n$2 just wrote on your board on {{SITENAME}}!\n\nClick below to check out your board!\n\n$3\n\n---\n\nHey, want to stop getting e-mails from us?\n\nClick $4\nand change your settings to disable email notifications.",
 	"echo-category-title-social-msg": "User board messages",
 	"echo-pref-tooltip-social-msg": "Notify me when someone leaves a message on my user board.",
-	"notification-social-msg-send": "$1 just left a message for you.<br /><br />''$2''",
-	"notification-social-msg-send-bundle": "{{PLURAL:$1|One person|$1 people|100=99+ people}} left messages for you."
+	"notification-social-msg-send": "$1 just left a message on your user board.<br /><br />''$2''",
+	"notification-social-msg-send-bundle": "{{PLURAL:$1|One person|$1 people|100=99+ people}} left messages on your user board."
 }
