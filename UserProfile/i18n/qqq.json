@@ -67,5 +67,10 @@
 	"user-profile-goback": "{{Identical|Go back}}",
 	"user-page-link": "{{Identical|User page}}",
 	"right-avatarremove": "{{doc-right|avatarremove}}",
-	"right-editothersprofiles": "{{doc-right|editothersprofiles}}"
+	"right-editothersprofiles": "{{doc-right|editothersprofiles}}",
+	"apihelp-socialprofile-userprofileprivacy-description": "{{doc-apihelp-description|socialprofile-userprofileprivacy}}",
+	"apihelp-socialprofile-userprofileprivacy-param-method": "{{doc-apihelp-param|socialprofile-userprofileprivacy|method}}",
+	"apihelp-socialprofile-userprofileprivacy-param-field_key": "{{doc-apihelp-param|socialprofile-userprofileprivacy|field_key}}",
+	"apihelp-socialprofile-userprofileprivacy-param-privacy": "{{doc-apihelp-param|socialprofile-userprofileprivacy|privacy}}",
+	"apihelp-socialprofile-userprofileprivacy-param-tuid": "{{doc-apihelp-param|socialprofile-userprofileprivacy|tuid}}"
 }

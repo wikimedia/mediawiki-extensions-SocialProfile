@@ -36,10 +36,6 @@ class ApiSendUserBoardMessage extends ApiBase {
 		return true;
 	}
 
-	public function getDescription() {
-		return 'Send a message to a user\'s UserBoard.';
-	}
-
 	public function getAllowedParams() {
 		return array_merge( parent::getAllowedParams(), array(
 			'username' => array(
@@ -55,17 +51,5 @@ class ApiSendUserBoardMessage extends ApiBase {
 				ApiBase::PARAM_REQUIRED => false
 			)
 		) );
-	}
-
-	public function getParamDescription() {
-		return array_merge( parent::getParamDescription(), array(
-			'username' => 'The recipient\'s user name.',
-			'message' => 'urlencoded version of the message to send.',
-			'type' => 'Message type; 0 for a public message, 1 for a private message.'
-		) );
-	}
-
-	public function getExamplesMessages() {
-		return array();
 	}
 }

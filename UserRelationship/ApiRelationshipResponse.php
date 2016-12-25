@@ -53,10 +53,6 @@ class ApiRelationshipResponse extends ApiBase {
 		return true;
 	}
 
-	public function getDescription() {
-		return 'Responds to user relationship (friend/foe) requests.';
-	}
-
 	public function getAllowedParams() {
 		return array_merge( parent::getAllowedParams(), array(
 			'response' => array(
@@ -68,17 +64,6 @@ class ApiRelationshipResponse extends ApiBase {
 				ApiBase::PARAM_REQUIRED => true
 			)
 		) );
-	}
-
-	public function getParamDescription() {
-		return array_merge( parent::getParamDescription(), array(
-			'response' => 'Response to the relationship request; 1 to accept, -1 to reject.',
-			'id' => 'Unique identifier of the relationship request'
-		) );
-	}
-
-	public function getExamplesMessages() {
-		return array();
 	}
 }
 

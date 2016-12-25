@@ -27,10 +27,6 @@ class ApiDeleteUserBoardMessage extends ApiBase {
 		return true;
 	}
 
-	public function getDescription() {
-		return 'Delete a UserBoard message.';
-	}
-
 	public function getAllowedParams() {
 		return array_merge( parent::getAllowedParams(), array(
 			'id' => array(
@@ -38,15 +34,5 @@ class ApiDeleteUserBoardMessage extends ApiBase {
 				ApiBase::PARAM_REQUIRED => false
 			)
 		) );
-	}
-
-	public function getParamDescription() {
-		return array_merge( parent::getParamDescription(), array(
-			'id' => 'Unique identifier of the board message to delete.'
-		) );
-	}
-
-	public function getExamplesMessages() {
-		return array();
 	}
 }

@@ -79,23 +79,4 @@ class ApiUserProfilePrivacy extends ApiBase {
 			)
 		);
 	}
-
-	/**
-	 * @return array Human-readable descriptions for all parameters that this module accepts
-	 */
-	protected function getParamDescription() {
-		return array(
-			'method' => 'Action (either "get" or "set")',
-			'field_key' => 'Target field key, such as up_movies for the "Movies" field',
-			'privacy' => 'New privacy value (one of the following: public, hidden, friends, foaf)',
-			'tuid' => 'Target user (ID)'
-		);
-	}
-
-	/**
-	 * @return string Human-readable description for this API module, shown on api.php
-	 */
-	protected function getDescription() {
-		return 'API module for setting the visibility ("privacy") of a profile field';
-	}
 }

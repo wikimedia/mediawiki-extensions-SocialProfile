@@ -12,5 +12,8 @@
 	"ur-next": "{{Identical|Next}}",
 	"ur-remove": "{{Identical|Remove}}",
 	"ur-cancel": "{{Identical|Cancel}}",
-	"ur-login": "{{Identical|Log in}}"
+	"ur-login": "{{Identical|Log in}}",
+	"apihelp-socialprofile-request-response-description": "{{doc-apihelp-description|socialprofile-request-response}}",
+	"apihelp-socialprofile-request-response-param-response": "{{doc-apihelp-param|socialprofile-request-response|response}}",
+	"apihelp-socialprofile-request-response-param-id": "{{doc-apihelp-param|socialprofile-request-response|id}}"
 }

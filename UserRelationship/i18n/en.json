@@ -101,5 +101,8 @@
 	"notification-social-rel-accept-friend": "You became friends with $1.",
 	"notification-social-rel-accept-foe": "You became foes with $1.",
 	"notification-social-rel-accept-email-subject": "$1 has accepted your relationship request!",
-	"notification-social-rel-accept-email-batch-body": "$1 has accepted your relationship request."
+	"notification-social-rel-accept-email-batch-body": "$1 has accepted your relationship request.",
+	"apihelp-socialprofile-request-response-description": "Responds to user relationship (friend/foe) requests.",
+	"apihelp-socialprofile-request-response-param-response": "Response to the relationship request; 1 to accept, -1 to reject.",
+	"apihelp-socialprofile-request-response-param-id": "Unique identifier of the relationship request"
 }
