@@ -33,6 +33,8 @@ class ViewGifts extends SpecialPage {
 	public function execute( $par ) {
 		global $wgUploadPath;
 
+		$linkRenderer = $this->getLinkRenderer();
+
 		$out = $this->getOutput();
 		$request = $this->getRequest();
 		$currentUser = $this->getUser();
@@ -180,7 +182,7 @@ class ViewGifts extends SpecialPage {
 		if ( $numofpages > 1 ) {
 			$output .= '<div class="page-nav">';
 			if ( $page > 1 ) {
-				$output .= Linker::link(
+				$output .= $linkRenderer->makeLink(
 					$pageLink,
 					$this->msg( 'g-previous' )->plain(),
 					array(),
@@ -205,7 +207,7 @@ class ViewGifts extends SpecialPage {
 				if ( $i == $page ) {
 					$output .= ( $i . ' ' );
 				} else {
-					$output .= Linker::link(
+					$output .= $linkRenderer->makeLink(
 						$pageLink,
 						$i,
 						array(),
@@ -219,7 +221,7 @@ class ViewGifts extends SpecialPage {
 
 			if ( ( $total - ( $per_page * $page ) ) > 0 ) {
 				$output .= $this->msg( 'word-separator' )->plain() .
-					Linker::link(
+					$linkRenderer->makeLink(
 						$pageLink,
 						$this->msg( 'g-next' )->plain(),
 						array(),

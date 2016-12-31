@@ -23,6 +23,8 @@ class ViewSystemGifts extends SpecialPage {
 	public function execute( $par ) {
 		global $wgUploadPath;
 
+		$linkRenderer = $this->getLinkRenderer();
+
 		$out = $this->getOutput();
 		$request = $this->getRequest();
 		$user = $this->getUser();
@@ -141,7 +143,7 @@ class ViewSystemGifts extends SpecialPage {
 			$output .= '<div class="page-nav">';
 
 			if ( $page > 1 ) {
-				$output .= Linker::link(
+				$output .= $linkRenderer->makeLink(
 					$page_link,
 					$this->msg( 'ga-previous' )->plain(),
 					array(),
@@ -166,7 +168,7 @@ class ViewSystemGifts extends SpecialPage {
 				if ( $i == $page ) {
 					$output .= ( $i . ' ' );
 				} else {
-					$output .= Linker::link(
+					$output .= $linkRenderer->makeLink(
 						$page_link,
 						$i,
 						array(),
@@ -180,7 +182,7 @@ class ViewSystemGifts extends SpecialPage {
 
 			if ( ( $total - ( $per_page * $page ) ) > 0 ) {
 				$output .= $this->msg( 'word-separator' )->plain() .
-					Linker::link(
+					$linkRenderer->makeLink(
 						$page_link,
 						$this->msg( 'ga-next' )->plain(),
 						array(),

@@ -138,6 +138,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 			$output .= '<h1 class="top-title">' .
 				$this->msg( 'top-fans-by-category-nav-header' )->plain() . '</h1>';
 
+			$linkRenderer = $this->getLinkRenderer();
 			$lines = explode( "\n", $message->text() );
 			foreach ( $lines as $line ) {
 				if ( strpos( $line, '*' ) !== 0 ) {
@@ -155,7 +156,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 					}
 
 					$output .= '<p>';
-					$output .= Linker::link(
+					$output .= $linkRenderer->makeLink(
 						$this->getPageTitle(),
 						$link_text,
 						array(),

@@ -129,7 +129,7 @@ class UserHome extends SpecialPage {
 				}
 			}
 
-			$output .= Linker::link(
+			$output .= $this->getLinkRenderer()->makeLink(
 				$this->getPageTitle(),
 				$this->msg( 'useractivity-all' )->plain()
 			);

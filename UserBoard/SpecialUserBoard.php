@@ -37,6 +37,8 @@ class SpecialViewUserBoard extends SpecialPage {
 		$request = $this->getRequest();
 		$currentUser = $this->getUser();
 
+		$linkRenderer = $this->getLinkRenderer();
+
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();
 
@@ -170,7 +172,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		if ( $numofpages > 1 ) {
 			$output .= '<div class="page-nav">';
 			if ( $page > 1 ) {
-				$output .= Linker::link(
+				$output .= $linkRenderer->makeLink(
 					$this->getPageTitle(),
 					$this->msg( 'userboard_prevpage' )->plain(),
 					array(),
@@ -195,7 +197,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				if ( $i == $page ) {
 					$output .= ( $i . ' ' );
 				} else {
-					$output .= Linker::link(
+					$output .= $linkRenderer->makeLink(
 						$this->getPageTitle(),
 						$i,
 						array(),
@@ -209,7 +211,7 @@ class SpecialViewUserBoard extends SpecialPage {
 
 			if ( ( $total - ( $per_page * $page ) ) > 0 ) {
 				$output .= $this->msg( 'word-separator' )->plain() .
-					Linker::link(
+					$linkRenderer->makeLink(
 					$this->getPageTitle(),
 					$this->msg( 'userboard_nextpage' )->plain(),
 					array(),

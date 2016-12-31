@@ -1,4 +1,6 @@
 <?php
+use MediaWiki\MediaWikiServices;
+
 /**
  * Class to access profile data for a user
  */
@@ -227,6 +229,7 @@ class UserProfile {
 	static function getEditProfileNav( $current_nav ) {
 		$lines = explode( "\n", wfMessage( 'update_profile_nav' )->inContentLanguage()->text() );
 		$output = '<div class="profile-tab-bar">';
+		$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
 
 		foreach ( $lines as $line ) {
 			if ( strpos( $line, '*' ) !== 0 ) {
@@ -243,7 +246,7 @@ class UserProfile {
 				}
 
 				$output .= '<div class="profile-tab' . ( ( $current_nav == $link_text ) ? '-on' : '' ) . '">';
-				$output .= Linker::link( $page, $link_text );
+				$output .= $linkRenderer->makeLink( $page, $link_text );
 				$output .= '</div>';
 			}
 		}

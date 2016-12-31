@@ -39,6 +39,7 @@ class SpecialViewRelationships extends SpecialPage {
 		$out = $this->getOutput();
 		$request = $this->getRequest();
 		$user = $this->getUser();
+		$linkRenderer = $this->getLinkRenderer();
 
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();
@@ -198,13 +199,13 @@ class SpecialViewRelationships extends SpecialPage {
 
 				if ( $indivRelationship == false ) {
 					$output .= $lang->pipeList( array(
-						Linker::link(
+						$linkRenderer->makeLink(
 							$addRelationshipLink,
 							$this->msg( 'ur-add-friend' )->plain(),
 							array(),
 							array( 'user' => $relationship['user_name'], 'rel_type' => 1 )
 						),
-						Linker::link(
+						$linkRenderer->makeLink(
 							$addRelationshipLink,
 							$this->msg( 'ur-add-foe' )->plain(),
 							array(),
@@ -213,7 +214,7 @@ class SpecialViewRelationships extends SpecialPage {
 						''
 					) );
 				} elseif ( $user_name == $user->getName() ) {
-					$output .= Linker::link(
+					$output .= $linkRenderer->makeLink(
 						$removeRelationshipLink,
 						$rem,
 						array(),
@@ -222,7 +223,7 @@ class SpecialViewRelationships extends SpecialPage {
 					$output .= $this->msg( 'pipe-separator' )->escaped();
 				}
 
-				$output .= Linker::link(
+				$output .= $linkRenderer->makeLink(
 					$giveGiftLink,
 					$this->msg( 'ur-give-gift' )->plain(),
 					array(),
@@ -252,7 +253,7 @@ class SpecialViewRelationships extends SpecialPage {
 		if ( $numofpages > 1 ) {
 			$output .= '<div class="page-nav">';
 			if ( $page > 1 ) {
-				$output .= Linker::link(
+				$output .= $linkRenderer->makeLink(
 					$pageLink,
 					$this->msg( 'ur-previous' )->plain(),
 					array(),
@@ -278,7 +279,7 @@ class SpecialViewRelationships extends SpecialPage {
 				if ( $i == $page ) {
 					$output .= ( $i . ' ' );
 				} else {
-					$output .= Linker::link(
+					$output .= $linkRenderer->makeLink(
 						$pageLink,
 						$i,
 						array(),
@@ -293,7 +294,7 @@ class SpecialViewRelationships extends SpecialPage {
 
 			if ( ( $total - ( $per_page * $page ) ) > 0 ) {
 				$output .= $this->msg( 'word-separator' )->plain() .
-					Linker::link(
+					$linkRenderer->makeLink(
 						$pageLink,
 						$this->msg( 'ur-next' )->plain(),
 						array(),
