@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"socialprofile-desc": "Et sett sosiale verktøy for MediaWiki",
+	"socialprofile-uploads-disabled": "Avataropplastingsfunksjonen er slått av",
+	"apihelp-smpuserprivacy-description": "API-modul for å sette synligheten («personvern») av et profilfelt",
+	"apihelp-smpuserprivacy-param-method": "Handling (enten «get» eller «set»)",
+	"apihelp-smpuserprivacy-param-field_key": "Nøkkel for målfelt, som up_movies for «Movies»-feltet",
+	"apihelp-smpuserprivacy-param-privacy": "Ny personvernsverdi (én av følgende: «public», «hidden», «friends», «foaf»)",
+	"apihelp-smpuserprivacy-param-tuid": "Målbruker (ID)"
+}
