@@ -294,6 +294,8 @@ class GiveGift extends SpecialPage {
 	function displayFormAll() {
 		global $wgGiveGiftPerRow, $wgUploadPath;
 
+		$linkRenderer = $this->getLinkRenderer();
+
 		$out = $this->getOutput();
 
 		$user = Title::makeTitle( NS_USER, $this->user_name_to );
@@ -358,7 +360,7 @@ class GiveGift extends SpecialPage {
 			if ( $numofpages > 1 ) {
 				$output .= '<div class="page-nav">';
 				if ( $page > 1 ) {
-					$output .= Linker::link(
+					$output .= $linkRenderer->makeLink(
 						$giveGiftLink,
 						$this->msg( 'g-previous' )->plain(),
 						array(),
@@ -379,7 +381,7 @@ class GiveGift extends SpecialPage {
 					if ( $i == $page ) {
 						$output .= ( $i . ' ' );
 					} else {
-						$output .= Linker::link(
+						$output .= $linkRenderer->makeLink(
 							$giveGiftLink,
 							$i,
 							array(),
@@ -393,7 +395,7 @@ class GiveGift extends SpecialPage {
 
 				if ( ( $total - ( $per_page * $page ) ) > 0 ) {
 					$output .= $this->msg( 'word-separator' )->plain() .
-						Linker::link(
+						$linkRenderer->makeLink(
 							$giveGiftLink,
 							$this->msg( 'g-next' )->plain(),
 							array(),

@@ -109,6 +109,7 @@ class TopUsersPoints extends SpecialPage {
 			$output .= '<h1 style="margin-top:15px !important;">' .
 				$this->msg( 'top-fans-by-category-nav-header' )->plain() . '</h1>';
 
+			$linkRenderer = $this->getLinkRenderer();
 			$lines = explode( "\n", $byCategoryMessage->text() );
 			foreach ( $lines as $line ) {
 				if ( strpos( $line, '*' ) !== 0 ) {
@@ -126,7 +127,7 @@ class TopUsersPoints extends SpecialPage {
 					}
 
 					$output .= '<p> ';
-					$output .= Linker::link(
+					$output .= $linkRenderer->makeLink(
 						$by_category_title,
 						$link_text,
 						array(),

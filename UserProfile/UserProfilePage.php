@@ -1,4 +1,6 @@
 <?php
+use MediaWiki\MediaWikiServices;
+
 /**
  * User profile Wiki Page
  *
@@ -1713,7 +1715,8 @@ class UserProfilePage extends Article {
 			// If there are more than ten fanboxes, display a "View all" link
 			// instead of listing them all on the profile page
 			if ( $fanbox_count > 10 ) {
-				$output .= Linker::link(
+				$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
+				$output .= $linkRenderer->makeLink(
 					$fanbox_link,
 					wfMessage( 'user-view-all' )->plain(),
 					array(),
