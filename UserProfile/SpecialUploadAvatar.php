@@ -356,7 +356,7 @@ class UploadAvatar extends UploadFromFile {
 	/**
 	 * Create the thumbnails and delete old files
 	 */
-	public function performUpload( $comment, $pageText, $watch, $user ) {
+	public function performUpload( $comment, $pageText, $watch, $user, $tags = [] ) {
 		global $wgUploadDirectory, $wgAvatarKey, $wgMemc;
 
 		$this->avatarUploadDirectory = $wgUploadDirectory . '/avatars';
