@@ -38,7 +38,7 @@ var UserGifts = {
 	}
 };
 
-jQuery( document ).ready( function() {
+jQuery( function() {
 	// "Select a friend" dropdown menu
 	jQuery( 'div.g-gift-select select' ).on( 'change', function() {
 		UserGifts.chooseFriend( jQuery( this ).val() );

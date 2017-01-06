@@ -22,7 +22,7 @@ function requestResponse( response, id ) {
 	);
 }
 
-jQuery( document ).ready( function() {
+jQuery( function() {
 	jQuery( 'div.relationship-buttons input[type="button"]' ).on( 'click', function() {
 		requestResponse(
 			jQuery( this ).data( 'response' ),

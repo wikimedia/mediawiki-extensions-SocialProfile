@@ -127,7 +127,7 @@ var UserProfilePage = {
 	}
 };
 
-jQuery( document ).ready( function() {
+jQuery( function() {
 	// "Send message" button on (other users') profile pages
 	jQuery( 'div.user-page-message-box-button input[type="button"]' ).on( 'click', function() {
 		UserProfilePage.sendMessage();

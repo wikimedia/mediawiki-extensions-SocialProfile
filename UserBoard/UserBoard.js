@@ -59,7 +59,7 @@ var UserBoard = {
 	}
 };
 
-jQuery( document ).ready( function() {
+jQuery( function() {
 	// "Delete" link
 	jQuery( 'span.user-board-red a' ).on( 'click', function() {
 		UserBoard.deleteMessage( jQuery( this ).data( 'message-id' ) );

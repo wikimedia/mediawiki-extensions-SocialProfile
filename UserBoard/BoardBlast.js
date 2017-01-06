@@ -109,7 +109,7 @@ var BoardBlast = {
 	}
 };
 
-jQuery( document ).ready( function() {
+jQuery( function() {
 	// "Select/Unselect all" links
 	jQuery( 'div.blast-nav-links a.blast-select-all-link' ).on( 'click', function() {
 		BoardBlast.selectAll();
