@@ -20,6 +20,7 @@ if( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'UserWelcome',
+	'license-name' => 'GPL-2.0+',
 	'version' => '1.5',
 	'author' => array( 'David Pean', 'Jack Phoenix' ),
 	'descriptionmsg' => 'userwelcome-desc',
