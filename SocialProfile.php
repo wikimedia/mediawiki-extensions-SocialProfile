@@ -65,7 +65,6 @@ $wgAutoloadClasses['UserStatsHooks'] = __DIR__ . '/UserStats/UserStatsHooks.php'
 $wgAutoloadClasses['UserLevel'] = __DIR__ . '/UserStats/UserStatsClass.php';
 $wgAutoloadClasses['UserStats'] = __DIR__ . '/UserStats/UserStatsClass.php';
 $wgAutoloadClasses['UserStatsTrack'] = __DIR__ . '/UserStats/UserStatsClass.php';
-$wgAutoloadClasses['UserEmailTrack'] = __DIR__ . '/UserStats/UserStatsClass.php';
 $wgAutoloadClasses['UserSystemMessage'] = __DIR__ . '/UserSystemMessages/UserSystemMessagesClass.php';
 $wgAutoloadClasses['TopFansByStat'] = __DIR__ . '/UserStats/TopFansByStat.php';
 $wgAutoloadClasses['TopFansRecent'] = __DIR__ . '/UserStats/TopFansRecent.php';
