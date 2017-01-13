@@ -57,7 +57,7 @@ class wAvatar {
 	/**
 	 * @param Array $extraParams: array of extra parameters to give to the image
 	 * @return String: <img> HTML tag with full path to the avatar image
-	 * */
+	 */
 	function getAvatarURL( $extraParams = array() ) {
 		global $wgUploadPath, $wgUserProfileDisplay;
 
@@ -79,6 +79,15 @@ class wAvatar {
 		$params = array_merge( $extraParams, $defaultParams );
 
 		return Html::element( 'img', $params, '' );
+	}
+
+	/**
+	 * Is the user's avatar a default one?
+	 *
+	 * @return bool True if they have a default avatar, false if they've uploaded their own
+	 */
+	function isDefault() {
+		return (bool)strpos( $this->getAvatarImage(), 'default_' ) !== false;
 	}
 
 	/**

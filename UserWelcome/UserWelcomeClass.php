@@ -51,7 +51,7 @@ class UserWelcome {
 		<div class="mp-welcome-image">
 		<a href="' . htmlspecialchars( $wgUser->getUserPage()->getFullURL() ) . '" rel="nofollow">' .
 			$avatar->getAvatarURL() . '</a>';
-		if ( strpos( $avatar->getAvatarImage(), 'default_' ) !== false ) {
+		if ( $avatar->isDefault() ) {
 			$uploadOrEditMsg = 'mp-welcome-upload';
 		} else {
 			$uploadOrEditMsg = 'mp-welcome-edit';

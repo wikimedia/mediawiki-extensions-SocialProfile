@@ -387,7 +387,7 @@ class UploadAvatar extends UploadFromFile {
 		// If this is the user's first custom avatar, update statistics (in
 		// case if we want to give out some points to the user for uploading
 		// their first avatar)
-		if ( strpos( $avatar->getAvatarImage(), 'default_' ) !== false ) {
+		if ( $avatar->isDefault() ) {
 			$stats = new UserStatsTrack( $uid, $user->getName() );
 			$stats->incStatField( 'user_image' );
 		}

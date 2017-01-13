@@ -219,7 +219,7 @@ class UserProfile {
 		// Check if the user has a non-default avatar
 		$this->profile_fields_count++;
 		$avatar = new wAvatar( $wgUser->getID(), 'l' );
-		if ( strpos( $avatar->getAvatarImage(), 'default_' ) === false ) {
+		if ( !$avatar->isDefault() ) {
 			$complete_count++;
 		}
 

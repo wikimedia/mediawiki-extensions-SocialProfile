@@ -1075,7 +1075,7 @@ class UserProfilePage extends Article {
 
 		$output = '<div class="profile-image">';
 		if ( $wgUser->getName() == $this->user_name ) {
-			if ( strpos( $avatar->getAvatarImage(), 'default_' ) != false ) {
+			if ( $avatar->isDefault() ) {
 				$caption = 'upload image';
 			} else {
 				$caption = 'new image';
