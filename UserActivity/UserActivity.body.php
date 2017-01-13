@@ -91,6 +91,8 @@ class UserHome extends SpecialPage {
 			$network_updates = 1;
 		}
 
+		$linkRenderer = $this->getLinkRenderer();
+		$pageTitle = $this->getPageTitle();
 		// Filtering feature, if enabled
 		// The filter message's format is:
 		// *filter name (item_type URL parameter)|Displayed text (can be the name of a MediaWiki: message, too)|Type icon name (*not* the image name; see UserActivity::getTypeIcon())
@@ -117,20 +119,20 @@ class UserHome extends SpecialPage {
 
 					// Maybe it's the name of a MediaWiki: message? I18n is
 					// always nice, so at least try it and see what happens...
-					$linkMsgObj = wfMessage( $link_text );
+					$linkMsgObj = $this->msg( $link_text );
 					if ( !$linkMsgObj->isDisabled() ) {
 						$link_text = $linkMsgObj->parse();
 					}
 
 					$link_image = $line[2];
-					$output .= '<a href="' . htmlspecialchars( $this->getPageTitle()->getFullURL( "item_type={$filter}" ) ) .
+					$output .= '<a href="' . htmlspecialchars( $pageTitle->getFullURL( "item_type={$filter}" ) ) .
 						"\"><img src=\"{$wgExtensionAssetsPath}/SocialProfile/images/" .
 						UserActivity::getTypeIcon( $link_image ) . "\"/>{$link_text}</a>";
 				}
 			}
 
-			$output .= $this->getLinkRenderer()->makeLink(
-				$this->getPageTitle(),
+			$output .= $linkRenderer->makeLink(
+				$pageTitle,
 				$this->msg( 'useractivity-all' )->plain()
 			);
 			$output .= '</div>
