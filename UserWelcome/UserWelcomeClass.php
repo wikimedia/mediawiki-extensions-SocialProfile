@@ -23,10 +23,14 @@ class UserWelcome {
 		return true;
 	}
 
-	function getWelcomeUser( $input, $args, $parser ) {
+	public static function getWelcomeUser( $input, $args, $parser ) {
 		$parser->disableCache();
 		$parser->getOutput()->addModuleStyles( 'ext.socialprofile.userwelcome.css' );
-		$output = $this->getWelcome();
+		// This is so stupid. The callback to onParserFirstCallInit() is
+		// *always* (assumed to be) static even if you don't declare it as such.
+		// So obviously using $this in a static function fails...grumble grumble.
+		$uw = new UserWelcome;
+		$output = $uw->getWelcome();
 		return $output;
 	}
 
