@@ -31,6 +31,16 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 	function getGroupName() {
 		return 'users';
 	}
+
+	/**
+	 * Show this special page on Special:SpecialPages only for registered users
+	 *
+	 * @return bool
+	 */
+	function isListed() {
+		return (bool)$this->getUser()->isLoggedIn();
+	}
+
 	/**
 	 * Show the special page
 	 *

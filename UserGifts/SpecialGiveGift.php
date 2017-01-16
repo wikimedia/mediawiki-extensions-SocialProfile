@@ -29,6 +29,15 @@ class GiveGift extends SpecialPage {
 	}
 
 	/**
+	 * Show this special page on Special:SpecialPages only for registered users
+	 *
+	 * @return bool
+	 */
+	function isListed() {
+		return (bool)$this->getUser()->isLoggedIn();
+	}
+
+	/**
 	 * Show the special page
 	 *
 	 * @param $par Mixed: parameter passed to the page or null
