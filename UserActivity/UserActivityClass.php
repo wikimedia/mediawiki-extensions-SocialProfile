@@ -105,7 +105,7 @@ class UserActivity {
 		$res = $dbr->select(
 			'recentchanges',
 			array(
-				'UNIX_TIMESTAMP(rc_timestamp) AS item_date', 'rc_title',
+				'rc_timestamp', 'rc_title',
 				'rc_user', 'rc_user_text', 'rc_comment', 'rc_id', 'rc_minor',
 				'rc_new', 'rc_namespace', 'rc_cur_id', 'rc_this_oldid',
 				'rc_last_oldid', 'rc_log_action'
@@ -126,11 +126,14 @@ class UserActivity {
 			if ( $row->rc_namespace == NS_SPECIAL || $row->rc_log_action != null ) {
 				continue;
 			}
+
 			$title = Title::makeTitle( $row->rc_namespace, $row->rc_title );
+			$unixTS = wfTimestamp( TS_UNIX, $row->rc_timestamp );
+
 			$this->items_grouped['edit'][$title->getPrefixedText()]['users'][$row->rc_user_text][] = array(
 				'id' => 0,
 				'type' => 'edit',
-				'timestamp' => $row->item_date,
+				'timestamp' => $unixTS,
 				'pagetitle' => $row->rc_title,
 				'namespace' => $row->rc_namespace,
 				'username' => $row->rc_user_text,
@@ -141,12 +144,12 @@ class UserActivity {
 			);
 
 			// set last timestamp
-			$this->items_grouped['edit'][$title->getPrefixedText()]['timestamp'] = $row->item_date;
+			$this->items_grouped['edit'][$title->getPrefixedText()]['timestamp'] = $unixTS;
 
 			$this->items[] = array(
 				'id' => 0,
 				'type' => 'edit',
-				'timestamp' => ( $row->item_date ),
+				'timestamp' => $unixTS,
 				'pagetitle' => $row->rc_title,
 				'namespace' => $row->rc_namespace,
 				'username' => $row->rc_user_text,
@@ -199,7 +202,7 @@ class UserActivity {
 		$res = $dbr->select(
 			array( 'Vote', 'page' ),
 			array(
-				'UNIX_TIMESTAMP(vote_date) AS item_date', 'username',
+				'vote_date AS item_date', 'username',
 				'page_title', 'vote_count', 'comment_count', 'vote_ip',
 				'vote_user_id'
 			),
@@ -217,7 +220,7 @@ class UserActivity {
 			$this->items[] = array(
 				'id' => 0,
 				'type' => 'vote',
-				'timestamp' => $row->item_date,
+				'timestamp' => wfTimestamp( TS_UNIX, $row->vote_date ),
 				'pagetitle' => $row->page_title,
 				'namespace' => $row->page_namespace,
 				'username' => $username,
@@ -242,7 +245,7 @@ class UserActivity {
 		}
 
 		$where = array();
-		$where[] = 'comment_page_id = page_id';
+		$where[] = 'Comment_Page_ID = page_id';
 
 		if ( !empty( $this->rel_type ) ) {
 			$users = $dbr->select(
@@ -271,7 +274,7 @@ class UserActivity {
 		$res = $dbr->select(
 			array( 'Comments', 'page' ),
 			array(
-				'UNIX_TIMESTAMP(comment_date) AS item_date',
+				'Comment_Date AS item_date',
 				'Comment_Username', 'Comment_IP', 'page_title', 'Comment_Text',
 				'Comment_user_id', 'page_namespace', 'CommentID'
 			),
@@ -296,10 +299,11 @@ class UserActivity {
 
 			if ( $show_comment ) {
 				$title = Title::makeTitle( $row->page_namespace, $row->page_title );
+				$unixTS = wfTimestamp( TS_UNIX, $row->item_date );
 				$this->items_grouped['comment'][$title->getPrefixedText()]['users'][$row->Comment_Username][] = array(
 					'id' => $row->CommentID,
 					'type' => 'comment',
-					'timestamp' => $row->item_date,
+					'timestamp' => $unixTS,
 					'pagetitle' => $row->page_title,
 					'namespace' => $row->page_namespace,
 					'username' => $row->Comment_Username,
@@ -310,13 +314,13 @@ class UserActivity {
 				);
 
 				// set last timestamp
-				$this->items_grouped['comment'][$title->getPrefixedText()]['timestamp'] = $row->item_date;
+				$this->items_grouped['comment'][$title->getPrefixedText()]['timestamp'] = $unixTS;
 
 				$username = $row->Comment_Username;
 				$this->items[] = array(
 					'id' => $row->CommentID,
 					'type' => 'comment',
-					'timestamp' => $row->item_date,
+					'timestamp' => $unixTS,
 					'pagetitle' => $row->page_title,
 					'namespace' => $row->page_namespace,
 					'username' => $username,
@@ -367,7 +371,7 @@ class UserActivity {
 			array(
 				'ug_id', 'ug_user_id_from', 'ug_user_name_from',
 				'ug_user_id_to', 'ug_user_name_to',
-				'UNIX_TIMESTAMP(ug_date) AS item_date', 'gift_name', 'gift_id'
+				'ug_date', 'gift_name', 'gift_id'
 			),
 			$where,
 			__METHOD__,
@@ -383,7 +387,7 @@ class UserActivity {
 			$this->items[] = array(
 				'id' => $row->ug_id,
 				'type' => 'gift-sent',
-				'timestamp' => $row->item_date,
+				'timestamp' => wfTimestamp( TS_UNIX, $row->ug_date ),
 				'pagetitle' => $row->gift_name,
 				'namespace' => $row->gift_id,
 				'username' => $row->ug_user_name_from,
@@ -433,7 +437,7 @@ class UserActivity {
 			array(
 				'ug_id', 'ug_user_id_from', 'ug_user_name_from',
 				'ug_user_id_to', 'ug_user_name_to',
-				'UNIX_TIMESTAMP(ug_date) AS item_date', 'gift_name', 'gift_id'
+				'ug_date', 'gift_name', 'gift_id'
 			),
 			$where,
 			__METHOD__,
@@ -466,16 +470,18 @@ class UserActivity {
 				</a>
 			</div>";
 
+			$unixTS = wfTimestamp( TS_UNIX, $row->ug_date );
+
 			$this->activityLines[] = array(
 				'type' => 'gift-rec',
-				'timestamp' => $row->item_date,
+				'timestamp' => $unixTS,
 				'data' => ' ' . $html
 			);
 
 			$this->items[] = array(
 				'id' => $row->ug_id,
 				'type' => 'gift-rec',
-				'timestamp' => $row->item_date,
+				'timestamp' => $unixTS,
 				'pagetitle' => $row->gift_name,
 				'namespace' => $row->gift_id,
 				'username' => $row->ug_user_name_to,
@@ -527,7 +533,7 @@ class UserActivity {
 			array( 'user_system_gift', 'system_gift' ),
 			array(
 				'sg_id', 'sg_user_id', 'sg_user_name',
-				'UNIX_TIMESTAMP(sg_date) AS item_date', 'gift_name', 'gift_id'
+				'sg_date', 'gift_name', 'gift_id'
 			),
 			$where,
 			__METHOD__,
@@ -558,16 +564,18 @@ class UserActivity {
 				</a>
 			</div>";
 
+			$unixTS = wfTimestamp( TS_UNIX, $row->sg_date );
+
 			$this->activityLines[] = array(
 				'type' => 'system_gift',
-				'timestamp' => $row->item_date,
+				'timestamp' => $unixTS,
 				'data' => ' ' . $html
 			);
 
 			$this->items[] = array(
 				'id' => $row->sg_id,
 				'type' => 'system_gift',
-				'timestamp' => $row->item_date,
+				'timestamp' => $unixTS,
 				'pagetitle' => $row->gift_name,
 				'namespace' => $row->gift_id,
 				'username' => $row->sg_user_name,
@@ -618,8 +626,7 @@ class UserActivity {
 			'user_relationship',
 			array(
 				'r_id', 'r_user_id', 'r_user_name', 'r_user_id_relation',
-				'r_user_name_relation', 'r_type',
-				'UNIX_TIMESTAMP(r_date) AS item_date'
+				'r_user_name_relation', 'r_type', 'r_date'
 			),
 			$where,
 			__METHOD__,
@@ -638,11 +645,12 @@ class UserActivity {
 			}
 
 			$user_name_short = $wgLang->truncate( $row->r_user_name, 25 );
+			$unixTS = wfTimestamp( TS_UNIX, $row->r_date );
 
 			$this->items_grouped[$r_type][$row->r_user_name_relation]['users'][$row->r_user_name][] = array(
 				'id' => $row->r_id,
 				'type' => $r_type,
-				'timestamp' => $row->item_date,
+				'timestamp' => $unixTS,
 				'pagetitle' => '',
 				'namespace' => '',
 				'username' => $user_name_short,
@@ -653,12 +661,12 @@ class UserActivity {
 			);
 
 			// set last timestamp
-			$this->items_grouped[$r_type][$row->r_user_name_relation]['timestamp'] = $row->item_date;
+			$this->items_grouped[$r_type][$row->r_user_name_relation]['timestamp'] = $unixTS;
 
 			$this->items[] = array(
 				'id' => $row->r_id,
 				'type' => $r_type,
-				'timestamp' => $row->item_date,
+				'timestamp' => $unixTS,
 				'pagetitle' => '',
 				'namespace' => '',
 				'username' => $row->r_user_name,
@@ -709,8 +717,7 @@ class UserActivity {
 			'user_board',
 			array(
 				'ub_id', 'ub_user_id', 'ub_user_name', 'ub_user_id_from',
-				'ub_user_name_from', 'UNIX_TIMESTAMP(ub_date) AS item_date',
-				'ub_message'
+				'ub_user_name_from', 'ub_date', 'ub_message'
 			),
 			$where,
 			__METHOD__,
@@ -730,10 +737,12 @@ class UserActivity {
 
 			$to = stripslashes( $row->ub_user_name );
 			$from = stripslashes( $row->ub_user_name_from );
+			$unixTS = wfTimestamp( TS_UNIX, $row->ub_date );
+
 			$this->items_grouped['user_message'][$to]['users'][$from][] = array(
 				'id' => $row->ub_id,
 				'type' => 'user_message',
-				'timestamp' => $row->item_date,
+				'timestamp' => $unixTS,
 				'pagetitle' => '',
 				'namespace' => '',
 				'username' => $from,
@@ -744,12 +753,12 @@ class UserActivity {
 			);
 
 			// set last timestamp
-			$this->items_grouped['user_message'][$to]['timestamp'] = $row->item_date;
+			$this->items_grouped['user_message'][$to]['timestamp'] = $unixTS;
 
 			$this->items[] = array(
 				'id' => $row->ub_id,
 				'type' => 'user_message',
-				'timestamp' => $row->item_date,
+				'timestamp' => $unixTS,
 				'pagetitle' => '',
 				'namespace' => $this->fixItemComment( $row->ub_message ),
 				'username' => $from,
@@ -801,7 +810,7 @@ class UserActivity {
 			'user_system_messages',
 			array(
 				'um_id', 'um_user_id', 'um_user_name', 'um_type', 'um_message',
-				'UNIX_TIMESTAMP(um_date) AS item_date'
+				'um_date'
 			),
 			$where,
 			__METHOD__,
@@ -815,17 +824,18 @@ class UserActivity {
 		foreach ( $res as $row ) {
 			$user_title = Title::makeTitle( NS_USER, $row->um_user_name );
 			$user_name_short = $wgLang->truncate( $row->um_user_name, 15 );
+			$unixTS = wfTimestamp( TS_UNIX, $row->um_date );
 
 			$this->activityLines[] = array(
 				'type' => 'system_message',
-				'timestamp' => $row->item_date,
+				'timestamp' => $unixTS,
 				'data' => ' ' . '<b><a href="' . htmlspecialchars( $user_title->getFullURL() ) . "\">{$user_name_short}</a></b> {$row->um_message}"
 			);
 
 			$this->items[] = array(
 				'id' => $row->um_id,
 				'type' => 'system_message',
-				'timestamp' => $row->item_date,
+				'timestamp' => $unixTS,
 				'pagetitle' => '',
 				'namespace' => '',
 				'username' => $row->um_user_name,
@@ -880,8 +890,7 @@ class UserActivity {
 			'user_status',
 			array(
 				'us_id', 'us_user_id', 'us_user_name', 'us_text',
-				'UNIX_TIMESTAMP(us_date) AS item_date', 'us_sport_id',
-				'us_team_id'
+				'us_date', 'us_sport_id', 'us_team_id'
 			),
 			$where,
 			__METHOD__,
@@ -900,11 +909,12 @@ class UserActivity {
 				$sport = SportsTeams::getSport( $row->us_sport_id );
 				$network_name = $sport['name'];
 			}
+			$unixTS = wfTimestamp( TS_UNIX, $row->us_date );
 
 			$this->items[] = array(
 				'id' => $row->us_id,
 				'type' => 'network_update',
-				'timestamp' => $row->item_date,
+				'timestamp' => $unixTS,
 				'pagetitle' => '',
 				'namespace' => '',
 				'username' => $row->us_user_name,
@@ -937,7 +947,7 @@ class UserActivity {
 
 			$this->activityLines[] = array(
 				'type' => 'network_update',
-				'timestamp' => $row->item_date,
+				'timestamp' => $unixTS,
 				'data' => $html,
 			);
 		}
