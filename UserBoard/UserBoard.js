@@ -52,7 +52,7 @@ var UserBoard = {
 					// 1st parent = span.user-board-red
 					// 2nd parent = div.user-board-message-links
 					// 3rd parent = div.user-board-message = the container of a msg
-					jQuery( this ).parent().parent().parent().hide( 100 );
+					jQuery( '[data-message-id="' + id + '"]' ).parent().parent().parent().hide( 100 );
 				}
 			);
 		}
