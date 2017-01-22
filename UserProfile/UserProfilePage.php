@@ -262,9 +262,7 @@ class UserProfilePage extends Article {
 			$dbr = wfGetDB( DB_SLAVE );
 			$res = $dbr->select(
 				array( 'poll_question', 'page' ),
-				array(
-					'page_title', 'UNIX_TIMESTAMP(poll_date) AS poll_date'
-				),
+				array( 'page_title', 'poll_date' ),
 				/* WHERE */array( 'poll_user_id' => $this->user_id ),
 				__METHOD__,
 				array( 'ORDER BY' => 'poll_id DESC', 'LIMIT' => 3 ),
@@ -273,7 +271,7 @@ class UserProfilePage extends Article {
 			foreach( $res as $row ) {
 				$polls[] = array(
 					'title' => $row->page_title,
-					'timestamp' => $row->poll_date
+					'timestamp' => wfTimestamp( TS_UNIX, $row->poll_date )
 				);
 			}
 			$wgMemc->set( $key, $polls );
@@ -304,12 +302,10 @@ class UserProfilePage extends Article {
 			$dbr = wfGetDB( DB_SLAVE );
 			$res = $dbr->select(
 				'quizgame_questions',
-				array(
-					'q_id', 'q_text', 'UNIX_TIMESTAMP(q_date) AS quiz_date'
-				),
+				array( 'q_id', 'q_text', 'q_date' ),
 				array(
 					'q_user_id' => $this->user_id,
-					'q_flag' => 0 // the same as QUIZGAME_FLAG_NONE
+					'q_flag' => 0 // the same as QuizGameHome::$FLAG_NONE
 				),
 				__METHOD__,
 				array(
@@ -321,7 +317,7 @@ class UserProfilePage extends Article {
 				$quiz[] = array(
 					'id' => $row->q_id,
 					'text' => $row->q_text,
-					'timestamp' => $row->quiz_date
+					'timestamp' => wfTimestamp( TS_UNIX, $row->q_date )
 				);
 			}
 			$wgMemc->set( $key, $quiz );
@@ -352,13 +348,10 @@ class UserProfilePage extends Article {
 			$dbr = wfGetDB( DB_SLAVE );
 			$res = $dbr->select(
 				'picturegame_images',
-				array(
-					'id', 'title', 'img1', 'img2',
-					'UNIX_TIMESTAMP(pg_date) AS pic_game_date'
-				),
+				array( 'id', 'title', 'img1', 'img2', 'pg_date' ),
 				array(
 					'userid' => $this->user_id,
-					'flag' => 0 // PICTUREGAME_FLAG_NONE
+					'flag' => 0 // PictureGameHome::$FLAG_NONE
 				),
 				__METHOD__,
 				array(
@@ -372,7 +365,7 @@ class UserProfilePage extends Article {
 					'title' => $row->title,
 					'img1' => $row->img1,
 					'img2' => $row->img2,
-					'timestamp' => $row->pic_game_date
+					'timestamp' => wfTimestamp( TS_UNIX, $row->pg_date )
 				);
 			}
 			$wgMemc->set( $key, $pics );

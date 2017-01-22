@@ -369,7 +369,7 @@ class UserSystemGifts {
 			array(
 				'sg_id', 'sg_user_id', 'sg_user_name', 'sg_gift_id', 'sg_date',
 				'sg_status', 'gift_name', 'gift_description',
-				'gift_given_count', 'UNIX_TIMESTAMP(sg_date) AS unix_time'
+				'gift_given_count'
 			),
 			array( "sg_user_id = {$this->user_id}" ),
 			__METHOD__,
@@ -386,14 +386,14 @@ class UserSystemGifts {
 			$requests[] = array(
 				'id' => $row->sg_id,
 				'gift_id' => $row->sg_gift_id,
-				'timestamp' => ( $row->sg_date ),
+				'timestamp' => $row->sg_date,
 				'status' => $row->sg_status,
 				'user_id' => $row->sg_user_id,
 				'user_name' => $row->sg_user_name,
 				'gift_name' => $row->gift_name,
 				'gift_description' => $row->gift_description,
 				'gift_given_count' => $row->gift_given_count,
-				'unix_timestamp' => $row->unix_time
+				'unix_timestamp' => wfTimestamp( TS_UNIX, $row->sg_date )
 			);
 		}
 		return $requests;

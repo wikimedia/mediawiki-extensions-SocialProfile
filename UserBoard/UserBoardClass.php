@@ -308,7 +308,7 @@ class UserBoard {
 		}
 
 		$sql = "SELECT ub_id, ub_user_id_from, ub_user_name_from, ub_user_id, ub_user_name,
-			ub_message,UNIX_TIMESTAMP(ub_date) AS unix_time,ub_type
+			ub_message, ub_date, ub_type
 			FROM {$dbr->tableName( 'user_board' )}
 			WHERE {$user_sql}
 			ORDER BY ub_id DESC
@@ -324,7 +324,7 @@ class UserBoard {
 
 			$messages[] = array(
 				'id' => $row->ub_id,
-				'timestamp' => ( $row->unix_time ),
+				'timestamp' => wfTimestamp( TS_UNIX, $row->ub_date ),
 				'user_id_from' => $row->ub_user_id_from,
 				'user_name_from' => $row->ub_user_name_from,
 				'user_id' => $row->ub_user_id,

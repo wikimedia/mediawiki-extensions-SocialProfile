@@ -344,7 +344,7 @@ class UserGifts {
 			array(
 				'ug_id', 'ug_user_id_from', 'ug_user_name_from', 'ug_gift_id',
 				'ug_date', 'ug_status', 'gift_name', 'gift_description',
-				'gift_given_count', 'UNIX_TIMESTAMP(ug_date) AS unix_time'
+				'gift_given_count'
 			),
 			array( "ug_user_id_to = {$this->user_id}" ),
 			__METHOD__,
@@ -357,14 +357,14 @@ class UserGifts {
 			$requests[] = array(
 				'id' => $row->ug_id,
 				'gift_id' => $row->ug_gift_id,
-				'timestamp' => ( $row->ug_date ),
+				'timestamp' => $row->ug_date,
 				'status' => $row->ug_status,
 				'user_id_from' => $row->ug_user_id_from,
 				'user_name_from' => $row->ug_user_name_from,
 				'gift_name' => $row->gift_name,
 				'gift_description' => $row->gift_description,
 				'gift_given_count' => $row->gift_given_count,
-				'unix_timestamp' => $row->unix_time
+				'unix_timestamp' => wfTimestamp( TS_UNIX, $row->ug_date )
 			);
 		}
 
@@ -390,7 +390,7 @@ class UserGifts {
 			array(
 				'ug_id', 'ug_user_id_from', 'ug_user_name_from', 'ug_gift_id',
 				'ug_date', 'ug_status', 'gift_name', 'gift_description',
-				'gift_given_count', 'UNIX_TIMESTAMP(ug_date) AS unix_time'
+				'gift_given_count'
 			),
 			array(),
 			__METHOD__,
@@ -403,14 +403,14 @@ class UserGifts {
 			$requests[] = array(
 				'id' => $row->ug_id,
 				'gift_id' => $row->ug_gift_id,
-				'timestamp' => ( $row->ug_date ),
+				'timestamp' => $row->ug_date,
 				'status' => $row->ug_status,
 				'user_id_from' => $row->ug_user_id_from,
 				'user_name_from' => $row->ug_user_name_from,
 				'gift_name' => $row->gift_name,
 				'gift_description' => $row->gift_description,
 				'gift_given_count' => $row->gift_given_count,
-				'unix_timestamp' => $row->unix_time
+				'unix_timestamp' => wfTimestamp( TS_UNIX, $row->ug_date )
 			);
 		}
 
