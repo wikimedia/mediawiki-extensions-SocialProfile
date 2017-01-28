@@ -59,7 +59,6 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 
 		// Add CSS & JS
 		$out->addModuleStyles( array(
-			'ext.socialprofile.clearfix',
 			'ext.socialprofile.userprofile.css'
 		) );
 		$out->addModules( 'ext.userProfile.updateProfile' );

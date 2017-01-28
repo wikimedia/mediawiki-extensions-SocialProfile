@@ -46,7 +46,6 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 
 		// Add CSS
 		$out->addModuleStyles( array(
-			'ext.socialprofile.clearfix',
 			'ext.socialprofile.userrelationship.css'
 		) );
 
