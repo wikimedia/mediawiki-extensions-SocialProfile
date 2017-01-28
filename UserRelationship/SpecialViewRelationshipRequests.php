@@ -68,7 +68,6 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 
 		// Add CSS & JS
 		$out->addModuleStyles( array(
-			'ext.socialprofile.clearfix',
 			'ext.socialprofile.userrelationship.css'
 		) );
 		$out->addModules( 'ext.socialprofile.userrelationship.js' );

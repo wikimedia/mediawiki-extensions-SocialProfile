@@ -55,7 +55,6 @@ class SpecialViewRelationships extends SpecialPage {
 
 		// Add CSS
 		$out->addModuleStyles( array(
-			'ext.socialprofile.clearfix',
 			'ext.socialprofile.userrelationship.css'
 		) );
 
