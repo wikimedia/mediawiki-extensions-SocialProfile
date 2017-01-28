@@ -53,7 +53,6 @@ class SpecialViewUserBoard extends SpecialPage {
 
 		// Add CSS & JS
 		$out->addModuleStyles( array(
-			'ext.socialprofile.clearfix',
 			'ext.socialprofile.userboard.css'
 		) );
 		$out->addModules( 'ext.socialprofile.userboard.js' );
