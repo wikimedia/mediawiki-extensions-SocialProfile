@@ -51,13 +51,11 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * @param $section Mixed: parameter passed to the page or null
 	 */
 	public function execute( $section ) {
-		global $wgUpdateProfileInRecentChanges, $wgUserProfileThresholds, $wgSupressPageTitle, $wgAutoConfirmCount, $wgEmailConfirmToEdit;
+		global $wgUpdateProfileInRecentChanges, $wgUserProfileThresholds, $wgAutoConfirmCount, $wgEmailConfirmToEdit;
 
 		$out = $this->getOutput();
 		$request = $this->getRequest();
 		$user = $this->getUser();
-
-		$wgSupressPageTitle = true;
 
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();
@@ -115,8 +113,6 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 			// Boo, go away!
 			if ( $can_create == false ) {
-				global $wgSupressPageTitle;
-				$wgSupressPageTitle = false;
 				$out->setPageTitle( $this->msg( 'user-profile-create-threshold-title' )->text() );
 				$thresholdMessages = array();
 				foreach ( $thresholdReasons as $requiredAmount => $reason ) {

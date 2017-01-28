@@ -23,13 +23,11 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 	 * @param $section Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgUpdateProfileInRecentChanges, $wgSupressPageTitle;
+		global $wgUpdateProfileInRecentChanges;
 
 		$out = $this->getOutput();
 		$request = $this->getRequest();
 		$user = $this->getUser();
-
-		$wgSupressPageTitle = true;
 
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();
