@@ -36,6 +36,7 @@ $wgAutoloadClasses['RemoveGift'] = "{$wgUserGiftsDirectory}/SpecialRemoveGift.ph
 $wgSpecialPages['RemoveGift'] = 'RemoveGift';
 
 $wgMessagesDirs['UserGifts'] = __DIR__ . '/i18n';
+$wgExtensionMessagesFiles['UserGiftsAlias'] = __DIR__ . '/UserGifts.alias.php';
 
 // Register the CSS & JS with ResourceLoader
 $wgResourceModules['ext.socialprofile.usergifts.css'] = array(
