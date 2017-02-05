@@ -10,4 +10,4 @@ CREATE TABLE user_points_archive (
   up_points        FLOAT   NOT NULL DEFAULT 0
 );
 
-CREATE INDEX up_user_id ON user_points_archive (up_user_id);
+CREATE INDEX upa_up_user_id ON user_points_archive (up_user_id);

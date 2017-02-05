@@ -5,4 +5,4 @@ CREATE TABLE /*_*/user_points_weekly (
   up_points float NOT NULL default 0
 ) /*$wgDBTableOptions*/;
 
-CREATE INDEX /*i*/up_user_id ON /*_*/user_points_weekly (up_user_id);
+CREATE INDEX /*i*/upw_up_user_id ON /*_*/user_points_weekly (up_user_id);

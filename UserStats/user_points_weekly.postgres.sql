@@ -8,4 +8,4 @@ CREATE TABLE user_points_weekly (
   up_points    FLOAT   NOT NULL default 0
 );
 
-CREATE INDEX up_user_id ON user_points_weekly (up_user_id);
+CREATE INDEX upw_up_user_id ON user_points_weekly (up_user_id);
