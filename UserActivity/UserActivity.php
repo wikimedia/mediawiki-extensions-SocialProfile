@@ -22,6 +22,7 @@ $wgExtensionCredits['specialpage'][] = array(
 
 // Set up the new special page
 $wgMessagesDirs['UserActivity'] = __DIR__ . '/i18n';
+$wgExtensionMessagesFiles['UserActivityAlias'] = __DIR__ . '/UserActivity.alias.php';
 
 $wgAutoloadClasses['SiteActivityHook'] = __DIR__ . '/SiteActivityHook.php';
 $wgAutoloadClasses['UserActivity'] = __DIR__ . '/UserActivityClass.php';

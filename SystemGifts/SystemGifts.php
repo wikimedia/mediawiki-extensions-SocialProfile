@@ -41,6 +41,7 @@ $wgSpecialPages['PopulateAwards'] = 'PopulateAwards';
 
 // i18n
 $wgMessagesDirs['SystemGifts'] = __DIR__ . '/i18n';
+$wgExtensionMessagesFiles['SystemGiftsAlias'] = __DIR__ . '/SystemGifts.alias.php';
 
 // Register the CSS with ResourceLoader
 $wgResourceModules['ext.socialprofile.systemgifts.css'] = array(
