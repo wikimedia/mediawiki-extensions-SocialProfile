@@ -77,8 +77,8 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 
 		if ( $user_page_type == 1 && !$user->isBlocked() ) {
 			$user_page = Title::makeTitle( NS_USER, $user->getName() );
-			$article = new Article( $user_page );
-			$contentObject = $article->getContentObject();
+			$article = new WikiPage( $user_page );
+			$contentObject = $article->getContent();
 			$user_page_content = ContentHandler::getContentText( $contentObject );
 
 			$user_wiki_title = Title::makeTitle( NS_USER_WIKI, $user->getName() );
