@@ -77,7 +77,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				$this->msg( 'ur-add-error-message-yourself' )->escaped() .
 			'</div>
 			<div>
-				<input type="button" class="site-button" value="' . $this->msg( 'ur-main-page' )->plain() . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
+				<input type="button" class="site-button" value="' . $this->msg( 'mainpage' )->plain() . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
 			if ( $currentUser->isLoggedIn() ) {
 				$output .= '<input type="button" class="site-button" value="' . $this->msg( 'ur-your-profile' )->plain() . '" size="20" onclick=\'window.location="' . htmlspecialchars( $currentUser->getUserPage()->getFullURL() ) . '"\' />';
 			}
@@ -92,7 +92,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				$this->msg( 'ur-add-error-message-blocked' )->plain() .
 			'</div>
 			<div>
-				<input type="button" class="site-button" value="' . $this->msg( 'ur-main-page' )->plain() . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
+				<input type="button" class="site-button" value="' . $this->msg( 'mainpage' )->plain() . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
 			if ( $currentUser->isLoggedIn() ) {
 				$output .= '<input type="button" class="site-button" value="' . $this->msg( 'ur-your-profile' )->plain() . '" size="20" onclick=\'window.location="' . htmlspecialchars( $currentUser->getUserPage()->getFullURL() ) . '"\' />';
 			}
@@ -107,7 +107,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				$this->msg( 'ur-add-error-message-no-user' )->plain() .
 			'</div>
 			<div>
-				<input type="button" class="site-button" value="' . $this->msg( 'ur-main-page' )->plain() . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
+				<input type="button" class="site-button" value="' . $this->msg( 'mainpage' )->plain() . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
 			if ( $currentUser->isLoggedIn() ) {
 				$output .= '<input type="button" class="site-button" value="' . $this->msg( 'ur-your-profile' )->plain() . '" size="20" onclick=\'window.location="' . htmlspecialchars( $currentUser->getUserPage()->getFullURL() ) . '"\' />';
 			}
@@ -131,7 +131,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				{$avatar->getAvatarURL()}
 				" . $error . "
 				<div class=\"relationship-buttons\">
-					<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-main-page' )->plain() . "\" size=\"20\" onclick=\"window.location='index.php?title=" . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . "'\"/>
+					<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'mainpage' )->plain() . "\" size=\"20\" onclick=\"window.location='index.php?title=" . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . "'\"/>
 					<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-your-profile' )->plain() . "\" size=\"20\" onclick=\"window.location='" . htmlspecialchars( $currentUser->getUserPage()->getFullURL() ) . "'\"/>
 				</div>
 				<div class=\"visualClear\"></div>
@@ -155,7 +155,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				{$avatar->getAvatarURL()}
 				" . $error . "
 				<div class=\"relationship-buttons\">
-					<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-main-page' )->plain() . "\" size=\"20\" onclick=\"window.location='index.php?title=" . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . "'\"/>
+					<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'mainpage' )->plain() . "\" size=\"20\" onclick=\"window.location='index.php?title=" . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . "'\"/>
 					<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-your-profile' )->plain() . "\" size=\"20\" onclick=\"window.location='" . htmlspecialchars( $currentUser->getUserPage()->getFullURL() ) . "'\"/>
 				</div>
 				<div class=\"visualClear\"></div>
@@ -180,8 +180,8 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				. $error .
 			'</div>
 			<div>
-				<input type="button" class="site-button" value="' . $this->msg( 'ur-main-page' )->escaped() . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />
-				<input type="button" class="site-button" value="' . $this->msg( 'ur-login' )->escaped() . '" size="20" onclick="window.location=\'' . htmlspecialchars( $login_link->getFullURL() ) . '\'" />';
+				<input type="button" class="site-button" value="' . $this->msg( 'mainpage' )->escaped() . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />
+				<input type="button" class="site-button" value="' . $this->msg( 'login' )->escaped() . '" size="20" onclick="window.location=\'' . htmlspecialchars( $login_link->getFullURL() ) . '\'" />';
 			$output .= '</div>';
 
 			$out->addHTML( $output );
@@ -210,7 +210,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 					{$avatar->getAvatarURL()}
 					" . $sent . "
 					<div class=\"relationship-buttons\">
-						<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-main-page' )->plain() . "\" size=\"20\" onclick=\"window.location='index.php?title=" . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . "'\"/>
+						<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'mainpage' )->plain() . "\" size=\"20\" onclick=\"window.location='index.php?title=" . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . "'\"/>
 						<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-your-profile' )->plain() . "\" size=\"20\" onclick=\"window.location='" . htmlspecialchars( $currentUser->getUserPage()->getFullURL() ) . "'\"/>
 					</div>
 					<div class=\"visualClear\"></div>
@@ -256,7 +256,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 			<textarea name="message" id="message" rows="3" cols="50"></textarea>
 			<div class="relationship-buttons">
 				<input type="button" class="site-button" value="' . $button . '" size="20" onclick="document.form1.submit()" />
-				<input type="button" class="site-button" value="' . $this->msg( 'ur-cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
+				<input type="button" class="site-button" value="' . $this->msg( 'cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
 			</div>
 		</form>';
 		return $form;

@@ -182,7 +182,7 @@ class SpecialViewUserBoard extends SpecialPage {
 			if ( $page > 1 ) {
 				$output .= $linkRenderer->makeLink(
 					$this->getPageTitle(),
-					$this->msg( 'userboard_prevpage' )->plain(),
+					$this->msg( 'last' )->plain(),
 					array(),
 					array(
 						'user' => $user_name,
@@ -221,7 +221,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				$output .= $this->msg( 'word-separator' )->plain() .
 					$linkRenderer->makeLink(
 					$this->getPageTitle(),
-					$this->msg( 'userboard_nextpage' )->plain(),
+					$this->msg( 'next' )->plain(),
 					array(),
 					array(
 						'user' => $user_name,
@@ -311,7 +311,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				{
 					$delete_link = "<span class=\"user-board-red\">
 						<a href=\"javascript:void(0);\" data-message-id=\"{$ub_message['id']}\">" .
-							$this->msg( 'userboard_delete' )->plain() . '</a>
+							$this->msg( 'delete' )->plain() . '</a>
 					</span>';
 				}
 

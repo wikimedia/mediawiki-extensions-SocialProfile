@@ -7,7 +7,6 @@
 	"userwelcome-desc": "Setzt e <code>&lt;welcomeUser&gt;</code> Tag derbäi fir den ageloggte Benotzer  benotzerspezifesch Sozialinformatiounen vun anere Benotzer ze weisen.",
 	"mp-userlevels-link": "Benotzerniveauen",
 	"mp-welcome-upload": "Eroplueden",
-	"mp-welcome-edit": "Änneren",
 	"mp-welcome-points": "$1 {{PLURAL:$1|Punkt|Punkten}}",
 	"mp-welcome-needed-points": "Fir weiderzekommen <b><a href=\"$1\">$2</a></b> verdéngt <i>$3</i> {{PLURAL:$3|Punkt|Punkte}} méi!",
 	"mp-welcome-logged-in": "Salut $1",

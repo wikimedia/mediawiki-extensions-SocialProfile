@@ -4,18 +4,13 @@
 			"Liangent"
 		]
 	},
-	"ur-main-page": "Sahifai Aslī",
 	"ur-your-profile": "Namojai şumo",
 	"ur-add-friend": "Cun dūst ilova kuned",
 	"ur-add-foe": "Cun harif ilova kuned",
 	"ur-give-gift": "Hadja dihed",
-	"ur-previous": "qablī",
-	"ur-next": "ba'dī",
 	"ur-remove-error-message-no-relationship": "Şumo munosibate bo $1 nadored.",
 	"ur-remove-error-message-remove-yourself": "Şumo xudro nametavoned pok kuned.",
 	"ur-remove": "Hazf",
-	"ur-cancel": "Laƣv",
-	"ur-login": "Vurud kuned",
 	"ur-add-error-message-no-user": "Korbari şumo kūşişi ilova kardani hasted vuçud nadorad.",
 	"ur-add-error-message-yourself": "Şumo xudro nametavoned cun dūst jo harif ilova kuned.",
 	"ur-add-error-message-pending-request-title": "Sabr!",

@@ -7,7 +7,6 @@
 	"userwelcome-desc": "Pridáva značku <code>&lt;welcomeUser&gt;</code> na zobrazovanie sociálnych informácií špecifických pre používateľa (pre prihlásených používateľov)",
 	"mp-userlevels-link": "Úrovne používateľov",
 	"mp-welcome-upload": "Nahrať súbor",
-	"mp-welcome-edit": "Upraviť",
 	"mp-welcome-points": "$1 {{PLURAL:$1|bod|body|bodov}}",
 	"mp-welcome-needed-points": "Aby ste postúpili na <b><a href=\"$1\">$2</a></b>, zarobte ešte <i>$3</i> {{PLURAL:$3|bod|body|bodov}}!",
 	"mp-welcome-logged-in": "Ahoj $1",

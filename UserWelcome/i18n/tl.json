@@ -7,7 +7,6 @@
 	"userwelcome-desc": "Nagdaragdag ng tatak na <code>&lt;welcomeUser&gt;</code> upang maipakita sa nakalagda/nakatalang mga tagagamit ang kabatirang panlipunang (impormasyon) tumutukoy sa   partikular na tagagamit",
 	"mp-userlevels-link": "Mga antas na pangtagagamit",
 	"mp-welcome-upload": "Ikarga",
-	"mp-welcome-edit": "Baguhin",
 	"mp-welcome-points": "$1 {{PLURAL:$1|puntos|mga puntos}}",
 	"mp-welcome-needed-points": "Upang makasulong patungo sa <b><a href=\"$1\">$2</a></b> umani ng <i>$3</i> karagdagang {{PLURAL:$3|puntos|mga puntos}}!",
 	"mp-welcome-logged-in": "Mabuhay $1",

@@ -9,7 +9,6 @@
 	"userwelcome-desc": "Lisää <code>&lt;welcomeUser&gt;</code>-elementin käyttäjäkohtaisten sosiaalisten tietojen näyttämiseen.",
 	"mp-userlevels-link": "Käyttäjätasot",
 	"mp-welcome-upload": "Tallenna",
-	"mp-welcome-edit": "Muokkaa",
 	"mp-welcome-points": "$1 {{PLURAL:$1|piste|pistettä}}",
 	"mp-welcome-needed-points": "Päästäksesi tasolle <b><a href=\"$1\">$2</a></b>, ansaitse <i>$3</i> {{PLURAL:$3|piste|pistettä}} lisää!",
 	"mp-welcome-logged-in": "Hei $1",

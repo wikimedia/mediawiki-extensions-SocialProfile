@@ -7,7 +7,6 @@
 	"userwelcome-desc": "Добавя етикет <code>&lt;welcomeUser&gt;</code> за показване на специфична социална потребителска информация за влезлите потребители",
 	"mp-userlevels-link": "Потребителски рангове",
 	"mp-welcome-upload": "Качване",
-	"mp-welcome-edit": "Редактиране",
 	"mp-welcome-points": "$1 {{PLURAL:$1|точка|точки}}",
 	"mp-welcome-logged-in": "Здрасти $1",
 	"mp-requests-title": "Заявки",

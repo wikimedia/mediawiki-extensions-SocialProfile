@@ -108,7 +108,7 @@ class SpecialViewRelationships extends SpecialPage {
 				$this->msg( 'ur-error-message-no-user' )->plain() .
 			'</div>
 			<div class="relationship-request-buttons">
-				<input type="button" class="site-button" value="' . $this->msg( 'ur-main-page' )->plain() . '" onclick=\'window.location="index.php?title=' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
+				<input type="button" class="site-button" value="' . $this->msg( 'mainpage' )->plain() . '" onclick=\'window.location="index.php?title=' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
 			if ( $user->isLoggedIn() ) {
 				$output .= '<input type="button" class="site-button" value="' . $this->msg( 'ur-your-profile' )->plain() . '" onclick=\'window.location="' . htmlspecialchars( $user->getUserPage()->getFullURL() ) . '"\' />';
 			}
@@ -263,7 +263,7 @@ class SpecialViewRelationships extends SpecialPage {
 			if ( $page > 1 ) {
 				$output .= $linkRenderer->makeLink(
 					$pageLink,
-					$this->msg( 'ur-previous' )->plain(),
+					$this->msg( 'last' )->plain(),
 					array(),
 					array(
 						'user' => $user_name,
@@ -304,7 +304,7 @@ class SpecialViewRelationships extends SpecialPage {
 				$output .= $this->msg( 'word-separator' )->plain() .
 					$linkRenderer->makeLink(
 						$pageLink,
-						$this->msg( 'ur-next' )->plain(),
+						$this->msg( 'next' )->plain(),
 						array(),
 						array(
 							'user' => $user_name,

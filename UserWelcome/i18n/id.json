@@ -7,7 +7,6 @@
 	"userwelcome-desc": "Menambahkan tag <code>&lt;welcomeUser&gt;</code> untuk menampilkan info sosial pengguna kepada pengguna yang masuk log",
 	"mp-userlevels-link": "Tingkat pengguna",
 	"mp-welcome-upload": "Memuat",
-	"mp-welcome-edit": "Sunting",
 	"mp-welcome-points": "$1 {{PLURAL:$1||}}poin",
 	"mp-welcome-needed-points": "Untuk naik menjadi <b><a href=\"$1\">$2</a></b>, perolehlah $3 {{PLURAL:$3||}}poin atau lebih!",
 	"mp-welcome-logged-in": "Halo $1",

@@ -7,7 +7,6 @@
 	"userwelcome-desc": "Zet de tag <code>&lt;welcomeUser&gt;</code> derbie um gebrukerspesifieke sociale informasie over an-emelde gebrukers te laoten zien",
 	"mp-userlevels-link": "Gebrukersnivo's",
 	"mp-welcome-upload": "Bestaand derbie doon",
-	"mp-welcome-edit": "Bewark",
 	"mp-welcome-points": "$1 {{PLURAL:$1|punt|punten}}",
 	"mp-welcome-needed-points": "Um te promoveren naor <b><a href=\"$1\">$2</a></b> mö'j nog <i>$3</i> {{PLURAL:$3|punte|punten}} verdienen!",
 	"mp-welcome-logged-in": "Huj $1",

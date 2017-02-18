@@ -188,7 +188,7 @@ class UserProfilePage extends Article {
 		if ( $total_value != 0 ) {
 			$output .= '<div class="user-section-heading">
 				<div class="user-section-title">' .
-					wfMessage( 'user-stats-title' )->escaped() .
+					wfMessage( 'statistics' )->escaped() .
 				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">

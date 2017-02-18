@@ -7,7 +7,6 @@
 	"userwelcome-desc": "Fiegt e <code>&lt;welcomeUser&gt;</code>-Tag dezue, wu mer aagmäldete Benutzer benutzerspezifischi soziali Informatione demit cha zeige",
 	"mp-userlevels-link": "Benutzerebene",
 	"mp-welcome-upload": "Uffelade",
-	"mp-welcome-edit": "Bearbeite",
 	"mp-welcome-points": "$1 {{PLURAL:$1|Punkt|Pinkt}}",
 	"mp-welcome-needed-points": "Zum <b><a href=\"$1\">$2</a></b> z wäre, muesch no <i>$3</i> {{PLURAL:$3|wytere Punkt Punkt|wyteri Pinkt}} verdiene!",
 	"mp-welcome-logged-in": "Sali $1",

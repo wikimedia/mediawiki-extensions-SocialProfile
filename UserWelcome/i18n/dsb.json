@@ -7,7 +7,6 @@
 	"userwelcome-desc": "Pśidawa toflicku <code>&lt;welcomeUser&gt;</code> za zwobraznjenje wužywarjeju specifiske socialne informacije pśizjawjonych wužywarjow",
 	"mp-userlevels-link": "Wužywarske rowniny",
 	"mp-welcome-upload": "Nagraś",
-	"mp-welcome-edit": "Wobźěłaś",
 	"mp-welcome-points": "$1 {{PLURAL:$1|dypk|dypka|dypki|dypkow}}",
 	"mp-welcome-needed-points": "Aby póstupował k <b><a href=\"$1\">$2</a></b>, zasłuž <i>$3</i> {{PLURAL:$3|dalšny dypk|dalšnej dypka|dalšne dypki|dalšnych dypkow}}!",
 	"mp-welcome-logged-in": "Halo $1",

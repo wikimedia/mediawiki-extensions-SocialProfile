@@ -154,7 +154,7 @@ class GiveGift extends SpecialPage {
 				$output .= '</div>
 				<div class="visualClear"></div>
 				<div class="g-buttons">
-					<input type="button" class="site-button" value="' . $this->msg( 'g-main-page' )->plain() . '" size="20" onclick="window.location=\'index.php?title=' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '\'" />
+					<input type="button" class="site-button" value="' . $this->msg( 'mainpage' )->plain() . '" size="20" onclick="window.location=\'index.php?title=' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '\'" />
 					<input type="button" class="site-button" value="' . $this->msg( 'g-your-profile' )->plain() . '" size="20" onclick="window.location=\'' . htmlspecialchars( $user->getUserPage()->getFullURL() ) . '\'" />
 				</div>';
 
@@ -233,7 +233,7 @@ class GiveGift extends SpecialPage {
 				<input type="hidden" name="gift_id" value="' . $giftId . '" />
 				<input type="hidden" name="user_name" value="' . addslashes( $this->user_name_to ) . '" />
 				<input type="button" class="site-button" value="' . $this->msg( 'g-send-gift' )->plain() . '" size="20" onclick="document.gift.submit()" />
-				<input type="button" class="site-button" value="' . $this->msg( 'g-cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
+				<input type="button" class="site-button" value="' . $this->msg( 'cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
 			</div>
 		</form>';
 
@@ -428,7 +428,7 @@ class GiveGift extends SpecialPage {
 					<input type="hidden" name="gift_id" value="0" />
 					<input type="hidden" name="user_name" value="' . addslashes( $this->user_name_to ) . '" />
 					<input type="button" id="send-gift-button" class="site-button" value="' . $this->msg( 'g-send-gift' )->plain() . '" size="20" />
-					<input type="button" class="site-button" value="' . $this->msg( 'g-cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
+					<input type="button" class="site-button" value="' . $this->msg( 'cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
 				</div>
 			</form>';
 		} else {

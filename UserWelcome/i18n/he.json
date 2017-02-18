@@ -8,7 +8,6 @@
 	"userwelcome-desc": "הוספת תגית <code>&lt;welcomeUser&gt;</code> כדי להציג, למשתמשים רשומים בלבד, נתונים חברתיים לפי משתמש",
 	"mp-userlevels-link": "רמות המשתמשים",
 	"mp-welcome-upload": "העלאה",
-	"mp-welcome-edit": "עריכה",
 	"mp-welcome-points": "{{PLURAL:$1|נקודה אחת|$1 נקודות}}",
 	"mp-welcome-needed-points": "כדי להתקדם ל<b><a href=\"$1\">$2</a></b> הרוויחו {{PLURAL:$3|נקודה <i>אחת</i> נוספת|<i>$3</i> נקודות נוספות}}!",
 	"mp-welcome-logged-in": "שלום $1",

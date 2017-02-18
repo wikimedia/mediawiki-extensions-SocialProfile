@@ -154,7 +154,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 			<div class="visualClear"></div>
 			<div class="g-buttons">
 				<input type="button" class="site-button" value="' . $this->msg( 'g-remove' )->plain() . '" size="20" onclick="document.form1.submit()" />
-				<input type="button" class="site-button" value="' . $this->msg( 'g-cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
+				<input type="button" class="site-button" value="' . $this->msg( 'cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
 			</div>
 		</form>';
 

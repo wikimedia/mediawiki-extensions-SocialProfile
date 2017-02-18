@@ -6,12 +6,9 @@
 		]
 	},
 	"boardlinkselectall": "Обрати всі",
-	"userboard_delete": "Вилучити",
 	"userboard_posted_ago": "написано $1 тому",
 	"userboard_public": "публічне",
 	"userboard_messagetype": "Тип повідомлення",
-	"userboard_nextpage": "наступна",
-	"userboard_prevpage": "попередній",
 	"userboard_nomessages": "Немає повідомлень.",
 	"userboard_sendbutton": "надіслати",
 	"userboard-time-days": "$1 {{PLURAL:$1|день|дні|днів}}",

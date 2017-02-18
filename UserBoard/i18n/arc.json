@@ -4,11 +4,8 @@
 			"Basharh"
 		]
 	},
-	"userboard_delete": "ܫܘܦ",
 	"userboard_private": "ܦܪܨܘܦܝܐ",
 	"userboard_messagetype": "ܐܕܫܐ ܕܐܓܪܬܐ",
-	"userboard_nextpage": "ܒܬܪ",
-	"userboard_prevpage": "ܩܕܡ",
 	"userboard_nomessages": "ܠܝܬ ܐܓܪ̈ܬܐ",
 	"userboard-time-days": "{{PLURAL:$1|ܚܕ ܝܘܡܐ|$1 ܝܘܡܬ̈ܐ}}",
 	"userboard-time-hours": "{{PLURAL:$1|ܚܕܐ ܫܥܬܐ|$1 ܫܥܬ̈ܐ}}",

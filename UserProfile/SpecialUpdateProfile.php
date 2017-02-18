@@ -524,11 +524,11 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-name' )->plain() . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="real_name" id="real_name" value="' . $real_name . '"/></p>
 			<div class="visualClear">' . $this->renderEye( 'up_real_name' ) . '</div>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-email' )->plain() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'email' )->plain() . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="email" id="email" value="' . $email . '"/>';
 		if ( !$user->mEmailAuthenticated ) {
 			$confirm = SpecialPage::getTitleFor( 'Confirmemail' );
-			$form .= " <a href=\"{$confirm->getFullURL()}\">" . $this->msg( 'user-profile-personal-confirmemail' )->plain() . '</a>';
+			$form .= " <a href=\"{$confirm->getFullURL()}\">" . $this->msg( 'confirmemail' )->plain() . '</a>';
 		}
 		$form .= '</p>
 			<div class="visualClear">' . $this->renderEye( 'up_email' ) . '</div>';
@@ -773,9 +773,9 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$showYOB = isset( $s, $s->up_birthday ) ? false : true;
 
 		// @todo If the checkboxes are in front of the option, this would look more like Special:Preferences
-		$this->getOutput()->setPageTitle( $this->msg( 'user-profile-section-preferences' )->plain() );
+		$this->getOutput()->setPageTitle( $this->msg( 'preferences' )->plain() );
 
-		$form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-preferences' )->plain() );
+		$form = UserProfile::getEditProfileNav( $this->msg( 'preferences' )->plain() );
 		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">';
 		$form .= '<div class="profile-info clearfix">
 			<div class="profile-update">

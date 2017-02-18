@@ -8,7 +8,6 @@
 	"userwelcome-desc": "<code>&lt;welcomeUser&gt;</code> tag felhasználó-specifikus közösségi információk megjelenítéséhez a bejelentkezett felhasználóknak",
 	"mp-userlevels-link": "Felhasználói szintek",
 	"mp-welcome-upload": "Feltöltés",
-	"mp-welcome-edit": "Szerkesztés",
 	"mp-welcome-points": "$1 pont",
 	"mp-welcome-needed-points": "Még <i>$3</i> pontot kell szerezned a továbblépéshez ide: <b><a href=\"$1\">$2</a></b>!",
 	"mp-welcome-logged-in": "Szia $1",

@@ -8,7 +8,6 @@
 	"userwelcome-desc": "Dodaje znacznik <code>&lt;welcomeUser&gt;</code> wyświetlający zalogowanym użytkownikom informacje o innych użytkownikach służące do utrzymywania kontaktów towarzyskich",
 	"mp-userlevels-link": "Poziomy użytkownika",
 	"mp-welcome-upload": "Prześlij",
-	"mp-welcome-edit": "Edytuj",
 	"mp-welcome-points": "$1 {{PLURAL:$1|punkt|punkty|punktów}}",
 	"mp-welcome-needed-points": "Aby posunąć się do <b><a href=\"$1\">$2</a></b> musisz zdobyć nie mniej niż <i>$3</i> {{PLURAL:$3|punkt|punkty|punktów}}!",
 	"mp-welcome-logged-in": "Witaj $1",

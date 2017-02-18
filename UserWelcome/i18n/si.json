@@ -9,7 +9,6 @@
 	"userwelcome-desc": "පිවිසුනු පරිශීලකයන්ට පරිශීලක-විශේෂිත සමාජීය තොරතුරු පෙන්වීම සඳහා <code>&lt;welcomeUser&gt;</code> ටැගය එකතු කෙරෙයි",
 	"mp-userlevels-link": "පරිශීලක මට්ටම්",
 	"mp-welcome-upload": "උඩුගත කිරීම",
-	"mp-welcome-edit": "සංස්කරණය",
 	"mp-welcome-points": "{{PLURAL:$1|එක් ලකුණක්|ලකුණු $1 ක්}}",
 	"mp-welcome-needed-points": "<b><a href=\"$1\">$2</a></b> වෙත උසස් වීමට,තවත් <i>$3</i> {{PLURAL:$3|ලකුණක්|ලකුණු ගණනක්}} උපයා ගන්න!",
 	"mp-welcome-logged-in": "ආයුබෝවන් $1",
