@@ -631,10 +631,6 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 
 		$ulb = $this->msg( 'uploadbtn' )->plain();
 
-		$titleObj = SpecialPage::getTitleFor( 'Upload' );
-		$action = htmlspecialchars( $titleObj->getLocalURL() );
-
-		$encDestFile = htmlspecialchars( $this->mDestFile );
 		$source = null;
 
 		if ( $wgUseCopyrightUpload ) {
