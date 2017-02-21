@@ -187,7 +187,7 @@
 	"user-page-link": "User page",
 	"user-social-profile-link": "Social profile",
 	"user-wiki-link": "Wiki userpage",
-	"update_profile_nav": "* Special:UpdateProfile|user-profile-section-personal\n* Special:UpdateProfile/personal|user-profile-section-interests\n* Special:UpdateProfile/custom|user-profile-section-custom\n* Special:UploadAvatar|user-profile-section-picture\n* Special:UpdateProfile/preferences|user-profile-section-preferences",
+	"update_profile_nav": "* Special:UpdateProfile|user-profile-section-personal\n* Special:UpdateProfile/personal|user-profile-section-interests\n* Special:UpdateProfile/custom|user-profile-section-custom\n* Special:UploadAvatar|user-profile-section-picture\n* Special:UpdateProfile/preferences|preferences",
 	"user-type-toggle-old": "Use wiki userpage",
 	"user-type-toggle-new": "Use social userpage",
 	"user-board-login-message": "You must be <a href=\"$1\">logged in</a> to post messages to other users",
