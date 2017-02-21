@@ -4,7 +4,6 @@
 			"Gazeb"
 		]
 	},
-	"user-stats-title": "Штатістіка",
 	"other-info-title": "Іншы інформації",
 	"user-friends-title": "Приятелї",
 	"user-foes-title": "Неприятелї",
@@ -61,11 +60,8 @@
 	"user-profile-section-custom": "Властны інформації",
 	"user-profile-section-interests": "Іншы інформації",
 	"user-profile-section-picture": "Аватар",
-	"user-profile-section-preferences": "Наставлїня",
 	"user-profile-personal-info": "Інфо",
 	"user-profile-personal-name": "Мено",
-	"user-profile-personal-email": "Електронічна пошта",
-	"user-profile-personal-confirmemail": "Підтвердити ел. пошту",
 	"user-profile-personal-location": "Місце",
 	"user-profile-personal-city": "Місто",
 	"user-profile-personal-country": "Країна",

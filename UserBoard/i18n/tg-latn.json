@@ -11,7 +11,6 @@
 	"boardnofriends": "Şumo jagon dūste baroi firistodani pajom nadored!",
 	"messagesentsuccess": "Pajomi şumo bo muvaffaqijat firistoda şud",
 	"userboard": "Lavhai korbar",
-	"userboard_delete": "Hazf",
 	"userboard_noexist": "Korbare ki şumo kuşişi didan karda istodaed vuçud nadorad.",
 	"userboard_yourboard": "Lavhai Şumo",
 	"userboard_owner": "Lavhai $1",
@@ -21,8 +20,6 @@
 	"userboard_sendmessage": "Ba $1 pajome firist",
 	"userboard_myboard": "Lavhai Man",
 	"userboard_messagetype": "Nav'i pajom",
-	"userboard_nextpage": "ba'dī",
-	"userboard_prevpage": "qablī",
 	"userboard_nomessages": "Pajƣome nest.",
 	"userboard_sendbutton": "firist"
 }

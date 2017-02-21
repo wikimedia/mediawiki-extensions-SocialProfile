@@ -8,7 +8,6 @@
 	"userwelcome-desc": "Thêm thẻ <code>&lt;welcomeUser&gt;</code> để hiển thị thông tin cá nhân cho những thành viên đăng ký",
 	"mp-userlevels-link": "Cấp thành viên",
 	"mp-welcome-upload": "Tải lên",
-	"mp-welcome-edit": "Sửa đổi",
 	"mp-welcome-points": "$1 {{PLURAL:$1|điểm|điểm}}",
 	"mp-welcome-needed-points": "Để trở thành <b><a href=\"$1\">$2</a></b>, hãy kiếm thêm <i>$3</i> {{PLURAL:$3|điểm|điểm}} nữa!",
 	"mp-welcome-logged-in": "Chào $1",

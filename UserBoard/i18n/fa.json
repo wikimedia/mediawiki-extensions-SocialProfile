@@ -6,11 +6,8 @@
 	},
 	"messagesenttitle": "پیام‌ها ارسال شدند",
 	"boardlinkselectall": "انتخاب همه",
-	"userboard_delete": "حذف",
 	"userboard_private": "خصوصی",
 	"userboard_public": "عمومی",
-	"userboard_nextpage": "بعدی",
-	"userboard_prevpage": "قبلی",
 	"userboard_nomessages": "پيامى وجود ندارد.",
 	"userboard_sendbutton": "ارسال"
 }

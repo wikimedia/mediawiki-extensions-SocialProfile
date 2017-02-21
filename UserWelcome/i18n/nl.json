@@ -8,7 +8,6 @@
 	"userwelcome-desc": "Voegt de tag <code>&lt;welcomeUser&gt;</code> toe om gebruikerspecifieke sociale informatie over aangemelde gebruikers weer te geven",
 	"mp-userlevels-link": "Gebruikersniveaus",
 	"mp-welcome-upload": "Uploaden",
-	"mp-welcome-edit": "Bewerken",
 	"mp-welcome-points": "$1 {{PLURAL:$1|punt|punten}}",
 	"mp-welcome-needed-points": "Om te promoveren naar <b><a href=\"$1\">$2</a></b> moet u nog <i>$3</i> {{PLURAL:$3|punt|punten}} verdienen!",
 	"mp-welcome-logged-in": "Hallo $1",

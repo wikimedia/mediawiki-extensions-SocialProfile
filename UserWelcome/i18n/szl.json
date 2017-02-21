@@ -7,7 +7,6 @@
 	"userwelcome-desc": "Dodej <code>&lt;welcomeUser&gt;</code> tag do pokozańo dedykowanym specyficznymu użytkowńikowi informacyjům socyjolnym lů zalogowanych użytkowńikůw",
 	"mp-userlevels-link": "Poźůmy użytkowńika",
 	"mp-welcome-upload": "Wćepńij",
-	"mp-welcome-edit": "Sprowjej",
 	"mp-welcome-points": "$1 půnktůw",
 	"mp-welcome-needed-points": "Coby przyńść ku <b><a href=\"$1\">$2</a></b> zdobůńdź <i>$3</i> wjyncyj {{PLURAL:$3|půnkt|půnktůw}}!",
 	"mp-welcome-logged-in": "Witej $1",

@@ -10,14 +10,11 @@
 	"boardlinkunselectfriends": "Sävälön flenis",
 	"boardlinkselectfoes": "Välön neflenis",
 	"boardlinkunselectfoes": "Sävälön neflenis",
-	"userboard_delete": "Moükön",
 	"userboard_confirmdelete": "Vilol-li fümiko moükön nuni at?",
 	"userboard_sendmessage": "Sedön gebane: $1 penedi",
 	"userboard_private": "privatik",
 	"userboard_public": "notidik",
 	"userboard_messagetype": "Nunasot",
-	"userboard_nextpage": "sököl",
-	"userboard_prevpage": "büik",
 	"userboard_nomessages": "Nuns nonik.",
 	"userboard_sendbutton": "sedön"
 }

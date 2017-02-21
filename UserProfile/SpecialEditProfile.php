@@ -227,12 +227,12 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-name' )->plain() . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="real_name" id="real_name" value="' . $real_name . '"/></p>
 			<div class="visualClear"></div>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-email' )->plain() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'email' )->plain() . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="email" id="email" value="' . $email . '"/>';
 		if ( !$tar->mEmailAuthenticated ) {
 			$confirm = SpecialPage::getTitleFor( 'Confirmemail' );
 			$form .= " <a href=\"{$confirm->getFullURL()}\">" .
-				$this->msg( 'user-profile-personal-confirmemail' )->plain() .
+				$this->msg( 'confirmemail' )->plain() .
 			'</a>';
 		}
 		$form .= '</p>

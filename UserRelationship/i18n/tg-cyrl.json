@@ -4,18 +4,13 @@
 			"Ibrahim"
 		]
 	},
-	"ur-main-page": "Саҳифаи Аслӣ",
 	"ur-your-profile": "Намояи шумо",
 	"ur-add-friend": "Чун дӯст илова кунед",
 	"ur-add-foe": "Чун ҳариф илова кунед",
 	"ur-give-gift": "Ҳадя диҳед",
-	"ur-previous": "қаблӣ",
-	"ur-next": "баъдӣ",
 	"ur-remove-error-message-no-relationship": "Шумо муносибате бо $1 надоред.",
 	"ur-remove-error-message-remove-yourself": "Шумо худро наметавонед пок кунед.",
 	"ur-remove": "Ҳазф",
-	"ur-cancel": "Лағв",
-	"ur-login": "Вуруд кунед",
 	"ur-add-error-message-no-user": "Корбари шумо кӯшиши илова кардани ҳастед вуҷуд надорад.",
 	"ur-add-error-message-yourself": "Шумо худро наметавонед чун дӯст ё ҳариф илова кунед.",
 	"ur-add-error-message-pending-request-title": "Сабр!",

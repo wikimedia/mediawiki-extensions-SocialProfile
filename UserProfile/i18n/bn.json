@@ -22,7 +22,6 @@
 	"user-send-message": "একটি বার্তা প্রেরণ করো",
 	"user-send-gift": "উপহার প্রেরণ করো",
 	"user-contributions": "অবদানসমূহ",
-	"user-stats-title": "পরিসংখ্যান",
 	"user-stats-edits": "{{PLURAL:$1|সম্পাদনা|সম্পাদনাসমূহ}}",
 	"user-stats-votes": "{{PLURAL:$1|ভোট|ভোটসমূহ}}",
 	"user-stats-comments": "{{PLURAL:$1|মন্তব্য|মন্তব্যসমূহ}}",
@@ -61,6 +60,5 @@
 	"user-recent-activity-edit": "এই পাতাটি সম্পাদনা করো",
 	"user-recent-activity-vote": "এই পাতার জন্য ভোট দাও",
 	"user-recent-activity-comment": "যে পাতায় মন্তব্য করেছিলাম",
-	"user-profile-section-picture": "অ্যাভাটার",
-	"user-profile-section-preferences": "পছন্দ"
+	"user-profile-section-picture": "অ্যাভাটার"
 }

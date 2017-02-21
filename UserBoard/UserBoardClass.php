@@ -396,7 +396,7 @@ class UserBoard {
 				if ( $wgUser->getName() == $message['user_name'] || $wgUser->isAllowed( 'userboard-delete' ) ) {
 					$delete_link = "<span class=\"user-board-red\">
 							<a href=\"javascript:void(0);\" data-message-id=\"{$message['id']}\">" .
-								wfMessage( 'userboard_delete' )->plain() . '</a>
+								wfMessage( 'delete' )->plain() . '</a>
 						</span>';
 				}
 				if ( $message['type'] == 1 ) {

@@ -10,7 +10,6 @@
 	"userwelcome-desc": "Fügt ein <code>&lt;welcomeUser&gt;</code>-Tag hinzu, mit dem man benutzerspezifische soziale Informationen eingeloggten Benutzern zeigen kann",
 	"mp-userlevels-link": "Benutzerebenen",
 	"mp-welcome-upload": "Hochladen",
-	"mp-welcome-edit": "Bearbeiten",
 	"mp-welcome-points": "$1 {{PLURAL:$1|Punkt|Punkte}}",
 	"mp-welcome-needed-points": "Um <b><a href=\"$1\">$2</a></b> zu werden musst du noch <i>$3</i> {{PLURAL:$3|weiteren Punkt|weitere Punkte}} verdienen!",
 	"mp-welcome-logged-in": "Hallo $1",

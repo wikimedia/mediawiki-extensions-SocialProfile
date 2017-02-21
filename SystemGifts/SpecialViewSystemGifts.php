@@ -154,7 +154,7 @@ class ViewSystemGifts extends SpecialPage {
 			if ( $page > 1 ) {
 				$output .= $linkRenderer->makeLink(
 					$page_link,
-					$this->msg( 'ga-previous' )->plain(),
+					$this->msg( 'last' )->plain(),
 					array(),
 					array(
 						'user' => $user_name,
@@ -193,7 +193,7 @@ class ViewSystemGifts extends SpecialPage {
 				$output .= $this->msg( 'word-separator' )->plain() .
 					$linkRenderer->makeLink(
 						$page_link,
-						$this->msg( 'ga-next' )->plain(),
+						$this->msg( 'next' )->plain(),
 						array(),
 						array(
 							'user' => $user_name,

@@ -11,7 +11,6 @@
 	"boardnofriends": "Шумо ягон дӯсте барои фиристодани паём надоред!",
 	"messagesentsuccess": "Паёми шумо бо муваффақият фиристода шуд",
 	"userboard": "Лавҳаи корбар",
-	"userboard_delete": "Ҳазф",
 	"userboard_noexist": "Корбаре ки шумо кушиши дидан карда истодаед вуҷуд надорад.",
 	"userboard_yourboard": "Лавҳаи Шумо",
 	"userboard_owner": "Лавҳаи $1",
@@ -21,8 +20,6 @@
 	"userboard_sendmessage": "Ба $1 паёме фирист",
 	"userboard_myboard": "Лавҳаи Ман",
 	"userboard_messagetype": "Навъи паём",
-	"userboard_nextpage": "баъдӣ",
-	"userboard_prevpage": "қаблӣ",
 	"userboard_nomessages": "Пайғоме нест.",
 	"userboard_sendbutton": "фирист"
 }

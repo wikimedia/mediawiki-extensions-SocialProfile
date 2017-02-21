@@ -6,11 +6,8 @@
 	},
 	"messagesenttitle": "Messaggio inviato",
 	"boardlinkselectall": "Seleziona tutte",
-	"userboard_delete": "Cancella",
 	"userboard_private": "privata",
 	"userboard_public": "pubblico",
-	"userboard_nextpage": "succ",
-	"userboard_prevpage": "prec",
 	"userboard_nomessages": "Non vi sono nuovi messaggi.",
 	"userboard_sendbutton": "invia"
 }

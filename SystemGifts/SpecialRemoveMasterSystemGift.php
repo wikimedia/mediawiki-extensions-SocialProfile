@@ -143,7 +143,7 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 			<div class="visualClear"></div>
 			<div class="ga-buttons">
 				<input type="button" class="site-button" value="' . $this->msg( 'ga-remove' )->plain() . '" size="20" onclick="document.form1.submit()" />
-				<input type="button" class="site-button" value="' . $this->msg( 'ga-cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
+				<input type="button" class="site-button" value="' . $this->msg( 'cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
 			</div>
 		</form>';
 

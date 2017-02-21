@@ -79,7 +79,7 @@ class RemoveGift extends UnlistedSpecialPage {
 				'<div class="visualClear"></div>
 			</div>
 			<div class="g-buttons">
-				<input type="button" class="site-button" value="' . $this->msg( 'g-main-page' )->plain() . '" size="20" onclick="window.location=\'index.php?title=' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '\'" />
+				<input type="button" class="site-button" value="' . $this->msg( 'mainpage' )->plain() . '" size="20" onclick="window.location=\'index.php?title=' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '\'" />
 				<input type="button" class="site-button" value="' . $this->msg( 'g-your-profile' )->plain() . '" size="20" onclick="window.location=\'' . htmlspecialchars( $user_page_link->getFullURL() ) . '\'" />
 			</div>';
 
@@ -133,7 +133,7 @@ class RemoveGift extends UnlistedSpecialPage {
 			<div class="g-buttons">' .
 				Html::hidden( 'user', $gift['user_name_from'] ) .
 				'<input type="button" class="site-button" value="' . $this->msg( 'g-remove' )->plain() . '" size="20" onclick="document.form1.submit()" />
-				<input type="button" class="site-button" value="' . $this->msg( 'g-cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
+				<input type="button" class="site-button" value="' . $this->msg( 'cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
 			</div>
 		</form>';
 

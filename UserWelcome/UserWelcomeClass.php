@@ -58,7 +58,7 @@ class UserWelcome {
 		if ( $avatar->isDefault() ) {
 			$uploadOrEditMsg = 'mp-welcome-upload';
 		} else {
-			$uploadOrEditMsg = 'mp-welcome-edit';
+			$uploadOrEditMsg = 'edit';
 		}
 		$output .= '<div><a href="' . htmlspecialchars( $avatar_link->getFullURL() ) . '" rel="nofollow">' .
 			wfMessage( $uploadOrEditMsg )->plain() .

@@ -7,7 +7,6 @@
 	"userwelcome-desc": "Lägger till <code>&lt;welcomeUser&gt;</code>-taggen för att visa användarspecifierad social information för inloggade användare",
 	"mp-userlevels-link": "Användarnivåer",
 	"mp-welcome-upload": "Ladda upp",
-	"mp-welcome-edit": "Redigera",
 	"mp-welcome-points": "$1 {{PLURAL:$1|poäng|poäng}}",
 	"mp-welcome-needed-points": "För att avancera för <b><a href=\"$1\">$2</a></b> måste du uppnå <i>$3</i> fler {{PLURAL:$3|poäng|poäng}}!",
 	"mp-welcome-logged-in": "Hej $1",
