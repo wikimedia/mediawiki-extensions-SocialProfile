@@ -72,5 +72,6 @@
 	"echo-pref-tooltip-social-award": "Notify me when I receive an award.",
 	"notification-social-award-rec": "You have received a new award: $1.",
 	"notification-social-award-rec-bundle": "You have received {{PLURAL:$1|one new award|$1 new awards}}.",
-	"right-awardsmanage": "Create new and edit existing awards"
+	"right-awardsmanage": "Create new and edit existing awards",
+	"action-awardsmanage": "create new and edit existing awards"
 }
