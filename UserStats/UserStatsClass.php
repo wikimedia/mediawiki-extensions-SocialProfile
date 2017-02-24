@@ -3,12 +3,12 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die();
 }
 /**
- * Four classes for tracking users' social activity
+ * Three classes for tracking users' social activity
  *	UserStatsTrack: main class, used by most other SocialProfile components
  *	UserStats:
  *	UserLevel: used for getting the names of user levels and points needed to
  *			advance to the next level when $wgUserLevels is a properly-defined array.
- *	UserEmailTrack: tracks email invitations (ones sent out by InviteContacts extension)
+ *
  * @file
  * @ingroup Extensions
  */
