@@ -47,6 +47,7 @@
 	"userboard_loggedout": "You must be [[Special:UserLogin|logged in]] to post messages to other users.",
 	"userboard_showingmessages": "Showing {{PLURAL:$4|message $3|messages $2-$3}} of {{PLURAL:$1|$1 message|$1 messages}}.",
 	"right-userboard-delete": "Delete others' board messages",
+	"action-userboard-delete": "delete others' board messages",
 	"userboard-time-days": "{{PLURAL:$1|one day|$1 days}}",
 	"userboard-time-hours": "{{PLURAL:$1|one hour|$1 hours}}",
 	"userboard-time-minutes": "{{PLURAL:$1|one minute|$1 minutes}}",
