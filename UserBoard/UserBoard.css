@@ -1,10 +1,10 @@
 #user-page-board {
-	margin: 5px 0px 10px 0px;
+	margin: 5px 0 10px 0;
 }
 
 .user-board-top-links {
-	font-weight: bold;
-	margin: 15px 0px 0px 0px;
+	font-weight: 700;
+	margin: 15px 0 0 0;
 }
 
 .user-board-top-links a {
@@ -12,25 +12,26 @@
 }
 
 .user-page-message-form {
-	margin: 5px 0px 15px 0px;
-	font-weight: bold;
+	font-weight: 700;
+	margin: 5px 0 15px 0;
+
 }
 
 .user-board-message {
-	border: 1px solid #D4DFD7;
-	margin: 0px 0px 15px 0px;
+	border: 1px solid #d4dfd7;
 	width: 550px;
+	margin: 0 0 15px 0;
 }
 
 .user-board-message-from {
-	background-color: #EFF3F0;
-	padding: 3px 0px 5px 5px;
+	background-color: #eef3f0;
+	padding: 3px 0 5px 5px;
 }
 
 .user-board-message-from a {
 	font-size: 14px;
+	font-weight: 700;
 	text-decoration: none;
-	font-weight: bold;
 }
 
 .user-board-message-content {
@@ -38,14 +39,14 @@
 }
 
 .user-board-message-time {
-	font-size: 11px;
 	color: #797979;
-	margin: 2px 0px 0px 5px;
+	font-size: 11px;
+	margin: 2px 0 0 5px;
 }
 
 .user-board-message-image {
 	float: left;
-	margin: 0px 10px 0px 0px;
+	margin: 0 10px 0 0;
 }
 
 .user-board-message-image img {
@@ -54,32 +55,32 @@
 
 .user-board-message-body {
 	float: left;
-	margin: 0px 10px 0px 0px;
+	margin: 0 10px 0 0;
 	vertical-align: top;
 	width: 90%;
 }
 
 .user-board-message-body p {
-	margin: 0px 0px 0px 0px !important;
+	margin: 0 0 0 0 !important;
 }
 
 .user-board-message-links {
-	padding: 0px 0px 5px 5px;
+	padding: 0 0 5px 5px;
 }
 
 .user-board-message-links a {
 	font-size: 11px;
 	text-decoration: none;
-	margin: 0px 10px 0px 0px;
+	margin: 0 10px 0 0;
 }
 
 .user-board-red a {
-	color: #ff0000;
+	color: #f00;
 }
 
 select#message_type {
 	vertical-align: middle;
-	margin: -1px 0px 0px 5px;
+	margin: -1px 0 0 5px;
 }
 
 .user-page-message-form textarea {
@@ -87,7 +88,7 @@ select#message_type {
 }
 
 .user-page-message-count {
-	color: #666666;
+	color: #666;
 	font-size: 11px;
 }
 

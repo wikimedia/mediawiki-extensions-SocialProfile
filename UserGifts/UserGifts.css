@@ -1,22 +1,22 @@
 .back-links {
-	margin: 0px 0px 10px 0px;
+	margin: 0 0 10px 0;
 }
 
 .back-links a {
 	text-decoration: none;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .g-count {
-	margin: 0px 0px 15px 0px;
+	margin: 0 0 15px 0;
 }
 
 .g-item {
-	border: 1px solid #D7DEE8;
-	padding: 7px;
+	border: 1px solid #d7dee8;
 	float: left;
-	margin: 0px 15px 15px 0px;
 	width: 350px;
+	padding: 7px;
+	margin: 0 15px 15px 0;
 }
 
 .g-item a {
@@ -24,23 +24,23 @@
 }
 
 .g-item img {
-	border: 1px solid #dcdcdc;
 	background-color: #fff;
-	padding: 3px;
-	display: block;
+	border: 1px solid #dcdcdc;
 	float: left;
-	margin: 0px 10px 0px 0px;
+	padding: 3px;
+	margin: 0 10px 0 0;
+	display: block;
 }
 
 .g-title {
 	font-size: 16px;
-	font-weight: bold;
-	margin: 0px 0px 8px 0px;
+	font-weight: 700;
+	margin: 0 0 8px 0;
 }
 
 .g-from {
-	font-weight: bold;
 	font-size: 11px;
+	font-weight: 700;
 }
 
 .g-actions {
@@ -52,26 +52,26 @@
 }
 
 .g-delete {
-	margin: 0px 0px 0px 12px;
+	margin: 0 0 0 12px;
 }
 
 .page-nav a {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .g-new {
-	background-color: #FFFB9B;
-	border: 1px solid #FDC745;
-	font-weight: bold;
-	padding: 0px 5px;
+	background-color: #fffb9b;
+	border: 1px solid #fdc745;
 	font-size: 12px;
-	margin: 0px 0px 0px 10px;
+	font-weight: 700;
+	padding: 0 5px;
+	margin: 0 0 0 10px;
 }
 
 .g-name {
 	font-size: 16px;
-	font-weight: bold;
-	margin: 0px 0px 2px;
+	font-weight: 700;
+	margin: 0 0 2px;
 }
 
 .g-timestamp {
@@ -80,24 +80,24 @@
 }
 
 .g-user-message {
-	margin: 8px 0px;
 	color: #666;
-	font-weight: bold;
+	font-weight: 700;
+	margin: 8px 0;
 }
 
 .g-gift-count {
 	font-size: 9px;
-	margin: 2px 0px 10px 0px;
+	margin: 2px 0 10px 0;
 }
 
 .g-description-container {
 	width: 480px;
-	margin: 20px 0px;
+	margin: 20px 0;
 }
 
 .g-recent {
-	border-top: 1px solid #EFEFEF;
-	padding: 10px 0px 0px 0px;
+	border-top: 1px solid #efefef;
+	padding: 10px 0 0 0;
 }
 
 .g-recent img {
@@ -105,7 +105,7 @@
 	padding: 3px;
 	background-color: #fff;
 	border: 1px solid #dcdcdc;
-	margin: 0px 10px 0px 0px;
+	margin: 0 10px 0 0;
 }
 
 .g-recent a {
@@ -116,17 +116,17 @@
 
 .g-recent-title {
 	font-size: 14px;
-	font-weight: bold;
+	font-weight: 700;
 	color: #777;
-	margin: 0px 0px 2px 0px;
+	margin: 0 0 2px 0;
 }
 
 .g-recent-item {
-	margin: 0px 0px 5px 0px;
+	margin: 0 0 5px 0;
 }
 
 .g-description {
-	margin: 0px 0px 15px 0px;
+	margin: 0 0 15px 0;
 }
 
 .g-description img {
@@ -135,11 +135,11 @@
 	padding: 3px;
 	display: block;
 	float: left;
-	margin: 0px 10px 0px 0px;
+	margin: 0 10px 0 0;
 }
 
 .g-container {
-	margin: 15px 0px 0px 0px;
+	margin: 15px 0 0 0;
 }
 
 .g-container img {
@@ -148,41 +148,41 @@
 	padding: 3px;
 	display: block;
 	float: left;
-	margin: 0px 10px 0px 0px;
+	margin: 0 10px 0 0;
 }
 
 .g-buttons {
-	padding: 15px 0px 0px 0px;
+	padding: 15px 0 0 0;
 }
 
 .g-message {
-	margin: 0px 0px 15px 0px;
+	margin: 0 0 15px 0;
 }
 
 .g-give-container {
-	background-color: #F2F4F7;
-	border: 1px solid #D7DEE8;
+	background-color: #f2f4f7;
+	border: 1px solid #d7dee8;
 	padding: 10px;
 	width: 500px;
-	margin: 0px 0px 20px 0px;
+	margin: 0 0 20px 0;
 }
 
 .g-give-title {
 	font-size: 13px;
 	color: #888;
-	margin: 0px 0px 6px 0px;
-	font-weight: bold;
+	margin: 0 0 6px 0;
+	font-weight: 700;
 }
 
 .g-give-separator {
-	margin: 10px 0px;
-	font-weight: bold;
+	margin: 10px 0;
+	font-weight: 700;
 }
 
 .g-add-message {
-	margin: 15px 0px 4px 0px;
+	margin: 15px 0 4px 0;
 	color: #666;
-	font-weight: bold;
+	font-weight: 700;
 	font-size: 14px;
 }
 
@@ -192,11 +192,11 @@
 }
 
 .g-give-all {
-	border: 1px solid #DCDCDC;
+	border: 1px solid #dcdcdc;
 	cursor: pointer;
 	float: left;
 	min-height: 110px;
-	margin: 0px 10px 10px 0px;
+	margin: 0 10px 10px 0;
 	padding: 8px;
 	width: 250px;
 	overflow: hidden;
@@ -204,7 +204,7 @@
 
 .g-give-all img {
 	float: left;
-	margin: 0px 10px 0px 0px;
+	margin: 0 10px 0 0;
 	display: block;
 	border: 1px solid #dcdcdc;
 	padding: 3px;
@@ -212,17 +212,17 @@
 }
 
 .g-blue {
-	color: #285C98 !important;
+	color: #285c98 !important;
 }
 
 .g-give-all-message-title {
 	color: #666;
-	font-weight: bold;
-	margin: 10px 0px 5px 0px;
+	font-weight: 700;
+	margin: 10px 0 5px 0;
 }
 
 .g-give-all-highlight {
-	background-color: #FAF9F9;
+	background-color: #faf9f9;
 }
 
 .g-give-all-selected {
@@ -231,16 +231,16 @@
 
 /* Special:GiftManager */
 .view-form {
-	font-weight: 800;
+	color: #666;
 	font-size: 12px;
-	color: #666666;
+	font-weight: 800;
 }
 
 .view-status {
-	font-weight: 800;
+	background-color: #fffb9b;
+	color: #666;
 	font-size: 12px;
-	background-color: #FFFB9B;
-	color: #666666;
+	font-weight: 800;
 	padding: 5px;
 	margin-bottom: 5px;
 }

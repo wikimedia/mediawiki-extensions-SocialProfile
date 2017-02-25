@@ -1,21 +1,21 @@
 .back-links {
-	margin: 0px 0px 10px 0px;
+	margin: 0 0 10px 0;
 }
 
 .back-links a {
 	text-decoration: none;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .relationship-count {
-	margin: 0px 0px 15px 0px;
+	margin: 0 0 15px 0;
 }
 
 .relationship-item {
-	border: 1px solid #D7DEE8;
+	border: 1px solid #d7dee8;
 	padding: 7px;
 	float: left;
-	margin: 0px 15px 15px 0px;
+	margin: 0 15px 15px 0;
 	width: 350px;
 }
 
@@ -29,13 +29,13 @@
 	padding: 3px;
 	display: block;
 	float: left;
-	margin: 0px 10px 0px 0px;
+	margin: 0 10px 0 0;
 }
 
 .relationship-name {
 	font-size: 14px;
-	font-weight: bold;
-	margin: 0px 0px 2px 0px;
+	font-weight: 700;
+	margin: 0 0 2px 0;
 }
 
 .relationship-actions {
@@ -47,48 +47,48 @@
 }
 
 .relationship-delete {
-	margin: 0px 0px 0px 12px;
+	margin: 0 0 0 12px;
 }
 
 .page-nav a {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .relationship-error-message {
-	margin: 0px 0px 15px 0px;
+	margin: 0 0 15px 0;
 }
 
 .relationship-action {
-	margin: 0px 0px 15px 0px;
 	color: #888;
+	font-weight: 700;
 	width: 500px;
-	margin: 15px 0px;
-	font-weight: bold;
+	margin: 15px 0;
 }
 
 .relationship-action img {
 	float: left;
-	display: block;
-	margin: 0px 15px 0px 0px;
 	background-color: #fff;
-	padding: 3px;
 	border: 1px solid #dcdcdc;
+	padding: 3px;
+	margin: 0 15px 0 0;
+	display: block;
 }
 
 .relationship-buttons {
-	padding: 10px 0px 0px 0px;
+	padding: 10px 0 0 0;
 }
 
 .relationship-textbox-title {
-	font-weight: bold;
 	font-size: 13px;
-	margin: 0px 0px 5px 0px;
+	font-weight: 700;
+	margin: 0 0 5px 0;
 }
 
 .relationship-message {
-	font-size: 14px;
-	margin: 10px 0px 0px 0px;
 	color: #888 !important;
+	font-size: 14px;
+	margin: 10px 0 0 0;
+
 }
 
 .black-text {
@@ -96,7 +96,7 @@
 }
 
 .red-text {
-	color: red !important;
+	color: #f00 !important;
 }
 
 /* Responsive stuff for mobile devices */
