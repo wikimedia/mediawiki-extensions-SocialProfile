@@ -46,10 +46,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 		$out = $this->getOutput();
 
 		// Add CSS
-		$out->addModuleStyles( array(
-			'ext.socialprofile.clearfix',
-			'ext.socialprofile.userprofile.css'
-		) );
+		$out->addModuleStyles( 'ext.socialprofile.userprofile.css' );
 
 		// Let the parent class do most of the heavy lifting.
 		parent::execute( $params );
