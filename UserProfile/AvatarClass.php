@@ -87,7 +87,7 @@ class wAvatar {
 	 * @return bool True if they have a default avatar, false if they've uploaded their own
 	 */
 	function isDefault() {
-		return (bool)strpos( $this->getAvatarImage(), 'default_' ) !== false;
+		return strpos( $this->getAvatarImage(), 'default_' ) !== false;
 	}
 
 	/**
