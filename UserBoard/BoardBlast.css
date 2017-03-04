@@ -1,72 +1,70 @@
 #blast-friends-list div.blast-friend-selected,
 #blast-friends-list div.blast-foe-selected {
-	background-color:#FFFCA9;
-	border: 1px solid #FDC745;
-	color: #002BB8;
-	font-weight: bold;
-	padding: 3px;
+	background-color: #fffca9;
+	border: 1px solid #fdc745;
+	color: #002bb8;
+	font-weight: 700;
 	overflow: hidden;
-	margin: 0px 3px 3px 0px;
 	float: left;
 	cursor: pointer;
-	width: 200px;
-	overflow: hidden;
-	font-weight: bold;
-	padding: 4px;
 	height: 17px;
+	width: 200px;
+
+	padding: 4px;
+	margin: 0 3px 3px 0;
+	overflow: hidden;
+
 }
 
 #blast-friends-list div.blast-friend-unselected,
 #blast-friends-list div.blast-foe-unselected {
 	border: 1px solid #dcdcdc;
-	color: #285C98;
-	font-weight: bold;
-	padding: 3px;
+	color: #285c98;
+	font-weight: 700;
 	overflow: hidden;
-	margin: 0px 3px 3px 0px;
 	float: left;
 	cursor: pointer;
-	width: 200px;
-	overflow: hidden;
-	font-weight: bold;
-	padding: 4px;
 	height: 17px;
+	width: 200px;
+	padding: 4px;
+	margin: 0 3px 3px 0;
+	overflow: hidden;
 }
 
 .board-blast-message-form {
-	margin: 8px 0px 0px 0px;
+	margin: 8px 0 0 0;
 }
 
 .blast-nav {
-	margin: 0px 0px 12px 0px;
+	margin: 0 0 12px 0;
 	font-size: 12px;
 }
 
 .blast-nav a {
-	color: #999999;
+	color: #999;
 }
 
 .blast-nav-text {
-	margin: 0px 0px 5px 0px;
+	margin: 0 0 5px 0;
 }
 
 .blast-message-box-button {
-	padding: 10px 0px 0px 0px;
+	padding: 10px 0 0 0;
 }
 
 .blast-message-text {
-	color: #999999;
-	font-weight: bold;
+	color: #999;
 	font-size: 12px;
-	margin: 0px 0px 3px 0px;
+	font-weight: 700;
+	margin: 0 0 3px 0;
 }
 
 .board-blast-message-form h2 {
-	color: #333333;
-	margin: 0px 0px 10px 0px !important;
+	color: #333;
+	margin: 0 0 10px 0 !important;
 }
 
 .blast-nav h2 {
-	color: #333333;
-	margin: 15px 0px 10px 0px !important;
+	color: #333;
+	margin: 15px 0 10px 0 !important;
 }
