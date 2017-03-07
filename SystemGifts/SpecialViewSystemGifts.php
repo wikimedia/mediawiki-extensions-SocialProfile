@@ -42,7 +42,10 @@ class ViewSystemGifts extends SpecialPage {
 		$this->setHeaders();
 
 		// Add CSS
-		$out->addModuleStyles( 'ext.socialprofile.systemgifts.css' );
+		$out->addModuleStyles( [
+			'ext.socialprofile.systemgifts.css',
+			'ext.socialprofile.special.viewsystemgifts.css'
+		] );
 
 		$output = '';
 		$user_name = $request->getVal( 'user' );

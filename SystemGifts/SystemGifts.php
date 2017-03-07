@@ -51,6 +51,48 @@ $wgResourceModules['ext.socialprofile.systemgifts.css'] = array(
 	'position' => 'top'
 );
 
+$wgResourceModules['ext.socialprofile.special.removemastersystemgift.css'] = array(
+	'styles' => 'SpecialRemoveMasterSystemGift.css',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'SocialProfile/SystemGifts',
+	'position' => 'top'
+);
+
+$wgResourceModules['ext.socialprofile.special.systemgiftmanager.css'] = array(
+	'styles' => 'SpecialSystemGiftManager.css',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'SocialProfile/SystemGifts',
+	'position' => 'top'
+);
+
+$wgResourceModules['ext.socialprofile.special.systemgiftmanagerlogo.css'] = array(
+	'styles' => 'SpecialSystemGiftManagerLogo.css',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'SocialProfile/SystemGifts',
+	'position' => 'top'
+);
+
+$wgResourceModules['ext.socialprofile.special.topawards.css'] = array(
+	'styles' => 'SpecialTopAwards.css',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'SocialProfile/SystemGifts',
+	'position' => 'top'
+);
+
+$wgResourceModules['ext.socialprofile.special.viewsystemgift.css'] = array(
+	'styles' => 'SpecialViewSystemGift.css',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'SocialProfile/SystemGifts',
+	'position' => 'top'
+);
+
+$wgResourceModules['ext.socialprofile.special.viewsystemgifts.css'] = array(
+	'styles' => 'SpecialViewSystemGifts.css',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'SocialProfile/SystemGifts',
+	'position' => 'top'
+);
+
 // Echo (Notifications) stuff
 $wgAutoloadClasses['EchoUserSystemGiftPresentationModel'] = "{$wgSystemGiftsDirectory}/EchoUserSystemGiftPresentationModel.php";
 

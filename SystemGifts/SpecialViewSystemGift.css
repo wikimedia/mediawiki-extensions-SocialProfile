@@ -1,0 +1,53 @@
+.ga-description {
+	padding: 0 0 15px 0;
+}
+
+.ga-description img {
+	border: 1px solid #dcdcdc;
+	background-color: #fff;
+	padding: 3px;
+	display: block;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+.ga-description-container {
+	width: 480px;
+	margin: 20px 0;
+}
+
+.ga-description-message {
+	margin: 0 0 5px 0;
+	color: #666;
+	font-weight: 700;
+}
+
+.ga-gift-count {
+	font-size: 9px;
+	margin: 0 0 10px 0;
+}
+
+.ga-recent {
+	border-top: 1px solid #efefef;
+	padding: 10px 0 0 0;
+}
+
+.ga-recent img {
+	vertical-align: middle;
+	padding: 3px;
+	background-color: #fff;
+	border: 1px solid #dcdcdc;
+	margin: 0 10px 0 0;
+}
+
+.ga-recent a {
+	display: block;
+	float: left;
+	text-decoration: none;
+}
+
+.ga-timestamp {
+	font-size: 9px;
+	color: #999;
+	margin: 0 0 5px 0;
+}

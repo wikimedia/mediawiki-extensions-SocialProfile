@@ -126,7 +126,7 @@ class TopAwards extends UnlistedSpecialPage {
 		);
 
 		// Add CSS
-		$out->addModuleStyles( 'ext.socialprofile.systemgifts.css' );
+		$out->addModuleStyles( 'ext.socialprofile.special.topawards.css' );
 
 		$output = '<div class="top-awards-navigation">
 			<h1>' . $this->msg( 'topawards-award-categories' )->plain() . '</h1>';

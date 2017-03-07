@@ -53,7 +53,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		}
 
 		// Add CSS
-		$out->addModuleStyles( 'ext.socialprofile.systemgifts.css' );
+		$out->addModuleStyles( 'ext.socialprofile.special.systemgiftmanagerlogo.css' );
 
 		$this->gift_id = $this->getRequest()->getInt( 'gift_id' );
 		$this->initLogo();

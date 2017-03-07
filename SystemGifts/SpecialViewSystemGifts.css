@@ -1,0 +1,33 @@
+.ga-count {
+	margin: 0 0 15px 0;
+}
+
+.ga-item {
+	border: 1px solid #d7dee8;
+	padding: 7px;
+	float: left;
+	margin: 0 15px 15px 0;
+	width: 350px;
+}
+
+.ga-item a {
+	font-size: 14px;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.ga-item img {
+	border: 1px solid #dcdcdc;
+	background-color: #fff;
+	padding: 3px;
+	display: block;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+.ga-new {
+	background-color: #FFFB9B;
+	border: 1px solid #FDC745;
+	font-weight:  700;
+	padding: 0 5px;
+}

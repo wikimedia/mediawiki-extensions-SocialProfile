@@ -1,0 +1,16 @@
+.ga-container {
+	margin: 15px 0 0 0;
+}
+
+.ga-container img {
+	background-color: #fff;
+	border: 1px solid #dcdcdc;
+	display: block;
+	float: left;
+	padding: 3px;
+	margin: 0 10px 0 0;
+}
+
+.ga-buttons {
+	padding: 15px 0 0 0;
+}
