@@ -1,6 +1,8 @@
 <?php
 /**
- * A special page for privileged users to remove other users' avatars.
+ * A special page for removing avatars.
+ * Privileged users can remove other users' avatars, but everyone can remove
+ * their own avatar regardless of their user rights.
  *
  * @file
  * @ingroup Extensions
@@ -11,7 +13,7 @@ class RemoveAvatar extends SpecialPage {
 	 * Constructor
 	 */
 	public function __construct() {
-		parent::__construct( 'RemoveAvatar'/*class*/, 'avatarremove'/*restriction*/ );
+		parent::__construct( 'RemoveAvatar' );
 	}
 
 	public function doesWrites() {
@@ -28,25 +30,33 @@ class RemoveAvatar extends SpecialPage {
 	}
 
 	/**
+	 * Special page description shown on Special:SpecialPages -- different for
+	 * privileged users and mortals
+	 *
+	 * @return string Special page description
+	 */
+	function getDescription() {
+		if ( $this->getUser()->isAllowed( 'avatarremove' ) ) {
+			return $this->msg( 'removeavatar' )->plain();
+		} else {
+			return $this->msg( 'removeavatar-remove-my-avatar' )->plain();
+		}
+	}
+
+	/**
 	 * Show the special page
 	 *
 	 * @param $user Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgUploadAvatarInRecentChanges;
-
 		$out = $this->getOutput();
 		$request = $this->getRequest();
 		$user = $this->getUser();
 
+		$userIsPrivileged = $user->isAllowed( 'avatarremove' );
+
 		// If the user isn't logged in, display an error
 		if ( !$user->isLoggedIn() ) {
-			$this->displayRestrictionError();
-			return;
-		}
-
-		// If the user doesn't have 'avatarremove' permission, display an error
-		if ( !$user->isAllowed( 'avatarremove' ) ) {
 			$this->displayRestrictionError();
 			return;
 		}
@@ -64,42 +74,40 @@ class RemoveAvatar extends SpecialPage {
 
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();
-		$out->setPageTitle( $this->msg( 'avatarupload-removeavatar' )->plain() );
+		if ( $userIsPrivileged ) {
+			$pageTitle = $this->msg( 'avatarupload-removeavatar' )->plain();
+		} else {
+			$pageTitle = $this->msg( 'removeavatar-remove-your-avatar' )->plain();
+		}
+		$out->setPageTitle( $pageTitle );
 
-		if ( $request->getVal( 'user' ) != '' ) {
+		if ( $userIsPrivileged && $request->getVal( 'user' ) != '' ) {
 			$out->redirect( $this->getPageTitle()->getFullURL() . '/' . $request->getVal( 'user' ) );
+		}
+
+		// If the user isn't allowed to delete everyone's avatars, only let
+		// them remove their own avatar
+		if ( !$userIsPrivileged ) {
+			$par = $user->getName();
 		}
 
 		// If the request was POSTed, then delete the avatar
 		if ( $request->wasPosted() ) {
-			$user_id = $request->getInt( 'user_id' );
-			$user_deleted = User::newFromId( $user_id );
-
-			$this->deleteImage( $user_id, 's' );
-			$this->deleteImage( $user_id, 'm' );
-			$this->deleteImage( $user_id, 'l' );
-			$this->deleteImage( $user_id, 'ml' );
-
-			$log = new LogPage( 'avatar' );
-			if ( !$wgUploadAvatarInRecentChanges ) {
-				$log->updateRecentChanges = false;
-			}
-			$log->addEntry(
-				'avatar',
-				$user->getUserPage(),
-				$this->msg( 'user-profile-picture-log-delete-entry', $user_deleted->getName() )
-					->inContentLanguage()->text()
-			);
+			$this->onSubmit();
 			$out->addHTML(
 				'<div>' .
 				$this->msg( 'avatarupload-removesuccess' )->plain() .
 				'</div>'
 			);
-			$out->addHTML(
-				'<div><a href="' . htmlspecialchars( $this->getPageTitle()->getFullURL() ) . '">' .
-					$this->msg( 'avatarupload-removeanother' )->plain() .
-				'</a></div>'
-			);
+			if ( $userIsPrivileged ) {
+				// No point in showing this message to mortals, they can't
+				// remove others' avatars anyway
+				$out->addHTML(
+					'<div><a href="' . htmlspecialchars( $this->getPageTitle()->getFullURL() ) . '">' .
+						$this->msg( 'avatarupload-removeanother' )->plain() .
+					'</a></div>'
+				);
+			}
 		} else {
 			if ( $par ) {
 				$out->addHTML( $this->showUserAvatar( $par ) );
@@ -108,6 +116,40 @@ class RemoveAvatar extends SpecialPage {
 				$out->addHTML( $this->showUserForm() );
 			}
 		}
+	}
+
+	/**
+	 * Handle form submission, i.e. do everything we need to & log it
+	 */
+	private function onSubmit() {
+		global $wgUploadAvatarInRecentChanges;
+
+		$user = $this->getUser();
+		// Only privileged users can delete others' avatars, but everyone
+		// can delete their own avatar
+		if ( $user->isAllowed( 'avatarremove' ) ) {
+			$user_id = $this->getRequest()->getInt( 'user_id' );
+			$user_deleted = User::newFromId( $user_id );
+		} else {
+			$user_id = $user->getId();
+			$user_deleted = $user;
+		}
+
+		$this->deleteImage( $user_id, 's' );
+		$this->deleteImage( $user_id, 'm' );
+		$this->deleteImage( $user_id, 'l' );
+		$this->deleteImage( $user_id, 'ml' );
+
+		$log = new LogPage( 'avatar' );
+		if ( !$wgUploadAvatarInRecentChanges ) {
+			$log->updateRecentChanges = false;
+		}
+		$log->addEntry(
+			'avatar',
+			$user->getUserPage(),
+			$this->msg( 'user-profile-picture-log-delete-entry', $user_deleted->getName() )
+				->inContentLanguage()->text()
+		);
 	}
 
 	/**
@@ -133,15 +175,33 @@ class RemoveAvatar extends SpecialPage {
 		$user_name = str_replace( '_', ' ', $user_name ); // replace underscores with spaces
 		$user_id = User::idFromName( $user_name );
 
+		$currentUser = $this->getUser();
+		$userIsAvatarOwner = (bool)( $currentUser->getName() === $user_name );
+		$userIsPrivileged = $currentUser->isAllowed( 'avatarremove' );
 		$avatar = new wAvatar( $user_id, 'l' );
+		$output = '';
 
-		$output = '<div><b>' . $this->msg( 'avatarupload-currentavatar', $user_name )->parse() . '</b></div>';
-		$output .= "<div>{$avatar->getAvatarURL()}</div>";
-		$output .= '<div><form method="post" name="avatar" action="">
+		if ( !$avatar->isDefault() ) {
+			if ( !$userIsAvatarOwner ) {
+				$output .= '<div><b>' . $this->msg( 'avatarupload-currentavatar', $user_name )->parse() . '</b></div>';
+			}
+			$output .= "<div>{$avatar->getAvatarURL()}</div>";
+			$output .= '<div><form method="post" name="avatar" action="">
 				<input type="hidden" name="user_id" value="' . $user_id . '" />
 				<br />
 				<input type="submit" value="' . $this->msg( 'delete' )->plain() . '" />
 			</form></div>';
+		} else {
+			// avatar IS default AND user is privileged
+			if ( $userIsPrivileged ) {
+				$output = $this->msg( 'removeavatar-already-default' )->parse();
+			} elseif ( $userIsAvatarOwner ) {
+				// avatar IS default AND user is NOT privileged -> display CTA
+				// prompting the user to upload a new avatar instead
+				$output = $this->msg( 'removeavatar-already-default-cta' )->parse();
+			}
+		}
+
 		return $output;
 	}
 
