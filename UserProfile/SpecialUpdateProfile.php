@@ -74,10 +74,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		}
 
 		// Database operations require write mode
-		if ( wfReadOnly() ) {
-			$out->readOnlyPage();
-			return;
-		}
+		$this->checkReadOnly();
 
 		/**
 		 * Create thresholds based on user stats

@@ -46,10 +46,7 @@ class GenerateTopUsersReport extends SpecialPage {
 		}
 
 		// Is the database locked or not?
-		if ( wfReadOnly() ) {
-			$out->readOnlyPage();
-			return false;
-		}
+		$this->checkReadOnly();
 
 		// Check for the correct permission
 		if ( !$user->isAllowed( 'generatetopusersreport' ) ) {

@@ -136,10 +136,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		if ( !$user->isAllowed( 'upload' ) || $user->isBlocked() ) {
 			throw new ErrorPageError( 'uploadnologin', 'uploadnologintext' );
 		}
-		if ( wfReadOnly() ) {
-			$out->readOnlyPage();
-			return;
-		}
+		$this->checkReadOnly();
 
 		/** Check if the image directory is writeable, this is a common mistake */
 		if ( !is_writeable( $wgUploadDirectory ) ) {

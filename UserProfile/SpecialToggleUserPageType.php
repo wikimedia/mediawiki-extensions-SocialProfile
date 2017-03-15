@@ -37,10 +37,7 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 		}
 
 		// Show a message if the database is in read-only mode
-		if ( wfReadOnly() ) {
-			$out->readOnlyPage();
-			return;
-		}
+		$this->checkReadOnly();
 
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(

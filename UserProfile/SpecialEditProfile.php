@@ -47,10 +47,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		}
 
 		// Database operations require write mode
-		if ( wfReadOnly() ) {
-			$out->readOnlyPage();
-			return;
-		}
+		$this->checkReadOnly();
 
 		// Are we even allowed to do this?
 		if ( !$user->isAllowed( 'editothersprofiles' ) ) {

@@ -48,10 +48,7 @@ class GiftManager extends SpecialPage {
 		}
 
 		// Show a message if the database is in read-only mode
-		if ( wfReadOnly() ) {
-			$out->readOnlyPage();
-			return;
-		}
+		$this->checkReadOnly();
 
 		// Add CSS
 		$out->addModuleStyles( 'ext.socialprofile.usergifts.css' );

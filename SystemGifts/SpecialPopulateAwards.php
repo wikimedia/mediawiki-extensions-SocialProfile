@@ -33,10 +33,7 @@ class PopulateAwards extends UnlistedSpecialPage {
 		}
 
 		// Show a message if the database is in read-only mode
-		if ( wfReadOnly() ) {
-			$out->readOnlyPage();
-			return;
-		}
+		$this->checkReadOnly();
 
 		// If user is blocked, s/he doesn't need to access this page
 		if ( $user->isBlocked() ) {
