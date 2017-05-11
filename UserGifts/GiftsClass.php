@@ -43,7 +43,7 @@ class Gifts {
 	 * @param $gift_description Mixed: a short description about the gift, as supplied by the user
 	 * @param $gift_access Integer: 0 by default
 	 */
-	public function updateGift( $id, $gift_name, $gift_description, $access = 0 ) {
+	public static function updateGift( $id, $gift_name, $gift_description, $access = 0 ) {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update( 'gift',
 			/* SET */array(
