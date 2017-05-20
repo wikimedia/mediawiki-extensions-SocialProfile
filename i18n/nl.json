@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Siebrand"
+			"Siebrand",
+			"Mainframe98"
 		]
 	},
-	"socialprofile-desc": "Een set van sociale hulpmiddelen voor MediaWiki"
+	"socialprofile-desc": "Een set van sociale hulpmiddelen voor MediaWiki",
+	"socialprofile-uploads-disabled": "Het uploaden van avatars is uitgeschakeld"
 }
