@@ -66,6 +66,7 @@
 	"right-avatarremove": "{{doc-right|avatarremove}}",
 	"right-editothersprofiles": "{{doc-right|editothersprofiles}}",
 	"apihelp-socialprofile-userprofileprivacy-description": "{{doc-apihelp-description|socialprofile-userprofileprivacy}}",
+	"apihelp-socialprofile-userprofileprivacy-summary": "{{doc-apihelp-summary|socialprofile-userprofileprivacy}}",
 	"apihelp-socialprofile-userprofileprivacy-param-method": "{{doc-apihelp-param|socialprofile-userprofileprivacy|method}}",
 	"apihelp-socialprofile-userprofileprivacy-param-field_key": "{{doc-apihelp-param|socialprofile-userprofileprivacy|field_key}}",
 	"apihelp-socialprofile-userprofileprivacy-param-privacy": "{{doc-apihelp-param|socialprofile-userprofileprivacy|privacy}}",

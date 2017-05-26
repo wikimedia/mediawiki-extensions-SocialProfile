@@ -9,6 +9,7 @@
 	"ur-add-foe": "{{Identical|Add as foe}}",
 	"ur-remove": "{{Identical|Remove}}",
 	"apihelp-socialprofile-request-response-description": "{{doc-apihelp-description|socialprofile-request-response}}",
+	"apihelp-socialprofile-request-response-summary": "{{doc-apihelp-summary|socialprofile-request-response}}",
 	"apihelp-socialprofile-request-response-param-response": "{{doc-apihelp-param|socialprofile-request-response|response}}",
 	"apihelp-socialprofile-request-response-param-id": "{{doc-apihelp-param|socialprofile-request-response|id}}"
 }

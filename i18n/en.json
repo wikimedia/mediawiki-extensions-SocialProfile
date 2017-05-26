@@ -5,6 +5,7 @@
 	"socialprofile-desc": "A set of social tools for MediaWiki",
 	"socialprofile-uploads-disabled": "The avatar upload feature is disabled",
 	"apihelp-smpuserprivacy-description": "API module for setting the visibility (\"privacy\") of a profile field",
+	"apihelp-smpuserprivacy-summary": "API module for setting the visibility (\"privacy\") of a profile field",
 	"apihelp-smpuserprivacy-param-method": "Action (either \"get\" or \"set\")",
 	"apihelp-smpuserprivacy-param-field_key": "Target field key, such as up_movies for the \"Movies\" field",
 	"apihelp-smpuserprivacy-param-privacy": "New privacy value (one of the following: public, hidden, friends, foaf)",

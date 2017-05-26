@@ -59,9 +59,11 @@
 	"notification-social-msg-send": "$1 just left a message on your user board.<br /><br />''$2''",
 	"notification-social-msg-send-bundle": "{{PLURAL:$1|One person|$1 people|100=99+ people}} left messages on your user board.",
 	"apihelp-socialprofile-send-message-description": "Send a message to a user's UserBoard.",
+	"apihelp-socialprofile-send-message-summary": "Send a message to a user's UserBoard.",
 	"apihelp-socialprofile-send-message-param-username": "The recipient's user name.",
 	"apihelp-socialprofile-send-message-param-message": "A urlencoded version of the message to send.",
 	"apihelp-socialprofile-send-message-param-type": "Message type: 0 for a public message, 1 for a private message.",
 	"apihelp-socialprofile-delete-message-description": "Delete a UserBoard message.",
+	"apihelp-socialprofile-delete-message-summary": "Delete a UserBoard message.",
 	"apihelp-socialprofile-delete-message-param-id": "Unique identifier of the board message to delete."
 }
