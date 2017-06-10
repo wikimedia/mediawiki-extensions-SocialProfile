@@ -5,5 +5,6 @@
 		]
 	},
 	"socialprofile-desc": "Набор сацыяльных інструмэнтаў для MediaWiki",
-	"socialprofile-uploads-disabled": "Функцыя загрузкі аватараў адключаная"
+	"socialprofile-uploads-disabled": "Функцыя загрузкі аватараў адключаная",
+	"apihelp-smpuserprivacy-description": "API-модуль для выстаўленьня бачнасьці («прыватнасьці») поля профілю"
 }
