@@ -8,5 +8,6 @@
 	"socialprofile-uploads-disabled": "Функцыя загрузкі аватараў адключаная",
 	"apihelp-smpuserprivacy-description": "API-модуль для выстаўленьня бачнасьці («прыватнасьці») поля профілю",
 	"apihelp-smpuserprivacy-param-method": "Дзеяньне («get» ці «set»)",
-	"apihelp-smpuserprivacy-param-field_key": "Ключ мэтавага поля, такі як up_movies для поля «Movies»"
+	"apihelp-smpuserprivacy-param-field_key": "Ключ мэтавага поля, такі як up_movies для поля «Movies»",
+	"apihelp-smpuserprivacy-param-privacy": "Новае значэньне прыватнасьці (адно з наступных: public, hidden, friends, foaf)"
 }
