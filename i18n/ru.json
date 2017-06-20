@@ -1,9 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"Okras"
+			"Okras",
+			"Facenapalm"
 		]
 	},
 	"socialprofile-desc": "Набор социальных инструментов для MediaWiki",
-	"socialprofile-uploads-disabled": "Функция загрузки аватара отключена"
+	"socialprofile-uploads-disabled": "Функция загрузки аватара отключена",
+	"apihelp-smpuserprivacy-description": "Модуль API для установки видимости («конфиденциальности») поля профиля",
+	"apihelp-smpuserprivacy-summary": "Модуль API для установки видимости («конфиденциальности») поля профиля",
+	"apihelp-smpuserprivacy-param-method": "Действие («get» или «set»)",
+	"apihelp-smpuserprivacy-param-field_key": "Ключ целевого поля, например, up_movies для поля «Фильмы»",
+	"apihelp-smpuserprivacy-param-privacy": "Новое значения конфиденциальности (одно из следующих значений: public, hidden, friends, foaf)",
+	"apihelp-smpuserprivacy-param-tuid": "Целевой пользователь (идентификатор)"
 }
