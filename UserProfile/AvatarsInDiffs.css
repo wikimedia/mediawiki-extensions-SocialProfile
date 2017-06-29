@@ -1,0 +1,58 @@
+/* Various interesting bits and pieces from wikiHow's /skins/common/diff.css
+ * @date 25 April 2015 (with tweaks in December 2016 to remove stuff we don't
+ * need for SocialProfile)
+ */
+table.diff td {
+	text-align: left;
+}
+
+#mw-diff-otitle1,
+#mw-diff-ntitle1,
+#mw-diff-otitle4,
+#mw-diff-ntitle4,
+.rccomment {
+	text-align: center;
+}
+
+#mw-diff-otitle2,
+#mw-diff-ntitle2 {
+	padding: .5em;
+	margin: 1em 0;
+}
+
+#mw-diff-oinfo .comment {
+	display: block;
+}
+
+table.diff td.diff-multi {
+	text-align: center;
+}
+
+table.diff td div {
+	/* As fallback, scrollbars will be added for very wide cells
+	   instead of text overflowing or widening */
+	overflow: auto;
+}
+
+table.diff h4 {
+	font-size: 14px;
+	background: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* details at top */
+.diff_details {
+	margin: 0 auto;
+}
+
+.diff-avatar {
+	border-radius: .125em;
+	float: left;
+	margin: 0 .75em 0 0;
+}
+
+.diff-hr {
+	border: 0;
+	margin: 1em 0 0 0;
+}

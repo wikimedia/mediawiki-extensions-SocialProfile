@@ -3,6 +3,9 @@
 define( 'NS_USER_PROFILE', 202 );
 define( 'NS_USER_WIKI', 200 );
 
+// Show user avatars in diffs?
+$wgUserProfileAvatarsInDiffs = false;
+
 /**
  * If you want to require users to have a certain number of certain things, like
  * five edits or three friends or two comments or whatever (is supported by
@@ -92,6 +95,14 @@ $wgResourceModules['ext.userProfile.updateProfile'] = array(
 	'position' => 'top'
 );
 
+// CSS for user avatars in page diffs
+$wgResourceModules['ext.socialprofile.userprofile.diff'] = array(
+	'styles' => 'AvatarsInDiffs.css',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'SocialProfile/UserProfile',
+	'position' => 'top'
+);
+
 # Add new log types for profile edits and avatar uploads
 global $wgLogTypes, $wgLogNames, $wgLogHeaders, $wgLogActions;
 $wgLogTypes[]                    = 'profile';
@@ -105,3 +116,8 @@ $wgLogHeaders['avatar']          = 'avatarlogpagetext';
 $wgLogActions['avatar/avatar'] = 'avatarlogentry';
 
 $wgHooks['ArticleFromTitle'][] = 'UserProfileHooks::onArticleFromTitle';
+
+$wgHooks['DifferenceEngineShowDiff'][] = 'UserProfileHooks::onDifferenceEngineShowDiff';
+$wgHooks['DifferenceEngineShowDiffPage'][] = 'UserProfileHooks::onDifferenceEngineShowDiffPage';
+$wgHooks['DifferenceEngineOldHeader'][] = 'UserProfileHooks::onDifferenceEngineOldHeader';
+$wgHooks['DifferenceEngineNewHeader'][] = 'UserProfileHooks::onDifferenceEngineNewHeader';
