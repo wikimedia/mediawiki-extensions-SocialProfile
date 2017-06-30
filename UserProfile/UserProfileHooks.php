@@ -95,7 +95,7 @@ class UserProfileHooks {
 	 * (as of 2016-07-08) with some tweaks for SocialProfile.
 	 *
 	 * @author Scott Cushman@wikiHow -- original code
-	 * @author Jack Phoenix -- modifications
+	 * @author Jack Phoenix, Samantha Nguyen -- modifications
 	 */
 	public static function onDifferenceEngineOldHeader( $differenceEngine, &$oldHeader, $prevLink, $oldMinor, $diffOnly, $ldel, $unhide ) {
 		global $wgUserProfileAvatarsInDiffs;
@@ -114,7 +114,7 @@ class UserProfileHooks {
 			'class' => 'diff-avatar'
 		] );
 
-		$oldHeader = '<div id="mw-diff-otitle1"><h4>' . $prevLink . $oldRevisionHeader . '</h4></div>' .
+		$oldHeader = '<div id="mw-diff-otitle1"><h4>' . $oldRevisionHeader . '</h4></div>' .
 			'<div id="mw-diff-otitle2">' . $avatarElement . '<div id="mw-diff-oinfo">' .
 			Linker::revUserTools( $differenceEngine->mOldRev, !$unhide ) .
 			//'<br /><div id="mw-diff-odaysago">' . $differenceEngine->mOldRev->getTimestamp() . '</div>' .
@@ -133,7 +133,7 @@ class UserProfileHooks {
 	 * (as of 2016-07-08) with some tweaks for SocialProfile.
 	 *
 	 * @author Scott Cushman@wikiHow -- original code
-	 * @author Jack Phoenix -- modifications
+	 * @author Jack Phoenix, Samantha Nguyen -- modifications
 	 */
 	public static function onDifferenceEngineNewHeader( $differenceEngine, &$newHeader, $formattedRevisionTools, $nextLink, $rollback, $newMinor, $diffOnly, $rdel, $unhide ) {
 		global $wgUserProfileAvatarsInDiffs;
@@ -154,7 +154,7 @@ class UserProfileHooks {
 			'class' => 'diff-avatar'
 		] );
 
-		$newHeader = '<div id="mw-diff-ntitle1"><h4>' . $newRevisionHeader . $nextLink . '</h4></div>' .
+		$newHeader = '<div id="mw-diff-ntitle1"><h4>' . $newRevisionHeader . '</h4></div>' .
 			'<div id="mw-diff-ntitle2">' . $avatarElement . '<div id="mw-diff-oinfo">'
 			. Linker::revUserTools( $differenceEngine->mNewRev, !$unhide ) .
 			" $rollback " .
@@ -162,7 +162,7 @@ class UserProfileHooks {
 			Linker::revComment( $differenceEngine->mNewRev, !$diffOnly, !$unhide ) .
 			'</div></div>' .
 			'<div id="mw-diff-ntitle3" class="rccomment">' . $newMinor . $rdel . '</div>' .
-			'<div id="mw-diff-ntitle4">' . $differenceEngine->markPatrolledLink() . '</div>';
+			'<div id="mw-diff-ntitle4">' . $nextLink . $differenceEngine->markPatrolledLink() . '</div>';
 
 		return true;
 	}
