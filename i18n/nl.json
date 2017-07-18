@@ -6,5 +6,6 @@
 		]
 	},
 	"socialprofile-desc": "Een set van sociale hulpmiddelen voor MediaWiki",
-	"socialprofile-uploads-disabled": "Het uploaden van avatars is uitgeschakeld"
+	"socialprofile-uploads-disabled": "Het uploaden van avatars is uitgeschakeld",
+	"apihelp-smpuserprivacy-param-tuid": "Doelgebruiker (ID)"
 }
