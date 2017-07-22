@@ -60,6 +60,14 @@ class ApiUserProfilePrivacy extends ApiBase {
 		$result->addValue( null, $this->getModuleName(), $data );
 	}
 
+	public function needsToken() {
+		return 'csrf';
+	}
+
+	public function isWriteMode() {
+		return true;
+	}
+
 	/**
 	 * @return array
 	 */

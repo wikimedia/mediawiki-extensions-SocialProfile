@@ -13,48 +13,42 @@ var UserBoard = {
 			var encodedName = encodeURIComponent( recipient ),
 				encodedMsg = encodeURIComponent( message ),
 				messageType = document.getElementById( 'message_type' ).value;
-			jQuery.post(
-				mediaWiki.util.wikiScript( 'api' ), {
-					action: 'socialprofile-send-message',
-					format: 'json',
-					username: encodedName,
-					message: encodedMsg,
-					type: messageType
-				},
-				function() {
-					UserBoard.posted = 0;
-					var user_1, user_2;
-					if ( sender ) { // it's a board to board
-						user_1 = sender;
-						user_2 = recipient;
-					} else {
-						user_1 = recipient;
-						user_2 = '';
-					}
-					var params = ( user_2 ) ? '&conv=' + user_2 : '';
-					var url = mediaWiki.config.get( 'wgScriptPath' ) + '/index.php?title=Special:UserBoard&user=' + user_1 + params;
-					window.location = url;
+			( new mw.Api() ).postWithToken( 'edit', {
+				action: 'socialprofile-send-message',
+				format: 'json',
+				username: encodedName,
+				message: encodedMsg,
+				type: messageType
+			} ).done( function() {
+				UserBoard.posted = 0;
+				var user_1, user_2;
+				if ( sender ) { // it's a board to board
+					user_1 = sender;
+					user_2 = recipient;
+				} else {
+					user_1 = recipient;
+					user_2 = '';
 				}
-			);
+				var params = ( user_2 ) ? '&conv=' + user_2 : '';
+				var url = mediaWiki.config.get( 'wgScriptPath' ) + '/index.php?title=Special:UserBoard&user=' + user_1 + params;
+				window.location = url;
+			} );
 		}
 	},
 
 	deleteMessage: function( id ) {
 		if ( window.confirm( mediaWiki.msg( 'userboard_confirmdelete' ) ) ) {
-			jQuery.post(
-				mediaWiki.util.wikiScript( 'api' ), {
-					action: 'socialprofile-delete-message',
-					format: 'json',
-					'id': id
-				},
-				function() {
-					//window.location.reload();
-					// 1st parent = span.user-board-red
-					// 2nd parent = div.user-board-message-links
-					// 3rd parent = div.user-board-message = the container of a msg
-					jQuery( '[data-message-id="' + id + '"]' ).parent().parent().parent().hide( 100 );
-				}
-			);
+			( new mw.Api() ).postWithToken( 'edit', {
+				action: 'socialprofile-delete-message',
+				format: 'json',
+				'id': id
+			} ).done( function() {
+				//window.location.reload();
+				// 1st parent = span.user-board-red
+				// 2nd parent = div.user-board-message-links
+				// 3rd parent = div.user-board-message = the container of a msg
+				jQuery( '[data-message-id="' + id + '"]' ).parent().parent().parent().hide( 100 );
+			} );
 		}
 	}
 };

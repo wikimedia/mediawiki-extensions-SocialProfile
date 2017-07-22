@@ -14,39 +14,33 @@ var UserProfilePage = {
 			msgType = document.getElementById( 'message_type' ).value;
 		if ( document.getElementById( 'message' ).value && !UserProfilePage.posted ) {
 			UserProfilePage.posted = 1;
-			jQuery.post(
-				mediaWiki.util.wikiScript( 'api' ), {
-					action: 'socialprofile-send-message',
-					format: 'json',
-					username: userTo,
-					message: encMsg,
-					type: msgType
-				},
-				function( data ) {
-					jQuery( data.result ).prependTo( '#user-page-board' );
-					UserProfilePage.posted = 0;
-					jQuery( '#message' ).val( '' );
-				}
-			);
+			( new mw.Api() ).postWithToken( 'edit', {
+				action: 'socialprofile-send-message',
+				format: 'json',
+				username: userTo,
+				message: encMsg,
+				type: msgType
+			} ).done( function( data ) {
+				jQuery( data.result ).prependTo( '#user-page-board' );
+				UserProfilePage.posted = 0;
+				jQuery( '#message' ).val( '' );
+			} );
 		}
 	},
 
 	deleteMessage: function( id ) {
 		if ( window.confirm( mediaWiki.msg( 'user-board-confirm-delete' ) ) ) {
-			jQuery.post(
-				mediaWiki.util.wikiScript( 'api' ), {
-					action: 'socialprofile-delete-message',
-					format: 'json',
-					'id': id
-				},
-				function() {
-					//window.location.reload();
-					// 1st parent = span.user-board-red
-					// 2nd parent = div.user-board-message-links
-					// 3rd parent = div.user-board-message = the container of a msg
-					jQuery( '[data-message-id="' + id + '"]' ).parent().parent().parent().hide( 100 );
-				}
-			);
+			( new mw.Api() ).postWithToken( 'edit', {
+				action: 'socialprofile-delete-message',
+				format: 'json',
+				'id': id
+			} ).done( function() {
+				//window.location.reload();
+				// 1st parent = span.user-board-red
+				// 2nd parent = div.user-board-message-links
+				// 3rd parent = div.user-board-message = the container of a msg
+				jQuery( '[data-message-id="' + id + '"]' ).parent().parent().parent().hide( 100 );
+			} );
 		}
 	},
 

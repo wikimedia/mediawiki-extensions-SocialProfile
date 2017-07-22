@@ -150,7 +150,7 @@ $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'SocialProfile',
 	'author' => array( 'Aaron Wright', 'David Pean', 'Jack Phoenix' ),
-	'version' => '1.12',
+	'version' => '1.13',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile',
 	'descriptionmsg' => 'socialprofile-desc',
 );
@@ -301,6 +301,7 @@ $wgResourceModules['ext.socialprofile.LightBox'] = array(
 // UserBoard
 $wgResourceModules['ext.socialprofile.userboard.js'] = array(
 	'scripts' => 'UserBoard.js',
+	'dependencies' => array( 'mediawiki.api' ),
 	'messages' => array( 'userboard_confirmdelete' ),
 	'localBasePath' => __DIR__ . '/UserBoard',
 	'remoteExtPath' => 'SocialProfile/UserBoard',

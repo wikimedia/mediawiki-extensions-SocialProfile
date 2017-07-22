@@ -105,16 +105,12 @@ $( function() {
 
 		$( this_element ).find( 'div.title' ).html( '...' );
 
-		$.ajax( {
-			type: 'GET',
-			url: mediaWiki.util.wikiScript( 'api' ),
-			data: {
-				action: 'smpuserprivacy',
-				format: 'json',
-				method: 'set',
-				'field_key': field_key,
-				privacy: encodeURIComponent( priv )
-			}
+		( new mw.Api() ).postWithToken( 'edit', {
+			action: 'smpuserprivacy',
+			format: 'json',
+			method: 'set',
+			'field_key': field_key,
+			privacy: encodeURIComponent( priv )
 		} ).done( function( data ) {
 			var offset = $( this_element ).offset();
 			$( this_element ).remove();

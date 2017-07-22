@@ -81,7 +81,7 @@ $wgResourceModules['ext.socialprofile.userprofile.css'] = array(
 $wgResourceModules['ext.socialprofile.userprofile.js'] = array(
 	'scripts' => 'UserProfilePage.js',
 	'messages' => array( 'user-board-confirm-delete' ),
-	'dependencies' => 'mediawiki.util',
+	'dependencies' => array( 'mediawiki.api', 'mediawiki.util' ),
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserProfile',
 );
@@ -89,7 +89,7 @@ $wgResourceModules['ext.socialprofile.userprofile.js'] = array(
 // Modules for Special:EditProfile/Special:UpdateProfile
 $wgResourceModules['ext.userProfile.updateProfile'] = array(
 	'scripts' => 'UpdateProfile.js',
-	'dependencies' => array( 'mediawiki.util', 'jquery.ui.datepicker' ),
+	'dependencies' => array( 'mediawiki.api', 'mediawiki.util', 'jquery.ui.datepicker' ),
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserProfile',
 	'position' => 'top'

@@ -27,6 +27,14 @@ class ApiDeleteUserBoardMessage extends ApiBase {
 		return true;
 	}
 
+	public function needsToken() {
+		return 'csrf';
+	}
+
+	public function isWriteMode() {
+		return true;
+	}
+
 	public function getAllowedParams() {
 		return array_merge( parent::getAllowedParams(), array(
 			'id' => array(
