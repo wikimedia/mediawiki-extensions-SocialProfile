@@ -252,11 +252,10 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			<p class="profile-update-unit-left" id="location_state_label">' . $this->msg( 'user-profile-personal-country' )->plain() . '</p>';
 		$form .= '<p class="profile-update-unit">';
 		$form .= '<span id="location_state_form">';
-		$form .= "</span>
-				<script type=\"text/javascript\">
-					displaySection(\"location_state\",\"" . $location_country . "\",\"" . ( isset( $location_state ) ? $location_state : '' ) . "\");
-				</script>";
-		$form .= "<select name=\"location_country\" id=\"location_country\" onchange=\"displaySection('location_state',this.value,'')\"><option></option>";
+		$form .= '</span>';
+		// Hidden helper for UpdateProfile.js since JS cannot directly access PHP variables
+		$form .= '<input type="hidden" id="location_state_current" value="' . ( isset( $location_state ) ? $location_state : '' ) . '" />';
+		$form .= '<select name="location_country" id="location_country"><option></option>';
 
 		foreach ( $countries as $country ) {
 			$form .= "<option value=\"{$country}\"" . ( ( $country == $location_country ) ? ' selected="selected"' : '' ) . ">";
@@ -277,11 +276,10 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			<p class="profile-update-unit-left" id="hometown_state_label">' . $this->msg( 'user-profile-personal-country' )->plain() . '</p>
 			<p class="profile-update-unit">';
 		$form .= '<span id="hometown_state_form">';
-		$form .= "</span>
-			<script type=\"text/javascript\">
-				displaySection(\"hometown_state\",\"" . $hometown_country . "\",\"" . ( isset( $hometown_state ) ? $hometown_state : '' ) . "\");
-			</script>";
-		$form .= "<select name=\"hometown_country\" id=\"hometown_country\" onchange=\"displaySection('hometown_state',this.value,'')\"><option></option>";
+		$form .= '</span>';
+		// Hidden helper for UpdateProfile.js since JS cannot directly access PHP variables
+		$form .= '<input type="hidden" id="hometown_state_current" value="' . ( isset( $hometown_state ) ? $hometown_state : '' ) . '" />';
+		$form .= '<select name="hometown_country" id="hometown_country"><option></option>';
 
 		foreach ( $countries as $country ) {
 			$form .= "<option value=\"{$country}\"" . ( ( $country == $hometown_country ) ? ' selected="selected"' : '' ) . ">";
@@ -505,4 +503,23 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 
 		return $form;
 	}
+
+	/**
+	 * Return an array of subpages beginning with $search that this special page will accept.
+	 *
+	 * @param string $search Prefix to search for
+	 * @param int $limit Maximum number of results to return (usually 10)
+	 * @param int $offset Number of results to skip (usually 0)
+	 * @return string[] Matching subpages
+	 */
+	public function prefixSearchSubpages( $search, $limit, $offset ) {
+		$user = User::newFromName( $search );
+		if ( !$user ) {
+			// No prefix suggestion for invalid user
+			return [];
+		}
+		// Autocomplete subpage as user list - public to allow caching
+		return UserNamePrefixSearch::search( 'public', $search, $limit, $offset );
+	}
+
 }

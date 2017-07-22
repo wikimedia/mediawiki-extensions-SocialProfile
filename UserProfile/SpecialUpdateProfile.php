@@ -546,12 +546,11 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			<div class="visualClear">' . $this->renderEye( 'up_location_city' ) . '</div>
 			<p class="profile-update-unit-left" id="location_state_label">' . $this->msg( 'user-profile-personal-country' )->plain() . '</p>';
 		$form .= '<p class="profile-update-unit">';
+		// Hidden helper for UpdateProfile.js since JS cannot directly access PHP variables
+		$form .= '<input type="hidden" id="location_state_current" value="' . ( isset( $location_state ) ? $location_state : '' ) . '" />';
 		$form .= '<span id="location_state_form">';
-		$form .= "</span>
-				<script type=\"text/javascript\">
-					displaySection(\"location_state\",\"" . $location_country . "\",\"" . ( isset( $location_state ) ? $location_state : '' ) . "\");
-				</script>";
-		$form .= "<select name=\"location_country\" id=\"location_country\" onchange=\"displaySection('location_state',this.value,'')\"><option></option>";
+		$form .= '</span>';
+		$form .= '<select name="location_country" id="location_country"><option></option>';
 
 		foreach ( $countries as $country ) {
 			$form .= "<option value=\"{$country}\"" . ( ( $country == $location_country ) ? ' selected="selected"' : '' ) . ">";
@@ -572,11 +571,10 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			<p class="profile-update-unit-left" id="hometown_state_label">' . $this->msg( 'user-profile-personal-country' )->plain() . '</p>
 			<p class="profile-update-unit">';
 		$form .= '<span id="hometown_state_form">';
-		$form .= "</span>
-			<script type=\"text/javascript\">
-				displaySection(\"hometown_state\",\"" . $hometown_country . "\",\"" . ( isset( $hometown_state ) ? $hometown_state : '' ) . "\");
-			</script>";
-		$form .= "<select name=\"hometown_country\" id=\"hometown_country\" onchange=\"displaySection('hometown_state',this.value,'')\"><option></option>";
+		$form .= '</span>';
+		// Hidden helper for UpdateProfile.js since JS cannot directly access PHP variables
+		$form .= '<input type="hidden" id="hometown_state_current" value="' . ( isset( $hometown_state ) ? $hometown_state : '' ) . '" />';
+		$form .= '<select name="hometown_country" id="hometown_country"><option></option>';
 
 		foreach ( $countries as $country ) {
 			$form .= "<option value=\"{$country}\"" . ( ( $country == $hometown_country ) ? ' selected="selected"' : '' ) . ">";
