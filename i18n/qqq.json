@@ -1,11 +1,15 @@
 {
-	"@metadata": [],
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226"
+		]
+	},
 	"socialprofile-desc": "{{desc|name=Social Profile|url=https://www.mediawiki.org/wiki/Extension:SocialProfile}}",
 	"socialprofile-uploads-disabled": "Notification that the avatar upload feature is disabled shown to users on the avatar upload form.",
 	"apihelp-smpuserprivacy-description": "{{doc-apihelp-description|smpuserprivacy}}",
 	"apihelp-smpuserprivacy-summary": "{{doc-apihelp-summary|smpuserprivacy}}",
 	"apihelp-smpuserprivacy-param-method": "{{doc-apihelp-param|smpuserprivacy|method}}",
-	"apihelp-smpuserprivacy-param-field_key": "{{doc-apihelp-param|smpuserprivacy|field_key}}",
-	"apihelp-smpuserprivacy-param-privacy": "{{doc-apihelp-param|smpuserprivacy|privacy}}",
+	"apihelp-smpuserprivacy-param-field_key": "{{doc-important|Do not translate \"up_movies\".}}\n{{doc-apihelp-param|smpuserprivacy|field_key}}",
+	"apihelp-smpuserprivacy-param-privacy": "{{doc-important|Do not translate \"public, hidden, friends, foaf\", though you are feel free to change commas here.}}\n{{doc-apihelp-param|smpuserprivacy|privacy}}",
 	"apihelp-smpuserprivacy-param-tuid": "{{doc-apihelp-param|smpuserprivacy|tuid}}"
 }
