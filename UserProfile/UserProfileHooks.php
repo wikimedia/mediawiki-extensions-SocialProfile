@@ -2,6 +2,40 @@
 
 class UserProfileHooks {
 	/**
+	 * Add a class to the <body> element on user pages to indicate which type
+	 * of user page -- social profile or traditional wiki user page -- has been
+	 * chosen by the user in question to make CSS styling easier.
+	 *
+	 * @see https://phabricator.wikimedia.org/T167506
+	 * @param OutputPage $out
+	 * @param Skin $skin
+	 * @param array $bodyAttrs Pre-existing attributes of the <body> tag
+	 * @return bool
+	 */
+	public static function onOutputPageBodyAttributes( $out, $skin, &$bodyAttrs ) {
+		global $wgUserPageChoice;
+
+		$title = $out->getTitle();
+		// Only NS_USER is "ambiguous", NS_USER_PROFILE and NS_USER_WIKI are not
+		// Also we don't care about subpages here since only the main user page
+		// can be something else than wikitext
+		if ( $title->inNamespace( NS_USER ) && !$title->isSubpage() && $wgUserPageChoice ) {
+			$profile = new UserProfile( $title->getText() );
+			$profile_data = $profile->getProfile();
+
+			if ( isset( $profile_data['user_id'] ) && $profile_data['user_id'] ) {
+				if ( $profile_data['user_page_type'] == 0 ) {
+					$bodyAttrs['class'] .= ' mw-wiki-user-page';
+				} else {
+					$bodyAttrs['class'] .= ' mw-social-profile-page';
+				}
+			}
+		}
+
+		return true;
+	}
+
+	/**
 	 * Called by ArticleFromTitle hook
 	 * Calls UserProfilePage instead of standard article
 	 *
