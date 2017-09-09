@@ -74,7 +74,7 @@ class UserActivity {
 	 * appropriate class member variables.
 	 */
 	private function setEdits() {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$where = array();
 
@@ -166,7 +166,7 @@ class UserActivity {
 	 * set them in the appropriate class member variables.
 	 */
 	private function setVotes() {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		# Bail out if Vote table doesn't exist
 		if ( !$dbr->tableExists( 'Vote' ) ) {
@@ -237,7 +237,7 @@ class UserActivity {
 	 * extension) and set them in the appropriate class member variables.
 	 */
 	private function setComments() {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		# Bail out if Comments table doesn't exist
 		if ( !$dbr->tableExists( 'Comments' ) ) {
@@ -338,7 +338,7 @@ class UserActivity {
 	 * and set them in the appropriate class member variables.
 	 */
 	private function setGiftsSent() {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$where = array();
 
@@ -404,7 +404,7 @@ class UserActivity {
 	 * tables and set them in the appropriate class member variables.
 	 */
 	private function setGiftsRec() {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$where = array();
 
@@ -501,7 +501,7 @@ class UserActivity {
 	private function setSystemGiftsRec() {
 		global $wgUploadPath;
 
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$where = array();
 
@@ -594,7 +594,7 @@ class UserActivity {
 	private function setRelationships() {
 		global $wgLang;
 
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$where = array();
 
@@ -683,7 +683,7 @@ class UserActivity {
 	 * and set them in the appropriate class member variables.
 	 */
 	private function setMessagesSent() {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$where = array();
 		// We do *not* want to display private messages...
@@ -778,7 +778,7 @@ class UserActivity {
 	private function setSystemMessages() {
 		global $wgLang;
 
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$where = array();
 
@@ -858,7 +858,7 @@ class UserActivity {
 			return;
 		}
 
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$where = array();
 

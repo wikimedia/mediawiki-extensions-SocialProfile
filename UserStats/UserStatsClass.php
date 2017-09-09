@@ -105,7 +105,7 @@ class UserStatsTrack {
 	 * Checks if records for the given user are present in user_stats table and if not, adds them
 	 */
 	function initStatsTrack() {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_stats',
 			array( 'stats_user_id' ),
@@ -813,7 +813,7 @@ class UserStats {
 	 * 					amount of points the user has
 	 */
 	static function getTopFansList( $limit = 10 ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$res = $dbr->select(
 			'user_stats',
@@ -853,7 +853,7 @@ class UserStats {
 			$pointsTable = 'user_points_weekly';
 		}
 
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
 			$pointsTable,
 			array( 'up_user_id', 'up_user_name', 'up_points' ),
@@ -919,7 +919,7 @@ class UserStats {
 			$sort = 'DESC';
 		}
 
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
 			array( 'user_stats', 'user_relationship' ),
 			array( 'stats_user_id', 'stats_user_name', 'stats_total_points' ),

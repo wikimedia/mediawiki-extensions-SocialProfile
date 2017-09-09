@@ -163,7 +163,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 	}
 
 	function displayBasicForm( $tar ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_profile',
 			array(
@@ -355,7 +355,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 	}
 
 	function displayPersonalForm( $tar ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_profile',
 			array(
@@ -444,7 +444,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 	 * @return $form Mixed: HTML output
 	 */
 	function displayCustomForm( $tar ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_profile',
 			array(

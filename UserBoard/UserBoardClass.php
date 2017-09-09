@@ -218,7 +218,7 @@ class UserBoard {
 	 * @return Boolean: true if user owns the message, otherwise false
 	 */
 	public function doesUserOwnMessage( $user_id, $ub_id ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_board',
 			array( 'ub_user_id' ),
@@ -281,7 +281,7 @@ class UserBoard {
 	 */
 	public function getUserBoardMessages( $user_id, $user_id_2 = 0, $limit = 0, $page = 0 ) {
 		global $wgUser, $wgOut, $wgTitle;
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		if ( $limit > 0 ) {
 			$limitvalue = 0;
@@ -349,7 +349,7 @@ class UserBoard {
 	public function getUserBoardToBoardCount( $user_id, $user_id_2 ) {
 		global $wgUser;
 
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$user_sql = " ( (ub_user_id={$user_id} AND ub_user_id_from={$user_id_2}) OR
 					(ub_user_id={$user_id_2} AND ub_user_id_from={$user_id}) )";

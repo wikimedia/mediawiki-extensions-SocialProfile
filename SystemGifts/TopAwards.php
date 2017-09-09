@@ -98,7 +98,7 @@ class TopAwards extends UnlistedSpecialPage {
 		}
 
 		// Database calls
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
 			array( 'user_system_gift', 'system_gift' ),
 			array(

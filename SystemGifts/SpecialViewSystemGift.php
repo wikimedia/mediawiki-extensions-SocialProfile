@@ -57,7 +57,7 @@ class ViewSystemGift extends UnlistedSpecialPage {
 				}
 			}
 			// DB stuff
-			$dbr = wfGetDB( DB_SLAVE );
+			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
 				'user_system_gift',
 				array(

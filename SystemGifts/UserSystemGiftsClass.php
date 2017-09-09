@@ -129,7 +129,7 @@ class UserSystemGifts {
 	 * @return Boolean: true if the user has the gift, otherwise false
 	 */
 	public function doesUserHaveGift( $user_id, $gift_id ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_system_gift',
 			array( 'sg_status' ),
@@ -172,7 +172,7 @@ class UserSystemGifts {
 	 *					otherwise false
 	 */
 	public function doesUserOwnGift( $user_id, $sg_id ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_system_gift',
 			array( 'sg_user_id' ),
@@ -211,7 +211,7 @@ class UserSystemGifts {
 	 * @return Array: array containing information about the system gift
 	 */
 	static function getUserGift( $id ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
 			array( 'user_system_gift', 'system_gift' ),
 			array(
@@ -330,7 +330,7 @@ class UserSystemGifts {
 
 		global $wgMemc;
 		$key = wfMemcKey( 'system_gifts', 'new_count', $user_id );
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$new_gift_count = 0;
 		$s = $dbr->selectRow(
 			'user_system_gift',
@@ -357,7 +357,7 @@ class UserSystemGifts {
 	 * @return Array: array of system gift information
 	 */
 	public function getUserGiftList( $type, $limit = 0, $page = 0 ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$limitvalue = 0;
 		if ( $limit > 0 && $page ) {
@@ -423,7 +423,7 @@ class UserSystemGifts {
 	 * @return Integer: gift count for the specified user
 	 */
 	static function getGiftCountByUsername( $user_name ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$user_id = User::idFromName( $user_name );
 		$res = $dbr->select(
 			'user_system_gift',

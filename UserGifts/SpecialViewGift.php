@@ -54,7 +54,7 @@ class ViewGift extends UnlistedSpecialPage {
 			}
 
 			// DB stuff
-			$dbr = wfGetDB( DB_SLAVE );
+			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
 				'user_gift',
 				array( 'DISTINCT ug_user_name_to', 'ug_user_id_to', 'ug_date' ),

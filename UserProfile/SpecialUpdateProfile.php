@@ -458,7 +458,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * @param $user Object: User
 	 */
 	function displayBasicForm( $user ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow( 'user_profile',
 			array(
 				'up_location_city', 'up_location_state', 'up_location_country',
@@ -661,7 +661,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * @param $user Object: User
 	 */
 	function displayPersonalForm( $user ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_profile',
 			array(
@@ -757,7 +757,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	function displayPreferencesForm() {
 		$user = $this->getUser();
 
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_profile',
 			array( 'up_birthday' ),

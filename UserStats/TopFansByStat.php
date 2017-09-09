@@ -35,7 +35,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 		// Load CSS
 		$out->addModuleStyles( 'ext.socialprofile.userstats.css' );
 
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$statistic = trim( $request->getVal( 'stat', $par ) );
 		$column = "stats_{$statistic}";

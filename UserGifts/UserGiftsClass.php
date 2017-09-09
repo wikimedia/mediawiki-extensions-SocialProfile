@@ -153,7 +153,7 @@ class UserGifts {
 	 * @return Boolean: true if the user owns the gift, otherwise false
 	 */
 	public function doesUserOwnGift( $user_id, $ug_id ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_gift',
 			array( 'ug_user_id_to' ),
@@ -189,7 +189,7 @@ class UserGifts {
 			return '';
 		}
 
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
 			array( 'user_gift', 'gift' ),
 			array(
@@ -308,7 +308,7 @@ class UserGifts {
 
 		global $wgMemc;
 		$key = wfMemcKey( 'user_gifts', 'new_count', $user_id );
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$newGiftCount = 0;
 		$s = $dbr->selectRow(
 			'user_gift',
@@ -326,7 +326,7 @@ class UserGifts {
 	}
 
 	public function getUserGiftList( $type, $limit = 0, $page = 0 ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$params = array();
 
 		if ( $limit > 0 ) {
@@ -372,7 +372,7 @@ class UserGifts {
 	}
 
 	public function getAllGiftList( $limit = 10, $page = 0 ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$params = array();
 
 		$params['ORDER BY'] = 'ug_id DESC';
@@ -439,7 +439,7 @@ class UserGifts {
 	 * @return Integer: amount of gifts the specified user has
 	 */
 	static function getGiftCountByUsername( $userName ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$userId = User::idFromName( $userName );
 
 		$res = $dbr->select(

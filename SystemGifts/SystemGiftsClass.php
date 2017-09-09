@@ -112,7 +112,7 @@ class SystemGifts {
 	 *                          gift, else the gift's ID number
 	 */
 	public function doesUserHaveGift( $user_id, $gift_id ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_system_gift',
 			array( 'sg_gift_id' ),
@@ -176,7 +176,7 @@ class SystemGifts {
 	}
 
 	public function doesGiftExistForThreshold( $category, $threshold ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$awardCategory = 0;
 		if ( isset( $this->categories[$category] ) ) {
@@ -207,7 +207,7 @@ class SystemGifts {
 	 *                the gift ID, its name, description, category, threshold
 	 */
 	static function getGift( $id ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
 			'system_gift',
 			array(
@@ -261,7 +261,7 @@ class SystemGifts {
 	 *                to) gift ID, creation timestamp, name, description, etc.
 	 */
 	static function getGiftList( $limit = 0, $page = 0 ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$limitvalue = 0;
 		if ( $limit > 0 && $page ) {
@@ -305,7 +305,7 @@ class SystemGifts {
 	 * @return Integer: the amount of all system gifts on the database
 	 */
 	static function getGiftCount() {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$gift_count = 0;
 		$s = $dbr->selectRow(
 			'system_gift',

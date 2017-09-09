@@ -431,7 +431,7 @@ class UserRelationship {
 	 * @return bool
 	 */
 	public function verifyRelationshipRequest( $relationshipRequestId ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_relationship_request',
 			array( 'ur_user_id_to' ),
@@ -452,7 +452,7 @@ class UserRelationship {
 	 * @return Mixed: integer or boolean false
 	 */
 	static function getUserRelationshipByID( $user1, $user2 ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_relationship',
 			array( 'r_type' ),
@@ -472,7 +472,7 @@ class UserRelationship {
 	 * @return bool
 	 */
 	static function userHasRequestByID( $user1, $user2 ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_relationship_request',
 			array( 'ur_type' ),
@@ -498,7 +498,7 @@ class UserRelationship {
 	 *                ID, type, requester, etc.
 	 */
 	public function getRequest( $id ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
 			'user_relationship_request',
 			array(
@@ -536,7 +536,7 @@ class UserRelationship {
 	 * @return Array: array of open relationship requests
 	 */
 	public function getRequestList( $status, $limit = 0 ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$options = array();
 
@@ -618,7 +618,7 @@ class UserRelationship {
 		wfDebug( "Got open request count (type={$relType}) for id $userId from DB\n" );
 
 		$key = wfMemcKey( 'user_relationship', 'open_request', $relType, $userId );
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$requestCount = 0;
 
 		$s = $dbr->selectRow(
@@ -691,7 +691,7 @@ class UserRelationship {
 	 * @return Array: array of relationship information
 	 */
 	public function getRelationshipList( $type = 0, $limit = 0, $page = 0 ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$where = array();
 		$options = array();
@@ -739,7 +739,7 @@ class UserRelationship {
 	 * @return Array: array of relationship ID numbers
 	 */
 	public function getRelationshipIDs( $type ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$res = $dbr->select(
 			'user_relationship',
@@ -768,7 +768,7 @@ class UserRelationship {
 	 * @return Array: array containing the amount of friends and foes
 	 */
 	static function getRelationshipCountByUsername( $userName ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$userId = User::idFromName( $userName );
 		$res = $dbr->select(
 			'user_relationship_stats',

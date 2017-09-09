@@ -259,7 +259,7 @@ class UserProfilePage extends Article {
 			$polls = $data;
 		} else {
 			wfDebug( "Got profile polls for user {$this->user_id} from DB\n" );
-			$dbr = wfGetDB( DB_SLAVE );
+			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
 				array( 'poll_question', 'page' ),
 				array( 'page_title', 'poll_date' ),
@@ -299,7 +299,7 @@ class UserProfilePage extends Article {
 			$quiz = $data;
 		} else {
 			wfDebug( "Got profile quizzes for user {$this->user_id} from DB\n" );
-			$dbr = wfGetDB( DB_SLAVE );
+			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
 				'quizgame_questions',
 				array( 'q_id', 'q_text', 'q_date' ),
@@ -345,7 +345,7 @@ class UserProfilePage extends Article {
 			$pics = $data;
 		} else {
 			wfDebug( "Got profile picgames for user {$this->user_id} from DB\n" );
-			$dbr = wfGetDB( DB_SLAVE );
+			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
 				'picturegame_images',
 				array( 'id', 'title', 'img1', 'img2', 'pg_date' ),

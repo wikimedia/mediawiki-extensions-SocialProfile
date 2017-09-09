@@ -97,7 +97,7 @@ class UserProfile {
 			$profile = $data;
 		} else {
 			wfDebug( "Got user profile info for {$this->user_name} from DB\n" );
-			$dbr = wfGetDB( DB_SLAVE );
+			$dbr = wfGetDB( DB_REPLICA );
 			$row = $dbr->selectRow(
 				'user_profile',
 				'*',

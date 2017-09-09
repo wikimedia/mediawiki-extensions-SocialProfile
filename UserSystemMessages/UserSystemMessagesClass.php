@@ -54,7 +54,7 @@ class UserSystemMessage {
 	 * @return array
 	 */
 	public function getMessageList( $type, $limit = 0, $page = 0 ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		if ( $limit > 0 ) {
 			$limitvalue = 0;
