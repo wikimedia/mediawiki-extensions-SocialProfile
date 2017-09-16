@@ -97,7 +97,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 				// in the top lists.
 				$exists = $u->loadFromId();
 
-				if ( !$u->isBlocked() && $exists && !$u->isAllowed( 'bot' ) ) {
+				if ( !$u->isBlocked() && $exists && !$u->isBot() ) {
 					$user_list[] = array(
 						'user_id' => $row->stats_user_id,
 						'user_name' => $row->stats_user_name,

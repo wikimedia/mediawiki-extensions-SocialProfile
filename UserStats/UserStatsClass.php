@@ -155,7 +155,7 @@ class UserStatsTrack {
 	function incStatField( $field, $val = 1 ) {
 		global $wgUser, $wgMemc, $wgSystemGifts, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
 
-		if ( !$wgUser->isAllowed( 'bot' ) && !$wgUser->isAnon() && $this->stats_fields[$field] ) {
+		if ( !$wgUser->isBot() && !$wgUser->isAnon() && $this->stats_fields[$field] ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$dbw->update(
 				'user_stats',
@@ -216,7 +216,7 @@ class UserStatsTrack {
 	function decStatField( $field, $val = 1 ) {
 		global $wgUser, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
 
-		if ( !$wgUser->isAllowed( 'bot' ) && !$wgUser->isAnon() && $this->stats_fields[$field] ) {
+		if ( !$wgUser->isBot() && !$wgUser->isAnon() && $this->stats_fields[$field] ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$dbw->update(
 				'user_stats',
@@ -880,7 +880,7 @@ class UserStats {
 			// in the top lists.
 			$exists = $user->loadFromId();
 
-			if ( !$user->isBlocked() && $exists && !$user->isAllowed( 'bot' )  ) {
+			if ( !$user->isBlocked() && $exists && !$user->isBot()  ) {
 				$list[] = array(
 					'user_id' => $row->up_user_id,
 					'user_name' => $row->up_user_name,

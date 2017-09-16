@@ -67,7 +67,7 @@ class TopUsersPoints extends SpecialPage {
 				// in the top lists.
 				$exists = $user->loadFromId();
 
-				if ( !$user->isBlocked() && $exists && !$user->isAllowed( 'bot' ) ) {
+				if ( !$user->isBlocked() && $exists && !$user->isBot() ) {
 					$user_list[] = array(
 						'user_id' => $row->stats_user_id,
 						'user_name' => $row->stats_user_name,

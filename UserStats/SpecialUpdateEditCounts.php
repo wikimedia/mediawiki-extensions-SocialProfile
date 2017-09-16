@@ -52,7 +52,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 			$user = User::newFromId( $row->rev_user );
 			$user->loadFromId();
 
-			if ( !$user->isAllowed( 'bot' ) ) {
+			if ( !$user->isBot() ) {
 				$editCount = $row->the_count;
 			} else {
 				$editCount = 0;
