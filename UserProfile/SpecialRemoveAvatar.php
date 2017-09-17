@@ -214,9 +214,9 @@ class RemoveAvatar extends SpecialPage {
 
 		$avatar = new wAvatar( $id, $size );
 		$files = glob( $wgUploadDirectory . '/avatars/' . $wgAvatarKey . '_' . $id .  '_' . $size . "*" );
-		wfSuppressWarnings();
+		MediaWiki\suppressWarnings();
 		$img = basename( $files[0] );
-		wfRestoreWarnings();
+		MediaWiki\restoreWarnings();
 		if ( $img && $img[0] ) {
 			unlink( $wgUploadDirectory . '/avatars/' . $img );
 		}
