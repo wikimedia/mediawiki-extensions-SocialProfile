@@ -6,6 +6,7 @@
 		]
 	},
 	"useractivity": "Friends' activity",
+	"useractivity-desc": "Shows users' social activity",
 	"useractivity-award": "$1 received an award",
 	"useractivity-all": "View all",
 	"useractivity-edit": "$1 {{PLURAL:$4|edited the page|edited the following pages:}} $3",
