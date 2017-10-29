@@ -107,7 +107,7 @@ class UserSystemMessage {
 		$user = User::newFromId( $userIdTo );
 		$user->loadFromDatabase();
 
-		$wantsEmail = class_exists( 'EchoEvent' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-level-up' ) : $user->getIntOption( 'notifyhonorifics', 1 );
+		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-level-up' ) : $user->getIntOption( 'notifyhonorifics', 1 );
 		if ( $user->isEmailConfirmed() && $wantsEmail ) {
 			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
 			$subject = wfMessage( 'level-advance-subject', $level )->text();

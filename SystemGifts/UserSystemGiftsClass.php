@@ -53,7 +53,7 @@ class UserSystemGifts {
 			$this->sendGiftNotificationEmail( $this->user_id, $gift_id );
 		}
 
-		if ( class_exists( 'EchoEvent' ) ) {
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ) {
 			$userFrom = User::newFromId( $this->user_id );
 
 			$giftObj = SystemGifts::getGift( $gift_id );
@@ -89,7 +89,7 @@ class UserSystemGifts {
 		$user = User::newFromId( $user_id_to );
 		$user->loadFromDatabase();
 
-		$wantsEmail = class_exists( 'EchoEvent' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-award' ) : $user->getIntOption( 'notifygift', 1 );
+		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-award' ) : $user->getIntOption( 'notifygift', 1 );
 		if ( $user->isEmailConfirmed() && $wantsEmail ) {
 			$gifts_link = SpecialPage::getTitleFor( 'ViewSystemGifts' );
 			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );

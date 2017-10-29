@@ -775,7 +775,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$form .= '<div class="profile-info clearfix">
 			<div class="profile-update">
 				<p class="profile-update-title">' . $this->msg( 'user-profile-preferences-emails' )->plain() . '</p>';
-		if ( class_exists( 'EchoEvent' ) ) {
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ) {
 			$form .= '<p class="profile-update-row">' .
 				$this->msg( 'user-profile-preferences-emails-manage' )->parse() .
 				'</p>';

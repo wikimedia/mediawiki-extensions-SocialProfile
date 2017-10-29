@@ -668,7 +668,7 @@ class UserStatsTrack {
 						$user_level->getLevelName()
 					);
 
-					if ( class_exists( 'EchoEvent' ) ) {
+					if ( ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ) {
 						$userFrom = User::newFromId( $this->user_id );
 
 						EchoEvent::create( array(

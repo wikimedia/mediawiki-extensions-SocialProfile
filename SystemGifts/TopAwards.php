@@ -58,9 +58,11 @@ class TopAwards extends UnlistedSpecialPage {
 			)
 		);
 
+		$registry = ExtensionRegistry::getInstance();
+
 		// VoteStars is unique to the VoteNY extension, while there are a bunch
 		// of other voting extensions where the main class is named "Vote"
-		if ( class_exists( 'VoteStars' ) ) {
+		if ( $registry->isLoaded( 'VoteNY' ) ) {
 			$categories[] = array(
 				'category_name' => 'Vote',
 				'category_threshold' => '2000',
@@ -70,7 +72,7 @@ class TopAwards extends UnlistedSpecialPage {
 
 		// Show the "Comments" category only if the Comments extension is
 		// installed
-		if ( class_exists( 'Comment' ) ) {
+		if ( $registry->isLoaded( 'Comments' ) ) {
 			$categories[] = array(
 				'category_name' => 'Comment',
 				'category_threshold' => '1000',

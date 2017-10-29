@@ -854,7 +854,7 @@ class UserActivity {
 	private function setNetworkUpdates() {
 		global $wgLang;
 
-		if ( !class_exists( 'SportsTeams' ) ) {
+		if ( !ExtensionRegistry::getInstance()->isLoaded( 'SportsTeams' ) ) {
 			return;
 		}
 

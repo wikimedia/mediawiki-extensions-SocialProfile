@@ -56,7 +56,7 @@ class UserGifts {
 		$stats = new UserStatsTrack( $this->user_id, $this->user_name );
 		$stats->incStatField( 'gift_sent' );
 
-		if ( class_exists( 'EchoEvent' ) ) {
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ) {
 			$userFrom = User::newFromId( $this->user_id );
 
 			EchoEvent::create( array(
@@ -91,7 +91,7 @@ class UserGifts {
 		$user = User::newFromId( $user_id_to );
 		$user->loadFromDatabase();
 
-		$wantsEmail = class_exists( 'EchoEvent' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-gift' ) : $user->getIntOption( 'notifygift', 1 );
+		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-gift' ) : $user->getIntOption( 'notifygift', 1 );
 		if ( $user->isEmailConfirmed() && $wantsEmail ) {
 			$giftsLink = SpecialPage::getTitleFor( 'ViewGifts' );
 			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );

@@ -60,7 +60,7 @@ class UserBoard {
 		$stats = new UserStatsTrack( $user_id_from, $user_name_from );
 		$stats->incStatField( 'user_board_sent' );
 
-		if ( class_exists( 'EchoEvent' ) ) {
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ) {
 			$userFrom = User::newFromId( $user_id_from );
 
 			EchoEvent::create( array(
@@ -89,7 +89,7 @@ class UserBoard {
 		$user->loadFromId();
 
 		// Send email if user's email is confirmed and s/he's opted in to recieving social notifications
-		$wantsEmail = class_exists( 'EchoEvent' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-rel' ) : $user->getIntOption( 'notifymessage', 1 );
+		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-rel' ) : $user->getIntOption( 'notifymessage', 1 );
 		if ( $user->isEmailConfirmed() && $wantsEmail ) {
 			$board_link = SpecialPage::getTitleFor( 'UserBoard' );
 			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
