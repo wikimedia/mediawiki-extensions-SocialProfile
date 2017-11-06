@@ -32,8 +32,6 @@ function wfRegisterTopUsersTag( &$parser ) {
  * @return String: HTML
  */
 function getTopUsersForTag( $input, $args, $parser ) {
-	global $wgLang;
-
 	// Don't allow showing OVER 9000...I mean, over 50 users, duh.
 	// Performance and all that stuff.
 	if (
@@ -66,8 +64,8 @@ function getTopUsersForTag( $input, $args, $parser ) {
 				<span class=\"top-fan-number\">{$x}.</span>
 				<a href=\"{$user->getFullURL()}\">{$avatar->getAvatarURL()}</a>
 				<span class=\"top-fans-user\"><a href=\"{$user->getFullURL()}\">{$fan['user_name']}</a></span>
-				<span class=\"top-fans-points\"><b>+" . $wgLang->formatNum( $fan['points'] ) . '</b> ' .
-				wfMessage( 'top-fans-points' )->plain() . '</span>
+				<span class=\"top-fans-points\">" .
+				wfMessage( 'top-fans-points-tag' )->numParams( $fan['points'] )->parse() . '</span>
 			</div>';
 		$x++;
 	}

@@ -176,9 +176,8 @@ class TopFansRecent extends UnlistedSpecialPage {
 					'<a href="' . htmlspecialchars( $user_title->getFullURL() ) . '" >' . $user['user_name'] . '</a>
 				</span>';
 
-			$output .= '<span class="top-fan-points"><b>' .
-				$this->getLanguage()->formatNum( $user['points'] ) . '</b> ' .
-				$this->msg( 'top-fans-points' )->plain() . '</span>';
+			$output .= '<span class="top-fan-points">' .
+				$this->msg( 'top-fans-points' )->numParams( $user['points'] )->parse() . '</span>';
 			$output .= '<div class="visualClear"></div>';
 			$output .= '</div>';
 			$x++;

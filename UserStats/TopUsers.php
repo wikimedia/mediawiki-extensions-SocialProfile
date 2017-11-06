@@ -167,9 +167,8 @@ class TopUsersPoints extends SpecialPage {
 						$user['user_name'] . '</a>
 				</span>';
 
-			$output .= '<span class="top-fan-points"><b>' .
-				number_format( $user['points'] ) . '</b> ' .
-				$this->msg( 'top-fans-points' )->plain() . '</span>';
+			$output .= '<span class="top-fan-points">' .
+				$this->msg( 'top-fans-points' )->numParams( $user['points'] )->parse() . '</span>';
 			$output .= '<div class="visualClear"></div>';
 			$output .= '</div>';
 			$x++;
