@@ -39,9 +39,9 @@ class SpecialViewUserBoard extends SpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param $params Mixed: parameter(s) passed to the page or null
+	 * @param string $par Name of the user whose board we want to view
 	 */
-	public function execute( $params ) {
+	public function execute( $par ) {
 		$out = $this->getOutput();
 		$request = $this->getRequest();
 		$currentUser = $this->getUser();
@@ -58,7 +58,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		$out->addModules( 'ext.socialprofile.userboard.js' );
 
 		$ub_messages_show = 25;
-		$user_name = $request->getVal( 'user' );
+		$user_name = $request->getVal( 'user', $par );
 		$user_name_2 = $request->getVal( 'conv' );
 		$user_id_2 = ''; // Prevent E_NOTICE
 		$page = $request->getInt( 'page', 1 );
