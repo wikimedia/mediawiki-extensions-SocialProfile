@@ -6,7 +6,7 @@
 	Licensed under the Creative Commons Attribution 2.5 License - http://creativecommons.org/licenses/by/2.5/
 	(basically, do anything you want, just leave my name and link)
 	Stripped this down a bit - Ashish
-	Rewritten to be more object-oriented by Jack Phoenix <jack@countervandalism.net>
+	Rewritten to be more object-oriented by Jack Phoenix
 	on 21 June 2011 and JSHinted on 14 August 2015
 */
 window.LightBox = {

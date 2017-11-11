@@ -7,7 +7,7 @@
  * @file
  * @ingroup Extensions
  * @date 19 August 2013
- * @author Jack Phoenix <jack@countervandalism.net>
+ * @author Jack Phoenix
  */
 if ( !defined( 'MEDIAWIKI' ) ) {
 	die();
