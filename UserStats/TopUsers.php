@@ -17,6 +17,7 @@ class TopUsersPoints extends SpecialPage {
 	public function execute( $par ) {
 		global $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgUserLevels;
 
+		$linkRenderer = $this->getLinkRenderer();
 		$out = $this->getOutput();
 
 		// Load CSS
@@ -109,7 +110,6 @@ class TopUsersPoints extends SpecialPage {
 			$output .= '<h1 style="margin-top:15px !important;">' .
 				$this->msg( 'top-fans-by-category-nav-header' )->plain() . '</h1>';
 
-			$linkRenderer = $this->getLinkRenderer();
 			$lines = explode( "\n", $byCategoryMessage->text() );
 			foreach ( $lines as $line ) {
 				if ( strpos( $line, '*' ) !== 0 ) {
@@ -160,12 +160,12 @@ class TopUsersPoints extends SpecialPage {
 				$last_level = $user_level->getLevelName();
 			}
 
+			$userLink = $linkRenderer->makeLink( $user_title, $user['user_name'] );
 			$output .= "<div class=\"top-fan-row\">
 				<span class=\"top-fan-num\">{$x}.</span>
 				<span class=\"top-fan\">
-					{$commentIcon} <a href='" . htmlspecialchars( $user_title->getFullURL() ) . "'>" .
-						$user['user_name'] . '</a>
-				</span>';
+					{$commentIcon} {$userLink}
+				</span>";
 
 			$output .= '<span class="top-fan-points">' .
 				$this->msg( 'top-fans-points' )->numParams( $user['points'] )->parse() . '</span>';

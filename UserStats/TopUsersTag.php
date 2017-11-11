@@ -56,14 +56,20 @@ function getTopUsersForTag( $input, $args, $parser ) {
 	$x = 1;
 	$topfans = '';
 
-	foreach( $fans as $fan ) {
+	$linkRenderer = MediaWiki\MediaWikiServices::getInstance()->getLinkRenderer();
+	foreach ( $fans as $fan ) {
 		$avatar = new wAvatar( $fan['user_id'], 'm' );
 		$user = Title::makeTitle( NS_USER, $fan['user_name'] );
 
+		$userLink = $linkRenderer->makeLink(
+			$user,
+			$fan['user_name']
+		);
+		$safeUserURL = htmlspecialchars( $user->getFullURL() );
 		$topfans .= "<div class=\"top-fan\">
 				<span class=\"top-fan-number\">{$x}.</span>
-				<a href=\"{$user->getFullURL()}\">{$avatar->getAvatarURL()}</a>
-				<span class=\"top-fans-user\"><a href=\"{$user->getFullURL()}\">{$fan['user_name']}</a></span>
+				<a href=\"{$safeUserURL}\">{$avatar->getAvatarURL()}</a>
+				<span class=\"top-fans-user\">{$userLink}</span>
 				<span class=\"top-fans-points\">" .
 				wfMessage( 'top-fans-points-tag' )->numParams( $fan['points'] )->parse() . '</span>
 			</div>';

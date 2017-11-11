@@ -17,6 +17,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 	public function execute( $par ) {
 		global $wgMemc;
 
+		$linkRenderer = $this->getLinkRenderer();
 		$out = $this->getOutput();
 		$request = $this->getRequest();
 		$user = $this->getUser();
@@ -130,7 +131,6 @@ class TopFansRecent extends UnlistedSpecialPage {
 			$output .= '<h1 class="top-title">' .
 				$this->msg( 'top-fans-by-category-nav-header' )->plain() . '</h1>';
 
-			$linkRenderer = $this->getLinkRenderer();
 			$lines = explode( "\n", $message->text() );
 			foreach ( $lines as $line ) {
 				if ( strpos( $line, '*' ) !== 0 ) {
@@ -173,8 +173,11 @@ class TopFansRecent extends UnlistedSpecialPage {
 				<span class="top-fan-num">' . $x . '.</span>
 				<span class="top-fan">' .
 					$avatarImage .
-					'<a href="' . htmlspecialchars( $user_title->getFullURL() ) . '" >' . $user['user_name'] . '</a>
-				</span>';
+					$linkRenderer->makeLink(
+						$user_title,
+						$user['user_name']
+					) .
+				'</span>';
 
 			$output .= '<span class="top-fan-points">' .
 				$this->msg( 'top-fans-points' )->numParams( $user['points'] )->parse() . '</span>';

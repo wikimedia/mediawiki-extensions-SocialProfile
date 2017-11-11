@@ -25,6 +25,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 		global $wgMemc;
 		global $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
 
+		$linkRenderer = $this->getLinkRenderer();
 		$lang = $this->getLanguage();
 		$out = $this->getOutput();
 		$request = $this->getRequest();
@@ -138,7 +139,6 @@ class TopFansByStat extends UnlistedSpecialPage {
 			$output .= '<h1 class="top-title">' .
 				$this->msg( 'top-fans-by-category-nav-header' )->plain() . '</h1>';
 
-			$linkRenderer = $this->getLinkRenderer();
 			$lines = explode( "\n", $message->text() );
 			foreach ( $lines as $line ) {
 				if ( strpos( $line, '*' ) !== 0 ) {
@@ -194,8 +194,11 @@ class TopFansByStat extends UnlistedSpecialPage {
 				<span class="top-fan-num">' . $x . '.</span>
 				<span class="top-fan">' .
 					$commentIcon .
-					'<a href="' . htmlspecialchars( $user_title->getFullURL() ) . '">' . $user_name . '</a>
-				</span>
+					$linkRenderer->makeLink(
+						$user_title,
+						$user_name
+					) .
+				'</span>
 				<span class="top-fan-points"><b>' . $statistics_row . '</b> ' . $lowercase_statistics_name . '</span>
 				<div class="visualClear"></div>
 			</div>';
