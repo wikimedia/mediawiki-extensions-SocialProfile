@@ -52,7 +52,10 @@ class ViewGifts extends SpecialPage {
 		$this->setHeaders();
 
 		// Add CSS
-		$out->addModuleStyles( 'ext.socialprofile.usergifts.css' );
+		$out->addModuleStyles( [
+			'ext.socialprofile.usergifts.css',
+			'ext.socialprofile.special.viewgifts.css'
+		] );
 
 		$user_name = $request->getVal( 'user' );
 		$page = $request->getInt( 'page', 1 );

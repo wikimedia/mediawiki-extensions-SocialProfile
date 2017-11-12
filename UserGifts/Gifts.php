@@ -46,6 +46,30 @@ $wgResourceModules['ext.socialprofile.usergifts.css'] = array(
 	'position' => 'top'
 );
 
+$wgResourceModules['ext.socialprofile.special.giftmanager.css'] = array(
+	'styles' => 'SpecialGiftManager.css',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'SocialProfile/UserGifts',
+);
+
+$wgResourceModules['ext.socialprofile.special.givegift.css'] = array(
+	'styles' => 'SpecialGiveGift.css',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'SocialProfile/UserGifts',
+);
+
+$wgResourceModules['ext.socialprofile.special.viewgift.css'] = array(
+	'styles' => 'SpecialViewGift.css',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'SocialProfile/UserGifts',
+);
+
+$wgResourceModules['ext.socialprofile.special.viewgifts.css'] = array(
+	'styles' => 'SpecialViewGifts.css',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'SocialProfile/UserGifts',
+);
+
 $wgResourceModules['ext.socialprofile.usergifts.js'] = array(
 	'scripts' => 'UserGifts.js',
 	'localBasePath' => __DIR__,

@@ -1,0 +1,68 @@
+.g-message {
+	margin: 0 0 15px 0;
+}
+
+.g-give-container {
+	background-color: #f2f4f7;
+	border: 1px solid #d7dee8;
+	padding: 10px;
+	width: 500px;
+	margin: 0 0 20px 0;
+}
+
+.g-give-title {
+	font-size: 13px;
+	color: #888;
+	margin: 0 0 6px 0;
+	font-weight: 700;
+}
+
+.g-give-separator {
+	margin: 10px 0;
+	font-weight: 700;
+}
+
+.g-add-message {
+	margin: 15px 0 4px 0;
+	color: #666;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.g-give-all {
+	border: 1px solid #dcdcdc;
+	cursor: pointer;
+	float: left;
+	min-height: 110px;
+	margin: 0 10px 10px 0;
+	padding: 8px;
+	width: 250px;
+	overflow: hidden;
+}
+
+.g-give-all img {
+	float: left;
+	margin: 0 10px 0 0;
+	display: block;
+	border: 1px solid #dcdcdc;
+	padding: 3px;
+	background-color: #fff;
+}
+
+.g-blue {
+	color: #285c98 !important;
+}
+
+.g-give-all-message-title {
+	color: #666;
+	font-weight: 700;
+	margin: 10px 0 5px 0;
+}
+
+.g-give-all-highlight {
+	background-color: #faf9f9;
+}
+
+.g-give-all-selected {
+	border: 1px solid red;
+}
