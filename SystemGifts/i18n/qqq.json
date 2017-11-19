@@ -7,6 +7,7 @@
 			"Umherirrender"
 		]
 	},
+	"systemgifts-desc": "{{desc|name=SystemGifts|url=https://www.mediawiki.org/wiki/Extension:SocialProfile}}",
 	"systemgiftmanager": "Page title for system git manager pages.",
 	"ga-addnew": "Link to gift creation form.",
 	"ga-back-edit-gift": "Link to system gift edit screen after upload of gift icon.",

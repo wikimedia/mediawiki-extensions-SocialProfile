@@ -161,8 +161,10 @@ $wgAutoloadClasses['SocialProfileHooks'] = __DIR__ . '/SocialProfileHooks.php';
 // Loader files
 require_once( "$IP/extensions/SocialProfile/UserProfile/UserProfile.php" ); // Profile page configuration loader file
 require_once( "$IP/extensions/SocialProfile/UserGifts/Gifts.php" ); // UserGifts (user-to-user gifting functionality) loader file
-require_once( "$IP/extensions/SocialProfile/SystemGifts/SystemGifts.php" ); // SystemGifts (awards functionality) loader file
-wfLoadExtension( 'SocialProfile/UserActivity' ); // UserActivity - recent social changes
+wfLoadExtensions( [
+	'SocialProfile/SystemGifts', // SystemGifts (awards functionality)
+	'SocialProfile/UserActivity' // UserActivity - recent social changes
+] );
 
 $wgHooks['BeforePageDisplay'][] = 'SocialProfileHooks::onBeforePageDisplay';
 $wgHooks['CanonicalNamespaces'][] = 'SocialProfileHooks::onCanonicalNamespaces';
