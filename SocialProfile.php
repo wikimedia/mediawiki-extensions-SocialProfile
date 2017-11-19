@@ -28,7 +28,6 @@ $wgMessagesDirs['SocialProfile'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['SocialProfileAlias'] = __DIR__ . '/SocialProfile.alias.php';
 
 $wgMessagesDirs['SocialProfileUserProfile'] = __DIR__ . '/UserProfile/i18n';
-$wgMessagesDirs['SocialProfileUserRelationship'] = __DIR__ . '/UserRelationship/i18n';
 $wgMessagesDirs['SocialProfileUserStats'] = __DIR__ . '/UserStats/i18n';
 
 $wgExtensionMessagesFiles['SocialProfileNamespaces'] = __DIR__ . '/SocialProfile.namespaces.php';
@@ -36,25 +35,18 @@ $wgExtensionMessagesFiles['AvatarMagic'] = __DIR__ . '/UserProfile/Avatar.i18n.m
 
 // Classes to be autoloaded
 $wgAutoloadClasses['GenerateTopUsersReport'] = __DIR__ . '/UserStats/GenerateTopUsersReport.php';
-$wgAutoloadClasses['EchoUserRelationshipPresentationModel'] = __DIR__ . '/UserRelationship/EchoUserRelationshipPresentationModel.php';
 $wgAutoloadClasses['EchoUserLevelAdvancePresentationModel'] = __DIR__ . '/UserStats/EchoUserLevelAdvancePresentationModel.php';
-$wgAutoloadClasses['SpecialAddRelationship'] = __DIR__ . '/UserRelationship/SpecialAddRelationship.php';
 $wgAutoloadClasses['SpecialEditProfile'] = __DIR__ . '/UserProfile/SpecialEditProfile.php';
 $wgAutoloadClasses['SpecialPopulateUserProfiles'] = __DIR__ . '/UserProfile/SpecialPopulateExistingUsersProfiles.php';
-$wgAutoloadClasses['SpecialRemoveRelationship'] = __DIR__ . '/UserRelationship/SpecialRemoveRelationship.php';
 $wgAutoloadClasses['SpecialToggleUserPage'] = __DIR__ . '/UserProfile/SpecialToggleUserPageType.php';
 $wgAutoloadClasses['SpecialUpdateProfile'] = __DIR__ . '/UserProfile/SpecialUpdateProfile.php';
 $wgAutoloadClasses['SpecialUploadAvatar'] = __DIR__ . '/UserProfile/SpecialUploadAvatar.php';
 $wgAutoloadClasses['UploadAvatar'] = __DIR__ . '/UserProfile/SpecialUploadAvatar.php';
-$wgAutoloadClasses['SpecialViewRelationshipRequests'] = __DIR__ . '/UserRelationship/SpecialViewRelationshipRequests.php';
-$wgAutoloadClasses['SpecialViewRelationships'] = __DIR__ . '/UserRelationship/SpecialViewRelationships.php';
 $wgAutoloadClasses['RemoveAvatar'] = __DIR__ . '/UserProfile/SpecialRemoveAvatar.php';
 $wgAutoloadClasses['UpdateEditCounts'] = __DIR__ . '/UserStats/SpecialUpdateEditCounts.php';
 $wgAutoloadClasses['UserProfile'] = __DIR__ . '/UserProfile/UserProfileClass.php';
 $wgAutoloadClasses['UserProfileHooks'] = __DIR__ . '/UserProfile/UserProfileHooks.php';
 $wgAutoloadClasses['UserProfilePage'] = __DIR__ . '/UserProfile/UserProfilePage.php';
-$wgAutoloadClasses['UserRelationship'] = __DIR__ . '/UserRelationship/UserRelationshipClass.php';
-$wgAutoloadClasses['UserRelationshipHooks'] = __DIR__ . '/UserRelationship/UserRelationshipHooks.php';
 $wgAutoloadClasses['UserStatsHooks'] = __DIR__ . '/UserStats/UserStatsHooks.php';
 $wgAutoloadClasses['UserLevel'] = __DIR__ . '/UserStats/UserLevel.php';
 $wgAutoloadClasses['UserStats'] = __DIR__ . '/UserStats/UserStats.php';
@@ -71,14 +63,6 @@ $wgAutoloadClasses['SPUserSecurity'] = __DIR__ . '/UserProfile/UserSecurityClass
 $wgAutoloadClasses['ApiUserProfilePrivacy'] = __DIR__ . '/UserProfile/ApiUserProfilePrivacy.php';
 $wgAPIModules['smpuserprivacy'] = 'ApiUserProfilePrivacy';
 
-$wgAutoloadClasses['ApiRelationshipResponse'] = __DIR__ . '/UserRelationship/ApiRelationshipResponse.php';
-$wgAPIModules['socialprofile-request-response'] = 'ApiRelationshipResponse';
-
-// Echo (Notifications) stuff
-// UserRelationship
-$wgHooks['BeforeCreateEchoEvent'][] = 'UserRelationshipHooks::onBeforeCreateEchoEvent';
-$wgHooks['EchoGetDefaultNotifiedUsers'][] = 'UserRelationshipHooks::onEchoGetDefaultNotifiedUsers';
-
 $wgDefaultUserOptions['echo-subscriptions-web-social-rel'] = true;
 $wgDefaultUserOptions['echo-subscriptions-email-social-rel'] = false;
 
@@ -90,12 +74,10 @@ $wgDefaultUserOptions['echo-subscriptions-web-social-level-up'] = true;
 $wgDefaultUserOptions['echo-subscriptions-email-social-level-up'] = false;
 
 // New special pages
-$wgSpecialPages['AddRelationship'] = 'SpecialAddRelationship';
 $wgSpecialPages['EditProfile'] = 'SpecialEditProfile';
 $wgSpecialPages['GenerateTopUsersReport'] = 'GenerateTopUsersReport';
 $wgSpecialPages['PopulateUserProfiles'] = 'SpecialPopulateUserProfiles';
 $wgSpecialPages['RemoveAvatar'] = 'RemoveAvatar';
-$wgSpecialPages['RemoveRelationship'] = 'SpecialRemoveRelationship';
 $wgSpecialPages['TopFansByStatistic'] = 'TopFansByStat';
 $wgSpecialPages['TopUsers'] = 'TopUsersPoints';
 $wgSpecialPages['TopUsersRecent'] = 'TopFansRecent';
@@ -103,8 +85,6 @@ $wgSpecialPages['ToggleUserPage'] = 'SpecialToggleUserPage';
 $wgSpecialPages['UpdateEditCounts'] = 'UpdateEditCounts';
 $wgSpecialPages['UpdateProfile'] = 'SpecialUpdateProfile';
 $wgSpecialPages['UploadAvatar'] = 'SpecialUploadAvatar';
-$wgSpecialPages['ViewRelationshipRequests'] = 'SpecialViewRelationshipRequests';
-$wgSpecialPages['ViewRelationships'] = 'SpecialViewRelationships';
 
 // What to display on social profile pages by default?
 $wgUserProfileDisplay['board'] = true;
@@ -167,6 +147,7 @@ wfLoadExtensions( [
 	'SocialProfile/SystemGifts', // SystemGifts (awards functionality)
 	'SocialProfile/UserActivity', // UserActivity - recent social changes
 	'SocialProfile/UserBoard',
+	'SocialProfile/UserRelationship',
 ] );
 
 $wgHooks['BeforePageDisplay'][] = 'SocialProfileHooks::onBeforePageDisplay';
@@ -210,21 +191,6 @@ $wgResourceModules['ext.socialprofile.LightBox'] = array(
 	'position' => 'bottom',
 	'localBasePath' => __DIR__ . '/shared',
 	'remoteExtPath' => 'SocialProfile/shared',
-);
-
-// UserRelationship
-$wgResourceModules['ext.socialprofile.userrelationship.css'] = array(
-	'styles' => 'UserRelationship.css',
-	'localBasePath' => __DIR__ . '/UserRelationship',
-	'remoteExtPath' => 'SocialProfile/UserRelationship',
-	'position' => 'top' // just in case
-);
-
-$wgResourceModules['ext.socialprofile.userrelationship.js'] = array(
-	'scripts' => 'UserRelationship.js',
-	'dependencies' => 'mediawiki.util',
-	'localBasePath' => __DIR__ . '/UserRelationship',
-	'remoteExtPath' => 'SocialProfile/UserRelationship',
 );
 
 // UserStats

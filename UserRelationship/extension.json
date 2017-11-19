@@ -1,0 +1,60 @@
+{
+	"name": "UserRelationship",
+	"author": [
+		"Aaron Wright",
+		"David Pean",
+		"Jack Phoenix"
+	],
+	"license-name": "GPL-2.0+",
+	"descriptionmsg": "userrelationship-desc",
+	"type": "other",
+	"MessagesDirs": {
+		"UserRelationship": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"EchoUserRelationshipPresentationModel": "EchoUserRelationshipPresentationModel.php",
+		"UserRelationship": "UserRelationshipClass.php",
+		"UserRelationshipHooks": "UserRelationshipHooks.php",
+		"SpecialAddRelationship": "SpecialAddRelationship.php",
+		"SpecialRemoveRelationship": "SpecialRemoveRelationship.php",
+		"SpecialViewRelationshipRequests": "SpecialViewRelationshipRequests.php",
+		"SpecialViewRelationships": "SpecialViewRelationships.php",
+		"ApiRelationshipResponse": "ApiRelationshipResponse.php"
+	},
+	"APIModules": {
+		"socialprofile-request-response": "ApiRelationshipResponse"
+	},
+	"Hooks": {
+		"BeforeCreateEchoEvent": "UserRelationshipHooks::onBeforeCreateEchoEvent",
+		"EchoGetDefaultNotifiedUsers": "UserRelationshipHooks::onEchoGetDefaultNotifiedUsers"
+	},
+	"DefaultUserOptions": {
+		"echo-subscriptions-web-social-rel": true,
+		"echo-subscriptions-email-social-rel": false
+	},
+	"SpecialPages": {
+		"AddRelationship": "SpecialAddRelationship",
+		"RemoveRelationship": "SpecialRemoveRelationship",
+		"ViewRelationshipRequests": "SpecialViewRelationshipRequests",
+		"ViewRelationships": "SpecialViewRelationships"
+	},
+	"ResourceModules": {
+		"ext.socialprofile.userrelationship.css": {
+			"styles": "UserRelationship.css",
+			"position": "top"
+		},
+		"ext.socialprofile.userrelationship.js": {
+			"scripts": "UserRelationship.js",
+			"dependencies": [
+				"mediawiki.util"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "SocialProfile/UserRelationship"
+	},
+	"manifest_version": 1
+}

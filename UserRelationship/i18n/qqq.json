@@ -5,6 +5,7 @@
 			"Siebrand"
 		]
 	},
+	"userrelationship-desc": "{{desc|name=UserRelationship|url=https://www.mediawiki.org/wiki/Extension:SocialProfile}}",
 	"ur-add-friend": "{{Identical|Add as friend}}",
 	"ur-add-foe": "{{Identical|Add as foe}}",
 	"ur-remove": "{{Identical|Remove}}",
