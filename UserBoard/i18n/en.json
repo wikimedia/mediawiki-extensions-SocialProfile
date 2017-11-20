@@ -6,6 +6,7 @@
 			"Purodha"
 		]
 	},
+	"userboard-desc": "Allows for sending board-to-board messages",
 	"boardblastlogintitle": "You must be logged in to send board blasts",
 	"boardblastlogintext": "In order to send board blasts, you must be [[Special:UserLogin|logged in]].",
 	"messagesenttitle": "Messages sent",

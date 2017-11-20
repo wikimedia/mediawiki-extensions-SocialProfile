@@ -1,0 +1,74 @@
+{
+	"name": "UserBoard",
+	"author": [
+		"Aaron Wright",
+		"David Pean",
+		"Jack Phoenix"
+	],
+	"license-name": "GPL-2.0+",
+	"descriptionmsg": "userboard-desc",
+	"type": "other",
+	"MessagesDirs": {
+		"UserBoard": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"EchoUserBoardMessagePresentationModel": "EchoUserBoardMessagePresentationModel.php",
+		"SpecialBoardBlast": "SpecialSendBoardBlast.php",
+		"SpecialViewUserBoard": "SpecialUserBoard.php",
+		"UserBoard": "UserBoardClass.php",
+		"UserBoardHooks": "UserBoardHooks.php",
+		"ApiDeleteUserBoardMessage": "ApiDeleteUserBoardMessage.php",
+		"ApiSendUserBoardMessage": "ApiSendUserBoardMessage.php"
+	},
+	"APIModules": {
+		"socialprofile-delete-message": "ApiDeleteUserBoardMessage",
+		"socialprofile-send-message": "ApiSendUserBoardMessage"
+	},
+	"Hooks": {
+		"BeforeCreateEchoEvent": "UserBoardHooks::onBeforeCreateEchoEvent",
+		"EchoGetDefaultNotifiedUsers": "UserBoardHooks::onEchoGetDefaultNotifiedUsers",
+		"EchoGetBundleRules": "UserBoardHooks::onEchoGetBundleRules"
+	},
+	"DefaultUserOptions": {
+		"echo-subscriptions-web-social-msg": true,
+		"echo-subscriptions-email-social-msg": false
+	},
+	"SpecialPages": {
+		"SendBoardBlast": "SpecialBoardBlast",
+		"UserBoard": "SpecialViewUserBoard"
+	},
+	"ResourceModules": {
+		"ext.socialprofile.userboard.js": {
+			"scripts": "UserBoard.js",
+			"dependencies": [
+				"mediawiki.api"
+			],
+			"messages": [
+				"userboard_confirmdelete"
+			]
+		},
+		"ext.socialprofile.userboard.css": {
+			"styles": "UserBoard.css",
+			"position": "top"
+		},
+		"ext.socialprofile.userboard.boardblast.css": {
+			"styles": "BoardBlast.css",
+			"position": "top"
+		},
+		"ext.socialprofile.userboard.boardblast.js": {
+			"scripts": "BoardBlast.js",
+			"messages": [
+				"boardblast-js-sending",
+				"boardblast-js-error-missing-message",
+				"boardblast-js-error-missing-user"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "SocialProfile/UserBoard"
+	},
+	"manifest_version": 1
+}
