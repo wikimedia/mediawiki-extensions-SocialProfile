@@ -62,9 +62,9 @@ $wgAutoloadClasses['UserProfilePage'] = __DIR__ . '/UserProfile/UserProfilePage.
 $wgAutoloadClasses['UserRelationship'] = __DIR__ . '/UserRelationship/UserRelationshipClass.php';
 $wgAutoloadClasses['UserRelationshipHooks'] = __DIR__ . '/UserRelationship/UserRelationshipHooks.php';
 $wgAutoloadClasses['UserStatsHooks'] = __DIR__ . '/UserStats/UserStatsHooks.php';
-$wgAutoloadClasses['UserLevel'] = __DIR__ . '/UserStats/UserStatsClass.php';
-$wgAutoloadClasses['UserStats'] = __DIR__ . '/UserStats/UserStatsClass.php';
-$wgAutoloadClasses['UserStatsTrack'] = __DIR__ . '/UserStats/UserStatsClass.php';
+$wgAutoloadClasses['UserLevel'] = __DIR__ . '/UserStats/UserLevel.php';
+$wgAutoloadClasses['UserStats'] = __DIR__ . '/UserStats/UserStats.php';
+$wgAutoloadClasses['UserStatsTrack'] = __DIR__ . '/UserStats/UserStatsTrack.php';
 $wgAutoloadClasses['UserSystemMessage'] = __DIR__ . '/UserSystemMessages/UserSystemMessagesClass.php';
 $wgAutoloadClasses['TopFansByStat'] = __DIR__ . '/UserStats/TopFansByStat.php';
 $wgAutoloadClasses['TopFansRecent'] = __DIR__ . '/UserStats/TopFansRecent.php';
@@ -144,6 +144,30 @@ $wgFriendingEnabled = true;
 // for global avatars on a wikifarm or groups of wikis,
 // set this to something static.
 $wgAvatarKey = $wgDBname;
+
+// UserStats configuration
+$wgUserStatsTrackWeekly = false;
+$wgUserStatsTrackMonthly = false;
+
+$wgUserStatsPointValues['edit'] = 50;
+$wgUserStatsPointValues['vote'] = 0;
+$wgUserStatsPointValues['comment'] = 0;
+$wgUserStatsPointValues['comment_plus'] = 0;
+$wgUserStatsPointValues['comment_ignored'] = 0;
+$wgUserStatsPointValues['opinions_created'] = 0;
+$wgUserStatsPointValues['opinions_pub'] = 0;
+$wgUserStatsPointValues['referral_complete'] = 0;
+$wgUserStatsPointValues['friend'] = 0;
+$wgUserStatsPointValues['foe'] = 0;
+$wgUserStatsPointValues['gift_rec'] = 0;
+$wgUserStatsPointValues['gift_sent'] = 0;
+$wgUserStatsPointValues['points_winner_weekly'] = 0;
+$wgUserStatsPointValues['points_winner_monthly'] = 0;
+$wgUserStatsPointValues['user_image'] = 1000;
+$wgUserStatsPointValues['poll_vote'] = 0;
+$wgUserStatsPointValues['quiz_points'] = 0;
+$wgUserStatsPointValues['quiz_created'] = 0;
+$wgNamespacesForEditPoints = array( 0 );
 
 // Extension credits that show up on Special:Version
 $wgExtensionCredits['other'][] = array(
