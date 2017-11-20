@@ -1,0 +1,81 @@
+{
+	"name": "UserStats",
+	"author": [
+		"Aaron Wright",
+		"David Pean",
+		"Jack Phoenix"
+	],
+	"license-name": "GPL-2.0+",
+	"descriptionmsg": "userstats-desc",
+	"type": "other",
+	"MessagesDirs": {
+		"UserStats": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"EchoUserLevelAdvancePresentationModel": "EchoUserLevelAdvancePresentationModel.php",
+		"GenerateTopUsersReport": "GenerateTopUsersReport.php",
+		"TopFansByStat": "TopFansByStat.php",
+		"TopFansRecent": "TopFansRecent.php",
+		"TopUsersPoints": "TopUsers.php",
+		"UpdateEditCounts": "SpecialUpdateEditCounts.php",
+		"UserLevel": "UserLevel.php",
+		"UserStatsTrack": "UserStatsTrack.php",
+		"UserStats": "UserStats.php",
+		"UserStatsHooks": "UserStatsHooks.php"
+	},
+	"Hooks": {
+		"BeforeCreateEchoEvent":"UserStatsHooks::onBeforeCreateEchoEvent",
+		"EchoGetBundleRules": "UserStatsHooks::onEchoGetBundleRules"
+	},
+	"DefaultUserOptions": {
+		"echo-subscriptions-web-social-level-up": true,
+		"echo-subscriptions-email-social-level-up": false
+	},
+	"SpecialPages": {
+		"GenerateTopUsersReport": "GenerateTopUsersReport",
+		"TopFansByStatistic": "TopFansByStat",
+		"TopUsers": "TopUsersPoints",
+		"TopUsersRecent": "TopFansRecent",
+		"UpdateEditCounts": "UpdateEditCounts"
+	},
+	"config": {
+		"UserStatsTrackWeekly": false,
+		"UserStatsTrackMonthly": false,
+		"UserStatsPointValues": {
+			"edit": 50,
+			"vote": 0,
+			"comment": 0,
+			"comment_plus": 0,
+			"comment_ignored": 0,
+			"opinions_created": 0,
+			"opinions_pub": 0,
+			"referral_complete": 0,
+			"friend": 0,
+			"foe": 0,
+			"gift_rec": 0,
+			"gift_sent": 0,
+			"points_winner_weekly": 0,
+			"points_winner_monthly": 0,
+			"user_image": 1000,
+			"poll_vote": 0,
+			"quiz_points": 0,
+			"quiz_created": 0
+		},
+		"NamespacesForEditPoints": [
+			0
+		]
+	},
+	"ResourceModules": {
+		"ext.socialprofile.userstats.css": {
+			"styles": "TopList.css",
+			"position": "top"
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "SocialProfile/UserStats"
+	},
+	"manifest_version": 1
+}

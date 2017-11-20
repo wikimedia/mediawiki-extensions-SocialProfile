@@ -10,6 +10,7 @@
 			"Umherirrender"
 		]
 	},
+	"userstats-desc": "{{desc|name=UserStats|url=https://www.mediawiki.org/wiki/Extension:SocialProfile}}",
 	"top-fans-points": "{{Identical|Point}}",
 	"top-fans-by-category-title-gifts-rec-count": "",
 	"top-fans-stats-vote-count": "{{Identical|Vote}}",

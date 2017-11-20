@@ -28,14 +28,11 @@ $wgMessagesDirs['SocialProfile'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['SocialProfileAlias'] = __DIR__ . '/SocialProfile.alias.php';
 
 $wgMessagesDirs['SocialProfileUserProfile'] = __DIR__ . '/UserProfile/i18n';
-$wgMessagesDirs['SocialProfileUserStats'] = __DIR__ . '/UserStats/i18n';
 
 $wgExtensionMessagesFiles['SocialProfileNamespaces'] = __DIR__ . '/SocialProfile.namespaces.php';
 $wgExtensionMessagesFiles['AvatarMagic'] = __DIR__ . '/UserProfile/Avatar.i18n.magic.php';
 
 // Classes to be autoloaded
-$wgAutoloadClasses['GenerateTopUsersReport'] = __DIR__ . '/UserStats/GenerateTopUsersReport.php';
-$wgAutoloadClasses['EchoUserLevelAdvancePresentationModel'] = __DIR__ . '/UserStats/EchoUserLevelAdvancePresentationModel.php';
 $wgAutoloadClasses['SpecialEditProfile'] = __DIR__ . '/UserProfile/SpecialEditProfile.php';
 $wgAutoloadClasses['SpecialPopulateUserProfiles'] = __DIR__ . '/UserProfile/SpecialPopulateExistingUsersProfiles.php';
 $wgAutoloadClasses['SpecialToggleUserPage'] = __DIR__ . '/UserProfile/SpecialToggleUserPageType.php';
@@ -43,18 +40,10 @@ $wgAutoloadClasses['SpecialUpdateProfile'] = __DIR__ . '/UserProfile/SpecialUpda
 $wgAutoloadClasses['SpecialUploadAvatar'] = __DIR__ . '/UserProfile/SpecialUploadAvatar.php';
 $wgAutoloadClasses['UploadAvatar'] = __DIR__ . '/UserProfile/SpecialUploadAvatar.php';
 $wgAutoloadClasses['RemoveAvatar'] = __DIR__ . '/UserProfile/SpecialRemoveAvatar.php';
-$wgAutoloadClasses['UpdateEditCounts'] = __DIR__ . '/UserStats/SpecialUpdateEditCounts.php';
 $wgAutoloadClasses['UserProfile'] = __DIR__ . '/UserProfile/UserProfileClass.php';
 $wgAutoloadClasses['UserProfileHooks'] = __DIR__ . '/UserProfile/UserProfileHooks.php';
 $wgAutoloadClasses['UserProfilePage'] = __DIR__ . '/UserProfile/UserProfilePage.php';
-$wgAutoloadClasses['UserStatsHooks'] = __DIR__ . '/UserStats/UserStatsHooks.php';
-$wgAutoloadClasses['UserLevel'] = __DIR__ . '/UserStats/UserLevel.php';
-$wgAutoloadClasses['UserStats'] = __DIR__ . '/UserStats/UserStats.php';
-$wgAutoloadClasses['UserStatsTrack'] = __DIR__ . '/UserStats/UserStatsTrack.php';
 $wgAutoloadClasses['UserSystemMessage'] = __DIR__ . '/UserSystemMessages/UserSystemMessagesClass.php';
-$wgAutoloadClasses['TopFansByStat'] = __DIR__ . '/UserStats/TopFansByStat.php';
-$wgAutoloadClasses['TopFansRecent'] = __DIR__ . '/UserStats/TopFansRecent.php';
-$wgAutoloadClasses['TopUsersPoints'] = __DIR__ . '/UserStats/TopUsers.php';
 $wgAutoloadClasses['wAvatar'] = __DIR__ . '/UserProfile/AvatarClass.php';
 $wgAutoloadClasses['AvatarParserFunction'] = __DIR__ . '/UserProfile/AvatarParserFunction.php';
 $wgAutoloadClasses['SPUserSecurity'] = __DIR__ . '/UserProfile/UserSecurityClass.php';
@@ -66,23 +55,11 @@ $wgAPIModules['smpuserprivacy'] = 'ApiUserProfilePrivacy';
 $wgDefaultUserOptions['echo-subscriptions-web-social-rel'] = true;
 $wgDefaultUserOptions['echo-subscriptions-email-social-rel'] = false;
 
-// UserStats
-$wgHooks['BeforeCreateEchoEvent'][] = 'UserStatsHooks::onBeforeCreateEchoEvent';
-$wgHooks['EchoGetBundleRules'][] = 'UserStatsHooks::onEchoGetBundleRules';
-
-$wgDefaultUserOptions['echo-subscriptions-web-social-level-up'] = true;
-$wgDefaultUserOptions['echo-subscriptions-email-social-level-up'] = false;
-
 // New special pages
 $wgSpecialPages['EditProfile'] = 'SpecialEditProfile';
-$wgSpecialPages['GenerateTopUsersReport'] = 'GenerateTopUsersReport';
 $wgSpecialPages['PopulateUserProfiles'] = 'SpecialPopulateUserProfiles';
 $wgSpecialPages['RemoveAvatar'] = 'RemoveAvatar';
-$wgSpecialPages['TopFansByStatistic'] = 'TopFansByStat';
-$wgSpecialPages['TopUsers'] = 'TopUsersPoints';
-$wgSpecialPages['TopUsersRecent'] = 'TopFansRecent';
 $wgSpecialPages['ToggleUserPage'] = 'SpecialToggleUserPage';
-$wgSpecialPages['UpdateEditCounts'] = 'UpdateEditCounts';
 $wgSpecialPages['UpdateProfile'] = 'SpecialUpdateProfile';
 $wgSpecialPages['UploadAvatar'] = 'SpecialUploadAvatar';
 
@@ -102,30 +79,6 @@ $wgFriendingEnabled = true;
 // for global avatars on a wikifarm or groups of wikis,
 // set this to something static.
 $wgAvatarKey = $wgDBname;
-
-// UserStats configuration
-$wgUserStatsTrackWeekly = false;
-$wgUserStatsTrackMonthly = false;
-
-$wgUserStatsPointValues['edit'] = 50;
-$wgUserStatsPointValues['vote'] = 0;
-$wgUserStatsPointValues['comment'] = 0;
-$wgUserStatsPointValues['comment_plus'] = 0;
-$wgUserStatsPointValues['comment_ignored'] = 0;
-$wgUserStatsPointValues['opinions_created'] = 0;
-$wgUserStatsPointValues['opinions_pub'] = 0;
-$wgUserStatsPointValues['referral_complete'] = 0;
-$wgUserStatsPointValues['friend'] = 0;
-$wgUserStatsPointValues['foe'] = 0;
-$wgUserStatsPointValues['gift_rec'] = 0;
-$wgUserStatsPointValues['gift_sent'] = 0;
-$wgUserStatsPointValues['points_winner_weekly'] = 0;
-$wgUserStatsPointValues['points_winner_monthly'] = 0;
-$wgUserStatsPointValues['user_image'] = 1000;
-$wgUserStatsPointValues['poll_vote'] = 0;
-$wgUserStatsPointValues['quiz_points'] = 0;
-$wgUserStatsPointValues['quiz_created'] = 0;
-$wgNamespacesForEditPoints = array( 0 );
 
 // Extension credits that show up on Special:Version
 $wgExtensionCredits['other'][] = array(
@@ -148,6 +101,7 @@ wfLoadExtensions( [
 	'SocialProfile/UserActivity', // UserActivity - recent social changes
 	'SocialProfile/UserBoard',
 	'SocialProfile/UserRelationship',
+	'SocialProfile/UserStats',
 ] );
 
 $wgHooks['BeforePageDisplay'][] = 'SocialProfileHooks::onBeforePageDisplay';
@@ -191,14 +145,6 @@ $wgResourceModules['ext.socialprofile.LightBox'] = array(
 	'position' => 'bottom',
 	'localBasePath' => __DIR__ . '/shared',
 	'remoteExtPath' => 'SocialProfile/shared',
-);
-
-// UserStats
-$wgResourceModules['ext.socialprofile.userstats.css'] = array(
-	'styles' => 'TopList.css',
-	'localBasePath' => __DIR__ . '/UserStats',
-	'remoteExtPath' => 'SocialProfile/UserStats',
-	'position' => 'top' // just in case
 );
 
 // End ResourceLoader stuff
