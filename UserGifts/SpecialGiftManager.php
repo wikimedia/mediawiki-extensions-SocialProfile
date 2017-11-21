@@ -51,7 +51,10 @@ class GiftManager extends SpecialPage {
 		$this->checkReadOnly();
 
 		// Add CSS
-		$out->addModuleStyles( 'ext.socialprofile.usergifts.css' );
+		$out->addModuleStyles( [
+			'ext.socialprofile.usergifts.css',
+			'ext.socialprofile.special.giftmanager.css'
+		] );
 
 		if ( $request->wasPosted() ) {
 			if ( !$request->getInt( 'id' ) ) {

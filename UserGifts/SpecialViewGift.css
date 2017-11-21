@@ -1,0 +1,57 @@
+.g-timestamp {
+	font-size: 9px;
+	color: #999;
+}
+
+.g-gift-count {
+	font-size: 9px;
+	margin: 2px 0 10px 0;
+}
+
+.g-description-container {
+	width: 480px;
+	margin: 20px 0;
+}
+
+.g-recent {
+	border-top: 1px solid #efefef;
+	padding: 10px 0 0 0;
+}
+
+.g-recent img {
+	vertical-align: middle;
+	padding: 3px;
+	background-color: #fff;
+	border: 1px solid #dcdcdc;
+	margin: 0 10px 0 0;
+}
+
+.g-recent a {
+	display: block;
+	float: left;
+	text-decoration: none;
+}
+
+.g-recent-title {
+	font-size: 14px;
+	font-weight: 700;
+	color: #777;
+	margin: 0 0 2px 0;
+}
+
+.g-recent-item {
+	margin: 0 0 5px 0;
+}
+
+.g-description {
+	margin: 0 0 15px 0;
+}
+
+.g-description img {
+	border: 1px solid #dcdcdc;
+	background-color: #fff;
+	padding: 3px;
+	display: block;
+	float: left;
+	margin: 0 10px 0 0;
+}

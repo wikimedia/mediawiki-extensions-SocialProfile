@@ -1,0 +1,32 @@
+.g-count {
+	margin: 0 0 15px 0;
+}
+.g-item {
+	border: 1px solid #d7dee8;
+	float: left;
+	width: 350px;
+	padding: 7px;
+	margin: 0 15px 15px 0;
+}
+
+.g-item a {
+	text-decoration: none;
+}
+
+.g-item img {
+	background-color: #fff;
+	border: 1px solid #dcdcdc;
+	float: left;
+	padding: 3px;
+	margin: 0 10px 0 0;
+	display: block;
+}
+
+.g-new {
+	background-color: #fffb9b;
+	border: 1px solid #fdc745;
+	font-size: 12px;
+	font-weight: 700;
+	padding: 0 5px;
+	margin: 0 0 0 10px;
+}
