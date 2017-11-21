@@ -1,0 +1,95 @@
+{
+	"name": "UserGifts",
+	"author": [
+		"Aaron Wright",
+		"David Pean",
+		"Jack Phoenix"
+	],
+	"license-name": "GPL-2.0+",
+	"descriptionmsg": "usergifts-desc",
+	"type": "other",
+	"MessagesDirs": {
+		"UserGifts": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"UserGiftsAlias": "UserGifts.alias.php"
+	},
+	"AutoloadClasses": {
+		"Gifts": "GiftsClass.php",
+		"UserGifts": "UserGiftsClass.php",
+		"UserGiftsHooks": "UserGiftsHooks.php",
+		"GiveGift": "SpecialGiveGift.php",
+		"ViewGifts": "SpecialViewGifts.php",
+		"ViewGift": "SpecialViewGift.php",
+		"GiftManager": "SpecialGiftManager.php",
+		"GiftManagerLogo": "SpecialGiftManagerLogo.php",
+		"RemoveMasterGift": "SpecialRemoveMasterGift.php",
+		"RemoveGift": "SpecialRemoveGift.php",
+		"EchoUserGiftPresentationModel": "EchoUserGiftPresentationModel.php"
+	},
+	"Hooks": {
+		"BeforeCreateEchoEvent": "UserGiftsHooks::onBeforeCreateEchoEvent",
+		"EchoGetDefaultNotifiedUsers": "UserGiftsHooks::onEchoGetDefaultNotifiedUsers",
+		"EchoGetBundleRules": "UserGiftsHooks::onEchoGetBundleRules"
+	},
+	"DefaultUserOptions": {
+		"echo-subscriptions-web-social-gift": true,
+		"echo-subscriptions-email-social-gift": false
+	},
+	"SpecialPages": {
+		"GiveGift": "GiveGift",
+		"ViewGifts": "ViewGifts",
+		"ViewGift": "ViewGift",
+		"GiftManager": "GiftManager",
+		"GiftManagerLogo": "GiftManagerLogo",
+		"RemoveMasterGift": "RemoveMasterGift",
+		"RemoveGift": "RemoveGift"
+	},
+	"ResourceModules": {
+		"ext.socialprofile.usergifts.css": {
+			"styles": "UserGifts.css",
+			"position": "top"
+		},
+		"ext.socialprofile.special.giftmanager.css": {
+			"styles": "SpecialGiftManager.css",
+			"position": "top"
+		},
+		"ext.socialprofile.special.givegift.css": {
+			"styles": "SpecialGiveGift.css",
+			"position": "top"
+		},
+		"ext.socialprofile.special.viewgift.css": {
+			"styles": "SpecialViewGift.css",
+			"position": "top"
+		},
+		"ext.socialprofile.special.viewgifts.css": {
+			"styles": "SpecialViewGifts.css",
+			"position": "top"
+		},
+		"ext.socialprofile.usergifts.js": {
+			"styles": "UserGifts.js"
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "SocialProfile/UserGifts"
+	},
+	"DefaultUserOptions": {
+		"echo-subscriptions-web-social-gift": true,
+		"echo-subscriptions-email-social-gift": false
+	},
+	"AvailableRights": [
+		"giftadmin"
+	],
+	"GroupPermissions": {
+		"staff": {
+			"giftadmin": true
+		},
+		"sysop": {
+			"giftadmin": true
+		}
+	},
+	"manifest_version": 1
+}

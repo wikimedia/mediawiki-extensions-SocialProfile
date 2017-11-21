@@ -5,6 +5,7 @@
 			"Purodha"
 		]
 	},
+	"usergifts-desc": "Allows sending, receiving, creating, and removing user gifts",
 	"giftmanager": "Gifts manager",
 	"giftmanager-addgift": "+ Add new gift",
 	"giftmanager-access": "gift access",

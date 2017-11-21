@@ -8,6 +8,7 @@
 			"Umherirrender"
 		]
 	},
+	"usergifts-desc": "{{desc|name=UserGifts|url=https://www.mediawiki.org/wiki/Extension:SocialProfile}}",
 	"giftmanager-public": "{{Identical|Public}}",
 	"giftmanager-private": "{{Identical|Private}}",
 	"g-count": "* '''$1''' is a user name\n* '''$2''' is his or her count of gifts",
