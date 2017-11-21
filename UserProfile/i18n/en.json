@@ -125,6 +125,7 @@
 	"user-profile-interests-foodsnacks": "Food & snacks",
 	"user-profile-interests-drinks": "Drinks",
 	"user-profile-preferences-emails": "E-mail notifications",
+	"user-profile-preferences-emails-manage": "E-mail notifications are handled by the Echo extension. You can change these in your [[Special:Preferences#mw-prefsection-echo|preferences]].",
 	"user-profile-preferences-emails-personalmessage": "When sent a personal message",
 	"user-profile-preferences-emails-friendfoe": "When another user friends or foes you",
 	"user-profile-preferences-emails-gift": "When you receive a gift",

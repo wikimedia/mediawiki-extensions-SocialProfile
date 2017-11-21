@@ -129,6 +129,7 @@
 	"user-profile-interests-foodsnacks": "Ruoka & naposteltavat",
 	"user-profile-interests-drinks": "Juomat",
 	"user-profile-preferences-emails": "Sähköposti-ilmoitukset",
+	"user-profile-preferences-emails-manage": "Sähköposti-ilmoituksista vastaa Echo-lisäosa. Voit muuttaa näitä asetuksia [[Special:Preferences#mw-prefsection-echo|henkilökohtaisissa asetuksissasi]].",
 	"user-profile-preferences-emails-personalmessage": "Kun saan yksityisviestin",
 	"user-profile-preferences-emails-friendfoe": "Kun toinen käyttäjä lisää minut ystäväksi tai viholliseksi",
 	"user-profile-preferences-emails-gift": "Kun saan lahjan",
