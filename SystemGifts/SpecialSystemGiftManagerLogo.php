@@ -692,7 +692,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		global $wgDisableUploadScriptChecks, $wgVerifyMimeType, $wgMimeTypeBlacklist;
 
 		# magically determine mime type
-		$magic = MimeMagic::singleton();
+		$magic = \MediaWiki\MediaWikiServices::getInstance()->getMimeAnalyzer();
 		$mime = $magic->guessMimeType( $tmpfile, false );
 
 		# check mime type, if desired
