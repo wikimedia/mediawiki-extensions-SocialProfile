@@ -1,0 +1,96 @@
+{
+	"name": "SystemGifts",
+	"author": [
+		"Aaron Wright",
+		"David Pean",
+		"Jack Phoenix"
+	],
+	"license-name": "GPL-2.0+",
+	"descriptionmsg": "systemgifts-desc",
+	"type": "other",
+	"MessagesDirs": {
+		"SystemGifts": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"SystemGiftsAlias": "SystemGifts.alias.php"
+	},
+	"AutoloadClasses": {
+		"SystemGifts": "SystemGiftsClass.php",
+		"UserSystemGifts": "UserSystemGiftsClass.php",
+		"UserSystemGiftsHooks": "UserSystemGiftsHooks.php",
+		"TopAwards": "TopAwards.php",
+		"ViewSystemGifts": "SpecialViewSystemGifts.php",
+		"ViewSystemGift": "SpecialViewSystemGift.php",
+		"SystemGiftManager": "SpecialSystemGiftManager.php",
+		"SystemGiftManagerLogo": "SpecialSystemGiftManagerLogo.php",
+		"RemoveMasterSystemGift": "SpecialRemoveMasterSystemGift.php",
+		"PopulateAwards": "SpecialPopulateAwards.php",
+		"EchoUserSystemGiftPresentationModel": "EchoUserSystemGiftPresentationModel.php"
+	},
+	"Hooks": {
+		"BeforeCreateEchoEvent": "UserSystemGiftsHooks::onBeforeCreateEchoEvent",
+		"EchoGetDefaultNotifiedUsers": "UserSystemGiftsHooks::onEchoGetDefaultNotifiedUsers",
+		"EchoGetBundleRules": "UserSystemGiftsHooks::onEchoGetBundleRules"
+	},
+	"SpecialPages": {
+		"TopAwards": "TopAwards",
+		"ViewSystemGifts": "ViewSystemGifts",
+		"ViewSystemGift": "ViewSystemGift",
+		"SystemGiftManager": "SystemGiftManager",
+		"SystemGiftManagerLogo": "SystemGiftManagerLogo",
+		"RemoveMasterSystemGift": "RemoveMasterSystemGift",
+		"PopulateAwards": "PopulateAwards"
+	},
+	"DefaultUserOptions": {
+		"echo-subscriptions-web-social-award": true,
+		"echo-subscriptions-email-social-award": false
+	},
+	"AvailableRights": [
+		"awardsmanage"
+	],
+	"GroupPermissions": {
+		"staff": {
+			"awardsmanage": true
+		},
+		"sysop": {
+			"awardsmanage": true
+		}
+	},
+	"ResourceModules": {
+		"ext.socialprofile.systemgifts.css": {
+			"styles": "SystemGift.css",
+			"position": "top"
+		},
+		"ext.socialprofile.special.removemastersystemgift.css": {
+			"styles": "SpecialRemoveMasterSystemGift.css",
+			"position": "top"
+		},
+		"ext.socialprofile.special.systemgiftmanager.css": {
+			"styles": "SpecialSystemGiftManager.css",
+			"position": "top"
+		},
+		"ext.socialprofile.special.systemgiftmanagerlogo.css": {
+			"styles": "SpecialSystemGiftManagerLogo.css",
+			"position": "top"
+		},
+		"ext.socialprofile.special.topawards.css": {
+			"styles": "SpecialTopAwards.css",
+			"position": "top"
+		},
+		"ext.socialprofile.special.viewsystemgift.css": {
+			"styles": "SpecialViewSystemGift.css",
+			"position": "top"
+		},
+		"ext.socialprofile.special.viewsystemgifts.css": {
+			"styles": "SpecialViewSystemGifts.css",
+			"position": "top"
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "SocialProfile/SystemGifts"
+	},
+	"manifest_version": 1
+}

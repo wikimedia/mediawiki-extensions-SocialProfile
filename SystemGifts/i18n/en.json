@@ -5,6 +5,7 @@
 			"Purodha"
 		]
 	},
+	"systemgifts-desc": "Allows sending, receiving, creating, and removing system gifts",
 	"systemgiftmanager": "System gifts manager",
 	"ga-addnew": "+ Add new gift",
 	"ga-back-edit-gift": "Back to edit this gift",
