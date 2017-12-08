@@ -76,10 +76,6 @@
 		"localBasePath": "",
 		"remoteExtPath": "SocialProfile/UserGifts"
 	},
-	"DefaultUserOptions": {
-		"echo-subscriptions-web-social-gift": true,
-		"echo-subscriptions-email-social-gift": false
-	},
 	"AvailableRights": [
 		"giftadmin"
 	],
