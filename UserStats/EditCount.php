@@ -20,13 +20,13 @@ $wgHooks['ArticleUndelete'][] = 'restoreDeletedEdits';
  * Updates user's points after they've made an edit in a namespace that is
  * listed in the $wgNamespacesForEditPoints array.
  */
-function incEditCount( $article, $revision, $baseRevId ) {
+function incEditCount( WikiPage $wikiPage, $revision, $baseRevId ) {
 	global $wgUser, $wgNamespacesForEditPoints;
 
 	// only keep tally for allowable namespaces
 	if (
 		!is_array( $wgNamespacesForEditPoints ) ||
-		in_array( $article->getTitle()->getNamespace(), $wgNamespacesForEditPoints )
+		in_array( $wikiPage->getTitle()->getNamespace(), $wgNamespacesForEditPoints )
 	) {
 		$stats = new UserStatsTrack( $wgUser->getID(), $wgUser->getName() );
 		$stats->incStatField( 'edit' );
