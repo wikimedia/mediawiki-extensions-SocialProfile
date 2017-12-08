@@ -69,7 +69,7 @@
 			"position": "top"
 		},
 		"ext.socialprofile.usergifts.js": {
-			"styles": "UserGifts.js"
+			"scripts": "UserGifts.js"
 		}
 	},
 	"ResourceFileModulePaths": {
