@@ -108,7 +108,10 @@ class UserProfilePage extends Article {
 		// Left side
 		$wgOut->addHTML( '<div id="user-page-left" class="clearfix">' );
 
-		if ( !Hooks::run( 'UserProfileBeginLeft', array( &$this ) ) ) {
+		// Avoid PHP 7.1 warning of passing $this by reference
+		$userProfilePage = $this;
+
+		if ( !Hooks::run( 'UserProfileBeginLeft', array( &$userProfilePage ) ) ) {
 			wfDebug( __METHOD__ . ": UserProfileBeginLeft messed up profile!\n" );
 		}
 
@@ -121,7 +124,7 @@ class UserProfilePage extends Article {
 		$wgOut->addHTML( $this->getFanBoxes( $this->user_name ) );
 		$wgOut->addHTML( $this->getUserStats( $this->user_id, $this->user_name ) );
 
-		if ( !Hooks::run( 'UserProfileEndLeft', array( &$this ) ) ) {
+		if ( !Hooks::run( 'UserProfileEndLeft', array( &$userProfilePage ) ) ) {
 			wfDebug( __METHOD__ . ": UserProfileEndLeft messed up profile!\n" );
 		}
 
@@ -132,7 +135,7 @@ class UserProfilePage extends Article {
 		// Right side
 		$wgOut->addHTML( '<div id="user-page-right" class="clearfix">' );
 
-		if ( !Hooks::run( 'UserProfileBeginRight', array( &$this ) ) ) {
+		if ( !Hooks::run( 'UserProfileBeginRight', array( &$userProfilePage ) ) ) {
 			wfDebug( __METHOD__ . ": UserProfileBeginRight messed up profile!\n" );
 		}
 
@@ -145,7 +148,7 @@ class UserProfilePage extends Article {
 		$wgOut->addHTML( $this->getCasualGames( $this->user_id, $this->user_name ) );
 		$wgOut->addHTML( $this->getUserBoard( $this->user_id, $this->user_name ) );
 
-		if ( !Hooks::run( 'UserProfileEndRight', array( &$this ) ) ) {
+		if ( !Hooks::run( 'UserProfileEndRight', array( &$userProfilePage ) ) ) {
 			wfDebug( __METHOD__ . ": UserProfileEndRight messed up profile!\n" );
 		}
 
