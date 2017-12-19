@@ -79,9 +79,10 @@ class UserProfilePage extends Article {
 	}
 
 	function view() {
-		global $wgOut;
+		$context = $this->getContext();
+		$out = $context->getOutput();
 
-		$wgOut->setPageTitle( $this->mTitle->getPrefixedText() );
+		$out->setPageTitle( $this->mTitle->getPrefixedText() );
 
 		// No need to display noarticletext, we use our own message
 		if ( !$this->user_id ) {
@@ -89,9 +90,9 @@ class UserProfilePage extends Article {
 			return '';
 		}
 
-		$wgOut->addHTML( '<div id="profile-top">' );
-		$wgOut->addHTML( $this->getProfileTop( $this->user_id, $this->user_name ) );
-		$wgOut->addHTML( '<div class="visualClear"></div></div>' );
+		$out->addHTML( '<div id="profile-top">' );
+		$out->addHTML( $this->getProfileTop( $this->user_id, $this->user_name ) );
+		$out->addHTML( '<div class="visualClear"></div></div>' );
 
 		// User does not want social profile for User:user_name, so we just
 		// show header + page content
@@ -106,7 +107,7 @@ class UserProfilePage extends Article {
 		}
 
 		// Left side
-		$wgOut->addHTML( '<div id="user-page-left" class="clearfix">' );
+		$out->addHTML( '<div id="user-page-left" class="clearfix">' );
 
 		// Avoid PHP 7.1 warning of passing $this by reference
 		$userProfilePage = $this;
@@ -115,44 +116,44 @@ class UserProfilePage extends Article {
 			wfDebug( __METHOD__ . ": UserProfileBeginLeft messed up profile!\n" );
 		}
 
-		$wgOut->addHTML( $this->getRelationships( $this->user_name, 1 ) );
-		$wgOut->addHTML( $this->getRelationships( $this->user_name, 2 ) );
-		$wgOut->addHTML( $this->getGifts( $this->user_name ) );
-		$wgOut->addHTML( $this->getAwards( $this->user_name ) );
-		$wgOut->addHTML( $this->getCustomInfo( $this->user_name ) );
-		$wgOut->addHTML( $this->getInterests( $this->user_name ) );
-		$wgOut->addHTML( $this->getFanBoxes( $this->user_name ) );
-		$wgOut->addHTML( $this->getUserStats( $this->user_id, $this->user_name ) );
+		$out->addHTML( $this->getRelationships( $this->user_name, 1 ) );
+		$out->addHTML( $this->getRelationships( $this->user_name, 2 ) );
+		$out->addHTML( $this->getGifts( $this->user_name ) );
+		$out->addHTML( $this->getAwards( $this->user_name ) );
+		$out->addHTML( $this->getCustomInfo( $this->user_name ) );
+		$out->addHTML( $this->getInterests( $this->user_name ) );
+		$out->addHTML( $this->getFanBoxes( $this->user_name ) );
+		$out->addHTML( $this->getUserStats( $this->user_id, $this->user_name ) );
 
 		if ( !Hooks::run( 'UserProfileEndLeft', array( &$userProfilePage ) ) ) {
 			wfDebug( __METHOD__ . ": UserProfileEndLeft messed up profile!\n" );
 		}
 
-		$wgOut->addHTML( '</div>' );
+		$out->addHTML( '</div>' );
 
 		wfDebug( "profile start right\n" );
 
 		// Right side
-		$wgOut->addHTML( '<div id="user-page-right" class="clearfix">' );
+		$out->addHTML( '<div id="user-page-right" class="clearfix">' );
 
 		if ( !Hooks::run( 'UserProfileBeginRight', array( &$userProfilePage ) ) ) {
 			wfDebug( __METHOD__ . ": UserProfileBeginRight messed up profile!\n" );
 		}
 
-		$wgOut->addHTML( $this->getPersonalInfo( $this->user_id, $this->user_name ) );
-		$wgOut->addHTML( $this->getActivity( $this->user_name ) );
+		$out->addHTML( $this->getPersonalInfo( $this->user_id, $this->user_name ) );
+		$out->addHTML( $this->getActivity( $this->user_name ) );
 		// Hook for BlogPage
 		if ( !Hooks::run( 'UserProfileRightSideAfterActivity', array( $this ) ) ) {
 			wfDebug( __METHOD__ . ": UserProfileRightSideAfterActivity hook messed up profile!\n" );
 		}
-		$wgOut->addHTML( $this->getCasualGames( $this->user_id, $this->user_name ) );
-		$wgOut->addHTML( $this->getUserBoard( $this->user_id, $this->user_name ) );
+		$out->addHTML( $this->getCasualGames( $this->user_id, $this->user_name ) );
+		$out->addHTML( $this->getUserBoard( $this->user_id, $this->user_name ) );
 
 		if ( !Hooks::run( 'UserProfileEndRight', array( &$userProfilePage ) ) ) {
 			wfDebug( __METHOD__ . ": UserProfileEndRight messed up profile!\n" );
 		}
 
-		$wgOut->addHTML( '</div><div class="visualClear"></div>' );
+		$out->addHTML( '</div><div class="visualClear"></div>' );
 	}
 
 	function getUserStatsRow( $label, $value ) {
@@ -387,7 +388,7 @@ class UserProfilePage extends Article {
 	 * @return String: HTML or nothing if this feature isn't enabled
 	 */
 	function getCasualGames( $user_id, $user_name ) {
-		global $wgUser, $wgOut, $wgUserProfileDisplay;
+		global $wgUser, $wgUserProfileDisplay;
 
 		if ( $wgUserProfileDisplay['games'] == false ) {
 			return '';
@@ -527,7 +528,10 @@ class UserProfilePage extends Article {
 	}
 
 	function getProfileSection( $label, $value, $required = true ) {
-		global $wgUser, $wgOut;
+		global $wgUser;
+
+		$context = $this->getContext();
+		$out = $context->getOutput();
 
 		$output = '';
 		if ( $value || $required ) {
@@ -539,7 +543,7 @@ class UserProfilePage extends Article {
 				}
 			}
 
-			$value = $wgOut->parse( trim( $value ), false );
+			$value = $out->parse( trim( $value ), false );
 
 			$output = "<div><b>{$label}</b>{$value}</div>";
 		}
@@ -1560,7 +1564,10 @@ class UserProfilePage extends Article {
 	 * @param $user_name String: user name
 	 */
 	function getUserBoard( $user_id, $user_name ) {
-		global $wgUser, $wgOut, $wgUserProfileDisplay;
+		global $wgUser, $wgUserProfileDisplay;
+
+		$context = $this->getContext();
+		$out = $context->getOutput();
 
 		// Anonymous users cannot have user boards
 		if ( $user_id == 0 ) {
@@ -1576,7 +1583,7 @@ class UserProfilePage extends Article {
 		$output = ''; // Prevent E_NOTICE
 
 		// Add JS
-		$wgOut->addModules( 'ext.socialprofile.userprofile.js' );
+		$out->addModules( 'ext.socialprofile.userprofile.js' );
 
 		$rel = new UserRelationship( $user_name );
 		$friends = $rel->getRelationshipList( 1, 4 );
@@ -1669,14 +1676,17 @@ class UserProfilePage extends Article {
 	 * @return String: HTML
 	 */
 	function getFanBoxes( $user_name ) {
-		global $wgOut, $wgUser, $wgMemc, $wgUserProfileDisplay, $wgEnableUserBoxes;
+		global $wgUser, $wgMemc, $wgUserProfileDisplay, $wgEnableUserBoxes;
+
+		$context = $this->getContext();
+		$out = $context->getOutput();
 
 		if ( !$wgEnableUserBoxes || $wgUserProfileDisplay['userboxes'] == false ) {
 			return '';
 		}
 
 		// Add CSS & JS
-		$wgOut->addModules( 'ext.fanBoxes' );
+		$out->addModules( 'ext.fanBoxes' );
 
 		$output = '';
 		$f = new UserFanBoxes( $user_name );
@@ -1761,7 +1771,7 @@ class UserProfilePage extends Article {
 					$fantag_leftside = $fanbox['fantag_left_text'];
 					$fantag_leftside = $tagParser->parse(
 						$fantag_leftside, $this->getTitle(),
-						$wgOut->parserOptions(), false
+						$out->parserOptions(), false
 					);
 					$fantag_leftside = $fantag_leftside->getText();
 				}
@@ -1788,7 +1798,7 @@ class UserProfilePage extends Article {
 				$fantag_title = Title::makeTitle( NS_FANTAG, $fanbox['fantag_title'] );
 				$right_text = $fanbox['fantag_right_text'];
 				$right_text = $tagParser->parse(
-					$right_text, $this->getTitle(), $wgOut->parserOptions(), false
+					$right_text, $this->getTitle(), $out->parserOptions(), false
 				);
 				$right_text = $right_text->getText();
 
