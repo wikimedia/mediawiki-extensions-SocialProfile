@@ -68,7 +68,7 @@ class UserProfileHooks {
 				}
 			} else {
 				$wgOut->enableClientCache( false );
-				$wgHooks['ParserLimitReport'][] = 'UserProfileHooks::markPageUncacheable';
+				$wgHooks['ParserLimitReportPrepare'][] = 'UserProfileHooks::onParserLimitReportPrepare';
 			}
 
 			$wgOut->addModuleStyles( [
@@ -86,10 +86,10 @@ class UserProfileHooks {
 	 * Mark page as uncacheable
 	 *
 	 * @param Parser $parser
-	 * @param string &$limitReport unused
-	 * @return bool
+	 * @param ParserOutput $output
+	 * @return bool true
 	 */
-	public static function markPageUncacheable( $parser, &$limitReport ) {
+	public static function onParserLimitReportPrepare( $parser, $output ) {
 		$parser->disableCache();
 		return true;
 	}
