@@ -53,18 +53,20 @@ class UserProfilePage extends Article {
 	 * Constructor
 	 */
 	function __construct( $title ) {
-		global $wgUser;
+		$context = $this->getContext();
+		$user = $context->getUser();
+
 		parent::__construct( $title );
 		$this->user_name = $title->getText();
 		$this->user_id = User::idFromName( $this->user_name );
 		$this->user = User::newFromId( $this->user_id );
 		$this->user->loadFromDatabase();
 
-		$this->is_owner = ( $this->user_name == $wgUser->getName() );
+		$this->is_owner = ( $this->user_name == $user->getName() );
 
 		$profile = new UserProfile( $this->user_name );
 		$this->profile_data = $profile->getProfile();
-		$this->profile_visible_fields = SPUserSecurity::getVisibleFields( $this->user_id, $wgUser->getId() );
+		$this->profile_visible_fields = SPUserSecurity::getVisibleFields( $this->user_id, $user->getID() );
 	}
 
 	/**
@@ -388,7 +390,7 @@ class UserProfilePage extends Article {
 	 * @return String: HTML or nothing if this feature isn't enabled
 	 */
 	function getCasualGames( $user_id, $user_name ) {
-		global $wgUser, $wgUserProfileDisplay;
+		global $wgUserProfileDisplay;
 
 		if ( $wgUserProfileDisplay['games'] == false ) {
 			return '';
@@ -528,15 +530,14 @@ class UserProfilePage extends Article {
 	}
 
 	function getProfileSection( $label, $value, $required = true ) {
-		global $wgUser;
-
 		$context = $this->getContext();
 		$out = $context->getOutput();
+		$user = $context->getUser();
 
 		$output = '';
 		if ( $value || $required ) {
 			if ( !$value ) {
-				if ( $wgUser->getName() == $this->getTitle()->getText() ) {
+				if ( $user->getName() == $this->getTitle()->getText() ) {
 					$value = wfMessage( 'profile-updated-personal' )->escaped();
 				} else {
 					$value = wfMessage( 'profile-not-provided' )->escaped();
@@ -551,7 +552,10 @@ class UserProfilePage extends Article {
 	}
 
 	function getPersonalInfo( $user_id, $user_name ) {
-		global $wgUser, $wgUserProfileDisplay;
+		global $wgUserProfileDisplay;
+
+		$context = $this->getContext();
+		$user = $context->getUser();
 
 		if ( $wgUserProfileDisplay['personal'] == false ) {
 			return '';
@@ -694,7 +698,7 @@ class UserProfilePage extends Article {
 				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">';
-			if ( $wgUser->getName() == $user_name ) {
+			if ( $user->getName() == $user_name ) {
 				$output .= '<a href="' . htmlspecialchars( $edit_info_link->getFullURL() ) . '">' .
 					wfMessage( 'user-edit-this' )->escaped() . '</a>';
 			}
@@ -706,7 +710,7 @@ class UserProfilePage extends Article {
 			<div class="profile-info-container">' .
 				$personal_output .
 			'</div>';
-		} elseif ( $wgUser->getName() == $user_name ) {
+		} elseif ( $user->getName() == $user_name ) {
 			$output .= '<div class="user-section-heading">
 				<div class="user-section-title">' .
 					wfMessage( 'user-personal-info-title' )->escaped() .
@@ -736,7 +740,10 @@ class UserProfilePage extends Article {
 	 * @return String: HTML
 	 */
 	function getCustomInfo( $user_name ) {
-		global $wgUser, $wgUserProfileDisplay;
+		global $wgUserProfileDisplay;
+
+		$context = $this->getContext();
+		$user = $context->getUser();
 
 		if ( $wgUserProfileDisplay['custom'] == false ) {
 			return '';
@@ -772,7 +779,7 @@ class UserProfilePage extends Article {
 				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">';
-			if ( $wgUser->getName() == $user_name ) {
+			if ( $user->getName() == $user_name ) {
 				$output .= '<a href="' . htmlspecialchars( $edit_info_link->getFullURL() ) . '/custom">' .
 					wfMessage( 'user-edit-this' )->escaped() . '</a>';
 			}
@@ -784,7 +791,7 @@ class UserProfilePage extends Article {
 			<div class="profile-info-container">' .
 				$custom_output .
 			'</div>';
-		} elseif ( $wgUser->getName() == $user_name ) {
+		} elseif ( $user->getName() == $user_name ) {
 			$output .= '<div class="user-section-heading">
 				<div class="user-section-title">' .
 					wfMessage( 'custom-info-title' )->escaped() .
@@ -815,7 +822,10 @@ class UserProfilePage extends Article {
 	 * @return String: HTML
 	 */
 	function getInterests( $user_name ) {
-		global $wgUser, $wgUserProfileDisplay;
+		global $wgUserProfileDisplay;
+
+		$context = $this->getContext();
+		$user = $context->getUser();
 
 		if ( $wgUserProfileDisplay['interests'] == false ) {
 			return '';
@@ -865,7 +875,7 @@ class UserProfilePage extends Article {
 				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">';
-			if ( $wgUser->getName() == $user_name ) {
+			if ( $user->getName() == $user_name ) {
 				$output .= '<a href="' . htmlspecialchars( $edit_info_link->getFullURL() ) . '/personal">' .
 					wfMessage( 'user-edit-this' )->escaped() . '</a>';
 			}
@@ -908,8 +918,10 @@ class UserProfilePage extends Article {
 	 * @param $user_name String: user name
 	 */
 	function getProfileTop( $user_id, $user_name ) {
-		global $wgUser, $wgLang;
-		global $wgUserLevels;
+		global $wgLang, $wgUserLevels;
+
+		$context = $this->getContext();
+		$userContext = $context->getUser();
 
 		$stats = new UserStats( $user_id, $user_name );
 		$stats_data = $stats->getUserStats();
@@ -941,7 +953,7 @@ class UserProfilePage extends Article {
 		$user_wiki = Title::makeTitle( NS_USER_WIKI, $user );
 
 		if ( $id != 0 ) {
-			$relationship = UserRelationship::getUserRelationshipByID( $id, $wgUser->getID() );
+			$relationship = UserRelationship::getUserRelationshipByID( $id, $userContext->getID() );
 		}
 		$avatar = new wAvatar( $this->user_id, 'l' );
 
@@ -1001,7 +1013,7 @@ class UserProfilePage extends Article {
 				'<a href="' . htmlspecialchars( $watchlist->getFullURL() ) . '">' . wfMessage( 'user-watchlist' )->escaped() . '</a>',
 				''
 			) );
-		} elseif ( $wgUser->isLoggedIn() ) {
+		} elseif ( $userContext->isLoggedIn() ) {
 			if ( $relationship == false ) {
 				$output .= $wgLang->pipeList( array(
 					'<a href="' . htmlspecialchars( $add_relationship->getFullURL( 'user=' . $user_safe . '&rel_type=1' ) ) . '" rel="nofollow">' . wfMessage( 'user-add-friend' )->escaped() . '</a>',
@@ -1025,7 +1037,7 @@ class UserProfilePage extends Article {
 
 			global $wgUserBoard;
 			if ( $wgUserBoard ) {
-				$output .= '<a href="' . htmlspecialchars( $send_message->getFullURL( 'user=' . $wgUser->getName() . '&conv=' . $user_safe ) ) . '" rel="nofollow">' .
+				$output .= '<a href="' . htmlspecialchars( $send_message->getFullURL( 'user=' . $userContext->getName() . '&conv=' . $user_safe ) ) . '" rel="nofollow">' .
 					wfMessage( 'user-send-message' )->escaped() . '</a>';
 				$output .= wfMessage( 'pipe-separator' )->escaped();
 			}
@@ -1068,13 +1080,14 @@ class UserProfilePage extends Article {
 	 * @return String: HTML
 	 */
 	function getProfileImage( $user_name ) {
-		global $wgUser;
+		$context = $this->getContext();
+		$user = $context->getUser();
 
 		$avatar = new wAvatar( $this->user_id, 'l' );
 		$avatarTitle = SpecialPage::getTitleFor( 'UploadAvatar' );
 
 		$output = '<div class="profile-image">';
-		if ( $wgUser->getName() == $this->user_name ) {
+		if ( $user->getName() == $this->user_name ) {
 			if ( $avatar->isDefault() ) {
 				$caption = 'upload image';
 			} else {
@@ -1101,7 +1114,7 @@ class UserProfilePage extends Article {
 	 *                           foes
 	 */
 	function getRelationships( $user_name, $rel_type ) {
-		global $wgMemc, $wgUser, $wgUserProfileDisplay, $wgLang;
+		global $wgMemc, $wgUserProfileDisplay, $wgLang;
 
 		// If not enabled in site settings, don't display
 		if ( $rel_type == 1 ) {
@@ -1200,7 +1213,7 @@ class UserProfilePage extends Article {
 	 * @param $user_name String: name of the user whose activity we want to fetch
 	 */
 	function getActivity( $user_name ) {
-		global $wgUser, $wgUserProfileDisplay, $wgExtensionAssetsPath, $wgUploadPath;
+		global $wgUserProfileDisplay, $wgExtensionAssetsPath, $wgUploadPath;
 
 		// If not enabled in site settings, don't display
 		if ( $wgUserProfileDisplay['activity'] == false ) {
@@ -1380,7 +1393,10 @@ class UserProfilePage extends Article {
 	}
 
 	function getGifts( $user_name ) {
-		global $wgUser, $wgMemc, $wgUserProfileDisplay, $wgUploadPath;
+		global $wgMemc, $wgUserProfileDisplay, $wgUploadPath;
+
+		$context = $this->getContext();
+		$user = $context->getUser();
 
 		// If not enabled in site settings, don't display
 		if ( $wgUserProfileDisplay['gifts'] == false ) {
@@ -1438,10 +1454,10 @@ class UserProfilePage extends Article {
 			$x = 1;
 
 			foreach ( $gifts as $gift ) {
-				if ( $gift['status'] == 1 && $user_name == $wgUser->getName() ) {
+				if ( $gift['status'] == 1 && $user_name == $user->getName() ) {
 					$g->clearUserGiftStatus( $gift['id'] );
 					$wgMemc->delete( $key );
-					$g->decNewGiftCount( $wgUser->getID() );
+					$g->decNewGiftCount( $user->getID() );
 				}
 
 				$user = Title::makeTitle( NS_USER, $gift['user_name_from'] );
@@ -1469,7 +1485,10 @@ class UserProfilePage extends Article {
 	}
 
 	function getAwards( $user_name ) {
-		global $wgUser, $wgMemc, $wgUserProfileDisplay, $wgUploadPath;
+		global $wgMemc, $wgUserProfileDisplay, $wgUploadPath;
+
+		$context = $this->getContext();
+		$user = $context->getUser();
 
 		// If not enabled in site settings, don't display
 		if ( $wgUserProfileDisplay['awards'] == false ) {
@@ -1525,10 +1544,10 @@ class UserProfilePage extends Article {
 			<div class="user-gift-container">';
 
 			foreach ( $system_gifts as $gift ) {
-				if ( $gift['status'] == 1 && $user_name == $wgUser->getName() ) {
+				if ( $gift['status'] == 1 && $user_name == $user->getName() ) {
 					$sg->clearUserGiftStatus( $gift['id'] );
 					$wgMemc->delete( $sg_key );
-					$sg->decNewSystemGiftCount( $wgUser->getID() );
+					$sg->decNewSystemGiftCount( $user->getID() );
 				}
 
 				$gift_image = '<img src="' . $wgUploadPath . '/awards/' .
@@ -1564,7 +1583,7 @@ class UserProfilePage extends Article {
 	 * @param $user_name String: user name
 	 */
 	function getUserBoard( $user_id, $user_name ) {
-		global $wgUser, $wgUserProfileDisplay;
+		global $wgUserProfileDisplay;
 
 		$context = $this->getContext();
 		$out = $context->getOutput();
@@ -1595,7 +1614,7 @@ class UserProfilePage extends Article {
 		// If the user is viewing their own profile or is allowed to delete
 		// board messages, add the amount of private messages to the total
 		// sum of board messages.
-		if ( $wgUser->getName() == $user_name || $wgUser->isAllowed( 'userboard-delete' ) ) {
+		if ( $user->getName() == $user_name || $user->isAllowed( 'userboard-delete' ) ) {
 			$total = $total + $stats_data['user_board_priv'];
 		}
 
@@ -1605,7 +1624,7 @@ class UserProfilePage extends Article {
 			'</div>
 			<div class="user-section-actions">
 				<div class="action-right">';
-		if ( $wgUser->getName() == $user_name ) {
+		if ( $user->getName() == $user_name ) {
 			if ( $friends ) {
 				$output .= '<a href="' . UserBoard::getBoardBlastURL() . '">' .
 					wfMessage( 'user-send-board-blast' )->escaped() . '</a>';
@@ -1631,8 +1650,8 @@ class UserProfilePage extends Article {
 		</div>
 		<div class="visualClear"></div>';
 
-		if ( $wgUser->getName() !== $user_name ) {
-			if ( $wgUser->isLoggedIn() && !$wgUser->isBlocked() ) {
+		if ( $user->getName() !== $user_name ) {
+			if ( $user->isLoggedIn() && !$user->isBlocked() ) {
 				$output .= '<div class="user-page-message-form">
 						<input type="hidden" id="user_name_to" name="user_name_to" value="' . addslashes( $user_name ) . '" />
 						<span class="profile-board-message-type">' .
@@ -1676,10 +1695,11 @@ class UserProfilePage extends Article {
 	 * @return String: HTML
 	 */
 	function getFanBoxes( $user_name ) {
-		global $wgUser, $wgMemc, $wgUserProfileDisplay, $wgEnableUserBoxes;
+		global $wgMemc, $wgUserProfileDisplay, $wgEnableUserBoxes;
 
 		$context = $this->getContext();
 		$out = $context->getOutput();
+		$user = $context->getUser();
 
 		if ( !$wgEnableUserBoxes || $wgUserProfileDisplay['userboxes'] == false ) {
 			return '';
@@ -1816,7 +1836,7 @@ class UserProfilePage extends Article {
 						</div>
 					</div>";
 
-				if ( $wgUser->isLoggedIn() ) {
+				if ( $user->isLoggedIn() ) {
 					if ( $check_user_fanbox == 0 ) {
 						$output .= '<div class="fanbox-pop-up-box-profile" id="fanboxPopUpBox' . $fanbox['fantag_id'] . '">
 							<table cellpadding="0" cellspacing="0" align="center">
@@ -1853,7 +1873,7 @@ class UserProfilePage extends Article {
 				}
 
 				// Show a message to anonymous users, prompting them to log in
-				if ( $wgUser->getID() == 0 ) {
+				if ( $user->getID() == 0 ) {
 					$output .= '<div class="fanbox-pop-up-box-profile" id="fanboxPopUpBox' . $fanbox['fantag_id'] . '">
 						<table cellpadding="0" cellspacing="0" align="center">
 							<tr>
