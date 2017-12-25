@@ -51,20 +51,20 @@ class SocialProfileHooks {
 			$dbExt = '.postgres';
 		}
 
-		$updater->addExtensionUpdate( array( 'addTable', 'user_board', "$dir/UserBoard/user_board$dbExt.sql", true ) );
-		$updater->addExtensionUpdate( array( 'addTable', 'user_fields_privacy', "$dir/UserProfile/user_fields_privacy$dbExt.sql", true ) );
-		$updater->addExtensionUpdate( array( 'addTable', 'user_profile', "$dir/UserProfile/user_profile$dbExt.sql", true ) );
-		$updater->addExtensionUpdate( array( 'addTable', 'user_stats', "$dir/UserStats/user_stats$dbExt.sql", true ) );
-		$updater->addExtensionUpdate( array( 'addTable', 'user_relationship', "$dir/UserRelationship/user_relationship$dbExt.sql", true ) );
-		$updater->addExtensionUpdate( array( 'addTable', 'user_relationship_request', "$dir/UserRelationship/user_relationship$dbExt.sql", true ) );
-		$updater->addExtensionUpdate( array( 'addTable', 'user_system_gift', "$dir/SystemGifts/systemgifts$dbExt.sql", true ) );
-		$updater->addExtensionUpdate( array( 'addTable', 'system_gift', "$dir/SystemGifts/systemgifts$dbExt.sql", true ) );
-		$updater->addExtensionUpdate( array( 'addTable', 'user_gift', "$dir/UserGifts/usergifts$dbExt.sql", true ) );
-		$updater->addExtensionUpdate( array( 'addTable', 'gift', "$dir/UserGifts/usergifts$dbExt.sql", true ) );
-		$updater->addExtensionUpdate( array( 'addTable', 'user_system_messages', "$dir/UserSystemMessages/user_system_messages$dbExt.sql", true ) );
-		$updater->addExtensionUpdate( array( 'addTable', 'user_points_weekly', "$dir/UserStats/user_points_weekly$dbExt.sql", true ) );
-		$updater->addExtensionUpdate( array( 'addTable', 'user_points_monthly', "$dir/UserStats/user_points_monthly$dbExt.sql", true ) );
-		$updater->addExtensionUpdate( array( 'addTable', 'user_points_archive', "$dir/UserStats/user_points_archive$dbExt.sql", true ) );
+		$updater->addExtensionTable( 'user_board', "$dir/UserBoard/user_board$dbExt.sql" );
+		$updater->addExtensionTable( 'user_fields_privacy', "$dir/UserProfile/user_fields_privacy$dbExt.sql" );
+		$updater->addExtensionTable( 'user_profile', "$dir/UserProfile/user_profile$dbExt.sql" );
+		$updater->addExtensionTable( 'user_stats', "$dir/UserStats/user_stats$dbExt.sql" );
+		$updater->addExtensionTable( 'user_relationship', "$dir/UserRelationship/user_relationship$dbExt.sql" );
+		$updater->addExtensionTable( 'user_relationship_request', "$dir/UserRelationship/user_relationship$dbExt.sql" );
+		$updater->addExtensionTable( 'user_system_gift', "$dir/SystemGifts/systemgifts$dbExt.sql" );
+		$updater->addExtensionTable( 'system_gift', "$dir/SystemGifts/systemgifts$dbExt.sql" );
+		$updater->addExtensionTable( 'user_gift', "$dir/UserGifts/usergifts$dbExt.sql" );
+		$updater->addExtensionTable( 'gift', "$dir/UserGifts/usergifts$dbExt.sql" );
+		$updater->addExtensionTable( 'user_system_messages', "$dir/UserSystemMessages/user_system_messages$dbExt.sql" );
+		$updater->addExtensionTable( 'user_points_weekly', "$dir/UserStats/user_points_weekly$dbExt.sql" );
+		$updater->addExtensionTable( 'user_points_monthly', "$dir/UserStats/user_points_monthly$dbExt.sql" );
+		$updater->addExtensionTable( 'user_points_archive', "$dir/UserStats/user_points_archive$dbExt.sql" );
 
 		return true;
 	}
