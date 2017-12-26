@@ -1587,6 +1587,7 @@ class UserProfilePage extends Article {
 
 		$context = $this->getContext();
 		$out = $context->getOutput();
+		$user = $context->getUser();
 
 		// Anonymous users cannot have user boards
 		if ( $user_id == 0 ) {
