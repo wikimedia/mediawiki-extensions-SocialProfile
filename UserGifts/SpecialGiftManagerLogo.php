@@ -47,14 +47,10 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	function canUserManage() {
 		$user = $this->getUser();
 
-		if ( $user->isBlocked() || $user->isAnon() ) {
-			return false;
-		}
-
 		$gift = Gifts::getGift( $this->gift_id );
 		if (
-			$user->getID() == $gift['creator_user_id'] ||
-			in_array( 'giftadmin', $user->getGroups() )
+			$user->getId() == $gift['creator_user_id'] ||
+			$user->isAllowed( 'giftadmin' )
 		)
 		{
 			return true;
@@ -122,21 +118,30 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 
 		$this->avatarUploadDirectory = $wgUploadDirectory . '/awards';
 
-		// Set the robot policies, etc.
-		$out->setArticleRelated( false );
-		$out->setRobotPolicy( 'noindex,nofollow' );
-
 		/** Show an error message if file upload is disabled */
 		if ( !$wgEnableUploads ) {
 			$out->addWikiMsg( 'uploaddisabled' );
 			return;
 		}
 
+		// user needs to be logged in to access
+		$this->requireLogin();
+
 		/** Various rights checks */
 		if ( !$user->isAllowed( 'upload' ) || $user->isBlocked() ) {
 			throw new ErrorPageError( 'uploadnologin', 'uploadnologintext' );
 		}
+
 		$this->checkReadOnly();
+
+		// If user is blocked, s/he doesn't need to access this page
+		if ( $user->isBlocked() ) {
+			throw new UserBlockedError( $user->getBlock() );
+		}
+
+		// Set the robot policies, etc.
+		$out->setArticleRelated( false );
+		$out->setRobotPolicy( 'noindex,nofollow' );
 
 		/** Check if the image directory is writeable, this is a common mistake */
 		if ( !is_writeable( $wgUploadDirectory ) ) {

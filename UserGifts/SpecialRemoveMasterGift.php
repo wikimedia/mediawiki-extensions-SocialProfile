@@ -6,7 +6,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	 * Constructor
 	 */
 	public function __construct() {
-		parent::__construct( 'RemoveMasterGift' );
+		parent::__construct( 'RemoveMasterGift', 'giftadmin' );
 	}
 
 	/**
@@ -37,18 +37,17 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	/**
 	 * Checks if a user is allowed to remove gifts.
 	 *
-	 * @return Boolean: false by default or if the user is blocked, true if
-	 *                  user has 'delete' permission or is a member of the
-	 *                  giftadmin group
+	 * @return Boolean: false by default or true if
+	 * - has'delete' permission or..
+	 * - has the 'giftadmin' permission
 	 */
 	function canUserManage() {
 		$user = $this->getUser();
 
-		if ( $user->isBlocked() ) {
-			return false;
-		}
-
-		if ( $user->isAllowed( 'delete' ) || in_array( 'giftadmin', $user->getGroups() ) ) {
+		if (
+			$user->isAllowed( 'delete' ) ||
+			$user->isAllowed( 'giftadmin' )
+		) {
 			return true;
 		}
 
@@ -64,16 +63,24 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 		$out = $this->getOutput();
 		$request = $this->getRequest();
 
+		// user needs to be logged in to access
+		$this->requireLogin();
+
+		// Check for permissions
+		if ( !$this->canUserManage() ) {
+			throw new ErrorPageError( 'error', 'badaccess' );
+		}
+
+		// If user is blocked, s/he doesn't need to access this page
+		if ( $user->isBlocked() ) {
+			throw new UserBlockedError( $user->getBlock() );
+		}
+
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();
 
 		// Add CSS
 		$out->addModuleStyles( 'ext.socialprofile.usergifts.css' );
-
-		// Check for permissions
-		if ( $this->getUser()->isAnon() || !$this->canUserManage() ) {
-			throw new ErrorPageError( 'error', 'badaccess' );
-		}
 
 		$this->gift_id = $request->getInt( 'gift_id' );
 

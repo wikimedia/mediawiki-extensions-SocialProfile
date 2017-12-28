@@ -50,6 +50,12 @@ class SpecialViewRelationships extends SpecialPage {
 		$user = $this->getUser();
 		$linkRenderer = $this->getLinkRenderer();
 
+		/**
+		 * Redirect Non-logged in users to Login Page
+		 * It will automatically return them to the ViewRelationships page
+		 */
+		$this->requireLogin();
+
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();
 
@@ -66,17 +72,6 @@ class SpecialViewRelationships extends SpecialPage {
 		$user_name = $request->getVal( 'user' );
 		$rel_type = $request->getInt( 'rel_type' );
 		$page = $request->getInt( 'page' );
-
-		/**
-		 * Redirect Non-logged in users to Login Page
-		 * It will automatically return them to the ViewRelationships page
-		 */
-		if ( !$user->isLoggedIn() && $user_name == '' ) {
-			$out->setPageTitle( $this->msg( 'ur-error-page-title' )->plain() );
-			$login = SpecialPage::getTitleFor( 'Userlogin' );
-			$out->redirect( htmlspecialchars( $login->getFullURL( 'returnto=Special:ViewRelationships' ) ) );
-			return false;
-		}
 
 		/**
 		 * Set up config for page / default values

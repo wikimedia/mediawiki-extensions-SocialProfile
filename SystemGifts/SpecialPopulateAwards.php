@@ -27,10 +27,8 @@ class PopulateAwards extends UnlistedSpecialPage {
 		$out = $this->getOutput();
 		$user = $this->getUser();
 
-		// If the user doesn't have the required 'awardsmanage' permission, display an error
-		if ( !$user->isAllowed( 'awardsmanage' ) ) {
-			throw new PermissionsError( 'awardsmanage' );
-		}
+		// make sure user has the correct permissions
+		$this->checkPermissions();
 
 		// Show a message if the database is in read-only mode
 		$this->checkReadOnly();

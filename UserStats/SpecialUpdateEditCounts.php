@@ -106,9 +106,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 
 		// Check permissions -- we must be allowed to access this special page
 		// before we can run any database queries
-		if ( !$this->getUser()->isAllowed( 'updatepoints' ) ) {
-			throw new ErrorPageError( 'error', 'badaccess' );
-		}
+		$this->checkPermissions();
 
 		// And obviously the database needs to be writable before we start
 		// running INSERT/UPDATE queries against it...
