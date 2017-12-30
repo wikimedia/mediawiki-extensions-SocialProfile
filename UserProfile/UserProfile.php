@@ -103,6 +103,13 @@ $wgResourceModules['ext.socialprofile.userprofile.diff'] = array(
 	'position' => 'top'
 );
 
+$wgResourceModules['ext.socialprofile.special.uploadavatar.css'] = array(
+	'styles' => 'SpecialUploadAvatar.css',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'SocialProfile/UserProfile',
+	'position' => 'top'
+);
+
 # Add new log types for profile edits and avatar uploads
 global $wgLogTypes, $wgLogNames, $wgLogHeaders, $wgLogActions;
 $wgLogTypes[]                    = 'profile';

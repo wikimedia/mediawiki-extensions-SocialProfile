@@ -1,0 +1,24 @@
+#wpUploadSource {
+	width: 100px;
+}
+
+table.avatar-success-page {
+	border-collapse: collapse;
+	margin-top: 20px;
+	padding: 0;
+}
+
+table.avatar-success-page td.title-cell {
+	color: #797979;
+	font-size: 12px;
+	font-weight: 700;
+	padding: 5px 5px 20px 5px;
+}
+
+table.avatar-success-page td.image-cell {
+	padding-bottom: 20px;
+}
+
+table.avatar-success-page td.image-cell img {
+	border: 0;
+}
