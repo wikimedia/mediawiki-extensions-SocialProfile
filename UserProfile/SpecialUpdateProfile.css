@@ -1,0 +1,186 @@
+.firstHeading {
+	border-bottom: none;
+	margin: 0 !important;
+	display: none;
+}
+
+.profile-info {
+	padding: 25px 0;
+}
+
+.profile-update {
+	padding: 0;
+}
+
+.profile-update-button {
+	background-color: #78ba5d;
+	border: 1px solid #6b6b6b;
+	color: #fff;
+	font-size: 13px;
+	padding: 3px;
+}
+
+.profile-update-title {
+	color: #333;
+	font-size: 16px;
+	font-weight: 700;
+	margin: 0 0 5px 0 !important;
+}
+
+.profile-update-title img {
+	vertical-align: middle;
+	margin: -3px 0 0 5px;
+}
+
+.profile-update-unit-left {
+	color: #797979;
+	font-size: 12px;
+	font-weight: 700;
+	float: left;
+	width: 150px;
+}
+
+.profile-update-unit {
+	float: left;
+	width: 450px;
+}
+
+.profile-update-unit-small {
+	color: #797979;
+	font-size: 10px;
+	float: left;
+	width: 450px;
+}
+
+.profile-update-row {
+	color: #797979;
+	font-weight: 700;
+	font-size: 12px;
+}
+
+.profile-update-links {
+	margin: 0 0 10px 0;
+	font-weight: 700;
+}
+
+.profile-update-links a {
+	text-decoration: none;
+}
+
+.profile-status {
+	background-color: #fffb9b;
+	font-weight: 700;
+	padding: 0 5px 0 5px;
+}
+
+.profile-on {
+	background-color: #fffb9b;
+	border: 1px solid #fdc745;
+	font-weight: 700;
+	padding: 1px 5px 1px 5px;
+}
+
+/* The text "Message type" on the left side of the message type selector on profile page */
+.profile-board-message-type {
+	color: #797979;
+}
+
+/* Responsive stuff for mobile devices */
+@media screen and (max-width: 750px) {
+	/* Special:UpdateProfile & Special:EditProfile */
+	.mw-special-EditProfile textarea,
+	.mw-special-UpdateProfile textarea {
+		min-width: 60%;
+		max-width: 100%;
+	}
+	div.profile-tab {
+		/**
+		 * I don't like how the tabs' texts are off-center, but this
+		 * is still better than nothing
+		 */
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 750px) and (orientation: portrait) {
+	.mw-special-EditProfile textarea,
+	.mw-special-UpdateProfile textarea {
+		width: 30% !important;
+	}
+}
+
+/* Privacy */
+.mw-special-UpdateProfile div#mw-content-text .visualClear {
+	height: 20px;
+}
+
+.eye-container {
+	width: 130px;
+	height: 20px;
+	/* @embed */
+	background: #a3c2d5 url(../images/eye.png) 0 0 no-repeat;
+	border-radius: 4px;
+	opacity: 0.5;
+	overflow: hidden;
+	position: relative;
+	top: -25px;
+	cursor: pointer;
+	box-shadow: 2px 2px 3px -1px darkgray;
+}
+
+/** @todo FIXME: this is an awful hack for Special:UpdateProfile (the "personal information" page) */
+div.eye-container[fieldkey="up_real_name"],
+div.eye-container[fieldkey="up_email"],
+div.eye-container[fieldkey="up_location_city"],
+div.eye-container[fieldkey="up_hometown_country"],
+div.eye-container[fieldkey="up_birthday"] {
+	top: 5px;
+}
+
+div.eye-container[fieldkey="up_hometown_city"],
+div.eye-container[fieldkey="up_location_country"] {
+	top: 10px;
+}
+
+.eye-container:hover {
+	opacity: 1.0;
+}
+
+.eye-container .title {
+	font-size: 12px;
+	font-weight: 700;
+	color: #fff;
+	padding: 0 0 0 25px;
+}
+
+.eye-container .menu {
+	padding: 10px 0 10px 0;
+}
+
+.eye-container .menu .item {
+	/* @embed */
+	background: #a3c2d5 url(../images/eye-bw.png) 5px 1px no-repeat;
+	color: #fff;
+	height: 18px;
+	font-size: 12px;
+	font-weight: 700;
+	padding: 0 0 0 30px;
+	margin: 4px 0 4px 0;
+}
+
+.eye-container .menu .item:hover {
+	background-color: #fff;
+	box-shadow: 1px 1px 1px -1px #000;
+	color: #a3c2d5;
+}
+
+/*
+.profile-info-other-info .eye-container,.profile-info-custom-info .eye-container,
+#profile-update-personal-aboutme .eye-container,
+#profile-update-personal-work .eye-container,
+#profile-update-personal-education .eye-container,
+#profile-update-personal-places .eye-container,
+#profile-update-personal-web .eye-container {
+	top: -35px !important;
+}
+*/

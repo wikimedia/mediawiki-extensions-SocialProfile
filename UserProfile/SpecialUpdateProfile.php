@@ -152,10 +152,11 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		}
 
 		// Add CSS & JS
-		$out->addModuleStyles( array(
+		$out->addModuleStyles( [
 			'ext.socialprofile.clearfix',
-			'ext.socialprofile.userprofile.css'
-		) );
+			'ext.socialprofile.userprofile.tabs.css',
+			'ext.socialprofile.special.updateprofile.css'
+		] );
 		$out->addModules( 'ext.userProfile.updateProfile' );
 
 		if ( $request->wasPosted() ) {

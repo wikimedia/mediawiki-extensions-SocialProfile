@@ -103,8 +103,22 @@ $wgResourceModules['ext.socialprofile.userprofile.diff'] = array(
 	'position' => 'top'
 );
 
+$wgResourceModules['ext.socialprofile.userprofile.tabs.css'] = array(
+	'styles' => 'ProfileTabs.css',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'SocialProfile/UserProfile',
+	'position' => 'top'
+);
+
 $wgResourceModules['ext.socialprofile.special.uploadavatar.css'] = array(
 	'styles' => 'SpecialUploadAvatar.css',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'SocialProfile/UserProfile',
+	'position' => 'top'
+);
+
+$wgResourceModules['ext.socialprofile.special.updateprofile.css'] = array(
+	'styles' => 'SpecialUpdateProfile.css',
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserProfile',
 	'position' => 'top'

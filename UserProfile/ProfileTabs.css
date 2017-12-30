@@ -1,0 +1,45 @@
+.profile-tab-bar {
+	margin-top: 20px;
+}
+
+.profile-tab {
+	background-color: #68bd46;
+	text-align: center;
+	height: 22px;
+	min-width: 72px;
+	float: left;
+	padding: 6px 5px 0 5px;
+	margin: 0 5px 0 0;
+}
+
+.profile-tab-on {
+	background-color: #466c2c;
+	float: left;
+	height: 22px;
+	color: #fff;
+	font-size: 12px;
+	min-width: 72px;
+	font-weight: 700;
+	padding: 6px 5px 0 5px;
+	margin: 0 5px 0 0;
+	text-align: center;
+}
+
+.profile-tab-on a,
+.profile-tab a {
+	color: #fff;
+	font-weight: 400;
+	text-decoration: none;
+}
+
+.profile-tab a:hover {
+	color: #466C2C;
+}
+
+.profile-tab a:visited {
+	color: #fff !important;
+}
+
+.profile-tab-on a:visited {
+	color: #fff !important;
+}
