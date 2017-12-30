@@ -94,7 +94,7 @@ $wgExtensionCredits['other'][] = array(
 $wgAutoloadClasses['SocialProfileHooks'] = __DIR__ . '/SocialProfileHooks.php';
 
 // Loader files
-require_once( "$IP/extensions/SocialProfile/UserProfile/UserProfile.php" ); // Profile page configuration loader file
+require_once __DIR__ . '/UserProfile/UserProfile.php'; // Profile page configuration loader file
 wfLoadExtensions( [
 	'SocialProfile/SystemGifts', // SystemGifts (awards functionality)
 	'SocialProfile/UserActivity', // UserActivity - recent social changes
