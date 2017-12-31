@@ -58,7 +58,7 @@
 	"echo-category-title-social-msg": "User board messages",
 	"echo-pref-tooltip-social-msg": "Notify me when someone leaves a message on my user board.",
 	"notification-social-msg-send": "$1 just left a message on your user board.<br /><br />''$2''",
-	"notification-social-msg-send-bundle": "{{PLURAL:$1|One person|$1 people|100=99+ people}} left messages on your user board.",
+	"notification-social-msg-send-bundle": "{{PLURAL:$1|One message|$1 messages|100=99+ messages}} have been left on your user board.",
 	"apihelp-socialprofile-send-message-description": "Send a message to a user's UserBoard.",
 	"apihelp-socialprofile-send-message-summary": "Send a message to a user's UserBoard.",
 	"apihelp-socialprofile-send-message-param-username": "The recipient's user name.",
