@@ -555,7 +555,7 @@ class UserStatsTrack {
 	 * @return Array
 	 */
 	public function updateTotalPoints() {
-		global $wgEnableFacebook, $wgUserLevels;
+		global $wgUserLevels;
 
 		if ( $this->user_id == 0 ) {
 			return array();
@@ -591,18 +591,6 @@ class UserStatsTrack {
 						$field = $this->stats_fields[$point_field];
 						$new_total_points += $point_value * $row->$field;
 					}
-				}
-			}
-
-			if ( $wgEnableFacebook ) {
-				$s = $dbw->selectRow(
-					'fb_link_view_opinions',
-					array( 'fb_user_id', 'fb_user_session_key' ),
-					array( 'fb_user_id_wikia' => $this->user_id ),
-					__METHOD__
-				);
-				if ( $s !== false ) {
-					$new_total_points += $this->point_values['facebook'];
 				}
 			}
 
