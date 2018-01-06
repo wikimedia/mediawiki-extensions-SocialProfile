@@ -161,9 +161,11 @@ class UserProfilePage extends Article {
 	function getUserStatsRow( $label, $value ) {
 		$output = ''; // Prevent E_NOTICE
 
+		$context = $this->getContext();
+		$language = $context->getLanguage();
+
 		if ( $value != 0 ) {
-			global $wgLang;
-			$formattedValue = $wgLang->formatNum( $value );
+			$formattedValue = $language->formatNum( $value );
 			$output = "<div>
 					<b>{$label}</b>
 					{$formattedValue}
@@ -918,10 +920,11 @@ class UserProfilePage extends Article {
 	 * @param $user_name String: user name
 	 */
 	function getProfileTop( $user_id, $user_name ) {
-		global $wgLang, $wgUserLevels;
+		global $wgUserLevels;
 
 		$context = $this->getContext();
 		$userContext = $context->getUser();
+		$language = $context->getLanguage();
 
 		$stats = new UserStats( $user_id, $user_name );
 		$stats_data = $stats->getUserStats();
@@ -994,7 +997,7 @@ class UserProfilePage extends Article {
 					<a href="' . htmlspecialchars( $level_link->getFullURL() ) . '">' .
 						wfMessage(
 							'user-profile-points',
-							$wgLang->formatNum( $stats_data['points'] )
+							$language->formatNum( $stats_data['points'] )
 						)->escaped() .
 					'</a>
 					</div>
@@ -1007,7 +1010,7 @@ class UserProfilePage extends Article {
 			<div class="profile-actions">';
 
 		if ( $this->isOwner() ) {
-			$output .= $wgLang->pipeList( array(
+			$output .= $language->pipeList( array(
 				'<a href="' . htmlspecialchars( $update_profile->getFullURL() ) . '">' . wfMessage( 'user-edit-profile' )->escaped() . '</a>',
 				'<a href="' . htmlspecialchars( $upload_avatar->getFullURL() ) . '">' . wfMessage( 'user-upload-avatar' )->escaped() . '</a>',
 				'<a href="' . htmlspecialchars( $watchlist->getFullURL() ) . '">' . wfMessage( 'user-watchlist' )->escaped() . '</a>',
@@ -1015,20 +1018,20 @@ class UserProfilePage extends Article {
 			) );
 		} elseif ( $userContext->isLoggedIn() ) {
 			if ( $relationship == false ) {
-				$output .= $wgLang->pipeList( array(
+				$output .= $language->pipeList( array(
 					'<a href="' . htmlspecialchars( $add_relationship->getFullURL( 'user=' . $user_safe . '&rel_type=1' ) ) . '" rel="nofollow">' . wfMessage( 'user-add-friend' )->escaped() . '</a>',
 					'<a href="' . htmlspecialchars( $add_relationship->getFullURL( 'user=' . $user_safe . '&rel_type=2' ) ) . '" rel="nofollow">' . wfMessage( 'user-add-foe' )->escaped() . '</a>',
 					''
 				) );
 			} else {
 				if ( $relationship == 1 ) {
-					$output .= $wgLang->pipeList( array(
+					$output .= $language->pipeList( array(
 						'<a href="' . htmlspecialchars( $remove_relationship->getFullURL( 'user=' . $user_safe ) ) . '">' . wfMessage( 'user-remove-friend' )->escaped() . '</a>',
 						''
 					) );
 				}
 				if ( $relationship == 2 ) {
-					$output .= $wgLang->pipeList( array(
+					$output .= $language->pipeList( array(
 						'<a href="' . htmlspecialchars( $remove_relationship->getFullURL( 'user=' . $user_safe ) ) . '">' . wfMessage( 'user-remove-foe' )->escaped() . '</a>',
 						''
 					) );
@@ -1114,7 +1117,10 @@ class UserProfilePage extends Article {
 	 *                           foes
 	 */
 	function getRelationships( $user_name, $rel_type ) {
-		global $wgMemc, $wgUserProfileDisplay, $wgLang;
+		global $wgMemc, $wgUserProfileDisplay;
+
+		$context = $this->getContext();
+		$language = $context->getLanguage();
 
 		// If not enabled in site settings, don't display
 		if ( $rel_type == 1 ) {
@@ -1186,7 +1192,7 @@ class UserProfilePage extends Article {
 				$avatar = new wAvatar( $friend['user_id'], 'ml' );
 
 				// Chop down username that gets displayed
-				$user_name = $wgLang->truncate( $friend['user_name'], 9, '..' );
+				$user_name = $language->truncate( $friend['user_name'], 9, '..' );
 
 				$output .= "<a href=\"" . htmlspecialchars( $user->getFullURL() ) .
 					"\" title=\"" . htmlspecialchars( $friend['user_name'] ) . "\" rel=\"nofollow\">
