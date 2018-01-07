@@ -24,7 +24,7 @@ class UserWelcome {
 	}
 
 	public static function getWelcomeUser( $input, $args, $parser ) {
-		$parser->disableCache();
+		$parser->getOutput()->updateCacheExpiry( 0 );
 		$parser->getOutput()->addModuleStyles( 'ext.socialprofile.userwelcome.css' );
 		// This is so stupid. The callback to onParserFirstCallInit() is
 		// *always* (assumed to be) static even if you don't declare it as such.

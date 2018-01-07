@@ -16,7 +16,7 @@ class SiteActivityHook {
 	public static function getSiteActivity( $input, $args, $parser ) {
 		global $wgMemc, $wgExtensionAssetsPath;
 
-		$parser->disableCache();
+		$parser->getOutput()->updateCacheExpiry( 0 );
 
 		$limit = ( isset( $args['limit'] ) && is_numeric( $args['limit'] ) ) ? $args['limit'] : 10;
 

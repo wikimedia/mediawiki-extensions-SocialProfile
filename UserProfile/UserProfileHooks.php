@@ -90,7 +90,7 @@ class UserProfileHooks {
 	 * @return bool true
 	 */
 	public static function onParserLimitReportPrepare( $parser, $output ) {
-		$parser->disableCache();
+		$parser->getOutput()->updateCacheExpiry( 0 );
 		return true;
 	}
 
