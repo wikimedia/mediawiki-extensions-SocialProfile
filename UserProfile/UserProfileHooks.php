@@ -44,7 +44,11 @@ class UserProfileHooks {
 	 * @return bool
 	 */
 	public static function onArticleFromTitle( &$title, &$article ) {
-		global $wgRequest, $wgOut, $wgHooks, $wgUserPageChoice;
+		global $wgHooks, $wgUserPageChoice;
+
+		$context = $article->getContext();
+		$out = $context->getOutput();
+		$request = $context->getRequest();
 
 		if (
 			!$title->isSubpage() &&
@@ -63,15 +67,15 @@ class UserProfileHooks {
 
 			if ( !$show_user_page ) {
 				// Prevents editing of userpage
-				if ( $wgRequest->getVal( 'action' ) == 'edit' ) {
-					$wgOut->redirect( $title->getFullURL() );
+				if ( $request->getVal( 'action' ) == 'edit' ) {
+					$out->redirect( $title->getFullURL() );
 				}
 			} else {
-				$wgOut->enableClientCache( false );
+				$out->enableClientCache( false );
 				$wgHooks['ParserLimitReportPrepare'][] = 'UserProfileHooks::onParserLimitReportPrepare';
 			}
 
-			$wgOut->addModuleStyles( [
+			$out->addModuleStyles( [
 				'ext.socialprofile.clearfix',
 				'ext.socialprofile.userprofile.css'
 			] );
