@@ -69,7 +69,7 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 			), __METHOD__
 		);
 
-		$key = wfMemcKey( 'user', 'profile', 'info', $user->getID() );
+		$key = $wgMemc->makeKey( 'user', 'profile', 'info', $user->getID() );
 		$wgMemc->delete( $key );
 
 		if ( $user_page_type == 1 && !$user->isBlocked() ) {

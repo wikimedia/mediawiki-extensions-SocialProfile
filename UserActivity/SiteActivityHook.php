@@ -23,7 +23,7 @@ class SiteActivityHook {
 		// so that <siteactivity limit=5 /> will return 5 items instead of 4...
 		$fixedLimit = $limit + 1;
 
-		$key = wfMemcKey( 'site_activity', 'all', $fixedLimit );
+		$key = $wgMemc->makeKey( 'site_activity', 'all', $fixedLimit );
 		$data = $wgMemc->get( $key );
 		if ( !$data ) {
 			wfDebug( "Got site activity from DB\n" );

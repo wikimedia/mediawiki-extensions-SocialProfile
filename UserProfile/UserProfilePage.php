@@ -259,7 +259,7 @@ class UserProfilePage extends Article {
 		$polls = array();
 
 		// Try cache
-		$key = wfMemcKey( 'user', 'profile', 'polls', $this->user_id );
+		$key = $wgMemc->makeKey( 'user', 'profile', 'polls', $this->user_id );
 		$data = $wgMemc->get( $key );
 
 		if( $data ) {
@@ -299,7 +299,7 @@ class UserProfilePage extends Article {
 		$quiz = array();
 
 		// Try cache
-		$key = wfMemcKey( 'user', 'profile', 'quiz', $this->user_id );
+		$key = $wgMemc->makeKey( 'user', 'profile', 'quiz', $this->user_id );
 		$data = $wgMemc->get( $key );
 
 		if( $data ) {
@@ -346,7 +346,7 @@ class UserProfilePage extends Article {
 		$pics = array();
 
 		// Try cache
-		$key = wfMemcKey( 'user', 'profile', 'picgame', $this->user_id );
+		$key = $wgMemc->makeKey( 'user', 'profile', 'picgame', $this->user_id );
 		$data = $wgMemc->get( $key );
 		if( $data ) {
 			wfDebug( "Got profile picgames for user {$this->user_id} from cache\n" );
@@ -1162,7 +1162,7 @@ class UserProfilePage extends Article {
 
 		$count = 4;
 		$rel = new UserRelationship( $user_name );
-		$key = wfMemcKey( 'relationship', 'profile', "{$rel->user_id}-{$rel_type}" );
+		$key = $wgMemc->makeKey( 'relationship', 'profile', "{$rel->user_id}-{$rel_type}" );
 		$data = $wgMemc->get( $key );
 
 		// Try cache
@@ -1441,7 +1441,7 @@ class UserProfilePage extends Article {
 		$user_safe = urlencode( $user_name );
 
 		// Try cache
-		$key = wfMemcKey( 'user', 'profile', 'gifts', "{$g->user_id}" );
+		$key = $wgMemc->makeKey( 'user', 'profile', 'gifts', "{$g->user_id}" );
 		$data = $wgMemc->get( $key );
 
 		if ( !$data ) {
@@ -1532,7 +1532,7 @@ class UserProfilePage extends Article {
 		$sg = new UserSystemGifts( $user_name );
 
 		// Try cache
-		$sg_key = wfMemcKey( 'user', 'profile', 'system_gifts', "{$sg->user_id}" );
+		$sg_key = $wgMemc->makeKey( 'user', 'profile', 'system_gifts', "{$sg->user_id}" );
 		$data = $wgMemc->get( $sg_key );
 		if ( !$data ) {
 			wfDebug( "Got profile awards for user {$user_name} from DB\n" );
@@ -1745,7 +1745,7 @@ class UserProfilePage extends Article {
 
 		// Try cache
 		/*
-		$key = wfMemcKey( 'user', 'profile', 'fanboxes', "{$f->user_id}" );
+		$key = $wgMemc->makeKey( 'user', 'profile', 'fanboxes', "{$f->user_id}" );
 		$data = $wgMemc->get( $key );
 
 		if ( !$data ) {

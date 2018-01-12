@@ -36,7 +36,7 @@ class wAvatar {
 	function getAvatarImage() {
 		global $wgAvatarKey, $wgUploadDirectory, $wgMemc;
 
-		$key = wfMemcKey( 'user', 'profile', 'avatar', $this->user_id, $this->avatar_size );
+		$key = $wgMemc->makeKey( 'user', 'profile', 'avatar', $this->user_id, $this->avatar_size );
 		$data = $wgMemc->get( $key );
 
 		// Load from memcached if possible

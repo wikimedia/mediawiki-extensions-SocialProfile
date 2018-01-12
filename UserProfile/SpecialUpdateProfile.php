@@ -376,7 +376,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		Hooks::run( 'BasicProfileChanged', array( $user, $basicProfileData ) );
 		// end of the hook
 
-		$wgMemc->delete( wfMemcKey( 'user', 'profile', 'info', $user->getID() ) );
+		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', $user->getID() ) );
 	}
 
 	/**
@@ -408,7 +408,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			__METHOD__
 		);
 
-		$wgMemc->delete( wfMemcKey( 'user', 'profile', 'info', $user->getID() ) );
+		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', $user->getID() ) );
 	}
 
 	/**
@@ -452,7 +452,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		Hooks::run( 'PersonalInterestsChanged', array( $user, $interestsData ) );
 		// end of the hook
 
-		$wgMemc->delete( wfMemcKey( 'user', 'profile', 'info', $user->getID() ) );
+		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', $user->getID() ) );
 	}
 
 	/**
