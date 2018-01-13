@@ -30,13 +30,8 @@ class SystemGiftManager extends SpecialPage {
 		$request = $this->getRequest();
 		$user = $this->getUser();
 
-		// Set the page title, robot policies, etc.
-		$this->setHeaders();
-
-		// If the user doesn't have the required 'awardsmanage' permission, display an error
-		if ( !$user->isAllowed( 'awardsmanage' ) ) {
-			throw new PermissionsError( 'awardsmanage' );
-		}
+		// make sure user has the correct permissions
+		$this->checkPermissions();
 
 		// Show a message if the database is in read-only mode
 		$this->checkReadOnly();
@@ -45,6 +40,10 @@ class SystemGiftManager extends SpecialPage {
 		if ( $user->isBlocked() ) {
 			throw new UserBlockedError( $user->getBlock() );
 		}
+
+		// Set the page title, robot policies, etc.
+		$out->setArticleRelated( false );
+		$out->setRobotPolicy( 'noindex,nofollow' );
 
 		// Add CSS
 		$out->addModuleStyles( 'ext.socialprofile.special.systemgiftmanager.css' );

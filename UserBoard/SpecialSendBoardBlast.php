@@ -29,15 +29,8 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$request = $this->getRequest();
 		$user = $this->getUser();
 
-		// Set the page title, robot policies, etc.
-		$this->setHeaders();
-
 		// This feature is available only to logged-in users.
-		if ( !$user->isLoggedIn() ) {
-			$out->setPageTitle( $this->msg( 'boardblastlogintitle' )->plain() );
-			$out->addWikiMsg( 'boardblastlogintext' );
-			return '';
-		}
+		$this->requireLogin();
 
 		// Is the database locked?
 		$this->checkReadOnly();
@@ -46,6 +39,9 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		if ( $user->isBlocked() ) {
 			throw new UserBlockedError( $user->getBlock() );
 		}
+
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
 
 		// Add CSS & JS
 		$out->addModuleStyles( array(

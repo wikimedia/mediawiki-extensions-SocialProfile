@@ -32,12 +32,13 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 		$user = $this->getUser();
 
 		// This feature is only available to logged-in users.
-		if ( !$user->isLoggedIn() ) {
-			throw new ErrorPageError( 'error', 'badaccess' );
-		}
+		$this->requireLogin();
 
 		// Show a message if the database is in read-only mode
 		$this->checkReadOnly();
+
+		// set header (robot policy, page title, etc)
+		$this->setHeaders();
 
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(

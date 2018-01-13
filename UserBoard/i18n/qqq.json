@@ -10,7 +10,6 @@
 		]
 	},
 	"userboard-desc": "{{desc|name=UserBoard|url=https://www.mediawiki.org/wiki/Extension:SocialProfile}}",
-	"boardblastlogintitle": "As I understand it, it is a sort of board tool to leave messages. Is it?\nhttp://www.mediawiki.org/wiki/Extension:SocialProfile#Board_Blast",
 	"userboard_private": "{{Identical|Private}}",
 	"userboard_public": "{{Identical|Public}}",
 	"userboard_sendbutton": "{{Identical|Send}}",

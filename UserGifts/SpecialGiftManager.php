@@ -36,19 +36,24 @@ class GiftManager extends SpecialPage {
 		$request = $this->getRequest();
 		$user = $this->getUser();
 
-		// Set the page title, robot policies, etc.
-		$this->setHeaders();
-
-		$out->setPageTitle( $this->msg( 'giftmanager' )->plain() );
-
 		// Make sure that the user is logged in and that they can use this
 		// special page
-		if ( $user->isAnon() || !$this->canUserManage() ) {
+		$this->requireLogin();
+
+		if ( !$this->canUserManage() ) {
 			throw new ErrorPageError( 'error', 'badaccess' );
 		}
 
 		// Show a message if the database is in read-only mode
 		$this->checkReadOnly();
+
+		// If the user is blocked, don't allow access to them
+		if ( $user->isBlocked() ) {
+			throw new UserBlockedError( $user->getBlock() );
+		}
+
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
 
 		// Add CSS
 		$out->addModuleStyles( [
@@ -107,27 +112,19 @@ class GiftManager extends SpecialPage {
 	/**
 	 * Function to check if the user can manage created gifts
 	 *
-	 * @return Boolean: true if user has 'giftadmin' permission or is
-	 *			a member of the giftadmin group, otherwise false
+	 * @return bool true if -
+	 * - the user has the 'giftadmin' permission
+	 * - ..or the max amount of custom user gifts is above zero
 	 */
 	function canUserManage() {
 		global $wgMaxCustomUserGiftCount;
 
 		$user = $this->getUser();
 
-		if ( $user->isBlocked() ) {
-			return false;
-		}
-
-		if ( $wgMaxCustomUserGiftCount > 0 ) {
-			return true;
-		}
-
 		if (
 			$user->isAllowed( 'giftadmin' ) ||
-			in_array( 'giftadmin', $user->getGroups() )
-		)
-		{
+			$wgMaxCustomUserGiftCount > 0
+		) {
 			return true;
 		}
 

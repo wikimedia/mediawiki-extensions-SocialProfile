@@ -40,17 +40,15 @@ class GenerateTopUsersReport extends SpecialPage {
 		$request = $this->getRequest();
 		$user = $this->getUser();
 
-		// Blocked through Special:Block? Tough luck.
-		if ( $user->isBlocked() ) {
-			throw new UserBlockedError( $user->getBlock() );
-		}
+		// Check for the correct permission
+		$this->checkPermissions();
 
 		// Is the database locked or not?
 		$this->checkReadOnly();
 
-		// Check for the correct permission
-		if ( !$user->isAllowed( 'generatetopusersreport' ) ) {
-			throw new PermissionsError( 'generatetopusersreport' );
+		// Blocked through Special:Block? Tough luck.
+		if ( $user->isBlocked() ) {
+			throw new UserBlockedError( $user->getBlock() );
 		}
 
 		// Set the page title, robot policy, etc.

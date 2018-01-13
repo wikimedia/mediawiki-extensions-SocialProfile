@@ -17,7 +17,7 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 	 * Constructor -- set up the new special page
 	 */
 	public function __construct() {
-		parent::__construct( 'PopulateUserProfiles' );
+		parent::__construct( 'PopulateUserProfiles', 'populate-user-profiles' );
 	}
 
 	public function doesWrites() {
@@ -33,10 +33,8 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 		$out = $this->getOutput();
 		$user = $this->getUser();
 
-		// Check permissions
-		if ( !in_array( 'staff', $user->getEffectiveGroups() ) ) {
-			throw new ErrorPageError( 'error', 'badaccess' );
-		}
+		// Make sure user has the correct permissions
+		$this->checkPermissions();
 
 		// Show a message if the database is in read-only mode
 		$this->checkReadOnly();
@@ -45,6 +43,9 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 		if ( $user->isBlocked() ) {
 			throw new UserBlockedError( $user->getBlock() );
 		}
+
+		// set headers
+		$this->setHeaders();
 
 		$dbw = wfGetDB( DB_MASTER );
 		$res = $dbw->select(

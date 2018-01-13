@@ -50,21 +50,14 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		$out = $this->getOutput();
 		$user = $this->getUser();
 
-		// Set the page title, robot policies, etc.
-		$this->setHeaders();
-
 		/**
 		 * Redirect anonymous users to the login page
 		 * It will automatically return them to the ViewRelationshipRequests page
 		 */
-		if ( !$user->isLoggedIn() ) {
-			$out->setPageTitle( $this->msg( 'ur-error-page-title' )->plain() );
-			$login = SpecialPage::getTitleFor( 'Userlogin' );
-			$out->redirect(
-				$login->getFullURL( 'returnto=Special:ViewRelationshipRequests' )
-			);
-			return false;
-		}
+		$this->requireLogin();
+
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
 
 		// Add CSS & JS
 		$out->addModuleStyles( array(

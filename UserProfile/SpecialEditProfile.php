@@ -29,30 +29,24 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		$request = $this->getRequest();
 		$user = $this->getUser();
 
-		// Set the page title, robot policies, etc.
-		$this->setHeaders();
-		$out->setHTMLTitle( $this->msg( 'pagetitle',
-			$this->msg( 'edit-profiles-title' )->plain() )->parse() );
-
 		// This feature is only available for logged-in users.
-		if ( !$user->isLoggedIn() ) {
-			$out->setPageTitle( $this->msg( 'user-profile-update-notloggedin-title' )->plain() );
-			$out->addWikiMsg( 'user-profile-update-notloggedin-text' );
-			return;
-		}
+		$this->requireLogin();
+
+		// make sure user has the correct permissions
+		$this->checkPermissions();
+
+		// Database operations require write mode
+		$this->checkReadOnly();
 
 		// No need to allow blocked users to access this page, they could abuse it, y'know.
 		if ( $user->isBlocked() ) {
 			throw new UserBlockedError( $user->getBlock() );
 		}
 
-		// Database operations require write mode
-		$this->checkReadOnly();
-
-		// Are we even allowed to do this?
-		if ( !$user->isAllowed( 'editothersprofiles' ) ) {
-			throw new PermissionsError( 'editothersprofiles' );
-		}
+		// Set the page title, robot policies, etc.
+		$this->setHeaders();
+		$out->setHTMLTitle( $this->msg( 'pagetitle',
+			$this->msg( 'edit-profiles-title' )->plain() )->parse() );
 
 		// Add CSS & JS
 		$out->addModuleStyles( [

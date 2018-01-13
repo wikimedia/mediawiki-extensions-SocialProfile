@@ -22,7 +22,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	 * Constructor -- set up the new special page
 	 */
 	public function __construct() {
-		parent::__construct( 'SystemGiftManagerLogo' );
+		parent::__construct( 'SystemGiftManagerLogo', 'awardsmanage' );
 	}
 
 	/**
@@ -35,14 +35,8 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		$request = $this->getRequest();
 		$user = $this->getUser();
 
-		// Set the robot policies, etc.
-		$out->setArticleRelated( false );
-		$out->setRobotPolicy( 'noindex,nofollow' );
-
-		// If the user doesn't have the required 'awardsmanage' permission, display an error
-		if ( !$user->isAllowed( 'awardsmanage' ) ) {
-			throw new PermissionsError( 'awardsmanage' );
-		}
+		// make sure user has the correct permissions
+		$this->checkPermissions();
 
 		// Show a message if the database is in read-only mode
 		$this->checkReadOnly();
@@ -51,6 +45,10 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		if ( $user->isBlocked() ) {
 			throw new UserBlockedError( $user->getBlock() );
 		}
+
+		// Set the robot policies, etc.
+		$out->setArticleRelated( false );
+		$out->setRobotPolicy( 'noindex,nofollow' );
 
 		// Add CSS
 		$out->addModuleStyles( 'ext.socialprofile.special.systemgiftmanagerlogo.css' );
