@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 class ApiSendUserBoardMessage extends ApiBase {
 	public function execute() {
 		$main = $this->getMain();
@@ -9,10 +11,11 @@ class ApiSendUserBoardMessage extends ApiBase {
 		$message_type = $main->getVal( 'type' ) || 0;
 
 		$user = $this->getUser();
+		$readOnlyMode = MediaWikiServices::getInstance()->getReadOnlyMode();
 
 		// Don't allow blocked users to send messages and also don't allow message
 		// sending when the database is locked for some reason
-		if ( $user->isBlocked() || wfReadOnly() ) {
+		if ( $user->isBlocked() || $readOnlyMode->isReadOnly() ) {
 			$this->getResult()->addValue( null, 'result', 'You cannot send messages.' );
 			return true;
 		}

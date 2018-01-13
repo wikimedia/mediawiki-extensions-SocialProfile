@@ -1,14 +1,17 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 class ApiDeleteUserBoardMessage extends ApiBase {
 	public function execute() {
 		$main = $this->getMain();
 		$user = $this->getUser();
+		$readOnlyMode = MediaWikiServices::getInstance()->getReadOnlyMode();
 
 		$messageId = $main->getVal( 'id' );
 
 		// Don't allow deleting messages when the database is locked for some reason
-		if ( wfReadOnly() ) {
+		if ( $readOnlyMode->isReadOnly() ) {
 			$this->getResult()->addValue( null, 'result', 'You cannot delete messages right now.' );
 			return true;
 		}
