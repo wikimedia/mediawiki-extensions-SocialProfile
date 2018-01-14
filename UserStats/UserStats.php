@@ -52,7 +52,7 @@ class UserStats {
 	 */
 	public function getUserStatsCache() {
 		global $wgMemc;
-		$key = wfMemcKey( 'user', 'stats', $this->user_id );
+		$key = $wgMemc->makeKey( 'user', 'stats', $this->user_id );
 		$data = $wgMemc->get( $key );
 		if ( $data ) {
 			wfDebug( "Got user stats for {$this->user_name} from cache\n" );
@@ -110,7 +110,7 @@ class UserStats {
 			$stats['points'] = '1000';
 		}
 
-		$key = wfMemcKey( 'user', 'stats', $this->user_id );
+		$key = $wgMemc->makeKey( 'user', 'stats', $this->user_id );
 		$wgMemc->set( $key, $stats );
 		return $stats;
 	}

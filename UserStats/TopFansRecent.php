@@ -64,7 +64,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 		$user_list = array();
 
 		// Try cache
-		$key = wfMemcKey( 'user_stats', $period, 'points', $realCount );
+		$key = $wgMemc->makeKey( 'user_stats', $period, 'points', $realCount );
 		$data = $wgMemc->get( $key );
 
 		if ( $data != '' ) {

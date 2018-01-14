@@ -91,7 +91,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 
 			global $wgMemc;
 			// clear stats cache for current user
-			$key = wfMemcKey( 'user', 'stats', $row->rev_user );
+			$key = $wgMemc->makeKey( 'user', 'stats', $row->rev_user );
 			$wgMemc->delete( $key );
 		}
 	}

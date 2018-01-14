@@ -34,7 +34,7 @@ class TopUsersPoints extends SpecialPage {
 		$user_list = array();
 
 		// Try cache
-		$key = wfMemcKey( 'user_stats', 'top', 'points', $realcount );
+		$key = $wgMemc->makeKey( 'user_stats', 'top', 'points', $realcount );
 		$data = $wgMemc->get( $key );
 
 		if ( $data != '' ) {
