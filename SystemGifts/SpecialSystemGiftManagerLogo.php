@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\Logger\LoggerFactory;
+
 /**
  * A special page to upload images for system gifts (awards).
  * This is mostly copied from an old version of Special:Upload and changed a
@@ -75,7 +78,12 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		$this->mUploadCopyStatus = $request->getText( 'wpUploadCopyStatus' );
 		$this->mUploadSource = $request->getText( 'wpUploadSource' );
 		$this->mWatchthis = $request->getBool( 'wpWatchthis' );
-		wfDebug( __METHOD__ . ": watchthis is: '$this->mWatchthis'\n" );
+
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
+		$logger->debug( "{method}: watchthis is: '{watchthis}'\n", [
+			'method' => __METHOD__,
+			'watchthis' => $this->mWatchthis
+		] );
 
 		$this->mAction = $request->getVal( 'action' );
 		$this->mSessionKey = $request->getInt( 'wpSessionKey' );
@@ -722,7 +730,11 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			return Status::newFatal( 'uploadvirus', htmlspecialchars( $virus ) );
 		}
 
-		wfDebug( __METHOD__ . ": all clear; passing.\n" );
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
+		$logger->debug( "{method}: all clear; passing.\n", [
+			'method' => __METHOD__
+		] );
+
 		return Status::newGood();
 	}
 }

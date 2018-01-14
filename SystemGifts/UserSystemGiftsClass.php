@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\Logger\LoggerFactory;
+
 /**
  * Class for managing awards (a.k.a system gifts)
  */
@@ -290,7 +293,12 @@ class UserSystemGifts {
 		$key = $wgMemc->makeKey( 'system_gifts', 'new_count', $user_id );
 		$data = $wgMemc->get( $key );
 		if ( $data != '' ) {
-			wfDebug( "Got new award count of $data for id $user_id from cache\n" );
+			$logger = LoggerFactory::getInstance( 'SocialProfile' );
+			$logger->debug( "Got new award count of {data} for {user_id} from cache\n", [
+				'data' => $data,
+				'user_id' => $user_id
+			] );
+
 			return $data;
 		}
 	}
@@ -326,7 +334,10 @@ class UserSystemGifts {
 	 * @return Integer: amount of new system gifts
 	 */
 	static function getNewSystemGiftCountDB( $user_id ) {
-		wfDebug( "Got new award count for id $user_id from DB\n" );
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
+		$logger->debug( "Got new award count for id {user_id} from DB\n", [
+			'user_id' => $user_id
+		] );
 
 		global $wgMemc;
 		$key = $wgMemc->makeKey( 'system_gifts', 'new_count', $user_id );

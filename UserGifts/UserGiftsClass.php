@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\Logger\LoggerFactory;
+
 /**
  * UserGifts class
  * @todo document
@@ -269,7 +272,12 @@ class UserGifts {
 		$key = $wgMemc->makeKey( 'user_gifts', 'new_count', $user_id );
 		$data = $wgMemc->get( $key );
 		if ( $data != '' ) {
-			wfDebug( "Got new gift count of $data for id $user_id from cache\n" );
+			$logger = LoggerFactory::getInstance( 'SocialProfile' );
+			$logger->debug( "Got new gift count of {data} for id {user_id} from cache\n", [
+				'data' => $data,
+				'user_id' => $user_id
+			] );
+
 			return $data;
 		}
 	}
@@ -304,7 +312,10 @@ class UserGifts {
 	 * @return Integer: amount of new gifts
 	 */
 	static function getNewGiftCountDB( $user_id ) {
-		wfDebug( "Got new gift count for id $user_id from DB\n" );
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
+		$logger->debug( "Got new gift count for id {user_id} from DB\n", [
+			'user_id' => $user_id
+		] );
 
 		global $wgMemc;
 		$key = $wgMemc->makeKey( 'user_gifts', 'new_count', $user_id );

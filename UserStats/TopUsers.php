@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Logger\LoggerFactory;
+
 class TopUsersPoints extends SpecialPage {
 
 	/**
@@ -19,6 +21,7 @@ class TopUsersPoints extends SpecialPage {
 
 		$linkRenderer = $this->getLinkRenderer();
 		$out = $this->getOutput();
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		// Load CSS
 		$out->addModuleStyles( 'ext.socialprofile.userstats.css' );
@@ -38,10 +41,15 @@ class TopUsersPoints extends SpecialPage {
 		$data = $wgMemc->get( $key );
 
 		if ( $data != '' ) {
-			wfDebug( "Got top users by points ({$count}) from cache\n" );
+			$logger->debug( "Got top users by points ({count}) from cache\n", [
+				'count' => $count
+			] );
+
 			$user_list = $data;
 		} else {
-			wfDebug( "Got top users by points ({$count}) from DB\n" );
+			$logger->debug( "Got top users by points ({count}) from DB\n", [
+				'count' => $count
+			] );
 
 			$params['ORDER BY'] = 'stats_total_points DESC';
 			$params['LIMIT'] = $count;
