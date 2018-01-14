@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\Logger\LoggerFactory;
+
 /**
  * Functions for managing user board data
  */
@@ -148,8 +151,14 @@ class UserBoard {
 		global $wgMemc;
 		$key = $wgMemc->makeKey( 'user', 'newboardmessage', $user_id );
 		$data = $wgMemc->get( $key );
+
 		if ( $data != '' ) {
-			wfDebug( "Got new message count of $data for id $user_id from cache\n" );
+			$logger = LoggerFactory::getInstance( 'SocialProfile' );
+			$logger->debug( "Got new message count of {data} for id {user_id} from cache\n", [
+				'data' => $data,
+				'user_id' => $user_id
+			] );
+
 			return $data;
 		}
 	}
@@ -165,7 +174,10 @@ class UserBoard {
 	static function getNewMessageCountDB( $user_id ) {
 		global $wgMemc;
 
-		wfDebug( "Got new message count for id $user_id from DB\n" );
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
+		$logger->debug( "Got new message count for id {user_id} from DB\n", [
+			'user_id' => $user_id
+		] );
 
 		$key = $wgMemc->makeKey( 'user', 'newboardmessage', $user_id );
 		$newCount = 0;

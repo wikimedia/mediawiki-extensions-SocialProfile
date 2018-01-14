@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Logger\LoggerFactory;
+
 class UserStats {
 	/**
 	 * Constructor
@@ -55,7 +57,11 @@ class UserStats {
 		$key = $wgMemc->makeKey( 'user', 'stats', $this->user_id );
 		$data = $wgMemc->get( $key );
 		if ( $data ) {
-			wfDebug( "Got user stats for {$this->user_name} from cache\n" );
+			$logger = LoggerFactory::getInstance( 'SocialProfile' );
+			$logger->debug( "Got user stats for {user_name} from cache\n", [
+				'user_name' => $this->user_name
+			] );
+
 			return $data;
 		}
 	}
@@ -66,7 +72,11 @@ class UserStats {
 	public function getUserStatsDB() {
 		global $wgMemc;
 
-		wfDebug( "Got user stats for {$this->user_name} from DB\n" );
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
+		$logger->debug( "Got user stats for {user_name} from DB\n", [
+			'user_name' => $this->user_name
+		] );
+
 		$dbr = wfGetDB( DB_MASTER );
 		$res = $dbr->select(
 			'user_stats',

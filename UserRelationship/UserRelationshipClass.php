@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\Logger\LoggerFactory;
+
 /**
  * Functions for managing relationship data
  */
@@ -615,7 +618,11 @@ class UserRelationship {
 	static function getOpenRequestCountDB( $userId, $relType ) {
 		global $wgMemc;
 
-		wfDebug( "Got open request count (type={$relType}) for id $userId from DB\n" );
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
+		$logger->debug( "Got open request count (type={relType}) for id {userId} from DB\n", [
+			'rel_type' => $relType,
+			'user_id' => $userId
+		] );
 
 		$key = $wgMemc->makeKey( 'user_relationship', 'open_request', $relType, $userId );
 		$dbr = wfGetDB( DB_REPLICA );
@@ -653,7 +660,13 @@ class UserRelationship {
 		$key = $wgMemc->makeKey( 'user_relationship', 'open_request', $relType, $userId );
 		$data = $wgMemc->get( $key );
 		if ( $data != '' ) {
-			wfDebug( "Got open request count of $data (type={$relType}) for id $userId from cache\n" );
+			$logger = LoggerFactory::getInstance( 'SocialProfile' );
+			$logger->debug( "Got open request count of {data} (type={relType}) for id {userId} from cache\n", [
+				'data' => $data,
+				'rel_type' => $relType,
+				'user_id' => $userId
+			] );
+
 			return $data;
 		}
 	}

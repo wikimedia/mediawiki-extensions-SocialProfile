@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Logger\LoggerFactory;
+
 class SiteActivityHook {
 
 	/**
@@ -25,15 +27,19 @@ class SiteActivityHook {
 
 		$key = $wgMemc->makeKey( 'site_activity', 'all', $fixedLimit );
 		$data = $wgMemc->get( $key );
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
+
 		if ( !$data ) {
-			wfDebug( "Got site activity from DB\n" );
+			$logger->debug( "Got new site activity from DB\n" );
+
 			$rel = new UserActivity( '', 'ALL', $fixedLimit );
 
 			$rel->setActivityToggle( 'show_votes', 0 );
 			$activity = $rel->getActivityListGrouped();
 			$wgMemc->set( $key, $activity, 60 * 2 );
 		} else {
-			wfDebug( "Got site activity from cache\n" );
+			$logger->debug( "Got site activity from cache\n" );
+
 			$activity = $data;
 		}
 

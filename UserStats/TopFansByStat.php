@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\Logger\LoggerFactory;
+
 /**
  * Special page that shows the top users for a given statistic, i.e.
  * "users with the most friends" or "users with the most votes".
@@ -29,6 +32,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 		$lang = $this->getLanguage();
 		$out = $this->getOutput();
 		$request = $this->getRequest();
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();
@@ -68,10 +72,17 @@ class TopFansByStat extends UnlistedSpecialPage {
 		$data = $wgMemc->get( $key );
 
 		if ( $data != '' ) {
-			wfDebug( "Got top users by {$statistic} ({$count}) from cache\n" );
+			$logger->debug( "Got top users by {statistic} ({count}) from cache\n", [
+				'statistic' => $statistic,
+				'count' => $count
+			] );
+
 			$user_list = $data;
 		} else {
-			wfDebug( "Got top users by {$statistic} ({$count}) from DB\n" );
+			$logger->debug( "Got top users by {statistic} ({count}) from DB\n", [
+				'statistic' => $statistic,
+				'count' => $count
+			] );
 
 			$params['ORDER BY'] = "{$column} DESC";
 			$params['LIMIT'] = $count;

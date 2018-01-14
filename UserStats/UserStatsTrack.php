@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Logger\LoggerFactory;
+
 class UserStatsTrack {
 
 	// for referencing purposes
@@ -154,7 +156,9 @@ class UserStatsTrack {
 			$data = $wgMemc->get( $key );
 
 			if ( $data ) {
-				wfDebug( "Got system gift ID from cache\n" );
+				$logger = LoggerFactory::getInstance( 'SocialProfile' );
+				$logger->debug( "Got system gift ID from cache\n" );
+
 				$systemGiftID = $data;
 			} else {
 				$g = new SystemGifts();

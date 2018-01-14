@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Logger\LoggerFactory;
+
 class TopFansRecent extends UnlistedSpecialPage {
 
 	/**
@@ -33,6 +35,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 		$out = $this->getOutput();
 		$request = $this->getRequest();
 		$user = $this->getUser();
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();
@@ -68,10 +71,17 @@ class TopFansRecent extends UnlistedSpecialPage {
 		$data = $wgMemc->get( $key );
 
 		if ( $data != '' ) {
-			wfDebug( "Got top users by {$period} points ({$count}) from cache\n" );
+			$logger->debug( "Got top users by {period} points ({count}) from cache\n", [
+				'period' => $period,
+				'count' => $count
+			] );
+
 			$user_list = $data;
 		} else {
-			wfDebug( "Got top users by {$period} points ({$count}) from DB\n" );
+			$logger->debug( "Got top users by {period} points ({count}) from DB\n", [
+				'period' => $period,
+				'count' => $count
+			] );
 
 			$params['ORDER BY'] = 'up_points DESC';
 			$params['LIMIT'] = $count;

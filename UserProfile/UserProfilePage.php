@@ -1,4 +1,6 @@
 <?php
+
+use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 
 /**
@@ -83,6 +85,7 @@ class UserProfilePage extends Article {
 	function view() {
 		$context = $this->getContext();
 		$out = $context->getOutput();
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		$out->setPageTitle( $this->mTitle->getPrefixedText() );
 
@@ -115,7 +118,9 @@ class UserProfilePage extends Article {
 		$userProfilePage = $this;
 
 		if ( !Hooks::run( 'UserProfileBeginLeft', array( &$userProfilePage ) ) ) {
-			wfDebug( __METHOD__ . ": UserProfileBeginLeft messed up profile!\n" );
+			$logger->debug( "{method}: UserProfileBeginLeft messed up profile!\n", [
+				'method' => __METHOD__
+			] );
 		}
 
 		$out->addHTML( $this->getRelationships( $this->user_name, 1 ) );
@@ -128,31 +133,39 @@ class UserProfilePage extends Article {
 		$out->addHTML( $this->getUserStats( $this->user_id, $this->user_name ) );
 
 		if ( !Hooks::run( 'UserProfileEndLeft', array( &$userProfilePage ) ) ) {
-			wfDebug( __METHOD__ . ": UserProfileEndLeft messed up profile!\n" );
+			$logger->debug( "{method}: UserProfileEndLeft messed up profile!\n", [
+				'method' => __METHOD__
+			] );
 		}
 
 		$out->addHTML( '</div>' );
 
-		wfDebug( "profile start right\n" );
+		$logger->debug( "profile start right\n" );
 
 		// Right side
 		$out->addHTML( '<div id="user-page-right" class="clearfix">' );
 
 		if ( !Hooks::run( 'UserProfileBeginRight', array( &$userProfilePage ) ) ) {
-			wfDebug( __METHOD__ . ": UserProfileBeginRight messed up profile!\n" );
+			$logger->debug( "{method}: UserProfileBeginRight messed up profile!\n", [
+				'method' => __METHOD__
+			] );
 		}
 
 		$out->addHTML( $this->getPersonalInfo( $this->user_id, $this->user_name ) );
 		$out->addHTML( $this->getActivity( $this->user_name ) );
 		// Hook for BlogPage
 		if ( !Hooks::run( 'UserProfileRightSideAfterActivity', array( $this ) ) ) {
-			wfDebug( __METHOD__ . ": UserProfileRightSideAfterActivity hook messed up profile!\n" );
+			$logger->debug( "{method}: UserProfileRightSideAfterActivity hook messed up profile!\n", [
+				'method' => __METHOD__
+			] );
 		}
 		$out->addHTML( $this->getCasualGames( $this->user_id, $this->user_name ) );
 		$out->addHTML( $this->getUserBoard( $this->user_id, $this->user_name ) );
 
 		if ( !Hooks::run( 'UserProfileEndRight', array( &$userProfilePage ) ) ) {
-			wfDebug( __METHOD__ . ": UserProfileEndRight messed up profile!\n" );
+			$logger->debug( "{method}: UserProfileEndRight messed up profile!\n", [
+				'method' => __METHOD__
+			] );
 		}
 
 		$out->addHTML( '</div><div class="visualClear"></div>' );
@@ -257,16 +270,23 @@ class UserProfilePage extends Article {
 		global $wgMemc;
 
 		$polls = array();
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		// Try cache
 		$key = $wgMemc->makeKey( 'user', 'profile', 'polls', $this->user_id );
 		$data = $wgMemc->get( $key );
 
 		if( $data ) {
-			wfDebug( "Got profile polls for user {$this->user_id} from cache\n" );
+			$logger->debug( "Got profile polls for user {user_id} from cache\n", [
+				'user_id' => $this->user_id
+			] );
+
 			$polls = $data;
 		} else {
-			wfDebug( "Got profile polls for user {$this->user_id} from DB\n" );
+			$logger->debug( "Got profile polls for user {user_id} from DB\n", [
+				'user_id' => $this->user_id
+			] );
+
 			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
 				array( 'poll_question', 'page' ),
@@ -297,16 +317,23 @@ class UserProfilePage extends Article {
 		global $wgMemc;
 
 		$quiz = array();
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		// Try cache
 		$key = $wgMemc->makeKey( 'user', 'profile', 'quiz', $this->user_id );
 		$data = $wgMemc->get( $key );
 
 		if( $data ) {
-			wfDebug( "Got profile quizzes for user {$this->user_id} from cache\n" );
+			$logger->debug( "Got profile quizzes for user {user_id} from cache\n", [
+				'user_id' => $this->user_id
+			] );
+
 			$quiz = $data;
 		} else {
-			wfDebug( "Got profile quizzes for user {$this->user_id} from DB\n" );
+			$logger->debug( "Got profile quizzes for user {user_id} from DB\n", [
+				'user_id' => $this->user_id
+			] );
+
 			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
 				'quizgame_questions',
@@ -344,15 +371,22 @@ class UserProfilePage extends Article {
 		global $wgMemc;
 
 		$pics = array();
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		// Try cache
 		$key = $wgMemc->makeKey( 'user', 'profile', 'picgame', $this->user_id );
 		$data = $wgMemc->get( $key );
 		if( $data ) {
-			wfDebug( "Got profile picgames for user {$this->user_id} from cache\n" );
+			$logger->debug( "Got profile picgames for user {user_id} from cache\n", [
+				'user_id' => $this->user_id
+			] );
+
 			$pics = $data;
 		} else {
-			wfDebug( "Got profile picgames for user {$this->user_id} from DB\n" );
+			$logger->debug( "Got profile picgames for user {user_id} from DB\n", [
+				'user_id' => $this->user_id
+			] );
+
 			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
 				'picturegame_images',
@@ -960,7 +994,11 @@ class UserProfilePage extends Article {
 		}
 		$avatar = new wAvatar( $this->user_id, 'l' );
 
-		wfDebug( 'profile type: ' . $profile_data['user_page_type'] . "\n" );
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
+		$logger->debug( "profile type: {user_profile_type} \n", [
+			'user_profile_type' => $profile_data['user_page_type']
+		] );
+
 		$output = '';
 
 		// Show the link for changing user page type for the user whose page
@@ -1170,7 +1208,12 @@ class UserProfilePage extends Article {
 			$friends = $rel->getRelationshipList( $rel_type, $count );
 			$wgMemc->set( $key, $friends );
 		} else {
-			wfDebug( "Got profile relationship type {$rel_type} for user {$user_name} from cache\n" );
+			$logger = LoggerFactory::getInstance( 'SocialProfile' );
+			$logger->debug( "Got profile relationship type {rel_type} for user {user_name} from cache\n", [
+				'rel_type' => $rel_type,
+				'user_name' => $user_name
+			] );
+
 			$friends = $data;
 		}
 
@@ -1428,6 +1471,7 @@ class UserProfilePage extends Article {
 
 		$context = $this->getContext();
 		$user = $context->getUser();
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		// If not enabled in site settings, don't display
 		if ( $wgUserProfileDisplay['gifts'] == false ) {
@@ -1445,11 +1489,16 @@ class UserProfilePage extends Article {
 		$data = $wgMemc->get( $key );
 
 		if ( !$data ) {
-			wfDebug( "Got profile gifts for user {$user_name} from DB\n" );
+			$logger->debug( "Got profile gifts for user {user_name} from DB\n", [
+				'user_name' => $user_name
+			] );
+
 			$gifts = $g->getUserGiftList( 0, 4 );
 			$wgMemc->set( $key, $gifts, 60 * 60 * 4 );
 		} else {
-			wfDebug( "Got profile gifts for user {$user_name} from cache\n" );
+			$logger->debug( "Got profile gifts for user {user_name} from cache\n", [
+				'user_name' => $user_name
+			] );
 			$gifts = $data;
 		}
 
@@ -1520,6 +1569,7 @@ class UserProfilePage extends Article {
 
 		$context = $this->getContext();
 		$user = $context->getUser();
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		// If not enabled in site settings, don't display
 		if ( $wgUserProfileDisplay['awards'] == false ) {
@@ -1535,11 +1585,17 @@ class UserProfilePage extends Article {
 		$sg_key = $wgMemc->makeKey( 'user', 'profile', 'system_gifts', "{$sg->user_id}" );
 		$data = $wgMemc->get( $sg_key );
 		if ( !$data ) {
-			wfDebug( "Got profile awards for user {$user_name} from DB\n" );
+			$logger->debug( "Got profile awards for user {user_name} from DB\n", [
+				'user_name' => $user_name
+			] );
+
 			$system_gifts = $sg->getUserGiftList( 0, 4 );
 			$wgMemc->set( $sg_key, $system_gifts, 60 * 60 * 4 );
 		} else {
-			wfDebug( "Got profile awards for user {$user_name} from cache\n" );
+			$logger->debug( "Got profile awards for user {user_name} from cache\n", [
+				'user_name' => $user_name
+			] );
+
 			$system_gifts = $data;
 		}
 
@@ -1747,13 +1803,20 @@ class UserProfilePage extends Article {
 		/*
 		$key = $wgMemc->makeKey( 'user', 'profile', 'fanboxes', "{$f->user_id}" );
 		$data = $wgMemc->get( $key );
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		if ( !$data ) {
-			wfDebug( "Got profile fanboxes for user {$user_name} from DB\n" );
+			$logger->debug( "Got profile fanboxes for user {user_name} from DB\n", [
+				'user_name' => $user_name
+			] );
+
 			$fanboxes = $f->getUserFanboxes( 0, 10 );
 			$wgMemc->set( $key, $fanboxes );
 		} else {
-			wfDebug( "Got profile fanboxes for user {$user_name} from cache\n" );
+			$logger->debug( "Got profile fanboxes for user {user_name} from cache\n", [
+				'user_name' => $user_name
+			] );
+
 			$fanboxes = $data;
 		}
 		*/
