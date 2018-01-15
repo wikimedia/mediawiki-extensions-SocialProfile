@@ -43,10 +43,9 @@ class UserProfileHooks {
 	 * @param WikiPage|Article &$article
 	 * @return bool
 	 */
-	public static function onArticleFromTitle( &$title, &$article ) {
+	public static function onArticleFromTitle( &$title, &$article, $context ) {
 		global $wgHooks, $wgUserPageChoice;
 
-		$context = $article->getContext();
 		$out = $context->getOutput();
 		$request = $context->getRequest();
 
