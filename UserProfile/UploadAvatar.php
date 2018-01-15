@@ -206,6 +206,8 @@ class UploadAvatar extends UploadFromFile {
 	/**
 	 * Don't verify the upload, since it all dangerous stuff is killed by
 	 * making thumbnails
+	 *
+	 * @return array
 	 */
 	public function verifyUpload() {
 		return array( 'status' => self::OK );
@@ -213,6 +215,8 @@ class UploadAvatar extends UploadFromFile {
 
 	/**
 	 * Only needed for the redirect; needs fixage
+	 *
+	 * @return Title
 	 */
 	public function getTitle() {
 		return Title::makeTitle( NS_FILE, 'Avatar-placeholder' . uniqid() . '.jpg' );
@@ -220,6 +224,8 @@ class UploadAvatar extends UploadFromFile {
 
 	/**
 	 * We don't overwrite stuff, so don't care
+	 *
+	 * @return array
 	 */
 	public function checkWarnings() {
 		return array();

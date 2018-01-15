@@ -39,7 +39,7 @@ class SpecialViewUserBoard extends SpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param string $par Name of the user whose board we want to view
+	 * @param string|null $par Name of the user whose board we want to view
 	 */
 	public function execute( $par ) {
 		$out = $this->getOutput();

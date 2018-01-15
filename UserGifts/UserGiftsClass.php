@@ -23,10 +23,10 @@ class UserGifts {
 	/**
 	 * Sends a gift to the specified user.
 	 *
-	 * @param $user_to Integer: user ID of the recipient
-	 * @param $gift_id Integer: gift ID number
-	 * @param $type Integer: gift type
-	 * @param $message Mixed: message as supplied by the sender
+	 * @param int $user_to User ID of the recipient
+	 * @param int $gift_id Gift ID number
+	 * @param int $type Gift type
+	 * @param mixed $message Message as supplied by the sender
 	 */
 	public function sendGift( $user_to, $gift_id, $type, $message ) {
 		$user_id_to = User::idFromName( $user_to );
@@ -84,10 +84,10 @@ class UserGifts {
 	 * gift, if the user wants notifications about new gifts and their e-mail
 	 * is confirmed.
 	 *
-	 * @param $user_id_to Integer: user ID of the receiver of the gift
-	 * @param $user_from Mixed: name of the user who sent the gift
-	 * @param $gift_id Integer: ID number of the given gift
-	 * @param $type Integer: gift type; unused
+	 * @param int $user_id_to User ID of the receiver of the gift
+	 * @param mixed $user_from Name of the user who sent the gift
+	 * @param int $gift_id ID Number of the given gift
+	 * @param int $type Gift type; unused
 	 */
 	public function sendGiftNotificationEmail( $user_id_to, $user_from, $gift_id, $type ) {
 		$gift = Gifts::getGift( $gift_id );
@@ -151,9 +151,9 @@ class UserGifts {
 	/**
 	 * Checks if a given user owns the gift, which is specified by its ID.
 	 *
-	 * @param $user_id Integer: user ID of the given user
-	 * @param $ug_id Integer: ID number of the gift that we're checking
-	 * @return Boolean: true if the user owns the gift, otherwise false
+	 * @param int $user_id User ID of the given user
+	 * @param int $ug_id ID Number of the gift that we're checking
+	 * @return bool True if the user owns the gift, otherwise false
 	 */
 	public function doesUserOwnGift( $user_id, $ug_id ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -174,7 +174,7 @@ class UserGifts {
 	/**
 	 * Deletes a gift from the user_gift table.
 	 *
-	 * @param $ug_id Integer: ID number of the gift to delete
+	 * @param int $ug_id ID number of the gift to delete
 	 */
 	static function deleteGift( $ug_id ) {
 		$dbw = wfGetDB( DB_MASTER );
@@ -184,8 +184,8 @@ class UserGifts {
 	/**
 	 * Gets the user gift with the ID = $id.
 	 *
-	 * @param $id Integer: gift ID number
-	 * @return Array: array containing gift info, such as its ID, sender, etc.
+	 * @param int $id Gift ID number
+	 * @return array Array containing gift info, such as its ID, sender, etc.
 	 */
 	static function getUserGift( $id ) {
 		if ( !is_numeric( $id ) ) {
@@ -228,8 +228,8 @@ class UserGifts {
 	/**
 	 * Increase the amount of new gifts for the user with ID = $user_id.
 	 *
-	 * @param $user_id Integer: user ID for the user whose gift count we're
-	 *							going to increase.
+	 * @param int $user_id User ID for the user
+	 * whose gift count we're going to increase.
 	 */
 	public function incNewGiftCount( $user_id ) {
 		global $wgMemc;
@@ -240,8 +240,8 @@ class UserGifts {
 	/**
 	 * Decrease the amount of new gifts for the user with ID = $user_id.
 	 *
-	 * @param $user_id Integer: user ID for the user whose gift count we're
-	 *							going to decrease.
+	 * @param int $user_id User ID for the user
+	 * whose gift count we're going to decrease.
 	 */
 	public function decNewGiftCount( $user_id ) {
 		global $wgMemc;
@@ -263,9 +263,9 @@ class UserGifts {
 	 * Get the amount of new gifts for the user with ID = $user_id
 	 * from memcached. If successful, returns the amount of new gifts.
 	 *
-	 * @param $user_id Integer: user ID for the user whose gifts we're going to
-	 *							fetch.
-	 * @return Integer: amount of new gifts
+	 * @param int $user_id User ID for the user
+	 * whose gifts we're going to fetch.
+	 * @return int Amount of new gifts
 	 */
 	static function getNewGiftCountCache( $user_id ) {
 		global $wgMemc;
@@ -288,9 +288,9 @@ class UserGifts {
 	 * data. If that fails, the count is fetched from the database.
 	 * UserWelcome.php calls this function.
 	 *
-	 * @param $user_id Integer: user ID for the user whose gifts we're going to
-	 *							fetch.
-	 * @return Integer: amount of new gifts
+	 * @param int $user_id User ID for the user
+	 * whose gifts we're going to fetch.
+	 * @return int Amount of new gifts
 	 */
 	static function getNewGiftCount( $user_id ) {
 		$data = self::getNewGiftCountCache( $user_id );
@@ -307,9 +307,9 @@ class UserGifts {
 	 * Get the amount of new gifts for the user with ID = $user_id from the
 	 * database and stores it in memcached.
 	 *
-	 * @param $user_id Integer: user ID for the user whose gifts we're going to
-	 *							fetch.
-	 * @return Integer: amount of new gifts
+	 * @param int $user_id User ID for the user
+	 * whose gifts we're going to fetch.
+	 * @return int Amount of new gifts
 	 */
 	static function getNewGiftCountDB( $user_id ) {
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
@@ -431,7 +431,7 @@ class UserGifts {
 	/**
 	 * Update the counter that tracks how many times a gift has been given out.
 	 *
-	 * @param $gift_id Integer: ID number of the gift that we're tracking
+	 * @param int $gift_id ID number of the gift that we're tracking
 	 */
 	private function incGiftGivenCount( $gift_id ) {
 		$dbw = wfGetDB( DB_MASTER );
@@ -446,8 +446,8 @@ class UserGifts {
 	/**
 	 * Gets the amount of gifts a user has.
 	 *
-	 * @param $userName Mixed: username whose gift count we're looking up
-	 * @return Integer: amount of gifts the specified user has
+	 * @param mixed $userName Username whose gift count we're looking up
+	 * @return int Amount of gifts the specified user has
 	 */
 	static function getGiftCountByUsername( $userName ) {
 		$dbr = wfGetDB( DB_REPLICA );

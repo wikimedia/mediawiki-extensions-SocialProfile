@@ -27,7 +27,7 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param $params Mixed: parameter(s) passed to the page or null
+	 * @param string|null $params
 	 */
 	public function execute( $params ) {
 		$out = $this->getOutput();

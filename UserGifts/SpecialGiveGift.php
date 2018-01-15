@@ -195,7 +195,7 @@ class GiveGift extends SpecialPage {
 	 * Display the form for sending out a single gift.
 	 * Relies on the gift_id URL parameter and bails out if it's not there.
 	 *
-	 * @return String: HTML
+	 * @return string HTML
 	 */
 	function displayFormSingle() {
 		global $wgUploadPath;
@@ -264,7 +264,7 @@ class GiveGift extends SpecialPage {
 	 * Display the form for giving out a gift to a user when there was no user
 	 * parameter in the URL.
 	 *
-	 * @return String: HTML
+	 * @return string HTML
 	 */
 	function displayFormNoUser() {
 		global $wgFriendingEnabled;

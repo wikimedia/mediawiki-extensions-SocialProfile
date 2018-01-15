@@ -7,7 +7,7 @@ class SiteActivityHook {
 	/**
 	 * Register the <siteactivity> hook with the Parser.
 	 *
-	 * @param Parser $parser Parser
+	 * @param Parser $parser
 	 * @return bool
 	 */
 	public static function onParserFirstCallInit( &$parser ) {
@@ -15,6 +15,13 @@ class SiteActivityHook {
 		return true;
 	}
 
+	/**
+	 * Callback for ParserFirstCallInit hook subscriber
+	 *
+	 * @param string|null $input
+	 * @param array $args
+	 * @param Parser $parser
+	 */
 	public static function getSiteActivity( $input, $args, $parser ) {
 		global $wgMemc, $wgExtensionAssetsPath;
 

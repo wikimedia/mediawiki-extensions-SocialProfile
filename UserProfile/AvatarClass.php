@@ -18,8 +18,13 @@ class wAvatar {
 
 	/**
 	 * Constructor
+	 *
 	 * @param $userid Integer: user's internal ID number
-	 * @param $size String: 's' for small, 'm' for medium, 'ml' for medium-large and 'l' for large
+	 * @param $size string
+	 * - 's' for small
+	 * - 'm' for medium
+	 * - 'ml' for medium-large
+	 * - 'l' for large
 	 */
 	function __construct( $userId, $size ) {
 		$this->user_id = $userId;
@@ -28,10 +33,11 @@ class wAvatar {
 
 	/**
 	 * Fetches the avatar image's name from the filesystem
-	 * @return Avatar image's file name (i.e. default_l.gif or wikidb_3_l.jpg;
-	 *			first part for non-default images is the database name, second
-	 *			part is the user's ID number and third part is the letter for
-	 *			image size (s, m, ml or l)
+	 *
+	 * @return string Avatar image's file name i.e. default_l.gif or wikidb_3_l.jpg;
+	 * - First part for non-default images is the database name
+	 * - Second part is the user's ID number
+	 * - Third part is the letter for image size (s, m, ml or l)
 	 */
 	function getAvatarImage() {
 		global $wgAvatarKey, $wgUploadDirectory, $wgMemc;
@@ -55,8 +61,8 @@ class wAvatar {
 	}
 
 	/**
-	 * @param Array $extraParams: array of extra parameters to give to the image
-	 * @return String: <img> HTML tag with full path to the avatar image
+	 * @param array $extraParams Array of extra parameters to give to the image
+	 * @return string <img> HTML tag with full path to the avatar image
 	 */
 	function getAvatarURL( $extraParams = array() ) {
 		global $wgUploadPath, $wgUserProfileDisplay;

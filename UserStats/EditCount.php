@@ -19,6 +19,11 @@ $wgHooks['ArticleUndelete'][] = 'restoreDeletedEdits';
 /**
  * Updates user's points after they've made an edit in a namespace that is
  * listed in the $wgNamespacesForEditPoints array.
+ *
+ * @param WikiPage $wikiPage
+ * @param Revision $revision
+ * @param int $baseRevId
+ * @return bool true
  */
 function incEditCount( WikiPage $wikiPage, $revision, $baseRevId ) {
 	global $wgUser, $wgNamespacesForEditPoints;
@@ -38,6 +43,11 @@ function incEditCount( WikiPage $wikiPage, $revision, $baseRevId ) {
 /**
  * Updates user's points after a page in a namespace that is listed in the
  * $wgNamespacesForEditPoints array that they've edited has been deleted.
+ *
+ * @param WikiPage $article
+ * @param User $user
+ * @param string $reason
+ * @return bool true
  */
 function removeDeletedEdits( &$article, &$user, &$reason ) {
 	global $wgNamespacesForEditPoints;
@@ -68,6 +78,10 @@ function removeDeletedEdits( &$article, &$user, &$reason ) {
  * Updates user's points after a page in a namespace that is listed in the
  * $wgNamespacesForEditPoints array that they've edited has been restored after
  * it was originally deleted.
+ *
+ * @param Title $title
+ * @param bool $new
+ * @return bool true
  */
 function restoreDeletedEdits( &$title, $new ) {
 	global $wgNamespacesForEditPoints;

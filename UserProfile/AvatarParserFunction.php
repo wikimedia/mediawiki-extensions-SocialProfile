@@ -5,8 +5,8 @@ class AvatarParserFunction {
 	/**
 	 * Setup function for the {{#avatar:Username}} function
 	 *
-	 * @param Parser $parser: MW parser object
-	 * @return boolean
+	 * @param Parser $parser
+	 * @return bool
 	 */
 	static function setupAvatarParserFunction( &$parser ) {
 		$parser->setFunctionHook( 'avatar', 'AvatarParserFunction::renderAvatarParserFunction' );
@@ -17,10 +17,10 @@ class AvatarParserFunction {
 	/**
 	 * Function to render the {{#avatar:Username}} function
 	 *
-	 * @param Parser $parser: MW parser object
-	 * @param string $username: Username of user to show avatar for
-	 * @param string $size: Size of avatar to return (s/m/ml/l), or px value (100px, 10px, etc)
-	 * @return array: output of function, and options for the parser
+	 * @param Parser $parser
+	 * @param string $username Username of user to show avatar for
+	 * @param string $size Size of avatar to return (s/m/ml/l), or px value (100px, 10px, etc)
+	 * @return array Output of function, and options for the parser
 	 */
 	static function renderAvatarParserFunction( $parser, $username = '', $givenSize = 'm' ) {
 		global $wgUploadPath;

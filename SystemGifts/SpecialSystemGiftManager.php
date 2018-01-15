@@ -23,7 +23,7 @@ class SystemGiftManager extends SpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param $par Mixed: parameter passed to the page or null
+	 * @param string|null $par
 	 */
 	public function execute( $par ) {
 		$out = $this->getOutput();
@@ -100,7 +100,7 @@ class SystemGiftManager extends SpecialPage {
 	 * Display the text list of all existing system gifts and a delete link to
 	 * users who are allowed to delete gifts.
 	 *
-	 * @return String: HTML
+	 * @return string HTML
 	 */
 	function displayGiftList() {
 		$output = ''; // Prevent E_NOTICE

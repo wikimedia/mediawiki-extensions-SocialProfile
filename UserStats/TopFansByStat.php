@@ -22,7 +22,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param @param string|null $par Statistic name, i.e. friends_count or edit_count, etc. (or null)
+	 * @param string|null $par Statistic name, i.e. friends_count or edit_count, etc. (or null)
 	 */
 	public function execute( $par ) {
 		global $wgMemc;

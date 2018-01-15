@@ -5,11 +5,11 @@ use MediaWiki\Logger\LoggerFactory;
 class UserStats {
 	/**
 	 * Constructor
-	 * @private
-	 * @param $user_id Integer: ID number of the user that we want to track stats for
-	 * @param $user_name Mixed: user's name; if not supplied, then the user ID will be used to get the user name from DB.
+	 *
+	 * @param int $user_id ID number of the user that we want to track stats for
+	 * @param mixed $user_name user's name; if not supplied, then the user ID will be used to get the user name from DB.
 	 */
-	/* private */ function __construct( $user_id, $user_name ) {
+	function __construct( $user_id, $user_name ) {
 		$this->user_id = $user_id;
 		if ( !$user_name ) {
 			$user = User::newFromId( $this->user_id );
@@ -51,6 +51,8 @@ class UserStats {
 
 	/**
 	 * Retrieves cached per-user statistics from Memcached, if possible
+	 *
+	 * @return array
 	 */
 	public function getUserStatsCache() {
 		global $wgMemc;
@@ -68,6 +70,8 @@ class UserStats {
 
 	/**
 	 * Retrieves per-user statistics from the database
+	 *
+	 * @return array
 	 */
 	public function getUserStatsDB() {
 		global $wgMemc;
@@ -128,9 +132,9 @@ class UserStats {
 	/**
 	 * Get the list of top users, based on social statistics.
 	 *
-	 * @param $limit Integer: LIMIT for SQL query, defaults to 10
-	 * @return Array: list of top users, contains the user IDs, names and
-	 * 					amount of points the user has
+	 * @param int $limit LIMIT for SQL query, defaults to 10
+	 * @return array list of top users, contains the user IDs,
+	 * names and amount of points the user has
 	 */
 	static function getTopFansList( $limit = 10 ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -161,10 +165,10 @@ class UserStats {
 	/**
 	 * Get the top users for a given period.
 	 *
-	 * @param $limit Integer: LIMIT for SQL query, defaults to 10
-	 * @param $period String: period for which we're getting the top users, can
-	 *							be either 'weekly' or 'monthly'
-	 * @return Array: list of top users
+	 * @param int $limit LIMIT for SQL query, defaults to 10
+	 * @param string $period period for which we're getting the top users,
+	 * can be either 'weekly' or 'monthly'
+	 * @return array list of top users
 	 */
 	static function getTopFansListPeriod( $limit = 10, $period = 'weekly' ) {
 		if ( $period == 'monthly' ) {
@@ -220,15 +224,15 @@ class UserStats {
 	/**
 	 * Gets the amount of friends relative to points.
 	 *
-	 * @param $user_id Integer: user ID
-	 * @param $points Integer:
-	 * @param $limit Integer: LIMIT for SQL queries, defaults to 3
-	 * @param $condition Integer: if 1, the query operator for ORDER BY clause
-	 *								will be set to > and the results are
-	 *								ordered in ascending order, otherwise it'll
-	 * 								be set to < and results are ordered in
-	 *								descending order
-	 * @return Array
+	 * @param int $user_id user ID
+	 * @param int $points
+	 * @param int $limit LIMIT for SQL queries, defaults to 3
+	 * @param int $condition if 1, the query operator for ORDER BY clause
+	 * 	will be set to > and the results are
+	 * 	ordered in ascending order, otherwise it'll
+	 * 	be set to < and results are ordered in
+	 * 	descending order
+	 * @return array
 	 */
 	static function getFriendsRelativeToPoints( $user_id, $points, $limit = 3, $condition = 1 ) {
 		if ( $condition == 1 ) {

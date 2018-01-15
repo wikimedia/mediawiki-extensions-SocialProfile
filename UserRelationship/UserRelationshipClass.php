@@ -21,14 +21,15 @@ class UserRelationship {
 	/**
 	 * Add a relationship request to the database.
 	 *
-	 * @param $user_to String: user name of the recipient of the relationship
-	 *                         request
-	 * @param $type Integer: 1 for friend request, 2 (or anything else than 1)
-	 *                       for foe request
-	 * @param $message String: user-supplied message to to the recipient; may
-	 *                         be empty
-	 * @param $email Boolean: send out email to the recipient of the request?
-	 * @return Integer: ID of the new relationship request
+	 * @param string $user_to User name of the
+	 * recipient of the relationship request
+	 * @param int $type
+	 * - 1 for friend request
+	 * - 2 (or anything else than 1) for foe request
+	 * @param string|null $message User-supplied message
+	 * to the recipient; may be empty
+	 * @param bool $email Send out email to the recipient of the request?
+	 * @return int ID of the new relationship request
 	 */
 	public function addRelationshipRequest( $userTo, $type, $message, $email = true ) {
 		$userIdTo = User::idFromName( $userTo );
@@ -77,10 +78,11 @@ class UserRelationship {
 	 * Send e-mail about a new relationship request to the user whose user ID
 	 * is $userIdTo if they have opted in for these notification e-mails.
 	 *
-	 * @param $userIdTo Integer: user ID of the recipient
-	 * @param $userFrom String: name of the user who requested the relationship
-	 * @param $type Integer: 1 for friend request, 2 (or anything else than 1)
-	 *                       for foe request
+	 * @param int $userIdTo User ID of the recipient
+	 * @param string $userFrom Name of the user who requested the relationship
+	 * @param int $type
+	 * - 1 for friend request
+	 * - 2 (or anything else than 1) for foe request
 	 */
 	public function sendRelationshipRequestEmail( $userIdTo, $userFrom, $type ) {
 		$user = User::newFromId( $userIdTo );
@@ -135,9 +137,11 @@ class UserRelationship {
 	 * Send an e-mail to the user whose user ID is $userIdTo about a new user
 	 * relationship.
 	 *
-	 * @param $userIdTo Integer: user ID of the recipient of the e-mail
-	 * @param $userFrom String: name of the user who removed the relationship
-	 * @param $type Integer: 1 for friend, 2 (or anything else but 1) for foe
+	 * @param int $userIdTo User ID of the recipient of the e-mail
+	 * @param string $userFrom Name of the user who removed the relationship
+	 * @param int $type
+	 * - 1 for friend
+	 * - 2 (or anything else but 1) for foe
 	 */
 	public function sendRelationshipAcceptEmail( $userIdTo, $userFrom, $type ) {
 		$user = User::newFromId( $userIdTo );
@@ -192,9 +196,11 @@ class UserRelationship {
 	 * Send an e-mail to the user whose user ID is $userIdTo about a removed
 	 * relationship.
 	 *
-	 * @param $userIdTo Integer: user ID of the recipient of the e-mail
-	 * @param $userFrom String: name of the user who removed the relationship
-	 * @param $type Integer: 1 for friend, 2 (or anything else but 1) for foe
+	 * @param string $userIdTo User ID of the recipient of the e-mail
+	 * @param string $userFrom Name of the user who removed the relationship
+	 * @param int $type
+	 * - 1 for friend
+	 * - 2 (or anything else but 1) for foe
 	 */
 	public function sendRelationshipRemoveEmail( $userIdTo, $userFrom, $type ) {
 		$user = User::newFromId( $userIdTo );
@@ -248,9 +254,9 @@ class UserRelationship {
 	/**
 	 * Add a new relationship to the database.
 	 *
-	 * @param $relationshipRequestId Integer: relationship request ID number
-	 * @param $email Boolean: send out email to the recipient of the request?
-	 * @return Boolean: true if successful, otherwise false
+	 * @param int $relationshipRequestId Relationship request ID number
+	 * @param bool $email Send out email to the recipient of the request?
+	 * @return bool True if successful, otherwise false
 	 */
 	public function addRelationship( $relationshipRequestId, $email = true ) {
 		global $wgMemc;
@@ -351,8 +357,8 @@ class UserRelationship {
 	/**
 	 * Remove a relationship between two users and clear caches afterwards.
 	 *
-	 * @param $user1 Integer: user ID of the first user
-	 * @param $user2 Integer: user ID of the second user
+	 * @param int $user1 User ID of the first user
+	 * @param int $user2 User ID of the second user
 	 */
 	public function removeRelationshipByUserID( $user1, $user2 ) {
 		global $wgUser, $wgMemc;
@@ -398,7 +404,7 @@ class UserRelationship {
 	/**
 	 * Delete a user relationship request from the database.
 	 *
-	 * @param $id Integer: relationship request ID number
+	 * @param int $id Relationship request ID number
 	 */
 	public function deleteRequest( $id ) {
 		$request = $this->getRequest( $id );
@@ -413,7 +419,7 @@ class UserRelationship {
 	}
 
 	/**
-	 * @param $relationshipRequestId Integer: relationship request ID number
+	 * @param int $relationshipRequestId Relationship request ID number
 	 * @param $status
 	 */
 	public function updateRelationshipRequestStatus( $relationshipRequestId, $status ) {
@@ -430,7 +436,7 @@ class UserRelationship {
 	 * Make sure that there is a pending user relationship request with the
 	 * given ID.
 	 *
-	 * @param $relationshipRequestId Integer: relationship request ID number
+	 * @param int $relationshipRequestId Relationship request ID number
 	 * @return bool
 	 */
 	public function verifyRelationshipRequest( $relationshipRequestId ) {
@@ -450,9 +456,9 @@ class UserRelationship {
 	}
 
 	/**
-	 * @param $user1 Integer:
-	 * @param $user2 Integer:
-	 * @return Mixed: integer or boolean false
+	 * @param int $user1
+	 * @param int $user2
+	 * @return int|bool false
 	 */
 	static function getUserRelationshipByID( $user1, $user2 ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -470,8 +476,8 @@ class UserRelationship {
 	}
 
 	/**
-	 * @param $user1 Integer: user ID of the recipient of the request
-	 * @param $user2 Integer: user ID of the sender of the request
+	 * @param int $user1 User ID of the recipient of the request
+	 * @param int $user2 User ID of the sender of the request
 	 * @return bool
 	 */
 	static function userHasRequestByID( $user1, $user2 ) {
@@ -496,9 +502,9 @@ class UserRelationship {
 	/**
 	 * Get an individual user relationship request via its ID.
 	 *
-	 * @param $id Integer: relationship request ID
-	 * @return Array: array containing relationship request info, such as its
-	 *                ID, type, requester, etc.
+	 * @param int $id Relationship request ID
+	 * @return array Array containing relationship request info,
+	 * such as its ID, type, requester, etc.
 	 */
 	public function getRequest( $id ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -534,9 +540,9 @@ class UserRelationship {
 	/**
 	 * Get the list of open relationship requests.
 	 *
-	 * @param $status Integer:
-	 * @param $limit Integer: used as the LIMIT in the SQL query
-	 * @return Array: array of open relationship requests
+	 * @param int $status
+	 * @param int $limit Used as the LIMIT in the SQL query
+	 * @return array Array of open relationship requests
 	 */
 	public function getRequestList( $status, $limit = 0 ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -586,8 +592,10 @@ class UserRelationship {
 	/**
 	 * Increase the amount of open relationship requests for a user.
 	 *
-	 * @param $userId Integer: user ID for whom to get the requests
-	 * @param $relType Integer: 1 for friends, 2 (or anything else but 1) for foes
+	 * @param int $userId User ID for whom to get the requests
+	 * @param int $relType
+	 * - 1 for friends
+	 * - 2 (or anything else but 1) for foes
 	 */
 	private function incNewRequestCount( $userId, $relType ) {
 		global $wgMemc;
@@ -598,8 +606,10 @@ class UserRelationship {
 	/**
 	 * Decrease the amount of open relationship requests for a user.
 	 *
-	 * @param $userId Integer: user ID for whom to get the requests
-	 * @param $relType Integer: 1 for friends, 2 (or anything else but 1) for foes
+	 * @param int $userId User ID for whom to get the requests
+	 * @param int $relType
+	 * - 1 for friends
+	 * - 2 (or anything else but 1) for foes
 	 */
 	private function decNewRequestCount( $userId, $relType ) {
 		global $wgMemc;
@@ -611,9 +621,11 @@ class UserRelationship {
 	 * Get the amount of open user relationship requests for a user from the
 	 * database and cache it.
 	 *
-	 * @param $userId Integer: user ID for whom to get the requests
-	 * @param $relType Integer: 1 for friends, 2 (or anything else but 1) for foes
-	 * @return Integer
+	 * @param int $userId User ID for whom to get the requests
+	 * @param int $relType
+	 * - 1 for friends
+	 * - 2 (or anything else but 1) for foes
+	 * @return int
 	 */
 	static function getOpenRequestCountDB( $userId, $relType ) {
 		global $wgMemc;
@@ -651,9 +663,11 @@ class UserRelationship {
 	/**
 	 * Get the amount of open user relationship requests from cache.
 	 *
-	 * @param $userId Integer: user ID for whom to get the requests
-	 * @param $relType Integer: 1 for friends, 2 (or anything else but 1) for foes
-	 * @return Integer
+	 * @param int $userId User ID for whom to get the requests
+	 * @param int $relType
+	 * - 1 for friends
+	 * - 2 (or anything else but 1) for foes
+	 * @return int
 	 */
 	static function getOpenRequestCountCache( $userId, $relType ) {
 		global $wgMemc;
@@ -675,9 +689,11 @@ class UserRelationship {
 	 * Get the amount of open user relationship requests; first tries cache,
 	 * and if that fails, fetches the count from the database.
 	 *
-	 * @param $userId Integer: user ID for whom to get the requests
-	 * @param $relType Integer: 1 for friends, 2 (or anything else but 1) for foes
-	 * @return Integer
+	 * @param int $userId User ID for whom to get the requests
+	 * @param int $relType
+	 * - 1 for friends
+	 * - 2 (or anything else but 1) for foes
+	 * @return int
 	 */
 	static function getOpenRequestCount( $userId, $relType ) {
 		$data = self::getOpenRequestCountCache( $userId, $relType );
@@ -697,11 +713,13 @@ class UserRelationship {
 	/**
 	 * Get the relationship list for the current user.
 	 *
-	 * @param $type Integer: 1 for friends, 2 (or anything else but 1) for foes
-	 * @param $limit Integer: used as the LIMIT in the SQL query
-	 * @param $page Integer: if greater than 0, will be used to calculate the
-	 *                       OFFSET for the SQL query
-	 * @return Array: array of relationship information
+	 * @param int $type
+	 * - 1 for friends
+	 * - 2 (or anything else but 1) for foes
+	 * @param int $limit Used as the LIMIT in the SQL query
+	 * @param int $page If greater than 0, will be used to
+	 * calculate the OFFSET for the SQL query
+	 * @return array Array of relationship information
 	 */
 	public function getRelationshipList( $type = 0, $limit = 0, $page = 0 ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -748,8 +766,10 @@ class UserRelationship {
 	/**
 	 * Get the relationship IDs for the current user.
 	 *
-	 * @param $type Integer: 1 for friends, 2 (or anything else but 1) for foes
-	 * @return Array: array of relationship ID numbers
+	 * @param int $type
+	 * - 1 for friends
+	 * - 2 (or anything else but 1) for foes
+	 * @return array Array of relationship ID numbers
 	 */
 	public function getRelationshipIDs( $type ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -777,8 +797,8 @@ class UserRelationship {
 	 * Get the amount of friends and foes a user has from the
 	 * user_relationship_stats database table.
 	 *
-	 * @param $userName String: name of the user whose stats we're looking up
-	 * @return Array: array containing the amount of friends and foes
+	 * @param string $userName Name of the user whose stats we're looking up
+	 * @return array Array containing the amount of friends and foes
 	 */
 	static function getRelationshipCountByUsername( $userName ) {
 		$dbr = wfGetDB( DB_REPLICA );

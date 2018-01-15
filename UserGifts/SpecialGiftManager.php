@@ -29,7 +29,7 @@ class GiftManager extends SpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param $par Mixed: parameter passed to the page or null
+	 * @param string|null $par
 	 */
 	public function execute( $par ) {
 		$out = $this->getOutput();
@@ -112,7 +112,7 @@ class GiftManager extends SpecialPage {
 	/**
 	 * Function to check if the user can manage created gifts
 	 *
-	 * @return bool true if -
+	 * @return bool True if -
 	 * - the user has the 'giftadmin' permission
 	 * - ..or the max amount of custom user gifts is above zero
 	 */
@@ -134,8 +134,9 @@ class GiftManager extends SpecialPage {
 	/**
 	 * Function to check if the user can delete created gifts
 	 *
-	 * @return Boolean: true if user has 'giftadmin' permission or is
-	 *			a member of the giftadmin group, otherwise false
+	 * @return bool True if:
+	 * - user has 'giftadmin' permission
+	 * - ..or a member of the giftadmin group, otherwise false
 	 */
 	function canUserDelete() {
 		$user = $this->getUser();
@@ -158,9 +159,9 @@ class GiftManager extends SpecialPage {
 	/**
 	 * Function to check if the user can create new gifts
 	 *
-	 * @return Boolean: true if user has 'giftadmin' permission, is
-	 *			a member of the giftadmin group or if $wgMaxCustomUserGiftCount
-	 *			has been defined, otherwise false
+	 * @return bool True if user has 'giftadmin' permission, is
+	 * - a member of the giftadmin group
+	 * - or if $wgMaxCustomUserGiftCount has been defined, otherwise false
 	 */
 	function canUserCreateGift() {
 		global $wgMaxCustomUserGiftCount;
@@ -188,7 +189,7 @@ class GiftManager extends SpecialPage {
 	 * Display the text list of all existing gifts and a delete link to users
 	 * who are allowed to delete gifts.
 	 *
-	 * @return String: HTML
+	 * @return string HTML
 	 */
 	function displayGiftList() {
 		$output = ''; // Prevent E_NOTICE

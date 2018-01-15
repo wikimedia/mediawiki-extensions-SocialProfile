@@ -32,7 +32,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param $params Mixed: parameter(s) passed to the page or null
+	 * @param string|null $params
 	 */
 	public function execute( $params ) {
 		$out = $this->getOutput();
@@ -170,7 +170,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 	/**
 	 * Displays the form for removing a friend or a foe
 	 *
-	 * @return $form Mixed: HTML code for the form
+	 * @return string $form HTML code for the form
 	 */
 	function displayForm() {
 		$avatar = new wAvatar( $this->user_id_to, 'l' );

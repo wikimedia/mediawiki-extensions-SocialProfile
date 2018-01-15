@@ -12,9 +12,9 @@ class UserSystemMessage {
 	/**
 	 * Adds the message into the database
 	 *
-	 * @param $userName Mixed: the name of the user who's receiving the message
-	 * @param $type Integer: 0 by default
-	 * @param $message Mixed: message to be sent out
+	 * @param mixed $userName The name of the user who's receiving the message
+	 * @param int $type 0 by default
+	 * @param string $message Message to be sent out
 	 */
 	public function addMessage( $userName, $type = 0, $message ) {
 		$userId = User::idFromName( $userName );
@@ -34,7 +34,8 @@ class UserSystemMessage {
 
 	/**
 	 * Deletes a message from the user_system_messages table in the database
-	 * @param $um_id Integer: internal ID number of the message to delete
+	 *
+	 * @param int $um_id Internal ID number of the message to delete
 	 */
 	static function deleteMessage( $um_id ) {
 		$dbw = wfGetDB( DB_MASTER );
@@ -48,9 +49,9 @@ class UserSystemMessage {
 	/**
 	 * Gets a list of system messages for the current user from the database
 	 *
-	 * @param $type Integer: 0 by default
-	 * @param $limit Integer: LIMIT for database queries, 0 by default
-	 * @param $page Integer: 0 by default
+	 * @param int $type 0 by default
+	 * @param int $limit LIMIT for database queries, 0 by default
+	 * @param int $page 0 by default
 	 * @return array
 	 */
 	public function getMessageList( $type, $limit = 0, $page = 0 ) {
@@ -100,8 +101,8 @@ class UserSystemMessage {
 	/**
 	 * Sends out the "you have advanced to level [fill in this]" messages to the users
 	 *
-	 * @param $userIdTo Integer: user ID of the receiver
-	 * @param $level Mixed: name of the level that the user advanced to
+	 * @param int $userIdTo User ID of the receiver
+	 * @param mixed $level Name of the level that the user advanced to
 	 */
 	public function sendAdvancementNotificationEmail( $userIdTo, $level ) {
 		$user = User::newFromId( $userIdTo );

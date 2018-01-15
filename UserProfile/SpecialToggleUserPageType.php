@@ -23,7 +23,7 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param $params Mixed: parameter(s) passed to the page or null
+	 * @param string|null $params
 	 */
 	public function execute( $params ) {
 		global $wgMemc;

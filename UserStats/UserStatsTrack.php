@@ -178,8 +178,8 @@ class UserStatsTrack {
 	/**
 	 * Decrease a given social statistic field by $val.
 	 *
-	 * @param $field String: field name in user_stats database table
-	 * @param $val Integer: decrease $field by this amount, defaults to 1
+	 * @param string $field field name in user_stats database table
+	 * @param int $val decrease $field by this amount, defaults to 1
 	 */
 	function decStatField( $field, $val = 1 ) {
 		global $wgUser, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
@@ -323,9 +323,9 @@ class UserStatsTrack {
 	/**
 	 * Updates the comment scores for the current user.
 	 *
-	 * @param $voteType Integer: if 1, sets the amount of positive comment
-	 * 							scores, else sets the amount of negative
-	 * 							comment scores
+	 * @param int $voteType
+	 * - if 1, sets the amount of positive comment scores
+	 * - ..else sets the amount of negative comment scores
 	 */
 	function updateCommentScoreRec( $voteType ) {
 		if ( $this->user_id != 0 ) {
@@ -376,7 +376,7 @@ class UserStatsTrack {
 	 * This is called by UserRelationship::removeRelationshipByUserID(), which
 	 * in turn is called when removing friends or foes.
 	 *
-	 * @param $relType Integer: 1 for updating friends
+	 * @param int $relType 1 for updating friends
 	 */
 	function updateRelationshipCount( $relType ) {
 		global $wgUser;

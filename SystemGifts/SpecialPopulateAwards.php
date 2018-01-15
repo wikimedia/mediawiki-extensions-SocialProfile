@@ -19,7 +19,7 @@ class PopulateAwards extends UnlistedSpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param $gift_category Mixed: parameter passed to the page or null
+	 * @param string|null $gift_category
 	 */
 	public function execute( $gift_category ) {
 		global $wgUserLevels;

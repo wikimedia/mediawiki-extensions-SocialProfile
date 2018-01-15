@@ -106,10 +106,10 @@ class SystemGifts {
 	 * Checks if the given user has then given award (system gift) via their ID
 	 * numbers.
 	 *
-	 * @param $user_id Integer: user ID number
-	 * @param $gift_id Integer: award (system gift) ID number
-	 * @return Boolean|Integer: false if the user doesn't have the specified
-	 *                          gift, else the gift's ID number
+	 * @param int $user_id User ID number
+	 * @param int $gift_id Award (system gift) ID number
+	 * @return bool|int False if the user doesn't have the specified
+	 * gift, else the gift's ID number
 	 */
 	public function doesUserHaveGift( $user_id, $gift_id ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -129,11 +129,11 @@ class SystemGifts {
 	/**
 	 * Adds a new system gift to the database.
 	 *
-	 * @param $name Mixed: gift name
-	 * @param $description Mixed: gift description
-	 * @param $category Integer: see the $categories class member variable
-	 * @param $threshold Integer: threshold number (i.e. 50 or 100 or whatever)
-	 * @return Integer: the inserted gift's ID number
+	 * @param mixed $name Gift name
+	 * @param mixed $description Gift description
+	 * @param int $category See the $categories class member variable
+	 * @param int $threshold Threshold number (i.e. 50 or 100 or whatever)
+	 * @return int The inserted gift's ID number
 	 */
 	public function addGift( $name, $description, $category, $threshold ) {
 		$dbw = wfGetDB( DB_MASTER );
@@ -154,9 +154,9 @@ class SystemGifts {
 	/**
 	 * Updates the data for a system gift.
 	 *
-	 * @param $id Integer: system gift unique ID number
-	 * @param $name Mixed: gift name
-	 * @param $description Mixed: gift description
+	 * @param int $id System gift unique ID number
+	 * @param mixed $name Gift name
+	 * @param mixed $description Gift description
 	 * @param $category
 	 * @param $threshold
 	 */
@@ -202,9 +202,10 @@ class SystemGifts {
 
 	/**
 	 * Fetches the system gift with the ID $id from the database
-	 * @param $id Integer: ID number of the system gift to be fetched
-	 * @return Array: array of gift information, including, but not limited to,
-	 *                the gift ID, its name, description, category, threshold
+	 *
+	 * @param int $id ID number of the system gift to be fetched
+	 * @return array Array of gift information, including, but not limited to,
+	 * the gift ID, its name, description, category, threshold
 	 */
 	static function getGift( $id ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -233,10 +234,10 @@ class SystemGifts {
 	/**
 	 * Gets the associated image for a system gift.
 	 *
-	 * @param $id Integer: system gift ID number
-	 * @param $size String: image size (s, m, ml or l)
-	 * @return String: gift image filename (following the format
-	 *                 sg_ID_SIZE.ext; for example, sg_1_l.jpg)
+	 * @param int $id System gift ID number
+	 * @param string $size Image size (s, m, ml or l)
+	 * @return string gift Image filename (following the format
+	 * sg_ID_SIZE.ext; for example, sg_1_l.jpg)
 	 */
 	static function getGiftImage( $id, $size ) {
 		global $wgUploadDirectory;
@@ -254,11 +255,12 @@ class SystemGifts {
 	/**
 	 * Get the list of all existing system gifts (awards).
 	 *
-	 * @param $limit Integer: LIMIT for the SQL query, 0 by default
-	 * @param $page Integer: used to determine OFFSET for the SQL query;
-	 *                       0 by default
-	 * @return Array: array containing gift info, including (but not limited
-	 *                to) gift ID, creation timestamp, name, description, etc.
+	 * @param int $limit LIMIT for the SQL query, 0 by default
+	 * @param int $page used to determine OFFSET for the SQL query;
+	 * 0 by default
+	 * @return array array containing gift info, including
+	 * (but not limited to) gift ID, creation timestamp, name,
+	 * description, etc.
 	 */
 	static function getGiftList( $limit = 0, $page = 0 ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -302,7 +304,7 @@ class SystemGifts {
 	/**
 	 * Gets the amount of available system gifts from the database.
 	 *
-	 * @return Integer: the amount of all system gifts on the database
+	 * @return int The amount of all system gifts on the database
 	 */
 	static function getGiftCount() {
 		$dbr = wfGetDB( DB_REPLICA );

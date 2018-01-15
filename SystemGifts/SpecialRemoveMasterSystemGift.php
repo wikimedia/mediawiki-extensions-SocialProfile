@@ -17,9 +17,12 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 	/**
 	 * Deletes a gift image from $wgUploadDirectory/awards/
 	 *
-	 * @param $id Integer: internal ID number of the gift whose image we want to delete
-	 * @param $size String: size of the image to delete (s for small, m for
-	 *                      medium, ml for medium-large and l for large)
+	 * @param int $id Internal ID number of the gift whose image we want to delete
+	 * @param string $size Size of the image to delete,
+	 * - s for small
+	 * - m for medium
+	 * - ml for medium-large
+	 * - l for large
 	 */
 	function deleteImage( $id, $size ) {
 		global $wgUploadDirectory;
@@ -34,7 +37,8 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param $par Mixed: parameter passed to the page or null
+	 * @param string|null $par
+	 * @return string HTML
 	 */
 	public function execute( $par ) {
 		$out = $this->getOutput();
@@ -113,7 +117,7 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 	/**
 	 * Displays the main form for removing a system gift permanently.
 	 *
-	 * @return String: HTML output
+	 * @return string HTML
 	 */
 	function displayForm() {
 		global $wgUploadPath;
