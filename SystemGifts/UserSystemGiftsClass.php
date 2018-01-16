@@ -23,9 +23,9 @@ class UserSystemGifts {
 	 * Gives out a system gift with the ID of $gift_id, purges memcached and
 	 * optionally sends out e-mail to the user about their new system gift.
 	 *
-	 * @param $gift_id Integer: ID number of the system gift
-	 * @param $email Boolean: true to send out notification e-mail to users,
-	 *							otherwise false
+	 * @param int $gift_id ID number of the system gift
+	 * @param bool $email True to send out notification e-mail to users,
+	 * otherwise false
 	 */
 	public function sendSystemGift( $gift_id, $email = true ) {
 		global $wgMemc;
@@ -84,8 +84,8 @@ class UserSystemGifts {
 	 * and they have opted in to these notifications on their social
 	 * preferences.
 	 *
-	 * @param $user_id_to Integer: user ID of the recipient
-	 * @param $gift_id Integer: system gift ID number
+	 * @param int $user_id_to User ID of the recipient
+	 * @param int $gift_id System gift ID number
 	 */
 	public function sendGiftNotificationEmail( $user_id_to, $gift_id ) {
 		$gift = SystemGifts::getGift( $gift_id );
@@ -127,9 +127,9 @@ class UserSystemGifts {
 	 * Checks if the user with the ID $user_id has the system gift with the ID
 	 * $gift_id by querying the user_system_gift table.
 	 *
-	 * @param $user_id Integer: user ID
-	 * @param $gift_id Integer: system gift ID
-	 * @return Boolean: true if the user has the gift, otherwise false
+	 * @param int $user_id User ID
+	 * @param int $gift_id System gift ID
+	 * @return bool True if the user has the gift, otherwise false
 	 */
 	public function doesUserHaveGift( $user_id, $gift_id ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -168,11 +168,11 @@ class UserSystemGifts {
 	 * Checks if the user whose user ID is $user_id owns the system gift with
 	 * the ID = $sg_id.
 	 *
-	 * @param $user_id Integer: user ID of the user
-	 * @param $sg_id Integer: ID number of the system gift whose ownership
-	 *							we're trying to figure out here.
-	 * @return Boolean: true if the specified user owns the system gift,
-	 *					otherwise false
+	 * @param int $user_id User ID
+	 * @param int $sg_id ID Number of the system gift whose ownership
+	 * we're trying to figure out here.
+	 * @return bool True if the specified user owns the system gift,
+	 * otherwise false
 	 */
 	public function doesUserOwnGift( $user_id, $sg_id ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -193,8 +193,8 @@ class UserSystemGifts {
 	/**
 	 * Deletes the system gift that has the ID $ug_id.
 	 *
-	 * @param $ug_id Integer: gift ID of the system gift that we're about to
-	 *							delete.
+	 * @param int $ug_id Gift ID of the system gift
+	 * that we're about to delete.
 	 */
 	static function deleteGift( $ug_id ) {
 		$dbw = wfGetDB( DB_MASTER );
@@ -210,8 +210,8 @@ class UserSystemGifts {
 	 * This info includes, but is not limited to, the gift ID, its description,
 	 * name, status and so on.
 	 *
-	 * @param $id Integer: system gift ID number
-	 * @return Array: array containing information about the system gift
+	 * @param int $id System gift ID number
+	 * @return array Array containing information about the system gift
 	 */
 	static function getUserGift( $id ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -249,8 +249,8 @@ class UserSystemGifts {
 	/**
 	 * Increase the amount of new system gifts for the user with ID = $user_id.
 	 *
-	 * @param $user_id Integer: user ID for the user whose gift count we're
-	 *							going to increase.
+	 * @param int $user_id User ID for the user
+	 * whose gift count we're going to increase.
 	 */
 	public function incNewSystemGiftCount( $user_id ) {
 		global $wgMemc;
@@ -261,8 +261,8 @@ class UserSystemGifts {
 	/**
 	 * Decrease the amount of new system gifts for the user with ID = $user_id.
 	 *
-	 * @param $user_id Integer: user ID for the user whose gift count we're
-	 *							going to decrease.
+	 * @param int $user_id User ID for the user
+	 * whose gift count we're going to decrease.
 	 */
 	public function decNewSystemGiftCount( $user_id ) {
 		global $wgMemc;
@@ -284,9 +284,9 @@ class UserSystemGifts {
 	 * Get the amount of new system gifts for the user with ID = $user_id
 	 * from memcached. If successful, returns the amount of new system gifts.
 	 *
-	 * @param $user_id Integer: user ID for the user whose system gifts we're
-	 * 							going to fetch.
-	 * @return Integer: amount of new system gifts
+	 * @param int $user_id User ID for the user
+	 * whose system gifts we're going to fetch.
+	 * @return int Amount of new system gifts
 	 */
 	static function getNewSystemGiftCountCache( $user_id ) {
 		global $wgMemc;
@@ -309,9 +309,9 @@ class UserSystemGifts {
 	 * data. If that fails, the count is fetched from the database.
 	 * UserWelcome.php calls this function.
 	 *
-	 * @param $user_id Integer: user ID for the user whose system gifts we're
-	 * 							going to fetch.
-	 * @return Integer: amount of new gifts
+	 * @param $user_id int User ID for the user
+	 * whose system gifts we're going to fetch.
+	 * @return int Amount of new gifts
 	 */
 	static function getNewSystemGiftCount( $user_id ) {
 		global $wgMemc;
@@ -329,9 +329,9 @@ class UserSystemGifts {
 	 * Get the amount of new system gifts for the user with ID = $user_id from
 	 * the database and stores it in memcached.
 	 *
-	 * @param $user_id Integer: user ID for the user whose system gifts we're
-	 *							going to fetch.
-	 * @return Integer: amount of new system gifts
+	 * @param $user_id int User ID for the user
+	 * whose system gifts we're going to fetch.
+	 * @return int Amount of new system gifts
 	 */
 	static function getNewSystemGiftCountDB( $user_id ) {
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
@@ -362,10 +362,10 @@ class UserSystemGifts {
 	 * Get the list of this user's system gifts.
 	 *
 	 * @param $type Unused
-	 * @param $limit Integer: LIMIT for the SQL query
-	 * @param $page Integer: if greater than 0, used to build the OFFSET for
-	 *                       the SQL query
-	 * @return Array: array of system gift information
+	 * @param int $limit LIMIT for the SQL query
+	 * @param int $page If greater than 0, used to build
+	 * the OFFSET for the SQL query
+	 * @return array Array of system gift information
 	 */
 	public function getUserGiftList( $type, $limit = 0, $page = 0 ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -414,7 +414,7 @@ class UserSystemGifts {
 	 * Update the counter that tracks how many times a system gift has been
 	 * given out.
 	 *
-	 * @param $giftId Integer: ID number of the system gift that we're tracking
+	 * @param int $giftId ID number of the system gift that we're tracking
 	 */
 	public static function incGiftGivenCount( $giftId ) {
 		$dbw = wfGetDB( DB_MASTER );
@@ -429,9 +429,9 @@ class UserSystemGifts {
 	/**
 	 * Get the amount of system gifts for the specified user.
 	 *
-	 * @param $user_name Mixed: user name for the user whose gift count we're
-	 *							looking up; this is used to find out their UID.
-	 * @return Integer: gift count for the specified user
+	 * @param mixed $user_name User name for the user whose gift
+	 * count we're looking up; this is used to find out their UID.
+	 * @return int Gift count for the specified user
 	 */
 	static function getGiftCountByUsername( $user_name ) {
 		$dbr = wfGetDB( DB_REPLICA );

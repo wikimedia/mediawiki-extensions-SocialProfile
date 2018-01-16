@@ -5,16 +5,19 @@ class UserLevel {
 	public $level_name;
 
 	/**
-	 * @var String: name of the next level
+	 * @var int $next_level_name name of the next level
 	 */
 	public $next_level_name;
 
 	/**
-	 * @var Integer: amount of points needed to reach the next level
+	 * @var int $next_level_points amount of points needed to reach the next level
 	 */
 	public $next_level_points_needed;
 
-	/* private */ function __construct( $points ) {
+	/**
+	 * Constructor
+	 */
+	function __construct( $points ) {
 		global $wgUserLevels;
 		$this->levels = $wgUserLevels;
 		$this->points = (int)str_replace( ',', '', $points );

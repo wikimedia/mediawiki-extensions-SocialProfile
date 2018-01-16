@@ -22,7 +22,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param $params Mixed: parameter(s) passed to the page or null
+	 * @param string|null $params
 	 */
 	public function execute( $params ) {
 		$out = $this->getOutput();
@@ -82,6 +82,8 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 
 	/**
 	 * Displays the form for sending board blasts
+	 *
+	 * @return string HTML
 	 */
 	function displayForm() {
 		$user = $this->getUser();

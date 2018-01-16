@@ -245,7 +245,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 	/**
 	 * Displays the form for adding a friend or a foe
 	 *
-	 * @return $form Mixed: HTML code for the form
+	 * @return string $form HTML
 	 */
 	function displayForm() {
 		$out = $this->getOutput();

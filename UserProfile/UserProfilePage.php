@@ -21,33 +21,33 @@ class UserProfilePage extends Article {
 	public $title = null;
 
 	/**
-	 * @var String: user name of the user whose profile we're viewing
+	 * @var string user name of the user whose profile we're viewing
 	 */
 	public $user_name;
 
 	/**
-	 * @var Integer: user ID of the user whose profile we're viewing
+	 * @var int user ID of the user whose profile we're viewing
 	 */
 	public $user_id;
 
 	/**
-	 * @var User: User object representing the user whose profile we're viewing
+	 * @var User User object representing the user whose profile we're viewing
 	 */
 	public $user;
 
 	/**
-	 * @var Boolean: is the current user the owner of the profile page?
+	 * @var bool is the current user the owner of the profile page?
 	 */
 	public $is_owner;
 
 	/**
-	 * @var Array: user profile data (interests, etc.) for the user whose
+	 * @var array user profile data (interests, etc.) for the user whose
 	 * profile we're viewing
 	 */
 	public $profile_data;
 
 	/**
-	 * @var Array: array of profile fields visible to the user viewing the profile
+	 * @var array array of profile fields visible to the user viewing the profile
 	 */
 	public $profile_visible_fields;
 
@@ -76,7 +76,7 @@ class UserProfilePage extends Article {
 	 * In other words, is the current user's username the same as that of the
 	 * profile's owner's?
 	 *
-	 * @return Boolean
+	 * @return bool
 	 */
 	function isOwner() {
 		return $this->is_owner;
@@ -264,7 +264,7 @@ class UserProfilePage extends Article {
 	 * Get three of the polls the user has created and cache the data in
 	 * memcached.
 	 *
-	 * @return Array
+	 * @return array
 	 */
 	function getUserPolls() {
 		global $wgMemc;
@@ -311,7 +311,7 @@ class UserProfilePage extends Article {
 	 * Get three of the quiz games the user has created and cache the data in
 	 * memcached.
 	 *
-	 * @return Array
+	 * @return array
 	 */
 	function getUserQuiz() {
 		global $wgMemc;
@@ -365,7 +365,7 @@ class UserProfilePage extends Article {
 	 * Get three of the picture games the user has created and cache the data
 	 * in memcached.
 	 *
-	 * @return Array
+	 * @return array
 	 */
 	function getUserPicGames() {
 		global $wgMemc;
@@ -421,9 +421,9 @@ class UserProfilePage extends Article {
 	 * has created if $wgUserProfileDisplay['games'] is set to true and the
 	 * PictureGame, PollNY and QuizGame extensions have been installed.
 	 *
-	 * @param $user_id Integer: user ID number
-	 * @param $user_name String: user name
-	 * @return String: HTML or nothing if this feature isn't enabled
+	 * @param int $user_id User ID number
+	 * @param string $user_name User name
+	 * @return string HTML or nothing if this feature isn't enabled
 	 */
 	function getCasualGames( $user_id, $user_name ) {
 		global $wgUserProfileDisplay;
@@ -772,8 +772,8 @@ class UserProfilePage extends Article {
 	/**
 	 * Get the custom info (site-specific stuff) for a given user.
 	 *
-	 * @param $user_name String: user name whose custom info we should fetch
-	 * @return String: HTML
+	 * @param string $user_name User name whose custom info we should fetch
+	 * @return string HTML
 	 */
 	function getCustomInfo( $user_name ) {
 		global $wgUserProfileDisplay;
@@ -854,8 +854,8 @@ class UserProfilePage extends Article {
 	 * Get the interests (favorite movies, TV shows, music, etc.) for a given
 	 * user.
 	 *
-	 * @param $user_name String: user name whose interests we should fetch
-	 * @return String: HTML
+	 * @param string $user_name user name whose interests we should fetch
+	 * @return string HTML
 	 */
 	function getInterests( $user_name ) {
 		global $wgUserProfileDisplay;
@@ -950,8 +950,8 @@ class UserProfilePage extends Article {
 	 * points and user level (if enabled in the site configuration) and lots
 	 * more.
 	 *
-	 * @param $user_id Integer: user ID
-	 * @param $user_name String: user name
+	 * @param int $user_id User ID
+	 * @param string $user_name User name
 	 */
 	function getProfileHeader( $user_id, $user_name ) {
 		global $wgUserLevels;
@@ -1142,8 +1142,8 @@ class UserProfilePage extends Article {
 	 * This is currently unused, seems to be a leftover from the ArmchairGM
 	 * days.
 	 *
-	 * @param $user_name String: user name
-	 * @return String: HTML
+	 * @param string $user_name User name
+	 * @return string HTML
 	 */
 	function getProfileImage( $user_name ) {
 		$context = $this->getContext();
@@ -1174,10 +1174,11 @@ class UserProfilePage extends Article {
 	/**
 	 * Get the relationships for a given user.
 	 *
-	 * @param $user_name String: name of the user whose relationships we want
-	 *                           to fetch
-	 * @param $rel_type Integer: 1 for friends, 2 (or anything else than 1) for
-	 *                           foes
+	 * @param string $user_name Name of the user
+	 * whose relationships we want to fetch
+	 * @param int $rel_type
+	 * - 1 for friends
+	 * - 2 (or anything else than 1) for foes
 	 */
 	function getRelationships( $user_name, $rel_type ) {
 		global $wgMemc, $wgUserProfileDisplay;
@@ -1284,7 +1285,7 @@ class UserProfilePage extends Article {
 	/**
 	 * Gets the recent social activity for a given user.
 	 *
-	 * @param $user_name String: name of the user whose activity we want to fetch
+	 * @param string $user_name Name of the user whose activity we want to fetch
 	 */
 	function getActivity( $user_name ) {
 		global $wgUserProfileDisplay, $wgExtensionAssetsPath, $wgUploadPath;
@@ -1666,8 +1667,8 @@ class UserProfilePage extends Article {
 	/**
 	 * Get the user board for a given user.
 	 *
-	 * @param $user_id Integer: user's ID number
-	 * @param $user_name String: user name
+	 * @param int $user_id User's ID number
+	 * @param string $user_name User name
 	 */
 	function getUserBoard( $user_id, $user_name ) {
 		global $wgUserProfileDisplay;
@@ -1779,8 +1780,8 @@ class UserProfilePage extends Article {
 	 * $wgUserProfileDisplay['userboxes'] = true; and the FanBoxes extension is
 	 * installed.
 	 *
-	 * @param $user_name String: user name
-	 * @return String: HTML
+	 * @param string $user_name User name
+	 * @return string HTML
 	 */
 	function getFanBoxes( $user_name ) {
 		global $wgMemc, $wgUserProfileDisplay, $wgEnableUserBoxes;
@@ -2000,7 +2001,7 @@ class UserProfilePage extends Article {
 	 * Initialize UserProfile data for the given user if that hasn't been done
 	 * already.
 	 *
-	 * @param $username String: name of the user whose profile data to initialize
+	 * @param string $username Name of the user whose profile data to initialize
 	 */
 	private function initializeProfileData( $username ) {
 		if ( !$this->profile_data ) {

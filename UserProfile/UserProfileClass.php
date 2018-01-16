@@ -6,16 +6,18 @@ use MediaWiki\MediaWikiServices;
  */
 class UserProfile {
 	/**
-	 * @var Integer: the current user's user ID. Set in the constructor.
+	 * @var int $user_id The current user's user ID. Set in the constructor.
 	 */
 	public $user_id;
 
 	/**
-	 * @var String: the current user's user name. Set in the constructor.
+	 * @var string $user_name The current user's user name. Set in the constructor.
 	 */
 	public $user_name;
 
-	/** unused, remove me? */
+	/**
+	 * @var $profile Unused, remove me?
+	 */
 	public $profile;
 
 	/**
@@ -24,7 +26,7 @@ class UserProfile {
 	public $profile_fields_count;
 
 	/**
-	 * @var Array: array of valid profile fields; used in getProfileComplete()
+	 * @var array Array of valid profile fields; used in getProfileComplete()
 	 */
 	public $profile_fields = array(
 		'real_name',
@@ -51,15 +53,14 @@ class UserProfile {
 	);
 
 	/**
-	 * @var Array: unused, remove me?
+	 * @var array $profile_missing Unused, remove me?
 	 */
 	public $profile_missing = array();
 
 	/**
 	 * Constructor
-	 * @private
 	 */
-	/* private */ function __construct( $username ) {
+	function __construct( $username ) {
 		$title1 = Title::newFromDBkey( $username );
 		$this->user_name = $title1->getText();
 		$this->user_id = User::idFromName( $this->user_name );
@@ -68,7 +69,7 @@ class UserProfile {
 	/**
 	 * Deletes the memcached key for $user_id.
 	 *
-	 * @param $user_id Integer: user ID number
+	 * @param int $user_id User ID number
 	 */
 	static function clearCache( $user_id ) {
 		global $wgMemc;
@@ -79,8 +80,8 @@ class UserProfile {
 
 	/**
 	 * Loads social profile info for the current user.
-	 * First tries fetching the info from memcached and if that fails, queries
-	 * the database.
+	 * First tries fetching the info from memcached and if that fails,
+	 * queries the database.
 	 * Fetched info is cached in memcached.
 	 */
 	public function getProfile() {
@@ -154,8 +155,8 @@ class UserProfile {
 	/**
 	 * Format the user's birthday.
 	 *
-	 * @param $birthday String: birthday in YYYY-MM-DD format
-	 * @return String: formatted birthday
+	 * @param string $birthday birthday in YYYY-MM-DD format
+	 * @return string formatted birthday
 	 */
 	function formatBirthday( $birthday, $showYear = true ) {
 		$dob = explode( '-', $birthday );
@@ -184,8 +185,8 @@ class UserProfile {
 	 * Get the user's birthday year by exploding the given birthday in three
 	 * parts and returning the first one.
 	 *
-	 * @param $birthday String: birthday in YYYY-MM-DD format
-	 * @return String: birthyear or '00'
+	 * @param string $birthday Birthday in YYYY-MM-DD format
+	 * @return string Birthyear or '00'
 	 */
 	function getBirthdayYear( $birthday ) {
 		$dob = explode( '-', $birthday );
@@ -200,7 +201,7 @@ class UserProfile {
 	 * Currently unused, I think that this might've been used in some older
 	 * ArmchairGM code, but this looks useful enough to be kept around.
 	 *
-	 * @return Integer
+	 * @return int
 	 */
 	public function getProfileComplete() {
 		global $wgUser;

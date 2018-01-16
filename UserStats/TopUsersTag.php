@@ -18,8 +18,8 @@ $wgHooks['ParserFirstCallInit'][] = 'wfRegisterTopUsersTag';
 /**
  * Register the new <topusers /> parser hook with the Parser.
  *
- * @param $parser Parser: instance of Parser (not necessarily $wgParser)
- * @return Boolean: true
+ * @param Parser $parser
+ * @return bool true
  */
 function wfRegisterTopUsersTag( &$parser ) {
 	$parser->setHook( 'topusers', 'getTopUsersForTag' );
@@ -29,7 +29,7 @@ function wfRegisterTopUsersTag( &$parser ) {
 /**
  * Get the given amount of top users for the given timeframe.
  *
- * @return String: HTML
+ * @return string HTML
  */
 function getTopUsersForTag( $input, $args, $parser ) {
 	// Don't allow showing OVER 9000...I mean, over 50 users, duh.

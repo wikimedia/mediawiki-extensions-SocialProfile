@@ -40,7 +40,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 * Show the special page. Let the parent handle most stuff, but handle a
 	 * successful upload ourselves
 	 *
-	 * @param $params Mixed: parameter(s) passed to the page or null
+	 * @param string|null $params
 	 */
 	public function execute( $params ) {
 		$out = $this->getOutput();
@@ -67,7 +67,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 	/**
 	 * Show some text and linkage on successful upload.
 	 *
-	 * @param $ext String: file extension (gif, jpg or png)
+	 * @param string $ext File extension (gif, jpg or png)
 	 */
 	private function showSuccess( $ext ) {
 		global $wgAvatarKey, $wgUploadPath, $wgUploadAvatarInRecentChanges;
@@ -140,10 +140,10 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 * Displays the main upload form, optionally with a highlighted
 	 * error message up at the top.
 	 *
-	 * @param $msg String: error message as HTML
-	 * @param $sessionKey String: session key in case this is a stashed upload
-	 * @param $hideIgnoreWarning Boolean: whether to hide "ignore warning" check box
-	 * @return HTML output
+	 * @param string $msg Error message as HTML
+	 * @param string $sessionKey Session key in case this is a stashed upload
+	 * @param bool $hideIgnoreWarning Whether to hide "ignore warning" check box
+	 * @return string HTML
 	 */
 	protected function getUploadForm( $message = '', $sessionKey = '', $hideIgnoreWarning = false ) {
 		global $wgUseCopyrightUpload, $wgUserProfileDisplay;
@@ -235,9 +235,12 @@ class SpecialUploadAvatar extends SpecialUpload {
 	/**
 	 * Gets an avatar image with the specified size
 	 *
-	 * @param $size String: size of the image ('s' for small, 'm' for medium,
-	 * 'ml' for medium-large and 'l' for large)
-	 * @return String: full img HTML tag
+	 * @param string $size Size of the image
+	 * - 's' for small
+	 * - 'm' for medium
+	 * - 'ml' for medium-large
+	 * - 'l' for large
+	 * @return string HTML
 	 */
 	function getAvatar( $size ) {
 		global $wgAvatarKey, $wgUploadDirectory, $wgUploadPath;

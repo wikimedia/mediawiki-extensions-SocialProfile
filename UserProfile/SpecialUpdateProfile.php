@@ -22,7 +22,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * Initialize the user_profile records for a given user (either the current
 	 * user or someone else).
 	 *
-	 * @param $user Object: User object; null by default (=current user)
+	 * @param User|null $user User object; null by default (=current user)
 	 */
 	function initProfile( $user = null ) {
 		if ( is_null( $user ) ) {
@@ -48,7 +48,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param $section Mixed: parameter passed to the page or null
+	 * @param string|null $section
 	 */
 	public function execute( $section ) {
 		global $wgUpdateProfileInRecentChanges, $wgUserProfileThresholds, $wgAutoConfirmCount, $wgEmailConfirmToEdit;
@@ -229,7 +229,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * Save basic settings about the user (real name, e-mail address) into the
 	 * database.
 	 *
-	 * @param $user Object: User object representing the current user
+	 * @param User $user Representing the current user
 	 */
 	function saveSettings_basic( $user ) {
 		global $wgEmailAuthentication;
@@ -328,7 +328,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	/**
 	 * Save the basic user profile info fields into the database.
 	 *
-	 * @param $user Object: User object, null by default (=the current user)
+	 * @param User|null $user User object, null by default (=the current user)
 	 */
 	function saveProfileBasic( $user = null ) {
 		global $wgMemc, $wgSitename;
@@ -379,7 +379,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * Save the four custom (site-specific) user profile fields into the
 	 * database.
 	 *
-	 * @param $user Object: User object
+	 * @param User|null $user
 	 */
 	function saveProfileCustom( $user = null ) {
 		global $wgMemc;
@@ -411,7 +411,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * Save the user's personal info (interests, such as favorite music or
 	 * TV programs or video games, etc.) into the database.
 	 *
-	 * @param $user Object: User object
+	 * @param User|null $user
 	 */
 	function saveProfilePersonal( $user = null ) {
 		global $wgMemc;
@@ -452,7 +452,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	/**
-	 * @param $user Object: User
+	 * @param User $user
 	 */
 	function displayBasicForm( $user ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -655,7 +655,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	/**
-	 * @param $user Object: User
+	 * @param User $user
 	 */
 	function displayPersonalForm( $user ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -749,7 +749,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * Displays the form for toggling notifications related to social tools
 	 * (e-mail me when someone friends/foes me, send me a gift, etc.)
 	 *
-	 * @return HTML
+	 * @return string HTML
 	 */
 	function displayPreferencesForm() {
 		$user = $this->getUser();
@@ -819,8 +819,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	/**
 	 * Displays the form for editing custom (site-specific) information.
 	 *
-	 * @param $user Object: User
-	 * @return $form Mixed: HTML output
+	 * @param User $user
+	 * @return string $form HTML
 	 */
 	function displayCustomForm( $user ) {
 		$dbr = wfGetDB( DB_MASTER );

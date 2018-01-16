@@ -21,9 +21,12 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	/**
 	 * Deletes a gift image from $wgUploadDirectory/awards/
 	 *
-	 * @param $id Integer: internal ID number of the gift whose image we want to delete
-	 * @param $size String: size of the image to delete (s for small, m for
-	 *                      medium, ml for medium-large and l for large)
+	 * @param int $id Internal ID number of the gift whose image we want to delete
+	 * @param string $size size of the image to delete
+	 * - s for small
+	 * - m for medium
+	 * - ml for medium-large
+	 * - l for large
 	 */
 	function deleteImage( $id, $size ) {
 		global $wgUploadDirectory;
@@ -37,7 +40,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	/**
 	 * Checks if a user is allowed to remove gifts.
 	 *
-	 * @return Boolean: false by default or true if
+	 * @return bool False by default or true if
 	 * - has'delete' permission or..
 	 * - has the 'giftadmin' permission
 	 */
@@ -57,7 +60,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param $par Mixed: parameter passed to the page or null
+	 * @param string|null $par
 	 */
 	public function execute( $par ) {
 		$out = $this->getOutput();
@@ -133,7 +136,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	/**
 	 * Displays the main form for removing a gift permanently
 	 *
-	 * @return String: HTML output
+	 * @return string HTML
 	 */
 	function displayForm() {
 		global $wgUploadPath;

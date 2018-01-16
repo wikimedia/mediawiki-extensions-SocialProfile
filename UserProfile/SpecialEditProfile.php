@@ -20,7 +20,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 	/**
 	 * Show the special page
 	 *
-	 * @param $section Mixed: parameter passed to the page or null
+	 * @param string|null $par
 	 */
 	public function execute( $par ) {
 		global $wgUpdateProfileInRecentChanges;
@@ -436,7 +436,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 	/**
 	 * Displays the form for editing custom (site-specific) information
 	 *
-	 * @return $form Mixed: HTML output
+	 * @return string $form HTML
 	 */
 	function displayCustomForm( $tar ) {
 		$dbr = wfGetDB( DB_REPLICA );

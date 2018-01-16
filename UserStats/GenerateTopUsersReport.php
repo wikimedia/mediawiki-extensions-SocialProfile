@@ -30,7 +30,7 @@ class GenerateTopUsersReport extends SpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param $period String: either weekly or monthly
+	 * @param string $period Either weekly or monthly
 	 */
 	public function execute( $period ) {
 		global $wgContLang, $wgUser;

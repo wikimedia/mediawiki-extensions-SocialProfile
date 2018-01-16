@@ -17,13 +17,13 @@ class UserBoard {
 	 * Performs the insertion to user_board table, sends e-mail notification
 	 * (if appliable), and increases social statistics as appropriate.
 	 *
-	 * @param $user_id_from Integer: user ID of the sender
-	 * @param $user_name_from Mixed: user name of the sender
-	 * @param $user_id_to Integer: user ID of the reciever
-	 * @param $user_name_to Mixed: user name of the reciever
-	 * @param $message Mixed: message text
-	 * @param $message_type Integer: 0 for public message
-	 * @return Integer: the inserted value of ub_id row
+	 * @param int $user_id_from User ID of the sender
+	 * @param mixed $user_name_from User name of the sender
+	 * @param int $user_id_to User ID of the reciever
+	 * @param mixed $user_name_to User name of the reciever
+	 * @param mixed $message Message text
+	 * @param int $message_type 0 for public message
+	 * @return int The inserted value of ub_id row
 	 */
 	public function sendBoardMessage( $user_id_from, $user_name_from, $user_id_to, $user_name_to, $message, $message_type = 0 ) {
 		$dbw = wfGetDB( DB_MASTER );
@@ -84,8 +84,8 @@ class UserBoard {
 	/**
 	 * Sends an email to a user if someone wrote on their board
 	 *
-	 * @param $user_id_to Integer: user ID of the reciever
-	 * @param $user_from Mixed: the user name of the person who wrote the board message
+	 * @param int $user_id_to User ID of the reciever
+	 * @param mixed $user_from The user name of the person who wrote the board message
 	 */
 	public function sendBoardNotificationEmail( $user_id_to, $user_from ) {
 		$user = User::newFromId( $user_id_to );
@@ -117,8 +117,8 @@ class UserBoard {
 	/**
 	 * Increase the amount of new messages for $user_id
 	 *
-	 * @param $user_id Integer: user ID for the user whose message count we're
-	 *							going to increase.
+	 * @param $user_id int User ID for the user
+	 * whose message count we're going to increase.
 	 */
 	public function incNewMessageCount( $user_id ) {
 		global $wgMemc;
@@ -130,8 +130,8 @@ class UserBoard {
 	 * Clear the new board messages counter for the user with ID = $user_id.
 	 * This is done by setting the value of the memcached key to 0.
 	 *
-	 * @param $user_id Integer: user ID for the user whose message count we're
-	 *							going to clear.
+	 * @param mixed $user_id User ID for the user
+	 * whose message count we're going to clear.
 	 */
 	static function clearNewMessageCount( $user_id ) {
 		global $wgMemc;
@@ -143,9 +143,9 @@ class UserBoard {
 	 * Get the amount of new board messages for the user with ID = $user_id
 	 * from memcached. If successful, returns the amount of new messages.
 	 *
-	 * @param $user_id Integer: user ID for the user whose messages we're going
-	 *							to fetch.
-	 * @return Integer: amount of new messages
+	 * @param int $user_id User ID for the user
+	 * whose messages we're going to fetch.
+	 * @return int Amount of new messages
 	 */
 	static function getNewMessageCountCache( $user_id ) {
 		global $wgMemc;
@@ -167,9 +167,9 @@ class UserBoard {
 	 * Get the amount of new board messages for the user with ID = $user_id
 	 * from the database.
 	 *
-	 * @param $user_id Integer: user ID for the user whose messages we're going
-	 *							to fetch.
-	 * @return Integer: amount of new messages
+	 * @param int $user_id User ID for the user
+	 * whose messages we're going to fetch.
+	 * @return int Amount of new messages
 	 */
 	static function getNewMessageCountDB( $user_id ) {
 		global $wgMemc;
@@ -205,9 +205,9 @@ class UserBoard {
 	 * data. If that fails, the count is fetched from the database.
 	 * UserWelcome.php calls this function.
 	 *
-	 * @param $user_id Integer: user ID for the user whose messages we're going
-	 *							to fetch.
-	 * @return Integer: amount of new messages
+	 * @param $user_id int User ID for the user
+	 * whose messages we're going to fetch.
+	 * @return int Amount of new messages
 	 */
 	static function getNewMessageCount( $user_id ) {
 		$data = self::getNewMessageCountCache( $user_id );
@@ -225,9 +225,9 @@ class UserBoard {
 	 * Checks if the user with ID number $user_id owns the board message with
 	 * the ID number $ub_id.
 	 *
-	 * @param $user_id Integer: user ID number
-	 * @param $ub_id Integer: user board message ID number
-	 * @return Boolean: true if user owns the message, otherwise false
+	 * @param $user_id int User ID number
+	 * @param $ub_id int User board message ID number
+	 * @return bool True if user owns the message, otherwise false
 	 */
 	public function doesUserOwnMessage( $user_id, $ub_id ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -250,7 +250,7 @@ class UserBoard {
 	 * statistics as appropriate (either 'user_board_count' or
 	 * 'user_board_count_priv' is decreased by one).
 	 *
-	 * @param $ub_id Integer: ID number of the board message that we want to delete
+	 * @param int $ub_id ID Number of the board message that we want to delete
 	 */
 	public function deleteMessage( $ub_id ) {
 		if ( $ub_id ) {
@@ -281,15 +281,15 @@ class UserBoard {
 	/**
 	 * Get the user board messages for the user with the ID $user_id.
 	 *
-	 * @todo FIXME: rewrite this function to be compatible with non-MySQL DBMS
-	 * @param $user_id Integer: user ID number
-	 * @param $user_id_2 Integer: user ID number of the second user; only used
-	 *                            in board-to-board stuff
-	 * @param $limit Integer: used to build the LIMIT and OFFSET for the SQL
-	 *                        query
-	 * @param $page Integer: used to build the LIMIT and OFFSET for the SQL
-	 *                       query
-	 * @return Array: array of user board messages
+	 * @todo FIXME: Rewrite this function to be compatible with non-MySQL DBMS
+	 * @param int $user_id User ID number
+	 * @param int $user_id_2 User ID number of the second user; only used
+	 * in board-to-board stuff
+	 * @param int $limit Used to build the LIMIT and OFFSET for the SQL
+	 * query
+	 * @param int $page Used to build the LIMIT and OFFSET for the SQL
+	 * query
+	 * @return array Array of user board messages
 	 */
 	public function getUserBoardMessages( $user_id, $user_id_2 = 0, $limit = 0, $page = 0 ) {
 		global $wgUser, $wgOut, $wgTitle;
@@ -353,10 +353,10 @@ class UserBoard {
 	 * Get the amount of board-to-board messages sent between the users whose
 	 * IDs are $user_id and $user_id_2.
 	 *
-	 * @todo FIXME: rewrite this function to be compatible with non-MySQL DBMS
-	 * @param $user_id Integer: user ID of the first user
-	 * @param $user_id_2 Integer: user ID of the second user
-	 * @return Integer: the amount of board-to-board messages
+	 * @todo FIXME: Rewrite this function to be compatible with non-MySQL DBMS
+	 * @param int $user_id User ID of the first user
+	 * @param int $user_id_2 User ID of the second user
+	 * @return int The amount of board-to-board messages
 	 */
 	public function getUserBoardToBoardCount( $user_id, $user_id_2 ) {
 		global $wgUser;
@@ -457,7 +457,7 @@ class UserBoard {
 	 * Get the escaped full URL to Special:SendBoardBlast.
 	 * This is just a silly wrapper function.
 	 *
-	 * @return String: escaped full URL to Special:SendBoardBlast
+	 * @return string Escaped full URL to Special:SendBoardBlast
 	 */
 	static function getBoardBlastURL() {
 		$title = SpecialPage::getTitleFor( 'SendBoardBlast' );
@@ -467,9 +467,9 @@ class UserBoard {
 	/**
 	 * Get the user board URL for $user_name.
 	 *
-	 * @param $user_name Mixed: name of the user whose user board URL we're
-	 *							going to get.
-	 * @return String: escaped full URL to the user board page
+	 * @param mixed $user_name Name of the user
+	 * whose user board URL we're going to get.
+	 * @return string Escaped full URL to the user board page
 	 */
 	static function getUserBoardURL( $user_name ) {
 		$title = SpecialPage::getTitleFor( 'UserBoard' );
@@ -480,9 +480,9 @@ class UserBoard {
 	/**
 	 * Get the board-to-board URL for the users $user_name_1 and $user_name_2.
 	 *
-	 * @param $user_name_1 Mixed: name of the first user
-	 * @param $user_name_2 Mixed: name of the second user
-	 * @return String: escaped full URL to the board-to-board conversation
+	 * @param mixed $user_name_1 Name of the first user
+	 * @param mixed $user_name_2 Name of the second user
+	 * @return string Escaped full URL to the board-to-board conversation
 	 */
 	static function getUserBoardToBoardURL( $user_name_1, $user_name_2 ) {
 		$title = SpecialPage::getTitleFor( 'UserBoard' );
@@ -494,9 +494,9 @@ class UserBoard {
 	/**
 	 * Gets the difference between two given dates
 	 *
-	 * @param $dt1 Mixed: current time, as returned by PHP's time() function
-	 * @param $dt2 Mixed: date
-	 * @return Difference between dates
+	 * @param int $dt1 Current time, as returned by PHP's time() function
+	 * @param int $dt2 Date
+	 * @return int Difference between dates
 	 */
 	public function dateDiff( $date1, $date2 ) {
 		$dtDiff = $date1 - $date2;
@@ -526,8 +526,8 @@ class UserBoard {
 	/**
 	 * Gets the time how long ago the given board message was posted
 	 *
-	 * @param $time
-	 * @return $timeStr Mixed: time, such as "20 days" or "11 hours"
+	 * @param int $time
+	 * @return string $timeStr Time, such as "20 days" or "11 hours"
 	 */
 	public function getTimeAgo( $time ) {
 		$timeArray = $this->dateDiff( time(), $time );

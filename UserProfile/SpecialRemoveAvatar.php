@@ -33,7 +33,7 @@ class RemoveAvatar extends SpecialPage {
 	 * Special page description shown on Special:SpecialPages -- different for
 	 * privileged users and mortals
 	 *
-	 * @return string Special page description
+	 * @return string
 	 */
 	function getDescription() {
 		if ( $this->getUser()->isAllowed( 'avatarremove' ) ) {
@@ -173,6 +173,7 @@ class RemoveAvatar extends SpecialPage {
 
 	/**
 	 * Show the form for retrieving a user's current avatar
+	 *
 	 * @return HTML
 	 */
 	private function showUserForm() {
@@ -188,7 +189,7 @@ class RemoveAvatar extends SpecialPage {
 	/**
 	 * Shows the requested user's current avatar and the button for deleting it
 	 *
-	 * @param $user_name String: name of the user whose avatars we want to delete
+	 * @param string $user_name Name of the user whose avatars we want to delete
 	 */
 	private function showUserAvatar( $user_name ) {
 		$user_name = str_replace( '_', ' ', $user_name ); // replace underscores with spaces
@@ -227,9 +228,9 @@ class RemoveAvatar extends SpecialPage {
 	/**
 	 * Deletes all of the requested user's avatar images from the filesystem
 	 *
-	 * @param $id Integer: user ID
-	 * @param $size String: size of the avatar image to delete (small, medium or large).
-	 * 			Doesn't really matter since we're just going to blast 'em all.
+	 * @param int $id User ID
+	 * @param string $size Size of the avatar image to delete (small, medium or large).
+	 * Doesn't really matter since we're just going to blast 'em all.
 	 */
 	private function deleteImage( $id, $size ) {
 		global $wgUploadDirectory, $wgAvatarKey, $wgMemc;

@@ -21,7 +21,7 @@ class RemoveGift extends UnlistedSpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param $par Mixed: parameter passed to the page or null
+	 * @param string|null $par
 	 */
 	public function execute( $par ) {
 		global $wgMemc, $wgUploadPath;
@@ -92,7 +92,8 @@ class RemoveGift extends UnlistedSpecialPage {
 
 	/**
 	 * Displays the main form for removing a gift
-	 * @return HTML output
+	 *
+	 * @return string HTML
 	 */
 	function displayForm() {
 		global $wgUploadPath;

@@ -28,11 +28,11 @@ class UserActivity {
 	/**
 	 * Constructor
 	 *
-	 * @param $username String: username (usually $wgUser's username)
-	 * @param $filter String: passed to setFilter(); can be either 'user',
-	 *                        'friends', 'foes' or 'all', depending on what
-	 *                        kind of information is wanted
-	 * @param $item_max Integer: maximum amount of items to display in the feed
+	 * @param string $username Username (usually $wgUser's username)
+	 * @param string $filter Passed to setFilter(); can be either
+	 * 'user', 'friends', 'foes' or 'all', depending on what
+	 * kind of information is wanted
+	 * @param int $item_max Maximum amount of items to display in the feed
 	 */
 	public function __construct( $username, $filter, $item_max ) {
 		if ( $username ) {
@@ -1072,8 +1072,8 @@ class UserActivity {
 	}
 
 	/**
-	 * @param $type String: activity type, such as 'friend' or 'foe' or 'edit'
-	 * @param $has_page Boolean: true by default
+	 * @param string $type Activity type, such as 'friend' or 'foe' or 'edit'
+	 * @param bool $has_page True by default
 	 */
 	function simplifyPageActivity( $type, $has_page = true ) {
 		global $wgLang;
@@ -1196,9 +1196,9 @@ class UserActivity {
 	/**
 	 * Get the correct icon for the given activity type.
 	 *
-	 * @param $type String: activity type, such as 'edit' or 'friend' (etc.)
-	 * @return String: image file name (images are located in SocialProfile's
-	 *                 images/ directory)
+	 * @param string $type Activity type, such as 'edit' or 'friend' (etc.)
+	 * @return string Image file name (images are located inSocialProfile's
+	 * images/ directory)
 	 */
 	static function getTypeIcon( $type ) {
 		switch( $type ) {
@@ -1233,8 +1233,8 @@ class UserActivity {
 	 * equivalents and, if necessary, truncates the comment and finally applies
 	 * stripslashes() to the comment.
 	 *
-	 * @param $comment String: comment to "fix"
-	 * @return String: "fixed" comment
+	 * @param string $comment Comment to "fix"
+	 * @return string "Fixed" comment
 	 */
 	function fixItemComment( $comment ) {
 		global $wgLang;
@@ -1254,10 +1254,10 @@ class UserActivity {
 	 * Compares the timestamps of two given objects to decide how to sort them.
 	 * Called by getActivityList() and getActivityListGrouped().
 	 *
-	 * @param $x Object
-	 * @param $y Object
-	 * @return Integer: 0 if the timestamps are the same, -1 if $x's timestamp
-	 *                  is greater than $y's, else 1
+	 * @param object $x
+	 * @param object $y
+	 * @return int 0 if the timestamps are the same, -1 if $x's timestamp
+	 * is greater than $y's, else 1
 	 */
 	private static function sortItems( $x, $y ) {
 		if( $x['timestamp'] == $y['timestamp'] ) {

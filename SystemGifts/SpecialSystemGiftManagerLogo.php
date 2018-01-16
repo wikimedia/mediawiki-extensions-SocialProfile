@@ -31,7 +31,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param $par Mixed: parameter passed to the page or null
+	 * @param string|null $par
 	 */
 	public function execute( $par ) {
 		$out = $this->getOutput();
@@ -151,7 +151,6 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	/**
 	 * Really do the upload
 	 * Checks are made in SpecialUpload::execute()
-	 * @access private
 	 */
 	function processUpload() {
 		/**
@@ -355,9 +354,9 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	 * @todo If the later save fails, we may have disappeared the original file.
 	 *
 	 * @param string $saveName
-	 * @param string $tempName full path to the temporary file
-	 * @param bool $useRename if true, doesn't check that the source file
-	 *					is a PHP-managed upload temporary
+	 * @param string $tempName Full path to the temporary file
+	 * @param bool $useRename If true, doesn't check that the source file
+	 * is a PHP-managed upload temporary
 	 */
 	function saveUploadedFile( $saveName, $tempName, $ext ) {
 		$dest = $this->avatarUploadDirectory;
@@ -436,10 +435,9 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	 * If the user doesn't explicitly cancel or accept, these files
 	 * can accumulate in the temp directory.
 	 *
-	 * @param string $saveName - the destination filename
-	 * @param string $tempName - the source temporary file to save
-	 * @return string - full path the stashed file, or false on failure
-	 * @access private
+	 * @param string $saveName The destination filename
+	 * @param string $tempName The source temporary file to save
+	 * @return string Full path the stashed file, or false on failure
 	 */
 	function saveTempUploadedFile( $saveName, $tempName ) {
 		$archive = wfImageArchiveDir( $saveName, 'temp' );
@@ -459,7 +457,6 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	 * to pick up the path info on a later invocation.
 	 *
 	 * @return int
-	 * @access private
 	 */
 	function stashSession() {
 		$stash = $this->saveTempUploadedFile(
@@ -481,7 +478,6 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 
 	/**
 	 * Remove a temporarily kept file stashed by saveTempUploadedFile().
-	 * @access private
 	 */
 	function unsaveUploadedFile() {
 		MediaWiki\suppressWarnings();
@@ -494,7 +490,6 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 
 	/**
 	 * Show some text and linkage on successful upload.
-	 * @access private
 	 */
 	function showSuccess( $status ) {
 		global $wgUploadPath;
@@ -548,8 +543,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	}
 
 	/**
-	 * @param string $error as HTML
-	 * @access private
+	 * @param string $error HTML
 	 */
 	function uploadError( $error ) {
 		$out = $this->getOutput();
@@ -564,8 +558,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	 * totally but we require manual intervention to save it for real.
 	 * Stash it away, then present a form asking to confirm or cancel.
 	 *
-	 * @param string $warning as HTML
-	 * @access private
+	 * @param string $warning HTML
 	 */
 	function uploadWarning( $warning ) {
 		global $wgUseCopyrightUpload;
@@ -619,8 +612,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	 * Displays the main upload form, optionally with a highlighted
 	 * error message up at the top.
 	 *
-	 * @param string $msg as HTML
-	 * @access private
+	 * @param string $msg HTML
 	 */
 	function mainUploadForm( $msg = '' ) {
 		global $wgUseCopyrightUpload;
@@ -690,9 +682,9 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	/**
 	 * Verifies that it's ok to include the uploaded file
 	 *
-	 * @param string $tmpfile the full path opf the temporary file to verify
+	 * @param string $tmpfile The full path opf the temporary file to verify
 	 * @param string $extension The filename extension that the file is to be served with
-	 * @return Status object
+	 * @return Status
 	 */
 	function verify( $tmpfile, $extension ) {
 		global $wgDisableUploadScriptChecks, $wgVerifyMimeType, $wgMimeTypeBlacklist;
