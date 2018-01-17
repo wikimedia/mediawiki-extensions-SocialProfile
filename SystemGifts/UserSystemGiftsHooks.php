@@ -7,7 +7,6 @@ class UserSystemGiftsHooks {
 	 * @param array $notifications Echo notifications
 	 * @param array $notificationCategories Echo notification categories
 	 * @param array $icons Icon details
-	 * @return bool
 	 */
 	public static function onBeforeCreateEchoEvent( &$notifications, &$notificationCategories, &$icons ) {
 		$notificationCategories['social-award'] = array(
@@ -35,8 +34,6 @@ class UserSystemGiftsHooks {
 		$icons['social-award'] = array(
 			'path' => 'SocialProfile/images/notifications-award.svg'
 		);
-
-		return true;
 	}
 
 	/**
@@ -44,7 +41,6 @@ class UserSystemGiftsHooks {
 	 *
 	 * @param EchoEvent $event
 	 * @param array $users
-	 * @return bool
 	 */
 	public static function onEchoGetDefaultNotifiedUsers( $event, &$users ) {
 		switch ( $event->getType() ) {
@@ -54,7 +50,6 @@ class UserSystemGiftsHooks {
 				$users[] = User::newFromId( $targetId );
 				break;
 		}
-		return true;
 	}
 
 	/**
@@ -62,7 +57,6 @@ class UserSystemGiftsHooks {
 	 *
 	 * @param EchoEvent $event
 	 * @param string $bundleString
-	 * @return bool
 	 */
 	public static function onEchoGetBundleRules( $event, &$bundleString ) {
 		switch ( $event->getType() ) {
@@ -70,6 +64,5 @@ class UserSystemGiftsHooks {
 				$bundleString = 'social-award-rec';
 				break;
 		}
-		return true;
 	}
 }

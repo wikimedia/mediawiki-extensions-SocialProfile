@@ -13,35 +13,29 @@ class SocialProfileHooks {
 	 *
 	 * @param OutputPage $out
 	 * @param Skin $skin
-	 * @return bool
 	 */
 	public static function onBeforePageDisplay( OutputPage &$out, &$skin ) {
 		$out->addModuleStyles( 'ext.socialprofile.responsive' );
-		return true;
 	}
 
 	/**
 	 * Register the canonical names for our custom namespaces and their talkspaces.
 	 *
-	 * @param $list Array: array of namespace numbers with corresponding
-	 *                     canonical names
-	 * @return Boolean: true
+	 * @param array $list Array of namespace numbers
+	 * with corresponding canonical names
 	 */
 	public static function onCanonicalNamespaces( &$list ) {
 		$list[NS_USER_WIKI] = 'UserWiki';
 		$list[NS_USER_WIKI_TALK] = 'UserWiki_talk';
 		$list[NS_USER_PROFILE] = 'User_profile';
 		$list[NS_USER_PROFILE_TALK] = 'User_profile_talk';
-
-		return true;
 	}
 
 	/**
 	 * Creates SocialProfile's new database tables when the user runs
 	 * /maintenance/update.php, the MediaWiki core updater script.
 	 *
-	 * @param $updater DatabaseUpdater
-	 * @return Boolean
+	 * @param DatabaseUpdater $updater
 	 */
 	public static function onLoadExtensionSchemaUpdates( $updater ) {
 		$dir = __DIR__;
@@ -65,17 +59,14 @@ class SocialProfileHooks {
 		$updater->addExtensionTable( 'user_points_weekly', "$dir/UserStats/user_points_weekly$dbExt.sql" );
 		$updater->addExtensionTable( 'user_points_monthly', "$dir/UserStats/user_points_monthly$dbExt.sql" );
 		$updater->addExtensionTable( 'user_points_archive', "$dir/UserStats/user_points_archive$dbExt.sql" );
-
-		return true;
 	}
 
 	/**
 	 * For integration with the Renameuser extension.
 	 *
 	 * @param int $uid User ID
-	 * @param String $oldName old user name
-	 * @param String $newName new user name
-	 * @return Boolean
+	 * @param string $oldName Old user name
+	 * @param string $newName New user name
 	 */
 	public static function onRenameUserComplete( $uid, $oldName, $newName ) {
 		$dbw = wfGetDB( DB_MASTER );
@@ -100,7 +91,5 @@ class SocialProfileHooks {
 				__METHOD__
 			);
 		}
-
-		return true;
 	}
 }

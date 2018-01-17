@@ -10,7 +10,6 @@ class UserProfileHooks {
 	 * @param OutputPage $out
 	 * @param Skin $skin
 	 * @param array $bodyAttrs Pre-existing attributes of the <body> tag
-	 * @return bool
 	 */
 	public static function onOutputPageBodyAttributes( $out, $skin, &$bodyAttrs ) {
 		global $wgUserPageChoice;
@@ -31,8 +30,6 @@ class UserProfileHooks {
 				}
 			}
 		}
-
-		return true;
 	}
 
 	/**
@@ -41,7 +38,6 @@ class UserProfileHooks {
 	 *
 	 * @param Title &$title
 	 * @param WikiPage|Article &$article
-	 * @return bool
 	 */
 	public static function onArticleFromTitle( &$title, &$article, $context ) {
 		global $wgHooks, $wgUserPageChoice;
@@ -81,8 +77,6 @@ class UserProfileHooks {
 
 			$article = new UserProfilePage( $title );
 		}
-
-		return true;
 	}
 
 	/**
@@ -90,39 +84,33 @@ class UserProfileHooks {
 	 *
 	 * @param Parser $parser
 	 * @param ParserOutput $output
-	 * @return bool true
 	 */
 	public static function onParserLimitReportPrepare( $parser, $output ) {
 		$parser->getOutput()->updateCacheExpiry( 0 );
-		return true;
 	}
 
 	/**
 	 * Load the necessary CSS for avatars in diffs if that feature is enabled.
 	 *
 	 * @param DifferenceEngine $differenceEngine
-	 * @return bool
 	 */
 	public static function onDifferenceEngineShowDiff( $differenceEngine ) {
 		global $wgUserProfileAvatarsInDiffs;
 		if ( $wgUserProfileAvatarsInDiffs ) {
 			$differenceEngine->getOutput()->addModuleStyles( 'ext.socialprofile.userprofile.diff' );
 		}
-		return true;
 	}
 
 	/**
 	 * Load the necessary CSS for avatars in diffs if that feature is enabled.
 	 *
 	 * @param OutputPage $out
-	 * @return bool
 	 */
 	public static function onDifferenceEngineShowDiffPage( $out ) {
 		global $wgUserProfileAvatarsInDiffs;
 		if ( $wgUserProfileAvatarsInDiffs ) {
 			$out->addModuleStyles( 'ext.socialprofile.userprofile.diff' );
 		}
-		return true;
 	}
 
 	/**
@@ -159,8 +147,6 @@ class UserProfileHooks {
 			'</div></div>' .
 			'<div id="mw-diff-otitle3" class="rccomment">' . $oldMinor . $ldel . '</div>' .
 			'<div id="mw-diff-otitle4">' . $prevLink . '</div>';
-
-		return true;
 	}
 
 	/**
@@ -200,9 +186,6 @@ class UserProfileHooks {
 			'</div></div>' .
 			'<div id="mw-diff-ntitle3" class="rccomment">' . $newMinor . $rdel . '</div>' .
 			'<div id="mw-diff-ntitle4">' . $nextLink . $differenceEngine->markPatrolledLink() . '</div>';
-
-		return true;
 	}
-
 
 }

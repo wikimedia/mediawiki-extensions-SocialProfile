@@ -16,11 +16,9 @@ class UserWelcome {
 	 * Register <welcomeUser /> tag with the parser
 	 *
 	 * @param Parser $parser
-	 * @return bool true
 	 */
 	public static function onParserFirstCallInit( &$parser ) {
 		$parser->setHook( 'welcomeUser', array( __CLASS__, 'getWelcomeUser' ) );
-		return true;
 	}
 
 	public static function getWelcomeUser( $input, $args, $parser ) {

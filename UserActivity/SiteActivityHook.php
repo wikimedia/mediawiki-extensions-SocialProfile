@@ -8,11 +8,9 @@ class SiteActivityHook {
 	 * Register the <siteactivity> hook with the Parser.
 	 *
 	 * @param Parser $parser
-	 * @return bool
 	 */
 	public static function onParserFirstCallInit( &$parser ) {
 		$parser->setHook( 'siteactivity', array( __CLASS__, 'getSiteActivity' ) );
-		return true;
 	}
 
 	/**

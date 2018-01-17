@@ -7,7 +7,6 @@ class UserStatsHooks {
 	 * @param array $notifications Echo notifications
 	 * @param array $notificationCategories Echo notification categories
 	 * @param array $icons Icon details
-	 * @return bool
 	 */
 	public static function onBeforeCreateEchoEvent( &$notifications, &$notificationCategories, &$icons ) {
 		$notificationCategories['social-level-up'] = array(
@@ -36,8 +35,6 @@ class UserStatsHooks {
 		$icons['social-level-up'] = array(
 			'path' => 'SocialProfile/images/notifications-level-up.svg'
 		);
-
-		return true;
 	}
 
 	/**
@@ -45,7 +42,6 @@ class UserStatsHooks {
 	 *
 	 * @param EchoEvent $event
 	 * @param string $bundleString
-	 * @return bool
 	 */
 	public static function onEchoGetBundleRules( $event, &$bundleString ) {
 		switch ( $event->getType() ) {
@@ -53,6 +49,5 @@ class UserStatsHooks {
 				$bundleString = 'social-level-up';
 				break;
 		}
-		return true;
 	}
 }

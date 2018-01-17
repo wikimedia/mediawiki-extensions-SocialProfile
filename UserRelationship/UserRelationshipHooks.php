@@ -7,7 +7,6 @@ class UserRelationshipHooks {
 	 * @param array $notifications Echo notifications
 	 * @param array $notificationCategories Echo notification categories
 	 * @param array $icons Icon details
-	 * @return bool
 	 */
 	public static function onBeforeCreateEchoEvent( &$notifications, &$notificationCategories, &$icons ) {
 		$notificationCategories['social-rel'] = array(
@@ -52,8 +51,6 @@ class UserRelationshipHooks {
 		$icons['gratitude'] = array(
 			'path' => 'SocialProfile/images/gratitude.png'
 		);
-
-		return true;
 	}
 
 	/**
@@ -61,7 +58,6 @@ class UserRelationshipHooks {
 	 *
 	 * @param EchoEvent $event
 	 * @param array $users
-	 * @return bool
 	 */
 	public static function onEchoGetDefaultNotifiedUsers( $event, &$users ) {
 		switch ( $event->getType() ) {
@@ -72,6 +68,5 @@ class UserRelationshipHooks {
 				$users[] = User::newFromId( $targetId );
 				break;
 		}
-		return true;
 	}
 }
