@@ -60,32 +60,25 @@
 	},
 	"ResourceModules": {
 		"ext.socialprofile.systemgifts.css": {
-			"styles": "SystemGift.css",
-			"position": "top"
+			"styles": "SystemGift.css"
 		},
 		"ext.socialprofile.special.removemastersystemgift.css": {
-			"styles": "SpecialRemoveMasterSystemGift.css",
-			"position": "top"
+			"styles": "SpecialRemoveMasterSystemGift.css"
 		},
 		"ext.socialprofile.special.systemgiftmanager.css": {
-			"styles": "SpecialSystemGiftManager.css",
-			"position": "top"
+			"styles": "SpecialSystemGiftManager.css"
 		},
 		"ext.socialprofile.special.systemgiftmanagerlogo.css": {
-			"styles": "SpecialSystemGiftManagerLogo.css",
-			"position": "top"
+			"styles": "SpecialSystemGiftManagerLogo.css"
 		},
 		"ext.socialprofile.special.topawards.css": {
-			"styles": "SpecialTopAwards.css",
-			"position": "top"
+			"styles": "SpecialTopAwards.css"
 		},
 		"ext.socialprofile.special.viewsystemgift.css": {
-			"styles": "SpecialViewSystemGift.css",
-			"position": "top"
+			"styles": "SpecialViewSystemGift.css"
 		},
 		"ext.socialprofile.special.viewsystemgifts.css": {
-			"styles": "SpecialViewSystemGifts.css",
-			"position": "top"
+			"styles": "SpecialViewSystemGifts.css"
 		}
 	},
 	"ResourceFileModulePaths": {

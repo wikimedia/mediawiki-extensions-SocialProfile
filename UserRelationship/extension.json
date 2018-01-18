@@ -42,8 +42,7 @@
 	},
 	"ResourceModules": {
 		"ext.socialprofile.userrelationship.css": {
-			"styles": "UserRelationship.css",
-			"position": "top"
+			"styles": "UserRelationship.css"
 		},
 		"ext.socialprofile.userrelationship.js": {
 			"scripts": "UserRelationship.js",

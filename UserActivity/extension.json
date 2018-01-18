@@ -29,8 +29,7 @@
 	},
 	"ResourceModules": {
 		"ext.socialprofile.useractivity.css": {
-			"styles": "UserActivity.css",
-			"position": "top"
+			"styles": "UserActivity.css"
 		}
 	},
 	"ResourceFileModulePaths": {

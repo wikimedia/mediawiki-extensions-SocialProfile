@@ -76,8 +76,7 @@ $wgGroupPermissions['staff']['populate-user-profiles'] = true;
 $wgResourceModules['ext.socialprofile.userprofile.css'] = array(
 	'styles' => 'UserProfile.css',
 	'localBasePath' => __DIR__,
-	'remoteExtPath' => 'SocialProfile/UserProfile',
-	'position' => 'top'
+	'remoteExtPath' => 'SocialProfile/UserProfile'
 );
 
 $wgResourceModules['ext.socialprofile.userprofile.js'] = array(
@@ -93,37 +92,32 @@ $wgResourceModules['ext.userProfile.updateProfile'] = array(
 	'scripts' => 'UpdateProfile.js',
 	'dependencies' => array( 'mediawiki.api', 'mediawiki.util', 'jquery.ui.datepicker' ),
 	'localBasePath' => __DIR__,
-	'remoteExtPath' => 'SocialProfile/UserProfile',
-	'position' => 'top'
+	'remoteExtPath' => 'SocialProfile/UserProfile'
 );
 
 // CSS for user avatars in page diffs
 $wgResourceModules['ext.socialprofile.userprofile.diff'] = array(
 	'styles' => 'AvatarsInDiffs.css',
 	'localBasePath' => __DIR__,
-	'remoteExtPath' => 'SocialProfile/UserProfile',
-	'position' => 'top'
+	'remoteExtPath' => 'SocialProfile/UserProfile'
 );
 
 $wgResourceModules['ext.socialprofile.userprofile.tabs.css'] = array(
 	'styles' => 'ProfileTabs.css',
 	'localBasePath' => __DIR__,
-	'remoteExtPath' => 'SocialProfile/UserProfile',
-	'position' => 'top'
+	'remoteExtPath' => 'SocialProfile/UserProfile'
 );
 
 $wgResourceModules['ext.socialprofile.special.uploadavatar.css'] = array(
 	'styles' => 'SpecialUploadAvatar.css',
 	'localBasePath' => __DIR__,
-	'remoteExtPath' => 'SocialProfile/UserProfile',
-	'position' => 'top'
+	'remoteExtPath' => 'SocialProfile/UserProfile'
 );
 
 $wgResourceModules['ext.socialprofile.special.updateprofile.css'] = array(
 	'styles' => 'SpecialUpdateProfile.css',
 	'localBasePath' => __DIR__,
-	'remoteExtPath' => 'SocialProfile/UserProfile',
-	'position' => 'top'
+	'remoteExtPath' => 'SocialProfile/UserProfile'
 );
 
 # Add new log types for profile edits and avatar uploads

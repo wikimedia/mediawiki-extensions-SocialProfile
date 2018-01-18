@@ -21,8 +21,7 @@
 	},
 	"ResourceModules": {
 		"ext.socialprofile.userwelcome.css": {
-			"styles": "UserWelcome.css",
-			"position": "top"
+			"styles": "UserWelcome.css"
 		}
 	},
 	"ResourceFileModulePaths": {

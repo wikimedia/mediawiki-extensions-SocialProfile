@@ -69,8 +69,7 @@
 	},
 	"ResourceModules": {
 		"ext.socialprofile.userstats.css": {
-			"styles": "TopList.css",
-			"position": "top"
+			"styles": "TopList.css"
 		}
 	},
 	"ResourceFileModulePaths": {

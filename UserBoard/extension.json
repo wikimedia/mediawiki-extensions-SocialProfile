@@ -50,12 +50,10 @@
 			]
 		},
 		"ext.socialprofile.userboard.css": {
-			"styles": "UserBoard.css",
-			"position": "top"
+			"styles": "UserBoard.css"
 		},
 		"ext.socialprofile.userboard.boardblast.css": {
-			"styles": "BoardBlast.css",
-			"position": "top"
+			"styles": "BoardBlast.css"
 		},
 		"ext.socialprofile.userboard.boardblast.js": {
 			"scripts": "BoardBlast.js",

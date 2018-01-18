@@ -118,14 +118,12 @@ $wgHooks['RenameUserComplete'][] = 'SocialProfileHooks::onRenameUserComplete';
 // General
 $wgResourceModules['ext.socialprofile.clearfix'] = array(
 	'styles' => 'clearfix.css',
-	'position' => 'top',
 	'localBasePath' => __DIR__ . '/shared',
 	'remoteExtPath' => 'SocialProfile/shared',
 );
 
 $wgResourceModules['ext.socialprofile.responsive'] = array(
 	'styles' => 'responsive.less',
-	'position' => 'top',
 	'localBasePath' => __DIR__ . '/shared',
 	'remoteExtPath' => 'SocialProfile/shared',
 );
@@ -135,14 +133,12 @@ $wgResourceModules['ext.socialprofile.responsive'] = array(
 // @see https://phabricator.wikimedia.org/T100025
 $wgResourceModules['ext.socialprofile.flash'] = array(
 	'scripts' => 'flash.js',
-	'position' => 'bottom',
 	'localBasePath' => __DIR__ . '/shared',
 	'remoteExtPath' => 'SocialProfile/shared',
 );
 
 $wgResourceModules['ext.socialprofile.LightBox'] = array(
 	'scripts' => 'LightBox.js',
-	'position' => 'bottom',
 	'localBasePath' => __DIR__ . '/shared',
 	'remoteExtPath' => 'SocialProfile/shared',
 );
