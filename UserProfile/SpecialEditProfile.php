@@ -436,7 +436,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 	/**
 	 * Displays the form for editing custom (site-specific) information
 	 *
-	 * @return string $form HTML
+	 * @return string HTML
 	 */
 	function displayCustomForm( $tar ) {
 		$dbr = wfGetDB( DB_REPLICA );

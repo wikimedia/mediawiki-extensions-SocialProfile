@@ -527,7 +527,7 @@ class UserBoard {
 	 * Gets the time how long ago the given board message was posted
 	 *
 	 * @param int $time
-	 * @return string $timeStr Time, such as "20 days" or "11 hours"
+	 * @return string Time, such as "20 days" or "11 hours"
 	 */
 	public function getTimeAgo( $time ) {
 		$timeArray = $this->dateDiff( time(), $time );

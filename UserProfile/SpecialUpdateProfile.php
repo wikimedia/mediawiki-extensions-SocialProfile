@@ -820,7 +820,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * Displays the form for editing custom (site-specific) information.
 	 *
 	 * @param User $user
-	 * @return string $form HTML
+	 * @return string HTML
 	 */
 	function displayCustomForm( $user ) {
 		$dbr = wfGetDB( DB_MASTER );

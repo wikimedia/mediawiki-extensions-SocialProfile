@@ -170,7 +170,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 	/**
 	 * Displays the form for removing a friend or a foe
 	 *
-	 * @return string $form HTML code for the form
+	 * @return string HTML code for the form
 	 */
 	function displayForm() {
 		$avatar = new wAvatar( $this->user_id_to, 'l' );
