@@ -108,7 +108,7 @@ class UserStatsTrack {
 		global $wgMemc;
 
 		// clear stats cache for current user
-		$key = $wgMemc-makeKey( 'user', 'stats', $this->user_id );
+		$key = $wgMemc->makeKey( 'user', 'stats', $this->user_id );
 		$wgMemc->delete( $key );
 	}
 
@@ -152,7 +152,7 @@ class UserStatsTrack {
 			$stat_field = $this->stats_fields[$field];
 			$field_count = $s->$stat_field;
 
-			$key = $wgMemc-makeKey( 'system_gift', 'id', $field . '-' . $field_count );
+			$key = $wgMemc->makeKey( 'system_gift', 'id', $field . '-' . $field_count );
 			$data = $wgMemc->get( $key );
 
 			if ( $data ) {
