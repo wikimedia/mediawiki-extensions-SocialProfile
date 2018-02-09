@@ -70,7 +70,7 @@ class RemoveGift extends UnlistedSpecialPage {
 
 			$out->setPageTitle( $this->msg( 'g-remove-success-title', $gift['name'] )->parse() );
 
-			$out = '<div class="back-links">
+			$html = '<div class="back-links">
 				<a href="' . htmlspecialchars( $user->getUserPage()->getFullURL() ) . '">' .
 					$this->msg( 'g-back-link', $gift['user_name_to'] )->parse() . '</a>
 			</div>
@@ -83,7 +83,7 @@ class RemoveGift extends UnlistedSpecialPage {
 				<input type="button" class="site-button" value="' . $this->msg( 'g-your-profile' )->plain() . '" size="20" onclick="window.location=\'' . htmlspecialchars( $user_page_link->getFullURL() ) . '\'" />
 			</div>';
 
-			$out->addHTML( $out );
+			$out->addHTML( $html );
 		} else {
 			$_SESSION['alreadysubmitted'] = false;
 			$out->addHTML( $this->displayForm() );
