@@ -36,11 +36,21 @@ class RemoveAvatar extends SpecialPage {
 	 * @return string
 	 */
 	function getDescription() {
-		if ( $this->getUser()->isAllowed( 'avatarremove' ) ) {
+		if ( $this->isUserPrivileged() ) {
 			return $this->msg( 'removeavatar' )->plain();
 		} else {
 			return $this->msg( 'removeavatar-remove-my-avatar' )->plain();
 		}
+	}
+
+	/**
+	 * Checks if user is privileged to remove other users' avatars
+	 * by seeing if they have the 'avatarremove' right
+	 *
+	 * @return bool
+	 */
+	private function isUserPrivileged() {
+		return $this->getUser()->isAllowed( 'avatarremove' );
 	}
 
 	/**
@@ -53,7 +63,7 @@ class RemoveAvatar extends SpecialPage {
 		$request = $this->getRequest();
 		$user = $this->getUser();
 
-		$userIsPrivileged = $user->isAllowed( 'avatarremove' );
+		$userIsPrivileged = $this->isUserPrivileged();
 
 		// If the user isn't logged in, display an error
 		if ( !$user->isLoggedIn() ) {
@@ -124,7 +134,7 @@ class RemoveAvatar extends SpecialPage {
 		$user = $this->getUser();
 		// Only privileged users can delete others' avatars, but everyone
 		// can delete their own avatar
-		if ( $user->isAllowed( 'avatarremove' ) ) {
+		if ( $this->isUserPrivileged() ) {
 			$user_id = $this->getRequest()->getInt( 'user_id' );
 			$user_deleted = User::newFromId( $user_id );
 		} else {
@@ -163,7 +173,7 @@ class RemoveAvatar extends SpecialPage {
 			// No prefix suggestion for invalid user
 			return [];
 		}
-		if ( $this->getUser()->isAllowed( 'avatarremove' ) ) {
+		if ( $this->isUserPrivileged() ) {
 			// Autocomplete subpage as user list - public to allow caching
 			return UserNamePrefixSearch::search( 'public', $search, $limit, $offset );
 		} else {
@@ -197,7 +207,7 @@ class RemoveAvatar extends SpecialPage {
 
 		$currentUser = $this->getUser();
 		$userIsAvatarOwner = (bool)( $currentUser->getName() === $user_name );
-		$userIsPrivileged = $currentUser->isAllowed( 'avatarremove' );
+		$userIsPrivileged = $this->isUserPrivileged();
 		$avatar = new wAvatar( $user_id, 'l' );
 		$output = '';
 
