@@ -23,7 +23,8 @@
 		"UserLevel": "UserLevel.php",
 		"UserStatsTrack": "UserStatsTrack.php",
 		"UserStats": "UserStats.php",
-		"UserStatsHooks": "UserStatsHooks.php"
+		"UserStatsHooks": "UserStatsHooks.php",
+		"UserSystemMessage": "UserSystemMessagesClass.php"
 	},
 	"Hooks": {
 		"BeforeCreateEchoEvent":"UserStatsHooks::onBeforeCreateEchoEvent",
