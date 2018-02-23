@@ -48,17 +48,17 @@ class SocialProfileHooks {
 		$updater->addExtensionTable( 'user_board', "$dir/UserBoard/user_board$dbExt.sql" );
 		$updater->addExtensionTable( 'user_fields_privacy', "$dir/UserProfile/user_fields_privacy$dbExt.sql" );
 		$updater->addExtensionTable( 'user_profile', "$dir/UserProfile/user_profile$dbExt.sql" );
-		$updater->addExtensionTable( 'user_stats', "$dir/UserStats/user_stats$dbExt.sql" );
+		$updater->addExtensionTable( 'user_stats', "$dir/UserStats/sql/user_stats$dbExt.sql" );
 		$updater->addExtensionTable( 'user_relationship', "$dir/UserRelationship/user_relationship$dbExt.sql" );
 		$updater->addExtensionTable( 'user_relationship_request', "$dir/UserRelationship/user_relationship$dbExt.sql" );
 		$updater->addExtensionTable( 'user_system_gift', "$dir/SystemGifts/systemgifts$dbExt.sql" );
 		$updater->addExtensionTable( 'system_gift', "$dir/SystemGifts/systemgifts$dbExt.sql" );
 		$updater->addExtensionTable( 'user_gift', "$dir/UserGifts/usergifts$dbExt.sql" );
 		$updater->addExtensionTable( 'gift', "$dir/UserGifts/usergifts$dbExt.sql" );
-		$updater->addExtensionTable( 'user_system_messages', "$dir/UserSystemMessages/user_system_messages$dbExt.sql" );
-		$updater->addExtensionTable( 'user_points_weekly', "$dir/UserStats/user_points_weekly$dbExt.sql" );
-		$updater->addExtensionTable( 'user_points_monthly', "$dir/UserStats/user_points_monthly$dbExt.sql" );
-		$updater->addExtensionTable( 'user_points_archive', "$dir/UserStats/user_points_archive$dbExt.sql" );
+		$updater->addExtensionTable( 'user_system_messages', "$dir/UserStats/sql/user_system_messages$dbExt.sql" );
+		$updater->addExtensionTable( 'user_points_weekly', "$dir/UserStats/sql/user_points_weekly$dbExt.sql" );
+		$updater->addExtensionTable( 'user_points_monthly', "$dir/UserStats/sql/user_points_monthly$dbExt.sql" );
+		$updater->addExtensionTable( 'user_points_archive', "$dir/UserStats/sql/user_points_archive$dbExt.sql" );
 	}
 
 	/**

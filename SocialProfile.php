@@ -43,7 +43,6 @@ $wgAutoloadClasses['RemoveAvatar'] = __DIR__ . '/UserProfile/SpecialRemoveAvatar
 $wgAutoloadClasses['UserProfile'] = __DIR__ . '/UserProfile/UserProfileClass.php';
 $wgAutoloadClasses['UserProfileHooks'] = __DIR__ . '/UserProfile/UserProfileHooks.php';
 $wgAutoloadClasses['UserProfilePage'] = __DIR__ . '/UserProfile/UserProfilePage.php';
-$wgAutoloadClasses['UserSystemMessage'] = __DIR__ . '/UserSystemMessages/UserSystemMessagesClass.php';
 $wgAutoloadClasses['wAvatar'] = __DIR__ . '/UserProfile/AvatarClass.php';
 $wgAutoloadClasses['AvatarParserFunction'] = __DIR__ . '/UserProfile/AvatarParserFunction.php';
 $wgAutoloadClasses['SPUserSecurity'] = __DIR__ . '/UserProfile/UserSecurityClass.php';
