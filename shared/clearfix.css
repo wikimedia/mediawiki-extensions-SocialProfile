@@ -1,7 +1,3 @@
-.cleared {
-	clear: both;
-}
-
 .clearfix:after {
 	content: ".";
 	display: block;
