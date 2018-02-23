@@ -1431,7 +1431,11 @@ class UserProfilePage extends Article {
 						break;
 					case 'user_message':
 						$item_html .= wfMessage( 'user-recent-activity-user-message' )->escaped() .
-							" <b><a href=\"" . UserBoard::getUserBoardURL( $user_title_2->getText() ) .
+							" <b><a href=\"" .
+								htmlspecialchars(
+									SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $user_title_2->getText() ] ),
+									ENT_QUOTES
+								) .
 								"\" rel=\"nofollow\">{$item['comment']}</a></b>  {$item_time}
 								<div class=\"item\">
 								\"{$item['namespace']}\"
@@ -1715,7 +1719,11 @@ class UserProfilePage extends Article {
 				<div class="action-right">';
 		if ( $user->getName() == $user_name ) {
 			if ( $friends ) {
-				$output .= '<a href="' . UserBoard::getBoardBlastURL() . '">' .
+				$output .= '<a href="' .
+					htmlspecialchars(
+						SpecialPage::getTitleFor( 'SendBoardBlast' )->getFullURL(),
+						ENT_QUOTES
+					) . '">' .
 					wfMessage( 'user-send-board-blast' )->escaped() . '</a>';
 			}
 			if ( $total > 10 ) {
@@ -1723,7 +1731,11 @@ class UserProfilePage extends Article {
 			}
 		}
 		if ( $total > 10 ) {
-			$output .= '<a href="' . UserBoard::getUserBoardURL( $user_name ) . '">' .
+			$output .= '<a href="' .
+				htmlspecialchars(
+					SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $user_name ] ),
+					ENT_QUOTES
+				) . '">' .
 				wfMessage( 'user-view-all' )->escaped() . '</a>';
 		}
 		$output .= '</div>

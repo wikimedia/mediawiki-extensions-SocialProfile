@@ -156,7 +156,15 @@ class SpecialViewUserBoard extends SpecialPage {
 		$end = $start + ( count( $ub_messages ) ) - 1;
 
 		if ( $currentUser->getName() != $user_name ) {
-			$board_to_board = '<a href="' . UserBoard::getUserBoardToBoardURL( $currentUser->getName(), $user_name ) . '">' .
+			$board_to_board = '<a href="' .
+				htmlspecialchars(
+					SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [
+						'user' => $message['user_name'],
+						'conv' => $message['user_name_from']
+					] ),
+					ENT_QUOTES
+				)
+				. '">' .
 				$this->msg( 'userboard_boardtoboard' )->plain() . '</a>';
 		}
 
@@ -296,12 +304,27 @@ class SpecialViewUserBoard extends SpecialPage {
 				$delete_link = '';
 
 				if ( $currentUser->getName() != $ub_message['user_name_from'] ) {
-					$board_to_board = '<a href="' . UserBoard::getUserBoardToBoardURL( $user_name, $ub_message['user_name_from'] ) . '">' .
+					$board_to_board = '<a href="' .
+						htmlspecialchars(
+							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [
+								'user' => $user_name,
+								'conv' => $ub_message['user_name_from']
+							] ),
+							ENT_QUOTES
+						) . '">' .
 						$this->msg( 'userboard_boardtoboard' )->plain() . '</a>';
-					$board_link = '<a href="' . UserBoard::getUserBoardURL( $ub_message['user_name_from'] ) . '">' .
+					$board_link = '<a href="' .
+						htmlspecialchars(
+							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $ub_message['user_name_from'] ] ),
+							ENT_QUOTES
+						) . '">' .
 						$this->msg( 'userboard_sendmessage', $ub_message['user_name_from'] )->parse() . '</a>';
 				} else {
-					$board_link = '<a href="' . UserBoard::getUserBoardURL( $ub_message['user_name_from'] ) . '">' .
+					$board_link = '<a href="' .
+						htmlspecialchars(
+							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( ['user' => $ub_message['user_name_from'] ] ),
+							ENT_QUOTES
+						) . '">' .
 						$this->msg( 'userboard_myboard' )->plain() . '</a>';
 				}
 

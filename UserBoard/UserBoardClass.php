@@ -400,9 +400,21 @@ class UserBoard {
 				$delete_link = '';
 
 				if ( $wgUser->getName() != $message['user_name_from'] ) {
-					$board_to_board = '<a href="' . UserBoard::getUserBoardToBoardURL( $message['user_name'], $message['user_name_from'] ) . '">' .
+					$board_to_board = '<a href="' .
+						htmlspecialchars(
+							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [
+								'user' => $message['user_name'],
+								'conv' => $message['user_name_from']
+							] ),
+							ENT_QUOTES
+						)
+						. '">' .
 						wfMessage( 'userboard_board-to-board' )->plain() . '</a>';
-					$board_link = '<a href="' . UserBoard::getUserBoardURL( $message['user_name_from'] ) . '">' .
+					$board_link = '<a href="' .
+						htmlspecialchars(
+							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $message['user_name_from'] ] ),
+							ENT_QUOTES
+						) . '">' .
 						wfMessage( 'userboard_sendmessage', $message['user_name_from'] )->parse() . '</a>';
 				}
 				if ( $wgUser->getName() == $message['user_name'] || $wgUser->isAllowed( 'userboard-delete' ) ) {
@@ -451,44 +463,6 @@ class UserBoard {
 		}
 
 		return $output;
-	}
-
-	/**
-	 * Get the escaped full URL to Special:SendBoardBlast.
-	 * This is just a silly wrapper function.
-	 *
-	 * @return string Escaped full URL to Special:SendBoardBlast
-	 */
-	static function getBoardBlastURL() {
-		$title = SpecialPage::getTitleFor( 'SendBoardBlast' );
-		return htmlspecialchars( $title->getFullURL() );
-	}
-
-	/**
-	 * Get the user board URL for $user_name.
-	 *
-	 * @param mixed $user_name Name of the user
-	 * whose user board URL we're going to get.
-	 * @return string Escaped full URL to the user board page
-	 */
-	static function getUserBoardURL( $user_name ) {
-		$title = SpecialPage::getTitleFor( 'UserBoard' );
-		$user_name = str_replace( '&', '%26', $user_name );
-		return htmlspecialchars( $title->getFullURL( 'user=' . $user_name ) );
-	}
-
-	/**
-	 * Get the board-to-board URL for the users $user_name_1 and $user_name_2.
-	 *
-	 * @param mixed $user_name_1 Name of the first user
-	 * @param mixed $user_name_2 Name of the second user
-	 * @return string Escaped full URL to the board-to-board conversation
-	 */
-	static function getUserBoardToBoardURL( $user_name_1, $user_name_2 ) {
-		$title = SpecialPage::getTitleFor( 'UserBoard' );
-		$user_name_1 = str_replace( '&', '%26', $user_name_1 );
-		$user_name_2 = str_replace( '&', '%26', $user_name_2 );
-		return htmlspecialchars( $title->getFullURL( 'user=' . $user_name_1 . '&conv=' . $user_name_2 ) );
 	}
 
 	/**
