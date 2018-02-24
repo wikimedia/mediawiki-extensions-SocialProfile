@@ -14,12 +14,12 @@
 		]
 	},
 	"ExtensionMessagesFiles": {
-		"UserActivityAlias": "UserActivity.alias.php"
+		"UserActivityAlias": "includes/UserActivity.alias.php"
 	},
 	"AutoloadClasses": {
-		"SiteActivityHook": "SiteActivityHook.php",
-		"UserActivity": "UserActivityClass.php",
-		"UserHome": "UserActivity.body.php"
+		"SiteActivityHook": "includes/SiteActivityHook.php",
+		"UserActivity": "includes/UserActivity.php",
+		"UserHome": "includes/specials/UserActivity.body.php"
 	},
 	"Hooks": {
 		"ParserFirstCallInit": "SiteActivityHook::onParserFirstCallInit"
@@ -29,12 +29,12 @@
 	},
 	"ResourceModules": {
 		"ext.socialprofile.useractivity.css": {
-			"styles": "UserActivity.css"
+			"styles": "css/UserActivity.css"
 		}
 	},
 	"ResourceFileModulePaths": {
-		"localBasePath": "",
-		"remoteExtPath": "SocialProfile/UserActivity"
+		"localBasePath": "resources",
+		"remoteExtPath": "SocialProfile/UserActivity/resources"
 	},
 	"manifest_version": 1
 }

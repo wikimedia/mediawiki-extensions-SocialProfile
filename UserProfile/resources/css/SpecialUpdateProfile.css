@@ -118,7 +118,7 @@
 	width: 130px;
 	height: 20px;
 	/* @embed */
-	background: #a3c2d5 url(../images/eye.png) 0 0 no-repeat;
+	background: #a3c2d5 url(../../../images/eye.png) 0 0 no-repeat;
 	border-radius: 4px;
 	opacity: 0.5;
 	overflow: hidden;
@@ -159,7 +159,7 @@ div.eye-container[fieldkey="up_location_country"] {
 
 .eye-container .menu .item {
 	/* @embed */
-	background: #a3c2d5 url(../images/eye-bw.png) 5px 1px no-repeat;
+	background: #a3c2d5 url(../../../images/eye-bw.png) 5px 1px no-repeat;
 	color: #fff;
 	height: 18px;
 	font-size: 12px;

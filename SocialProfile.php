@@ -30,25 +30,25 @@ $wgExtensionMessagesFiles['SocialProfileAlias'] = __DIR__ . '/SocialProfile.alia
 $wgMessagesDirs['SocialProfileUserProfile'] = __DIR__ . '/UserProfile/i18n';
 
 $wgExtensionMessagesFiles['SocialProfileNamespaces'] = __DIR__ . '/SocialProfile.namespaces.php';
-$wgExtensionMessagesFiles['AvatarMagic'] = __DIR__ . '/UserProfile/Avatar.i18n.magic.php';
+$wgExtensionMessagesFiles['AvatarMagic'] = __DIR__ . '/UserProfile/includes/avatar/Avatar.i18n.magic.php';
 
 // Classes to be autoloaded
-$wgAutoloadClasses['SpecialEditProfile'] = __DIR__ . '/UserProfile/SpecialEditProfile.php';
-$wgAutoloadClasses['SpecialPopulateUserProfiles'] = __DIR__ . '/UserProfile/SpecialPopulateExistingUsersProfiles.php';
-$wgAutoloadClasses['SpecialToggleUserPage'] = __DIR__ . '/UserProfile/SpecialToggleUserPageType.php';
-$wgAutoloadClasses['SpecialUpdateProfile'] = __DIR__ . '/UserProfile/SpecialUpdateProfile.php';
-$wgAutoloadClasses['SpecialUploadAvatar'] = __DIR__ . '/UserProfile/SpecialUploadAvatar.php';
-$wgAutoloadClasses['UploadAvatar'] = __DIR__ . '/UserProfile/UploadAvatar.php';
-$wgAutoloadClasses['RemoveAvatar'] = __DIR__ . '/UserProfile/SpecialRemoveAvatar.php';
-$wgAutoloadClasses['UserProfile'] = __DIR__ . '/UserProfile/UserProfileClass.php';
-$wgAutoloadClasses['UserProfileHooks'] = __DIR__ . '/UserProfile/UserProfileHooks.php';
-$wgAutoloadClasses['UserProfilePage'] = __DIR__ . '/UserProfile/UserProfilePage.php';
-$wgAutoloadClasses['wAvatar'] = __DIR__ . '/UserProfile/AvatarClass.php';
-$wgAutoloadClasses['AvatarParserFunction'] = __DIR__ . '/UserProfile/AvatarParserFunction.php';
-$wgAutoloadClasses['SPUserSecurity'] = __DIR__ . '/UserProfile/UserSecurityClass.php';
+$wgAutoloadClasses['SpecialEditProfile'] = __DIR__ . '/UserProfile/includes/specials/SpecialEditProfile.php';
+$wgAutoloadClasses['SpecialPopulateUserProfiles'] = __DIR__ . '/UserProfile/includes/specials/SpecialPopulateExistingUsersProfiles.php';
+$wgAutoloadClasses['SpecialToggleUserPage'] = __DIR__ . '/UserProfile/includes/specials/SpecialToggleUserPageType.php';
+$wgAutoloadClasses['SpecialUpdateProfile'] = __DIR__ . '/UserProfile/includes/specials/SpecialUpdateProfile.php';
+$wgAutoloadClasses['SpecialUploadAvatar'] = __DIR__ . '/UserProfile/includes/specials/SpecialUploadAvatar.php';
+$wgAutoloadClasses['UploadAvatar'] = __DIR__ . '/UserProfile/includes/avatar/UploadAvatar.php';
+$wgAutoloadClasses['RemoveAvatar'] = __DIR__ . '/UserProfile/includes/specials/SpecialRemoveAvatar.php';
+$wgAutoloadClasses['UserProfile'] = __DIR__ . '/UserProfile/includes/UserProfile.php';
+$wgAutoloadClasses['UserProfileHooks'] = __DIR__ . '/UserProfile/includes/UserProfileHooks.php';
+$wgAutoloadClasses['UserProfilePage'] = __DIR__ . '/UserProfile/includes/UserProfilePage.php';
+$wgAutoloadClasses['wAvatar'] = __DIR__ . '/UserProfile/includes/avatar/Avatar.php';
+$wgAutoloadClasses['AvatarParserFunction'] = __DIR__ . '/UserProfile/includes/avatar/AvatarParserFunction.php';
+$wgAutoloadClasses['SPUserSecurity'] = __DIR__ . '/UserProfile/includes/SPUserSecurity.php';
 
 // API modules
-$wgAutoloadClasses['ApiUserProfilePrivacy'] = __DIR__ . '/UserProfile/ApiUserProfilePrivacy.php';
+$wgAutoloadClasses['ApiUserProfilePrivacy'] = __DIR__ . '/UserProfile/includes/api/ApiUserProfilePrivacy.php';
 $wgAPIModules['smpuserprivacy'] = 'ApiUserProfilePrivacy';
 
 $wgDefaultUserOptions['echo-subscriptions-web-social-rel'] = true;

@@ -14,20 +14,20 @@
 		]
 	},
 	"ExtensionMessagesFiles": {
-		"UserGiftsAlias": "UserGifts.alias.php"
+		"UserGiftsAlias": "includes/UserGifts.alias.php"
 	},
 	"AutoloadClasses": {
-		"Gifts": "GiftsClass.php",
-		"UserGifts": "UserGiftsClass.php",
-		"UserGiftsHooks": "UserGiftsHooks.php",
-		"GiveGift": "SpecialGiveGift.php",
-		"ViewGifts": "SpecialViewGifts.php",
-		"ViewGift": "SpecialViewGift.php",
-		"GiftManager": "SpecialGiftManager.php",
-		"GiftManagerLogo": "SpecialGiftManagerLogo.php",
-		"RemoveMasterGift": "SpecialRemoveMasterGift.php",
-		"RemoveGift": "SpecialRemoveGift.php",
-		"EchoUserGiftPresentationModel": "EchoUserGiftPresentationModel.php"
+		"Gifts": "includes/Gifts.php",
+		"UserGifts": "includes/UserGifts.php",
+		"UserGiftsHooks": "includes/UserGiftsHooks.php",
+		"GiveGift": "includes/specials/SpecialGiveGift.php",
+		"ViewGifts": "includes/specials/SpecialViewGifts.php",
+		"ViewGift": "includes/specials/SpecialViewGift.php",
+		"GiftManager": "includes/specials/SpecialGiftManager.php",
+		"GiftManagerLogo": "includes/specials/SpecialGiftManagerLogo.php",
+		"RemoveMasterGift": "includes/specials/SpecialRemoveMasterGift.php",
+		"RemoveGift": "includes/specials/SpecialRemoveGift.php",
+		"EchoUserGiftPresentationModel": "includes/EchoUserGiftPresentationModel.php"
 	},
 	"Hooks": {
 		"BeforeCreateEchoEvent": "UserGiftsHooks::onBeforeCreateEchoEvent",
@@ -49,27 +49,27 @@
 	},
 	"ResourceModules": {
 		"ext.socialprofile.usergifts.css": {
-			"styles": "UserGifts.css"
+			"styles": "css/UserGifts.css"
 		},
 		"ext.socialprofile.special.giftmanager.css": {
-			"styles": "SpecialGiftManager.css"
+			"styles": "css/SpecialGiftManager.css"
 		},
 		"ext.socialprofile.special.givegift.css": {
-			"styles": "SpecialGiveGift.css"
+			"styles": "css/SpecialGiveGift.css"
 		},
 		"ext.socialprofile.special.viewgift.css": {
-			"styles": "SpecialViewGift.css"
+			"styles": "css/SpecialViewGift.css"
 		},
 		"ext.socialprofile.special.viewgifts.css": {
-			"styles": "SpecialViewGifts.css"
+			"styles": "css/SpecialViewGifts.css"
 		},
 		"ext.socialprofile.usergifts.js": {
-			"scripts": "UserGifts.js"
+			"scripts": "js/UserGifts.js"
 		}
 	},
 	"ResourceFileModulePaths": {
-		"localBasePath": "",
-		"remoteExtPath": "SocialProfile/UserGifts"
+		"localBasePath": "resources",
+		"remoteExtPath": "SocialProfile/UserGifts/resources"
 	},
 	"AvailableRights": [
 		"giftadmin"

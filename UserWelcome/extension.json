@@ -14,19 +14,19 @@
 		]
 	},
 	"AutoloadClasses": {
-		"UserWelcome": "UserWelcomeClass.php"
+		"UserWelcome": "includes/UserWelcomeClass.php"
 	},
 	"Hooks": {
 		"ParserFirstCallInit": "UserWelcome::onParserFirstCallInit"
 	},
 	"ResourceModules": {
 		"ext.socialprofile.userwelcome.css": {
-			"styles": "UserWelcome.css"
+			"styles": "css/UserWelcome.css"
 		}
 	},
 	"ResourceFileModulePaths": {
-		"localBasePath": "",
-		"remoteExtPath": "SocialProfile/UserWelcome"
+		"localBasePath": "resources",
+		"remoteExtPath": "SocialProfile/UserWelcome/resources"
 	},
 	"manifest_version": 1
 }

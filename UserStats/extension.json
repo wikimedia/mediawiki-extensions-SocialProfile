@@ -14,17 +14,17 @@
 		]
 	},
 	"AutoloadClasses": {
-		"EchoUserLevelAdvancePresentationModel": "EchoUserLevelAdvancePresentationModel.php",
-		"GenerateTopUsersReport": "GenerateTopUsersReport.php",
-		"TopFansByStat": "TopFansByStat.php",
-		"TopFansRecent": "TopFansRecent.php",
-		"TopUsersPoints": "TopUsers.php",
-		"UpdateEditCounts": "SpecialUpdateEditCounts.php",
-		"UserLevel": "UserLevel.php",
-		"UserStatsTrack": "UserStatsTrack.php",
-		"UserStats": "UserStats.php",
-		"UserStatsHooks": "UserStatsHooks.php",
-		"UserSystemMessage": "UserSystemMessagesClass.php"
+		"EchoUserLevelAdvancePresentationModel": "includes/EchoUserLevelAdvancePresentationModel.php",
+		"GenerateTopUsersReport": "includes/specials/GenerateTopUsersReport.php",
+		"TopFansByStat": "includes/specials/TopFansByStat.php",
+		"TopFansRecent": "includes/specials/TopFansRecent.php",
+		"TopUsersPoints": "includes/specials/TopUsers.php",
+		"UpdateEditCounts": "includes/specials/SpecialUpdateEditCounts.php",
+		"UserLevel": "includes/UserLevel.php",
+		"UserStatsTrack": "includes/UserStatsTrack.php",
+		"UserStats": "includes/UserStats.php",
+		"UserStatsHooks": "includes/UserStatsHooks.php",
+		"UserSystemMessage": "includes/UserSystemMessage.php"
 	},
 	"Hooks": {
 		"BeforeCreateEchoEvent":"UserStatsHooks::onBeforeCreateEchoEvent",
@@ -70,12 +70,12 @@
 	},
 	"ResourceModules": {
 		"ext.socialprofile.userstats.css": {
-			"styles": "TopList.css"
+			"styles": "css/TopList.css"
 		}
 	},
 	"ResourceFileModulePaths": {
-		"localBasePath": "",
-		"remoteExtPath": "SocialProfile/UserStats"
+		"localBasePath": "resources",
+		"remoteExtPath": "SocialProfile/UserStats/resources"
 	},
 	"manifest_version": 1
 }

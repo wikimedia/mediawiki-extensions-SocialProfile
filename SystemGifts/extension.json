@@ -14,20 +14,20 @@
 		]
 	},
 	"ExtensionMessagesFiles": {
-		"SystemGiftsAlias": "SystemGifts.alias.php"
+		"SystemGiftsAlias": "includes/SystemGifts.alias.php"
 	},
 	"AutoloadClasses": {
-		"SystemGifts": "SystemGiftsClass.php",
-		"UserSystemGifts": "UserSystemGiftsClass.php",
-		"UserSystemGiftsHooks": "UserSystemGiftsHooks.php",
-		"TopAwards": "TopAwards.php",
-		"ViewSystemGifts": "SpecialViewSystemGifts.php",
-		"ViewSystemGift": "SpecialViewSystemGift.php",
-		"SystemGiftManager": "SpecialSystemGiftManager.php",
-		"SystemGiftManagerLogo": "SpecialSystemGiftManagerLogo.php",
-		"RemoveMasterSystemGift": "SpecialRemoveMasterSystemGift.php",
-		"PopulateAwards": "SpecialPopulateAwards.php",
-		"EchoUserSystemGiftPresentationModel": "EchoUserSystemGiftPresentationModel.php"
+		"SystemGifts": "includes/SystemGifts.php",
+		"UserSystemGifts": "includes/UserSystemGifts.php",
+		"UserSystemGiftsHooks": "includes/UserSystemGiftsHooks.php",
+		"TopAwards": "includes/specials/TopAwards.php",
+		"ViewSystemGifts": "includes/specials/SpecialViewSystemGifts.php",
+		"ViewSystemGift": "includes/specials/SpecialViewSystemGift.php",
+		"SystemGiftManager": "includes/specials/SpecialSystemGiftManager.php",
+		"SystemGiftManagerLogo": "includes/specials/SpecialSystemGiftManagerLogo.php",
+		"RemoveMasterSystemGift": "includes/specials/SpecialRemoveMasterSystemGift.php",
+		"PopulateAwards": "includes/specials/SpecialPopulateAwards.php",
+		"EchoUserSystemGiftPresentationModel": "includes/EchoUserSystemGiftPresentationModel.php"
 	},
 	"Hooks": {
 		"BeforeCreateEchoEvent": "UserSystemGiftsHooks::onBeforeCreateEchoEvent",
@@ -60,30 +60,30 @@
 	},
 	"ResourceModules": {
 		"ext.socialprofile.systemgifts.css": {
-			"styles": "SystemGift.css"
+			"styles": "css/SystemGift.css"
 		},
 		"ext.socialprofile.special.removemastersystemgift.css": {
-			"styles": "SpecialRemoveMasterSystemGift.css"
+			"styles": "css/SpecialRemoveMasterSystemGift.css"
 		},
 		"ext.socialprofile.special.systemgiftmanager.css": {
-			"styles": "SpecialSystemGiftManager.css"
+			"styles": "css/SpecialSystemGiftManager.css"
 		},
 		"ext.socialprofile.special.systemgiftmanagerlogo.css": {
-			"styles": "SpecialSystemGiftManagerLogo.css"
+			"styles": "css/SpecialSystemGiftManagerLogo.css"
 		},
 		"ext.socialprofile.special.topawards.css": {
-			"styles": "SpecialTopAwards.css"
+			"styles": "css/SpecialTopAwards.css"
 		},
 		"ext.socialprofile.special.viewsystemgift.css": {
-			"styles": "SpecialViewSystemGift.css"
+			"styles": "css/SpecialViewSystemGift.css"
 		},
 		"ext.socialprofile.special.viewsystemgifts.css": {
-			"styles": "SpecialViewSystemGifts.css"
+			"styles": "css/SpecialViewSystemGifts.css"
 		}
 	},
 	"ResourceFileModulePaths": {
-		"localBasePath": "",
-		"remoteExtPath": "SocialProfile/SystemGifts"
+		"localBasePath": "resources",
+		"remoteExtPath": "SocialProfile/SystemGifts/resources"
 	},
 	"manifest_version": 1
 }

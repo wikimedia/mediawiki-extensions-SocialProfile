@@ -14,13 +14,13 @@
 		]
 	},
 	"AutoloadClasses": {
-		"EchoUserBoardMessagePresentationModel": "EchoUserBoardMessagePresentationModel.php",
-		"SpecialBoardBlast": "SpecialSendBoardBlast.php",
-		"SpecialViewUserBoard": "SpecialUserBoard.php",
-		"UserBoard": "UserBoardClass.php",
-		"UserBoardHooks": "UserBoardHooks.php",
-		"ApiDeleteUserBoardMessage": "ApiDeleteUserBoardMessage.php",
-		"ApiSendUserBoardMessage": "ApiSendUserBoardMessage.php"
+		"EchoUserBoardMessagePresentationModel": "includes/EchoUserBoardMessagePresentationModel.php",
+		"SpecialBoardBlast": "includes/specials/SpecialSendBoardBlast.php",
+		"SpecialViewUserBoard": "includes/specials/SpecialUserBoard.php",
+		"UserBoard": "includes/UserBoard.php",
+		"UserBoardHooks": "includes/UserBoardHooks.php",
+		"ApiDeleteUserBoardMessage": "includes/api/ApiDeleteUserBoardMessage.php",
+		"ApiSendUserBoardMessage": "includes/api/ApiSendUserBoardMessage.php"
 	},
 	"APIModules": {
 		"socialprofile-delete-message": "ApiDeleteUserBoardMessage",
@@ -41,7 +41,7 @@
 	},
 	"ResourceModules": {
 		"ext.socialprofile.userboard.js": {
-			"scripts": "UserBoard.js",
+			"scripts": "js/UserBoard.js",
 			"dependencies": [
 				"mediawiki.api"
 			],
@@ -50,13 +50,13 @@
 			]
 		},
 		"ext.socialprofile.userboard.css": {
-			"styles": "UserBoard.css"
+			"styles": "css/UserBoard.css"
 		},
 		"ext.socialprofile.userboard.boardblast.css": {
-			"styles": "BoardBlast.css"
+			"styles": "css/BoardBlast.css"
 		},
 		"ext.socialprofile.userboard.boardblast.js": {
-			"scripts": "BoardBlast.js",
+			"scripts": "js/BoardBlast.js",
 			"messages": [
 				"boardblast-js-sending",
 				"boardblast-js-error-missing-message",
@@ -65,8 +65,8 @@
 		}
 	},
 	"ResourceFileModulePaths": {
-		"localBasePath": "",
-		"remoteExtPath": "SocialProfile/UserBoard"
+		"localBasePath": "resources",
+		"remoteExtPath": "SocialProfile/UserBoard/resources"
 	},
 	"manifest_version": 1
 }

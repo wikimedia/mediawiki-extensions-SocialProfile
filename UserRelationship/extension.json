@@ -14,14 +14,14 @@
 		]
 	},
 	"AutoloadClasses": {
-		"EchoUserRelationshipPresentationModel": "EchoUserRelationshipPresentationModel.php",
-		"UserRelationship": "UserRelationshipClass.php",
-		"UserRelationshipHooks": "UserRelationshipHooks.php",
-		"SpecialAddRelationship": "SpecialAddRelationship.php",
-		"SpecialRemoveRelationship": "SpecialRemoveRelationship.php",
-		"SpecialViewRelationshipRequests": "SpecialViewRelationshipRequests.php",
-		"SpecialViewRelationships": "SpecialViewRelationships.php",
-		"ApiRelationshipResponse": "ApiRelationshipResponse.php"
+		"EchoUserRelationshipPresentationModel": "includes/EchoUserRelationshipPresentationModel.php",
+		"UserRelationship": "includes/UserRelationshipClass.php",
+		"UserRelationshipHooks": "includes/UserRelationshipHooks.php",
+		"SpecialAddRelationship": "includes/specials/SpecialAddRelationship.php",
+		"SpecialRemoveRelationship": "includes/specials/SpecialRemoveRelationship.php",
+		"SpecialViewRelationshipRequests": "includes/specials/SpecialViewRelationshipRequests.php",
+		"SpecialViewRelationships": "includes/specials/SpecialViewRelationships.php",
+		"ApiRelationshipResponse": "includes/api/ApiRelationshipResponse.php"
 	},
 	"APIModules": {
 		"socialprofile-request-response": "ApiRelationshipResponse"
@@ -42,18 +42,18 @@
 	},
 	"ResourceModules": {
 		"ext.socialprofile.userrelationship.css": {
-			"styles": "UserRelationship.css"
+			"styles": "css/UserRelationship.css"
 		},
 		"ext.socialprofile.userrelationship.js": {
-			"scripts": "UserRelationship.js",
+			"scripts": "js/UserRelationship.js",
 			"dependencies": [
 				"mediawiki.util"
 			]
 		}
 	},
 	"ResourceFileModulePaths": {
-		"localBasePath": "",
-		"remoteExtPath": "SocialProfile/UserRelationship"
+		"localBasePath": "resources",
+		"remoteExtPath": "SocialProfile/UserRelationship/resources"
 	},
 	"manifest_version": 1
 }

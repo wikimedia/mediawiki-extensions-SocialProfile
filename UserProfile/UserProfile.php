@@ -74,13 +74,13 @@ $wgGroupPermissions['staff']['populate-user-profiles'] = true;
 
 // ResourceLoader support for MediaWiki 1.17+
 $wgResourceModules['ext.socialprofile.userprofile.css'] = array(
-	'styles' => 'UserProfile.css',
+	'styles' => 'resources/css/UserProfile.css',
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserProfile'
 );
 
 $wgResourceModules['ext.socialprofile.userprofile.js'] = array(
-	'scripts' => 'UserProfilePage.js',
+	'scripts' => 'resources/js/UserProfilePage.js',
 	'messages' => array( 'user-board-confirm-delete' ),
 	'dependencies' => array( 'mediawiki.api', 'mediawiki.util' ),
 	'localBasePath' => __DIR__,
@@ -89,7 +89,7 @@ $wgResourceModules['ext.socialprofile.userprofile.js'] = array(
 
 // Modules for Special:EditProfile/Special:UpdateProfile
 $wgResourceModules['ext.userProfile.updateProfile'] = array(
-	'scripts' => 'UpdateProfile.js',
+	'scripts' => 'resources/js/UpdateProfile.js',
 	'dependencies' => array( 'mediawiki.api', 'mediawiki.util', 'jquery.ui.datepicker' ),
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserProfile'
@@ -97,25 +97,25 @@ $wgResourceModules['ext.userProfile.updateProfile'] = array(
 
 // CSS for user avatars in page diffs
 $wgResourceModules['ext.socialprofile.userprofile.diff'] = array(
-	'styles' => 'AvatarsInDiffs.css',
+	'styles' => 'resources/css/AvatarsInDiffs.css',
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserProfile'
 );
 
 $wgResourceModules['ext.socialprofile.userprofile.tabs.css'] = array(
-	'styles' => 'ProfileTabs.css',
+	'styles' => 'resources/css/ProfileTabs.css',
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserProfile'
 );
 
 $wgResourceModules['ext.socialprofile.special.uploadavatar.css'] = array(
-	'styles' => 'SpecialUploadAvatar.css',
+	'styles' => 'resources/css/SpecialUploadAvatar.css',
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserProfile'
 );
 
 $wgResourceModules['ext.socialprofile.special.updateprofile.css'] = array(
-	'styles' => 'SpecialUpdateProfile.css',
+	'styles' => 'resources/css/SpecialUpdateProfile.css',
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserProfile'
 );
