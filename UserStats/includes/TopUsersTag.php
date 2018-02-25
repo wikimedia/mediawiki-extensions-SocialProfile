@@ -52,7 +52,8 @@ function getTopUsersForTag( $input, $args, $parser ) {
 		$period = 'weekly';
 	}
 
-	$fans = UserStats::getTopFansListPeriod( $limit, $period );
+	$lookup = new TopUsersListLookup( $limit );
+	$fans = $lookup->getListByTimePeriod( $period );
 	$x = 1;
 	$topfans = '';
 
