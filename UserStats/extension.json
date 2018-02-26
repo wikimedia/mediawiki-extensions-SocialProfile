@@ -19,6 +19,7 @@
 		"TopFansByStat": "includes/specials/TopFansByStat.php",
 		"TopFansRecent": "includes/specials/TopFansRecent.php",
 		"TopUsersPoints": "includes/specials/TopUsers.php",
+		"TopUsersListLookup": "includes/TopUsersListLookup.php",
 		"UpdateEditCounts": "includes/specials/SpecialUpdateEditCounts.php",
 		"UserLevel": "includes/UserLevel.php",
 		"UserStatsTrack": "includes/UserStatsTrack.php",
