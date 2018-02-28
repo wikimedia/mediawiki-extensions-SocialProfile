@@ -3,7 +3,6 @@
 --
 
 CREATE TABLE /*_*/user_stats (
-  `stats_year_id` int(2) NOT NULL default '0',
   `stats_user_id` int(11) NOT NULL default '0' PRIMARY KEY,
   `stats_user_name` varchar(255) NOT NULL default '',
   `stats_user_image_count` int(11) NOT NULL default '0',

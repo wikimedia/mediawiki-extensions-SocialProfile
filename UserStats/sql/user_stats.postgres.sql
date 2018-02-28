@@ -2,7 +2,6 @@
 
 CREATE TABLE user_stats (
   stats_user_id                        INTEGER  NOT NULL  DEFAULT 0  PRIMARY KEY,
-  stats_year_id                        INTEGER  NOT NULL  DEFAULT 0,
   stats_user_name                      TEXT     NOT NULL  DEFAULT '',
   stats_user_image_count               INTEGER  NOT NULL  DEFAULT 0,
   stats_comment_count                  INTEGER  NOT NULL  DEFAULT 0,

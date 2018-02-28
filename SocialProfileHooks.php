@@ -59,6 +59,7 @@ class SocialProfileHooks {
 		$updater->addExtensionTable( 'user_points_weekly', "$dir/UserStats/sql/user_points_weekly$dbExt.sql" );
 		$updater->addExtensionTable( 'user_points_monthly', "$dir/UserStats/sql/user_points_monthly$dbExt.sql" );
 		$updater->addExtensionTable( 'user_points_archive', "$dir/UserStats/sql/user_points_archive$dbExt.sql" );
+		$updater->dropExtensionField( 'user_stats', 'stats_year_id', "$dir/UserStats/sql/patch-drop-column-stats_year_id.sql" );
 	}
 
 	/**
