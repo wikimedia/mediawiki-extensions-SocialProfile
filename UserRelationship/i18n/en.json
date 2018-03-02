@@ -4,7 +4,7 @@
 			"David Pean"
 		]
 	},
-	"userrelationship-desc": "Adds a feature that allows sending relationship requests",
+	"userrelationship-desc": "Allows sending friend and foe requests",
 	"viewrelationships": "View relationship",
 	"viewrelationshiprequests": "View relationship requests",
 	"ur-already-submitted": "Your request has been sent",
