@@ -68,7 +68,7 @@ class UserProfilePage extends Article {
 
 		$profile = new UserProfile( $this->user_name );
 		$this->profile_data = $profile->getProfile();
-		$this->profile_visible_fields = SPUserSecurity::getVisibleFields( $this->user_id, $user->getID() );
+		$this->profile_visible_fields = SPUserSecurity::getVisibleFields( $this->user_id, $user->getId() );
 	}
 
 	/**
@@ -990,7 +990,7 @@ class UserProfilePage extends Article {
 		$user_wiki = Title::makeTitle( NS_USER_WIKI, $user );
 
 		if ( $id != 0 ) {
-			$relationship = UserRelationship::getUserRelationshipByID( $id, $userContext->getID() );
+			$relationship = UserRelationship::getUserRelationshipByID( $id, $userContext->getId() );
 		}
 		$avatar = new wAvatar( $this->user_id, 'l' );
 
@@ -1542,7 +1542,7 @@ class UserProfilePage extends Article {
 				if ( $gift['status'] == 1 && $user_name == $user->getName() ) {
 					$g->clearUserGiftStatus( $gift['id'] );
 					$wgMemc->delete( $key );
-					$g->decNewGiftCount( $user->getID() );
+					$g->decNewGiftCount( $user->getId() );
 				}
 
 				$user = Title::makeTitle( NS_USER, $gift['user_name_from'] );
@@ -1639,7 +1639,7 @@ class UserProfilePage extends Article {
 				if ( $gift['status'] == 1 && $user_name == $user->getName() ) {
 					$sg->clearUserGiftStatus( $gift['id'] );
 					$wgMemc->delete( $sg_key );
-					$sg->decNewSystemGiftCount( $user->getID() );
+					$sg->decNewSystemGiftCount( $user->getId() );
 				}
 
 				$gift_image = '<img src="' . $wgUploadPath . '/awards/' .
@@ -1981,7 +1981,7 @@ class UserProfilePage extends Article {
 				}
 
 				// Show a message to anonymous users, prompting them to log in
-				if ( $user->getID() == 0 ) {
+				if ( $user->getId() == 0 ) {
 					$output .= '<div class="fanbox-pop-up-box-profile" id="fanboxPopUpBox' . $fanbox['fantag_id'] . '">
 						<table cellpadding="0" cellspacing="0" align="center">
 							<tr>

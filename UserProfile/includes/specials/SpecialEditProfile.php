@@ -73,7 +73,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 
 		$target = User::newFromName( $userFromRequest );
 
-		if ( !$target || $target->getID() == 0 ) {
+		if ( !$target || $target->getId() == 0 ) {
 			$out->addModules( 'mediawiki.userSuggest' );
 			$out->addHTML( $this->msg( 'nosuchusershort', htmlspecialchars( $userFromRequest ) )->escaped() );
 			$out->addHTML( $this->createUserInputForm() );
@@ -86,7 +86,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			$this->saveProfilePersonal( $target );
 			$this->saveProfileCustom( $target );
 
-			UserProfile::clearCache( $target->getID() );
+			UserProfile::clearCache( $target->getId() );
 
 			$log = new LogPage( 'profile' );
 			if ( !$wgUpdateProfileInRecentChanges ) {
@@ -167,7 +167,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 				'up_birthday', 'up_occupation', 'up_about', 'up_schools',
 				'up_places_lived', 'up_websites'
 			),
-			array( 'up_user_id' => $tar->getID() ),
+			array( 'up_user_id' => $tar->getId() ),
 			__METHOD__
 		);
 
@@ -196,7 +196,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		$s = $dbr->selectRow(
 			'user',
 			array( 'user_real_name', 'user_email', 'user_email_authenticated' ),
-			array( 'user_id' => $tar->getID() ),
+			array( 'user_id' => $tar->getId() ),
 			__METHOD__
 		);
 
@@ -359,7 +359,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 				'up_tv', 'up_music', 'up_books', 'up_video_games',
 				'up_magazines', 'up_snacks', 'up_drinks'
 			),
-			array( 'up_user_id' => $tar->getID() ),
+			array( 'up_user_id' => $tar->getId() ),
 			__METHOD__
 		);
 
@@ -446,7 +446,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 				'up_custom_1', 'up_custom_2', 'up_custom_3', 'up_custom_4',
 				'up_custom_5'
 			),
-			array( 'up_user_id' => $tar->getID() ),
+			array( 'up_user_id' => $tar->getId() ),
 			__METHOD__
 		);
 

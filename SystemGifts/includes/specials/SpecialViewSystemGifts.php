@@ -55,7 +55,7 @@ class ViewSystemGifts extends SpecialPage {
 		 * Redirect Non-logged in users to Login Page
 		 * It will automatically return them to the ViewSystemGifts page
 		 */
-		if ( $user->getID() == 0 && $user_name == '' ) {
+		if ( $user->getId() == 0 && $user_name == '' ) {
 			$out->setPageTitle( $this->msg( 'ga-error-title' )->plain() );
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
 			$out->redirect( htmlspecialchars( $login->getFullURL( 'returnto=Special:ViewSystemGifts' ) ) );
@@ -128,7 +128,7 @@ class ViewSystemGifts extends SpecialPage {
 				if ( $gift['status'] == 1 ) {
 					if ( $user_name == $user->getName() ) {
 						$rel->clearUserGiftStatus( $gift['id'] );
-						$rel->decNewSystemGiftCount( $user->getID() );
+						$rel->decNewSystemGiftCount( $user->getId() );
 					}
 					$output .= '<span class="ga-new">' .
 						$this->msg( 'ga-new' )->plain() . '</span>';

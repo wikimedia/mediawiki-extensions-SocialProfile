@@ -36,7 +36,7 @@ class UserWelcome {
 		global $wgUser, $wgLang;
 
 		// Get stats and user level
-		$stats = new UserStats( $wgUser->getID(), $wgUser->getName() );
+		$stats = new UserStats( $wgUser->getId(), $wgUser->getName() );
 		$stats_data = $stats->getUserStats();
 		$user_level = new UserLevel( $stats_data['points'] );
 
@@ -45,7 +45,7 @@ class UserWelcome {
 		$avatar_link = SpecialPage::getTitleFor( 'UploadAvatar' );
 
 		// Make an avatar
-		$avatar = new wAvatar( $wgUser->getID(), 'l' );
+		$avatar = new wAvatar( $wgUser->getId(), 'l' );
 
 		// Profile top images/points
 		$output = '<div class="mp-welcome-logged-in">
@@ -117,8 +117,8 @@ class UserWelcome {
 	function getRelationshipRequestLink() {
 		global $wgUser, $wgExtensionAssetsPath;
 
-		$friend_request_count = UserRelationship::getOpenRequestCount( $wgUser->getID(), 1 );
-		$foe_request_count = UserRelationship::getOpenRequestCount( $wgUser->getID(), 2 );
+		$friend_request_count = UserRelationship::getOpenRequestCount( $wgUser->getId(), 1 );
+		$foe_request_count = UserRelationship::getOpenRequestCount( $wgUser->getId(), 2 );
 		$relationship_request_link = SpecialPage::getTitleFor( 'ViewRelationshipRequests' );
 
 		$output = '';
@@ -145,7 +145,7 @@ class UserWelcome {
 	function getNewGiftLink() {
 		global $wgUser, $wgExtensionAssetsPath;
 
-		$gift_count = UserGifts::getNewGiftCount( $wgUser->getID() );
+		$gift_count = UserGifts::getNewGiftCount( $wgUser->getId() );
 		$gifts_title = SpecialPage::getTitleFor( 'ViewGifts' );
 		$output = '';
 
@@ -164,7 +164,7 @@ class UserWelcome {
 	function getNewSystemGiftLink() {
 		global $wgUser, $wgExtensionAssetsPath;
 
-		$gift_count = UserSystemGifts::getNewSystemGiftCount( $wgUser->getID() );
+		$gift_count = UserSystemGifts::getNewSystemGiftCount( $wgUser->getId() );
 		$gifts_title = SpecialPage::getTitleFor( 'ViewSystemGifts' );
 		$output = '';
 
@@ -183,7 +183,7 @@ class UserWelcome {
 	function getNewMessagesLink() {
 		global $wgUser, $wgExtensionAssetsPath;
 
-		$new_messages = UserBoard::getNewMessageCount( $wgUser->getID() );
+		$new_messages = UserBoard::getNewMessageCount( $wgUser->getId() );
 		$output = '';
 
 		if ( $new_messages > 0 ) {

@@ -306,16 +306,16 @@ class UserBoard {
 		if ( $user_id_2 ) {
 			$user_sql = "( (ub_user_id={$user_id} AND ub_user_id_from={$user_id_2}) OR
 					(ub_user_id={$user_id_2} AND ub_user_id_from={$user_id}) )";
-			if ( !( $user_id == $wgUser->getID() || $user_id_2 == $wgUser->getID() ) ) {
+			if ( !( $user_id == $wgUser->getId() || $user_id_2 == $wgUser->getId() ) ) {
 				$user_sql .= ' AND ub_type = 0 ';
 			}
 		} else {
 			$user_sql = "ub_user_id = {$user_id}";
-			if ( $user_id != $wgUser->getID() ) {
+			if ( $user_id != $wgUser->getId() ) {
 				$user_sql .= ' AND ub_type = 0 ';
 			}
 			if ( $wgUser->isLoggedIn() ) {
-				$user_sql .= " OR (ub_user_id={$user_id} AND ub_user_id_from={$wgUser->getID() }) ";
+				$user_sql .= " OR (ub_user_id={$user_id} AND ub_user_id_from={$wgUser->getId()}) ";
 			}
 		}
 
@@ -366,7 +366,7 @@ class UserBoard {
 		$user_sql = " ( (ub_user_id={$user_id} AND ub_user_id_from={$user_id_2}) OR
 					(ub_user_id={$user_id_2} AND ub_user_id_from={$user_id}) )";
 
-		if ( !( $user_id == $wgUser->getID() || $user_id_2 == $wgUser->getID() ) ) {
+		if ( !( $user_id == $wgUser->getId() || $user_id_2 == $wgUser->getId() ) ) {
 			$user_sql .= ' AND ub_type = 0 ';
 		}
 		$sql = "SELECT COUNT(*) AS the_count

@@ -33,13 +33,13 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$s = $dbw->selectRow(
 			'user_profile',
 			array( 'up_user_id' ),
-			array( 'up_user_id' => $user->getID() ),
+			array( 'up_user_id' => $user->getId() ),
 			__METHOD__
 		);
 		if ( $s === false ) {
 			$dbw->insert(
 				'user_profile',
-				array( 'up_user_id' => $user->getID() ),
+				array( 'up_user_id' => $user->getId() ),
 				__METHOD__
 			);
 		}
@@ -175,7 +175,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 					break;
 			}
 
-			UserProfile::clearCache( $user->getID() );
+			UserProfile::clearCache( $user->getId() );
 
 			$log = new LogPage( 'profile' );
 			if ( !$wgUpdateProfileInRecentChanges ) {
@@ -362,7 +362,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$dbw->update(
 			'user_profile',
 			/* SET */$basicProfileData,
-			/* WHERE */array( 'up_user_id' => $user->getID() ),
+			/* WHERE */array( 'up_user_id' => $user->getId() ),
 			__METHOD__
 		);
 
@@ -372,7 +372,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		Hooks::run( 'BasicProfileChanged', array( $user, $basicProfileData ) );
 		// end of the hook
 
-		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', $user->getID() ) );
+		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', $user->getId() ) );
 	}
 
 	/**
@@ -400,11 +400,11 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 				'up_custom_3' => $request->getVal( 'custom3' ),
 				'up_custom_4' => $request->getVal( 'custom4' )
 			),
-			/* WHERE */array( 'up_user_id' => $user->getID() ),
+			/* WHERE */array( 'up_user_id' => $user->getId() ),
 			__METHOD__
 		);
 
-		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', $user->getID() ) );
+		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', $user->getId() ) );
 	}
 
 	/**
@@ -440,7 +440,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$dbw->update(
 			'user_profile',
 			/* SET */$interestsData,
-			/* WHERE */array( 'up_user_id' => $user->getID() ),
+			/* WHERE */array( 'up_user_id' => $user->getId() ),
 			__METHOD__
 		);
 
@@ -448,7 +448,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		Hooks::run( 'PersonalInterestsChanged', array( $user, $interestsData ) );
 		// end of the hook
 
-		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', $user->getID() ) );
+		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', $user->getId() ) );
 	}
 
 	/**
@@ -463,7 +463,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 				'up_birthday', 'up_occupation', 'up_about', 'up_schools',
 				'up_places_lived', 'up_websites'
 			),
-			array( 'up_user_id' => $user->getID() ),
+			array( 'up_user_id' => $user->getId() ),
 			__METHOD__
 		);
 
@@ -494,7 +494,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$s = $dbr->selectRow(
 			'user',
 			array( 'user_real_name', 'user_email', 'user_email_authenticated' ),
-			array( 'user_id' => $user->getID() ),
+			array( 'user_id' => $user->getId() ),
 			__METHOD__
 		);
 
@@ -667,7 +667,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 				'up_tv', 'up_music', 'up_books', 'up_video_games',
 				'up_magazines', 'up_snacks', 'up_drinks'
 			),
-			array( 'up_user_id' => $user->getID() ),
+			array( 'up_user_id' => $user->getId() ),
 			__METHOD__
 		);
 
@@ -758,7 +758,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$s = $dbr->selectRow(
 			'user_profile',
 			array( 'up_birthday' ),
-			array( 'up_user_id' => $user->getID() ),
+			array( 'up_user_id' => $user->getId() ),
 			__METHOD__
 		);
 
@@ -830,7 +830,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 				'up_custom_1', 'up_custom_2', 'up_custom_3', 'up_custom_4',
 				'up_custom_5'
 			),
-			array( 'up_user_id' => $user->getID() ),
+			array( 'up_user_id' => $user->getId() ),
 			__METHOD__
 		);
 

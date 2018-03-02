@@ -3,7 +3,7 @@
  * wAvatar class - used to display avatars
  * Example usage:
  * @code
- *	$avatar = new wAvatar( $wgUser->getID(), 'l' );
+ *	$avatar = new wAvatar( $wgUser->getId(), 'l' );
  *	$wgOut->addHTML( $avatar->getAvatarURL() );
  * @endcode
  * This would display the current user's largest avatar on the page.

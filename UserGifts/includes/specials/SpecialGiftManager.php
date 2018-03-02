@@ -172,7 +172,7 @@ class GiftManager extends SpecialPage {
 			return false;
 		}
 
-		$createdCount = Gifts::getCustomCreatedGiftCount( $user->getID() );
+		$createdCount = Gifts::getCustomCreatedGiftCount( $user->getId() );
 		if (
 			$user->isAllowed( 'giftadmin' ) ||
 			in_array( 'giftadmin', $user->getGroups() ) ||
@@ -234,7 +234,7 @@ class GiftManager extends SpecialPage {
 		if ( $gift_id ) {
 			$gift = Gifts::getGift( $gift_id );
 			if (
-				$user->getID() != $gift['creator_user_id'] &&
+				$user->getId() != $gift['creator_user_id'] &&
 				(
 					!in_array( 'giftadmin', $user->getGroups() ) &&
 					!$user->isAllowed( 'delete' )

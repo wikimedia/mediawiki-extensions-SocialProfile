@@ -67,7 +67,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		 * Redirect Non-logged in users to Login Page
 		 * It will automatically return them to the UserBoard page
 		 */
-		if ( $currentUser->getID() == 0 && $user_name == '' ) {
+		if ( $currentUser->getId() == 0 && $user_name == '' ) {
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
 			$out->redirect( $login->getFullURL( 'returnto=Special:UserBoard' ) );
 			return false;
@@ -130,7 +130,7 @@ class SpecialViewUserBoard extends SpecialPage {
 			if ( !( $currentUser->getName() == $user_name ) ) {
 				$out->setPageTitle( $this->msg( 'userboard_owner', $user_name )->parse() );
 			} else {
-				$b->clearNewMessageCount( $currentUser->getID() );
+				$b->clearNewMessageCount( $currentUser->getId() );
 				$out->setPageTitle( $this->msg( 'userboard_yourboard' )->parse() );
 			}
 		} else {

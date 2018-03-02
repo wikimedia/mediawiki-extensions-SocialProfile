@@ -44,13 +44,13 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 		$s = $dbw->selectRow(
 			'user_profile',
 			array( 'up_user_id' ),
-			array( 'up_user_id' => $user->getID() ),
+			array( 'up_user_id' => $user->getId() ),
 			__METHOD__
 		);
 		if ( $s === false ) {
 			$dbw->insert(
 				'user_profile',
-				array( 'up_user_id' => $user->getID() ),
+				array( 'up_user_id' => $user->getId() ),
 				__METHOD__
 			);
 		}
@@ -66,11 +66,11 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 				'up_type' => $user_page_type
 			),
 			/* WHERE */array(
-				'up_user_id' => $user->getID()
+				'up_user_id' => $user->getId()
 			), __METHOD__
 		);
 
-		$key = $wgMemc->makeKey( 'user', 'profile', 'info', $user->getID() );
+		$key = $wgMemc->makeKey( 'user', 'profile', 'info', $user->getId() );
 		$wgMemc->delete( $key );
 
 		if ( $user_page_type == 1 && !$user->isBlocked() ) {

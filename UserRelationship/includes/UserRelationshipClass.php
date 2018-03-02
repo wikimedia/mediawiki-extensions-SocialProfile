@@ -363,7 +363,7 @@ class UserRelationship {
 	public function removeRelationshipByUserID( $user1, $user2 ) {
 		global $wgUser, $wgMemc;
 
-		if ( $user1 != $wgUser->getID() && $user2 != $wgUser->getID() ) {
+		if ( $user1 != $wgUser->getId() && $user2 != $wgUser->getId() ) {
 			return false; // only logged in user should be able to delete
 		}
 

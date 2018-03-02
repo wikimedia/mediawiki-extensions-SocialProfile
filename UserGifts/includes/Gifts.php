@@ -28,7 +28,7 @@ class Gifts {
 				'gift_name' => $gift_name,
 				'gift_description' => $gift_description,
 				'gift_createdate' => date( 'Y-m-d H:i:s' ),
-				'gift_creator_user_id' => $wgUser->getID(),
+				'gift_creator_user_id' => $wgUser->getId(),
 				'gift_creator_user_name' => $wgUser->getName(),
 				'gift_access' => $gift_access,
 			), __METHOD__
@@ -125,7 +125,7 @@ class Gifts {
 				'gift_id', 'gift_createdate', 'gift_name', 'gift_description',
 				'gift_given_count'
 			),
-			array( "gift_access = 0 OR gift_creator_user_id = {$wgUser->getID()}" ),
+			array( "gift_access = 0 OR gift_creator_user_id = {$wgUser->getId()}" ),
 			__METHOD__,
 			$params
 		);
@@ -157,7 +157,7 @@ class Gifts {
 		// and isn't allowed to delete pages, only show them the gifts they've
 		// created
 		if ( !$wgUser->isAllowed( 'giftadmin' ) && !$wgUser->isAllowed( 'delete' ) ) {
-			$where = array( 'gift_creator_user_id' => $wgUser->getID() );
+			$where = array( 'gift_creator_user_id' => $wgUser->getId() );
 		}
 
 		$dbr = wfGetDB( DB_REPLICA );

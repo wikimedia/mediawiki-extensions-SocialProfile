@@ -67,10 +67,10 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 		}
 		$hasRelationship = UserRelationship::getUserRelationshipByID(
 			$this->user_id_to,
-			$currentUser->getID()
+			$currentUser->getId()
 		);
 
-		if ( ( $currentUser->getID() == $this->user_id_to ) && ( $currentUser->getID() != 0 ) ) {
+		if ( ( $currentUser->getId() == $this->user_id_to ) && ( $currentUser->getId() != 0 ) ) {
 			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
 
 			$output = '<div class="relationship-error-message">' .
@@ -139,7 +139,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 
 			$out->addHTML( $output );
 
-		} elseif ( UserRelationship::userHasRequestByID( $this->user_id_to, $currentUser->getID() ) == true ) {
+		} elseif ( UserRelationship::userHasRequestByID( $this->user_id_to, $currentUser->getId() ) == true ) {
 
 			if ( $this->relationship_type == 1 ) {
 				$error = $this->msg( 'ur-add-error-message-pending-friend-request', $this->user_name_to )->parseAsBlock();
@@ -162,10 +162,10 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 			</div>";
 
 			$out->addHTML( $output );
-		} elseif ( UserRelationship::userHasRequestByID( $currentUser->getID(), $this->user_id_to ) == true ) {
+		} elseif ( UserRelationship::userHasRequestByID( $currentUser->getId(), $this->user_id_to ) == true ) {
 			$relationship_request = SpecialPage::getTitleFor( 'ViewRelationshipRequests' );
 			$out->redirect( $relationship_request->getFullURL() );
-		} elseif ( $currentUser->getID() == 0 ) {
+		} elseif ( $currentUser->getId() == 0 ) {
 			$login_link = SpecialPage::getTitleFor( 'Userlogin' );
 
 			if ( $this->relationship_type == 1 ) {

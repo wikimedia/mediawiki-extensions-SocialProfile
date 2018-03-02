@@ -33,7 +33,7 @@ function incEditCount( WikiPage $wikiPage, $revision, $baseRevId ) {
 		!is_array( $wgNamespacesForEditPoints ) ||
 		in_array( $wikiPage->getTitle()->getNamespace(), $wgNamespacesForEditPoints )
 	) {
-		$stats = new UserStatsTrack( $wgUser->getID(), $wgUser->getName() );
+		$stats = new UserStatsTrack( $wgUser->getId(), $wgUser->getName() );
 		$stats->incStatField( 'edit' );
 	}
 

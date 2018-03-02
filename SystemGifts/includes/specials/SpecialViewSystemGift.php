@@ -53,7 +53,7 @@ class ViewSystemGift extends UnlistedSpecialPage {
 				if ( $gift['user_name'] == $user->getName() ) {
 					$g = new UserSystemGifts( $gift['user_name'] );
 					$g->clearUserGiftStatus( $gift['id'] );
-					$g->decNewSystemGiftCount( $user->getID() );
+					$g->decNewSystemGiftCount( $user->getId() );
 				}
 			}
 			// DB stuff

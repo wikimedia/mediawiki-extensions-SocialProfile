@@ -64,7 +64,7 @@ class ViewGifts extends SpecialPage {
 		 * Redirect Non-logged in users to Login Page
 		 * It will automatically return them to the ViewGifts page
 		 */
-		if ( $currentUser->getID() == 0 && $user_name == '' ) {
+		if ( $currentUser->getId() == 0 && $user_name == '' ) {
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
 			$out->redirect( htmlspecialchars( $login->getFullURL( 'returnto=Special:ViewGifts' ) ) );
 			return false;
@@ -151,7 +151,7 @@ class ViewGifts extends SpecialPage {
 				if ( $gift['status'] == 1 ) {
 					if ( $user_name == $currentUser->getName() ) {
 						$rel->clearUserGiftStatus( $gift['id'] );
-						$rel->decNewGiftCount( $currentUser->getID() );
+						$rel->decNewGiftCount( $currentUser->getId() );
 					}
 					$output .= '<span class="g-new">' .
 						$this->msg( 'g-new' )->plain() .

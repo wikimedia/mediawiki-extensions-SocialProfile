@@ -47,7 +47,7 @@ class RemoveGift extends UnlistedSpecialPage {
 		}
 
 		// And also ensure that we're not trying to delete *someone else's* gift(s)...
-		if ( $rel->doesUserOwnGift( $user->getID(), $this->gift_id ) == false ) {
+		if ( $rel->doesUserOwnGift( $user->getId(), $this->gift_id ) == false ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
 			$out->addHTML( $this->msg( 'g-error-do-not-own' )->plain() );
 			return false;
@@ -60,7 +60,7 @@ class RemoveGift extends UnlistedSpecialPage {
 			$user_page_link = Title::makeTitle( NS_USER, $user->getName() );
 
 			if ( $rel->doesUserOwnGift( $user->getId(), $this->gift_id ) == true ) {
-				$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'gifts', $user->getID() ) );
+				$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'gifts', $user->getId() ) );
 				$rel->deleteGift( $this->gift_id );
 			}
 

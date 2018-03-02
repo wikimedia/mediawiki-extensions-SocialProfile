@@ -168,7 +168,7 @@ class SpecialViewRelationships extends SpecialPage {
 			foreach ( $relationships as $relationship ) {
 				$indivRelationship = UserRelationship::getUserRelationshipByID(
 					$relationship['user_id'],
-					$user->getID()
+					$user->getId()
 				);
 
 				// Safe titles

@@ -246,7 +246,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 		global $wgAvatarKey, $wgUploadDirectory, $wgUploadPath;
 		$files = glob(
 			$wgUploadDirectory . '/avatars/' . $wgAvatarKey . '_' .
-			$this->getUser()->getID() . '_' . $size . '*'
+			$this->getUser()->getId() . '_' . $size . '*'
 		);
 		if ( isset( $files[0] ) && $files[0] ) {
 			return "<img src=\"{$wgUploadPath}/avatars/" .

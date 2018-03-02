@@ -88,7 +88,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 	function displayForm() {
 		$user = $this->getUser();
 
-		$stats = new UserStats( $user->getID(), $user->getName() );
+		$stats = new UserStats( $user->getId(), $user->getName() );
 		$stats_data = $stats->getUserStats();
 		$friendCount = $stats_data['friend_count'];
 		$foeCount = $stats_data['foe_count'];

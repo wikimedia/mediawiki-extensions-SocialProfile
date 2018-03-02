@@ -71,7 +71,7 @@ class GiveGift extends SpecialPage {
 		$this->user_id_to = User::idFromName( $this->user_name_to );
 		$giftId = $request->getInt( 'gift_id' );
 
-		if ( $user->getID() === $this->user_id_to ) {
+		if ( $user->getId() === $this->user_id_to ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
 			$out->addHTML( $this->msg( 'g-error-message-to-yourself' )->plain() );
 		} elseif ( $user->isBlocked() ) {
@@ -80,7 +80,7 @@ class GiveGift extends SpecialPage {
 		} elseif ( $this->user_id_to == 0 ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
 			$out->addHTML( $this->msg( 'g-error-message-no-user' )->plain() );
-		} elseif ( $user->getID() == 0 ) {
+		} elseif ( $user->getId() == 0 ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
 			$out->addHTML( $this->msg( 'g-error-message-login' )->plain() );
 		} else {
@@ -216,7 +216,7 @@ class GiveGift extends SpecialPage {
 			return false;
 		}
 
-		if ( $gift['access'] == 1 && $this->getUser()->getID() != $gift['creator_user_id'] ) {
+		if ( $gift['access'] == 1 && $this->getUser()->getId() != $gift['creator_user_id'] ) {
 			return $this->displayFormAll();
 		}
 

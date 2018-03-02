@@ -60,7 +60,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 		$this->user_id_to = User::idFromName( $this->user_name_to );
 		$this->relationship_type = UserRelationship::getUserRelationshipByID(
 			$this->user_id_to,
-			$user->getID()
+			$user->getId()
 		);
 
 		if ( $this->relationship_type == 1 ) {
@@ -76,7 +76,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 		}
 
 		$output = '';
-		if ( $user->getID() == $this->user_id_to ) {
+		if ( $user->getId() == $this->user_id_to ) {
 			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
 
 			$output .= '<div class="relationship-error-message">' .
@@ -104,7 +104,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			$output .= '</div>';
 
 			$out->addHTML( $output );
-		} elseif ( UserRelationship::userHasRequestByID( $this->user_id_to, $user->getID() ) == true ) {
+		} elseif ( UserRelationship::userHasRequestByID( $this->user_id_to, $user->getId() ) == true ) {
 			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
 
 			$output = '<div class="relationship-error-message">' .
@@ -118,7 +118,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			$output .= '</div>';
 
 			$out->addHTML( $output );
-		} elseif ( $user->getID() == 0 ) {
+		} elseif ( $user->getId() == 0 ) {
 			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
 			$output = '<div class="relationship-error-message">' .
 				$error .
@@ -137,7 +137,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 				$_SESSION['alreadysubmitted'] = true;
 				$rel->removeRelationshipByUserID(
 					$this->user_id_to,
-					$user->getID()
+					$user->getId()
 				);
 				$rel->sendRelationshipRemoveEmail(
 					$this->user_id_to,
