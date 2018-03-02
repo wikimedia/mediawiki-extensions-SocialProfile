@@ -14,7 +14,7 @@
 		]
 	},
 	"AutoloadClasses": {
-		"UserWelcome": "includes/UserWelcomeClass.php"
+		"UserWelcome": "includes/UserWelcome.php"
 	},
 	"Hooks": {
 		"ParserFirstCallInit": "UserWelcome::onParserFirstCallInit"
