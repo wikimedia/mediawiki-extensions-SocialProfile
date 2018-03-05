@@ -792,33 +792,4 @@ class UserRelationship {
 
 		return $rel;
 	}
-
-	/**
-	 * Get the amount of friends and foes a user has from the
-	 * user_relationship_stats database table.
-	 *
-	 * @param string $userName Name of the user whose stats we're looking up
-	 * @return array Array containing the amount of friends and foes
-	 */
-	static function getRelationshipCountByUsername( $userName ) {
-		$dbr = wfGetDB( DB_REPLICA );
-		$userId = User::idFromName( $userName );
-		$res = $dbr->select(
-			'user_relationship_stats',
-			array( 'rs_friend_count', 'rs_foe_count' ),
-			array( 'rs_user_id' => $userId ),
-			__METHOD__,
-			array( 'LIMIT' => 1, 'OFFSET' => 0 )
-		);
-		$row = $dbr->fetchObject( $res );
-		$friendCount = 0;
-		$foeCount = 0;
-		if ( $row ) {
-			$friendCount = $row->rs_friend_count;
-			$foeCount = $row->rs_foe_count;
-		}
-		$stats['friend_count'] = $friendCount;
-		$stats['foe_count'] = $foeCount;
-		return $stats;
-	}
 }
