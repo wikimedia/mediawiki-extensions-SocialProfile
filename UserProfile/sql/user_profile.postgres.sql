@@ -31,6 +31,5 @@ CREATE TABLE user_profile (
   up_custom_3          TEXT,
   up_custom_4          TEXT,
   up_custom_5          TEXT,
-  up_last_seen         TIMESTAMPTZ  NOT NULL  DEFAULT now(),
   up_type              INTEGER      NOT NULL  DEFAULT 1
 );
