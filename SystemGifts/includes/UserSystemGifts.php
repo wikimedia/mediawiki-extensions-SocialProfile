@@ -145,16 +145,6 @@ class UserSystemGifts {
 		return false;
 	}
 
-	public function clearAllUserSystemGiftStatus() {
-		$dbw = wfGetDB( DB_MASTER );
-		$dbw->update( 'user_system_gift',
-		/* SET */array( 'sg_status' => 0 ),
-		/* WHERE */array( 'sg_user_id' => $this->user_id ),
-			__METHOD__
-		);
-		$this->clearNewSystemGiftCountCache( $this->user_id );
-	}
-
 	static function clearUserGiftStatus( $id ) {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update( 'user_system_gift',
@@ -268,16 +258,6 @@ class UserSystemGifts {
 		global $wgMemc;
 		$key = $wgMemc->makeKey( 'system_gifts', 'new_count', $user_id );
 		$wgMemc->decr( $key );
-	}
-
-	/**
-	 * Clear the new system gift counter for the user with ID = $user_id.
-	 * This is done by setting the value of the memcached key to 0.
-	 */
-	public function clearNewSystemGiftCountCache() {
-		global $wgMemc;
-		$key = $wgMemc->makeKey( 'system_gifts', 'new_count', $user_id );
-		$wgMemc->set( $key, 0 );
 	}
 
 	/**
