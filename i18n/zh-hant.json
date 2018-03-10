@@ -1,8 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Kly"
 		]
 	},
-	"socialprofile-desc": "用於MediaWiki的社交工具設定"
+	"socialprofile-desc": "用於 MediaWiki 的社交工具設定",
+	"socialprofile-uploads-disabled": "頭像更新功能已停用",
+	"apihelp-smpuserprivacy-description": "用於設定個人檔案欄位可見度（「privacy」）的 API 模組",
+	"apihelp-smpuserprivacy-summary": "用於設定個人檔案欄位可見度（「privacy」）的 API 模組",
+	"apihelp-smpuserprivacy-param-method": "操作（「get」或是「set」）",
+	"apihelp-smpuserprivacy-param-field_key": "目標欄位鍵值，例如 up_movies 用於「Movies」欄位",
+	"apihelp-smpuserprivacy-param-privacy": "新私有值（為以下其中之一：public、hidden、friends、foaf）",
+	"apihelp-smpuserprivacy-param-tuid": "目標使用者（ID）"
 }
