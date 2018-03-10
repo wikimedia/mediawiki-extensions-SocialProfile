@@ -120,13 +120,10 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 	 * @return string HTML
 	 */
 	function displayForm() {
-		global $wgUploadPath;
-
 		$gift = SystemGifts::getGift( $this->gift_id );
 
-		$giftImage = '<img src="' . $wgUploadPath . '/awards/' .
-			SystemGifts::getGiftImage( $this->gift_id, 'l' ) .
-			'" border="0" alt="gift" />';
+		$systemGiftIcon = new SystemGiftIcon( $this->gift_id, 'l' );
+		$icon = $systemGiftIcon->getIconHTML();
 
 		$this->getOutput()->setPageTitle( $this->msg( 'ga-remove-title', $gift['gift_name'] )->plain() );
 
@@ -139,7 +136,7 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 				$this->msg( 'ga-delete-message', $gift['gift_name'] ) .
 			'</div>
 			<div class="ga-container">' .
-				$giftImage .
+				$icon .
 				'<div class="ga-name">' . $gift['gift_name'] . '</div>
 			</div>
 			<div class="visualClear"></div>

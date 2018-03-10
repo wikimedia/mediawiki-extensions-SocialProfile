@@ -17,6 +17,7 @@
 		"SystemGiftsAlias": "includes/SystemGifts.alias.php"
 	},
 	"AutoloadClasses": {
+		"SystemGiftIcon": "includes/SystemGiftIcon.php",
 		"SystemGifts": "includes/SystemGifts.php",
 		"UserSystemGifts": "includes/UserSystemGifts.php",
 		"UserSystemGiftsHooks": "includes/UserSystemGiftsHooks.php",

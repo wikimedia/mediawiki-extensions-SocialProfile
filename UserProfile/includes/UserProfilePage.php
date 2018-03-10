@@ -1406,14 +1406,14 @@ class UserProfilePage extends Article {
 								</div>";
 						break;
 					case 'system_gift':
-						$gift_image = "<img src=\"{$wgUploadPath}/awards/" .
-							SystemGifts::getGiftImage( $item['namespace'], 'm' ) .
-							'" border="0" alt="" />';
+						$systemGiftIcon = new SystemGiftIcon( $item['namespace'], 'm' );
+						$icon = $systemGiftIcon->getIconHTML();
+
 						$viewSystemGift = SpecialPage::getTitleFor( 'ViewSystemGift' );
 						$item_html .= wfMessage( 'user-recent-system-gift' )->escaped() . " {$item_time}
 								<div class=\"user-home-item-gift\">
 									<a href=\"" . htmlspecialchars( $viewSystemGift->getFullURL( "gift_id={$item['id']}" ) ) . "\" rel=\"nofollow\">
-										{$gift_image}
+										{$icon}
 										{$item['pagetitle']}
 									</a>
 								</div>";
@@ -1570,7 +1570,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getAwards( $user_name ) {
-		global $wgMemc, $wgUserProfileDisplay, $wgUploadPath;
+		global $wgMemc, $wgUserProfileDisplay;
 
 		$context = $this->getContext();
 		$user = $context->getUser();
@@ -1642,9 +1642,9 @@ class UserProfilePage extends Article {
 					$sg->decNewSystemGiftCount( $user->getId() );
 				}
 
-				$gift_image = '<img src="' . $wgUploadPath . '/awards/' .
-					SystemGifts::getGiftImage( $gift['gift_id'], 'ml' ) .
-					'" border="0" alt="" />';
+				$systemGiftIcon = new SystemGiftIcon( $gift['gift_id'], 'ml' );
+				$icon = $systemGiftIcon->getIconHTML();
+
 				$gift_link = $user = SpecialPage::getTitleFor( 'ViewSystemGift' );
 
 				$class = '';
@@ -1653,7 +1653,7 @@ class UserProfilePage extends Article {
 				}
 				$output .= '<a href="' . htmlspecialchars( $gift_link->getFullURL( 'gift_id=' . $gift['id'] ) ) .
 					'" ' . $class . " rel=\"nofollow\">
-					{$gift_image}
+					{$icon}
 				</a>";
 
 				if ( $x == count( $system_gifts ) || $x != 1 && $x % $per_row == 0 ) {

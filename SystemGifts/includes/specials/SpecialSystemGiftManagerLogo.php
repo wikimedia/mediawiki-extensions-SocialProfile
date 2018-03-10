@@ -640,8 +640,9 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	";
 		}
 
-		global $wgUploadPath;
-		$gift_image = SystemGifts::getGiftImage( $this->gift_id, 'l' );
+		$systemGiftIcon = new SystemGiftIcon( $this->gift_id, 'l' );
+		$icon = $systemGiftIcon->getIconHTML();
+
 		if ( $gift_image != '' ) {
 			$output = '<table>
 				<tr>
@@ -650,10 +651,9 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 					'</td>
 				</tr>
 				<tr>
-					<td>
-						<img src="' . $wgUploadPath . '/awards/' . $gift_image .
-							'" alt="' . $this->msg( 'ga-gift' )->plain() . '" />
-					</td>
+					<td>' .
+						$icon .
+					'</td>
 				</tr>
 			</table>
 		<br />';

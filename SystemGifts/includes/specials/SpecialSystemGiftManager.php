@@ -130,8 +130,6 @@ class SystemGiftManager extends SpecialPage {
 	}
 
 	function displayForm( $gift_id ) {
-		global $wgUploadPath;
-
 		$form = '<div><b><a href="' . htmlspecialchars( $this->getPageTitle()->getFullURL() ) .
 			'">' . $this->msg( 'ga-viewlist' )->plain() . '</a></b></div>';
 
@@ -174,13 +172,13 @@ class SystemGiftManager extends SpecialPage {
 
 		if ( $gift_id ) {
 			$sgml = SpecialPage::getTitleFor( 'SystemGiftManagerLogo' );
-			$gift_image = '<img src="' . $wgUploadPath . '/awards/' .
-				SystemGifts::getGiftImage( $gift_id, 'l' ) .
-				'" alt="gift" />';
+			$systemGiftIcon = new SystemGiftIcon( $gift_id, 'l' );
+			$icon = $systemGiftIcon->getIconHTML();
+
 			$form .= '<tr>
 			<td class="view-form" valign="top">' . $this->msg( 'ga-giftimage' )->plain() . '</td>
 			<td class="view-container">' .
-				$gift_image .
+				$icon .
 				'<a href="' . htmlspecialchars( $sgml->getFullURL( 'gift_id=' . $gift_id ) ) . '">' .
 					$this->msg( 'ga-img' )->plain() . '</a>
 				</td>
