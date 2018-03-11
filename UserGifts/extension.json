@@ -19,6 +19,7 @@
 	"AutoloadClasses": {
 		"Gifts": "includes/Gifts.php",
 		"UserGiftIcon": "includes/UserGiftIcon.php",
+		"UserGiftListLookup": "includes/UserGiftListLookup.php",
 		"UserGifts": "includes/UserGifts.php",
 		"UserGiftsHooks": "includes/UserGiftsHooks.php",
 		"GiveGift": "includes/specials/SpecialGiveGift.php",

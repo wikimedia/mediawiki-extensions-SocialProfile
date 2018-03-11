@@ -201,7 +201,9 @@ class GiftManager extends SpecialPage {
 		 * @see https://www.mediawiki.org/w/index.php?oldid=988111#Gift_administrator_displays_10_gifts_only
 		 */
 		$per_page = 1000;
-		$gifts = Gifts::getManagedGiftList( $per_page, $page );
+		$listLookup = new UserGiftListLookup( $this->getContext(), $per_page, $page );
+		$gifts = $listLookup->getManagedGiftList();
+
 		if ( $gifts ) {
 			foreach ( $gifts as $gift ) {
 				$deleteLink = '';

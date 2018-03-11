@@ -320,9 +320,7 @@ class GiveGift extends SpecialPage {
 		global $wgGiveGiftPerRow;
 
 		$linkRenderer = $this->getLinkRenderer();
-
 		$out = $this->getOutput();
-
 		$user = Title::makeTitle( NS_USER, $this->user_name_to );
 
 		$page = $this->getRequest()->getInt( 'page' );
@@ -337,7 +335,8 @@ class GiveGift extends SpecialPage {
 		}
 
 		$total = Gifts::getGiftCount();
-		$gifts = Gifts::getGiftList( $per_page, $page, 'gift_name' );
+		$listLookup = new UserGiftListLookup( $this->getContext(), $per_page, $page );
+		$gifts = $listLookup->getGiftList( 'gift_name' );
 		$output = '';
 
 		if ( $gifts ) {
