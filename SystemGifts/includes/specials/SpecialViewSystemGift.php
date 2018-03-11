@@ -21,8 +21,6 @@ class ViewSystemGift extends UnlistedSpecialPage {
 	 * @param string|null $par
 	 */
 	public function execute( $par ) {
-		global $wgUploadPath;
-
 		$out = $this->getOutput();
 		$user = $this->getUser();
 
@@ -87,12 +85,11 @@ class ViewSystemGift extends UnlistedSpecialPage {
 			$message = $out->parse( trim( $gift['description'] ), false );
 			$output .= '<div class="ga-description-container">';
 
-			$giftImage = "<img src=\"{$wgUploadPath}/awards/" .
-				SystemGifts::getGiftImage( $gift['gift_id'], 'l' ) .
-				'" border="0" alt=""/>';
+			$systemGiftIcon = new SystemGiftIcon( $gift['gift_id'], 'l' );
+			$icon = $systemGiftIcon->getIconHTML();
 
 			$output .= "<div class=\"ga-description\">
-					{$giftImage}
+					{$icon}
 					<div class=\"ga-name\">{$gift['name']}</div>
 					<div class=\"ga-timestamp\">({$gift['timestamp']})</div>
 					<div class=\"ga-description-message\">\"{$message}\"</div>";

@@ -454,9 +454,8 @@ class UserActivity {
 			$user_title = Title::makeTitle( NS_USER, $row->ug_user_name_to );
 			$user_title_from = Title::makeTitle( NS_USER, $row->ug_user_name_from );
 
-			$gift_image = '<img src="' . $wgUploadPath . '/awards/' .
-				Gifts::getGiftImage( $row->gift_id, 'm' ) .
-				'" border="0" alt="" />';
+			$systemGiftIcon = new SystemGiftIcon( $row->gift_id, 'm' );
+			$icon = $systemGiftIcon->getIconHTML();
 			$view_gift_link = SpecialPage::getTitleFor( 'ViewGift' );
 
 			$html = wfMessage( 'useractivity-gift',
@@ -465,7 +464,7 @@ class UserActivity {
 			)->text() .
 			"<div class=\"item\">
 				<a href=\"" . htmlspecialchars( $view_gift_link->getFullURL( 'gift_id=' . $row->ug_id ) ) . "\" rel=\"nofollow\">
-					{$gift_image}
+					{$icon}
 					{$row->gift_name}
 				</a>
 			</div>";

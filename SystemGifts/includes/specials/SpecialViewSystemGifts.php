@@ -30,8 +30,6 @@ class ViewSystemGifts extends SpecialPage {
 	 * @param string|null $par
 	 */
 	public function execute( $par ) {
-		global $wgUploadPath;
-
 		$linkRenderer = $this->getLinkRenderer();
 
 		$out = $this->getOutput();
@@ -114,13 +112,13 @@ class ViewSystemGifts extends SpecialPage {
 
 		if ( $gifts ) {
 			$x = 1;
+			$systemGiftIcon = new SystemGiftIcon( $gift['gift_id'], 'ml' );
+
 			foreach ( $gifts as $gift ) {
-				$gift_image = "<img src=\"{$wgUploadPath}/awards/" .
-					SystemGifts::getGiftImage( $gift['gift_id'], 'ml' ) .
-					'" border="0" alt="" />';
+				$icon = $systemGiftIcon->getIconHTML();
 
 				$output .= "<div class=\"ga-item\">
-					{$gift_image}
+					{$icon}
 					<a href=\"" .
 						htmlspecialchars( $view_system_gift_link->getFullURL( 'gift_id=' . $gift['id'] ) ) .
 						"\">{$gift['gift_name']}</a>";

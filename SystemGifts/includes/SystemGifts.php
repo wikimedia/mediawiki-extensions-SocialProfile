@@ -232,27 +232,6 @@ class SystemGifts {
 	}
 
 	/**
-	 * Gets the associated image for a system gift.
-	 *
-	 * @param int $id System gift ID number
-	 * @param string $size Image size (s, m, ml or l)
-	 * @return string gift Image filename (following the format
-	 * sg_ID_SIZE.ext; for example, sg_1_l.jpg)
-	 */
-	static function getGiftImage( $id, $size ) {
-		global $wgUploadDirectory;
-		$files = glob( $wgUploadDirectory . '/awards/sg_' . $id . '_' . $size . '*' );
-
-		if ( !empty( $files[0] ) ) {
-			$img = basename( $files[0] );
-		} else {
-			$img = 'default_' . $size . '.gif';
-		}
-
-		return $img . '?r=' . rand();
-	}
-
-	/**
 	 * Get the list of all existing system gifts (awards).
 	 *
 	 * @param int $limit LIMIT for the SQL query, 0 by default
