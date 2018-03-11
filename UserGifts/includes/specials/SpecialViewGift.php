@@ -88,15 +88,14 @@ class ViewGift extends UnlistedSpecialPage {
 			$removeGiftLink = SpecialPage::getTitleFor( 'RemoveGift' );
 			$giveGiftLink = SpecialPage::getTitleFor( 'GiveGift' );
 
-			$giftImage = '<img src="' . $wgUploadPath . '/awards/' .
-				Gifts::getGiftImage( $gift['gift_id'], 'l' ) .
-				'" border="0" alt="" />';
+			$userGiftIcon = new UserGiftIcon( $gift['gift_id'], 'l' );
+			$icon = $userGiftIcon->getIconHTML();
 
 			$message = $out->parse( trim( $gift['message'] ), false );
 
 			$output .= '<div class="g-description-container">';
 			$output .= '<div class="g-description">' .
-					$giftImage .
+					$icon .
 					'<div class="g-name">' . $gift['name'] . '</div>
 					<div class="g-timestamp">(' . $gift['timestamp'] . ')</div>
 					<div class="g-from">' . $this->msg(

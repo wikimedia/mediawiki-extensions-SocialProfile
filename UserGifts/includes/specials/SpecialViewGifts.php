@@ -40,10 +40,7 @@ class ViewGifts extends SpecialPage {
 	 * @param string|null $par
 	 */
 	public function execute( $par ) {
-		global $wgUploadPath;
-
 		$linkRenderer = $this->getLinkRenderer();
-
 		$out = $this->getOutput();
 		$request = $this->getRequest();
 		$currentUser = $this->getUser();
@@ -136,13 +133,12 @@ class ViewGifts extends SpecialPage {
 				}
 
 				$user_from = Title::makeTitle( NS_USER, $gift['user_name_from'] );
-				$gift_image = "<img src=\"{$wgUploadPath}/awards/" .
-					Gifts::getGiftImage( $gift['gift_id'], 'l' ) .
-					'" border="0" alt="" />';
+				$userGiftIcon = new UserGiftIcon( $gift['gift_id'], 'l' );
+				$icon = $userGiftIcon->getIconHTML();
 
 				$output .= '<div class="g-item">
 					<a href="' . htmlspecialchars( $viewGiftLink->getFullURL( 'gift_id=' . $gift['id'] ) ) . '">' .
-						$gift_image .
+						$icon .
 					'</a>
 					<div class="g-title">
 						<a href="' . htmlspecialchars( $viewGiftLink->getFullURL( 'gift_id=' . $gift['id'] ) ) . '">' .

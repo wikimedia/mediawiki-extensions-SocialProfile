@@ -91,18 +91,6 @@ class Gifts {
 		return $gift;
 	}
 
-	static function getGiftImage( $id, $size ) {
-		global $wgUploadDirectory;
-		$files = glob( $wgUploadDirectory . '/awards/' . $id .  '_' . $size . "*" );
-
-		if ( !empty( $files[0] ) ) {
-			$img = basename( $files[0] );
-		} else {
-			$img = 'default_' . $size . '.gif';
-		}
-		return $img . '?r=' . rand();
-	}
-
 	static function getGiftList( $limit = 0, $page = 0, $order = 'gift_createdate DESC' ) {
 		global $wgUser;
 

@@ -43,7 +43,7 @@ class GiveGift extends SpecialPage {
 	 * @param string|null $par Name of the user whom to give a gift
 	 */
 	public function execute( $par ) {
-		global $wgMemc, $wgUploadPath;
+		global $wgMemc;
 
 		$out = $this->getOutput();
 		$request = $this->getRequest();
@@ -131,9 +131,8 @@ class GiveGift extends SpecialPage {
 				}
 
 				$sent_gift = UserGifts::getUserGift( $ug_gift_id );
-				$gift_image = '<img src="' . $wgUploadPath . '/awards/' .
-					Gifts::getGiftImage( $sent_gift['gift_id'], 'l' ) .
-					'" border="0" alt="" />';
+				$userGiftIcon = new UserGiftIcon( $sent_gift['gift_id'], 'l' );
+				$icon = $userGiftIcon->getIconHTML();
 
 				$out->setPageTitle( $this->msg( 'g-sent-title', $this->user_name_to )->parse() );
 
@@ -146,7 +145,7 @@ class GiveGift extends SpecialPage {
 					$this->msg( 'g-sent-message', $this->user_name_to )->parse() .
 				'</div>
 				<div class="g-container">' .
-					$gift_image .
+					$icon .
 				'<div class="g-title">' . $sent_gift['name'] . '</div>';
 				if ( $sent_gift['message'] ) {
 					$output .= '<div class="g-user-message">' .
@@ -198,8 +197,6 @@ class GiveGift extends SpecialPage {
 	 * @return string HTML
 	 */
 	function displayFormSingle() {
-		global $wgUploadPath;
-
 		$out = $this->getOutput();
 
 		$giftId = $this->getRequest()->getInt( 'gift_id' );
@@ -226,9 +223,8 @@ class GiveGift extends SpecialPage {
 
 		$out->setPageTitle( $this->msg( 'g-give-to-user-title', $gift['gift_name'], $this->user_name_to )->parse() );
 
-		$gift_image = "<img id=\"gift_image_{$gift['gift_id']}\" src=\"{$wgUploadPath}/awards/" .
-			Gifts::getGiftImage( $gift['gift_id'], 'l' ) .
-			'" border="0" alt="" />';
+		$userGiftIcon = new UserGiftIcon( $gift['gift_id'], 'l' );
+		$icon = $userGiftIcon->getIconHTML( [ 'id' => "gift_image_{$gift['gift_id']}" ] );
 
 		$output = '<form action="" method="post" enctype="multipart/form-data" name="gift">
 			<div class="g-message">' .
@@ -238,7 +234,7 @@ class GiveGift extends SpecialPage {
 					htmlspecialchars( $giveGiftLink->getFullURL( 'user=' . $this->user_name_to ) )
 				)->text() . "</div>
 			<div id=\"give_gift_{$gift['gift_id']}\" class=\"g-container\">
-				{$gift_image}
+				{$icon}
 				<div class=\"g-title\">{$gift['gift_name']}</div>";
 		if ( $gift['gift_description'] ) {
 			$output .= '<div class="g-describe">' .
@@ -321,7 +317,7 @@ class GiveGift extends SpecialPage {
 	}
 
 	function displayFormAll() {
-		global $wgGiveGiftPerRow, $wgUploadPath;
+		global $wgGiveGiftPerRow;
 
 		$linkRenderer = $this->getLinkRenderer();
 
@@ -360,9 +356,8 @@ class GiveGift extends SpecialPage {
 			$x = 1;
 
 			foreach ( $gifts as $gift ) {
-				$gift_image = "<img id=\"gift_image_{$gift['id']}\" src=\"{$wgUploadPath}/awards/" .
-					Gifts::getGiftImage( $gift['id'], 'l' ) .
-					'" border="0" alt="" />';
+				$userGiftIcon = new UserGiftIcon( $gift['id'], 'l' );
+				$icon = $userGiftIcon->getIconHTML( [ 'id' => "gift_image_{$gift['gift_id']}" ] );
 
 				$output .= "<div id=\"give_gift_{$gift['id']}\" class=\"g-give-all\">
 					{$gift_image}

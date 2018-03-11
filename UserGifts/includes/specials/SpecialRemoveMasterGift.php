@@ -139,13 +139,10 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	 * @return string HTML
 	 */
 	function displayForm() {
-		global $wgUploadPath;
-
 		$gift = Gifts::getGift( $this->gift_id );
 
-		$gift_image = '<img src="' . $wgUploadPath . '/awards/' .
-			Gifts::getGiftImage( $this->gift_id, 'l' ) .
-			'" border="0" alt="gift" />';
+		$userGiftIcon = new UserGiftIcon( $this->gift_id, 'l' );
+		$icon = $userGiftIcon->getIconHTML();
 
 		$this->getOutput()->setPageTitle( $this->msg( 'g-remove-title', $gift['gift_name'] )->parse() );
 
@@ -158,7 +155,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 				$this->msg( 'g-delete-message', $gift['gift_name'] )->parse() .
 			'</div>
 			<div class="g-container">' .
-				$gift_image .
+				$icon .
 				'<div class="g-name">' . $gift['gift_name'] . '</div>
 			</div>
 			<div class="visualClear"></div>

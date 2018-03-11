@@ -657,14 +657,12 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	";
 		}
 
-		global $wgUploadPath;
-		$gift_image = Gifts::getGiftImage( $this->gift_id, 'l' );
-		if ( $gift_image != '' ) {
+		$userGiftIcon = new UserGiftIcon( $this->gift_id, 'l' );
+		$icon = $userGiftIcon->getIconHTML();
+		if ( $icon != '' ) {
 			$output = '<table><tr><td style="color:#666666;font-weight:800">' .
 				$this->msg( 'g-current-image' )->plain() . '</td></tr>';
-			$output .= '<tr><td><img src="' . $wgUploadPath .
-				'/awards/' . $gift_image . '" border="0" alt="' .
-				$this->msg( 'g-gift' )->plain() . '" /></td></tr></table><br />';
+			$output .= '<tr><td>' . $icon . '</td></tr></table><br />';
 		}
 		$out->addHTML( $output );
 

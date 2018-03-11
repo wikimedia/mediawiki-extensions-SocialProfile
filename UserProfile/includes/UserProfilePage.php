@@ -1288,7 +1288,7 @@ class UserProfilePage extends Article {
 	 * @param string $user_name Name of the user whose activity we want to fetch
 	 */
 	function getActivity( $user_name ) {
-		global $wgUserProfileDisplay, $wgExtensionAssetsPath, $wgUploadPath;
+		global $wgUserProfileDisplay, $wgExtensionAssetsPath;
 
 		// If not enabled in site settings, don't display
 		if ( $wgUserProfileDisplay['activity'] == false ) {
@@ -1382,25 +1382,25 @@ class UserProfilePage extends Article {
 							</div>";
 						break;
 					case 'gift-sent':
-						$gift_image = "<img src=\"{$wgUploadPath}/awards/" .
-							Gifts::getGiftImage( $item['namespace'], 'm' ) .
-							'" border="0" alt="" />';
+						$userGiftIcon = new UserGiftIcon( $item['namespace'], 'm' );
+						$icon = $userGiftIcon->getIconHTML();
+
 						$item_html .= wfMessage( 'user-recent-activity-gift-sent' )->escaped() . " {$user_link_2} {$item_time}
 						<div class=\"item\">
 							<a href=\"" . htmlspecialchars( $viewGift->getFullURL( "gift_id={$item['id']}" ) ) . "\" rel=\"nofollow\">
-								{$gift_image}
+								{$icon}
 								{$item['pagetitle']}
 							</a>
 						</div>";
 						break;
 					case 'gift-rec':
-						$gift_image = "<img src=\"{$wgUploadPath}/awards/" .
-							Gifts::getGiftImage( $item['namespace'], 'm' ) .
-							'" border="0" alt="" />';
+						$userGiftIcon = new UserGiftIcon( $item['namespace'], 'm' );
+						$icon = $userGiftIcon->getIconHTML();
+
 						$item_html .= wfMessage( 'user-recent-activity-gift-rec' )->escaped() . " {$user_link_2} {$item_time}</span>
 								<div class=\"item\">
 									<a href=\"" . htmlspecialchars( $viewGift->getFullURL( "gift_id={$item['id']}" ) ) . "\" rel=\"nofollow\">
-										{$gift_image}
+										{$icon}
 										{$item['pagetitle']}
 									</a>
 								</div>";
@@ -1472,7 +1472,7 @@ class UserProfilePage extends Article {
 	}
 
 	function getGifts( $user_name ) {
-		global $wgMemc, $wgUserProfileDisplay, $wgUploadPath;
+		global $wgMemc, $wgUserProfileDisplay;
 
 		$context = $this->getContext();
 		$user = $context->getUser();
@@ -1546,16 +1546,15 @@ class UserProfilePage extends Article {
 				}
 
 				$user = Title::makeTitle( NS_USER, $gift['user_name_from'] );
-				$gift_image = '<img src="' . $wgUploadPath . '/awards/' .
-					Gifts::getGiftImage( $gift['gift_id'], 'ml' ) .
-					'" border="0" alt="" />';
+				$userGiftIcon = new UserGiftIcon( $gift['gift_id'], 'ml' );
+				$icon = $userGiftIcon->getIconHTML();
 				$gift_link = $user = SpecialPage::getTitleFor( 'ViewGift' );
 				$class = '';
 				if ( $gift['status'] == 1 ) {
 					$class = 'class="user-page-new"';
 				}
 				$output .= '<a href="' . htmlspecialchars( $gift_link->getFullURL( 'gift_id=' . $gift['id'] ) ) . '" ' .
-					$class . " rel=\"nofollow\">{$gift_image}</a>";
+					$class . " rel=\"nofollow\">{$icon}</a>";
 				if ( $x == count( $gifts ) || $x != 1 && $x % $per_row == 0 ) {
 					$output .= '<div class="visualClear"></div>';
 				}

@@ -296,14 +296,13 @@ class GiftManager extends SpecialPage {
 		}
 
 		if ( $gift_id ) {
-			global $wgUploadPath;
 			$gml = SpecialPage::getTitleFor( 'GiftManagerLogo' );
-			$gift_image = '<img src="' . $wgUploadPath . '/awards/' .
-				Gifts::getGiftImage( $gift_id, 'l' ) . '" border="0" alt="' .
-				$this->msg( 'g-gift' )->plain() . '" />';
+			$userGiftIcon = new UserGiftIcon( $gift_id, 'l' );
+			$icon = $userGiftIcon->getIconHTML();
+
 			$form .= '<tr>
 			<td width="200" class="view-form" valign="top">' . $this->msg( 'giftmanager-giftimage' )->plain() . '</td>
-			<td width="695">' . $gift_image .
+			<td width="695">' . $icon .
 			'<p>
 			<a href="' . htmlspecialchars( $gml->getFullURL( 'gift_id=' . $gift_id ) ) . '">' .
 				$this->msg( 'giftmanager-image' )->plain() . '</a>

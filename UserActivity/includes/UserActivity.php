@@ -450,12 +450,11 @@ class UserActivity {
 		);
 
 		foreach ( $res as $row ) {
-			global $wgUploadPath;
 			$user_title = Title::makeTitle( NS_USER, $row->ug_user_name_to );
 			$user_title_from = Title::makeTitle( NS_USER, $row->ug_user_name_from );
 
-			$systemGiftIcon = new SystemGiftIcon( $row->gift_id, 'm' );
-			$icon = $systemGiftIcon->getIconHTML();
+			$userGiftIcon = new UserGiftIcon( $row->gift_id, 'm' );
+			$icon = $userGiftIcon->getIconHTML();
 			$view_gift_link = SpecialPage::getTitleFor( 'ViewGift' );
 
 			$html = wfMessage( 'useractivity-gift',
@@ -498,8 +497,6 @@ class UserActivity {
 	 * variables.
 	 */
 	private function setSystemGiftsRec() {
-		global $wgUploadPath;
-
 		$dbr = wfGetDB( DB_REPLICA );
 
 		$where = array();
@@ -546,9 +543,9 @@ class UserActivity {
 
 		foreach ( $res as $row ) {
 			$user_title = Title::makeTitle( NS_USER, $row->sg_user_name );
-			$system_gift_image = '<img src="' . $wgUploadPath . '/awards/' .
-				SystemGifts::getGiftImage( $row->gift_id, 'm' ) .
-				'" border="0" alt="" />';
+			$systemGiftIcon = new SystemGiftIcon( $row->gift_id, 'm' );
+			$icon = $systemGiftIcon->getIconHTML();
+
 			$system_gift_link = SpecialPage::getTitleFor( 'ViewSystemGift' );
 
 			$html = wfMessage(
@@ -558,7 +555,7 @@ class UserActivity {
 			)->text() .
 			'<div class="item">
 				<a href="' . htmlspecialchars( $system_gift_link->getFullURL( 'gift_id=' . $row->sg_id ) ) . "\" rel=\"nofollow\">
-					{$system_gift_image}
+					{$icon}
 					{$row->gift_name}
 				</a>
 			</div>";

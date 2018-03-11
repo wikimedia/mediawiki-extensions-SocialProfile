@@ -24,7 +24,7 @@ class RemoveGift extends UnlistedSpecialPage {
 	 * @param string|null $par
 	 */
 	public function execute( $par ) {
-		global $wgMemc, $wgUploadPath;
+		global $wgMemc;
 
 		$out = $this->getOutput();
 		$request = $this->getRequest();
@@ -64,9 +64,8 @@ class RemoveGift extends UnlistedSpecialPage {
 				$rel->deleteGift( $this->gift_id );
 			}
 
-			$gift_image = '<img src="' . $wgUploadPath . '/awards/' .
-				Gifts::getGiftImage( $gift['gift_id'], 'l' ) .
-				'" border="0" alt="" />';
+			$userGiftIcon = new UserGiftIcon( $gift['gift_id'], 'l' );
+			$icon = $userGiftIcon->getIconHTML();
 
 			$out->setPageTitle( $this->msg( 'g-remove-success-title', $gift['name'] )->parse() );
 
