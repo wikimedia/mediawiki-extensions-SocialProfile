@@ -86,9 +86,10 @@ class ViewSystemGifts extends SpecialPage {
 		/**
 		 * Get all Gifts for this user into the array
 		 */
+		$listLookup = new SystemGiftListLookup( $per_page, $page );
 		$rel = new UserSystemGifts( $user_name );
 
-		$gifts = $rel->getUserGiftList( 0, $per_page, $page );
+		$gifts = $listLookup->getUserGiftList( $user );
 		$total = $rel->getGiftCountByUsername( $user_name );
 
 		/**

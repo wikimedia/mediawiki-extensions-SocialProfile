@@ -106,7 +106,8 @@ class SystemGiftManager extends SpecialPage {
 		$output = ''; // Prevent E_NOTICE
 		$page = 0;
 		$per_page = 50;
-		$gifts = SystemGifts::getGiftList( $per_page, $page );
+		$listLookup = new SystemGiftListLookup( $per_page, $page );
+		$gifts = $listLookup->getGiftList();
 		$user = $this->getUser();
 
 		if ( $gifts ) {

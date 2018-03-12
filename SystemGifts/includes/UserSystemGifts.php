@@ -339,58 +339,6 @@ class UserSystemGifts {
 	}
 
 	/**
-	 * Get the list of this user's system gifts.
-	 *
-	 * @param $type Unused
-	 * @param int $limit LIMIT for the SQL query
-	 * @param int $page If greater than 0, used to build
-	 * the OFFSET for the SQL query
-	 * @return array Array of system gift information
-	 */
-	public function getUserGiftList( $type, $limit = 0, $page = 0 ) {
-		$dbr = wfGetDB( DB_REPLICA );
-
-		$limitvalue = 0;
-		if ( $limit > 0 && $page ) {
-			$limitvalue = $page * $limit - ( $limit );
-		}
-
-		$res = $dbr->select(
-			array( 'user_system_gift', 'system_gift' ),
-			array(
-				'sg_id', 'sg_user_id', 'sg_user_name', 'sg_gift_id', 'sg_date',
-				'sg_status', 'gift_name', 'gift_description',
-				'gift_given_count'
-			),
-			array( "sg_user_id = {$this->user_id}" ),
-			__METHOD__,
-			array(
-				'ORDER BY' => 'sg_id DESC',
-				'LIMIT' => $limit,
-				'OFFSET' => $limitvalue
-			),
-			array( 'system_gift' => array( 'INNER JOIN', 'sg_gift_id = gift_id' ) )
-		);
-
-		$requests = array();
-		foreach ( $res as $row ) {
-			$requests[] = array(
-				'id' => $row->sg_id,
-				'gift_id' => $row->sg_gift_id,
-				'timestamp' => $row->sg_date,
-				'status' => $row->sg_status,
-				'user_id' => $row->sg_user_id,
-				'user_name' => $row->sg_user_name,
-				'gift_name' => $row->gift_name,
-				'gift_description' => $row->gift_description,
-				'gift_given_count' => $row->gift_given_count,
-				'unix_timestamp' => wfTimestamp( TS_UNIX, $row->sg_date )
-			);
-		}
-		return $requests;
-	}
-
-	/**
 	 * Update the counter that tracks how many times a system gift has been
 	 * given out.
 	 *

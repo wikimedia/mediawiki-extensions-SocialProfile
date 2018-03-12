@@ -1593,21 +1593,22 @@ class UserProfilePage extends Article {
 				'user_name' => $user_name
 			] );
 
-			$system_gifts = $sg->getUserGiftList( 0, 4 );
-			$wgMemc->set( $sg_key, $system_gifts, 60 * 60 * 4 );
+			$listLookup = new SystemGiftListLookup( 4 );
+			$systemGifts = $listLookup->getUserGiftList( $user );
+			$wgMemc->set( $sg_key, $systemGifts, 60 * 60 * 4 );
 		} else {
 			$logger->debug( "Got profile awards for user {user_name} from cache\n", [
 				'user_name' => $user_name
 			] );
 
-			$system_gifts = $data;
+			$systemGifts = $data;
 		}
 
 		$system_gift_count = $sg->getGiftCountByUsername( $user_name );
 		$system_gift_link = SpecialPage::getTitleFor( 'ViewSystemGifts' );
 		$per_row = 4;
 
-		if ( $system_gifts ) {
+		if ( $systemGifts ) {
 			$x = 1;
 
 			$output .= '<div class="user-section-heading">
@@ -1655,7 +1656,7 @@ class UserProfilePage extends Article {
 					{$icon}
 				</a>";
 
-				if ( $x == count( $system_gifts ) || $x != 1 && $x % $per_row == 0 ) {
+				if ( $x == count( $systemGifts ) || $x != 1 && $x % $per_row == 0 ) {
 					$output .= '<div class="visualClear"></div>';
 				}
 				$x++;
