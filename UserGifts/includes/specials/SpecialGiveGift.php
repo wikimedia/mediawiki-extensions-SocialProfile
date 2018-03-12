@@ -278,8 +278,10 @@ class GiveGift extends SpecialPage {
 			// If friending is enabled, build a dropdown menu of the user's
 			// friends
 			if ( $wgFriendingEnabled ) {
-				$rel = new UserRelationship( $this->getUser()->getName() );
-				$friends = $rel->getRelationshipList( 1 );
+				$user = $this->getUser();
+
+				$listLookup = new RelationshipListLookup( $user );
+				$friends = $listLookup->getFriendList();
 
 				if ( $friends ) {
 					$output .= '<div class="g-give-title">' .

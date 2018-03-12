@@ -1185,6 +1185,7 @@ class UserProfilePage extends Article {
 
 		$context = $this->getContext();
 		$language = $context->getLanguage();
+		$user = $context->getUser();
 
 		// If not enabled in site settings, don't display
 		if ( $rel_type == 1 ) {
@@ -1200,13 +1201,13 @@ class UserProfilePage extends Article {
 		$output = ''; // Prevent E_NOTICE
 
 		$count = 4;
-		$rel = new UserRelationship( $user_name );
-		$key = $wgMemc->makeKey( 'relationship', 'profile', "{$rel->user_id}-{$rel_type}" );
+		$key = $wgMemc->makeKey( 'relationship', 'profile', "{$user->getId()}-{$rel_type}" );
 		$data = $wgMemc->get( $key );
 
 		// Try cache
 		if ( !$data ) {
-			$friends = $rel->getRelationshipList( $rel_type, $count );
+			$listLookup = new RelationshipListLookup( $user, $count );
+			$friends = $listLookup->getRelationshipList( $rel_type );
 			$wgMemc->set( $key, $friends );
 		} else {
 			$logger = LoggerFactory::getInstance( 'SocialProfile' );
@@ -1218,7 +1219,7 @@ class UserProfilePage extends Article {
 			$friends = $data;
 		}
 
-		$stats = new UserStats( $rel->user_id, $user_name );
+		$stats = new UserStats( $user->getId(), $user_name );
 		$stats_data = $stats->getUserStats();
 		$view_all_title = SpecialPage::getTitleFor( 'ViewRelationships' );
 
@@ -1697,8 +1698,8 @@ class UserProfilePage extends Article {
 		// Add JS
 		$out->addModules( 'ext.socialprofile.userprofile.js' );
 
-		$rel = new UserRelationship( $user_name );
-		$friends = $rel->getRelationshipList( 1, 4 );
+		$listLookup = new RelationshipListLookup( $user, 4 );
+		$friends = $listLookup->getFriendList();
 
 		$stats = new UserStats( $user_id, $user_name );
 		$stats_data = $stats->getUserStats();

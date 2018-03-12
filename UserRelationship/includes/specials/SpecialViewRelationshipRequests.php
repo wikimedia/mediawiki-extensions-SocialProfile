@@ -85,7 +85,8 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 			$output = '';
 
 			$out->setPageTitle( $this->msg( 'ur-requests-title' )->plain() );
-			$requests = $rel->getRequestList( 0 );
+			$listLookup = new RelationshipListLookup( $user );
+			$requests = $listLookup->getRequestList( 0 );
 
 			if ( $requests ) {
 				foreach ( $requests as $request ) {

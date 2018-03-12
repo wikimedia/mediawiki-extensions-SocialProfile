@@ -538,58 +538,6 @@ class UserRelationship {
 	}
 
 	/**
-	 * Get the list of open relationship requests.
-	 *
-	 * @param int $status
-	 * @param int $limit Used as the LIMIT in the SQL query
-	 * @return array Array of open relationship requests
-	 */
-	public function getRequestList( $status, $limit = 0 ) {
-		$dbr = wfGetDB( DB_REPLICA );
-
-		$options = array();
-
-		if ( $limit > 0 ) {
-			$options['OFFSET'] = 0;
-			$options['LIMIT'] = $limit;
-		}
-
-		$options['ORDER BY'] = 'ur_id DESC';
-		$res = $dbr->select(
-			'user_relationship_request',
-			array(
-				'ur_id', 'ur_user_id_from', 'ur_user_name_from', 'ur_type',
-				'ur_message', 'ur_date'
-			),
-			array(
-				'ur_user_id_to' => $this->user_id,
-				'ur_status' => $status
-			),
-			__METHOD__,
-			$options
-		);
-
-		$requests = array();
-		foreach ( $res as $row ) {
-			if ( $row->ur_type == 1 ) {
-				$type_name = 'Friend';
-			} else {
-				$type_name = 'Foe';
-			}
-			$requests[] = array(
-				'id' => $row->ur_id,
-				'type' => $type_name,
-				'message' => $row->ur_message,
-				'timestamp' => ( $row->ur_date ),
-				'user_id_from' => $row->ur_user_id_from,
-				'user_name_from' => $row->ur_user_name_from
-			);
-		}
-
-		return $requests;
-	}
-
-	/**
 	 * Increase the amount of open relationship requests for a user.
 	 *
 	 * @param int $userId User ID for whom to get the requests
@@ -708,59 +656,6 @@ class UserRelationship {
 		}
 
 		return $count;
-	}
-
-	/**
-	 * Get the relationship list for the current user.
-	 *
-	 * @param int $type
-	 * - 1 for friends
-	 * - 2 (or anything else but 1) for foes
-	 * @param int $limit Used as the LIMIT in the SQL query
-	 * @param int $page If greater than 0, will be used to
-	 * calculate the OFFSET for the SQL query
-	 * @return array Array of relationship information
-	 */
-	public function getRelationshipList( $type = 0, $limit = 0, $page = 0 ) {
-		$dbr = wfGetDB( DB_REPLICA );
-
-		$where = array();
-		$options = array();
-		$where['r_user_id'] = $this->user_id;
-		if ( $type ) {
-			$where['r_type'] = $type;
-		}
-		if ( $limit > 0 ) {
-			$limitvalue = 0;
-			if ( $page ) {
-				$limitvalue = $page * $limit - ( $limit );
-			}
-			$options['LIMIT'] = $limit;
-			$options['OFFSET'] = $limitvalue;
-		}
-		$res = $dbr->select(
-			'user_relationship',
-			array(
-				'r_id', 'r_user_id_relation', 'r_user_name_relation', 'r_date',
-				'r_type'
-			),
-			$where,
-			__METHOD__,
-			$options
-		);
-
-		$requests = array();
-		foreach ( $res as $row ) {
-			$requests[] = array(
-				'id' => $row->r_id,
-				'timestamp' => ( $row->r_date ),
-				'user_id' => $row->r_user_id_relation,
-				'user_name' => $row->r_user_name_relation,
-				'type' => $row->r_type
-			);
-		}
-
-		return $requests;
 	}
 
 	/**

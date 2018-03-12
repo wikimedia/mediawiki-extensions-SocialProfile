@@ -15,6 +15,7 @@
 	},
 	"AutoloadClasses": {
 		"EchoUserRelationshipPresentationModel": "includes/EchoUserRelationshipPresentationModel.php",
+		"RelationshipListLookup": "includes/RelationshipListLookup.php",
 		"UserRelationship": "includes/UserRelationshipClass.php",
 		"UserRelationshipHooks": "includes/UserRelationshipHooks.php",
 		"SpecialAddRelationship": "includes/specials/SpecialAddRelationship.php",

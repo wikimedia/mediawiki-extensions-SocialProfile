@@ -127,8 +127,8 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$output .= '</div>
 		</div>';
 
-		$rel = new UserRelationship( $user->getName() );
-		$relationships = $rel->getRelationshipList();
+		$listLookup = new RelationshipListLookup( $user );
+		$relationships = $listLookup->getRelationshipList();
 
 		$output .= '<div id="blast-friends-list" class="blast-friends-list">';
 

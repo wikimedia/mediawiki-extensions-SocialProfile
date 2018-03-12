@@ -223,10 +223,11 @@ class SPUserSecurity {
 				if ( !$user instanceof User ) {
 					return false;
 				}
-				$ur = new UserRelationship( $user->getName() );
-				$owner_friends = $ur->getRelationshipList( 1 );
 
-				foreach ( $owner_friends as $friend ) {
+				$listLookup = new RelationshipListLookup( $user );
+				$ownerFriends = $listLookup->getFriendList();
+
+				foreach ( $ownerFriends as $friend ) {
 					// If someone in the owner's friends has the viewer in their
 					// friends, the test is passed
 					if ( UserRelationship::getUserRelationshipByID( $friend['user_id'], $viewerUid ) == 1 ) {

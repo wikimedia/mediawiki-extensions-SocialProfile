@@ -116,7 +116,8 @@ class SpecialViewRelationships extends SpecialPage {
 		 * Get all relationships
 		 */
 		$rel = new UserRelationship( $user_name );
-		$relationships = $rel->getRelationshipList( $rel_type, $per_page, $page );
+		$listLookup = new RelationshipListLookup( $user, $per_page );
+		$relationships = $listLookup->getRelationshipList( $rel_type, $page );
 
 		$stats = new UserStats( $rel->user_id, $rel->user_name );
 		$stats_data = $stats->getUserStats();
