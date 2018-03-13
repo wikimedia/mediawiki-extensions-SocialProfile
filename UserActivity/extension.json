@@ -19,6 +19,7 @@
 	"AutoloadClasses": {
 		"SiteActivityHook": "includes/SiteActivityHook.php",
 		"UserActivity": "includes/UserActivity.php",
+		"UserActivityIcon": "includes/UserActivityIcon.php",
 		"UserHome": "includes/specials/UserActivity.body.php"
 	},
 	"Hooks": {

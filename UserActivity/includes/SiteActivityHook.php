@@ -21,7 +21,7 @@ class SiteActivityHook {
 	 * @param Parser $parser
 	 */
 	public static function getSiteActivity( $input, $args, $parser ) {
-		global $wgMemc, $wgExtensionAssetsPath;
+		global $wgMemc;
 
 		$parser->getOutput()->updateCacheExpiry( 0 );
 
@@ -56,10 +56,11 @@ class SiteActivityHook {
 			$x = 1;
 			foreach ( $activity as $item ) {
 				if ( $x < $fixedLimit ) {
-					$typeIcon = UserActivity::getTypeIcon( $item['type'] );
-					$output .= '<div class="mp-activity' . ( ( $x == $fixedLimit ) ? ' mp-activity-border-fix' : '' ) . '">
-					<img src="' . $wgExtensionAssetsPath . '/SocialProfile/images/' . $typeIcon . '" alt="' . $typeIcon . '" border="0" />'
-					. $item['data'] .
+					$userActivityIcon = new UserActivityIcon( $item['type'] );
+					$icon = $userActivityIcon->getIconHTML();
+
+					$output .= '<div class="mp-activity' . ( ( $x == $fixedLimit ) ? ' mp-activity-border-fix' : '' ) . '">' .
+					$icon . $item['data'] .
 					'</div>';
 					$x++;
 				}
