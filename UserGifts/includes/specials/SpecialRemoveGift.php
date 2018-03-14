@@ -101,9 +101,8 @@ class RemoveGift extends UnlistedSpecialPage {
 		$rel = new UserGifts( $currentUser->getName() );
 		$gift = $rel->getUserGift( $this->gift_id );
 		$user = Title::makeTitle( NS_USER, $gift['user_name_from'] );
-		$gift_image = '<img src="' . $wgUploadPath . '/awards/' .
-			Gifts::getGiftImage( $gift['gift_id'], 'l' ) .
-			'" border="0" alt="gift" />';
+		$userGiftIcon = new UserGiftIcon( $gift['gift_id'], 'l' );
+		$icon = $userGiftIcon->getIconHTML();
 
 		$this->getOutput()->setPageTitle( $this->msg( 'g-remove-title', $gift['name'] )->parse() );
 
@@ -116,7 +115,7 @@ class RemoveGift extends UnlistedSpecialPage {
 				$this->msg( 'g-remove-message', $gift['name'] )->parse() .
 			'</div>
 			<div class="g-container">' .
-				$gift_image .
+				$icon .
 				'<div class="g-name">' . $gift['name'] . '</div>
 				<div class="g-from">' .
 					$this->msg(
