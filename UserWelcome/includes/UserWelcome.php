@@ -115,7 +115,7 @@ class UserWelcome {
 	}
 
 	function getRelationshipRequestLink() {
-		global $wgUser, $wgExtensionAssetsPath;
+		global $wgUser;
 
 		$friend_request_count = UserRelationship::getOpenRequestCount( $wgUser->getId(), 1 );
 		$foe_request_count = UserRelationship::getOpenRequestCount( $wgUser->getId(), 2 );
@@ -124,17 +124,21 @@ class UserWelcome {
 		$output = '';
 
 		if ( $friend_request_count > 0 ) {
-			$output .= '<p>
-				<img src="' . $wgExtensionAssetsPath . '/SocialProfile/images/addedFriendIcon.png" alt="" border="0" />
-				<span class="profile-on"><a href="' . htmlspecialchars( $relationship_request_link->getFullURL() ) . '" rel="nofollow">'
+			$userFriendIcon = new UserActivityIcon( 'friend' );
+			$friendIcon = $userFriendIcon->getIconHTML();
+
+			$output .= '<p>' . $friendIcon .
+				'<span class="profile-on"><a href="' . htmlspecialchars( $relationship_request_link->getFullURL() ) . '" rel="nofollow">'
 				. wfMessage( 'mp-request-new-friend', $friend_request_count )->parse() . '</a></span>
 			</p>';
 		}
 
 		if ( $foe_request_count > 0 ) {
-			$output .= '<p>
-				<img src="' . $wgExtensionAssetsPath . '/SocialProfile/images/addedFoeIcon.png" alt="" border="0" />
-				<span class="profile-on"><a href="' . htmlspecialchars( $relationship_request_link->getFullURL() ) . '" rel="nofollow">'
+			$userFoeIcon = new UserActivityIcon( 'foe' );
+			$foeIcon = $userFoeIcon->getIconHTML();
+
+			$output .= '<p>' . $foeIcon .
+				'<span class="profile-on"><a href="' . htmlspecialchars( $relationship_request_link->getFullURL() ) . '" rel="nofollow">'
 				. wfMessage( 'mp-request-new-foe', $foe_request_count )->parse() . '</a></span>
 			</p>';
 		}
@@ -143,16 +147,18 @@ class UserWelcome {
 	}
 
 	function getNewGiftLink() {
-		global $wgUser, $wgExtensionAssetsPath;
+		global $wgUser;
 
 		$gift_count = UserGifts::getNewGiftCount( $wgUser->getId() );
 		$gifts_title = SpecialPage::getTitleFor( 'ViewGifts' );
 		$output = '';
 
 		if ( $gift_count > 0 ) {
-			$output .= '<p>
-				<img src="' . $wgExtensionAssetsPath . '/SocialProfile/images/icon_package_get.gif" alt="" border="0" />
-				<span class="profile-on"><a href="' . htmlspecialchars( $gifts_title->getFullURL() ) . '" rel="nofollow">'
+			$userActivityIcon = new UserActivityIcon( 'gift_rec' );
+			$icon = $userActivityIcon->getIconHTML();
+
+			$output .= '<p>' . $icon .
+				'<span class="profile-on"><a href="' . htmlspecialchars( $gifts_title->getFullURL() ) . '" rel="nofollow">'
 					. wfMessage( 'mp-request-new-gift', $gift_count )->parse() .
 				'</a></span>
 			</p>';
@@ -162,16 +168,18 @@ class UserWelcome {
 	}
 
 	function getNewSystemGiftLink() {
-		global $wgUser, $wgExtensionAssetsPath;
+		global $wgUser;
 
 		$gift_count = UserSystemGifts::getNewSystemGiftCount( $wgUser->getId() );
 		$gifts_title = SpecialPage::getTitleFor( 'ViewSystemGifts' );
 		$output = '';
 
 		if ( $gift_count > 0 ) {
-			$output .= '<p>
-				<img src="' . $wgExtensionAssetsPath . '/SocialProfile/images/awardIcon.png" alt="" border="0" />
-				<span class="profile-on"><a href="' . htmlspecialchars( $gifts_title->getFullURL() ) . '" rel="nofollow">'
+			$userActivityIcon = new UserActivityIcon( 'system_gift' );
+			$icon = $userActivityIcon->getIconHTML();
+
+			$output .= '<p>' . $icon .
+				'<span class="profile-on"><a href="' . htmlspecialchars( $gifts_title->getFullURL() ) . '" rel="nofollow">'
 					. wfMessage( 'mp-request-new-award', $gift_count )->parse() .
 				'</a></span>
 			</p>';
@@ -181,16 +189,18 @@ class UserWelcome {
 	}
 
 	function getNewMessagesLink() {
-		global $wgUser, $wgExtensionAssetsPath;
+		global $wgUser;
 
 		$new_messages = UserBoard::getNewMessageCount( $wgUser->getId() );
 		$output = '';
 
 		if ( $new_messages > 0 ) {
+			$userActivityIcon = new UserActivityIcon( 'user_message' );
+			$icon = $userActivityIcon->getIconHTML();
+
 			$board_link = SpecialPage::getTitleFor( 'UserBoard' );
-			$output .= '<p>
-				<img src="' . $wgExtensionAssetsPath . '/SocialProfile/images/emailIcon.gif" alt="" border="" />
-				<span class="profile-on"><a href="' . htmlspecialchars( $board_link->getFullURL() ) . '" rel="nofollow">'
+			$output .= '<p>' . $icon .
+				'<span class="profile-on"><a href="' . htmlspecialchars( $board_link->getFullURL() ) . '" rel="nofollow">'
 					. wfMessage( 'mp-request-new-message' )->plain() .
 				'</a></span>
 			</p>';

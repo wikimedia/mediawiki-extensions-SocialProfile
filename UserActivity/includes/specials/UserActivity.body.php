@@ -31,8 +31,6 @@ class UserHome extends SpecialPage {
 	 * @param string|null $par
 	 */
 	public function execute( $par ) {
-		global $wgExtensionAssetsPath;
-
 		$out = $this->getOutput();
 		$request = $this->getRequest();
 		$user = $this->getUser();
@@ -125,9 +123,13 @@ class UserHome extends SpecialPage {
 					}
 
 					$link_image = $line[2];
+
+					$activityFilterIcon = new UserActivityIcon( $link_image );
+					$filterIcon = $activityFilterIcon->getIconHTML();
+
 					$output .= '<a href="' . htmlspecialchars( $pageTitle->getFullURL( "item_type={$filter}" ) ) .
-						"\"><img src=\"{$wgExtensionAssetsPath}/SocialProfile/images/" .
-						UserActivity::getTypeIcon( $link_image ) . "\"/>{$link_text}</a>";
+						"\">{$filterIcon}{$link_text}</a>";
+
 				}
 			}
 
@@ -170,10 +172,10 @@ class UserHome extends SpecialPage {
 						$border_fix = ' border-fix';
 					}
 
-					$typeIcon = UserActivity::getTypeIcon( $item['type'] );
+					$userActivityIcon = new UserActivityIcon( $item['type'] );
+					$icon = $userActivityIcon->getIconHTML();
 					$output .= "<div class=\"user-home-activity{$border_fix}\">
-						<img src=\"{$wgExtensionAssetsPath}/SocialProfile/images/" . $typeIcon . "\" alt=\"\" border=\"0\" />
-						{$item['data']}
+						{$icon}{$item['data']}
 					</div>";
 					$x++;
 				}

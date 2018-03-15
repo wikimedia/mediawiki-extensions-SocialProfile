@@ -1288,7 +1288,7 @@ class UserProfilePage extends Article {
 	 * @param string $user_name Name of the user whose activity we want to fetch
 	 */
 	function getActivity( $user_name ) {
-		global $wgUserProfileDisplay, $wgExtensionAssetsPath;
+		global $wgUserProfileDisplay;
 
 		// If not enabled in site settings, don't display
 		if ( $wgUserProfileDisplay['activity'] == false ) {
@@ -1352,14 +1352,14 @@ class UserProfilePage extends Article {
 				'</span>';
 
 				if ( $x < $style_limit ) {
-					$item_html .= '<div class="activity-item">
-						<img src="' . $wgExtensionAssetsPath . '/SocialProfile/images/' .
-							UserActivity::getTypeIcon( $item['type'] ) . '" alt="" border="0" />';
+					$class = 'activity-item';
 				} else {
-					$item_html .= '<div class="activity-item-bottom">
-						<img src="' . $wgExtensionAssetsPath . '/SocialProfile/images/' .
-							UserActivity::getTypeIcon( $item['type'] ) . '" alt="" border="0" />';
+					$class = 'activity-item-bottom';
 				}
+
+				$userActivityIcon = new UserActivityIcon( $item['type'] );
+				$icon = $userActivityIcon->getIconHTML();
+				$item_html .= "<div class=\"{$class}\">" . $icon;
 
 				$viewGift = SpecialPage::getTitleFor( 'ViewGift' );
 
