@@ -232,55 +232,6 @@ class SystemGifts {
 	}
 
 	/**
-	 * Get the list of all existing system gifts (awards).
-	 *
-	 * @param int $limit LIMIT for the SQL query, 0 by default
-	 * @param int $page used to determine OFFSET for the SQL query;
-	 * 0 by default
-	 * @return array array containing gift info, including
-	 * (but not limited to) gift ID, creation timestamp, name,
-	 * description, etc.
-	 */
-	static function getGiftList( $limit = 0, $page = 0 ) {
-		$dbr = wfGetDB( DB_REPLICA );
-
-		$limitvalue = 0;
-		if ( $limit > 0 && $page ) {
-			$limitvalue = $page * $limit - ( $limit );
-		}
-
-		$res = $dbr->select(
-			'system_gift',
-			array(
-				'gift_id', 'gift_createdate', 'gift_name', 'gift_description',
-				'gift_category', 'gift_threshold', 'gift_given_count'
-			),
-			array(),
-			__METHOD__,
-			array(
-				'ORDER BY' => 'gift_createdate DESC',
-				'LIMIT' => $limit,
-				'OFFSET' => $limitvalue
-			)
-		);
-
-		$gifts = array();
-		foreach ( $res as $row ) {
-			$gifts[] = array(
-				'id' => $row->gift_id,
-				'timestamp' => ( $row->gift_createdate ),
-				'gift_name' => $row->gift_name,
-				'gift_description' => $row->gift_description,
-				'gift_category' => $row->gift_category,
-				'gift_threshold' => $row->gift_threshold,
-				'gift_given_count' => $row->gift_given_count
-			);
-		}
-
-		return $gifts;
-	}
-
-	/**
 	 * Gets the amount of available system gifts from the database.
 	 *
 	 * @return int The amount of all system gifts on the database
