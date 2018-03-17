@@ -149,19 +149,21 @@ class UserWelcome {
 	}
 
 	function getNewGiftLink() {
-		global $wgUser;
+		global $wgUser, $wgMemc;
 
-		$gift_count = UserGifts::getNewGiftCount( $wgUser->getId() );
+		$systemGiftCount = new SystemGiftCount( $wgMemc, $wgUser->getId() );
+		$giftCount = $systemGiftCount->get();
+
 		$gifts_title = SpecialPage::getTitleFor( 'ViewGifts' );
 		$output = '';
 
-		if ( $gift_count > 0 ) {
+		if ( $giftCount > 0 ) {
 			$userActivityIcon = new UserActivityIcon( 'gift_rec' );
 			$icon = $userActivityIcon->getIconHTML();
 
 			$output .= '<p>' . $icon .
 				'<span class="profile-on"><a href="' . htmlspecialchars( $gifts_title->getFullURL() ) . '" rel="nofollow">'
-					. wfMessage( 'mp-request-new-gift', $gift_count )->parse() .
+					. wfMessage( 'mp-request-new-gift', $giftCount )->parse() .
 				'</a></span>
 			</p>';
 		}

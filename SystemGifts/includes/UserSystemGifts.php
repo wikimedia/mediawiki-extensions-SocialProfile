@@ -1,7 +1,5 @@
 <?php
 
-use MediaWiki\Logger\LoggerFactory;
-
 /**
  * Class for managing awards (a.k.a system gifts)
  */
@@ -50,7 +48,8 @@ class UserSystemGifts {
 		self::incGiftGivenCount( $gift_id );
 
 		// Add to new gift count cache for receiving user
-		$this->incNewSystemGiftCount( $this->user_id );
+		$giftCount = new SystemGiftCount( $wgMemc, $this->user_id );
+		$giftCount->increase();
 
 		if ( $email && !empty( $sg_gift_id ) ) {
 			$this->sendGiftNotificationEmail( $this->user_id, $gift_id );
@@ -145,13 +144,18 @@ class UserSystemGifts {
 		return false;
 	}
 
-	static function clearUserGiftStatus( $id ) {
+	public function clearUserGiftStatus( $id ) {
+		global $wgMemc;
+
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update( 'user_system_gift',
-			/* SET */array( 'sg_status' => 0 ),
-			/* WHERE */array( 'sg_id' => $id ),
+			[ 'sg_status' => 0 ],
+			[ 'sg_id' => $id ],
 			__METHOD__
 		);
+
+		$giftCount = new SystemGiftCount( $wgMemc, $this->user_id );
+		$giftCount->decrease();
 	}
 
 	/**
@@ -234,108 +238,6 @@ class UserSystemGifts {
 		}
 
 		return $gift;
-	}
-
-	/**
-	 * Increase the amount of new system gifts for the user with ID = $user_id.
-	 *
-	 * @param int $user_id User ID for the user
-	 * whose gift count we're going to increase.
-	 */
-	public function incNewSystemGiftCount( $user_id ) {
-		global $wgMemc;
-		$key = $wgMemc->makeKey( 'system_gifts', 'new_count', $user_id );
-		$wgMemc->incr( $key );
-	}
-
-	/**
-	 * Decrease the amount of new system gifts for the user with ID = $user_id.
-	 *
-	 * @param int $user_id User ID for the user
-	 * whose gift count we're going to decrease.
-	 */
-	public function decNewSystemGiftCount( $user_id ) {
-		global $wgMemc;
-		$key = $wgMemc->makeKey( 'system_gifts', 'new_count', $user_id );
-		$wgMemc->decr( $key );
-	}
-
-	/**
-	 * Get the amount of new system gifts for the user with ID = $user_id
-	 * from memcached. If successful, returns the amount of new system gifts.
-	 *
-	 * @param int $user_id User ID for the user
-	 * whose system gifts we're going to fetch.
-	 * @return int Amount of new system gifts
-	 */
-	static function getNewSystemGiftCountCache( $user_id ) {
-		global $wgMemc;
-		$key = $wgMemc->makeKey( 'system_gifts', 'new_count', $user_id );
-		$data = $wgMemc->get( $key );
-		if ( $data != '' ) {
-			$logger = LoggerFactory::getInstance( 'SocialProfile' );
-			$logger->debug( "Got new award count of {data} for {user_id} from cache\n", [
-				'data' => $data,
-				'user_id' => $user_id
-			] );
-
-			return $data;
-		}
-	}
-
-	/**
-	 * Get the amount of new system gifts for the user with ID = $user_id.
-	 * First tries cache (memcached) and if that succeeds, returns the cached
-	 * data. If that fails, the count is fetched from the database.
-	 * UserWelcome.php calls this function.
-	 *
-	 * @param $user_id int User ID for the user
-	 * whose system gifts we're going to fetch.
-	 * @return int Amount of new gifts
-	 */
-	static function getNewSystemGiftCount( $user_id ) {
-		global $wgMemc;
-		$data = self::getNewSystemGiftCountCache( $user_id );
-
-		if ( $data != '' ) {
-			$count = $data;
-		} else {
-			$count = self::getNewSystemGiftCountDB( $user_id );
-		}
-		return $count;
-	}
-
-	/**
-	 * Get the amount of new system gifts for the user with ID = $user_id from
-	 * the database and stores it in memcached.
-	 *
-	 * @param $user_id int User ID for the user
-	 * whose system gifts we're going to fetch.
-	 * @return int Amount of new system gifts
-	 */
-	static function getNewSystemGiftCountDB( $user_id ) {
-		$logger = LoggerFactory::getInstance( 'SocialProfile' );
-		$logger->debug( "Got new award count for id {user_id} from DB\n", [
-			'user_id' => $user_id
-		] );
-
-		global $wgMemc;
-		$key = $wgMemc->makeKey( 'system_gifts', 'new_count', $user_id );
-		$dbr = wfGetDB( DB_REPLICA );
-		$new_gift_count = 0;
-		$s = $dbr->selectRow(
-			'user_system_gift',
-			array( 'COUNT(*) AS count' ),
-			array( 'sg_user_id' => $user_id, 'sg_status' => 1 ),
-			__METHOD__
-		);
-		if ( $s !== false ) {
-			$new_gift_count = $s->count;
-		}
-
-		$wgMemc->set( $key, $new_gift_count );
-
-		return $new_gift_count;
 	}
 
 	/**

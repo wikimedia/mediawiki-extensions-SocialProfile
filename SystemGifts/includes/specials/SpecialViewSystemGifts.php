@@ -127,7 +127,6 @@ class ViewSystemGifts extends SpecialPage {
 				if ( $gift['status'] == 1 ) {
 					if ( $user_name == $user->getName() ) {
 						$rel->clearUserGiftStatus( $gift['id'] );
-						$rel->decNewSystemGiftCount( $user->getId() );
 					}
 					$output .= '<span class="ga-new">' .
 						$this->msg( 'ga-new' )->plain() . '</span>';

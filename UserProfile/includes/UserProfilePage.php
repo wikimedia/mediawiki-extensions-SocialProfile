@@ -1640,7 +1640,6 @@ class UserProfilePage extends Article {
 				if ( $gift['status'] == 1 && $user_name == $user->getName() ) {
 					$sg->clearUserGiftStatus( $gift['id'] );
 					$wgMemc->delete( $sg_key );
-					$sg->decNewSystemGiftCount( $user->getId() );
 				}
 
 				$systemGiftIcon = new SystemGiftIcon( $gift['gift_id'], 'ml' );
