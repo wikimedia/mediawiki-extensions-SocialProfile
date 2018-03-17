@@ -1543,7 +1543,6 @@ class UserProfilePage extends Article {
 				if ( $gift['status'] == 1 && $user_name == $user->getName() ) {
 					$g->clearUserGiftStatus( $gift['id'] );
 					$wgMemc->delete( $key );
-					$g->decNewGiftCount( $user->getId() );
 				}
 
 				$user = Title::makeTitle( NS_USER, $gift['user_name_from'] );

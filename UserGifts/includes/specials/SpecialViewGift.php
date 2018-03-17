@@ -52,7 +52,6 @@ class ViewGift extends UnlistedSpecialPage {
 				if ( $gift['user_name_to'] == $user->getName() ) {
 					$g = new UserGifts( $gift['user_name_to'] );
 					$g->clearUserGiftStatus( $gift['id'] );
-					$g->decNewGiftCount( $user->getId() );
 				}
 			}
 

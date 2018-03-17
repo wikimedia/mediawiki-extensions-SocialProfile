@@ -147,7 +147,6 @@ class ViewGifts extends SpecialPage {
 				if ( $gift['status'] == 1 ) {
 					if ( $user_name == $currentUser->getName() ) {
 						$rel->clearUserGiftStatus( $gift['id'] );
-						$rel->decNewGiftCount( $currentUser->getId() );
 					}
 					$output .= '<span class="g-new">' .
 						$this->msg( 'g-new' )->plain() .

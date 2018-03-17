@@ -1,7 +1,5 @@
 <?php
 
-use MediaWiki\Logger\LoggerFactory;
-
 /**
  * UserGifts class
  * @todo document
@@ -29,6 +27,8 @@ class UserGifts {
 	 * @param mixed $message Message as supplied by the sender
 	 */
 	public function sendGift( $user_to, $gift_id, $type, $message ) {
+		global $wgMemc;
+
 		$user_id_to = User::idFromName( $user_to );
 		$dbw = wfGetDB( DB_MASTER );
 
@@ -51,7 +51,8 @@ class UserGifts {
 		$this->sendGiftNotificationEmail( $user_id_to, $this->user_name, $gift_id, $type );
 
 		// Add to new gift count cache for receiving user
-		$this->incNewGiftCount( $user_id_to );
+		$giftCount = new UserGiftCount( $wgMemc, $user_id_to );
+		$giftCount->increase();
 
 		$stats = new UserStatsTrack( $user_id_to, $user_to );
 		$stats->incStatField( 'gift_rec' );
@@ -130,22 +131,31 @@ class UserGifts {
 	}
 
 	public function clearAllUserGiftStatus() {
+		global $wgMemc;
+
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update( 'user_gift',
 			/* SET */array( 'ug_status' => 0 ),
 			/* WHERE */array( 'ug_user_id_to' => $this->user_id ),
 			__METHOD__
 		);
-		$this->clearNewGiftCountCache( $this->user_id );
+
+		$giftCount = new UserGiftCount( $wgMemc, $this->user_id );
+		$giftCount->clear();
 	}
 
-	static function clearUserGiftStatus( $id ) {
+	public function clearUserGiftStatus( $id ) {
+		global $wgMemc;
+
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update( 'user_gift',
 			/* SET */array( 'ug_status' => 0 ),
 			/* WHERE */array( 'ug_id' => $id ),
 			__METHOD__
 		);
+
+		$giftCount = new UserGiftCount( $wgMemc, $this->user_id );
+		$giftCount->decrease();
 	}
 
 	/**
@@ -223,117 +233,6 @@ class UserGifts {
 		}
 
 		return $gift;
-	}
-
-	/**
-	 * Increase the amount of new gifts for the user with ID = $user_id.
-	 *
-	 * @param int $user_id User ID for the user
-	 * whose gift count we're going to increase.
-	 */
-	public function incNewGiftCount( $user_id ) {
-		global $wgMemc;
-		$key = $wgMemc->makeKey( 'user_gifts', 'new_count', $user_id );
-		$wgMemc->incr( $key );
-	}
-
-	/**
-	 * Decrease the amount of new gifts for the user with ID = $user_id.
-	 *
-	 * @param int $user_id User ID for the user
-	 * whose gift count we're going to decrease.
-	 */
-	public function decNewGiftCount( $user_id ) {
-		global $wgMemc;
-		$key = $wgMemc->makeKey( 'user_gifts', 'new_count', $user_id );
-		$wgMemc->decr( $key );
-	}
-
-	/**
-	 * Clear the new gift counter for the user with ID = $user_id.
-	 * This is done by setting the value of the memcached key to 0.
-	 */
-	public function clearNewGiftCountCache() {
-		global $wgMemc;
-		$key = $wgMemc->makeKey( 'user_gifts', 'new_count', $this->user_id );
-		$wgMemc->set( $key, 0 );
-	}
-
-	/**
-	 * Get the amount of new gifts for the user with ID = $user_id
-	 * from memcached. If successful, returns the amount of new gifts.
-	 *
-	 * @param int $user_id User ID for the user
-	 * whose gifts we're going to fetch.
-	 * @return int Amount of new gifts
-	 */
-	static function getNewGiftCountCache( $user_id ) {
-		global $wgMemc;
-		$key = $wgMemc->makeKey( 'user_gifts', 'new_count', $user_id );
-		$data = $wgMemc->get( $key );
-		if ( $data != '' ) {
-			$logger = LoggerFactory::getInstance( 'SocialProfile' );
-			$logger->debug( "Got new gift count of {data} for id {user_id} from cache\n", [
-				'data' => $data,
-				'user_id' => $user_id
-			] );
-
-			return $data;
-		}
-	}
-
-	/**
-	 * Get the amount of new gifts for the user with ID = $user_id.
-	 * First tries cache (memcached) and if that succeeds, returns the cached
-	 * data. If that fails, the count is fetched from the database.
-	 * UserWelcome.php calls this function.
-	 *
-	 * @param int $user_id User ID for the user
-	 * whose gifts we're going to fetch.
-	 * @return int Amount of new gifts
-	 */
-	static function getNewGiftCount( $user_id ) {
-		$data = self::getNewGiftCountCache( $user_id );
-
-		if ( $data != '' ) {
-			$count = $data;
-		} else {
-			$count = self::getNewGiftCountDB( $user_id );
-		}
-		return $count;
-	}
-
-	/**
-	 * Get the amount of new gifts for the user with ID = $user_id from the
-	 * database and stores it in memcached.
-	 *
-	 * @param int $user_id User ID for the user
-	 * whose gifts we're going to fetch.
-	 * @return int Amount of new gifts
-	 */
-	static function getNewGiftCountDB( $user_id ) {
-		$logger = LoggerFactory::getInstance( 'SocialProfile' );
-		$logger->debug( "Got new gift count for id {user_id} from DB\n", [
-			'user_id' => $user_id
-		] );
-
-		global $wgMemc;
-		$key = $wgMemc->makeKey( 'user_gifts', 'new_count', $user_id );
-		$dbr = wfGetDB( DB_REPLICA );
-		$newGiftCount = 0;
-		$s = $dbr->selectRow(
-			'user_gift',
-			array( 'COUNT(*) AS count' ),
-			array( 'ug_user_id_to' => $user_id, 'ug_status' => 1 ),
-			__METHOD__
-		);
-		if ( $s !== false ) {
-			$newGiftCount = $s->count;
-		}
-
-		$wgMemc->set( $key, $newGiftCount );
-
-		return $newGiftCount;
 	}
 
 	public function getUserGiftList( $type, $limit = 0, $page = 0 ) {

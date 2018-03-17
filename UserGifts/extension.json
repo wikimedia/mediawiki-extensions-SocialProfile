@@ -18,6 +18,7 @@
 	},
 	"AutoloadClasses": {
 		"Gifts": "includes/Gifts.php",
+		"UserGiftCount": "includes/UserGiftCount.php",
 		"UserGiftIcon": "includes/UserGiftIcon.php",
 		"UserGiftListLookup": "includes/UserGiftListLookup.php",
 		"UserGifts": "includes/UserGifts.php",

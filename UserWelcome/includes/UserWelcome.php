@@ -151,8 +151,8 @@ class UserWelcome {
 	function getNewGiftLink() {
 		global $wgUser, $wgMemc;
 
-		$systemGiftCount = new SystemGiftCount( $wgMemc, $wgUser->getId() );
-		$giftCount = $systemGiftCount->get();
+		$userGiftCount = new UserGiftCount( $wgMemc, $wgUser->getId() );
+		$giftCount = $userGiftCount->get();
 
 		$gifts_title = SpecialPage::getTitleFor( 'ViewGifts' );
 		$output = '';
@@ -172,19 +172,21 @@ class UserWelcome {
 	}
 
 	function getNewSystemGiftLink() {
-		global $wgUser;
+		global $wgUser, $wgMemc;
 
-		$gift_count = UserSystemGifts::getNewSystemGiftCount( $wgUser->getId() );
+		$systemGiftCount = new SystemGiftCount( $wgMemc, $wgUser->getId() );
+		$giftCount = $systemGiftCount->get();
+
 		$gifts_title = SpecialPage::getTitleFor( 'ViewSystemGifts' );
 		$output = '';
 
-		if ( $gift_count > 0 ) {
+		if ( $giftCount > 0 ) {
 			$userActivityIcon = new UserActivityIcon( 'system_gift' );
 			$icon = $userActivityIcon->getIconHTML();
 
 			$output .= '<p>' . $icon .
 				'<span class="profile-on"><a href="' . htmlspecialchars( $gifts_title->getFullURL() ) . '" rel="nofollow">'
-					. wfMessage( 'mp-request-new-award', $gift_count )->parse() .
+					. wfMessage( 'mp-request-new-award', $giftCount )->parse() .
 				'</a></span>
 			</p>';
 		}
