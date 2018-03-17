@@ -115,15 +115,17 @@ class UserWelcome {
 	}
 
 	function getRelationshipRequestLink() {
-		global $wgUser;
+		global $wgUser, $wgMemc;
 
-		$friend_request_count = UserRelationship::getOpenRequestCount( $wgUser->getId(), 1 );
-		$foe_request_count = UserRelationship::getOpenRequestCount( $wgUser->getId(), 2 );
+		$requestCount = new RelationshipRequestCount( $wgMemc, $wgUser->getId() );
+		$friendRequestCount = $requestCount->setFriends()->get();
+		$foeRequestCount = $requestCount->setFoes()->get();
+
 		$relationship_request_link = SpecialPage::getTitleFor( 'ViewRelationshipRequests' );
 
 		$output = '';
 
-		if ( $friend_request_count > 0 ) {
+		if ( $friendRequestCount > 0 ) {
 			$userFriendIcon = new UserActivityIcon( 'friend' );
 			$friendIcon = $userFriendIcon->getIconHTML();
 
@@ -133,7 +135,7 @@ class UserWelcome {
 			</p>';
 		}
 
-		if ( $foe_request_count > 0 ) {
+		if ( $foeRequestCount > 0 ) {
 			$userFoeIcon = new UserActivityIcon( 'foe' );
 			$foeIcon = $userFoeIcon->getIconHTML();
 

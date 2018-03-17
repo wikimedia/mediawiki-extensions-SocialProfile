@@ -1,7 +1,5 @@
 <?php
 
-use MediaWiki\Logger\LoggerFactory;
-
 /**
  * Functions for managing relationship data
  */
@@ -32,6 +30,8 @@ class UserRelationship {
 	 * @return int ID of the new relationship request
 	 */
 	public function addRelationshipRequest( $userTo, $type, $message, $email = true ) {
+		global $wgMemc;
+
 		$userIdTo = User::idFromName( $userTo );
 		$dbw = wfGetDB( DB_MASTER );
 
@@ -49,7 +49,8 @@ class UserRelationship {
 		);
 		$requestId = $dbw->insertId();
 
-		$this->incNewRequestCount( $userIdTo, $type );
+		$requestCount = new RelationshipRequestCount( $wgMemc, $userIdTo );
+		$requestCount->setType( $type )->increase();
 
 		if ( $email ) {
 			$this->sendRelationshipRequestEmail( $userIdTo, $this->user_name, $type );
@@ -407,8 +408,11 @@ class UserRelationship {
 	 * @param int $id Relationship request ID number
 	 */
 	public function deleteRequest( $id ) {
+		global $wgMemc;
+
 		$request = $this->getRequest( $id );
-		$this->decNewRequestCount( $this->user_id, $request[0]['rel_type'] );
+		$requestCount = new RelationshipRequestCount( $wgMemc, $this->user_id );
+		$requestCount->setType( $request[0]['rel_type'] )->decrease();
 
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->delete(
@@ -535,127 +539,6 @@ class UserRelationship {
 		}
 
 		return $request;
-	}
-
-	/**
-	 * Increase the amount of open relationship requests for a user.
-	 *
-	 * @param int $userId User ID for whom to get the requests
-	 * @param int $relType
-	 * - 1 for friends
-	 * - 2 (or anything else but 1) for foes
-	 */
-	private function incNewRequestCount( $userId, $relType ) {
-		global $wgMemc;
-		$key = $wgMemc->makeKey( 'user_relationship', 'open_request', $relType, $userId );
-		$wgMemc->incr( $key );
-	}
-
-	/**
-	 * Decrease the amount of open relationship requests for a user.
-	 *
-	 * @param int $userId User ID for whom to get the requests
-	 * @param int $relType
-	 * - 1 for friends
-	 * - 2 (or anything else but 1) for foes
-	 */
-	private function decNewRequestCount( $userId, $relType ) {
-		global $wgMemc;
-		$key = $wgMemc->makeKey( 'user_relationship', 'open_request', $relType, $userId );
-		$wgMemc->decr( $key );
-	}
-
-	/**
-	 * Get the amount of open user relationship requests for a user from the
-	 * database and cache it.
-	 *
-	 * @param int $userId User ID for whom to get the requests
-	 * @param int $relType
-	 * - 1 for friends
-	 * - 2 (or anything else but 1) for foes
-	 * @return int
-	 */
-	static function getOpenRequestCountDB( $userId, $relType ) {
-		global $wgMemc;
-
-		$logger = LoggerFactory::getInstance( 'SocialProfile' );
-		$logger->debug( "Got open request count (type={relType}) for id {userId} from DB\n", [
-			'rel_type' => $relType,
-			'user_id' => $userId
-		] );
-
-		$key = $wgMemc->makeKey( 'user_relationship', 'open_request', $relType, $userId );
-		$dbr = wfGetDB( DB_REPLICA );
-		$requestCount = 0;
-
-		$s = $dbr->selectRow(
-			'user_relationship_request',
-			array( 'COUNT(*) AS count' ),
-			array(
-				'ur_user_id_to' => $userId,
-				'ur_status' => 0,
-				'ur_type' => $relType
-			),
-			__METHOD__
-		);
-
-		if ( $s !== false ) {
-			$requestCount = $s->count;
-		}
-
-		$wgMemc->set( $key, $requestCount );
-
-		return $requestCount;
-	}
-
-	/**
-	 * Get the amount of open user relationship requests from cache.
-	 *
-	 * @param int $userId User ID for whom to get the requests
-	 * @param int $relType
-	 * - 1 for friends
-	 * - 2 (or anything else but 1) for foes
-	 * @return int
-	 */
-	static function getOpenRequestCountCache( $userId, $relType ) {
-		global $wgMemc;
-		$key = $wgMemc->makeKey( 'user_relationship', 'open_request', $relType, $userId );
-		$data = $wgMemc->get( $key );
-		if ( $data != '' ) {
-			$logger = LoggerFactory::getInstance( 'SocialProfile' );
-			$logger->debug( "Got open request count of {data} (type={relType}) for id {userId} from cache\n", [
-				'data' => $data,
-				'rel_type' => $relType,
-				'user_id' => $userId
-			] );
-
-			return $data;
-		}
-	}
-
-	/**
-	 * Get the amount of open user relationship requests; first tries cache,
-	 * and if that fails, fetches the count from the database.
-	 *
-	 * @param int $userId User ID for whom to get the requests
-	 * @param int $relType
-	 * - 1 for friends
-	 * - 2 (or anything else but 1) for foes
-	 * @return int
-	 */
-	static function getOpenRequestCount( $userId, $relType ) {
-		$data = self::getOpenRequestCountCache( $userId, $relType );
-
-		if ( $data != '' ) {
-			if ( $data == -1 ) {
-				$data = 0;
-			}
-			$count = $data;
-		} else {
-			$count = self::getOpenRequestCountDB( $userId, $relType );
-		}
-
-		return $count;
 	}
 
 	/**

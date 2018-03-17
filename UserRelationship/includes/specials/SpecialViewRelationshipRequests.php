@@ -66,8 +66,6 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		$out->addModules( 'ext.socialprofile.userrelationship.js' );
 
 		$rel = new UserRelationship( $user->getName() );
-		$friend_request_count = $rel->getOpenRequestCount( $user->getId(), 1 );
-		$foe_request_count = $rel->getOpenRequestCount( $user->getId(), 2 );
 
 		if ( $this->getRequest()->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
 			$_SESSION['alreadysubmitted'] = true;
