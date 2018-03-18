@@ -1,7 +1,4 @@
 <?php
-
-use MediaWiki\Logger\LoggerFactory;
-
 /**
  * Functions for managing user board data
  */
@@ -48,7 +45,11 @@ class UserBoard {
 		// Send e-mail notification (if user is not writing on own board)
 		if ( $user_id_from != $user_id_to ) {
 			$this->sendBoardNotificationEmail( $user_id_to, $user_name_from );
-			$this->incNewMessageCount( $user_id_to );
+
+			global $wgMemc;
+
+			$messageCount = new UserBoardMessageCount( $wgMemc, $user_id_to );
+			$messageCount->increase();
 		}
 
 		$stats = new UserStatsTrack( $user_id_to, $user_name_to );
@@ -112,113 +113,6 @@ class UserBoard {
 
 			$user->sendMail( $subject, $body );
 		}
-	}
-
-	/**
-	 * Increase the amount of new messages for $user_id
-	 *
-	 * @param $user_id int User ID for the user
-	 * whose message count we're going to increase.
-	 */
-	public function incNewMessageCount( $user_id ) {
-		global $wgMemc;
-		$key = $wgMemc->makeKey( 'user', 'newboardmessage', $user_id );
-		$wgMemc->incr( $key );
-	}
-
-	/**
-	 * Clear the new board messages counter for the user with ID = $user_id.
-	 * This is done by setting the value of the memcached key to 0.
-	 *
-	 * @param mixed $user_id User ID for the user
-	 * whose message count we're going to clear.
-	 */
-	static function clearNewMessageCount( $user_id ) {
-		global $wgMemc;
-		$key = $wgMemc->makeKey( 'user', 'newboardmessage', $user_id );
-		$wgMemc->set( $key, 0 );
-	}
-
-	/**
-	 * Get the amount of new board messages for the user with ID = $user_id
-	 * from memcached. If successful, returns the amount of new messages.
-	 *
-	 * @param int $user_id User ID for the user
-	 * whose messages we're going to fetch.
-	 * @return int Amount of new messages
-	 */
-	static function getNewMessageCountCache( $user_id ) {
-		global $wgMemc;
-		$key = $wgMemc->makeKey( 'user', 'newboardmessage', $user_id );
-		$data = $wgMemc->get( $key );
-
-		if ( $data != '' ) {
-			$logger = LoggerFactory::getInstance( 'SocialProfile' );
-			$logger->debug( "Got new message count of {data} for id {user_id} from cache\n", [
-				'data' => $data,
-				'user_id' => $user_id
-			] );
-
-			return $data;
-		}
-	}
-
-	/**
-	 * Get the amount of new board messages for the user with ID = $user_id
-	 * from the database.
-	 *
-	 * @param int $user_id User ID for the user
-	 * whose messages we're going to fetch.
-	 * @return int Amount of new messages
-	 */
-	static function getNewMessageCountDB( $user_id ) {
-		global $wgMemc;
-
-		$logger = LoggerFactory::getInstance( 'SocialProfile' );
-		$logger->debug( "Got new message count for id {user_id} from DB\n", [
-			'user_id' => $user_id
-		] );
-
-		$key = $wgMemc->makeKey( 'user', 'newboardmessage', $user_id );
-		$newCount = 0;
-		/*
-		$dbw = wfGetDB( DB_MASTER );
-		$s = $dbw->selectRow(
-			'user_board',
-			array( 'COUNT(*) AS count' ),
-			array( 'ug_user_id_to' => $user_id, 'ug_status' => 1 ),
-			__METHOD__
-		);
-		if ( $s !== false ) {
-			$newCount = $s->count;
-		}
-		*/
-
-		$wgMemc->set( $key, $newCount );
-
-		return $newCount;
-	}
-
-	/**
-	 * Get the amount of new board messages for the user with ID = $user_id.
-	 * First tries cache (memcached) and if that succeeds, returns the cached
-	 * data. If that fails, the count is fetched from the database.
-	 * UserWelcome.php calls this function.
-	 *
-	 * @param $user_id int User ID for the user
-	 * whose messages we're going to fetch.
-	 * @return int Amount of new messages
-	 */
-	static function getNewMessageCount( $user_id ) {
-		$data = self::getNewMessageCountCache( $user_id );
-
-		if ( $data != '' ) {
-			$count = $data;
-		} else {
-			$count = self::getNewMessageCountDB( $user_id );
-		}
-
-		return $count;
 	}
 
 	/**

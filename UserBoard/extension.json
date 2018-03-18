@@ -19,6 +19,7 @@
 		"SpecialViewUserBoard": "includes/specials/SpecialUserBoard.php",
 		"UserBoard": "includes/UserBoard.php",
 		"UserBoardHooks": "includes/UserBoardHooks.php",
+		"UserBoardMessageCount": "includes/UserBoardMessageCount.php",
 		"ApiDeleteUserBoardMessage": "includes/api/ApiDeleteUserBoardMessage.php",
 		"ApiSendUserBoardMessage": "includes/api/ApiSendUserBoardMessage.php"
 	},

@@ -195,12 +195,13 @@ class UserWelcome {
 	}
 
 	function getNewMessagesLink() {
-		global $wgUser;
+		global $wgUser, $wgMemc;
 
-		$new_messages = UserBoard::getNewMessageCount( $wgUser->getId() );
+		$messageCount = new UserBoardMessageCount( $wgMemc, $wgUser->getId() );
+		$newMessages = $messageCount->get();
 		$output = '';
 
-		if ( $new_messages > 0 ) {
+		if ( $newMessages > 0 ) {
 			$userActivityIcon = new UserActivityIcon( 'user_message' );
 			$icon = $userActivityIcon->getIconHTML();
 

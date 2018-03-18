@@ -130,7 +130,10 @@ class SpecialViewUserBoard extends SpecialPage {
 			if ( !( $currentUser->getName() == $user_name ) ) {
 				$out->setPageTitle( $this->msg( 'userboard_owner', $user_name )->parse() );
 			} else {
-				$b->clearNewMessageCount( $currentUser->getId() );
+				global $wgMemc;
+
+				$messageCount = new UserBoardMessageCount( $wgMemc, $currentUser->getId() );
+				$messageCount->clear();
 				$out->setPageTitle( $this->msg( 'userboard_yourboard' )->parse() );
 			}
 		} else {
