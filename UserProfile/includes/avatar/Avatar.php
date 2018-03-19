@@ -70,6 +70,7 @@ class wAvatar {
 		$defaultParams = array(
 			'src' => "{$wgUploadPath}/avatars/{$this->getAvatarImage()}",
 			'border' => '0',
+			'class' => 'mw-socialprofile-avatar'
 		);
 		// Allow callers to add a different alt attribute and only add this
 		// default one if no alt attribute was provided in $extraParams
