@@ -91,8 +91,14 @@ $specialPageAliases['bgn'] = array(
 
 /** Bosnian (bosanski) */
 $specialPageAliases['bs'] = array(
-	'AddRelationship' => array( 'DodavanjeVeze' ),
-	'ViewRelationships' => array( 'PregledVeza' ),
+	'AddRelationship' => array( 'Dodaj_vezu', 'DodavanjeVeza' ),
+	'RemoveAvatar' => array( 'Ukloni_sličicu' ),
+	'RemoveRelationship' => array( 'Ukloni_vezu' ),
+	'TopUsers' => array( 'Top_korisnici' ),
+	'UpdateEditCounts' => array( 'Ažuriraj_broj_izmjena' ),
+	'UpdateProfile' => array( 'Ažuriraj_profil' ),
+	'ViewRelationshipRequests' => array( 'Prikaži_zahtjevane_veze' ),
+	'ViewRelationships' => array( 'Prikaži_vjezu', 'PregledVeza' ),
 );
 
 /** German (Deutsch) */
@@ -441,7 +447,7 @@ $specialPageAliases['sk'] = array(
 	'ViewRelationships' => array( 'ZobraziťVzťahy' ),
 );
 
-/** Serbian (Cyrillic script) (српски (ћирилица)‎) */
+/** Serbian (Cyrillic script) (српски (ћирилица)) */
 $specialPageAliases['sr-ec'] = array(
 	'AddRelationship' => array( 'Додај_везу' ),
 	'RemoveAvatar' => array( 'Уклони_сличицу' ),
@@ -451,6 +457,18 @@ $specialPageAliases['sr-ec'] = array(
 	'UpdateProfile' => array( 'Ажурирај_профил' ),
 	'ViewRelationshipRequests' => array( 'Прикажи_захтеве_везе' ),
 	'ViewRelationships' => array( 'Прикажи_везу' ),
+);
+
+/** Serbian (Latin script) (srpski (latinica)) */
+$specialPageAliases['sr-el'] = array(
+	'AddRelationship' => array( 'Dodaj_vezu' ),
+	'RemoveAvatar' => array( 'Ukloni_sličicu' ),
+	'RemoveRelationship' => array( 'Ukloni_vezu' ),
+	'TopUsers' => array( 'Top_korisnici' ),
+	'UpdateEditCounts' => array( 'Ažuriraj_broj_izmena' ),
+	'UpdateProfile' => array( 'Ažuriraj_profil' ),
+	'ViewRelationshipRequests' => array( 'Prikaži_zahtevane_veze' ),
+	'ViewRelationships' => array( 'Prikaži_vezu' ),
 );
 
 /** Swedish (svenska) */
@@ -503,7 +521,7 @@ $specialPageAliases['tr'] = array(
 	'ViewRelationships' => array( 'İlişkileriGör' ),
 );
 
-/** Simplified Chinese (中文（简体）‎) */
+/** Simplified Chinese (中文（简体)) */
 $specialPageAliases['zh-hans'] = array(
 	'AddRelationship' => array( '添加关系' ),
 	'EditProfile' => array( '编辑简介' ),
@@ -524,7 +542,7 @@ $specialPageAliases['zh-hans'] = array(
 	'ViewRelationships' => array( '查看关系' ),
 );
 
-/** Traditional Chinese (中文（繁體）‎) */
+/** Traditional Chinese (中文（繁體)) */
 $specialPageAliases['zh-hant'] = array(
 	'AddRelationship' => array( '加入關聯' ),
 	'EditProfile' => array( '編輯簡介' ),
