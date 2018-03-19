@@ -182,21 +182,6 @@ class UserProfile {
 	}
 
 	/**
-	 * Get the user's birthday year by exploding the given birthday in three
-	 * parts and returning the first one.
-	 *
-	 * @param string $birthday Birthday in YYYY-MM-DD format
-	 * @return string Birthyear or '00'
-	 */
-	function getBirthdayYear( $birthday ) {
-		$dob = explode( '-', $birthday );
-		if ( count( $dob ) == 3 ) {
-			return $dob[0];
-		}
-		return '00';
-	}
-
-	/**
 	 * How many % of this user's profile is complete?
 	 * Currently unused, I think that this might've been used in some older
 	 * ArmchairGM code, but this looks useful enough to be kept around.
