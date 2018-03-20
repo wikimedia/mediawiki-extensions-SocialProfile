@@ -1635,7 +1635,7 @@ class UserProfilePage extends Article {
 			<div class="visualClear"></div>
 			<div class="user-gift-container">';
 
-			foreach ( $system_gifts as $gift ) {
+			foreach ( $systemGifts as $gift ) {
 				if ( $gift['status'] == 1 && $user_name == $user->getName() ) {
 					$sg->clearUserGiftStatus( $gift['id'] );
 					$wgMemc->delete( $sg_key );
