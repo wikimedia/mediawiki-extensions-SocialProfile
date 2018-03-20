@@ -131,7 +131,7 @@ class UserWelcome {
 
 			$output .= '<p>' . $friendIcon .
 				'<span class="profile-on"><a href="' . htmlspecialchars( $relationship_request_link->getFullURL() ) . '" rel="nofollow">'
-				. wfMessage( 'mp-request-new-friend', $friend_request_count )->parse() . '</a></span>
+				. wfMessage( 'mp-request-new-friend', $friendRequestCount )->parse() . '</a></span>
 			</p>';
 		}
 
@@ -141,7 +141,7 @@ class UserWelcome {
 
 			$output .= '<p>' . $foeIcon .
 				'<span class="profile-on"><a href="' . htmlspecialchars( $relationship_request_link->getFullURL() ) . '" rel="nofollow">'
-				. wfMessage( 'mp-request-new-foe', $foe_request_count )->parse() . '</a></span>
+				. wfMessage( 'mp-request-new-foe', $foeRequestCount )->parse() . '</a></span>
 			</p>';
 		}
 
