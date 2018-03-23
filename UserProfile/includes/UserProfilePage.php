@@ -96,7 +96,7 @@ class UserProfilePage extends Article {
 		}
 
 		$out->addHTML( '<div id="profile-top">' );
-		$out->addHTML( $this->getProfileHeader( $this->user_id, $this->user_name ) );
+		$out->addHTML( $this->getProfileHeader() );
 		$out->addHTML( '<div class="visualClear"></div></div>' );
 
 		// User does not want social profile for User:user_name, so we just
@@ -123,14 +123,14 @@ class UserProfilePage extends Article {
 			] );
 		}
 
-		$out->addHTML( $this->getRelationships( $this->user_name, 1 ) );
-		$out->addHTML( $this->getRelationships( $this->user_name, 2 ) );
-		$out->addHTML( $this->getGifts( $this->user_name ) );
-		$out->addHTML( $this->getAwards( $this->user_name ) );
-		$out->addHTML( $this->getCustomInfo( $this->user_name ) );
-		$out->addHTML( $this->getInterests( $this->user_name ) );
-		$out->addHTML( $this->getFanBoxes( $this->user_name ) );
-		$out->addHTML( $this->getUserStats( $this->user_id, $this->user_name ) );
+		$out->addHTML( $this->getRelationships( 1 ) );
+		$out->addHTML( $this->getRelationships( 2 ) );
+		$out->addHTML( $this->getGifts() );
+		$out->addHTML( $this->getAwards() );
+		$out->addHTML( $this->getCustomInfo() );
+		$out->addHTML( $this->getInterests() );
+		$out->addHTML( $this->getFanBoxes() );
+		$out->addHTML( $this->getUserStats() );
 
 		if ( !Hooks::run( 'UserProfileEndLeft', array( &$userProfilePage ) ) ) {
 			$logger->debug( "{method}: UserProfileEndLeft messed up profile!\n", [
@@ -151,16 +151,16 @@ class UserProfilePage extends Article {
 			] );
 		}
 
-		$out->addHTML( $this->getPersonalInfo( $this->user_id, $this->user_name ) );
-		$out->addHTML( $this->getActivity( $this->user_name ) );
+		$out->addHTML( $this->getPersonalInfo() );
+		$out->addHTML( $this->getActivity() );
 		// Hook for BlogPage
 		if ( !Hooks::run( 'UserProfileRightSideAfterActivity', array( $this ) ) ) {
 			$logger->debug( "{method}: UserProfileRightSideAfterActivity hook messed up profile!\n", [
 				'method' => __METHOD__
 			] );
 		}
-		$out->addHTML( $this->getCasualGames( $this->user_id, $this->user_name ) );
-		$out->addHTML( $this->getUserBoard( $this->user_id, $this->user_name ) );
+		$out->addHTML( $this->getCasualGames() );
+		$out->addHTML( $this->getUserBoard() );
 
 		if ( !Hooks::run( 'UserProfileEndRight', array( &$userProfilePage ) ) ) {
 			$logger->debug( "{method}: UserProfileEndRight messed up profile!\n", [
@@ -188,7 +188,7 @@ class UserProfilePage extends Article {
 		return $output;
 	}
 
-	function getUserStats( $user_id, $user_name ) {
+	function getUserStats() {
 		global $wgUserProfileDisplay;
 
 		if ( $wgUserProfileDisplay['stats'] == false ) {
@@ -196,6 +196,9 @@ class UserProfilePage extends Article {
 		}
 
 		$output = ''; // Prevent E_NOTICE
+
+		$user_id = $this->user_id;
+		$user_name = $user_name;
 
 		$stats = new UserStats( $user_id, $user_name );
 		$stats_data = $stats->getUserStats();
@@ -421,16 +424,17 @@ class UserProfilePage extends Article {
 	 * has created if $wgUserProfileDisplay['games'] is set to true and the
 	 * PictureGame, PollNY and QuizGame extensions have been installed.
 	 *
-	 * @param int $user_id User ID number
-	 * @param string $user_name User name
 	 * @return string HTML or nothing if this feature isn't enabled
 	 */
-	function getCasualGames( $user_id, $user_name ) {
+	function getCasualGames() {
 		global $wgUserProfileDisplay;
 
 		if ( $wgUserProfileDisplay['games'] == false ) {
 			return '';
 		}
+
+		$user_id = $this->user_id;
+		$user_name = $this->user_name;
 
 		$output = '';
 
@@ -587,8 +591,11 @@ class UserProfilePage extends Article {
 		return $output;
 	}
 
-	function getPersonalInfo( $user_id, $user_name ) {
+	function getPersonalInfo() {
 		global $wgUserProfileDisplay;
+
+		$user_id = $this->user_id;
+		$user_name = $this->user_name;
 
 		$context = $this->getContext();
 		$user = $context->getUser();
@@ -602,7 +609,7 @@ class UserProfilePage extends Article {
 		$user_level = new UserLevel( $stats_data['points'] );
 		$level_link = Title::makeTitle( NS_HELP, wfMessage( 'user-profile-userlevels-link' )->inContentLanguage()->text() );
 
-		$this->initializeProfileData( $user_name );
+		$this->initializeProfileData();
 		$profile_data = $this->profile_data;
 
 		$defaultCountry = wfMessage( 'user-profile-default-country' )->inContentLanguage()->text();
@@ -772,11 +779,12 @@ class UserProfilePage extends Article {
 	/**
 	 * Get the custom info (site-specific stuff) for a given user.
 	 *
-	 * @param string $user_name User name whose custom info we should fetch
 	 * @return string HTML
 	 */
-	function getCustomInfo( $user_name ) {
+	function getCustomInfo() {
 		global $wgUserProfileDisplay;
+
+		$user_name = $this->user_name;
 
 		$context = $this->getContext();
 		$user = $context->getUser();
@@ -785,7 +793,7 @@ class UserProfilePage extends Article {
 			return '';
 		}
 
-		$this->initializeProfileData( $user_name );
+		$this->initializeProfileData();
 
 		$profile_data = $this->profile_data;
 
@@ -854,11 +862,12 @@ class UserProfilePage extends Article {
 	 * Get the interests (favorite movies, TV shows, music, etc.) for a given
 	 * user.
 	 *
-	 * @param string $user_name user name whose interests we should fetch
 	 * @return string HTML
 	 */
-	function getInterests( $user_name ) {
+	function getInterests() {
 		global $wgUserProfileDisplay;
+
+		$user_name = $this->user_name;
 
 		$context = $this->getContext();
 		$user = $context->getUser();
@@ -867,7 +876,7 @@ class UserProfilePage extends Article {
 			return '';
 		}
 
-		$this->initializeProfileData( $user_name );
+		$this->initializeProfileData();
 
 		$profile_data = $this->profile_data;
 		$joined_data = $profile_data['movies'] . $profile_data['tv'] .
@@ -950,11 +959,12 @@ class UserProfilePage extends Article {
 	 * points and user level (if enabled in the site configuration) and lots
 	 * more.
 	 *
-	 * @param int $user_id User ID
-	 * @param string $user_name User name
 	 */
-	function getProfileHeader( $user_id, $user_name ) {
+	function getProfileHeader() {
 		global $wgUserLevels;
+
+		$user_id = $this->user_id;
+		$user_name = $this->user_name;
 
 		$context = $this->getContext();
 		$userContext = $context->getUser();
@@ -965,7 +975,7 @@ class UserProfilePage extends Article {
 		$user_level = new UserLevel( $stats_data['points'] );
 		$level_link = Title::makeTitle( NS_HELP, wfMessage( 'user-profile-userlevels-link' )->inContentLanguage()->text() );
 
-		$this->initializeProfileData( $user_name );
+		$this->initializeProfileData();
 		$profile_data = $this->profile_data;
 
 		// Variables and other crap
@@ -1174,14 +1184,15 @@ class UserProfilePage extends Article {
 	/**
 	 * Get the relationships for a given user.
 	 *
-	 * @param string $user_name Name of the user
 	 * whose relationships we want to fetch
 	 * @param int $rel_type
 	 * - 1 for friends
 	 * - 2 (or anything else than 1) for foes
 	 */
-	function getRelationships( $user_name, $rel_type ) {
+	function getRelationships( $rel_type ) {
 		global $wgMemc, $wgUserProfileDisplay;
+
+		$user_name = $this->user_name;
 
 		$context = $this->getContext();
 		$language = $context->getLanguage();
@@ -1286,15 +1297,16 @@ class UserProfilePage extends Article {
 	/**
 	 * Gets the recent social activity for a given user.
 	 *
-	 * @param string $user_name Name of the user whose activity we want to fetch
 	 */
-	function getActivity( $user_name ) {
+	function getActivity() {
 		global $wgUserProfileDisplay;
 
 		// If not enabled in site settings, don't display
 		if ( $wgUserProfileDisplay['activity'] == false ) {
 			return '';
 		}
+
+		$user_name = $this->user_name;
 
 		$output = '';
 
@@ -1472,8 +1484,10 @@ class UserProfilePage extends Article {
 		return $output;
 	}
 
-	function getGifts( $user_name ) {
+	function getGifts() {
 		global $wgMemc, $wgUserProfileDisplay;
+
+		$user_name = $this->user_name;
 
 		$context = $this->getContext();
 		$user = $context->getUser();
@@ -1568,8 +1582,10 @@ class UserProfilePage extends Article {
 		return $output;
 	}
 
-	function getAwards( $user_name ) {
+	function getAwards() {
 		global $wgMemc, $wgUserProfileDisplay;
+
+		$user_name = $this->user_name;
 
 		$context = $this->getContext();
 		$user = $context->getUser();
@@ -1669,13 +1685,12 @@ class UserProfilePage extends Article {
 
 	/**
 	 * Get the user board for a given user.
-	 *
-	 * @param int $user_id User's ID number
-	 * @param string $user_name User name
 	 */
-	function getUserBoard( $user_id, $user_name ) {
+	function getUserBoard() {
 		global $wgUserProfileDisplay;
 
+		$user_id = $this->user_id;
+		$user_name = $this->user_name;
 		$context = $this->getContext();
 		$out = $context->getOutput();
 		$user = $context->getUser();
@@ -1791,11 +1806,12 @@ class UserProfilePage extends Article {
 	 * $wgUserProfileDisplay['userboxes'] = true; and the FanBoxes extension is
 	 * installed.
 	 *
-	 * @param string $user_name User name
 	 * @return string HTML
 	 */
-	function getFanBoxes( $user_name ) {
+	function getFanBoxes() {
 		global $wgMemc, $wgUserProfileDisplay, $wgEnableUserBoxes;
+
+		$user_name = $this->user_name;
 
 		$context = $this->getContext();
 		$out = $context->getOutput();
@@ -2011,12 +2027,10 @@ class UserProfilePage extends Article {
 	/**
 	 * Initialize UserProfile data for the given user if that hasn't been done
 	 * already.
-	 *
-	 * @param string $username Name of the user whose profile data to initialize
 	 */
-	private function initializeProfileData( $username ) {
+	private function initializeProfileData() {
 		if ( !$this->profile_data ) {
-			$profile = new UserProfile( $username );
+			$profile = new UserProfile( $this->user_name );
 			$this->profile_data = $profile->getProfile();
 		}
 	}
