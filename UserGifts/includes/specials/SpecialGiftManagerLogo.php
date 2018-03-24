@@ -20,9 +20,6 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	public $fileExtensions;
 	public $gift_id;
 
-	/**
-	 * Constructor
-	 */
 	public function __construct() {
 		parent::__construct( 'GiftManagerLogo' );
 	}

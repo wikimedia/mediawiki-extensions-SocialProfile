@@ -12,9 +12,6 @@ use MediaWiki\Logger\LoggerFactory;
  */
 class TopFansByStat extends UnlistedSpecialPage {
 
-	/**
-	 * Constructor
-	 */
 	public function __construct() {
 		parent::__construct( 'TopFansByStatistic' );
 	}

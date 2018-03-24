@@ -9,9 +9,6 @@ class UserGifts {
 	public $user_id; # Text form (spaces not underscores) of the main part
 	public $user_name; # Text form (spaces not underscores) of the main part
 
-	/**
-	 * Constructor
-	 */
 	public function __construct( $username ) {
 		$title1 = Title::newFromDBkey( $username );
 		$this->user_name = $title1->getText();

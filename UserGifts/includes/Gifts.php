@@ -6,9 +6,6 @@
  */
 class Gifts {
 
-	/**
-	 * Constructor
-	 */
 	public function __construct() {}
 
 	/**

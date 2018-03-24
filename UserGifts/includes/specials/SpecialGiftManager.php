@@ -6,9 +6,6 @@
  */
 class GiftManager extends SpecialPage {
 
-	/**
-	 * Constructor
-	 */
 	public function __construct() {
 		parent::__construct( 'GiftManager'/*class*/, 'giftadmin'/*restriction*/ );
 	}

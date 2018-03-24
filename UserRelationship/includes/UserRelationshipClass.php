@@ -7,9 +7,6 @@ class UserRelationship {
 	public $user_id;
 	public $user_name;
 
-	/**
-	 * Constructor
-	 */
 	public function __construct( $username ) {
 		$title1 = Title::newFromDBkey( $username );
 		$this->user_name = $title1->getText();

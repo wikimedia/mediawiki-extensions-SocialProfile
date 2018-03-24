@@ -4,8 +4,6 @@ use MediaWiki\Logger\LoggerFactory;
 
 class UserStats {
 	/**
-	 * Constructor
-	 *
 	 * @param int $user_id ID number of the user that we want to track stats for
 	 * @param mixed $user_name user's name; if not supplied, then the user ID will be used to get the user name from DB.
 	 */

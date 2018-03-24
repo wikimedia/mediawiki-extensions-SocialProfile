@@ -12,9 +12,6 @@
 
 class SpecialViewRelationshipRequests extends SpecialPage {
 
-	/**
-	 * Constructor
-	 */
 	public function __construct() {
 		parent::__construct( 'ViewRelationshipRequests' );
 	}

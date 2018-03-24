@@ -10,9 +10,6 @@
 
 class ApiUserProfilePrivacy extends ApiBase {
 
-	/**
-	 * Constructor
-	 */
 	public function __construct( $query, $moduleName ) {
 		parent::__construct( $query, $moduleName );
 	}

@@ -4,9 +4,6 @@ use MediaWiki\Logger\LoggerFactory;
 
 class TopFansRecent extends UnlistedSpecialPage {
 
-	/**
-	 * Constructor
-	 */
 	public function __construct() {
 		parent::__construct( 'TopUsersRecent' );
 	}

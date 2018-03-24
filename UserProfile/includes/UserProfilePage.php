@@ -51,9 +51,6 @@ class UserProfilePage extends Article {
 	 */
 	public $profile_visible_fields;
 
-	/**
-	 * Constructor
-	 */
 	function __construct( $title ) {
 		$context = $this->getContext();
 		$user = $context->getUser();

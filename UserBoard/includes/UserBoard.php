@@ -4,9 +4,6 @@
  */
 class UserBoard {
 
-	/**
-	 * Constructor
-	 */
 	public function __construct() {}
 
 	/**
