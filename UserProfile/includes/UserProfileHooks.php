@@ -102,18 +102,6 @@ class UserProfileHooks {
 	}
 
 	/**
-	 * Load the necessary CSS for avatars in diffs if that feature is enabled.
-	 *
-	 * @param OutputPage $out
-	 */
-	public static function onDifferenceEngineShowDiffPage( $out ) {
-		global $wgUserProfileAvatarsInDiffs;
-		if ( $wgUserProfileAvatarsInDiffs ) {
-			$out->addModuleStyles( 'ext.socialprofile.userprofile.diff' );
-		}
-	}
-
-	/**
 	 * Displays user avatars in diffs.
 	 *
 	 * This is largely based on wikiHow's /extensions/wikihow/hooks/DiffHooks.php

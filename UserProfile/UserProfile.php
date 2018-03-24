@@ -135,6 +135,5 @@ $wgLogActions['avatar/avatar'] = 'avatarlogentry';
 $wgHooks['ArticleFromTitle'][] = 'UserProfileHooks::onArticleFromTitle';
 $wgHooks['OutputPageBodyAttributes'][] = 'UserProfileHooks::onOutputPageBodyAttributes';
 $wgHooks['DifferenceEngineShowDiff'][] = 'UserProfileHooks::onDifferenceEngineShowDiff';
-$wgHooks['DifferenceEngineShowDiffPage'][] = 'UserProfileHooks::onDifferenceEngineShowDiffPage';
 $wgHooks['DifferenceEngineOldHeader'][] = 'UserProfileHooks::onDifferenceEngineOldHeader';
 $wgHooks['DifferenceEngineNewHeader'][] = 'UserProfileHooks::onDifferenceEngineNewHeader';
