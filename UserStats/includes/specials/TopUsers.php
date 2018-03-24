@@ -4,9 +4,6 @@ use MediaWiki\Logger\LoggerFactory;
 
 class TopUsersPoints extends SpecialPage {
 
-	/**
-	 * Constructor
-	 */
 	public function __construct() {
 		parent::__construct( 'TopUsers' );
 	}

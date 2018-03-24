@@ -6,12 +6,12 @@ use MediaWiki\MediaWikiServices;
  */
 class UserProfile {
 	/**
-	 * @var int $user_id The current user's user ID. Set in the constructor.
+	 * @var int $user_id The current user's user ID.
 	 */
 	public $user_id;
 
 	/**
-	 * @var string $user_name The current user's user name. Set in the constructor.
+	 * @var string $user_name The current user's user name.
 	 */
 	public $user_name;
 
@@ -57,9 +57,6 @@ class UserProfile {
 	 */
 	public $profile_missing = array();
 
-	/**
-	 * Constructor
-	 */
 	function __construct( $username ) {
 		$title1 = Title::newFromDBkey( $username );
 		$this->user_name = $title1->getText();

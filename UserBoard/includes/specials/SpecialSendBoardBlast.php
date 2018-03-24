@@ -12,9 +12,6 @@
 
 class SpecialBoardBlast extends UnlistedSpecialPage {
 
-	/**
-	 * Constructor
-	 */
 	public function __construct() {
 		parent::__construct( 'SendBoardBlast' );
 	}

@@ -17,8 +17,6 @@ class wAvatar {
 	public $avatar_type = 0;
 
 	/**
-	 * Constructor
-	 *
 	 * @param $userid Integer: user's internal ID number
 	 * @param $size string
 	 * - 's' for small

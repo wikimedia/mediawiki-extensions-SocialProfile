@@ -7,9 +7,6 @@
  */
 class RemoveMasterSystemGift extends UnlistedSpecialPage {
 
-	/**
-	 * Constructor
-	 */
 	public function __construct() {
 		parent::__construct( 'RemoveMasterSystemGift', 'awardsmanage' );
 	}

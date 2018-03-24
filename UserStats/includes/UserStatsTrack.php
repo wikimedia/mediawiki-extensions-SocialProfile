@@ -47,7 +47,6 @@ class UserStatsTrack {
 	);
 
 	/**
-	 * Constructor
 	 * @param $user_id Integer: ID number of the user that we want to track stats for
 	 * @param $user_name Mixed: user's name; if not supplied, then the user ID
 	 * 							will be used to get the user name from DB.

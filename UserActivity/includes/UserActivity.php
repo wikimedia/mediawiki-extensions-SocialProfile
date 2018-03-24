@@ -26,8 +26,6 @@ class UserActivity {
 	private $show_network_updates = 0;
 
 	/**
-	 * Constructor
-	 *
 	 * @param string $username Username (usually $wgUser's username)
 	 * @param string $filter Passed to setFilter(); can be either
 	 * 'user', 'friends', 'foes' or 'all', depending on what

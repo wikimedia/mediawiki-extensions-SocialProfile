@@ -14,9 +14,6 @@ class UserLevel {
 	 */
 	public $next_level_points_needed;
 
-	/**
-	 * Constructor
-	 */
 	function __construct( $points ) {
 		global $wgUserLevels;
 		$this->levels = $wgUserLevels;

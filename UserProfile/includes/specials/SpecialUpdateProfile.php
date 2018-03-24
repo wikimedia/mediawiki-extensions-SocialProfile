@@ -11,9 +11,6 @@
 
 class SpecialUpdateProfile extends UnlistedSpecialPage {
 
-	/**
-	 * Constructor
-	 */
 	public function __construct() {
 		parent::__construct( 'UpdateProfile' );
 	}

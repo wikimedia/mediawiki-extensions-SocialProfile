@@ -10,9 +10,6 @@
 
 class SpecialEditProfile extends SpecialUpdateProfile {
 
-	/**
-	 * Constructor
-	 */
 	public function __construct() {
 		SpecialPage::__construct( 'EditProfile', 'editothersprofiles' );
 	}

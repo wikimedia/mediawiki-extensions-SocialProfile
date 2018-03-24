@@ -13,9 +13,6 @@
 
 class SpecialToggleUserPage extends UnlistedSpecialPage {
 
-	/**
-	 * Constructor -- set up the new special page
-	 */
 	public function __construct() {
 		parent::__construct( 'ToggleUserPage' );
 	}
