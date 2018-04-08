@@ -63,17 +63,15 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 
 		// Still not set? Just give up and show the "search for a user" form...
 		if ( !$userFromRequest ) {
-			$out->addModules( 'mediawiki.userSuggest' );
-			$out->addHTML( $this->createUserInputForm() );
+			$this->createUserInputForm();
 			return;
 		}
 
 		$target = User::newFromName( $userFromRequest );
 
 		if ( !$target || $target->getId() == 0 ) {
-			$out->addModules( 'mediawiki.userSuggest' );
 			$out->addHTML( $this->msg( 'nosuchusershort', htmlspecialchars( $userFromRequest ) )->escaped() );
-			$out->addHTML( $this->createUserInputForm() );
+			$this->createUserInputForm();
 			return;
 		}
 
@@ -121,24 +119,28 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 
 	function createUserInputForm() {
 		$actionUrl = $this->getPageTitle()->getLocalURL( '' );
-		$form = Xml::openElement( 'fieldset' ) .
-				Xml::openElement( 'form',
-				array(
-					'id' => 'mw-socialprofile-edit-profile-userform',
-					'method' => 'get',
-					'action' => $actionUrl
-				)
-			) . Xml::label( $this->msg( 'username' )->parse(), 'mw-socialprofile-user' ) .
-			Xml::input( 'wpUser', 60, '', array(
-				'class' => 'mw-autocomplete-user',
-				'tabindex' => '1',
+		$formDescriptor = [
+			'text' => [
+				'type' => 'user',
+				'name' => 'wpUser',
+				'label-message' => 'username',
+				'size' => 60,
 				'id' => 'mw-socialprofile-user',
 				'maxlength' => '200'
-			) ) .
-			Xml::submitButton( $this->msg( 'edit' )->plain(), array( 'id' => 'mw-namespaces-submit' ) ) .
-			Xml::closeElement( 'table' ) . Xml::closeElement( 'form' ) .
-			Xml::closeElement( 'fieldset' );
-		return $form;
+			]
+		];
+
+		$htmlForm = HTMLForm::factory( 'ooui', $formDescriptor, $this->getContext() );
+		$htmlForm
+			->setSubmitTextMsg( 'edit' )
+			->setWrapperLegend( null )
+			->setAction( $actionUrl )
+			->setId( 'mw-socialprofile-edit-profile-userform' )
+			->setMethod( 'get' )
+			->prepareForm()
+			->displayForm( false );
+
+		return true;
 	}
 
 	function saveSettings_basic( $tar ) {
