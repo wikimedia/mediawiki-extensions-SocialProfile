@@ -116,8 +116,8 @@ class RemoveAvatar extends SpecialPage {
 			if ( $par ) {
 				$out->addHTML( $this->showUserAvatar( $par ) );
 			} else {
-				$out->addModules( 'mediawiki.userSuggest' );
-				$out->addHTML( $this->showUserForm() );
+
+				$this->showUserForm();
 			}
 		}
 	}
@@ -181,16 +181,29 @@ class RemoveAvatar extends SpecialPage {
 	/**
 	 * Show the form for retrieving a user's current avatar
 	 *
-	 * @return HTML
+	 * @return bool
 	 */
 	private function showUserForm() {
-		$output = '<form method="get" name="avatar" action="">' .
-				Html::hidden( 'title', $this->getPageTitle() ) .
-				'<b>' . $this->msg( 'username' )->text() . '</b>
-				<input type="text" name="user" class="mw-autocomplete-user" />
-				<input type="submit" value="' . $this->msg( 'search' )->plain() . '" />
-			</form>';
-		return $output;
+
+		$formDescriptor = [
+			'user' => [
+				'type' => 'user',
+				'name' => 'user',
+				'label-message' => 'username'
+			]
+		];
+
+		$htmlForm = HTMLForm::factory( 'ooui', $formDescriptor, $this->getContext() );
+		$htmlForm
+			->addHiddenField( 'title', $this->getPageTitle() )
+			->setAction( '' )
+			->setMethod( 'get' )
+			->setName( 'avatar' )
+			->setSubmitTextMsg( 'search' )
+			->setWrapperLegend( null )
+			->prepareForm()
+			->displayForm( false );
+		return true;
 	}
 
 	/**
