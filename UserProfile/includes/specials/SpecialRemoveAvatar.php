@@ -98,11 +98,7 @@ class RemoveAvatar extends SpecialPage {
 		// If the request was POSTed, then delete the avatar
 		if ( $request->wasPosted() ) {
 			$this->onSubmit();
-			$out->addHTML(
-				'<div>' .
-				$this->msg( 'avatarupload-removesuccess' )->plain() .
-				'</div>'
-			);
+			$out->wrapWikiMsg( '<div class="successbox">$1</div>', 'avatarupload-removesuccess' );
 			if ( $userIsPrivileged ) {
 				// No point in showing this message to mortals, they can't
 				// remove others' avatars anyway
