@@ -199,6 +199,7 @@ class RemoveAvatar extends SpecialPage {
 	 * @param string $user_name Name of the user whose avatars we want to delete
 	 */
 	private function showUserAvatar( $user_name ) {
+		$out = $this->getOutput();
 		$user_name = str_replace( '_', ' ', $user_name ); // replace underscores with spaces
 		$user_id = User::idFromName( $user_name );
 
@@ -210,14 +211,22 @@ class RemoveAvatar extends SpecialPage {
 
 		if ( !$avatar->isDefault() ) {
 			if ( !$userIsAvatarOwner ) {
-				$output .= '<div><b>' . $this->msg( 'avatarupload-currentavatar', $user_name )->parse() . '</b></div>';
+				$out->addHTML( '<div><b>' . $this->msg( 'avatarupload-currentavatar', $user_name )->parse() . '</b></div>' );
+
 			}
-			$output .= "<div>{$avatar->getAvatarURL()}</div>";
-			$output .= '<div><form method="post" name="avatar" action="">
-				<input type="hidden" name="user_id" value="' . $user_id . '" />
-				<br />
-				<input type="submit" value="' . $this->msg( 'delete' )->plain() . '" />
-			</form></div>';
+			$out->addHTML( "<div>{$avatar->getAvatarURL()}</div>" );
+
+			$htmlForm = HTMLForm::factory( 'ooui', [], $this->getContext() );
+			$htmlForm
+				->addHiddenField( 'user_id', $user_id )
+				->setAction( '' )
+				->setMethod( 'post' )
+				->setName( 'avatar' )
+				->setSubmitDestructive()
+				->setSubmitTextMsg( 'delete' )
+				->prepareForm()
+				->displayForm( false );
+
 		} else {
 			// avatar IS default AND user is privileged
 			if ( $userIsPrivileged ) {
