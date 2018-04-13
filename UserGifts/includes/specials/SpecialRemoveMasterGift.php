@@ -62,6 +62,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	public function execute( $par ) {
 		$out = $this->getOutput();
 		$request = $this->getRequest();
+		$user = $this->getUser();
 
 		// user needs to be logged in to access
 		$this->requireLogin();
