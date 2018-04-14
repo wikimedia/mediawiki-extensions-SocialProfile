@@ -638,7 +638,7 @@ class UserProfilePage extends Article {
 			} elseif ( $profile_data['location_state'] && !$profile_data['location_city'] ) { // state, but no city
 				$location = $profile_data['location_state'];
 				if ( in_array( 'up_location_country', $this->profile_visible_fields ) ) {
-					$location.= ', ' . $profile_data['location_country'];
+					$location .= ', ' . $profile_data['location_country'];
 				}
 			} else {
 				$location = '';
@@ -1014,7 +1014,7 @@ class UserProfilePage extends Article {
 			$toggle_title = SpecialPage::getTitleFor( 'ToggleUserPage' );
 			// Cast it to an int because PHP is stupid.
 			if (
-				(int) $profile_data['user_page_type'] == 1 ||
+				(int)$profile_data['user_page_type'] == 1 ||
 				$profile_data['user_page_type'] === ''
 			)
 			{

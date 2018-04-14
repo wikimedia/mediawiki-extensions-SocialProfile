@@ -2,8 +2,6 @@
 <ruleset>
 	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
 		<exclude name="Generic.Files.LineLength.TooLong"></exclude>
-		<exclude name="Generic.Formatting.MultipleStatementAlignment.IncorrectWarning"></exclude>
-		<exclude name="Generic.Formatting.NoSpaceAfterCast.SpaceFound"></exclude>
 		<exclude name="Generic.Functions.FunctionCallArgumentSpacing.SpaceBeforeComma"></exclude>
 		<exclude name="Generic.Functions.OpeningFunctionBraceKernighanRitchie.ContentAfterBrace"></exclude>
 		<exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed"></exclude>
