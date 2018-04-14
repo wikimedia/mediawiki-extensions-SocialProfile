@@ -12,7 +12,6 @@
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamTag"></exclude>
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingReturn"></exclude>
 		<exclude name="MediaWiki.Commenting.FunctionComment.ParamNameNoMatch"></exclude>
-		<exclude name="MediaWiki.Commenting.LicenseComment.InvalidLicenseTag"></exclude>
 		<exclude name="MediaWiki.Files.ClassMatchesFilename.NotMatch"></exclude>
 		<exclude name="MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName"></exclude>
 		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.wfPrefix"></exclude>
