@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<ruleset>
+	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
+		<exclude name="Generic.Arrays.DisallowLongArraySyntax.Found"></exclude>
+		<exclude name="Generic.Files.LineLength.TooLong"></exclude>
+		<exclude name="Generic.Formatting.MultipleStatementAlignment.IncorrectWarning"></exclude>
+		<exclude name="Generic.Formatting.NoSpaceAfterCast.SpaceFound"></exclude>
+		<exclude name="Generic.Functions.FunctionCallArgumentSpacing.SpaceBeforeComma"></exclude>
+		<exclude name="Generic.Functions.OpeningFunctionBraceKernighanRitchie.ContentAfterBrace"></exclude>
+		<exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed"></exclude>
+		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic"></exclude>
+		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamName"></exclude>
+		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamTag"></exclude>
+		<exclude name="MediaWiki.Commenting.FunctionComment.MissingReturn"></exclude>
+		<exclude name="MediaWiki.Commenting.FunctionComment.ParamNameNoMatch"></exclude>
+		<exclude name="MediaWiki.Commenting.LicenseComment.InvalidLicenseTag"></exclude>
+		<exclude name="MediaWiki.Files.ClassMatchesFilename.NotMatch"></exclude>
+		<exclude name="MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName"></exclude>
+		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.wfPrefix"></exclude>
+		<exclude name="MediaWiki.Usage.ForbiddenFunctions.is_writeable"></exclude>
+		<exclude name="MediaWiki.Usage.DbrQueryUsage.DbrQueryFound"></exclude>
+		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals"></exclude>
+		<exclude name="MediaWiki.VariableAnalysis.ForbiddenGlobalVariables.ForbiddenGlobal$wgTitle"></exclude>
+		<exclude name="MediaWiki.VariableAnalysis.UnusedGlobalVariables.UnusedGlobal$wgMemc"></exclude>
+		<exclude name="MediaWiki.VariableAnalysis.UnusedGlobalVariables.UnusedGlobal$wgSitename"></exclude>
+		<exclude name="MediaWiki.VariableAnalysis.UnusedGlobalVariables.UnusedGlobal$wgSystemGifts"></exclude>
+		<exclude name="MediaWiki.VariableAnalysis.UnusedGlobalVariables.UnusedGlobal$wgUploadPath"></exclude>
+		<exclude name="MediaWiki.WhiteSpace.DisallowEmptyLineFunctions.NoEmptyLine"></exclude>
+		<exclude name="MediaWiki.WhiteSpace.SpaceAfterControlStructure.Incorrect"></exclude>
+		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeControlStructureBrace.BraceOnNewLine"></exclude>
+		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment"></exclude>
+		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.SingleSpaceBeforeSingleLineComment"></exclude>
+		<exclude name="MediaWiki.WhiteSpace.SpaceyParenthesis.SingleSpaceAfterOpenParenthesis"></exclude>
+		<exclude name="MediaWiki.WhiteSpace.SpaceyParenthesis.SingleSpaceBeforeCloseParenthesis"></exclude>
+		<exclude name="PSR2.Classes.PropertyDeclaration.ScopeMissing"></exclude>
+		<exclude name="PSR2.Files.EndFileNewline.NoneFound"></exclude>
+		<exclude name="PSR2.Files.EndFileNewline.TooMany"></exclude>
+		<exclude name="Squiz.Classes.SelfMemberReference.NotUsed"></exclude>
+		<exclude name="Squiz.Classes.ValidClassName.NotCamelCaps"></exclude>
+		<exclude name="Squiz.Scope.MemberVarScope.Missing"></exclude>
+		<exclude name="Squiz.Scope.MethodScope.Missing"></exclude>
+		<exclude name="Squiz.WhiteSpace.OperatorSpacing.NoSpaceBefore"></exclude>
+		<exclude name="Squiz.WhiteSpace.OperatorSpacing.SpacingAfter"></exclude>
+		<exclude name="Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore"></exclude>
+		<exclude name="Squiz.WhiteSpace.ScopeClosingBrace.Indent"></exclude>
+	</rule>
+	<file>.</file>
+	<arg name="bootstrap" value="./vendor/mediawiki/mediawiki-codesniffer/utils/bootstrap-ci.php"/>
+	<arg name="extensions" value="php,php5,inc"/>
+	<arg name="encoding" value="UTF-8"/>
+</ruleset>
