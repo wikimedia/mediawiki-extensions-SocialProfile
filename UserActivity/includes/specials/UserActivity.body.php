@@ -109,7 +109,7 @@ class UserHome extends SpecialPage {
 				if ( strpos( $line, '*' ) !== 0 ) {
 					continue;
 				} else {
-					$line = explode( '|' , trim( $line, '* ' ), 3 );
+					$line = explode( '|', trim( $line, '* ' ), 3 );
 					$filter = $line[0];
 					$link_text = $line[1];
 

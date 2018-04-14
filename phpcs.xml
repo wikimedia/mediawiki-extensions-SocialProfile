@@ -2,9 +2,6 @@
 <ruleset>
 	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
 		<exclude name="Generic.Files.LineLength.TooLong"></exclude>
-		<exclude name="Generic.Functions.FunctionCallArgumentSpacing.SpaceBeforeComma"></exclude>
-		<exclude name="Generic.Functions.OpeningFunctionBraceKernighanRitchie.ContentAfterBrace"></exclude>
-		<exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed"></exclude>
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic"></exclude>
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamName"></exclude>
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamTag"></exclude>

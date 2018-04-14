@@ -87,7 +87,7 @@ class AvatarParserFunction {
 			// Fallback for the case where an invalid (nonexistent)
 			// user name was supplied...
 			// not very nice, but -1 will get the default avatar
-			$avatar = new wAvatar( -1 , 'm' );
+			$avatar = new wAvatar( -1, 'm' );
 		}
 
 		// if px value needed, set height to it

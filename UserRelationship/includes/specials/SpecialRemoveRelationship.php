@@ -130,7 +130,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			$out->addHTML( $output );
 		} else {
 			$rel = new UserRelationship( $user->getName() );
-	 		if ( $this->getRequest()->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
+			if ( $this->getRequest()->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
 				$_SESSION['alreadysubmitted'] = true;
 				$rel->removeRelationshipByUserID(
 					$this->user_id_to,

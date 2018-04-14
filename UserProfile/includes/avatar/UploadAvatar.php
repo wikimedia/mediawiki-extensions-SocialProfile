@@ -193,7 +193,7 @@ class UploadAvatar extends UploadFromFile {
 		$key = $wgMemc->makeKey( 'user', 'profile', 'avatar', $uid, 'm' );
 		$data = $wgMemc->delete( $key );
 
-		$key = $wgMemc->makeKey( 'user', 'profile', 'avatar', $uid , 'l' );
+		$key = $wgMemc->makeKey( 'user', 'profile', 'avatar', $uid, 'l' );
 		$data = $wgMemc->delete( $key );
 
 		$key = $wgMemc->makeKey( 'user', 'profile', 'avatar', $uid, 'ml' );

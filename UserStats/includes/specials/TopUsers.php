@@ -120,7 +120,7 @@ class TopUsersPoints extends SpecialPage {
 				if ( strpos( $line, '*' ) !== 0 ) {
 					continue;
 				} else {
-					$line = explode( '|' , trim( $line, '* ' ), 2 );
+					$line = explode( '|', trim( $line, '* ' ), 2 );
 					$stat = $line[0];
 
 					$link_text = $line[1];

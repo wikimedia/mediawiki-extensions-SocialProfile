@@ -41,9 +41,17 @@ class UserLevel {
 		}
 	}
 
-	public function getLevelName() { return $this->level_name; }
-	public function getLevelNumber() { return $this->level_number; }
-	public function getNextLevelName() { return $this->next_level_name; }
+	public function getLevelName() {
+		return $this->level_name;
+	}
+
+	public function getLevelNumber() {
+		return $this->level_number;
+	}
+
+	public function getNextLevelName() {
+		return $this->next_level_name;
+	}
 
 	public function getPointsNeededToAdvance() {
 		return $this->next_level_points_needed;

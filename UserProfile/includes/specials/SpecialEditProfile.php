@@ -75,7 +75,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			return;
 		}
 
- 		if ( $request->wasPosted() ) {
+		if ( $request->wasPosted() ) {
 			$this->saveProfileBasic( $target );
 			$this->saveSettings_basic( $target );
 			$this->saveProfilePersonal( $target );

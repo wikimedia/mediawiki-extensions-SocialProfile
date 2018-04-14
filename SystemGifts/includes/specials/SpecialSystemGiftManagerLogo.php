@@ -360,7 +360,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 
 		$this->mSavedFile = "{$dest}/{$saveName}";
 
-	 	$this->createThumbnail( $tempName, $ext, $this->gift_id . '_l', 75 );
+		$this->createThumbnail( $tempName, $ext, $this->gift_id . '_l', 75 );
 		$this->createThumbnail( $tempName, $ext, $this->gift_id . '_ml', 50 );
 		$this->createThumbnail( $tempName, $ext, $this->gift_id . '_m', 30 );
 		$this->createThumbnail( $tempName, $ext, $this->gift_id . '_s', 16 );
