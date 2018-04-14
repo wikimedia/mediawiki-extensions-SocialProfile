@@ -60,10 +60,10 @@ function removeDeletedEdits( &$article, &$user, &$reason ) {
 		$dbr = wfGetDB( DB_MASTER );
 		$res = $dbr->select(
 			'revision',
-			array( 'rev_user_text', 'rev_user', 'COUNT(*) AS the_count' ),
-			array( 'rev_page' => $article->getID(), 'rev_user <> 0' ),
+			[ 'rev_user_text', 'rev_user', 'COUNT(*) AS the_count' ],
+			[ 'rev_page' => $article->getID(), 'rev_user <> 0' ],
 			__METHOD__,
-			array( 'GROUP BY' => 'rev_user_text' )
+			[ 'GROUP BY' => 'rev_user_text' ]
 		);
 		foreach ( $res as $row ) {
 			$stats = new UserStatsTrack( $row->rev_user, $row->rev_user_text );
@@ -94,10 +94,10 @@ function restoreDeletedEdits( &$title, $new ) {
 		$dbr = wfGetDB( DB_MASTER );
 		$res = $dbr->select(
 			'revision',
-			array( 'rev_user_text', 'rev_user', 'COUNT(*) AS the_count' ),
-			array( 'rev_page' => $title->getArticleID(), 'rev_user <> 0' ),
+			[ 'rev_user_text', 'rev_user', 'COUNT(*) AS the_count' ],
+			[ 'rev_page' => $title->getArticleID(), 'rev_user <> 0' ],
 			__METHOD__,
-			array( 'GROUP BY' => 'rev_user_text' )
+			[ 'GROUP BY' => 'rev_user_text' ]
 		);
 		foreach ( $res as $row ) {
 			$stats = new UserStatsTrack( $row->rev_user, $row->rev_user_text );

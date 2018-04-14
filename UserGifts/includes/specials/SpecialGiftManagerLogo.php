@@ -60,7 +60,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	}
 
 	function initLogo() {
-		$this->fileExtensions = array( 'gif', 'jpg', 'jpeg', 'png' );
+		$this->fileExtensions = [ 'gif', 'jpg', 'jpeg', 'png' ];
 
 		$request = $this->getRequest();
 
@@ -488,11 +488,11 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		}
 
 		$key = mt_rand( 0, 0x7fffffff );
-		$_SESSION['wsUploadData'][$key] = array(
+		$_SESSION['wsUploadData'][$key] = [
 			'mUploadTempName' => $stash,
 			'mUploadSize' => $this->mUploadSize,
 			'mOname' => $this->mOname
-		);
+		];
 		return $key;
 	}
 
@@ -540,12 +540,12 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$output .= '<tr><td><input type="button" onclick="javascript:history.go(-1)" value="' . $this->msg( 'g-go-back' )->plain() . '"></td></tr>';
 
 		$giftManager = SpecialPage::getTitleFor( 'GiftManager' );
-		$output .= $this->getLanguage()->pipeList( array(
+		$output .= $this->getLanguage()->pipeList( [
 			'<tr><td><a href="' . htmlspecialchars( $giftManager->getFullURL() ) . '">' .
 				$this->msg( 'g-back-gift-list' )->plain() . '</a>&#160;',
 			'&#160;<a href="' . htmlspecialchars( $giftManager->getFullURL( 'id=' . $this->gift_id ) ) .
 				'">' . $this->msg( 'g-back-edit-gift' )->plain() . '</a></td></tr>'
-		) );
+		] );
 		$output .= '</table>';
 		$this->getOutput()->addHTML( $output );
 	}

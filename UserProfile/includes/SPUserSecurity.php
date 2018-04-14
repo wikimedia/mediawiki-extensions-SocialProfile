@@ -21,26 +21,26 @@ class SPUserSecurity {
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(
 			'user_fields_privacy',
-			array( '*' ),
-			array( 'ufp_user_id' => $uid, 'ufp_field_key' => $fieldKey ),
+			[ '*' ],
+			[ 'ufp_user_id' => $uid, 'ufp_field_key' => $fieldKey ],
 			__METHOD__
 		);
 
 		if ( !$s ) {
 			$dbw->insert(
 				'user_fields_privacy',
-				array(
+				[
 					'ufp_user_id' => $uid,
 					'ufp_field_key' => $fieldKey,
 					'ufp_privacy' => $priv
-				),
+				],
 				__METHOD__
 			);
 		} else {
 			$dbw->update(
 				'user_fields_privacy',
-				array( 'ufp_privacy' => $priv ),
-				array( 'ufp_user_id' => $uid, 'ufp_field_key' => $fieldKey ),
+				[ 'ufp_privacy' => $priv ],
+				[ 'ufp_user_id' => $uid, 'ufp_field_key' => $fieldKey ],
 				__METHOD__
 			);
 		}
@@ -57,8 +57,8 @@ class SPUserSecurity {
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(
 			'user_fields_privacy',
-			array( '*' ),
-			array( 'ufp_field_key' => $fieldKey, 'ufp_user_id' => $uid ),
+			[ '*' ],
+			[ 'ufp_field_key' => $fieldKey, 'ufp_user_id' => $uid ],
 			__METHOD__
 		);
 
@@ -86,8 +86,8 @@ class SPUserSecurity {
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(
 			'user_fields_privacy',
-			array( '*' ),
-			array( 'ufp_field_key' => $fieldKey, 'ufp_user_id' => $uid ),
+			[ '*' ],
+			[ 'ufp_field_key' => $fieldKey, 'ufp_user_id' => $uid ],
 			__METHOD__
 		);
 
@@ -98,7 +98,7 @@ class SPUserSecurity {
 		}
 
 		// Form list with remaining privacies
-		$all_privacy = array( 'public', 'hidden', 'friends', 'foaf' );
+		$all_privacy = [ 'public', 'hidden', 'friends', 'foaf' ];
 
 		$ret = '<div class="eye-container" current_action="' .
 			htmlspecialchars( $privacy, ENT_QUOTES ) . '" fieldkey="' .
@@ -142,7 +142,7 @@ class SPUserSecurity {
 			$viewerUid = $wgUser->getId();
 		}
 
-		$arResult = array();
+		$arResult = [];
 		// Get fields list
 		$user = User::newFromId( $ownerUid );
 		if ( !$user instanceof User ) {

@@ -60,16 +60,16 @@ class EchoUserRelationshipPresentationModel extends EchoEventPresentationModel {
 		} elseif ( $eventType == 'social-rel-accept' ) { // accepted request
 			$url = SpecialPage::getTitleFor( 'ViewRelationships' )->getLocalURL();
 		}
-		return array(
+		return [
 			'url' => $url,
 			'label' => $this->msg( 'echo-learn-more' )->text()
-		);
+		];
 	}
 
 	public function getSecondaryLinks() {
 		// Apparently these two can't be the other way around 'cause it'll look
 		// stupid. Who knew?
-		return array( $this->getAgentLink(), $this->getSpecialPageLink() );
+		return [ $this->getAgentLink(), $this->getSpecialPageLink() ];
 	}
 
 	private function getSpecialPageLink() {
@@ -82,13 +82,13 @@ class EchoUserRelationshipPresentationModel extends EchoEventPresentationModel {
 			$label = $this->msg( ( $relType == 1 ) ? 'ur-title-friend' : 'ur-title-foe' )->params( $this->getViewingUserForGender() )->text();
 			$url = SpecialPage::getTitleFor( 'ViewRelationships' )->getLocalURL();
 		}
-		return array(
+		return [
 			'label' => $label,
 			'url' => $url,
 			'description' => '',
 			'icon' => false,
 			'prioritized' => true,
-		);
+		];
 	}
 
 }

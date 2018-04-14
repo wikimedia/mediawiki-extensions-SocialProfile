@@ -40,14 +40,14 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(
 			'user_profile',
-			array( 'up_user_id' ),
-			array( 'up_user_id' => $user->getId() ),
+			[ 'up_user_id' ],
+			[ 'up_user_id' => $user->getId() ],
 			__METHOD__
 		);
 		if ( $s === false ) {
 			$dbw->insert(
 				'user_profile',
-				array( 'up_user_id' => $user->getId() ),
+				[ 'up_user_id' => $user->getId() ],
 				__METHOD__
 			);
 		}
@@ -59,12 +59,12 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 
 		$dbw->update(
 			'user_profile',
-			/* SET */array(
+			/* SET */[
 				'up_type' => $user_page_type
-			),
-			/* WHERE */array(
+			],
+			/* WHERE */[
 				'up_user_id' => $user->getId()
-			), __METHOD__
+			], __METHOD__
 		);
 
 		$key = $wgMemc->makeKey( 'user', 'profile', 'info', $user->getId() );

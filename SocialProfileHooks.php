@@ -73,23 +73,23 @@ class SocialProfileHooks {
 	public static function onRenameUserComplete( $uid, $oldName, $newName ) {
 		$dbw = wfGetDB( DB_MASTER );
 
-		$tables = array(
-			'user_system_gift' => array( 'sg_user_name', 'sg_user_id' ),
-			'user_board' => array( 'ub_user_name_from', 'ub_user_id_from' ),
-			'user_gift' => array( 'ug_user_name_to', 'ug_user_id_to' ),
-			'gift' => array( 'gift_creator_user_name', 'gift_creator_user_id' ),
-			'user_relationship' => array( 'r_user_name_relation', 'r_user_id_relation' ),
-			'user_relationship' => array( 'r_user_name', 'r_user_id' ),
-			'user_relationship_request' => array( 'ur_user_name_from', 'ur_user_id_from' ),
-			'user_stats' => array( 'stats_user_name', 'stats_user_id' ),
-			'user_system_messages' => array( 'um_user_name', 'um_user_id' ),
-		);
+		$tables = [
+			'user_system_gift' => [ 'sg_user_name', 'sg_user_id' ],
+			'user_board' => [ 'ub_user_name_from', 'ub_user_id_from' ],
+			'user_gift' => [ 'ug_user_name_to', 'ug_user_id_to' ],
+			'gift' => [ 'gift_creator_user_name', 'gift_creator_user_id' ],
+			'user_relationship' => [ 'r_user_name_relation', 'r_user_id_relation' ],
+			'user_relationship' => [ 'r_user_name', 'r_user_id' ],
+			'user_relationship_request' => [ 'ur_user_name_from', 'ur_user_id_from' ],
+			'user_stats' => [ 'stats_user_name', 'stats_user_id' ],
+			'user_system_messages' => [ 'um_user_name', 'um_user_id' ],
+		];
 
 		foreach ( $tables as $table => $data ) {
 			$dbw->update(
 				$table,
-				array( $data[0] => $newName ),
-				array( $data[1] => $uid ),
+				[ $data[0] => $newName ],
+				[ $data[1] => $uid ],
 				__METHOD__
 			);
 		}

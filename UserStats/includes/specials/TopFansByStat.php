@@ -60,7 +60,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 		$count = 50;
 		$realCount = 100;
 
-		$user_list = array();
+		$user_list = [];
 
 		// Get the list of users
 
@@ -86,8 +86,8 @@ class TopFansByStat extends UnlistedSpecialPage {
 
 			$res = $dbr->select(
 				'user_stats',
-				array( 'stats_user_id', 'stats_user_name', $column ),
-				array( 'stats_user_id <> 0', "{$column} > 0" ),
+				[ 'stats_user_id', 'stats_user_name', $column ],
+				[ 'stats_user_id <> 0', "{$column} > 0" ],
 				__METHOD__,
 				$params
 			);
@@ -107,11 +107,11 @@ class TopFansByStat extends UnlistedSpecialPage {
 				$exists = $u->loadFromId();
 
 				if ( !$u->isBlocked() && $exists && !$u->isBot() ) {
-					$user_list[] = array(
+					$user_list[] = [
 						'user_id' => $row->stats_user_id,
 						'user_name' => $row->stats_user_name,
 						'stat' => $row->$column
-					);
+					];
 				}
 
 				if ( $loop >= $realCount ) {
@@ -167,8 +167,8 @@ class TopFansByStat extends UnlistedSpecialPage {
 					$output .= $linkRenderer->makeLink(
 						$this->getPageTitle(),
 						$link_text,
-						array(),
-						array( 'stat' => $stat )
+						[],
+						[ 'stat' => $stat ]
 					);
 					$output .= '</p>';
 				}

@@ -10,7 +10,7 @@ class SiteActivityHook {
 	 * @param Parser $parser
 	 */
 	public static function onParserFirstCallInit( &$parser ) {
-		$parser->setHook( 'siteactivity', array( __CLASS__, 'getSiteActivity' ) );
+		$parser->setHook( 'siteactivity', [ __CLASS__, 'getSiteActivity' ] );
 	}
 
 	/**

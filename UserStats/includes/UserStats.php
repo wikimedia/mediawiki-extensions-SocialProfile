@@ -17,7 +17,7 @@ class UserStats {
 		$this->user_name = $user_name;
 	}
 
-	static $stats_name = array(
+	static $stats_name = [
 		'monthly_winner_count' => 'Monthly Wins',
 		'weekly_winner_count' => 'Weekly Wins',
 		'vote_count' => 'Votes',
@@ -34,7 +34,7 @@ class UserStats {
 		'comment_score_negative_given' => 'Thumbs Down Given',
 		'gifts_rec_count' => 'Gifts Received',
 		'gifts_sent_count' => 'Gifts Sent'
-	);
+	];
 
 	/**
 	 * Retrieves per-user statistics, either from Memcached or from the database
@@ -83,12 +83,12 @@ class UserStats {
 		$res = $dbr->select(
 			'user_stats',
 			'*',
-			array( 'stats_user_id' => $this->user_id ),
+			[ 'stats_user_id' => $this->user_id ],
 			__METHOD__,
-			array(
+			[
 				'LIMIT' => 1,
 				'OFFSET' => 0
-			)
+			]
 		);
 		$row = $dbr->fetchObject( $res );
 		$stats['edits'] = isset( $row->stats_edit_count ) ? $row->stats_edit_count : 0;
@@ -151,31 +151,31 @@ class UserStats {
 
 		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
-			array( 'user_stats', 'user_relationship' ),
-			array( 'stats_user_id', 'stats_user_name', 'stats_total_points' ),
-			array(
+			[ 'user_stats', 'user_relationship' ],
+			[ 'stats_user_id', 'stats_user_name', 'stats_total_points' ],
+			[
 				'r_user_id' => $user_id,
 				"stats_total_points {$op} {$points}"
-			),
+			],
 			__METHOD__,
-			array(
+			[
 				'ORDER BY' => "stats_total_points {$sort}",
 				'LIMIT' => $limit
-			),
-			array(
-				'user_relationship' => array(
+			],
+			[
+				'user_relationship' => [
 					'INNER JOIN', 'stats_user_id = r_user_id_relation'
-				)
-			)
+				]
+			]
 		);
 
-		$list = array();
+		$list = [];
 		foreach ( $res as $row ) {
-			$list[] = array(
+			$list[] = [
 				'user_id' => $row->stats_user_id,
 				'user_name' => $row->stats_user_name,
 				'points' => $row->stats_total_points
-			);
+			];
 		}
 
 		if ( $condition == 1 ) {

@@ -9,27 +9,27 @@ class UserBoardHooks {
 	 * @param array $icons Icon details
 	 */
 	public static function onBeforeCreateEchoEvent( &$notifications, &$notificationCategories, &$icons ) {
-		$notificationCategories['social-msg'] = array(
+		$notificationCategories['social-msg'] = [
 			'priority' => 3,
 			'tooltip' => 'echo-pref-tooltip-social-msg',
-		);
+		];
 
-		$notifications['social-msg-send'] = array(
+		$notifications['social-msg-send'] = [
 			'category' => 'social-msg',
 			'group' => 'interactive',
 			'presentation-model' => 'EchoUserBoardMessagePresentationModel',
-			EchoAttributeManager::ATTR_LOCATORS => array(
+			EchoAttributeManager::ATTR_LOCATORS => [
 				'EchoUserLocator::locateEventAgent'
-			),
+			],
 
-			'payload' => array( 'send-message' ),
+			'payload' => [ 'send-message' ],
 
 			'icon' => 'emailuser', // per discussion with Cody on 27 March 2016
 
-			'bundle' => array( 'web' => true, 'email' => true ),
+			'bundle' => [ 'web' => true, 'email' => true ],
 			'bundle-message' => 'notification-social-msg-send-bundle',
-			'bundle-params' => array( 'bundle-user-count', 'bundle-noti-count' )
-		);
+			'bundle-params' => [ 'bundle-user-count', 'bundle-noti-count' ]
+		];
 	}
 
 	/**

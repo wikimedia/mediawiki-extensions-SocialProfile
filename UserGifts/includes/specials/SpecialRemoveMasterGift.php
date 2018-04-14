@@ -99,12 +99,12 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 
 			$dbw->delete(
 				'gift',
-				array( 'gift_id' => $this->gift_id ),
+				[ 'gift_id' => $this->gift_id ],
 				__METHOD__
 			);
 			$dbw->delete(
 				'user_gift',
-				array( 'ug_gift_id' => $this->gift_id ),
+				[ 'ug_gift_id' => $this->gift_id ],
 				__METHOD__
 			);
 

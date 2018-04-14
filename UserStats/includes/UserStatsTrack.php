@@ -6,7 +6,7 @@ class UserStatsTrack {
 
 	// for referencing purposes
 	// key: statistic name in wgUserStatsPointValues -> database column name
-	public $stats_fields = array(
+	public $stats_fields = [
 		'edit' => 'stats_edit_count',
 		'vote' => 'stats_vote_count',
 		'comment' => 'stats_comment_count',
@@ -44,7 +44,7 @@ class UserStatsTrack {
 		'currency' => 'stats_currency',
 		'links_submitted' => 'stats_links_submitted',
 		'links_approved' => 'stats_links_approved'
-	);
+	];
 
 	/**
 	 * @param $user_id Integer: ID number of the user that we want to track stats for
@@ -73,8 +73,8 @@ class UserStatsTrack {
 		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_stats',
-			array( 'stats_user_id' ),
-			array( 'stats_user_id' => $this->user_id ),
+			[ 'stats_user_id' ],
+			[ 'stats_user_id' => $this->user_id ],
 			__METHOD__
 		);
 
@@ -90,12 +90,12 @@ class UserStatsTrack {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->insert(
 			'user_stats',
-			array(
+			[
 				'stats_year_id' => 0,
 				'stats_user_id' => $this->user_id,
 				'stats_user_name' => $this->user_name,
 				'stats_total_points' => 1000
-			),
+			],
 			__METHOD__
 		);
 	}
@@ -124,8 +124,8 @@ class UserStatsTrack {
 			$dbw = wfGetDB( DB_MASTER );
 			$dbw->update(
 				'user_stats',
-				array( $this->stats_fields[$field] . '=' . $this->stats_fields[$field] . "+{$val}" ),
-				array( 'stats_user_id' => $this->user_id  ),
+				[ $this->stats_fields[$field] . '=' . $this->stats_fields[$field] . "+{$val}" ],
+				[ 'stats_user_id' => $this->user_id  ],
 				__METHOD__
 			);
 			$this->updateTotalPoints();
@@ -144,8 +144,8 @@ class UserStatsTrack {
 
 			$s = $dbw->selectRow(
 				'user_stats',
-				array( $this->stats_fields[$field] ),
-				array( 'stats_user_id' => $this->user_id ),
+				[ $this->stats_fields[$field] ],
+				[ 'stats_user_id' => $this->user_id ],
 				__METHOD__
 			);
 			$stat_field = $this->stats_fields[$field];
@@ -187,8 +187,8 @@ class UserStatsTrack {
 			$dbw = wfGetDB( DB_MASTER );
 			$dbw->update(
 				'user_stats',
-				array( $this->stats_fields[$field] . '=' . $this->stats_fields[$field] . "-{$val}" ),
-				array( 'stats_user_id' => $this->user_id ),
+				[ $this->stats_fields[$field] . '=' . $this->stats_fields[$field] . "-{$val}" ],
+				[ 'stats_user_id' => $this->user_id ],
 				__METHOD__
 			);
 
@@ -219,15 +219,15 @@ class UserStatsTrack {
 			$comments = $dbw->select(
 				'Comments',
 				'COUNT(*) AS CommentCount',
-				array( 'Comment_user_id' => $this->user_id ),
+				[ 'Comment_user_id' => $this->user_id ],
 				__METHOD__
 			);
 			$res = $dbw->update(
 				'user_stats',
-				array(
+				[
 					'stats_comment_count' => $comments->CommentCount
-				),
-				array( 'stats_user_id' => $this->user_id ),
+				],
+				[ 'stats_user_id' => $this->user_id ],
 				__METHOD__
 			);
 
@@ -248,15 +248,15 @@ class UserStatsTrack {
 			$blockedComments = $dbw->select(
 				'Comments_block',
 				'COUNT(*) AS CommentCount',
-				array( 'cb_user_id_blocked' => $this->user_id ),
+				[ 'cb_user_id_blocked' => $this->user_id ],
 				__METHOD__
 			);
 			$res = $dbw->update(
 				'user_stats',
-				array(
+				[
 					'stats_comment_blocked' => $blockedComments->CommentCount
-				),
-				array( 'stats_user_id' => $this->user_id ),
+				],
+				[ 'stats_user_id' => $this->user_id ],
 				__METHOD__
 			);
 
@@ -276,15 +276,15 @@ class UserStatsTrack {
 			$edits = $dbw->select(
 				'revision',
 				'COUNT(*) AS EditsCount',
-				array( 'rev_user' => $this->user_id ),
+				[ 'rev_user' => $this->user_id ],
 				__METHOD__
 			);
 			$res = $dbw->update(
 				'user_stats',
-				array(
+				[
 					'stats_edit_count' => $edits->EditsCount
-				),
-				array( 'stats_user_id' => $this->user_id ),
+				],
+				[ 'stats_user_id' => $this->user_id ],
 				__METHOD__
 			);
 
@@ -305,13 +305,13 @@ class UserStatsTrack {
 			$votes = $dbw->select(
 				'Vote',
 				'COUNT(*) AS VoteCount',
-				array( 'vote_user_id' => $this->user_id ),
+				[ 'vote_user_id' => $this->user_id ],
 				__METHOD__
 			);
 			$res = $dbw->update(
 				'user_stats',
-				array( 'stats_vote_count' => $votes->VoteCount ),
-				array( 'stats_user_id' => $this->user_id ),
+				[ 'stats_vote_count' => $votes->VoteCount ],
+				[ 'stats_user_id' => $this->user_id ],
 				__METHOD__
 			);
 
@@ -339,11 +339,11 @@ class UserStatsTrack {
 			$commentIDs = $dbw->select(
 				'Comments',
 				'CommentID',
-				array( 'Comment_user_id' => $this->user_id ),
+				[ 'Comment_user_id' => $this->user_id ],
 				__METHOD__
 			);
 
-			$ids = array();
+			$ids = [];
 			foreach ( $commentIDs as $commentID ) {
 				$ids[] = $commentID->CommentID;
 			}
@@ -351,17 +351,17 @@ class UserStatsTrack {
 			$comments = $dbw->selectField(
 				'Comments_Vote',
 				'COUNT(*) AS CommentVoteCount',
-				array(
+				[
 					'Comment_Vote_ID' => $ids,
 					'Comment_Vote_Score' => $voteType
-				),
+				],
 				__METHOD__
 			);
 
 			$res = $dbw->update(
 				'user_stats',
-				array( $columnName => $comments ),
-				array( 'stats_user_id' => $this->user_id ),
+				[ $columnName => $comments ],
+				[ 'stats_user_id' => $this->user_id ],
 				__METHOD__
 			);
 
@@ -390,15 +390,15 @@ class UserStatsTrack {
 			$relationships = $dbw->selectField(
 				'user_relationship',
 				'COUNT(*) AS rel_count',
-				array( 'r_user_id' => $this->user_id, 'r_type' => $relType ),
+				[ 'r_user_id' => $this->user_id, 'r_type' => $relType ],
 				__METHOD__
 			);
 			$res = $dbw->update(
 				'user_stats',
-				array( $col => $relationships ),
-				array( 'stats_user_id' => $this->user_id ),
+				[ $col => $relationships ],
+				[ 'stats_user_id' => $this->user_id ],
 				__METHOD__,
-				array( 'LOW_PRIORITY' )
+				[ 'LOW_PRIORITY' ]
 			);
 		}
 	}
@@ -414,15 +414,15 @@ class UserStatsTrack {
 			$gifts = $dbw->select(
 				'user_gift',
 				'COUNT(*) AS gift_count',
-				array( 'ug_user_id_to' => $this->user_id ),
+				[ 'ug_user_id_to' => $this->user_id ],
 				__METHOD__
 			);
 			$res = $dbw->update(
 				'user_stats',
-				array( 'stats_gifts_rec_count' => $gifts->gift_count ),
-				array( 'stats_user_id' => $this->user_id ),
+				[ 'stats_gifts_rec_count' => $gifts->gift_count ],
+				[ 'stats_user_id' => $this->user_id ],
 				__METHOD__,
-				array( 'LOW_PRIORITY' )
+				[ 'LOW_PRIORITY' ]
 			);
 		}
 	}
@@ -438,15 +438,15 @@ class UserStatsTrack {
 			$gifts = $dbw->select(
 				'user_gift',
 				'COUNT(*) AS gift_count',
-				array( 'ug_user_id_from' => $this->user_id ),
+				[ 'ug_user_id_from' => $this->user_id ],
 				__METHOD__
 			);
 			$res = $dbw->update(
 				'user_stats',
-				array( 'stats_gifts_sent_count' => $gifts->gift_count ),
-				array( 'stats_user_id' => $this->user_id ),
+				[ 'stats_gifts_sent_count' => $gifts->gift_count ],
+				[ 'stats_user_id' => $this->user_id ],
 				__METHOD__,
-				array( 'LOW_PRIORITY' )
+				[ 'LOW_PRIORITY' ]
 			);
 		}
 	}
@@ -462,15 +462,15 @@ class UserStatsTrack {
 			$referrals = $dbw->select(
 				'user_register_track',
 				'COUNT(*) AS thecount',
-				array( 'ur_user_id_referral' => $this->user_id ),
+				[ 'ur_user_id_referral' => $this->user_id ],
 				__METHOD__
 			);
 			$res = $dbw->update(
 				'user_stats',
-				array( 'stats_referrals_completed' => $referrals->thecount ),
-				array( 'stats_user_id' => $this->user_id ),
+				[ 'stats_referrals_completed' => $referrals->thecount ],
+				[ 'stats_user_id' => $this->user_id ],
 				__METHOD__,
-				array( 'LOW_PRIORITY' )
+				[ 'LOW_PRIORITY' ]
 			);
 		}
 	}
@@ -480,7 +480,7 @@ class UserStatsTrack {
 		$res = $dbw->select(
 			'user_points_weekly',
 			'up_user_id',
-			array( "up_user_id = {$this->user_id}" ),
+			[ "up_user_id = {$this->user_id}" ],
 			__METHOD__
 		);
 		$row = $dbw->fetchObject( $res );
@@ -491,8 +491,8 @@ class UserStatsTrack {
 		if ( is_int( $points ) ) {
 			$dbw->update(
 				'user_points_weekly',
-				array( 'up_points=up_points+' . $points ),
-				array( 'up_user_id' => $this->user_id ),
+				[ 'up_points=up_points+' . $points ],
+				[ 'up_user_id' => $this->user_id ],
 				__METHOD__
 			);
 		}
@@ -506,10 +506,10 @@ class UserStatsTrack {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->insert(
 			'user_points_weekly',
-			array(
+			[
 				'up_user_id' => $this->user_id,
 				'up_user_name' => $this->user_name
-			),
+			],
 			__METHOD__
 		);
 	}
@@ -519,7 +519,7 @@ class UserStatsTrack {
 		$res = $dbw->select(
 			'user_points_monthly',
 			'up_user_id',
-			array( "up_user_id = {$this->user_id}" ),
+			[ "up_user_id = {$this->user_id}" ],
 			__METHOD__
 		);
 		$row = $dbw->fetchObject( $res );
@@ -529,8 +529,8 @@ class UserStatsTrack {
 		if ( is_int( $points ) ) {
 			$dbw->update(
 				'user_points_monthly',
-				array( 'up_points=up_points+' . $points ),
-				array( 'up_user_id' => $this->user_id ),
+				[ 'up_points=up_points+' . $points ],
+				[ 'up_user_id' => $this->user_id ],
 				__METHOD__
 			);
 		}
@@ -544,10 +544,10 @@ class UserStatsTrack {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->insert(
 			'user_points_monthly',
-			array(
+			[
 				'up_user_id' => $this->user_id,
 				'up_user_name' => $this->user_name
-			),
+			],
 			__METHOD__
 		);
 	}
@@ -561,10 +561,10 @@ class UserStatsTrack {
 		global $wgUserLevels;
 
 		if ( $this->user_id == 0 ) {
-			return array();
+			return [];
 		}
 
-		$stats_data = array();
+		$stats_data = [];
 		if ( is_array( $wgUserLevels ) ) {
 			// Load points before update
 			$stats = new UserStats( $this->user_id, $this->user_name );
@@ -580,7 +580,7 @@ class UserStatsTrack {
 		$res = $dbw->select(
 			'user_stats',
 			'*',
-			array( "stats_user_id = {$this->user_id}" ),
+			[ "stats_user_id = {$this->user_id}" ],
 			__METHOD__
 		);
 		$row = $dbw->fetchObject( $res );
@@ -599,8 +599,8 @@ class UserStatsTrack {
 
 			$dbw->update(
 				'user_stats',
-				array( 'stats_total_points' => $new_total_points ),
-				array( 'stats_user_id' => $this->user_id ),
+				[ 'stats_total_points' => $new_total_points ],
+				[ 'stats_user_id' => $this->user_id ],
 				__METHOD__
 			);
 
@@ -626,14 +626,14 @@ class UserStatsTrack {
 					if ( ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ) {
 						$userFrom = User::newFromId( $this->user_id );
 
-						EchoEvent::create( array(
+						EchoEvent::create( [
 							'type' => 'social-level-up',
 							'agent' => $userFrom,
-							'extra' => array(
+							'extra' => [
 								'notifyAgent' => true,
 								'new-level' => $user_level->getLevelName()
-							)
-						) );
+							]
+						] );
 					}
 				}
 			}

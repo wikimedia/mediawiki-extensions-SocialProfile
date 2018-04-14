@@ -42,50 +42,50 @@ class TopAwards extends UnlistedSpecialPage {
 		// navigation bar (MediaWiki:Topfans-by-category) shown on
 		// Special:TopUsers and related special pages is...this is ugly and
 		// far from flexible, since the thresholds are all hard-coded in
-		$categories = array(
-			array(
+		$categories = [
+			[
 				'category_name' => 'Edit',
 				'category_threshold' => '500',
 				'category_id' => 1
-			),
-			array(
+			],
+			[
 				'category_name' => 'Friend',
 				'category_threshold' => '25',
 				'category_id' => 8
-			)
-		);
+			]
+		];
 
 		$registry = ExtensionRegistry::getInstance();
 
 		// VoteStars is unique to the VoteNY extension, while there are a bunch
 		// of other voting extensions where the main class is named "Vote"
 		if ( $registry->isLoaded( 'VoteNY' ) ) {
-			$categories[] = array(
+			$categories[] = [
 				'category_name' => 'Vote',
 				'category_threshold' => '2000',
 				'category_id' => 2
-			);
+			];
 		}
 
 		// Show the "Comments" category only if the Comments extension is
 		// installed
 		if ( $registry->isLoaded( 'Comments' ) ) {
-			$categories[] = array(
+			$categories[] = [
 				'category_name' => 'Comment',
 				'category_threshold' => '1000',
 				'category_id' => 3
-			);
+			];
 		}
 
 		// Well, we could test for the existence of the extension which allows
 		// for referring users to the wiki so that you get points for it, but
 		// this seems like a better thing to check for.
 		if ( $wgUserStatsPointValues['referral_complete'] > 0 ) {
-			$categories[] = array(
+			$categories[] = [
 				'category_name' => 'Recruit',
 				'category_threshold' => '0',
 				'category_id' => 7
-			);
+			];
 		}
 
 		// Set title
@@ -99,18 +99,18 @@ class TopAwards extends UnlistedSpecialPage {
 		// Database calls
 		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
-			array( 'user_system_gift', 'system_gift' ),
-			array(
+			[ 'user_system_gift', 'system_gift' ],
+			[
 				'sg_user_name', 'sg_user_id', 'gift_category',
 				'MAX(gift_threshold) AS top_gift'
-			),
-			array(
+			],
+			[
 				"gift_category = {$categories[$category_number]['category_id']}",
 				"gift_threshold > {$categories[$category_number]['category_threshold']}"
-			),
+			],
 			__METHOD__,
-			array( 'GROUP BY' => 'sg_user_name', 'ORDER BY' => 'top_gift DESC' ),
-			array( 'system_gift' => array( 'INNER JOIN', 'gift_id=sg_gift_id' ) )
+			[ 'GROUP BY' => 'sg_user_name', 'ORDER BY' => 'top_gift DESC' ],
+			[ 'system_gift' => [ 'INNER JOIN', 'gift_id=sg_gift_id' ] ]
 		);
 
 		// Set the page title, robot policies, etc.

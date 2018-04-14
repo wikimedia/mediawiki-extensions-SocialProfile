@@ -47,8 +47,8 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 		$dbw = wfGetDB( DB_MASTER );
 		$res = $dbw->select(
 			'page',
-			array( 'page_title' ),
-			array( 'page_namespace' => NS_USER ),
+			[ 'page_title' ],
+			[ 'page_namespace' => NS_USER ],
 			__METHOD__
 		);
 
@@ -62,17 +62,17 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 			if ( $user_id > 0 ) {
 				$s = $dbw->selectRow(
 					'user_profile',
-					array( 'up_user_id' ),
-					array( 'up_user_id' => $user_id ),
+					[ 'up_user_id' ],
+					[ 'up_user_id' => $user_id ],
 					__METHOD__
 				);
 				if ( $s === false ) {
 					$dbw->insert(
 						'user_profile',
-						array(
+						[
 							'up_user_id' => $user_id,
 							'up_type' => 0
-						),
+						],
 						__METHOD__
 					);
 					$count++;

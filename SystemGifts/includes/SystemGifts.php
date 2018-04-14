@@ -8,7 +8,7 @@ class SystemGifts {
 	 * All member variables should be considered private
 	 * Please use the accessor functions
 	 */
-	private $categories = array(
+	private $categories = [
 		'edit' => 1,
 		'vote' => 2,
 		'comment' => 3,
@@ -23,7 +23,7 @@ class SystemGifts {
 		'points_winner_weekly' => 12,
 		'points_winner_monthly' => 13,
 		'quiz_points' => 14
-	);
+	];
 
 	/**
 	 * Accessor for the private $categories variable; used by
@@ -47,10 +47,10 @@ class SystemGifts {
 
 		$res = $dbw->select(
 			'system_gift',
-			array( 'gift_id', 'gift_category', 'gift_threshold', 'gift_name' ),
-			array(),
+			[ 'gift_id', 'gift_category', 'gift_threshold', 'gift_name' ],
+			[],
 			__METHOD__,
-			array( 'ORDER BY' => 'gift_category, gift_threshold ASC' )
+			[ 'ORDER BY' => 'gift_category, gift_threshold ASC' ]
 		);
 
 		$x = 0;
@@ -58,12 +58,12 @@ class SystemGifts {
 			if ( $row->gift_category ) {
 				$res2 = $dbw->select(
 					'user_stats',
-					array( 'stats_user_id', 'stats_user_name' ),
-					array(
+					[ 'stats_user_id', 'stats_user_name' ],
+					[
 						$stats->stats_fields[$this->categories[$row->gift_category]] .
 							" >= {$row->gift_threshold}",
 						'stats_user_id <> 0'
-					),
+					],
 					__METHOD__
 				);
 
@@ -72,13 +72,13 @@ class SystemGifts {
 					if ( $this->doesUserHaveGift( $row2->stats_user_id, $row->gift_id ) == false ) {
 						$dbw->insert(
 							'user_system_gift',
-							array(
+							[
 								'sg_gift_id' => $row->gift_id,
 								'sg_user_id' => $row2->stats_user_id,
 								'sg_user_name' => $row2->stats_user_name,
 								'sg_status' => 0,
 								'sg_date' => date( 'Y-m-d H:i:s', time() - ( 60 * 60 * 24 * 3 ) ),
-							),
+							],
 							__METHOD__
 						);
 
@@ -115,8 +115,8 @@ class SystemGifts {
 		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_system_gift',
-			array( 'sg_gift_id' ),
-			array( 'sg_gift_id' => $gift_id, 'sg_user_id' => $user_id ),
+			[ 'sg_gift_id' ],
+			[ 'sg_gift_id' => $gift_id, 'sg_user_id' => $user_id ],
 			__METHOD__
 		);
 		if ( $s === false ) {
@@ -139,13 +139,13 @@ class SystemGifts {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->insert(
 			'system_gift',
-			array(
+			[
 				'gift_name' => $name,
 				'gift_description' => $description,
 				'gift_category' => $category,
 				'gift_threshold' => $threshold,
 				'gift_createdate' => date( 'Y-m-d H:i:s' ),
-			),
+			],
 			__METHOD__
 		);
 		return $dbw->insertId();
@@ -164,13 +164,13 @@ class SystemGifts {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update(
 			'system_gift',
-			/* SET */array(
+			/* SET */[
 				'gift_name' => $name,
 				'gift_description' => $description,
 				'gift_category' => $category,
 				'gift_threshold' => $threshold,
-			),
-			/* WHERE */array( 'gift_id' => $id ),
+			],
+			/* WHERE */[ 'gift_id' => $id ],
 			__METHOD__
 		);
 	}
@@ -185,11 +185,11 @@ class SystemGifts {
 
 		$s = $dbr->selectRow(
 			'system_gift',
-			array( 'gift_id' ),
-			array(
+			[ 'gift_id' ],
+			[
 				'gift_category' => $awardCategory,
 				'gift_threshold' => $threshold
-			),
+			],
 			__METHOD__
 		);
 
@@ -211,13 +211,13 @@ class SystemGifts {
 		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
 			'system_gift',
-			array(
+			[
 				'gift_id', 'gift_name', 'gift_description', 'gift_category',
 				'gift_threshold', 'gift_given_count'
-			),
-			array( 'gift_id' => $id ),
+			],
+			[ 'gift_id' => $id ],
 			__METHOD__,
-			array( 'LIMIT' => 1 )
+			[ 'LIMIT' => 1 ]
 		);
 		$row = $dbr->fetchObject( $res );
 		if ( $row ) {
@@ -241,8 +241,8 @@ class SystemGifts {
 		$gift_count = 0;
 		$s = $dbr->selectRow(
 			'system_gift',
-			array( 'COUNT(*) AS count' ),
-			array(),
+			[ 'COUNT(*) AS count' ],
+			[],
 			__METHOD__
 		);
 		if ( $s !== false ) {

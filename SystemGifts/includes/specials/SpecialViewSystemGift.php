@@ -54,21 +54,21 @@ class ViewSystemGift extends UnlistedSpecialPage {
 			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
 				'user_system_gift',
-				array(
+				[
 					'DISTINCT sg_user_name', 'sg_user_id', 'sg_gift_id',
 					'sg_date'
-				),
-				array(
+				],
+				[
 					"sg_gift_id = {$gift['gift_id']}",
 					'sg_user_name <> ' . $dbr->addQuotes( $gift['user_name'] )
-				),
+				],
 				__METHOD__,
-				array(
+				[
 					'GROUP BY' => 'sg_user_name',
 					'ORDER BY' => 'sg_date DESC',
 					'OFFSET' => 0,
 					'LIMIT' => 6
-				)
+				]
 			);
 
 			$out->setPageTitle( $this->msg( 'ga-gift-title', $gift['user_name'], $gift['name'] )->parse() );

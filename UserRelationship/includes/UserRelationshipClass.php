@@ -34,7 +34,7 @@ class UserRelationship {
 
 		$dbw->insert(
 			'user_relationship_request',
-			array(
+			[
 				'ur_user_id_from' => $this->user_id,
 				'ur_user_name_from' => $this->user_name,
 				'ur_user_id_to' => $userIdTo,
@@ -42,7 +42,7 @@ class UserRelationship {
 				'ur_type' => $type,
 				'ur_message' => $message,
 				'ur_date' => date( 'Y-m-d H:i:s' )
-			), __METHOD__
+			], __METHOD__
 		);
 		$requestId = $dbw->insertId();
 
@@ -56,17 +56,17 @@ class UserRelationship {
 		if ( ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ) {
 			$userFrom = User::newFromId( $this->user_id );
 
-			EchoEvent::create( array(
+			EchoEvent::create( [
 				'type' => 'social-rel-add',
 				'agent' => $userFrom,
 				'title' => $userFrom->getUserPage(),
-				'extra' => array(
+				'extra' => [
 					'target' => $userIdTo,
 					'from' => $this->user_id,
 					'rel_type' => $type,
 					'message' => $message
-				)
-			) );
+				]
+			] );
 		}
 
 		return $requestId;
@@ -99,7 +99,7 @@ class UserRelationship {
 
 			if ( $type == 1 ) {
 				$subject = wfMessage( 'friend_request_subject', $userFrom )->text();
-				$body = array(
+				$body = [
 					'html' => wfMessage( 'friend_request_body_html',
 						$name,
 						$userFrom
@@ -110,10 +110,10 @@ class UserRelationship {
 						$requestLink->getFullURL(),
 						$updateProfileLink->getFullURL()
 					)->text()
-				);
+				];
 			} else {
 				$subject = wfMessage( 'foe_request_subject', $userFrom )->text();
-				$body = array(
+				$body = [
 					'html' => wfMessage( 'foe_request_body_html',
 						$name,
 						$userFrom
@@ -124,7 +124,7 @@ class UserRelationship {
 						$requestLink->getFullURL(),
 						$updateProfileLink->getFullURL()
 					)->text()
-				);
+				];
 			}
 
 			$user->sendMail( $subject, $body );
@@ -158,7 +158,7 @@ class UserRelationship {
 
 			if ( $type == 1 ) {
 				$subject = wfMessage( 'friend_accept_subject', $userFrom )->text();
-				$body = array(
+				$body = [
 					'html' => wfMessage( 'friend_accept_body_html',
 						$name,
 						$userFrom
@@ -169,10 +169,10 @@ class UserRelationship {
 						$userLink->getFullURL(),
 						$updateProfileLink->getFullURL()
 					)->text()
-				);
+				];
 			} else {
 				$subject = wfMessage( 'foe_accept_subject', $userFrom )->text();
-				$body = array(
+				$body = [
 					'html' => wfMessage( 'foe_accept_body_html',
 						$name,
 						$userFrom
@@ -183,7 +183,7 @@ class UserRelationship {
 						$userLink->getFullURL(),
 						$updateProfileLink->getFullURL()
 					)->text()
-				);
+				];
 			}
 
 			$user->sendMail( $subject, $body );
@@ -217,7 +217,7 @@ class UserRelationship {
 
 			if ( $type == 1 ) {
 				$subject = wfMessage( 'friend_removed_subject', $userFrom )->text();
-				$body = array(
+				$body = [
 					'html' => wfMessage( 'friend_removed_body_html',
 						$name,
 						$userFrom
@@ -228,10 +228,10 @@ class UserRelationship {
 						$userLink->getFullURL(),
 						$updateProfileLink->getFullURL()
 					)->text()
-				);
+				];
 			} else {
 				$subject = wfMessage( 'foe_removed_subject', $userFrom )->text();
-				$body = array(
+				$body = [
 					'html' => wfMessage( 'foe_removed_body_html',
 						$name,
 						$userFrom
@@ -242,7 +242,7 @@ class UserRelationship {
 						$userLink->getFullURL(),
 						$updateProfileLink->getFullURL()
 					)->text()
-				);
+				];
 			}
 
 			$user->sendMail( $subject, $body );
@@ -262,8 +262,8 @@ class UserRelationship {
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(
 			'user_relationship_request',
-			array( 'ur_user_id_from', 'ur_user_name_from', 'ur_type' ),
-			array( 'ur_id' => $relationshipRequestId ),
+			[ 'ur_user_id_from', 'ur_user_name_from', 'ur_type' ],
+			[ 'ur_id' => $relationshipRequestId ],
 			__METHOD__
 		);
 
@@ -278,27 +278,27 @@ class UserRelationship {
 
 			$dbw->insert(
 				'user_relationship',
-				array(
+				[
 					'r_user_id' => $this->user_id,
 					'r_user_name' => $this->user_name,
 					'r_user_id_relation' => $ur_user_id_from,
 					'r_user_name_relation' => $ur_user_name_from,
 					'r_type' => $ur_type,
 					'r_date' => date( 'Y-m-d H:i:s' )
-				),
+				],
 				__METHOD__
 			);
 
 			$dbw->insert(
 				'user_relationship',
-				array(
+				[
 					'r_user_id' => $ur_user_id_from,
 					'r_user_name' => $ur_user_name_from,
 					'r_user_id_relation' => $this->user_id,
 					'r_user_name_relation' => $this->user_name,
 					'r_type' => $ur_type,
 					'r_date' => date( 'Y-m-d H:i:s' )
-				),
+				],
 				__METHOD__
 			);
 
@@ -327,23 +327,23 @@ class UserRelationship {
 			if ( ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ) {
 				$userFrom = User::newFromId( $this->user_id );
 
-				EchoEvent::create( array(
+				EchoEvent::create( [
 					'type' => 'social-rel-accept',
 					'agent' => $userFrom,
 					'title' => $userFrom->getUserPage(),
-					'extra' => array(
+					'extra' => [
 						'target' => $ur_user_id_from,
 						'from' => $this->user_id,
 						'rel_type' => $ur_type
-					)
-				) );
+					]
+				] );
 			}
 
 			// Hooks (for Semantic SocialProfile mostly)
 			if ( $ur_type == 1 ) {
-				Hooks::run( 'NewFriendAccepted', array( $ur_user_name_from, $this->user_name ) );
+				Hooks::run( 'NewFriendAccepted', [ $ur_user_name_from, $this->user_name ] );
 			} else {
-				Hooks::run( 'NewFoeAccepted', array( $ur_user_name_from, $this->user_name ) );
+				Hooks::run( 'NewFoeAccepted', [ $ur_user_name_from, $this->user_name ] );
 			}
 
 			return true;
@@ -369,12 +369,12 @@ class UserRelationship {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->delete(
 			'user_relationship',
-			array( 'r_user_id' => $user1, 'r_user_id_relation' => $user2 ),
+			[ 'r_user_id' => $user1, 'r_user_id_relation' => $user2 ],
 			__METHOD__
 		);
 		$dbw->delete(
 			'user_relationship',
-			array( 'r_user_id' => $user2, 'r_user_id_relation' => $user1 ),
+			[ 'r_user_id' => $user2, 'r_user_id_relation' => $user1 ],
 			__METHOD__
 		);
 
@@ -385,7 +385,7 @@ class UserRelationship {
 		$wgMemc->delete( $wgMemc->makeKey( 'relationship', 'profile', "{$user2}-2" ) );
 
 		// RelationshipRemovedByUserID hook
-		Hooks::run( 'RelationshipRemovedByUserID', array( $user1, $user2 ) );
+		Hooks::run( 'RelationshipRemovedByUserID', [ $user1, $user2 ] );
 
 		// Update social statistics for both users
 		$stats = new UserStatsTrack( $user1, '' );
@@ -414,7 +414,7 @@ class UserRelationship {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->delete(
 			'user_relationship_request',
-			array( 'ur_id' => $id ),
+			[ 'ur_id' => $id ],
 			__METHOD__
 		);
 	}
@@ -427,8 +427,8 @@ class UserRelationship {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update(
 			'user_relationship_request',
-			/* SET */array( 'ur_status' => $status ),
-			/* WHERE */array( 'ur_id' => $relationshipRequestId ),
+			/* SET */[ 'ur_status' => $status ],
+			/* WHERE */[ 'ur_id' => $relationshipRequestId ],
 			__METHOD__
 		);
 	}
@@ -444,8 +444,8 @@ class UserRelationship {
 		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_relationship_request',
-			array( 'ur_user_id_to' ),
-			array( 'ur_id' => $relationshipRequestId ),
+			[ 'ur_user_id_to' ],
+			[ 'ur_id' => $relationshipRequestId ],
 			__METHOD__
 		);
 		if ( $s !== false ) {
@@ -465,8 +465,8 @@ class UserRelationship {
 		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_relationship',
-			array( 'r_type' ),
-			array( 'r_user_id' => $user1, 'r_user_id_relation' => $user2 ),
+			[ 'r_type' ],
+			[ 'r_user_id' => $user1, 'r_user_id_relation' => $user2 ],
 			__METHOD__
 		);
 		if ( $s !== false ) {
@@ -485,12 +485,12 @@ class UserRelationship {
 		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_relationship_request',
-			array( 'ur_type' ),
-			array(
+			[ 'ur_type' ],
+			[
 				'ur_user_id_to' => $user1,
 				'ur_user_id_from' => $user2,
 				'ur_status' => 0
-			),
+			],
 			__METHOD__
 		);
 		if ( $s === false ) {
@@ -511,11 +511,11 @@ class UserRelationship {
 		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
 			'user_relationship_request',
-			array(
+			[
 				'ur_id', 'ur_user_id_from', 'ur_user_name_from', 'ur_type',
 				'ur_message', 'ur_date'
-			),
-			array( 'ur_id' => $id ),
+			],
+			[ 'ur_id' => $id ],
 			__METHOD__
 		);
 
@@ -525,14 +525,14 @@ class UserRelationship {
 			} else {
 				$typeName = 'Foe';
 			}
-			$request[] = array(
+			$request[] = [
 				'id' => $row->ur_id,
 				'rel_type' => $row->ur_type,
 				'type' => $typeName,
 				'timestamp' => ( $row->ur_date ),
 				'user_id_from' => $row->ur_user_id_from,
 				'user_name_from' => $row->ur_user_name_from
-			);
+			];
 		}
 
 		return $request;
@@ -551,16 +551,16 @@ class UserRelationship {
 
 		$res = $dbr->select(
 			'user_relationship',
-			array(
+			[
 				'r_id', 'r_user_id_relation',
 				'r_user_name_relation', 'r_date'
-			),
-			array( 'r_user_id' => $this->user_id, 'r_type' => $type ),
+			],
+			[ 'r_user_id' => $this->user_id, 'r_type' => $type ],
 			__METHOD__,
-			array( 'ORDER BY' => 'r_user_name_relation' )
+			[ 'ORDER BY' => 'r_user_name_relation' ]
 		);
 
-		$rel = array();
+		$rel = [];
 		foreach ( $res as $row ) {
 			$rel[] = $row->r_user_id_relation;
 		}

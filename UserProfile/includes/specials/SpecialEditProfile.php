@@ -91,7 +91,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 				'profile',
 				$target->getUserPage(),
 				$this->msg( 'user-profile-edit-profile',
-					array( '[[User:' . $target->getName() . ']]' ) )
+					[ '[[User:' . $target->getName() . ']]' ] )
 				->inContentLanguage()->text()
 			);
 			$out->addHTML(
@@ -160,13 +160,13 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_profile',
-			array(
+			[
 				'up_location_city', 'up_location_state', 'up_location_country',
 				'up_hometown_city', 'up_hometown_state', 'up_hometown_country',
 				'up_birthday', 'up_occupation', 'up_about', 'up_schools',
 				'up_places_lived', 'up_websites'
-			),
-			array( 'up_user_id' => $tar->getId() ),
+			],
+			[ 'up_user_id' => $tar->getId() ],
 			__METHOD__
 		);
 
@@ -194,8 +194,8 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 
 		$s = $dbr->selectRow(
 			'user',
-			array( 'user_real_name', 'user_email', 'user_email_authenticated' ),
-			array( 'user_id' => $tar->getId() ),
+			[ 'user_real_name', 'user_email', 'user_email_authenticated' ],
+			[ 'user_id' => $tar->getId() ],
 			__METHOD__
 		);
 
@@ -352,13 +352,13 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_profile',
-			array(
+			[
 				'up_about', 'up_places_lived', 'up_websites', 'up_relationship',
 				'up_occupation', 'up_companies', 'up_schools', 'up_movies',
 				'up_tv', 'up_music', 'up_books', 'up_video_games',
 				'up_magazines', 'up_snacks', 'up_drinks'
-			),
-			array( 'up_user_id' => $tar->getId() ),
+			],
+			[ 'up_user_id' => $tar->getId() ],
 			__METHOD__
 		);
 
@@ -441,11 +441,11 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_profile',
-			array(
+			[
 				'up_custom_1', 'up_custom_2', 'up_custom_3', 'up_custom_4',
 				'up_custom_5'
-			),
-			array( 'up_user_id' => $tar->getId() ),
+			],
+			[ 'up_user_id' => $tar->getId() ],
 			__METHOD__
 		);
 

@@ -29,10 +29,10 @@ class EchoUserBoardMessagePresentationModel extends EchoEventPresentationModel {
 	}
 
 	public function getPrimaryLink() {
-		return array(
+		return [
 			'url' => SpecialPage::getTitleFor( 'UserBoard' )->getLocalURL(),
 			'label' => $this->msg( 'echo-learn-more' )->text()
-		);
+		];
 	}
 
 }

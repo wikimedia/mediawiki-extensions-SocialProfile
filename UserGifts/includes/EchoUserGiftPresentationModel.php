@@ -45,10 +45,10 @@ class EchoUserGiftPresentationModel extends EchoEventPresentationModel {
 	}
 
 	public function getPrimaryLink() {
-		return array(
+		return [
 			'url' => $this->getGiftLink(),
 			'label' => $this->msg( 'echo-learn-more' )->text()
-		);
+		];
 	}
 
 	public function getSecondaryLinks() {
@@ -59,29 +59,29 @@ class EchoUserGiftPresentationModel extends EchoEventPresentationModel {
 			// return an empty array
 			$label = $g['gift_name'];
 		}
-		return array(
+		return [
 			$this->getMyProfileLink(),
-			array(
+			[
 				'url' => $this->getGiftLink(),
 				'label' => $label
-			)
-		);
+			]
+		];
 	}
 
 	private function getMyProfileLink() {
-		return array(
+		return [
 			'label' => $this->msg( 'g-your-profile' )->text(),
 			'url' => Title::makeTitle( NS_USER, $this->getViewingUserForGender() )->getFullURL(),
 			'description' => '',
 			'icon' => 'userAvatar',
 			'prioritized' => true,
-		);
+		];
 	}
 
 	private function getGiftLink() {
-		return SpecialPage::getTitleFor( 'ViewGift' )->getLocalURL( array(
+		return SpecialPage::getTitleFor( 'ViewGift' )->getLocalURL( [
 			'gift_id' => $this->event->getExtraParam( 'giftid' )
-		) );
+		] );
 	}
 
 }

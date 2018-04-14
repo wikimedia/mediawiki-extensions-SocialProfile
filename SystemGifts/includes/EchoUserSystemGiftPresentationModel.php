@@ -22,10 +22,10 @@ class EchoUserSystemGiftPresentationModel extends EchoEventPresentationModel {
 	}
 
 	public function getPrimaryLink() {
-		return array(
-			'url' => SpecialPage::getTitleFor( 'ViewSystemGift' )->getLocalURL( array( 'gift_id' => $this->event->getExtraParam( 'giftid' ) ) ),
+		return [
+			'url' => SpecialPage::getTitleFor( 'ViewSystemGift' )->getLocalURL( [ 'gift_id' => $this->event->getExtraParam( 'giftid' ) ] ),
 			'label' => $this->msg( 'echo-learn-more' )->text()
-		);
+		];
 	}
 
 }

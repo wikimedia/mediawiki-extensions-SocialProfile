@@ -5,9 +5,9 @@
  * @file
  */
 
-$magicWords = array();
+$magicWords = [];
 
 /** English */
-$magicWords['en'] = array(
-	'avatar' => array( 0, 'avatar' ),
-);
+$magicWords['en'] = [
+	'avatar' => [ 0, 'avatar' ],
+];

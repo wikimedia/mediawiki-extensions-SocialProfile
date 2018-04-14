@@ -57,9 +57,9 @@ class SpecialViewRelationships extends SpecialPage {
 		$this->setHeaders();
 
 		// Add CSS
-		$out->addModuleStyles( array(
+		$out->addModuleStyles( [
 			'ext.socialprofile.userrelationship.css'
-		) );
+		] );
 
 		$output = '';
 
@@ -199,27 +199,27 @@ class SpecialViewRelationships extends SpecialPage {
 					<div class=\"relationship-actions\">";
 
 				if ( $indivRelationship == false ) {
-					$output .= $lang->pipeList( array(
+					$output .= $lang->pipeList( [
 						$linkRenderer->makeLink(
 							$addRelationshipLink,
 							$this->msg( 'ur-add-friend' )->plain(),
-							array(),
-							array( 'user' => $relationship['user_name'], 'rel_type' => 1 )
+							[],
+							[ 'user' => $relationship['user_name'], 'rel_type' => 1 ]
 						),
 						$linkRenderer->makeLink(
 							$addRelationshipLink,
 							$this->msg( 'ur-add-foe' )->plain(),
-							array(),
-							array( 'user' => $relationship['user_name'], 'rel_type' => 2 )
+							[],
+							[ 'user' => $relationship['user_name'], 'rel_type' => 2 ]
 						),
 						''
-					) );
+					] );
 				} elseif ( $user_name == $user->getName() ) {
 					$output .= $linkRenderer->makeLink(
 						$removeRelationshipLink,
 						$rem,
-						array(),
-						array( 'user' => $relationship['user_name'] )
+						[],
+						[ 'user' => $relationship['user_name'] ]
 					);
 					$output .= $this->msg( 'pipe-separator' )->escaped();
 				}
@@ -227,8 +227,8 @@ class SpecialViewRelationships extends SpecialPage {
 				$output .= $linkRenderer->makeLink(
 					$giveGiftLink,
 					$this->msg( 'ur-give-gift' )->plain(),
-					array(),
-					array( 'user' => $relationship['user_name'] )
+					[],
+					[ 'user' => $relationship['user_name'] ]
 				);
 
 				$output .= '</div>
@@ -257,12 +257,12 @@ class SpecialViewRelationships extends SpecialPage {
 				$output .= $linkRenderer->makeLink(
 					$pageLink,
 					$this->msg( 'last' )->plain(),
-					array(),
-					array(
+					[],
+					[
 						'user' => $user_name,
 						'rel_type' => $rel_type,
 						'page' => ( $page - 1 )
-					)
+					]
 				) . $this->msg( 'word-separator' )->plain();
 			}
 
@@ -283,12 +283,12 @@ class SpecialViewRelationships extends SpecialPage {
 					$output .= $linkRenderer->makeLink(
 						$pageLink,
 						$i,
-						array(),
-						array(
+						[],
+						[
 							'user' => $user_name,
 							'rel_type' => $rel_type,
 							'page' => $i
-						)
+						]
 					) . $this->msg( 'word-separator' )->plain();
 				}
 			}
@@ -298,12 +298,12 @@ class SpecialViewRelationships extends SpecialPage {
 					$linkRenderer->makeLink(
 						$pageLink,
 						$this->msg( 'next' )->plain(),
-						array(),
-						array(
+						[],
+						[
 							'user' => $user_name,
 							'rel_type' => $rel_type,
 							'page' => ( $page + 1 )
-						)
+						]
 					);
 			}
 			$output .= '</div>';

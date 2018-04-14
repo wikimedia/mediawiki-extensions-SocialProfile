@@ -57,16 +57,16 @@ class ApiRelationshipResponse extends ApiBase {
 	}
 
 	public function getAllowedParams() {
-		return array_merge( parent::getAllowedParams(), array(
-			'response' => array(
+		return array_merge( parent::getAllowedParams(), [
+			'response' => [
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_REQUIRED => true
-			),
-			'id' => array(
+			],
+			'id' => [
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_REQUIRED => true
-			)
-		) );
+			]
+		] );
 	}
 }
 

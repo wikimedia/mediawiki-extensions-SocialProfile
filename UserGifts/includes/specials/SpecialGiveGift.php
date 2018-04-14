@@ -113,10 +113,10 @@ class GiveGift extends SpecialPage {
 
 				if ( $found ) {
 					// add new unique to array
-					$lastUniqueGifts[] = array(
+					$lastUniqueGifts[] = [
 						'id' => $ug_gift_id,
 						'gift_id' => $request->getInt( 'gift_id' )
-					);
+					];
 
 					// remove oldest value
 					if ( count( $lastUniqueGifts ) > 4 ) {
@@ -385,11 +385,11 @@ class GiveGift extends SpecialPage {
 					$output .= $linkRenderer->makeLink(
 						$giveGiftLink,
 						$this->msg( 'g-previous' )->plain(),
-						array(),
-						array(
+						[],
+						[
 							'user' => $user_name,
 							'page' => ( $page - 1 )
-						)
+						]
 					) . $this->msg( 'word-separator' )->plain();
 				}
 
@@ -406,11 +406,11 @@ class GiveGift extends SpecialPage {
 						$output .= $linkRenderer->makeLink(
 							$giveGiftLink,
 							$i,
-							array(),
-							array(
+							[],
+							[
 								'user' => $user_name,
 								'page' => $i
-							)
+							]
 						) . $this->msg( 'word-separator' )->plain();
 					}
 				}
@@ -420,11 +420,11 @@ class GiveGift extends SpecialPage {
 						$linkRenderer->makeLink(
 							$giveGiftLink,
 							$this->msg( 'g-next' )->plain(),
-							array(),
-							array(
+							[],
+							[
 								'user' => $user_name,
 								'page' => ( $page + 1 )
-							)
+							]
 						);
 				}
 				$output .= '</div>';

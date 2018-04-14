@@ -57,7 +57,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 
 			$this->showSuccess( $this->mUpload->mExtension );
 			// Run a hook on avatar change
-			Hooks::run( 'NewAvatarUploaded', array( $this->getUser() ) );
+			Hooks::run( 'NewAvatarUploaded', [ $this->getUser() ] );
 		}
 	}
 
@@ -201,7 +201,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 		// SpecialUpload::loadRequest() and having the hidden title doesn't
 		// hurt either
 		// @see https://phabricator.wikimedia.org/T32953
-		$output .= Html::hidden( 'wpEditToken', $this->getUser()->getEditToken(), array( 'id' => 'wpEditToken' ) ) . "\n";
+		$output .= Html::hidden( 'wpEditToken', $this->getUser()->getEditToken(), [ 'id' => 'wpEditToken' ] ) . "\n";
 		$output .= Html::hidden( 'title', $this->getPageTitle()->getPrefixedText() ) . "\n";
 		$output .= '<table>
 				<tr>

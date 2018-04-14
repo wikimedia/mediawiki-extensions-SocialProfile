@@ -42,7 +42,7 @@ class UserActivity {
 		$this->item_max = $item_max;
 		$this->now = time();
 		$this->three_days_ago = $this->now - ( 60 * 60 * 24 * 3 );
-		$this->items_grouped = array();
+		$this->items_grouped = [];
 	}
 
 	private function setFilter( $filter ) {
@@ -74,19 +74,19 @@ class UserActivity {
 	private function setEdits() {
 		$dbr = wfGetDB( DB_REPLICA );
 
-		$where = array();
+		$where = [];
 
 		if ( !empty( $this->rel_type ) ) {
 			$users = $dbr->select(
 				'user_relationship',
 				'r_user_id_relation',
-				array(
+				[
 					'r_user_id' => $this->user_id,
 					'r_type' => $this->rel_type
-				),
+				],
 				__METHOD__
 			);
-			$userArray = array();
+			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
@@ -102,19 +102,19 @@ class UserActivity {
 
 		$res = $dbr->select(
 			'recentchanges',
-			array(
+			[
 				'rc_timestamp', 'rc_title',
 				'rc_user', 'rc_user_text', 'rc_comment', 'rc_id', 'rc_minor',
 				'rc_new', 'rc_namespace', 'rc_cur_id', 'rc_this_oldid',
 				'rc_last_oldid', 'rc_log_action'
-			),
+			],
 			$where,
 			__METHOD__,
-			array(
+			[
 				'ORDER BY' => 'rc_id DESC',
 				'LIMIT' => $this->item_max,
 				'OFFSET' => 0
-			)
+			]
 		);
 
 		foreach ( $res as $row ) {
@@ -128,7 +128,7 @@ class UserActivity {
 			$title = Title::makeTitle( $row->rc_namespace, $row->rc_title );
 			$unixTS = wfTimestamp( TS_UNIX, $row->rc_timestamp );
 
-			$this->items_grouped['edit'][$title->getPrefixedText()]['users'][$row->rc_user_text][] = array(
+			$this->items_grouped['edit'][$title->getPrefixedText()]['users'][$row->rc_user_text][] = [
 				'id' => 0,
 				'type' => 'edit',
 				'timestamp' => $unixTS,
@@ -139,12 +139,12 @@ class UserActivity {
 				'comment' => $this->fixItemComment( $row->rc_comment ),
 				'minor' => $row->rc_minor,
 				'new' => $row->rc_new
-			);
+			];
 
 			// set last timestamp
 			$this->items_grouped['edit'][$title->getPrefixedText()]['timestamp'] = $unixTS;
 
-			$this->items[] = array(
+			$this->items[] = [
 				'id' => 0,
 				'type' => 'edit',
 				'timestamp' => $unixTS,
@@ -155,7 +155,7 @@ class UserActivity {
 				'comment' => $this->fixItemComment( $row->rc_comment ),
 				'minor' => $row->rc_minor,
 				'new' => $row->rc_new
-			);
+			];
 		}
 	}
 
@@ -171,20 +171,20 @@ class UserActivity {
 			return false;
 		}
 
-		$where = array();
+		$where = [];
 		$where[] = 'vote_page_id = page_id';
 
 		if ( $this->rel_type ) {
 			$users = $dbr->select(
 				'user_relationship',
 				'r_user_id_relation',
-				array(
+				[
 					'r_user_id' => $this->user_id,
 					'r_type' => $this->rel_type
-				),
+				],
 				__METHOD__
 			);
-			$userArray = array();
+			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
@@ -198,24 +198,24 @@ class UserActivity {
 		}
 
 		$res = $dbr->select(
-			array( 'Vote', 'page' ),
-			array(
+			[ 'Vote', 'page' ],
+			[
 				'vote_date AS item_date', 'username',
 				'page_title', 'vote_count', 'comment_count', 'vote_ip',
 				'vote_user_id'
-			),
+			],
 			$where,
 			__METHOD__,
-			array(
+			[
 				'ORDER BY' => 'vote_date DESC',
 				'LIMIT' => $this->item_max,
 				'OFFSET' => 0
-			)
+			]
 		);
 
 		foreach ( $res as $row ) {
 			$username = $row->username;
-			$this->items[] = array(
+			$this->items[] = [
 				'id' => 0,
 				'type' => 'vote',
 				'timestamp' => wfTimestamp( TS_UNIX, $row->vote_date ),
@@ -226,7 +226,7 @@ class UserActivity {
 				'comment' => '-',
 				'new' => '0',
 				'minor' => 0
-			);
+			];
 		}
 	}
 
@@ -242,20 +242,20 @@ class UserActivity {
 			return false;
 		}
 
-		$where = array();
+		$where = [];
 		$where[] = 'Comment_Page_ID = page_id';
 
 		if ( !empty( $this->rel_type ) ) {
 			$users = $dbr->select(
 				'user_relationship',
 				'r_user_id_relation',
-				array(
+				[
 					'r_user_id' => $this->user_id,
 					'r_type' => $this->rel_type
-				),
+				],
 				__METHOD__
 			);
-			$userArray = array();
+			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
@@ -270,19 +270,19 @@ class UserActivity {
 		}
 
 		$res = $dbr->select(
-			array( 'Comments', 'page' ),
-			array(
+			[ 'Comments', 'page' ],
+			[
 				'Comment_Date AS item_date',
 				'Comment_Username', 'Comment_IP', 'page_title', 'Comment_Text',
 				'Comment_user_id', 'page_namespace', 'CommentID'
-			),
+			],
 			$where,
 			__METHOD__,
-			array(
+			[
 				'ORDER BY' => 'comment_date DESC',
 				'LIMIT' => $this->item_max,
 				'OFFSET' => 0
-			)
+			]
 		);
 
 		foreach ( $res as $row ) {
@@ -298,7 +298,7 @@ class UserActivity {
 			if ( $show_comment ) {
 				$title = Title::makeTitle( $row->page_namespace, $row->page_title );
 				$unixTS = wfTimestamp( TS_UNIX, $row->item_date );
-				$this->items_grouped['comment'][$title->getPrefixedText()]['users'][$row->Comment_Username][] = array(
+				$this->items_grouped['comment'][$title->getPrefixedText()]['users'][$row->Comment_Username][] = [
 					'id' => $row->CommentID,
 					'type' => 'comment',
 					'timestamp' => $unixTS,
@@ -309,13 +309,13 @@ class UserActivity {
 					'comment' => $this->fixItemComment( $row->Comment_Text ),
 					'minor' => 0,
 					'new' => 0
-				);
+				];
 
 				// set last timestamp
 				$this->items_grouped['comment'][$title->getPrefixedText()]['timestamp'] = $unixTS;
 
 				$username = $row->Comment_Username;
-				$this->items[] = array(
+				$this->items[] = [
 					'id' => $row->CommentID,
 					'type' => 'comment',
 					'timestamp' => $unixTS,
@@ -326,7 +326,7 @@ class UserActivity {
 					'comment' => $this->fixItemComment( $row->Comment_Text ),
 					'new' => '0',
 					'minor' => 0
-				);
+				];
 			}
 		}
 	}
@@ -338,19 +338,19 @@ class UserActivity {
 	private function setGiftsSent() {
 		$dbr = wfGetDB( DB_REPLICA );
 
-		$where = array();
+		$where = [];
 
 		if( $this->rel_type ) {
 			$users = $dbr->select(
 				'user_relationship',
 				'r_user_id_relation',
-				array(
+				[
 					'r_user_id' => $this->user_id,
 					'r_type' => $this->rel_type
-				),
+				],
 				__METHOD__
 			);
-			$userArray = array();
+			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
@@ -365,24 +365,24 @@ class UserActivity {
 		}
 
 		$res = $dbr->select(
-			array( 'user_gift', 'gift' ),
-			array(
+			[ 'user_gift', 'gift' ],
+			[
 				'ug_id', 'ug_user_id_from', 'ug_user_name_from',
 				'ug_user_id_to', 'ug_user_name_to',
 				'ug_date', 'gift_name', 'gift_id'
-			),
+			],
 			$where,
 			__METHOD__,
-			array(
+			[
 				'ORDER BY' => 'ug_id DESC',
 				'LIMIT' => $this->item_max,
 				'OFFSET' => 0
-			),
-			array( 'gift' => array( 'INNER JOIN', 'gift_id = ug_gift_id' ) )
+			],
+			[ 'gift' => [ 'INNER JOIN', 'gift_id = ug_gift_id' ] ]
 		);
 
 		foreach ( $res as $row ) {
-			$this->items[] = array(
+			$this->items[] = [
 				'id' => $row->ug_id,
 				'type' => 'gift-sent',
 				'timestamp' => wfTimestamp( TS_UNIX, $row->ug_date ),
@@ -393,7 +393,7 @@ class UserActivity {
 				'comment' => $row->ug_user_name_to,
 				'new' => '0',
 				'minor' => 0
-			);
+			];
 		}
 	}
 
@@ -404,19 +404,19 @@ class UserActivity {
 	private function setGiftsRec() {
 		$dbr = wfGetDB( DB_REPLICA );
 
-		$where = array();
+		$where = [];
 
 		if ( !empty( $this->rel_type ) ) {
 			$users = $dbr->select(
 				'user_relationship',
 				'r_user_id_relation',
-				array(
+				[
 					'r_user_id' => $this->user_id,
 					'r_type' => $this->rel_type
-				),
+				],
 				__METHOD__
 			);
-			$userArray = array();
+			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
@@ -431,20 +431,20 @@ class UserActivity {
 		}
 
 		$res = $dbr->select(
-			array( 'user_gift', 'gift' ),
-			array(
+			[ 'user_gift', 'gift' ],
+			[
 				'ug_id', 'ug_user_id_from', 'ug_user_name_from',
 				'ug_user_id_to', 'ug_user_name_to',
 				'ug_date', 'gift_name', 'gift_id'
-			),
+			],
 			$where,
 			__METHOD__,
-			array(
+			[
 				'ORDER BY' => 'ug_id DESC',
 				'LIMIT' => $this->item_max,
 				'OFFSET' => 0
-			),
-			array( 'gift' => array( 'INNER JOIN', 'gift_id = ug_gift_id' ) )
+			],
+			[ 'gift' => [ 'INNER JOIN', 'gift_id = ug_gift_id' ] ]
 		);
 
 		foreach ( $res as $row ) {
@@ -468,13 +468,13 @@ class UserActivity {
 
 			$unixTS = wfTimestamp( TS_UNIX, $row->ug_date );
 
-			$this->activityLines[] = array(
+			$this->activityLines[] = [
 				'type' => 'gift-rec',
 				'timestamp' => $unixTS,
 				'data' => ' ' . $html
-			);
+			];
 
-			$this->items[] = array(
+			$this->items[] = [
 				'id' => $row->ug_id,
 				'type' => 'gift-rec',
 				'timestamp' => $unixTS,
@@ -485,7 +485,7 @@ class UserActivity {
 				'comment' => $row->ug_user_name_from,
 				'new' => '0',
 				'minor' => 0
-			);
+			];
 		}
 	}
 
@@ -497,19 +497,19 @@ class UserActivity {
 	private function setSystemGiftsRec() {
 		$dbr = wfGetDB( DB_REPLICA );
 
-		$where = array();
+		$where = [];
 
 		if ( !empty( $this->rel_type ) ) {
 			$users = $dbr->select(
 				'user_relationship',
 				'r_user_id_relation',
-				array(
+				[
 					'r_user_id' => $this->user_id,
 					'r_type' => $this->rel_type
-				),
+				],
 				__METHOD__
 			);
-			$userArray = array();
+			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
@@ -524,19 +524,19 @@ class UserActivity {
 		}
 
 		$res = $dbr->select(
-			array( 'user_system_gift', 'system_gift' ),
-			array(
+			[ 'user_system_gift', 'system_gift' ],
+			[
 				'sg_id', 'sg_user_id', 'sg_user_name',
 				'sg_date', 'gift_name', 'gift_id'
-			),
+			],
 			$where,
 			__METHOD__,
-			array(
+			[
 				'ORDER BY' => 'sg_id DESC',
 				'LIMIT' => $this->item_max,
 				'OFFSET' => 0
-			),
-			array( 'system_gift' => array( 'INNER JOIN', 'gift_id = sg_gift_id' ) )
+			],
+			[ 'system_gift' => [ 'INNER JOIN', 'gift_id = sg_gift_id' ] ]
 		);
 
 		foreach ( $res as $row ) {
@@ -560,13 +560,13 @@ class UserActivity {
 
 			$unixTS = wfTimestamp( TS_UNIX, $row->sg_date );
 
-			$this->activityLines[] = array(
+			$this->activityLines[] = [
 				'type' => 'system_gift',
 				'timestamp' => $unixTS,
 				'data' => ' ' . $html
-			);
+			];
 
-			$this->items[] = array(
+			$this->items[] = [
 				'id' => $row->sg_id,
 				'type' => 'system_gift',
 				'timestamp' => $unixTS,
@@ -577,7 +577,7 @@ class UserActivity {
 				'comment' => '-',
 				'new' => '0',
 				'minor' => 0
-			);
+			];
 		}
 	}
 
@@ -590,19 +590,19 @@ class UserActivity {
 
 		$dbr = wfGetDB( DB_REPLICA );
 
-		$where = array();
+		$where = [];
 
 		if ( !empty( $this->rel_type ) ) {
 			$users = $dbr->select(
 				'user_relationship',
 				'r_user_id_relation',
-				array(
+				[
 					'r_user_id' => $this->user_id,
 					'r_type' => $this->rel_type
-				),
+				],
 				__METHOD__
 			);
-			$userArray = array();
+			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
@@ -618,17 +618,17 @@ class UserActivity {
 
 		$res = $dbr->select(
 			'user_relationship',
-			array(
+			[
 				'r_id', 'r_user_id', 'r_user_name', 'r_user_id_relation',
 				'r_user_name_relation', 'r_type', 'r_date'
-			),
+			],
 			$where,
 			__METHOD__,
-			array(
+			[
 				'ORDER BY' => 'r_id DESC',
 				'LIMIT' => $this->item_max,
 				'OFFSET' => 0
-			)
+			]
 		);
 
 		foreach ( $res as $row ) {
@@ -641,7 +641,7 @@ class UserActivity {
 			$user_name_short = $wgLang->truncate( $row->r_user_name, 25 );
 			$unixTS = wfTimestamp( TS_UNIX, $row->r_date );
 
-			$this->items_grouped[$r_type][$row->r_user_name_relation]['users'][$row->r_user_name][] = array(
+			$this->items_grouped[$r_type][$row->r_user_name_relation]['users'][$row->r_user_name][] = [
 				'id' => $row->r_id,
 				'type' => $r_type,
 				'timestamp' => $unixTS,
@@ -652,12 +652,12 @@ class UserActivity {
 				'comment' => $row->r_user_name_relation,
 				'minor' => 0,
 				'new' => 0
-			);
+			];
 
 			// set last timestamp
 			$this->items_grouped[$r_type][$row->r_user_name_relation]['timestamp'] = $unixTS;
 
-			$this->items[] = array(
+			$this->items[] = [
 				'id' => $row->r_id,
 				'type' => $r_type,
 				'timestamp' => $unixTS,
@@ -668,7 +668,7 @@ class UserActivity {
 				'comment' => $row->r_user_name_relation,
 				'new' => '0',
 				'minor' => 0
-			);
+			];
 		}
 	}
 
@@ -679,7 +679,7 @@ class UserActivity {
 	private function setMessagesSent() {
 		$dbr = wfGetDB( DB_REPLICA );
 
-		$where = array();
+		$where = [];
 		// We do *not* want to display private messages...
 		$where['ub_type'] = 0;
 
@@ -687,13 +687,13 @@ class UserActivity {
 			$users = $dbr->select(
 				'user_relationship',
 				'r_user_id_relation',
-				array(
+				[
 					'r_user_id' => $this->user_id,
 					'r_type' => $this->rel_type
-				),
+				],
 				__METHOD__
 			);
-			$userArray = array();
+			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
@@ -709,17 +709,17 @@ class UserActivity {
 
 		$res = $dbr->select(
 			'user_board',
-			array(
+			[
 				'ub_id', 'ub_user_id', 'ub_user_name', 'ub_user_id_from',
 				'ub_user_name_from', 'ub_date', 'ub_message'
-			),
+			],
 			$where,
 			__METHOD__,
-			array(
+			[
 				'ORDER BY' => 'ub_id DESC',
 				'LIMIT' => $this->item_max,
 				'OFFSET' => 0
-			)
+			]
 		);
 
 		foreach ( $res as $row ) {
@@ -733,7 +733,7 @@ class UserActivity {
 			$from = stripslashes( $row->ub_user_name_from );
 			$unixTS = wfTimestamp( TS_UNIX, $row->ub_date );
 
-			$this->items_grouped['user_message'][$to]['users'][$from][] = array(
+			$this->items_grouped['user_message'][$to]['users'][$from][] = [
 				'id' => $row->ub_id,
 				'type' => 'user_message',
 				'timestamp' => $unixTS,
@@ -744,12 +744,12 @@ class UserActivity {
 				'comment' => $to,
 				'minor' => 0,
 				'new' => 0
-			);
+			];
 
 			// set last timestamp
 			$this->items_grouped['user_message'][$to]['timestamp'] = $unixTS;
 
-			$this->items[] = array(
+			$this->items[] = [
 				'id' => $row->ub_id,
 				'type' => 'user_message',
 				'timestamp' => $unixTS,
@@ -760,7 +760,7 @@ class UserActivity {
 				'comment' => $to,
 				'new' => '0',
 				'minor' => 0
-			);
+			];
 		}
 	}
 
@@ -774,19 +774,19 @@ class UserActivity {
 
 		$dbr = wfGetDB( DB_REPLICA );
 
-		$where = array();
+		$where = [];
 
 		if ( !empty( $this->rel_type ) ) {
 			$users = $dbr->select(
 				'user_relationship',
 				'r_user_id_relation',
-				array(
+				[
 					'r_user_id' => $this->user_id,
 					'r_type' => $this->rel_type
-				),
+				],
 				__METHOD__
 			);
-			$userArray = array();
+			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
@@ -802,17 +802,17 @@ class UserActivity {
 
 		$res = $dbr->select(
 			'user_system_messages',
-			array(
+			[
 				'um_id', 'um_user_id', 'um_user_name', 'um_type', 'um_message',
 				'um_date'
-			),
+			],
 			$where,
 			__METHOD__,
-			array(
+			[
 				'ORDER BY' => 'um_id DESC',
 				'LIMIT' => $this->item_max,
 				'OFFSET' => 0
-			)
+			]
 		);
 
 		foreach ( $res as $row ) {
@@ -820,13 +820,13 @@ class UserActivity {
 			$user_name_short = $wgLang->truncate( $row->um_user_name, 15 );
 			$unixTS = wfTimestamp( TS_UNIX, $row->um_date );
 
-			$this->activityLines[] = array(
+			$this->activityLines[] = [
 				'type' => 'system_message',
 				'timestamp' => $unixTS,
 				'data' => ' ' . '<b><a href="' . htmlspecialchars( $user_title->getFullURL() ) . "\">{$user_name_short}</a></b> {$row->um_message}"
-			);
+			];
 
-			$this->items[] = array(
+			$this->items[] = [
 				'id' => $row->um_id,
 				'type' => 'system_message',
 				'timestamp' => $unixTS,
@@ -837,7 +837,7 @@ class UserActivity {
 				'comment' => $row->um_message,
 				'new' => '0',
 				'minor' => 0
-			);
+			];
 		}
 	}
 
@@ -854,19 +854,19 @@ class UserActivity {
 
 		$dbr = wfGetDB( DB_REPLICA );
 
-		$where = array();
+		$where = [];
 
 		if ( !empty( $this->rel_type ) ) {
 			$users = $dbr->select(
 				'user_relationship',
 				'r_user_id_relation',
-				array(
+				[
 					'r_user_id' => $this->user_id,
 					'r_type' => $this->rel_type
-				),
+				],
 				__METHOD__
 			);
-			$userArray = array();
+			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
@@ -882,17 +882,17 @@ class UserActivity {
 
 		$res = $dbr->select(
 			'user_status',
-			array(
+			[
 				'us_id', 'us_user_id', 'us_user_name', 'us_text',
 				'us_date', 'us_sport_id', 'us_team_id'
-			),
+			],
 			$where,
 			__METHOD__,
-			array(
+			[
 				'ORDER BY' => 'us_id DESC',
 				'LIMIT' => $this->item_max,
 				'OFFSET' => 0
-			)
+			]
 		);
 
 		foreach ( $res as $row ) {
@@ -905,7 +905,7 @@ class UserActivity {
 			}
 			$unixTS = wfTimestamp( TS_UNIX, $row->us_date );
 
-			$this->items[] = array(
+			$this->items[] = [
 				'id' => $row->us_id,
 				'type' => 'network_update',
 				'timestamp' => $unixTS,
@@ -917,7 +917,7 @@ class UserActivity {
 				'sport_id' => $row->us_sport_id,
 				'team_id' => $row->us_team_id,
 				'network' => $network_name
-			);
+			];
 
 			$user_title = Title::makeTitle( NS_USER, $row->us_user_name );
 			$user_name_short = $wgLang->truncate( $row->us_user_name, 15 );
@@ -939,11 +939,11 @@ class UserActivity {
 						</a>
 					</div>";
 
-			$this->activityLines[] = array(
+			$this->activityLines[] = [
 				'type' => 'network_update',
 				'timestamp' => $unixTS,
 				'data' => $html,
-			);
+			];
 		}
 	}
 
@@ -1030,7 +1030,7 @@ class UserActivity {
 		}
 
 		if ( $this->items ) {
-			usort( $this->items, array( 'UserActivity', 'sortItems' ) );
+			usort( $this->items, [ 'UserActivity', 'sortItems' ] );
 		}
 		return $this->items;
 	}
@@ -1055,11 +1055,11 @@ class UserActivity {
 		}
 
 		if ( !isset( $this->activityLines ) ) {
-			$this->activityLines = array();
+			$this->activityLines = [];
 		}
 
 		if ( isset( $this->activityLines ) && is_array( $this->activityLines ) ) {
-			usort( $this->activityLines, array( 'UserActivity', 'sortItems' ) );
+			usort( $this->activityLines, [ 'UserActivity', 'sortItems' ] );
 		}
 
 		return $this->activityLines;
@@ -1174,7 +1174,7 @@ class UserActivity {
 				$users .= ' <b><a href="' . htmlspecialchars( $user_title->getFullURL() ) . "\" title=\"{$safeTitle}\">{$user_name_short}</a></b>";
 			}
 			if ( $pages || $has_page == false ) {
-				$this->activityLines[] = array(
+				$this->activityLines[] = [
 					'type' => $type,
 					'timestamp' => $page_data['timestamp'],
 					'data' => wfMessage(
@@ -1182,7 +1182,7 @@ class UserActivity {
 						$users, $count_users, $pages, $pages_count,
 						$userNameForGender
 					)->text()
-				);
+				];
 			}
 		}
 	}

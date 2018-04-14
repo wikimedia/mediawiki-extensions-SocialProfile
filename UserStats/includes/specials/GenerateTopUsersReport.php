@@ -94,17 +94,17 @@ class GenerateTopUsersReport extends SpecialPage {
 		// Query the appropriate points table
 		$res = $dbw->select(
 			"user_points_{$period}",
-			array( 'up_user_id', 'up_user_name', 'up_points' ),
-			array(),
+			[ 'up_user_id', 'up_user_name', 'up_points' ],
+			[],
 			__METHOD__,
-			array( 'ORDER BY' => 'up_points DESC', 'LIMIT' => $user_count )
+			[ 'ORDER BY' => 'up_points DESC', 'LIMIT' => $user_count ]
 		);
 
 		$last_rank = 0;
 		$last_total = 0;
 		$x = 1;
 
-		$users = array();
+		$users = [];
 
 		// Initial run is a special case
 		if ( $dbw->numRows( $res ) <= 0 ) {
@@ -115,13 +115,13 @@ class GenerateTopUsersReport extends SpecialPage {
 			// limitation.
 			$res = $dbw->select(
 				'user_stats',
-				array( 'stats_user_id', 'stats_user_name', 'stats_total_points' ),
-				array(),
+				[ 'stats_user_id', 'stats_user_name', 'stats_total_points' ],
+				[],
 				__METHOD__,
-				array(
+				[
 					'ORDER BY' => 'stats_total_points DESC',
 					'LIMIT' => $user_count
-				)
+				]
 			);
 
 			$output = '<div class="top-users">';
@@ -135,12 +135,12 @@ class GenerateTopUsersReport extends SpecialPage {
 				$last_rank = $x;
 				$last_total = $row->stats_total_points;
 				$x++;
-				$users[] = array(
+				$users[] = [
 					'user_id' => $row->stats_user_id,
 					'user_name' => $row->stats_user_name,
 					'points' => $row->stats_total_points,
 					'rank' => $rank
-				);
+				];
 			}
 		} else {
 			$output = '<div class="top-users">';
@@ -154,12 +154,12 @@ class GenerateTopUsersReport extends SpecialPage {
 				$last_rank = $x;
 				$last_total = $row->up_points;
 				$x++;
-				$users[] = array(
+				$users[] = [
 					'user_id' => $row->up_user_id,
 					'user_name' => $row->up_user_name,
 					'points' => $row->up_points,
 					'rank' => $rank
-				);
+				];
 			}
 		}
 
@@ -255,13 +255,13 @@ class GenerateTopUsersReport extends SpecialPage {
 			$dbw->insertSelect(
 				'user_points_archive',
 				"user_points_{$period}",
-				array(
+				[
 					'up_user_name' => 'up_user_name',
 					'up_user_id' => 'up_user_id',
 					'up_points' => 'up_points',
 					'up_period' => ( ( $period == 'weekly' ) ? 1 : 2 ),
 					'up_date' => $dbw->addQuotes( $date )
-				),
+				],
 				'*',
 				__METHOD__
 			);

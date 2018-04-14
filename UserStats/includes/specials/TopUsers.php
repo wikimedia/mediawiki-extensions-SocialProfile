@@ -31,7 +31,7 @@ class TopUsersPoints extends SpecialPage {
 		$count = 100;
 		$realcount = 50;
 
-		$user_list = array();
+		$user_list = [];
 
 		// Try cache
 		$key = $wgMemc->makeKey( 'user_stats', 'top', 'points', $realcount );
@@ -53,8 +53,8 @@ class TopUsersPoints extends SpecialPage {
 			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
 				'user_stats',
-				array( 'stats_user_id', 'stats_user_name', 'stats_total_points' ),
-				array( 'stats_user_id <> 0' ),
+				[ 'stats_user_id', 'stats_user_name', 'stats_total_points' ],
+				[ 'stats_user_id <> 0' ],
 				__METHOD__,
 				$params
 			);
@@ -74,11 +74,11 @@ class TopUsersPoints extends SpecialPage {
 				$exists = $user->loadFromId();
 
 				if ( !$user->isBlocked() && $exists && !$user->isBot() ) {
-					$user_list[] = array(
+					$user_list[] = [
 						'user_id' => $row->stats_user_id,
 						'user_name' => $row->stats_user_name,
 						'points' => $row->stats_total_points
-					);
+					];
 					$loop++;
 				}
 
@@ -135,8 +135,8 @@ class TopUsersPoints extends SpecialPage {
 					$output .= $linkRenderer->makeLink(
 						$by_category_title,
 						$link_text,
-						array(),
-						array( 'stat' => $stat )
+						[],
+						[ 'stat' => $stat ]
 					);
 					$output .= '</p>';
 				}

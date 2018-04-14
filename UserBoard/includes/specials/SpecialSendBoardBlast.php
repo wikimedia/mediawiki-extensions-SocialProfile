@@ -41,9 +41,9 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$this->setHeaders();
 
 		// Add CSS & JS
-		$out->addModuleStyles( array(
+		$out->addModuleStyles( [
 			'ext.socialprofile.userboard.boardblast.css'
-		) );
+		] );
 		$out->addModules( 'ext.socialprofile.userboard.boardblast.js' );
 
 		$output = '';

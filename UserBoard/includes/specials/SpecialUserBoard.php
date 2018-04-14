@@ -49,9 +49,9 @@ class SpecialViewUserBoard extends SpecialPage {
 		$this->setHeaders();
 
 		// Add CSS & JS
-		$out->addModuleStyles( array(
+		$out->addModuleStyles( [
 			'ext.socialprofile.userboard.css'
-		) );
+		] );
 		$out->addModules( 'ext.socialprofile.userboard.js' );
 
 		$ub_messages_show = 25;
@@ -179,7 +179,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		/**
 		 * Build next/prev navigation links
 		 */
-		$qs = array();
+		$qs = [];
 		if ( $user_id_2 ) {
 			$qs['conv'] = $user_name_2;
 		}
@@ -191,11 +191,11 @@ class SpecialViewUserBoard extends SpecialPage {
 				$output .= $linkRenderer->makeLink(
 					$this->getPageTitle(),
 					$this->msg( 'last' )->plain(),
-					array(),
-					array(
+					[],
+					[
 						'user' => $user_name,
 						'page' => ( $page - 1 )
-					) + $qs
+					] + $qs
 				);
 			}
 
@@ -216,11 +216,11 @@ class SpecialViewUserBoard extends SpecialPage {
 					$output .= $linkRenderer->makeLink(
 						$this->getPageTitle(),
 						$i,
-						array(),
-						array(
+						[],
+						[
 							'user' => $user_name,
 							'page' => $i
-						) + $qs
+						] + $qs
 					) . $this->msg( 'word-separator' )->plain();
 				}
 			}
@@ -230,11 +230,11 @@ class SpecialViewUserBoard extends SpecialPage {
 					$linkRenderer->makeLink(
 					$this->getPageTitle(),
 					$this->msg( 'next' )->plain(),
-					array(),
-					array(
+					[],
+					[
 						'user' => $user_name,
 						'page' => ( $page + 1 )
-					) + $qs
+					] + $qs
 				);
 			}
 			$output .= '</div><p>';

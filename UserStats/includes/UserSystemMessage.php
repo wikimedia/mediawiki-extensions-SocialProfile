@@ -22,13 +22,13 @@ class UserSystemMessage {
 
 		$dbw->insert(
 			'user_system_messages',
-			array(
+			[
 				'um_user_id' => $userId,
 				'um_user_name' => $userName,
 				'um_type' => $type,
 				'um_message' => $message,
 				'um_date' => date( 'Y-m-d H:i:s' ),
-			), __METHOD__
+			], __METHOD__
 		);
 	}
 
@@ -41,7 +41,7 @@ class UserSystemMessage {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->delete(
 			'user_system_messages',
-			array( 'um_id' => $um_id ),
+			[ 'um_id' => $um_id ],
 			__METHOD__
 		);
 	}
@@ -68,21 +68,21 @@ class UserSystemMessage {
 
 		$params['ORDER BY'] = 'ug_id DESC';
 		$res = $dbr->select(
-			array( 'user_gift', 'gift' ),
-			array(
+			[ 'user_gift', 'gift' ],
+			[
 				'ug_id', 'ug_user_id_from', 'ug_user_name_from', 'ug_gift_id',
 				'ug_date', 'ug_status', 'gift_name', 'gift_description',
 				'gift_given_count'
-			),
-			array( "ug_user_id_to = {$this->user_id}" ),
+			],
+			[ "ug_user_id_to = {$this->user_id}" ],
 			__METHOD__,
 			$params,
-			array( 'gift' => array( 'INNER JOIN', 'ug_gift_id = gift_id' ) )
+			[ 'gift' => [ 'INNER JOIN', 'ug_gift_id = gift_id' ] ]
 		);
 
-		$requests = array();
+		$requests = [];
 		foreach ( $res as $row ) {
-			$requests[] = array(
+			$requests[] = [
 				'id' => $row->ug_id,
 				'gift_id' => $row->ug_gift_id,
 				'timestamp' => ( $row->ug_date ),
@@ -92,7 +92,7 @@ class UserSystemMessage {
 				'gift_name' => $row->gift_name,
 				'gift_description' => $row->gift_description,
 				'gift_given_count' => $row->gift_given_count
-			);
+			];
 		}
 
 		return $requests;
@@ -117,14 +117,14 @@ class UserSystemMessage {
 			} else {
 				$name = $user->getName();
 			}
-			$body = array(
+			$body = [
 				'html' => wfMessage( 'level-advance-body-html', $name, $level )->parse(),
 				'text' => wfMessage( 'level-advance-body',
 					$name,
 					$level,
 					$updateProfileLink->getFullURL()
 				)->text()
-			);
+			];
 
 			$user->sendMail( $subject, $body );
 		}

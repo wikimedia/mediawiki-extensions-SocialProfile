@@ -9,31 +9,31 @@ class UserSystemGiftsHooks {
 	 * @param array $icons Icon details
 	 */
 	public static function onBeforeCreateEchoEvent( &$notifications, &$notificationCategories, &$icons ) {
-		$notificationCategories['social-award'] = array(
+		$notificationCategories['social-award'] = [
 			'priority' => 3,
 			'tooltip' => 'echo-pref-tooltip-social-award',
-		);
+		];
 
-		$notifications['social-award-rec'] = array(
+		$notifications['social-award-rec'] = [
 			'category' => 'social-award',
 			'group' => 'interactive',
 			'presentation-model' => 'EchoUserSystemGiftPresentationModel',
-			EchoAttributeManager::ATTR_LOCATORS => array(
+			EchoAttributeManager::ATTR_LOCATORS => [
 				'EchoUserLocator::locateEventAgent'
-			),
+			],
 
-			'payload' => array( 'award-rec' ),
+			'payload' => [ 'award-rec' ],
 
 			'icon' => 'social-award',
 
-			'bundle' => array( 'web' => true, 'email' => true ),
+			'bundle' => [ 'web' => true, 'email' => true ],
 			'bundle-message' => 'notification-social-award-rec-bundle',
-			'bundle-params' => array( 'bundle-user-count', 'bundle-noti-count' ) // @todo FIXME: 100% incorrect & bad copypasta
-		);
+			'bundle-params' => [ 'bundle-user-count', 'bundle-noti-count' ] // @todo FIXME: 100% incorrect & bad copypasta
+		];
 
-		$icons['social-award'] = array(
+		$icons['social-award'] = [
 			'path' => 'SocialProfile/images/notifications-award.svg'
-		);
+		];
 	}
 
 	/**

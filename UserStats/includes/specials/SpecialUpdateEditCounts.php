@@ -21,7 +21,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 
 		$out = $this->getOutput();
 
-		$whereConds = array();
+		$whereConds = [];
 		$whereConds[] = 'rev_user <> 0';
 		// If points are given out for editing non-main namespaces, take that
 		// into account, too.
@@ -37,12 +37,12 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 
 		$dbw = wfGetDB( DB_MASTER );
 		$res = $dbw->select(
-			array( 'revision', 'page' ),
-			array( 'rev_user_text', 'rev_user', 'COUNT(*) AS the_count' ),
+			[ 'revision', 'page' ],
+			[ 'rev_user_text', 'rev_user', 'COUNT(*) AS the_count' ],
 			$whereConds,
 			__METHOD__,
-			array( 'GROUP BY' => 'rev_user_text' ),
-			array( 'page' => array( 'INNER JOIN', 'page_id = rev_page' ) )
+			[ 'GROUP BY' => 'rev_user_text' ],
+			[ 'page' => [ 'INNER JOIN', 'page_id = rev_page' ] ]
 		);
 
 		foreach ( $res as $row ) {
@@ -57,19 +57,19 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 
 			$s = $dbw->selectRow(
 				'user_stats',
-				array( 'stats_user_id' ),
-				array( 'stats_user_id' => $row->rev_user ),
+				[ 'stats_user_id' ],
+				[ 'stats_user_id' => $row->rev_user ],
 				__METHOD__
 			);
 			if ( !$s->stats_user_id || $s === false ) {
 				$dbw->insert(
 					'user_stats',
-					array(
+					[
 						'stats_year_id' => 0,
 						'stats_user_id' => $row->rev_user,
 						'stats_user_name' => $row->rev_user_text,
 						'stats_total_points' => 1000
-					),
+					],
 					__METHOD__
 				);
 			}
@@ -81,8 +81,8 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 
 			$dbw->update(
 				'user_stats',
-				array( 'stats_edit_count = ' . $editCount ),
-				array( 'stats_user_id' => $row->rev_user ),
+				[ 'stats_edit_count = ' . $editCount ],
+				[ 'stats_user_id' => $row->rev_user ],
 				__METHOD__
 			);
 
@@ -120,10 +120,10 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 
 		$res = $dbw->select(
 			'user_stats',
-			array( 'stats_user_id', 'stats_user_name', 'stats_total_points' ),
-			array(),
+			[ 'stats_user_id', 'stats_user_name', 'stats_total_points' ],
+			[],
 			__METHOD__,
-			array( 'ORDER BY' => 'stats_user_name' )
+			[ 'ORDER BY' => 'stats_user_name' ]
 		);
 
 		$x = 0;

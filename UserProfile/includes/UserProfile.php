@@ -28,7 +28,7 @@ class UserProfile {
 	/**
 	 * @var array Array of valid profile fields; used in getProfileComplete()
 	 */
-	public $profile_fields = array(
+	public $profile_fields = [
 		'real_name',
 		'location_city',
 		'hometown_city',
@@ -50,12 +50,12 @@ class UserProfile {
 		'custom_3',
 		'custom_4',
 		'email'
-	);
+	];
 
 	/**
 	 * @var array $profile_missing Unused, remove me?
 	 */
-	public $profile_missing = array();
+	public $profile_missing = [];
 
 	function __construct( $username ) {
 		$title1 = Title::newFromDBkey( $username );
@@ -99,9 +99,9 @@ class UserProfile {
 			$row = $dbr->selectRow(
 				'user_profile',
 				'*',
-				array( 'up_user_id' => $this->user_id ),
+				[ 'up_user_id' => $this->user_id ],
 				__METHOD__,
-				array( 'LIMIT' => 5 )
+				[ 'LIMIT' => 5 ]
 			);
 
 			if ( $row ) {

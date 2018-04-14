@@ -31,7 +31,7 @@ class UserGifts {
 
 		$dbw->insert(
 			'user_gift',
-			array(
+			[
 				'ug_gift_id' => $gift_id,
 				'ug_user_id_from' => $this->user_id,
 				'ug_user_name_from' => $this->user_name,
@@ -41,7 +41,7 @@ class UserGifts {
 				'ug_status' => 1,
 				'ug_message' => $message,
 				'ug_date' => date( 'Y-m-d H:i:s' ),
-			), __METHOD__
+			], __METHOD__
 		);
 		$ug_gift_id = $dbw->insertId();
 		$this->incGiftGivenCount( $gift_id );
@@ -60,18 +60,18 @@ class UserGifts {
 		if ( ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ) {
 			$userFrom = User::newFromId( $this->user_id );
 
-			EchoEvent::create( array(
+			EchoEvent::create( [
 				'type' => 'social-gift-send',
 				'agent' => $userFrom,
-				'extra' => array(
+				'extra' => [
 					'target' => $user_id_to,
 					'from' => $this->user_id,
 					'mastergiftid' => $gift_id,
 					'giftid' => $ug_gift_id,
 					'type' => $type,
 					'message' => $message
-				)
-			) );
+				]
+			] );
 		}
 
 		return $ug_gift_id;
@@ -108,7 +108,7 @@ class UserGifts {
 				$gift['gift_name']
 			)->parse();
 
-			$body = array(
+			$body = [
 				'html' => wfMessage( 'gift_received_body_html',
 					$name,
 					$user_from,
@@ -121,7 +121,7 @@ class UserGifts {
 					$giftsLink->getFullURL(),
 					$updateProfileLink->getFullURL()
 				)->text()
-			);
+			];
 
 			$user->sendMail( $subject, $body );
 		}
@@ -132,8 +132,8 @@ class UserGifts {
 
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update( 'user_gift',
-			/* SET */array( 'ug_status' => 0 ),
-			/* WHERE */array( 'ug_user_id_to' => $this->user_id ),
+			/* SET */[ 'ug_status' => 0 ],
+			/* WHERE */[ 'ug_user_id_to' => $this->user_id ],
 			__METHOD__
 		);
 
@@ -146,8 +146,8 @@ class UserGifts {
 
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update( 'user_gift',
-			/* SET */array( 'ug_status' => 0 ),
-			/* WHERE */array( 'ug_id' => $id ),
+			/* SET */[ 'ug_status' => 0 ],
+			/* WHERE */[ 'ug_id' => $id ],
 			__METHOD__
 		);
 
@@ -166,8 +166,8 @@ class UserGifts {
 		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_gift',
-			array( 'ug_user_id_to' ),
-			array( 'ug_id' => $ug_id ),
+			[ 'ug_user_id_to' ],
+			[ 'ug_id' => $ug_id ],
 			__METHOD__
 		);
 		if ( $s !== false ) {
@@ -185,7 +185,7 @@ class UserGifts {
 	 */
 	static function deleteGift( $ug_id ) {
 		$dbw = wfGetDB( DB_MASTER );
-		$dbw->delete( 'user_gift', array( 'ug_id' => $ug_id ), __METHOD__ );
+		$dbw->delete( 'user_gift', [ 'ug_id' => $ug_id ], __METHOD__ );
 	}
 
 	/**
@@ -201,17 +201,17 @@ class UserGifts {
 
 		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
-			array( 'user_gift', 'gift' ),
-			array(
+			[ 'user_gift', 'gift' ],
+			[
 				'ug_id', 'ug_user_id_from', 'ug_user_name_from',
 				'ug_user_id_to', 'ug_user_name_to', 'ug_message', 'gift_id',
 				'ug_date', 'ug_status', 'gift_name', 'gift_description',
 				'gift_given_count'
-			),
-			array( "ug_id = {$id}" ),
+			],
+			[ "ug_id = {$id}" ],
 			__METHOD__,
-			array( 'LIMIT' => 1, 'OFFSET' => 0 ),
-			array( 'gift' => array( 'INNER JOIN', 'ug_gift_id = gift_id' ) )
+			[ 'LIMIT' => 1, 'OFFSET' => 0 ],
+			[ 'gift' => [ 'INNER JOIN', 'ug_gift_id = gift_id' ] ]
 		);
 		$row = $dbr->fetchObject( $res );
 		if ( $row ) {
@@ -234,7 +234,7 @@ class UserGifts {
 
 	public function getUserGiftList( $type, $limit = 0, $page = 0 ) {
 		$dbr = wfGetDB( DB_REPLICA );
-		$params = array();
+		$params = [];
 
 		if ( $limit > 0 ) {
 			$limitvalue = 0;
@@ -247,21 +247,21 @@ class UserGifts {
 
 		$params['ORDER BY'] = 'ug_id DESC';
 		$res = $dbr->select(
-			array( 'user_gift', 'gift' ),
-			array(
+			[ 'user_gift', 'gift' ],
+			[
 				'ug_id', 'ug_user_id_from', 'ug_user_name_from', 'ug_gift_id',
 				'ug_date', 'ug_status', 'gift_name', 'gift_description',
 				'gift_given_count'
-			),
-			array( "ug_user_id_to = {$this->user_id}" ),
+			],
+			[ "ug_user_id_to = {$this->user_id}" ],
 			__METHOD__,
 			$params,
-			array( 'gift' => array( 'INNER JOIN', 'ug_gift_id = gift_id' ) )
+			[ 'gift' => [ 'INNER JOIN', 'ug_gift_id = gift_id' ] ]
 		);
 
-		$requests = array();
+		$requests = [];
 		foreach ( $res as $row ) {
-			$requests[] = array(
+			$requests[] = [
 				'id' => $row->ug_id,
 				'gift_id' => $row->ug_gift_id,
 				'timestamp' => $row->ug_date,
@@ -272,7 +272,7 @@ class UserGifts {
 				'gift_description' => $row->gift_description,
 				'gift_given_count' => $row->gift_given_count,
 				'unix_timestamp' => wfTimestamp( TS_UNIX, $row->ug_date )
-			);
+			];
 		}
 
 		return $requests;
@@ -280,7 +280,7 @@ class UserGifts {
 
 	public function getAllGiftList( $limit = 10, $page = 0 ) {
 		$dbr = wfGetDB( DB_REPLICA );
-		$params = array();
+		$params = [];
 
 		$params['ORDER BY'] = 'ug_id DESC';
 		if ( $limit > 0 ) {
@@ -293,21 +293,21 @@ class UserGifts {
 		}
 
 		$res = $dbr->select(
-			array( 'user_gift', 'gift' ),
-			array(
+			[ 'user_gift', 'gift' ],
+			[
 				'ug_id', 'ug_user_id_from', 'ug_user_name_from', 'ug_gift_id',
 				'ug_date', 'ug_status', 'gift_name', 'gift_description',
 				'gift_given_count'
-			),
-			array(),
+			],
+			[],
 			__METHOD__,
 			$params,
-			array( 'gift' => array( 'INNER JOIN', 'ug_gift_id = gift_id' ) )
+			[ 'gift' => [ 'INNER JOIN', 'ug_gift_id = gift_id' ] ]
 		);
 
-		$requests = array();
+		$requests = [];
 		foreach ( $res as $row ) {
-			$requests[] = array(
+			$requests[] = [
 				'id' => $row->ug_id,
 				'gift_id' => $row->ug_gift_id,
 				'timestamp' => $row->ug_date,
@@ -318,7 +318,7 @@ class UserGifts {
 				'gift_description' => $row->gift_description,
 				'gift_given_count' => $row->gift_given_count,
 				'unix_timestamp' => wfTimestamp( TS_UNIX, $row->ug_date )
-			);
+			];
 		}
 
 		return $requests;
@@ -333,8 +333,8 @@ class UserGifts {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update(
 			'gift',
-			array( 'gift_given_count=gift_given_count+1' ),
-			array( 'gift_id' => $gift_id ),
+			[ 'gift_given_count=gift_given_count+1' ],
+			[ 'gift_id' => $gift_id ],
 			__METHOD__
 		);
 	}
@@ -352,9 +352,9 @@ class UserGifts {
 		$res = $dbr->select(
 			'user_gift',
 			'COUNT(*) AS count',
-			array( "ug_user_id_to = {$userId}" ),
+			[ "ug_user_id_to = {$userId}" ],
 			__METHOD__,
-			array( 'LIMIT' => 1, 'OFFSET' => 0 )
+			[ 'LIMIT' => 1, 'OFFSET' => 0 ]
 		);
 
 		$row = $dbr->fetchObject( $res );

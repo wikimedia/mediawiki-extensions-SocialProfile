@@ -80,14 +80,14 @@ $wgFriendingEnabled = true;
 $wgAvatarKey = $wgDBname;
 
 // Extension credits that show up on Special:Version
-$wgExtensionCredits['other'][] = array(
+$wgExtensionCredits['other'][] = [
 	'path' => __FILE__,
 	'name' => 'SocialProfile',
-	'author' => array( 'Aaron Wright', 'David Pean', 'Jack Phoenix' ),
+	'author' => [ 'Aaron Wright', 'David Pean', 'Jack Phoenix' ],
 	'version' => '1.13',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile',
 	'descriptionmsg' => 'socialprofile-desc',
-);
+];
 
 // Hooked functions
 $wgAutoloadClasses['SocialProfileHooks'] = __DIR__ . '/SocialProfileHooks.php';
@@ -115,32 +115,32 @@ $wgHooks['RenameUserComplete'][] = 'SocialProfileHooks::onRenameUserComplete';
 // their own loader file
 
 // General
-$wgResourceModules['ext.socialprofile.clearfix'] = array(
+$wgResourceModules['ext.socialprofile.clearfix'] = [
 	'styles' => 'clearfix.css',
 	'localBasePath' => __DIR__ . '/shared',
 	'remoteExtPath' => 'SocialProfile/shared',
-);
+];
 
-$wgResourceModules['ext.socialprofile.responsive'] = array(
+$wgResourceModules['ext.socialprofile.responsive'] = [
 	'styles' => 'responsive.less',
 	'localBasePath' => __DIR__ . '/shared',
 	'remoteExtPath' => 'SocialProfile/shared',
-);
+];
 
 // General/shared JS modules -- not (necessarily) directly used by SocialProfile,
 // but rather by other social tools which depend on SP
 // @see https://phabricator.wikimedia.org/T100025
-$wgResourceModules['ext.socialprofile.flash'] = array(
+$wgResourceModules['ext.socialprofile.flash'] = [
 	'scripts' => 'flash.js',
 	'localBasePath' => __DIR__ . '/shared',
 	'remoteExtPath' => 'SocialProfile/shared',
-);
+];
 
-$wgResourceModules['ext.socialprofile.LightBox'] = array(
+$wgResourceModules['ext.socialprofile.LightBox'] = [
 	'scripts' => 'LightBox.js',
 	'localBasePath' => __DIR__ . '/shared',
 	'remoteExtPath' => 'SocialProfile/shared',
-);
+];
 
 // End ResourceLoader stuff
 

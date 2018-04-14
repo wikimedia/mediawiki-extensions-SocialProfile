@@ -32,7 +32,7 @@ class ApiUserProfilePrivacy extends ApiBase {
 		if ( !$tuid ) {
 			$tuid = $this->getUser()->getId();
 		}
-		$data = array();
+		$data = [];
 
 		switch ( $method ) {
 			case 'get':
@@ -40,7 +40,7 @@ class ApiUserProfilePrivacy extends ApiBase {
 				break;
 
 			case 'set':
-				if ( !$privacy || !in_array( $privacy, array( 'public', 'hidden', 'friends', 'foaf' ) ) ) {
+				if ( !$privacy || !in_array( $privacy, [ 'public', 'hidden', 'friends', 'foaf' ] ) ) {
 					$this->dieUsage( 'The supplied argument for the "privacy" parameter is invalid (no such parameter/missing parameter)', 'privacy' );
 				}
 
@@ -69,19 +69,19 @@ class ApiUserProfilePrivacy extends ApiBase {
 	 * @return array
 	 */
 	protected function getAllowedParams() {
-		return array(
-			'method' => array(
+		return [
+			'method' => [
 				ApiBase::PARAM_TYPE => 'string',
-			),
-			'field_key' => array(
+			],
+			'field_key' => [
 				ApiBase::PARAM_TYPE => 'string',
-			),
-			'privacy' => array(
+			],
+			'privacy' => [
 				ApiBase::PARAM_TYPE => 'string',
-			),
-			'tuid' => array(
+			],
+			'tuid' => [
 				ApiBase::PARAM_TYPE => 'integer',
-			)
-		);
+			]
+		];
 	}
 }

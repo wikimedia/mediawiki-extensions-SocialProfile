@@ -9,32 +9,32 @@ class UserStatsHooks {
 	 * @param array $icons Icon details
 	 */
 	public static function onBeforeCreateEchoEvent( &$notifications, &$notificationCategories, &$icons ) {
-		$notificationCategories['social-level-up'] = array(
+		$notificationCategories['social-level-up'] = [
 			'priority' => 3,
 			'tooltip' => 'echo-pref-tooltip-social-level-up',
-		);
+		];
 
-		$notifications['social-level-up'] = array(
+		$notifications['social-level-up'] = [
 			'category' => 'social-level-up',
 			'group' => 'interactive',
 			'presentation-model' => 'EchoUserLevelAdvancePresentationModel',
-			EchoAttributeManager::ATTR_LOCATORS => array(
+			EchoAttributeManager::ATTR_LOCATORS => [
 				'EchoUserLocator::locateEventAgent'
-			),
+			],
 
 			'title-message' => 'notification-social-level-up',
-			'title-params' => array( 'new-level' ),
-			'payload' => array( 'level-up' ),
+			'title-params' => [ 'new-level' ],
+			'payload' => [ 'level-up' ],
 
 			'icon' => 'social-level-up',
 
-			'bundle' => array( 'web' => true, 'email' => true ),
+			'bundle' => [ 'web' => true, 'email' => true ],
 			'bundle-message' => 'notification-social-level-up-bundle'
-		);
+		];
 
-		$icons['social-level-up'] = array(
+		$icons['social-level-up'] = [
 			'path' => 'SocialProfile/images/notifications-level-up.svg'
-		);
+		];
 	}
 
 	/**

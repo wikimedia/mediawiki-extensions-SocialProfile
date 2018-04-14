@@ -62,14 +62,14 @@ class wAvatar {
 	 * @param array $extraParams Array of extra parameters to give to the image
 	 * @return string <img> HTML tag with full path to the avatar image
 	 */
-	function getAvatarURL( $extraParams = array() ) {
+	function getAvatarURL( $extraParams = [] ) {
 		global $wgUploadPath, $wgUserProfileDisplay;
 
-		$defaultParams = array(
+		$defaultParams = [
 			'src' => "{$wgUploadPath}/avatars/{$this->getAvatarImage()}",
 			'border' => '0',
 			'class' => 'mw-socialprofile-avatar'
-		);
+		];
 		// Allow callers to add a different alt attribute and only add this
 		// default one if no alt attribute was provided in $extraParams
 		if ( empty( $extraParams['alt'] ) ) {

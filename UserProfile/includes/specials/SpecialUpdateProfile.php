@@ -29,14 +29,14 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(
 			'user_profile',
-			array( 'up_user_id' ),
-			array( 'up_user_id' => $user->getId() ),
+			[ 'up_user_id' ],
+			[ 'up_user_id' => $user->getId() ],
 			__METHOD__
 		);
 		if ( $s === false ) {
 			$dbw->insert(
 				'user_profile',
-				array( 'up_user_id' => $user->getId() ),
+				[ 'up_user_id' => $user->getId() ],
 				__METHOD__
 			);
 		}
@@ -78,7 +78,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$stats = new UserStats( $user->getId(), $user->getName() );
 			$stats_data = $stats->getUserStats();
 
-			$thresholdReasons = array();
+			$thresholdReasons = [];
 			foreach ( $wgUserProfileThresholds as $field => $threshold ) {
 				// If the threshold is greater than the user's amount of whatever
 				// statistic we're looking at, then it means that they can't use
@@ -104,7 +104,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			// Boo, go away!
 			if ( $can_create == false ) {
 				$out->setPageTitle( $this->msg( 'user-profile-create-threshold-title' )->text() );
-				$thresholdMessages = array();
+				$thresholdMessages = [];
 				foreach ( $thresholdReasons as $requiredAmount => $reason ) {
 					// Replace underscores with hyphens for consistency in i18n
 					// message names.
@@ -290,7 +290,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$user->saveSettings();
 
 		// Allow extensions like UserMailingList do their magic here
-		Hooks::run( 'SpecialUpdateProfile::saveSettings_pref', array( $this, $request ) );
+		Hooks::run( 'SpecialUpdateProfile::saveSettings_pref', [ $this, $request ] );
 	}
 
 	public static function formatBirthdayDB( $birthday ) {
@@ -338,7 +338,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$dbw = wfGetDB( DB_MASTER );
 		$request = $this->getRequest();
 
-		$basicProfileData = array(
+		$basicProfileData = [
 			'up_location_city' => $request->getVal( 'location_city' ),
 			'up_location_state' => $request->getVal( 'location_state' ),
 			'up_location_country' => $request->getVal( 'location_country' ),
@@ -354,19 +354,19 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			'up_places_lived' => $request->getVal( 'places' ),
 			'up_websites' => $request->getVal( 'websites' ),
 			'up_relationship' => $request->getVal( 'relationship' )
-		);
+		];
 
 		$dbw->update(
 			'user_profile',
 			/* SET */$basicProfileData,
-			/* WHERE */array( 'up_user_id' => $user->getId() ),
+			/* WHERE */[ 'up_user_id' => $user->getId() ],
 			__METHOD__
 		);
 
 		// BasicProfileChanged hook
 		$basicProfileData['up_name'] = $request->getVal( 'real_name' );
 		$basicProfileData['up_email'] = $request->getVal( 'email' );
-		Hooks::run( 'BasicProfileChanged', array( $user, $basicProfileData ) );
+		Hooks::run( 'BasicProfileChanged', [ $user, $basicProfileData ] );
 		// end of the hook
 
 		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', $user->getId() ) );
@@ -391,13 +391,13 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update(
 			'user_profile',
-			/* SET */array(
+			/* SET */[
 				'up_custom_1' => $request->getVal( 'custom1' ),
 				'up_custom_2' => $request->getVal( 'custom2' ),
 				'up_custom_3' => $request->getVal( 'custom3' ),
 				'up_custom_4' => $request->getVal( 'custom4' )
-			),
-			/* WHERE */array( 'up_user_id' => $user->getId() ),
+			],
+			/* WHERE */[ 'up_user_id' => $user->getId() ],
 			__METHOD__
 		);
 
@@ -422,7 +422,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		$dbw = wfGetDB( DB_MASTER );
 
-		$interestsData = array(
+		$interestsData = [
 			'up_companies' => $request->getVal( 'companies' ),
 			'up_movies' => $request->getVal( 'movies' ),
 			'up_music' => $request->getVal( 'music' ),
@@ -432,17 +432,17 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			'up_video_games' => $request->getVal( 'videogames' ),
 			'up_snacks' => $request->getVal( 'snacks' ),
 			'up_drinks' => $request->getVal( 'drinks' )
-		);
+		];
 
 		$dbw->update(
 			'user_profile',
 			/* SET */$interestsData,
-			/* WHERE */array( 'up_user_id' => $user->getId() ),
+			/* WHERE */[ 'up_user_id' => $user->getId() ],
 			__METHOD__
 		);
 
 		// PersonalInterestsChanged hook
-		Hooks::run( 'PersonalInterestsChanged', array( $user, $interestsData ) );
+		Hooks::run( 'PersonalInterestsChanged', [ $user, $interestsData ] );
 		// end of the hook
 
 		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', $user->getId() ) );
@@ -454,13 +454,13 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	function displayBasicForm( $user ) {
 		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow( 'user_profile',
-			array(
+			[
 				'up_location_city', 'up_location_state', 'up_location_country',
 				'up_hometown_city', 'up_hometown_state', 'up_hometown_country',
 				'up_birthday', 'up_occupation', 'up_about', 'up_schools',
 				'up_places_lived', 'up_websites'
-			),
-			array( 'up_user_id' => $user->getId() ),
+			],
+			[ 'up_user_id' => $user->getId() ],
 			__METHOD__
 		);
 
@@ -490,8 +490,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		$s = $dbr->selectRow(
 			'user',
-			array( 'user_real_name', 'user_email', 'user_email_authenticated' ),
-			array( 'user_id' => $user->getId() ),
+			[ 'user_real_name', 'user_email', 'user_email_authenticated' ],
+			[ 'user_id' => $user->getId() ],
 			__METHOD__
 		);
 
@@ -658,13 +658,13 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_profile',
-			array(
+			[
 				'up_about', 'up_places_lived', 'up_websites', 'up_relationship',
 				'up_occupation', 'up_companies', 'up_schools', 'up_movies',
 				'up_tv', 'up_music', 'up_books', 'up_video_games',
 				'up_magazines', 'up_snacks', 'up_drinks'
-			),
-			array( 'up_user_id' => $user->getId() ),
+			],
+			[ 'up_user_id' => $user->getId() ],
 			__METHOD__
 		);
 
@@ -754,8 +754,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_profile',
-			array( 'up_birthday' ),
-			array( 'up_user_id' => $user->getId() ),
+			[ 'up_birthday' ],
+			[ 'up_user_id' => $user->getId() ],
 			__METHOD__
 		);
 
@@ -802,7 +802,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			</p>';
 
 		// Allow extensions (like UserMailingList) to add new checkboxes
-		Hooks::run( 'SpecialUpdateProfile::displayPreferencesForm', array( $this, &$form ) );
+		Hooks::run( 'SpecialUpdateProfile::displayPreferencesForm', [ $this, &$form ] );
 
 		$form .= '</div>
 			<div class="visualClear"></div>';
@@ -823,11 +823,11 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$dbr = wfGetDB( DB_MASTER );
 		$s = $dbr->selectRow(
 			'user_profile',
-			array(
+			[
 				'up_custom_1', 'up_custom_2', 'up_custom_3', 'up_custom_4',
 				'up_custom_5'
-			),
-			array( 'up_user_id' => $user->getId() ),
+			],
+			[ 'up_user_id' => $user->getId() ],
 			__METHOD__
 		);
 

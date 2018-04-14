@@ -10,32 +10,32 @@ class UserGiftsHooks {
 	 * @return bool
 	 */
 	public static function onBeforeCreateEchoEvent( &$notifications, &$notificationCategories, &$icons ) {
-		$notificationCategories['social-gift'] = array(
+		$notificationCategories['social-gift'] = [
 			'priority' => 3,
 			'tooltip' => 'echo-pref-tooltip-social-gift',
-		);
+		];
 
-		$notifications['social-gift-send'] = array(
+		$notifications['social-gift-send'] = [
 			'category' => 'social-gift',
 			'group' => 'interactive',
 			'presentation-model' => 'EchoUserGiftPresentationModel',
-			EchoAttributeManager::ATTR_LOCATORS => array(
+			EchoAttributeManager::ATTR_LOCATORS => [
 				'EchoUserLocator::locateEventAgent'
-			),
+			],
 
-			'payload' => array( 'send-message' ), // @todo FIXME
+			'payload' => [ 'send-message' ], // @todo FIXME
 
 			'icon' => 'social-gift-send',
 
-			'bundle' => array( 'web' => true, 'email' => true ),
+			'bundle' => [ 'web' => true, 'email' => true ],
 			'bundle-message' => 'notification-social-gift-send-bundle'
-		);
+		];
 
 		// You just were *sent* a gift, thus you *received* it, ergo you should
 		// be seeing the *received* icon
-		$icons['social-gift-send'] = array(
+		$icons['social-gift-send'] = [
 			'path' => 'SocialProfile/images/notifications-gift-received.svg'
-		);
+		];
 
 		return true;
 	}

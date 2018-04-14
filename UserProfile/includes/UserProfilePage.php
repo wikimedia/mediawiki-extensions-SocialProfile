@@ -114,7 +114,7 @@ class UserProfilePage extends Article {
 		// Avoid PHP 7.1 warning of passing $this by reference
 		$userProfilePage = $this;
 
-		if ( !Hooks::run( 'UserProfileBeginLeft', array( &$userProfilePage ) ) ) {
+		if ( !Hooks::run( 'UserProfileBeginLeft', [ &$userProfilePage ] ) ) {
 			$logger->debug( "{method}: UserProfileBeginLeft messed up profile!\n", [
 				'method' => __METHOD__
 			] );
@@ -129,7 +129,7 @@ class UserProfilePage extends Article {
 		$out->addHTML( $this->getFanBoxes() );
 		$out->addHTML( $this->getUserStats() );
 
-		if ( !Hooks::run( 'UserProfileEndLeft', array( &$userProfilePage ) ) ) {
+		if ( !Hooks::run( 'UserProfileEndLeft', [ &$userProfilePage ] ) ) {
 			$logger->debug( "{method}: UserProfileEndLeft messed up profile!\n", [
 				'method' => __METHOD__
 			] );
@@ -142,7 +142,7 @@ class UserProfilePage extends Article {
 		// Right side
 		$out->addHTML( '<div id="user-page-right" class="clearfix">' );
 
-		if ( !Hooks::run( 'UserProfileBeginRight', array( &$userProfilePage ) ) ) {
+		if ( !Hooks::run( 'UserProfileBeginRight', [ &$userProfilePage ] ) ) {
 			$logger->debug( "{method}: UserProfileBeginRight messed up profile!\n", [
 				'method' => __METHOD__
 			] );
@@ -151,7 +151,7 @@ class UserProfilePage extends Article {
 		$out->addHTML( $this->getPersonalInfo() );
 		$out->addHTML( $this->getActivity() );
 		// Hook for BlogPage
-		if ( !Hooks::run( 'UserProfileRightSideAfterActivity', array( $this ) ) ) {
+		if ( !Hooks::run( 'UserProfileRightSideAfterActivity', [ $this ] ) ) {
 			$logger->debug( "{method}: UserProfileRightSideAfterActivity hook messed up profile!\n", [
 				'method' => __METHOD__
 			] );
@@ -159,7 +159,7 @@ class UserProfilePage extends Article {
 		$out->addHTML( $this->getCasualGames() );
 		$out->addHTML( $this->getUserBoard() );
 
-		if ( !Hooks::run( 'UserProfileEndRight', array( &$userProfilePage ) ) ) {
+		if ( !Hooks::run( 'UserProfileEndRight', [ &$userProfilePage ] ) ) {
 			$logger->debug( "{method}: UserProfileEndRight messed up profile!\n", [
 				'method' => __METHOD__
 			] );
@@ -269,7 +269,7 @@ class UserProfilePage extends Article {
 	function getUserPolls() {
 		global $wgMemc;
 
-		$polls = array();
+		$polls = [];
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		// Try cache
@@ -289,18 +289,18 @@ class UserProfilePage extends Article {
 
 			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
-				array( 'poll_question', 'page' ),
-				array( 'page_title', 'poll_date' ),
-				/* WHERE */array( 'poll_user_id' => $this->user_id ),
+				[ 'poll_question', 'page' ],
+				[ 'page_title', 'poll_date' ],
+				/* WHERE */[ 'poll_user_id' => $this->user_id ],
 				__METHOD__,
-				array( 'ORDER BY' => 'poll_id DESC', 'LIMIT' => 3 ),
-				array( 'page' => array( 'INNER JOIN', 'page_id = poll_page_id' ) )
+				[ 'ORDER BY' => 'poll_id DESC', 'LIMIT' => 3 ],
+				[ 'page' => [ 'INNER JOIN', 'page_id = poll_page_id' ] ]
 			);
 			foreach( $res as $row ) {
-				$polls[] = array(
+				$polls[] = [
 					'title' => $row->page_title,
 					'timestamp' => wfTimestamp( TS_UNIX, $row->poll_date )
-				);
+				];
 			}
 			$wgMemc->set( $key, $polls );
 		}
@@ -316,7 +316,7 @@ class UserProfilePage extends Article {
 	function getUserQuiz() {
 		global $wgMemc;
 
-		$quiz = array();
+		$quiz = [];
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		// Try cache
@@ -337,23 +337,23 @@ class UserProfilePage extends Article {
 			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
 				'quizgame_questions',
-				array( 'q_id', 'q_text', 'q_date' ),
-				array(
+				[ 'q_id', 'q_text', 'q_date' ],
+				[
 					'q_user_id' => $this->user_id,
 					'q_flag' => 0 // the same as QuizGameHome::$FLAG_NONE
-				),
+				],
 				__METHOD__,
-				array(
+				[
 					'ORDER BY' => 'q_id DESC',
 					'LIMIT' => 3
-				)
+				]
 			);
 			foreach( $res as $row ) {
-				$quiz[] = array(
+				$quiz[] = [
 					'id' => $row->q_id,
 					'text' => $row->q_text,
 					'timestamp' => wfTimestamp( TS_UNIX, $row->q_date )
-				);
+				];
 			}
 			$wgMemc->set( $key, $quiz );
 		}
@@ -370,7 +370,7 @@ class UserProfilePage extends Article {
 	function getUserPicGames() {
 		global $wgMemc;
 
-		$pics = array();
+		$pics = [];
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		// Try cache
@@ -390,25 +390,25 @@ class UserProfilePage extends Article {
 			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
 				'picturegame_images',
-				array( 'id', 'title', 'img1', 'img2', 'pg_date' ),
-				array(
+				[ 'id', 'title', 'img1', 'img2', 'pg_date' ],
+				[
 					'userid' => $this->user_id,
 					'flag' => 0 // PictureGameHome::$FLAG_NONE
-				),
+				],
 				__METHOD__,
-				array(
+				[
 					'ORDER BY' => 'id DESC',
 					'LIMIT' => 3
-				)
+				]
 			);
 			foreach( $res as $row ) {
-				$pics[] = array(
+				$pics[] = [
 					'id' => $row->id,
 					'title' => $row->title,
 					'img1' => $row->img1,
 					'img2' => $row->img2,
 					'timestamp' => wfTimestamp( TS_UNIX, $row->pg_date )
-				);
+				];
 			}
 			$wgMemc->set( $key, $pics );
 		}
@@ -440,40 +440,40 @@ class UserProfilePage extends Article {
 		$pic_game_title = SpecialPage::getTitleFor( 'PictureGameHome' );
 
 		// Combine the queries
-		$combined_array = array();
+		$combined_array = [];
 
 		$quizzes = $this->getUserQuiz();
 		foreach( $quizzes as $quiz ) {
-			$combined_array[] = array(
+			$combined_array[] = [
 				'type' => 'Quiz',
 				'id' => $quiz['id'],
 				'text' => $quiz['text'],
 				'timestamp' => $quiz['timestamp']
-			);
+			];
 		}
 
 		$polls = $this->getUserPolls();
 		foreach( $polls as $poll ) {
-			$combined_array[] = array(
+			$combined_array[] = [
 				'type' => 'Poll',
 				'title' => $poll['title'],
 				'timestamp' => $poll['timestamp']
-			);
+			];
 		}
 
 		$pics = $this->getUserPicGames();
 		foreach( $pics as $pic ) {
-			$combined_array[] = array(
+			$combined_array[] = [
 				'type' => 'Picture Game',
 				'id' => $pic['id'],
 				'title' => $pic['title'],
 				'img1' => $pic['img1'],
 				'img2' => $pic['img2'],
 				'timestamp' => $pic['timestamp']
-			);
+			];
 		}
 
-		usort( $combined_array, array( 'UserProfilePage', 'sortItems' ) );
+		usort( $combined_array, [ 'UserProfilePage', 'sortItems' ] );
 
 		if ( count( $combined_array ) > 0 ) {
 			$output .= '<div class="user-section-heading">
@@ -522,13 +522,13 @@ class UserProfilePage extends Article {
 						$image_1 = $image_2 = '';
 						$render_1 = wfFindFile( $item['img1'] );
 						if ( is_object( $render_1 ) ) {
-							$thumb_1 = $render_1->transform( array( 'width' =>  25 ) );
+							$thumb_1 = $render_1->transform( [ 'width' =>  25 ] );
 							$image_1 = $thumb_1->toHtml();
 						}
 
 						$render_2 = wfFindFile( $item['img2'] );
 						if ( is_object( $render_2 ) ) {
-							$thumb_2 = $render_2->transform( array( 'width' =>  25 ) );
+							$thumb_2 = $render_2->transform( [ 'width' =>  25 ] );
 							$image_2 = $thumb_2->toHtml();
 						}
 
@@ -1135,7 +1135,7 @@ class UserProfilePage extends Article {
 		// Provide a hook point for adding links to the profile header
 		// or maybe even removing them
 		// @see https://phabricator.wikimedia.org/T152930
-		Hooks::run( 'UserProfileGetProfileHeaderLinks', array( $this, &$profileLinks ) );
+		Hooks::run( 'UserProfileGetProfileHeaderLinks', [ $this, &$profileLinks ] );
 
 		$output .= $language->pipeList( $profileLinks );
 		$output .= '</div>
@@ -1866,8 +1866,8 @@ class UserProfilePage extends Article {
 				$output .= $linkRenderer->makeLink(
 					$fanbox_link,
 					wfMessage( 'user-view-all' )->plain(),
-					array(),
-					array( 'user' => $user_name )
+					[],
+					[ 'user' => $user_name ]
 				);
 			}
 			$output .= '</div>

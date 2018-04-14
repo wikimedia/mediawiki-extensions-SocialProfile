@@ -56,17 +56,17 @@ class ViewGift extends UnlistedSpecialPage {
 			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
 				'user_gift',
-				array( 'DISTINCT ug_user_name_to', 'ug_user_id_to', 'ug_date' ),
-				array(
+				[ 'DISTINCT ug_user_name_to', 'ug_user_id_to', 'ug_date' ],
+				[
 					'ug_gift_id' => $gift['gift_id'],
 					'ug_user_name_to <> ' . $dbr->addQuotes( $gift['user_name_to'] )
-				),
+				],
 				__METHOD__,
-				array(
+				[
 					'GROUP BY' => 'ug_user_name_to',
 					'ORDER BY' => 'ug_date DESC',
 					'LIMIT' => 6
-				)
+				]
 			);
 
 			$out->setPageTitle( $this->msg(

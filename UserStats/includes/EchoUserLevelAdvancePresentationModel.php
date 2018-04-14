@@ -26,10 +26,10 @@ class EchoUserLevelAdvancePresentationModel extends EchoEventPresentationModel {
 	}
 
 	public function getPrimaryLink() {
-		return array(
+		return [
 			'url' => Title::makeTitle( NS_USER, $this->event->getAgent()->getName() )->getLocalURL(),
 			'label' => $this->msg( 'echo-learn-more' )->text()
-		);
+		];
 	}
 
 }

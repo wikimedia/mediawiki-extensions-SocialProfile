@@ -18,7 +18,7 @@ class UserWelcome {
 	 * @param Parser $parser
 	 */
 	public static function onParserFirstCallInit( &$parser ) {
-		$parser->setHook( 'welcomeUser', array( __CLASS__, 'getWelcomeUser' ) );
+		$parser->setHook( 'welcomeUser', [ __CLASS__, 'getWelcomeUser' ] );
 	}
 
 	public static function getWelcomeUser( $input, $args, $parser ) {

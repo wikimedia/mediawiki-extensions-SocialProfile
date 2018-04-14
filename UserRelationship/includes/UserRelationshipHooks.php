@@ -9,48 +9,48 @@ class UserRelationshipHooks {
 	 * @param array $icons Icon details
 	 */
 	public static function onBeforeCreateEchoEvent( &$notifications, &$notificationCategories, &$icons ) {
-		$notificationCategories['social-rel'] = array(
+		$notificationCategories['social-rel'] = [
 			'priority' => 2,
 			'tooltip' => 'echo-pref-tooltip-social-rel',
-		);
+		];
 
-		$notifications['social-rel-add'] = array(
-			'primary-link' => array( 'message' => 'notification-link-text-view-edit', 'destination' => 'diff' ),
+		$notifications['social-rel-add'] = [
+			'primary-link' => [ 'message' => 'notification-link-text-view-edit', 'destination' => 'diff' ],
 			'category' => 'social-rel',
 			'group' => 'interactive',
 			'presentation-model' => 'EchoUserRelationshipPresentationModel',
-			EchoAttributeManager::ATTR_LOCATORS => array(
+			EchoAttributeManager::ATTR_LOCATORS => [
 				'EchoUserLocator::locateEventAgent'
-			),
-			'payload' => array( 'relationship-add' ),
+			],
+			'payload' => [ 'relationship-add' ],
 			'email-subject-message' => 'notification-social-rel-add-email-subject',
-			'email-subject-params' => array( 'user' ),
+			'email-subject-params' => [ 'user' ],
 			'email-body-batch-message' => 'notification-social-rel-add-email-batch-body',
-			'email-body-batch-params' => array( 'user', 'relationship' ),
+			'email-body-batch-params' => [ 'user', 'relationship' ],
 			'icon' => 'gratitude',
-		);
+		];
 
-		$notifications['social-rel-accept'] = array(
-			'primary-link' => array( 'message' => 'notification-link-text-view-edit', 'destination' => 'diff' ),
+		$notifications['social-rel-accept'] = [
+			'primary-link' => [ 'message' => 'notification-link-text-view-edit', 'destination' => 'diff' ],
 			'category' => 'social-rel',
 			'group' => 'interactive',
 			'presentation-model' => 'EchoUserRelationshipPresentationModel',
-			EchoAttributeManager::ATTR_LOCATORS => array(
+			EchoAttributeManager::ATTR_LOCATORS => [
 				'EchoUserLocator::locateEventAgent'
-			),
+			],
 			'email-subject-message' => 'notification-social-rel-accept-email-subject',
-			'email-subject-params' => array( 'user' ),
+			'email-subject-params' => [ 'user' ],
 			'email-body-batch-message' => 'notification-social-rel-accept-email-batch-body',
-			'email-body-batch-params' => array( 'user' ),
+			'email-body-batch-params' => [ 'user' ],
 			'icon' => 'gratitude',
-		);
+		];
 
-		$icons['social-added'] = array(
+		$icons['social-added'] = [
 			'path' => 'SocialProfile/images/notifications-added.svg'
-		);
-		$icons['gratitude'] = array(
+		];
+		$icons['gratitude'] = [
 			'path' => 'SocialProfile/images/gratitude.png'
-		);
+		];
 	}
 
 	/**

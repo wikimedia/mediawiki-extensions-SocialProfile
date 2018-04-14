@@ -23,7 +23,7 @@ $wgUserProfileAvatarsInDiffs = false;
  * $wgUserProfileThresholds = array( 'edits' => 10, 'friend-count' => 3 );
  * @endcode
  */
-$wgUserProfileThresholds = array(
+$wgUserProfileThresholds = [
 /**
  * All currently "supported" options (supported meaning that there is i18n support):
  * edits // normal edits in the namespaces that earn you points ($wgNamespacesForEditPoints)
@@ -43,7 +43,7 @@ $wgUserProfileThresholds = array(
  * quiz-correct // [[mw:Extension:QuizGame]] correctly answered quizzes
  * quiz-points // [[mw:Extension:QuizGame]] points in total
 */
-);
+];
 
 // Default setup for displaying sections
 $wgUserPageChoice = true;
@@ -73,52 +73,52 @@ $wgGroupPermissions['staff']['editothersprofiles'] = true;
 $wgGroupPermissions['staff']['populate-user-profiles'] = true;
 
 // ResourceLoader support for MediaWiki 1.17+
-$wgResourceModules['ext.socialprofile.userprofile.css'] = array(
+$wgResourceModules['ext.socialprofile.userprofile.css'] = [
 	'styles' => 'resources/css/UserProfile.css',
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserProfile'
-);
+];
 
-$wgResourceModules['ext.socialprofile.userprofile.js'] = array(
+$wgResourceModules['ext.socialprofile.userprofile.js'] = [
 	'scripts' => 'resources/js/UserProfilePage.js',
-	'messages' => array( 'user-board-confirm-delete' ),
-	'dependencies' => array( 'mediawiki.api', 'mediawiki.util' ),
+	'messages' => [ 'user-board-confirm-delete' ],
+	'dependencies' => [ 'mediawiki.api', 'mediawiki.util' ],
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserProfile',
-);
+];
 
 // Modules for Special:EditProfile/Special:UpdateProfile
-$wgResourceModules['ext.userProfile.updateProfile'] = array(
+$wgResourceModules['ext.userProfile.updateProfile'] = [
 	'scripts' => 'resources/js/UpdateProfile.js',
-	'dependencies' => array( 'mediawiki.api', 'mediawiki.util', 'jquery.ui.datepicker' ),
+	'dependencies' => [ 'mediawiki.api', 'mediawiki.util', 'jquery.ui.datepicker' ],
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserProfile'
-);
+];
 
 // CSS for user avatars in page diffs
-$wgResourceModules['ext.socialprofile.userprofile.diff'] = array(
+$wgResourceModules['ext.socialprofile.userprofile.diff'] = [
 	'styles' => 'resources/css/AvatarsInDiffs.css',
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserProfile'
-);
+];
 
-$wgResourceModules['ext.socialprofile.userprofile.tabs.css'] = array(
+$wgResourceModules['ext.socialprofile.userprofile.tabs.css'] = [
 	'styles' => 'resources/css/ProfileTabs.css',
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserProfile'
-);
+];
 
-$wgResourceModules['ext.socialprofile.special.uploadavatar.css'] = array(
+$wgResourceModules['ext.socialprofile.special.uploadavatar.css'] = [
 	'styles' => 'resources/css/SpecialUploadAvatar.css',
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserProfile'
-);
+];
 
-$wgResourceModules['ext.socialprofile.special.updateprofile.css'] = array(
+$wgResourceModules['ext.socialprofile.special.updateprofile.css'] = [
 	'styles' => 'resources/css/SpecialUpdateProfile.css',
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserProfile'
-);
+];
 
 # Add new log types for profile edits and avatar uploads
 global $wgLogTypes, $wgLogNames, $wgLogHeaders, $wgLogActions;

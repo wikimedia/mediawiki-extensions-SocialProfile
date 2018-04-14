@@ -48,19 +48,19 @@ class ApiSendUserBoardMessage extends ApiBase {
 	}
 
 	public function getAllowedParams() {
-		return array_merge( parent::getAllowedParams(), array(
-			'username' => array(
+		return array_merge( parent::getAllowedParams(), [
+			'username' => [
 				ApiBase::PARAM_TYPE => 'string',
 				ApiBase::PARAM_REQUIRED => true
-			),
-			'message' => array(
+			],
+			'message' => [
 				ApiBase::PARAM_TYPE => 'string',
 				ApiBase::PARAM_REQUIRED => true
-			),
-			'type' => array(
+			],
+			'type' => [
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_REQUIRED => false
-			)
-		) );
+			]
+		] );
 	}
 }

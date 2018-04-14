@@ -32,13 +32,13 @@ class UserSystemGifts {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->insert(
 			'user_system_gift',
-			array(
+			[
 				'sg_gift_id' => $gift_id,
 				'sg_user_id' => $this->user_id,
 				'sg_user_name' => $this->user_name,
 				'sg_status' => 1,
 				'sg_date' => date( 'Y-m-d H:i:s' ),
-			),
+			],
 			__METHOD__
 		);
 		$sg_gift_id = $dbw->insertId();
@@ -56,17 +56,17 @@ class UserSystemGifts {
 			$userFrom = User::newFromId( $this->user_id );
 
 			$giftObj = SystemGifts::getGift( $gift_id );
-			EchoEvent::create( array(
+			EchoEvent::create( [
 				'type' => 'social-award-rec',
 				'agent' => $userFrom,
-				'extra' => array(
+				'extra' => [
 					'notifyAgent' => true,
 					'target' => $this->user_id,
 					'mastergiftid' => $gift_id,
 					'giftid' => $sg_gift_id,
 					'giftname' => $giftObj['gift_name']
-				)
-			) );
+				]
+			] );
 		}
 
 		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'system_gifts', $this->user_id ) );
@@ -100,7 +100,7 @@ class UserSystemGifts {
 			} else {
 				$name = $user->getName();
 			}
-			$body = array(
+			$body = [
 				'html' => wfMessage( 'system_gift_received_body_html',
 					$name,
 					$gift['gift_name'],
@@ -113,7 +113,7 @@ class UserSystemGifts {
 					$gifts_link->getFullURL(),
 					$update_profile_link->getFullURL()
 				)->text()
-			);
+			];
 
 			$user->sendMail( $subject, $body );
 		}
@@ -131,8 +131,8 @@ class UserSystemGifts {
 		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_system_gift',
-			array( 'sg_status' ),
-			array( 'sg_user_id' => $user_id, 'sg_gift_id' => $gift_id ),
+			[ 'sg_status' ],
+			[ 'sg_user_id' => $user_id, 'sg_gift_id' => $gift_id ],
 			__METHOD__
 		);
 		if ( $s !== false ) {
@@ -169,8 +169,8 @@ class UserSystemGifts {
 		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_system_gift',
-			array( 'sg_user_id' ),
-			array( 'sg_id' => $sg_id ),
+			[ 'sg_user_id' ],
+			[ 'sg_id' => $sg_id ],
 			__METHOD__
 		);
 		if ( $s !== false ) {
@@ -191,7 +191,7 @@ class UserSystemGifts {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->delete(
 			'user_system_gift',
-			array( 'sg_id' => $ug_id ),
+			[ 'sg_id' => $ug_id ],
 			__METHOD__
 		);
 	}
@@ -207,21 +207,21 @@ class UserSystemGifts {
 	static function getUserGift( $id ) {
 		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
-			array( 'user_system_gift', 'system_gift' ),
-			array(
+			[ 'user_system_gift', 'system_gift' ],
+			[
 				'sg_id', 'sg_user_id', 'sg_user_name', 'gift_id', 'sg_date',
 				'gift_name', 'gift_description', 'gift_given_count', 'sg_status'
-			),
-			array( "sg_id = {$id}" ),
+			],
+			[ "sg_id = {$id}" ],
 			__METHOD__,
-			array(
+			[
 				'LIMIT' => 1,
 				'OFFSET' => 0
-			),
-			array( 'system_gift' => array( 'INNER JOIN', 'sg_gift_id = gift_id' ) )
+			],
+			[ 'system_gift' => [ 'INNER JOIN', 'sg_gift_id = gift_id' ] ]
 		);
 		$row = $dbr->fetchObject( $res );
-		$gift = array();
+		$gift = [];
 		if ( $row ) {
 			$gift['id'] = $row->sg_id;
 			$gift['user_id'] = $row->sg_user_id;
@@ -247,8 +247,8 @@ class UserSystemGifts {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update(
 			'system_gift',
-			array( 'gift_given_count = gift_given_count + 1' ),
-			array( 'gift_id' => $giftId ),
+			[ 'gift_given_count = gift_given_count + 1' ],
+			[ 'gift_id' => $giftId ],
 			__METHOD__
 		);
 	}
@@ -265,10 +265,10 @@ class UserSystemGifts {
 		$user_id = User::idFromName( $user_name );
 		$res = $dbr->select(
 			'user_system_gift',
-			array( 'COUNT(*) AS count' ),
-			array( "sg_user_id = {$user_id}" ),
+			[ 'COUNT(*) AS count' ],
+			[ "sg_user_id = {$user_id}" ],
 			__METHOD__,
-			array( 'LIMIT' => 1, 'OFFSET' => 0 )
+			[ 'LIMIT' => 1, 'OFFSET' => 0 ]
 		);
 		$row = $dbr->fetchObject( $res );
 		$gift_count = 0;

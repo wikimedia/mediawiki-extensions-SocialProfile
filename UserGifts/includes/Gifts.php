@@ -21,14 +21,14 @@ class Gifts {
 
 		$dbw->insert(
 			'gift',
-			array(
+			[
 				'gift_name' => $gift_name,
 				'gift_description' => $gift_description,
 				'gift_createdate' => date( 'Y-m-d H:i:s' ),
 				'gift_creator_user_id' => $wgUser->getId(),
 				'gift_creator_user_name' => $wgUser->getName(),
 				'gift_access' => $gift_access,
-			), __METHOD__
+			], __METHOD__
 		);
 		return $dbw->insertId();
 	}
@@ -43,12 +43,12 @@ class Gifts {
 	public static function updateGift( $id, $gift_name, $gift_description, $access = 0 ) {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update( 'gift',
-			/* SET */array(
+			/* SET */[
 				'gift_name' => $gift_name,
 				'gift_description' => $gift_description,
 				'gift_access' => $access
-			),
-			/* WHERE */array( 'gift_id' => $id ),
+			],
+			/* WHERE */[ 'gift_id' => $id ],
 			__METHOD__
 		);
 	}
@@ -67,16 +67,16 @@ class Gifts {
 		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
 			'gift',
-			array(
+			[
 				'gift_id', 'gift_name', 'gift_description',
 				'gift_creator_user_id', 'gift_creator_user_name', 'gift_access'
-			),
-			array( "gift_id = {$id}" ),
+			],
+			[ "gift_id = {$id}" ],
 			__METHOD__,
-			array( 'LIMIT' => 1, 'OFFSET' => 0 )
+			[ 'LIMIT' => 1, 'OFFSET' => 0 ]
 		);
 		$row = $dbr->fetchObject( $res );
-		$gift = array();
+		$gift = [];
 		if ( $row ) {
 			$gift['gift_id'] = $row->gift_id;
 			$gift['gift_name'] = $row->gift_name;
@@ -93,8 +93,8 @@ class Gifts {
 		$gift_count = 0;
 		$s = $dbr->selectRow(
 			'gift',
-			array( 'COUNT(gift_id) AS count' ),
-			array( 'gift_creator_user_id' => $user_id ),
+			[ 'COUNT(gift_id) AS count' ],
+			[ 'gift_creator_user_id' => $user_id ],
 			__METHOD__
 		);
 		if ( $s !== false ) {
@@ -108,8 +108,8 @@ class Gifts {
 		$gift_count = 0;
 		$s = $dbr->selectRow(
 			'gift',
-			array( 'COUNT(gift_id) AS count' ),
-			array( 'gift_given_count' => $gift_count ),
+			[ 'COUNT(gift_id) AS count' ],
+			[ 'gift_given_count' => $gift_count ],
 			__METHOD__
 		);
 		if ( $s !== false ) {

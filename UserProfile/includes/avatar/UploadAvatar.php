@@ -210,7 +210,7 @@ class UploadAvatar extends UploadFromFile {
 	 * @return array
 	 */
 	public function verifyUpload() {
-		return array( 'status' => self::OK );
+		return [ 'status' => self::OK ];
 	}
 
 	/**
@@ -228,6 +228,6 @@ class UploadAvatar extends UploadFromFile {
 	 * @return array
 	 */
 	public function checkWarnings() {
-		return array();
+		return [];
 	}
 }

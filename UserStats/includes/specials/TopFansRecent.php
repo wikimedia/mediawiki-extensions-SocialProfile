@@ -61,7 +61,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 		$count = 100;
 		$realCount = 50;
 
-		$user_list = array();
+		$user_list = [];
 
 		// Try cache
 		$key = $wgMemc->makeKey( 'user_stats', $period, 'points', $realCount );
@@ -86,8 +86,8 @@ class TopFansRecent extends UnlistedSpecialPage {
 			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
 				"user_points_{$period}",
-				array( 'up_user_id', 'up_user_name', 'up_points' ),
-				array( 'up_user_id <> 0' ),
+				[ 'up_user_id', 'up_user_name', 'up_points' ],
+				[ 'up_user_id <> 0' ],
 				__METHOD__,
 				$params
 			);
@@ -107,11 +107,11 @@ class TopFansRecent extends UnlistedSpecialPage {
 				$exists = $u->loadFromId();
 
 				if ( !$u->isBlocked() && $exists && !$u->isBot() ) {
-					$user_list[] = array(
+					$user_list[] = [
 						'user_id' => $row->up_user_id,
 						'user_name' => $row->up_user_name,
 						'points' => $row->up_points
-					);
+					];
 					$loop++;
 				}
 
@@ -170,8 +170,8 @@ class TopFansRecent extends UnlistedSpecialPage {
 					$output .= $linkRenderer->makeLink(
 						$by_category_title,
 						$link_text,
-						array(),
-						array( 'stat' => $stat )
+						[],
+						[ 'stat' => $stat ]
 					);
 					$output .= '</p>';
 				}

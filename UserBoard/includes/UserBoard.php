@@ -27,7 +27,7 @@ class UserBoard {
 
 		$dbw->insert(
 			'user_board',
-			array(
+			[
 				'ub_user_id_from' => $user_id_from,
 				'ub_user_name_from' => $user_name_from,
 				'ub_user_id' => $user_id_to,
@@ -35,7 +35,7 @@ class UserBoard {
 				'ub_message' => $message,
 				'ub_type' => $message_type,
 				'ub_date' => date( 'Y-m-d H:i:s' ),
-			),
+			],
 			__METHOD__
 		);
 
@@ -64,16 +64,16 @@ class UserBoard {
 		if ( ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ) {
 			$userFrom = User::newFromId( $user_id_from );
 
-			EchoEvent::create( array(
+			EchoEvent::create( [
 				'type' => 'social-msg-send',
 				'agent' => $userFrom,
-				'extra' => array(
+				'extra' => [
 					'target' => $user_id_to,
 					'from' => $user_id_from,
 					'type' => $message_type,
 					'message' => $message
-				)
-			) );
+				]
+			] );
 		}
 
 		return $dbw->insertId();
@@ -95,7 +95,7 @@ class UserBoard {
 			$board_link = SpecialPage::getTitleFor( 'UserBoard' );
 			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
 			$subject = wfMessage( 'message_received_subject', $user_from )->parse();
-			$body = array(
+			$body = [
 				'html' => wfMessage( 'message_received_body_html',
 					$user->getName(),
 					$user_from
@@ -106,7 +106,7 @@ class UserBoard {
 					htmlspecialchars( $board_link->getFullURL() ),
 					htmlspecialchars( $update_profile_link->getFullURL() )
 				)->text()
-			);
+			];
 
 			$user->sendMail( $subject, $body );
 		}
@@ -124,8 +124,8 @@ class UserBoard {
 		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_board',
-			array( 'ub_user_id' ),
-			array( 'ub_id' => $ub_id ),
+			[ 'ub_user_id' ],
+			[ 'ub_id' => $ub_id ],
 			__METHOD__
 		);
 		if ( $s !== false ) {
@@ -148,14 +148,14 @@ class UserBoard {
 			$dbw = wfGetDB( DB_MASTER );
 			$s = $dbw->selectRow(
 				'user_board',
-				array( 'ub_user_id', 'ub_user_name', 'ub_type' ),
-				array( 'ub_id' => $ub_id ),
+				[ 'ub_user_id', 'ub_user_name', 'ub_type' ],
+				[ 'ub_id' => $ub_id ],
 				__METHOD__
 			);
 			if ( $s !== false ) {
 				$dbw->delete(
 					'user_board',
-					array( 'ub_id' => $ub_id ),
+					[ 'ub_id' => $ub_id ],
 					__METHOD__
 				);
 
@@ -218,14 +218,14 @@ class UserBoard {
 			{$limit_sql}";
 		$res = $dbr->query( $sql, __METHOD__ );
 
-		$messages = array();
+		$messages = [];
 
 		foreach ( $res as $row ) {
 			$parser = new Parser();
 			$message_text = $parser->parse( $row->ub_message, $wgTitle, $wgOut->parserOptions(), true );
 			$message_text = $message_text->getText();
 
-			$messages[] = array(
+			$messages[] = [
 				'id' => $row->ub_id,
 				'timestamp' => wfTimestamp( TS_UNIX, $row->ub_date ),
 				'user_id_from' => $row->ub_user_id_from,
@@ -234,7 +234,7 @@ class UserBoard {
 				'user_name' => $row->ub_user_name,
 				'message_text' => $message_text,
 				'type' => $row->ub_type
-			);
+			];
 		}
 
 		return $messages;

@@ -189,11 +189,11 @@ class ViewGifts extends SpecialPage {
 				$output .= $linkRenderer->makeLink(
 					$pageLink,
 					$this->msg( 'g-previous' )->plain(),
-					array(),
-					array(
+					[],
+					[
 						'user' => $user_name,
 						'page' => ( $page - 1 )
-					)
+					]
 				) . $this->msg( 'word-separator' )->plain();
 			}
 
@@ -214,11 +214,11 @@ class ViewGifts extends SpecialPage {
 					$output .= $linkRenderer->makeLink(
 						$pageLink,
 						$i,
-						array(),
-						array(
+						[],
+						[
 							'user' => $user_name,
 							'page' => $i
-						)
+						]
 					) . $this->msg( 'word-separator' )->plain();
 				}
 			}
@@ -228,11 +228,11 @@ class ViewGifts extends SpecialPage {
 					$linkRenderer->makeLink(
 						$pageLink,
 						$this->msg( 'g-next' )->plain(),
-						array(),
-						array(
+						[],
+						[
 							'user' => $user_name,
 							'page' => ( $page + 1 )
-						)
+						]
 					);
 			}
 			$output .= '</div>';

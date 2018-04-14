@@ -5,7 +5,7 @@
  * @file
  */
 
-$namespaceNames = array();
+$namespaceNames = [];
 
 // For wikis where the SocialProfile extension is not installed.
 if( !defined( 'NS_USER_WIKI' ) ) {
@@ -25,17 +25,17 @@ if( !defined( 'NS_USER_PROFILE_TALK' ) ) {
 }
 
 /** English */
-$namespaceNames['en'] = array(
+$namespaceNames['en'] = [
 	NS_USER_WIKI => 'UserWiki',
 	NS_USER_WIKI_TALK => 'UserWiki_talk',
 	NS_USER_PROFILE => 'User_profile',
 	NS_USER_PROFILE_TALK => 'User_profile_talk',
-);
+];
 
 /** Finnish (Suomi) */
-$namespaceNames['fi'] = array(
+$namespaceNames['fi'] = [
 	NS_USER_WIKI => 'Käyttäjäwiki',
 	NS_USER_WIKI_TALK => 'Keskustelu_käyttäjäwikistä',
 	NS_USER_PROFILE => 'Käyttäjäprofiili',
 	NS_USER_PROFILE_TALK => 'Keskustelu_käyttäjäprofiilista',
-);
+];

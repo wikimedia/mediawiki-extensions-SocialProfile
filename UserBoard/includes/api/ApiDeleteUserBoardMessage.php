@@ -39,11 +39,11 @@ class ApiDeleteUserBoardMessage extends ApiBase {
 	}
 
 	public function getAllowedParams() {
-		return array_merge( parent::getAllowedParams(), array(
-			'id' => array(
+		return array_merge( parent::getAllowedParams(), [
+			'id' => [
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_REQUIRED => false
-			)
-		) );
+			]
+		] );
 	}
 }

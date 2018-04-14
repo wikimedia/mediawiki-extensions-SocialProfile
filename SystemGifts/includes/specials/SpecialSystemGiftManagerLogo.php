@@ -59,7 +59,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	}
 
 	function initLogo() {
-		$this->fileExtensions = array( 'gif', 'jpg', 'jpeg', 'png' );
+		$this->fileExtensions = [ 'gif', 'jpg', 'jpeg', 'png' ];
 
 		$request = $this->getRequest();
 		if ( !$request->wasPosted() ) {
@@ -465,11 +465,11 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		}
 
 		$key = mt_rand( 0, 0x7fffffff );
-		$_SESSION['wsUploadData'][$key] = array(
+		$_SESSION['wsUploadData'][$key] = [
 			'mUploadTempName' => $stash,
 			'mUploadSize' => $this->mUploadSize,
 			'mOname' => $this->mOname
-		);
+		];
 		return $key;
 	}
 
@@ -529,12 +529,12 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		</tr>';
 
 		$systemGiftManager = SpecialPage::getTitleFor( 'SystemGiftManager' );
-		$output .= $this->getLanguage()->pipeList( array(
+		$output .= $this->getLanguage()->pipeList( [
 			'<tr><td><a href="' . htmlspecialchars( $systemGiftManager->getFullURL() ) . '">' .
 				$this->msg( 'ga-back-gift-list' )->plain() . '</a>&#160;',
 			'&#160;<a href="' . htmlspecialchars( $systemGiftManager->getFullURL( 'id=' . $this->gift_id ) ) . '">' .
 				$this->msg( 'ga-back-edit-gift' )->plain() . '</a></td></tr>'
-		) );
+		] );
 		$output .= '</table>';
 		$this->getOutput()->addHTML( $output );
 	}
