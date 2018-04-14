@@ -31,8 +31,6 @@
 		<exclude name="MediaWiki.WhiteSpace.SpaceyParenthesis.SingleSpaceAfterOpenParenthesis"></exclude>
 		<exclude name="MediaWiki.WhiteSpace.SpaceyParenthesis.SingleSpaceBeforeCloseParenthesis"></exclude>
 		<exclude name="PSR2.Classes.PropertyDeclaration.ScopeMissing"></exclude>
-		<exclude name="PSR2.Files.EndFileNewline.NoneFound"></exclude>
-		<exclude name="PSR2.Files.EndFileNewline.TooMany"></exclude>
 		<exclude name="Squiz.Classes.SelfMemberReference.NotUsed"></exclude>
 		<exclude name="Squiz.Classes.ValidClassName.NotCamelCaps"></exclude>
 		<exclude name="Squiz.Scope.MemberVarScope.Missing"></exclude>
