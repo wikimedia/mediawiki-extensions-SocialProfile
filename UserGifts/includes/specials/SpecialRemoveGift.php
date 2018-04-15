@@ -92,8 +92,6 @@ class RemoveGift extends UnlistedSpecialPage {
 	 * @return string HTML
 	 */
 	function displayForm() {
-		global $wgUploadPath;
-
 		$currentUser = $this->getUser();
 		$rel = new UserGifts( $currentUser->getName() );
 		$gift = $rel->getUserGift( $this->gift_id );

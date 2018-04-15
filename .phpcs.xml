@@ -14,10 +14,6 @@
 		<exclude name="MediaWiki.Usage.DbrQueryUsage.DbrQueryFound"></exclude>
 		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals"></exclude>
 		<exclude name="MediaWiki.VariableAnalysis.ForbiddenGlobalVariables.ForbiddenGlobal$wgTitle"></exclude>
-		<exclude name="MediaWiki.VariableAnalysis.UnusedGlobalVariables.UnusedGlobal$wgMemc"></exclude>
-		<exclude name="MediaWiki.VariableAnalysis.UnusedGlobalVariables.UnusedGlobal$wgSitename"></exclude>
-		<exclude name="MediaWiki.VariableAnalysis.UnusedGlobalVariables.UnusedGlobal$wgSystemGifts"></exclude>
-		<exclude name="MediaWiki.VariableAnalysis.UnusedGlobalVariables.UnusedGlobal$wgUploadPath"></exclude>
 		<exclude name="MediaWiki.WhiteSpace.DisallowEmptyLineFunctions.NoEmptyLine"></exclude>
 		<exclude name="MediaWiki.WhiteSpace.SpaceAfterControlStructure.Incorrect"></exclude>
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeControlStructureBrace.BraceOnNewLine"></exclude>

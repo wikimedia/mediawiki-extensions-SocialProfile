@@ -118,7 +118,7 @@ class UserStatsTrack {
 	 * @param $val Integer: increase $field by this amount, defaults to 1
 	 */
 	function incStatField( $field, $val = 1 ) {
-		global $wgUser, $wgMemc, $wgSystemGifts, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
+		global $wgUser, $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
 
 		if ( !$wgUser->isBot() && !$wgUser->isAnon() && $this->stats_fields[$field] ) {
 			$dbw = wfGetDB( DB_MASTER );

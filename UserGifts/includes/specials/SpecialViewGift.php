@@ -21,8 +21,6 @@ class ViewGift extends UnlistedSpecialPage {
 	 * @param string|null $par
 	 */
 	public function execute( $par ) {
-		global $wgUploadPath;
-
 		$out = $this->getOutput();
 		$user = $this->getUser();
 

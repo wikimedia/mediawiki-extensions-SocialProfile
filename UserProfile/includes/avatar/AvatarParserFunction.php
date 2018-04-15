@@ -25,8 +25,6 @@ class AvatarParserFunction {
 	 * @return array Output of function, and options for the parser
 	 */
 	public static function renderAvatarParserFunction( $parser, $username = '', $givenSize = 'm' ) {
-		global $wgUploadPath;
-
 		$sizes = [ 's', 'm', 'ml', 'l' ];
 
 		// if given size is a code,

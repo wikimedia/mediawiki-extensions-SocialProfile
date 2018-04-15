@@ -328,7 +328,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * @param User|null $user User object, null by default (=the current user)
 	 */
 	function saveProfileBasic( $user = null ) {
-		global $wgMemc, $wgSitename;
+		global $wgMemc;
 
 		if ( is_null( $user ) ) {
 			$user = $this->getUser();

@@ -1806,7 +1806,7 @@ class UserProfilePage extends Article {
 	 * @return string HTML
 	 */
 	function getFanBoxes() {
-		global $wgMemc, $wgUserProfileDisplay, $wgEnableUserBoxes;
+		global $wgUserProfileDisplay, $wgEnableUserBoxes;
 
 		$user_name = $this->user_name;
 
