@@ -130,7 +130,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		}
 
 		/** Check if the image directory is writeable, this is a common mistake */
-		if ( !is_writeable( $wgUploadDirectory ) ) {
+		if ( !is_writable( $wgUploadDirectory ) ) {
 			$this->getOutput()->addWikiMsg( 'upload_directory_read_only', $wgUploadDirectory );
 			return;
 		}

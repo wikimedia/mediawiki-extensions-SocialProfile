@@ -10,9 +10,7 @@
 		<exclude name="MediaWiki.Files.ClassMatchesFilename.NotMatch"></exclude>
 		<exclude name="MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName"></exclude>
 		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.wfPrefix"></exclude>
-		<exclude name="MediaWiki.Usage.ForbiddenFunctions.is_writeable"></exclude>
 		<exclude name="MediaWiki.Usage.DbrQueryUsage.DbrQueryFound"></exclude>
-		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals"></exclude>
 		<exclude name="MediaWiki.VariableAnalysis.ForbiddenGlobalVariables.ForbiddenGlobal$wgTitle"></exclude>
 		<exclude name="MediaWiki.WhiteSpace.DisallowEmptyLineFunctions.NoEmptyLine"></exclude>
 		<exclude name="MediaWiki.WhiteSpace.SpaceAfterControlStructure.Incorrect"></exclude>

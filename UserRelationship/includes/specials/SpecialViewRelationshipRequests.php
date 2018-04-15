@@ -46,6 +46,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 	public function execute( $params ) {
 		$out = $this->getOutput();
 		$user = $this->getUser();
+		$request = $this->getRequest();
 
 		/**
 		 * Redirect anonymous users to the login page
@@ -64,12 +65,12 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 
 		$rel = new UserRelationship( $user->getName() );
 
-		if ( $this->getRequest()->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
+		if ( $request->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
 			$_SESSION['alreadysubmitted'] = true;
 			$rel->addRelationshipRequest(
 				$this->user_name_to,
 				$this->relationship_type,
-				$_POST['message']
+				$request->getVal( 'message' )
 			);
 			$output = '<br /><span class="title">' .
 				$this->msg( 'ur-already-submitted' )->plain() .
