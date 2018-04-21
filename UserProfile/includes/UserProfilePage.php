@@ -102,8 +102,7 @@ class UserProfilePage extends Article {
 			$this->getTitle()->getNamespace() == NS_USER &&
 			$this->profile_data['user_id'] &&
 			$this->profile_data['user_page_type'] == 0
-		)
-		{
+		) {
 			parent::view();
 			return '';
 		}
@@ -276,7 +275,7 @@ class UserProfilePage extends Article {
 		$key = $wgMemc->makeKey( 'user', 'profile', 'polls', $this->user_id );
 		$data = $wgMemc->get( $key );
 
-		if( $data ) {
+		if ( $data ) {
 			$logger->debug( "Got profile polls for user {user_id} from cache\n", [
 				'user_id' => $this->user_id
 			] );
@@ -296,7 +295,7 @@ class UserProfilePage extends Article {
 				[ 'ORDER BY' => 'poll_id DESC', 'LIMIT' => 3 ],
 				[ 'page' => [ 'INNER JOIN', 'page_id = poll_page_id' ] ]
 			);
-			foreach( $res as $row ) {
+			foreach ( $res as $row ) {
 				$polls[] = [
 					'title' => $row->page_title,
 					'timestamp' => wfTimestamp( TS_UNIX, $row->poll_date )
@@ -323,7 +322,7 @@ class UserProfilePage extends Article {
 		$key = $wgMemc->makeKey( 'user', 'profile', 'quiz', $this->user_id );
 		$data = $wgMemc->get( $key );
 
-		if( $data ) {
+		if ( $data ) {
 			$logger->debug( "Got profile quizzes for user {user_id} from cache\n", [
 				'user_id' => $this->user_id
 			] );
@@ -348,7 +347,7 @@ class UserProfilePage extends Article {
 					'LIMIT' => 3
 				]
 			);
-			foreach( $res as $row ) {
+			foreach ( $res as $row ) {
 				$quiz[] = [
 					'id' => $row->q_id,
 					'text' => $row->q_text,
@@ -376,7 +375,7 @@ class UserProfilePage extends Article {
 		// Try cache
 		$key = $wgMemc->makeKey( 'user', 'profile', 'picgame', $this->user_id );
 		$data = $wgMemc->get( $key );
-		if( $data ) {
+		if ( $data ) {
 			$logger->debug( "Got profile picgames for user {user_id} from cache\n", [
 				'user_id' => $this->user_id
 			] );
@@ -401,7 +400,7 @@ class UserProfilePage extends Article {
 					'LIMIT' => 3
 				]
 			);
-			foreach( $res as $row ) {
+			foreach ( $res as $row ) {
 				$pics[] = [
 					'id' => $row->id,
 					'title' => $row->title,
@@ -443,7 +442,7 @@ class UserProfilePage extends Article {
 		$combined_array = [];
 
 		$quizzes = $this->getUserQuiz();
-		foreach( $quizzes as $quiz ) {
+		foreach ( $quizzes as $quiz ) {
 			$combined_array[] = [
 				'type' => 'Quiz',
 				'id' => $quiz['id'],
@@ -453,7 +452,7 @@ class UserProfilePage extends Article {
 		}
 
 		$polls = $this->getUserPolls();
-		foreach( $polls as $poll ) {
+		foreach ( $polls as $poll ) {
 			$combined_array[] = [
 				'type' => 'Poll',
 				'title' => $poll['title'],
@@ -462,7 +461,7 @@ class UserProfilePage extends Article {
 		}
 
 		$pics = $this->getUserPicGames();
-		foreach( $pics as $pic ) {
+		foreach ( $pics as $pic ) {
 			$combined_array[] = [
 				'type' => 'Picture Game',
 				'id' => $pic['id'],
@@ -478,7 +477,7 @@ class UserProfilePage extends Article {
 		if ( count( $combined_array ) > 0 ) {
 			$output .= '<div class="user-section-heading">
 				<div class="user-section-title">' .
-					wfMessage('casual-games-title')->escaped().'
+					wfMessage( 'casual-games-title' )->escaped().'
 				</div>
 				<div class="user-section-actions">
 					<div class="action-right">
@@ -493,7 +492,7 @@ class UserProfilePage extends Article {
 
 			$x = 1;
 
-			foreach( $combined_array as $item ) {
+			foreach ( $combined_array as $item ) {
 				$output .= ( ( $x == 1 ) ? '<p class="item-top">' : '<p>' );
 
 				if ( $item['type'] == 'Poll' ) {
@@ -518,17 +517,17 @@ class UserProfilePage extends Article {
 				}
 
 				if ( $item['type'] == 'Picture Game' ) {
-					if( $item['img1'] != '' && $item['img2'] != '' ) {
+					if ( $item['img1'] != '' && $item['img2'] != '' ) {
 						$image_1 = $image_2 = '';
 						$render_1 = wfFindFile( $item['img1'] );
 						if ( is_object( $render_1 ) ) {
-							$thumb_1 = $render_1->transform( [ 'width' =>  25 ] );
+							$thumb_1 = $render_1->transform( [ 'width' => 25 ] );
 							$image_1 = $thumb_1->toHtml();
 						}
 
 						$render_2 = wfFindFile( $item['img2'] );
 						if ( is_object( $render_2 ) ) {
-							$thumb_2 = $render_2->transform( [ 'width' =>  25 ] );
+							$thumb_2 = $render_2->transform( [ 'width' => 25 ] );
 							$image_2 = $thumb_2->toHtml();
 						}
 
@@ -1016,8 +1015,7 @@ class UserProfilePage extends Article {
 			if (
 				(int)$profile_data['user_page_type'] == 1 ||
 				$profile_data['user_page_type'] === ''
-			)
-			{
+			) {
 				$toggleMessage = wfMessage( 'user-type-toggle-old' )->escaped();
 			} else {
 				$toggleMessage = wfMessage( 'user-type-toggle-new' )->escaped();
@@ -1101,8 +1099,7 @@ class UserProfilePage extends Article {
 			$this->getTitle()->getNamespace() == NS_USER_PROFILE &&
 			$this->profile_data['user_id'] &&
 			$this->profile_data['user_page_type'] == 0
-		)
-		{
+		) {
 			$profileLinks['user-page-link'] =
 				'<a href="' . htmlspecialchars( $user_page->getFullURL() ) . '" rel="nofollow">' .
 					wfMessage( 'user-page-link' )->escaped() . '</a>';
@@ -1113,8 +1110,7 @@ class UserProfilePage extends Article {
 			$this->getTitle()->getNamespace() == NS_USER &&
 			$this->profile_data['user_id'] &&
 			$this->profile_data['user_page_type'] == 0
-		)
-		{
+		) {
 			$profileLinks['user-social-profile-link'] =
 				'<a href="' . htmlspecialchars( $user_social_profile->getFullURL() ) . '" rel="nofollow">' .
 					wfMessage( 'user-social-profile-link' )->escaped() . '</a>';
@@ -1125,8 +1121,7 @@ class UserProfilePage extends Article {
 				!$this->profile_data['user_id'] ||
 				$this->profile_data['user_page_type'] == 1
 			)
-		)
-		{
+		) {
 			$profileLinks['user-wiki-link'] =
 				'<a href="' . htmlspecialchars( $user_wiki->getFullURL() ) . '" rel="nofollow">' .
 					wfMessage( 'user-wiki-link' )->escaped() . '</a>';
@@ -1373,7 +1368,7 @@ class UserProfilePage extends Article {
 
 				$viewGift = SpecialPage::getTitleFor( 'ViewGift' );
 
-				switch( $item['type'] ) {
+				switch ( $item['type'] ) {
 					case 'edit':
 						$item_html .= wfMessage( 'user-recent-activity-edit' )->escaped() . " {$page_link} {$item_time}
 							<div class=\"item\">";
@@ -1459,14 +1454,14 @@ class UserProfilePage extends Article {
 									"\" rel=\"nofollow\">{$network_image} \"{$item['comment']}\"</a>
 								</div>";
 						break;
-					}
+				}
 
-					$item_html .= '</div>';
+				$item_html .= '</div>';
 
-					if ( $x <= $limit ) {
-						$items_html_type['all'][] = $item_html;
-					}
-					$items_html_type[$item['type']][] = $item_html;
+				if ( $x <= $limit ) {
+					$items_html_type['all'][] = $item_html;
+				}
+				$items_html_type[$item['type']][] = $item_html;
 
 				$x++;
 			}

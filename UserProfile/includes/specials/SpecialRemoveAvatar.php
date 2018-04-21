@@ -180,7 +180,6 @@ class RemoveAvatar extends SpecialPage {
 	 * @return bool
 	 */
 	private function showUserForm() {
-
 		$formDescriptor = [
 			'user' => [
 				'type' => 'user',

@@ -288,7 +288,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			}
 		} else { // ImageMagick is not enabled, so fall back to PHP's GD library
 			// Get the image size, used in calculations later.
-			switch( $typeCode ) {
+			switch ( $typeCode ) {
 				case '1':
 					$fullImage = imagecreatefromgif( $imageSrc );
 					$ext = 'gif';

@@ -125,7 +125,7 @@ class UserStatsTrack {
 			$dbw->update(
 				'user_stats',
 				[ $this->stats_fields[$field] . '=' . $this->stats_fields[$field] . "+{$val}" ],
-				[ 'stats_user_id' => $this->user_id  ],
+				[ 'stats_user_id' => $this->user_id ],
 				__METHOD__
 			);
 			$this->updateTotalPoints();

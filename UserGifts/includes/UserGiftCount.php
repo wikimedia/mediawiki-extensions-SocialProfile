@@ -102,7 +102,7 @@ class UserGiftCount {
 
 		$s = $dbr->selectRow(
 			'user_gift',
-			[  'COUNT(*) AS count' ],
+			[ 'COUNT(*) AS count' ],
 			[
 				'ug_user_id_to' => $this->userId,
 				'ug_status' => 1

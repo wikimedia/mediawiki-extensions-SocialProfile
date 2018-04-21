@@ -45,7 +45,7 @@ class UploadAvatar extends UploadFromFile {
 			// Get the image size, used in calculations later.
 			list( $origWidth, $origHeight, $typeCode ) = getimagesize( $imageSrc );
 
-			switch( $typeCode ) {
+			switch ( $typeCode ) {
 				case '1':
 					$fullImage = imagecreatefromgif( $imageSrc );
 					$ext = 'gif';

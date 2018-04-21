@@ -116,7 +116,7 @@ class UserProfile {
 			$profile['location_state'] = isset( $row->up_location_state ) ? $row->up_location_state : '';
 			$profile['location_country'] = isset( $row->up_location_country ) ? $row->up_location_country : '';
 			$profile['hometown_city'] = isset( $row->up_hometown_city ) ? $row->up_hometown_city : '';
-			$profile['hometown_state'] = isset( $row->up_hometown_state ) ?  $row->up_hometown_state : '';
+			$profile['hometown_state'] = isset( $row->up_hometown_state ) ? $row->up_hometown_state : '';
 			$profile['hometown_country'] = isset( $row->up_hometown_country ) ? $row->up_hometown_country : '';
 			$profile['birthday'] = $this->formatBirthday( $issetUpBirthday, $showYOB );
 
@@ -173,7 +173,7 @@ class UserProfile {
 			} else {
 				return date( 'F jS, Y', mktime( 0, 0, 0, $month, $day, $year ) );
 			}
-			//return $day . ' ' . $wgLang->getMonthNameGen( $month );
+			// return $day . ' ' . $wgLang->getMonthNameGen( $month );
 		}
 		return $birthday;
 	}

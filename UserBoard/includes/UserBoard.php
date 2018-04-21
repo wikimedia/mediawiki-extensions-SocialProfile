@@ -4,6 +4,7 @@
  */
 class UserBoard {
 
+	// phpcs:ignore Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore
 	public function __construct() {}
 
 	/**

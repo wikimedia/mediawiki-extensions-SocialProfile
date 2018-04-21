@@ -145,8 +145,7 @@ class GiftManager extends SpecialPage {
 		if (
 			$user->isAllowed( 'giftadmin' ) ||
 			in_array( 'giftadmin', $user->getGroups() )
-		)
-		{
+		) {
 			return true;
 		}
 
@@ -174,8 +173,7 @@ class GiftManager extends SpecialPage {
 			$user->isAllowed( 'giftadmin' ) ||
 			in_array( 'giftadmin', $user->getGroups() ) ||
 			( $wgMaxCustomUserGiftCount > 0 && $createdCount < $wgMaxCustomUserGiftCount )
-		)
-		{
+		) {
 			return true;
 		} else {
 			return false;
@@ -238,8 +236,7 @@ class GiftManager extends SpecialPage {
 					!in_array( 'giftadmin', $user->getGroups() ) &&
 					!$user->isAllowed( 'delete' )
 				)
-			)
-			{
+			) {
 				throw new ErrorPageError( 'error', 'badaccess' );
 			}
 		}

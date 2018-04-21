@@ -38,8 +38,7 @@ function getTopUsersForTag( $input, $args, $parser ) {
 		!empty( $args['limit'] ) &&
 		is_numeric( $args['limit'] ) &&
 		$args['limit'] < 50
-	)
-	{
+	) {
 		$limit = intval( $args['limit'] );
 	} else {
 		$limit = 5;

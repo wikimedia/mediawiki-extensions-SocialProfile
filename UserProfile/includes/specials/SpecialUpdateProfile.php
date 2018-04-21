@@ -156,7 +156,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			if ( !$section ) {
 				$section = 'basic';
 			}
-			switch( $section ) {
+			switch ( $section ) {
 				case 'basic':
 					$this->saveProfileBasic( $user );
 					$this->saveBasicSettings( $user );

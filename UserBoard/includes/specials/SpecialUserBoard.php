@@ -115,8 +115,7 @@ class SpecialViewUserBoard extends SpecialPage {
 			if (
 				$currentUser->getName() == $user_name ||
 				$currentUser->isAllowed( 'userboard-delete' )
-			)
-			{
+			) {
 				$total = $total + $stats_data['user_board_priv'];
 			}
 		} else {
@@ -258,7 +257,7 @@ class SpecialViewUserBoard extends SpecialPage {
 
 		if ( $currentUser->isBlocked() ) {
 			// only let them post to admins
-			//$user_to = User::newFromId( $user_id );
+			// $user_to = User::newFromId( $user_id );
 			// if( !$user_to->isAllowed( 'delete' ) ) {
 				$can_post = false;
 			// }
@@ -322,7 +321,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				} else {
 					$board_link = '<a href="' .
 						htmlspecialchars(
-							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( ['user' => $ub_message['user_name_from'] ] ),
+							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $ub_message['user_name_from'] ] ),
 							ENT_QUOTES
 						) . '">' .
 						$this->msg( 'userboard_myboard' )->plain() . '</a>';
@@ -333,8 +332,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				if (
 					$currentUser->getName() == $ub_message['user_name'] ||
 					$currentUser->isAllowed( 'userboard-delete' )
-				)
-				{
+				) {
 					$delete_link = "<span class=\"user-board-red\">
 						<a href=\"javascript:void(0);\" data-message-id=\"{$ub_message['id']}\">" .
 							$this->msg( 'delete' )->plain() . '</a>

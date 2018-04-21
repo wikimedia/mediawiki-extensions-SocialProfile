@@ -210,7 +210,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		array_shift( $countries );
 
 		$this->getOutput()->setPageTitle( $this->msg( 'edit-profile-title' )->plain() );
-		//$form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-personal' )->plain() );
+		// $form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-personal' )->plain() );
 		$form = '<form action="" method="post" enctype="multipart/form-data" name="profile">';
 		$form .= '<div class="profile-info visualClear">';
 		$form .= '<div class="profile-update">
@@ -379,7 +379,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		}
 
 		$this->getOutput()->setPageTitle( $this->msg( 'user-profile-section-interests' )->plain() );
-		//$form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-interests' )->plain() );
+		// $form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-interests' )->plain() );
 		$form = '<div class="profile-info visualClear">
 			<div class="profile-update">
 			<p class="profile-update-title">' . $this->msg( 'user-profile-interests-entertainment' )->plain() . '</p>
@@ -459,7 +459,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		$this->getOutput()->setHTMLTitle( $this->msg( 'pagetitle',
 			$this->msg( 'user-profile-tidbits-title' )->plain() )->parse() );
 		$form = '<h1>' . $this->msg( 'user-profile-tidbits-title' )->plain() . '</h1>';
-		//$form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-custom' )->plain() );
+		// $form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-custom' )->plain() );
 		$form = '<div class="profile-info visualClear">
 				<div class="profile-update">
 					<p class="profile-update-title">' . $this->msg( 'user-profile-tidbits-title' )->inContentLanguage()->parse() . '</p>

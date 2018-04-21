@@ -130,7 +130,7 @@ class UserProfileHooks {
 		$oldHeader = '<div id="mw-diff-otitle1"><h4>' . $oldRevisionHeader . '</h4></div>' .
 			'<div id="mw-diff-otitle2">' . $avatarElement . '<div id="mw-diff-oinfo">' .
 			Linker::revUserTools( $differenceEngine->mOldRev, !$unhide ) .
-			//'<br /><div id="mw-diff-odaysago">' . $differenceEngine->mOldRev->getTimestamp() . '</div>' .
+			// '<br /><div id="mw-diff-odaysago">' . $differenceEngine->mOldRev->getTimestamp() . '</div>' .
 			Linker::revComment( $differenceEngine->mOldRev, !$diffOnly, !$unhide ) .
 			'</div></div>' .
 			'<div id="mw-diff-otitle3" class="rccomment">' . $oldMinor . $ldel . '</div>' .
@@ -169,7 +169,7 @@ class UserProfileHooks {
 			'<div id="mw-diff-ntitle2">' . $avatarElement . '<div id="mw-diff-oinfo">'
 			. Linker::revUserTools( $differenceEngine->mNewRev, !$unhide ) .
 			" $rollback " .
-			//'<br /><div id="mw-diff-ndaysago">' . $differenceEngine->mNewRev->getTimestamp() . '</div>' .
+			// '<br /><div id="mw-diff-ndaysago">' . $differenceEngine->mNewRev->getTimestamp() . '</div>' .
 			Linker::revComment( $differenceEngine->mNewRev, !$diffOnly, !$unhide ) .
 			'</div></div>' .
 			'<div id="mw-diff-ntitle3" class="rccomment">' . $newMinor . $rdel . '</div>' .

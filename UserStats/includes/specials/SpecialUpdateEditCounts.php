@@ -28,9 +28,8 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 		if (
 			isset( $wgNamespacesForEditPoints ) &&
 			is_array( $wgNamespacesForEditPoints )
-		)
-		{
-			foreach( $wgNamespacesForEditPoints as $pointNamespace ) {
+		) {
+			foreach ( $wgNamespacesForEditPoints as $pointNamespace ) {
 				$whereConds[] = 'page_namespace = ' . (int)$pointNamespace;
 			}
 		}

@@ -81,7 +81,7 @@ class GenerateTopUsersReport extends SpecialPage {
 		// in the generated reports.
 		$user_count = $request->getInt( 'user_count', 10 );
 
-		if( $period == 'weekly' ) {
+		if ( $period == 'weekly' ) {
 			$period_title = $wgContLang->date( wfTimestamp( TS_MW, strtotime( '-1 week' ) ) ) .
 				'-' . $wgContLang->date( wfTimestampNow() );
 		} elseif ( $period == 'monthly' ) {
@@ -203,7 +203,7 @@ class GenerateTopUsersReport extends SpecialPage {
 		$pageContent .= '==' . $this->msg( 'user-stats-full-top' )->numParams(
 			$wgContLang->formatNum( $user_count ) )->inContentLanguage()->parse() . "==\n\n";
 
-		foreach( $users as $user ) {
+		foreach ( $users as $user ) {
 			$userTitle = Title::makeTitle( NS_USER, $user['user_name'] );
 			$pageContent .= $this->msg(
 				'user-stats-report-row',

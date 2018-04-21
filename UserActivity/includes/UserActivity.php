@@ -340,7 +340,7 @@ class UserActivity {
 
 		$where = [];
 
-		if( $this->rel_type ) {
+		if ( $this->rel_type ) {
 			$users = $dbr->select(
 				'user_relationship',
 				'r_user_id_relation',
@@ -360,7 +360,7 @@ class UserActivity {
 			}
 		}
 
-		if( $this->show_current_user ) {
+		if ( $this->show_current_user ) {
 			$where['ug_user_id_from'] = $this->user_id;
 		}
 
@@ -1163,7 +1163,7 @@ class UserActivity {
 				if ( $users && $count_users > 2 ) {
 					$users .= wfMessage( 'comma-separator' )->text();
 				}
-				if ( $user_index ==  $count_users && $count_users > 1 ) {
+				if ( $user_index == $count_users && $count_users > 1 ) {
 					$users .= wfMessage( 'and' )->text();
 				}
 
@@ -1195,7 +1195,7 @@ class UserActivity {
 	 * images/ directory)
 	 */
 	static function getTypeIcon( $type ) {
-		switch( $type ) {
+		switch ( $type ) {
 			case 'edit':
 				return 'editIcon.gif';
 			case 'vote':
@@ -1254,7 +1254,7 @@ class UserActivity {
 	 * is greater than $y's, else 1
 	 */
 	private static function sortItems( $x, $y ) {
-		if( $x['timestamp'] == $y['timestamp'] ) {
+		if ( $x['timestamp'] == $y['timestamp'] ) {
 			return 0;
 		} elseif ( $x['timestamp'] > $y['timestamp'] ) {
 			return -1;
