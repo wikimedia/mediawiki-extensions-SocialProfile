@@ -77,7 +77,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 
 		if ( $request->wasPosted() ) {
 			$this->saveProfileBasic( $target );
-			$this->saveSettings_basic( $target );
+			$this->saveBasicSettings( $target );
 			$this->saveProfilePersonal( $target );
 			$this->saveProfileCustom( $target );
 
@@ -143,7 +143,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		return true;
 	}
 
-	function saveSettings_basic( $tar ) {
+	function saveBasicSettings( $tar ) {
 		$request = $this->getRequest();
 
 		$tar->setRealName( $request->getVal( 'real_name' ) );

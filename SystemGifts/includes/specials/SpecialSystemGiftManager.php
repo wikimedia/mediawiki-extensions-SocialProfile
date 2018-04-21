@@ -76,7 +76,7 @@ class SystemGiftManager extends SpecialPage {
 					'</span><br /><br />'
 				);
 			}
-			$g->update_system_gifts();
+			$g->updateSystemGifts();
 			$out->addHTML( $this->displayForm( $gift_id ) );
 		} else {
 			$gift_id = $request->getInt( 'id' );

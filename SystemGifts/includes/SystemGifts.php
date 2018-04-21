@@ -38,7 +38,7 @@ class SystemGifts {
 	 * caches.
 	 * Special:PopulateAwards calls this function
 	 */
-	public function update_system_gifts() {
+	public function updateSystemGifts() {
 		global $wgOut, $wgMemc;
 
 		$dbw = wfGetDB( DB_MASTER );

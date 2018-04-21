@@ -1,7 +1,7 @@
 <?php
 /**
- * Special:PopulateAwards -- basically just a special page that calls
- * SystemGifts' update_system_gifts() function and does nothing else
+ * Special:PopulateAwards -- a special page that wraps around
+ * SystemGifts#updateSystemGifts()
  *
  * @file
  * @ingroup Extensions
@@ -42,6 +42,6 @@ class PopulateAwards extends UnlistedSpecialPage {
 		$wgUserLevels = '';
 
 		$g = new SystemGifts();
-		$g->update_system_gifts();
+		$g->updateSystemGifts();
 	}
 }

@@ -159,7 +159,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			switch( $section ) {
 				case 'basic':
 					$this->saveProfileBasic( $user );
-					$this->saveSettings_basic( $user );
+					$this->saveBasicSettings( $user );
 					break;
 				case 'personal':
 					$this->saveProfilePersonal( $user );
@@ -168,7 +168,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 					$this->saveProfileCustom( $user );
 					break;
 				case 'preferences':
-					$this->saveSettings_pref();
+					$this->saveSocialPreferences();
 					break;
 			}
 
@@ -228,7 +228,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 *
 	 * @param User $user Representing the current user
 	 */
-	function saveSettings_basic( $user ) {
+	function saveBasicSettings( $user ) {
 		global $wgEmailAuthentication;
 
 		$request = $this->getRequest();
@@ -256,7 +256,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	/**
 	 * Save social preferences into the database.
 	 */
-	function saveSettings_pref() {
+	function saveSocialPreferences() {
 		$request = $this->getRequest();
 		$user = $this->getUser();
 
