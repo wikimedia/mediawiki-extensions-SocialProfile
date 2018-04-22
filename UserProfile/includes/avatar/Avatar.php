@@ -11,6 +11,8 @@
  * @file
  * @ingroup Extensions
  */
+
+// phpcs:ignore Squiz.Classes.ValidClassName.NotCamelCaps
 class wAvatar {
 	public $user_name = null;
 	public $user_id;

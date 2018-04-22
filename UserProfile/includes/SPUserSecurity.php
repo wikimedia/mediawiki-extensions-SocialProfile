@@ -157,7 +157,7 @@ class SPUserSecurity {
 		$arFields = $profile->profile_fields;
 
 		foreach ( $arFields as $field ) {
-			if ( SPUserSecurity::isFieldVisible( $ownerUid, 'up_' . $field, $viewerUid ) ) {
+			if ( self::isFieldVisible( $ownerUid, 'up_' . $field, $viewerUid ) ) {
 				$arResult[] = 'up_' . $field;
 			}
 		}
@@ -190,7 +190,7 @@ class SPUserSecurity {
 		}
 
 		$relation = UserRelationship::getUserRelationshipByID( $viewerUid, $ownerUid ); // 1 = friend, 2 = foe
-		$privacy = SPUserSecurity::getPrivacy( $ownerUid, $fieldKey );
+		$privacy = self::getPrivacy( $ownerUid, $fieldKey );
 
 		switch ( $privacy ) {
 			case 'public':
