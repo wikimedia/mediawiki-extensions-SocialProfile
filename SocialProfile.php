@@ -6,7 +6,7 @@
 if ( !defined( 'MEDIAWIKI' ) ) {
 	die(
 		'This is the setup file for the SocialProfile extension to MediaWiki.' .
-		'Please see http://www.mediawiki.org/wiki/Extension:SocialProfile for' .
+		'Please see https://www.mediawiki.org/wiki/Extension:SocialProfile for' .
 		' more information about this extension.'
 	);
 }
