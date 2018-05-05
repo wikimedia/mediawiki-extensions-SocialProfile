@@ -921,8 +921,16 @@ class UserActivity {
 
 			$user_title = Title::makeTitle( NS_USER, $row->us_user_name );
 			$user_name_short = $wgLang->truncate( $row->us_user_name, 15 );
-			$page_link = '<a href="' . SportsTeams::getNetworkURL( $row->us_sport_id, $row->us_team_id ) .
-				"\" rel=\"nofollow\">{$network_name}</a>";
+
+			$sportsNetworkURL = htmlspecialchars(
+				SpecialPage::getTitleFor( 'FanHome' )->getFullURL( [
+					'sport_id' => $row->us_sport_id,
+					'team_id' => $row->us_team_id
+				] ),
+				ENT_QUOTES
+			);
+
+			$page_link = '<a href="' . $sportsNetworkURL . "\" rel=\"nofollow\">{$network_name}</a>";
 			$network_image = SportsTeams::getLogo( $row->us_sport_id, $row->us_team_id, 's' );
 
 			$html = wfMessage(
@@ -933,7 +941,7 @@ class UserActivity {
 				htmlspecialchars( $user_title->getFullURL() )
 			)->text() .
 					'<div class="item">
-						<a href="' . SportsTeams::getNetworkURL( $row->us_sport_id, $row->us_team_id ) . "\" rel=\"nofollow\">
+						<a href="' . $sportsNetworkURL . "\" rel=\"nofollow\">
 							{$network_image}
 							\"{$row->us_text}\"
 						</a>

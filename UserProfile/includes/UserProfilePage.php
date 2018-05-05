@@ -1450,7 +1450,13 @@ class UserProfilePage extends Article {
 						$network_image = SportsTeams::getLogo( $item['sport_id'], $item['team_id'], 's' );
 						$item_html .= wfMessage( 'user-recent-activity-network-update' )->escaped() .
 								'<div class="item">
-									<a href="' . SportsTeams::getNetworkURL( $item['sport_id'], $item['team_id'] ) .
+									<a href="' . htmlspecialchars(
+										SpecialPage::getTitleFor( 'FanHome' )->getFullURL( [
+											'sport_id' => $item['sport_id'],
+											'team_id' => $item['team_id']
+										] ),
+										ENT_QUOTES
+									) .
 									"\" rel=\"nofollow\">{$network_image} \"{$item['comment']}\"</a>
 								</div>";
 						break;
