@@ -97,8 +97,8 @@ $specialPageAliases['bs'] = array(
 	'TopUsers' => array( 'Top_korisnici' ),
 	'UpdateEditCounts' => array( 'Ažuriraj_broj_izmjena' ),
 	'UpdateProfile' => array( 'Ažuriraj_profil' ),
-	'ViewRelationshipRequests' => array( 'Prikaži_zahtjevane_veze' ),
-	'ViewRelationships' => array( 'Prikaži_vjezu', 'PregledVeza' ),
+	'ViewRelationshipRequests' => array( 'Prikaži_zahtijevane_veze', 'Prikaži_zahtjevane_veze' ),
+	'ViewRelationships' => array( 'Prikaži_vezu', 'PregledVeza', 'Prikaži_vjezu' ),
 );
 
 /** German (Deutsch) */
