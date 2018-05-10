@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"ديفيد"
+		]
+	},
+	"socialprofile-desc": "مجموعة من الأدوات الاجتماعية لميدياويكي",
+	"socialprofile-uploads-disabled": "تم تعطيل ميزة رفع الصور الرمزية",
+	"apihelp-smpuserprivacy-description": "وحدة API لتعيين الرؤية (\"الخصوصية\") لحقل ملف شخصي",
+	"apihelp-smpuserprivacy-summary": "وحدة API لتعيين الرؤية (\"الخصوصية\") لحقل ملف شخصي",
+	"apihelp-smpuserprivacy-param-method": "الإجراء (إما \"get\" أو \"set\")",
+	"apihelp-smpuserprivacy-param-field_key": "مفتاح الحقل المستهدف، مثل up_movies للحقل \"الأفلام\"",
+	"apihelp-smpuserprivacy-param-privacy": "قيمة خصوصية جديدة (أحد الخيارات التالية: عامة، مخفية، أصدقاء، foaf)",
+	"apihelp-smpuserprivacy-param-tuid": "المستخدم المستهدف (معرف)"
+}
