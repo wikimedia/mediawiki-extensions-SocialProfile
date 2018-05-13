@@ -64,7 +64,6 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 				$dbw->insert(
 					'user_stats',
 					[
-						'stats_year_id' => 0,
 						'stats_user_id' => $row->rev_user,
 						'stats_user_name' => $row->rev_user_text,
 						'stats_total_points' => 1000

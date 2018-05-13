@@ -91,7 +91,6 @@ class UserStatsTrack {
 		$dbw->insert(
 			'user_stats',
 			[
-				'stats_year_id' => 0,
 				'stats_user_id' => $this->user_id,
 				'stats_user_name' => $this->user_name,
 				'stats_total_points' => 1000
