@@ -1,6 +1,16 @@
 <?php
 
 class UserStatsHooks {
+
+	/**
+	 * Set up the <randomfeatureduser> tag
+	 *
+	 * @param Parser &$parser
+	 */
+	public static function onParserFirstCallInit( Parser &$parser ) {
+		$parser->setHook( 'randomfeatureduser', [ 'RandomFeaturedUser', 'getRandomUser' ] );
+	}
+
 	/**
 	 * For the Echo extension.
 	 *

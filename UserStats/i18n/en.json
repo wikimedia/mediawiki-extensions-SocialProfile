@@ -77,5 +77,8 @@
 	"user-stats-report-monthly-edit-summary": "automated monthly user report",
 	"user-stats-report-weekly-page-title": "Weekly User Points Report ($1)",
 	"user-stats-report-monthly-page-title": "Monthly User Points Report ($1)",
-	"user-stats-report-error-variable-not-set": "The variable $wgUserStatsPointValues['points_winner_$1'] must have a value greater than 0 in LocalSettings.php!"
+	"user-stats-report-error-variable-not-set": "The variable $wgUserStatsPointValues['points_winner_$1'] must have a value greater than 0 in LocalSettings.php!",
+	"random-user-points-weekly": "{{PLURAL:$1|one point|$1 points}} this week",
+	"random-user-points-monthly": "{{PLURAL:$1|one point|$1 points}} this month",
+	"random-user-about-me": "About Me"
 }
