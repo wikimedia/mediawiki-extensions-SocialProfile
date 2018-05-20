@@ -24,5 +24,8 @@
 	"user-stats-report-row": "Parameters:\n* $1 is a rank number\n* $2 is a username\n* $3 is a number of points; used for PLURAL.",
 	"user-stats-report-points": "Parameters:\n* $1 is a number of points; used for PLURAL.",
 	"user-stats-report-weekly-page-title": "Parameters:\n* $1 is a localised timestamp",
-	"user-stats-report-monthly-page-title": "Parameters:\n* $1 is a localised timestamp"
+	"user-stats-report-monthly-page-title": "Parameters:\n* $1 is a localised timestamp",
+	"random-user-points-weekly": "Amount of weekly points earned for the represented user",
+	"random-user-points-monthly": "Amount of monthly points earned for the represented user",
+	"random-user-about-me": "A header message"
 }

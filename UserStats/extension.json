@@ -19,6 +19,7 @@
 		"TopFansByStat": "includes/specials/TopFansByStat.php",
 		"TopFansRecent": "includes/specials/TopFansRecent.php",
 		"TopUsersPoints": "includes/specials/TopUsers.php",
+		"RandomFeaturedUser": "includes/RandomFeaturedUser.php",
 		"TopUsersListLookup": "includes/TopUsersListLookup.php",
 		"UpdateEditCounts": "includes/specials/SpecialUpdateEditCounts.php",
 		"UserLevel": "includes/UserLevel.php",
@@ -29,7 +30,8 @@
 	},
 	"Hooks": {
 		"BeforeCreateEchoEvent":"UserStatsHooks::onBeforeCreateEchoEvent",
-		"EchoGetBundleRules": "UserStatsHooks::onEchoGetBundleRules"
+		"EchoGetBundleRules": "UserStatsHooks::onEchoGetBundleRules",
+		"ParserFirstCallInit": "UserStatsHooks::onParserFirstCallInit"
 	},
 	"DefaultUserOptions": {
 		"echo-subscriptions-web-social-level-up": true,
@@ -67,11 +69,19 @@
 		},
 		"NamespacesForEditPoints": [
 			0
-		]
+		],
+		"RandomFeaturedUser": {
+			"about": true,
+			"avatar": true,
+			"points": true
+		}
 	},
 	"ResourceModules": {
 		"ext.socialprofile.userstats.css": {
 			"styles": "css/TopList.css"
+		},
+		"ext.socialprofile.userstats.randomfeatureduser.styles": {
+			"styles": "css/RandomFeaturedUser.css"
 		}
 	},
 	"ResourceFileModulePaths": {
