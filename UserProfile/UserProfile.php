@@ -120,6 +120,13 @@ $wgResourceModules['ext.socialprofile.special.updateprofile.css'] = [
 	'remoteExtPath' => 'SocialProfile/UserProfile'
 ];
 
+// styles for <randomfeatureduser> tag
+$wgResourceModules['ext.socialprofile.userprofile.randomfeatureduser.styles'] = [
+	'styles' => 'resources/css/RandomUsersWithAvatars.css',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'SocialProfile/UserProfile'
+];
+
 # Add new log types for profile edits and avatar uploads
 global $wgLogTypes, $wgLogNames, $wgLogHeaders, $wgLogActions;
 $wgLogTypes[]                    = 'profile';
@@ -134,6 +141,7 @@ $wgLogActions['avatar/avatar'] = 'avatarlogentry';
 
 $wgHooks['ArticleFromTitle'][] = 'UserProfileHooks::onArticleFromTitle';
 $wgHooks['OutputPageBodyAttributes'][] = 'UserProfileHooks::onOutputPageBodyAttributes';
+$wgHooks['ParserFirstCallInit'][] = 'UserProfileHooks::onParserFirstCallInit';
 $wgHooks['DifferenceEngineShowDiff'][] = 'UserProfileHooks::onDifferenceEngineShowDiff';
 $wgHooks['DifferenceEngineOldHeader'][] = 'UserProfileHooks::onDifferenceEngineOldHeader';
 $wgHooks['DifferenceEngineNewHeader'][] = 'UserProfileHooks::onDifferenceEngineNewHeader';

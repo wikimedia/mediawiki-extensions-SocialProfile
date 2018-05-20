@@ -224,5 +224,6 @@
 	"apihelp-socialprofile-userprofileprivacy-param-method": "Action (either \"get\" or \"set\")",
 	"apihelp-socialprofile-userprofileprivacy-param-field_key": "Target field key, such as up_movies for the \"Movies\" field",
 	"apihelp-socialprofile-userprofileprivacy-param-privacy": "New privacy value (public, hidden, friends, foaf)",
-	"apihelp-socialprofile-userprofileprivacy-param-tuid": "Target user ID"
+	"apihelp-socialprofile-userprofileprivacy-param-tuid": "Target user ID",
+	"random-users-avatars-title": "Meet the community"
 }

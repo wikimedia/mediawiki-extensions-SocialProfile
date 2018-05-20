@@ -8,7 +8,9 @@
 			"Meno25",
 			"Purodha",
 			"Translationista",
-			"Umherirrender"
+			"Umherirrender",
+			"Shirayuki",
+			"The Evil IP address"
 		]
 	},
 	"user-count-separator": "$1 and $2 are numbers of users.",
@@ -72,5 +74,6 @@
 	"apihelp-socialprofile-userprofileprivacy-param-method": "{{doc-apihelp-param|socialprofile-userprofileprivacy|method}}",
 	"apihelp-socialprofile-userprofileprivacy-param-field_key": "{{doc-apihelp-param|socialprofile-userprofileprivacy|field_key}}",
 	"apihelp-socialprofile-userprofileprivacy-param-privacy": "{{doc-apihelp-param|socialprofile-userprofileprivacy|privacy}}",
-	"apihelp-socialprofile-userprofileprivacy-param-tuid": "{{doc-apihelp-param|socialprofile-userprofileprivacy|tuid}}"
+	"apihelp-socialprofile-userprofileprivacy-param-tuid": "{{doc-apihelp-param|socialprofile-userprofileprivacy|tuid}}",
+	"random-users-avatars-title": "Used as HTML <code><nowiki><h2></nowiki></code> heading."
 }

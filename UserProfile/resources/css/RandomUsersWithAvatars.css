@@ -1,0 +1,18 @@
+.random-users-avatars {
+	padding: 0 0 0 10px;
+}
+
+.random-users-avatars h2 {
+	border-bottom: none;
+	margin: 0;
+	padding: 7px 0 8px 0;
+}
+
+.random-users-avatars img {
+	border: 1px solid #dcdcdc;
+	display: block;
+	float: left;
+	max-height: 75px;
+	margin: 0 8px 8px 0;
+	max-width: 75px;
+}

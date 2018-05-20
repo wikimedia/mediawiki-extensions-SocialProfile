@@ -1,6 +1,16 @@
 <?php
 
 class UserProfileHooks {
+
+	/**
+	 * Registers the custom <randomuserswithavatars> tag with the Parser.
+	 *
+	 * @param Parser $parser
+	 */
+	public static function onParserFirstCallInit( &$parser ) {
+		$parser->setHook( 'randomuserswithavatars', [ 'RandomUsersWithAvatars', 'getRandomUsersWithAvatars' ] );
+	}
+
 	/**
 	 * Add a class to the <body> element on user pages to indicate which type
 	 * of user page -- social profile or traditional wiki user page -- has been
