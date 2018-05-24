@@ -47,58 +47,6 @@ class UserSystemMessage {
 	}
 
 	/**
-	 * Gets a list of system messages for the current user from the database
-	 *
-	 * @param int $type 0 by default
-	 * @param int $limit LIMIT for database queries, 0 by default
-	 * @param int $page 0 by default
-	 * @return array
-	 */
-	public function getMessageList( $type, $limit = 0, $page = 0 ) {
-		$dbr = wfGetDB( DB_REPLICA );
-
-		if ( $limit > 0 ) {
-			$limitvalue = 0;
-			if ( $page ) {
-				$limitvalue = $page * $limit - ( $limit );
-			}
-			$params['LIMIT'] = $limit;
-			$params['OFFSET'] = $limitvalue;
-		}
-
-		$params['ORDER BY'] = 'ug_id DESC';
-		$res = $dbr->select(
-			[ 'user_gift', 'gift' ],
-			[
-				'ug_id', 'ug_user_id_from', 'ug_user_name_from', 'ug_gift_id',
-				'ug_date', 'ug_status', 'gift_name', 'gift_description',
-				'gift_given_count'
-			],
-			[ "ug_user_id_to = {$this->user_id}" ],
-			__METHOD__,
-			$params,
-			[ 'gift' => [ 'INNER JOIN', 'ug_gift_id = gift_id' ] ]
-		);
-
-		$requests = [];
-		foreach ( $res as $row ) {
-			$requests[] = [
-				'id' => $row->ug_id,
-				'gift_id' => $row->ug_gift_id,
-				'timestamp' => ( $row->ug_date ),
-				'status' => $row->ug_status,
-				'user_id_from' => $row->ug_user_id_from,
-				'user_name_from' => $row->ug_user_name_from,
-				'gift_name' => $row->gift_name,
-				'gift_description' => $row->gift_description,
-				'gift_given_count' => $row->gift_given_count
-			];
-		}
-
-		return $requests;
-	}
-
-	/**
 	 * Sends out the "you have advanced to level [fill in this]" messages to the users
 	 *
 	 * @param int $userIdTo User ID of the receiver

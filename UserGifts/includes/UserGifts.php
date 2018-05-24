@@ -278,52 +278,6 @@ class UserGifts {
 		return $requests;
 	}
 
-	public function getAllGiftList( $limit = 10, $page = 0 ) {
-		$dbr = wfGetDB( DB_REPLICA );
-		$params = [];
-
-		$params['ORDER BY'] = 'ug_id DESC';
-		if ( $limit > 0 ) {
-			$limitvalue = 0;
-			if ( $page ) {
-				$limitvalue = $page * $limit - ( $limit );
-			}
-			$params['LIMIT'] = $limit;
-			$params['OFFSET'] = $limitvalue;
-		}
-
-		$res = $dbr->select(
-			[ 'user_gift', 'gift' ],
-			[
-				'ug_id', 'ug_user_id_from', 'ug_user_name_from', 'ug_gift_id',
-				'ug_date', 'ug_status', 'gift_name', 'gift_description',
-				'gift_given_count'
-			],
-			[],
-			__METHOD__,
-			$params,
-			[ 'gift' => [ 'INNER JOIN', 'ug_gift_id = gift_id' ] ]
-		);
-
-		$requests = [];
-		foreach ( $res as $row ) {
-			$requests[] = [
-				'id' => $row->ug_id,
-				'gift_id' => $row->ug_gift_id,
-				'timestamp' => $row->ug_date,
-				'status' => $row->ug_status,
-				'user_id_from' => $row->ug_user_id_from,
-				'user_name_from' => $row->ug_user_name_from,
-				'gift_name' => $row->gift_name,
-				'gift_description' => $row->gift_description,
-				'gift_given_count' => $row->gift_given_count,
-				'unix_timestamp' => wfTimestamp( TS_UNIX, $row->ug_date )
-			];
-		}
-
-		return $requests;
-	}
-
 	/**
 	 * Update the counter that tracks how many times a gift has been given out.
 	 *
