@@ -3,12 +3,15 @@
 class UserProfileHooks {
 
 	/**
-	 * Registers the custom <randomuserswithavatars> tag with the Parser.
+	 * Registers the following custom tags with the Parser:
+	 * - <randomuserswithavatars>
+	 * - <newusers>
 	 *
 	 * @param Parser $parser
 	 */
 	public static function onParserFirstCallInit( &$parser ) {
 		$parser->setHook( 'randomuserswithavatars', [ 'RandomUsersWithAvatars', 'getRandomUsersWithAvatars' ] );
+		$parser->setHook( 'newusers', [ 'NewUsersList', 'getNewUsers' ] );
 	}
 
 	/**

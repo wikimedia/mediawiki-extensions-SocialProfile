@@ -44,9 +44,10 @@ $wgAutoloadClasses['UserProfile'] = __DIR__ . '/UserProfile/includes/UserProfile
 $wgAutoloadClasses['UserProfileHooks'] = __DIR__ . '/UserProfile/includes/UserProfileHooks.php';
 $wgAutoloadClasses['UserProfilePage'] = __DIR__ . '/UserProfile/includes/UserProfilePage.php';
 $wgAutoloadClasses['wAvatar'] = __DIR__ . '/UserProfile/includes/avatar/Avatar.php';
-$wgAutoloadClasses['AvatarParserFunction'] = __DIR__ . '/UserProfile/includes/avatar/AvatarParserFunction.php';
+$wgAutoloadClasses['AvatarParserFunction'] = __DIR__ . '/UserProfile/includes/parser/AvatarParserFunction.php';
 $wgAutoloadClasses['SPUserSecurity'] = __DIR__ . '/UserProfile/includes/SPUserSecurity.php';
-$wgAutoloadClasses['RandomUsersWithAvatars'] = __DIR__ .'/UserProfile/includes/RandomUsersWithAvatars.php';
+$wgAutoloadClasses['RandomUsersWithAvatars'] = __DIR__ . '/UserProfile/includes/parser/RandomUsersWithAvatars.php';
+$wgAutoloadClasses['NewUsersList'] = __DIR__ . '/UserProfile/includes/parser/NewUsersList.php';
 
 // API modules
 $wgAutoloadClasses['ApiUserProfilePrivacy'] = __DIR__ . '/UserProfile/includes/api/ApiUserProfilePrivacy.php';
