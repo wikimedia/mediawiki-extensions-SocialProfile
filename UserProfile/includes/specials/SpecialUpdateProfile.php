@@ -888,7 +888,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * Renders fields privacy button by field code
 	 *
 	 * @param string $fieldCode Internal field code, such as up_movies for the "Movies" field
-	 * @param int $uid User ID
+	 * @param int|null $uid User ID
 	 */
 	function renderEye( $fieldCode, $uid = null ) {
 		return SPUserSecurity::renderEye( $fieldCode, $uid );
