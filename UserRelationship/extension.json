@@ -13,6 +13,9 @@
 			"i18n"
 		]
 	},
+	"ExtensionMessagesFiles": {
+		"UserRelationshipAlias": "UserRelationship.i18n.alias.php"
+	},
 	"AutoloadClasses": {
 		"EchoUserRelationshipPresentationModel": "includes/EchoUserRelationshipPresentationModel.php",
 		"RelationshipListLookup": "includes/RelationshipListLookup.php",
