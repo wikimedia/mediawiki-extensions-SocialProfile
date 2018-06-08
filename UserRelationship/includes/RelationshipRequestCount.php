@@ -37,23 +37,34 @@ class RelationshipRequestCount {
 	 * relationship type.
 	 *
 	 * @param int $type
+	 * @return RelationshipRequestCount
 	 */
 	public function setType( $type ) {
 		$this->type = $type;
+
+		return $this;
 	}
 
 	/**
 	 * Sets the type as friends
+	 *
+	 * @return RelationshipRequestCount
 	 */
 	public function setFriends() {
 		$this->type = 1;
+
+		return $this;
 	}
 
 	/**
 	 * Sets the type as foes
+	 *
+	 * @return RelationshipRequestCount
 	 */
 	public function setFoes() {
 		$this->type = 2;
+
+		return $this;
 	}
 
 	/**
