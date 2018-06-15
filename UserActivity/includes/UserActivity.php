@@ -638,7 +638,7 @@ class UserActivity {
 				$r_type = 'foe';
 			}
 
-			$user_name_short = $wgLang->truncate( $row->r_user_name, 25 );
+			$user_name_short = $wgLang->truncateForVisual( $row->r_user_name, 25 );
 			$unixTS = wfTimestamp( TS_UNIX, $row->r_date );
 
 			$this->items_grouped[$r_type][$row->r_user_name_relation]['users'][$row->r_user_name][] = [
@@ -817,7 +817,7 @@ class UserActivity {
 
 		foreach ( $res as $row ) {
 			$user_title = Title::makeTitle( NS_USER, $row->um_user_name );
-			$user_name_short = $wgLang->truncate( $row->um_user_name, 15 );
+			$user_name_short = $wgLang->truncateForVisual( $row->um_user_name, 15 );
 			$unixTS = wfTimestamp( TS_UNIX, $row->um_date );
 
 			$this->activityLines[] = [
@@ -920,7 +920,7 @@ class UserActivity {
 			];
 
 			$user_title = Title::makeTitle( NS_USER, $row->us_user_name );
-			$user_name_short = $wgLang->truncate( $row->us_user_name, 15 );
+			$user_name_short = $wgLang->truncateForVisual( $row->us_user_name, 15 );
 
 			$sportsNetworkURL = htmlspecialchars(
 				SpecialPage::getTitleFor( 'FanHome' )->getFullURL( [
@@ -1176,7 +1176,7 @@ class UserActivity {
 				}
 
 				$user_title = Title::makeTitle( NS_USER, $user_name );
-				$user_name_short = $wgLang->truncate( $user_name, 15 );
+				$user_name_short = $wgLang->truncateForVisual( $user_name, 15 );
 
 				$safeTitle = htmlspecialchars( $user_title->getText() );
 				$users .= ' <b><a href="' . htmlspecialchars( $user_title->getFullURL() ) . "\" title=\"{$safeTitle}\">{$user_name_short}</a></b>";
@@ -1248,7 +1248,7 @@ class UserActivity {
 			$comment = str_replace( '&', '%26', $comment );
 			$comment = str_replace( '%26quot;', '"', $comment );
 		}
-		$preview = $wgLang->truncate( $comment, 75 );
+		$preview = $wgLang->truncateForVisual( $comment, 75 );
 		return stripslashes( $preview );
 	}
 

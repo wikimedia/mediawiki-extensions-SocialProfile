@@ -180,7 +180,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 		$output .= '<div class="top-users">';
 
 		foreach ( $user_list as $user ) {
-			$user_name = $lang->truncate( $user['user_name'], 22 );
+			$user_name = $lang->truncateForVisual( $user['user_name'], 22 );
 			$user_title = Title::makeTitle( NS_USER, $user['user_name'] );
 			$avatar = new wAvatar( $user['user_id'], 'm' );
 			$commentIcon = $avatar->getAvatarURL();
