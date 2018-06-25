@@ -78,6 +78,12 @@ class wAvatar {
 			$defaultParams['alt'] = 'avatar';
 		}
 
+		// If a caller (such as the Refreshed skin) wants to specify custom classes,
+		// allow that but keep the default class intact nevertheless.
+		if ( isset( $extraParams['class'] ) && $extraParams['class'] ) {
+			$defaultParams['class'] = $defaultParams['class'] . ' ' . $extraParams['class'];
+		}
+
 		if ( $wgUserProfileDisplay['avatar'] === false ) {
 			$defaultParams['src'] = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; // Replace by a white pixel
 			$defaultParams['style'] = 'border-width:0;display:none;';
