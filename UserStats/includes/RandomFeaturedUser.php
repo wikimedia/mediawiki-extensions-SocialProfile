@@ -110,11 +110,9 @@ class RandomFeaturedUser {
 			$avatar = new wAvatar( $random_user['user_id'], 'ml' );
 			$avatarImage = $avatar->getAvatarURL();
 
-			$output .= Html::element(
-				'a',
-				[ 'href' => $user_title->getFullURL() ],
-				$avatarImage
-			);
+			$output .= '<a href="' . htmlspecialchars( $user_title->getFullURL(), ENT_QUOTES ) . '">';
+			$output .= $avatarImage;
+			$output .= '</a>';
 		}
 
 		$link = Html::element(
