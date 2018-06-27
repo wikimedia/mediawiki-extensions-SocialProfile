@@ -7,24 +7,24 @@
  */
 // @codingStandardsIgnoreFile
 
-$specialPageAliases = array();
+$specialPageAliases = [];
 
-/** English (English) */
-$specialPageAliases['en'] = array(
-	'UserActivity' => array( 'UserActivity' ),
-);
+/** English */
+$specialPageAliases['en'] = [
+	'UserActivity' => [ 'UserActivity' ],
+];
 
-/** Bosnian (bosanski)) */
-$specialPageAliases['bs'] = array(
-	'UserActivity' => array( 'Aktivnost_korisnika' ),
-);
+/** Bosnian (bosanski) */
+$specialPageAliases['bs'] = [
+	'UserActivity' => [ 'Aktivnost_korisnika' ],
+];
 
 /** Serbian Cyrilic (српски (ћирилица)) */
-$specialPageAliases['sr-ec'] = array(
-	'UserActivity' => array( 'Активност_корисника' ),
-);
+$specialPageAliases['sr-ec'] = [
+	'UserActivity' => [ 'Активност_корисника' ],
+];
 
 /** Serbian Latin (srpski (latinica)) */
-$specialPageAliases['sr-el'] = array(
-	'UserActivity' => array( 'Aktivnost_korisnika' ),
-);
+$specialPageAliases['sr-el'] = [
+	'UserActivity' => [ 'Aktivnost_korisnika' ],
+];

@@ -7,15 +7,15 @@
  */
 // @codingStandardsIgnoreFile
 
-$specialPageAliases = array();
+$specialPageAliases = [];
 
-/** English (English) */
-$specialPageAliases['en'] = array(
-	'TopAwards' => array( 'TopAwards' ),
-	'ViewSystemGifts' => array( 'ViewSystemGifts' ),
-	'ViewSystemGift' => array( 'ViewSystemGift' ),
-	'SystemGiftManager' => array( 'SystemGiftManager' ),
-	'SystemGiftManagerLogo' => array( 'SystemGiftManagerLogo' ),
-	'RemoveMasterSystemGift' => array( 'RemoveMasterSystemGift' ),
-	'PopulateAwards' => array( 'PopulateAwards' ),
-);
+/** English */
+$specialPageAliases['en'] = [
+	'TopAwards' => [ 'TopAwards' ],
+	'ViewSystemGifts' => [ 'ViewSystemGifts' ],
+	'ViewSystemGift' => [ 'ViewSystemGift' ],
+	'SystemGiftManager' => [ 'SystemGiftManager' ],
+	'SystemGiftManagerLogo' => [ 'SystemGiftManagerLogo' ],
+	'RemoveMasterSystemGift' => [ 'RemoveMasterSystemGift' ],
+	'PopulateAwards' => [ 'PopulateAwards' ],
+];

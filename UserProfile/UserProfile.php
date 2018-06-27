@@ -15,12 +15,12 @@ $wgUserProfileAvatarsInDiffs = false;
  * For example, to require a user to have five edits before they're allowed to access
  * Special:UpdateProfile, set:
  * @code
- * $wgUserProfileThresholds = array( 'edits' => 5 );
+ * $wgUserProfileThresholds = [ 'edits' => 5 ];
  * @endcode
  *
  * To require both ten edits *and* three friends, set:
  * @code
- * $wgUserProfileThresholds = array( 'edits' => 10, 'friend-count' => 3 );
+ * $wgUserProfileThresholds = [ 'edits' => 10, 'friend-count' => 3 ];
  * @endcode
  */
 $wgUserProfileThresholds = [
