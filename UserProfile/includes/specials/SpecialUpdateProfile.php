@@ -722,7 +722,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			</p>
 			<div class="visualClear">' . $this->renderEye( 'up_video_games' ) . '</div>
 			</div>
-			<div class="profile-info clearfix">
+			<div class="profile-info">
 			<p class="profile-update-title">' . $this->msg( 'user-profile-interests-eats' )->plain() . '</p>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-foodsnacks' )->plain() . '</p>
 			<p class="profile-update-unit">
