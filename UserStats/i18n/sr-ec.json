@@ -10,7 +10,7 @@
 	"top-fans-total-points-link": "Укупно поена",
 	"top-fans-weekly-points-link": "Поена ове недеље",
 	"top-fans-monthly-points-link": "Поена овог месеца",
-	"top-fans-points": "бодова",
+	"top-fans-points": "'''$1''' бодова",
 	"top-fans-bad-field-title": "Упс!",
 	"top-fans-stats-vote-count": "{{PLURAL:$1|Глас|Гласа|Гласа|Гласа|Гласова}}",
 	"top-fans-stats-weekly-winner-count": "{{PLURAL:$1|Недељна победа|Недељних победа}}",

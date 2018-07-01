@@ -13,7 +13,7 @@
 	"top-fans-total-points-link": "Tutaj poentoj",
 	"top-fans-weekly-points-link": "Poentoj dum ĉi tiu semajno",
 	"top-fans-monthly-points-link": "Poentoj dum ĉi tiu monato",
-	"top-fans-points": "poentoj",
+	"top-fans-points": "'''$1''' poentoj",
 	"top-fans-bad-field-title": "Ho ve!",
 	"top-fans-stats-vote-count": "{{PLURAL:$1|Voĉdono|Voĉdonoj}}",
 	"top-fans-stats-monthly-winner-count": "{{PLURAL:$1|Monata venko|Monataj venkoj}}",

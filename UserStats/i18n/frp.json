@@ -5,7 +5,7 @@
 			"ChrisPtDe"
 		]
 	},
-	"top-fans-points": "pouents",
+	"top-fans-points": "'''$1''' pouents",
 	"top-fans-bad-field-title": "Crenom !",
 	"top-fans-stats-vote-count": "Voto{{PLURAL:$1||s}}",
 	"top-fans-stats-monthly-winner-count": "Victouère{{PLURAL:$1||s}} du mês",
