@@ -194,7 +194,7 @@ class UserProfilePage extends Article {
 		$output = ''; // Prevent E_NOTICE
 
 		$user_id = $this->user_id;
-		$user_name = $user_name;
+		$user_name = $this->user_name;
 
 		$stats = new UserStats( $user_id, $user_name );
 		$stats_data = $stats->getUserStats();
