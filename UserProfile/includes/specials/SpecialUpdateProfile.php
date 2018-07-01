@@ -838,12 +838,9 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$custom4 = $s->up_custom_4;
 		}
 
-		$this->getOutput()->setHTMLTitle( $this->msg( 'pagetitle',
-			$this->msg( 'user-profile-tidbits-title' )->inContentLanguage()->escaped()
-		)->parse() );
+		$this->getOutput()->setPageTitle( $this->msg( 'user-profile-tidbits-title' )->plain() );
 
-		$form = '<h1>' . $this->msg( 'user-profile-tidbits-title' ) . '</h1>';
-		$form .= UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-custom' )->plain() );
+		$form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-custom' )->plain() );
 		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">
 			<div class="profile-info profile-info-custom-info clearfix">
 				<div class="profile-update">
