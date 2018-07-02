@@ -19,7 +19,7 @@ class EchoUserBoardMessagePresentationModel extends EchoEventPresentationModel {
 			return $this->msg(
 				'notification-social-msg-send',
 				$this->event->getAgent()->getName(),
-				$this->language->truncate( $this->event->getExtraParam( 'message' ), 100 )
+				$this->language->truncateForVisual( $this->event->getExtraParam( 'message' ), 100 )
 			);
 		}
 	}

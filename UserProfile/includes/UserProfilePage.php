@@ -1265,7 +1265,7 @@ class UserProfilePage extends Article {
 				$avatar = new wAvatar( $friend['user_id'], 'ml' );
 
 				// Chop down username that gets displayed
-				$user_name = $language->truncate( $friend['user_name'], 9, '..' );
+				$user_name = $language->truncateForVisual( $friend['user_name'], 9, '..' );
 
 				$output .= "<a href=\"" . htmlspecialchars( $user->getFullURL() ) .
 					"\" title=\"" . htmlspecialchars( $friend['user_name'] ) . "\" rel=\"nofollow\">
