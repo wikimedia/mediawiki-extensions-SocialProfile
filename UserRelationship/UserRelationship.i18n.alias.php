@@ -7,6 +7,8 @@
  * @ingroup Extensions
  */
 
+$specialPageAliases = [];
+
 /** English (English) */
 $specialPageAliases['en'] = [
 	'AddRelationship' => [ 'AddRelationship' ],
