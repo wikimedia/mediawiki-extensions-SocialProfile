@@ -6,7 +6,7 @@
  * The avatars are not held as MediaWiki images, but
  * rather based on the user_id and in multiple sizes
  *
- * Requirements: Need writable directory $wgUploadDirectory/avatars
+ * Requirements: Needs writable mwstore://<file_backend>
  *
  * @file
  * @ingroup Extensions
@@ -16,8 +16,6 @@
  */
 
 class SpecialUploadAvatar extends SpecialUpload {
-	/** @var string|null */
-	public $avatarUploadDirectory;
 	/** @var string|null */
 	public $mUploadCopyStatus;
 	/** @var string|null */
@@ -118,9 +116,9 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 * @param string $ext File extension (gif, jpg or png)
 	 */
 	private function showSuccess( $ext ) {
-		global $wgAvatarKey, $wgUploadBaseUrl, $wgUploadPath, $wgUploadAvatarInRecentChanges;
+		global $wgAvatarKey, $wgUploadAvatarInRecentChanges;
 
-		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
+		$backend = new SocialProfileFileBackend( 'avatars' );
 
 		$user = $this->getUser();
 		$log = new LogPage( 'avatar' );
@@ -150,7 +148,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 				$this->msg( 'user-profile-picture-large' )->escaped() .
 			'</td>
 			<td class="image-cell">
-				<img src="' . $uploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_l.' . $ext . '?ts=' . $ts . '" alt="" />
+				<img src="' . $backend->getFileHttpUrl( $wgAvatarKey . '_', $uid, 'l', $ext ) . '?ts=' . $ts . '" alt="" />
 			</td>
 		</tr>';
 		$output .= '<tr>
@@ -158,7 +156,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 				$this->msg( 'user-profile-picture-medlarge' )->escaped() .
 			'</td>
 			<td class="image-cell">
-				<img src="' . $uploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_ml.' . $ext . '?ts=' . $ts . '" alt="" />
+				<img src="' . $backend->getFileHttpUrl( $wgAvatarKey . '_', $uid, 'ml', $ext ) . '?ts=' . $ts . '" alt="" />
 			</td>
 		</tr>';
 		$output .= '<tr>
@@ -166,7 +164,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 				$this->msg( 'user-profile-picture-medium' )->escaped() .
 			'</td>
 			<td class="image-cell">
-				<img src="' . $uploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_m.' . $ext . '?ts=' . $ts . '" alt="" />
+				<img src="' . $backend->getFileHttpUrl( $wgAvatarKey . '_', $uid, 'm', $ext ) . '?ts=' . $ts . '" alt="" />
 			</td>
 		</tr>';
 		$output .= '<tr>
@@ -174,7 +172,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 				$this->msg( 'user-profile-picture-small' )->escaped() .
 			'</td>
 			<td class="image-cell">
-				<img src="' . $uploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_s.' . $ext . '?ts=' . $ts . '" alt="" />
+				<img src="' . $backend->getFileHttpUrl( $wgAvatarKey . '_', $uid, 's', $ext ) . '?ts=' . $ts . '" alt="" />
 			</td>
 		</tr>';
 		$output .= '<tr>
@@ -328,20 +326,29 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 * @return string|void HTML (img tag) if the user has a custom avatar, nothing if they don't
 	 */
 	function getAvatar( $size ) {
-		global $wgAvatarKey, $wgUploadDirectory, $wgUploadBaseUrl, $wgUploadPath;
+		global $wgAvatarKey;
 
-		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
+		$backend = new SocialProfileFileBackend( 'avatars' );
 
-		$files = glob(
-			$wgUploadDirectory . '/avatars/' . $wgAvatarKey . '_' .
-			$this->getUser()->getId() . '_' . $size . '*'
-		);
-		if ( isset( $files[0] ) && $files[0] ) {
-			return "<img src=\"{$uploadPath}/avatars/" .
+		$prefix = $wgAvatarKey . '_';
+		$id = $this->getUser()->getId();
+
+		$extensions = [ 'png', 'gif', 'jpg', 'jpeg' ];
+		foreach ( $extensions as $ext ) {
+			if ( $backend->fileExists( $prefix, $id, $size, $ext ) ) {
+				$fileUrl = $backend->getFileHttpUrl( $prefix, $id, $size, $ext );
+
+				// We only really care about the first one being found, so exit once it finds one
+				break;
+			}
+		}
+
+		if ( isset( $fileUrl ) && $fileUrl ) {
+			return '<img src="' . $fileUrl .
 				// Use a cache buster variable to ensure we show the newly uploaded avatar
 				// should the user click on the "Upload a different avatar" button immediately
 				// after uploading an avatar (w/o the cachebuster variable it'll show the old avatar)
-				basename( $files[0] ) . '?r=' . (int)rand() . '" alt="" border="0" />';
+				'?r=' . (int)rand() . '" alt="" border="0" />';
 		}
 	}
 

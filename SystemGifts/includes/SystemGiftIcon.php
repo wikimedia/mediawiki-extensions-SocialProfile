@@ -26,31 +26,24 @@ class SystemGiftIcon {
 	}
 
 	/**
-	 * @return array
-	 */
-	public function getPathnames() {
-		global $wgUploadDirectory;
-
-		return glob(
-			$wgUploadDirectory . '/awards/sg_' .
-			$this->id . '_' .
-			$this->size . '*'
-		);
-	}
-
-	/**
 	 * Gets the associated image URL for a system gift.
 	 *
 	 * @return string Gift image filename (following the format
 	 * sg_ID_SIZE.ext; for example, sg_1_l.jpg)
 	 */
 	private function getIconURL() {
-		$files = $this->getPathnames();
+		$backend = new SocialProfileFileBackend( 'awards' );
+		$extensions = [ 'png', 'gif', 'jpg', 'jpeg' ];
 
-		if ( !empty( $files[0] ) ) {
-			$img = basename( $files[0] );
-		} else {
-			$img = 'default_' . $this->size . '.gif';
+		$img = 'default_' . $this->size . '.gif';
+
+		foreach ( $extensions as $ext ) {
+			if ( $backend->fileExists( 'sg_', $this->id, $this->size, $ext ) ) {
+				$img = $backend->getFileHttpUrl( 'sg_', $this->id, $this->size, $ext );
+
+				// We only really care about one being found, so exit once it finds one
+				break;
+			}
 		}
 
 		return $img . '?r=' . rand();
@@ -62,12 +55,8 @@ class SystemGiftIcon {
 	 * @return string HTML
 	 */
 	public function getIconHTML() {
-		global $wgUploadBaseUrl, $wgUploadPath;
-
-		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
-
 		$params = [
-			'src' => "{$uploadPath}/awards/{$this->getIconURL()}",
+			'src' => $this->getIconURL(),
 			'border' => '0',
 			'alt' => wfMessage( 'ga-gift' )->plain()
 		];

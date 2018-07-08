@@ -29,11 +29,11 @@ class wAvatar {
 
 	/**
 	 * @param int $userId User's internal ID number
-	 * @param string $size
-	 * - 's' for small
-	 * - 'm' for medium
-	 * - 'ml' for medium-large
-	 * - 'l' for large
+	 * @param string $size Avatar image size
+	 * - 's' for small (16x16px)
+	 * - 'm' for medium (30x30px)
+	 * - 'ml' for medium-large (50x50px)
+	 * - 'l' for large (75x75px)
 	 */
 	function __construct( $userId, $size ) {
 		$this->user_id = $userId;
@@ -41,7 +41,34 @@ class wAvatar {
 	}
 
 	/**
-	 * Fetches the avatar image's name from the filesystem
+	 * Check if there is a default avatar image with the supplied $size.
+	 *
+	 * @param string $size Avatar image size
+	 * @return bool|null Returns null on failure
+	 */
+	private function defaultAvatarExists( $size ) {
+		$backend = new SocialProfileFileBackend( 'avatars' );
+		return $backend->getFileBackend()->fileExists( [
+			'src' => $backend->getContainerStoragePath() . '/default_' . $size . '.gif',
+		] );
+	}
+
+	/**
+	 * Upload a default avatar image in the supplied $size.
+	 *
+	 * @param string $size Avatar image size
+	 * @return StatusValue
+	 */
+	private function uploadDefaultAvatars( $size ) {
+		$backend = new SocialProfileFileBackend( 'avatars' );
+		return $backend->getFileBackend()->quickStore( [
+			'src' => __DIR__ . '/../../../avatars/default_' . $size . '.gif',
+			'dst' => $backend->getContainerStoragePath() . '/default_' . $size . '.gif',
+		] );
+	}
+
+	/**
+	 * Fetches the avatar image's name from the file backend
 	 *
 	 * @return string Avatar image's file name i.e. default_l.gif or wikidb_3_l.jpg;
 	 * - First part for non-default images is the database name
@@ -49,7 +76,7 @@ class wAvatar {
 	 * - Third part is the letter for image size (s, m, ml or l)
 	 */
 	function getAvatarImage() {
-		global $wgAvatarKey, $wgUploadDirectory;
+		global $wgAvatarKey;
 
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$key = $cache->makeKey( 'user', 'profile', 'avatar', $this->user_id, $this->avatar_size );
@@ -59,28 +86,48 @@ class wAvatar {
 		if ( $data ) {
 			$avatar_filename = $data;
 		} else {
-			$files = glob( $wgUploadDirectory . '/avatars/' . $wgAvatarKey . '_' . $this->user_id . '_' . $this->avatar_size . "*" );
-			if ( !isset( $files[0] ) || !$files[0] ) {
-				$avatar_filename = 'default_' . $this->avatar_size . '.gif';
-			} else {
-				$avatar_filename = basename( $files[0] ) . '?r=' . filemtime( $files[0] );
+			// @todo FIXME: This seems unnecessarily intensive since this really
+			// should be done at install time and never again afterwards.
+			// Move this to SocialProfileHooks#onLoadExtensionSchemaUpdates or something?
+			if ( !$this->defaultAvatarExists( 'l' ) ) {
+				$this->uploadDefaultAvatars( 'l' );
 			}
+
+			if ( !$this->defaultAvatarExists( 'm' ) ) {
+				$this->uploadDefaultAvatars( 'm' );
+			}
+
+			if ( !$this->defaultAvatarExists( 'ml' ) ) {
+				$this->uploadDefaultAvatars( 'ml' );
+			}
+
+			if ( !$this->defaultAvatarExists( 's' ) ) {
+				$this->uploadDefaultAvatars( 's' );
+			}
+
+			$avatar_filename = 'default_' . $this->avatar_size . '.gif';
+
+			$backend = new SocialProfileFileBackend( 'avatars' );
+			$extensions = [ 'png', 'gif', 'jpg', 'jpeg' ];
+			foreach ( $extensions as $ext ) {
+				if ( $backend->fileExists( $wgAvatarKey . '_', $this->user_id, $this->avatar_size, $ext ) ) {
+					$avatar_filename = $backend->getFileName(
+						$wgAvatarKey . '_', $this->user_id, $this->avatar_size, $ext
+					);
+
+					$avatar_filename .= '?r=' . $backend->getFileBackend()->getFileStat( [
+						'src' => $backend->getContainerStoragePath() . '/' . $avatar_filename
+					] )['mtime'];
+
+					// We only really care about the first one being found, so exit once it finds one
+					break;
+				}
+			}
+
 			$cache->set( $key, $avatar_filename, 60 * 60 * 24 ); // cache for 24 hours
 		}
+
 		return $avatar_filename;
-	}
-
-	/**
-	 * Get the web-accessible url for the avatar.
-	 *
-	 * @return string
-	 */
-	public function getAvatarUrlPath(): string {
-		global $wgUploadBaseUrl, $wgUploadPath;
-
-		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
-
-		return "{$uploadPath}/avatars/{$this->getAvatarImage()}";
 	}
 
 	/**
@@ -90,8 +137,10 @@ class wAvatar {
 	function getAvatarURL( $extraParams = [] ) {
 		global $wgUserProfileDisplay, $wgNativeImageLazyLoading;
 
+		$backend = new SocialProfileFileBackend( 'avatars' );
+
 		$defaultParams = [
-			'src' => $this->getAvatarUrlPath(),
+			'src' => $backend->getFileHttpUrlFromName( $this->getAvatarImage() ),
 			'border' => '0',
 			'class' => 'mw-socialprofile-avatar'
 		];

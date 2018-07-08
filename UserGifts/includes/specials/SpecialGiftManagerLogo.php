@@ -52,8 +52,6 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	public $mWatchthis;
 	/** @var bool|null */
 	public $mTokenOk;
-	/** @var string|null */
-	public $awardsUploadDirectory;
 	/** @var string[]|null */
 	public $fileExtensions;
 	/** @var int|null */
@@ -157,12 +155,10 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 * Start doing stuff
 	 */
 	public function executeLogo() {
-		global $wgEnableUploads, $wgUploadDirectory;
+		global $wgEnableUploads;
 
 		$out = $this->getOutput();
 		$user = $this->getUser();
-
-		$this->awardsUploadDirectory = $wgUploadDirectory . '/awards';
 
 		/** Show an error message if file upload is disabled */
 		if ( !$wgEnableUploads ) {
@@ -188,12 +184,6 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		// Set the robot policies, etc.
 		$out->setArticleRelated( false );
 		$out->setRobotPolicy( 'noindex,nofollow' );
-
-		/** Check if the image directory is writeable, this is a common mistake */
-		if ( !is_writable( $wgUploadDirectory ) ) {
-			$out->addWikiMsg( 'upload_directory_read_only', $wgUploadDirectory );
-			return;
-		}
 
 		if ( $this->mReUpload ) {
 			$this->unsaveUploadedFile();
@@ -335,6 +325,18 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 
 		list( $origWidth, $origHeight, $typeCode ) = getimagesize( $imageSrc );
 
+		$backend = new SocialProfileFileBackend( 'awards' );
+		$dir = $backend->getContainerStoragePath();
+
+		$fileBackend = $backend->getFileBackend();
+		$status = $fileBackend->prepare( [ 'dir' => $dir ] );
+
+		if ( !$status->isOK() ) {
+			throw new Exception(
+				$this->msg( 'backend-fail-internal', Status::wrap( $status )->getWikitext() )
+			);
+		}
+
 		if ( $wgUseImageMagick ) { // ImageMagick is enabled
 			if ( $origWidth < $thumbWidth ) {
 				$thumbWidth = $origWidth;
@@ -349,23 +351,56 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 					Shell::escape( $wgImageMagickConvertCommand ) . ' -size ' . $thumbWidth . 'x' .
 					$thumbWidth . ' -resize ' . $thumbWidth . '  -quality 100 ' .
 					$border . ' ' . Shell::escape( $imageSrc ) . ' ' .
-					$this->awardsUploadDirectory . '/' . $imgDest . '.jpg'
+					wfTempDir() . '/' . $imgDest . '.jpg'
 				);
+
+				$status = $fileBackend->quickStore( [
+					'src' => wfTempDir() . '/' . $imgDest . '.jpg',
+					'dst' => $dir . '/' . $imgDest . '.jpg'
+				] );
+
+				if ( !$status->isOK() ) {
+					throw new Exception(
+						$this->msg( 'backend-fail-internal', Status::wrap( $status )->getWikitext() )
+					);
+				}
 			}
 			if ( $typeCode == 1 ) {
 				exec(
 					Shell::escape( $wgImageMagickConvertCommand ) . ' -size ' . $thumbWidth . 'x' .
 					$thumbWidth . ' -resize ' . $thumbWidth . ' ' . Shell::escape( $imageSrc ) .
 					' ' . $border . ' ' .
-					$this->awardsUploadDirectory . '/' . $imgDest . '.gif'
+					wfTempDir() . '/' . $imgDest . '.gif'
 				);
+
+				$status = $fileBackend->quickStore( [
+					'src' => wfTempDir() . '/' . $imgDest . '.gif',
+					'dst' => $dir . '/' . $imgDest . '.gif'
+				] );
+
+				if ( !$status->isOK() ) {
+					throw new Exception(
+						$this->msg( 'backend-fail-internal', Status::wrap( $status )->getWikitext() )
+					);
+				}
 			}
 			if ( $typeCode == 3 ) {
 				exec(
 					Shell::escape( $wgImageMagickConvertCommand ) . ' -size ' . $thumbWidth . 'x' .
 					$thumbWidth . ' -resize ' . $thumbWidth . ' ' . Shell::escape( $imageSrc ) .
-					' ' . $this->awardsUploadDirectory . '/' . $imgDest . '.png'
+					' ' . wfTempDir() . '/' . $imgDest . '.png'
 				);
+
+				$status = $fileBackend->quickStore( [
+					'src' => wfTempDir() . '/' . $imgDest . '.png',
+					'dst' => $dir . '/' . $imgDest . '.png'
+				] );
+
+				if ( !$status->isOK() ) {
+					throw new Exception(
+						$this->msg( 'backend-fail-internal', Status::wrap( $status )->getWikitext() )
+					);
+				}
 			}
 		} else {
 			// ImageMagick is not enabled, so fall back to PHP's GD library
@@ -420,8 +455,19 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 			// Copy the thumb
 			copy(
 				$imageSrc,
-				$this->awardsUploadDirectory . '/' . $imgDest . '.' . $ext
+				wfTempDir() . '/' . $imgDest . '.' . $ext
 			);
+
+			$status = $fileBackend->quickStore( [
+				'src' => wfTempDir() . '/' . $imgDest . '.' . $ext,
+				'dst' => $dir . '/' . $imgDest . '.' . $ext
+			] );
+
+			if ( !$status->isOK() ) {
+				throw new Exception(
+					$this->msg( 'backend-fail-internal', Status::wrap( $status )->getWikitext() )
+				);
+			}
 		}
 	}
 
@@ -439,65 +485,83 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 * @return int
 	 */
 	function saveUploadedFile( $saveName, $tempName, $ext ) {
-		$dest = $this->awardsUploadDirectory;
+		$backend = new SocialProfileFileBackend( 'awards' );
 
+		$dest = $backend->getContainerStoragePath();
 		$this->mSavedFile = "{$dest}/{$saveName}";
+
 		$this->createThumbnail( $tempName, $ext, $this->gift_id . '_l', 75 );
 		$this->createThumbnail( $tempName, $ext, $this->gift_id . '_ml', 50 );
 		$this->createThumbnail( $tempName, $ext, $this->gift_id . '_m', 30 );
 		$this->createThumbnail( $tempName, $ext, $this->gift_id . '_s', 16 );
 
 		$type = 0;
-		if ( $ext == 'JPG' && is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_l.jpg' ) ) {
+		if ( $ext == 'JPG' && is_file( wfTempDir() . '/' . $this->gift_id . '_l.jpg' ) ) {
 			$type = 2;
 		}
-		if ( $ext == 'GIF' && is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_l.gif' ) ) {
+		if ( $ext == 'GIF' && is_file( wfTempDir() . '/' . $this->gift_id . '_l.gif' ) ) {
 			$type = 1;
 		}
-		if ( $ext == 'PNG' && is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_l.png' ) ) {
+		if ( $ext == 'PNG' && is_file( wfTempDir() . '/' . $this->gift_id . '_l.png' ) ) {
 			$type = 3;
 		}
 
 		if ( $ext != 'JPG' ) {
-			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_s.jpg' ) ) {
-				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_s.jpg' );
+			if ( is_file( wfTempDir() . '/' . $this->gift_id . '_s.jpg' ) ) {
+				unlink( wfTempDir() . '/' . $this->gift_id . '_s.jpg' );
 			}
-			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_m.jpg' ) ) {
-				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_m.jpg' );
+			if ( is_file( wfTempDir() . '/' . $this->gift_id . '_m.jpg' ) ) {
+				unlink( wfTempDir() . '/' . $this->gift_id . '_m.jpg' );
 			}
-			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_ml.jpg' ) ) {
-				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_ml.jpg' );
+			if ( is_file( wfTempDir() . '/' . $this->gift_id . '_ml.jpg' ) ) {
+				unlink( wfTempDir() . '/' . $this->gift_id . '_ml.jpg' );
 			}
-			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_l.jpg' ) ) {
-				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_l.jpg' );
+			if ( is_file( wfTempDir() . '/' . $this->gift_id . '_l.jpg' ) ) {
+				unlink( wfTempDir() . '/' . $this->gift_id . '_l.jpg' );
 			}
 		}
 		if ( $ext != 'GIF' ) {
-			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_s.gif' ) ) {
-				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_s.gif' );
+			if ( is_file( wfTempDir() . '/' . $this->gift_id . '_s.gif' ) ) {
+				unlink( wfTempDir() . '/' . $this->gift_id . '_s.gif' );
 			}
-			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_m.gif' ) ) {
-				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_m.gif' );
+			if ( is_file( wfTempDir() . '/' . $this->gift_id . '_m.gif' ) ) {
+				unlink( wfTempDir() . '/' . $this->gift_id . '_m.gif' );
 			}
-			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_ml.gif' ) ) {
-				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_ml.gif' );
+			if ( is_file( wfTempDir() . '/' . $this->gift_id . '_ml.gif' ) ) {
+				unlink( wfTempDir() . '/' . $this->gift_id . '_ml.gif' );
 			}
-			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_l.gif' ) ) {
-				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_l.gif' );
+			if ( is_file( wfTempDir() . '/' . $this->gift_id . '_l.gif' ) ) {
+				unlink( wfTempDir() . '/' . $this->gift_id . '_l.gif' );
 			}
 		}
 		if ( $ext != 'PNG' ) {
-			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_s.png' ) ) {
-				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_s.png' );
+			if ( is_file( wfTempDir() . '/' . $this->gift_id . '_s.png' ) ) {
+				unlink( wfTempDir() . '/' . $this->gift_id . '_s.png' );
 			}
-			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_m.png' ) ) {
-				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_m.png' );
+			if ( is_file( wfTempDir() . '/' . $this->gift_id . '_m.png' ) ) {
+				unlink( wfTempDir() . '/' . $this->gift_id . '_m.png' );
 			}
-			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_ml.png' ) ) {
-				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_ml.png' );
+			if ( is_file( wfTempDir() . '/' . $this->gift_id . '_ml.png' ) ) {
+				unlink( wfTempDir() . '/' . $this->gift_id . '_ml.png' );
 			}
-			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_l.png' ) ) {
-				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_l.png' );
+			if ( is_file( wfTempDir() . '/' . $this->gift_id . '_l.png' ) ) {
+				unlink( wfTempDir() . '/' . $this->gift_id . '_l.png' );
+			}
+		}
+
+		foreach ( [ 'gif', 'jpg', 'jpeg', 'png' ] as $fileExtension ) {
+			if ( $fileExtension === strtolower( $ext ) ) {
+				// Our brand new logo; skip over it in order to _not_ delete it, obviously
+			} else {
+				foreach ( [ 's', 'm', 'ml', 'l' ] as $size ) {
+					if ( $backend->fileExists( '', $this->gift_id, $size, $fileExtension ) ) {
+						$backend->getFileBackend()->quickDelete( [
+							'src' => $backend->getPath(
+								'', $this->gift_id, $size, $fileExtension
+							)
+						] );
+					}
+				}
 			}
 		}
 
@@ -576,10 +640,6 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 * @param int $status
 	 */
 	function showSuccess( $status ) {
-		global $wgUploadBaseUrl, $wgUploadPath;
-
-		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
-
 		$ext = 'jpg';
 
 		$output = '<h2>' . $this->msg( 'g-uploadsuccess' )->escaped() . '</h2>';
@@ -593,17 +653,16 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		if ( $status == 3 ) {
 			$ext = 'png';
 		}
-		$ts = rand();
 
 		$output .= '<table cellspacing="0" cellpadding="5">';
 		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">' . $this->msg( 'g-large' )->escaped() . '</td>
-		<td><img src="' . $uploadPath . '/awards/' . $this->gift_id . '_l.' . $ext . '?ts=' . $ts . '"></td></tr>';
+		<td>' . ( new UserGiftIcon( $this->gift_id, 'l' ) )->getIconHTML() . '</td></tr>';
 		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">' . $this->msg( 'g-mediumlarge' )->escaped() . '</td>
-		<td><img src="' . $uploadPath . '/awards/' . $this->gift_id . '_ml.' . $ext . '?ts=' . $ts . '"></td></tr>';
+		<td>' . ( new UserGiftIcon( $this->gift_id, 'ml' ) )->getIconHTML() . '</td></tr>';
 		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">' . $this->msg( 'g-medium' )->escaped() . '</td>
-		<td><img src="' . $uploadPath . '/awards/' . $this->gift_id . '_m.' . $ext . '?ts=' . $ts . '"></td></tr>';
+		<td>' . ( new UserGiftIcon( $this->gift_id, 'm' ) )->getIconHTML() . '</td></tr>';
 		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">' . $this->msg( 'g-small' )->escaped() . '</td>
-		<td><img src="' . $uploadPath . '/awards/' . $this->gift_id . '_s.' . $ext . '?ts=' . $ts . '"></td></tr>';
+		<td>' . ( new UserGiftIcon( $this->gift_id, 's' ) )->getIconHTML() . '</td></tr>';
 		$output .= '<tr><td><input type="button" onclick="javascript:history.go(-1)" value="' . $this->msg( 'g-go-back' )->escaped() . '"></td></tr>';
 
 		$giftManager = SpecialPage::getTitleFor( 'GiftManager' );
