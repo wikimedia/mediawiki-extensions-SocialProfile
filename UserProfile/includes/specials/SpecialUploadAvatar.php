@@ -49,6 +49,9 @@ class SpecialUploadAvatar extends SpecialUpload {
 			'ext.socialprofile.special.uploadavatar.css'
 		] );
 
+		// Add JS
+		$out->addModules( 'ext.socialprofile.special.uploadavatar.js' );
+
 		// Let the parent class do most of the heavy lifting.
 		parent::execute( $params );
 

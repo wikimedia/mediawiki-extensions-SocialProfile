@@ -114,6 +114,12 @@ $wgResourceModules['ext.socialprofile.special.uploadavatar.css'] = [
 	'remoteExtPath' => 'SocialProfile/UserProfile'
 ];
 
+$wgResourceModules['ext.socialprofile.special.uploadavatar.js'] = [
+	'scripts' => 'resources/js/UploadAvatar.js',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'SocialProfile/UserProfile'
+];
+
 $wgResourceModules['ext.socialprofile.special.updateprofile.css'] = [
 	'styles' => 'resources/css/SpecialUpdateProfile.css',
 	'localBasePath' => __DIR__,
