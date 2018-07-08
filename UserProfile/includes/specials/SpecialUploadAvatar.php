@@ -45,6 +45,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 		// Add CSS
 		$out->addModuleStyles( [
 			'ext.socialprofile.userprofile.tabs.css',
+			'ext.socialprofile.special.updateprofile.css', // Need this module for .profile-update-title styles at least, probably more
 			'ext.socialprofile.special.uploadavatar.css'
 		] );
 
