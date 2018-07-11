@@ -53,14 +53,33 @@ class UserWelcome {
 		<div class="mp-welcome-image">
 		<a href="' . htmlspecialchars( $wgUser->getUserPage()->getFullURL() ) . '" rel="nofollow">' .
 			$avatar->getAvatarURL() . '</a>';
-		if ( $avatar->isDefault() ) {
-			$uploadOrEditMsg = 'mp-welcome-upload';
-		} else {
-			$uploadOrEditMsg = 'edit';
+		if ( $wgUser->isLoggedIn() ) {
+			$links = [];
+
+			if ( $avatar->isDefault() ) {
+				$uploadOrEditMsg = 'mp-welcome-upload';
+				$links[] = '<a href="' . htmlspecialchars( $avatar_link->getFullURL() ) . '" rel="nofollow">' .
+					wfMessage( $uploadOrEditMsg )->plain() .
+				'</a>';
+			} else {
+				$uploadOrEditMsg = 'edit';
+				$links[] = '<a href="' . htmlspecialchars( $avatar_link->getFullURL() ) . '" rel="nofollow">' .
+					wfMessage( $uploadOrEditMsg )->plain() .
+				'</a>';
+
+				if ( $wgUser->isAllowed( 'avatarremove' ) ) {
+					$removeAvatarURL = SpecialPage::getTitleFor( 'RemoveAvatar', $wgUser->getName() )->getFullURL();
+				} else {
+					$removeAvatarURL = SpecialPage::getTitleFor( 'RemoveAvatar' )->getFullURL();
+				}
+				$links[] = '<a href="' . htmlspecialchars( $removeAvatarURL ) . '" rel="nofollow">' .
+					wfMessage( 'user-profile-remove-avatar' )->text() . '</a>';
+			}
+
+			$output .= '<div>';
+			$output .= $wgLang->pipeList( $links );
+			$output .= '</div>';
 		}
-		$output .= '<div><a href="' . htmlspecialchars( $avatar_link->getFullURL() ) . '" rel="nofollow">' .
-			wfMessage( $uploadOrEditMsg )->plain() .
-		'</a></div>';
 		$output .= '</div>';
 
 		global $wgUserLevels;
