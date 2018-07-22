@@ -382,11 +382,11 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			if ( is_file( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_m.jpg' ) ) {
 				unlink( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_m.jpg' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_l.jpg' ) ) {
-				unlink( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_l.jpg' );
+			if ( is_file( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_ml.jpg' ) ) {
+				unlink( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_ml.jpg' );
 			}
 			if ( is_file( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_l.jpg' ) ) {
-				unlink( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_ml.jpg' );
+				unlink( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_l.jpg' );
 			}
 		}
 		if ( $ext != 'GIF' ) {
@@ -396,11 +396,11 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			if ( is_file( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_m.gif' ) ) {
 				unlink( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_m.gif' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_l.gif' ) ) {
-				unlink( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_l.gif' );
+			if ( is_file( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_ml.gif' ) ) {
+				unlink( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_ml.gif' );
 			}
 			if ( is_file( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_l.gif' ) ) {
-				unlink( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_ml.gif' );
+				unlink( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_l.gif' );
 			}
 		}
 		if ( $ext != 'PNG' ) {
@@ -410,11 +410,11 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			if ( is_file( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_m.png' ) ) {
 				unlink( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_m.png' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/sg_'. $this->gift_id . '_l.png' ) ) {
-				unlink( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_l.png' );
+			if ( is_file( $this->avatarUploadDirectory . '/sg_'. $this->gift_id . '_ml.png' ) ) {
+				unlink( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_ml.png' );
 			}
 			if ( is_file( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_l.png' ) ) {
-				unlink( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_ml.png' );
+				unlink( $this->avatarUploadDirectory . '/sg_' . $this->gift_id . '_l.png' );
 			}
 		}
 
