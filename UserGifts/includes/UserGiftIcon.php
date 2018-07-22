@@ -45,7 +45,7 @@ class UserGiftIcon {
 	 * ID_SIZE.ext; for example, 1_l.jpg)
 	 */
 	public function getIconURL() {
-		$file = $this->getPathnames();
+		$files = $this->getPathnames();
 
 		if ( !empty( $files[0] ) ) {
 			$img = basename( $files[0] );
