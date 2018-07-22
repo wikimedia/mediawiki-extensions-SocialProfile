@@ -638,23 +638,20 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		}
 
 		$systemGiftIcon = new SystemGiftIcon( $this->gift_id, 'l' );
-		$icon = $systemGiftIcon->getIconHTML();
 
-		if ( $gift_image != '' ) {
-			$output = '<table>
-				<tr>
-					<td class="title-cell">' .
-						$this->msg( 'ga-currentimage' )->plain() .
-					'</td>
-				</tr>
-				<tr>
-					<td>' .
-						$icon .
-					'</td>
-				</tr>
-			</table>
+		$output = '<table>
+			<tr>
+				<td class="title-cell">' .
+					$this->msg( 'ga-currentimage' )->plain() .
+				'</td>
+			</tr>
+			<tr>
+				<td>' .
+					$systemGiftIcon->getIconHTML() .
+				'</td>
+			</tr>
+		</table>
 		<br />';
-		}
 		$out->addHTML( $output );
 
 		$out->addHTML( '
