@@ -62,10 +62,11 @@ class UserGiftIcon {
 	 * @return string HTML
 	 */
 	public function getIconHTML( $extraParams = [] ) {
-		global $wgUploadPath;
+		global $wgUploadBaseUrl, $wgUploadPath;
+		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
 
 		$defaultParams = [
-			'src' => "{$wgUploadPath}/awards/{$this->getIconURL()}",
+			'src' => "{$uploadPath}/awards/{$this->getIconURL()}",
 			'border' => 0,
 			'alt' => wfMessage( 'g-gift' )->plain()
 		];

@@ -489,9 +489,11 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	 * Show some text and linkage on successful upload.
 	 */
 	function showSuccess( $status ) {
-		global $wgUploadPath;
+		global $wgUploadBaseUrl, $wgUploadPath;
+		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
 
 		$ext = 'jpg';
+		$ts = rand();
 
 		$output = '<h2>' . $this->msg( 'ga-uploadsuccess' )->plain() . '</h2>';
 		$output .= '<h5>' . $this->msg( 'ga-imagesbelow' )->plain() . '</h5>';
@@ -508,19 +510,19 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		$output .= '<table class="ga-upload-success-page">
 		<tr>
 			<td class="title-cell" valign="top">' . $this->msg( 'ga-large' )->plain() . '</td>
-			<td><img src="' . $wgUploadPath . '/awards/sg_' . $this->gift_id . '_l.' . $ext . '?ts=' .	rand() . '" alt="" /></td>
+			<td><img src="' . $uploadPath . '/awards/sg_' . $this->gift_id . '_l.' . $ext . '?ts=' . $ts . '" alt="" /></td>
 		</tr>
 		<tr>
 			<td class="title-cell" valign="top">' . $this->msg( 'ga-mediumlarge' )->plain() . '</td>
-			<td><img src="' . $wgUploadPath . '/awards/sg_' . $this->gift_id . '_ml.' . $ext . '?ts=' . rand() . '" alt="" /></td>
+			<td><img src="' . $uploadPath . '/awards/sg_' . $this->gift_id . '_ml.' . $ext . '?ts=' . $ts . '" alt="" /></td>
 		</tr>
 		<tr>
 			<td class="title-cell" valign="top">' . $this->msg( 'ga-medium' )->plain() . '</td>
-			<td><img src="' . $wgUploadPath . '/awards/sg_' . $this->gift_id . '_m.' . $ext . '?ts=' . rand() . '" alt="" /></td>
+			<td><img src="' . $uploadPath . '/awards/sg_' . $this->gift_id . '_m.' . $ext . '?ts=' . $ts . '" alt="" /></td>
 		</tr>
 		<tr>
 			<td class="title-cell" valign="top">' . $this->msg( 'ga-small' )->plain() . '</td>
-			<td><img src="' . $wgUploadPath . '/awards/sg_' . $this->gift_id . '_s.' . $ext . '?ts' . rand() . '" alt="" /></td>
+			<td><img src="' . $uploadPath . '/awards/sg_' . $this->gift_id . '_s.' . $ext . '?ts=' . $ts . '" alt="" /></td>
 		</tr>
 		<tr>
 			<td>

@@ -278,6 +278,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 				$thumbWidth = $origWidth;
 			}
 			$thumbHeight = ( $thumbWidth * $origHeight / $origWidth );
+			$border = '';
 			if ( $thumbHeight < $thumbWidth ) {
 				$border = ' -bordercolor white -border 0x' . ( ( $thumbWidth - $thumbHeight ) / 2 );
 			}
@@ -511,7 +512,8 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 * Show some text and linkage on successful upload.
 	 */
 	function showSuccess( $status ) {
-		global $wgUploadPath;
+		global $wgUploadBaseUrl, $wgUploadPath;
+		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
 
 		$ext = 'jpg';
 
@@ -526,16 +528,17 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		if ( $status == 3 ) {
 			$ext = 'png';
 		}
+		$ts = rand();
 
 		$output .= '<table cellspacing="0" cellpadding="5">';
 		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">' . $this->msg( 'g-large' )->plain() . '</td>
-		<td><img src="' . $wgUploadPath . '/awards/' . $this->gift_id . '_l.' . $ext . '?ts=' . rand() . '"></td></tr>';
+		<td><img src="' . $uploadPath . '/awards/' . $this->gift_id . '_l.' . $ext . '?ts=' . $ts . '"></td></tr>';
 		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">' . $this->msg( 'g-mediumlarge' )->plain() . '</td>
-		<td><img src="' . $wgUploadPath . '/awards/' . $this->gift_id . '_ml.' . $ext . '?ts=' . rand() . '"></td></tr>';
+		<td><img src="' . $uploadPath . '/awards/' . $this->gift_id . '_ml.' . $ext . '?ts=' . $ts . '"></td></tr>';
 		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">' . $this->msg( 'g-medium' )->plain() . '</td>
-		<td><img src="' . $wgUploadPath . '/awards/' . $this->gift_id . '_m.' . $ext . '?ts=' . rand() . '"></td></tr>';
+		<td><img src="' . $uploadPath . '/awards/' . $this->gift_id . '_m.' . $ext . '?ts=' . $ts . '"></td></tr>';
 		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">' . $this->msg( 'g-small' )->plain() . '</td>
-		<td><img src="' . $wgUploadPath . '/awards/' . $this->gift_id . '_s.' . $ext . '?ts' . rand()  . '"></td></tr>';
+		<td><img src="' . $uploadPath . '/awards/' . $this->gift_id . '_s.' . $ext . '?ts=' . $ts  . '"></td></tr>';
 		$output .= '<tr><td><input type="button" onclick="javascript:history.go(-1)" value="' . $this->msg( 'g-go-back' )->plain() . '"></td></tr>';
 
 		$giftManager = SpecialPage::getTitleFor( 'GiftManager' );

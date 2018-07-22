@@ -6,7 +6,7 @@
  * The avatars are not held as MediaWiki images, but
  * rather based on the user_id and in multiple sizes
  *
- * Requirements: Need writable directory $wgUploadPath/avatars
+ * Requirements: Need writable directory $wgUploadDirectory/avatars
  *
  * @file
  * @ingroup Extensions
@@ -71,7 +71,8 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 * @param string $ext File extension (gif, jpg or png)
 	 */
 	private function showSuccess( $ext ) {
-		global $wgAvatarKey, $wgUploadPath, $wgUploadAvatarInRecentChanges;
+		global $wgAvatarKey, $wgUploadBaseUrl, $wgUploadPath, $wgUploadAvatarInRecentChanges;
+		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
 
 		$user = $this->getUser();
 		$log = new LogPage( 'avatar' );
@@ -85,6 +86,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 		);
 
 		$uid = $user->getId();
+		$ts = rand();
 
 		$output = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-picture' )->plain() );
 		$output .= '<div class="profile-info">';
@@ -98,7 +100,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 				$this->msg( 'user-profile-picture-large' )->plain() .
 			'</td>
 			<td class="image-cell">
-				<img src="' . $wgUploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_l.' . $ext . '?ts=' . rand() . '" alt="" />
+				<img src="' . $uploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_l.' . $ext . '?ts=' . $ts . '" alt="" />
 			</td>
 		</tr>';
 		$output .= '<tr>
@@ -106,7 +108,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 				$this->msg( 'user-profile-picture-medlarge' )->plain() .
 			'</td>
 			<td class="image-cell">
-				<img src="' . $wgUploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_ml.' . $ext . '?ts=' . rand() . '" alt="" />
+				<img src="' . $uploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_ml.' . $ext . '?ts=' . $ts . '" alt="" />
 			</td>
 		</tr>';
 		$output .= '<tr>
@@ -114,7 +116,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 				$this->msg( 'user-profile-picture-medium' )->plain() .
 			'</td>
 			<td class="image-cell">
-				<img src="' . $wgUploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_m.' . $ext . '?ts=' . rand() . '" alt="" />
+				<img src="' . $uploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_m.' . $ext . '?ts=' . $ts . '" alt="" />
 			</td>
 		</tr>';
 		$output .= '<tr>
@@ -122,7 +124,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 				$this->msg( 'user-profile-picture-small' )->plain() .
 			'</td>
 			<td class="image-cell">
-				<img src="' . $wgUploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_s.' . $ext . '?ts=' . rand() . '" alt="" />
+				<img src="' . $uploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_s.' . $ext . '?ts=' . $ts . '" alt="" />
 			</td>
 		</tr>';
 		$output .= '<tr>
@@ -242,13 +244,15 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 * @return string HTML
 	 */
 	function getAvatar( $size ) {
-		global $wgAvatarKey, $wgUploadDirectory, $wgUploadPath;
+		global $wgAvatarKey, $wgUploadDirectory, $wgUploadBaseUrl, $wgUploadPath;
+		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
+
 		$files = glob(
 			$wgUploadDirectory . '/avatars/' . $wgAvatarKey . '_' .
 			$this->getUser()->getId() . '_' . $size . '*'
 		);
 		if ( isset( $files[0] ) && $files[0] ) {
-			return "<img src=\"{$wgUploadPath}/avatars/" .
+			return "<img src=\"{$uploadPath}/avatars/" .
 				basename( $files[0] ) . '" alt="" border="0" />';
 		}
 	}

@@ -62,10 +62,11 @@ class SystemGiftIcon {
 	 * @return string HTML
 	 */
 	public function getIconHTML() {
-		global $wgUploadPath;
+		global $wgUploadBaseUrl, $wgUploadPath;
+		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
 
 		$params = [
-			'src' => "{$wgUploadPath}/awards/{$this->getIconURL()}",
+			'src' => "{$uploadPath}/awards/{$this->getIconURL()}",
 			'border' => '0',
 			'alt' => wfMessage( 'ga-gift' )->plain()
 		];

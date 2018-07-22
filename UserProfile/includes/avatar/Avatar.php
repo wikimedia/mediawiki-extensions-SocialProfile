@@ -65,10 +65,11 @@ class wAvatar {
 	 * @return string <img> HTML tag with full path to the avatar image
 	 */
 	function getAvatarURL( $extraParams = [] ) {
-		global $wgUploadPath, $wgUserProfileDisplay;
+		global $wgUploadBaseUrl, $wgUploadPath, $wgUserProfileDisplay;
 
+		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
 		$defaultParams = [
-			'src' => "{$wgUploadPath}/avatars/{$this->getAvatarImage()}",
+			'src' => "{$uploadPath}/avatars/{$this->getAvatarImage()}",
 			'border' => '0',
 			'class' => 'mw-socialprofile-avatar'
 		];
