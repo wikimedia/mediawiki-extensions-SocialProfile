@@ -42,7 +42,7 @@ class RelationshipListLookup {
 				'ur_type', 'ur_message', 'ur_date'
 			],
 			[
-				'ur_user_id_to' => $this->user->getId,
+				'ur_user_id_to' => $this->user->getId(),
 				'ur_status' => $status
 			],
 			__METHOD__,
