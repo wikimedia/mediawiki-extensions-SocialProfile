@@ -16,7 +16,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	public $mUploadSaveName, $mUploadTempName, $mUploadSize, $mUploadOldVersion;
 	public $mUploadCopyStatus, $mUploadSource, $mReUpload, $mAction, $mUpload;
 	public $mOname, $mSessionKey, $mStashed, $mDestFile;
-	public $avatarUploadDirectory;
+	public $awardsUploadDirectory;
 	public $fileExtensions;
 	public $gift_id;
 
@@ -120,7 +120,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$out = $this->getOutput();
 		$user = $this->getUser();
 
-		$this->avatarUploadDirectory = $wgUploadDirectory . '/awards';
+		$this->awardsUploadDirectory = $wgUploadDirectory . '/awards';
 
 		/** Show an error message if file upload is disabled */
 		if ( !$wgEnableUploads ) {
@@ -287,7 +287,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' .
 					$thumbWidth . ' -resize ' . $thumbWidth . '  -quality 100 ' .
 					$border . ' ' . $imageSrc . ' ' .
-					$this->avatarUploadDirectory . '/' . $imgDest . '.jpg'
+					$this->awardsUploadDirectory . '/' . $imgDest . '.jpg'
 				);
 			}
 			if ( $typeCode == 1 ) {
@@ -295,14 +295,14 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' .
 					$thumbWidth . ' -resize ' . $thumbWidth . ' ' . $imageSrc .
 					' ' . $border . ' ' .
-					$this->avatarUploadDirectory . '/' . $imgDest . '.gif'
+					$this->awardsUploadDirectory . '/' . $imgDest . '.gif'
 				);
 			}
 			if ( $typeCode == 3 ) {
 				exec(
 					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' .
 					$thumbWidth . ' -resize ' . $thumbWidth . ' ' . $imageSrc .
-					' ' . $this->avatarUploadDirectory . '/' . $imgDest . '.png'
+					' ' . $this->awardsUploadDirectory . '/' . $imgDest . '.png'
 				);
 			}
 		} else {
@@ -358,7 +358,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 			// Copy the thumb
 			copy(
 				$imageSrc,
-				$this->avatarUploadDirectory . '/' . $imgDest . '.' . $ext
+				$this->awardsUploadDirectory . '/' . $imgDest . '.' . $ext
 			);
 		}
 	}
@@ -376,7 +376,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 * is a PHP-managed upload temporary
 	 */
 	function saveUploadedFile( $saveName, $tempName, $ext ) {
-		$dest = $this->avatarUploadDirectory;
+		$dest = $this->awardsUploadDirectory;
 
 		$this->mSavedFile = "{$dest}/{$saveName}";
 		$this->createThumbnail( $tempName, $ext, $this->gift_id . '_l', 75 );
@@ -385,56 +385,56 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$this->createThumbnail( $tempName, $ext, $this->gift_id . '_s', 16 );
 
 		$type = 0;
-		if ( $ext == 'JPG' && is_file( $this->avatarUploadDirectory . '/' . $this->gift_id . '_l.jpg' ) ) {
+		if ( $ext == 'JPG' && is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_l.jpg' ) ) {
 			$type = 2;
 		}
-		if ( $ext == 'GIF' && is_file( $this->avatarUploadDirectory . '/' . $this->gift_id . '_l.gif' ) ) {
+		if ( $ext == 'GIF' && is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_l.gif' ) ) {
 			$type = 1;
 		}
-		if ( $ext == 'PNG' && is_file( $this->avatarUploadDirectory . '/' . $this->gift_id . '_l.png' ) ) {
+		if ( $ext == 'PNG' && is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_l.png' ) ) {
 			$type = 3;
 		}
 
 		if ( $ext != 'JPG' ) {
-			if ( is_file( $this->avatarUploadDirectory . '/' . $this->gift_id . '_s.jpg' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $this->gift_id . '_s.jpg' );
+			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_s.jpg' ) ) {
+				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_s.jpg' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/' . $this->gift_id . '_m.jpg' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $this->gift_id . '_m.jpg' );
+			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_m.jpg' ) ) {
+				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_m.jpg' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/' . $this->gift_id . '_ml.jpg' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $this->gift_id . '_ml.jpg' );
+			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_ml.jpg' ) ) {
+				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_ml.jpg' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/' . $this->gift_id . '_l.jpg' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $this->gift_id . '_l.jpg' );
+			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_l.jpg' ) ) {
+				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_l.jpg' );
 			}
 		}
 		if ( $ext != 'GIF' ) {
-			if ( is_file( $this->avatarUploadDirectory . '/' . $this->gift_id . '_s.gif' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $this->gift_id . '_s.gif' );
+			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_s.gif' ) ) {
+				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_s.gif' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/' . $this->gift_id . '_m.gif' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $this->gift_id . '_m.gif' );
+			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_m.gif' ) ) {
+				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_m.gif' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/' . $this->gift_id . '_ml.gif' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $this->gift_id . '_ml.gif' );
+			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_ml.gif' ) ) {
+				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_ml.gif' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/' . $this->gift_id . '_l.gif' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $this->gift_id . '_l.gif' );
+			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_l.gif' ) ) {
+				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_l.gif' );
 			}
 		}
 		if ( $ext != 'PNG' ) {
-			if ( is_file( $this->avatarUploadDirectory . '/' . $this->gift_id . '_s.png' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $this->gift_id . '_s.png' );
+			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_s.png' ) ) {
+				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_s.png' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/' . $this->gift_id . '_m.png' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $this->gift_id . '_m.png' );
+			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_m.png' ) ) {
+				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_m.png' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/' . $this->gift_id . '_ml.png' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $this->gift_id . '_ml.png' );
+			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_ml.png' ) ) {
+				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_ml.png' );
 			}
-			if ( is_file( $this->avatarUploadDirectory . '/' . $this->gift_id . '_l.png' ) ) {
-				unlink( $this->avatarUploadDirectory . '/' . $this->gift_id . '_l.png' );
+			if ( is_file( $this->awardsUploadDirectory . '/' . $this->gift_id . '_l.png' ) ) {
+				unlink( $this->awardsUploadDirectory . '/' . $this->gift_id . '_l.png' );
 			}
 		}
 
