@@ -80,7 +80,7 @@ class UserBoardMessageCount {
 	 * Get the amount of new board messages for the user
 	 * from the database.
 	 *
-	 * @TODO: This SQL query is commented out, so this function
+	 * @todo This SQL query is commented out, so this function
 	 * doesn't quite work the way it should: since $newCount
 	 * doesn't get updated, it actually clears the counter instead
 	 * as it stays 0.
