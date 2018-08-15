@@ -158,8 +158,8 @@ class SpecialViewUserBoard extends SpecialPage {
 			$board_to_board = '<a href="' .
 				htmlspecialchars(
 					SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [
-						'user' => $message['user_name'],
-						'conv' => $message['user_name_from']
+						'user' => $currentUser->getName(),
+						'conv' => $user_name
 					] ),
 					ENT_QUOTES
 				)
