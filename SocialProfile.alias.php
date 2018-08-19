@@ -74,10 +74,19 @@ $specialPageAliases['bgn'] = [
 
 /** Bosnian (bosanski) */
 $specialPageAliases['bs'] = [
+	'EditProfile' => [ 'Uredi_profil' ],
+	'GenerateTopUsersReport' => [ 'Napravi_izvještaj_top_korisnika' ],
+	'PopulateUserProfiles' => [ 'Popuni_profile_korisnika' ],
 	'RemoveAvatar' => [ 'Ukloni_sličicu' ],
+	'SendBoardBlast' => [ 'Pošalji_mnogo_poruka' ],
+	'TopFansByStatistic' => [ 'Najbolji_obožavatelji' ],
 	'TopUsers' => [ 'Top_korisnici' ],
+	'TopUsersRecent' => [ 'Skorašnji_top_korisnici' ],
+	'ToggleUserPage' => [ 'Prekidač_za_korisničku_stranicu' ],
 	'UpdateEditCounts' => [ 'Ažuriraj_broj_izmjena' ],
 	'UpdateProfile' => [ 'Ažuriraj_profil' ],
+	'UploadAvatar' => [ 'Postavi_sličicu' ],
+	'UserBoard' => [ 'Korisnička_tabla' ],
 ];
 
 /** German (Deutsch) */
@@ -151,6 +160,23 @@ $specialPageAliases['hsb'] = [
 	'UpdateProfile' => [ 'Profil_aktualizować' ],
 	'UploadAvatar' => [ 'Awatar_nahrać' ],
 	'UserBoard' => [ 'Wužiwarska_deska' ],
+];
+
+/** Croatian (hrvatski) */
+$specialPageAliases['hr'] = [
+	'EditProfile' => [ 'Uredi_profil' ],
+	'GenerateTopUsersReport' => [ 'Napravi_izvještaj_top_suradnika' ],
+	'PopulateUserProfiles' => [ 'Popuni_profile_suradnika' ],
+	'RemoveAvatar' => [ 'Ukloni_sličicu' ],
+	'SendBoardBlast' => [ 'Pošalji_puno_poruka' ],
+	'TopFansByStatistic' => [ 'Najbolji_obožavatelji' ],
+	'TopUsers' => [ 'Top_suradnici' ],
+	'TopUsersRecent' => [ 'Skorašnji_top_suradnici' ],
+	'ToggleUserPage' => [ 'Prekidač_za_stranicu_suradnika' ],
+	'UpdateEditCounts' => [ 'Ažuriraj_broj_izmjena' ],
+	'UpdateProfile' => [ 'Ažuriraj_profil' ],
+	'UploadAvatar' => [ 'Postavi_sličicu' ],
+	'UserBoard' => [ 'Tabla_suradnika' ],
 ];
 
 /** Haitian (Kreyòl ayisyen) */
@@ -363,18 +389,36 @@ $specialPageAliases['sk'] = [
 
 /** Serbian (Cyrillic script) (српски (ћирилица)) */
 $specialPageAliases['sr-ec'] = [
+	'EditProfile' => [ 'Уреди_профил' ],
+	'GenerateTopUsersReport' => [ 'Направи_извештај_најбољих_корисника' ],
+	'PopulateUserProfiles' => [ 'Попуни_профиле_корисника' ],
 	'RemoveAvatar' => [ 'Уклони_сличицу' ],
-	'TopUsers' => [ 'Топ_корисници' ],
+	'SendBoardBlast' => [ 'Пошаљи_много_порука' ],
+	'TopFansByStatistic' => [ 'Најбољи_обожаваоци' ],
+	'TopUsers' => [ 'Најбољи_корисници', 'Топ_корисници' ],
+	'TopUsersRecent' => [ 'Скорашњи_најбољи_корисници' ],
+	'ToggleUserPage' => [ 'Прекидач_за_корисничку_страницу' ],
 	'UpdateEditCounts' => [ 'Ажурирај_број_измена' ],
 	'UpdateProfile' => [ 'Ажурирај_профил' ],
+	'UploadAvatar' => [ 'Постави_сличицу' ],
+	'UserBoard' => [ 'Корисничка_табла' ],
 ];
 
 /** Serbian (Latin script) (srpski (latinica)) */
 $specialPageAliases['sr-el'] = [
+	'EditProfile' => [ 'Uredi_profil' ],
+	'GenerateTopUsersReport' => [ 'Napravi_izveštaj_najboljih_korisnika' ],
+	'PopulateUserProfiles' => [ 'Popuni_profile_korisnika' ],
 	'RemoveAvatar' => [ 'Ukloni_sličicu' ],
-	'TopUsers' => [ 'Top_korisnici' ],
+	'SendBoardBlast' => [ 'Pošalji_mnogo_poruka' ],
+	'TopFansByStatistic' => [ 'Najbolji_obožavaoci' ],
+	'TopUsers' => [ 'Najbolji_korisnici', 'Top_korisnici' ],
+	'TopUsersRecent' => [ 'Skorašnji_najbolji_korisnici' ],
+	'ToggleUserPage' => [ 'Prekidač_za_korisničku_stranicu' ],
 	'UpdateEditCounts' => [ 'Ažuriraj_broj_izmena' ],
 	'UpdateProfile' => [ 'Ažuriraj_profil' ],
+	'UploadAvatar' => [ 'Postavi_sličicu' ],
+	'UserBoard' => [ 'Korisnička_tabla' ],
 ];
 
 /** Swedish (svenska) */
