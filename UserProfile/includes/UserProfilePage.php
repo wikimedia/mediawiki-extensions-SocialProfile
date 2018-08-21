@@ -1188,7 +1188,6 @@ class UserProfilePage extends Article {
 
 		$context = $this->getContext();
 		$language = $context->getLanguage();
-		$user = $context->getUser();
 
 		// If not enabled in site settings, don't display
 		if ( $rel_type == 1 ) {
@@ -1204,12 +1203,12 @@ class UserProfilePage extends Article {
 		$output = ''; // Prevent E_NOTICE
 
 		$count = 4;
-		$key = $wgMemc->makeKey( 'relationship', 'profile', "{$user->getId()}-{$rel_type}" );
+		$key = $wgMemc->makeKey( 'relationship', 'profile', "{$this->user_id}-{$rel_type}" );
 		$data = $wgMemc->get( $key );
 
 		// Try cache
 		if ( !$data ) {
-			$listLookup = new RelationshipListLookup( $user, $count );
+			$listLookup = new RelationshipListLookup( $this->user, $count );
 			$friends = $listLookup->getRelationshipList( $rel_type );
 			$wgMemc->set( $key, $friends );
 		} else {
@@ -1222,7 +1221,7 @@ class UserProfilePage extends Article {
 			$friends = $data;
 		}
 
-		$stats = new UserStats( $user->getId(), $user_name );
+		$stats = new UserStats( $this->user_id, $user_name );
 		$stats_data = $stats->getUserStats();
 		$view_all_title = SpecialPage::getTitleFor( 'ViewRelationships' );
 
