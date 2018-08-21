@@ -1607,7 +1607,7 @@ class UserProfilePage extends Article {
 			] );
 
 			$listLookup = new SystemGiftListLookup( 4 );
-			$systemGifts = $listLookup->getUserGiftList( $user );
+			$systemGifts = $listLookup->getUserGiftList( $this->user );
 			$wgMemc->set( $sg_key, $systemGifts, 60 * 60 * 4 );
 		} else {
 			$logger->debug( "Got profile awards for user {user_name} from cache\n", [
@@ -1657,7 +1657,7 @@ class UserProfilePage extends Article {
 				$systemGiftIcon = new SystemGiftIcon( $gift['gift_id'], 'ml' );
 				$icon = $systemGiftIcon->getIconHTML();
 
-				$gift_link = $user = SpecialPage::getTitleFor( 'ViewSystemGift' );
+				$gift_link = SpecialPage::getTitleFor( 'ViewSystemGift' );
 
 				$class = '';
 				if ( $gift['status'] == 1 ) {
