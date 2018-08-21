@@ -106,7 +106,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 				// in the top lists.
 				$exists = $u->loadFromId();
 
-				if ( !$u->isBlocked() && $exists && !$u->isBot() ) {
+				if ( $exists && !$u->isBlocked() && !$u->isBot() ) {
 					$user_list[] = [
 						'user_id' => $row->up_user_id,
 						'user_name' => $row->up_user_name,
@@ -128,18 +128,18 @@ class TopFansRecent extends UnlistedSpecialPage {
 		$recent_title = SpecialPage::getTitleFor( 'TopUsersRecent' );
 
 		$output = '<div class="top-fan-nav">
-			<h1>' . $this->msg( 'top-fans-by-points-nav-header' )->plain() . '</h1>
+			<h1>' . htmlspecialchars( $this->msg( 'top-fans-by-points-nav-header' )->plain() ) . '</h1>
 			<p><a href="' . htmlspecialchars( $top_title->getFullURL() ) . '">' .
-				$this->msg( 'top-fans-total-points-link' )->plain() . '</a></p>';
+				htmlspecialchars( $this->msg( 'top-fans-total-points-link' )->plain() ) . '</a></p>';
 
 		if ( $period == 'weekly' ) {
 			$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=monthly' ) ) . '">' .
-				$this->msg( 'top-fans-monthly-points-link' )->plain() . '</a><p>
-			<p><b>' . $this->msg( 'top-fans-weekly-points-link' )->plain() . '</b></p>';
+				htmlspecialchars( $this->msg( 'top-fans-monthly-points-link' )->plain() ) . '</a><p>
+			<p><b>' . htmlspecialchars( $this->msg( 'top-fans-weekly-points-link' )->plain() ) . '</b></p>';
 		} else {
 			$output .= '<p><b>' . $this->msg( 'top-fans-monthly-points-link' )->plain() . '</b><p>
 			<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=weekly' ) ) . '">' .
-				$this->msg( 'top-fans-weekly-points-link' )->plain() . '</a></p>';
+				htmlspecialchars( $this->msg( 'top-fans-weekly-points-link' )->plain() ) . '</a></p>';
 		}
 
 		// Build nav of stats by category based on MediaWiki:Topfans-by-category
@@ -148,7 +148,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 
 		if ( !$message->isDisabled() ) {
 			$output .= '<h1 class="top-title">' .
-				$this->msg( 'top-fans-by-category-nav-header' )->plain() . '</h1>';
+				htmlspecialchars( $this->msg( 'top-fans-by-category-nav-header' )->plain() ) . '</h1>';
 
 			$lines = explode( "\n", $message->text() );
 			foreach ( $lines as $line ) {

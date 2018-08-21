@@ -56,7 +56,7 @@ class GenerateTopUsersReport extends SpecialPage {
 		// If we don't have a period, default to weekly or else we'll be
 		// hitting a database error because when constructing table names
 		// later on in the code, we assume that $period is set to something
-		if ( !$period ) {
+		if ( !$period || ( $period != 'weekly' && $period != 'monthly' ) ) {
 			$period = 'weekly';
 		}
 
@@ -205,16 +205,14 @@ class GenerateTopUsersReport extends SpecialPage {
 
 		foreach ( $users as $user ) {
 			$userTitle = Title::makeTitle( NS_USER, $user['user_name'] );
-			$pageContent .= $this->msg(
-				'user-stats-report-row',
-				$wgContLang->formatNum( $user['rank'] ),
-				$user['user_name'],
-				$wgContLang->formatNum( $user['points'] )
-			)->inContentLanguage()->parse() . "\n\n";
+			$pageContent .= '{{int:user-stats-report-row|' .
+				$wgContLang->formatNum( $user['rank'] ) . '|' .
+				$user['user_name'] . '|' .
+				$wgContLang->formatNum( $user['points'] ) . "}}\n\n";
 
 			$output .= "<div class=\"top-fan-row\">
 			<span class=\"top-fan-num\">{$user['rank']}</span><span class=\"top-fan\"> <a href='" .
-				$userTitle->getFullURL() . "' >" . $user['user_name'] . "</a>
+				htmlspecialchars( $userTitle->getFullURL() ) . "' >" . htmlspecialchars( $user['user_name'] ) . "</a>
 			</span>";
 
 			$output .= '<span class="top-fan-points">' . $this->msg(
@@ -227,6 +225,10 @@ class GenerateTopUsersReport extends SpecialPage {
 		// Make the edit as MediaWiki default
 		$oldUser = $wgUser;
 		$wgUser = User::newFromName( 'MediaWiki default' );
+		// If the user does not exist, crate it
+		if ( $wgUser->getId() === 0 ) {
+			$wgUser = User::newSystemUser( 'MediaWiki default', [ 'steal' => true ] );
+		}
 		$wgUser->addGroup( 'bot' );
 
 		// Add a note to the page that it was automatically generated
@@ -236,7 +238,7 @@ class GenerateTopUsersReport extends SpecialPage {
 		// For grep: user-stats-report-weekly-page-title, user-stats-report-monthly-page-title
 		$title = Title::makeTitleSafe(
 			NS_PROJECT,
-			$this->msg( "user-stats-report-{$period}-page-title", $period_title )->inContentLanguage()->escaped()
+			$this->msg( "user-stats-report-{$period}-page-title", $period_title )->inContentLanguage()->plain()
 		);
 
 		$article = new Article( $title );
@@ -247,7 +249,7 @@ class GenerateTopUsersReport extends SpecialPage {
 			// For grep: user-stats-report-weekly-edit-summary, user-stats-report-monthly-edit-summary
 			$article->doEditContent(
 				ContentHandler::makeContent( $pageContent, $title ),
-				$this->msg( "user-stats-report-{$period}-edit-summary" )->inContentLanguage()->escaped()
+				$this->msg( "user-stats-report-{$period}-edit-summary" )->inContentLanguage()->plain()
 			);
 			$date = date( 'Y-m-d H:i:s' );
 			// Archive points from the weekly/monthly table into the archive

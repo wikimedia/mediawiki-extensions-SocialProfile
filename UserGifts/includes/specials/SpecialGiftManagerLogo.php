@@ -172,7 +172,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		 * If there was no filename or a zero size given, give up quick.
 		 */
 		if ( trim( $this->mOname ) == '' || empty( $this->mUploadSize ) ) {
-			return $this->mainUploadForm( '<li>' . $this->msg( 'emptyfile' )->plain() . '</li>' );
+			return $this->mainUploadForm( '<li>' . htmlspecialchars( $this->msg( 'emptyfile' )->plain() ) . '</li>' );
 		}
 
 		# Chop off any directories in the given filename
@@ -241,7 +241,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 			}
 
 			if ( $this->mUploadSize == 0 ) {
-				$warning .= '<li>' . $this->msg( 'emptyfile' )->plain() . '</li>';
+				$warning .= '<li>' . htmlspecialchars( $this->msg( 'emptyfile' )->plain() ) . '</li>';
 			}
 
 			if ( $warning != '' ) {
@@ -517,8 +517,8 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 
 		$ext = 'jpg';
 
-		$output = '<h2>' . $this->msg( 'g-uploadsuccess' )->plain() . '</h2>';
-		$output .= '<h5>' . $this->msg( 'g-imagesbelow' )->plain() . '</h5>';
+		$output = '<h2>' . htmlspecialchars( $this->msg( 'g-uploadsuccess' )->plain() ) . '</h2>';
+		$output .= '<h5>' . htmlspecialchars( $this->msg( 'g-imagesbelow' )->plain() ) . '</h5>';
 		if ( $status == 1 ) {
 			$ext = 'gif';
 		}
@@ -531,36 +531,36 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$ts = rand();
 
 		$output .= '<table cellspacing="0" cellpadding="5">';
-		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">' . $this->msg( 'g-large' )->plain() . '</td>
+		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">' . htmlspecialchars( $this->msg( 'g-large' )->plain() ) . '</td>
 		<td><img src="' . $uploadPath . '/awards/' . $this->gift_id . '_l.' . $ext . '?ts=' . $ts . '"></td></tr>';
-		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">' . $this->msg( 'g-mediumlarge' )->plain() . '</td>
+		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">' . htmlspecialchars( $this->msg( 'g-mediumlarge' )->plain() ) . '</td>
 		<td><img src="' . $uploadPath . '/awards/' . $this->gift_id . '_ml.' . $ext . '?ts=' . $ts . '"></td></tr>';
-		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">' . $this->msg( 'g-medium' )->plain() . '</td>
+		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">' . htmlspecialchars( $this->msg( 'g-medium' )->plain() ) . '</td>
 		<td><img src="' . $uploadPath . '/awards/' . $this->gift_id . '_m.' . $ext . '?ts=' . $ts . '"></td></tr>';
-		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">' . $this->msg( 'g-small' )->plain() . '</td>
+		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">' . htmlspecialchars( $this->msg( 'g-small' )->plain() ) . '</td>
 		<td><img src="' . $uploadPath . '/awards/' . $this->gift_id . '_s.' . $ext . '?ts=' . $ts  . '"></td></tr>';
-		$output .= '<tr><td><input type="button" onclick="javascript:history.go(-1)" value="' . $this->msg( 'g-go-back' )->plain() . '"></td></tr>';
+		$output .= '<tr><td><input type="button" onclick="javascript:history.go(-1)" value="' . htmlspecialchars( $this->msg( 'g-go-back' )->plain() ) . '"></td></tr>';
 
 		$giftManager = SpecialPage::getTitleFor( 'GiftManager' );
 		$output .= $this->getLanguage()->pipeList( [
 			'<tr><td><a href="' . htmlspecialchars( $giftManager->getFullURL() ) . '">' .
-				$this->msg( 'g-back-gift-list' )->plain() . '</a>&#160;',
+				htmlspecialchars( $this->msg( 'g-back-gift-list' )->plain() ) . '</a>&#160;',
 			'&#160;<a href="' . htmlspecialchars( $giftManager->getFullURL( 'id=' . $this->gift_id ) ) .
-				'">' . $this->msg( 'g-back-edit-gift' )->plain() . '</a></td></tr>'
+				'">' . htmlspecialchars( $this->msg( 'g-back-edit-gift' )->plain() ) . '</a></td></tr>'
 		] );
 		$output .= '</table>';
 		$this->getOutput()->addHTML( $output );
 	}
 
 	/**
-	 * @param string $error as HTML
+	 * @param string $error as sanitized HTML
 	 */
 	function uploadError( $error ) {
 		$out = $this->getOutput();
-		$sub = $this->msg( 'uploadwarning' )->plain();
+		$sub = htmlspecialchars( $this->msg( 'uploadwarning' )->plain() );
 		$out->addHTML( "<h2>{$sub}</h2>\n" );
 		$out->addHTML( "<h4 class='error'>{$error}</h4>\n" );
-		$out->addHTML( '<br /><input type="button" onclick="javascript:history.go(-1)" value="' . $this->msg( 'g-go-back' )->plain() . '">' );
+		$out->addHTML( '<br /><input type="button" onclick="javascript:history.go(-1)" value="' . htmlspecialchars( $this->msg( 'g-go-back' )->plain() ) . '">' );
 	}
 
 	/**
@@ -568,7 +568,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 * totally but we require manual intervention to save it for real.
 	 * Stash it away, then present a form asking to confirm or cancel.
 	 *
-	 * @param string $warning HTML
+	 * @param string $warning as sanitized HTML
 	 */
 	function uploadWarning( $warning ) {
 		global $wgUseCopyrightUpload;
@@ -611,7 +611,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 
 			<tr>
 				<td align='right'>
-					<input tabindex='2' type='button' onclick=javascript:history.go(-1) value='" . $this->msg( 'back' )->plain() . "' />
+					<input tabindex='2' type='button' onclick=javascript:history.go(-1) value='" . htmlspecialchars( $this->msg( 'back' )->plain() ) . "' />
 				</td>
 
 			</tr>
@@ -623,7 +623,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 * Displays the main upload form, optionally with a highlighted
 	 * error message up at the top.
 	 *
-	 * @param string $msg HTML
+	 * @param string $msg sanitized HTML
 	 */
 	function mainUploadForm( $msg = '' ) {
 		global $wgUseCopyrightUpload;
@@ -635,22 +635,22 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$out = $this->getOutput();
 
 		if ( $msg != '' ) {
-			$sub = $this->msg( 'uploaderror' )->plain();
+			$sub = htmlspecialchars( $this->msg( 'uploaderror' )->plain() );
 			$out->addHTML( "<h2>{$sub}</h2>\n" .
 				"<h4 class='error'>{$msg}</h4>\n" );
 		}
 
-		$ulb = $this->msg( 'uploadbtn' )->plain();
+		$ulb = htmlspecialchars( $this->msg( 'uploadbtn' )->plain() );
 
 		$source = null;
 
 		if ( $wgUseCopyrightUpload ) {
 			$source = "
-	<td align='right' nowrap='nowrap'>" . $this->msg( 'filestatus' )->plain() . "</td>
+	<td align='right' nowrap='nowrap'>" . htmlspecialchars( $this->msg( 'filestatus' )->plain() ) . "</td>
 	<td><input tabindex='3' type='text' name=\"wpUploadCopyStatus\" value=\"" .
 	htmlspecialchars( $this->mUploadCopyStatus ) . "\" size='40' /></td>
 	</tr><tr>
-	<td align='right'>" . $this->msg( 'filesource' )->plain() . "</td>
+	<td align='right'>" . htmlspecialchars( $this->msg( 'filesource' )->plain() ) . "</td>
 	<td><input tabindex='4' type='text' name='wpUploadSource' value=\"" .
 	htmlspecialchars( $this->mUploadSource ) . "\" style='width:100px' /></td>
 	";
@@ -660,7 +660,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$icon = $userGiftIcon->getIconHTML();
 		if ( $icon != '' ) {
 			$output = '<table><tr><td style="color:#666666;font-weight:800">' .
-				$this->msg( 'g-current-image' )->plain() . '</td></tr>';
+				htmlspecialchars( $this->msg( 'g-current-image' )->plain() ) . '</td></tr>';
 			$output .= '<tr><td>' . $icon . '</td></tr></table><br />';
 		}
 		$out->addHTML( $output );
@@ -670,7 +670,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	<table border='0'><tr>
 
 	<td style='color:#666666;font-weight:800'>" . $this->msg( 'g-file-instructions' )->escaped() .
-	'<p>' . $this->msg( 'g-choose-file' )->plain() . "<br />
+	'<p>' . htmlspecialchars( $this->msg( 'g-choose-file' )->plain() ) . "<br />
 	<input tabindex='1' type='file' name='wpUploadFile' id='wpUploadFile' style='width:100px' />
 	</td></tr><tr>
 	{$source}

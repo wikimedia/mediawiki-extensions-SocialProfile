@@ -87,7 +87,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 
 		if ( !$this->gift_id || !is_numeric( $this->gift_id ) ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
-			$out->addHTML( $this->msg( 'g-error-message-invalid-link' )->plain() );
+			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-invalid-link' )->plain() ) );
 			return false;
 		}
 
@@ -117,7 +117,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 
 			$output = '<div class="back-links">
 				<a href="' . htmlspecialchars( SpecialPage::getTitleFor( 'GiftManager' )->getFullURL() ) . '">' .
-					$this->msg( 'g-viewgiftlist' )->plain() . '</a>
+					htmlspecialchars( $this->msg( 'g-viewgiftlist' )->plain() ) . '</a>
 			</div>
 			<div class="g-container">' .
 				$this->msg( 'g-remove-success-message', $gift['gift_name'] )->parse() .
@@ -146,7 +146,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 
 		$output = '<div class="back-links">
 			<a href="' . htmlspecialchars( SpecialPage::getTitleFor( 'GiftManager' )->getFullURL() ) . '">' .
-				$this->msg( 'g-viewgiftlist' )->plain() . '</a>
+				htmlspecialchars( $this->msg( 'g-viewgiftlist' )->plain() ) . '</a>
 		</div>
 		<form action="" method="post" enctype="multipart/form-data" name="form1">
 			<div class="g-remove-message">' .
@@ -154,12 +154,12 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 			'</div>
 			<div class="g-container">' .
 				$icon .
-				'<div class="g-name">' . $gift['gift_name'] . '</div>
+				'<div class="g-name">' . htmlspecialchars( $gift['gift_name'] ) . '</div>
 			</div>
 			<div class="visualClear"></div>
 			<div class="g-buttons">
-				<input type="button" class="site-button" value="' . $this->msg( 'g-remove' )->plain() . '" size="20" onclick="document.form1.submit()" />
-				<input type="button" class="site-button" value="' . $this->msg( 'cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
+				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'g-remove' )->plain() ) . '" size="20" onclick="document.form1.submit()" />
+				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'cancel' )->plain() ) . '" size="20" onclick="history.go(-1)" />
 			</div>
 		</form>';
 

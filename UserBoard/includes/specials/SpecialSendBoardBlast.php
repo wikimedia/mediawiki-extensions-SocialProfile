@@ -68,7 +68,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 				);
 				$count++;
 			}
-			$output .= $this->msg( 'messagesentsuccess' )->plain();
+			$output .= htmlspecialchars( $this->msg( 'messagesentsuccess' )->plain() );
 		} else {
 			$out->setPageTitle( $this->msg( 'boardblasttitle' )->plain() );
 			$output .= $this->displayForm();
@@ -140,7 +140,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 				}
 				$id = $relationship['user_id'];
 				$output .= '<div class="blast-' . $class . "-unselected\" id=\"user-{$id}\">
-						{$relationship['user_name']}
+						" . htmlspecialchars( $relationship['user_name'] ) . "
 					</div>";
 				if ( $x == count( $relationships ) || $x != 1 && $x % $per_row == 0 ) {
 					$output .= '<div class="visualClear"></div>';

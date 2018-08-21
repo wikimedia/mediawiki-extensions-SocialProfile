@@ -47,7 +47,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 			!$dbr->fieldExists( 'user_stats', $column )
 		) {
 			$out->setPageTitle( $this->msg( 'top-fans-bad-field-title' )->plain() );
-			$out->addHTML( $this->msg( 'top-fans-bad-field-message' )->plain() );
+			$out->addHTML( htmlspecialchars( $this->msg( 'top-fans-bad-field-message' )->plain() ) );
 			return false;
 		}
 
@@ -98,7 +98,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 				$u = User::newFromId( $row->stats_user_id );
 				// Ensure that the user exists for real.
 				// Otherwise we'll be happily displaying entries for users that
-				// once existed by no longer do (account merging is a thing,
+				// once existed but no longer do (account merging is a thing,
 				// sadly), since user_stats entries for users are *not* purged
 				// and/or merged during the account merge process (which is a
 				// different bug with a different extension).
@@ -106,7 +106,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 				// in the top lists.
 				$exists = $u->loadFromId();
 
-				if ( !$u->isBlocked() && $exists && !$u->isBot() ) {
+				if ( $exists && !$u->isBlocked() && !$u->isBot() ) {
 					$user_list[] = [
 						'user_id' => $row->stats_user_id,
 						'user_name' => $row->stats_user_name,
@@ -127,17 +127,17 @@ class TopFansByStat extends UnlistedSpecialPage {
 		$recent_title = SpecialPage::getTitleFor( 'TopUsersRecent' );
 
 		$output = '<div class="top-fan-nav">
-			<h1>' . $this->msg( 'top-fans-by-points-nav-header' )->plain() . '</h1>
+			<h1>' . htmlspecialchars( $this->msg( 'top-fans-by-points-nav-header' )->plain() ) . '</h1>
 			<p><a href="' . htmlspecialchars( $top_title->getFullURL() ) . '">' .
-				$this->msg( 'top-fans-total-points-link' )->plain() . '</a></p>';
+				htmlspecialchars( $this->msg( 'top-fans-total-points-link' )->plain() ) . '</a></p>';
 
 		if ( $wgUserStatsTrackWeekly ) {
 			$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=monthly' ) ) . '">' .
-				$this->msg( 'top-fans-monthly-points-link' )->plain() . '</a><p>';
+				htmlspecialchars( $this->msg( 'top-fans-monthly-points-link' )->plain() ) . '</a><p>';
 		}
 		if ( $wgUserStatsTrackMonthly ) {
 			$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=weekly' ) ) . '">' .
-				$this->msg( 'top-fans-weekly-points-link' )->plain() . '</a></p>';
+				htmlspecialchars( $this->msg( 'top-fans-weekly-points-link' )->plain() ) . '</a></p>';
 		}
 
 		// Build nav of stats by category based on MediaWiki:Topfans-by-category
@@ -145,7 +145,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 
 		if ( !$message->isDisabled() ) {
 			$output .= '<h1 class="top-title">' .
-				$this->msg( 'top-fans-by-category-nav-header' )->plain() . '</h1>';
+				htmlspecialchars( $this->msg( 'top-fans-by-category-nav-header' )->plain() ) . '</h1>';
 
 			$lines = explode( "\n", $message->text() );
 			foreach ( $lines as $line ) {
@@ -180,7 +180,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 		$output .= '<div class="top-users">';
 
 		foreach ( $user_list as $user ) {
-			$user_name = $lang->truncateForVisual( $user['user_name'], 22 );
+			$user_name = $lang->truncate( $user['user_name'], 22 );
 			$user_title = Title::makeTitle( NS_USER, $user['user_name'] );
 			$avatar = new wAvatar( $user['user_id'], 'm' );
 			$commentIcon = $avatar->getAvatarURL();

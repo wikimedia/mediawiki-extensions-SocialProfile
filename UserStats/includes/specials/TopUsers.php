@@ -73,7 +73,7 @@ class TopUsersPoints extends SpecialPage {
 				// in the top lists.
 				$exists = $user->loadFromId();
 
-				if ( !$user->isBlocked() && $exists && !$user->isBot() ) {
+				if ( $exists && !$user->isBlocked() && !$user->isBot() ) {
 					$user_list[] = [
 						'user_id' => $row->stats_user_id,
 						'user_name' => $row->stats_user_name,
@@ -93,17 +93,17 @@ class TopUsersPoints extends SpecialPage {
 		$recent_title = SpecialPage::getTitleFor( 'TopUsersRecent' );
 
 		$output = '<div class="top-fan-nav">
-			<h1>' . $this->msg( 'top-fans-by-points-nav-header' )->plain() . '</h1>
-			<p><b>' . $this->msg( 'top-fans-total-points-link' )->plain() . '</b></p>';
+			<h1>' . htmlspecialchars( $this->msg( 'top-fans-by-points-nav-header' )->plain() ) . '</h1>
+			<p><b>' . htmlspecialchars( $this->msg( 'top-fans-total-points-link' )->plain() ) . '</b></p>';
 
 		if ( $wgUserStatsTrackWeekly ) {
 			$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=monthly' ) ) . '">' .
-				$this->msg( 'top-fans-monthly-points-link' )->plain() . '</a></p>';
+				htmlspecialchars( $this->msg( 'top-fans-monthly-points-link' )->plain() ) . '</a></p>';
 		}
 
 		if ( $wgUserStatsTrackMonthly ) {
 			$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=weekly' ) ) . '">' .
-				$this->msg( 'top-fans-weekly-points-link' )->plain() . '</a></p>';
+				htmlspecialchars( $this->msg( 'top-fans-weekly-points-link' )->plain() ) . '</a></p>';
 		}
 
 		// Build nav of stats by category based on MediaWiki:Topfans-by-category
@@ -158,9 +158,9 @@ class TopUsersPoints extends SpecialPage {
 			if ( is_array( $wgUserLevels ) ) {
 				$user_level = new UserLevel( number_format( $user['points'] ) );
 				if ( $user_level->getLevelName() != $last_level ) {
-					$output .= "<div class=\"top-fan-row\"><div class=\"top-fan-level\">
-						{$user_level->getLevelName()}
-						</div></div>";
+					$output .= '<div class="top-fan-row"><div class="top-fan-level">
+						' . htmlspecialchars( $user_level->getLevelName() ) . '
+						</div></div>';
 				}
 				$last_level = $user_level->getLevelName();
 			}

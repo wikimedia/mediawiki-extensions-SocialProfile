@@ -78,7 +78,7 @@ class ViewGifts extends SpecialPage {
 		 */
 		if ( $user_id == 0 ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
-			$out->addHTML( $this->msg( 'g-error-message-no-user' )->plain() );
+			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-no-user' )->plain() ) );
 			return false;
 		}
 
@@ -102,7 +102,7 @@ class ViewGifts extends SpecialPage {
 		$out->setPageTitle( $this->msg( 'g-list-title', $rel->user_name )->parse() );
 
 		$output = '<div class="back-links">
-			<a href="' . $user->getFullURL() . '">' .
+			<a href="' . htmlspecialchars( $user->getFullURL() ) . '">' .
 				$this->msg( 'g-back-link', $rel->user_name )->parse() .
 			'</a>
 		</div>
@@ -139,31 +139,32 @@ class ViewGifts extends SpecialPage {
 					'</a>
 					<div class="g-title">
 						<a href="' . htmlspecialchars( $viewGiftLink->getFullURL( 'gift_id=' . $gift['id'] ) ) . '">' .
-							$gift_name_display .
+							htmlspecialchars( $gift_name_display ) .
 						'</a>';
 				if ( $gift['status'] == 1 ) {
 					if ( $user_name == $currentUser->getName() ) {
 						$rel->clearUserGiftStatus( $gift['id'] );
 					}
 					$output .= '<span class="g-new">' .
-						$this->msg( 'g-new' )->plain() .
+						htmlspecialchars( $this->msg( 'g-new' )->plain() ) .
 					'</span>';
 				}
 				$output .= '</div>';
 
 				$output .= '<div class="g-from">' .
+					// FIXME: Message with raw HTML
 					$this->msg( 'g-from', htmlspecialchars( $user_from->getFullURL() ), $gift['user_name_from'] )->text() .
 				'</div>
 					<div class="g-actions">
 						<a href="' . htmlspecialchars( $giveGiftLink->getFullURL( 'gift_id=' . $gift['gift_id'] ) ) . '">' .
-							$this->msg( 'g-to-another' )->plain() .
+							htmlspecialchars( $this->msg( 'g-to-another' )->plain() ) .
 						'</a>';
 				if ( $rel->user_name == $currentUser->getName() ) {
 					$output .= '&#160;';
 					$output .= $this->msg( 'pipe-separator' )->escaped();
 					$output .= '&#160;';
 					$output .= '<a href="' . htmlspecialchars( $removeGiftLink->getFullURL( 'gift_id=' . $gift['id'] ) ) . '">' .
-						$this->msg( 'g-remove-gift' )->plain() . '</a>';
+						htmlspecialchars( $this->msg( 'g-remove-gift' )->plain() ) . '</a>';
 				}
 				$output .= '</div>
 					<div class="visualClear"></div>';
@@ -194,7 +195,7 @@ class ViewGifts extends SpecialPage {
 						'user' => $user_name,
 						'page' => ( $page - 1 )
 					]
-				) . $this->msg( 'word-separator' )->plain();
+				) . htmlspecialchars( $this->msg( 'word-separator' )->plain() );
 			}
 
 			if ( ( $total % $per_page ) != 0 ) {
@@ -224,7 +225,7 @@ class ViewGifts extends SpecialPage {
 			}
 
 			if ( ( $total - ( $per_page * $page ) ) > 0 ) {
-				$output .= $this->msg( 'word-separator' )->plain() .
+				$output .= htmlspecialchars( $this->msg( 'word-separator' )->plain() ) .
 					$linkRenderer->makeLink(
 						$pageLink,
 						$this->msg( 'g-next' )->plain(),

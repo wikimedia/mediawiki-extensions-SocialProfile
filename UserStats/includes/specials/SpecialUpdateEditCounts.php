@@ -60,7 +60,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 				[ 'stats_user_id' => $row->rev_user ],
 				__METHOD__
 			);
-			if ( !$s->stats_user_id || $s === false ) {
+			if ( $s === false || !$s->stats_user_id ) {
 				$dbw->insert(
 					'user_stats',
 					[

@@ -100,7 +100,7 @@ class UserHome extends SpecialPage {
 		$filterMsg = $this->msg( 'useractivity-friendsactivity-filter' );
 		if ( !$filterMsg->isDisabled() ) {
 			$output .= '<div class="user-home-links-container">
-			<h2>' . $this->msg( 'useractivity-filter' )->plain() . '</h2>
+			<h2>' . htmlspecialchars( $this->msg( 'useractivity-filter' )->plain() ) . '</h2>
 			<div class="user-home-links">';
 
 			$lines = explode( "\n", $filterMsg->inContentLanguage()->text() );
@@ -118,6 +118,8 @@ class UserHome extends SpecialPage {
 					$linkMsgObj = $this->msg( $link_text );
 					if ( !$linkMsgObj->isDisabled() ) {
 						$link_text = $linkMsgObj->parse();
+					} else {
+						$link_text = htmlspecialchars( $link_text );
 					}
 
 					$link_image = $line[2];
@@ -125,7 +127,7 @@ class UserHome extends SpecialPage {
 					$activityFilterIcon = new UserActivityIcon( $link_image );
 					$filterIcon = $activityFilterIcon->getIconHTML();
 
-					$output .= '<a href="' . htmlspecialchars( $pageTitle->getFullURL( "item_type={$filter}" ) ) .
+					$output .= '<a href="' . htmlspecialchars( $pageTitle->getFullURL( [ 'item_type' => $filter ] ) ) .
 						"\">{$filterIcon}{$link_text}</a>";
 
 				}

@@ -39,14 +39,14 @@ class RemoveGift extends UnlistedSpecialPage {
 		// Make sure that we have a gift ID, can't do anything without that
 		if ( !$this->gift_id || !is_numeric( $this->gift_id ) ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
-			$out->addHTML( $this->msg( 'g-error-message-invalid-link' )->plain() );
+			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-invalid-link' )->plain() ) );
 			return false;
 		}
 
 		// And also ensure that we're not trying to delete *someone else's* gift(s)...
 		if ( $rel->doesUserOwnGift( $user->getId(), $this->gift_id ) == false ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
-			$out->addHTML( $this->msg( 'g-error-do-not-own' )->plain() );
+			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-do-not-own' )->plain() ) );
 			return false;
 		}
 
@@ -71,12 +71,12 @@ class RemoveGift extends UnlistedSpecialPage {
 					$this->msg( 'g-back-link', $gift['user_name_to'] )->parse() . '</a>
 			</div>
 			<div class="g-container">' .
-				$gift_image . $this->msg( 'g-remove-success-message', $gift['name'] )->parse() .
+				$icon . $this->msg( 'g-remove-success-message', $gift['name'] )->parse() .
 				'<div class="visualClear"></div>
 			</div>
 			<div class="g-buttons">
-				<input type="button" class="site-button" value="' . $this->msg( 'mainpage' )->plain() . '" size="20" onclick="window.location=\'index.php?title=' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '\'" />
-				<input type="button" class="site-button" value="' . $this->msg( 'g-your-profile' )->plain() . '" size="20" onclick="window.location=\'' . htmlspecialchars( $user_page_link->getFullURL() ) . '\'" />
+				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'mainpage' )->plain() ) . '" size="20" onclick="window.location=\'index.php?title=' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '\'" />
+				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'g-your-profile' )->plain() ) . '" size="20" onclick="window.location=\'' . htmlspecialchars( $user_page_link->getFullURL() ) . '\'" />
 			</div>';
 
 			$out->addHTML( $html );
@@ -111,23 +111,24 @@ class RemoveGift extends UnlistedSpecialPage {
 			'</div>
 			<div class="g-container">' .
 				$icon .
-				'<div class="g-name">' . $gift['name'] . '</div>
+				'<div class="g-name">' . htmlspecialchars( $gift['name'] ) . '</div>
 				<div class="g-from">' .
+					// FIXME: This message uses raw html
 					$this->msg(
 						'g-from',
 						htmlspecialchars( $user->getFullURL() ),
-						$gift['user_name_from']
+						htmlspecialchars( $gift['user_name_from'] )
 					)->text() . '</div>';
 		if ( $gift['message'] ) {
 			$output .= '<div class="g-user-message">' .
-				$gift['message'] . '</div>';
+				htmlspecialchars( $gift['message'] ) . '</div>';
 		}
 		$output .= '</div>
 			<div class="visualClear"></div>
 			<div class="g-buttons">' .
 				Html::hidden( 'user', $gift['user_name_from'] ) .
-				'<input type="button" class="site-button" value="' . $this->msg( 'g-remove' )->plain() . '" size="20" onclick="document.form1.submit()" />
-				<input type="button" class="site-button" value="' . $this->msg( 'cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
+				'<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'g-remove' )->plain() ) . '" size="20" onclick="document.form1.submit()" />
+				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'cancel' )->plain() ) . '" size="20" onclick="history.go(-1)" />
 			</div>
 		</form>';
 

@@ -67,7 +67,7 @@ class GiftManager extends SpecialPage {
 				);
 				$out->addHTML(
 					'<span class="view-status">' .
-					$this->msg( 'giftmanager-giftcreated' )->plain() .
+					htmlspecialchars( $this->msg( 'giftmanager-giftcreated' )->plain() ) .
 					'</span><br /><br />'
 				);
 			} else {
@@ -80,7 +80,7 @@ class GiftManager extends SpecialPage {
 				);
 				$out->addHTML(
 					'<span class="view-status">' .
-					$this->msg( 'giftmanager-giftsaved' )->plain() .
+					htmlspecialchars( $this->msg( 'giftmanager-giftsaved' )->plain() ) .
 					'</span><br /><br />'
 				);
 			}
@@ -97,7 +97,7 @@ class GiftManager extends SpecialPage {
 					$out->addHTML(
 						'<div><b><a href="' .
 						htmlspecialchars( $this->getPageTitle()->getFullURL( 'method=edit' ) ) .
-						'">' . $this->msg( 'giftmanager-addgift' )->plain() .
+						'">' . htmlspecialchars( $this->msg( 'giftmanager-addgift' )->plain() ) .
 						'</a></b></div>'
 					);
 				}
@@ -206,12 +206,12 @@ class GiftManager extends SpecialPage {
 					$deleteLink = '<a href="' .
 						htmlspecialchars( SpecialPage::getTitleFor( 'RemoveMasterGift' )->getFullURL( "gift_id={$gift['id']}" ) ) .
 						'" style="font-size:10px; color:red;">' .
-						$this->msg( 'delete' )->plain() . '</a>';
+						htmlspecialchars( $this->msg( 'delete' )->plain() ) . '</a>';
 				}
 
 				$output .= '<div class="Item">
 				<a href="' . htmlspecialchars( $this->getPageTitle()->getFullURL( "id={$gift['id']}" ) ) . '">' .
-					$gift['gift_name'] . '</a> ' .
+					htmlspecialchars( $gift['gift_name'] ) . '</a> ' .
 					$deleteLink . "</div>\n";
 			}
 		}
@@ -226,7 +226,7 @@ class GiftManager extends SpecialPage {
 		}
 
 		$form = '<div><b><a href="' . htmlspecialchars( $this->getPageTitle()->getFullURL() ) .
-			'">' . $this->msg( 'giftmanager-view' )->plain() . '</a></b></div>';
+			'">' . htmlspecialchars( $this->msg( 'giftmanager-view' )->plain() ) . '</a></b></div>';
 
 		if ( $gift_id ) {
 			$gift = Gifts::getGift( $gift_id );
@@ -244,14 +244,14 @@ class GiftManager extends SpecialPage {
 		$form .= '<form action="" method="post" enctype="multipart/form-data" name="gift">';
 		$form .= '<table border="0" cellpadding="5" cellspacing="0" width="500">';
 		$form .= '<tr>
-		<td width="200" class="view-form">' . $this->msg( 'g-gift-name' )->plain() . '</td>
+		<td width="200" class="view-form">' . htmlspecialchars( $this->msg( 'g-gift-name' )->plain() ) . '</td>
 		<td width="695"><input type="text" size="45" class="createbox" name="gift_name" value="' .
-			( isset( $gift['gift_name'] ) ? $gift['gift_name'] : '' ) . '"/></td>
+			( isset( $gift['gift_name'] ) ? htmlspecialchars( $gift['gift_name'] ) : '' ) . '"/></td>
 		</tr>
 		<tr>
-		<td width="200" class="view-form" valign="top">' . $this->msg( 'giftmanager-description' )->plain() . '</td>
+		<td width="200" class="view-form" valign="top">' . htmlspecialchars( $this->msg( 'giftmanager-description' )->plain() ) . '</td>
 		<td width="695"><textarea class="createbox" name="gift_description" rows="2" cols="30">' .
-			( isset( $gift['gift_description'] ) ? $gift['gift_description'] : '' ) . '</textarea></td>
+			( isset( $gift['gift_description'] ) ? htmlspecialchars( $gift['gift_description'] ) : '' ) . '</textarea></td>
 		</tr>';
 		if ( $gift_id ) {
 			$creator = Title::makeTitle( NS_USER, $gift['creator_user_name'] );
@@ -260,7 +260,7 @@ class GiftManager extends SpecialPage {
 				$this->msg( 'g-created-by', $gift['creator_user_name'] )->parse() .
 			'</td>
 			<td><a href="' . htmlspecialchars( $creator->getFullURL() ) . '">' .
-				$gift['creator_user_name'] . '</a></td>
+				htmlspecialchars( $gift['creator_user_name'] ) . '</a></td>
 			</tr>';
 		}
 
@@ -277,14 +277,14 @@ class GiftManager extends SpecialPage {
 				$privateSelected = ' selected="selected"';
 			}
 			$form .= '<tr>
-				<td class="view-form">' . $this->msg( 'giftmanager-access' )->plain() . '</td>
+				<td class="view-form">' . htmlspecialchars( $this->msg( 'giftmanager-access' )->plain() ) . '</td>
 				<td>
 				<select name="access">
 					<option value="0"' . $publicSelected . '>' .
-						$this->msg( 'giftmanager-public' )->plain() .
+						htmlspecialchars( $this->msg( 'giftmanager-public' )->plain() ) .
 					'</option>
 					<option value="1"' . $privateSelected . '>' .
-						$this->msg( 'giftmanager-private' )->plain() .
+						htmlspecialchars( $this->msg( 'giftmanager-private' )->plain() ) .
 					'</option>
 				</select>
 				</td>
@@ -297,11 +297,11 @@ class GiftManager extends SpecialPage {
 			$icon = $userGiftIcon->getIconHTML();
 
 			$form .= '<tr>
-			<td width="200" class="view-form" valign="top">' . $this->msg( 'giftmanager-giftimage' )->plain() . '</td>
+			<td width="200" class="view-form" valign="top">' . htmlspecialchars( $this->msg( 'giftmanager-giftimage' )->plain() ) . '</td>
 			<td width="695">' . $icon .
 			'<p>
 			<a href="' . htmlspecialchars( $gml->getFullURL( 'gift_id=' . $gift_id ) ) . '">' .
-				$this->msg( 'giftmanager-image' )->plain() . '</a>
+				htmlspecialchars( $this->msg( 'giftmanager-image' )->plain() ) . '</a>
 			</td>
 			</tr>';
 		}
@@ -315,8 +315,8 @@ class GiftManager extends SpecialPage {
 		$form .= '<tr>
 			<td colspan="2">
 				<input type="hidden" name="id" value="' . ( isset( $gift['gift_id'] ) ? $gift['gift_id'] : '' ) . '" />
-				<input type="button" class="createbox" value="' . $button . '" size="20" onclick="document.gift.submit()" />
-				<input type="button" class="createbox" value="' . $this->msg( 'cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
+				<input type="button" class="createbox" value="' . htmlspecialchars( $button ) . '" size="20" onclick="document.gift.submit()" />
+				<input type="button" class="createbox" value="' . htmlspecialchars( $this->msg( 'cancel' )->plain() ) . '" size="20" onclick="history.go(-1)" />
 			</td>
 		</tr>
 		</table>

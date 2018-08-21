@@ -456,13 +456,13 @@ class UserActivity {
 			$view_gift_link = SpecialPage::getTitleFor( 'ViewGift' );
 
 			$html = wfMessage( 'useractivity-gift',
-				'<b><a href="' . htmlspecialchars( $user_title->getFullURL() ) . "\">{$row->ug_user_name_to}</a></b>",
-				'<a href="' . htmlspecialchars( $user_title_from->getFullURL() ) . "\">{$user_title_from->getText()}</a>"
+				'<b><a href="' . htmlspecialchars( $user_title->getFullURL() ) . "\">" . htmlspecialchars( $row->ug_user_name_to ) . "</a></b>",
+				'<a href="' . htmlspecialchars( $user_title_from->getFullURL() ) . "\">" . htmlspecialchars( $user_title_from->getText() ) . "</a>"
 			)->text() .
 			"<div class=\"item\">
 				<a href=\"" . htmlspecialchars( $view_gift_link->getFullURL( 'gift_id=' . $row->ug_id ) ) . "\" rel=\"nofollow\">
 					{$icon}
-					{$row->gift_name}
+					" . htmlspecialchars( $row->gift_name ) . "
 				</a>
 			</div>";
 
@@ -546,15 +546,13 @@ class UserActivity {
 
 			$system_gift_link = SpecialPage::getTitleFor( 'ViewSystemGift' );
 
-			$html = wfMessage(
-				'useractivity-award',
-				'<b><a href="' . htmlspecialchars( $user_title->getFullURL() ) . "\">{$row->sg_user_name}</a></b>",
-				$row->sg_user_name
-			)->text() .
+			$html = wfMessage( 'useractivity-award' )->rawParams(
+				'<b><a href="' . htmlspecialchars( $user_title->getFullURL() ) . "\">" . htmlspecialchars( $row->sg_user_name ) . "</a></b>",
+				htmlspecialchars( $row->sg_user_name ) )->escaped() .
 			'<div class="item">
 				<a href="' . htmlspecialchars( $system_gift_link->getFullURL( 'gift_id=' . $row->sg_id ) ) . "\" rel=\"nofollow\">
 					{$icon}
-					{$row->gift_name}
+					" . htmlspecialchars( $row->gift_name ) . "
 				</a>
 			</div>";
 
@@ -729,8 +727,8 @@ class UserActivity {
 				continue;
 			}
 
-			$to = stripslashes( $row->ub_user_name );
-			$from = stripslashes( $row->ub_user_name_from );
+			$to = $row->ub_user_name;
+			$from = $row->ub_user_name_from;
 			$unixTS = wfTimestamp( TS_UNIX, $row->ub_date );
 
 			$this->items_grouped['user_message'][$to]['users'][$from][] = [
@@ -817,13 +815,13 @@ class UserActivity {
 
 		foreach ( $res as $row ) {
 			$user_title = Title::makeTitle( NS_USER, $row->um_user_name );
-			$user_name_short = $wgLang->truncateForVisual( $row->um_user_name, 15 );
+			$user_name_short = htmlspecialchars( $wgLang->truncateForVisual( $row->um_user_name, 15 ) );
 			$unixTS = wfTimestamp( TS_UNIX, $row->um_date );
 
 			$this->activityLines[] = [
 				'type' => 'system_message',
 				'timestamp' => $unixTS,
-				'data' => ' ' . '<b><a href="' . htmlspecialchars( $user_title->getFullURL() ) . "\">{$user_name_short}</a></b> {$row->um_message}"
+				'data' => ' <b><a href="' . htmlspecialchars( $user_title->getFullURL() ) . "\">{$user_name_short}</a></b> " . htmlspecialchars( $row->um_message )
 			];
 
 			$this->items[] = [
@@ -834,7 +832,7 @@ class UserActivity {
 				'namespace' => '',
 				'username' => $row->um_user_name,
 				'userid' => $row->um_user_id,
-				'comment' => $row->um_message,
+				'comment' => $this->fixItemComment( $row->um_message ),
 				'new' => '0',
 				'minor' => 0
 			];
@@ -913,7 +911,7 @@ class UserActivity {
 				'namespace' => '',
 				'username' => $row->us_user_name,
 				'userid' => $row->us_user_id,
-				'comment' => $row->us_text,
+				'comment' => $this->fixItemComment( $row->us_text ),
 				'sport_id' => $row->us_sport_id,
 				'team_id' => $row->us_team_id,
 				'network' => $network_name
@@ -930,20 +928,21 @@ class UserActivity {
 				ENT_QUOTES
 			);
 
-			$page_link = '<a href="' . $sportsNetworkURL . "\" rel=\"nofollow\">{$network_name}</a>";
+			$page_link = '<a href="' . $sportsNetworkURL . "\" rel=\"nofollow\">" . htmlspecialchars( $network_name ) . "</a>";
 			$network_image = SportsTeams::getLogo( $row->us_sport_id, $row->us_team_id, 's' );
 
+			// FIXME: This message uses raw HTML
 			$html = wfMessage(
 				'useractivity-network-thought',
-				$row->us_user_name,
-				$user_name_short,
+				htmlspecialchars( $row->us_user_name ),
+				htmlspecialchars( $user_name_short ),
 				$page_link,
 				htmlspecialchars( $user_title->getFullURL() )
 			)->text() .
 					'<div class="item">
 						<a href="' . $sportsNetworkURL . "\" rel=\"nofollow\">
 							{$network_image}
-							\"{$row->us_text}\"
+							\"" . htmlspecialchars( $row->us_text ) . "\"
 						</a>
 					</div>";
 
@@ -1112,14 +1111,14 @@ class UserActivity {
 				if ( $has_page && !isset( $this->displayed[$type][$page_name] ) ) {
 					$this->displayed[$type][$page_name] = 1;
 
-					$pages .= ' <a href="' . htmlspecialchars( $page_title->getFullURL() ) . "\">{$page_name}</a>";
+					$pages .= ' <a href="' . htmlspecialchars( $page_title->getFullURL() ) . "\">" . htmlspecialchars( $page_name ) . "</a>";
 					if ( $count_users == 1 && $count_actions > 1 ) {
-						$pages .= wfMessage( 'word-separator' )->text();
-						$pages .= wfMessage( 'parentheses', wfMessage(
+						$pages .= wfMessage( 'word-separator' )->escaped();
+						$pages .= wfMessage( 'parentheses' )->rawParams( wfMessage(
 							"useractivity-group-{$type}",
 							$count_actions,
 							$user_name
-						)->text() )->text();
+						)->escaped() )->escaped();
 					}
 					$pages_count++;
 				}
@@ -1150,12 +1149,15 @@ class UserActivity {
 										$pages .= ', ';
 									}
 									if ( $page_title2 instanceof Title ) {
-										$pages .= ' <a href="' . htmlspecialchars( $page_title2->getFullURL() ) . "\">{$page_name2}</a>";
+										$pages .= ' <a href="' . htmlspecialchars( $page_title2->getFullURL() ) . '">' . htmlspecialchars( $page_name2 ) . '</a>';
 									}
 									if ( $count_actions2 > 1 ) {
-										$pages .= ' (' . wfMessage(
-											"useractivity-group-{$type}", $count_actions2
-										)->text() . ')';
+										$pages .= wfMessage( 'word-separator' )->escaped();
+										$pages .= wfMessage( 'parentheses' )->rawParams( wfMessage(
+											"useractivity-group-{$type}",
+											$count_actions2,
+											$user_name
+										)->escaped() )->escaped();
 									}
 									$pages_count++;
 
@@ -1169,14 +1171,14 @@ class UserActivity {
 				$user_index++;
 
 				if ( $users && $count_users > 2 ) {
-					$users .= wfMessage( 'comma-separator' )->text();
+					$users .= wfMessage( 'comma-separator' )->escaped();
 				}
 				if ( $user_index == $count_users && $count_users > 1 ) {
-					$users .= wfMessage( 'and' )->text();
+					$users .= wfMessage( 'and' )->escaped();
 				}
 
 				$user_title = Title::makeTitle( NS_USER, $user_name );
-				$user_name_short = $wgLang->truncateForVisual( $user_name, 15 );
+				$user_name_short = htmlspecialchars( $wgLang->truncateForVisual( $user_name, 15 ) );
 
 				$safeTitle = htmlspecialchars( $user_title->getText() );
 				$users .= ' <b><a href="' . htmlspecialchars( $user_title->getFullURL() ) . "\" title=\"{$safeTitle}\">{$user_name_short}</a></b>";
@@ -1185,11 +1187,12 @@ class UserActivity {
 				$this->activityLines[] = [
 					'type' => $type,
 					'timestamp' => $page_data['timestamp'],
-					'data' => wfMessage(
-						"useractivity-{$type}",
+					'data' => wfMessage( "useractivity-{$type}" )->rawParams(
 						$users, $count_users, $pages, $pages_count,
+						// $userNameForGender is not sanitized, but this parameter
+						// is expected to be used for gender only
 						$userNameForGender
-					)->text()
+					)->escaped()
 				];
 			}
 		}
@@ -1232,8 +1235,7 @@ class UserActivity {
 	/**
 	 * "Fixes" a comment (such as a recent changes edit summary) by converting
 	 * certain characters (such as the ampersand) into their encoded
-	 * equivalents and, if necessary, truncates the comment and finally applies
-	 * stripslashes() to the comment.
+	 * equivalents and, if necessary, truncates the comment
 	 *
 	 * @param string $comment Comment to "fix"
 	 * @return string "Fixed" comment
@@ -1242,14 +1244,9 @@ class UserActivity {
 		global $wgLang;
 		if ( !$comment ) {
 			return '';
-		} else {
-			$comment = str_replace( '<', '&lt;', $comment );
-			$comment = str_replace( '>', '&gt;', $comment );
-			$comment = str_replace( '&', '%26', $comment );
-			$comment = str_replace( '%26quot;', '"', $comment );
 		}
 		$preview = $wgLang->truncateForVisual( $comment, 75 );
-		return stripslashes( $preview );
+		return htmlspecialchars( $preview );
 	}
 
 	/**

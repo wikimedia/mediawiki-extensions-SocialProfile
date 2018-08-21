@@ -154,7 +154,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		}
 		$end = $start + ( count( $ub_messages ) ) - 1;
 
-		if ( $currentUser->getName() != $user_name ) {
+		if ( $currentUser->getId() != 0 && $currentUser->getName() != $user_name ) {
 			$board_to_board = '<a href="' .
 				htmlspecialchars(
 					SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [
@@ -164,7 +164,7 @@ class SpecialViewUserBoard extends SpecialPage {
 					ENT_QUOTES
 				)
 				. '">' .
-				$this->msg( 'userboard_boardtoboard' )->plain() . '</a>';
+				htmlspecialchars( $this->msg( 'userboard_boardtoboard' )->plain() ) . '</a>';
 		}
 
 		if ( $total ) {
@@ -225,16 +225,16 @@ class SpecialViewUserBoard extends SpecialPage {
 			}
 
 			if ( ( $total - ( $per_page * $page ) ) > 0 ) {
-				$output .= $this->msg( 'word-separator' )->plain() .
+				$output .= htmlspecialchars( $this->msg( 'word-separator' )->plain() ) .
 					$linkRenderer->makeLink(
-					$this->getPageTitle(),
-					$this->msg( 'next' )->plain(),
-					[],
-					[
-						'user' => $user_name,
-						'page' => ( $page + 1 )
-					] + $qs
-				);
+						$this->getPageTitle(),
+						$this->msg( 'next' )->plain(),
+						[],
+						[
+							'user' => $user_name,
+							'page' => ( $page + 1 )
+						] + $qs
+					);
 			}
 			$output .= '</div><p>';
 		}
@@ -268,16 +268,16 @@ class SpecialViewUserBoard extends SpecialPage {
 				$output .= '<div class="user-page-message-form">
 					<input type="hidden" id="user_name_to" name="user_name_to" value="' . $user_name_to . '"/>
 					<input type="hidden" id="user_name_from" name="user_name_from" value="' . $user_name_from . '"/>
-					<span class="user-board-message-type">' . $this->msg( 'userboard_messagetype' )->plain() . ' </span>
+					<span class="user-board-message-type">' . htmlspecialchars( $this->msg( 'userboard_messagetype' )->plain() ) . ' </span>
 					<select id="message_type">
-						<option value="0">' . $this->msg( 'userboard_public' )->plain() . '</option>
-						<option value="1">' . $this->msg( 'userboard_private' )->plain() . '</option>
+						<option value="0">' . htmlspecialchars( $this->msg( 'userboard_public' )->plain() ) . '</option>
+						<option value="1">' . htmlspecialchars( $this->msg( 'userboard_private' )->plain() ) . '</option>
 					</select>
 					<p>
 					<textarea name="message" id="message" cols="63" rows="4"></textarea>
 
 					<div class="user-page-message-box-button">
-						<input type="button" value="' . $this->msg( 'userboard_sendbutton' )->plain() . '" class="site-button" data-per-page="' . $per_page . '" />
+						<input type="button" value="' . htmlspecialchars( $this->msg( 'userboard_sendbutton' )->plain() ) . '" class="site-button" data-per-page="' . $per_page . '" />
 					</div>
 
 				</div>';
@@ -303,28 +303,29 @@ class SpecialViewUserBoard extends SpecialPage {
 				$delete_link = '';
 
 				if ( $currentUser->getName() != $ub_message['user_name_from'] ) {
-					$board_to_board = '<a href="' .
-						htmlspecialchars(
-							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [
-								'user' => $user_name,
-								'conv' => $ub_message['user_name_from']
-							] ),
-							ENT_QUOTES
-						) . '">' .
-						$this->msg( 'userboard_boardtoboard' )->plain() . '</a>';
+					// Prevent logged-out views from getting a board to board with 127.0.0.1
+					// And also board to board with self
+					if ( $currentUser->getId() != 0 && $user_name != $ub_message['user_name_from'] ) {
+						$board_to_board = '<a href="' .
+							htmlspecialchars(
+								SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [
+									'user' => $user_name,
+									'conv' => $ub_message['user_name_from']
+								] )
+							) . '">' .
+							htmlspecialchars( $this->msg( 'userboard_boardtoboard' )->plain() ) . '</a>';
+					}
 					$board_link = '<a href="' .
 						htmlspecialchars(
-							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $ub_message['user_name_from'] ] ),
-							ENT_QUOTES
+							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $ub_message['user_name_from'] ] )
 						) . '">' .
 						$this->msg( 'userboard_sendmessage', $ub_message['user_name_from'] )->parse() . '</a>';
 				} else {
 					$board_link = '<a href="' .
 						htmlspecialchars(
-							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $ub_message['user_name_from'] ] ),
-							ENT_QUOTES
+							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $ub_message['user_name_from'] ] )
 						) . '">' .
-						$this->msg( 'userboard_myboard' )->plain() . '</a>';
+						htmlspecialchars( $this->msg( 'userboard_myboard' )->plain() ) . '</a>';
 				}
 
 				// If the user owns this private message or they are allowed to
@@ -335,13 +336,13 @@ class SpecialViewUserBoard extends SpecialPage {
 				) {
 					$delete_link = "<span class=\"user-board-red\">
 						<a href=\"javascript:void(0);\" data-message-id=\"{$ub_message['id']}\">" .
-							$this->msg( 'delete' )->plain() . '</a>
+							htmlspecialchars( $this->msg( 'delete' )->plain() ) . '</a>
 					</span>';
 				}
 
 				// Mark private messages as such
 				if ( $ub_message['type'] == 1 ) {
-					$ub_message_type_label = '(' . $this->msg( 'userboard_private' )->plain() . ')';
+					$ub_message_type_label = '(' . htmlspecialchars( $this->msg( 'userboard_private' )->plain() ) . ')';
 				}
 
 				// had global function to cut link text if too long and no breaks
@@ -352,7 +353,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				$senderTitle = htmlspecialchars( $ub_message['user_name_from'] );
 				$output .= "<div class=\"user-board-message\">
 					<div class=\"user-board-message-from\">
-						<a href=\"{$userPageURL}\" title=\"{$senderTitle}\">{$ub_message['user_name_from']} </a> {$ub_message_type_label}
+						<a href=\"{$userPageURL}\" title=\"{$senderTitle}\">{$senderTitle} </a> {$ub_message_type_label}
 					</div>
 					<div class=\"user-board-message-time\">"
 						. $this->msg( 'userboard_posted_ago', $b->getTimeAgo( $ub_message['timestamp'] ) )->parse() .

@@ -23,9 +23,6 @@ class UserBoard {
 	public function sendBoardMessage( $user_id_from, $user_name_from, $user_id_to, $user_name_to, $message, $message_type = 0 ) {
 		$dbw = wfGetDB( DB_MASTER );
 
-		$user_name_from = stripslashes( $user_name_from );
-		$user_name_to = stripslashes( $user_name_to );
-
 		$dbw->insert(
 			'user_board',
 			[
@@ -297,15 +294,13 @@ class UserBoard {
 							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [
 								'user' => $message['user_name'],
 								'conv' => $message['user_name_from']
-							] ),
-							ENT_QUOTES
+							] )
 						)
 						. '">' .
 						wfMessage( 'userboard_board-to-board' )->plain() . '</a>';
 					$board_link = '<a href="' .
 						htmlspecialchars(
-							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $message['user_name_from'] ] ),
-							ENT_QUOTES
+							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $message['user_name_from'] ] )
 						) . '">' .
 						wfMessage( 'userboard_sendmessage', $message['user_name_from'] )->parse() . '</a>';
 				}
@@ -326,7 +321,7 @@ class UserBoard {
 				$senderTitle = htmlspecialchars( $message['user_name_from'] );
 				$output .= "<div class=\"user-board-message\">
 					<div class=\"user-board-message-from\">
-					<a href=\"{$sender}\" title=\"{$senderTitle}\">{$message['user_name_from']}</a> {$message_type_label}
+					<a href=\"{$sender}\" title=\"{$senderTitle}\">{$senderTitle}</a> {$message_type_label}
 					</div>
 					<div class=\"user-board-message-time\">" .
 						wfMessage( 'userboard_posted_ago', $this->getTimeAgo( $message['timestamp'] ) )->parse() .

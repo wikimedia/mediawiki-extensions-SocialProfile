@@ -192,11 +192,11 @@ class UserGifts {
 	 * Gets the user gift with the ID = $id.
 	 *
 	 * @param int $id Gift ID number
-	 * @return array Array containing gift info, such as its ID, sender, etc.
+	 * @return array|false Array containing gift info, such as its ID, sender, etc.
 	 */
 	static function getUserGift( $id ) {
 		if ( !is_numeric( $id ) ) {
-			return '';
+			return false;
 		}
 
 		$dbr = wfGetDB( DB_REPLICA );
@@ -214,20 +214,23 @@ class UserGifts {
 			[ 'gift' => [ 'INNER JOIN', 'ug_gift_id = gift_id' ] ]
 		);
 		$row = $dbr->fetchObject( $res );
-		if ( $row ) {
-			$gift['id'] = $row->ug_id;
-			$gift['user_id_from'] = $row->ug_user_id_from;
-			$gift['user_name_from'] = $row->ug_user_name_from;
-			$gift['user_id_to'] = $row->ug_user_id_to;
-			$gift['user_name_to'] = $row->ug_user_name_to;
-			$gift['message'] = $row->ug_message;
-			$gift['gift_count'] = $row->gift_given_count;
-			$gift['timestamp'] = $row->ug_date;
-			$gift['gift_id'] = $row->gift_id;
-			$gift['name'] = $row->gift_name;
-			$gift['description'] = $row->gift_description;
-			$gift['status'] = $row->ug_status;
+		if ( !$row ) {
+			return false;
 		}
+
+		$gift = [];
+		$gift['id'] = $row->ug_id;
+		$gift['user_id_from'] = $row->ug_user_id_from;
+		$gift['user_name_from'] = $row->ug_user_name_from;
+		$gift['user_id_to'] = $row->ug_user_id_to;
+		$gift['user_name_to'] = $row->ug_user_name_to;
+		$gift['message'] = $row->ug_message;
+		$gift['gift_count'] = $row->gift_given_count;
+		$gift['timestamp'] = $row->ug_date;
+		$gift['gift_id'] = $row->gift_id;
+		$gift['name'] = $row->gift_name;
+		$gift['description'] = $row->gift_description;
+		$gift['status'] = $row->ug_status;
 
 		return $gift;
 	}

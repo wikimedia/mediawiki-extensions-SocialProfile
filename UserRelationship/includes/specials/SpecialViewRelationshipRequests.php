@@ -73,7 +73,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 				$request->getVal( 'message' )
 			);
 			$output = '<br /><span class="title">' .
-				$this->msg( 'ur-already-submitted' )->plain() .
+				htmlspecialchars( $this->msg( 'ur-already-submitted' )->plain() ) .
 				'</span><br /><br />';
 			$out->addHTML( $output );
 		} else {
@@ -91,12 +91,14 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 					$avatar_img = $avatar->getAvatarURL();
 
 					if ( $request['type'] == 'Foe' ) {
+						// FIXME: Message should be escaped, but uses raw HTML
 						$msg = $this->msg(
 							'ur-requests-message-foe',
 							htmlspecialchars( $user_from->getFullURL() ),
 							$request['user_name_from']
 						)->text();
 					} else {
+						// FIXME: Message should be escaped, but uses raw HTML
 						$msg = $this->msg(
 							'ur-requests-message-friend',
 							htmlspecialchars( $user_from->getFullURL() ),
@@ -113,8 +115,8 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 					}
 					$output .= '<div class="visualClear"></div>
 						<div class="relationship-buttons">
-							<input type="button" class="site-button" value="' . $this->msg( 'ur-accept' )->plain() . '" data-response="1" />
-							<input type="button" class="site-button" value="' . $this->msg( 'ur-reject' )->plain() . '" data-response="-1" />
+							<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'ur-accept' )->plain() ) . '" data-response="1" />
+							<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'ur-reject' )->plain() ) . '" data-response="-1" />
 						</div>
 					</div>';
 				}

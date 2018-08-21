@@ -10,14 +10,12 @@ var UserBoard = {
 			sender = document.getElementById( 'user_name_from' ).value;
 		if ( message && !UserBoard.posted ) {
 			UserBoard.posted = 1;
-			var encodedName = encodeURIComponent( recipient ),
-				encodedMsg = encodeURIComponent( message ),
-				messageType = document.getElementById( 'message_type' ).value;
+			var messageType = document.getElementById( 'message_type' ).value;
 			( new mw.Api() ).postWithToken( 'edit', {
 				action: 'socialprofile-send-message',
 				format: 'json',
-				username: encodedName,
-				message: encodedMsg,
+				username: recipient,
+				message: message,
 				type: messageType
 			} ).done( function() {
 				UserBoard.posted = 0;
@@ -29,8 +27,8 @@ var UserBoard = {
 					user_1 = recipient;
 					user_2 = '';
 				}
-				var params = ( user_2 ) ? '&conv=' + user_2 : '';
-				var url = mediaWiki.config.get( 'wgScriptPath' ) + '/index.php?title=Special:UserBoard&user=' + user_1 + params;
+				var params = ( user_2 ) ? '&conv=' + encodeURIComponent( user_2 ) : '';
+				var url = mediaWiki.config.get( 'wgScriptPath' ) + '/index.php?title=Special:UserBoard&user=' + encodeURIComponent( user_1 ) + params;
 				window.location = url;
 			} );
 		}
