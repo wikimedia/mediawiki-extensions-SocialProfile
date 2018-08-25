@@ -42,8 +42,6 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();
-		$out->setHTMLTitle( $this->msg( 'pagetitle',
-			$this->msg( 'edit-profiles-title' )->plain() )->parse() );
 
 		// Add CSS & JS
 		$out->addModuleStyles( [
@@ -115,6 +113,14 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		$out->addHTML( $this->displayBasicForm( $target ) );
 		$out->addHTML( $this->displayPersonalForm( $target ) );
 		$out->addHTML( $this->displayCustomForm( $target ) );
+
+		// Set the page title *once again* here
+		// Needed because display*Form() functions can and do override our title so
+		// if we don't do this here, the page title ends up being something like
+		// "Other information" and the HTML title ends up being "Tidbits"
+		$out->setPageTitle( $this->msg( 'editprofile' ) );
+		$out->setHTMLTitle( $this->msg( 'pagetitle',
+			$this->msg( 'edit-profiles-title' )->plain() )->parse() );
 	}
 
 	function createUserInputForm() {
