@@ -3,6 +3,8 @@
  * Displays the "State" dropdown menu if selected country is the United States
  */
 /*jshint unused:false*/
+( function ( mw, $ ) {
+
 var countries = [];
 countries[0] = {
 	country: 'United States',
@@ -43,25 +45,32 @@ function displaySection( id, country, section ) {
 	document.getElementById( id + '_form' ).innerHTML = section_select;
 }
 
-jQuery( function( jQuery ) {
-	jQuery( '#birthday' ).datepicker( {
+$( function() {
+	$( '#birthday' ).datepicker( {
 		changeYear: true,
 		yearRange: '1930:c',
-		dateFormat: jQuery( '#birthday' ).hasClass( 'long-birthday' ) ? 'mm/dd/yy' : 'mm/dd'
-	} );
-} );
-
-$( function() {
-	// US state selector
-	displaySection( 'location_state', $( '#location_country' ).val(), $( '#location_state_current' ).val() );
-	$( '#location_country' ).on( 'change', function () {
-		displaySection( 'location_state', this.value, '' );
+		dateFormat: $( '#birthday' ).hasClass( 'long-birthday' ) ? 'mm/dd/yy' : 'mm/dd'
 	} );
 
-	displaySection( 'hometown_state', $( '#hometown_country' ).val(), $( '#hometown_state_current' ).val() );
-	$( '#hometown_country' ).on( 'change', function () {
-		displaySection( 'hometown_state', this.value, '' );
-	} );
+	// US state selector -- but only on [[Special:UpdateProfile]] and [[Special:EditProfile]],
+	// *not* on [[Special:UpdateProfile/custom]] etc.!
+	if (
+		(
+			mw.config.get( 'wgCanonicalSpecialPageName' ) === 'UpdateProfile' &&
+			mw.config.get( 'wgTitle' ).indexOf( '/' ) === -1
+		) ||
+		mw.config.get( 'wgCanonicalSpecialPageName' ) === 'EditProfile'
+	) {
+		displaySection( 'location_state', $( '#location_country' ).val(), $( '#location_state_current' ).val() );
+		$( '#location_country' ).on( 'change', function () {
+			displaySection( 'location_state', this.value, '' );
+		} );
+
+		displaySection( 'hometown_state', $( '#hometown_country' ).val(), $( '#hometown_state_current' ).val() );
+		$( '#hometown_country' ).on( 'change', function () {
+			displaySection( 'hometown_state', this.value, '' );
+		} );
+	}
 
 	// Profile visibility stuff
 	$( '.eye-container' ).on( {
@@ -126,3 +135,5 @@ $( function() {
 		} );
 	} );
 } );
+
+}( mediaWiki, jQuery ) );
