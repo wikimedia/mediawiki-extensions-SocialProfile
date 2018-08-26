@@ -64,33 +64,29 @@ $( function() {
 	} );
 
 	// Profile visibility stuff
-	$( '.eye-container' ).on( {
-		'mouseenter': function() {
-			if ( $( this ).css( 'position' ) !== 'absolute' ) {
-				var offset = $( this ).offset();
+	$( 'body' ).on( 'mouseenter', '.eye-container', function() {
+		if ( $( this ).css( 'position' ) !== 'absolute' ) {
+			var offset = $( this ).offset();
 
-				$( this ).attr( 'link', $( this ).parent() );
+			$( 'body' ).append( $( this ) );
 
-				$( 'body' ).append( $( this ) );
-
-				$( this ).css( {
-					position: 'absolute',
-					top: offset.top + 'px',
-					left: offset.left + 'px'
-				} );
-			}
-
-			$( this ).css( {zIndex: 1000} );
-
-			$( this ).animate( {height: 100}, 100 );
-		},
-		'mouseleave': function() {
-			$( this ).animate( {height: 20}, 100 );
-			$( this ).css( {zIndex: 10} );
+			$( this ).css( {
+				position: 'absolute',
+				top: offset.top + 'px',
+				left: offset.left + 'px'
+			} );
 		}
+
+		$( this ).css( {zIndex: 1000} );
+
+		$( this ).animate( {height: 100}, 100 );
+	} );
+	$( 'body' ).on( 'mouseleave', '.eye-container', function() {
+		$( this ).animate( {height: 20}, 100 );
+		$( this ).css( {zIndex: 10} );
 	} );
 
-	$( '.eye-container > .menu > .item' ).on( 'click', function() {
+	$( 'body' ).on( 'click', '.eye-container > .menu > .item', function() {
 		$( this ).parent().parent().css( {height: 20} );
 
 		var field_key = $( this ).parent().parent().attr( 'fieldkey' );
@@ -105,7 +101,7 @@ $( function() {
 
 		$( this_element ).find( 'div.title' ).html( '...' );
 
-		( new mw.Api() ).postWithToken( 'edit', {
+		( new mw.Api() ).postWithToken( 'csrf', {
 			action: 'smpuserprivacy',
 			format: 'json',
 			method: 'set',
@@ -119,7 +115,11 @@ $( function() {
 			$( newEl ).css( {
 				position: 'absolute',
 				top: offset.top + 'px',
-				left: offset.left + 'px'
+				left: offset.left + 'px',
+				// Apparently this is set inline, but it's not set anymore here
+				// (after the user has changed the value), which makes the button
+				// essentially invisible to the user. Fun!
+				zIndex: 10
 			} );
 
 			$( 'body' ).append( $( newEl ) );
