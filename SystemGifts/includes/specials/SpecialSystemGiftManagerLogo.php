@@ -410,7 +410,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			if ( is_file( $this->awardsUploadDirectory . '/sg_' . $this->gift_id . '_m.png' ) ) {
 				unlink( $this->awardsUploadDirectory . '/sg_' . $this->gift_id . '_m.png' );
 			}
-			if ( is_file( $this->awardsUploadDirectory . '/sg_'. $this->gift_id . '_ml.png' ) ) {
+			if ( is_file( $this->awardsUploadDirectory . '/sg_' . $this->gift_id . '_ml.png' ) ) {
 				unlink( $this->awardsUploadDirectory . '/sg_' . $this->gift_id . '_ml.png' );
 			}
 			if ( is_file( $this->awardsUploadDirectory . '/sg_' . $this->gift_id . '_l.png' ) ) {

@@ -477,7 +477,7 @@ class UserProfilePage extends Article {
 		if ( count( $combined_array ) > 0 ) {
 			$output .= '<div class="user-section-heading">
 				<div class="user-section-title">' .
-					wfMessage( 'casual-games-title' )->escaped().'
+					wfMessage( 'casual-games-title' )->escaped() . '
 				</div>
 				<div class="user-section-actions">
 					<div class="action-right">
@@ -629,7 +629,7 @@ class UserProfilePage extends Article {
 			} elseif ( $profile_data['location_city'] && !$profile_data['location_state'] ) { // city, but no state
 				$location = '';
 				if ( in_array( 'up_location_city', $this->profile_visible_fields ) ) {
-					$location .= $profile_data['location_city'] .', ';
+					$location .= $profile_data['location_city'] . ', ';
 				}
 				if ( in_array( 'up_location_country', $this->profile_visible_fields ) ) {
 					$location .= $profile_data['location_country'];
@@ -668,7 +668,7 @@ class UserProfilePage extends Article {
 			} elseif ( $profile_data['hometown_city'] && !$profile_data['hometown_state'] ) { // city, but no state
 				$hometown = '';
 				if ( in_array( 'up_hometown_city', $this->profile_visible_fields ) ) {
-					$hometown .= $profile_data['hometown_city'] .', ';
+					$hometown .= $profile_data['hometown_city'] . ', ';
 				}
 				if ( in_array( 'up_hometown_country', $this->profile_visible_fields ) ) {
 					$hometown .= $profile_data['hometown_country'];

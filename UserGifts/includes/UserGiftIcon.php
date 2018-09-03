@@ -33,7 +33,7 @@ class UserGiftIcon {
 
 		return glob(
 			$wgUploadDirectory . '/awards/' .
-			$this->id .  '_' .
+			$this->id . '_' .
 			$this->size . "*"
 		);
 	}
