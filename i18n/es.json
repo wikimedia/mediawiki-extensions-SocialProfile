@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fitoschido"
+			"Fitoschido",
+			"Ciencia Al Poder"
 		]
 	},
-	"socialprofile-desc": "Un conjunto de herramientas sociales para MediaWiki"
+	"socialprofile-desc": "Un conjunto de herramientas sociales para MediaWiki",
+	"socialprofile-uploads-disabled": "Se ha desactivado la posibilidad de subir un avatar"
 }
