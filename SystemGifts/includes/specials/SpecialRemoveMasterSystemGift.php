@@ -27,7 +27,7 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 		if ( $files && $files[0] ) {
 			$img = basename( $files[0] );
 			// $img already contains the sg_ prefix
-			unlink( $wgUploadDirectory . '/awards/' .  $img );
+			unlink( $wgUploadDirectory . '/awards/' . $img );
 		}
 	}
 

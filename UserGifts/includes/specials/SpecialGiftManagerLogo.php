@@ -538,7 +538,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">' . htmlspecialchars( $this->msg( 'g-medium' )->plain() ) . '</td>
 		<td><img src="' . $uploadPath . '/awards/' . $this->gift_id . '_m.' . $ext . '?ts=' . $ts . '"></td></tr>';
 		$output .= '<tr><td valign="top" style="color:#666666;font-weight:800">' . htmlspecialchars( $this->msg( 'g-small' )->plain() ) . '</td>
-		<td><img src="' . $uploadPath . '/awards/' . $this->gift_id . '_s.' . $ext . '?ts=' . $ts  . '"></td></tr>';
+		<td><img src="' . $uploadPath . '/awards/' . $this->gift_id . '_s.' . $ext . '?ts=' . $ts . '"></td></tr>';
 		$output .= '<tr><td><input type="button" onclick="javascript:history.go(-1)" value="' . htmlspecialchars( $this->msg( 'g-go-back' )->plain() ) . '"></td></tr>';
 
 		$giftManager = SpecialPage::getTitleFor( 'GiftManager' );

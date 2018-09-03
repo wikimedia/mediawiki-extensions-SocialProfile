@@ -260,7 +260,7 @@ class RemoveAvatar extends SpecialPage {
 		global $wgUploadDirectory, $wgAvatarKey, $wgMemc;
 
 		$avatar = new wAvatar( $id, $size );
-		$files = glob( $wgUploadDirectory . '/avatars/' . $wgAvatarKey . '_' . $id .  '_' . $size . "*" );
+		$files = glob( $wgUploadDirectory . '/avatars/' . $wgAvatarKey . '_' . $id . '_' . $size . "*" );
 		MediaWiki\suppressWarnings();
 		$img = basename( $files[0] );
 		MediaWiki\restoreWarnings();
