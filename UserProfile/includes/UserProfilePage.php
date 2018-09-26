@@ -980,7 +980,7 @@ class UserProfilePage extends Article {
 		$user = $title_parts[0];
 		$user_safe = urlencode( $this->user_name );
 
-		// Safe urls
+		// Safe URLs
 		$add_relationship = SpecialPage::getTitleFor( 'AddRelationship' );
 		$remove_relationship = SpecialPage::getTitleFor( 'RemoveRelationship' );
 		$give_gift = SpecialPage::getTitleFor( 'GiveGift', $this->user_name );
@@ -1024,8 +1024,25 @@ class UserProfilePage extends Article {
 			</div>';
 		}
 
-		$output .= '<div id="profile-image">' . $avatar->getAvatarURL() .
-			'</div>';
+		$output .= '<div id="profile-image">' . $avatar->getAvatarURL();
+		// Expose the link to the avatar removal page in the UI when the user has
+		// uploaded a custom avatar
+		$canRemoveOthersAvatars = $userContext->isAllowed( 'avatarremove' );
+		if ( !$avatar->isDefault() && ( $canRemoveOthersAvatars || $this->isOwner() ) ) {
+			// Different URLs for privileged and regular users
+			// Need to specify the user for people who are able to remove anyone's avatar
+			// via the special page; for regular users, it doesn't matter because they
+			// can't remove anyone else's but their own avatar via RemoveAvatar
+			if ( $canRemoveOthersAvatars ) {
+				$removeAvatarURL = SpecialPage::getTitleFor( 'RemoveAvatar', $user )->getFullURL();
+			} else {
+				$removeAvatarURL = SpecialPage::getTitleFor( 'RemoveAvatar' )->getFullURL();
+			}
+			$output .= '<p><a href="' . htmlspecialchars( $removeAvatarURL ) . '" rel="nofollow">' .
+					wfMessage( 'user-profile-remove-avatar' )->text() . '</a>
+			</p>';
+		}
+		$output .= '</div>';
 
 		$output .= '<div id="profile-right">';
 

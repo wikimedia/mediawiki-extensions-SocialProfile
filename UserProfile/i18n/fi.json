@@ -205,6 +205,7 @@
 	"avatarlogpagetext": "Tämä on loki käyttäjien avatarien tallennuksista",
 	"user-profile-picture-log-entry": "latasi uuden avatarin",
 	"user-profile-picture-log-delete-entry": "poisti käyttäjän $1 avatarin",
+	"user-profile-remove-avatar": "poista",
 	"right-avatarremove": "Poistaa käyttäjien avatareja",
 	"right-editothersprofiles": "Päivittää muiden käyttäjien sosiaalisia profiileja",
 	"action-avatarremove": "poistaa käyttäjien avatareja",

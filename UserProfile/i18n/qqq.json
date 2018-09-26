@@ -65,6 +65,7 @@
 	"user-profile-picture-small": "{{Identical|Small}}",
 	"user-profile-goback": "{{Identical|Go back}}",
 	"user-page-link": "{{Identical|User page}}",
+	"user-profile-remove-avatar": "Shown on social profile pages as a link title below the user's avatar if the user has uploaded a custom avatar; clicking on this link will take the user to the Special:RemoveAvatar page, where they are able to remove their avatar.",
 	"right-avatarremove": "{{doc-right|avatarremove}}",
 	"right-editothersprofiles": "{{doc-right|editothersprofiles}}",
 	"right-populate-user-profiles": "{{doc-right|populate-user-profiles}}",

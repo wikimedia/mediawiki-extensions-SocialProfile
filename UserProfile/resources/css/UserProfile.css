@@ -150,6 +150,13 @@
 	padding: 3px;
 }
 
+/* Avatar removal link below the avatar -- make the text a bit smaller and center it */
+#profile-image p {
+	font-size: 75%;
+	margin: 0 auto;
+	text-align: center;
+}
+
 #profile-right {
 	float: left;
 	position: relative;
