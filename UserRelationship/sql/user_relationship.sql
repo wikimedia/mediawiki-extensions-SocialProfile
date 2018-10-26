@@ -2,7 +2,7 @@
 -- Table structure for table `user_relationship`
 --
 
-CREATE TABLE /*_*/user_relationship (
+CREATE TABLE IF NOT EXISTS /*_*/user_relationship (
   `r_id` int(11) PRIMARY KEY auto_increment,
   `r_user_id` int(5) unsigned NOT NULL default '0',
   `r_user_name` varchar(255) NOT NULL default '',
@@ -18,7 +18,7 @@ CREATE INDEX /*i*/r_user_id_relation ON /*_*/user_relationship (`r_user_id_relat
 -- Table structure for table `user_relationship_request`
 --
 
-CREATE TABLE /*_*/user_relationship_request (
+CREATE TABLE IF NOT EXISTS /*_*/user_relationship_request (
   `ur_id` int(11) PRIMARY KEY auto_increment,
   `ur_user_id_from` int(5) unsigned NOT NULL default '0',
   `ur_user_name_from` varchar(255) NOT NULL default '',
