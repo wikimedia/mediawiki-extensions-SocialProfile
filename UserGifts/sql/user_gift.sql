@@ -12,14 +12,3 @@ CREATE TABLE IF NOT EXISTS /*_*/user_gift (
 ) /*$wgDBTableOptions*/;
 CREATE INDEX /*i*/ug_user_id_from ON /*_*/user_gift (`ug_user_id_from`);
 CREATE INDEX /*i*/ug_user_id_to   ON /*_*/user_gift (`ug_user_id_to`);
-
-CREATE TABLE IF NOT EXISTS /*_*/gift (
-  `gift_id` int(11) UNSIGNED PRIMARY KEY auto_increment,
-  `gift_access` int(5) NOT NULL default '0',
-  `gift_creator_user_id` int(11) NOT NULL default '0',
-  `gift_creator_user_name` varchar(255) NOT NULL default '',
-  `gift_name` varchar(255) NOT NULL default '',
-  `gift_description` text,
-  `gift_given_count` int(5) default '0',
-  `gift_createdate` datetime default NULL
-) /*$wgDBTableOptions*/;

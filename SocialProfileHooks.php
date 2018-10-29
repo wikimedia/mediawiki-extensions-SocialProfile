@@ -50,17 +50,17 @@ class SocialProfileHooks {
 		$updater->addExtensionTable( 'user_profile', "$dir/UserProfile/sql/user_profile$dbExt.sql" );
 		$updater->addExtensionTable( 'user_stats', "$dir/UserStats/sql/user_stats$dbExt.sql" );
 		$updater->addExtensionTable( 'user_relationship', "$dir/UserRelationship/sql/user_relationship$dbExt.sql" );
-		$updater->addExtensionTable( 'user_relationship_request', "$dir/UserRelationship/sql/user_relationship$dbExt.sql" );
-		$updater->addExtensionTable( 'user_system_gift', "$dir/SystemGifts/sql/systemgifts$dbExt.sql" );
-		$updater->addExtensionTable( 'system_gift', "$dir/SystemGifts/sql/systemgifts$dbExt.sql" );
-		$updater->addExtensionTable( 'user_gift', "$dir/UserGifts/sql/usergifts$dbExt.sql" );
-		$updater->addExtensionTable( 'gift', "$dir/UserGifts/sql/usergifts$dbExt.sql" );
+		$updater->addExtensionTable( 'user_relationship_request', "$dir/UserRelationship/sql/user_relationship_request$dbExt.sql" );
+		$updater->addExtensionTable( 'user_system_gift', "$dir/SystemGifts/sql/user_system_gift$dbExt.sql" );
+		$updater->addExtensionTable( 'system_gift', "$dir/SystemGifts/sql/system_gift$dbExt.sql" );
+		$updater->addExtensionTable( 'user_gift', "$dir/UserGifts/sql/user_gift$dbExt.sql" );
+		$updater->addExtensionTable( 'gift', "$dir/UserGifts/sql/gift$dbExt.sql" );
 		$updater->addExtensionTable( 'user_system_messages', "$dir/UserStats/sql/user_system_messages$dbExt.sql" );
 		$updater->addExtensionTable( 'user_points_weekly', "$dir/UserStats/sql/user_points_weekly$dbExt.sql" );
 		$updater->addExtensionTable( 'user_points_monthly', "$dir/UserStats/sql/user_points_monthly$dbExt.sql" );
 		$updater->addExtensionTable( 'user_points_archive', "$dir/UserStats/sql/user_points_archive$dbExt.sql" );
-		$updater->dropExtensionField( 'user_stats', 'stats_year_id', "$dir/UserStats/sql/patch-drop-column-stats_year_id.sql" );
-		$updater->dropExtensionField( 'user_profile', 'up_last_seen', "$dir/UserProfile/sql/patch-drop-column-up_last_seen.sql" );
+		$updater->dropExtensionField( 'user_stats', 'stats_year_id', "$dir/UserStats/sql/patches/patch-drop-column-stats_year_id.sql" );
+		$updater->dropExtensionField( 'user_profile', 'up_last_seen', "$dir/UserProfile/sql/patches/patch-drop-column-up_last_seen.sql" );
 	}
 
 	/**
