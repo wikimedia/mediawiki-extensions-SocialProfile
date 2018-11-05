@@ -60,7 +60,7 @@ class UserSystemGifts {
 				'type' => 'social-award-rec',
 				'agent' => $userFrom,
 				'extra' => [
-					'notifyAgent' => true,
+					'notifyAgent' => true, // backwards compatibility for MW 1.32 and below
 					'target' => $this->user_id,
 					'mastergiftid' => $gift_id,
 					'giftid' => $sg_gift_id,

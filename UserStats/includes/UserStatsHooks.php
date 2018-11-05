@@ -31,6 +31,7 @@ class UserStatsHooks {
 			EchoAttributeManager::ATTR_LOCATORS => [
 				'EchoUserLocator::locateEventAgent'
 			],
+			'canNotifyAgent' => true,
 
 			'title-message' => 'notification-social-level-up',
 			'title-params' => [ 'new-level' ],

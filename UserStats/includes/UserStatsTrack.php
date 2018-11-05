@@ -629,7 +629,7 @@ class UserStatsTrack {
 							'type' => 'social-level-up',
 							'agent' => $userFrom,
 							'extra' => [
-								'notifyAgent' => true,
+								'notifyAgent' => true, // backwards compatibility for MW 1.32 and below
 								'new-level' => $user_level->getLevelName()
 							]
 						] );

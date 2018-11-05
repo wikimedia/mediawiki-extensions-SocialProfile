@@ -21,6 +21,7 @@ class UserSystemGiftsHooks {
 			EchoAttributeManager::ATTR_LOCATORS => [
 				'EchoUserLocator::locateEventAgent'
 			],
+			'canNotifyAgent' => true,
 
 			'payload' => [ 'award-rec' ],
 
