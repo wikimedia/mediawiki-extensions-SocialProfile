@@ -27,6 +27,9 @@ class UserProfile {
 
 	/**
 	 * @var array Array of valid profile fields; used in getProfileComplete()
+	 * These _mostly_ correspond to the fields in the user_profile DB table.
+	 * If a field is not defined here, it won't be shown in profile pages!
+	 * @see https://phabricator.wikimedia.org/T212290
 	 */
 	public $profile_fields = [
 		'real_name',
@@ -40,6 +43,7 @@ class UserProfile {
 		'schools',
 		'movies',
 		'tv',
+		'music',
 		'books',
 		'magazines',
 		'video_games',
