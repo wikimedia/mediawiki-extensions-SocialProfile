@@ -26,7 +26,7 @@ class ApiUserProfilePrivacy extends ApiBase {
 
 		// Search content: for example let's search
 		if ( strlen( $fieldKey ) == 0 ) {
-			$this->dieUsage( 'No data provided', 'field_key' );
+			$this->dieWithError( new RawMessage( 'No data provided' ), 'field_key' );
 		}
 
 		if ( !$tuid ) {
@@ -41,7 +41,10 @@ class ApiUserProfilePrivacy extends ApiBase {
 
 			case 'set':
 				if ( !$privacy || !in_array( $privacy, [ 'public', 'hidden', 'friends', 'foaf' ] ) ) {
-					$this->dieUsage( 'The supplied argument for the "privacy" parameter is invalid (no such parameter/missing parameter)', 'privacy' );
+					$this->dieWithError(
+						new RawMessage( 'The supplied argument for the "privacy" parameter is invalid (no such parameter/missing parameter)' ),
+						'privacy'
+					);
 				}
 
 				SPUserSecurity::setPrivacy( $tuid, $fieldKey, $privacy );
