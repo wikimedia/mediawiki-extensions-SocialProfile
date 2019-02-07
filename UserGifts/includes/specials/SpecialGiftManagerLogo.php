@@ -455,7 +455,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 * @param string $saveName The destination filename
 	 * @param string $tempName The source temporary file to save
 	 * @return string full path the stashed file, or false on failure
-	 * @access private
+	 * @private
 	 */
 	function saveTempUploadedFile( $saveName, $tempName ) {
 		$archive = wfImageArchiveDir( $saveName, 'temp' );
