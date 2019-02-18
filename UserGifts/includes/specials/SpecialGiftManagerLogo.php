@@ -500,9 +500,9 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 * Remove a temporarily kept file stashed by saveTempUploadedFile().
 	 */
 	function unsaveUploadedFile() {
-		MediaWiki\suppressWarnings();
+		Wikimedia\suppressWarnings();
 		$success = unlink( $this->mUploadTempName );
-		MediaWiki\restoreWarnings();
+		Wikimedia\restoreWarnings();
 		if ( !$success ) {
 			throw new FatalError( $this->msg( 'filedeleteerror', $this->mUploadTempName )->escaped() );
 		}
