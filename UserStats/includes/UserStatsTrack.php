@@ -614,7 +614,7 @@ class UserStatsTrack {
 					$m = new UserSystemMessage();
 					$m->addMessage(
 						$this->user_name,
-						2,
+						UserSystemMessage::TYPE_LEVELUP,
 						wfMessage( 'level-advanced-to', $user_level->getLevelName() )->inContentLanguage()->parse()
 					);
 					$m->sendAdvancementNotificationEmail(

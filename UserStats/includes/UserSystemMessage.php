@@ -8,12 +8,27 @@
  * @ingroup Extensions
  */
 class UserSystemMessage {
+	// Constants for the um_type field.
+	/**
+	 * @var int The default type; de facto unused.
+	 */
+	const TYPE_DEFAULT = 0;
+
+	/**
+	 * @var int Used by the NewSignupPage extension for "user A recruited user B" events.
+	 */
+	const TYPE_RECRUIT = 1;
+
+	/**
+	 * @var int Used by the UserStatsTrack class for "user A advanced to level X" events.
+	 */
+	const TYPE_LEVELUP = 2;
 
 	/**
 	 * Adds the message into the database
 	 *
 	 * @param mixed $userName The name of the user who's receiving the message
-	 * @param int $type 0 by default
+	 * @param int $type One of the TYPE_* constants; 0/TYPE_DEFAULT by default
 	 * @param string $message Message to be sent out
 	 */
 	public function addMessage( $userName, $type = 0, $message ) {
