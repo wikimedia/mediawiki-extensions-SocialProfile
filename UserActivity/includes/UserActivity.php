@@ -1115,6 +1115,8 @@ class UserActivity {
 					if ( $count_users == 1 && $count_actions > 1 ) {
 						$pages .= wfMessage( 'word-separator' )->escaped();
 						$pages .= wfMessage( 'parentheses' )->rawParams( wfMessage(
+							// For grep: useractivity-group-edit, useractivity-group-comment,
+							// useractivity-group-user_message, useractivity-group-friend
 							"useractivity-group-{$type}",
 							$count_actions,
 							$user_name
@@ -1154,6 +1156,8 @@ class UserActivity {
 									if ( $count_actions2 > 1 ) {
 										$pages .= wfMessage( 'word-separator' )->escaped();
 										$pages .= wfMessage( 'parentheses' )->rawParams( wfMessage(
+											// For grep: useractivity-group-edit, useractivity-group-comment,
+											// useractivity-group-user_message, useractivity-group-friend
 											"useractivity-group-{$type}",
 											$count_actions2,
 											$user_name
@@ -1187,6 +1191,8 @@ class UserActivity {
 				$this->activityLines[] = [
 					'type' => $type,
 					'timestamp' => $page_data['timestamp'],
+					// For grep: useractivity-edit, useractivity-foe, useractivity-friend,
+					// useractivity-gift, useractivity-user_message, useractivity-comment
 					'data' => wfMessage( "useractivity-{$type}" )->rawParams(
 						$users, $count_users, $pages, $pages_count,
 						// $userNameForGender is not sanitized, but this parameter
