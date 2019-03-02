@@ -818,10 +818,20 @@ class UserActivity {
 			$user_name_short = htmlspecialchars( $wgLang->truncateForVisual( $row->um_user_name, 15 ) );
 			$unixTS = wfTimestamp( TS_UNIX, $row->um_date );
 
+			// @todo FIXME: epic suckage is epic
+			// For level-up actions we do _not_ want escaping because "level-advanced-to" i18n msg
+			// contains <span> tags and we want to parse those correctly...
+			// But why the hell are we even storing an English string or whatever in the
+			// DB in the first place in UserSystemMessage?! That's just horrible.
+			$msg = htmlspecialchars( $row->um_message );
+			if ( $row->um_type == UserSystemMessage::TYPE_LEVELUP ) {
+				$msg = $row->um_message;
+			}
+
 			$this->activityLines[] = [
 				'type' => 'system_message',
 				'timestamp' => $unixTS,
-				'data' => ' <b><a href="' . htmlspecialchars( $user_title->getFullURL() ) . "\">{$user_name_short}</a></b> " . htmlspecialchars( $row->um_message )
+				'data' => ' <b><a href="' . htmlspecialchars( $user_title->getFullURL() ) . "\">{$user_name_short}</a></b> " . $msg
 			];
 
 			$this->items[] = [
