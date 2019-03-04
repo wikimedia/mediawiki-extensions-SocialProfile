@@ -100,21 +100,25 @@ class UserActivity {
 			$where['rc_user'] = $this->user_id;
 		}
 
+		$commentStore = CommentStore::getStore();
+		$commentQuery = $commentStore->getJoin( 'rc_comment' );
+
 		$res = $dbr->select(
-			'recentchanges',
+			[ 'recentchanges' ] + $commentQuery['tables'],
 			[
 				'rc_timestamp', 'rc_title',
-				'rc_user', 'rc_user_text', 'rc_comment', 'rc_id', 'rc_minor',
+				'rc_user', 'rc_user_text', 'rc_id', 'rc_minor',
 				'rc_new', 'rc_namespace', 'rc_cur_id', 'rc_this_oldid',
 				'rc_last_oldid', 'rc_log_action'
-			],
+			] + $commentQuery['fields'],
 			$where,
 			__METHOD__,
 			[
 				'ORDER BY' => 'rc_id DESC',
 				'LIMIT' => $this->item_max,
 				'OFFSET' => 0
-			]
+			],
+			$commentQuery['joins']
 		);
 
 		foreach ( $res as $row ) {
@@ -136,7 +140,8 @@ class UserActivity {
 				'namespace' => $row->rc_namespace,
 				'username' => $row->rc_user_text,
 				'userid' => $row->rc_user,
-				'comment' => $this->fixItemComment( $row->rc_comment ),
+				'comment' => $this->fixItemComment( $commentStore->getComment(
+					'rc_comment', $row )->text ),
 				'minor' => $row->rc_minor,
 				'new' => $row->rc_new
 			];
@@ -152,7 +157,8 @@ class UserActivity {
 				'namespace' => $row->rc_namespace,
 				'username' => $row->rc_user_text,
 				'userid' => $row->rc_user,
-				'comment' => $this->fixItemComment( $row->rc_comment ),
+				'comment' => $this->fixItemComment( $commentStore->getComment(
+					'rc_comment', $row )->text ),
 				'minor' => $row->rc_minor,
 				'new' => $row->rc_new
 			];
