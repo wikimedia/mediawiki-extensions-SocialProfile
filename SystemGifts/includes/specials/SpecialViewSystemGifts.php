@@ -110,9 +110,9 @@ class ViewSystemGifts extends SpecialPage {
 
 		if ( $gifts ) {
 			$x = 1;
-			$systemGiftIcon = new SystemGiftIcon( $gift['gift_id'], 'ml' );
 
 			foreach ( $gifts as $gift ) {
+				$systemGiftIcon = new SystemGiftIcon( $gift['gift_id'], 'ml' );
 				$icon = $systemGiftIcon->getIconHTML();
 
 				$output .= "<div class=\"ga-item\">
