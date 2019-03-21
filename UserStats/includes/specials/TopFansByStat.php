@@ -81,6 +81,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 				'count' => $count
 			] );
 
+			$params = [];
 			$params['ORDER BY'] = "{$column} DESC";
 			$params['LIMIT'] = $count;
 

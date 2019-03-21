@@ -12,6 +12,16 @@
 
 class SpecialViewRelationshipRequests extends SpecialPage {
 
+	/**
+	 * @var string $user_name_to User name
+	 */
+	public $user_name_to;
+
+	/**
+	 * @var int $relationship_type 1 for friending, any other number for foeing
+	 */
+	public $relationship_type;
+
 	public function __construct() {
 		parent::__construct( 'ViewRelationshipRequests' );
 	}

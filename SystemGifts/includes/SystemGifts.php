@@ -220,6 +220,7 @@ class SystemGifts {
 			[ 'LIMIT' => 1 ]
 		);
 		$row = $dbr->fetchObject( $res );
+		$gift = [];
 		if ( $row ) {
 			$gift['gift_id'] = $row->gift_id;
 			$gift['gift_name'] = $row->gift_name;

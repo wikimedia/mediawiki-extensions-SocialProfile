@@ -5,6 +5,17 @@ class UserLevel {
 	public $level_name;
 
 	/**
+	 * @var int $points The amount of points the user has; passed to the constructor
+	 */
+	public $points;
+
+	/**
+	 * @var array $levels User level configuration in the form of
+	 *   'Level name' => required points; gotten from $wgUserLevels
+	 */
+	public $levels;
+
+	/**
 	 * @var int $next_level_name name of the next level
 	 */
 	public $next_level_name;

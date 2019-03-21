@@ -16,7 +16,7 @@ class UserRelationship {
 	/**
 	 * Add a relationship request to the database.
 	 *
-	 * @param string $user_to User name of the
+	 * @param string $userTo User name of the
 	 * recipient of the relationship request
 	 * @param int $type
 	 * - 1 for friend request
@@ -267,7 +267,7 @@ class UserRelationship {
 			__METHOD__
 		);
 
-		if ( $s == true ) {
+		if ( $s ) {
 			$ur_user_id_from = $s->ur_user_id_from;
 			$ur_user_name_from = $s->ur_user_name_from;
 			$ur_type = $s->ur_type;
@@ -519,6 +519,7 @@ class UserRelationship {
 			__METHOD__
 		);
 
+		$request = [];
 		foreach ( $res as $row ) {
 			if ( $row->ur_type == 1 ) {
 				$typeName = 'Friend';

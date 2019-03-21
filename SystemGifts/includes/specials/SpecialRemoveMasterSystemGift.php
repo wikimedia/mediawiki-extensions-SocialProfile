@@ -7,6 +7,11 @@
  */
 class RemoveMasterSystemGift extends UnlistedSpecialPage {
 
+	/**
+	 * @var int $gift_id Internal ID of the system gift we want to delete
+	 */
+	public $gift_id;
+
 	public function __construct() {
 		parent::__construct( 'RemoveMasterSystemGift', 'awardsmanage' );
 	}

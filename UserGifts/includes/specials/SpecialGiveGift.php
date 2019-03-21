@@ -8,6 +8,16 @@
 
 class GiveGift extends SpecialPage {
 
+	/**
+	 * @var string $user_name_to Name of the user who we are giving a gift
+	 */
+	public $user_name_to;
+
+	/**
+	 * @var int $user_id_to User ID of the user who we are giving a gift
+	 */
+	public $user_id_to;
+
 	public function __construct() {
 		parent::__construct( 'GiveGift' );
 	}

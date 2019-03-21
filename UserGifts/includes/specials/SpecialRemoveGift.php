@@ -2,6 +2,11 @@
 
 class RemoveGift extends UnlistedSpecialPage {
 
+	/**
+	 * @var int $gift_id ID of the gift we're removing
+	 */
+	public $gift_id;
+
 	public function __construct() {
 		parent::__construct( 'RemoveGift' );
 	}

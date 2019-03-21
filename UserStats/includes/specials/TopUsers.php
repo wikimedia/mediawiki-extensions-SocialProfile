@@ -48,6 +48,7 @@ class TopUsersPoints extends SpecialPage {
 				'count' => $count
 			] );
 
+			$params = [];
 			$params['ORDER BY'] = 'stats_total_points DESC';
 			$params['LIMIT'] = $count;
 			$dbr = wfGetDB( DB_REPLICA );

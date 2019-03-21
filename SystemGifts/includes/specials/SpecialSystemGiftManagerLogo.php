@@ -17,6 +17,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	public $mUploadSaveName, $mUploadTempName, $mUploadSize, $mUploadOldVersion;
 	public $mUploadCopyStatus, $mUploadSource, $mReUpload, $mAction, $mUpload;
 	public $mOname, $mSessionKey, $mStashed, $mDestFile;
+	public $mSavedFile, $mWatchthis;
 	public $awardsUploadDirectory;
 	public $fileExtensions;
 	public $gift_id;
@@ -352,8 +353,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	 *
 	 * @param string $saveName
 	 * @param string $tempName Full path to the temporary file
-	 * @param bool $useRename If true, doesn't check that the source file
-	 * is a PHP-managed upload temporary
+	 * @param string $ext File extension (jpg, gif or png)
 	 */
 	function saveUploadedFile( $saveName, $tempName, $ext ) {
 		$dest = $this->awardsUploadDirectory;

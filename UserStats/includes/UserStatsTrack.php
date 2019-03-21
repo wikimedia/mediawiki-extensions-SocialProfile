@@ -4,8 +4,25 @@ use MediaWiki\Logger\LoggerFactory;
 
 class UserStatsTrack {
 
-	// for referencing purposes
-	// key: statistic name in wgUserStatsPointValues -> database column name
+	/**
+	 * @var array $point_values Literally $wgUserStatsPointValues
+	 */
+	public $point_values;
+
+	/**
+	 * @var string $user_name Name of the person whose stats we're dealing with here
+	 */
+	public $user_name;
+
+	/**
+	 * @var int $user_id User ID of the aforementioned person
+	 */
+	public $user_id;
+
+	/**
+	 * @var array $stats_fields For referencing purposes
+	 *   key: statistic name in wgUserStatsPointValues -> database column name in user_stats table
+	 */
 	public $stats_fields = [
 		'edit' => 'stats_edit_count',
 		'vote' => 'stats_vote_count',

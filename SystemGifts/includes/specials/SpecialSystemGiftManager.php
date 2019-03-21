@@ -139,11 +139,11 @@ class SystemGiftManager extends SpecialPage {
 		<table>
 			<tr>
 				<td class="view-form">' . $this->msg( 'ga-giftname' )->plain() . '</td>
-				<td class="view-container"><input type="text" size="45" class="createbox" name="gift_name" value="' . ( isset( $gift['gift_name'] ) ? $gift['gift_name'] : '' ) . '"/></td>
+				<td class="view-container"><input type="text" size="45" class="createbox" name="gift_name" value="' . ( $gift['gift_name'] ?? '' ) . '"/></td>
 			</tr>
 			<tr>
 				<td class="view-form" valign="top">' . $this->msg( 'ga-giftdesc' )->plain() . '</td>
-				<td class="view-container"><textarea class="createbox" name="gift_description" rows="2" cols="30">' . ( isset( $gift['gift_description'] ) ? $gift['gift_description'] : '' ) . '</textarea></td>
+				<td class="view-container"><textarea class="createbox" name="gift_description" rows="2" cols="30">' . ( $gift['gift_description'] ?? '' ) . '</textarea></td>
 			</tr>
 			<tr>
 				<td class="view-form">' . $this->msg( 'ga-gifttype' )->plain() . '</td>
@@ -165,7 +165,7 @@ class SystemGiftManager extends SpecialPage {
 		<tr>
 			<td class="view-form">' . $this->msg( 'ga-threshold' )->plain() . '</td>
 			<td class="view-container"><input type="text" size="25" class="createbox" name="gift_threshold" value="' .
-				( isset( $gift['gift_threshold'] ) ? $gift['gift_threshold'] : '' ) . '"/></td>
+				( $gift['gift_threshold'] ?? '' ) . '"/></td>
 		</tr>';
 
 		if ( $gift_id ) {
@@ -191,7 +191,7 @@ class SystemGiftManager extends SpecialPage {
 
 		$form .= '<tr>
 		<td colspan="2">
-			<input type="hidden" name="id" value="' . ( isset( $gift['gift_id'] ) ? $gift['gift_id'] : '' ) . '" />
+			<input type="hidden" name="id" value="' . ( $gift['gift_id'] ?? '' ) . '" />
 			<input type="button" class="createbox" value="' . $button . '" size="20" onclick="document.gift.submit()" />
 			<input type="button" class="createbox" value="' . $this->msg( 'cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
 		</td>

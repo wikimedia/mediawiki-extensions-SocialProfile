@@ -2,6 +2,7 @@
 
 class UploadAvatar extends UploadFromFile {
 	public $mExtension;
+	public $avatarUploadDirectory;
 
 	function createThumbnail( $imageSrc, $imageInfo, $imgDest, $thumbWidth ) {
 		global $wgUseImageMagick, $wgImageMagickConvertCommand;

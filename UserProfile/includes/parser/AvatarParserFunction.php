@@ -21,7 +21,7 @@ class AvatarParserFunction {
 	 *
 	 * @param Parser $parser
 	 * @param string $username Username of user to show avatar for
-	 * @param string $size Size of avatar to return (s/m/ml/l), or px value (100px, 10px, etc)
+	 * @param string $givenSize Size of avatar to return (s/m/ml/l), or px value (100px, 10px, etc)
 	 * @return array Output of function, and options for the parser
 	 */
 	public static function renderAvatarParserFunction( $parser, $username = '', $givenSize = 'm' ) {

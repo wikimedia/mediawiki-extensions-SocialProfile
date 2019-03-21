@@ -555,7 +555,7 @@ class UserProfilePage extends Article {
 		return $output;
 	}
 
-	function sortItems( $x, $y ) {
+	static function sortItems( $x, $y ) {
 		if ( $x['timestamp'] == $y['timestamp'] ) {
 			return 0;
 		} elseif ( $x['timestamp'] > $y['timestamp'] ) {
@@ -1349,6 +1349,8 @@ class UserProfilePage extends Article {
 			} else {
 				$style_limit = $limit;
 			}
+
+			$items_html_type = [];
 
 			foreach ( $activity as $item ) {
 				$item_html = '';

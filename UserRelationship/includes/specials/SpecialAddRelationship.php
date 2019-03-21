@@ -14,6 +14,21 @@
 
 class SpecialAddRelationship extends UnlistedSpecialPage {
 
+	/**
+	 * @var string $user_name_to Name of the user who we are friending/foeing
+	 */
+	public $user_name_to;
+
+	/**
+	 * @var int $user_id_to User ID of the aforementioned person
+	 */
+	public $user_id_to;
+
+	/**
+	 * @var int $relationship_type 1 for friending, any other number for foeing
+	 */
+	public $relationship_type;
+
 	public function __construct() {
 		parent::__construct( 'AddRelationship' );
 	}

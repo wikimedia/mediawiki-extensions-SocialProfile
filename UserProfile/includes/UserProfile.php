@@ -108,6 +108,7 @@ class UserProfile {
 				[ 'LIMIT' => 5 ]
 			);
 
+			$profile = [];
 			if ( $row ) {
 				$profile['user_id'] = $this->user_id;
 			} else {
@@ -115,35 +116,35 @@ class UserProfile {
 				$profile['user_id'] = 0;
 			}
 			$showYOB = $user->getIntOption( 'showyearofbirth', !isset( $row->up_birthday ) ) == 1;
-			$issetUpBirthday = isset( $row->up_birthday ) ? $row->up_birthday : '';
-			$profile['location_city'] = isset( $row->up_location_city ) ? $row->up_location_city : '';
-			$profile['location_state'] = isset( $row->up_location_state ) ? $row->up_location_state : '';
-			$profile['location_country'] = isset( $row->up_location_country ) ? $row->up_location_country : '';
-			$profile['hometown_city'] = isset( $row->up_hometown_city ) ? $row->up_hometown_city : '';
-			$profile['hometown_state'] = isset( $row->up_hometown_state ) ? $row->up_hometown_state : '';
-			$profile['hometown_country'] = isset( $row->up_hometown_country ) ? $row->up_hometown_country : '';
+			$issetUpBirthday = $row->up_birthday ?? '';
+			$profile['location_city'] = $row->up_location_city ?? '';
+			$profile['location_state'] = $row->up_location_state ?? '';
+			$profile['location_country'] = $row->up_location_country ?? '';
+			$profile['hometown_city'] = $row->up_hometown_city ?? '';
+			$profile['hometown_state'] = $row->up_hometown_state ?? '';
+			$profile['hometown_country'] = $row->up_hometown_country ?? '';
 			$profile['birthday'] = $this->formatBirthday( $issetUpBirthday, $showYOB );
 
-			$profile['about'] = isset( $row->up_about ) ? $row->up_about : '';
-			$profile['places_lived'] = isset( $row->up_places_lived ) ? $row->up_places_lived : '';
-			$profile['websites'] = isset( $row->up_websites ) ? $row->up_websites : '';
-			$profile['relationship'] = isset( $row->up_relationship ) ? $row->up_relationship : '';
-			$profile['occupation'] = isset( $row->up_occupation ) ? $row->up_occupation : '';
-			$profile['schools'] = isset( $row->up_schools ) ? $row->up_schools : '';
-			$profile['movies'] = isset( $row->up_movies ) ? $row->up_movies : '';
-			$profile['music'] = isset( $row->up_music ) ? $row->up_music : '';
-			$profile['tv'] = isset( $row->up_tv ) ? $row->up_tv : '';
-			$profile['books'] = isset( $row->up_books ) ? $row->up_books : '';
-			$profile['magazines'] = isset( $row->up_magazines ) ? $row->up_magazines : '';
-			$profile['video_games'] = isset( $row->up_video_games ) ? $row->up_video_games : '';
-			$profile['snacks'] = isset( $row->up_snacks ) ? $row->up_snacks : '';
-			$profile['drinks'] = isset( $row->up_drinks ) ? $row->up_drinks : '';
-			$profile['custom_1'] = isset( $row->up_custom_1 ) ? $row->up_custom_1 : '';
-			$profile['custom_2'] = isset( $row->up_custom_2 ) ? $row->up_custom_2 : '';
-			$profile['custom_3'] = isset( $row->up_custom_3 ) ? $row->up_custom_3 : '';
-			$profile['custom_4'] = isset( $row->up_custom_4 ) ? $row->up_custom_4 : '';
-			$profile['custom_5'] = isset( $row->up_custom_5 ) ? $row->up_custom_5 : '';
-			$profile['user_page_type'] = isset( $row->up_type ) ? $row->up_type : '';
+			$profile['about'] = $row->up_about ?? '';
+			$profile['places_lived'] = $row->up_places_lived ?? '';
+			$profile['websites'] = $row->up_websites ?? '';
+			$profile['relationship'] = $row->up_relationship ?? '';
+			$profile['occupation'] = $row->up_occupation ?? '';
+			$profile['schools'] = $row->up_schools ?? '';
+			$profile['movies'] = $row->up_movies ?? '';
+			$profile['music'] = $row->up_music ?? '';
+			$profile['tv'] = $row->up_tv ?? '';
+			$profile['books'] = $row->up_books ?? '';
+			$profile['magazines'] = $row->up_magazines ?? '';
+			$profile['video_games'] = $row->up_video_games ?? '';
+			$profile['snacks'] = $row->up_snacks ?? '';
+			$profile['drinks'] = $row->up_drinks ?? '';
+			$profile['custom_1'] = $row->up_custom_1 ?? '';
+			$profile['custom_2'] = $row->up_custom_2 ?? '';
+			$profile['custom_3'] = $row->up_custom_3 ?? '';
+			$profile['custom_4'] = $row->up_custom_4 ?? '';
+			$profile['custom_5'] = $row->up_custom_5 ?? '';
+			$profile['user_page_type'] = $row->up_type ?? '';
 			$wgMemc->set( $key, $profile );
 		}
 

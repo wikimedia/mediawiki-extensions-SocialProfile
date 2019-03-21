@@ -355,15 +355,16 @@ class UserBoard {
 	/**
 	 * Gets the difference between two given dates
 	 *
-	 * @param int $dt1 Current time, as returned by PHP's time() function
-	 * @param int $dt2 Date
-	 * @return int Difference between dates
+	 * @param int $date1 Current time, as returned by PHP's time() function
+	 * @param int $date2 Date
+	 * @return array Difference between dates as an array containing 'w', 'd', 'h', 'm' and 's' keys
 	 */
 	public function dateDiff( $date1, $date2 ) {
 		$dtDiff = $date1 - $date2;
 
 		$totalDays = intval( $dtDiff / ( 24 * 60 * 60 ) );
 		$totalSecs = $dtDiff - ( $totalDays * 24 * 60 * 60 );
+		$dif = [];
 		$dif['w'] = intval( $totalDays / 7 );
 		$dif['d'] = $totalDays;
 		$dif['h'] = $h = intval( $totalSecs / ( 60 * 60 ) );

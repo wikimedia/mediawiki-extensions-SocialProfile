@@ -29,7 +29,7 @@ class RandomFeaturedUser {
 
 		$parser->getOutput()->updateCacheExpiry( 0 );
 
-		$period = ( isset( $args['period'] ) ) ? $args['period'] : '';
+		$period = $args['period'] ?? '';
 		if ( $period != 'weekly' && $period != 'monthly' ) {
 			return '';
 		}
@@ -132,7 +132,7 @@ class RandomFeaturedUser {
 			$p = new Parser();
 			$profile = new UserProfile( $random_user['user_name'] );
 			$profile_data = $profile->getProfile();
-			$about = ( isset( $profile_data['about'] ) ) ? $profile_data['about'] : '';
+			$about = $profile_data['about'] ?? '';
 			// Remove templates
 			$about = preg_replace( '@{{.*?}}@si', '', $about );
 			if ( !empty( $about ) ) {

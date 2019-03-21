@@ -11,8 +11,9 @@ class Gifts {
 
 	/**
 	 * Adds a gift to the database
-	 * @param string $gift_name name of the gift, as supplied by the user
-	 * @param string $gift_description a short description about the gift, as supplied by the user
+	 *
+	 * @param string $gift_name Name of the gift, as supplied by the user
+	 * @param string $gift_description A short description about the gift, as supplied by the user
 	 * @param int $gift_access 0 by default
 	 */
 	static function addGift( $gift_name, $gift_description, $gift_access = 0 ) {
@@ -36,10 +37,11 @@ class Gifts {
 
 	/**
 	 * Updates a gift's info in the database
-	 * @param $id int internal ID number of the gift that we want to update
-	 * @param $gift_namemixed name of the gift, as supplied by the user
-	 * @param $gift_descriptionmixed a short description about the gift, as supplied by the user
-	 * @param $gift_access int 0 by default
+	 *
+	 * @param int $id Internal ID number of the gift that we want to update
+	 * @param string $gift_name Name of the gift, as supplied by the user
+	 * @param string $gift_description A short description about the gift, as supplied by the user
+	 * @param int $access 0 by default
 	 */
 	public static function updateGift( $id, $gift_name, $gift_description, $access = 0 ) {
 		$dbw = wfGetDB( DB_MASTER );
@@ -58,12 +60,12 @@ class Gifts {
 	 * Gets information, such as name and description, about a given gift from the database
 	 *
 	 * @param int $id internal ID number of the gift
-	 * @return Gift information, including ID number, name, description,
+	 * @return array Gift information, including ID number, name, description,
 	 * creator's user name and ID and gift access
 	 */
 	static function getGift( $id ) {
 		if ( !is_numeric( $id ) ) {
-			return '';
+			return [];
 		}
 		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(

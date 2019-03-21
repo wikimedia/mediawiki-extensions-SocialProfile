@@ -17,6 +17,8 @@
 
 class SpecialUploadAvatar extends SpecialUpload {
 	public $avatarUploadDirectory;
+	public $mUploadCopyStatus;
+	public $mUploadSource;
 
 	public function __construct( $request = null ) {
 		SpecialPage::__construct( 'UploadAvatar', 'upload', false/* listed? */ );
@@ -28,7 +30,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 */
 	protected function loadRequest() {
 		$request = $this->getRequest();
-		parent::loadRequest( $request );
+		parent::loadRequest();
 		$this->mUpload = new UploadAvatar();
 		$this->mUpload->initializeFromRequest( $request );
 	}
@@ -142,7 +144,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 * Displays the main upload form, optionally with a highlighted
 	 * error message up at the top.
 	 *
-	 * @param string $msg Error message as HTML
+	 * @param string $message Error message as HTML
 	 * @param string $sessionKey Session key in case this is a stashed upload
 	 * @param bool $hideIgnoreWarning Whether to hide "ignore warning" check box
 	 * @return string HTML

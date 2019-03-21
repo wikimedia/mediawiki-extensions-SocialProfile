@@ -80,6 +80,7 @@ class UserGiftListLookup {
 		$dbr = wfGetDB( DB_REPLICA );
 
 		$where = []; // Prevent E_NOTICE
+		$params = [];
 		$params['ORDER BY'] = 'gift_createdate';
 		if ( $this->limit ) {
 			$params['LIMIT'] = $this->limit;

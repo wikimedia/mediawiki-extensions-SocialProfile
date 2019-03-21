@@ -17,10 +17,11 @@ class wAvatar {
 	public $user_name = null;
 	public $user_id;
 	public $avatar_type = 0;
+	public $avatar_size;
 
 	/**
-	 * @param $userid Integer: user's internal ID number
-	 * @param $size string
+	 * @param int $userId User's internal ID number
+	 * @param string $size
 	 * - 's' for small
 	 * - 'm' for medium
 	 * - 'ml' for medium-large

@@ -24,6 +24,13 @@ class UserActivity {
 	private $show_system_messages = 1;
 	private $show_messages_sent = 1;
 	private $show_network_updates = 0;
+	private $show_all;
+	private $item_max;
+	private $now;
+	private $three_days_ago;
+	private $items_grouped;
+	private $displayed;
+	private $activityLines;
 
 	/**
 	 * @param string $username Username (usually $wgUser's username)

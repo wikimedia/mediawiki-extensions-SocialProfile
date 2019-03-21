@@ -80,6 +80,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 				'count' => $count
 			] );
 
+			$params = [];
 			$params['ORDER BY'] = 'up_points DESC';
 			$params['LIMIT'] = $count;
 
