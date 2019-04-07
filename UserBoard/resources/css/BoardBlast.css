@@ -9,10 +9,8 @@
 	cursor: pointer;
 	height: 17px;
 	width: 200px;
-
 	padding: 4px;
 	margin: 0 3px 3px 0;
-	overflow: hidden;
 
 }
 
@@ -28,7 +26,6 @@
 	width: 200px;
 	padding: 4px;
 	margin: 0 3px 3px 0;
-	overflow: hidden;
 }
 
 .board-blast-message-form {
