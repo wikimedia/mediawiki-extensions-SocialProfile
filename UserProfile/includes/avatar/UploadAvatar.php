@@ -5,7 +5,7 @@ class UploadAvatar extends UploadFromFile {
 	public $avatarUploadDirectory;
 
 	function createThumbnail( $imageSrc, $imageInfo, $imgDest, $thumbWidth ) {
-		global $wgUseImageMagick, $wgImageMagickConvertCommand, $wgTmpDirectory;
+		global $wgUseImageMagick, $wgImageMagickConvertCommand;
 
 		if ( $wgUseImageMagick ) { // ImageMagick is enabled
 			list( $origWidth, $origHeight, $typeCode ) = $imageInfo;
@@ -23,7 +23,7 @@ class UploadAvatar extends UploadFromFile {
 					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' . $thumbWidth .
 					' -resize ' . $thumbWidth . ' -crop ' . $thumbWidth . 'x' .
 					$thumbWidth . '+0+0   -quality 100 ' . $border . ' ' .
-					$imageSrc . ' ' . $wgTmpDirectory . '/' . $imgDest . '.jpg'
+					$imageSrc . ' ' . $this->avatarUploadDirectory . '/' . $imgDest . '.jpg'
 				);
 			}
 			if ( $typeCode == 1 ) {
@@ -31,7 +31,7 @@ class UploadAvatar extends UploadFromFile {
 					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' . $thumbWidth .
 					' -resize ' . $thumbWidth . ' -crop ' . $thumbWidth . 'x' .
 					$thumbWidth . '+0+0 ' . $imageSrc . ' ' . $border . ' ' .
-					$wgTmpDirectory . '/' . $imgDest . '.gif'
+					$this->avatarUploadDirectory . '/' . $imgDest . '.gif'
 				);
 			}
 			if ( $typeCode == 3 ) {
@@ -39,7 +39,7 @@ class UploadAvatar extends UploadFromFile {
 					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' . $thumbWidth .
 					' -resize ' . $thumbWidth . ' -crop ' . $thumbWidth . 'x' .
 					$thumbWidth . '+0+0 ' . $imageSrc . ' ' .
-					$wgTmpDirectory . '/' . $imgDest . '.png'
+					$this->avatarUploadDirectory . '/' . $imgDest . '.png'
 				);
 			}
 		} else { // ImageMagick is not enabled, so fall back to PHP's GD library
@@ -96,7 +96,7 @@ class UploadAvatar extends UploadFromFile {
 			// Copy the thumb
 			copy(
 				$imageSrc,
-				$wgTmpDirectory . '/' . $imgDest . '.' . $ext
+				$this->avatarUploadDirectory . '/' . $imgDest . '.' . $ext
 			);
 		}
 	}
