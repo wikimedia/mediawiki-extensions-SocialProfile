@@ -6,7 +6,7 @@
 
 .top-fan {
 	font-size: 90%;
-	font-weight: bold;
+	font-weight: 700;
 	float: left;
 	width: 250px;
 	padding-right: 10px;
@@ -47,7 +47,7 @@
 
 .top-fan-level {
 	font-size: 16px;
-	font-weight: 800;
+	font-weight: 700;
 	color: #797979;
 	margin: 0 0 10px 0;
 }
