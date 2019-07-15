@@ -247,7 +247,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			if ( $status->isGood() ) {
 				$this->getOutput()->addWikiMsg( 'confirmemail_sent' );
 			} else {
-				$this->getOutput()->addWikiText( $status->getWikiText( 'confirmemail_sendfailed' ) );
+				$this->getOutput()->addWikiTextAsInterface( $status->getWikiText( 'confirmemail_sendfailed' ) );
 			}
 		}
 		$user->saveSettings();
