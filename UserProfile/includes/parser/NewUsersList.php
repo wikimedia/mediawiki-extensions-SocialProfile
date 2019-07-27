@@ -59,28 +59,35 @@ class NewUsersList {
 					__METHOD__,
 					[ 'ORDER BY' => 'ur_date', 'LIMIT' => $count ]
 				);
+
+				$list = [];
+				foreach ( $res as $row ) {
+					$list[] = [
+						'user_id' => $row->ur_user_id,
+						'user_name' => $row->ur_user_name
+					];
+				}
 			} else {
 				// If user_register_track table doesn't exist, use the core logging
 				// table
+				$actorQuery = ActorMigration::newMigration()->getJoin( 'log_user' );
 				$res = $dbr->select(
-					'logging',
-					[
-						'log_user AS ur_user_id',
-						'log_user_text AS ur_user_name'
-					],
+					[ 'logging' ] + $actorQuery['tables'],
+					$actorQuery['fields'],
 					[ 'log_type' => 'newusers' ],
 					__METHOD__,
 					// DESC to get the *newest* $count users instead of the oldest
-					[ 'ORDER BY' => 'log_timestamp DESC', 'LIMIT' => $count ]
+					[ 'ORDER BY' => 'log_timestamp DESC', 'LIMIT' => $count ],
+					$actorQuery['joins']
 				);
-			}
 
-			$list = [];
-			foreach ( $res as $row ) {
-				$list[] = [
-					'user_id' => $row->ur_user_id,
-					'user_name' => $row->ur_user_name
-				];
+				$list = [];
+				foreach ( $res as $row ) {
+					$list[] = [
+						'user_id' => $row->log_user,
+						'user_name' => $row->log_user_text
+					];
+				}
 			}
 
 			// Cache in memcached for 10 minutes

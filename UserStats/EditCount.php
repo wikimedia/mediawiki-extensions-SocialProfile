@@ -50,7 +50,7 @@ function incEditCount( WikiPage $wikiPage, $revision, $baseRevId ) {
  * @return bool true
  */
 function removeDeletedEdits( &$article, &$user, &$reason ) {
-	global $wgNamespacesForEditPoints;
+	global $wgActorTableSchemaMigrationStage, $wgNamespacesForEditPoints;
 
 	// only keep tally for allowable namespaces
 	if (
@@ -58,15 +58,31 @@ function removeDeletedEdits( &$article, &$user, &$reason ) {
 		in_array( $article->getTitle()->getNamespace(), $wgNamespacesForEditPoints )
 	) {
 		$dbr = wfGetDB( DB_MASTER );
+		$revQuery = MediaWiki\MediaWikiServices::getInstance()->getRevisionStore()->getQueryInfo();
+		$pageField = ( $wgActorTableSchemaMigrationStage & SCHEMA_COMPAT_READ_NEW )
+			? 'revactor_page' : 'rev_page';
+		$userNameField = $revQuery['fields']['rev_user_text'];
 		$res = $dbr->select(
-			'revision',
-			[ 'rev_user_text', 'rev_user', 'COUNT(*) AS the_count' ],
-			[ 'rev_page' => $article->getID(), 'rev_user <> 0' ],
+			$revQuery['tables'],
+			array_merge( $revQuery['fields'], [ 'COUNT(*) AS the_count' ] ),
+			[
+				$pageField => $article->getID(),
+				ActorMigration::newMigration()->isNotAnon( $revQuery['fields']['rev_user'] )
+			],
 			__METHOD__,
-			[ 'GROUP BY' => 'rev_user_text' ]
+			[ 'GROUP BY' => $userNameField ],
+			$revQuery['joins']
 		);
 		foreach ( $res as $row ) {
-			$stats = new UserStatsTrack( $row->rev_user, $row->rev_user_text );
+			if ( $wgActorTableSchemaMigrationStage & SCHEMA_COMPAT_READ_NEW ) {
+				$u = User::newFromActorId( $row->rev_actor );
+				$uid = $u->getId();
+				$userName = $u->getName();
+			} else {
+				$uid = $row->rev_user;
+				$userName = $row->rev_user_text;
+			}
+			$stats = new UserStatsTrack( $uid, $userName );
 			$stats->decStatField( 'edit', $row->the_count );
 		}
 	}
@@ -84,7 +100,7 @@ function removeDeletedEdits( &$article, &$user, &$reason ) {
  * @return bool true
  */
 function restoreDeletedEdits( &$title, $new ) {
-	global $wgNamespacesForEditPoints;
+	global $wgActorTableSchemaMigrationStage, $wgNamespacesForEditPoints;
 
 	// only keep tally for allowable namespaces
 	if (
@@ -92,15 +108,31 @@ function restoreDeletedEdits( &$title, $new ) {
 		in_array( $title->getNamespace(), $wgNamespacesForEditPoints )
 	) {
 		$dbr = wfGetDB( DB_MASTER );
+		$revQuery = MediaWiki\MediaWikiServices::getInstance()->getRevisionStore()->getQueryInfo();
+		$pageField = ( $wgActorTableSchemaMigrationStage & SCHEMA_COMPAT_READ_NEW )
+			? 'revactor_page' : 'rev_page';
+		$userNameField = $revQuery['fields']['rev_user_text'];
 		$res = $dbr->select(
-			'revision',
-			[ 'rev_user_text', 'rev_user', 'COUNT(*) AS the_count' ],
-			[ 'rev_page' => $title->getArticleID(), 'rev_user <> 0' ],
+			$revQuery['tables'],
+			array_merge( $revQuery['fields'], [ 'COUNT(*) AS the_count' ] ),
+			[
+				$pageField => $title->getArticleID(),
+				ActorMigration::newMigration()->isNotAnon( $revQuery['fields']['rev_user'] )
+			],
 			__METHOD__,
-			[ 'GROUP BY' => 'rev_user_text' ]
+			[ 'GROUP BY' => $userNameField ],
+			$revQuery['joins']
 		);
 		foreach ( $res as $row ) {
-			$stats = new UserStatsTrack( $row->rev_user, $row->rev_user_text );
+			if ( $wgActorTableSchemaMigrationStage & SCHEMA_COMPAT_READ_NEW ) {
+				$u = User::newFromActorId( $row->rev_actor );
+				$uid = $u->getId();
+				$userName = $u->getName();
+			} else {
+				$uid = $row->rev_user;
+				$userName = $row->rev_user_text;
+			}
+			$stats = new UserStatsTrack( $uid, $userName );
 			$stats->incStatField( 'edit', $row->the_count );
 		}
 	}
