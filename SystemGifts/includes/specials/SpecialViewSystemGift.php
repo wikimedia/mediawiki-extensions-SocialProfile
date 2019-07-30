@@ -78,7 +78,7 @@ class ViewSystemGift extends UnlistedSpecialPage {
 				$this->msg( 'ga-back-link', $profileURL, $gift['user_name'] )->text() .
 			'</div>';
 
-			$message = $out->parse( trim( $gift['description'] ), false );
+			$message = str_replace( [ '<p>', '</p>' ], '', $out->parseAsContent( trim( $gift['description'] ), false ) );
 			$output .= '<div class="ga-description-container">';
 
 			$systemGiftIcon = new SystemGiftIcon( $gift['gift_id'], 'l' );
