@@ -30,7 +30,7 @@ class GenerateTopUsersReport extends SpecialPage {
 	 * @param string $period Either weekly or monthly
 	 */
 	public function execute( $period ) {
-		global $wgContLang, $wgUser;
+		global $wgUser;
 		global $wgUserStatsPointValues;
 
 		$out = $this->getOutput();
@@ -50,6 +50,8 @@ class GenerateTopUsersReport extends SpecialPage {
 
 		// Set the page title, robot policy, etc.
 		$this->setHeaders();
+
+		$contLang = MediaWiki\MediaWikiServices::getInstance()->getContentLanguage();
 
 		$period = $request->getVal( 'period', $period );
 
@@ -82,11 +84,11 @@ class GenerateTopUsersReport extends SpecialPage {
 		$user_count = $request->getInt( 'user_count', 10 );
 
 		if ( $period == 'weekly' ) {
-			$period_title = $wgContLang->date( wfTimestamp( TS_MW, strtotime( '-1 week' ) ) ) .
-				'-' . $wgContLang->date( wfTimestampNow() );
+			$period_title = $contLang->date( wfTimestamp( TS_MW, strtotime( '-1 week' ) ) ) .
+				'-' . $contLang->date( wfTimestampNow() );
 		} elseif ( $period == 'monthly' ) {
 			$date = getdate(); // It's a PHP core function
-			$period_title = $wgContLang->getMonthName( $date['mon'] ) .
+			$period_title = $contLang->getMonthName( $date['mon'] ) .
 				' ' . $date['year'];
 		}
 
@@ -167,7 +169,7 @@ class GenerateTopUsersReport extends SpecialPage {
 		$winners = '';
 
 		if ( !empty( $users ) ) {
-			$localizedUserNS = $wgContLang->getNsText( NS_USER );
+			$localizedUserNS = $contLang->getNsText( NS_USER );
 			foreach ( $users as $user ) {
 				if ( $user['rank'] == 1 ) {
 					// Mark the user ranked #1 as the "winner" for the given
@@ -196,19 +198,19 @@ class GenerateTopUsersReport extends SpecialPage {
 			"user-stats-{$period}-win-congratulations"
 		)->numParams(
 			$winner_count,
-			$wgContLang->formatNum( $wgUserStatsPointValues["points_winner_{$period}"] )
+			$contLang->formatNum( $wgUserStatsPointValues["points_winner_{$period}"] )
 		)->inContentLanguage()->parse() . "\n\n";
 		$pageContent .= "=={$winners}==\n\n<br />\n";
 
 		$pageContent .= '==' . $this->msg( 'user-stats-full-top' )->numParams(
-			$wgContLang->formatNum( $user_count ) )->inContentLanguage()->parse() . "==\n\n";
+			$contLang->formatNum( $user_count ) )->inContentLanguage()->parse() . "==\n\n";
 
 		foreach ( $users as $user ) {
 			$userTitle = Title::makeTitle( NS_USER, $user['user_name'] );
 			$pageContent .= '{{int:user-stats-report-row|' .
-				$wgContLang->formatNum( $user['rank'] ) . '|' .
+				$contLang->formatNum( $user['rank'] ) . '|' .
 				$user['user_name'] . '|' .
-				$wgContLang->formatNum( $user['points'] ) . "}}\n\n";
+				$contLang->formatNum( $user['points'] ) . "}}\n\n";
 
 			$output .= "<div class=\"top-fan-row\">
 			<span class=\"top-fan-num\">{$user['rank']}</span><span class=\"top-fan\"> <a href='" .
@@ -217,7 +219,7 @@ class GenerateTopUsersReport extends SpecialPage {
 
 			$output .= '<span class="top-fan-points">' . $this->msg(
 				'user-stats-report-points',
-				$wgContLang->formatNum( $user['points'] )
+				$contLang->formatNum( $user['points'] )
 			)->inContentLanguage()->parse() . '</span>
 		</div>';
 		}
