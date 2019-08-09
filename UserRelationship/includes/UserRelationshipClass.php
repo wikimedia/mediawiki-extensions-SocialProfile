@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * Functions for managing relationship data
  */
@@ -34,8 +36,6 @@ class UserRelationship {
 	 * @return int ID of the new relationship request
 	 */
 	public function addRelationshipRequest( $userTo, $type, $message, $email = true ) {
-		global $wgMemc;
-
 		$dbw = wfGetDB( DB_MASTER );
 
 		$dbw->insert(
@@ -50,8 +50,9 @@ class UserRelationship {
 		);
 		$requestId = $dbw->insertId();
 
-		$requestCount = new RelationshipRequestCount( $wgMemc, $userTo );
-		$requestCount->setType( $type )->increase();
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		$requestCount = new RelationshipRequestCount( $cache, $userTo );
+		$requestCount->setType( $type )->clear();
 
 		if ( $email ) {
 			$this->sendRelationshipRequestEmail( $userTo, $type );
@@ -263,7 +264,7 @@ class UserRelationship {
 	 * @return bool True if successful, otherwise false
 	 */
 	public function addRelationship( $relationshipRequestId, $email = true ) {
-		global $wgMemc;
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(
@@ -322,8 +323,8 @@ class UserRelationship {
 			}
 
 			// Purge caches
-			$wgMemc->delete( $wgMemc->makeKey( 'relationship', 'profile', 'actor_id', "{$this->user->getActorId()}-{$ur_type}" ) );
-			$wgMemc->delete( $wgMemc->makeKey( 'relationship', 'profile', 'actor_id', "{$userFrom->getActorId()}-{$ur_type}" ) );
+			$cache->delete( $cache->makeKey( 'relationship', 'profile', 'actor_id', "{$this->user->getActorId()}-{$ur_type}" ) );
+			$cache->delete( $cache->makeKey( 'relationship', 'profile', 'actor_id', "{$userFrom->getActorId()}-{$ur_type}" ) );
 
 			if ( ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ) {
 				EchoEvent::create( [
@@ -358,7 +359,7 @@ class UserRelationship {
 	 * @param User $user2 The friend/foe being removed
 	 */
 	public function removeRelationship( $user1, $user2 ) {
-		global $wgMemc;
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		if (
 			$user1->getActorId() != $this->user->getActorId() &&
@@ -380,11 +381,11 @@ class UserRelationship {
 			__METHOD__
 		);
 
-		$wgMemc->delete( $wgMemc->makeKey( 'relationship', 'profile', 'actor_id', "{$user1->getActorId()}-1" ) );
-		$wgMemc->delete( $wgMemc->makeKey( 'relationship', 'profile', 'actor_id', "{$user2->getActorId()}-1" ) );
+		$cache->delete( $cache->makeKey( 'relationship', 'profile', 'actor_id', "{$user1->getActorId()}-1" ) );
+		$cache->delete( $cache->makeKey( 'relationship', 'profile', 'actor_id', "{$user2->getActorId()}-1" ) );
 
-		$wgMemc->delete( $wgMemc->makeKey( 'relationship', 'profile', 'actor_id', "{$user1->getActorId()}-2" ) );
-		$wgMemc->delete( $wgMemc->makeKey( 'relationship', 'profile', 'actor_id', "{$user2->getActorId()}-2" ) );
+		$cache->delete( $cache->makeKey( 'relationship', 'profile', 'actor_id', "{$user1->getActorId()}-2" ) );
+		$cache->delete( $cache->makeKey( 'relationship', 'profile', 'actor_id', "{$user2->getActorId()}-2" ) );
 
 		// RelationshipRemovedByUserID hook
 		Hooks::run( 'RelationshipRemovedByUserID', [ $user1, $user2 ] );
@@ -407,11 +408,10 @@ class UserRelationship {
 	 * @param int $id Relationship request ID number
 	 */
 	public function deleteRequest( $id ) {
-		global $wgMemc;
-
 		$request = $this->getRequest( $id );
-		$requestCount = new RelationshipRequestCount( $wgMemc, $this->user );
-		$requestCount->setType( $request[0]['rel_type'] )->decrease();
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		$requestCount = new RelationshipRequestCount( $cache, $this->user );
+		$requestCount->setType( $request[0]['rel_type'] )->clear();
 
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->delete(

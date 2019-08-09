@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\MediaWikiServices;
 
 class UserStats {
 	/**
@@ -43,9 +44,9 @@ class UserStats {
 	 * @return array|false
 	 */
 	private function getUserStatsCache() {
-		global $wgMemc;
-		$key = $wgMemc->makeKey( 'user', 'stats', 'actor_id', $this->user->getActorId() );
-		$data = $wgMemc->get( $key );
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		$key = $cache->makeKey( 'user', 'stats', 'actor_id', $this->user->getActorId() );
+		$data = $cache->get( $key );
 		if ( $data ) {
 			$logger = LoggerFactory::getInstance( 'SocialProfile' );
 			$logger->debug( "Got user stats for {user_name} from cache\n", [
@@ -61,7 +62,7 @@ class UserStats {
 	 * @return array
 	 */
 	public function getUserStatsDB() {
-		global $wgMemc;
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 		$logger->debug( "Got user stats for {user_name} from DB\n", [
@@ -112,8 +113,8 @@ class UserStats {
 			$stats['points'] = '1000';
 		}
 
-		$key = $wgMemc->makeKey( 'user', 'stats', 'actor_id', $this->user->getActorId() );
-		$wgMemc->set( $key, $stats );
+		$key = $cache->makeKey( 'user', 'stats', 'actor_id', $this->user->getActorId() );
+		$cache->set( $key, $stats );
 		return $stats;
 	}
 

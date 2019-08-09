@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\MediaWikiServices;
 
 class TopFansRecent extends UnlistedSpecialPage {
 
@@ -26,8 +27,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 	 * @param string|null $par Period name, i.e. weekly or monthly (or null)
 	 */
 	public function execute( $par ) {
-		global $wgMemc;
-
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$linkRenderer = $this->getLinkRenderer();
 		$out = $this->getOutput();
 		$request = $this->getRequest();
@@ -64,8 +64,8 @@ class TopFansRecent extends UnlistedSpecialPage {
 		$user_list = [];
 
 		// Try cache
-		$key = $wgMemc->makeKey( 'user_stats', $period, 'points', $realCount );
-		$data = $wgMemc->get( $key );
+		$key = $cache->makeKey( 'user_stats', $period, 'points', $realCount );
+		$data = $cache->get( $key );
 
 		if ( $data != '' ) {
 			$logger->debug( "Got top users by {period} points ({count}) from cache\n", [
@@ -120,7 +120,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 				}
 			}
 
-			$wgMemc->set( $key, $user_list, 60 * 5 );
+			$cache->set( $key, $user_list, 60 * 5 );
 		}
 
 		// Top nav bar

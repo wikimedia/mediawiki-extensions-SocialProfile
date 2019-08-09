@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * wAvatar class - used to display avatars
  * Example usage:
@@ -41,10 +44,11 @@ class wAvatar {
 	 * - Third part is the letter for image size (s, m, ml or l)
 	 */
 	function getAvatarImage() {
-		global $wgAvatarKey, $wgUploadDirectory, $wgMemc;
+		global $wgAvatarKey, $wgUploadDirectory;
 
-		$key = $wgMemc->makeKey( 'user', 'profile', 'avatar', $this->user_id, $this->avatar_size );
-		$data = $wgMemc->get( $key );
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		$key = $cache->makeKey( 'user', 'profile', 'avatar', $this->user_id, $this->avatar_size );
+		$data = $cache->get( $key );
 
 		// Load from memcached if possible
 		if ( $data ) {
@@ -56,7 +60,7 @@ class wAvatar {
 			} else {
 				$avatar_filename = basename( $files[0] ) . '?r=' . filemtime( $files[0] );
 			}
-			$wgMemc->set( $key, $avatar_filename, 60 * 60 * 24 ); // cache for 24 hours
+			$cache->set( $key, $avatar_filename, 60 * 60 * 24 ); // cache for 24 hours
 		}
 		return $avatar_filename;
 	}

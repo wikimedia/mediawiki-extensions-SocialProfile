@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 class UploadAvatar extends UploadFromFile {
 	public $mExtension;
 	public $avatarUploadDirectory;
@@ -113,8 +115,9 @@ class UploadAvatar extends UploadFromFile {
 	 * @return Status
 	 */
 	public function performUpload( $comment, $pageText, $watch, $user, $tags = [] ) {
-		global $wgUploadDirectory, $wgAvatarKey, $wgMemc, $wgTmpDirectory;
+		global $wgUploadDirectory, $wgAvatarKey, $wgTmpDirectory;
 
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$this->avatarUploadDirectory = $wgUploadDirectory . '/avatars';
 
 		$imageInfo = getimagesize( $this->mTempPath );
@@ -196,17 +199,17 @@ class UploadAvatar extends UploadFromFile {
 			}
 		}
 
-		$key = $wgMemc->makeKey( 'user', 'profile', 'avatar', $uid, 's' );
-		$data = $wgMemc->delete( $key );
+		$key = $cache->makeKey( 'user', 'profile', 'avatar', $uid, 's' );
+		$data = $cache->delete( $key );
 
-		$key = $wgMemc->makeKey( 'user', 'profile', 'avatar', $uid, 'm' );
-		$data = $wgMemc->delete( $key );
+		$key = $cache->makeKey( 'user', 'profile', 'avatar', $uid, 'm' );
+		$data = $cache->delete( $key );
 
-		$key = $wgMemc->makeKey( 'user', 'profile', 'avatar', $uid, 'l' );
-		$data = $wgMemc->delete( $key );
+		$key = $cache->makeKey( 'user', 'profile', 'avatar', $uid, 'l' );
+		$data = $cache->delete( $key );
 
-		$key = $wgMemc->makeKey( 'user', 'profile', 'avatar', $uid, 'ml' );
-		$data = $wgMemc->delete( $key );
+		$key = $cache->makeKey( 'user', 'profile', 'avatar', $uid, 'ml' );
+		$data = $cache->delete( $key );
 
 		$this->mExtension = $ext;
 		return Status::newGood();

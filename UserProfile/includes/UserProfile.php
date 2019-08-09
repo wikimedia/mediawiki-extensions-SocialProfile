@@ -90,8 +90,9 @@ class UserProfile {
 	 * @return string
 	 */
 	public static function getCacheKey( $user ) {
-		global $wgMemc;
-		return $wgMemc->makeKey( 'user', 'profile', 'info', 'actor_id', $user->getActorId() );
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+
+		return $cache->makeKey( 'user', 'profile', 'info', 'actor_id', $user->getActorId() );
 	}
 
 	/**
@@ -100,8 +101,9 @@ class UserProfile {
 	 * @param UserIdentity $user User object for the desired user
 	 */
 	public static function clearCache( $user ) {
-		global $wgMemc;
-		$wgMemc->delete( self::getCacheKey( $user ) );
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+
+		$cache->delete( self::getCacheKey( $user ) );
 	}
 
 	/**
@@ -113,13 +115,13 @@ class UserProfile {
 	 * @return array
 	 */
 	public function getProfile() {
-		global $wgMemc;
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		$this->user->load();
 
 		// Try cache first
 		$key = self::getCacheKey( $this->user );
-		$data = $wgMemc->get( $key );
+		$data = $cache->get( $key );
 		if ( $data ) {
 			wfDebug( "Got user profile info for {$this->user->getName()} from cache\n" );
 			$profile = $data;
@@ -171,7 +173,7 @@ class UserProfile {
 			$profile['custom_4'] = $row->up_custom_4 ?? '';
 			$profile['custom_5'] = $row->up_custom_5 ?? '';
 			$profile['user_page_type'] = $row->up_type ?? '';
-			$wgMemc->set( $key, $profile );
+			$cache->set( $key, $profile );
 		}
 
 		$profile['real_name'] = $this->user->getRealName();

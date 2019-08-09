@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * A special page for updating users' point counts.
  *
@@ -95,10 +98,10 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 				__METHOD__
 			);
 
-			global $wgMemc;
 			// clear stats cache for current user
-			$key = $wgMemc->makeKey( 'user', 'stats', 'actor_id', $actorId );
-			$wgMemc->delete( $key );
+			$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+			$key = $cache->makeKey( 'user', 'stats', 'actor_id', $actorId );
+			$cache->delete( $key );
 		}
 	}
 

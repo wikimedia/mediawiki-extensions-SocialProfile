@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * A special page for removing avatars.
  * Privileged users can remove other users' avatars, but everyone can remove
@@ -261,8 +264,9 @@ class RemoveAvatar extends SpecialPage {
 	 * Doesn't really matter since we're just going to blast 'em all.
 	 */
 	private function deleteImage( $id, $size ) {
-		global $wgUploadDirectory, $wgAvatarKey, $wgMemc;
+		global $wgUploadDirectory, $wgAvatarKey;
 
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$avatar = new wAvatar( $id, $size );
 		$files = glob( $wgUploadDirectory . '/avatars/' . $wgAvatarKey . '_' . $id . '_' . $size . "*" );
 		Wikimedia\suppressWarnings();
@@ -273,7 +277,7 @@ class RemoveAvatar extends SpecialPage {
 		}
 
 		// clear cache
-		$key = $wgMemc->makeKey( 'user', 'profile', 'avatar', $id, $size );
-		$wgMemc->delete( $key );
+		$key = $cache->makeKey( 'user', 'profile', 'avatar', $id, $size );
+		$cache->delete( $key );
 	}
 }

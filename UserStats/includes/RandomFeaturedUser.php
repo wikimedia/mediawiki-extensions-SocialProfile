@@ -27,8 +27,9 @@ class RandomFeaturedUser {
 	 * @return string
 	 */
 	public static function getRandomUser( $input, $args, Parser $parser ) {
-		global $wgMemc, $wgRandomFeaturedUser;
+		global $wgRandomFeaturedUser;
 
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$parser->getOutput()->updateCacheExpiry( 0 );
 
 		$period = $args['period'] ?? '';
@@ -43,8 +44,8 @@ class RandomFeaturedUser {
 		$count = 10;
 
 		// Try cache
-		$key = $wgMemc->makeKey( 'user_stats', 'top', 'points', 'weekly', $count );
-		$data = $wgMemc->get( $key );
+		$key = $cache->makeKey( 'user_stats', 'top', 'points', 'weekly', $count );
+		$data = $cache->get( $key );
 
 		if ( $data != '' ) {
 			wfDebug( "Got top $period users by points ({$count}) from cache\n" );
@@ -55,7 +56,7 @@ class RandomFeaturedUser {
 			$user_list = ( new TopUsersListLookup( $count ) )->getListByTimePeriod( $period );
 
 			if ( count( $user_list ) > 0 ) {
-				$wgMemc->set( $key, $user_list, 60 * 60 );
+				$cache->set( $key, $user_list, 60 * 60 );
 			}
 		}
 

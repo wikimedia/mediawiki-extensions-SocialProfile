@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 class RemoveGift extends UnlistedSpecialPage {
 
 	/**
@@ -26,8 +28,6 @@ class RemoveGift extends UnlistedSpecialPage {
 	 * @param string|null $par
 	 */
 	public function execute( $par ) {
-		global $wgMemc;
-
 		$out = $this->getOutput();
 		$request = $this->getRequest();
 		$user = $this->getUser();
@@ -64,7 +64,8 @@ class RemoveGift extends UnlistedSpecialPage {
 			$_SESSION['alreadysubmitted'] = true;
 
 			if ( $rel->doesUserOwnGift( $user, $this->gift_id ) == true ) {
-				$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'gifts', 'actor_id', $user->getActorId() ) );
+				$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+				$cache->delete( $cache->makeKey( 'user', 'profile', 'gifts', 'actor_id', $user->getActorId() ) );
 				$rel->deleteGift( $this->gift_id );
 			}
 

@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\MediaWikiServices;
 
 class UserStatsTrack {
 
@@ -124,11 +125,11 @@ class UserStatsTrack {
 	 * Deletes cache entries
 	 */
 	public function clearCache() {
-		global $wgMemc;
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		// clear stats cache for current user
-		$key = $wgMemc->makeKey( 'user', 'stats', 'actor_id', $this->user->getActorId() );
-		$wgMemc->delete( $key );
+		$key = $cache->makeKey( 'user', 'stats', 'actor_id', $this->user->getActorId() );
+		$cache->delete( $key );
 	}
 
 	/**
@@ -139,8 +140,9 @@ class UserStatsTrack {
 	 * @param int $val Increase $field by this amount, defaults to 1
 	 */
 	function incStatField( $field, $val = 1 ) {
-		global $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
+		global $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
 
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		if ( !$this->user->isBot() && !$this->user->isAnon() && $this->stats_fields[$field] ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$dbw->update(
@@ -172,8 +174,8 @@ class UserStatsTrack {
 			$stat_field = $this->stats_fields[$field];
 			$field_count = $s->$stat_field;
 
-			$key = $wgMemc->makeKey( 'system_gift', 'id', $field . '-' . $field_count );
-			$data = $wgMemc->get( $key );
+			$key = $cache->makeKey( 'system_gift', 'id', $field . '-' . $field_count );
+			$data = $cache->get( $key );
 
 			if ( $data ) {
 				$logger = LoggerFactory::getInstance( 'SocialProfile' );
@@ -184,7 +186,7 @@ class UserStatsTrack {
 				$g = new SystemGifts();
 				$systemGiftID = $g->doesGiftExistForThreshold( $field, $field_count );
 				if ( $systemGiftID ) {
-					$wgMemc->set( $key, $systemGiftID, 60 * 30 );
+					$cache->set( $key, $systemGiftID, 60 * 30 );
 				}
 			}
 

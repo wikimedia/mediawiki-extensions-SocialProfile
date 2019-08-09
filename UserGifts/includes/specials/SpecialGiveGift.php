@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * Special:GiveGift -- a special page for sending out user-to-user gifts
  *
@@ -45,8 +48,6 @@ class GiveGift extends SpecialPage {
 	 * @param string|null $par Name of the user whom to give a gift
 	 */
 	public function execute( $par ) {
-		global $wgMemc;
-
 		$out = $this->getOutput();
 		$request = $this->getRequest();
 		$user = $this->getUser();
@@ -102,10 +103,11 @@ class GiveGift extends SpecialPage {
 				);
 
 				// clear the cache for the user profile gifts for this user
-				$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'gifts', 'actor_id', $this->userTo->getActorId() ) );
+				$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+				$cache->delete( $cache->makeKey( 'user', 'profile', 'gifts', 'actor_id', $this->userTo->getActorId() ) );
 
-				$key = $wgMemc->makeKey( 'gifts', 'unique', 4 );
-				$data = $wgMemc->get( $key );
+				$key = $cache->makeKey( 'gifts', 'unique', 4 );
+				$data = $cache->get( $key );
 
 				// check to see if this type of gift is in the unique list
 				$lastUniqueGifts = $data;
@@ -133,7 +135,7 @@ class GiveGift extends SpecialPage {
 					}
 
 					// reset the cache
-					$wgMemc->set( $key, $lastUniqueGifts );
+					$cache->set( $key, $lastUniqueGifts );
 				}
 
 				$sent_gift = UserGifts::getUserGift( $ug_gift_id );

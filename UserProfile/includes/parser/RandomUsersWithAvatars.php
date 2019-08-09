@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * RandomUsersWithAvatars - displays a number of randomly selected users
  * that have uploaded an avatar though [[Special:UploadAvatar]].
@@ -22,8 +25,9 @@ class RandomUsersWithAvatars {
 	 * @return string
 	 */
 	public static function getRandomUsersWithAvatars( $input, array $args, Parser $parser ) {
-		global $wgUploadDirectory, $wgDBname, $wgMemc;
+		global $wgUploadDirectory, $wgDBname;
 
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$parser->getOutput()->addModuleStyles( 'ext.socialprofile.userprofile.randomuserswithavatars.styles' );
 		$parser->getOutput()->updateCacheExpiry( 0 );
 
@@ -38,11 +42,11 @@ class RandomUsersWithAvatars {
 		}
 
 		// Try cache
-		$key = $wgMemc->makeKey( 'users', 'random', 'avatars', $count, $perRow, $size );
-		$data = $wgMemc->get( $key );
+		$key = $cache->makeKey( 'users', 'random', 'avatars', $count, $perRow, $size );
+		$data = $cache->get( $key );
 		if ( !$data ) {
 			$files = glob( $wgUploadDirectory . "/avatars/{$wgDBname}_*_{$size}.*" );
-			$wgMemc->set( $key, $files, 60 * 60 );
+			$cache->set( $key, $files, 60 * 60 );
 		} else {
 			wfDebug( "Got random users with avatars from cache\n" );
 			$files = $data;

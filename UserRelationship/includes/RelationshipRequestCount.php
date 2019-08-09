@@ -9,7 +9,7 @@ use MediaWiki\Logger\LoggerFactory;
 class RelationshipRequestCount {
 
 	/**
-	 * @var BagOStuff $cache
+	 * @var WANObjectCache $cache
 	 */
 	private $cache;
 
@@ -67,17 +67,10 @@ class RelationshipRequestCount {
 	}
 
 	/**
-	 * Increase the amount of open relationship requests for a user.
+	 * Purge the cache of the amount of open relationship requests for a user.
 	 */
-	public function increase() {
-		$this->cache->incr( $this->makeKey() );
-	}
-
-	/**
-	 * Decrease the amount of open relationship requests for a user.
-	 */
-	public function decrease() {
-		$this->cache->decr( $this->makeKey() );
+	public function clear() {
+		$this->cache->delete( $this->makeKey() );
 	}
 
 	/**
@@ -140,10 +133,11 @@ class RelationshipRequestCount {
 	/**
 	 * Get the amount of open user relationship requests from cache.
 	 *
-	 * @return int
+	 * @return int|false
 	 */
 	private function getFromCache() {
 		$data = $this->cache->get( $this->makeKey() );
+
 		if ( $data != '' ) {
 			$logger = LoggerFactory::getInstance( 'SocialProfile' );
 			$logger->debug( "Got open request count of {data} (type={relType}) for user name {userName} from cache\n", [
@@ -152,8 +146,9 @@ class RelationshipRequestCount {
 				'userName' => $this->user->getName()
 			] );
 
-			return $data;
 		}
+
+		return $data;
 	}
 
 	/**

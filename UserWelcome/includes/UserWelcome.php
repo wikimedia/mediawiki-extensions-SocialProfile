@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * UserWelcome extension
  * Adds <welcomeUser/> tag to display user-specific social information
@@ -141,9 +144,9 @@ class UserWelcome {
 	}
 
 	function getRelationshipRequestLink() {
-		global $wgMemc;
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		$requestCount = new RelationshipRequestCount( $cache, $this->user );
 
-		$requestCount = new RelationshipRequestCount( $wgMemc, $this->user );
 		$friendRequestCount = $requestCount->setFriends()->get();
 		$foeRequestCount = $requestCount->setFoes()->get();
 
@@ -175,9 +178,10 @@ class UserWelcome {
 	}
 
 	function getNewGiftLink() {
-		global $wgMemc;
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
-		$userGiftCount = new UserGiftCount( $wgMemc, $this->user );
+		$userGiftCount = new UserGiftCount( $cache, $this->user );
+
 		$giftCount = $userGiftCount->get();
 
 		$output = '';
@@ -199,9 +203,8 @@ class UserWelcome {
 	}
 
 	function getNewSystemGiftLink() {
-		global $wgMemc;
-
-		$systemGiftCount = new SystemGiftCount( $wgMemc, $this->user );
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		$systemGiftCount = new SystemGiftCount( $cache, $this->user );
 		$giftCount = $systemGiftCount->get();
 
 		$output = '';
@@ -223,9 +226,9 @@ class UserWelcome {
 	}
 
 	function getNewMessagesLink() {
-		global $wgMemc;
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		$messageCount = new UserBoardMessageCount( $cache, $this->user );
 
-		$messageCount = new UserBoardMessageCount( $wgMemc, $this->user );
 		$newMessages = $messageCount->get();
 		$output = '';
 

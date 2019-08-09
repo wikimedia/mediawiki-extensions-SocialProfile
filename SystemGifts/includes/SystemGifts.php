@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * SystemGifts class
  */
@@ -46,9 +49,10 @@ class SystemGifts {
 	 * desire.
 	 */
 	public function updateSystemGifts() {
-		global $wgOut, $wgMemc;
+		global $wgOut;
 
 		$dbw = wfGetDB( DB_MASTER );
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$stats = new UserStatsTrack( 1, '' );
 		$this->categories = array_flip( $this->categories );
 
@@ -93,8 +97,8 @@ class SystemGifts {
 						// 1) SystemGifts/includes/SystemGifts.php
 						// 2) SystemGifts/includes/UserSystemGifts.php
 						// 3) UserProfile/includes/UserProfilePage.php
-						$sg_key = $wgMemc->makeKey( 'user', 'profile', 'system_gifts', 'actor_id', "{$row2->stats_actor}" );
-						$wgMemc->delete( $sg_key );
+						$sg_key = $cache->makeKey( 'user', 'profile', 'system_gifts', 'actor_id', "{$row2->stats_actor}" );
+						$cache->delete( $sg_key );
 
 						// Update counters (https://phabricator.wikimedia.org/T29981)
 						UserSystemGifts::incGiftGivenCount( $row->gift_id );

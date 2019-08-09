@@ -294,7 +294,7 @@ class UserProfilePage extends Article {
 	 * @return array
 	 */
 	function getUserPolls() {
-		global $wgMemc;
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		$polls = [];
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
@@ -302,8 +302,8 @@ class UserProfilePage extends Article {
 		// Try cache
 		// @note Keep this cache key in sync with PollNY
 		// (includes/PollNY.hooks.php and includes/specials/SpecialCreatePoll.php)
-		$key = $wgMemc->makeKey( 'user', 'profile', 'polls', 'actor_id', $this->profileOwner->getActorId() );
-		$data = $wgMemc->get( $key );
+		$key = $cache->makeKey( 'user', 'profile', 'polls', 'actor_id', $this->profileOwner->getActorId() );
+		$data = $cache->get( $key );
 
 		if ( $data ) {
 			$logger->debug( "Got profile polls for user name {user_name} from cache\n", [
@@ -331,7 +331,7 @@ class UserProfilePage extends Article {
 					'timestamp' => wfTimestamp( TS_UNIX, $row->poll_date )
 				];
 			}
-			$wgMemc->set( $key, $polls );
+			$cache->set( $key, $polls );
 		}
 		return $polls;
 	}
@@ -343,14 +343,14 @@ class UserProfilePage extends Article {
 	 * @return array
 	 */
 	function getUserQuiz() {
-		global $wgMemc;
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		$quiz = [];
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		// Try cache
-		$key = $wgMemc->makeKey( 'user', 'profile', 'quiz', $this->user_id );
-		$data = $wgMemc->get( $key );
+		$key = $cache->makeKey( 'user', 'profile', 'quiz', $this->user_id );
+		$data = $cache->get( $key );
 
 		if ( $data ) {
 			$logger->debug( "Got profile quizzes for user name {user_name} from cache\n", [
@@ -384,7 +384,7 @@ class UserProfilePage extends Article {
 					'timestamp' => wfTimestamp( TS_UNIX, $row->q_date )
 				];
 			}
-			$wgMemc->set( $key, $quiz );
+			$cache->set( $key, $quiz );
 		}
 
 		return $quiz;
@@ -397,14 +397,14 @@ class UserProfilePage extends Article {
 	 * @return array
 	 */
 	function getUserPicGames() {
-		global $wgMemc;
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		$pics = [];
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		// Try cache
-		$key = $wgMemc->makeKey( 'user', 'profile', 'picgame', $this->user_id );
-		$data = $wgMemc->get( $key );
+		$key = $cache->makeKey( 'user', 'profile', 'picgame', $this->user_id );
+		$data = $cache->get( $key );
 		if ( $data ) {
 			$logger->debug( "Got profile picgames for user name {user_name} from cache\n", [
 				'user_name' => $this->profileOwner->getName()
@@ -439,7 +439,7 @@ class UserProfilePage extends Article {
 					'timestamp' => wfTimestamp( TS_UNIX, $row->pg_date )
 				];
 			}
-			$wgMemc->set( $key, $pics );
+			$cache->set( $key, $pics );
 		}
 
 		return $pics;
@@ -1168,8 +1168,9 @@ class UserProfilePage extends Article {
 	 * @return string
 	 */
 	function getRelationships( $rel_type ) {
-		global $wgMemc, $wgUserProfileDisplay;
+		global $wgUserProfileDisplay;
 
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$context = $this->getContext();
 		$language = $context->getLanguage();
 
@@ -1187,14 +1188,14 @@ class UserProfilePage extends Article {
 		$output = ''; // Prevent E_NOTICE
 
 		$count = 4;
-		$key = $wgMemc->makeKey( 'relationship', 'profile', 'actor_id', "{$this->profileOwner->getActorId()}-{$rel_type}" );
-		$data = $wgMemc->get( $key );
+		$key = $cache->makeKey( 'relationship', 'profile', 'actor_id', "{$this->profileOwner->getActorId()}-{$rel_type}" );
+		$data = $cache->get( $key );
 
 		// Try cache
 		if ( !$data ) {
 			$listLookup = new RelationshipListLookup( $this->profileOwner, $count );
 			$friends = $listLookup->getRelationshipList( $rel_type );
-			$wgMemc->set( $key, $friends );
+			$cache->set( $key, $friends );
 		} else {
 			$logger = LoggerFactory::getInstance( 'SocialProfile' );
 			$logger->debug( "Got profile relationship type {rel_type} for user {user_name} from cache\n", [
@@ -1472,7 +1473,9 @@ class UserProfilePage extends Article {
 	}
 
 	function getGifts() {
-		global $wgMemc, $wgUserProfileDisplay;
+		global $wgUserProfileDisplay;
+
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		// If not enabled in site settings, don't display
 		if ( $wgUserProfileDisplay['gifts'] == false ) {
@@ -1485,8 +1488,8 @@ class UserProfilePage extends Article {
 		$g = new UserGifts( $this->profileOwner );
 
 		// Try cache
-		$key = $wgMemc->makeKey( 'user', 'profile', 'gifts', 'actor_id', "{$this->profileOwner->getActorId()}" );
-		$data = $wgMemc->get( $key );
+		$key = $cache->makeKey( 'user', 'profile', 'gifts', 'actor_id', "{$this->profileOwner->getActorId()}" );
+		$data = $cache->get( $key );
 
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
@@ -1496,7 +1499,7 @@ class UserProfilePage extends Article {
 			] );
 
 			$gifts = $g->getUserGiftList( 0, 4 );
-			$wgMemc->set( $key, $gifts, 60 * 60 * 4 );
+			$cache->set( $key, $gifts, 60 * 60 * 4 );
 		} else {
 			$logger->debug( "Got profile gifts for user {user_name} from cache\n", [
 				'user_name' => $this->profileOwner->getName()
@@ -1538,7 +1541,7 @@ class UserProfilePage extends Article {
 			foreach ( $gifts as $gift ) {
 				if ( $gift['status'] == 1 && $this->profileOwner->getName() == $this->viewingUser->getName() ) {
 					$g->clearUserGiftStatus( $gift['id'] );
-					$wgMemc->delete( $key );
+					$cache->delete( $key );
 				}
 
 				$userGiftIcon = new UserGiftIcon( $gift['gift_id'], 'ml' );
@@ -1564,7 +1567,9 @@ class UserProfilePage extends Article {
 	}
 
 	function getAwards() {
-		global $wgMemc, $wgUserProfileDisplay;
+		global $wgUserProfileDisplay;
+
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		// If not enabled in site settings, don't display
 		if ( $wgUserProfileDisplay['awards'] == false ) {
@@ -1579,8 +1584,8 @@ class UserProfilePage extends Article {
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		// Try cache
-		$sg_key = $wgMemc->makeKey( 'user', 'profile', 'system_gifts', 'actor_id', "{$this->profileOwner->getActorId()}" );
-		$data = $wgMemc->get( $sg_key );
+		$sg_key = $cache->makeKey( 'user', 'profile', 'system_gifts', 'actor_id', "{$this->profileOwner->getActorId()}" );
+		$data = $cache->get( $sg_key );
 
 		if ( !$data ) {
 			$logger->debug( "Got profile awards for user {user_name} from DB\n", [
@@ -1589,7 +1594,7 @@ class UserProfilePage extends Article {
 
 			$listLookup = new SystemGiftListLookup( 4 );
 			$systemGifts = $listLookup->getUserGiftList( $this->profileOwner );
-			$wgMemc->set( $sg_key, $systemGifts, 60 * 60 * 4 );
+			$cache->set( $sg_key, $systemGifts, 60 * 60 * 4 );
 		} else {
 			$logger->debug( "Got profile awards for user {user_name} from cache\n", [
 				'user_name' => $this->profileOwner->getName()
@@ -1632,7 +1637,7 @@ class UserProfilePage extends Article {
 			foreach ( $systemGifts as $gift ) {
 				if ( $gift['status'] == 1 && $this->profileOwner->getName() == $this->viewingUser->getName() ) {
 					$sg->clearUserGiftStatus( $gift['id'] );
-					$wgMemc->delete( $sg_key );
+					$cache->delete( $sg_key );
 				}
 
 				$systemGiftIcon = new SystemGiftIcon( $gift['gift_id'], 'ml' );
@@ -1800,8 +1805,8 @@ class UserProfilePage extends Article {
 
 		// Try cache
 		/*
-		$key = $wgMemc->makeKey( 'user', 'profile', 'fanboxes', "{$f->user_id}" );
-		$data = $wgMemc->get( $key );
+		$key = $cache->makeKey( 'user', 'profile', 'fanboxes', "{$f->user_id}" );
+		$data = $cache->get( $key );
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		if ( !$data ) {
@@ -1810,7 +1815,7 @@ class UserProfilePage extends Article {
 			] );
 
 			$fanboxes = $f->getUserFanboxes( 10 );
-			$wgMemc->set( $key, $fanboxes );
+			$cache->set( $key, $fanboxes );
 		} else {
 			$logger->debug( "Got profile fanboxes for user {user_name} from cache\n", [
 				'user_name' => $user_name

@@ -8,7 +8,7 @@ use MediaWiki\Logger\LoggerFactory;
  */
 class UserBoardMessageCount {
 	/**
-	 * @var BagOStuff $cache
+	 * @var WANObjectCache $cache
 	 */
 	private $cache;
 
@@ -20,13 +20,6 @@ class UserBoardMessageCount {
 	public function __construct( $cache, $user ) {
 		$this->cache = $cache;
 		$this->user = $user;
-	}
-
-	/**
-	 * Increase the amount of new messages for the user.
-	 */
-	public function increase() {
-		$this->cache->incr( $this->makeKey() );
 	}
 
 	/**
@@ -60,7 +53,7 @@ class UserBoardMessageCount {
 	 * Get the amount of new board messages for the user from cache.
 	 * If successful, returns the amount of new messages.
 	 *
-	 * @return int Amount of new messages
+	 * @return int|false Amount of new messages
 	 */
 	private function getFromCache() {
 		$data = $this->cache->get( $this->makeKey() );
@@ -72,8 +65,9 @@ class UserBoardMessageCount {
 				'user_name' => $this->user->getName()
 			] );
 
-			return $data;
 		}
+
+		return $data;
 	}
 
 	/**

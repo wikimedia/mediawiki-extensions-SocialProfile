@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\MediaWikiServices;
 
 class TopUsersPoints extends SpecialPage {
 
@@ -14,8 +15,9 @@ class TopUsersPoints extends SpecialPage {
 	 * @param string|null $par
 	 */
 	public function execute( $par ) {
-		global $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgUserLevels;
+		global $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly, $wgUserLevels;
 
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$linkRenderer = $this->getLinkRenderer();
 		$out = $this->getOutput();
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
@@ -34,8 +36,8 @@ class TopUsersPoints extends SpecialPage {
 		$user_list = [];
 
 		// Try cache
-		$key = $wgMemc->makeKey( 'user_stats', 'top', 'points', $realcount );
-		$data = $wgMemc->get( $key );
+		$key = $cache->makeKey( 'user_stats', 'top', 'points', $realcount );
+		$data = $cache->get( $key );
 
 		if ( $data != '' ) {
 			$logger->debug( "Got top users by points ({count}) from cache\n", [
@@ -87,7 +89,7 @@ class TopUsersPoints extends SpecialPage {
 				}
 			}
 
-			$wgMemc->set( $key, $user_list, 60 * 5 );
+			$cache->set( $key, $user_list, 60 * 5 );
 		}
 
 		$recent_title = SpecialPage::getTitleFor( 'TopUsersRecent' );

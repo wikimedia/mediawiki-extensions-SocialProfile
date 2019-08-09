@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\MediaWikiServices;
 
 /**
  * Special page that shows the top users for a given statistic, i.e.
@@ -22,9 +23,9 @@ class TopFansByStat extends UnlistedSpecialPage {
 	 * @param string|null $par Statistic name, i.e. friends_count or edit_count, etc. (or null)
 	 */
 	public function execute( $par ) {
-		global $wgMemc;
 		global $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
 
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$linkRenderer = $this->getLinkRenderer();
 		$lang = $this->getLanguage();
 		$out = $this->getOutput();
@@ -65,8 +66,8 @@ class TopFansByStat extends UnlistedSpecialPage {
 		// Get the list of users
 
 		// Try cache
-		$key = $wgMemc->makeKey( 'user_stats', 'top', $statistic, $realCount );
-		$data = $wgMemc->get( $key );
+		$key = $cache->makeKey( 'user_stats', 'top', $statistic, $realCount );
+		$data = $cache->get( $key );
 
 		if ( $data != '' ) {
 			$logger->debug( "Got top users by {statistic} ({count}) from cache\n", [
@@ -119,7 +120,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 				}
 			}
 
-			$wgMemc->set( $key, $user_list, 60 * 5 );
+			$cache->set( $key, $user_list, 60 * 5 );
 		}
 
 		// Top nav bar

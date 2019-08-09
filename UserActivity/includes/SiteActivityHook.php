@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\MediaWikiServices;
 
 class SiteActivityHook {
 
@@ -23,8 +24,6 @@ class SiteActivityHook {
 	 * @return string
 	 */
 	public static function getSiteActivity( $input, array $args, Parser $parser ) {
-		global $wgMemc;
-
 		$parser->getOutput()->updateCacheExpiry( 0 );
 
 		$limit = ( isset( $args['limit'] ) && is_numeric( $args['limit'] ) ) ? $args['limit'] : 10;
@@ -32,8 +31,9 @@ class SiteActivityHook {
 		// so that <siteactivity limit=5 /> will return 5 items instead of 4...
 		$fixedLimit = $limit + 1;
 
-		$key = $wgMemc->makeKey( 'site_activity', 'all', $fixedLimit );
-		$data = $wgMemc->get( $key );
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		$key = $cache->makeKey( 'site_activity', 'all', $fixedLimit );
+		$data = $cache->get( $key );
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		if ( !$data ) {
@@ -43,7 +43,7 @@ class SiteActivityHook {
 
 			$rel->setActivityToggle( 'show_votes', 0 );
 			$activity = $rel->getActivityListGrouped();
-			$wgMemc->set( $key, $activity, 60 * 2 );
+			$cache->set( $key, $activity, 60 * 2 );
 		} else {
 			$logger->debug( "Got site activity from cache\n" );
 

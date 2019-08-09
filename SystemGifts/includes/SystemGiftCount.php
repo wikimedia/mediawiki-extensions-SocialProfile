@@ -8,7 +8,7 @@ use MediaWiki\Logger\LoggerFactory;
  */
 class SystemGiftCount {
 	/**
-	 * @var BagOStuff $cache
+	 * @var WANObjectCache $cache
 	 */
 	private $cache;
 
@@ -23,17 +23,10 @@ class SystemGiftCount {
 	}
 
 	/**
-	 * Increase the amount of new system gifts for the user
+	 * Purge the cache of the amount of new system gifts for the user
 	 */
-	public function increase() {
-		$this->cache->incr( $this->makeKey() );
-	}
-
-	/**
-	 * Decrease the amount of new system gifts for the user
-	 */
-	public function decrease() {
-		$this->cache->decr( $this->makeKey() );
+	public function clear() {
+		$this->cache->delete( $this->makeKey() );
 	}
 
 	/**
@@ -58,7 +51,7 @@ class SystemGiftCount {
 	 * Get the amount of new system gifts for the user from memcached.
 	 * If successful, returns the amount of new system gifts.
 	 *
-	 * @return int Amount of new system gifts
+	 * @return int|false Amount of new system gifts
 	 */
 	private function getFromCache() {
 		$data = $this->cache->get( $this->makeKey() );
@@ -72,8 +65,9 @@ class SystemGiftCount {
 				'actor_id' => $this->user->getActorId()
 			] );
 
-			return $data;
 		}
+
+		return $data;
 	}
 
 	/**

@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * Display User Board messages for a user
  *
@@ -126,9 +129,8 @@ class SpecialViewUserBoard extends SpecialPage {
 			if ( !( $currentUser->getName() == $user_name ) ) {
 				$out->setPageTitle( $this->msg( 'userboard_owner', $user_name )->parse() );
 			} else {
-				global $wgMemc;
-
-				$messageCount = new UserBoardMessageCount( $wgMemc, $currentUser );
+				$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+				$messageCount = new UserBoardMessageCount( $cache, $currentUser );
 				$messageCount->clear();
 				$out->setPageTitle( $this->msg( 'userboard_yourboard' )->parse() );
 			}

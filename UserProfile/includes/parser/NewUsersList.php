@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * NewUsersList parser hook extension -- adds <newusers> parser tag to retrieve
  * the list of new users and their avatars.
@@ -31,7 +34,7 @@ class NewUsersList {
 	 * @return string
 	 */
 	public static function getNewUsers( $input, array $args, Parser $parser ) {
-		global $wgMemc;
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		$parser->getOutput()->updateCacheExpiry( 0 );
 
@@ -47,8 +50,8 @@ class NewUsersList {
 		}
 
 		// Try cache
-		$key = $wgMemc->makeKey( 'users', 'new', $count );
-		$data = $wgMemc->get( $key );
+		$key = $cache->makeKey( 'users', 'new', $count );
+		$data = $cache->get( $key );
 
 		if ( !$data ) {
 			$dbr = wfGetDB( DB_REPLICA );
@@ -88,7 +91,7 @@ class NewUsersList {
 			}
 
 			// Cache in memcached for 10 minutes
-			$wgMemc->set( $key, $list, 60 * 10 );
+			$cache->set( $key, $list, 60 * 10 );
 		} else {
 			wfDebugLog( 'NewUsersList', 'Got new users from cache' );
 			$list = $data;

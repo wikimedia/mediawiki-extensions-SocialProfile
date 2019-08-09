@@ -61,10 +61,9 @@ class UserBoard {
 		if ( $sender->getActorId() != $recipient->getActorId() ) {
 			$this->sendBoardNotificationEmail( $recipient, $sender );
 
-			global $wgMemc;
-
-			$messageCount = new UserBoardMessageCount( $wgMemc, $recipient );
-			$messageCount->increase();
+			$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+			$messageCount = new UserBoardMessageCount( $cache, $recipient );
+			$messageCount->clear();
 		}
 
 		$stats = new UserStatsTrack( $recipient->getId(), $recipient->getName() );

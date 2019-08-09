@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * Class for managing awards (a.k.a system gifts)
  */
@@ -53,8 +55,6 @@ class UserSystemGifts {
 	 * @return int|string
 	 */
 	public function sendSystemGift( $gift_id, $email = true ) {
-		global $wgMemc;
-
 		if ( $this->doesUserHaveGift( $gift_id ) ) {
 			return '';
 		}
@@ -74,8 +74,9 @@ class UserSystemGifts {
 		self::incGiftGivenCount( $gift_id );
 
 		// Add to new gift count cache for receiving user
-		$giftCount = new SystemGiftCount( $wgMemc, $this->user );
-		$giftCount->increase();
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		$giftCount = new SystemGiftCount( $cache, $this->user );
+		$giftCount->clear();
 
 		if ( $email && !empty( $sg_gift_id ) ) {
 			$this->sendGiftNotificationEmail( $gift_id );
@@ -101,7 +102,7 @@ class UserSystemGifts {
 		// 1) SystemGifts/includes/SystemGifts.php
 		// 2) SystemGifts/includes/UserSystemGifts.php
 		// 3) UserProfile/includes/UserProfilePage.php
-		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'system_gifts', 'actor_id', $this->actorId ) );
+		$cache->delete( $cache->makeKey( 'user', 'profile', 'system_gifts', 'actor_id', $this->actorId ) );
 
 		return $sg_gift_id;
 	}
@@ -175,8 +176,6 @@ class UserSystemGifts {
 	}
 
 	public function clearUserGiftStatus( $id ) {
-		global $wgMemc;
-
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update(
 			'user_system_gift',
@@ -185,8 +184,9 @@ class UserSystemGifts {
 			__METHOD__
 		);
 
-		$giftCount = new SystemGiftCount( $wgMemc, $this->user );
-		$giftCount->decrease();
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		$giftCount = new SystemGiftCount( $cache, $this->user );
+		$giftCount->clear();
 	}
 
 	/**

@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * UserGifts class
  * @todo document
@@ -34,8 +36,6 @@ class UserGifts {
 	 * @return int
 	 */
 	public function sendGift( $user_to, $gift_id, $type, $message ) {
-		global $wgMemc;
-
 		$dbw = wfGetDB( DB_MASTER );
 
 		$dbw->insert(
@@ -55,8 +55,9 @@ class UserGifts {
 		$this->sendGiftNotificationEmail( $user_to, $gift_id, $type );
 
 		// Add to new gift count cache for receiving user
-		$giftCount = new UserGiftCount( $wgMemc, $user_to );
-		$giftCount->increase();
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		$giftCount = new UserGiftCount( $cache, $user_to );
+		$giftCount->clear();
 
 		$stats = new UserStatsTrack( $user_to->getId(), $user_to->getName() );
 		$stats->incStatField( 'gift_rec' );
@@ -131,8 +132,6 @@ class UserGifts {
 	}
 
 	public function clearAllUserGiftStatus() {
-		global $wgMemc;
-
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update( 'user_gift',
 			/* SET */[ 'ug_status' => 0 ],
@@ -140,13 +139,12 @@ class UserGifts {
 			__METHOD__
 		);
 
-		$giftCount = new UserGiftCount( $wgMemc, $this->user );
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		$giftCount = new UserGiftCount( $cache, $this->user );
 		$giftCount->clear();
 	}
 
 	public function clearUserGiftStatus( $id ) {
-		global $wgMemc;
-
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->update( 'user_gift',
 			/* SET */[ 'ug_status' => 0 ],
@@ -154,8 +152,9 @@ class UserGifts {
 			__METHOD__
 		);
 
-		$giftCount = new UserGiftCount( $wgMemc, $this->user );
-		$giftCount->decrease();
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		$giftCount = new UserGiftCount( $cache, $this->user );
+		$giftCount->clear();
 	}
 
 	/**

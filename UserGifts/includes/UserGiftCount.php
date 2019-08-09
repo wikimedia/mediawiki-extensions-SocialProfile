@@ -9,7 +9,7 @@ use MediaWiki\Logger\LoggerFactory;
  */
 class UserGiftCount {
 	/**
-	 * @var BagOStuff $cache
+	 * @var WANObjectCache $cache
 	 */
 	private $cache;
 
@@ -24,25 +24,10 @@ class UserGiftCount {
 	}
 
 	/**
-	 * Increase the amount of new gifts for the user.
-	 */
-	public function increase() {
-		$this->cache->incr( $this->makeKey() );
-	}
-
-	/**
-	 * Decrease the amount of new gifts for the user.
-	 */
-	public function decrease() {
-		$this->cache->decr( $this->makeKey() );
-	}
-
-	/**
-	 * Clear the new gift counter for the user.
-	 * This is done by setting the value of the memcached key to 0.
+	 * Purge the cache for increase the amount of new gifts for the user.
 	 */
 	public function clear() {
-		$this->cache->set( $this->makeKey(), 0 );
+		$this->cache->delete( $this->makeKey() );
 	}
 
 	/**
@@ -71,7 +56,7 @@ class UserGiftCount {
 	 * Get the amount of new gifts for the user from cache.
 	 * If successful, returns the amount of new gifts.
 	 *
-	 * @return int Amount of new gifts
+	 * @return int|false Amount of new gifts
 	 */
 	private function getFromCache() {
 		$data = $this->cache->get( $this->makeKey() );
@@ -83,8 +68,9 @@ class UserGiftCount {
 				'user_name' => $this->user->getName()
 			] );
 
-			return $data;
 		}
+
+		return $data;
 	}
 
 	/**
