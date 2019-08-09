@@ -301,7 +301,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$day = $dob[1];
 			$birthday_date = $year . '-' . $month . '-' . $day;
 		} else {
-			$birthday_date = '';
+			$birthday_date = null;
 		}
 		return $birthday_date;
 	}
