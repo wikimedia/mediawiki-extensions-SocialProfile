@@ -339,21 +339,21 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$request = $this->getRequest();
 
 		$basicProfileData = [
-			'up_location_city' => $request->getVal( 'location_city' ),
-			'up_location_state' => $request->getVal( 'location_state' ),
-			'up_location_country' => $request->getVal( 'location_country' ),
+			'up_location_city' => $request->getVal( 'location_city' ) ?? '',
+			'up_location_state' => $request->getVal( 'location_state' ) ?? '',
+			'up_location_country' => $request->getVal( 'location_country' ) ?? '',
 
-			'up_hometown_city' => $request->getVal( 'hometown_city' ),
-			'up_hometown_state' => $request->getVal( 'hometown_state' ),
-			'up_hometown_country' => $request->getVal( 'hometown_country' ),
+			'up_hometown_city' => $request->getVal( 'hometown_city' ) ?? '',
+			'up_hometown_state' => $request->getVal( 'hometown_state' ) ?? '',
+			'up_hometown_country' => $request->getVal( 'hometown_country' ) ?? '',
 
 			'up_birthday' => self::formatBirthdayDB( $request->getVal( 'birthday' ) ),
-			'up_about' => $request->getVal( 'about' ),
-			'up_occupation' => $request->getVal( 'occupation' ),
-			'up_schools' => $request->getVal( 'schools' ),
-			'up_places_lived' => $request->getVal( 'places' ),
-			'up_websites' => $request->getVal( 'websites' ),
-			'up_relationship' => $request->getVal( 'relationship' )
+			'up_about' => $request->getVal( 'about' ) ?? '',
+			'up_occupation' => $request->getVal( 'occupation' ) ?? '',
+			'up_schools' => $request->getVal( 'schools' ) ?? '',
+			'up_places_lived' => $request->getVal( 'places' ) ?? '',
+			'up_websites' => $request->getVal( 'websites' ) ?? '',
+			'up_relationship' => $request->getVal( 'relationship' ) ?? ''
 		];
 
 		$dbw->update(
