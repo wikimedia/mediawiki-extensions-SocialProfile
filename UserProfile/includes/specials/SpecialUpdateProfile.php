@@ -353,7 +353,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			'up_schools' => $request->getVal( 'schools' ) ?? '',
 			'up_places_lived' => $request->getVal( 'places' ) ?? '',
 			'up_websites' => $request->getVal( 'websites' ) ?? '',
-			'up_relationship' => $request->getVal( 'relationship' ) ?? ''
+			'up_relationship' => $request->getVal( 'relationship' ) ?? 0
 		];
 
 		$dbw->update(
