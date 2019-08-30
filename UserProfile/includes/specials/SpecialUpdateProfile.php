@@ -240,7 +240,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$user->mEmailAuthenticated = null; # but flag as "dirty" = unauthenticated
 		}
 
-		if ( $wgEmailAuthentication && !$user->isEmailConfirmed() ) {
+		if ( $wgEmailAuthentication && !$user->isEmailConfirmed() && $user->getEmail() ) {
 			# Mail a temporary password to the dirty address.
 			# User can come back through the confirmation URL to re-enable email.
 			$status = $user->sendConfirmationMail();
