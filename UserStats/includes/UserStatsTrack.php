@@ -226,6 +226,9 @@ class UserStatsTrack {
 	 * Update the amount of comments the user has submitted.
 	 * Comment count is fetched from the Comments table, which is introduced by
 	 * the extension with the same name.
+	 *
+	 * @todo FIXME: This appears to be unused (as of July 2019) and seems to have
+	 * been like that for over a decade...
 	 */
 	function updateCommentCount() {
 		global $wgUser;
@@ -255,6 +258,9 @@ class UserStatsTrack {
 	 * Update the amount of times the user has been added into someone's
 	 * comment ignore list by fetching data from the Comments_block table,
 	 * which is introduced by the Comments extension.
+	 *
+	 * @todo FIXME: This appears to be unused (as of July 2019) and seems to have
+	 * been like that for over a decade...
 	 */
 	function updateCommentIgnored() {
 		global $wgUser;
@@ -283,23 +289,32 @@ class UserStatsTrack {
 	/**
 	 * Update the amount of edits for a given user
 	 * Edit count is fetched from revision table
+	 *
+	 * @todo FIXME: This appears to be unused (as of July 2019) and seems to have
+	 * been like that for over a decade...
 	 */
 	function updateEditCount() {
-		global $wgUser;
+		global $wgActorTableSchemaMigrationStage, $wgUser;
 
 		if ( !$wgUser->isAnon() ) {
 			$dbw = wfGetDB( DB_MASTER );
+			$revQuery = MediaWiki\MediaWikiServices::getInstance()->getRevisionStore()->getQueryInfo();
+			$idField = ( $wgActorTableSchemaMigrationStage & SCHEMA_COMPAT_READ_NEW )
+				? 'rev_actor' : 'rev_user';
+			$target = ( $wgActorTableSchemaMigrationStage & SCHEMA_COMPAT_READ_NEW ) ?
+				$wgUser->getActorId() : $this->user_id;
+
 			$edits = $dbw->select(
-				'revision',
+				$revQuery['tables'],
 				'COUNT(*) AS EditsCount',
-				[ 'rev_user' => $this->user_id ],
-				__METHOD__
+				[ $idField => $target ],
+				__METHOD__,
+				[],
+				$revQuery['joins']
 			);
 			$res = $dbw->update(
 				'user_stats',
-				[
-					'stats_edit_count' => $edits->EditsCount
-				],
+				[ 'stats_edit_count' => $edits->EditsCount ],
 				[ 'stats_user_id' => $this->user_id ],
 				__METHOD__
 			);
@@ -312,6 +327,9 @@ class UserStatsTrack {
 	 * Update the amount of votes for a given user.
 	 * Vote count is fetched from the Vote table, which is introduced
 	 * by a separate extension.
+	 *
+	 * @todo FIXME: This appears to be unused (as of July 2019) and seems to have
+	 * been like that for over a decade...
 	 */
 	function updateVoteCount() {
 		global $wgUser;

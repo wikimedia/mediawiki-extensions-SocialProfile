@@ -17,12 +17,16 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 	 * purge memcached entries.
 	 */
 	function updateMainEditsCount() {
-		global $wgNamespacesForEditPoints;
+		global $wgActorTableSchemaMigrationStage, $wgNamespacesForEditPoints;
 
 		$out = $this->getOutput();
+		$revQuery = MediaWiki\MediaWikiServices::getInstance()->getRevisionStore()->getQueryInfo();
+		$pageField = ( $wgActorTableSchemaMigrationStage & SCHEMA_COMPAT_READ_NEW )
+			? 'revactor_page' : 'rev_page';
+		$userNameField = $revQuery['fields']['rev_user_text'];
 
 		$whereConds = [];
-		$whereConds[] = 'rev_user <> 0';
+		$whereConds[] = ActorMigration::newMigration()->isNotAnon( $revQuery['fields']['rev_user'] );
 		// If points are given out for editing non-main namespaces, take that
 		// into account, too.
 		if (
@@ -36,17 +40,31 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 
 		$dbw = wfGetDB( DB_MASTER );
 		$res = $dbw->select(
-			[ 'revision', 'page' ],
-			[ 'rev_user_text', 'rev_user', 'COUNT(*) AS the_count' ],
+			array_merge( $revQuery['tables'], [ 'page' ] ),
+			array_merge( $revQuery['fields'], [ 'COUNT(*) AS the_count' ] ),
 			$whereConds,
 			__METHOD__,
-			[ 'GROUP BY' => 'rev_user_text' ],
-			[ 'page' => [ 'INNER JOIN', 'page_id = rev_page' ] ]
+			[ 'GROUP BY' => $userNameField ],
+			array_merge( $revQuery['joins'], [ 'page' => [ 'INNER JOIN', "page_id = $pageField" ] ] )
 		);
 
 		foreach ( $res as $row ) {
-			$user = User::newFromId( $row->rev_user );
-			$user->loadFromId();
+			if ( $wgActorTableSchemaMigrationStage & SCHEMA_COMPAT_READ_NEW ) {
+				$user = User::newFromActorId( $row->rev_actor );
+				$user->loadFromId();
+				$uid = $user->getId();
+				$userName = $user->getName();
+			} else {
+				$user = User::newFromId( $row->rev_user );
+				$user->loadFromId();
+				$uid = $row->rev_user;
+				$userName = $row->rev_user_text;
+			}
+
+			// Ehh yeah, we don't care about anons here...
+			if ( $uid === 0 ) {
+				continue;
+			}
 
 			if ( !$user->isBot() ) {
 				$editCount = $row->the_count;
@@ -57,36 +75,33 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 			$s = $dbw->selectRow(
 				'user_stats',
 				[ 'stats_user_id' ],
-				[ 'stats_user_id' => $row->rev_user ],
+				[ 'stats_user_id' => $uid ],
 				__METHOD__
 			);
 			if ( $s === false || !$s->stats_user_id ) {
 				$dbw->insert(
 					'user_stats',
 					[
-						'stats_user_id' => $row->rev_user,
-						'stats_user_name' => $row->rev_user_text,
+						'stats_user_id' => $uid,
+						'stats_user_name' => $userName,
 						'stats_total_points' => 1000
 					],
 					__METHOD__
 				);
 			}
-			$out->addWikiMsg(
-				'updateeditcounts-updating',
-				$row->rev_user_text,
-				$editCount
-			);
+
+			$out->addWikiMsg( 'updateeditcounts-updating', $userName, $editCount );
 
 			$dbw->update(
 				'user_stats',
 				[ 'stats_edit_count = ' . $editCount ],
-				[ 'stats_user_id' => $row->rev_user ],
+				[ 'stats_user_id' => $uid ],
 				__METHOD__
 			);
 
 			global $wgMemc;
 			// clear stats cache for current user
-			$key = $wgMemc->makeKey( 'user', 'stats', $row->rev_user );
+			$key = $wgMemc->makeKey( 'user', 'stats', $uid );
 			$wgMemc->delete( $key );
 		}
 	}

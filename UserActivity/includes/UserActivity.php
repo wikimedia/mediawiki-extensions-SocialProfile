@@ -108,16 +108,17 @@ class UserActivity {
 		}
 
 		$commentStore = CommentStore::getStore();
+		$actorQuery = ActorMigration::newMigration()->getJoin( 'rc_user' );
 		$commentQuery = $commentStore->getJoin( 'rc_comment' );
 
 		$res = $dbr->select(
-			[ 'recentchanges' ] + $commentQuery['tables'],
+			[ 'recentchanges' ] + $commentQuery['tables'] + $actorQuery['tables'],
 			[
 				'rc_timestamp', 'rc_title',
 				'rc_user', 'rc_user_text', 'rc_id', 'rc_minor',
 				'rc_new', 'rc_namespace', 'rc_cur_id', 'rc_this_oldid',
 				'rc_last_oldid', 'rc_log_action'
-			] + $commentQuery['fields'],
+			] + $commentQuery['fields'] + $actorQuery['fields'],
 			$where,
 			__METHOD__,
 			[
@@ -125,7 +126,7 @@ class UserActivity {
 				'LIMIT' => $this->item_max,
 				'OFFSET' => 0
 			],
-			$commentQuery['joins']
+			$commentQuery['joins'] + $actorQuery['joins']
 		);
 
 		foreach ( $res as $row ) {
