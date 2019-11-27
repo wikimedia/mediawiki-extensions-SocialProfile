@@ -31,7 +31,7 @@ class ViewSystemGifts extends SpecialPage {
 
 		$out = $this->getOutput();
 		$request = $this->getRequest();
-		$user = $this->getUser();
+		$currentUser = $this->getUser();
 
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();
@@ -50,7 +50,7 @@ class ViewSystemGifts extends SpecialPage {
 		 * Redirect Non-logged in users to Login Page
 		 * It will automatically return them to the ViewSystemGifts page
 		 */
-		if ( $user->getId() == 0 && $user_name == '' ) {
+		if ( $currentUser->getId() == 0 && $user_name == '' ) {
 			$out->setPageTitle( $this->msg( 'ga-error-title' )->plain() );
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
 			$out->redirect( htmlspecialchars( $login->getFullURL( 'returnto=Special:ViewSystemGifts' ) ) );
@@ -61,9 +61,10 @@ class ViewSystemGifts extends SpecialPage {
 		 * If no user is set in the URL, we assume it's the current user
 		 */
 		if ( !$user_name ) {
-			$user_name = $user->getName();
+			$user_name = $currentUser->getName();
 		}
 		$user_id = User::idFromName( $user_name );
+		$targetUser = User::newFromName( $user_name );
 
 		/**
 		 * Error message for username that does not exist (from URL)
@@ -86,7 +87,7 @@ class ViewSystemGifts extends SpecialPage {
 		$listLookup = new SystemGiftListLookup( $per_page, $page );
 		$rel = new UserSystemGifts( $user_name );
 
-		$gifts = $listLookup->getUserGiftList( $user );
+		$gifts = $listLookup->getUserGiftList( $targetUser );
 		$total = $rel->getGiftCountByUsername( $user_name );
 
 		/**
@@ -97,7 +98,7 @@ class ViewSystemGifts extends SpecialPage {
 		$output .= '<div class="back-links">' .
 			$this->msg(
 				'ga-back-link',
-				htmlspecialchars( $user->getUserPage()->getFullURL() ),
+				htmlspecialchars( $targetUser->getUserPage()->getFullURL() ),
 				$rel->user_name
 			)->text() . '</div>';
 
@@ -122,7 +123,7 @@ class ViewSystemGifts extends SpecialPage {
 						"\">{$gift['gift_name']}</a>";
 
 				if ( $gift['status'] == 1 ) {
-					if ( $user_name == $user->getName() ) {
+					if ( $user_name == $currentUser->getName() ) {
 						$rel->clearUserGiftStatus( $gift['id'] );
 					}
 					$output .= '<span class="ga-new">' .
