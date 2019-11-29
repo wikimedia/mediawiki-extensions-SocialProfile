@@ -68,6 +68,38 @@ class SpecialUploadAvatar extends SpecialUpload {
 	}
 
 	/**
+	 * Override the parent method because our getUploadForm() does _not_ return
+	 * a(n) HTMLForm yet the parent version of this method assumes it does.
+	 *
+	 * This is called at least when $wgEmailConfirmToEdit is set to true and a user
+	 * with an unconfirmed email tries to upload their avatar.
+	 * (Alternatively we _could_ allow that action since, unlike with regular file
+	 * uploads, our avatars do not indeed have an associated File: page or anything
+	 * like that, but IMO it makes sense to /not/ allow avatar uploads before
+	 * confirming their email address in this particular case.)
+	 *
+	 * @see https://phabricator.wikimedia.org/T239447
+	 *
+	 * @param string $message HTML message to be passed to mainUploadForm
+	 */
+	protected function showRecoverableUploadError( $message ) {
+		$stashStatus = $this->mUpload->tryStashFile( $this->getUser() );
+		if ( $stashStatus->isGood() ) {
+			$sessionKey = $stashStatus->getValue()->getFileKey();
+			$uploadWarning = 'upload-tryagain';
+		} else {
+			$sessionKey = null;
+			$uploadWarning = 'upload-tryagain-nostash';
+		}
+		$message = // '<h2>' . $this->msg( 'uploaderror' )->escaped() . "</h2>\n" .
+			'<div class="error">' . $message . "</div>\n";
+
+		$form = $this->getUploadForm( $message, $sessionKey );
+		// $form->setSubmitText( $this->msg( $uploadWarning )->escaped() );
+		$this->showUploadForm( $form );
+	}
+
+	/**
 	 * Show some text and linkage on successful upload.
 	 *
 	 * @param string $ext File extension (gif, jpg or png)
