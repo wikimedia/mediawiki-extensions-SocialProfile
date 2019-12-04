@@ -153,10 +153,12 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		$request = $this->getRequest();
 
 		$tar->setRealName( $request->getVal( 'real_name' ) );
-		$tar->setEmail( $request->getVal( 'email' ) );
+		if ( $this->getUser()->isAllowed( 'editothersprofiles-private' ) ) {
+			$tar->setEmail( $request->getVal( 'email' ) );
 
-		if ( $tar->getEmail() != $request->getVal( 'email' ) ) {
-			$tar->mEmailAuthenticated = null; # but flag as "dirty" = unauthenticated
+			if ( $tar->getEmail() != $request->getVal( 'email' ) ) {
+				$tar->mEmailAuthenticated = null; # but flag as "dirty" = unauthenticated
+			}
 		}
 
 		$tar->saveSettings();
@@ -223,22 +225,24 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-info' )->plain() . '</p>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-name' )->plain() . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="real_name" id="real_name" value="' . $real_name . '"/></p>
-			<div class="visualClear"></div>
-			<p class="profile-update-unit-left">' . $this->msg( 'email' )->plain() . '</p>
-			<p class="profile-update-unit"><input type="text" size="25" name="email" id="email" value="' . $email . '"/>';
-		if ( !$tar->mEmailAuthenticated ) {
-			$confirm = SpecialPage::getTitleFor( 'Confirmemail' );
-			$form .= " <a href=\"{$confirm->getFullURL()}\">" .
-				$this->msg( 'confirmemail' )->plain() .
-			'</a>';
-		}
-		$form .= '</p>
 			<div class="visualClear"></div>';
-		if ( !$tar->mEmailAuthenticated ) {
-			$form .= '<p class="profile-update-unit-left"></p>
-				<p class="profile-update-unit-small">' .
-					$this->msg( 'user-profile-personal-email-needs-auth' )->plain() .
-				'</p>';
+		if ( $this->getUser()->isAllowed( 'editothersprofiles-private' ) ) {
+			$form .= '<p class="profile-update-unit-left">' . $this->msg( 'email' )->plain() . '</p>
+			<p class="profile-update-unit"><input type="text" size="25" name="email" id="email" value="' . $email . '"/>';
+			if ( !$tar->mEmailAuthenticated ) {
+				$confirm = SpecialPage::getTitleFor( 'Confirmemail' );
+				$form .= " <a href=\"{$confirm->getFullURL()}\">" .
+					$this->msg( 'confirmemail' )->plain() .
+				'</a>';
+			}
+			$form .= '</p>
+				<div class="visualClear"></div>';
+			if ( !$tar->mEmailAuthenticated ) {
+				$form .= '<p class="profile-update-unit-left"></p>
+					<p class="profile-update-unit-small">' .
+						$this->msg( 'user-profile-personal-email-needs-auth' )->plain() .
+					'</p>';
+			}
 		}
 		$form .= '<div class="visualClear"></div>
 		</div>
