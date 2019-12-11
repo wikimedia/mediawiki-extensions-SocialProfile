@@ -831,6 +831,7 @@ class UserActivity {
 			$user_title = Title::makeTitle( NS_USER, $row->um_user_name );
 			$user_name_short = htmlspecialchars( $wgLang->truncateForVisual( $row->um_user_name, 15 ) );
 			$unixTS = wfTimestamp( TS_UNIX, $row->um_date );
+			$comment = $this->fixItemComment( $row->um_message );
 
 			// @todo FIXME: epic suckage is epic
 			// For level-up actions we do _not_ want escaping because "level-advanced-to" i18n msg
@@ -840,6 +841,10 @@ class UserActivity {
 			$msg = htmlspecialchars( $row->um_message );
 			if ( $row->um_type == UserSystemMessage::TYPE_LEVELUP ) {
 				$msg = $row->um_message;
+				// Don't call $this->fixItemComment() b/c we don't want to mutilate the
+				// HTML as if we do that, it won't show up properly on social profile pages
+				// Instead just directly truncate the string here if necessary and continue
+				$comment = $wgLang->truncateForVisual( $msg, 75 );
 			}
 
 			$this->activityLines[] = [
@@ -856,7 +861,7 @@ class UserActivity {
 				'namespace' => '',
 				'username' => $row->um_user_name,
 				'userid' => $row->um_user_id,
-				'comment' => $this->fixItemComment( $row->um_message ),
+				'comment' => $comment,
 				'new' => '0',
 				'minor' => 0
 			];
