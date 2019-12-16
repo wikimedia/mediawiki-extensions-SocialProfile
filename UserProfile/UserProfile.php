@@ -90,7 +90,7 @@ $wgResourceModules['ext.socialprofile.userprofile.js'] = [
 // Modules for Special:EditProfile/Special:UpdateProfile
 $wgResourceModules['ext.userProfile.updateProfile'] = [
 	'scripts' => 'resources/js/UpdateProfile.js',
-	'dependencies' => [ 'mediawiki.api', 'mediawiki.util', 'jquery.ui.datepicker' ],
+	'dependencies' => [ 'mediawiki.api', 'mediawiki.util', 'jquery.ui' ],
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'SocialProfile/UserProfile'
 ];
