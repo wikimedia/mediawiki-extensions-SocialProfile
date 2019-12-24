@@ -99,23 +99,23 @@ class UserActivity {
 			}
 			$userIDs = implode( ',', $userArray );
 			if ( !empty( $userIDs ) ) {
-				$where[] = "rc_user IN ($userIDs)";
+				$where[] = "actor_user IN ($userIDs)";
 			}
 		}
 
 		if ( !empty( $this->show_current_user ) ) {
-			$where['rc_user'] = $this->user_id;
+			$where['actor_user'] = $this->user_id;
 		}
 
 		$commentStore = CommentStore::getStore();
-		$actorQuery = ActorMigration::newMigration()->getJoin( 'rc_user' );
+		$actorQuery = ActorMigration::newMigration()->getJoin( 'rc_user' ); // @todo This usage is deprecated since MW 1.34.
 		$commentQuery = $commentStore->getJoin( 'rc_comment' );
 
 		$res = $dbr->select(
 			[ 'recentchanges' ] + $commentQuery['tables'] + $actorQuery['tables'],
 			[
 				'rc_timestamp', 'rc_title',
-				'rc_user', 'rc_user_text', 'rc_id', 'rc_minor',
+				'rc_id', 'rc_minor',
 				'rc_new', 'rc_namespace', 'rc_cur_id', 'rc_this_oldid',
 				'rc_last_oldid', 'rc_log_action'
 			] + $commentQuery['fields'] + $actorQuery['fields'],
