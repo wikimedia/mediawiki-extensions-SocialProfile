@@ -580,7 +580,7 @@ class UserProfilePage extends Article {
 				}
 			}
 
-			$value = $out->parse( trim( $value ), false );
+			$value = $out->parseAsInterface( trim( $value ), false );
 
 			$output = "<div><b>{$label}</b>{$value}</div>";
 		}
