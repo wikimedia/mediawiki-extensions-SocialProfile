@@ -115,7 +115,7 @@ class RandomFeaturedUser {
 			$output .= '</a>';
 		}
 
-		$link = Html::element(
+		$link = Html::rawElement(
 			'a',
 			[ 'href' => $user_title->getFullURL() ],
 			wordwrap( $random_user['user_name'], 12, "<br />\n", true )
