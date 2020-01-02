@@ -11,7 +11,7 @@ var UserBoard = {
 		if ( message && !UserBoard.posted ) {
 			UserBoard.posted = 1;
 			var messageType = document.getElementById( 'message_type' ).value;
-			( new mw.Api() ).postWithToken( 'edit', {
+			( new mw.Api() ).postWithToken( 'csrf', {
 				action: 'socialprofile-send-message',
 				format: 'json',
 				username: recipient,
@@ -36,7 +36,7 @@ var UserBoard = {
 
 	deleteMessage: function( id ) {
 		if ( window.confirm( mediaWiki.msg( 'userboard_confirmdelete' ) ) ) {
-			( new mw.Api() ).postWithToken( 'edit', {
+			( new mw.Api() ).postWithToken( 'csrf', {
 				action: 'socialprofile-delete-message',
 				format: 'json',
 				'id': id
