@@ -893,24 +893,29 @@ class UserActivity {
 				],
 				__METHOD__
 			);
+
 			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
-			$userIDs = implode( ',', $userArray );
+
 			if ( !empty( $userIDs ) ) {
-				$where[] = "us_user_id IN ($userIDs)";
+				$actorIDs = [];
+				foreach ( $userIDs as $userID ) {
+					$actorIDs[] = User::newFromId( $userID )->getActorId();
+				}
+				$where['us_actor'] = $actorIDs;
 			}
 		}
 
 		if ( $this->show_current_user ) {
-			$where['us_user_id'] = $this->user_id;
+			$where['us_actor'] = User::newFromId( $this->user_id )->getActorId();
 		}
 
 		$res = $dbr->select(
 			'user_status',
 			[
-				'us_id', 'us_user_id', 'us_user_name', 'us_text',
+				'us_id', 'us_actor', 'us_text',
 				'us_date', 'us_sport_id', 'us_team_id'
 			],
 			$where,
@@ -931,6 +936,8 @@ class UserActivity {
 				$network_name = $sport['name'];
 			}
 			$unixTS = wfTimestamp( TS_UNIX, $row->us_date );
+			$user = User::newFromActorId( $row->us_actor );
+			$userName = $user->getName();
 
 			$this->items[] = [
 				'id' => $row->us_id,
@@ -938,16 +945,19 @@ class UserActivity {
 				'timestamp' => $unixTS,
 				'pagetitle' => '',
 				'namespace' => '',
-				'username' => $row->us_user_name,
-				'userid' => $row->us_user_id,
+				'username' => $userName,
+				// @todo FIXME: as far as I can see, literally nothing consumes 'userid'
+				// columns despite that many methods in this class set that value.
+				// Just drop it altogether in favor of an actor array item?
+				// --ashley, 1 January 2019
+				'userid' => $user->getId(),
 				'comment' => $this->fixItemComment( $row->us_text ),
 				'sport_id' => $row->us_sport_id,
 				'team_id' => $row->us_team_id,
 				'network' => $network_name
 			];
 
-			$user_title = Title::makeTitle( NS_USER, $row->us_user_name );
-			$user_name_short = $wgLang->truncateForVisual( $row->us_user_name, 15 );
+			$user_name_short = $wgLang->truncateForVisual( $userName, 15 );
 
 			$sportsNetworkURL = htmlspecialchars(
 				SpecialPage::getTitleFor( 'FanHome' )->getFullURL( [
@@ -957,16 +967,17 @@ class UserActivity {
 				ENT_QUOTES
 			);
 
-			$page_link = '<a href="' . $sportsNetworkURL . "\" rel=\"nofollow\">" . htmlspecialchars( $network_name ) . "</a>";
+			$page_link = '<a href="' . $sportsNetworkURL . '" rel="nofollow">' .
+				htmlspecialchars( $network_name ) . '</a>';
 			$network_image = SportsTeams::getLogo( $row->us_sport_id, $row->us_team_id, 's' );
 
 			// FIXME: This message uses raw HTML
 			$html = wfMessage(
 				'useractivity-network-thought',
-				htmlspecialchars( $row->us_user_name ),
+				htmlspecialchars( $userName ),
 				htmlspecialchars( $user_name_short ),
 				$page_link,
-				htmlspecialchars( $user_title->getFullURL() )
+				htmlspecialchars( $user->getUserPage()->getFullURL() )
 			)->text() .
 					'<div class="item">
 						<a href="' . $sportsNetworkURL . "\" rel=\"nofollow\">
