@@ -27,25 +27,6 @@ class UserStats {
 		$this->user_name = $user_name;
 	}
 
-	static $stats_name = [
-		'monthly_winner_count' => 'Monthly Wins',
-		'weekly_winner_count' => 'Weekly Wins',
-		'vote_count' => 'Votes',
-		'edit_count' => 'Edits',
-		'comment_count' => 'Comments',
-		'referrals_completed' => 'Referrals',
-		'friends_count' => 'Friends',
-		'foe_count' => 'Foes',
-		'opinions_published' => 'Published Opinions',
-		'opinions_created' => 'Opinions',
-		'comment_score_positive_rec' => 'Thumbs Up',
-		'comment_score_negative_rec' => 'Thumbs Down',
-		'comment_score_positive_given' => 'Thumbs Up Given',
-		'comment_score_negative_given' => 'Thumbs Down Given',
-		'gifts_rec_count' => 'Gifts Received',
-		'gifts_sent_count' => 'Gifts Sent'
-	];
-
 	/**
 	 * Retrieves per-user statistics, either from Memcached or from the database
 	 */
