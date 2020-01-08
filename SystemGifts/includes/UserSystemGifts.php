@@ -156,32 +156,6 @@ class UserSystemGifts {
 	}
 
 	/**
-	 * Checks if the user whose user ID is $user_id owns the system gift with
-	 * the ID = $sg_id.
-	 *
-	 * @param int $user_id User ID
-	 * @param int $sg_id ID Number of the system gift whose ownership
-	 * we're trying to figure out here.
-	 * @return bool True if the specified user owns the system gift,
-	 * otherwise false
-	 */
-	public function doesUserOwnGift( $user_id, $sg_id ) {
-		$dbr = wfGetDB( DB_REPLICA );
-		$s = $dbr->selectRow(
-			'user_system_gift',
-			[ 'sg_user_id' ],
-			[ 'sg_id' => $sg_id ],
-			__METHOD__
-		);
-		if ( $s !== false ) {
-			if ( $user_id == $s->ug_user_id_to ) {
-				return true;
-			}
-		}
-		return false;
-	}
-
-	/**
 	 * Deletes the system gift that has the ID $ug_id.
 	 *
 	 * @param int $ug_id Gift ID of the system gift
