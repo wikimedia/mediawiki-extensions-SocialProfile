@@ -130,8 +130,9 @@ class UserStatsTrack {
 	/**
 	 * Increase a given social statistic field by $val.
 	 *
-	 * @param $field String: field name in user_stats database table
-	 * @param $val Integer: increase $field by this amount, defaults to 1
+	 * @param string $field Field name key, e.g. 'edit' for referencing the 'stats_edit_count' field
+	 *   in user_stats database table
+	 * @param int $val Increase $field by this amount, defaults to 1
 	 */
 	function incStatField( $field, $val = 1 ) {
 		global $wgUser, $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
@@ -193,8 +194,9 @@ class UserStatsTrack {
 	/**
 	 * Decrease a given social statistic field by $val.
 	 *
-	 * @param string $field field name in user_stats database table
-	 * @param int $val decrease $field by this amount, defaults to 1
+	 * @param string $field Field name key, e.g. 'edit' for referencing the 'stats_edit_count' field
+	 *   in user_stats database table
+	 * @param int $val Decrease $field by this amount, defaults to 1
 	 */
 	function decStatField( $field, $val = 1 ) {
 		global $wgUser, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
@@ -217,137 +219,6 @@ class UserStatsTrack {
 					$this->updateMonthlyPoints( 0 - ( $this->point_values[$field] ) );
 				}
 			}
-
-			$this->clearCache();
-		}
-	}
-
-	/**
-	 * Update the amount of comments the user has submitted.
-	 * Comment count is fetched from the Comments table, which is introduced by
-	 * the extension with the same name.
-	 *
-	 * @todo FIXME: This appears to be unused (as of July 2019) and seems to have
-	 * been like that for over a decade...
-	 */
-	function updateCommentCount() {
-		global $wgUser;
-
-		if ( !$wgUser->isAnon() ) {
-			$dbw = wfGetDB( DB_MASTER );
-			$comments = $dbw->select(
-				'Comments',
-				'COUNT(*) AS CommentCount',
-				[ 'Comment_user_id' => $this->user_id ],
-				__METHOD__
-			);
-			$res = $dbw->update(
-				'user_stats',
-				[
-					'stats_comment_count' => $comments->CommentCount
-				],
-				[ 'stats_user_id' => $this->user_id ],
-				__METHOD__
-			);
-
-			$this->clearCache();
-		}
-	}
-
-	/**
-	 * Update the amount of times the user has been added into someone's
-	 * comment ignore list by fetching data from the Comments_block table,
-	 * which is introduced by the Comments extension.
-	 *
-	 * @todo FIXME: This appears to be unused (as of July 2019) and seems to have
-	 * been like that for over a decade...
-	 */
-	function updateCommentIgnored() {
-		global $wgUser;
-
-		if ( !$wgUser->isAnon() ) {
-			$dbw = wfGetDB( DB_MASTER );
-			$blockedComments = $dbw->select(
-				'Comments_block',
-				'COUNT(*) AS CommentCount',
-				[ 'cb_user_id_blocked' => $this->user_id ],
-				__METHOD__
-			);
-			$res = $dbw->update(
-				'user_stats',
-				[
-					'stats_comment_blocked' => $blockedComments->CommentCount
-				],
-				[ 'stats_user_id' => $this->user_id ],
-				__METHOD__
-			);
-
-			$this->clearCache();
-		}
-	}
-
-	/**
-	 * Update the amount of edits for a given user
-	 * Edit count is fetched from revision table
-	 *
-	 * @todo FIXME: This appears to be unused (as of July 2019) and seems to have
-	 * been like that for over a decade...
-	 */
-	function updateEditCount() {
-		global $wgActorTableSchemaMigrationStage, $wgUser;
-
-		if ( !$wgUser->isAnon() ) {
-			$dbw = wfGetDB( DB_MASTER );
-			$revQuery = MediaWiki\MediaWikiServices::getInstance()->getRevisionStore()->getQueryInfo();
-			$idField = ( $wgActorTableSchemaMigrationStage & SCHEMA_COMPAT_READ_NEW )
-				? 'rev_actor' : 'rev_user';
-			$target = ( $wgActorTableSchemaMigrationStage & SCHEMA_COMPAT_READ_NEW ) ?
-				$wgUser->getActorId() : $this->user_id;
-
-			$edits = $dbw->select(
-				$revQuery['tables'],
-				'COUNT(*) AS EditsCount',
-				[ $idField => $target ],
-				__METHOD__,
-				[],
-				$revQuery['joins']
-			);
-			$res = $dbw->update(
-				'user_stats',
-				[ 'stats_edit_count' => $edits->EditsCount ],
-				[ 'stats_user_id' => $this->user_id ],
-				__METHOD__
-			);
-
-			$this->clearCache();
-		}
-	}
-
-	/**
-	 * Update the amount of votes for a given user.
-	 * Vote count is fetched from the Vote table, which is introduced
-	 * by a separate extension.
-	 *
-	 * @todo FIXME: This appears to be unused (as of July 2019) and seems to have
-	 * been like that for over a decade...
-	 */
-	function updateVoteCount() {
-		global $wgUser;
-
-		if ( !$wgUser->isAnon() ) {
-			$dbw = wfGetDB( DB_MASTER );
-			$votes = $dbw->select(
-				'Vote',
-				'COUNT(*) AS VoteCount',
-				[ 'vote_user_id' => $this->user_id ],
-				__METHOD__
-			);
-			$res = $dbw->update(
-				'user_stats',
-				[ 'stats_vote_count' => $votes->VoteCount ],
-				[ 'stats_user_id' => $this->user_id ],
-				__METHOD__
-			);
 
 			$this->clearCache();
 		}
@@ -430,78 +301,6 @@ class UserStatsTrack {
 			$res = $dbw->update(
 				'user_stats',
 				[ $col => $relationships ],
-				[ 'stats_user_id' => $this->user_id ],
-				__METHOD__,
-				[ 'LOW_PRIORITY' ]
-			);
-		}
-	}
-
-	/**
-	 * Updates the amount of received gifts if the user isn't an anon.
-	 */
-	function updateGiftCountRec() {
-		global $wgUser;
-
-		if ( !$wgUser->isAnon() ) {
-			$dbw = wfGetDB( DB_MASTER );
-			$gifts = $dbw->select(
-				'user_gift',
-				'COUNT(*) AS gift_count',
-				[ 'ug_user_id_to' => $this->user_id ],
-				__METHOD__
-			);
-			$res = $dbw->update(
-				'user_stats',
-				[ 'stats_gifts_rec_count' => $gifts->gift_count ],
-				[ 'stats_user_id' => $this->user_id ],
-				__METHOD__,
-				[ 'LOW_PRIORITY' ]
-			);
-		}
-	}
-
-	/**
-	 * Updates the amount of sent gifts if the user isn't an anon.
-	 */
-	function updateGiftCountSent() {
-		global $wgUser;
-
-		if ( !$wgUser->isAnon() ) {
-			$dbw = wfGetDB( DB_MASTER );
-			$gifts = $dbw->select(
-				'user_gift',
-				'COUNT(*) AS gift_count',
-				[ 'ug_user_id_from' => $this->user_id ],
-				__METHOD__
-			);
-			$res = $dbw->update(
-				'user_stats',
-				[ 'stats_gifts_sent_count' => $gifts->gift_count ],
-				[ 'stats_user_id' => $this->user_id ],
-				__METHOD__,
-				[ 'LOW_PRIORITY' ]
-			);
-		}
-	}
-
-	/**
-	 * Update the amount of users our user has referred to the wiki.
-	 */
-	public function updateReferralComplete() {
-		global $wgUser;
-
-		if ( !$wgUser->isAnon() ) {
-			$dbw = wfGetDB( DB_MASTER );
-			$referrals = $dbw->select(
-				'user_register_track',
-				'COUNT(*) AS thecount',
-				[ 'ur_user_id_referral' => $this->user_id ],
-				__METHOD__
-			);
-			$res = $dbw->update(
-				'user_stats',
-				[ 'stats_referrals_completed' => $referrals->thecount ],
 				[ 'stats_user_id' => $this->user_id ],
 				__METHOD__,
 				[ 'LOW_PRIORITY' ]
