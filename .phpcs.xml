@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <ruleset>
 	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
-		<exclude name="Generic.Files.LineLength.TooLong"/>
+		<exclude name="Generic.Files.LineLength.TooLong" />
+		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPrivate" />
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic"/>
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamName"/>
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamTag"/>
@@ -12,11 +13,10 @@
 		<exclude name="MediaWiki.Usage.DbrQueryUsage.DbrQueryFound" />
 		<exclude name="MediaWiki.Usage.DeprecatedGlobalVariables.Deprecated$wgTitle" />
 		<exclude name="MediaWiki.Usage.ForbiddenFunctions.exec" />
+		<exclude name="MediaWiki.Usage.ForbiddenFunctions.isset" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment" />
 		<exclude name="PSR12.Properties.ConstantVisibility.NotFound" />
-		<exclude name="PSR2.Classes.PropertyDeclaration.ScopeMissing" />
 		<exclude name="Squiz.PHP.NonExecutableCode.Unreachable" />
-		<exclude name="Squiz.Scope.MemberVarScope.Missing"/>
 		<exclude name="Squiz.Scope.MethodScope.Missing"/>
 	</rule>
 	<file>.</file>

@@ -42,7 +42,7 @@ $wgUserProfileThresholds = [
  * quiz-answered // [[mw:Extension:QuizGame]] answered quizzes in total
  * quiz-correct // [[mw:Extension:QuizGame]] correctly answered quizzes
  * quiz-points // [[mw:Extension:QuizGame]] points in total
-*/
+ */
 ];
 
 // Default setup for displaying sections

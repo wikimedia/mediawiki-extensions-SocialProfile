@@ -92,8 +92,8 @@ class SpecialViewRelationships extends SpecialPage {
 		if ( !$targetUser || $targetUser->getId() === 0 ) {
 
 			/**
-			* Error message for username that does not exist (from URL)
-			*/
+			 * Error message for username that does not exist (from URL)
+			 */
 			if ( $user_name ) {
 				$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
 				$output = '<div class="relationship-error-message">' .

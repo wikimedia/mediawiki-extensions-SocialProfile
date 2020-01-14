@@ -76,8 +76,8 @@ class ViewSystemGifts extends SpecialPage {
 		}
 
 		/**
-		* Config for the page
-		*/
+		 * Config for the page
+		 */
 		$per_page = 10;
 		$per_row = 2;
 

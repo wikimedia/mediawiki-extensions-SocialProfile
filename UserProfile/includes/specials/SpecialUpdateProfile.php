@@ -22,7 +22,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * @param User|null $user User object; null by default (=current user)
 	 */
 	function initProfile( $user = null ) {
-		if ( is_null( $user ) ) {
+		if ( $user === null ) {
 			$user = $this->getUser();
 		}
 
@@ -128,7 +128,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 					 * user-profile-create-threshold-quiz-answered
 					 * user-profile-create-threshold-quiz-correct
 					 * user-profile-create-threshold-quiz-points
-					*/
+					 */
 					$thresholdMessages[] = $this->msg( 'user-profile-create-threshold-' . $reason )->numParams( $requiredAmount )->parse();
 				}
 				// Set a useful message of why.
@@ -330,7 +330,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	function saveProfileBasic( $user = null ) {
 		global $wgMemc;
 
-		if ( is_null( $user ) ) {
+		if ( $user === null ) {
 			$user = $this->getUser();
 		}
 
@@ -381,7 +381,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	function saveProfileCustom( $user = null ) {
 		global $wgMemc;
 
-		if ( is_null( $user ) ) {
+		if ( $user === null ) {
 			$user = $this->getUser();
 		}
 
@@ -413,7 +413,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	function saveProfilePersonal( $user = null ) {
 		global $wgMemc;
 
-		if ( is_null( $user ) ) {
+		if ( $user === null ) {
 			$user = $this->getUser();
 		}
 
