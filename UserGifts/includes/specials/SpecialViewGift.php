@@ -85,7 +85,7 @@ class ViewGift extends UnlistedSpecialPage {
 			$userGiftIcon = new UserGiftIcon( $gift['gift_id'], 'l' );
 			$icon = $userGiftIcon->getIconHTML();
 
-			$message = $out->parse( trim( $gift['message'] ), false );
+			$message = $out->parseAsContent( trim( $gift['message'] ), false );
 
 			$output .= '<div class="g-description-container">';
 			$output .= '<div class="g-description">' .

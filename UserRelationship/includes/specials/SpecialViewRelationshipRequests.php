@@ -116,7 +116,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 						)->text();
 					}
 
-					$message = $out->parse( trim( $request['message'] ), false );
+					$message = $out->parseAsContent( trim( $request['message'] ), false );
 
 					$output .= "<div class=\"relationship-action black-text\" id=\"request_action_{$request['id']}\">
 					  	{$avatar_img}" . $msg;
