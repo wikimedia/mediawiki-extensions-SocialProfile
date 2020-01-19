@@ -57,14 +57,11 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 			foreach ( $user_ids_to as $user_id ) {
 				$recipient = User::newFromId( $user_id );
 				$recipient->loadFromId();
-				$user_name = $recipient->getName();
 				$b->sendBoardMessage(
-					$user->getId(),
-					$user->getName(),
-					$user_id,
-					$user_name,
+					$user,
+					$recipient,
 					$request->getVal( 'message' ),
-					1
+					UserBoard::MESSAGE_PRIVATE
 				);
 				$count++;
 			}

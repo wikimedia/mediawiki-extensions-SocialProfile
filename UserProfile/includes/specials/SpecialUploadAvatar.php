@@ -106,6 +106,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 */
 	private function showSuccess( $ext ) {
 		global $wgAvatarKey, $wgUploadBaseUrl, $wgUploadPath, $wgUploadAvatarInRecentChanges;
+
 		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
 
 		$user = $this->getUser();
@@ -279,6 +280,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 */
 	function getAvatar( $size ) {
 		global $wgAvatarKey, $wgUploadDirectory, $wgUploadBaseUrl, $wgUploadPath;
+
 		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
 
 		$files = glob(

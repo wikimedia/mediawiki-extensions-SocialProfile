@@ -50,7 +50,7 @@ class ViewSystemGifts extends SpecialPage {
 		 * Redirect Non-logged in users to Login Page
 		 * It will automatically return them to the ViewSystemGifts page
 		 */
-		if ( $currentUser->getId() == 0 && $user_name == '' ) {
+		if ( !$currentUser->isLoggedIn() && $user_name == '' ) {
 			$out->setPageTitle( $this->msg( 'ga-error-title' )->plain() );
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
 			$out->redirect( htmlspecialchars( $login->getFullURL( 'returnto=Special:ViewSystemGifts' ) ) );
@@ -63,13 +63,12 @@ class ViewSystemGifts extends SpecialPage {
 		if ( !$user_name ) {
 			$user_name = $currentUser->getName();
 		}
-		$user_id = User::idFromName( $user_name );
 		$targetUser = User::newFromName( $user_name );
 
 		/**
 		 * Error message for username that does not exist (from URL)
 		 */
-		if ( $user_id == 0 ) {
+		if ( $targetUser->getId() == 0 ) {
 			$out->setPageTitle( $this->msg( 'ga-error-title' )->plain() );
 			$out->addHTML( $this->msg( 'ga-error-message-no-user' )->plain() );
 			return false;
@@ -85,10 +84,10 @@ class ViewSystemGifts extends SpecialPage {
 		 * Get all Gifts for this user into the array
 		 */
 		$listLookup = new SystemGiftListLookup( $per_page, $page );
-		$rel = new UserSystemGifts( $user_name );
+		$rel = new UserSystemGifts( $targetUser );
 
 		$gifts = $listLookup->getUserGiftList( $targetUser );
-		$total = $rel->getGiftCountByUsername( $user_name );
+		$total = $rel->getGiftCountByUsername( $targetUser );
 
 		/**
 		 * Show gift count for user

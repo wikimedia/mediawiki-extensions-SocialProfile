@@ -73,7 +73,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		] );
 		$out->addModules( 'ext.socialprofile.userrelationship.js' );
 
-		$rel = new UserRelationship( $user->getName() );
+		$rel = new UserRelationship( $user );
 
 		if ( $request->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
 			$_SESSION['alreadysubmitted'] = true;
@@ -96,23 +96,27 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 
 			if ( $requests ) {
 				foreach ( $requests as $request ) {
-					$user_from = Title::makeTitle( NS_USER, $request['user_name_from'] );
-					$avatar = new wAvatar( $request['user_id_from'], 'l' );
+					$userFrom = User::newFromActorId( $request['actor_from'] );
+					if ( !$userFrom ) {
+						continue;
+					}
+
+					$avatar = new wAvatar( $userFrom->getId(), 'l' );
 					$avatar_img = $avatar->getAvatarURL();
 
 					if ( $request['type'] == 'Foe' ) {
 						// FIXME: Message should be escaped, but uses raw HTML
 						$msg = $this->msg(
 							'ur-requests-message-foe',
-							htmlspecialchars( $user_from->getFullURL() ),
-							$request['user_name_from']
+							htmlspecialchars( $userFrom->getUserPage()->getFullURL() ),
+							$userFrom->getName()
 						)->text();
 					} else {
 						// FIXME: Message should be escaped, but uses raw HTML
 						$msg = $this->msg(
 							'ur-requests-message-friend',
-							htmlspecialchars( $user_from->getFullURL() ),
-							$request['user_name_from']
+							htmlspecialchars( $userFrom->getUserPage()->getFullURL() ),
+							$userFrom->getName()
 						)->text();
 					}
 

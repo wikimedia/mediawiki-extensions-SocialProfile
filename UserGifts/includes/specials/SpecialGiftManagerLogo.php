@@ -45,14 +45,14 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$this->executeLogo();
 	}
 
-	function canUserManage() {
+	private function canUserManage() {
 		$user = $this->getUser();
 
 		if ( $user->isAllowed( 'giftadmin' ) ) {
 			return true;
 		} elseif ( $this->gift_id ) {
 			$gift = Gifts::getGift( $this->gift_id );
-			return $user->getId() == $gift['creator_user_id'];
+			return $user->getActorId() == $gift['creator_actor'];
 		}
 
 		return false;

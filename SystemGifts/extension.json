@@ -17,6 +17,7 @@
 		"SystemGiftsAlias": "includes/SystemGifts.alias.php"
 	},
 	"AutoloadClasses": {
+		"MigrateOldSystemGiftsUserColumnsToActor": "maintenance/migrateOldSystemGiftsUserColumnsToActor.php",
 		"SystemGiftCount": "includes/SystemGiftCount.php",
 		"SystemGiftIcon": "includes/SystemGiftIcon.php",
 		"SystemGiftListLookup": "includes/SystemGiftListLookup.php",

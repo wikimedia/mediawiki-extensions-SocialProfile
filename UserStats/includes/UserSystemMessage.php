@@ -27,19 +27,18 @@ class UserSystemMessage {
 	/**
 	 * Adds the message into the database
 	 *
-	 * @param mixed $userName The name of the user who's receiving the message
+	 * @param User $user The user (object) related to the message (i.e. user who advanced to a new level etc.)
 	 * @param int $type One of the TYPE_* constants; 0/TYPE_DEFAULT by default
 	 * @param string $message Message to be sent out
 	 */
-	public function addMessage( $userName, $type = 0, $message ) {
-		$userId = User::idFromName( $userName );
+	public function addMessage( $user, $type = 0, $message ) {
+		$actorId = $user->getActorId();
 		$dbw = wfGetDB( DB_MASTER );
 
 		$dbw->insert(
 			'user_system_messages',
 			[
-				'um_user_id' => $userId,
-				'um_user_name' => $userName,
+				'um_actor' => $actorId,
 				'um_type' => $type,
 				'um_message' => $message,
 				'um_date' => date( 'Y-m-d H:i:s' ),
@@ -52,7 +51,7 @@ class UserSystemMessage {
 	 *
 	 * @param int $um_id Internal ID number of the message to delete
 	 */
-	static function deleteMessage( $um_id ) {
+	public static function deleteMessage( $um_id ) {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->delete(
 			'user_system_messages',
@@ -64,21 +63,20 @@ class UserSystemMessage {
 	/**
 	 * Sends out the "you have advanced to level [fill in this]" messages to the users
 	 *
-	 * @param int $userIdTo User ID of the receiver
+	 * @param User $userTo User receiving the email
 	 * @param mixed $level Name of the level that the user advanced to
 	 */
-	public function sendAdvancementNotificationEmail( $userIdTo, $level ) {
-		$user = User::newFromId( $userIdTo );
-		$user->loadFromDatabase();
+	public function sendAdvancementNotificationEmail( $userTo, $level ) {
+		$userTo->loadFromDatabase();
 
-		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-level-up' ) : $user->getIntOption( 'notifyhonorifics', 1 );
-		if ( $user->isEmailConfirmed() && $wantsEmail ) {
+		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $userTo->getBoolOption( 'echo-subscriptions-email-social-level-up' ) : $userTo->getIntOption( 'notifyhonorifics', 1 );
+		if ( $userTo->isEmailConfirmed() && $wantsEmail ) {
 			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
 			$subject = wfMessage( 'level-advance-subject', $level )->text();
-			if ( trim( $user->getRealName() ) ) {
-				$name = $user->getRealName();
+			if ( trim( $userTo->getRealName() ) ) {
+				$name = $userTo->getRealName();
 			} else {
-				$name = $user->getName();
+				$name = $userTo->getName();
 			}
 			$body = [
 				'html' => wfMessage( 'level-advance-body-html', $name, $level )->parse(),
@@ -89,7 +87,7 @@ class UserSystemMessage {
 				)->text()
 			];
 
-			$user->sendMail( $subject, $body );
+			$userTo->sendMail( $subject, $body );
 		}
 	}
 

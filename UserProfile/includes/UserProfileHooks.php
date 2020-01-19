@@ -35,7 +35,7 @@ class UserProfileHooks {
 			$profile = new UserProfile( $title->getText() );
 			$profile_data = $profile->getProfile();
 
-			if ( isset( $profile_data['user_id'] ) && $profile_data['user_id'] ) {
+			if ( isset( $profile_data['actor'] ) && $profile_data['actor'] ) {
 				if ( $profile_data['user_page_type'] == 0 ) {
 					$bodyAttrs['class'] .= ' mw-wiki-user-page';
 				} else {
@@ -68,7 +68,7 @@ class UserProfileHooks {
 				$profile_data = $profile->getProfile();
 
 				// If they want regular page, ignore this hook
-				if ( isset( $profile_data['user_id'] ) && $profile_data['user_id'] && $profile_data['user_page_type'] == 0 ) {
+				if ( isset( $profile_data['actor'] ) && $profile_data['actor'] && $profile_data['user_page_type'] == 0 ) {
 					$show_user_page = true;
 				}
 			}

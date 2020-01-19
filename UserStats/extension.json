@@ -14,6 +14,11 @@
 		]
 	},
 	"AutoloadClasses": {
+		"MigrateOldUserPointsArchiveUserColumnToActor": "maintenance/migrateOldUserPointsArchiveUserColumnToActor.php",
+		"MigrateOldUserPointsMonthlyUserColumnToActor": "maintenance/migrateOldUserPointsMonthlyUserColumnToActor.php",
+		"MigrateOldUserPointsWeeklyUserColumnToActor": "maintenance/migrateOldUserPointsWeeklyUserColumnToActor.php",
+		"MigrateOldUserStatsUserColumnsToActor": "maintenance/migrateOldUserStatsUserColumnsToActor.php",
+		"MigrateOldUserSystemMessagesUserColumnToActor": "maintenance/migrateOldUserSystemMessagesUserColumnToActor.php",
 		"EchoUserLevelAdvancePresentationModel": "includes/EchoUserLevelAdvancePresentationModel.php",
 		"GenerateTopUsersReport": "includes/specials/GenerateTopUsersReport.php",
 		"TopFansByStat": "includes/specials/TopFansByStat.php",

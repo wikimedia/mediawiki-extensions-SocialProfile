@@ -89,8 +89,7 @@ class SpecialViewRelationships extends SpecialPage {
 		if ( $user_name ) {
 			$targetUser = User::newFromName( $user_name );
 		}
-		if ( !$targetUser || $targetUser->getId() === 0 ) {
-
+		if ( !$targetUser || $targetUser->isAnon() ) {
 			/**
 			 * Error message for username that does not exist (from URL)
 			 */
@@ -116,50 +115,48 @@ class SpecialViewRelationships extends SpecialPage {
 		/**
 		 * Get all relationships
 		 */
-		$rel = new UserRelationship( $targetUser->getName() );
+		$rel = new UserRelationship( $targetUser );
 		$listLookup = new RelationshipListLookup( $targetUser, $per_page );
 		$relationships = $listLookup->getRelationshipList( $rel_type, $page );
 
-		$stats = new UserStats( $rel->user_id, $rel->user_name );
+		$stats = new UserStats( $targetUser );
 		$stats_data = $stats->getUserStats();
 		$friend_count = $stats_data['friend_count'];
 		$foe_count = $stats_data['foe_count'];
 
-		$back_link = Title::makeTitle( NS_USER, $rel->user_name );
-
 		if ( $rel_type == 1 ) {
-			$out->setPageTitle( $this->msg( 'ur-title-friend', $rel->user_name )->parse() );
+			$out->setPageTitle( $this->msg( 'ur-title-friend', $targetUser->getName() )->parse() );
 
 			$total = $friend_count;
 
 			$rem = $this->msg( 'ur-remove-relationship-friend' )->plain();
 			$output .= '<div class="back-links">
-			<a href="' . htmlspecialchars( $back_link->getFullURL() ) . '">' .
-				$this->msg( 'ur-backlink', $rel->user_name )->parse() .
+			<a href="' . htmlspecialchars( $targetUser->getUserPage()->getFullURL() ) . '">' .
+				$this->msg( 'ur-backlink', $targetUser->getName() )->parse() .
 			'</a>
 		</div>
 		<div class="relationship-count">' .
 			$this->msg(
 				'ur-relationship-count-friends',
-				$rel->user_name,
+				$targetUser->getName(),
 				$total
 			)->escaped() . '</div>';
 		} else {
-			$out->setPageTitle( $this->msg( 'ur-title-foe', $rel->user_name )->parse() );
+			$out->setPageTitle( $this->msg( 'ur-title-foe', $targetUser->getName() )->parse() );
 
 			$total = $foe_count;
 
 			$rem = $this->msg( 'ur-remove-relationship-foe' )->plain();
 
 			$output .= '<div class="back-links">
-			<a href="' . htmlspecialchars( $back_link->getFullURL() ) . '">' .
-				$this->msg( 'ur-backlink', $rel->user_name )->parse() .
+			<a href="' . htmlspecialchars( $targetUser->getUserPage()->getFullURL() ) . '">' .
+				$this->msg( 'ur-backlink', $targetUser->getName() )->parse() .
 			'</a>
 		</div>
 		<div class="relationship-count">'
 			. $this->msg(
 				'ur-relationship-count-foes',
-				$rel->user_name,
+				$targetUser->getName(),
 				$total
 			)->escaped() . '</div>';
 		}
@@ -168,32 +165,34 @@ class SpecialViewRelationships extends SpecialPage {
 			$x = 1;
 
 			foreach ( $relationships as $relationship ) {
-				$indivRelationship = UserRelationship::getUserRelationshipByID(
-					$relationship['user_id'],
-					$user->getId()
-				);
+				$actor = User::newFromActorId( $relationship['actor'] );
+				if ( !$actor ) {
+					continue;
+				}
+
+				$indivRelationship = UserRelationship::getUserRelationshipByID( $actor, $user );
 
 				// Safe titles
-				$userPage = Title::makeTitle( NS_USER, $relationship['user_name'] );
 				$addRelationshipLink = SpecialPage::getTitleFor( 'AddRelationship' );
 				$removeRelationshipLink = SpecialPage::getTitleFor( 'RemoveRelationship' );
 				$giveGiftLink = SpecialPage::getTitleFor( 'GiveGift' );
 
-				$userPageURL = htmlspecialchars( $userPage->getFullURL() );
-				$avatar = new wAvatar( $relationship['user_id'], 'ml' );
+				$userPageURL = htmlspecialchars( $actor->getUserPage()->getFullURL() );
+				$avatar = new wAvatar( $actor->getId(), 'ml' );
 
 				$avatar_img = $avatar->getAvatarURL();
 
-				$username_length = strlen( $relationship['user_name'] );
-				$username_space = stripos( $relationship['user_name'], ' ' );
+				$username_length = strlen( $actor->getName() );
+				$username_space = stripos( $actor->getName(), ' ' );
 
 				// Insert a space at position 30 if the first word of the name
 				// has more than 30 characters, truncate at 50 characters
+				// @todo Or just use $this->getLanguage()->truncateForVisual( $actor->getName(), 50 )?
 				if ( ( $username_space == false || $username_space >= "30" ) && $username_length > 30 ) {
-					$user_name_display = substr( $relationship['user_name'], 0, 30 ) .
-						' ' . substr( $relationship['user_name'], 30, 50 );
+					$user_name_display = substr( $actor->getName(), 0, 30 ) .
+						' ' . substr( $actor->getName(), 30, 50 );
 				} else {
-					$user_name_display = $relationship['user_name'];
+					$user_name_display = $actor->getName();
 				}
 				$user_name_display = htmlspecialchars( $user_name_display );
 
@@ -206,7 +205,7 @@ class SpecialViewRelationships extends SpecialPage {
 					<div class=\"relationship-actions\">";
 
 				// Provide links to add/remove as foe/friend and give a gift, except for ourselves
-				if ( $relationship['user_id'] != $user->getId() ) {
+				if ( $relationship['actor'] != $user->getActorId() ) {
 					if ( $indivRelationship == false ) {
 						// No relationship with us, links to add relationship
 						$output .= $lang->pipeList( [
@@ -214,23 +213,23 @@ class SpecialViewRelationships extends SpecialPage {
 								$addRelationshipLink,
 								$this->msg( 'ur-add-friend' )->plain(),
 								[],
-								[ 'user' => $relationship['user_name'], 'rel_type' => 1 ]
+								[ 'user' => $actor->getName(), 'rel_type' => 1 ]
 							),
 							$linkRenderer->makeLink(
 								$addRelationshipLink,
 								$this->msg( 'ur-add-foe' )->plain(),
 								[],
-								[ 'user' => $relationship['user_name'], 'rel_type' => 2 ]
+								[ 'user' => $actor->getName(), 'rel_type' => 2 ]
 							),
 							''
 						] );
-					} elseif ( $targetUser->getId() === $user->getId() ) {
+					} elseif ( $targetUser->getActorId() === $user->getActorId() ) {
 						// Our relationships page, link to remove
 						$output .= $linkRenderer->makeLink(
 							$removeRelationshipLink,
 							$rem,
 							[],
-							[ 'user' => $relationship['user_name'] ]
+							[ 'user' => $actor->getName() ]
 						);
 						$output .= $this->msg( 'pipe-separator' )->escaped();
 					}
@@ -239,7 +238,7 @@ class SpecialViewRelationships extends SpecialPage {
 						$giveGiftLink,
 						$this->msg( 'ur-give-gift' )->plain(),
 						[],
-						[ 'user' => $relationship['user_name'] ]
+						[ 'user' => $actor->getName() ]
 					);
 				} else {
 					// Add an empty space to account for the lack of links

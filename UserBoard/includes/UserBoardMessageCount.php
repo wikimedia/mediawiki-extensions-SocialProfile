@@ -4,7 +4,7 @@ use MediaWiki\Logger\LoggerFactory;
 
 /**
  * This object allows for updating and retrieving the amount
- * of UserBoard messages for a given user based on their ID.
+ * of UserBoard messages for a given user.
  */
 class UserBoardMessageCount {
 	/**
@@ -13,13 +13,13 @@ class UserBoardMessageCount {
 	private $cache;
 
 	/**
-	 * @var int $userId
+	 * @var User $user
 	 */
-	private $userId;
+	private $user;
 
-	public function __construct( $cache, $userId ) {
+	public function __construct( $cache, $user ) {
 		$this->cache = $cache;
-		$this->userId = $userId;
+		$this->user = $user;
 	}
 
 	/**
@@ -38,7 +38,7 @@ class UserBoardMessageCount {
 	}
 
 	/**
-	 * Get the amount of new board messages for the user with ID = $user_id.
+	 * Get the amount of new board messages for the user.
 	 * First tries cache (memcached) and if that succeeds, returns the cached
 	 * data. If that fails, the count is fetched from the database.
 	 *
@@ -57,8 +57,8 @@ class UserBoardMessageCount {
 	}
 
 	/**
-	 * Get the amount of new board messages for the user with ID = $user_id
-	 * from memcached. If successful, returns the amount of new messages.
+	 * Get the amount of new board messages for the user from cache.
+	 * If successful, returns the amount of new messages.
 	 *
 	 * @return int Amount of new messages
 	 */
@@ -67,9 +67,9 @@ class UserBoardMessageCount {
 
 		if ( $data != '' ) {
 			$logger = LoggerFactory::getInstance( 'SocialProfile' );
-			$logger->debug( "Got new message count of {data} for id {user_id} from cache\n", [
+			$logger->debug( "Got new message count of {data} for user name {user_name} from cache\n", [
 				'data' => $data,
-				'user_id' => $this->userId
+				'user_name' => $this->user->getName()
 			] );
 
 			return $data;
@@ -89,8 +89,8 @@ class UserBoardMessageCount {
 	 */
 	private function getFromDatabase() {
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
-		$logger->debug( "Got new message count for id {user_id} from DB\n", [
-			'user_id' => $this->userId
+		$logger->debug( "Got new message count for user name {user_name} from DB\n", [
+			'user_name' => $this->user->getName()
 		] );
 
 		$newCount = 0;
@@ -100,7 +100,7 @@ class UserBoardMessageCount {
 			'user_board',
 			[ 'COUNT(*) AS count' ],
 			[
-				'ug_user_id_to' => $this->userId,
+				'ug_actor_to' => $this->user->getActorId(),
 				'ug_status' => 1
 			],
 			__METHOD__
@@ -119,6 +119,6 @@ class UserBoardMessageCount {
 	 * @return string
 	 */
 	private function makeKey() {
-		return $this->cache->makeKey( 'user', 'newboardmessage', $this->userId );
+		return $this->cache->makeKey( 'user', 'newboardmessage', 'actor_id', $this->user->getActorId() );
 	}
 }

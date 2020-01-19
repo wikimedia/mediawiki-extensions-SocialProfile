@@ -22,19 +22,17 @@ class ApiSendUserBoardMessage extends ApiBase {
 
 		$user_name = stripslashes( $user_name );
 		$user_name = urldecode( $user_name );
-		$user_id_to = User::idFromName( $user_name );
+		$recipient = User::newFromName( $user_name );
 		$b = new UserBoard();
 
 		$m = $b->sendBoardMessage(
-			$user->getId(),
-			$user->getName(),
-			$user_id_to,
-			$user_name,
+			$user,
+			$recipient,
 			urldecode( $message ),
 			$message_type
 		);
 
-		$this->getResult()->addValue( null, 'result', $b->displayMessages( $user_id_to, 0, 1 ) );
+		$this->getResult()->addValue( null, 'result', $b->displayMessages( $recipient, 0, 1 ) );
 
 		return true;
 	}

@@ -79,7 +79,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			$this->saveProfilePersonal( $target );
 			$this->saveProfileCustom( $target );
 
-			UserProfile::clearCache( $target->getId() );
+			UserProfile::clearCache( $target );
 
 			$log = new LogPage( 'profile' );
 			if ( !$wgUpdateProfileInRecentChanges ) {
@@ -174,7 +174,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 				'up_birthday', 'up_occupation', 'up_about', 'up_schools',
 				'up_places_lived', 'up_websites'
 			],
-			[ 'up_user_id' => $tar->getId() ],
+			[ 'up_actor' => $tar->getActorId() ],
 			__METHOD__
 		);
 
@@ -368,7 +368,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 				'up_tv', 'up_music', 'up_books', 'up_video_games',
 				'up_magazines', 'up_snacks', 'up_drinks'
 			],
-			[ 'up_user_id' => $tar->getId() ],
+			[ 'up_actor' => $tar->getActorId() ],
 			__METHOD__
 		);
 
@@ -455,7 +455,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 				'up_custom_1', 'up_custom_2', 'up_custom_3', 'up_custom_4',
 				'up_custom_5'
 			],
-			[ 'up_user_id' => $tar->getId() ],
+			[ 'up_actor' => $tar->getActorId() ],
 			__METHOD__
 		);
 

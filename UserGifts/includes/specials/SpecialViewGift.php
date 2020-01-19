@@ -44,8 +44,8 @@ class ViewGift extends UnlistedSpecialPage {
 
 		if ( $gift ) {
 			if ( $gift['status'] == 1 ) {
-				if ( $gift['user_name_to'] == $user->getName() ) {
-					$g = new UserGifts( $gift['user_name_to'] );
+				if ( $gift['actor_to'] == $user->getActorId() ) {
+					$g = new UserGifts( $user );
 					$g->clearUserGiftStatus( $gift['id'] );
 				}
 			}
@@ -53,32 +53,35 @@ class ViewGift extends UnlistedSpecialPage {
 			// DB stuff
 			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
-				'user_gift',
-				[ 'DISTINCT ug_user_name_to', 'ug_user_id_to', 'ug_date' ],
+				[ 'user_gift', 'actor' ],
+				[ 'DISTINCT actor_name', 'ug_actor_to', 'ug_date' ],
 				[
 					'ug_gift_id' => $gift['gift_id'],
-					'ug_user_name_to <> ' . $dbr->addQuotes( $gift['user_name_to'] )
+					'ug_actor_to <> ' . $dbr->addQuotes( $gift['actor_to'] )
 				],
 				__METHOD__,
 				[
-					'GROUP BY' => 'ug_user_name_to',
+					'GROUP BY' => 'actor_name',
 					'ORDER BY' => 'ug_date DESC',
 					'LIMIT' => 6
-				]
+				],
+				// @todo CHECKME!
+				[ 'actor' => [ 'JOIN', 'actor_id = ug_actor_to' ] ]
 			);
 
+			$giftRecipientUser = User::newFromActorId( $gift['actor_to'] );
 			$out->setPageTitle( $this->msg(
 				'g-description-title',
-				$gift['user_name_to'],
+				$giftRecipientUser->getName(),
 				$gift['name']
 			)->parse() );
 
 			$output = '<div class="back-links">
-				<a href="' . htmlspecialchars( Title::makeTitle( NS_USER, $gift['user_name_to'] )->getFullURL() ) . '">'
-				. $this->msg( 'g-back-link', $gift['user_name_to'] )->parse() . '</a>
+				<a href="' . htmlspecialchars( $giftRecipientUser->getUserPage()->getFullURL() ) . '">'
+				. $this->msg( 'g-back-link', $giftRecipientUser->getName() )->parse() . '</a>
 			</div>';
 
-			$sender = Title::makeTitle( NS_USER, $gift['user_name_from'] );
+			$sender = User::newFromActorId( $gift['actor_from'] );
 			$removeGiftLink = SpecialPage::getTitleFor( 'RemoveGift' );
 			$giveGiftLink = SpecialPage::getTitleFor( 'GiveGift' );
 
@@ -94,8 +97,8 @@ class ViewGift extends UnlistedSpecialPage {
 					<div class="g-timestamp">(' . $gift['timestamp'] . ')</div>
 					<div class="g-from">' . $this->msg( // FIXME: Message with raw HTML
 						'g-from',
-						htmlspecialchars( $sender->getFullURL() ),
-						htmlspecialchars( $gift['user_name_from'] )
+						htmlspecialchars( $sender->getUserPage()->getFullURL() ),
+						htmlspecialchars( $sender->getName() )
 					)->text() . '</div>';
 			if ( $message ) {
 				$output .= '<div class="g-user-message">' . $message . '</div>';
@@ -105,7 +108,7 @@ class ViewGift extends UnlistedSpecialPage {
 					<div class="g-actions">
 						<a href="' . htmlspecialchars( $giveGiftLink->getFullURL( 'gift_id=' . $gift['gift_id'] ) ) . '">' .
 							htmlspecialchars( $this->msg( 'g-to-another' )->plain() ) . '</a>';
-			if ( $gift['user_name_to'] == $user->getName() ) {
+			if ( $gift['actor_to'] == $user->getActorId() ) {
 				$output .= $this->msg( 'pipe-separator' )->escaped();
 				$output .= '<a href="' . htmlspecialchars( $removeGiftLink->getFullURL( 'gift_id=' . $gift['id'] ) ) . '">' .
 					htmlspecialchars( $this->msg( 'g-remove-gift' )->plain() ) . '</a>';
@@ -122,11 +125,10 @@ class ViewGift extends UnlistedSpecialPage {
 					'</div>';
 
 			foreach ( $res as $row ) {
-				$userToId = $row->ug_user_id_to;
-				$avatar = new wAvatar( $userToId, 'ml' );
-				$userNameLink = Title::makeTitle( NS_USER, $row->ug_user_name_to );
+				$userTo = User::newFromActorId( $row->ug_actor_to );
+				$avatar = new wAvatar( $userTo->getId(), 'ml' );
 
-				$output .= '<a href="' . htmlspecialchars( $userNameLink->getFullURL() ) . "\">
+				$output .= '<a href="' . htmlspecialchars( $userTo->getUserPage()->getFullURL() ) . "\">
 					{$avatar->getAvatarURL()}
 				</a>";
 			}

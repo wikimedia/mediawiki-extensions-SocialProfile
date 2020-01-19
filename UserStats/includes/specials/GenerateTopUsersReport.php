@@ -96,7 +96,7 @@ class GenerateTopUsersReport extends SpecialPage {
 		// Query the appropriate points table
 		$res = $dbw->select(
 			"user_points_{$period}",
-			[ 'up_user_id', 'up_user_name', 'up_points' ],
+			[ 'up_actor', 'up_points' ],
 			[],
 			__METHOD__,
 			[ 'ORDER BY' => 'up_points DESC', 'LIMIT' => $user_count ]
@@ -117,7 +117,7 @@ class GenerateTopUsersReport extends SpecialPage {
 			// limitation.
 			$res = $dbw->select(
 				'user_stats',
-				[ 'stats_user_id', 'stats_user_name', 'stats_total_points' ],
+				[ 'stats_actor', 'stats_total_points' ],
 				[],
 				__METHOD__,
 				[
@@ -138,8 +138,7 @@ class GenerateTopUsersReport extends SpecialPage {
 				$last_total = $row->stats_total_points;
 				$x++;
 				$users[] = [
-					'user_id' => $row->stats_user_id,
-					'user_name' => $row->stats_user_name,
+					'actor' => $row->stats_actor,
 					'points' => $row->stats_total_points,
 					'rank' => $rank
 				];
@@ -157,8 +156,7 @@ class GenerateTopUsersReport extends SpecialPage {
 				$last_total = $row->up_points;
 				$x++;
 				$users[] = [
-					'user_id' => $row->up_user_id,
-					'user_name' => $row->up_user_name,
+					'actor' => $row->up_actor,
 					'points' => $row->up_points,
 					'rank' => $rank
 				];
@@ -174,12 +172,16 @@ class GenerateTopUsersReport extends SpecialPage {
 				if ( $user['rank'] == 1 ) {
 					// Mark the user ranked #1 as the "winner" for the given
 					// period
-					$stats = new UserStatsTrack( $user['user_id'], $user['user_name'] );
+					$stats = new UserStatsTrack( $user['actor'] );
 					$stats->incStatField( "points_winner_{$period}" );
 					if ( $winners ) {
 						$winners .= ', ';
 					}
-					$winners .= "[[{$localizedUserNS}:{$user['user_name']}|{$user['user_name']}]]";
+					$actorUser = User::newFromActorId( $user['actor'] );
+					if ( !$actorUser ) {
+						continue;
+					}
+					$winners .= "[[{$localizedUserNS}:{$actorUser->getName()}|{$actorUser->getName()}]]";
 					$winner_count++;
 				}
 			}
@@ -206,15 +208,19 @@ class GenerateTopUsersReport extends SpecialPage {
 			$contLang->formatNum( $user_count ) )->inContentLanguage()->parse() . "==\n\n";
 
 		foreach ( $users as $user ) {
-			$userTitle = Title::makeTitle( NS_USER, $user['user_name'] );
+			$u = User::newFromActorId( $user['actor'] );
+			if ( !$u ) {
+				continue;
+			}
+
 			$pageContent .= '{{int:user-stats-report-row|' .
 				$contLang->formatNum( $user['rank'] ) . '|' .
-				$user['user_name'] . '|' .
+				$u->getName() . '|' .
 				$contLang->formatNum( $user['points'] ) . "}}\n\n";
 
 			$output .= "<div class=\"top-fan-row\">
 			<span class=\"top-fan-num\">{$user['rank']}</span><span class=\"top-fan\"> <a href='" .
-				htmlspecialchars( $userTitle->getFullURL() ) . "' >" . htmlspecialchars( $user['user_name'] ) . "</a>
+				htmlspecialchars( $u->getUserPage()->getFullURL() ) . "' >" . htmlspecialchars( $u->getName() ) . "</a>
 			</span>";
 
 			$output .= '<span class="top-fan-points">' . $this->msg(
@@ -260,8 +266,7 @@ class GenerateTopUsersReport extends SpecialPage {
 				'user_points_archive',
 				"user_points_{$period}",
 				[
-					'up_user_name' => 'up_user_name',
-					'up_user_id' => 'up_user_id',
+					'up_actor' => 'up_actor',
 					'up_points' => 'up_points',
 					'up_period' => ( ( $period == 'weekly' ) ? 1 : 2 ),
 					'up_date' => $dbw->addQuotes( $date )

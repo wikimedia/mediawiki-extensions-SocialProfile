@@ -20,29 +20,29 @@ class ApiRelationshipResponse extends ApiBase {
 
 		$out = '';
 
-		$rel = new UserRelationship( $user->getName() );
+		$rel = new UserRelationship( $user );
 		if ( $rel->verifyRelationshipRequest( $requestId ) == true ) {
 			$request = $rel->getRequest( $requestId );
-			$user_name_from = $request[0]['user_name_from'];
-			$user_id_from = User::idFromName( $user_name_from );
+			$actorIdFrom = $request[0]['actor_from'];
+			$userFrom = User::newFromActorId( $actorIdFrom );
 			$rel_type = strtolower( $request[0]['type'] );
 
 			$rel->updateRelationshipRequestStatus( $requestId, intval( $response ) );
 
-			$avatar = new wAvatar( $user_id_from, 'l' );
+			$avatar = new wAvatar( $userFrom->getId(), 'l' );
 			$avatar_img = $avatar->getAvatarURL();
 
 			if ( $response == 1 ) {
 				$rel->addRelationship( $requestId );
 				$out .= "<div class=\"relationship-action red-text\">
 					{$avatar_img}" .
-						wfMessage( "ur-requests-added-message-{$rel_type}", $user_name_from )->escaped() .
+						wfMessage( "ur-requests-added-message-{$rel_type}", $userFrom->getName() )->escaped() .
 					'<div class="visualClear"></div>
 				</div>';
 			} else {
 				$out .= "<div class=\"relationship-action red-text\">
 					{$avatar_img}" .
-						wfMessage( "ur-requests-reject-message-{$rel_type}", $user_name_from )->escaped() .
+						wfMessage( "ur-requests-reject-message-{$rel_type}", $userFrom->getName() )->escaped() .
 					'<div class="visualClear"></div>
 				</div>';
 			}

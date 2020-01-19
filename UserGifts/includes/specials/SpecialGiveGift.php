@@ -9,14 +9,9 @@
 class GiveGift extends SpecialPage {
 
 	/**
-	 * @var string $user_name_to Name of the user who we are giving a gift
+	 * @var User $userTo The user (object) who we are giving a gift
 	 */
-	public $user_name_to;
-
-	/**
-	 * @var int $user_id_to User ID of the user who we are giving a gift
-	 */
-	public $user_id_to;
+	public $userTo;
 
 	public function __construct() {
 		parent::__construct( 'GiveGift' );
@@ -68,24 +63,22 @@ class GiveGift extends SpecialPage {
 		] );
 		$out->addModules( 'ext.socialprofile.usergifts.js' );
 
-		$this->user_name_to = $request->getVal( 'user', $par );
+		$this->userTo = User::newFromName( $request->getVal( 'user', $par ) );
 
-		if ( !$this->user_name_to ) {
+		if ( !$this->userTo ) {
 			$out->addHTML( $this->displayFormNoUser() );
 			return false;
 		}
 
-		$this->user_id_to = User::idFromName( $this->user_name_to );
-		$userTitle = Title::makeTitle( NS_USER, $this->user_name_to );
 		$giftId = $request->getInt( 'gift_id' );
 
-		if ( $user->getId() == 0 ) {
+		if ( $user->isAnon() ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
 			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-login' )->plain() ) );
-		} elseif ( $this->user_id_to == 0 ) {
+		} elseif ( $this->userTo->isAnon() ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
 			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-no-user' )->plain() ) );
-		} elseif ( $user->getId() === $this->user_id_to ) {
+		} elseif ( $user->getActorId() === $this->userTo->getActorId() ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
 			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-to-yourself' )->plain() ) );
 		} elseif ( $user->isBlocked() ) {
@@ -98,14 +91,14 @@ class GiveGift extends SpecialPage {
 				$_SESSION['alreadysubmitted'] = true;
 
 				$ug_gift_id = $gift->sendGift(
-					$this->user_name_to,
+					$this->userTo,
 					$request->getInt( 'gift_id' ),
 					0,
 					$request->getVal( 'message' )
 				);
 
 				// clear the cache for the user profile gifts for this user
-				$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'gifts', $this->user_id_to ) );
+				$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'gifts', 'actor_id', $this->userTo->getActorId() ) );
 
 				$key = $wgMemc->makeKey( 'gifts', 'unique', 4 );
 				$data = $wgMemc->get( $key );
@@ -143,15 +136,15 @@ class GiveGift extends SpecialPage {
 				$userGiftIcon = new UserGiftIcon( $sent_gift['gift_id'], 'l' );
 				$icon = $userGiftIcon->getIconHTML();
 
-				$out->setPageTitle( $this->msg( 'g-sent-title', $this->user_name_to )->parse() );
+				$out->setPageTitle( $this->msg( 'g-sent-title', $this->userTo->getName() )->parse() );
 
 				$output .= '<div class="back-links">
-					<a href="' . htmlspecialchars( $userTitle->getFullURL() ) . '">' .
-						$this->msg( 'g-back-link', $this->user_name_to )->parse() .
+					<a href="' . htmlspecialchars( $this->userTo->getUserPage()->getFullURL() ) . '">' .
+						$this->msg( 'g-back-link', $this->userTo->getName() )->parse() .
 					'</a>
 				</div>
 				<div class="g-message">' .
-					$this->msg( 'g-sent-message', $this->user_name_to )->parse() .
+					$this->msg( 'g-sent-message', $this->userTo->getName() )->parse() .
 				'</div>
 				<div class="g-container">' .
 					$icon .
@@ -222,15 +215,14 @@ class GiveGift extends SpecialPage {
 			return false;
 		}
 
-		if ( $gift['access'] == 1 && $this->getUser()->getId() != $gift['creator_user_id'] ) {
+		if ( $gift['access'] == 1 && $this->getUser()->getActorId() != $gift['creator_actor'] ) {
 			return $this->displayFormAll();
 		}
 
-		// Safe titles
-		$user = Title::makeTitle( NS_USER, $this->user_name_to );
+		// Safe title
 		$giveGiftLink = SpecialPage::getTitleFor( 'GiveGift' );
 
-		$out->setPageTitle( $this->msg( 'g-give-to-user-title', $gift['gift_name'], $this->user_name_to )->parse() );
+		$out->setPageTitle( $this->msg( 'g-give-to-user-title', $gift['gift_name'], $this->userTo->getName() )->parse() );
 
 		$userGiftIcon = new UserGiftIcon( $gift['gift_id'], 'l' );
 		$icon = $userGiftIcon->getIconHTML( [ 'id' => "gift_image_{$gift['gift_id']}" ] );
@@ -240,8 +232,8 @@ class GiveGift extends SpecialPage {
 				// FIXME: This message uses raw html
 				$this->msg(
 					'g-give-to-user-message',
-					htmlspecialchars( $this->user_name_to ),
-					htmlspecialchars( $giveGiftLink->getFullURL( 'user=' . $this->user_name_to ) )
+					htmlspecialchars( $this->userTo->getName() ),
+					htmlspecialchars( $giveGiftLink->getFullURL( 'user=' . $this->userTo->getName() ) )
 				)->text() . "</div>
 			<div id=\"give_gift_{$gift['gift_id']}\" class=\"g-container\">
 				{$icon}
@@ -257,7 +249,7 @@ class GiveGift extends SpecialPage {
 			<textarea name="message" id="message" rows="4" cols="50"></textarea>
 			<div class="g-buttons">
 				<input type="hidden" name="gift_id" value="' . $giftId . '" />
-				<input type="hidden" name="user_name" value="' . htmlspecialchars( $this->user_name_to ) . '" />
+				<input type="hidden" name="user_name" value="' . htmlspecialchars( $this->userTo->getName() ) . '" />
 				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'g-send-gift' )->plain() ) . '" size="20" onclick="document.gift.submit()" />
 				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'cancel' )->plain() ) . '" size="20" onclick="history.go(-1)" />
 			</div>
@@ -333,7 +325,6 @@ class GiveGift extends SpecialPage {
 
 		$linkRenderer = $this->getLinkRenderer();
 		$out = $this->getOutput();
-		$user = Title::makeTitle( NS_USER, $this->user_name_to );
 
 		$page = $this->getRequest()->getInt( 'page' );
 		if ( !$page || !is_numeric( $page ) ) {
@@ -352,15 +343,15 @@ class GiveGift extends SpecialPage {
 		$output = '';
 
 		if ( $gifts ) {
-			$out->setPageTitle( $this->msg( 'g-give-all-title', $this->user_name_to )->parse() );
+			$out->setPageTitle( $this->msg( 'g-give-all-title', $this->userTo->getName() )->parse() );
 
 			$output .= '<div class="back-links">
-				<a href="' . htmlspecialchars( $user->getFullURL() ) . '">' .
-					$this->msg( 'g-back-link', $this->user_name_to )->parse() .
+				<a href="' . htmlspecialchars( $this->userTo->getUserPage()->getFullURL() ) . '">' .
+					$this->msg( 'g-back-link', $this->userTo->getName() )->parse() .
 				'</a>
 			</div>
 			<div class="g-message">' .
-				$this->msg( 'g-give-all', $this->user_name_to )->parse() .
+				$this->msg( 'g-give-all', $this->userTo->getName() )->parse() .
 			'</div>
 			<form action="" method="post" enctype="multipart/form-data" name="gift">';
 
@@ -390,7 +381,7 @@ class GiveGift extends SpecialPage {
 			$giveGiftLink = $this->getPageTitle();
 
 			$numofpages = $total / $per_page;
-			$user_name = $user->getText();
+			$user_name = $this->userTo->getName();
 
 			if ( $numofpages > 1 ) {
 				$output .= '<div class="page-nav">';
@@ -452,7 +443,7 @@ class GiveGift extends SpecialPage {
 				<textarea name="message" id="message" rows="4" cols="50"></textarea>
 				<div class="g-buttons">
 					<input type="hidden" name="gift_id" value="0" />
-					<input type="hidden" name="user_name" value="' . htmlspecialchars( $this->user_name_to ) . '" />
+					<input type="hidden" name="user_name" value="' . htmlspecialchars( $this->userTo->getName() ) . '" />
 					<input type="button" id="send-gift-button" class="site-button" value="' . htmlspecialchars( $this->msg( 'g-send-gift' )->plain() ) . '" size="20" />
 					<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'cancel' )->plain() ) . '" size="20" onclick="history.go(-1)" />
 				</div>

@@ -94,7 +94,7 @@ class ViewGifts extends SpecialPage {
 		$rel = new UserGifts( $user_name );
 
 		$gifts = $rel->getUserGiftList( 0, $per_page, $page );
-		$total = $rel->getGiftCountByUsername( $user_name );
+		$total = $rel->getGiftCountByUsername();
 
 		/**
 		 * Show gift count for user
@@ -129,7 +129,7 @@ class ViewGifts extends SpecialPage {
 					$gift_name_display = $gift['gift_name'];
 				}
 
-				$user_from = Title::makeTitle( NS_USER, $gift['user_name_from'] );
+				$userFrom = User::newFromActorId( $gift['actor_from'] );
 				$userGiftIcon = new UserGiftIcon( $gift['gift_id'], 'l' );
 				$icon = $userGiftIcon->getIconHTML();
 
@@ -153,7 +153,11 @@ class ViewGifts extends SpecialPage {
 
 				$output .= '<div class="g-from">' .
 					// FIXME: Message with raw HTML
-					$this->msg( 'g-from', htmlspecialchars( $user_from->getFullURL() ), $gift['user_name_from'] )->text() .
+					$this->msg(
+						'g-from',
+						htmlspecialchars( $userFrom->getUserPage()->getFullURL() ),
+						$userFrom->getName()
+					)->text() .
 				'</div>
 					<div class="g-actions">
 						<a href="' . htmlspecialchars( $giveGiftLink->getFullURL( 'gift_id=' . $gift['gift_id'] ) ) . '">' .

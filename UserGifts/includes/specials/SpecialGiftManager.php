@@ -159,7 +159,7 @@ class GiftManager extends SpecialPage {
 	 * - a member of the giftadmin group
 	 * - or if $wgMaxCustomUserGiftCount has been defined, otherwise false
 	 */
-	function canUserCreateGift() {
+	private function canUserCreateGift() {
 		global $wgMaxCustomUserGiftCount;
 
 		$user = $this->getUser();
@@ -168,7 +168,7 @@ class GiftManager extends SpecialPage {
 			return false;
 		}
 
-		$createdCount = Gifts::getCustomCreatedGiftCount( $user->getId() );
+		$createdCount = Gifts::getCustomCreatedGiftCount( $user );
 		if (
 			$user->isAllowed( 'giftadmin' ) ||
 			in_array( 'giftadmin', $user->getGroups() ) ||
@@ -231,7 +231,7 @@ class GiftManager extends SpecialPage {
 		if ( $gift_id ) {
 			$gift = Gifts::getGift( $gift_id );
 			if (
-				$user->getId() != $gift['creator_user_id'] &&
+				$user->getActorId() != $gift['creator_actor'] &&
 				(
 					!in_array( 'giftadmin', $user->getGroups() ) &&
 					!$user->isAllowed( 'delete' )
@@ -254,13 +254,13 @@ class GiftManager extends SpecialPage {
 			( isset( $gift['gift_description'] ) ? htmlspecialchars( $gift['gift_description'] ) : '' ) . '</textarea></td>
 		</tr>';
 		if ( $gift_id ) {
-			$creator = Title::makeTitle( NS_USER, $gift['creator_user_name'] );
+			$creator = User::newFromActorId( $gift['creator_actor'] );
 			$form .= '<tr>
 			<td class="view-form">' .
-				$this->msg( 'g-created-by', $gift['creator_user_name'] )->parse() .
+				$this->msg( 'g-created-by', $creator->getName() )->parse() .
 			'</td>
-			<td><a href="' . htmlspecialchars( $creator->getFullURL() ) . '">' .
-				htmlspecialchars( $gift['creator_user_name'] ) . '</a></td>
+			<td><a href="' . htmlspecialchars( $creator->getUserPage()->getFullURL() ) . '">' .
+				htmlspecialchars( $creator->getName() ) . '</a></td>
 			</tr>';
 		}
 

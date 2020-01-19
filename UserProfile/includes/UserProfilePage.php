@@ -21,17 +21,30 @@ class UserProfilePage extends Article {
 	public $title = null;
 
 	/**
+	 * @var User User object for the person whose profile is being viewed
+	 */
+	public $profileOwner;
+
+	/**
+	 * @var User User who is viewing someone's profile
+	 */
+	public $viewingUser;
+
+	/**
 	 * @var string user name of the user whose profile we're viewing
+	 * @deprecated Prefer using getName() on $this->profileOwner or $this->viewingUser as appropriate
 	 */
 	public $user_name;
 
 	/**
 	 * @var int user ID of the user whose profile we're viewing
+	 * @deprecated Prefer using getId() or better yet, getActorId(), on $this->profileOwner or $this->viewingUser as appropriate
 	 */
 	public $user_id;
 
 	/**
 	 * @var User User object representing the user whose profile we're viewing
+	 * @deprecated Confusing name; prefer using $this->profileOwner or $this->viewingUser as appropriate
 	 */
 	public $user;
 
@@ -53,19 +66,24 @@ class UserProfilePage extends Article {
 
 	function __construct( $title ) {
 		$context = $this->getContext();
-		$user = $context->getUser();
+		// This is the user *who is viewing* the page
+		$user = $this->viewingUser = $context->getUser();
 
 		parent::__construct( $title );
-		$this->user_name = $title->getText();
-		$this->user_id = User::idFromName( $this->user_name );
-		$this->user = User::newFromId( $this->user_id );
+		// These vars represent info about the user *whose page is being viewed*
+		$this->profileOwner = User::newFromName( $title->getText() );
+
+		$this->user_name = $this->profileOwner->getName();
+		$this->user_id = $this->profileOwner->getId();
+
+		$this->user = $this->profileOwner;
 		$this->user->loadFromDatabase();
 
-		$this->is_owner = ( $this->user_name == $user->getName() );
+		$this->is_owner = ( $this->profileOwner->getName() == $user->getName() );
 
-		$profile = new UserProfile( $this->user_name );
+		$profile = new UserProfile( $this->profileOwner );
 		$this->profile_data = $profile->getProfile();
-		$this->profile_visible_fields = SPUserSecurity::getVisibleFields( $this->user_id, $user->getId() );
+		$this->profile_visible_fields = SPUserSecurity::getVisibleFields( $this->profileOwner, $this->viewingUser );
 	}
 
 	/**
@@ -87,7 +105,12 @@ class UserProfilePage extends Article {
 		$out->setPageTitle( $this->mTitle->getPrefixedText() );
 
 		// No need to display noarticletext, we use our own message
-		if ( !$this->user_id ) {
+		// @todo FIXME: this was basically "!$this->profileOwner" prior to actor.
+		// Now we need to explicitly check for this b/c if we don't and we're viewing
+		// the User: page of a nonexistent user as an anon, that profile page will
+		// display as User:<your IP address> and $this->profileOwner will have been
+		// set to a User object representing that anonymous user (IP address).
+		if ( $this->profileOwner->isAnon() ) {
 			parent::view();
 			return '';
 		}
@@ -100,7 +123,7 @@ class UserProfilePage extends Article {
 		// show header + page content
 		if (
 			$this->getTitle()->getNamespace() == NS_USER &&
-			$this->profile_data['user_id'] &&
+			$this->profile_data['actor'] &&
 			$this->profile_data['user_page_type'] == 0
 		) {
 			parent::view();
@@ -193,10 +216,7 @@ class UserProfilePage extends Article {
 
 		$output = ''; // Prevent E_NOTICE
 
-		$user_id = $this->user_id;
-		$user_name = $this->user_name;
-
-		$stats = new UserStats( $user_id, $user_name );
+		$stats = new UserStats( $this->profileOwner->getId(), $this->profileOwner->getName() );
 		$stats_data = $stats->getUserStats();
 
 		$total_value = $stats_data['edits'] . $stats_data['votes'] .
@@ -272,25 +292,27 @@ class UserProfilePage extends Article {
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		// Try cache
-		$key = $wgMemc->makeKey( 'user', 'profile', 'polls', $this->user_id );
+		// @note Keep this cache key in sync with PollNY
+		// (includes/PollNY.hooks.php and includes/specials/SpecialCreatePoll.php)
+		$key = $wgMemc->makeKey( 'user', 'profile', 'polls', 'actor_id', $this->profileOwner->getActorId() );
 		$data = $wgMemc->get( $key );
 
 		if ( $data ) {
-			$logger->debug( "Got profile polls for user {user_id} from cache\n", [
-				'user_id' => $this->user_id
+			$logger->debug( "Got profile polls for user name {user_name} from cache\n", [
+				'user_name' => $this->profileOwner->getName()
 			] );
 
 			$polls = $data;
 		} else {
-			$logger->debug( "Got profile polls for user {user_id} from DB\n", [
-				'user_id' => $this->user_id
+			$logger->debug( "Got profile polls for user name {user_name} from DB\n", [
+				'user_name' => $this->profileOwner->getName()
 			] );
 
 			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
 				[ 'poll_question', 'page' ],
 				[ 'page_title', 'poll_date' ],
-				/* WHERE */[ 'poll_user_id' => $this->user_id ],
+				/* WHERE */[ 'poll_actor' => $this->profileOwner->getActorId() ],
 				__METHOD__,
 				[ 'ORDER BY' => 'poll_id DESC', 'LIMIT' => 3 ],
 				[ 'page' => [ 'INNER JOIN', 'page_id = poll_page_id' ] ]
@@ -323,14 +345,14 @@ class UserProfilePage extends Article {
 		$data = $wgMemc->get( $key );
 
 		if ( $data ) {
-			$logger->debug( "Got profile quizzes for user {user_id} from cache\n", [
-				'user_id' => $this->user_id
+			$logger->debug( "Got profile quizzes for user name {user_name} from cache\n", [
+				'user_name' => $this->profileOwner->getName()
 			] );
 
 			$quiz = $data;
 		} else {
-			$logger->debug( "Got profile quizzes for user {user_id} from DB\n", [
-				'user_id' => $this->user_id
+			$logger->debug( "Got profile quizzes for user name {user_name} from DB\n", [
+				'user_name' => $this->profileOwner->getName()
 			] );
 
 			$dbr = wfGetDB( DB_REPLICA );
@@ -376,14 +398,14 @@ class UserProfilePage extends Article {
 		$key = $wgMemc->makeKey( 'user', 'profile', 'picgame', $this->user_id );
 		$data = $wgMemc->get( $key );
 		if ( $data ) {
-			$logger->debug( "Got profile picgames for user {user_id} from cache\n", [
-				'user_id' => $this->user_id
+			$logger->debug( "Got profile picgames for user name {user_name} from cache\n", [
+				'user_name' => $this->profileOwner->getName()
 			] );
 
 			$pics = $data;
 		} else {
-			$logger->debug( "Got profile picgames for user {user_id} from DB\n", [
-				'user_id' => $this->user_id
+			$logger->debug( "Got profile picgames for user name {user_name} from DB\n", [
+				'user_name' => $this->profileOwner->getName()
 			] );
 
 			$dbr = wfGetDB( DB_REPLICA );
@@ -391,7 +413,7 @@ class UserProfilePage extends Article {
 				'picturegame_images',
 				[ 'id', 'title', 'img1', 'img2', 'pg_date' ],
 				[
-					'userid' => $this->user_id,
+					'actor' => $this->profileOwner->getActorId(),
 					'flag' => 0 // PictureGameHome::$FLAG_NONE
 				],
 				__METHOD__,
@@ -428,9 +450,6 @@ class UserProfilePage extends Article {
 		if ( $wgUserProfileDisplay['games'] == false ) {
 			return '';
 		}
-
-		$user_id = $this->user_id;
-		$user_name = $this->user_name;
 
 		$output = '';
 
@@ -590,20 +609,9 @@ class UserProfilePage extends Article {
 	function getPersonalInfo() {
 		global $wgUserProfileDisplay;
 
-		$user_id = $this->user_id;
-		$user_name = $this->user_name;
-
-		$context = $this->getContext();
-		$user = $context->getUser();
-
 		if ( $wgUserProfileDisplay['personal'] == false ) {
 			return '';
 		}
-
-		$stats = new UserStats( $user_id, $user_name );
-		$stats_data = $stats->getUserStats();
-		$user_level = new UserLevel( $stats_data['points'] );
-		$level_link = Title::makeTitle( NS_HELP, wfMessage( 'user-profile-userlevels-link' )->inContentLanguage()->text() );
 
 		$this->initializeProfileData();
 		$profile_data = $this->profile_data;
@@ -737,7 +745,7 @@ class UserProfilePage extends Article {
 				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">';
-			if ( $user->getName() == $user_name ) {
+			if ( $this->viewingUser->getName() == $this->profileOwner->getName() ) {
 				$output .= '<a href="' . htmlspecialchars( $edit_info_link->getFullURL() ) . '">' .
 					wfMessage( 'user-edit-this' )->escaped() . '</a>';
 			}
@@ -749,7 +757,7 @@ class UserProfilePage extends Article {
 			<div class="profile-info-container">' .
 				$personal_output .
 			'</div>';
-		} elseif ( $user->getName() == $user_name ) {
+		} elseif ( $this->viewingUser->getName() == $this->profileOwner->getName() ) {
 			$output .= '<div class="user-section-heading">
 				<div class="user-section-title">' .
 					wfMessage( 'user-personal-info-title' )->escaped() .
@@ -779,11 +787,6 @@ class UserProfilePage extends Article {
 	 */
 	function getCustomInfo() {
 		global $wgUserProfileDisplay;
-
-		$user_name = $this->user_name;
-
-		$context = $this->getContext();
-		$user = $context->getUser();
 
 		if ( $wgUserProfileDisplay['custom'] == false ) {
 			return '';
@@ -819,7 +822,7 @@ class UserProfilePage extends Article {
 				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">';
-			if ( $user->getName() == $user_name ) {
+			if ( $this->viewingUser->getName() == $this->profileOwner->getName() ) {
 				$output .= '<a href="' . htmlspecialchars( $edit_info_link->getFullURL() ) . '/custom">' .
 					wfMessage( 'user-edit-this' )->escaped() . '</a>';
 			}
@@ -831,7 +834,7 @@ class UserProfilePage extends Article {
 			<div class="profile-info-container">' .
 				$custom_output .
 			'</div>';
-		} elseif ( $user->getName() == $user_name ) {
+		} elseif ( $this->viewingUser->getName() == $this->profileOwner->getName() ) {
 			$output .= '<div class="user-section-heading">
 				<div class="user-section-title">' .
 					wfMessage( 'custom-info-title' )->escaped() .
@@ -862,11 +865,6 @@ class UserProfilePage extends Article {
 	 */
 	function getInterests() {
 		global $wgUserProfileDisplay;
-
-		$user_name = $this->user_name;
-
-		$context = $this->getContext();
-		$user = $context->getUser();
 
 		if ( $wgUserProfileDisplay['interests'] == false ) {
 			return '';
@@ -916,7 +914,7 @@ class UserProfilePage extends Article {
 				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">';
-			if ( $user->getName() == $user_name ) {
+			if ( $this->viewingUser->getName() == $this->profileOwner->getName() ) {
 				$output .= '<a href="' . htmlspecialchars( $edit_info_link->getFullURL() ) . '/personal">' .
 					wfMessage( 'user-edit-this' )->escaped() . '</a>';
 			}
@@ -955,18 +953,15 @@ class UserProfilePage extends Article {
 	 * points and user level (if enabled in the site configuration) and lots
 	 * more.
 	 *
+	 * @return string HTML suitable for output
 	 */
 	function getProfileHeader() {
 		global $wgUserLevels;
 
-		$user_id = $this->user_id;
-		$user_name = $this->user_name;
-
 		$context = $this->getContext();
-		$userContext = $context->getUser();
 		$language = $context->getLanguage();
 
-		$stats = new UserStats( $user_id, $user_name );
+		$stats = new UserStats( $this->profileOwner );
 		$stats_data = $stats->getUserStats();
 		$user_level = new UserLevel( $stats_data['points'] );
 		$level_link = Title::makeTitle( NS_HELP, wfMessage( 'user-profile-userlevels-link' )->inContentLanguage()->text() );
@@ -974,29 +969,25 @@ class UserProfilePage extends Article {
 		$this->initializeProfileData();
 		$profile_data = $this->profile_data;
 
-		// Variables and other crap
-		$page_title = $this->getTitle()->getText();
-		$title_parts = explode( '/', $page_title );
-		$user = $title_parts[0];
-		$user_safe = urlencode( $this->user_name );
-
 		// Safe URLs
 		$add_relationship = SpecialPage::getTitleFor( 'AddRelationship' );
 		$remove_relationship = SpecialPage::getTitleFor( 'RemoveRelationship' );
-		$give_gift = SpecialPage::getTitleFor( 'GiveGift', $this->user_name );
+		$give_gift = SpecialPage::getTitleFor( 'GiveGift', $this->profileOwner->getName() );
 		$update_profile = SpecialPage::getTitleFor( 'UpdateProfile' );
 		$watchlist = SpecialPage::getTitleFor( 'Watchlist' );
-		$contributions = SpecialPage::getTitleFor( 'Contributions', $this->user_name );
+		$contributions = SpecialPage::getTitleFor( 'Contributions', $this->profileOwner->getName() );
 		$send_message = SpecialPage::getTitleFor( 'UserBoard' );
 		$upload_avatar = SpecialPage::getTitleFor( 'UploadAvatar' );
-		$user_page = Title::makeTitle( NS_USER, $this->user_name );
-		$user_social_profile = Title::makeTitle( NS_USER_PROFILE, $this->user_name );
-		$user_wiki = Title::makeTitle( NS_USER_WIKI, $this->user_name );
+		$user_social_profile = Title::makeTitle( NS_USER_PROFILE, $this->profileOwner->getName() );
+		$user_wiki = Title::makeTitle( NS_USER_WIKI, $this->profileOwner->getName() );
 
-		if ( $this->user_id != 0 ) {
-			$relationship = UserRelationship::getUserRelationshipByID( $this->user_id, $userContext->getId() );
+		if ( !$this->profileOwner->isAnon() ) {
+			$relationship = UserRelationship::getUserRelationshipByID(
+				$this->profileOwner,
+				$this->viewingUser
+			);
 		}
-		$avatar = new wAvatar( $this->user_id, 'l' );
+		$avatar = new wAvatar( $this->profileOwner->getId(), 'l' );
 
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 		$logger->debug( "profile type: {user_profile_type} \n", [
@@ -1027,14 +1018,14 @@ class UserProfilePage extends Article {
 		$output .= '<div id="profile-image">' . $avatar->getAvatarURL();
 		// Expose the link to the avatar removal page in the UI when the user has
 		// uploaded a custom avatar
-		$canRemoveOthersAvatars = $userContext->isAllowed( 'avatarremove' );
+		$canRemoveOthersAvatars = $this->viewingUser->isAllowed( 'avatarremove' );
 		if ( !$avatar->isDefault() && ( $canRemoveOthersAvatars || $this->isOwner() ) ) {
 			// Different URLs for privileged and regular users
 			// Need to specify the user for people who are able to remove anyone's avatar
 			// via the special page; for regular users, it doesn't matter because they
 			// can't remove anyone else's but their own avatar via RemoveAvatar
 			if ( $canRemoveOthersAvatars ) {
-				$removeAvatarURL = SpecialPage::getTitleFor( 'RemoveAvatar', $user )->getFullURL();
+				$removeAvatarURL = SpecialPage::getTitleFor( 'RemoveAvatar', $this->profileOwner->getName() )->getFullURL();
 			} else {
 				$removeAvatarURL = SpecialPage::getTitleFor( 'RemoveAvatar' )->getFullURL();
 			}
@@ -1048,7 +1039,7 @@ class UserProfilePage extends Article {
 
 		$output .= '<div id="profile-title-container">
 				<div id="profile-title">' .
-					htmlspecialchars( $user_name ) .
+					htmlspecialchars( $this->profileOwner->getName() ) .
 				'</div>';
 		// Show the user's level and the amount of points they have if
 		// UserLevels has been configured
@@ -1077,28 +1068,31 @@ class UserProfilePage extends Article {
 				'<a href="' . htmlspecialchars( $upload_avatar->getFullURL() ) . '">' . wfMessage( 'user-upload-avatar' )->escaped() . '</a>';
 			$profileLinks['user-watchlist'] =
 				'<a href="' . htmlspecialchars( $watchlist->getFullURL() ) . '">' . wfMessage( 'user-watchlist' )->escaped() . '</a>';
-		} elseif ( $userContext->isLoggedIn() ) {
+		} elseif ( $this->viewingUser->isLoggedIn() ) {
 			if ( $relationship == false ) {
 				$profileLinks['user-add-friend'] =
-					'<a href="' . htmlspecialchars( $add_relationship->getFullURL( [ 'user' => $this->user_name, 'rel_type' => '1' ] ) ) . '" rel="nofollow">' . wfMessage( 'user-add-friend' )->escaped() . '</a>';
+					'<a href="' . htmlspecialchars( $add_relationship->getFullURL( [ 'user' => $this->profileOwner->getName(), 'rel_type' => '1' ] ) ) . '" rel="nofollow">' . wfMessage( 'user-add-friend' )->escaped() . '</a>';
 
 				$profileLinks['user-add-foe'] =
-					'<a href="' . htmlspecialchars( $add_relationship->getFullURL( [ 'user' => $this->user_name, 'rel_type' => '2' ] ) ) . '" rel="nofollow">' . wfMessage( 'user-add-foe' )->escaped() . '</a>';
+					'<a href="' . htmlspecialchars( $add_relationship->getFullURL( [ 'user' => $this->profileOwner->getName(), 'rel_type' => '2' ] ) ) . '" rel="nofollow">' . wfMessage( 'user-add-foe' )->escaped() . '</a>';
 			} else {
 				if ( $relationship == 1 ) {
 					$profileLinks['user-remove-friend'] =
-						'<a href="' . htmlspecialchars( $remove_relationship->getFullURL( [ 'user' => $this->user_name ] ) ) . '">' . wfMessage( 'user-remove-friend' )->escaped() . '</a>';
+						'<a href="' . htmlspecialchars( $remove_relationship->getFullURL( [ 'user' => $this->profileOwner->getName() ] ) ) . '">' . wfMessage( 'user-remove-friend' )->escaped() . '</a>';
 				}
 				if ( $relationship == 2 ) {
 					$profileLinks['user-remove-foe'] =
-						'<a href="' . htmlspecialchars( $remove_relationship->getFullURL( [ 'user' => $this->user_name ] ) ) . '">' . wfMessage( 'user-remove-foe' )->escaped() . '</a>';
+						'<a href="' . htmlspecialchars( $remove_relationship->getFullURL( [ 'user' => $this->profileOwner->getName() ] ) ) . '">' . wfMessage( 'user-remove-foe' )->escaped() . '</a>';
 				}
 			}
 
 			global $wgUserBoard;
 			if ( $wgUserBoard ) {
 				$profileLinks['user-send-message'] =
-					'<a href="' . htmlspecialchars( $send_message->getFullURL( [ 'user' => $userContext->getName(), 'conv' => $this->user_name ] ) ) . '" rel="nofollow">' .
+					'<a href="' . htmlspecialchars( $send_message->getFullURL( [
+						'user' => $this->viewingUser->getName(),
+						'conv' => $this->profileOwner->getName()
+					] ) ) . '" rel="nofollow">' .
 					wfMessage( 'user-send-message' )->escaped() . '</a>';
 			}
 			$profileLinks['user-send-gift'] =
@@ -1107,23 +1101,24 @@ class UserProfilePage extends Article {
 		}
 
 		$profileLinks['user-contributions'] =
-			'<a href="' . htmlspecialchars( $contributions->getFullURL() ) . '" rel="nofollow">' . wfMessage( 'user-contributions' )->escaped() . '</a>';
+			'<a href="' . htmlspecialchars( $contributions->getFullURL() ) . '" rel="nofollow">' .
+				wfMessage( 'user-contributions' )->escaped() . '</a>';
 
 		// Links to User:user_name from User_profile:
 		if (
 			$this->getTitle()->getNamespace() == NS_USER_PROFILE &&
-			$this->profile_data['user_id'] &&
+			$this->profile_data['actor'] &&
 			$this->profile_data['user_page_type'] == 0
 		) {
 			$profileLinks['user-page-link'] =
-				'<a href="' . htmlspecialchars( $user_page->getFullURL() ) . '" rel="nofollow">' .
+				'<a href="' . htmlspecialchars( $this->profileOwner->getUserPage()->getFullURL() ) . '" rel="nofollow">' .
 					wfMessage( 'user-page-link' )->escaped() . '</a>';
 		}
 
 		// Links to User:user_name from User_profile:
 		if (
 			$this->getTitle()->getNamespace() == NS_USER &&
-			$this->profile_data['user_id'] &&
+			$this->profile_data['actor'] &&
 			$this->profile_data['user_page_type'] == 0
 		) {
 			$profileLinks['user-social-profile-link'] =
@@ -1133,7 +1128,7 @@ class UserProfilePage extends Article {
 
 		if (
 			$this->getTitle()->getNamespace() == NS_USER && (
-				!$this->profile_data['user_id'] ||
+				!$this->profile_data['actor'] ||
 				$this->profile_data['user_page_type'] == 1
 			)
 		) {
@@ -1156,50 +1151,14 @@ class UserProfilePage extends Article {
 	}
 
 	/**
-	 * This is currently unused, seems to be a leftover from the ArmchairGM
-	 * days.
-	 *
-	 * @param string $user_name User name
-	 * @return string HTML
-	 */
-	function getProfileImage( $user_name ) {
-		$context = $this->getContext();
-		$user = $context->getUser();
-
-		$avatar = new wAvatar( $this->user_id, 'l' );
-		$avatarTitle = SpecialPage::getTitleFor( 'UploadAvatar' );
-
-		$output = '<div class="profile-image">';
-		if ( $user->getName() == $this->user_name ) {
-			if ( $avatar->isDefault() ) {
-				$caption = 'upload image';
-			} else {
-				$caption = 'new image';
-			}
-			$output .= '<a href="' . htmlspecialchars( $avatarTitle->getFullURL() ) . '" rel="nofollow">' .
-						$avatar->getAvatarURL() . '<br />
-					(' . $caption . ')
-				</a>';
-		} else {
-			$output .= $avatar->getAvatarURL();
-		}
-		$output .= '</div>';
-
-		return $output;
-	}
-
-	/**
 	 * Get the relationships for a given user.
 	 *
-	 * whose relationships we want to fetch
 	 * @param int $rel_type
 	 * - 1 for friends
 	 * - 2 (or anything else than 1) for foes
 	 */
 	function getRelationships( $rel_type ) {
 		global $wgMemc, $wgUserProfileDisplay;
-
-		$user_name = $this->user_name;
 
 		$context = $this->getContext();
 		$language = $context->getLanguage();
@@ -1218,25 +1177,25 @@ class UserProfilePage extends Article {
 		$output = ''; // Prevent E_NOTICE
 
 		$count = 4;
-		$key = $wgMemc->makeKey( 'relationship', 'profile', "{$this->user_id}-{$rel_type}" );
+		$key = $wgMemc->makeKey( 'relationship', 'profile', 'actor_id', "{$this->profileOwner->getActorId()}-{$rel_type}" );
 		$data = $wgMemc->get( $key );
 
 		// Try cache
 		if ( !$data ) {
-			$listLookup = new RelationshipListLookup( $this->user, $count );
+			$listLookup = new RelationshipListLookup( $this->profileOwner, $count );
 			$friends = $listLookup->getRelationshipList( $rel_type );
 			$wgMemc->set( $key, $friends );
 		} else {
 			$logger = LoggerFactory::getInstance( 'SocialProfile' );
 			$logger->debug( "Got profile relationship type {rel_type} for user {user_name} from cache\n", [
 				'rel_type' => $rel_type,
-				'user_name' => $user_name
+				'user_name' => $this->profileOwner->getName()
 			] );
 
 			$friends = $data;
 		}
 
-		$stats = new UserStats( $this->user_id, $user_name );
+		$stats = new UserStats( $this->profileOwner );
 		$stats_data = $stats->getUserStats();
 		$view_all_title = SpecialPage::getTitleFor( 'ViewRelationships' );
 
@@ -1258,7 +1217,7 @@ class UserProfilePage extends Article {
 					<div class="action-right">';
 			if ( intval( $relationship_count ) > 4 ) {
 				$output .= '<a href="' . htmlspecialchars( $view_all_title->getFullURL( [
-						'user' => $user_name,
+						'user' => $this->profileOwner->getName(),
 						'rel_type' => $rel_type
 					] ) ) .
 					'" rel="nofollow">' . wfMessage( 'user-view-all' )->escaped() . '</a>';
@@ -1278,14 +1237,17 @@ class UserProfilePage extends Article {
 			<div class="user-relationship-container">';
 
 			foreach ( $friends as $friend ) {
-				$user = Title::makeTitle( NS_USER, $friend['user_name'] );
-				$avatar = new wAvatar( $friend['user_id'], 'ml' );
+				$user = User::newFromActorId( $friend['actor'] );
+				if ( !$user ) {
+					continue;
+				}
+				$avatar = new wAvatar( $user->getId(), 'ml' );
 
 				// Chop down username that gets displayed
-				$user_name = htmlspecialchars( $language->truncateForVisual( $friend['user_name'], 9, '..' ) );
+				$user_name = htmlspecialchars( $language->truncateForVisual( $user->getName(), 9, '..' ) );
 
-				$output .= "<a href=\"" . htmlspecialchars( $user->getFullURL() ) .
-					"\" title=\"" . htmlspecialchars( $friend['user_name'] ) . "\" rel=\"nofollow\">
+				$output .= "<a href=\"" . htmlspecialchars( $user->getUserPage()->getFullURL() ) .
+					"\" title=\"" . htmlspecialchars( $user->getName() ) . "\" rel=\"nofollow\">
 					{$avatar->getAvatarURL()}<br />
 					{$user_name}
 				</a>";
@@ -1306,6 +1268,7 @@ class UserProfilePage extends Article {
 	/**
 	 * Gets the recent social activity for a given user.
 	 *
+	 * @return string HTML
 	 */
 	function getActivity() {
 		global $wgUserProfileDisplay;
@@ -1315,12 +1278,10 @@ class UserProfilePage extends Article {
 			return '';
 		}
 
-		$user_name = $this->user_name;
-
 		$output = '';
 
 		$limit = 8;
-		$rel = new UserActivity( $user_name, 'user', $limit );
+		$rel = new UserActivity( $this->profileOwner, 'user', $limit );
 		$rel->setActivityToggle( 'show_votes', 0 );
 		$rel->setActivityToggle( 'show_gifts_sent', 1 );
 
@@ -1503,12 +1464,6 @@ class UserProfilePage extends Article {
 	function getGifts() {
 		global $wgMemc, $wgUserProfileDisplay;
 
-		$user_name = $this->user_name;
-
-		$context = $this->getContext();
-		$user = $context->getUser();
-		$logger = LoggerFactory::getInstance( 'SocialProfile' );
-
 		// If not enabled in site settings, don't display
 		if ( $wgUserProfileDisplay['gifts'] == false ) {
 			return '';
@@ -1517,28 +1472,29 @@ class UserProfilePage extends Article {
 		$output = '';
 
 		// User to user gifts
-		$g = new UserGifts( $user_name );
-		$user_safe = urlencode( $user_name );
+		$g = new UserGifts( $this->profileOwner );
 
 		// Try cache
-		$key = $wgMemc->makeKey( 'user', 'profile', 'gifts', "{$g->user_id}" );
+		$key = $wgMemc->makeKey( 'user', 'profile', 'gifts', 'actor_id', "{$this->profileOwner->getActorId()}" );
 		$data = $wgMemc->get( $key );
+
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		if ( !$data ) {
 			$logger->debug( "Got profile gifts for user {user_name} from DB\n", [
-				'user_name' => $user_name
+				'user_name' => $this->profileOwner->getName()
 			] );
 
 			$gifts = $g->getUserGiftList( 0, 4 );
 			$wgMemc->set( $key, $gifts, 60 * 60 * 4 );
 		} else {
 			$logger->debug( "Got profile gifts for user {user_name} from cache\n", [
-				'user_name' => $user_name
+				'user_name' => $this->profileOwner->getName()
 			] );
 			$gifts = $data;
 		}
 
-		$gift_count = $g->getGiftCountByUsername( $user_name );
+		$gift_count = $g->getGiftCountByUsername( $this->profileOwner );
 		$gift_link = SpecialPage::getTitleFor( 'ViewGifts' );
 		$per_row = 4;
 
@@ -1550,7 +1506,7 @@ class UserProfilePage extends Article {
 				<div class="user-section-actions">
 					<div class="action-right">';
 			if ( $gift_count > 4 ) {
-				$output .= '<a href="' . htmlspecialchars( $gift_link->getFullURL( 'user=' . $user_safe ) ) . '" rel="nofollow">' .
+				$output .= '<a href="' . htmlspecialchars( $gift_link->getFullURL( [ 'user' => $this->profileOwner->getName() ] ) ) . '" rel="nofollow">' .
 					wfMessage( 'user-view-all' )->escaped() . '</a>';
 			}
 			$output .= '</div>
@@ -1570,7 +1526,7 @@ class UserProfilePage extends Article {
 			$x = 1;
 
 			foreach ( $gifts as $gift ) {
-				if ( $gift['status'] == 1 && $user_name == $user->getName() ) {
+				if ( $gift['status'] == 1 && $this->profileOwner->getName() == $this->viewingUser->getName() ) {
 					$g->clearUserGiftStatus( $gift['id'] );
 					$wgMemc->delete( $key );
 				}
@@ -1582,7 +1538,7 @@ class UserProfilePage extends Article {
 				if ( $gift['status'] == 1 ) {
 					$class = 'class="user-page-new"';
 				}
-				$output .= '<a href="' . htmlspecialchars( $gift_link->getFullURL( 'gift_id=' . $gift['id'] ) ) . '" ' .
+				$output .= '<a href="' . htmlspecialchars( $gift_link->getFullURL( [ 'gift_id' => $gift['id'] ] ) ) . '" ' .
 					$class . " rel=\"nofollow\">{$icon}</a>";
 				if ( $x == count( $gifts ) || $x != 1 && $x % $per_row == 0 ) {
 					$output .= '<div class="visualClear"></div>';
@@ -1600,12 +1556,6 @@ class UserProfilePage extends Article {
 	function getAwards() {
 		global $wgMemc, $wgUserProfileDisplay;
 
-		$user_name = $this->user_name;
-
-		$context = $this->getContext();
-		$user = $context->getUser();
-		$logger = LoggerFactory::getInstance( 'SocialProfile' );
-
 		// If not enabled in site settings, don't display
 		if ( $wgUserProfileDisplay['awards'] == false ) {
 			return '';
@@ -1614,28 +1564,31 @@ class UserProfilePage extends Article {
 		$output = '';
 
 		// System gifts
-		$sg = new UserSystemGifts( $user_name );
+		$sg = new UserSystemGifts( $this->profileOwner );
+
+		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		// Try cache
-		$sg_key = $wgMemc->makeKey( 'user', 'profile', 'system_gifts', "{$sg->user_id}" );
+		$sg_key = $wgMemc->makeKey( 'user', 'profile', 'system_gifts', 'actor_id', "{$this->profileOwner->getActorId()}" );
 		$data = $wgMemc->get( $sg_key );
+
 		if ( !$data ) {
 			$logger->debug( "Got profile awards for user {user_name} from DB\n", [
-				'user_name' => $user_name
+				'user_name' => $this->profileOwner->getName()
 			] );
 
 			$listLookup = new SystemGiftListLookup( 4 );
-			$systemGifts = $listLookup->getUserGiftList( $this->user );
+			$systemGifts = $listLookup->getUserGiftList( $this->profileOwner );
 			$wgMemc->set( $sg_key, $systemGifts, 60 * 60 * 4 );
 		} else {
 			$logger->debug( "Got profile awards for user {user_name} from cache\n", [
-				'user_name' => $user_name
+				'user_name' => $this->profileOwner->getName()
 			] );
 
 			$systemGifts = $data;
 		}
 
-		$system_gift_count = $sg->getGiftCountByUsername( $user_name );
+		$system_gift_count = $sg->getGiftCountByUsername( $this->profileOwner );
 		$system_gift_link = SpecialPage::getTitleFor( 'ViewSystemGifts' );
 		$per_row = 4;
 
@@ -1649,7 +1602,7 @@ class UserProfilePage extends Article {
 				<div class="user-section-actions">
 					<div class="action-right">';
 			if ( $system_gift_count > 4 ) {
-				$output .= '<a href="' . htmlspecialchars( $system_gift_link->getFullURL( 'user=' . $user_name ) ) . '" rel="nofollow">' .
+				$output .= '<a href="' . htmlspecialchars( $system_gift_link->getFullURL( [ 'user' => $this->profileOwner->getName() ] ) ) . '" rel="nofollow">' .
 					wfMessage( 'user-view-all' )->escaped() . '</a>';
 			}
 			$output .= '</div>
@@ -1667,7 +1620,7 @@ class UserProfilePage extends Article {
 			<div class="user-gift-container">';
 
 			foreach ( $systemGifts as $gift ) {
-				if ( $gift['status'] == 1 && $user_name == $user->getName() ) {
+				if ( $gift['status'] == 1 && $this->profileOwner->getName() == $this->viewingUser->getName() ) {
 					$sg->clearUserGiftStatus( $gift['id'] );
 					$wgMemc->delete( $sg_key );
 				}
@@ -1681,7 +1634,7 @@ class UserProfilePage extends Article {
 				if ( $gift['status'] == 1 ) {
 					$class = 'class="user-page-new"';
 				}
-				$output .= '<a href="' . htmlspecialchars( $gift_link->getFullURL( 'gift_id=' . $gift['id'] ) ) .
+				$output .= '<a href="' . htmlspecialchars( $gift_link->getFullURL( [ 'gift_id' => $gift['id'] ] ) ) .
 					'" ' . $class . " rel=\"nofollow\">
 					{$icon}
 				</a>";
@@ -1704,14 +1657,11 @@ class UserProfilePage extends Article {
 	function getUserBoard() {
 		global $wgUserProfileDisplay;
 
-		$user_id = $this->user_id;
-		$user_name = $this->user_name;
 		$context = $this->getContext();
 		$out = $context->getOutput();
-		$user = $context->getUser();
 
 		// Anonymous users cannot have user boards
-		if ( $user_id == 0 ) {
+		if ( $this->profileOwner->isAnon() ) {
 			return '';
 		}
 
@@ -1726,17 +1676,20 @@ class UserProfilePage extends Article {
 		// Add JS
 		$out->addModules( 'ext.socialprofile.userprofile.js' );
 
-		$listLookup = new RelationshipListLookup( $user, 4 );
+		$listLookup = new RelationshipListLookup( $this->profileOwner, 4 );
 		$friends = $listLookup->getFriendList();
 
-		$stats = new UserStats( $user_id, $user_name );
+		$stats = new UserStats( $this->profileOwner );
 		$stats_data = $stats->getUserStats();
 		$total = $stats_data['user_board'];
 
 		// If the user is viewing their own profile or is allowed to delete
 		// board messages, add the amount of private messages to the total
 		// sum of board messages.
-		if ( $user->getName() == $user_name || $user->isAllowed( 'userboard-delete' ) ) {
+		if (
+			$this->viewingUser->getName() == $this->profileOwner->getName() ||
+			$this->viewingUser->isAllowed( 'userboard-delete' )
+		) {
 			$total = $total + $stats_data['user_board_priv'];
 		}
 
@@ -1746,7 +1699,7 @@ class UserProfilePage extends Article {
 			'</div>
 			<div class="user-section-actions">
 				<div class="action-right">';
-		if ( $user->getName() == $user_name ) {
+		if ( $this->viewingUser->getName() == $this->profileOwner->getName() ) {
 			if ( $friends ) {
 				$output .= '<a href="' .
 					htmlspecialchars(
@@ -1761,7 +1714,7 @@ class UserProfilePage extends Article {
 		if ( $total > 10 ) {
 			$output .= '<a href="' .
 				htmlspecialchars(
-					SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $user_name ] )
+					SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $this->profileOwner->getName() ] )
 				) . '">' .
 				wfMessage( 'user-view-all' )->escaped() . '</a>';
 		}
@@ -1778,10 +1731,10 @@ class UserProfilePage extends Article {
 		</div>
 		<div class="visualClear"></div>';
 
-		if ( $user->getName() !== $user_name ) {
-			if ( $user->isLoggedIn() && !$user->isBlocked() ) {
+		if ( $this->viewingUser->getName() !== $this->profileOwner->getName() ) {
+			if ( $this->viewingUser->isLoggedIn() && !$this->viewingUser->isBlocked() ) {
 				$output .= '<div class="user-page-message-form">
-						<input type="hidden" id="user_name_to" name="user_name_to" value="' . addslashes( $user_name ) . '" />
+						<input type="hidden" id="user_name_to" name="user_name_to" value="' . addslashes( $this->profileOwner->getName() ) . '" />
 						<span class="profile-board-message-type">' .
 							wfMessage( 'userboard_messagetype' )->escaped() .
 						'</span>
@@ -1809,7 +1762,7 @@ class UserProfilePage extends Article {
 
 		$output .= '<div id="user-page-board">';
 		$b = new UserBoard();
-		$output .= $b->displayMessages( $user_id, 0, 10 );
+		$output .= $b->displayMessages( $this->profileOwner, 0, 10 );
 		$output .= '</div>';
 
 		return $output;
@@ -1825,7 +1778,7 @@ class UserProfilePage extends Article {
 	function getFanBoxes() {
 		global $wgUserProfileDisplay, $wgEnableUserBoxes;
 
-		$user_name = $this->user_name;
+		$user_name = $this->profileOwner->getName();
 
 		$context = $this->getContext();
 		$out = $context->getOutput();
@@ -1839,7 +1792,7 @@ class UserProfilePage extends Article {
 		$out->addModules( 'ext.fanBoxes' );
 
 		$output = '';
-		$f = new UserFanBoxes( $user_name );
+		$f = new UserFanBoxes( $this->profileOwner );
 
 		// Try cache
 		/*
@@ -1865,7 +1818,7 @@ class UserProfilePage extends Article {
 
 		$fanboxes = $f->getUserFanboxes( 0, 10 );
 
-		$fanbox_count = $f->getFanBoxCountByUsername( $user_name );
+		$fanbox_count = $f->getFanBoxCount();
 		$fanbox_link = SpecialPage::getTitleFor( 'ViewUserBoxes' );
 		$per_row = 1;
 
@@ -2044,7 +1997,7 @@ class UserProfilePage extends Article {
 	 */
 	private function initializeProfileData() {
 		if ( !$this->profile_data ) {
-			$profile = new UserProfile( $this->user_name );
+			$profile = new UserProfile( $this->profileOwner );
 			$this->profile_data = $profile->getProfile();
 		}
 	}

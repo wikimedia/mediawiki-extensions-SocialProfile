@@ -5,13 +5,41 @@
  */
 class UserSystemGifts {
 
-	public $user_id;		# Text form (spaces not underscores) of the main part
-	public $user_name;		# Text form (spaces not underscores) of the main part
+	/**
+	 * @var User The user (object) whose awards we're dealing with here
+	 */
+	public $user;
 
-	public function __construct( $username ) {
-		$title1 = Title::newFromDBkey( $username );
-		$this->user_name = $title1->getText();
-		$this->user_id = User::idFromName( $this->user_name );
+	/**
+	 * @var int User ID of the user (object) whose awards we're dealing with here
+	 */
+	public $user_id;
+
+	/**
+	 * @var string User name of the user (object) whose awards we're dealing with here
+	 */
+	public $user_name;
+
+	/**
+	 * @var int Actor ID of the user (object) whose awards we're dealing with here
+	 */
+	public $actorId;
+
+	/**
+	 * Constructor, sets the appropriate class member variables
+	 *
+	 * @param string|User $user User instance object (preferred) or a string (user name)
+	 */
+	public function __construct( $user ) {
+		if ( $user instanceof User ) {
+			$this->user = $user;
+		} else {
+			$this->user = User::newFromName( $user );
+		}
+
+		$this->user_id = $user->getId();
+		$this->user_name = $user->getName();
+		$this->actorId = $user->getActorId();
 	}
 
 	/**
@@ -25,7 +53,7 @@ class UserSystemGifts {
 	public function sendSystemGift( $gift_id, $email = true ) {
 		global $wgMemc;
 
-		if ( $this->doesUserHaveGift( $this->user_id, $gift_id ) ) {
+		if ( $this->doesUserHaveGift( $gift_id ) ) {
 			return '';
 		}
 
@@ -34,8 +62,7 @@ class UserSystemGifts {
 			'user_system_gift',
 			[
 				'sg_gift_id' => $gift_id,
-				'sg_user_id' => $this->user_id,
-				'sg_user_name' => $this->user_name,
+				'sg_actor' => $this->actorId,
 				'sg_status' => 1,
 				'sg_date' => date( 'Y-m-d H:i:s' ),
 			],
@@ -45,20 +72,18 @@ class UserSystemGifts {
 		self::incGiftGivenCount( $gift_id );
 
 		// Add to new gift count cache for receiving user
-		$giftCount = new SystemGiftCount( $wgMemc, $this->user_id );
+		$giftCount = new SystemGiftCount( $wgMemc, $this->user );
 		$giftCount->increase();
 
 		if ( $email && !empty( $sg_gift_id ) ) {
-			$this->sendGiftNotificationEmail( $this->user_id, $gift_id );
+			$this->sendGiftNotificationEmail( $gift_id );
 		}
 
 		if ( ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ) {
-			$userFrom = User::newFromId( $this->user_id );
-
 			$giftObj = SystemGifts::getGift( $gift_id );
 			EchoEvent::create( [
 				'type' => 'social-award-rec',
-				'agent' => $userFrom,
+				'agent' => $this->user,
 				'extra' => [
 					'notifyAgent' => true, // backwards compatibility for MW 1.32 and below
 					'target' => $this->user_id,
@@ -69,7 +94,12 @@ class UserSystemGifts {
 			] );
 		}
 
-		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'system_gifts', $this->user_id ) );
+		// @todo There should be a sensible method for getting this cache key because
+		// it is called in three places:
+		// 1) SystemGifts/includes/SystemGifts.php
+		// 2) SystemGifts/includes/UserSystemGifts.php
+		// 3) UserProfile/includes/UserProfilePage.php
+		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'system_gifts', 'actor_id', $this->actorId ) );
 
 		return $sg_gift_id;
 	}
@@ -80,25 +110,23 @@ class UserSystemGifts {
 	 * and they have opted in to these notifications on their social
 	 * preferences.
 	 *
-	 * @param int $user_id_to User ID of the recipient
 	 * @param int $gift_id System gift ID number
 	 */
-	public function sendGiftNotificationEmail( $user_id_to, $gift_id ) {
+	public function sendGiftNotificationEmail( $gift_id ) {
 		$gift = SystemGifts::getGift( $gift_id );
-		$user = User::newFromId( $user_id_to );
-		$user->loadFromDatabase();
+		$this->user->loadFromDatabase();
 
-		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-award' ) : $user->getIntOption( 'notifygift', 1 );
-		if ( $user->isEmailConfirmed() && $wantsEmail ) {
+		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $this->user->getBoolOption( 'echo-subscriptions-email-social-award' ) : $this->user->getIntOption( 'notifygift', 1 );
+		if ( $this->user->isEmailConfirmed() && $wantsEmail ) {
 			$gifts_link = SpecialPage::getTitleFor( 'ViewSystemGifts' );
 			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
 			$subject = wfMessage( 'system_gift_received_subject',
 				$gift['gift_name']
 			)->text();
-			if ( trim( $user->getRealName() ) ) {
-				$name = $user->getRealName();
+			if ( trim( $this->user->getRealName() ) ) {
+				$name = $this->user->getRealName();
 			} else {
-				$name = $user->getName();
+				$name = $this->user->getName();
 			}
 			$body = [
 				'html' => wfMessage( 'system_gift_received_body_html',
@@ -115,24 +143,27 @@ class UserSystemGifts {
 				)->text()
 			];
 
-			$user->sendMail( $subject, $body );
+			$this->user->sendMail( $subject, $body );
 		}
 	}
 
 	/**
-	 * Checks if the user with the ID $user_id has the system gift with the ID
-	 * $gift_id by querying the user_system_gift table.
+	 * Checks if the user has the system gift with the supplied ID
+	 * by querying the user_system_gift table.
 	 *
-	 * @param int $user_id User ID
+	 * @todo Merge this and SystemGifts#doesUserHaveGift! Note the slightly
+	 *  different output (this returns only bools whereas the other method
+	 *  return the system gift ID if the user has the requested system gift).
+	 *
 	 * @param int $gift_id System gift ID
 	 * @return bool True if the user has the gift, otherwise false
 	 */
-	public function doesUserHaveGift( $user_id, $gift_id ) {
+	public function doesUserHaveGift( $gift_id ) {
 		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_system_gift',
 			[ 'sg_status' ],
-			[ 'sg_user_id' => $user_id, 'sg_gift_id' => $gift_id ],
+			[ 'sg_actor' => $this->actorId, 'sg_gift_id' => $gift_id ],
 			__METHOD__
 		);
 		if ( $s !== false ) {
@@ -145,23 +176,23 @@ class UserSystemGifts {
 		global $wgMemc;
 
 		$dbw = wfGetDB( DB_MASTER );
-		$dbw->update( 'user_system_gift',
+		$dbw->update(
+			'user_system_gift',
 			[ 'sg_status' => 0 ],
 			[ 'sg_id' => $id ],
 			__METHOD__
 		);
 
-		$giftCount = new SystemGiftCount( $wgMemc, $this->user_id );
+		$giftCount = new SystemGiftCount( $wgMemc, $this->user );
 		$giftCount->decrease();
 	}
 
 	/**
 	 * Deletes the system gift that has the ID $ug_id.
 	 *
-	 * @param int $ug_id Gift ID of the system gift
-	 * that we're about to delete.
+	 * @param int $ug_id Gift ID of the system gift that we're about to delete
 	 */
-	static function deleteGift( $ug_id ) {
+	public static function deleteGift( $ug_id ) {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->delete(
 			'user_system_gift',
@@ -178,28 +209,31 @@ class UserSystemGifts {
 	 * @param int $id System gift ID number
 	 * @return array Array containing information about the system gift
 	 */
-	static function getUserGift( $id ) {
+	public static function getUserGift( $id ) {
 		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
-			[ 'user_system_gift', 'system_gift' ],
+			[ 'user_system_gift', 'system_gift', 'actor' ],
 			[
-				'sg_id', 'sg_user_id', 'sg_user_name', 'gift_id', 'sg_date',
+				'sg_id', 'sg_actor', 'actor_name', 'actor_user', 'gift_id', 'sg_date',
 				'gift_name', 'gift_description', 'gift_given_count', 'sg_status'
 			],
-			[ "sg_id = {$id}" ],
+			[ 'sg_id' => $id ],
 			__METHOD__,
 			[
 				'LIMIT' => 1,
 				'OFFSET' => 0
 			],
-			[ 'system_gift' => [ 'INNER JOIN', 'sg_gift_id = gift_id' ] ]
+			[
+				'system_gift' => [ 'INNER JOIN', 'sg_gift_id = gift_id' ],
+				'actor' => [ 'JOIN', 'sg_actor = actor_id' ]
+			]
 		);
 		$row = $dbr->fetchObject( $res );
 		$gift = [];
 		if ( $row ) {
 			$gift['id'] = $row->sg_id;
-			$gift['user_id'] = $row->sg_user_id;
-			$gift['user_name'] = $row->sg_user_name;
+			$gift['user_id'] = $row->actor_user;
+			$gift['user_name'] = $row->actor_name;
 			$gift['gift_count'] = $row->gift_given_count;
 			$gift['timestamp'] = $row->sg_date;
 			$gift['gift_id'] = $row->gift_id;
@@ -230,17 +264,16 @@ class UserSystemGifts {
 	/**
 	 * Get the amount of system gifts for the specified user.
 	 *
-	 * @param mixed $user_name User name for the user whose gift
-	 * count we're looking up; this is used to find out their UID.
-	 * @return int Gift count for the specified user
+	 * @param User $user
+	 * @return int System gift count for the specified user
 	 */
-	static function getGiftCountByUsername( $user_name ) {
+	public function getGiftCountByUsername( User $user ) {
 		$dbr = wfGetDB( DB_REPLICA );
-		$user_id = User::idFromName( $user_name );
+		$actorId = $user->getActorId();
 		$res = $dbr->select(
 			'user_system_gift',
 			[ 'COUNT(*) AS count' ],
-			[ "sg_user_id = {$user_id}" ],
+			[ 'sg_actor' => $actorId ],
 			__METHOD__,
 			[ 'LIMIT' => 1, 'OFFSET' => 0 ]
 		);

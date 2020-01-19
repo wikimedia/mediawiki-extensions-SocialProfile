@@ -87,8 +87,8 @@ class TopFansByStat extends UnlistedSpecialPage {
 
 			$res = $dbr->select(
 				'user_stats',
-				[ 'stats_user_id', 'stats_user_name', $column ],
-				[ 'stats_user_id <> 0', "{$column} > 0" ],
+				[ 'stats_actor', $column ],
+				[ 'stats_actor IS NOT NULL', "{$column} > 0" ],
 				__METHOD__,
 				$params
 			);
@@ -96,7 +96,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 			$loop = 0;
 
 			foreach ( $res as $row ) {
-				$u = User::newFromId( $row->stats_user_id );
+				$u = User::newFromActorId( $row->stats_actor );
 				// Ensure that the user exists for real.
 				// Otherwise we'll be happily displaying entries for users that
 				// once existed but no longer do (account merging is a thing,
@@ -105,12 +105,11 @@ class TopFansByStat extends UnlistedSpecialPage {
 				// different bug with a different extension).
 				// Also ignore flagged bot accounts, no point in showing those
 				// in the top lists.
-				$exists = $u->loadFromId();
+				$exists = $u->load();
 
 				if ( $exists && !$u->isBlocked() && !$u->isBot() ) {
 					$user_list[] = [
-						'user_id' => $row->stats_user_id,
-						'user_name' => $row->stats_user_name,
+						'actor' => $row->stats_actor,
 						'stat' => $row->$column
 					];
 				}
@@ -181,9 +180,13 @@ class TopFansByStat extends UnlistedSpecialPage {
 		$output .= '<div class="top-users">';
 
 		foreach ( $user_list as $user ) {
-			$user_name = $lang->truncateForVisual( $user['user_name'], 22 );
-			$user_title = Title::makeTitle( NS_USER, $user['user_name'] );
-			$avatar = new wAvatar( $user['user_id'], 'm' );
+			$u = User::newFromActorId( $user['actor'] );
+			if ( !$u ) {
+				continue;
+			}
+
+			$user_name = $lang->truncateForVisual( $u->getName(), 22 );
+			$avatar = new wAvatar( $u->getId(), 'm' );
 			$commentIcon = $avatar->getAvatarURL();
 
 			// Stats row
@@ -204,7 +207,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 				<span class="top-fan">' .
 					$commentIcon .
 					$linkRenderer->makeLink(
-						$user_title,
+						$u->getUserPage(),
 						$user_name
 					) .
 				'</span>

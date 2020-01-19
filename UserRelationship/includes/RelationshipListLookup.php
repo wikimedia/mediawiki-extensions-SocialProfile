@@ -37,12 +37,9 @@ class RelationshipListLookup {
 		$options['ORDER BY'] = 'ur_id DESC';
 		$res = $dbr->select(
 			'user_relationship_request',
+			[ 'ur_id', 'ur_actor_from', 'ur_type', 'ur_message', 'ur_date' ],
 			[
-				'ur_id', 'ur_user_id_from', 'ur_user_name_from',
-				'ur_type', 'ur_message', 'ur_date'
-			],
-			[
-				'ur_user_id_to' => $this->user->getId(),
+				'ur_actor_to' => $this->user->getActorId(),
 				'ur_status' => $status
 			],
 			__METHOD__,
@@ -61,8 +58,7 @@ class RelationshipListLookup {
 				'type' => $type_name,
 				'message' => $row->ur_message,
 				'timestamp' => $row->ur_date,
-				'user_id_from' => $row->ur_user_id_from,
-				'user_name_from' => $row->ur_user_name_from
+				'actor_from' => $row->ur_actor_from
 			];
 		}
 
@@ -87,7 +83,7 @@ class RelationshipListLookup {
 
 		$where = [];
 		$options = [];
-		$where['r_user_id'] = $this->user->getId();
+		$where['r_actor'] = $this->user->getActorId();
 
 		if ( $type ) {
 			$where['r_type'] = $type;
@@ -104,10 +100,7 @@ class RelationshipListLookup {
 
 		$res = $dbr->select(
 			'user_relationship',
-			[
-				'r_id', 'r_user_id_relation', 'r_user_name_relation',
-				'r_date', 'r_type'
-			],
+			[ 'r_id', 'r_actor_relation', 'r_date', 'r_type' ],
 			$where,
 			__METHOD__,
 			$options
@@ -118,8 +111,7 @@ class RelationshipListLookup {
 			$requests[] = [
 				'id' => $row->r_id,
 				'timestamp' => $row->r_date,
-				'user_id' => $row->r_user_id_relation,
-				'user_name' => $row->r_user_name_relation,
+				'actor' => $row->r_actor_relation,
 				'type' => $row->r_type
 			];
 		}

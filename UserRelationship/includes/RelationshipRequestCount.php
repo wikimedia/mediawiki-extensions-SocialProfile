@@ -4,8 +4,7 @@ use MediaWiki\Logger\LoggerFactory;
 
 /**
  * This object allows for increasing, decreasing, and getting
- * the amount of relationship requests present in a user's queue
- * based on their ID.
+ * the amount of relationship requests present in a user's queue.
  */
 class RelationshipRequestCount {
 
@@ -17,7 +16,7 @@ class RelationshipRequestCount {
 	/**
 	 * @var User $user
 	 */
-	private $userId;
+	private $user;
 
 	/**
 	 * @var int $type
@@ -26,9 +25,9 @@ class RelationshipRequestCount {
 	 */
 	private $type;
 
-	public function __construct( $cache, $userId ) {
+	public function __construct( $cache, $user ) {
 		$this->cache = $cache;
-		$this->userId = $userId;
+		$this->user = $user;
 	}
 
 	/**
@@ -110,9 +109,9 @@ class RelationshipRequestCount {
 	 */
 	private function getFromDatabase() {
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
-		$logger->debug( "Got open request count (type={relType}) for id {userId} from DB\n", [
+		$logger->debug( "Got open request count (type={relType}) for user name {userName} from DB\n", [
 			'relType' => $this->type,
-			'userId' => $this->userId
+			'userName' => $this->user->getName()
 		] );
 
 		$dbr = wfGetDB( DB_REPLICA );
@@ -122,7 +121,7 @@ class RelationshipRequestCount {
 			'user_relationship_request',
 			[ 'COUNT(*) AS count' ],
 			[
-				'ur_user_id_to' => $this->userId,
+				'ur_actor_to' => $this->user->getActorId(),
 				'ur_status' => 0,
 				'ur_type' => $this->type
 			],
@@ -147,10 +146,10 @@ class RelationshipRequestCount {
 		$data = $this->cache->get( $this->makeKey() );
 		if ( $data != '' ) {
 			$logger = LoggerFactory::getInstance( 'SocialProfile' );
-			$logger->debug( "Got open request count of {data} (type={relType}) for id {userId} from cache\n", [
+			$logger->debug( "Got open request count of {data} (type={relType}) for user name {userName} from cache\n", [
 				'data' => $data,
 				'relType' => $this->type,
-				'userId' => $this->userId
+				'userName' => $this->user->getName()
 			] );
 
 			return $data;
@@ -161,10 +160,11 @@ class RelationshipRequestCount {
 	 * @return string
 	 */
 	private function makeKey() {
-		return $this->cache->makeKey( 'user_relationship',
+		return $this->cache->makeKey(
+			'user_relationship',
 			'open_request',
 			$this->type,
-			$this->userId
+			$this->user->getActorId()
 		);
 	}
 }

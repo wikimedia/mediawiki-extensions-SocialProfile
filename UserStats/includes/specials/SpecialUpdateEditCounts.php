@@ -17,16 +17,13 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 	 * purge memcached entries.
 	 */
 	function updateMainEditsCount() {
-		global $wgActorTableSchemaMigrationStage, $wgNamespacesForEditPoints;
+		global $wgNamespacesForEditPoints;
 
 		$out = $this->getOutput();
-		$revQuery = MediaWiki\MediaWikiServices::getInstance()->getRevisionStore()->getQueryInfo();
-		$pageField = ( $wgActorTableSchemaMigrationStage & SCHEMA_COMPAT_READ_NEW )
-			? 'revactor_page' : 'rev_page';
-		$userNameField = $revQuery['fields']['rev_user_text'];
 
-		$whereConds = [];
-		$whereConds[] = ActorMigration::newMigration()->isNotAnon( $revQuery['fields']['rev_user'] );
+		$whereConds = [
+			'actor_user IS NOT NULL'
+		];
 		// If points are given out for editing non-main namespaces, take that
 		// into account, too.
 		if (
@@ -40,29 +37,26 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 
 		$dbw = wfGetDB( DB_MASTER );
 		$res = $dbw->select(
-			array_merge( $revQuery['tables'], [ 'page' ] ),
-			array_merge( $revQuery['fields'], [ 'COUNT(*) AS the_count' ] ),
+			[ 'revision_actor_temp', 'revision', 'actor', 'page' ],
+			[ 'COUNT(*) AS the_count', 'revactor_actor' ],
 			$whereConds,
 			__METHOD__,
-			[ 'GROUP BY' => $userNameField ],
-			array_merge( $revQuery['joins'], [ 'page' => [ 'INNER JOIN', "page_id = $pageField" ] ] )
+			[ 'GROUP BY' => 'actor_name' ],
+			[
+				'actor' => [ 'JOIN', 'actor_id = revactor_actor' ],
+				'revision_actor_temp' => [ 'JOIN', 'revactor_rev = rev_id' ],
+				'page' => [ 'INNER JOIN', 'page_id = revactor_page' ]
+			]
 		);
 
 		foreach ( $res as $row ) {
-			if ( $wgActorTableSchemaMigrationStage & SCHEMA_COMPAT_READ_NEW ) {
-				$user = User::newFromActorId( $row->rev_actor );
-				$user->loadFromId();
-				$uid = $user->getId();
-				$userName = $user->getName();
-			} else {
-				$user = User::newFromId( $row->rev_user );
-				$user->loadFromId();
-				$uid = $row->rev_user;
-				$userName = $row->rev_user_text;
-			}
+			$user = User::newFromActorId( $row->revactor_actor );
+			$user->load();
+			$actorId = $user->getActorId();
+			$userName = $user->getName();
 
 			// Ehh yeah, we don't care about anons here...
-			if ( $uid === 0 ) {
+			if ( $user->isAnon() ) {
 				continue;
 			}
 
@@ -74,16 +68,15 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 
 			$s = $dbw->selectRow(
 				'user_stats',
-				[ 'stats_user_id' ],
-				[ 'stats_user_id' => $uid ],
+				[ 'stats_actor' ],
+				[ 'stats_actor' => $actorId ],
 				__METHOD__
 			);
-			if ( $s === false || !$s->stats_user_id ) {
+			if ( $s === false || !$s->stats_actor ) {
 				$dbw->insert(
 					'user_stats',
 					[
-						'stats_user_id' => $uid,
-						'stats_user_name' => $userName,
+						'stats_actor' => $actorId,
 						'stats_total_points' => 1000
 					],
 					__METHOD__
@@ -95,13 +88,13 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 			$dbw->update(
 				'user_stats',
 				[ 'stats_edit_count = ' . $editCount ],
-				[ 'stats_user_id' => $uid ],
+				[ 'stats_actor' => $actorId ],
 				__METHOD__
 			);
 
 			global $wgMemc;
 			// clear stats cache for current user
-			$key = $wgMemc->makeKey( 'user', 'stats', $uid );
+			$key = $wgMemc->makeKey( 'user', 'stats', 'actor_id', $actorId );
 			$wgMemc->delete( $key );
 		}
 	}
@@ -132,20 +125,18 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 		$wgUserLevels = '';
 
 		$res = $dbw->select(
-			'user_stats',
-			[ 'stats_user_id', 'stats_user_name', 'stats_total_points' ],
+			[ 'user_stats', 'actor' ],
+			[ 'stats_actor', 'actor_name', 'stats_total_points' ],
 			[],
 			__METHOD__,
-			[ 'ORDER BY' => 'stats_user_name' ]
+			[ 'ORDER BY' => 'actor_name' ],
+			[ 'actor' => [ 'JOIN', 'stats_actor = actor_id' ] ]
 		);
 
 		$x = 0;
 		foreach ( $res as $row ) {
 			$x++;
-			$stats = new UserStatsTrack(
-				$row->stats_user_id,
-				$row->stats_user_name
-			);
+			$stats = new UserStatsTrack( $row->stats_actor );
 			$stats->updateTotalPoints();
 		}
 

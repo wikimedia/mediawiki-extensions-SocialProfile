@@ -49,6 +49,9 @@ $wgAutoloadClasses['SPUserSecurity'] = __DIR__ . '/UserProfile/includes/SPUserSe
 $wgAutoloadClasses['RandomUsersWithAvatars'] = __DIR__ . '/UserProfile/includes/parser/RandomUsersWithAvatars.php';
 $wgAutoloadClasses['NewUsersList'] = __DIR__ . '/UserProfile/includes/parser/NewUsersList.php';
 
+$wgAutoloadClasses['MigrateOldUserProfileUserColumnToActor'] = __DIR__ . '/UserProfile/maintenance/migrateOldUserProfileUserColumnToActor.php';
+$wgAutoloadClasses['MigrateOldUserFieldPrivacyUserColumnToActor'] = __DIR__ . '/UserProfile/maintenance/migrateOldUserFieldPrivacyUserColumnToActor.php';
+
 // API modules
 $wgAutoloadClasses['ApiUserProfilePrivacy'] = __DIR__ . '/UserProfile/includes/api/ApiUserProfilePrivacy.php';
 $wgAPIModules['smpuserprivacy'] = 'ApiUserProfilePrivacy';
@@ -86,7 +89,7 @@ $wgExtensionCredits['other'][] = [
 	'path' => __FILE__,
 	'name' => 'SocialProfile',
 	'author' => [ 'Aaron Wright', 'David Pean', 'Jack Phoenix' ],
-	'version' => '1.13',
+	'version' => '1.14',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:SocialProfile',
 	'descriptionmsg' => 'socialprofile-desc',
 ];
@@ -109,9 +112,6 @@ $wgHooks['BeforePageDisplay'][] = 'SocialProfileHooks::onBeforePageDisplay';
 $wgHooks['CanonicalNamespaces'][] = 'SocialProfileHooks::onCanonicalNamespaces';
 $wgHooks['LoadExtensionSchemaUpdates'][] = 'SocialProfileHooks::onLoadExtensionSchemaUpdates';
 $wgHooks['ParserFirstCallInit'][] = 'AvatarParserFunction::setupAvatarParserFunction';
-
-// For the Renameuser extension
-$wgHooks['RenameUserComplete'][] = 'SocialProfileHooks::onRenameUserComplete';
 
 // ResourceLoader module definitions for certain components which do not have
 // their own loader file

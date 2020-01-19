@@ -29,14 +29,14 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(
 			'user_profile',
-			[ 'up_user_id' ],
-			[ 'up_user_id' => $user->getId() ],
+			[ 'up_actor' ],
+			[ 'up_actor' => $user->getActorId() ],
 			__METHOD__
 		);
 		if ( $s === false ) {
 			$dbw->insert(
 				'user_profile',
-				[ 'up_user_id' => $user->getId() ],
+				[ 'up_actor' => $user->getActorId() ],
 				__METHOD__
 			);
 		}
@@ -172,7 +172,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 					break;
 			}
 
-			UserProfile::clearCache( $user->getId() );
+			UserProfile::clearCache( $user );
 
 			$log = new LogPage( 'profile' );
 			if ( !$wgUpdateProfileInRecentChanges ) {
@@ -359,7 +359,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$dbw->update(
 			'user_profile',
 			/* SET */$basicProfileData,
-			/* WHERE */[ 'up_user_id' => $user->getId() ],
+			/* WHERE */[ 'up_actor' => $user->getActorId() ],
 			__METHOD__
 		);
 
@@ -369,7 +369,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		Hooks::run( 'BasicProfileChanged', [ $user, $basicProfileData ] );
 		// end of the hook
 
-		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', $user->getId() ) );
+		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', 'actor_id', $user->getActorId() ) );
 	}
 
 	/**
@@ -397,11 +397,11 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 				'up_custom_3' => $request->getVal( 'custom3' ),
 				'up_custom_4' => $request->getVal( 'custom4' )
 			],
-			/* WHERE */[ 'up_user_id' => $user->getId() ],
+			/* WHERE */[ 'up_actor' => $user->getActorId() ],
 			__METHOD__
 		);
 
-		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', $user->getId() ) );
+		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', 'actor_id', $user->getActorId() ) );
 	}
 
 	/**
@@ -437,7 +437,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$dbw->update(
 			'user_profile',
 			/* SET */$interestsData,
-			/* WHERE */[ 'up_user_id' => $user->getId() ],
+			/* WHERE */[ 'up_actor' => $user->getActorId() ],
 			__METHOD__
 		);
 
@@ -445,7 +445,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		Hooks::run( 'PersonalInterestsChanged', [ $user, $interestsData ] );
 		// end of the hook
 
-		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', $user->getId() ) );
+		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', 'actor_id', $user->getActorId() ) );
 	}
 
 	/**
@@ -460,7 +460,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 				'up_birthday', 'up_occupation', 'up_about', 'up_schools',
 				'up_places_lived', 'up_websites'
 			],
-			[ 'up_user_id' => $user->getId() ],
+			[ 'up_actor' => $user->getActorId() ],
 			__METHOD__
 		);
 
@@ -664,7 +664,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 				'up_tv', 'up_music', 'up_books', 'up_video_games',
 				'up_magazines', 'up_snacks', 'up_drinks'
 			],
-			[ 'up_user_id' => $user->getId() ],
+			[ 'up_actor' => $user->getActorId() ],
 			__METHOD__
 		);
 
@@ -755,7 +755,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$s = $dbr->selectRow(
 			'user_profile',
 			[ 'up_birthday' ],
-			[ 'up_user_id' => $user->getId() ],
+			[ 'up_actor' => $user->getActorId() ],
 			__METHOD__
 		);
 
@@ -827,7 +827,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 				'up_custom_1', 'up_custom_2', 'up_custom_3', 'up_custom_4',
 				'up_custom_5'
 			],
-			[ 'up_user_id' => $user->getId() ],
+			[ 'up_actor' => $user->getActorId() ],
 			__METHOD__
 		);
 
@@ -885,9 +885,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * Renders fields privacy button by field code
 	 *
 	 * @param string $fieldCode Internal field code, such as up_movies for the "Movies" field
-	 * @param int|null $uid User ID
 	 */
-	function renderEye( $fieldCode, $uid = null ) {
-		return SPUserSecurity::renderEye( $fieldCode, $uid );
+	private function renderEye( $fieldCode ) {
+		return SPUserSecurity::renderEye( $fieldCode, $this->getUser() );
 	}
 }

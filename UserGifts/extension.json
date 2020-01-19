@@ -17,6 +17,8 @@
 		"UserGiftsAlias": "includes/UserGifts.alias.php"
 	},
 	"AutoloadClasses": {
+		"MigrateOldGiftsUserColumnsToActor": "maintenance/migrateOldGiftsUserColumnsToActor.php",
+		"MigrateOldUserGiftsUserColumnsToActor": "maintenance/migrateOldUserGiftsUserColumnsToActor.php",
 		"Gifts": "includes/Gifts.php",
 		"UserGiftCount": "includes/UserGiftCount.php",
 		"UserGiftIcon": "includes/UserGiftIcon.php",

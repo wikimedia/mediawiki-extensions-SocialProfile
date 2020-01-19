@@ -14,6 +14,7 @@
 		]
 	},
 	"AutoloadClasses": {
+		"MigrateOldUserBoardUserColumnsToActor": "maintenance/migrateOldUserBoardUserColumnsToActor.php",
 		"EchoUserBoardMessagePresentationModel": "includes/EchoUserBoardMessagePresentationModel.php",
 		"SpecialBoardBlast": "includes/specials/SpecialSendBoardBlast.php",
 		"SpecialViewUserBoard": "includes/specials/SpecialUserBoard.php",

@@ -29,14 +29,16 @@ class ApiUserProfilePrivacy extends ApiBase {
 			$this->dieWithError( new RawMessage( 'No data provided' ), 'field_key' );
 		}
 
-		if ( !$tuid ) {
-			$tuid = $this->getUser()->getId();
+		if ( $tuid ) {
+			$targetUser = User::newFromId( $tuid );
+		} else {
+			$targetUser = $this->getUser();
 		}
 		$data = [];
 
 		switch ( $method ) {
 			case 'get':
-				$data['privacy'] = SPUserSecurity::getPrivacy( $tuid, $fieldKey );
+				$data['privacy'] = SPUserSecurity::getPrivacy( $targetUser, $fieldKey );
 				break;
 
 			case 'set':
@@ -47,9 +49,9 @@ class ApiUserProfilePrivacy extends ApiBase {
 					);
 				}
 
-				SPUserSecurity::setPrivacy( $tuid, $fieldKey, $privacy );
+				SPUserSecurity::setPrivacy( $targetUser, $fieldKey, $privacy );
 
-				$data['replace'] = SPUserSecurity::renderEye( $fieldKey, $tuid );
+				$data['replace'] = SPUserSecurity::renderEye( $fieldKey, $targetUser );
 
 				break;
 		}

@@ -24,21 +24,23 @@ class TopUsersListLookup {
 	public function getList() {
 		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
-			'user_stats',
-			[ 'stats_user_id', 'stats_user_name', 'stats_total_points' ],
-			[ 'stats_user_id <> 0' ],
+			[ 'user_stats', 'actor' ],
+			[ 'stats_actor', 'actor_user', 'actor_name', 'stats_total_points' ],
+			[ 'stats_actor IS NOT NULL' ],
 			__METHOD__,
 			[
 				'ORDER BY' => 'stats_total_points DESC',
 				'LIMIT' => $this->getLimit()
-			]
+			],
+			[ 'actor' => [ 'JOIN', 'stats_actor = actor_id' ] ]
 		);
 
 		$list = [];
 		foreach ( $res as $row ) {
 			$list[] = [
-				'user_id' => $row->stats_user_id,
-				'user_name' => $row->stats_user_name,
+				'actor' => $row->stats_actor,
+				'user_id' => $row->actor_user,
+				'user_name' => $row->actor_name,
 				'points' => $row->stats_total_points
 			];
 		}
@@ -64,8 +66,8 @@ class TopUsersListLookup {
 		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
 			$pointsTable,
-			[ 'up_user_id', 'up_user_name', 'up_points' ],
-			[ 'up_user_id <> 0' ],
+			[ 'up_actor', 'up_points' ],
+			[ 'up_actor IS NOT NULL' ],
 			__METHOD__,
 			[
 				'ORDER BY' => 'up_points DESC',
@@ -76,7 +78,7 @@ class TopUsersListLookup {
 		$loop = 0;
 		$list = [];
 		foreach ( $res as $row ) {
-			$user = User::newFromId( $row->up_user_id );
+			$user = User::newFromId( $row->up_actor );
 			// Ensure that the user exists for real.
 			// Otherwise we'll be happily displaying entries for users that
 			// once existed by no longer do (account merging is a thing,
@@ -85,12 +87,11 @@ class TopUsersListLookup {
 			// different bug with a different extension).
 			// Also ignore flagged bot accounts, no point in showing those
 			// in the top lists.
-			$exists = $user->loadFromId();
+			$exists = $user->load();
 
 			if ( !$user->isBlocked() && $exists && !$user->isBot() ) {
 				$list[] = [
-					'user_id' => $row->up_user_id,
-					'user_name' => $row->up_user_name,
+					'actor' => $row->up_actor,
 					'points' => $row->up_points
 				];
 				$loop++;

@@ -17,6 +17,8 @@
 		"UserRelationshipAlias": "UserRelationship.i18n.alias.php"
 	},
 	"AutoloadClasses": {
+		"MigrateOldUserRelationshipUserColumnsToActor": "maintenance/migrateOldUserRelationshipUserColumnsToActor.php",
+		"MigrateOldUserRelationshipRequestUserColumnsToActor": "maintenance/migrateOldUserRelationshipRequestUserColumnsToActor.php",
 		"EchoUserRelationshipPresentationModel": "includes/EchoUserRelationshipPresentationModel.php",
 		"RelationshipListLookup": "includes/RelationshipListLookup.php",
 		"RelationshipRequestCount": "includes/RelationshipRequestCount.php",

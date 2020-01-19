@@ -46,7 +46,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	 * - has'delete' permission or..
 	 * - has the 'giftadmin' permission
 	 */
-	function canUserManage() {
+	private function canUserManage() {
 		$user = $this->getUser();
 
 		if (

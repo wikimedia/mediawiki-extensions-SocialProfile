@@ -36,7 +36,12 @@ class SystemGifts {
 	/**
 	 * Adds awards for all registered users, updates statistics and purges
 	 * caches.
-	 * Special:PopulateAwards calls this function
+	 * Special:PopulateAwards calls this function as does Special:SystemGiftManager
+	 *
+	 * @todo FIXME: The reliance on global state here is awful. Callers should somehow
+	 * be able to set a context...or perhaps this method should return an array
+	 * so that callers would be able to output the messages etc. should they so
+	 * desire.
 	 */
 	public function updateSystemGifts() {
 		global $wgOut, $wgMemc;
@@ -58,31 +63,35 @@ class SystemGifts {
 			if ( $row->gift_category ) {
 				$res2 = $dbw->select(
 					'user_stats',
-					[ 'stats_user_id', 'stats_user_name' ],
+					[ 'stats_actor' ],
 					[
 						$stats->stats_fields[$this->categories[$row->gift_category]] .
 							" >= {$row->gift_threshold}",
-						'stats_user_id <> 0'
+						'stats_actor IS NOT NULL'
 					],
 					__METHOD__
 				);
 
 				foreach ( $res2 as $row2 ) {
 					// @todo FIXME: this needs refactoring and badly (see T131016 for details)
-					if ( $this->doesUserHaveGift( $row2->stats_user_id, $row->gift_id ) == false ) {
+					if ( $this->doesUserHaveGift( $row2->stats_actor, $row->gift_id ) == false ) {
 						$dbw->insert(
 							'user_system_gift',
 							[
 								'sg_gift_id' => $row->gift_id,
-								'sg_user_id' => $row2->stats_user_id,
-								'sg_user_name' => $row2->stats_user_name,
+								'sg_actor' => $row2->stats_actor,
 								'sg_status' => 0,
 								'sg_date' => date( 'Y-m-d H:i:s', time() - ( 60 * 60 * 24 * 3 ) ),
 							],
 							__METHOD__
 						);
 
-						$sg_key = $wgMemc->makeKey( 'user', 'profile', 'system_gifts', "{$row2->stats_user_id}" );
+						// @todo There should be a sensible method for getting this cache key because
+						// it is called in three places:
+						// 1) SystemGifts/includes/SystemGifts.php
+						// 2) SystemGifts/includes/UserSystemGifts.php
+						// 3) UserProfile/includes/UserProfilePage.php
+						$sg_key = $wgMemc->makeKey( 'user', 'profile', 'system_gifts', 'actor_id', "{$row2->stats_actor}" );
 						$wgMemc->delete( $sg_key );
 
 						// Update counters (https://phabricator.wikimedia.org/T29981)
@@ -90,7 +99,7 @@ class SystemGifts {
 
 						$wgOut->addHTML( wfMessage(
 							'ga-user-got-awards',
-							$row2->stats_user_name,
+							User::newFromActorId( $row2->stats_actor )->getName(),
 							$row->gift_name
 						)->escaped() . '<br />' );
 						$x++;
@@ -106,17 +115,21 @@ class SystemGifts {
 	 * Checks if the given user has then given award (system gift) via their ID
 	 * numbers.
 	 *
-	 * @param int $user_id User ID number
+	 * @todo Merge this and UserSystemGifts#doesUserHaveGift! Note the slightly
+	 *  different output (this returns bool false if the user doesn't have the
+	 *  gift and gift ID if they do; the other method returns only bools).
+	 *
+	 * @param int $actorId Actor identifier
 	 * @param int $gift_id Award (system gift) ID number
 	 * @return bool|int False if the user doesn't have the specified
 	 * gift, else the gift's ID number
 	 */
-	public function doesUserHaveGift( $user_id, $gift_id ) {
+	public function doesUserHaveGift( $actorId, $gift_id ) {
 		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_system_gift',
 			[ 'sg_gift_id' ],
-			[ 'sg_gift_id' => $gift_id, 'sg_user_id' => $user_id ],
+			[ 'sg_gift_id' => $gift_id, 'sg_actor' => $actorId ],
 			__METHOD__
 		);
 		if ( $s === false ) {

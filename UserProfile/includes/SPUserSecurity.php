@@ -13,16 +13,16 @@ class SPUserSecurity {
 	 * Set the visibility of a given user's given profile field ($fieldKey) to
 	 * whatever $priv is.
 	 *
-	 * @param int $uid User ID of the user whose profile we're dealing with
+	 * @param User $owner User whose profile we're dealing with
 	 * @param string $fieldKey Field key, i.e. up_movies for the "Movies" field
 	 * @param string $priv New privacy value (in plain English, i.e. "public" or "hidden")
 	 */
-	public static function setPrivacy( $uid, $fieldKey, $priv ) {
+	public static function setPrivacy( $owner, $fieldKey, $priv ) {
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(
 			'user_fields_privacy',
 			[ '*' ],
-			[ 'ufp_user_id' => $uid, 'ufp_field_key' => $fieldKey ],
+			[ 'ufp_actor' => $owner->getActorId(), 'ufp_field_key' => $fieldKey ],
 			__METHOD__
 		);
 
@@ -30,7 +30,7 @@ class SPUserSecurity {
 			$dbw->insert(
 				'user_fields_privacy',
 				[
-					'ufp_user_id' => $uid,
+					'ufp_actor' => $owner->getActorId(),
 					'ufp_field_key' => $fieldKey,
 					'ufp_privacy' => $priv
 				],
@@ -40,7 +40,7 @@ class SPUserSecurity {
 			$dbw->update(
 				'user_fields_privacy',
 				[ 'ufp_privacy' => $priv ],
-				[ 'ufp_user_id' => $uid, 'ufp_field_key' => $fieldKey ],
+				[ 'ufp_actor' => $owner->getActorId(), 'ufp_field_key' => $fieldKey ],
 				__METHOD__
 			);
 		}
@@ -49,16 +49,16 @@ class SPUserSecurity {
 	/**
 	 * Get the privacy value for the supplied user's supplied field key
 	 *
-	 * @param int $uid User ID of the user whose profile we're dealing with
+	 * @param User $owner User whose profile we're dealing with
 	 * @param string $fieldKey Field key, i.e. up_movies for the "Movies" field
 	 * @return string Privacy value (in plain English, i.e. "public" or "hidden")
 	 */
-	public static function getPrivacy( $uid, $fieldKey ) {
+	public static function getPrivacy( $user, $fieldKey ) {
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(
 			'user_fields_privacy',
 			[ '*' ],
-			[ 'ufp_field_key' => $fieldKey, 'ufp_user_id' => $uid ],
+			[ 'ufp_field_key' => $fieldKey, 'ufp_actor' => $user->getActorId() ],
 			__METHOD__
 		);
 
@@ -73,21 +73,15 @@ class SPUserSecurity {
 	 * Render fields privacy button by field code
 	 *
 	 * @param string $fieldKey Field key, i.e. up_movies for the "Movies" field
-	 * @param int|null $uid User ID of the user whose profile we're dealing with
+	 * @param User $user User whose profile we're dealing with
 	 * @return string HTML suitable for output
 	 */
-	public static function renderEye( $fieldKey, $uid = null ) {
-		global $wgUser;
-
-		if ( !$uid || $uid == null ) {
-			$uid = $wgUser->getId();
-		}
-
+	public static function renderEye( $fieldKey, User $user ) {
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(
 			'user_fields_privacy',
 			[ '*' ],
-			[ 'ufp_field_key' => $fieldKey, 'ufp_user_id' => $uid ],
+			[ 'ufp_field_key' => $fieldKey, 'ufp_actor' => $user->getActorId() ],
 			__METHOD__
 		);
 
@@ -131,38 +125,31 @@ class SPUserSecurity {
 	/**
 	 * Get the list of user profile fields visible to the supplied viewer
 	 *
-	 * @param int $ownerUid User ID of the person whose profile we're dealing with
-	 * @param null|int $viewerUid User ID of the person who's viewing the owner's profile
+	 * @param User $owner User whose profile we're dealing with
+	 * @param null|User $viewerUid User who's viewing the owner's profile
 	 * @return array Array of field keys (up_movies for "Movies" and so on)
 	 */
-	public static function getVisibleFields( $ownerUid, $viewerUid = null ) {
-		global $wgUser;
-
-		if ( $viewerUid == null ) {
-			$viewerUid = $wgUser->getId();
+	public static function getVisibleFields( $owner, $viewer = null ) {
+		if ( $viewer == null ) {
+			$viewer = RequestContext::getMain()->getUser();
 		}
 
-		$arResult = [];
+		$result = [];
 		// Get fields list
-		$user = User::newFromId( $ownerUid );
-		if ( !$user instanceof User ) {
-			return $arResult;
+		if ( !$owner instanceof User ) {
+			return $result;
 		}
-		// The following line originally had the inline comment "does not matter",
-		// but it actually matters if you pass in something that the constructor
-		// expects (a username) or something that it doesn't (a user ID), because
-		// the latter will lead into "fun" fatals that are tricky to track down
-		// unless you know what you're doing...
-		$profile = new UserProfile( $user->getName() );
-		$arFields = $profile->profile_fields;
 
-		foreach ( $arFields as $field ) {
-			if ( self::isFieldVisible( $ownerUid, 'up_' . $field, $viewerUid ) ) {
-				$arResult[] = 'up_' . $field;
+		$profile = new UserProfile( $owner );
+		$fields = $profile->profile_fields;
+
+		foreach ( $fields as $field ) {
+			if ( self::isFieldVisible( $owner, 'up_' . $field, $viewer ) ) {
+				$result[] = 'up_' . $field;
 			}
 		}
 
-		return $arResult;
+		return $result;
 	}
 
 	/**
@@ -171,26 +158,24 @@ class SPUserSecurity {
 	 * @todo Implement new function which returns an array of accessible fields
 	 * in order to reduce SQL queries
 	 *
-	 * @param int $ownerUid User ID of the person whose profile we're dealing with
+	 * @param User $owner User whose profile we're dealing with
 	 * @param string $fieldKey Field key, i.e. up_movies for the "Movies" field
-	 * @param null|int $viewerUid User ID of the person who's viewing the owner's profile
+	 * @param null|User $viewerUid User who's viewing the owner's profile
 	 * @return bool True if the user can view the field, otherwise false
 	 */
-	public static function isFieldVisible( $ownerUid, $fieldKey, $viewerUid = null ) {
-		global $wgUser;
-
-		// No user ID -> use the current user's ID
-		if ( $viewerUid == null ) {
-			$viewerUid = $wgUser->getId();
+	public static function isFieldVisible( $owner, $fieldKey, $viewer = null ) {
+		// No viewing user supplied -> use the current user
+		if ( $viewer == null ) {
+			$viewer = RequestContext::getMain()->getUser();
 		}
 
 		// Owner can always view all of their profile fields, obviously
-		if ( $viewerUid == $ownerUid ) {
+		if ( $viewer->getActorId() == $owner->getActorId() ) {
 			return true;
 		}
 
-		$relation = UserRelationship::getUserRelationshipByID( $viewerUid, $ownerUid ); // 1 = friend, 2 = foe
-		$privacy = self::getPrivacy( $ownerUid, $fieldKey );
+		$relation = UserRelationship::getUserRelationshipByID( $viewer, $owner ); // 1 = friend, 2 = foe
+		$privacy = self::getPrivacy( $owner, $fieldKey );
 
 		switch ( $privacy ) {
 			case 'public':
@@ -214,23 +199,14 @@ class SPUserSecurity {
 
 				// Now we know that the viewer is not the user's friend, but we
 				// must check if the viewer has friends that are the owner's friends:
-				if ( isset( $ownerUid ) && ( $ownerUid !== null ) ) {
-					$what = $ownerUid;
-				} else {
-					$what = $wgUser->getId();
-				}
-				$user = User::newFromId( $what );
-				if ( !$user instanceof User ) {
-					return false;
-				}
-
-				$listLookup = new RelationshipListLookup( $user );
+				$listLookup = new RelationshipListLookup( $owner );
 				$ownerFriends = $listLookup->getFriendList();
 
 				foreach ( $ownerFriends as $friend ) {
 					// If someone in the owner's friends has the viewer in their
 					// friends, the test is passed
-					if ( UserRelationship::getUserRelationshipByID( $friend['user_id'], $viewerUid ) == 1 ) {
+					$friendActor = User::newFromActorId( $friend['actor'] );
+					if ( UserRelationship::getUserRelationshipByID( $friendActor, $viewer ) == 1 ) {
 						return true;
 					}
 				}

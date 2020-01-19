@@ -57,8 +57,6 @@ class TopAwards extends UnlistedSpecialPage {
 
 		$registry = ExtensionRegistry::getInstance();
 
-		// VoteStars is unique to the VoteNY extension, while there are a bunch
-		// of other voting extensions where the main class is named "Vote"
 		if ( $registry->isLoaded( 'VoteNY' ) ) {
 			$categories[] = [
 				'category_name' => 'Vote',
@@ -99,9 +97,9 @@ class TopAwards extends UnlistedSpecialPage {
 		// Database calls
 		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
-			[ 'user_system_gift', 'system_gift' ],
+			[ 'user_system_gift', 'system_gift', 'actor' ],
 			[
-				'sg_user_name', 'sg_user_id', 'gift_category',
+				'sg_actor', 'actor_name', 'actor_user', 'gift_category',
 				'MAX(gift_threshold) AS top_gift'
 			],
 			[
@@ -109,8 +107,11 @@ class TopAwards extends UnlistedSpecialPage {
 				"gift_threshold > {$categories[$category_number]['category_threshold']}"
 			],
 			__METHOD__,
-			[ 'GROUP BY' => 'sg_user_name', 'ORDER BY' => 'top_gift DESC' ],
-			[ 'system_gift' => [ 'INNER JOIN', 'gift_id=sg_gift_id' ] ]
+			[ 'GROUP BY' => 'actor_name', 'ORDER BY' => 'top_gift DESC' ],
+			[
+				'system_gift' => [ 'INNER JOIN', 'gift_id = sg_gift_id' ],
+				'actor' => [ 'JOIN', 'sg_actor = actor_id' ]
+			]
 		);
 
 		// Set the page title, robot policies, etc.
@@ -159,8 +160,8 @@ class TopAwards extends UnlistedSpecialPage {
 		} else {
 			$linkRenderer = $this->getLinkRenderer();
 			foreach ( $res as $row ) {
-				$user_name = $row->sg_user_name;
-				$user_id = $row->sg_user_id;
+				$user_name = $row->actor_name;
+				$user_id = $row->actor_user;
 				$avatar = new wAvatar( $user_id, 'm' );
 				$top_gift = $row->top_gift;
 				$lower = strtolower( $categories[$category_number]['category_name'] );
@@ -182,7 +183,7 @@ class TopAwards extends UnlistedSpecialPage {
 				}
 
 				$userLink = $linkRenderer->makeLink(
-					Title::makeTitle( NS_USER, $row->sg_user_name ),
+					Title::makeTitle( NS_USER, $user_name ),
 					$user_name
 				);
 				$output .= "<div class=\"top-award\">

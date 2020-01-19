@@ -14,14 +14,9 @@
 class SpecialRemoveRelationship extends UnlistedSpecialPage {
 
 	/**
-	 * @var string $user_name_to Name of the user who we are unfriending/unfoeing
+	 * @var User $user_to User (object) who we are unfriending/unfoeing
 	 */
-	public $user_name_to;
-
-	/**
-	 * @var int $user_id_to User ID of the aforementioned person
-	 */
-	public $user_id_to;
+	public $user_to;
 
 	/**
 	 * @var int $relationship_type 1 for friending, any other number for foeing
@@ -60,6 +55,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 		$out->addModuleStyles( [
 			'ext.socialprofile.userrelationship.css'
 		] );
+
 		$usertitle = Title::makeTitleSafe( NS_USER, $this->getRequest()->getVal( 'user' ) );
 		if ( !$usertitle ) {
 			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
@@ -67,27 +63,23 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			return false;
 		}
 
-		$this->user_name_to = $usertitle->getText();
-		$this->user_id_to = User::idFromName( $this->user_name_to );
-		$this->relationship_type = UserRelationship::getUserRelationshipByID(
-			$this->user_id_to,
-			$user->getId()
-		);
+		$this->user_to = User::newFromName( $usertitle->getText() );
+		$this->relationship_type = UserRelationship::getUserRelationshipByID( $this->user_to, $user );
 
 		if ( $this->relationship_type == 1 ) {
-			$confirmTitle = $this->msg( 'ur-remove-relationship-title-confirm-friend', $this->user_name_to )->parse();
-			$confirmMsg = $this->msg( 'ur-remove-relationship-message-confirm-friend', $this->user_name_to )->parseAsBlock();
+			$confirmTitle = $this->msg( 'ur-remove-relationship-title-confirm-friend', $this->user_to->getName() )->parse();
+			$confirmMsg = $this->msg( 'ur-remove-relationship-message-confirm-friend', $this->user_to->getName() )->parseAsBlock();
 			$error = htmlspecialchars( $this->msg( 'ur-remove-error-not-loggedin-friend' )->plain() );
-			$pending = $this->msg( 'ur-remove-error-message-pending-friend-request', $this->user_name_to )->parse();
+			$pending = $this->msg( 'ur-remove-error-message-pending-friend-request', $this->user_to->getName() )->parse();
 		} else {
-			$confirmTitle = $this->msg( 'ur-remove-relationship-title-confirm-foe', $this->user_name_to )->parse();
-			$confirmMsg = $this->msg( 'ur-remove-relationship-message-confirm-foe', $this->user_name_to )->parseAsBlock();
+			$confirmTitle = $this->msg( 'ur-remove-relationship-title-confirm-foe', $this->user_to->getName() )->parse();
+			$confirmMsg = $this->msg( 'ur-remove-relationship-message-confirm-foe', $this->user_to->getName() )->parseAsBlock();
 			$error = htmlspecialchars( $this->msg( 'ur-remove-error-not-loggedin-foe' )->plain() );
-			$pending = $this->msg( 'ur-remove-error-message-pending-foe-request', $this->user_name_to )->parse();
+			$pending = $this->msg( 'ur-remove-error-message-pending-foe-request', $this->user_to->getName() )->parse();
 		}
 
 		$output = '';
-		if ( $user->getId() == $this->user_id_to ) {
+		if ( $user->getActorId() == $this->user_to->getActorId() ) {
 			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
 
 			$output .= '<div class="relationship-error-message">' .
@@ -105,7 +97,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
 
 			$output = '<div class="relationship-error-message">' .
-				$this->msg( 'ur-remove-error-message-no-relationship', $this->user_name_to )->parse() .
+				$this->msg( 'ur-remove-error-message-no-relationship', $this->user_to->getName() )->parse() .
 			'</div>
 			<div>
 				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'mainpage' )->plain() ) . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
@@ -115,7 +107,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			$output .= '</div>';
 
 			$out->addHTML( $output );
-		} elseif ( UserRelationship::userHasRequestByID( $this->user_id_to, $user->getId() ) == true ) {
+		} elseif ( UserRelationship::userHasRequestByID( $this->user_to, $user ) == true ) {
 			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
 
 			$output = '<div class="relationship-error-message">' .
@@ -129,7 +121,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			$output .= '</div>';
 
 			$out->addHTML( $output );
-		} elseif ( $user->getId() == 0 ) {
+		} elseif ( $user->isAnon() ) {
 			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
 			$output = '<div class="relationship-error-message">' .
 				$error .
@@ -143,19 +135,15 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 
 			$out->addHTML( $output );
 		} else {
-			$rel = new UserRelationship( $user->getName() );
+			$rel = new UserRelationship( $user );
 			if ( $this->getRequest()->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
 				$_SESSION['alreadysubmitted'] = true;
-				$rel->removeRelationshipByUserID(
-					$this->user_id_to,
-					$user->getId()
-				);
+				$rel->removeRelationship( $this->user_to, $user );
 				$rel->sendRelationshipRemoveEmail(
-					$this->user_id_to,
-					$user->getName(),
+					$this->user_to,
 					$this->relationship_type
 				);
-				$avatar = new wAvatar( $this->user_id_to, 'l' );
+				$avatar = new wAvatar( $this->user_to->getId(), 'l' );
 
 				$out->setPageTitle( $confirmTitle );
 

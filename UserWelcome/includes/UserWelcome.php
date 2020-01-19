@@ -36,7 +36,7 @@ class UserWelcome {
 		global $wgUser, $wgLang;
 
 		// Get stats and user level
-		$stats = new UserStats( $wgUser->getId(), $wgUser->getName() );
+		$stats = new UserStats( $wgUser );
 		$stats_data = $stats->getUserStats();
 		$user_level = new UserLevel( $stats_data['points'] );
 
@@ -136,7 +136,7 @@ class UserWelcome {
 	function getRelationshipRequestLink() {
 		global $wgUser, $wgMemc;
 
-		$requestCount = new RelationshipRequestCount( $wgMemc, $wgUser->getId() );
+		$requestCount = new RelationshipRequestCount( $wgMemc, $wgUser );
 		$friendRequestCount = $requestCount->setFriends()->get();
 		$foeRequestCount = $requestCount->setFoes()->get();
 
@@ -170,15 +170,16 @@ class UserWelcome {
 	function getNewGiftLink() {
 		global $wgUser, $wgMemc;
 
-		$userGiftCount = new UserGiftCount( $wgMemc, $wgUser->getId() );
+		$userGiftCount = new UserGiftCount( $wgMemc, $wgUser );
 		$giftCount = $userGiftCount->get();
 
-		$gifts_title = SpecialPage::getTitleFor( 'ViewGifts' );
 		$output = '';
 
 		if ( $giftCount > 0 ) {
 			$userActivityIcon = new UserActivityIcon( 'gift_rec' );
 			$icon = $userActivityIcon->getIconHTML();
+
+			$gifts_title = SpecialPage::getTitleFor( 'ViewGifts' );
 
 			$output .= '<p>' . $icon .
 				'<span class="profile-on"><a href="' . htmlspecialchars( $gifts_title->getFullURL() ) . '" rel="nofollow">'
@@ -193,15 +194,16 @@ class UserWelcome {
 	function getNewSystemGiftLink() {
 		global $wgUser, $wgMemc;
 
-		$systemGiftCount = new SystemGiftCount( $wgMemc, $wgUser->getId() );
+		$systemGiftCount = new SystemGiftCount( $wgMemc, $wgUser );
 		$giftCount = $systemGiftCount->get();
 
-		$gifts_title = SpecialPage::getTitleFor( 'ViewSystemGifts' );
 		$output = '';
 
 		if ( $giftCount > 0 ) {
 			$userActivityIcon = new UserActivityIcon( 'system_gift' );
 			$icon = $userActivityIcon->getIconHTML();
+
+			$gifts_title = SpecialPage::getTitleFor( 'ViewSystemGifts' );
 
 			$output .= '<p>' . $icon .
 				'<span class="profile-on"><a href="' . htmlspecialchars( $gifts_title->getFullURL() ) . '" rel="nofollow">'
@@ -216,7 +218,7 @@ class UserWelcome {
 	function getNewMessagesLink() {
 		global $wgUser, $wgMemc;
 
-		$messageCount = new UserBoardMessageCount( $wgMemc, $wgUser->getId() );
+		$messageCount = new UserBoardMessageCount( $wgMemc, $wgUser );
 		$newMessages = $messageCount->get();
 		$output = '';
 

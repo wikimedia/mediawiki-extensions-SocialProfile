@@ -1,0 +1,1 @@
+ALTER TABLE /*_*/user_board ADD COLUMN ub_actor_from bigint unsigned NOT NULL AFTER ub_id;

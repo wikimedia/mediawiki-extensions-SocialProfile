@@ -50,25 +50,27 @@ class ViewSystemGift extends UnlistedSpecialPage {
 					$g->clearUserGiftStatus( $gift['id'] );
 				}
 			}
+
 			// DB stuff
 			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
-				'user_system_gift',
+				[ 'user_system_gift', 'actor' ],
 				[
-					'DISTINCT sg_user_name', 'sg_user_id', 'sg_gift_id',
+					'DISTINCT actor_name', 'actor_user', 'sg_actor', 'sg_gift_id',
 					'sg_date'
 				],
 				[
-					"sg_gift_id = {$gift['gift_id']}",
-					'sg_user_name <> ' . $dbr->addQuotes( $gift['user_name'] )
+					'sg_gift_id' => $gift['gift_id'],
+					'actor_name <> ' . $dbr->addQuotes( $gift['user_name'] )
 				],
 				__METHOD__,
 				[
-					'GROUP BY' => 'sg_user_name',
+					'GROUP BY' => 'actor_name',
 					'ORDER BY' => 'sg_date DESC',
 					'OFFSET' => 0,
 					'LIMIT' => 6
-				]
+				],
+				[ 'actor' => [ 'JOIN', 'actor_id = sg_actor' ] ]
 			);
 
 			$out->setPageTitle( $this->msg( 'ga-gift-title', $gift['user_name'], $gift['name'] )->parse() );
@@ -109,9 +111,9 @@ class ViewSystemGift extends UnlistedSpecialPage {
 					'</div>';
 
 				foreach ( $res as $row ) {
-					$userToId = $row->sg_user_id;
+					$userToId = $row->actor_user;
 					$avatar = new wAvatar( $userToId, 'ml' );
-					$userNameLink = Title::makeTitle( NS_USER, $row->sg_user_name );
+					$userNameLink = Title::makeTitle( NS_USER, $row->actor_name );
 
 					$output .= '<a href="' . htmlspecialchars( $userNameLink->getFullURL() ) . "\">
 					{$avatar->getAvatarURL()}

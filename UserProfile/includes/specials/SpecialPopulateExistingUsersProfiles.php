@@ -55,28 +55,27 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 		$count = 0; // To avoid an annoying PHP notice
 
 		foreach ( $res as $row ) {
-			$user_name_title = Title::newFromDBkey( $row->page_title );
-			$user_name = $user_name_title->getText();
-			$user_id = User::idFromName( $user_name );
+			$userBeingProcessed = User::newFromName( $row->page_title );
+			if ( !$userBeingProcessed ) {
+				continue;
+			}
 
-			if ( $user_id > 0 ) {
-				$s = $dbw->selectRow(
+			$s = $dbw->selectRow(
+				'user_profile',
+				[ 'up_actor' ],
+				[ 'up_actor' => $userBeingProcessed->getActorId() ],
+				__METHOD__
+			);
+			if ( $s === false ) {
+				$dbw->insert(
 					'user_profile',
-					[ 'up_user_id' ],
-					[ 'up_user_id' => $user_id ],
+					[
+						'up_actor' => $userBeingProcessed->getActorId(),
+						'up_type' => 0
+					],
 					__METHOD__
 				);
-				if ( $s === false ) {
-					$dbw->insert(
-						'user_profile',
-						[
-							'up_user_id' => $user_id,
-							'up_type' => 0
-						],
-						__METHOD__
-					);
-					$count++;
-				}
+				$count++;
 			}
 		}
 

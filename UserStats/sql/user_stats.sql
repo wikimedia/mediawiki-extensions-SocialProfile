@@ -3,8 +3,8 @@
 --
 
 CREATE TABLE /*_*/user_stats (
-  `stats_user_id` int(11) NOT NULL default '0' PRIMARY KEY,
-  `stats_user_name` varchar(255) NOT NULL default '',
+  `stats_id` int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `stats_actor` bigint unsigned NOT NULL,
   `stats_user_image_count` int(11) NOT NULL default '0',
   `stats_comment_count` int(11) NOT NULL default '0',
   `stats_comment_score` int(11) NOT NULL default '0',

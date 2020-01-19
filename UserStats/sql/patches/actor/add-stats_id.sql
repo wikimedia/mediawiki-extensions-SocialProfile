@@ -1,0 +1,1 @@
+ALTER TABLE /*_*/user_stats ADD COLUMN stats_id int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;

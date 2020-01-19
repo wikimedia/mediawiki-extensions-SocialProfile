@@ -4,27 +4,24 @@ use MediaWiki\Logger\LoggerFactory;
 
 class UserStats {
 	/**
-	 * @var string $user_name Name of the person whose stats we're dealing with here
+	 * @var User $user User object whose stats we're dealing with here
 	 */
-	public $user_name;
+	public $user;
 
 	/**
-	 * @var int $user_id User ID of the aforementioned person
+	 * @param id|User $user User instance object (preferred) or a user ID
+	 * @param string|null $user_name User's name [legacy, unused]
 	 */
-	public $user_id;
-
-	/**
-	 * @param int $user_id ID number of the user that we want to track stats for
-	 * @param string|null $user_name User's name; if not supplied, then the user ID will be used to get the user name from DB.
-	 */
-	function __construct( $user_id, $user_name ) {
-		$this->user_id = $user_id;
-		if ( !$user_name ) {
-			$user = User::newFromId( $this->user_id );
-			$user->loadFromDatabase();
-			$user_name = $user->getName();
+	public function __construct( $user, $user_name = '' ) {
+		if ( $user instanceof User ) {
+			$this->user = $user;
+		} else {
+			$this->user = User::newFromId( $user );
 		}
-		$this->user_name = $user_name;
+
+		$this->user->loadFromDatabase();
+		$this->user_id = $this->user->getId();
+		$this->user_name = $this->user->getName();
 	}
 
 	/**
@@ -45,12 +42,12 @@ class UserStats {
 	 */
 	public function getUserStatsCache() {
 		global $wgMemc;
-		$key = $wgMemc->makeKey( 'user', 'stats', $this->user_id );
+		$key = $wgMemc->makeKey( 'user', 'stats', 'actor_id', $this->user->getActorId() );
 		$data = $wgMemc->get( $key );
 		if ( $data ) {
 			$logger = LoggerFactory::getInstance( 'SocialProfile' );
 			$logger->debug( "Got user stats for {user_name} from cache\n", [
-				'user_name' => $this->user_name
+				'user_name' => $this->user->getName()
 			] );
 
 			return $data;
@@ -67,14 +64,14 @@ class UserStats {
 
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 		$logger->debug( "Got user stats for {user_name} from DB\n", [
-			'user_name' => $this->user_name
+			'user_name' => $this->user->getName()
 		] );
 
 		$dbr = wfGetDB( DB_MASTER );
 		$res = $dbr->select(
 			'user_stats',
 			'*',
-			[ 'stats_user_id' => $this->user_id ],
+			[ 'stats_actor' => $this->user->getActorId() ],
 			__METHOD__,
 			[
 				'LIMIT' => 1,
@@ -114,7 +111,7 @@ class UserStats {
 			$stats['points'] = '1000';
 		}
 
-		$key = $wgMemc->makeKey( 'user', 'stats', $this->user_id );
+		$key = $wgMemc->makeKey( 'user', 'stats', 'actor_id', $this->user->getActorId() );
 		$wgMemc->set( $key, $stats );
 		return $stats;
 	}
@@ -122,7 +119,7 @@ class UserStats {
 	/**
 	 * Gets the amount of friends relative to points.
 	 *
-	 * @param int $user_id user ID
+	 * @param User $user User whose friends to get
 	 * @param int $points
 	 * @param int $limit LIMIT for SQL queries, defaults to 3
 	 * @param int $condition if 1, the query operator for ORDER BY clause
@@ -132,7 +129,7 @@ class UserStats {
 	 * 	descending order
 	 * @return array
 	 */
-	static function getFriendsRelativeToPoints( $user_id, $points, $limit = 3, $condition = 1 ) {
+	public static function getFriendsRelativeToPoints( $user, $points, $limit = 3, $condition = 1 ) {
 		if ( $condition == 1 ) {
 			$op = '>';
 			$sort = 'ASC';
@@ -143,10 +140,10 @@ class UserStats {
 
 		$dbr = wfGetDB( DB_REPLICA );
 		$res = $dbr->select(
-			[ 'user_stats', 'user_relationship' ],
-			[ 'stats_user_id', 'stats_user_name', 'stats_total_points' ],
+			[ 'user_stats', 'user_relationship', 'actor' ],
+			[ 'stats_actor', 'actor_name', 'actor_user', 'stats_total_points' ],
 			[
-				'r_user_id' => $user_id,
+				'r_actor' => $user->getActorId(),
 				"stats_total_points {$op} {$points}"
 			],
 			__METHOD__,
@@ -156,16 +153,17 @@ class UserStats {
 			],
 			[
 				'user_relationship' => [
-					'INNER JOIN', 'stats_user_id = r_user_id_relation'
-				]
+					'INNER JOIN', 'stats_actor = r_actor_relation'
+				],
+				'actor' => [ 'JOIN', 'stats_actor = actor_id' ]
 			]
 		);
 
 		$list = [];
 		foreach ( $res as $row ) {
 			$list[] = [
-				'user_id' => $row->stats_user_id,
-				'user_name' => $row->stats_user_name,
+				'user_id' => $row->actor_user,
+				'user_name' => $row->actor_name,
 				'points' => $row->stats_total_points
 			];
 		}

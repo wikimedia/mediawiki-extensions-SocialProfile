@@ -34,25 +34,25 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 		// Show a message if the database is in read-only mode
 		$this->checkReadOnly();
 
-		// set header (robot policy, page title, etc)
+		// Set headers (robot policy, page title, etc.)
 		$this->setHeaders();
 
 		$dbw = wfGetDB( DB_MASTER );
 		$s = $dbw->selectRow(
 			'user_profile',
-			[ 'up_user_id' ],
-			[ 'up_user_id' => $user->getId() ],
+			[ 'up_actor' ],
+			[ 'up_actor' => $user->getActorId() ],
 			__METHOD__
 		);
 		if ( $s === false ) {
 			$dbw->insert(
 				'user_profile',
-				[ 'up_user_id' => $user->getId() ],
+				[ 'up_actor' => $user->getActorId() ],
 				__METHOD__
 			);
 		}
 
-		$profile = new UserProfile( $user->getName() );
+		$profile = new UserProfile( $user );
 		$profile_data = $profile->getProfile();
 
 		$user_page_type = ( ( $profile_data['user_page_type'] == 1 ) ? 0 : 1 );
@@ -63,16 +63,15 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 				'up_type' => $user_page_type
 			],
 			/* WHERE */[
-				'up_user_id' => $user->getId()
+				'up_actor' => $user->getActorId()
 			], __METHOD__
 		);
 
-		$key = $wgMemc->makeKey( 'user', 'profile', 'info', $user->getId() );
+		$key = $wgMemc->makeKey( 'user', 'profile', 'info', 'actor_id', $user->getActorId() );
 		$wgMemc->delete( $key );
 
 		if ( $user_page_type == 1 && !$user->isBlocked() ) {
-			$user_page = Title::makeTitle( NS_USER, $user->getName() );
-			$article = new WikiPage( $user_page );
+			$article = new WikiPage( $user->getUserPage() );
 			$contentObject = $article->getContent();
 			$user_page_content = ContentHandler::getContentText( $contentObject );
 
@@ -85,6 +84,7 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 				);
 			}
 		}
+
 		$title = Title::makeTitle( NS_USER, $user->getName() );
 		$out->redirect( $title->getFullURL() );
 	}

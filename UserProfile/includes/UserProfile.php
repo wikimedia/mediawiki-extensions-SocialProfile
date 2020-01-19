@@ -6,12 +6,19 @@ use MediaWiki\MediaWikiServices;
  */
 class UserProfile {
 	/**
+	 * @var User $user User object whose profile is being viewed
+	 */
+	public $user;
+
+	/**
 	 * @var int $user_id The current user's user ID.
+	 * @deprecated Prefer using $this->user to get an actor ID instead
 	 */
 	public $user_id;
 
 	/**
 	 * @var string $user_name The current user's user name.
+	 * @deprecated Prefer using $this->user instead
 	 */
 	public $user_name;
 
@@ -35,6 +42,7 @@ class UserProfile {
 		'real_name',
 		'location_city',
 		'hometown_city',
+		'hometown_country',
 		'birthday',
 		'about',
 		'places_lived',
@@ -61,21 +69,28 @@ class UserProfile {
 	 */
 	public $profile_missing = [];
 
-	function __construct( $username ) {
-		$title1 = Title::newFromDBkey( $username );
-		$this->user_name = $title1->getText();
-		$this->user_id = User::idFromName( $this->user_name );
+	/**
+	 * @param User|string $username User object (preferred) or user name (legacy b/c)
+	 */
+	public function __construct( $username ) {
+		if ( $username instanceof User ) {
+			$this->user = $username;
+		} else {
+			$this->user = User::newFromName( $username );
+		}
+		$this->user_name = $this->user->getName();
+		$this->user_id = $this->user->getId();
 	}
 
 	/**
-	 * Deletes the memcached key for $user_id.
+	 * Deletes the memcached key for the given user.
 	 *
-	 * @param int $user_id User ID number
+	 * @param User $user User object for the desired user
 	 */
-	static function clearCache( $user_id ) {
+	public static function clearCache( $user ) {
 		global $wgMemc;
 
-		$key = $wgMemc->makeKey( 'user', 'profile', 'info', $user_id );
+		$key = $wgMemc->makeKey( 'user', 'profile', 'info', 'actor_id', $user->getActorId() );
 		$wgMemc->delete( $key );
 	}
 
@@ -88,34 +103,33 @@ class UserProfile {
 	public function getProfile() {
 		global $wgMemc;
 
-		$user = User::newFromId( $this->user_id );
-		$user->loadFromId();
+		$this->user->load();
 
 		// Try cache first
-		$key = $wgMemc->makeKey( 'user', 'profile', 'info', $this->user_id );
+		$key = $wgMemc->makeKey( 'user', 'profile', 'info', 'actor_id', $this->user->getActorId() );
 		$data = $wgMemc->get( $key );
 		if ( $data ) {
-			wfDebug( "Got user profile info for {$this->user_name} from cache\n" );
+			wfDebug( "Got user profile info for {$this->user->getName()} from cache\n" );
 			$profile = $data;
 		} else {
-			wfDebug( "Got user profile info for {$this->user_name} from DB\n" );
+			wfDebug( "Got user profile info for {$this->user->getName()} from DB\n" );
 			$dbr = wfGetDB( DB_REPLICA );
 			$row = $dbr->selectRow(
 				'user_profile',
 				'*',
-				[ 'up_user_id' => $this->user_id ],
+				[ 'up_actor' => $this->user->getActorId() ],
 				__METHOD__,
 				[ 'LIMIT' => 5 ]
 			);
 
 			$profile = [];
 			if ( $row ) {
-				$profile['user_id'] = $this->user_id;
+				$profile['actor'] = $this->user->getActorId();
 			} else {
 				$profile['user_page_type'] = 1;
-				$profile['user_id'] = 0;
+				$profile['actor'] = 0;
 			}
-			$showYOB = $user->getIntOption( 'showyearofbirth', !isset( $row->up_birthday ) ) == 1;
+			$showYOB = $this->user->getIntOption( 'showyearofbirth', !isset( $row->up_birthday ) ) == 1;
 			$issetUpBirthday = $row->up_birthday ?? '';
 			$profile['location_city'] = $row->up_location_city ?? '';
 			$profile['location_state'] = $row->up_location_state ?? '';
@@ -148,8 +162,8 @@ class UserProfile {
 			$wgMemc->set( $key, $profile );
 		}
 
-		$profile['real_name'] = $user->getRealName();
-		$profile['email'] = $user->getEmail();
+		$profile['real_name'] = $this->user->getRealName();
+		$profile['email'] = $this->user->getEmail();
 
 		return $profile;
 	}
@@ -214,7 +228,7 @@ class UserProfile {
 		return round( $complete_count / $this->profile_fields_count * 100 );
 	}
 
-	static function getEditProfileNav( $current_nav ) {
+	public static function getEditProfileNav( $current_nav ) {
 		$lines = explode( "\n", wfMessage( 'update_profile_nav' )->inContentLanguage()->text() );
 		$output = '<div class="profile-tab-bar">';
 		$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();

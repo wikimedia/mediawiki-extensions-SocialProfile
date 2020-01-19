@@ -3,33 +3,40 @@
  * Functions for managing user board data
  */
 class UserBoard {
+	// Constants for the ub_type field.
+	/**
+	 * @var int Public message, which is the default
+	 */
+	const MESSAGE_PUBLIC = 0;
+
+	/**
+	 * @var int Private message readable only by the intended user
+	 */
+	const MESSAGE_PRIVATE = 1;
 
 	// phpcs:ignore Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore
 	public function __construct() {}
 
 	/**
 	 * Sends a user board message to another user.
+	 *
 	 * Performs the insertion to user_board table, sends e-mail notification
 	 * (if appliable), and increases social statistics as appropriate.
 	 *
-	 * @param int $user_id_from User ID of the sender
-	 * @param mixed $user_name_from User name of the sender
-	 * @param int $user_id_to User ID of the reciever
-	 * @param mixed $user_name_to User name of the reciever
-	 * @param mixed $message Message text
+	 * @param User $sender User (object) sending the message
+	 * @param User $recipient User (object) receiving the message
+	 * @param string $message Message text
 	 * @param int $message_type 0 for public message
 	 * @return int The inserted value of ub_id row
 	 */
-	public function sendBoardMessage( $user_id_from, $user_name_from, $user_id_to, $user_name_to, $message, $message_type = 0 ) {
+	public function sendBoardMessage( $sender, $recipient, $message, $message_type = 0 ) {
 		$dbw = wfGetDB( DB_MASTER );
 
 		$dbw->insert(
 			'user_board',
 			[
-				'ub_user_id_from' => $user_id_from,
-				'ub_user_name_from' => $user_name_from,
-				'ub_user_id' => $user_id_to,
-				'ub_user_name' => $user_name_to,
+				'ub_actor_from' => $sender->getActorId(),
+				'ub_actor' => $recipient->getActorId(),
 				'ub_message' => $message,
 				'ub_type' => $message_type,
 				'ub_date' => date( 'Y-m-d H:i:s' ),
@@ -38,16 +45,16 @@ class UserBoard {
 		);
 
 		// Send e-mail notification (if user is not writing on own board)
-		if ( $user_id_from != $user_id_to ) {
-			$this->sendBoardNotificationEmail( $user_id_to, $user_name_from );
+		if ( $sender->getActorId() != $recipient->getActorId() ) {
+			$this->sendBoardNotificationEmail( $recipient, $sender );
 
 			global $wgMemc;
 
-			$messageCount = new UserBoardMessageCount( $wgMemc, $user_id_to );
+			$messageCount = new UserBoardMessageCount( $wgMemc, $recipient );
 			$messageCount->increase();
 		}
 
-		$stats = new UserStatsTrack( $user_id_to, $user_name_to );
+		$stats = new UserStatsTrack( $recipient->getId(), $recipient->getName() );
 		if ( $message_type == 0 ) {
 			// public message count
 			$stats->incStatField( 'user_board_count' );
@@ -56,18 +63,16 @@ class UserBoard {
 			$stats->incStatField( 'user_board_count_priv' );
 		}
 
-		$stats = new UserStatsTrack( $user_id_from, $user_name_from );
+		$stats = new UserStatsTrack( $sender->getId(), $sender->getName() );
 		$stats->incStatField( 'user_board_sent' );
 
 		if ( ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ) {
-			$userFrom = User::newFromId( $user_id_from );
-
 			EchoEvent::create( [
 				'type' => 'social-msg-send',
-				'agent' => $userFrom,
+				'agent' => $sender,
 				'extra' => [
-					'target' => $user_id_to,
-					'from' => $user_id_from,
+					'target' => $recipient->getId(),
+					'from' => $sender->getId(),
 					'type' => $message_type,
 					'message' => $message
 				]
@@ -80,33 +85,32 @@ class UserBoard {
 	/**
 	 * Sends an email to a user if someone wrote on their board
 	 *
-	 * @param int $user_id_to User ID of the reciever
-	 * @param mixed $user_from The user name of the person who wrote the board message
+	 * @param User $sender User (object) who wrote the board message
+	 * @param User $recipient User (object) receiving the message
 	 */
-	public function sendBoardNotificationEmail( $user_id_to, $user_from ) {
-		$user = User::newFromId( $user_id_to );
-		$user->loadFromId();
+	private function sendBoardNotificationEmail( $sender, $recipient ) {
+		$recipient->load();
 
 		// Send email if user's email is confirmed and s/he's opted in to recieving social notifications
-		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-rel' ) : $user->getIntOption( 'notifymessage', 1 );
-		if ( $user->isEmailConfirmed() && $wantsEmail ) {
+		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $recipient->getBoolOption( 'echo-subscriptions-email-social-rel' ) : $recipient->getIntOption( 'notifymessage', 1 );
+		if ( $recipient->isEmailConfirmed() && $wantsEmail ) {
 			$board_link = SpecialPage::getTitleFor( 'UserBoard' );
 			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );
-			$subject = wfMessage( 'message_received_subject', $user_from )->parse();
+			$subject = wfMessage( 'message_received_subject', $sender->getName() )->parse();
 			$body = [
 				'html' => wfMessage( 'message_received_body_html',
-					$user->getName(),
-					$user_from
+					$recipient->getName(),
+					$sender->getName()
 				)->parse(),
 				'text' => wfMessage( 'message_received_body',
-					$user->getName(),
-					$user_from,
+					$recipient->getName(),
+					$sender->getName(),
 					htmlspecialchars( $board_link->getFullURL() ),
 					htmlspecialchars( $update_profile_link->getFullURL() )
 				)->text()
 			];
 
-			$user->sendMail( $subject, $body );
+			$recipient->sendMail( $subject, $body );
 		}
 	}
 
@@ -114,20 +118,20 @@ class UserBoard {
 	 * Checks if the user with ID number $user_id owns the board message with
 	 * the ID number $ub_id.
 	 *
-	 * @param $user_id int User ID number
-	 * @param $ub_id int User board message ID number
+	 * @param User $user User object
+	 * @param int $ub_id User board message ID number
 	 * @return bool True if user owns the message, otherwise false
 	 */
-	public function doesUserOwnMessage( $user_id, $ub_id ) {
+	public function doesUserOwnMessage( $user, $ub_id ) {
 		$dbr = wfGetDB( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_board',
-			[ 'ub_user_id' ],
+			[ 'ub_actor' ],
 			[ 'ub_id' => $ub_id ],
 			__METHOD__
 		);
 		if ( $s !== false ) {
-			if ( $user_id == $s->ub_user_id ) {
+			if ( $user->getActorId() == $s->ub_actor ) {
 				return true;
 			}
 		}
@@ -146,7 +150,7 @@ class UserBoard {
 			$dbw = wfGetDB( DB_MASTER );
 			$s = $dbw->selectRow(
 				'user_board',
-				[ 'ub_user_id', 'ub_user_name', 'ub_type' ],
+				[ 'ub_actor', 'ub_type' ],
 				[ 'ub_id' => $ub_id ],
 				__METHOD__
 			);
@@ -157,7 +161,8 @@ class UserBoard {
 					__METHOD__
 				);
 
-				$stats = new UserStatsTrack( $s->ub_user_id, $s->ub_user_name );
+				$user = User::newFromActorId( $s->ub_actor );
+				$stats = new UserStatsTrack( $user->getId(), $user->getName() );
 				if ( $s->ub_type == 0 ) {
 					$stats->decStatField( 'user_board_count' );
 				} else {
@@ -171,8 +176,9 @@ class UserBoard {
 	 * Get the user board messages for the user with the ID $user_id.
 	 *
 	 * @todo FIXME: Rewrite this function to be compatible with non-MySQL DBMS
-	 * @param int $user_id User ID number
-	 * @param int $user_id_2 User ID number of the second user; only used
+	 *
+	 * @param User $user User object
+	 * @param User $user_2 User object representing the second user; only used
 	 * in board-to-board stuff
 	 * @param int $limit Used to build the LIMIT and OFFSET for the SQL
 	 * query
@@ -180,41 +186,38 @@ class UserBoard {
 	 * query
 	 * @return array Array of user board messages
 	 */
-	public function getUserBoardMessages( $user_id, $user_id_2 = 0, $limit = 0, $page = 0 ) {
+	public function getUserBoardMessages( $user, $user_2 = 0, $limit = 0, $page = 0 ) {
 		global $wgUser, $wgOut, $wgTitle;
+
 		$dbr = wfGetDB( DB_REPLICA );
 
-		if ( $limit > 0 ) {
-			$limitvalue = 0;
-			if ( $page ) {
-				$limitvalue = $page * $limit - ( $limit );
-			}
-			$limit_sql = " LIMIT {$limitvalue},{$limit} ";
+		$offset = 0;
+		if ( $limit > 0 && $page ) {
+			$offset = $page * $limit - ( $limit );
 		}
 
-		if ( $user_id_2 ) {
-			$user_sql = "( (ub_user_id={$user_id} AND ub_user_id_from={$user_id_2}) OR
-					(ub_user_id={$user_id_2} AND ub_user_id_from={$user_id}) )";
-			if ( !( $user_id == $wgUser->getId() || $user_id_2 == $wgUser->getId() ) ) {
+		if ( $user_2 instanceof User ) {
+			$user_sql = "( (ub_actor={$user->getActorId()} AND ub_actor_from={$user_2->getActorId()}) OR
+					(ub_actor={$user_2->getActorId()} AND ub_actor_from={$user->getActorId()}) )";
+			if ( !( $user->getActorId() == $wgUser->getActorId() || $user_2->getActorId() == $wgUser->getActorId() ) ) {
 				$user_sql .= ' AND ub_type = 0 ';
 			}
 		} else {
-			$user_sql = "ub_user_id = {$user_id}";
-			if ( $user_id != $wgUser->getId() ) {
+			$user_sql = "ub_actor = {$user->getActorId()}";
+			if ( $user->getActorId() != $wgUser->getId() ) {
 				$user_sql .= ' AND ub_type = 0 ';
 			}
 			if ( $wgUser->isLoggedIn() ) {
-				$user_sql .= " OR (ub_user_id={$user_id} AND ub_user_id_from={$wgUser->getId()}) ";
+				$user_sql .= " OR (ub_actor={$user->getActorId()} AND ub_actor_from={$wgUser->getActorId()}) ";
 			}
 		}
 
-		$sql = "SELECT ub_id, ub_user_id_from, ub_user_name_from, ub_user_id, ub_user_name,
+		$sql = "SELECT ub_id, ub_actor_from, ub_actor,
 			ub_message, ub_date, ub_type
 			FROM {$dbr->tableName( 'user_board' )}
 			WHERE {$user_sql}
-			ORDER BY ub_id DESC
-			{$limit_sql}";
-		$res = $dbr->query( $sql, __METHOD__ );
+			ORDER BY ub_id DESC";
+		$res = $dbr->query( $dbr->limitResult( $sql, $limit, $offset ), __METHOD__ );
 
 		$messages = [];
 
@@ -226,10 +229,8 @@ class UserBoard {
 			$messages[] = [
 				'id' => $row->ub_id,
 				'timestamp' => wfTimestamp( TS_UNIX, $row->ub_date ),
-				'user_id_from' => $row->ub_user_id_from,
-				'user_name_from' => $row->ub_user_name_from,
-				'user_id' => $row->ub_user_id,
-				'user_name' => $row->ub_user_name,
+				'ub_actor_from' => $row->ub_actor_from,
+				'ub_actor' => $row->ub_actor,
 				'message_text' => $message_text,
 				'type' => $row->ub_type
 			];
@@ -239,23 +240,23 @@ class UserBoard {
 	}
 
 	/**
-	 * Get the amount of board-to-board messages sent between the users whose
-	 * IDs are $user_id and $user_id_2.
+	 * Get the amount of board-to-board messages sent between the given user objects.
 	 *
 	 * @todo FIXME: Rewrite this function to be compatible with non-MySQL DBMS
-	 * @param int $user_id User ID of the first user
-	 * @param int $user_id_2 User ID of the second user
+	 *
+	 * @param User $user The first user (object)
+	 * @param User $user_2 The second user (object)
 	 * @return int The amount of board-to-board messages
 	 */
-	public function getUserBoardToBoardCount( $user_id, $user_id_2 ) {
+	public function getUserBoardToBoardCount( $user, $user_2 ) {
 		global $wgUser;
 
 		$dbr = wfGetDB( DB_REPLICA );
 
-		$user_sql = " ( (ub_user_id={$user_id} AND ub_user_id_from={$user_id_2}) OR
-					(ub_user_id={$user_id_2} AND ub_user_id_from={$user_id}) )";
+		$user_sql = " ( (ub_actor={$user->getActorId()} AND ub_actor_from={$user_2->getActorId()}) OR
+					(ub_actor={$user_2->getActorId()} AND ub_actor_from={$user->getActorId()}) )";
 
-		if ( !( $user_id == $wgUser->getId() || $user_id_2 == $wgUser->getId() ) ) {
+		if ( !( $user->getActorId() == $wgUser->getActorId() || $user_2->getActorId() == $wgUser->getActorId() ) ) {
 			$user_sql .= ' AND ub_type = 0 ';
 		}
 		$sql = "SELECT COUNT(*) AS the_count
@@ -265,6 +266,7 @@ class UserBoard {
 		$res = $dbr->query( $sql, __METHOD__ );
 		$row = $dbr->fetchObject( $res );
 
+		$count = 0;
 		if ( $row ) {
 			$count = $row->the_count;
 		}
@@ -272,39 +274,40 @@ class UserBoard {
 		return $count;
 	}
 
-	public function displayMessages( $user_id, $user_id_2 = 0, $count = 10, $page = 0 ) {
+	public function displayMessages( $user, $user_2 = 0, $count = 10, $page = 0 ) {
 		global $wgUser, $wgTitle;
 
 		$output = ''; // Prevent E_NOTICE
-		$messages = $this->getUserBoardMessages( $user_id, $user_id_2, $count, $page );
+		$messages = $this->getUserBoardMessages( $user, $user_2, $count, $page );
 
 		if ( $messages ) {
 			foreach ( $messages as $message ) {
-				$user = Title::makeTitle( NS_USER, $message['user_name_from'] );
-				$avatar = new wAvatar( $message['user_id_from'], 'm' );
+				$sender = User::newFromActorId( $message['ub_actor_from'] );
+				$recipient = User::newFromActorId( $message['ub_actor'] );
+				$avatar = new wAvatar( $sender->getId(), 'm' );
 
 				$board_to_board = '';
 				$board_link = '';
 				$message_type_label = '';
 				$delete_link = '';
 
-				if ( $wgUser->getName() != $message['user_name_from'] ) {
+				if ( $wgUser->getActorId() != $message['ub_actor_from'] ) {
 					$board_to_board = '<a href="' .
 						htmlspecialchars(
 							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [
-								'user' => $message['user_name'],
-								'conv' => $message['user_name_from']
+								'user' => $recipient->getName(),
+								'conv' => $sender->getName()
 							] )
 						)
 						. '">' .
 						wfMessage( 'userboard_board-to-board' )->plain() . '</a>';
 					$board_link = '<a href="' .
 						htmlspecialchars(
-							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $message['user_name_from'] ] )
+							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $sender->getName() ] )
 						) . '">' .
-						wfMessage( 'userboard_sendmessage', $message['user_name_from'] )->parse() . '</a>';
+						wfMessage( 'userboard_sendmessage', $sender->getName() )->parse() . '</a>';
 				}
-				if ( $wgUser->getName() == $message['user_name'] || $wgUser->isAllowed( 'userboard-delete' ) ) {
+				if ( $wgUser->getActorId() == $message['ub_actor'] || $wgUser->isAllowed( 'userboard-delete' ) ) {
 					$delete_link = "<span class=\"user-board-red\">
 							<a href=\"javascript:void(0);\" data-message-id=\"{$message['id']}\">" .
 								wfMessage( 'delete' )->plain() . '</a>
@@ -317,18 +320,18 @@ class UserBoard {
 				$message_text = $message['message_text'];
 				# $message_text = preg_replace_callback( "/(<a[^>]*>)(.*?)(<\/a>)/i", 'cut_link_text', $message['message_text'] );
 
-				$sender = htmlspecialchars( $user->getFullURL() );
-				$senderTitle = htmlspecialchars( $message['user_name_from'] );
+				$senderUserPage = htmlspecialchars( $sender->getUserPage()->getFullURL() );
+				$senderTitle = htmlspecialchars( $sender->getName() );
 				$output .= "<div class=\"user-board-message\">
 					<div class=\"user-board-message-from\">
-					<a href=\"{$sender}\" title=\"{$senderTitle}\">{$senderTitle}</a> {$message_type_label}
+					<a href=\"{$senderUserPage}\" title=\"{$senderTitle}\">{$senderTitle}</a> {$message_type_label}
 					</div>
 					<div class=\"user-board-message-time\">" .
 						wfMessage( 'userboard_posted_ago', $this->getTimeAgo( $message['timestamp'] ) )->parse() .
 					"</div>
 					<div class=\"user-board-message-content\">
 						<div class=\"user-board-message-image\">
-							<a href=\"{$sender}\" title=\"{$senderTitle}\">{$avatar->getAvatarURL()}</a>
+							<a href=\"{$senderUserPage}\" title=\"{$senderTitle}\">{$avatar->getAvatarURL()}</a>
 						</div>
 						<div class=\"user-board-message-body\">
 							{$message_text}
@@ -346,7 +349,6 @@ class UserBoard {
 			$output .= '<div class="no-info-container">' .
 				wfMessage( 'userboard_nomessages' )->parse() .
 			'</div>';
-
 		}
 
 		return $output;

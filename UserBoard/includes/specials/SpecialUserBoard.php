@@ -55,9 +55,9 @@ class SpecialViewUserBoard extends SpecialPage {
 		$out->addModules( 'ext.socialprofile.userboard.js' );
 
 		$ub_messages_show = 25;
-		$user_name = $request->getVal( 'user', $par );
+		$user_name = $userFromURL = $request->getVal( 'user', $par );
 		$user_name_2 = $request->getVal( 'conv' );
-		$user_id_2 = ''; // Prevent E_NOTICE
+		$user_2 = null; // Prevent E_NOTICE
 		$page = $request->getInt( 'page', 1 );
 
 		/**
@@ -71,7 +71,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		}
 
 		/**
-		 * If no user is set in the URL, we assume its the current user
+		 * If no user is set in the URL, we assume it's the current user
 		 */
 		if ( !$user_name ) {
 			$user_name = $currentUser->getName();
@@ -80,8 +80,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		$user = Title::makeTitle( NS_USER, $user_name );
 
 		if ( $user_name_2 ) {
-			$user_id_2 = User::idFromName( $user_name_2 );
-			$user_2 = Title::makeTitle( NS_USER, $user_name );
+			$user_2 = User::newFromName( $user_name_2 );
 		}
 
 		/**
@@ -99,13 +98,14 @@ class SpecialViewUserBoard extends SpecialPage {
 
 		$b = new UserBoard();
 		$ub_messages = $b->getUserBoardMessages(
-			$user_id,
-			$user_id_2,
+			// @todo FIXME: variabilize this construct since we're using it twice here
+			( $userFromURL ? User::newFromName( $userFromURL ) : $currentUser ),
+			$user_2,
 			$ub_messages_show,
 			$page
 		);
 
-		if ( !$user_id_2 ) {
+		if ( !$user_2 ) {
 			$stats = new UserStats( $user_id, $user_name );
 			$stats_data = $stats->getUserStats();
 			$total = $stats_data['user_board'];
@@ -119,16 +119,16 @@ class SpecialViewUserBoard extends SpecialPage {
 				$total = $total + $stats_data['user_board_priv'];
 			}
 		} else {
-			$total = $b->getUserBoardToBoardCount( $user_id, $user_id_2 );
+			$total = $b->getUserBoardToBoardCount( ( $userFromURL ? User::newFromName( $userFromURL ) : $currentUser ), $user_2 );
 		}
 
-		if ( !$user_id_2 ) {
+		if ( !$user_2 ) {
 			if ( !( $currentUser->getName() == $user_name ) ) {
 				$out->setPageTitle( $this->msg( 'userboard_owner', $user_name )->parse() );
 			} else {
 				global $wgMemc;
 
-				$messageCount = new UserBoardMessageCount( $wgMemc, $currentUser->getId() );
+				$messageCount = new UserBoardMessageCount( $wgMemc, $currentUser );
 				$messageCount->clear();
 				$out->setPageTitle( $this->msg( 'userboard_yourboard' )->parse() );
 			}
@@ -179,7 +179,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		 * Build next/prev navigation links
 		 */
 		$qs = [];
-		if ( $user_id_2 ) {
+		if ( $user_2 ) {
 			$qs['conv'] = $user_name_2;
 		}
 		$numofpages = $total / $per_page;
@@ -242,7 +242,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		$can_post = false;
 		$user_name_from = ''; // Prevent E_NOTICE
 
-		if ( !$user_id_2 ) {
+		if ( !$user_2 ) {
 			if ( $currentUser->getName() != $user_name ) {
 				$can_post = true;
 				$user_name_to = htmlspecialchars( $user_name, ENT_QUOTES );
@@ -294,36 +294,37 @@ class SpecialViewUserBoard extends SpecialPage {
 		// one sane & sensible method. --ashley, 19 July 2017
 		if ( $ub_messages ) {
 			foreach ( $ub_messages as $ub_message ) {
-				$user = Title::makeTitle( NS_USER, $ub_message['user_name_from'] );
-				$avatar = new wAvatar( $ub_message['user_id_from'], 'm' );
+				$sender = User::newFromActorId( $ub_message['ub_actor_from'] );
+				$recipient = User::newFromActorId( $ub_message['ub_actor'] );
+				$avatar = new wAvatar( $sender->getId(), 'm' );
 
 				$board_to_board = '';
 				$board_link = '';
 				$ub_message_type_label = '';
 				$delete_link = '';
 
-				if ( $currentUser->getName() != $ub_message['user_name_from'] ) {
+				if ( $currentUser->getActorId() != $ub_message['ub_actor_from'] ) {
 					// Prevent logged-out views from getting a board to board with 127.0.0.1
 					// And also board to board with self
-					if ( $currentUser->getId() != 0 && $user_name != $ub_message['user_name_from'] ) {
+					if ( $currentUser->isLoggedIn() && $user_name != $sender->getName() ) {
 						$board_to_board = '<a href="' .
 							htmlspecialchars(
 								SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [
 									'user' => $user_name,
-									'conv' => $ub_message['user_name_from']
+									'conv' => $sender->getName()
 								] )
 							) . '">' .
 							htmlspecialchars( $this->msg( 'userboard_boardtoboard' )->plain() ) . '</a>';
 					}
 					$board_link = '<a href="' .
 						htmlspecialchars(
-							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $ub_message['user_name_from'] ] )
+							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $sender->getName() ] )
 						) . '">' .
-						$this->msg( 'userboard_sendmessage', $ub_message['user_name_from'] )->parse() . '</a>';
+						$this->msg( 'userboard_sendmessage', $sender->getName() )->parse() . '</a>';
 				} else {
 					$board_link = '<a href="' .
 						htmlspecialchars(
-							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $ub_message['user_name_from'] ] )
+							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $sender->getName() ] )
 						) . '">' .
 						htmlspecialchars( $this->msg( 'userboard_myboard' )->plain() ) . '</a>';
 				}
@@ -331,7 +332,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				// If the user owns this private message or they are allowed to
 				// delete board messages, show the "delete" link to them
 				if (
-					$currentUser->getName() == $ub_message['user_name'] ||
+					$currentUser->getActorId() == $ub_message['ub_actor'] ||
 					$currentUser->isAllowed( 'userboard-delete' )
 				) {
 					$delete_link = "<span class=\"user-board-red\">
@@ -349,8 +350,8 @@ class SpecialViewUserBoard extends SpecialPage {
 				// $ub_message_text = preg_replace_callback( "/(<a[^>]*>)(.*?)(<\/a>)/i", 'cut_link_text', $ub_message['message_text'] );
 				$ub_message_text = $ub_message['message_text'];
 
-				$userPageURL = htmlspecialchars( $user->getFullURL() );
-				$senderTitle = htmlspecialchars( $ub_message['user_name_from'] );
+				$userPageURL = htmlspecialchars( $sender->getUserPage()->getFullURL() );
+				$senderTitle = htmlspecialchars( $sender->getName() );
 				$output .= "<div class=\"user-board-message\">
 					<div class=\"user-board-message-from\">
 						<a href=\"{$userPageURL}\" title=\"{$senderTitle}\">{$senderTitle} </a> {$ub_message_type_label}

@@ -87,8 +87,8 @@ class TopFansRecent extends UnlistedSpecialPage {
 			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
 				"user_points_{$period}",
-				[ 'up_user_id', 'up_user_name', 'up_points' ],
-				[ 'up_user_id <> 0' ],
+				[ 'up_actor', 'up_points' ],
+				[ 'up_actor IS NOT NULL' ],
 				__METHOD__,
 				$params
 			);
@@ -96,7 +96,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 			$loop = 0;
 
 			foreach ( $res as $row ) {
-				$u = User::newFromId( $row->up_user_id );
+				$u = User::newFromActorId( $row->up_actor );
 				// Ensure that the user exists for real.
 				// Otherwise we'll be happily displaying entries for users that
 				// once existed by no longer do (account merging is a thing,
@@ -105,12 +105,11 @@ class TopFansRecent extends UnlistedSpecialPage {
 				// different bug with a different extension).
 				// Also ignore flagged bot accounts, no point in showing those
 				// in the top lists.
-				$exists = $u->loadFromId();
+				$exists = $u->load();
 
 				if ( $exists && !$u->isBlocked() && !$u->isBot() ) {
 					$user_list[] = [
-						'user_id' => $row->up_user_id,
-						'user_name' => $row->up_user_name,
+						'actor' => $row->up_actor,
 						'points' => $row->up_points
 					];
 					$loop++;
@@ -185,8 +184,12 @@ class TopFansRecent extends UnlistedSpecialPage {
 		$output .= '<div class="top-users">';
 
 		foreach ( $user_list as $user ) {
-			$user_title = Title::makeTitle( NS_USER, $user['user_name'] );
-			$avatar = new wAvatar( $user['user_id'], 'm' );
+			$u = User::newFromActorId( $user['actor'] );
+			if ( !$u ) {
+				continue;
+			}
+
+			$avatar = new wAvatar( $u->getId(), 'm' );
 			$avatarImage = $avatar->getAvatarURL();
 
 			$output .= '<div class="top-fan-row">
@@ -194,8 +197,8 @@ class TopFansRecent extends UnlistedSpecialPage {
 				<span class="top-fan">' .
 					$avatarImage .
 					$linkRenderer->makeLink(
-						$user_title,
-						$user['user_name']
+						$u->getUserPage(),
+						$u->getName()
 					) .
 				'</span>';
 

@@ -80,20 +80,23 @@ class SystemGiftListLookup {
 		}
 
 		$res = $dbr->select(
-			[ 'user_system_gift', 'system_gift' ],
+			[ 'user_system_gift', 'system_gift', 'actor' ],
 			[
-				'sg_id', 'sg_user_id', 'sg_user_name', 'sg_gift_id', 'sg_date',
+				'sg_id', 'sg_actor', 'actor_name', 'actor_user', 'sg_gift_id', 'sg_date',
 				'sg_status', 'gift_name', 'gift_description',
 				'gift_given_count'
 			],
-			[ 'sg_user_id' => $user->getId() ],
+			[ 'sg_actor' => $user->getActorId() ],
 			__METHOD__,
 			[
 				'ORDER BY' => 'sg_id DESC',
 				'LIMIT' => $this->limit,
 				'OFFSET' => $offset
 			],
-			[ 'system_gift' => [ 'INNER JOIN', 'sg_gift_id = gift_id' ] ]
+			[
+				'system_gift' => [ 'INNER JOIN', 'sg_gift_id = gift_id' ],
+				'actor' => [ 'JOIN', 'sg_actor = actor_id' ]
+			]
 		);
 
 		$gifts = [];
@@ -103,8 +106,8 @@ class SystemGiftListLookup {
 				'gift_id' => $row->sg_gift_id,
 				'timestamp' => $row->sg_date,
 				'status' => $row->sg_status,
-				'user_id' => $row->sg_user_id,
-				'user_name' => $row->sg_user_name,
+				'user_id' => $row->actor_user,
+				'user_name' => $row->actor_name,
 				'gift_name' => $row->gift_name,
 				'gift_description' => $row->gift_description,
 				'gift_given_count' => $row->gift_given_count,

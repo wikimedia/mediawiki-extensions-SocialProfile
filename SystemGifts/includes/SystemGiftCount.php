@@ -4,7 +4,7 @@ use MediaWiki\Logger\LoggerFactory;
 
 /**
  * This object allows for increasing, decreasing, and getting
- * the amount of system gifts for a user based on their ID.
+ * the amount of system gifts for a given user.
  */
 class SystemGiftCount {
 	/**
@@ -13,13 +13,13 @@ class SystemGiftCount {
 	private $cache;
 
 	/**
-	 * @var int $userId
+	 * @var User $user
 	 */
-	private $userId;
+	private $user;
 
-	public function __construct( $cache, $userId ) {
+	public function __construct( $cache, $user ) {
 		$this->cache = $cache;
-		$this->userId = $userId;
+		$this->user = $user;
 	}
 
 	/**
@@ -65,9 +65,11 @@ class SystemGiftCount {
 
 		if ( $data != '' ) {
 			$logger = LoggerFactory::getInstance( 'SocialProfile' );
-			$logger->debug( "Got new award count of {data} for {user_id} from cache\n", [
+			$logger->debug( "Got new award count of {data} for {user_name} (ID: {user_id}, actor ID: {actor_id}) from cache\n", [
 				'data' => $data,
-				'user_id' => $this->userId
+				'user_name' => $this->user->getName(),
+				'user_id' => $this->user->getId(),
+				'actor_id' => $this->user->getActorId()
 			] );
 
 			return $data;
@@ -82,8 +84,11 @@ class SystemGiftCount {
 	 */
 	private function getFromDatabase() {
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
-		$logger->debug( "Got new award count for id {user_id} from DB\n", [
-			'user_id' => $this->userId
+		$actorId = $this->user->getActorId();
+		$logger->debug( "Got new award count for id {user_name} (ID: {user_id}, actor ID: {actor_id}) from DB\n", [
+			'user_name' => $this->user->getName(),
+			'user_id' => $this->user->getId(),
+			'actor_id' => $actorId
 		] );
 
 		$dbr = wfGetDB( DB_REPLICA );
@@ -92,7 +97,7 @@ class SystemGiftCount {
 			'user_system_gift',
 			[ 'COUNT(*) AS count' ],
 			[
-				'sg_user_id' => $this->userId,
+				'sg_actor' => $actorId,
 				'sg_status' => 1
 			],
 			__METHOD__
@@ -110,6 +115,6 @@ class SystemGiftCount {
 	 * @return string
 	 */
 	private function makeKey() {
-		return $this->cache->makeKey( 'system_gifts', 'new_count', $this->userId );
+		return $this->cache->makeKey( 'system_gifts', 'new_count', 'actor_id', $this->user->getActorId() );
 	}
 }

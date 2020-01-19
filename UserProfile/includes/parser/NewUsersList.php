@@ -54,7 +54,7 @@ class NewUsersList {
 			if ( $dbr->tableExists( 'user_register_track' ) ) {
 				$res = $dbr->select(
 					'user_register_track',
-					[ 'ur_user_id', 'ur_user_name' ],
+					[ 'ur_actor' ],
 					[],
 					__METHOD__,
 					[ 'ORDER BY' => 'ur_date', 'LIMIT' => $count ]
@@ -63,29 +63,24 @@ class NewUsersList {
 				$list = [];
 				foreach ( $res as $row ) {
 					$list[] = [
-						'user_id' => $row->ur_user_id,
-						'user_name' => $row->ur_user_name
+						'actor' => $row->ur_actor
 					];
 				}
 			} else {
-				// If user_register_track table doesn't exist, use the core logging
-				// table
-				$actorQuery = ActorMigration::newMigration()->getJoin( 'log_user' );
+				// If user_register_track table doesn't exist, use the core logging table
 				$res = $dbr->select(
-					[ 'logging' ] + $actorQuery['tables'],
-					$actorQuery['fields'],
+					'logging',
+					[ 'log_actor' ],
 					[ 'log_type' => 'newusers' ],
 					__METHOD__,
 					// DESC to get the *newest* $count users instead of the oldest
-					[ 'ORDER BY' => 'log_timestamp DESC', 'LIMIT' => $count ],
-					$actorQuery['joins']
+					[ 'ORDER BY' => 'log_timestamp DESC', 'LIMIT' => $count ]
 				);
 
 				$list = [];
 				foreach ( $res as $row ) {
 					$list[] = [
-						'user_id' => $row->log_user,
-						'user_name' => $row->log_user_text
+						'actor' => $row->log_actor
 					];
 				}
 			}
@@ -101,12 +96,15 @@ class NewUsersList {
 
 		if ( !empty( $list ) ) {
 			$x = 1;
-			foreach ( $list as $user ) {
-				$avatar = new wAvatar( $user['user_id'], 'ml' );
-				$userLink = Title::makeTitle( NS_USER, $user['user_name'] );
+			foreach ( $list as $entry ) {
+				$user = User::newFromActorId( $entry['actor'] );
+				if ( !$user ) {
+					continue;
+				}
 
-				$output .= '<a href="' . htmlspecialchars( $userLink->getFullURL() ) .
-					'" rel="nofollow">' . $avatar->getAvatarURL( [ 'title' => $user['user_name'] ] ) . '</a>';
+				$avatar = new wAvatar( $user->getId(), 'ml' );
+				$output .= '<a href="' . htmlspecialchars( $user->getUserPage()->getFullURL() ) .
+					'" rel="nofollow">' . $avatar->getAvatarURL( [ 'title' => $user->getName() ] ) . '</a>';
 
 				if ( ( $x == $count ) || ( $x != 1 ) && ( $x % $per_row == 0 ) ) {
 					$output .= '<div class="visualClear"></div>';

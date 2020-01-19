@@ -54,8 +54,8 @@ class TopUsersPoints extends SpecialPage {
 			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
 				'user_stats',
-				[ 'stats_user_id', 'stats_user_name', 'stats_total_points' ],
-				[ 'stats_user_id <> 0' ],
+				[ 'stats_actor', 'stats_total_points' ],
+				[ 'stats_actor IS NOT NULL' ],
 				__METHOD__,
 				$params
 			);
@@ -63,7 +63,7 @@ class TopUsersPoints extends SpecialPage {
 			$loop = 0;
 
 			foreach ( $res as $row ) {
-				$user = User::newFromId( $row->stats_user_id );
+				$user = User::newFromId( $row->stats_actor );
 				// Ensure that the user exists for real.
 				// Otherwise we'll be happily displaying entries for users that
 				// once existed by no longer do (account merging is a thing,
@@ -76,8 +76,7 @@ class TopUsersPoints extends SpecialPage {
 
 				if ( $exists && !$user->isBlocked() && !$user->isBot() ) {
 					$user_list[] = [
-						'user_id' => $row->stats_user_id,
-						'user_name' => $row->stats_user_name,
+						'actor' => $row->stats_actor,
 						'points' => $row->stats_total_points
 					];
 					$loop++;
@@ -151,8 +150,11 @@ class TopUsersPoints extends SpecialPage {
 		$last_level = '';
 
 		foreach ( $user_list as $user ) {
-			$user_title = Title::makeTitle( NS_USER, $user['user_name'] );
-			$avatar = new wAvatar( $user['user_id'], 'm' );
+			$u = User::newFromActorId( $user['actor'] );
+			if ( !$u ) {
+				continue;
+			}
+			$avatar = new wAvatar( $u->getId(), 'm' );
 			$commentIcon = $avatar->getAvatarURL();
 
 			// Break list into sections based on User Level if it's defined for this site
@@ -166,7 +168,7 @@ class TopUsersPoints extends SpecialPage {
 				$last_level = $user_level->getLevelName();
 			}
 
-			$userLink = $linkRenderer->makeLink( $user_title, $user['user_name'] );
+			$userLink = $linkRenderer->makeLink( $u->getUserPage(), $u->getName() );
 			$output .= "<div class=\"top-fan-row\">
 				<span class=\"top-fan-num\">{$x}.</span>
 				<span class=\"top-fan\">
