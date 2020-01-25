@@ -116,7 +116,9 @@ class SpecialUploadAvatar extends SpecialUpload {
 		$log->addEntry(
 			'avatar',
 			$user->getUserPage(),
-			$this->msg( 'user-profile-picture-log-entry' )->inContentLanguage()->text()
+			$this->msg( 'user-profile-picture-log-entry' )->inContentLanguage()->text(),
+			[],
+			$user
 		);
 
 		$uid = $user->getId();

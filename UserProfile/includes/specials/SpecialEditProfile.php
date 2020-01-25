@@ -90,7 +90,9 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 				$target->getUserPage(),
 				$this->msg( 'user-profile-edit-profile',
 					[ '[[User:' . $target->getName() . ']]' ] )
-				->inContentLanguage()->text()
+				->inContentLanguage()->text(),
+				[],
+				$user
 			);
 			$out->addHTML(
 				'<span class="profile-on">' .
