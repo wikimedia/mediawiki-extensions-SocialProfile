@@ -183,7 +183,9 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 				$user->getUserPage(),
 				$this->msg( 'user-profile-update-log-section' )
 					->inContentLanguage()->text() .
-					" '{$section}'"
+					" '{$section}'",
+				[],
+				$user
 			);
 			$out->addHTML(
 				'<span class="profile-on">' .

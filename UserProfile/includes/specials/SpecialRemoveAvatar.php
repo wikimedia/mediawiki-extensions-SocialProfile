@@ -148,7 +148,9 @@ class RemoveAvatar extends SpecialPage {
 			'avatar',
 			$user->getUserPage(),
 			$this->msg( 'user-profile-picture-log-delete-entry', $user_deleted->getName() )
-				->inContentLanguage()->text()
+				->inContentLanguage()->text(),
+			[],
+			$user
 		);
 	}
 
