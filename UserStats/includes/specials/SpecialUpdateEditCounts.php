@@ -41,7 +41,10 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 			[ 'COUNT(*) AS the_count', 'revactor_actor' ],
 			$whereConds,
 			__METHOD__,
-			[ 'GROUP BY' => 'actor_name' ],
+			// revactor_actor wasn't here originally but PostgreSQL seems to require it
+			// Without it, this error happens:
+			// Error: 42803 ERROR: column "revision_actor_temp.revactor_actor" must appear in the GROUP BY clause or be used in an aggregate function
+			[ 'GROUP BY' => 'actor_name, revactor_actor' ],
 			[
 				'actor' => [ 'JOIN', 'actor_id = revactor_actor' ],
 				'revision_actor_temp' => [ 'JOIN', 'revactor_rev = rev_id' ],
