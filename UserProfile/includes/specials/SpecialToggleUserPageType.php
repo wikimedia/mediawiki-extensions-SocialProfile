@@ -23,8 +23,6 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 	 * @param string|null $params
 	 */
 	public function execute( $params ) {
-		global $wgMemc;
-
 		$out = $this->getOutput();
 		$user = $this->getUser();
 
@@ -55,6 +53,8 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 		$profile = new UserProfile( $user );
 		$profile_data = $profile->getProfile();
 
+		// If type is currently 1 (social profile), the user will want to change it to
+		// 0 (wikitext page), and vice-versa
 		$user_page_type = ( ( $profile_data['user_page_type'] == 1 ) ? 0 : 1 );
 
 		$dbw->update(
@@ -67,8 +67,7 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 			], __METHOD__
 		);
 
-		$key = $wgMemc->makeKey( 'user', 'profile', 'info', 'actor_id', $user->getActorId() );
-		$wgMemc->delete( $key );
+		UserProfile::clearCache( $user );
 
 		if ( $user_page_type == 1 && !$user->isBlocked() ) {
 			$article = new WikiPage( $user->getUserPage() );
