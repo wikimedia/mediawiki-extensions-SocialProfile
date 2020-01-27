@@ -330,8 +330,6 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * @param User|null $user User object, null by default (=the current user)
 	 */
 	function saveProfileBasic( $user = null ) {
-		global $wgMemc;
-
 		if ( $user === null ) {
 			$user = $this->getUser();
 		}
@@ -371,7 +369,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		Hooks::run( 'BasicProfileChanged', [ $user, $basicProfileData ] );
 		// end of the hook
 
-		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', 'actor_id', $user->getActorId() ) );
+		UserProfile::clearCache( $user );
 	}
 
 	/**
@@ -381,8 +379,6 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * @param User|null $user
 	 */
 	function saveProfileCustom( $user = null ) {
-		global $wgMemc;
-
 		if ( $user === null ) {
 			$user = $this->getUser();
 		}
@@ -403,7 +399,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			__METHOD__
 		);
 
-		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', 'actor_id', $user->getActorId() ) );
+		UserProfile::clearCache( $user );
 	}
 
 	/**
@@ -413,8 +409,6 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * @param User|null $user
 	 */
 	function saveProfilePersonal( $user = null ) {
-		global $wgMemc;
-
 		if ( $user === null ) {
 			$user = $this->getUser();
 		}
@@ -447,7 +441,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		Hooks::run( 'PersonalInterestsChanged', [ $user, $interestsData ] );
 		// end of the hook
 
-		$wgMemc->delete( $wgMemc->makeKey( 'user', 'profile', 'info', 'actor_id', $user->getActorId() ) );
+		UserProfile::clearCache( $user );
 	}
 
 	/**

@@ -83,15 +83,24 @@ class UserProfile {
 	}
 
 	/**
+	 * Gets the memcached key for the given user.
+	 *
+	 * @param User $user User object for the desired user
+	 * @return string
+	 */
+	public static function getCacheKey( $user ) {
+		global $wgMemc;
+		return $wgMemc->makeKey( 'user', 'profile', 'info', 'actor_id', $user->getActorId() );
+	}
+
+	/**
 	 * Deletes the memcached key for the given user.
 	 *
 	 * @param User $user User object for the desired user
 	 */
 	public static function clearCache( $user ) {
 		global $wgMemc;
-
-		$key = $wgMemc->makeKey( 'user', 'profile', 'info', 'actor_id', $user->getActorId() );
-		$wgMemc->delete( $key );
+		$wgMemc->delete( self::getCacheKey( $user ) );
 	}
 
 	/**
@@ -106,7 +115,7 @@ class UserProfile {
 		$this->user->load();
 
 		// Try cache first
-		$key = $wgMemc->makeKey( 'user', 'profile', 'info', 'actor_id', $this->user->getActorId() );
+		$key = self::getCacheKey( $this->user );
 		$data = $wgMemc->get( $key );
 		if ( $data ) {
 			wfDebug( "Got user profile info for {$this->user->getName()} from cache\n" );
