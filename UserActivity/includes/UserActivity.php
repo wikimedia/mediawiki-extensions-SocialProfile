@@ -113,7 +113,7 @@ class UserActivity {
 			[
 				'rc_timestamp', 'rc_title',
 				'rc_id', 'rc_minor',
-				'rc_new', 'rc_namespace', 'rc_cur_id', 'rc_this_oldid',
+				'rc_source', 'rc_namespace', 'rc_cur_id', 'rc_this_oldid',
 				'rc_last_oldid', 'rc_log_action'
 			] + $commentQuery['fields'] + $actorQuery['fields'],
 			$where,
@@ -147,7 +147,7 @@ class UserActivity {
 				'comment' => $this->fixItemComment( $commentStore->getComment(
 					'rc_comment', $row )->text ),
 				'minor' => $row->rc_minor,
-				'new' => $row->rc_new
+				'new' => $row->rc_source === RecentChange::SRC_NEW
 			];
 
 			// set last timestamp
@@ -163,7 +163,7 @@ class UserActivity {
 				'comment' => $this->fixItemComment( $commentStore->getComment(
 					'rc_comment', $row )->text ),
 				'minor' => $row->rc_minor,
-				'new' => $row->rc_new
+				'new' => $row->rc_source === RecentChange::SRC_NEW
 			];
 		}
 	}
