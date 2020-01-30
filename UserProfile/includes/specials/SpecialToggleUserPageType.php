@@ -64,27 +64,45 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 			],
 			/* WHERE */[
 				'up_actor' => $user->getActorId()
-			], __METHOD__
+			],
+			__METHOD__
 		);
 
 		UserProfile::clearCache( $user );
 
 		if ( $user_page_type == 1 && !$user->isBlocked() ) {
-			$article = new WikiPage( $user->getUserPage() );
-			$contentObject = $article->getContent();
-			$user_page_content = ContentHandler::getContentText( $contentObject );
-
-			$user_wiki_title = Title::makeTitle( NS_USER_WIKI, $user->getName() );
-			$user_wiki = new Article( $user_wiki_title );
-			if ( !$user_wiki->exists() ) {
-				$user_wiki->doEditContent(
-					ContentHandler::makeContent( $user_page_content, $user_wiki_title ),
-					'import user wiki'
-				);
-			}
+			self::importUserWiki( $user );
 		}
 
 		$title = Title::makeTitle( NS_USER, $user->getName() );
 		$out->redirect( $title->getFullURL() );
 	}
+
+	/**
+	 * If the given user has a User: page and they don't yet have a UserWiki: page,
+	 * this method imports the contents of the User: page into the UserWiki:
+	 * namespace, allowing the user to use the social profile as their default
+	 * User: page while still preserving any and all wikitext the old wikitext
+	 * User: page has had.
+	 *
+	 * Callers should check for things like permissions, read-only status, etc.
+	 * before calling this method.
+	 *
+	 * @param User $user
+	 */
+	public static function importUserWiki( User $user ) {
+		$article = new WikiPage( $user->getUserPage() );
+		$contentObject = $article->getContent();
+		$user_page_content = ContentHandler::getContentText( $contentObject );
+
+		$user_wiki_title = Title::makeTitle( NS_USER_WIKI, $user->getName() );
+		$user_wiki = new Article( $user_wiki_title );
+		if ( !$user_wiki->exists() ) {
+			$user_wiki->doEditContent(
+				ContentHandler::makeContent( $user_page_content, $user_wiki_title ),
+				'import user wiki'
+			);
+		}
+	}
+
 }
