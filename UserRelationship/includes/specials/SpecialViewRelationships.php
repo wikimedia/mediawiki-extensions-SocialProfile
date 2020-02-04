@@ -105,7 +105,7 @@ class SpecialViewRelationships extends SpecialPage {
 				}
 				$output .= '</div>';
 				$out->addHTML( $output );
-				return false;
+				return;
 			}
 
 			$targetUser = $user;

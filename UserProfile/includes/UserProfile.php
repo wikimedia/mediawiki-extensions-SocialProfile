@@ -1,5 +1,6 @@
 <?php
 use MediaWiki\MediaWikiServices;
+use MediaWiki\User\UserIdentity;
 
 /**
  * Class to access profile data for a user
@@ -85,7 +86,7 @@ class UserProfile {
 	/**
 	 * Gets the memcached key for the given user.
 	 *
-	 * @param User $user User object for the desired user
+	 * @param UserIdentity $user User object for the desired user
 	 * @return string
 	 */
 	public static function getCacheKey( $user ) {
@@ -96,7 +97,7 @@ class UserProfile {
 	/**
 	 * Deletes the memcached key for the given user.
 	 *
-	 * @param User $user User object for the desired user
+	 * @param UserIdentity $user User object for the desired user
 	 */
 	public static function clearCache( $user ) {
 		global $wgMemc;
@@ -108,6 +109,8 @@ class UserProfile {
 	 * First tries fetching the info from memcached and if that fails,
 	 * queries the database.
 	 * Fetched info is cached in memcached.
+	 *
+	 * @return array
 	 */
 	public function getProfile() {
 		global $wgMemc;
@@ -181,6 +184,7 @@ class UserProfile {
 	 * Format the user's birthday.
 	 *
 	 * @param string $birthday birthday in YYYY-MM-DD format
+	 * @param bool $showYear
 	 * @return string formatted birthday
 	 */
 	function formatBirthday( $birthday, $showYear = true ) {

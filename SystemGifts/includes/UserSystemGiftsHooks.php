@@ -4,11 +4,11 @@ class UserSystemGiftsHooks {
 	/**
 	 * For the Echo extension.
 	 *
-	 * @param array $notifications Echo notifications
-	 * @param array $notificationCategories Echo notification categories
-	 * @param array $icons Icon details
+	 * @param array[] &$notifications Echo notifications
+	 * @param array[] &$notificationCategories Echo notification categories
+	 * @param array[] &$icons Icon details
 	 */
-	public static function onBeforeCreateEchoEvent( &$notifications, &$notificationCategories, &$icons ) {
+	public static function onBeforeCreateEchoEvent( array &$notifications, array &$notificationCategories, array &$icons ) {
 		$notificationCategories['social-award'] = [
 			'priority' => 3,
 			'tooltip' => 'echo-pref-tooltip-social-award',
@@ -41,9 +41,9 @@ class UserSystemGiftsHooks {
 	 * Add user to be notified on Echo event
 	 *
 	 * @param EchoEvent $event
-	 * @param array $users
+	 * @param User[] &$users
 	 */
-	public static function onEchoGetDefaultNotifiedUsers( $event, &$users ) {
+	public static function onEchoGetDefaultNotifiedUsers( EchoEvent $event, array &$users ) {
 		switch ( $event->getType() ) {
 			case 'social-award-rec':
 				$extra = $event->getExtra();
@@ -57,9 +57,9 @@ class UserSystemGiftsHooks {
 	 * Set bundle for message
 	 *
 	 * @param EchoEvent $event
-	 * @param string $bundleString
+	 * @param string &$bundleString
 	 */
-	public static function onEchoGetBundleRules( $event, &$bundleString ) {
+	public static function onEchoGetBundleRules( EchoEvent $event, &$bundleString ) {
 		switch ( $event->getType() ) {
 			case 'social-award-rec':
 				$bundleString = 'social-award-rec';

@@ -93,7 +93,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 		if ( !$this->gift_id || !is_numeric( $this->gift_id ) ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
 			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-invalid-link' )->plain() ) );
-			return false;
+			return;
 		}
 
 		if ( $request->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {

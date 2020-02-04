@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\User\UserIdentity;
+
 /**
  * A special page to allow privileged users to update others' social profiles
  *
@@ -446,6 +449,8 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 
 	/**
 	 * Displays the form for editing custom (site-specific) information
+	 *
+	 * @param UserIdentity $tar
 	 *
 	 * @return string HTML
 	 */

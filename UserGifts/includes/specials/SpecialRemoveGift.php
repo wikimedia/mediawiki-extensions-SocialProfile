@@ -45,14 +45,14 @@ class RemoveGift extends UnlistedSpecialPage {
 		if ( !$this->gift_id || !is_numeric( $this->gift_id ) ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
 			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-invalid-link' )->plain() ) );
-			return false;
+			return;
 		}
 
 		// And also ensure that we're not trying to delete *someone else's* gift(s)...
 		if ( $rel->doesUserOwnGift( $user, $this->gift_id ) == false ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
 			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-do-not-own' )->plain() ) );
-			return false;
+			return;
 		}
 
 		$gift = $rel->getUserGift( $this->gift_id );

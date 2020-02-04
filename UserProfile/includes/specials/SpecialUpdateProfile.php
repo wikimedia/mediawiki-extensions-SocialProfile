@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\User\UserIdentity;
+
 /**
  * A special page to allow users to update their social profile
  *
@@ -19,7 +22,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * Initialize the user_profile records for a given user (either the current
 	 * user or someone else).
 	 *
-	 * @param User|null $user User object; null by default (=current user)
+	 * @param UserIdentity|null $user User object; null by default (=current user)
 	 */
 	function initProfile( $user = null ) {
 		if ( $user === null ) {
@@ -140,7 +143,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 						$this->getLanguage()->commaList( $thresholdMessages )
 					)->parse()
 				);
-				return '';
+				return;
 			}
 		}
 
@@ -327,7 +330,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	/**
 	 * Save the basic user profile info fields into the database.
 	 *
-	 * @param User|null $user User object, null by default (=the current user)
+	 * @param UserIdentity|null $user User object, null by default (=the current user)
 	 */
 	function saveProfileBasic( $user = null ) {
 		if ( $user === null ) {
@@ -376,7 +379,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * Save the four custom (site-specific) user profile fields into the
 	 * database.
 	 *
-	 * @param User|null $user
+	 * @param UserIdentity|null $user
 	 */
 	function saveProfileCustom( $user = null ) {
 		if ( $user === null ) {
@@ -406,7 +409,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * Save the user's personal info (interests, such as favorite music or
 	 * TV programs or video games, etc.) into the database.
 	 *
-	 * @param User|null $user
+	 * @param UserIdentity|null $user
 	 */
 	function saveProfilePersonal( $user = null ) {
 		if ( $user === null ) {
@@ -446,6 +449,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 	/**
 	 * @param User $user
+	 *
+	 * @return string
 	 */
 	function displayBasicForm( $user ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -648,7 +653,9 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	}
 
 	/**
-	 * @param User $user
+	 * @param UserIdentity $user
+	 *
+	 * @return string
 	 */
 	function displayPersonalForm( $user ) {
 		$dbr = wfGetDB( DB_REPLICA );
@@ -755,7 +762,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			__METHOD__
 		);
 
-		$showYOB = isset( $s, $s->up_birthday ) ? false : true;
+		$showYOB = $s && $s->up_birthday ? false : true;
 
 		// @todo If the checkboxes are in front of the option, this would look more like Special:Preferences
 		$this->getOutput()->setPageTitle( $this->msg( 'preferences' )->plain() );
@@ -812,7 +819,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	/**
 	 * Displays the form for editing custom (site-specific) information.
 	 *
-	 * @param User $user
+	 * @param UserIdentity $user
 	 * @return string HTML
 	 */
 	function displayCustomForm( $user ) {
@@ -881,6 +888,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * Renders fields privacy button by field code
 	 *
 	 * @param string $fieldCode Internal field code, such as up_movies for the "Movies" field
+	 *
+	 * @return string
 	 */
 	private function renderEye( $fieldCode ) {
 		return SPUserSecurity::renderEye( $fieldCode, $this->getUser() );

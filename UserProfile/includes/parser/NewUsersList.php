@@ -27,8 +27,10 @@ class NewUsersList {
 	 * @param string|null $input
 	 * @param array $args
 	 * @param Parser $parser
+	 *
+	 * @return string
 	 */
-	public static function getNewUsers( $input, $args, $parser ) {
+	public static function getNewUsers( $input, array $args, Parser $parser ) {
 		global $wgMemc;
 
 		$parser->getOutput()->updateCacheExpiry( 0 );

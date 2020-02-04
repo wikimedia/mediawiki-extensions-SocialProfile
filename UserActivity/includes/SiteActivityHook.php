@@ -9,7 +9,7 @@ class SiteActivityHook {
 	 *
 	 * @param Parser $parser
 	 */
-	public static function onParserFirstCallInit( &$parser ) {
+	public static function onParserFirstCallInit( Parser $parser ) {
 		$parser->setHook( 'siteactivity', [ __CLASS__, 'getSiteActivity' ] );
 	}
 
@@ -19,8 +19,10 @@ class SiteActivityHook {
 	 * @param string|null $input
 	 * @param array $args
 	 * @param Parser $parser
+	 *
+	 * @return string
 	 */
-	public static function getSiteActivity( $input, $args, $parser ) {
+	public static function getSiteActivity( $input, array $args, Parser $parser ) {
 		global $wgMemc;
 
 		$parser->getOutput()->updateCacheExpiry( 0 );

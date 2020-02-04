@@ -49,7 +49,7 @@ class SPUserSecurity {
 	/**
 	 * Get the privacy value for the supplied user's supplied field key
 	 *
-	 * @param User $owner User whose profile we're dealing with
+	 * @param User $user User whose profile we're dealing with
 	 * @param string $fieldKey Field key, i.e. up_movies for the "Movies" field
 	 * @return string Privacy value (in plain English, i.e. "public" or "hidden")
 	 */
@@ -126,8 +126,8 @@ class SPUserSecurity {
 	 * Get the list of user profile fields visible to the supplied viewer
 	 *
 	 * @param User $owner User whose profile we're dealing with
-	 * @param null|User $viewerUid User who's viewing the owner's profile
-	 * @return array Array of field keys (up_movies for "Movies" and so on)
+	 * @param null|User $viewer User who's viewing the owner's profile
+	 * @return string[] Array of field keys (up_movies for "Movies" and so on)
 	 */
 	public static function getVisibleFields( $owner, $viewer = null ) {
 		if ( $viewer == null ) {
@@ -160,7 +160,7 @@ class SPUserSecurity {
 	 *
 	 * @param User $owner User whose profile we're dealing with
 	 * @param string $fieldKey Field key, i.e. up_movies for the "Movies" field
-	 * @param null|User $viewerUid User who's viewing the owner's profile
+	 * @param null|User $viewer User who's viewing the owner's profile
 	 * @return bool True if the user can view the field, otherwise false
 	 */
 	public static function isFieldVisible( $owner, $fieldKey, $viewer = null ) {
@@ -180,11 +180,9 @@ class SPUserSecurity {
 		switch ( $privacy ) {
 			case 'public':
 				return true;
-				break;
 
 			case 'hidden':
 				return false;
-				break;
 
 			case 'friends':
 				if ( $relation == 1 ) {

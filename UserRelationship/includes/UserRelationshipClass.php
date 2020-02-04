@@ -365,7 +365,7 @@ class UserRelationship {
 			$user1->getActorId() != $this->user->getActorId() &&
 			$user2->getActorId() != $this->user->getActorId()
 		) {
-			return false; // only logged in user should be able to delete
+			return; // only logged in user should be able to delete
 		}
 
 		// must delete record for each user involved in relationship
@@ -424,7 +424,7 @@ class UserRelationship {
 
 	/**
 	 * @param int $relationshipRequestId Relationship request ID number
-	 * @param $status
+	 * @param int $status
 	 */
 	public function updateRelationshipRequestStatus( $relationshipRequestId, $status ) {
 		$dbw = wfGetDB( DB_MASTER );

@@ -14,14 +14,14 @@ class SocialProfileHooks {
 	 * @param OutputPage $out
 	 * @param Skin $skin
 	 */
-	public static function onBeforePageDisplay( OutputPage &$out, &$skin ) {
+	public static function onBeforePageDisplay( OutputPage $out, $skin ) {
 		$out->addModuleStyles( 'ext.socialprofile.responsive' );
 	}
 
 	/**
 	 * Register the canonical names for our custom namespaces and their talkspaces.
 	 *
-	 * @param array $list Array of namespace numbers
+	 * @param string[] &$list Array of namespace numbers
 	 * with corresponding canonical names
 	 */
 	public static function onCanonicalNamespaces( &$list ) {

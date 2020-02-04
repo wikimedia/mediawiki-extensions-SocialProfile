@@ -9,7 +9,7 @@ class UserStats {
 	public $user;
 
 	/**
-	 * @param id|User $user User instance object (preferred) or a user ID
+	 * @param User|int $user User instance object (preferred) or a user ID
 	 * @param string|null $user_name User's name [legacy, unused]
 	 */
 	public function __construct( $user, $user_name = '' ) {
@@ -26,6 +26,8 @@ class UserStats {
 
 	/**
 	 * Retrieves per-user statistics, either from Memcached or from the database
+	 *
+	 * @return array
 	 */
 	public function getUserStats() {
 		$stats = $this->getUserStatsCache();
@@ -40,7 +42,7 @@ class UserStats {
 	 *
 	 * @return array
 	 */
-	public function getUserStatsCache() {
+	private function getUserStatsCache() {
 		global $wgMemc;
 		$key = $wgMemc->makeKey( 'user', 'stats', 'actor_id', $this->user->getActorId() );
 		$data = $wgMemc->get( $key );
@@ -52,6 +54,7 @@ class UserStats {
 
 			return $data;
 		}
+		// FIXME: All code expects this to return an array!
 	}
 
 	/**

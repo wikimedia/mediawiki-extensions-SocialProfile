@@ -54,7 +54,7 @@ class ViewSystemGifts extends SpecialPage {
 			$out->setPageTitle( $this->msg( 'ga-error-title' )->plain() );
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
 			$out->redirect( htmlspecialchars( $login->getFullURL( 'returnto=Special:ViewSystemGifts' ) ) );
-			return false;
+			return;
 		}
 
 		/**
@@ -71,7 +71,7 @@ class ViewSystemGifts extends SpecialPage {
 		if ( $targetUser->getId() == 0 ) {
 			$out->setPageTitle( $this->msg( 'ga-error-title' )->plain() );
 			$out->addHTML( $this->msg( 'ga-error-message-no-user' )->plain() );
-			return false;
+			return;
 		}
 
 		/**

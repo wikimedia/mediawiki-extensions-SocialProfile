@@ -48,7 +48,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 		) {
 			$out->setPageTitle( $this->msg( 'top-fans-bad-field-title' )->plain() );
 			$out->addHTML( htmlspecialchars( $this->msg( 'top-fans-bad-field-message' )->plain() ) );
-			return false;
+			return;
 		}
 
 		// Fix i18n message key

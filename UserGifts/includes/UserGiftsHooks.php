@@ -4,12 +4,12 @@ class UserGiftsHooks {
 	/**
 	 * For the Echo extension.
 	 *
-	 * @param array $notifications Echo notifications
-	 * @param array $notificationCategories Echo notification categories
-	 * @param array $icons Icon details
+	 * @param array[] &$notifications Echo notifications
+	 * @param array[] &$notificationCategories Echo notification categories
+	 * @param array[] &$icons Icon details
 	 * @return bool
 	 */
-	public static function onBeforeCreateEchoEvent( &$notifications, &$notificationCategories, &$icons ) {
+	public static function onBeforeCreateEchoEvent( array &$notifications, array &$notificationCategories, array &$icons ) {
 		$notificationCategories['social-gift'] = [
 			'priority' => 3,
 			'tooltip' => 'echo-pref-tooltip-social-gift',
@@ -44,10 +44,9 @@ class UserGiftsHooks {
 	 * Add user to be notified on Echo event
 	 *
 	 * @param EchoEvent $event
-	 * @param array $users
-	 * @return bool
+	 * @param User[] &$users
 	 */
-	public static function onEchoGetDefaultNotifiedUsers( $event, &$users ) {
+	public static function onEchoGetDefaultNotifiedUsers( EchoEvent $event, array &$users ) {
 		switch ( $event->getType() ) {
 			case 'social-gift-send':
 				$extra = $event->getExtra();
@@ -55,22 +54,19 @@ class UserGiftsHooks {
 				$users[] = User::newFromId( $targetId );
 				break;
 		}
-		return true;
 	}
 
 	/**
 	 * Set bundle for message
 	 *
 	 * @param EchoEvent $event
-	 * @param string $bundleString
-	 * @return bool
+	 * @param string &$bundleString
 	 */
-	public static function onEchoGetBundleRules( $event, &$bundleString ) {
+	public static function onEchoGetBundleRules( EchoEvent $event, &$bundleString ) {
 		switch ( $event->getType() ) {
 			case 'social-gift-send':
 				$bundleString = 'social-gift-send';
 				break;
 		}
-		return true;
 	}
 }

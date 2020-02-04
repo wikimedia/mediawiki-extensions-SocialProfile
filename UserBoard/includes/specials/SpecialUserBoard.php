@@ -67,7 +67,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		if ( $currentUser->getId() == 0 && $user_name == '' ) {
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
 			$out->redirect( $login->getFullURL( 'returnto=Special:UserBoard' ) );
-			return false;
+			return;
 		}
 
 		/**
@@ -88,7 +88,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		 */
 		if ( $user_id == 0 ) {
 			$out->showErrorPage( 'error', 'userboard_noexist' );
-			return false;
+			return;
 		}
 
 		/**
