@@ -45,6 +45,11 @@ class MigrateOldUserBoardUserColumnsToActor extends LoggedUpdateMaintenance {
 	 */
 	protected function doDBUpdates() {
 		$dbw = $this->getDB( DB_MASTER );
+
+		if ( !$dbw->fieldExists( 'user_board', 'ub_user_id', __METHOD__ ) ) {
+			return true;
+		}
+
 		$dbw->query(
 			"UPDATE {$dbw->tableName( 'user_board' )} SET ub_actor=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=ub_user_id AND actor_name=ub_user_name)",
 			__METHOD__
