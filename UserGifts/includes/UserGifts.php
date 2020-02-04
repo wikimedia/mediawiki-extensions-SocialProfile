@@ -30,6 +30,8 @@ class UserGifts {
 	 * @param int $gift_id Gift ID number
 	 * @param int $type Gift type
 	 * @param mixed $message Message as supplied by the sender
+	 *
+	 * @return int
 	 */
 	public function sendGift( $user_to, $gift_id, $type, $message ) {
 		global $wgMemc;

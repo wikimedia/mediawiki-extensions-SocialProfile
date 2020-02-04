@@ -50,7 +50,7 @@ function incEditCount( WikiPage $wikiPage, Revision $revision, $baseRevId, User 
  * @param string $reason
  * @return bool true
  */
-function removeDeletedEdits( &$article, &$user, &$reason ) {
+function removeDeletedEdits( WikiPage $article, $user, $reason ) {
 	global $wgNamespacesForEditPoints;
 
 	// only keep tally for allowable namespaces
@@ -93,7 +93,7 @@ function removeDeletedEdits( &$article, &$user, &$reason ) {
  * @param bool $new
  * @return bool true
  */
-function restoreDeletedEdits( &$title, $new ) {
+function restoreDeletedEdits( Title $title, $new ) {
 	global $wgNamespacesForEditPoints;
 
 	// only keep tally for allowable namespaces

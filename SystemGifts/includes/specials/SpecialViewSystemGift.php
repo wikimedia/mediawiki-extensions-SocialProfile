@@ -38,7 +38,7 @@ class ViewSystemGift extends UnlistedSpecialPage {
 		if ( !$giftId || !is_numeric( $giftId ) ) {
 			$out->setPageTitle( $this->msg( 'ga-error-title' )->plain() );
 			$out->addHTML( $this->msg( 'ga-error-message-invalid-link' )->plain() );
-			return false;
+			return;
 		}
 
 		$gift = UserSystemGifts::getUserGift( $giftId );

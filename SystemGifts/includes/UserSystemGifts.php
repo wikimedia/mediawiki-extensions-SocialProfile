@@ -49,6 +49,8 @@ class UserSystemGifts {
 	 * @param int $gift_id ID number of the system gift
 	 * @param bool $email True to send out notification e-mail to users,
 	 * otherwise false
+	 *
+	 * @return int|string
 	 */
 	public function sendSystemGift( $gift_id, $email = true ) {
 		global $wgMemc;

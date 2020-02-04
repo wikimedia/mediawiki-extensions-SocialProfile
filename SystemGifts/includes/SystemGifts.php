@@ -28,6 +28,8 @@ class SystemGifts {
 	/**
 	 * Accessor for the private $categories variable; used by
 	 * SpecialSystemGiftManager.php at least.
+	 *
+	 * @return int[]
 	 */
 	public function getCategories() {
 		return $this->categories;
@@ -168,10 +170,10 @@ class SystemGifts {
 	 * Updates the data for a system gift.
 	 *
 	 * @param int $id System gift unique ID number
-	 * @param mixed $name Gift name
-	 * @param mixed $description Gift description
-	 * @param $category
-	 * @param $threshold
+	 * @param string|null $name Gift name
+	 * @param string|null $description Gift description
+	 * @param string|null $category
+	 * @param int $threshold
 	 */
 	public function updateGift( $id, $name, $description, $category, $threshold ) {
 		$dbw = wfGetDB( DB_MASTER );

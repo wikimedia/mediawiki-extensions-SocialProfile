@@ -60,7 +60,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 		if ( !$usertitle ) {
 			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
 			$out->addWikiMsg( 'ur-add-no-user' );
-			return false;
+			return;
 		}
 
 		$this->user_to = User::newFromName( $usertitle->getText() );

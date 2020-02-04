@@ -5,20 +5,20 @@ class UserStatsHooks {
 	/**
 	 * Set up the <randomfeatureduser> tag
 	 *
-	 * @param Parser &$parser
+	 * @param Parser $parser
 	 */
-	public static function onParserFirstCallInit( Parser &$parser ) {
+	public static function onParserFirstCallInit( Parser $parser ) {
 		$parser->setHook( 'randomfeatureduser', [ 'RandomFeaturedUser', 'getRandomUser' ] );
 	}
 
 	/**
 	 * For the Echo extension.
 	 *
-	 * @param array $notifications Echo notifications
-	 * @param array $notificationCategories Echo notification categories
-	 * @param array $icons Icon details
+	 * @param array[] &$notifications Echo notifications
+	 * @param array[] &$notificationCategories Echo notification categories
+	 * @param array[] &$icons Icon details
 	 */
-	public static function onBeforeCreateEchoEvent( &$notifications, &$notificationCategories, &$icons ) {
+	public static function onBeforeCreateEchoEvent( array &$notifications, array &$notificationCategories, array &$icons ) {
 		$notificationCategories['social-level-up'] = [
 			'priority' => 3,
 			'tooltip' => 'echo-pref-tooltip-social-level-up',
@@ -52,9 +52,9 @@ class UserStatsHooks {
 	 * Set bundle for message
 	 *
 	 * @param EchoEvent $event
-	 * @param string $bundleString
+	 * @param string &$bundleString
 	 */
-	public static function onEchoGetBundleRules( $event, &$bundleString ) {
+	public static function onEchoGetBundleRules( EchoEvent $event, &$bundleString ) {
 		switch ( $event->getType() ) {
 			case 'social-level-up':
 				$bundleString = 'social-level-up';

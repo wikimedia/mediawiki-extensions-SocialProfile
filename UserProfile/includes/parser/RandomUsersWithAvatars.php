@@ -18,8 +18,10 @@ class RandomUsersWithAvatars {
 	 * @param string|null $input
 	 * @param array $args
 	 * @param Parser $parser
+	 *
+	 * @return string
 	 */
-	public static function getRandomUsersWithAvatars( $input, $args, $parser ) {
+	public static function getRandomUsersWithAvatars( $input, array $args, Parser $parser ) {
 		global $wgUploadDirectory, $wgDBname, $wgMemc;
 
 		$parser->getOutput()->addModuleStyles( 'ext.socialprofile.userprofile.randomuserswithavatars.styles' );

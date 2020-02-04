@@ -1156,6 +1156,8 @@ class UserProfilePage extends Article {
 	 * @param int $rel_type
 	 * - 1 for friends
 	 * - 2 (or anything else than 1) for foes
+	 *
+	 * @return string
 	 */
 	function getRelationships( $rel_type ) {
 		global $wgMemc, $wgUserProfileDisplay;
@@ -1653,6 +1655,8 @@ class UserProfilePage extends Article {
 
 	/**
 	 * Get the user board for a given user.
+	 *
+	 * @return string
 	 */
 	function getUserBoard() {
 		global $wgUserProfileDisplay;

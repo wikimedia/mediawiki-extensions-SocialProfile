@@ -207,6 +207,8 @@ class RemoveAvatar extends SpecialPage {
 	 * Shows the requested user's current avatar and the button for deleting it
 	 *
 	 * @param string $user_name Name of the user whose avatars we want to delete
+	 *
+	 * @return string
 	 */
 	private function showUserAvatar( $user_name ) {
 		$out = $this->getOutput();

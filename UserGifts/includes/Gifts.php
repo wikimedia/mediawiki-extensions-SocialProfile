@@ -15,6 +15,8 @@ class Gifts {
 	 * @param string $gift_name Name of the gift, as supplied by the user
 	 * @param string $gift_description A short description about the gift, as supplied by the user
 	 * @param int $gift_access 0 by default
+	 *
+	 * @return int
 	 */
 	public static function addGift( $gift_name, $gift_description, $gift_access = 0 ) {
 		global $wgUser;

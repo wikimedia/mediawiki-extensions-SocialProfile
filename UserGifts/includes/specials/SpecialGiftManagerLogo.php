@@ -166,6 +166,8 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	/**
 	 * Really do the upload
 	 * Checks are made in SpecialUpload::execute()
+	 *
+	 * @return void|string Might return an HTML snippet, error message, or nothing on success
 	 */
 	function processUpload() {
 		/**
@@ -373,6 +375,8 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 * @param string $saveName
 	 * @param string $tempName Full path to the temporary file
 	 * @param string $ext File extension
+	 *
+	 * @return int
 	 */
 	function saveUploadedFile( $saveName, $tempName, $ext ) {
 		$dest = $this->awardsUploadDirectory;
@@ -509,6 +513,8 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 
 	/**
 	 * Show some text and linkage on successful upload.
+	 *
+	 * @param int $status
 	 */
 	function showSuccess( $status ) {
 		global $wgUploadBaseUrl, $wgUploadPath;

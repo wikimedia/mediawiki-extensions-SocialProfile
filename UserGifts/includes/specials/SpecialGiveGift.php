@@ -67,7 +67,7 @@ class GiveGift extends SpecialPage {
 
 		if ( !$this->userTo ) {
 			$out->addHTML( $this->displayFormNoUser() );
-			return false;
+			return;
 		}
 
 		$giftId = $request->getInt( 'gift_id' );

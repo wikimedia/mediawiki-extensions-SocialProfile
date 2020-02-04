@@ -9,7 +9,7 @@ class UserProfileHooks {
 	 *
 	 * @param Parser $parser
 	 */
-	public static function onParserFirstCallInit( &$parser ) {
+	public static function onParserFirstCallInit( Parser $parser ) {
 		$parser->setHook( 'randomuserswithavatars', [ 'RandomUsersWithAvatars', 'getRandomUsersWithAvatars' ] );
 		$parser->setHook( 'newusers', [ 'NewUsersList', 'getNewUsers' ] );
 	}
@@ -22,9 +22,9 @@ class UserProfileHooks {
 	 * @see https://phabricator.wikimedia.org/T167506
 	 * @param OutputPage $out
 	 * @param Skin $skin
-	 * @param array $bodyAttrs Pre-existing attributes of the <body> tag
+	 * @param array &$bodyAttrs Pre-existing attributes of the <body> tag
 	 */
-	public static function onOutputPageBodyAttributes( $out, $skin, &$bodyAttrs ) {
+	public static function onOutputPageBodyAttributes( $out, $skin, array &$bodyAttrs ) {
 		global $wgUserPageChoice;
 
 		$title = $out->getTitle();
@@ -49,10 +49,11 @@ class UserProfileHooks {
 	 * Called by ArticleFromTitle hook
 	 * Calls UserProfilePage instead of standard article
 	 *
-	 * @param Title &$title
-	 * @param WikiPage|Article &$article
+	 * @param Title $title
+	 * @param Article|null &$article
+	 * @param IContextSource $context
 	 */
-	public static function onArticleFromTitle( &$title, &$article, $context ) {
+	public static function onArticleFromTitle( Title $title, &$article, $context ) {
 		global $wgHooks, $wgUserPageChoice;
 
 		$out = $context->getOutput();
@@ -122,12 +123,20 @@ class UserProfileHooks {
 	 *
 	 * @author Scott Cushman@wikiHow -- original code
 	 * @author Jack Phoenix, Samantha Nguyen -- modifications
+	 *
+	 * @param DifferenceEngine $differenceEngine
+	 * @param string &$oldHeader
+	 * @param string $prevLink
+	 * @param string $oldMinor
+	 * @param bool $diffOnly
+	 * @param string $ldel
+	 * @param bool $unhide
 	 */
 	public static function onDifferenceEngineOldHeader( $differenceEngine, &$oldHeader, $prevLink, $oldMinor, $diffOnly, $ldel, $unhide ) {
 		global $wgUserProfileAvatarsInDiffs;
 
 		if ( !$wgUserProfileAvatarsInDiffs ) {
-			return true;
+			return;
 		}
 
 		$oldRevisionHeader = $differenceEngine->getRevisionHeader( $differenceEngine->mOldRev, 'complete', 'old' );
@@ -158,12 +167,22 @@ class UserProfileHooks {
 	 *
 	 * @author Scott Cushman@wikiHow -- original code
 	 * @author Jack Phoenix, Samantha Nguyen -- modifications
+	 *
+	 * @param DifferenceEngine $differenceEngine
+	 * @param string &$newHeader
+	 * @param string[] $formattedRevisionTools
+	 * @param string $nextLink
+	 * @param string $rollback
+	 * @param string $newMinor
+	 * @param bool $diffOnly
+	 * @param string $rdel
+	 * @param bool $unhide
 	 */
 	public static function onDifferenceEngineNewHeader( $differenceEngine, &$newHeader, $formattedRevisionTools, $nextLink, $rollback, $newMinor, $diffOnly, $rdel, $unhide ) {
 		global $wgUserProfileAvatarsInDiffs;
 
 		if ( !$wgUserProfileAvatarsInDiffs ) {
-			return true;
+			return;
 		}
 
 		$newRevisionHeader =

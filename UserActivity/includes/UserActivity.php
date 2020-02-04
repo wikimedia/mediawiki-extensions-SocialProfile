@@ -66,6 +66,9 @@ class UserActivity {
 
 	/**
 	 * Sets the value of class member variable $name to $value.
+	 *
+	 * @param string $name
+	 * @param mixed $value
 	 */
 	public function setActivityToggle( $name, $value ) {
 		$this->$name = $value;
@@ -177,7 +180,7 @@ class UserActivity {
 
 		# Bail out if Vote table doesn't exist
 		if ( !$dbr->tableExists( 'Vote' ) ) {
-			return false;
+			return;
 		}
 
 		$where = [];
@@ -249,7 +252,7 @@ class UserActivity {
 
 		# Bail out if Comments table doesn't exist
 		if ( !$dbr->tableExists( 'Comments' ) ) {
-			return false;
+			return;
 		}
 
 		$where = [];
@@ -1106,7 +1109,7 @@ class UserActivity {
 		global $wgLang;
 
 		if ( !isset( $this->items_grouped[$type] ) || !is_array( $this->items_grouped[$type] ) ) {
-			return '';
+			return;
 		}
 
 		foreach ( $this->items_grouped[$type] as $page_name => $page_data ) {

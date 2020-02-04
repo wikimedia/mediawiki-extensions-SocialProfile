@@ -61,7 +61,7 @@ class ViewGifts extends SpecialPage {
 		if ( $currentUser->getId() == 0 && $user_name == '' ) {
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
 			$out->redirect( htmlspecialchars( $login->getFullURL( 'returnto=Special:ViewGifts' ) ) );
-			return false;
+			return;
 		}
 
 		/**
@@ -79,7 +79,7 @@ class ViewGifts extends SpecialPage {
 		if ( $user_id == 0 ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
 			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-no-user' )->plain() ) );
-			return false;
+			return;
 		}
 
 		/**

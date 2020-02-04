@@ -12,7 +12,7 @@ class AvatarParserFunction {
 	 *
 	 * @param Parser $parser
 	 */
-	public static function setupAvatarParserFunction( &$parser ) {
+	public static function setupAvatarParserFunction( Parser $parser ) {
 		$parser->setFunctionHook( 'avatar', [ __CLASS__, 'renderAvatarParserFunction' ] );
 	}
 
