@@ -40,7 +40,7 @@ class UserStats {
 	/**
 	 * Retrieves cached per-user statistics from Memcached, if possible
 	 *
-	 * @return array
+	 * @return array|false
 	 */
 	private function getUserStatsCache() {
 		global $wgMemc;
@@ -51,10 +51,8 @@ class UserStats {
 			$logger->debug( "Got user stats for {user_name} from cache\n", [
 				'user_name' => $this->user->getName()
 			] );
-
-			return $data;
 		}
-		// FIXME: All code expects this to return an array!
+		return $data;
 	}
 
 	/**
