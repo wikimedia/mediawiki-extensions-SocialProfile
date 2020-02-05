@@ -32,6 +32,23 @@ $wgMessagesDirs['SocialProfileUserProfile'] = __DIR__ . '/UserProfile/i18n';
 $wgExtensionMessagesFiles['SocialProfileNamespaces'] = __DIR__ . '/SocialProfile.namespaces.php';
 $wgExtensionMessagesFiles['AvatarMagic'] = __DIR__ . '/UserProfile/includes/avatar/Avatar.i18n.magic.php';
 
+// Hack to make installer load extension properly. (T243861)
+// Based on Installer::includeExtensions()
+if ( defined( 'MEDIAWIKI_INSTALL' ) ) {
+	$subext = [
+		__DIR__ . '/SystemGifts/extension.json' => 1,
+		__DIR__ . '/UserActivity/extension.json' => 1,
+		__DIR__ . '/UserBoard/extension.json' => 1,
+		__DIR__ . '/UserRelationship/extension.json' => 1,
+		__DIR__ . '/UserStats/extension.json' => 1,
+		__DIR__ . '/UserGifts/extension.json' => 1,
+	];
+
+	$registry = new ExtensionRegistry();
+	$data = $registry->readFromQueue( $subext );
+	$wgAutoloadClasses += $data['globals']['wgAutoloadClasses'];
+}
+
 // Classes to be autoloaded
 $wgAutoloadClasses['SpecialEditProfile'] = __DIR__ . '/UserProfile/includes/specials/SpecialEditProfile.php';
 $wgAutoloadClasses['SpecialPopulateUserProfiles'] = __DIR__ . '/UserProfile/includes/specials/SpecialPopulateExistingUsersProfiles.php';
