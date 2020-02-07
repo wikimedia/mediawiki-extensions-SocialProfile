@@ -376,7 +376,7 @@ class UserStatsTrack {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->insert(
 			'user_points_monthly',
-			[ 'up_actor' => $this->user->getActor() ],
+			[ 'up_actor' => $this->user->getActorId() ],
 			__METHOD__
 		);
 	}
