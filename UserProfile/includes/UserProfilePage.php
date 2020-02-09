@@ -1809,7 +1809,7 @@ class UserProfilePage extends Article {
 				'user_name' => $user_name
 			] );
 
-			$fanboxes = $f->getUserFanboxes( 0, 10 );
+			$fanboxes = $f->getUserFanboxes( 10 );
 			$wgMemc->set( $key, $fanboxes );
 		} else {
 			$logger->debug( "Got profile fanboxes for user {user_name} from cache\n", [
@@ -1820,7 +1820,7 @@ class UserProfilePage extends Article {
 		}
 		*/
 
-		$fanboxes = $f->getUserFanboxes( 0, 10 );
+		$fanboxes = $f->getUserFanboxes( 10 );
 
 		$fanbox_count = $f->getFanBoxCount();
 		$fanbox_link = SpecialPage::getTitleFor( 'ViewUserBoxes' );
