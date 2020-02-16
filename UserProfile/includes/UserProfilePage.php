@@ -360,7 +360,7 @@ class UserProfilePage extends Article {
 				'quizgame_questions',
 				[ 'q_id', 'q_text', 'q_date' ],
 				[
-					'q_user_id' => $this->user_id,
+					'q_actor' => $this->profileOwner->getActorId(),
 					'q_flag' => 0 // the same as QuizGameHome::$FLAG_NONE
 				],
 				__METHOD__,
