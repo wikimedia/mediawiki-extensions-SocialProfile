@@ -16,6 +16,8 @@
  * @license GPL-2.0-or-later
  */
 
+use MediaWiki\MediaWikiServices;
+
 class RandomFeaturedUser {
 
 	/**
@@ -103,7 +105,7 @@ class RandomFeaturedUser {
 			 * @TODO: Do we need to instantiate a new parser?
 			 * Why can't we use the parser passed through by reference?
 			 */
-			$p = new Parser();
+			$p = MediaWikiServices::getInstance()->getParserFactory()->create();
 			$profile = new UserProfile( $user );
 			$profile_data = $profile->getProfile();
 			$about = $profile_data['about'] ?? '';

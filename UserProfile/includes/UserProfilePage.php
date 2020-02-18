@@ -1861,7 +1861,7 @@ class UserProfilePage extends Article {
 			<div class="user-fanbox-container clearfix">';
 
 			$x = 1;
-			$tagParser = new Parser();
+			$tagParser = MediaWikiServices::getInstance()->getParserFactory()->create();
 			foreach ( $fanboxes as $fanbox ) {
 				$check_user_fanbox = $f->checkIfUserHasFanbox( $fanbox['fantag_id'] );
 

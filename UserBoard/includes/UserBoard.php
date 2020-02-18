@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * Functions for managing user board data
  */
@@ -222,7 +225,7 @@ class UserBoard {
 		$messages = [];
 
 		foreach ( $res as $row ) {
-			$parser = new Parser();
+			$parser = MediaWikiServices::getInstance()->getParserFactory()->create();
 			$message_text = $parser->parse( $row->ub_message, $wgTitle, $wgOut->parserOptions(), true );
 			$message_text = $message_text->getText();
 
