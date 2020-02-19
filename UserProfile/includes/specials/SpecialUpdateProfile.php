@@ -198,9 +198,9 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 			// create the user page if it doesn't exist yet
 			$title = Title::makeTitle( NS_USER, $user->getName() );
-			$article = new Article( $title );
-			if ( !$article->exists() ) {
-				$article->doEditContent(
+			$page = WikiPage::factory( $title );
+			if ( !$page->exists() ) {
+				$page->doEditContent(
 					ContentHandler::makeContent( '', $title ),
 					'create user page',
 					EDIT_SUPPRESS_RC

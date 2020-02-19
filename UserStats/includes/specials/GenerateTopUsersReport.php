@@ -249,13 +249,13 @@ class GenerateTopUsersReport extends SpecialPage {
 			$this->msg( "user-stats-report-{$period}-page-title", $period_title )->inContentLanguage()->plain()
 		);
 
-		$article = new Article( $title );
+		$page = WikiPage::factory( $title );
 		// If the article doesn't exist, create it!
 		// @todo Would there be any point in updating a pre-existing article?
 		// I think not, but...
-		if ( !$article->exists() ) {
+		if ( !$page->exists() ) {
 			// For grep: user-stats-report-weekly-edit-summary, user-stats-report-monthly-edit-summary
-			$article->doEditContent(
+			$page->doEditContent(
 				ContentHandler::makeContent( $pageContent, $title ),
 				$this->msg( "user-stats-report-{$period}-edit-summary" )->inContentLanguage()->plain()
 			);

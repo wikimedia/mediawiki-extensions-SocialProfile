@@ -96,7 +96,7 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 		$user_page_content = ContentHandler::getContentText( $contentObject );
 
 		$user_wiki_title = Title::makeTitle( NS_USER_WIKI, $user->getName() );
-		$user_wiki = new Article( $user_wiki_title );
+		$user_wiki = WikiPage::factory( $user_wiki_title );
 		if ( !$user_wiki->exists() ) {
 			$user_wiki->doEditContent(
 				ContentHandler::makeContent( $user_page_content, $user_wiki_title ),
