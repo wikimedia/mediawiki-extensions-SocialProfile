@@ -97,6 +97,8 @@ class GenerateTopUsersReport extends SpecialPage {
 	 * @todo This could probably be made more modular and reusable in general
 	 *  by using Status or StatusValue objects or somesuch instead of directly
 	 *  outputting HTML via OutputPage. Something to work on a rainy day...
+	 *
+	 * @param string $period Either weekly or monthly
 	 */
 	private function generateReport( $period ) {
 		global $wgUser;
