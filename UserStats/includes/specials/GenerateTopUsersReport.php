@@ -30,9 +30,6 @@ class GenerateTopUsersReport extends SpecialPage {
 	 * @param string $period Either weekly or monthly
 	 */
 	public function execute( $period ) {
-		global $wgUser;
-		global $wgUserStatsPointValues;
-
 		$out = $this->getOutput();
 		$request = $this->getRequest();
 		$user = $this->getUser();
@@ -51,8 +48,6 @@ class GenerateTopUsersReport extends SpecialPage {
 		// Set the page title, robot policy, etc.
 		$this->setHeaders();
 
-		$contLang = MediaWiki\MediaWikiServices::getInstance()->getContentLanguage();
-
 		$period = $request->getVal( 'period', $period );
 
 		// If we don't have a period, default to weekly or else we'll be
@@ -61,6 +56,57 @@ class GenerateTopUsersReport extends SpecialPage {
 		if ( !$period || ( $period != 'weekly' && $period != 'monthly' ) ) {
 			$period = 'weekly';
 		}
+
+		if ( $request->wasPosted() && $user->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
+			$this->generateReport( $period );
+		} else {
+			$out->addHTML( $this->displayForm( $period ) );
+		}
+	}
+
+	/**
+	 * Render the confirmation form
+	 *
+	 * @param string $period Either weekly or monthly
+	 * @return string HTML
+	 */
+	private function displayForm( $period ) {
+		$form = '<form method="post" name="generate-top-users-report-form" action="">';
+		// For grep: generatetopusersreport-confirm-monthly, generatetopusersreport-confirm-weekly
+		$form .= $this->msg( 'generatetopusersreport-confirm-' . $period )->escaped();
+		$form .= '<br />';
+		$form .= Html::hidden( 'period', $period ); // not sure if this is strictly needed but paranoia
+		$form .= Html::hidden( 'wpEditToken', $this->getUser()->getEditToken() );
+		// passing null as the 1st argument makes the button use the browser default text
+		// (on Firefox 72 with English localization this is "Submit Query" which is good enough,
+		// since MW core lacks a generic "submit" message and I don't feel like introducing
+		// a new i18n msg just for this button...)
+		$form .= Html::submitButton( null, [ 'name' => 'wpSubmit' ] );
+		$form .= '</form>';
+		return $form;
+	}
+
+	/**
+	 * Actually generate the report.
+	 *
+	 * Includes:
+	 * -calculating the winners
+	 * -updating the relevant stats tables in the DB with new data
+	 * -generating the on-wiki page
+	 *
+	 * @todo This could probably be made more modular and reusable in general
+	 *  by using Status or StatusValue objects or somesuch instead of directly
+	 *  outputting HTML via OutputPage. Something to work on a rainy day...
+	 */
+	private function generateReport( $period ) {
+		global $wgUser;
+		global $wgUserStatsPointValues;
+
+		$out = $this->getOutput();
+		$request = $this->getRequest();
+		$user = $this->getUser();
+
+		$contLang = MediaWiki\MediaWikiServices::getInstance()->getContentLanguage();
 
 		// Make sure that we are actually going to give out some extra points
 		// for weekly and/or monthly wins, depending on which report we're
@@ -285,4 +331,5 @@ class GenerateTopUsersReport extends SpecialPage {
 		$output .= '</div>'; // .top-users
 		$out->addHTML( $output );
 	}
+
 }

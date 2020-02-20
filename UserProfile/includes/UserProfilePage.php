@@ -119,6 +119,14 @@ class UserProfilePage extends Article {
 		$out->addHTML( $this->getProfileHeader() );
 		$out->addHTML( '<div class="visualClear"></div></div>' );
 
+		// Add JS -- needed by UserBoard stuff but also by the "change profile type" button
+		// If this were loaded in getUserBoard() as it originally was, then the JS that deals
+		// with the "change profile type" button would *not* work when the user is using a
+		// regular wikitext user page despite that the social profile header would still be
+		// displayed.
+		// @see T202272, T242689
+		$out->addModules( 'ext.socialprofile.userprofile.js' );
+
 		// User does not want social profile for User:user_name, so we just
 		// show header + page content
 		if (
@@ -1661,9 +1669,6 @@ class UserProfilePage extends Article {
 	function getUserBoard() {
 		global $wgUserProfileDisplay;
 
-		$context = $this->getContext();
-		$out = $context->getOutput();
-
 		// Anonymous users cannot have user boards
 		if ( $this->profileOwner->isAnon() ) {
 			return '';
@@ -1676,9 +1681,6 @@ class UserProfilePage extends Article {
 		}
 
 		$output = ''; // Prevent E_NOTICE
-
-		// Add JS
-		$out->addModules( 'ext.socialprofile.userprofile.js' );
 
 		$listLookup = new RelationshipListLookup( $this->profileOwner, 4 );
 		$friends = $listLookup->getFriendList();

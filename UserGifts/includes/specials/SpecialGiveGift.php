@@ -87,7 +87,11 @@ class GiveGift extends SpecialPage {
 		} else {
 			$gift = new UserGifts( $user->getName() );
 
-			if ( $request->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
+			if (
+				$request->wasPosted() &&
+				$user->matchEditToken( $request->getVal( 'wpEditToken' ) ) &&
+				$_SESSION['alreadysubmitted'] == false
+			) {
 				$_SESSION['alreadysubmitted'] = true;
 
 				$ug_gift_id = $gift->sendGift(
@@ -249,6 +253,7 @@ class GiveGift extends SpecialPage {
 			<textarea name="message" id="message" rows="4" cols="50"></textarea>
 			<div class="g-buttons">
 				<input type="hidden" name="gift_id" value="' . $giftId . '" />
+				<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 				<input type="hidden" name="user_name" value="' . htmlspecialchars( $this->userTo->getName() ) . '" />
 				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'g-send-gift' )->plain() ) . '" size="20" onclick="document.gift.submit()" />
 				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'cancel' )->plain() ) . '" size="20" onclick="history.go(-1)" />
@@ -443,6 +448,7 @@ class GiveGift extends SpecialPage {
 				<textarea name="message" id="message" rows="4" cols="50"></textarea>
 				<div class="g-buttons">
 					<input type="hidden" name="gift_id" value="0" />
+					<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 					<input type="hidden" name="user_name" value="' . htmlspecialchars( $this->userTo->getName() ) . '" />
 					<input type="button" id="send-gift-button" class="site-button" value="' . htmlspecialchars( $this->msg( 'g-send-gift' )->plain() ) . '" size="20" />
 					<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'cancel' )->plain() ) . '" size="20" onclick="history.go(-1)" />

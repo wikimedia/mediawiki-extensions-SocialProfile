@@ -187,7 +187,11 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 		} else {
 			$rel = new UserRelationship( $currentUser );
 
-			if ( $request->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
+			if (
+				$request->wasPosted() &&
+				$currentUser->matchEditToken( $request->getVal( 'wpEditToken' ) ) &&
+				$_SESSION['alreadysubmitted'] == false
+			) {
 				$_SESSION['alreadysubmitted'] = true;
 				$rel = $rel->addRelationshipRequest(
 					$this->user_to,
@@ -275,7 +279,9 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 				<input type="button" class="site-button" value="' . htmlspecialchars( $button ) . '" size="20" onclick="document.form1.submit()" />
 				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'cancel' )->plain() ) . '" size="20" onclick="history.go(-1)" />
 			</div>
+			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 		</form>';
+
 		return $form;
 	}
 }

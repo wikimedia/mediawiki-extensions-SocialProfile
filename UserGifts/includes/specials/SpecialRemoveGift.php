@@ -56,7 +56,11 @@ class RemoveGift extends UnlistedSpecialPage {
 		}
 
 		$gift = $rel->getUserGift( $this->gift_id );
-		if ( $request->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
+		if (
+			$request->wasPosted() &&
+			$user->matchEditToken( $request->getVal( 'wpEditToken' ) ) &&
+			$_SESSION['alreadysubmitted'] == false
+		) {
 			$_SESSION['alreadysubmitted'] = true;
 
 			if ( $rel->doesUserOwnGift( $user, $this->gift_id ) == true ) {
@@ -130,6 +134,7 @@ class RemoveGift extends UnlistedSpecialPage {
 			<div class="visualClear"></div>
 			<div class="g-buttons">' .
 				Html::hidden( 'user', $userFrom->getName() ) .
+				Html::hidden( 'wpEditToken', $currentUser->getEditToken() ) .
 				'<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'g-remove' )->plain() ) . '" size="20" onclick="document.form1.submit()" />
 				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'cancel' )->plain() ) . '" size="20" onclick="history.go(-1)" />
 			</div>

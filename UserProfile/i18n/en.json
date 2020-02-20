@@ -7,6 +7,7 @@
 	},
 	"editprofile": "Edit other users' profiles",
 	"populateuserprofiles": "Populate user profiles",
+	"populateuserprofiles-confirm": "Are you sure you want to populate existing users' profiles?",
 	"user-time-ago": "$1 ago",
 	"user-awards-title": "Awards",
 	"user-gifts-title": "Gifts",
@@ -199,6 +200,8 @@
 	"givegift": "Give a gift",
 	"viewgifts": "View gifts",
 	"viewsystemgifts": "View awards",
+	"toggleuserpage": "Toggle user page type",
+	"toggleuserpage-confirm": "Do you really want to change your user profile page type?",
 	"avatarupload-removeavatar": "Remove avatar",
 	"avatarupload-currentavatar": "$1's current avatar",
 	"avatarupload-removesuccess": "The avatar has been successfully removed",
@@ -228,5 +231,9 @@
 	"apihelp-socialprofile-userprofileprivacy-param-field_key": "Target field key, such as up_movies for the \"Movies\" field",
 	"apihelp-socialprofile-userprofileprivacy-param-privacy": "New privacy value (public, hidden, friends, foaf)",
 	"apihelp-socialprofile-userprofileprivacy-param-tuid": "Target user ID",
+	"apihelp-smpuserprofiletype-description": "Get a user's user page type or set your own user page type",
+	"apihelp-smpuserprofiletype-summary": "Get a user's user page type or set your own user page type",
+	"apihelp-smpuserprofiletype-param-do": "Action to perform (get or set)",
+	"apihelp-smpuserprofiletype-param-user": "User name (only relevant when <kbd>do</kbd> is <kbd>get</kbd> as this module cannot be used to set other user's user page types, only your own)",
 	"random-users-avatars-title": "Meet the community"
 }

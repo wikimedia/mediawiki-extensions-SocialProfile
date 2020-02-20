@@ -47,6 +47,7 @@
 	"ga-remove-success-title": "You have successfully removed the gift \"$1\"",
 	"ga-remove-success-message": "The gift \"$1\" has been removed.",
 	"ga-user-got-awards": "$1 got $2",
+	"ga-awards-populate-confirm": "Are you sure you want to populate awards?",
 	"ga-awards-given-out": "{{PLURAL:$1|One award|$1 awards}} were given out",
 	"topawards": "Top Awards",
 	"topawards-edit-title": "Top Awards - Edit Milestones",

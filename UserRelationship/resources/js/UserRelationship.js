@@ -2,31 +2,31 @@
  * JavaScript for UserRelationship
  * Used on Special:ViewRelationshipRequests
  */
-function requestResponse( response, id ) {
-	document.getElementById( 'request_action_' + id ).style.display = 'none';
-	document.getElementById( 'request_action_' + id ).style.visibility = 'hidden';
+( function () {
 
-	jQuery.post(
-		mediaWiki.util.wikiScript( 'api' ), {
-			action: 'socialprofile-request-response',
-			format: 'json',
-			response: response,
-			id: id
-		},
-		function( data ) {
-			document.getElementById( 'request_action_' + id ).innerHTML = data.html;
-			jQuery( '#request_action_' + id ).fadeIn( 2000 );
-			document.getElementById( 'request_action_' + id ).style.display = 'block';
-			document.getElementById( 'request_action_' + id ).style.visibility = 'visible';
-		}
-	);
+function requestResponse( response, id ) {
+	$( '#request_action_' + id ).hide();
+
+	( new mw.Api() ).postWithToken( 'csrf', {
+		action: 'socialprofile-request-response',
+		format: 'json',
+		response: response,
+		id: id
+	} ).done( function( data ) {
+		$( '#request_action_' + id )
+			.html( data.html )
+			.fadeIn( 2000 )
+			.show();
+	} );
 }
 
-jQuery( function() {
-	jQuery( 'div.relationship-buttons input[type="button"]' ).on( 'click', function() {
+$( function() {
+	$( 'div.relationship-buttons input[type="button"]' ).on( 'click', function() {
 		requestResponse(
-			jQuery( this ).data( 'response' ),
-			jQuery( this ).parent().parent().attr( 'id' ).replace( /request_action_/, '' )
+			$( this ).data( 'response' ),
+			$( this ).parent().parent().attr( 'id' ).replace( /request_action_/, '' )
 		);
 	} );
 } );
+
+}() );

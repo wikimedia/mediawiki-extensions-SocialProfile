@@ -155,7 +155,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		] );
 		$out->addModules( 'ext.userProfile.updateProfile' );
 
-		if ( $request->wasPosted() ) {
+		if ( $request->wasPosted() && $user->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
 			if ( !$section ) {
 				$section = 'basic';
 			}
@@ -647,6 +647,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$form .= '
 			<input type="button" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->plain() . '" size="20" onclick="document.profile.submit()" />
 			</div>
+			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 		</form>';
 
 		return $form;
@@ -740,6 +741,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			</div>
 			<input type="button" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->plain() . '" size="20" onclick="document.profile.submit()" />
 			</div>
+			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 		</form>';
 
 		return $form;
@@ -809,8 +811,9 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		$form .= '</div>
 			<div class="visualClear"></div>';
-		$form .= '<input type="button" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->plain() . '" size="20" onclick="document.profile.submit()" />
-			</form>';
+		$form .= '<input type="button" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->plain() . '" size="20" onclick="document.profile.submit()" />';
+		$form .= Html::hidden( 'wpEditToken', $user->getEditToken() );
+		$form .= '</form>';
 		$form .= '</div>';
 
 		return $form;
@@ -879,6 +882,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 				</div>
 			<input type="button" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->plain() . '" size="20" onclick="document.profile.submit()" />
 			</div>
+			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 		</form>';
 
 		return $form;

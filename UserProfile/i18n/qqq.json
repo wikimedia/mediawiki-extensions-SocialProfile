@@ -13,7 +13,9 @@
 			"The Evil IP address"
 		]
 	},
-	"user-count-separator": "$1 and $2 are numbers of users.",
+	"populateuserprofiles": "Page title of Special:PopulateUserProfiles, the special page which privileged users (those with the <code>populate-user-profiles</code> user right; usually, but not necessarily always, admins) can use to populate the <code>user_profile</code> database table with information about existing users who already have created their own User: page. Once that process is done, users who had an existing User: page prior to SocialProfile being installed will keep their wikitext user page as the default when someone accesses their user page.",
+	"populateuserprofiles-confirm": "Confirmation message shown on Special:PopulateUserProfiles for privileged users ((those with the <code>populate-user-profiles</code> user right)",
+	"user-count-separator": "$1 and $2 are numbers, such as the amount of gifts, awards, friends, foes, etc. that a user has; this message is only displayed on [[mw:File:Social user profile.png|social profile pages]].",
 	"user-watchlist": "{{Identical|My watchlist}}",
 	"user-add-friend": "{{Identical|Add as friend}}",
 	"user-add-foe": "{{Identical|Add as foe}}",
@@ -74,6 +76,8 @@
 	"user-profile-goback": "{{Identical|Go back}}",
 	"user-page-link": "{{Identical|User page}}",
 	"user-profile-remove-avatar": "Shown on social profile pages as a link title below the user's avatar if the user has uploaded a custom avatar; clicking on this link will take the user to the Special:RemoveAvatar page, where they are able to remove their avatar.",
+	"toggleuserpage": "Page title of Special:ToggleUserPage",
+	"toggleuserpage-confirm": "Confirmation message shown on Special:ToggleUserPage prompting the user to confirm if they really want to change their user page type",
 	"right-avatarremove": "{{doc-right|avatarremove}}",
 	"right-editothersprofiles": "{{doc-right|editothersprofiles}}",
 	"right-editothersprofiles-private": "{{doc-right|editothersprofiles-private}}",
@@ -86,5 +90,9 @@
 	"apihelp-socialprofile-userprofileprivacy-param-field_key": "{{doc-apihelp-param|socialprofile-userprofileprivacy|field_key}}",
 	"apihelp-socialprofile-userprofileprivacy-param-privacy": "{{doc-apihelp-param|socialprofile-userprofileprivacy|privacy}}",
 	"apihelp-socialprofile-userprofileprivacy-param-tuid": "{{doc-apihelp-param|socialprofile-userprofileprivacy|tuid}}",
-	"random-users-avatars-title": "Used as HTML <code><nowiki><h2></nowiki></code> heading."
+	"apihelp-smpuserprofiletype-description": "{{doc-apihelp-description|smpuserprofiletype}}",
+	"apihelp-smpuserprofiletype-summary": "{{doc-apihelp-summary|smpuserprofiletype}}",
+	"apihelp-smpuserprofiletype-param-do": "{{doc-apihelp-param|smpuserprofiletype|do}}",
+	"apihelp-smpuserprofiletype-param-user": "{{doc-apihelp-param|smpuserprofiletype|user}}",
+	"random-users-avatars-title": "Used as HTML <code><nowiki><h2></nowiki></code> heading in the output of the <code>&lt;randomuserswithavatars /&gt;</code> tag."
 }

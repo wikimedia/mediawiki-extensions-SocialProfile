@@ -17,6 +17,10 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 		parent::__construct( 'ToggleUserPage' );
 	}
 
+	public function doesWrites() {
+		return true;
+	}
+
 	/**
 	 * Show the special page
 	 *
@@ -24,6 +28,7 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 	 */
 	public function execute( $params ) {
 		$out = $this->getOutput();
+		$request = $this->getRequest();
 		$user = $this->getUser();
 
 		// This feature is only available to logged-in users.
@@ -35,47 +40,66 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 		// Set headers (robot policy, page title, etc.)
 		$this->setHeaders();
 
-		$dbw = wfGetDB( DB_MASTER );
-		$s = $dbw->selectRow(
-			'user_profile',
-			[ 'up_actor' ],
-			[ 'up_actor' => $user->getActorId() ],
-			__METHOD__
-		);
-		if ( $s === false ) {
-			$dbw->insert(
+		if ( $request->wasPosted() && $user->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
+			$dbw = wfGetDB( DB_MASTER );
+			$s = $dbw->selectRow(
 				'user_profile',
+				[ 'up_actor' ],
 				[ 'up_actor' => $user->getActorId() ],
 				__METHOD__
 			);
+			if ( $s === false ) {
+				$dbw->insert(
+					'user_profile',
+					[ 'up_actor' => $user->getActorId() ],
+					__METHOD__
+				);
+			}
+
+			$profile = new UserProfile( $user );
+			$profile_data = $profile->getProfile();
+
+			// If type is currently 1 (social profile), the user will want to change it to
+			// 0 (wikitext page), and vice-versa
+			$user_page_type = ( ( $profile_data['user_page_type'] == 1 ) ? 0 : 1 );
+
+			$dbw->update(
+				'user_profile',
+				/* SET */[
+					'up_type' => $user_page_type
+				],
+				/* WHERE */[
+					'up_actor' => $user->getActorId()
+				],
+				__METHOD__
+			);
+
+			UserProfile::clearCache( $user );
+
+			if ( $user_page_type == 1 && !$user->isBlocked() ) {
+				self::importUserWiki( $user );
+			}
+
+			$title = Title::makeTitle( NS_USER, $user->getName() );
+			$out->redirect( $title->getFullURL() );
+		} else {
+			$out->addHTML( $this->displayForm() );
 		}
+	}
 
-		$profile = new UserProfile( $user );
-		$profile_data = $profile->getProfile();
-
-		// If type is currently 1 (social profile), the user will want to change it to
-		// 0 (wikitext page), and vice-versa
-		$user_page_type = ( ( $profile_data['user_page_type'] == 1 ) ? 0 : 1 );
-
-		$dbw->update(
-			'user_profile',
-			/* SET */[
-				'up_type' => $user_page_type
-			],
-			/* WHERE */[
-				'up_actor' => $user->getActorId()
-			],
-			__METHOD__
-		);
-
-		UserProfile::clearCache( $user );
-
-		if ( $user_page_type == 1 && !$user->isBlocked() ) {
-			self::importUserWiki( $user );
-		}
-
-		$title = Title::makeTitle( NS_USER, $user->getName() );
-		$out->redirect( $title->getFullURL() );
+	/**
+	 * Render the confirmation form
+	 *
+	 * @return string HTML
+	 */
+	private function displayForm() {
+		$form = '<form method="post" name="toggle-user-page-type-form" action="">';
+		$form .= $this->msg( 'toggleuserpage-confirm' )->escaped();
+		$form .= '<br />';
+		$form .= Html::hidden( 'wpEditToken', $this->getUser()->getEditToken() );
+		$form .= Html::submitButton( $this->msg( 'confirmable-yes' )->escaped(), [ 'name' => 'wpSubmit' ] );
+		$form .= '</form>';
+		return $form;
 	}
 
 	/**

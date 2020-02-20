@@ -45,7 +45,7 @@ class SystemGiftManager extends SpecialPage {
 		// Add CSS
 		$out->addModuleStyles( 'ext.socialprofile.special.systemgiftmanager.css' );
 
-		if ( $request->wasPosted() ) {
+		if ( $request->wasPosted() && $user->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
 			$g = new SystemGifts();
 
 			if ( !$request->getInt( 'id' ) ) {
@@ -192,6 +192,7 @@ class SystemGiftManager extends SpecialPage {
 		$form .= '<tr>
 		<td colspan="2">
 			<input type="hidden" name="id" value="' . ( $gift['gift_id'] ?? '' ) . '" />
+			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 			<input type="button" class="createbox" value="' . $button . '" size="20" onclick="document.gift.submit()" />
 			<input type="button" class="createbox" value="' . $this->msg( 'cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
 		</td>

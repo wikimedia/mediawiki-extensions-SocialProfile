@@ -18,6 +18,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	public $mUploadCopyStatus, $mUploadSource, $mReUpload, $mAction, $mUpload;
 	public $mOname, $mSessionKey, $mStashed, $mDestFile;
 	public $mSavedFile, $mWatchthis;
+	public $mTokenOk;
 	public $awardsUploadDirectory;
 	public $fileExtensions;
 	public $gift_id;
@@ -109,6 +110,10 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			$this->mSessionKey	= false;
 			$this->mStashed	= false;
 		}
+
+		// If it was posted check for the token (no remote POST'ing with user credentials)
+		$token = $request->getVal( 'wpEditToken' );
+		$this->mTokenOk = $this->getUser()->matchEditToken( $token );
 	}
 
 	/**
@@ -139,8 +144,13 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		if ( $this->mReUpload ) {
 			$this->unsaveUploadedFile();
 			$this->mainUploadForm();
-		} elseif ( 'submit' == $this->mAction || $this->mUpload ) {
-			$this->processUpload();
+		} elseif ( $this->mAction == 'submit' || $this->mUpload ) {
+			if ( $this->mTokenOk ) {
+				$this->processUpload();
+			} else {
+				// Possible CSRF attempt or something...
+				$this->mainUploadForm( $this->msg( 'session_fail_preview' )->parse() );
+			}
 		} else {
 			$this->mainUploadForm();
 		}
@@ -496,6 +506,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	 */
 	function showSuccess( $status ) {
 		global $wgUploadBaseUrl, $wgUploadPath;
+
 		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
 
 		$ext = 'jpg';
@@ -662,6 +673,8 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		<br />';
 		$out->addHTML( $output );
 
+		$token = Html::hidden( 'wpEditToken', $this->getUser()->getEditToken() );
+
 		$out->addHTML( '
 	<form id="upload" method="post" enctype="multipart/form-data" action="">
 	<table>
@@ -673,8 +686,8 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		</tr>
 		<tr>' . $source . '</tr>
 		<tr>
-			<td>
-				<input tabindex="5" type="submit" name="wpUpload" value="' . $ulb . '" />
+			<td>' . $token .
+				'<input tabindex="5" type="submit" name="wpUpload" value="' . $ulb . '" />
 			</td>
 		</tr>
 		</table></form>' . "\n"

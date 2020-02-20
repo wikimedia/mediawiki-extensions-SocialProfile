@@ -29,6 +29,7 @@
 	"ga-small": "{{Identical|Small}}",
 	"ga-remove": "{{Identical|Remove}}",
 	"ga-remove-success-title": "Parameters:\n* $1 is a gift name.",
+	"ga-awards-populate-confirm": "Confirmation message shown on Special:PopulateAwards",
 	"topawards-edits": "{{Identical|Edit}}",
 	"topawards-votes": "{{Identical|Vote}}",
 	"topawards-comments": "{{Identical|Comment}}",

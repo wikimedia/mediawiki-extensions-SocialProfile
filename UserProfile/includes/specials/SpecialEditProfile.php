@@ -76,7 +76,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			return;
 		}
 
-		if ( $request->wasPosted() ) {
+		if ( $request->wasPosted() && $user->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
 			$this->saveProfileBasic( $target );
 			$this->saveBasicSettings( $target );
 			$this->saveProfilePersonal( $target );
@@ -509,8 +509,10 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 					</div>
 					<div class="visualClear"></div>
 				</div>
+			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 			<input type="submit" value="' . $this->msg( 'user-profile-update-button' )->plain() . '" />
 			</form></div>';
+		// The <form> was opened in displayBasicForm() and left unclosed for us to close here
 
 		return $form;
 	}

@@ -17,6 +17,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	public $mUploadCopyStatus, $mUploadSource, $mReUpload, $mAction, $mUpload;
 	public $mOname, $mSessionKey, $mStashed, $mDestFile;
 	public $mSavedFile, $mWatchthis;
+	public $mTokenOk;
 	public $awardsUploadDirectory;
 	public $fileExtensions;
 	public $gift_id;
@@ -109,6 +110,10 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 			$this->mSessionKey = false;
 			$this->mStashed	 = false;
 		}
+
+		// If it was posted check for the token (no remote POST'ing with user credentials)
+		$token = $request->getVal( 'wpEditToken' );
+		$this->mTokenOk = $this->getUser()->matchEditToken( $token );
 	}
 
 	/**
@@ -156,8 +161,13 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		if ( $this->mReUpload ) {
 			$this->unsaveUploadedFile();
 			$this->mainUploadForm();
-		} elseif ( 'submit' == $this->mAction || $this->mUpload ) {
-			$this->processUpload();
+		} elseif ( $this->mAction == 'submit' || $this->mUpload ) {
+			if ( $this->mTokenOk ) {
+				$this->processUpload();
+			} else {
+				// Possible CSRF attempt or something...
+				$this->mainUploadForm( $this->msg( 'session_fail_preview' )->parse() );
+			}
 		} else {
 			$this->mainUploadForm();
 		}
@@ -235,6 +245,10 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 			}
 
 			global $wgUploadSizeWarning;
+			// @todo FIXME: This should probably check that 100 kB limit explained to the user
+			// in the instructions msg rather than $wgUploadSizeWarning.
+			// Currently uploading a file larger than that results in hitting the fatal
+			// error condition in saveUploadedFile() whereas ideally it'd be caught here.
 			if ( $wgUploadSizeWarning && ( $this->mUploadSize > $wgUploadSizeWarning ) ) {
 				$lang = $this->getLanguage();
 				$wsize = $lang->formatSize( $wgUploadSizeWarning );
@@ -518,6 +532,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 */
 	function showSuccess( $status ) {
 		global $wgUploadBaseUrl, $wgUploadPath;
+
 		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
 
 		$ext = 'jpg';
@@ -670,6 +685,8 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		}
 		$out->addHTML( $output );
 
+		$token = Html::hidden( 'wpEditToken', $this->getUser()->getEditToken() );
+
 		$out->addHTML( "
 	<form id='upload' method='post' enctype='multipart/form-data' action=\"\">
 	<table border='0'><tr>
@@ -681,6 +698,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	{$source}
 	</tr>
 	<tr><td>
+	{$token}
 	<input tabindex='5' type='submit' name='wpUpload' value=\"{$ulb}\" />
 	</td></tr></table></form>\n" );
 	}

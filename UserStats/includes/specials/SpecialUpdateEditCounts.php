@@ -109,6 +109,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 	 */
 	public function execute( $par ) {
 		$out = $this->getOutput();
+		$request = $this->getRequest();
 
 		// Check permissions -- we must be allowed to access this special page
 		// before we can run any database queries
@@ -121,9 +122,46 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();
 
+		if ( $request->wasPosted() && $this->getUser()->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
+			$count = $this->performMagic();
+
+			$out->addWikiMsg( 'updateeditcounts-updated', $count );
+		} else {
+			$out->addHTML( $this->displayForm() );
+		}
+	}
+
+	/**
+	 * Render the confirmation form
+	 *
+	 * @return string HTML
+	 */
+	private function displayForm() {
+		$form = '<form method="post" name="update-edit-counts" action="">';
+		$form .= $this->msg( 'updateeditcounts-confirm' )->escaped();
+		$form .= '<br />';
+		$form .= Html::hidden( 'wpEditToken', $this->getUser()->getEditToken() );
+		// passing null as the 1st argument makes the button use the browser default text
+		// (on Firefox 72 with English localization this is "Submit Query" which is good enough,
+		// since MW core lacks a generic "submit" message and I don't feel like introducing
+		// a new i18n msg just for this button...)
+		$form .= Html::submitButton( null, [ 'name' => 'wpSubmit' ] );
+		$form .= '</form>';
+		return $form;
+	}
+
+	/**
+	 * Update users' total points in the user_stats DB table.
+	 *
+	 * @return int Amount of users whose records were updated
+	 */
+	private function performMagic() {
+		$out = $this->getOutput();
+
 		$dbw = wfGetDB( DB_MASTER );
 		$this->updateMainEditsCount();
 
+		// @todo FIXME: Why does this do this? I don't get it.
 		global $wgUserLevels;
 		$wgUserLevels = '';
 
@@ -143,6 +181,6 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 			$stats->updateTotalPoints();
 		}
 
-		$out->addWikiMsg( 'updateeditcounts-updated', $x );
+		return $x;
 	}
 }

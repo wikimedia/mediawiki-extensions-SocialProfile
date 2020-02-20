@@ -22,6 +22,7 @@ class PopulateAwards extends UnlistedSpecialPage {
 		global $wgUserLevels;
 
 		$out = $this->getOutput();
+		$request = $this->getRequest();
 		$user = $this->getUser();
 
 		// make sure user has the correct permissions
@@ -39,9 +40,33 @@ class PopulateAwards extends UnlistedSpecialPage {
 		$out->setArticleRelated( false );
 		$out->setRobotPolicy( 'noindex,nofollow' );
 
-		$wgUserLevels = '';
+		if ( $request->wasPosted() && $user->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
+			$wgUserLevels = '';
 
-		$g = new SystemGifts();
-		$g->updateSystemGifts();
+			$g = new SystemGifts();
+			$g->updateSystemGifts();
+		} else {
+			$out->addHTML( $this->displayForm() );
+		}
 	}
+
+	/**
+	 * Render the confirmation form
+	 *
+	 * @return string HTML
+	 */
+	private function displayForm() {
+		$form = '<form method="post" name="populate-awards-form" action="">';
+		$form .= $this->msg( 'ga-awards-populate-confirm' )->escaped();
+		$form .= '<br />';
+		$form .= Html::hidden( 'wpEditToken', $this->getUser()->getEditToken() );
+		// passing null as the 1st argument makes the button use the browser default text
+		// (on Firefox 72 with English localization this is "Submit Query" which is good enough,
+		// since MW core lacks a generic "submit" message and I don't feel like introducing
+		// a new i18n msg just for this button...)
+		$form .= Html::submitButton( null, [ 'name' => 'wpSubmit' ] );
+		$form .= '</form>';
+		return $form;
+	}
+
 }

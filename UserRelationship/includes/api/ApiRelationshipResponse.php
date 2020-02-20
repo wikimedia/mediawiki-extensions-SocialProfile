@@ -32,6 +32,10 @@ class ApiRelationshipResponse extends ApiBase {
 			$avatar = new wAvatar( $userFrom->getId(), 'l' );
 			$avatar_img = $avatar->getAvatarURL();
 
+			// @todo FIXME: super legacy code is legacy. This API module should return a more structured,
+			// programmatical response and leave the HTML up to the caller(s).
+			// e.g. [ 'avatar' => avatar URL here, 'rel_type' => $rel_type, 'userFrom' => $userFrom ]
+			// or something like that...
 			if ( $response == 1 ) {
 				$rel->addRelationship( $requestId );
 				$out .= "<div class=\"relationship-action red-text\">
@@ -46,6 +50,7 @@ class ApiRelationshipResponse extends ApiBase {
 					'<div class="visualClear"></div>
 				</div>';
 			}
+
 			$rel->deleteRequest( $requestId );
 		} else {
 			return false;
@@ -53,6 +58,14 @@ class ApiRelationshipResponse extends ApiBase {
 
 		$this->getResult()->addValue( null, 'html', $out );
 
+		return true;
+	}
+
+	public function needsToken() {
+		return 'csrf';
+	}
+
+	public function isWriteMode() {
 		return true;
 	}
 

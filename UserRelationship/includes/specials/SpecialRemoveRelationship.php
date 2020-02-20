@@ -136,7 +136,11 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			$out->addHTML( $output );
 		} else {
 			$rel = new UserRelationship( $user );
-			if ( $this->getRequest()->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
+			if (
+				$this->getRequest()->wasPosted() &&
+				$user->matchEditToken( $request->getVal( 'wpEditToken' ) ) &&
+				$_SESSION['alreadysubmitted'] == false
+			) {
 				$_SESSION['alreadysubmitted'] = true;
 				$rel->removeRelationship( $this->user_to, $user );
 				$rel->sendRelationshipRemoveEmail(
@@ -209,7 +213,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			</div>
 			<div class="visualClear"></div>
 			</div>
-
+			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 		</form>';
 
 		return $form;

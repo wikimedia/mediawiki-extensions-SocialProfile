@@ -28,6 +28,7 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 	 */
 	public function execute( $params ) {
 		$out = $this->getOutput();
+		$request = $this->getRequest();
 		$user = $this->getUser();
 
 		// Make sure user has the correct permissions
@@ -41,9 +42,46 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 			throw new UserBlockedError( $user->getBlock() );
 		}
 
-		// set headers
+		// Set the page title, robot policy, etc.
 		$this->setHeaders();
 
+		if ( $request->wasPosted() && $user->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
+			$count = $this->populateProfiles();
+
+			// @todo Handle $count === 0 more gracefully
+			$out->addHTML( $this->msg( 'populate-user-profile-done' )->numParams( $count )->parse() );
+		} else {
+			$out->addHTML( $this->displayForm() );
+		}
+	}
+
+	/**
+	 * Render the confirmation form
+	 *
+	 * @return string HTML
+	 */
+	private function displayForm() {
+		$form = '<form method="post" name="populate-profiles-form" action="">';
+		$form .= $this->msg( 'populateuserprofiles-confirm' )->escaped();
+		$form .= '<br />';
+		$form .= Html::hidden( 'wpEditToken', $this->getUser()->getEditToken() );
+		// passing null as the 1st argument makes the button use the browser default text
+		// (on Firefox 72 with English localization this is "Submit Query" which is good enough,
+		// since MW core lacks a generic "submit" message and I don't feel like introducing
+		// a new i18n msg just for this button...)
+		$form .= Html::submitButton( null, [ 'name' => 'wpSubmit' ] );
+		$form .= '</form>';
+		return $form;
+	}
+
+	/**
+	 * Get all users who have a User: page and populate the user_profile DB table
+	 * with information about them, namely their actor ID and that they prefer
+	 * a wikitext user page.
+	 *
+	 * @return int Amount of profiles populated
+	 */
+	private function populateProfiles() {
 		$dbw = wfGetDB( DB_MASTER );
 		$res = $dbw->select(
 			'page',
@@ -79,6 +117,6 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 			}
 		}
 
-		$out->addHTML( $this->msg( 'populate-user-profile-done' )->numParams( $count )->parse() );
+		return $count;
 	}
 }

@@ -8,6 +8,19 @@ var UserProfilePage = {
 	replaceSrc: '',
 	oldHtml: '',
 
+	changeUserPageType: function() {
+		( new mw.Api() ).postWithToken( 'csrf', {
+			action: 'smpuserprofiletype',
+			format: 'json',
+			do: 'set'
+		} ).done( function() {
+			// @todo This works, but is kinda crude. Ideally we'd show a spinner and maybe
+			// even load the requested page's content (wikitext page or social profile)
+			// using AJAX, if possible.
+			window.location.reload();
+		} );
+	},
+
 	sendMessage: function() {
 		var userTo = decodeURIComponent( mediaWiki.config.get( 'wgTitle' ) ), //document.getElementById( 'user_name_to' ).value;
 			encMsg = encodeURIComponent( document.getElementById( 'message' ).value ),
@@ -122,6 +135,12 @@ var UserProfilePage = {
 };
 
 jQuery( function() {
+	// "Use social profile" / "Use wikitext userpage" button on your own profile
+	jQuery( '#profile-toggle-button a' ).on( 'click', function( e ) {
+		e.preventDefault();
+		UserProfilePage.changeUserPageType();
+	} );
+
 	// "Send message" button on (other users') profile pages
 	jQuery( 'div.user-page-message-box-button input[type="button"]' ).on( 'click', function() {
 		UserProfilePage.sendMessage();

@@ -56,6 +56,9 @@ $wgAutoloadClasses['MigrateOldUserFieldPrivacyUserColumnToActor'] = __DIR__ . '/
 $wgAutoloadClasses['ApiUserProfilePrivacy'] = __DIR__ . '/UserProfile/includes/api/ApiUserProfilePrivacy.php';
 $wgAPIModules['smpuserprivacy'] = 'ApiUserProfilePrivacy';
 
+$wgAutoloadClasses['ApiUserProfileType'] = __DIR__ . '/UserProfile/includes/api/ApiUserProfileType.php';
+$wgAPIModules['smpuserprofiletype'] = 'ApiUserProfileType';
+
 $wgDefaultUserOptions['echo-subscriptions-web-social-rel'] = true;
 $wgDefaultUserOptions['echo-subscriptions-email-social-rel'] = false;
 

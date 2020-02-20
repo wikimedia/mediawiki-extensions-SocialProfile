@@ -48,7 +48,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 
 		$output = '';
 
-		if ( $request->wasPosted() ) {
+		if ( $request->wasPosted() && $user->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
 			$out->setPageTitle( $this->msg( 'messagesenttitle' )->plain() );
 			$b = new UserBoard();
 
@@ -91,6 +91,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 				<h2>' . $this->msg( 'boardblaststep1' )->escaped() . '</h2>
 				<form method="post" name="blast" action="">
 					<input type="hidden" name="ids" id="ids" />
+					<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $user->getEditToken(), ENT_QUOTES ) . '" />
 					<div class="blast-message-text">'
 						. $this->msg( 'boardblastprivatenote' )->escaped() .
 					'</div>
