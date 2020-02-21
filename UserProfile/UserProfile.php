@@ -97,6 +97,20 @@ $wgResourceModules['ext.userProfile.updateProfile'] = [
 	'remoteExtPath' => 'SocialProfile/UserProfile'
 ];
 
+// Only used on Special:UpdateProfile for the current user
+$wgResourceModules['ext.userProfile.updateProfile.confirmClose'] = [
+	'scripts' => 'resources/js/UpdateProfile-confirmClose.js',
+	'messages' => [
+		'user-profile-edit-profile-save-warning',
+		'user-profile-update-save'
+	],
+	'dependencies' => [
+		'mediawiki.confirmCloseWindow'
+	],
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'SocialProfile/UserProfile'
+];
+
 // CSS for user avatars in page diffs
 $wgResourceModules['ext.socialprofile.userprofile.diff'] = [
 	'styles' => 'resources/css/AvatarsInDiffs.css',

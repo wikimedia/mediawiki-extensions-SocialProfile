@@ -161,7 +161,10 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			'ext.socialprofile.userprofile.tabs.css',
 			'ext.socialprofile.special.updateprofile.css'
 		] );
-		$out->addModules( 'ext.userProfile.updateProfile' );
+		$out->addModules( [
+			'ext.userProfile.updateProfile',
+			'ext.userProfile.updateProfile.confirmClose'
+		] );
 
 		if ( $request->wasPosted() && $user->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
 			// NoJS support
