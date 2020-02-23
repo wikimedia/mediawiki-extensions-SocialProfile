@@ -18,7 +18,7 @@
 	"g-error-message-login": "Trebuie să vă autentificați pentru a da cadouri",
 	"g-error-message-no-user": "Utilizatorul pe care încercați să îl vizualizați nu există.",
 	"g-error-message-to-yourself": "Nu vă puteți da un cadou dumneavoastră.",
-	"g-from": "de la <a href=\"$1\">$2</a>",
+	"g-from": "de la [[User:$1|$1]]",
 	"g-gift": "cadou",
 	"g-gift-name": "numele cadoului",
 	"g-give-gift": "Dați cadoul",

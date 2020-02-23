@@ -120,12 +120,10 @@ class RemoveGift extends UnlistedSpecialPage {
 				$icon .
 				'<div class="g-name">' . htmlspecialchars( $gift['name'] ) . '</div>
 				<div class="g-from">' .
-					// FIXME: This message uses raw html
 					$this->msg(
 						'g-from',
-						htmlspecialchars( $userFrom->getUserPage()->getFullURL() ),
-						htmlspecialchars( $userFrom->getName() )
-					)->text() . '</div>';
+						$userFrom->getName()
+					)->parse() . '</div>';
 		if ( $gift['message'] ) {
 			$output .= '<div class="g-user-message">' .
 				htmlspecialchars( $gift['message'] ) . '</div>';

@@ -95,11 +95,10 @@ class ViewGift extends UnlistedSpecialPage {
 					$icon .
 					'<div class="g-name">' . htmlspecialchars( $gift['name'] ) . '</div>
 					<div class="g-timestamp">(' . $gift['timestamp'] . ')</div>
-					<div class="g-from">' . $this->msg( // FIXME: Message with raw HTML
+					<div class="g-from">' . $this->msg(
 						'g-from',
-						htmlspecialchars( $sender->getUserPage()->getFullURL() ),
-						htmlspecialchars( $sender->getName() )
-					)->text() . '</div>';
+						$sender->getName()
+					)->parse() . '</div>';
 			if ( $message ) {
 				$output .= '<div class="g-user-message">' . $message . '</div>';
 			}

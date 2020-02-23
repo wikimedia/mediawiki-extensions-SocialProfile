@@ -233,12 +233,10 @@ class GiveGift extends SpecialPage {
 
 		$output = '<form action="" method="post" enctype="multipart/form-data" name="gift">
 			<div class="g-message">' .
-				// FIXME: This message uses raw html
 				$this->msg(
 					'g-give-to-user-message',
-					htmlspecialchars( $this->userTo->getName() ),
-					htmlspecialchars( $giveGiftLink->getFullURL( 'user=' . $this->userTo->getName() ) )
-				)->text() . "</div>
+					$this->userTo->getName()
+				)->parse() . "</div>
 			<div id=\"give_gift_{$gift['gift_id']}\" class=\"g-container\">
 				{$icon}
 				<div class=\"g-title\">" . htmlspecialchars( $gift['gift_name'] ) . "</div>";

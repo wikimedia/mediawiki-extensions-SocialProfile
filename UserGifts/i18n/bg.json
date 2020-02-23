@@ -17,7 +17,7 @@
 	"g-created-by": "създаден от",
 	"g-current-image": "Текуща картинка",
 	"g-error-message-login": "За да давате подаръци е необходимо да влезете в системата",
-	"g-from": "от <a href=\"$1\">$2</a>",
+	"g-from": "от [[User:$1|$1]]",
 	"g-gift": "подарък",
 	"g-gift-name": "име на подаръка",
 	"g-give-all-message-title": "Добавяне на съобщение",

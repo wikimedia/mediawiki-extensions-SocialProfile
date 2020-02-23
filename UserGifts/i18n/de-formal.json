@@ -17,7 +17,7 @@
 	"g-give-enter-friend-title": "Falls Sie einen Benutzernamen wissen, tragen Sie ihn hier unten ein",
 	"g-give-list-friends-title": "Wählen Sie aus Ihrer Freundesliste",
 	"g-give-no-user-title": "Wem möchten Sie ein Geschenk geben?",
-	"g-give-to-user-message": "Möchen Sie $1 ein <a href=\"$2\">anderes Geschenk geben</a>?",
+	"g-give-to-user-message": "Möchen Sie $1 ein [[Special:GiveGift/$1|anderes Geschenk geben]]?",
 	"g-remove-message": "Sind Sie sich sicher, das Geschenk „$1“ zu entfernen?",
 	"g-remove-success-title": "Sie haben das Geschenk „$1“ erfolgreich entfernt.",
 	"g-sent-title": "Sie haben ein Geschenk an $1 gesendet",

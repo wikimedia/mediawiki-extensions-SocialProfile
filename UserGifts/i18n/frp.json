@@ -26,7 +26,7 @@
 	"g-created-by": "fêt per",
 	"g-current-image": "Émâge d’ora",
 	"g-description-title": "Present « $2 » a $1",
-	"g-from": "de <a href=\"$1\">$2</a>",
+	"g-from": "de [[User:$1|$1]]",
 	"g-gift": "present",
 	"g-gift-name": "nom du present",
 	"g-give-gift": "Balyér lo present",

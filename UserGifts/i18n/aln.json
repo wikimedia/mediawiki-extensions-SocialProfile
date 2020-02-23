@@ -34,7 +34,7 @@
 	"g-error-message-to-yourself": "Ju nuk mund të japë një dhuratë për veten.",
 	"g-error-title": "Woops, ju mori një kthesë të gabuar!",
 	"g-file-instructions": "Imazhi yt duhet të jetë një jpeg, png ose gif (pa animuar gifs), dhe duhet të jetë më pak se 100kb në madhësi.",
-	"g-from": "nga <a href=\"$1\">$2</a>",
+	"g-from": "nga [[User:$1|$1]]",
 	"g-gift": "dhuratë",
 	"g-gift-name": "Emri dhuratë",
 	"g-give-gift": "Jepni dhuratë"

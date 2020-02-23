@@ -152,12 +152,10 @@ class ViewGifts extends SpecialPage {
 				$output .= '</div>';
 
 				$output .= '<div class="g-from">' .
-					// FIXME: Message with raw HTML
 					$this->msg(
 						'g-from',
-						htmlspecialchars( $userFrom->getUserPage()->getFullURL() ),
 						$userFrom->getName()
-					)->text() .
+					)->parse() .
 				'</div>
 					<div class="g-actions">
 						<a href="' . htmlspecialchars( $giveGiftLink->getFullURL( 'gift_id=' . $gift['gift_id'] ) ) . '">' .

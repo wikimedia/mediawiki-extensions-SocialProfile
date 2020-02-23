@@ -18,7 +18,7 @@
 	"g-created-by": "kreita de",
 	"g-current-image": "Nuna bildo",
 	"g-description-title": "Donaco \"$2\" de $1",
-	"g-from": "de <a href=\"$1\">$2</a>",
+	"g-from": "de [[User:$1|$1]]",
 	"g-gift": "donaco",
 	"g-gift-name": "donaca nomo",
 	"g-give-all-message-title": "Aldoni mesaĝon",
