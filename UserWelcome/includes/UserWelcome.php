@@ -99,10 +99,10 @@ class UserWelcome {
 					<br />'
 					. wfMessage(
 						'mp-welcome-needed-points',
-						htmlspecialchars( $level_link->getFullURL() ),
+						$level_link->getPrefixedText(),
 						$user_level->getNextLevelName(),
 						$wgLang->formatNum( $user_level->getPointsNeededToAdvance() )
-					)->text() .
+					)->parse() .
 				'</div>
 			</div>';
 		}

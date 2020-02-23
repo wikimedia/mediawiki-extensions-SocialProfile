@@ -8,7 +8,7 @@
 	"mp-userlevels-link": "Urovně uživatelů",
 	"mp-welcome-upload": "Nahrát soubor",
 	"mp-welcome-points": "$1 {{PLURAL:$1|bod|body|bodů}}",
-	"mp-welcome-needed-points": "Abyste postoupili na <b><a href=\"$1\">$2</a></b>, udělejte ještě <i>$3</i> {{PLURAL:$3|bod|body|bodů}}!",
+	"mp-welcome-needed-points": "Abyste postoupili na [[$1|'''$2''']], udělejte ještě ''$3'' {{PLURAL:$3|bod|body|bodů}}!",
 	"mp-welcome-logged-in": "Ahoj $1",
 	"mp-requests-title": "Požadavky",
 	"mp-requests-message": "Máte následující požadavky.",

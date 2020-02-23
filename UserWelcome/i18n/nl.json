@@ -9,7 +9,7 @@
 	"mp-userlevels-link": "Gebruikersniveaus",
 	"mp-welcome-upload": "Uploaden",
 	"mp-welcome-points": "$1 {{PLURAL:$1|punt|punten}}",
-	"mp-welcome-needed-points": "Om te promoveren naar <b><a href=\"$1\">$2</a></b> moet u nog <i>$3</i> {{PLURAL:$3|punt|punten}} verdienen!",
+	"mp-welcome-needed-points": "Om te promoveren naar [[$1|'''$2''']] moet u nog ''$3'' {{PLURAL:$3|punt|punten}} verdienen!",
 	"mp-welcome-logged-in": "Hallo $1",
 	"mp-requests-title": "Aanvragen",
 	"mp-requests-message": "U hebt de volgende aanvragen.",

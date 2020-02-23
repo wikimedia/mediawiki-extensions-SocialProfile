@@ -10,7 +10,7 @@
 	"mp-userlevels-link": "Узроўні ўдзельніка",
 	"mp-welcome-upload": "Загрузіць",
 	"mp-welcome-points": "$1 {{PLURAL:$1|пункт|пункты|пунктаў}}",
-	"mp-welcome-needed-points": "Каб узьняцца да <b><a href=\"$1\">$2</a></b> неабходна здабыць яшчэ <i>$3</i>  {{PLURAL:$3|пункт|пункты|пунктаў}}!",
+	"mp-welcome-needed-points": "Каб узьняцца да [[$1|'''$2''']] неабходна здабыць яшчэ ''$3'' {{PLURAL:$3|пункт|пункты|пунктаў}}!",
 	"mp-welcome-logged-in": "Прывітаньне $1",
 	"mp-requests-title": "Запыты",
 	"mp-requests-message": "Вы атрымалі наступныя запыты.",

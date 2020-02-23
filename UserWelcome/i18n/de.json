@@ -11,7 +11,7 @@
 	"mp-userlevels-link": "Benutzerebenen",
 	"mp-welcome-upload": "Hochladen",
 	"mp-welcome-points": "$1 {{PLURAL:$1|Punkt|Punkte}}",
-	"mp-welcome-needed-points": "Um <b><a href=\"$1\">$2</a></b> zu werden musst du noch <i>$3</i> {{PLURAL:$3|weiteren Punkt|weitere Punkte}} verdienen!",
+	"mp-welcome-needed-points": "Um [[$1|'''$2''']] zu werden musst du noch ''$3'' {{PLURAL:$3|weiteren Punkt|weitere Punkte}} verdienen!",
 	"mp-welcome-logged-in": "Hallo $1",
 	"mp-requests-title": "Anfragen",
 	"mp-requests-message": "Du hast die folgenden Anfragen.",

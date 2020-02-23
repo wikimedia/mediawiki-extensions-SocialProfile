@@ -9,7 +9,7 @@
 	"mp-userlevels-link": "ระดับผู้ใช้",
 	"mp-welcome-upload": "อัปโหลด",
 	"mp-welcome-points": "$1 {{PLURAL:$1|คะแนน|คะแนน}}",
-	"mp-welcome-needed-points": "เพื่อยกระดับไปเป็น<b><a href=\"$1\">$2</a></b> คุณต้องการอีก<i>$3</i>{{PLURAL:$3|คะแนน|คะแนน}}เท่านั้น!",
+	"mp-welcome-needed-points": "เพื่อยกระดับไปเป็น[[$1|'''$2''']] คุณต้องการอีก''$3''{{PLURAL:$3|คะแนน|คะแนน}}เท่านั้น!",
 	"mp-welcome-logged-in": "สวัสดี $1",
 	"mp-requests-title": "คำร้องขอ",
 	"mp-requests-message": "คุณมีคำร้องขอดังนี้",

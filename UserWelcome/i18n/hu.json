@@ -9,7 +9,7 @@
 	"mp-userlevels-link": "Felhasználói szintek",
 	"mp-welcome-upload": "Feltöltés",
 	"mp-welcome-points": "$1 pont",
-	"mp-welcome-needed-points": "Még <i>$3</i> pontot kell szerezned a továbblépéshez ide: <b><a href=\"$1\">$2</a></b>!",
+	"mp-welcome-needed-points": "Még ''$3'' pontot kell szerezned a továbblépéshez ide: [[$1|'''$2''']]!",
 	"mp-welcome-logged-in": "Szia $1",
 	"mp-requests-title": "Kérelmek",
 	"mp-requests-message": "Az alábbi kérelmeid vannak.",

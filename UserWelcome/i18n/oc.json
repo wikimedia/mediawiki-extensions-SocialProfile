@@ -8,7 +8,7 @@
 	"mp-userlevels-link": "Nivèls de l'utilizaire",
 	"mp-welcome-upload": "Telecargar",
 	"mp-welcome-points": "$1 {{PLURAL:$1|punt|punts}}",
-	"mp-welcome-needed-points": "Avançar cap a <b><a href=\"$1\">$2</a></b> ganha <i>$3</i> {{PLURAL:$3|punt|punts}} en mai !",
+	"mp-welcome-needed-points": "Avançar cap a [[$1|'''$2''']] ganha ''$3'' {{PLURAL:$3|punt|punts}} en mai !",
 	"mp-welcome-logged-in": "Benvenguda $1",
 	"mp-requests-title": "Requèstas",
 	"mp-requests-message": "Avètz las requèstas seguentas.",

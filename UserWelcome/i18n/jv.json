@@ -8,7 +8,7 @@
 	"mp-userlevels-link": "Tataran panganggo",
 	"mp-welcome-upload": "Unggah",
 	"mp-welcome-points": "$1 {{PLURAL:$1|poin|poin}}",
-	"mp-welcome-needed-points": "Kanggo maju menyang <b><a href=\"$1\">$2</a></b> kumpulna <i>$3</i> {{PLURAL:$3|poin|poin}} luwih akèh!",
+	"mp-welcome-needed-points": "Kanggo maju menyang [[$1|'''$2''']] kumpulna ''$3'' {{PLURAL:$3|poin|poin}} luwih akèh!",
 	"mp-welcome-logged-in": "Halo $1",
 	"mp-requests-title": "Panyuwunan",
 	"mp-requests-message": "Ana panyuwunan iki marang panjenengan.",

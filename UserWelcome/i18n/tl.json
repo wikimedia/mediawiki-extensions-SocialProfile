@@ -8,7 +8,7 @@
 	"mp-userlevels-link": "Mga antas na pangtagagamit",
 	"mp-welcome-upload": "Ikarga",
 	"mp-welcome-points": "$1 {{PLURAL:$1|puntos|mga puntos}}",
-	"mp-welcome-needed-points": "Upang makasulong patungo sa <b><a href=\"$1\">$2</a></b> umani ng <i>$3</i> karagdagang {{PLURAL:$3|puntos|mga puntos}}!",
+	"mp-welcome-needed-points": "Upang makasulong patungo sa [[$1|'''$2''']] umani ng ''$3'' karagdagang {{PLURAL:$3|puntos|mga puntos}}!",
 	"mp-welcome-logged-in": "Mabuhay $1",
 	"mp-requests-title": "Mga kahilingan",
 	"mp-requests-message": "Mayroon kang sumusunod na mga kahilingan.",

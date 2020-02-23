@@ -8,7 +8,7 @@
 	"mp-userlevels-link": "Uzulaj niveloj",
 	"mp-welcome-upload": "Alŝuti",
 	"mp-welcome-points": "$1 {{PLURAL:$1|poento|poentoj}}",
-	"mp-welcome-needed-points": "Pliniveligi al <b><a href=\"$1\">$2</a></b> gajnu <i>$3</i> {{PLURAL:$3|plian poenton|pliajn poentojn}}!",
+	"mp-welcome-needed-points": "Pliniveligi al [[$1|'''$2''']] gajnu ''$3'' {{PLURAL:$3|plian poenton|pliajn poentojn}}!",
 	"mp-welcome-logged-in": "Saluton $1",
 	"mp-requests-title": "Petoj",
 	"mp-requests-message": "Vi havas la jenajn petojn.",

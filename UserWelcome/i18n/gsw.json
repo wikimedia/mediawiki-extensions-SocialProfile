@@ -8,7 +8,7 @@
 	"mp-userlevels-link": "Benutzerebene",
 	"mp-welcome-upload": "Uffelade",
 	"mp-welcome-points": "$1 {{PLURAL:$1|Punkt|Pinkt}}",
-	"mp-welcome-needed-points": "Zum <b><a href=\"$1\">$2</a></b> z wäre, muesch no <i>$3</i> {{PLURAL:$3|wytere Punkt Punkt|wyteri Pinkt}} verdiene!",
+	"mp-welcome-needed-points": "Zum [[$1|'''$2''']] z wäre, muesch no ''$3'' {{PLURAL:$3|wytere Punkt Punkt|wyteri Pinkt}} verdiene!",
 	"mp-welcome-logged-in": "Sali $1",
 	"mp-requests-title": "Aafroge",
 	"mp-requests-message": "Du hesch die Aafroge.",

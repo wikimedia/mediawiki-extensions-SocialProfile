@@ -8,7 +8,7 @@
 	"mp-userlevels-link": "Benotzerniveauen",
 	"mp-welcome-upload": "Eroplueden",
 	"mp-welcome-points": "$1 {{PLURAL:$1|Punkt|Punkten}}",
-	"mp-welcome-needed-points": "Fir weiderzekommen <b><a href=\"$1\">$2</a></b> verdéngt <i>$3</i> {{PLURAL:$3|Punkt|Punkte}} méi!",
+	"mp-welcome-needed-points": "Fir weiderzekommen [[$1|'''$2''']] verdéngt ''$3'' {{PLURAL:$3|Punkt|Punkte}} méi!",
 	"mp-welcome-logged-in": "Salut $1",
 	"mp-requests-title": "Ufroen",
 	"mp-requests-message": "Dir hutt dës Ufroen",

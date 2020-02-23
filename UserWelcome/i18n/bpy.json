@@ -8,7 +8,7 @@
 	"mp-userlevels-link": "আতাকুরার থাকহান",
 	"mp-welcome-upload": "আপলোড",
 	"mp-welcome-points": "$1 {{PLURAL:$1|পয়েন্ট|পয়েন্ট}}",
-	"mp-welcome-needed-points": "এহাত যাগা  <b><a href=\"$1\">$2</a></b> আরাকউ <i>$3</i> বপকরে {{PLURAL:$3|পয়েন্ট|পয়েন্ট}} পানার কা!",
+	"mp-welcome-needed-points": "এহাত যাগা  [[$1|'''$2''']] আরাকউ ''$3'' বপকরে {{PLURAL:$3|পয়েন্ট|পয়েন্ট}} পানার কা!",
 	"mp-welcome-logged-in": "হ্যালো $1",
 	"mp-requests-title": "হেইচাহানি",
 	"mp-requests-message": "তরতা তলর হেইচাহানি আসে।",

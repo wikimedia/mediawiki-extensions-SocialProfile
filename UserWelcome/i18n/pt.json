@@ -11,7 +11,7 @@
 	"mp-userlevels-link": "Níveis de utilizador",
 	"mp-welcome-upload": "Carregar",
 	"mp-welcome-points": "$1 {{PLURAL:$1|ponto|pontos}}",
-	"mp-welcome-needed-points": "Para avançar para <b><a href=\"$1\">$2</a></b>, ganhe mais <i>$3</i> {{PLURAL:$3|ponto|pontos}}!",
+	"mp-welcome-needed-points": "Para avançar para [[$1|'''$2''']], ganhe mais ''$3'' {{PLURAL:$3|ponto|pontos}}!",
 	"mp-welcome-logged-in": "Olá, $1",
 	"mp-requests-title": "Pedidos",
 	"mp-requests-message": "Tem os seguinte pedidos.",

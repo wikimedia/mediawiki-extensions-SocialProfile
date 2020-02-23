@@ -8,7 +8,7 @@
 	"mp-userlevels-link": "Livej utent",
 	"mp-welcome-upload": "Caria",
 	"mp-welcome-points": "$1 {{PLURAL:$1|pont|pont}}",
-	"mp-welcome-needed-points": "Për passé a <b><a href=\"$1\">$2</a></b> vagna <i>$3</i> {{PLURAL:$3|àutr pont|àutri pont}}!",
+	"mp-welcome-needed-points": "Për passé a [[$1|'''$2''']] vagna ''$3'' {{PLURAL:$3|àutr pont|àutri pont}}!",
 	"mp-welcome-logged-in": "Cerea $1",
 	"mp-requests-title": "Arceste",
 	"mp-requests-message": "It l'has l'arcesta ch'i ven.",

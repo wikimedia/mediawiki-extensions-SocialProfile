@@ -8,7 +8,7 @@
 	"mp-userlevels-link": "Wužiwarske runiny",
 	"mp-welcome-upload": "Nahrać",
 	"mp-welcome-points": "$1 {{PLURAL:$1|dypk|dypkaj|dypki|dypkow}}",
-	"mp-welcome-needed-points": "Zo by k <b><a href=\"$1\">$2</a></b> postupował, zasłuž <i>$3</i> {{PLURAL:$3|dalši dypk|dalšej dypkaj|dalše dypki|dalšich dypkow}}!",
+	"mp-welcome-needed-points": "Zo by k [[$1|'''$2''']] postupował, zasłuž ''$3'' {{PLURAL:$3|dalši dypk|dalšej dypkaj|dalše dypki|dalšich dypkow}}!",
 	"mp-welcome-logged-in": "Halo $1",
 	"mp-requests-title": "Požadanja",
 	"mp-requests-message": "Maš slědowace požadanja.",

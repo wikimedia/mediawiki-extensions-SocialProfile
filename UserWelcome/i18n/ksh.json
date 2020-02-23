@@ -8,7 +8,7 @@
 	"mp-userlevels-link": "Ebene för Metmaacher",
 	"mp-welcome-upload": "Huhlaade",
 	"mp-welcome-points": "{{PLURAL:$1|Eine Pungk|$1 Pungkte|nix}}",
-	"mp-welcome-needed-points": "Öm föraanzekumme op <b><a href=\"$1\">$2</a></b>, donn {{PLURAL:$3|<i>eine</i> Pungk mieh|<i>$3</i> zosätzlijje Pungkte|<i>kein</i> Pungkte dobei}} sammele!",
+	"mp-welcome-needed-points": "Öm föraanzekumme op [[$1|'''$2''']], donn {{PLURAL:$3|''eine'' Pungk mieh|''$3'' zosätzlijje Pungkte|''kein'' Pungkte dobei}} sammele!",
 	"mp-welcome-logged-in": "Daach $1,",
 	"mp-requests-title": "Wönsch und Aanfroore",
 	"mp-requests-message": "Do häß hee di Wönsch und Aanfroore:",

@@ -8,7 +8,7 @@
 	"mp-userlevels-link": "Къошулуучуланы дараджалары",
 	"mp-welcome-upload": "Джюкле",
 	"mp-welcome-points": "$1 {{PLURAL:$1|балл|балл}}",
-	"mp-welcome-needed-points": "<b><a href=\"$1\">$2</a></b>-гъа кёчер ючюн энтда <i>$3</i> {{PLURAL:$3|балл|балл}} керекди!",
+	"mp-welcome-needed-points": "[[$1|'''$2''']]-гъа кёчер ючюн энтда ''$3'' {{PLURAL:$3|балл|балл}} керекди!",
 	"mp-welcome-logged-in": "Сау кел, $1",
 	"mp-requests-title": "Сапаришле",
 	"mp-requests-message": "Сорууларыгъыз барды.",

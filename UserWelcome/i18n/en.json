@@ -8,7 +8,7 @@
 	"mp-userlevels-link": "User levels",
 	"mp-welcome-upload": "Upload",
 	"mp-welcome-points": "$1 {{PLURAL:$1|point|points}}",
-	"mp-welcome-needed-points": "To advance to <b><a href=\"$1\">$2</a></b> earn <i>$3</i> more {{PLURAL:$3|point|points}}!",
+	"mp-welcome-needed-points": "To advance to [[$1|'''$2''']] earn ''$3'' more {{PLURAL:$3|point|points}}!",
 	"mp-welcome-logged-in": "Hello $1",
 	"mp-requests-title": "Requests",
 	"mp-requests-message": "You have the following requests.",

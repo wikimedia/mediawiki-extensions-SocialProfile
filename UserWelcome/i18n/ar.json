@@ -9,7 +9,7 @@
 	"mp-userlevels-link": "مستويات المستخدم",
 	"mp-welcome-upload": "ارفع",
 	"mp-welcome-points": "{{PLURAL:$1|لا نقاط|نقطة واحدة|نقطتان|$1 نقاط|$1 نقطة}}",
-	"mp-welcome-needed-points": "للتقدم <b><a href=\"$1\">$2</a></b> لاستحقاق {{PLURAL:$3||نقطة واحدة إضافية|نقطتان إضافيتان|<i>$3</i> نقاط إضافية|<i>$3</i> نقطة إضافية}}!",
+	"mp-welcome-needed-points": "للتقدم [[$1|'''$2''']] لاستحقاق {{PLURAL:$3||نقطة واحدة إضافية|نقطتان إضافيتان|''$3'' نقاط إضافية|''$3'' نقطة إضافية}}!",
 	"mp-welcome-logged-in": "مرحبا $1",
 	"mp-requests-title": "طلبات",
 	"mp-requests-message": "لديك الطلبات التالية.",

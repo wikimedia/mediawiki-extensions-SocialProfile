@@ -9,7 +9,7 @@
 	"mp-userlevels-link": "सदस्य-स्तराः",
 	"mp-welcome-upload": "उद्भारयतु",
 	"mp-welcome-points": "$1 गुणदिष्ट",
-	"mp-welcome-needed-points": "प्रगतिकृते <b><a href=\"$1\">$2</a></b> अर्जति <i>$3</i> अधिक {{PLURAL:$3|गुण:|गुण:}}!",
+	"mp-welcome-needed-points": "प्रगतिकृते [[$1|'''$2''']] अर्जति ''$3'' अधिक {{PLURAL:$3|गुण:|गुण:}}!",
 	"mp-welcome-logged-in": "नमस्ते $1",
 	"mp-requests-title": "विनन्ती",
 	"mp-requests-message": "भवन्तं प्रति निवेदनानि एवं सन्ति।",

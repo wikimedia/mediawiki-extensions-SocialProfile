@@ -9,7 +9,7 @@
 	"mp-userlevels-link": "Kullanıcı seviyeleri",
 	"mp-welcome-upload": "Yükle",
 	"mp-welcome-points": "$1 {{PLURAL:$1|puan|puan}}",
-	"mp-welcome-needed-points": "<b><a href=\"$1\">$2</a></b>'ye ilerlemek için <i>$3</i> {{PLURAL:$3|puan|puan}} daha kazanın!",
+	"mp-welcome-needed-points": "[[$1|'''$2''']]'ye ilerlemek için ''$3'' {{PLURAL:$3|puan|puan}} daha kazanın!",
 	"mp-welcome-logged-in": "$1 Hoşgeldiniz",
 	"mp-requests-title": "İstekler",
 	"mp-requests-message": "Şu istekleriniz var.",
