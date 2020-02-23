@@ -168,7 +168,7 @@
 	"user-wiki-link": "Página wiki do utilizador",
 	"user-type-toggle-old": "Usar página wiki do utilizador",
 	"user-type-toggle-new": "Usar página social de utilizador",
-	"user-board-login-message": "Precisa de <a href=\"$1\">autenticar-se</a> para enviar mensagens a outros utilizadores",
+	"user-board-login-message": "Precisa de [[Special:UserLogin|autenticar-se]] para enviar mensagens a outros utilizadores",
 	"removeavatar": "Remover avatar",
 	"givegift": "Dar uma prenda",
 	"viewgifts": "Ver prendas",

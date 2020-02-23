@@ -173,7 +173,7 @@
 	"user-wiki-link": "Wiki-Benutzerseite",
 	"user-type-toggle-old": "Benutze Wiki-Benutzerseite",
 	"user-type-toggle-new": "Benutzer Profil-Seite",
-	"user-board-login-message": "Du musst <a href=\"$1\">angemeldet sein</a> um Nachrichten an andere Nutzer zu senden",
+	"user-board-login-message": "Du musst [[Special:UserLogin|angemeldet sein]] um Nachrichten an andere Nutzer zu senden",
 	"removeavatar": "Avatar löschen",
 	"givegift": "Ein Geschenk machen",
 	"viewgifts": "Geschenke ansehen",

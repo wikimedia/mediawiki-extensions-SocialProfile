@@ -157,7 +157,7 @@
 	"user-wiki-link": "Brukarsida på wikien",
 	"user-type-toggle-old": "Nytt wikibrukarsida",
 	"user-type-toggle-new": "Nytt sosial brukarsida",
-	"user-board-login-message": "Du må vera <a href=\"$1\">innlogga</a> for å senda meldingar til andre brukarar",
+	"user-board-login-message": "Du må vera [[Special:UserLogin|innlogga]] for å senda meldingar til andre brukarar",
 	"removeavatar": "Fjern avatar",
 	"givegift": "Gje ei gåva",
 	"viewgifts": "Syn gåver",

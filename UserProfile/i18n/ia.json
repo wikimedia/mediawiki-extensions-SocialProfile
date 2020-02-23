@@ -165,7 +165,7 @@
 	"user-wiki-link": "Pagina wiki de usator",
 	"user-type-toggle-old": "Usar le pagina wiki del usator",
 	"user-type-toggle-new": "Usar le pagina social del usator",
-	"user-board-login-message": "Tu debe <a href=\"$1\">aperir un session</a> pro poter inviar messages a altere usatores",
+	"user-board-login-message": "Tu debe [[Special:UserLogin|aperir un session]] pro poter inviar messages a altere usatores",
 	"removeavatar": "Remover avatar",
 	"givegift": "Dar un dono",
 	"viewgifts": "Vider donos",

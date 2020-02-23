@@ -155,7 +155,7 @@
 	"user-wiki-link": "صفحة اليوزر على الويكى",
 	"user-type-toggle-old": "استعمل صفحة يوزر الويكي",
 	"user-type-toggle-new": "استعمل صفحة يوزر اجتماعية",
-	"user-board-login-message": "لازم تكون <a href=\"$1\">مسجل الدخول</a> لإرسال الرسائل لليوزرز التانين",
+	"user-board-login-message": "لازم تكون [[Special:UserLogin|مسجل الدخول]] لإرسال الرسائل لليوزرز التانين",
 	"removeavatar": "إزالة الأفاتر",
 	"givegift": "منح هدية",
 	"viewgifts": "عرض الهدايا",

@@ -116,5 +116,5 @@
 	"user-wiki-link": "Páhina d'usuáriu wiki",
 	"user-type-toggle-old": "Gastal la páhina d'usuáriu wiki",
 	"user-type-toggle-new": "Gastal la páhina d'usuáriu social",
-	"user-board-login-message": "Ebis estal <a href=\"$1\">rustriu</a> pa envial mensahis a otrus usuárius"
+	"user-board-login-message": "Ebis estal [[Special:UserLogin|rustriu]] pa envial mensahis a otrus usuárius"
 }

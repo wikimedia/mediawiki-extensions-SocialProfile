@@ -156,7 +156,7 @@
 	"user-wiki-link": "صفحة المستخدم على الويكي",
 	"user-type-toggle-old": "استعمل صفحة مستخدم الويكي",
 	"user-type-toggle-new": "استعمل صفحة مستخدم اجتماعية",
-	"user-board-login-message": "أنت يجب أن تكون <a href=\"$1\">مسجل الدخول</a> لإرسال الرسائل إلى المستخدمين الآخرين",
+	"user-board-login-message": "أنت يجب أن تكون [[Special:UserLogin|مسجل الدخول]] لإرسال الرسائل إلى المستخدمين الآخرين",
 	"removeavatar": "إزالة الأفاتر",
 	"givegift": "منح هدية",
 	"viewgifts": "عرض الهدايا",

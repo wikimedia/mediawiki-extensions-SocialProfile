@@ -158,7 +158,7 @@
 	"user-wiki-link": "Pàgina utent dla wiki",
 	"user-type-toggle-old": "Dovré le pàgine utent dla wiki",
 	"user-type-toggle-new": "Dovré la pàgina utent social",
-	"user-board-login-message": "A deuv esse <a href=\"$1\">intrà ant ël sistema</a> për spedì dij mëssagi a j'àutri utent",
+	"user-board-login-message": "A deuv esse [[Special:UserLogin|intrà ant ël sistema]] për spedì dij mëssagi a j'àutri utent",
 	"removeavatar": "Gava avatar",
 	"givegift": "Fé un cadò",
 	"viewgifts": "Varda cadò",

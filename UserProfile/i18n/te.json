@@ -116,7 +116,7 @@
 	"user-social-profile-link": "సాంఘీక ప్రొఫైలు",
 	"user-wiki-link": "వికీ వాడుకరిపేజీ",
 	"user-type-toggle-old": "వికీ వాడుకరిపేజీని వాడు",
-	"user-board-login-message": "ఇతర వాడుకరులకు సందేశం వ్రాయడానికి మీరు <a href=\"$1\">ప్రవేశించి</a> ఉండాలి",
+	"user-board-login-message": "ఇతర వాడుకరులకు సందేశం వ్రాయడానికి మీరు [[Special:UserLogin|ప్రవేశించి]] ఉండాలి",
 	"removeavatar": "అవతారాన్ని తొలగించండి",
 	"givegift": "ఒక బహుమతిని ఇవ్వండి",
 	"viewgifts": "బహుమతులను చూడండి",

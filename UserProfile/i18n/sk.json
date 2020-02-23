@@ -154,7 +154,7 @@
 	"user-wiki-link": "Používateľská stránka na wiki",
 	"user-type-toggle-old": "Použiť používateľskú stránku na wiki",
 	"user-type-toggle-new": "Použiť spoločenskú používateľskú stránku",
-	"user-board-login-message": "Aby ste mohli posielať správy ostatným používateľom, musíte <a href=\"$1\">sa prihlásiť</a>.",
+	"user-board-login-message": "Aby ste mohli posielať správy ostatným používateľom, musíte [[Special:UserLogin|sa prihlásiť]].",
 	"removeavatar": "Odstrániť fotografiu",
 	"givegift": "Dať dar",
 	"viewgifts": "Zobraziť dary",

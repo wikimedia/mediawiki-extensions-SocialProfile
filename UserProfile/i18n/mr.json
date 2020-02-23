@@ -143,6 +143,6 @@
 	"user-wiki-link": "विकि सदस्य पान",
 	"user-type-toggle-old": "विकि सदस्य पान वापरा",
 	"user-type-toggle-new": "सार्वजनिक सदस्यपान वापरा",
-	"user-board-login-message": "इतर सदस्यांना संदेश पाठविण्यासाठी तुम्ही <a href=\"$1\">प्रवेश केलेला असणे</a> आवश्यक आहे.",
+	"user-board-login-message": "इतर सदस्यांना संदेश पाठविण्यासाठी तुम्ही [[Special:UserLogin|प्रवेश केलेला असणे]] आवश्यक आहे.",
 	"user-profile-picture-log-entry": "नवीन अवतार चढविला"
 }

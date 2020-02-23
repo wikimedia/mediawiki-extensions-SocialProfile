@@ -164,7 +164,7 @@
 	"user-wiki-link": "דף המשתמש של הוויקי",
 	"user-type-toggle-old": "שימוש בדף המשתמש של הוויקי",
 	"user-type-toggle-new": "שימוש בדף המשתמש הקהילתי",
-	"user-board-login-message": "עליכם <a href=\"$1\">להיכנס לחשבון</a> כדי לשלוח הודעות למשתמשים אחרים",
+	"user-board-login-message": "עליכם [[Special:UserLogin|להיכנס לחשבון]] כדי לשלוח הודעות למשתמשים אחרים",
 	"removeavatar": "הסרת התמונה האישית",
 	"givegift": "הענקת מתנה",
 	"viewgifts": "הצגת מתנות",

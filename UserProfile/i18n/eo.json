@@ -147,7 +147,7 @@
 	"user-wiki-link": "Vikia uzanto-paĝo",
 	"user-type-toggle-old": "Uzi vikian uzulpaĝon",
 	"user-type-toggle-new": "Uzi socian uzulpaĝon",
-	"user-board-login-message": "Vi devas <a href=\"$1\">ensaluti</a> afiŝi mesaĝojn al aliaj uzantoj",
+	"user-board-login-message": "Vi devas [[Special:UserLogin|ensaluti]] afiŝi mesaĝojn al aliaj uzantoj",
 	"removeavatar": "Forigi avataron",
 	"givegift": "Donaci donacon",
 	"viewgifts": "Vidi donacojn",

@@ -157,7 +157,7 @@
 	"user-wiki-link": "Viki kullanıcı sayfası",
 	"user-type-toggle-old": "Viki kullanıcı sayfasını kullan",
 	"user-type-toggle-new": "Sosyal kullanıcı sayfasını kullan",
-	"user-board-login-message": "Diğer kullanıcılara mesaj göndermek için <a href=\"$1\">oturum açmış</a> olmalısınız",
+	"user-board-login-message": "Diğer kullanıcılara mesaj göndermek için [[Special:UserLogin|oturum açmış]] olmalısınız",
 	"removeavatar": "Avatarı kaldır",
 	"givegift": "Bir hediye ver",
 	"viewgifts": "Hediyeleri gör",

@@ -156,7 +156,7 @@
 	"user-wiki-link": "หน้าผู้ใช้วิกิ",
 	"user-type-toggle-old": "ใช้หน้าผู้ใช้วิกิ",
 	"user-type-toggle-new": "ใช้หน้าสังคมผู้ใช้",
-	"user-board-login-message": "คุณต้อง<a href=\"$1\">ลงชื่อเข้าใช้</a>เพื่อส่งข้อความให้กับผู้ใช้คนอื่นๆ",
+	"user-board-login-message": "คุณต้อง[[Special:UserLogin|ลงชื่อเข้าใช้]]เพื่อส่งข้อความให้กับผู้ใช้คนอื่นๆ",
 	"removeavatar": "ลบอวาต้าออก",
 	"givegift": "ให้ของขวัญ",
 	"viewgifts": "ดูของขวัญ",

@@ -165,7 +165,7 @@
 	"user-wiki-link": "Páxina de usuario do wiki",
 	"user-type-toggle-old": "Usar a páxina de usuario do wiki",
 	"user-type-toggle-new": "Usar a páxina de usuario social",
-	"user-board-login-message": "Debe <a href=\"$1\">acceder ao sistema</a> para deixar mensaxes a outros usuarios",
+	"user-board-login-message": "Debe [[Special:UserLogin|acceder ao sistema]] para deixar mensaxes a outros usuarios",
 	"removeavatar": "Eliminar o avatar",
 	"givegift": "Dar un agasallo",
 	"viewgifts": "Ver os agasallos",

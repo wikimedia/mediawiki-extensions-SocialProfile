@@ -160,7 +160,7 @@
 	"user-wiki-link": "Halaman pengguna wiki",
 	"user-type-toggle-old": "Gunakan halaman pengguna wiki",
 	"user-type-toggle-new": "Gunakan halaman pengguna sosial",
-	"user-board-login-message": "Anda harus <a href=\"$1\">masuk log</a> untuk mengirim pesan ke pengguna lain",
+	"user-board-login-message": "Anda harus [[Special:UserLogin|masuk log]] untuk mengirim pesan ke pengguna lain",
 	"removeavatar": "Hapus avatar",
 	"givegift": "Berikan hadiah",
 	"viewgifts": "Lihat hadiah",
