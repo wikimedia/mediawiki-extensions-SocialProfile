@@ -300,8 +300,12 @@ class GiveGift extends SpecialPage {
 								htmlspecialchars( $this->msg( 'g-select-a-friend' )->plain() ) .
 							'</option>';
 					foreach ( $friends as $friend ) {
-						$output .= '<option value="' . htmlspecialchars( $friend['user_name'] ) . '">' .
-							htmlspecialchars( $friend['user_name'] ) .
+						$friendActor = User::newFromActorId( $friend['actor'] );
+						if ( !$friendActor || !$friendActor instanceof User ) {
+							continue;
+						}
+						$output .= '<option value="' . htmlspecialchars( $friendActor->getName() ) . '">' .
+							htmlspecialchars( $friendActor->getName() ) .
 						'</option>' . "\n";
 					}
 					$output .= '</select>
