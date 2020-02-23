@@ -105,19 +105,15 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 					$avatar_img = $avatar->getAvatarURL();
 
 					if ( $request['type'] == 'Foe' ) {
-						// FIXME: Message should be escaped, but uses raw HTML
 						$msg = $this->msg(
 							'ur-requests-message-foe',
-							htmlspecialchars( $userFrom->getUserPage()->getFullURL() ),
 							$userFrom->getName()
-						)->text();
+						)->parse();
 					} else {
-						// FIXME: Message should be escaped, but uses raw HTML
 						$msg = $this->msg(
 							'ur-requests-message-friend',
-							htmlspecialchars( $userFrom->getUserPage()->getFullURL() ),
 							$userFrom->getName()
-						)->text();
+						)->parse();
 					}
 
 					$message = $out->parseAsContent( trim( $request['message'] ), false );

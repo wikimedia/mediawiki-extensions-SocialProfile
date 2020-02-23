@@ -10,7 +10,7 @@
 	"ur-remove": "Scangille",
 	"ur-add-button-friend": "Aggiugne cumme amiche",
 	"ur-add-error-message-pending-request-title": "Pascenze!",
-	"ur-requests-message-friend": "<a href=\"$1\">$2</a> vvò ccu devende amiche tue.",
+	"ur-requests-message-friend": "[[User:$1|$1]] vvò ccu devende amiche tue.",
 	"ur-accept": "Accitte",
 	"ur-reject": "Scitte"
 }
