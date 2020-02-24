@@ -725,7 +725,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 			}
 
 			# check mime type blacklist
-			if ( isset( $wgMimeTypeBlacklist ) && $wgMimeTypeBlacklist !== null
+			if ( isset( $wgMimeTypeBlacklist )
 				&& UploadBase::checkFileExtension( $mime, $wgMimeTypeBlacklist ) ) {
 				return Status::newFatal( 'badfiletype', htmlspecialchars( $mime ) );
 			}
