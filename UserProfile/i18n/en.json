@@ -224,7 +224,7 @@
 	"action-avatarremove": "remove user's avatars",
 	"action-editothersprofiles": "update other users' social profiles",
 	"right-populate-user-profiles": "Allows populating other users' profiles for existing wikis",
-	"action-populate-user-profiles": "Allows populating other users' profiles for existing wikis",
+	"action-populate-user-profiles": "populate other users' profiles",
 	"apihelp-socialprofile-userprofileprivacy-description": "API module for setting the visibility (\"privacy\") of a profile field",
 	"apihelp-socialprofile-userprofileprivacy-summary": "API module for setting the visibility (\"privacy\") of a profile field",
 	"apihelp-socialprofile-userprofileprivacy-param-method": "Action (either \"get\" or \"set\")",
