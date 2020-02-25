@@ -101,5 +101,5 @@
 	"user-wiki-link": "Vikipēdijas lietotājlapa",
 	"user-type-toggle-old": "Izmantot Vikipēdijas lietotājlapu",
 	"user-type-toggle-new": "Izmantot sociālo lietotājlapu",
-	"user-board-login-message": "Jums ir jābūt <a href=\"$1\">iegājušam</a>, lai sūtītu ziņojumus citiem lietotājiem"
+	"user-board-login-message": "Jums ir jābūt [[Special:UserLogin|iegājušam]], lai sūtītu ziņojumus citiem lietotājiem"
 }

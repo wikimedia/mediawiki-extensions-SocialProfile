@@ -174,7 +174,7 @@
 	"user-wiki-link": "Página de usuario wiki",
 	"user-type-toggle-old": "Usar pagina de usuario wiki",
 	"user-type-toggle-new": "Usar página de usuario social",
-	"user-board-login-message": "Tiene que haber <a href=\"$1\">iniciado sesión</a> para enviar mensajes a otros usuarios.",
+	"user-board-login-message": "Tiene que haber [[Special:UserLogin|iniciado sesión]] para enviar mensajes a otros usuarios.",
 	"removeavatar": "Quitar avatar",
 	"givegift": "Dar un regalo",
 	"viewgifts": "Ver regalos",

@@ -158,7 +158,7 @@
 	"user-wiki-link": "Wiki korisnička stranica",
 	"user-type-toggle-old": "Koristi korisničku stranicu na wiki",
 	"user-type-toggle-new": "Koristi društvenu korisničku stranicu",
-	"user-board-login-message": "Morate biti <a href=\"$1\">prijavljeni</a> da biste slali poruke drugim korisnicima",
+	"user-board-login-message": "Morate biti [[Special:UserLogin|prijavljeni]] da biste slali poruke drugim korisnicima",
 	"removeavatar": "Ukloni avatara",
 	"givegift": "Pošalji poklon",
 	"viewgifts": "Vidi poklone",

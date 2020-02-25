@@ -156,7 +156,7 @@
 	"user-wiki-link": "Brukerside på wikien",
 	"user-type-toggle-old": "Bruk wikibrukerside",
 	"user-type-toggle-new": "Bruk sosial brukerside",
-	"user-board-login-message": "Du må være <a href=\"$1\">logget inn</a> for å sende beskjeder til andre brukere",
+	"user-board-login-message": "Du må være [[Special:UserLogin|logget inn]] for å sende beskjeder til andre brukere",
 	"removeavatar": "Fjern avatar",
 	"givegift": "Gi en gave",
 	"viewgifts": "Vis gaver",

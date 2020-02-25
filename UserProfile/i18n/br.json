@@ -163,7 +163,7 @@
 	"user-wiki-link": "Pajenn implijer wiki",
 	"user-type-toggle-old": "Implijout ar bajenn implijer wiki",
 	"user-type-toggle-new": "Implijout ur bajenn implijer sokial",
-	"user-board-login-message": "Ret eo deoc'h bezañ <a href=\"$1\">kevreet</a> evit kas kemennadennoù d'an implijerien all",
+	"user-board-login-message": "Ret eo deoc'h bezañ [[Special:UserLogin|kevreet]] evit kas kemennadennoù d'an implijerien all",
 	"removeavatar": "Lemel an avatar",
 	"givegift": "Reiñ ur prof",
 	"viewgifts": "Gwelet ar profoù",

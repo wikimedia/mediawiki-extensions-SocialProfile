@@ -1758,10 +1758,8 @@ class UserProfilePage extends Article {
 						</div>
 					</div>';
 			} else {
-				$login_link = SpecialPage::getTitleFor( 'Userlogin' );
 				$output .= '<div class="user-page-message-form">' .
-					// FIXME: This message uses raw html
-					wfMessage( 'user-board-login-message', htmlspecialchars( $login_link->getFullURL() ) )->plain() .
+					wfMessage( 'user-board-login-message' )->parse() .
 				'</div>';
 			}
 		}

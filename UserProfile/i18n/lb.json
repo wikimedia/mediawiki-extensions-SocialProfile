@@ -157,7 +157,7 @@
 	"user-wiki-link": "Wiki Benotzersäit",
 	"user-type-toggle-old": "Benotzt d'Wiki-Benotzersäit",
 	"user-type-toggle-new": "Sozial-Benotzersäit benotzen",
-	"user-board-login-message": "Dir musst <a href=\"$1\">ageloggt si</a> fir anere Benotzer e Message ze schécken",
+	"user-board-login-message": "Dir musst [[Special:UserLogin|ageloggt si]] fir anere Benotzer e Message ze schécken",
 	"removeavatar": "Aavatar ewechhuelen",
 	"givegift": "E Cadeau maachen",
 	"viewgifts": "Cadeaue weisen",

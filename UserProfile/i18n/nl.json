@@ -169,7 +169,7 @@
 	"user-wiki-link": "Wiki gebruikerspagina",
 	"user-type-toggle-old": "Wiki gebruikerspagina gebruiken",
 	"user-type-toggle-new": "Sociale gebruikerspagina gebruiken",
-	"user-board-login-message": "U moet <a href=\"$1\">aangemeld</a> zijn om berichten aan andere gebruikers te kunnen versturen",
+	"user-board-login-message": "U moet [[Special:UserLogin|aangemeld]] zijn om berichten aan andere gebruikers te kunnen versturen",
 	"removeavatar": "Avatar verwijderen",
 	"givegift": "Cadeautje geven",
 	"viewgifts": "Cadeautjes bekijken",

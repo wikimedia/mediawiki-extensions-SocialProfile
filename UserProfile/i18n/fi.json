@@ -185,7 +185,7 @@
 	"user-wiki-link": "Wikin käyttäjäsivu",
 	"user-type-toggle-old": "Käytä wikin käyttäjäsivua",
 	"user-type-toggle-new": "Käytä sosiaalista käyttäjäsivua",
-	"user-board-login-message": "Sinun tulee olla <a href=\"$1\">sisäänkirjautunut</a> lähettääksesi viestejä toisille käyttäjille",
+	"user-board-login-message": "Sinun tulee olla [[Special:UserLogin|sisäänkirjautunut]] lähettääksesi viestejä toisille käyttäjille",
 	"removeavatar": "Poista avatar",
 	"removeavatar-remove-my-avatar": "Poista avatarini",
 	"removeavatar-remove-your-avatar": "Poista avatarisi",

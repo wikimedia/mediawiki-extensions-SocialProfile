@@ -156,7 +156,7 @@
 	"user-wiki-link": "Wikis felhasználói lap",
 	"user-type-toggle-old": "Wikis felhasználói lap használata",
 	"user-type-toggle-new": "Közösségi profil-oldal használata",
-	"user-board-login-message": "<a href=\"$1\">Be kell jelentkezned</a>, ha más felhasználóknak szeretnél üzenetet küldeni",
+	"user-board-login-message": "[[Special:UserLogin|Be kell jelentkezned]], ha más felhasználóknak szeretnél üzenetet küldeni",
 	"removeavatar": "Avatar eltávolítása",
 	"givegift": "Ajándékot adok",
 	"viewgifts": "Ajándékok megtekintése",

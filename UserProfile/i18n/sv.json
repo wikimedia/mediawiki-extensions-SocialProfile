@@ -159,7 +159,7 @@
 	"user-wiki-link": "Användarsida på wikin",
 	"user-type-toggle-old": "Använd wikianvändarsida",
 	"user-type-toggle-new": "Använd social användarsida",
-	"user-board-login-message": "Du måste vara <a href=\"$1\">inloggad</a> för att skicka meddelanden till andra användare",
+	"user-board-login-message": "Du måste vara [[Special:UserLogin|inloggad]] för att skicka meddelanden till andra användare",
 	"removeavatar": "Ta bort avatar",
 	"givegift": "Ge en present",
 	"viewgifts": "Visa presenter",

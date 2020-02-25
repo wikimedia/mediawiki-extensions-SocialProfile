@@ -166,7 +166,7 @@
 	"user-wiki-link": "Wiki-Benutzersyte",
 	"user-type-toggle-old": "Bruuch d Wiki-Benutzersyte",
 	"user-type-toggle-new": "Bruuch d Benutzer-Profilsyte",
-	"user-board-login-message": "Du muesch <a href=\"$1\">aagmäldet syy</a> go Nochrichte an anderi Nutzer z schicke",
+	"user-board-login-message": "Du muesch [[Special:UserLogin|aagmäldet syy]] go Nochrichte an anderi Nutzer z schicke",
 	"removeavatar": "Avatar lesche",
 	"givegift": "Ebis schänke",
 	"viewgifts": "Gschänk aaluege",

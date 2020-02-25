@@ -154,7 +154,7 @@
 	"user-wiki-link": "Pagina d'utilizaire del wiki",
 	"user-type-toggle-old": "Utilizar la pagina d'utilizaire del wiki",
 	"user-type-toggle-new": "Utilizar la pagina d'utilizaire en societat",
-	"user-board-login-message": "Vos cal èsser <a href=\"$1\">en sesilha</a> per mandar de messatges als autres utilizaires",
+	"user-board-login-message": "Vos cal èsser [[Special:UserLogin|en sesilha]] per mandar de messatges als autres utilizaires",
 	"removeavatar": "Levar l’avatar",
 	"givegift": "Balhar un present",
 	"viewgifts": "Veire los presents",
