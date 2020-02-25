@@ -45,7 +45,6 @@
 	"g-give-enter-friend-title": "Ha tudod a felhasználó nevét, írd be alább",
 	"g-given": "Ezt az ajándékot már {{PLURAL:$1|egy|$1}} alkalommal adták oda",
 	"g-give-list-friends-title": "Válassz valakit a barátaid listájáról",
-	"g-give-list-select": "válassz ki egy barátot",
 	"g-give-separator": "vagy",
 	"g-give-no-user-message": "Az ajándékok és díjak remek módjai barátaid elismerésének!",
 	"g-give-no-user-title": "Kinek szeretnél ajándékot küldeni?",

@@ -45,7 +45,6 @@
 	"g-give-enter-friend-title": "Hvis du kjenner navnet på brukeren, skriv det inn under.",
 	"g-given": "Denne gaven har blitt gitt {{PLURAL:$1|én gang|$1 ganger}}",
 	"g-give-list-friends-title": "Velg fra din liste over venner",
-	"g-give-list-select": "velg en venn",
 	"g-give-separator": "eller",
 	"g-give-no-user-message": "Gaver og utmerkelser er en flott måte å vise at du setter pris på vennene dine!",
 	"g-give-no-user-title": "Hvem vil du gi en gave til?",

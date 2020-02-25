@@ -49,7 +49,6 @@
 	"g-give-enter-friend-title": "Si vous connaissez le nom de l’utilisateur, entrez-le ci-dessous",
 	"g-given": "Ce cadeau a été donné {{PLURAL:$1|une|$1}} fois",
 	"g-give-list-friends-title": "Sélectionnez depuis la liste de vos amis",
-	"g-give-list-select": "sélectionnez un ami",
 	"g-give-separator": "ou",
 	"g-give-no-user-message": "Les cadeaux et les prix sont bien pour faire connaitre vos amis !",
 	"g-give-no-user-title": "À qui voulez-vous donner un cadeau ?",

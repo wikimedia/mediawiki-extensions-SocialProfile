@@ -46,7 +46,6 @@
 	"g-give-enter-friend-title": "If you know the name of the user, type it in below",
 	"g-given": "This gift has been given out $1 {{PLURAL:$1|time|times}}",
 	"g-give-list-friends-title": "Select from your list of friends",
-	"g-give-list-select": "select a friend",
 	"g-give-separator": "or",
 	"g-give-no-user-message": "Gifts and awards are a great way to acknowledge your friends!",
 	"g-give-no-user-title": "Who would you like to give a gift to?",

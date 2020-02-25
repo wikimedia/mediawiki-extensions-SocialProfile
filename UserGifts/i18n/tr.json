@@ -45,7 +45,6 @@
 	"g-give-enter-friend-title": "Kullanıcının adını biliyorsanız, aşağıya girin",
 	"g-given": "Bu hediye $1 {{PLURAL:$1|kez|kez}} verildi",
 	"g-give-list-friends-title": "Arkadaş listenizden seçin",
-	"g-give-list-select": "bir arkadaş seç",
 	"g-give-separator": "ya da",
 	"g-give-no-user-message": "Hediye ve ödüller arkadaşlarınıza teşekkür etmek için harika bir yol!",
 	"g-give-no-user-title": "Hediyeyi kime vermek istersiniz?",

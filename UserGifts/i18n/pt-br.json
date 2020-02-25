@@ -44,7 +44,6 @@
 	"g-give-enter-friend-title": "Se você sabe o nome do utilizador, escreva-o abaixo",
 	"g-given": "Este presente foi dado $1 {{PLURAL:$1|vez|vezes}}",
 	"g-give-list-friends-title": "Selecione da sua lista de amigos",
-	"g-give-list-select": "selecione um amigo",
 	"g-give-separator": "ou",
 	"g-give-no-user-message": "Presentes e prêmios são uma ótima maneira de dar reconhecimento aos seus amigos!",
 	"g-give-no-user-title": "Para quem você gostaria de dar um presente?",

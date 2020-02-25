@@ -45,7 +45,6 @@
 	"g-give-enter-friend-title": "لو كنت تعرف اسم المستخدم، اكتبه بالأسفل",
 	"g-given": "هذه الهدية تم إعطاؤها $1 {{PLURAL:$1|مرة|مرة}}",
 	"g-give-list-friends-title": "اختر من قائمة أصدقائك",
-	"g-give-list-select": "اختر صديقا",
 	"g-give-separator": "أو",
 	"g-give-no-user-message": "الهدايا والجوائز طريقة عظيمة لمعرفة أصدقائك!",
 	"g-give-no-user-title": "من تريد إعطاء هدية له؟",

@@ -45,7 +45,6 @@
 	"g-give-enter-friend-title": "Jos tiedät käyttäjän nimen, kirjoita se alapuolelle",
 	"g-given": "Tämä lahja on annettu $1 {{PLURAL:$1|kerran|kertaa}}",
 	"g-give-list-friends-title": "Valitse ystävälistaltasi",
-	"g-give-list-select": "valitse ystävä",
 	"g-give-separator": "tai",
 	"g-give-no-user-message": "Lahjat ja palkinnot ovat loistava tapa huomioida ystäviäsi!",
 	"g-give-no-user-title": "Kenelle haluaisit antaa lahjan?",

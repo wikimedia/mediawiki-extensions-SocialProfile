@@ -44,7 +44,6 @@
 	"g-give-enter-friend-title": "Ak poznáte meno používateľa, napíšte ho dolu",
 	"g-given": "Tento darček bol darovaný {{PLURAL:$1|jedenkrát|$1-krát}}",
 	"g-give-list-friends-title": "Vybrať z vášho zoznamu priateľov",
-	"g-give-list-select": "vybrať priateľa",
 	"g-give-separator": "alebo",
 	"g-give-no-user-message": "Darčeky a ocenenia sú skvelým spôsobom ako oceniť vašich priateľov!",
 	"g-give-no-user-title": "Komu by ste chceli darovať darček?",

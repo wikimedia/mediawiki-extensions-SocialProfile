@@ -44,7 +44,6 @@
 	"g-give-enter-friend-title": "Ako znate ime korisnika, otkucajte ga ispod",
 	"g-given": "Ovaj poklon je bio poslat $1 {{PLURAL:$1|put|puta}}",
 	"g-give-list-friends-title": "Izaberite sa Vašeg spiska prijatelja",
-	"g-give-list-select": "izaberite prijatelja",
 	"g-give-separator": "ili",
 	"g-give-no-user-title": "Kome biste voleli da pošaljete poklon?",
 	"g-give-to-user-title": "Slanje poklona \"$1\" korisniku $2",

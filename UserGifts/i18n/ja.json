@@ -47,7 +47,6 @@
 	"g-give-enter-friend-title": "利用者の名前を知っているなら、以下に入力してください",
 	"g-given": "この贈り物は$1{{PLURAL:$1|回}}贈られています",
 	"g-give-list-friends-title": "友達一覧から選択してください",
-	"g-give-list-select": "友達を選択",
 	"g-give-separator": "または",
 	"g-give-no-user-message": "贈り物と賞は友人に対して感謝の気持ちを表すのにぴったりな方法です！",
 	"g-give-no-user-title": "誰に贈り物を贈りますか？",
