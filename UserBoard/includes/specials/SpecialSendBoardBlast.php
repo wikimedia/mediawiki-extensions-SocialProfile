@@ -131,14 +131,18 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$per_row = 3;
 		if ( count( $relationships ) > 0 ) {
 			foreach ( $relationships as $relationship ) {
+				$friendActor = User::newFromActorId( $relationship['actor'] );
+				if ( !$friendActor || !$friendActor instanceof User ) {
+					continue;
+				}
 				if ( $relationship['type'] == 1 ) {
 					$class = 'friend';
 				} else {
 					$class = 'foe';
 				}
-				$id = $relationship['user_id'];
+				$id = $friendActor->getId();
 				$output .= '<div class="blast-' . $class . "-unselected\" id=\"user-{$id}\">
-						" . htmlspecialchars( $relationship['user_name'] ) . "
+						" . htmlspecialchars( $friendActor->getName() ) . "
 					</div>";
 				if ( $x == count( $relationships ) || $x != 1 && $x % $per_row == 0 ) {
 					$output .= '<div class="visualClear"></div>';
