@@ -45,14 +45,21 @@ class MigrateOldUserGiftsUserColumnsToActor extends LoggedUpdateMaintenance {
 	 */
 	protected function doDBUpdates() {
 		$dbw = $this->getDB( DB_MASTER );
-		$dbw->query(
-			"UPDATE {$dbw->tableName( 'user_gift' )} SET ug_actor_to=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=ug_user_id_to AND actor_name=ug_user_name_to)",
-			__METHOD__
-		);
-		$dbw->query(
-			"UPDATE {$dbw->tableName( 'user_gift' )} SET ug_actor_from=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=ug_user_id_from AND actor_name=ug_user_name_from)",
-			__METHOD__
-		);
+
+		if ( $dbw->fieldExists( 'user_gift', 'ug_user_id_to', __METHOD__ ) ) {
+			$dbw->query(
+				"UPDATE {$dbw->tableName( 'user_gift' )} SET ug_actor_to=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=ug_user_id_to AND actor_name=ug_user_name_to)",
+				__METHOD__
+			);
+		}
+
+		if ( $dbw->fieldExists( 'user_gift', 'ug_user_id_from', __METHOD__ ) ) {
+			$dbw->query(
+				"UPDATE {$dbw->tableName( 'user_gift' )} SET ug_actor_from=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=ug_user_id_from AND actor_name=ug_user_name_from)",
+				__METHOD__
+			);
+		}
+
 		return true;
 	}
 }

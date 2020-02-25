@@ -45,10 +45,16 @@ class MigrateOldUserFieldPrivacyUserColumnToActor extends LoggedUpdateMaintenanc
 	 */
 	protected function doDBUpdates() {
 		$dbw = $this->getDB( DB_MASTER );
+
+		if ( !$dbw->fieldExists( 'user_fields_privacy', 'ufp_user_id', __METHOD__ ) ) {
+			return true;
+		}
+
 		$dbw->query(
 			"UPDATE {$dbw->tableName( 'user_fields_privacy' )} SET ufp_actor=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=ufp_user_id)",
 			__METHOD__
 		);
+
 		return true;
 	}
 }

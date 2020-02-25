@@ -45,10 +45,17 @@ class MigrateOldGiftsUserColumnsToActor extends LoggedUpdateMaintenance {
 	 */
 	protected function doDBUpdates() {
 		$dbw = $this->getDB( DB_MASTER );
+
+		if ( !$dbw->fieldExists( 'gift', 'gift_creator_user_id', __METHOD__ ) ) {
+			// Old field's been dropped already so nothing to do here...
+			return true;
+		}
+
 		$dbw->query(
 			"UPDATE {$dbw->tableName( 'gift' )} SET gift_creator_actor=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=gift_creator_user_id AND actor_name=gift_creator_user_name)",
 			__METHOD__
 		);
+
 		return true;
 	}
 }

@@ -51,10 +51,12 @@ class MigrateOldUserStatsUserColumnsToActor extends LoggedUpdateMaintenance {
 			$dbw->sourceFile( __DIR__ . '/../sql/patches/actor/add-stats_id.sql' );
 		}
 
-		$dbw->query(
-			"UPDATE {$dbw->tableName( 'user_stats' )} SET stats_actor=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=stats_user_id AND actor_name=stats_user_name)",
-			__METHOD__
-		);
+		if ( $dbw->fieldExists( 'user_stats', 'stats_user_id', __METHOD__ ) ) {
+			$dbw->query(
+				"UPDATE {$dbw->tableName( 'user_stats' )} SET stats_actor=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=stats_user_id AND actor_name=stats_user_name)",
+				__METHOD__
+			);
+		}
 
 		return true;
 	}

@@ -45,14 +45,21 @@ class MigrateOldUserRelationshipUserColumnsToActor extends LoggedUpdateMaintenan
 	 */
 	protected function doDBUpdates() {
 		$dbw = $this->getDB( DB_MASTER );
-		$dbw->query(
-			"UPDATE {$dbw->tableName( 'user_relationship' )} SET r_actor=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=r_user_id AND actor_name=r_user_name)",
-			__METHOD__
-		);
-		$dbw->query(
-			"UPDATE {$dbw->tableName( 'user_relationship' )} SET r_actor_relation=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=r_user_id_relation AND actor_name=r_user_name_relation)",
-			__METHOD__
-		);
+
+		if ( $dbw->fieldExists( 'user_relationship', 'r_user_id', __METHOD__ ) ) {
+			$dbw->query(
+				"UPDATE {$dbw->tableName( 'user_relationship' )} SET r_actor=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=r_user_id AND actor_name=r_user_name)",
+				__METHOD__
+			);
+		}
+
+		if ( $dbw->fieldExists( 'user_relationship', 'r_user_id_relation', __METHOD__ ) ) {
+			$dbw->query(
+				"UPDATE {$dbw->tableName( 'user_relationship' )} SET r_actor_relation=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=r_user_id_relation AND actor_name=r_user_name_relation)",
+				__METHOD__
+			);
+		}
+
 		return true;
 	}
 }
