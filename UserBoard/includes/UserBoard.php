@@ -208,7 +208,7 @@ class UserBoard {
 				$user_sql .= ' AND ub_type = 0 ';
 			}
 			if ( $wgUser->isLoggedIn() ) {
-				$user_sql .= " OR (ub_actor={$user->getActorId()} AND ub_actor_from={$wgUser->getActorId()}) ";
+				$user_sql .= " OR (ub_actor={$user->getActorId()} OR ub_actor_from={$wgUser->getActorId()}) ";
 			}
 		}
 
