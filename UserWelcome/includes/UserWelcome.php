@@ -27,16 +27,23 @@ class UserWelcome {
 		// This is so stupid. The callback to onParserFirstCallInit() is
 		// *always* (assumed to be) static even if you don't declare it as such.
 		// So obviously using $this in a static function fails...grumble grumble.
-		$uw = new UserWelcome;
+		$uw = new UserWelcome( $parser->getUser() );
 		$output = $uw->getWelcome();
 		return $output;
 	}
 
+	/** @var User */
+	private $user;
+
+	public function __construct( User $user ) {
+		$this->user = $user;
+	}
+
 	function getWelcome() {
-		global $wgUser, $wgLang;
+		global $wgLang;
 
 		// Get stats and user level
-		$stats = new UserStats( $wgUser );
+		$stats = new UserStats( $this->user );
 		$stats_data = $stats->getUserStats();
 		$user_level = new UserLevel( $stats_data['points'] );
 
@@ -45,15 +52,15 @@ class UserWelcome {
 		$avatar_link = SpecialPage::getTitleFor( 'UploadAvatar' );
 
 		// Make an avatar
-		$avatar = new wAvatar( $wgUser->getId(), 'l' );
+		$avatar = new wAvatar( $this->user->getId(), 'l' );
 
 		// Profile top images/points
 		$output = '<div class="mp-welcome-logged-in">
-		<h2>' . wfMessage( 'mp-welcome-logged-in', $wgUser->getName() )->parse() . '</h2>
+		<h2>' . wfMessage( 'mp-welcome-logged-in', $this->user->getName() )->parse() . '</h2>
 		<div class="mp-welcome-image">
-		<a href="' . htmlspecialchars( $wgUser->getUserPage()->getFullURL() ) . '" rel="nofollow">' .
+		<a href="' . htmlspecialchars( $this->user->getUserPage()->getFullURL() ) . '" rel="nofollow">' .
 			$avatar->getAvatarURL() . '</a>';
-		if ( $wgUser->isLoggedIn() ) {
+		if ( $this->user->isLoggedIn() ) {
 			$links = [];
 
 			if ( $avatar->isDefault() ) {
@@ -67,8 +74,8 @@ class UserWelcome {
 					wfMessage( $uploadOrEditMsg )->plain() .
 				'</a>';
 
-				if ( $wgUser->isAllowed( 'avatarremove' ) ) {
-					$removeAvatarURL = SpecialPage::getTitleFor( 'RemoveAvatar', $wgUser->getName() )->getFullURL();
+				if ( $this->user->isAllowed( 'avatarremove' ) ) {
+					$removeAvatarURL = SpecialPage::getTitleFor( 'RemoveAvatar', $this->user->getName() )->getFullURL();
 				} else {
 					$removeAvatarURL = SpecialPage::getTitleFor( 'RemoveAvatar' )->getFullURL();
 				}
@@ -134,9 +141,9 @@ class UserWelcome {
 	}
 
 	function getRelationshipRequestLink() {
-		global $wgUser, $wgMemc;
+		global $wgMemc;
 
-		$requestCount = new RelationshipRequestCount( $wgMemc, $wgUser );
+		$requestCount = new RelationshipRequestCount( $wgMemc, $this->user );
 		$friendRequestCount = $requestCount->setFriends()->get();
 		$foeRequestCount = $requestCount->setFoes()->get();
 
@@ -168,9 +175,9 @@ class UserWelcome {
 	}
 
 	function getNewGiftLink() {
-		global $wgUser, $wgMemc;
+		global $wgMemc;
 
-		$userGiftCount = new UserGiftCount( $wgMemc, $wgUser );
+		$userGiftCount = new UserGiftCount( $wgMemc, $this->user );
 		$giftCount = $userGiftCount->get();
 
 		$output = '';
@@ -192,9 +199,9 @@ class UserWelcome {
 	}
 
 	function getNewSystemGiftLink() {
-		global $wgUser, $wgMemc;
+		global $wgMemc;
 
-		$systemGiftCount = new SystemGiftCount( $wgMemc, $wgUser );
+		$systemGiftCount = new SystemGiftCount( $wgMemc, $this->user );
 		$giftCount = $systemGiftCount->get();
 
 		$output = '';
@@ -216,9 +223,9 @@ class UserWelcome {
 	}
 
 	function getNewMessagesLink() {
-		global $wgUser, $wgMemc;
+		global $wgMemc;
 
-		$messageCount = new UserBoardMessageCount( $wgMemc, $wgUser );
+		$messageCount = new UserBoardMessageCount( $wgMemc, $this->user );
 		$newMessages = $messageCount->get();
 		$output = '';
 
