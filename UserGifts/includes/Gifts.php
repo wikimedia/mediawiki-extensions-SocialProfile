@@ -12,15 +12,19 @@ class Gifts {
 	/**
 	 * Adds a gift to the database
 	 *
+	 * @param User $user User who created the gift
 	 * @param string $gift_name Name of the gift, as supplied by the user
 	 * @param string $gift_description A short description about the gift, as supplied by the user
 	 * @param int $gift_access 0 by default
 	 *
 	 * @return int
 	 */
-	public static function addGift( $gift_name, $gift_description, $gift_access = 0 ) {
-		global $wgUser;
-
+	public static function addGift(
+		User $user,
+		$gift_name,
+		$gift_description,
+		$gift_access = 0
+	) {
 		$dbw = wfGetDB( DB_MASTER );
 
 		$dbw->insert(
@@ -29,9 +33,10 @@ class Gifts {
 				'gift_name' => $gift_name,
 				'gift_description' => $gift_description,
 				'gift_createdate' => date( 'Y-m-d H:i:s' ),
-				'gift_creator_actor' => $wgUser->getActorId(),
+				'gift_creator_actor' => $user->getActorId(),
 				'gift_access' => $gift_access,
-			], __METHOD__
+			],
+			__METHOD__
 		);
 		return $dbw->insertId();
 	}

@@ -61,6 +61,7 @@ class GiftManager extends SpecialPage {
 		if ( $request->wasPosted() && $user->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
 			if ( !$request->getInt( 'id' ) ) {
 				$giftId = Gifts::addGift(
+					$user,
 					$request->getVal( 'gift_name' ),
 					$request->getVal( 'gift_description' ),
 					$request->getInt( 'access' )
