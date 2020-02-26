@@ -17,8 +17,15 @@ class UserBoard {
 	 */
 	const MESSAGE_PRIVATE = 1;
 
-	// phpcs:ignore Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore
-	public function __construct() {}
+	/**
+	 * @var User the current context user
+	 */
+	private $currentUser;
+
+	public function __construct() {
+		// No context to use
+		$this->currentUser = RequestContext::getMain()->getUser();
+	}
 
 	/**
 	 * Sends a user board message to another user.
@@ -190,7 +197,7 @@ class UserBoard {
 	 * @return array Array of user board messages
 	 */
 	public function getUserBoardMessages( $user, $user_2 = 0, $limit = 0, $page = 0 ) {
-		global $wgUser, $wgOut, $wgTitle;
+		global $wgOut, $wgTitle;
 
 		$dbr = wfGetDB( DB_REPLICA );
 
@@ -202,16 +209,19 @@ class UserBoard {
 		if ( $user_2 instanceof User ) {
 			$user_sql = "( (ub_actor={$user->getActorId()} AND ub_actor_from={$user_2->getActorId()}) OR
 					(ub_actor={$user_2->getActorId()} AND ub_actor_from={$user->getActorId()}) )";
-			if ( !( $user->getActorId() == $wgUser->getActorId() || $user_2->getActorId() == $wgUser->getActorId() ) ) {
+			if ( !(
+				$user->getActorId() == $this->currentUser->getActorId() ||
+				$user_2->getActorId() == $this->currentUser->getActorId()
+			) ) {
 				$user_sql .= ' AND ub_type = 0 ';
 			}
 		} else {
 			$user_sql = "ub_actor = {$user->getActorId()}";
-			if ( $user->getActorId() != $wgUser->getId() ) {
+			if ( $user->getActorId() != $this->currentUser->getId() ) {
 				$user_sql .= ' AND ub_type = 0 ';
 			}
-			if ( $wgUser->isLoggedIn() ) {
-				$user_sql .= " OR (ub_actor={$user->getActorId()} OR ub_actor_from={$wgUser->getActorId()}) ";
+			if ( $this->currentUser->isLoggedIn() ) {
+				$user_sql .= " OR (ub_actor={$user->getActorId()} OR ub_actor_from={$this->currentUser->getActorId()}) ";
 			}
 		}
 
@@ -252,14 +262,15 @@ class UserBoard {
 	 * @return int The amount of board-to-board messages
 	 */
 	public function getUserBoardToBoardCount( $user, $user_2 ) {
-		global $wgUser;
-
 		$dbr = wfGetDB( DB_REPLICA );
 
 		$user_sql = " ( (ub_actor={$user->getActorId()} AND ub_actor_from={$user_2->getActorId()}) OR
 					(ub_actor={$user_2->getActorId()} AND ub_actor_from={$user->getActorId()}) )";
 
-		if ( !( $user->getActorId() == $wgUser->getActorId() || $user_2->getActorId() == $wgUser->getActorId() ) ) {
+		if ( !(
+			$user->getActorId() == $this->currentUser->getActorId() ||
+			$user_2->getActorId() == $this->currentUser->getActorId()
+		) ) {
 			$user_sql .= ' AND ub_type = 0 ';
 		}
 		$sql = "SELECT COUNT(*) AS the_count
@@ -278,7 +289,7 @@ class UserBoard {
 	}
 
 	public function displayMessages( $user, $user_2 = 0, $count = 10, $page = 0 ) {
-		global $wgUser, $wgTitle;
+		global $wgTitle;
 
 		$output = ''; // Prevent E_NOTICE
 		$messages = $this->getUserBoardMessages( $user, $user_2, $count, $page );
@@ -294,7 +305,7 @@ class UserBoard {
 				$message_type_label = '';
 				$delete_link = '';
 
-				if ( $wgUser->getActorId() != $message['ub_actor_from'] ) {
+				if ( $this->currentUser->getActorId() != $message['ub_actor_from'] ) {
 					$board_to_board = '<a href="' .
 						htmlspecialchars(
 							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [
@@ -310,7 +321,9 @@ class UserBoard {
 						) . '">' .
 						wfMessage( 'userboard_sendmessage', $sender->getName() )->parse() . '</a>';
 				}
-				if ( $wgUser->getActorId() == $message['ub_actor'] || $wgUser->isAllowed( 'userboard-delete' ) ) {
+				if ( $this->currentUser->getActorId() == $message['ub_actor'] ||
+					$this->currentUser->isAllowed( 'userboard-delete' )
+				) {
 					$delete_link = "<span class=\"user-board-red\">
 							<a href=\"javascript:void(0);\" data-message-id=\"{$message['id']}\">" .
 								wfMessage( 'delete' )->plain() . '</a>
@@ -348,7 +361,7 @@ class UserBoard {
 					</div>
 				</div>";
 			}
-		} elseif ( $wgUser->getName() == $wgTitle->getText() ) {
+		} elseif ( $this->currentUser->getName() == $wgTitle->getText() ) {
 			$output .= '<div class="no-info-container">' .
 				wfMessage( 'userboard_nomessages' )->parse() .
 			'</div>';
