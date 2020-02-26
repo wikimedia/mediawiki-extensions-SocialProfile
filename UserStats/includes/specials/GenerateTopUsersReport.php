@@ -101,7 +101,6 @@ class GenerateTopUsersReport extends SpecialPage {
 	 * @param string $period Either weekly or monthly
 	 */
 	private function generateReport( $period ) {
-		global $wgUser;
 		global $wgUserStatsPointValues;
 
 		$out = $this->getOutput();
@@ -278,18 +277,6 @@ class GenerateTopUsersReport extends SpecialPage {
 		</div>';
 		}
 
-		// Make the edit as MediaWiki default
-		$oldUser = $wgUser;
-		$wgUser = User::newFromName( 'MediaWiki default' );
-		// If the user does not exist, crate it
-		if ( $wgUser->getId() === 0 ) {
-			$wgUser = User::newSystemUser( 'MediaWiki default', [ 'steal' => true ] );
-		}
-		$wgUser->addGroup( 'bot' );
-
-		// Add a note to the page that it was automatically generated
-		$pageContent .= "\n\n''" . $this->msg( 'user-stats-report-generation-note' )->parse() . "''\n\n";
-
 		// Create the Title object that represents the report page
 		// For grep: user-stats-report-weekly-page-title, user-stats-report-monthly-page-title
 		$title = Title::makeTitleSafe(
@@ -302,36 +289,64 @@ class GenerateTopUsersReport extends SpecialPage {
 		// @todo Would there be any point in updating a pre-existing article?
 		// I think not, but...
 		if ( !$page->exists() ) {
-			// For grep: user-stats-report-weekly-edit-summary, user-stats-report-monthly-edit-summary
-			$page->doEditContent(
-				ContentHandler::makeContent( $pageContent, $title ),
-				$this->msg( "user-stats-report-{$period}-edit-summary" )->inContentLanguage()->plain()
-			);
-			$date = date( 'Y-m-d H:i:s' );
-			// Archive points from the weekly/monthly table into the archive
-			// table
-			$dbw->insertSelect(
-				'user_points_archive',
-				"user_points_{$period}",
-				[
-					'up_actor' => 'up_actor',
-					'up_points' => 'up_points',
-					'up_period' => ( ( $period == 'weekly' ) ? 1 : 2 ),
-					'up_date' => $dbw->addQuotes( $date )
-				],
-				'*',
-				__METHOD__
-			);
-
-			// Clear the current point table to make way for the next period
-			$res = $dbw->delete( "user_points_{$period}", '*', __METHOD__ );
+			$this->createReportPage( $page, $title, $period, $pageContent );
 		}
-
-		// Switch the user back
-		$wgUser = $oldUser;
 
 		$output .= '</div>'; // .top-users
 		$out->addHTML( $output );
+	}
+
+	/**
+	 * Make the edit
+	 *
+	 * TODO stop writing to $wgUser
+	 *
+	 * @param WikiPage $page
+	 * @param Title $title
+	 * @param string $period
+	 * @param string $pageContent
+	 */
+	private function createReportPage( WikiPage $page, Title $title, $period, $pageContent ) {
+		global $wgUser;
+
+		// Make the edit as MediaWiki default
+		$oldUser = $wgUser;
+		$wgUser = User::newFromName( 'MediaWiki default' );
+		// If the user does not exist, create it
+		if ( $wgUser->getId() === 0 ) {
+			$wgUser = User::newSystemUser( 'MediaWiki default', [ 'steal' => true ] );
+		}
+		$wgUser->addGroup( 'bot' );
+
+		// Add a note to the page that it was automatically generated
+		$pageContent .= "\n\n''" . $this->msg( 'user-stats-report-generation-note' )->parse() . "''\n\n";
+
+		// For grep: user-stats-report-weekly-edit-summary, user-stats-report-monthly-edit-summary
+		$page->doEditContent(
+			ContentHandler::makeContent( $pageContent, $title ),
+			$this->msg( "user-stats-report-{$period}-edit-summary" )->inContentLanguage()->plain()
+		);
+		$date = date( 'Y-m-d H:i:s' );
+		// Archive points from the weekly/monthly table into the archive table
+		$dbw = wfGetDB( DB_MASTER );
+		$dbw->insertSelect(
+			'user_points_archive',
+			"user_points_{$period}",
+			[
+				'up_actor' => 'up_actor',
+				'up_points' => 'up_points',
+				'up_period' => ( ( $period == 'weekly' ) ? 1 : 2 ),
+				'up_date' => $dbw->addQuotes( $date )
+			],
+			'*',
+			__METHOD__
+		);
+
+		// Clear the current point table to make way for the next period
+		$res = $dbw->delete( "user_points_{$period}", '*', __METHOD__ );
+
+		// Switch the user back
+		$wgUser = $oldUser;
 	}
 
 }
