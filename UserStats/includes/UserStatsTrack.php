@@ -139,9 +139,9 @@ class UserStatsTrack {
 	 * @param int $val Increase $field by this amount, defaults to 1
 	 */
 	function incStatField( $field, $val = 1 ) {
-		global $wgUser, $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
+		global $wgMemc, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
 
-		if ( !$wgUser->isBot() && !$wgUser->isAnon() && $this->stats_fields[$field] ) {
+		if ( !$this->user->isBot() && !$this->user->isAnon() && $this->stats_fields[$field] ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$dbw->update(
 				'user_stats',
@@ -203,9 +203,9 @@ class UserStatsTrack {
 	 * @param int $val Decrease $field by this amount, defaults to 1
 	 */
 	function decStatField( $field, $val = 1 ) {
-		global $wgUser, $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
+		global $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
 
-		if ( !$wgUser->isBot() && !$wgUser->isAnon() && $this->stats_fields[$field] ) {
+		if ( !$this->user->isBot() && !$this->user->isAnon() && $this->stats_fields[$field] ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$dbw->update(
 				'user_stats',
