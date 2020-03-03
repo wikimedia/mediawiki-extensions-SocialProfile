@@ -218,8 +218,6 @@ class UserProfile {
 	 * @return int
 	 */
 	public function getProfileComplete() {
-		global $wgUser;
-
 		$complete_count = 0;
 
 		// Check all profile fields
@@ -233,7 +231,7 @@ class UserProfile {
 
 		// Check if the user has a non-default avatar
 		$this->profile_fields_count++;
-		$avatar = new wAvatar( $wgUser->getId(), 'l' );
+		$avatar = new wAvatar( $this->user->getId(), 'l' );
 		if ( !$avatar->isDefault() ) {
 			$complete_count++;
 		}
