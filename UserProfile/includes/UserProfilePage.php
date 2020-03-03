@@ -1765,7 +1765,7 @@ class UserProfilePage extends Article {
 		}
 
 		$output .= '<div id="user-page-board">';
-		$b = new UserBoard( $this->getContext()->getUser() );
+		$b = new UserBoard( $this->viewingUser );
 		$output .= $b->displayMessages( $this->profileOwner, 0, 10 );
 		$output .= '</div>';
 

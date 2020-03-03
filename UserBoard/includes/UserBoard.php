@@ -224,7 +224,7 @@ class UserBoard {
 				$user_sql .= ' AND ub_type = 0 ';
 			}
 			if ( $this->currentUser->isLoggedIn() ) {
-				$user_sql .= " OR (ub_actor={$user->getActorId()} OR ub_actor_from={$this->currentUser->getActorId()}) ";
+				$user_sql .= " OR (ub_actor={$user->getActorId()} AND ub_actor_from={$this->currentUser->getActorId()}) ";
 			}
 		}
 
