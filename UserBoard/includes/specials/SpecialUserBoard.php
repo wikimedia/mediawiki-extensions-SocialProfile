@@ -96,7 +96,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		 */
 		$per_page = $ub_messages_show;
 
-		$b = new UserBoard();
+		$b = new UserBoard( $currentUser );
 		$ub_messages = $b->getUserBoardMessages(
 			// @todo FIXME: variabilize this construct since we're using it twice here
 			( $userFromURL ? User::newFromName( $userFromURL ) : $currentUser ),

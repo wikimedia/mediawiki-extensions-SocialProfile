@@ -22,9 +22,12 @@ class UserBoard {
 	 */
 	private $currentUser;
 
-	public function __construct() {
+	/**
+	 * @param User|null $user
+	 */
+	public function __construct( $user = null ) {
 		// No context to use
-		$this->currentUser = RequestContext::getMain()->getUser();
+		$this->currentUser = $user ?? RequestContext::getMain()->getUser();
 	}
 
 	/**

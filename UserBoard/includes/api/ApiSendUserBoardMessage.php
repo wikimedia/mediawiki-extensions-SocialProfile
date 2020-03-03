@@ -23,7 +23,7 @@ class ApiSendUserBoardMessage extends ApiBase {
 		$user_name = stripslashes( $user_name );
 		$user_name = urldecode( $user_name );
 		$recipient = User::newFromName( $user_name );
-		$b = new UserBoard();
+		$b = new UserBoard( $user );
 
 		$m = $b->sendBoardMessage(
 			$user,

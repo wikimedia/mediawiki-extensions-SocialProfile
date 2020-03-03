@@ -187,7 +187,7 @@ class UserProfilePage extends Article {
 			] );
 		}
 		$out->addHTML( $this->getCasualGames() );
-		$out->addHTML( $this->getUserBoard() );
+		$out->addHTML( $this->getUserBoard( $context->getUser() ) );
 
 		if ( !Hooks::run( 'UserProfileEndRight', [ &$userProfilePage ] ) ) {
 			$logger->debug( "{method}: UserProfileEndRight messed up profile!\n", [
@@ -1765,7 +1765,7 @@ class UserProfilePage extends Article {
 		}
 
 		$output .= '<div id="user-page-board">';
-		$b = new UserBoard();
+		$b = new UserBoard( $this->getContext()->getUser() );
 		$output .= $b->displayMessages( $this->profileOwner, 0, 10 );
 		$output .= '</div>';
 

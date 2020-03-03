@@ -16,7 +16,7 @@ class ApiDeleteUserBoardMessage extends ApiBase {
 			return true;
 		}
 
-		$b = new UserBoard();
+		$b = new UserBoard( $user );
 		if (
 			$b->doesUserOwnMessage( $user, $messageId ) ||
 			$user->isAllowed( 'userboard-delete' )

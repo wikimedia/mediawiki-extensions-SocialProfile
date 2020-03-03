@@ -50,7 +50,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 
 		if ( $request->wasPosted() && $user->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
 			$out->setPageTitle( $this->msg( 'messagesenttitle' )->plain() );
-			$b = new UserBoard();
+			$b = new UserBoard( $user );
 
 			$count = 0;
 			$user_ids_to = explode( ',', $request->getVal( 'ids' ) );
