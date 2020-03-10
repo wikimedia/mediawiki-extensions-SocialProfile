@@ -93,7 +93,7 @@ class UserGifts {
 	 */
 	private function sendGiftNotificationEmail( $user, $gift_id, $type ) {
 		$gift = Gifts::getGift( $gift_id );
-		$user->loadFromDatabase();
+		$user->load();
 
 		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-gift' ) : $user->getIntOption( 'notifygift', 1 );
 		if ( $user->isEmailConfirmed() && $wantsEmail ) {

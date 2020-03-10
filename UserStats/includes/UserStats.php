@@ -19,7 +19,7 @@ class UserStats {
 			$this->user = User::newFromId( $user );
 		}
 
-		$this->user->loadFromDatabase();
+		$this->user->load();
 		$this->user_id = $this->user->getId();
 		$this->user_name = $this->user->getName();
 	}

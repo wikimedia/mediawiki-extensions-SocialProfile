@@ -62,7 +62,7 @@ function removeDeletedEdits( WikiPage $article, $user, $reason ) {
 
 		$res = $dbr->select(
 			[ 'revision_actor_temp', 'revision', 'actor' ],
-			[ 'COUNT(*) AS the_count' ],
+			[ 'COUNT(*) AS the_count', 'revactor_actor' ],
 			[
 				'revactor_page' => $article->getID(),
 				'actor_user IS NOT NULL'
@@ -76,7 +76,7 @@ function removeDeletedEdits( WikiPage $article, $user, $reason ) {
 		);
 
 		foreach ( $res as $row ) {
-			$stats = new UserStatsTrack( $row->rev_actor );
+			$stats = new UserStatsTrack( $row->revactor_actor );
 			$stats->decStatField( 'edit', $row->the_count );
 		}
 	}
@@ -105,7 +105,7 @@ function restoreDeletedEdits( Title $title, $new ) {
 
 		$res = $dbr->select(
 			[ 'revision_actor_temp', 'revision', 'actor' ],
-			[ 'COUNT(*) AS the_count' ],
+			[ 'COUNT(*) AS the_count', 'revactor_actor' ],
 			[
 				'revactor_page' => $title->getArticleID(),
 				'actor_user IS NOT NULL'
@@ -119,7 +119,7 @@ function restoreDeletedEdits( Title $title, $new ) {
 		);
 
 		foreach ( $res as $row ) {
-			$stats = new UserStatsTrack( $row->rev_actor );
+			$stats = new UserStatsTrack( $row->revactor_actor );
 			$stats->incStatField( 'edit', $row->the_count );
 		}
 	}

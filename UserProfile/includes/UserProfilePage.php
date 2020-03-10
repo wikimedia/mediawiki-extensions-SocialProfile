@@ -77,7 +77,7 @@ class UserProfilePage extends Article {
 		$this->user_id = $this->profileOwner->getId();
 
 		$this->user = $this->profileOwner;
-		$this->user->loadFromDatabase();
+		$this->user->load();
 
 		$this->is_owner = ( $this->profileOwner->getName() == $user->getName() );
 

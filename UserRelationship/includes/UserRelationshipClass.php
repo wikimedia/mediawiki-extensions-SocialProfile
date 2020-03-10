@@ -80,13 +80,13 @@ class UserRelationship {
 	 * Send e-mail about a new relationship request to the user whose user ID
 	 * is $userIdTo if they have opted in for these notification e-mails.
 	 *
-	 * @param User $userTo User ID of the recipient
+	 * @param User $userTo Recipient User object
 	 * @param int $type
 	 * - 1 for friend request
 	 * - 2 (or anything else than 1) for foe request
 	 */
 	public function sendRelationshipRequestEmail( $userTo, $type ) {
-		$userTo->loadFromDatabase();
+		$userTo->load();
 
 		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $userTo->getBoolOption( 'echo-subscriptions-email-social-rel' ) : $userTo->getIntOption( 'notifyfriendrequest', 1 );
 		if ( $userTo->getEmail() && $wantsEmail ) {
@@ -144,7 +144,7 @@ class UserRelationship {
 	 * - 2 (or anything else but 1) for foe
 	 */
 	public function sendRelationshipAcceptEmail( $user, $type ) {
-		$user->loadFromDatabase();
+		$user->load();
 
 		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-rel' ) : $user->getIntOption( 'notifyfriendrequest', 1 );
 		if ( $user->getEmail() && $wantsEmail ) {
@@ -204,8 +204,7 @@ class UserRelationship {
 	 * - 2 (or anything else but 1) for foe
 	 */
 	public function sendRelationshipRemoveEmail( $user, $type ) {
-		$user = User::newFromId( $userIdTo );
-		$user->loadFromDatabase();
+		$user->load();
 
 		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-rel' ) : $user->getIntOption( 'notifyfriendrequest', 1 );
 		if ( $user->isEmailConfirmed() && $wantsEmail ) {

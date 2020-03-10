@@ -67,7 +67,7 @@ class UserSystemMessage {
 	 * @param mixed $level Name of the level that the user advanced to
 	 */
 	public function sendAdvancementNotificationEmail( $userTo, $level ) {
-		$userTo->loadFromDatabase();
+		$userTo->load();
 
 		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $userTo->getBoolOption( 'echo-subscriptions-email-social-level-up' ) : $userTo->getIntOption( 'notifyhonorifics', 1 );
 		if ( $userTo->isEmailConfirmed() && $wantsEmail ) {

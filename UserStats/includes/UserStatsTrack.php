@@ -81,7 +81,7 @@ class UserStatsTrack {
 			$this->user = User::newFromId( $args[0] );
 		}
 
-		$this->user->loadFromDatabase();
+		$this->user->load();
 
 		$this->point_values = $wgUserStatsPointValues;
 

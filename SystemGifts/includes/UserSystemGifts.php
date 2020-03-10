@@ -116,7 +116,7 @@ class UserSystemGifts {
 	 */
 	public function sendGiftNotificationEmail( $gift_id ) {
 		$gift = SystemGifts::getGift( $gift_id );
-		$this->user->loadFromDatabase();
+		$this->user->load();
 
 		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $this->user->getBoolOption( 'echo-subscriptions-email-social-award' ) : $this->user->getIntOption( 'notifygift', 1 );
 		if ( $this->user->isEmailConfirmed() && $wantsEmail ) {
