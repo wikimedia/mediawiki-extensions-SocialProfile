@@ -8,7 +8,7 @@
 	"ga-addnew": "+ Adder un nove dono",
 	"ga-back-edit-gift": "Retornar a modificar iste dono",
 	"ga-back-gift-list": "Retornar al lista de donos",
-	"ga-back-link": "<a href=\"$1\">< Retornar al profilo de $2</a>",
+	"ga-back-link": "[[User:$1|< Retornar al profilo de $1]]",
 	"ga-choosefile": "Selige un file:",
 	"ga-count": "$1 ha $2 {{PLURAL:$2|premio|premios}}.",
 	"ga-create-gift": "Crear un dono",

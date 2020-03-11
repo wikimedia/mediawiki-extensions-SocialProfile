@@ -11,7 +11,7 @@
 	"ga-addnew": "+ Adicionar nova prenda",
 	"ga-back-edit-gift": "Voltar para editar esta prenda",
 	"ga-back-gift-list": "Voltar à lista de prendas",
-	"ga-back-link": "<a href=\"$1\">< Voltar ao perfil de $2</a>",
+	"ga-back-link": "[[User:$1|< Voltar ao perfil de $1]]",
 	"ga-choosefile": "Escolher ficheiro:",
 	"ga-count": "$1 tem {{PLURAL:$2|um prémio|$2 prémios}}.",
 	"ga-create-gift": "Criar prenda",

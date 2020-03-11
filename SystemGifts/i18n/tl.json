@@ -8,7 +8,7 @@
 	"ga-addnew": "+ Magdagdag ng Bagong Handog",
 	"ga-back-edit-gift": "Bumalik sa Baguhin ang Handog na Ito",
 	"ga-back-gift-list": "Bumalik sa Talaan ng Handog",
-	"ga-back-link": "<a href=\"$1\">< Bumalik sa Talaan ng Katangian ni $2</a>",
+	"ga-back-link": "[[User:$1|< Bumalik sa Talaan ng Katangian ni $1]]",
 	"ga-choosefile": "Pumili ng Talaksan:",
 	"ga-count": "Si $1 ay may $2 {{PLURAL:$2|gantimpala|mga gantimpala}}.",
 	"ga-create-gift": "Lumikha ng handog",

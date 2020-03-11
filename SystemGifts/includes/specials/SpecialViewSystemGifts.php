@@ -97,9 +97,10 @@ class ViewSystemGifts extends SpecialPage {
 		$output .= '<div class="back-links">' .
 			$this->msg(
 				'ga-back-link',
-				htmlspecialchars( $targetUser->getUserPage()->getFullURL() ),
+				// could also be using $targetUser->getName() here but doesn't really matter
+				// since both of the vars should have the same value here
 				$rel->user_name
-			)->text() . '</div>';
+			)->escaped() . '</div>';
 
 		$output .= '<div class="ga-count">' .
 			$this->msg( 'ga-count', $rel->user_name, $total )->parse() .

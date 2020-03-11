@@ -8,7 +8,7 @@
 	"ga-addnew": "+ Dodaj novi poklon",
 	"ga-back-edit-gift": "Nazad na uređivanje ovog poklona",
 	"ga-back-gift-list": "Nazad na spisak poklona",
-	"ga-back-link": "<a href=\"$1\">< Nazad na profil korisnika $2</a>",
+	"ga-back-link": "[[User:$1|< Nazad na profil korisnika $1]]",
 	"ga-choosefile": "Odaberi datoteku:",
 	"ga-count": "$1 ima $2 {{PLURAL:$2|nagradu|nagrade|nagrada}}.",
 	"ga-create-gift": "Napravi poklon",

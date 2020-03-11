@@ -10,7 +10,7 @@
 	"ga-addnew": "+ 新しい贈り物を追加",
 	"ga-back-edit-gift": "戻ってこの贈り物を編集する",
 	"ga-back-gift-list": "贈り物一覧へ戻る",
-	"ga-back-link": "<a href=\"$1\">< $2のプロフィールへ戻る</a>",
+	"ga-back-link": "[[User:$1|< $1のプロフィールへ戻る]]",
 	"ga-choosefile": "ファイルを選ぶ:",
 	"ga-count": "$1 は$2{{PLURAL:$2|回}}表彰されています",
 	"ga-create-gift": "贈り物を作成",

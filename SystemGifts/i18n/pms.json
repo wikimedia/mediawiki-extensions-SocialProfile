@@ -9,7 +9,7 @@
 	"ga-addnew": "+ Gionta un cadò neuv",
 	"ga-back-edit-gift": "André a modifiché sto cadò-sì",
 	"ga-back-gift-list": "André a la lista dij cadò",
-	"ga-back-link": "<a href=\"$1\">< André al profil ëd $2</a>",
+	"ga-back-link": "[[User:$1|< André al profil ëd $1]]",
 	"ga-choosefile": "Serne l'archivi:",
 	"ga-count": "$1 a l'ha $2 {{PLURAL:$2|premi|premi}}.",
 	"ga-create-gift": "Crea cadò",

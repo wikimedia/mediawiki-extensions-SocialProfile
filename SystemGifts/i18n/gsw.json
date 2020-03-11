@@ -9,7 +9,7 @@
 	"ga-addnew": "+ Nej Gschänk zuefiege",
 	"ga-back-edit-gift": "Zrugg zum Bearbeite vu däm Gschänk",
 	"ga-back-gift-list": "Zrugg zue dr Gschänklischt",
-	"ga-back-link": "<a href=\"$1\">< Zrugg zum Profil vu $2</a>",
+	"ga-back-link": "[[User:$1|< Zrugg zum Profil vu $1]]",
 	"ga-choosefile": "Wehl e Datei:",
 	"ga-count": "$1 het $2 {{PLURAL:$2|Uuszeichnig|Uuszeichnige}}.",
 	"ga-create-gift": "Gschänk aalege",

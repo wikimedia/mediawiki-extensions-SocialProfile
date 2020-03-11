@@ -9,7 +9,7 @@
 	"ga-addnew": "+ Új ajándék hozzáadása",
 	"ga-back-edit-gift": "Vissza ezen ajándék szerkesztéséhez",
 	"ga-back-gift-list": "Vissza az ajándékok listájához",
-	"ga-back-link": "<a href=\"$1\">< vissza $2 profiljára</a>",
+	"ga-back-link": "[[User:$1|< vissza $1 profiljára]]",
 	"ga-choosefile": "Fájl kiválasztása:",
 	"ga-count": "$1 felhasználónak $2 díja van.",
 	"ga-create-gift": "Ajándék készítése",

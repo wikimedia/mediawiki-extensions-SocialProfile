@@ -8,7 +8,7 @@
 	"ga-addnew": "+ legg til ei ny gåva",
 	"ga-back-edit-gift": "Attende til endring av gåva",
 	"ga-back-gift-list": "Attende til gåvelista",
-	"ga-back-link": "<a href=\"$1\">< attende til profilen til $2</a>",
+	"ga-back-link": "[[User:$1|< attende til profilen til $1]]",
 	"ga-choosefile": "Vel fil:",
 	"ga-count": "$1 har {{PLURAL:$2|éi utmerking|$2 utmerkingar}}.",
 	"ga-create-gift": "Opprett gåva",

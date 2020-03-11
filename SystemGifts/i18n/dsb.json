@@ -8,7 +8,7 @@
 	"ga-addnew": "+ Nowy dar pśidaś",
 	"ga-back-edit-gift": "Slědk k wobźěłanjeju toś togo dara",
 	"ga-back-gift-list": "Slědk k lisćinje darow",
-	"ga-back-link": "<a href=\"$1\">< Slědk k profiloju wót $2</a>",
+	"ga-back-link": "[[User:$1|< Slědk k profiloju wót $1]]",
 	"ga-choosefile": "Dataju wubraś:",
 	"ga-count": "$1 ma $2 {{PLURAL:$2|myto|myśe|myta|mytow}}.",
 	"ga-create-gift": "Dar napóraś",

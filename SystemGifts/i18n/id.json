@@ -11,7 +11,7 @@
 	"ga-addnew": "+ Tambahkan hadiah baru",
 	"ga-back-edit-gift": "Kembali untuk menyunting hadiah ini",
 	"ga-back-gift-list": "Kembali ke daftar hadiah",
-	"ga-back-link": "<a href=\"$1\">< Kembali ke profil $2</a>",
+	"ga-back-link": "[[User:$1|< Kembali ke profil $1]]",
 	"ga-choosefile": "Pilih berkas:",
 	"ga-count": "$1 memiliki $2 {{PLURAL:$2|penghargaan|penghargaan}}.",
 	"ga-create-gift": "Buat hadiah",

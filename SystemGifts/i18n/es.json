@@ -10,7 +10,7 @@
 	"ga-addnew": "+ Agregar nuevo regalo",
 	"ga-back-edit-gift": "Regresar a editar este regalo",
 	"ga-back-gift-list": "Regresar a la lista de regalos",
-	"ga-back-link": "<a href=\"$1\">< regresar a perfil de $2</a>",
+	"ga-back-link": "[[User:$1|< regresar a perfil de $1]]",
 	"ga-choosefile": "Escoger archivo:",
 	"ga-count": "$1 tiene $2 {{PLURAL:$2|premio|premios}}.",
 	"ga-create-gift": "Crear regalo",

@@ -8,7 +8,7 @@
 	"ga-addnew": "+ إضافة هدية جديدة",
 	"ga-back-edit-gift": "رجوع لتعديل هذه الهدية",
 	"ga-back-gift-list": "رجوع لقائمة الهدايا",
-	"ga-back-link": "<a href=\"$1\">< رجوع إلى ملف $2</a>",
+	"ga-back-link": "[[User:$1|< رجوع إلى ملف $1]]",
 	"ga-choosefile": "اختر الملف:",
 	"ga-count": "$1 يمتلك $2 {{PLURAL:$2|جائزة|جائزة}}.",
 	"ga-create-gift": "إنشاء الهدية",

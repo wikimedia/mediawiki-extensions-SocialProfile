@@ -10,7 +10,7 @@
 	"ga-addnew": "+ Ouzhpennañ ur prof nevez",
 	"ga-back-edit-gift": "Distreiñ da aozañ ar prof-mañ",
 	"ga-back-gift-list": "Distreiñ da roll ar profoù",
-	"ga-back-link": "<a href=\"$1\">< Distreiñ da brofil $2</a>",
+	"ga-back-link": "[[User:$1|< Distreiñ da brofil $1]]",
 	"ga-choosefile": "Dibab ur restr :",
 	"ga-count": "$1 en deus $2 {{PLURAL:$2|garedon|garedon}}.",
 	"ga-create-gift": "Krouiñ ur prof",

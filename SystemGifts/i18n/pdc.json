@@ -4,7 +4,7 @@
 			"Xqt"
 		]
 	},
-	"ga-back-link": "<a href=\"$1\">< Zerrick zur Uffstelling vun $2</a>",
+	"ga-back-link": "[[User:$1|< Zerrick zur Uffstelling vun $1]]",
 	"ga-goback": "geh zerrick",
 	"ga-large": "Gross",
 	"ga-new": "Nei",

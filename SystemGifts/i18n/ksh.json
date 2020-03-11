@@ -8,7 +8,7 @@
 	"ga-addnew": "+ Neu Jeschenk dobei donn",
 	"ga-back-edit-gift": "Jangk retuur un donn dat Jeschengk beärbeide",
 	"ga-back-gift-list": "Jangk retuur op de Leß met de Jeschengke",
-	"ga-back-link": "<a href=\"$1\">← Jangk retuur noh däm „$2“ singem Profil</a>",
+	"ga-back-link": "[[User:$1|← Jangk retuur noh däm „$1“ singem Profil]]",
 	"ga-choosefile": "Sök en Datei uß:",
 	"ga-count": "Dä Metmaacher „$1“ hät {{PLURAL:$2|eij <span class=\"plainlinks\">gif</span> hann, ävver Belohnung|$2 Belohnunge|keij Belohnung}}.",
 	"ga-create-gift": "Jeschenk aanlääje",

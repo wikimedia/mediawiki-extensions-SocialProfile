@@ -9,7 +9,7 @@
 	"ga-addnew": "+ Yeni hediye ekle",
 	"ga-back-edit-gift": "Bu hediyeyi düzenlemeye geri dön",
 	"ga-back-gift-list": "Hediye listesine geri dön",
-	"ga-back-link": "<a href=\"$1\">< $2 adlı kullanıcının profiline geri dön</a>",
+	"ga-back-link": "[[User:$1|< $1 adlı kullanıcının profiline geri dön]]",
 	"ga-choosefile": "Dosya seç:",
 	"ga-count": "$1, $2 {{PLURAL:$2|ödüle|ödüle}} sahip.",
 	"ga-create-gift": "Hediye oluştur",

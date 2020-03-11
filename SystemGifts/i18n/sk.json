@@ -8,7 +8,7 @@
 	"ga-addnew": "+ Pridať nový darček",
 	"ga-back-edit-gift": "Späť na Upraviť tento darček",
 	"ga-back-gift-list": "Späť na zoznam darčekov",
-	"ga-back-link": "<a href=\"$1\">< Späť na profil $2</a>",
+	"ga-back-link": "[[User:$1|< Späť na profil $1]]",
 	"ga-choosefile": "Vybrať súbor:",
 	"ga-count": "$1 má $2 {{PLURAL:$2|ocenenie|ocenenia|ocenení}}.",
 	"ga-create-gift": "Vytvoriť darček",

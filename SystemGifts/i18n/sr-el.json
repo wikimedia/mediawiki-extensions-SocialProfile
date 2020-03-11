@@ -7,7 +7,7 @@
 	"ga-addnew": "+ Dodajte novi poklon",
 	"ga-back-edit-gift": "Povratak na izmenu ovog poklona",
 	"ga-back-gift-list": "Povratak na spisak poklona",
-	"ga-back-link": "<a href=\"$1\">< Povratak na profil $2</a>",
+	"ga-back-link": "[[User:$1|< Povratak na profil $1]]",
 	"ga-choosefile": "Izaberite fajl:",
 	"ga-count": "$1 ima $2 {{PLURAL:$2|nagradu|nagrada}}.",
 	"ga-create-gift": "Napravite poklon",

@@ -8,7 +8,7 @@
 	"ga-addnew": "+ Nowy dar přidać",
 	"ga-back-edit-gift": "Wróćo k wobdźěłanju tutoho dara",
 	"ga-back-gift-list": "Wróćo k lisćinje darow",
-	"ga-back-link": "<a href=\"$1\">< Wróćo k profilej wot $2</a>",
+	"ga-back-link": "[[User:$1|< Wróćo k profilej wot $1]]",
 	"ga-choosefile": "Wubjer dataju:",
 	"ga-count": "$1 ma $2 {{PLURAL:$2|myto|myće|myta|mytow}}.",
 	"ga-create-gift": "Dar wutworić",

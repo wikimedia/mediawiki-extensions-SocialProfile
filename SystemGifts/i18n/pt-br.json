@@ -8,7 +8,7 @@
 	"ga-addnew": "+ Adicionar Novo Presente",
 	"ga-back-edit-gift": "Voltar para Editar Este Presente",
 	"ga-back-gift-list": "Voltar para Lista de Presentes",
-	"ga-back-link": "<a href=\"$1\">< Voltar para Perfil de $2</a>",
+	"ga-back-link": "[[User:$1|< Voltar para Perfil de $1]]",
 	"ga-choosefile": "Escolher arquivo:",
 	"ga-count": "$1 tem $2 {{PLURAL:$2|prêmio|prêmios}}.",
 	"ga-create-gift": "Criar presente",

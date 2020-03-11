@@ -8,7 +8,7 @@
 	"ga-addnew": "+ Dodaj nowy prezent",
 	"ga-back-edit-gift": "Powrót do edycji tego prezentu",
 	"ga-back-gift-list": "Powrót do listy prezentów",
-	"ga-back-link": "<a href=\"$1\">< Powrót do profilu $2</a>",
+	"ga-back-link": "[[User:$1|< Powrót do profilu $1]]",
 	"ga-choosefile": "Wybierz plik",
 	"ga-count": "$1 dostał $2 {{PLURAL:$2|nagrodę|nagrody|nagród}}.",
 	"ga-create-gift": "Utwórz prezent",

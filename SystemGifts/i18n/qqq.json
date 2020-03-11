@@ -12,7 +12,7 @@
 	"ga-addnew": "Link to gift creation form.",
 	"ga-back-edit-gift": "Link to system gift edit screen after uploading a gift image.",
 	"ga-back-gift-list": "Link to system gift list after uploading a gift image.",
-	"ga-back-link": "Link back to user profile from Special:ViewSystemGifts. Parameters:\n* $1 is a URL to the user profile.\n* $2 is the current users name.",
+	"ga-back-link": "Link back to user profile from Special:ViewSystemGifts and Special:ViewSystemGift. Parameters:\n* $1 is a user name.",
 	"ga-choosefile": "Button to prompt system upload box to select file to upload as the gift image.",
 	"ga-count": "Parameters:\n* $1 is the username of the current user.\n* $2 is the number of gifts the user has.",
 	"ga-create-gift": "Button on gift creation form to write new gift to database.",

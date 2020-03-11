@@ -4,7 +4,7 @@
 			"Gazeb"
 		]
 	},
-	"ga-back-link": "<a href=\"$1\">< Назад на $2's профіл</a>",
+	"ga-back-link": "[[User:$1|< Назад на $1's профіл]]",
 	"ga-choosefile": "Выбрати файл:",
 	"ga-large": "Великый",
 	"ga-medium": "Середнїй",

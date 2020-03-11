@@ -10,7 +10,7 @@
 	"ga-addnew": "+ הוספת מתנה חדשה",
 	"ga-back-edit-gift": "חזרה לעריכת מתנה זו",
 	"ga-back-gift-list": "חזרה לרשימת המתנות",
-	"ga-back-link": "<a href=\"$1\">< חזרה לפרופיל של $2</a>",
+	"ga-back-link": "[[User:$1|< חזרה לפרופיל של $1]]",
 	"ga-choosefile": "בחירת קובץ:",
 	"ga-count": "ל־$1 יש {{PLURAL:$2|פרס אחד|$2 פרסים}}.",
 	"ga-create-gift": "יצירת מתנה",

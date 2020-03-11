@@ -8,7 +8,7 @@
 	"ga-addnew": "+ legg til en ny presang",
 	"ga-back-edit-gift": "Tilbake til endring av gaven",
 	"ga-back-gift-list": "Tilbake til gavelista",
-	"ga-back-link": "<a href=\"$1\">< tilbake til $2s profil </a>",
+	"ga-back-link": "[[User:$1|< tilbake til $1s profil]]",
 	"ga-choosefile": "Velg fil:",
 	"ga-count": "$1 har {{PLURAL:$2|én utmerkelse|$2 utmerkelser}}.",
 	"ga-create-gift": "opprett gave",
