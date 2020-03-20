@@ -6,9 +6,6 @@
  */
 class Gifts {
 
-	// phpcs:ignore Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore
-	public function __construct() {}
-
 	/**
 	 * Adds a gift to the database
 	 *
