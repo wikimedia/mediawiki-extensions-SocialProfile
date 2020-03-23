@@ -331,7 +331,7 @@ class UserRelationship {
 					'agent' => $this->user,
 					'title' => $this->user->getUserPage(),
 					'extra' => [
-						'target' => $ur_user_id_from,
+						'target' => $userFrom->getId(),
 						'from' => $this->user_id,
 						'rel_type' => $ur_type
 					]
