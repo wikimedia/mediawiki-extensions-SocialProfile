@@ -23,7 +23,7 @@ var UserGifts = {
 
 	sendGift: function() {
 		if ( !UserGifts.selected_gift ) {
-			window.alert( 'Please select a gift' );
+			window.alert( mediaWiki.msg( 'g-select-gift' ) );
 			return false;
 		}
 		document.gift.gift_id.value = UserGifts.selected_gift;

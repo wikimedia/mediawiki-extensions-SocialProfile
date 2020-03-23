@@ -67,6 +67,7 @@
 	"g-remove-success-message": "Lahja ”$1” on poistettu.",
 	"g-remove-title": "Poista ”$1”?",
 	"g-send-gift": "Lähetä lahja",
+	"g-select-gift": "Valitsethan lahjan.",
 	"g-select-a-friend": "valitse ystävä",
 	"g-sent-title": "Olet lähettänyt lahjan käyttäjälle $1",
 	"g-sent-message": "Olet lähettänyt seuraavan lahjan käyttäjälle $1.",

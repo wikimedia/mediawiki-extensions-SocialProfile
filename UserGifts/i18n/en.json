@@ -68,6 +68,7 @@
 	"g-remove-success-message": "The gift \"$1\" has been removed.",
 	"g-remove-title": "Remove \"$1\"?",
 	"g-send-gift": "Send gift",
+	"g-select-gift": "Please select a gift.",
 	"g-select-a-friend": "select a friend",
 	"g-sent-title": "You have sent a gift to $1",
 	"g-sent-message": "You have sent the following gift to $1.",

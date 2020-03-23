@@ -69,7 +69,10 @@
 			"styles": "css/SpecialViewGifts.css"
 		},
 		"ext.socialprofile.usergifts.js": {
-			"scripts": "js/UserGifts.js"
+			"scripts": "js/UserGifts.js",
+			"messages": [
+				"g-select-gift"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {

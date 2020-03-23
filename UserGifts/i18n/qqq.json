@@ -71,6 +71,7 @@
 	"g-remove-success-message": "Informational message shown on Special:RemoveGift and Special:RemoveMasterGift after removing a gift successfully.\n$1 is the name of the gift you removed",
 	"g-remove-title": "Page title of Special:RemoveGift and Special:RemoveMasterGift when about to remove a gift\n$1 is the name of the gift you're about to remove",
 	"g-send-gift": "Text of a button shown on Special:GiveGift; pressing the button sends the desired gift to the desired user",
+	"g-select-gift": "Error message shown on Special:GiveGift if the user hasn't chosen a gift to send to another user but tries to submit the form nevertheless.",
 	"g-select-a-friend": "Shown on Special:GiveGift if you have friends; this is the first item in the drop-down menu containing your friends' user names.",
 	"g-sent-title": "Page title of Special:GiveGift after sending a gift to somebody.\n$1 is the user name of the person you just sent a gift to.",
 	"g-sent-message": "Informational message shown on Special:GiveGift after sending a gift to somebody. This message is followed by the image and description of the gift you just sent as well as your personalized message to the recipient (if you specified such a message).\n$1 is the user name of the person you just sent a gift to.",
