@@ -176,26 +176,26 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 	 * @return string HTML code for the form
 	 */
 	function displayForm() {
-		$avatar = new wAvatar( $this->user_id_to, 'l' );
+		$avatar = new wAvatar( $this->user_to->getId(), 'l' );
 
 		if ( $this->relationship_type == 1 ) {
 			$title = $this->msg(
 				'ur-remove-relationship-title-friend',
-				$this->user_name_to
+				$this->user_to->getName()
 			)->parse();
 			$remove = $this->msg(
 				'ur-remove-relationship-message-friend',
-				$this->user_name_to,
+				$this->user_to->getName(),
 				$this->msg( 'ur-remove' )->plain()
 			)->parseAsBlock();
 		} else {
 			$title = $this->msg(
 				'ur-remove-relationship-title-foe',
-				$this->user_name_to
+				$this->user_to->getName()
 			)->parse();
 			$remove = $this->msg(
 				'ur-remove-relationship-message-foe',
-				$this->user_name_to,
+				$this->user_to->getName(),
 				$this->msg( 'ur-remove' )->plain()
 			)->parseAsBlock();
 		}
@@ -207,7 +207,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			{$avatar->getAvatarURL()}" .
 			$remove .
 			'<div class="relationship-buttons">
-				<input type="hidden" name="user" value="' . htmlspecialchars( $this->user_name_to ) . '" />
+				<input type="hidden" name="user" value="' . htmlspecialchars( $this->user_to->getName() ) . '" />
 				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'ur-remove' )->plain() ) . '" size="20" onclick="document.form1.submit()" />
 				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'cancel' )->plain() ) . '" size="20" onclick="history.go(-1)" />
 			</div>
