@@ -22,18 +22,20 @@ class ApiUserProfilePrivacy extends ApiBase {
 		$method = $params['method'];
 		$fieldKey = $params['field_key'];
 		$privacy = $params['privacy'];
-		$tuid = $params['tuid'];
+
+		$targetUser = $this->getUser();
+
+		// Given that the underlying table stores info only for registered users, it
+		// makes sense to require users to be logged in to be able to use this API module
+		if ( !$targetUser->isLoggedIn() ) {
+			$this->dieWithError( 'exception-nologin-text', 'notloggedin' );
+		}
 
 		// Search content: for example let's search
 		if ( strlen( $fieldKey ) == 0 ) {
 			$this->dieWithError( new RawMessage( 'No data provided' ), 'field_key' );
 		}
 
-		if ( $tuid ) {
-			$targetUser = User::newFromId( $tuid );
-		} else {
-			$targetUser = $this->getUser();
-		}
 		$data = [];
 
 		switch ( $method ) {
@@ -83,9 +85,6 @@ class ApiUserProfilePrivacy extends ApiBase {
 			],
 			'privacy' => [
 				ApiBase::PARAM_TYPE => 'string',
-			],
-			'tuid' => [
-				ApiBase::PARAM_TYPE => 'integer',
 			]
 		];
 	}

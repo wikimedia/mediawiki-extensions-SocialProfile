@@ -10,6 +10,5 @@
 	"apihelp-smpuserprivacy-summary": "{{doc-apihelp-summary|smpuserprivacy}}",
 	"apihelp-smpuserprivacy-param-method": "{{doc-apihelp-param|smpuserprivacy|method}}",
 	"apihelp-smpuserprivacy-param-field_key": "{{doc-important|Do not translate \"up_movies\".}}\n{{doc-apihelp-param|smpuserprivacy|field_key}}",
-	"apihelp-smpuserprivacy-param-privacy": "{{doc-important|Do not translate \"public, hidden, friends, foaf\", though you are feel free to change commas here.}}\n{{doc-apihelp-param|smpuserprivacy|privacy}}",
-	"apihelp-smpuserprivacy-param-tuid": "{{doc-apihelp-param|smpuserprivacy|tuid}}"
+	"apihelp-smpuserprivacy-param-privacy": "{{doc-important|Do not translate \"public, hidden, friends, foaf\", though you are feel free to change commas here.}}\n{{doc-apihelp-param|smpuserprivacy|privacy}}"
 }
