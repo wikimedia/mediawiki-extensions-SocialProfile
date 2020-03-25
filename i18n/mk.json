@@ -10,6 +10,5 @@
 	"apihelp-smpuserprivacy-summary": "Приложнички модул за видливост („лични податоци“) на профилно поле",
 	"apihelp-smpuserprivacy-param-method": "Дејство (или „get“ или „set“)",
 	"apihelp-smpuserprivacy-param-field_key": "целен клуч на полето, како up_movies за полето „Филмови“",
-	"apihelp-smpuserprivacy-param-privacy": "Нова вредност за приватност (една од следниве: public, hidden, friends, foaf)",
-	"apihelp-smpuserprivacy-param-tuid": "Целен корисник (назнака)"
+	"apihelp-smpuserprivacy-param-privacy": "Нова вредност за приватност (една од следниве: public, hidden, friends, foaf)"
 }

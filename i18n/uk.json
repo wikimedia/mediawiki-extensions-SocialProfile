@@ -12,6 +12,5 @@
 	"apihelp-smpuserprivacy-summary": "Модуль API для налаштування видимості («приватність») поля профілю",
 	"apihelp-smpuserprivacy-param-method": "Дія (або «get», або «set»)",
 	"apihelp-smpuserprivacy-param-field_key": "Ключ цільового поля, на кшталт up_movies для поля «Фільми»",
-	"apihelp-smpuserprivacy-param-privacy": "Нове значення приватності (одне з таких: public, hidden, friends, foaf)",
-	"apihelp-smpuserprivacy-param-tuid": "Цільовий користувач (ID)"
+	"apihelp-smpuserprivacy-param-privacy": "Нове значення приватності (одне з таких: public, hidden, friends, foaf)"
 }

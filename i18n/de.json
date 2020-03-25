@@ -12,6 +12,5 @@
 	"apihelp-smpuserprivacy-summary": "Das API-Modul, welches die Sichtbarkeit (\"Privatsphäre\") eines Profilfeldes festlegt",
 	"apihelp-smpuserprivacy-param-method": "Aktion (entweder „get“ oder „set“)",
 	"apihelp-smpuserprivacy-param-field_key": "Zielfeldschlüssel, wie up_movies für das Feld „Filme“",
-	"apihelp-smpuserprivacy-param-privacy": "Neuer Privatsphärenwert (einer der folgenden Werte: public, hidden, friends, foaf)",
-	"apihelp-smpuserprivacy-param-tuid": "Zielbenutzer (Kennung)"
+	"apihelp-smpuserprivacy-param-privacy": "Neuer Privatsphärenwert (einer der folgenden Werte: public, hidden, friends, foaf)"
 }

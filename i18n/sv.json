@@ -6,6 +6,5 @@
 		]
 	},
 	"socialprofile-desc": "En uppsättning sociala verktyg för MediaWiki",
-	"socialprofile-uploads-disabled": "Avatar uppladdningsfunktionen är inaktiverad",
-	"apihelp-smpuserprivacy-param-tuid": "Målanvändare (ID)"
+	"socialprofile-uploads-disabled": "Avatar uppladdningsfunktionen är inaktiverad"
 }

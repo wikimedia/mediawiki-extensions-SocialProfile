@@ -10,6 +10,5 @@
 	"apihelp-smpuserprivacy-summary": "API-modul for å sette synligheten («privacy») for et profilfelt",
 	"apihelp-smpuserprivacy-param-method": "Handling (enten «get» eller «set»)",
 	"apihelp-smpuserprivacy-param-field_key": "Nøkkel for målfelt, som up_movies for «Movies»-feltet",
-	"apihelp-smpuserprivacy-param-privacy": "Ny personvernsverdi (én av følgende: «public», «hidden», «friends», «foaf»)",
-	"apihelp-smpuserprivacy-param-tuid": "Målbruker (ID)"
+	"apihelp-smpuserprivacy-param-privacy": "Ny personvernsverdi (én av følgende: «public», «hidden», «friends», «foaf»)"
 }

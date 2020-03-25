@@ -10,6 +10,5 @@
 	"apihelp-smpuserprivacy-description": "Modulo API per impostare la visibilità (\"privacy\") di un campo profilo",
 	"apihelp-smpuserprivacy-param-method": "Azione (che sia \"prendi\" o \"imposta\")",
 	"apihelp-smpuserprivacy-param-field_key": "Campo di destinazione chiave, ad esempio up_movies per il campo\"Film\"",
-	"apihelp-smpuserprivacy-param-privacy": "Nuovo valore di privacy (uno dei seguenti: pubblico, nascosto, amici, amici degli amici)",
-	"apihelp-smpuserprivacy-param-tuid": "Utente di destinazione (ID)"
+	"apihelp-smpuserprivacy-param-privacy": "Nuovo valore di privacy (uno dei seguenti: pubblico, nascosto, amici, amici degli amici)"
 }

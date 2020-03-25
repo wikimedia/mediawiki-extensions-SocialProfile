@@ -10,6 +10,5 @@
 	"apihelp-smpuserprivacy-summary": "Módulu de la API pa configurar la visibilidá («intimidá») d'un campu del perfil",
 	"apihelp-smpuserprivacy-param-method": "Aición (o \"get\" o \"set\")",
 	"apihelp-smpuserprivacy-param-field_key": "Clave del campu destín, como up_movies pal campu \"Películes\"",
-	"apihelp-smpuserprivacy-param-privacy": "Nuevu valor de privacidá (unu de los siguientesː públicu, tapecíu, amigos, amigos d'amigos)",
-	"apihelp-smpuserprivacy-param-tuid": "Usuariu destín (ID)"
+	"apihelp-smpuserprivacy-param-privacy": "Nuevu valor de privacidá (unu de los siguientesː públicu, tapecíu, amigos, amigos d'amigos)"
 }

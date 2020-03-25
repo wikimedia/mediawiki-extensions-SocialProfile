@@ -11,6 +11,5 @@
 	"apihelp-smpuserprivacy-summary": "Module de l’API pour fixer la visibilité (« confidentialité ») d’un champ du profil",
 	"apihelp-smpuserprivacy-param-method": "Action (soit « get », soit « set »)",
 	"apihelp-smpuserprivacy-param-field_key": "Clé du champ cible, comme up_movies pour le champ « Films »",
-	"apihelp-smpuserprivacy-param-privacy": "Nouvelle valeur de confidentialité (une des suivantes : public, masqué, amis, amis des amis)",
-	"apihelp-smpuserprivacy-param-tuid": "Utilisateur cible (ID)"
+	"apihelp-smpuserprivacy-param-privacy": "Nouvelle valeur de confidentialité (une des suivantes : public, masqué, amis, amis des amis)"
 }

@@ -10,6 +10,5 @@
 	"apihelp-smpuserprivacy-summary": "设置详情字段可见性（“privacy”）的API模块",
 	"apihelp-smpuserprivacy-param-method": "操作（“get”或“set”）",
 	"apihelp-smpuserprivacy-param-field_key": "目标字段关键字，例如up_movies用于“Movies”字段",
-	"apihelp-smpuserprivacy-param-privacy": "新隐私值（以下之一：public、hidden、friends和foaf）",
-	"apihelp-smpuserprivacy-param-tuid": "目标用户（ID）"
+	"apihelp-smpuserprivacy-param-privacy": "新隐私值（以下之一：public、hidden、friends和foaf）"
 }

@@ -7,6 +7,5 @@
 		]
 	},
 	"socialprofile-desc": "Zestaw narzędzi społecznościowych dla MediaWiki",
-	"socialprofile-uploads-disabled": "Opcja przesyłania avataru jest wyłączona",
-	"apihelp-smpuserprivacy-param-tuid": "Docelowy użytkownik (identyfikator)"
+	"socialprofile-uploads-disabled": "Opcja przesyłania avataru jest wyłączona"
 }

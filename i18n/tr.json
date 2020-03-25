@@ -10,6 +10,5 @@
 	"apihelp-smpuserprivacy-summary": "Bir profil alanının görünürlüğünü (\"gizlilik\") ayarlamak için API modülü",
 	"apihelp-smpuserprivacy-param-method": "İşlem (\"get\" veya \"set\")",
 	"apihelp-smpuserprivacy-param-field_key": "\"Filmler\" alanı için up_movies gibi hedef alan anahtarı",
-	"apihelp-smpuserprivacy-param-privacy": "Yeni gizlilik değeri (aşağıdakilerden biri: genel, gizli, arkadaşlar, foaf)",
-	"apihelp-smpuserprivacy-param-tuid": "Hedef kullanıcı (Kimlik)"
+	"apihelp-smpuserprivacy-param-privacy": "Yeni gizlilik değeri (aşağıdakilerden biri: genel, gizli, arkadaşlar, foaf)"
 }

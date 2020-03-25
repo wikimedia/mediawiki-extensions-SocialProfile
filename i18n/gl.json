@@ -12,6 +12,5 @@
 	"apihelp-smpuserprivacy-summary": "Módulo da API para definir a visibilidade (\"privacidade\") dun campo do perfil",
 	"apihelp-smpuserprivacy-param-method": "Acción (ou \"get\" ou \"set\")",
 	"apihelp-smpuserprivacy-param-field_key": "Clave do campo obxectivo, como up_movies para o campo \"Filmes\"",
-	"apihelp-smpuserprivacy-param-privacy": "Novo valor de privacidade (un dos seguintesː público, oculto, amigos, amigos dos amigos)",
-	"apihelp-smpuserprivacy-param-tuid": "Usuario obxectivo (Identificador)"
+	"apihelp-smpuserprivacy-param-privacy": "Novo valor de privacidade (un dos seguintesː público, oculto, amigos, amigos dos amigos)"
 }
