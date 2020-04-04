@@ -519,6 +519,12 @@ class UserProfilePage extends Article {
 
 			$x = 1;
 
+			if ( method_exists( MediaWikiServices::class, 'getRepoGroup' ) ) {
+				// MediaWiki 1.34+
+				$repoGroup = MediaWikiServices::getInstance()->getRepoGroup();
+			} else {
+				$repoGroup = RepoGroup::singleton();
+			}
 			foreach ( $combined_array as $item ) {
 				$output .= ( ( $x == 1 ) ? '<p class="item-top">' : '<p>' );
 
@@ -546,13 +552,13 @@ class UserProfilePage extends Article {
 				if ( $item['type'] == 'Picture Game' ) {
 					if ( $item['img1'] != '' && $item['img2'] != '' ) {
 						$image_1 = $image_2 = '';
-						$render_1 = wfFindFile( $item['img1'] );
+						$render_1 = $repoGroup->findFile( $item['img1'] );
 						if ( is_object( $render_1 ) ) {
 							$thumb_1 = $render_1->transform( [ 'width' => 25 ] );
 							$image_1 = $thumb_1->toHtml();
 						}
 
-						$render_2 = wfFindFile( $item['img2'] );
+						$render_2 = $repoGroup->findFile( $item['img2'] );
 						if ( is_object( $render_2 ) ) {
 							$thumb_2 = $render_2->transform( [ 'width' => 25 ] );
 							$image_2 = $thumb_2->toHtml();
@@ -1867,13 +1873,19 @@ class UserProfilePage extends Article {
 
 			$x = 1;
 			$tagParser = MediaWikiServices::getInstance()->getParserFactory()->create();
+			if ( method_exists( MediaWikiServices::class, 'getRepoGroup' ) ) {
+				// MediaWiki 1.34+
+				$repoGroup = MediaWikiServices::getInstance()->getRepoGroup();
+			} else {
+				$repoGroup = RepoGroup::singleton();
+			}
 			foreach ( $fanboxes as $fanbox ) {
 				$check_user_fanbox = $f->checkIfUserHasFanbox( $fanbox['fantag_id'] );
 
 				if ( $fanbox['fantag_image_name'] ) {
 					$fantag_image_width = 45;
 					$fantag_image_height = 53;
-					$fantag_image = wfFindFile( $fanbox['fantag_image_name'] );
+					$fantag_image = $repoGroup->findFile( $fanbox['fantag_image_name'] );
 					$fantag_image_url = '';
 					if ( is_object( $fantag_image ) ) {
 						$fantag_image_url = $fantag_image->createThumb(
