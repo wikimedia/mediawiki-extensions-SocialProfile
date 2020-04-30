@@ -10,7 +10,6 @@
 	},
 	"rules": {
 		"camelcase": "off",
-		"eqeqeq": "off",
 		"max-len": "off",
 		"no-alert": "off",
 		"no-array-constructor": "off",
