@@ -22,7 +22,7 @@ var UserProfilePage = {
 	},
 
 	sendMessage: function () {
-		var userTo = decodeURIComponent( mediaWiki.config.get( 'wgTitle' ) ), //document.getElementById( 'user_name_to' ).value;
+		var userTo = decodeURIComponent( mw.config.get( 'wgTitle' ) ), //document.getElementById( 'user_name_to' ).value;
 			encMsg = encodeURIComponent( document.getElementById( 'message' ).value ),
 			msgType = document.getElementById( 'message_type' ).value;
 		if ( document.getElementById( 'message' ).value && !UserProfilePage.posted ) {
@@ -34,15 +34,15 @@ var UserProfilePage = {
 				message: encMsg,
 				type: msgType
 			} ).done( function ( data ) {
-				jQuery( data.result ).prependTo( '#user-page-board' );
+				$( data.result ).prependTo( '#user-page-board' );
 				UserProfilePage.posted = 0;
-				jQuery( '#message' ).val( '' );
+				$( '#message' ).val( '' );
 			} );
 		}
 	},
 
 	deleteMessage: function ( id ) {
-		if ( window.confirm( mediaWiki.msg( 'user-board-confirm-delete' ) ) ) {
+		if ( window.confirm( mw.msg( 'user-board-confirm-delete' ) ) ) {
 			( new mw.Api() ).postWithToken( 'csrf', {
 				action: 'socialprofile-delete-message',
 				format: 'json',
@@ -52,7 +52,7 @@ var UserProfilePage = {
 				// 1st parent = span.user-board-red
 				// 2nd parent = div.user-board-message-links
 				// 3rd parent = div.user-board-message = the container of a msg
-				jQuery( '[data-message-id="' + id + '"]' ).parent().parent().parent().hide( 100 );
+				$( '[data-message-id="' + id + '"]' ).parent().parent().parent().hide( 100 );
 			} );
 		}
 	},
@@ -89,7 +89,7 @@ var UserProfilePage = {
 		}
 		document.getElementById( 'mini-gallery-0' ).innerHTML =
 			'<a><img height="75" width="75" src="' +
-			mediaWiki.config.get( 'wgExtensionAssetsPath' ) +
+			mw.config.get( 'wgExtensionAssetsPath' ) +
 			'/SocialProfile/images/ajax-loader-white.gif" alt="" /></a>';
 
 		if ( document.getElementById( 'no-pictures-containers' ) ) {
@@ -134,20 +134,20 @@ var UserProfilePage = {
 	}
 };
 
-jQuery( function () {
+$( function () {
 	// "Use social profile" / "Use wikitext userpage" button on your own profile
-	jQuery( '#profile-toggle-button a' ).on( 'click', function ( e ) {
+	$( '#profile-toggle-button a' ).on( 'click', function ( e ) {
 		e.preventDefault();
 		UserProfilePage.changeUserPageType();
 	} );
 
 	// "Send message" button on (other users') profile pages
-	jQuery( 'div.user-page-message-box-button input[type="button"]' ).on( 'click', function () {
+	$( 'div.user-page-message-box-button input[type="button"]' ).on( 'click', function () {
 		UserProfilePage.sendMessage();
 	} );
 
 	// Board messages' "Delete" link
-	jQuery( 'span.user-board-red a' ).on( 'click', function () {
-		UserProfilePage.deleteMessage( jQuery( this ).data( 'message-id' ) );
+	$( 'span.user-board-red a' ).on( 'click', function () {
+		UserProfilePage.deleteMessage( $( this ).data( 'message-id' ) );
 	} );
 } );

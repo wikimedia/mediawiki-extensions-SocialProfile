@@ -7,8 +7,8 @@
  * @file
  * @date 14 August 2015
  */
-/* global ActiveXObject, mediaWiki */
-( function ( mw, $ ) {
+/* global ActiveXObject */
+( function () {
 	'use strict';
 
 	/**
@@ -35,4 +35,4 @@
 		return hasFlash;
 	};
 
-}( mediaWiki, jQuery ) );
+}() );

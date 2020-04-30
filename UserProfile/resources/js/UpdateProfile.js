@@ -2,7 +2,7 @@
  * JavaScript used on Special:UpdateProfile
  * Displays the "State" dropdown menu if selected country is the United States
  */
-( function ( mw, $ ) {
+( function () {
 
 	var countries = [];
 	countries[ 0 ] = {
@@ -135,4 +135,4 @@
 		} );
 	} );
 
-}( mediaWiki, jQuery ) );
+}() );
