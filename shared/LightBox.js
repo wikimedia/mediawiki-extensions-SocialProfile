@@ -129,14 +129,14 @@ window.LightBox = {
 
 			// A small pause between the image loading and displaying is required with IE,
 			// this prevents the previous image displaying for a short burst causing flicker.
-			if ( navigator.appVersion.indexOf( 'MSIE' ) != -1 ) {
+			if ( navigator.appVersion.indexOf( 'MSIE' ) !== -1 ) {
 				lb.pause( 250 );
 			}
 
 			// Hide select boxes as they will 'peek' through the image in IE
 			var selects = document.getElementsByTagName( 'select' );
 
-			for ( var i = 0; i != selects.length; i++ ) {
+			for ( var i = 0; i !== selects.length; i++ ) {
 				selects[ i ].style.visibility = 'hidden';
 			}
 
@@ -170,7 +170,7 @@ window.LightBox = {
 
 		// make select boxes visible
 		var selects = document.getElementsByTagName( 'select' );
-		for ( var i = 0; i != selects.length; i++ ) {
+		for ( var i = 0; i !== selects.length; i++ ) {
 			selects[ i ].style.visibility = 'visible';
 		}
 
@@ -274,7 +274,7 @@ window.LightBox = {
 	getDimensions: function ( element ) {
 		var display = element.style.display;
 
-		if ( display != 'none' && display !== null ) { // Safari bug
+		if ( display !== 'none' && display !== null ) { // Safari bug
 			return { width: element.offsetWidth, height: element.offsetHeight };
 		}
 
