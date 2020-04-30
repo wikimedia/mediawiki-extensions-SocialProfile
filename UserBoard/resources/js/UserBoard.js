@@ -41,7 +41,7 @@ var UserBoard = {
 				format: 'json',
 				'id': id
 			} ).done( function () {
-				//window.location.reload();
+				// window.location.reload();
 				// 1st parent = span.user-board-red
 				// 2nd parent = div.user-board-message-links
 				// 3rd parent = div.user-board-message = the container of a msg

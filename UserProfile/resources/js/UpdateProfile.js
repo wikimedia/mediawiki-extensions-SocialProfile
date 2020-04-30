@@ -85,17 +85,17 @@
 				} );
 			}
 
-			$( this ).css( {zIndex: 1000} );
+			$( this ).css( { zIndex: 1000 } );
 
-			$( this ).animate( {height: 100}, 100 );
+			$( this ).animate( { height: 100 }, 100 );
 		} );
 		$( 'body' ).on( 'mouseleave', '.eye-container', function () {
-			$( this ).animate( {height: 20}, 100 );
-			$( this ).css( {zIndex: 10} );
+			$( this ).animate( { height: 20 }, 100 );
+			$( this ).css( { zIndex: 10 } );
 		} );
 
 		$( 'body' ).on( 'click', '.eye-container > .menu > .item', function () {
-			$( this ).parent().parent().css( {height: 20} );
+			$( this ).parent().parent().css( { height: 20 } );
 
 			var field_key = $( this ).parent().parent().attr( 'fieldkey' );
 			var priv = $( this ).attr( 'action' );
