@@ -2,7 +2,6 @@
  * JavaScript used on Special:UpdateProfile
  * Displays the "State" dropdown menu if selected country is the United States
  */
-/*jshint unused:false*/
 ( function ( mw, $ ) {
 
 var countries = [];
