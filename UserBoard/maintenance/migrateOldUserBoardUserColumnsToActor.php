@@ -50,14 +50,43 @@ class MigrateOldUserBoardUserColumnsToActor extends LoggedUpdateMaintenance {
 			return true;
 		}
 
-		$dbw->query(
-			"UPDATE {$dbw->tableName( 'user_board' )} SET ub_actor=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=ub_user_id AND actor_name=ub_user_name)",
-			__METHOD__
+		$res = $dbw->select(
+			'user_board',
+			[
+				'ub_user_name'
+			]
 		);
-		$dbw->query(
-			"UPDATE {$dbw->tableName( 'user_board' )} SET ub_actor_from=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=ub_user_id_from AND actor_name=ub_user_name_from)",
-			__METHOD__
+		foreach ( $res as $row ) {
+			$user = new User();
+			$user->setName( $row->ub_user_name );
+			$dbw->update(
+				'user_board',
+				[
+					'ub_actor' => $user->getActorId( $dbw )
+				]
+			);
+		}
+
+		$res = $dbw->select(
+			'user_board',
+			[
+				'ub_user_name_from'
+			]
 		);
+		foreach ( $res as $row ) {
+			$user = new User();
+			$user->setName( $row->ub_user_name_from );
+			$dbw->update(
+				'user_board',
+				[
+					'ub_actor_from' => $user->getActorId( $dbw )
+				],
+				[
+					'ub_user_name_from' => $row->ub_user_name_from
+				]
+			);
+		}
+
 		return true;
 	}
 }

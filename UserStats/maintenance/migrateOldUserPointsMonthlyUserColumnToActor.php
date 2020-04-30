@@ -50,10 +50,27 @@ class MigrateOldUserPointsMonthlyUserColumnToActor extends LoggedUpdateMaintenan
 			// Why is this loop here? Because Postgres was being weird, that's why.
 			return true;
 		}
-		$dbw->query(
-			"UPDATE {$dbw->tableName( 'user_points_monthly' )} SET up_actor=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=up_user_id AND actor_name=up_user_name)",
-			__METHOD__
+
+		$res = $dbw->select(
+			'user_points_monthly',
+			[
+				'up_user_name'
+			]
 		);
+		foreach ( $res as $row ) {
+			$user = new User();
+			$user->setName( $row->up_user_name );
+			$dbw->update(
+				'user_points_monthly',
+				[
+					'up_actor' => $user->getActorId( $dbw )
+				],
+				[
+					'up_user_name' => $row->up_user_name
+				]
+			);
+		}
+
 		return true;
 	}
 }

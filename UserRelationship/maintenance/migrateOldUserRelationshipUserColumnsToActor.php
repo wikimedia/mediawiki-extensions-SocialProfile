@@ -47,17 +47,47 @@ class MigrateOldUserRelationshipUserColumnsToActor extends LoggedUpdateMaintenan
 		$dbw = $this->getDB( DB_MASTER );
 
 		if ( $dbw->fieldExists( 'user_relationship', 'r_user_id', __METHOD__ ) ) {
-			$dbw->query(
-				"UPDATE {$dbw->tableName( 'user_relationship' )} SET r_actor=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=r_user_id AND actor_name=r_user_name)",
-				__METHOD__
+			$res = $dbw->select(
+				'user_relationship',
+				[
+					'r_user_name'
+				]
 			);
+			foreach ( $res as $row ) {
+				$user = new User();
+				$user->setName( $row->r_user_name );
+				$dbw->update(
+					'user_relationship',
+					[
+						'r_actor' => $user->getActorId( $dbw )
+					],
+					[
+						'r_user_name' => $row->r_user_name
+					]
+				);
+			}
 		}
 
 		if ( $dbw->fieldExists( 'user_relationship', 'r_user_id_relation', __METHOD__ ) ) {
-			$dbw->query(
-				"UPDATE {$dbw->tableName( 'user_relationship' )} SET r_actor_relation=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=r_user_id_relation AND actor_name=r_user_name_relation)",
-				__METHOD__
+			$res = $dbw->select(
+				'user_relationship',
+				[
+					'r_user_name_relation'
+				]
 			);
+			foreach ( $res as $row ) {
+				$user = new User();
+				$user->setName( $row->r_user_name_relation );
+				$dbw->update(
+					'user_relationship',
+					[
+						'r_actor_relation' => $user->getActorId( $dbw )
+					],
+					[
+						'r_user_name_relation' => $row->r_user_name_relation
+					]
+				);
+			}
 		}
 
 		return true;

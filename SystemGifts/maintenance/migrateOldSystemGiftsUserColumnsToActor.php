@@ -50,10 +50,27 @@ class MigrateOldSystemGiftsUserColumnsToActor extends LoggedUpdateMaintenance {
 			// Why is this loop here? Because Postgres was being weird, that's why.
 			return true;
 		}
-		$dbw->query(
-			"UPDATE {$dbw->tableName( 'user_system_gift' )} SET sg_actor=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=sg_user_id AND actor_name=sg_user_name)",
-			__METHOD__
+
+		$res = $dbw->select(
+			'user_system_gift',
+			[
+				'sg_user_name'
+			]
 		);
+		foreach ( $res as $row ) {
+			$user = new User();
+			$user->setName( $row->sg_user_name );
+			$dbw->update(
+				'user_system_gift',
+				[
+					'sg_actor' => $user->getActorId( $dbw )
+				],
+				[
+					'sg_user_name' => $row->sg_user_name
+				]
+			);
+		}
+
 		return true;
 	}
 }

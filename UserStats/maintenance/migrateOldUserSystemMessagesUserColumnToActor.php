@@ -50,10 +50,25 @@ class MigrateOldUserSystemMessagesUserColumnToActor extends LoggedUpdateMaintena
 			return true;
 		}
 
-		$dbw->query(
-			"UPDATE {$dbw->tableName( 'user_system_messages' )} SET um_actor=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=um_user_id AND actor_name=um_user_name)",
-			__METHOD__
+		$res = $dbw->select(
+			'user_system_messages',
+			[
+				'um_user_name'
+			]
 		);
+		foreach ( $res as $row ) {
+			$user = new User();
+			$user->setName( $row->um_user_name );
+			$dbw->update(
+				'user_system_messages',
+				[
+					'um_actor' => $user->getActorId( $dbw )
+				],
+				[
+					'um_user_name' => $row->um_user_name
+				]
+			);
+		}
 
 		return true;
 	}

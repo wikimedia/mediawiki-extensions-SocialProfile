@@ -47,17 +47,47 @@ class MigrateOldUserGiftsUserColumnsToActor extends LoggedUpdateMaintenance {
 		$dbw = $this->getDB( DB_MASTER );
 
 		if ( $dbw->fieldExists( 'user_gift', 'ug_user_id_to', __METHOD__ ) ) {
-			$dbw->query(
-				"UPDATE {$dbw->tableName( 'user_gift' )} SET ug_actor_to=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=ug_user_id_to AND actor_name=ug_user_name_to)",
-				__METHOD__
+			$res = $dbw->select(
+				'user_gift',
+				[
+					'ug_user_name_to'
+				]
 			);
+			foreach ( $res as $row ) {
+				$user = new User();
+				$user->setName( $row->ug_user_name_to );
+				$dbw->update(
+					'user_gift',
+					[
+						'ug_actor_to' => $user->getActorId( $dbw )
+					],
+					[
+						'ug_user_name_to' => $row->ug_user_name_to
+					]
+				);
+			}
 		}
 
 		if ( $dbw->fieldExists( 'user_gift', 'ug_user_id_from', __METHOD__ ) ) {
-			$dbw->query(
-				"UPDATE {$dbw->tableName( 'user_gift' )} SET ug_actor_from=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=ug_user_id_from AND actor_name=ug_user_name_from)",
-				__METHOD__
+			$res = $dbw->select(
+				'user_gift',
+				[
+					'ug_user_name_from'
+				]
 			);
+			foreach ( $res as $row ) {
+				$user = new User();
+				$user->setName( $row->ug_user_name_from );
+				$dbw->update(
+					'user_gift',
+					[
+						'ug_actor_from' => $user->getActorId( $dbw )
+					],
+					[
+						'ug_user_name_from' => $row->ug_user_name_from
+					]
+				);
+			}
 		}
 
 		return true;

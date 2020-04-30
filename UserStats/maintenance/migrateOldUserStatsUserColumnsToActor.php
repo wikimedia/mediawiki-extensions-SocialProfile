@@ -52,10 +52,25 @@ class MigrateOldUserStatsUserColumnsToActor extends LoggedUpdateMaintenance {
 		}
 
 		if ( $dbw->fieldExists( 'user_stats', 'stats_user_id', __METHOD__ ) ) {
-			$dbw->query(
-				"UPDATE {$dbw->tableName( 'user_stats' )} SET stats_actor=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=stats_user_id AND actor_name=stats_user_name)",
-				__METHOD__
+			$res = $dbw->select(
+				'user_stats',
+				[
+					'stats_user_name'
+				]
 			);
+			foreach ( $res as $row ) {
+				$user = new User();
+				$user->setName( $row->stats_user_name );
+				$dbw->update(
+					'user_stats',
+					[
+						'stats_actor' => $user->getActorId( $dbw )
+					],
+					[
+						'stats_user_name' => $row->stats_user_name
+					]
+				);
+			}
 		}
 
 		return true;
