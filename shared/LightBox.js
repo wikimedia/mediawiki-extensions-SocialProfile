@@ -14,7 +14,7 @@ window.LightBox = {
 	 * Core code from quirksmode.org
 	 * @return Array with x,y page scroll values.
 	 */
-	getPageScroll: function() {
+	getPageScroll: function () {
 		var yScroll;
 
 		if ( this.pageYOffset ) {
@@ -34,7 +34,7 @@ window.LightBox = {
 	 * Edit for Firefox by pHaez
 	 * @return Array with page width, height and window width, height
 	 */
-	getPageSize: function() {
+	getPageSize: function () {
 		var xScroll, yScroll;
 
 		if ( window.innerHeight && window.scrollMaxY ) {
@@ -83,7 +83,7 @@ window.LightBox = {
 	 * Pauses code execution for specified time. Uses busy code, not good.
 	 * Code from http://www.faqts.com/knowledge_base/view.phtml/aid/1602
 	 */
-	pause: function( numberMillis ) {
+	pause: function ( numberMillis ) {
 		var now = new Date();
 		var exitTime = now.getTime() + numberMillis;
 		while ( true ) {
@@ -97,7 +97,7 @@ window.LightBox = {
 	/**
 	 * Preloads images. Places new image in lightbox then centers and displays.
 	 */
-	show: function( objLink ) {
+	show: function ( objLink ) {
 		var lb = this;
 		// prepare objects
 		var objOverlay = document.getElementById( 'overlay' );
@@ -110,13 +110,13 @@ window.LightBox = {
 
 		objLightboxText.style.display = 'none';
 		// set height of Overlay to take up whole page and show
-		objOverlay.style.height = ( arrayPageSize[1] + 'px' );
+		objOverlay.style.height = ( arrayPageSize[ 1 ] + 'px' );
 		objOverlay.style.display = 'block';
 
 		// preload image
 		var imgPreload = new Image();
 
-		imgPreload.onload = function() {
+		imgPreload.onload = function () {
 			objImage.src = objLink.href;
 
 			// center lightbox and make sure that the top and left values are not negative
@@ -137,7 +137,7 @@ window.LightBox = {
 			var selects = document.getElementsByTagName( 'select' );
 
 			for ( var i = 0; i != selects.length; i++ ) {
-				selects[i].style.visibility = 'hidden';
+				selects[ i ].style.visibility = 'hidden';
 			}
 
 			objLightbox.style.display = 'block';
@@ -146,15 +146,15 @@ window.LightBox = {
 			// After image is loaded, update the overlay height as the new image might have
 			// increased the overall page height.
 			arrayPageSize = lb.getPageSize();
-			objOverlay.style.height = ( arrayPageSize[1] + 'px' );
+			objOverlay.style.height = ( arrayPageSize[ 1 ] + 'px' );
 
-			this.onload = function() { return; };
+			this.onload = function () { return; };
 		};
 
 		imgPreload.src = objLink.href;
 	},
 
-	hide: function() {
+	hide: function () {
 		// get objects
 		var objOverlay = document.getElementById( 'overlay' );
 		var objLightbox = document.getElementById( 'lightbox' );
@@ -169,7 +169,7 @@ window.LightBox = {
 		// make select boxes visible
 		var selects = document.getElementsByTagName( 'select' );
 		for ( var i = 0; i != selects.length; i++ ) {
-			selects[i].style.visibility = 'visible';
+			selects[ i ].style.visibility = 'visible';
 		}
 
 		// disable keypress listener
@@ -182,7 +182,7 @@ window.LightBox = {
 	 * The function also inserts html markup at the top of the page which will be used as a
 	 * container for the overlay pattern and the inline image.
 	 */
-	init: function() {
+	init: function () {
 		if ( !document.getElementsByTagName ) {
 			return;
 		}
@@ -194,7 +194,7 @@ window.LightBox = {
 		// (aesthetic styles are in CSS file)
 		var objOverlay = document.createElement( 'div' );
 		objOverlay.setAttribute( 'id', 'overlay' );
-		objOverlay.onclick = function() {
+		objOverlay.onclick = function () {
 			lb.hide();
 			return false;
 		};
@@ -235,7 +235,7 @@ window.LightBox = {
 		objLightbox.appendChild( objImage );
 	},
 
-	setText: function( message ) {
+	setText: function ( message ) {
 		var lb = this;
 		// prep objects
 		// var objOverlay = document.getElementById( 'overlay' );
@@ -255,8 +255,8 @@ window.LightBox = {
 		// center lightbox and make sure that the top and left values are not negative
 		// and the image placed outside the viewport
 		var dimensionsObj = lb.getDimensions( objLightboxText );
-		var lightboxTop = arrayPageScroll[1] + ( ( arrayPageSize[3] - 35 - dimensionsObj.height ) / 2 );
-		var lightboxLeft = ( ( arrayPageSize[0] - 20 - dimensionsObj.width ) / 2 );
+		var lightboxTop = arrayPageScroll[ 1 ] + ( ( arrayPageSize[ 3 ] - 35 - dimensionsObj.height ) / 2 );
+		var lightboxLeft = ( ( arrayPageSize[ 0 ] - 20 - dimensionsObj.width ) / 2 );
 
 		objLightbox.style.top = ( lightboxTop < 0 ) ? '0px' : lightboxTop + 'px';
 		objLightbox.style.left = ( lightboxLeft < 0 ) ? '0px' : lightboxLeft + 'px';
@@ -269,7 +269,7 @@ window.LightBox = {
 	 * @param element The element whose width and height we want to get
 	 * @return Array
 	 */
-	getDimensions: function( element ) {
+	getDimensions: function ( element ) {
 		var display = element.style.display;
 
 		if ( display != 'none' && display !== null ) { // Safari bug

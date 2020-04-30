@@ -8,12 +8,12 @@ var UserProfilePage = {
 	replaceSrc: '',
 	oldHtml: '',
 
-	changeUserPageType: function() {
+	changeUserPageType: function () {
 		( new mw.Api() ).postWithToken( 'csrf', {
 			action: 'smpuserprofiletype',
 			format: 'json',
 			do: 'set'
-		} ).done( function() {
+		} ).done( function () {
 			// @todo This works, but is kinda crude. Ideally we'd show a spinner and maybe
 			// even load the requested page's content (wikitext page or social profile)
 			// using AJAX, if possible.
@@ -21,7 +21,7 @@ var UserProfilePage = {
 		} );
 	},
 
-	sendMessage: function() {
+	sendMessage: function () {
 		var userTo = decodeURIComponent( mediaWiki.config.get( 'wgTitle' ) ), //document.getElementById( 'user_name_to' ).value;
 			encMsg = encodeURIComponent( document.getElementById( 'message' ).value ),
 			msgType = document.getElementById( 'message_type' ).value;
@@ -33,7 +33,7 @@ var UserProfilePage = {
 				username: userTo,
 				message: encMsg,
 				type: msgType
-			} ).done( function( data ) {
+			} ).done( function ( data ) {
 				jQuery( data.result ).prependTo( '#user-page-board' );
 				UserProfilePage.posted = 0;
 				jQuery( '#message' ).val( '' );
@@ -41,13 +41,13 @@ var UserProfilePage = {
 		}
 	},
 
-	deleteMessage: function( id ) {
+	deleteMessage: function ( id ) {
 		if ( window.confirm( mediaWiki.msg( 'user-board-confirm-delete' ) ) ) {
 			( new mw.Api() ).postWithToken( 'csrf', {
 				action: 'socialprofile-delete-message',
 				format: 'json',
 				'id': id
-			} ).done( function() {
+			} ).done( function () {
 				//window.location.reload();
 				// 1st parent = span.user-board-red
 				// 2nd parent = div.user-board-message-links
@@ -57,12 +57,12 @@ var UserProfilePage = {
 		}
 	},
 
-	showUploadFrame: function() {
+	showUploadFrame: function () {
 		document.getElementById( 'upload-container' ).style.display = 'block';
 		document.getElementById( 'upload-container' ).style.visibility = 'visible';
 	},
 
-	uploadError: function( message ) {
+	uploadError: function ( message ) {
 		document.getElementById( 'mini-gallery-' + UserProfilePage.replaceID ).innerHTML = UserProfilePage.oldHtml;
 		document.getElementById( 'upload-frame-errors' ).innerHTML = message;
 		document.getElementById( 'imageUpload-frame' ).src = 'index.php?title=Special:MiniAjaxUpload&wpThumbWidth=75';
@@ -71,13 +71,13 @@ var UserProfilePage = {
 		document.getElementById( 'upload-container' ).style.visibility = 'visible';
 	},
 
-	textError: function( message ) {
+	textError: function ( message ) {
 		document.getElementById( 'upload-frame-errors' ).innerHTML = message;
 		document.getElementById( 'upload-frame-errors' ).style.display = 'block';
 		document.getElementById( 'upload-frame-errors' ).style.visibility = 'visible';
 	},
 
-	completeImageUpload: function() {
+	completeImageUpload: function () {
 		document.getElementById( 'upload-frame-errors' ).style.display = 'none';
 		document.getElementById( 'upload-frame-errors' ).style.visibility = 'hidden';
 		document.getElementById( 'upload-frame-errors' ).innerHTML = '';
@@ -100,54 +100,54 @@ var UserProfilePage = {
 		document.getElementById( 'pictures-containers' ).style.visibility = 'visible';
 	},
 
-	uploadComplete: function( imgSrc, imgName ) {
+	uploadComplete: function ( imgSrc, imgName ) {
 		UserProfilePage.replaceSrc = imgSrc;
 
 		document.getElementById( 'upload-frame-errors' ).innerHTML = '';
 
 		//document.getElementById( 'imageUpload-frame' ).onload = function() {
-			// var idOffset = -1 - UserProfilePage.numReplaces;
-			var __image_prefix;
-			//$D.addClass( 'mini-gallery-0', 'mini-gallery' );
-			//document.getElementById('mini-gallery-0').innerHTML = '<a href=\"javascript:slideShowLink(' + idOffset + ')\">' + UserProfilePage.replaceSrc + '</a>';
-			document.getElementById( 'mini-gallery-0' ).innerHTML = '<a href=\"' + __image_prefix + imgName + '\">' + UserProfilePage.replaceSrc + '</a>';
+		// var idOffset = -1 - UserProfilePage.numReplaces;
+		var __image_prefix;
+		//$D.addClass( 'mini-gallery-0', 'mini-gallery' );
+		//document.getElementById('mini-gallery-0').innerHTML = '<a href=\"javascript:slideShowLink(' + idOffset + ')\">' + UserProfilePage.replaceSrc + '</a>';
+		document.getElementById( 'mini-gallery-0' ).innerHTML = '<a href=\"' + __image_prefix + imgName + '\">' + UserProfilePage.replaceSrc + '</a>';
 
-			//UserProfilePage.replaceID = ( UserProfilePage.replaceID == 7 ) ? 0 : ( UserProfilePage.replaceID + 1 );
-			UserProfilePage.numReplaces += 1;
+		//UserProfilePage.replaceID = ( UserProfilePage.replaceID == 7 ) ? 0 : ( UserProfilePage.replaceID + 1 );
+		UserProfilePage.numReplaces += 1;
 		//}
 		//if ( document.getElementById( 'imageUpload-frame' ).captureEvents ) document.getElementById( 'imageUpload-frame' ).captureEvents( Event.LOAD );
 
 		document.getElementById( 'imageUpload-frame' ).src = 'index.php?title=Special:MiniAjaxUpload&wpThumbWidth=75&extra=' + UserProfilePage.numReplaces;
 	},
 
-	slideShowLink: function( id ) {
+	slideShowLink: function ( id ) {
 		//window.location = 'index.php?title=Special:UserSlideShow&user=' + __slideshow_user + '&picture=' + ( numReplaces + id );
 		window.location = 'Image:' + id;
 	},
 
-	doHover: function( divID ) {
+	doHover: function ( divID ) {
 		document.getElementById( divID ).style.backgroundColor = '#4B9AF6';
 	},
 
-	endHover: function( divID ) {
+	endHover: function ( divID ) {
 		document.getElementById( divID ).style.backgroundColor = '';
 	}
 };
 
-jQuery( function() {
+jQuery( function () {
 	// "Use social profile" / "Use wikitext userpage" button on your own profile
-	jQuery( '#profile-toggle-button a' ).on( 'click', function( e ) {
+	jQuery( '#profile-toggle-button a' ).on( 'click', function ( e ) {
 		e.preventDefault();
 		UserProfilePage.changeUserPageType();
 	} );
 
 	// "Send message" button on (other users') profile pages
-	jQuery( 'div.user-page-message-box-button input[type="button"]' ).on( 'click', function() {
+	jQuery( 'div.user-page-message-box-button input[type="button"]' ).on( 'click', function () {
 		UserProfilePage.sendMessage();
 	} );
 
 	// Board messages' "Delete" link
-	jQuery( 'span.user-board-red a' ).on( 'click', function() {
+	jQuery( 'span.user-board-red a' ).on( 'click', function () {
 		UserProfilePage.deleteMessage( jQuery( this ).data( 'message-id' ) );
 	} );
 } );

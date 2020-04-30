@@ -1,7 +1,7 @@
 var UserBoard = {
 	posted: 0,
 
-	sendMessage: function( perPage ) {
+	sendMessage: function ( perPage ) {
 		if ( !perPage ) {
 			perPage = 25;
 		}
@@ -17,7 +17,7 @@ var UserBoard = {
 				username: recipient,
 				message: message,
 				type: messageType
-			} ).done( function() {
+			} ).done( function () {
 				UserBoard.posted = 0;
 				var user_1, user_2;
 				if ( sender ) { // it's a board to board
@@ -34,13 +34,13 @@ var UserBoard = {
 		}
 	},
 
-	deleteMessage: function( id ) {
+	deleteMessage: function ( id ) {
 		if ( window.confirm( mediaWiki.msg( 'userboard_confirmdelete' ) ) ) {
 			( new mw.Api() ).postWithToken( 'csrf', {
 				action: 'socialprofile-delete-message',
 				format: 'json',
 				'id': id
-			} ).done( function() {
+			} ).done( function () {
 				//window.location.reload();
 				// 1st parent = span.user-board-red
 				// 2nd parent = div.user-board-message-links
@@ -51,14 +51,14 @@ var UserBoard = {
 	}
 };
 
-jQuery( function() {
+jQuery( function () {
 	// "Delete" link
-	jQuery( 'span.user-board-red a' ).on( 'click', function() {
+	jQuery( 'span.user-board-red a' ).on( 'click', function () {
 		UserBoard.deleteMessage( jQuery( this ).data( 'message-id' ) );
 	} );
 
 	// Submit button
-	jQuery( 'div.user-page-message-box-button input[type="button"]' ).on( 'click', function() {
+	jQuery( 'div.user-page-message-box-button input[type="button"]' ).on( 'click', function () {
 		UserBoard.sendMessage( jQuery( this ).data( 'per-page' ) );
 	} );
 } );
