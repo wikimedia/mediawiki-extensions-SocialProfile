@@ -113,7 +113,7 @@
 				action: 'smpuserprivacy',
 				format: 'json',
 				method: 'set',
-				'field_key': field_key,
+				field_key: field_key,
 				privacy: encodeURIComponent( priv )
 			} ).done( function ( data ) {
 				var offset = $( this_element ).offset();

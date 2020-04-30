@@ -39,7 +39,7 @@ var UserBoard = {
 			( new mw.Api() ).postWithToken( 'csrf', {
 				action: 'socialprofile-delete-message',
 				format: 'json',
-				'id': id
+				id: id
 			} ).done( function () {
 				// window.location.reload();
 				// 1st parent = span.user-board-red
