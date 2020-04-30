@@ -248,9 +248,10 @@ class UploadAvatar extends UploadFromFile {
 	/**
 	 * We don't overwrite stuff, so don't care
 	 *
+	 * @param User|null $user Ignored; required for type fit with upstream.
 	 * @return array
 	 */
-	public function checkWarnings() {
+	public function checkWarnings( $user = null ) {
 		return [];
 	}
 }
