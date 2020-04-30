@@ -1,7 +1,7 @@
 var BoardBlast = {
 	submitted: 0,
 
-	toggleUser: function( user_id ) {
+	toggleUser: function ( user_id ) {
 		var elem = jQuery( '#user-' + user_id );
 
 		if ( elem.hasClass( 'blast-friend-selected' ) ) {
@@ -21,11 +21,11 @@ var BoardBlast = {
 		}
 	},
 
-	toggleType: function( method, on, off ) {
+	toggleType: function ( method, on, off ) {
 		var list = jQuery( '#blast-friends-list div.' + ( ( method === 1 ) ? off : on ) );
 
 		for ( var x = 0; x <= list.length - 1; x++ ) {
-			var el = list[x];
+			var el = list[ x ];
 			if ( jQuery( el ).hasClass( on ) || jQuery( el ).hasClass( off ) ) {
 				if ( method === 1 ) {
 					jQuery( el ).removeClass( off ).addClass( on );
@@ -36,7 +36,7 @@ var BoardBlast = {
 		}
 	},
 
-	toggleFriends: function( method ) {
+	toggleFriends: function ( method ) {
 		BoardBlast.toggleType(
 			method,
 			'blast-friend-selected',
@@ -44,7 +44,7 @@ var BoardBlast = {
 		);
 	},
 
-	toggleFoes: function( method ) {
+	toggleFoes: function ( method ) {
 		BoardBlast.toggleType(
 			method,
 			'blast-foe-selected',
@@ -52,17 +52,17 @@ var BoardBlast = {
 		);
 	},
 
-	selectAll: function() {
+	selectAll: function () {
 		BoardBlast.toggleFriends( 1 );
 		BoardBlast.toggleFoes( 1 );
 	},
 
-	unselectAll: function() {
+	unselectAll: function () {
 		BoardBlast.toggleFriends( 0 );
 		BoardBlast.toggleFoes( 0 );
 	},
 
-	sendMessages: function() {
+	sendMessages: function () {
 		if ( BoardBlast.submitted === 1 ) {
 			return 0;
 		}
@@ -74,7 +74,7 @@ var BoardBlast = {
 		var list = jQuery( '#blast-friends-list div.blast-friend-selected' );
 		var el, user_id;
 		for ( var x = 0; x <= list.length - 1; x++ ) {
-			el = list[x];
+			el = list[ x ];
 			selected++;
 			user_id = el.id.replace( 'user-', '' );
 			user_ids_to += ( ( user_ids_to ) ? ',' : '' ) + user_id;
@@ -82,7 +82,7 @@ var BoardBlast = {
 
 		list = jQuery( '#blast-friends-list div.blast-foe-selected' );
 		for ( x = 0; x <= list.length - 1; x++ ) {
-			el = list[x];
+			el = list[ x ];
 			selected++;
 			user_id = el.id.replace( 'user-', '' );
 			user_ids_to += ( ( user_ids_to ) ? ',' : '' ) + user_id;
@@ -109,41 +109,41 @@ var BoardBlast = {
 	}
 };
 
-jQuery( function() {
+jQuery( function () {
 	// "Select/Unselect all" links
-	jQuery( 'div.blast-nav-links a.blast-select-all-link' ).on( 'click', function() {
+	jQuery( 'div.blast-nav-links a.blast-select-all-link' ).on( 'click', function () {
 		BoardBlast.selectAll();
 	} );
 
-	jQuery( 'div.blast-nav-links a.blast-unselect-all-link' ).on( 'click', function() {
+	jQuery( 'div.blast-nav-links a.blast-unselect-all-link' ).on( 'click', function () {
 		BoardBlast.unselectAll();
 	} );
 
 	// "Select/Unselect friends" links
-	jQuery( 'div.blast-nav-links a.blast-select-friends-link' ).on( 'click', function() {
+	jQuery( 'div.blast-nav-links a.blast-select-friends-link' ).on( 'click', function () {
 		BoardBlast.toggleFriends( 1 );
 	} );
 
-	jQuery( 'div.blast-nav-links a.blast-unselect-friends-link' ).on( 'click', function() {
+	jQuery( 'div.blast-nav-links a.blast-unselect-friends-link' ).on( 'click', function () {
 		BoardBlast.toggleFriends( 0 );
 	} );
 
 	// "Select/Unselect foes" links
-	jQuery( 'div.blast-nav-links a.blast-select-foes-link' ).on( 'click', function() {
+	jQuery( 'div.blast-nav-links a.blast-select-foes-link' ).on( 'click', function () {
 		BoardBlast.toggleFoes( 1 );
 	} );
 
-	jQuery( 'div.blast-nav-links a.blast-unselect-foes-link' ).on( 'click', function() {
+	jQuery( 'div.blast-nav-links a.blast-unselect-foes-link' ).on( 'click', function () {
 		BoardBlast.toggleFoes( 0 );
 	} );
 
 	// Toggling for an individual user
-	jQuery( 'div#blast-friends-list div[id^="user-"]' ).on( 'click', function() {
+	jQuery( 'div#blast-friends-list div[id^="user-"]' ).on( 'click', function () {
 		BoardBlast.toggleUser( jQuery( this ).attr( 'id' ).replace( /user-/, '' ) );
 	} );
 
 	// The submit button
-	jQuery( 'div.blast-message-box-button input[type="button"]' ).on( 'click', function() {
+	jQuery( 'div.blast-message-box-button input[type="button"]' ).on( 'click', function () {
 		BoardBlast.sendMessages();
 	} );
 } );
