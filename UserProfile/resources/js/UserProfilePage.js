@@ -46,7 +46,7 @@ var UserProfilePage = {
 			( new mw.Api() ).postWithToken( 'csrf', {
 				action: 'socialprofile-delete-message',
 				format: 'json',
-				'id': id
+				id: id
 			} ).done( function () {
 				// window.location.reload();
 				// 1st parent = span.user-board-red
@@ -110,7 +110,7 @@ var UserProfilePage = {
 		var __image_prefix;
 		// $D.addClass( 'mini-gallery-0', 'mini-gallery' );
 		// document.getElementById('mini-gallery-0').innerHTML = '<a href=\"javascript:slideShowLink(' + idOffset + ')\">' + UserProfilePage.replaceSrc + '</a>';
-		document.getElementById( 'mini-gallery-0' ).innerHTML = '<a href=\"' + __image_prefix + imgName + '\">' + UserProfilePage.replaceSrc + '</a>';
+		document.getElementById( 'mini-gallery-0' ).innerHTML = '<a href="' + __image_prefix + imgName + '">' + UserProfilePage.replaceSrc + '</a>';
 
 		// UserProfilePage.replaceID = ( UserProfilePage.replaceID == 7 ) ? 0 : ( UserProfilePage.replaceID + 1 );
 		UserProfilePage.numReplaces += 1;

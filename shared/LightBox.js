@@ -148,7 +148,9 @@ window.LightBox = {
 			arrayPageSize = lb.getPageSize();
 			objOverlay.style.height = ( arrayPageSize[ 1 ] + 'px' );
 
-			this.onload = function () { return; };
+			this.onload = function () {
+				return;
+			};
 		};
 
 		imgPreload.src = objLink.href;

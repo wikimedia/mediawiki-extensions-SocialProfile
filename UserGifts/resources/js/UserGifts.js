@@ -46,21 +46,21 @@ $( function () {
 
 	// Handlers for individual gift images
 	$( 'div[id^=give_gift_]' ).on( {
-		'click': function () {
+		click: function () {
 			UserGifts.selectGift(
 				$( this ).attr( 'id' ).replace( 'give_gift_', '' )
 			);
 		},
-		'mouseout': function () {
+		mouseout: function () {
 			UserGifts.unHighlightGift(
 				$( this ).attr( 'id' ).replace( 'give_gift_', '' )
 			);
 		},
-		'mouseover': function () {
+		mouseover: function () {
 			UserGifts.highlightGift(
 				$( this ).attr( 'id' ).replace( 'give_gift_', '' )
 			);
-		},
+		}
 	} );
 
 	// "Send gift" button
