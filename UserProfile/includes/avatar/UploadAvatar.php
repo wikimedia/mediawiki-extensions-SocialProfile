@@ -231,7 +231,7 @@ class UploadAvatar extends UploadFromFile {
 		// doesn't use that variable per se, this stuff in this method is here just to
 		// keep AbuseFilter happy and such. (And who knows, perhaps some other things also
 		// blindly assume that mFileProps is always set...)
-		$mwProps = new MWFileProps( MediaWiki\MediaWikiServices::getInstance()->getMimeAnalyzer() );
+		$mwProps = new MWFileProps( MediaWikiServices::getInstance()->getMimeAnalyzer() );
 		$this->mFileProps = $mwProps->getPropsFromPath( $this->mTempPath, $this->mFinalExtension );
 		return [ 'status' => self::OK ];
 	}
