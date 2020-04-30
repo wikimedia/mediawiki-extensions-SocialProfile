@@ -124,8 +124,8 @@ window.LightBox = {
 			// var lightboxTop = arrayPageScroll[1] + ( ( arrayPageSize[3] - 35 - imgPreload.height ) / 2 );
 			// var lightboxLeft = ( ( arrayPageSize[0] - 20 - imgPreload.width ) / 2 );
 
-			//objLightbox.style.top = ( lightboxTop < 0 ) ? '0px' : lightboxTop + 'px';
-			//objLightbox.style.left = ( lightboxLeft < 0 ) ? '0px' : lightboxLeft + 'px';
+			// objLightbox.style.top = ( lightboxTop < 0 ) ? '0px' : lightboxTop + 'px';
+			// objLightbox.style.left = ( lightboxLeft < 0 ) ? '0px' : lightboxLeft + 'px';
 
 			// A small pause between the image loading and displaying is required with IE,
 			// this prevents the previous image displaying for a short burst causing flicker.
@@ -273,7 +273,7 @@ window.LightBox = {
 		var display = element.style.display;
 
 		if ( display != 'none' && display !== null ) { // Safari bug
-			return {width: element.offsetWidth, height: element.offsetHeight};
+			return { width: element.offsetWidth, height: element.offsetHeight };
 		}
 
 		// All *Width and *Height properties give 0 on elements with display none,
@@ -292,6 +292,6 @@ window.LightBox = {
 		els.position = originalPosition;
 		els.visibility = originalVisibility;
 
-		return {width: originalWidth, height: originalHeight};
+		return { width: originalWidth, height: originalHeight };
 	}
 };

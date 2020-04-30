@@ -22,7 +22,7 @@ var UserProfilePage = {
 	},
 
 	sendMessage: function () {
-		var userTo = decodeURIComponent( mw.config.get( 'wgTitle' ) ), //document.getElementById( 'user_name_to' ).value;
+		var userTo = decodeURIComponent( mw.config.get( 'wgTitle' ) ), // document.getElementById( 'user_name_to' ).value;
 			encMsg = encodeURIComponent( document.getElementById( 'message' ).value ),
 			msgType = document.getElementById( 'message_type' ).value;
 		if ( document.getElementById( 'message' ).value && !UserProfilePage.posted ) {
@@ -48,7 +48,7 @@ var UserProfilePage = {
 				format: 'json',
 				'id': id
 			} ).done( function () {
-				//window.location.reload();
+				// window.location.reload();
 				// 1st parent = span.user-board-red
 				// 2nd parent = div.user-board-message-links
 				// 3rd parent = div.user-board-message = the container of a msg
@@ -105,23 +105,23 @@ var UserProfilePage = {
 
 		document.getElementById( 'upload-frame-errors' ).innerHTML = '';
 
-		//document.getElementById( 'imageUpload-frame' ).onload = function() {
+		// document.getElementById( 'imageUpload-frame' ).onload = function() {
 		// var idOffset = -1 - UserProfilePage.numReplaces;
 		var __image_prefix;
-		//$D.addClass( 'mini-gallery-0', 'mini-gallery' );
-		//document.getElementById('mini-gallery-0').innerHTML = '<a href=\"javascript:slideShowLink(' + idOffset + ')\">' + UserProfilePage.replaceSrc + '</a>';
+		// $D.addClass( 'mini-gallery-0', 'mini-gallery' );
+		// document.getElementById('mini-gallery-0').innerHTML = '<a href=\"javascript:slideShowLink(' + idOffset + ')\">' + UserProfilePage.replaceSrc + '</a>';
 		document.getElementById( 'mini-gallery-0' ).innerHTML = '<a href=\"' + __image_prefix + imgName + '\">' + UserProfilePage.replaceSrc + '</a>';
 
-		//UserProfilePage.replaceID = ( UserProfilePage.replaceID == 7 ) ? 0 : ( UserProfilePage.replaceID + 1 );
+		// UserProfilePage.replaceID = ( UserProfilePage.replaceID == 7 ) ? 0 : ( UserProfilePage.replaceID + 1 );
 		UserProfilePage.numReplaces += 1;
-		//}
-		//if ( document.getElementById( 'imageUpload-frame' ).captureEvents ) document.getElementById( 'imageUpload-frame' ).captureEvents( Event.LOAD );
+		// }
+		// if ( document.getElementById( 'imageUpload-frame' ).captureEvents ) document.getElementById( 'imageUpload-frame' ).captureEvents( Event.LOAD );
 
 		document.getElementById( 'imageUpload-frame' ).src = 'index.php?title=Special:MiniAjaxUpload&wpThumbWidth=75&extra=' + UserProfilePage.numReplaces;
 	},
 
 	slideShowLink: function ( id ) {
-		//window.location = 'index.php?title=Special:UserSlideShow&user=' + __slideshow_user + '&picture=' + ( numReplaces + id );
+		// window.location = 'index.php?title=Special:UserSlideShow&user=' + __slideshow_user + '&picture=' + ( numReplaces + id );
 		window.location = 'Image:' + id;
 	},
 
