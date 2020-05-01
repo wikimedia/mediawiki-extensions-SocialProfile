@@ -46,10 +46,8 @@ class MigrateOldUserProfileUserColumnToActor extends LoggedUpdateMaintenance {
 	protected function doDBUpdates() {
 		$dbw = $this->getDB( DB_MASTER );
 		if ( $dbw->fieldExists( 'user_profile', 'up_user_id', __METHOD__ ) ) {
+			// Drop the _old_ PRIMARY KEY
 			$dbw->sourceFile( __DIR__ . '/../sql/patches/actor/drop-primary-key.sql' );
-			if ( !$dbw->fieldExists( 'user_profile', 'up_id', __METHOD__ ) ) {
-				$dbw->sourceFile( __DIR__ . '/../sql/patches/actor/add-up_id.sql' );
-			}
 
 			$res = $dbw->select(
 				'user_profile',
@@ -62,6 +60,7 @@ class MigrateOldUserProfileUserColumnToActor extends LoggedUpdateMaintenance {
 			);
 			foreach ( $res as $row ) {
 				$user = User::newFromId( $row->up_user_id );
+				// Populate our brand new column
 				$dbw->update(
 					'user_profile',
 					[
@@ -73,6 +72,8 @@ class MigrateOldUserProfileUserColumnToActor extends LoggedUpdateMaintenance {
 					__METHOD__
 				);
 			}
+			// Make our new column the new PK!
+			$dbw->sourceFile( __DIR__ . '/../sql/patches/actor/make-up_actor-primary-key.sql' );
 		}
 		return true;
 	}

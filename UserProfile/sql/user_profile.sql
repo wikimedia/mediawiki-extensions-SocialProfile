@@ -3,8 +3,7 @@
 --
 
 CREATE TABLE IF NOT EXISTS /*_*/user_profile (
-  `up_id` int unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `up_actor` bigint unsigned NOT NULL,
+  `up_actor` bigint unsigned NOT NULL PRIMARY KEY,
   `up_location_city` varchar(255) default NULL,
   `up_location_state` varchar(100) default NULL,
   `up_location_country` varchar(255) default NULL,
@@ -36,5 +35,3 @@ CREATE TABLE IF NOT EXISTS /*_*/user_profile (
   `up_custom_5` text,
   `up_type` int(5) NOT NULL default '1'
 ) /*$wgDBTableOptions*/;
-
-CREATE INDEX /*i*/up_actor ON /*_*/user_profile (up_actor);

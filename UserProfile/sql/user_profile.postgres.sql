@@ -1,10 +1,6 @@
 -- Postgres version
-DROP SEQUENCE IF EXISTS user_profile_up_id_seq CASCADE;
-CREATE SEQUENCE user_profile_up_id_seq;
-
 CREATE TABLE user_profile (
-  up_id                INTEGER      NOT NULL  PRIMARY KEY DEFAULT nextval('user_profile_up_id_seq'),
-  up_actor             INTEGER      NOT NULL,
+  up_actor             INTEGER      NOT NULL  PRIMARY KEY,
   up_location_city     TEXT,
   up_location_state    TEXT,
   up_location_country  TEXT,

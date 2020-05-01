@@ -1,0 +1,1 @@
+ALTER TABLE /*_*/user_profile ADD PRIMARY KEY (up_actor);

@@ -146,13 +146,8 @@ class SocialProfileHooks {
 
 		# UserProfile -- two affected tables, user_profile and user_fields_privacy
 		if ( !$db->fieldExists( 'user_profile', 'up_actor', __METHOD__ ) ) {
-			// 1) add new actor column + autoincrementing field
+			// 1) add new actor column
 			$updater->addExtensionField( 'user_profile', 'up_actor', "$dir/UserProfile/sql/patches/actor/add-up_actor$dbExt.sql" );
-			// can't be done here, must be done in the maint script :-(
-			// Otherwise we get this error on MySQL/MariaDB:
-			// Error: 1075 Incorrect table definition; there can be only one auto column and it must be defined as a key
-			// $updater->addExtensionField( 'user_profile', 'up_id', "$dir/UserProfile/sql/patches/actor/add-up_id$dbExt.sql" );
-			$updater->addExtensionIndex( 'user_profile', 'up_actor', "$dir/UserProfile/sql/patches/actor/add-up_actor_index.sql" );
 			// 2) populate the new column with data and make some other magic happen, too,
 			// like the PRIMARY KEY switchover
 			$updater->addExtensionUpdate( [
@@ -162,6 +157,12 @@ class SocialProfileHooks {
 			] );
 			// 3) drop the old user ID column
 			$updater->dropExtensionField( 'user_profile', 'up_user_id', "$dir/UserProfile/sql/patches/actor/drop-up_user_id.sql" );
+		}
+
+		// This was a bad idea and I should feel bad. Luckily it existed only for
+		// like less than half a year in 2020.
+		if ( $db->fieldExists( 'user_profile', 'up_id', __METHOD__ ) ) {
+			$updater->dropExtensionField( 'user_profile', 'up_id', "$dir/UserProfile/sql/patches/drop-up_id.sql" );
 		}
 
 		if ( !$db->fieldExists( 'user_fields_privacy', 'ufp_actor', __METHOD__ ) ) {
