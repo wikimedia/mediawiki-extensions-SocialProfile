@@ -232,7 +232,7 @@ class SocialProfileHooks {
 			$updater->addExtensionUpdate( [
 				'runMaintenance',
 				'MigrateOldUserStatsUserColumnsToActor',
-				"$dir/SystemGifts/maintenance/migrateOldUserStatsUserColumnsToActor.php"
+				"$dir/UserStats/maintenance/migrateOldUserStatsUserColumnsToActor.php"
 			] );
 			// 3) drop old columns
 			$updater->dropExtensionField( 'user_stats', 'stats_user_name', "$dir/UserStats/sql/patches/actor/drop-stats_user_name.sql" );
