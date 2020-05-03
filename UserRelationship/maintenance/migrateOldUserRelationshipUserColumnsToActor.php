@@ -50,19 +50,21 @@ class MigrateOldUserRelationshipUserColumnsToActor extends LoggedUpdateMaintenan
 			$res = $dbw->select(
 				'user_relationship',
 				[
-					'r_user_name'
-				]
+					'r_user_id'
+				],
+				'',
+				__METHOD__,
+				[ 'DISTINCT' ]
 			);
 			foreach ( $res as $row ) {
-				$user = new User();
-				$user->setName( $row->r_user_name );
+				$user = User::newFromId( $row->r_user_id );
 				$dbw->update(
 					'user_relationship',
 					[
 						'r_actor' => $user->getActorId( $dbw )
 					],
 					[
-						'r_user_name' => $row->r_user_name
+						'r_user_id' => $row->r_user_id
 					]
 				);
 			}
@@ -72,19 +74,21 @@ class MigrateOldUserRelationshipUserColumnsToActor extends LoggedUpdateMaintenan
 			$res = $dbw->select(
 				'user_relationship',
 				[
-					'r_user_name_relation'
-				]
+					'r_user_id_relation'
+				],
+				'',
+				__METHOD__,
+				[ 'DISTINCT' ]
 			);
 			foreach ( $res as $row ) {
-				$user = new User();
-				$user->setName( $row->r_user_name_relation );
+				$user = User::newFromId( $row->r_user_id_relation );
 				$dbw->update(
 					'user_relationship',
 					[
 						'r_actor_relation' => $user->getActorId( $dbw )
 					],
 					[
-						'r_user_name_relation' => $row->r_user_name_relation
+						'r_user_id_relation' => $row->r_user_id_relation
 					]
 				);
 			}

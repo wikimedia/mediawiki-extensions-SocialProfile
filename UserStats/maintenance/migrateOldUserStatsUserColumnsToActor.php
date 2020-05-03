@@ -55,19 +55,21 @@ class MigrateOldUserStatsUserColumnsToActor extends LoggedUpdateMaintenance {
 			$res = $dbw->select(
 				'user_stats',
 				[
-					'stats_user_name'
-				]
+					'stats_user_id'
+				],
+				'',
+				__METHOD__,
+				[ 'DISTINCT' ]
 			);
 			foreach ( $res as $row ) {
-				$user = new User();
-				$user->setName( $row->stats_user_name );
+				$user = User::newFromId( $row->stats_user_id );
 				$dbw->update(
 					'user_stats',
 					[
 						'stats_actor' => $user->getActorId( $dbw )
 					],
 					[
-						'stats_user_name' => $row->stats_user_name
+						'stats_user_id' => $row->stats_user_id
 					]
 				);
 			}
