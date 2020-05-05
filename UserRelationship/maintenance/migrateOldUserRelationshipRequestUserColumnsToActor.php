@@ -50,19 +50,21 @@ class MigrateOldUserRelationshipRequestUserColumnsToActor extends LoggedUpdateMa
 			$res = $dbw->select(
 				'user_relationship_request',
 				[
-					'ur_user_name_from'
-				]
+					'ur_user_id_from'
+				],
+				'',
+				__METHOD__,
+				[ 'DISTINCT' ]
 			);
 			foreach ( $res as $row ) {
-				$user = new User();
-				$user->setName( $row->ur_user_name_from );
+				$user = User::newFromId( $row->ur_user_id_from );
 				$dbw->update(
 					'user_relationship_request',
 					[
 						'ur_actor_from' => $user->getActorId( $dbw )
 					],
 					[
-						'ur_user_name_from' => $row->ur_user_name_from
+						'ur_user_id_from' => $row->ur_user_id_from
 					]
 				);
 			}
@@ -72,19 +74,21 @@ class MigrateOldUserRelationshipRequestUserColumnsToActor extends LoggedUpdateMa
 			$res = $dbw->select(
 				'user_relationship_request',
 				[
-					'ur_user_name_to'
-				]
+					'ur_user_id_to'
+				],
+				'',
+				__METHOD__,
+				[ 'DISTINCT' ]
 			);
 			foreach ( $res as $row ) {
-				$user = new User();
-				$user->setName( $row->ur_user_name_to );
+				$user = User::newFromId( $row->ur_user_id_to );
 				$dbw->update(
 					'user_relationship_request',
 					[
 						'ur_actor_to' => $user->getActorId( $dbw )
 					],
 					[
-						'ur_user_name_to' => $row->ur_user_name_to
+						'ur_user_id_to' => $row->ur_user_id_to
 					]
 				);
 			}

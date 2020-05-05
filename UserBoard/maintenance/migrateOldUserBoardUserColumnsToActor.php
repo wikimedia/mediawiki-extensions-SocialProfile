@@ -53,16 +53,21 @@ class MigrateOldUserBoardUserColumnsToActor extends LoggedUpdateMaintenance {
 		$res = $dbw->select(
 			'user_board',
 			[
-				'ub_user_name'
-			]
+				'ub_user_id'
+			],
+			'',
+			__METHOD__,
+			[ 'DISTINCT' ]
 		);
 		foreach ( $res as $row ) {
-			$user = new User();
-			$user->setName( $row->ub_user_name );
+			$user = User::newFromId( $row->ub_user_id );
 			$dbw->update(
 				'user_board',
 				[
 					'ub_actor' => $user->getActorId( $dbw )
+				],
+				[
+					'ub_user_id' => $row->ub_user_id
 				]
 			);
 		}
@@ -70,19 +75,21 @@ class MigrateOldUserBoardUserColumnsToActor extends LoggedUpdateMaintenance {
 		$res = $dbw->select(
 			'user_board',
 			[
-				'ub_user_name_from'
-			]
+				'ub_user_id_from'
+			],
+			'',
+			__METHOD__,
+			[ 'DISTINCT' ]
 		);
 		foreach ( $res as $row ) {
-			$user = new User();
-			$user->setName( $row->ub_user_name_from );
+			$user = User::newFromId( $row->ub_user_id_from );
 			$dbw->update(
 				'user_board',
 				[
 					'ub_actor_from' => $user->getActorId( $dbw )
 				],
 				[
-					'ub_user_name_from' => $row->ub_user_name_from
+					'ub_user_id_from' => $row->ub_user_id_from
 				]
 			);
 		}

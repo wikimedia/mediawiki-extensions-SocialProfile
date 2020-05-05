@@ -54,19 +54,21 @@ class MigrateOldGiftsUserColumnsToActor extends LoggedUpdateMaintenance {
 		$res = $dbw->select(
 			'gift',
 			[
-				'gift_creator_user_name'
-			]
+				'gift_creator_user_id'
+			],
+			'',
+			__METHOD__,
+			[ 'DISTINCT' ]
 		);
 		foreach ( $res as $row ) {
-			$user = new User();
-			$user->setName( $row->gift_creator_user_name );
+			$user = User::newFromId( $row->gift_creator_user_id );
 			$dbw->update(
 				'gift',
 				[
 					'gift_creator_actor' => $user->getActorId( $dbw )
 				],
 				[
-					'gift_creator_user_name' => $row->gift_creator_user_name
+					'gift_creator_user_id' => $row->gift_creator_user_id
 				]
 			);
 		}

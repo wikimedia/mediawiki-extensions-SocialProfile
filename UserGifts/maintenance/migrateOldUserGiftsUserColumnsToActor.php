@@ -50,19 +50,21 @@ class MigrateOldUserGiftsUserColumnsToActor extends LoggedUpdateMaintenance {
 			$res = $dbw->select(
 				'user_gift',
 				[
-					'ug_user_name_to'
-				]
+					'ug_user_id_to'
+				],
+				'',
+				__METHOD__,
+				[ 'DISTINCT' ]
 			);
 			foreach ( $res as $row ) {
-				$user = new User();
-				$user->setName( $row->ug_user_name_to );
+				$user = User::newFromId( $row->ug_user_id_to );
 				$dbw->update(
 					'user_gift',
 					[
 						'ug_actor_to' => $user->getActorId( $dbw )
 					],
 					[
-						'ug_user_name_to' => $row->ug_user_name_to
+						'ug_user_id_to' => $row->ug_user_id_to
 					]
 				);
 			}
@@ -72,19 +74,21 @@ class MigrateOldUserGiftsUserColumnsToActor extends LoggedUpdateMaintenance {
 			$res = $dbw->select(
 				'user_gift',
 				[
-					'ug_user_name_from'
-				]
+					'ug_user_id_from'
+				],
+				'',
+				__METHOD__,
+				[ 'DISTINCT' ]
 			);
 			foreach ( $res as $row ) {
-				$user = new User();
-				$user->setName( $row->ug_user_name_from );
+				$user = User::newFromId( $row->ug_user_id_from );
 				$dbw->update(
 					'user_gift',
 					[
 						'ug_actor_from' => $user->getActorId( $dbw )
 					],
 					[
-						'ug_user_name_from' => $row->ug_user_name_from
+						'ug_user_id_from' => $row->ug_user_id_from
 					]
 				);
 			}

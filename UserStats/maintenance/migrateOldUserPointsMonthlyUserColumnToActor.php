@@ -54,19 +54,21 @@ class MigrateOldUserPointsMonthlyUserColumnToActor extends LoggedUpdateMaintenan
 		$res = $dbw->select(
 			'user_points_monthly',
 			[
-				'up_user_name'
-			]
+				'up_user_id'
+			],
+			'',
+			__METHOD__,
+			[ 'DISTINCT' ]
 		);
 		foreach ( $res as $row ) {
-			$user = new User();
-			$user->setName( $row->up_user_name );
+			$user = User::newFromId( $row->up_user_id );
 			$dbw->update(
 				'user_points_monthly',
 				[
 					'up_actor' => $user->getActorId( $dbw )
 				],
 				[
-					'up_user_name' => $row->up_user_name
+					'up_user_id' => $row->up_user_id
 				]
 			);
 		}
