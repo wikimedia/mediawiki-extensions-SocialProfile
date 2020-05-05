@@ -50,10 +50,29 @@ class MigrateOldUserProfileUserColumnToActor extends LoggedUpdateMaintenance {
 			if ( !$dbw->fieldExists( 'user_profile', 'up_id', __METHOD__ ) ) {
 				$dbw->sourceFile( __DIR__ . '/../sql/patches/actor/add-up_id.sql' );
 			}
-			$dbw->query(
-				"UPDATE {$dbw->tableName( 'user_profile' )} SET up_actor=(SELECT actor_id FROM {$dbw->tableName( 'actor' )} WHERE actor_user=up_user_id)",
-				__METHOD__
+
+			$res = $dbw->select(
+				'user_profile',
+				[
+					'up_user_id'
+				],
+				'',
+				__METHOD__,
+				[ 'DISTINCT' ]
 			);
+			foreach ( $res as $row ) {
+				$user = User::newFromId( $row->up_user_id );
+				$dbw->update(
+					'user_profile',
+					[
+						'up_actor' => $user->getActorId( $dbw )
+					],
+					[
+						'up_user_id' => $row->up_user_id
+					],
+					__METHOD__
+				);
+			}
 		}
 		return true;
 	}
