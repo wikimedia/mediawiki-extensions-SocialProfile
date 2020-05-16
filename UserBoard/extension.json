@@ -61,8 +61,8 @@
 			"scripts": "js/BoardBlast.js",
 			"messages": [
 				"boardblast-js-sending",
-				"boardblast-js-error-missing-message",
-				"boardblast-js-error-missing-user"
+				"boardblast-error-missing-message",
+				"boardblast-error-missing-user"
 			]
 		}
 	},
