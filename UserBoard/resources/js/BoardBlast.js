@@ -89,13 +89,13 @@ var BoardBlast = {
 		}
 
 		if ( selected === 0 ) {
-			window.alert( mw.msg( 'boardblast-js-error-missing-user' ) );
+			window.alert( mw.msg( 'boardblast-error-missing-user' ) );
 			BoardBlast.submitted = 0;
 			return 0;
 		}
 
 		if ( !document.getElementById( 'message' ).value ) {
-			window.alert( mw.msg( 'boardblast-js-error-missing-message' ) );
+			window.alert( mw.msg( 'boardblast-error-missing-message' ) );
 			BoardBlast.submitted = 0;
 			return 0;
 		}
