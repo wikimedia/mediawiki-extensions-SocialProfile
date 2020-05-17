@@ -72,6 +72,9 @@ class UserProfile {
 
 	/**
 	 * @param User|string $username User object (preferred) or user name (legacy b/c)
+	 * @todo FIXME: will explode horribly if $username is an IP address (can't call
+	 *  the getters here because $this->user is not an object then; adding an
+	 *  instanceof check here will cause getProfile() instead to explode, etc.)
 	 */
 	public function __construct( $username ) {
 		if ( $username instanceof User ) {

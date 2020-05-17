@@ -28,11 +28,19 @@ class UserProfileHooks {
 		global $wgUserPageChoice;
 
 		$title = $out->getTitle();
+		$pageTitle = $title->getText();
 		// Only NS_USER is "ambiguous", NS_USER_PROFILE and NS_USER_WIKI are not
 		// Also we don't care about subpages here since only the main user page
 		// can be something else than wikitext
-		if ( $title->inNamespace( NS_USER ) && !$title->isSubpage() && $wgUserPageChoice ) {
-			$profile = new UserProfile( $title->getText() );
+		// Also ignore anonymous users since they can't have social profiles and
+		// passing an IP address to UserProfile's constructor would break things
+		if (
+			$title->inNamespace( NS_USER ) &&
+			!$title->isSubpage() &&
+			$wgUserPageChoice &&
+			!User::isIP( $pageTitle )
+		) {
+			$profile = new UserProfile( $pageTitle );
 			$profile_data = $profile->getProfile();
 
 			if ( isset( $profile_data['actor'] ) && $profile_data['actor'] ) {
@@ -47,7 +55,8 @@ class UserProfileHooks {
 
 	/**
 	 * Called by ArticleFromTitle hook
-	 * Calls UserProfilePage instead of standard article
+	 * Calls UserProfilePage instead of standard article on registered users'
+	 * User: or User_profile: pages which are not subpages
 	 *
 	 * @param Title $title
 	 * @param Article|null &$article
@@ -58,14 +67,16 @@ class UserProfileHooks {
 
 		$out = $context->getOutput();
 		$request = $context->getRequest();
+		$pageTitle = $title->getText();
 
 		if (
 			!$title->isSubpage() &&
-			$title->inNamespaces( [ NS_USER, NS_USER_PROFILE ] )
+			$title->inNamespaces( [ NS_USER, NS_USER_PROFILE ] ) &&
+			!User::isIP( $pageTitle )
 		) {
 			$show_user_page = false;
 			if ( $wgUserPageChoice ) {
-				$profile = new UserProfile( $title->getText() );
+				$profile = new UserProfile( $pageTitle );
 				$profile_data = $profile->getProfile();
 
 				// If they want regular page, ignore this hook
