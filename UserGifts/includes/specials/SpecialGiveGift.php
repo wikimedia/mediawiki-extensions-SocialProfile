@@ -54,6 +54,19 @@ class GiveGift extends SpecialPage {
 
 		$output = ''; // Prevent E_NOTICE
 
+		// These checks must happen here, or else the "no target user" check below
+		// results in $this->displayFormNoUser(); being called when the current user
+		// is an anon...d'oh
+		if ( $user->isAnon() ) {
+			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
+			$out->addHTML( $this->msg( 'g-error-message-login' )->parse() );
+			return;
+		} elseif ( $user->isBlocked() ) {
+			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
+			$out->addHTML( $this->msg( 'g-error-message-blocked' )->escaped() );
+			return;
+		}
+
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();
 
@@ -65,6 +78,10 @@ class GiveGift extends SpecialPage {
 		$out->addModules( 'ext.socialprofile.usergifts.js' );
 
 		$this->userTo = User::newFromName( $request->getVal( 'user', $par ) );
+		if ( !$this->userTo ) {
+			// No-JS fallback
+			$this->userTo = User::newFromName( $request->getVal( 'friend-list' ) );
+		}
 
 		if ( !$this->userTo ) {
 			$out->addHTML( $this->displayFormNoUser() );
@@ -72,19 +89,29 @@ class GiveGift extends SpecialPage {
 		}
 
 		$giftId = $request->getInt( 'gift_id' );
+		if ( !$giftId ) {
+			// NoJS fallback
+			$potentialGiftIds = [];
+			foreach ( $request->getValues() as $key => $val ) {
+				if ( preg_match( '/nojs-gift-/i', $key ) ) {
+					$potentialGiftIds[] = (int)str_replace( 'nojs-gift-', '', $key );
+				}
+				if ( !empty( $potentialGiftIds ) ) {
+					// In NoJS mode, with JS disabled, there's no way to enforce the
+					// "you can only send one gift at a time" limit before the form is
+					// submitted; so while we may have e.g. 10 gifts and some no-JS
+					// user may have selected all 10 checkboxes, we care only about the first one.
+					$giftId = reset( $potentialGiftIds );
+				}
+			}
+		}
 
-		if ( $user->isAnon() ) {
+		if ( $this->userTo->isAnon() ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
-			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-login' )->plain() ) );
-		} elseif ( $this->userTo->isAnon() ) {
-			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
-			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-no-user' )->plain() ) );
+			$out->addHTML( $this->msg( 'g-error-message-no-user' )->escaped() );
 		} elseif ( $user->getActorId() === $this->userTo->getActorId() ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
-			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-to-yourself' )->plain() ) );
-		} elseif ( $user->isBlocked() ) {
-			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
-			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-blocked' )->plain() ) );
+			$out->addHTML( $this->msg( 'g-error-message-to-yourself' )->escaped() );
 		} else {
 			$gift = new UserGifts( $user->getName() );
 
@@ -97,7 +124,7 @@ class GiveGift extends SpecialPage {
 
 				$ug_gift_id = $gift->sendGift(
 					$this->userTo,
-					$request->getInt( 'gift_id' ),
+					$giftId,
 					0,
 					$request->getVal( 'message' )
 				);
@@ -115,7 +142,7 @@ class GiveGift extends SpecialPage {
 
 				if ( is_array( $lastUniqueGifts ) ) {
 					foreach ( $lastUniqueGifts as $lastUniqueGift ) {
-						if ( $request->getInt( 'gift_id' ) == $lastUniqueGift['gift_id'] ) {
+						if ( $giftId == $lastUniqueGift['gift_id'] ) {
 							$found = 0;
 							break;
 						}
@@ -126,7 +153,7 @@ class GiveGift extends SpecialPage {
 					// add new unique to array
 					$lastUniqueGifts[] = [
 						'id' => $ug_gift_id,
-						'gift_id' => $request->getInt( 'gift_id' )
+						'gift_id' => $giftId
 					];
 
 					// remove oldest value
@@ -160,11 +187,13 @@ class GiveGift extends SpecialPage {
 						htmlspecialchars( $sent_gift['message'] ) .
 					'</div>';
 				}
+				// NoJS TODO: these buttons should not require JS to work; might need to change
+				// them into styled <a>'s or something?
 				$output .= '</div>
 				<div class="visualClear"></div>
 				<div class="g-buttons">
-					<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'mainpage' )->plain() ) . '" size="20" onclick="window.location=\'' . htmlspecialchars( Title::newMainPage()->getFullURL() ) . '\'" />
-					<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'g-your-profile' )->plain() ) . '" size="20" onclick="window.location=\'' . htmlspecialchars( $user->getUserPage()->getFullURL() ) . '\'" />
+					<input type="button" class="site-button" value="' . $this->msg( 'mainpage' )->escaped() . '" size="20" onclick="window.location=\'' . htmlspecialchars( Title::newMainPage()->getFullURL() ) . '\'" />
+					<input type="button" class="site-button" value="' . $this->msg( 'g-your-profile' )->escaped() . '" size="20" onclick="window.location=\'' . htmlspecialchars( $user->getUserPage()->getFullURL() ) . '\'" />
 				</div>';
 
 				$out->addHTML( $output );
@@ -211,7 +240,7 @@ class GiveGift extends SpecialPage {
 
 		if ( !$giftId || !is_numeric( $giftId ) ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
-			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-invalid-link' )->plain() ) );
+			$out->addHTML( $this->msg( 'g-error-message-invalid-link' )->escaped() );
 			return false;
 		}
 
@@ -224,9 +253,6 @@ class GiveGift extends SpecialPage {
 		if ( $gift['access'] == 1 && $this->getUser()->getActorId() != $gift['creator_actor'] ) {
 			return $this->displayFormAll();
 		}
-
-		// Safe title
-		$giveGiftLink = SpecialPage::getTitleFor( 'GiveGift' );
 
 		$out->setPageTitle( $this->msg( 'g-give-to-user-title', $gift['gift_name'], $this->userTo->getName() )->parse() );
 
@@ -249,14 +275,14 @@ class GiveGift extends SpecialPage {
 		}
 		$output .= '</div>
 			<div class="visualClear"></div>
-			<div class="g-add-message">' . htmlspecialchars( $this->msg( 'g-add-message' )->plain() ) . '</div>
+			<div class="g-add-message">' . $this->msg( 'g-add-message' )->escaped() . '</div>
 			<textarea name="message" id="message" rows="4" cols="50"></textarea>
 			<div class="g-buttons">
 				<input type="hidden" name="gift_id" value="' . $giftId . '" />
 				<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 				<input type="hidden" name="user_name" value="' . htmlspecialchars( $this->userTo->getName() ) . '" />
-				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'g-send-gift' )->plain() ) . '" size="20" onclick="document.gift.submit()" />
-				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'cancel' )->plain() ) . '" size="20" onclick="history.go(-1)" />
+				<input type="submit" class="site-button" value="' . $this->msg( 'g-send-gift' )->escaped() . '" size="20" onclick="document.gift.submit()" />
+				<input type="button" class="site-button" value="' . $this->msg( 'cancel' )->escaped() . '" size="20" onclick="history.go(-1)" />
 			</div>
 		</form>';
 
@@ -278,7 +304,7 @@ class GiveGift extends SpecialPage {
 		$output = '<form action="" method="get" enctype="multipart/form-data" name="gift">' .
 			Html::hidden( 'title', $this->getPageTitle() ) .
 			'<div class="g-message">' .
-				htmlspecialchars( $this->msg( 'g-give-no-user-message' )->plain() ) .
+				$this->msg( 'g-give-no-user-message' )->escaped() .
 			'</div>
 			<div class="g-give-container">';
 
@@ -292,12 +318,12 @@ class GiveGift extends SpecialPage {
 
 				if ( $friends ) {
 					$output .= '<div class="g-give-title">' .
-						htmlspecialchars( $this->msg( 'g-give-list-friends-title' )->plain() ) .
+						$this->msg( 'g-give-list-friends-title' )->escaped() .
 					'</div>
 					<div class="g-gift-select">
-						<select>
+						<select name="friend-list">
 							<option value="#" selected="selected">' .
-								htmlspecialchars( $this->msg( 'g-select-a-friend' )->plain() ) .
+								$this->msg( 'g-select-a-friend' )->escaped() .
 							'</option>';
 					foreach ( $friends as $friend ) {
 						$friendActor = User::newFromActorId( $friend['actor'] );
@@ -311,17 +337,17 @@ class GiveGift extends SpecialPage {
 					$output .= '</select>
 					</div>
 					<div class="g-give-separator">' .
-						htmlspecialchars( $this->msg( 'g-give-separator' )->plain() ) .
+						$this->msg( 'g-give-separator' )->escaped() .
 					'</div>';
 				}
 			}
 
 			$output .= '<div class="g-give-title">' .
-				htmlspecialchars( $this->msg( 'g-give-enter-friend-title' )->plain() ) .
+				$this->msg( 'g-give-enter-friend-title' )->escaped() .
 			'</div>
 			<div class="g-give-textbox">
 				<input type="text" width="85" name="user" class="mw-autocomplete-user" value="" />
-				<input class="site-button" type="button" value="' . htmlspecialchars( $this->msg( 'g-give-gift' )->plain() ) . '" onclick="document.gift.submit()" />
+				<input class="site-button" type="submit" value="' . $this->msg( 'g-give-gift' )->escaped() . '" onclick="document.gift.submit()" />
 			</div>
 			</div>
 		</form>';
@@ -372,10 +398,16 @@ class GiveGift extends SpecialPage {
 
 				$output .= "<div id=\"give_gift_{$gift['id']}\" class=\"g-give-all\">
 					{$icon}
-					<div class=\"g-title g-blue\">" . htmlspecialchars( $gift['gift_name'] ) . "</div>";
+					<div class=\"g-title g-blue\">" . htmlspecialchars( $gift['gift_name'] ) . '</div>';
 				if ( $gift['gift_description'] ) {
 					$output .= '<div class="g-describe">' . htmlspecialchars( $gift['gift_description'] ) . '</div>';
 				}
+				// NoJS checkbox for selecting a gift
+				$output .= Html::check( "nojs-gift-{$gift['id']}", false, [
+					'class' => 'g-give-checkbox',
+					'id' => "nojs-gift-{$gift['id']}"
+				] );
+				$output .= Html::label( $this->msg( 'g-give-this-gift' )->escaped(), "nojs-gift-{$gift['id']}" );
 				$output .= '<div class="visualClear"></div>
 				</div>';
 				if ( $x == count( $gifts ) || $x != 1 && $x % $per_row == 0 ) {
@@ -447,20 +479,20 @@ class GiveGift extends SpecialPage {
 			 * Build the send/cancel buttons and whatnot
 			 */
 			$output .= '<div class="g-give-all-message-title">' .
-				htmlspecialchars( $this->msg( 'g-give-all-message-title' )->plain() ) .
+				$this->msg( 'g-give-all-message-title' )->escaped() .
 			'</div>
 				<textarea name="message" id="message" rows="4" cols="50"></textarea>
 				<div class="g-buttons">
 					<input type="hidden" name="gift_id" value="0" />
 					<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 					<input type="hidden" name="user_name" value="' . htmlspecialchars( $this->userTo->getName() ) . '" />
-					<input type="button" id="send-gift-button" class="site-button" value="' . htmlspecialchars( $this->msg( 'g-send-gift' )->plain() ) . '" size="20" />
-					<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'cancel' )->plain() ) . '" size="20" onclick="history.go(-1)" />
+					<input type="submit" id="send-gift-button" class="site-button" value="' . $this->msg( 'g-send-gift' )->escaped() . '" size="20" />
+					<input type="button" class="site-button" value="' . $this->msg( 'cancel' )->escaped() . '" size="20" onclick="history.go(-1)" />
 				</div>
 			</form>';
 		} else {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
-			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-invalid-link' )->plain() ) );
+			$out->addHTML( $this->msg( 'g-error-message-invalid-link' )->escaped() );
 		}
 
 		return $output;

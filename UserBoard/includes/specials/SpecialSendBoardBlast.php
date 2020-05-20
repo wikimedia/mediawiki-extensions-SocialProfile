@@ -47,25 +47,73 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$out->addModules( 'ext.socialprofile.userboard.boardblast.js' );
 
 		$output = '';
+		$errors = [];
 
 		if ( $request->wasPosted() && $user->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
-			$out->setPageTitle( $this->msg( 'messagesenttitle' )->plain() );
-			$b = new UserBoard( $user );
-
-			$count = 0;
-			$user_ids_to = explode( ',', $request->getVal( 'ids' ) );
-			foreach ( $user_ids_to as $user_id ) {
-				$recipient = User::newFromId( $user_id );
-				$recipient->loadFromId();
-				$b->sendBoardMessage(
-					$user,
-					$recipient,
-					$request->getVal( 'message' ),
-					UserBoard::MESSAGE_PRIVATE
-				);
-				$count++;
+			// Ensure that we have something to send, and if not, make a note to nag the
+			// user about that...
+			if ( empty( $request->getVal( 'message' ) ) ) {
+				$errors[] = 'boardblast-error-missing-message';
 			}
-			$output .= htmlspecialchars( $this->msg( 'messagesentsuccess' )->plain() );
+
+			$ids = $request->getVal( 'ids' );
+			if ( !empty( $ids ) ) {
+				// If we were to blindly explode $ids without checking its emptiness, we'd
+				// get an annoying technically-not-empty array ([ 0 ], in other words) that'd
+				// cause at least some annoying issues later on. Let's only explode that
+				// array if it's non-empty, obviously.
+				$user_ids_to = explode( ',', $ids );
+			} else {
+				// @todo FIXME: This just smells ugly to me.
+				// Ideally we'd use $request->getCheck() but the problem is that we only know
+				// that the keys _begin_ with "user-", but the latter part is variable (literally
+				// the recipient users' UIDs for each recipient), so...
+				$user_ids_to = [];
+				foreach ( $request->getValues() as $key => $val ) {
+					if ( preg_match( '/user-/i', $key ) ) {
+						$user_ids_to[] = str_replace( 'user-', '', $key );
+					}
+				}
+
+				// Still nothing? Well that's an error that the user needs to fix, then!
+				if ( empty( $user_ids_to ) ) {
+					$errors[] = 'boardblast-error-missing-user';
+				}
+			}
+
+			// If no errors popped up, everything should be fine and we can send the message!
+			if ( empty( $errors ) ) {
+				$out->setPageTitle( $this->msg( 'messagesenttitle' )->plain() );
+				$b = new UserBoard( $user );
+
+				$count = 0;
+
+				foreach ( $user_ids_to as $user_id ) {
+					$recipient = User::newFromId( $user_id );
+					$recipient->loadFromId();
+					$b->sendBoardMessage(
+						$user,
+						$recipient,
+						$request->getVal( 'message' ),
+						UserBoard::MESSAGE_PRIVATE
+					);
+					$count++;
+				}
+
+				$output .= $this->msg( 'messagesentsuccess' )->escaped();
+			} else {
+				$out->setPageTitle( $this->msg( 'boardblasttitle' )->plain() );
+
+				// We can have more than one error message (at least in the case of no-JS users)
+				$errorHTML = '';
+				foreach ( $errors as $errorMsgKey ) {
+					$errorHTML .= $this->msg( $errorMsgKey )->escaped();
+					$errorHTML .= '<br />';
+				}
+				$output .= Html::errorBox( $errorHTML );
+
+				$output .= $this->displayForm();
+			}
 		} else {
 			$out->setPageTitle( $this->msg( 'boardblasttitle' )->plain() );
 			$output .= $this->displayForm();
@@ -96,7 +144,6 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 						. $this->msg( 'boardblastprivatenote' )->escaped() .
 					'</div>
 					<textarea name="message" id="message" cols="63" rows="4"></textarea>
-				</form>
 		</div>
 		<div class="blast-nav">
 				<h2>' . $this->msg( 'boardblaststep2' )->escaped() . '</h2>
@@ -141,9 +188,10 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 					$class = 'foe';
 				}
 				$id = $friendActor->getId();
-				$output .= '<div class="blast-' . $class . "-unselected\" id=\"user-{$id}\">
-						" . htmlspecialchars( $friendActor->getName() ) . "
-					</div>";
+				$safeUserName = htmlspecialchars( $friendActor->getName() );
+				$output .= '<input type="checkbox" name="user-' . $id . '" value="' . $safeUserName . '" />' .
+					'<div class="blast-' . $class . "-unselected\" id=\"user-{$id}\">" .
+					$safeUserName . '</div>';
 				if ( $x == count( $relationships ) || $x != 1 && $x % $per_row == 0 ) {
 					$output .= '<div class="visualClear"></div>';
 				}
@@ -158,7 +206,8 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 			<div class="visualClear"></div>';
 
 		$output .= '<div class="blast-message-box-button">
-			<input type="button" value="' . $this->msg( 'boardsendbutton' )->escaped() . '" class="site-button" />
+				<input type="submit" value="' . $this->msg( 'boardsendbutton' )->escaped() . '" class="site-button" />
+			</form>
 		</div>';
 
 		return $output;

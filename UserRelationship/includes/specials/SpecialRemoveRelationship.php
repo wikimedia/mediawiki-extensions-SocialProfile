@@ -208,8 +208,8 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			$remove .
 			'<div class="relationship-buttons">
 				<input type="hidden" name="user" value="' . htmlspecialchars( $this->user_to->getName() ) . '" />
-				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'ur-remove' )->plain() ) . '" size="20" onclick="document.form1.submit()" />
-				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'cancel' )->plain() ) . '" size="20" onclick="history.go(-1)" />
+				<input type="submit" class="site-button" value="' . $this->msg( 'ur-remove' )->escaped() . '" size="20" onclick="document.form1.submit()" />
+				<input type="button" class="site-button" value="' . $this->msg( 'cancel' )->escaped() . '" size="20" onclick="history.go(-1)" />
 			</div>
 			<div class="visualClear"></div>
 			</div>

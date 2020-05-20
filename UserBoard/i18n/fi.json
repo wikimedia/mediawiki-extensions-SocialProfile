@@ -47,6 +47,7 @@
 	"userboard_sendbutton": "lähetä",
 	"userboard_loggedout": "Sinun tulee olla [[Special:UserLogin|kirjautunut sisään]] lähettääksesi viestejä toisille käyttäjille.",
 	"userboard_showingmessages": "Näkyvillä on {{PLURAL:$4|viesti $3|viestit $2–$3}}. Yhteensä {{PLURAL:$1|$1 viesti|$1 viestiä}}.",
+	"userboard-delete-success": "Viesti poistettiin onnistuneesti!",
 	"right-userboard-delete": "Poistaa toisten käyttäjien keskustelualueviestejä",
 	"userboard-time-days": "{{PLURAL:$1|päivä|$1 päivää}}",
 	"userboard-time-hours": "{{PLURAL:$1|tunti|$1 tuntia}}",

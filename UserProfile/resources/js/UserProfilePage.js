@@ -142,12 +142,14 @@ $( function () {
 	} );
 
 	// "Send message" button on (other users') profile pages
-	$( 'div.user-page-message-box-button input[type="button"]' ).on( 'click', function () {
+	$( 'div.user-page-message-box-button input[type="submit"]' ).on( 'click', function ( e ) {
+		e.preventDefault();
 		UserProfilePage.sendMessage();
 	} );
 
 	// Board messages' "Delete" link
-	$( 'span.user-board-red a' ).on( 'click', function () {
+	$( 'span.user-board-red a' ).on( 'click', function ( e ) {
+		e.preventDefault();
 		UserProfilePage.deleteMessage( $( this ).data( 'message-id' ) );
 	} );
 } );

@@ -127,8 +127,10 @@ class UserBoard {
 	}
 
 	/**
-	 * Checks if the user with ID number $user_id owns the board message with
-	 * the ID number $ub_id.
+	 * Checks if the given user owns the board message with the ID number $ub_id.
+	 * This means, "was the given message sent _to_ $user?".
+	 * If you want to know "was the given message sent _by_ $user?", use
+	 * isUserAuthor() instead.
 	 *
 	 * @param User $user User object
 	 * @param int $ub_id User board message ID number
@@ -144,6 +146,31 @@ class UserBoard {
 		);
 		if ( $s !== false ) {
 			if ( $user->getActorId() == $s->ub_actor ) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * Checks if the given user wrote the board message with the ID number $ub_id.
+	 * If you want to know "was the given message sent _to_ $user?", use
+	 * doesUserOwnMessage() instead.
+	 *
+	 * @param User $user User object
+	 * @param int $ub_id User board message ID number
+	 * @return bool True if user owns the message, otherwise false
+	 */
+	public function isUserAuthor( $user, $ub_id ) {
+		$dbr = wfGetDB( DB_REPLICA );
+		$s = $dbr->selectRow(
+			'user_board',
+			[ 'ub_actor_from' ],
+			[ 'ub_id' => $ub_id ],
+			__METHOD__
+		);
+		if ( $s !== false ) {
+			if ( $user->getActorId() == $s->ub_actor_from ) {
 				return true;
 			}
 		}
@@ -185,17 +212,52 @@ class UserBoard {
 	}
 
 	/**
-	 * Get the user board messages for the user with the ID $user_id.
+	 * Get an individual board message from the database when we have its ID.
 	 *
-	 * @todo FIXME: Rewrite this function to be compatible with non-MySQL DBMS
+	 * @param int $messageId Board message ID (user_board.ub_id)
+	 * @return array Array containing info about the message on success, empty array on failure
+	 */
+	public function getMessage( $messageId ) {
+		global $wgOut, $wgTitle;
+
+		$dbr = wfGetDB( DB_REPLICA );
+		$res = $dbr->select(
+			'user_board',
+			'*',
+			[ 'ub_id' => $messageId ],
+			__METHOD__,
+			[ 'LIMIT' => 1 ]
+		);
+
+		$message = [];
+
+		foreach ( $res as $row ) {
+			$parser = MediaWikiServices::getInstance()->getParserFactory()->create();
+			$message_text = $parser->parse( $row->ub_message, $wgTitle, $wgOut->parserOptions(), true );
+			$message_text = $message_text->getText();
+
+			$message = [
+				'id' => $row->ub_id,
+				'timestamp' => wfTimestamp( TS_UNIX, $row->ub_date ),
+				'ub_actor_from' => $row->ub_actor_from,
+				'ub_actor' => $row->ub_actor,
+				'message_text' => $message_text,
+				'type' => $row->ub_type
+			];
+		}
+
+		return $message;
+	}
+
+	/**
+	 * Get the user board messages for the given user or users (board-to-board view
+	 * between two given users).
 	 *
 	 * @param User $user User object
 	 * @param User $user_2 User object representing the second user; only used
 	 * in board-to-board stuff
-	 * @param int $limit Used to build the LIMIT and OFFSET for the SQL
-	 * query
-	 * @param int $page Used to build the LIMIT and OFFSET for the SQL
-	 * query
+	 * @param int $limit Used to build the LIMIT and OFFSET for the SQL query
+	 * @param int $page Used to build the LIMIT and OFFSET for the SQL query
 	 * @return array Array of user board messages
 	 */
 	public function getUserBoardMessages( $user, $user_2 = 0, $limit = 0, $page = 0 ) {
@@ -257,8 +319,6 @@ class UserBoard {
 	/**
 	 * Get the amount of board-to-board messages sent between the given user objects.
 	 *
-	 * @todo FIXME: Rewrite this function to be compatible with non-MySQL DBMS
-	 *
 	 * @param User $user The first user (object)
 	 * @param User $user_2 The second user (object)
 	 * @return int The amount of board-to-board messages
@@ -290,6 +350,88 @@ class UserBoard {
 		return $count;
 	}
 
+	/**
+	 * Render an individual board message wrapped in the appropriate <div>s and whatnot.
+	 *
+	 * Callers should check for things like can the user even see this msg, etc.
+	 *
+	 * @param User $user Viewing User object
+	 * @param array|int $message Database row containing info about the message,
+	 *   like sender (ub_actor_from), recipient (ub_actor), etc. *or* a board message ID
+	 * @return string HTML
+	 */
+	public function displayMessage( $user, $message ) {
+		if ( !is_array( $message ) && is_int( $message ) ) {
+			$message = $this->getMessage( $message );
+		}
+
+		$sender = User::newFromActorId( $message['ub_actor_from'] );
+		$recipient = User::newFromActorId( $message['ub_actor'] );
+		$avatar = new wAvatar( $sender->getId(), 'm' );
+
+		$board_to_board = '';
+		$board_link = '';
+		$message_type_label = '';
+		$delete_link = '';
+
+		$userBoardPage = SpecialPage::getTitleFor( 'UserBoard' );
+
+		if ( $this->currentUser->getActorId() != $message['ub_actor_from'] ) {
+			$board_to_board = '<a href="' .
+				htmlspecialchars(
+					$userBoardPage->getFullURL( [
+						'user' => $recipient->getName(),
+						'conv' => $sender->getName()
+					] )
+				) . '">' . wfMessage( 'userboard_board-to-board' )->escaped() . '</a>';
+			$board_link = '<a href="' .
+				htmlspecialchars(
+					$userBoardPage->getFullURL( [ 'user' => $sender->getName() ] )
+				) . '">' . wfMessage( 'userboard_sendmessage', $sender->getName() )->parse() . '</a>';
+		}
+
+		if (
+			$this->currentUser->getActorId() == $message['ub_actor'] ||
+			$this->currentUser->isAllowed( 'userboard-delete' )
+		) {
+			$deleteURL = htmlspecialchars(
+				$userBoardPage->getFullURL( [
+					'action' => 'delete',
+					'messageId' => $message['id']
+				] ),
+				ENT_QUOTES
+			);
+			$delete_link = "<span class=\"user-board-red\">
+					<a href=\"{$deleteURL}\" data-message-id=\"{$message['id']}\">" .
+						wfMessage( 'delete' )->escaped() . '</a>
+				</span>';
+		}
+		if ( $message['type'] == 1 ) {
+			$message_type_label = '(' . wfMessage( 'userboard_private' )->escaped() . ')';
+		}
+
+		$message_text = $message['message_text'];
+		# $message_text = preg_replace_callback( "/(<a[^>]*>)(.*?)(<\/a>)/i", 'cut_link_text', $message['message_text'] );
+
+		$templateParser = new TemplateParser( __DIR__ . '/templates' );
+		$output = $templateParser->processTemplate(
+			'board-message',
+			[
+				'userPageURL' => $sender->getUserPage()->getFullURL(),
+				'senderName' => $sender->getName(),
+				'messageTypeLabel' => $message_type_label,
+				'postedAgo' => wfMessage( 'userboard_posted_ago', $this->getTimeAgo( $message['timestamp'] ) )->parse(),
+				'avatarElement' => $avatar->getAvatarURL(),
+				'messageBody' => $message_text,
+				'boardLink' => $board_link,
+				'boardToBoard' => $board_to_board,
+				'deleteLink' => $delete_link
+			]
+		);
+
+		return $output;
+	}
+
 	public function displayMessages( $user, $user_2 = 0, $count = 10, $page = 0 ) {
 		global $wgTitle;
 
@@ -298,70 +440,7 @@ class UserBoard {
 
 		if ( $messages ) {
 			foreach ( $messages as $message ) {
-				$sender = User::newFromActorId( $message['ub_actor_from'] );
-				$recipient = User::newFromActorId( $message['ub_actor'] );
-				$avatar = new wAvatar( $sender->getId(), 'm' );
-
-				$board_to_board = '';
-				$board_link = '';
-				$message_type_label = '';
-				$delete_link = '';
-
-				if ( $this->currentUser->getActorId() != $message['ub_actor_from'] ) {
-					$board_to_board = '<a href="' .
-						htmlspecialchars(
-							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [
-								'user' => $recipient->getName(),
-								'conv' => $sender->getName()
-							] )
-						)
-						. '">' .
-						wfMessage( 'userboard_board-to-board' )->plain() . '</a>';
-					$board_link = '<a href="' .
-						htmlspecialchars(
-							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $sender->getName() ] )
-						) . '">' .
-						wfMessage( 'userboard_sendmessage', $sender->getName() )->parse() . '</a>';
-				}
-				if ( $this->currentUser->getActorId() == $message['ub_actor'] ||
-					$this->currentUser->isAllowed( 'userboard-delete' )
-				) {
-					$delete_link = "<span class=\"user-board-red\">
-							<a href=\"javascript:void(0);\" data-message-id=\"{$message['id']}\">" .
-								wfMessage( 'delete' )->plain() . '</a>
-						</span>';
-				}
-				if ( $message['type'] == 1 ) {
-					$message_type_label = '(' . wfMessage( 'userboard_private' )->plain() . ')';
-				}
-
-				$message_text = $message['message_text'];
-				# $message_text = preg_replace_callback( "/(<a[^>]*>)(.*?)(<\/a>)/i", 'cut_link_text', $message['message_text'] );
-
-				$senderUserPage = htmlspecialchars( $sender->getUserPage()->getFullURL() );
-				$senderTitle = htmlspecialchars( $sender->getName() );
-				$output .= "<div class=\"user-board-message\">
-					<div class=\"user-board-message-from\">
-					<a href=\"{$senderUserPage}\" title=\"{$senderTitle}\">{$senderTitle}</a> {$message_type_label}
-					</div>
-					<div class=\"user-board-message-time\">" .
-						wfMessage( 'userboard_posted_ago', $this->getTimeAgo( $message['timestamp'] ) )->parse() .
-					"</div>
-					<div class=\"user-board-message-content\">
-						<div class=\"user-board-message-image\">
-							<a href=\"{$senderUserPage}\" title=\"{$senderTitle}\">{$avatar->getAvatarURL()}</a>
-						</div>
-						<div class=\"user-board-message-body\">
-							{$message_text}
-						</div>
-						<div class=\"visualClear\"></div>
-					</div>
-					<div class=\"user-board-message-links\">
-						{$board_link}
-						{$board_to_board}
-						{$delete_link}
-					</div>
-				</div>";
+				$output .= $this->displayMessage( $user, $message );
 			}
 		} elseif ( $this->currentUser->getName() == $wgTitle->getText() ) {
 			$output .= '<div class="no-info-container">' .

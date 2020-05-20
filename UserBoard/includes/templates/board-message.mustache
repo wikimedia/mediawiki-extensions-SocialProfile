@@ -1,0 +1,28 @@
+<div class="user-board-message">
+	<div class="user-board-message-from">
+		<a href="{{userPageURL}}" title="{{senderName}}">{{senderName}} </a> {{messageTypeLabel}}
+	</div>
+	<div class="user-board-message-time">
+		{{{postedAgo}}}
+	</div>
+	<div class="user-board-message-content">
+		<div class="user-board-message-image">
+			<a href="{{userPageURL}}" title="{{senderName}}">{{{avatarElement}}}</a>
+		</div>
+		<div class="user-board-message-body">
+			{{{messageBody}}}
+		</div>
+		<div class="visualClear"></div>
+	</div>
+	<div class="user-board-message-links">
+		{{#boardLink}}
+		{{{boardLink}}}
+		{{/boardLink}}
+		{{#boardToBoard}}
+		{{{boardToBoard}}}
+		{{/boardToBoard}}
+		{{#deleteLink}}
+		{{{deleteLink}}}
+		{{/deleteLink}}
+	</div>
+</div>

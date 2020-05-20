@@ -256,11 +256,11 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 		if ( $this->relationship_type == 1 ) {
 			$out->setPageTitle( $this->msg( 'ur-add-title-friend', $this->user_to->getName() )->parse() );
 			$add = $this->msg( 'ur-add-message-friend', $this->user_to->getName() )->parseAsBlock();
-			$button = $this->msg( 'ur-add-button-friend' )->plain();
+			$button = $this->msg( 'ur-add-button-friend' )->escaped();
 		} else {
 			$out->setPageTitle( $this->msg( 'ur-add-title-foe', $this->user_to->getName() )->parse() );
 			$add = $this->msg( 'ur-add-message-foe', $this->user_to->getName() )->parseAsBlock();
-			$button = $this->msg( 'ur-add-button-foe' )->plain();
+			$button = $this->msg( 'ur-add-button-foe' )->escaped();
 		}
 
 		$avatar = new wAvatar( $this->user_to->getId(), 'l' );
@@ -272,12 +272,12 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 			'<div class="visualClear"></div>
 			</div>
 			<div class="relationship-textbox-title">' .
-				htmlspecialchars( $this->msg( 'ur-add-personal-message' )->plain() ) .
+				$this->msg( 'ur-add-personal-message' )->escaped() .
 			'</div>
 			<textarea name="message" id="message" rows="3" cols="50"></textarea>
 			<div class="relationship-buttons">
-				<input type="button" class="site-button" value="' . htmlspecialchars( $button ) . '" size="20" onclick="document.form1.submit()" />
-				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'cancel' )->plain() ) . '" size="20" onclick="history.go(-1)" />
+				<input type="submit" class="site-button" value="' . $button . '" size="20" onclick="document.form1.submit()" />
+				<input type="button" class="site-button" value="' . $this->msg( 'cancel' )->escaped() . '" size="20" onclick="history.go(-1)" />
 			</div>
 			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 		</form>';

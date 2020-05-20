@@ -54,6 +54,7 @@
 	"g-give-no-user-title": "Message shown on Special:GiveGift when no gift recipient has yet been specified",
 	"g-give-to-user-title": "Page title of Special:GiveGift when sending a gift.\nParameters:\n* $1 is the gift name\n* $2 is the recipient's user name",
 	"g-give-to-user-message": "Message shown on Special:GiveGift when sending a user a certain gift (e.g. the URL contain <code>gift_id</code> parameter). This message informs the user that there (probably) are other gifts they can also send to the recipient if for some reason the current gift is not one they wish to send.\n$1 is the user name of the person you're giving a gift to",
+	"g-give-this-gift": "Shown on Special:GiveGift on each gift box when the user has JavaScript disabled; checking the box labeled with this message allows the user to give the desired gift to the target user even when JavaScript is disabled.",
 	"g-go-back": "{{Identical|Go back}}",
 	"g-imagesbelow": "Success message shown on Special:GiftManagerLogo after uploading a (new) gift image for a gift",
 	"g-large": "{{Identical|Large}}",

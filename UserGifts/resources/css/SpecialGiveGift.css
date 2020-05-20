@@ -66,3 +66,8 @@
 .g-give-all-selected {
 	border: 1px solid red;
 }
+
+.client-js .g-give-checkbox,
+.client-js label[for^="nojs-gift-"] {
+	display: none;
+}

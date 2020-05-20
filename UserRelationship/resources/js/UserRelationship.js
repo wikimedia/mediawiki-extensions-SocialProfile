@@ -21,7 +21,8 @@
 	}
 
 	$( function () {
-		$( 'div.relationship-buttons input[type="button"]' ).on( 'click', function () {
+		$( 'div.relationship-buttons input[type="submit"]' ).on( 'click', function ( e ) {
+			e.preventDefault();
 			requestResponse(
 				$( this ).data( 'response' ),
 				$( this ).parent().parent().attr( 'id' ).replace( /request_action_/, '' )

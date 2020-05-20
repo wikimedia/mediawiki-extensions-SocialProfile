@@ -53,12 +53,13 @@ var UserBoard = {
 
 $( function () {
 	// "Delete" link
-	$( 'span.user-board-red a' ).on( 'click', function () {
+	$( 'span.user-board-red a' ).on( 'click', function ( e ) {
+		e.preventDefault();
 		UserBoard.deleteMessage( $( this ).data( 'message-id' ) );
 	} );
 
 	// Submit button
-	$( 'div.user-page-message-box-button input[type="button"]' ).on( 'click', function () {
+	$( 'div.user-page-message-box-button input[type="submit"]' ).on( 'click', function () {
 		UserBoard.sendMessage( $( this ).data( 'per-page' ) );
 	} );
 } );

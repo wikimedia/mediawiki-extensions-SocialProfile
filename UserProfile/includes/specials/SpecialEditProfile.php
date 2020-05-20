@@ -99,7 +99,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			);
 			$out->addHTML(
 				'<span class="profile-on">' .
-				$this->msg( 'user-profile-edit-profile-update-saved' )->plain() .
+				$this->msg( 'user-profile-edit-profile-update-saved' )->escaped() .
 				'</span><br /><br />'
 			);
 
@@ -125,7 +125,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		// "Other information" and the HTML title ends up being "Tidbits"
 		$out->setPageTitle( $this->msg( 'editprofile' ) );
 		$out->setHTMLTitle( $this->msg( 'pagetitle',
-			$this->msg( 'edit-profiles-title' )->plain() )->parse() );
+			$this->msg( 'edit-profiles-title' )->escaped() )->parse() );
 	}
 
 	function createUserInputForm() {
@@ -199,10 +199,10 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		}
 
 		if ( !isset( $location_country ) ) {
-			$location_country = $this->msg( 'user-profile-default-country' )->inContentLanguage()->plain();
+			$location_country = $this->msg( 'user-profile-default-country' )->inContentLanguage()->escaped();
 		}
 		if ( !isset( $hometown_country ) ) {
-			$hometown_country = $this->msg( 'user-profile-default-country' )->inContentLanguage()->plain();
+			$hometown_country = $this->msg( 'user-profile-default-country' )->inContentLanguage()->escaped();
 		}
 
 		$s = $dbr->selectRow(
@@ -222,22 +222,22 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		$countries = explode( "\n*", $this->msg( 'userprofile-country-list' )->inContentLanguage()->text() );
 		array_shift( $countries );
 
-		$this->getOutput()->setPageTitle( $this->msg( 'edit-profile-title' )->plain() );
-		// $form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-personal' )->plain() );
+		$this->getOutput()->setPageTitle( $this->msg( 'edit-profile-title' )->escaped() );
+		// $form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-personal' )->escaped() );
 		$form = '<form action="" method="post" enctype="multipart/form-data" name="profile">';
 		$form .= '<div class="profile-info visualClear">';
 		$form .= '<div class="profile-update">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-info' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-name' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-info' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-name' )->escaped() . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="real_name" id="real_name" value="' . $real_name . '"/></p>
 			<div class="visualClear"></div>';
 		if ( $this->getUser()->isAllowed( 'editothersprofiles-private' ) ) {
-			$form .= '<p class="profile-update-unit-left">' . $this->msg( 'email' )->plain() . '</p>
+			$form .= '<p class="profile-update-unit-left">' . $this->msg( 'email' )->escaped() . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="email" id="email" value="' . $email . '"/>';
 			if ( !$tar->mEmailAuthenticated ) {
 				$confirm = SpecialPage::getTitleFor( 'Confirmemail' );
 				$form .= " <a href=\"{$confirm->getFullURL()}\">" .
-					$this->msg( 'confirmemail' )->plain() .
+					$this->msg( 'confirmemail' )->escaped() .
 				'</a>';
 			}
 			$form .= '</p>
@@ -245,7 +245,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			if ( !$tar->mEmailAuthenticated ) {
 				$form .= '<p class="profile-update-unit-left"></p>
 					<p class="profile-update-unit-small">' .
-						$this->msg( 'user-profile-personal-email-needs-auth' )->plain() .
+						$this->msg( 'user-profile-personal-email-needs-auth' )->escaped() .
 					'</p>';
 			}
 		}
@@ -254,11 +254,11 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		<div class="visualClear"></div>';
 
 		$form .= '<div class="profile-update">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-location' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-city' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-location' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-city' )->escaped() . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="location_city" id="location_city" value="' . ( $location_city ?? '' ) . '" /></p>
 			<div class="visualClear"></div>
-			<p class="profile-update-unit-left" id="location_state_label">' . $this->msg( 'user-profile-personal-country' )->plain() . '</p>';
+			<p class="profile-update-unit-left" id="location_state_label">' . $this->msg( 'user-profile-personal-country' )->escaped() . '</p>';
 		$form .= '<p class="profile-update-unit">';
 		$form .= '<span id="location_state_form">';
 		$form .= '</span>';
@@ -278,11 +278,11 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		<div class="visualClear"></div>';
 
 		$form .= '<div class="profile-update">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-hometown' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-city' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-hometown' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-city' )->escaped() . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="hometown_city" id="hometown_city" value="' . ( $hometown_city ?? '' ) . '" /></p>
 			<div class="visualClear"></div>
-			<p class="profile-update-unit-left" id="hometown_state_label">' . $this->msg( 'user-profile-personal-country' )->plain() . '</p>
+			<p class="profile-update-unit-left" id="hometown_state_label">' . $this->msg( 'user-profile-personal-country' )->escaped() . '</p>
 			<p class="profile-update-unit">';
 		$form .= '<span id="hometown_state_form">';
 		$form .= '</span>';
@@ -302,15 +302,15 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		<div class="visualClear"></div>';
 
 		$form .= '<div class="profile-update">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-birthday' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-birthdate-with-year' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-birthday' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-birthdate-with-year' )->escaped() . '</p>
 			<p class="profile-update-unit"><input type="text" class="long-birthday" size="25" name="birthday" id="birthday" value="' . ( $birthday ?? '' ) . '" /></p>
 			<div class="visualClear"></div>
 		</div><div class="visualClear"></div>';
 
 		$form .= '<div class="profile-update" id="profile-update-personal-aboutme">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-aboutme' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-aboutme' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-aboutme' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-aboutme' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="about" id="about" rows="3" cols="75">' . ( $about ?? '' ) . '</textarea>
 			</p>
@@ -319,8 +319,8 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		<div class="visualClear"></div>
 
 		<div class="profile-update" id="profile-update-personal-work">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-work' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-occupation' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-work' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-occupation' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="occupation" id="occupation" rows="2" cols="75">' . ( $occupation ?? '' ) . '</textarea>
 			</p>
@@ -329,8 +329,8 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		<div class="visualClear"></div>
 
 		<div class="profile-update" id="profile-update-personal-education">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-education' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-schools' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-education' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-schools' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="schools" id="schools" rows="2" cols="75">' . ( $schools ?? '' ) . '</textarea>
 			</p>
@@ -339,8 +339,8 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		<div class="visualClear"></div>
 
 		<div class="profile-update" id="profile-update-personal-places">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-places' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-placeslived' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-places' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-placeslived' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="places" id="places" rows="3" cols="75">' . ( $places ?? '' ) . '</textarea>
 			</p>
@@ -349,8 +349,8 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		<div class="visualClear"></div>
 
 		<div class="profile-update" id="profile-update-personal-web">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-web' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-websites' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-web' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-websites' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="websites" id="websites" rows="2" cols="75">' . ( $websites ?? '' ) . '</textarea>
 			</p>
@@ -393,50 +393,50 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			$drinks = $s->up_drinks;
 		}
 
-		$this->getOutput()->setPageTitle( $this->msg( 'user-profile-section-interests' )->plain() );
-		// $form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-interests' )->plain() );
+		$this->getOutput()->setPageTitle( $this->msg( 'user-profile-section-interests' )->escaped() );
+		// $form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-interests' )->escaped() );
 		$form = '<div class="profile-info visualClear">
 			<div class="profile-update">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-interests-entertainment' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-movies' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-interests-entertainment' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-movies' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="movies" id="movies" rows="3" cols="75">' . ( $movies ?? '' ) . '</textarea>
 			</p>
 			<div class="visualClear"></div>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-tv' )->plain() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-tv' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="tv" id="tv" rows="3" cols="75">' . ( $tv ?? '' ) . '</textarea>
 			</p>
 			<div class="visualClear"></div>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-music' )->plain() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-music' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="music" id="music" rows="3" cols="75">' . ( $music ?? '' ) . '</textarea>
 			</p>
 			<div class="visualClear"></div>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-books' )->plain() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-books' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="books" id="books" rows="3" cols="75">' . ( $books ?? '' ) . '</textarea>
 			</p>
 			<div class="visualClear"></div>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-magazines' )->plain() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-magazines' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="magazines" id="magazines" rows="3" cols="75">' . ( $magazines ?? '' ) . '</textarea>
 			</p>
 			<div class="visualClear"></div>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-videogames' )->plain() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-videogames' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="videogames" id="videogames" rows="3" cols="75">' . ( $videogames ?? '' ) . '</textarea>
 			</p>
 			<div class="visualClear"></div>
 			</div>
 			<div class="profile-info visualClear">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-interests-eats' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-foodsnacks' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-interests-eats' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-foodsnacks' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="snacks" id="snacks" rows="3" cols="75">' . ( $snacks ?? '' ) . '</textarea>
 			</p>
 			<div class="visualClear"></div>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-drinks' )->plain() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-drinks' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="drinks" id="drinks" rows="3" cols="75">' . ( $drinks ?? '' ) . '</textarea>
 			</p>
@@ -474,9 +474,9 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		}
 
 		$this->getOutput()->setHTMLTitle( $this->msg( 'pagetitle',
-			$this->msg( 'user-profile-tidbits-title' )->plain() )->parse() );
-		$form = '<h1>' . $this->msg( 'user-profile-tidbits-title' )->plain() . '</h1>';
-		// $form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-custom' )->plain() );
+			$this->msg( 'user-profile-tidbits-title' )->escaped() )->parse() );
+		$form = '<h1>' . $this->msg( 'user-profile-tidbits-title' )->escaped() . '</h1>';
+		// $form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-custom' )->escaped() );
 		$form = '<div class="profile-info visualClear">
 				<div class="profile-update">
 					<p class="profile-update-title">' . $this->msg( 'user-profile-tidbits-title' )->inContentLanguage()->parse() . '</p>
@@ -510,7 +510,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 					<div class="visualClear"></div>
 				</div>
 			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
-			<input type="submit" value="' . $this->msg( 'user-profile-update-button' )->plain() . '" />
+			<input type="submit" value="' . $this->msg( 'user-profile-update-button' )->escaped() . '" />
 			</form></div>';
 		// The <form> was opened in displayBasicForm() and left unclosed for us to close here
 

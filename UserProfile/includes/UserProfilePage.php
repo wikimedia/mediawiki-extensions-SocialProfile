@@ -1750,12 +1750,22 @@ class UserProfilePage extends Article {
 
 		if ( $this->viewingUser->getName() !== $this->profileOwner->getName() ) {
 			if ( $this->viewingUser->isLoggedIn() && !$this->viewingUser->isBlocked() ) {
+				// @todo FIXME: This code exists in an almost identical form in
+				// ../../UserBoard/incldues/specials/SpecialUserBoard.php
+				$url = htmlspecialchars(
+					SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [
+						'user' => $this->profileOwner->getName(),
+						'action' => 'send'
+					] ),
+					ENT_QUOTES
+				);
 				$output .= '<div class="user-page-message-form">
+					<form id="board-post-form" action="' . $url . '" method="post">
 						<input type="hidden" id="user_name_to" name="user_name_to" value="' . addslashes( $this->profileOwner->getName() ) . '" />
 						<span class="profile-board-message-type">' .
 							wfMessage( 'userboard_messagetype' )->escaped() .
 						'</span>
-						<select id="message_type">
+						<select id="message_type" name="message_type">
 							<option value="0">' .
 								wfMessage( 'userboard_public' )->escaped() .
 							'</option>
@@ -1765,9 +1775,10 @@ class UserProfilePage extends Article {
 						</select><p>
 						<textarea name="message" id="message" cols="43" rows="4"></textarea>
 						<div class="user-page-message-box-button">
-							<input type="button" value="' . wfMessage( 'userboard_sendbutton' )->escaped() . '" class="site-button" />
-						</div>
-					</div>';
+							<input type="submit" value="' . wfMessage( 'userboard_sendbutton' )->escaped() . '" class="site-button" />
+						</div>' .
+						Html::hidden( 'wpEditToken', $this->viewingUser->getEditToken() ) .
+					'</div>';
 			} else {
 				$output .= '<div class="user-page-message-form">' .
 					wfMessage( 'user-board-login-message' )->parse() .

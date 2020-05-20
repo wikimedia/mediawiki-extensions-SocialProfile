@@ -70,7 +70,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();
-		$out->setHTMLTitle( $this->msg( 'pagetitle', $this->msg( 'edit-profile-title' )->plain() )->parse() );
+		$out->setHTMLTitle( $this->msg( 'pagetitle', $this->msg( 'edit-profile-title' )->escaped() )->parse() );
 
 		/**
 		 * Create thresholds based on user stats
@@ -156,6 +156,23 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$out->addModules( 'ext.userProfile.updateProfile' );
 
 		if ( $request->wasPosted() && $user->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
+			// NoJS support
+			if ( $request->getBool( 'should_update_field_visibilities' ) ) {
+				$newFieldVisibilities = [];
+				foreach ( $request->getValues() as $key => $val ) {
+					if ( preg_match( '/up_/i', $key ) ) {
+						$newFieldVisibilities[$key] = $val;
+					}
+				}
+				if ( !empty( $newFieldVisibilities ) ) {
+					foreach ( $newFieldVisibilities as $fieldKey => $visibility ) {
+						// TODO Would be nice if the SPUserSecurity class had a batch API of
+						// some kind for situations like these...
+						SPUserSecurity::setPrivacy( $user, $fieldKey, $visibility );
+					}
+				}
+			}
+
 			if ( !$section ) {
 				$section = 'basic';
 			}
@@ -192,7 +209,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			);
 			$out->addHTML(
 				'<span class="profile-on">' .
-				$this->msg( 'user-profile-update-saved' )->plain() .
+				$this->msg( 'user-profile-update-saved' )->escaped() .
 				'</span><br /><br />'
 			);
 
@@ -483,10 +500,10 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		}
 
 		if ( !isset( $location_country ) ) {
-			$location_country = $this->msg( 'user-profile-default-country' )->inContentLanguage()->plain();
+			$location_country = $this->msg( 'user-profile-default-country' )->inContentLanguage()->escaped();
 		}
 		if ( !isset( $hometown_country ) ) {
-			$hometown_country = $this->msg( 'user-profile-default-country' )->inContentLanguage()->plain();
+			$hometown_country = $this->msg( 'user-profile-default-country' )->inContentLanguage()->escaped();
 		}
 
 		$s = $dbr->selectRow(
@@ -506,28 +523,33 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$countries = explode( "\n*", $this->msg( 'userprofile-country-list' )->inContentLanguage()->text() );
 		array_shift( $countries );
 
-		$this->getOutput()->setPageTitle( $this->msg( 'edit-profile-title' )->plain() );
+		$this->getOutput()->setPageTitle( $this->msg( 'edit-profile-title' )->escaped() );
 
-		$form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-personal' )->plain() );
+		$form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-personal' )->escaped() );
 		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">';
+		// NoJS thing -- JS sets this to false, which means that in execute() we skip updating
+		// profile field visibilities for users with JS enabled can do and have already done that
+		// with the nice JS-enabled drop-down (instead of having to rely on a plain ol'
+		// <select> + form submission, as no-JS users have to)
+		$form .= Html::hidden( 'should_update_field_visibilities', true );
 		$form .= '<div class="profile-info clearfix">';
 		$form .= '<div class="profile-update">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-info' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-name' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-info' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-name' )->escaped() . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="real_name" id="real_name" value="' . $real_name . '"/></p>
 			<div class="visualClear">' . $this->renderEye( 'up_real_name' ) . '</div>
-			<p class="profile-update-unit-left">' . $this->msg( 'email' )->plain() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'email' )->escaped() . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="email" id="email" value="' . $email . '"/>';
 		if ( !$user->mEmailAuthenticated ) {
 			$confirm = SpecialPage::getTitleFor( 'Confirmemail' );
-			$form .= " <a href=\"{$confirm->getFullURL()}\">" . $this->msg( 'confirmemail' )->plain() . '</a>';
+			$form .= " <a href=\"{$confirm->getFullURL()}\">" . $this->msg( 'confirmemail' )->escaped() . '</a>';
 		}
 		$form .= '</p>
 			<div class="visualClear">' . $this->renderEye( 'up_email' ) . '</div>';
 		if ( !$user->mEmailAuthenticated ) {
 			$form .= '<p class="profile-update-unit-left"></p>
 				<p class="profile-update-unit-small">' .
-					$this->msg( 'user-profile-personal-email-needs-auth' )->plain() .
+					$this->msg( 'user-profile-personal-email-needs-auth' )->escaped() .
 				'</p>';
 		}
 		$form .= '<div class="visualClear"></div>
@@ -535,11 +557,11 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		<div class="visualClear"></div>';
 
 		$form .= '<div class="profile-update">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-location' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-city' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-location' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-city' )->escaped() . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="location_city" id="location_city" value="' . ( $location_city ?? '' ) . '" /></p>
 			<div class="visualClear">' . $this->renderEye( 'up_location_city' ) . '</div>
-			<p class="profile-update-unit-left" id="location_state_label">' . $this->msg( 'user-profile-personal-country' )->plain() . '</p>';
+			<p class="profile-update-unit-left" id="location_state_label">' . $this->msg( 'user-profile-personal-country' )->escaped() . '</p>';
 		$form .= '<p class="profile-update-unit">';
 		// Hidden helper for UpdateProfile.js since JS cannot directly access PHP variables
 		$form .= '<input type="hidden" id="location_state_current" value="' . ( $location_state ?? '' ) . '" />';
@@ -559,11 +581,11 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		<div class="visualClear"></div>';
 
 		$form .= '<div class="profile-update">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-hometown' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-city' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-hometown' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-city' )->escaped() . '</p>
 			<p class="profile-update-unit"><input type="text" size="25" name="hometown_city" id="hometown_city" value="' . ( $hometown_city ?? '' ) . '" /></p>
 			<div class="visualClear">' . $this->renderEye( 'up_hometown_city' ) . '</div>
-			<p class="profile-update-unit-left" id="hometown_state_label">' . $this->msg( 'user-profile-personal-country' )->plain() . '</p>
+			<p class="profile-update-unit-left" id="hometown_state_label">' . $this->msg( 'user-profile-personal-country' )->escaped() . '</p>
 			<p class="profile-update-unit">';
 		$form .= '<span id="hometown_state_form">';
 		$form .= '</span>';
@@ -583,9 +605,9 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		<div class="visualClear"></div>';
 
 		$form .= '<div class="profile-update">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-birthday' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-birthday' )->escaped() . '</p>
 			<p class="profile-update-unit-left" id="birthday-format">' .
-				$this->msg( $showYOB ? 'user-profile-personal-birthdate-with-year' : 'user-profile-personal-birthdate' )->plain() .
+				$this->msg( $showYOB ? 'user-profile-personal-birthdate-with-year' : 'user-profile-personal-birthdate' )->escaped() .
 			'</p>
 			<p class="profile-update-unit"><input type="text"' .
 			( $showYOB ? ' class="long-birthday"' : null ) .
@@ -595,8 +617,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		</div><div class="visualClear"></div>';
 
 		$form .= '<div class="profile-update" id="profile-update-personal-aboutme">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-aboutme' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-aboutme' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-aboutme' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-aboutme' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="about" id="about" rows="3" cols="75">' . ( $about ?? '' ) . '</textarea>
 			</p>
@@ -605,8 +627,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		<div class="visualClear"></div>
 
 		<div class="profile-update" id="profile-update-personal-work">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-work' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-occupation' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-work' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-occupation' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="occupation" id="occupation" rows="2" cols="75">' . ( $occupation ?? '' ) . '</textarea>
 			</p>
@@ -615,8 +637,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		<div class="visualClear"></div>
 
 		<div class="profile-update" id="profile-update-personal-education">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-education' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-schools' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-education' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-schools' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="schools" id="schools" rows="2" cols="75">' . ( $schools ?? '' ) . '</textarea>
 			</p>
@@ -625,8 +647,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		<div class="visualClear"></div>
 
 		<div class="profile-update" id="profile-update-personal-places">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-places' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-placeslived' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-places' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-placeslived' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="places" id="places" rows="3" cols="75">' . ( $places ?? '' ) . '</textarea>
 			</p>
@@ -635,8 +657,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		<div class="visualClear"></div>
 
 		<div class="profile-update" id="profile-update-personal-web">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-web' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-websites' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-personal-web' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-personal-websites' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="websites" id="websites" rows="2" cols="75">' . ( $websites ?? '' ) . '</textarea>
 			</p>
@@ -645,7 +667,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		<div class="visualClear"></div>';
 
 		$form .= '
-			<input type="button" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->plain() . '" size="20" onclick="document.profile.submit()" />
+			<input type="submit" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->escaped() . '" size="20" onclick="document.profile.submit()" />
 			</div>
 			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 		</form>';
@@ -688,58 +710,63 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$drinks = $s->up_drinks;
 		}
 
-		$this->getOutput()->setPageTitle( $this->msg( 'user-profile-section-interests' )->plain() );
+		$this->getOutput()->setPageTitle( $this->msg( 'user-profile-section-interests' )->escaped() );
 
-		$form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-interests' )->plain() );
-		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">
-			<div class="profile-info profile-info-other-info clearfix">
+		$form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-interests' )->escaped() );
+		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">';
+		// NoJS thing -- JS sets this to false, which means that in execute() we skip updating
+		// profile field visibilities for users with JS enabled can do and have already done that
+		// with the nice JS-enabled drop-down (instead of having to rely on a plain ol'
+		// <select> + form submission, as no-JS users have to)
+		$form .= Html::hidden( 'should_update_field_visibilities', true );
+		$form .= '<div class="profile-info profile-info-other-info clearfix">
 			<div class="profile-update">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-interests-entertainment' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-movies' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-interests-entertainment' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-movies' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="movies" id="movies" rows="3" cols="75">' . ( $movies ?? '' ) . '</textarea>
 			</p>
 			<div class="visualClear">' . $this->renderEye( 'up_movies' ) . '</div>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-tv' )->plain() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-tv' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="tv" id="tv" rows="3" cols="75">' . ( $tv ?? '' ) . '</textarea>
 			</p>
 			<div class="visualClear">' . $this->renderEye( 'up_tv' ) . '</div>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-music' )->plain() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-music' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="music" id="music" rows="3" cols="75">' . ( $music ?? '' ) . '</textarea>
 			</p>
 			<div class="visualClear">' . $this->renderEye( 'up_music' ) . '</div>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-books' )->plain() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-books' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="books" id="books" rows="3" cols="75">' . ( $books ?? '' ) . '</textarea>
 			</p>
 			<div class="visualClear">' . $this->renderEye( 'up_books' ) . '</div>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-magazines' )->plain() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-magazines' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="magazines" id="magazines" rows="3" cols="75">' . ( $magazines ?? '' ) . '</textarea>
 			</p>
 			<div class="visualClear">' . $this->renderEye( 'up_magazines' ) . '</div>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-videogames' )->plain() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-videogames' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="videogames" id="videogames" rows="3" cols="75">' . ( $videogames ?? '' ) . '</textarea>
 			</p>
 			<div class="visualClear">' . $this->renderEye( 'up_video_games' ) . '</div>
 			</div>
 			<div class="profile-info">
-			<p class="profile-update-title">' . $this->msg( 'user-profile-interests-eats' )->plain() . '</p>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-foodsnacks' )->plain() . '</p>
+			<p class="profile-update-title">' . $this->msg( 'user-profile-interests-eats' )->escaped() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-foodsnacks' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="snacks" id="snacks" rows="3" cols="75">' . ( $snacks ?? '' ) . '</textarea>
 			</p>
 			<div class="visualClear">' . $this->renderEye( 'up_snacks' ) . '</div>
-			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-drinks' )->plain() . '</p>
+			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-drinks' )->escaped() . '</p>
 			<p class="profile-update-unit">
 				<textarea name="drinks" id="drinks" rows="3" cols="75">' . ( $drinks ?? '' ) . '</textarea>
 			</p>
 			<div class="visualClear">' . $this->renderEye( 'up_drinks' ) . '</div>
 			</div>
-			<input type="button" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->plain() . '" size="20" onclick="document.profile.submit()" />
+			<input type="submit" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->escaped() . '" size="20" onclick="document.profile.submit()" />
 			</div>
 			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 		</form>';
@@ -767,42 +794,42 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$showYOB = $s && $s->up_birthday ? false : true;
 
 		// @todo If the checkboxes are in front of the option, this would look more like Special:Preferences
-		$this->getOutput()->setPageTitle( $this->msg( 'preferences' )->plain() );
+		$this->getOutput()->setPageTitle( $this->msg( 'preferences' )->escaped() );
 
-		$form = UserProfile::getEditProfileNav( $this->msg( 'preferences' )->plain() );
+		$form = UserProfile::getEditProfileNav( $this->msg( 'preferences' )->escaped() );
 		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">';
 		$form .= '<div class="profile-info clearfix">
 			<div class="profile-update">
-				<p class="profile-update-title">' . $this->msg( 'user-profile-preferences-emails' )->plain() . '</p>';
+				<p class="profile-update-title">' . $this->msg( 'user-profile-preferences-emails' )->escaped() . '</p>';
 		if ( ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ) {
 			$form .= '<p class="profile-update-row">' .
 				$this->msg( 'user-profile-preferences-emails-manage' )->parse() .
 				'</p>';
 		} else {
 			$form .= '<p class="profile-update-row">'
-					. $this->msg( 'user-profile-preferences-emails-personalmessage' )->plain() .
+					. $this->msg( 'user-profile-preferences-emails-personalmessage' )->escaped() .
 					' <input type="checkbox" size="25" name="notify_message" id="notify_message" value="1"' . ( ( $user->getIntOption( 'notifymessage', 1 ) == 1 ) ? 'checked' : '' ) . '/>
 				</p>
 				<p class="profile-update-row">'
-					. $this->msg( 'user-profile-preferences-emails-friendfoe' )->plain() .
+					. $this->msg( 'user-profile-preferences-emails-friendfoe' )->escaped() .
 					' <input type="checkbox" size="25" class="createbox" name="notify_friend" id="notify_friend" value="1" ' . ( ( $user->getIntOption( 'notifyfriendrequest', 1 ) == 1 ) ? 'checked' : '' ) . '/>
 				</p>
 				<p class="profile-update-row">'
-					. $this->msg( 'user-profile-preferences-emails-gift' )->plain() .
+					. $this->msg( 'user-profile-preferences-emails-gift' )->escaped() .
 					' <input type="checkbox" size="25" name="notify_gift" id="notify_gift" value="1" ' . ( ( $user->getIntOption( 'notifygift', 1 ) == 1 ) ? 'checked' : '' ) . '/>
 				</p>
 
 				<p class="profile-update-row">'
-					. $this->msg( 'user-profile-preferences-emails-level' )->plain() .
+					. $this->msg( 'user-profile-preferences-emails-level' )->escaped() .
 					' <input type="checkbox" size="25" name="notify_honorifics" id="notify_honorifics" value="1"' . ( ( $user->getIntOption( 'notifyhonorifics', 1 ) == 1 ) ? 'checked' : '' ) . '/>
 				</p>';
 		}
 
 		$form .= '<p class="profile-update-title">' .
-			$this->msg( 'user-profile-preferences-miscellaneous' )->plain() .
+			$this->msg( 'user-profile-preferences-miscellaneous' )->escaped() .
 			'</p>
 			<p class="profile-update-row">' .
-				$this->msg( 'user-profile-preferences-miscellaneous-show-year-of-birth' )->plain() .
+				$this->msg( 'user-profile-preferences-miscellaneous-show-year-of-birth' )->escaped() .
 				' <input type="checkbox" size="25" name="show_year_of_birth" id="show_year_of_birth" value="1"' . ( ( $user->getIntOption( 'showyearofbirth', $showYOB ) == 1 ) ? 'checked' : '' ) . '/>
 			</p>';
 
@@ -811,7 +838,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		$form .= '</div>
 			<div class="visualClear"></div>';
-		$form .= '<input type="button" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->plain() . '" size="20" onclick="document.profile.submit()" />';
+		$form .= '<input type="submit" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->escaped() . '" size="20" onclick="document.profile.submit()" />';
 		$form .= Html::hidden( 'wpEditToken', $user->getEditToken() );
 		$form .= '</form>';
 		$form .= '</div>';
@@ -844,11 +871,16 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$custom4 = $s->up_custom_4;
 		}
 
-		$this->getOutput()->setPageTitle( $this->msg( 'user-profile-tidbits-title' )->plain() );
+		$this->getOutput()->setPageTitle( $this->msg( 'user-profile-tidbits-title' )->escaped() );
 
-		$form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-custom' )->plain() );
-		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">
-			<div class="profile-info profile-info-custom-info clearfix">
+		$form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-custom' )->escaped() );
+		$form .= '<form action="" method="post" enctype="multipart/form-data" name="profile">';
+		// NoJS thing -- JS sets this to false, which means that in execute() we skip updating
+		// profile field visibilities for users with JS enabled can do and have already done that
+		// with the nice JS-enabled drop-down (instead of having to rely on a plain ol'
+		// <select> + form submission, as no-JS users have to)
+		$form .= Html::hidden( 'should_update_field_visibilities', true );
+		$form .= '<div class="profile-info profile-info-custom-info clearfix">
 				<div class="profile-update">
 					<p class="profile-update-title">' . $this->msg( 'user-profile-tidbits-title' )->inContentLanguage()->parse() . '</p>
 					<div id="profile-update-custom1">
@@ -880,7 +912,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 					</div>
 					<div class="visualClear">' . $this->renderEye( 'up_custom_4' ) . '</div>
 				</div>
-			<input type="button" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->plain() . '" size="20" onclick="document.profile.submit()" />
+			<input type="submit" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->escaped() . '" size="20" onclick="document.profile.submit()" />
 			</div>
 			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 		</form>';

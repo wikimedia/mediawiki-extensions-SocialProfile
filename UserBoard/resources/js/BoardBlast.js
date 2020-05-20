@@ -143,7 +143,8 @@ $( function () {
 	} );
 
 	// The submit button
-	$( 'div.blast-message-box-button input[type="button"]' ).on( 'click', function () {
+	$( 'div.blast-message-box-button input[type="submit"]' ).on( 'click', function ( e ) {
+		e.preventDefault();
 		BoardBlast.sendMessages();
 	} );
 } );

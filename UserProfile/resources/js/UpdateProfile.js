@@ -56,9 +56,9 @@
 		if (
 			(
 				mw.config.get( 'wgCanonicalSpecialPageName' ) === 'UpdateProfile' &&
-			mw.config.get( 'wgTitle' ).indexOf( '/' ) === -1
+				mw.config.get( 'wgTitle' ).indexOf( '/' ) === -1
 			) ||
-		mw.config.get( 'wgCanonicalSpecialPageName' ) === 'EditProfile'
+			mw.config.get( 'wgCanonicalSpecialPageName' ) === 'EditProfile'
 		) {
 			displaySection( 'location_state', $( '#location_country' ).val(), $( '#location_state_current' ).val() );
 			$( '#location_country' ).on( 'change', function () {
@@ -72,6 +72,15 @@
 		}
 
 		// Profile visibility stuff
+		// This flag skips updating the profile field visibilities by SpecialUpdateProfile#execute
+		// if and when the user has JS enabled.
+		// The existence of this flag is just meant as a fallback for no-JS users, hence why
+		// it is _true_ and not false by default and we explicitly set it to false
+		// for JS users here.
+		if ( $( 'input[name="should_update_field_visibilities"]' ).length > 0 ) {
+			$( 'input[name="should_update_field_visibilities"]' ).value = false;
+		}
+
 		$( 'body' ).on( 'mouseenter', '.eye-container', function () {
 			if ( $( this ).css( 'position' ) !== 'absolute' ) {
 				var offset = $( this ).offset();

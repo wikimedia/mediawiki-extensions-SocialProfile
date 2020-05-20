@@ -103,23 +103,29 @@ class SPUserSecurity {
 					// user-profile-privacy-status-privacy-hidden,
 					// user-profile-privacy-status-privacy-friends,
 					// user-profile-privacy-status-privacy-foaf
-					wfMessage( 'user-profile-privacy-status-privacy-' . $privacy )->plain() . '</div>
+					wfMessage( 'user-profile-privacy-status-privacy-' . $privacy )->escaped() . '</div>
 					<div class="menu">';
+		$noscriptVersion = '<noscript><select name="' . htmlspecialchars( $fieldKey, ENT_QUOTES ) . '">';
 
 		foreach ( $all_privacy as $priv ) {
 			if ( $priv == $privacy ) {
+				$noscriptVersion .= '<option value="' . htmlspecialchars( $privacy, ENT_QUOTES ) .
+					'" selected="selected">' . wfMessage( 'user-profile-privacy-status-privacy-' . $privacy )->escaped() . '</option>';
 				continue;
 			}
 
 			$ret .= '<div class="item" action="' . htmlspecialchars( $priv, ENT_QUOTES ) . '">' .
-				wfMessage( 'user-profile-privacy-status-privacy-' . $priv )->plain() .
+				wfMessage( 'user-profile-privacy-status-privacy-' . $priv )->escaped() .
 				'</div>';
+			$noscriptVersion .= '<option value="' . htmlspecialchars( $priv, ENT_QUOTES ) . '">' .
+				wfMessage( 'user-profile-privacy-status-privacy-' . $priv )->escaped() . '</option>';
 		}
 
 		$ret .= '</div>
 			</div>';
+		$noscriptVersion .= '</select></noscript>';
 
-		return $ret;
+		return $ret . $noscriptVersion;
 	}
 
 	/**

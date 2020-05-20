@@ -114,6 +114,21 @@
 	height: 20px;
 }
 
+.client-nojs .eye-container {
+	display: none;
+}
+
+.client-nojs .mw-special-UpdateProfile select:not(#location_country):not(#hometown_country) {
+	width: 20%;
+	/**
+	 * This is just crazy. Position has to be something else than static (the
+	 * default) for us to be able to set the bottom property, and bottom: 250%;
+	 * looks good on my setup...
+	 */
+	position: relative;
+	bottom: 250%;
+}
+
 .eye-container {
 	width: 130px;
 	height: 20px;

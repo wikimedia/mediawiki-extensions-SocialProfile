@@ -62,6 +62,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		$user_name_2 = $request->getVal( 'conv' );
 		$user_2 = null; // Prevent E_NOTICE
 		$page = $request->getInt( 'page', 1 );
+		$output = '';
 
 		/**
 		 * Redirect Non-logged in users to Login Page
@@ -100,6 +101,45 @@ class SpecialViewUserBoard extends SpecialPage {
 		$per_page = $ub_messages_show;
 
 		$b = new UserBoard( $currentUser );
+
+		// NoJS handling of board message actions (deletion & sending)
+		$isDelete = ( $request->getVal( 'action' ) === 'delete' );
+		$messageId = $request->getInt( 'messageId' );
+		if ( $isDelete && !$request->wasPosted() && $messageId ) {
+			$output .= $this->renderConfirmDeleteForm( $messageId );
+			$out->addHTML( $output );
+			return;
+		}
+
+		if ( $request->wasPosted() && !MediaWikiServices::getInstance()->getReadOnlyMode()->isReadOnly() ) {
+			// Deletions
+			if ( $isDelete ) {
+				if (
+					( $b->doesUserOwnMessage( $currentUser, $messageId ) || $currentUser->isAllowed( 'userboard-delete' ) ) &&
+					$currentUser->matchEditToken( $request->getVal( 'wpDeleteToken' ) )
+				) {
+					$b->deleteMessage( $messageId );
+					$output .= Html::successBox( $this->msg( 'userboard-delete-success' )->escaped() );
+				} else {
+					// CSRF attempt or something...display an informational message in that case
+					$output .= Html::errorBox( $this->msg( 'sessionfailure' )->escaped() );
+				}
+			} elseif ( $request->getVal( 'action' ) === 'send' ) {
+				// Sending a message
+				if ( $currentUser->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
+					$b->sendBoardMessage(
+						$currentUser,
+						User::newFromName( $request->getVal( 'user_name_to' ) ),
+						urldecode( $request->getVal( 'message' ) ),
+						$request->getInt( 'message_type' )
+					);
+				} else {
+					// CSRF attempt or something...display an informational message in that case
+					$output .= Html::errorBox( $this->msg( 'sessionfailure' )->escaped() );
+				}
+			}
+		}
+
 		$ub_messages = $b->getUserBoardMessages(
 			// @todo FIXME: variabilize this construct since we're using it twice here
 			( $userFromURL ? User::newFromName( $userFromURL ) : $currentUser ),
@@ -142,7 +182,7 @@ class SpecialViewUserBoard extends SpecialPage {
 			}
 		}
 
-		$output = '<div class="user-board-top-links">';
+		$output .= '<div class="user-board-top-links">';
 		$output .= '<a href="' . htmlspecialchars( $user->getFullURL() ) . '">&lt; ' .
 			$this->msg( 'userboard_backprofile', $user_name )->parse() . '</a>';
 		$output .= '</div>';
@@ -267,21 +307,31 @@ class SpecialViewUserBoard extends SpecialPage {
 
 		if ( $can_post ) {
 			if ( $currentUser->isLoggedIn() && !$currentUser->isBlocked() ) {
+				$urlParams = [ 'action' => 'send' ];
+				if ( $request->getVal( 'user' ) ) {
+					// Need this to ensure that no-JS users are shown the correct stuff
+					// after sending a board message, i.e. if they're viewing another user's
+					// board, show _that_ board and not /their own/ board
+					$urlParams['user'] = $request->getVal( 'user' );
+				}
+				$url = htmlspecialchars( $this->getPageTitle()->getFullURL( $urlParams ), ENT_QUOTES );
 				$output .= '<div class="user-page-message-form">
+				<form id="board-post-form" action="' . $url . '" method="post">
 					<input type="hidden" id="user_name_to" name="user_name_to" value="' . $user_name_to . '"/>
 					<input type="hidden" id="user_name_from" name="user_name_from" value="' . $user_name_from . '"/>
-					<span class="user-board-message-type">' . htmlspecialchars( $this->msg( 'userboard_messagetype' )->plain() ) . ' </span>
-					<select id="message_type">
-						<option value="0">' . htmlspecialchars( $this->msg( 'userboard_public' )->plain() ) . '</option>
-						<option value="1">' . htmlspecialchars( $this->msg( 'userboard_private' )->plain() ) . '</option>
+					<span class="user-board-message-type">' . $this->msg( 'userboard_messagetype' )->escaped() . ' </span>
+					<select id="message_type" name="message_type">
+						<option value="0">' . $this->msg( 'userboard_public' )->escaped() . '</option>
+						<option value="1">' . $this->msg( 'userboard_private' )->escaped() . '</option>
 					</select>
 					<p>
 					<textarea name="message" id="message" cols="63" rows="4"></textarea>
 
 					<div class="user-page-message-box-button">
-						<input type="button" value="' . htmlspecialchars( $this->msg( 'userboard_sendbutton' )->plain() ) . '" class="site-button" data-per-page="' . $per_page . '" />
-					</div>
-
+						<input type="submit" value="' . $this->msg( 'userboard_sendbutton' )->escaped() . '" class="site-button" data-per-page="' . $per_page . '" />
+					</div>' .
+					Html::hidden( 'wpEditToken', $currentUser->getEditToken() ) .
+				'</form>
 				</div>';
 			} else {
 				$output .= '<div class="user-page-message-form">'
@@ -337,9 +387,23 @@ class SpecialViewUserBoard extends SpecialPage {
 					$currentUser->getActorId() == $ub_message['ub_actor'] ||
 					$currentUser->isAllowed( 'userboard-delete' )
 				) {
+					$deleteURLParams = [
+						'action' => 'delete',
+						'messageId' => $ub_message['id']
+					];
+					if ( $request->getVal( 'user' ) ) {
+						// Need this to ensure that no-JS users are shown the correct stuff
+						// after deleting a board message, i.e. if they're viewing another user's
+						// board, show _that_ board and not /their own/ board
+						$deleteURLParams['user'] = $request->getVal( 'user' );
+					}
+					$deleteURL = htmlspecialchars(
+						$this->getPageTitle()->getFullURL( $deleteURLParams ),
+						ENT_QUOTES
+					);
 					$delete_link = "<span class=\"user-board-red\">
-						<a href=\"javascript:void(0);\" data-message-id=\"{$ub_message['id']}\">" .
-							htmlspecialchars( $this->msg( 'delete' )->plain() ) . '</a>
+						<a href=\"{$deleteURL}\" data-message-id=\"{$ub_message['id']}\">" .
+							$this->msg( 'delete' )->escaped() . '</a>
 					</span>';
 				}
 
@@ -352,30 +416,21 @@ class SpecialViewUserBoard extends SpecialPage {
 				// $ub_message_text = preg_replace_callback( "/(<a[^>]*>)(.*?)(<\/a>)/i", 'cut_link_text', $ub_message['message_text'] );
 				$ub_message_text = $ub_message['message_text'];
 
-				$userPageURL = htmlspecialchars( $sender->getUserPage()->getFullURL() );
-				$senderTitle = htmlspecialchars( $sender->getName() );
-				$output .= "<div class=\"user-board-message\">
-					<div class=\"user-board-message-from\">
-						<a href=\"{$userPageURL}\" title=\"{$senderTitle}\">{$senderTitle} </a> {$ub_message_type_label}
-					</div>
-					<div class=\"user-board-message-time\">"
-						. $this->msg( 'userboard_posted_ago', $b->getTimeAgo( $ub_message['timestamp'] ) )->parse() .
-					"</div>
-					<div class=\"user-board-message-content\">
-						<div class=\"user-board-message-image\">
-							<a href=\"{$userPageURL}\" title=\"{$senderTitle}\">{$avatar->getAvatarURL()}</a>
-						</div>
-						<div class=\"user-board-message-body\">
-							{$ub_message_text}
-						</div>
-						<div class=\"visualClear\"></div>
-					</div>
-					<div class=\"user-board-message-links\">
-						{$board_link}
-						{$board_to_board}
-						{$delete_link}
-					</div>
-				</div>";
+				$templateParser = new TemplateParser( __DIR__ . '/../templates' );
+				$output .= $templateParser->processTemplate(
+					'board-message',
+					[
+						'userPageURL' => $sender->getUserPage()->getFullURL(),
+						'senderName' => $sender->getName(),
+						'messageTypeLabel' => $ub_message_type_label,
+						'postedAgo' => $this->msg( 'userboard_posted_ago', $b->getTimeAgo( $ub_message['timestamp'] ) )->parse(),
+						'avatarElement' => $avatar->getAvatarURL(),
+						'messageBody' => $ub_message_text,
+						'boardLink' => $board_link,
+						'boardToBoard' => $board_to_board,
+						'deleteLink' => $delete_link
+					]
+				);
 			}
 		} else {
 			$output .= '<p>' . $this->msg( 'userboard_nomessages' )->parse() . '</p>';
@@ -385,4 +440,39 @@ class SpecialViewUserBoard extends SpecialPage {
 
 		$out->addHTML( $output );
 	}
+
+	/**
+	 * Render the "are you sure you REALLY want to delete this message?" <form>.
+	 * Primarily used by no-JS users.
+	 *
+	 * @param int $messageId ID of the board message to be deleted
+	 * @return string HTML
+	 */
+	private function renderConfirmDeleteForm( $messageId ) {
+		$form = '';
+		$user = $this->getUser();
+		$b = new UserBoard( $user );
+
+		if (
+			!$b->doesUserOwnMessage( $user, $messageId ) ||
+			!$b->isUserAuthor( $user, $messageId )
+		) {
+			if ( !$user->isAllowed( 'userboard-delete' ) ) {
+				throw new PermissionsError( 'userboard-delete' );
+			}
+		}
+
+		$form .= '<form method="post" name="delete-board-message" action="">';
+		$form .= $this->msg( 'userboard_confirmdelete' )->escaped();
+		$form .= '<br />';
+		$form .= $b->displayMessage( $user, $messageId );
+		$form .= Html::hidden( 'wpDeleteToken', $user->getEditToken() );
+		$form .= Html::hidden( 'messageId', $messageId );
+		$form .= Html::hidden( 'action', 'delete' );
+		$form .= Html::submitButton( $this->msg( 'delete' )->escaped(), [ 'name' => 'wpSubmit', 'class' => 'site-button' ] );
+		$form .= '</form>';
+
+		return $form;
+	}
+
 }

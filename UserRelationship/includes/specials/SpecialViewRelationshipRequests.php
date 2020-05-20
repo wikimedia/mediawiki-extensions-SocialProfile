@@ -64,6 +64,8 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		 */
 		$this->requireLogin();
 
+		$this->checkReadOnly();
+
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();
 
@@ -74,23 +76,77 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		$out->addModules( 'ext.socialprofile.userrelationship.js' );
 
 		$rel = new UserRelationship( $user );
+		$output = '';
 
-		if ( $request->wasPosted() && $_SESSION['alreadysubmitted'] == false ) {
-			$_SESSION['alreadysubmitted'] = true;
-			$rel->addRelationshipRequest(
-				$this->user_name_to,
-				$this->relationship_type,
-				$request->getVal( 'message' )
-			);
-			$output = '<br /><span class="title">' .
-				htmlspecialchars( $this->msg( 'ur-already-submitted' )->plain() ) .
-				'</span><br /><br />';
+		if ( $request->wasPosted() ) {
+			if ( $_SESSION['alreadysubmitted'] == false && !$request->getInt( 'response' ) ) {
+				$_SESSION['alreadysubmitted'] = true;
+				$rel->addRelationshipRequest(
+					$this->user_name_to,
+					$this->relationship_type,
+					$request->getVal( 'message' )
+				);
+				$output = '<br /><span class="title">' .
+					$this->msg( 'ur-already-submitted' )->escaped() .
+					'</span><br /><br />';
+				$out->addHTML( $output );
+				return;
+			}
+
+			// @todo FIXME: essentially almost the same code as in ../api/ApiRelationshipResponse.php
+			$response = $request->getInt( 'response' );
+			$requestId = $request->getInt( 'id' );
+
+			// This chunk of code handles the no-JS case of accepting/rejecting requests
+			if (
+				$response &&
+				$rel->verifyRelationshipRequest( $requestId ) == true &&
+				$user->matchEditToken( $request->getVal( 'token' ) )
+			) {
+				$request = $rel->getRequest( $requestId );
+				$actorIdFrom = $request[0]['actor_from'];
+				$userFrom = User::newFromActorId( $actorIdFrom );
+				$rel_type = strtolower( $request[0]['type'] );
+
+				$rel->updateRelationshipRequestStatus( $requestId, intval( $response ) );
+
+				$avatar = new wAvatar( $userFrom->getId(), 'l' );
+				$avatar_img = $avatar->getAvatarURL();
+
+				if ( $response == 1 ) {
+					$rel->addRelationship( $requestId );
+					$performedAction = 'added';
+				} else {
+					$performedAction = 'reject';
+				}
+
+				$output .= "<div class=\"relationship-action red-text\">
+					{$avatar_img}" .
+					// i18n messages used here: ur-requests-added-message-friend, ur-requests-added-message-foe
+					// ur-requests-reject-message-friend, ur-requests-reject-message-foe
+					$this->msg( "ur-requests-{$performedAction}-message-{$rel_type}", $userFrom->getName() )->escaped() .
+					'<div class="visualClear"></div>
+				</div>';
+
+				// "Your profile" and "Main page" buttons, for consistency w/ other special pages like
+				// AddRelationship, RemoveRelationship, etc.
+				// @todo NoJS support...
+				$output .= "<div class=\"relationship-buttons\">
+						<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'mainpage' )->escaped() . "\" size=\"20\" onclick=\"window.location='index.php?title=" . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . "'\"/>
+						<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-your-profile' )->escaped() . "\" size=\"20\" onclick=\"window.location='" . htmlspecialchars( $user->getUserPage()->getFullURL() ) . "'\"/>
+					</div>
+					<div class=\"visualClear\"></div>";
+
+				$rel->deleteRequest( $requestId );
+			}
+
 			$out->addHTML( $output );
+			return;
 		} else {
 			$_SESSION['alreadysubmitted'] = false;
-			$output = '';
 
 			$out->setPageTitle( $this->msg( 'ur-requests-title' )->plain() );
+
 			$listLookup = new RelationshipListLookup( $user );
 			$requests = $listLookup->getRequestList( 0 );
 
@@ -123,10 +179,21 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 					if ( $request['message'] ) {
 						$output .= '<div class="relationship-message">' . $message . '</div>';
 					}
+					$url = htmlspecialchars( $this->getPageTitle()->getFullURL(), ENT_QUOTES );
 					$output .= '<div class="visualClear"></div>
 						<div class="relationship-buttons">
-							<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'ur-accept' )->plain() ) . '" data-response="1" />
-							<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'ur-reject' )->plain() ) . '" data-response="-1" />
+						<form id="relationship-request-accept-form" action="' . $url . '" method="post">
+							<input type="hidden" name="response" value="1" />
+							<input type="hidden" name="id" value="' . $request['id'] . '" />
+							<input type="hidden" name="token" value="' . htmlspecialchars( $user->getEditToken(), ENT_QUOTES ) . '" />
+							<input type="submit" class="site-button" value="' . $this->msg( 'ur-accept' )->escaped() . '" data-response="1" />
+						</form>
+						<form id="relationship-request-reject-form" action="' . $url . '" method="post">
+							<input type="hidden" name="response" value="-1" />
+							<input type="hidden" name="id" value="' . $request['id'] . '" />
+							<input type="hidden" name="token" value="' . htmlspecialchars( $user->getEditToken(), ENT_QUOTES ) . '" />
+							<input type="submit" class="site-button" value="' . $this->msg( 'ur-reject' )->escaped() . '" data-response="-1" />
+						</form>
 						</div>
 					</div>';
 				}
