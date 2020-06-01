@@ -25,7 +25,7 @@
 			e.preventDefault();
 			requestResponse(
 				$( this ).data( 'response' ),
-				$( this ).parent().parent().attr( 'id' ).replace( /request_action_/, '' )
+				$( this ).parent().parent().parent().attr( 'id' ).replace( /request_action_/, '' )
 			);
 		} );
 	} );
