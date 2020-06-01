@@ -43,6 +43,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 	 */
 	public function execute( $params ) {
 		$out = $this->getOutput();
+		$request = $this->getRequest();
 		$user = $this->getUser();
 
 		// Can't use $this->setHeaders(); here because then it'll set the page
@@ -56,7 +57,7 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 			'ext.socialprofile.userrelationship.css'
 		] );
 
-		$usertitle = Title::makeTitleSafe( NS_USER, $this->getRequest()->getVal( 'user' ) );
+		$usertitle = Title::makeTitleSafe( NS_USER, $request->getVal( 'user' ) );
 		if ( !$usertitle ) {
 			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
 			$out->addWikiMsg( 'ur-add-no-user' );
