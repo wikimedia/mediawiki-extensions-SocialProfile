@@ -59,7 +59,8 @@ $( function () {
 	} );
 
 	// Submit button
-	$( 'div.user-page-message-box-button input[type="submit"]' ).on( 'click', function () {
+	$( 'div.user-page-message-box-button input[type="submit"]' ).on( 'click', function ( e ) {
+		e.preventDefault();
 		UserBoard.sendMessage( $( this ).data( 'per-page' ) );
 	} );
 } );
