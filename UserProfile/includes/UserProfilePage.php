@@ -468,35 +468,42 @@ class UserProfilePage extends Article {
 		// Combine the queries
 		$combined_array = [];
 
-		$quizzes = $this->getUserQuiz();
-		foreach ( $quizzes as $quiz ) {
-			$combined_array[] = [
-				'type' => 'Quiz',
-				'id' => $quiz['id'],
-				'text' => $quiz['text'],
-				'timestamp' => $quiz['timestamp']
-			];
+		$registry = ExtensionRegistry::getInstance();
+		if ( $registry->isLoaded( 'QuizGame' ) ) {
+			$quizzes = $this->getUserQuiz();
+			foreach ( $quizzes as $quiz ) {
+				$combined_array[] = [
+					'type' => 'Quiz',
+					'id' => $quiz['id'],
+					'text' => $quiz['text'],
+					'timestamp' => $quiz['timestamp']
+				];
+			}
 		}
 
-		$polls = $this->getUserPolls();
-		foreach ( $polls as $poll ) {
-			$combined_array[] = [
-				'type' => 'Poll',
-				'title' => $poll['title'],
-				'timestamp' => $poll['timestamp']
-			];
+		if ( $registry->isLoaded( 'PollNY' ) ) {
+			$polls = $this->getUserPolls();
+			foreach ( $polls as $poll ) {
+				$combined_array[] = [
+					'type' => 'Poll',
+					'title' => $poll['title'],
+					'timestamp' => $poll['timestamp']
+				];
+			}
 		}
 
-		$pics = $this->getUserPicGames();
-		foreach ( $pics as $pic ) {
-			$combined_array[] = [
-				'type' => 'Picture Game',
-				'id' => $pic['id'],
-				'title' => $pic['title'],
-				'img1' => $pic['img1'],
-				'img2' => $pic['img2'],
-				'timestamp' => $pic['timestamp']
-			];
+		if ( $registry->isLoaded( 'PictureGame' ) ) {
+			$pics = $this->getUserPicGames();
+			foreach ( $pics as $pic ) {
+				$combined_array[] = [
+					'type' => 'Picture Game',
+					'id' => $pic['id'],
+					'title' => $pic['title'],
+					'img1' => $pic['img1'],
+					'img2' => $pic['img2'],
+					'timestamp' => $pic['timestamp']
+				];
+			}
 		}
 
 		usort( $combined_array, [ 'UserProfilePage', 'sortItems' ] );
