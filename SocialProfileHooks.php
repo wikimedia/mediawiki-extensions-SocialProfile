@@ -162,7 +162,7 @@ class SocialProfileHooks {
 		// This was a bad idea and I should feel bad. Luckily it existed only for
 		// like less than half a year in 2020.
 		if ( $db->fieldExists( 'user_profile', 'up_id', __METHOD__ ) ) {
-			$updater->dropExtensionField( 'user_profile', 'up_id', "$dir/UserProfile/sql/patches/drop-up_id.sql" );
+			$updater->dropExtensionField( 'user_profile', 'up_id', "$dir/UserProfile/sql/patches/patch-drop-column-up_id.sql" );
 		}
 
 		if ( !$db->fieldExists( 'user_fields_privacy', 'ufp_actor', __METHOD__ ) ) {
