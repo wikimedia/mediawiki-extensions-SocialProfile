@@ -100,7 +100,7 @@ class ViewSystemGifts extends SpecialPage {
 				// could also be using $targetUser->getName() here but doesn't really matter
 				// since both of the vars should have the same value here
 				$rel->user_name
-			)->escaped() . '</div>';
+			)->parse() . '</div>';
 
 		$output .= '<div class="ga-count">' .
 			$this->msg( 'ga-count', $rel->user_name, $total )->parse() .
