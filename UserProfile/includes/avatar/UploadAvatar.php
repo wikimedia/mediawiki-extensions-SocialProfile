@@ -111,10 +111,12 @@ class UploadAvatar extends UploadFromFile {
 	 * @param bool $watch
 	 * @param User $user
 	 * @param string[] $tags
+	 * @param string|null $watchlistExpiry Optional watchlist expiry timestamp in any format
+	 *   acceptable to wfTimestamp(). [unused here]
 	 *
 	 * @return Status
 	 */
-	public function performUpload( $comment, $pageText, $watch, $user, $tags = [] ) {
+	public function performUpload( $comment, $pageText, $watch, $user, $tags = [], ?string $watchlistExpiry = null ) {
 		global $wgUploadDirectory, $wgAvatarKey, $wgTmpDirectory;
 
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
