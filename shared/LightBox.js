@@ -12,6 +12,7 @@
 window.LightBox = {
 	/**
 	 * Core code from quirksmode.org
+	 *
 	 * @return Array with x,y page scroll values.
 	 */
 	getPageScroll: function () {
@@ -32,6 +33,7 @@ window.LightBox = {
 	/**
 	 * Core code from quirksmode.org
 	 * Edit for Firefox by pHaez
+	 *
 	 * @return Array with page width, height and window width, height
 	 */
 	getPageSize: function () {
@@ -82,6 +84,8 @@ window.LightBox = {
 	/**
 	 * Pauses code execution for specified time. Uses busy code, not good.
 	 * Code from http://www.faqts.com/knowledge_base/view.phtml/aid/1602
+	 *
+	 * @param numberMillis
 	 */
 	pause: function ( numberMillis ) {
 		var now = new Date();
@@ -96,6 +100,8 @@ window.LightBox = {
 
 	/**
 	 * Preloads images. Places new image in lightbox then centers and displays.
+	 *
+	 * @param objLink
 	 */
 	show: function ( objLink ) {
 		var lb = this;

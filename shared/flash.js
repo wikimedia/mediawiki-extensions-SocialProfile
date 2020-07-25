@@ -13,7 +13,7 @@
 
 	/**
 	 * @see http://stackoverflow.com/questions/998245/how-can-i-detect-if-flash-is-installed-and-if-not-display-a-hidden-div-that-inf/20095467#20095467
-	 * @return {Boolean}
+	 * @return {boolean}
 	 */
 	window.isFlashSupported = function () {
 		var hasFlash = false;
