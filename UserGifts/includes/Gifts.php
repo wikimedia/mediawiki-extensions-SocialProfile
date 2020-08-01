@@ -29,7 +29,7 @@ class Gifts {
 			[
 				'gift_name' => $gift_name,
 				'gift_description' => $gift_description,
-				'gift_createdate' => date( 'Y-m-d H:i:s' ),
+				'gift_createdate' => $dbw->timestamp( date( 'Y-m-d H:i:s' ) ),
 				'gift_creator_actor' => $user->getActorId(),
 				'gift_access' => $gift_access,
 			],

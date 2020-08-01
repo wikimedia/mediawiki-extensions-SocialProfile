@@ -47,7 +47,7 @@ class UserGifts {
 				'ug_type' => $type,
 				'ug_status' => 1,
 				'ug_message' => $message,
-				'ug_date' => date( 'Y-m-d H:i:s' ),
+				'ug_date' => $dbw->timestamp( date( 'Y-m-d H:i:s' ) ),
 			], __METHOD__
 		);
 		$ug_gift_id = $dbw->insertId();

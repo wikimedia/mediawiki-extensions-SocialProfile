@@ -66,7 +66,7 @@ class UserSystemGifts {
 				'sg_gift_id' => $gift_id,
 				'sg_actor' => $this->actorId,
 				'sg_status' => 1,
-				'sg_date' => date( 'Y-m-d H:i:s' ),
+				'sg_date' => $dbw->timestamp( date( 'Y-m-d H:i:s' ) ),
 			],
 			__METHOD__
 		);
