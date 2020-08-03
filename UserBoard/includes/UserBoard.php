@@ -52,7 +52,7 @@ class UserBoard {
 				'ub_actor' => $recipient->getActorId(),
 				'ub_message' => $message,
 				'ub_type' => $message_type,
-				'ub_date' => date( 'Y-m-d H:i:s' ),
+				'ub_date' => $dbw->timestamp( date( 'Y-m-d H:i:s' ) ),
 			],
 			__METHOD__
 		);

@@ -45,7 +45,7 @@ class UserRelationship {
 				'ur_actor_to' => $userTo->getActorId(),
 				'ur_type' => $type,
 				'ur_message' => $message,
-				'ur_date' => date( 'Y-m-d H:i:s' )
+				'ur_date' => $dbw->timestamp( date( 'Y-m-d H:i:s' ) )
 			], __METHOD__
 		);
 		$requestId = $dbw->insertId();
@@ -288,7 +288,7 @@ class UserRelationship {
 					'r_actor' => $this->user->getActorId(),
 					'r_actor_relation' => $userFrom->getActorId(),
 					'r_type' => $ur_type,
-					'r_date' => date( 'Y-m-d H:i:s' )
+					'r_date' => $dbw->timestamp( date( 'Y-m-d H:i:s' ) )
 				],
 				__METHOD__
 			);
@@ -299,7 +299,7 @@ class UserRelationship {
 					'r_actor' => $userFrom->getActorId(),
 					'r_actor_relation' => $this->user->getActorId(),
 					'r_type' => $ur_type,
-					'r_date' => date( 'Y-m-d H:i:s' )
+					'r_date' => $dbw->timestamp( date( 'Y-m-d H:i:s' ) )
 				],
 				__METHOD__
 			);

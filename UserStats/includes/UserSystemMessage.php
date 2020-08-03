@@ -41,7 +41,7 @@ class UserSystemMessage {
 				'um_actor' => $actorId,
 				'um_type' => $type,
 				'um_message' => $message,
-				'um_date' => date( 'Y-m-d H:i:s' ),
+				'um_date' => $dbw->timestamp( date( 'Y-m-d H:i:s' ) ),
 			], __METHOD__
 		);
 	}

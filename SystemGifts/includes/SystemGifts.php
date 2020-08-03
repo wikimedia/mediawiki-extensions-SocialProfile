@@ -87,7 +87,7 @@ class SystemGifts {
 								'sg_gift_id' => $row->gift_id,
 								'sg_actor' => $row2->stats_actor,
 								'sg_status' => 0,
-								'sg_date' => date( 'Y-m-d H:i:s', time() - ( 60 * 60 * 24 * 3 ) ),
+								'sg_date' => $dbw->timestamp( date( 'Y-m-d H:i:s', time() - ( 60 * 60 * 24 * 3 ) ) ),
 							],
 							__METHOD__
 						);
@@ -163,7 +163,7 @@ class SystemGifts {
 				'gift_description' => $description,
 				'gift_category' => $category,
 				'gift_threshold' => $threshold,
-				'gift_createdate' => date( 'Y-m-d H:i:s' ),
+				'gift_createdate' => $dbw->timestamp( date( 'Y-m-d H:i:s' ) ),
 			],
 			__METHOD__
 		);
