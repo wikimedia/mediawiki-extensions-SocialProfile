@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Beta16",
 			"Darth Kule"
 		]
 	},
-	"top-fans-stats-edit-count": "{{PLURAL:$1|Modifica|Modifiche}}"
+	"top-fans-points": "'''$1''' punti",
+	"top-fans-points-tag": "'''+$1''' punti",
+	"top-fans-stats-edit-count": "{{PLURAL:$1|Modifica|Modifiche}}",
+	"echo-pref-tooltip-social-level-up": "Avvisami quando avanzo a un nuovo livello."
 }

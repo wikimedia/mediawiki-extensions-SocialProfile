@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Aotake",
-			"Hosiryuhosi"
+			"Hosiryuhosi",
+			"Rxy"
 		]
 	},
 	"userwelcome-desc": "ログイン利用者に利用者ごとの情報を表示させる<code>&lt;welcomeUser&gt;</code>タグを追加する",

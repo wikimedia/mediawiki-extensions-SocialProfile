@@ -5,15 +5,18 @@
 			"Gzdavidwong",
 			"Hydra",
 			"Liangent",
+			"Liuxinyu970226",
 			"Onecountry",
 			"PhiLiP",
 			"Wrightbus",
-			"Xiaomingyan"
+			"Xiaomingyan",
+			"Yfdyh000"
 		]
 	},
 	"user-time-ago": "$1之前",
 	"user-awards-title": "奖励",
 	"user-gifts-title": "礼物",
+	"user-fanbox-title": "兴趣盒子",
 	"user-count-separator": "$2中的$1",
 	"user-view-all": "查看全部",
 	"user-upload-image": "上传图像",
@@ -29,6 +32,8 @@
 	"user-send-message": "传送讯息",
 	"user-send-gift": "送一个礼物",
 	"user-contributions": "贡献",
+	"user-stats-edits": "{{PLURAL:$1|编辑}}",
+	"user-stats-comments": "评论",
 	"user-friends-title": "朋友",
 	"user-foes-title": "仇敌",
 	"other-info-movies": "电影",
@@ -45,6 +50,8 @@
 	"custom-info-field4": "自定义4",
 	"profile-updated-personal": "更新您的个人资料",
 	"profile-not-provided": "没有提供",
+	"user-board-title": "版块",
+	"user-send-board-blast": "发送版块爆炸",
 	"user-personal-info-real-name": "真实姓名",
 	"user-personal-info-location": "位置",
 	"user-personal-info-hometown": "家乡",
@@ -107,7 +114,9 @@
 	"user-no-images": "没有上载图片",
 	"edit-profile-title": "更改您的个人资料",
 	"user-page-link": "用户页",
+	"user-social-profile-link": "社交详细信息",
 	"user-wiki-link": "Wiki使用者页面",
+	"user-board-login-message": "您必须<a href=\"$1\">登录</a>以向其他用户发送消息",
 	"removeavatar": "移除头像",
 	"givegift": "给一个礼物",
 	"viewgifts": "查看礼物",
@@ -122,5 +131,6 @@
 	"avatarlogpagetext": "这是使用者头像上载记录",
 	"user-profile-picture-log-entry": "上载了新头像",
 	"user-profile-picture-log-delete-entry": "删除了$1的头像",
-	"right-avatarremove": "移除使用者的头像"
+	"right-avatarremove": "移除使用者的头像",
+	"random-users-avatars-title": "满足社区"
 }

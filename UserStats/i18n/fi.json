@@ -72,5 +72,8 @@
 	"user-stats-report-monthly-edit-summary": "automatisoitu kuukausittainen käyttäjäraportti",
 	"user-stats-report-weekly-page-title": "Viikottainen raportti käyttäjien pisteistä ($1)",
 	"user-stats-report-monthly-page-title": "Kuukausittainen raportti käyttäjien pisteistä ($1)",
-	"user-stats-report-error-variable-not-set": "Muuttujan $wgUserStatsPointValues['points_winner_$1'] arvo LocalSettings.php-tiedostossa tulee olla suurempi kuin 0!"
+	"user-stats-report-error-variable-not-set": "Muuttujan $wgUserStatsPointValues['points_winner_$1'] arvo LocalSettings.php-tiedostossa tulee olla suurempi kuin 0!",
+	"random-user-points-weekly": "{{PLURAL:$1|yksi piste|$1 pistettä}} tällä viikolla",
+	"random-user-points-monthly": "{{PLURAL:$1|yksi piste|$1 pistettä}} tässä kuussa",
+	"random-user-about-me": "Tietoja minusta"
 }

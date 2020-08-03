@@ -7,6 +7,7 @@
 			"DoveBirkoff",
 			"Fitoschido",
 			"Imre",
+			"Indiralena",
 			"Locos epraix",
 			"Mor",
 			"Sanbec",
@@ -91,8 +92,6 @@
 	"user-recent-activity-user-message": "Enviar un mensaje a",
 	"user-recent-activity-network-update": "Ha enviado una opinión",
 	"user-recent-system-gift": "Recibido un premio",
-	"user-profile-update-notloggedin-title": "No se puede editar tu perfil sin haber iniciado sesión",
-	"user-profile-update-notloggedin-text": "No puedes editar tu perfil sin iniciar sesión.\nHaz click [[Special:UserLogin|aquí]] para iniciar sesión o click [[Special:UserLogin/signup|aquí]] para registrarte.",
 	"user-profile-update-saved": "Su perfil ha sido grabado",
 	"user-profile-edit-profile-update-saved": "El perfil del usuario se ha guardado correctamente",
 	"user-profile-update-log-section": "Sección cambiada",
@@ -191,5 +190,6 @@
 	"user-profile-picture-log-entry": "nuevo avatar cargado",
 	"user-profile-picture-log-delete-entry": "borrado avatar de $1",
 	"right-avatarremove": "Quitar los avatares del usuario",
-	"right-editothersprofiles": "Actualizar los perfiles sociales de otros usuarios"
+	"right-editothersprofiles": "Actualizar los perfiles sociales de otros usuarios",
+	"random-users-avatars-title": "Conocer la comunidad"
 }

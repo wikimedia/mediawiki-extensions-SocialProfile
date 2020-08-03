@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Eduardo Addad de Oliveira",
 			"Eduardo.mps",
 			"Giro720"
 		]
 	},
+	"userstats-desc": "Permite atribuir pontos aos usuários com base no tipo de ações realizadas",
 	"user-stats-alltime-title": "Mais pontos de todo o tempo",
 	"user-stats-weekly-title": "Mais pontos esta semana",
 	"user-stats-monthly-title": "Mais pontos deste mês",
@@ -15,6 +17,7 @@
 	"top-fans-weekly-points-link": "Pontos esta semana",
 	"top-fans-monthly-points-link": "Pontos este mês",
 	"top-fans-points": "'''$1''' pontos",
+	"top-fans-points-tag": "'''+$1''' pontos",
 	"top-fans-by-category-title-edit-count": "Top global de edições",
 	"top-fans-by-category-title-friends-count": "Top global de amigos",
 	"top-fans-by-category-title-foe-count": "Top global de inimigos",
@@ -48,7 +51,32 @@
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|Presente recebido|Presentes recebidos}}",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Presente enviado|Presentes enviados}}",
 	"right-updatepoints": "Atualizar contadores de edição",
+	"action-updatepoints": "atualizar contagens de edição",
+	"action-generatetopusersreport": "gerar relatórios dos principais usuários",
 	"level-advanced-to": "Avançou para o nível <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "Você agora é um \"$1\" em {{SITENAME}}!",
-	"level-advance-body": "Oi $1:\n\nVocê agora é um \"$2\" em {{SITENAME}}!\n\nParabéns,\n\nO Time de {{SITENAME}}\n\n---\nEi, quer parar de receber e-mails de nós?\n\nClique $3\ne altere suas preferências para desabilitar e-mails de notificação"
+	"level-advance-body": "Oi $1:\n\nVocê agora é um \"$2\" em {{SITENAME}}!\n\nParabéns,\n\nO Time de {{SITENAME}}\n\n---\nEi, quer parar de receber e-mails de nós?\n\nClique $3\ne altere suas preferências para desabilitar e-mails de notificação",
+	"echo-pref-tooltip-social-level-up": "Notifique-me quando eu avançar para um novo nível.",
+	"notification-social-level-up": "Você subiu de nível \"$1\"!",
+	"updateeditcounts": "Atualizar contagens de edição",
+	"updateeditcounts-confirm": "Tem certeza de que deseja atualizar todas as contagens de edição dos usuários?",
+	"updateeditcounts-updated": "Estatísticas atualizadas para '''$1''' {{PLURAL:$1|usuário|usuários}}",
+	"updateeditcounts-updating": "Atualizando $1 com $2 {{PLURAL:$2|edição|edições}}",
+	"generatetopusersreport": "Gerar relatórios dos usuários principais",
+	"generatetopusersreport-confirm-weekly": "Tem certeza de que deseja gerar o relatório semanal dos principais usuários?",
+	"generatetopusersreport-confirm-monthly": "Tem certeza de que deseja gerar o relatório mensal dos principais usuários?",
+	"user-stats-weekly-winners": "{{PLURAL:$1|Vencedor|Vencedores}} da semana",
+	"user-stats-monthly-winners": "{{PLURAL:$1|Vencedor|Vencedores}} do mês",
+	"user-stats-full-top": "Os $1 primeiros",
+	"user-stats-report-row": "($1) [[User:$2|$2]] - '''$3''' {{PLURAL:$3|ponto|pontos}}!",
+	"user-stats-report-points": "'''$1''' {{PLURAL:$1|ponto|pontos}}!",
+	"user-stats-report-generation-note": "esta página foi gerada automaticamente",
+	"user-stats-report-weekly-edit-summary": "relatório de usuários semanal automatizado",
+	"user-stats-report-monthly-edit-summary": "relatório de usuários mensal automatizado",
+	"user-stats-report-weekly-page-title": "Relatório semanal de pontos dos usuários ($1)",
+	"user-stats-report-monthly-page-title": "Relatório mensal de pontos dos usuários ($1)",
+	"user-stats-report-error-variable-not-set": "A variável $wgUserStatsPointValues['points_winner_$1'] tem de ter um valor maior do que 0 no arquivo LocalSettings.php!",
+	"random-user-points-weekly": "{{PLURAL:$1|um ponto|$1 pontos}} esta semana",
+	"random-user-points-monthly": "{{PLURAL:$1|um ponto|$1 pontos}} este mês",
+	"random-user-about-me": "Sobre mim"
 }

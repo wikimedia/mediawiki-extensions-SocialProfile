@@ -82,8 +82,6 @@
 	"user-recent-activity-user-message": "Inivava un message a",
 	"user-recent-activity-network-update": "Ha publicate un pensamento",
 	"user-recent-system-gift": "Recipeva un premio",
-	"user-profile-update-notloggedin-title": "Non pote modificar tu profilo sin session aperte",
-	"user-profile-update-notloggedin-text": "Tu debe authenticar te pro poter modificar tu profilo.\nClicca [[Special:UserLogin|hic]] pro aperir un session o clicca [[Special:UserLogin/signup|hic]] pro crear un conto.",
 	"user-profile-update-saved": "Tu profilo ha essite salveguardate",
 	"user-profile-edit-profile-update-saved": "Le profilo del usator ha essite salveguardate",
 	"user-profile-update-log-section": "cambiava section",
@@ -182,5 +180,6 @@
 	"user-profile-picture-log-entry": "incargava un nove avatar",
 	"user-profile-picture-log-delete-entry": "deleva le avatar de $1",
 	"right-avatarremove": "Eliminar avatares de usatores",
-	"right-editothersprofiles": "Actualisar le profilos social de altere usatores"
+	"right-editothersprofiles": "Actualisar le profilos social de altere usatores",
+	"random-users-avatars-title": "Cognosce le communitate"
 }

@@ -1,12 +1,26 @@
 {
 	"@metadata": {
 		"authors": [
-			"Joseph"
+			"Joseph",
+			"MuratTheTurkish"
 		]
 	},
 	"useractivity": "Arkadaşların etkinliği",
+	"useractivity-desc": "Kullanıcıların sosyal etkinliğini gösterir",
 	"useractivity-award": "$1 bir ödül aldı",
 	"useractivity-all": "Hepsini gör",
+	"useractivity-edit": "$1 {{PLURAL:$4|sayfayı düzenledi|aşağıdaki sayfaları düzenledi:}} $3",
+	"useractivity-foe": "$1 {{PLURAL:$2|şimdi}} $3 ile düşman",
+	"useractivity-filter": "Filtre",
+	"useractivity-friend": "$1 {{PLURAL:$2|şimdi}} $3 ile arkadaş",
+	"useractivity-gift": "$1 kullanıcısı $2 hediye aldı",
+	"useractivity-group-edit": "{{PLURAL:$1|$1 düzenleme|$1 düzenleme}}",
+	"useractivity-group-comment": "{{PLURAL:$1|$1 yorum|$1 yorum}}",
+	"useractivity-group-user_message": "{{PLURAL:$1|bir ileti|$1 ileti}}",
+	"useractivity-group-friend": "{{PLURAL:$1|bir arkadaş|$1 arkadaş}}",
+	"useractivity-network-thought": "<b><a href=\"$4\">$2</a></b>, $3 ağ için bir düşüncesi var",
 	"useractivity-siteactivity": "Site etkinliği",
-	"useractivity-title": "Arkadaşların etkinliği"
+	"useractivity-title": "Arkadaşların etkinliği",
+	"useractivity-user_message": "$1, $3 kullanıcıya bir mesaj {{PLURAL:$4|gönderdi}}",
+	"useractivity-comment": "$1 {{PLURAL:$4|aşağıdaki sayfaya yorum yaptı:|aşağıdaki sayfalara yorum yaptı:}} $3"
 }

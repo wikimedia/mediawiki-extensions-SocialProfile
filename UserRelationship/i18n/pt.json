@@ -1,19 +1,19 @@
 {
 	"@metadata": {
 		"authors": [
-			"555",
 			"Hamilton Abreu",
 			"Helder.wiki",
 			"Lijealso",
 			"Malafaya",
 			"Vanessa Sabino",
-			"Waldir"
+			"Vitorvicentevalente",
+			"Waldir",
+			555
 		]
 	},
 	"viewrelationships": "Ver relacionamentos",
 	"viewrelationshiprequests": "Ver pedidos de relacionamento",
 	"ur-already-submitted": "O seu pedido foi enviado",
-	"ur-error-page-title": "Ui!",
 	"ur-error-title": "Ui, enganou-se no caminho!",
 	"ur-error-message-no-user": "Não podemos processar o seu pedido, porque não existe um utilizador com esse nome.",
 	"ur-your-profile": "O seu perfil",

@@ -8,8 +8,6 @@
 			"WikiPhoenix"
 		]
 	},
-	"boardblastlogintitle": "Du måste vara inloggad för att sända meddelanden",
-	"boardblastlogintext": "För att kunna skicka meddelanden måste du vara [[Special:UserLogin|inloggad]].",
 	"messagesenttitle": "Sända meddelanden",
 	"boardblasttitle": "Sänd meddelande",
 	"boardblaststep1": "Steg 1 - Skriv ditt meddelande",

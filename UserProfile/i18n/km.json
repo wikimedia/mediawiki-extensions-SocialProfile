@@ -71,8 +71,6 @@
 	"user-recent-activity-foe": "ឥឡូវនេះ ជា​បច្ចាមិត្ត​ជាមួយ",
 	"user-recent-activity-user-message": "បាន​ផ្ញើ​សារ​ទៅកាន់",
 	"user-recent-system-gift": "បាន​ទទួល​រង្វាន់​មួយ",
-	"user-profile-update-notloggedin-title": "មិន​អាច​កែប្រែ​ទម្រង់​របស់​អ្នក ដោយ​មិន​បាន​កត់ឈ្មោះ​ចូល​ឡើយ",
-	"user-profile-update-notloggedin-text": "អ្នក​មិន​អាច​កែប្រែ​ប្រវត្តិរូប​របស់​អ្នក ដោយ​មិន​បានកត់ឈ្មោះ​ចូល​បាន​ទេ​។ សូម​ចុច [[Special:UserLogin|ទីនេះ]]​ ដើម្បី​កត់ឈ្មោះចូល ឬ ចុច [[Special:UserLogin/signup|ទីនេះ]]​ ដើម្បី​ចុះឈ្មោះ​ថ្មី។",
 	"user-profile-update-saved": "ប្រវត្តិរូបរបស់អ្នកត្រូវបានរក្សាទុករួចរាល់ហើយ",
 	"user-profile-default-country": "សហរដ្ឋអាមេរិក",
 	"user-profile-points": "$1 {{PLURAL:$1|ពិន្ទុ|ពិន្ទុ}}",
@@ -160,5 +158,6 @@
 	"avatarlogpagetext": "នេះ​គឺជា​កំណត់ហេតុ​នៃ​ការ​ផ្ទុកឡើង​អវតារ​អ្នកប្រើប្រាស់",
 	"user-profile-picture-log-entry": "ផ្ទុក​អវតារ​ថ្មី​ឡើង",
 	"user-profile-picture-log-delete-entry": "បាន​លុប​អវតារ​របស់ $1",
-	"right-avatarremove": "លុបអវតាររបស់អ្នកប្រើប្រាស់"
+	"right-avatarremove": "លុបអវតាររបស់អ្នកប្រើប្រាស់",
+	"random-users-avatars-title": "ជួបជាមួយនឹងសហគមន៍"
 }

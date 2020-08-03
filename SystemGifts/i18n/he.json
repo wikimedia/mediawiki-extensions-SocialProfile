@@ -21,7 +21,7 @@
 	"ga-error-title": "אופס, טעות בפנייה!",
 	"ga-file-instructions": "על תמונתכם להיות מסוג jpeg, מסוג png או מסוג gif (לא מונפש), ועליה להיות קטנה מ־100 קילובייט.",
 	"ga-gift": "מתנה",
-	"ga-gift-given-count": "מתנה זו הוענקה {{PLURAL:$1|פעם אחת|$1 פעמים|פעמיים}}",
+	"ga-gift-given-count": "מתנה זו הוענקה {{PLURAL:$1|פעם אחת|פעמיים|$1 פעמים}}",
 	"ga-gift-title": "ה־\"$2\" של $1",
 	"ga-giftdesc": "תיאור המתנה",
 	"ga-giftimage": "תמונת המתנה",

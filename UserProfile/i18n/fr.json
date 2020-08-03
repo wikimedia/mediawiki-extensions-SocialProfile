@@ -8,6 +8,7 @@
 			"IAlex",
 			"McDutchie",
 			"PieRRoMaN",
+			"Urhixidur",
 			"Verdy p"
 		]
 	},
@@ -89,8 +90,6 @@
 	"user-recent-activity-user-message": "A envoyé un message à",
 	"user-recent-activity-network-update": "A posté une pensée",
 	"user-recent-system-gift": "A reçu une récompense",
-	"user-profile-update-notloggedin-title": "Impossible de modifier votre profil sans être connecté",
-	"user-profile-update-notloggedin-text": "Vous ne pouvez pas modifier votre profil si vous n’êtes pas connecté.\nCliquez [[Special:UserLogin|ici]] pour vous connecter ou alors [[Special:UserLogin/signup|là]] pour vous enregistrer.",
 	"user-profile-update-saved": "Votre profil a été sauvegardé",
 	"user-profile-edit-profile-update-saved": "Le profil de l'utilisateur a été sauvegardé avec succès",
 	"user-profile-update-log-section": "section changée",
@@ -164,6 +163,7 @@
 	"user-profile-picture-picsize": "Votre image doit être au format jpeg, png ou gif, et sa taille ne doit pas dépasser 100ko.",
 	"user-profile-goback": "Revenir en arrière",
 	"user-profile-userlevels-link": "Niveaux de l’utilisateur",
+	"user-profile-create-threshold-only-confirmed-email": "et une addresse courriel confirmée",
 	"user-profile-privacy-status-privacy-public": "public",
 	"user-profile-privacy-status-privacy-hidden": "caché",
 	"user-profile-privacy-status-privacy-friends": "amis",
@@ -193,6 +193,6 @@
 	"user-profile-picture-log-entry": "a téléversé un nouvel avatar",
 	"user-profile-picture-log-delete-entry": "a supprimé l’avatar de $1",
 	"right-avatarremove": "Supprimer les avatars d’un utilisateur",
-	"user-profile-create-threshold-only-confirmed-email": "et une addresse courriel confirmée",
-	"right-editothersprofiles": "Mettre à jour le profil social d'autres utilisateurs"
+	"right-editothersprofiles": "Mettre à jour le profil social d'autres utilisateurs",
+	"random-users-avatars-title": "Faites connaissance avec la communauté"
 }

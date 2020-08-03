@@ -78,8 +78,6 @@
 	"user-recent-activity-user-message": "ได้ส่งข้อความไปยัง",
 	"user-recent-activity-network-update": "ได้ให้ความคิดแก่",
 	"user-recent-system-gift": "ได้รับรางวัล",
-	"user-profile-update-notloggedin-title": "ไม่สามารถแก้ไขโปรไฟล์ของคุณได้ก่อนที่จะลงชื่อเข้าใช้",
-	"user-profile-update-notloggedin-text": "ไม่สามารถแก้ไขโปรไฟล์ของคุณได้ก่อนที่จะลงชื่อเข้าใช้\n<br />คลิก[[Special:UserLogin|ที่นี่]]เพื่อลงชื่อเข้าใช้ หรือคลิก[[Special:UserLogin/signup|ที่นี่]]เพื่อลงทะเบียน",
 	"user-profile-update-saved": "โปรไฟล์ของคุณได้ถูกบันทึกแล้ว",
 	"user-profile-update-log-section": "ส่วนที่เปลี่ยนไป",
 	"user-profile-default-country": "สหรัฐอเมริกา",

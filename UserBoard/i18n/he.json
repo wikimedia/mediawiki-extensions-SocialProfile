@@ -6,8 +6,6 @@
 			"YaronSh"
 		]
 	},
-	"boardblastlogintitle": "עליכם להיכנס לחשבון כדי לשלוח מסרים המוניים",
-	"boardblastlogintext": "כדי לשלוח מסרים המוניים, עליכם [[Special:UserLogin|להיכנס לחשבון]].",
 	"messagesenttitle": "ההודעות נשלחו",
 	"boardblasttitle": "שליחת מסר המוני",
 	"boardblaststep1": "שלב 1 – כתבו את הודעתכם",
@@ -44,8 +42,8 @@
 	"userboard_loggedout": "עליכם [[Special:UserLogin|להיכנס לחשבון]] כדי לשלוח הודעות למשתמשים אחרים.",
 	"userboard_showingmessages": "הצגת {{PLURAL:$4|הודעה $3|הודעות $2-$3}} מתוך {{PLURAL:$1|הודעה אחת|$1 הודעות}}",
 	"right-userboard-delete": "מחיקת הודעות לוח שכתבו אחרים",
-	"userboard-time-days": "{{PLURAL:$1|יום|$1 ימים|יומיים}}",
-	"userboard-time-hours": "{{PLURAL:$1|שעה|$1 שעות|שעתיים}}",
+	"userboard-time-days": "{{PLURAL:$1|יום|יומיים|$1 ימים}}",
+	"userboard-time-hours": "{{PLURAL:$1|שעה|שעתיים|$1 שעות}}",
 	"userboard-time-minutes": "{{PLURAL:$1|דקה|$1 דקות}}",
 	"userboard-time-seconds": "{{PLURAL:$1|שנייה|$1 שניות}}",
 	"message_received_subject": "$1 כתב בלוח שלך ב{{grammar:תחילית|{{SITENAME}}}}",

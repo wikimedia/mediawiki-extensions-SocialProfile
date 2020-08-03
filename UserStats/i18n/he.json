@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
+			"Guycn2",
 			"Rotemliss",
 			"YaronSh"
 		]
@@ -49,6 +50,7 @@
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|התקבלה מתנה|התקבלו מתנות}}",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|נשלחה מתנה|נשלחו מתנות}}",
 	"right-updatepoints": "עדכון מספרי העריכות",
+	"right-generatetopusersreport": "קבלת דיווחים של משתמשים",
 	"level-advanced-to": "התקדמות לשלב <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "כעת הינכם  \"$1\" ב{{grammar:תחילית|{{SITENAME}}}}!",
 	"level-advance-body": "שלום $1:\n\nכעת הנכם \"$2\" ב{{grammar:תחילית|{{SITENAME}}}}!\n\nברכותינו,\n\nצוות {{SITENAME}}\n\n---\nמעוניינים להפסיק לקבל מאיתנו הודעות?\n\nלחצו $3\nושנו את הגדרותיכם כדי לבטל התראות בדואר אלקטרוני."

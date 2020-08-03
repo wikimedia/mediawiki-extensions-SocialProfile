@@ -78,8 +78,6 @@
 	"user-recent-activity-user-message": "Mandà un mëssagi a",
 	"user-recent-activity-network-update": "A l'ha spedì un pensé",
 	"user-recent-system-gift": "Arseivù un premi",
-	"user-profile-update-notloggedin-title": "A peul pa modifiché sò profil sensa esse intrà ant ël sistema",
-	"user-profile-update-notloggedin-text": "A peule pa modifiché sò profil sensa esse intrà ant ël sistema.\nSgnaché [[Special:UserLogin|ambelessì]] për intré ant ël sistema o sgnaché [[Special:UserLogin/signup|ambelessì]] për argistresse.",
 	"user-profile-update-saved": "Tò profil a l'é stàit salvà.",
 	"user-profile-edit-profile-update-saved": "Ël profil ëd l'utent a l'é stàit salvà për da bin",
 	"user-profile-update-log-section": "session cangià",
@@ -175,5 +173,6 @@
 	"user-profile-picture-log-entry": "carià avatar neuv",
 	"user-profile-picture-log-delete-entry": "a l'ha scancelà l'avatar ëd $1",
 	"right-avatarremove": "Gava avatar ëd l'utent",
-	"right-editothersprofiles": "Modifiché ij profij sociaj d'autr utent"
+	"right-editothersprofiles": "Modifiché ij profij sociaj d'autr utent",
+	"random-users-avatars-title": "Ancontra la comunità"
 }

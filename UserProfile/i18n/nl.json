@@ -86,8 +86,6 @@
 	"user-recent-activity-user-message": "Bericht verzonden aan",
 	"user-recent-activity-network-update": "Heeft een bericht gepost",
 	"user-recent-system-gift": "Heeft een ster ontvangen",
-	"user-profile-update-notloggedin-title": "U kunt uw profiel niet bewerken als u niet aangemeld bent",
-	"user-profile-update-notloggedin-text": "U kunt uw profiel niet bewerken als u niet aangemeld bent.\nKlik [[Special:UserLogin|hier]] om u aan te melden of klik [[Special:UserLogin/signup|hier]] om een nieuwe gebruiker aan te maken.",
 	"user-profile-update-saved": "Uw profiel is opgeslagen",
 	"user-profile-edit-profile-update-saved": "Het gebruikersprofiel is opgeslagen",
 	"user-profile-update-log-section": "onderdeel gewijzigd",
@@ -186,5 +184,6 @@
 	"user-profile-picture-log-entry": "nieuwe avatar uploaden",
 	"user-profile-picture-log-delete-entry": "heeft de avatar van $1 verwijderd",
 	"right-avatarremove": "Avatars van gebruikers verwijderen",
-	"right-editothersprofiles": "Sociale profielen van andere gebruikers bewerken"
+	"right-editothersprofiles": "Sociale profielen van andere gebruikers bewerken",
+	"random-users-avatars-title": "Ontmoet de gemeenschap"
 }

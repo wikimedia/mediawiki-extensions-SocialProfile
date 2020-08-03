@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gazeb"
+			"Gazeb",
+			"Tkalyn"
 		]
 	},
+	"user-contributions": "Приспівкы",
 	"other-info-title": "Іншы інформації",
 	"user-friends-title": "Приятелї",
 	"user-foes-title": "Неприятелї",
@@ -49,8 +51,6 @@
 	"user-recent-activity-user-message": "Послав повідомлїня",
 	"user-recent-activity-network-update": "Послав думку",
 	"user-recent-system-gift": "Дістав оцінїня",
-	"user-profile-update-notloggedin-title": "Не можете едітовати ваш профіл без того, жебы сьте ся приголосів",
-	"user-profile-update-notloggedin-text": "Не можете едітовати ваш профіл без того, жебы сьте быв приголошеный.\nКликните [[Special:UserLogin|гев]] про приголошіня або кликните [[Special:UserLogin/signup|гев]] про реґістрованя.",
 	"user-profile-update-saved": "Ваш профіл быв уложеный",
 	"user-profile-update-log-section": "змінив секцію",
 	"user-profile-default-country": "Споєны штаты",

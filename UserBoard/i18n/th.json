@@ -5,8 +5,6 @@
 			"Woraponboonkerd"
 		]
 	},
-	"boardblastlogintitle": "คุณต้องลงชื่อเข้าใช้ก่อนที่จะกระจายข้อความ",
-	"boardblastlogintext": "ในการที่จะกระจายข้อความนั้น\n<br />คุณต้อง[[Special:UserLogin|ได้ลงชื่อเข้าใช้แล้ว]]",
 	"messagesenttitle": "ข้อความได้ถูกส่งแล้ว",
 	"boardblasttitle": "กระจายข้อความ",
 	"boardblaststep1": "ขั้นตอนที่ 1 - เขียนข้อความ",

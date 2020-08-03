@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"GreenZeb"
+			"GreenZeb",
+			"Xil"
 		]
 	},
 	"editprofile": "Rediģēt citu lietotāju profilus",
@@ -101,5 +102,6 @@
 	"user-wiki-link": "Vikipēdijas lietotājlapa",
 	"user-type-toggle-old": "Izmantot Vikipēdijas lietotājlapu",
 	"user-type-toggle-new": "Izmantot sociālo lietotājlapu",
-	"user-board-login-message": "Jums ir jābūt [[Special:UserLogin|iegājušam]], lai sūtītu ziņojumus citiem lietotājiem"
+	"user-board-login-message": "Jums ir jābūt [[Special:UserLogin|iegājušam]], lai sūtītu ziņojumus citiem lietotājiem",
+	"random-users-avatars-title": "Iepazīsti kopienu"
 }

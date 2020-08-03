@@ -77,8 +77,6 @@
 	"user-recent-activity-user-message": "Pósła powěsć",
 	"user-recent-activity-network-update": "Je mysličku wótpósłał",
 	"user-recent-system-gift": "Je myto dóstał",
-	"user-profile-update-notloggedin-title": "Njeje móžno twój profil wobdźěłać, dokelž njejsy přizjewjeny",
-	"user-profile-update-notloggedin-text": "Njemóžeš swój profil wobdźěłać, dokelž njejsy přizjewjeny.\nKlikń [[Special:UserLogin|sem]], zo by so přizjewił abo klikń [[Special:UserLogin/signup|sem]], zo by so registrował.",
 	"user-profile-update-saved": "Twój profil bu składowany.",
 	"user-profile-edit-profile-update-saved": "Profil wužiwarja je so wuspěšnje składowała.",
 	"user-profile-update-log-section": "je wotrězk změnił",
@@ -174,5 +172,6 @@
 	"user-profile-picture-log-entry": "nowy awatar nahraty",
 	"user-profile-picture-log-delete-entry": "awatar wužiwarja $1 wušmórnjeny",
 	"right-avatarremove": "Awatary wužiwarja wotstronić",
-	"right-editothersprofiles": "Socialne profile druhich wužiwarjow aktualizować"
+	"right-editothersprofiles": "Socialne profile druhich wužiwarjow aktualizować",
+	"random-users-avatars-title": "Zhromadźenstwo zetkać"
 }

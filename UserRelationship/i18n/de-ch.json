@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Geitost"
+		]
+	},
+	"ur-add-sent-message-foe": "Deine Feindschaftsanfrage wurde an $1 zum Bestätigen weitergereicht. Du wirst ein E-Mail bekommen, sobald $1 deine Anfrage bestätigt.",
+	"ur-add-sent-message-friend": "Deine Freundschaftsanfrage wurde an $1 zum Bestätigen weitergereicht. Du wirst ein E-Mail bekommen, sobald $1 deine Anfrage bestätigt."
+}

@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Умар"
+		]
+	},
+	"g-add-message": "ТӀетоха хаам",
+	"g-choose-file": "Харжа файл:",
+	"g-current-image": "Карара сурт",
+	"g-give-all-message-title": "ТӀетоха хаам",
+	"g-remove": "ДӀаяккха",
+	"g-remove-title": "ДӀаяккха «$1» ?"
+}

@@ -3,13 +3,14 @@
 		"authors": [
 			"Ferrer",
 			"Rubin",
+			"Rubin16",
 			"Александр Сигачёв"
 		]
 	},
 	"userwelcome-desc": "Добавляет тег <code>&lt;welcomeUser&gt;</code> для отображения зарегистрированным участникам социальной информации",
 	"mp-userlevels-link": "Уровни участников",
 	"mp-welcome-upload": "Загрузить",
-	"mp-welcome-points": "$1 {{PLURAL:$1|очко|очков|очков}}",
+	"mp-welcome-points": "!!FUZZY!!$1 {{PLURAL:$1|очко|очков|очков}}",
 	"mp-welcome-needed-points": "Для продвижения на [[$1|'''$2''']] требуется ещё ''$3'' {{PLURAL:$3|очко|очка|очков|}}!",
 	"mp-welcome-logged-in": "Привет, $1",
 	"mp-requests-title": "Запросы",

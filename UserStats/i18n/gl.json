@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Elisardojm",
 			"Toliño"
 		]
 	},
@@ -64,5 +65,6 @@
 	"user-stats-report-monthly-edit-summary": "informe de usuarios mensual automático",
 	"user-stats-report-weekly-page-title": "Informe semanal de puntos dos usuarios ($1)",
 	"user-stats-report-monthly-page-title": "Informe mensual de puntos dos usuarios ($1)",
-	"user-stats-report-error-variable-not-set": "A variable $wgUserStatsPointValues['points_winner_$1'] debe ter un valor maior que 0 en LocalSettings.php!"
+	"user-stats-report-error-variable-not-set": "A variable $wgUserStatsPointValues['points_winner_$1'] debe ter un valor maior que 0 en LocalSettings.php!",
+	"random-user-about-me": "Acerca de min"
 }

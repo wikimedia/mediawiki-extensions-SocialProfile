@@ -78,8 +78,6 @@
 	"user-recent-activity-user-message": "Message geschéckt un",
 	"user-recent-activity-network-update": "Huet eng Iwwerleeung verëfentlecht",
 	"user-recent-system-gift": "Huet e Präis kritt",
-	"user-profile-update-notloggedin-title": "Dir kënnt äre Profil net änneren wann dir net ageloggt sidd",
-	"user-profile-update-notloggedin-text": "Dir kënnt Äre Profil net änneren wann dir net ageloggt sidd.\nKlickt [[Special:UserLogin|hei]] fir Iech anzeloggen oder klickt [[Special:UserLogin/signup|hei]] fir Iech unzemellen.",
 	"user-profile-update-saved": "Äre Profil gouf ofgespäichert",
 	"user-profile-edit-profile-update-saved": "De Benotzerprofil gouf gespäichert",
 	"user-profile-update-log-section": "Abschnitt änneren",
@@ -173,5 +171,6 @@
 	"user-profile-picture-log-entry": "huet ee neien Avatar eropgelueden",
 	"user-profile-picture-log-delete-entry": "huet dem $1 säin Avatar geläscht",
 	"right-avatarremove": "Benotzeravataren ewechhuelen",
-	"right-editothersprofiles": "Anere Benotzer hir sozial Profiler aktualiséieren"
+	"right-editothersprofiles": "Anere Benotzer hir sozial Profiler aktualiséieren",
+	"random-users-avatars-title": "D'Gemeinschaft treffen"
 }

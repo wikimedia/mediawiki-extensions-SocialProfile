@@ -1,14 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
+			"BadDog",
 			"Rancher",
 			"Sasa Stefanovic",
 			"Жељко Тодоровић",
 			"Михајло Анђелковић"
 		]
 	},
+	"userrelationship-desc": "Омогучава слање захтева за пријатељство и непријатељство",
 	"ur-already-submitted": "Ваш захтев је послат",
-	"ur-error-page-title": "Упс!",
 	"ur-your-profile": "Ваш профил",
 	"ur-add-friend": "Додај као пријатеља",
 	"ur-add-foe": "Додај као непријатеља",
@@ -16,9 +17,9 @@
 	"ur-remove-relationship-friend": "Обриши као пријатеља",
 	"ur-remove-relationship-foe": "Обриши као непријатеља",
 	"ur-give-gift": "Пошаљи поклон",
-	"ur-remove-relationship-title-foe": "Да ли желите да обришете $1 са Вашег списка непријатеља?",
+	"ur-remove-relationship-title-foe": "Желите ли да избришете корисника $1 са списка непријатеља?",
 	"ur-remove-relationship-title-confirm-foe": "Обрисали сте $1 са Вашег списка непријатеља",
-	"ur-remove-relationship-title-friend": "Да ли желите да обришете $1 са Вашег списка пријатеља?",
+	"ur-remove-relationship-title-friend": "Желите ли да уклоните $1 са списка пријатеља?",
 	"ur-remove-relationship-title-confirm-friend": "Обрисали сте $1 са Вашег списка пријатеља",
 	"ur-remove-relationship-message-foe": "Затражили сте да се $1 обрише са Вашег списка непријатеља, притисните \"$2\" да бисте то потврдили.",
 	"ur-remove-relationship-message-confirm-foe": "Успешно сте обрисали $1 са Вашег списка непријатеља.",
@@ -31,8 +32,8 @@
 	"ur-remove-error-not-loggedin-foe": "Морате бити улоговани да бисте уклонили некога са Вашег списка непријатеља.",
 	"ur-remove-error-not-loggedin-friend": "Морате бити улоговани да бисте некога обрисали са списка пријатеља.",
 	"ur-remove": "Уклони",
-	"ur-add-title-foe": "Да ли желите да означите $1 као Вашег непријатеља?",
-	"ur-add-title-friend": "Да ли желите да означите $1 као Вашег пријатеља?",
+	"ur-add-title-foe": "Желите ли да додате корисника $1 као Вашег непријатеља?",
+	"ur-add-title-friend": "Желите ли да додате корисника $1 на списак пријатеља?",
 	"ur-add-button-foe": "Означи као непријатеља",
 	"ur-add-button-friend": "Означи као пријатеља",
 	"ur-add-error-message-no-user": "Корисник кога покушавате да означите не постоји.",
@@ -47,10 +48,17 @@
 	"ur-requests-message-friend": "[[User:$1|$1]] жели да буде Ваш пријатељ.",
 	"ur-accept": "Прихвати",
 	"ur-reject": "Одбаци",
+	"ur-no-requests-message": "Немате захтеве за пријатељство или непријатељство.",
 	"ur-requests-added-message-foe": "$1 је означен као Ваш непријатељ.",
 	"ur-requests-added-message-friend": "$1 је означен као Ваш пријатељ.",
 	"ur-requests-reject-message-friend": "Нисте прихватили $1 као пријатеља.",
 	"ur-requests-reject-message-foe": "Нисте прихватили $1 као непријатеља.",
 	"ur-title-foe": "Списак непријатеља за $1",
-	"ur-title-friend": "Списак пријатеља за $1"
+	"ur-title-friend": "Списак пријатеља за $1",
+	"echo-pref-tooltip-social-rel": "Обавештавај ме када ми неко пошаље захтев за пријатељство или непријатељство",
+	"echo-show-social-rel-add-link": "(Захтев за пријатељство/непријатељство)",
+	"notification-social-rel-add-friend-message": "$1 жели да Вам буде пријатељ.<br /><br />''$2''",
+	"notification-social-rel-accept-friend": "Постали сте пријатељи с корисником $1.",
+	"notification-social-rel-accept-foe": "Постали сте непријатељи с корисником $1.",
+	"notification-social-rel-accept-email-subject": "$1 је прихватио/-ла Ваш захтев за пријатељство."
 }

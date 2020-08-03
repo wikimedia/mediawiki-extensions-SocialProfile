@@ -82,8 +82,6 @@
 	"user-recent-activity-user-message": "Enviou unha mensaxe a",
 	"user-recent-activity-network-update": "Fixo un comentario",
 	"user-recent-system-gift": "Recibido un premio",
-	"user-profile-update-notloggedin-title": "Non pode editar o seu perfil sen ter accedido ao sistema",
-	"user-profile-update-notloggedin-text": "Non pode editar o seu perfil sen ter accedido ao sistema.  Faga clic [[Special:UserLogin|aquí]] para acceder ou faga clic [[Special:UserLogin/signup|aquí]] para rexistrarse.",
 	"user-profile-update-saved": "Gardouse o seu perfil",
 	"user-profile-edit-profile-update-saved": "O perfil do usuario gardouse correctamente",
 	"user-profile-update-log-section": "cambiou a sección",
@@ -182,5 +180,6 @@
 	"user-profile-picture-log-entry": "cargou un novo avatar",
 	"user-profile-picture-log-delete-entry": "borrou o avatar de $1",
 	"right-avatarremove": "Eliminar os avatares dun usuario",
-	"right-editothersprofiles": "Actualizar os perfís sociais doutros usuarios"
+	"right-editothersprofiles": "Actualizar os perfís sociais doutros usuarios",
+	"random-users-avatars-title": "Coñeza a comunidade"
 }

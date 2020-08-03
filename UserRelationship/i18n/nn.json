@@ -2,13 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Harald Khan",
-			"Jon Harald Søby"
+			"Jon Harald Søby",
+			"Njardarlogar"
 		]
 	},
 	"viewrelationships": "Syn forhold",
 	"viewrelationshiprequests": "Syn førespurnader om forhold",
 	"ur-already-submitted": "Førespurnaden din har blitt sendt",
-	"ur-error-page-title": "Ops!",
 	"ur-error-title": "Ops, du svingte feil!",
 	"ur-error-message-no-user": "Me kan ikkje fullføra førespurnaden din etter di det ikkje finst ein brukar med namnet du oppgav.",
 	"ur-your-profile": "Profilen din",

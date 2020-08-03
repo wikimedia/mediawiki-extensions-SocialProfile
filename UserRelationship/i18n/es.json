@@ -7,6 +7,7 @@
 			"Feten7",
 			"Fitoschido",
 			"Imre",
+			"MarcoAurelio",
 			"Mor",
 			"Sanbec"
 		]
@@ -14,7 +15,6 @@
 	"viewrelationships": "Ver relación",
 	"viewrelationshiprequests": "Ver solicitudes de relaciones",
 	"ur-already-submitted": "Su solicitud ha sido enviada",
-	"ur-error-page-title": "Woops!",
 	"ur-error-title": "Whoops, usted tomó un turno equivocado!",
 	"ur-error-message-no-user": "No podemos completar su solicitud, porque ningun usuario con este nombre existe.",
 	"ur-your-profile": "Su perfil",

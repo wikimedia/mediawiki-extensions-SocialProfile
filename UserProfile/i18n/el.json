@@ -168,5 +168,6 @@
 	"avatarlogpagetext": "Αυτή είναι μια καταγραφή φορτώσεων εικόνων χρηστών",
 	"user-profile-picture-log-entry": "φορτώθηκε νέα εικόνα χρήστη",
 	"user-profile-picture-log-delete-entry": "διαγράφηκε το άβαταρ του χρήστη $1",
-	"right-avatarremove": "Αφαίρεση της εικόνας του χρήστη"
+	"right-avatarremove": "Αφαίρεση της εικόνας του χρήστη",
+	"random-users-avatars-title": "Γνωρίστε την κοινότητα"
 }

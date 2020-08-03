@@ -54,6 +54,7 @@
 	"level-advanced-to": "is gepromoveerd tot niveau tot niveau <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "U bent nu \"$1\" op {{SITENAME}}",
 	"level-advance-body": "Hallo $1.\n\nU bent nu \"$2\" op {{SITENAME}}\n\nVan harte gefeliciteerd.\n\nHet team van {{SITENAME}}\n\n---\nWilt u niet langer e-mails van ons ontvangen?\n\nKlik $3\nen wijzig uw instellingen om e-mailberichten uit te schakelen.\",",
+	"updateeditcounts": "Bewerkingsteller bijwerken",
 	"generatetopusersreport": "Topgebruikersrapportage aanmaken",
 	"user-stats-weekly-winners": "Wekelijkse {{PLURAL:$1|winnaar|winnaars}}",
 	"user-stats-monthly-winners": "Maandelijkse {{PLURAL:$1|winnaar|winnaars}}",
@@ -67,5 +68,8 @@
 	"user-stats-report-monthly-edit-summary": "automatische maandelijkse gebruikersrapportage",
 	"user-stats-report-weekly-page-title": "Wekelijkse gebruikerspuntenrapportage ($1)",
 	"user-stats-report-monthly-page-title": "Maandelijkse gebruikerspuntenrapportage ($1)",
-	"user-stats-report-error-variable-not-set": "De variabele $wgUserStatsPointValues['points_winner_$1'] moet een waarde groter dan 0 hebben in LocalSettings.php!"
+	"user-stats-report-error-variable-not-set": "De variabele $wgUserStatsPointValues['points_winner_$1'] moet een waarde groter dan 0 hebben in LocalSettings.php!",
+	"random-user-points-weekly": "{{PLURAL:$1|een punt|$1 punten}} deze week",
+	"random-user-points-monthly": "{{PLURAL:$1|een punt|$1 punten}} deze month",
+	"random-user-about-me": "Over mij"
 }

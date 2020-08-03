@@ -6,13 +6,13 @@
 			"Innv",
 			"Lockal",
 			"Rubin",
+			"Rubin16",
 			"Александр Сигачёв"
 		]
 	},
 	"viewrelationships": "Посмотреть отношения",
 	"viewrelationshiprequests": "Посмотреть запросы отношений",
 	"ur-already-submitted": "Ваш запрос был отправлен",
-	"ur-error-page-title": "Опа!",
 	"ur-error-title": "Оп, дела приняли неправильный поворот!",
 	"ur-error-message-no-user": "Мы не можем выполнить ваш запрос, так как участника с таким именем не существует.",
 	"ur-your-profile": "Ваш профиль",

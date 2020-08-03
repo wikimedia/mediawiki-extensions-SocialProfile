@@ -81,8 +81,6 @@
 	"user-recent-activity-user-message": "Skickade ett meddelande till",
 	"user-recent-activity-network-update": "Har postat en tanke",
 	"user-recent-system-gift": "Mottog ett pris",
-	"user-profile-update-notloggedin-title": "Kan inte redigera din användarprofil utan att vara inloggad",
-	"user-profile-update-notloggedin-text": "Du kan inte redigera din profil utan att vara inloggad.\nKlicka [[Special:UserLogin|här]] för att logga in eller klicka [[Special:UserLogin/signup|här]] för att registrera dig.",
 	"user-profile-update-saved": "Din profil har sparats",
 	"user-profile-update-log-section": "ändrade avsnitt",
 	"user-profile-default-country": "USA",
@@ -174,5 +172,6 @@
 	"avatarlogpagetext": "Detta är en logg för uppladdningar av användaravatarer",
 	"user-profile-picture-log-entry": "laddade upp ny avatar",
 	"user-profile-picture-log-delete-entry": "raderade avataren för $1",
-	"right-avatarremove": "Ta bort användares avatarer"
+	"right-avatarremove": "Ta bort användares avatarer",
+	"random-users-avatars-title": "Träffa gemenskapen"
 }

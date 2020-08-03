@@ -10,8 +10,6 @@
 			"Umherirrender"
 		]
 	},
-	"boardblastlogintitle": "Du musst angemeldet sein, um Nachrichten versenden zu können",
-	"boardblastlogintext": "Du musst [[Special:UserLogin|angemeldet]] sein, um Nachrichten versenden zu können.",
 	"messagesenttitle": "Nachrichten verschickt",
 	"boardblasttitle": "Nachricht senden",
 	"boardblaststep1": "Schritt 1: Schreibe deine Nachricht",

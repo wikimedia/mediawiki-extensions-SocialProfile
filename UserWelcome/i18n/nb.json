@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Jon Harald Søby",
 			"Nghtwlkr"
 		]
 	},
@@ -8,7 +9,7 @@
 	"mp-userlevels-link": "Brukernivå",
 	"mp-welcome-upload": "Last opp",
 	"mp-welcome-points": "{{PLURAL:$1|ett poeng|$1 poeng}}",
-	"mp-welcome-needed-points": "For å avansere til [[$1|'''$2''']] må du oppnå ''$3'' {{PLURAL:$3|poeng|poeng}} til!",
+	"mp-welcome-needed-points": "For å gå videre til [[$1|'''$2''']] må du oppnå ''$3'' {{PLURAL:$3|poeng}} til!",
 	"mp-welcome-logged-in": "Hei $1",
 	"mp-requests-title": "Forespørsler",
 	"mp-requests-message": "Du har følgende forespørsler.",

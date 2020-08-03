@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Base",
 			"Prima klasy4na",
 			"Тест"
 		]
@@ -35,5 +36,6 @@
 	"user-profile-picture-large": "Великий",
 	"user-profile-picture-medium": "Середній",
 	"user-profile-picture-small": "Малий",
-	"user-profile-goback": "Назад"
+	"user-profile-goback": "Назад",
+	"random-users-avatars-title": "Познайомтесь із спільнотою"
 }

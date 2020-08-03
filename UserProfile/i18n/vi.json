@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Minh Nguyen"
+			"Minh Nguyen",
+			"Vinhtantran"
 		]
 	},
 	"user-awards-title": "Huy chương",
@@ -73,5 +74,6 @@
 	"user-no-images": "Chưa tải hình lên",
 	"user-page-link": "Trang cá nhân",
 	"user-wiki-link": "Trang cá nhân wiki",
-	"user-type-toggle-old": "Sử dụng trang cá nhân wiki"
+	"user-type-toggle-old": "Sử dụng trang cá nhân wiki",
+	"random-users-avatars-title": "Gặp gỡ cộng đồng"
 }

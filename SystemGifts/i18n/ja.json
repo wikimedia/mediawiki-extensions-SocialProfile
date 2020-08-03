@@ -3,7 +3,9 @@
 		"authors": [
 			"Aotake",
 			"Fryed-peach",
-			"Hosiryuhosi"
+			"Hosiryuhosi",
+			"Rxy",
+			"Shirayuki"
 		]
 	},
 	"systemgiftmanager": "システムからの贈り物の管理",
@@ -41,7 +43,10 @@
 	"ga-title": "$1のもらった賞",
 	"ga-uploadsuccess": "アップロード成功",
 	"ga-viewlist": "贈り物一覧を見る",
+	"ga-remove": "除去",
+	"topawards-comments": "コメント",
+	"topawards-friends": "友達",
 	"system_gift_received_subject": "{{SITENAME}}にて$1賞を受けました",
 	"system_gift_received_body": "$1さん、こんにちは。\n\n$1さんは、{{SITENAME}}にて$2賞を受賞されました！\n\n「$3」\n\nトロフィー入れを確認するには下のリンクをクリックしてください！\n\n$4\n\nお気に入れば幸いです！\n\n{{SITENAME}}チーム\n\n---\nメール受信を停止したい場合は、\n$5\nをクリックして、メール通知を無効にするよう設定変更してください。",
-	"right-awardsmanage": "賞の編集・新規作成"
+	"right-awardsmanage": "賞を新規作成/編集"
 }

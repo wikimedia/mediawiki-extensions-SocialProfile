@@ -87,8 +87,6 @@
 	"user-recent-activity-user-message": "Lähetti viestin käyttäjälle",
 	"user-recent-activity-network-update": "Jätti ajatuksen sivulle",
 	"user-recent-system-gift": "Sai palkinnon",
-	"user-profile-update-notloggedin-title": "Et voi muokata profiiliasi ellet ole kirjautunut sisään",
-	"user-profile-update-notloggedin-text": "Et voi muokata profiiliasi ellet ole kirjautunut sisään.  Napsauta [[Special:UserLogin|tästä]] kirjautuaksesi tai napsauta [[Special:UserLogin/signup|tästä]] rekisteröityäksesi.",
 	"user-profile-update-saved": "Profiilisi on tallennettu",
 	"user-profile-edit-profile-update-saved": "Käyttäjän profiili tallennettiin onnistuneesti",
 	"user-profile-update-log-section": "muutti osioa",
@@ -209,5 +207,6 @@
 	"right-avatarremove": "Poistaa käyttäjien avatareja",
 	"right-editothersprofiles": "Päivittää muiden käyttäjien sosiaalisia profiileja",
 	"action-avatarremove": "poistaa käyttäjien avatareja",
-	"action-editothersprofiles": "päivittää muiden käyttäjien sosiaalisia profiileja"
+	"action-editothersprofiles": "päivittää muiden käyttäjien sosiaalisia profiileja",
+	"random-users-avatars-title": "Tapaa yhteisö"
 }

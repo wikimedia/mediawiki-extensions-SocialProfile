@@ -3,6 +3,7 @@
 		"authors": [
 			"Gzdavidwong",
 			"Liangent",
+			"Liuxinyu970226",
 			"PhiLiP",
 			"Wrightbus"
 		]
@@ -32,5 +33,6 @@
 	"ur-title-foe": "$1的仇敌清单",
 	"ur-title-friend": "$1的朋友清单",
 	"friend_request_subject": "$1已在{{SITENAME}}把您加入成为朋友！",
-	"friend_removed_subject": "哎唷！$1已在{{SITENAME}}把您从朋友清单移除了!"
+	"friend_removed_subject": "哎唷！$1已在{{SITENAME}}把您从朋友清单移除了!",
+	"foe_removed_subject": "呜呼！$1将您从{{SITENAME}}的敌人中移除了！"
 }

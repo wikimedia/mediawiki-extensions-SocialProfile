@@ -87,8 +87,6 @@
 	"user-recent-activity-user-message": "Даслаць паведамленьне для",
 	"user-recent-activity-network-update": "Апублікаваньне думкі",
 	"user-recent-system-gift": "Атрыманьне ўзнагароды",
-	"user-profile-update-notloggedin-title": "Немагчыма рэдагаваць Ваш профіль не ўвайшоўшы ў сыстэму",
-	"user-profile-update-notloggedin-text": "Вы ня можаце рэдагаваць Ваш профіль не ўвайшоўшы ў сыстэму.\nНацісьніце [[Special:UserLogin|тут]], каб увайсьці, альбо націсьніце [[Special:UserLogin/signup|тут]], каб зарэгістравацца.",
 	"user-profile-update-saved": "Ваш профіль быў захаваны",
 	"user-profile-edit-profile-update-saved": "Профіль удзельніка захаваны пасьпяхова",
 	"user-profile-update-log-section": "зьмененая сэкцыя",
@@ -184,5 +182,6 @@
 	"user-profile-picture-log-entry": "загрузіў новую аватару",
 	"user-profile-picture-log-delete-entry": "выдалена аватара $1",
 	"right-avatarremove": "Выдаліць аватары ўдзельніка",
-	"right-editothersprofiles": "абнаўленьне сацыяльных профіляў іншых удзельнікаў"
+	"right-editothersprofiles": "абнаўленьне сацыяльных профіляў іншых удзельнікаў",
+	"random-users-avatars-title": "Знайсьці новую суполку"
 }

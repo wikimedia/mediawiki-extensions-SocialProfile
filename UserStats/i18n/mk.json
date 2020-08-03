@@ -67,5 +67,8 @@
 	"user-stats-report-monthly-edit-summary": "автоматизиран месечен кориснички извештај",
 	"user-stats-report-weekly-page-title": "Неделен извештај за короснички бодови ($1)",
 	"user-stats-report-monthly-page-title": "Месечен извештај за короснички бодови ($1)",
-	"user-stats-report-error-variable-not-set": "Променливата $wgUserStatsPointValues['points_winner_$1'] мора да има вредност поголема од 0 во LocalSettings.php!"
+	"user-stats-report-error-variable-not-set": "Променливата $wgUserStatsPointValues['points_winner_$1'] мора да има вредност поголема од 0 во LocalSettings.php!",
+	"random-user-points-weekly": "{{PLURAL:$1|еден бод|$1 бода}} неделава",
+	"random-user-points-monthly": "{{PLURAL:$1|еден бод|$1 бода}} месецов",
+	"random-user-about-me": "За мене"
 }

@@ -6,8 +6,6 @@
 		]
 	},
 	"profile-updated-personal": "Ihr Profil aktualisieren",
-	"user-profile-update-notloggedin-title": "Sie können Ihr Profil nicht unangemeldet bearbeiten.",
-	"user-profile-update-notloggedin-text": "Sie können Ihr Profil nicht unangemeldet bearbeiten.\nKlicken Sie [[Special:UserLogin|hier]] um sich anzumelden oder klicken Sie [[Special:UserLogin/signup|hier]] um ein Benutzerkonto zu erstellen.",
 	"user-profile-update-saved": "Ihr Profil wurde gespeichert",
 	"user-profile-personal-email-needs-auth": "(Ihre E-Mail-Adresse muss bestätigt sein, damit Sie Benachrichtigungen erhalten können)",
 	"user-profile-sports-title": "Bearbeiten Sie Ihre Lieblings-Sportarten und -Teams",

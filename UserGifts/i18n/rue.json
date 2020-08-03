@@ -8,7 +8,6 @@
 	"g-gift": "подарунок",
 	"g-gift-name": "мено подарунку",
 	"g-give-gift": "Дати подарунок",
-	"g-select-a-friend": "выбрати приятеля",
 	"g-give-separator": "або",
 	"g-go-back": "Назад",
 	"g-large": "Великый",
@@ -17,6 +16,7 @@
 	"g-next": "Далшый",
 	"g-previous": "Попереднїй",
 	"g-remove": "Одстранити",
+	"g-select-a-friend": "выбрати приятеля",
 	"g-small": "Маленькый",
 	"g-your-profile": "Ваш профіл"
 }

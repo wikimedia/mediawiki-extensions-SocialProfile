@@ -83,8 +83,6 @@
 	"user-recent-activity-user-message": "Испрати порака до",
 	"user-recent-activity-network-update": "Објави мисла",
 	"user-recent-system-gift": "Доби награда",
-	"user-profile-update-notloggedin-title": "Не можете да си го уредувате профилот без да сте најавени.",
-	"user-profile-update-notloggedin-text": "Не можете да си го уредувате профилот без да сте најавени.\nКликнете [[Special:UserLogin|тука]] за да се најавите или кликнете [[Special:UserLogin/signup|тука]] за да се регистрирате.",
 	"user-profile-update-saved": "Вашиот профил е зачуван",
 	"user-profile-edit-profile-update-saved": "Профилот на корисникот е успешно зачуван",
 	"user-profile-update-log-section": "го измени заглавието",
@@ -183,5 +181,6 @@
 	"user-profile-picture-log-entry": "подигна нов аватар",
 	"user-profile-picture-log-delete-entry": "го избриша аватарот на $1",
 	"right-avatarremove": "Отстранување на аватари на корисници",
-	"right-editothersprofiles": "Поднова на друштвените профили на други корисници"
+	"right-editothersprofiles": "Поднова на друштвените профили на други корисници",
+	"random-users-avatars-title": "Запознајте ја заедницата"
 }

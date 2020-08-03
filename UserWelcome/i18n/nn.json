@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Frokor",
-			"Harald Khan"
+			"Harald Khan",
+			"Njardarlogar"
 		]
 	},
 	"userwelcome-desc": "Legg til <code>&lt;welcomeUser&gt;</code>-taggen for å vise brukarspesifisert sosial informasjon for innlogga brukarar",

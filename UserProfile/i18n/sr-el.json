@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Michaello",
+			"Milicevic01",
 			"Rancher",
 			"Жељко Тодоровић"
 		]
 	},
+	"user-time-ago": "pre $1",
 	"user-awards-title": "Nagrade",
 	"user-gifts-title": "Pokloni",
 	"user-count-separator": "$1 od $2",
@@ -63,8 +65,6 @@
 	"user-recent-activity-user-message": "Poslao poruku",
 	"user-recent-activity-network-update": "Napisao je misao",
 	"user-recent-system-gift": "Primio je nagradu",
-	"user-profile-update-notloggedin-title": "Ne možete menjati svoj profil pre nego što se ulogujete",
-	"user-profile-update-notloggedin-text": "Ne možete menjati svoj profil pre nego što se ulogujete.\nKliknite [[Special:UserLogin|ovde]] da se ulogujete ili kliknite [[Special:UserLogin/signup|here]] da se registrujete.",
 	"user-profile-update-saved": "Vaš profil je obnovljen",
 	"user-profile-update-log-section": "promenjen izbor",
 	"user-profile-default-country": "Sjedinjene američke države",

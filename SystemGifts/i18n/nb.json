@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Jon Harald Søby",
 			"Simny"
 		]
 	},
+	"systemgifts-desc": "Gjør det mulig å sende, motta, opprette og fjerne systemgaver",
 	"systemgiftmanager": "Systemgaveforvalter",
 	"ga-addnew": "+ legg til en ny presang",
 	"ga-back-edit-gift": "Tilbake til endring av gaven",
@@ -39,7 +41,39 @@
 	"ga-title": "$1s utmerkelser",
 	"ga-uploadsuccess": "Opplasting vellykket",
 	"ga-viewlist": "Se gavelista",
+	"ga-remove": "Fjern",
+	"ga-remove-title": "Fjerne «$1»?",
+	"ga-delete-message": "Er du sikker på at du vil slette gava «$1»?\nDette vil også slette den for brukere som har mottatt den.",
+	"ga-remove-success-title": "Du har fjernet gava «$1»",
+	"ga-remove-success-message": "Gava «$1» har blitt fjernet.",
+	"ga-user-got-awards": "$1 fikk $2",
+	"ga-awards-populate-confirm": "Er du sikker på at du vil befolke prisene?",
+	"ga-awards-given-out": "{{PLURAL:$1|Én pris|$1 priser}} ble delt ut",
+	"topawards": "Toppriser",
+	"topawards-edit-title": "Toppriser – redigeringsmilepæler",
+	"topawards-vote-title": "Toppriser – avstemningsmilepæler",
+	"topawards-comment-title": "Toppriser – kommentarmilepæler",
+	"topawards-recruit-title": "Toppriser – rekrutteringsmilepæler",
+	"topawards-friend-title": "Toppriser – vennemilepæler",
+	"topawards-award-categories": "Priskategorier",
+	"topawards-edits": "Redigeringer",
+	"topawards-votes": "Avstemninger",
+	"topawards-comments": "Kommentarer",
+	"topawards-recruits": "Rekrutteringer",
+	"topawards-friends": "Venner",
+	"topawards-edit-milestone": "Milepæl for $1 {{PLURAL:$1|redigering|redigeringer}}",
+	"topawards-vote-milestone": "Milepæl for $1 {{PLURAL:$1|avstemning|avstemninger}}",
+	"topawards-comment-milestone": "Milepæl for $1 {{PLURAL:$1|kommentar|kommentarer}}",
+	"topawards-recruit-milestone": "Milepæl for $1 {{PLURAL:$1|rekruttering|rekrutteringer}}",
+	"topawards-friend-milestone": "Milepæl for $1 {{PLURAL:$1|venn|venner}}",
+	"topawards-empty": "Enten er det ingen priser konfigurert for denne priskategorien, eller så er det ingen som har mottatt prisene ennå.",
 	"system_gift_received_subject": "Du har mottatt utmerkelsen $1 på {{SITENAME}}!",
+	"system_gift_received_body_html": "Hei, $1.\n\nDu har mottat prisen $2 på {{SITENAME}}!\n\n«$3»\n\nTrykk nedenfor for å komme til troféskapet ditt!\n\n[[Special:ViewSystemGifts]]\n\nVi håper du liker den!\n\nTakk,\n\n{{SITENAME}}-teamet\n\n---\n\nØnsker du ikke lenger å motta eposter fra oss?\n\nTrykk på [[Special:UpdateProfile]] og endre innstillingene dine for å slå av epostvarsler.",
 	"system_gift_received_body": "Hei $1.\n\nDu har akkurat mottatt en $2-utmerkelse på {{SITENAME}}!\n\n«$3»\n\nKlikk under for å se trofeet ditt!\n\n$4\n\nVi håper du liker det!\n\nTakk,\n\n{{SITENAME}}-laget\n\n---\n\nVil du ikke lenger motta e-poster fra oss?\n\nKlikk $5\nog forandre dine innstillinger for å slå av e-postbeskjeder.",
-	"right-awardsmanage": "Opprett nye og endre eksisterende utmerkelser"
+	"echo-category-title-social-award": "Priser",
+	"echo-pref-tooltip-social-award": "Varsle meg når jeg mottar en pris.",
+	"notification-social-award-rec": "Du har mottatt en ny pris: $1.",
+	"notification-social-award-rec-bundle": "Du har mottatt {{PLURAL:$1|en ny pris|$1 nye priser}}.",
+	"right-awardsmanage": "Opprett nye og endre eksisterende utmerkelser",
+	"action-awardsmanage": "opprette nye og redigere eksisterende priser"
 }

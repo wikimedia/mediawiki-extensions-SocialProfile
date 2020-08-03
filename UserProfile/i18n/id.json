@@ -80,8 +80,6 @@
 	"user-recent-activity-user-message": "Mengirimkan pesan kepada",
 	"user-recent-activity-network-update": "Mengirimkan pemikiran",
 	"user-recent-system-gift": "Menerima penghargaan",
-	"user-profile-update-notloggedin-title": "Tidak bisa menyunting profil Anda tanpa masuk log",
-	"user-profile-update-notloggedin-text": "Anda tidak bisa menyunting profil Anda tanpa masuk log.\nKlik [[Special:UserLogin|di sini]] untuk masuk log atau klik [[Special:UserLogin/signup|di sini]] untuk mendaftar.",
 	"user-profile-update-saved": "Profil Anda telah disimpan",
 	"user-profile-edit-profile-update-saved": "Profil pengguna berhasil disimpan",
 	"user-profile-update-log-section": "mengubah bagian",
@@ -177,5 +175,6 @@
 	"user-profile-picture-log-entry": "memuat avatar baru",
 	"user-profile-picture-log-delete-entry": "menghapus avatar $1",
 	"right-avatarremove": "Menghapus avatar pengguna",
-	"right-editothersprofiles": "Perbarui profil sosial pengguna lain"
+	"right-editothersprofiles": "Perbarui profil sosial pengguna lain",
+	"random-users-avatars-title": "Jumpailah komunitas"
 }

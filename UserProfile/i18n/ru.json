@@ -6,6 +6,7 @@
 			"Lockal",
 			"Putnik",
 			"Rubin",
+			"Rubin16",
 			"Александр Сигачёв"
 		]
 	},
@@ -82,8 +83,6 @@
 	"user-recent-activity-user-message": "Отправить сообщение для",
 	"user-recent-activity-network-update": "отправил мысль",
 	"user-recent-system-gift": "получил награду",
-	"user-profile-update-notloggedin-title": "Невозможно редактировать свой профиль, не представившись системе",
-	"user-profile-update-notloggedin-text": "Вы не можете редактировать свой профиль, не представившись системе. Нажмите [[Special:UserLogin|здесь]], чтобы представиться, или [[Special:UserLogin/signup|здесь]], чтобы зарегистрироваться.",
 	"user-profile-update-saved": "Ваш профиль сохранён",
 	"user-profile-edit-profile-update-saved": "Профиль участника был успешно сохранён",
 	"user-profile-update-log-section": "изменил раздел",
@@ -186,5 +185,6 @@
 	"user-profile-picture-log-entry": "загрузил новую аватару",
 	"user-profile-picture-log-delete-entry": "удалил аватару $1",
 	"right-avatarremove": "Удаление аватар участников",
-	"right-editothersprofiles": "обновление социальных профилей других участников"
+	"right-editothersprofiles": "обновление социальных профилей других участников",
+	"random-users-avatars-title": "Познакомьтесь с сообществом"
 }

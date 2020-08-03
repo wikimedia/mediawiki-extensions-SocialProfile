@@ -78,8 +78,6 @@
 	"user-recent-activity-user-message": "Üzenetet küldött neki:",
 	"user-recent-activity-network-update": "Megosztotta egy gondolatát",
 	"user-recent-system-gift": "Díjat kapott",
-	"user-profile-update-notloggedin-title": "Nem szerkesztheted a profilodat, ha nem vagy bejelentkezve",
-	"user-profile-update-notloggedin-text": "Nem szerkesztheted a profilodat, ha nem vagy bejelentkezve.\nKattints [[Special:UserLogin|ide]] a bejelentkezéshez, vagy [[Special:UserLogin/signup|ide]] a regisztráláshoz.",
 	"user-profile-update-saved": "A profilod elmentve",
 	"user-profile-update-log-section": "megváltozott szakasz",
 	"user-profile-default-country": "Magyarország",
@@ -171,5 +169,6 @@
 	"avatarlogpagetext": "Ez az avatarfeltöltések naplója",
 	"user-profile-picture-log-entry": "új avatar feltöltve",
 	"user-profile-picture-log-delete-entry": "törölte $1 avatárját",
-	"right-avatarremove": "felhasználók avatarjainak eltávolítása"
+	"right-avatarremove": "felhasználók avatarjainak eltávolítása",
+	"random-users-avatars-title": "Találkozz a közösséggel"
 }

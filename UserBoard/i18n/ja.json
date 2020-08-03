@@ -2,14 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Aotake",
+			"Azeha",
 			"Fievarsty",
 			"Fryed-peach",
 			"Gzdavidwong",
-			"Schu"
+			"Schu",
+			"Shirayuki"
 		]
 	},
-	"boardblastlogintitle": "一斉メッセージを送るにはログインする必要があります",
-	"boardblastlogintext": "一斉メッセージを送るには [[Special:UserLogin|ログイン]]する必要があります。",
 	"messagesenttitle": "メッセージを送る",
 	"boardblasttitle": "一斉メッセージの送信",
 	"boardblaststep1": "ステップ1 - メッセージを書きます",
@@ -45,7 +45,7 @@
 	"userboard_sendbutton": "送信",
 	"userboard_loggedout": "他の利用者にメッセージを送信するには[[Special:UserLogin|ログイン]]する必要があります。",
 	"userboard_showingmessages": "メッセージ$1件中{{PLURAL:$4|$3件|$2-$3件}}を表示中",
-	"right-userboard-delete": "他人の掲示板のメッセージを削除する",
+	"right-userboard-delete": "他人の掲示板のメッセージを削除",
 	"userboard-time-days": "{{PLURAL:$1|$1日}}",
 	"userboard-time-hours": "{{PLURAL:$1|$1時間}}",
 	"userboard-time-minutes": "{{PLURAL:$1|$1分}}",

@@ -7,6 +7,8 @@
 			"Dferg",
 			"Fitoschido",
 			"Imre",
+			"Indiralena",
+			"MarcoAurelio",
 			"Sanbec",
 			"Translationista"
 		]
@@ -74,5 +76,8 @@
 	"user-stats-report-monthly-edit-summary": "informe de usuarios mensual automático",
 	"user-stats-report-weekly-page-title": "Informe semanal de puntos de los usuarios ($1)",
 	"user-stats-report-monthly-page-title": "Informe mensual de puntos de los usuarios ($1)",
-	"user-stats-report-error-variable-not-set": "¡La variable $wgUserStatsPointValues['points_winner_$1'] debe tener un valor mayor que 0 en LocalSettings.php!"
+	"user-stats-report-error-variable-not-set": "¡La variable $wgUserStatsPointValues['points_winner_$1'] debe tener un valor mayor que 0 en LocalSettings.php!",
+	"random-user-points-weekly": "{{PLURAL:$1|un punto|$1 puntos}} esta semana",
+	"random-user-points-monthly": "{{PLURAL:$1|un punto|$1 puntos}} este mes",
+	"random-user-about-me": "Acerca de mí"
 }

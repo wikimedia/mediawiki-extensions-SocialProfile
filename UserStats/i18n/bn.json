@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bellayet"
+			"Bellayet",
+			"আফতাবুজ্জামান"
 		]
 	},
-	"right-updatepoints": "সম্পাদনা সংখ্যা হালনাগাদ করো"
+	"right-updatepoints": "সম্পাদনা সংখ্যা হালনাগাদ করো",
+	"random-user-points-weekly": "এই সপ্তাহে {{PLURAL:$1|এক পয়েন্ট|$1 পয়েন্ট}}",
+	"random-user-points-monthly": "এই মাসে {{PLURAL:$1|এক পয়েন্ট|$1 পয়েন্ট}}",
+	"random-user-about-me": "আমার সম্পর্কে"
 }

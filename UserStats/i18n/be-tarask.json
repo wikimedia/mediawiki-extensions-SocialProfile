@@ -69,5 +69,8 @@
 	"user-stats-report-monthly-edit-summary": "аўтаматычная штомесячная справаздача ўдзельнікаў",
 	"user-stats-report-weekly-page-title": "Штотыднёвая справаздача пунктаў удзельнікаў ($1)",
 	"user-stats-report-monthly-page-title": "Штомесячная справаздача пунктаў удзельнікаў ($1)",
-	"user-stats-report-error-variable-not-set": "Зьменная $wgUserStatsPointValues['points_winner_$1'] у LocalSettings.php павінна мець значэньне, большае за 0!"
+	"user-stats-report-error-variable-not-set": "Зьменная $wgUserStatsPointValues['points_winner_$1'] у LocalSettings.php павінна мець значэньне, большае за 0!",
+	"random-user-points-weekly": "$1 {{PLURAL:$1|пункт|пункты|пунктаў}} на гэтым тыдні",
+	"random-user-points-monthly": "$1 {{PLURAL:$1|пункт у|пункты ў|пунктаў у}} гэтым месяцы",
+	"random-user-about-me": "Пра мяне"
 }

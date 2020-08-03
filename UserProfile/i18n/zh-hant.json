@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Kly",
 			"Liangent",
 			"Mark85296341",
 			"Wrightbus"
@@ -74,6 +75,7 @@
 	"user-profile-personal-hometown": "家鄉",
 	"user-profile-personal-birthday": "生日",
 	"user-profile-personal-birthdate": "日期 （MM/DD）",
+	"user-profile-personal-birthdate-with-year": "日期（MM/DD/YYYY）",
 	"user-profile-personal-aboutme": "關於我",
 	"user-profile-personal-work": "工作",
 	"user-profile-personal-occupation": "職業",
@@ -110,6 +112,8 @@
 	"user-profile-picture-picsize": "您的圖片必須為 JPEG、PNG 或 GIF 格式，且大小必須不超過 100 kb。",
 	"user-profile-goback": "返回",
 	"user-profile-userlevels-link": "用戶等級",
+	"user-profile-privacy-status-privacy-friends": "朋友",
+	"user-profile-privacy-status-privacy-foaf": "朋友的朋友",
 	"user-no-images": "沒有上傳圖片",
 	"edit-profile-title": "更改您的個人檔案",
 	"user-page-link": "使用者頁面",
@@ -128,5 +132,6 @@
 	"avatarlogpagetext": "這是使用者頭像上傳記錄",
 	"user-profile-picture-log-entry": "上傳了新頭像",
 	"user-profile-picture-log-delete-entry": "刪除了 $1 的頭像",
-	"right-avatarremove": "移除使用者的頭像"
+	"right-avatarremove": "移除使用者的頭像",
+	"random-users-avatars-title": "認識社群"
 }

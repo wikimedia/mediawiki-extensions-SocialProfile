@@ -7,7 +7,8 @@
 			"Malafaya",
 			"McDutchie",
 			"Vanessa Sabino",
-			"Waldir"
+			"Waldir",
+			"Waldyrious"
 		]
 	},
 	"editprofile": "Editar o perfil de outros utilizadores",
@@ -88,8 +89,6 @@
 	"user-recent-activity-user-message": "Enviou uma mensagem para",
 	"user-recent-activity-network-update": "Enviou um pensamento",
 	"user-recent-system-gift": "Recebeu um prémio",
-	"user-profile-update-notloggedin-title": "Não pode editar o seu perfil sem estar autenticado",
-	"user-profile-update-notloggedin-text": "Não pode editar o seu perfil sem estar autenticado.\nClique [[Special:UserLogin|aqui]] para se autenticar ou [[Special:UserLogin/signup|aqui]] para se registar.",
 	"user-profile-update-saved": "O seu perfil foi gravado",
 	"user-profile-edit-profile-update-saved": "O perfil do utilizador foi gravado",
 	"user-profile-update-log-section": "secção alterada",
@@ -185,5 +184,6 @@
 	"user-profile-picture-log-entry": "carregou avatar novo",
 	"user-profile-picture-log-delete-entry": "eliminou avatar de $1",
 	"right-avatarremove": "Remover avatares do utilizador",
-	"right-editothersprofiles": "Actualizar o perfil social de outros utilizadores"
+	"right-editothersprofiles": "Actualizar o perfil social de outros utilizadores",
+	"random-users-avatars-title": "Conheça a comunidade"
 }

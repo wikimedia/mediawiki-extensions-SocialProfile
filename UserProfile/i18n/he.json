@@ -84,8 +84,6 @@
 	"user-recent-activity-user-message": "נשלחה הודעה אל",
 	"user-recent-activity-network-update": "פרסמו רעיון",
 	"user-recent-system-gift": "קיבלו פרס",
-	"user-profile-update-notloggedin-title": "לא ניתן לערוך את הפרופיל שלכם מבלי לבצע כניסה לחשבון",
-	"user-profile-update-notloggedin-text": "לא תוכלו לערוך את הפרופיל מבלי לבצע כניסה לחשבון.\nלחצו [[Special:UserLogin|כאן]] כדי להיכנס לחשבון או [[Special:UserLogin/signup|כאן]] כדי להרשם.",
 	"user-profile-update-saved": "הפרופיל שלכם נשמר",
 	"user-profile-edit-profile-update-saved": "פרופיל המשתמש הזה שמר בהצלחה",
 	"user-profile-update-log-section": "קטע שהשתנה",
@@ -181,5 +179,6 @@
 	"user-profile-picture-log-entry": "הועלתה תמונת משתמש חדשה",
 	"user-profile-picture-log-delete-entry": "מחק את תמונת המשתמש של $1",
 	"right-avatarremove": "הסרת תמונות משתמש",
-	"right-editothersprofiles": "לעדכן פרופילים חברתיים של משתמשים אחרים"
+	"right-editothersprofiles": "לעדכן פרופילים חברתיים של משתמשים אחרים",
+	"random-users-avatars-title": "פגשו את הקהילה"
 }

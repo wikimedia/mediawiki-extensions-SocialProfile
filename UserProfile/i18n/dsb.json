@@ -76,8 +76,6 @@
 	"user-recent-activity-user-message": "Jo pósłał powěsć",
 	"user-recent-activity-network-update": "Jo wótpósłał myslicku",
 	"user-recent-system-gift": "Jo dostał myto",
-	"user-profile-update-notloggedin-title": "Njamóžoš swój profil wobźěłaś, gaž njejsy píszjawjony",
-	"user-profile-update-notloggedin-text": "Njamóžoš swój profil wobźěłaś, gaž njejsy pśizjawjony.\nKlikni [[Special:UserLogin|sem]], aby se pśizjawił abo klikni [[Special:UserLogin/signup|sem]], aby se registrěrował.",
 	"user-profile-update-saved": "Twój profil jo se składł",
 	"user-profile-update-log-section": "jo změnił wótrězk",
 	"user-profile-default-country": "Nimska",
@@ -169,5 +167,6 @@
 	"avatarlogpagetext": "To jo protokol nagraśow wužywarskich awatarow",
 	"user-profile-picture-log-entry": "nowy awatar nagraty",
 	"user-profile-picture-log-delete-entry": "awatar wužywarja $1 wulašowany",
-	"right-avatarremove": "Awatary wužywarja wótpóraś"
+	"right-avatarremove": "Awatary wužywarja wótpóraś",
+	"random-users-avatars-title": "Zmakaś se ze zgromaźenstwom"
 }

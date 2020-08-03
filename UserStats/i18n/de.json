@@ -4,6 +4,7 @@
 			"Kghbln",
 			"MF-Warburg",
 			"Melancholie",
+			"Metalhead64",
 			"Purodha",
 			"Revolus",
 			"The Evil IP address",
@@ -73,5 +74,8 @@
 	"user-stats-report-monthly-edit-summary": "automatisierter monatlicher Benutzerbericht",
 	"user-stats-report-weekly-page-title": "Wöchentlicher Benutzerpunktebericht ($1)",
 	"user-stats-report-monthly-page-title": "Monatlicher Benutzerpunktebericht ($1)",
-	"user-stats-report-error-variable-not-set": "Für den Parameter $wgUserStatsPointValues['points_winner_$1'] in der Datei LocalSettings.php muss ein Wert größer als 0 angegeben sein."
+	"user-stats-report-error-variable-not-set": "Für den Parameter $wgUserStatsPointValues['points_winner_$1'] in der Datei LocalSettings.php muss ein Wert größer als 0 angegeben sein.",
+	"random-user-points-weekly": "{{PLURAL:$1|Ein Punkt|$1 Punkte}} in dieser Woche",
+	"random-user-points-monthly": "{{PLURAL:$1|Ein Punkt|$1 Punkte}} in diesem Monat",
+	"random-user-about-me": "Über mich"
 }

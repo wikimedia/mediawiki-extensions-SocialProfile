@@ -90,8 +90,6 @@
 	"user-recent-activity-user-message": "Nachricht verschickt an",
 	"user-recent-activity-network-update": "Hat einen Gedanken veröffentlicht",
 	"user-recent-system-gift": "Auszeichnung erhalten",
-	"user-profile-update-notloggedin-title": "Du kannst dein Profil nicht unangemeldet bearbeiten.",
-	"user-profile-update-notloggedin-text": "Du kannst dein Profil nicht unangemeldet bearbeiten.\nKlicke [[Special:UserLogin|hier]] um dich anzumelden oder klicke [[Special:UserLogin/signup|hier]] um einen Account zu erstellen.",
 	"user-profile-update-saved": "Dein Profil wurde gespeichert",
 	"user-profile-edit-profile-update-saved": "Das Benutzerprofil wurde erfolgreich gespeichert",
 	"user-profile-update-log-section": "Abschnitt geändert",
@@ -190,5 +188,6 @@
 	"user-profile-picture-log-entry": "Neuer Avatar hochgeladen",
 	"user-profile-picture-log-delete-entry": "Avatar von $1 gelöscht",
 	"right-avatarremove": "Avatar eines Benutzers entfernen",
-	"right-editothersprofiles": "Aktualisierung der Benutzerprofile anderer Benutzer"
+	"right-editothersprofiles": "Aktualisierung der Benutzerprofile anderer Benutzer",
+	"random-users-avatars-title": "Triff die Community"
 }

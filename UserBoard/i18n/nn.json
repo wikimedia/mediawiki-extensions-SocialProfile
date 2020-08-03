@@ -3,11 +3,10 @@
 		"authors": [
 			"Harald Khan",
 			"Jon Harald Søby",
-			"Nghtwlkr"
+			"Nghtwlkr",
+			"Njardarlogar"
 		]
 	},
-	"boardblastlogintitle": "Du må logga inn for kunna senda meldingar",
-	"boardblastlogintext": "For å kunna senda meldingar, lyt du vera [[Special:UserLogin|innlogga]].",
 	"messagesenttitle": "Sendte meldingar",
 	"boardblasttitle": "Send melding",
 	"boardblaststep1": "Steg 1 &ndash; skriv meldinga di",

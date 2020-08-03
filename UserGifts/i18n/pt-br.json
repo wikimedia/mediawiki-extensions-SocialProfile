@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Eduardo Addad de Oliveira",
 			"Eduardo.mps"
 		]
 	},
+	"usergifts-desc": "Permite enviar, receber, criar e remover presentes do usuário",
 	"giftmanager": "Gerenciador de Presentes",
 	"giftmanager-addgift": "+ Adicionar Novo Presente",
 	"giftmanager-access": "acesso ao presente",
@@ -29,7 +31,7 @@
 	"g-error-do-not-own": "Você não possui este presente.",
 	"g-error-message-blocked": "Você está bloqueado atualmente e não pode dar presentes",
 	"g-error-message-invalid-link": "A ligação em que você entrou é inválida.",
-	"g-error-message-login": "Você precisa estar autenticado para enviar presentes",
+	"g-error-message-login": "Você precisa [[Special:UserLogin|entrar]] para enviar presentes",
 	"g-error-message-no-user": "O utilizador que você está tentando ver não existe.",
 	"g-error-message-to-yourself": "Você não pode dar um presente a si mesmo",
 	"g-error-title": "Ops, você entrou no lugar errado!",
@@ -49,6 +51,7 @@
 	"g-give-no-user-title": "Para quem você gostaria de dar um presente?",
 	"g-give-to-user-title": "Enviar presente \"$1\" para $2",
 	"g-give-to-user-message": "Quer dar a $1 um [[Special:GiveGift/$1|presente diferente]]?",
+	"g-give-this-gift": "Dar este presente",
 	"g-go-back": "Voltar",
 	"g-imagesbelow": "Abaixo estão as imagens que serão usadas no site",
 	"g-large": "Grande",
@@ -66,6 +69,7 @@
 	"g-remove-success-message": "O presente \"$1\" foi removido.",
 	"g-remove-title": "Remover \"$1\"?",
 	"g-send-gift": "Enviar Presente",
+	"g-select-gift": "Por favor, selecione um presente.",
 	"g-select-a-friend": "selecionar um amigo",
 	"g-sent-title": "Você enviou um presente para $1",
 	"g-sent-message": "Você enviou o seguinte presente para $1.",
@@ -76,5 +80,10 @@
 	"g-your-profile": "Seu Perfil",
 	"gift_received_subject": "$1 enviou para você o Presente $2 Gift em {{SITENAME}}!",
 	"gift_received_body": "Oi $1:\n\n$2 acabou de enviar o presente $3 em {{SITENAME}}.\n\nQuer ler o recado que $2 deixou e ver seu presente? Clique na ligação abaixo:\n\n$4\n\nEsperamos que tenha gostado!\n\nObrigado,\n\n\nO Time de {{SITENAME}}\n\n---\n\nEi, quer parer de receber e-mails de nós?\n\nClique $5\ne altere suas preferências para desabilitar e-mails de notificação.",
-	"right-giftadmin": "Crie novos e edite presentes existentes"
+	"echo-category-title-social-gift": "Presentes",
+	"echo-pref-tooltip-social-gift": "Notifique-me quando alguém me enviar um presente.",
+	"notification-social-gift-send-no-message": "$1 acabou de enviar um presente para você: $2.",
+	"notification-social-gift-send-with-message": "$1 acabou de enviar um presente para você: $2.<br /><br />''$3''",
+	"right-giftadmin": "Crie novos e edite presentes existentes",
+	"action-giftadmin": "crie novos e edite presentes existentes"
 }

@@ -6,11 +6,10 @@
 			"Lijealso",
 			"Malafaya",
 			"Vanessa Sabino",
-			"Waldir"
+			"Waldir",
+			"Waldyrious"
 		]
 	},
-	"boardblastlogintitle": "Tem de estar autenticado para enviar recados",
-	"boardblastlogintext": "Para enviar recados tem de [[Special:UserLogin|autenticar-se]].",
 	"messagesenttitle": "Mensagens enviadas",
 	"boardblasttitle": "Enviar recado",
 	"boardblaststep1": "Passo 1 - Escreva a sua mensagem",

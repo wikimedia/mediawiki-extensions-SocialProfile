@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Jon Harald Søby",
 			"Nghtwlkr",
 			"Simny"
 		]
 	},
+	"usergifts-desc": "Gjør det mulig å sende, motta, opprette og fjerne brukergaver",
 	"giftmanager": "Gavebehandler",
 	"giftmanager-addgift": "+ Legg til ny gave",
 	"giftmanager-access": "gavetilgang",
@@ -30,7 +32,7 @@
 	"g-error-do-not-own": "Du eier ikke denne gava.",
 	"g-error-message-blocked": "Du er for tiden blokkert og kan ikke gi gaver",
 	"g-error-message-invalid-link": "Lenken du oppga er ugyldig.",
-	"g-error-message-login": "Du må være innlogget for å gi gaver",
+	"g-error-message-login": "Du må [[Special:UserLogin|logge inn]] for å gi gaver.",
 	"g-error-message-no-user": "Brukeren som du ønsker å se finnes ikke.",
 	"g-error-message-to-yourself": "Du kan ikke gi gaver til degselv.",
 	"g-error-title": "Oi da, der svingte du feil!",
@@ -50,6 +52,7 @@
 	"g-give-no-user-title": "Hvem vil du gi en gave til?",
 	"g-give-to-user-title": "Send gaven «$1» til $2",
 	"g-give-to-user-message": "Vil du gi $1 en [[Special:GiveGift/$1|annen gave]]?",
+	"g-give-this-gift": "Gi denne gava",
 	"g-go-back": "Tilbake",
 	"g-imagesbelow": "Under er dine bilde som vil bli brukt på denne siden",
 	"g-large": "Stort",
@@ -67,6 +70,7 @@
 	"g-remove-success-message": "Gaven «$1» har blitt fjernet.",
 	"g-remove-title": "Fjern «$1»?",
 	"g-send-gift": "Send gave",
+	"g-select-gift": "Velg ei gave.",
 	"g-select-a-friend": "velg en venn",
 	"g-sent-title": "Du har har sendt ei gave til $1",
 	"g-sent-message": "Du har sendt følgende gave til $1.",
@@ -76,6 +80,13 @@
 	"g-viewgiftlist": "Se gavelisten",
 	"g-your-profile": "Profilen din",
 	"gift_received_subject": "$1 har send deg gava «$2» på {{SITENAME}}!",
-	"gift_received_body": "Hei $1.\n\n$2 sendte deg akkurat $3-gava på {{SITENAME}}.\n\nVil du lese det som $2 skrev til deg og se gaven din? Klikk på linken under:\n\n$4\n\nVi håper at du vil like den!\n\nTakk,\n\n{{SITENAME}}-laget\n\n---\n\nVil du ikke lenger motta e-poster fra oss?\n\nKlikk på $5\nog forandre på dine instillinger for å slå av e-postmeldinger.",
-	"right-giftadmin": "Opprett ny og endre eksisterende gaver"
+	"gift_received_body_html": "Hei, $1.\n\n$2 sendte deg gava $3 på {{SITENAME}}.\n\nTrykk på lenka nedenfor for å se gava og lese meldingen $2 sendte deg.\n\n[[Special:ViewGifts]]\n\nVi håper du liker den!\n\nTakk,\n\n{{SITENAME}}-teamet\n\n---\n\nØnsker du ikke lenger å motta eposter fra oss??\n\nTrykk på [[Special:UpdateProfile]]\nog endre innstillingene dine for å slå av epostvarsler.",
+	"gift_received_body": "Hei, $1.\n\n$2 sendte deg akkurat gava $3 på {{SITENAME}}.\n\nVil du lese det som $2 skrev til deg og se gaven din? Trykk på lenka nedenfor:\n\n$4\n\nVi håper at du vil like den!\n\nTakk,\n\n{{SITENAME}}-teamet\n\n---\n\nVil du ikke lenger motta e- fra oss?\n\nTrykk på $5\nog endre innstillingene dine for å slå av epostvarsler.",
+	"echo-category-title-social-gift": "Gaver",
+	"echo-pref-tooltip-social-gift": "Varsle meg når noen sender meg ei gave.",
+	"notification-social-gift-send-no-message": "$1 sendte deg ei gave: $2.",
+	"notification-social-gift-send-with-message": "$1 sendte deg ei gave: $2.<br /><br />''$3''",
+	"notification-social-gift-send-bundle": "{{PLURAL:$1|Én person|$1 personer}} sendte deg gaver.",
+	"right-giftadmin": "Opprett ny og endre eksisterende gaver",
+	"action-giftadmin": "opprette nye og redigere eksisterende gaver"
 }

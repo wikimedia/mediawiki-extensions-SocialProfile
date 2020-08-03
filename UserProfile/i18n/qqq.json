@@ -7,10 +7,10 @@
 			"Jon Harald Søby",
 			"Meno25",
 			"Purodha",
-			"Translationista",
-			"Umherirrender",
 			"Shirayuki",
-			"The Evil IP address"
+			"The Evil IP address",
+			"Translationista",
+			"Umherirrender"
 		]
 	},
 	"editprofile": "Page title of Special:EditProfile, the special page which allows privileged users (usually admins, but not always) to edit other users' social profiles; generally speaking users can only edit their own social profiles, but it might be necessary for admins to be able to edit others' profiles to e.g. remove spam or personal attacks, etc.",
@@ -80,7 +80,6 @@
 	"user-personal-info-places-lived": "Social profile section item; see the [[mw:File:Social user profile.png|screenshot]] for details.\n{{Identical|Places I've lived}}",
 	"user-personal-info-schools": "Social profile section item; see the [[mw:File:Social user profile.png|screenshot]] for details.\n{{Identical|Schools}}",
 	"user-personal-info-about-me": "Social profile section item; see the [[mw:File:Social user profile.png|screenshot]] for details.\n{{Identical|About me}}",
-
 	"user-recent-activity-title": "Title of the activity feed section on social profile pages; see the [[mw:File:Social user profile.png|screenshot]]. The activity feed on profiles is displayed only when <code>$wgUserProfileDisplay['activity']</code> is set to <code>true</code> in the wiki's [[mw:Manual:LocalSettings.php|LocalSettings.php]] file.",
 	"user-recent-activity-edit": "Activity feed item. This is followed by a '''bolded''' link to the page that the user in question recently (or \"recently\") edited.",
 	"user-recent-activity-vote": "Activity feed item. This is followed by a '''bolded''' link to the page that the user in question recently (or \"recently\") voted for.",
@@ -226,9 +225,9 @@
 	"right-avatarremove": "{{doc-right|avatarremove}}",
 	"right-editothersprofiles": "{{doc-right|editothersprofiles}}",
 	"right-editothersprofiles-private": "{{doc-right|editothersprofiles-private}}",
+	"action-editothersprofiles-private": "This will literally never be displayed anywhere to anyone, so don't bother wasting your time with it. The only reason this exists is because some Continuous Integration test expects it despite that it will never be shown...",
 	"right-populate-user-profiles": "{{doc-right|populate-user-profiles}}",
 	"action-populate-user-profiles": "{{doc-action|populate-user-profiles}}",
-	"action-editothersprofiles-private": "This will literally never be displayed anywhere to anyone, so don't bother wasting your time with it. The only reason this exists is because some Continuous Integration test expects it despite that it will never be shown...",
 	"apihelp-socialprofile-userprofileprivacy-description": "{{doc-apihelp-description|socialprofile-userprofileprivacy}}",
 	"apihelp-socialprofile-userprofileprivacy-summary": "{{doc-apihelp-summary|socialprofile-userprofileprivacy}}",
 	"apihelp-socialprofile-userprofileprivacy-param-method": "{{doc-apihelp-param|socialprofile-userprofileprivacy|method}}",

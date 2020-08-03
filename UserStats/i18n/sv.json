@@ -3,7 +3,8 @@
 		"authors": [
 			"Boivie",
 			"Najami",
-			"Per"
+			"Per",
+			"WikiPhoenix"
 		]
 	},
 	"user-stats-alltime-title": "Flest poäng någonsin",
@@ -37,5 +38,8 @@
 	"right-updatepoints": "Uppdatera redigeringsräknare",
 	"level-advanced-to": "avancerat till nivå <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "Du är nu en \"$1\" på {{SITENAME}}!",
-	"level-advance-body": "Hej $1!\n\nDu är nu en \"$2\" på {{SITENAME}}!\n\nGrattis,\n\n{{SITENAME}}-teamet\n\n---\nFörresten, vill du slippa få epost från oss?\n\nKlicka $3\noch ändra dina inställningar för att avaktivera epost-meddelanden."
+	"level-advance-body": "Hej $1!\n\nDu är nu en \"$2\" på {{SITENAME}}!\n\nGrattis,\n\n{{SITENAME}}-teamet\n\n---\nFörresten, vill du slippa få epost från oss?\n\nKlicka $3\noch ändra dina inställningar för att avaktivera epost-meddelanden.",
+	"random-user-points-weekly": "{{PLURAL:$1|ett poäng|$1 poäng}} denna vecka",
+	"random-user-points-monthly": "{{PLURAL:$1|ett poäng|$1 poäng}} denna månad",
+	"random-user-about-me": "Om mig"
 }
