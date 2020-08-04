@@ -22,5 +22,5 @@
 	"useractivity-siteactivity": "Sivuston aktiivisuus",
 	"useractivity-title": "Ystävien aktiivisuus",
 	"useractivity-user_message": "$1 {{PLURAL:$4|lähetti viestin käyttäjälle|lähetti viestejä käyttäjille}} $3",
-	"useractivity-comment": "$1 {{PLURAL:$2|kommentoi|kommentoivat}} {{PLURAL:$4|sivua|sivuja}}: $3"
+	"useractivity-comment": "$1 {{PLURAL:$4|kommentoi sivua|kommentoivat sivuja}}: $3"
 }

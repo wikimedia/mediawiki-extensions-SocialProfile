@@ -83,7 +83,7 @@
 	"echo-category-title-social-gift": "Lahjat",
 	"echo-pref-tooltip-social-gift": "Ilmoita minulle, kun joku lähettää minulle lahjan.",
 	"notification-social-gift-send-no-message": "$1 lähetti juuri sinulle lahjan: $2.",
-	"notification-social-gift-send-with-message": "$1 lähetti juuri sinulle lahjan: $2.<br /><br />''$2''",
+	"notification-social-gift-send-with-message": "$1 lähetti juuri sinulle lahjan: $2.<br /><br />''$3''",
 	"notification-social-gift-send-bundle": "{{PLURAL:$1|Yksi henkilö lähetti|$1 henkilöä lähettivät}} sinulle lahjoja.",
 	"right-giftadmin": "Luoda uusia ja muokata olemassa olevia lahjoja"
 }

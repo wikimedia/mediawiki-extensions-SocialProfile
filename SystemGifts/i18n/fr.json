@@ -10,6 +10,7 @@
 			"Verdy p"
 		]
 	},
+	"systemgifts-desc": "Permet d’envoyer, recevoir, créer et supprimer des cadeaux système",
 	"systemgiftmanager": "Système de gestion de cadeaux",
 	"ga-addnew": "+ Ajouter un nouveau cadeau",
 	"ga-back-edit-gift": "Revenir à la modification de ce cadeau",
@@ -50,6 +51,9 @@
 	"ga-delete-message": "Êtes-vous sûrs de vouloir supprimer le cadeau \"$1\"?\nCela le supprimera aussi pour les utilisateurs qui l'auraient reçu.",
 	"ga-remove-success-title": "Vous avez bien supprimé le cadeau \"$1\"",
 	"ga-remove-success-message": "Le cadeau \"$1\" a été supprimé.",
+	"ga-user-got-awards": "$1 a obtenu $2",
+	"ga-awards-populate-confirm": "Êtes-vous sûr d’alimenter les distinctions ?",
+	"ga-awards-given-out": "{{PLURAL:$1|Une distinction a été donnée|$1 distinctions ont été données}}",
 	"topawards": "Premiers prix",
 	"topawards-edit-title": "Premiers prix - Modifier les jalons",
 	"topawards-vote-title": "Premiers prix - Voter pour les jalons",
@@ -70,5 +74,9 @@
 	"topawards-empty": "Soit il n'y a aucun prix configuré  pour cette catégorie, soit personne n'a encore obtenu ces prix.",
 	"system_gift_received_subject": "Vous avez reçu le prix $1 sur {{SITENAME}} !",
 	"system_gift_received_body": "Bonjour $1,\n\nVous avez reçu le prix $2 sur {{SITENAME}} !\n\n« $3 »\n\nCliquez sur le lien ci-dessous pour voir votre trophée\n\n$4\n\nNous espérons que l’apprécierez !\n\nMerci,\n\n\nL’équipe de {{SITENAME}}\n\n---\n\nVous ne voulez plus recevoir de courriels de notre part ?\n\nCliquez $5\net modifiez vos préférences pour désactiver les notifications par courriel.",
+	"echo-category-title-social-award": "Distinctions",
+	"echo-pref-tooltip-social-award": "Me notifier quand je reçois une distinction.",
+	"notification-social-award-rec": "Vous avez reçu une nouvelle distinction : $1.",
+	"notification-social-award-rec-bundle": "Vous avez reçu {{PLURAL:$1|une nouvelle distinction|$1 nouvelles distinctions}}.",
 	"right-awardsmanage": "Créer et modifier les prix existants"
 }

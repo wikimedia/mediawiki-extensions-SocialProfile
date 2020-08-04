@@ -5,14 +5,15 @@
 			"Liangent",
 			"Liuxinyu970226",
 			"PhiLiP",
-			"Wrightbus"
+			"Wrightbus",
+			"列维劳德"
 		]
 	},
 	"ur-already-submitted": "您的请求经已传送",
 	"ur-your-profile": "您的个人资料",
 	"ur-backlink": "&lt; 回到$1的个人资料",
-	"ur-relationship-count-foes": "$1已经有$2位仇敌了。",
-	"ur-relationship-count-friends": "$1已经有$2位朋友了。",
+	"ur-relationship-count-foes": "$1已经有$2位{{PLURAL:$2|仇敌}}了。",
+	"ur-relationship-count-friends": "$1已经有$2位{{PLURAL:$2|朋友}}了。",
 	"ur-add-friend": "加入成为朋友",
 	"ur-add-foe": "加入成为仇敌",
 	"ur-remove-relationship-friend": "从朋友清单移除",
