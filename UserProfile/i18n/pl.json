@@ -3,6 +3,7 @@
 		"authors": [
 			"Jwitos",
 			"Maikking",
+			"Mkazberuk",
 			"Rail",
 			"Sp5uhe",
 			"ToSter"
@@ -29,7 +30,7 @@
 	"user-send-gift": "Wyślij prezent",
 	"user-contributions": "Wkład użytkownika",
 	"user-stats-edits": "{{PLURAL:$1|Edycja|Edycje|Edycji}}",
-	"user-stats-votes": "{{PLURAL:$1|Głos|Głosy|Głosów}}",
+	"user-stats-votes": "Głosy",
 	"user-stats-comments": "{{PLURAL:$1|Komentarz|Komentarze|Komentarzy}}",
 	"user-stats-recruits": "{{PLURAL:$1|Zwerbowany|Zwerbowanych}}",
 	"user-stats-poll-votes": "Uzyskał {{PLURAL:$1|głos|głosów}}",

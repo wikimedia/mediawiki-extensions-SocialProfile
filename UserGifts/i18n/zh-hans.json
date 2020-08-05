@@ -3,7 +3,8 @@
 		"authors": [
 			"Hydra",
 			"Liangent",
-			"PhiLiP"
+			"PhiLiP",
+			"沈澄心"
 		]
 	},
 	"giftmanager-access": "礼品访问",
@@ -24,6 +25,7 @@
 	"g-give-list-friends-title": "在您的朋友清单中选择",
 	"g-give-separator": "或",
 	"g-give-no-user-title": "您想送礼物给哪人?",
+	"g-give-this-gift": "送出这份礼物",
 	"g-go-back": "后退",
 	"g-large": "大",
 	"g-list-title": "$1的礼物清单",
@@ -43,5 +45,6 @@
 	"g-uploadsuccess": "上载成功",
 	"g-viewgiftlist": "检视礼物清单",
 	"g-your-profile": "您的个人资料",
+	"echo-category-title-social-gift": "礼物",
 	"right-giftadmin": "创建新的和编辑现有的礼物"
 }

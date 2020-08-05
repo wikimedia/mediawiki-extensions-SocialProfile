@@ -1,12 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"Kly",
 			"Liangent",
 			"Mark85296341",
 			"Wrightbus"
 		]
 	},
 	"ga-choosefile": "選擇檔案：",
+	"ga-currentimage": "目前圖片",
 	"ga-error-message-invalid-link": "您輸入的連結是無效的。",
 	"ga-giftdesc": "禮物說明",
 	"ga-giftimage": "禮物圖片",
@@ -19,5 +21,9 @@
 	"ga-new": "新的",
 	"ga-small": "小",
 	"ga-uploadsuccess": "上傳成功",
-	"ga-viewlist": "檢視禮物清單"
+	"ga-viewlist": "檢視禮物清單",
+	"ga-remove": "移除",
+	"ga-remove-title": "移除「$1」？",
+	"topawards-votes": "投票",
+	"topawards-friends": "朋友"
 }

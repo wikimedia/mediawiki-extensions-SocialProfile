@@ -4,6 +4,7 @@
 			"Consta",
 			"Crazymadlover",
 			"Evropi",
+			"Norhorn",
 			"Omnipaedista",
 			"ZaDiak"
 		]
@@ -14,10 +15,10 @@
 	"user-gifts-title": "Δώρα",
 	"user-count-separator": "$1 από $2",
 	"user-view-all": "Προβολή όλων",
-	"user-upload-image": "Φόρτωση αρχείου",
+	"user-upload-image": "Ανέβασμα εικόνας",
 	"user-edit-this": "Επεξεργαστείτε αυτό",
 	"user-edit-profile": "Επεξεργασία προφίλ",
-	"user-upload-avatar": "Φόρτωση εικόνας",
+	"user-upload-avatar": "Ανέβασμα εικόνας προφίλ",
 	"user-watchlist": "Η λίστα παρακολούθησής μου",
 	"user-meet-people": "Γνωρίστε ανθρώπους",
 	"user-add-friend": "Προσθήκη ως φίλου",

@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Matma Rex",
+			"Mkazberuk",
 			"Sp5uhe"
 		]
 	},
@@ -10,6 +11,7 @@
 	"useractivity-all": "Pokaż wszystko",
 	"useractivity-edit": "$1 {{PLURAL:$4|{{GENDER:$6|edytował|edytowała|edytował}}|edytowali}} strony: $3",
 	"useractivity-foe": "{{PLURAL:}}$1 oraz $3 są obecnie wrogami",
+	"useractivity-filter": "Filtr",
 	"useractivity-friend": "{{PLURAL:}}$1 oraz $3 są obecnie przyjaciółmi",
 	"useractivity-gift": "$1 {{GENDER:$6|otrzymał|otrzymała|otrzymali}} prezent od $2",
 	"useractivity-group-edit": "{{GENDER:$2|{{PLURAL:$1|raz edytował|$1 razy edytował}}|{{PLURAL:$1|raz edytowała|$1 razy edytowała}}|{{PLURAL:$1|raz edytowali|$1 razy edytowali}}}}",

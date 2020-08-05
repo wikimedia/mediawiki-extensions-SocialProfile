@@ -3,7 +3,8 @@
 		"authors": [
 			"Hydra",
 			"Liangent",
-			"PhiLiP"
+			"PhiLiP",
+			"沈澄心"
 		]
 	},
 	"systemgiftmanager": "系统礼物管理",
@@ -36,5 +37,6 @@
 	"ga-small": "小",
 	"ga-threshold": "阈值",
 	"ga-uploadsuccess": "上载成功",
-	"ga-viewlist": "检视礼物清单"
+	"ga-viewlist": "检视礼物清单",
+	"echo-category-title-social-award": "奖励"
 }

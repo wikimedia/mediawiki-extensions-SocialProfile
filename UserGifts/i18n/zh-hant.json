@@ -3,7 +3,8 @@
 		"authors": [
 			"Liangent",
 			"Mark85296341",
-			"Wrightbus"
+			"Wrightbus",
+			"沈澄心"
 		]
 	},
 	"giftmanager-access": "禮品訪問",
@@ -37,5 +38,6 @@
 	"g-small": "小",
 	"g-uploadsuccess": "上傳成功",
 	"g-viewgiftlist": "檢視禮物清單",
-	"g-your-profile": "您的個人資料"
+	"g-your-profile": "您的個人資料",
+	"echo-category-title-social-gift": "禮物"
 }

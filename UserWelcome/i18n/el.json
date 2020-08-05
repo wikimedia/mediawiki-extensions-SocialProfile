@@ -2,12 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Consta",
+			"Norhorn",
 			"Omnipaedista",
 			"ZaDiak"
 		]
 	},
 	"mp-userlevels-link": "Επίπεδα χρήστη",
-	"mp-welcome-upload": "Επιφόρτωση",
+	"mp-welcome-upload": "Ανέβασμα",
 	"mp-welcome-points": "$1 {{PLURAL:$1|βαθμός|βαθμοί}}",
 	"mp-welcome-logged-in": "Γεια σου $1",
 	"mp-requests-title": "Αιτήματα",

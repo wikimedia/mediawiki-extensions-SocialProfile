@@ -11,7 +11,8 @@
 			"Wrightbus",
 			"Xiaomingyan",
 			"Yfdyh000",
-			"列维劳德"
+			"列维劳德",
+			"沈澄心"
 		]
 	},
 	"user-time-ago": "$1之前",
@@ -34,7 +35,9 @@
 	"user-send-gift": "送一个礼物",
 	"user-contributions": "贡献",
 	"user-stats-edits": "编辑",
+	"user-stats-votes": "投票",
 	"user-stats-comments": "评论",
+	"user-stats-quiz-points": "问答得分",
 	"user-friends-title": "朋友",
 	"user-foes-title": "仇敌",
 	"other-info-movies": "电影",
@@ -112,6 +115,9 @@
 	"user-profile-picture-picsize": "您的图片必须为JPEG、PNG或GIF格式，且大小必须不超过100kb。",
 	"user-profile-goback": "后退",
 	"user-profile-userlevels-link": "用户等级",
+	"user-profile-create-threshold-friend-count": "{{PLURAL:$1|$1名好友}}",
+	"user-profile-privacy-status-privacy-hidden": "隐藏",
+	"user-profile-privacy-status-privacy-foaf": "好友的好友",
 	"user-no-images": "没有上载图片",
 	"edit-profile-title": "更改您的个人资料",
 	"user-page-link": "用户页",
@@ -119,6 +125,8 @@
 	"user-wiki-link": "Wiki使用者页面",
 	"user-board-login-message": "您必须[[Special:UserLogin|登录]]以向其他用户发送消息",
 	"removeavatar": "移除头像",
+	"removeavatar-remove-my-avatar": "移除我的头像",
+	"removeavatar-remove-your-avatar": "移除你的头像",
 	"givegift": "给一个礼物",
 	"viewgifts": "查看礼物",
 	"viewsystemgifts": "查看奖励",
@@ -132,6 +140,8 @@
 	"avatarlogpagetext": "这是使用者头像上载记录",
 	"user-profile-picture-log-entry": "上载了新头像",
 	"user-profile-picture-log-delete-entry": "删除了$1的头像",
+	"user-profile-remove-avatar": "移除",
 	"right-avatarremove": "移除使用者的头像",
+	"apihelp-socialprofile-userprofileprivacy-param-tuid": "目标用户ID",
 	"random-users-avatars-title": "满足社区"
 }
