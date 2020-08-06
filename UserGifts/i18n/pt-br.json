@@ -85,6 +85,5 @@
 	"notification-social-gift-send-no-message": "$1 acabou de enviar um presente para você: $2.",
 	"notification-social-gift-send-with-message": "$1 acabou de enviar um presente para você: $2.<br /><br />''$3''",
 	"notification-social-gift-send-bundle": "{{PLURAL:$1|Uma pessoa|$1 pessoas}} enviou presentes para você.",
-	"right-giftadmin": "Crie novos e edite presentes existentes",
-	"action-giftadmin": "crie novos e edite presentes existentes"
+	"right-giftadmin": "Crie novos e edite presentes existentes"
 }

@@ -87,6 +87,5 @@
 	"notification-social-gift-send-no-message": "$1 sendte deg ei gave: $2.",
 	"notification-social-gift-send-with-message": "$1 sendte deg ei gave: $2.<br /><br />''$3''",
 	"notification-social-gift-send-bundle": "{{PLURAL:$1|Én person|$1 personer}} sendte deg gaver.",
-	"right-giftadmin": "Opprett ny og endre eksisterende gaver",
-	"action-giftadmin": "opprette nye og redigere eksisterende gaver"
+	"right-giftadmin": "Opprett ny og endre eksisterende gaver"
 }

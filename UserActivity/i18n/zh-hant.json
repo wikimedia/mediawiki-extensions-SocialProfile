@@ -1,21 +1,26 @@
 {
 	"@metadata": {
 		"authors": [
+			"Kly",
 			"Mark85296341"
 		]
 	},
 	"useractivity": "好友動態",
+	"useractivity-desc": "顯示使用者的社交動態",
 	"useractivity-award": "$1 獲得了一個獎勵",
 	"useractivity-all": "檢視全部",
 	"useractivity-edit": "$1 {{PLURAL:$4|編輯了頁面|編輯了如下頁面：}}$3",
 	"useractivity-foe": "$1 {{PLURAL:$2|現在與|現在與}} $3 成為仇人",
+	"useractivity-filter": "篩選",
 	"useractivity-friend": "$1 {{PLURAL:$2|現在與|現在與}} $3 成為好友",
 	"useractivity-gift": "$1 收到了一份來自 $2 的禮物",
 	"useractivity-group-edit": "{{PLURAL:$1|一次編輯|$1 次編輯}}",
 	"useractivity-group-comment": "{{PLURAL:$1|一個評論|$1 個評論}}",
 	"useractivity-group-user_message": "{{PLURAL:$1|一則留言|$1 則留言}}",
 	"useractivity-group-friend": "{{PLURAL:$1|一位好友|$1 位好友}}",
+	"useractivity-network-thought": "<b><a href=\"$4\">$2</a></b>對$3網絡有看法",
 	"useractivity-siteactivity": "站點動態",
 	"useractivity-title": "好友動態",
-	"useractivity-user_message": "$1 向 $3 {{PLURAL:$4|傳送了 1 則訊息|傳送了訊息}}"
+	"useractivity-user_message": "$1 向 $3 {{PLURAL:$4|傳送了 1 則訊息|傳送了訊息}}",
+	"useractivity-comment": "$1{{PLURAL:$4|在頁面留下了評論|在以下頁面留下了評論：}}$3"
 }

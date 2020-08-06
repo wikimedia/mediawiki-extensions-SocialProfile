@@ -47,7 +47,6 @@
 	"userboard_loggedout": "Du må være [[Special:UserLogin|logget inn]] for å sende beskjeder til andre brukere.",
 	"userboard_showingmessages": "Viser {{PLURAL:$4|melding $3|meldingene $2&ndash;$3}} av {{PLURAL:$1|$1 melding|$1 meldinger}}",
 	"userboard-delete-success": "Meldingen ble levert!",
-	"action-userboard-delete": "slette andres tavlemeldinger",
 	"right-userboard-delete": "Slett andres meldinger",
 	"userboard-time-days": "{{PLURAL:$1|én dag|$1 dager}}",
 	"userboard-time-hours": "{{PLURAL:$1|én time|$1 timer}}",

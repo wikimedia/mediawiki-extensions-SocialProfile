@@ -7,6 +7,7 @@
 			"IAlex",
 			"Od1n",
 			"PieRRoMaN",
+			"Thibaut120094",
 			"Verdy p"
 		]
 	},
@@ -52,7 +53,7 @@
 	"ga-remove-success-title": "Vous avez bien supprimé le cadeau \"$1\"",
 	"ga-remove-success-message": "Le cadeau \"$1\" a été supprimé.",
 	"ga-user-got-awards": "$1 a obtenu $2",
-	"ga-awards-populate-confirm": "Êtes-vous sûr d’alimenter les distinctions ?",
+	"ga-awards-populate-confirm": "Êtes-vous sûr d’alimenter les distinctions ?",
 	"ga-awards-given-out": "{{PLURAL:$1|Une distinction a été donnée|$1 distinctions ont été données}}",
 	"topawards": "Premiers prix",
 	"topawards-edit-title": "Premiers prix - Modifier les jalons",

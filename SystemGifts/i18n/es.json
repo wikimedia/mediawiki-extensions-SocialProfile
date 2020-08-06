@@ -3,6 +3,7 @@
 		"authors": [
 			"Armando-Martin",
 			"Crazymadlover",
+			"Fitoschido",
 			"Mor"
 		]
 	},
@@ -68,5 +69,6 @@
 	"topawards-empty": "No están configurados los premios para esta categoría de premio, o bien nadie ha conseguido todavía esos premios.",
 	"system_gift_received_subject": "Usted ha recibido el premio $1 en {{SITENAME}}!",
 	"system_gift_received_body": "Hola $1.\n\nAcabas de recibir el premio $2 en {{SITENAME}}!\n\n\"$3\"\n\n¡Haz click abajo para ver tu vitrina de trofeos!\n\n$4\n\n¡Esperamos que te guste!\n\nGracias,\n\n\nEl equipo de {{SITENAME}}\n\n---\n\nHey, ¿Deseas dejar de recibir correos nuestros?\n\nHaz click en $5\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
+	"echo-category-title-social-award": "Premios",
 	"right-awardsmanage": "Crear nuevo y editar premios existentes"
 }

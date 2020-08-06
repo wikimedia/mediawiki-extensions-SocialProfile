@@ -46,7 +46,6 @@
 	"userboard_loggedout": "Diğer kullanıcılara mesaj göndermek için [[Special:UserLogin|oturum açmanız]] gerekir.",
 	"userboard_showingmessages": "{{PLURAL:$1|$1 mesajdan|$1 mesajdan}} {{PLURAL:$4|$3. numaralı mesaj|$2-$3 arası mesajlar}} gösteriliyor",
 	"userboard-delete-success": "Mesaj başarıyla silindi!",
-	"action-userboard-delete": "diğerlerin pano mesajlarını sil",
 	"right-userboard-delete": "Diğerlerinin pano mesajlarını sil",
 	"userboard-time-days": "{{PLURAL:$1|bir gün|$1 gün}}",
 	"userboard-time-hours": "{{PLURAL:$1|bir saat|$1 saat}}",

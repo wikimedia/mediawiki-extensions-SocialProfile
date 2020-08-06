@@ -47,7 +47,6 @@
 	"userboard_loggedout": "Você precida estar [[Special:UserLogin|autenticado]] para enviar mensagens a outros usuários.",
 	"userboard_showingmessages": "Mostrando {{PLURAL:$4|mensagem $3|mensagens $2-$3}} de {{PLURAL:$1|$1 mensagem|$1 mensagens}}",
 	"userboard-delete-success": "A mensagem foi excluída com sucesso!",
-	"action-userboard-delete": "excluir mensagens do mural de outras pessoas",
 	"right-userboard-delete": "Eliminar mensagens no mural de outros",
 	"userboard-time-days": "{{PLURAL:$1|um dia|$1 dias}}",
 	"userboard-time-hours": "{{PLURAL:$1|uma hora|$1 horas}}",

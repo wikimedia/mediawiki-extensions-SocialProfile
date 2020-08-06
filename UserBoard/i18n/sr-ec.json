@@ -32,7 +32,6 @@
 	"userboard_sendbutton": "пошаљи",
 	"userboard_loggedout": "Морате се [[Special:UserLogin|пријавити]] да бисте слали поруке другим корисницима.",
 	"userboard-delete-success": "Порука је избрисана.",
-	"action-userboard-delete": "бришете туђе поруке на табли",
 	"userboard-time-days": "{{PLURAL:$1|један дан|$1 дана|$1 дана}}",
 	"userboard-time-hours": "{{PLURAL:$1|један сат|$1 сата|$1 сати}}",
 	"userboard-time-minutes": "{{PLURAL:$1|једна минута|$1 минуте|$1 минуте|$1 минуте|$1 минута}}",
