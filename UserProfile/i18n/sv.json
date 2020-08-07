@@ -7,6 +7,7 @@
 			"M.M.S.",
 			"Najami",
 			"Per",
+			"Sabelöga",
 			"WikiPhoenix"
 		]
 	},
@@ -172,7 +173,7 @@
 	"user-profile-create-threshold-monthly-wins": "{{PLURAL:$1|en månadsvinst|$1 månadsvinster}}",
 	"user-profile-create-threshold-poll-votes": "{{PLURAL:$1|en omröstningsröst|$1 omröstningsröster}}",
 	"user-profile-create-threshold-picture-game-votes": "{{PLURAL:$1|en bildspelsröst|$1 bildspelsröster}}",
-	"user-profile-create-threshold-quiz-created": "{{PLURAL:$1|en skapad frågesport|$1 frågesporter}}",
+	"user-profile-create-threshold-quiz-created": "{{PLURAL:$1|en skapad frågesport|$1 skapade frågesporter}}",
 	"user-profile-create-threshold-quiz-answered": "{{PLURAL:$1|en besvarad frågesport|$1 besvarade frågesporter}}",
 	"user-profile-privacy-status-privacy-public": "offentlig",
 	"user-profile-privacy-status-privacy-hidden": "dold",

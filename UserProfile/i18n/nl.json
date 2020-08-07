@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Mainframe98",
 			"McDutchie",
 			"Meursault2004",
 			"SPQRobin",
@@ -159,6 +160,7 @@
 	"user-profile-picture-picsize": "Uw afbeelding moet van het type jpeg, png of gif zijn en kleiner zijn dan 100kb.",
 	"user-profile-goback": "Terug",
 	"user-profile-userlevels-link": "Gebruikersniveaus",
+	"user-profile-privacy-status-privacy-hidden": "verborgen",
 	"user-no-images": "Geen afbeeldingen toegevoegd",
 	"edit-profile-title": "Uw profiel bewerken",
 	"edit-profiles-title": "Profielen bewerken",

@@ -4,7 +4,8 @@
 			"Gabbe.g",
 			"M.M.S.",
 			"Najami",
-			"Per"
+			"Per",
+			"Sabelöga"
 		]
 	},
 	"viewrelationships": "Visa relationer",
@@ -63,7 +64,7 @@
 	"ur-requests-message-friend": "[[User:$1|$1]] vill bli din vän.",
 	"ur-accept": "Acceptera",
 	"ur-reject": "Avslå",
-	"ur-no-requests-message": "Du har inga vän- eller fiendeefterfrågningar.",
+	"ur-no-requests-message": "Du har inga vän- eller fiendeförfrågningar.",
 	"ur-requests-added-message-foe": "Du har lagt till $1 som din fiende.",
 	"ur-requests-added-message-friend": "Du har lagt till $1 som din vän.",
 	"ur-requests-reject-message-friend": "Du har avvisat $1 som din vän.",

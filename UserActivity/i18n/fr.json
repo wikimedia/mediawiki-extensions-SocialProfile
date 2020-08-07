@@ -8,10 +8,12 @@
 		]
 	},
 	"useractivity": "Activité des amis",
+	"useractivity-desc": "Montre l’activité sociale des utilisateurs",
 	"useractivity-award": "$1 a reçu une récompense",
 	"useractivity-all": "Tout voir",
 	"useractivity-edit": "$1 a modifié {{PLURAL:$4|la page|les pages suivantes :}} $3",
 	"useractivity-foe": "$1 {{PLURAL:$2|est maintenant ennemi|sont maintenant ennemis}} avec $3",
+	"useractivity-filter": "Filtrer",
 	"useractivity-friend": "$1 {{PLURAL:$2|est maintenant ami|sont maintenant amis}} avec $3",
 	"useractivity-gift": "$1 a reçu un cadeau de la part de $2",
 	"useractivity-group-edit": "$1 {{PLURAL:$1|modification|modifications}}",
