@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Per"
+			"Per",
+			"Sabelöga"
 		]
 	},
 	"systemgiftmanager": "Systempresentförvaltare",
@@ -33,5 +34,6 @@
 	"ga-threshold": "tröskel",
 	"ga-title": "$1s utmärkelser",
 	"ga-viewlist": "Visa presentlista",
+	"ga-user-got-awards": "$1 fick $2",
 	"right-awardsmanage": "Skapa nya och ändra existerande utmärkelser"
 }

@@ -73,5 +73,6 @@
 	"friend_accept_subject": "$1 huet är Ufro als Frënd op {{SITENAME}} ugeholl!",
 	"foe_accept_subject": "Et geet lass! $1 huet Iech als Géigner op {{SITENAME}} akzeptéiert!",
 	"friend_removed_subject": "Oh nee! $1 huet Iech als Frënd op {{SITENAME}} ewechgeholl!",
-	"foe_removed_subject": "Hey! $1 huet Iech als Géigner op {{SITENAME}} ewechgeholl!"
+	"foe_removed_subject": "Hey! $1 huet Iech als Géigner op {{SITENAME}} ewechgeholl!",
+	"notification-social-rel-add-friend-no-message": "$1 wëllt Äre Frënd sinn"
 }

@@ -82,5 +82,9 @@
 	"friend_removed_subject": "Å Nej! $1 har tagit bort dig som vän på {{SITENAME}}!",
 	"friend_removed_body": "Hej, $1\n\n$2 har tagit bort dig som vän på {{SITENAME}}.\n\n---\n\nVill du inte mottaga mer e-post från oss?\n\nKlicka $4 och ändra dina inställningar för att stänga av e-postmeddelanden.",
 	"foe_removed_subject": "Hurra! $1 har tagit bort dig som fiende på {{SITENAME}}!",
-	"foe_removed_body": "Hej, $1.\n\n$2 har tagit bort dig som fiende på {{SITENAME}}.\n\nKanske ni två är på väg att bli vänner?\n\n---\n\nVill du inte motta mer e-post från oss?\n\nKlicka $4 och ändra dina inställningarna för att slå av e-postmeddelanden."
+	"foe_removed_body": "Hej, $1.\n\n$2 har tagit bort dig som fiende på {{SITENAME}}.\n\nKanske ni två är på väg att bli vänner?\n\nTack,\n\n\n{{SITENAME}}-teamet\n\n---\n\nVill du inte ta emot mer e-post från oss?\n\nKlicka $4 och ändra dina inställningarna för att slå av e-postmeddelanden.",
+	"notification-social-rel-add-foe-message": "$1 vill bli din fiende.<br /><br />''$2''",
+	"notification-social-rel-add-foe-no-message": "$1 vill bli din fiende.",
+	"notification-social-rel-accept-friend": "Du blev vän med $1.",
+	"notification-social-rel-accept-foe": "Du blev fiende med $1."
 }

@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Akmaie Ajam",
 			"Bennylin",
 			"Farras"
 		]
@@ -48,7 +49,10 @@
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1||}}Hadiah yang diterima",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1||}}Hadiah yang diberikan",
 	"right-updatepoints": "Mutakhirkan penghitungan suntingan",
+	"action-updatepoints": "perbarui jumlah edit",
 	"level-advanced-to": "naik ke level <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "Anda sekarang adalah \"$1\" di {{SITENAME}}!",
-	"level-advance-body": "Halo $1.\n\nSekarang Anda adalah \"$2\" di {{SITENAME}}!\n\nSelamat,\n\nTim {{SITENAME}}\n\n---\nMau berhenti mendapatkan pesan ini?\n\nKlik $3\ndan ganti seting Anda untuk mematikan pemberitahuan lewat surel."
+	"level-advance-body": "Halo $1.\n\nSekarang Anda adalah \"$2\" di {{SITENAME}}!\n\nSelamat,\n\nTim {{SITENAME}}\n\n---\nMau berhenti mendapatkan pesan ini?\n\nKlik $3\ndan ganti seting Anda untuk mematikan pemberitahuan lewat surel.",
+	"echo-pref-tooltip-social-level-up": "Beri tahu saya jika saya naik ke level baru.",
+	"notification-social-level-up": "Anda naik level menjadi \"$1\"!"
 }

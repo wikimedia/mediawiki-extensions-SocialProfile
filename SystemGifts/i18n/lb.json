@@ -40,5 +40,7 @@
 	"ga-uploadsuccess": "Eroplueden ofgeschloss",
 	"ga-viewlist": "Lëscht vun de Cadeaue kucken",
 	"system_gift_received_subject": "Dir hutt d'$1-Auszeechnung op {{SITENAME}}!",
+	"echo-category-title-social-award": "Auszeechnungen",
+	"echo-pref-tooltip-social-award": "Mech informéiere wann ech eng Auszeechnung kréien.",
 	"right-awardsmanage": "Nei Auszeechnungen uleeën a bestoender änneren"
 }

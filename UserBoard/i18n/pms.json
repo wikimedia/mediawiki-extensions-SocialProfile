@@ -38,7 +38,7 @@
 	"userboard_messagetype": "Tipo ëd mëssagi",
 	"userboard_nomessages": "Gnun mëssagi.",
 	"userboard_sendbutton": "manda",
-	"userboard_loggedout": "A dev esse [[Special:UserLogin|intrà ant ël sistema]] për spedì dij mëssagi a d'àutr utent.",
+	"userboard_loggedout": "A dev esse [[Special:UserLogin|intrà ant ël sistema]] për spedì dij mëssagi a d'àutri utent.",
 	"userboard_showingmessages": "Vision {{PLURAL:$4|dël mëssagi $3|dij mëssagi $2-$3}} ëd {{PLURAL:$1|$1 mëssagi|$1 mëssagi}}",
 	"right-userboard-delete": "Scancela ij mëssagi d'àutri utent",
 	"userboard-time-days": "{{PLURAL:$1|un di|$1 di}}",

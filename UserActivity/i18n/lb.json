@@ -9,6 +9,7 @@
 	"useractivity-all": "Alles weisen",
 	"useractivity-edit": "$1 huet dës {{PLURAL:$4|Säit|Säite}} geännert: $3",
 	"useractivity-foe": "$1 {{PLURAL:$2|ass elo e Feind|sinn elo Feinde}} vum $3",
+	"useractivity-filter": "Filteren",
 	"useractivity-friend": "$1 {{PLURAL:$2|ass elo e Frënd vum|sinn elo Frënn vum}} $3",
 	"useractivity-gift": "$1 huet e Cadeau vum $2 kritt",
 	"useractivity-group-edit": "{{PLURAL:$1|eng Ännerung|$1 Ännerungen}}",

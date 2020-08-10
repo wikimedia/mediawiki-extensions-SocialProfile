@@ -2,13 +2,16 @@
 	"@metadata": {
 		"authors": [
 			"Crochet.david",
+			"Gomoko",
 			"IAlex",
 			"Od1n",
 			"PieRRoMaN",
+			"Thibaut120094",
 			"Urhixidur",
 			"Verdy p"
 		]
 	},
+	"usergifts-desc": "Permet d’envoyer, recevoir, créer et supprimer des cadeaux utilisateur",
 	"giftmanager": "Gestionnaire de cadeaux",
 	"giftmanager-addgift": "+ Ajouter un cadeau",
 	"giftmanager-access": "accès au cadeau",
@@ -34,7 +37,7 @@
 	"g-error-do-not-own": "Vous ne possédez pas ce cadeau.",
 	"g-error-message-blocked": "Vous êtes bloqué{{GENDER:||e|(e)}} et ne pouvez donc pas donner de cadeaux",
 	"g-error-message-invalid-link": "Le lien que vous avez fourni est invalide.",
-	"g-error-message-login": "Vous devez vous connecter pour donner des cadeaux",
+	"g-error-message-login": "Vous devez [[Special:UserLogin|vous connecter]] pour donner des cadeaux.",
 	"g-error-message-no-user": "L’utilisateur que vous essayez de voir n’existe pas.",
 	"g-error-message-to-yourself": "Vous ne pouvez pas vous donner un cadeau à vous-même.",
 	"g-error-title": "Oups, vous avez pris un mauvais virage !",
@@ -54,6 +57,7 @@
 	"g-give-no-user-title": "À qui voulez-vous donner un cadeau ?",
 	"g-give-to-user-title": "Envoyer le cadeau « $1 » à $2",
 	"g-give-to-user-message": "Envie de donner [[Special:GiveGift/$1|un cadeau différent]] à $1 ?",
+	"g-give-this-gift": "Donner ce cadeau",
 	"g-go-back": "Revenir",
 	"g-imagesbelow": "Les images qui seront utilisées sur le site sont affichées ci-dessous",
 	"g-large": "Grand",
@@ -71,6 +75,7 @@
 	"g-remove-success-message": "Le cadeau « $1 » a été enlevé.",
 	"g-remove-title": "Enlever « $1 » ?",
 	"g-send-gift": "Envoyer le cadeau",
+	"g-select-gift": "Veuillez sélectionner un cadeau.",
 	"g-select-a-friend": "sélectionnez un ami",
 	"g-sent-title": "Vous avez envoyé le cadeau à $1",
 	"g-sent-message": "Vous avez envoyé le cadeau suivant à $1.",
@@ -80,6 +85,12 @@
 	"g-viewgiftlist": "Voir la liste des cadeaux",
 	"g-your-profile": "Votre profil",
 	"gift_received_subject": "$1 vous a envoyé le cadeau $2 sur {{SITENAME}} !",
-	"gift_received_body": "Bonjour $1,\n\n$2 vient de vous envoyer le cadeau $3 sur {{SITENAME}}.\n\nPour lire la note $2 qui vous est adressée et voir votre cadeau, cliquez sur le lien ci-dessous :\n\n$4\n\nNous espérons que vous l’apprécierez !\n\nMerci,\n\n\nL’équipe de {{SITENAME}}\n\n---\n\nVous ne voulez plus recevoir de courriels de notre part ?\n\nCliquez $5\net modifiez vos préférences pour désactiver les notifications par courriel.",
+	"gift_received_body_html": "Bonjour $1.\n\n$2 vient de vous envoyer un cadeau $3 sur {{SITENAME}}.\n\nVoulez-vous lire la note que $2 vous a laissé et voir vos cadeaux ? Cliquez sur le lien ci-dessous :\n\n[[Special:ViewGifts]]\n\nNous espérons que vous l’apprécierez !\n\nMerci,\n\n\nL’équipe {{SITENAME}}\n\n---\n\nVous ne voulez plus recevoir de courriels de notre part ?\n\nCliquez sur [[Special:UpdateProfile]]\net modifiez vos paramètres pour désactiver les notifications de courriel.",
+	"gift_received_body": "Bonjour $1,\n\n$2 vient de vous envoyer le cadeau $3 sur {{SITENAME}}.\n\nPour lire la note $2 qui vous est adressée et voir votre cadeau, cliquez sur le lien ci-dessous :\n\n$4\n\nNous espérons que vous l’apprécierez !\n\nMerci,\n\n\nL’équipe de {{SITENAME}}\n\n---\n\nVous ne voulez plus recevoir de courriels de notre part ?\n\nCliquez sur $5\net modifiez vos préférences pour désactiver les notifications par courriel.",
+	"echo-category-title-social-gift": "Cadeaux",
+	"echo-pref-tooltip-social-gift": "Me notifier quand quelqu’un m’envoie un cadeau.",
+	"notification-social-gift-send-no-message": "$1 vient de vous envoyer un cadeau : $2.",
+	"notification-social-gift-send-with-message": "$1 vient de vous envoyer un cadeau : $2.<br /><br />''$3''",
+	"notification-social-gift-send-bundle": "{{PLURAL:$1|Une personne vous a|$1 personnes vous ont}} envoyé des cadeaux.",
 	"right-giftadmin": "Créer ou modifier des cadeaux"
 }

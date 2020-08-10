@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ibrahim"
+			"Ibrahim",
+			"ToJack"
 		]
 	},
 	"user-time-ago": "пеш",
@@ -94,6 +95,7 @@
 	"user-profile-picture-currentimage": "Акси кунунӣ",
 	"user-profile-picture-choosepicture": "Акси худро интихоб кунед",
 	"user-profile-picture-picsize": "Акси шумо бояд jpeg, png, ё gif бошад ва бояд аз рӯи андоза хурдтар аз 100kb бошад.",
+	"user-profile-create-threshold-friend-count": "{{PLURAL:$1|рафиқ}}",
 	"user-no-images": "Ҳеҷ аксе боргузорӣ нашудааст",
 	"edit-profile-title": "Намояи худро вироиш кунед",
 	"user-page-link": "Саҳифаи Корбарӣ",

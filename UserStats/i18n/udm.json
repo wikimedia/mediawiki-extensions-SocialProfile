@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kotwys"
+		]
+	},
+	"top-fans-points": "«$1» балл",
+	"top-fans-points-tag": "«+$1» балл",
+	"level-advance-body": "Ӟечбур, $1.\n\nТӥ табере «$2» {{SITENAME}}-ын!\n\nӞечкыласьком,\n\n{{SITENAME}}-лэн командаез\n\n---\nМилесьтым гожтэтъёсме басьтэмды уг ни пот?\n\n$3 зӥбе\nно пуктэтъёсады почта пыр ивортонъёсты кысэ.",
+	"echo-pref-tooltip-social-level-up": "Выль ӵошталае потыкум монэ ивортоно.",
+	"notification-social-level-up": "«$1» ӵошталае потӥллямды!"
+}

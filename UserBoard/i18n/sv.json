@@ -5,6 +5,7 @@
 			"Jon Harald Søby",
 			"M.M.S.",
 			"Najami",
+			"Sabelöga",
 			"WikiPhoenix"
 		]
 	},
@@ -22,6 +23,8 @@
 	"boardsendbutton": "Sänd meddelande",
 	"boardnofriends": "Du har inga vänner att sända meddelandet till!",
 	"messagesentsuccess": "Ditt meddelande har skickats",
+	"boardblast-js-sending": "Skickar meddelanden...",
+	"boardblast-error-missing-user": "Välj minst en person",
 	"userboard": "Användardiskussion",
 	"userboard_board-to-board": "Användardiskussion",
 	"userboard_noexist": "Användaren du prövar att se finns inte.",
@@ -49,5 +52,6 @@
 	"userboard-time-minutes": "{{PLURAL:$1|en minut|$1 minuter}}",
 	"userboard-time-seconds": "{{PLURAL:$1|en sekund|$1 sekunder}}",
 	"message_received_subject": "$1 har skrivit på din diskussionssida på {{SITENAME}}",
-	"message_received_body": "Hej, $1.\n\n$2 har skrivit på din diskussionssida på {{SITENAME}}.\n\nFölj länken nedan för att se din diskussionssida.\n\n$3\n\n---\n\nVill du inte ta emot fler e-postmeddelanden från oss?\n\nKlicka på $4 och ändra dina inställningar för att slå av e-postbesked."
+	"message_received_body": "Hej, $1.\n\n$2 har skrivit på din diskussionssida på {{SITENAME}}.\n\nFölj länken nedan för att se din diskussionssida.\n\n$3\n\n---\n\nVill du inte ta emot fler e-postmeddelanden från oss?\n\nKlicka på $4 och ändra dina inställningar för att slå av e-postbesked.",
+	"notification-social-msg-send-bundle": "{{PLURAL:$1|Ett meddelande|$1 meddelanden|100=99+ meddelanden}} har lämnats på den diskussion."
 }

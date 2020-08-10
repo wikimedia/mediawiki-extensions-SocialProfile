@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ykhwong"
+		]
+	},
+	"boardblast-js-sending": "메시지를 보내는 중...",
+	"boardblast-error-missing-message": "메시지를 입력해 주십시오",
+	"boardblast-error-missing-user": "적어도 한 명을 선택해 주십시오",
+	"userboard-delete-success": "메시지가 성공적으로 삭제되었습니다!"
+}

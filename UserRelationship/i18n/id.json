@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Akmaie Ajam",
 			"Bennylin",
 			"Farras",
 			"Irwangatot"
@@ -80,5 +81,11 @@
 	"friend_removed_subject": "Oh tidak! $1 telah menghapus Anda sebagai teman di {{SITENAME}}!",
 	"friend_removed_body": "Hai $1.\n\n$2 telah menghapus Anda sebagai teman di {{SITENAME}}!\n\nTerima kasih\n\n---\n\nHei, ingin berhenti menerima surel dari kami?\n\nKlik $4\ndan ubah pengaturan Anda untuk menghentikan pemberitahuan surel.",
 	"foe_removed_subject": "Akhirnya! $1 telah menghapus Anda sebagai musuh di {{SITENAME}}!",
-	"foe_removed_body": "Hai $1.\n\n$2 telah menghapus Anda sebagai musuh di {{SITENAME}}!\n\nMungkin kalian berdua akan segera berteman?\n\nTerima kasih\n\n---\n\nHei, ingin berhenti menerima surel dari kami?\n\nKlik $4\ndan ubah pengaturan Anda untuk menghentikan pemberitahuan surel."
+	"foe_removed_body_html": "Hai $1.\n\n$2 telah menghapus Anda sebagai musuh di {{SITENAME}}!\n\nMungkin kalian berdua sedang dalam proses menjadi teman?\n\nTerima kasih,\n\n\nTim {{SITENAME}}\n\n---\n\nIngin berhenti menerima email dari kami?\n\nKlik [[Special: UpdateProfile]]\ndan ubah pengaturan Anda untuk menonaktifkan pemberitahuan email.",
+	"foe_removed_body": "Hai $1.\n\n$2 telah menghapus Anda sebagai musuh di {{SITENAME}}!\n\nMungkin kalian berdua akan segera berteman?\n\nTerima kasih\n\n---\n\nHei, ingin berhenti menerima surel dari kami?\n\nKlik $4\ndan ubah pengaturan Anda untuk menghentikan pemberitahuan surel.",
+	"echo-pref-tooltip-social-rel": "Beri tahu saya jika seseorang mengirimi saya permintaan hubungan pengguna (permintaan teman atau musuh).",
+	"notification-social-rel-add-friend-message": "$1 mau menjadi temanmu.<br /><br />''$2''",
+	"notification-social-rel-add-foe-message": "$1 ingin menjadi musuhmu. <br /> <br /> '' $2 ''",
+	"notification-social-rel-add-friend-no-message": "$1 mau menjadi temanmu.",
+	"notification-social-rel-accept-foe": "Anda menjadi musuh dengan $1."
 }

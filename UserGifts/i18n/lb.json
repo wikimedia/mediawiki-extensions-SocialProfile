@@ -50,6 +50,7 @@
 	"g-give-no-user-title": "Wiem wëllt Dir e Cadeau maachen?",
 	"g-give-to-user-title": "Dem $2 de Cadeau \"$1\" maachen",
 	"g-give-to-user-message": "Wëllt Dir dem $1 en [[Special:GiveGift/$1|anere Cadeau]] maachen?",
+	"g-give-this-gift": "Dëse Kaddo maachen",
 	"g-go-back": "Zréck goen",
 	"g-imagesbelow": "Ënndrënner sinn Är Biller déi op dësem Site benotzt gi werten",
 	"g-large": "Grouss",
@@ -77,5 +78,7 @@
 	"g-your-profile": "Äre Profil",
 	"gift_received_subject": "De Benotzer $1 huet Iech de Cadeau $2 op {{SITENAME}} gemaach!",
 	"gift_received_body": "Salut $1.\n\nDe Benotzer $2 Huet Iech eclo grad de Cadeau $3 op {{SITENAME}} geschéckt.\n\nWëllt Dir de Message den de Benotzer $2 Iech hannerlooss huet and Äre Cadeau gesinn?  Da klickt op de lInk hei ënnendrënner:\n\n$4\n\nMir hoffen e gefällt Iech!\n\nMerci,\n\n\nD'Equipe vu(n) {{SITENAME}}\n\n---\n\nWëllt Dir keng E-Maile méi vun eis kréien?\n\nKlickt op $5\nan ännert Är Astellunge fir d'E-Mail-Notifikatioun auszeschalten.",
+	"echo-category-title-social-gift": "Kaddoen",
+	"echo-pref-tooltip-social-gift": "Mech informéiere wann ee mir e Kaddo schéckt.",
 	"right-giftadmin": "Nei Cadeauen uleeën a bestoender änneren"
 }

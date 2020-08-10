@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Dafer45",
-			"Per"
+			"Per",
+			"Sabelöga"
 		]
 	},
 	"giftmanager": "Presenthanterare",
@@ -30,7 +31,7 @@
 	"g-error-do-not-own": "Du äger inte denna present.",
 	"g-error-message-blocked": "Du är för tillfället blockerad och kan inte ta emot presenter",
 	"g-error-message-invalid-link": "Länken du angav är ogiltig.",
-	"g-error-message-login": "Du måste vara inloggad för att ge presenter",
+	"g-error-message-login": "Du måste [[Special:UserLogin|logga in]] för att ge presenter",
 	"g-error-message-no-user": "Användaren du försöker titta på finns inte.",
 	"g-error-message-to-yourself": "Du kan inte ge en present till dig själv.",
 	"g-error-title": "Oj, du har hamnat fel!",
@@ -49,6 +50,7 @@
 	"g-give-no-user-title": "Vem vill du ge en present till?",
 	"g-give-to-user-title": "Skicka presenten \"$1\" till $2",
 	"g-give-to-user-message": "Vill du ge $1 en [[Special:GiveGift/$1|annan present]]?",
+	"g-give-this-gift": "Ge den här gåvan",
 	"g-go-back": "Gå tillbaka",
 	"g-large": "Stor",
 	"g-list-title": "$1s presentlista",
@@ -64,6 +66,7 @@
 	"g-remove-success-message": "Presenten \"$1\" har tagits bort.",
 	"g-remove-title": "Ta bort \"$1\"?",
 	"g-send-gift": "Skicka present",
+	"g-select-gift": "Välj en gåva.",
 	"g-select-a-friend": "välj en vän",
 	"g-sent-title": "Du har skickat en present till $1",
 	"g-sent-message": "Du har skickat följande present till $1.",
@@ -73,5 +76,8 @@
 	"g-viewgiftlist": "Visa presentlista",
 	"g-your-profile": "Din profil",
 	"gift_received_subject": "$1 har skickat presenten $2 till dig på {{SITENAME}}!",
+	"echo-category-title-social-gift": "Gåvor",
+	"notification-social-gift-send-no-message": "$1 skickade precis en gåva till dig: $2.",
+	"notification-social-gift-send-bundle": "{{PLURAL:$1|En person|$1 personer}} har skickat gåvor till dig.",
 	"right-giftadmin": "Skapa nya och ändra existerande presenter"
 }

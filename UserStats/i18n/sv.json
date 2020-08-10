@@ -4,6 +4,7 @@
 			"Boivie",
 			"Najami",
 			"Per",
+			"Sabelöga",
 			"WikiPhoenix"
 		]
 	},
@@ -40,7 +41,7 @@
 	"action-updatepoints": "uppdatera antal redigeringar",
 	"level-advanced-to": "avancerat till nivå <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "Du är nu en \"$1\" på {{SITENAME}}!",
-	"level-advance-body": "Hej $1!\n\nDu är nu en \"$2\" på {{SITENAME}}!\n\nGrattis,\n\n{{SITENAME}}-teamet\n\n---\nFörresten, vill du slippa få epost från oss?\n\nKlicka $3\noch ändra dina inställningar för att avaktivera epost-meddelanden.",
+	"level-advance-body": "Hej $1!\n\nDu är nu en \"$2\" på {{SITENAME}}!\n\nGrattis,\n\n{{SITENAME}}-teamet\n\n---\nFörresten, vill du slippa få e-post från oss?\n\nKlicka $3\noch ändra dina inställningar för att avaktivera e-postmeddelanden.",
 	"echo-category-title-social-level-up": "Nivå upp",
 	"echo-pref-tooltip-social-level-up": "Meddela mig när jag når en ny nivå.",
 	"notification-social-level-up": "Du har nått nivå \"$1\"!",

@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kotwys"
+		]
+	},
+	"message_received_body": "Ӟечбур, $1.\n\n$2 али гинэ {{SITENAME}}-ысь пулады гожтэм!\n\nПулдэс учкон понна улӥын зӥбе!\n\n$3\n\n---\n\nМилесьтым гожтэтъёсме басьтэмды уг ни пот?\n\n$4 зӥбе\nно пуктэтъёсады почта пыр ивортонъёсты кысэ.",
+	"notification-social-msg-send": "$1 али гинэ пыриськись пулады гожтэт кельтэм.<br /><br />«$2»",
+	"notification-social-msg-send-bundle": "{{PLURAL:$1|Одӥг гожтэт|$1 гожтэт|100=99+ гожтэт}} пыриськись пулады кельтэмын вал.",
+	"apihelp-socialprofile-send-message-param-message": "Ыстоно гожтэтлэн urlencode карем версиез.",
+	"apihelp-socialprofile-send-message-param-type": "Ивортонлэн типез: 0 — шара ивортон, 1 — нимаз ивортон."
+}

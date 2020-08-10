@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Per",
+			"Sabelöga",
 			"WikiPhoenix"
 		]
 	},
@@ -10,6 +11,7 @@
 	"useractivity-all": "Visa alla",
 	"useractivity-edit": "$1 {{PLURAL:$4|redigerade sidan|redigerade följande sidor:}} $3",
 	"useractivity-foe": "$1 {{PLURAL:$2|är nu en fiende till|är nu fiender till}} $3",
+	"useractivity-filter": "Filter",
 	"useractivity-friend": "$1 {{PLURAL:$2|är nu en vän med|är nu vänner med}} $3",
 	"useractivity-gift": "$1 fick en present från $2",
 	"useractivity-group-edit": "{{PLURAL:$1|en redigering|$1 redigeringar}}",
