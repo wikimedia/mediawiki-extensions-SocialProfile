@@ -30,7 +30,7 @@
 	"user-stats-comments": "{{PLURAL:$1|Bemierkung|Bemierkungen}}",
 	"user-stats-poll-votes": "Walen $1 {{PLURAL:$1|Stëmm|Stëmmen}}",
 	"user-stats-picture-game-votes": "Stëmme fir d'Bildspill",
-	"user-stats-quiz-points": "{{PLURAL:$1|Punkt|Punkten}} am Quiz",
+	"user-stats-quiz-points": "Quizpunkten",
 	"user-stats-pick-points": "{{PLURAL:$1|Punkt|Punkte}} fonnt",
 	"casual-game-quiz": "Quiz",
 	"casual-game-poll": "Ëmfro",

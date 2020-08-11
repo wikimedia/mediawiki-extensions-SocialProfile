@@ -229,8 +229,8 @@
 	"action-editothersprofiles": "mettre à jour les profils sociaux d’autres utilisateurs",
 	"right-populate-user-profiles": "Permet de remplir les profils des autres utilisateurs pour les wikis existants",
 	"action-populate-user-profiles": "remplir les profils des autres utilisateurs",
-	"apihelp-socialprofile-userprofileprivacy-description": "Module API pour définir la visibilité (« confidentialité ») d’un champ de profil",
-	"apihelp-socialprofile-userprofileprivacy-summary": "Module API pour fixer la visibilité (« confidentialité ») d’un champ de profil",
-	"apihelp-socialprofile-userprofileprivacy-param-method": "Action (« get » ou « set »)",
+	"apihelp-socialprofile-userprofileprivacy-description": "Module API pour définir la visibilité (« confidentialité ») d’un champ de profil",
+	"apihelp-socialprofile-userprofileprivacy-summary": "Module API pour fixer la visibilité (« confidentialité ») d’un champ de profil",
+	"apihelp-socialprofile-userprofileprivacy-param-method": "Action (« get » ou « set »)",
 	"random-users-avatars-title": "Faites connaissance avec la communauté"
 }

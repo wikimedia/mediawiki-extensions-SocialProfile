@@ -18,5 +18,6 @@
 	"mp-request-new-message": "新訊息",
 	"mp-request-new-award": "$1 個新{{PLURAL:$1|獎項}}",
 	"mp-request-new-gift": "{{PLURAL:$1件|新禮物}}",
+	"mp-request-new-foe": "$1 新{{PLURAL:$1|對手}}",
 	"mp-request-new-friend": "{{PLURAL:$1名|新朋友}}"
 }

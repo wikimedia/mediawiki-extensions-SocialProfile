@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Kareyac",
 			"Togaed"
 		]
 	},
-	"user-profile-personal-name": "Անուն"
+	"user-profile-personal-name": "Անուն",
+	"user-profile-remove-avatar": "հեռացնել"
 }
