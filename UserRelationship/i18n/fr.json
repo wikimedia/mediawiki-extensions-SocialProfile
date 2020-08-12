@@ -6,6 +6,7 @@
 			"IAlex",
 			"McDutchie",
 			"Verdy p",
+			"Wladek92",
 			"Zetud"
 		]
 	},
@@ -65,7 +66,7 @@
 	"ur-requests-message-friend": "[[User:$1|$1]] veut être votre ami.",
 	"ur-accept": "Accepter",
 	"ur-reject": "Rejeter",
-	"ur-no-requests-message": "Vous n’avez aucune requête en ami ou ennemi.",
+	"ur-no-requests-message": "Vous n’avez aucune demande en ami ou en ennemi.",
 	"ur-requests-added-message-foe": "Vous avez ajouté $1 en tant qu’ennemi.",
 	"ur-requests-added-message-friend": "Vous avez ajouté $1 en tant qu’ami.",
 	"ur-requests-reject-message-friend": "Vous avez refusé $1 en tant qu’ami.",

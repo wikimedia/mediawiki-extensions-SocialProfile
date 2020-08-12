@@ -232,5 +232,6 @@
 	"apihelp-socialprofile-userprofileprivacy-description": "Module API pour définir la visibilité (« confidentialité ») d’un champ de profil",
 	"apihelp-socialprofile-userprofileprivacy-summary": "Module API pour fixer la visibilité (« confidentialité ») d’un champ de profil",
 	"apihelp-socialprofile-userprofileprivacy-param-method": "Action (« get » ou « set »)",
+	"apihelp-smpuserprofiletype-param-do": "Action à réaliser (get ou set)",
 	"random-users-avatars-title": "Faites connaissance avec la communauté"
 }

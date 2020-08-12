@@ -39,6 +39,7 @@
 	"userboard_sendbutton": "geschéckt",
 	"userboard_loggedout": "Dir musst [[Special:UserLogin|ageloggt si]] fir anere Benotzer e Message ze schécken.",
 	"userboard_showingmessages": "Weis {{PLURAL:$4|Noriicht $3|Noriichten $2-$3}} vu(n) {{PLURAL:$1|$1 Noriicht|$1 Noriichten}}",
+	"userboard-delete-success": "De Message gouf geläscht!",
 	"right-userboard-delete": "Noriichten vun Aneren um Panneau läschen",
 	"userboard-time-days": "{{PLURAL:$1|een Dag|$1 Deeg}}",
 	"userboard-time-hours": "{{PLURAL:$1|eng Stonn|$1 Stonnen}}",
