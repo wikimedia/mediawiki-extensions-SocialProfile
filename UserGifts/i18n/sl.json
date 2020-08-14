@@ -30,7 +30,7 @@
 	"g-error-do-not-own": "Ne lastite si tega darila.",
 	"g-error-message-blocked": "Trenutno ste blokirani in ne morete podarjati daril",
 	"g-error-message-invalid-link": "Povezava, ki ste jo vnesli, je neveljavna.",
-	"g-error-message-login": "Za podarjanje daril se morate prijaviti",
+	"g-error-message-login": "Za podarjanje daril se morate [[Special:UserLogin|prijaviti]].",
 	"g-error-message-no-user": "Uporabnik, ki si ga želite ogledati, ne obstaja.",
 	"g-error-message-to-yourself": "Darila ne morete podariti sebi.",
 	"g-error-title": "Ups, ubrali ste napačno smer!",
@@ -76,6 +76,6 @@
 	"g-viewgiftlist": "Ogled seznama daril",
 	"g-your-profile": "Vaš profil",
 	"gift_received_subject": "$1 vam je poslal darilo $2 na {{GRAMMAR:dative|{{SITENAME}}}}!",
-	"gift_received_body": "$1, pozdravljen(-a).\n\n$2 vam je pravkar poslal(-a) darilo $3 na {{SITENAME}}.\n\nŽelite prebrati sporočilo, ki vam ga je pustil $2, in si ogledati darilo?   Kliknite spodnjo povezavo:\n\n$4\n\nUpamo, da vam je všeč!\n\nHvala,\n\n\nEkipa {{SITENAME}}\n\n---\n\nHej, ne želiš več prejemati e-pošte od nas?\n\nKlikni $5\nin spremeni svoje nastavitve za onemogočitev e-poštnih obvestil.",
+	"gift_received_body": "$1, pozdravljen(-a).\n\n$2 vam je pravkar poslal(-a) darilo $3 na {{SITENAME}}.\n\nŽelite prebrati sporočilo, ki vam ga je pustil $2, in si ogledati darilo? Kliknite spodnjo povezavo:\n\n$4\n\nUpamo, da vam je všeč!\n\nHvala,\n\n\nEkipa {{SITENAME}}\n\n---\n\nHej, ne želiš več prejemati e-pošte od nas?\n\nKlikni $5\nin spremeni svoje nastavitve za onemogočitev e-poštnih obvestil.",
 	"right-giftadmin": "Ustvarjanje novih in urejanje obstoječih daril"
 }

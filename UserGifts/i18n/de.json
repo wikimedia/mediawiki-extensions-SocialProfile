@@ -35,7 +35,7 @@
 	"g-error-do-not-own": "Du besitzt dieses Geschenk nicht.",
 	"g-error-message-blocked": "Du bist aktuell gesperrt und kannst keine Geschenke vergeben",
 	"g-error-message-invalid-link": "Der eingegebende Link ist ungültig.",
-	"g-error-message-login": "Du musst dich anmelden um Geschenke zu vergeben",
+	"g-error-message-login": "Du musst dich [[Special:UserLogin|anmelden]] um Geschenke zu vergeben.",
 	"g-error-message-no-user": "Der Benutzer, den du anschauen möchtest, existiert nicht.",
 	"g-error-message-to-yourself": "Du kannst dir selber keine Geschenke geben.",
 	"g-error-title": "Oops, da ging etwas schief!",

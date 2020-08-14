@@ -57,7 +57,7 @@
 	"right-generatetopusersreport": "Berichte zu den aktivsten Benutzern generieren",
 	"level-advanced-to": "erweitert auf Level <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "[{{SITENAME}}] Du bist jetzt „$1“!",
-	"level-advance-body": "Hallo $1,\n\nDu bist jetzt ein „$2“ bei {{SITENAME}}!\n\nEs gratuliert das {{SITENAME}}-Team\n\n---\nDu willst gar keine E-Mails mehr von uns bekommen?\n\nKlicke $3\nund ändere deine Einstellungen, um die E-Mail-Benachrichtigungen abzustellen.",
+	"level-advance-body": "Hallo $1,\n\nDu bist jetzt ein „$2“ bei {{SITENAME}}!\n\nGratulation,\n\nDas {{SITENAME}}-Team\n\n---\nDu willst gar keine E-Mails mehr von uns bekommen?\n\nKlicke $3\nund ändere deine Einstellungen, um die E-Mail-Benachrichtigungen abzustellen.",
 	"updateeditcounts": "Beitragszähler aktualisieren",
 	"updateeditcounts-updated": "Aktualisierte die Statistiken für '''$1''' {{PLURAL:$1|Benutzer|Benutzer}}",
 	"updateeditcounts-updating": "Aktualisierung von $1 mit $2 {{PLURAL:$2|Bearbeitung|Bearbeitungen}}",

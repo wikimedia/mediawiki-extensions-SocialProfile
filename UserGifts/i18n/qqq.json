@@ -90,5 +90,5 @@
 	"notification-social-gift-send-with-message": "[[mw:Extension:Echo|Echo]] notification title\nParameters:\n* $1 is the user name of the person who sent you a gift\n* $2 is the name of the gift you received\n* $3 is the personalized message from the user who sent you the gift",
 	"notification-social-gift-send-bundle": "[[mw:Extension:Echo|Echo]] notification when multiple users have sent you gifts.\n$1 is the amount of users who sent you gifts.",
 	"right-giftadmin": "{{doc-right|giftadmin}}",
-	"action-giftadmin": "This is literally never used anywhere, but I think this message exists so that [[mw:Continuous Integration|CI]] doesn't get upset (though ironically enough as of late February 2020 CI is broken anyway due to other reasons). Don't bother translating this.\n{{doc-action|giftadmin}}"
+	"action-giftadmin": "{{notranslate}}\nThis is literally never used anywhere, but I think this message exists so that [[mw:Continuous Integration|CI]] doesn't get upset (though ironically enough as of late February 2020 CI is broken anyway due to other reasons). Don't bother translating this.\n{{doc-action|giftadmin}}"
 }

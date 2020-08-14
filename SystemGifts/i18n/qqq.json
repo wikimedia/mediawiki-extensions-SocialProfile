@@ -24,7 +24,7 @@
 	"ga-file-instructions": "Restrictions for the upload of award images, including file types and size limit.",
 	"ga-gift": "Used as the <code>alt</code> attribute on award images on Special:SystemGiftManager/Special:SystemGiftManagerLogo",
 	"ga-gift-given-count": "Shown on Special:ViewSystemGift to indicate how many times an award has been given out to users of the wiki.\n$1 is the amount of times it has been given out",
-	"ga-gift-title": "Page title of Special:ViewSystemGift\nParameters:\n* $1 is the user name of the person whose awards you're viewing\n* $2 is the award name (configurable on-wiki by privileged users via Special:SystemGiftManager)",
+	"ga-gift-title": "{{optional}}\nPage title of Special:ViewSystemGift\nParameters:\n* $1 is the user name of the person whose awards you're viewing\n* $2 is the award name (configurable on-wiki by privileged users via Special:SystemGiftManager)",
 	"ga-giftdesc": "Field label/table cell element on Special:SystemGiftManager",
 	"ga-giftimage": "Field label/table cell element on Special:SystemGiftManager",
 	"ga-giftname": "Field label/table cell element on Special:SystemGiftManager",
