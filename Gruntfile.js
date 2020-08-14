@@ -16,7 +16,17 @@ module.exports = function ( grunt ) {
 			]
 		},
 		banana: {
-			all: 'i18n/'
+			all: [
+				'i18n/',
+				'UserBoard/i18n/',
+				'UserProfile/i18n/',
+				'UserRelationship/i18n/',
+				'UserStats/i18n/',
+				'SystemGifts/i18n/',
+				'UserActivity/i18n/',
+				'UserGifts/i18n/',
+				'UserWelcome/i18n/'
+			]
 		}
 	} );
 
