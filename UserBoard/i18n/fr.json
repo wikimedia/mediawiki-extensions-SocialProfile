@@ -6,7 +6,8 @@
 			"Grondin",
 			"IAlex",
 			"Thibaut120094",
-			"Urhixidur"
+			"Urhixidur",
+			"Wladek92"
 		]
 	},
 	"userboard-desc": "Permet d’envoyer des messages entre panneaux",
@@ -64,9 +65,9 @@
 	"apihelp-socialprofile-send-message-description": "Envoyer un message au UserBoard d’un utilisateur.",
 	"apihelp-socialprofile-send-message-summary": "Envoyer un message au UserBoard d’un utilisateur.",
 	"apihelp-socialprofile-send-message-param-username": "Le nom d’utilisateur du destinataire.",
-	"apihelp-socialprofile-send-message-param-message": "Une version non encodée du message à envoyer.",
+	"apihelp-socialprofile-send-message-param-message": "Une version encodée sous forme d'URL du message à envoyer.",
 	"apihelp-socialprofile-send-message-param-type": "Type de message : 0 pour un message public, 1 pour un message privé.",
 	"apihelp-socialprofile-delete-message-description": "Supprimer un message de UserBoard.",
 	"apihelp-socialprofile-delete-message-summary": "Supprimer un message de UserBoard.",
-	"apihelp-socialprofile-delete-message-param-id": "Identifiant unique du message du panneau à supprimer."
+	"apihelp-socialprofile-delete-message-param-id": "Identifiant unique du message à supprimer du panneau."
 }

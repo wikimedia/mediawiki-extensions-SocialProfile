@@ -54,7 +54,7 @@
 	"userboard-time-seconds": "{{PLURAL:$1|um segundo|$1 segundos}}",
 	"message_received_subject": "$1 escreveu em seu mural em {{SITENAME}}",
 	"message_received_body_html": "Olá $1.\n\n$2 acabaram de escrever no seu fórum em {{SITENAME}}!\n\nClique abaixo para conferir seu quadro!\n\n[[Special:UserBoard]]\n\n---\n\nEi, quer parar de receber e-mails nossos?\n\nClique [[Special:UpdateProfile]]\ne altere suas configurações para desativar as notificações por e-mail.",
-	"message_received_body": "Oi $1:\n\n$2 acabou de escrever em seu mural em {{SITENAME}}!\n\nClique abaixo para ver seu mural!\n\n$3\n\n---\n\nEi, quer parar de receber e-mails de nós?\n\nClique $4\ne altere suas preferênciar para desabilidar e-mails de notificação.",
+	"message_received_body": "Oi $1:\n\n$2 acabou de escrever em seu mural em {{SITENAME}}!\n\nClique abaixo para ver seu mural!\n\n$3\n\n---\n\nEi, quer parar de receber e-mails de nós?\n\nClique $4\ne altere suas preferência para desabilitar e-mails de notificação.",
 	"echo-category-title-social-msg": "Mensagens do mural do usuários",
 	"echo-pref-tooltip-social-msg": "Notifique-me quando alguém deixar uma mensagem no meu mural de usuários.",
 	"notification-social-msg-send": "$1 deixou uma mensagem no seu mural de usuários.<br /><br />''$2''",

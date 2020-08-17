@@ -68,7 +68,7 @@
 	"user-stats-monthly-win-congratulations": "Herzlichen Glückwunsch {{PLURAL:$1|dem folgenden Benutzer, der den Monatssieg errungen und {{PLURAL:$2|Zusatzpunkt|Zusatzpunkte}} erhalten hat.|den folgenden Benutzern, die den Monatssieg errungen und {{PLURAL:$2|Zusatzpunkt|Zusatzpunkte}} erhalten haben.}}",
 	"user-stats-full-top": "Vollständige Bestenliste $1",
 	"user-stats-report-row": "($1) [[User:$2|$2]] - '''$3''' {{PLURAL:$3|Punkt|Punkte}}",
-	"user-stats-report-points": "'''$1'''  {{PLURAL:$1|Punkt|Punkte}}",
+	"user-stats-report-points": "'''$1''' {{PLURAL:$1|Punkt|Punkte}}",
 	"user-stats-report-generation-note": "Diese Seite wurde automatisch generiert.",
 	"user-stats-report-weekly-edit-summary": "automatisierter wöchentlicher Benutzerbericht",
 	"user-stats-report-monthly-edit-summary": "automatisierter monatlicher Benutzerbericht",

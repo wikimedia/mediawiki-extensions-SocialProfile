@@ -49,8 +49,8 @@
 	"ur-add-button-friend": "Ajouter comme ami",
 	"ur-add-sent-title-foe": "Vous avez envoyé déclaration d’hostilité à $1 !",
 	"ur-add-sent-title-friend": "Vous avez envoyé déclaration d’amitié à $1 !",
-	"ur-add-sent-message-foe": "Votre requête en hostilité a été envoyée à $1 pour confirmation.\nSi $1 confirme votre demande, vous recevrez le suivi par courriel.",
-	"ur-add-sent-message-friend": "Votre requête en amitié a été envoyée à $1 pour confirmation.\nSi $1 confirme votre demande, vous recevrez le suivi par courriel.",
+	"ur-add-sent-message-foe": "Votre requête d'hostilité a été envoyée à $1 pour confirmation.\nSi $1 confirme votre demande, vous recevrez le suivi par courriel.",
+	"ur-add-sent-message-friend": "Votre requête d'amitié a été envoyée à $1 pour confirmation.\nSi $1 confirme votre demande, vous recevrez le suivi par courriel.",
 	"ur-add-error-message-no-user": "L’utilisateur que vous être en train d’ajouter n’existe pas.",
 	"ur-add-error-message-blocked": "Vous êtes actuellement bloqué{{GENDER:||e|(e)}} et vous ne pouvez donc ajouter ni amis ni ennemis.",
 	"ur-add-error-message-yourself": "Vous ne pouvez vous-même vous ajouter comme ennemi ou ami.",
@@ -85,5 +85,6 @@
 	"friend_removed_body": "Salut $1 :\n\n$2 vous a retiré de la liste de ses amis sur {{SITENAME}} !\n\nMerci\n\n---\n\nHé ! Voulez-vous vous arrêter de recevoir des courriels de notre part ?\n\nCliquez $4 et modifiez vos préférences pour désactiver les notifications par courriel.",
 	"foe_removed_subject": "Par Jupiter ! $1 vous a retiré de la liste de ses ennemis {{SITENAME}} !",
 	"foe_removed_body": "Salut $1 :\n\n$2 vous a retiré de la liste de ses ennemis sur {{SITENAME}} !\n\nNe seriez-vous pas, peut-être, sur le chemin pour devenir amis ?\n\nMerci\n\n---\n\nHé ! Voulez-vous vous arrêter de recevoir des courriels de notre part ?\n\nCliquez $4\net modifiez vos préférences pour désactiver les notifications par courriel.",
-	"notification-social-rel-add-friend-no-message": "$1 désire être votre amis."
+	"notification-social-rel-add-friend-no-message": "$1 désire être votre amis.",
+	"notification-social-rel-accept-email-subject": "$1 a accepté votre demande d'ami !"
 }

@@ -9,7 +9,7 @@
 	"mp-userlevels-link": "Кориснички нивоа",
 	"mp-welcome-upload": "Подигни",
 	"mp-welcome-points": "$1 {{PLURAL:$1|бод|бода}}",
-	"mp-welcome-needed-points": "За да напредувате до [[$1|'''$2''']] заработете повеќе од ''$3'' {{PLURAL:$3|бод|бода}}!",
+	"mp-welcome-needed-points": "За да напреднете на [[$1|'''$2''']] заработете уште ''$3'' {{PLURAL:$3|бод|бода}}!",
 	"mp-welcome-logged-in": "Добредојдовте $1",
 	"mp-requests-title": "Барања",
 	"mp-requests-message": "Вие ги имате следниве барања.",
