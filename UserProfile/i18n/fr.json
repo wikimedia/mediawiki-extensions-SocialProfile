@@ -232,6 +232,12 @@
 	"apihelp-socialprofile-userprofileprivacy-description": "Module API pour définir la visibilité (« confidentialité ») d’un champ de profil",
 	"apihelp-socialprofile-userprofileprivacy-summary": "Module API pour fixer la visibilité (« confidentialité ») d’un champ de profil",
 	"apihelp-socialprofile-userprofileprivacy-param-method": "Action (« get » ou « set »)",
+	"apihelp-socialprofile-userprofileprivacy-param-field_key": "Clé du champ cible, comme up_movies pour le champ « Films »",
+	"apihelp-socialprofile-userprofileprivacy-param-privacy": "Nouvelle valeur de confidentialité (public, caché, amis, amis des amis)",
+	"apihelp-socialprofile-userprofileprivacy-param-tuid": "ID de l’utilisateur cible",
+	"apihelp-smpuserprofiletype-description": "Prendre le type de page utilisateur d’un utilisateur, ou définir votre propre type de page utilisateur",
+	"apihelp-smpuserprofiletype-summary": "Prendre le type de page utilisateur d’un utilisateur, ou définir votre propre type de page utilisateur",
 	"apihelp-smpuserprofiletype-param-do": "Action à réaliser (get ou set)",
+	"apihelp-smpuserprofiletype-param-user": "Nom d’utilisateur (significatif uniquement quand <kbd>do</kbd> est <kbd>get</kbd>, car ce module ne peut pas être utilisé pour définir les types de page utilisateur d’autres utilisateurs, uniquement la vôtre)",
 	"random-users-avatars-title": "Faites connaissance avec la communauté"
 }

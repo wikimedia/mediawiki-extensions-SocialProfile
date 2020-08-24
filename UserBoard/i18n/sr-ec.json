@@ -27,7 +27,7 @@
 	"userboard_posted_ago": "послато пре $1",
 	"userboard_private": "приватно",
 	"userboard_public": "јавно",
-	"userboard_messagetype": "Тип поруке",
+	"userboard_messagetype": "Врста поруке",
 	"userboard_nomessages": "Нема порука.",
 	"userboard_sendbutton": "пошаљи",
 	"userboard_loggedout": "Морате се [[Special:UserLogin|пријавити]] да бисте слали поруке другим корисницима.",

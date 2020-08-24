@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Crochet.david",
+			"Gomoko",
 			"Grondin",
 			"IAlex",
 			"McDutchie",
@@ -10,6 +11,7 @@
 			"Zetud"
 		]
 	},
+	"userrelationship-desc": "Permet l’envoi de requêtes d’amis et d’ennemis",
 	"viewrelationships": "Voir les relations",
 	"viewrelationshiprequests": "Voir les requêtes des relations",
 	"ur-already-submitted": "Votre demande a été envoyée",
@@ -85,6 +87,19 @@
 	"friend_removed_body": "Salut $1 :\n\n$2 vous a retiré de la liste de ses amis sur {{SITENAME}} !\n\nMerci\n\n---\n\nHé ! Voulez-vous vous arrêter de recevoir des courriels de notre part ?\n\nCliquez $4 et modifiez vos préférences pour désactiver les notifications par courriel.",
 	"foe_removed_subject": "Par Jupiter ! $1 vous a retiré de la liste de ses ennemis {{SITENAME}} !",
 	"foe_removed_body": "Salut $1 :\n\n$2 vous a retiré de la liste de ses ennemis sur {{SITENAME}} !\n\nNe seriez-vous pas, peut-être, sur le chemin pour devenir amis ?\n\nMerci\n\n---\n\nHé ! Voulez-vous vous arrêter de recevoir des courriels de notre part ?\n\nCliquez $4\net modifiez vos préférences pour désactiver les notifications par courriel.",
+	"echo-category-title-social-rel": "Modifications des relations utilisateur",
+	"echo-pref-tooltip-social-rel": "Me notifier quand quelqu’un m’envoie une demande de relation utilisateur (requête d’ami ou d’ennemi).",
+	"echo-show-social-rel-add-link": "(Requête ami/ennemi)",
+	"notification-social-rel-add-friend-message": "$1 veut être votre ami.<br /><br />''$2''",
+	"notification-social-rel-add-foe-message": "$1 veut être votre ennemi.<br /><br />''$2''",
 	"notification-social-rel-add-friend-no-message": "$1 désire être votre amis.",
-	"notification-social-rel-accept-email-subject": "$1 a accepté votre demande d'ami !"
+	"notification-social-rel-add-foe-no-message": "$1 veut être votre ennemi.",
+	"notification-social-rel-accept-friend": "Vous devenez ami avec $1.",
+	"notification-social-rel-accept-foe": "Vous devenez ennemi avec $1.",
+	"notification-social-rel-accept-email-subject": "$1 a accepté votre demande d'ami !",
+	"notification-social-rel-accept-email-batch-body": "$1 a accepté votre demande de relation.",
+	"apihelp-socialprofile-request-response-description": "Répond aux demandes de relation utilisateur (ami/ennemi).",
+	"apihelp-socialprofile-request-response-summary": "Répond aux demandes de relation utilisateur (ami/ennemi).",
+	"apihelp-socialprofile-request-response-param-response": "Réponse à la demande de relation ; 1 pour accepter ; -1 pour rejeter.",
+	"apihelp-socialprofile-request-response-param-id": "Identifiant unique de la demande de relation"
 }

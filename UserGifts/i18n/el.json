@@ -5,6 +5,7 @@
 			"Lou",
 			"Norhorn",
 			"Omnipaedista",
+			"Protnet",
 			"ZaDiak"
 		]
 	},
@@ -67,7 +68,7 @@
 	"g-sent-message": "Έχεις αποστείλει το παρακάτω δώρο στο $1.",
 	"g-small": "Μικρός",
 	"g-to-another": "Δώστε σε κάποιον άλλο",
-	"g-uploadsuccess": "Επιτυχής φόρτωση",
+	"g-uploadsuccess": "Επιτυχές ανέβασμα",
 	"g-viewgiftlist": "Προβολή λίστας δώρων",
 	"g-your-profile": "Το προφίλ σας",
 	"gift_received_subject": "Ο $1 σου έστειλε το δώρο $2 στο {{SITENAME}}!",
