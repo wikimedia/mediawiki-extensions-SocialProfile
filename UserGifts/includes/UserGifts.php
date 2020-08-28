@@ -31,12 +31,19 @@ class UserGifts {
 	 * @param User $user_to Recipient user (object)
 	 * @param int $gift_id Gift ID number
 	 * @param int $type Gift type
-	 * @param mixed $message Message as supplied by the sender
+	 * @param string $message Message as supplied by the sender; should be 255 characters or less
 	 *
 	 * @return int
 	 */
 	public function sendGift( $user_to, $gift_id, $type, $message ) {
 		$dbw = wfGetDB( DB_MASTER );
+
+		$services = MediaWikiServices::getInstance();
+		// Ensure that if we received a $message longer than 255 only the first
+		// 255 characters will be INSERTed into the DB; any longer than that and
+		// we run into query errors if MySQL is running in strict mode
+		// @see https://gerrit.wikimedia.org/r/606224
+		$message = $services->getContentLanguage()->truncateForDatabase( $message, 255 );
 
 		$dbw->insert(
 			'user_gift',
@@ -55,7 +62,7 @@ class UserGifts {
 		$this->sendGiftNotificationEmail( $user_to, $gift_id, $type );
 
 		// Add to new gift count cache for receiving user
-		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		$cache = $services->getMainWANObjectCache();
 		$giftCount = new UserGiftCount( $cache, $user_to );
 		$giftCount->clear();
 

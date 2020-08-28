@@ -18,6 +18,7 @@
 	"giftmanager-private": "private",
 	"giftmanager-view": "View gift list",
 	"g-add-message": "Add a message",
+	"g-characters-left": "$1 characters left",
 	"g-back-edit-gift": "Back to edit this gift",
 	"g-back-gift-list": "Back to gift list",
 	"g-back-link": "< Back to $1's page",

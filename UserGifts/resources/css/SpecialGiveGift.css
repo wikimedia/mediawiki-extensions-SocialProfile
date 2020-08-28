@@ -71,3 +71,7 @@
 .client-js label[for^="nojs-gift-"] {
 	display: none;
 }
+
+.client-nojs .g-characters-left-message {
+	display: none;
+}

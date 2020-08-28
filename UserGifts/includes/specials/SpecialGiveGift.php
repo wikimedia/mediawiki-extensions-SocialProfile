@@ -276,7 +276,11 @@ class GiveGift extends SpecialPage {
 		$output .= '</div>
 			<div class="visualClear"></div>
 			<div class="g-add-message">' . $this->msg( 'g-add-message' )->escaped() . '</div>
-			<textarea name="message" id="message" rows="4" cols="50"></textarea>
+			<textarea name="message" id="message" rows="4" cols="50" maxlength="255"></textarea>
+			<div class="g-characters-left-message">' . $this->msg(
+				'g-characters-left',
+				'<span class="countdown" value="255">255</span>'
+			)->text() . '</div>
 			<div class="g-buttons">
 				<input type="hidden" name="gift_id" value="' . $giftId . '" />
 				<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
@@ -482,6 +486,10 @@ class GiveGift extends SpecialPage {
 				$this->msg( 'g-give-all-message-title' )->escaped() .
 			'</div>
 				<textarea name="message" id="message" rows="4" cols="50"></textarea>
+				<div class="g-characters-left-message">' . $this->msg(
+					'g-characters-left',
+					'<span class="countdown" value="255">255</span>'
+				)->text() . '</div>
 				<div class="g-buttons">
 					<input type="hidden" name="gift_id" value="0" />
 					<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />

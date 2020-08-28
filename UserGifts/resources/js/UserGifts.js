@@ -1,6 +1,23 @@
 var UserGifts = {
 	selected_gift: 0,
 
+	// Countdown as user types characters
+	// "Borrowed" from FanBoxes & slightly modified here as per discussion w/ Isarra on 28 August 2020
+	limitText: function ( limitField, limitCount, limitNum ) {
+		if ( limitField.value.length > limitNum ) {
+			limitField.value = limitField.value.substring( 0, limitNum );
+		} else {
+			// This old line of code won't work now that the displayed number is
+			// no longer an <input>...
+			// limitCount.value = limitNum - limitField.value.length;
+			// First we store the current remaining character amount as the value attribute
+			// of the <span> which also shows the amount of characters left to the user...
+			limitCount.attr( 'value', limitNum - limitField.value.length );
+			// ...and then we change the displayed number accordingly, like this:
+			limitCount.html( limitCount.attr( 'value' ) );
+		}
+	},
+
 	selectGift: function ( id ) {
 		// Un-select previously selected gift
 		if ( UserGifts.selected_gift ) {
@@ -60,6 +77,22 @@ $( function () {
 			UserGifts.highlightGift(
 				$( this ).attr( 'id' ).replace( 'give_gift_', '' )
 			);
+		}
+	} );
+
+	// "X characters left" counter
+	$( '#message' ).on( {
+		keydown: function () {
+			UserGifts.limitText( this.form.message, $( 'span.countdown' ), 255 );
+		},
+		keyup: function () {
+			UserGifts.limitText( this.form.message, $( 'span.countdown' ), 255 );
+		},
+		paste: function () {
+			UserGifts.limitText( this.form.message, $( 'span.countdown' ), 255 );
+		},
+		keypress: function () {
+			UserGifts.limitText( this.form.message, $( 'span.countdown' ), 255 );
 		}
 	} );
 
