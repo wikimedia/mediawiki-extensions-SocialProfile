@@ -18,6 +18,7 @@
 	"giftmanager-private": "privado",
 	"giftmanager-view": "Ver Lista de Presentes",
 	"g-add-message": "Adicionar Mensagem",
+	"g-characters-left": "$1 caracteres restantes",
 	"g-back-edit-gift": "Voltar para Editar Este Presente",
 	"g-back-gift-list": "Voltar para Lista de Presentes",
 	"g-back-link": "< Voltar para página de $1",

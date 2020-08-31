@@ -18,6 +18,7 @@
 	"giftmanager-private": "privat",
 	"giftmanager-view": "Se presentlista",
 	"g-add-message": "Lägg till ett meddelande",
+	"g-characters-left": "$1 tecken kvar",
 	"g-back-edit-gift": "Tillbaka för att ändra denna present",
 	"g-back-gift-list": "Tillbaka till presentlista",
 	"g-back-link": "< Tillbaka till $1s sida",

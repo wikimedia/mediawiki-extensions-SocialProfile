@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Crazymadlover",
+			"Giorgos456",
 			"Lou",
 			"Norhorn",
 			"Omnipaedista",
@@ -21,6 +22,7 @@
 	"giftmanager-private": "ιδιωτικός",
 	"giftmanager-view": "Προβολή λίστας δώρων",
 	"g-add-message": "Προσθήκη ενός μηνύματος",
+	"g-characters-left": "απομένουν $1 χαρακτήρες",
 	"g-back-edit-gift": "Πίσω στην επεξεργασία αυτού του δώρου",
 	"g-back-gift-list": "Πίσω στη λίστα δώρων",
 	"g-back-link": "< Πίσω στη σελίδα του $1",

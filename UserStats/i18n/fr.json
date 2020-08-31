@@ -62,6 +62,7 @@
 	"action-generatetopusersreport": "générer les rapports d’utilisateur principal",
 	"level-advanced-to": "a avancé vers le niveau <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "Vous avez désormais un « $1 » sur {{SITENAME}} !",
+	"level-advance-body-html": "Bonjour, $1.\n\nVous êtes maintenant un « $2 » sur {{SITENAME}} !\n\nFélicitations,\n\nL’équipe {{SITENAME}}\n\n---\nHé, vous ne voulez plus recevoir de courriel de notre part ?\n\nCliquez sur [[Special:UpdateProfile]]\net modifiez vos paramètres pour désactiver les notifications par courriel.",
 	"level-advance-body": "Bonjour $1 :\n\nVous êtes maintenant un « $2 » sur {{SITENAME}} !\n\nToutes nos félicitations,\n\nL’équipe de {{SITENAME}}\n\n---\nVoulez-vous arrêter de recevoir des courriels de notre part ?\n\nCliquez $3\net modifiez vos paramètres pour désactiver les notifications par courriel.",
 	"echo-category-title-social-level-up": "Niveau supérieur",
 	"echo-pref-tooltip-social-level-up": "Me notifier lorsque j'accède à un nouveau niveau.",
