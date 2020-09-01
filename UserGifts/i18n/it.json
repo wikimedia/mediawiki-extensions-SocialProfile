@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Beta16",
 			"Darth Kule"
 		]
 	},
 	"giftmanager-public": "pubblico",
 	"giftmanager-private": "privata",
+	"g-characters-left": "$1 caratteri rimanenti",
 	"g-give-separator": "o",
 	"g-large": "Grande",
 	"g-medium": "Medio",
