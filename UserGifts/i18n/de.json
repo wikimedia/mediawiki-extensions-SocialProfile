@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Als-Holder",
+			"Elliot",
 			"Imre",
 			"Jorges",
 			"Kghbln",
@@ -22,6 +23,7 @@
 	"giftmanager-private": "privat",
 	"giftmanager-view": "Geschenkeliste ansehen",
 	"g-add-message": "Füge eine Nachricht hinzu",
+	"g-characters-left": "$1 Zeichen übrig",
 	"g-back-edit-gift": "Zurück zur Geschenkbearbeitung",
 	"g-back-gift-list": "Zurück zur Geschenkeliste",
 	"g-back-link": "< Zurück zum Profil von $1",
