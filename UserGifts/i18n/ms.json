@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Anakmalaysia"
+			"Anakmalaysia",
+			"Tofeiku"
 		]
 	},
 	"giftmanager": "Pengurus hadiah",
+	"g-characters-left": "$1 aksara tinggal",
 	"g-choose-file": "Pilih fail:",
 	"g-count": "$1 ada $2 hadiah.",
 	"g-give-separator": "atau",
