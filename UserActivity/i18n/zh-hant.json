@@ -10,7 +10,7 @@
 	"useractivity-award": "$1 獲得了一個獎勵",
 	"useractivity-all": "檢視全部",
 	"useractivity-edit": "$1 {{PLURAL:$4|編輯了頁面|編輯了如下頁面：}}$3",
-	"useractivity-foe": "$1 {{PLURAL:$2|現在與|現在與}} $3 成為仇人",
+	"useractivity-foe": "$1 {{PLURAL:$2|現在與|現在與}} $3 成為冤家",
 	"useractivity-filter": "篩選",
 	"useractivity-friend": "$1 {{PLURAL:$2|現在與|現在與}} $3 成為好友",
 	"useractivity-gift": "$1 收到了一份來自 $2 的禮物",

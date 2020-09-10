@@ -19,6 +19,7 @@
 	"giftmanager-private": "privat",
 	"giftmanager-view": "Se gaveliste",
 	"g-add-message": "Legg til en melding",
+	"g-characters-left": "$1 tegn igjen",
 	"g-back-edit-gift": "Tilbake for å endre av gaven",
 	"g-back-gift-list": "Tilbake til gavelisten",
 	"g-back-link": "< Tilbake til siden til $1",
