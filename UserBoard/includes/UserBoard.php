@@ -281,7 +281,7 @@ class UserBoard {
 			}
 		} else {
 			$user_sql = "ub_actor = {$user->getActorId()}";
-			if ( $user->getActorId() != $this->currentUser->getId() ) {
+			if ( $user->getActorId() != $this->currentUser->getActorId() ) {
 				$user_sql .= ' AND ub_type = 0 ';
 			}
 			if ( $this->currentUser->isLoggedIn() ) {
