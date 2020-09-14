@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Facenapalm",
 			"Ferrer",
 			"Innv",
 			"Lockal",
@@ -30,13 +31,13 @@
 	"user-send-message": "Отправить сообщение",
 	"user-send-gift": "Отправить подарок",
 	"user-contributions": "Вклад",
-	"user-stats-edits": "{{PLURAL:$1|Правка|Правки}}",
-	"user-stats-votes": "{{PLURAL:$1|Голос|Голоса}}",
-	"user-stats-comments": "{{PLURAL:$1|Комментарий|Комментарии}}",
+	"user-stats-edits": "Правок",
+	"user-stats-votes": "Голосов",
+	"user-stats-comments": "Комментариев",
 	"user-stats-recruits": "{{PLURAL:$1|Новичок|Новичков}}",
-	"user-stats-poll-votes": "Опросов {{PLURAL:$1|голос|голосов}}",
-	"user-stats-picture-game-votes": "{{PLURAL:$1|Голос|Голосов}} в игре с картинками",
-	"user-stats-quiz-points": "{{PLURAL:$1|Очко|Очков}} викторины",
+	"user-stats-poll-votes": "Голосов в опросах",
+	"user-stats-picture-game-votes": "Голосов в играх с картинками",
+	"user-stats-quiz-points": "Очков в викторинах",
 	"user-stats-pick-points": "{{PLURAL:$1|Очко|Очков}} pick 'em",
 	"other-info-title": "Другие сведения",
 	"user-friends-title": "Друзья",
