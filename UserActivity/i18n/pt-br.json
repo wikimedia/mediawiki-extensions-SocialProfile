@@ -24,5 +24,6 @@
 	"useractivity-network-thought": "<b><a href=\"$4\">$2</a></b> tem um pensamento para a rede de $3",
 	"useractivity-siteactivity": "Atividade no site",
 	"useractivity-title": "Atividade dos amigos",
-	"useractivity-user_message": "$1 {{PLURAL:$4|enviou uma mensagem para|enviou mensagens para}} $3"
+	"useractivity-user_message": "$1 {{PLURAL:$4|enviou uma mensagem para|enviou mensagens para}} $3",
+	"useractivity-comment": "$1 {{PLURAL:$4|comentou a página|comentou as seguintes páginas:}} $3"
 }

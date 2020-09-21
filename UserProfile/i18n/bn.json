@@ -20,7 +20,7 @@
 	"user-add-foe": "শত্রু হিসেবে যোগ করুন",
 	"user-remove-friend": "বন্ধু হিসেবে বাদ দিন",
 	"user-remove-foe": "শত্রু হিসেবে বাদ দিন",
-	"user-send-message": "একটি বার্তা প্রেরণ করো",
+	"user-send-message": "একটি বার্তা পাঠান",
 	"user-send-gift": "উপহার প্রেরণ করো",
 	"user-contributions": "অবদান",
 	"user-stats-edits": "{{PLURAL:$1|সম্পাদনা|সম্পাদনাসমূহ}}",
