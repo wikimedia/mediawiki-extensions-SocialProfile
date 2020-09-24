@@ -39,9 +39,9 @@ class UserSystemGifts {
 			$this->user = User::newFromName( $user );
 		}
 
-		$this->user_id = $user->getId();
-		$this->user_name = $user->getName();
-		$this->actorId = $user->getActorId();
+		$this->user_id = $this->user->getId();
+		$this->user_name = $this->user->getName();
+		$this->actorId = $this->user->getActorId();
 	}
 
 	/**
