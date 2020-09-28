@@ -17,6 +17,7 @@
 	"giftmanager-private": "yksityinen",
 	"giftmanager-view": "Näytä lahjalista",
 	"g-add-message": "Lisää viesti",
+	"g-characters-left": "$1 merkkiä jäljellä",
 	"g-back-edit-gift": "Takaisin tämän lahjan muokkaamiseen",
 	"g-back-gift-list": "Takaisin lahjalistaan",
 	"g-back-link": "< Takaisin käyttäjän $1 sivulle",
