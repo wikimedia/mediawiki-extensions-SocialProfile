@@ -1,13 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Cedric31"
+			"Cedric31",
+			"Guilhelma"
 		]
 	},
 	"populateuserprofiles": "Completar los perfils d'utilizaire",
 	"user-time-ago": "(i a $1 s)",
 	"user-awards-title": "Recompensas",
 	"user-gifts-title": "Presents",
+	"user-fanbox-title": "Boita d'utilizaire",
 	"user-count-separator": "$1 sus $2",
 	"user-view-all": "Veire tot",
 	"user-upload-image": "Importar un imatge",
