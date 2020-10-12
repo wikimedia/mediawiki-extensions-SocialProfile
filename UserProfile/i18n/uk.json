@@ -3,6 +3,7 @@
 		"authors": [
 			"Base",
 			"Prima klasy4na",
+			"Ата",
 			"Тест"
 		]
 	},
@@ -11,7 +12,7 @@
 	"user-upload-avatar": "Завантажити аватар",
 	"user-watchlist": "Мій список спостереження",
 	"user-contributions": "Внесок",
-	"user-stats-edits": "{{PLURAL:$1|Редагування|Редагування|Редагувань}}",
+	"user-stats-edits": "Редагування",
 	"other-info-title": "Інша інформація",
 	"other-info-music": "Музика",
 	"other-info-books": "Книги",
