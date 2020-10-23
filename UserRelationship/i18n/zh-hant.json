@@ -31,6 +31,7 @@
 	"ur-add-button-foe": "新增為仇人",
 	"ur-add-button-friend": "新增為朋友",
 	"ur-add-error-message-no-user": "您嘗試要添加的使用者不存在。",
+	"ur-add-error-message-pending-request-title": "請忍耐！",
 	"ur-requests-message-foe": "[[User:$1|$1]]想要成為您的冤家。",
 	"ur-requests-message-friend": "[[User:$1|$1]]想要成為您的朋友。",
 	"ur-accept": "接受",
@@ -40,6 +41,8 @@
 	"friend_request_subject": "$1 已在 {{SITENAME}} 把您加入成為朋友！",
 	"friend_removed_subject": "哦，不！$1 已在 {{SITENAME}} 把您從朋友名單中移除了!",
 	"foe_removed_subject": "哦，不！$1 已在 {{SITENAME}} 把您從仇人名單中移除了!",
+	"echo-category-title-social-rel": "使用者關係更改",
 	"notification-social-rel-add-friend-message": "$1想要成為您的朋友。<br /><br />''$2''",
-	"notification-social-rel-add-foe-message": "$1想要成為您的冤家。<br /><br />''$2''"
+	"notification-social-rel-add-foe-message": "$1想要成為您的冤家。<br /><br />''$2''",
+	"notification-social-rel-add-friend-no-message": "$1想要成為您的朋友。"
 }
