@@ -48,7 +48,7 @@
 	"g-give-all-message-title": "添加新訊息",
 	"g-give-all-title": "送禮物給 $1",
 	"g-give-enter-friend-title": "若您知道使用者名稱，請在下方輸入",
-	"g-given": "此份禮物被贈送過 $1 {{PLURAL:$1|次}}",
+	"g-given": "此份禮物被頒發過 $1 {{PLURAL:$1|次}}",
 	"g-give-list-friends-title": "在您的朋友清單中選擇",
 	"g-give-separator": "或",
 	"g-give-no-user-message": "禮物與獎勵是認同您朋友的好方法！",
