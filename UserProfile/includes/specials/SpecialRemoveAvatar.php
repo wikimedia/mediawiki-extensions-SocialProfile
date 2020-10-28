@@ -30,6 +30,15 @@ class RemoveAvatar extends SpecialPage {
 	}
 
 	/**
+	 * Show this special page on Special:SpecialPages only for registered users
+	 *
+	 * @return bool
+	 */
+	function isListed() {
+		return (bool)$this->getUser()->isLoggedIn();
+	}
+
+	/**
 	 * Special page description shown on Special:SpecialPages -- different for
 	 * privileged users and mortals
 	 *
