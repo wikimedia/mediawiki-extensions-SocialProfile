@@ -102,7 +102,7 @@ class UserProfilePage extends Article {
 		$out = $context->getOutput();
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
-		$out->setPageTitle( $this->mTitle->getPrefixedText() );
+		$out->setPageTitle( $this->getTitle()->getPrefixedText() );
 
 		// No need to display noarticletext, we use our own message
 		// @todo FIXME: this was basically "!$this->profileOwner" prior to actor.
