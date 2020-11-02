@@ -299,33 +299,31 @@ class GenerateTopUsersReport extends SpecialPage {
 	/**
 	 * Make the edit
 	 *
-	 * TODO stop writing to $wgUser
-	 *
 	 * @param WikiPage $page
 	 * @param Title $title
 	 * @param string $period
 	 * @param string $pageContent
 	 */
 	private function createReportPage( WikiPage $page, Title $title, $period, $pageContent ) {
-		global $wgUser;
-
-		// Make the edit as MediaWiki default
-		$oldUser = $wgUser;
-		$wgUser = User::newFromName( 'MediaWiki default' );
-		// If the user does not exist, create it
-		if ( $wgUser->getId() === 0 ) {
-			$wgUser = User::newSystemUser( 'MediaWiki default', [ 'steal' => true ] );
+		// Grab a user object to make the edit as
+		$user = User::newFromName( 'MediaWiki default' );
+		if ( $user->getId() === 0 ) {
+			$user = User::newSystemUser( 'MediaWiki default', [ 'steal' => true ] );
 		}
-		$wgUser->addGroup( 'bot' );
 
 		// Add a note to the page that it was automatically generated
 		$pageContent .= "\n\n''" . $this->msg( 'user-stats-report-generation-note' )->parse() . "''\n\n";
 
+		// Make the edit as MediaWiki default
 		// For grep: user-stats-report-weekly-edit-summary, user-stats-report-monthly-edit-summary
 		$page->doEditContent(
 			ContentHandler::makeContent( $pageContent, $title ),
-			$this->msg( "user-stats-report-{$period}-edit-summary" )->inContentLanguage()->plain()
+			$this->msg( "user-stats-report-{$period}-edit-summary" )->inContentLanguage()->plain(),
+			EDIT_NEW | EDIT_FORCE_BOT,
+			false, /* $originalRevId */
+			$user
 		);
+
 		$date = date( 'Y-m-d H:i:s' );
 		// Archive points from the weekly/monthly table into the archive table
 		$dbw = wfGetDB( DB_MASTER );
@@ -344,9 +342,6 @@ class GenerateTopUsersReport extends SpecialPage {
 
 		// Clear the current point table to make way for the next period
 		$res = $dbw->delete( "user_points_{$period}", '*', __METHOD__ );
-
-		// Switch the user back
-		$wgUser = $oldUser;
 	}
 
 }
