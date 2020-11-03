@@ -69,7 +69,7 @@
 	"topawards-friend-milestone": "Objectivo de {{PLURAL:$1|$1 amigo|$1 amigos}}",
 	"topawards-empty": "Ou não há prêmios configurados para esta categoria de prêmio ou então ninguém os recebeu ainda.",
 	"system_gift_received_subject": "Você recebeu o prêmio $1 em {{SITENAME}}!",
-	"system_gift_received_body_html": "Oi $1.\n\nVocê acaba de receber o prêmio $2 em {{SITENAME}}!\n\n\"$3\"\n\nClique abaixo para ver sua coleção de troféus!\n\n[[Special:ViewSystemGifts]]\n\nEsperamos que você goste!\n\nObrigado,\n\n\nA equipe {{SITENAME}}\n\n---\n\nEi, quer parar de receber emails de nós?\n\nClique em [[Special:UpdateProfile]]\ne mude suas preferências para desabilitar notificações por email.",
+	"system_gift_received_body_html": "Oi $1.\n\nVocê acaba de receber o prêmio $2 em {{SITENAME}}!\n\n\"$3\"\n\nClique abaixo para ver sua coleção de troféus!\n\n[[Special:ViewSystemGifts]]\n\nEsperamos que você goste!\n\nObrigado,\n\n\nA equipe {{SITENAME}}\n\n---\n\nEi, quer parar de receber e-mails de nós?\n\nClique em [[Special:UpdateProfile]]\ne mude suas preferências para desabilitar notificações por email.",
 	"system_gift_received_body": "Oi $1:\n\nVocê acaba de receber o prêmio $2 em {{SITENAME}}!\n\n\"$3\"\n\nClique abaixo para ver sua estante de troféis!\n\n$4\n\nEsperamos que tenha gostado!\n\nObrigado,\n\n\nO Time de {{SITENAME}}\n\n---\n\nEi, quer parer de receber e-mails de nós?\n\nClique $5\ne altere suas preferências para desabilitar e-mails de notificação.",
 	"echo-category-title-social-award": "Prémios",
 	"echo-pref-tooltip-social-award": "Notifique-me quando receber um prêmio.",
