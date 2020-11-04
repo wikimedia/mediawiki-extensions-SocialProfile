@@ -246,9 +246,14 @@
 	margin: 5px 0 10px 0;
 }
 
-.user-page-message-form {
+.user-page-message-form,
+.user-page-message-form-blocked {
 	margin: 5px 0 15px 0;
 	font-weight: 700;
+}
+
+.user-page-message-form-blocked {
+	color: #f00;
 }
 
 .user-board-message {

@@ -1786,6 +1786,12 @@ class UserProfilePage extends Article {
 						</div>' .
 						Html::hidden( 'wpEditToken', $this->viewingUser->getEditToken() ) .
 					'</div>';
+			} elseif ( $this->viewingUser->isLoggedIn() && $this->viewingUser->isBlocked() ) {
+				// Show a better i18n message for registered users who are blocked
+				// @see https://phabricator.wikimedia.org/T266918
+				$output .= '<div class="user-page-message-form-blocked">' .
+					wfMessage( 'user-board-blocked-message' )->escaped() .
+				'</div>';
 			} else {
 				$output .= '<div class="user-page-message-form">' .
 					wfMessage( 'user-board-login-message' )->parse() .
