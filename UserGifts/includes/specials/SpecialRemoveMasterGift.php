@@ -3,7 +3,7 @@
 class RemoveMasterGift extends UnlistedSpecialPage {
 
 	/**
-	 * @var int $gift_id ID of the gift we are removing
+	 * @var int ID of the gift we are removing
 	 */
 	public $gift_id;
 

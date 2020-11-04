@@ -15,12 +15,12 @@
 class SpecialAddRelationship extends UnlistedSpecialPage {
 
 	/**
-	 * @var User $user_to The user (object) who we are friending/foeing
+	 * @var User The user (object) who we are friending/foeing
 	 */
 	public $user_to;
 
 	/**
-	 * @var int $relationship_type 1 for friending, any other number for foeing
+	 * @var int 1 for friending, any other number for foeing
 	 */
 	public $relationship_type;
 

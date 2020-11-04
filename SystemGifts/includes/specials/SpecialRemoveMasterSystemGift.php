@@ -8,7 +8,7 @@
 class RemoveMasterSystemGift extends UnlistedSpecialPage {
 
 	/**
-	 * @var int $gift_id Internal ID of the system gift we want to delete
+	 * @var int Internal ID of the system gift we want to delete
 	 */
 	public $gift_id;
 

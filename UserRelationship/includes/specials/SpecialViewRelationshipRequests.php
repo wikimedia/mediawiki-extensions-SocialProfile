@@ -13,12 +13,12 @@
 class SpecialViewRelationshipRequests extends SpecialPage {
 
 	/**
-	 * @var string $user_name_to User name
+	 * @var string User name
 	 */
 	public $user_name_to;
 
 	/**
-	 * @var int $relationship_type 1 for friending, any other number for foeing
+	 * @var int 1 for friending, any other number for foeing
 	 */
 	public $relationship_type;
 

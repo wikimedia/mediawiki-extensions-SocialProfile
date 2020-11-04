@@ -4,12 +4,12 @@
  */
 class UserGiftIcon {
 	/**
-	 * @var int $id User gift ID number
+	 * @var int User gift ID number
 	 */
 	private $id;
 
 	/**
-	 * @var string $size Image size (s,m, ml, or l)
+	 * @var string Image size (s,m, ml, or l)
 	 */
 	private $size;
 

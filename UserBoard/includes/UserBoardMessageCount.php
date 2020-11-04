@@ -8,12 +8,12 @@ use MediaWiki\Logger\LoggerFactory;
  */
 class UserBoardMessageCount {
 	/**
-	 * @var WANObjectCache $cache
+	 * @var WANObjectCache
 	 */
 	private $cache;
 
 	/**
-	 * @var User $user
+	 * @var User
 	 */
 	private $user;
 

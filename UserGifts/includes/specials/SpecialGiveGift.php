@@ -12,7 +12,7 @@ use MediaWiki\MediaWikiServices;
 class GiveGift extends SpecialPage {
 
 	/**
-	 * @var User $userTo The user (object) who we are giving a gift
+	 * @var User The user (object) who we are giving a gift
 	 */
 	public $userTo;
 

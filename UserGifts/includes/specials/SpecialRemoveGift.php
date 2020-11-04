@@ -5,7 +5,7 @@ use MediaWiki\MediaWikiServices;
 class RemoveGift extends UnlistedSpecialPage {
 
 	/**
-	 * @var int $gift_id ID of the gift we're removing
+	 * @var int ID of the gift we're removing
 	 */
 	public $gift_id;
 

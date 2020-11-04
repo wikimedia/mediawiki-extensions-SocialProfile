@@ -5,7 +5,7 @@ use MediaWiki\MediaWikiServices;
 
 class UserStats {
 	/**
-	 * @var User $user User object whose stats we're dealing with here
+	 * @var User User object whose stats we're dealing with here
 	 */
 	public $user;
 

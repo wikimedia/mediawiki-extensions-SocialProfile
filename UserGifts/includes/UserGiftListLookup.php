@@ -4,22 +4,22 @@
  */
 class UserGiftListLookup {
 	/**
-	 * @var IContextSource|RequestContext $context
+	 * @var IContextSource|RequestContext
 	 */
 	private $context;
 
 	/**
-	 * @var User $user
+	 * @var User
 	 */
 	private $user;
 
 	/**
-	 * @var int $limit
+	 * @var int
 	 */
 	private $limit;
 
 	/**
-	 * @var int $page
+	 * @var int
 	 */
 	private $page;
 

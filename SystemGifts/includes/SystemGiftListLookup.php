@@ -4,12 +4,12 @@
  */
 class SystemGiftListLookup {
 	/**
-	 * @var int $limit LIMIT for the SQL query
+	 * @var int LIMIT for the SQL query
 	 */
 	private $limit;
 
 	/**
-	 * @var int $page If greater than 0, used to determine
+	 * @var int If greater than 0, used to determine
 	 * the OFFSET for the SQL query
 	 */
 	private $page;

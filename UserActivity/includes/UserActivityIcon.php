@@ -4,7 +4,7 @@
  */
 class UserActivityIcon {
 	/**
-	 * @var string $icon
+	 * @var string
 	 */
 	private $icon;
 

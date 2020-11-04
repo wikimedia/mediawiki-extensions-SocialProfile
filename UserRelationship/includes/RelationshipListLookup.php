@@ -5,12 +5,12 @@
  */
 class RelationshipListLookup {
 	/**
-	 * @var User $user
+	 * @var User
 	 */
 	private $user;
 
 	/**
-	 * @var int $limit Used as the LIMIT in the SQL query
+	 * @var int Used as the LIMIT in the SQL query
 	 */
 	private $limit;
 

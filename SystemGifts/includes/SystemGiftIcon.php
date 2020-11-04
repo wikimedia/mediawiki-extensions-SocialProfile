@@ -4,12 +4,12 @@
  */
 class SystemGiftIcon {
 	/**
-	 * @var int $id System gift ID number
+	 * @var int System gift ID number
 	 */
 	private $id;
 
 	/**
-	 * @var string $size Image size (s, m, ml or l)
+	 * @var string Image size (s, m, ml or l)
 	 */
 	private $size;
 

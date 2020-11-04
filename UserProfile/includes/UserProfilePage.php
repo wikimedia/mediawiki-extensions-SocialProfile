@@ -599,7 +599,7 @@ class UserProfilePage extends Article {
 		if ( $x['timestamp'] == $y['timestamp'] ) {
 			return 0;
 		} elseif ( $x['timestamp'] > $y['timestamp'] ) {
-			return - 1;
+			return -1;
 		} else {
 			return 1;
 		}

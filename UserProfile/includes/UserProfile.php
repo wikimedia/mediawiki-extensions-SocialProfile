@@ -7,29 +7,29 @@ use MediaWiki\User\UserIdentity;
  */
 class UserProfile {
 	/**
-	 * @var User $user User object whose profile is being viewed
+	 * @var User User object whose profile is being viewed
 	 */
 	public $user;
 
 	/**
-	 * @var int $user_id The current user's user ID.
+	 * @var int The current user's user ID.
 	 * @deprecated Prefer using $this->user to get an actor ID instead
 	 */
 	public $user_id;
 
 	/**
-	 * @var string $user_name The current user's user name.
+	 * @var string The current user's user name.
 	 * @deprecated Prefer using $this->user instead
 	 */
 	public $user_name;
 
 	/**
-	 * @var $profile Unused, remove me?
+	 * @var Unused remove me?
 	 */
 	public $profile;
 
 	/**
-	 * @var Integer: used in getProfileComplete()
+	 * @var int used in getProfileComplete()
 	 */
 	public $profile_fields_count;
 
@@ -66,7 +66,7 @@ class UserProfile {
 	];
 
 	/**
-	 * @var array $profile_missing Unused, remove me?
+	 * @var array Unused, remove me?
 	 */
 	public $profile_missing = [];
 

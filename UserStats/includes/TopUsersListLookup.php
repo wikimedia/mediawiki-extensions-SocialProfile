@@ -3,7 +3,7 @@
 class TopUsersListLookup {
 
 	/**
-	 * @var int $limit LIMIT for SQL query, defaults to 10
+	 * @var int LIMIT for SQL query, defaults to 10
 	 */
 	private $limit;
 

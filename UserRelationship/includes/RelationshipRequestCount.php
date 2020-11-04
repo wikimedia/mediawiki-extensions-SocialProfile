@@ -9,17 +9,17 @@ use MediaWiki\Logger\LoggerFactory;
 class RelationshipRequestCount {
 
 	/**
-	 * @var WANObjectCache $cache
+	 * @var WANObjectCache
 	 */
 	private $cache;
 
 	/**
-	 * @var User $user
+	 * @var User
 	 */
 	private $user;
 
 	/**
-	 * @var int $type
+	 * @var int
 	 * - 1 for friends
 	 * - 2 (or anything else but 1) for foes
 	 */

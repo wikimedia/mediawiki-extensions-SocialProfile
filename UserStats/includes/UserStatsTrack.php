@@ -6,17 +6,17 @@ use MediaWiki\MediaWikiServices;
 class UserStatsTrack {
 
 	/**
-	 * @var array $point_values Literally $wgUserStatsPointValues
+	 * @var array Literally $wgUserStatsPointValues
 	 */
 	public $point_values;
 
 	/**
-	 * @var User $user The user (object) whose stats we're dealing with here
+	 * @var User The user (object) whose stats we're dealing with here
 	 */
 	public $user;
 
 	/**
-	 * @var array $stats_fields For referencing purposes
+	 * @var array For referencing purposes
 	 *   key: statistic name in wgUserStatsPointValues -> database column name in user_stats table
 	 */
 	public $stats_fields = [

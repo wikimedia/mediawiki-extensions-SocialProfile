@@ -9,12 +9,12 @@ use MediaWiki\Logger\LoggerFactory;
  */
 class UserGiftCount {
 	/**
-	 * @var WANObjectCache $cache
+	 * @var WANObjectCache
 	 */
 	private $cache;
 
 	/**
-	 * @var User $user
+	 * @var User
 	 */
 	private $user;
 

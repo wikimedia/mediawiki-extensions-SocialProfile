@@ -8,12 +8,12 @@ use MediaWiki\Logger\LoggerFactory;
  */
 class SystemGiftCount {
 	/**
-	 * @var WANObjectCache $cache
+	 * @var WANObjectCache
 	 */
 	private $cache;
 
 	/**
-	 * @var User $user
+	 * @var User
 	 */
 	private $user;
 
