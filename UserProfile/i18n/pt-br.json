@@ -194,6 +194,7 @@
 	"user-wiki-link": "Página wiki de usuário",
 	"user-type-toggle-old": "Usar página wiki de usuário",
 	"user-type-toggle-new": "Usar página social de usuário",
+	"user-board-blocked-message": "Você está bloqueado no momento e, portanto, não pode postar mensagens para outros usuários.",
 	"user-board-login-message": "Precisa de [[Special:UserLogin|autenticar-se]] para enviar mensagens a outros usuários",
 	"user-board-confirm-delete": "Você tem certeza que quer deletar esta mensagem?",
 	"removeavatar": "Remover avatar",

@@ -176,6 +176,7 @@
 	"user-wiki-link": "Strona użytkownika wiki",
 	"user-type-toggle-old": "Użyj strony użytkownika wiki",
 	"user-type-toggle-new": "Użyj towarzyskiej strony użytkownika",
+	"user-board-blocked-message": "Twoje konto zostało zablokowane i nie możesz wysyłać wiadomości do innych użytkowników.",
 	"user-board-login-message": "Musisz być [[Special:UserLogin|zalogowany]], żeby zostawiać wiadomości innym użytkownikom.",
 	"user-board-confirm-delete": "Czy na pewno chcesz usunąć tę wiadomość?",
 	"removeavatar": "Usuń portret",

@@ -192,6 +192,7 @@
 	"user-wiki-link": "Viki kullanıcı sayfası",
 	"user-type-toggle-old": "Viki kullanıcı sayfasını kullan",
 	"user-type-toggle-new": "Sosyal kullanıcı sayfasını kullan",
+	"user-board-blocked-message": "Şu anda engellenmiş durumdasınız ve bu nedenle diğer kullanıcılara mesaj gönderemezsiniz.",
 	"user-board-login-message": "Diğer kullanıcılara mesaj göndermek için [[Special:UserLogin|oturum açmalısınız]]",
 	"user-board-confirm-delete": "Bu mesajı silmek istediğinizden emin misiniz?",
 	"removeavatar": "Avatarı kaldır",
