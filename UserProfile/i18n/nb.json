@@ -190,6 +190,7 @@
 	"user-wiki-link": "Brukerside på wikien",
 	"user-type-toggle-old": "Bruk wikibrukerside",
 	"user-type-toggle-new": "Bruk sosial brukerside",
+	"user-board-blocked-message": "Du er for tiden blokkert og kan derfor ikke poste meldinger til andre brukere.",
 	"user-board-login-message": "Du må være [[Special:UserLogin|logget inn]] for å sende meldinger til andre brukere",
 	"user-board-confirm-delete": "Er du sikker på at du vil slette denne meldingen?",
 	"removeavatar": "Fjern avatar",
