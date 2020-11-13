@@ -1,8 +1,12 @@
 <?php
 /**
  * A special page for viewing all relationships by type
- * Example URL: index.php?title=Special:ViewRelationships&user=Pean&rel_type=1 (viewing friends)
- * Example URL: index.php?title=Special:ViewRelationships&user=Pean&rel_type=2 (viewing foes)
+ *
+ * Example URL: index.php?title=Special:ViewRelationships/Pean/friends (viewing friends)
+ * Example URL: index.php?title=Special:ViewRelationships/Pean/foes (viewing foes)
+ *
+ * Example old URL: index.php?title=Special:ViewRelationships&user=Pean&rel_type=1 (viewing friends)
+ * Example old URL: index.php?title=Special:ViewRelationships&user=Pean&rel_type=2 (viewing foes)
  *
  * @file
  * @ingroup Extensions
@@ -38,7 +42,8 @@ class SpecialViewRelationships extends SpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param string|null $params
+	 * @param string|null $params Forward slash separated parameters (user/type), e.g. "Alice/friends"
+	 *  to view Alice's friend list
 	 */
 	public function execute( $params ) {
 		$lang = $this->getLanguage();
@@ -57,9 +62,7 @@ class SpecialViewRelationships extends SpecialPage {
 		$this->setHeaders();
 
 		// Add CSS
-		$out->addModuleStyles( [
-			'ext.socialprofile.userrelationship.css'
-		] );
+		$out->addModuleStyles( 'ext.socialprofile.userrelationship.css' );
 
 		$output = '';
 
@@ -69,6 +72,13 @@ class SpecialViewRelationships extends SpecialPage {
 		$user_name = $request->getVal( 'user' );
 		$rel_type = $request->getInt( 'rel_type' );
 		$page = $request->getInt( 'page' );
+
+		// Support for friendly-by-default URLs (T191157)
+		$params = explode( '/', $params );
+		if ( count( $params ) === 2 ) {
+			$user_name = $params[0];
+			$rel_type = ( $params[1] === 'foes' ? 2 : 1 );
+		}
 
 		/**
 		 * Set up config for page / default values
