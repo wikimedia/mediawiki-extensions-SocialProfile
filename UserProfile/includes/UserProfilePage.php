@@ -1861,18 +1861,19 @@ class UserProfilePage extends Article {
 		$fanbox_count = $f->getFanBoxCount();
 		$fanbox_link = SpecialPage::getTitleFor( 'ViewUserBoxes' );
 		$per_row = 1;
+		$services = MediaWikiServices::getInstance();
 
 		if ( $fanboxes ) {
 			$output .= '<div class="user-section-heading">
 				<div class="user-section-title">' .
-					htmlspecialchars( wfMessage( 'user-fanbox-title' )->plain() ) .
+					wfMessage( 'user-fanbox-title' )->escaped() .
 				'</div>
 				<div class="user-section-actions">
 					<div class="action-right">';
 			// If there are more than ten fanboxes, display a "View all" link
 			// instead of listing them all on the profile page
 			if ( $fanbox_count > 10 ) {
-				$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
+				$linkRenderer = $services->getLinkRenderer();
 				$output .= $linkRenderer->makeLink(
 					$fanbox_link,
 					wfMessage( 'user-view-all' )->plain(),
@@ -1897,13 +1898,8 @@ class UserProfilePage extends Article {
 			<div class="user-fanbox-container clearfix">';
 
 			$x = 1;
-			$tagParser = MediaWikiServices::getInstance()->getParserFactory()->create();
-			if ( method_exists( MediaWikiServices::class, 'getRepoGroup' ) ) {
-				// MediaWiki 1.34+
-				$repoGroup = MediaWikiServices::getInstance()->getRepoGroup();
-			} else {
-				$repoGroup = RepoGroup::singleton();
-			}
+			$tagParser = $services->getParserFactory()->create();
+			$repoGroup = $services->getRepoGroup();
 			foreach ( $fanboxes as $fanbox ) {
 				$check_user_fanbox = $f->checkIfUserHasFanbox( $fanbox['fantag_id'] );
 
@@ -1962,7 +1958,7 @@ class UserProfilePage extends Article {
 				$output .= "<div class=\"fanbox-item\">
 					<div class=\"individual-fanbox\" id=\"individualFanbox" . $fanbox['fantag_id'] . "\">
 						<div class=\"show-message-container-profile\" id=\"show-message-container" . $fanbox['fantag_id'] . "\">
-							<a class=\"perma\" style=\"font-size:8px; color:" . $fanbox['fantag_right_textcolor'] . "\" href=\"" . htmlspecialchars( $fantag_title->getFullURL() ) . "\" title=\"" . htmlspecialchars( $fanbox['fantag_title'] ) . "\">" . htmlspecialchars( wfMessage( 'fanbox-perma' )->plain() ) . "</a>
+							<a class=\"perma\" style=\"font-size:8px; color:" . $fanbox['fantag_right_textcolor'] . "\" href=\"" . htmlspecialchars( $fantag_title->getFullURL() ) . "\" title=\"" . htmlspecialchars( $fanbox['fantag_title'] ) . "\">" . wfMessage( 'fanbox-perma' )->escaped() . "</a>
 							<table class=\"fanBoxTableProfile\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">
 								<tr>
 									<td id=\"fanBoxLeftSideOutputProfile\" style=\"color:" . $fanbox['fantag_left_textcolor'] . "; font-size:$leftfontsize\" bgcolor=\"" . $fanbox['fantag_left_bgcolor'] . "\">" . $fantag_leftside . "</td>
@@ -1978,13 +1974,13 @@ class UserProfilePage extends Article {
 							<table cellpadding="0" cellspacing="0" align="center">
 								<tr>
 									<td style="font-size:10px">' .
-										htmlspecialchars( wfMessage( 'fanbox-add-fanbox' )->plain() ) .
+										wfMessage( 'fanbox-add-fanbox' )->escaped() .
 									'</td>
 								</tr>
 								<tr>
 									<td align="center">
-										<input type="button" class="fanbox-add-button-half" value="' . htmlspecialchars( wfMessage( 'fanbox-add' )->plain() ) . '" size="10" />
-										<input type="button" class="fanbox-cancel-button" value="' . htmlspecialchars( wfMessage( 'cancel' )->plain() ) . '" size="10" />
+										<input type="button" class="fanbox-add-button-half" value="' . wfMessage( 'fanbox-add' )->escaped() . '" size="10" />
+										<input type="button" class="fanbox-cancel-button" value="' . wfMessage( 'cancel' )->escaped() . '" size="10" />
 									</td>
 								</tr>
 							</table>
@@ -1994,13 +1990,13 @@ class UserProfilePage extends Article {
 							<table cellpadding="0" cellspacing="0" align="center">
 								<tr>
 									<td style="font-size:10px">' .
-										htmlspecialchars( wfMessage( 'fanbox-remove-fanbox' )->plain() ) .
+										wfMessage( 'fanbox-remove-fanbox' )->escaped() .
 									'</td>
 								</tr>
 								<tr>
 									<td align="center">
-										<input type="button" class="fanbox-remove-button-half" value="' . htmlspecialchars( wfMessage( 'fanbox-remove' )->plain() ) . '" size="10" />
-										<input type="button" class="fanbox-cancel-button" value="' . htmlspecialchars( wfMessage( 'cancel' )->plain() ) . '" size="10" />
+										<input type="button" class="fanbox-remove-button-half" value="' . wfMessage( 'fanbox-remove' )->escaped() . '" size="10" />
+										<input type="button" class="fanbox-cancel-button" value="' . wfMessage( 'cancel' )->escaped() . '" size="10" />
 									</td>
 								</tr>
 							</table>
@@ -2019,7 +2015,7 @@ class UserProfilePage extends Article {
 							</tr>
 							<tr>
 								<td align="center">
-									<input type="button" class="fanbox-cancel-button" value="' . htmlspecialchars( wfMessage( 'cancel' )->plain() ) . '" size="10" />
+									<input type="button" class="fanbox-cancel-button" value="' . wfMessage( 'cancel' )->escaped() . '" size="10" />
 								</td>
 							</tr>
 						</table>
