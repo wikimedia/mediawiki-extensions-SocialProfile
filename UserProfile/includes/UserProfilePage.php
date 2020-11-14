@@ -1828,7 +1828,8 @@ class UserProfilePage extends Article {
 		}
 
 		// Add CSS & JS
-		$out->addModules( 'ext.fanBoxes' );
+		$out->addModuleStyles( 'ext.fanBoxes.styles' );
+		$out->addModules( 'ext.fanBoxes.scripts' );
 
 		$output = '';
 		$f = new UserFanBoxes( $this->profileOwner );
