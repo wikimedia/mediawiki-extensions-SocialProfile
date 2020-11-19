@@ -1407,7 +1407,7 @@ class UserProfilePage extends Article {
 						$userGiftIcon = new UserGiftIcon( $item['namespace'], 'm' );
 						$icon = $userGiftIcon->getIconHTML();
 
-						$item_html .= wfMessage( 'user-recent-activity-gift-rec' )->escaped() . " {$user_link_2} {$item_time}</span>
+						$item_html .= wfMessage( 'user-recent-activity-gift-rec' )->escaped() . " {$user_link_2} {$item_time}
 								<div class=\"item\">
 									<a href=\"" . htmlspecialchars( $viewGift->getFullURL( "gift_id={$item['id']}" ) ) . "\" rel=\"nofollow\">
 										{$icon}
@@ -1785,7 +1785,7 @@ class UserProfilePage extends Article {
 							<input type="submit" value="' . wfMessage( 'userboard_sendbutton' )->escaped() . '" class="site-button" />
 						</div>' .
 						Html::hidden( 'wpEditToken', $this->viewingUser->getEditToken() ) .
-					'</div>';
+					'</form></div>';
 			} elseif ( $this->viewingUser->isLoggedIn() && $this->viewingUser->isBlocked() ) {
 				// Show a better i18n message for registered users who are blocked
 				// @see https://phabricator.wikimedia.org/T266918
