@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"BadDog",
+			"Kizule",
 			"Milicevic01",
 			"Rancher",
 			"Жељко Тодоровић",
@@ -68,6 +69,7 @@
 	"g-remove-success-message": "Поклон \"$1\" је обрисан.",
 	"g-remove-title": "Обрисати \"$1\"?",
 	"g-send-gift": "Слање поклона",
+	"g-select-gift": "Одаберите поклон.",
 	"g-select-a-friend": "изабери пријатеља",
 	"g-sent-title": "Послали сте поклон кориснику $1",
 	"g-sent-message": "Послали сте следећи поклон корисинку $1.",
@@ -76,7 +78,7 @@
 	"g-uploadsuccess": "Слање успешно",
 	"g-viewgiftlist": "Погледајте списак поклона",
 	"g-your-profile": "Ваш профил",
-	"gift_received_subject": "$1 Вам је послао/ла поклон $2 на {{SITENAME}}!",
+	"gift_received_subject": "$1 Вам шаље поклон $2 на пројекту {{SITENAME}}!",
 	"echo-category-title-social-gift": "Поклони",
 	"echo-pref-tooltip-social-gift": "Обавештавај ме када ми неко пошаље поклон."
 }
