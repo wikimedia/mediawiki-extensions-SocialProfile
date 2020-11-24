@@ -21,7 +21,12 @@ class SpecialUploadAvatar extends SpecialUpload {
 	public $mUploadSource;
 
 	public function __construct( $request = null ) {
-		SpecialPage::__construct( 'UploadAvatar', 'upload', false/* listed? */ );
+		parent::__construct();
+		$this->mName = 'UploadAvatar';
+	}
+
+	public function isListed() {
+		return false;
 	}
 
 	/**
