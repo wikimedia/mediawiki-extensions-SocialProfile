@@ -201,17 +201,30 @@ class UploadAvatar extends UploadFromFile {
 			}
 		}
 
-		$key = $cache->makeKey( 'user', 'profile', 'avatar', $uid, 's' );
-		$data = $cache->delete( $key );
+		$sizes = [ 's', 'm', 'ml', 'l' ];
 
-		$key = $cache->makeKey( 'user', 'profile', 'avatar', $uid, 'm' );
-		$data = $cache->delete( $key );
+		// Also delete any and all old versions of the user's _current_ avatar
+		// because the code in wAvatar#getAvatarImage assumes that there is only
+		// one current avatar (which, in all fairness, *is* a reasonable assumption)
+		foreach ( [ 'gif', 'jpg', 'png' ] as $fileExtension ) {
+			if ( $fileExtension === $ext ) {
+				// Our brand new avatar; skip over it in order to _not_ delete it, obviously
+			} else {
+				// Delete every other avatar image for this user that exists in the
+				// avatars directory (usually <path to MW installation>/images/avatars)
+				foreach ( $sizes as $size ) {
+					if ( is_file( $dest . '/' . $wgAvatarKey . '_' . $uid . '_' . $size . '.' . $fileExtension ) ) {
+						unlink( $dest . '/' . $wgAvatarKey . '_' . $uid . '_' . $size . '.' . $fileExtension );
+					}
+				}
+			}
+		}
 
-		$key = $cache->makeKey( 'user', 'profile', 'avatar', $uid, 'l' );
-		$data = $cache->delete( $key );
-
-		$key = $cache->makeKey( 'user', 'profile', 'avatar', $uid, 'ml' );
-		$data = $cache->delete( $key );
+		// Purge caches as well
+		foreach ( $sizes as $size ) {
+			$key = $cache->makeKey( 'user', 'profile', 'avatar', $uid, $size );
+			$cache->delete( $key );
+		}
 
 		$this->mExtension = $ext;
 		return Status::newGood();
