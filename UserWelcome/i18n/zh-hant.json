@@ -12,6 +12,7 @@
 	"mp-userlevels-link": "使用者等級",
 	"mp-welcome-upload": "上傳",
 	"mp-welcome-points": "$1 {{PLURAL:$1|積分}}",
+	"mp-welcome-needed-points": "贏得更多 ''$3'' 個{{PLURAL:$3|積分}}來晉升成[[$1|'''$2''']]！",
 	"mp-welcome-logged-in": "$1，您好",
 	"mp-requests-title": "請求",
 	"mp-requests-message": "您有以下請求。",

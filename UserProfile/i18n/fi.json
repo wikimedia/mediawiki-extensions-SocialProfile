@@ -191,6 +191,7 @@
 	"user-wiki-link": "Wikin käyttäjäsivu",
 	"user-type-toggle-old": "Käytä wikin käyttäjäsivua",
 	"user-type-toggle-new": "Käytä sosiaalista käyttäjäsivua",
+	"user-board-blocked-message": "Olet tällä hetkellä estettynä ja siitä johtuen et voi lähettää muille käyttäjille viestejä.",
 	"user-board-login-message": "Sinun tulee olla [[Special:UserLogin|sisäänkirjautunut]] lähettääksesi viestejä toisille käyttäjille",
 	"user-board-confirm-delete": "Haluatko varmasti poistaa tämän viestin?",
 	"removeavatar": "Poista avatar",
