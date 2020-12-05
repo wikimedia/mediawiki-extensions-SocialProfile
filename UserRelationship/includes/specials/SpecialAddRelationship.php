@@ -40,7 +40,8 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param string|null $par Name of the user whom to remove as a friend/foe
+	 * @param string|null $par Name of the user whom to remove as a friend/foe and
+	 *   relationship type name (e.g. Alice/friend to add Alice as a friend)
 	 */
 	public function execute( $par ) {
 		$out = $this->getOutput();
@@ -56,7 +57,16 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 		// Add CSS
 		$out->addModuleStyles( 'ext.socialprofile.userrelationship.css' );
 
-		$userTitle = Title::newFromDBkey( $request->getVal( 'user', $par ) );
+		// Support for friendly-by-default URLs (T191157)
+		$params = explode( '/', $par );
+		if ( count( $params ) === 2 ) {
+			$user_name = $params[0];
+			$this->relationship_type = ( $params[1] === 'foe' ? 2 : 1 );
+		} else {
+			$user_name = $par;
+		}
+
+		$userTitle = Title::newFromDBkey( $request->getVal( 'user', $user_name ) );
 
 		if ( !$userTitle ) {
 			$out->setPageTitle( $this->msg( 'ur-error-title' ) );
@@ -65,9 +75,8 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 		}
 
 		$this->user_to = User::newFromName( $userTitle->getText() );
-		$this->relationship_type = $request->getInt( 'rel_type' );
 		if ( !$this->relationship_type || !is_numeric( $this->relationship_type ) ) {
-			$this->relationship_type = 1;
+			$this->relationship_type = $request->getInt( 'rel_type', 1 );
 		}
 		$hasRelationship = UserRelationship::getUserRelationshipByID(
 			$this->user_to,

@@ -39,9 +39,9 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param string|null $params
+	 * @param string|null $par User name of the target user (friend or foe) with whom you want to end the relationship
 	 */
-	public function execute( $params ) {
+	public function execute( $par ) {
 		$out = $this->getOutput();
 		$request = $this->getRequest();
 		$user = $this->getUser();
@@ -53,11 +53,10 @@ class SpecialRemoveRelationship extends UnlistedSpecialPage {
 		$out->setRobotPolicy( 'noindex,nofollow' );
 
 		// Add CSS
-		$out->addModuleStyles( [
-			'ext.socialprofile.userrelationship.css'
-		] );
+		$out->addModuleStyles( 'ext.socialprofile.userrelationship.css' );
 
-		$usertitle = Title::makeTitleSafe( NS_USER, $request->getVal( 'user' ) );
+		// Support for friendly-by-default URLs (T191157)
+		$usertitle = Title::makeTitleSafe( NS_USER, $request->getVal( 'user', $par ) );
 		if ( !$usertitle ) {
 			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
 			$out->addWikiMsg( 'ur-add-no-user' );

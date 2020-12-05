@@ -991,8 +991,6 @@ class UserProfilePage extends Article {
 		$profile_data = $this->profile_data;
 
 		// Safe URLs
-		$add_relationship = SpecialPage::getTitleFor( 'AddRelationship' );
-		$remove_relationship = SpecialPage::getTitleFor( 'RemoveRelationship' );
 		$give_gift = SpecialPage::getTitleFor( 'GiveGift', $this->profileOwner->getName() );
 		$update_profile = SpecialPage::getTitleFor( 'UpdateProfile' );
 		$watchlist = SpecialPage::getTitleFor( 'Watchlist' );
@@ -1090,20 +1088,34 @@ class UserProfilePage extends Article {
 			$profileLinks['user-watchlist'] =
 				'<a href="' . htmlspecialchars( $watchlist->getFullURL() ) . '">' . wfMessage( 'user-watchlist' )->escaped() . '</a>';
 		} elseif ( $this->viewingUser->isLoggedIn() ) {
+			// Support for friendly-by-default URLs (T191157)
+			$add_friend = SpecialPage::getTitleFor(
+				'AddRelationship',
+				$this->profileOwner->getName() . '/friend'
+			);
+			$add_foe = SpecialPage::getTitleFor(
+				'AddRelationship',
+				$this->profileOwner->getName() . '/foe'
+			);
+			$remove_relationship = SpecialPage::getTitleFor(
+				'RemoveRelationship',
+				$this->profileOwner->getName()
+			);
+
 			if ( $relationship == false ) {
 				$profileLinks['user-add-friend'] =
-					'<a href="' . htmlspecialchars( $add_relationship->getFullURL( [ 'user' => $this->profileOwner->getName(), 'rel_type' => '1' ] ) ) . '" rel="nofollow">' . wfMessage( 'user-add-friend' )->escaped() . '</a>';
+					'<a href="' . htmlspecialchars( $add_friend->getFullURL() ) . '" rel="nofollow">' . wfMessage( 'user-add-friend' )->escaped() . '</a>';
 
 				$profileLinks['user-add-foe'] =
-					'<a href="' . htmlspecialchars( $add_relationship->getFullURL( [ 'user' => $this->profileOwner->getName(), 'rel_type' => '2' ] ) ) . '" rel="nofollow">' . wfMessage( 'user-add-foe' )->escaped() . '</a>';
+					'<a href="' . htmlspecialchars( $add_foe->getFullURL() ) . '" rel="nofollow">' . wfMessage( 'user-add-foe' )->escaped() . '</a>';
 			} else {
 				if ( $relationship == 1 ) {
 					$profileLinks['user-remove-friend'] =
-						'<a href="' . htmlspecialchars( $remove_relationship->getFullURL( [ 'user' => $this->profileOwner->getName() ] ) ) . '">' . wfMessage( 'user-remove-friend' )->escaped() . '</a>';
+						'<a href="' . htmlspecialchars( $remove_relationship->getFullURL() ) . '">' . wfMessage( 'user-remove-friend' )->escaped() . '</a>';
 				}
 				if ( $relationship == 2 ) {
 					$profileLinks['user-remove-foe'] =
-						'<a href="' . htmlspecialchars( $remove_relationship->getFullURL( [ 'user' => $this->profileOwner->getName() ] ) ) . '">' . wfMessage( 'user-remove-foe' )->escaped() . '</a>';
+						'<a href="' . htmlspecialchars( $remove_relationship->getFullURL() ) . '">' . wfMessage( 'user-remove-foe' )->escaped() . '</a>';
 				}
 			}
 
@@ -1221,7 +1233,6 @@ class UserProfilePage extends Article {
 
 		$stats = new UserStats( $this->profileOwner );
 		$stats_data = $stats->getUserStats();
-		$view_all_title = SpecialPage::getTitleFor( 'ViewRelationships' );
 
 		if ( $rel_type == 1 ) {
 			$relationship_count = $stats_data['friend_count'];
@@ -1240,10 +1251,13 @@ class UserProfilePage extends Article {
 				<div class="user-section-actions">
 					<div class="action-right">';
 			if ( intval( $relationship_count ) > 4 ) {
-				$output .= '<a href="' . htmlspecialchars( $view_all_title->getFullURL( [
-						'user' => $this->profileOwner->getName(),
-						'rel_type' => $rel_type
-					] ) ) .
+				// Use the friendlier URLs here by default (T191157)
+				$rel_type_name = ( $rel_type == 1 ? 'friends' : 'foes' );
+				$view_all_title = SpecialPage::getTitleFor(
+					'ViewRelationships',
+					$this->profileOwner->getName() . '/' . $rel_type_name
+				);
+				$output .= '<a href="' . htmlspecialchars( $view_all_title->getFullURL() ) .
 					'" rel="nofollow">' . wfMessage( 'user-view-all' )->escaped() . '</a>';
 			}
 			$output .= '</div>
