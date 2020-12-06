@@ -97,10 +97,10 @@ class UserBoard {
 	/**
 	 * Sends an email to a user if someone wrote on their board
 	 *
-	 * @param User $sender User (object) who wrote the board message
 	 * @param User $recipient User (object) receiving the message
+	 * @param User $sender User (object) who wrote the board message
 	 */
-	private function sendBoardNotificationEmail( $sender, $recipient ) {
+	private function sendBoardNotificationEmail( $recipient, $sender ) {
 		$recipient->load();
 
 		// Send email if user's email is confirmed and s/he's opted in to recieving social notifications
