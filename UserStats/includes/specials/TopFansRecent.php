@@ -18,7 +18,17 @@ class TopFansRecent extends UnlistedSpecialPage {
 	 * @return string[] Matching subpages
 	 */
 	public function prefixSearchSubpages( $search, $limit, $offset ) {
-		return [ 'weekly', 'monthly' ];
+		global $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
+
+		$prefixes = [];
+		if ( $wgUserStatsTrackWeekly ) {
+			$prefixes[] = 'weekly';
+		}
+		if ( $wgUserStatsTrackMonthly ) {
+			$prefixes[] = 'monthly';
+		}
+
+		return $prefixes;
 	}
 
 	/**
@@ -27,6 +37,8 @@ class TopFansRecent extends UnlistedSpecialPage {
 	 * @param string|null $par Period name, i.e. weekly or monthly (or null)
 	 */
 	public function execute( $par ) {
+		global $wgUserStatsTrackWeekly, $wgUserStatsTrackMonthly;
+
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$linkRenderer = $this->getLinkRenderer();
 		$out = $this->getOutput();
@@ -41,14 +53,20 @@ class TopFansRecent extends UnlistedSpecialPage {
 		$out->addModuleStyles( 'ext.socialprofile.userstats.css' );
 
 		$periodFromRequest = $request->getVal( 'period', $par );
-		if ( $periodFromRequest == 'weekly' ) {
+		if ( $periodFromRequest == 'weekly' && $wgUserStatsTrackWeekly ) {
 			$period = 'weekly';
-		} elseif ( $periodFromRequest == 'monthly' ) {
+		} elseif ( $periodFromRequest == 'monthly' && $wgUserStatsTrackMonthly ) {
 			$period = 'monthly';
 		}
 
 		if ( !isset( $period ) ) {
-			$period = 'weekly';
+			if ( $wgUserStatsTrackWeekly ) {
+				$period = 'weekly';
+			} elseif ( $wgUserStatsTrackMonthly ) {
+				$period = 'monthly';
+			} else {
+				throw new ErrorPageError( 'top-fans-bad-field-title', 'top-fans-bad-field-message' );
+			}
 		}
 
 		if ( $period == 'weekly' ) {
@@ -134,13 +152,17 @@ class TopFansRecent extends UnlistedSpecialPage {
 				$this->msg( 'top-fans-total-points-link' )->escaped() . '</a></p>';
 
 		if ( $period == 'weekly' ) {
-			$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=monthly' ) ) . '">' .
-				$this->msg( 'top-fans-monthly-points-link' )->escaped() . '</a><p>
-			<p><b>' . $this->msg( 'top-fans-weekly-points-link' )->escaped() . '</b></p>';
+			if ( $wgUserStatsTrackMonthly ) {
+				$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=monthly' ) ) . '">' .
+					htmlspecialchars( $this->msg( 'top-fans-monthly-points-link' )->escaped() ) . '</a></p>';
+			}
+			$output .= '<p><b>' . htmlspecialchars( $this->msg( 'top-fans-weekly-points-link' )->escaped() ) . '</b></p>';
 		} else {
-			$output .= '<p><b>' . $this->msg( 'top-fans-monthly-points-link' )->escaped() . '</b><p>
-			<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=weekly' ) ) . '">' .
-				$this->msg( 'top-fans-weekly-points-link' )->escaped() . '</a></p>';
+			$output .= '<p><b>' . $this->msg( 'top-fans-monthly-points-link' )->escaped() . '</b></p>';
+			if ( $wgUserStatsTrackWeekly ) {
+				$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=weekly' ) ) . '">' .
+					htmlspecialchars( $this->msg( 'top-fans-weekly-points-link' )->escaped() ) . '</a></p>';
+			}
 		}
 
 		// Build nav of stats by category based on MediaWiki:Topfans-by-category
