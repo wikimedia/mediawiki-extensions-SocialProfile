@@ -105,7 +105,8 @@ class TopFansRecent extends UnlistedSpecialPage {
 				// different bug with a different extension).
 				// Also ignore flagged bot accounts, no point in showing those
 				// in the top lists.
-				$exists = $u->load();
+				$u->load();
+				$exists = $u->getId() !== 0;
 
 				if ( $exists && !$u->isBlocked() && !$u->isBot() ) {
 					$user_list[] = [
