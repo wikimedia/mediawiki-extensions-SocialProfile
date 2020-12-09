@@ -98,12 +98,12 @@ class TopUsersPoints extends SpecialPage {
 			<h1>' . htmlspecialchars( $this->msg( 'top-fans-by-points-nav-header' )->plain() ) . '</h1>
 			<p><b>' . htmlspecialchars( $this->msg( 'top-fans-total-points-link' )->plain() ) . '</b></p>';
 
-		if ( $wgUserStatsTrackWeekly ) {
+		if ( $wgUserStatsTrackMonthly ) {
 			$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=monthly' ) ) . '">' .
 				htmlspecialchars( $this->msg( 'top-fans-monthly-points-link' )->plain() ) . '</a></p>';
 		}
 
-		if ( $wgUserStatsTrackMonthly ) {
+		if ( $wgUserStatsTrackWeekly ) {
 			$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=weekly' ) ) . '">' .
 				htmlspecialchars( $this->msg( 'top-fans-weekly-points-link' )->plain() ) . '</a></p>';
 		}
