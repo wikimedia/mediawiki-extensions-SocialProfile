@@ -4,6 +4,7 @@
 			"EugeneZelenko",
 			"Jim-by",
 			"Red Winged Duck",
+			"Renessaince",
 			"Wizardist",
 			"Zedlik"
 		]
@@ -33,7 +34,7 @@
 	"g-error-do-not-own": "Вы не валодаеце гэтым падарункам.",
 	"g-error-message-blocked": "Цяпер Вы заблякаваныя і ня можаце дарыць падарункі",
 	"g-error-message-invalid-link": "Вы ўвялі няслушную спасылку.",
-	"g-error-message-login": "Вам неабходна ўвайсьці ў сыстэму, каб дарыць падарункі",
+	"g-error-message-login": "Каб дарыць падарункі, Вам неабходна [[Special:UserLogin|ўвайсьці ў сыстэму]]",
 	"g-error-message-no-user": "Удзельніка, якога Вы спрабуеце паглядзець, не існуе.",
 	"g-error-message-to-yourself": "Вы ня можаце дарыць падарункі сабе.",
 	"g-error-title": "Ой! Вы выбралі няслушны кірунак!",

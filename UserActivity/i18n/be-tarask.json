@@ -19,6 +19,6 @@
 	"useractivity-group-friend": "$1 {{PLURAL:$1|сябар|сябры|сяброў}}",
 	"useractivity-siteactivity": "Актыўнасьць на сайце",
 	"useractivity-title": "Актыўнасьць сяброў",
-	"useractivity-user_message": "$1 {{GENDER:$6|даслаў|даслала}} {{PLURAL:$4|паведамленьне|паведамленьні}} $3",
+	"useractivity-user_message": "$1 даслаў {{PLURAL:$4|паведамленьне|паведамленьні}} $3",
 	"useractivity-comment": "$1 {{GENDER:$1|камэнтаваў|камэнтавала}} на {{PLURAL:$4|старонцы|наступных старонках:}} $3"
 }

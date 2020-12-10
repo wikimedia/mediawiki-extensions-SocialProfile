@@ -3,14 +3,15 @@
 		"authors": [
 			"EugeneZelenko",
 			"Jim-by",
-			"Red Winged Duck"
+			"Red Winged Duck",
+			"Renessaince"
 		]
 	},
 	"userwelcome-desc": "Дадае тэг <code>&lt;welcomeUser&gt;</code>, каб паказваць сацыяльную інфармацыю пра ўдзельніка іншым зарэгістраваным удзельнікам",
 	"mp-userlevels-link": "Узроўні ўдзельніка",
 	"mp-welcome-upload": "Загрузіць",
 	"mp-welcome-points": "$1 {{PLURAL:$1|пункт|пункты|пунктаў}}",
-	"mp-welcome-needed-points": "Каб узьняцца да [[$1|'''$2''']] неабходна здабыць яшчэ ''$3'' {{PLURAL:$3|пункт|пункты|пунктаў}}!",
+	"mp-welcome-needed-points": "Каб узьняцца да [[$1|'''$2''']], неабходна здабыць яшчэ ''$3'' {{PLURAL:$3|пункт|пункты|пунктаў}}!",
 	"mp-welcome-logged-in": "Прывітаньне $1",
 	"mp-requests-title": "Запыты",
 	"mp-requests-message": "Вы атрымалі наступныя запыты.",
