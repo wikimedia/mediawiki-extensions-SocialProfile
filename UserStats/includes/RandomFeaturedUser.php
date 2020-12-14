@@ -82,19 +82,21 @@ class RandomFeaturedUser {
 			$points = $stats_data['points'];
 		}
 
+		$userPageURL = $user->getUserPage()->getFullURL();
+
 		if ( $wgRandomFeaturedUser['avatar'] == true ) {
 			$avatar = new wAvatar( $user->getId(), 'ml' );
 			$avatarImage = $avatar->getAvatarURL();
 
-			$output .= '<a href="' . htmlspecialchars( $user->getUserPage()->getFullURL(), ENT_QUOTES ) . '">';
+			$output .= '<a href="' . htmlspecialchars( $userPageURL, ENT_QUOTES ) . '">';
 			$output .= $avatarImage;
 			$output .= '</a>';
 		}
 
 		$link = Html::rawElement(
 			'a',
-			[ 'href' => $user_title->getFullURL() ],
-			wordwrap( $random_user['user_name'], 12, "<br />\n", true )
+			[ 'href' => htmlspecialchars( $userPageURL, ENT_QUOTES ) ],
+			wordwrap( htmlspecialchars( $random_user['user_name'], ENT_QUOTES ), 12, "<br />\n", true )
 		);
 		$output .= "<div class=\"random-featured-user-title\">$link<br /> " .
 				// For grep: random-user-points-weekly, random-user-points-monthly
