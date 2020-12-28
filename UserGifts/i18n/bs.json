@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"CERminator",
+			"Obsuser",
 			"Palapa"
 		]
 	},
@@ -41,7 +42,7 @@
 	"g-medium": "Srednje",
 	"g-mediumlarge": "Srednje-veliki",
 	"g-new": "novo",
-	"g-next": "Slijedeći",
+	"g-next": "Sljedeći",
 	"g-previous": "Preth",
 	"g-remove": "Ukloni",
 	"g-remove-gift": "Ukloni ovaj poklon",

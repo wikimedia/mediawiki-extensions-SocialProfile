@@ -45,5 +45,5 @@
 	"userboard-time-minutes": "{{PLURAL:$1|un minuta|$1 minutas}}",
 	"userboard-time-seconds": "{{PLURAL:$1|un secunda|$1 secundas}}",
 	"message_received_subject": "$1 scribeva in tu tabuliero in {{SITENAME}}",
-	"message_received_body": "Salute $1,\n\n$2 justo scribeva in tu tabuliero in {{SITENAME}}!\n\nClicca infra pro visitar tu tabuliero!\n\n$3\n\n---\n\nTu non vole reciper plus e-mail de nos?\n\nClicca $4\ne disactiva in tu preferentias le notificationes per e-mail."
+	"message_received_body": "Salute $1,\n\n$2 ha justo ora scribite sur tu tabuliero in {{SITENAME}}!\n\nClicca infra pro visitar tu tabuliero!\n\n$3\n\n---\n\nTu non vole reciper plus e-mail de nos?\n\nClicca $4\ne disactiva in tu preferentias le notificationes per e-mail."
 }

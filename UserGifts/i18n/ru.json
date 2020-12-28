@@ -3,6 +3,7 @@
 		"authors": [
 			"Ferrer",
 			"Innv",
+			"Okras",
 			"Rubin",
 			"Rubin16",
 			"Александр Сигачёв"
@@ -46,7 +47,7 @@
 	"g-give-all-message-title": "Добавить сообщение",
 	"g-give-all-title": "Подарить подарок для $1",
 	"g-give-enter-friend-title": "Если вы знаете имя участника, введите его ниже",
-	"g-given": "Этот подарок был подарен $1 {{PLURAL:$1|раз|раза|раза}}",
+	"g-given": "Этот подарок был подарен $1 {{PLURAL:$1|раз|раза|раз}}",
 	"g-give-list-friends-title": "Выбор из вашего списка друзей",
 	"g-give-separator": "или",
 	"g-give-no-user-message": "Подарки и награды — хороший способ отметить ваших друзей!",

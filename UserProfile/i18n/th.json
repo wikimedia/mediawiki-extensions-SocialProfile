@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Ans",
+			"Geonuch",
 			"Passawuth",
 			"Woraponboonkerd"
 		]
@@ -24,7 +25,7 @@
 	"user-remove-foe": "ลบออกจากการเป็นศัตรู",
 	"user-send-message": "ส่งข้อความ",
 	"user-send-gift": "ส่งของขวัญ",
-	"user-contributions": "งานเขียนทั้งหมด",
+	"user-contributions": "การเข้ามีส่วนร่วม",
 	"user-stats-edits": "{{PLURAL:$1|การแก้ไข|การแก้ไขทั้งหมด}}",
 	"user-stats-votes": "{{PLURAL:$1|การลงคะแนน|การลงคะแนนทั้งหมด}}",
 	"user-stats-comments": "{{PLURAL:$1|ความเห็น|ความเห็น}}",

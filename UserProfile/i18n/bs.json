@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"CERminator",
+			"Obsuser",
 			"Palapa"
 		]
 	},
@@ -120,7 +121,7 @@
 	"user-profile-preferences-emails-personalmessage": "Kada pošaljem ličnu poruku",
 	"user-profile-preferences-emails-friendfoe": "Kada vas drugi korisnik doda među prijatelje ili neprijatelje",
 	"user-profile-preferences-emails-gift": "Kada primim poklon",
-	"user-profile-preferences-emails-level": "Kada napredujem na slijedeći nivo",
+	"user-profile-preferences-emails-level": "Kada napredujem na sljedeći nivo",
 	"user-profile-preferences-emails-weekly": "Dobijanje sedmičnih ažuriranja e-mailom",
 	"user-profile-update-button": "Ažurirano",
 	"user-profile-tidbits-title": "Zanimljivosti",
@@ -164,7 +165,7 @@
 	"avatarupload-removeavatar": "Ukloni avatara",
 	"avatarupload-currentavatar": "Trenutni avatar od $1",
 	"avatarupload-removesuccess": "Avatar je uspješno uklonjen",
-	"avatarupload-removeanother": "Ukloni slijedeći",
+	"avatarupload-removeanother": "Ukloni sljedeći",
 	"profilelogpage": "Zapisnik uređivanja korisničkog profila",
 	"profilelogpagetext": "Ovo je zapisnik uređivanja korisničkog profila",
 	"user-profile-edit-profile": "je uredio $1 profil",

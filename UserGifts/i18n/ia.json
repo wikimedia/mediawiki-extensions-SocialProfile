@@ -29,7 +29,7 @@
 	"g-error-do-not-own": "Tu non possede iste dono.",
 	"g-error-message-blocked": "Tu es blocate al momento e non pote dar donos",
 	"g-error-message-invalid-link": "Le ligamine que tu ha entrate es invalide.",
-	"g-error-message-login": "Tu debe aperir un session pro dar donos",
+	"g-error-message-login": "Tu debe [[Special:UserLogin|aperir session]] pro dar donos.",
 	"g-error-message-no-user": "Le usator que tu tenta vider non existe.",
 	"g-error-message-to-yourself": "Tu non pote dar un dono a te mesme.",
 	"g-error-title": "Ups, tu ha errate!",
@@ -75,6 +75,6 @@
 	"g-viewgiftlist": "Vider lista de donos",
 	"g-your-profile": "Tu profilo",
 	"gift_received_subject": "$1 te ha inviate le dono $2 in {{SITENAME}}!",
-	"gift_received_body": "Salute $1,\n\n$2 justo te inviava le dono $3 in {{SITENAME}}.\n\nVole leger le nota que $2 te lassava e vider tu dono? Clicca super le ligamine sequente:\n\n$4\n\nNos spera que illo te placera!\n\nGratias,\n\n\nLe equipa de {{SITENAME}}\n\n---\n\nTu non vole reciper plus e-mail de nos?\n\nClicca $5\ne cambia tu configurationes pro disactivar le notificationes in e-mail.",
+	"gift_received_body": "Salute $1,\n\n$2 te ha justo ora inviate le dono $3 sur {{SITENAME}}.\n\nVole leger le nota que $2 te lassava e vider tu dono? Clicca sur le ligamine sequente:\n\n$4\n\nNos spera que illo te placera!\n\nGratias,\n\n\nLe equipa de {{SITENAME}}\n\n---\n\nTu non vole reciper plus e-mail de nos?\n\nClicca $5\ne disactiva in tu preferentias le notificationes per e-mail.",
 	"right-giftadmin": "Crear nove donos e modificar existentes"
 }
