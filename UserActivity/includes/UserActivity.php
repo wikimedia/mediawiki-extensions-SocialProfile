@@ -1288,8 +1288,8 @@ class UserActivity {
 	 * Compares the timestamps of two given objects to decide how to sort them.
 	 * Called by getActivityList() and getActivityListGrouped().
 	 *
-	 * @param object $x
-	 * @param object $y
+	 * @param array $x
+	 * @param array $y
 	 * @return int 0 if the timestamps are the same, -1 if $x's timestamp
 	 * is greater than $y's, else 1
 	 */
