@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ayour2002",
 			"Zanatos"
 		]
 	},
 	"ur-accept": "qbl",
 	"ur-reject": "adur-tqblt",
-	"friend_request_body": "Azul $1:\n\n$2 iskr gik zod amdakl ns ɣ {{SITENAME}}.  nra annisan isnit tgam imdukal nsaḥt.\n\nad o-zday ad bach atsḥut tidukla nk:\n$3\n\nTanmirte\n\n---\n\nyak ortrit azakn soul ur-nsifid tibratin?\nad $4\nsbddlt reglage nk bach aktnin soul ur-nsifid."
+	"friend_request_body": "Azul a $1.\n\n$2 iskr gik amddakl nns ɣ {{SITENAME}}. Nra ad nissan is nit tgam imddukkal n ṣṣaḥt.\n\nIrbbi add f uzday ad bac atṣṣḥut tiddukla nnk:\n$3\n\nTanmmirt,\n\n---\n\nYak ur trit ad ak-nn sul ur nṣifiḍ tibratin?\n\nAdd $4\nsbddlt tisɣal nnk fad ak-t-nin sul ur nṣifiḍ."
 }
