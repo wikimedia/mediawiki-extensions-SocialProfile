@@ -3,7 +3,9 @@
 use MediaWiki\MediaWikiServices;
 
 class UploadAvatar extends UploadFromFile {
+	/** @var string */
 	public $mExtension;
+	/** @var string */
 	public $avatarUploadDirectory;
 
 	function createThumbnail( $imageSrc, $imageInfo, $imgDest, $thumbWidth ) {

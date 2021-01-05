@@ -12,14 +12,49 @@ use MediaWiki\Logger\LoggerFactory;
  */
 class GiftManagerLogo extends UnlistedSpecialPage {
 
-	public $mUploadFile, $mUploadDescription, $mIgnoreWarning;
-	public $mUploadSaveName, $mUploadTempName, $mUploadSize, $mUploadOldVersion;
-	public $mUploadCopyStatus, $mUploadSource, $mReUpload, $mAction, $mUpload;
-	public $mOname, $mSessionKey, $mStashed, $mDestFile;
-	public $mSavedFile, $mWatchthis;
+	/** @var UploadBase */
+	public $mUploadFile;
+	/** @var string|null */
+	public $mUploadDescription;
+	/** @var bool|null */
+	public $mIgnoreWarning;
+	/** @var string|null */
+	public $mUploadSaveName;
+	/** @var string|null */
+	public $mUploadTempName;
+	/** @var int|null */
+	public $mUploadSize;
+	/** @var string|null */
+	public $mUploadOldVersion;
+	/** @var string|null */
+	public $mUploadCopyStatus;
+	/** @var string|null */
+	public $mUploadSource;
+	/** @var bool|null */
+	public $mReUpload;
+	/** @var string|null */
+	public $mAction;
+	/** @var boolmUpload */
+	public $mUpload;
+	/** @var string|null */
+	public $mOname;
+	/** @var string|null */
+	public $mSessionKey;
+	/** @var boolmStashed */
+	public $mStashed;
+	/** @var string|null */
+	public $mDestFile;
+	/** @var bool|null */
+	public $mSavedFile;
+	/** @var bool |null */
+	public $mWatchthis;
+	/** @var bool|null */
 	public $mTokenOk;
+	/** @var string|null */
 	public $awardsUploadDirectory;
+	/** @var string[]|null */
 	public $fileExtensions;
+	/** @var int|null */
 	public $gift_id;
 
 	public function __construct() {

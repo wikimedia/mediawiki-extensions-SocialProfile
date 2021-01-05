@@ -6,8 +6,11 @@ use MediaWiki\MediaWikiServices;
  * Functions for managing relationship data
  */
 class UserRelationship {
+	/** @var User */
 	public $user;
+	/** @var int */
 	public $user_id;
+	/** @var string */
 	public $user_name;
 
 	/**

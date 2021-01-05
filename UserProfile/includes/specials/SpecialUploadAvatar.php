@@ -16,8 +16,11 @@
  */
 
 class SpecialUploadAvatar extends SpecialUpload {
+	/** @var string|null */
 	public $avatarUploadDirectory;
+	/** @var string|null */
 	public $mUploadCopyStatus;
+	/** @var string|null */
 	public $mUploadSource;
 
 	public function __construct( $request = null ) {

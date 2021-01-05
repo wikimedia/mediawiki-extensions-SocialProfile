@@ -11,6 +11,8 @@ class SystemGifts {
 	 * All member variables should be considered private
 	 * Please use the accessor functions
 	 */
+
+	/** @var int[] */
 	private $categories = [
 		'edit' => 1,
 		'vote' => 2,
