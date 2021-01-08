@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Borislav",
-			"DCLXVI"
+			"DCLXVI",
+			"StanProg"
 		]
 	},
 	"messagesenttitle": "Изпратени съобщения",
@@ -27,7 +28,7 @@
 	"userboard_backprofile": "Връщане към профила на $1",
 	"userboard_backyourprofile": "Обратно към профила ми",
 	"userboard_boardtoboard": "Табло-до-табло",
-	"userboard_confirmdelete": "Необходимо е потвърждение за изтриване на съобщението.",
+	"userboard_confirmdelete": "Сигурни ли сте, че искате да изтриете това съобщение?",
 	"userboard_sendmessage": "Изпращане на съобщение до $1",
 	"userboard_myboard": "Моето табло",
 	"userboard_posted_ago": "публикувано преди $1",
