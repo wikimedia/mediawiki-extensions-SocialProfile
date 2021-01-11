@@ -2,18 +2,40 @@
 	"@metadata": {
 		"authors": [
 			"Gzdavidwong",
+			"Lakejason0",
 			"Liangent",
 			"PhiLiP"
 		]
 	},
+	"userboard-desc": "允许发送用户墙对用户墙的消息",
+	"messagesenttitle": "消息已发送",
+	"boardblasttitle": "群发用户墙消息",
 	"boardlinkselectall": "选择全部",
 	"boardlinkunselectall": "取消选择所有",
 	"boardlinkselectfriends": "选择朋友",
 	"boardlinkunselectfriends": "取消选择朋友",
 	"boardlinkselectfoes": "选择仇敌",
+	"boardsendbutton": "群发用户墙消息",
+	"userboard": "用户墙",
+	"userboard_board-to-board": "墙对墙消息",
+	"userboard_yourboard": "您的用户墙",
+	"userboard_owner": "$1的用户墙",
+	"userboard_yourboardwith": "您与$1的墙对墙消息",
+	"userboard_otherboardwith": "$1与$2的墙对墙消息",
+	"userboard_boardtoboard": "墙对墙消息",
+	"userboard_myboard": "我的用户墙",
 	"userboard_posted_ago": "在$1前张贴",
 	"userboard_private": "私有",
 	"userboard_public": "公开",
 	"userboard_nomessages": "没有信息。",
-	"userboard_sendbutton": "发送"
+	"userboard_sendbutton": "发送",
+	"right-userboard-delete": "删除其他人的用户墙消息",
+	"message_received_subject": "$1在{{SITENAME}}于您的用户墙留下了消息",
+	"message_received_body_html": "您好，$1。\n\n$2刚刚在{{SITENAME}}上在您的用户墙上留言了！\n\n点击下方以查看您的用户墙！\n\n[[Special:UserBoard]]\n\n---\n\n嘿，不想继续从我们这里收到邮件了？\n\n点击[[Special:UpdateProfile]]\n然后更改您的设置以关闭邮件通知。",
+	"message_received_body": "您好，$1。\n\n$2刚刚在{{SITENAME}}上在您的用户墙上留言了！\n\n点击下方以查看您的用户墙！\n\n$3\n\n---\n\n嘿，不想继续从我们这里收到邮件了？\n\n点击$4\n然后更改您的设置以关闭邮件通知。",
+	"echo-category-title-social-msg": "用户墙消息",
+	"echo-pref-tooltip-social-msg": "当有人在我的用户墙上留消息时通知我。",
+	"notification-social-msg-send": "$1于您的用户墙上留下了消息。<br /><br />''$2''",
+	"notification-social-msg-send-bundle": "您的用户墙上有{{PLURAL:$1|$1条消息|100=99+条消息}}。",
+	"apihelp-socialprofile-delete-message-param-id": "要删除的用户墙消息的唯一标识符。"
 }

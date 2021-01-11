@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Kly",
+			"Lakejason0",
 			"Liangent",
 			"Mark85296341",
 			"Wrightbus",
@@ -53,6 +54,8 @@
 	"custom-no-info": "沒有自訂資訊",
 	"profile-updated-personal": "更新您的個人檔案",
 	"profile-not-provided": "未提供",
+	"user-board-title": "留言版",
+	"user-send-board-blast": "發送批量訊息",
 	"user-personal-info-title": "個人資訊",
 	"user-no-personal-info": "沒有個人資訊",
 	"user-personal-info-real-name": "真實姓名",

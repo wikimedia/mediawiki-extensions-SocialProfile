@@ -2,15 +2,21 @@
 	"@metadata": {
 		"authors": [
 			"Gzdavidwong",
+			"Lakejason0",
 			"Liangent"
 		]
 	},
+	"userwelcome-desc": "为登录用户添加<code>&lt;welcomeUser&gt;</code>标签以显示针对用户个人的社交信息",
 	"mp-userlevels-link": "用户等级",
 	"mp-welcome-upload": "上传",
-	"mp-welcome-logged-in": "$1，您好",
+	"mp-welcome-points": "$1{{PLURAL:$1|点}}",
+	"mp-welcome-needed-points": "要升到[[$1|'''$2''']]，需要获得额外的''$3''{{PLURAL:$3|点点数}}！",
+	"mp-welcome-logged-in": "您好，$1",
 	"mp-requests-title": "请求",
 	"mp-requests-message": "您有以下请求：",
 	"mp-request-new-message": "新信息",
+	"mp-request-new-award": "$1份新{{PLURAL:$1|奖励}}",
 	"mp-request-new-gift": "{{PLURAL:$1件|新礼物}}",
+	"mp-request-new-foe": "$1位新{{PLURAL:$1|仇敌}}",
 	"mp-request-new-friend": "{{PLURAL:$1名|新朋友}}"
 }

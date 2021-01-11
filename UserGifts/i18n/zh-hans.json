@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Hydra",
+			"Lakejason0",
 			"Liangent",
 			"PhiLiP",
 			"沈澄心"
@@ -22,9 +23,9 @@
 	"g-gift-name": "送礼物",
 	"g-give-gift": "礼物名称",
 	"g-give-all-title": "送礼物给$1",
-	"g-give-list-friends-title": "在您的朋友清单中选择",
+	"g-give-list-friends-title": "在您的朋友列表中选择",
 	"g-give-separator": "或",
-	"g-give-no-user-title": "您想送礼物给哪人?",
+	"g-give-no-user-title": "您想送礼物给哪个人？",
 	"g-give-this-gift": "送出这份礼物",
 	"g-go-back": "后退",
 	"g-large": "大",
@@ -36,15 +37,16 @@
 	"g-previous": "前页",
 	"g-remove": "移除",
 	"g-remove-gift": "移除这份礼物",
-	"g-remove-title": "移除「$1」?",
+	"g-remove-title": "移除“$1”？",
 	"g-send-gift": "传送礼物",
 	"g-select-a-friend": "选择一位朋友",
-	"g-sent-title": "您已传送礼物给$1",
-	"g-sent-message": "您已传送以下礼物给$1。",
+	"g-sent-title": "您已发送礼物给$1",
+	"g-sent-message": "您已发送以下礼物给$1。",
 	"g-small": "小",
-	"g-uploadsuccess": "上载成功",
-	"g-viewgiftlist": "检视礼物清单",
+	"g-uploadsuccess": "上传成功",
+	"g-viewgiftlist": "查看礼物列表",
 	"g-your-profile": "您的个人资料",
+	"gift_received_body_html": "您好，$1。\n\n$2刚刚在{{SITENAME}}送给了您$3礼物。\n\n希望阅读$2留给你的留言，看看你的礼物吗？请点击下方链接：\n\n[[Special:ViewGifts]]\n\n希望你喜欢它！\n\n此致，\n\n{{SITENAME}}团队\n\n---\n\n嘿，不想继续从我们这里收到邮件了？\n\n点击[[Special:UpdateProfile]]\n然后更改您的设置以关闭邮件通知。",
 	"echo-category-title-social-gift": "礼物",
 	"right-giftadmin": "创建新的和编辑现有的礼物"
 }
