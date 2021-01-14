@@ -66,15 +66,27 @@ class wAvatar {
 	}
 
 	/**
+	 * Get the web-accessible url for the avatar.
+	 *
+	 * @return string
+	 */
+	public function getAvatarUrlPath() : string {
+		global $wgUploadBaseUrl, $wgUploadPath;
+
+		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
+
+		return "{$uploadPath}/avatars/{$this->getAvatarImage()}";
+	}
+
+	/**
 	 * @param array $extraParams Array of extra parameters to give to the image
 	 * @return string <img> HTML tag with full path to the avatar image
 	 */
 	function getAvatarURL( $extraParams = [] ) {
-		global $wgUploadBaseUrl, $wgUploadPath, $wgUserProfileDisplay;
+		global $wgUserProfileDisplay;
 
-		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
 		$defaultParams = [
-			'src' => "{$uploadPath}/avatars/{$this->getAvatarImage()}",
+			'src' => $this->getAvatarUrlPath(),
 			'border' => '0',
 			'class' => 'mw-socialprofile-avatar'
 		];
