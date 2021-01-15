@@ -1,7 +1,9 @@
 <?php
 
 class UserLevel {
+	/** @var int */
 	public $level_number = 0;
+	/** @var string */
 	public $level_name;
 
 	/**

@@ -8,8 +8,11 @@ use MediaWiki\MediaWikiServices;
  */
 class UserGifts {
 
+	/** @var User */
 	public $user;
+	/** @var int */
 	public $user_id;
+	/** @var string */
 	public $user_name;
 
 	/**

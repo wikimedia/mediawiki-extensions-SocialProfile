@@ -17,9 +17,13 @@ use MediaWiki\MediaWikiServices;
 
 // phpcs:ignore Squiz.Classes.ValidClassName.NotCamelCaps
 class wAvatar {
+	/** @var string|null */
 	public $user_name = null;
+	/** @var int */
 	public $user_id;
+	/** @var int */
 	public $avatar_type = 0;
+	/** @var int */
 	public $avatar_size;
 
 	/**

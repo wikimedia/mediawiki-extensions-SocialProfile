@@ -9,26 +9,47 @@ class UserActivity {
 	 * Please use the accessor functions
 	 */
 
+	/** @var User|null */
 	private $user;
+	/** @var array[]|null */
 	private $items;
+	/** @var int|null */
 	private $rel_type;
+	/** @var bool */
 	private $show_current_user = false;
+	/** @var int */
 	private $show_edits = 1;
+	/** @var int */
 	private $show_votes = 0;
+	/** @var int */
 	private $show_comments = 1;
+	/** @var int */
 	private $show_relationships = 1;
+	/** @var int */
 	private $show_gifts_sent = 0;
+	/** @var int */
 	private $show_gifts_rec = 1;
+	/** @var int */
 	private $show_system_gifts = 1;
+	/** @var int */
 	private $show_system_messages = 1;
+	/** @var int */
 	private $show_messages_sent = 1;
+	/** @var int */
 	private $show_network_updates = 0;
+	/** @var bool */
 	private $show_all;
+	/** @var int */
 	private $item_max;
+	/** @var int */
 	private $now;
+	/** @var int */
 	private $three_days_ago;
+	/** @var array */
 	private $items_grouped;
+	/** @var array[]|null */
 	private $displayed;
+	/** @var array[]|null */
 	private $activityLines;
 
 	/**
