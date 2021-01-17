@@ -46,7 +46,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	public $mDestFile;
 	/** @var bool|null */
 	public $mSavedFile;
-	/** @var bool |null */
+	/** @var bool|null */
 	public $mWatchthis;
 	/** @var bool|null */
 	public $mTokenOk;
