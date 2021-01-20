@@ -235,5 +235,6 @@
 	"apihelp-smpuserprofiletype-description": "Obtenha o tipo de página de usuário de um usuário ou defina seu próprio tipo de página de usuário",
 	"apihelp-smpuserprofiletype-summary": "Obtenha o tipo de página de usuário de um usuário ou defina seu próprio tipo de página de usuário",
 	"apihelp-smpuserprofiletype-param-do": "Ação a executar (obter ou definir)",
+	"apihelp-smpuserprofiletype-param-user": "Nome de usuário (relevante apenas quando <kbd>do</kbd> é <kbd>get</kbd> já que este módulo não pode ser usado para definir os tipos de página do usuário de outro usuário, apenas o seu)",
 	"random-users-avatars-title": "Conheça a comunidade"
 }
