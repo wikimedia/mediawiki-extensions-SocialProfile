@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Anakmalaysia",
-			"Kurniasan"
+			"Kurniasan",
+			"Tofeiku"
 		]
 	},
+	"user-fanbox-title": "Kotak pengguna",
 	"other-info-title": "Maklumat lain",
 	"other-info-movies": "Wayang",
 	"other-info-tv": "TV",
