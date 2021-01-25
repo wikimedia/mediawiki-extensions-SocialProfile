@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Colathewikian",
 			"Fantasticfears",
 			"Gzdavidwong",
 			"Hydra",
@@ -24,7 +25,7 @@
 	"user-time-ago": "$1之前",
 	"user-awards-title": "奖励",
 	"user-gifts-title": "礼物",
-	"user-fanbox-title": "兴趣盒子",
+	"user-fanbox-title": "用户框",
 	"user-count-separator": "$2中的$1",
 	"user-view-all": "查看全部",
 	"user-upload-image": "上传图像",

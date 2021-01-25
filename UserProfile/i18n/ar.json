@@ -3,13 +3,15 @@
 		"authors": [
 			"Alnokta",
 			"Meno25",
-			"OsamaK"
+			"OsamaK",
+			"محمد أحمد عبد الفتاح"
 		]
 	},
 	"populateuserprofiles": "أشهر ملفات المستخدمين",
 	"user-time-ago": "$1 مضى",
 	"user-awards-title": "جوائز",
 	"user-gifts-title": "منح",
+	"user-fanbox-title": "صناديق المستخدم",
 	"user-count-separator": "$1 من $2",
 	"user-view-all": "اعرض الكل",
 	"user-upload-image": "رفع الصورة",
