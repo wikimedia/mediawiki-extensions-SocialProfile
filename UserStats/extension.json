@@ -34,7 +34,7 @@
 		"UserSystemMessage": "includes/UserSystemMessage.php"
 	},
 	"Hooks": {
-		"BeforeCreateEchoEvent":"UserStatsHooks::onBeforeCreateEchoEvent",
+		"BeforeCreateEchoEvent": "UserStatsHooks::onBeforeCreateEchoEvent",
 		"EchoGetBundleRules": "UserStatsHooks::onEchoGetBundleRules",
 		"ParserFirstCallInit": "UserStatsHooks::onParserFirstCallInit"
 	},
