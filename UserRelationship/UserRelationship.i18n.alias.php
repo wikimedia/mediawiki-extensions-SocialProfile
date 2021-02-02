@@ -228,6 +228,14 @@ $specialPageAliases['tr'] = [
 	'ViewRelationships' => [ 'İlişkileriGör' ],
 ];
 
+/** Chinese (中文) */
+$specialPageAliases['zh'] = [
+	'AddRelationship' => [ '添加关系', '建立關係' ],
+	'RemoveRelationship' => [ '删除关系', '移除關係' ],
+	'ViewRelationshipRequests' => [ '查看关系申请', '檢視關係申請' ],
+	'ViewRelationships' => [ '查看关系', '檢視關係' ],
+];
+
 /** Simplified Chinese (中文（简体)) */
 $specialPageAliases['zh-hans'] = [
 	'AddRelationship' => [ '添加关系' ],
@@ -238,6 +246,8 @@ $specialPageAliases['zh-hans'] = [
 
 /** Traditional Chinese (中文（繁體)) */
 $specialPageAliases['zh-hant'] = [
-	'AddRelationship' => [ '加入關聯' ],
-	'RemoveRelationship' => [ '移除關聯' ],
+	'AddRelationship' => [ '建立關係' ],
+	'RemoveRelationship' => [ '移除關係' ],
+	'ViewRelationshipRequests' => [ '檢視關係申請' ],
+	'ViewRelationships' => [ '檢視關係' ],
 ];

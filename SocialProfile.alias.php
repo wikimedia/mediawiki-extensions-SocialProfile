@@ -461,6 +461,23 @@ $specialPageAliases['tr'] = [
 	'UserBoard' => [ 'KullanıcıPanosu' ],
 ];
 
+/** Chinese (中文) */
+$specialPageAliases['zh'] = [
+	'EditProfile' => [ '编辑简介', '編輯簡介' ],
+	'GenerateTopUsersReport' => [ '生成用户排行榜报告', '生成使用者排行榜報告' ],
+	'PopulateUserProfiles' => [ '填写用户资料页', '填寫使用者資訊' ],
+	'RemoveAvatar' => [ '删除头像', '移除頭像' ],
+	'SendBoardBlast' => [ '群发消息', '發送批量訊息' ],
+	'TopFansByStatistic' => [ '基于统计结果的粉丝排行榜', '基於統計的粉絲排行榜' ],
+	'TopUsers' => [ '用户排行榜', '使用者排行榜' ],
+	'TopUsersRecent' => [ '新近用户排行榜', '新近使用者排行榜' ],
+	'ToggleUserPage' => [ '开关用户页', '啟閉使用者頁面' ],
+	'UpdateEditCounts' => [ '更新编辑计数', '更新編輯數' ],
+	'UpdateProfile' => [ '更新个人资料', '更新個人資料' ],
+	'UploadAvatar' => [ '上传头像', '上傳頭像' ],
+	'UserBoard' => [ '用户墙', '使用者留言版' ],
+];
+
 /** Simplified Chinese (中文（简体)) */
 $specialPageAliases['zh-hans'] = [
 	'EditProfile' => [ '编辑简介' ],
