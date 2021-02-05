@@ -11,6 +11,7 @@
 			"Indiralena",
 			"Locos epraix",
 			"Mor",
+			"Rodney Araujo",
 			"Sanbec",
 			"Translationista"
 		]
@@ -20,7 +21,7 @@
 	"user-time-ago": "hace $1",
 	"user-awards-title": "Premios",
 	"user-gifts-title": "Regalos",
-	"user-fanbox-title": "Cajas de aficionados (fanboxes)",
+	"user-fanbox-title": "Etiquetas de usuario",
 	"user-count-separator": "$1 de $2",
 	"user-view-all": "Ver todo",
 	"user-upload-image": "Cargar imagen",
