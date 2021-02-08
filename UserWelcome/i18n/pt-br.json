@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Eduardo Addad de Oliveira",
-			"Eduardo.mps"
+			"Eduardo.mps",
+			"Eduardoaddad"
 		]
 	},
 	"userwelcome-desc": "Adiciona a marca <code>&lt;welcomeUser&gt;</code> para apresentar informação social específica do utilizador, para utilizadores autenticados",

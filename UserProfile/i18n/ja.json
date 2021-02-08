@@ -3,6 +3,7 @@
 		"authors": [
 			"Aotake",
 			"Azeha",
+			"Buntschann",
 			"Fievarsty",
 			"Foomin10",
 			"Fryed-peach",
@@ -18,6 +19,7 @@
 	"user-time-ago": "$1前",
 	"user-awards-title": "表彰",
 	"user-gifts-title": "贈り物",
+	"user-fanbox-title": "ユーザーボックス",
 	"user-count-separator": "$2人中 $1人",
 	"user-view-all": "すべて閲覧",
 	"user-upload-image": "画像をアップロード",
