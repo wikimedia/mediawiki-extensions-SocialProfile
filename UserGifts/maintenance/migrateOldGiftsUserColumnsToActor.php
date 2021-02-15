@@ -3,6 +3,9 @@
  * @file
  * @ingroup Maintenance
  */
+
+use MediaWiki\MediaWikiServices;
+
 $IP = getenv( 'MW_INSTALL_PATH' );
 if ( $IP === false ) {
 	$IP = __DIR__ . '/../../../..';
@@ -62,10 +65,16 @@ class MigrateOldGiftsUserColumnsToActor extends LoggedUpdateMaintenance {
 		);
 		foreach ( $res as $row ) {
 			$user = User::newFromId( $row->gift_creator_user_id );
+			if ( interface_exists( '\MediaWiki\User\ActorNormalization' ) ) {
+				// MW 1.36+
+				$actorId = MediaWikiServices::getInstance()->getActorNormalization()->acquireActorId( $user );
+			} else {
+				$actorId = $user->getActorId( $dbw );
+			}
 			$dbw->update(
 				'gift',
 				[
-					'gift_creator_actor' => $user->getActorId( $dbw )
+					'gift_creator_actor' => $actorId
 				],
 				[
 					'gift_creator_user_id' => $row->gift_creator_user_id

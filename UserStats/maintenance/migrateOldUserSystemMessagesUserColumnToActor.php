@@ -3,6 +3,9 @@
  * @file
  * @ingroup Maintenance
  */
+
+use MediaWiki\MediaWikiServices;
+
 $IP = getenv( 'MW_INSTALL_PATH' );
 if ( $IP === false ) {
 	$IP = __DIR__ . '/../../../..';
@@ -61,10 +64,16 @@ class MigrateOldUserSystemMessagesUserColumnToActor extends LoggedUpdateMaintena
 		);
 		foreach ( $res as $row ) {
 			$user = User::newFromId( $row->um_user_id );
+			if ( interface_exists( '\MediaWiki\User\ActorNormalization' ) ) {
+				// MW 1.36+
+				$actorId = MediaWikiServices::getInstance()->getActorNormalization()->acquireActorId( $user );
+			} else {
+				$actorId = $user->getActorId( $dbw );
+			}
 			$dbw->update(
 				'user_system_messages',
 				[
-					'um_actor' => $user->getActorId( $dbw )
+					'um_actor' => $actorId
 				],
 				[
 					'um_user_id' => $row->um_user_id

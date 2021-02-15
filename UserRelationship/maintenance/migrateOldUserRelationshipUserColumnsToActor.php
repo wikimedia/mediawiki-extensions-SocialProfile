@@ -3,6 +3,9 @@
  * @file
  * @ingroup Maintenance
  */
+
+use MediaWiki\MediaWikiServices;
+
 $IP = getenv( 'MW_INSTALL_PATH' );
 if ( $IP === false ) {
 	$IP = __DIR__ . '/../../../..';
@@ -58,10 +61,16 @@ class MigrateOldUserRelationshipUserColumnsToActor extends LoggedUpdateMaintenan
 			);
 			foreach ( $res as $row ) {
 				$user = User::newFromId( $row->r_user_id );
+				if ( interface_exists( '\MediaWiki\User\ActorNormalization' ) ) {
+					// MW 1.36+
+					$actorId = MediaWikiServices::getInstance()->getActorNormalization()->acquireActorId( $user );
+				} else {
+					$actorId = $user->getActorId( $dbw );
+				}
 				$dbw->update(
 					'user_relationship',
 					[
-						'r_actor' => $user->getActorId( $dbw )
+						'r_actor' => $actorId
 					],
 					[
 						'r_user_id' => $row->r_user_id
@@ -82,10 +91,16 @@ class MigrateOldUserRelationshipUserColumnsToActor extends LoggedUpdateMaintenan
 			);
 			foreach ( $res as $row ) {
 				$user = User::newFromId( $row->r_user_id_relation );
+				if ( interface_exists( '\MediaWiki\User\ActorNormalization' ) ) {
+					// MW 1.36+
+					$actorId = MediaWikiServices::getInstance()->getActorNormalization()->acquireActorId( $user );
+				} else {
+					$actorId = $user->getActorId( $dbw );
+				}
 				$dbw->update(
 					'user_relationship',
 					[
-						'r_actor_relation' => $user->getActorId( $dbw )
+						'r_actor_relation' => $actorId
 					],
 					[
 						'r_user_id_relation' => $row->r_user_id_relation
