@@ -3,7 +3,8 @@
 		"authors": [
 			"Danutz",
 			"Firilacroco",
-			"KlaudiuMihaila"
+			"KlaudiuMihaila",
+			"NGC 54"
 		]
 	},
 	"populateuserprofiles": "Populați profiluri de utilizator",
@@ -25,9 +26,9 @@
 	"user-send-message": "Trimite un mesaj",
 	"user-send-gift": "Trimite un cadou",
 	"user-contributions": "Contribuții",
-	"user-stats-edits": "{{PLURAL:$1|Modificare|Modificări}}",
-	"user-stats-votes": "{{PLURAL:$1|Vot|Voturi}}",
-	"user-stats-comments": "{{PLURAL:$1|Comentariu|Comentarii}}",
+	"user-stats-edits": "Editări",
+	"user-stats-votes": "Voturi",
+	"user-stats-comments": "Comentarii",
 	"other-info-title": "Alte informații",
 	"user-friends-title": "Prieteni",
 	"user-foes-title": "Inamici",
