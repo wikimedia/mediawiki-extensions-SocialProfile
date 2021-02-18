@@ -4,6 +4,7 @@
 			"Ferrer",
 			"Flrn",
 			"MuratTheTurkish",
+			"Okras",
 			"Александр Сигачёв"
 		]
 	},
@@ -42,6 +43,7 @@
 	"userboard_sendbutton": "отправить",
 	"userboard_loggedout": "Вы должны быть [[Special:UserLogin|представлены системе]], чтобы отправлять сообщения другим участникам.",
 	"userboard_showingmessages": "Отображение {{PLURAL:$4|сообщения $3|сообщений $2—$3}} из $1",
+	"userboard-delete-success": "Сообщение успешно удалено!",
 	"right-userboard-delete": "удаление сообщений других досок",
 	"userboard-time-days": "{{PLURAL:$1|$1 день|$1 дня|$1 дней}}",
 	"userboard-time-hours": "{{PLURAL:$1|$1 час|$1 часа|$1 часов}}",
