@@ -3,6 +3,9 @@
  * @file
  * @ingroup Maintenance
  */
+
+use MediaWiki\MediaWikiServices;
+
 $IP = getenv( 'MW_INSTALL_PATH' );
 if ( $IP === false ) {
 	$IP = __DIR__ . '/../../../..';
@@ -60,11 +63,17 @@ class MigrateOldUserProfileUserColumnToActor extends LoggedUpdateMaintenance {
 			);
 			foreach ( $res as $row ) {
 				$user = User::newFromId( $row->up_user_id );
+				if ( interface_exists( '\MediaWiki\User\ActorNormalization' ) ) {
+					// MW 1.36+
+					$actorId = MediaWikiServices::getInstance()->getActorNormalization()->acquireActorId( $user );
+				} else {
+					$actorId = $user->getActorId( $dbw );
+				}
 				// Populate our brand new column
 				$dbw->update(
 					'user_profile',
 					[
-						'up_actor' => $user->getActorId( $dbw )
+						'up_actor' => $actorId
 					],
 					[
 						'up_user_id' => $row->up_user_id
