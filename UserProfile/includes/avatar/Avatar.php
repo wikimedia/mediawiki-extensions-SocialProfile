@@ -87,13 +87,18 @@ class wAvatar {
 	 * @return string <img> HTML tag with full path to the avatar image
 	 */
 	function getAvatarURL( $extraParams = [] ) {
-		global $wgUserProfileDisplay;
+		global $wgUserProfileDisplay, $wgNativeImageLazyLoading;
 
 		$defaultParams = [
 			'src' => $this->getAvatarUrlPath(),
 			'border' => '0',
 			'class' => 'mw-socialprofile-avatar'
 		];
+
+		if ( $wgNativeImageLazyLoading ) {
+			$defaultParams['loading'] = 'lazy';
+		}
+
 		// Allow callers to add a different alt attribute and only add this
 		// default one if no alt attribute was provided in $extraParams
 		if ( empty( $extraParams['alt'] ) ) {
