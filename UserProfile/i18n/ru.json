@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Facenapalm",
 			"Ferrer",
 			"Innv",
@@ -35,7 +36,7 @@
 	"user-stats-edits": "Правок",
 	"user-stats-votes": "Голосов",
 	"user-stats-comments": "Комментариев",
-	"user-stats-recruits": "{{PLURAL:$1|Новичок|Новичков}}",
+	"user-stats-recruits": "Новичков",
 	"user-stats-poll-votes": "Голосов в опросах",
 	"user-stats-picture-game-votes": "Голосов в играх с картинками",
 	"user-stats-quiz-points": "Очков в викторинах",
