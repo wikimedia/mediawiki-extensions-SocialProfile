@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Kly",
+			"Lakejason0",
 			"Liangent",
 			"Mark85296341",
 			"Wrightbus"
@@ -24,6 +25,7 @@
 	"ga-file-instructions": "您的圖片檔案必須是 jpeg、png、或是 gif（不能是動態的 gif），必且要小於 100kb。",
 	"ga-gift": "禮物",
 	"ga-gift-given-count": "這個禮物被頒發過 $1 {{PLURAL:$1|次}}",
+	"ga-gift-title": "$1的「$2」",
 	"ga-giftdesc": "禮物說明",
 	"ga-giftimage": "禮物圖片",
 	"ga-giftname": "禮物名稱",

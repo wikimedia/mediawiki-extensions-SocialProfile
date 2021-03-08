@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Kly",
+			"Lakejason0",
 			"Mark85296341",
 			"Wrightbus"
 		]
@@ -11,7 +12,7 @@
 	"ur-already-submitted": "您的請求已傳送",
 	"ur-your-profile": "您的個人檔案",
 	"ur-backlink": "&lt; 返回到 $1 的個人檔案",
-	"ur-relationship-count-foes": "$1 已經有 $2 位仇人了。",
+	"ur-relationship-count-foes": "$1 已經有 {{PLURAL:$2|$2 位仇人}}了。",
 	"ur-relationship-count-friends": "$1 已經有 $2 位朋友了。",
 	"ur-add-friend": "加入成為朋友",
 	"ur-add-foe": "新增為冤家",

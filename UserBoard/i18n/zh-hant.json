@@ -26,7 +26,7 @@
 	"boardblast-error-missing-message": "請輸入一個訊息。",
 	"boardblast-error-missing-user": "請至少選擇一個人。",
 	"userboard": "使用者留言版",
-	"userboard_board-to-board": "面板對面板",
+	"userboard_board-to-board": "留言版對留言版",
 	"userboard_noexist": "您嘗試要檢視的使用者不存在。",
 	"userboard_yourboard": "您的留言版",
 	"userboard_owner": "$1的面板",
