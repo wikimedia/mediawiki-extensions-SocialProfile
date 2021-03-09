@@ -63,7 +63,7 @@ class MigrateOldUserGiftsUserColumnsToActor extends LoggedUpdateMaintenance {
 				$user = User::newFromId( $row->ug_user_id_to );
 				if ( interface_exists( '\MediaWiki\User\ActorNormalization' ) ) {
 					// MW 1.36+
-					$actorId = MediaWikiServices::getInstance()->getActorNormalization()->acquireActorId( $user );
+					$actorId = MediaWikiServices::getInstance()->getActorNormalization()->acquireActorId( $user, $dbw );
 				} else {
 					$actorId = $user->getActorId( $dbw );
 				}
@@ -94,7 +94,7 @@ class MigrateOldUserGiftsUserColumnsToActor extends LoggedUpdateMaintenance {
 				$user = User::newFromId( $row->ug_user_id_from );
 				if ( interface_exists( '\MediaWiki\User\ActorNormalization' ) ) {
 					// MW 1.36+
-					$actorId = MediaWikiServices::getInstance()->getActorNormalization()->acquireActorId( $user );
+					$actorId = MediaWikiServices::getInstance()->getActorNormalization()->acquireActorId( $user, $dbw );
 				} else {
 					$actorId = $user->getActorId( $dbw );
 				}
