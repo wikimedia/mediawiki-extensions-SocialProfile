@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Andreyyshore",
 			"Danutz",
 			"Firilacroco",
 			"KlaudiuMihaila",
@@ -49,7 +50,7 @@
 	"user-personal-info-occupation": "Ocupație",
 	"user-personal-info-websites": "Pagini web",
 	"user-personal-info-places-lived": "Locuri în care am locuit",
-	"user-personal-info-schools": "Şcoli",
+	"user-personal-info-schools": "Școli",
 	"user-personal-info-about-me": "Despre mine",
 	"user-recent-activity-title": "Activitate recentă",
 	"user-recent-activity-edit": "Modificat pagina",
@@ -73,7 +74,7 @@
 	"user-profile-personal-name": "Nume",
 	"user-profile-personal-location": "Locație",
 	"user-profile-personal-city": "Oraș",
-	"user-profile-personal-country": "Ţară",
+	"user-profile-personal-country": "Țară",
 	"user-profile-personal-hometown": "Oraș natal",
 	"user-profile-personal-birthday": "Zi de naștere",
 	"user-profile-personal-birthdate": "Dată (LL/ZZ)",
@@ -81,7 +82,7 @@
 	"user-profile-personal-work": "Muncă",
 	"user-profile-personal-occupation": "Ocupație",
 	"user-profile-personal-education": "Educație",
-	"user-profile-personal-schools": "Şcoli",
+	"user-profile-personal-schools": "Școli",
 	"user-profile-personal-places": "Locuri",
 	"user-profile-personal-placeslived": "Locuri în care am locuit",
 	"user-profile-personal-web": "Web",
@@ -115,7 +116,7 @@
 	"user-page-link": "Pagină de utilizator",
 	"user-social-profile-link": "Profil social",
 	"user-wiki-link": "Wiki pagină de utilizator",
-	"removeavatar": "Şterge avatar",
+	"removeavatar": "Șterge avatar",
 	"givegift": "Dați un cadou.",
 	"viewgifts": "Vedeți cadouri",
 	"viewsystemgifts": "Vedeți premii",
