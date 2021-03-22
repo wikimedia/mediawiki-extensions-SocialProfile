@@ -6,7 +6,8 @@
 			"Farras",
 			"Irwangatot",
 			"IvanLanin",
-			"Kandar"
+			"Kandar",
+			"Naufal06"
 		]
 	},
 	"giftmanager": "Pengelolaan hadiah",
@@ -34,7 +35,7 @@
 	"g-error-do-not-own": "Anda tidak memiliki hadiah ini.",
 	"g-error-message-blocked": "Saat ini anda sedang diblok dan tidak bisa memberi hadiah",
 	"g-error-message-invalid-link": "Pranala yang anda masukkan tidak benar.",
-	"g-error-message-login": "Anda harus masuk log untuk bisa memberi hadiah",
+	"g-error-message-login": "Anda harus [[Special:UserLogin|masuk log]] agar bisa memberi hadiah",
 	"g-error-message-no-user": "Pengguna yang anda coba buka tidak ada.",
 	"g-error-message-to-yourself": "Anda tidak bisa memberi hadiah kepada diri sendiri.",
 	"g-error-title": "Aduh, anda salah belok!",
