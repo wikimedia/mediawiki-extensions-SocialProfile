@@ -106,7 +106,10 @@ class UserGifts {
 		$gift = Gifts::getGift( $gift_id );
 		$user->load();
 
-		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-gift' ) : $user->getIntOption( 'notifygift', 1 );
+		$userOptionsLookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
+		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ?
+			$userOptionsLookup->getBoolOption( $user, 'echo-subscriptions-email-social-gift' ) :
+			$userOptionsLookup->getIntOption( $user, 'notifygift', 1 );
 		if ( $user->isEmailConfirmed() && $wantsEmail ) {
 			$giftsLink = SpecialPage::getTitleFor( 'ViewGifts' );
 			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );

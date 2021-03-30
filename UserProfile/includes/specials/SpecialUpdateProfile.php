@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserIdentity;
 
 /**
@@ -492,7 +493,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$hometown_city = $s->up_hometown_city;
 			$hometown_state = $s->up_hometown_state;
 			$hometown_country = $s->up_hometown_country;
-			$showYOB = $user->getIntOption( 'showyearofbirth', !isset( $s->up_birthday ) ) == 1;
+			$userOptionsLookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
+			$showYOB = $userOptionsLookup->getIntOption( $user, 'showyearofbirth', !isset( $s->up_birthday ) ) == 1;
 			$birthday = self::formatBirthday( $s->up_birthday, $showYOB );
 			$schools = $s->up_schools;
 			$places = $s->up_places_lived;
@@ -799,6 +801,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$form .= '<div class="profile-info clearfix">
 			<div class="profile-update">
 				<p class="profile-update-title">' . $this->msg( 'user-profile-preferences-emails' )->escaped() . '</p>';
+		$userOptionsLookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
 		if ( ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ) {
 			$form .= '<p class="profile-update-row">' .
 				$this->msg( 'user-profile-preferences-emails-manage' )->parse() .
@@ -806,20 +809,20 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		} else {
 			$form .= '<p class="profile-update-row">'
 					. $this->msg( 'user-profile-preferences-emails-personalmessage' )->escaped() .
-					' <input type="checkbox" size="25" name="notify_message" id="notify_message" value="1"' . ( ( $user->getIntOption( 'notifymessage', 1 ) == 1 ) ? 'checked' : '' ) . '/>
+					' <input type="checkbox" size="25" name="notify_message" id="notify_message" value="1"' . ( ( $userOptionsLookup->getIntOption( $user, 'notifymessage', 1 ) == 1 ) ? 'checked' : '' ) . '/>
 				</p>
 				<p class="profile-update-row">'
 					. $this->msg( 'user-profile-preferences-emails-friendfoe' )->escaped() .
-					' <input type="checkbox" size="25" class="createbox" name="notify_friend" id="notify_friend" value="1" ' . ( ( $user->getIntOption( 'notifyfriendrequest', 1 ) == 1 ) ? 'checked' : '' ) . '/>
+					' <input type="checkbox" size="25" class="createbox" name="notify_friend" id="notify_friend" value="1" ' . ( ( $userOptionsLookup->getIntOption( $user, 'notifyfriendrequest', 1 ) == 1 ) ? 'checked' : '' ) . '/>
 				</p>
 				<p class="profile-update-row">'
 					. $this->msg( 'user-profile-preferences-emails-gift' )->escaped() .
-					' <input type="checkbox" size="25" name="notify_gift" id="notify_gift" value="1" ' . ( ( $user->getIntOption( 'notifygift', 1 ) == 1 ) ? 'checked' : '' ) . '/>
+					' <input type="checkbox" size="25" name="notify_gift" id="notify_gift" value="1" ' . ( ( $userOptionsLookup->getIntOption( $user, 'notifygift', 1 ) == 1 ) ? 'checked' : '' ) . '/>
 				</p>
 
 				<p class="profile-update-row">'
 					. $this->msg( 'user-profile-preferences-emails-level' )->escaped() .
-					' <input type="checkbox" size="25" name="notify_honorifics" id="notify_honorifics" value="1"' . ( ( $user->getIntOption( 'notifyhonorifics', 1 ) == 1 ) ? 'checked' : '' ) . '/>
+					' <input type="checkbox" size="25" name="notify_honorifics" id="notify_honorifics" value="1"' . ( ( $userOptionsLookup->getIntOption( $user, 'notifyhonorifics', 1 ) == 1 ) ? 'checked' : '' ) . '/>
 				</p>';
 		}
 
@@ -828,7 +831,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			'</p>
 			<p class="profile-update-row">' .
 				$this->msg( 'user-profile-preferences-miscellaneous-show-year-of-birth' )->escaped() .
-				' <input type="checkbox" size="25" name="show_year_of_birth" id="show_year_of_birth" value="1"' . ( ( $user->getIntOption( 'showyearofbirth', $showYOB ) == 1 ) ? 'checked' : '' ) . '/>
+				' <input type="checkbox" size="25" name="show_year_of_birth" id="show_year_of_birth" value="1"' . ( ( $userOptionsLookup->getIntOption( $user, 'showyearofbirth', $showYOB ) == 1 ) ? 'checked' : '' ) . '/>
 			</p>';
 
 		// Allow extensions (like UserMailingList) to add new checkboxes
