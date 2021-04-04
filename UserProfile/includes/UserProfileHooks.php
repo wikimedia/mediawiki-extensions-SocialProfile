@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 class UserProfileHooks {
 
 	/**
@@ -29,6 +31,7 @@ class UserProfileHooks {
 
 		$title = $out->getTitle();
 		$pageTitle = $title->getText();
+		$userNameUtils = MediaWikiServices::getInstance()->getUserNameUtils();
 		// Only NS_USER is "ambiguous", NS_USER_PROFILE and NS_USER_WIKI are not
 		// Also we don't care about subpages here since only the main user page
 		// can be something else than wikitext
@@ -38,7 +41,7 @@ class UserProfileHooks {
 			$title->inNamespace( NS_USER ) &&
 			!$title->isSubpage() &&
 			$wgUserPageChoice &&
-			!User::isIP( $pageTitle )
+			!$userNameUtils->isIP( $pageTitle )
 		) {
 			$profile = new UserProfile( $pageTitle );
 			$profile_data = $profile->getProfile();
@@ -104,11 +107,11 @@ class UserProfileHooks {
 		$out = $context->getOutput();
 		$request = $context->getRequest();
 		$pageTitle = $title->getText();
-
+		$userNameUtils = MediaWikiServices::getInstance()->getUserNameUtils();
 		if (
 			!$title->isSubpage() &&
 			$title->inNamespaces( [ NS_USER, NS_USER_PROFILE ] ) &&
-			!User::isIP( $pageTitle )
+			!$userNameUtils->isIP( $pageTitle )
 		) {
 			$show_user_page = false;
 			if ( $wgUserPageChoice ) {
