@@ -2,13 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"DCLXVI",
-			"MuratTheTurkish"
+			"MuratTheTurkish",
+			"StanProg"
 		]
 	},
 	"ur-already-submitted": "Вашата заявка беше изпратена",
 	"ur-error-title": "Опа, грешен ход!",
 	"ur-error-message-no-user": "Заявката не може да бъде изпълнена, тъй като не съществува потребител с това име.",
-	"ur-your-profile": "Моят профил",
+	"ur-your-profile": "Вашият профил",
 	"ur-backlink": "&lt; Обратно към профила на $1",
 	"ur-relationship-count-foes": "$1 има $2 {{PLURAL:$2|неприятел|неприятели}}.",
 	"ur-relationship-count-friends": "$1 има $2 {{PLURAL:$2|приятел|приятели}}.",
@@ -19,8 +20,8 @@
 	"ur-remove-relationship-friend": "Премахване от приятели",
 	"ur-remove-relationship-foe": "Премахване от неприятели",
 	"ur-give-gift": "Подаряване на подарък",
-	"ur-remove-relationship-title-foe": "Желаете ли да премахнете $1 от списъка ви с неприятели?",
-	"ur-remove-relationship-title-confirm-foe": "Премахнахте $1 от списъка ви с неприятели",
+	"ur-remove-relationship-title-foe": "Желаете ли да премахнете $1 от списъка си с неприятели?",
+	"ur-remove-relationship-title-confirm-foe": "Премахнахте $1 от списъка Ви с неприятели",
 	"ur-remove-relationship-title-friend": "Желаете ли да премахнете $1 от списъка ви с приятели?",
 	"ur-remove-relationship-title-confirm-friend": "Премахнахте $1 от списъка ви с приятели",
 	"ur-remove-relationship-message-foe": "Направихте заявка да премахнете $1 от списъка ви с неприятели; написнете „$2“ за потвърждаване.",
@@ -41,7 +42,7 @@
 	"ur-add-button-friend": "Добавяне като приятел",
 	"ur-add-sent-title-foe": "Заявката за неприятелство беше изпратена на $1!",
 	"ur-add-sent-title-friend": "Заявката за приятелство беше изпратена на $1!",
-	"ur-add-sent-message-foe": "Заявката ви за неприятелство беше изпратена на $1 за потвърждение.\nАко $1 потвърди, че сте неприятели, ще получите оповестително писмо.",
+	"ur-add-sent-message-foe": "Заявката Ви за неприятелство беше изпратена на $1 за потвърждение.\nАко $1 потвърди, че сте неприятели, ще получите оповестително писмо.",
 	"ur-add-sent-message-friend": "Заявката ви за приятелство беше изпратена на $1 за потвърждение.\nАко $1 потвърди, че сте приятели, ще получите оповестително писмо.",
 	"ur-add-error-message-no-user": "Потребителят, който се опитвате да добавите, не съществува.",
 	"ur-add-error-message-blocked": "В момента потребителската ви сметка е блокирана и не можете да добавяте приятели или неприятели.",
