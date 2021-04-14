@@ -91,4 +91,26 @@ class EchoUserRelationshipPresentationModel extends EchoEventPresentationModel {
 		];
 	}
 
+	/**
+	 * Get a Message object and add the performer's name as a parameter.
+	 * The output of the message should be plaintext.
+	 *
+	 * This message is used as the subject line in single-notification emails.
+	 *
+	 * @return Message
+	 */
+	public function getSubjectMessage() {
+		$eventType = $this->event->getType();
+		$relType = $this->event->getExtraParam( 'rel_type' );
+		if ( $eventType == 'social-rel-add' ) { // pending request
+			$msgKey = ( $relType == 1 ) ? 'friend_request_subject' : 'foe_request_subject';
+		} elseif ( $eventType == 'social-rel-accept' ) { // accepted request
+			$msgKey = 'notification-social-rel-accept-email-subject';
+		}
+		// Note that getMessageWithAgent() adds the username as $2 for GENDER, even
+		// if it's currently unused/ignored in the messages mentioned above
+		$msg = $this->getMessageWithAgent( $msgKey );
+		return $msg;
+	}
+
 }

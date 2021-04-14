@@ -33,14 +33,9 @@ class UserStatsHooks {
 			],
 			'canNotifyAgent' => true,
 
-			'title-message' => 'notification-social-level-up',
-			'title-params' => [ 'new-level' ],
-			'payload' => [ 'level-up' ],
-
 			'icon' => 'social-level-up',
 
-			'bundle' => [ 'web' => true, 'email' => true ],
-			'bundle-message' => 'notification-social-level-up-bundle'
+			'bundle' => [ 'web' => true, 'email' => true ]
 		];
 
 		$icons['social-level-up'] = [

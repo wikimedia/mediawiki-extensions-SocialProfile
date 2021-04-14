@@ -7,7 +7,6 @@ class UserGiftsHooks {
 	 * @param array[] &$notifications Echo notifications
 	 * @param array[] &$notificationCategories Echo notification categories
 	 * @param array[] &$icons Icon details
-	 * @return bool
 	 */
 	public static function onBeforeCreateEchoEvent( array &$notifications, array &$notificationCategories, array &$icons ) {
 		$notificationCategories['social-gift'] = [
@@ -23,12 +22,9 @@ class UserGiftsHooks {
 				'EchoUserLocator::locateEventAgent'
 			],
 
-			'payload' => [ 'send-message' ], // @todo FIXME
-
 			'icon' => 'social-gift-send',
 
-			'bundle' => [ 'web' => true, 'email' => true ],
-			'bundle-message' => 'notification-social-gift-send-bundle'
+			'bundle' => [ 'web' => true, 'email' => true ]
 		];
 
 		// You just were *sent* a gift, thus you *received* it, ergo you should
@@ -36,8 +32,6 @@ class UserGiftsHooks {
 		$icons['social-gift-send'] = [
 			'path' => 'SocialProfile/images/notifications-gift-received.svg'
 		];
-
-		return true;
 	}
 
 	/**

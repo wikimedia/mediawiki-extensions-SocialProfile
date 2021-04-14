@@ -22,13 +22,9 @@ class UserBoardHooks {
 				'EchoUserLocator::locateEventAgent'
 			],
 
-			'payload' => [ 'send-message' ],
-
 			'icon' => 'emailuser', // per discussion with Cody on 27 March 2016
 
-			'bundle' => [ 'web' => true, 'email' => true ],
-			'bundle-message' => 'notification-social-msg-send-bundle',
-			'bundle-params' => [ 'bundle-user-count', 'bundle-noti-count' ]
+			'bundle' => [ 'web' => true, 'email' => true ]
 		];
 	}
 
