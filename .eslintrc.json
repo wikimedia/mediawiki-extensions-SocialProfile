@@ -24,6 +24,7 @@
 		"no-jquery/no-parse-html-literal": "off",
 		"no-jquery/no-sizzle": "off",
 		"no-jquery/variable-pattern": "off",
-		"mediawiki/class-doc": "off"
+		"mediawiki/class-doc": "off",
+		"block-scoped-var": "warn"
 	}
 }
