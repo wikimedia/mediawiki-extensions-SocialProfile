@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"DCLXVI",
-			"StanProg"
+			"StanProg",
+			"Vodnokon4e"
 		]
 	},
 	"populateuserprofiles": "Създаване на потребителските профили",
@@ -23,9 +24,9 @@
 	"user-send-message": "Изпращане на съобщение",
 	"user-send-gift": "Изпращане на подарък",
 	"user-contributions": "Приноси",
-	"user-stats-edits": "{{PLURAL:$1|Редакция|Редакции}}",
+	"user-stats-edits": "Редакции",
 	"user-stats-votes": "{{PLURAL:$1|Гласуване|Гласувания}}",
-	"user-stats-comments": "{{PLURAL:$1|Коментар|Коментари}}",
+	"user-stats-comments": "Коментари",
 	"other-info-title": "Друга информация",
 	"user-friends-title": "Приятели",
 	"user-foes-title": "Неприятели",
