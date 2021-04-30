@@ -3,7 +3,7 @@
 --
 
 CREATE TABLE /*_*/user_stats (
-  `stats_id` int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `stats_id` int unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `stats_actor` bigint unsigned NOT NULL,
   `stats_user_image_count` int(11) NOT NULL default '0',
   `stats_comment_count` int(11) NOT NULL default '0',
