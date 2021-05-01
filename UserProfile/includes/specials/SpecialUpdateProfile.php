@@ -303,13 +303,14 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		if ( $notify_message == '' ) {
 			$notify_message = 0;
 		}
-		$user->setOption( 'notifygift', $notify_gift );
-		$user->setOption( 'notifyfriendrequest', $notify_friend );
-		$user->setOption( 'notifychallenge', $notify_challenge );
-		$user->setOption( 'notifyhonorifics', $notify_honorifics );
-		$user->setOption( 'notifymessage', $notify_message );
-		$user->setOption( 'showyearofbirth', $show_year_of_birth );
-		$user->saveSettings();
+		$userOptionsManager = $this->getUserOptionsManager();
+		$userOptionsManager->setOption( $user, 'notifygift', $notify_gift );
+		$userOptionsManager->setOption( $user, 'notifyfriendrequest', $notify_friend );
+		$userOptionsManager->setOption( $user, 'notifychallenge', $notify_challenge );
+		$userOptionsManager->setOption( $user, 'notifyhonorifics', $notify_honorifics );
+		$userOptionsManager->setOption( $user, 'notifymessage', $notify_message );
+		$userOptionsManager->setOption( $user, 'showyearofbirth', $show_year_of_birth );
+		$userOptionsManager->saveOptions( $user );
 
 		// Allow extensions like UserMailingList do their magic here
 		Hooks::run( 'SpecialUpdateProfile::saveSettings_pref', [ $this, $request ] );
