@@ -34,13 +34,13 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	public $mReUpload;
 	/** @var string|null */
 	public $mAction;
-	/** @var boolmUpload */
+	/** @var bool */
 	public $mUpload;
 	/** @var string|null */
 	public $mOname;
 	/** @var string|null */
 	public $mSessionKey;
-	/** @var boolmStashed */
+	/** @var bool */
 	public $mStashed;
 	/** @var string|null */
 	public $mDestFile;

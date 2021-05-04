@@ -34,13 +34,13 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	public $mReUpload;
 	/** @var string|null */
 	public $mAction;
-	/** @var boolmUpload */
+	/** @var bool */
 	public $mUpload;
 	/** @var string|null */
 	public $mOname;
 	/** @var string|null */
 	public $mSessionKey;
-	/** @var boolmStashed */
+	/** @var bool */
 	public $mStashed;
 	/** @var string|null */
 	public $mDestFile;
@@ -741,7 +741,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	/**
 	 * Verifies that it's ok to include the uploaded file
 	 *
-	 * @param string $tmpfile The full path opf the temporary file to verify
+	 * @param string $tmpfile The full path of the temporary file to verify
 	 * @param string $extension The filename extension that the file is to be served with
 	 * @return Status
 	 */
