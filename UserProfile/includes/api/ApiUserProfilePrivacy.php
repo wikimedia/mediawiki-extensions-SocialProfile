@@ -27,7 +27,7 @@ class ApiUserProfilePrivacy extends ApiBase {
 
 		// Given that the underlying table stores info only for registered users, it
 		// makes sense to require users to be logged in to be able to use this API module
-		if ( !$targetUser->isLoggedIn() ) {
+		if ( !$targetUser->isRegistered() ) {
 			$this->dieWithError( 'exception-nologin-text', 'notloggedin' );
 		}
 

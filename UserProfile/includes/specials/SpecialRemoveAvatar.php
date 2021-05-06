@@ -35,7 +35,7 @@ class RemoveAvatar extends SpecialPage {
 	 * @return bool
 	 */
 	function isListed() {
-		return (bool)$this->getUser()->isLoggedIn();
+		return (bool)$this->getUser()->isRegistered();
 	}
 
 	/**
@@ -75,7 +75,7 @@ class RemoveAvatar extends SpecialPage {
 		$userIsPrivileged = $this->isUserPrivileged();
 
 		// If the user isn't logged in, display an error
-		if ( !$user->isLoggedIn() ) {
+		if ( !$user->isRegistered() ) {
 			$this->displayRestrictionError();
 			return;
 		}

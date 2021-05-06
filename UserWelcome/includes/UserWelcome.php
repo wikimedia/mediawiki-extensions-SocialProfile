@@ -63,7 +63,7 @@ class UserWelcome {
 		<div class="mp-welcome-image">
 		<a href="' . htmlspecialchars( $this->user->getUserPage()->getFullURL() ) . '" rel="nofollow">' .
 			$avatar->getAvatarURL() . '</a>';
-		if ( $this->user->isLoggedIn() ) {
+		if ( $this->user->isRegistered() ) {
 			$links = [];
 
 			if ( $avatar->isDefault() ) {

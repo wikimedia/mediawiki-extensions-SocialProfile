@@ -36,7 +36,7 @@ class SpecialViewRelationships extends SpecialPage {
 	 * @return bool
 	 */
 	function isListed() {
-		return (bool)$this->getUser()->isLoggedIn();
+		return (bool)$this->getUser()->isRegistered();
 	}
 
 	/**
@@ -110,7 +110,7 @@ class SpecialViewRelationships extends SpecialPage {
 				'</div>
 				<div class="relationship-request-buttons">
 					<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'mainpage' )->plain() ) . '" onclick=\'window.location="index.php?title=' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
-				if ( $user->isLoggedIn() ) {
+				if ( $user->isRegistered() ) {
 					$output .= '<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'ur-your-profile' )->plain() ) . '" onclick=\'window.location="' . htmlspecialchars( $user->getUserPage()->getFullURL() ) . '"\' />';
 				}
 				$output .= '</div>';

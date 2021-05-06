@@ -1087,7 +1087,7 @@ class UserProfilePage extends Article {
 				'<a href="' . htmlspecialchars( $upload_avatar->getFullURL() ) . '">' . wfMessage( 'user-upload-avatar' )->escaped() . '</a>';
 			$profileLinks['user-watchlist'] =
 				'<a href="' . htmlspecialchars( $watchlist->getFullURL() ) . '">' . wfMessage( 'user-watchlist' )->escaped() . '</a>';
-		} elseif ( $this->viewingUser->isLoggedIn() ) {
+		} elseif ( $this->viewingUser->isRegistered() ) {
 			// Support for friendly-by-default URLs (T191157)
 			$add_friend = SpecialPage::getTitleFor(
 				'AddRelationship',
@@ -1770,7 +1770,7 @@ class UserProfilePage extends Article {
 		<div class="visualClear"></div>';
 
 		if ( $this->viewingUser->getName() !== $this->profileOwner->getName() ) {
-			if ( $this->viewingUser->isLoggedIn() && !$this->viewingUser->isBlocked() ) {
+			if ( $this->viewingUser->isRegistered() && !$this->viewingUser->isBlocked() ) {
 				// @todo FIXME: This code exists in an almost identical form in
 				// ../../UserBoard/incldues/specials/SpecialUserBoard.php
 				$url = htmlspecialchars(
@@ -1800,7 +1800,7 @@ class UserProfilePage extends Article {
 						</div>' .
 						Html::hidden( 'wpEditToken', $this->viewingUser->getEditToken() ) .
 					'</form></div>';
-			} elseif ( $this->viewingUser->isLoggedIn() && $this->viewingUser->isBlocked() ) {
+			} elseif ( $this->viewingUser->isRegistered() && $this->viewingUser->isBlocked() ) {
 				// Show a better i18n message for registered users who are blocked
 				// @see https://phabricator.wikimedia.org/T266918
 				$output .= '<div class="user-page-message-form-blocked">' .
@@ -1982,7 +1982,7 @@ class UserProfilePage extends Article {
 						</div>
 					</div>";
 
-				if ( $user->isLoggedIn() ) {
+				if ( $user->isRegistered() ) {
 					if ( $check_user_fanbox == 0 ) {
 						$output .= '<div class="fanbox-pop-up-box-profile" id="fanboxPopUpBox' . $fanbox['fantag_id'] . '">
 							<table cellpadding="0" cellspacing="0" align="center">

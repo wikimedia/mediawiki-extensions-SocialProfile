@@ -18,7 +18,7 @@ class ViewSystemGifts extends SpecialPage {
 	 * @return bool
 	 */
 	function isListed() {
-		return (bool)$this->getUser()->isLoggedIn();
+		return (bool)$this->getUser()->isRegistered();
 	}
 
 	/**
@@ -50,7 +50,7 @@ class ViewSystemGifts extends SpecialPage {
 		 * Redirect Non-logged in users to Login Page
 		 * It will automatically return them to the ViewSystemGifts page
 		 */
-		if ( !$currentUser->isLoggedIn() && $user_name == '' ) {
+		if ( !$currentUser->isRegistered() && $user_name == '' ) {
 			$out->setPageTitle( $this->msg( 'ga-error-title' )->plain() );
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
 			$out->redirect( htmlspecialchars( $login->getFullURL( 'returnto=Special:ViewSystemGifts' ) ) );
