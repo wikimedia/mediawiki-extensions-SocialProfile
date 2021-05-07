@@ -83,7 +83,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 			$currentUser
 		);
 
-		if ( ( $currentUser->getActorId() == $this->user_to->getActorId() ) && $currentUser->isLoggedIn() ) {
+		if ( ( $currentUser->getActorId() == $this->user_to->getActorId() ) && $currentUser->isRegistered() ) {
 			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
 
 			$output = '<div class="relationship-error-message">' .
@@ -91,7 +91,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 			'</div>
 			<div>
 				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'mainpage' )->plain() ) . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
-			if ( $currentUser->isLoggedIn() ) {
+			if ( $currentUser->isRegistered() ) {
 				$output .= '<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'ur-your-profile' )->plain() ) . '" size="20" onclick=\'window.location="' . htmlspecialchars( $currentUser->getUserPage()->getFullURL() ) . '"\' />';
 			}
 			$output .= '</div>';
@@ -106,7 +106,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 			'</div>
 			<div>
 				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'mainpage' )->plain() ) . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
-			if ( $currentUser->isLoggedIn() ) {
+			if ( $currentUser->isRegistered() ) {
 				$output .= '<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'ur-your-profile' )->plain() ) . '" size="20" onclick=\'window.location="' . htmlspecialchars( $currentUser->getUserPage()->getFullURL() ) . '"\' />';
 			}
 			$output .= '</div>';
@@ -120,7 +120,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 			'</div>
 			<div>
 				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'mainpage' )->plain() ) . '" size="20" onclick=\'window.location="index.php?title="' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
-			if ( $currentUser->isLoggedIn() ) {
+			if ( $currentUser->isRegistered() ) {
 				$output .= '<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'ur-your-profile' )->plain() ) . '" size="20" onclick=\'window.location="' . htmlspecialchars( $currentUser->getUserPage()->getFullURL() ) . '"\' />';
 			}
 			$output .= '</div>';

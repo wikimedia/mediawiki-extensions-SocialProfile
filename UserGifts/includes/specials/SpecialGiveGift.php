@@ -39,7 +39,7 @@ class GiveGift extends SpecialPage {
 	 * @return bool
 	 */
 	function isListed() {
-		return (bool)$this->getUser()->isLoggedIn();
+		return (bool)$this->getUser()->isRegistered();
 	}
 
 	/**

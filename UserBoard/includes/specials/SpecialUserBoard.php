@@ -33,7 +33,7 @@ class SpecialViewUserBoard extends SpecialPage {
 	 * @return bool
 	 */
 	function isListed() {
-		return (bool)$this->getUser()->isLoggedIn();
+		return (bool)$this->getUser()->isRegistered();
 	}
 
 	/**
@@ -306,7 +306,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		}
 
 		if ( $can_post ) {
-			if ( $currentUser->isLoggedIn() && !$currentUser->isBlocked() ) {
+			if ( $currentUser->isRegistered() && !$currentUser->isBlocked() ) {
 				$urlParams = [ 'action' => 'send' ];
 				if ( $request->getVal( 'user' ) ) {
 					// Need this to ensure that no-JS users are shown the correct stuff
@@ -358,7 +358,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				if ( $currentUser->getActorId() != $ub_message['ub_actor_from'] ) {
 					// Prevent logged-out views from getting a board to board with 127.0.0.1
 					// And also board to board with self
-					if ( $currentUser->isLoggedIn() && $user_name != $sender->getName() ) {
+					if ( $currentUser->isRegistered() && $user_name != $sender->getName() ) {
 						$board_to_board = '<a href="' .
 							htmlspecialchars(
 								SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [
