@@ -6,7 +6,7 @@
 			"WikiPhoenix"
 		]
 	},
-	"systemgifts-desc": "Gör det möjlig att skicka, ta emot, skapa och ta bort systemgåvor",
+	"systemgifts-desc": "Gör det möjlig att skicka, ta emot, skapa och ta bort systempresenter",
 	"systemgiftmanager": "Systempresentförvaltare",
 	"ga-addnew": "+ lägg till en ny present",
 	"ga-back-edit-gift": "Tillbaka för att ändra denna present",
@@ -44,6 +44,9 @@
 	"ga-viewlist": "Visa presentlista",
 	"ga-remove": "Ta bort",
 	"ga-remove-title": "Ta bort \"$1\"?",
+	"ga-delete-message": "Är du säker på att du vill radera presenten \"$1\"?\nDetta kommer även radera den för användare som har mottagit den.",
+	"ga-remove-success-title": "Du har tagit bort presenten \"$1\"",
+	"ga-remove-success-message": "Presenten \"$1\" har tagits bort.",
 	"ga-user-got-awards": "$1 fick $2",
 	"ga-awards-given-out": "{{PLURAL:$1|En utmärkelse|$1 utmärkelser}} utdelades",
 	"topawards-award-categories": "Utmärkelsekategorier",
