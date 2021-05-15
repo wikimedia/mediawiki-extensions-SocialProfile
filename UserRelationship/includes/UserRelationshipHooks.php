@@ -15,33 +15,22 @@ class UserRelationshipHooks {
 		];
 
 		$notifications['social-rel-add'] = [
-			'primary-link' => [ 'message' => 'notification-link-text-view-edit', 'destination' => 'diff' ],
 			'category' => 'social-rel',
 			'group' => 'interactive',
 			'presentation-model' => 'EchoUserRelationshipPresentationModel',
 			EchoAttributeManager::ATTR_LOCATORS => [
 				'EchoUserLocator::locateEventAgent'
 			],
-			'payload' => [ 'relationship-add' ],
-			'email-subject-message' => 'notification-social-rel-add-email-subject',
-			'email-subject-params' => [ 'user' ],
-			'email-body-batch-message' => 'notification-social-rel-add-email-batch-body',
-			'email-body-batch-params' => [ 'user', 'relationship' ],
 			'icon' => 'gratitude',
 		];
 
 		$notifications['social-rel-accept'] = [
-			'primary-link' => [ 'message' => 'notification-link-text-view-edit', 'destination' => 'diff' ],
 			'category' => 'social-rel',
 			'group' => 'interactive',
 			'presentation-model' => 'EchoUserRelationshipPresentationModel',
 			EchoAttributeManager::ATTR_LOCATORS => [
 				'EchoUserLocator::locateEventAgent'
 			],
-			'email-subject-message' => 'notification-social-rel-accept-email-subject',
-			'email-subject-params' => [ 'user' ],
-			'email-body-batch-message' => 'notification-social-rel-accept-email-batch-body',
-			'email-body-batch-params' => [ 'user' ],
 			'icon' => 'gratitude',
 		];
 

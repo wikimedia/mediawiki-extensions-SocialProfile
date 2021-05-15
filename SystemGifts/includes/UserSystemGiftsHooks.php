@@ -23,13 +23,9 @@ class UserSystemGiftsHooks {
 			],
 			'canNotifyAgent' => true,
 
-			'payload' => [ 'award-rec' ],
-
 			'icon' => 'social-award',
 
-			'bundle' => [ 'web' => true, 'email' => true ],
-			'bundle-message' => 'notification-social-award-rec-bundle',
-			'bundle-params' => [ 'bundle-user-count', 'bundle-noti-count' ] // @todo FIXME: 100% incorrect & bad copypasta
+			'bundle' => [ 'web' => true, 'email' => true ]
 		];
 
 		$icons['social-award'] = [
