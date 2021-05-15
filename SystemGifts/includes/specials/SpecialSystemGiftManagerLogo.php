@@ -137,7 +137,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			/**
 			 * Check for a newly uploaded file.
 			 */
-			$this->mUploadTempName = $request->getFileTempName( 'wpUploadFile' );
+			$this->mUploadTempName = $request->getFileTempname( 'wpUploadFile' );
 			$file = new WebRequestUpload( $request, 'wpUploadFile' );
 			$this->mUploadSize = $file->getSize();
 			$this->mOname	= $request->getFileName( 'wpUploadFile' );
