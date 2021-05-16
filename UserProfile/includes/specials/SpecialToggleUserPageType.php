@@ -97,7 +97,7 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 		$form .= $this->msg( 'toggleuserpage-confirm' )->escaped();
 		$form .= '<br />';
 		$form .= Html::hidden( 'wpEditToken', $this->getUser()->getEditToken() );
-		$form .= Html::submitButton( $this->msg( 'confirmable-yes' )->escaped(), [ 'name' => 'wpSubmit' ] );
+		$form .= Html::submitButton( $this->msg( 'confirmable-yes' )->text(), [ 'name' => 'wpSubmit' ] );
 		$form .= '</form>';
 		return $form;
 	}

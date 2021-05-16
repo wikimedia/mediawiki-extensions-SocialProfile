@@ -231,7 +231,7 @@ class SpecialViewUserBoard extends SpecialPage {
 			if ( $page > 1 ) {
 				$output .= $linkRenderer->makeLink(
 					$this->getPageTitle(),
-					$this->msg( 'last' )->plain(),
+					$this->msg( 'last' )->text(),
 					[],
 					[
 						'user' => $user_name,
@@ -262,15 +262,15 @@ class SpecialViewUserBoard extends SpecialPage {
 							'user' => $user_name,
 							'page' => $i
 						] + $qs
-					) . $this->msg( 'word-separator' )->plain();
+					) . $this->msg( 'word-separator' )->escaped();
 				}
 			}
 
 			if ( ( $total - ( $per_page * $page ) ) > 0 ) {
-				$output .= htmlspecialchars( $this->msg( 'word-separator' )->plain() ) .
+				$output .= $this->msg( 'word-separator' )->escaped() .
 					$linkRenderer->makeLink(
 						$this->getPageTitle(),
-						$this->msg( 'next' )->plain(),
+						$this->msg( 'next' )->text(),
 						[],
 						[
 							'user' => $user_name,
@@ -365,8 +365,7 @@ class SpecialViewUserBoard extends SpecialPage {
 									'user' => $user_name,
 									'conv' => $sender->getName()
 								] )
-							) . '">' .
-							htmlspecialchars( $this->msg( 'userboard_boardtoboard' )->plain() ) . '</a>';
+							) . '">' . $this->msg( 'userboard_boardtoboard' )->escaped() . '</a>';
 					}
 					$board_link = '<a href="' .
 						htmlspecialchars(
@@ -377,8 +376,7 @@ class SpecialViewUserBoard extends SpecialPage {
 					$board_link = '<a href="' .
 						htmlspecialchars(
 							SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $sender->getName() ] )
-						) . '">' .
-						htmlspecialchars( $this->msg( 'userboard_myboard' )->plain() ) . '</a>';
+						) . '">' . $this->msg( 'userboard_myboard' )->escaped() . '</a>';
 				}
 
 				// If the user owns this private message or they are allowed to
@@ -409,7 +407,7 @@ class SpecialViewUserBoard extends SpecialPage {
 
 				// Mark private messages as such
 				if ( $ub_message['type'] == 1 ) {
-					$ub_message_type_label = '(' . htmlspecialchars( $this->msg( 'userboard_private' )->plain() ) . ')';
+					$ub_message_type_label = '(' . $this->msg( 'userboard_private' )->escaped() . ')';
 				}
 
 				// had global function to cut link text if too long and no breaks
@@ -469,7 +467,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		$form .= Html::hidden( 'wpDeleteToken', $user->getEditToken() );
 		$form .= Html::hidden( 'messageId', $messageId );
 		$form .= Html::hidden( 'action', 'delete' );
-		$form .= Html::submitButton( $this->msg( 'delete' )->escaped(), [ 'name' => 'wpSubmit', 'class' => 'site-button' ] );
+		$form .= Html::submitButton( $this->msg( 'delete' )->text(), [ 'name' => 'wpSubmit', 'class' => 'site-button' ] );
 		$form .= '</form>';
 
 		return $form;

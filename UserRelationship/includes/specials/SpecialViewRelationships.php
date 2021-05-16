@@ -106,12 +106,12 @@ class SpecialViewRelationships extends SpecialPage {
 			if ( $user_name ) {
 				$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
 				$output = '<div class="relationship-error-message">' .
-					htmlspecialchars( $this->msg( 'ur-error-message-no-user' )->plain() ) .
+					$this->msg( 'ur-error-message-no-user' )->escaped() .
 				'</div>
 				<div class="relationship-request-buttons">
-					<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'mainpage' )->plain() ) . '" onclick=\'window.location="index.php?title=' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
+					<input type="button" class="site-button" value="' . $this->msg( 'mainpage' )->escaped() . '" onclick=\'window.location="index.php?title=' . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . '"\' />';
 				if ( $user->isRegistered() ) {
-					$output .= '<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'ur-your-profile' )->plain() ) . '" onclick=\'window.location="' . htmlspecialchars( $user->getUserPage()->getFullURL() ) . '"\' />';
+					$output .= '<input type="button" class="site-button" value="' . $this->msg( 'ur-your-profile' )->escaped() . '" onclick=\'window.location="' . htmlspecialchars( $user->getUserPage()->getFullURL() ) . '"\' />';
 				}
 				$output .= '</div>';
 				$out->addHTML( $output );
@@ -221,13 +221,13 @@ class SpecialViewRelationships extends SpecialPage {
 						$output .= $lang->pipeList( [
 							$linkRenderer->makeLink(
 								$addRelationshipLink,
-								$this->msg( 'ur-add-friend' )->plain(),
+								$this->msg( 'ur-add-friend' )->text(),
 								[],
 								[ 'user' => $actor->getName(), 'rel_type' => 1 ]
 							),
 							$linkRenderer->makeLink(
 								$addRelationshipLink,
-								$this->msg( 'ur-add-foe' )->plain(),
+								$this->msg( 'ur-add-foe' )->text(),
 								[],
 								[ 'user' => $actor->getName(), 'rel_type' => 2 ]
 							),
@@ -246,7 +246,7 @@ class SpecialViewRelationships extends SpecialPage {
 
 					$output .= $linkRenderer->makeLink(
 						$giveGiftLink,
-						$this->msg( 'ur-give-gift' )->plain(),
+						$this->msg( 'ur-give-gift' )->text(),
 						[],
 						[ 'user' => $actor->getName() ]
 					);
@@ -280,14 +280,14 @@ class SpecialViewRelationships extends SpecialPage {
 			if ( $page > 1 ) {
 				$output .= $linkRenderer->makeLink(
 					$pageLink,
-					$this->msg( 'last' )->plain(),
+					$this->msg( 'last' )->text(),
 					[],
 					[
 						'user' => $user_name,
 						'rel_type' => $rel_type,
 						'page' => ( $page - 1 )
 					]
-				) . htmlspecialchars( $this->msg( 'word-separator' )->plain() );
+				) . $this->msg( 'word-separator' )->escaped();
 			}
 
 			if ( ( $total % $per_page ) != 0 ) {
@@ -313,15 +313,15 @@ class SpecialViewRelationships extends SpecialPage {
 							'rel_type' => $rel_type,
 							'page' => $i
 						]
-					) . htmlspecialchars( $this->msg( 'word-separator' )->plain() );
+					) . $this->msg( 'word-separator' )->escaped();
 				}
 			}
 
 			if ( ( $total - ( $per_page * $page ) ) > 0 ) {
-				$output .= $this->msg( 'word-separator' )->plain() .
+				$output .= $this->msg( 'word-separator' )->escaped() .
 					$linkRenderer->makeLink(
 						$pageLink,
-						$this->msg( 'next' )->plain(),
+						$this->msg( 'next' )->text(),
 						[],
 						[
 							'user' => $user_name,

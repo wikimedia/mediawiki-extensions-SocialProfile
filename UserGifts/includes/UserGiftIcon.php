@@ -63,6 +63,7 @@ class UserGiftIcon {
 	 */
 	public function getIconHTML( $extraParams = [] ) {
 		global $wgUploadBaseUrl, $wgUploadPath;
+
 		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
 
 		$defaultParams = [
@@ -73,6 +74,7 @@ class UserGiftIcon {
 
 		$params = array_merge( $extraParams, $defaultParams );
 
+		// @phan-suppress-next-line SecurityCheck-DoubleEscaped No clue why phan claims double-escaping is happening as it clearly...isn't
 		return Html::element( 'img', $params, '' );
 	}
 }

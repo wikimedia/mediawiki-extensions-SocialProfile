@@ -260,7 +260,7 @@ class UserProfile {
 				// Maybe it's the name of a system message? (bug #30030)
 				$msgObj = wfMessage( $line[1] );
 				if ( !$msgObj->isDisabled() ) {
-					$link_text = $msgObj->parse();
+					$link_text = $msgObj->text();
 				}
 
 				$output .= '<div class="profile-tab' . ( ( $current_nav == $link_text ) ? '-on' : '' ) . '">';

@@ -86,6 +86,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 			$params['ORDER BY'] = "{$column} DESC";
 			$params['LIMIT'] = $count;
 
+			// @phan-suppress-next-line SecurityCheck-SQLInjection false positive, phan doesn't understand our custom validation of $column on L47
 			$res = $dbr->select(
 				'user_stats',
 				[ 'stats_actor', $column ],
@@ -128,17 +129,17 @@ class TopFansByStat extends UnlistedSpecialPage {
 		$recent_title = SpecialPage::getTitleFor( 'TopUsersRecent' );
 
 		$output = '<div class="top-fan-nav">
-			<h1>' . htmlspecialchars( $this->msg( 'top-fans-by-points-nav-header' )->plain() ) . '</h1>
+			<h1>' . $this->msg( 'top-fans-by-points-nav-header' )->escaped() . '</h1>
 			<p><a href="' . htmlspecialchars( $top_title->getFullURL() ) . '">' .
-				htmlspecialchars( $this->msg( 'top-fans-total-points-link' )->plain() ) . '</a></p>';
+					$this->msg( 'top-fans-total-points-link' )->escaped() . '</a></p>';
 
 		if ( $wgUserStatsTrackWeekly ) {
 			$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=monthly' ) ) . '">' .
-				htmlspecialchars( $this->msg( 'top-fans-monthly-points-link' )->plain() ) . '</a><p>';
+				$this->msg( 'top-fans-monthly-points-link' )->escaped() . '</a><p>';
 		}
 		if ( $wgUserStatsTrackMonthly ) {
 			$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=weekly' ) ) . '">' .
-				htmlspecialchars( $this->msg( 'top-fans-weekly-points-link' )->plain() ) . '</a></p>';
+				$this->msg( 'top-fans-weekly-points-link' )->escaped() . '</a></p>';
 		}
 
 		// Build nav of stats by category based on MediaWiki:Topfans-by-category
@@ -146,7 +147,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 
 		if ( !$message->isDisabled() ) {
 			$output .= '<h1 class="top-title">' .
-				htmlspecialchars( $this->msg( 'top-fans-by-category-nav-header' )->plain() ) . '</h1>';
+				$this->msg( 'top-fans-by-category-nav-header' )->escaped() . '</h1>';
 
 			$lines = explode( "\n", $message->text() );
 			foreach ( $lines as $line ) {
@@ -161,7 +162,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 					// message (refs bug #30030)
 					$msgObj = $this->msg( $link_text );
 					if ( !$msgObj->isDisabled() ) {
-						$link_text = $msgObj->parse();
+						$link_text = $msgObj->text();
 					}
 
 					$output .= '<p>';
@@ -212,7 +213,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 						$user_name
 					) .
 				'</span>
-				<span class="top-fan-points"><b>' . $statistics_row . '</b> ' . $lowercase_statistics_name . '</span>
+				<span class="top-fan-points"><b>' . htmlspecialchars( $statistics_row, ENT_QUOTES ) . '</b> ' . $lowercase_statistics_name . '</span>
 				<div class="visualClear"></div>
 			</div>';
 			$x++;

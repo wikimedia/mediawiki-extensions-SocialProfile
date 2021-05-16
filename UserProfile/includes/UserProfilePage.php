@@ -198,14 +198,19 @@ class UserProfilePage extends Article {
 		$out->addHTML( '</div><div class="visualClear"></div>' );
 	}
 
-	function getUserStatsRow( $label, $value ) {
+	/**
+	 * @param string $label Should be pre-escaped
+	 * @param int $value
+	 * @return string HTML
+	 */
+	function getUserStatsRow( $label, int $value ) {
 		$output = ''; // Prevent E_NOTICE
 
-		$context = $this->getContext();
-		$language = $context->getLanguage();
-
 		if ( $value != 0 ) {
-			$formattedValue = $language->formatNum( $value );
+			$context = $this->getContext();
+			$language = $context->getLanguage();
+
+			$formattedValue = htmlspecialchars( $language->formatNum( $value ), ENT_QUOTES );
 			$output = "<div>
 					<b>{$label}</b>
 					{$formattedValue}
@@ -1049,7 +1054,7 @@ class UserProfilePage extends Article {
 				$removeAvatarURL = SpecialPage::getTitleFor( 'RemoveAvatar' )->getFullURL();
 			}
 			$output .= '<p><a href="' . htmlspecialchars( $removeAvatarURL ) . '" rel="nofollow">' .
-					wfMessage( 'user-profile-remove-avatar' )->text() . '</a>
+					wfMessage( 'user-profile-remove-avatar' )->escaped() . '</a>
 			</p>';
 		}
 		$output .= '</div>';
@@ -1359,8 +1364,9 @@ class UserProfilePage extends Article {
 				$user_title_2 = Title::makeTitle( NS_USER, $item['comment'] );
 
 				if ( $user_title_2 ) {
-					$user_link_2 = '<a href="' . htmlspecialchars( $user_title_2->getFullURL() ) .
-						'" rel="nofollow">' . htmlspecialchars( $item['comment'] ) . '</a>';
+					$user_link_2 = '<a href="' . htmlspecialchars( $user_title_2->getFullURL() ) . '" rel="nofollow">' .
+						// @phan-suppress-next-line SecurityCheck-DoubleEscaped Not sure but might be a false alarm
+						htmlspecialchars( $item['comment'] ) . '</a>';
 				}
 
 				$comment_url = '';
@@ -1412,10 +1418,11 @@ class UserProfilePage extends Article {
 						$item_html .= wfMessage( 'user-recent-activity-gift-sent' )->escaped() . " {$user_link_2} {$item_time}
 						<div class=\"item\">
 							<a href=\"" . htmlspecialchars( $viewGift->getFullURL( "gift_id={$item['id']}" ) ) . "\" rel=\"nofollow\">
-								{$icon}
-								" . htmlspecialchars( $item['pagetitle'] ) . "
-							</a>
-						</div>";
+								{$icon}" .
+								// @phan-suppress-next-line SecurityCheck-DoubleEscaped Not sure but might be a false alarm
+								htmlspecialchars( $item['pagetitle'] ) .
+							'</a>
+						</div>';
 						break;
 					case 'gift-rec':
 						$userGiftIcon = new UserGiftIcon( $item['namespace'], 'm' );
@@ -1424,10 +1431,11 @@ class UserProfilePage extends Article {
 						$item_html .= wfMessage( 'user-recent-activity-gift-rec' )->escaped() . " {$user_link_2} {$item_time}
 								<div class=\"item\">
 									<a href=\"" . htmlspecialchars( $viewGift->getFullURL( "gift_id={$item['id']}" ) ) . "\" rel=\"nofollow\">
-										{$icon}
-										" . htmlspecialchars( $item['pagetitle'] ) . "
-									</a>
-								</div>";
+										{$icon}" .
+										// @phan-suppress-next-line SecurityCheck-DoubleEscaped Not sure but might be a false alarm
+										htmlspecialchars( $item['pagetitle'] ) .
+									'</a>
+								</div>';
 						break;
 					case 'system_gift':
 						$systemGiftIcon = new SystemGiftIcon( $item['namespace'], 'm' );
@@ -1437,10 +1445,11 @@ class UserProfilePage extends Article {
 						$item_html .= wfMessage( 'user-recent-system-gift' )->escaped() . " {$item_time}
 								<div class=\"user-home-item-gift\">
 									<a href=\"" . htmlspecialchars( $viewSystemGift->getFullURL( "gift_id={$item['id']}" ) ) . "\" rel=\"nofollow\">
-										{$icon}
-										" . htmlspecialchars( $item['pagetitle'] ) . "
-									</a>
-								</div>";
+										{$icon}" .
+										// @phan-suppress-next-line SecurityCheck-DoubleEscaped Not sure but might be a false alarm
+										htmlspecialchars( $item['pagetitle'] ) .
+									'</a>
+								</div>';
 						break;
 					case 'friend':
 						$item_html .= wfMessage( 'user-recent-activity-friend' )->escaped() .
@@ -1459,6 +1468,7 @@ class UserProfilePage extends Article {
 								htmlspecialchars(
 									SpecialPage::getTitleFor( 'UserBoard' )->getFullURL( [ 'user' => $user_title_2->getText() ] )
 								) .
+								// @phan-suppress-next-line SecurityCheck-DoubleEscaped Not sure but might be a false alarm (about $item['comment'])
 								"\" rel=\"nofollow\">" . htmlspecialchars( $item['comment'] ) . "</a></b>  {$item_time}
 								<div class=\"item\">
 								\"{$item['namespace']}\"
@@ -1782,7 +1792,7 @@ class UserProfilePage extends Article {
 				);
 				$output .= '<div class="user-page-message-form">
 					<form id="board-post-form" action="' . $url . '" method="post">
-						<input type="hidden" id="user_name_to" name="user_name_to" value="' . addslashes( $this->profileOwner->getName() ) . '" />
+						<input type="hidden" id="user_name_to" name="user_name_to" value="' . htmlspecialchars( $this->profileOwner->getName(), ENT_QUOTES ) . '" />
 						<span class="profile-board-message-type">' .
 							wfMessage( 'userboard_messagetype' )->escaped() .
 						'</span>
@@ -1890,7 +1900,7 @@ class UserProfilePage extends Article {
 				$linkRenderer = $services->getLinkRenderer();
 				$output .= $linkRenderer->makeLink(
 					$fanbox_link,
-					wfMessage( 'user-view-all' )->plain(),
+					wfMessage( 'user-view-all' )->text(),
 					[],
 					[ 'user' => $user_name ]
 				);

@@ -46,10 +46,12 @@ if ( defined( 'MEDIAWIKI_INSTALL' ) ) {
 
 	$registry = new ExtensionRegistry();
 	$data = $registry->readFromQueue( $subext );
+	// @phan-suppress-next-line PhanUndeclaredVariableAssignOp Obviously not undeclared
 	$wgAutoloadClasses += $data['globals']['wgAutoloadClasses'];
 }
 
 // Classes to be autoloaded
+// @phan-suppress-next-line PhanTypeArraySuspicious
 $wgAutoloadClasses['SpecialEditProfile'] = __DIR__ . '/UserProfile/includes/specials/SpecialEditProfile.php';
 $wgAutoloadClasses['SpecialPopulateUserProfiles'] = __DIR__ . '/UserProfile/includes/specials/SpecialPopulateExistingUsersProfiles.php';
 $wgAutoloadClasses['SpecialToggleUserPage'] = __DIR__ . '/UserProfile/includes/specials/SpecialToggleUserPageType.php';

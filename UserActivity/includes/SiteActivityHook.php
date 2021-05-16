@@ -17,6 +17,9 @@ class SiteActivityHook {
 	/**
 	 * Callback for ParserFirstCallInit hook subscriber
 	 *
+	 * @suppress SecurityCheck-XSS Technically a valid issue but not fixable here, the
+	 *   real fix is to make the i18n msgs not use raw HTML (T30617, sorta)
+	 *
 	 * @param string|null $input
 	 * @param array $args
 	 * @param Parser $parser
@@ -53,7 +56,7 @@ class SiteActivityHook {
 		$output = '';
 		if ( $activity ) {
 			$output .= '<div class="mp-site-activity">
-			<h2>' . wfMessage( 'useractivity-siteactivity' )->plain() . '</h2>';
+			<h2>' . wfMessage( 'useractivity-siteactivity' )->escaped() . '</h2>';
 
 			$x = 1;
 			foreach ( $activity as $item ) {
@@ -62,8 +65,8 @@ class SiteActivityHook {
 					$icon = $userActivityIcon->getIconHTML();
 
 					$output .= '<div class="mp-activity' . ( ( $x == $fixedLimit ) ? ' mp-activity-border-fix' : '' ) . '">' .
-					$icon . $item['data'] .
-					'</div>';
+						$icon . $item['data'] .
+						'</div>';
 					$x++;
 				}
 			}

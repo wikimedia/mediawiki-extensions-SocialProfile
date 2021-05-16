@@ -95,17 +95,17 @@ class TopUsersPoints extends SpecialPage {
 		$recent_title = SpecialPage::getTitleFor( 'TopUsersRecent' );
 
 		$output = '<div class="top-fan-nav">
-			<h1>' . htmlspecialchars( $this->msg( 'top-fans-by-points-nav-header' )->plain() ) . '</h1>
-			<p><b>' . htmlspecialchars( $this->msg( 'top-fans-total-points-link' )->plain() ) . '</b></p>';
+			<h1>' . $this->msg( 'top-fans-by-points-nav-header' )->escaped() . '</h1>
+			<p><b>' . $this->msg( 'top-fans-total-points-link' )->escaped() . '</b></p>';
 
 		if ( $wgUserStatsTrackMonthly ) {
 			$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=monthly' ) ) . '">' .
-				htmlspecialchars( $this->msg( 'top-fans-monthly-points-link' )->plain() ) . '</a></p>';
+				$this->msg( 'top-fans-monthly-points-link' )->escaped() . '</a></p>';
 		}
 
 		if ( $wgUserStatsTrackWeekly ) {
 			$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=weekly' ) ) . '">' .
-				htmlspecialchars( $this->msg( 'top-fans-weekly-points-link' )->plain() ) . '</a></p>';
+				$this->msg( 'top-fans-weekly-points-link' )->escaped() . '</a></p>';
 		}
 
 		// Build nav of stats by category based on MediaWiki:Topfans-by-category
@@ -115,7 +115,7 @@ class TopUsersPoints extends SpecialPage {
 
 		if ( !$byCategoryMessage->isDisabled() ) {
 			$output .= '<h1 style="margin-top:15px !important;">' .
-				$this->msg( 'top-fans-by-category-nav-header' )->plain() . '</h1>';
+				$this->msg( 'top-fans-by-category-nav-header' )->escaped() . '</h1>';
 
 			$lines = explode( "\n", $byCategoryMessage->text() );
 			foreach ( $lines as $line ) {
@@ -130,7 +130,7 @@ class TopUsersPoints extends SpecialPage {
 					// message (refs bug #30030)
 					$msgObj = $this->msg( $link_text );
 					if ( !$msgObj->isDisabled() ) {
-						$link_text = $msgObj->parse();
+						$link_text = $msgObj->text();
 					}
 
 					$output .= '<p> ';

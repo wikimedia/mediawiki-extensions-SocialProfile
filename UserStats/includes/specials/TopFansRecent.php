@@ -129,18 +129,18 @@ class TopFansRecent extends UnlistedSpecialPage {
 		$recent_title = SpecialPage::getTitleFor( 'TopUsersRecent' );
 
 		$output = '<div class="top-fan-nav">
-			<h1>' . htmlspecialchars( $this->msg( 'top-fans-by-points-nav-header' )->plain() ) . '</h1>
+			<h1>' . $this->msg( 'top-fans-by-points-nav-header' )->escaped() . '</h1>
 			<p><a href="' . htmlspecialchars( $top_title->getFullURL() ) . '">' .
-				htmlspecialchars( $this->msg( 'top-fans-total-points-link' )->plain() ) . '</a></p>';
+				$this->msg( 'top-fans-total-points-link' )->escaped() . '</a></p>';
 
 		if ( $period == 'weekly' ) {
 			$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=monthly' ) ) . '">' .
-				htmlspecialchars( $this->msg( 'top-fans-monthly-points-link' )->plain() ) . '</a><p>
-			<p><b>' . htmlspecialchars( $this->msg( 'top-fans-weekly-points-link' )->plain() ) . '</b></p>';
+				$this->msg( 'top-fans-monthly-points-link' )->escaped() . '</a><p>
+			<p><b>' . $this->msg( 'top-fans-weekly-points-link' )->escaped() . '</b></p>';
 		} else {
-			$output .= '<p><b>' . $this->msg( 'top-fans-monthly-points-link' )->plain() . '</b><p>
+			$output .= '<p><b>' . $this->msg( 'top-fans-monthly-points-link' )->escaped() . '</b><p>
 			<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=weekly' ) ) . '">' .
-				htmlspecialchars( $this->msg( 'top-fans-weekly-points-link' )->plain() ) . '</a></p>';
+				$this->msg( 'top-fans-weekly-points-link' )->escaped() . '</a></p>';
 		}
 
 		// Build nav of stats by category based on MediaWiki:Topfans-by-category
@@ -149,7 +149,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 
 		if ( !$message->isDisabled() ) {
 			$output .= '<h1 class="top-title">' .
-				htmlspecialchars( $this->msg( 'top-fans-by-category-nav-header' )->plain() ) . '</h1>';
+				$this->msg( 'top-fans-by-category-nav-header' )->escaped() . '</h1>';
 
 			$lines = explode( "\n", $message->text() );
 			foreach ( $lines as $line ) {
@@ -164,7 +164,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 					// message (refs bug #30030)
 					$msgObj = $this->msg( $link_text );
 					if ( !$msgObj->isDisabled() ) {
-						$link_text = $msgObj->parse();
+						$link_text = $msgObj->text();
 					}
 
 					$output .= '<p>';

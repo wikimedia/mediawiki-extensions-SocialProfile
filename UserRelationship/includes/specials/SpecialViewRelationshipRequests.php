@@ -172,11 +172,11 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 						)->parse();
 					}
 
-					$message = $out->parseAsContent( trim( $request['message'] ), false );
-
-					$output .= "<div class=\"relationship-action black-text\" id=\"request_action_{$request['id']}\">
+					$reqId = (int)$request['id'];
+					$output .= "<div class=\"relationship-action black-text\" id=\"request_action_{$reqId}\">
 					  	{$avatar_img}" . $msg;
-					if ( $request['message'] ) {
+					if ( isset( $request['message'] ) && $request['message'] ) {
+						$message = $out->parseAsContent( trim( $request['message'] ), false );
 						$output .= '<div class="relationship-message">' . $message . '</div>';
 					}
 					$url = htmlspecialchars( $this->getPageTitle()->getFullURL(), ENT_QUOTES );
@@ -184,13 +184,13 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 						<div class="relationship-buttons">
 						<form id="relationship-request-accept-form" action="' . $url . '" method="post">
 							<input type="hidden" name="response" value="1" />
-							<input type="hidden" name="id" value="' . $request['id'] . '" />
+							<input type="hidden" name="id" value="' . $reqId . '" />
 							<input type="hidden" name="token" value="' . htmlspecialchars( $user->getEditToken(), ENT_QUOTES ) . '" />
 							<input type="submit" class="site-button" value="' . $this->msg( 'ur-accept' )->escaped() . '" data-response="1" />
 						</form>
 						<form id="relationship-request-reject-form" action="' . $url . '" method="post">
 							<input type="hidden" name="response" value="-1" />
-							<input type="hidden" name="id" value="' . $request['id'] . '" />
+							<input type="hidden" name="id" value="' . $reqId . '" />
 							<input type="hidden" name="token" value="' . htmlspecialchars( $user->getEditToken(), ENT_QUOTES ) . '" />
 							<input type="submit" class="site-button" value="' . $this->msg( 'ur-reject' )->escaped() . '" data-response="-1" />
 						</form>

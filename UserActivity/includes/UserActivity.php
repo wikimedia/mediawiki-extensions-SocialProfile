@@ -132,6 +132,7 @@ class UserActivity {
 		$actorQuery = ActorMigration::newMigration()->getJoin( 'rc_user' ); // @todo This usage is deprecated since MW 1.34.
 		$commentQuery = $commentStore->getJoin( 'rc_comment' );
 
+		// @phan-suppress-next-line SecurityCheck-SQLInjection The escaping here is totally proper, phan just can't tell
 		$res = $dbr->select(
 			[ 'recentchanges' ] + $commentQuery['tables'] + $actorQuery['tables'],
 			[
@@ -230,6 +231,7 @@ class UserActivity {
 			$where['vote_actor'] = $this->user->getActorId();
 		}
 
+		// @phan-suppress-next-line SecurityCheck-SQLInjection The escaping here is totally proper, phan just can't tell
 		$res = $dbr->select(
 			[ 'Vote', 'page' ],
 			[
@@ -303,6 +305,7 @@ class UserActivity {
 			$where['Comment_actor'] = $this->user->getActorId();
 		}
 
+		// @phan-suppress-next-line SecurityCheck-SQLInjection The escaping here is totally proper, phan just can't tell
 		$res = $dbr->select(
 			[ 'Comments', 'page' ],
 			[
@@ -398,6 +401,7 @@ class UserActivity {
 			$where['ug_actor_from'] = $this->user->getActorId();
 		}
 
+		// @phan-suppress-next-line SecurityCheck-SQLInjection The escaping here is totally proper, phan just can't tell
 		$res = $dbr->select(
 			[ 'user_gift', 'gift' ],
 			[
@@ -464,6 +468,7 @@ class UserActivity {
 			$where['ug_actor_to'] = $this->user->getActorId();
 		}
 
+		// @phan-suppress-next-line SecurityCheck-SQLInjection The escaping here is totally proper, phan just can't tell
 		$res = $dbr->select(
 			[ 'user_gift', 'gift' ],
 			[
@@ -555,6 +560,7 @@ class UserActivity {
 			$where['sg_actor'] = $this->user->getActorId();
 		}
 
+		// @phan-suppress-next-line SecurityCheck-SQLInjection The escaping here is totally proper, phan just can't tell
 		$res = $dbr->select(
 			[ 'user_system_gift', 'system_gift' ],
 			[
@@ -651,6 +657,7 @@ class UserActivity {
 			$where['r_actor'] = $this->user->getActorId();
 		}
 
+		// @phan-suppress-next-line SecurityCheck-SQLInjection The escaping here is totally proper, phan just can't tell
 		$res = $dbr->select(
 			'user_relationship',
 			[ 'r_id', 'r_actor', 'r_actor_relation', 'r_type', 'r_date' ],
@@ -747,6 +754,7 @@ class UserActivity {
 			$where['ub_actor_from'] = $this->user->getActorId();
 		}
 
+		// @phan-suppress-next-line SecurityCheck-SQLInjection The escaping here is totally proper, phan just can't tell
 		$res = $dbr->select(
 			'user_board',
 			[ 'ub_id', 'ub_actor', 'ub_actor_from', 'ub_date', 'ub_message' ],
@@ -835,6 +843,7 @@ class UserActivity {
 			$where['um_actor'] = $this->user->getActorId();
 		}
 
+		// @phan-suppress-next-line SecurityCheck-SQLInjection The escaping here is totally proper, phan just can't tell
 		$res = $dbr->select(
 			'user_system_messages',
 			[ 'um_id', 'um_actor', 'um_type', 'um_message', 'um_date' ],
@@ -1243,6 +1252,7 @@ class UserActivity {
 					'timestamp' => $page_data['timestamp'],
 					// For grep: useractivity-edit, useractivity-foe, useractivity-friend,
 					// useractivity-gift, useractivity-user_message, useractivity-comment
+					// @phan-suppress-next-line SecurityCheck-XSS Somewhat false alarm as per the comment below
 					'data' => wfMessage( "useractivity-{$type}" )->rawParams(
 						$users, $count_users, $pages, $pages_count,
 						// $userNameForGender is not sanitized, but this parameter

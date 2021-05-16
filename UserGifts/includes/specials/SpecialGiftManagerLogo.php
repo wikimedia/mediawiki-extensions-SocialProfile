@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\Shell\Shell;
 
 /**
  * A special page to upload images for gifts.
@@ -259,6 +260,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		 * probably not accept it.
 		 */
 		if ( !$this->mStashed ) {
+			// @phan-suppress-next-line SecurityCheck-PathTraversal False positive
 			$veri = $this->verify( $this->mUploadTempName, $finalExt );
 
 			if ( !$veri->isGood() ) {
@@ -319,6 +321,14 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		}
 	}
 
+	/**
+	 * Create the gift image thumbnails, either with ImageMagick or GD.
+	 *
+	 * @param string $imageSrc Path to the temporary file
+	 * @param string $ext File extension (gif, jpg, png); de facto unused when using GD
+	 * @param string $imgDest <gift ID>_<size code>, e.g. 20_l for a large image for gift ID #20
+	 * @param int $thumbWidth Thumbnail image width in pixels
+	 */
 	function createThumbnail( $imageSrc, $ext, $imgDest, $thumbWidth ) {
 		global $wgUseImageMagick, $wgImageMagickConvertCommand;
 
@@ -335,24 +345,24 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 			}
 			if ( $typeCode == 2 ) {
 				exec(
-					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' .
+					Shell::escape( $wgImageMagickConvertCommand ) . ' -size ' . $thumbWidth . 'x' .
 					$thumbWidth . ' -resize ' . $thumbWidth . '  -quality 100 ' .
-					$border . ' ' . $imageSrc . ' ' .
+					$border . ' ' . Shell::escape( $imageSrc ) . ' ' .
 					$this->awardsUploadDirectory . '/' . $imgDest . '.jpg'
 				);
 			}
 			if ( $typeCode == 1 ) {
 				exec(
-					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' .
-					$thumbWidth . ' -resize ' . $thumbWidth . ' ' . $imageSrc .
+					Shell::escape( $wgImageMagickConvertCommand ) . ' -size ' . $thumbWidth . 'x' .
+					$thumbWidth . ' -resize ' . $thumbWidth . ' ' . Shell::escape( $imageSrc ) .
 					' ' . $border . ' ' .
 					$this->awardsUploadDirectory . '/' . $imgDest . '.gif'
 				);
 			}
 			if ( $typeCode == 3 ) {
 				exec(
-					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' .
-					$thumbWidth . ' -resize ' . $thumbWidth . ' ' . $imageSrc .
+					Shell::escape( $wgImageMagickConvertCommand ) . ' -size ' . $thumbWidth . 'x' .
+					$thumbWidth . ' -resize ' . $thumbWidth . ' ' . Shell::escape( $imageSrc ) .
 					' ' . $this->awardsUploadDirectory . '/' . $imgDest . '.png'
 				);
 			}
@@ -623,6 +633,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 * totally but we require manual intervention to save it for real.
 	 * Stash it away, then present a form asking to confirm or cancel.
 	 *
+	 * @param-taint $warning none, should be pre-escaped by all the callers
 	 * @param string $warning as sanitized HTML
 	 */
 	function uploadWarning( $warning ) {

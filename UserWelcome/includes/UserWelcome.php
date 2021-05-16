@@ -69,12 +69,12 @@ class UserWelcome {
 			if ( $avatar->isDefault() ) {
 				$uploadOrEditMsg = 'mp-welcome-upload';
 				$links[] = '<a href="' . htmlspecialchars( $avatar_link->getFullURL() ) . '" rel="nofollow">' .
-					wfMessage( $uploadOrEditMsg )->plain() .
+					wfMessage( $uploadOrEditMsg )->escaped() .
 				'</a>';
 			} else {
 				$uploadOrEditMsg = 'edit';
 				$links[] = '<a href="' . htmlspecialchars( $avatar_link->getFullURL() ) . '" rel="nofollow">' .
-					wfMessage( $uploadOrEditMsg )->plain() .
+					wfMessage( $uploadOrEditMsg )->escaped() .
 				'</a>';
 
 				if ( $this->user->isAllowed( 'avatarremove' ) ) {
@@ -83,7 +83,7 @@ class UserWelcome {
 					$removeAvatarURL = SpecialPage::getTitleFor( 'RemoveAvatar' )->getFullURL();
 				}
 				$links[] = '<a href="' . htmlspecialchars( $removeAvatarURL ) . '" rel="nofollow">' .
-					wfMessage( 'user-profile-remove-avatar' )->text() . '</a>';
+					wfMessage( 'user-profile-remove-avatar' )->escaped() . '</a>';
 			}
 
 			$output .= '<div>';
@@ -132,9 +132,9 @@ class UserWelcome {
 		$output = '';
 		if ( $requests ) {
 			$output .= '<div class="mp-requests">
-				<h3>' . wfMessage( 'mp-requests-title' )->plain() . '</h3>
+				<h3>' . wfMessage( 'mp-requests-title' )->escaped() . '</h3>
 				<div class="mp-requests-message">
-					' . wfMessage( 'mp-requests-message' )->plain() . "
+					' . wfMessage( 'mp-requests-message' )->escaped() . "
 				</div>
 				$requests
 			</div>";
@@ -239,7 +239,7 @@ class UserWelcome {
 			$board_link = SpecialPage::getTitleFor( 'UserBoard' );
 			$output .= '<p>' . $icon .
 				'<span class="profile-on"><a href="' . htmlspecialchars( $board_link->getFullURL() ) . '" rel="nofollow">'
-					. wfMessage( 'mp-request-new-message' )->plain() .
+					. wfMessage( 'mp-request-new-message' )->escaped() .
 				'</a></span>
 			</p>';
 		}

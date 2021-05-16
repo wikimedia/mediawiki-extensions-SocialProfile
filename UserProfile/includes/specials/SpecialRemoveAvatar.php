@@ -116,7 +116,7 @@ class RemoveAvatar extends SpecialPage {
 				// remove others' avatars anyway
 				$out->addHTML(
 					'<div><a href="' . htmlspecialchars( $this->getPageTitle()->getFullURL() ) . '">' .
-						$this->msg( 'avatarupload-removeanother' )->plain() .
+						$this->msg( 'avatarupload-removeanother' )->escaped() .
 					'</a></div>'
 				);
 			}
@@ -124,7 +124,6 @@ class RemoveAvatar extends SpecialPage {
 			if ( $par ) {
 				$out->addHTML( $this->showUserAvatar( $par ) );
 			} else {
-
 				$this->showUserForm();
 			}
 		}

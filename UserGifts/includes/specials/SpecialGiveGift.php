@@ -256,6 +256,7 @@ class GiveGift extends SpecialPage {
 
 		$out->setPageTitle( $this->msg( 'g-give-to-user-title', $gift['gift_name'], $this->userTo->getName() )->parse() );
 
+		$gift['gift_id'] = (int)$gift['gift_id'];
 		$userGiftIcon = new UserGiftIcon( $gift['gift_id'], 'l' );
 		$icon = $userGiftIcon->getIconHTML( [ 'id' => "gift_image_{$gift['gift_id']}" ] );
 

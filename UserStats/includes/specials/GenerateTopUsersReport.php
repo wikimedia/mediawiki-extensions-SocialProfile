@@ -98,6 +98,7 @@ class GenerateTopUsersReport extends SpecialPage {
 	 *  by using Status or StatusValue objects or somesuch instead of directly
 	 *  outputting HTML via OutputPage. Something to work on a rainy day...
 	 *
+	 * @suppress SecurityCheck-SQLInjection phan can't tell that we only allow 'monthly' or 'weekly' as $period
 	 * @param string $period Either weekly or monthly
 	 */
 	private function generateReport( $period ) {

@@ -93,7 +93,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 
 			$dbw->update(
 				'user_stats',
-				[ 'stats_edit_count = ' . $editCount ],
+				[ 'stats_edit_count = ' . (int)$editCount ],
 				[ 'stats_actor' => $actorId ],
 				__METHOD__
 			);

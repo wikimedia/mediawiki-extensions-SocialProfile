@@ -93,6 +93,7 @@ class RandomFeaturedUser {
 			$output .= '</a>';
 		}
 
+		// @phan-suppress-next-line SecurityCheck-DoubleEscaped Fake news, escaping is totally proper here
 		$link = Html::rawElement(
 			'a',
 			[ 'href' => htmlspecialchars( $userPageURL, ENT_QUOTES ) ],
@@ -100,7 +101,7 @@ class RandomFeaturedUser {
 		);
 		$output .= "<div class=\"random-featured-user-title\">$link<br /> " .
 				// For grep: random-user-points-weekly, random-user-points-monthly
-				wfMessage( "random-user-points-{$period}", $points )->text() .
+				wfMessage( "random-user-points-{$period}", $points )->escaped() .
 			"</div>\n\n";
 
 		if ( $wgRandomFeaturedUser['about'] == true ) {
@@ -117,7 +118,7 @@ class RandomFeaturedUser {
 			if ( !empty( $about ) ) {
 				global $wgOut;
 				$output .= '<div class="random-featured-user-about-title">' .
-					wfMessage( 'random-user-about-me' )->text() . '</div>' .
+					wfMessage( 'random-user-about-me' )->escaped() . '</div>' .
 					$p->parse( $about, $parser->getTitle(), $wgOut->parserOptions(), false )->getText();
 			}
 		}

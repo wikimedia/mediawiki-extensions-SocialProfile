@@ -136,13 +136,13 @@ class SpecialUploadAvatar extends SpecialUpload {
 		$output = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-picture' )->plain() );
 		$output .= '<div class="profile-info">';
 		$output .= '<p class="profile-update-title">' .
-			$this->msg( 'user-profile-picture-yourpicture' )->plain() . '</p>';
-		$output .= '<p>' . $this->msg( 'user-profile-picture-yourpicturestext' )->plain() . '</p>';
+			$this->msg( 'user-profile-picture-yourpicture' )->escaped() . '</p>';
+		$output .= '<p>' . $this->msg( 'user-profile-picture-yourpicturestext' )->escaped() . '</p>';
 
 		$output .= '<table class="avatar-success-page">';
 		$output .= '<tr>
 			<td class="title-cell" valign="top">' .
-				$this->msg( 'user-profile-picture-large' )->plain() .
+				$this->msg( 'user-profile-picture-large' )->escaped() .
 			'</td>
 			<td class="image-cell">
 				<img src="' . $uploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_l.' . $ext . '?ts=' . $ts . '" alt="" />
@@ -150,7 +150,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 		</tr>';
 		$output .= '<tr>
 			<td class="title-cell" valign="top">' .
-				$this->msg( 'user-profile-picture-medlarge' )->plain() .
+				$this->msg( 'user-profile-picture-medlarge' )->escaped() .
 			'</td>
 			<td class="image-cell">
 				<img src="' . $uploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_ml.' . $ext . '?ts=' . $ts . '" alt="" />
@@ -158,7 +158,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 		</tr>';
 		$output .= '<tr>
 			<td class="title-cell" valign="top">' .
-				$this->msg( 'user-profile-picture-medium' )->plain() .
+				$this->msg( 'user-profile-picture-medium' )->escaped() .
 			'</td>
 			<td class="image-cell">
 				<img src="' . $uploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_m.' . $ext . '?ts=' . $ts . '" alt="" />
@@ -166,7 +166,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 		</tr>';
 		$output .= '<tr>
 			<td class="title-cell" valign="top">' .
-				$this->msg( 'user-profile-picture-small' )->plain() .
+				$this->msg( 'user-profile-picture-small' )->escaped() .
 			'</td>
 			<td class="image-cell">
 				<img src="' . $uploadPath . '/avatars/' . $wgAvatarKey . '_' . $uid . '_s.' . $ext . '?ts=' . $ts . '" alt="" />
@@ -174,7 +174,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 		</tr>';
 		$output .= '<tr>
 			<td>
-				<input type="button" onclick="javascript:history.go(-1)" class="site-button" value="' . $this->msg( 'user-profile-picture-uploaddifferent' )->plain() . '" />
+				<input type="button" onclick="javascript:history.go(-1)" class="site-button" value="' . $this->msg( 'user-profile-picture-uploaddifferent' )->escaped() . '" />
 			</td>
 		</tr>';
 		$output .= '</table>';
@@ -196,11 +196,11 @@ class SpecialUploadAvatar extends SpecialUpload {
 		global $wgUseCopyrightUpload, $wgUserProfileDisplay;
 
 		if ( $wgUserProfileDisplay['avatar'] === false ) {
-			$message = $this->msg( 'socialprofile-uploads-disabled' )->plain();
+			$message = $this->msg( 'socialprofile-uploads-disabled' )->escaped();
 		}
 
 		if ( $message != '' ) {
-			$sub = $this->msg( 'uploaderror' )->plain();
+			$sub = $this->msg( 'uploaderror' )->escaped();
 			$this->getOutput()->addHTML( "<h2>{$sub}</h2>\n" .
 				"<h4 class='error'>{$message}</h4>\n" );
 		}
@@ -209,17 +209,17 @@ class SpecialUploadAvatar extends SpecialUpload {
 			return '';
 		}
 
-		$ulb = $this->msg( 'uploadbtn' );
+		$ulb = $this->msg( 'uploadbtn' )->escaped();
 
 		$source = null;
 
 		if ( $wgUseCopyrightUpload ) {
 			$source = "
-				<td align='right' nowrap='nowrap'>" . $this->msg( 'filestatus' )->plain() . "</td>
+				<td align='right' nowrap='nowrap'>" . $this->msg( 'filestatus' )->escaped() . "</td>
 				<td><input tabindex='3' type='text' name=\"wpUploadCopyStatus\" value=\"" .
 				htmlspecialchars( $this->mUploadCopyStatus ) . "\" size='40' /></td>
 				</tr><tr>
-				<td align='right'>" . $this->msg( 'filesource' )->plain() . "</td>
+				<td align='right'>" . $this->msg( 'filesource' )->escaped() . "</td>
 				<td><input tabindex='4' type='text' name='wpUploadSource' id='wpUploadSource' value=\"" .
 				htmlspecialchars( $this->mUploadSource ) . "\" /></td>
 				";
@@ -233,7 +233,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 				<tr>
 					<td>
 						<p class="profile-update-title">' .
-							$this->msg( 'user-profile-picture-currentimage' )->plain() .
+							$this->msg( 'user-profile-picture-currentimage' )->escaped() .
 						'</p>
 					</td>
 				</tr>';
@@ -256,10 +256,10 @@ class SpecialUploadAvatar extends SpecialUpload {
 				<tr>
 					<td>
 						<p class="profile-update-title">' .
-							$this->msg( 'user-profile-picture-choosepicture' )->plain() .
+							$this->msg( 'user-profile-picture-choosepicture' )->escaped() .
 						'</p>
 						<p style="margin-bottom:10px;">' .
-							$this->msg( 'user-profile-picture-picsize' )->plain() .
+							$this->msg( 'user-profile-picture-picsize' )->escaped() .
 						'</p>
 						<input tabindex="1" type="file" name="wpUploadFile" id="wpUploadFile" size="36"/>
 					</td>

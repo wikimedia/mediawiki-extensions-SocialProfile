@@ -74,7 +74,7 @@ class SystemGifts {
 					[ 'stats_actor' ],
 					[
 						$stats->stats_fields[$this->categories[$row->gift_category]] .
-							" >= {$row->gift_threshold}",
+							' >= ' . (int)$row->gift_threshold,
 						'stats_actor IS NOT NULL'
 					],
 					__METHOD__

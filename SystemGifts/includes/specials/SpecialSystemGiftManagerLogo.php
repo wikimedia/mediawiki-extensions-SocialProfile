@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\Shell\Shell;
 
 /**
  * A special page to upload images for system gifts (awards).
@@ -120,8 +121,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 
 		$this->mAction = $request->getVal( 'action' );
 		$this->mSessionKey = $request->getInt( 'wpSessionKey' );
-		if ( !empty( $this->mSessionKey ) &&
-			isset( $_SESSION['wsUploadData'][$this->mSessionKey] ) ) {
+		if ( !empty( $this->mSessionKey ) && isset( $_SESSION['wsUploadData'][$this->mSessionKey] ) ) {
 			/**
 			 * Confirming a temporarily stashed upload.
 			 * We don't want path names to be forged, so we keep
@@ -241,6 +241,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		 * probably not accept it.
 		 */
 		if ( !$this->mStashed ) {
+			// @phan-suppress-next-line SecurityCheck-PathTraversal False positive
 			$veri = $this->verify( $this->mUploadTempName, $finalExt );
 
 			if ( !$veri->isGood() ) {
@@ -297,6 +298,14 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		}
 	}
 
+	/**
+	 * Create the award image thumbnails, either with ImageMagick or GD.
+	 *
+	 * @param string $imageSrc Path to the temporary file
+	 * @param string $ext File extension (gif, jpg, png); de facto unused when using GD
+	 * @param string $imgDest <award ID>_<size code>, e.g. 20_l for a large image for award ID #20
+	 * @param int $thumbWidth Thumbnail image width in pixels
+	 */
 	function createThumbnail( $imageSrc, $ext, $imgDest, $thumbWidth ) {
 		global $wgUseImageMagick, $wgImageMagickConvertCommand;
 
@@ -312,24 +321,24 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			}
 			if ( $typeCode == 2 ) {
 				exec(
-					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' .
+					Shell::escape( $wgImageMagickConvertCommand ) . ' -size ' . $thumbWidth . 'x' .
 					$thumbWidth . ' -resize ' . $thumbWidth . '  -quality 100 ' .
-					$border . ' ' . $imageSrc . ' ' .
+					$border . ' ' . Shell::escape( $imageSrc ) . ' ' .
 					$this->awardsUploadDirectory . '/sg_' . $imgDest . '.jpg'
 				);
 			}
 			if ( $typeCode == 1 ) {
 				exec(
-					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' .
-					$thumbWidth . ' -resize ' . $thumbWidth . ' ' . $imageSrc .
+					Shell::escape( $wgImageMagickConvertCommand ) . ' -size ' . $thumbWidth . 'x' .
+					$thumbWidth . ' -resize ' . $thumbWidth . ' ' . Shell::escape( $imageSrc ) .
 					' ' . $border . ' ' .
 					$this->awardsUploadDirectory . '/sg_' . $imgDest . '.gif'
 				);
 			}
 			if ( $typeCode == 3 ) {
 				exec(
-					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' .
-					$thumbWidth . ' -resize ' . $thumbWidth . ' ' . $imageSrc .
+					Shell::escape( $wgImageMagickConvertCommand ) . ' -size ' . $thumbWidth . 'x' .
+					$thumbWidth . ' -resize ' . $thumbWidth . ' ' . Shell::escape( $imageSrc ) .
 					' ' . $this->awardsUploadDirectory . '/sg_' . $imgDest . '.png'
 				);
 			}
