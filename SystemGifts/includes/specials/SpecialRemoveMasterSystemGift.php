@@ -71,8 +71,8 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 		$this->gift_id = $request->getInt( 'gift_id', $par );
 
 		if ( !$this->gift_id || !is_numeric( $this->gift_id ) ) {
-			$out->setPageTitle( $this->msg( 'ga-error-title' )->plain() );
-			$out->addHTML( $this->msg( 'ga-error-message-invalid-link' )->plain() );
+			$out->setPageTitle( $this->msg( 'ga-error-title' ) );
+			$out->addHTML( $this->msg( 'ga-error-message-invalid-link' )->escaped() );
 			return false;
 		}
 
@@ -102,14 +102,14 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 			$this->deleteImage( $this->gift_id, 'l' );
 			$this->deleteImage( $this->gift_id, 'ml' );
 
-			$out->setPageTitle( $this->msg( 'ga-remove-success-title', $gift['gift_name'] )->plain() );
+			$out->setPageTitle( $this->msg( 'ga-remove-success-title', $gift['gift_name'] ) );
 
 			$output = '<div class="back-links">
 				<a href="' . htmlspecialchars( SpecialPage::getTitleFor( 'SystemGiftManager' )->getFullURL() ) . '">' .
-					$this->msg( 'ga-viewlist' )->plain() . '</a>
+					$this->msg( 'ga-viewlist' )->escaped() . '</a>
 			</div>
 			<div class="ga-container">' .
-				$this->msg( 'ga-remove-success-message', $gift['gift_name'] )->plain() .
+				$this->msg( 'ga-remove-success-message', $gift['gift_name'] )->escaped() .
 				'<div class="visualClear"></div>
 			</div>';
 
@@ -131,24 +131,24 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 		$systemGiftIcon = new SystemGiftIcon( $this->gift_id, 'l' );
 		$icon = $systemGiftIcon->getIconHTML();
 
-		$this->getOutput()->setPageTitle( $this->msg( 'ga-remove-title', $gift['gift_name'] )->plain() );
+		$this->getOutput()->setPageTitle( $this->msg( 'ga-remove-title', $gift['gift_name'] ) );
 
 		$output = '<div class="back-links">
 			<a href="' . htmlspecialchars( SpecialPage::getTitleFor( 'SystemGiftManager' )->getFullURL() ) . '">' .
-				$this->msg( 'ga-viewlist' )->plain() . '</a>
+				$this->msg( 'ga-viewlist' )->escaped() . '</a>
 		</div>
 		<form action="" method="post" enctype="multipart/form-data" name="form1">
 			<div class="ga-remove-message">' .
-				$this->msg( 'ga-delete-message', $gift['gift_name'] ) .
+				$this->msg( 'ga-delete-message', $gift['gift_name'] )->escaped() .
 			'</div>
 			<div class="ga-container">' .
 				$icon .
-				'<div class="ga-name">' . $gift['gift_name'] . '</div>
+				'<div class="ga-name">' . htmlspecialchars( $gift['gift_name'], ENT_QUOTES ) . '</div>
 			</div>
 			<div class="visualClear"></div>
 			<div class="ga-buttons">
-				<input type="button" class="site-button" value="' . $this->msg( 'ga-remove' )->plain() . '" size="20" onclick="document.form1.submit()" />
-				<input type="button" class="site-button" value="' . $this->msg( 'cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
+				<input type="button" class="site-button" value="' . $this->msg( 'ga-remove' )->escaped() . '" size="20" onclick="document.form1.submit()" />
+				<input type="button" class="site-button" value="' . $this->msg( 'cancel' )->escaped() . '" size="20" onclick="history.go(-1)" />
 			</div>
 			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 		</form>';
