@@ -58,7 +58,7 @@ class SystemGiftManager extends SpecialPage {
 				);
 				$out->addHTML(
 					'<span class="view-status">' .
-					$this->msg( 'ga-created' )->plain() .
+					$this->msg( 'ga-created' )->escaped() .
 					'</span><br /><br />'
 				);
 			} else {
@@ -72,7 +72,7 @@ class SystemGiftManager extends SpecialPage {
 				);
 				$out->addHTML(
 					'<span class="view-status">' .
-					$this->msg( 'ga-saved' )->plain() .
+					$this->msg( 'ga-saved' )->escaped() .
 					'</span><br /><br />'
 				);
 			}
@@ -86,7 +86,7 @@ class SystemGiftManager extends SpecialPage {
 				$out->addHTML(
 					'<div><b><a href="' .
 					htmlspecialchars( $this->getPageTitle()->getFullURL( 'method=edit' ) ) . '">' .
-						$this->msg( 'ga-addnew' )->plain() . '</a></b></div>'
+						$this->msg( 'ga-addnew' )->escaped() . '</a></b></div>'
 				);
 				$out->addHTML( $this->displayGiftList() );
 			}
@@ -114,12 +114,12 @@ class SystemGiftManager extends SpecialPage {
 					$removePage = SpecialPage::getTitleFor( 'RemoveMasterSystemGift' );
 					$deleteLink = '<a class="ga-remove-link" href="' .
 						htmlspecialchars( $removePage->getFullURL( "gift_id={$gift['id']}" ) ) .
-						'">' . $this->msg( 'delete' )->plain() . '</a>';
+						'">' . $this->msg( 'delete' )->escaped() . '</a>';
 				}
 
 				$output .= '<div class="Item">
 					<a href="' . htmlspecialchars( $this->getPageTitle()->getFullURL( 'id=' . $gift['id'] ) ) . '">' .
-						$gift['gift_name'] . '</a> ' .
+						htmlspecialchars( $gift['gift_name'], ENT_QUOTES ) . '</a> ' .
 						$deleteLink . '</div>' . "\n";
 			}
 		}
@@ -127,9 +127,9 @@ class SystemGiftManager extends SpecialPage {
 		return '<div id="views">' . $output . '</div>';
 	}
 
-	function displayForm( $gift_id ) {
+	function displayForm( int $gift_id ) {
 		$form = '<div><b><a href="' . htmlspecialchars( $this->getPageTitle()->getFullURL() ) .
-			'">' . $this->msg( 'ga-viewlist' )->plain() . '</a></b></div>';
+			'">' . $this->msg( 'ga-viewlist' )->escaped() . '</a></b></div>';
 
 		if ( $gift_id ) {
 			$gift = SystemGifts::getGift( $gift_id );
@@ -138,15 +138,19 @@ class SystemGiftManager extends SpecialPage {
 		$form .= '<form action="" method="post" enctype="multipart/form-data" name="gift">
 		<table>
 			<tr>
-				<td class="view-form">' . $this->msg( 'ga-giftname' )->plain() . '</td>
-				<td class="view-container"><input type="text" size="45" class="createbox" name="gift_name" value="' . ( $gift['gift_name'] ?? '' ) . '"/></td>
+				<td class="view-form">' . $this->msg( 'ga-giftname' )->escaped() . '</td>
+				<td class="view-container"><input type="text" size="45" class="createbox" name="gift_name" value="' .
+					( isset( $gift['gift_name'] ) && $gift['gift_name'] ? htmlspecialchars( $gift['gift_name'], ENT_QUOTES ) : '' ) .
+					'"/></td>
 			</tr>
 			<tr>
-				<td class="view-form" valign="top">' . $this->msg( 'ga-giftdesc' )->plain() . '</td>
-				<td class="view-container"><textarea class="createbox" name="gift_description" rows="2" cols="30">' . ( $gift['gift_description'] ?? '' ) . '</textarea></td>
+				<td class="view-form" valign="top">' . $this->msg( 'ga-giftdesc' )->escaped() . '</td>
+				<td class="view-container"><textarea class="createbox" name="gift_description" rows="2" cols="30">' .
+					( isset( $gift['gift_description'] ) && $gift['gift_description'] ? htmlspecialchars( $gift['gift_description'], ENT_QUOTES ) : '' ) .
+			'</textarea></td>
 			</tr>
 			<tr>
-				<td class="view-form">' . $this->msg( 'ga-gifttype' )->plain() . '</td>
+				<td class="view-form">' . $this->msg( 'ga-gifttype' )->escaped() . '</td>
 				<td class="view-container">
 					<select name="gift_category">' . "\n";
 			$g = new SystemGifts();
@@ -163,9 +167,9 @@ class SystemGiftManager extends SpecialPage {
 				</td>
 			</tr>
 		<tr>
-			<td class="view-form">' . $this->msg( 'ga-threshold' )->plain() . '</td>
+			<td class="view-form">' . $this->msg( 'ga-threshold' )->escaped() . '</td>
 			<td class="view-container"><input type="text" size="25" class="createbox" name="gift_threshold" value="' .
-				( $gift['gift_threshold'] ?? '' ) . '"/></td>
+				( isset( $gift['gift_threshold'] ) && $gift['gift_threshold'] ? (int)$gift['gift_threshold'] : '' ) . '"/></td>
 		</tr>';
 
 		if ( $gift_id ) {
@@ -174,27 +178,27 @@ class SystemGiftManager extends SpecialPage {
 			$icon = $systemGiftIcon->getIconHTML();
 
 			$form .= '<tr>
-			<td class="view-form" valign="top">' . $this->msg( 'ga-giftimage' )->plain() . '</td>
+			<td class="view-form" valign="top">' . $this->msg( 'ga-giftimage' )->escaped() . '</td>
 			<td class="view-container">' .
 				$icon .
 				'<a href="' . htmlspecialchars( $sgml->getFullURL( 'gift_id=' . $gift_id ) ) . '">' .
-					$this->msg( 'ga-img' )->plain() . '</a>
+					$this->msg( 'ga-img' )->escaped() . '</a>
 				</td>
 			</tr>';
 		}
 
 		if ( isset( $gift['gift_id'] ) ) {
-			$button = $this->msg( 'edit' )->plain();
+			$button = $this->msg( 'edit' )->escaped();
 		} else {
-			$button = $this->msg( 'ga-create-gift' )->plain();
+			$button = $this->msg( 'ga-create-gift' )->escaped();
 		}
 
 		$form .= '<tr>
 		<td colspan="2">
-			<input type="hidden" name="id" value="' . ( $gift['gift_id'] ?? '' ) . '" />
+			<input type="hidden" name="id" value="' . ( isset( $gift['gift_id'] ) ? (int)$gift['gift_id'] : '' ) . '" />
 			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 			<input type="button" class="createbox" value="' . $button . '" size="20" onclick="document.gift.submit()" />
-			<input type="button" class="createbox" value="' . $this->msg( 'cancel' )->plain() . '" size="20" onclick="history.go(-1)" />
+			<input type="button" class="createbox" value="' . $this->msg( 'cancel' )->escaped() . '" size="20" onclick="history.go(-1)" />
 		</td>
 		</tr>
 		</table>

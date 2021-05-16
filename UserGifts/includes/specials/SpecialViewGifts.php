@@ -78,7 +78,7 @@ class ViewGifts extends SpecialPage {
 		 */
 		if ( $user_id == 0 ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
-			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-no-user' )->plain() ) );
+			$out->addHTML( $this->msg( 'g-error-message-no-user' )->escaped() );
 			return;
 		}
 
@@ -146,7 +146,7 @@ class ViewGifts extends SpecialPage {
 						$rel->clearUserGiftStatus( $gift['id'] );
 					}
 					$output .= '<span class="g-new">' .
-						htmlspecialchars( $this->msg( 'g-new' )->plain() ) .
+						$this->msg( 'g-new' )->escaped() .
 					'</span>';
 				}
 				$output .= '</div>';
@@ -159,14 +159,14 @@ class ViewGifts extends SpecialPage {
 				'</div>
 					<div class="g-actions">
 						<a href="' . htmlspecialchars( $giveGiftLink->getFullURL( 'gift_id=' . $gift['gift_id'] ) ) . '">' .
-							htmlspecialchars( $this->msg( 'g-to-another' )->plain() ) .
+							$this->msg( 'g-to-another' )->escaped() .
 						'</a>';
 				if ( $rel->user_name == $currentUser->getName() ) {
 					$output .= '&#160;';
 					$output .= $this->msg( 'pipe-separator' )->escaped();
 					$output .= '&#160;';
 					$output .= '<a href="' . htmlspecialchars( $removeGiftLink->getFullURL( 'gift_id=' . $gift['id'] ) ) . '">' .
-						htmlspecialchars( $this->msg( 'g-remove-gift' )->plain() ) . '</a>';
+						$this->msg( 'g-remove-gift' )->escaped() . '</a>';
 				}
 				$output .= '</div>
 					<div class="visualClear"></div>';
@@ -191,13 +191,13 @@ class ViewGifts extends SpecialPage {
 			if ( $page > 1 ) {
 				$output .= $linkRenderer->makeLink(
 					$pageLink,
-					$this->msg( 'g-previous' )->plain(),
+					$this->msg( 'g-previous' )->text(),
 					[],
 					[
 						'user' => $user_name,
 						'page' => ( $page - 1 )
 					]
-				) . htmlspecialchars( $this->msg( 'word-separator' )->plain() );
+				) . $this->msg( 'word-separator' )->escaped();
 			}
 
 			if ( ( $total % $per_page ) != 0 ) {
@@ -222,15 +222,15 @@ class ViewGifts extends SpecialPage {
 							'user' => $user_name,
 							'page' => $i
 						]
-					) . $this->msg( 'word-separator' )->plain();
+					) . $this->msg( 'word-separator' )->escaped();
 				}
 			}
 
 			if ( ( $total - ( $per_page * $page ) ) > 0 ) {
-				$output .= htmlspecialchars( $this->msg( 'word-separator' )->plain() ) .
+				$output .= $this->msg( 'word-separator' )->escaped() .
 					$linkRenderer->makeLink(
 						$pageLink,
-						$this->msg( 'g-next' )->plain(),
+						$this->msg( 'g-next' )->text(),
 						[],
 						[
 							'user' => $user_name,
