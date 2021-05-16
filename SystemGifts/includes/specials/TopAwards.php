@@ -122,14 +122,14 @@ class TopAwards extends UnlistedSpecialPage {
 		// topawards-comment-title, topawards-recruit-title,
 		// topawards-friend-title
 		$out->setPageTitle(
-			$this->msg( 'topawards-' . strtolower( $page_category ) . '-title' )->plain()
+			$this->msg( 'topawards-' . strtolower( $page_category ) . '-title' )
 		);
 
 		// Add CSS
 		$out->addModuleStyles( 'ext.socialprofile.special.topawards.css' );
 
 		$output = '<div class="top-awards-navigation">
-			<h1>' . $this->msg( 'topawards-award-categories' )->plain() . '</h1>';
+			<h1>' . $this->msg( 'topawards-award-categories' )->escaped() . '</h1>';
 
 		$nav_x = 0;
 
@@ -140,7 +140,7 @@ class TopAwards extends UnlistedSpecialPage {
 			$msg = $this->msg(
 				'topawards-' .
 				strtolower( $awardType['category_name'] ) . 's'
-			)->plain();
+			)->escaped();
 			if ( $nav_x == $category_number ) {
 				$output .= "<p><b>{$msg}</b></p>";
 			} else {
@@ -156,7 +156,7 @@ class TopAwards extends UnlistedSpecialPage {
 		// Display a "no results" message if we got no results -- because it's
 		// a lot nicer to display something rather than a half-empty page
 		if ( $dbr->numRows( $res ) <= 0 ) {
-			$output .= $this->msg( 'topawards-empty' )->plain();
+			$output .= $this->msg( 'topawards-empty' )->escaped();
 		} else {
 			$linkRenderer = $this->getLinkRenderer();
 			foreach ( $res as $row ) {

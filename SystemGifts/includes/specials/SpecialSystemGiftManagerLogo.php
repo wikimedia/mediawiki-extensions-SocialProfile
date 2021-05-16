@@ -201,7 +201,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		 * If there was no filename or a zero size given, give up quick.
 		 */
 		if ( trim( $this->mOname ) == '' || empty( $this->mUploadSize ) ) {
-			return $this->mainUploadForm( '<li>' . $this->msg( 'emptyfile' )->plain() . '</li>' );
+			return $this->mainUploadForm( '<li>' . $this->msg( 'emptyfile' )->escaped() . '</li>' );
 		}
 
 		# Chop off any directories in the given filename
@@ -270,7 +270,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			}
 
 			if ( $this->mUploadSize == 0 ) {
-				$warning .= '<li>' . $this->msg( 'emptyfile' )->plain() . '</li>';
+				$warning .= '<li>' . $this->msg( 'emptyfile' )->escaped() . '</li>';
 			}
 
 			if ( $warning != '' ) {
@@ -546,8 +546,8 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		$ext = 'jpg';
 		$ts = rand();
 
-		$output = '<h2>' . $this->msg( 'ga-uploadsuccess' )->plain() . '</h2>';
-		$output .= '<h5>' . $this->msg( 'ga-imagesbelow' )->plain() . '</h5>';
+		$output = '<h2>' . $this->msg( 'ga-uploadsuccess' )->escaped() . '</h2>';
+		$output .= '<h5>' . $this->msg( 'ga-imagesbelow' )->escaped() . '</h5>';
 		if ( $status == 1 ) {
 			$ext = 'gif';
 		}
@@ -560,33 +560,33 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 
 		$output .= '<table class="ga-upload-success-page">
 		<tr>
-			<td class="title-cell" valign="top">' . $this->msg( 'ga-large' )->plain() . '</td>
+			<td class="title-cell" valign="top">' . $this->msg( 'ga-large' )->escaped() . '</td>
 			<td><img src="' . $uploadPath . '/awards/sg_' . $this->gift_id . '_l.' . $ext . '?ts=' . $ts . '" alt="" /></td>
 		</tr>
 		<tr>
-			<td class="title-cell" valign="top">' . $this->msg( 'ga-mediumlarge' )->plain() . '</td>
+			<td class="title-cell" valign="top">' . $this->msg( 'ga-mediumlarge' )->escaped() . '</td>
 			<td><img src="' . $uploadPath . '/awards/sg_' . $this->gift_id . '_ml.' . $ext . '?ts=' . $ts . '" alt="" /></td>
 		</tr>
 		<tr>
-			<td class="title-cell" valign="top">' . $this->msg( 'ga-medium' )->plain() . '</td>
+			<td class="title-cell" valign="top">' . $this->msg( 'ga-medium' )->escaped() . '</td>
 			<td><img src="' . $uploadPath . '/awards/sg_' . $this->gift_id . '_m.' . $ext . '?ts=' . $ts . '" alt="" /></td>
 		</tr>
 		<tr>
-			<td class="title-cell" valign="top">' . $this->msg( 'ga-small' )->plain() . '</td>
+			<td class="title-cell" valign="top">' . $this->msg( 'ga-small' )->escaped() . '</td>
 			<td><img src="' . $uploadPath . '/awards/sg_' . $this->gift_id . '_s.' . $ext . '?ts=' . $ts . '" alt="" /></td>
 		</tr>
 		<tr>
 			<td>
-				<input type="button" onclick="javascript:history.go(-1)" value="' . $this->msg( 'ga-goback' )->plain() . '" />
+				<input type="button" onclick="javascript:history.go(-1)" value="' . $this->msg( 'ga-goback' )->escaped() . '" />
 			</td>
 		</tr>';
 
 		$systemGiftManager = SpecialPage::getTitleFor( 'SystemGiftManager' );
 		$output .= $this->getLanguage()->pipeList( [
 			'<tr><td><a href="' . htmlspecialchars( $systemGiftManager->getFullURL() ) . '">' .
-				$this->msg( 'ga-back-gift-list' )->plain() . '</a>&#160;',
+				$this->msg( 'ga-back-gift-list' )->escaped() . '</a>&#160;',
 			'&#160;<a href="' . htmlspecialchars( $systemGiftManager->getFullURL( 'id=' . $this->gift_id ) ) . '">' .
-				$this->msg( 'ga-back-edit-gift' )->plain() . '</a></td></tr>'
+				$this->msg( 'ga-back-edit-gift' )->escaped() . '</a></td></tr>'
 		] );
 		$output .= '</table>';
 		$this->getOutput()->addHTML( $output );
@@ -597,10 +597,10 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	 */
 	function uploadError( $error ) {
 		$out = $this->getOutput();
-		$sub = $this->msg( 'uploadwarning' )->plain();
+		$sub = $this->msg( 'uploadwarning' )->escaped();
 		$out->addHTML( "<h2>{$sub}</h2>\n" );
 		$out->addHTML( "<h4 class='error'>{$error}</h4>\n" );
-		$out->addHTML( '<br /><input type="button" onclick="javascript:history.go(-1)" value="' . $this->msg( 'ga-goback' )->plain() . '">' );
+		$out->addHTML( '<br /><input type="button" onclick="javascript:history.go(-1)" value="' . $this->msg( 'ga-goback' )->escaped() . '">' );
 	}
 
 	/**
@@ -620,7 +620,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		}
 
 		$out = $this->getOutput();
-		$sub = $this->msg( 'uploadwarning' )->plain();
+		$sub = $this->msg( 'uploadwarning' )->escaped();
 		$out->addHTML( "<h2>{$sub}</h2>\n" );
 		$out->addHTML( "<ul class='warning'>{$warning}</ul><br />\n" );
 
@@ -650,7 +650,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 
 			<tr>
 				<td align='right'>
-					<input tabindex='2' type='button' onclick=javascript:history.go(-1) value='" . $this->msg( 'ga-goback' )->plain() . "' />
+					<input tabindex='2' type='button' onclick=javascript:history.go(-1) value='" . $this->msg( 'ga-goback' )->escaped() . "' />
 				</td>
 
 			</tr>
@@ -669,22 +669,22 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 
 		$out = $this->getOutput();
 		if ( $msg != '' ) {
-			$sub = $this->msg( 'uploaderror' )->plain();
+			$sub = $this->msg( 'uploaderror' )->escaped();
 			$out->addHTML( "<h2>{$sub}</h2>\n" .
 				"<h4 class='error'>{$msg}</h4>\n" );
 		}
 
-		$ulb = $this->msg( 'uploadbtn' )->plain();
+		$ulb = $this->msg( 'uploadbtn' )->escaped();
 
 		$source = null;
 
 		if ( $wgUseCopyrightUpload ) {
 			$source = "
-	<td align='right' nowrap='nowrap'>" . $this->msg( 'filestatus' )->plain() . "</td>
+	<td align='right' nowrap='nowrap'>" . $this->msg( 'filestatus' )->escaped() . "</td>
 	<td><input tabindex='3' type='text' name=\"wpUploadCopyStatus\" value=\"" .
 	htmlspecialchars( $this->mUploadCopyStatus ) . "\" size='40' /></td>
 	</tr><tr>
-	<td align='right'>" . $this->msg( 'filesource' )->plain() . "</td>
+	<td align='right'>" . $this->msg( 'filesource' )->escaped() . "</td>
 	<td><input tabindex='4' type='text' name='wpUploadSource' id='wpUploadSource' value=\"" .
 	htmlspecialchars( $this->mUploadSource ) . "\" /></td>
 	";
@@ -695,7 +695,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		$output = '<table>
 			<tr>
 				<td class="title-cell">' .
-					$this->msg( 'ga-currentimage' )->plain() .
+					$this->msg( 'ga-currentimage' )->escaped() .
 				'</td>
 			</tr>
 			<tr>
@@ -714,7 +714,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	<table>
 		<tr>
 			<td class="title-cell">' .
-				$this->msg( 'ga-file-instructions' )->escaped() . $this->msg( 'ga-choosefile' )->plain() . '<br />
+				$this->msg( 'ga-file-instructions' )->escaped() . $this->msg( 'ga-choosefile' )->escaped() . '<br />
 				<input tabindex="1" type="file" name="wpUploadFile" id="wpUploadFile" />
 			</td>
 		</tr>

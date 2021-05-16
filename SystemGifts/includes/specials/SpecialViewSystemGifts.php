@@ -51,7 +51,7 @@ class ViewSystemGifts extends SpecialPage {
 		 * It will automatically return them to the ViewSystemGifts page
 		 */
 		if ( !$currentUser->isLoggedIn() && $user_name == '' ) {
-			$out->setPageTitle( $this->msg( 'ga-error-title' )->plain() );
+			$out->setPageTitle( $this->msg( 'ga-error-title' ) );
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
 			$out->redirect( htmlspecialchars( $login->getFullURL( 'returnto=Special:ViewSystemGifts' ) ) );
 			return;
@@ -69,8 +69,8 @@ class ViewSystemGifts extends SpecialPage {
 		 * Error message for username that does not exist (from URL)
 		 */
 		if ( $targetUser->getId() == 0 ) {
-			$out->setPageTitle( $this->msg( 'ga-error-title' )->plain() );
-			$out->addHTML( $this->msg( 'ga-error-message-no-user' )->plain() );
+			$out->setPageTitle( $this->msg( 'ga-error-title' ) );
+			$out->addHTML( $this->msg( 'ga-error-message-no-user' )->escaped() );
 			return;
 		}
 
@@ -92,7 +92,7 @@ class ViewSystemGifts extends SpecialPage {
 		/**
 		 * Show gift count for user
 		 */
-		$out->setPageTitle( $this->msg( 'ga-title', $rel->user_name )->parse() );
+		$out->setPageTitle( $this->msg( 'ga-title', $rel->user_name ) );
 
 		$output .= '<div class="back-links">' .
 			$this->msg(
@@ -120,14 +120,14 @@ class ViewSystemGifts extends SpecialPage {
 					{$icon}
 					<a href=\"" .
 						htmlspecialchars( $view_system_gift_link->getFullURL( 'gift_id=' . $gift['id'] ) ) .
-						"\">{$gift['gift_name']}</a>";
+						'">' . htmlspecialchars( $gift['gift_name'], ENT_QUOTES ) . '</a>';
 
 				if ( $gift['status'] == 1 ) {
 					if ( $user_name == $currentUser->getName() ) {
 						$rel->clearUserGiftStatus( $gift['id'] );
 					}
 					$output .= '<span class="ga-new">' .
-						$this->msg( 'ga-new' )->plain() . '</span>';
+						$this->msg( 'ga-new' )->escaped() . '</span>';
 				}
 
 				$output .= '<div class="visualClear"></div>
@@ -153,13 +153,13 @@ class ViewSystemGifts extends SpecialPage {
 			if ( $page > 1 ) {
 				$output .= $linkRenderer->makeLink(
 					$page_link,
-					$this->msg( 'last' )->plain(),
+					$this->msg( 'last' )->text(),
 					[],
 					[
 						'user' => $user_name,
 						'page' => ( $page - 1 )
 					]
-				) . $this->msg( 'word-separator' )->plain();
+				) . $this->msg( 'word-separator' )->escaped();
 			}
 
 			if ( ( $total % $per_page ) != 0 ) {
@@ -184,15 +184,15 @@ class ViewSystemGifts extends SpecialPage {
 							'user' => $user_name,
 							'page' => $i
 						]
-					) . $this->msg( 'word-separator' )->plain();
+					) . $this->msg( 'word-separator' )->escaped();
 				}
 			}
 
 			if ( ( $total - ( $per_page * $page ) ) > 0 ) {
-				$output .= $this->msg( 'word-separator' )->plain() .
+				$output .= $this->msg( 'word-separator' )->escaped() .
 					$linkRenderer->makeLink(
 						$page_link,
-						$this->msg( 'next' )->plain(),
+						$this->msg( 'next' )->text(),
 						[],
 						[
 							'user' => $user_name,

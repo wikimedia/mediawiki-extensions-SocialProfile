@@ -68,7 +68,7 @@ class GiftManager extends SpecialPage {
 				);
 				$out->addHTML(
 					'<span class="view-status">' .
-					htmlspecialchars( $this->msg( 'giftmanager-giftcreated' )->plain() ) .
+					$this->msg( 'giftmanager-giftcreated' )->escaped() .
 					'</span><br /><br />'
 				);
 			} else {
@@ -81,7 +81,7 @@ class GiftManager extends SpecialPage {
 				);
 				$out->addHTML(
 					'<span class="view-status">' .
-					htmlspecialchars( $this->msg( 'giftmanager-giftsaved' )->plain() ) .
+					$this->msg( 'giftmanager-giftsaved' )->escaped() .
 					'</span><br /><br />'
 				);
 			}
@@ -98,7 +98,7 @@ class GiftManager extends SpecialPage {
 					$out->addHTML(
 						'<div><b><a href="' .
 						htmlspecialchars( $this->getPageTitle()->getFullURL( 'method=edit' ) ) .
-						'">' . htmlspecialchars( $this->msg( 'giftmanager-addgift' )->plain() ) .
+						'">' . $this->msg( 'giftmanager-addgift' )->escaped() .
 						'</a></b></div>'
 					);
 				}
@@ -207,7 +207,7 @@ class GiftManager extends SpecialPage {
 					$deleteLink = '<a href="' .
 						htmlspecialchars( SpecialPage::getTitleFor( 'RemoveMasterGift' )->getFullURL( "gift_id={$gift['id']}" ) ) .
 						'" style="font-size:10px; color:red;">' .
-						htmlspecialchars( $this->msg( 'delete' )->plain() ) . '</a>';
+						$this->msg( 'delete' )->escaped() . '</a>';
 				}
 
 				$output .= '<div class="Item">
@@ -227,7 +227,7 @@ class GiftManager extends SpecialPage {
 		}
 
 		$form = '<div><b><a href="' . htmlspecialchars( $this->getPageTitle()->getFullURL() ) .
-			'">' . htmlspecialchars( $this->msg( 'giftmanager-view' )->plain() ) . '</a></b></div>';
+			'">' . $this->msg( 'giftmanager-view' )->escaped() . '</a></b></div>';
 
 		if ( $gift_id ) {
 			$gift = Gifts::getGift( $gift_id );
@@ -245,12 +245,12 @@ class GiftManager extends SpecialPage {
 		$form .= '<form action="" method="post" enctype="multipart/form-data" name="gift">';
 		$form .= '<table border="0" cellpadding="5" cellspacing="0" width="500">';
 		$form .= '<tr>
-		<td width="200" class="view-form">' . htmlspecialchars( $this->msg( 'g-gift-name' )->plain() ) . '</td>
+		<td width="200" class="view-form">' . $this->msg( 'g-gift-name' )->escaped() . '</td>
 		<td width="695"><input type="text" size="45" class="createbox" name="gift_name" value="' .
 			( isset( $gift['gift_name'] ) ? htmlspecialchars( $gift['gift_name'] ) : '' ) . '"/></td>
 		</tr>
 		<tr>
-		<td width="200" class="view-form" valign="top">' . htmlspecialchars( $this->msg( 'giftmanager-description' )->plain() ) . '</td>
+		<td width="200" class="view-form" valign="top">' . $this->msg( 'giftmanager-description' )->escaped() . '</td>
 		<td width="695"><textarea class="createbox" name="gift_description" rows="2" cols="30">' .
 			( isset( $gift['gift_description'] ) ? htmlspecialchars( $gift['gift_description'] ) : '' ) . '</textarea></td>
 		</tr>';
@@ -278,14 +278,14 @@ class GiftManager extends SpecialPage {
 				$privateSelected = ' selected="selected"';
 			}
 			$form .= '<tr>
-				<td class="view-form">' . htmlspecialchars( $this->msg( 'giftmanager-access' )->plain() ) . '</td>
+				<td class="view-form">' . $this->msg( 'giftmanager-access' )->escaped() . '</td>
 				<td>
 				<select name="access">
 					<option value="0"' . $publicSelected . '>' .
-						htmlspecialchars( $this->msg( 'giftmanager-public' )->plain() ) .
+						$this->msg( 'giftmanager-public' )->escaped() .
 					'</option>
 					<option value="1"' . $privateSelected . '>' .
-						htmlspecialchars( $this->msg( 'giftmanager-private' )->plain() ) .
+						$this->msg( 'giftmanager-private' )->escaped() .
 					'</option>
 				</select>
 				</td>
@@ -298,27 +298,27 @@ class GiftManager extends SpecialPage {
 			$icon = $userGiftIcon->getIconHTML();
 
 			$form .= '<tr>
-			<td width="200" class="view-form" valign="top">' . htmlspecialchars( $this->msg( 'giftmanager-giftimage' )->plain() ) . '</td>
+			<td width="200" class="view-form" valign="top">' . $this->msg( 'giftmanager-giftimage' )->escaped() . '</td>
 			<td width="695">' . $icon .
 			'<p>
 			<a href="' . htmlspecialchars( $gml->getFullURL( 'gift_id=' . $gift_id ) ) . '">' .
-				htmlspecialchars( $this->msg( 'giftmanager-image' )->plain() ) . '</a>
+				$this->msg( 'giftmanager-image' )->escaped() . '</a>
 			</td>
 			</tr>';
 		}
 
 		if ( isset( $gift['gift_id'] ) ) {
-			$button = $this->msg( 'edit' )->plain();
+			$button = $this->msg( 'edit' )->escaped();
 		} else {
-			$button = $this->msg( 'g-create-gift' )->plain();
+			$button = $this->msg( 'g-create-gift' )->escaped();
 		}
 
 		$form .= '<tr>
 			<td colspan="2">
-				<input type="hidden" name="id" value="' . ( $gift['gift_id'] ?? '' ) . '" />
+				<input type="hidden" name="id" value="' . ( isset( $gift['gift_id'] ) && $gift['gift_id'] ? (int)$gift['gift_id'] : '' ) . '" />
 				<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $user->getEditToken(), ENT_QUOTES ) . '" />
-				<input type="button" class="createbox" value="' . htmlspecialchars( $button ) . '" size="20" onclick="document.gift.submit()" />
-				<input type="button" class="createbox" value="' . htmlspecialchars( $this->msg( 'cancel' )->plain() ) . '" size="20" onclick="history.go(-1)" />
+				<input type="button" class="createbox" value="' . $button . '" size="20" onclick="document.gift.submit()" />
+				<input type="button" class="createbox" value="' . $this->msg( 'cancel' )->escaped() . '" size="20" onclick="history.go(-1)" />
 			</td>
 		</tr>
 		</table>
