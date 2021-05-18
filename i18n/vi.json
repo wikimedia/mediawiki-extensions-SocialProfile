@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dinhxuanduyet"
+			"Dinhxuanduyet",
+			"SongNguKaze"
 		]
 	},
-	"socialprofile-uploads-disabled": "Tính năng tải lên hình đại diện bị vô hiệu"
+	"socialprofile-desc": "Cung cấp một bộ các công cụ xã hội cho nền tảng MediaWiki",
+	"socialprofile-uploads-disabled": "Tính năng tải lên hình đại diện bị vô hiệu",
+	"apihelp-smpuserprivacy-description": "Mô-đun API để đặt khả năng hiển thị quyền riêng tư của một trường hồ sơ",
+	"apihelp-smpuserprivacy-summary": "Mô-đun API để đặt khả năng hiển thị quyền riêng tư của một trường hồ sơ"
 }
