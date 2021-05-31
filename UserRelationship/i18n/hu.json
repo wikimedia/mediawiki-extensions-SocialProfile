@@ -3,7 +3,8 @@
 		"authors": [
 			"Bdamokos",
 			"Dani",
-			"Glanthor Reviol"
+			"Glanthor Reviol",
+			"Tacsipacsi"
 		]
 	},
 	"viewrelationships": "Kapcsolat megtekintése",
@@ -45,8 +46,8 @@
 	"ur-add-button-friend": "Hozzáadás barátként",
 	"ur-add-sent-title-foe": "Elküldtük az ellenségnek jelölésedet $1 részére!",
 	"ur-add-sent-title-friend": "Elküldtük a barátkérődet $1 részére!",
-	"ur-add-sent-message-foe": "Értesítettük $1 felhasználót, hogy ellenségének jelölted.\nHa $1 megerősíti a jelölést, értesítünk téged e-mailben.",
-	"ur-add-sent-message-friend": "Értesítettük $1 felhasználót, hogy barátodnak jelölted.\nHa $1 megerősíti a jelölést, értesítünk téged e-mailben.",
+	"ur-add-sent-message-foe": "Értesítettük $1 felhasználót, hogy ellenségének jelölted.\nHa $1 megerősíti a jelölést, értesítünk téged.",
+	"ur-add-sent-message-friend": "Értesítettük $1 felhasználót, hogy barátodnak jelölted.\nHa $1 megerősíti a jelölést, értesítünk téged.",
 	"ur-add-error-message-no-user": "A felhasználó, akit hozzá akartál adni, nem létezik.",
 	"ur-add-error-message-blocked": "Jelenleg blokkolva vagy, így nem vehetsz fel barátokat vagy ellenségeket.",
 	"ur-add-error-message-yourself": "Nem lehetsz saját magad ellensége vagy barátja.",
@@ -70,15 +71,15 @@
 	"ur-title-foe": "$1 ellenségeinek listája",
 	"ur-title-friend": "$1 barátainak listája",
 	"friend_request_subject": "$1 barátjának jelölt a(z) {{SITENAME}} wikin!",
-	"friend_request_body": "Szia, $1!\n\n$2 felvett barátjának a(z) {{SITENAME}} wikin. Szeretnénk biztosan tudni, hogy tényleg barátok vagytok.\n\nKattints a következő hivatkozásra a barátság megerősítéséhez:\n$3\n\nKöszönjük\n\n---\nSzeretnéd, ha nem zaklatnánk több e-maillel?\n\nKattints a következő hivatkozásra: $4\nés tiltsd le az e-mailes értesítéseket a beállításaidban.",
+	"friend_request_body": "Szia, $1!\n\n$2 felvett barátjának a(z) {{SITENAME}} wikin. Szeretnénk biztosan tudni, hogy tényleg barátok vagytok.\n\nKattints a következő hivatkozásra a barátság megerősítéséhez:\n$3\n\nKöszönettel:\na(z) {{SITENAME}} csapata\n\n---\n\nSzeretnéd, ha nem zaklatnánk több e-maillel?\n\nKattints a következő hivatkozásra: $4\nés tiltsd le az e-mailes értesítéseket a beállításaidban.",
 	"foe_request_subject": "Háború! $1 ellenségnek jelölt a(z) {{SITENAME}} wikin!",
-	"foe_request_body": "Szia, $1!\n\n$2 felvett az ellenségei közé a(z) {{SITENAME}} wikin. Szeretnénk biztosan tudni, hogy tényleg halálos ellenségek vagytok, vagy legalább valami nézeteltérésetek van.\n\nKattints a következő hivatkozásra az ellenszenv megerősítéséhez:\n$3\n\nKöszönjük\n\n---\nSzeretnéd, ha nem zaklatnánk több e-maillel?\n\nKattints a következő hivatkozásra: $4\nés tiltsd le az e-mailes értesítéseket a beállításaidban.",
+	"foe_request_body": "Szia, $1!\n\n$2 felvett az ellenségei közé a(z) {{SITENAME}} wikin. Szeretnénk biztosan tudni, hogy tényleg halálos ellenségek vagytok, vagy legalább valami nézeteltérésetek van.\n\nKattints a következő hivatkozásra az ellenszenv megerősítéséhez:\n$3\n\nKöszönettel:\na(z) {{SITENAME}} csapata\n\n---\n\nSzeretnéd, ha nem zaklatnánk több e-maillel?\n\nKattints a következő hivatkozásra: $4\nés tiltsd le az e-mailes értesítéseket a beállításaidban.",
 	"friend_accept_subject": "$1 elfogadta a barátkérődet a(z) {{SITENAME}} wikin!",
-	"friend_accept_body": "Szia, $1!\n\n$2 elfogadta a barátnak jelölésedet a(z) {{SITENAME}} wikin!\n\n$2 lapját itt tekintheted meg: $3\n\nKöszönjük\n\n---\nSzeretnéd, ha nem zaklatnánk több e-maillel?\n\nKattints a következő hivatkozásra: $4\nés tiltsd le az e-mailes értesítéseket a beállításaidban.",
+	"friend_accept_body": "Szia, $1!\n\n$2 elfogadta a barátnak jelölésedet a(z) {{SITENAME}} wikin!\n\n$2 lapját itt tekintheted meg: $3\n\nKöszönettel:\na(z) {{SITENAME}} csapata\n\n---\n\nSzeretnéd, ha nem zaklatnánk több e-maillel?\n\nKattints a következő hivatkozásra: $4\nés tiltsd le az e-mailes értesítéseket a beállításaidban.",
 	"foe_accept_subject": "$1 elfogadta, hogy ellensége vagy a(z) {{SITENAME}} wikin!",
-	"foe_accept_body": "Szia, $1!\n\n$2 elfogadta az ellenségnek jelölésedet a(z) {{SITENAME}} wikin!\n\n$2 lapját itt tekintheted meg: $3\n\nKöszönjük\n\n---\nSzeretnéd, ha nem zaklatnánk több e-maillel?\n\nKattints a következő hivatkozásra: $4\nés tiltsd le az e-mailes értesítéseket a beállításaidban.",
+	"foe_accept_body": "Szia, $1!\n\n$2 elfogadta az ellenségnek jelölésedet a(z) {{SITENAME}} wikin!\n\n$2 lapját itt tekintheted meg: $3\n\nKöszönettel:\na(z) {{SITENAME}} csapata\n\n---\n\nSzeretnéd, ha nem zaklatnánk több e-maillel?\n\nKattints a következő hivatkozásra: $4\nés tiltsd le az e-mailes értesítéseket a beállításaidban.",
 	"friend_removed_subject": "Jaj, ne! $1 eltávolított a barátjai közül a(z) {{SITENAME}} wikin!",
-	"friend_removed_body": "Szia, $1!\n\n$2 eltávolított a barátai közül a(z) {{SITENAME}} wikin!\n\nKöszönjük\n\n---\nSzeretnéd, ha nem zaklatnánk több e-maillel?\n\nKattints a következő hivatkozásra: $4\nés tiltsd le az e-mailes értesítéseket a beállításaidban.",
+	"friend_removed_body": "Szia, $1!\n\n$2 eltávolított a barátai közül a(z) {{SITENAME}} wikin!\n\nKöszönettel:\na(z) {{SITENAME}} csapata\n\n---\n\nSzeretnéd, ha nem zaklatnánk több e-maillel?\n\nKattints a következő hivatkozásra: $4\nés tiltsd le az e-mailes értesítéseket a beállításaidban.",
 	"foe_removed_subject": "Hurrá! $1 eltávolított az ellenségei közül a(z) {{SITENAME}} wikin!",
-	"foe_removed_body": "Szia, $1!\n\n$2 eltávolított az ellenségei közül a(z) {{SITENAME}} wikin!\n\nKöszönjük\n\n---\nSzeretnéd, ha nem zaklatnánk több e-maillel?\n\nKattints a következő hivatkozásra: $4\nés tiltsd le az e-mailes értesítéseket a beállításaidban."
+	"foe_removed_body": "Szia, $1!\n\n$2 eltávolított az ellenségei közül a(z) {{SITENAME}} wikin!\n\nLehet, hogy úton vagytok a barátokká válás felé?\n\nKöszönettel:\na(z) {{SITENAME}} csapata\n\n---\n\nSzeretnéd, ha nem zaklatnánk több e-maillel?\n\nKattints a következő hivatkozásra: $4\nés tiltsd le az e-mailes értesítéseket a beállításaidban."
 }
