@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * Special page for creating and editing user-to-user gifts.
  *
@@ -143,9 +146,11 @@ class GiftManager extends SpecialPage {
 			return false;
 		}
 
+		$services = MediaWikiServices::getInstance();
+
 		if (
 			$user->isAllowed( 'giftadmin' ) ||
-			in_array( 'giftadmin', $user->getGroups() )
+			in_array( 'giftadmin', $services->getUserGroupManager()->getUserGroups( $user ) )
 		) {
 			return true;
 		}
@@ -169,10 +174,12 @@ class GiftManager extends SpecialPage {
 			return false;
 		}
 
+		$services = MediaWikiServices::getInstance();
 		$createdCount = Gifts::getCustomCreatedGiftCount( $user );
+
 		if (
 			$user->isAllowed( 'giftadmin' ) ||
-			in_array( 'giftadmin', $user->getGroups() ) ||
+			in_array( 'giftadmin', $services->getUserGroupManager()->getUserGroups( $user ) ) ||
 			( $wgMaxCustomUserGiftCount > 0 && $createdCount < $wgMaxCustomUserGiftCount )
 		) {
 			return true;
@@ -226,15 +233,18 @@ class GiftManager extends SpecialPage {
 			return $this->displayGiftList();
 		}
 
+		$services = MediaWikiServices::getInstance();
+
 		$form = '<div><b><a href="' . htmlspecialchars( $this->getPageTitle()->getFullURL() ) .
 			'">' . $this->msg( 'giftmanager-view' )->escaped() . '</a></b></div>';
 
 		if ( $gift_id ) {
 			$gift = Gifts::getGift( $gift_id );
+
 			if (
 				$user->getActorId() != $gift['creator_actor'] &&
 				(
-					!in_array( 'giftadmin', $user->getGroups() ) &&
+					!in_array( 'giftadmin', $services->getUserGroupManager()->getUserGroups( $user ) ) &&
 					!$user->isAllowed( 'delete' )
 				)
 			) {
