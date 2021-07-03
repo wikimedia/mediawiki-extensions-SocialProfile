@@ -12,7 +12,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
  * define $wgUserLevels and require_once() this file in your wiki's
  * LocalSettings.php file.
  */
-$wgHooks['NewRevisionFromEditComplete'][] = 'incEditCount';
+$wgHooks['RevisionFromEditComplete'][] = 'incEditCount';
 $wgHooks['ArticleDelete'][] = 'removeDeletedEdits';
 $wgHooks['ArticleUndelete'][] = 'restoreDeletedEdits';
 
@@ -21,12 +21,12 @@ $wgHooks['ArticleUndelete'][] = 'restoreDeletedEdits';
  * listed in the $wgNamespacesForEditPoints array.
  *
  * @param WikiPage $wikiPage
- * @param Revision $revision
- * @param int $baseRevId
- * @param User $user
- * @return bool true
+ * @param MediaWiki\Revision\RevisionRecord $revision
+ * @param int $baseRevId Revision ID if the edit restores or repeats an
+ *   earlier revision (such as a rollback or a null revision), otherwise bool false
+ * @param MediaWiki\User\UserIdentity $user The user who performed the edit in question
  */
-function incEditCount( WikiPage $wikiPage, Revision $revision, $baseRevId, User $user ) {
+function incEditCount( WikiPage $wikiPage, $revision, $baseRevId, $user ) {
 	global $wgNamespacesForEditPoints;
 
 	// only keep tally for allowable namespaces
@@ -34,11 +34,17 @@ function incEditCount( WikiPage $wikiPage, Revision $revision, $baseRevId, User 
 		!is_array( $wgNamespacesForEditPoints ) ||
 		in_array( $wikiPage->getTitle()->getNamespace(), $wgNamespacesForEditPoints )
 	) {
-		$stats = new UserStatsTrack( $user->getActorId() );
+		if ( method_exists( $user, 'getActorId' ) ) {
+			// MediaWiki 1.35
+			$actorId = $user->getActorId();
+		} else {
+			// MediaWiki 1.36+
+			$userObj = User::newFromName( $user->getName() );
+			$actorId = $userObj->getActorId();
+		}
+		$stats = new UserStatsTrack( $actorId );
 		$stats->incStatField( 'edit' );
 	}
-
-	return true;
 }
 
 /**
