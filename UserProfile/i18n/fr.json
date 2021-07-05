@@ -177,7 +177,7 @@
 	"user-profile-create-threshold-friend-count": "{{PLURAL:$1|un ami|$1 amis}}",
 	"user-profile-create-threshold-foe-count": "{{PLURAL:$1|un ennemi|$1 ennemis}}",
 	"user-profile-create-threshold-weekly-wins": "{{PLURAL:$1|une victoire hebdomadaire|$1 victoires hebdomadaires}}",
-	"user-profile-create-threshold-monthly-wins": "{{PLURAL:$1|une victoire mensuelle|$1 victoires mentuelles}}",
+	"user-profile-create-threshold-monthly-wins": "{{PLURAL:$1|une victoire mensuelle|$1 victoires mensuelles}}",
 	"user-profile-create-threshold-poll-votes": "{{PLURAL:$1|un vote aux élections|$1 votes aux élections}}",
 	"user-profile-create-threshold-picture-game-votes": "{{PLURAL:$1|un vote de jeu d’images|$1 votes de jeu d’images}}",
 	"user-profile-create-threshold-quiz-created": "{{PLURAL:$1|un quiz créé|$1 quiz créés}}",
