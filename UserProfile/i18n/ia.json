@@ -225,5 +225,9 @@
 	"apihelp-socialprofile-userprofileprivacy-param-field_key": "Clave del campo de destination, como up_movies pro le campo \"Films\"",
 	"apihelp-socialprofile-userprofileprivacy-param-privacy": "Nove valor de confidentialitate (public, hidden, friends, foaf)",
 	"apihelp-socialprofile-userprofileprivacy-param-tuid": "ID del usator de destination",
+	"apihelp-smpuserprofiletype-description": "Obtener le typo de pagina de usator de un usator, o definir tu proprie typo de pagina de usator",
+	"apihelp-smpuserprofiletype-summary": "Obtener le typo de pagina de usator de un usator, o definir tu proprie typo de pagina de usator",
+	"apihelp-smpuserprofiletype-param-do": "Action a exequer (get/obtener o set/definir)",
+	"apihelp-smpuserprofiletype-param-user": "Nomine de usator (solmente relevante quando <kbd>do</kbd> es <kbd>get</kbd> perque iste modulo non pote esser usate pro definir le typos de pagina de usator de altere usatores, solmente le tue)",
 	"random-users-avatars-title": "Cognosce le communitate"
 }

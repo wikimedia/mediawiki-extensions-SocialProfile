@@ -100,7 +100,7 @@
 	"echo-show-social-rel-add-link": "(Requête ami/ennemi)",
 	"notification-social-rel-add-friend-message": "$1 veut être votre ami.<br /><br />''$2''",
 	"notification-social-rel-add-foe-message": "$1 veut être votre ennemi.<br /><br />''$2''",
-	"notification-social-rel-add-friend-no-message": "$1 désire être votre amis.",
+	"notification-social-rel-add-friend-no-message": "$1 veut être votre ami.",
 	"notification-social-rel-add-foe-no-message": "$1 veut être votre ennemi.",
 	"notification-social-rel-accept-friend": "Vous devenez ami avec $1.",
 	"notification-social-rel-accept-foe": "Vous devenez ennemi avec $1.",
