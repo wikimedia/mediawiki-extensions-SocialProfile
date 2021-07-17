@@ -13,7 +13,6 @@
 		"no-implicit-globals": "off",
 		"no-underscore-dangle": "off",
 		"no-useless-concat": "off",
-		"one-var": "off",
 		"valid-jsdoc": "off",
 		"vars-on-top": "off",
 		"no-jquery/no-animate-toggle": "off",
