@@ -116,7 +116,7 @@ class Gifts {
 	}
 
 	/**
-	 * Get the the total amount of gifts that have never been given out (?!).
+	 * Get the total amount of gifts that have never been given out (?!).
 	 *
 	 * @todo FIXME: I don't understand this method at all. It's used by GiftManager
 	 * special page for pagination, but it makes no sense because $gift_count is
