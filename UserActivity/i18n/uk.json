@@ -1,12 +1,27 @@
 {
 	"@metadata": {
 		"authors": [
+			"DDPAT",
 			"Prima klasy4na",
 			"Тест"
 		]
 	},
+	"useractivity": "Активність друзів",
+	"useractivity-desc": "Показує соціальну активність користувачів",
+	"useractivity-award": "$1 отримав нагороду",
 	"useractivity-all": "Переглянути все",
+	"useractivity-edit": "$1 {{PLURAL:$4|редагував сторінку|редагував такі сторінки:}} $3",
+	"useractivity-foe": "$1 {{PLURAL:$2|зараз вороги з|тепер вороги з}} $3",
+	"useractivity-filter": "Фільтр",
+	"useractivity-friend": "$1 {{PLURAL:$2|зараз дружить з|тепер є друзями з}} $3",
+	"useractivity-gift": "$1 отримав подарунок від $2",
 	"useractivity-group-edit": "$1 {{PLURAL:$1|редагування|редагування|редагувань}}",
 	"useractivity-group-comment": "{{PLURAL:$1|один коментар|$1 коментарі|$1 коментарів}}",
-	"useractivity-user_message": "$1 {{GENDER:$6|відправив|відправила}} {{PLURAL:$4|повідомлення|повідомлення|повідомлень}} $3"
+	"useractivity-group-user_message": "{{PLURAL:$1|одне повідомлення|$1 повідомлень}}",
+	"useractivity-group-friend": "{{PLURAL:$1|один друг|$1 друзів}}",
+	"useractivity-network-thought": "<b><a href=\"$4\">$2</a></b> думає про мережу $3",
+	"useractivity-siteactivity": "Активність на сайті",
+	"useractivity-title": "Активність друзів",
+	"useractivity-user_message": "$1 {{GENDER:$6|відправив|відправила}} {{PLURAL:$4|повідомлення|повідомлення|повідомлень}} $3",
+	"useractivity-comment": "$1 {{PLURAL:$4|прокоментував на сторінці|коментував такі сторінки:}} $3"
 }
