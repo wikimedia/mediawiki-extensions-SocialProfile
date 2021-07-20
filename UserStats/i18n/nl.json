@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"McDutchie",
 			"Purodha",
 			"SPQRobin",
 			"Siebrand",
@@ -53,7 +54,7 @@
 	"right-generatetopusersreport": "Topgebruikersrapportages aanmaken",
 	"level-advanced-to": "is gepromoveerd tot niveau tot niveau <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "U bent nu \"$1\" op {{SITENAME}}",
-	"level-advance-body": "Hallo $1.\n\nU bent nu \"$2\" op {{SITENAME}}\n\nVan harte gefeliciteerd.\n\nHet team van {{SITENAME}}\n\n---\nWilt u niet langer e-mails van ons ontvangen?\n\nKlik $3\nen wijzig uw instellingen om e-mailberichten uit te schakelen.\",",
+	"level-advance-body": "Hallo $1.\n\nU bent nu \"$2\" op {{SITENAME}}!\n\nVan harte gefeliciteerd,\n\nHet team van {{SITENAME}}\n\n---\nWilt u geen e-mails meer van ons ontvangen?\n\nKlik op $3\nen wijzig uw instellingen om e-mailberichten uit te schakelen.",
 	"updateeditcounts": "Bewerkingsteller bijwerken",
 	"generatetopusersreport": "Topgebruikersrapportage aanmaken",
 	"user-stats-weekly-winners": "Wekelijkse {{PLURAL:$1|winnaar|winnaars}}",

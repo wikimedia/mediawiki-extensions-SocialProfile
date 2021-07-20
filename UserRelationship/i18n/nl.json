@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"McDutchie",
 			"SPQRobin",
 			"Siebrand",
 			"Tvdm"
@@ -45,8 +46,8 @@
 	"ur-add-button-friend": "Als vriend toevoegen",
 	"ur-add-sent-title-foe": "Uw tegenstandersverzoek is verstuurd aan $1.",
 	"ur-add-sent-title-friend": "Uw vriendschapsverzoek is verstuurd aan $1.",
-	"ur-add-sent-message-foe": "Uw tegenstandersverzoek is ter bevestiging verstuurd aan $1.\nAls $1 uw verzoek bevestigt, ontvangt u daar een e-mail over.",
-	"ur-add-sent-message-friend": "Uw vriendschapsverzoek is ter bevestiging verstuurd aan $1.\nAls $1 uw verzoek bevestigt, ontvangt u daar een e-mail over.",
+	"ur-add-sent-message-foe": "Uw tegenstandersverzoek is ter bevestiging verstuurd aan $1.\nAls $1 uw verzoek bevestigt, krijgt u daar bericht van.",
+	"ur-add-sent-message-friend": "Uw vriendschapsverzoek is ter bevestiging verstuurd aan $1.\nAls $1 uw verzoek bevestigt, krijgt u daar bericht van.",
 	"ur-add-error-message-no-user": "De gebruiker die u probeert toe te voegen bestaat niet.",
 	"ur-add-error-message-blocked": "U bent geblokkeerd en kunt geen vrienden of tegenstanders toevoegen.",
 	"ur-add-error-message-yourself": "U kunt uzelf niet als vriend of tegenstander toevoegen.",
@@ -71,14 +72,14 @@
 	"ur-title-friend": "Vriendenlijst van $1",
 	"friend_request_subject": "$1 heeft u als vriend toegevoegd op {{SITENAME}}.",
 	"friend_request_body": "Hallo $1.\n\n$2 heeft u als vriend toegevoegd op {{SITENAME}}. We willen graag bevestiging dat u echt bevriend bent.\n\nKlik op de onderstaande verwijzing om uw vriendschap te bevestigen:\n$3\n\nBedankt.\n---\n\nWilt u niet langer e-mails van ons ontvangen?\n\nKlik $4\nen wijzig uw instellingen om e-mailberichten uit te schakelen.",
-	"foe_request_subject": "$1 heeft u toegevoegd als tegenstander op {{SITENAME}}!",
+	"foe_request_subject": "Oorlogsverklaring! $1 heeft u toegevoegd als tegenstander op {{SITENAME}}!",
 	"foe_request_body": "Hallo $1.\n\n$2 heeft u als tegenstander toegevoegd op {{SITENAME}}. We willen graag bevestiging dat u echt tegenstanders bent of in ieder geval gebrouilleerd bent.\n\nKlik op de onderstaande verwijzing om uw animositeit te bevestigen:\n$3\n\nBedankt.\n---\n\nWilt u niet langer e-mails van ons ontvangen?\n\nKlik $4\nen wijzig uw instellingen om e-mailberichten uit te schakelen.",
 	"friend_accept_subject": "$1 heeft uw verzoek om vrienden te worden op {{SITENAME}} aanvaard.",
-	"friend_accept_body": "Hallo $1.\n\n$2 heeft u als vriend geaccepteerd op {{SITENAME}}.\n\nU kunt $2's pagina bekijken op $3\n\nBedankt.\n---\n\nWilt u niet langer e-mails van ons ontvangen?\n\nKlik $4\nen wijzig uw instellingen om e-mailberichten uit te schakelen.",
+	"friend_accept_body": "Hallo $1.\n\n$2 heeft u als vriend geaccepteerd op {{SITENAME}}!\n\nBekijk de pagina van $2 op $3\n\nBedankt,\n\n\nHet team van {{SITENAME}}\n\n---\n\nWilt u geen e-mails meer van ons ontvangen?\n\nKlik op $4\nen wijzig uw instellingen om e-mailberichten uit te schakelen.",
 	"foe_accept_subject": "$1 heeft u als tegenstander aanvaard op {{SITENAME}}.",
-	"foe_accept_body": "Hallo $1.\n\n$2 heeft u als tegenstander bevestigd op {{SITENAME}}.\n\nU kunt $2's pagina bekijken op $3\n\nBedankt.\n---\n\nWilt u niet langer e-mails van ons ontvangen?\n\nKlik $4\nen wijzig uw instellingen om e-mailberichten uit te schakelen.",
+	"foe_accept_body": "Hallo $1.\n\n$2 heeft u als tegenstander bevestigd op {{SITENAME}}!\n\nBekijk de pagina van $2 op $3\n\nBedankt,\n\n\nHet team van {{SITENAME}}\n\n---\n\nWilt u geen e-mails meer van ons ontvangen?\n\nKlik op $4\nen wijzig uw instellingen om e-mailberichten uit te schakelen.",
 	"friend_removed_subject": "$1 heeft u helaas verwijderd als vriend op {{SITENAME}}!",
-	"friend_removed_body": "Hallo $1.\n\n$2 heeft u als vriend verwijderd op {{SITENAME}}.\n\nBedankt.\n---\n\nWilt u niet langer e-mails van ons ontvangen?\n\nKlik $4\nen wijzig uw instellingen om e-mailberichten uit te schakelen.",
+	"friend_removed_body": "Hallo $1.\n\n$2 heeft u als vriend verwijderd op {{SITENAME}}!\n\nBedankt,\n\n\nHet team van {{SITENAME}}\n\n---\n\nWilt u geen e-mails meer van ons ontvangen?\n\nKlik op $4\nen wijzig uw instellingen om e-mailberichten uit te schakelen.",
 	"foe_removed_subject": "$1 heeft u verwijderd als tegenstander op {{SITENAME}}!",
-	"foe_removed_body": "Hallo $1.\n\n$2 heeft u als tegenstander verwijderd op {{SITENAME}}.\n\nWellicht bent u op weg om vrienden te worden?\n\nBedankt.\n---\n\nWilt u niet langer e-mails van ons ontvangen?\n\nKlik $4\nen wijzig uw instellingen om e-mailberichten uit te schakelen."
+	"foe_removed_body": "Hallo $1.\n\n$2 heeft u als tegenstander verwijderd op {{SITENAME}}!\n\nWellicht bent u op weg om vrienden te worden?\n\nBedankt,\n\n\nHet team van {{SITENAME}}\n\n---\n\nWilt u geen e-mails meer van ons ontvangen?\n\nKlik op $4\nen wijzig uw instellingen om e-mailberichten uit te schakelen."
 }
