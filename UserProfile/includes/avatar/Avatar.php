@@ -74,7 +74,7 @@ class wAvatar {
 	 *
 	 * @return string
 	 */
-	public function getAvatarUrlPath() : string {
+	public function getAvatarUrlPath(): string {
 		global $wgUploadBaseUrl, $wgUploadPath;
 
 		$uploadPath = $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath;
