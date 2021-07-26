@@ -200,13 +200,13 @@ class UserProfileHooks {
 		$oldRevisionHeader = $differenceEngine->getRevisionHeader( $oldRevision, 'complete', 'old' );
 
 		$oldRevUser = $oldRevision->getUser();
-		if ( $oldRevUser instanceof User ) {
+		if ( $oldRevUser ) {
 			$username = $oldRevUser->getName();
 			$uid = $oldRevUser->getId();
 		} else {
-			$username = $oldRevision->getUserText();
-			$uid = $oldRevUser; // sic!
+			return;
 		}
+
 		$avatar = new wAvatar( $uid, 'l' );
 		$avatarElement = $avatar->getAvatarURL( [
 			'alt' => $username,
@@ -262,13 +262,13 @@ class UserProfileHooks {
 			' ' . implode( ' ', $formattedRevisionTools );
 
 		$newRevUser = $newRevision->getUser();
-		if ( $newRevUser instanceof User ) {
+		if ( $newRevUser ) {
 			$username = $newRevUser->getName();
 			$uid = $newRevUser->getId();
 		} else {
-			$username = $newRevision->getUserText();
-			$uid = $newRevUser; // sic!
+			return;
 		}
+
 		$avatar = new wAvatar( $uid, 'l' );
 		$avatarElement = $avatar->getAvatarURL( [
 			'alt' => $username,
