@@ -14,7 +14,6 @@
 		"no-underscore-dangle": "off",
 		"no-useless-concat": "off",
 		"valid-jsdoc": "off",
-		"vars-on-top": "off",
 		"no-jquery/no-animate-toggle": "off",
 		"no-jquery/no-animate": "off",
 		"no-jquery/no-class-state": "off",
