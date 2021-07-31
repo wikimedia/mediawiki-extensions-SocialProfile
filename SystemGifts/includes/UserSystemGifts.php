@@ -119,7 +119,10 @@ class UserSystemGifts {
 		$gift = SystemGifts::getGift( $gift_id );
 		$this->user->load();
 
-		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $this->user->getBoolOption( 'echo-subscriptions-email-social-award' ) : $this->user->getIntOption( 'notifygift', 1 );
+		$userOptionsLookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
+		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ?
+			$userOptionsLookup->getBoolOption( $this->user, 'echo-subscriptions-email-social-award' ) :
+			$userOptionsLookup->getIntOption( $this->user, 'notifygift', 1 );
 		if ( $this->user->isEmailConfirmed() && $wantsEmail ) {
 			$gifts_link = SpecialPage::getTitleFor( 'ViewSystemGifts' );
 			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );

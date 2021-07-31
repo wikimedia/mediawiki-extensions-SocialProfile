@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * UserSystemMessage class
  * Used to send "You have advanced to level [fill in this]" messages
@@ -69,7 +72,10 @@ class UserSystemMessage {
 	public function sendAdvancementNotificationEmail( $userTo, $level ) {
 		$userTo->load();
 
-		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $userTo->getBoolOption( 'echo-subscriptions-email-social-level-up' ) : $userTo->getIntOption( 'notifyhonorifics', 1 );
+		$userOptionsLookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
+		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ?
+			$userOptionsLookup->getBoolOption( $userTo, 'echo-subscriptions-email-social-level-up' ) :
+			$userOptionsLookup->getIntOption( $userTo, 'notifyhonorifics', 1 );
 		if ( $userTo->isEmailConfirmed() && $wantsEmail ) {
 			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
 			$subject = wfMessage( 'level-advance-subject', $level )->text();

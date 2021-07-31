@@ -104,7 +104,10 @@ class UserBoard {
 		$recipient->load();
 
 		// Send email if user's email is confirmed and s/he's opted in to recieving social notifications
-		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $recipient->getBoolOption( 'echo-subscriptions-email-social-rel' ) : $recipient->getIntOption( 'notifymessage', 1 );
+		$userOptionsLookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
+		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ?
+			$userOptionsLookup->getBoolOption( $recipient, 'echo-subscriptions-email-social-rel' ) :
+			$userOptionsLookup->getIntOption( $recipient, 'notifymessage', 1 );
 		if ( $recipient->isEmailConfirmed() && $wantsEmail ) {
 			$board_link = SpecialPage::getTitleFor( 'UserBoard' );
 			$update_profile_link = SpecialPage::getTitleFor( 'UpdateProfile' );

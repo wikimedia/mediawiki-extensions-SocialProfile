@@ -92,7 +92,10 @@ class UserRelationship {
 	public function sendRelationshipRequestEmail( $userTo, $type ) {
 		$userTo->load();
 
-		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $userTo->getBoolOption( 'echo-subscriptions-email-social-rel' ) : $userTo->getIntOption( 'notifyfriendrequest', 1 );
+		$userOptionsLookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
+		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ?
+			$userOptionsLookup->getBoolOption( $userTo, 'echo-subscriptions-email-social-rel' ) :
+			$userOptionsLookup->getIntOption( $userTo, 'notifyfriendrequest', 1 );
 		if ( $userTo->getEmail() && $wantsEmail ) {
 			$requestLink = SpecialPage::getTitleFor( 'ViewRelationshipRequests' );
 			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
@@ -150,7 +153,10 @@ class UserRelationship {
 	public function sendRelationshipAcceptEmail( $user, $type ) {
 		$user->load();
 
-		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-rel' ) : $user->getIntOption( 'notifyfriendrequest', 1 );
+		$userOptionsLookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
+		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ?
+			$userOptionsLookup->getBoolOption( $user, 'echo-subscriptions-email-social-rel' ) :
+			$userOptionsLookup->getIntOption( $user, 'notifyfriendrequest', 1 );
 		if ( $user->getEmail() && $wantsEmail ) {
 			$userFrom = $this->user;
 			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
