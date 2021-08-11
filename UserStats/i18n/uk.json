@@ -54,7 +54,7 @@
 	"action-updatepoints": "оновити кількість редагувань",
 	"right-generatetopusersreport": "Створити звіти про найкращих користувачів",
 	"action-generatetopusersreport": "створити звіти про найкращих користувачів",
-	"level-advanced-to": "перейшов на рівень <span style=\"font-weight:800\">$1</span>",
+	"level-advanced-to": "перейшов на рівень <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "Тепер ви \"$1\" на {{SITENAME}}!",
 	"level-advance-body-html": "Привіт, $1.\n\nТепер ви \"$2\" на {{SITENAME}}!\n\nВітаємо,\n\nКоманда {{SITENAME}}\n\n---\nГей, хочеш припинити отримувати від нас електронні листи?\n\nНатисніть [[Special:UpdateProfile]] і змініть налаштування, щоб вимкнути сповіщення електронною поштою.",
 	"level-advance-body": "Привіт, $1.\n\nТепер ви \"$2\" на {{SITENAME}}!\n\nВітаємо,\n\nКоманда {{SITENAME}}\n\n---\nГей, хочеш припинити отримувати від нас електронні листи?\n\nНатисніть $3 і змініть налаштування, щоб вимкнути сповіщення електронною поштою.",
