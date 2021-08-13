@@ -183,13 +183,13 @@ class UserProfileHooks {
 	 * @param bool $unhide
 	 */
 	public static function onDifferenceEngineOldHeader( $differenceEngine, &$oldHeader, $prevLink, $oldMinor, $diffOnly, $ldel, $unhide ) {
-		global $wgUserProfileAvatarsInDiffs, $wgVersion;
+		global $wgUserProfileAvatarsInDiffs;
 
 		if ( !$wgUserProfileAvatarsInDiffs ) {
 			return;
 		}
 
-		if ( version_compare( $wgVersion, '1.35', '<' ) ) {
+		if ( version_compare( MW_VERSION, '1.35', '<' ) ) {
 			// Need a Revision object
 			$oldRevision = $differenceEngine->mOldRev;
 		} else {
@@ -244,13 +244,13 @@ class UserProfileHooks {
 	 * @param bool $unhide
 	 */
 	public static function onDifferenceEngineNewHeader( $differenceEngine, &$newHeader, $formattedRevisionTools, $nextLink, $rollback, $newMinor, $diffOnly, $rdel, $unhide ) {
-		global $wgUserProfileAvatarsInDiffs, $wgVersion;
+		global $wgUserProfileAvatarsInDiffs;
 
 		if ( !$wgUserProfileAvatarsInDiffs ) {
 			return;
 		}
 
-		if ( version_compare( $wgVersion, '1.35', '<' ) ) {
+		if ( version_compare( MW_VERSION, '1.35', '<' ) ) {
 			// Need a Revision object
 			$newRevision = $differenceEngine->mNewRev;
 		} else {
