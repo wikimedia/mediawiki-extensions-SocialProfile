@@ -8,7 +8,8 @@
 			"Kghbln",
 			"Purodha",
 			"The Evil IP address",
-			"Umherirrender"
+			"Umherirrender",
+			"Zabe"
 		]
 	},
 	"giftmanager": "Geschenke-Verwaltung",
@@ -84,5 +85,6 @@
 	"g-your-profile": "Dein Profil",
 	"gift_received_subject": "[{{SITENAME}}] $1 hat dir das $2-Geschenk gesendet!",
 	"gift_received_body": "Hallo $1,\n\n$2 hat dir eben das $3-Geschenk auf {{SITENAME}} gesendet!\n\nMöchtest du die Notiz von $2 lesen und dein Geschenk sehen? Klicke den folgenden Link:\n\n$4\n\nWir hoffen, es gefällt dir!\n\nDanke,\n\nDas {{SITENAME}}-Team\n\n---\n\nDu möchtest keine E-Mails von uns erhalten?\n\nKlicke $5\nund ändere deine Einstellungen auf deaktivierte E-Mail-Benachrichtigung.",
+	"echo-category-title-social-gift": "Geschenke",
 	"right-giftadmin": "Neue erstellen und bestehende Geschenke bearbeiten"
 }

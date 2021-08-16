@@ -7,7 +7,8 @@
 			"Purodha",
 			"Raimond Spekking",
 			"Tim 'Avatar' Bartel",
-			"Umherirrender"
+			"Umherirrender",
+			"Zabe"
 		]
 	},
 	"messagesenttitle": "Nachrichten verschickt",
@@ -51,5 +52,6 @@
 	"userboard-time-minutes": "{{PLURAL:$1|eine Minute|$1 Minuten}}",
 	"userboard-time-seconds": "{{PLURAL:$1|eine Sekunde|$1 Sekunden}}",
 	"message_received_subject": "$1 hat auf deine {{SITENAME}}-Pinnwand geschrieben",
-	"message_received_body": "Hallo $1,\n\n$2 hat eben auf deine {{SITENAME}}-Pinnwand geschrieben!\n\nKlicke auf den folgenden Link um deine Pinnwand aufzurufen!\n\n$3\n\n---\n\nHm, du willst keine E-Mails mehr von uns bekommen?\n\nKlicke $4\nund ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten."
+	"message_received_body": "Hallo $1,\n\n$2 hat eben auf deine {{SITENAME}}-Pinnwand geschrieben!\n\nKlicke auf den folgenden Link um deine Pinnwand aufzurufen!\n\n$3\n\n---\n\nHm, du willst keine E-Mails mehr von uns bekommen?\n\nKlicke $4\nund ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.",
+	"apihelp-socialprofile-send-message-param-username": "Den Benutzernamen des Empfängers."
 }
