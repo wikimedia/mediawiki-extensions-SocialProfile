@@ -3,7 +3,6 @@
 		"mediawiki/mediawiki-codesniffer": "37.0.0",
 		"mediawiki/mediawiki-phan-config": "0.10.6",
 		"mediawiki/minus-x": "1.1.1",
-		"mediawiki/phan-taint-check-plugin": "^3.2",
 		"php-parallel-lint/php-console-highlighter": "0.5.0",
 		"php-parallel-lint/php-parallel-lint": "1.3.0"
 	},
@@ -17,8 +16,6 @@
 			"minus-x fix .",
 			"phpcbf"
 		],
-		"phan": "phan -d . --long-progress-bar",
-		"seccheck": "seccheck-mwext",
-		"seccheck-fast": "seccheck-fast-mwext"
+		"phan": "phan -d . --long-progress-bar"
 	}
 }
