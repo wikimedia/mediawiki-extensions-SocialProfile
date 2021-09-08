@@ -77,7 +77,6 @@ class RemoveAvatar extends SpecialPage {
 		// If the user isn't logged in, display an error
 		if ( !$user->isRegistered() ) {
 			$this->displayRestrictionError();
-			return;
 		}
 
 		// Show a message if the database is in read-only mode

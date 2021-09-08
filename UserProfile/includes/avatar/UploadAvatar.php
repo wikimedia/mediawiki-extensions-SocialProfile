@@ -160,6 +160,7 @@ class UploadAvatar extends UploadFromFile {
 		$this->createThumbnail( $this->mTempPath, $imageInfo, $wgAvatarKey . '_' . $uid . '_m', 30 );
 		$this->createThumbnail( $this->mTempPath, $imageInfo, $wgAvatarKey . '_' . $uid . '_s', 16 );
 
+		'@phan-var string $wgTmpDirectory';
 		if ( $ext != 'jpg' ) {
 			if ( is_file( $wgTmpDirectory . '/' . $wgAvatarKey . '_' . $uid . '_s.jpg' ) ) {
 				unlink( $wgTmpDirectory . '/' . $wgAvatarKey . '_' . $uid . '_s.jpg' );
