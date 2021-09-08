@@ -124,8 +124,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		// if we don't do this here, the page title ends up being something like
 		// "Other information" and the HTML title ends up being "Tidbits"
 		$out->setPageTitle( $this->msg( 'editprofile' ) );
-		$out->setHTMLTitle( $this->msg( 'pagetitle',
-			$this->msg( 'edit-profiles-title' )->escaped() )->parse() );
+		$out->setHTMLTitle( $this->msg( 'pagetitle', $this->msg( 'edit-profiles-title' ) ) );
 	}
 
 	function createUserInputForm() {
@@ -471,8 +470,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			$custom4 = $s->up_custom_4;
 		}
 
-		$this->getOutput()->setHTMLTitle( $this->msg( 'pagetitle',
-			$this->msg( 'user-profile-tidbits-title' )->escaped() )->parse() );
+		$this->getOutput()->setHTMLTitle( $this->msg( 'pagetitle', $this->msg( 'user-profile-tidbits-title' ) ) );
 		$form = '<h1>' . $this->msg( 'user-profile-tidbits-title' )->escaped() . '</h1>';
 		// $form = UserProfile::getEditProfileNav( $this->msg( 'user-profile-section-custom' )->escaped() );
 		$form = '<div class="profile-info visualClear">

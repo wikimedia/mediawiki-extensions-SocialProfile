@@ -401,7 +401,7 @@ class GiveGift extends SpecialPage {
 				$userGiftIcon = new UserGiftIcon( $gift['id'], 'l' );
 				$icon = $userGiftIcon->getIconHTML( [ 'id' => "gift_image_{$gift['id']}" ] );
 
-				$output .= "<div id=\"give_gift_{$gift['id']}\" class=\"g-give-all\">
+				$output .= '<div id="give_gift_' . htmlspecialchars( $gift['id'] ) . "\" class=\"g-give-all\">
 					{$icon}
 					<div class=\"g-title g-blue\">" . htmlspecialchars( $gift['gift_name'] ) . '</div>';
 				if ( $gift['gift_description'] ) {
