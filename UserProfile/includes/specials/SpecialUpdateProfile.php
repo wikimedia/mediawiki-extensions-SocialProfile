@@ -71,7 +71,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		// Set the page title, robot policies, etc.
 		$this->setHeaders();
-		$out->setHTMLTitle( $this->msg( 'pagetitle', $this->msg( 'edit-profile-title' )->escaped() )->parse() );
+		$out->setHTMLTitle( $this->msg( 'pagetitle', $this->msg( 'edit-profile-title' ) ) );
 
 		/**
 		 * Create thresholds based on user stats
@@ -97,7 +97,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 				}
 			}
 
-			$hasEqualEditThreshold = ( isset( $wgUserProfileThresholds['edit'] ) && $wgUserProfileThresholds['edit'] == $wgAutoConfirmCount ) ? true : false;
+			$hasEqualEditThreshold = isset( $wgUserProfileThresholds['edit'] ) && $wgUserProfileThresholds['edit'] == $wgAutoConfirmCount;
 			$can_create = ( $user->isAllowed( 'createpage' ) && $hasEqualEditThreshold ) ? true : $can_create;
 
 			// Ensure we enforce profile creation exclusively to members who confirmed their email
@@ -106,7 +106,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			}
 
 			// Boo, go away!
-			if ( $can_create == false ) {
+			if ( !$can_create ) {
 				$out->setPageTitle( $this->msg( 'user-profile-create-threshold-title' )->text() );
 				$thresholdMessages = [];
 				foreach ( $thresholdReasons as $requiredAmount => $reason ) {
@@ -792,7 +792,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			__METHOD__
 		);
 
-		$showYOB = $s && $s->up_birthday ? false : true;
+		$showYOB = !$s || !$s->up_birthday;
 
 		// @todo If the checkboxes are in front of the option, this would look more like Special:Preferences
 		$this->getOutput()->setPageTitle( $this->msg( 'preferences' )->escaped() );

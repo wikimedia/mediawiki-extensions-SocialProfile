@@ -63,6 +63,7 @@ class UserHome extends SpecialPage {
 			$edits = 1;
 		}
 		if ( $item_type == 'votes' || $item_type == 'all' ) {
+			// @phan-suppress-next-line PhanPluginRedundantAssignment
 			$votes = 0;
 		}
 		if ( $item_type == 'comments' || $item_type == 'all' ) {
@@ -184,6 +185,7 @@ class UserHome extends SpecialPage {
 
 		$output .= '</div>
 		<div class="visualClear"></div>';
+		// @phan-suppress-next-line SecurityCheck-XSS
 		$out->addHTML( $output );
 	}
 }

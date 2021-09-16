@@ -179,6 +179,7 @@ class UserProfilePage extends Article {
 		}
 
 		$out->addHTML( $this->getPersonalInfo() );
+		// @phan-suppress-next-line SecurityCheck-XSS
 		$out->addHTML( $this->getActivity() );
 		// Hook for BlogPage
 		if ( !Hooks::run( 'UserProfileRightSideAfterActivity', [ $this ] ) ) {
@@ -1287,6 +1288,7 @@ class UserProfilePage extends Article {
 				$avatar = new wAvatar( $user->getId(), 'ml' );
 
 				// Chop down username that gets displayed
+				// @phan-suppress-next-line SecurityCheck-DoubleEscaped T290624
 				$user_name = htmlspecialchars( $language->truncateForVisual( $user->getName(), 9, '..' ) );
 
 				$output .= "<a href=\"" . htmlspecialchars( $user->getUserPage()->getFullURL() ) .
@@ -1419,7 +1421,6 @@ class UserProfilePage extends Article {
 						<div class=\"item\">
 							<a href=\"" . htmlspecialchars( $viewGift->getFullURL( "gift_id={$item['id']}" ) ) . "\" rel=\"nofollow\">
 								{$icon}" .
-								// @phan-suppress-next-line SecurityCheck-DoubleEscaped Not sure but might be a false alarm
 								htmlspecialchars( $item['pagetitle'] ) .
 							'</a>
 						</div>';
@@ -1432,7 +1433,6 @@ class UserProfilePage extends Article {
 								<div class=\"item\">
 									<a href=\"" . htmlspecialchars( $viewGift->getFullURL( "gift_id={$item['id']}" ) ) . "\" rel=\"nofollow\">
 										{$icon}" .
-										// @phan-suppress-next-line SecurityCheck-DoubleEscaped Not sure but might be a false alarm
 										htmlspecialchars( $item['pagetitle'] ) .
 									'</a>
 								</div>';
@@ -1446,7 +1446,6 @@ class UserProfilePage extends Article {
 								<div class=\"user-home-item-gift\">
 									<a href=\"" . htmlspecialchars( $viewSystemGift->getFullURL( "gift_id={$item['id']}" ) ) . "\" rel=\"nofollow\">
 										{$icon}" .
-										// @phan-suppress-next-line SecurityCheck-DoubleEscaped Not sure but might be a false alarm
 										htmlspecialchars( $item['pagetitle'] ) .
 									'</a>
 								</div>';
