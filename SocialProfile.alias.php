@@ -498,16 +498,16 @@ $specialPageAliases['zh-hans'] = [
 /** Traditional Chinese (中文（繁體)) */
 $specialPageAliases['zh-hant'] = [
 	'EditProfile' => [ '編輯簡介' ],
-	'GenerateTopUsersReport' => [ '生成使用者排行榜報告' ],
+	'GenerateTopUsersReport' => [ '產生使用者排行榜報告' ],
 	'PopulateUserProfiles' => [ '填寫使用者資訊' ],
 	'RemoveAvatar' => [ '移除頭像' ],
 	'SendBoardBlast' => [ '發送批量訊息' ],
 	'TopFansByStatistic' => [ '基於統計的粉絲排行榜' ],
 	'TopUsers' => [ '使用者排行榜' ],
-	'TopUsersRecent' => [ '新近使用者排行榜' ],
+	'TopUsersRecent' => [ '新進使用者排行榜' ],
 	'ToggleUserPage' => [ '啟閉使用者頁面' ],
-	'UpdateEditCounts' => [ '更新編輯數' ],
-	'UpdateProfile' => [ '更新個人資料' ],
+	'UpdateEditCounts' => [ '更新編輯次數' ],
+	'UpdateProfile' => [ '更新個人檔案' ],
 	'UploadAvatar' => [ '上傳頭像' ],
-	'UserBoard' => [ '使用者留言版' ],
+	'UserBoard' => [ '使用者留言板' ],
 ];
