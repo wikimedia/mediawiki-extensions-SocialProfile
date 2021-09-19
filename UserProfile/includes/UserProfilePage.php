@@ -536,6 +536,7 @@ class UserProfilePage extends Article {
 				// MediaWiki 1.34+
 				$repoGroup = MediaWikiServices::getInstance()->getRepoGroup();
 			} else {
+				// @phan-suppress-next-line PhanUndeclaredStaticMethod
 				$repoGroup = RepoGroup::singleton();
 			}
 			foreach ( $combined_array as $item ) {
