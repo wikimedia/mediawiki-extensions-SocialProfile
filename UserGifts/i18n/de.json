@@ -9,6 +9,7 @@
 			"Purodha",
 			"The Evil IP address",
 			"Umherirrender",
+			"Umlaut",
 			"Zabe"
 		]
 	},
@@ -75,6 +76,7 @@
 	"g-remove-success-message": "Das Geschenk „$1“ wurde entfernt.",
 	"g-remove-title": "„$1“ entfernen?",
 	"g-send-gift": "Geschenk senden",
+	"g-select-gift": "Bitte wähle ein Geschenk aus.",
 	"g-select-a-friend": "wähle einen Freund aus",
 	"g-sent-title": "Du hast ein Geschenk an $1 gesendet",
 	"g-sent-message": "Du hast die folgenden Geschenke an $1 gesendet.",
