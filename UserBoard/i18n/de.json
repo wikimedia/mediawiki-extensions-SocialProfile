@@ -8,6 +8,7 @@
 			"Raimond Spekking",
 			"Tim 'Avatar' Bartel",
 			"Umherirrender",
+			"Umlaut",
 			"Zabe"
 		]
 	},
@@ -25,6 +26,8 @@
 	"boardsendbutton": "Nachricht senden",
 	"boardnofriends": "Du hast keine Freunde, denen du eine Nachricht senden könntest!",
 	"messagesentsuccess": "Deine Nachricht wurde erfolgreich verschickt.",
+	"boardblast-error-missing-message": "Bitte eine Mitteilung eingeben",
+	"boardblast-error-missing-user": "Bitte wähle mindestens eine Person aus",
 	"userboard": "Pinnwand",
 	"userboard_board-to-board": "Pinnwand-zu-Pinnwand",
 	"userboard_noexist": "Der gesuchte Benutzer existiert nicht.",
@@ -46,6 +49,7 @@
 	"userboard_sendbutton": "senden",
 	"userboard_loggedout": "Du musst [[Special:UserLogin|angemeldet sein]], um Nachrichten an andere Nutzer schicken zu können.",
 	"userboard_showingmessages": "Zeige {{PLURAL:$4|Nachricht $3|Nachrichten $2-$3}} von $1 insgesamt",
+	"userboard-delete-success": "Die Mitteilung wurde gelöscht!",
 	"right-userboard-delete": "Nachrichten anderer vom Board löschen",
 	"userboard-time-days": "{{PLURAL:$1|ein Tag|$1 Tage}}",
 	"userboard-time-hours": "{{PLURAL:$1|eine Stunde|$1 Stunden}}",
