@@ -39,7 +39,12 @@ class SpecialUploadAvatar extends SpecialUpload {
 	protected function loadRequest() {
 		$request = $this->getRequest();
 		parent::loadRequest();
-		$this->mUpload = new UploadAvatar();
+		$this->mSourceType = $request->getVal( 'wpSourceType', 'file' );
+		if ( $this->mSourceType === 'url' ) {
+			$this->mUpload = new UploadAvatarFromUrl();
+		} else {
+			$this->mUpload = new UploadAvatar();
+		}
 		$this->mUpload->initializeFromRequest( $request );
 	}
 
@@ -250,21 +255,55 @@ class SpecialUploadAvatar extends SpecialUpload {
 		// SpecialUpload::loadRequest() and having the hidden title doesn't
 		// hurt either
 		// @see https://phabricator.wikimedia.org/T32953
-		$output .= Html::hidden( 'wpEditToken', $this->getUser()->getEditToken(), [ 'id' => 'wpEditToken' ] ) . "\n";
+		$user = $this->getUser();
+
+		$output .= Html::hidden( 'wpEditToken', $user->getEditToken(), [ 'id' => 'wpEditToken' ] ) . "\n";
 		$output .= Html::hidden( 'title', $this->getPageTitle()->getPrefixedText() ) . "\n";
+
+		$canUploadByUrl = UploadFromUrl::isEnabled() && $user->isAllowed( 'upload_by_url' );
+		$selectedSourceType = strtolower( $this->getRequest()->getText( 'wpSourceType', 'file' ) );
+
+		// Instructions (max file size etc.)
+		$output .= '<p class="profile-update-title">' .
+				$this->msg( 'user-profile-picture-choosepicture' )->escaped() .
+			'</p>
+			<p style="margin-bottom:10px;">' .
+				$this->msg( 'user-profile-picture-picsize' )->escaped() .
+			'</p>';
+
 		$output .= '<table>
-				<tr>
-					<td>
-						<p class="profile-update-title">' .
-							$this->msg( 'user-profile-picture-choosepicture' )->escaped() .
-						'</p>
-						<p style="margin-bottom:10px;">' .
-							$this->msg( 'user-profile-picture-picsize' )->escaped() .
-						'</p>
-						<input tabindex="1" type="file" name="wpUploadFile" id="wpUploadFile" size="36"/>
-					</td>
-				</tr>
-				<tr>' . $source . '</tr>
+		<tr class="mw-htmlform-field-UploadSourceField">
+		<td class="mw-label">
+			<label for="wpUploadFile">' . $this->msg( 'sourcefilename' )->escaped() . '</label>';
+		// Show the radio button only when upload-by-URL is enabled and not by default
+		if ( $canUploadByUrl ) {
+			$output .= '<input name="wpSourceType" type="radio" id="wpSourceTypeFile" value="file"' .
+				( $selectedSourceType == 'file' ? ' checked=""' : '' ) . '>';
+		} else {
+			$output .= Html::hidden( 'wpSourceType', 'file', [ 'id' => 'wpSourceTypeFile' ] );
+		}
+		$output .= '</td>
+		<td class="mw-input">
+			<input tabindex="1" id="wpUploadFile" name="wpUploadFile" size="60" type="file" />
+		</td>
+	</tr>';
+
+		// Upload-by-URL input field
+		if ( $canUploadByUrl ) {
+			$output .= '<tr class="mw-htmlform-field-UploadSourceField">
+		<td class="mw-label">
+			<label for="wpUploadFileURL">' . $this->msg( 'sourceurl' )->escaped() . '</label>
+			<input name="wpSourceType" type="radio" id="wpSourceTypeurl" value="url"' .
+				( $selectedSourceType == 'url' ? ' checked=""' : '' ) . '>
+		</td>
+		<td class="mw-input">
+			<input id="wpUploadFileURL" name="wpUploadFileURL" size="60">
+		</td>
+	</tr>';
+		}
+
+		// Submission button & tying up the loose ends
+		$output .= '<tr>' . $source . '</tr>
 				<tr>
 					<td>
 						<input tabindex="5" type="submit" name="wpUpload" class="site-button" value="' . $ulb . '" />
@@ -286,7 +325,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 	 * - 'm' for medium
 	 * - 'ml' for medium-large
 	 * - 'l' for large
-	 * @return string HTML
+	 * @return string|void HTML (img tag) if the user has a custom avatar, nothing if they don't
 	 */
 	function getAvatar( $size ) {
 		global $wgAvatarKey, $wgUploadDirectory, $wgUploadBaseUrl, $wgUploadPath;
@@ -299,7 +338,10 @@ class SpecialUploadAvatar extends SpecialUpload {
 		);
 		if ( isset( $files[0] ) && $files[0] ) {
 			return "<img src=\"{$uploadPath}/avatars/" .
-				basename( $files[0] ) . '" alt="" border="0" />';
+				// Use a cache buster variable to ensure we show the newly uploaded avatar
+				// should the user click on the "Upload a different avatar" button immediately
+				// after uploading an avatar (w/o the cachebuster variable it'll show the old avatar)
+				basename( $files[0] ) . '?r=' . (int)rand() . '" alt="" border="0" />';
 		}
 	}
 

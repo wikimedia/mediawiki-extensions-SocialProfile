@@ -46,18 +46,18 @@ if ( defined( 'MEDIAWIKI_INSTALL' ) ) {
 
 	$registry = new ExtensionRegistry();
 	$data = $registry->readFromQueue( $subext );
-	// @phan-suppress-next-line PhanUndeclaredVariableAssignOp Obviously not undeclared
 	$wgAutoloadClasses += $data['globals']['wgAutoloadClasses'];
 }
 
 // Classes to be autoloaded
-// @phan-suppress-next-line PhanTypeArraySuspicious
 $wgAutoloadClasses['SpecialEditProfile'] = __DIR__ . '/UserProfile/includes/specials/SpecialEditProfile.php';
 $wgAutoloadClasses['SpecialPopulateUserProfiles'] = __DIR__ . '/UserProfile/includes/specials/SpecialPopulateExistingUsersProfiles.php';
 $wgAutoloadClasses['SpecialToggleUserPage'] = __DIR__ . '/UserProfile/includes/specials/SpecialToggleUserPageType.php';
 $wgAutoloadClasses['SpecialUpdateProfile'] = __DIR__ . '/UserProfile/includes/specials/SpecialUpdateProfile.php';
 $wgAutoloadClasses['SpecialUploadAvatar'] = __DIR__ . '/UserProfile/includes/specials/SpecialUploadAvatar.php';
 $wgAutoloadClasses['UploadAvatar'] = __DIR__ . '/UserProfile/includes/avatar/UploadAvatar.php';
+$wgAutoloadClasses['UploadAvatarFromUrl'] = __DIR__ . '/UserProfile/includes/avatar/UploadAvatarFromUrl.php';
+$wgAutoloadClasses['UploadAvatarTrait'] = __DIR__ . '/UserProfile/includes/avatar/UploadAvatarTrait.php';
 $wgAutoloadClasses['RemoveAvatar'] = __DIR__ . '/UserProfile/includes/specials/SpecialRemoveAvatar.php';
 $wgAutoloadClasses['UserProfile'] = __DIR__ . '/UserProfile/includes/UserProfile.php';
 $wgAutoloadClasses['UserProfileHooks'] = __DIR__ . '/UserProfile/includes/UserProfileHooks.php';
