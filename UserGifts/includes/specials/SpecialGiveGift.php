@@ -277,6 +277,10 @@ class GiveGift extends SpecialPage {
 			<div class="visualClear"></div>
 			<div class="g-add-message">' . $this->msg( 'g-add-message' )->escaped() . '</div>
 			<textarea name="message" id="message" rows="4" cols="50"></textarea>
+			<div class="g-characters-left-message">' . $this->msg(
+				'g-characters-left',
+				'<span class="countdown" value="255">255</span>'
+			)->parse() . '</div>
 			<div class="g-buttons">
 				<input type="hidden" name="gift_id" value="' . $giftId . '" />
 				<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
@@ -407,7 +411,7 @@ class GiveGift extends SpecialPage {
 					'class' => 'g-give-checkbox',
 					'id' => "nojs-gift-{$gift['id']}"
 				] );
-				$output .= Html::label( $this->msg( 'g-give-this-gift' )->escaped(), "nojs-gift-{$gift['id']}" );
+				$output .= Html::label( $this->msg( 'g-give-this-gift' )->text(), "nojs-gift-{$gift['id']}" );
 				$output .= '<div class="visualClear"></div>
 				</div>';
 				if ( $x == count( $gifts ) || $x != 1 && $x % $per_row == 0 ) {
@@ -429,13 +433,13 @@ class GiveGift extends SpecialPage {
 				if ( $page > 1 ) {
 					$output .= $linkRenderer->makeLink(
 						$giveGiftLink,
-						$this->msg( 'g-previous' )->plain(),
+						$this->msg( 'g-previous' )->text(),
 						[],
 						[
 							'user' => $user_name,
 							'page' => ( $page - 1 )
 						]
-					) . htmlspecialchars( $this->msg( 'word-separator' )->plain() );
+					) . $this->msg( 'word-separator' )->escaped();
 				}
 
 				if ( ( $total % $per_page ) != 0 ) {
@@ -456,15 +460,15 @@ class GiveGift extends SpecialPage {
 								'user' => $user_name,
 								'page' => $i
 							]
-						) . htmlspecialchars( $this->msg( 'word-separator' )->plain() );
+						) . $this->msg( 'word-separator' )->escaped();
 					}
 				}
 
 				if ( ( $total - ( $per_page * $page ) ) > 0 ) {
-					$output .= $this->msg( 'word-separator' )->plain() .
+					$output .= $this->msg( 'word-separator' )->escaped() .
 						$linkRenderer->makeLink(
 							$giveGiftLink,
-							$this->msg( 'g-next' )->plain(),
+							$this->msg( 'g-next' )->text(),
 							[],
 							[
 								'user' => $user_name,
