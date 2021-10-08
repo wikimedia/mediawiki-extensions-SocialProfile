@@ -36,7 +36,7 @@ class ViewGift extends UnlistedSpecialPage {
 		$giftId = $this->getRequest()->getInt( 'gift_id' );
 		if ( !$giftId || !is_numeric( $giftId ) ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
-			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-invalid-link' )->plain() ) );
+			$out->addHTML( $this->msg( 'g-error-message-invalid-link' )->escaped() );
 			return;
 		}
 
@@ -87,37 +87,39 @@ class ViewGift extends UnlistedSpecialPage {
 
 			$userGiftIcon = new UserGiftIcon( $gift['gift_id'], 'l' );
 			$icon = $userGiftIcon->getIconHTML();
-
-			$message = $out->parseAsContent( trim( $gift['message'] ), false );
+			$lang = $this->getLanguage();
+			// because "23:25, 18 July 2020" is more readable than "2020-07-18 23:25:37" (thanks legoktm!)
+			$humanFriendlyTimestamp = $lang->userTimeAndDate( $gift['timestamp'], $user );
 
 			$output .= '<div class="g-description-container">';
 			$output .= '<div class="g-description">' .
 					$icon .
 					'<div class="g-name">' . htmlspecialchars( $gift['name'] ) . '</div>
-					<div class="g-timestamp">(' . $gift['timestamp'] . ')</div>
+					<div class="g-timestamp">(' . htmlspecialchars( $humanFriendlyTimestamp, ENT_QUOTES ) . ')</div>
 					<div class="g-from">' . $this->msg(
 						'g-from',
 						$sender->getName()
 					)->parse() . '</div>';
-			if ( $message ) {
+			if ( isset( $gift['message'] ) && $gift['message'] ) {
+				$message = $out->parseAsContent( trim( $gift['message'] ), false );
 				$output .= '<div class="g-user-message">' . $message . '</div>';
 			}
 			$output .= '<div class="visualClear"></div>
 					<div class="g-describe">' . htmlspecialchars( $gift['description'] ) . '</div>
 					<div class="g-actions">
 						<a href="' . htmlspecialchars( $giveGiftLink->getFullURL( 'gift_id=' . $gift['gift_id'] ) ) . '">' .
-							htmlspecialchars( $this->msg( 'g-to-another' )->plain() ) . '</a>';
+							$this->msg( 'g-to-another' )->escaped() . '</a>';
 			if ( $gift['actor_to'] == $user->getActorId() ) {
 				$output .= $this->msg( 'pipe-separator' )->escaped();
 				$output .= '<a href="' . htmlspecialchars( $removeGiftLink->getFullURL( 'gift_id=' . $gift['id'] ) ) . '">' .
-					htmlspecialchars( $this->msg( 'g-remove-gift' )->plain() ) . '</a>';
+					$this->msg( 'g-remove-gift' )->escaped() . '</a>';
 			}
 			$output .= '</div>
 				</div>';
 
 			$output .= '<div class="g-recent">
 					<div class="g-recent-title">' .
-						htmlspecialchars( $this->msg( 'g-recent-recipients' )->plain() ) .
+						$this->msg( 'g-recent-recipients' )->escaped() .
 					'</div>
 					<div class="g-gift-count">' .
 						$this->msg( 'g-given', $gift['gift_count'] )->parse() .
@@ -139,7 +141,7 @@ class ViewGift extends UnlistedSpecialPage {
 			$out->addHTML( $output );
 		} else {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
-			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-invalid-link' )->plain() ) );
+			$out->addHTML( $this->msg( 'g-error-message-invalid-link' )->escaped() );
 		}
 	}
 }
