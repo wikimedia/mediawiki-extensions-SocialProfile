@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ajeje Brazorf"
+		]
+	},
+	"useractivity-group-comment": "{{PLURAL:$1|nu cummentu|$1 cummenti}}",
+	"useractivity-group-user_message": "{{PLURAL:$1|nu missaggiu|$1 missaggi}}"
+}
