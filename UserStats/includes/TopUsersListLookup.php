@@ -89,7 +89,7 @@ class TopUsersListLookup {
 			// in the top lists.
 			$exists = $user->load();
 
-			if ( !$user->isBlocked() && $exists && !$user->isBot() ) {
+			if ( !$user->getBlock() && $exists && !$user->isBot() ) {
 				$list[] = [
 					'actor' => $row->up_actor,
 					'points' => $row->up_points

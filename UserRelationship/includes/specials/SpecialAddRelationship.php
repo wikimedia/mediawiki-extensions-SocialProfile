@@ -98,7 +98,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 
 			$out->addHTML( $output );
 
-		} elseif ( $currentUser->isBlocked() ) {
+		} elseif ( $currentUser->getBlock() ) {
 			$out->setPageTitle( $this->msg( 'ur-error-title' )->plain() );
 
 			$output = '<div class="relationship-error-message">' .

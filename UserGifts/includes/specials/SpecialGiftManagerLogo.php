@@ -173,14 +173,14 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$this->requireLogin();
 
 		/** Various rights checks */
-		if ( !$user->isAllowed( 'upload' ) || $user->isBlocked() ) {
+		if ( !$user->isAllowed( 'upload' ) || $user->getBlock() ) {
 			throw new ErrorPageError( 'uploadnologin', 'uploadnologintext' );
 		}
 
 		$this->checkReadOnly();
 
 		// If user is blocked, s/he doesn't need to access this page
-		if ( $user->isBlocked() ) {
+		if ( $user->getBlock() ) {
 			throw new UserBlockedError( $user->getBlock() );
 		}
 

@@ -76,7 +76,7 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 
 			UserProfile::clearCache( $user );
 
-			if ( $user_page_type == 1 && !$user->isBlocked() ) {
+			if ( $user_page_type == 1 && !$user->getBlock() ) {
 				self::importUserWiki( $user );
 			}
 

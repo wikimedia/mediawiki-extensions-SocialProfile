@@ -61,7 +61,7 @@ class GiveGift extends SpecialPage {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
 			$out->addHTML( $this->msg( 'g-error-message-login' )->parse() );
 			return;
-		} elseif ( $user->isBlocked() ) {
+		} elseif ( $user->getBlock() ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
 			$out->addHTML( $this->msg( 'g-error-message-blocked' )->escaped() );
 			return;

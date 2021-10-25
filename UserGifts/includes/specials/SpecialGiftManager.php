@@ -48,7 +48,7 @@ class GiftManager extends SpecialPage {
 		$this->checkReadOnly();
 
 		// If the user is blocked, don't allow access to them
-		if ( $user->isBlocked() ) {
+		if ( $user->getBlock() ) {
 			throw new UserBlockedError( $user->getBlock() );
 		}
 
@@ -142,7 +142,7 @@ class GiftManager extends SpecialPage {
 	function canUserDelete() {
 		$user = $this->getUser();
 
-		if ( $user->isBlocked() ) {
+		if ( $user->getBlock() ) {
 			return false;
 		}
 
@@ -170,7 +170,7 @@ class GiftManager extends SpecialPage {
 
 		$user = $this->getUser();
 
-		if ( $user->isBlocked() ) {
+		if ( $user->getBlock() ) {
 			return false;
 		}
 

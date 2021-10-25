@@ -108,7 +108,7 @@ class ApiUserProfileType extends ApiBase {
 
 		UserProfile::clearCache( $user );
 
-		if ( $user_page_type == 1 && !$user->isBlocked() ) {
+		if ( $user_page_type == 1 && !$user->getBlock() ) {
 			SpecialToggleUserPage::importUserWiki( $user );
 		}
 		// End massive code duplication

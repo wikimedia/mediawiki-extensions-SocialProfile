@@ -108,7 +108,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 				$u->load();
 				$exists = $u->getId() !== 0;
 
-				if ( $exists && !$u->isBlocked() && !$u->isBot() ) {
+				if ( $exists && !$u->getBlock() && !$u->isBot() ) {
 					$user_list[] = [
 						'actor' => $row->up_actor,
 						'points' => $row->up_points
