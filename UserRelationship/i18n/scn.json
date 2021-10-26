@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ajeje Brazorf"
+		]
+	},
+	"ur-your-profile": "Lu tò prufilu",
+	"ur-relationship-count-friends": "$1 havi $2 {{PLURAL:$2|amicu|amici}}.",
+	"ur-add-friend": "Agghiunci comu amicu",
+	"ur-add-personal-message": "Agghiunci nu missaggiu pirsunali",
+	"ur-add-button-friend": "Agghiunci comu amicu",
+	"ur-requests-message-friend": "[[User:$1|$1]] voli èssiri tò amicu.",
+	"notification-social-rel-add-friend-message": "$1 voli èssiri tò amicu.<br /><br />''$2''",
+	"notification-social-rel-add-friend-no-message": "$1 voli èssiri tò amicu.",
+	"notification-social-rel-accept-friend": "Sî addivintatu amicu cu $1."
+}
