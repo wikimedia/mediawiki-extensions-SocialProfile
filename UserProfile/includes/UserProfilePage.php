@@ -1780,7 +1780,7 @@ class UserProfilePage extends Article {
 		<div class="visualClear"></div>';
 
 		if ( $this->viewingUser->getName() !== $this->profileOwner->getName() ) {
-			if ( $this->viewingUser->isRegistered() && !$this->viewingUser->isBlocked() ) {
+			if ( $this->viewingUser->isRegistered() && !$this->viewingUser->getBlock() ) {
 				// @todo FIXME: This code exists in an almost identical form in
 				// ../../UserBoard/incldues/specials/SpecialUserBoard.php
 				$url = htmlspecialchars(
@@ -1810,7 +1810,7 @@ class UserProfilePage extends Article {
 						</div>' .
 						Html::hidden( 'wpEditToken', $this->viewingUser->getEditToken() ) .
 					'</form></div>';
-			} elseif ( $this->viewingUser->isRegistered() && $this->viewingUser->isBlocked() ) {
+			} elseif ( $this->viewingUser->isRegistered() && $this->viewingUser->getBlock() ) {
 				// Show a better i18n message for registered users who are blocked
 				// @see https://phabricator.wikimedia.org/T266918
 				$output .= '<div class="user-page-message-form-blocked">' .

@@ -14,7 +14,7 @@ class ApiRelationshipResponse extends ApiBase {
 
 		// Don't allow blocked users to send messages and also don't allow message
 		// sending when the database is locked for some reason
-		if ( $user->isBlocked() || $readOnlyMode->isReadOnly() ) {
+		if ( $user->getBlock() || $readOnlyMode->isReadOnly() ) {
 			return false;
 		}
 

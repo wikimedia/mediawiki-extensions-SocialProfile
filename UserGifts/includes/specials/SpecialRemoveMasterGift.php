@@ -78,7 +78,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 		}
 
 		// If user is blocked, s/he doesn't need to access this page
-		if ( $user->isBlocked() ) {
+		if ( $user->getBlock() ) {
 			throw new UserBlockedError( $user->getBlock() );
 		}
 

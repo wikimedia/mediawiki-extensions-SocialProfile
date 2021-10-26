@@ -33,7 +33,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$this->checkReadOnly();
 
 		// Blocked through Special:Block? No access for you!
-		if ( $user->isBlocked() ) {
+		if ( $user->getBlock() ) {
 			throw new UserBlockedError( $user->getBlock() );
 		}
 

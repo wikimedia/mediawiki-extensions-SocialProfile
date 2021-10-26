@@ -297,7 +297,7 @@ class SpecialViewUserBoard extends SpecialPage {
 			}
 		}
 
-		if ( $currentUser->isBlocked() ) {
+		if ( $currentUser->getBlock() ) {
 			// only let them post to admins
 			// $user_to = User::newFromId( $user_id );
 			// if( !$user_to->isAllowed( 'delete' ) ) {
@@ -306,7 +306,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		}
 
 		if ( $can_post ) {
-			if ( $currentUser->isRegistered() && !$currentUser->isBlocked() ) {
+			if ( $currentUser->isRegistered() && !$currentUser->getBlock() ) {
 				$urlParams = [ 'action' => 'send' ];
 				if ( $request->getVal( 'user' ) ) {
 					// Need this to ensure that no-JS users are shown the correct stuff

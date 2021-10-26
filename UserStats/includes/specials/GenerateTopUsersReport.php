@@ -41,7 +41,7 @@ class GenerateTopUsersReport extends SpecialPage {
 		$this->checkReadOnly();
 
 		// Blocked through Special:Block? Tough luck.
-		if ( $user->isBlocked() ) {
+		if ( $user->getBlock() ) {
 			throw new UserBlockedError( $user->getBlock() );
 		}
 
