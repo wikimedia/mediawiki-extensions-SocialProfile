@@ -4,6 +4,7 @@
 			"Kly",
 			"Lakejason0",
 			"Mark85296341",
+			"Winston Sung",
 			"Wrightbus"
 		]
 	},
@@ -44,7 +45,7 @@
 	"ur-requests-reject-message-friend": "您已拒絕$1為您的好友。",
 	"ur-title-foe": "$1 的仇敵名單",
 	"ur-title-friend": "$1 的朋友名單",
-	"friend_request_subject": "$1 已在 {{SITENAME}} 把您加入成為朋友！",
+	"friend_request_subject": "$1已在{{SITENAME}}把您加入成為朋友！",
 	"friend_removed_subject": "哦，不！$1 已在 {{SITENAME}} 把您從朋友名單中移除了!",
 	"foe_removed_subject": "哦，不！$1 已在 {{SITENAME}} 把您從仇人名單中移除了!",
 	"echo-category-title-social-rel": "使用者關係更改",
