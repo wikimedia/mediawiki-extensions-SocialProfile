@@ -6,6 +6,7 @@
 			"Fievarsty",
 			"Fryed-peach",
 			"Hosiryuhosi",
+			"RYOUMA1117",
 			"Rxy",
 			"Shirayuki"
 		]
@@ -35,7 +36,7 @@
 	"g-error-do-not-own": "あなたはこの贈り物を所持してません。",
 	"g-error-message-blocked": "あなたは現在ブロックされているため贈り物を贈ることはできません",
 	"g-error-message-invalid-link": "あなたの入力したリンクは無効です。",
-	"g-error-message-login": "贈り物を贈るにはログインする必要があります",
+	"g-error-message-login": "ギフトを贈るには [[Special:UserLogin|ログイン]] をする必要があります。",
 	"g-error-message-no-user": "あなたが閲覧しようとした利用者は存在しません。",
 	"g-error-message-to-yourself": "自分自身へ贈り物を贈ることはできません。",
 	"g-error-title": "おっと、操作を間違えましたよ！",
