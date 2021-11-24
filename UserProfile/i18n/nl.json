@@ -6,7 +6,8 @@
 			"Meursault2004",
 			"SPQRobin",
 			"Siebrand",
-			"Tvdm"
+			"Tvdm",
+			"Romaine"
 		]
 	},
 	"editprofile": "Profielen van andere gebruikers bewerken",
@@ -165,6 +166,7 @@
 	"user-profile-create-threshold-comments": "{{PLURAL:$1|één reactie|$1 reacties}}",
 	"user-profile-create-threshold-friend-count": "{{PLURAL:$1|één vriend|$1 vrienden}}",
 	"user-profile-create-threshold-quiz-points": "{{PLURAL:$1|één quizpunt|$1 quizpunten}}",
+	"user-profile-privacy-status-privacy-public": "openbaar",
 	"user-profile-privacy-status-privacy-hidden": "verborgen",
 	"user-profile-privacy-status-privacy-friends": "vrienden",
 	"user-profile-privacy-status-privacy-foaf": "vrienden van vrienden",

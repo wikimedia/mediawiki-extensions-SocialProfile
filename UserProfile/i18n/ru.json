@@ -10,7 +10,8 @@
 			"Putnik",
 			"Rubin",
 			"Rubin16",
-			"Александр Сигачёв"
+			"Александр Сигачёв",
+			"DDPAT"
 		]
 	},
 	"editprofile": "Править профили других участников",
@@ -40,7 +41,7 @@
 	"user-stats-poll-votes": "Голосов в опросах",
 	"user-stats-picture-game-votes": "Голосов в играх с картинками",
 	"user-stats-quiz-points": "Очков в викторинах",
-	"user-stats-pick-points": "{{PLURAL:$1|Очко|Очков}} pick 'em",
+	"user-stats-pick-points": "Выбери очки",
 	"other-info-title": "Другие сведения",
 	"user-friends-title": "Друзья",
 	"user-foes-title": "Неприятели",

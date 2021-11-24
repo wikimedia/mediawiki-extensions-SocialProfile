@@ -11,7 +11,8 @@
 			"Revolus",
 			"The Evil IP address",
 			"Tim 'Avatar' Bartel",
-			"Umherirrender"
+			"Umherirrender",
+			"Umlaut"
 		]
 	},
 	"editprofile": "Benutzerprofile anderer Benutzer bearbeiten",
@@ -164,6 +165,12 @@
 	"user-profile-picture-picsize": "Das Bild muss ein „JPEG“, „PNG“ oder „GIF“ sein sowie eine Dateigröße unter 100 KB haben.",
 	"user-profile-goback": "Zurück",
 	"user-profile-userlevels-link": "Benutzerebenen",
+	"user-profile-create-threshold-edits": "{{PLURAL:$1|eine Bearbeitung|$1 Bearbeitungen}}",
+	"user-profile-create-threshold-votes": "{{PLURAL:$1|eine Stimme|$1 Stimmen}}",
+	"user-profile-create-threshold-comments": "{{PLURAL:$1|Ein Kommentar|$1 Kommentare}}",
+	"user-profile-create-threshold-friend-count": "{{PLURAL:$1|ein Freund|$1 Freunde}}",
+	"user-profile-create-threshold-poll-votes": "{{PLURAL:$1|eine Stimme|$1 Stimmen}}",
+	"user-profile-create-threshold-quiz-points": "{{PLURAL:$1|ein Quizpunkt|$1 Quizpunkte}}",
 	"user-profile-privacy-status-privacy-public": "öffentlich",
 	"user-profile-privacy-status-privacy-hidden": "versteckt",
 	"user-profile-privacy-status-privacy-friends": "Freunde",
