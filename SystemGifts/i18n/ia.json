@@ -4,6 +4,7 @@
 			"McDutchie"
 		]
 	},
+	"systemgifts-desc": "Permitte inviar, reciper, crear e remover donos de systema",
 	"systemgiftmanager": "Gerente de donos del systema",
 	"ga-addnew": "+ Adder un nove dono",
 	"ga-back-edit-gift": "Retornar a modificar iste dono",
@@ -45,6 +46,7 @@
 	"ga-remove-success-title": "Tu ha removite le dono \"$1\" con successo",
 	"ga-remove-success-message": "Le dono \"$1\" ha essite removite.",
 	"ga-user-got-awards": "$1 ganiava $2",
+	"ga-awards-populate-confirm": "Es tu secur de voler plenar le premios?",
 	"ga-awards-given-out": "{{PLURAL:$1|Un premio|$1 premios}} esseva attribuite",
 	"topawards": "Top de premios",
 	"topawards-edit-title": "Top de premios - Successos de modification",
@@ -65,6 +67,12 @@
 	"topawards-friend-milestone": "Successo de $1 {{PLURAL:$1|amico|amicos}}",
 	"topawards-empty": "O il non ha premios configurate pro iste categoria, o nemo ha ancora recipite iste premios.",
 	"system_gift_received_subject": "Tu ha recipite le premio $1 in {{SITENAME}}!",
+	"system_gift_received_body_html": "Salute $1.\n\nTu ha justo ora recipite le premio $2 sur {{SITENAME}}!\n\n\"$3\"\n\nClicca sur le ligamine sequente pro vider tu cassa de tropheos!\n\n[[Special:ViewSystemGifts]]\n\nNos spera que isto te place!\n\nGratias,\n\n\nLe equipa de {{SITENAME}}\n\n---\n\nTu non vole reciper plus messages de nos?\n\nClicca sur [[Special:UpdateProfile]]\ne cambia tu parametros pro disactivar le notificationes in e-mail.",
 	"system_gift_received_body": "Salute $1.\n\nTu ha justo recipite le premio $2 in {{SITENAME}}!\n\n\"$3\"\n\nClicca infra pro vider tu armario de tropheos!\n\n$4\n\nNos spera que isto te place!\n\nGratias,\n\n\nLe equipa de {{SITENAME}}\n\n---\n\nTu non vole reciper plus messages de nos?\n\nClicca $5\ne disactiva in tu preferentias le notificationes per e-mail.",
-	"right-awardsmanage": "Crear nove premios e modificar existentes"
+	"echo-category-title-social-award": "Premios",
+	"echo-pref-tooltip-social-award": "Notificar me quando io recipe un premio.",
+	"notification-social-award-rec": "Tu ha recipite un nove premio: $1.",
+	"notification-social-award-rec-bundle": "Tu ha recipite {{PLURAL:$1|un nove premio|$1 nove premios}}.",
+	"right-awardsmanage": "Crear nove premios e modificar existentes",
+	"action-awardsmanage": "crear e modificar premios"
 }

@@ -2,14 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Dani",
-			"Glanthor Reviol"
+			"Glanthor Reviol",
+			"Tacsipacsi"
 		]
 	},
 	"userwelcome-desc": "<code>&lt;welcomeUser&gt;</code> tag felhasználó-specifikus közösségi információk megjelenítéséhez a bejelentkezett felhasználóknak",
 	"mp-userlevels-link": "Felhasználói szintek",
 	"mp-welcome-upload": "Feltöltés",
 	"mp-welcome-points": "$1 pont",
-	"mp-welcome-needed-points": "Még ''$3'' pontot kell szerezned a továbblépéshez ide: [[$1|'''$2''']]!",
+	"mp-welcome-needed-points": "Még ''$3'' {{PLURAL:$3|pontot}} kell szerezned a továbblépéshez ide: [[$1|'''$2''']]!",
 	"mp-welcome-logged-in": "Szia $1",
 	"mp-requests-title": "Kérelmek",
 	"mp-requests-message": "Az alábbi kérelmeid vannak.",

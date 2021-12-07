@@ -6,7 +6,9 @@
 			"Evropi",
 			"Norhorn",
 			"Omnipaedista",
-			"ZaDiak"
+			"ZaDiak",
+			"Geraki",
+			"Giannaras99"
 		]
 	},
 	"populateuserprofiles": "Οικίστε τα προφίλ χρηστών",
@@ -33,7 +35,7 @@
 	"user-stats-comments": "Σχόλια",
 	"user-stats-recruits": "Νεοσύλλεκτοι",
 	"user-stats-poll-votes": "Ψήφοι δημοσκόπησης",
-	"user-stats-picture-game-votes": "Παιχνίδι εικόνων {{PLURAL:$1|ψήφός|ψήφοι}}",
+	"user-stats-picture-game-votes": "Ψήφοι παιχνιδιού με εικόνα",
 	"user-stats-quiz-points": "{{PLURAL:$1|Πόντος|Πόντοι}} κουίζ",
 	"user-stats-pick-points": "Διαλογή {{PLURAL:$1|πόντου|πόντων}}",
 	"other-info-title": "Άλλες πληροφορίες",
@@ -117,7 +119,7 @@
 	"user-profile-interests-eats": "Φαγητά",
 	"user-profile-interests-foodsnacks": "Φαγητό & πρόχειρα γεύματα",
 	"user-profile-interests-drinks": "Ποτά",
-	"user-profile-preferences-emails": "E-mail Ειδοποιήσεις",
+	"user-profile-preferences-emails": "Ειδοποιήσεις e-mail",
 	"user-profile-preferences-emails-personalmessage": "Όταν στέλνει ένα προσωπικό μήνυμα",
 	"user-profile-preferences-emails-friendfoe": "Όταν ένας άλλος χρήστης σε κάνει φίλο ή εχθρό του",
 	"user-profile-preferences-emails-gift": "Όταν λαμβάνεις ένα δώρο",

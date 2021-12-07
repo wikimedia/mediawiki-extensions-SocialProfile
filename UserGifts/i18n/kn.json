@@ -1,9 +1,20 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nayvik"
+			"Nayvik",
+			"ಮಲ್ನಾಡಾಚ್ ಕೊಂಕ್ಣೊ"
 		]
 	},
+	"giftmanager-public": "ಸಾರ್ವಜನಿಕ",
+	"giftmanager-private": "ಖಾಸಗಿ",
+	"g-add-message": "ಒಂದು ಸಂದೇಶ ಸೇರಿಸಿ",
+	"g-give-all-message-title": "ಒಂದು ಸಂದೇಶ ಸೇರಿಸಿ",
+	"g-give-separator": "ಅಥವಾ",
+	"g-go-back": "ಹಿಂದೆ ಹೋಗಿ",
+	"g-large": "ದೊಡ್ಡ",
 	"g-new": "ಹೊಸ",
-	"g-next": "ಮುಂದಿನ"
+	"g-next": "ಮುಂದಿನ",
+	"g-previous": "ಹಿಂದಿನ",
+	"g-remove": "ತೆಗೆ",
+	"g-small": "ಸಣ್ಣ"
 }

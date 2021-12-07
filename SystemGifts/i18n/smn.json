@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Seipinne"
+		]
+	},
+	"ga-addnew": "+Lasseet uđđâ skeeŋkâ",
+	"ga-back-edit-gift": "Maassâd taam skeeŋkâ hammiimân",
+	"ga-back-gift-list": "Maassâd skeŋkkâliston",
+	"ga-back-link": "[[User:$1|< Maassâd kevttee $1 profiilin]]",
+	"ga-choosefile": "Valjii tiätuvuárhá:",
+	"ga-error-message-no-user": "Kevttee, mon irâttah keččâđ, ij lah.",
+	"ga-file-instructions": "Kovváád kárttá leđe jpeg, png teikkâ gif (ij animistum gif-kuuvijd) já tot kárttá leđe stuáruduváinis vuálá 100Kb.",
+	"ga-gift": "skeŋkkâ",
+	"ga-giftdesc": "skeeŋkâ kuvvim",
+	"ga-giftimage": "skeeŋkâ kove",
+	"ga-giftname": "skeeŋkâ nommâ",
+	"ga-gifttype": "skeeŋkâ tijppâ",
+	"ga-goback": "Maacâ",
+	"ga-large": "Stuorrâ",
+	"ga-medium": "Koskâmatsâš",
+	"ga-mediumlarge": "Koskâmatsâš-stuorrâ",
+	"ga-new": "Uđđâ",
+	"ga-small": "Ucce",
+	"ga-uploadsuccess": "Vuorkkim luhostui",
+	"ga-viewlist": "Keejâ skeŋkkâlisto",
+	"ga-remove": "Siho",
+	"topawards-edits": "Nubástusah",
+	"topawards-votes": "Jienah",
+	"topawards-comments": "Kommenteh",
+	"topawards-recruits": "Rekrytistmeh",
+	"topawards-friends": "Usteveh"
+}

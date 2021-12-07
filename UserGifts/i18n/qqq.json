@@ -46,7 +46,7 @@
 	"g-give-gift": "Button text on Special:GiveGift",
 	"g-give-all": "Instructions shown on Special:GiveGift explaining how to use the special page.\n$1 is the user name of the person whom you're sending a gift",
 	"g-give-all-message-title": "Shown on Special:GiveGift when in the process of gifting a named user; this message is followed by a textarea element that the user can use to send the recipient a personalized message together with the gift (e.g. \"For all your hard work on character articles!\", \"Thank you for helping me write last week's featured article\", etc.).",
-	"g-give-all-title": "Page title of Special:GiveGift when in the process of gifting a named user; $1 is the the user name of the person you're about to send a gift",
+	"g-give-all-title": "Page title of Special:GiveGift when in the process of gifting a named user; $1 is the user name of the person you're about to send a gift",
 	"g-give-enter-friend-title": "Instructions shown on Special:GiveGift; this is preceded by the drop-down menu containing the users' friends (if any) and followed by a n input box, to which the user can enter the user name of the recipient or a part of the user name and the software will suggest possible matches using the same logic as many core MediaWiki special pages do.",
 	"g-given": "Shown on Special:ViewGift, indicating how many times the gift in question has been given out.\n$1 is the amount of times the gift has been given out",
 	"g-give-list-friends-title": "Shown on Special:GiveGift if you have friends; this is displayed above the drop-down menu, which contains your friends' user names",

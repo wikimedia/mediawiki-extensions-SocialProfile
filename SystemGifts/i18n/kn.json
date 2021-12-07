@@ -1,8 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nayvik"
+			"Nayvik",
+			"ಮಲ್ನಾಡಾಚ್ ಕೊಂಕ್ಣೊ"
 		]
 	},
-	"ga-new": "ಹೊಸ"
+	"ga-new": "ಹೊಸ",
+	"topawards-edits": "ಸಂಪಾದನೆಗಳು",
+	"topawards-votes": "ಮತಗಳು",
+	"topawards-comments": "ಟಿಪ್ಪಣಿಗಳು",
+	"topawards-friends": "ಗೆಳೆಯರು",
+	"topawards-edit-milestone": "{{PLURAL:$1|$1 ಸಂಪಾದನೆಯ|$1 ಸಂಪಾದನೆಗಳ}} ಮೈಲಿಗಲ್ಲು",
+	"topawards-vote-milestone": "{{PLURAL:$1|$1 ಮತದ|$1 ಮತಗಳ}} ಮೈಲಿಗಲ್ಲು",
+	"topawards-comment-milestone": "{{PLURAL:$1|$1 ಟಿಪ್ಪಣಿಯ|$1 ಟಿಪ್ಪಣಿಗಳ}} ಮೈಲಿಗಲ್ಲು"
 }

@@ -60,7 +60,7 @@
 	"action-generatetopusersreport": "{{doc-action|generatetopusersreport}}",
 	"level-advanced-to": "Shown in the output of the <code>&lt;siteactivity /&gt;</code> tag as well as on activity feeds on profile pages (provided that <code>$wgUserProfileDisplay['activity']</code> is set to <code>true</code> in the wiki's [[mw:Manual:LocalSettings.php|LocalSettings.php]] file) and on the Special:UserActivity special page; sadly this string is stored as-is in the database and used as such in the aforementioned places and that is absolutely horrible.",
 	"level-advance-subject": "Title of the \"you've advanced a level\" notification email",
-	"level-advance-body-html": "HTML version of the \"you've advanced a level\" notification email message; the regular version is {{msg-mw|level-advance-body}}.\nParameters:\n* $1 is your user name\n* $2 is the name of the new social level you've reached",
+	"level-advance-body-html": "HTML version of the \"you've advanced a level\" notification email message; the regular version is {{msg-mw|level-advance-body}}.\n\nParameters:\n* $1 is your user name\n* $2 is the name of the new social level you've reached",
 	"level-advance-body": "Regular version of the \"you've advanced a level\" notification email message; the HTML version is {{msg-mw|level-advance-body-html}}.\nParameters:\n* $1 is your user name\n* $2 is the name of the new social level you've reached\n* $3 is a link to the user preferences page",
 	"echo-category-title-social-level-up": "{{doc-echo-category-title|tooltip=echo-pref-tooltip-social-level-up}}",
 	"echo-pref-tooltip-social-level-up": "{{doc-echo-pref-tooltip|title=echo-category-title-social-level-up}}",

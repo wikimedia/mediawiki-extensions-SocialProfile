@@ -7,7 +7,9 @@
 			"Purodha",
 			"Raimond Spekking",
 			"Tim 'Avatar' Bartel",
-			"Umherirrender"
+			"Umherirrender",
+			"Umlaut",
+			"Zabe"
 		]
 	},
 	"messagesenttitle": "Nachrichten verschickt",
@@ -24,6 +26,8 @@
 	"boardsendbutton": "Nachricht senden",
 	"boardnofriends": "Du hast keine Freunde, denen du eine Nachricht senden könntest!",
 	"messagesentsuccess": "Deine Nachricht wurde erfolgreich verschickt.",
+	"boardblast-error-missing-message": "Bitte eine Mitteilung eingeben",
+	"boardblast-error-missing-user": "Bitte wähle mindestens eine Person aus",
 	"userboard": "Pinnwand",
 	"userboard_board-to-board": "Pinnwand-zu-Pinnwand",
 	"userboard_noexist": "Der gesuchte Benutzer existiert nicht.",
@@ -45,11 +49,13 @@
 	"userboard_sendbutton": "senden",
 	"userboard_loggedout": "Du musst [[Special:UserLogin|angemeldet sein]], um Nachrichten an andere Nutzer schicken zu können.",
 	"userboard_showingmessages": "Zeige {{PLURAL:$4|Nachricht $3|Nachrichten $2-$3}} von $1 insgesamt",
+	"userboard-delete-success": "Die Mitteilung wurde gelöscht!",
 	"right-userboard-delete": "Nachrichten anderer vom Board löschen",
 	"userboard-time-days": "{{PLURAL:$1|ein Tag|$1 Tage}}",
 	"userboard-time-hours": "{{PLURAL:$1|eine Stunde|$1 Stunden}}",
 	"userboard-time-minutes": "{{PLURAL:$1|eine Minute|$1 Minuten}}",
 	"userboard-time-seconds": "{{PLURAL:$1|eine Sekunde|$1 Sekunden}}",
 	"message_received_subject": "$1 hat auf deine {{SITENAME}}-Pinnwand geschrieben",
-	"message_received_body": "Hallo $1,\n\n$2 hat eben auf deine {{SITENAME}}-Pinnwand geschrieben!\n\nKlicke auf den folgenden Link um deine Pinnwand aufzurufen!\n\n$3\n\n---\n\nHm, du willst keine E-Mails mehr von uns bekommen?\n\nKlicke $4\nund ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten."
+	"message_received_body": "Hallo $1,\n\n$2 hat eben auf deine {{SITENAME}}-Pinnwand geschrieben!\n\nKlicke auf den folgenden Link um deine Pinnwand aufzurufen!\n\n$3\n\n---\n\nHm, du willst keine E-Mails mehr von uns bekommen?\n\nKlicke $4\nund ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.",
+	"apihelp-socialprofile-send-message-param-username": "Den Benutzernamen des Empfängers."
 }

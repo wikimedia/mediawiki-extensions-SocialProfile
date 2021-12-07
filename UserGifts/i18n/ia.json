@@ -4,6 +4,7 @@
 			"McDutchie"
 		]
 	},
+	"usergifts-desc": "Permitte inviar, reciper, crear e remover donos de usator",
 	"giftmanager": "Gestor de donos",
 	"giftmanager-addgift": "+ Adder un nove dono",
 	"giftmanager-access": "accesso al dono",
@@ -16,6 +17,7 @@
 	"giftmanager-private": "private",
 	"giftmanager-view": "Vider lista de donos",
 	"g-add-message": "Adder un message",
+	"g-characters-left": "$1 characteres restante",
 	"g-back-edit-gift": "Retornar a modificar iste dono",
 	"g-back-gift-list": "Retornar al lista de donos",
 	"g-back-link": "< Retornar al pagina de $1",
@@ -49,6 +51,7 @@
 	"g-give-no-user-title": "A qui vole tu dar un dono?",
 	"g-give-to-user-title": "Inviar le dono \"$1\" a $2",
 	"g-give-to-user-message": "Vole dar un [[Special:GiveGift/$1|altere dono]] a $1?",
+	"g-give-this-gift": "Dar iste dono",
 	"g-go-back": "Retornar",
 	"g-imagesbelow": "In basso es tu imagines que essera usate in iste sito",
 	"g-large": "Grande",
@@ -66,6 +69,7 @@
 	"g-remove-success-message": "Le dono \"$1\" ha essite removite.",
 	"g-remove-title": "Remover \"$1\"?",
 	"g-send-gift": "Inviar dono",
+	"g-select-gift": "Per favor selige un dono.",
 	"g-select-a-friend": "selige un amico",
 	"g-sent-title": "Tu ha inviate un dono a $1",
 	"g-sent-message": "Tu ha inviate le dono sequente a $1.",
@@ -75,6 +79,12 @@
 	"g-viewgiftlist": "Vider lista de donos",
 	"g-your-profile": "Tu profilo",
 	"gift_received_subject": "$1 te ha inviate le dono $2 in {{SITENAME}}!",
+	"gift_received_body_html": "Salute $1,\n\n$2 te ha justo ora inviate le dono $3 sur {{SITENAME}}.\n\nVole leger le nota que $2 te lassava e vider tu dono? Clicca sur le ligamine sequente:\n\n[[Special:ViewGifts]]\n\nNos spera que illo te placera!\n\nGratias,\n\n\nLe equipa de {{SITENAME}}\n\n---\n\nTu non vole reciper plus e-mail de nos?\n\nClicca sur [[Special:UpdateProfile]]\ne disactiva in tu preferentias le notificationes per e-mail.",
 	"gift_received_body": "Salute $1,\n\n$2 te ha justo ora inviate le dono $3 sur {{SITENAME}}.\n\nVole leger le nota que $2 te lassava e vider tu dono? Clicca sur le ligamine sequente:\n\n$4\n\nNos spera que illo te placera!\n\nGratias,\n\n\nLe equipa de {{SITENAME}}\n\n---\n\nTu non vole reciper plus e-mail de nos?\n\nClicca $5\ne disactiva in tu preferentias le notificationes per e-mail.",
+	"echo-category-title-social-gift": "Donos",
+	"echo-pref-tooltip-social-gift": "Notificar me quando alcuno me invia un dono.",
+	"notification-social-gift-send-no-message": "$1 te ha justo ora inviate un dono: $2.",
+	"notification-social-gift-send-with-message": "$1 te ha justo ora inviate un dono: $2.<br /><br />''$3''",
+	"notification-social-gift-send-bundle": "{{PLURAL:$1|Un persona|$1 personas}} te ha inviate donos.",
 	"right-giftadmin": "Crear nove donos e modificar existentes"
 }

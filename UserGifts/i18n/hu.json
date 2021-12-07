@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Dani",
-			"Glanthor Reviol"
+			"Glanthor Reviol",
+			"Tacsipacsi"
 		]
 	},
 	"giftmanager": "Ajándékkezelő",
@@ -30,7 +31,7 @@
 	"g-error-do-not-own": "Ez nem a te ajándékod.",
 	"g-error-message-blocked": "Jelenleg blokkolva vagy, és nem adhatsz ajándékokat",
 	"g-error-message-invalid-link": "A megadott hivatkozás érvénytelen",
-	"g-error-message-login": "Be kell jelentkezned ajándékok küldéséhez",
+	"g-error-message-login": "[[Special:UserLogin|Be kell jelentkezned]] ajándékok küldéséhez",
 	"g-error-message-no-user": "A felhasználó, akit meg próbáltál nézni, nem létezik.",
 	"g-error-message-to-yourself": "Nem adhatsz ajándékot saját magadnak.",
 	"g-error-title": "Hoppá, eltévedtél!",
@@ -76,6 +77,6 @@
 	"g-viewgiftlist": "Ajándéklista megjelenítése",
 	"g-your-profile": "A profilod",
 	"gift_received_subject": "$1 $2 ajándékot küldött neked a(z) {{SITENAME}} wikin!",
-	"gift_received_body": "Szia, $1!\n\n$2 épp most küldte neked a(z) $3 ajándékot a(z) {{SITENAME}} wikin.\n\nMeg szeretnéd nézni az ajándékodat, és a megjegyzést, amit $2 fűzött hozzá? Csak kattints az alábbi linkre:\n\n$4\n\nReméljük tetszeni fog!\n\nKöszönettel:\na(z) {{SITENAME}} csapata\n\n---\nSzeretnéd ha nem zaklatnánk több e-maillel?\n\nKattints a linkre: $5\nés tiltsd le az e-mail értesítéseket a beállításaidban",
+	"gift_received_body": "Szia, $1!\n\n$2 épp most küldte neked a(z) $3 ajándékot a(z) {{SITENAME}} wikin.\n\nMeg szeretnéd nézni az ajándékodat, és a megjegyzést, amit $2 fűzött hozzá? Csak kattints az alábbi linkre:\n\n$4\n\nReméljük, tetszeni fog!\n\nKöszönettel:\na(z) {{SITENAME}} csapata\n\n---\n\nSzeretnéd, ha nem zaklatnánk több e-maillel?\n\nKattints a linkre: $5\nés tiltsd le az e-mailes értesítéseket a beállításaidban.",
 	"right-giftadmin": "Új ajándékok készítése és meglevők szerkesztése"
 }
