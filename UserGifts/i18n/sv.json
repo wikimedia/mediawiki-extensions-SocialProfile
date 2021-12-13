@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Dafer45",
-			"Per"
+			"Per",
+			"Sabelöga"
 		]
 	},
+	"usergifts-desc": "Gör det möjlig att skicka, ta emot, skapa och ta bort användarpresenter",
 	"giftmanager": "Presenthanterare",
 	"giftmanager-addgift": "+ Lägg till en ny present",
 	"giftmanager-access": "presenttillgång",
@@ -30,7 +32,7 @@
 	"g-error-do-not-own": "Du äger inte denna present.",
 	"g-error-message-blocked": "Du är för tillfället blockerad och kan inte ta emot presenter",
 	"g-error-message-invalid-link": "Länken du angav är ogiltig.",
-	"g-error-message-login": "Du måste vara inloggad för att ge presenter",
+	"g-error-message-login": "Du måste [[Special:UserLogin|logga in]] för att ge presenter",
 	"g-error-message-no-user": "Användaren du försöker titta på finns inte.",
 	"g-error-message-to-yourself": "Du kan inte ge en present till dig själv.",
 	"g-error-title": "Oj, du har hamnat fel!",
@@ -49,6 +51,7 @@
 	"g-give-no-user-title": "Vem vill du ge en present till?",
 	"g-give-to-user-title": "Skicka presenten \"$1\" till $2",
 	"g-give-to-user-message": "Vill du ge $1 en [[Special:GiveGift/$1|annan present]]?",
+	"g-give-this-gift": "Ge den här gåvan",
 	"g-go-back": "Gå tillbaka",
 	"g-large": "Stor",
 	"g-list-title": "$1s presentlista",
@@ -64,6 +67,7 @@
 	"g-remove-success-message": "Presenten \"$1\" har tagits bort.",
 	"g-remove-title": "Ta bort \"$1\"?",
 	"g-send-gift": "Skicka present",
+	"g-select-gift": "Välj en present.",
 	"g-select-a-friend": "välj en vän",
 	"g-sent-title": "Du har skickat en present till $1",
 	"g-sent-message": "Du har skickat följande present till $1.",
@@ -73,5 +77,12 @@
 	"g-viewgiftlist": "Visa presentlista",
 	"g-your-profile": "Din profil",
 	"gift_received_subject": "$1 har skickat presenten $2 till dig på {{SITENAME}}!",
+	"gift_received_body_html": "Hej, $1.\n\nDu har precis fått presenten $2 från $3 på {{SITENAME}}!\n\nVill du läsa anteckningen $2 lämnade dig och se din present? Klicka länken nedan:\n\n[[Special:ViewGifts]]\n\nVi hoppas du tycker om det!\n\nTack,\n\n\n{{SITENAME}}-teamet\n\n---\n\nVill du sluta få e-post från oss?\n\nKlicka på [[Special:UpdateProfile]]\noch ändra dina inställningar för att inaktivera e-postaviseringar.",
+	"gift_received_body": "Hej, $1.\n\nDu har precis fått presenten $2 från $3 på {{SITENAME}}!\n\nVill du läsa anteckningen $2 lämnade dig och se din present? Klicka länken nedan:\n\n$4\n\nVi hoppas du tycker om det!\n\nTack,\n\n\n{{SITENAME}}-teamet\n\n---\n\nVill du sluta få e-post från oss?\n\nKlicka på $5\noch ändra dina inställningar för att inaktivera e-postaviseringar.",
+	"echo-category-title-social-gift": "Gåvor",
+	"echo-pref-tooltip-social-gift": "Meddela mig när någon ger mig en present.",
+	"notification-social-gift-send-no-message": "$1 skickade precis en gåva till dig: $2.",
+	"notification-social-gift-send-with-message": "$1 gav dig en present: $2.<br /><br />''$3''",
+	"notification-social-gift-send-bundle": "{{PLURAL:$1|En person|$1 personer}} har skickat dig presenter.",
 	"right-giftadmin": "Skapa nya och ändra existerande presenter"
 }

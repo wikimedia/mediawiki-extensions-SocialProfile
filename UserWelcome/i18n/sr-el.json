@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Michaello"
+			"Michaello",
+			"Milicevic01"
 		]
 	},
 	"mp-userlevels-link": "Korisnički nivoi",
 	"mp-welcome-upload": "Slanje",
-	"mp-welcome-points": "$1 {{PLURAL:$1|poen|poena}}",
+	"mp-welcome-points": "$1 {{PLURAL:$1|bod|boda|bodova}}",
 	"mp-welcome-logged-in": "Zdravo, $1",
 	"mp-requests-title": "Zahtevi",
 	"mp-request-new-message": "nova poruka",

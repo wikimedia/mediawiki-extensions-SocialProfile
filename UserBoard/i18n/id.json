@@ -4,11 +4,10 @@
 			"Bennylin",
 			"Irwangatot",
 			"IvanLanin",
-			"Kandar"
+			"Kandar",
+			"Akmaie Ajam"
 		]
 	},
-	"boardblastlogintitle": "Anda harus masuk log untuk mengirim papan peledak",
-	"boardblastlogintext": "Untuk mengirim kiriman massal, Anda harus [[Special:UserLogin|masuk]].",
 	"messagesenttitle": "Surat terkirim",
 	"boardblasttitle": "Kirim papan peledak",
 	"boardblaststep1": "Tahap 1 - Tulis surat anda",
@@ -23,6 +22,7 @@
 	"boardsendbutton": "Kirim papan peledak",
 	"boardnofriends": "Anda tidak punya teman yang bisa dikirimi surat!",
 	"messagesentsuccess": "Surat anda sudah terkirim",
+	"boardblast-error-missing-user": "Pilih setidaknya satu orang",
 	"userboard": "Papan pengguna",
 	"userboard_board-to-board": "Antarpapan",
 	"userboard_noexist": "Pengguna yang anda coba lihat tidak ada.",
@@ -50,5 +50,7 @@
 	"userboard-time-minutes": "{{PLURAL:$1|semenit|$1 menit}}",
 	"userboard-time-seconds": "{{PLURAL:$1|sedetik|$1 detik}}",
 	"message_received_subject": "$1 menulis pada papan anda di {{SITENAME}}",
-	"message_received_body": "Hai $1.\n\n$2 baru menulis di papan Anda pada {{SITENAME}}!\n\nKlik di bawah untuk memeriksa papan Anda!\n\n$3\n\n---\n\nHey, ingin berhenti menerima surel dari kami?\n\nKlik $4\ndan ubah setting anda untuk menonaktifkan notifikasi surel."
+	"message_received_body": "Hai $1.\n\n$2 baru menulis di papan Anda pada {{SITENAME}}!\n\nKlik di bawah untuk memeriksa papan Anda!\n\n$3\n\n---\n\nHey, ingin berhenti menerima surel dari kami?\n\nKlik $4\ndan ubah setting anda untuk menonaktifkan notifikasi surel.",
+	"notification-social-msg-send": "$1 telah meninggalkan pesan di papan pengguna anda.<br /><br />''$2''",
+	"apihelp-socialprofile-send-message-param-type": "Jenis pesan: 0 untuk pesan publik, 1 untuk pesan pribadi."
 }

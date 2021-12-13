@@ -3,7 +3,8 @@
 		"authors": [
 			"Alnokta",
 			"Meno25",
-			"OsamaK"
+			"OsamaK",
+			"محمد أحمد عبد الفتاح"
 		]
 	},
 	"populateuserprofiles": "أشهر ملفات المستخدمين",
@@ -63,7 +64,7 @@
 	"user-personal-info-hometown": "بلد المنشأ",
 	"user-personal-info-birthday": "عيد الميلاد",
 	"user-personal-info-occupation": "الوظيفة",
-	"user-personal-info-websites": "مواقع الوب",
+	"user-personal-info-websites": "مواقع الويب",
 	"user-personal-info-places-lived": "أماكن أقمت فيها",
 	"user-personal-info-schools": "مدارس",
 	"user-personal-info-about-me": "حولي",
@@ -78,8 +79,6 @@
 	"user-recent-activity-user-message": "أرسل رسالة إلى",
 	"user-recent-activity-network-update": "بعث خاطرة",
 	"user-recent-system-gift": "حصل على جائزة",
-	"user-profile-update-notloggedin-title": "لا يمكنك تعديل ملفك بدون أن تكون مسجل الدخول",
-	"user-profile-update-notloggedin-text": "أنت لا يمكنك تعديل ملفك بدون تسجيل الدخول.\nاضغط [[Special:UserLogin|هنا]] لتسجيل الدخول أو اضغط [[Special:UserLogin/signup|هنا]] للتسجيل.",
 	"user-profile-update-saved": "تم حفظ ملفك",
 	"user-profile-update-log-section": "غير القسم",
 	"user-profile-default-country": "الولايات المتحدة",
@@ -105,8 +104,8 @@
 	"user-profile-personal-schools": "مدارس",
 	"user-profile-personal-places": "أماكن",
 	"user-profile-personal-placeslived": "أماكن أقمت فيها",
-	"user-profile-personal-web": "وب",
-	"user-profile-personal-websites": "مواقع وب",
+	"user-profile-personal-web": "ويب",
+	"user-profile-personal-websites": "مواقع ويب",
 	"user-profile-interests-entertainment": "ترفيه",
 	"user-profile-interests-movies": "أفلام",
 	"user-profile-interests-tv": "تلفاز",
@@ -123,7 +122,7 @@
 	"user-profile-preferences-emails-gift": "عندما تستلم هدية",
 	"user-profile-preferences-emails-level": "عندما تتقدم مستوى",
 	"user-profile-preferences-emails-weekly": "استقبال تحديثات بريد إلكتروني أسبوعية",
-	"user-profile-update-button": "حدّث",
+	"user-profile-update-button": "تحديث",
 	"user-profile-tidbits-title": "تيد بيتس",
 	"user-profile-tidbits-favmoment": "لحظة الرياضة المفضلة",
 	"user-profile-tidbits-worstmoment": "أسوأ لحظة رياضية",
@@ -171,5 +170,6 @@
 	"avatarlogpagetext": "هذا سجل بعمليات رفع أفاتر المستخدمين",
 	"user-profile-picture-log-entry": "رفع أفاتر جديد",
 	"user-profile-picture-log-delete-entry": "حذف الأفاتر الخاص ب$1",
-	"right-avatarremove": "إزالة أفاترات المستخدمين"
+	"right-avatarremove": "إزالة أفاترات المستخدمين",
+	"random-users-avatars-title": "مقابلة المجتمع"
 }

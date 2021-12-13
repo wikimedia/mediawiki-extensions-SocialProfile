@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ajeje Brazorf"
+		]
+	},
+	"top-fans-bad-field-title": "Ops!",
+	"top-fans-stats-edit-count": "{{PLURAL:$1|Canciamentu|Canciamenti}}",
+	"top-fans-stats-comment-count": "{{PLURAL:$1|Cummentu|Cummenti}}",
+	"random-user-about-me": "Nfurmazzioni supra mi"
+}

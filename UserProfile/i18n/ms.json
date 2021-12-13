@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Anakmalaysia",
-			"Kurniasan"
+			"Kurniasan",
+			"Tofeiku"
 		]
 	},
 	"other-info-title": "Maklumat lain",
@@ -59,5 +60,6 @@
 	"user-profile-userlevels-link": "Tahap-tahap pengguna",
 	"user-no-images": "Tiada imej yang dimuat naik",
 	"edit-profile-title": "Sunting profil anda",
-	"user-page-link": "Laman pengguna"
+	"user-page-link": "Laman pengguna",
+	"random-users-avatars-title": "Bertemu dengan komuniti"
 }

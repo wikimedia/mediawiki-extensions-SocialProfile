@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"random-user-points-weekly": "{{PLURAL:$1|un puntu|$1 puntos}} esta selmana",
+	"random-user-points-monthly": "{{PLURAL:$1|un puntu|$1 puntos}} esti mes",
+	"random-user-about-me": "Tocante a min"
+}

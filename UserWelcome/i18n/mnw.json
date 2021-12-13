@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Htawmonzel"
+		]
+	},
+	"userwelcome-desc": "Adds <code>&lt;welcomeUser&gt;</code> tag to display user-specific social info to logged-in users",
+	"mp-userlevels-link": "ကဆံင် ညးလွပ်",
+	"mp-welcome-upload": "ပတိုန်",
+	"mp-welcome-points": "$1 {{PLURAL:$1|point|points}}"
+}

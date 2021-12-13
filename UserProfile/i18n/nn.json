@@ -4,7 +4,8 @@
 			"Gunnernett",
 			"Harald Khan",
 			"Jon Harald Søby",
-			"Nghtwlkr"
+			"Nghtwlkr",
+			"Njardarlogar"
 		]
 	},
 	"populateuserprofiles": "Folkeset brukarprofilar",
@@ -79,8 +80,6 @@
 	"user-recent-activity-user-message": "Sendte ei melding til",
 	"user-recent-activity-network-update": "Har lagt inn ein tanke",
 	"user-recent-system-gift": "Mottok ei utmerking",
-	"user-profile-update-notloggedin-title": "Du kan ikkje endra profilen din utan å vera innlogga",
-	"user-profile-update-notloggedin-text": "Du kan ikkje endra profilen din utan å vera innlogga.\nTrykk [[Special:UserLogin|her]] for å loggå inn eller [[Special:UserLogin/signup|her]] for å registrera deg.",
 	"user-profile-update-saved": "Profilen din blei lagra",
 	"user-profile-update-log-section": "endra avsnitt",
 	"user-profile-default-country": "USA",
@@ -172,5 +171,6 @@
 	"avatarlogpagetext": "Dette er ein logg over opplasta brukaravatarar",
 	"user-profile-picture-log-entry": "lasta opp ny avatar",
 	"user-profile-picture-log-delete-entry": "sletta avataren til $1",
-	"right-avatarremove": "Fjerna avatarane til brukarar"
+	"right-avatarremove": "Fjerna avatarane til brukarar",
+	"random-users-avatars-title": "Møt brukarane"
 }

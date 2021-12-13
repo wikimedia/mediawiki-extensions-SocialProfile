@@ -1,21 +1,26 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nghtwlkr"
+			"Nghtwlkr",
+			"Jon Harald Søby"
 		]
 	},
 	"useractivity": "Venners aktivitet",
+	"useractivity-desc": "Vise brukeres sosiale aktivitet",
 	"useractivity-award": "$1 mottok en pris",
 	"useractivity-all": "Vis alt",
 	"useractivity-edit": "$1 {{PLURAL:$4|redigerte siden|redigerte følgende sider:}} $3",
 	"useractivity-foe": "$1 {{PLURAL:$2|er nå en fiende av|er nå en fiende av}} $3",
+	"useractivity-filter": "Filter",
 	"useractivity-friend": "$1 {{PLURAL:$2|er nå en venn av|er nå en venn av}} $3",
 	"useractivity-gift": "$1 fikk en gave av $2",
 	"useractivity-group-edit": "{{PLURAL:$1|én redigering|$1 redigeringer}}",
 	"useractivity-group-comment": "{{PLURAL:$1|én kommentar|$1 kommentarer}}",
 	"useractivity-group-user_message": "{{PLURAL:$1|én beskjed|$1 beskjeder}}",
 	"useractivity-group-friend": "{{PLURAL:$1|én venn|$1 venner}}",
+	"useractivity-network-thought": "<b><a href=\"$4\">$2</a></b> har en tanke for $3-nettverket",
 	"useractivity-siteactivity": "Sideaktivitet",
 	"useractivity-title": "Venners aktivitet",
-	"useractivity-user_message": "$1 {{PLURAL:$4|sendte en beskjed til|sendte flere beskjeder til}} $3"
+	"useractivity-user_message": "$1 {{PLURAL:$4|sendte en beskjed til|sendte flere beskjeder til}} $3",
+	"useractivity-comment": "$1 la igjen {{PLURAL:$4|en kommentar|kommentarer}} på {{PLURAL:$4|$3|følgende sider: $3}}"
 }

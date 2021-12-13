@@ -1,15 +1,19 @@
 {
 	"@metadata": {
-		"authors": []
+		"authors": [
+			"Milicevic01"
+		]
 	},
 	"useractivity": "Aktivnost prijatelja",
+	"useractivity-desc": "Prikazuje društvenu aktivnost korisnika",
 	"useractivity-award": "$1 je primio/la nagradu",
-	"useractivity-all": "Vidi sve",
-	"useractivity-foe": "$1 je sada neprijatelj sa $3",
-	"useractivity-friend": "$1 je sada prijatelj sa $3",
+	"useractivity-all": "Prikaži sve",
+	"useractivity-foe": "$1 {{PLURAL:$2|je sada neprijatelj sa}} $3",
+	"useractivity-filter": "Filter",
+	"useractivity-friend": "$1 {{PLURAL:$2|je sada prijatelj sa}} $3",
 	"useractivity-gift": "$1 je primio/la poklon od $2",
-	"useractivity-group-edit": "{{PLURAL:$1|jedna|$1}} izmena",
-	"useractivity-group-comment": "{{PLURAL:$1|jedan komentar|$1 komentara}}",
+	"useractivity-group-edit": "{{PLURAL:$1|jedna izmena|$1 izmene|$1 izmena}}",
+	"useractivity-group-comment": "{{PLURAL:$1|jedan komentar|$1 komentara|$1 komentara}}",
 	"useractivity-group-user_message": "{{PLURAL:$1|jedna|$1}} poruka",
 	"useractivity-group-friend": "{{PLURAL:$1|jedan prijatelj|$1 prijatelja}}",
 	"useractivity-siteactivity": "Aktivnost sajta",

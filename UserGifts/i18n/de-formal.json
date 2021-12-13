@@ -10,7 +10,7 @@
 	"g-delete-message": "Sind Sie sich sicher, das Sie das Geschenk „$1“ löschen möchten?\nDies wird es auch bei Benutzern löschen, die es bereits erhalten haben.",
 	"g-error-do-not-own": "Sie besitzen dieses Geschenk nicht.",
 	"g-error-message-blocked": "Sie sind aktuell gesperrt und können keine Geschenke vergeben",
-	"g-error-message-login": "Sie müssen sich anmelden um Geschenke zu vergeben",
+	"g-error-message-login": "Sie müssen sich [[Special:UserLogin|anmelden]] um Geschenke zu vergeben.",
 	"g-error-message-no-user": "Der Benutzer, den Sie anschauen möchten, existiert nicht.",
 	"g-error-message-to-yourself": "Sie können sich selber keine Geschenke geben.",
 	"g-give-all": "Möchten Sie $1 ein Geschenk geben? Suchen Sie eins der folgenden Geschenke aus und klicken Sie „Geschenk senden“. Es ist ganz einfach.",

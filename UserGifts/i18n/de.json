@@ -7,7 +7,10 @@
 			"Kghbln",
 			"Purodha",
 			"The Evil IP address",
-			"Umherirrender"
+			"Umherirrender",
+			"Elliot",
+			"Umlaut",
+			"Zabe"
 		]
 	},
 	"giftmanager": "Geschenke-Verwaltung",
@@ -35,7 +38,7 @@
 	"g-error-do-not-own": "Du besitzt dieses Geschenk nicht.",
 	"g-error-message-blocked": "Du bist aktuell gesperrt und kannst keine Geschenke vergeben",
 	"g-error-message-invalid-link": "Der eingegebende Link ist ungültig.",
-	"g-error-message-login": "Du musst dich anmelden um Geschenke zu vergeben",
+	"g-error-message-login": "Du musst dich [[Special:UserLogin|anmelden]] um Geschenke zu vergeben.",
 	"g-error-message-no-user": "Der Benutzer, den du anschauen möchtest, existiert nicht.",
 	"g-error-message-to-yourself": "Du kannst dir selber keine Geschenke geben.",
 	"g-error-title": "Oops, da ging etwas schief!",
@@ -72,6 +75,7 @@
 	"g-remove-success-message": "Das Geschenk „$1“ wurde entfernt.",
 	"g-remove-title": "„$1“ entfernen?",
 	"g-send-gift": "Geschenk senden",
+	"g-select-gift": "Bitte wähle ein Geschenk aus.",
 	"g-select-a-friend": "wähle einen Freund aus",
 	"g-sent-title": "Du hast ein Geschenk an $1 gesendet",
 	"g-sent-message": "Du hast die folgenden Geschenke an $1 gesendet.",
@@ -82,5 +86,6 @@
 	"g-your-profile": "Dein Profil",
 	"gift_received_subject": "[{{SITENAME}}] $1 hat dir das $2-Geschenk gesendet!",
 	"gift_received_body": "Hallo $1,\n\n$2 hat dir eben das $3-Geschenk auf {{SITENAME}} gesendet!\n\nMöchtest du die Notiz von $2 lesen und dein Geschenk sehen? Klicke den folgenden Link:\n\n$4\n\nWir hoffen, es gefällt dir!\n\nDanke,\n\nDas {{SITENAME}}-Team\n\n---\n\nDu möchtest keine E-Mails von uns erhalten?\n\nKlicke $5\nund ändere deine Einstellungen auf deaktivierte E-Mail-Benachrichtigung.",
+	"echo-category-title-social-gift": "Geschenke",
 	"right-giftadmin": "Neue erstellen und bestehende Geschenke bearbeiten"
 }

@@ -1,20 +1,38 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bellayet"
+			"Bellayet",
+			"আফতাবুজ্জামান"
 		]
 	},
-	"viewrelationships": "সম্পর্ক দেখাও",
-	"viewrelationshiprequests": "সম্পর্কের অনুরোধ দেখাও",
+	"viewrelationships": "সম্পর্ক দেখুন",
+	"viewrelationshiprequests": "সম্পর্কের অনুরোধ দেখান",
+	"ur-already-submitted": "আপনার অনুরোধ পাঠানো হয়েছে",
 	"ur-your-profile": "আপনার বৃত্তান্ত",
+	"ur-backlink": "&lt; $1-এর প্রোফাইলে ফিরুন",
+	"ur-relationship-count-foes": "$1-এর $2 জন {{PLURAL:$2|শত্রু}} আছে।",
+	"ur-relationship-count-friends": "$1-এর $2 জন {{PLURAL:$2|বন্ধু}} আছে।",
 	"ur-add-friend": "বন্ধু হিসেবে যোগ করুন",
 	"ur-add-foe": "শত্রু হিসেবে যোগ করুন",
+	"ur-add-personal-message": "একটি ব্যক্তিগত বার্তা যোগ করুন",
 	"ur-remove-relationship-friend": "বন্ধুকে ত্যাগ করুন",
 	"ur-remove-relationship-foe": "শত্রুকে ত্যাগ করুন",
 	"ur-give-gift": "উপহার দিন",
+	"ur-remove-error-message-remove-yourself": "আপনি নিজেকে সরাতে পারবেন না।",
 	"ur-remove": "অপসারণ",
 	"ur-add-button-foe": "শত্রু হিসেবে যোগ করুন",
 	"ur-add-button-friend": "বন্ধু হিসেবে যোগ করুন",
-	"ur-accept": "গ্রহণ",
-	"ur-reject": "প্রত্যাখান"
+	"ur-requests-title": "সম্পর্কের অনুরোধ",
+	"ur-requests-message-foe": "[[User:$1|$1]] আপনার শত্রু হতে চায়।",
+	"ur-requests-message-friend": "[[User:$1|$1]] আপনার বন্ধু হতে চায়।",
+	"ur-accept": "গ্রহণ করুন",
+	"ur-reject": "প্রত্যাখান করুন",
+	"ur-title-friend": "$1-এর বন্ধু তালিকা",
+	"echo-category-title-social-rel": "ব্যবহারকারী সম্পর্ক পরিবর্তন",
+	"echo-show-social-rel-add-link": "(বন্ধুত্বের/শত্রুতার অনুরোধ)",
+	"notification-social-rel-add-friend-message": "$1 আপনার বন্ধু হতে চায়।<br /><br />''$2''",
+	"notification-social-rel-add-foe-message": "$1 আপনার শত্রু হতে চায়।<br /><br />''$2''",
+	"notification-social-rel-add-friend-no-message": "$1 আপনার বন্ধু হতে চায়।",
+	"notification-social-rel-accept-email-subject": "$1 আপনার সম্পর্কের অনুরোধ গ্রহণ করেছে!",
+	"notification-social-rel-accept-email-batch-body": "$1 আপনার সম্পর্কের অনুরোধ গ্রহণ করেছে।"
 }

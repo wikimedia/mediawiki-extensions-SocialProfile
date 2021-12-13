@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Kv75",
-			"Александр Сигачёв"
+			"Александр Сигачёв",
+			"Okras"
 		]
 	},
 	"useractivity": "Действия друзей",
@@ -10,6 +11,7 @@
 	"useractivity-all": "Смотреть все",
 	"useractivity-edit": "$1 отредактировал {{PLURAL:$4|страницу|следующие страницы:}} $3",
 	"useractivity-foe": "$1 {{PLURAL:$2|враждует сейчас с|враждуют сейчас с}} $3",
+	"useractivity-filter": "Фильтр",
 	"useractivity-friend": "$1 {{PLURAL:$2|дружит сейчас с|дружат сейчас с}} $3",
 	"useractivity-gift": "$1 получил подарок от $2",
 	"useractivity-group-edit": "$1 {{PLURAL:$1|правка|правки|правок}}",

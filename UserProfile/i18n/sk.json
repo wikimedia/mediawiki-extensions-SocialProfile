@@ -76,8 +76,6 @@
 	"user-recent-activity-user-message": "Poslal správu",
 	"user-recent-activity-network-update": "Poslal myšlienku",
 	"user-recent-system-gift": "Dostal ocenenie",
-	"user-profile-update-notloggedin-title": "Nemôžete upravovať svoj profil bez toho, aby ste sa prihlásili",
-	"user-profile-update-notloggedin-text": "Nemôžete upravovať svoj profil bez toho, aby ste sa prihlásili. Môžete sa [[Special:UserLogin|prihlásiť]] alebo [[Special:UserLogin/signup|zaregistrovať]].",
 	"user-profile-update-saved": "Váš profil bol uložený",
 	"user-profile-update-log-section": "zmenil sekciu",
 	"user-profile-default-country": "Spojené štáty",
@@ -169,5 +167,6 @@
 	"avatarlogpagetext": "Toto je záznam nahraných fotografií používateľa",
 	"user-profile-picture-log-entry": "bol nahraný nový obrázok",
 	"user-profile-picture-log-delete-entry": "zmazal fotografiu používateľa $1",
-	"right-avatarremove": "Odstrániť fotografie používateľa"
+	"right-avatarremove": "Odstrániť fotografie používateľa",
+	"random-users-avatars-title": "Zoznámte sa s komunitou"
 }

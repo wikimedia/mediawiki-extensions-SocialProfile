@@ -3,11 +3,11 @@
 		"authors": [
 			"Harald Khan",
 			"Jon Harald Søby",
-			"Nghtwlkr"
+			"Nghtwlkr",
+			"Njardarlogar"
 		]
 	},
-	"boardblastlogintitle": "Du må være logget inn for å sende meldinger",
-	"boardblastlogintext": "For å kunne sende meldinger må du være [[Special:UserLogin|logget inn]].",
+	"userboard-desc": "Gjør det mulig å sende meldinger fra tavle til tavle",
 	"messagesenttitle": "Sendte beskjeder",
 	"boardblasttitle": "Send melding",
 	"boardblaststep1": "Steg 1 &ndash; skriv beskjeden din",
@@ -22,6 +22,9 @@
 	"boardsendbutton": "Send melding",
 	"boardnofriends": "Du har ingen venner å sende beskjed til.",
 	"messagesentsuccess": "Beskjeden din ble sendt",
+	"boardblast-js-sending": "Sender meldinger …",
+	"boardblast-error-missing-message": "Skriv inn en melding",
+	"boardblast-error-missing-user": "Velg minst én person",
 	"userboard": "Brukerdiskusjon",
 	"userboard_board-to-board": "Brukerdiskusjon",
 	"userboard_noexist": "Brukeren du prøver å se finnes ikke.",
@@ -43,11 +46,25 @@
 	"userboard_sendbutton": "send",
 	"userboard_loggedout": "Du må være [[Special:UserLogin|logget inn]] for å sende beskjeder til andre brukere.",
 	"userboard_showingmessages": "Viser {{PLURAL:$4|melding $3|meldingene $2&ndash;$3}} av {{PLURAL:$1|$1 melding|$1 meldinger}}",
+	"userboard-delete-success": "Meldingen ble levert!",
 	"right-userboard-delete": "Slett andres meldinger",
 	"userboard-time-days": "{{PLURAL:$1|én dag|$1 dager}}",
 	"userboard-time-hours": "{{PLURAL:$1|én time|$1 timer}}",
 	"userboard-time-minutes": "{{PLURAL:$1|ett minutt|$1 minutt}}",
 	"userboard-time-seconds": "{{PLURAL:$1|ett sekund|$1 sekund}}",
 	"message_received_subject": "$1 har skrevet på diskusjonssiden din på {{SITENAME}}",
-	"message_received_body": "Hei, $1.\n\n$2 har skrevet på diskusjonssiden din på {{SITENAME}}.\n\nFølg lenken nedenfor for å se diskusjonssiden din.\n\n$3\n\n---\n\nVil du ikke motta flere e-poster fra oss?\n\nKlikk $4 og endre innstillingene dine for å slå av e-postbeskjeder."
+	"message_received_body_html": "Hei, $1.\n\n$2 skrev på tavla di på {{SITENAME}}!\n\nTrykk nedenfor for å vise tavla di.\n\n[[Special:UserBoard]]\n\n---\n\nHei, ønsker du ikke lenger å motta eposter fra oss?\n\nTrykk på [[Special:UpdateProfile]]\nog endre innstillingene dine for å slå av epostvarsler.",
+	"message_received_body": "Hei, $1.\n\n$2 har skrevet på diskusjonssiden din på {{SITENAME}}.\n\nFølg lenken nedenfor for å se diskusjonssiden din.\n\n$3\n\n---\n\nVil du ikke motta flere eposter fra oss?\n\nTrykk på $4 og endre innstillingene dine for å slå av e-postbeskjeder.",
+	"echo-category-title-social-msg": "Brukertavlemeldinger",
+	"echo-pref-tooltip-social-msg": "Varsle meg når noen skriver en melding på brukertavla mi.",
+	"notification-social-msg-send": "$1 skrev en beskjed på brukertavla di.<br /><br />''$2''",
+	"notification-social-msg-send-bundle": "{{PLURAL:$1|Én melding|$1 meldinger|100=99+ meldinger}} har blitt skrevet på brukertavla di.",
+	"apihelp-socialprofile-send-message-description": "Send en melding til en brukertavle.",
+	"apihelp-socialprofile-send-message-summary": "Send en melding til en brukertavle.",
+	"apihelp-socialprofile-send-message-param-username": "Mottakerens brukernavn.",
+	"apihelp-socialprofile-send-message-param-message": "En URL-kodet versjon av meldingen som skal sendes.",
+	"apihelp-socialprofile-send-message-param-type": "Meldingstype: 0 for offentlig melding, 1 for privat melding.",
+	"apihelp-socialprofile-delete-message-description": "Slett en brukertavlemelding.",
+	"apihelp-socialprofile-delete-message-summary": "Slett en brukertavlemelding.",
+	"apihelp-socialprofile-delete-message-param-id": "Unik identifikator for tavlemeldingen som skal slettes."
 }

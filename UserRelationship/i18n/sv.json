@@ -4,13 +4,13 @@
 			"Gabbe.g",
 			"M.M.S.",
 			"Najami",
-			"Per"
+			"Per",
+			"Sabelöga"
 		]
 	},
 	"viewrelationships": "Visa relationer",
 	"viewrelationshiprequests": "Visa efterfrågningar om relationer",
 	"ur-already-submitted": "Din efterfrågning har skickats",
-	"ur-error-page-title": "Oops!",
 	"ur-error-title": "Oops, du hamnade fel!",
 	"ur-error-message-no-user": "Vi kan inte fullfölja din efterfrågning, för att det inte finns någon användare med detta namn.",
 	"ur-your-profile": "Din profil",
@@ -47,8 +47,8 @@
 	"ur-add-button-friend": "Lägg till som vän",
 	"ur-add-sent-title-foe": "Vi har skickat din fiendeförfrågan till $1!",
 	"ur-add-sent-title-friend": "Vi har skickat din vänskapsförfrågning till $1!",
-	"ur-add-sent-message-foe": "Din fiendeförfrågan har skickats till $1 för bekräftelse.\nOm $1 bekräftar din förfrågan kommer du att få ett e-post meddelande",
-	"ur-add-sent-message-friend": "Din vänskaps begäran har skickats till $1 för godkännande.\nOm $1 godkänner din begäran kommer du få ett uppföljningsmeddelande",
+	"ur-add-sent-message-foe": "Din fiendeförfrågan har skickats till $1 för bekräftelse.\nOm $1 godkänner din förfrågan kommer du att få en uppföljningsmeddelande.",
+	"ur-add-sent-message-friend": "Din vänskapsförfrågan har skickats till $1 för godkännande.\nOm $1 godkänner din begäran kommer du få ett uppföljningsmeddelande.",
 	"ur-add-error-message-no-user": "Användaren du prövade att lägga till finns inte.",
 	"ur-add-error-message-blocked": "Du är blockerad, och kan inte lägga till vänner eller fiender.",
 	"ur-add-error-message-yourself": "Du kan inte lägga till dig själv som vän eller fiende.",
@@ -64,7 +64,7 @@
 	"ur-requests-message-friend": "[[User:$1|$1]] vill bli din vän.",
 	"ur-accept": "Acceptera",
 	"ur-reject": "Avslå",
-	"ur-no-requests-message": "Du har inga vän- eller fiendeefterfrågningar.",
+	"ur-no-requests-message": "Du har inga vän- eller fiendeförfrågningar.",
 	"ur-requests-added-message-foe": "Du har lagt till $1 som din fiende.",
 	"ur-requests-added-message-friend": "Du har lagt till $1 som din vän.",
 	"ur-requests-reject-message-friend": "Du har avvisat $1 som din vän.",
@@ -80,7 +80,11 @@
 	"foe_accept_subject": "$1 har accepterat din fiendeskapsefterfrågning på {{SITENAME}}!",
 	"foe_accept_body": "Hej, $1!\n\n$2 har accepterat din efterfrågning om fiendeskap med $2 på {{SITENAME}}!\n\nKolla på $2s sida på $3\n\nTack\n\n---\n\nVill du inte ha mer mejl från oss?\n\nKlicka $4\noch ändra dina inställningar att inte tillåta e-postmeddelanden.",
 	"friend_removed_subject": "Å Nej! $1 har tagit bort dig som vän på {{SITENAME}}!",
-	"friend_removed_body": "Hej, $1\n\n$2 har tagit bort dig som vän på {{SITENAME}}.\n\n---\n\nVill du inte mottaga mer e-post från oss?\n\nKlicka $4 och ändra dina inställningar för att stänga av e-postmeddelanden.",
+	"friend_removed_body": "Hej, $1\n\n$2 har tagit bort dig som vän på {{SITENAME}}!\n\nTack,\n\n\n{{SITENAME}}-teamet\n\n---\n\nVill du inte mottaga mer e-post från oss?\n\nKlicka $4\noch ändra dina inställningar för att stänga av e-postmeddelanden.",
 	"foe_removed_subject": "Hurra! $1 har tagit bort dig som fiende på {{SITENAME}}!",
-	"foe_removed_body": "Hej, $1.\n\n$2 har tagit bort dig som fiende på {{SITENAME}}.\n\nKanske ni två är på väg att bli vänner?\n\n---\n\nVill du inte motta mer e-post från oss?\n\nKlicka $4 och ändra dina inställningarna för att slå av e-postmeddelanden."
+	"foe_removed_body": "Hej, $1.\n\n$2 har tagit bort dig som fiende på {{SITENAME}}.\n\nKanske ni två är på väg att bli vänner?\n\nTack,\n\n\n{{SITENAME}}-teamet\n\n---\n\nVill du inte ta emot mer e-post från oss?\n\nKlicka $4 och ändra dina inställningarna för att slå av e-postmeddelanden.",
+	"notification-social-rel-add-foe-message": "$1 vill bli din fiende.<br /><br />''$2''",
+	"notification-social-rel-add-foe-no-message": "$1 vill bli din fiende.",
+	"notification-social-rel-accept-friend": "Du blev vän med $1.",
+	"notification-social-rel-accept-foe": "Du blev fiende med $1."
 }

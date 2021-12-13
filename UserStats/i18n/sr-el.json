@@ -1,11 +1,16 @@
 {
 	"@metadata": {
-		"authors": []
+		"authors": [
+			"Milicevic01"
+		]
 	},
+	"topusers": "Najbolji korisnici",
+	"top-fans-by-points-nav-header": "Najveći fanovi",
 	"top-fans-total-points-link": "Ukupno poena",
 	"top-fans-weekly-points-link": "Poena ove nedelje",
 	"top-fans-monthly-points-link": "Poena ovog meseca",
-	"top-fans-points": "'''$1''' poena",
+	"top-fans-points": "'''$1''' poen(a)",
+	"top-fans-points-tag": "'''+$1''' poen(a)",
 	"top-fans-bad-field-title": "Ups!",
 	"top-fans-stats-vote-count": "{{PLURAL:$1|Glas|Glasa|Glasa|Glasa|Glasova}}",
 	"top-fans-stats-weekly-winner-count": "{{PLURAL:$1|Nedeljna pobeda|Nedeljnih pobeda}}",
@@ -14,11 +19,18 @@
 	"top-fans-stats-friends-count": "{{PLURAL:$1|Prijatelj|Prijatelja}}",
 	"top-fans-stats-foe-count": "{{PLURAL:$1|Neprijatelj|Neprijatelja}}",
 	"top-fans-stats-opinions-published": "{{PLURAL:$1|Objavljno mišljenje|Objavljena mišljenja|Objavljena mišljenja|Objavljena mišljenja|Objavljenih mišljenja}}",
-	"top-fans-stats-opinions-created": "{{PLURAL:$1|Opcija|Opcije|Opcije|Opcije|Opcija}}",
+	"top-fans-stats-opinions-created": "{{PLURAL:$1|Mišljenje|Mišljenja}}",
 	"top-fans-stats-comment-score-positive-rec": "{{PLURAL:$1|Palac nagore|Palčeva nagore}}",
 	"top-fans-stats-comment-score-negative-rec": "{{PLURAL:$1|Palac nadole|Palaca nadole}}",
 	"top-fans-stats-comment-score-positive-given": "{{PLURAL:$1|Palac nagore dat|Palaca nagore dato}}",
 	"top-fans-stats-comment-score-negative-given": "{{PLURAL:$1|Palac nadole dat|Palaca nadole dato}}",
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|Poklon primljen|Poklona primljeno}}",
-	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Poklon poslat|Poklona poslato}}"
+	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Poklon poslat|Poklona poslato}}",
+	"action-generatetopusersreport": "generišete izveštaje o najboljim korisnicima",
+	"echo-pref-tooltip-social-level-up": "Obaveštavaj me kada pređem na novi nivo.",
+	"updateeditcounts": "Ažuriranje broja izmena",
+	"updateeditcounts-updated": "Statistika je ažurirana ('''$1''' {{PLURAL:$1|korisnik|korisnika}})",
+	"generatetopusersreport-confirm-weekly": "Želite li zaista da generišete nedeljni izveštaj o najboljim korisnicima?",
+	"generatetopusersreport-confirm-monthly": "Želite li zaista da generišete mesečni izveštaj o najboljim korisnicima?",
+	"random-user-about-me": "O meni"
 }

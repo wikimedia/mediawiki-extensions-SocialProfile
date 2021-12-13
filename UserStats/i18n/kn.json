@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nayvik"
+			"Nayvik",
+			"ಮಲ್ನಾಡಾಚ್ ಕೊಂಕ್ಣೊ"
 		]
 	},
+	"top-fans-total-points-link": "ಒಟ್ಟು ಅಂಕಗಳು",
+	"top-fans-points": "'''$1''' ಅಂಕಗಳು",
+	"top-fans-points-tag": "'''+$1''' ಅಂಕಗಳು",
+	"top-fans-stats-vote-count": "{{PLURAL:$1|ಮತ|ಮತಗಳು}}",
 	"top-fans-stats-edit-count": "{{PLURAL:$1|ಸಂಪಾದನೆ|ಸಂಪಾದನೆಗಳು}}"
 }

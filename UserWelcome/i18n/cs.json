@@ -1,14 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Matěj Grabovský"
+			"Matěj Grabovský",
+			"Matěj Suchánek"
 		]
 	},
 	"userwelcome-desc": "Přidává značku <code>&lt;welcomeUser&gt;</code> pro zobrazování sociálních informací specifických pro uživatele (pro přihlášené uživatele)",
 	"mp-userlevels-link": "Urovně uživatelů",
 	"mp-welcome-upload": "Nahrát soubor",
 	"mp-welcome-points": "$1 {{PLURAL:$1|bod|body|bodů}}",
-	"mp-welcome-needed-points": "Abyste postoupili na [[$1|'''$2''']], udělejte ještě ''$3'' {{PLURAL:$3|bod|body|bodů}}!",
+	"mp-welcome-needed-points": "Abyste postoupili na [[$1|'''$2''']], získejte ještě ''$3'' {{PLURAL:$3|bod|body|bodů}}!",
 	"mp-welcome-logged-in": "Ahoj $1",
 	"mp-requests-title": "Požadavky",
 	"mp-requests-message": "Máte následující požadavky.",

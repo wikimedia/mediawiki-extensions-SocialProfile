@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"1917 Ekim Devrimi"
+		]
+	},
+	"useractivity": "Aktivitey embazan",
+	"useractivity-filter": "Parzun",
+	"useractivity-group-edit": "{{PLURAL:$1|jew vurnayış|$1 vurnayışi }}",
+	"useractivity-group-comment": "{{PLURAL:$1|jew vatış|$1 vatışi }}",
+	"useractivity-group-user_message": "{{PLURAL:$1|jew mesac|$1 mesaci}}",
+	"useractivity-group-friend": "{{PLURAL:$1|jew embaz|$1 embazi}}",
+	"useractivity-siteactivity": "Aktivitey site",
+	"useractivity-title": "Aktivitey embazan"
+}

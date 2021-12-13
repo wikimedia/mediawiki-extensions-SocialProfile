@@ -2,9 +2,21 @@
 	"@metadata": {
 		"authors": [
 			"Prima klasy4na",
-			"Тест"
+			"Тест",
+			"DDPAT"
 		]
 	},
+	"userwelcome-desc": "Додає тег <code>&lt;welcomeUser&gt;</code> для відображення соціальної інформації, що стосується користувача, для зареєстрованих користувачів",
+	"mp-userlevels-link": "Рівні користувача",
 	"mp-welcome-upload": "Завантажити",
-	"mp-request-new-message": "нове повідомлення"
+	"mp-welcome-points": "$1 {{PLURAL:$1|бал|бала|балів}}",
+	"mp-welcome-needed-points": "Щоб перейти до [[$1|'''$2''']], заробіть ''$3'' більше {{PLURAL:$3|бал|бала|балів}}!",
+	"mp-welcome-logged-in": "Привіт, $1",
+	"mp-requests-title": "Запити",
+	"mp-requests-message": "У вас є наступні запити.",
+	"mp-request-new-message": "нове повідомлення",
+	"mp-request-new-award": "$1 {{PLURAL:$1|нова нагорода|нові нагороди}}",
+	"mp-request-new-gift": "$1 {{PLURAL:$1|новий подарунок|нових подарунків}}",
+	"mp-request-new-foe": "$1 {{PLURAL:$1|новий ворог|нових ворогів}}",
+	"mp-request-new-friend": "$1 {{PLURAL:$1|новий друг|нових друзей}}"
 }

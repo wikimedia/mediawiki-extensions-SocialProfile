@@ -47,6 +47,7 @@
 	"ga-delete-message": "Weet u zeker dat u de gift \"$1\" wilt verwijderen?\nDit zal hem ook verwijderen van gebruikers die hem ontvangen hebben.",
 	"ga-remove-success-title": "U hebt de gift \"$1\" verwijderd.",
 	"ga-remove-success-message": "De gift \"$1\" is verwijderd.",
+	"ga-user-got-awards": "$1 heeft er $2",
 	"topawards": "Toplijst onderscheidingen",
 	"topawards-edit-title": "Toplijst onderscheidingen - Mijlpalen bewerkingen",
 	"topawards-vote-title": "Toplijst onderscheidingen - Mijlpalen stemmen",

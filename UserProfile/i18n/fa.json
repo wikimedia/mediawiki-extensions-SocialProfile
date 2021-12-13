@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mjbmr"
+			"Mjbmr",
+			"Armin1392"
 		]
 	},
 	"user-view-all": "نمایش همه",
@@ -38,5 +39,6 @@
 	"user-profile-picture-medlarge": "متوسط - بزرگ",
 	"user-profile-picture-medium": "متوسط",
 	"user-profile-picture-small": "کوچک",
-	"user-profile-picture-currentimage": "تصویر کنونی"
+	"user-profile-picture-currentimage": "تصویر کنونی",
+	"random-users-avatars-title": "دیدار اجتماع"
 }

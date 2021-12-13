@@ -77,8 +77,6 @@
 	"user-recent-activity-user-message": "Nohreesch verscheck aan",
 	"user-recent-activity-network-update": "Ene Jedanke öffentlesch jemaat",
 	"user-recent-system-gift": "En Ußzeichnung krääje",
-	"user-profile-update-notloggedin-title": "Do kanns Ding Profil ne ändere, sulang De nit ennjelogg beß.",
-	"user-profile-update-notloggedin-text": "Do kanns Ding Profil ne ändere, sulang De nit ennjelogg beß.\nDonn [[Special:UserLogin|enlogge]] udder [[Special:UserLogin/signup|Desch aanmellde]].",
 	"user-profile-update-saved": "Ding Profil es avjespeichert.",
 	"user-profile-edit-profile-update-saved": "Däm Metmaacher sing Profil es jeseshert.",
 	"user-profile-update-log-section": "ene Afschnet jändert",
@@ -176,5 +174,6 @@
 	"user-profile-picture-log-entry": "Neue Avataa huhjelaade",
 	"user-profile-picture-log-delete-entry": "däm $1 singe Avataa fottjeschmeße",
 	"right-avatarremove": "Enem Metmaacher sing Avataare fott schmiiße",
-	"right-editothersprofiles": "Andere Metmaacher ier Profile ändere"
+	"right-editothersprofiles": "Andere Metmaacher ier Profile ändere",
+	"random-users-avatars-title": "Donn de Metmaacher treffe"
 }

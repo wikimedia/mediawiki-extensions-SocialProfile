@@ -2,14 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Rotemliss",
-			"YaronSh"
+			"YaronSh",
+			"Amire80"
 		]
 	},
 	"userwelcome-desc": "הוספת תגית <code>&lt;welcomeUser&gt;</code> כדי להציג, למשתמשים רשומים בלבד, נתונים חברתיים לפי משתמש",
 	"mp-userlevels-link": "רמות המשתמשים",
 	"mp-welcome-upload": "העלאה",
 	"mp-welcome-points": "{{PLURAL:$1|נקודה אחת|$1 נקודות}}",
-	"mp-welcome-needed-points": "כדי להתקדם ל[[$1|'''$2''']] הרוויחו {{PLURAL:$3|נקודה ''אחת'' נוספת|''$3'' נקודות נוספות}}!",
+	"mp-welcome-needed-points": "כדי להתקדם ל[[$1|'''$2''']], יש להרויח עוד {{PLURAL:$3|נקודה|''$3'' נקודות}}!",
 	"mp-welcome-logged-in": "שלום $1",
 	"mp-requests-title": "בקשות",
 	"mp-requests-message": "הגיעו אליכם הבקשות הבאות.",

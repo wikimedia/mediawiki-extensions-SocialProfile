@@ -3,7 +3,8 @@
 		"authors": [
 			"Firilacroco",
 			"KlaudiuMihaila",
-			"Mihai"
+			"Mihai",
+			"NGC 54"
 		]
 	},
 	"giftmanager-public": "public",
@@ -15,7 +16,7 @@
 	"g-error-do-not-own": "Nu dețineți acest cadou.",
 	"g-error-message-blocked": "Sunteți în prezent blocat și nu puteți da cadouri",
 	"g-error-message-invalid-link": "Legătura introdusă nu este corectă.",
-	"g-error-message-login": "Trebuie să vă autentificați pentru a da cadouri",
+	"g-error-message-login": "Trebuie să vă [[Special:UserLogin|autentificați]] pentru a da cadouri.",
 	"g-error-message-no-user": "Utilizatorul pe care încercați să îl vizualizați nu există.",
 	"g-error-message-to-yourself": "Nu vă puteți da un cadou dumneavoastră.",
 	"g-from": "de la [[User:$1|$1]]",

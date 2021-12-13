@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sp5uhe"
+			"Sp5uhe",
+			"Rail"
 		]
 	},
+	"systemgifts-desc": "Umożliwia wysyłanie, otrzymywanie, tworzenie oraz usuwanie nagród",
 	"systemgiftmanager": "System zarządzania prezentami",
 	"ga-addnew": "+ Dodaj nowy prezent",
 	"ga-back-edit-gift": "Powrót do edycji tego prezentu",
@@ -39,7 +41,21 @@
 	"ga-title": "nagrody $1",
 	"ga-uploadsuccess": "Przesłano",
 	"ga-viewlist": "Zobacz listę prezentu",
+	"ga-remove": "Usuń",
+	"ga-remove-title": "Usunąć „$1”?",
+	"ga-delete-message": "Czy na pewno chcesz usunąć nagrodę „$1”?\nUsunięta zostanie również u użytkowników, którzy już ją zdobyli.",
+	"ga-remove-success-title": "Pomyślnie usunięto nagrodę „$1”",
+	"ga-remove-success-message": "Nagroda „$1” została usunięta.",
+	"ga-user-got-awards": "$1 {{GENDER:$1|otrzymał|otrzymała|otrzymał(a)}} nagrodę „$2”",
+	"ga-awards-given-out": "Przyznano {{PLURAL:$1|jedną nagrodę|$1 nagrody|$1 nagród}}",
+	"topawards-award-categories": "Kategorie nagród",
+	"topawards-edits": "Edycje",
+	"topawards-votes": "Głosy",
+	"topawards-comments": "Komentarze",
+	"topawards-recruits": "Rekrutacja",
+	"topawards-friends": "Znajomi",
 	"system_gift_received_subject": "Dostałeś nagrodę $1 na {{GRAMMAR:MS.lp|{{SITENAME}}}}!",
 	"system_gift_received_body": "Witaj $1.\n\nOtrzymałeś właśnie nagrodę $2 w {{GRAMMAR:MS.lp|{{SITENAME}}}}!\n\n„$3”\n\nKliknij poniżej, aby sprawdzić dlaczego!\n\n$4\n\nMamy nadzieję, że się cieszysz!\n\nDziękujemy, \n\nzespół {{GRAMMAR:D.lp|{{SITENAME}}}}\n\n--- \n\nNie chcesz otrzymywać wiadomości?\n\nKliknij $5\ni zmień ustawienia, aby wyłączyć powiadomienia e‐mail.",
+	"echo-category-title-social-award": "Nagrody",
 	"right-awardsmanage": "Tworzenie nowych oraz edytowanie istniejących nagród"
 }

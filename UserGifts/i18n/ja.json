@@ -4,7 +4,11 @@
 			"Aotake",
 			"Fievarsty",
 			"Fryed-peach",
-			"Hosiryuhosi"
+			"Hosiryuhosi",
+			"Azeha",
+			"RYOUMA1117",
+			"Rxy",
+			"Shirayuki"
 		]
 	},
 	"giftmanager": "贈り物の管理",
@@ -32,11 +36,11 @@
 	"g-error-do-not-own": "あなたはこの贈り物を所持してません。",
 	"g-error-message-blocked": "あなたは現在ブロックされているため贈り物を贈ることはできません",
 	"g-error-message-invalid-link": "あなたの入力したリンクは無効です。",
-	"g-error-message-login": "贈り物を贈るにはログインする必要があります",
+	"g-error-message-login": "ギフトを贈るには [[Special:UserLogin|ログイン]] をする必要があります。",
 	"g-error-message-no-user": "あなたが閲覧しようとした利用者は存在しません。",
 	"g-error-message-to-yourself": "自分自身へ贈り物を贈ることはできません。",
 	"g-error-title": "おっと、操作を間違えましたよ！",
-	"g-file-instructions": "画像はjpeg、pngまたはgif (アニメーションgifは不可)である必要があり、サイズは100キロバイトよりも小さくする必要があります。",
+	"g-file-instructions": "画像は jpeg、png、gif のいずれか (アニメーション gif は不可) である必要があり、サイズは 100 KB よりも小さくする必要があります。",
 	"g-from": "[[User:$1|$1]]から",
 	"g-gift": "贈り物",
 	"g-gift-name": "贈り物名",
@@ -44,7 +48,7 @@
 	"g-give-all": "$1に贈り物を贈りますか？下の贈り物のどれか1つをクリックし、「贈り物を送る」をクリックしてください。操作はたったそれだけです。",
 	"g-give-all-message-title": "メッセージの追加",
 	"g-give-all-title": "$1に贈り物を贈る",
-	"g-give-enter-friend-title": "利用者の名前を知っているなら、以下に入力してください",
+	"g-give-enter-friend-title": "利用者の名前を知っている場合は、以下に入力してください",
 	"g-given": "この贈り物は$1{{PLURAL:$1|回}}贈られています",
 	"g-give-list-friends-title": "友達一覧から選択してください",
 	"g-give-separator": "または",
@@ -79,5 +83,5 @@
 	"g-your-profile": "あなたのプロフィール",
 	"gift_received_subject": "{{SITENAME}}上に$1さんからの$2の贈り物が届いています！",
 	"gift_received_body": "こんにちは、$1 さん。\n\n{{SITENAME}}上に、$2さんからあなたへ$3の贈り物が届いています。\n\n$2さんからのメッセージと贈り物を見るには以下のリンクをクリックしてください。\n\n$4\n\n贈り物が気に入れば幸いです。\n\n{{SITENAME}}チーム\n\n---\nメール受信を停止したい場合は、\n$5\nをクリックして、メール通知を無効にするよう設定変更してください。",
-	"right-giftadmin": "現在の贈り物を編集または新しく作成"
+	"right-giftadmin": "贈り物を新規作成/編集"
 }

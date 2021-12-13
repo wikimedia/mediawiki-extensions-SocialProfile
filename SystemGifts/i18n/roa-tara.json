@@ -6,5 +6,15 @@
 	},
 	"ga-choosefile": "Scacchie 'u file:",
 	"ga-gift": "riale",
-	"ga-new": "Nuève"
+	"ga-giftdesc": "descrzione d'u riale",
+	"ga-giftimage": "immaggine d'u riale",
+	"ga-giftname": "nome d'u riale",
+	"ga-gifttype": "tipe d'u riale",
+	"ga-goback": "Tuèrne rrete",
+	"ga-new": "Nuève",
+	"topawards-edits": "Cangiaminde",
+	"topawards-votes": "Vote",
+	"topawards-comments": "Commende",
+	"topawards-recruits": "Convingeminde",
+	"topawards-friends": "Amice"
 }

@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"CERminator",
-			"Palapa"
+			"Palapa",
+			"Obsuser"
 		]
 	},
 	"editprofile": "Uređivanje profila drugih korisnika",
@@ -78,8 +79,6 @@
 	"user-recent-activity-user-message": "Poslao/la poruku za",
 	"user-recent-activity-network-update": "ima poslana mišljenja",
 	"user-recent-system-gift": "Dobio je nagradu",
-	"user-profile-update-notloggedin-title": "Ne možete uređivati vaš profil bez prijave",
-	"user-profile-update-notloggedin-text": "Ne možete uređivati vaš profil bez prijave.\nKliknite [[Special:UserLogin|ovdje]] za prijavu ili kliknite [[Special:UserLogin/signup|ovdje]] da se registrirate.",
 	"user-profile-update-saved": "Vaš profil je sačuvan",
 	"user-profile-edit-profile-update-saved": "Korisnički profil je uspješno spremljen",
 	"user-profile-update-log-section": "promijenjena sekcija",
@@ -122,7 +121,7 @@
 	"user-profile-preferences-emails-personalmessage": "Kada pošaljem ličnu poruku",
 	"user-profile-preferences-emails-friendfoe": "Kada vas drugi korisnik doda među prijatelje ili neprijatelje",
 	"user-profile-preferences-emails-gift": "Kada primim poklon",
-	"user-profile-preferences-emails-level": "Kada napredujem na slijedeći nivo",
+	"user-profile-preferences-emails-level": "Kada napredujem na sljedeći nivo",
 	"user-profile-preferences-emails-weekly": "Dobijanje sedmičnih ažuriranja e-mailom",
 	"user-profile-update-button": "Ažurirano",
 	"user-profile-tidbits-title": "Zanimljivosti",
@@ -166,7 +165,7 @@
 	"avatarupload-removeavatar": "Ukloni avatara",
 	"avatarupload-currentavatar": "Trenutni avatar od $1",
 	"avatarupload-removesuccess": "Avatar je uspješno uklonjen",
-	"avatarupload-removeanother": "Ukloni slijedeći",
+	"avatarupload-removeanother": "Ukloni sljedeći",
 	"profilelogpage": "Zapisnik uređivanja korisničkog profila",
 	"profilelogpagetext": "Ovo je zapisnik uređivanja korisničkog profila",
 	"user-profile-edit-profile": "je uredio $1 profil",
@@ -175,5 +174,6 @@
 	"user-profile-picture-log-entry": "postavio novi avatar",
 	"user-profile-picture-log-delete-entry": "je obrisao avatar od $1",
 	"right-avatarremove": "Uklanjanje korisničkih avatara",
-	"right-editothersprofiles": "Ažuriranje društvenih profila drugih korisnika"
+	"right-editothersprofiles": "Ažuriranje društvenih profila drugih korisnika",
+	"random-users-avatars-title": "Susret sa zajednicom"
 }

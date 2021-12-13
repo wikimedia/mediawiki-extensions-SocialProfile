@@ -25,8 +25,8 @@
 	"g-back-gift-list": "Used on Special:GiftManagerLogo as a link title; clicking on this link takes you back to the main gift editor page, Special:GiftManager, which displays the list of all available gifts",
 	"g-back-link": "Used in various places (Special:GiftManager, Special:GiveGift, Special:ViewGift, Special:ViewGifts, Special:RemoveGift) as a \"back\" link.\n$1 is the user name, e.g. the user whose gift you're viewing (Special:ViewGift, Special:ViewGifts) or the user whom you want to give a gift (Special:GiveGift) or the user who created a particular gift (Special:GiftManager)",
 	"g-choose-file": "Used on Special:GiftManagerLogo, the special page for uploading new gift images; this is followed by the input box and button which allow you to overwrite the current gift image with a new one.",
-	"g-create-gift": "Button text on Special:GiftManager when you're creating a brand new gift",
 	"g-count": "* '''$1''' is a user name\n* '''$2''' is his or her count of gifts",
+	"g-create-gift": "Button text on Special:GiftManager when you're creating a brand new gift",
 	"g-created-by": "Complete contents of a cell in a table. The next cell (horizontally) contains the user name of the creator of a gift. {{gender}}\n* (optional) $1 is a user name that is used in the next cell",
 	"g-current-image": "Field label/table cell element on Special:GiftManager",
 	"g-delete-message": "Confirmation message on Special:RemoveGift to make sure the user knows that they're about to perform an action that results in data loss and cannot be undone.\n$1 is the name of the gift they are about to delete.",
@@ -45,7 +45,7 @@
 	"g-give-gift": "Button text on Special:GiveGift",
 	"g-give-all": "Instructions shown on Special:GiveGift explaining how to use the special page.\n$1 is the user name of the person whom you're sending a gift",
 	"g-give-all-message-title": "Shown on Special:GiveGift when in the process of gifting a named user; this message is followed by a textarea element that the user can use to send the recipient a personalized message together with the gift (e.g. \"For all your hard work on character articles!\", \"Thank you for helping me write last week's featured article\", etc.).",
-	"g-give-all-title": "Page title of Special:GiveGift when in the process of gifting a named user; $1 is the the user name of the person you're about to send a gift",
+	"g-give-all-title": "Page title of Special:GiveGift when in the process of gifting a named user; $1 is the user name of the person you're about to send a gift",
 	"g-give-enter-friend-title": "Instructions shown on Special:GiveGift; this is preceded by the drop-down menu containing the users' friends (if any) and followed by a n input box, to which the user can enter the user name of the recipient or a part of the user name and the software will suggest possible matches using the same logic as many core MediaWiki special pages do.",
 	"g-given": "Shown on Special:ViewGift, indicating how many times the gift in question has been given out.\n$1 is the amount of times the gift has been given out",
 	"g-give-list-friends-title": "Shown on Special:GiveGift if you have friends; this is displayed above the drop-down menu, which contains your friends' user names",
@@ -90,5 +90,5 @@
 	"notification-social-gift-send-with-message": "[[mw:Extension:Echo|Echo]] notification title\nParameters:\n* $1 is the user name of the person who sent you a gift\n* $2 is the name of the gift you received\n* $3 is the personalized message from the user who sent you the gift",
 	"notification-social-gift-send-bundle": "[[mw:Extension:Echo|Echo]] notification when multiple users have sent you gifts.\n$1 is the amount of users who sent you gifts.",
 	"right-giftadmin": "{{doc-right|giftadmin}}",
-	"action-giftadmin": "This is literally never used anywhere, but I think this message exists so that [[mw:Continuous Integration|CI]] doesn't get upset (though ironically enough as of late February 2020 CI is broken anyway due to other reasons). Don't bother translating this.\n{{doc-action|giftadmin}}"
+	"action-giftadmin": "{{notranslate}}\nThis is literally never used anywhere, but I think this message exists so that [[mw:Continuous Integration|CI]] doesn't get upset (though ironically enough as of late February 2020 CI is broken anyway due to other reasons). Don't bother translating this.\n{{doc-action|giftadmin}}"
 }

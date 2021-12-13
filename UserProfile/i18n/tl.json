@@ -77,8 +77,6 @@
 	"user-recent-activity-user-message": "Nagpadala ng isang mensahe kay",
 	"user-recent-activity-network-update": "Ay nagtala/nagpaskil ng isang kaisipan",
 	"user-recent-system-gift": "Nakatanggap ng isang gantimpala",
-	"user-profile-update-notloggedin-title": "Hindi mo mababago ang iyong talaang pangkatangian kung hindi ka pa nakalagda",
-	"user-profile-update-notloggedin-text": "Hindi mo mababago ang iyong talaang pangkatangian kung hindi ka pa nakalagda.\nPindutin [[Special:UserLogin|dito]] para lumagda o pindutin [[Special:UserLogin/signup|dito]] upang makapagpatala/magparehistro.",
 	"user-profile-update-saved": "Nasagip na ang iyong talaang pangkatangian",
 	"user-profile-edit-profile-update-saved": "Matagumpay na nasagip ang balangkas ng tagagamit",
 	"user-profile-update-log-section": "binago/nabago ang seksyon",
@@ -174,5 +172,6 @@
 	"user-profile-picture-log-entry": "nagkarga ng bagong huwaran (abatar)",
 	"user-profile-picture-log-delete-entry": "binura ang huwaran (abatar) ni $1",
 	"right-avatarremove": "Tanggalin ang mga huwaran (abatar) ng tagagamit",
-	"right-editothersprofiles": "Isapanahon ang mga balangkas na panlipunan ng ibang tagagamit"
+	"right-editothersprofiles": "Isapanahon ang mga balangkas na panlipunan ng ibang tagagamit",
+	"random-users-avatars-title": "Makipagtagpo sa pamayanan"
 }

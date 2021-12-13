@@ -3,9 +3,12 @@
 		"authors": [
 			"Boivie",
 			"Najami",
-			"Per"
+			"Per",
+			"Sabelöga",
+			"WikiPhoenix"
 		]
 	},
+	"userstats-desc": "Gör det möjligt att ge poäng till användare baserat på den typ av åtgärd som görs",
 	"user-stats-alltime-title": "Flest poäng någonsin",
 	"user-stats-weekly-title": "Flest poäng den här veckan",
 	"user-stats-monthly-title": "Flest poäng den här månaden",
@@ -16,6 +19,8 @@
 	"top-fans-weekly-points-link": "Poäng den här veckan",
 	"top-fans-monthly-points-link": "Poäng den här månaden",
 	"top-fans-points": "'''$1''' poäng",
+	"top-fans-points-tag": "'''+$1''' poäng",
+	"top-fans-by-category-title-gifts-rec-count": "Flest mottagna presenter",
 	"top-fans-bad-field-title": "Hoppsan!",
 	"top-fans-bad-field-message": "Den valda statistiken finns inte.",
 	"top-fans-stats-vote-count": "{{PLURAL:$1|Röst|Röster}}",
@@ -35,7 +40,26 @@
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|Fådd present|Fådda presenter}}",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Skickad present|Skickade presenter}}",
 	"right-updatepoints": "Uppdatera redigeringsräknare",
+	"action-updatepoints": "uppdatera antal redigeringar",
 	"level-advanced-to": "avancerat till nivå <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "Du är nu en \"$1\" på {{SITENAME}}!",
-	"level-advance-body": "Hej $1!\n\nDu är nu en \"$2\" på {{SITENAME}}!\n\nGrattis,\n\n{{SITENAME}}-teamet\n\n---\nFörresten, vill du slippa få epost från oss?\n\nKlicka $3\noch ändra dina inställningar för att avaktivera epost-meddelanden."
+	"level-advance-body": "Hej $1!\n\nDu är nu en \"$2\" på {{SITENAME}}!\n\nGrattis,\n\n{{SITENAME}}-teamet\n\n---\nFörresten, vill du slippa få e-post från oss?\n\nKlicka $3\noch ändra dina inställningar för att avaktivera e-postmeddelanden.",
+	"echo-category-title-social-level-up": "Nivå upp",
+	"echo-pref-tooltip-social-level-up": "Meddela mig när jag når en ny nivå.",
+	"notification-social-level-up": "Du har nått nivå \"$1\"!",
+	"notification-social-level-up-bundle": "Du har gått upp {{PLURAL:$1|en nivå|$1 nivåer}} till $2!",
+	"updateeditcounts": "Uppdatera antal redigeringar",
+	"updateeditcounts-confirm": "Är du säker på att du vill uppdatera antalet redigeringar för alla användare?",
+	"user-stats-weekly-winners": "Veckans {{PLURAL:$1|vinnare}}",
+	"user-stats-monthly-winners": "Månadens {{PLURAL:$1|vinnare}}",
+	"user-stats-weekly-win-congratulations": "Gratulerar till följande {{PLURAL:$1|användare}} som blev veckans vinnare och fick $2 extra{{PLURAL:$2|poäng}}!",
+	"user-stats-monthly-win-congratulations": "Gratulerar till följande {{PLURAL:$1|användare}} som blev månadens vinnare och fick $2 extra{{PLURAL:$2|poäng}}!",
+	"user-stats-report-row": "($1) [[User:$2|$2]] - '''$3''' {{PLURAL:$3|poäng}}!",
+	"user-stats-report-points": "'''$1''' {{PLURAL:$1|poäng}}!",
+	"user-stats-report-generation-note": "denna sida genererades automatiskt",
+	"user-stats-report-weekly-edit-summary": "automatiserad rapport över veckans användare",
+	"user-stats-report-monthly-edit-summary": "automatiserad rapport över månadens användare",
+	"random-user-points-weekly": "{{PLURAL:$1|ett poäng|$1 poäng}} denna vecka",
+	"random-user-points-monthly": "{{PLURAL:$1|ett poäng|$1 poäng}} denna månad",
+	"random-user-about-me": "Om mig"
 }

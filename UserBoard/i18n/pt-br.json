@@ -2,11 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Eduardo.mps",
-			"Helder.wiki"
+			"Helder.wiki",
+			"Eduardo Addad de Oliveira",
+			"Eduardoaddad",
+			"He7d3r"
 		]
 	},
-	"boardblastlogintitle": "Você precisa estar autenticado para enviar recados",
-	"boardblastlogintext": "Para enviar recados, você precisa estar [[Special:UserLogin|autenticado]]",
+	"userboard-desc": "Permite o envio de mensagens de um mural para o outro",
 	"messagesenttitle": "Mensagens Enviadas",
 	"boardblasttitle": "Enviar recado",
 	"boardblaststep1": "Passo 1 - Escreva a sua mensagem",
@@ -21,7 +23,10 @@
 	"boardsendbutton": "Enviar recado",
 	"boardnofriends": "Você não tem amigos para enviar uma mensagem!",
 	"messagesentsuccess": "Sua mensagem foi enviada com sucesso",
-	"userboard": "Mural do utilizador",
+	"boardblast-js-sending": "Enviando mensagens...",
+	"boardblast-error-missing-message": "Por favor, digite uma mensagem",
+	"boardblast-error-missing-user": "Por favor, selecione pelo menos uma pessoa",
+	"userboard": "Mural do usuário",
 	"userboard_board-to-board": "Mural-para-mural",
 	"userboard_noexist": "O utilizador que você está tentando ver não existe.",
 	"userboard_yourboard": "Seu mural",
@@ -40,13 +45,27 @@
 	"userboard_messagetype": "Tipo de Mensagem",
 	"userboard_nomessages": "Sem mensagens.",
 	"userboard_sendbutton": "enviar",
-	"userboard_loggedout": "Você precida estar [[Special:UserLogin|autenticado]] para enviar mensagens a outros usuários.",
+	"userboard_loggedout": "Você precisa estar [[Special:UserLogin|entrado]] para enviar mensagens a outros usuários.",
 	"userboard_showingmessages": "Mostrando {{PLURAL:$4|mensagem $3|mensagens $2-$3}} de {{PLURAL:$1|$1 mensagem|$1 mensagens}}",
+	"userboard-delete-success": "A mensagem foi excluída com sucesso!",
 	"right-userboard-delete": "Eliminar mensagens no mural de outros",
 	"userboard-time-days": "{{PLURAL:$1|um dia|$1 dias}}",
 	"userboard-time-hours": "{{PLURAL:$1|uma hora|$1 horas}}",
 	"userboard-time-minutes": "{{PLURAL:$1|um minuto|$1 minutos}}",
 	"userboard-time-seconds": "{{PLURAL:$1|um segundo|$1 segundos}}",
 	"message_received_subject": "$1 escreveu em seu mural em {{SITENAME}}",
-	"message_received_body": "Oi $1:\n\n$2 acabou de escrever em seu mural em {{SITENAME}}!\n\nClique abaixo para ver seu mural!\n\n$3\n\n---\n\nEi, quer parar de receber e-mails de nós?\n\nClique $4\ne altere suas preferênciar para desabilidar e-mails de notificação."
+	"message_received_body_html": "Olá $1.\n\n$2 acabaram de escrever no seu fórum em {{SITENAME}}!\n\nClique abaixo para conferir seu quadro!\n\n[[Special:UserBoard]]\n\n---\n\nEi, quer parar de receber e-mails nossos?\n\nClique [[Special:UpdateProfile]]\ne altere suas configurações para desativar as notificações por e-mail.",
+	"message_received_body": "Oi $1:\n\n$2 acabou de escrever em seu mural em {{SITENAME}}!\n\nClique abaixo para ver seu mural!\n\n$3\n\n---\n\nEi, quer parar de receber e-mails de nós?\n\nClique $4\ne altere suas preferência para desabilitar e-mails de notificação.",
+	"echo-category-title-social-msg": "Mensagens do mural do usuários",
+	"echo-pref-tooltip-social-msg": "Notifique-me quando alguém deixar uma mensagem no meu mural de usuários.",
+	"notification-social-msg-send": "$1 deixou uma mensagem no seu mural de usuários.<br /><br />''$2''",
+	"notification-social-msg-send-bundle": "{{PLURAL:$1|Uma mensagem foi deixada|$1 mensagens foram deixadas|100=99+ mensagens foram deixadas}} no seu mural de usuário.",
+	"apihelp-socialprofile-send-message-description": "Envie uma mensagem para o mural de um usuário.",
+	"apihelp-socialprofile-send-message-summary": "Envie uma mensagem para o mural de um usuário.",
+	"apihelp-socialprofile-send-message-param-username": "O nome de usuário do destinatário.",
+	"apihelp-socialprofile-send-message-param-message": "Uma versão com código de URL da mensagem a ser enviada.",
+	"apihelp-socialprofile-send-message-param-type": "Tipo de mensagem: 0 para uma mensagem pública, 1 para uma mensagem privada.",
+	"apihelp-socialprofile-delete-message-description": "Excluir uma mensagem no mural.",
+	"apihelp-socialprofile-delete-message-summary": "Excluir uma mensagem no mural.",
+	"apihelp-socialprofile-delete-message-param-id": "Identificador exclusivo da mensagem do mural a ser excluída."
 }

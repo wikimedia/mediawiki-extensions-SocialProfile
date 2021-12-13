@@ -75,7 +75,6 @@
 	"user-recent-activity-user-message": "Sendis mesaĝon al",
 	"user-recent-activity-network-update": "Afiŝis penson",
 	"user-recent-system-gift": "Ricevis premion",
-	"user-profile-update-notloggedin-title": "Vi ne povas redakti vian profilon sen ensalutado",
 	"user-profile-update-saved": "Via profilo estis konservita",
 	"user-profile-update-log-section": "ŝanĝis sekcion",
 	"user-profile-default-country": "Usono",
@@ -161,5 +160,6 @@
 	"avatarlogpage": "Protokolo pri avatara alŝutado",
 	"avatarlogpagetext": "Jen protokolo de avataraj alŝutoj de uzantoj",
 	"user-profile-picture-log-entry": "alŝutis novan avataron",
-	"user-profile-picture-log-delete-entry": "forigis avataron de $1"
+	"user-profile-picture-log-delete-entry": "forigis avataron de $1",
+	"random-users-avatars-title": "Renkonti la kolektivo"
 }

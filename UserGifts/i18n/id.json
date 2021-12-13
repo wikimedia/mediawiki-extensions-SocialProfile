@@ -5,7 +5,9 @@
 			"Farras",
 			"Irwangatot",
 			"IvanLanin",
-			"Kandar"
+			"Kandar",
+			"Akmaie Ajam",
+			"Naufal06"
 		]
 	},
 	"giftmanager": "Pengelolaan hadiah",
@@ -33,7 +35,7 @@
 	"g-error-do-not-own": "Anda tidak memiliki hadiah ini.",
 	"g-error-message-blocked": "Saat ini anda sedang diblok dan tidak bisa memberi hadiah",
 	"g-error-message-invalid-link": "Pranala yang anda masukkan tidak benar.",
-	"g-error-message-login": "Anda harus masuk log untuk bisa memberi hadiah",
+	"g-error-message-login": "Anda harus [[Special:UserLogin|masuk log]] agar bisa memberi hadiah",
 	"g-error-message-no-user": "Pengguna yang anda coba buka tidak ada.",
 	"g-error-message-to-yourself": "Anda tidak bisa memberi hadiah kepada diri sendiri.",
 	"g-error-title": "Aduh, anda salah belok!",
@@ -53,6 +55,7 @@
 	"g-give-no-user-title": "Siapa yang ingin anda beri hadiah?",
 	"g-give-to-user-title": "Kirim hadiah \"$1\" ke $2",
 	"g-give-to-user-message": "Ingin memberikan [[Special:GiveGift/$1|hadiah istimewa]] kepada $1?",
+	"g-give-this-gift": "Beri hadiah",
 	"g-go-back": "Kembali",
 	"g-imagesbelow": "Di bawah ini adalah gambar-gambar yang akan digunakan dalam situs",
 	"g-large": "Besar",
@@ -80,5 +83,8 @@
 	"g-your-profile": "Profil anda",
 	"gift_received_subject": "$1 telah mengirimi anda hadiah $2 di {{SITENAME}}!",
 	"gift_received_body": "Hai $1.\n\n$2 baru saja mengirim Anda hadiah $3 pada {{SITENAME}}.\n\nIngin membaca catatan $2 tinggalkan untuk anda dan lihat hadiah Anda? Klik pranala di bawah:\n\n$4\n\nKami harap Anda senang!\n\nTerima kasih,\n\n\nTim {{SITENAME}} \n\n---\n\nHai, ingin berhenti mendapatkan surel dari kami?\n\nKlik $5\ndan ubah seting untuk nonaktifkan notifikasi surel.",
+	"echo-pref-tooltip-social-gift": "Beri tahu saya bila seseorang mengirim saya hadiah.",
+	"notification-social-gift-send-no-message": "$1 telah mengirimkan hadiah untukmu: $2.",
+	"notification-social-gift-send-bundle": "{{PLURAL:$1|Sebuah pengguna|$1 pengguna}} mengirim anda hadiah.",
 	"right-giftadmin": "Buat baru dan sunting hadiah yang sudah ada"
 }

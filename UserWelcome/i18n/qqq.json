@@ -6,7 +6,8 @@
 			"EugeneZelenko",
 			"Fryed-peach",
 			"Purodha",
-			"Siebrand"
+			"Siebrand",
+			"Umherirrender"
 		]
 	},
 	"userwelcome-desc": "{{desc}}",
@@ -16,6 +17,7 @@
 	"mp-welcome-needed-points": "Shown on the output of the <code>&lt;welcomeUser /&gt;</code> tag to inform the user about their current social level and the amount of points they need to level up.\nParameters:\n* $1 is the help page link (configurable via {{msg-mw|mp-userlevels-link}}) ''including the Help: namespace'', which is not a part of {{msg-mw|mp-userlevels-link}}!\n* $2 is the name of the user's current social user level; this is configurable via the system administrator (<code>$wgUserLevels</code> in [[mw:Manual:LocalSettings.php|LocalSettings.php]]\n* $3 is the amount of points the user needs to gain to advance to the next social level",
 	"mp-welcome-logged-in": "Shown on the output of the <code>&lt;welcomeUser /&gt;</code> tag as a greeting to the user.\n$1 is the user's user name (supports GENDER)",
 	"mp-requests-title": "Shown on the output of the <code>&lt;welcomeUser /&gt;</code> tag. This is followed by a listing of any and all new requests the user may have; these include:\n* new user board messages ({{msg-mw|mp-request-new-message}}\n* new awards (system gifts) ({{msg-mw|mp-request-new-award}})\n* new gift from another user ({{msg-mw|mp-request-new-gift}})\n* new foe request from another user ({{msg-mw|mp-request-new-foe}})\n* new friend request from another user ({{msg-mw|mp-request-new-friend}})\nThe user may have multiple \"open\" requests at the same time, e.g. 4 new board messages, 2 pending foe requests, one new award, etc.",
+	"mp-requests-message": "Used as label message",
 	"mp-request-new-message": "Shown on the output of the <code>&lt;welcomeUser /&gt;</code> tag when the user has one (or more) new UserBoard message.\n{{Identical|New messages}}",
 	"mp-request-new-award": "Shown on the output of the <code>&lt;welcomeUser /&gt;</code> tag when the user has one (or more) new award (system gift).\n$1 is the amount of new awards (system gifts) the user has",
 	"mp-request-new-gift": "Shown on the output of the <code>&lt;welcomeUser /&gt;</code> tag when the user has one (or more) new gift.\n$1 is the amount of new gifts  the user has",

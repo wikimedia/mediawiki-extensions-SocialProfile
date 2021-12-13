@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Malafaya"
+			"Malafaya",
+			"Joao Xavier"
 		]
 	},
+	"topusers": "Precipua uzeri en aktiveso",
 	"top-fans-stats-edit-count": "{{PLURAL:$1|Redaktajo|Redaktaji}}"
 }

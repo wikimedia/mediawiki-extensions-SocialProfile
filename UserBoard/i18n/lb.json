@@ -4,8 +4,6 @@
 			"Robby"
 		]
 	},
-	"boardblastlogintitle": "Dir musst ageloggt si fir Messagen a grousser Zuel op Panneauen ze schécken",
-	"boardblastlogintext": "Fir d'Fonctioun \"board blast\" ze benotze musst Dir [[Special:UserLogin|ageloggt sinn]].",
 	"messagesenttitle": "Geschéckte Messagen",
 	"boardblasttitle": "Messagen a grousser Zuel op d'Panneaue schécken",
 	"boardblaststep1": "1. Schrëtt: Schreiwt äre Message",
@@ -41,11 +39,13 @@
 	"userboard_sendbutton": "geschéckt",
 	"userboard_loggedout": "Dir musst [[Special:UserLogin|ageloggt si]] fir anere Benotzer e Message ze schécken.",
 	"userboard_showingmessages": "Weis {{PLURAL:$4|Noriicht $3|Noriichten $2-$3}} vu(n) {{PLURAL:$1|$1 Noriicht|$1 Noriichten}}",
+	"userboard-delete-success": "De Message gouf geläscht!",
 	"right-userboard-delete": "Noriichten vun Aneren um Panneau läschen",
 	"userboard-time-days": "{{PLURAL:$1|een Dag|$1 Deeg}}",
 	"userboard-time-hours": "{{PLURAL:$1|eng Stonn|$1 Stonnen}}",
 	"userboard-time-minutes": "{{PLURAL:$1|eng Minutt|$1 Minutten}}",
 	"userboard-time-seconds": "{{PLURAL:$1|eng Sekonn|$1 Sekonnen}}",
 	"message_received_subject": "De(n) $1 huet op äre Panneau op {{SITENAME}} geschriwwen",
-	"message_received_body": "Salut $1.\n\n$2 huet elo grad op Äre Panneau op {{SITENAME}} geschriwwen!\n\nKlickt hei ënnendrënenr fir Ären Tableau ze kucken!\n\n$3\n\n---\n\nWëllt Dir keng Maile méi vun eis kréien?\n\nKlickt $4\nan ännert Är Astellunge fir E-Mail-Noriichten auszeschalten."
+	"message_received_body": "Salut $1.\n\n$2 huet elo grad op Äre Panneau op {{SITENAME}} geschriwwen!\n\nKlickt hei ënnendrënenr fir Ären Tableau ze kucken!\n\n$3\n\n---\n\nWëllt Dir keng Maile méi vun eis kréien?\n\nKlickt $4\nan ännert Är Astellunge fir E-Mail-Noriichten auszeschalten.",
+	"apihelp-socialprofile-send-message-param-username": "De Benotzernumm vum Destinataire."
 }

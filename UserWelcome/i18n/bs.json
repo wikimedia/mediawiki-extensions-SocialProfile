@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"CERminator"
+			"CERminator",
+			"Obsuser"
 		]
 	},
 	"userwelcome-desc": "Dodaje <code>&lt;welcomeUser&gt;</code> posebnu oznaku logiranim korisnicima sa posebnim socijalnim informacijama",
@@ -11,7 +12,7 @@
 	"mp-welcome-needed-points": "Da bi ste napredovali do [[$1|'''$2''']] trebate još {{PLURAL:$3|''$3'' bod|''$3'' boda|''$3'' bodova}}!",
 	"mp-welcome-logged-in": "Zdravo $1",
 	"mp-requests-title": "Zahtjevi",
-	"mp-requests-message": "Imate slijedeće zahtjeve.",
+	"mp-requests-message": "Imate sljedeće zahtjeve.",
 	"mp-request-new-message": "nova poruka",
 	"mp-request-new-award": "$1 {{PLURAL:$1|nova nagrada|nove nagrade|novih nagrada}}",
 	"mp-request-new-gift": "$1 {{PLURAL:$1|novi poklon|nova poklona|novih poklona}}",

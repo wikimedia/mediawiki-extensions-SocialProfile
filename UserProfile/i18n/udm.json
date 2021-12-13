@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kotwys"
+		]
+	},
+	"user-profile-personal-email-needs-auth": "(вотэсбамысь ивортонъёсты октон понна почтады юнматэмын луыны кулэ)",
+	"user-profile-preferences-emails-manage": "Почта пыр ивортонъёсын Echo ватсан выре. Соосты тупатэмды [[Special:Preferences#mw-prefsection-echo|пуктэтъёсады]] луэ.",
+	"user-profile-create-threshold-friend-count": "{{PLURAL:$1|одӥг эш|$1 эш}}",
+	"user-profile-create-threshold-quiz-correct": "шонер валэктэм {{PLURAL:$1|одӥг юан|$1 юан}}",
+	"user-profile-privacy-status-privacy-foaf": "эшъёсылэн эшъёссы",
+	"removeavatar-remove-my-avatar": "Аватарме быдтоно",
+	"toggleuserpage-confirm": "Тӥляд профиль бамдылэсь типсэ зэмен ик-а воштэмды потэ?",
+	"user-profile-remove-avatar": "быдтоно"
+}

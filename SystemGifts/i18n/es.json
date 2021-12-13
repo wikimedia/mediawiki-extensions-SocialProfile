@@ -3,14 +3,16 @@
 		"authors": [
 			"Armando-Martin",
 			"Crazymadlover",
-			"Mor"
+			"Mor",
+			"ArenaL5",
+			"Fitoschido"
 		]
 	},
 	"systemgiftmanager": "Administrador de sistema de regalos",
 	"ga-addnew": "+ Agregar nuevo regalo",
 	"ga-back-edit-gift": "Regresar a editar este regalo",
 	"ga-back-gift-list": "Regresar a la lista de regalos",
-	"ga-back-link": "[[User:$1|< regresar a perfil de $1]]",
+	"ga-back-link": "[[User:$1|< Regresar a perfil de $1]]",
 	"ga-choosefile": "Escoger archivo:",
 	"ga-count": "$1 tiene $2 {{PLURAL:$2|premio|premios}}.",
 	"ga-create-gift": "Crear regalo",
@@ -68,5 +70,6 @@
 	"topawards-empty": "No están configurados los premios para esta categoría de premio, o bien nadie ha conseguido todavía esos premios.",
 	"system_gift_received_subject": "Usted ha recibido el premio $1 en {{SITENAME}}!",
 	"system_gift_received_body": "Hola $1.\n\nAcabas de recibir el premio $2 en {{SITENAME}}!\n\n\"$3\"\n\n¡Haz click abajo para ver tu vitrina de trofeos!\n\n$4\n\n¡Esperamos que te guste!\n\nGracias,\n\n\nEl equipo de {{SITENAME}}\n\n---\n\nHey, ¿Deseas dejar de recibir correos nuestros?\n\nHaz click en $5\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
+	"echo-category-title-social-award": "Premios",
 	"right-awardsmanage": "Crear nuevo y editar premios existentes"
 }

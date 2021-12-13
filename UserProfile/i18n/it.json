@@ -6,6 +6,7 @@
 		]
 	},
 	"user-contributions": "Contributi",
+	"user-stats-votes": "Voti",
 	"other-info-books": "Libri",
 	"profile-not-provided": "Non fornito",
 	"user-personal-info-real-name": "Nome vero",
@@ -19,11 +20,22 @@
 	"user-profile-personal-birthdate": "Data (MM/GG)",
 	"user-profile-personal-occupation": "Occupazione",
 	"user-profile-interests-books": "Libri",
-	"user-profile-preferences-emails": "Notifica via e-mail",
+	"user-profile-preferences-emails": "Notifiche via email",
 	"user-profile-update-button": "Aggiorna",
 	"user-profile-picture-large": "Grande",
 	"user-profile-picture-medium": "Medio",
 	"user-profile-picture-small": "Piccolo",
 	"user-profile-goback": "Indietro",
-	"user-page-link": "Pagina utente"
+	"user-profile-create-threshold-edits": "{{PLURAL:$1|una modifica|$1 modifiche}}",
+	"user-profile-create-threshold-votes": "{{PLURAL:$1|un voto|$1 voti}}",
+	"user-profile-create-threshold-comments": "{{PLURAL:$1|un commento|$1 commenti}}",
+	"user-profile-create-threshold-friend-count": "{{PLURAL:$1|un amico|$1 amici}}",
+	"user-profile-privacy-status-privacy-friends": "amici",
+	"user-profile-privacy-status-privacy-foaf": "amici di amici",
+	"user-page-link": "Pagina utente",
+	"user-profile-remove-avatar": "rimuovi",
+	"apihelp-socialprofile-userprofileprivacy-param-method": "Azione (che sia \"prendi\" o \"imposta\")",
+	"apihelp-socialprofile-userprofileprivacy-param-field_key": "Campo di destinazione chiave, ad esempio up_movies per il campo\"Film\"",
+	"apihelp-smpuserprofiletype-param-do": "Azione da eseguire (\"prendi\" o \"imposta\")",
+	"random-users-avatars-title": "Incontra la comunità"
 }

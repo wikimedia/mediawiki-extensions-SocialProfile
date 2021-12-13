@@ -81,8 +81,6 @@
 	"user-recent-activity-user-message": "en/he deus kaset ur gemennadenn da",
 	"user-recent-activity-network-update": "en/he deus postet ur soñj",
 	"user-recent-system-gift": "zo bet priziet",
-	"user-profile-update-notloggedin-title": "Dibosupl degas kemmoù en ho profil ma n'oc'h ket kevreet",
-	"user-profile-update-notloggedin-text": "Ne c'hallit ket aozañ ho profil hep bezañ kevreet.\nKlikit [[Special:UserLogin|amañ]] evit kevreañ pe klikit [[Special:UserLogin/signup|amañ]] evit en em enskrivañ.",
 	"user-profile-update-saved": "Enrollet eo bet ho profil",
 	"user-profile-edit-profile-update-saved": "Enrollet eo bet profil an implijer ervat",
 	"user-profile-update-log-section": "kevrenn kemmet",
@@ -180,5 +178,6 @@
 	"user-profile-picture-log-entry": "en deus kaset un avatar nevez",
 	"user-profile-picture-log-delete-entry": "en deus dilamet avatar $1",
 	"right-avatarremove": "Lemel avatarioù an implijer",
-	"right-editothersprofiles": "Hizivaat profiloù sokial implijerien all"
+	"right-editothersprofiles": "Hizivaat profiloù sokial implijerien all",
+	"random-users-avatars-title": "Ober anaoudegezh gant ar gumuniezh"
 }

@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jon Harald Søby"
+			"Jon Harald Søby",
+			"Saederup92"
 		]
 	},
+	"boardblast-js-sending": "Sender beskeder...",
 	"userboard_private": "privat",
 	"userboard_sendbutton": "send"
 }

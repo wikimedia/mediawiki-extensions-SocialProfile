@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"ಮಲ್ನಾಡಾಚ್ ಕೊಂಕ್ಣೊ"
+		]
+	},
+	"userboard_private": "ಖಾಸಗಿ",
+	"userboard_public": "ಸಾರ್ವಜನಿಕ",
+	"userboard_sendbutton": "ಕಳುಹಿಸಿ",
+	"userboard-time-days": "{{PLURAL:$1|ಒಂದು ದಿನ|$1 ದಿನಗಳು}}",
+	"userboard-time-hours": "{{PLURAL:$1|ಒಂದು ಗಂಟೆ|$1 ಗಂಟೆಗಳು}}",
+	"userboard-time-minutes": "$1 {{PLURAL:$1|ನಿಮಿಷ|ನಿಮಿಷಗಳು}}",
+	"userboard-time-seconds": "{{PLURAL:$1|ಒಂದು ಸೆಕೆಂಡ್|$1 ಸೆಕೆಂಡುಗಳು}}"
+}

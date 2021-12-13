@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Rancher",
-			"Михајло Анђелковић"
+			"Михајло Анђелковић",
+			"BadDog"
 		]
 	},
-	"messagesenttitle": "Поруке послате",
+	"userboard-desc": "Омогућава слање порука на таблу",
+	"messagesenttitle": "Поруке су послате",
 	"boardblaststep1": "Први корак - Напишите Вашу поруку",
 	"boardblastprivatenote": "Све поруке ће бити послате као приватне поруке",
 	"boardblaststep2": "Корак 2 - Назначите коме желите да пожаљете поруку",
@@ -16,18 +18,27 @@
 	"boardlinkselectfoes": "Означи непријатеље",
 	"boardlinkunselectfoes": "Скини ознаке са непријатеља",
 	"boardnofriends": "Немате пријатеља којима бисте послали поруку!",
+	"boardblast-js-sending": "Слање порука…",
+	"boardblast-error-missing-message": "Унесите поруку",
+	"boardblast-error-missing-user": "Изаберите бар једну особу",
 	"userboard_backprofile": "Повратак на профил од $1",
 	"userboard_backyourprofile": "Назад на профил",
 	"userboard_sendmessage": "Пошаљи поруку кориснику $1",
 	"userboard_posted_ago": "послато пре $1",
 	"userboard_private": "приватно",
 	"userboard_public": "јавно",
-	"userboard_messagetype": "Тип поруке",
+	"userboard_messagetype": "Врста поруке",
 	"userboard_nomessages": "Нема порука.",
 	"userboard_sendbutton": "пошаљи",
-	"userboard_loggedout": "Морате бити [[Special:UserLogin|улоговани]] да бисте слали поруке другим корисницима.",
+	"userboard_loggedout": "Морате се [[Special:UserLogin|пријавити]] да бисте слали поруке другим корисницима.",
+	"userboard-delete-success": "Порука је избрисана.",
 	"userboard-time-days": "{{PLURAL:$1|један дан|$1 дана|$1 дана}}",
 	"userboard-time-hours": "{{PLURAL:$1|један сат|$1 сата|$1 сати}}",
 	"userboard-time-minutes": "{{PLURAL:$1|једна минута|$1 минуте|$1 минуте|$1 минуте|$1 минута}}",
-	"userboard-time-seconds": "{{PLURAL:$1|једна секунда|$1 секунде|$1 секунде|$1 секунде|$1 секунди}}"
+	"userboard-time-seconds": "{{PLURAL:$1|једна секунда|$1 секунде|$1 секунде|$1 секунде|$1 секунди}}",
+	"echo-category-title-social-msg": "Поруке на корисничкој табли",
+	"echo-pref-tooltip-social-msg": "Обавештавај ме када неко остави поруку на мојој корисничкој табли.",
+	"apihelp-socialprofile-send-message-param-username": "Корисничко име примаоца",
+	"apihelp-socialprofile-delete-message-description": "Брисање UserBoard поруке",
+	"apihelp-socialprofile-delete-message-summary": "Брисање UserBoard поруке"
 }

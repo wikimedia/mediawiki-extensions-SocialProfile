@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"useractivity": "Attivitate de l'amice",
+	"useractivity-desc": "Face 'ndrucà l'attività social de le utinde",
+	"useractivity-award": "$1 ave avute 'nu premie",
+	"useractivity-all": "'Ndruche tutte",
+	"useractivity-edit": "$1 ave cangiate {{PLURAL:$4|'a pàgene|le pàggene:}} $3",
+	"useractivity-foe": "$1 {{PLURAL:$2|jè mo nemiche cu|sò mò nemice cu}} $3",
+	"useractivity-filter": "Filtre",
+	"useractivity-friend": "$1 {{PLURAL:$2|jè mo amiche cu|so mò amice cu}} $3",
+	"useractivity-gift": "$1 ave avute 'nu riale da $2",
+	"useractivity-group-edit": "{{PLURAL:$1|'nu cangiamende|$1 cangiaminde}}",
+	"useractivity-group-comment": "{{PLURAL:$1|'nu commende|$1 commende}}",
+	"useractivity-group-user_message": "{{PLURAL:$1|'nu messàgge|$1 messàgge}}",
+	"useractivity-group-friend": "{{PLURAL:$1|'n'amiche|$1 amice}}",
+	"useractivity-network-thought": "<b><a href=\"$4\">$2</a></b> ave 'nu penziere pa rezze $3",
+	"useractivity-siteactivity": "Attività d'u site",
+	"useractivity-title": "Attività de l'amice",
+	"useractivity-user_message": "$1 ave mannate {{PLURAL:$4|'nu messàgge|messàgge}} a $3",
+	"useractivity-comment": "$1 ave commendate {{PLURAL:$4|sus 'a pàgene|sus a le pàggene:}} $3"
+}

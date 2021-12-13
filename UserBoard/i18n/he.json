@@ -6,8 +6,6 @@
 			"YaronSh"
 		]
 	},
-	"boardblastlogintitle": "עליכם להיכנס לחשבון כדי לשלוח מסרים המוניים",
-	"boardblastlogintext": "כדי לשלוח מסרים המוניים, עליכם [[Special:UserLogin|להיכנס לחשבון]].",
 	"messagesenttitle": "ההודעות נשלחו",
 	"boardblasttitle": "שליחת מסר המוני",
 	"boardblaststep1": "שלב 1 – כתבו את הודעתכם",
@@ -44,10 +42,10 @@
 	"userboard_loggedout": "עליכם [[Special:UserLogin|להיכנס לחשבון]] כדי לשלוח הודעות למשתמשים אחרים.",
 	"userboard_showingmessages": "הצגת {{PLURAL:$4|הודעה $3|הודעות $2-$3}} מתוך {{PLURAL:$1|הודעה אחת|$1 הודעות}}",
 	"right-userboard-delete": "מחיקת הודעות לוח שכתבו אחרים",
-	"userboard-time-days": "{{PLURAL:$1|יום|$1 ימים|יומיים}}",
-	"userboard-time-hours": "{{PLURAL:$1|שעה|$1 שעות|שעתיים}}",
+	"userboard-time-days": "{{PLURAL:$1|יום|יומיים|$1 ימים}}",
+	"userboard-time-hours": "{{PLURAL:$1|שעה|שעתיים|$1 שעות}}",
 	"userboard-time-minutes": "{{PLURAL:$1|דקה|$1 דקות}}",
 	"userboard-time-seconds": "{{PLURAL:$1|שנייה|$1 שניות}}",
 	"message_received_subject": "$1 כתב בלוח שלך ב{{grammar:תחילית|{{SITENAME}}}}",
-	"message_received_body": "שלום $1:\n\n$2 הרגע כתב בלוח שלכם ב{{grammar:תחילית|{{SITENAME}}}}!\n\nלחצו למטה כדי לצפות בלוח שלכם!\n\n$3\n\n---\n\nרוצים להפסיק לקבל מאיתנו הודעות בדוא\"ל?\n\nלחצו $4\nושנו את ההגדרות שלכם כדי לבטל קבלת התרעות בדוא\"ל."
+	"message_received_body": "שלום $1:\n\n$2 {{GENDER:$2|כתב|כתבה}} הרגע בלוח שלכם באתר {{SITENAME}}!\n\nנא ללחוץ למטה כדי לצפות בלוח שלך!\n\n$3\n\n---\n\nהיי, רוצים להפסיק לקבל מאיתנו הודעות דוא\"ל?\n\nנא ללחוץ על $4\nולשנות את ההגדרות שלך כדי לבטל הודעות בדוא\"ל."
 }

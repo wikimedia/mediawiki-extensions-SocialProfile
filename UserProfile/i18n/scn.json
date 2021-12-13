@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ajeje Brazorf"
+		]
+	},
+	"user-time-ago": "$1 fa",
+	"user-count-separator": "$1 di $2",
+	"other-info-title": "Àutri nfurmazzioni",
+	"other-info-music": "Mùsica",
+	"other-info-books": "Libbra",
+	"user-personal-info-real-name": "Nomu veru",
+	"user-profile-section-interests": "Àutri nfurmazzioni",
+	"user-profile-personal-info": "Nfurmazzioni",
+	"user-profile-personal-name": "Nomu",
+	"user-profile-interests-tv": "TV",
+	"user-profile-interests-music": "Mùsica",
+	"user-profile-interests-books": "Libbra",
+	"user-profile-picture-small": "Nicu"
+}

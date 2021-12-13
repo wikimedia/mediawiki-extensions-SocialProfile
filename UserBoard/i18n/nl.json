@@ -1,11 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Siebrand"
+			"Siebrand",
+			"McDutchie"
 		]
 	},
-	"boardblastlogintitle": "U moet aangemeld zijn om berichten naar meerdere gebruikers te kunnen verzenden",
-	"boardblastlogintext": "U moet [[Special:UserLogin|aanmelden]] om berichten naar meerdere gebruikers te kunnen verzenden.",
 	"messagesenttitle": "Berichten verzonden",
 	"boardblasttitle": "Bericht aan meerdere gebruikers verzenden",
 	"boardblaststep1": "Stap 1: uw bericht schrijven",
@@ -47,5 +46,5 @@
 	"userboard-time-minutes": "{{PLURAL:$1|één minuut|$1 minuten}}",
 	"userboard-time-seconds": "{{PLURAL:$1|één seconde|$1 seconden}}",
 	"message_received_subject": "$1 heeft op uw board op {{SITENAME}} geschreven",
-	"message_received_body": "Hallo $1.\n\n$2 heeft net een bericht achtergelaten op uw board op {{SITENAME}}!\n\nKlik op de onderstaande verwijzing om uw board te bekijken!\n\n$3\n\n---\n\nWilt u niet langer e-mails van ons ontvangen?\n\nKlik $4\nen wijzig uw instellingen om e-mailberichten uit te schakelen."
+	"message_received_body": "Hallo $1.\n\n$2 heeft net een bericht achtergelaten op uw board op {{SITENAME}}!\n\nKlik op de onderstaande koppeling om uw board te bekijken!\n\n$3\n\n---\n\nWilt u niet langer e-mails van ons ontvangen?\n\nKlik $4\nen wijzig uw instellingen om e-mailberichten uit te schakelen."
 }

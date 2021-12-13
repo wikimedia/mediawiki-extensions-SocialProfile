@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Toliño"
+			"Toliño",
+			"ArenaL5"
 		]
 	},
 	"editprofile": "Editar os perfís doutros usuarios",
@@ -25,13 +26,13 @@
 	"user-send-message": "Enviar unha mensaxe",
 	"user-send-gift": "Enviar un agasallo",
 	"user-contributions": "Contribucións",
-	"user-stats-edits": "{{PLURAL:$1|Edición|Edicións}}",
-	"user-stats-votes": "{{PLURAL:$1|Voto|Votos}}",
-	"user-stats-comments": "{{PLURAL:$1|Comentario|Comentarios}}",
-	"user-stats-recruits": "{{PLURAL:$1|Novo|Novos}}",
-	"user-stats-poll-votes": "{{PLURAL:$1|Voto obtido|Votos obtidos}}",
-	"user-stats-picture-game-votes": "{{PLURAL:$1|Voto|Votos}} da imaxe do xogo",
-	"user-stats-quiz-points": "{{PLURAL:$1|Punto|Puntos}} do concurso",
+	"user-stats-edits": "Edicións",
+	"user-stats-votes": "Votos",
+	"user-stats-comments": "Comentarios",
+	"user-stats-recruits": "Novos",
+	"user-stats-poll-votes": "Votos obtidos",
+	"user-stats-picture-game-votes": "Votos da imaxe do xogo",
+	"user-stats-quiz-points": "Puntos do concurso",
 	"user-stats-pick-points": "{{PLURAL:$1|Punto|Puntos}} que obtiven",
 	"casual-games-title": "Xogos casuais",
 	"casual-game-quiz": "Cuestionario",
@@ -82,8 +83,6 @@
 	"user-recent-activity-user-message": "Enviou unha mensaxe a",
 	"user-recent-activity-network-update": "Fixo un comentario",
 	"user-recent-system-gift": "Recibido un premio",
-	"user-profile-update-notloggedin-title": "Non pode editar o seu perfil sen ter accedido ao sistema",
-	"user-profile-update-notloggedin-text": "Non pode editar o seu perfil sen ter accedido ao sistema.  Faga clic [[Special:UserLogin|aquí]] para acceder ou faga clic [[Special:UserLogin/signup|aquí]] para rexistrarse.",
 	"user-profile-update-saved": "Gardouse o seu perfil",
 	"user-profile-edit-profile-update-saved": "O perfil do usuario gardouse correctamente",
 	"user-profile-update-log-section": "cambiou a sección",
@@ -182,5 +181,6 @@
 	"user-profile-picture-log-entry": "cargou un novo avatar",
 	"user-profile-picture-log-delete-entry": "borrou o avatar de $1",
 	"right-avatarremove": "Eliminar os avatares dun usuario",
-	"right-editothersprofiles": "Actualizar os perfís sociais doutros usuarios"
+	"right-editothersprofiles": "Actualizar os perfís sociais doutros usuarios",
+	"random-users-avatars-title": "Coñeza a comunidade"
 }

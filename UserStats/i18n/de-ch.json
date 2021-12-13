@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Geitost"
+		]
+	},
+	"level-advance-body": "Hallo $1,\n\nDu bist jetzt ein «$2» bei {{SITENAME}}!\n\nEs gratuliert das {{SITENAME}}-Team\n\n---\nDu willst gar keine E-Mails mehr von uns bekommen?\n\nKlicke auf $3\nund ändere deine Einstellungen, um die E-Mail-Benachrichtigungen abzustellen."
+}

@@ -49,7 +49,7 @@
 	"top-fans-stats-comment-score-negative-given": "{{PLURAL:$1|Desaprovação dada|Desaprovações dadas}}",
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|Prenda recebida|Prendas recebidas}}",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Prenda enviada|Prendas enviadas}}",
-	"right-updatepoints": "Actualizar contadores de edições",
+	"right-updatepoints": "Atualizar contadores de edições",
 	"right-generatetopusersreport": "Gerar relatórios dos utilizadores de topo",
 	"level-advanced-to": "avançou para o nível <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "Agora é um \"$1\" na {{SITENAME}}!",
@@ -67,5 +67,8 @@
 	"user-stats-report-monthly-edit-summary": "relatório de utilizadores mensal automatizado",
 	"user-stats-report-weekly-page-title": "Relatório Semanal de Pontos dos Utilizadores ($1)",
 	"user-stats-report-monthly-page-title": "Relatório Mensal de Pontos dos Utilizadores ($1)",
-	"user-stats-report-error-variable-not-set": "A variável $wgUserStatsPointValues['points_winner_$1'] tem de ter um valor maior do que 0 no ficheiro LocalSettings.php!"
+	"user-stats-report-error-variable-not-set": "A variável $wgUserStatsPointValues['points_winner_$1'] tem de ter um valor maior do que 0 no ficheiro LocalSettings.php!",
+	"random-user-points-weekly": "{{PLURAL:$1|um ponto|$1 pontos}} esta semana",
+	"random-user-points-monthly": "{{PLURAL:$1|um ponto|$1 pontos}} este mês",
+	"random-user-about-me": "Sobre mim"
 }

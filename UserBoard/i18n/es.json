@@ -7,11 +7,11 @@
 			"Locos epraix",
 			"Mor",
 			"Sanbec",
-			"Translationista"
+			"Translationista",
+			"Fitoschido",
+			"Indiralena"
 		]
 	},
-	"boardblastlogintitle": "Ud. debe ingresar como usuario para enviar mensajes a otros tablones",
-	"boardblastlogintext": "Para enviar mensajes, Ud. debe [[Special:UserLogin|ingresar como usuario]].",
 	"messagesenttitle": "Mensajes enviados",
 	"boardblasttitle": "Enviar mensaje a otros tablones",
 	"boardblaststep1": "Paso 1 - Escribe tu mensaje",
@@ -53,5 +53,7 @@
 	"userboard-time-minutes": "{{PLURAL:$1|un minuto|$1 minutos}}",
 	"userboard-time-seconds": "{{PLURAL:$1|un segundo|$1 segundos}}",
 	"message_received_subject": "$1 escribió en tu tablón en {{SITENAME}}",
-	"message_received_body": "Hola, $1.\n\n$2 acaba de escribir en tu tablón en {{SITENAME}}!\n\n¡Haz click debajo para revisar tu tablón!\n\n$3\n\n---\n\nHey, ¿deseas dejar de recibir correos electrónicos de nosotros?\n\nHaz click en $4\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico."
+	"message_received_body": "Hola, $1.\n\n$2 acaba de escribir en tu tablón en {{SITENAME}}!\n\n¡Haz click debajo para revisar tu tablón!\n\n$3\n\n---\n\nHey, ¿deseas dejar de recibir correos electrónicos de nosotros?\n\nHaz click en $4\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
+	"echo-pref-tooltip-social-msg": "Notificarme cuando alguien deje un mensaje en mi tablón de usuario.",
+	"apihelp-socialprofile-send-message-param-username": "El nombre de usuario del destinatario."
 }

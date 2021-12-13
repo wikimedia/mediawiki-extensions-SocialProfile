@@ -2,15 +2,24 @@
 	"@metadata": {
 		"authors": [
 			"Byrial",
-			"Jon Harald Søby"
+			"Jon Harald Søby",
+			"Saederup92"
 		]
 	},
 	"user-count-separator": "$1 af $2",
+	"user-stats-votes": "Stemmer",
+	"user-stats-comments": "Kommentarer",
 	"other-info-tv": "TV",
 	"user-personal-info-real-name": "Virkeligt navn:",
 	"user-profile-personal-name": "Navn",
 	"user-profile-personal-city": "By",
 	"user-profile-personal-country": "Land",
 	"user-profile-interests-tv": "TV",
-	"user-page-link": "Brugerside"
+	"user-profile-create-threshold-title": "Opret brugerprofil",
+	"user-profile-privacy-status-privacy-public": "offentlig",
+	"user-profile-privacy-status-privacy-hidden": "skjult",
+	"user-profile-privacy-status-privacy-friends": "venner",
+	"user-profile-privacy-status-privacy-foaf": "venners venner",
+	"user-page-link": "Brugerside",
+	"user-profile-remove-avatar": "fjern"
 }

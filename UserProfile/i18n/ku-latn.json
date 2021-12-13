@@ -1,15 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
-			"Welathêja"
+			"Welathêja",
+			"George Animal"
 		]
 	},
 	"other-info-tv": "TV",
 	"other-info-music": "Muzîk",
+	"user-personal-info-schools": "Dibistan",
 	"user-profile-personal-name": "Nav",
 	"user-profile-personal-location": "Cîh",
 	"user-profile-personal-city": "Bajar",
 	"user-profile-personal-country": "Welat",
+	"user-profile-personal-schools": "Dibistan",
 	"user-profile-interests-tv": "TV",
 	"user-profile-interests-music": "Muzîk"
 }

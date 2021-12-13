@@ -1,10 +1,25 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sasan700"
+			"Sasan700",
+			"Умар"
 		]
 	},
+	"user-time-ago": "$1 хьалха",
+	"user-view-all": "Йерриге хьажар",
+	"user-upload-image": "Сурт чудяьккхи",
+	"user-edit-this": "Нисйе хӀара",
+	"user-edit-profile": "Нисйе профиль",
+	"user-add-friend": "ТӀетоха доттагӀ сана",
+	"user-send-message": "ДӀабахьийта хаам",
 	"user-contributions": "Къинхьегам",
+	"user-stats-comments": "Комменташ",
 	"other-info-books": "Жайнаш",
-	"user-profile-interests-books": "Жайнаш"
+	"profile-updated-personal": "Карлайаккха хьай профиль",
+	"user-profile-personal-info": "Хаам",
+	"user-profile-interests-books": "Жайнаш",
+	"user-profile-update-button": "Карлайаккха",
+	"edit-profile-title": "Хьай профиль нисян",
+	"user-page-link": "Декъашхочун агӀо",
+	"user-wiki-link": "Вики-агӀо"
 }

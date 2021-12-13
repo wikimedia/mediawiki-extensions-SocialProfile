@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Cedric31"
+			"Cedric31",
+			"Guilhelma"
 		]
 	},
 	"populateuserprofiles": "Completar los perfils d'utilizaire",
@@ -76,8 +77,6 @@
 	"user-recent-activity-user-message": "A mandat un messatge a",
 	"user-recent-activity-network-update": "A mandat una pensada",
 	"user-recent-system-gift": "A recebut una recompensa",
-	"user-profile-update-notloggedin-title": "Podètz modificar vòstre perfil sens vos èsser enregistrat dins una sesilha",
-	"user-profile-update-notloggedin-text": "Pòt pas editar vòstre perfil sens èsser en sesilha. Clicatz [[Special:UserLogin|aicí]] per vos metre en sesilha o alara [[Special:UserLogin/signup|lai]] per vos enregistrar.",
 	"user-profile-update-saved": "Vòstre perfil es estat enregistrat",
 	"user-profile-update-log-section": "seccion cambiada",
 	"user-profile-default-country": "Estats Units d'America",
@@ -169,5 +168,6 @@
 	"avatarlogpagetext": "Vaquí lo jornal dels impòrts dels avatars",
 	"user-profile-picture-log-entry": "a importat un avatar novèl",
 	"user-profile-picture-log-delete-entry": "a suprimit l’avatar de $1",
-	"right-avatarremove": "Levar d'avatars d'utilizaires"
+	"right-avatarremove": "Levar d'avatars d'utilizaires",
+	"random-users-avatars-title": "Fasètz coneissença amb la comunautat"
 }

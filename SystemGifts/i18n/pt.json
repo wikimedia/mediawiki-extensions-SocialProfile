@@ -16,7 +16,7 @@
 	"ga-count": "$1 tem {{PLURAL:$2|um prémio|$2 prémios}}.",
 	"ga-create-gift": "Criar prenda",
 	"ga-created": "A prenda foi criada",
-	"ga-currentimage": "Imagem actual",
+	"ga-currentimage": "Imagem atual",
 	"ga-error-message-invalid-link": "O link que forneceu é inválido.",
 	"ga-error-message-no-user": "O utilizador que pretende ver não existe.",
 	"ga-error-title": "Ui, enganou-se no caminho!",
@@ -66,6 +66,6 @@
 	"topawards-friend-milestone": "Objectivo de {{PLURAL:$1|$1 Amigo|$1 Amigos}}",
 	"topawards-empty": "Ou não existem prémios configurados para esta categoria, ou ainda ninguém recebeu estes prémios.",
 	"system_gift_received_subject": "Recebeu o prémio $1 na {{SITENAME}}!",
-	"system_gift_received_body": "Olá $1,\n\nAcaba de receber o prémio $2 na {{SITENAME}}!\n\n\"$3\"\n\nClique abaixo para ver a sua estante de troféus!\n\n$4\n\nEsperamos que tenha gostado!\n\nObrigado,\n\n\nA equipa da {{SITENAME}}\n\n---\n\nOlhe, quer parar de receber as nossas mensagens?\n\nClique $5\ne altere as suas preferências para desactivar as notificações por correio electrónico.",
+	"system_gift_received_body": "Olá $1,\n\nAcaba de receber o prémio $2 na wiki {{SITENAME}}!\n\n\"$3\"\n\nClique abaixo para ver a sua estante de troféus!\n\n$4\n\nEsperamos que tenha gostado!\n\nObrigado,\n\n\nA equipa da wiki {{SITENAME}}\n\n---\n\nOlhe, quer parar de receber as nossas mensagens?\n\nClique $5\ne altere as suas preferências para desativar as notificações por correio eletrónico.",
 	"right-awardsmanage": "Criar novos prémios e editar os existentes"
 }

@@ -2,13 +2,19 @@
 	"@metadata": {
 		"authors": [
 			"Rancher",
-			"Михајло Анђелковић"
+			"Михајло Анђелковић",
+			"BadDog",
+			"Kizule",
+			"Milicevic01",
+			"Zoranzoki21"
 		]
 	},
 	"useractivity": "Активност пријатеља",
+	"useractivity-desc": "Приказује друштвену активност корисника",
 	"useractivity-award": "$1 је примио/ла награду",
 	"useractivity-all": "Прикажи све",
 	"useractivity-foe": "$1 {{PLURAL:$2|је сада непријатељ са}} $3",
+	"useractivity-filter": "Филтер",
 	"useractivity-friend": "$1 {{PLURAL:$2|је сада пријатељ са}} $3",
 	"useractivity-gift": "$1 је примио/ла поклон од $2",
 	"useractivity-group-edit": "{{PLURAL:$1|једна измена|$1 измене|$1 измена}}",

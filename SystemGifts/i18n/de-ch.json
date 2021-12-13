@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Geitost"
+		]
+	},
+	"system_gift_received_body": "Hallo $1,\n\ndu hast soeben die $2-Auszeichnung bei {{SITENAME}} erhalten!\n\n«$3»\n\nKlicke auf den nachfolgenden Link, um deine Trophäe anzusehen:\n\n$4\n\nWir hoffen, sie gefällt dir!\n\nVielen Dank und viele Grüsse,\n\nDas {{SITENAME}}-Team\n\n---\n\nDu möchtest keine E-Mails von uns erhalten?\n\nKlicke $5\nund ändere deine Einstellungen so, dass E-Mail-Benachrichtigungen deaktiviert sind."
+}

@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Siebrand",
-			"Tvdm"
+			"Tvdm",
+			"Mainframe98"
 		]
 	},
 	"giftmanager": "Giftenbeheer",
@@ -30,7 +31,7 @@
 	"g-error-do-not-own": "U bezit deze gift niet.",
 	"g-error-message-blocked": "U bent momenteel geblokkeerd en u kunt geen giften geven",
 	"g-error-message-invalid-link": "De verwijzing die u hebt ingevoerd is ongeldig.",
-	"g-error-message-login": "U dient in te loggen om giften te kunnen geven",
+	"g-error-message-login": "U dient [[Special:UserLogin|in te loggen]] om giften te kunnen geven",
 	"g-error-message-no-user": "De gebruiker die u wilt weergeven bestaat niet.",
 	"g-error-message-to-yourself": "U kunt geen gift aan uzelf geven.",
 	"g-error-title": "Oeps, er ging iets fout!",

@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Умар"
+		]
+	},
+	"userboard_sendmessage": "ДӀабахьийта хаам $1",
+	"userboard_public": "массарна лело йиш йолуш",
+	"userboard_sendbutton": "дӀадахьийта",
+	"userboard-time-hours": "{{PLURAL:$1|$1 сахьт|$1 сахьт|$1 сахьт}}"
+}

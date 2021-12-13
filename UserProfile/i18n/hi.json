@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kaustubh"
+			"Kaustubh",
+			"Abijeet Patro"
 		]
 	},
+	"user-stats-edits": "सम्पादन",
 	"other-info-title": "अन्य ज़ानकारी",
 	"user-personal-info-title": "वैयक्तिक ज़ानकारी",
 	"user-personal-info-real-name": "असली नाम",
@@ -12,5 +14,6 @@
 	"user-profile-personal-name": "नाम",
 	"user-profile-picture-large": "बडा",
 	"user-profile-picture-medium": "मध्यम",
-	"user-profile-picture-small": "छोटा"
+	"user-profile-picture-small": "छोटा",
+	"user-profile-remove-avatar": "हटायें"
 }

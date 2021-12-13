@@ -2,20 +2,21 @@
 	"@metadata": {
 		"authors": [
 			"Joseph",
-			"Karduelis"
+			"Karduelis",
+			"MuratTheTurkish"
 		]
 	},
 	"userwelcome-desc": "Kullanıcıya-özgü sosyal bilgileri giriş yapmış kullanıcılara göstermek için <code>&lt;welcomeUser&gt;</code> etiketini ekler",
 	"mp-userlevels-link": "Kullanıcı seviyeleri",
 	"mp-welcome-upload": "Yükle",
-	"mp-welcome-points": "$1 {{PLURAL:$1|puan|puan}}",
-	"mp-welcome-needed-points": "[[$1|'''$2''']]'ye ilerlemek için ''$3'' {{PLURAL:$3|puan|puan}} daha kazanın!",
-	"mp-welcome-logged-in": "$1 Hoşgeldiniz",
+	"mp-welcome-points": "$1 puan",
+	"mp-welcome-needed-points": "[[$1|'''$2''']] kullanıcıya ilerlemek için ''$3'' puan daha kazanın!",
+	"mp-welcome-logged-in": "Merhaba $1",
 	"mp-requests-title": "İstekler",
-	"mp-requests-message": "Şu istekleriniz var.",
-	"mp-request-new-message": "yeni mesajlar",
-	"mp-request-new-award": "$1 yeni {{PLURAL:$1|ödül|ödül}}",
-	"mp-request-new-gift": "$1 yeni {{PLURAL:$1|hediye|hediye}}",
-	"mp-request-new-foe": "$1 yeni {{PLURAL:$1|düşman|düşman}}",
-	"mp-request-new-friend": "$1 yeni {{PLURAL:$1|arkadaş|arkadaş}}"
+	"mp-requests-message": "Aşağıdaki istekleriniz var.",
+	"mp-request-new-message": "yeni mesaj",
+	"mp-request-new-award": "$1 yeni ödül",
+	"mp-request-new-gift": "$1 yeni hediye",
+	"mp-request-new-foe": "$1 yeni düşman",
+	"mp-request-new-friend": "$1 yeni arkadaş"
 }

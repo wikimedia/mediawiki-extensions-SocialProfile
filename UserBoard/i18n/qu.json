@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"AlimanRuna"
+		]
+	},
+	"userboard_posted_ago": "Kachasqa $1 ñaqha",
+	"userboard-time-days": "{{PLURAL:$1|huk p'unchaw|$1 p'unchawkuna}}"
+}

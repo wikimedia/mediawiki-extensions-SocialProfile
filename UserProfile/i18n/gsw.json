@@ -83,8 +83,6 @@
 	"user-recent-activity-user-message": "Nochricht gschickt an",
 	"user-recent-activity-network-update": "Het e Gedanke vereffentligt",
 	"user-recent-system-gift": "Uuszeichnig iberchu",
-	"user-profile-update-notloggedin-title": "Du chasch Dyy Profil nit bearbeite ohni aagmäldet z syy.",
-	"user-profile-update-notloggedin-text": "Du chasch Dyy Profil nit bearbeite ohni aagmäldet z syy.\nDruck [[Special:UserLogin|doo ]] go Di aamälde oder [[Special:UserLogin/signup|doo]] go ne Benutzerkonto aalege.",
 	"user-profile-update-saved": "Dyy Profil isch gspycheret wore",
 	"user-profile-edit-profile-update-saved": "S Benutzerprofil isch erfolgryych gspyychert worde",
 	"user-profile-update-log-section": "Abschnitt gänderet",
@@ -183,5 +181,6 @@
 	"user-profile-picture-log-entry": "Neje Avatar uffelade",
 	"user-profile-picture-log-delete-entry": "Avatar vu $1 isch glescht wore",
 	"right-avatarremove": "Nimm dr Avatar vum Benutzer use",
-	"right-editothersprofiles": "D Benutzerprofil vo andre Benutzer aktualisiere"
+	"right-editothersprofiles": "D Benutzerprofil vo andre Benutzer aktualisiere",
+	"random-users-avatars-title": "Triff d Community"
 }

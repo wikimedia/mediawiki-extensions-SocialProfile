@@ -77,8 +77,6 @@
 	"user-recent-activity-user-message": "أرسل رسالة إلى",
 	"user-recent-activity-network-update": "بعث خاطرة",
 	"user-recent-system-gift": "حصل على جائزة",
-	"user-profile-update-notloggedin-title": "لا يمكنك تعديل ملفك بدون أن تكون مسجل الدخول",
-	"user-profile-update-notloggedin-text": "أنت لا يمكنك تعديل ملفك بدون تسجيل الدخول.\nاضغط [[Special:UserLogin|هنا]] لتسجيل الدخول أو اضغط [[Special:UserLogin/signup|هنا]] للتسجيل.",
 	"user-profile-update-saved": "تم حفظ ملفك",
 	"user-profile-update-log-section": "غير القسم",
 	"user-profile-default-country": "الولايات المتحدة",
@@ -170,5 +168,6 @@
 	"avatarlogpagetext": "ده سجل بعمليات تحميل أفاتر اليوزرز",
 	"user-profile-picture-log-entry": "رفع أفاتر جديد",
 	"user-profile-picture-log-delete-entry": "حذف الأفاتر الخاص ب$1",
-	"right-avatarremove": "إزالة أفاترات اليوزرات"
+	"right-avatarremove": "إزالة أفاترات اليوزرات",
+	"random-users-avatars-title": "مقابلة المجتمع"
 }

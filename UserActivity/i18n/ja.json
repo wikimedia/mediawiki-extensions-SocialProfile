@@ -5,7 +5,9 @@
 			"Hosiryuhosi",
 			"Naohiro19",
 			"Schu",
-			"青子守歌"
+			"青子守歌",
+			"Rxy",
+			"Shirayuki"
 		]
 	},
 	"useractivity": "友達の活動度",
@@ -16,8 +18,8 @@
 	"useractivity-friend": "$1 {{PLURAL:$2|は次の人と友好関係にあります|は次の人々と友好関係にあります}} $3",
 	"useractivity-gift": "$1が$2からのギフトを受け取りました",
 	"useractivity-group-edit": "{{PLURAL:$1|$1回の編集}}",
-	"useractivity-group-comment": "{{PLURAL:$1|$1コのコメント}}",
-	"useractivity-group-user_message": "{{PLURAL:$1|$1コのメッセージ}}",
+	"useractivity-group-comment": "{{PLURAL:$1|$1件のコメント}}",
+	"useractivity-group-user_message": "{{PLURAL:$1|$1件のメッセージ}}",
 	"useractivity-group-friend": "{{PLURAL:$1|$1人の友達}}",
 	"useractivity-siteactivity": "サイトの活動度",
 	"useractivity-title": "友達の活動度",
