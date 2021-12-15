@@ -13,7 +13,8 @@
 			"Mor",
 			"Rodney Araujo",
 			"Sanbec",
-			"Translationista"
+			"Translationista",
+			"DDPAT"
 		]
 	},
 	"editprofile": "Editar perfiles de otros usuarios",
@@ -41,9 +42,9 @@
 	"user-stats-comments": "Comentarios",
 	"user-stats-recruits": "Voluntarios",
 	"user-stats-poll-votes": "Votos de encuesta",
-	"user-stats-picture-game-votes": "Juego de imágenes {{PLURAL:$1|voto|votos}}",
+	"user-stats-picture-game-votes": "Juego de imágenes",
 	"user-stats-quiz-points": "Puntos de concurso",
-	"user-stats-pick-points": "Elíjelos {{PLURAL:$1|punto|puntos}}",
+	"user-stats-pick-points": "Elíjelos puntos",
 	"casual-games-title": "Juegos ocasionales",
 	"casual-game-quiz": "Cuestionario",
 	"casual-game-poll": "Encuesta",
