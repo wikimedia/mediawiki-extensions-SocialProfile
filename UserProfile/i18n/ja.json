@@ -12,7 +12,8 @@
 			"Foomin10",
 			"Mizusumashi",
 			"Rxy",
-			"Shirayuki"
+			"Shirayuki",
+			"ひまり"
 		]
 	},
 	"populateuserprofiles": "利用者プロフィールを入力する",
@@ -180,7 +181,9 @@
 	"avatarlogpagetext": "これは利用者アバターのアップロード記録です。",
 	"user-profile-picture-log-entry": "新しいアバターをアップロード",
 	"user-profile-picture-log-delete-entry": "アバター $1 を削除しました",
+	"user-profile-remove-avatar": "アバターを削除",
 	"right-avatarremove": "利用者のアバターを除去",
 	"right-editothersprofiles": "他の利用者のソーシャルプロフィールを更新",
+	"action-avatarremove": "ユーザーのアバターを削除",
 	"random-users-avatars-title": "コミュニティに出会う"
 }
