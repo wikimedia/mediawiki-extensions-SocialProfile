@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hugo.arg"
+		]
+	},
+	"topawards-edit-milestone": "{{PLURAL:$1|$1 Redagavimo|$1 Redagavimų}} atžyma"
+}

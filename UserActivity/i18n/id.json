@@ -1,14 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
-			"Farras"
+			"Farras",
+			"Daud I.F. Argana"
 		]
 	},
 	"useractivity": "Aktivitas teman",
+	"useractivity-desc": "Menampilkan aktivitas sosial pengguna",
 	"useractivity-award": "$1 menerima penghargaan",
 	"useractivity-all": "Lihat semua",
 	"useractivity-edit": "$1 {{PLURAL:$4|menyunting halaman|menyunting halaman berikut:}} $3",
 	"useractivity-foe": "$1 {{PLURAL:$2|sekarang bermusuhan dengan|sekarang bermusuhan dengan}} $3",
+	"useractivity-filter": "Penyaring",
 	"useractivity-friend": "$1 {{PLURAL:$2|sekarang berteman dengan|sekarang berteman dengan}} $3",
 	"useractivity-gift": "$1 menerima hadiah dari $2",
 	"useractivity-group-edit": "{{PLURAL:$1|satu suntingan|$1 suntingan}}",
@@ -17,5 +20,6 @@
 	"useractivity-group-friend": "{{PLURAL:$1|satu teman|$1 teman}}",
 	"useractivity-siteactivity": "Aktivitas situs",
 	"useractivity-title": "Aktivitas teman",
-	"useractivity-user_message": "$1 {{PLURAL:$4|mengirimkan pesan ke|mengirimkan pesan ke}} $3"
+	"useractivity-user_message": "$1 {{PLURAL:$4|mengirimkan pesan ke|mengirimkan pesan ke}} $3",
+	"useractivity-comment": "$1 {{PLURAL:$4|berkomentar di halaman berikut|berkomentar di halaman-halaman berikut:}} $3"
 }
