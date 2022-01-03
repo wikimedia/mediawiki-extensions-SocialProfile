@@ -7,9 +7,11 @@
 			"IvanLanin",
 			"Kandar",
 			"Akmaie Ajam",
-			"Naufal06"
+			"Naufal06",
+			"Daud I.F. Argana"
 		]
 	},
+	"usergifts-desc": "Memungkinkan mengirim, menerima, membuat, dan menghapus hadiah pengguna",
 	"giftmanager": "Pengelolaan hadiah",
 	"giftmanager-addgift": "+ Tambah hadiah baru",
 	"giftmanager-access": "akses hadiah",
@@ -73,6 +75,7 @@
 	"g-remove-success-message": "Hadiah \"$1\" sudah disingkirkan.",
 	"g-remove-title": "Singkirkan \"$1\"?",
 	"g-send-gift": "Kirim hadiah",
+	"g-select-gift": "Silakan pilih hadiah.",
 	"g-select-a-friend": "pilih teman",
 	"g-sent-title": "Anda telah mengirim hadiah ke $1",
 	"g-sent-message": "Anda telah mengirim hadiah berikut ini ke $1.",
@@ -82,9 +85,12 @@
 	"g-viewgiftlist": "Lihat daftar hadiah",
 	"g-your-profile": "Profil anda",
 	"gift_received_subject": "$1 telah mengirimi anda hadiah $2 di {{SITENAME}}!",
-	"gift_received_body": "Hai $1.\n\n$2 baru saja mengirim Anda hadiah $3 pada {{SITENAME}}.\n\nIngin membaca catatan $2 tinggalkan untuk anda dan lihat hadiah Anda? Klik pranala di bawah:\n\n$4\n\nKami harap Anda senang!\n\nTerima kasih,\n\n\nTim {{SITENAME}} \n\n---\n\nHai, ingin berhenti mendapatkan surel dari kami?\n\nKlik $5\ndan ubah seting untuk nonaktifkan notifikasi surel.",
+	"gift_received_body_html": "Hai $1.\n\n$2 baru saja mengirim Anda hadiah $3 di {{SITENAME}}.\n\nIngin membaca catatan yang $2 tinggalkan untuk Anda dan lihat hadiah Anda? Klik pranala di bawah:\n\n[[Special:ViewGifts]]\n\nKami harap Anda senang!\n\nTerima kasih,\n\n\nTim {{SITENAME}} \n\n---\n\nHai, ingin berhenti mendapatkan surel dari kami?\n\nKlik [[Special:UpdateProfile]]\ndan ubah setelan Anda untuk menonaktifkan notifikasi surel.",
+	"gift_received_body": "Hai $1.\n\n$2 baru saja mengirim Anda hadiah $3 pada {{SITENAME}}.\n\nIngin membaca catatan yang $2 tinggalkan untuk Anda dan lihat hadiah Anda? Klik pranala di bawah:\n\n$4\n\nKami harap Anda senang!\n\nTerima kasih,\n\n\nTim {{SITENAME}} \n\n---\n\nHai, ingin berhenti mendapatkan surel dari kami?\n\nKlik $5\ndan ubah setelan untuk menonaktifkan notifikasi surel.",
+	"echo-category-title-social-gift": "Hadiah",
 	"echo-pref-tooltip-social-gift": "Beri tahu saya bila seseorang mengirim saya hadiah.",
 	"notification-social-gift-send-no-message": "$1 telah mengirimkan hadiah untukmu: $2.",
+	"notification-social-gift-send-with-message": "$1 baru saja mengirim hadiah kepadamu: $2.<br /><br />''$3''",
 	"notification-social-gift-send-bundle": "{{PLURAL:$1|Sebuah pengguna|$1 pengguna}} mengirim anda hadiah.",
 	"right-giftadmin": "Buat baru dan sunting hadiah yang sudah ada"
 }
