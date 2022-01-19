@@ -32,5 +32,9 @@
 	"ga-remove-title": "ဖုဲင်းထိုꩻ \"$1\"နဲ့?",
 	"ga-remove-success-title": "နာꩻဖုဲင်းထိုꩻ လက်ဆောင်ႏ \"$1\"နဝ်ꩻ အောင်ႏမျင်ႏလဲဉ်း",
 	"ga-remove-success-message": "ဖုဲင်းထန်ႏထွူလဲဉ်း လက်ဆောင်ႏ \"$1\"သွူ။",
-	"ga-user-got-awards": "$1 လꩻ $2"
+	"ga-user-got-awards": "$1 လꩻ $2",
+	"topawards-edits": "မွဉ်းဖျင်မုꩻဖိုင်ႏ",
+	"topawards-comments": "တောင်ꩻသေꩻ",
+	"topawards-friends": "သွꩻဖိုင်ႏ",
+	"topawards-edit-milestone": "{{PLURAL:$1|$1 မွဉ်းဖျင်|$1 မွဉ်းဖျင်မုꩻ}} လုံးတဲင်ႏထွန်ႏ"
 }

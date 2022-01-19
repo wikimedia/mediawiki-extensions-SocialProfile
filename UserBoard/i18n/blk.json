@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Khun Kt"
+		]
+	},
+	"boardlinkselectall": "လွိုက်ရွေꩻလို့",
+	"boardlinkunselectall": "လွိုက်ရွေꩻလို့တဝ်း",
+	"boardlinkselectfriends": "လွိုက်သွꩻပေႏဖိုင်ႏ",
+	"boardlinkunselectfriends": "လွိုက်တဝ်းဒုမ် သွꩻပေႏဖိုင်ႏ",
+	"boardblast-js-sending": "အဝ်ႏပသာ လိတ်မဲက်သေ့...",
+	"boardblast-error-missing-message": "တဲမ်းသော့ꩻသွော့ လိတ်မဲက်သေ့တဗာႏသြ",
+	"userboard_sendbutton": "ပသာ"
+}
