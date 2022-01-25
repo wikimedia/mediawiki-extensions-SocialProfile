@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Khun Kt"
+		]
+	},
+	"messagesenttitle": "ပသာထွူလဲဉ်းလိတ်မဲက်သေ့",
+	"boardlinkselectall": "လွိုက်ရွေꩻလို့",
+	"boardlinkunselectall": "လွိုက်ရွေꩻလို့တဝ်း",
+	"boardlinkselectfriends": "လွိုက်သွꩻပေႏဖိုင်ႏ",
+	"boardlinkunselectfriends": "လွိုက်တဝ်းဒုမ် သွꩻပေႏဖိုင်ႏ",
+	"boardblast-js-sending": "အဝ်ႏပသာ လိတ်မဲက်သေ့...",
+	"boardblast-error-missing-message": "တဲမ်းသော့ꩻသွော့ လိတ်မဲက်သေ့တဗာႏသြ",
+	"userboard_private": "ပုဂ္ဂလိက",
+	"userboard_public": "လိုꩻအာထွားလꩻ",
+	"userboard_messagetype": "လိတ်မဲက်သေ့အစွိုးအမျိုꩻ",
+	"userboard_nomessages": "လိတ်မဲက်သေ့ အဝ်ႏတဝ်း။",
+	"userboard_sendbutton": "ပသာ",
+	"userboard-time-days": "{{PLURAL:$1|တနီꩻ|$1 နီꩻ}}",
+	"userboard-time-hours": "{{PLURAL:$1|တနားရီႏ|$1 နားရီႏ}}",
+	"userboard-time-minutes": "{{PLURAL:$1|တမိနိစ်|$1 မိနိစ်}}",
+	"userboard-time-seconds": "{{PLURAL:$1|တစက္ကန်း|$1 စက္ကန်း}}"
+}

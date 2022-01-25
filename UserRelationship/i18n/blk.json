@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Khun Kt"
+		]
+	},
+	"ur-your-profile": "နာꩻပရိုဖုဲင်",
+	"ur-relationship-count-friends": "$1 သွꩻအဝ်ႏ $2 ဖြာꩻ {{PLURAL:$2|ဖြာꩻ}}",
+	"ur-add-friend": "ထဲမ်သော့ꩻနုဲင်းသွꩻအနေႏ",
+	"ur-add-personal-message": "ထဲမ်သော့ꩻ နမ်းရေꩻရာႏလိတ်မဲတ်သေ့",
+	"ur-remove-relationship-friend": "ဖုဲင်းထိုꩻသွꩻအနေႏ",
+	"ur-give-gift": "ဖေႏလက်ဆောင်ႏတဗာႏ",
+	"ur-remove-relationship-title-friend": "အဝ်ႏနာꩻသွꩻအနေႏ နာꩻမဲဉ်ဖုဲင်းထန်ႏထိုမွေး $1 နဲ့?",
+	"ur-remove-relationship-title-confirm-friend": "အဝ်ႏနာꩻသွꩻအနေႏ နာꩻဖုဲင်းထန်ႏထိုꩻလဲဉ်း $1 သွူ",
+	"ur-remove": "ဖုဲင်းထိုꩻ",
+	"ur-add-button-friend": "ထဲမ်သော့ꩻနုဲင်းသွꩻအနေႏ",
+	"ur-accept": "စူꩻလက်ခံႏ",
+	"ur-reject": "စူꩻတဝ်း",
+	"ur-requests-added-message-friend": "နာꩻထဲမ်သော့ꩻလဲဉ်း $1 နုဲင်းသွꩻအနေႏသွူ။",
+	"ur-title-friend": "$1 သွꩻစာႏရင်ꩻ",
+	"notification-social-rel-add-friend-message": "$1 မဲဉ်မာꩻသွꩻနာꩻသွူ။<br /><br />''$2''",
+	"notification-social-rel-add-friend-no-message": "$1 မဲဉ်ထွာနာꩻသွꩻသွူ။",
+	"notification-social-rel-accept-friend": "နာꩻထွာလဲဉ်းသွꩻ တောမ်ႏ $1။",
+	"notification-social-rel-accept-foe": "နာꩻထွာလဲဉ်း $1 ရန်ႏသူႏ။"
+}

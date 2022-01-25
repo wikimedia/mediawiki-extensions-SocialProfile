@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Khun Kt"
+		]
+	},
+	"ga-addnew": "+ ထဲမ်သော့ꩻ လက်ဆောင်ႏတသာ",
+	"ga-back-edit-gift": "သဲင်ꩻချာ မွဉ်းဖျင်လက်ဆောင်ႏယိုထျꩻ",
+	"ga-back-gift-list": "သဲင်ꩻချာ လက်ဆောင်ႏစာႏရင်ꩻထျꩻ",
+	"ga-back-link": "[[User:$1|< သဲင်ꩻချာ $1 ပရိုဖုဲင်ထျꩻ]]",
+	"ga-choosefile": "လွိုက်ဖုဲင်",
+	"ga-create-gift": "ဖန်ဆင်ꩻ လက်ဆောင်ႏ",
+	"ga-created": "ဖန်ဆင်ꩻထွူလဲဉ်း လက်ဆောင်ႏသွူ",
+	"ga-currentimage": "ဓာတ်ပုင်ႏယိုခါ",
+	"ga-error-message-invalid-link": "နာꩻကနွို့ဒါႏလိဉ့်နဝ်ꩻ တရာꩻဝင်ႏတဝ်းသြ။",
+	"ga-gift": "လက်ဆောင်ႏ",
+	"ga-giftdesc": "လက်ဆောင်ႏ အွောန်ႏနယ်ချက်ခရာႏ",
+	"ga-giftimage": "လက်ဆောင်ႏပုင်ႏ",
+	"ga-giftname": "လက်ဆောင်ႏမိဉ်ꩻ",
+	"ga-gifttype": "လက်ဆောင်ႏ အစွိုးအမျိုꩻ",
+	"ga-goback": "သဲင်ꩻချာ",
+	"ga-img": "ထဲမ်/လုဲင်ႏ ဓာတ်ပုင်ႏ",
+	"ga-large": "အတန်",
+	"ga-medium": "ထာႏဝ",
+	"ga-mediumlarge": "ထာႏဝ-အတန်",
+	"ga-new": "တသာ",
+	"ga-saved": "လက်ဆောင်ႏနဝ်ꩻ သဲမ်ဟဝ်ခါꩻလဲဉ်းသွူ",
+	"ga-small": "အပေႏ",
+	"ga-uploadsuccess": "ဒင်ႏထင်ႏမုꩻ အောင်ႏမျင်ႏလဲဉ်း",
+	"ga-viewlist": "ထွား လက်ဆောင်ႏစာႏရင်ꩻ",
+	"ga-remove": "ဖုဲင်းထိုꩻ",
+	"ga-remove-title": "ဖုဲင်းထိုꩻ \"$1\"နဲ့?",
+	"ga-remove-success-title": "နာꩻဖုဲင်းထိုꩻ လက်ဆောင်ႏ \"$1\"နဝ်ꩻ အောင်ႏမျင်ႏလဲဉ်း",
+	"ga-remove-success-message": "ဖုဲင်းထန်ႏထွူလဲဉ်း လက်ဆောင်ႏ \"$1\"သွူ။",
+	"ga-user-got-awards": "$1 လꩻ $2",
+	"topawards-edits": "မွဉ်းဖျင်မုꩻဖိုင်ႏ",
+	"topawards-comments": "တောင်ꩻသေꩻ",
+	"topawards-friends": "သွꩻဖိုင်ႏ",
+	"topawards-edit-milestone": "{{PLURAL:$1|$1 မွဉ်းဖျင်|$1 မွဉ်းဖျင်မုꩻ}} လုံးတဲင်ႏထွန်ႏ"
+}

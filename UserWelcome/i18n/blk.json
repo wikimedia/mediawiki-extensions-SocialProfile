@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Khun Kt"
+		]
+	},
+	"mp-userlevels-link": "ကေားသုင်ꩻသား အရန်းဖိုင်ႏ",
+	"mp-welcome-upload": "ဒင်ႏထင်ႏ",
+	"mp-welcome-logged-in": "မင်ႏဂလာႏဒျာႏ $1",
+	"mp-requests-title": "ကွီကော့ꩻ",
+	"mp-request-new-message": "လိတ်မဲတ်သေ့တသာ",
+	"mp-request-new-gift": "$1 လက်ဆောင်ႏတသာ {{PLURAL:$1|ဗာႏ}}",
+	"mp-request-new-foe": "$1 ရန်သူႏတသာ {{PLURAL:$1|ဖြာꩻ}}",
+	"mp-request-new-friend": "$1 သွꩻတသာ {{PLURAL:$1|ဖြာꩻ}}"
+}
