@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Khun Kt"
+		]
+	},
+	"top-fans-stats-edit-count": "{{PLURAL:$1|မွဉ်းဖျင်}}",
+	"top-fans-stats-comment-count": "{{PLURAL:$1|တောင်ꩻသေꩻ}}",
+	"top-fans-stats-friends-count": "{{PLURAL:$1|သွꩻ}}",
+	"top-fans-stats-foe-count": "{{PLURAL:$1|ရန်ႏသူႏ}}",
+	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|လက်ခံႏလက်ဆောင်ႏ}}",
+	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|ဖေႏလက်ဆောင်ႏ}}",
+	"random-user-about-me": "ခွေသွဉ်းခရာႏ"
+}
