@@ -4,6 +4,7 @@
 			"Antur",
 			"ArenaL5",
 			"Armando-Martin",
+			"Avengium",
 			"Crazymadlover",
 			"DDPAT",
 			"DoveBirkoff",
@@ -18,7 +19,8 @@
 		]
 	},
 	"editprofile": "Editar perfiles de otros usuarios",
-	"populateuserprofiles": "Perfiles de usuario populares",
+	"populateuserprofiles": "Poblar perfiles de usuario",
+	"populateuserprofiles-confirm": "¿Estás seguro de que deseas poblar los perfiles de usuario existentes?",
 	"user-time-ago": "hace $1",
 	"user-awards-title": "Premios",
 	"user-gifts-title": "Regalos",
