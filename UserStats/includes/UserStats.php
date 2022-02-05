@@ -70,17 +70,12 @@ class UserStats {
 		] );
 
 		$dbr = wfGetDB( DB_MASTER );
-		$res = $dbr->select(
+		$row = $dbr->selectRow(
 			'user_stats',
 			'*',
 			[ 'stats_actor' => $this->user->getActorId() ],
-			__METHOD__,
-			[
-				'LIMIT' => 1,
-				'OFFSET' => 0
-			]
+			__METHOD__
 		);
-		$row = $dbr->fetchObject( $res );
 		$stats = [];
 		$stats['edits'] = $row->stats_edit_count ?? 0;
 		$stats['votes'] = $row->stats_vote_count ?? 0;

@@ -157,7 +157,7 @@ class GenerateTopUsersReport extends SpecialPage {
 		$users = [];
 
 		// Initial run is a special case
-		if ( $dbw->numRows( $res ) <= 0 ) {
+		if ( $res->numRows() <= 0 ) {
 			// For the initial run, everybody's a winner!
 			// Yes, I know that this isn't ideal and I'm sorry about that.
 			// The original code just wouldn't work if the first query

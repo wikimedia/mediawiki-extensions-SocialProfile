@@ -72,17 +72,15 @@ class Gifts {
 			return [];
 		}
 		$dbr = wfGetDB( DB_REPLICA );
-		$res = $dbr->select(
+		$row = $dbr->selectRow(
 			'gift',
 			[
 				'gift_id', 'gift_name', 'gift_description', 'gift_creator_actor',
 				'gift_access'
 			],
 			[ 'gift_id' => $id ],
-			__METHOD__,
-			[ 'LIMIT' => 1, 'OFFSET' => 0 ]
+			__METHOD__
 		);
-		$row = $dbr->fetchObject( $res );
 		$gift = [];
 		if ( $row ) {
 			$gift['gift_id'] = $row->gift_id;

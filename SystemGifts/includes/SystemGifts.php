@@ -230,17 +230,15 @@ class SystemGifts {
 	 */
 	static function getGift( $id ) {
 		$dbr = wfGetDB( DB_REPLICA );
-		$res = $dbr->select(
+		$row = $dbr->selectRow(
 			'system_gift',
 			[
 				'gift_id', 'gift_name', 'gift_description', 'gift_category',
 				'gift_threshold', 'gift_given_count'
 			],
 			[ 'gift_id' => $id ],
-			__METHOD__,
-			[ 'LIMIT' => 1 ]
+			__METHOD__
 		);
-		$row = $dbr->fetchObject( $res );
 		$gift = [];
 		if ( $row ) {
 			$gift['gift_id'] = $row->gift_id;
