@@ -4,5 +4,22 @@
 			"Ajeje Brazorf"
 		]
 	},
-	"ga-small": "Nicu"
+	"ga-addnew": "+ Agghiunci nu rigalu novu",
+	"ga-choosefile": "Scegghi file:",
+	"ga-create-gift": "Crea rigalu",
+	"ga-created": "Lu rigalu fu criatu",
+	"ga-currentimage": "Mmàggini attuali",
+	"ga-gift": "rigalu",
+	"ga-giftdesc": "discrizzioni dû rigalu",
+	"ga-giftimage": "mmàggini dû rigalu",
+	"ga-giftname": "nomu dû rigalu",
+	"ga-gifttype": "tipu di rigalu",
+	"ga-new": "Novu",
+	"ga-small": "Nicu",
+	"ga-viewlist": "Talìa l'elencu di rigali",
+	"ga-remove": "Leva",
+	"ga-remove-title": "Leva \"$1\"?",
+	"ga-remove-success-message": "Lu rigalu \"$1\" fu livatu.",
+	"topawards-edits": "Canciamenti",
+	"topawards-comments": "Cummenti"
 }

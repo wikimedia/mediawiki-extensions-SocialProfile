@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ajeje Brazorf"
+		]
+	},
+	"userboard_messagetype": "Tipu di missaggiu",
+	"userboard_nomessages": "Nuddu missaggiu.",
+	"userboard_sendbutton": "manna",
+	"userboard-time-days": "{{PLURAL:$1|nu jornu|$1 jorna}}",
+	"userboard-time-hours": "{{PLURAL:$1|n'ura|$1 uri}}",
+	"userboard-time-minutes": "{{PLURAL:$1|nu minutu|$1 minuti}}",
+	"userboard-time-seconds": "{{PLURAL:$1|nu sicunnu|$1 sicunni}}"
+}
