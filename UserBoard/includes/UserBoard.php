@@ -343,7 +343,7 @@ class UserBoard {
 			WHERE {$user_sql}";
 
 		$res = $dbr->query( $sql, __METHOD__ );
-		$row = $dbr->fetchObject( $res );
+		$row = $res->fetchObject();
 
 		$count = 0;
 		if ( $row ) {

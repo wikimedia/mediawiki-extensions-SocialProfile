@@ -216,7 +216,7 @@ class UserSystemGifts {
 	 */
 	public static function getUserGift( $id ) {
 		$dbr = wfGetDB( DB_REPLICA );
-		$res = $dbr->select(
+		$row = $dbr->selectRow(
 			[ 'user_system_gift', 'system_gift', 'actor' ],
 			[
 				'sg_id', 'sg_actor', 'actor_name', 'actor_user', 'gift_id', 'sg_date',
@@ -224,16 +224,12 @@ class UserSystemGifts {
 			],
 			[ 'sg_id' => $id ],
 			__METHOD__,
-			[
-				'LIMIT' => 1,
-				'OFFSET' => 0
-			],
+			[],
 			[
 				'system_gift' => [ 'INNER JOIN', 'sg_gift_id = gift_id' ],
 				'actor' => [ 'JOIN', 'sg_actor = actor_id' ]
 			]
 		);
-		$row = $dbr->fetchObject( $res );
 		$gift = [];
 		if ( $row ) {
 			$gift['id'] = $row->sg_id;
@@ -275,14 +271,13 @@ class UserSystemGifts {
 	public function getGiftCountByUsername( User $user ) {
 		$dbr = wfGetDB( DB_REPLICA );
 		$actorId = $user->getActorId();
-		$res = $dbr->select(
+		$row = $dbr->selectRow(
 			'user_system_gift',
 			[ 'COUNT(*) AS count' ],
 			[ 'sg_actor' => $actorId ],
 			__METHOD__,
 			[ 'LIMIT' => 1, 'OFFSET' => 0 ]
 		);
-		$row = $dbr->fetchObject( $res );
 		$gift_count = 0;
 		if ( $row ) {
 			$gift_count = $row->count;

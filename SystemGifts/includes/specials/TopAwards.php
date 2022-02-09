@@ -155,7 +155,7 @@ class TopAwards extends UnlistedSpecialPage {
 
 		// Display a "no results" message if we got no results -- because it's
 		// a lot nicer to display something rather than a half-empty page
-		if ( $dbr->numRows( $res ) <= 0 ) {
+		if ( $res->numRows() <= 0 ) {
 			$output .= $this->msg( 'topawards-empty' )->escaped();
 		} else {
 			$linkRenderer = $this->getLinkRenderer();

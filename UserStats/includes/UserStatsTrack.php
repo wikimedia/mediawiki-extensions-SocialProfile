@@ -314,13 +314,12 @@ class UserStatsTrack {
 
 	public function updateWeeklyPoints( $points ) {
 		$dbw = wfGetDB( DB_MASTER );
-		$res = $dbw->select(
+		$row = $dbw->selectRow(
 			'user_points_weekly',
 			'up_actor',
 			[ 'up_actor' => $this->user->getActorId() ],
 			__METHOD__
 		);
-		$row = $dbw->fetchObject( $res );
 
 		if ( !$row ) {
 			$this->addWeekly();
@@ -350,13 +349,12 @@ class UserStatsTrack {
 
 	public function updateMonthlyPoints( $points ) {
 		$dbw = wfGetDB( DB_MASTER );
-		$res = $dbw->select(
+		$row = $dbw->selectRow(
 			'user_points_monthly',
 			'up_actor',
 			[ 'up_actor' => $this->user->getActorId() ],
 			__METHOD__
 		);
-		$row = $dbw->fetchObject( $res );
 		if ( !$row ) {
 			$this->addMonthly();
 		}
@@ -408,13 +406,12 @@ class UserStatsTrack {
 		}
 
 		$dbw = wfGetDB( DB_MASTER );
-		$res = $dbw->select(
+		$row = $dbw->selectRow(
 			'user_stats',
 			'*',
 			[ 'stats_actor' => $this->user->getActorId() ],
 			__METHOD__
 		);
-		$row = $dbw->fetchObject( $res );
 		if ( $row ) {
 			// recaculate point total
 			$new_total_points = 1000;
