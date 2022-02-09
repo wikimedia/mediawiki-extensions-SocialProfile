@@ -5,7 +5,8 @@
 			"Fryed-peach",
 			"Purodha",
 			"Siebrand",
-			"Umherirrender"
+			"Umherirrender",
+			"Ajeje Brazorf"
 		]
 	},
 	"usergifts-desc": "{{desc|name=UserGifts|url=https://www.mediawiki.org/wiki/Extension:SocialProfile}}",
@@ -65,7 +66,7 @@
 	"g-new": "{{Identical|New}}",
 	"g-next": "{{Identical|Next}}",
 	"g-previous": "{{Identical|Prev}}",
-	"g-remove": "Button text on Special:RemoveGift and Special:RemoveMasterGift, allowing a user to either remove a gift from themselves (Special:RemoveGift) or from all users (Special:RemoveMasterGift), provided they have the sufficient user rights to perform the latter action",
+	"g-remove": "Button text on Special:RemoveGift and Special:RemoveMasterGift, allowing a user to either remove a gift from themselves (Special:RemoveGift) or from all users (Special:RemoveMasterGift), provided they have the sufficient user rights to perform the latter action\n\n{{Identical|Remove}}",
 	"g-remove-gift": "Link text of a link shown on Special:ViewGift and Special:ViewGifts; clicking on the link takes the user to the page which allows them to remove the gift in question",
 	"g-remove-message": "Confirmation message shown to the user on Special:RemoveGift and Special:RemoveMasterGift when they're about to remove a gift\n$1 is the name of the gift to be removed",
 	"g-recent-recipients": "Used on Special:ViewGift; below this text are the small avatars of some other users who've gotten this same gift recently",
