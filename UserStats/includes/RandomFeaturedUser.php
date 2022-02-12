@@ -38,7 +38,7 @@ class RandomFeaturedUser {
 		}
 
 		// Add CSS
-		$parser->getOutput()->addModuleStyles( 'ext.socialprofile.userstats.randomfeatureduser.styles' );
+		$parser->getOutput()->addModuleStyles( [ 'ext.socialprofile.userstats.randomfeatureduser.styles' ] );
 
 		$user_list = [];
 		$count = 10;

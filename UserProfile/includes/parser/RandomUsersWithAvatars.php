@@ -28,7 +28,7 @@ class RandomUsersWithAvatars {
 		global $wgUploadDirectory, $wgDBname;
 
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
-		$parser->getOutput()->addModuleStyles( 'ext.socialprofile.userprofile.randomuserswithavatars.styles' );
+		$parser->getOutput()->addModuleStyles( [ 'ext.socialprofile.userprofile.randomuserswithavatars.styles' ] );
 		$parser->getOutput()->updateCacheExpiry( 0 );
 
 		$count = ( isset( $args['count'] ) && is_numeric( $args['count'] ) ) ? intval( $args['count'] ) : 10;
