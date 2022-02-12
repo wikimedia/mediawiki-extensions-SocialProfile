@@ -1289,7 +1289,6 @@ class UserProfilePage extends Article {
 				$avatar = new wAvatar( $user->getId(), 'ml' );
 
 				// Chop down username that gets displayed
-				// @phan-suppress-next-line SecurityCheck-DoubleEscaped T290624
 				$user_name = htmlspecialchars( $language->truncateForVisual( $user->getName(), 9, '..' ) );
 
 				$output .= "<a href=\"" . htmlspecialchars( $user->getUserPage()->getFullURL() ) .

@@ -858,7 +858,6 @@ class UserActivity {
 
 		foreach ( $res as $row ) {
 			$user = User::newFromActorId( $row->um_actor );
-			// @phan-suppress-next-line SecurityCheck-DoubleEscaped T290624
 			$user_name_short = htmlspecialchars( $wgLang->truncateForVisual( $user->getName(), 15 ) );
 			$unixTS = wfTimestamp( TS_UNIX, $row->um_date );
 			$comment = $this->fixItemComment( $row->um_message );
@@ -995,7 +994,6 @@ class UserActivity {
 			$html = wfMessage(
 				'useractivity-network-thought',
 				htmlspecialchars( $userName ),
-				// @phan-suppress-next-line SecurityCheck-DoubleEscaped T290624
 				htmlspecialchars( $user_name_short ),
 				$page_link,
 				htmlspecialchars( $user->getUserPage()->getFullURL() )
@@ -1243,7 +1241,6 @@ class UserActivity {
 				}
 
 				$user_title = Title::makeTitle( NS_USER, $user_name );
-				// @phan-suppress-next-line SecurityCheck-DoubleEscaped T290624
 				$user_name_short = htmlspecialchars( $wgLang->truncateForVisual( $user_name, 15 ) );
 
 				$safeTitle = htmlspecialchars( $user_title->getText() );
@@ -1315,7 +1312,6 @@ class UserActivity {
 			return '';
 		}
 		$preview = $wgLang->truncateForVisual( $comment, 75 );
-		// @phan-suppress-next-line SecurityCheck-DoubleEscaped T290624
 		return htmlspecialchars( $preview );
 	}
 

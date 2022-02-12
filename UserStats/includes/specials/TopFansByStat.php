@@ -208,7 +208,6 @@ class TopFansByStat extends UnlistedSpecialPage {
 				<span class="top-fan-num">' . $x . '.</span>
 				<span class="top-fan">' .
 					$commentIcon .
-					// @phan-suppress-next-line SecurityCheck-DoubleEscaped T290624
 					$linkRenderer->makeLink(
 						$u->getUserPage(),
 						$user_name
