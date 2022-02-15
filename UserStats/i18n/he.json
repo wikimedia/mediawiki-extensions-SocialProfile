@@ -4,7 +4,8 @@
 			"Amire80",
 			"Guycn2",
 			"Rotemliss",
-			"YaronSh"
+			"YaronSh",
+			"לואיקה"
 		]
 	},
 	"userstats-desc": "מאפשר הענקת נקודות למשתמשים בהתאם לסוג הפעולות שבוצעו",
@@ -57,7 +58,7 @@
 	"action-generatetopusersreport": "יצירת דוח משתמשים מובילים",
 	"level-advanced-to": "התקדמות לשלב <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "כעת הינכם  \"$1\" ב{{grammar:תחילית|{{SITENAME}}}}!",
-	"level-advance-body": "שלום $1\n\nעכשיו {{GENDER:$1|אתה|את}} \"$2\" באתר {{SITENAME}}!\n\nברכותינו,\n\nצוות {{SITENAME}}\n\n---\nהיי, רוצה להפסיק לקבל מאיתנו הודעות דוא\"ל?\n\nנא ללחוץ על $3\nולשנות את ההגדרות שלך כדי לבטל הודעות בדוא\"ל.",
+	"level-advance-body": "שלום $1\n\n{{GENDER:$1|אתה|את}} כעת \"$2\" באתר {{SITENAME}}!\n\nברכותינו,\n\nצוות {{SITENAME}}\n\n---\nהיי, רוצה להפסיק לקבל מאיתנו הודעות דוא\"ל?\n\nנא ללחוץ על $3\nולשנות את ההגדרות שלך לביטול התראות בדוא\"ל.",
 	"random-user-points-weekly": "{{PLURAL:$1|נקודה אחת|$1 נקודות}} השבוע",
 	"random-user-points-monthly": "{{PLURAL:$1|נקודה אחת|$1 נקודות}} החודש",
 	"random-user-about-me": "עלי"
