@@ -4,9 +4,31 @@
 			"Ajeje Brazorf"
 		]
 	},
+	"giftmanager-addgift": "+ Agghiunci nu rigalu novu",
+	"giftmanager-access": "accessu ô rigalu",
+	"giftmanager-description": "discrizzioni dû rigalu",
+	"giftmanager-giftimage": "mmàggini dû rigalu",
+	"giftmanager-giftcreated": "Lu rigalu fu criatu",
+	"giftmanager-giftsaved": "Lu rigalu fu sarvatu",
 	"giftmanager-public": "pùbblicu",
 	"giftmanager-private": "privata",
+	"giftmanager-view": "Talìa l'elencu dî rigali",
+	"g-add-message": "Agghiunci nu missaggiu",
+	"g-choose-file": "Scegghi file:",
+	"g-create-gift": "Crea rigalu",
+	"g-current-image": "Mmàggini attuali",
+	"g-gift": "rigalu",
+	"g-gift-name": "nomu dû rigalu",
+	"g-give-all-message-title": "Agghiunci nu missaggiu",
 	"g-give-separator": "o",
 	"g-new": "novu",
-	"g-small": "Nicu"
+	"g-remove": "Leva",
+	"g-remove-gift": "Leva stu rigalu",
+	"g-remove-message": "Sî sìcuru di vuliri livari lu rigalu \"$1\"?",
+	"g-remove-title": "Leva \"$1\"?",
+	"g-send-gift": "Manna rigalu",
+	"g-small": "Nicu",
+	"g-viewgiftlist": "Talìa l'elencu dî rigali",
+	"g-your-profile": "Lu tò prufilu",
+	"echo-category-title-social-gift": "Rigali"
 }
