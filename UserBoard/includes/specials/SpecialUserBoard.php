@@ -83,7 +83,8 @@ class SpecialViewUserBoard extends SpecialPage {
 		$user_id = User::idFromName( $user_name );
 		$user = Title::makeTitle( NS_USER, $user_name );
 
-		if ( $user_name_2 ) {
+		// Compare with '' to handle [[User:0]]
+		if ( $user_name_2 !== '' ) {
 			$user_2 = User::newFromName( $user_name_2 );
 		}
 
