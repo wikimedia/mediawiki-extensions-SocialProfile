@@ -120,7 +120,13 @@ class RemoveAvatar extends SpecialPage {
 				);
 			}
 		} else {
-			if ( $par ) {
+			// "0" is a valid user name
+			// For whatever reason, such a user may exist indeed. It is also entirely
+			// possible, and, in fact, likely that they are NOT a privileged account.
+			// So let's not tempt [[User:0]] with a rather pointless user search form
+			// that won't even work for them, yes?
+			// (Hence if ( $par !== '' ) instead of the old if ( $par ) check!)
+			if ( $par !== '' ) {
 				$out->addHTML( $this->showUserAvatar( $par ) );
 			} else {
 				$this->showUserForm();
