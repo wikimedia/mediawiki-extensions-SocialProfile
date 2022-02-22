@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Chaduvari",
 			"Kiranmayee",
 			"Veeven"
 		]
@@ -29,8 +30,21 @@
 	"g-previous": "గత",
 	"g-remove": "తొలగించు",
 	"g-remove-title": "\"$1\"ని తొలగించాలా?",
+	"g-send-gift": "బహుమతిని పంపించు",
+	"g-select-gift": "ఒక బహుమతిని ఎంచుకోండి.",
+	"g-select-a-friend": "ఓ మిత్రుని ఎంచుకోండి",
+	"g-sent-title": "$1 కు మీరొక బహుమతి పంపించారు",
+	"g-sent-message": "$1 కు కింది బహుమతిని పంపించారు.",
+	"g-small": "చిన్న",
+	"g-to-another": "మరెవరికైనా ఇవ్వండి",
 	"g-uploadsuccess": "ఎక్కింపు విజయవంతం",
 	"g-viewgiftlist": "బహుమతుల జాబితాని చూడండి",
 	"g-your-profile": "మీ ప్రవర",
-	"gift_received_subject": "{{SITENAME}}లో $1 మీకు $2 బహుమతిని పంపించారు!"
+	"gift_received_subject": "{{SITENAME}}లో $1 మీకు $2 బహుమతిని పంపించారు!",
+	"echo-category-title-social-gift": "బహుమతులు",
+	"echo-pref-tooltip-social-gift": "నాకు ఎవరైనా బహుమతి పంపిస్తే నాకు తెలియపరచు.",
+	"notification-social-gift-send-no-message": "$1, ఇప్పుడే మీకొక బహుమతి పంపారు: $2.",
+	"notification-social-gift-send-with-message": "$1, ఇప్పుడే మీకొక బహుమతి పంపారు: $2.<br /><br />''$3''",
+	"notification-social-gift-send-bundle": "{{PLURAL:$1|ఒక వ్యక్తి|$1 వ్యక్తులు}} మీకు అభుమతులు పంపారు.",
+	"right-giftadmin": "కొత్త పురస్కారాన్ని సృష్టించండి, ఉన్న వాటిని సరిదిద్దండి"
 }

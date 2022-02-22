@@ -1,14 +1,26 @@
 {
 	"@metadata": {
 		"authors": [
+			"Chaduvari",
 			"Veeven"
 		]
 	},
+	"useractivity": "మిత్రుల కార్యకలాపం",
+	"useractivity-desc": "వాడుకరుల సామాజిక కార్యకలాపాలను చూపిస్తుంది",
+	"useractivity-award": "$1 కు ఒక పురస్కారం వచ్చింది",
 	"useractivity-all": "అన్నీ చూడండి",
 	"useractivity-edit": "$1 {{PLURAL:$4|ఈ పేజీని|ఈ పేజీలను}} మార్చారు: $3",
+	"useractivity-foe": "$1 ఇపుడు $3 కు {{PLURAL:$2|శత్రువు|శత్రువులు}}",
+	"useractivity-filter": "వడపోత",
+	"useractivity-friend": "$1 ఇపుడు $3 కు {{PLURAL:$2|మిత్రుడు|మిత్రులు}}",
 	"useractivity-gift": "$1 $2 నుండి ఒక బహుమతిని అందుకున్నారు",
 	"useractivity-group-edit": "{{PLURAL:$1|ఒక మార్పు|$1 మార్పులు}}",
 	"useractivity-group-comment": "{{PLURAL:$1|ఒక వ్యాఖ్య|$1 వ్యాఖ్యలు}}",
 	"useractivity-group-user_message": "{{PLURAL:$1|ఒక సందేశం|$1 సందేశాలు}}",
-	"useractivity-group-friend": "{{PLURAL:$1|ఒక స్నేహితుడు|$1 స్నేహితులు}}"
+	"useractivity-group-friend": "{{PLURAL:$1|ఒక స్నేహితుడు|$1 స్నేహితులు}}",
+	"useractivity-network-thought": "<b><a href=\"$4\">$2</a></b> వద్ద $3 నెట్‌వర్కు కోసం ఒక ఆలోచన ఉంది",
+	"useractivity-siteactivity": "సైటు కార్యకలాపం",
+	"useractivity-title": "మిత్రుల కార్యకలాపం",
+	"useractivity-user_message": "$1, $3 కు {{PLURAL:$4|ఓ సందేశం|సందేశాలు}} పంపారు",
+	"useractivity-comment": "$1 {{PLURAL:$4|ఈ పేజీలో వ్యాఖ్యానించారు|కింది పేజీల్లో వ్యాఖ్యానించారు:}} $3"
 }
