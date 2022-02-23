@@ -181,6 +181,7 @@
 	"user-social-profile-link": "సాంఘీక ప్రొఫైలు",
 	"user-wiki-link": "వికీ వాడుకరిపేజీ",
 	"user-type-toggle-old": "వికీ వాడుకరిపేజీని వాడు",
+	"user-type-toggle-new": "సామాజిక వాడుకరి పేజీని వాడు",
 	"user-board-login-message": "ఇతర వాడుకరులకు సందేశం వ్రాయడానికి మీరు [[Special:UserLogin|ప్రవేశించి]] ఉండాలి",
 	"user-board-confirm-delete": "ఈ సందేశాన్ని తొలగించాలనే నిశ్చయించుకున్నారా?",
 	"removeavatar": "అవతారాన్ని తొలగించండి",
@@ -201,5 +202,9 @@
 	"user-profile-picture-log-entry": "కొత్త అవతారాన్ని ఎగుమతిచేయండి",
 	"user-profile-picture-log-delete-entry": "$1' అవతార్‌ను తొలగించారు",
 	"user-profile-remove-avatar": "తీసివెయ్యి",
-	"right-avatarremove": "వాడుకరి అవతార్‌లను తీసెయ్యి"
+	"right-avatarremove": "వాడుకరి అవతార్‌లను తీసెయ్యి",
+	"right-editothersprofiles-private": "ఇతర వాడుకరుల సామాజిక ప్రొఫైళ్ళలో ప్రైవేటు సమాచారాన్ని (ఈమెయిలు చిరునామా) చూడడం, తాజాకరించడం",
+	"action-avatarremove": "వాడుకరుల అవతార్‌లను తీసివేసే",
+	"action-editothersprofiles": "వాడుకరుల సమాజిక ప్రొఫైళ్ళను తాజాకరించే",
+	"random-users-avatars-title": "సముదాయాన్ని చూడండి"
 }
