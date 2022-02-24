@@ -5,6 +5,7 @@ use MediaWiki\MediaWikiServices;
 /**
  * NewUsersList parser hook extension -- adds <newusers> parser tag to retrieve
  * the list of new users and their avatars.
+ *
  * Works with NewSignupPage extension, i.e. if the user_register_track DB table
  * is present, this extension queries that table, but if it's not, then the
  * core logging table is used instead.
@@ -22,10 +23,9 @@ class NewUsersList {
 	/**
 	 * Callback function for UserProfileHooks::onParserFirstCallInit().
 	 *
-	 * Queries the user_register_track database table for new users and renders
-	 * the list of newest users and their avatars, wrapped in a div with the class
-	 * "new-users".
-	 * Disables parser cache and caches the database query results in memcached.
+	 * The heavy lifting is done by renderNewUsersList(); here we just check what
+	 * arguments we should pass to it and also here we disable parser caching to
+	 * ensure freshness of the data (renderNewUsersList() has its own caching).
 	 *
 	 * @param string|null $input
 	 * @param array $args
@@ -34,8 +34,6 @@ class NewUsersList {
 	 * @return string
 	 */
 	public static function getNewUsers( $input, array $args, Parser $parser ) {
-		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
-
 		$parser->getOutput()->updateCacheExpiry( 0 );
 
 		$count = 10;
@@ -49,11 +47,32 @@ class NewUsersList {
 			$per_row = intval( $args['row'] );
 		}
 
+		return self::renderNewUsersList( $count, $per_row );
+	}
+
+	/**
+	 * Stand-alone method for rendering a HTML version of the listing of new users
+	 * and their avatars.
+	 * This method is safe to call from an external class.
+	 *
+	 * Queries the user_register_track database table for new users and renders
+	 * the list of newest users and their avatars, wrapped in a div with the class
+	 * "new-users".
+	 * The results are cached for 10 minutes, but caching can be bypassed by passing
+	 *
+	 * @param int $count Get this many users...
+	 * @param int $per_row ...and divide them into this many rows
+	 * @param bool $skipCache Skip checking cache?
+	 * @return string HTML suitable for output
+	 */
+	public static function renderNewUsersList( $count = 10, $per_row = 5, $skipCache = false ) {
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+
 		// Try cache
 		$key = $cache->makeKey( 'users', 'new', $count );
 		$data = $cache->get( $key );
 
-		if ( !$data ) {
+		if ( !$data || $skipCache ) {
 			$dbr = wfGetDB( DB_REPLICA );
 
 			if ( $dbr->tableExists( 'user_register_track' ) ) {
