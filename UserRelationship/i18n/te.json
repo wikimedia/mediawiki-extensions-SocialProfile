@@ -5,8 +5,11 @@
 			"Veeven"
 		]
 	},
+	"userrelationship-desc": "మిత్ర, శత్రు అభ్యర్థనలు పంపే వీలు కలిగిస్తుంది",
 	"viewrelationships": "బంధాన్ని చూడండి",
+	"viewrelationshiprequests": "సంబంధ అభ్యర్థనలను చూపించు",
 	"ur-already-submitted": "మీ అభ్యర్థనని పంపించాం",
+	"ur-error-title": "అయ్‌యో, పొరపాటు చేసారు!",
 	"ur-error-message-no-user": "మీ అభ్యర్థనని మన్నింపలేము, ఎందుకంటే ఈ పేరుతో వాడుకరులెవరూ లేరు.",
 	"ur-your-profile": "మీ ప్రొఫైలు",
 	"ur-backlink": "&lt; తిరిగి $1 ప్రొఫైలుకు",
