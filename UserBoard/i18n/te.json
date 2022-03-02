@@ -63,5 +63,6 @@
 	"apihelp-socialprofile-send-message-param-message": "పంపాల్సిన సందేశపు urlencoded వెర్షను.",
 	"apihelp-socialprofile-send-message-param-type": "సందేశపు రకం: పబ్లిక్ సందేశానికి 0, ప్రైవేటు సందేశానికి 1.",
 	"apihelp-socialprofile-delete-message-description": "వాడుకరి బోర్డు సందేశాన్ని తొలగించు.",
-	"apihelp-socialprofile-delete-message-summary": "వాడుకరి బోర్డు సందేశాన్ని తొలగించు."
+	"apihelp-socialprofile-delete-message-summary": "వాడుకరి బోర్డు సందేశాన్ని తొలగించు.",
+	"apihelp-socialprofile-delete-message-param-id": "తొలగించాల్సిన బోర్డు సందేశపు విశిష్ఠ గుర్తింపు."
 }
