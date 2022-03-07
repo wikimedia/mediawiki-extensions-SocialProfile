@@ -48,6 +48,8 @@
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|ఇచ్చిన బహుమతి|ఇచ్చిన బహుమతులు}}",
 	"right-updatepoints": "దిద్దుబాట్ల సంఖ్యను తాజాకరించడం",
 	"action-updatepoints": "దిద్దుబాట్ల సంఖ్యను తాజాకరించే",
+	"right-generatetopusersreport": "అగ్ర వాడుకరుల నివేదికలను తయారు చెయ్య్డడం",
+	"action-generatetopusersreport": "అగ్ర వాడుకరుల నివేదికలను తయారు చేసే",
 	"level-advanced-to": "<span style=\"font-weight:800;\">$1</span> స్థాయికి ఎదిగారు",
 	"level-advance-subject": "{{SITENAME}}లో మీరిప్పుడు \"$1\"!",
 	"level-advance-body-html": "హై $1.\n\n{{SITENAME}} లో మీరిపుడు ఒక $2!\n\nఅభినందనలు,\n\n\n{{SITENAME}} బృందం\n\n---\n\nహేయ్, మానుండి ఈమెయిళ్ళు రాకుండా ఆపాలనుకుంటున్నారా?\n\n[[Special:UpdateProfile]] నొక్కి\nమీ సెట్టింగుల్లో ఈమెయిలు గమనింపులను అచేతనం చెయ్యండి.",
