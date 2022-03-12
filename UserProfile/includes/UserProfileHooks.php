@@ -130,7 +130,13 @@ class UserProfileHooks {
 					$out->redirect( $title->getFullURL() );
 				}
 			} else {
-				$out->enableClientCache( false );
+				if ( method_exists( $out, 'disableClientCache' ) ) {
+					// MW 1.38+
+					$out->disableClientCache();
+				} else {
+					$out->enableClientCache( false );
+				}
+
 				$wgHooks['ParserLimitReportPrepare'][] = 'UserProfileHooks::onParserLimitReportPrepare';
 			}
 
