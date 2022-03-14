@@ -4,7 +4,8 @@
 			"Amire80",
 			"Rotemliss",
 			"YaronSh",
-			"ישראל קלר"
+			"ישראל קלר",
+			"Dee"
 		]
 	},
 	"editprofile": "לערוך פרופילים של משתמשים אחרים",
@@ -86,7 +87,7 @@
 	"user-recent-activity-network-update": "פרסמו רעיון",
 	"user-recent-system-gift": "קיבלו פרס",
 	"user-profile-update-saved": "הפרופיל שלכם נשמר",
-	"user-profile-edit-profile-update-saved": "פרופיל המשתמש הזה שמר בהצלחה",
+	"user-profile-edit-profile-update-saved": "פרופיל המשתמש נשמר בהצלחה",
 	"user-profile-update-log-section": "קטע שהשתנה",
 	"user-profile-default-country": "ארצות הברית",
 	"user-profile-points": "{{PLURAL:$1|נקודה אחת|$1 נקודות}}",
