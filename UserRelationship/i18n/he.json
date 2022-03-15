@@ -3,7 +3,8 @@
 		"authors": [
 			"Amire80",
 			"Rotemliss",
-			"YaronSh"
+			"YaronSh",
+			"Dee"
 		]
 	},
 	"viewrelationships": "צפייה בקשרים",
@@ -62,7 +63,7 @@
 	"ur-requests-message-friend": "[[User:$1|$1]] מעונין להיות חברכם.",
 	"ur-accept": "אישור",
 	"ur-reject": "דחייה",
-	"ur-no-requests-message": "אין לכם בקשות חברות או יריבות.",
+	"ur-no-requests-message": "אין לך בקשות חברות או יריבות.",
 	"ur-requests-added-message-foe": "הוספתם את $1 כיריבכם.",
 	"ur-requests-added-message-friend": "הוספתם את $1 כחברכם.",
 	"ur-requests-reject-message-friend": "דחיתם את בקשת $1 להיות חברכם.",
