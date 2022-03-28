@@ -4,7 +4,8 @@
 			"Aotake",
 			"Fryed-peach",
 			"Hosiryuhosi",
-			"Shirayuki"
+			"Shirayuki",
+			"Yamagata Yusuke"
 		]
 	},
 	"viewrelationships": "関係の表示",
@@ -46,7 +47,7 @@
 	"ur-add-button-friend": "友人に追加",
 	"ur-add-sent-title-foe": "$1に敵申請を送信しました！",
 	"ur-add-sent-title-friend": "$1に友人申請を送信しました！",
-	"ur-add-sent-message-foe": "$1に敵申請の確認が送信されました。$1があなたの申請を承認すると、確認のメールが届きます。",
+	"ur-add-sent-message-foe": "$1に敵申請の確認が送信されました。$1があなたの申請を承認すると、確認の通知が届きます。",
 	"ur-add-sent-message-friend": "$1に友人申請の確認を送信しました。$1が申請を承認した際には、あなたに確認メールをお送りします。",
 	"ur-add-error-message-no-user": "追加しようとしている名前の利用者は存在しません。",
 	"ur-add-error-message-blocked": "現在ブロックされているため友人や敵を追加できません。",
