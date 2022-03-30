@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use Wikimedia\AtEase\AtEase;
 
 /**
  * A special page for removing avatars.
@@ -282,9 +283,9 @@ class RemoveAvatar extends SpecialPage {
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$avatar = new wAvatar( $id, $size );
 		$files = glob( $wgUploadDirectory . '/avatars/' . $wgAvatarKey . '_' . $id . '_' . $size . "*" );
-		Wikimedia\suppressWarnings();
+		AtEase::suppressWarnings();
 		$img = basename( $files[0] );
-		Wikimedia\restoreWarnings();
+		AtEase::restoreWarnings();
 		if ( $img && $img[0] ) {
 			unlink( $wgUploadDirectory . '/avatars/' . $img );
 		}
