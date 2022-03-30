@@ -56,10 +56,17 @@
 	"level-advance-subject": "Tu es ora un \"$1\" in {{SITENAME}}!",
 	"level-advance-body-html": "Salute $1,\n\nTu es ora un \"$2\" in {{SITENAME}}!\n\nFelicitationes,\n\nLe equipa de {{SITENAME}}\n\n---\nTu non vole reciper plus e-mail de nos?\n\nClicca sur [[Special:UpdateProfile]]\ne disactiva in tu preferentias le notificationes per e-mail.",
 	"level-advance-body": "Salute $1,\n\nTu es ora un \"$2\" in {{SITENAME}}!\n\nFelicitationes,\n\nLe equipa de {{SITENAME}}\n\n---\nTu non vole reciper plus e-mail de nos?\n\nClicca $3\ne disactiva in tu preferentias le notificationes per e-mail.",
+	"echo-category-title-social-level-up": "Nivello in plus",
+	"echo-pref-tooltip-social-level-up": "Notificar me quando io avantia a un nove nivello.",
+	"notification-social-level-up": "Tu ha attingite le nivello \"$1\"!",
+	"notification-social-level-up-bundle": "Tu ha ganiate {{PLURAL:$1|un nivello|$1 nivellos}}, attingente $2!",
 	"updateeditcounts": "Actualisar numeros de modificationes",
+	"updateeditcounts-confirm": "Es tu secur de voler actualisar le numero de modificationes de tote le usatores?",
 	"updateeditcounts-updated": "Statisticas actualisate pro '''$1''' {{PLURAL:$1|usator|usatores}}",
 	"updateeditcounts-updating": "Actualisante $1 con $2 {{PLURAL:$2|modification|modificationes}}",
 	"generatetopusersreport": "Generar reporto del usatores le plus active",
+	"generatetopusersreport-confirm-weekly": "Es tu secur de voler generar le reporto septimanal del principal usatores?",
+	"generatetopusersreport-confirm-monthly": "Es tu secur de voler generar le reporto mensual del principal usatores?",
 	"user-stats-weekly-winners": "Le {{PLURAL:$1|ganiator|ganiatores}} del septimana",
 	"user-stats-monthly-winners": "Le {{PLURAL:$1|ganiator|ganiatores}} del mense",
 	"user-stats-weekly-win-congratulations": "Felicitationes al sequente {{PLURAL:$1|usator|usatores}} que meritava un ganio septimanal e $2 {{PLURAL:$2|puncto|punctos}} extra!",
@@ -72,5 +79,8 @@
 	"user-stats-report-monthly-edit-summary": "reporto de usator mensual automatic",
 	"user-stats-report-weekly-page-title": "Reporto de punctos de usator septimanal ($1)",
 	"user-stats-report-monthly-page-title": "Reporto de punctos de usator mensual ($1)",
-	"user-stats-report-error-variable-not-set": "Le variabile $wgUserStatsPointValues['points_winner_$1'] debe haber un valor superior a 0 in LocalSettings.php!"
+	"user-stats-report-error-variable-not-set": "Le variabile $wgUserStatsPointValues['points_winner_$1'] debe haber un valor superior a 0 in LocalSettings.php!",
+	"random-user-points-weekly": "{{PLURAL:$1|un puncto|$1 punctos}} iste septimana",
+	"random-user-points-monthly": "{{PLURAL:$1|un puncto|$1 punctos}} iste mense",
+	"random-user-about-me": "A proposito de me"
 }
