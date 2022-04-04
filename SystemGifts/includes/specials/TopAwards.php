@@ -99,7 +99,7 @@ class TopAwards extends UnlistedSpecialPage {
 		$res = $dbr->select(
 			[ 'user_system_gift', 'system_gift', 'actor' ],
 			[
-				'sg_actor', 'actor_name', 'actor_user', 'gift_category',
+				'sg_actor', 'actor_name', 'actor_user',
 				'MAX(gift_threshold) AS top_gift'
 			],
 			[
@@ -107,7 +107,7 @@ class TopAwards extends UnlistedSpecialPage {
 				"gift_threshold > {$categories[$category_number]['category_threshold']}"
 			],
 			__METHOD__,
-			[ 'GROUP BY' => 'actor_name', 'ORDER BY' => 'top_gift DESC' ],
+			[ 'GROUP BY' => 'sg_actor, actor_name, actor_user', 'ORDER BY' => 'top_gift DESC' ],
 			[
 				'system_gift' => [ 'INNER JOIN', 'gift_id = sg_gift_id' ],
 				'actor' => [ 'JOIN', 'sg_actor = actor_id' ]
