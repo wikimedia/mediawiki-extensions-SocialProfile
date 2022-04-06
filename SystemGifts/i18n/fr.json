@@ -80,6 +80,6 @@
 	"echo-pref-tooltip-social-award": "Me notifier quand je reçois une distinction.",
 	"notification-social-award-rec": "Vous avez reçu une nouvelle distinction : $1.",
 	"notification-social-award-rec-bundle": "Vous avez reçu {{PLURAL:$1|une nouvelle distinction|$1 nouvelles distinctions}}.",
-	"right-awardsmanage": "Créer et modifier les prix existants",
+	"right-awardsmanage": "Créer et modifier les distinctions existantes",
 	"action-awardsmanage": "créer de nouvelles distinctions et modifier celles existantes"
 }
