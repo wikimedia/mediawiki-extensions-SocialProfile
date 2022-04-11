@@ -8,13 +8,14 @@
 			"Fitoschido",
 			"Imre",
 			"Mor",
-			"Sanbec"
+			"Sanbec",
+			"Jakeukalane",
+			"MarcoAurelio"
 		]
 	},
 	"viewrelationships": "Ver relación",
 	"viewrelationshiprequests": "Ver solicitudes de relaciones",
 	"ur-already-submitted": "Su solicitud ha sido enviada",
-	"ur-error-page-title": "Woops!",
 	"ur-error-title": "Whoops, usted tomó un turno equivocado!",
 	"ur-error-message-no-user": "No podemos completar su solicitud, porque ningun usuario con este nombre existe.",
 	"ur-your-profile": "Su perfil",
@@ -50,7 +51,7 @@
 	"ur-add-button-foe": "Agregar como enemigo",
 	"ur-add-button-friend": "Agregar como amigo",
 	"ur-add-sent-title-foe": "Hemos enviado su solicitud de enemigo a $1!",
-	"ur-add-sent-title-friend": "Hemos enviado su solicitud de amigo a $1!",
+	"ur-add-sent-title-friend": "¡Hemos enviado su solicitud de amistad a $1!",
 	"ur-add-sent-message-foe": "Tu solicitud de enemigo ha sido enviada a $1 para ser confirmada.\nSi $1 confirma tu solicitud, recibirás un segundo e-mail",
 	"ur-add-sent-message-friend": "Tu solicitud de amigo ha sido enviada a $1 para ser confirmada.\nSi $1 confirma tu solicitud, recibirás un segundo e-mail",
 	"ur-add-error-message-no-user": "El usuario que está tratando de agregar no existe.",
