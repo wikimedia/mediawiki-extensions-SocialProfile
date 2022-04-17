@@ -4,6 +4,7 @@ use MediaWiki\MediaWikiServices;
 
 /**
  * wAvatar class - used to display avatars
+ *
  * Example usage:
  * @code
  *	$avatar = new wAvatar( $wgUser->getId(), 'l' );
@@ -19,11 +20,11 @@ use MediaWiki\MediaWikiServices;
 class wAvatar {
 	/** @var string|null */
 	public $user_name = null;
+
 	/** @var int */
 	public $user_id;
-	/** @var int */
-	public $avatar_type = 0;
-	/** @var int */
+
+	/** @var string Avatar size (abbreviation): s/m/ml/l */
 	public $avatar_size;
 
 	/**
