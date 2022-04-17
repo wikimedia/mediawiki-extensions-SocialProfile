@@ -127,7 +127,7 @@ class RemoveAvatar extends SpecialPage {
 			// So let's not tempt [[User:0]] with a rather pointless user search form
 			// that won't even work for them, yes?
 			// (Hence if ( $par !== '' ) instead of the old if ( $par ) check!)
-			if ( $par !== '' ) {
+			if ( isset( $par ) && $par !== '' ) {
 				$out->addHTML( $this->showUserAvatar( $par ) );
 			} else {
 				$this->showUserForm();
