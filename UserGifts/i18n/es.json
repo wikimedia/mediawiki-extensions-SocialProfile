@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Crazymadlover",
+			"DiegoAmbrocio",
 			"Mor"
 		]
 	},
@@ -77,5 +78,8 @@
 	"g-your-profile": "Su perfil",
 	"gift_received_subject": "$1 le ha enviado el regalo $2 en {{SITENAME}}!",
 	"gift_received_body": "Hola $1.\n\n$2 acaba de enviarte el regalo $3 en {{SITENAME}}.\n\nDeseas leer la nota $2 que te dejó y ver tu regalo?  Haz click en el vínculo de abajo:\n\n$4\n\nEsperamos que te guste!\n\nGracias,\n\n\nEl equipo {{SITENAME}}\n\n---\n\nHey, Deseas no recibir más correos electrónicos de nosotros?\n\nHaz click en $5\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
+	"echo-category-title-social-gift": "Regalos",
+	"echo-pref-tooltip-social-gift": "Notificarme cuando alguien me envíe un regalo.",
+	"notification-social-gift-send-no-message": "$1 acaba de enviar un regalo para ti: $2.",
 	"right-giftadmin": "Crear nuevo y editar regalos existentes"
 }

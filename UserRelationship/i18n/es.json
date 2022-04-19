@@ -3,6 +3,7 @@
 		"authors": [
 			"Crazymadlover",
 			"Dferg",
+			"DiegoAmbrocio",
 			"DoveBirkoff",
 			"Feten7",
 			"Fitoschido",
@@ -87,5 +88,12 @@
 	"friend_removed_subject": "¡Oh, no! ¡$1 le ha quitado como amigo en {{SITENAME}}!",
 	"friend_removed_body": "Hola $1.\n\n¡$2 te ha quitado como amigo en {{SITENAME}}!\n\nGracias\n\n---\n\nHey, ¿deseas dejar de recibir mensajes de correo electrónico nuestros?\n\nHaz click en $4\ny cambia tus configuraciones para deshabilitar las notificaciones por correo electrónico.",
 	"foe_removed_subject": "¡Yuju! ¡$1 lo ha eliminado como enemigo en {{SITENAME}}!",
-	"foe_removed_body": "Hola $1.\n\n¡$2 te ha quitado como enemigo en {{SITENAME}}!\n\n¿Tal vez estais en camino de convertiros en amigos?\n\nGracias\n\n---\n\nHey, ¿deseas dejar de recibir correos electrónicos nuestros?\n\nHaz click en $4\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico."
+	"foe_removed_body": "Hola $1.\n\n¡$2 te ha quitado como enemigo en {{SITENAME}}!\n\n¿Tal vez estais en camino de convertiros en amigos?\n\nGracias\n\n---\n\nHey, ¿deseas dejar de recibir correos electrónicos nuestros?\n\nHaz click en $4\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
+	"echo-category-title-social-rel": "Cambios en la relación con el usuario",
+	"notification-social-rel-add-friend-no-message": "$1 quiere ser tu amigo.",
+	"notification-social-rel-add-foe-no-message": "$1 quiere ser tu rival.",
+	"notification-social-rel-accept-friend": "Te hiciste amigo de $1.",
+	"notification-social-rel-accept-foe": "Te has convertido en un rival con $1.",
+	"notification-social-rel-accept-email-subject": "¡$1 ha aceptado tu solicitud de relación!",
+	"notification-social-rel-accept-email-batch-body": "$1 ha aceptado su solicitud de relación de amistad."
 }
