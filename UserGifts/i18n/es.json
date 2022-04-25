@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ciencia Al Poder",
 			"Crazymadlover",
 			"DiegoAmbrocio",
+			"Jack Phoenix",
 			"Mor"
 		]
 	},
@@ -31,7 +33,7 @@
 	"g-error-do-not-own": "No te pertenece este regalo",
 	"g-error-message-blocked": "Estás actualmente bloqueado y no puedes dar regalos",
 	"g-error-message-invalid-link": "El vínculo que usted han ingresado es inválido.",
-	"g-error-message-login": "Tienes que iniciar sesión para dar regalos",
+	"g-error-message-login": "Tienes que [[Special:UserLogin|iniciar sesión]] para dar regalos.",
 	"g-error-message-no-user": "El usuario que estás tratando de ver no existe.",
 	"g-error-message-to-yourself": "No puede darse un regalo a sí mismo.",
 	"g-error-title": "Woops, tomó un turno erróneo!",
@@ -77,7 +79,7 @@
 	"g-viewgiftlist": "Ver lista de regalos",
 	"g-your-profile": "Su perfil",
 	"gift_received_subject": "$1 le ha enviado el regalo $2 en {{SITENAME}}!",
-	"gift_received_body": "Hola $1.\n\n$2 acaba de enviarte el regalo $3 en {{SITENAME}}.\n\nDeseas leer la nota $2 que te dejó y ver tu regalo?  Haz click en el vínculo de abajo:\n\n$4\n\nEsperamos que te guste!\n\nGracias,\n\n\nEl equipo {{SITENAME}}\n\n---\n\nHey, Deseas no recibir más correos electrónicos de nosotros?\n\nHaz click en $5\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
+	"gift_received_body": "Hola $1.\n\n$2 acaba de enviarte el regalo $3 en {{SITENAME}}.\n\n¿Deseas leer la nota que $2 te dejó y ver tu regalo?  Haz clic en el vínculo a continuación:\n\n$4\n\n¡Esperamos que te guste!\n\nGracias,\n\n\nEl equipo {{SITENAME}}\n\n---\n\n¿Deseas dejar de recibir más correos electrónicos de nosotros?\n\nHaz clic en $5\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
 	"echo-category-title-social-gift": "Regalos",
 	"echo-pref-tooltip-social-gift": "Notificarme cuando alguien me envíe un regalo.",
 	"notification-social-gift-send-no-message": "$1 acaba de enviar un regalo para ti: $2.",

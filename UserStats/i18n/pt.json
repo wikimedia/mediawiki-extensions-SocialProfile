@@ -3,6 +3,7 @@
 		"authors": [
 			"Giro720",
 			"Hamilton Abreu",
+			"Jack Phoenix",
 			"Vanessa Sabino",
 			"Waldir"
 		]
@@ -60,8 +61,8 @@
 	"user-stats-weekly-win-congratulations": "Parabéns {{PLURAL:$1|ao seguinte utilizador, que obteve|aos seguintes utilizadores, que obtiveram}} uma vitória da semana e $2 pontos extra!",
 	"user-stats-monthly-win-congratulations": "Parabéns {{PLURAL:$1|ao seguinte utilizador, que obteve|aos seguintes utilizadores, que obtiveram}} uma vitória do mês e $2 pontos extra!",
 	"user-stats-full-top": "Top $1 Completo",
-	"user-stats-report-row": "($1) [[User:$2|$2]] - '''$3''' pontos",
-	"user-stats-report-points": "'''$1''' pontos",
+	"user-stats-report-row": "($1) [[User:$2|$2]] - '''$3''' {{PLURAL:$1|um ponto|$1 pontos}}!",
+	"user-stats-report-points": "'''$1''' {{PLURAL:$1|um ponto|$1 pontos}}!",
 	"user-stats-report-generation-note": "esta página foi gerada automaticamente",
 	"user-stats-report-weekly-edit-summary": "relatório de utilizadores semanal automatizado",
 	"user-stats-report-monthly-edit-summary": "relatório de utilizadores mensal automatizado",

@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"Jack Phoenix",
 			"Lajsikonik"
 		]
 	},
 	"userwelcome-desc": "Dodej <code>&lt;welcomeUser&gt;</code> tag do pokozańo dedykowanym specyficznymu użytkowńikowi informacyjům socyjolnym lů zalogowanych użytkowńikůw",
 	"mp-userlevels-link": "Poźůmy użytkowńika",
 	"mp-welcome-upload": "Wćepńij",
-	"mp-welcome-points": "$1 půnktůw",
+	"mp-welcome-points": "$1 {{PLURAL:$1|půnkt|půnktůw}}",
 	"mp-welcome-needed-points": "Coby przyńść ku [[$1|'''$2''']] zdobůńdź ''$3'' wjyncyj {{PLURAL:$3|půnkt|půnktůw}}!",
 	"mp-welcome-logged-in": "Witej $1",
 	"mp-requests-title": "Żůndańo",

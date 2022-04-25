@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Hamilton Abreu",
+			"Jack Phoenix",
 			"Malafaya",
 			"Vanessa Sabino",
 			"Waldir"
@@ -32,7 +33,7 @@
 	"g-error-do-not-own": "Esta prenda não lhe pertence.",
 	"g-error-message-blocked": "Está bloqueado e não pode dar prendas",
 	"g-error-message-invalid-link": "O link que forneceu é inválido.",
-	"g-error-message-login": "Tem de estar autenticado para dar prendas",
+	"g-error-message-login": "Tem de [[Special:UserLogin|estar autenticado]] para dar prendas.",
 	"g-error-message-no-user": "O utilizador que está tentando ver não existe.",
 	"g-error-message-to-yourself": "Não pode dar prendas a si próprio.",
 	"g-error-title": "Ui, enganou-se no caminho!",
