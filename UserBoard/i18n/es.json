@@ -9,7 +9,8 @@
 			"Sanbec",
 			"Translationista",
 			"Fitoschido",
-			"Indiralena"
+			"Indiralena",
+			"DiegoAmbrocio"
 		]
 	},
 	"messagesenttitle": "Mensajes enviados",
@@ -26,6 +27,8 @@
 	"boardsendbutton": "Enviar mensaje",
 	"boardnofriends": "¡No tienes amigos a los que enviar un mensaje!",
 	"messagesentsuccess": "Tu mensaje fue enviado exitosamente",
+	"boardblast-error-missing-message": "Por favor, introduzca un mensaje",
+	"boardblast-error-missing-user": "Por favor, seleccione al menos una persona",
 	"userboard": "Tablón del usuario",
 	"userboard_board-to-board": "Tablón a tablón",
 	"userboard_noexist": "El usuario que tratas de ver no existe.",
@@ -47,6 +50,7 @@
 	"userboard_sendbutton": "enviar",
 	"userboard_loggedout": "Tienes que haber [[Special:UserLogin|iniciado sesión]] para enviar mensajes a otros usuarios.",
 	"userboard_showingmessages": "Mostrando {{PLURAL:$4|mensaje $3|mensajes $2-$3}} de {{PLURAL:$1|$1 mensaje|$1 mensajes}}",
+	"userboard-delete-success": "El mensaje ha sido eliminado con éxito.",
 	"right-userboard-delete": "Borrar otros mensajes del tablón",
 	"userboard-time-days": "{{PLURAL:$1|un día|$1 días}}",
 	"userboard-time-hours": "{{PLURAL:$1|una hora|$1 horas}}",
