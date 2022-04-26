@@ -7,7 +7,8 @@
 			"Norhorn",
 			"Omnipaedista",
 			"Protnet",
-			"ZaDiak"
+			"ZaDiak",
+			"Jack Phoenix"
 		]
 	},
 	"giftmanager": "Διαχειριστής δώρων",
@@ -34,7 +35,7 @@
 	"g-description-title": "Το δώρο του $1 \"$2\"",
 	"g-error-do-not-own": "Δεν σου ανήκει αυτό το δώρο.",
 	"g-error-message-invalid-link": "Ο σύνδεσμος που δώσατε είναι άκυρος.",
-	"g-error-message-login": "Πρέπει να συνδεθείτε για να δώσετε δώρα",
+	"g-error-message-login": "Πρέπει να [[Special:UserLogin|συνδεθείτε]] για να δώσετε δώρα.",
 	"g-error-message-no-user": "Ο χρήστης που προσπαθείτε να δείτε δεν υπάρχει.",
 	"g-error-message-to-yourself": "Δεν μπορείς να δώσεις ένα δώρο στον εαυτό σου.",
 	"g-error-title": "Ουπς, πήρες μια λάθος στροφή!",
