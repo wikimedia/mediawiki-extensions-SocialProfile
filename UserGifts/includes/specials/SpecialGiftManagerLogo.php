@@ -517,12 +517,11 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 *
 	 * @param string $saveName The destination filename
 	 * @param string $tempName The source temporary file to save
-	 * @return string full path the stashed file, or false on failure
-	 * @private
+	 * @return string Full path the stashed file, or false on failure
 	 */
-	function saveTempUploadedFile( $saveName, $tempName ) {
-		$archive = wfImageArchiveDir( $saveName, 'temp' );
-		$stash = $archive . '/' . gmdate( 'YmdHis' ) . '!' . $saveName;
+	private function saveTempUploadedFile( $saveName, $tempName ) {
+		$uploadPath = $this->getConfig()->get( 'UploadPath' );
+		$stash = $uploadPath . '/temp/' . gmdate( 'YmdHis' ) . '!' . $saveName;
 
 		if ( !move_uploaded_file( $tempName, $stash ) ) {
 			throw new FatalError( $this->msg( 'filecopyerror', $tempName, $stash )->escaped() );

@@ -51,8 +51,7 @@ $cfg['suppress_issue_types'] = array_merge( $cfg['suppress_issue_types'], [
 	'PhanRedefinedClassReference',
 	# False positive from main PHP setup file
 	'PhanUndeclaredGlobalVariable',
-	# 1) Tracked as T198154 (wfImageArchiveDir)
-	# 2) false positive (MediaWiki\MediaWikiServices::getActorNormalization calls in various maintenance scripts)
+	# False positive (MediaWiki\MediaWikiServices::getActorNormalization calls in various maintenance scripts)
 	'PhanUndeclaredFunction',
 	# Tracked as T183072 (sorta anyway)
 	'PhanParamSignatureMismatch',
