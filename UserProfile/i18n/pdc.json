@@ -1,14 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xqt"
+			"Xqt",
+			"Jack Phoenix"
 		]
 	},
 	"user-time-ago": "vor $1",
 	"user-count-separator": "$1 vun $2",
 	"user-watchlist": "Mei Watsch-Lischt",
-	"user-stats-edits": "{{PLURAL:$1|Ennering|Enneringe}}",
-	"user-stats-comments": "{{PLURAL:$1|Anmaerricking|Anmaerrickinge}}",
+	"user-stats-edits": "Enneringe",
+	"user-stats-comments": "Anmaerrickinge",
 	"other-info-tv": "Guckbax",
 	"other-info-music": "Musik",
 	"other-info-books": "Bicher",

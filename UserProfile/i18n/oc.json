@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Cedric31",
-			"Guilhelma"
+			"Guilhelma",
+			"Jack Phoenix"
 		]
 	},
 	"populateuserprofiles": "Completar los perfils d'utilizaire",
@@ -24,14 +25,14 @@
 	"user-send-message": "Mandar un messatge",
 	"user-send-gift": "Mandar un present",
 	"user-contributions": "Contribucions",
-	"user-stats-edits": "{{PLURAL:$1|Edicion|Edicions}}",
-	"user-stats-votes": "{{PLURAL:$1|Vòt|Vòts}}",
-	"user-stats-comments": "{{PLURAL:$1|Comentari|Comentaris}}",
-	"user-stats-recruits": "{{PLURAL:$1|Recrut|Recruts}}",
-	"user-stats-poll-votes": "{{PLURAL:$1|Vòt|Vòts}} a las eleccions",
-	"user-stats-picture-game-votes": "{{PLURAL:$1|Vòt|Vòts}} pels imatges de jòcs",
-	"user-stats-quiz-points": "{{PLURAL:$1|Punt|Punts}} al Quiz",
-	"user-stats-pick-points": "{{PLURAL:$1|Punt|Punts}} trobats",
+	"user-stats-edits": "Edicions",
+	"user-stats-votes": "Vòts",
+	"user-stats-comments": "Comentaris",
+	"user-stats-recruits": "Recruts",
+	"user-stats-poll-votes": "Vòts a las eleccions",
+	"user-stats-picture-game-votes": "Vòts pels imatges de jòcs",
+	"user-stats-quiz-points": "Punts al Quiz",
+	"user-stats-pick-points": "Punts trobats",
 	"other-info-title": "Autras entresenhas",
 	"user-friends-title": "Amics",
 	"user-foes-title": "Enemics",

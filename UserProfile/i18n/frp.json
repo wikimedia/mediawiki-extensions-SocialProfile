@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Cedric31",
-			"ChrisPtDe"
+			"ChrisPtDe",
+			"Jack Phoenix"
 		]
 	},
 	"editprofile": "Changiér lo profil d’ôtros utilisators",
@@ -25,14 +26,14 @@
 	"user-send-message": "Mandar un mèssâjo",
 	"user-send-gift": "Mandar un present",
 	"user-contributions": "Contribucions",
-	"user-stats-edits": "Changement{{PLURAL:$1||s}}",
-	"user-stats-votes": "Voto{{PLURAL:$1||s}}",
-	"user-stats-comments": "Comentèro{{PLURAL:$1||s}}",
-	"user-stats-recruits": "Recru{{PLURAL:$1|a|es}}",
-	"user-stats-poll-votes": "Voto{{PLURAL:$1||s}} a les èlèccions",
-	"user-stats-picture-game-votes": "Voto{{PLURAL:$1||s}} por lo juè d’émâges",
-	"user-stats-quiz-points": "Pouent{{PLURAL:$1||s}} u quèstionèro",
-	"user-stats-pick-points": "{{PLURAL:$1|Pouent trovâ|Pouents trovâs}}",
+	"user-stats-edits": "Changements",
+	"user-stats-votes": "Votos",
+	"user-stats-comments": "Comentèros",
+	"user-stats-recruits": "Recrues",
+	"user-stats-poll-votes": "Votos a les èlèccions",
+	"user-stats-picture-game-votes": "Votos por lo juè d’émâges",
+	"user-stats-quiz-points": "Pouents u quèstionèro",
+	"user-stats-pick-points": "Pouents trovâs",
 	"casual-games-title": "Juès contingents",
 	"casual-game-quiz": "Quèstionèro",
 	"casual-game-poll": "Sondâjo",

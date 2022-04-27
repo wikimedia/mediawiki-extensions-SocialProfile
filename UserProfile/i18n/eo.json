@@ -4,7 +4,8 @@
 			"LyzTyphone",
 			"Melancholie",
 			"Michawiki",
-			"Yekrats"
+			"Yekrats",
+			"Jack Phoenix"
 		]
 	},
 	"populateuserprofiles": "Aldoni datenojn en uzulaj profiloj",
@@ -26,10 +27,10 @@
 	"user-send-message": "Sendi mesaĝon",
 	"user-send-gift": "Sendi donacon",
 	"user-contributions": "Kontribuoj",
-	"user-stats-edits": "{{PLURAL:$1|Redakto|Redaktoj}}",
-	"user-stats-votes": "{{PLURAL:$1|Voĉdono|Voĉdonoj}}",
-	"user-stats-comments": "{{PLURAL:$1|Komento|Komentoj}}",
-	"user-stats-recruits": "{{PLURAL:$1|Varbito|Varbitoj}}",
+	"user-stats-edits": "Redaktoj",
+	"user-stats-votes": "Voĉdonoj",
+	"user-stats-comments": "Komentoj",
+	"user-stats-recruits": "Varbitoj",
 	"other-info-title": "Alia informo",
 	"user-friends-title": "Amikoj",
 	"user-foes-title": "Malamikoj",

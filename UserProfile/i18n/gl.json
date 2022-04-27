@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"ArenaL5",
-			"Toliño"
+			"Toliño",
+			"Jack Phoenix"
 		]
 	},
 	"editprofile": "Editar os perfís doutros usuarios",
@@ -32,7 +33,7 @@
 	"user-stats-poll-votes": "Votos obtidos",
 	"user-stats-picture-game-votes": "Votos da imaxe do xogo",
 	"user-stats-quiz-points": "Puntos do concurso",
-	"user-stats-pick-points": "{{PLURAL:$1|Punto|Puntos}} que obtiven",
+	"user-stats-pick-points": "Puntos que obtiven",
 	"casual-games-title": "Xogos casuais",
 	"casual-game-quiz": "Cuestionario",
 	"casual-game-poll": "Enquisa",
