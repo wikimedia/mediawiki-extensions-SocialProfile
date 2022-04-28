@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Helix84"
+			"Helix84",
+			"Jack Phoenix"
 		]
 	},
 	"giftmanager": "Správca darčekov",
@@ -29,7 +30,7 @@
 	"g-error-do-not-own": "Nevlastníte tento darček",
 	"g-error-message-blocked": "Momentálne ste zablokovaný a nemôžete dávať darčeky",
 	"g-error-message-invalid-link": "Odkaz, ktorý ste zadali je neplatný.",
-	"g-error-message-login": "Musíte sa prihlásiť, aby ste mohli dávať darčeky.",
+	"g-error-message-login": "Musíte [[Special:UserLogin|sa prihlásiť]], aby ste mohli dávať darčeky.",
 	"g-error-message-no-user": "Používateľ, ktorého sa snažíte zobraziť, neexistuje.",
 	"g-error-message-to-yourself": "Nemôžete darovať darček sebe.",
 	"g-error-title": "Ops, niečo ste spravili zle!",

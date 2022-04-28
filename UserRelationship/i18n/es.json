@@ -11,7 +11,8 @@
 			"Mor",
 			"Sanbec",
 			"Jakeukalane",
-			"DiegoAmbrocio"
+			"DiegoAmbrocio",
+			"Ciencia Al Poder"
 		]
 	},
 	"viewrelationships": "Ver relación",
@@ -53,8 +54,8 @@
 	"ur-add-button-friend": "Agregar como amigo",
 	"ur-add-sent-title-foe": "Hemos enviado su solicitud de enemigo a $1!",
 	"ur-add-sent-title-friend": "¡Hemos enviado su solicitud de amistad a $1!",
-	"ur-add-sent-message-foe": "Tu solicitud de enemigo ha sido enviada a $1 para ser confirmada.\nSi $1 confirma tu solicitud, recibirás un segundo e-mail",
-	"ur-add-sent-message-friend": "Tu solicitud de amigo ha sido enviada a $1 para ser confirmada.\nSi $1 confirma tu solicitud, recibirás un segundo e-mail",
+	"ur-add-sent-message-foe": "Tu solicitud de enemigo ha sido enviada a $1 para ser confirmada.\nSi $1 confirma tu solicitud, recibirás una segunda notificación.",
+	"ur-add-sent-message-friend": "Tu solicitud de amigo ha sido enviada a $1 para ser confirmada.\nSi $1 confirma tu solicitud, recibirás una segunda notificación.",
 	"ur-add-error-message-no-user": "El usuario que está tratando de agregar no existe.",
 	"ur-add-error-message-blocked": "Usted está actualmente bloqueado y no puede agregar amigos o enemigos.",
 	"ur-add-error-message-yourself": "No puede agregarse a sí mismo como amigo o enemigo.",
@@ -67,7 +68,7 @@
 	"ur-add-error-message-not-loggedin-friend": "Debes haber iniciado sesión para añadir un amigo",
 	"ur-requests-title": "Solicitudes de relación",
 	"ur-requests-message-foe": "[[User:$1|$1]] desea ser su enemigo.",
-	"ur-requests-message-friend": "[[User:$1|$1]] desea ser su amigo.",
+	"ur-requests-message-friend": "[[User:$1|$1]] quiere ser tu amigo.",
 	"ur-accept": "Aceptar",
 	"ur-reject": "Rechazar",
 	"ur-no-requests-message": "No tiene solicitudes de amigo o enemigo.",
@@ -79,7 +80,7 @@
 	"ur-title-friend": "lista de amigos de $1",
 	"friend_request_subject": "$1 lo ha agragado como amigo en {{SITENAME}}!",
 	"friend_request_body": "Hola $1.\n\n$2 te ha agregado como un amigo en {{SITENAME}}. Queremos estar seguros que ustedes dos son realmente amigos.\n\nPor favor haga click en este vínculo para confirmar su amistad:\n$3\n\nGracias\n\n---\n\nHey, Desea no recibir correos electrónicos de nosotros?\n\nHaga click en $4\ny cambie sus configuraciones para deshabilitar notificaciones por correo electrónico.",
-	"foe_request_subject": "Esto es guerra! $1 lo ha agregado como un enemigo en {{SITENAME}}!",
+	"foe_request_subject": "¡Esto es la guerra! ¡$1 te ha añadido como un enemigo en {{SITENAME}}!",
 	"foe_request_body": "Hola $1.\n\n$2 acaba de listarte como un enemigo en {{SITENAME}}. Queremos estar seguros que ustedes dos son mortales enemigos o al menos que tiene un pleito.\n\nPor favor haga click en este vínculo para confirmar la hostilidad:\n\n$3\n\nGracias\n\n---\n\nHey, Desea no recibir correos electrónicos de nosotros?\n\nHaga click en $4\ny cambie sus configuraciones para deshabilitar notificaciones por correo electrónico.",
 	"friend_accept_subject": "$1 ha aceptado su solicitud de amigo en {{SITENAME}}!",
 	"friend_accept_body": "Hola $1.\n\n$2 ha aceptado su solicitud de amigo en {{SITENAME}}!\n\nverifique la página de $2 en $3\n\nGracias\n\n---\n\nHey, Desea no recibir correos electrónicos de nosotros?\n\nHaga click en $4\ny cambie sus configuraciones para deshabilitar notificaciones por correo electrónico.",

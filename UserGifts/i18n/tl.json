@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"AnakngAraw"
+			"AnakngAraw",
+			"Jack Phoenix"
 		]
 	},
 	"giftmanager": "Tagapamahala ng mga Handog",
@@ -29,7 +30,7 @@
 	"g-error-do-not-own": "Hindi mo pag-aari ang handog na ito.",
 	"g-error-message-blocked": "Pangkasalukuyan kang hinahadlangan at hindi makapagbibigay ng mga handog",
 	"g-error-message-invalid-link": "Hindi tanggap ang ipinasok mong kawing.",
-	"g-error-message-login": "Dapat kang lumagda muna upang makapagbigay ng mga handog",
+	"g-error-message-login": "Dapat kang [[Special:UserLogin|lumagda]] muna upang makapagbigay ng mga handog.",
 	"g-error-message-no-user": "Hindi umiiral ang tagagamit na sinusubukan mong tingnan.",
 	"g-error-message-to-yourself": "Hindi ka makapagbibigay ng handog sa sarili mo.",
 	"g-error-title": "Ay 'sus, nagkamali ka sa pagliko!",

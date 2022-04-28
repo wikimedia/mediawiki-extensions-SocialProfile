@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sp5uhe"
+			"Sp5uhe",
+			"Jack Phoenix"
 		]
 	},
 	"giftmanager": "Zarządzanie prezentami",
@@ -29,7 +30,7 @@
 	"g-error-do-not-own": "Nie masz tego prezentu.",
 	"g-error-message-blocked": "Jesteś obecnie zablokowany i nie możesz dawać prezentów",
 	"g-error-message-invalid-link": "Link który wprowadziłeś jest nieprawidłowy.",
-	"g-error-message-login": "Należy zalogować się aby dawać prezenty",
+	"g-error-message-login": "Należy [[Special:UserLogin|zalogować się]] aby dawać prezenty.",
 	"g-error-message-no-user": "Użytkownik, którego próbujesz wyświetlić nie istnieje.",
 	"g-error-message-to-yourself": "Nie można dać prezentu samemu siebie.",
 	"g-error-title": "Ojej. Nie można tego zrobić!",
