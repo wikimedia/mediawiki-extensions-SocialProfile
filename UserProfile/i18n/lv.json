@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"GreenZeb",
-			"Xil"
+			"Xil",
+			"Jack Phoenix"
 		]
 	},
 	"editprofile": "Rediģēt citu lietotāju profilus",
@@ -23,9 +24,9 @@
 	"user-send-message": "Nosūtīt ziņu",
 	"user-send-gift": "Nosūtīt dāvanu",
 	"user-contributions": "Devums",
-	"user-stats-edits": "{{PLURAL:$1|izmaiņa|izmaiņas}}",
-	"user-stats-votes": "{{PLURAL:$1|Balss|Balsis}}",
-	"user-stats-comments": "{{PLURAL:$1|Komentārs|Komentāri}}",
+	"user-stats-edits": "Izmaiņas",
+	"user-stats-votes": "Balsis",
+	"user-stats-comments": "Komentāri",
 	"other-info-title": "Cita informācija",
 	"user-friends-title": "Draugi",
 	"user-foes-title": "Ienaidnieki",

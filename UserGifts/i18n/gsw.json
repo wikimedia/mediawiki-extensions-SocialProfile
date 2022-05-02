@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Als-Holder"
+			"Als-Holder",
+			"Jack Phoenix"
 		]
 	},
 	"giftmanager": "Gschänkverwaltig",
@@ -29,7 +30,7 @@
 	"g-error-do-not-own": "Dir ghert des Gschänk nit.",
 	"g-error-message-blocked": "Du bisch im Momänt gsperrt un chasch kei Gschänk mache",
 	"g-error-message-invalid-link": "S Gleich, wu Du yygee hesch, isch nit giltig.",
-	"g-error-message-login": "Du muesch aagmäldet syy go Gschänk mache",
+	"g-error-message-login": "Du muesch [[Special:UserLogin|aagmäldet syy]] go Gschänk mache.",
 	"g-error-message-no-user": "Dää Benutzer, wu Du witt aelueg, git s nit.",
 	"g-error-message-to-yourself": "Du chasch Dir nit sälber e Gschänk mache.",
 	"g-error-title": "Hoppla, do lauft ebis scheps!",

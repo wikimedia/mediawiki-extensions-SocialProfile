@@ -3,7 +3,9 @@
 		"authors": [
 			"Harald Khan",
 			"Nghtwlkr",
-			"Ranveig"
+			"Ranveig",
+			"Jack Phoenix",
+			"Njardarlogar"
 		]
 	},
 	"giftmanager": "Gåvehandsamar",
@@ -31,7 +33,7 @@
 	"g-error-do-not-own": "Du eig ikkje denne gåva.",
 	"g-error-message-blocked": "Du er nett no blokkert og kan ikkje senda gåver.",
 	"g-error-message-invalid-link": "Lenkja du oppgav er ugyldig.",
-	"g-error-message-login": "Du lyt vera innlogga for å kunna gje gåver.",
+	"g-error-message-login": "Du lyt vera [[Special:UserLogin|innlogga]] for å kunna gje gåver.",
 	"g-error-message-no-user": "Brukaren du ynskjer å sjå finst ikkje.",
 	"g-error-message-to-yourself": "Du kan ikkje gje ei gåva til deg sjølv.",
 	"g-error-title": "Oi, du svingte feil!",

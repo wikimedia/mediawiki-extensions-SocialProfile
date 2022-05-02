@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Als-Chlämens",
-			"Als-Holder"
+			"Als-Holder",
+			"Jack Phoenix"
 		]
 	},
 	"editprofile": "D Benutzerprofil vo andre Benutzer bearbeite",
@@ -26,14 +27,14 @@
 	"user-send-message": "Nochricht schicke",
 	"user-send-gift": "Gschänk schicke",
 	"user-contributions": "Byyträg",
-	"user-stats-edits": "{{PLURAL:$1|Byytrag|Byyträg}}",
-	"user-stats-votes": "{{PLURAL:$1|Stimm|Stimme}}",
-	"user-stats-comments": "{{PLURAL:$1|Kommentar|Kommentar}}",
-	"user-stats-recruits": "{{PLURAL:$1|Rekrut|Rekrute}}",
-	"user-stats-poll-votes": "Abstimmig {{PLURAL:$1|Stimm|Stimme}}",
-	"user-stats-picture-game-votes": "Bildspiil {{PLURAL:$1|Stimm|Stimme}}",
-	"user-stats-quiz-points": "Quiz {{PLURAL:$1|Punkt|Pinkt}}",
-	"user-stats-pick-points": "Suech ene {{PLURAL:$1|ne Punkt|Pinkt}} uus",
+	"user-stats-edits": "Byyträg",
+	"user-stats-votes": "Stimme",
+	"user-stats-comments": "Kommentar",
+	"user-stats-recruits": "Rekrute",
+	"user-stats-poll-votes": "Abstimmig Stimme",
+	"user-stats-picture-game-votes": "Bildspiil Stimme",
+	"user-stats-quiz-points": "Quiz Pinkt",
+	"user-stats-pick-points": "Suech ene Pinkt uus",
 	"casual-games-title": "Spiil zum Zitvertryyb",
 	"casual-game-quiz": "Quiz",
 	"casual-game-poll": "Abstimmig",

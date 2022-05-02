@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"DCLXVI"
+			"DCLXVI",
+			"Jack Phoenix"
 		]
 	},
 	"giftmanager-addgift": "+ Добавяне на нов подарък",
@@ -16,17 +17,17 @@
 	"g-count": "$1 има $2 {{PLURAL:$2|подарък|подаръка}}.",
 	"g-created-by": "създаден от",
 	"g-current-image": "Текуща картинка",
-	"g-error-message-login": "За да давате подаръци е необходимо да влезете в системата",
+	"g-error-message-login": "За да давате подаръци е необходимо да [[Special:UserLogin|влезете в системата]].",
 	"g-from": "от [[User:$1|$1]]",
 	"g-gift": "подарък",
 	"g-gift-name": "име на подаръка",
 	"g-give-all-message-title": "Добавяне на съобщение",
-	"g-select-a-friend": "избиране на приятел",
 	"g-give-separator": "или",
 	"g-large": "Голяма",
 	"g-medium": "Средна",
 	"g-next": "Следваща",
 	"g-previous": "Предишна",
 	"g-remove": "Премахване",
+	"g-select-a-friend": "избиране на приятел",
 	"g-small": "Малка"
 }
