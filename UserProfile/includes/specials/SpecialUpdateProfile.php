@@ -278,6 +278,9 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 	/**
 	 * Save social preferences into the database.
+	 *
+	 * @suppress SecurityCheck-SQLInjection Literally fake news, core MW UserOptionsManager is not
+	 *  suspectible to SQLi even though phan seems to think it is
 	 */
 	function saveSocialPreferences() {
 		$request = $this->getRequest();
@@ -304,7 +307,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		if ( $notify_message == '' ) {
 			$notify_message = 0;
 		}
-		$userOptionsManager = $this->getUserOptionsManager();
+		$userOptionsManager = MediaWikiServices::getInstance()->getUserOptionsManager();
 		$userOptionsManager->setOption( $user, 'notifygift', $notify_gift );
 		$userOptionsManager->setOption( $user, 'notifyfriendrequest', $notify_friend );
 		$userOptionsManager->setOption( $user, 'notifychallenge', $notify_challenge );
