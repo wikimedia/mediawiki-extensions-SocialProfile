@@ -22,34 +22,7 @@ class ApiRelationshipResponse extends ApiBase {
 
 		$rel = new UserRelationship( $user );
 		if ( $rel->verifyRelationshipRequest( $requestId ) == true ) {
-			$request = $rel->getRequest( $requestId );
-			$actorIdFrom = $request[0]['actor_from'];
-			$userFrom = User::newFromActorId( $actorIdFrom );
-			$rel_type = strtolower( $request[0]['type'] );
-
-			$rel->updateRelationshipRequestStatus( $requestId, intval( $response ) );
-
-			$avatar = new wAvatar( $userFrom->getId(), 'l' );
-			$avatar_img = $avatar->getAvatarURL();
-
-			// If the request was accepted, add the relationship.
-			if ( $response == 1 ) {
-				$rel->addRelationship( $requestId );
-			}
-
-			// Build response array
-			$retVal = [
-				'avatar' => $avatar_img,
-				// 'friend' or 'foe'
-				'rel_type' => $rel_type,
-				'requester' => $userFrom->getName(),
-				// action that was done to the request, will be used to build i18n keys
-				// in JS in ../resources/js/UserRelationship.js
-				'action' => ( $response == 1 ? 'added' : 'reject' )
-			];
-
-			// Whatever action was taken, the request's getting deleted either way, that's for sure.
-			$rel->deleteRequest( $requestId );
+			$retVal = SpecialViewRelationshipRequests::doAction( $rel, $requestId, $response );
 		} else {
 			return false;
 		}
