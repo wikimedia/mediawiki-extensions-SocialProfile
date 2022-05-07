@@ -93,7 +93,6 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 				return;
 			}
 
-			// @todo FIXME: essentially almost the same code as in ../api/ApiRelationshipResponse.php
 			$response = $request->getInt( 'response' );
 			$requestId = $request->getInt( 'id' );
 
@@ -103,41 +102,27 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 				$rel->verifyRelationshipRequest( $requestId ) == true &&
 				$user->matchEditToken( $request->getVal( 'token' ) )
 			) {
-				$request = $rel->getRequest( $requestId );
-				$actorIdFrom = $request[0]['actor_from'];
-				$userFrom = User::newFromActorId( $actorIdFrom );
-				$rel_type = strtolower( $request[0]['type'] );
+				$requestResponse = self::doAction( $rel, $requestId, $response );
 
-				$rel->updateRelationshipRequestStatus( $requestId, intval( $response ) );
-
-				$avatar = new wAvatar( $userFrom->getId(), 'l' );
-				$avatar_img = $avatar->getAvatarURL();
-
-				if ( $response == 1 ) {
-					$rel->addRelationship( $requestId );
-					$performedAction = 'added';
-				} else {
-					$performedAction = 'reject';
-				}
-
-				$output .= "<div class=\"relationship-action red-text\">
-					{$avatar_img}" .
+				$output .= '<div class="relationship-action red-text">' .
+					$requestResponse['avatar'] .
 					// i18n messages used here: ur-requests-added-message-friend, ur-requests-added-message-foe
 					// ur-requests-reject-message-friend, ur-requests-reject-message-foe
-					$this->msg( "ur-requests-{$performedAction}-message-{$rel_type}", $userFrom->getName() )->escaped() .
+					$this->msg(
+						"ur-requests-{$requestResponse['action']}-message-{$requestResponse['rel_type']}",
+						$requestResponse['requester']
+					)->escaped() .
 					'<div class="visualClear"></div>
 				</div>';
 
 				// "Your profile" and "Main page" buttons, for consistency w/ other special pages like
 				// AddRelationship, RemoveRelationship, etc.
-				// @todo NoJS support...
+				// @todo NoJS support for these two buttons
 				$output .= "<div class=\"relationship-buttons\">
 						<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'mainpage' )->escaped() . "\" size=\"20\" onclick=\"window.location='index.php?title=" . $this->msg( 'mainpage' )->inContentLanguage()->escaped() . "'\"/>
 						<input type=\"button\" class=\"site-button\" value=\"" . $this->msg( 'ur-your-profile' )->escaped() . "\" size=\"20\" onclick=\"window.location='" . htmlspecialchars( $user->getUserPage()->getFullURL() ) . "'\"/>
 					</div>
 					<div class=\"visualClear\"></div>";
-
-				$rel->deleteRequest( $requestId );
 			}
 
 			$out->addHTML( $output );
@@ -203,5 +188,54 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 
 			$out->addHTML( $output );
 		}
+	}
+
+	/**
+	 * Perform an action on a relationship request: accept it and add the relationship
+	 * or reject it.
+	 * Either way, the relationship will be deleted before this method returns a value.
+	 *
+	 * For users who do _not_ have JS enabled, the PHP code in /this/ class calls this method.
+	 * For the vast majority of users, who have JS enabled, this will be called by UserRelationship.js,
+	 * which calls ApiRelationshipResponse.php, which in turn is just a quick shim around this function.
+	 *
+	 * @note This method performs no user right (etc.) checking; sanity checks should be done before!
+	 *
+	 * @param UserRelationship $rel UserRelationship class instance for the user who is doing stuff
+	 * @param int $requestId Relationship request identifier to be acted upon
+	 * @param int $response Numeric status code indicating if a request should be accepted (1) or not (any other value)
+	 * @return array
+	 */
+	public static function doAction( $rel, $requestId, $response ) {
+		$request = $rel->getRequest( $requestId );
+		$actorIdFrom = $request[0]['actor_from'];
+		$userFrom = User::newFromActorId( $actorIdFrom );
+		$rel_type = strtolower( $request[0]['type'] );
+
+		$rel->updateRelationshipRequestStatus( $requestId, intval( $response ) );
+
+		$avatar = new wAvatar( $userFrom->getId(), 'l' );
+		$avatar_img = $avatar->getAvatarURL();
+
+		// If the request was accepted, add the relationship.
+		if ( $response == 1 ) {
+			$rel->addRelationship( $requestId );
+		}
+
+		// Build response array
+		$retVal = [
+			'avatar' => $avatar_img,
+			// 'friend' or 'foe'
+			'rel_type' => $rel_type,
+			'requester' => $userFrom->getName(),
+			// action that was done to the request, will be used to build i18n keys
+			// in JS in ../resources/js/UserRelationship.js and in PHP in this file
+			'action' => ( $response == 1 ? 'added' : 'reject' )
+		];
+
+		// Whatever action was taken, the request's getting deleted either way, that's for sure.
+		$rel->deleteRequest( $requestId );
+
+		return $retVal;
 	}
 }
