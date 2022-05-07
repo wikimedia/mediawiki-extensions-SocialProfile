@@ -195,13 +195,8 @@ class UserProfileHooks {
 			return;
 		}
 
-		if ( version_compare( MW_VERSION, '1.35', '<' ) ) {
-			// Need a Revision object
-			$oldRevision = $differenceEngine->mOldRev;
-		} else {
-			// Need a revision record object
-			$oldRevision = $differenceEngine->getOldRevision();
-		}
+		// Need a RevisionRecord object
+		$oldRevision = $differenceEngine->getOldRevision();
 
 		$oldRevisionHeader = $differenceEngine->getRevisionHeader( $oldRevision, 'complete', 'old' );
 
@@ -256,13 +251,9 @@ class UserProfileHooks {
 			return;
 		}
 
-		if ( version_compare( MW_VERSION, '1.35', '<' ) ) {
-			// Need a Revision object
-			$newRevision = $differenceEngine->mNewRev;
-		} else {
-			// Need a revision record object
-			$newRevision = $differenceEngine->getNewRevision();
-		}
+		// Need a RevisionRecord object
+		$newRevision = $differenceEngine->getNewRevision();
+
 		$newRevisionHeader =
 			$differenceEngine->getRevisionHeader( $newRevision, 'complete', 'new' ) .
 			' ' . implode( ' ', $formattedRevisionTools );
