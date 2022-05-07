@@ -32,31 +32,29 @@ class ApiRelationshipResponse extends ApiBase {
 			$avatar = new wAvatar( $userFrom->getId(), 'l' );
 			$avatar_img = $avatar->getAvatarURL();
 
-			// @todo FIXME: super legacy code is legacy. This API module should return a more structured,
-			// programmatical response and leave the HTML up to the caller(s).
-			// e.g. [ 'avatar' => avatar URL here, 'rel_type' => $rel_type, 'userFrom' => $userFrom ]
-			// or something like that...
+			// If the request was accepted, add the relationship.
 			if ( $response == 1 ) {
 				$rel->addRelationship( $requestId );
-				$out .= "<div class=\"relationship-action red-text\">
-					{$avatar_img}" .
-						wfMessage( "ur-requests-added-message-{$rel_type}", $userFrom->getName() )->escaped() .
-					'<div class="visualClear"></div>
-				</div>';
-			} else {
-				$out .= "<div class=\"relationship-action red-text\">
-					{$avatar_img}" .
-						wfMessage( "ur-requests-reject-message-{$rel_type}", $userFrom->getName() )->escaped() .
-					'<div class="visualClear"></div>
-				</div>';
 			}
 
+			// Build response array
+			$retVal = [
+				'avatar' => $avatar_img,
+				// 'friend' or 'foe'
+				'rel_type' => $rel_type,
+				'requester' => $userFrom->getName(),
+				// action that was done to the request, will be used to build i18n keys
+				// in JS in ../resources/js/UserRelationship.js
+				'action' => ( $response == 1 ? 'added' : 'reject' )
+			];
+
+			// Whatever action was taken, the request's getting deleted either way, that's for sure.
 			$rel->deleteRequest( $requestId );
 		} else {
 			return false;
 		}
 
-		$this->getResult()->addValue( null, 'html', $out );
+		$this->getResult()->addValue( null, 'response', $retVal );
 
 		return true;
 	}

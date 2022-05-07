@@ -55,6 +55,12 @@
 			"scripts": "js/UserRelationship.js",
 			"dependencies": [
 				"mediawiki.util"
+			],
+			"messages": [
+				"ur-requests-added-message-friend",
+				"ur-requests-added-message-foe",
+				"ur-requests-reject-message-friend",
+				"ur-requests-reject-message-foe"
 			]
 		}
 	},
