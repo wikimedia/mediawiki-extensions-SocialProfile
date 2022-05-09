@@ -79,9 +79,12 @@
 	"g-viewgiftlist": "Ver lista de regalos",
 	"g-your-profile": "Su perfil",
 	"gift_received_subject": "$1 le ha enviado el regalo $2 en {{SITENAME}}!",
-	"gift_received_body": "Hola $1.\n\n$2 acaba de enviarte el regalo $3 en {{SITENAME}}.\n\n¿Deseas leer la nota que $2 te dejó y ver tu regalo?  Haz clic en el vínculo a continuación:\n\n$4\n\n¡Esperamos que te guste!\n\nGracias,\n\n\nEl equipo {{SITENAME}}\n\n---\n\n¿Deseas dejar de recibir más correos electrónicos de nosotros?\n\nHaz clic en $5\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
+	"gift_received_body_html": "Hola $1.\n\n$2 acaba de enviarte el regalo $3 en {{SITENAME}}.\n\n¿Deseas leer la nota que $2 te dejó y ver tu regalo?  Haz clic en el vínculo a continuación:\n\n[[Special:ViewGifts]]\n\n¡Esperamos que te guste!\n\nGracias,\n\n\nEl equipo {{SITENAME}}\n\n---\n\n¿Deseas dejar de recibir correos electrónicos de nosotros?\n\nHaz clic en [[Special:UpdateProfile]]\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
+	"gift_received_body": "Hola $1.\n\n$2 acaba de enviarte el regalo $3 en {{SITENAME}}.\n\n¿Deseas leer la nota que $2 te dejó y ver tu regalo?  Haz clic en el vínculo a continuación:\n\n$4\n\n¡Esperamos que te guste!\n\nGracias,\n\n\nEl equipo {{SITENAME}}\n\n---\n\n¿Deseas dejar de recibir correos electrónicos de nosotros?\n\nHaz clic en $5\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
 	"echo-category-title-social-gift": "Regalos",
 	"echo-pref-tooltip-social-gift": "Notificarme cuando alguien me envíe un regalo.",
 	"notification-social-gift-send-no-message": "$1 acaba de enviar un regalo para ti: $2.",
+	"notification-social-gift-send-with-message": "$1 acaba de enviar un regalo para ti: $2.<br /><br />''$3''",
+	"notification-social-gift-send-bundle": "{{PLURAL:$1|Una persona te ha|$1 personas te han}} enviado regalos.",
 	"right-giftadmin": "Crear nuevo y editar regalos existentes"
 }

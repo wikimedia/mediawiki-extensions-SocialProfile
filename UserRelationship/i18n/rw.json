@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Germain92"
+		]
+	},
+	"foe_removed_body_html": "\nMuraho $1.\n\n$2 yagukuyeho nk'utagukeneye {{SITENAME}}!\n\nahari mwembi mwifuzaga kuba inshuti\n\nMurakoze,\n\n\nIzina ry'itsinda{{SITENAME}} \n\n---\n\nMuraho, urashaka guhagarika kubona imeri zacu?\n\nkanda [[Special:UpdateProfile]]\nubundi uhindure igenamiterere kugirango uhagarike imenyesha rya imeri zacu.",
+	"foe_removed_body": "Muraho $1.\n\n$2 yagukuyeho nk'utagukeneye {{SITENAME}}!\n\nahari mwembi mwifuzaga kuba inshuti?\n\nMurakoze,\n\n\nizina ry'itsinda {{SITENAME}} \n\n---\n\nMuraho, Urashaka guhagarika kubona Imeri zacu?\n\nKanda $4\nubundi uhindure igenamiterere kugirango uhagarike imenyesha rya imeri zacu."
+}
