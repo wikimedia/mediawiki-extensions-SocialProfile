@@ -21,7 +21,7 @@
 	"g-characters-left": "$1 characters left",
 	"g-back-edit-gift": "Back to edit this gift",
 	"g-back-gift-list": "Back to gift list",
-	"g-back-link": "< Back to $1's page",
+	"g-back-link": "&lt; Back to $1's page",
 	"g-choose-file": "Choose file:",
 	"g-count": "$1 has $2 {{PLURAL:$2|gift|gifts}}.",
 	"g-create-gift": "Create gift",
