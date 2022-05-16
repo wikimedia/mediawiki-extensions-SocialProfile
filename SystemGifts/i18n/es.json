@@ -5,7 +5,8 @@
 			"Crazymadlover",
 			"Mor",
 			"ArenaL5",
-			"Fitoschido"
+			"Fitoschido",
+			"Ciencia Al Poder"
 		]
 	},
 	"systemgiftmanager": "Administrador de sistema de regalos",
@@ -69,7 +70,8 @@
 	"topawards-friend-milestone": "Meta {{PLURAL:$1|de un amigo|de $1 amigos}}",
 	"topawards-empty": "No están configurados los premios para esta categoría de premio, o bien nadie ha conseguido todavía esos premios.",
 	"system_gift_received_subject": "Usted ha recibido el premio $1 en {{SITENAME}}!",
-	"system_gift_received_body": "Hola $1.\n\nAcabas de recibir el premio $2 en {{SITENAME}}!\n\n\"$3\"\n\n¡Haz click abajo para ver tu vitrina de trofeos!\n\n$4\n\n¡Esperamos que te guste!\n\nGracias,\n\n\nEl equipo de {{SITENAME}}\n\n---\n\nHey, ¿Deseas dejar de recibir correos nuestros?\n\nHaz click en $5\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
+	"system_gift_received_body_html": "Hola $1.\n\n¡Acabas de recibir el premio $2 en {{SITENAME}}!\n\n«$3»\n\n¡Haz clic a continuación para revisar tu vitrina de trofeos!\n\n[[Special:ViewSystemGifts]]\n\n¡Esperamos que te guste!\n\nGracias,\n\n\nEl equipo de {{SITENAME}}\n\n---\n\n¿Deseas dejar de recibir correos electrónicos de nosotros?\n\nHaz clic en [[Special:UpdateProfile]]\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
+	"system_gift_received_body": "Hola $1.\n\n¡Acabas de recibir el premio $2 en {{SITENAME}}!\n\n«$3»\n\n¡Haz clic a continuación para revisar tu vitrina de trofeos!\n\n$4\n\n¡Esperamos que te guste!\n\nGracias,\n\n\nEl equipo de {{SITENAME}}\n\n---\n\n¿Deseas dejar de recibir correos electrónicos de nosotros?\n\nHaz clic en $5\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
 	"echo-category-title-social-award": "Premios",
 	"right-awardsmanage": "Crear nuevo y editar premios existentes"
 }
