@@ -44,7 +44,13 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$out->addModuleStyles( [
 			'ext.socialprofile.userboard.boardblast.css'
 		] );
-		$out->addModules( 'ext.socialprofile.userboard.boardblast.js' );
+
+		$jsModules = [ 'ext.socialprofile.userboard.boardblast.js' ];
+		// Add WikiEditor to the textarea if enabled for the current user
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'WikiEditor' ) && $user->getOption( 'usebetatoolbar' ) ) {
+			$jsModules[] = 'ext.socialprofile.userboard.wikiEditor';
+		}
+		$out->addModules( $jsModules );
 
 		$output = '';
 		$errors = [];

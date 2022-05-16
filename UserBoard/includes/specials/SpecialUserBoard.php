@@ -55,7 +55,13 @@ class SpecialViewUserBoard extends SpecialPage {
 		$out->addModuleStyles( [
 			'ext.socialprofile.userboard.css'
 		] );
-		$out->addModules( 'ext.socialprofile.userboard.js' );
+
+		$jsModules = [ 'ext.socialprofile.userboard.js' ];
+		// Add WikiEditor to the textarea if enabled for the current user
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'WikiEditor' ) && $currentUser->getOption( 'usebetatoolbar' ) ) {
+			$jsModules[] = 'ext.socialprofile.userboard.wikiEditor';
+		}
+		$out->addModules( $jsModules );
 
 		$ub_messages_show = 25;
 		$user_name = $userFromURL = $request->getVal( 'user', $par );

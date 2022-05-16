@@ -1780,6 +1780,10 @@ class UserProfilePage extends Article {
 
 		if ( $this->viewingUser->getName() !== $this->profileOwner->getName() ) {
 			if ( $this->viewingUser->isRegistered() && !$this->viewingUser->getBlock() ) {
+				// Add WikiEditor to the textarea if enabled for the current user
+				if ( ExtensionRegistry::getInstance()->isLoaded( 'WikiEditor' ) && $this->viewingUser->getOption( 'usebetatoolbar' ) ) {
+					$this->getContext()->getOutput()->addModules( [ 'ext.socialprofile.userboard.wikiEditor' ] );
+				}
 				// @todo FIXME: This code exists in an almost identical form in
 				// ../../UserBoard/incldues/specials/SpecialUserBoard.php
 				$url = htmlspecialchars(

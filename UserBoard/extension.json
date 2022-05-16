@@ -51,6 +51,10 @@
 				"userboard_confirmdelete"
 			]
 		},
+		"ext.socialprofile.userboard.wikiEditor": {
+			"scripts": "js/WikiEditorIntegration.js",
+			"dependencies": "ext.wikiEditor"
+		},
 		"ext.socialprofile.userboard.css": {
 			"styles": "css/UserBoard.css"
 		},
