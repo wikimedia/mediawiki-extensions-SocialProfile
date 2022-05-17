@@ -32,8 +32,6 @@ CREATE TABLE user_stats (
   stats_weekly_winner_count            INTEGER  NOT NULL  DEFAULT 0,
   stats_monthly_winner_count           INTEGER  NOT NULL  DEFAULT 0,
   stats_total_points                   INTEGER            DEFAULT 0,
-  stats_overall_rank                   INTEGER  NOT NULL  DEFAULT 0,
-  up_complete                          INTEGER,
   user_board_count                     INTEGER           DEFAULT 0,
   user_board_sent                      INTEGER           DEFAULT 0,
   user_board_count_priv                INTEGER           DEFAULT 0,
