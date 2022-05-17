@@ -34,7 +34,7 @@
 	"user-stats-recruits": "מגויסים",
 	"user-stats-poll-votes": "הצבעות לסקר",
 	"user-stats-picture-game-votes": "הצבעות למשחק התמונות",
-	"user-stats-quiz-points": "נקודות בבוחן",
+	"user-stats-quiz-points": "נקודות בחידון",
 	"user-stats-pick-points": "נקודות איסוף",
 	"casual-games-title": "משחקים מזדמנים",
 	"casual-game-quiz": "חידון",
@@ -155,6 +155,7 @@
 	"user-profile-picture-picsize": "על התמונה שלכם להיות מסוג jpeg, png או gif ועליה להיות קטנה מ־100 קילובייט.",
 	"user-profile-goback": "חזרה",
 	"user-profile-userlevels-link": "רמות המשתמשים",
+	"user-profile-create-threshold-edits": "{{PLURAL:$1|עריכה אחת|$1 עריכות}}",
 	"user-no-images": "לא הועלו תמונות",
 	"edit-profile-title": "עריכת הפרופיל",
 	"edit-profiles-title": "לערוך פרופילים",
@@ -165,6 +166,9 @@
 	"user-type-toggle-new": "שימוש בדף המשתמש הקהילתי",
 	"user-board-login-message": "חובה [[Special:UserLogin|להיכנס לחשבון]] כדי לשלוח הודעות למשתמשים אחרים",
 	"removeavatar": "הסרת התמונה האישית",
+	"removeavatar-remove-your-avatar": "הסרת התמונה המייצגת שלך",
+	"removeavatar-already-default": "המשתמש הזה כבר משתמש בתמונה מייצגת לפי ברירת מחדל, אז אין מה להסיר כאן.",
+	"removeavatar-already-default-cta": "התמונה המייצגת שלך היא כבר ברירת המחדל. למה לא [[Special:UploadAvatar|להעלות]] תמונה מייצגת?",
 	"givegift": "הענקת מתנה",
 	"viewgifts": "הצגת מתנות",
 	"viewsystemgifts": "הצגת פרסים",
@@ -181,5 +185,6 @@
 	"user-profile-picture-log-delete-entry": "מחק את תמונת המשתמש של $1",
 	"right-avatarremove": "הסרת תמונות משתמש",
 	"right-editothersprofiles": "לעדכן פרופילים חברתיים של משתמשים אחרים",
+	"action-avatarremove": "להסיר תמונות מייצגות של משתמשים",
 	"random-users-avatars-title": "פגשו את הקהילה"
 }
