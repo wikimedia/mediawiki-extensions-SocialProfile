@@ -2,9 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Otokoume",
-			"Shirayuki"
+			"Shirayuki",
+			"Sou0012"
 		]
 	},
-	"socialprofile-desc": "MediaWiki 用のソーシャルツールの集合",
+	"socialprofile-desc": "MediaWikiのためのソーシャルツールセット",
 	"socialprofile-uploads-disabled": "アバターのアップロード機能が無効になっています"
 }
