@@ -5,7 +5,7 @@ var UserGifts = {
 	// "Borrowed" from FanBoxes & slightly modified here as per discussion w/ Isarra on 28 August 2020
 	limitText: function ( limitField, limitCount, limitNum ) {
 		if ( limitField.value.length > limitNum ) {
-			limitField.value = limitField.value.substring( 0, limitNum );
+			limitField.value = limitField.value.slice( 0, Math.max( 0, limitNum ) );
 		} else {
 			// This old line of code won't work now that the displayed number is
 			// no longer an <input>...
