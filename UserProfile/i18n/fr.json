@@ -227,7 +227,7 @@
 	"right-editothersprofiles-private": "Afficher et mettre à jour les informations privées (adresse de messagerie) dans les profils d’autres réseaux sociaux",
 	"action-avatarremove": "supprimer les avatars utilisateur",
 	"action-editothersprofiles": "mettre à jour les profils sociaux d’autres utilisateurs",
-	"right-populate-user-profiles": "Permet de remplir les profils des autres utilisateurs pour les wikis existants",
+	"right-populate-user-profiles": "Remplir les profils des autres utilisateurs pour les wikis existants",
 	"action-populate-user-profiles": "remplir les profils des autres utilisateurs",
 	"apihelp-socialprofile-userprofileprivacy-description": "Module API pour définir la visibilité (« confidentialité ») d’un champ de profil",
 	"apihelp-socialprofile-userprofileprivacy-summary": "Module API pour fixer la visibilité (« confidentialité ») d’un champ de profil",

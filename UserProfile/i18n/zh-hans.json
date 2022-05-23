@@ -3,6 +3,7 @@
 		"authors": [
 			"Colathewikian",
 			"Fantasticfears",
+			"GuoPC",
 			"Gzdavidwong",
 			"Hydra",
 			"Lakejason0",
@@ -234,7 +235,7 @@
 	"right-editothersprofiles-private": "查看与更新其他用户社交资料中的隐私信息（Email地址）",
 	"action-avatarremove": "移除用户头像",
 	"action-editothersprofiles": "更新其他用户的社交资料",
-	"right-populate-user-profiles": "允许为现有wiki填写其他用户的资料页",
+	"right-populate-user-profiles": "为现有wiki填写其他用户的资料页",
 	"action-populate-user-profiles": "填写其他用户的资料页",
 	"apihelp-socialprofile-userprofileprivacy-description": "设置详情字段可见性（“privacy”）的API模块",
 	"apihelp-socialprofile-userprofileprivacy-summary": "设置详情字段可见性（“privacy”）的API模块",

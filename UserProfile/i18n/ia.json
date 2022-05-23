@@ -217,7 +217,7 @@
 	"right-editothersprofiles-private": "Vider e actualisar informationes private (adresse de e-mail) in le profilos social de altere usatores",
 	"action-avatarremove": "remover avatares de usatores",
 	"action-editothersprofiles": "actualisar le profilos social de altere usatores",
-	"right-populate-user-profiles": "Permitte reimpler le profilos de altere usatores pro wikis existente",
+	"right-populate-user-profiles": "Reimpler le profilos de altere usatores pro wikis existente",
 	"action-populate-user-profiles": "reimpler le profilos de altere usatores",
 	"apihelp-socialprofile-userprofileprivacy-description": "Modulo API pro definir le visibilitate (\"confidentialitate\") de un campo de profilo",
 	"apihelp-socialprofile-userprofileprivacy-summary": "Modulo API pro definir le visibilitate (\"confidentialitate\") de un campo de profilo",
