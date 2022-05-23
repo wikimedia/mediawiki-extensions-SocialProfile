@@ -41,6 +41,9 @@
 	"ga-title": "הפרסים של $1",
 	"ga-uploadsuccess": "ההעלאה הושלמה בהצלחה",
 	"ga-viewlist": "צפייה ברשימת המתנות",
+	"topawards-edit-title": "פרסים מובילים – אבני־דרך בעריכה",
+	"topawards-edits": "עריכות",
+	"topawards-edit-milestone": "אבן־דרך של {{PLURAL:$1|עריכה אחת|$1 עריכות}}",
 	"system_gift_received_subject": "קיבלתם את פרס ה$1 ב{{grammar:תחילית|{{SITENAME}}}}!",
 	"system_gift_received_body": "שלום $1.\n\nהרגע קיבלתם את פרס ה$2 ב{{grammar:תחילית|{{SITENAME}}}}!\n\n\"$3\"\n\nלחצו להלן כדי לצפות בגביע שקיבלתם!\n\n$4\n\nאנו מקווים שתאהבו אותו!\n\nרוב תודות,\n\nצוות {{SITENAME}}\n\n---\n\nרוצים להפסיק לקבל מאיתנו הודעות בדוא\"ל?\n\nלחצו על $5\nושנו את הגדרותיכם לביטול התרעות בדוא\"ל",
 	"right-awardsmanage": "יצירת פרסים חדשים ועריכת פרסים קיימים"

@@ -6,6 +6,7 @@
 			"YaronSh"
 		]
 	},
+	"usergifts-desc": "אפשר לשלוח, לקבל, ליצור, ולהסיר מתנות משתמשים",
 	"giftmanager": "מנהל מתנות",
 	"giftmanager-addgift": "+ הוספת מתנה חדשה",
 	"giftmanager-access": "גישה למתנה",
@@ -51,6 +52,7 @@
 	"g-give-no-user-title": "למי ברצונכם לתת את המתנה הזאת?",
 	"g-give-to-user-title": "שליחת המתנה \"$1\" ל־$2",
 	"g-give-to-user-message": "מעוניינים להעניק ל־$1 [[Special:GiveGift/$1|מתנה אחרת]]?",
+	"g-give-this-gift": "לתת את המתנה הזאת",
 	"g-go-back": "חזרה",
 	"g-imagesbelow": "להלן תמונותיכם שתשמשנה באתר",
 	"g-large": "גדולה",
@@ -68,6 +70,7 @@
 	"g-remove-success-message": "המתנה \"$1\" הוסרה.",
 	"g-remove-title": "האם להסיר את \"$1\"?",
 	"g-send-gift": "שליחת מתנה",
+	"g-select-gift": "נא לבחור מתנה.",
 	"g-select-a-friend": "בחירת חבר",
 	"g-sent-title": "שלחתם מתנה ל־$1",
 	"g-sent-message": "שלחתם את המתנה הבאה ל־$1.",
@@ -77,6 +80,12 @@
 	"g-viewgiftlist": "צפייה ברשימת המתנות",
 	"g-your-profile": "הפרופיל שלך",
 	"gift_received_subject": "המתנה $2 נשלחה אליך מאת $1 ב{{grammar:תחילית|{{SITENAME}}}}!",
+	"gift_received_body_html": "שלום $1.\n\nכרגע נשלחה אליכם המתנה $3 מאת $2 באתר {{SITENAME}}.\n\nרוצה לקרוא את ההערה שנכתבה על־ידי $2 ולצפות במתנה שלכם? נא ללחוץ על הקישור הזה:\n\n[[Special:ViewGifts]]\n\nאנו מקווים שהיא תמצא חן בעיניך!\n\nתודה,\n\nצוות {{SITENAME}}\n\n---\n\nהיי, רוצים להפסיק לקבל מאיתנו הודעות דוא\"ל?\n\nנא ללחוץ על [[Special:UpdateProfile]]\nולשנות את ההגדרות שלך כדי לבטל הודעות בדוא\"ל.",
 	"gift_received_body": "שלום $1.\n\nכרגע נשלחה אליכם המתנה $3 מאת $2 באתר {{SITENAME}}.\n\nרוצה לקרוא את ההערה שנכתבה על־ידי $2 ולצפות במתנה שלכם? נא ללחוץ על הקישור הזה:\n\n$4\n\nאנו מקווים שהיא תמצא חן בעיניך!\n\nתודה,\n\nצוות {{SITENAME}}\n\n---\n\nהיי, רוצים להפסיק לקבל מאיתנו הודעות דוא\"ל?\n\nנא ללחוץ על $5\nולשנות את ההגדרות שלך כדי לבטל הודעות בדוא\"ל.",
+	"echo-category-title-social-gift": "מתנות",
+	"echo-pref-tooltip-social-gift": "להודיע לי כשמישהו שולח לי מתנה.",
+	"notification-social-gift-send-no-message": "$1 {{GENDER:$1|שלח|שלחה}} לך זה עתה מתנה: $2.",
+	"notification-social-gift-send-with-message": "$1 {{GENDER:$1|שלח|שלחה}} לך זה עתה מתנה: $2.<br /><br />''$3''",
+	"notification-social-gift-send-bundle": "{{PLURAL:$1|אדם אחד|$1 אנשים}} שלח לך מתנות.",
 	"right-giftadmin": "יצירת מתנות חדשות ועריכת מתנות קיימות"
 }

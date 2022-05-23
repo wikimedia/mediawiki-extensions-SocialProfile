@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"socialprofile-desc": "ערכת כלים חברתיים למדיה־ויקי",
+	"socialprofile-uploads-disabled": "האפשרות להעלות תמונה מייצגת כבויה",
+	"apihelp-smpuserprivacy-description": "מודול API להגדרת הנראות (\"פרטיות\") של שדה פרופיל",
+	"apihelp-smpuserprivacy-summary": "מודול API מודול API להגדרת הנראות (\"פרטיות\") של שדה פרופיל",
+	"apihelp-smpuserprivacy-param-method": "פעולה (\"get\" או \"set\")",
+	"apihelp-smpuserprivacy-param-field_key": "מפתח שדה היעד, כגון up_movies עבור שדה \"Movies\"",
+	"apihelp-smpuserprivacy-param-privacy": "ערך פרטיות חדש (אחד מהבאים: public‏, hidden‏, friends‏, foaf)"
+}
