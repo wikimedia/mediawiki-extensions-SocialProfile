@@ -5,7 +5,7 @@
 		]
 	},
 	"socialprofile-desc": "ערכת כלים חברתיים למדיה־ויקי",
-	"socialprofile-uploads-disabled": "אפשרות העלאת תמונת פרופיל כבויה",
+	"socialprofile-uploads-disabled": "האפשרות להעלות תמונה מייצגת כבויה",
 	"apihelp-smpuserprivacy-description": "מודול API להגדרת הנראות (\"פרטיות\") של שדה פרופיל",
 	"apihelp-smpuserprivacy-summary": "מודול API מודול API להגדרת הנראות (\"פרטיות\") של שדה פרופיל",
 	"apihelp-smpuserprivacy-param-method": "פעולה (\"get\" או \"set\")",
