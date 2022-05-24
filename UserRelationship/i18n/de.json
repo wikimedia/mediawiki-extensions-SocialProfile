@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Als-Holder",
+			"Brettchenweber",
 			"Imre",
 			"Melancholie",
 			"Revolus",
@@ -85,7 +86,7 @@
 	"friend_removed_subject": "[{{SITENAME}}] Oh nein! $1 hat seine Freundschaft zu dir beendet!",
 	"friend_removed_body": "Hi $1:\n\n$2 hat seine Freundschaft zu dir in {{SITENAME}} beendet!\n\nDanke,\n\nDas {{SITENAME}}-Team\n\n---\n\nHm, du willst keine E-Mails mehr von uns bekommen?\n\nKlicke $4\nund ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.",
 	"foe_removed_subject": "[{{SITENAME}}] Hey! $1 hat seine Feindschaft zu dir beendet!",
-	"foe_removed_body": "Hi $1:\n\n$2 hat seine Feindschaft zu dir in {{SITENAME}} beendet!\n\nVielleicht werdet ihr beide ja sogar mal Freunde?\n\nDanke,\n\nDas {{SITENAME}}-Team\n\n---\n\nHm, du willst keine E-Mails mehr von uns bekommen?\n\nKlicke $4\nund ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.",
+	"foe_removed_body": "Hi $1:\n\n$2 hat seine Feindschaft zu dir in {{SITENAME}} beendet!\n\nVielleicht werdet ihr beide ja sogar mal Freunde?\n\nDanke,\n\nDas {{SITENAME}}-Team\n\n---\n\nHm, du willst keine E-Mails mehr von uns bekommen?\n\nKlicke $4\nund ändere deine Einstellungen, um E-Mail-Benachrichtigungen auszuschalten.",
 	"notification-social-rel-add-friend-message": "$1 möchte Dein Freund werden.<br /><br />''$2''",
 	"notification-social-rel-add-friend-no-message": "$1 möchte Dein Freund werden."
 }
