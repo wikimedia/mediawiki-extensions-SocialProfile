@@ -317,13 +317,25 @@ class GenerateTopUsersReport extends SpecialPage {
 
 		// Make the edit as MediaWiki default
 		// For grep: user-stats-report-weekly-edit-summary, user-stats-report-monthly-edit-summary
-		$page->doEditContent(
-			ContentHandler::makeContent( $pageContent, $title ),
-			$this->msg( "user-stats-report-{$period}-edit-summary" )->inContentLanguage()->plain(),
-			EDIT_NEW | EDIT_FORCE_BOT,
-			false, /* $originalRevId */
-			$user
-		);
+		$summary = $this->msg( "user-stats-report-{$period}-edit-summary" )->inContentLanguage()->plain();
+		$contentObj = ContentHandler::makeContent( $pageContent, $title );
+		if ( method_exists( $page, 'doUserEditContent' ) ) {
+			// MW 1.36+
+			$page->doUserEditContent(
+				$contentObj,
+				$user,
+				$summary,
+				EDIT_NEW | EDIT_FORCE_BOT
+			);
+		} else {
+			$page->doEditContent(
+				$contentObj,
+				$summary,
+				EDIT_NEW | EDIT_FORCE_BOT,
+				false, /* $originalRevId */
+				$user
+			);
+		}
 
 		$date = date( 'Y-m-d H:i:s' );
 		// Archive points from the weekly/monthly table into the archive table

@@ -115,17 +115,27 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 	 * @param User $user
 	 */
 	public static function importUserWiki( User $user ) {
-		$article = new WikiPage( $user->getUserPage() );
-		$contentObject = $article->getContent();
+		$article = $user->getUserPage();
+		$wikiPage = new WikiPage( $article );
+		$contentObject = $wikiPage->getContent();
 		$user_page_content = ContentHandler::getContentText( $contentObject );
 
 		$user_wiki_title = Title::makeTitle( NS_USER_WIKI, $user->getName() );
 		$user_wiki = WikiPage::factory( $user_wiki_title );
 		if ( !$user_wiki->exists() ) {
-			$user_wiki->doEditContent(
-				ContentHandler::makeContent( $user_page_content, $user_wiki_title ),
-				'import user wiki'
-			);
+			if ( method_exists( $user_wiki, 'doUserEditContent' ) ) {
+				// MW 1.36+
+				$user_wiki->doUserEditContent(
+					ContentHandler::makeContent( $user_page_content, $user_wiki_title ),
+					$article->getContext()->getUser(),
+					'import user wiki'
+				);
+			} else {
+				$user_wiki->doEditContent(
+					ContentHandler::makeContent( $user_page_content, $user_wiki_title ),
+					'import user wiki'
+				);
+			}
 		}
 	}
 

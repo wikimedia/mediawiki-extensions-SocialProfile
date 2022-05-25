@@ -107,11 +107,21 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			$title = Title::makeTitle( NS_USER, $target->getName() );
 			$page = new WikiPage( $title );
 			if ( !$page->exists() ) {
-				$page->doEditContent(
-					ContentHandler::makeContent( '', $title ),
-					'create user page',
-					EDIT_SUPPRESS_RC
-				);
+				if ( method_exists( $page, 'doUserEditContent' ) ) {
+					// MW 1.36+
+					$page->doUserEditContent(
+						ContentHandler::makeContent( '', $title ),
+						$this->getUser(),
+						'create user page',
+						EDIT_SUPPRESS_RC
+					);
+				} else {
+					$page->doEditContent(
+						ContentHandler::makeContent( '', $title ),
+						'create user page',
+						EDIT_SUPPRESS_RC
+					);
+				}
 			}
 		}
 
