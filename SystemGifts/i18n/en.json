@@ -10,7 +10,7 @@
 	"ga-addnew": "+ Add new gift",
 	"ga-back-edit-gift": "Back to edit this gift",
 	"ga-back-gift-list": "Back to gift list",
-	"ga-back-link": "[[User:$1|< Back to $1's profile]]",
+	"ga-back-link": "[[User:$1|&lt; Back to $1's profile]]",
 	"ga-choosefile": "Choose file:",
 	"ga-count": "$1 has $2 {{PLURAL:$2|award|awards}}.",
 	"ga-create-gift": "Create gift",
