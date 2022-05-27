@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"GuoPC",
 			"Hydra",
 			"Lakejason0",
 			"Liangent",
@@ -24,7 +25,7 @@
 	"g-characters-left": "还剩$1个字符",
 	"g-back-edit-gift": "返回来编辑该礼物",
 	"g-back-gift-list": "回到礼物清单",
-	"g-back-link": "< 返回到$1的页面",
+	"g-back-link": "&lt; 返回到$1的页面",
 	"g-choose-file": "选择档案：",
 	"g-count": "$1有$2个{{PLURAL:$2|礼物}}。",
 	"g-create-gift": "创造礼物",

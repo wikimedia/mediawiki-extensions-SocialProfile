@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"GerardM",
+			"McDutchie",
 			"SPQRobin",
 			"Siebrand",
 			"Tvdm"
@@ -11,7 +12,7 @@
 	"ga-addnew": "+ Nieuwe gift toevoegen",
 	"ga-back-edit-gift": "Terug naar gift bewerken",
 	"ga-back-gift-list": "Terug naar giftenlijst",
-	"ga-back-link": "[[User:$1|< Terug naar het profiel van $1]]",
+	"ga-back-link": "[[User:$1|&lt; Terug naar het profiel van $1]]",
 	"ga-choosefile": "Bestand kiezen:",
 	"ga-count": "$1 heeft $2 {{PLURAL:$2|prijs|prijzen}}.",
 	"ga-create-gift": "Gift aanmaken",

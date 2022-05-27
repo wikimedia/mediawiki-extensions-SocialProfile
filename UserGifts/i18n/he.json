@@ -22,7 +22,7 @@
 	"g-characters-left": "{{PLURAL:$1|נשאר תו אחד|נשארו $1 תווים}}",
 	"g-back-edit-gift": "חזרה לעריכת מתנה זו",
 	"g-back-gift-list": "חזרה לרשימת המתנות",
-	"g-back-link": "< חזרה לדף של $1",
+	"g-back-link": "&lt; חזרה לדף של $1",
 	"g-choose-file": "בחירת קובץ:",
 	"g-count": "ל־$1 יש {{PLURAL:$2|מתנה אחת|$2 מתנות}}.",
 	"g-create-gift": "יצירת מתנה",

@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Mainframe98",
+			"McDutchie",
 			"Siebrand",
 			"Tvdm"
 		]
@@ -20,7 +21,7 @@
 	"g-add-message": "Een bericht toevoegen",
 	"g-back-edit-gift": "Terug naar gift bewerken",
 	"g-back-gift-list": "Terug naar giftenlijst",
-	"g-back-link": "< Terug naar de pagina van $1",
+	"g-back-link": "&lt; Terug naar de pagina van $1",
 	"g-choose-file": "Bestand kiezen:",
 	"g-count": "$1 heeft $2 {{PLURAL:$2|gift|giften}}.",
 	"g-create-gift": "Gift aanmaken",

@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"GuoPC",
 			"Hydra",
 			"Lakejason0",
 			"Liangent",
@@ -13,7 +14,7 @@
 	"ga-addnew": "+ 添加新的礼物",
 	"ga-back-edit-gift": "返回编辑礼物",
 	"ga-back-gift-list": "返回礼品列表",
-	"ga-back-link": "[[User:$1|< 返回到$1的个人资料]]",
+	"ga-back-link": "[[User:$1|&lt; 返回到$1的个人资料]]",
 	"ga-choosefile": "选择文件",
 	"ga-count": "$1拥有$2{{PLURAL:$2|项奖励}}。",
 	"ga-create-gift": "创建礼物",

@@ -20,7 +20,7 @@
 	"g-characters-left": "$1 characteres restante",
 	"g-back-edit-gift": "Retornar a modificar iste dono",
 	"g-back-gift-list": "Retornar al lista de donos",
-	"g-back-link": "< Retornar al pagina de $1",
+	"g-back-link": "&lt; Retornar al pagina de $1",
 	"g-choose-file": "Selige file:",
 	"g-count": "$1 ha $2 {{PLURAL:$2|dono|donos}}.",
 	"g-create-gift": "Crear dono",

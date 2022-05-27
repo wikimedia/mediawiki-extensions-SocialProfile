@@ -28,7 +28,7 @@
 	"g-characters-left": "$1 Zeichen übrig",
 	"g-back-edit-gift": "Zurück zur Geschenkbearbeitung",
 	"g-back-gift-list": "Zurück zur Geschenkeliste",
-	"g-back-link": "< Zurück zum Profil von $1",
+	"g-back-link": "&lt; Zurück zum Profil von $1",
 	"g-choose-file": "Wähle Datei:",
 	"g-count": "$1 hat $2 {{PLURAL:$2|Geschenk|Geschenke}}.",
 	"g-create-gift": "Geschenk erstellen",
