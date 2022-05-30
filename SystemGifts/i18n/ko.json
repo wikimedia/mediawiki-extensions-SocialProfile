@@ -5,6 +5,7 @@
 			"Ykhwong"
 		]
 	},
+	"ga-back-link": "[[User:$1|&lt; $1의 프로필로 돌아가기]]",
 	"ga-threshold": "최소 수치",
 	"ga-uploadsuccess": "업로드 성공"
 }

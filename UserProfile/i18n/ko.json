@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Theshinster123",
 			"Ykhwong",
 			"아라"
 		]
@@ -16,5 +17,6 @@
 	"removeavatar-remove-my-avatar": "내 아바타 제거",
 	"removeavatar-remove-your-avatar": "내 아바타 제거",
 	"user-profile-remove-avatar": "제거",
+	"right-populate-user-profiles": "이미 존재하는 위키를 위해 기타 사용자 프로필 채우기",
 	"random-users-avatars-title": "커뮤니티 만남"
 }

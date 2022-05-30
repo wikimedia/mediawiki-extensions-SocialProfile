@@ -27,7 +27,7 @@
 	"g-characters-left": "$1 caractères restant",
 	"g-back-edit-gift": "Revenir à la modification de ce cadeau",
 	"g-back-gift-list": "Revenir à la liste des cadeaux",
-	"g-back-link": "< Revenir à la page de $1",
+	"g-back-link": "&lt; Revenir à la page de $1",
 	"g-choose-file": "Choisir le fichier :",
 	"g-count": "$1 a $2 cadeau{{PLURAL:$2||x}}.",
 	"g-create-gift": "Créer un cadeau",

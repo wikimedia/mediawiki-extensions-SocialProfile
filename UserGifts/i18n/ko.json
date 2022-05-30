@@ -5,6 +5,7 @@
 		]
 	},
 	"g-characters-left": "$1자 남음",
+	"g-back-link": "&lt; $1의 페이지로 돌아가기",
 	"g-select-gift": "선물을 선택해 주십시오.",
 	"g-uploadsuccess": "업로드 성공"
 }
