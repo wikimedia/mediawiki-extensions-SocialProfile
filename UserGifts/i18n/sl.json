@@ -20,7 +20,7 @@
 	"g-add-message": "Dodaj sporočilo",
 	"g-back-edit-gift": "Nazaj na urejanje tega darila",
 	"g-back-gift-list": "Nazaj na seznam daril",
-	"g-back-link": "< Nazaj na stran $1",
+	"g-back-link": "&lt; Nazaj na stran $1",
 	"g-choose-file": "Izberite datoteko:",
 	"g-count": "$1 ima $2 {{PLURAL:$2|darilo|darili|darila|daril}}.",
 	"g-create-gift": "Ustvari darilo",
