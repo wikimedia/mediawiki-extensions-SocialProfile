@@ -46,12 +46,19 @@ if ( defined( 'MEDIAWIKI_INSTALL' ) ) {
 
 	$registry = new ExtensionRegistry();
 	$data = $registry->readFromQueue( $subext );
-	// @phan-suppress-next-line PhanUndeclaredVariableAssignOp Obviously not undeclared
-	$wgAutoloadClasses += $data['globals']['wgAutoloadClasses'];
+	if ( method_exists( AutoLoader::class, 'registerClasses' ) ) {
+		// MediaWiki 1.39+
+		AutoLoader::registerClasses( $data['autoloaderClasses'] );
+		if ( !isset( $wgAutoloadClasses ) ) {
+			$wgAutoloadClasses = [];
+		}
+	} else {
+		// @phan-suppress-next-line PhanUndeclaredVariableAssignOp
+		$wgAutoloadClasses += $data['globals']['wgAutoloadClasses'];
+	}
 }
 
 // Classes to be autoloaded
-// @phan-suppress-next-line PhanTypeArraySuspicious Nothing suspicious here, phan just doesn't understand $wgAutoloadClasses
 $wgAutoloadClasses['SpecialEditProfile'] = __DIR__ . '/UserProfile/includes/specials/SpecialEditProfile.php';
 $wgAutoloadClasses['SpecialPopulateUserProfiles'] = __DIR__ . '/UserProfile/includes/specials/SpecialPopulateExistingUsersProfiles.php';
 $wgAutoloadClasses['SpecialToggleUserPage'] = __DIR__ . '/UserProfile/includes/specials/SpecialToggleUserPageType.php';
