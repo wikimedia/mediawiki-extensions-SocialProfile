@@ -1,9 +1,21 @@
 {
 	"@metadata": {
 		"authors": [
+			"Joao Xavier",
 			"Malafaya"
 		]
 	},
-	"mp-welcome-points": "$1 punti",
-	"mp-request-new-message": "nova mesajo"
+	"userwelcome-desc": "Adjuntas l'etiketo <code>&lt;welcomeUser&gt;</code> por montrar social informo pri ula specifika uzero enrejistrita",
+	"mp-userlevels-link": "Niveli di uzeri",
+	"mp-welcome-upload": "Sendar",
+	"mp-welcome-points": "$1 {{PLURAL:$1|punto|punti}}",
+	"mp-welcome-needed-points": "Por avancar a [[$1|'''$2''']] obtenez ''$3'' plusa {{PLURAL:$3|punto|punti}}!",
+	"mp-welcome-logged-in": "Saluto $1",
+	"mp-requests-title": "Demandi",
+	"mp-requests-message": "Vu havas la sequanta demandi.",
+	"mp-request-new-message": "nova mesajo",
+	"mp-request-new-award": "$1 nova {{PLURAL:$1|premio|premii}}",
+	"mp-request-new-gift": "$1 nova {{PLURAL:$1|donaco|donaci}}",
+	"mp-request-new-foe": "$1 nov {{PLURAL:$1|enemiko|enemiki}}",
+	"mp-request-new-friend": "$1 nov {{PLURAL:$1|amiko|amiki}}"
 }
