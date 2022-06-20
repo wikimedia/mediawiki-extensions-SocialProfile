@@ -20,7 +20,7 @@
 	"g-characters-left": "$1 merkkiä jäljellä",
 	"g-back-edit-gift": "Takaisin tämän lahjan muokkaamiseen",
 	"g-back-gift-list": "Takaisin lahjalistaan",
-	"g-back-link": "< Takaisin käyttäjän $1 sivulle",
+	"g-back-link": "&lt; Takaisin käyttäjän $1 sivulle",
 	"g-choose-file": "Valitse tiedosto:",
 	"g-count": "Käyttäjällä $1 on $2 {{PLURAL:$2|lahja|lahjaa}}.",
 	"g-create-gift": "Luo lahja",

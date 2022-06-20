@@ -9,7 +9,7 @@
 	"ga-addnew": "+ Lisää uusi lahja",
 	"ga-back-edit-gift": "Takaisin tämän lahjan muokkaamiseen",
 	"ga-back-gift-list": "Takaisin lahjalistaan",
-	"ga-back-link": "[[User:$1|< Takaisin käyttäjän $1 profiiliin]]",
+	"ga-back-link": "[[User:$1|&lt; Takaisin käyttäjän $1 profiiliin]]",
 	"ga-choosefile": "Valitse tiedosto:",
 	"ga-count": "Käyttäjällä $1 on $2 {{PLURAL:$2|palkinto|palkintoa}}.",
 	"ga-create-gift": "Luo lahja",
