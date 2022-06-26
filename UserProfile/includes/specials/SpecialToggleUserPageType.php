@@ -11,6 +11,8 @@
  * @license GPL-2.0-or-later
  */
 
+use MediaWiki\MediaWikiServices;
+
 class SpecialToggleUserPage extends UnlistedSpecialPage {
 
 	public function __construct() {
@@ -116,12 +118,19 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 	 */
 	public static function importUserWiki( User $user ) {
 		$article = $user->getUserPage();
-		$wikiPage = new WikiPage( $article );
+		$user_wiki_title = Title::makeTitle( NS_USER_WIKI, $user->getName() );
+		if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
+			// MW 1.36+
+			$wikiPageFactory = MediaWikiServices::getInstance()->getWikiPageFactory();
+			$wikiPage = $wikiPageFactory->newFromTitle( $article );
+			$user_wiki = $wikiPageFactory->newFromTitle( $user_wiki_title );
+		} else {
+			$wikiPage = new WikiPage( $article );
+			$user_wiki = WikiPage::factory( $user_wiki_title );
+		}
+
 		$contentObject = $wikiPage->getContent();
 		$user_page_content = ContentHandler::getContentText( $contentObject );
-
-		$user_wiki_title = Title::makeTitle( NS_USER_WIKI, $user->getName() );
-		$user_wiki = WikiPage::factory( $user_wiki_title );
 		if ( !$user_wiki->exists() ) {
 			if ( method_exists( $user_wiki, 'doUserEditContent' ) ) {
 				// MW 1.36+

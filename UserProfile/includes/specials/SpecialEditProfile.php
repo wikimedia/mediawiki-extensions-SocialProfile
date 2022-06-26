@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserIdentity;
 
 /**
@@ -105,7 +106,12 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 
 			// create the user page if it doesn't exist yet
 			$title = Title::makeTitle( NS_USER, $target->getName() );
-			$page = new WikiPage( $title );
+			if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
+				// MW 1.36+
+				$page = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $title );
+			} else {
+				$page = new WikiPage( $title );
+			}
 			if ( !$page->exists() ) {
 				if ( method_exists( $page, 'doUserEditContent' ) ) {
 					// MW 1.36+

@@ -216,7 +216,12 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 			// create the user page if it doesn't exist yet
 			$title = Title::makeTitle( NS_USER, $user->getName() );
-			$page = WikiPage::factory( $title );
+			if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
+				// MW 1.36+
+				$page = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $title );
+			} else {
+				$page = WikiPage::factory( $title );
+			}
 			if ( !$page->exists() ) {
 				if ( method_exists( $page, 'doUserEditContent' ) ) {
 					// MW 1.36+
