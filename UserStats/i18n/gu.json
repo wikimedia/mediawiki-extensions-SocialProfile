@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"CptViraj"
+		]
+	},
+	"top-fans-stats-vote-count": "{{PLURAL:$1|મત|મતો}}"
+}
