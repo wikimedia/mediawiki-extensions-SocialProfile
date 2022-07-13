@@ -1,8 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dsvyas"
+			"Dsvyas",
+			"CptViraj"
 		]
 	},
+	"other-info-music": "સંગીત",
+	"other-info-books": "પુસ્તકો",
+	"user-personal-info-birthday": "જન્મદિવસ",
+	"user-personal-info-occupation": "વ્યવસાય",
+	"user-personal-info-schools": "શાળાઓ",
+	"user-personal-info-about-me": "મારા વિશે",
 	"user-page-link": "સભ્યનું પાનું"
 }

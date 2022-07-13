@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"CptViraj"
+		]
+	},
+	"top-fans-stats-vote-count": "{{PLURAL:$1|મત|મતો}}",
+	"top-fans-stats-edit-count": "{{PLURAL:$1|સંપાદન|સંપાદનો}}"
+}
