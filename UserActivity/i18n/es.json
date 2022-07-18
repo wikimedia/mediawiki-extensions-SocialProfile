@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Armando-Martin",
+			"Ciencia Al Poder",
 			"DiegoAmbrocio",
 			"Indiralena",
 			"Mor",
@@ -10,10 +11,11 @@
 		]
 	},
 	"useractivity": "Actividad de amigos",
+	"useractivity-desc": "Muestra la actividad social de los usuarios.",
 	"useractivity-award": "$1 ha recibido un premio",
 	"useractivity-all": "Ver todo",
 	"useractivity-edit": "$1 {{PLURAL:$4|ha editado la página|ha editado las siguientes páginas:}} $3",
-	"useractivity-foe": "$1 {{PLURAL:$2|se ha enemistado de|se han enemistado de}} $3",
+	"useractivity-foe": "$1 {{PLURAL:$2|es ahora rival de|son ahora rivales de}} $3",
 	"useractivity-filter": "Filtro",
 	"useractivity-friend": "$1 {{PLURAL:$2|es ahora amigos|son ahora amigos}} de  $3",
 	"useractivity-gift": "$1 ha recibido un regalo de $2",
@@ -21,6 +23,7 @@
 	"useractivity-group-comment": "{{PLURAL:$1|un comentario|$1 comentarios}}",
 	"useractivity-group-user_message": "{{PLURAL:$1|un mensaje|$1 mensajes}}",
 	"useractivity-group-friend": "{{PLURAL:$1|un amigo|$1 amigos}}",
+	"useractivity-network-thought": "<b><a href=\"$4\">$2</a></b> tiene una opinión sobre la red $3",
 	"useractivity-siteactivity": "Actividad del sitio",
 	"useractivity-title": "Actividad de amigos",
 	"useractivity-user_message": "$1 {{PLURAL:$4|ha enviado un mensaje a |ha enviado mensajes a}} $3",

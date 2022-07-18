@@ -22,7 +22,7 @@
 	"g-add-message": "Agregar un mensaje",
 	"g-back-edit-gift": "Regresar a editar este regalo",
 	"g-back-gift-list": "Regresar a lista de regalos",
-	"g-back-link": "< Regresar a la página de $1",
+	"g-back-link": "&lt; Regresar a la página de $1",
 	"g-choose-file": "Escoger archivo:",
 	"g-count": "$1 tiene $2 {{PLURAL:$2|regalo|regalos}}.",
 	"g-create-gift": "Crear regalo",

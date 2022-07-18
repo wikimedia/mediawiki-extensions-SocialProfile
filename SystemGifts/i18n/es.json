@@ -9,11 +9,12 @@
 			"Mor"
 		]
 	},
-	"systemgiftmanager": "Administrador de sistema de regalos",
+	"systemgifts-desc": "Permite enviar, recibir, crear y eliminar regalos del sistema.",
+	"systemgiftmanager": "Administrador de regalos del sistema",
 	"ga-addnew": "+ Agregar nuevo regalo",
 	"ga-back-edit-gift": "Regresar a editar este regalo",
 	"ga-back-gift-list": "Regresar a la lista de regalos",
-	"ga-back-link": "[[User:$1|< Regresar a perfil de $1]]",
+	"ga-back-link": "[[User:$1|&lt; Regresar a perfil de $1]]",
 	"ga-choosefile": "Escoger archivo:",
 	"ga-count": "$1 tiene $2 {{PLURAL:$2|premio|premios}}.",
 	"ga-create-gift": "Crear regalo",
@@ -73,5 +74,9 @@
 	"system_gift_received_body_html": "Hola $1.\n\n¡Acabas de recibir el premio $2 en {{SITENAME}}!\n\n«$3»\n\n¡Haz clic a continuación para revisar tu vitrina de trofeos!\n\n[[Special:ViewSystemGifts]]\n\n¡Esperamos que te guste!\n\nGracias,\n\n\nEl equipo de {{SITENAME}}\n\n---\n\n¿Deseas dejar de recibir correos electrónicos de nosotros?\n\nHaz clic en [[Special:UpdateProfile]]\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
 	"system_gift_received_body": "Hola $1.\n\n¡Acabas de recibir el premio $2 en {{SITENAME}}!\n\n«$3»\n\n¡Haz clic a continuación para revisar tu vitrina de trofeos!\n\n$4\n\n¡Esperamos que te guste!\n\nGracias,\n\n\nEl equipo de {{SITENAME}}\n\n---\n\n¿Deseas dejar de recibir correos electrónicos de nosotros?\n\nHaz clic en $5\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
 	"echo-category-title-social-award": "Premios",
-	"right-awardsmanage": "Crear nuevo y editar premios existentes"
+	"echo-pref-tooltip-social-award": "Notifícame cuando reciba un premio.",
+	"notification-social-award-rec": "Has recibido un premio nuevo: $1.",
+	"notification-social-award-rec-bundle": "Has recibido {{PLURAL:$1|un premio nuevo|$1 premios nuevos}}.",
+	"right-awardsmanage": "Crear nuevo y editar premios existentes",
+	"action-awardsmanage": "crear nuevos premios y editar los existentes"
 }

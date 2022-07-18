@@ -22,7 +22,7 @@
 	"g-add-message": "Adicionar mensagem",
 	"g-back-edit-gift": "Voltar para editar esta prenda",
 	"g-back-gift-list": "Voltar à lista de prendas",
-	"g-back-link": "< Voltar à página de $1",
+	"g-back-link": "&lt; Voltar à página de $1",
 	"g-choose-file": "Escolher ficheiro:",
 	"g-count": "$1 tem {{PLURAL:$2|uma prenda|$2 prendas}}.",
 	"g-create-gift": "Criar prenda",

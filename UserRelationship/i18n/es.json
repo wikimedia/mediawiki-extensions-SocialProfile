@@ -15,6 +15,7 @@
 			"Sanbec"
 		]
 	},
+	"userrelationship-desc": "Permite enviar solicitudes de amistad y rivalidad.",
 	"viewrelationships": "Ver relación",
 	"viewrelationshiprequests": "Ver solicitudes de relaciones",
 	"ur-already-submitted": "Su solicitud ha sido enviada",
@@ -97,6 +98,10 @@
 	"foe_removed_body_html": "Hola $1.\n\n¡$2 te ha borrado de su lista de rivales en {{SITENAME}}!\n\n¿Quizá estáis en camino de convertiros en amigos?\n\nGracias,\n\n\nEl equipo de {{SITENAME}}\n\n---\n\n¿Deseas dejar de recibir correos electrónicos de nosotros?\n\nHaz clic en [[Special:UpdateProfile]]\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
 	"foe_removed_body": "Hola $1.\n\n¡$2 te ha borrado de su lista de rivales en {{SITENAME}}!\n\n¿Quizá estáis en camino de convertiros en amigos?\n\nGracias,\n\n\nEl equipo de {{SITENAME}}\n\n---\n\n¿Deseas dejar de recibir correos electrónicos de nosotros?\n\nHaz clic en $4\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
 	"echo-category-title-social-rel": "Cambios en la relación con el usuario",
+	"echo-pref-tooltip-social-rel": "Notificarme cuando alguien me envíe una solicitud de relación de usuario (solicitud de amistad o rivalidad).",
+	"echo-show-social-rel-add-link": "(Solicitud de amistad/rivalidad)",
+	"notification-social-rel-add-friend-message": "$1 quiere ser tu amigo.<br /><br />''$2''",
+	"notification-social-rel-add-foe-message": "$1 quiere ser tu rival.<br /><br />''$2''",
 	"notification-social-rel-add-friend-no-message": "$1 quiere ser tu amigo.",
 	"notification-social-rel-add-foe-no-message": "$1 quiere ser tu rival.",
 	"notification-social-rel-accept-friend": "Te hiciste amigo de $1.",

@@ -140,8 +140,8 @@
 	"user-profile-interests-drinks": "Bebidas",
 	"user-profile-preferences-emails": "Notificaciones por correo electrónico",
 	"user-profile-preferences-emails-personalmessage": "Cuando envíe un mensaje personal",
-	"user-profile-preferences-emails-friendfoe": "Cuando otro usuario amiste o enemiste contigo",
-	"user-profile-preferences-emails-gift": "cuando recibas un regalo",
+	"user-profile-preferences-emails-friendfoe": "Cuando otro usuario se haga tu amigo o rival",
+	"user-profile-preferences-emails-gift": "Cuando recibas un regalo",
 	"user-profile-preferences-emails-level": "Cuando avance un nivel",
 	"user-profile-preferences-emails-weekly": "Recibir semanalmente actualizaciones por correo electrónico",
 	"user-profile-preferences-miscellaneous": "Varios",
@@ -210,6 +210,11 @@
 	"user-profile-remove-avatar": "eliminar",
 	"right-avatarremove": "Quitar los avatares del usuario",
 	"right-editothersprofiles": "Actualizar los perfiles sociales de otros usuarios",
+	"right-editothersprofiles-private": "Ver y modificar información privada (dirección de correo electrónico) en los perfiles sociales de otros usuarios",
+	"action-avatarremove": "eliminar el avatar del usuario",
+	"action-editothersprofiles": "modificar los perfiles sociales de otros usuarios",
+	"right-populate-user-profiles": "Rellenar los perfiles de otros usuarios en wikis existentes",
+	"action-populate-user-profiles": "rellenar los perfiles de usuario de otros usuarios",
 	"apihelp-socialprofile-userprofileprivacy-description": "Módulo de la API para establecer la visibilidad («privacidad») de un campo de perfil",
 	"random-users-avatars-title": "Conocer la comunidad"
 }
