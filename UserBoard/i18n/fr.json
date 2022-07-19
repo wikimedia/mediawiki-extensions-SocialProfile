@@ -7,14 +7,15 @@
 			"IAlex",
 			"Thibaut120094",
 			"Urhixidur",
-			"Wladek92"
+			"Wladek92",
+			"Verdy p"
 		]
 	},
 	"userboard-desc": "Permet d’envoyer des messages entre panneaux",
 	"messagesenttitle": "Messages envoyés",
 	"boardblasttitle": "Envoyer le tableau en rafale",
 	"boardblaststep1": "Étape 1 - Écrivez votre message",
-	"boardblastprivatenote": "Tous les messages seront envoyés comme des messages privés",
+	"boardblastprivatenote": "Tous les messages seront envoyés comme des messages privés.",
 	"boardblaststep2": "Étape 2 - Sélectionnez aussi à qui vous voulez envoyer votre message",
 	"boardlinkselectall": "Tout sélectionner",
 	"boardlinkunselectall": "Tout déselectionner",
@@ -49,7 +50,7 @@
 	"userboard_sendbutton": "envoyé",
 	"userboard_loggedout": "Vous devez être [[Special:UserLogin|connecté]] pour poster des messages à d’autres utilisateurs.",
 	"userboard_showingmessages": "Visionnement {{PLURAL:$4|du message $3|des messages $2-$3}} sur un total de $1 message{{PLURAL:$1||s}}",
-	"userboard-delete-success": "Le message a bien été supprimé !",
+	"userboard-delete-success": "Le message a bien été supprimé !",
 	"right-userboard-delete": "Supprimer les messages d’autres utilisateurs",
 	"userboard-time-days": "$1 {{PLURAL:$1|jour|jours}}",
 	"userboard-time-hours": "$1 {{PLURAL:$1|heure|heures}}",

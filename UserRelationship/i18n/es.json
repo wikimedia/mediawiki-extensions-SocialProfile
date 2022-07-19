@@ -15,6 +15,7 @@
 			"Ciencia Al Poder"
 		]
 	},
+	"userrelationship-desc": "Permite enviar solicitudes de amistad y rivalidad.",
 	"viewrelationships": "Ver relación",
 	"viewrelationshiprequests": "Ver solicitudes de relaciones",
 	"ur-already-submitted": "Su solicitud ha sido enviada",
@@ -96,6 +97,10 @@
 	"foe_removed_subject": "¡Yuju! ¡$1 ya no es tu rival en {{SITENAME}}!",
 	"foe_removed_body": "Hola $1.\n\n¡$2 te ha quitado como enemigo en {{SITENAME}}!\n\n¿Tal vez estais en camino de convertiros en amigos?\n\nGracias\n\n---\n\nHey, ¿deseas dejar de recibir correos electrónicos nuestros?\n\nHaz click en $4\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
 	"echo-category-title-social-rel": "Cambios en la relación con el usuario",
+	"echo-pref-tooltip-social-rel": "Notificarme cuando alguien me envíe una solicitud de relación de usuario (solicitud de amistad o rivalidad).",
+	"echo-show-social-rel-add-link": "(Solicitud de amistad/rivalidad)",
+	"notification-social-rel-add-friend-message": "$1 quiere ser tu amigo.<br /><br />''$2''",
+	"notification-social-rel-add-foe-message": "$1 quiere ser tu rival.<br /><br />''$2''",
 	"notification-social-rel-add-friend-no-message": "$1 quiere ser tu amigo.",
 	"notification-social-rel-add-foe-no-message": "$1 quiere ser tu rival.",
 	"notification-social-rel-accept-friend": "Te hiciste amigo de $1.",
