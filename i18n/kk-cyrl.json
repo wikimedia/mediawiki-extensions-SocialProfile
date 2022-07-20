@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"U.ayaao.p"
+		]
+	},
+	"socialprofile-desc": "MediaWiki үшін әлеуметтік құралдар жинағы",
+	"socialprofile-uploads-disabled": "Аватарды жүктеп салу мүмкіндігі өшірілген",
+	"apihelp-smpuserprivacy-description": "Профиль өрісінің көрінуін («құпиялылық») орнатуға арналған API модулі",
+	"apihelp-smpuserprivacy-summary": "Профиль өрісінің көрінуін («құпиялылық») орнатуға арналған API модулі",
+	"apihelp-smpuserprivacy-param-method": "Әрекет(«get» немесе «set»)",
+	"apihelp-smpuserprivacy-param-field_key": "\"Фильмдер\" өрісіне арналған up_movies сияқты мақсатты өріс пернесі"
+}
