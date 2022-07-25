@@ -222,7 +222,7 @@
 	"right-editothersprofiles-private": "Перегляд та оновлення особистої інформації (електронної адреси) у соціальних профілях інших користувачів",
 	"action-avatarremove": "вилучити аватари користувача",
 	"action-editothersprofiles": "оновити соціальні профілі інших користувачів",
-	"right-populate-user-profiles": "Дозволяє заповнювати профілі інших користувачів для наявних вікі",
+	"right-populate-user-profiles": "Заповнення профілів інших користувачів для наявних вікі",
 	"action-populate-user-profiles": "заповнювати профілі інших користувачів",
 	"apihelp-socialprofile-userprofileprivacy-description": "Модуль API для встановлення видимості (\"конфіденційності\") поля профілю",
 	"apihelp-socialprofile-userprofileprivacy-summary": "Модуль API для встановлення видимості (\"конфіденційності\") поля профілю",
