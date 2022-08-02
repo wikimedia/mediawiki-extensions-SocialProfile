@@ -4,6 +4,7 @@
 			"Yupik"
 		]
 	},
+	"user-upload-image": "Ruõkk kaart leʹbe snimldõõǥǥ",
 	"user-edit-this": "Muuʹtt",
 	"user-watchlist": "Valvvâmlistt",
 	"user-stats-edits": "Muttâz",
@@ -19,5 +20,6 @@
 	"user-profile-interests-books": "Ǩeeʹrj",
 	"user-profile-interests-videogames": "Videospeâll",
 	"user-profile-update-button": "Peiʹvved",
-	"user-profile-privacy-status-privacy-hidden": "čiõkkum"
+	"user-profile-privacy-status-privacy-hidden": "čiõkkum",
+	"viewsystemgifts": "Čuäʹjet ciistid"
 }
