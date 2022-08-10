@@ -1063,10 +1063,15 @@ class UserProfilePage extends Article {
 
 		$output .= '<div id="profile-right">';
 
-		$output .= '<div id="profile-title-container">
-				<div id="profile-title">' .
-					htmlspecialchars( $this->profileOwner->getName() ) .
-				'</div>';
+		$output .= '<div id="profile-title-container">';
+
+		$profileTitle = '<div id="profile-title">' .
+			htmlspecialchars( $this->profileOwner->getName() ) .
+		'</div>';
+
+		Hooks::run( 'UserProfileGetProfileTitle', [ $this, &$profileTitle ] );
+		$output .= $profileTitle;
+
 		// Show the user's level and the amount of points they have if
 		// UserLevels has been configured
 		if ( $wgUserLevels ) {
