@@ -3,6 +3,7 @@
 		"authors": [
 			"Fohanno",
 			"Fulup",
+			"Huñvreüs",
 			"Y-M D"
 		]
 	},
@@ -26,13 +27,13 @@
 	"user-send-message": "Kas ur gemennadenn",
 	"user-send-gift": "Kas ur prof",
 	"user-contributions": "Labourioù",
-	"user-stats-edits": "{{PLURAL:$1|Kemm|Kemm}}",
-	"user-stats-votes": "{{PLURAL:$1|Vot|Vot}}",
-	"user-stats-comments": "{{PLURAL:$1|Evezhiadenn|Evezhiadenn}}",
-	"user-stats-recruits": "{{PLURAL:$1|den tutaet|den tutaet}}",
-	"user-stats-poll-votes": "{{PLURAL:$1|Vot|Vot}} d'an dilennadegoù",
-	"user-stats-picture-game-votes": "{{PLURAL:$1|Vot|Vot}} evit ar c'hoari skeudennoù",
-	"user-stats-quiz-points": "{{PLURAL:$1|Poent|Poent}} er c'hwiz",
+	"user-stats-edits": "Kemmoù",
+	"user-stats-votes": "Votoù",
+	"user-stats-comments": "Evezhiadennoù",
+	"user-stats-recruits": "Tud tutaet",
+	"user-stats-poll-votes": "Votoù d'an dilennadegoù",
+	"user-stats-picture-game-votes": "Votoù evit ar c'hoari skeudennoù",
+	"user-stats-quiz-points": "Poentoù c'hwiz",
 	"user-stats-pick-points": "{{PLURAL:$1|Poent|Poent}} kavet",
 	"casual-game-quiz": "Kwiz",
 	"casual-game-poll": "Sontadeg",
