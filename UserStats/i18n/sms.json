@@ -4,5 +4,7 @@
 			"Yupik"
 		]
 	},
+	"top-fans-stats-vote-count": "{{PLURAL:$1|jiõnn|jiõn|jiõnnâd}}",
+	"top-fans-stats-edit-count": "{{PLURAL:$1|muuttâs|muttâz|muttsed}}",
 	"random-user-about-me": "Lââʹssteâđ muu pirr"
 }
