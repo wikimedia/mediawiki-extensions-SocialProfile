@@ -2,9 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Ciencia Al Poder",
-			"Fitoschido"
+			"Fitoschido",
+			"DarkGames26"
 		]
 	},
 	"socialprofile-desc": "Un conjunto de herramientas sociales para MediaWiki",
-	"socialprofile-uploads-disabled": "Se ha desactivado la posibilidad de subir un avatar"
+	"socialprofile-uploads-disabled": "Se ha desactivado la posibilidad de subir un avatar",
+	"apihelp-smpuserprivacy-description": "El módulo de la API para establecer la visibilidad de un campo del perfil es (\"privacy\")",
+	"apihelp-smpuserprivacy-summary": "El módulo de la API para establecer la visibilidad de un campo del perfil es (\"privacy\")",
+	"apihelp-smpuserprivacy-param-method": "Acción (ya sea \"get\" o \"set\")",
+	"apihelp-smpuserprivacy-param-field_key": "Clave del campo de destino, como up_movies para el campo \"Movies\"",
+	"apihelp-smpuserprivacy-param-privacy": "Nuevo valor de privacidad (uno de los siguientes: public, hidden, friends, foaf)"
 }

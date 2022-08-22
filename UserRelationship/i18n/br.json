@@ -1,19 +1,19 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fohanno"
+			"Fohanno",
+			"Huñvreüs"
 		]
 	},
 	"viewrelationships": "Gwelet an darempred",
 	"viewrelationshiprequests": "Gwelet ar goulennoù daremprediñ",
 	"ur-already-submitted": "Kaset eo bet ho koulenn",
-	"ur-error-page-title": "Hopala !",
 	"ur-error-title": "Hopala, kemeret hoc'h eus un hent fall !",
 	"ur-error-message-no-user": "Ne c'hallomp ket respont d'ho koulenn rak n'eus implijer ebet en anv-mañ.",
 	"ur-your-profile": "Ho profil",
 	"ur-backlink": "&lt; Distreiñ da brofil $1",
-	"ur-relationship-count-foes": "$1 en deus $2 {{PLURAL:$2|enebour|enebour}}.",
-	"ur-relationship-count-friends": "$1 en deus $2 {{PLURAL:$2|mignon|mignon}}.",
+	"ur-relationship-count-foes": "$1 en deus $2 {{PLURAL:$2|enebour}}.",
+	"ur-relationship-count-friends": "$1 en deus $2 {{PLURAL:$2|mignon}}.",
 	"ur-add-friend": "Ouzhpennañ evel mignon",
 	"ur-add-foe": "Ouzhpennañ evel enebour",
 	"ur-add-no-user": "N'eus implijer diuzet ebet.\nGoulennit mignoned pe enebourien dre al liamm reizh, mar plij.",
@@ -44,7 +44,7 @@
 	"ur-add-button-friend": "Ouzhpennañ evel mignon",
 	"ur-add-sent-title-foe": "Kaset hon eus ho koulenn enebouriezh da $1 !",
 	"ur-add-sent-title-friend": "Kaset hon eus ho koulenn mignoniezh da $1 !",
-	"ur-add-sent-message-foe": "Kaset eo bet ho koulenn enebouriezh da $1 evit bezañ kadarnaet.\nMa kadarna $1 ho koulenn e resevot ur postel heuliañ",
+	"ur-add-sent-message-foe": "Kaset eo bet ho koulenn enebouriezh da $1 evit bezañ kadarnaet.\nMa kadarna $1 ho koulenn e resevot ur gemennadenn heuliañ.",
 	"ur-add-sent-message-friend": "Kaset eo bet ho koulenn mignoniezh da $1 evit bezañ kadarnaet.\nMa kadarna $1 ho koulenn e resevot ur postel heuliañ",
 	"ur-add-error-message-no-user": "N'eus ket eus an implijer a glaskit ouzhpennañ.",
 	"ur-add-error-message-blocked": "Stanket oc'h evit bremañ ha ne c'hallit ket ouzhpennañ mignoned pe enebourien.",
