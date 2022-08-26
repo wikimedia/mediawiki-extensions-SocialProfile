@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Fohanno",
-			"Fulup"
+			"Fulup",
+			"Huñvreüs"
 		]
 	},
 	"user-stats-alltime-title": "Niver uhelañ a boentoù a-viskoazh",
@@ -50,5 +51,5 @@
 	"right-updatepoints": "Hizivaat ar c'honter aozadennoù",
 	"level-advanced-to": "zo aet war-raok d'al live <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "Bremañ ez oc'h un « $1 » war {{SITENAME}} !",
-	"level-advance-body": "Salud deoc'h, $1.\n\nBez' hoc'h eus un \"$2\" war {{SITENAME}} bremañ !\n\nGourc'hemennoù,\n\nSkipailh {{SITENAME}} \n\n---\nC'hoant hoc'h eus da baouez da resev posteloù diganimp ?\n\nKlikit war $3\nha cheñchit hoc'h arventennoù evit diweredekaat ar c'hemenn dre bosteloù."
+	"level-advance-body": "Salud deoc'h $1.\n\nUr \"$2\" war {{SITENAME}} oc’h bremañ !\n\nGourc'hemennoù,\n\nSkipailh {{SITENAME}} \n\n---\nNe fell ket deoc’h ken reseviñ posteloù diganeomp ?\n\nKlikit war $3\nha kemmit hoc'h arventennoù evit diweredekaat ar c'hemennoù dre bostel."
 }
