@@ -4,7 +4,8 @@
 			"Kghbln",
 			"The Evil IP address",
 			"Umherirrender",
-			"Zabe"
+			"Zabe",
+			"Brettchenweber"
 		]
 	},
 	"systemgiftmanager": "Verwaltung der Systemgeschenke",
@@ -70,5 +71,8 @@
 	"system_gift_received_subject": "[{{SITENAME}}] Du hast die $1-Auszeichnung erhalten!",
 	"system_gift_received_body": "Hallo $1,\n\ndu hast soeben die $2-Auszeichnung auf {{SITENAME}} erhalten!\n\n„$3“\n\nKlicke auf den nachfolgenden Link, um deine Trophäe anzusehen:\n\n$4\n\nWir hoffen, sie gefällt dir!\n\nVielen Dank und viele Grüße,\n\nDas {{SITENAME}}-Team\n\n---\n\nDu möchtest keine E-Mails von uns erhalten?\n\nKlicke $5\nund ändere deine Einstellungen so, dass E-Mail-Benachrichtigung deaktiviert sind.",
 	"echo-category-title-social-award": "Auszeichnungen",
-	"right-awardsmanage": "Neue erstellen und bestehende Auszeichnungen bearbeiten"
+	"notification-social-award-rec": "Du hast eine neue Auszeichnung erhalten: $1.",
+	"notification-social-award-rec-bundle": "Du hast {{PLURAL:$1|eine neue Auszeichnung|$1 neue Auszeichnungen}} erhalten.",
+	"right-awardsmanage": "Neue erstellen und bestehende Auszeichnungen bearbeiten",
+	"action-awardsmanage": "Kreiere neue Auszeichnungen und bearbeite bereits vorhandene Auszeichnungen"
 }
