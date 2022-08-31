@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"editprofile": "Uređivanje profila drugih korisnika",
+	"right-avatarremove": "Uklanjanje korisničkih avatara",
+	"right-editothersprofiles": "Podnova društvenih profila drugih korisnika",
+	"right-editothersprofiles-private": "Pregled i podnova privatnih podataka (e-pošte) na tuđim društvenim profilima",
+	"action-avatarremove": "uklanjanje korisničkih avatara",
+	"action-editothersprofiles": "podnovu tuđih društvenih profila",
+	"action-populate-user-profiles": "popun tuđih društvenih profila",
+	"apihelp-socialprofile-userprofileprivacy-description": "Izvršnički modul za ukazanje vidljivosti (\"privatnosti\") pojedinačnog polja profila",
+	"apihelp-socialprofile-userprofileprivacy-summary": "Izvršnički modul za ukazanje vidljivosti (\"privatnosti\") pojedinačnog polja profila",
+	"apihelp-socialprofile-userprofileprivacy-param-method": "Radnja (ili \"get\" ili \"set\")",
+	"apihelp-socialprofile-userprofileprivacy-param-field_key": "ključ ciljanog polja, kao što je up_movies za polje \"Filmovi\""
+}
