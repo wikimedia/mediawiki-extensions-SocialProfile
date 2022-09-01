@@ -199,7 +199,7 @@
 	"user-type-toggle-new": "Utiliser la page utilisateur social",
 	"user-board-blocked-message": "Vous êtes actuellement bloqué et ne pouvez donc poster de messages pour les autres utilisateurs.",
 	"user-board-login-message": "Vous devez être [[Special:UserLogin|connecté]] pour poster des messages aux autres utilisateurs",
-	"user-board-confirm-delete": "Êtes-vous sûr de vouloir supprimer ce message ?",
+	"user-board-confirm-delete": "Êtes-vous sûr{{GENDER:||e}} de vouloir supprimer ce message ?",
 	"removeavatar": "Enlever l’avatar",
 	"removeavatar-remove-my-avatar": "Supprimer mon avatar",
 	"removeavatar-remove-your-avatar": "Supprimer votre avatar",
