@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"socialprofile-desc": "Skup društvenih alata za MediaWiki",
+	"socialprofile-uploads-disabled": "Značajka postavljanja avatara je onemogućena",
+	"apihelp-smpuserprivacy-description": "Izvršnički modul za ukazanje vidljivosti (\"privatnosti\") pojedinačnog polja profila",
+	"apihelp-smpuserprivacy-summary": "Priložnički modul za vidljivost (\"privatne podatke\") polja profila",
+	"apihelp-smpuserprivacy-param-method": "Radnja (ili \"get\" ili \"set\")",
+	"apihelp-smpuserprivacy-param-field_key": "ključ ciljanog polja, kao što je up_movies za polje \"Filmovi\"",
+	"apihelp-smpuserprivacy-param-privacy": "Nova vrijednost privatnosti (jedna od sljedećih: public, hidden, friends, foaf)"
+}

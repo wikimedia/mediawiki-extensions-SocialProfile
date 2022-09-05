@@ -23,7 +23,7 @@
 	"ga-created": "Le cadeau a été créé",
 	"ga-currentimage": "Image actuelle",
 	"ga-error-message-invalid-link": "Le lien que vous avez entré est invalide.",
-	"ga-error-message-no-user": "L’utilisateur que vous essayez de voir n’existe pas.",
+	"ga-error-message-no-user": "L’utilisateur ou l’utilisatrice que vous essayez de voir n’existe pas.",
 	"ga-error-title": "Oops, vous avez pris un mauvais tour !",
 	"ga-file-instructions": "Voir image doit être jpeg, png ou gif (mais pas animée) et doit être plus petite que 100 Ko.",
 	"ga-gift": "cadeau",

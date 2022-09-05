@@ -13,7 +13,8 @@
 			"Ameisenigel",
 			"Gebu",
 			"Umlaut",
-			"ThisCarthing"
+			"ThisCarthing",
+			"Brettchenweber"
 		]
 	},
 	"editprofile": "Benutzerprofile anderer Benutzer bearbeiten",
@@ -174,6 +175,7 @@
 	"user-profile-create-threshold-friend-count": "{{PLURAL:$1|ein Freund|$1 Freunde}}",
 	"user-profile-create-threshold-poll-votes": "{{PLURAL:$1|eine Stimme|$1 Stimmen}}",
 	"user-profile-create-threshold-quiz-points": "{{PLURAL:$1|ein Quizpunkt|$1 Quizpunkte}}",
+	"user-profile-create-threshold-reason": "Du kannst leider erst eine Benutzerprofil anlegen, wenn du mindestens $1 hast.",
 	"user-profile-privacy-status-privacy-public": "öffentlich",
 	"user-profile-privacy-status-privacy-hidden": "versteckt",
 	"user-profile-privacy-status-privacy-friends": "Freunde",
