@@ -55,7 +55,7 @@
 	"ur-add-sent-title-friend": "Vous avez envoyé déclaration d’amitié à $1 !",
 	"ur-add-sent-message-foe": "Votre requête d'hostilité a été envoyée à $1 pour confirmation.\nSi $1 confirme votre demande, vous recevrez le suivi par courriel.",
 	"ur-add-sent-message-friend": "Votre requête d'amitié a été envoyée à $1 pour confirmation.\nSi $1 confirme votre demande, vous recevrez le suivi par courriel.",
-	"ur-add-error-message-no-user": "L’utilisateur que vous être en train d’ajouter n’existe pas.",
+	"ur-add-error-message-no-user": "L’utilisateur ou l’utilisateur que vous tentez d’ajouter n’existe pas.",
 	"ur-add-error-message-blocked": "Vous êtes actuellement bloqué{{GENDER:||e|(e)}} et vous ne pouvez donc ajouter ni amis ni ennemis.",
 	"ur-add-error-message-yourself": "Vous ne pouvez vous-même vous ajouter comme ennemi ou ami.",
 	"ur-add-error-message-existing-relationship-foe": "Vous êtes déjà l’ennemi de $1.",
