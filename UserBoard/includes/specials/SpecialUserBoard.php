@@ -58,7 +58,9 @@ class SpecialViewUserBoard extends SpecialPage {
 
 		$jsModules = [ 'ext.socialprofile.userboard.js' ];
 		// Add WikiEditor to the textarea if enabled for the current user
-		if ( ExtensionRegistry::getInstance()->isLoaded( 'WikiEditor' ) && $currentUser->getOption( 'usebetatoolbar' ) ) {
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'WikiEditor' )
+			&& MediaWikiServices::getInstance()->getUserOptionsLookup()->getOption( $currentUser, 'usebetatoolbar' )
+		) {
 			$jsModules[] = 'ext.socialprofile.userboard.wikiEditor';
 		}
 		$out->addModules( $jsModules );
