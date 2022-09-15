@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fohanno"
+			"Fohanno",
+			"Huñvreüs"
 		]
 	},
 	"messagesenttitle": "Kemennadennoù kaset",
@@ -45,5 +46,5 @@
 	"userboard-time-minutes": "{{PLURAL:$1|ur vunutenn|$1 munutenn}}",
 	"userboard-time-seconds": "{{PLURAL:$1|un eilenn|$1 eilenn}}",
 	"message_received_subject": "$1 en deus skrivet war ho taolenn war {{SITENAME}}",
-	"message_received_body": "Salud deoc'h, $1.\n\nEmañ $2 o paouez skrivañ war ho taolenn war {{SITENAME}} !\n\nKlikit war al liamm amañ dindan evit gwelet ho taolenn !\n\n$3\n\n---\n\nC'hoant hoc'h eus da baouez da resev posteloù diganimp ?\n\nKlikit war $4\nha cheñchit hoc'h arventennoù evit diweredekaat ar c'hemenn dre bostel."
+	"message_received_body": "Salud deoc'h, $1.\n\nEmañ $2 o paouez skrivañ war ho taolenn war {{SITENAME}} !\n\nKlikit war al liamm amañ dindan evit gwelet ho taolenn !\n\n$3\n\n---\n\nC'hoant hoc'h eus da baouez da resev posteloù diganimp ?\n\nKlikit war $4\nha cheñchit hoc'h arventennoù evit diweredekaat ar c'hemennoù dre bostel."
 }
