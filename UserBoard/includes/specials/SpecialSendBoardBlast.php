@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * A special page to allow users to send a mass board message by selecting from
  * a list of their friends and foes
@@ -47,7 +50,9 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 
 		$jsModules = [ 'ext.socialprofile.userboard.boardblast.js' ];
 		// Add WikiEditor to the textarea if enabled for the current user
-		if ( ExtensionRegistry::getInstance()->isLoaded( 'WikiEditor' ) && $user->getOption( 'usebetatoolbar' ) ) {
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'WikiEditor' )
+			&& MediaWikiServices::getInstance()->getUserOptionsLookup()->getOption( $user, 'usebetatoolbar' )
+		) {
 			$jsModules[] = 'ext.socialprofile.userboard.wikiEditor';
 		}
 		$out->addModules( $jsModules );
