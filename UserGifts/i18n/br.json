@@ -77,6 +77,6 @@
 	"g-viewgiftlist": "Gwelet roll ar profoù",
 	"g-your-profile": "Ho profil",
 	"gift_received_subject": "$1 en deus kaset deoc'h ar prof $2 war {{SITENAME}} !",
-	"gift_received_body": "Salud deoc'h, $1.\n\nEmañ $2 o paouez kas ar prof $3 deoc'h war {{SITENAME}}.\n\nC'hoant hoc'h eus da lenn an notenn zo bet lezet gant $2 evidoc'h ha da welet ho prof ?  Klikit war al liamm amañ dindan :\n\n$4\n\nEmichañs e plijo deoc'h !\n\nTrugarez deoc'h,\n\n\nSkipailh {{SITENAME}}\n\n---\n\nC'hoant hoc'h eus da baouez da resev posteloù diganimp ?\n\nKlikit war $5\nha cheñchit hoc'h arventennoù evit diweredekaat ar c'hemenn dre bostel.",
+	"gift_received_body": "Salud deoc'h, $1.\n\nEmañ $2 o paouez kas ar prof $3 deoc'h war {{SITENAME}}.\n\nC'hoant hoc'h eus lenn an notenn bet lezet gant $2 evidoc'h ha gwelet ho prof ?  Klikit war al liamm amañ dindan :\n\n$4\n\nEmichañs e plijo deoc'h !\n\nTrugarez deoc'h,\n\n\nSkipailh {{SITENAME}}\n\n---\n\nC'hoant hoc'h eus da baouez da resev posteloù diganimp ?\n\nKlikit war $5\nha cheñchit hoc'h arventennoù evit diweredekaat ar c'hemennoù dre bostel.",
 	"right-giftadmin": "Krouiñ pe aozañ profoù"
 }
