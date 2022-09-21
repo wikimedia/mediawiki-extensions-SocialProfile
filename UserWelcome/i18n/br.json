@@ -2,14 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Fohanno",
-			"Fulup"
+			"Fulup",
+			"Huñvreüs"
 		]
 	},
 	"userwelcome-desc": "Ouzhpennañ ur valizenn <code>&lt;welcomeUser&gt;</code> evit diskwel titouroù sokial a denn da bep implijer evit an implijerien kevreet",
 	"mp-userlevels-link": "Liveoù an implijer",
 	"mp-welcome-upload": "Enporzhiañ",
 	"mp-welcome-points": "$1 {{PLURAL:$1|poent}}",
-	"mp-welcome-needed-points": "Evit mont war-raok war-du [[$1|'''$2''']] gounezit ''$3'' {{PLURAL:$3|poent|poent}} ouzhpenn !",
+	"mp-welcome-needed-points": "Evit mont war-raok war-du [[$1|'''$2''']] gounezit ''$3'' {{PLURAL:$3|poent}} ouzhpenn !",
 	"mp-welcome-logged-in": "Salud $1",
 	"mp-requests-title": "Goulennoù",
 	"mp-requests-message": "Setu aze ho koulennoù",
