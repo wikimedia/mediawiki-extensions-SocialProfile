@@ -22,7 +22,7 @@
 	"g-characters-left": "$1 caracteres restantes",
 	"g-back-edit-gift": "Voltar para editar este presente",
 	"g-back-gift-list": "Voltar para lista de presentes",
-	"g-back-link": "< Voltar para página de $1",
+	"g-back-link": "&lt; Voltar para página de $1",
 	"g-choose-file": "Escolher arquivo:",
 	"g-count": "$1 tem $2 {{PLURAL:$2|presente|presentes}}.",
 	"g-create-gift": "Criar presente",
