@@ -196,14 +196,9 @@ class GiftManager extends SpecialPage {
 	 */
 	function displayGiftList() {
 		$output = ''; // Prevent E_NOTICE
-		$page = 0;
-		/**
-		 * @todo FIXME: this is a dumb hack. The value of this variable used to
-		 * be 10, but then it would display only the *first ten* gifts, as this
-		 * special page seems to lack pagination.
-		 * @see https://www.mediawiki.org/w/index.php?oldid=988111#Gift_administrator_displays_10_gifts_only
-		 */
-		$per_page = 1000;
+		$request = $this->getRequest();
+		$page = $request->getInt( 'page', 0 );
+		$per_page = $request->getInt( 'per_page', 10 );
 		$listLookup = new UserGiftListLookup( $this->getContext(), $per_page, $page );
 		$gifts = $listLookup->getManagedGiftList();
 
@@ -223,9 +218,114 @@ class GiftManager extends SpecialPage {
 					$deleteLink . "</div>\n";
 			}
 		}
+
+		$total = Gifts::getGiftCount( false );
+		if ( ( $total > $per_page ) ) {
+			$output .= $this->renderPagination( $total, $per_page, $page );
+		}
+
 		return '<div id="views">' . $output . '</div>';
 	}
 
+	/**
+	 * Build the pagination links
+	 *
+	 * @see https://phabricator.wikimedia.org/T306748
+	 *
+	 * @param int $total Total amount of entries
+	 * @param int $perPage Show this many entries per page
+	 * @param int $page Current page number
+	 * @return string HTML
+	 */
+	private function renderPagination( int $total, int $perPage, int $page ) {
+		$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
+		$pageTitle = $this->getPageTitle();
+
+		// Quick sanity check first...
+		if ( !$perPage || $perPage > 500 ) {
+			$perPage = 10;
+		}
+
+		$numOfPages = $total / $perPage;
+		$prevLink = [
+			'page' => ( $page - 1 ),
+			'per_page' => $perPage
+		];
+		$nextLink = [
+			'page' => ( $page + 1 ),
+			'per_page' => $perPage
+		];
+
+		$output = '';
+
+		if ( $numOfPages > 1 ) {
+			$output .= '<div class="mw-gift-manager-navigation">';
+
+			if ( $page > 1 ) {
+				$output .= $linkRenderer->makeLink(
+					$pageTitle,
+					$this->msg( 'g-prev' )->plain(),
+					[],
+					$prevLink
+				) . ' ';
+			}
+
+			if ( ( $total % $perPage ) != 0 ) {
+				$numOfPages++;
+			}
+
+			if ( $numOfPages >= 9 && $page < $total ) {
+				$numOfPages = 9 + $page;
+			}
+
+			if ( $numOfPages >= ( $total / $perPage ) ) {
+				$numOfPages = ( $total / $perPage ) + 1;
+			}
+
+			// @note I don't quite understand why I had to change the condition
+			// to have ( $numOfPages - 1 ) instead of just what it was, which was
+			// plain $numOfPages...but on my test wiki I had 6 gifts so with $perPage = 3,
+			// that meant two pages, right? Except prior to changing this condition this
+			// code would render a link to page 3, too, except said page was obviously
+			// empty.
+			// Note that I "borrowed" this code from ImageRating so the bug might still be present there?
+			for ( $i = 1; $i <= ( $numOfPages - 1 ); $i++ ) {
+				if ( $i == $page ) {
+					$output .= ( $i . ' ' );
+				} else {
+					$output .= $linkRenderer->makeLink(
+						$pageTitle,
+						"$i",
+						[],
+						[
+							'page' => $i,
+							'per_page' => $perPage
+						]
+					) . ' ';
+				}
+			}
+
+			if ( ( $total - ( $perPage * $page ) ) > 0 ) {
+				$output .= ' ' . $linkRenderer->makeLink(
+					$pageTitle,
+					$this->msg( 'g-next' )->plain(),
+					[],
+					$nextLink
+				);
+			}
+
+			$output .= '</div>';
+		}
+
+		return $output;
+	}
+
+	/**
+	 * Display the form for editing an existing gift (if $gift_id is given) or creating a brand new one.
+	 *
+	 * @param int $gift_id ID of the gift to edit, if not creating a brand new gift
+	 * @return string HTML
+	 */
 	function displayForm( $gift_id ) {
 		$user = $this->getUser();
 

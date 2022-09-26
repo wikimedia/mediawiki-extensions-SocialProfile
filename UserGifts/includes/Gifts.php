@@ -114,22 +114,24 @@ class Gifts {
 	}
 
 	/**
-	 * Get the total amount of gifts that have never been given out (?!).
+	 * Get the total amount of gifts.
 	 *
-	 * @todo FIXME: I don't understand this method at all. It's used by GiftManager
-	 * special page for pagination, but it makes no sense because $gift_count is
-	 * literally zero. Look into this and update documentation or remove this
-	 * whole method as appropriate.
+	 * If the parameter is passed to this method, gets the total amount of gifts that have never been
+	 * given out.
+	 *
+	 * Used by Special:GiveGift with the param and by Special:GiftManager without the param.
+	 *
+	 * @param bool $neverGivenOutOnly
 	 *
 	 * @return int
 	 */
-	public static function getGiftCount() {
+	public static function getGiftCount( $neverGivenOutOnly = true ) {
 		$dbr = wfGetDB( DB_REPLICA );
 		$gift_count = 0;
 		$s = $dbr->selectRow(
 			'gift',
 			[ 'COUNT(gift_id) AS count' ],
-			[ 'gift_given_count' => $gift_count ],
+			$neverGivenOutOnly ? [ 'gift_given_count' => $gift_count ] : [],
 			__METHOD__
 		);
 		if ( $s !== false ) {
