@@ -4,5 +4,7 @@
 			"Eleassar"
 		]
 	},
+	"boardlinkselectfriends": "Izberi prijatelje",
+	"boardlinkunselectfriends": "Odizberi prijatelje",
 	"boardblast-error-missing-user": "Prosimo, izberite vsaj eno osebo"
 }
