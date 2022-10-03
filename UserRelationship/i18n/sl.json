@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dbc334"
+			"Dbc334",
+			"Eleassar"
 		]
 	},
-	"ur-error-page-title": "Upsala!",
 	"ur-your-profile": "Vaš profil",
 	"ur-give-gift": "Podari darilo",
-	"ur-remove": "Odstrani"
+	"ur-remove": "Odstrani",
+	"friend_request_body": "Pozdravljeni, $1.\n\n$2 vas je v projektu {{SITENAME}} dodal/a kot prijatelja. Želimo se prepričati, da sta resnično prijatelja.\n\nZa potrditev prijateljstva kliknite naslednjo povezavo:\n$3\n\nHvala.\n\n\nEkipa projekta {{SITENAME}}\n\n---\n\nHej, bi morda želeli prenehati prejemati našo e-pošto?\n\nKliknite $4\nin v svojih nastavitvah izklopite obveščanje po e-pošti."
 }
