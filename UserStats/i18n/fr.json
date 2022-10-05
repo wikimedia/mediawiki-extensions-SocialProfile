@@ -11,7 +11,8 @@
 			"Pols12",
 			"Thibaut120094",
 			"Urhixidur",
-			"Wladek92"
+			"Wladek92",
+			"Verdy p"
 		]
 	},
 	"userstats-desc": "Permet d’accorder des points aux utilisateurs d’après le type d’actions effectuées",
@@ -45,7 +46,7 @@
 	"top-fans-stats-vote-count": "Vote{{PLURAL:$1||s}}",
 	"top-fans-stats-monthly-winner-count": "{{PLURAL:$1|victoire mensuelle|victoires mensuelles}}",
 	"top-fans-stats-weekly-winner-count": "{{PLURAL:$1|victoire hebdomadaire|victoires hebdomadaires}}",
-	"top-fans-stats-edit-count": "modification{{PLURAL:$1||s}}",
+	"top-fans-stats-edit-count": "Modification{{PLURAL:$1||s}}",
 	"top-fans-stats-comment-count": "commentaire{{PLURAL:$1||s}}",
 	"top-fans-stats-referrals-completed": "référence{{PLURAL:$1||s}}",
 	"top-fans-stats-friends-count": "ami{{PLURAL:$1||s}}",

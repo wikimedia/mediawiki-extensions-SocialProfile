@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dbc334"
+			"Dbc334",
+			"Eleassar"
 		]
 	},
-	"ga-goback": "Pojdi nazaj"
+	"ga-goback": "Pojdi nazaj",
+	"topawards-friends": "Prijatelji"
 }
