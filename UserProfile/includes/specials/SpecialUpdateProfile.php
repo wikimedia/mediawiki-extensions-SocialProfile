@@ -293,9 +293,6 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 	/**
 	 * Save social preferences into the database.
-	 *
-	 * @suppress SecurityCheck-SQLInjection Literally fake news, core MW UserOptionsManager is not
-	 *  suspectible to SQLi even though phan seems to think it is
 	 */
 	function saveSocialPreferences() {
 		$request = $this->getRequest();
