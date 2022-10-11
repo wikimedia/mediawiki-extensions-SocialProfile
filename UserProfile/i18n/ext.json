@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Better"
+			"Better",
+			"Julio Nepote"
 		]
 	},
 	"populateuserprofiles": "Perfilis d'usuáriu popularis",
@@ -109,7 +110,7 @@
 	"user-profile-goback": "Gorvel",
 	"user-no-images": "Nu s'án empuntau imahin",
 	"edit-profile-title": "Eital el tu perfil",
-	"user-page-link": "Páhina d'usuáriu",
+	"user-page-link": "Página d'usuariu",
 	"user-social-profile-link": "Perfil social",
 	"user-wiki-link": "Páhina d'usuáriu wiki",
 	"user-type-toggle-old": "Gastal la páhina d'usuáriu wiki",
