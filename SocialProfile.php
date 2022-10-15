@@ -59,6 +59,7 @@ if ( defined( 'MEDIAWIKI_INSTALL' ) ) {
 }
 
 // Classes to be autoloaded
+$wgAutoloadClasses['SocialProfileFileBackend'] = __DIR__ . '/SocialProfileFileBackend.php';
 $wgAutoloadClasses['SpecialEditProfile'] = __DIR__ . '/UserProfile/includes/specials/SpecialEditProfile.php';
 $wgAutoloadClasses['SpecialPopulateUserProfiles'] = __DIR__ . '/UserProfile/includes/specials/SpecialPopulateExistingUsersProfiles.php';
 $wgAutoloadClasses['SpecialToggleUserPage'] = __DIR__ . '/UserProfile/includes/specials/SpecialToggleUserPageType.php';
@@ -97,6 +98,12 @@ $wgSpecialPages['RemoveAvatar'] = 'RemoveAvatar';
 $wgSpecialPages['ToggleUserPage'] = 'SpecialToggleUserPage';
 $wgSpecialPages['UpdateProfile'] = 'SpecialUpdateProfile';
 $wgSpecialPages['UploadAvatar'] = 'SpecialUploadAvatar';
+
+// file backend to use defaults to FileSystem
+// this allows you to use e.g. swift.
+// to setup your own file backend see
+// https://www.mediawiki.org/wiki/Manual:$wgFileBackends
+$wgSocialProfileFileBackend = '';
 
 // What to display on social profile pages by default?
 $wgUserProfileDisplay['board'] = true;

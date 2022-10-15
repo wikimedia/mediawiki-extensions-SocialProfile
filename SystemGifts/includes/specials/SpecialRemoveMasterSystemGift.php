@@ -17,7 +17,7 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 	}
 
 	/**
-	 * Deletes a gift image from $wgUploadDirectory/awards/
+	 * Deletes a gift image from mwstore://<file_backend>
 	 *
 	 * @param int $id Internal ID number of the gift whose image we want to delete
 	 * @param string $size Size of the image to delete,
@@ -27,12 +27,15 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 	 * - l for large
 	 */
 	function deleteImage( $id, $size ) {
-		global $wgUploadDirectory;
-		$files = glob( $wgUploadDirectory . '/awards/sg_' . $id . "_{$size}*" );
-		if ( $files && $files[0] ) {
-			$img = basename( $files[0] );
-			// $img already contains the sg_ prefix
-			unlink( $wgUploadDirectory . '/awards/' . $img );
+		$backend = new SocialProfileFileBackend( 'awards' );
+
+		$extensions = [ 'png', 'gif', 'jpg', 'jpeg' ];
+		foreach ( $extensions as $ext ) {
+			if ( $backend->fileExists( 'sg_', $id, $size, '.' . $ext ) ) {
+				$backend->getFileBackend()->quickDelete( [
+					'src' => $backend->getPath( 'sg_', $id, $size, $ext )
+				] );
+			}
 		}
 	}
 

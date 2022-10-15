@@ -25,7 +25,7 @@ class RandomUsersWithAvatars {
 	 * @return string
 	 */
 	public static function getRandomUsersWithAvatars( $input, array $args, Parser $parser ) {
-		global $wgUploadDirectory, $wgDBname;
+		global $wgDBname;
 
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$parser->getOutput()->addModuleStyles( [ 'ext.socialprofile.userprofile.randomuserswithavatars.styles' ] );
@@ -45,7 +45,18 @@ class RandomUsersWithAvatars {
 		$key = $cache->makeKey( 'users', 'random', 'avatars', $count, $perRow, $size );
 		$data = $cache->get( $key );
 		if ( !$data ) {
-			$files = glob( $wgUploadDirectory . "/avatars/{$wgDBname}_*_{$size}.*" );
+			$backend = new SocialProfileFileBackend( 'avatars' );
+
+			$reSize = preg_quote( $size );
+			$files = preg_grep(
+				"/^{$wgDBname}_[0-9]+_{$reSize}\.(png|gif|jpe?g)$/i",
+				iterator_to_array( $backend->getFileBackend()->getFileList( [
+					'dir' => $backend->getContainerStoragePath(),
+					'topOnly' => true,
+					'adviseStat' => false,
+				] ) )
+			);
+
 			$cache->set( $key, $files, 60 * 60 );
 		} else {
 			wfDebug( "Got random users with avatars from cache\n" );

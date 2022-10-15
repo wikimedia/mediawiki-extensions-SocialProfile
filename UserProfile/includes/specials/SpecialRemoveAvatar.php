@@ -1,7 +1,6 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
-use Wikimedia\AtEase\AtEase;
 
 /**
  * A special page for removing avatars.
@@ -271,26 +270,28 @@ class RemoveAvatar extends SpecialPage {
 	}
 
 	/**
-	 * Deletes all of the requested user's avatar images from the filesystem
+	 * Deletes all of the requested user's avatar images from the file backend
 	 *
 	 * @param int $id User ID
 	 * @param string $size Size of the avatar image to delete (small, medium or large).
 	 * Doesn't really matter since we're just going to blast 'em all.
 	 */
 	private function deleteImage( $id, $size ) {
-		global $wgUploadDirectory, $wgAvatarKey;
+		global $wgAvatarKey;
 
-		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
-		$avatar = new wAvatar( $id, $size );
-		$files = glob( $wgUploadDirectory . '/avatars/' . $wgAvatarKey . '_' . $id . '_' . $size . "*" );
-		AtEase::suppressWarnings();
-		$img = basename( $files[0] );
-		AtEase::restoreWarnings();
-		if ( $img && $img[0] ) {
-			unlink( $wgUploadDirectory . '/avatars/' . $img );
+		$backend = new SocialProfileFileBackend( 'avatars' );
+
+		$extensions = [ 'png', 'gif', 'jpg', 'jpeg' ];
+		foreach ( $extensions as $ext ) {
+			if ( $backend->fileExists( $wgAvatarKey . '_', $id, $size, $ext ) ) {
+				$backend->getFileBackend()->quickDelete( [
+					'src' => $backend->getPath( $wgAvatarKey . '_', $id, $size, $ext )
+				] );
+			}
 		}
 
 		// clear cache
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$key = $cache->makeKey( 'user', 'profile', 'avatar', $id, $size );
 		$cache->delete( $key );
 	}
