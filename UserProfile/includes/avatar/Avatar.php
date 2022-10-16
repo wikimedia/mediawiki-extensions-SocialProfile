@@ -7,8 +7,9 @@ use MediaWiki\MediaWikiServices;
  *
  * Example usage:
  * @code
- *	$avatar = new wAvatar( $wgUser->getId(), 'l' );
- *	$wgOut->addHTML( $avatar->getAvatarURL() );
+ *	$context = RequestContext::getMain();
+ *	$avatar = new wAvatar( $context->getUser()->getId(), 'l' );
+ *	$context->getOutput()->addHTML( $avatar->getAvatarURL() );
  * @endcode
  * This would display the current user's largest avatar on the page.
  *
@@ -35,7 +36,7 @@ class wAvatar {
 	 * - 'ml' for medium-large (50x50px)
 	 * - 'l' for large (75x75px)
 	 */
-	function __construct( $userId, $size ) {
+	public function __construct( $userId, $size ) {
 		$this->user_id = $userId;
 		$this->avatar_size = $size;
 	}
@@ -75,7 +76,7 @@ class wAvatar {
 	 * - Second part is the user's ID number
 	 * - Third part is the letter for image size (s, m, ml or l)
 	 */
-	function getAvatarImage() {
+	public function getAvatarImage() {
 		global $wgAvatarKey;
 
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
@@ -134,7 +135,7 @@ class wAvatar {
 	 * @param array $extraParams Array of extra parameters to give to the image
 	 * @return string <img> HTML tag with full path to the avatar image
 	 */
-	function getAvatarURL( $extraParams = [] ) {
+	public function getAvatarURL( $extraParams = [] ) {
 		global $wgUserProfileDisplay, $wgNativeImageLazyLoading;
 
 		$backend = new SocialProfileFileBackend( 'avatars' );
@@ -176,7 +177,7 @@ class wAvatar {
 	 *
 	 * @return bool True if they have a default avatar, false if they've uploaded their own
 	 */
-	function isDefault() {
+	public function isDefault() {
 		return strpos( $this->getAvatarImage(), 'default_' ) !== false;
 	}
 
