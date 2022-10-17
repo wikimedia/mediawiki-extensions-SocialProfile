@@ -435,7 +435,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 				wfTempDir() . '/sg_' . $imgDest . '.' . $ext
 			);
 
-			$status = $backend->quickStore( [
+			$status = $fileBackend->quickStore( [
 				'src' => wfTempDir() . '/sg_' . $imgDest . '.' . $ext,
 				'dst' => $dir . '/sg_' . $imgDest . '.' . $ext
 			] );
