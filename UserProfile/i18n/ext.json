@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Better"
+			"Better",
+			"Julio Nepote"
 		]
 	},
 	"populateuserprofiles": "Perfilis d'usuáriu popularis",
@@ -57,8 +58,6 @@
 	"user-recent-activity-foe": "Es agora enemigu de",
 	"user-recent-activity-user-message": "Envió un mensahi a",
 	"user-recent-system-gift": "Recibió un prémiu",
-	"user-profile-update-notloggedin-title": "Nu es posibri eital el tu perfil sin entral ena tu cuenta",
-	"user-profile-update-notloggedin-text": "Nu es posibri eital el tu perfil sin entral enta tu cuenta.\nPursa [[Special:UserLogin|aquina]] p'abril la tu cuenta, u [[Special:UserLogin/signup|aquina]] pa rustrilti.",
 	"user-profile-update-saved": "El tu perfil á siu emburacau",
 	"user-profile-update-log-section": "chambó la seción",
 	"user-profile-default-country": "Estaus Unius",
@@ -111,7 +110,7 @@
 	"user-profile-goback": "Gorvel",
 	"user-no-images": "Nu s'án empuntau imahin",
 	"edit-profile-title": "Eital el tu perfil",
-	"user-page-link": "Páhina d'usuáriu",
+	"user-page-link": "Página d'usuariu",
 	"user-social-profile-link": "Perfil social",
 	"user-wiki-link": "Páhina d'usuáriu wiki",
 	"user-type-toggle-old": "Gastal la páhina d'usuáriu wiki",

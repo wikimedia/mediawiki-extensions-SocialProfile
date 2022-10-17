@@ -8,6 +8,7 @@
 			"Jack Phoenix"
 		]
 	},
+	"usergifts-desc": "Permite enviar, receber, criar e remover prendas de utilizadores",
 	"giftmanager": "Administrador de prendas",
 	"giftmanager-addgift": "+ Adicionar nova prenda",
 	"giftmanager-access": "acesso à prenda",
@@ -53,6 +54,7 @@
 	"g-give-no-user-title": "A quem gostaria de dar uma prenda?",
 	"g-give-to-user-title": "Enviar a prenda \"$1\" a $2",
 	"g-give-to-user-message": "Quer dar a $1 uma [[Special:GiveGift/$1|prenda diferente]]?",
+	"g-give-this-gift": "Dar esta prenda",
 	"g-go-back": "Voltar",
 	"g-imagesbelow": "Abaixo estão as imagens que serão usadas no site",
 	"g-large": "Grande",
@@ -70,6 +72,7 @@
 	"g-remove-success-message": "A prenda \"$1\" foi removida.",
 	"g-remove-title": "Remover \"$1\"?",
 	"g-send-gift": "Enviar prenda",
+	"g-select-gift": "Selecione uma prenda, por favor.",
 	"g-select-a-friend": "selecionar um amigo",
 	"g-sent-title": "Enviou uma prenda a $1",
 	"g-sent-message": "Enviou a seguinte prenda a $1.",
@@ -79,6 +82,12 @@
 	"g-viewgiftlist": "Ver lista de prendas",
 	"g-your-profile": "O seu perfil",
 	"gift_received_subject": "$1 enviou-lhe a prenda $2 na {{SITENAME}}!",
-	"gift_received_body": "Olá $1,\n\n$2 acabou de enviar-lhe a prenda $3 na {{SITENAME}}.\n\nQuer ler o recado que $2 deixou e ver a sua prenda? Clique no link abaixo:\n\n$4\n\nEsperamos que tenha gostado!\n\nObrigado,\n\n\nA equipa da {{SITENAME}}\n\n---\n\nOlhe, quer parar de receber as nossas mensagens?\n\nClique $5\ne altere as suas preferências para desactivar as notificações por correio electrónico.",
+	"gift_received_body_html": "Olá $1.\n\n$2 acabou de enviar-lhe a prenda $3 na wiki {{SITENAME}}.\n\nQuer ler o recado que $2 lhe deixou e ver a sua prenda? Clique na hiperligação abaixo:\n\n[[Special:ViewGifts|Especial:Ver prendas]]\n\nEsperamos que goste!\n\nObrigado,\n\n\nA equipa da wiki {{SITENAME}}\n\n---\n\nQuer parar de receber as nossas mensagens?\n\nClique [[Special:UpdateProfile|Especial:Atualizar perfil]]\ne altere as suas definições para desativar as notificações por correio eletrónico.",
+	"gift_received_body": "Olá $1.\n\n$2 acabou de enviar-lhe a prenda $3 na wiki {{SITENAME}}.\n\nQuer ler o recado que $2 lhe deixou e ver a sua prenda? Clique na hiperligação abaixo:\n\n$4\n\nEsperamos que goste!\n\nObrigado,\n\n\nA equipa da wiki {{SITENAME}}\n\n---\n\nQuer parar de receber as nossas mensagens?\n\nClique $5\ne altere as suas definições para desativar as notificações por correio eletrónico.",
+	"echo-category-title-social-gift": "Prendas",
+	"echo-pref-tooltip-social-gift": "Notificar-me quando alguém me enviar uma prenda.",
+	"notification-social-gift-send-no-message": "$1 acabou de enviar-lhe uma prenda: $2.",
+	"notification-social-gift-send-with-message": "$1 acabou de enviar-lhe uma prenda: $2.<br /><br />''$3''",
+	"notification-social-gift-send-bundle": "{{PLURAL:$1|Uma pessoa enviou-lhe uma prenda|$1 pessoas enviaram-lhe prendas}}.",
 	"right-giftadmin": "Crie novas prendas e edite as existentes"
 }
