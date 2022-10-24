@@ -38,7 +38,7 @@
 	"g-error-message-no-user": "O utilizador que está tentando ver não existe.",
 	"g-error-message-to-yourself": "Não pode dar prendas a si próprio.",
 	"g-error-title": "Ui, enganou-se no caminho!",
-	"g-file-instructions": "A imagem tem de ser um jpeg, png or gif (sem gifs animados) e ter tamanho inferior a 100KB.",
+	"g-file-instructions": "A sua imagem tem de ser um jpeg, png ou gif (não pode usar gifs animados) e ter tamanho inferior a 100 KB.",
 	"g-from": "de [[User:$1|$1]]",
 	"g-gift": "prenda",
 	"g-gift-name": "nome da prenda",

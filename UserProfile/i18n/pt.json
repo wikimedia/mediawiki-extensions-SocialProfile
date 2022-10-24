@@ -162,7 +162,7 @@
 	"user-profile-picture-uploaddifferent": "Carregar uma imagem diferente",
 	"user-profile-picture-currentimage": "Imagem atual",
 	"user-profile-picture-choosepicture": "Escolha a sua imagem",
-	"user-profile-picture-picsize": "A sua imagem tem de ter o formato jpeg, png ou gif e um tamanho inferior a 100KB.",
+	"user-profile-picture-picsize": "A sua imagem tem de ser um jpeg, png ou gif e ter um tamanho inferior a 100 KB.",
 	"user-profile-goback": "Voltar",
 	"user-profile-userlevels-link": "Níveis de utilizador",
 	"user-profile-create-threshold-title": "Criar perfil de utilizador",

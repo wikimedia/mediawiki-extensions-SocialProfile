@@ -22,7 +22,7 @@
 	"ga-error-message-invalid-link": "A hiperligação que forneceu é inválida.",
 	"ga-error-message-no-user": "O utilizador que pretende ver não existe.",
 	"ga-error-title": "Ui, enganou-se no caminho!",
-	"ga-file-instructions": "A imagem tem de ser um jpeg, png or gif (sem gifs animados) e ter um tamanho inferior a 100KB.",
+	"ga-file-instructions": "A sua imagem tem de ser um jpeg, png ou gif (não pode usar gifs animados) e ter um tamanho inferior a 100 KB.",
 	"ga-gift": "prenda",
 	"ga-gift-given-count": "Esta prenda foi dada {{PLURAL:$1|uma vez|$1 vezes}}",
 	"ga-gift-title": "\"$2\" de $1",
