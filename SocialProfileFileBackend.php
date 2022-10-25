@@ -37,11 +37,11 @@ class SocialProfileFileBackend {
 		$mainConfig = $services->getMainConfig();
 
 		if ( !empty( $mainConfig->get( 'SocialProfileFileBackend' ) ) ) {
-			return $services->getFileBackendGroup()->get(
+			$backend = $services->getFileBackendGroup()->get(
 				$mainConfig->get( 'SocialProfileFileBackend' )
 			);
 		} else {
-			return new FSFileBackend( [
+			$backend = new FSFileBackend( [
 				// We just set the backend name to match the container to
 				// avoid having to set another variable of the same value
 				'name'           => "{$this->container}-backend",
@@ -54,6 +54,12 @@ class SocialProfileFileBackend {
 				'statusWrapper'  => [ 'Status', 'wrap' ],
 			] );
 		}
+
+		if ( !$backend->directoryExists( [ 'dir' => $backend->getContainerStoragePath( $this->container ) ] ) ) {
+			$backend->prepare( [ 'dir' => $backend->getContainerStoragePath( $this->container ) ] );
+		}
+
+		return $backend;
 	}
 
 	/**
