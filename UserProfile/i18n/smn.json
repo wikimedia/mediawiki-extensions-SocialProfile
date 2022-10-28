@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Seipinne"
+			"Seipinne",
+			"Yupik"
 		]
 	},
 	"other-info-movies": "Elleekoveh",
@@ -42,5 +43,6 @@
 	"user-profile-preferences-emails": "Šleđgâpostâalmottâsah",
 	"user-profile-privacy-status-privacy-hidden": "čiehhum",
 	"user-profile-privacy-status-privacy-friends": "usteveh",
-	"user-profile-privacy-status-privacy-foaf": "ustevij usteveh"
+	"user-profile-privacy-status-privacy-foaf": "ustevij usteveh",
+	"user-profile-remove-avatar": "siho"
 }
