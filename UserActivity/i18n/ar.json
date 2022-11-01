@@ -6,17 +6,21 @@
 		]
 	},
 	"useractivity": "نشاط الأصدقاء",
+	"useractivity-desc": "يظهر النشاط الاجتماعي للمستخدمين",
 	"useractivity-award": "$1 تلقى جائزة",
 	"useractivity-all": "اعرض الكل",
 	"useractivity-edit": "$1 {{PLURAL:$4|عدل الصفحة|عدل الصفحات التالية:}} $3",
 	"useractivity-foe": "$1 {{PLURAL:$2|هو الآن عدو مع|هم الآن أعداء مع}} $3",
+	"useractivity-filter": "مرشح",
 	"useractivity-friend": "$1 {{PLURAL:$2|هو الآن صديق مع|هم الآن أصدقاء مع}} $3",
 	"useractivity-gift": "$1 تلقى هدية من $2",
 	"useractivity-group-edit": "{{PLURAL:$1|تعديل واحد|$1 تعديل}}",
 	"useractivity-group-comment": "{{PLURAL:$1|تعليق واحد|$1 تعليق}}",
 	"useractivity-group-user_message": "{{PLURAL:$1|رسالة واحدة|$1 رسالة}}",
 	"useractivity-group-friend": "{{PLURAL:$1|صديق واحد|$1 صديق}}",
+	"useractivity-network-thought": "<b><a href="$4">$2</a></b> لديه فكرة عن شبكة $3",
 	"useractivity-siteactivity": "نشاط الموقع",
 	"useractivity-title": "نشاط الأصدقاء",
-	"useractivity-user_message": "$1 {{PLURAL:$4|أرسل رسالة إلى|أرسل رسائل إلى}} $3"
+	"useractivity-user_message": "$1 {{PLURAL:$4|أرسل رسالة إلى|أرسل رسائل إلى}} $3",
+	"useractivity-comment": "$1 {{PLURAL:$4| علق على الصفحة | علق على الصفحات التالية:}} $3"
 }
