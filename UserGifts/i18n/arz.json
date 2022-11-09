@@ -30,7 +30,7 @@
 	"g-error-do-not-own": "أنت لا تمتلك هذه الهدية.",
 	"g-error-message-blocked": "أنت حاليا ممنوع ولا يمكنك إعطاء هدايا",
 	"g-error-message-invalid-link": "الوصلة التى أدخلتها غير صحيحة.",
-	"g-error-message-login": "يجب عليك تسجيل الدخول لإعطاء هدايا",
+	"g-error-message-login": "يجب عليك [[Special:UserLogin|log in]] لإعطاء هدايا.",
 	"g-error-message-no-user": "المستخدم الذى تحاول رؤيته غير موجود.",
 	"g-error-message-to-yourself": "أنت لا يمكنك منح هدية لنفسك.",
 	"g-error-title": "آه، أنت أخذت منحنى خاطئا!",
