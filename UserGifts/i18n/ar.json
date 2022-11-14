@@ -6,6 +6,7 @@
 			"OsamaK"
 		]
 	},
+	"usergifts-desc": "يسمح بإرسال هدايا المستخدم واستلامها وإنشائها وإزالتها",
 	"giftmanager": "مدير الهدايا",
 	"giftmanager-addgift": "+ إضافة هدية جديدة",
 	"giftmanager-access": "وصول الهدية",
@@ -51,6 +52,7 @@
 	"g-give-no-user-title": "من تريد إعطاء هدية له؟",
 	"g-give-to-user-title": "أرسل الهدية \"$1\" إلى $2",
 	"g-give-to-user-message": "تريد إعطاء $1 a [[Special:GiveGift/$1|هدية مختلفة]]؟",
+	"g-give-this-gift": "أعط هذه الهدية",
 	"g-go-back": "رجوع",
 	"g-imagesbelow": "بالأسفل صورك التي سيتم استخدامها في الموقع",
 	"g-large": "كبير",
@@ -68,6 +70,7 @@
 	"g-remove-success-message": "الهدية \"$1\" تمت إزالتها.",
 	"g-remove-title": "إزالة \"$1\"؟",
 	"g-send-gift": "إرسال الهدية",
+	"g-select-gift": "الرجاء تحديد هدية.",
 	"g-select-a-friend": "اختر صديقا",
 	"g-sent-title": "أنت أرسلت هدية إلى $1",
 	"g-sent-message": "أنت أرسلت الهدية التالية إلى $1.",
@@ -77,6 +80,12 @@
 	"g-viewgiftlist": "عرض قائمة الهدايا",
 	"g-your-profile": "ملفك",
 	"gift_received_subject": "$1 أرسل لك الهدية $2 في {{SITENAME}}!",
+	"gift_received_body_html": "مرحبًا $1\n\nأرسل لك $3 $2 بقيمة 3 دولارات على {{SITENAME}}.\n\nهل تريد قراءة الملاحظة التي تركتها $2 وترى هديتك؟ انقر على الرابط أدناه:\n\n[[Special:ViewGifts]]\n\nنأمل أن تنال إعجابك\n\nشكرًا ،\n\nفريق {{SITENAME}}\n\n---\n\nمرحبًا ، هل تريد التوقف عن تلقي رسائل البريد الإلكتروني منا؟!\n\nانقر فوق [[Special:UpdateProfile]]\nوقم بتغيير إعداداتك لتعطيل إشعارات البريد الإلكتروني.",
 	"gift_received_body": "مرحبا $1:\n\n$2 أرسل حالا لك الهدية $3 في {{SITENAME}}.\n\nتريد قراءة الملاحظة التي تركها $2 لك ورؤية هديتك؟  اضغط على الوصلة بالأسفل:\n\n$4\n\nنأمل أن تعجبك!\n\nشكرا،\n\n\nفريق {{SITENAME}}\n\n---\n\nها، تريد التوقف عن تلقي رسائل بريد إلكتروني منا؟\n\nاضغط $5\nوغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.",
+	"echo-category-title-social-gift": "الهدايا",
+	"echo-pref-tooltip-social-gift": "أعلمني عندما يرسل لي أحدهم هدية.",
+	"notification-social-gift-send-no-message": "$1 أرسل للتو هدية إليك: $2 .",
+	"notification-social-gift-send-with-message": "$1 أرسل للتو هدية إليك: $2 .<br /><br /> $3",
+	"notification-social-gift-send-bundle": "{{PLURAL:$1| شخص واحد | أرسل لك $1 people}} هدايا.",
 	"right-giftadmin": "إنشاء هدايا جديدة وتعديل الموجودة"
 }

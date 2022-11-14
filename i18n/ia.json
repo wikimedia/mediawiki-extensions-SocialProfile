@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"socialprofile-desc": "Un insimul de utensiles social pro MediaWiki",
+	"socialprofile-uploads-disabled": "Le function de incargar un avatar es disactivate",
+	"apihelp-smpuserprivacy-description": "Modulo API pro definir le visibilitate (\"privacy\") de un campo de profilo",
+	"apihelp-smpuserprivacy-summary": "Modulo API pro definir le visibilitate (\"privacy\") de un campo de profilo",
+	"apihelp-smpuserprivacy-param-method": "Action (o \"get\" o \"set\")",
+	"apihelp-smpuserprivacy-param-field_key": "Clave del campo de destination, como up_movies pro le campo \"Films\"",
+	"apihelp-smpuserprivacy-param-privacy": "Nove valor de sphera private (un del sequentes: public, hidden [celate], friends [amicos], foaf [amico de un amico])"
+}
