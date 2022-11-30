@@ -18,7 +18,7 @@
 	"ga-back-gift-list": "Revenir à la liste des cadeaux",
 	"ga-back-link": "[[User:$1|< Revenir au profil de $1]]",
 	"ga-choosefile": "Choisir le fichier :",
-	"ga-count": "$1 a {{PLURAL:$2|un prix|$2 prix}}.",
+	"ga-count": "$1 a {{PLURAL:$2|un prix|$2 prix}}.",
 	"ga-create-gift": "Créer un cadeau",
 	"ga-created": "Le cadeau a été créé",
 	"ga-currentimage": "Image actuelle",
