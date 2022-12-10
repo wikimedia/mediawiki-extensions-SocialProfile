@@ -227,7 +227,8 @@ class UserProfileHooks {
 			'<div id="mw-diff-otitle2">' . $avatarElement . '<div id="mw-diff-oinfo">' .
 			Linker::revUserTools( $oldRevision, !$unhide ) .
 			// '<br /><div id="mw-diff-odaysago">' . $differenceEngine->mOldRev->getTimestamp() . '</div>' .
-			Linker::revComment( $oldRevision, !$diffOnly, !$unhide ) .
+			MediaWikiServices::getInstance()->getCommentFormatter()
+				->formatRevision( $oldRevision, $differenceEngine->getAuthority(), !$diffOnly, !$unhide ) .
 			'</div></div>' .
 			'<div id="mw-diff-otitle3" class="rccomment">' . $oldMinor . $ldel . '</div>' .
 			'<div id="mw-diff-otitle4">' . $prevLink . '</div>';
@@ -286,7 +287,8 @@ class UserProfileHooks {
 			. Linker::revUserTools( $newRevision, !$unhide ) .
 			" $rollback " .
 			// '<br /><div id="mw-diff-ndaysago">' . $differenceEngine->mNewRev->getTimestamp() . '</div>' .
-			Linker::revComment( $newRevision, !$diffOnly, !$unhide ) .
+			MediaWikiServices::getInstance()->getCommentFormatter()
+				->formatRevision( $newRevision, $differenceEngine->getAuthority(), !$diffOnly, !$unhide ) .
 			'</div></div>' .
 			'<div id="mw-diff-ntitle3" class="rccomment">' . $newMinor . $rdel . '</div>' .
 			'<div id="mw-diff-ntitle4">' . $nextLink . $differenceEngine->markPatrolledLink() . '</div>';
