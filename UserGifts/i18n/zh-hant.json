@@ -5,6 +5,7 @@
 			"Liangent",
 			"Mark85296341",
 			"Wrightbus",
+			"捍粵者",
 			"沈澄心"
 		]
 	},
@@ -70,7 +71,7 @@
 	"g-remove-message": "您確定要移除禮物「$1」嗎？",
 	"g-recent-recipients": "近期收到的其它禮物",
 	"g-remove-success-title": "您成功移除了禮物「$1」",
-	"g-remove-success-message": "禮物「$1」已被移除。",
+	"g-remove-success-message": "已移除禮物「$1」。",
 	"g-remove-title": "移除「$1」?",
 	"g-send-gift": "傳送禮物",
 	"g-select-gift": "請選擇一個禮物。",
