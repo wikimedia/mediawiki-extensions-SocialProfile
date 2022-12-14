@@ -125,9 +125,7 @@ class SocialProfileFileBackend {
 	 * @return string|null URL or null on failure
 	 */
 	public function getFileHttpUrl( $prefix, $id, $size, $ext ) {
-		return $this->getFileBackend()->getFileHttpUrl( [
-			'src' => $this->getPath( $prefix, $id, $size, $ext )
-		] ) ?? $this->getDefaultUrlPath( $this->getFileName( $prefix, $id, $size, $ext ) );
+		return $this->getDefaultUrlPath( $this->getFileName( $prefix, $id, $size, $ext ) );
 	}
 
 	/**
@@ -137,11 +135,7 @@ class SocialProfileFileBackend {
 	 * @return string|null URL or null on failure
 	 */
 	public function getFileHttpUrlFromName( $fileName ) {
-		return $this->getFileBackend()->getFileHttpUrl( [
-			'src' => $this->getFileBackend()->normalizeStoragePath(
-				$this->getContainerStoragePath() . '/' . $fileName
-			)
-		] ) ?? $this->getDefaultUrlPath( $fileName );
+		return $this->getDefaultUrlPath( $fileName );
 	}
 
 	/**
