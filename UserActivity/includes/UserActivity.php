@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * UserActivity class
  */
@@ -128,7 +131,7 @@ class UserActivity {
 			$where['actor_id'] = $this->user->getActorId();
 		}
 
-		$commentStore = CommentStore::getStore();
+		$commentStore = MediaWikiServices::getInstance()->getCommentStore();
 		$actorQuery = ActorMigration::newMigration()->getJoin( 'rc_user' ); // @todo This usage is deprecated since MW 1.34.
 		$commentQuery = $commentStore->getJoin( 'rc_comment' );
 
