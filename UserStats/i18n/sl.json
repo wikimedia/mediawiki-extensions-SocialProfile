@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dbc334"
+			"Dbc334",
+			"Eleassar"
 		]
 	},
-	"top-fans-bad-field-title": "Ups!"
+	"top-fans-bad-field-title": "Ups!",
+	"echo-category-title-social-level-up": "Višja raven",
+	"echo-pref-tooltip-social-level-up": "Obvesti me, ko napredujem na novo raven."
 }
