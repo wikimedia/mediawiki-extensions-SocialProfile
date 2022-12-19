@@ -7,21 +7,22 @@
 			"Kly",
 			"Lakejason0",
 			"Winston Sung",
-			"沈澄心"
+			"沈澄心",
+			"捍粵者"
 		]
 	},
 	"editprofile": "編輯其他人的個人檔案",
 	"user-time-ago": "$1 之前",
 	"user-awards-title": "獎勵",
 	"user-gifts-title": "禮物",
-	"user-count-separator": "$2 的 $1",
+	"user-count-separator": "$2之$1",
 	"user-view-all": "檢視全部",
 	"user-upload-image": "上傳圖片",
 	"user-edit-this": "編輯這個",
 	"user-edit-profile": "編輯個人檔案",
 	"user-upload-avatar": "上傳頭像",
 	"user-watchlist": "我的監視列表",
-	"user-meet-people": "會見人們",
+	"user-meet-people": "會見眾人",
 	"user-add-friend": "加入成為朋友",
 	"user-add-foe": "加入成為冤家",
 	"user-remove-friend": "從朋友清單中移除",
@@ -181,6 +182,6 @@
 	"apihelp-socialprofile-userprofileprivacy-param-tuid": "目標使用者 ID",
 	"apihelp-smpuserprofiletype-description": "取得使用者的使用者類型，或是設定您自己的使用者頁面類型",
 	"apihelp-smpuserprofiletype-summary": "取得使用者的使用者類型，或是設定您自己的使用者頁面類型",
-	"apihelp-smpuserprofiletype-param-do": "執行的操作（get 或是 set）",
+	"apihelp-smpuserprofiletype-param-do": "操作（get或set）",
 	"random-users-avatars-title": "認識社群"
 }

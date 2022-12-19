@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Mark85296341",
-			"Kly"
+			"Kly",
+			"列维劳德"
 		]
 	},
 	"useractivity": "好友動態",
@@ -15,7 +16,7 @@
 	"useractivity-friend": "$1 {{PLURAL:$2|現在與|現在與}} $3 成為好友",
 	"useractivity-gift": "$1 收到了一份來自 $2 的禮物",
 	"useractivity-group-edit": "{{PLURAL:$1|一次編輯|$1 次編輯}}",
-	"useractivity-group-comment": "{{PLURAL:$1|一個評論|$1 個評論}}",
+	"useractivity-group-comment": "{{PLURAL:$1|一則留言|$1 則留言}}",
 	"useractivity-group-user_message": "{{PLURAL:$1|一則留言|$1 則留言}}",
 	"useractivity-group-friend": "{{PLURAL:$1|一位好友|$1 位好友}}",
 	"useractivity-network-thought": "<b><a href=\"$4\">$2</a></b>對$3網絡有看法",
