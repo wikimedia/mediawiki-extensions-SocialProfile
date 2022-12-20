@@ -7,5 +7,7 @@
 	"boardlinkselectfriends": "Izberi prijatelje",
 	"boardlinkunselectfriends": "Odizberi prijatelje",
 	"boardblast-error-missing-user": "Prosimo, izberite vsaj eno osebo",
-	"userboard_loggedout": "Za pošiljanje sporočil drugim uporabnikom morate biti [[Special:UserLogin|prijavljeni]]."
+	"userboard_loggedout": "Za pošiljanje sporočil drugim uporabnikom morate biti [[Special:UserLogin|prijavljeni]].",
+	"echo-category-title-social-msg": "Sporočila na uporabniških panelih",
+	"echo-pref-tooltip-social-msg": "Obvesti me, ko mi kdo na mojem uporabniškem panelu pusti sporočilo."
 }
