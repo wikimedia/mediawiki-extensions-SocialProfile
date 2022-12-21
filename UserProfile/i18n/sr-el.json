@@ -47,6 +47,7 @@
 	"custom-info-title": "Prilagođeni podaci",
 	"custom-no-info": "Nema prilagođenih podataka",
 	"profile-updated-personal": "Ažurirajte svoj profil",
+	"profile-not-provided": "Nije navedeno",
 	"populate-user-profile-done": "{{PLURAL:$1|Dodat $1 profil|Dodato $1 profila}}",
 	"user-personal-info-title": "Lični podaci",
 	"user-no-personal-info": "Nema ličnih podataka",
@@ -141,6 +142,8 @@
 	"user-profile-create-threshold-edits": "{{PLURAL:$1|jedna izmena|$1 izmene|$1 izmena}}",
 	"user-profile-create-threshold-comments": "{{PLURAL:$1|jedan komentar|$1 komentara}}",
 	"user-profile-create-threshold-friend-count": "{{PLURAL:$1|jedan prijatelj|$1 prijatelja}}",
+	"user-profile-privacy-status-privacy-public": "javno",
+	"user-profile-privacy-status-privacy-hidden": "sakriveno",
 	"user-profile-privacy-status-privacy-friends": "prijatelji",
 	"user-profile-privacy-status-privacy-foaf": "prijatelji prijatelja",
 	"user-no-images": "Nema poslatih slika",
@@ -149,6 +152,8 @@
 	"user-page-link": "Korisnička strana",
 	"user-social-profile-link": "Društveni profil",
 	"user-wiki-link": "Korisnička stranica",
+	"user-type-toggle-old": "Koristi korisničku stranicu vikija",
+	"user-board-blocked-message": "Trenutno ste blokirani i prema tome ne možete postavljati poruke ostalim korisnicima.",
 	"user-board-login-message": "Morate da se [[Special:UserLogin|prijavite]] kako biste slali poruke drugim korisnicima",
 	"user-board-confirm-delete": "Želite li zaista da izbrišete ovu poruku?",
 	"removeavatar": "Uklanjanje avatara",
@@ -168,5 +173,6 @@
 	"user-profile-picture-log-delete-entry": "{{GENDER:|je obrisao|je obrisala|je obrisao}} sličicu {{GENDER:$1|korisnika|korisnice|člana}} $1",
 	"user-profile-remove-avatar": "ukloni",
 	"right-avatarremove": "brisanje korisničkih sličica",
-	"right-editothersprofiles": "ažuriranje društvenih profila drugih korisnika"
+	"right-editothersprofiles": "ažuriranje društvenih profila drugih korisnika",
+	"random-users-avatars-title": "Upoznajte zajednicu"
 }
