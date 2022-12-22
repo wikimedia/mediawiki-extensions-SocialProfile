@@ -229,7 +229,14 @@ class RemoveAvatar extends SpecialPage {
 	private function showUserAvatar( $user_name ) {
 		$out = $this->getOutput();
 		$user_name = str_replace( '_', ' ', $user_name ); // replace underscores with spaces
-		$user_id = User::idFromName( $user_name );
+		if ( method_exists( MediaWikiServices::class, 'getUserIdentityLookup' ) ) {
+			// MW 1.36+
+			$userIdentity = MediaWikiServices::getInstance()->getUserIdentityLookup()
+				->getUserIdentityByName( $user_name );
+			$user_id = $userIdentity ? $userIdentity->getId() : 0;
+		} else {
+			$user_id = User::idFromName( $user_name );
+		}
 
 		$currentUser = $this->getUser();
 		$userIsAvatarOwner = (bool)( $currentUser->getName() === $user_name );

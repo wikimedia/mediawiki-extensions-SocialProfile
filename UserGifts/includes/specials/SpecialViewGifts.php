@@ -7,6 +7,8 @@
  * @ingroup Extensions
  */
 
+use MediaWiki\MediaWikiServices;
+
 class ViewGifts extends SpecialPage {
 
 	public function __construct() {
@@ -70,7 +72,14 @@ class ViewGifts extends SpecialPage {
 		if ( !$user_name ) {
 			$user_name = $currentUser->getName();
 		}
-		$user_id = User::idFromName( $user_name );
+		if ( method_exists( MediaWikiServices::class, 'getUserIdentityLookup' ) ) {
+			// MW 1.36+
+			$userIdentity = MediaWikiServices::getInstance()->getUserIdentityLookup()
+				->getUserIdentityByName( $user_name );
+			$user_id = $userIdentity ? $userIdentity->getId() : 0;
+		} else {
+			$user_id = User::idFromName( $user_name );
+		}
 		$user = Title::makeTitle( NS_USER, $user_name );
 
 		/**
