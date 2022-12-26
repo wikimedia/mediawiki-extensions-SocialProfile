@@ -164,6 +164,7 @@
 	"user-wiki-link": "דף המשתמש של הוויקי",
 	"user-type-toggle-old": "שימוש בדף המשתמש של הוויקי",
 	"user-type-toggle-new": "שימוש בדף המשתמש הקהילתי",
+	"user-board-blocked-message": "חשבונך חסום כרגע ולכן לא יכול לפרסם הודעות למשתמשים אחרים.",
 	"user-board-login-message": "חובה [[Special:UserLogin|להיכנס לחשבון]] כדי לשלוח הודעות למשתמשים אחרים",
 	"removeavatar": "הסרת תמונה מייצגת",
 	"removeavatar-remove-my-avatar": "הסרת תמונת המשתמש שלי",
