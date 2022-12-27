@@ -4,5 +4,11 @@
 			"Eleassar"
 		]
 	},
+	"useractivity": "Aktivnost prijateljev",
+	"useractivity-desc": "Prikazuje družbeno aktivnost uporabnikov",
+	"useractivity-award": "$1 je prejel_a nagrado",
+	"useractivity-all": "Prikaži vse",
+	"useractivity-filter": "Filter",
+	"useractivity-siteactivity": "Aktivnost v projektu",
 	"useractivity-title": "Aktivnost prijateljev"
 }

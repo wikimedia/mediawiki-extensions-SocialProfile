@@ -9,7 +9,7 @@
 	"ga-addnew": "+ Dodajte novi poklon",
 	"ga-back-edit-gift": "Povratak na izmenu ovog poklona",
 	"ga-back-gift-list": "Povratak na spisak poklona",
-	"ga-back-link": "[[User:$1|< Nazad na profil $1]]",
+	"ga-back-link": "[[User:$1|&lt; Nazad na profil $1]]",
 	"ga-choosefile": "Izaberite datoteku:",
 	"ga-count": "$1 ima $2 {{PLURAL:$2|nagradu|nagrada}}.",
 	"ga-create-gift": "Napravite poklon",
@@ -43,7 +43,9 @@
 	"topawards-edits": "Izmene",
 	"topawards-votes": "Glasovi",
 	"topawards-comments": "Komentari",
+	"topawards-recruits": "Regruti",
 	"topawards-friends": "Prijatelji",
+	"echo-category-title-social-award": "Nagrade",
 	"echo-pref-tooltip-social-award": "Obaveštavaj me kada primim nagradu.",
 	"notification-social-award-rec": "Primili ste novu nagradu: $1.",
 	"action-awardsmanage": "pravite nove i uređujete postojeće nagrade"

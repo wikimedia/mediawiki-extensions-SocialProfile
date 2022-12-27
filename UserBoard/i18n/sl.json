@@ -7,7 +7,11 @@
 	"boardlinkselectfriends": "Izberi prijatelje",
 	"boardlinkunselectfriends": "Odizberi prijatelje",
 	"boardblast-error-missing-user": "Prosimo, izberite vsaj eno osebo",
+	"userboard_posted_ago": "objavljeno pred $1",
 	"userboard_loggedout": "Za pošiljanje sporočil drugim uporabnikom morate biti [[Special:UserLogin|prijavljeni]].",
+	"userboard-time-days": "{{PLURAL:$1|enim dnevom|$1 dnevi}}",
+	"userboard-time-hours": "{{PLURAL:$1|eno uro|$1 urama|$1 urami}}",
+	"userboard-time-seconds": "{{PLURAL:$1|eno sekundo|$1 sekundama|$1 sekundami}}",
 	"echo-category-title-social-msg": "Sporočila na uporabniških panelih",
 	"echo-pref-tooltip-social-msg": "Obvesti me, ko mi kdo na mojem uporabniškem panelu pusti sporočilo."
 }
