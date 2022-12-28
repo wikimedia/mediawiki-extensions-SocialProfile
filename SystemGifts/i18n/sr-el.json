@@ -43,7 +43,9 @@
 	"topawards-edits": "Izmene",
 	"topawards-votes": "Glasovi",
 	"topawards-comments": "Komentari",
+	"topawards-recruits": "Regruti",
 	"topawards-friends": "Prijatelji",
+	"echo-category-title-social-award": "Nagrade",
 	"echo-pref-tooltip-social-award": "Obaveštavaj me kada primim nagradu.",
 	"notification-social-award-rec": "Primili ste novu nagradu: $1.",
 	"action-awardsmanage": "pravite nove i uređujete postojeće nagrade"

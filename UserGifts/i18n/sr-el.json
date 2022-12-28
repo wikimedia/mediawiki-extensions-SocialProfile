@@ -18,6 +18,7 @@
 	"giftmanager-private": "privatno",
 	"giftmanager-view": "Prikaži spisak poklona",
 	"g-add-message": "Dodaj poruku",
+	"g-characters-left": "ostalo je $1 karaktera",
 	"g-back-edit-gift": "Povratak na izmene ovog poklona",
 	"g-back-gift-list": "Povratak na spisak poklona",
 	"g-back-link": "< Povratak na stranu $1",
