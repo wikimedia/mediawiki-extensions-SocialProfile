@@ -35,7 +35,14 @@ class PurgeAvatarKeysFromMemcached extends Maintenance {
 			if ( $this->hasOption( 'uid' ) ) {
 				$uid = (int)$this->getOption( 'uid' );
 			} elseif ( $this->hasOption( 'username' ) ) {
-				$uid = User::idFromName( $this->getOption( 'username' ) );
+				if ( method_exists( MediaWikiServices::class, 'getUserIdentityLookup' ) ) {
+					// MW 1.36+
+					$userIdentity = MediaWikiServices::getInstance()->getUserIdentityLookup()
+						->getUserIdentityByName( $this->getOption( 'username' ) );
+					$uid = $userIdentity ? $userIdentity->getId() : 0;
+				} else {
+					$uid = User::idFromName( $this->getOption( 'username' ) );
+				}
 			}
 			if ( !$uid ) {
 				$this->error(
