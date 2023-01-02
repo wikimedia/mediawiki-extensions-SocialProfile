@@ -66,23 +66,41 @@ function removeDeletedEdits( WikiPage $article, $user, $reason ) {
 	) {
 		$dbr = wfGetDB( DB_MASTER );
 
-		$res = $dbr->select(
-			[ 'revision_actor_temp', 'revision', 'actor' ],
-			[ 'COUNT(*) AS the_count', 'revactor_actor' ],
-			[
-				'revactor_page' => $article->getID(),
-				'actor_user IS NOT NULL'
-			],
-			__METHOD__,
-			[ 'GROUP BY' => 'actor_name' ],
-			[
-				'actor' => [ 'JOIN', 'actor_id = revactor_actor' ],
-				'revision_actor_temp' => [ 'JOIN', 'revactor_rev = rev_id' ]
-			]
-		);
+		$MW139orEarlier = version_compare( MW_VERSION, '1.39', '<' );
+		if ( $MW139orEarlier ) {
+			$res = $dbr->select(
+				[ 'revision_actor_temp', 'revision', 'actor' ],
+				[ 'COUNT(*) AS the_count', 'revactor_actor' ],
+				[
+					'revactor_page' => $article->getID(),
+					'actor_user IS NOT NULL'
+				],
+				__METHOD__,
+				[ 'GROUP BY' => 'actor_name' ],
+				[
+					'actor' => [ 'JOIN', 'actor_id = revactor_actor' ],
+					'revision_actor_temp' => [ 'JOIN', 'revactor_rev = rev_id' ]
+				]
+			);
+		} else {
+			$res = $dbr->select(
+				[ 'revision', 'actor' ],
+				[ 'COUNT(*) AS the_count', 'rev_actor' ],
+				[
+					'rev_page' => $article->getID(),
+					'actor_user IS NOT NULL'
+				],
+				__METHOD__,
+				[ 'GROUP BY' => 'actor_name' ],
+				[
+					'actor' => [ 'JOIN', 'actor_id = rev_actor' ]
+				]
+			);
+		}
 
 		foreach ( $res as $row ) {
-			$stats = new UserStatsTrack( $row->revactor_actor );
+			$columnName = $MW139orEarlier ? 'revactor_actor' : 'rev_actor';
+			$stats = new UserStatsTrack( $row->$columnName );
 			$stats->decStatField( 'edit', $row->the_count );
 		}
 	}
@@ -109,23 +127,41 @@ function restoreDeletedEdits( Title $title, $new ) {
 	) {
 		$dbr = wfGetDB( DB_MASTER );
 
-		$res = $dbr->select(
-			[ 'revision_actor_temp', 'revision', 'actor' ],
-			[ 'COUNT(*) AS the_count', 'revactor_actor' ],
-			[
-				'revactor_page' => $title->getArticleID(),
-				'actor_user IS NOT NULL'
-			],
-			__METHOD__,
-			[ 'GROUP BY' => 'actor_name' ],
-			[
-				'actor' => [ 'JOIN', 'actor_id = revactor_actor' ],
-				'revision_actor_temp' => [ 'JOIN', 'revactor_rev = rev_id' ]
-			]
-		);
+		$MW139orEarlier = version_compare( MW_VERSION, '1.39', '<' );
+		if ( $MW139orEarlier ) {
+			$res = $dbr->select(
+				[ 'revision_actor_temp', 'revision', 'actor' ],
+				[ 'COUNT(*) AS the_count', 'revactor_actor' ],
+				[
+					'revactor_page' => $title->getArticleID(),
+					'actor_user IS NOT NULL'
+				],
+				__METHOD__,
+				[ 'GROUP BY' => 'actor_name' ],
+				[
+					'actor' => [ 'JOIN', 'actor_id = revactor_actor' ],
+					'revision_actor_temp' => [ 'JOIN', 'revactor_rev = rev_id' ]
+				]
+			);
+		} else {
+			$res = $dbr->select(
+				[ 'revision', 'actor' ],
+				[ 'COUNT(*) AS the_count', 'rev_actor' ],
+				[
+					'rev_page' => $title->getArticleID(),
+					'actor_user IS NOT NULL'
+				],
+				__METHOD__,
+				[ 'GROUP BY' => 'actor_name' ],
+				[
+					'actor' => [ 'JOIN', 'actor_id = rev_actor' ]
+				]
+			);
+		}
 
 		foreach ( $res as $row ) {
-			$stats = new UserStatsTrack( $row->revactor_actor );
+			$columnName = $MW139orEarlier ? 'revactor_actor' : 'rev_actor';
+			$stats = new UserStatsTrack( $row->$columnName );
 			$stats->incStatField( 'edit', $row->the_count );
 		}
 	}
