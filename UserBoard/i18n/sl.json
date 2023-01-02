@@ -7,6 +7,7 @@
 	"boardlinkselectfriends": "Izberi prijatelje",
 	"boardlinkunselectfriends": "Odizberi prijatelje",
 	"boardblast-error-missing-user": "Prosimo, izberite vsaj eno osebo",
+	"userboard": "Uporabniški panel",
 	"userboard_posted_ago": "objavljeno pred $1",
 	"userboard_loggedout": "Za pošiljanje sporočil drugim uporabnikom morate biti [[Special:UserLogin|prijavljeni]].",
 	"userboard-time-days": "{{PLURAL:$1|enim dnevom|$1 dnevi}}",
