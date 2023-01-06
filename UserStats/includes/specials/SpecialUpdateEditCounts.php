@@ -39,24 +39,41 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 		}
 
 		$dbw = wfGetDB( DB_MASTER );
-		$res = $dbw->select(
-			[ 'revision_actor_temp', 'revision', 'actor', 'page' ],
-			[ 'COUNT(*) AS the_count', 'revactor_actor' ],
-			$whereConds,
-			__METHOD__,
-			// revactor_actor wasn't here originally but PostgreSQL seems to require it
-			// Without it, this error happens:
-			// Error: 42803 ERROR: column "revision_actor_temp.revactor_actor" must appear in the GROUP BY clause or be used in an aggregate function
-			[ 'GROUP BY' => 'actor_name, revactor_actor' ],
-			[
-				'actor' => [ 'JOIN', 'actor_id = revactor_actor' ],
-				'revision_actor_temp' => [ 'JOIN', 'revactor_rev = rev_id' ],
-				'page' => [ 'INNER JOIN', 'page_id = revactor_page' ]
-			]
-		);
+		$MW139orEarlier = version_compare( MW_VERSION, '1.39', '<' );
+		if ( $MW139orEarlier ) {
+			$res = $dbw->select(
+				[ 'revision_actor_temp', 'revision', 'actor', 'page' ],
+				[ 'COUNT(*) AS the_count', 'revactor_actor' ],
+				$whereConds,
+				__METHOD__,
+				// revactor_actor wasn't here originally but PostgreSQL seems to require it
+				// Without it, this error happens:
+				// Error: 42803 ERROR: column "revision_actor_temp.revactor_actor" must appear in the GROUP BY clause or be used in an aggregate function
+				[ 'GROUP BY' => 'actor_name, revactor_actor' ],
+				[
+					'actor' => [ 'JOIN', 'actor_id = revactor_actor' ],
+					'revision_actor_temp' => [ 'JOIN', 'revactor_rev = rev_id' ],
+					'page' => [ 'INNER JOIN', 'page_id = revactor_page' ]
+				]
+			);
+		} else {
+			$res = $dbw->select(
+				[ 'revision', 'actor', 'page' ],
+				[ 'COUNT(*) AS the_count', 'rev_actor' ],
+				$whereConds,
+				__METHOD__,
+				// rev_actor wasn't here originally but PostgreSQL seems to require it
+				[ 'GROUP BY' => 'actor_name, rev_actor' ],
+				[
+					'actor' => [ 'JOIN', 'actor_id = rev_actor' ],
+					'page' => [ 'INNER JOIN', 'page_id = rev_page' ]
+				]
+			);
+		}
 
 		foreach ( $res as $row ) {
-			$user = User::newFromActorId( $row->revactor_actor );
+			$columnName = $MW139orEarlier ? 'revactor_actor' : 'rev_actor';
+			$user = User::newFromActorId( $row->$columnName );
 			$user->load();
 			$actorId = $user->getActorId();
 			$userName = $user->getName();
