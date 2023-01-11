@@ -5,8 +5,11 @@
 			"Eleassar"
 		]
 	},
+	"ga-addnew": "+ Dodaj novo darilo",
 	"ga-currentimage": "Trenutna slika",
+	"ga-giftdesc": "opis darila",
 	"ga-goback": "Pojdi nazaj",
+	"ga-new": "Novo",
 	"topawards-friends": "Prijatelji",
 	"echo-category-title-social-award": "Nagrade",
 	"echo-pref-tooltip-social-award": "Obvesti me, ko prejmem nagrado."
