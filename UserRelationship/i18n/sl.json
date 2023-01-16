@@ -11,6 +11,7 @@
 	"ur-remove-error-not-loggedin-foe": "Za odstranitev sovražnika morate biti prijavljeni.",
 	"ur-remove-error-not-loggedin-friend": "Za odstranitev prijatelja morate biti prijavljeni.",
 	"ur-remove": "Odstrani",
+	"ur-add-error-message-no-user": "Uporabnik, ki ga poskušate dodati, ne obstaja.",
 	"friend_request_body": "Pozdravljeni, $1.\n\n$2 vas je v projektu {{SITENAME}} dodal_a kot prijatelja_ico. Želimo se prepričati, da sta resnično prijatelja_ici.\n\nZa potrditev prijateljstva kliknite naslednjo povezavo:\n$3\n\nHvala.\n\n\nEkipa projekta {{SITENAME}}\n\n---\n\nNe želite več prejemati naše e-pošte?\n\nKliknite $4\nin s spremembno nastavitev onemogočite prejemanje e-poštnih obvestil.",
 	"echo-category-title-social-rel": "Spremembe uporabniških razmerij",
 	"echo-pref-tooltip-social-rel": "Obvesti me, ko mi kdo pošlje prošnjo za uporabniško razmerje (prošnja za prijateljstvo ali sovraštvo)."
