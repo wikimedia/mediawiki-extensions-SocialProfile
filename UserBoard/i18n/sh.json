@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"userboard-desc": "Omogućava slanje poruka na tablu",
+	"messagesenttitle": "Poruke poslane",
+	"boardblasttitle": "Pošalji izjavu na tablu",
+	"boardblaststep1": "Korak 1. - Napišite poruku",
+	"boardblastprivatenote": "Sve poruke će biti poslane kao privatne",
+	"boardblaststep2": "Korak 2. - Odaberite kome želite poslati poruku",
+	"boardlinkselectall": "Izaberi sve",
+	"boardlinkunselectall": "Ukloni sav odabir",
+	"boardlinkselectfriends": "Izaberi prijatelje",
+	"boardlinkunselectfriends": "Skini izbor sa prijatelja",
+	"boardlinkselectfoes": "Izaberi neprijatelje",
+	"boardlinkunselectfoes": "Skini izbor sa neprijatelja",
+	"boardsendbutton": "Pošalji izjavu na tablu"
+}
