@@ -136,7 +136,7 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 				// MW 1.36+
 				$user_wiki->doUserEditContent(
 					ContentHandler::makeContent( $user_page_content, $user_wiki_title ),
-					$article->getContext()->getUser(),
+					$user,
 					'import user wiki'
 				);
 			} else {
