@@ -13,6 +13,7 @@
 	"userboard": "Uporabniški panel",
 	"userboard_noexist": "Uporabnik, ki si ga poskušate ogledati, ne obstaja.",
 	"userboard_posted_ago": "objavljeno pred $1",
+	"userboard_public": "javni",
 	"userboard_loggedout": "Za pošiljanje sporočil drugim uporabnikom morate biti [[Special:UserLogin|prijavljeni]].",
 	"userboard-time-days": "{{PLURAL:$1|enim dnevom|$1 dnevi}}",
 	"userboard-time-hours": "{{PLURAL:$1|eno uro|$1 urama|$1 urami}}",
