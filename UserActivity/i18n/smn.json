@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Seipinne"
+			"Seipinne",
+			"Yupik"
 		]
 	},
-	"useractivity-all": "Keejâ puoh"
+	"useractivity-all": "Keejâ puoh",
+	"useractivity-filter": "Sillii"
 }
