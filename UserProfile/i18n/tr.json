@@ -5,10 +5,11 @@
 			"Joseph",
 			"Karduelis",
 			"MuratTheTurkish",
+			"Rapsar",
 			"Vito Genovese"
 		]
 	},
-	"editprofile": "Diğer kullanıcıların profillerini düzenle",
+	"editprofile": "Diğer kullanıcıların profillerini değiştir",
 	"populateuserprofiles": "Popüler kullanıcı profilleri",
 	"populateuserprofiles-confirm": "Mevcut kullanıcıların profillerini doldurmak istediğinizden emin misiniz?",
 	"user-time-ago": "$1 önce",
