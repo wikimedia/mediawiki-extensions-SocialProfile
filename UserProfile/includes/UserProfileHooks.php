@@ -75,7 +75,15 @@ class UserProfileHooks {
 	public static function onTitleIsAlwaysKnown( $title, &$isKnown ) {
 		// global $wgUserPageChoice;
 
-		if ( $title->inNamespace( NS_USER ) && !$title->isSubpage() ) {
+		$pageTitle = $title->getText();
+		$userNameUtils = MediaWikiServices::getInstance()->getUserNameUtils();
+		// @todo FIXME: also filter out nonexistent users (viewing the User: page of an
+		// account that does not literally exist in the DB)
+		if (
+			$title->inNamespace( NS_USER ) &&
+			!$title->isSubpage() &&
+			!$userNameUtils->isIP( $pageTitle )
+		) {
 			$isKnown = true;
 			/* @todo Do we care? Also, how expensive would this be in the long run?
 			if ( $wgUserPageChoice ) {
