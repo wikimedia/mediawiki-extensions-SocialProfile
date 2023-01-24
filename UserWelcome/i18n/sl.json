@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"userwelcome-desc": "Doda oznako <code>&lt;welcomeUser&gt;</code> za prikaz uporabniško specifičnih socialnih informacij prijavljenim uporabnikom",
+	"mp-userlevels-link": "Uporabniške ravni",
+	"mp-welcome-upload": "Naloži",
+	"mp-welcome-points": "$1 {{PLURAL:$1|točka|točki|točke|točk}}",
+	"mp-welcome-needed-points": "Če želite napredovati v [[$1|'''$2''']], si prislužite še ''$3'' {{PLURAL:$3|točko|točki|točke|točk}}!",
+	"mp-welcome-logged-in": "Pozdravljeni, $1",
+	"mp-requests-title": "Prošnje",
+	"mp-requests-message": "Imate naslednje prošnje.",
+	"mp-request-new-message": "novo sporočilo",
+	"mp-request-new-award": "$1 {{PLURAL:$1|nova nagrada|novi nagradi|nove nagrade|novih nagrad}}",
+	"mp-request-new-gift": "$1 {{PLURAL:$1|novo darilo|novi darili|nova darila|novih daril}}.",
+	"mp-request-new-foe": "$1 {{PLURAL:$1|nov sovražnik|nova sovražnika|novi sovražniki|nove sovražnike}}",
+	"mp-request-new-friend": "$1 {{PLURAL:$1|nov prijatelj|nova prijatelja|novi prijatelji|novih prijateljev}}"
+}
