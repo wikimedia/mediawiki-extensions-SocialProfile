@@ -11,7 +11,7 @@
 	"ga-addnew": "+ lägg till en ny present",
 	"ga-back-edit-gift": "Tillbaka för att ändra denna present",
 	"ga-back-gift-list": "Tillbaka till presentlista",
-	"ga-back-link": "[[User:$1|< Tillbaka till $1s profil]]",
+	"ga-back-link": "[[User:$1|&lt; Tillbaka till $1s profil]]",
 	"ga-choosefile": "Välj fil:",
 	"ga-count": "$1 har $2 {{PLURAL:$2|utmärkelse|utmärkelser}}.",
 	"ga-create-gift": "Skapa present",
