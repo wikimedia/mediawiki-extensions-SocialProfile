@@ -78,6 +78,10 @@ class SpecialViewRelationships extends SpecialPage {
 		if ( count( $params ) === 2 ) {
 			$user_name = $params[0];
 			$rel_type = ( $params[1] === 'foes' ? 2 : 1 );
+		} elseif ( count( $params ) === 1 && !$user_name ) {
+			// Support viewing *my* own foe list at Special:ViewRelationships/foes
+			// instead of having to specify Special:ViewRelationships/<user name>/foes for that
+			$rel_type = ( $params[0] === 'foes' ? 2 : 1 );
 		}
 
 		/**
