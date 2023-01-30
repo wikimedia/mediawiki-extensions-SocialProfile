@@ -92,5 +92,5 @@
 	"notification-social-gift-send-no-message": "$1 vient de vous envoyer un cadeau : $2.",
 	"notification-social-gift-send-with-message": "$1 vient de vous envoyer un cadeau : $2.<br /><br />''$3''",
 	"notification-social-gift-send-bundle": "{{PLURAL:$1|Une personne vous a|$1 personnes vous ont}} envoyé des cadeaux.",
-	"right-giftadmin": "Créer ou modifier des cadeaux"
+	"right-giftadmin": "Créer de nouveaux cadeaux ou modifier ceux existants"
 }
