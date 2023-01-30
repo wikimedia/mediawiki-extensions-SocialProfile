@@ -2003,7 +2003,7 @@ class UserProfilePage extends Article {
 					</div>";
 
 				if ( $user->isRegistered() ) {
-					if ( $check_user_fanbox == 0 ) {
+					if ( $check_user_fanbox ) {
 						$output .= '<div class="fanbox-pop-up-box-profile" id="fanboxPopUpBox' . $fanbox['fantag_id'] . '">
 							<table cellpadding="0" cellspacing="0" align="center">
 								<tr>
