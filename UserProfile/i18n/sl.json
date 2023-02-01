@@ -161,7 +161,7 @@
 	"user-profile-create-threshold-title": "Ustvaritev uporabniškega profila",
 	"user-profile-create-threshold-only-confirmed-email": "in potrjen e-poštni naslov",
 	"user-profile-create-threshold-edits": "{{PLURAL:$1|eno urejanje|$1 urejanji|$1 urejanja|$1 urejanj}}",
-	"user-profile-create-threshold-votes": "{{PLURAL:$1|en glas|$$1 glasova|$1 glasovi|$1 glasov}}",
+	"user-profile-create-threshold-votes": "{{PLURAL:$1|en glas|$1 glasova|$1 glasovi|$1 glasov}}",
 	"user-profile-create-threshold-comments": "{{PLURAL:$1|en komentar|$1 komentarja|$1 komentarji|$1 komentarjev}}",
 	"user-profile-create-threshold-comment-score-plus": "{{PLURAL:$1|en palec gor|$1 palca gor|$1 palci gor|$1 palcev gor}}",
 	"user-profile-create-threshold-comment-score-minus": "{{PLURAL:$1|en prezrt komentar|$1 prezrta komentarja|$1 prezrti komentarji|$1 prezrtih komentarjev}}",
