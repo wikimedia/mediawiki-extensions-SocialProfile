@@ -16,5 +16,7 @@
 	"boardlinkunselectfriends": "Skini izbor sa prijatelja",
 	"boardlinkselectfoes": "Izaberi neprijatelje",
 	"boardlinkunselectfoes": "Skini izbor sa neprijatelja",
-	"boardsendbutton": "Pošalji izjavu na tablu"
+	"boardsendbutton": "Pošalji izjavu na tablu",
+	"boardnofriends": "Nemate prijatelja kojima biste poslali poruku!",
+	"messagesentsuccess": "Vaša poruka je uspješno poslana"
 }
