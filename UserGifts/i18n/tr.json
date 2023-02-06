@@ -3,6 +3,7 @@
 		"authors": [
 			"Karduelis",
 			"MuratTheTurkish",
+			"Rapsar",
 			"Vito Genovese"
 		]
 	},
@@ -88,5 +89,5 @@
 	"notification-social-gift-send-no-message": "$1 az önce size bir hediye gönderdi: $2.",
 	"notification-social-gift-send-with-message": "$1 az önce size bir hediye gönderdi: $2.<br /><br />''$3''",
 	"notification-social-gift-send-bundle": "{{PLURAL:$1|Bir kişi|$1 kişi}} size hediye gönderdi.",
-	"right-giftadmin": "Yeni hediye oluştur ve mevcut hediyeleri düzenle"
+	"right-giftadmin": "Yeni hediye oluştur ve mevcut hediyeleri değiştir"
 }

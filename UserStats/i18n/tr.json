@@ -3,6 +3,7 @@
 		"authors": [
 			"Joseph",
 			"MuratTheTurkish",
+			"Rapsar",
 			"Vito Genovese"
 		]
 	},
@@ -51,7 +52,7 @@
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|Alınan hediye|Alınan hediyeler}}",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Gönderilen hediye|Gönderilen hediyeler}}",
 	"right-updatepoints": "Değişiklik sayılarını günceller",
-	"action-updatepoints": "düzenleme sayılarını güncelle",
+	"action-updatepoints": "değişiklik sayılarını güncelle",
 	"right-generatetopusersreport": "En iyi kullanıcı raporları oluştur",
 	"action-generatetopusersreport": "en iyi kullanıcı raporları oluştur",
 	"level-advanced-to": "<span style=\"font-weight:800;\">$1</span> seviyesine yükseldi",
@@ -62,10 +63,10 @@
 	"echo-pref-tooltip-social-level-up": "Yeni bir seviyeye atladığımda bana bildir.",
 	"notification-social-level-up": "\"$1\" seviyeye atladınız!",
 	"notification-social-level-up-bundle": "{{PLURAL:$1|bir seviyeye|$1 seviyeye}} $2 seviye oldunuz!",
-	"updateeditcounts": "Düzenleme Sayılarını Güncelle",
+	"updateeditcounts": "Değişiklik Sayılarını Güncelle",
 	"updateeditcounts-confirm": "Tüm kullanıcıların düzenleme sayılarını güncellemek istediğinizden emin misiniz?",
 	"updateeditcounts-updated": "'''$1''' kullanıcısı için güncellenmiş istatistikler",
-	"updateeditcounts-updating": "$1 ile $2 düzenleme güncelleniyor",
+	"updateeditcounts-updating": "$1 ile $2 değişiklik güncelleniyor",
 	"generatetopusersreport": "En İyi Kullanıcılar Raporu Oluştur",
 	"generatetopusersreport-confirm-weekly": "Haftalık en iyi kullanıcılar raporunu oluşturmak istediğinizden emin misiniz?",
 	"generatetopusersreport-confirm-monthly": "Aylık en iyi kullanıcılar raporunu oluşturmak istediğinizden emin misiniz?",
