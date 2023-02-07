@@ -45,6 +45,8 @@
 	"ga-remove-success-title": "Uspješno ste uklonili poklon \"$1\"",
 	"ga-remove-success-message": "Poklon \"$1\" je uklonjen.",
 	"ga-user-got-awards": "$1 je dobio/-la nagradu $2",
+	"ga-awards-populate-confirm": "Jeste li sigurni da želite ispuniti nagrade?",
+	"ga-awards-given-out": "{{PLURAL:$1|Dodijeljena je jedna nagrada|Dodijeljeno je $1 nagrade|Dodijeljeno je $1 nagrada}}",
 	"echo-pref-tooltip-social-award": "Obaveštavaj me kada primim nagradu.",
 	"notification-social-award-rec": "Primili ste novu nagradu: $1.",
 	"right-awardsmanage": "Pravljenje novih i uređivanje postojećih nagrada",
