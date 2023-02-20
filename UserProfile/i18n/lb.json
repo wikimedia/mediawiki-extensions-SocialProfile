@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Les Meloures",
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"editprofile": "Anere Benotzer hir Profiler änneren",
@@ -136,7 +137,7 @@
 	"user-profile-sports-title": "Ännert Äre léiwste Sportveräiner",
 	"user-profile-sports-notloggedintitle": "Ups!",
 	"user-profile-sports-notloggedintext": "Dir musst ageloggt sinn fir äre Profil änneren ze kënnen.",
-	"user-profile-sports-teamremoved": "Är Equipe gouf ewechgeholl",
+	"user-profile-sports-teamremoved": "Är Ekippe goufen ewechgeholl",
 	"user-profile-sports-teamsaved": "Är Equipe goufe gespäichert",
 	"user-profile-sports-addmore": "Méi Sportarten/Equippen derbäisetzen",
 	"uploadavatar": "Äert Bild eroplueden",
