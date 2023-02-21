@@ -25,7 +25,7 @@
 	"g-characters-left": "剩下$1字元",
 	"g-back-edit-gift": "返回到編輯此禮物",
 	"g-back-gift-list": "返回到禮物清單",
-	"g-back-link": "< 返回到$1的頁面",
+	"g-back-link": "&lt; 返回到$1的頁面",
 	"g-choose-file": "選擇檔案：",
 	"g-count": "$1有 $2 個{{PLURAL:$2|禮物}}。",
 	"g-create-gift": "建立禮物",
