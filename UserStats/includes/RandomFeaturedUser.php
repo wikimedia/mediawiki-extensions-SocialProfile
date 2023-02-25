@@ -93,7 +93,6 @@ class RandomFeaturedUser {
 			$output .= '</a>';
 		}
 
-		// @phan-suppress-next-line SecurityCheck-DoubleEscaped Fake news, escaping is totally proper here
 		$link = Html::rawElement(
 			'a',
 			[ 'href' => htmlspecialchars( $userPageURL, ENT_QUOTES ) ],
