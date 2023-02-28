@@ -14,7 +14,7 @@
 	"ga-addnew": "+ 添加新禮物",
 	"ga-back-edit-gift": "返回至編輯此禮物",
 	"ga-back-gift-list": "返回至禮物清單",
-	"ga-back-link": "[[User:$1|< 返回到$1的個人檔案]]",
+	"ga-back-link": "[[User:$1|&lt;返回到$1的個人檔案]]",
 	"ga-choosefile": "選擇檔案：",
 	"ga-count": "$1有 $2 {{PLURAL:$2|個獎勵}}。",
 	"ga-create-gift": "建立禮物",

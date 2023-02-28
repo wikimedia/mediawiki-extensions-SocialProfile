@@ -218,7 +218,7 @@
 	"right-editothersprofiles-private": "Преглед и поднова на приватни информации (е-пошта) во туѓи друштвени профили",
 	"action-avatarremove": "отстранување на кориснички аватари",
 	"action-editothersprofiles": "поднова на туѓи друштвени профили",
-	"right-populate-user-profiles": "Овозможува исполнување на туѓите профили за постоечки викија",
+	"right-populate-user-profiles": "Исполнување на туѓите профили за постоечки викија",
 	"action-populate-user-profiles": "исполнување на туѓи кориснички профили",
 	"apihelp-socialprofile-userprofileprivacy-description": "Извршнички модул за укажување на видливоста („приватност“) на едно профилно поле",
 	"apihelp-socialprofile-userprofileprivacy-summary": "Извршнички модул за укажување на видливоста („приватност“) на едно профилно поле",
