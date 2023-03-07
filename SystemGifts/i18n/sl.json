@@ -7,6 +7,7 @@
 	},
 	"ga-addnew": "+ Dodaj novo darilo",
 	"ga-currentimage": "Trenutna slika",
+	"ga-error-message-invalid-link": "Povezava, ki ste jo vnesli, je neveljavna.",
 	"ga-error-message-no-user": "Uporabnik, ki si ga poskušate ogledati, ne obstaja.",
 	"ga-giftdesc": "opis darila",
 	"ga-giftimage": "slika darila",
