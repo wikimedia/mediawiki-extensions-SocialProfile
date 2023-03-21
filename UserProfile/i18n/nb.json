@@ -219,7 +219,7 @@
 	"right-editothersprofiles-private": "Vise og oppdatere privat informasjon (epostadresse) i andre brukeres sosiale profiler",
 	"action-avatarremove": "fjerne brukeres avatarer",
 	"action-editothersprofiles": "oppdatere andre brukeres sosiale profiler",
-	"right-populate-user-profiles": "Gjør det mulig å befolke andre brukeres profiler for eksisterende wikier",
+	"right-populate-user-profiles": "Befolke andre brukeres profiler for eksisterende wikier",
 	"action-populate-user-profiles": "befolke andre brukeres profiler",
 	"apihelp-socialprofile-userprofileprivacy-description": "API-modul for å sette synligheten («privacy») til et profilfelt",
 	"apihelp-socialprofile-userprofileprivacy-summary": "API-modul for å sette synligheten («privacy») til et profilfelt",
