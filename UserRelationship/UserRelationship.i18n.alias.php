@@ -228,14 +228,6 @@ $specialPageAliases['tr'] = [
 	'ViewRelationships' => [ 'İlişkileriGör' ],
 ];
 
-/** Chinese (中文) */
-$specialPageAliases['zh'] = [
-	'AddRelationship' => [ '添加关系', '建立關係' ],
-	'RemoveRelationship' => [ '删除关系', '移除關係' ],
-	'ViewRelationshipRequests' => [ '查看关系申请', '檢視關係申請' ],
-	'ViewRelationships' => [ '查看关系', '檢視關係' ],
-];
-
 /** Simplified Chinese (中文（简体)) */
 $specialPageAliases['zh-hans'] = [
 	'AddRelationship' => [ '添加关系' ],
