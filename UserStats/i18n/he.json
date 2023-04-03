@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
+			"Dee",
 			"Guycn2",
 			"Rotemliss",
 			"YaronSh",
@@ -65,8 +66,8 @@
 	"notification-social-level-up": "עלית לרמת \"$1\"!",
 	"notification-social-level-up-bundle": "עלית {{PLURAL:$1|ברמה אחת|ב־$1 רמות}} עד $2!",
 	"updateeditcounts": "עדכון מוני עריכות",
-	"updateeditcounts-confirm": "האם ברצונך באמת לעדכן את מוני העריכות של כל המשמשים?",
-	"updateeditcounts-updated": "עודכנו סטטיסטיקות עבור {{PLURAL:$1|משתמש '''אחד'''|'''$1''' משתמים}}",
+	"updateeditcounts-confirm": "האם ברצונך באמת לעדכן את מוני העריכות של כל המשתמשים?",
+	"updateeditcounts-updated": "עודכנו סטטיסטיקות עבור {{PLURAL:$1|משתמש '''אחד'''|'''$1''' משתמשים}}",
 	"updateeditcounts-updating": "עדכון $1 עם {{PLURAL:$2|עריכה אחת|$1 עריכות}}",
 	"generatetopusersreport": "יצירת דו\"ח משתמשים מובילים",
 	"generatetopusersreport-confirm-weekly": "האם ברצונך באמת ליצור דו\"ח שבועי של משתמשים מובילים?",

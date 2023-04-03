@@ -2,11 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
+			"Dee",
 			"YaronSh"
 		]
 	},
 	"useractivity": "פעילות החברים",
-	"useractivity-desc": "הצגת הפעילות החברתית של משתשמשים",
+	"useractivity-desc": "הצגת הפעילות החברתית של משתמשים",
 	"useractivity-award": "$1 {{GENDER:$1|קיבל|קיבלה}} פרס",
 	"useractivity-all": "הצגת הכול",
 	"useractivity-edit": "$1 ערך את {{PLURAL:$4|הדף הבא|הדפים הבאים}}: $3",

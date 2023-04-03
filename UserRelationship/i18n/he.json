@@ -13,7 +13,7 @@
 	"ur-already-submitted": "בקשתכם נשלחה",
 	"ur-error-title": "אופס, זאת לא הפנייה הנכונה!",
 	"ur-error-message-no-user": "לא נוכל להשלים את בקשתכם, כיוון שלא קיים משתמש בשם זה.",
-	"ur-your-profile": "הפרופיל שלכם",
+	"ur-your-profile": "הפרופיל שלך",
 	"ur-backlink": "&lt; חזרה לפרופיל של $1",
 	"ur-relationship-count-foes": "ל־$1 יש {{PLURAL:$2|יריב אחד|$2 יריבים}}. מעוניי",
 	"ur-relationship-count-friends": "ל־$1 יש {{PLURAL:$2|חבר אחד|$2 חברים}}. מעוניינ",
