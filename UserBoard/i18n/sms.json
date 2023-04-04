@@ -4,6 +4,7 @@
 			"Yupik"
 		]
 	},
+	"userboard_sendbutton": "vuõlttâd",
 	"userboard-time-hours": "{{PLURAL:$1|õhtt čiâss|$1 čiâss|$1 čiâssâd}}",
 	"userboard-time-minutes": "{{PLURAL:$1|õhtt minutt|$1 minuutt|$1 minuttâd}}",
 	"userboard-time-seconds": "{{PLURAL:$1|õhtt sekuntt|$1 sekuunt|$1 sekunttâd}}"
