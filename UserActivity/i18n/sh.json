@@ -20,5 +20,6 @@
 	"useractivity-network-thought": "<b><a href=\"$4\">$2</a></b> ima ideju za mrežu $3",
 	"useractivity-siteactivity": "Aktivnost sajta",
 	"useractivity-title": "Aktivnost prijatelja",
-	"useractivity-user_message": "$1 {{PLURAL:$4|je poslao poruku|je poslao poruke}} $3"
+	"useractivity-user_message": "$1 {{PLURAL:$4|je poslao poruku|je poslao poruke}} $3",
+	"useractivity-comment": "$1 {{PLURAL:$4|je komentirao stranicu|je komentirao sljedeće stranice:}} $3"
 }
