@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Als-Holder",
+			"Brettchenweber",
 			"Elliot",
 			"Imre",
 			"Jorges",
@@ -52,7 +53,7 @@
 	"g-give-all-message-title": "Füge eine Nachricht hinzu",
 	"g-give-all-title": "$1 ein Geschenk machen",
 	"g-give-enter-friend-title": "Falls du einen Benutzernamen weißt, trage ihn hier unten ein",
-	"g-given": "Dieses Geschenk wurde {{PLURAL:$1|einmal|$1 mal}} ausgegeben",
+	"g-given": "Dieses Geschenk wurde {{PLURAL:$1|einmal|$1-mal}} ausgegeben",
 	"g-give-list-friends-title": "Wähle aus deiner Freundesliste",
 	"g-give-separator": "oder",
 	"g-give-no-user-message": "Geschenke und Auszeichnungen sind ein großartiger Weg um seine Freunde zu würdigen!",
