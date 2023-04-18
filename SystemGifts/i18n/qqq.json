@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"EugeneZelenko",
 			"Fryed-peach",
 			"Siebrand",
@@ -48,7 +49,7 @@
 	"ga-delete-message": "Confirmation message shown on Special:RemoveMasterSystemGift prior to removing an award permanently.\nThe page title is then {{msg-mw|ga-remove-title}}.\n$1 is the name of the award you're about to remove",
 	"ga-remove-success-title": "Page title of Special:RemoveMasterSystemGift after an award has been successfully removed.\nParameters:\n* $1 is an award name.",
 	"ga-remove-success-message": "Message shown on Special:RemoveMasterSystemGift after an award has been successfully removed.\nParameters:\n* $1 is an award name.",
-	"ga-user-got-awards": "Shown on Special:PopulateAwards (and also on Special:SystemGiftManager after creating a new award when existing users meet the given threshold of the award).\nParameters:\n* $1 is the user name of the person who got the award\n* $2 is the award name",
+	"ga-user-got-awards": "Shown on Special:PopulateAwards (and also on Special:SystemGiftManager after creating a new award when existing users meet the given threshold of the award).\nParameters:\n* $1 is the username of the person who got the award\n* $2 is the award name",
 	"ga-awards-populate-confirm": "Confirmation message shown on Special:PopulateAwards",
 	"ga-awards-given-out": "Shown on Special:PopulateAwards (and also on Special:SystemGiftManager after creating a new award when existing users meet the given threshold of the award).\n$1 is the amount of awards that were given out",
 	"topawards": "Page title of Special:TopAwards, which lists the amount of times various awards have been given out, along with the recipients of said awards",
