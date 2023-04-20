@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nokeoo"
+		]
+	},
+	"useractivity": "Draugų veikla",
+	"useractivity-desc": "Rodo naudotojų socialinę veiklą",
+	"useractivity-award": "$1 gavo apdovanojimą",
+	"useractivity-all": "Žiūrėti visus",
+	"useractivity-edit": "$1 {{PLURAL:$4|redagavo puslapį|redagavo šiuos puslapius:}} $3",
+	"useractivity-foe": "$1 {{PLURAL:$2|dabar yra priešai su}} $3",
+	"useractivity-filter": "Filtras",
+	"useractivity-friend": "$1 {{PLURAL:$2|dabar yra draugas su|dabar yra draugai su}} $3",
+	"useractivity-gift": "$1 gavo dovaną iš $2",
+	"useractivity-group-edit": "{{PLURAL:$1|vienas keitimas|$1 keitimai}}",
+	"useractivity-group-comment": "{{PLURAL:$1|vienas komentaras|$1 komentarai}}",
+	"useractivity-group-user_message": "{{PLURAL:$1|viena žinutė|$1 žinutės}}",
+	"useractivity-group-friend": "{{PLURAL:$1|vienas draugas|$1 draugai}}",
+	"useractivity-siteactivity": "Svetainės veikla",
+	"useractivity-title": "Draugų veikla",
+	"useractivity-user_message": "$1 {{PLURAL:$4|išsiuntė žinutę|išsiuntė žinutes}} $3",
+	"useractivity-comment": "$1 {{PLURAL:$4|pakomentavo puslapyje|pakomentavo šiuose puslapiuose:}} $3"
+}
