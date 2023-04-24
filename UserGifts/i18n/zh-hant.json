@@ -6,7 +6,8 @@
 			"Wrightbus",
 			"Kly",
 			"沈澄心",
-			"捍粵者"
+			"捍粵者",
+			"Winston Sung"
 		]
 	},
 	"usergifts-desc": "允許傳送、接收、建立、與移除使用者禮物",
@@ -81,7 +82,7 @@
 	"g-to-another": "贈送給別人",
 	"g-uploadsuccess": "上傳成功",
 	"g-viewgiftlist": "檢視禮物清單",
-	"g-your-profile": "您的個人資料",
+	"g-your-profile": "您的個人檔案",
 	"gift_received_subject": "$1在{{SITENAME}}傳送了禮物$2給您！",
 	"gift_received_body_html": "嗨，$1。\n\n$2剛剛在{{SITENAME}}傳送了禮物$3給您。\n\n想要閱讀$2留給您的通知並查看您的禮物嗎？請點擊下方連結：\n\n[[Special:ViewGifts]]\n\n我們希望您會喜歡！\n\n非常感謝\n\n\n{{SITENAME}}團隊\n\n---\n\n不想收到來自我們傳送的電子郵件嗎？\n\n那請點擊 [[Special:UpdateProfile]]\n並更改您的設定來停用電子郵件通知。",
 	"gift_received_body": "嗨，$1。\n\n$2剛剛在{{SITENAME}}傳送了禮物$3給您。\n\n想要閱讀$2留給您的通知並查看您的禮物嗎？請點擊下方連結：\n\n$4\n\n我們希望您會喜歡！\n\n非常感謝\n\n\n{{SITENAME}}團隊\n\n---\n\n不想收到來自我們傳送的電子郵件嗎？\n\n那請點擊$5\n並更改您的設定來停用電子郵件通知。",

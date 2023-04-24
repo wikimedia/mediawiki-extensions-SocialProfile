@@ -23,7 +23,7 @@
 	"ga-error-title": "Ops, da ging etwas schief!",
 	"ga-file-instructions": "Das Bild muss ein „JPEG“, „PNG“ oder ein nicht animiertes „GIF“ sein sowie eine Dateigröße unter 100 KB haben.",
 	"ga-gift": "Geschenk",
-	"ga-gift-given-count": "Dieses Geschenk wurde {{PLURAL:$1|einmal|$1 mal}} ausgegeben",
+	"ga-gift-given-count": "Dieses Geschenk wurde {{PLURAL:$1|einmal|$1-mal}} ausgegeben",
 	"ga-gift-title": "„$2“ von $1",
 	"ga-giftdesc": "Geschenkbeschreibung",
 	"ga-giftimage": "Geschenkabbildung",

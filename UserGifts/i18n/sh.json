@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"usergifts-desc": "Omogućava slanje, primanje, stvaranje i uklanjanje korisničkih poklona",
+	"giftmanager": "Menadžer za poklone",
+	"giftmanager-addgift": "+ Dodaj novi poklon",
+	"giftmanager-access": "pristup poklonima",
+	"giftmanager-description": "opis poklona",
+	"giftmanager-giftimage": "slika poklona",
+	"giftmanager-image": "dodaj/zamijeni sliku",
+	"giftmanager-giftcreated": "Poklon je napravljen",
+	"giftmanager-giftsaved": "Poklon je sačuvan",
+	"giftmanager-public": "javno",
+	"giftmanager-private": "privatno",
+	"giftmanager-view": "Prikaži spisak poklona",
+	"g-add-message": "Dodaj poruku",
+	"g-back-edit-gift": "Nazad na uređivanje ovog poklona",
+	"g-back-gift-list": "Nazad na spisak poklona",
+	"g-choose-file": "Izaberite datoteku:",
+	"g-count": "$1 ima $2 {{PLURAL:$2|poklon|poklona}}.",
+	"g-create-gift": "Napravi poklon",
+	"g-created-by": "napravljen od",
+	"g-current-image": "Trenutna slika",
+	"g-delete-message": "Jeste li sigurni da želite izbrisati poklon \"$1\"?\nOvo će ga također izbrisati od korisnika koji su ga možda primili.",
+	"g-description-title": "Poklon \"$2\" od $1",
+	"g-error-do-not-own": "Vi ne posjedujete ovaj poklon.",
+	"g-error-message-blocked": "Trenutno ste blokirani i ne možete slati poklone",
+	"g-error-message-invalid-link": "Uneseni link nije važeći."
+}
