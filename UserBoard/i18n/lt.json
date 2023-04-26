@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nokeoo"
+		]
+	},
+	"boardblaststep1": "1 žingsnis – parašykite savo žinutę",
+	"boardblastprivatenote": "Visos žinutės bus siunčiamos kaip privačios žinutės",
+	"boardblaststep2": "22 žingsnis – pasirinkite kam norite siųsti savo žinutę",
+	"boardlinkselectall": "Pasirinkti visus",
+	"boardlinkunselectall": "Atsisakyti visų",
+	"boardlinkselectfriends": "Pasirinkti draugus",
+	"boardlinkunselectfriends": "Atsisakyti draugų",
+	"boardlinkselectfoes": "Pasirinkti priešus",
+	"boardlinkunselectfoes": "Atsisakyti priešų",
+	"boardnofriends": "Neturite draugų, kuriems galėtumėte siųsti žinutę!",
+	"messagesentsuccess": "Jūsų žinutė sėkmingai išsiųsta",
+	"boardblast-js-sending": "Siunčiamos žinutės...",
+	"boardblast-error-missing-message": "Įveskite žinutę",
+	"boardblast-error-missing-user": "Pasirinkite bent vieną asmenį",
+	"userboard_noexist": "Naudotojas, kurį bandote peržiūrėti, neegzistuoja.",
+	"userboard_backprofile": "Grįžti į $1 profilį",
+	"userboard_backyourprofile": "Grįžti į savo profilį",
+	"userboard_confirmdelete": "Ar tikrai norite ištrinti šią žinutę?",
+	"userboard_sendmessage": "Siųsti žinutę $1",
+	"userboard_posted_ago": "paskelbta prieš $1",
+	"userboard_private": "privatus",
+	"userboard_public": "viešas",
+	"userboard_messagetype": "Žinutės tipas",
+	"userboard_nomessages": "Nėra žinučių.",
+	"userboard_sendbutton": "siųsti",
+	"userboard_showingmessages": "{{PLURAL:$4|Rodoma žinutė $3|Rodomos $2-$3 žinutės}} iš {{PLURAL:$1|$1 žinutės|$1 žinučių}}.",
+	"userboard-delete-success": "Žinutė sėkmingai ištrinta!",
+	"userboard-time-days": "{{PLURAL:$1|viena diena|$1 dienos}}",
+	"userboard-time-hours": "{{PLURAL:$1|viena valanda|$1 valandos}}",
+	"userboard-time-minutes": "{{PLURAL: $1|viena minutė|$1 minutės}}",
+	"userboard-time-seconds": "{{PLURAL:$1|viena sekundė|$1 sekundės}}",
+	"apihelp-socialprofile-send-message-param-username": "Gavėjo naudotojo vardas.",
+	"apihelp-socialprofile-send-message-param-type": "Žinutės tipas: 0 vieša žinutė, 1 privati žinutė."
+}
