@@ -56,7 +56,7 @@
 	"top-fans-stats-comment-score-positive-rec": "bravo{{PLURAL:$1||s}}",
 	"top-fans-stats-comment-score-negative-rec": "{{PLURAL:$1|nul|nuls}}",
 	"top-fans-stats-comment-score-positive-given": "{{PLURAL:$1|bravo attribué|bravos attribués}}",
-	"top-fans-stats-comment-score-negative-given": "{{PLURAL:$1|nul attribué|nuls attribués}}",
+	"top-fans-stats-comment-score-negative-given": "Rejet{{PLURAL:$1||s}} attribué{{PLURAL:$1||s}}",
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|cadeau reçu|cadeaux reçus}}",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|cadeau envoyé|cadeaux envoyés}}",
 	"right-updatepoints": "Mise à jour du compteur d’éditions",
