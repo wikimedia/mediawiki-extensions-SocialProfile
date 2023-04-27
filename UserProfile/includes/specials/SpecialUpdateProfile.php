@@ -773,7 +773,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			<p class="profile-update-title">' . $this->msg( 'user-profile-interests-eats' )->escaped() . '</p>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-foodsnacks' )->escaped() . '</p>
 			<p class="profile-update-unit">
-				<textarea name="snacks" id="snacks" rows="3" cols="75">' . ( isset( $snacks ) ? htmlspecialchars( $tv, ENT_QUOTES ) : '' ) . '</textarea>
+				<textarea name="snacks" id="snacks" rows="3" cols="75">' . ( isset( $snacks ) ? htmlspecialchars( $snacks, ENT_QUOTES ) : '' ) . '</textarea>
 			</p>
 			<div class="visualClear">' . $this->renderEye( 'up_snacks' ) . '</div>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-drinks' )->escaped() . '</p>
@@ -910,21 +910,21 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 					<div id="profile-update-custom2">
 					<p class="profile-update-unit-left">' . $this->msg( 'custom-info-field2' )->inContentLanguage()->parse() . '</p>
 					<p class="profile-update-unit">
-						<textarea name="custom2" id="least_moment" rows="3" cols="75">' . ( isset( $custom2 ) && $custom2 ? htmlspecialchars( $custom1, ENT_QUOTES ) : '' ) . '</textarea>
+						<textarea name="custom2" id="least_moment" rows="3" cols="75">' . ( isset( $custom2 ) && $custom2 ? htmlspecialchars( $custom2, ENT_QUOTES ) : '' ) . '</textarea>
 					</p>
 					</div>
 					<div class="visualClear">' . $this->renderEye( 'up_custom_2' ) . '</div>
 					<div id="profile-update-custom3">
 					<p class="profile-update-unit-left">' . $this->msg( 'custom-info-field3' )->inContentLanguage()->parse() . '</p>
 					<p class="profile-update-unit">
-						<textarea name="custom3" id="fav_athlete" rows="3" cols="75">' . ( isset( $custom3 ) && $custom3 ? htmlspecialchars( $custom1, ENT_QUOTES ) : '' ) . '</textarea>
+						<textarea name="custom3" id="fav_athlete" rows="3" cols="75">' . ( isset( $custom3 ) && $custom3 ? htmlspecialchars( $custom3, ENT_QUOTES ) : '' ) . '</textarea>
 					</p>
 					</div>
 					<div class="visualClear">' . $this->renderEye( 'up_custom_3' ) . '</div>
 					<div id="profile-update-custom4">
 					<p class="profile-update-unit-left">' . $this->msg( 'custom-info-field4' )->inContentLanguage()->parse() . '</p>
 					<p class="profile-update-unit">
-						<textarea name="custom4" id="least_fav_athlete" rows="3" cols="75">' . ( isset( $custom4 ) && $custom4 ? htmlspecialchars( $custom1, ENT_QUOTES ) : '' ) . '</textarea>
+						<textarea name="custom4" id="least_fav_athlete" rows="3" cols="75">' . ( isset( $custom4 ) && $custom4 ? htmlspecialchars( $custom4, ENT_QUOTES ) : '' ) . '</textarea>
 					</p>
 					</div>
 					<div class="visualClear">' . $this->renderEye( 'up_custom_4' ) . '</div>
