@@ -74,7 +74,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 
 			$this->showSuccess( $this->mUpload->mExtension );
 			// Run a hook on avatar change
-			Hooks::run( 'NewAvatarUploaded', [ $this->getUser() ] );
+			$this->getHookContainer()->run( 'NewAvatarUploaded', [ $this->getUser() ] );
 		}
 	}
 

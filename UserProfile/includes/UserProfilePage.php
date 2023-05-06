@@ -144,7 +144,7 @@ class UserProfilePage extends Article {
 		// Avoid PHP 7.1 warning of passing $this by reference
 		$userProfilePage = $this;
 
-		if ( !Hooks::run( 'UserProfileBeginLeft', [ &$userProfilePage ] ) ) {
+		if ( !MediaWikiServices::getInstance()->getHookContainer()->run( 'UserProfileBeginLeft', [ &$userProfilePage ] ) ) {
 			$logger->debug( "{method}: UserProfileBeginLeft messed up profile!\n", [
 				'method' => __METHOD__
 			] );
@@ -159,7 +159,7 @@ class UserProfilePage extends Article {
 		$out->addHTML( $this->getFanBoxes() );
 		$out->addHTML( $this->getUserStats() );
 
-		if ( !Hooks::run( 'UserProfileEndLeft', [ &$userProfilePage ] ) ) {
+		if ( !MediaWikiServices::getInstance()->getHookContainer()->run( 'UserProfileEndLeft', [ &$userProfilePage ] ) ) {
 			$logger->debug( "{method}: UserProfileEndLeft messed up profile!\n", [
 				'method' => __METHOD__
 			] );
@@ -172,7 +172,7 @@ class UserProfilePage extends Article {
 		// Right side
 		$out->addHTML( '<div id="user-page-right" class="clearfix">' );
 
-		if ( !Hooks::run( 'UserProfileBeginRight', [ &$userProfilePage ] ) ) {
+		if ( !MediaWikiServices::getInstance()->getHookContainer()->run( 'UserProfileBeginRight', [ &$userProfilePage ] ) ) {
 			$logger->debug( "{method}: UserProfileBeginRight messed up profile!\n", [
 				'method' => __METHOD__
 			] );
@@ -182,7 +182,7 @@ class UserProfilePage extends Article {
 		// @phan-suppress-next-line SecurityCheck-XSS
 		$out->addHTML( $this->getActivity() );
 		// Hook for BlogPage
-		if ( !Hooks::run( 'UserProfileRightSideAfterActivity', [ $this ] ) ) {
+		if ( !MediaWikiServices::getInstance()->getHookContainer()->run( 'UserProfileRightSideAfterActivity', [ $this ] ) ) {
 			$logger->debug( "{method}: UserProfileRightSideAfterActivity hook messed up profile!\n", [
 				'method' => __METHOD__
 			] );
@@ -190,7 +190,7 @@ class UserProfilePage extends Article {
 		$out->addHTML( $this->getCasualGames() );
 		$out->addHTML( $this->getUserBoard( $context->getUser() ) );
 
-		if ( !Hooks::run( 'UserProfileEndRight', [ &$userProfilePage ] ) ) {
+		if ( !MediaWikiServices::getInstance()->getHookContainer()->run( 'UserProfileEndRight', [ &$userProfilePage ] ) ) {
 			$logger->debug( "{method}: UserProfileEndRight messed up profile!\n", [
 				'method' => __METHOD__
 			] );
@@ -1069,7 +1069,7 @@ class UserProfilePage extends Article {
 			htmlspecialchars( $this->profileOwner->getName() ) .
 		'</div>';
 
-		Hooks::run( 'UserProfileGetProfileTitle', [ $this, &$profileTitle ] );
+		MediaWikiServices::getInstance()->getHookContainer()->run( 'UserProfileGetProfileTitle', [ $this, &$profileTitle ] );
 		$output .= $profileTitle;
 
 		// Show the user's level and the amount of points they have if
@@ -1185,7 +1185,7 @@ class UserProfilePage extends Article {
 		// Provide a hook point for adding links to the profile header
 		// or maybe even removing them
 		// @see https://phabricator.wikimedia.org/T152930
-		Hooks::run( 'UserProfileGetProfileHeaderLinks', [ $this, &$profileLinks ] );
+		MediaWikiServices::getInstance()->getHookContainer()->run( 'UserProfileGetProfileHeaderLinks', [ $this, &$profileLinks ] );
 
 		$output .= $language->pipeList( $profileLinks );
 		$output .= '</div>

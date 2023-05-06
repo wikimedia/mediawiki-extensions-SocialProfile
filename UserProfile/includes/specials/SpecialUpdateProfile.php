@@ -329,7 +329,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$userOptionsManager->saveOptions( $user );
 
 		// Allow extensions like UserMailingList do their magic here
-		Hooks::run( 'SpecialUpdateProfile::saveSettings_pref', [ $this, $request ] );
+		$this->getHookContainer()->run( 'SpecialUpdateProfile::saveSettings_pref', [ $this, $request ] );
 	}
 
 	public static function formatBirthdayDB( $birthday ) {
@@ -403,7 +403,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		// BasicProfileChanged hook
 		$basicProfileData['up_name'] = $request->getVal( 'real_name' );
 		$basicProfileData['up_email'] = $request->getVal( 'email' );
-		Hooks::run( 'BasicProfileChanged', [ $user, $basicProfileData ] );
+		$this->getHookContainer()->run( 'BasicProfileChanged', [ $user, $basicProfileData ] );
 		// end of the hook
 
 		UserProfile::clearCache( $user );
@@ -475,7 +475,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		);
 
 		// PersonalInterestsChanged hook
-		Hooks::run( 'PersonalInterestsChanged', [ $user, $interestsData ] );
+		$this->getHookContainer()->run( 'PersonalInterestsChanged', [ $user, $interestsData ] );
 		// end of the hook
 
 		UserProfile::clearCache( $user );
@@ -851,7 +851,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			</p>';
 
 		// Allow extensions (like UserMailingList) to add new checkboxes
-		Hooks::run( 'SpecialUpdateProfile::displayPreferencesForm', [ $this, &$form ] );
+		$this->getHookContainer()->run( 'SpecialUpdateProfile::displayPreferencesForm', [ $this, &$form ] );
 
 		$form .= '</div>
 			<div class="visualClear"></div>';

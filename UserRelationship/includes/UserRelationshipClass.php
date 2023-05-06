@@ -350,9 +350,9 @@ class UserRelationship {
 
 			// Hooks (for Semantic SocialProfile mostly)
 			if ( $ur_type == 1 ) {
-				Hooks::run( 'NewFriendAccepted', [ $userFrom, $this->user ] );
+				MediaWikiServices::getInstance()->getHookContainer()->run( 'NewFriendAccepted', [ $userFrom, $this->user ] );
 			} else {
-				Hooks::run( 'NewFoeAccepted', [ $userFrom, $this->user ] );
+				MediaWikiServices::getInstance()->getHookContainer()->run( 'NewFoeAccepted', [ $userFrom, $this->user ] );
 			}
 
 			return true;
@@ -397,7 +397,7 @@ class UserRelationship {
 		$cache->delete( $cache->makeKey( 'relationship', 'profile', 'actor_id', "{$user2->getActorId()}-2" ) );
 
 		// RelationshipRemovedByUserID hook
-		Hooks::run( 'RelationshipRemovedByUserID', [ $user1, $user2 ] );
+		MediaWikiServices::getInstance()->getHookContainer()->run( 'RelationshipRemovedByUserID', [ $user1, $user2 ] );
 
 		// Update social statistics for both users
 		$stats = new UserStatsTrack( $user1->getActorId() );
