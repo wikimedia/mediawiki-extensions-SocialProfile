@@ -48,7 +48,7 @@
 	"userboard_messagetype": "Type de message",
 	"userboard_nomessages": "Aucun message.",
 	"userboard_sendbutton": "envoyé",
-	"userboard_loggedout": "Vous devez être [[Special:UserLogin|connecté]] pour poster des messages à d’autres utilisateurs.",
+	"userboard_loggedout": "Vous devez être [[Special:UserLogin|connecté(e)]] pour envoyer des messages à d’autres utilisateurs.",
 	"userboard_showingmessages": "Visionnement {{PLURAL:$4|du message $3|des messages $2-$3}} sur un total de $1 message{{PLURAL:$1||s}}",
 	"userboard-delete-success": "Le message a bien été supprimé !",
 	"right-userboard-delete": "Supprimer les messages d’autres utilisateurs",
