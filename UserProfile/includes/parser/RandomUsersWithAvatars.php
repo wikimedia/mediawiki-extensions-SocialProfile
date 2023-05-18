@@ -25,7 +25,7 @@ class RandomUsersWithAvatars {
 	 * @return string
 	 */
 	public static function getRandomUsersWithAvatars( $input, array $args, Parser $parser ) {
-		global $wgDBname;
+		global $wgAvatarKey;
 
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$parser->getOutput()->addModuleStyles( [ 'ext.socialprofile.userprofile.randomuserswithavatars.styles' ] );
@@ -49,7 +49,7 @@ class RandomUsersWithAvatars {
 
 			$reSize = preg_quote( $size );
 			$files = preg_grep(
-				"/^{$wgDBname}_[0-9]+_{$reSize}\.(png|gif|jpe?g)$/i",
+				"/^{$wgAvatarKey}_[0-9]+_{$reSize}\.(png|gif|jpe?g)$/i",
 				iterator_to_array( $backend->getFileBackend()->getFileList( [
 					'dir' => $backend->getContainerStoragePath(),
 					'topOnly' => true,
@@ -80,7 +80,7 @@ class RandomUsersWithAvatars {
 		foreach ( $randomKeys as $random ) {
 			// Extract user ID out of avatar image name
 			$avatarName = basename( $files[$random] );
-			preg_match( "/{$wgDBname}_(.*)_/i", $avatarName, $matches );
+			preg_match( "/{$wgAvatarKey}_(.*)_/i", $avatarName, $matches );
 			$userId = $matches[1];
 
 			if ( $userId ) {
