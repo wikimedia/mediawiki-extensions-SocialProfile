@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Alshamiri1",
 			"Meno25",
 			"OsamaK"
 		]
 	},
+	"systemgifts-desc": "يسمح بإرسال واستلام وإنشاء وإزالة هدايا النظام",
 	"systemgiftmanager": "مدير هدايا النظام",
 	"ga-addnew": "+ إضافة هدية جديدة",
 	"ga-back-edit-gift": "رجوع لتعديل هذه الهدية",
@@ -40,7 +42,38 @@
 	"ga-title": "جوائز $1",
 	"ga-uploadsuccess": "الرفع نجح",
 	"ga-viewlist": "عرض قائمة الهدايا",
+	"ga-remove": "إزالة",
+	"ga-remove-title": "إزالة \"$1\"؟",
+	"ga-delete-message": "هل أنت متأكد أنك تريد حذف الهدية \"$1\"؟ هذا سيحذفها أيضا من المستخدمين الذين ربما كانوا قد تلقوها.",
+	"ga-remove-success-title": "لقد نجحت في إزالة الهدية \" $1 \"",
+	"ga-remove-success-message": "الهدية \"$1\" تمت إزالتها.",
+	"ga-user-got-awards": "حصل $1 على $2",
+	"ga-awards-populate-confirm": "هل أنت متأكد أنك تريد توزيع الجوائز؟",
+	"ga-awards-given-out": "{{PLURAL:$1| جائزة واحدة | تم توزيع جوائز $1 }}",
+	"topawards": "أعلى الجوائز",
+	"topawards-edit-title": "أعلى الجوائز - تحرير المعالم",
+	"topawards-vote-title": "أعلى الجوائز - مراحل التصويت",
+	"topawards-comment-title": "أعلى الجوائز - معالم التعليق",
+	"topawards-recruit-title": "أعلى الجوائز - معالم التوظيف",
+	"topawards-friend-title": "أعلى الجوائز - معالم الصداقة",
+	"topawards-award-categories": "فئات الجائزة",
+	"topawards-edits": "عمليات التحرير",
+	"topawards-votes": "أصوات",
+	"topawards-comments": "التعليقات",
+	"topawards-friends": "أصدقاء",
+	"topawards-edit-milestone": "{{PLURAL:$1| تحرير $1 | $1 Edits}} حدث هام",
+	"topawards-vote-milestone": "{{PLURAL:$1| $1 تصويت | $1 Votes}} حدث هام",
+	"topawards-comment-milestone": "{{PLURAL:$1| تعليق $1 | $1 تعليقات}} حدث هام",
+	"topawards-recruit-milestone": "{{PLURAL:$1| توظيف $1 | $1 مجندون}} حدث هام",
+	"topawards-friend-milestone": "{{PLURAL:$1| صديق $1 | $1 Friends}} حدث هام",
+	"topawards-empty": "إما أنه لا توجد جوائز مهيأة لفئة الجائزة هذه ، أو لم يحصل أحد على هذه الجوائز بعد.",
 	"system_gift_received_subject": "أنت تلقيت جائزة $1 في {{SITENAME}}!",
+	"system_gift_received_body_html": "مرحبا $1:\n\nأنت تلقيت حالا جائزة $2 في {{SITENAME}}!\n\n\"$3\"\n\nاضغط بالأسفل للتحقق من صندوق جوائزك!\n\n$4\n\nنأمل أن تعجبك!\n\nشكرا،\n\n\nفريق {{SITENAME}}\n\n---\n\nها، تريد أن تتوقف عن تلقي رسائل البريد الإلكتروني منا؟\n\nاضغط $5\nوغير إعداداتك لتعطيل إخطارات البريد الإكتروني.",
 	"system_gift_received_body": "مرحبا $1:\n\nأنت تلقيت حالا جائزة $2 في {{SITENAME}}!\n\n\"$3\"\n\nاضغط بالأسفل للتحقق من صندوق جوائزك!\n\n$4\n\nنأمل أن تعجبك!\n\nشكرا،\n\n\nفريق {{SITENAME}}\n\n---\n\nها، تريد أن تتوقف عن تلقي رسائل البريد الإلكتروني منا؟\n\nاضغط $5\nوغير إعداداتك لتعطيل إخطارات البريد الإكتروني.",
-	"right-awardsmanage": "إنشاء جوائز جديدة وتعديل الموجودة"
+	"echo-category-title-social-award": "جوائز",
+	"echo-pref-tooltip-social-award": "أعلمني عندما أحصل على جائزة.",
+	"notification-social-award-rec": "لقد تلقيت جائزة جديدة: $1 .",
+	"notification-social-award-rec-bundle": "لقد تلقيت {{PLURAL:$1| جائزة واحدة جديدة | جوائز جديدة بقيمة $1 }}.",
+	"right-awardsmanage": "إنشاء جوائز جديدة وتعديل الموجودة",
+	"action-awardsmanage": "إنشاء جوائز جديدة وتعديل الموجودة"
 }

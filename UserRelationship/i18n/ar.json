@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Alnokta",
+			"Dr-Taher",
 			"Meno25",
 			"OsamaK"
 		]
 	},
+	"userrelationship-desc": "يسمح بإرسال طلبات الصداقة والمنافسة",
 	"viewrelationships": "عرض العلاقة",
 	"viewrelationshiprequests": "اعرض طلبات العلاقات",
 	"ur-already-submitted": "طلبك تم إرساله",

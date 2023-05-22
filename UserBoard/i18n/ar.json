@@ -2,11 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Alnokta",
+			"Alshamiri1",
 			"Meno25",
 			"OsamaK",
 			"محمد أحمد عبد الفتاح"
 		]
 	},
+	"userboard-desc": "يسمح بإرسال رسائل من لوحة إلى لوحة",
 	"messagesenttitle": "الرسائل تم إرسالها",
 	"boardblasttitle": "أرسل بورد بلاست",
 	"boardblaststep1": "خطوة 1 - اكتب رسالتك",
@@ -21,6 +23,9 @@
 	"boardsendbutton": "أرسل بورد بلاست",
 	"boardnofriends": "لا تمتلك أي أصدقاء لترسل رسالة إليهم!",
 	"messagesentsuccess": "رسالتك أُرسلت بنجاح",
+	"boardblast-js-sending": "إرسال الرسائل...",
+	"boardblast-error-missing-message": "من فضلك أدخل رسالة",
+	"boardblast-error-missing-user": "الرجاء تحديد شخص واحد على الأقل",
 	"userboard": "مجلس المستخدم",
 	"userboard_board-to-board": "بورد إلى بورد",
 	"userboard_noexist": "المستخدم الذي تحاول عرضه غير موجود.",
@@ -49,5 +54,18 @@
 	"userboard-time-minutes": "{{PLURAL:$1||دقيقة واحدة|دقيقتان|$1 دقائق|$1 دقيقة}}",
 	"userboard-time-seconds": "{{PLURAL:$1||ثانية واحدة|ثانيتان|$1 ثوانٍ|$1 ثانية}}",
 	"message_received_subject": "$1 كتب على مجلسك في {{SITENAME}}",
-	"message_received_body": "مرحبا $1:\n\n$2 كتب حالا على مجلسك في {{SITENAME}}!\n\nاضغط بالأسفل للتحقق من مجلسك!\n\n$3\n\n---\n\nهل تريد التوقف عن تلقي رسائل بريد إلكتروني مننا؟\n\nاضغط $4\nوغير إعداداتك لتعطيل إخطارات البريد الإلكتروني."
+	"message_received_body_html": "مرحبا $1:\n\n$2 كتب حالا على مجلسك في {{SITENAME}}!\n\nاضغط بالأسفل للتحقق من مجلسك!\n\n$3\n\n---\n\nهل تريد التوقف عن تلقي رسائل بريد إلكتروني مننا؟\n\nاضغط $4\nوغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.",
+	"message_received_body": "مرحبا $1:\n\n$2 كتب حالا على مجلسك في {{SITENAME}}!\n\nاضغط بالأسفل للتحقق من مجلسك!\n\n$3\n\n---\n\nهل تريد التوقف عن تلقي رسائل بريد إلكتروني مننا؟\n\nاضغط $4\nوغير إعداداتك لتعطيل إخطارات البريد الإلكتروني.",
+	"echo-category-title-social-msg": "رسائل لوحة المستخدم",
+	"echo-pref-tooltip-social-msg": "إعلامي عندما يترك شخص ما رسالة على لوحة المستخدم الخاصة بي.",
+	"notification-social-msg-send": "$1 ترك للتو رسالة على لوحة المستخدم الخاصة بك.<br /><br /> $2",
+	"notification-social-msg-send-bundle": "{{PLURAL:$1| رسالة واحدة | $1 رسائل | 100 = 99 + رسالة}} تركت على لوحة المستخدم الخاصة بك.",
+	"apihelp-socialprofile-send-message-description": "أرسل رسالة إلى لوحة مستخدم المستخدم.",
+	"apihelp-socialprofile-send-message-summary": "أرسل رسالة إلى لوحة مستخدم المستخدم.",
+	"apihelp-socialprofile-send-message-param-username": "اسم مستخدم المستلم.",
+	"apihelp-socialprofile-send-message-param-message": "نسخة مشفرة من URL للرسالة لإرسالها.",
+	"apihelp-socialprofile-send-message-param-type": "نوع الرسالة: 0 للرسالة العامة ، و 1 للرسالة الخاصة.",
+	"apihelp-socialprofile-delete-message-description": "احذف رسالة UserBoard.",
+	"apihelp-socialprofile-delete-message-summary": "احذف رسالة UserBoard.",
+	"apihelp-socialprofile-delete-message-param-id": "المعرف الفريد لرسالة المنتدى المراد حذفها."
 }

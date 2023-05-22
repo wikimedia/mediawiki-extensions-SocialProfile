@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Alshamiri1",
 			"Meno25",
 			"NEHAOUA",
 			"OsamaK",
@@ -40,6 +41,19 @@
 	"level-advanced-to": "تقدم إلى المستوى <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "أنت الآن \"$1\" في {{SITENAME}}!",
 	"level-advance-body": "مرحبا $1:\n\nأنت الآن \"$2\" في {{SITENAME}}!\n\nتهانينا،\n\nفرق {{SITENAME}}\n\n---\nهل تريد التوقف عن تلقي رسائل بريد إلكتروني منا؟\n\nاضغط $3\nوغير إعداداتك لتعديل إخطارات البريد الإلكتروني.",
+	"user-stats-weekly-winners": "أسبوعيًا {{PLURAL:$1| الفائز | الفائزون}}",
+	"user-stats-monthly-winners": "شهريًا {{PLURAL:$1| الفائز | الفائزون}}",
+	"user-stats-weekly-win-congratulations": "تهانينا لـ {{PLURAL:$1| user | users}} ، الذي ربح ربحًا أسبوعيًا و $2 إضافيًا {{PLURAL:$2| نقطة | نقاط}}!",
+	"user-stats-monthly-win-congratulations": "تهانينا لـ {{PLURAL:$1| user | users}} ، الذي ربح ربحًا شهريًا و $2 إضافيًا {{PLURAL:$2| نقطة | نقاط}}!",
+	"user-stats-full-top": "قمة كاملة $1",
+	"user-stats-report-row": "( $1 ) [[المستخدم: $2 | $2 ]] - '' ' $3 ' '' {{PLURAL:$3| نقطة | نقاط}}!",
+	"user-stats-report-points": "'' ' $1 ' '' {{PLURAL:$1| نقطة | نقاط}}!",
+	"user-stats-report-generation-note": "تم إنشاء هذه الصفحة تلقائيًا",
+	"user-stats-report-weekly-edit-summary": "تقرير المستخدم الأسبوعي الآلي",
+	"user-stats-report-monthly-edit-summary": "تقرير المستخدم الشهري الآلي",
+	"user-stats-report-weekly-page-title": "تقرير نقاط المستخدم الأسبوعي ( $1 )",
+	"user-stats-report-monthly-page-title": "تقرير نقاط المستخدم الشهري ( $1 )",
+	"user-stats-report-error-variable-not-set": "يجب أن يكون للمتغير $ wgUserStatsPointValues ['Points_winner_ $1 '] قيمة أكبر من 0 في LocalSettings.php!",
 	"random-user-points-weekly": "{{PLURAL:$1|نقطة واحدة|$1 نقاط}} هذا الأسبوع",
 	"random-user-points-monthly": "{{PLURAL:$1|نقطة واحدة|$1 نقاط}} هذا الشهر",
 	"random-user-about-me": "عني"
