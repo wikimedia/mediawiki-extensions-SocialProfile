@@ -13,6 +13,7 @@
 	"user-profile-create-threshold-title": "사용자 프로파일 만들기",
 	"user-profile-create-threshold-friend-count": "{{PLURAL:$1|친구 1명|친구 $1명}}",
 	"user-profile-privacy-status-privacy-foaf": "친구의 친구",
+	"user-page-link": "사용자 문서",
 	"user-board-confirm-delete": "이 메시지를 삭제하시겠습니까?",
 	"removeavatar-remove-my-avatar": "내 아바타 제거",
 	"removeavatar-remove-your-avatar": "내 아바타 제거",
