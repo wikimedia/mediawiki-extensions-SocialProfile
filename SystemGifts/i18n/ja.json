@@ -48,5 +48,6 @@
 	"topawards-friends": "友達",
 	"system_gift_received_subject": "{{SITENAME}}にて$1賞を受けました",
 	"system_gift_received_body": "$1さん、こんにちは。\n\n$1さんは、{{SITENAME}}にて$2賞を受賞されました！\n\n「$3」\n\nトロフィー入れを確認するには下のリンクをクリックしてください！\n\n$4\n\nお気に入れば幸いです！\n\n{{SITENAME}}チーム\n\n---\nメール受信を停止したい場合は、\n$5\nをクリックして、メール通知を無効にするよう設定変更してください。",
-	"right-awardsmanage": "賞を新規作成/編集"
+	"right-awardsmanage": "賞を新規作成/編集",
+	"action-awardsmanage": "賞の新規作成/編集"
 }

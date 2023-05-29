@@ -45,7 +45,7 @@
 	"userboard_sendbutton": "送信",
 	"userboard_loggedout": "他の利用者にメッセージを送信するには[[Special:UserLogin|ログイン]]する必要があります。",
 	"userboard_showingmessages": "メッセージ$1件中{{PLURAL:$4|$3件|$2-$3件}}を表示中",
-	"right-userboard-delete": "他人の掲示板のメッセージを削除",
+	"right-userboard-delete": "他の人の掲示板のメッセージを削除",
 	"userboard-time-days": "{{PLURAL:$1|$1日}}",
 	"userboard-time-hours": "{{PLURAL:$1|$1時間}}",
 	"userboard-time-minutes": "{{PLURAL:$1|$1分}}",
