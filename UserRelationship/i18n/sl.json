@@ -15,7 +15,9 @@
 	"ur-add-error-message-no-user": "Uporabnik, ki ga poskušate dodati, ne obstaja.",
 	"ur-add-error-message-blocked": "Trenutno ste blokirani in ne morete dodajati prijateljev ali sovražnikov.",
 	"ur-add-error-message-yourself": "Sebe ne morete dodati kot prijatelja ali sovražnika.",
+	"ur-reject": "Zavrni",
 	"friend_request_body": "Pozdravljeni, $1.\n\n$2 vas je v projektu {{SITENAME}} dodal_a kot prijatelja_ico. Želimo se prepričati, da sta resnično prijatelja_ici.\n\nZa potrditev prijateljstva kliknite naslednjo povezavo:\n$3\n\nHvala.\n\n\nEkipa projekta {{SITENAME}}\n\n---\n\nNe želite več prejemati naše e-pošte?\n\nKliknite $4\nin s spremembno nastavitev onemogočite prejemanje e-poštnih obvestil.",
 	"echo-category-title-social-rel": "Spremembe uporabniških razmerij",
-	"echo-pref-tooltip-social-rel": "Obvesti me, ko mi kdo pošlje prošnjo za uporabniško razmerje (prošnja za prijateljstvo ali sovraštvo)."
+	"echo-pref-tooltip-social-rel": "Obvesti me, ko mi kdo pošlje prošnjo za uporabniško razmerje (prošnja za prijateljstvo ali sovraštvo).",
+	"apihelp-socialprofile-request-response-param-response": "Odziv na prošnjo za odnos; 1 za sprejem, -1 za zavrnitev."
 }

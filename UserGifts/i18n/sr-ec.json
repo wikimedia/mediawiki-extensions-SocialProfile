@@ -66,7 +66,7 @@
 	"g-remove-gift": "Обриши овај поклон",
 	"g-remove-message": "Желите ли заиста да избришете поклон „$1”?",
 	"g-recent-recipients": "Други примаоци овог поклона",
-	"g-remove-success-title": "Успешно сте обрисали поклон \"$1\"",
+	"g-remove-success-title": "Уклонили сте поклон „$1”",
 	"g-remove-success-message": "Поклон \"$1\" је обрисан.",
 	"g-remove-title": "Обрисати \"$1\"?",
 	"g-send-gift": "Слање поклона",
