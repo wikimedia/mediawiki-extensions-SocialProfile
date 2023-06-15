@@ -9,5 +9,10 @@
 	"top-fans-bad-field-message": "Določena statistika ne obstaja.",
 	"echo-category-title-social-level-up": "Višja raven",
 	"echo-pref-tooltip-social-level-up": "Obvesti me, ko napredujem na novo raven.",
+	"user-stats-monthly-win-congratulations": "Čestitamo {{PLURAL:$1|one=naslednjemu uporabniku|two=naslednjima uporabnikoma|few=naslednjim uporabnikom|naslednjim uporabnikom}}, ki so si prislužili mesečno zmago in {{PLURAL:$2|$2 dodatno točko|$2 dodatni točki|$2 dodatne točke|$2 dodatnih točk}}!",
+	"user-stats-report-row": "($1) [[User:$2|$2]] - '''$3''' {{PLURAL:$3|točka|točki|točke|točk}}!",
+	"user-stats-report-points": "'''$1''' {{PLURAL:$1|točka|točki|točke|točk}}!",
+	"random-user-points-weekly": "{{PLURAL:$1|ena točka|dve točki|$1 točke|$1 točk}} v tem tednu",
+	"random-user-points-monthly": "{{PLURAL:$1|ena točka|dve točki|$1 točke|$1 točk}} v tem mesecu",
 	"random-user-about-me": "O meni"
 }
