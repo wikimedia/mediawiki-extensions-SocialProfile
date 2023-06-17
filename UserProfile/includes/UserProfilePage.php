@@ -355,7 +355,8 @@ class UserProfilePage extends Article {
 		$logger = LoggerFactory::getInstance( 'SocialProfile' );
 
 		// Try cache
-		$key = $cache->makeKey( 'user', 'profile', 'quiz', $this->user_id );
+		$actorId = $this->profileOwner->getActorId();
+		$key = $cache->makeKey( 'user', 'profile', 'quiz', 'actor_id', $actorId );
 		$data = $cache->get( $key );
 
 		if ( $data ) {
@@ -374,7 +375,7 @@ class UserProfilePage extends Article {
 				'quizgame_questions',
 				[ 'q_id', 'q_text', 'q_date' ],
 				[
-					'q_actor' => $this->profileOwner->getActorId(),
+					'q_actor' => $actorId,
 					'q_flag' => 0 // the same as QuizGameHome::$FLAG_NONE
 				],
 				__METHOD__,
