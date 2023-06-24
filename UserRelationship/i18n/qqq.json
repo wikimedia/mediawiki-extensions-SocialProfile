@@ -98,7 +98,6 @@
 	"notification-social-rel-accept-foe": "[[mw:Extension:Echo|Echo]] notification title when a foeship request was accepted\nParameters:\n* $1 is the user name of the person who accepted your foe request",
 	"notification-social-rel-accept-email-subject": "[[mw:Extension:Echo|Echo]] notification email title about an accepted friend or foe request\nParameters:\n* $1 is the user name of the person who accepted your request",
 	"notification-social-rel-accept-email-batch-body": "[[mw:Extension:Echo|Echo]] notification batch email title about an accepted friend or foe request\nParameters:\n* $1 is the user name of the person who accepted your request",
-	"apihelp-socialprofile-request-response-description": "{{doc-apihelp-description|socialprofile-request-response}}",
 	"apihelp-socialprofile-request-response-summary": "{{doc-apihelp-summary|socialprofile-request-response}}",
 	"apihelp-socialprofile-request-response-param-response": "{{doc-apihelp-param|socialprofile-request-response|response}}",
 	"apihelp-socialprofile-request-response-param-id": "{{doc-apihelp-param|socialprofile-request-response|id}}"
