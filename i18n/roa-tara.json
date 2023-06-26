@@ -6,7 +6,6 @@
 	},
 	"socialprofile-desc": "'Nu 'nzieme de struminde sociale pe MediaUicchi",
 	"socialprofile-uploads-disabled": "'A funzione ca careche le avatar jè disattivate",
-	"apihelp-smpuserprivacy-description": "Module API pe 'mbostà 'a visibbiletà (\"privacy\") de 'nu cambe profile",
 	"apihelp-smpuserprivacy-summary": "Module API pe 'mbostà 'a visibbiletà (\"privacy\") de 'nu cambe profile",
 	"apihelp-smpuserprivacy-param-method": "Azionr (totte e doje \"get\" o \"set\")",
 	"apihelp-smpuserprivacy-param-field_key": "Cambe chiave de destinazione, pe esembie up_movies pu cambe \"Film\"",

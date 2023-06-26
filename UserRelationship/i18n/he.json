@@ -100,7 +100,6 @@
 	"notification-social-rel-accept-foe": "נהיית יריב של $1.",
 	"notification-social-rel-accept-email-subject": "$1 קיבל את בקשת היחס שלך!",
 	"notification-social-rel-accept-email-batch-body": "$1 קיבלת את בקשת היחס שלך.",
-	"apihelp-socialprofile-request-response-description": "שליחת תגובה לבקשות יחס (חבר/יריב).",
 	"apihelp-socialprofile-request-response-summary": "שליחת תגובה לבקשות יחס (חבר/יריב).",
 	"apihelp-socialprofile-request-response-param-response": "תגובה לבקשת חברות; 1 כדי לקבל, ‎-1 כדי לדחות.",
 	"apihelp-socialprofile-request-response-param-id": "מזהה ייחודי לבקשת יחס"

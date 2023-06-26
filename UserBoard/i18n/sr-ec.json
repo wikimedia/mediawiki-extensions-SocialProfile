@@ -39,6 +39,5 @@
 	"echo-category-title-social-msg": "Поруке на корисничкој табли",
 	"echo-pref-tooltip-social-msg": "Обавештавај ме када неко остави поруку на мојој корисничкој табли.",
 	"apihelp-socialprofile-send-message-param-username": "Корисничко име примаоца",
-	"apihelp-socialprofile-delete-message-description": "Брисање UserBoard поруке",
 	"apihelp-socialprofile-delete-message-summary": "Брисање UserBoard поруке"
 }

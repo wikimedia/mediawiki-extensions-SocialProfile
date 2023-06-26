@@ -6,7 +6,6 @@
 	},
 	"socialprofile-desc": "مجموعة من الأدوات الاجتماعية لميدياويكي",
 	"socialprofile-uploads-disabled": "تم تعطيل ميزة رفع الصور الرمزية",
-	"apihelp-smpuserprivacy-description": "وحدة API لتعيين الرؤية (\"الخصوصية\") لحقل ملف شخصي",
 	"apihelp-smpuserprivacy-summary": "وحدة API لتعيين الرؤية (\"الخصوصية\") لحقل ملف شخصي",
 	"apihelp-smpuserprivacy-param-method": "الإجراء (إما \"get\" أو \"set\")",
 	"apihelp-smpuserprivacy-param-field_key": "مفتاح الحقل المستهدف، مثل up_movies للحقل \"الأفلام\"",

@@ -104,7 +104,6 @@
 	"notification-social-rel-accept-foe": "Tornou-se inimigo de $1.",
 	"notification-social-rel-accept-email-subject": "$1 aceitou o seu pedido de relacionamento!",
 	"notification-social-rel-accept-email-batch-body": "$1 aceitou o seu pedido de relacionamento.",
-	"apihelp-socialprofile-request-response-description": "Responde a pedidos de relacionamento entre utilizadores (amizade/inimizade).",
 	"apihelp-socialprofile-request-response-summary": "Responde a pedidos de relacionamento entre utilizadores (amizade/inimizade).",
 	"apihelp-socialprofile-request-response-param-response": "Resposta ao pedido de relacionamento; 1 para aceitar, -1 para rejeitar.",
 	"apihelp-socialprofile-request-response-param-id": "Identificador único do pedido de relacionamento"

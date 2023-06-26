@@ -97,7 +97,6 @@
 	"notification-social-rel-accept-foe": "Tapote priešais su $1.",
 	"notification-social-rel-accept-email-subject": "$1 priėmė jūsų santykių užklausą!",
 	"notification-social-rel-accept-email-batch-body": "$1 priėmė jūsų santykių užklausą.",
-	"apihelp-socialprofile-request-response-description": "Atsako į naudotojo santykių (draugo / priešo) užklausas.",
 	"apihelp-socialprofile-request-response-summary": "Atsako į naudotojo santykių (draugo / priešo) užklausas.",
 	"apihelp-socialprofile-request-response-param-response": "Atsakymas į santykių užklausą; 1 priėmimui, -1 atmetimui.",
 	"apihelp-socialprofile-request-response-param-id": "Unikalus santykių užklausos identifikatorius"

@@ -56,12 +56,10 @@
 	"echo-pref-tooltip-social-msg": "Notificar me quando alcuno lassa un message sur mi tabuliero de usator.",
 	"notification-social-msg-send": "$1 ha justo ora lassate un message sur tu tabuliero de usator.<br /><br />''$2''",
 	"notification-social-msg-send-bundle": "{{PLURAL:$1|Un message|$1 messages|100=99+ messages}} ha essite lassate sur tu tabuliero de ustor.",
-	"apihelp-socialprofile-send-message-description": "Inviar un message al tabuliero (UserBoard) de un usator.",
 	"apihelp-socialprofile-send-message-summary": "Inviar un message al tabuliero (UserBoard) de un usator.",
 	"apihelp-socialprofile-send-message-param-username": "Le nomine de usator del destinatario.",
 	"apihelp-socialprofile-send-message-param-message": "Un version codificate in forma de URL del message a inviar.",
 	"apihelp-socialprofile-send-message-param-type": "Typo de message: 0 pro un message public, 1 pro un message private.",
-	"apihelp-socialprofile-delete-message-description": "Deler un message de un tabuliero de usator.",
 	"apihelp-socialprofile-delete-message-summary": "Deler un message de un tabuliero de usator.",
 	"apihelp-socialprofile-delete-message-param-id": "Identificator unic del message a deler del tabuliero."
 }

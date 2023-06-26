@@ -58,12 +58,10 @@
 	"echo-pref-tooltip-social-msg": "Birisi kullanıcı panomda bir mesaj bıraktığında bana bildir.",
 	"notification-social-msg-send": "$1, kullanıcı panonuza bir mesaj bıraktı.<br /><br />''$2''",
 	"notification-social-msg-send-bundle": "{{PLURAL:$1|Bir mesaj|$1 mesaj|100=99+ mesaj}} kullanıcı panonozda kaldı.",
-	"apihelp-socialprofile-send-message-description": "Bir kullanıcının UserBoard'ına mesaj gönderin.",
 	"apihelp-socialprofile-send-message-summary": "Bir kullanıcının UserBoard'ına mesaj gönderin.",
 	"apihelp-socialprofile-send-message-param-username": "Alıcının kullanıcı adı.",
 	"apihelp-socialprofile-send-message-param-message": "Gönderilecek iletinin urlencoded sürümü.",
 	"apihelp-socialprofile-send-message-param-type": "Mesaj türü: Genel mesaj için 0, özel mesaj için 1.",
-	"apihelp-socialprofile-delete-message-description": "Bir UserBoard mesajını silin.",
 	"apihelp-socialprofile-delete-message-summary": "Bir UserBoard mesajını silin.",
 	"apihelp-socialprofile-delete-message-param-id": "Silinecek mesajın benzersiz tanımlayıcısı."
 }

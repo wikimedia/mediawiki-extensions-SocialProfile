@@ -100,7 +100,6 @@
 	"notification-social-rel-accept-foe": "$1 ile düşman oldunuz.",
 	"notification-social-rel-accept-email-subject": "$1 ilişki isteğinizi kabul etti!",
 	"notification-social-rel-accept-email-batch-body": "$1 ilişki isteğinizi kabul etti.",
-	"apihelp-socialprofile-request-response-description": "Kullanıcı ilişkisi (arkadaş/düşman) isteklerine yanıt verir.",
 	"apihelp-socialprofile-request-response-summary": "Kullanıcı ilişkisi (arkadaş/düşman) isteklerine yanıt verir.",
 	"apihelp-socialprofile-request-response-param-response": "İlişki talebine cevap; 1 kabul etmek, -1 reddetmek.",
 	"apihelp-socialprofile-request-response-param-id": "İlişki isteğinin benzersiz tanımlayıcısı"

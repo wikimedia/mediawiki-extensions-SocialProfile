@@ -7,7 +7,6 @@
 	},
 	"socialprofile-desc": "Un conxuntu d'erbíes sociales pa MediaWiki",
 	"socialprofile-uploads-disabled": "La carga d'imaxes de perfil ta desactivada",
-	"apihelp-smpuserprivacy-description": "Módulo de la API pa configurar la visibilidá (\"privacidá\") d'un campu del perfil",
 	"apihelp-smpuserprivacy-summary": "Módulu de la API pa configurar la visibilidá («intimidá») d'un campu del perfil",
 	"apihelp-smpuserprivacy-param-method": "Aición (o \"get\" o \"set\")",
 	"apihelp-smpuserprivacy-param-field_key": "Clave del campu destín, como up_movies pal campu \"Películes\"",

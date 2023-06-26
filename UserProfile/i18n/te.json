@@ -211,7 +211,6 @@
 	"action-editothersprofiles": "వాడుకరుల సమాజిక ప్రొఫైళ్ళను తాజాకరించే",
 	"right-populate-user-profiles": "ప్రస్తుతం ఉనికిలో ఉన్న వికీల్లోని వాడుకరుల ప్రొఫైళ్ళలో డేటాను నింపే వీలు కలిగిస్తుంది",
 	"action-populate-user-profiles": "ఇతర వాడుకరుల ప్రొఫైళ్ళలో డేటా నింపండి",
-	"apihelp-socialprofile-userprofileprivacy-description": "ప్రొఫైలు ఫీల్డు దృశ్యతను (\"గోప్యత\") సెట్ చేసే API మాడ్యూలు",
 	"apihelp-socialprofile-userprofileprivacy-summary": "ప్రొఫైలు ఫీల్డు దృశ్యతను (\"గోప్యత\") సెట్ చేసే API మాడ్యూలు",
 	"apihelp-socialprofile-userprofileprivacy-param-privacy": "కొత్త గోప్యత విలువ (బహిరంగం, దాచినవి, మిత్రులు, foaf)",
 	"apihelp-socialprofile-userprofileprivacy-param-tuid": "లక్ష్య వాడుకరి ఐడీ",

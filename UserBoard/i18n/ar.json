@@ -60,12 +60,10 @@
 	"echo-pref-tooltip-social-msg": "إعلامي عندما يترك شخص ما رسالة على لوحة المستخدم الخاصة بي.",
 	"notification-social-msg-send": "$1 ترك للتو رسالة على لوحة المستخدم الخاصة بك.<br /><br /> $2",
 	"notification-social-msg-send-bundle": "{{PLURAL:$1| رسالة واحدة | $1 رسائل | 100 = 99 + رسالة}} تركت على لوحة المستخدم الخاصة بك.",
-	"apihelp-socialprofile-send-message-description": "أرسل رسالة إلى لوحة مستخدم المستخدم.",
 	"apihelp-socialprofile-send-message-summary": "أرسل رسالة إلى لوحة مستخدم المستخدم.",
 	"apihelp-socialprofile-send-message-param-username": "اسم مستخدم المستلم.",
 	"apihelp-socialprofile-send-message-param-message": "نسخة مشفرة من URL للرسالة لإرسالها.",
 	"apihelp-socialprofile-send-message-param-type": "نوع الرسالة: 0 للرسالة العامة ، و 1 للرسالة الخاصة.",
-	"apihelp-socialprofile-delete-message-description": "احذف رسالة UserBoard.",
 	"apihelp-socialprofile-delete-message-summary": "احذف رسالة UserBoard.",
 	"apihelp-socialprofile-delete-message-param-id": "المعرف الفريد لرسالة المنتدى المراد حذفها."
 }

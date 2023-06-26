@@ -216,7 +216,6 @@
 	"action-editothersprofiles": "memperbarui profil sosial pengguna lain",
 	"right-populate-user-profiles": "Memungkinkan mengisi profil pengguna lain di wiki yang sudah ada",
 	"action-populate-user-profiles": "mengisi profil pengguna lain",
-	"apihelp-socialprofile-userprofileprivacy-description": "Modul API untuk menetapkan keterlihatan (\"privasi\") suatu isian profil",
 	"apihelp-socialprofile-userprofileprivacy-summary": "Modul API untuk menetapkan keterlihatan (\"privasi\") suatu isian profil",
 	"random-users-avatars-title": "Jumpailah komunitas"
 }

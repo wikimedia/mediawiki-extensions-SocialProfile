@@ -101,7 +101,6 @@
 	"notification-social-rel-accept-foe": "Ви стали ворогами з $1.",
 	"notification-social-rel-accept-email-subject": "$1 прийняв ваш запит на відносини!",
 	"notification-social-rel-accept-email-batch-body": "$1 прийняв ваш запит на відносини.",
-	"apihelp-socialprofile-request-response-description": "Відповідає на запити про стосунки з користувачами (друг/ворог).",
 	"apihelp-socialprofile-request-response-summary": "Відповідає на запити про стосунки з користувачами (друг/ворог).",
 	"apihelp-socialprofile-request-response-param-response": "Відповідь на запит про відносини; 1 прийняти, -1 відхилити.",
 	"apihelp-socialprofile-request-response-param-id": "Унікальний ідентифікатор запиту на зв'язок"

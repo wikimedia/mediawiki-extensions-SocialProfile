@@ -56,12 +56,10 @@
 	"echo-pref-tooltip-social-msg": "Obvesti me, ko mi kdo na mojem uporabniškem panelu pusti sporočilo.",
 	"notification-social-msg-send": "$1 vam je pravkar pustil_a sporočilo na vašem uporabniškem panelu.<br /><br />''$2''",
 	"notification-social-msg-send-bundle": "Na vašem uporabniškem panelu je ostalo {{PLURAL:$1| Eno sporočilo|$1 sporočil|100=99+ sporočil}}.",
-	"apihelp-socialprofile-send-message-description": "Pošiljanje sporočila na uporabniški panel uporabnika.",
 	"apihelp-socialprofile-send-message-summary": "Pošiljanje sporočila na uporabniški panel uporabnika.",
 	"apihelp-socialprofile-send-message-param-username": "Uporabniško ime prejemnika.",
 	"apihelp-socialprofile-send-message-param-message": "URL-kodirana različica sporočila, ki naj se pošlje.",
 	"apihelp-socialprofile-send-message-param-type": "Vrsta sporočila: 0 za javno sporočilo, 1 za zasebno sporočilo.",
-	"apihelp-socialprofile-delete-message-description": "Izbris sporočila UserBoard.",
 	"apihelp-socialprofile-delete-message-summary": "Izbris sporočila UserBoard.",
 	"apihelp-socialprofile-delete-message-param-id": "Enolični identifikator sporočila na panelu za izbris."
 }

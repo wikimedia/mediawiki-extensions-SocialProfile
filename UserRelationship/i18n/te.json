@@ -98,7 +98,6 @@
 	"notification-social-rel-accept-foe": "మీరు $1 కు శత్రువులయ్యారు.",
 	"notification-social-rel-accept-email-subject": "$1, మీ సంబంధ అభ్యర్థనను స్వీకరించారు!",
 	"notification-social-rel-accept-email-batch-body": "$1, మీ సంబంధ అభ్యర్థనను స్వీకరించారు.",
-	"apihelp-socialprofile-request-response-description": "మీ (మిత్ర/శత్రు) అభ్యర్థనలకు స్పందించారు.",
 	"apihelp-socialprofile-request-response-summary": "మీ (మిత్ర/శత్రు) అభ్యర్థనలకు స్పందించారు.",
 	"apihelp-socialprofile-request-response-param-response": "సంబంధ అభ్యర్థనకు స్పందన; అంగీకారానికి 1, తిరస్కరణకు -1."
 }

@@ -103,7 +103,6 @@
 	"notification-social-rel-accept-foe": "您与$1成为了仇敌。",
 	"notification-social-rel-accept-email-subject": "$1接受了您的关系请求！",
 	"notification-social-rel-accept-email-batch-body": "$1接受了您的关系请求。",
-	"apihelp-socialprofile-request-response-description": "回复一个用户关系（好友/仇敌）请求。",
 	"apihelp-socialprofile-request-response-summary": "回复一个用户关系（好友/仇敌）请求。",
 	"apihelp-socialprofile-request-response-param-response": "回复一个用户关系（好友/仇敌）请求；1表示接受，-1表示拒绝。",
 	"apihelp-socialprofile-request-response-param-id": "该关系请求的唯一标识符"

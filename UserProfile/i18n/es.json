@@ -208,6 +208,5 @@
 	"action-editothersprofiles": "modificar los perfiles sociales de otros usuarios",
 	"right-populate-user-profiles": "Rellenar los perfiles de otros usuarios en wikis existentes",
 	"action-populate-user-profiles": "rellenar los perfiles de usuario de otros usuarios",
-	"apihelp-socialprofile-userprofileprivacy-description": "Módulo de la API para establecer la visibilidad («privacidad») de un campo de perfil",
 	"random-users-avatars-title": "Conocer la comunidad"
 }

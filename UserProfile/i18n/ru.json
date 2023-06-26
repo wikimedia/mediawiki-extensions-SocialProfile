@@ -225,7 +225,6 @@
 	"action-editothersprofiles": "удаление социальных профилей других участников",
 	"right-populate-user-profiles": "Позволяет заполнять профили других участников для существующих вики",
 	"action-populate-user-profiles": "заполнение профилей других участников",
-	"apihelp-socialprofile-userprofileprivacy-description": "Модуль API для установки видимости («конфиденциальности») поля профиля",
 	"apihelp-socialprofile-userprofileprivacy-summary": "Модуль API для установки видимости («конфиденциальности») поля профиля",
 	"apihelp-socialprofile-userprofileprivacy-param-method": "Действие («get» или «set»)",
 	"apihelp-socialprofile-userprofileprivacy-param-field_key": "Ключ целевого поля, например, up_movies для поля «Фильмы»",

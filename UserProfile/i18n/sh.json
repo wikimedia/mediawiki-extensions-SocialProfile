@@ -36,7 +36,6 @@
 	"action-editothersprofiles": "podnovu tuđih društvenih profila",
 	"right-populate-user-profiles": "Popun profila drugih korisnika za postojeće wikije",
 	"action-populate-user-profiles": "popun tuđih društvenih profila",
-	"apihelp-socialprofile-userprofileprivacy-description": "Izvršnički modul za ukazanje vidljivosti (\"privatnosti\") pojedinačnog polja profila",
 	"apihelp-socialprofile-userprofileprivacy-summary": "Izvršnički modul za ukazanje vidljivosti (\"privatnosti\") pojedinačnog polja profila",
 	"apihelp-socialprofile-userprofileprivacy-param-method": "Radnja (ili \"get\" ili \"set\")",
 	"apihelp-socialprofile-userprofileprivacy-param-field_key": "ključ ciljanog polja, kao što je up_movies za polje \"Filmovi\""

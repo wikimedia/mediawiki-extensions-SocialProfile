@@ -57,12 +57,10 @@
 	"echo-pref-tooltip-social-msg": "నా బోర్డులో ఎవరైనా సందేశం పెడితే నాకు గమనింపు పంపించు",
 	"notification-social-msg-send": "మీ బోర్డులో ఇప్పుడే $1 ఒక సందేశం పెట్టారు.<br /><br />''$2''",
 	"notification-social-msg-send-bundle": "మీ బోర్డుకు {{PLURAL:$1|ఒక సందేశం వచ్చింది|$1 సందేశాలు వచ్చాయి|100=99+ సందేశాలు వచ్చాయి}}.",
-	"apihelp-socialprofile-send-message-description": "వాడుకరి బోర్డుకు ఒక సందేశం పంపండి.",
 	"apihelp-socialprofile-send-message-summary": "వాడుకరి బోర్డుకు ఒక సందేశం పంపండి.",
 	"apihelp-socialprofile-send-message-param-username": "గ్రహీత వాడుకరి పేరు.",
 	"apihelp-socialprofile-send-message-param-message": "పంపాల్సిన సందేశపు urlencoded వెర్షను.",
 	"apihelp-socialprofile-send-message-param-type": "సందేశపు రకం: పబ్లిక్ సందేశానికి 0, ప్రైవేటు సందేశానికి 1.",
-	"apihelp-socialprofile-delete-message-description": "వాడుకరి బోర్డు సందేశాన్ని తొలగించు.",
 	"apihelp-socialprofile-delete-message-summary": "వాడుకరి బోర్డు సందేశాన్ని తొలగించు.",
 	"apihelp-socialprofile-delete-message-param-id": "తొలగించాల్సిన బోర్డు సందేశపు విశిష్ఠ గుర్తింపు."
 }

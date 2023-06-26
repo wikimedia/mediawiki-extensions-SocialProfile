@@ -201,7 +201,6 @@
 	"right-editothersprofiles-private": "Peržiūrėti ir atnaujinti privačią informaciją (el. pašto adresą) kitų naudotojų socialiniuose profiliuose",
 	"action-avatarremove": "pašalinti naudotojo avatarus",
 	"action-editothersprofiles": "atnaujinti kitų naudotojų socialinius profilius",
-	"apihelp-socialprofile-userprofileprivacy-description": "API modulis, skirtas profilio lauko matomumui („privatumui“) nustatyti",
 	"apihelp-socialprofile-userprofileprivacy-summary": "API modulis, skirtas profilio lauko matomumui („privatumui“) nustatyti",
 	"apihelp-socialprofile-userprofileprivacy-param-tuid": "Tikslinio naudotojo ID",
 	"random-users-avatars-title": "Susipažinkite su bendruomene"

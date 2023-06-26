@@ -60,12 +60,10 @@
 	"echo-pref-tooltip-social-msg": "Notifique-me quando alguém deixar uma mensagem no meu mural de usuários.",
 	"notification-social-msg-send": "$1 deixou uma mensagem no seu mural de usuários.<br /><br />''$2''",
 	"notification-social-msg-send-bundle": "{{PLURAL:$1|Uma mensagem foi deixada|$1 mensagens foram deixadas|100=99+ mensagens foram deixadas}} no seu mural de usuário.",
-	"apihelp-socialprofile-send-message-description": "Envie uma mensagem para o mural de um usuário.",
 	"apihelp-socialprofile-send-message-summary": "Envie uma mensagem para o mural de um usuário.",
 	"apihelp-socialprofile-send-message-param-username": "O nome de usuário do destinatário.",
 	"apihelp-socialprofile-send-message-param-message": "Uma versão com código de URL da mensagem a ser enviada.",
 	"apihelp-socialprofile-send-message-param-type": "Tipo de mensagem: 0 para uma mensagem pública, 1 para uma mensagem privada.",
-	"apihelp-socialprofile-delete-message-description": "Excluir uma mensagem no mural.",
 	"apihelp-socialprofile-delete-message-summary": "Excluir uma mensagem no mural.",
 	"apihelp-socialprofile-delete-message-param-id": "Identificador exclusivo da mensagem do mural a ser excluída."
 }

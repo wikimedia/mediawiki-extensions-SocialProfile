@@ -7,7 +7,6 @@
 	},
 	"socialprofile-desc": "MediaWiki için bir dizi sosyal aracı",
 	"socialprofile-uploads-disabled": "Avatar yükleme özelliği devre dışı",
-	"apihelp-smpuserprivacy-description": "Bir profil alanının görünürlüğünü (\"privacy\") ayarlamak için API modülü",
 	"apihelp-smpuserprivacy-summary": "Bir profil alanının görünürlüğünü (\"privacy\") ayarlamak için API modülü",
 	"apihelp-smpuserprivacy-param-method": "Eylem (\"get\" veya \"set\")",
 	"apihelp-smpuserprivacy-param-field_key": "\"Movies\" alanı için up_movies gibi hedef alan anahtarı",

@@ -38,6 +38,5 @@
 	"echo-category-title-social-msg": "Poruke na korisničkoj tabli",
 	"echo-pref-tooltip-social-msg": "Obaveštavaj me kada neko ostavi poruku na mojoj korisničkoj tabli.",
 	"apihelp-socialprofile-send-message-param-username": "Korisničko ime primaoca",
-	"apihelp-socialprofile-delete-message-description": "Brisanje UserBoard poruke",
 	"apihelp-socialprofile-delete-message-summary": "Brisanje UserBoard poruke"
 }

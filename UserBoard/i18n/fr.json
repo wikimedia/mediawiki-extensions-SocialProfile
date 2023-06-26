@@ -63,12 +63,10 @@
 	"echo-pref-tooltip-social-msg": "Me notifier quand quelqu’un a laissé un message sur mon panneau utilisateur.",
 	"notification-social-msg-send": "$1 vient de laisser un message sur votre panneau utilisateur.<br /><br />''$2''",
 	"notification-social-msg-send-bundle": "{{PLURAL:$1|Un message a été laissé|$1 messages ont été laissés|100=Plus de 100 messages ont été laissés}} sur votre panneau utilisateur.",
-	"apihelp-socialprofile-send-message-description": "Envoyer un message au UserBoard d’un utilisateur.",
 	"apihelp-socialprofile-send-message-summary": "Envoyer un message au UserBoard d’un utilisateur.",
 	"apihelp-socialprofile-send-message-param-username": "Le nom d’utilisateur du destinataire.",
 	"apihelp-socialprofile-send-message-param-message": "Une version encodée sous forme d'URL du message à envoyer.",
 	"apihelp-socialprofile-send-message-param-type": "Type de message : 0 pour un message public, 1 pour un message privé.",
-	"apihelp-socialprofile-delete-message-description": "Supprimer un message de UserBoard.",
 	"apihelp-socialprofile-delete-message-summary": "Supprimer un message de UserBoard.",
 	"apihelp-socialprofile-delete-message-param-id": "Identifiant unique du message à supprimer du panneau."
 }

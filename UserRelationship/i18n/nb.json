@@ -98,7 +98,6 @@
 	"notification-social-rel-accept-foe": "Du ble fiende med $1.",
 	"notification-social-rel-accept-email-subject": "$1 har godtatt venneforespørselen din!",
 	"notification-social-rel-accept-email-batch-body": "$1 har godtatt forespørselen din.",
-	"apihelp-socialprofile-request-response-description": "Svar på vennskapsforholdsforespørsler (venn/fiende).",
 	"apihelp-socialprofile-request-response-summary": "Svar på vennskapsforholdsforespørsler (venn/fiende).",
 	"apihelp-socialprofile-request-response-param-response": "Svar på vennskapsforholdsforespørselen; 1 for å godta, -1 for å avvise.",
 	"apihelp-socialprofile-request-response-param-id": "Unik identifikator for vennskapsforholdsforespørselen"

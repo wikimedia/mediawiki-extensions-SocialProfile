@@ -106,7 +106,6 @@
 	"notification-social-rel-accept-foe": "Vous devenez ennemi avec $1.",
 	"notification-social-rel-accept-email-subject": "$1 a accepté votre demande d'ami !",
 	"notification-social-rel-accept-email-batch-body": "$1 a accepté votre demande de relation.",
-	"apihelp-socialprofile-request-response-description": "Répond aux demandes de relation utilisateur (ami/ennemi).",
 	"apihelp-socialprofile-request-response-summary": "Répond aux demandes de relation utilisateur (ami/ennemi).",
 	"apihelp-socialprofile-request-response-param-response": "Réponse à la demande de relation ; 1 pour accepter ; -1 pour rejeter.",
 	"apihelp-socialprofile-request-response-param-id": "Identifiant unique de la demande de relation"

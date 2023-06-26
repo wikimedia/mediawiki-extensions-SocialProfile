@@ -97,7 +97,6 @@
 	"notification-social-rel-accept-foe": "Tu e $1 ha devenite inimicos.",
 	"notification-social-rel-accept-email-subject": "$1 ha acceptate tu requesta de relation!",
 	"notification-social-rel-accept-email-batch-body": "$1 ha acceptate tu requesta de relation.",
-	"apihelp-socialprofile-request-response-description": "Responde a requestas de relation de usator (amico/inimico).",
 	"apihelp-socialprofile-request-response-summary": "Responde a requestas de relation de usator (amico/inimico).",
 	"apihelp-socialprofile-request-response-param-response": "Responsa al requesta de relation; 1 pro acceptar, -1 pro rejectar.",
 	"apihelp-socialprofile-request-response-param-id": "Identificator unic del requesta de relation"
