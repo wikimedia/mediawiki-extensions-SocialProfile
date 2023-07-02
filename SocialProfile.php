@@ -120,7 +120,9 @@ $wgFriendingEnabled = true;
 // Prefix SocialProfile will use to store avatars
 // for global avatars on a wikifarm or groups of wikis,
 // set this to something static.
-$wgAvatarKey = $wgDBname;
+// Use GLOBALS to access wgDBname as for some reason
+// accessing the config directly doesn't work under MW 1.40.
+$wgAvatarKey = $GLOBALS['wgDBname'];
 
 // Extension credits that show up on Special:Version
 $wgExtensionCredits['other'][] = [
