@@ -292,6 +292,7 @@ class GenerateTopUsersReport extends SpecialPage {
 			// MW 1.36+
 			$page = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $title );
 		} else {
+			// @phan-suppress-next-line PhanUndeclaredStaticMethod
 			$page = WikiPage::factory( $title );
 		}
 		// If the article doesn't exist, create it!

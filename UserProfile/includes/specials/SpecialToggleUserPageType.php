@@ -126,6 +126,7 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 			$user_wiki = $wikiPageFactory->newFromTitle( $user_wiki_title );
 		} else {
 			$wikiPage = new WikiPage( $article );
+			// @phan-suppress-next-line PhanUndeclaredStaticMethod
 			$user_wiki = WikiPage::factory( $user_wiki_title );
 		}
 
