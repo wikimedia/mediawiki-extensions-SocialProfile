@@ -18,7 +18,8 @@
 			"Mor",
 			"Rodney Araujo",
 			"Sanbec",
-			"Translationista"
+			"Translationista",
+			"No se"
 		]
 	},
 	"editprofile": "Editar perfiles de otros usuarios",
@@ -139,6 +140,7 @@
 	"user-profile-interests-foodsnacks": "Comida & bocadillos",
 	"user-profile-interests-drinks": "Bebidas",
 	"user-profile-preferences-emails": "Notificaciones por correo electrónico",
+	"user-profile-preferences-emails-manage": "Las notificaciones por correo electrónico son manejadas por la extensión Echo. Puedes cambiarlos en sus [[Special:Preferences#mw-prefsection-echo|preferencias]].",
 	"user-profile-preferences-emails-personalmessage": "Cuando envíe un mensaje personal",
 	"user-profile-preferences-emails-friendfoe": "Cuando otro usuario se haga tu amigo o rival",
 	"user-profile-preferences-emails-gift": "Cuando recibas un regalo",
