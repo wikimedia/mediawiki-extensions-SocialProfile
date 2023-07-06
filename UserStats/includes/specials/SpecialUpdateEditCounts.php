@@ -1,7 +1,5 @@
 <?php
 
-use MediaWiki\MediaWikiServices;
-
 /**
  * A special page for updating users' point counts.
  *
@@ -13,111 +11,6 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 
 	public function __construct() {
 		parent::__construct( 'UpdateEditCounts', 'updatepoints' );
-	}
-
-	/**
-	 * Perform the queries necessary to update the social point counts and
-	 * purge memcached entries.
-	 */
-	function updateMainEditsCount() {
-		global $wgNamespacesForEditPoints;
-
-		$out = $this->getOutput();
-
-		$whereConds = [
-			'actor_user IS NOT NULL'
-		];
-		// If points are given out for editing non-main namespaces, take that
-		// into account, too.
-		if (
-			isset( $wgNamespacesForEditPoints ) &&
-			is_array( $wgNamespacesForEditPoints )
-		) {
-			$whereConds['page_namespace'] = $wgNamespacesForEditPoints;
-		}
-
-		$dbw = wfGetDB( DB_MASTER );
-		$MW139orEarlier = version_compare( MW_VERSION, '1.39', '<' );
-		if ( $MW139orEarlier ) {
-			$res = $dbw->select(
-				[ 'revision_actor_temp', 'revision', 'actor', 'page' ],
-				[ 'COUNT(*) AS the_count', 'revactor_actor' ],
-				$whereConds,
-				__METHOD__,
-				// revactor_actor wasn't here originally but PostgreSQL seems to require it
-				// Without it, this error happens:
-				// Error: 42803 ERROR: column "revision_actor_temp.revactor_actor" must appear in the GROUP BY clause or be used in an aggregate function
-				[ 'GROUP BY' => 'actor_name, revactor_actor' ],
-				[
-					'actor' => [ 'JOIN', 'actor_id = revactor_actor' ],
-					'revision_actor_temp' => [ 'JOIN', 'revactor_rev = rev_id' ],
-					'page' => [ 'INNER JOIN', 'page_id = revactor_page' ]
-				]
-			);
-		} else {
-			$res = $dbw->select(
-				[ 'revision', 'actor', 'page' ],
-				[ 'COUNT(*) AS the_count', 'rev_actor' ],
-				$whereConds,
-				__METHOD__,
-				// rev_actor wasn't here originally but PostgreSQL seems to require it
-				[ 'GROUP BY' => 'actor_name, rev_actor' ],
-				[
-					'actor' => [ 'JOIN', 'actor_id = rev_actor' ],
-					'page' => [ 'INNER JOIN', 'page_id = rev_page' ]
-				]
-			);
-		}
-
-		foreach ( $res as $row ) {
-			$columnName = $MW139orEarlier ? 'revactor_actor' : 'rev_actor';
-			$user = User::newFromActorId( $row->$columnName );
-			$user->load();
-			$actorId = $user->getActorId();
-			$userName = $user->getName();
-
-			// Ehh yeah, we don't care about anons here...
-			if ( $user->isAnon() ) {
-				continue;
-			}
-
-			if ( !$user->isBot() ) {
-				$editCount = $row->the_count;
-			} else {
-				$editCount = 0;
-			}
-
-			$s = $dbw->selectRow(
-				'user_stats',
-				[ 'stats_actor' ],
-				[ 'stats_actor' => $actorId ],
-				__METHOD__
-			);
-			if ( $s === false || !$s->stats_actor ) {
-				$dbw->insert(
-					'user_stats',
-					[
-						'stats_actor' => $actorId,
-						'stats_total_points' => 1000
-					],
-					__METHOD__
-				);
-			}
-
-			$out->addWikiMsg( 'updateeditcounts-updating', $userName, $editCount );
-
-			$dbw->update(
-				'user_stats',
-				[ 'stats_edit_count = ' . (int)$editCount ],
-				[ 'stats_actor' => $actorId ],
-				__METHOD__
-			);
-
-			// clear stats cache for current user
-			$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
-			$key = $cache->makeKey( 'user', 'stats', 'actor_id', $actorId );
-			$cache->delete( $key );
-		}
 	}
 
 	/**
@@ -141,12 +34,24 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 		$this->setHeaders();
 
 		if ( $request->wasPosted() && $this->getUser()->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
-			$count = $this->performMagic();
-
+			$updater = new UserStatsUpdater();
+			$updater->updateMainEditsCount( [ $this, 'reportProgress' ] );
+			$count = $updater->updateTotalPoints();
 			$out->addWikiMsg( 'updateeditcounts-updated', $count );
 		} else {
 			$out->addHTML( $this->displayForm() );
 		}
+	}
+
+	/**
+	 * Prints each user that gets their edit count updated
+	 *
+	 * @param string $userName User name
+	 * @param int $editCount Updated edit count
+	 */
+	public function reportProgress( $userName, $editCount ) {
+		$out = $this->getOutput();
+		$out->addWikiMsg( 'updateeditcounts-updating', $userName, $editCount );
 	}
 
 	/**
@@ -174,14 +79,15 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 	 * @return int Amount of users whose records were updated
 	 */
 	private function performMagic() {
-		$out = $this->getOutput();
-
 		$dbw = wfGetDB( DB_MASTER );
 		$this->updateMainEditsCount();
 
 		// @todo FIXME: Why does this do this? I don't get it.
-		global $wgUserLevels;
-		$wgUserLevels = '';
+		// This probably was here to prevent errors in notifications about leveling
+		// up. But that would effectively disable the level up message when editing.
+		// Let's comment it out and see what breaks...
+		// global $wgUserLevels;
+		// $wgUserLevels = '';
 
 		$res = $dbw->select(
 			[ 'user_stats', 'actor' ],
