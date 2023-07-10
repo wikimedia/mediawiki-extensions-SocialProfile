@@ -19,7 +19,8 @@
 			"Yining Chen",
 			"列维劳德",
 			"开炸弹车",
-			"沈澄心"
+			"沈澄心",
+			"淮南皓月"
 		]
 	},
 	"editprofile": "编辑其他用户的资料页",
@@ -156,7 +157,7 @@
 	"user-profile-tidbits-leastfavathlete": "最不喜欢的运动员及原因",
 	"uploadavatar": "上传您的头像",
 	"user-profile-picture-yourpicture": "你的图片",
-	"user-profile-picture-yourpicturestext": "以下图片会出现在您的用户页，网络页，和评论中。",
+	"user-profile-picture-yourpicturestext": "以下图片会出现在您的用户页、网络页和评论中。",
 	"user-profile-picture-large": "大",
 	"user-profile-picture-medlarge": "中至大",
 	"user-profile-picture-medium": "中",
