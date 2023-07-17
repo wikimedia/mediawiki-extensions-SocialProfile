@@ -18,7 +18,9 @@
 			"列维劳德",
 			"开炸弹车",
 			"沈澄心",
-			"Winston Sung"
+			"Winston Sung",
+			"GuoPC",
+			"淮南皓月"
 		]
 	},
 	"editprofile": "编辑其他用户的资料页",
@@ -162,7 +164,7 @@
 	"user-profile-sports-addmore": "添加更多运动/队伍",
 	"uploadavatar": "上传您的头像",
 	"user-profile-picture-yourpicture": "你的图片",
-	"user-profile-picture-yourpicturestext": "以下图片会出现在您的用户页，网络页，和评论中。",
+	"user-profile-picture-yourpicturestext": "以下图片会出现在您的用户页、网络页和评论中。",
 	"user-profile-picture-large": "大",
 	"user-profile-picture-medlarge": "中至大",
 	"user-profile-picture-medium": "中",
