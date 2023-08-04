@@ -37,11 +37,14 @@ class UserProfileHooks {
 		// can be something else than wikitext
 		// Also ignore anonymous users since they can't have social profiles and
 		// passing an IP address to UserProfile's constructor would break things
+		// Finally also ensure that the username isn't mojibake or other garbage
+		// which would fail MW's username validation and thus cause a user-facing
+		// fatal error
 		if (
 			$title->inNamespace( NS_USER ) &&
 			!$title->isSubpage() &&
 			$wgUserPageChoice &&
-			!$userNameUtils->isIP( $pageTitle )
+			$userNameUtils->isUsable( $pageTitle )
 		) {
 			$profile = new UserProfile( $pageTitle );
 			$profile_data = $profile->getProfile();
@@ -82,7 +85,7 @@ class UserProfileHooks {
 		if (
 			$title->inNamespace( NS_USER ) &&
 			!$title->isSubpage() &&
-			!$userNameUtils->isIP( $pageTitle )
+			$userNameUtils->isUsable( $pageTitle )
 		) {
 			$isKnown = true;
 			/* @todo Do we care? Also, how expensive would this be in the long run?
@@ -119,7 +122,10 @@ class UserProfileHooks {
 		if (
 			!$title->isSubpage() &&
 			$title->inNamespaces( [ NS_USER, NS_USER_PROFILE ] ) &&
-			!$userNameUtils->isIP( $pageTitle )
+			// Avoid new UserProfile( ... ) call below fataling on shitty mojibake usernames
+			// which fail core MW username validation; if we don't, there's gonna be a
+			// user-facing fatal, and that's nasty.
+			$userNameUtils->isUsable( $pageTitle )
 		) {
 			$show_user_page = false;
 			if ( $wgUserPageChoice ) {
