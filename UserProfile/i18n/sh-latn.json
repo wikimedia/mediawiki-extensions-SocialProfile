@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Winston Sung"
+		]
+	},
+	"editprofile": "Uređivanje profila drugih korisnika",
+	"populateuserprofiles": "Popuni korisničke profile",
+	"populateuserprofiles-confirm": "Da li sigurno želite ispuniti profile postojećih korisnika?",
+	"user-time-ago": "prije $1",
+	"user-awards-title": "Nagrade",
+	"user-gifts-title": "Pokloni",
+	"user-count-separator": "$1 od $2",
+	"user-view-all": "Prikaži sve",
+	"user-upload-image": "Otpremi sliku",
+	"user-edit-this": "Uredi ovo",
+	"user-edit-profile": "Uredi profil",
+	"user-upload-avatar": "Otpremi avatar",
+	"user-watchlist": "Moj spisak praćenja",
+	"user-meet-people": "Upoznaj ljude",
+	"user-add-friend": "Dodaj kao prijatelja",
+	"user-add-foe": "Dodaj kao neprijatelja",
+	"user-remove-friend": "Ukloni kao prijatelja",
+	"user-remove-foe": "Ukloni kao neprijatelja",
+	"user-send-message": "Pošalji poruku",
+	"user-send-gift": "Pošalji poklon",
+	"user-contributions": "Doprinosi",
+	"user-stats-edits": "Izmjene",
+	"user-stats-votes": "Glasovi",
+	"user-stats-comments": "Komentari",
+	"user-stats-recruits": "Regruti",
+	"right-avatarremove": "Uklanjanje korisničkih avatara",
+	"right-editothersprofiles": "Podnova društvenih profila drugih korisnika",
+	"right-editothersprofiles-private": "Pregled i podnova privatnih podataka (e-pošte) na tuđim društvenim profilima",
+	"action-avatarremove": "uklanjanje korisničkih avatara",
+	"action-editothersprofiles": "podnovu tuđih društvenih profila",
+	"action-populate-user-profiles": "popun tuđih društvenih profila",
+	"apihelp-socialprofile-userprofileprivacy-summary": "Izvršnički modul za ukazanje vidljivosti (\"privatnosti\") pojedinačnog polja profila",
+	"apihelp-socialprofile-userprofileprivacy-param-method": "Radnja (ili \"get\" ili \"set\")",
+	"apihelp-socialprofile-userprofileprivacy-param-field_key": "ključ ciljanog polja, kao što je up_movies za polje \"Filmovi\""
+}
