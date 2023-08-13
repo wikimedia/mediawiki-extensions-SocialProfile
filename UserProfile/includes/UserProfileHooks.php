@@ -229,7 +229,7 @@ class UserProfileHooks {
 			'class' => 'diff-avatar'
 		] );
 
-		$oldHeader = '<div id="mw-diff-otitle1"><h4>' . $oldRevisionHeader . '</h4></div>' .
+		$oldHeader = '<div id="mw-diff-otitle1"><strong>' . $oldRevisionHeader . '</strong></div>' .
 			'<div id="mw-diff-otitle2">' . $avatarElement . '<div id="mw-diff-oinfo">' .
 			Linker::revUserTools( $oldRevision, !$unhide ) .
 			// '<br /><div id="mw-diff-odaysago">' . $differenceEngine->mOldRev->getTimestamp() . '</div>' .
@@ -288,7 +288,7 @@ class UserProfileHooks {
 			'class' => 'diff-avatar'
 		] );
 
-		$newHeader = '<div id="mw-diff-ntitle1"><h4>' . $newRevisionHeader . '</h4></div>' .
+		$newHeader = '<div id="mw-diff-ntitle1"><strong>' . $newRevisionHeader . '</strong></div>' .
 			'<div id="mw-diff-ntitle2">' . $avatarElement . '<div id="mw-diff-oinfo">'
 			. Linker::revUserTools( $newRevision, !$unhide ) .
 			" $rollback " .

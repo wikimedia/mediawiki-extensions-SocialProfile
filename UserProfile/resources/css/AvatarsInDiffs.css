@@ -34,7 +34,7 @@ table.diff td div {
 	overflow: auto;
 }
 
-table.diff h4 {
+table.diff strong {
 	font-size: 14px;
 	background: none;
 	padding: 0;
