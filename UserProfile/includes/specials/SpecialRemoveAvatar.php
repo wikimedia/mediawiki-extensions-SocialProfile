@@ -235,6 +235,7 @@ class RemoveAvatar extends SpecialPage {
 				->getUserIdentityByName( $user_name );
 			$user_id = $userIdentity ? $userIdentity->getId() : 0;
 		} else {
+			// @phan-suppress-next-line PhanUndeclaredStaticMethod Removed in MW 1.41+
 			$user_id = User::idFromName( $user_name );
 		}
 

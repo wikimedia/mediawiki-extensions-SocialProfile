@@ -41,6 +41,7 @@ class PurgeAvatarKeysFromMemcached extends Maintenance {
 						->getUserIdentityByName( $this->getOption( 'username' ) );
 					$uid = $userIdentity ? $userIdentity->getId() : 0;
 				} else {
+					// @phan-suppress-next-line PhanUndeclaredStaticMethod Removed in MW 1.41+
 					$uid = User::idFromName( $this->getOption( 'username' ) );
 				}
 			}

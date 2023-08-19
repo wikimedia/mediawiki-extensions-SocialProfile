@@ -532,6 +532,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			__METHOD__
 		);
 
+		$real_name = '';
+		$email = '';
 		if ( $s !== false ) {
 			$real_name = $s->user_real_name;
 			$email = $s->user_email;
