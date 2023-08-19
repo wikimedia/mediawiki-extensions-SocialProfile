@@ -216,7 +216,10 @@ class UserRelationship {
 	public function sendRelationshipRemoveEmail( $user, $type ) {
 		$user->load();
 
-		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ? $user->getBoolOption( 'echo-subscriptions-email-social-rel' ) : $user->getIntOption( 'notifyfriendrequest', 1 );
+		$userOptionsLookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
+		$wantsEmail = ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ?
+			$userOptionsLookup->getBoolOption( $user, 'echo-subscriptions-email-social-rel' ) :
+			$userOptionsLookup->getIntOption( $user, 'notifyfriendrequest', 1 );
 		if ( $user->isEmailConfirmed() && $wantsEmail ) {
 			$userFrom = $this->user;
 			$updateProfileLink = SpecialPage::getTitleFor( 'UpdateProfile' );
