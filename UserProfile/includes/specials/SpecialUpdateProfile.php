@@ -527,7 +527,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		$s = $dbr->selectRow(
 			'user',
-			[ 'user_real_name', 'user_email', 'user_email_authenticated' ],
+			[ 'user_real_name', 'user_email' ],
 			[ 'user_id' => $user->getId() ],
 			__METHOD__
 		);
@@ -537,8 +537,6 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		if ( $s !== false ) {
 			$real_name = $s->user_real_name;
 			$email = $s->user_email;
-			$old_email = $s->user_email;
-			$email_authenticated = $s->user_email_authenticated;
 		}
 
 		$countries = explode( "\n*", $this->msg( 'userprofile-country-list' )->inContentLanguage()->text() );
