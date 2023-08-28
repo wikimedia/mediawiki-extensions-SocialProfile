@@ -19,6 +19,7 @@
 		"MigrateOldUserPointsWeeklyUserColumnToActor": "maintenance/migrateOldUserPointsWeeklyUserColumnToActor.php",
 		"MigrateOldUserStatsUserColumnsToActor": "maintenance/migrateOldUserStatsUserColumnsToActor.php",
 		"MigrateOldUserSystemMessagesUserColumnToActor": "maintenance/migrateOldUserSystemMessagesUserColumnToActor.php",
+		"UpdateUserStats": "maintenance/updateUserStats.php",
 		"EchoUserLevelAdvancePresentationModel": "includes/EchoUserLevelAdvancePresentationModel.php",
 		"GenerateTopUsersReport": "includes/specials/GenerateTopUsersReport.php",
 		"TopFansByStat": "includes/specials/TopFansByStat.php",
@@ -31,6 +32,7 @@
 		"UserStatsTrack": "includes/UserStatsTrack.php",
 		"UserStats": "includes/UserStats.php",
 		"UserStatsHooks": "includes/UserStatsHooks.php",
+		"UserStatsUpdater": "includes/UserStatsUpdater.php",
 		"UserSystemMessage": "includes/UserSystemMessage.php"
 	},
 	"Hooks": {
