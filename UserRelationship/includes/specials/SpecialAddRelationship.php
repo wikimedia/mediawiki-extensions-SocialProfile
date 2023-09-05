@@ -285,7 +285,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 			'</div>
 			<textarea name="message" id="message" rows="3" cols="50"></textarea>
 			<div class="relationship-buttons">
-				<input type="submit" class="site-button" value="' . $button . '" size="20" onclick="document.form1.submit()" />
+				<input type="submit" class="site-button" value="' . $button . '" size="20" />
 				<input type="button" class="site-button" value="' . $this->msg( 'cancel' )->escaped() . '" size="20" onclick="history.go(-1)" />
 			</div>
 			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />

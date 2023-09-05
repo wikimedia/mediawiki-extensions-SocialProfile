@@ -308,7 +308,7 @@ class SystemGiftManager extends SpecialPage {
 		<td colspan="2">
 			<input type="hidden" name="id" value="' . ( isset( $gift['gift_id'] ) ? (int)$gift['gift_id'] : '' ) . '" />
 			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
-			<input type="button" class="createbox" value="' . $button . '" size="20" onclick="document.gift.submit()" />
+			<input type="submit" class="createbox" value="' . $button . '" size="20" />
 			<input type="button" class="createbox" value="' . $this->msg( 'cancel' )->escaped() . '" size="20" onclick="history.go(-1)" />
 		</td>
 		</tr>

@@ -150,7 +150,7 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 			</div>
 			<div class="visualClear"></div>
 			<div class="ga-buttons">
-				<input type="button" class="site-button" value="' . $this->msg( 'ga-remove' )->escaped() . '" size="20" onclick="document.form1.submit()" />
+				<input type="submit" class="site-button" value="' . $this->msg( 'ga-remove' )->escaped() . '" size="20" />
 				<input type="button" class="site-button" value="' . $this->msg( 'cancel' )->escaped() . '" size="20" onclick="history.go(-1)" />
 			</div>
 			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />

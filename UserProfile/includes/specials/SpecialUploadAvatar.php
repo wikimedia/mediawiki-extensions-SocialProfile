@@ -177,7 +177,9 @@ class SpecialUploadAvatar extends SpecialUpload {
 		</tr>';
 		$output .= '<tr>
 			<td>
-				<input type="button" onclick="javascript:history.go(-1)" class="site-button" value="' . $this->msg( 'user-profile-picture-uploaddifferent' )->escaped() . '" />
+				<form action="' . htmlspecialchars( $this->getPageTitle()->getFullURL(), ENT_QUOTES ) . '" method="get">
+					<input type="submit" class="site-button" value="' . $this->msg( 'user-profile-picture-uploaddifferent' )->escaped() . '" />
+				</form>
 			</td>
 		</tr>';
 		$output .= '</table>';

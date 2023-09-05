@@ -286,7 +286,7 @@ class GiveGift extends SpecialPage {
 				<input type="hidden" name="gift_id" value="' . $giftId . '" />
 				<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 				<input type="hidden" name="user_name" value="' . htmlspecialchars( $this->userTo->getName() ) . '" />
-				<input type="submit" class="site-button" value="' . $this->msg( 'g-send-gift' )->escaped() . '" size="20" onclick="document.gift.submit()" />
+				<input type="submit" class="site-button" value="' . $this->msg( 'g-send-gift' )->escaped() . '" size="20" />
 				<input type="button" class="site-button" value="' . $this->msg( 'cancel' )->escaped() . '" size="20" onclick="history.go(-1)" />
 			</div>
 		</form>';
@@ -352,7 +352,7 @@ class GiveGift extends SpecialPage {
 			'</div>
 			<div class="g-give-textbox">
 				<input type="text" width="85" name="user" class="mw-autocomplete-user" value="" />
-				<input class="site-button" type="submit" value="' . $this->msg( 'g-give-gift' )->escaped() . '" onclick="document.gift.submit()" />
+				<input class="site-button" type="submit" value="' . $this->msg( 'g-give-gift' )->escaped() . '" />
 			</div>
 			</div>
 		</form>';

@@ -684,7 +684,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		<div class="visualClear"></div>';
 
 		$form .= '
-			<input type="submit" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->escaped() . '" size="20" onclick="document.profile.submit()" />
+			<input type="submit" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->escaped() . '" size="20" />
 			</div>
 			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 		</form>';
@@ -783,7 +783,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			</p>
 			<div class="visualClear">' . $this->renderEye( 'up_drinks' ) . '</div>
 			</div>
-			<input type="submit" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->escaped() . '" size="20" onclick="document.profile.submit()" />
+			<input type="submit" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->escaped() . '" size="20" />
 			</div>
 			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 		</form>';
@@ -856,7 +856,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 		$form .= '</div>
 			<div class="visualClear"></div>';
-		$form .= '<input type="submit" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->escaped() . '" size="20" onclick="document.profile.submit()" />';
+		$form .= '<input type="submit" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->escaped() . '" size="20" />';
 		$form .= Html::hidden( 'wpEditToken', $user->getEditToken() );
 		$form .= '</form>';
 		$form .= '</div>';
@@ -930,7 +930,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 					</div>
 					<div class="visualClear">' . $this->renderEye( 'up_custom_4' ) . '</div>
 				</div>
-			<input type="submit" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->escaped() . '" size="20" onclick="document.profile.submit()" />
+			<input type="submit" class="site-button" value="' . $this->msg( 'user-profile-update-button' )->escaped() . '" size="20" />
 			</div>
 			<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $this->getUser()->getEditToken(), ENT_QUOTES ) . '" />
 		</form>';

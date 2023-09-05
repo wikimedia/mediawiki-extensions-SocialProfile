@@ -134,7 +134,7 @@ class RemoveGift extends UnlistedSpecialPage {
 			<div class="g-buttons">' .
 				Html::hidden( 'user', $userFrom->getName() ) .
 				Html::hidden( 'wpEditToken', $currentUser->getEditToken() ) .
-				'<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'g-remove' )->plain() ) . '" size="20" onclick="document.form1.submit()" />
+				'<input type="submit" class="site-button" value="' . htmlspecialchars( $this->msg( 'g-remove' )->plain() ) . '" size="20" />
 				<input type="button" class="site-button" value="' . htmlspecialchars( $this->msg( 'cancel' )->plain() ) . '" size="20" onclick="history.go(-1)" />
 			</div>
 		</form>';
