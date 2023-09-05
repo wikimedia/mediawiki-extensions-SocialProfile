@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yupik"
+			"Yupik",
+			"Kimberli Mäkäräinen (WMNO)"
 		]
 	},
 	"g-choose-file": "Vállje fiilla:",
 	"g-new": "ođđa",
 	"g-next": "Čuovvovaš",
-	"g-remove": "Sihko"
+	"g-remove": "Sihko",
+	"echo-pref-tooltip-social-gift": "Almmut munnje, go muhtin sádde munnje skeaŋkka."
 }
