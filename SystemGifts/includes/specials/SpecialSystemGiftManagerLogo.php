@@ -164,7 +164,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 
 		/** Check if the user is allowed to upload files */
 		if ( !$this->getUser()->isAllowed( 'upload' ) ) {
-			throw new ErrorPageError( 'uploadnologin', 'uploadnologintext' );
+			throw new PermissionsError( 'upload' );
 		}
 
 		if ( $this->mReUpload ) {

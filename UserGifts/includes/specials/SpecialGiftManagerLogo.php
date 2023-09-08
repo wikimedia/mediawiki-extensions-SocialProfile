@@ -170,16 +170,22 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$this->requireLogin();
 
 		/** Various rights checks */
-		if ( !$user->isAllowed( 'upload' ) || $user->getBlock() ) {
-			throw new ErrorPageError( 'uploadnologin', 'uploadnologintext' );
+		if ( !$user->isAllowed( 'upload' ) ) {
+			throw new PermissionsError( 'upload' );
+		}
+
+		// Check blocks
+		$block = $user->getBlock();
+		if ( $block || $user->isBlockedFromUpload() ) {
+			throw new UserBlockedError(
+				$block,
+				$user,
+				$this->getLanguage(),
+				$this->getRequest()->getIP()
+			);
 		}
 
 		$this->checkReadOnly();
-
-		// If user is blocked, s/he doesn't need to access this page
-		if ( $user->getBlock() ) {
-			throw new UserBlockedError( $user->getBlock() );
-		}
 
 		// Set the robot policies, etc.
 		$out->setArticleRelated( false );
