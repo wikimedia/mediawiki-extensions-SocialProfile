@@ -179,7 +179,6 @@ class UserProfilePage extends Article {
 		}
 
 		$out->addHTML( $this->getPersonalInfo() );
-		// @phan-suppress-next-line SecurityCheck-XSS
 		$out->addHTML( $this->getActivity() );
 		// Hook for BlogPage
 		if ( !MediaWikiServices::getInstance()->getHookContainer()->run( 'UserProfileRightSideAfterActivity', [ $this ] ) ) {

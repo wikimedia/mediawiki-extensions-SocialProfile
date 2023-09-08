@@ -185,7 +185,6 @@ class UserHome extends SpecialPage {
 
 		$output .= '</div>
 		<div class="visualClear"></div>';
-		// @phan-suppress-next-line SecurityCheck-XSS
 		$out->addHTML( $output );
 	}
 }
