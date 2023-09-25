@@ -10,6 +10,15 @@ trait UploadAvatarTrait {
 	/** @var string */
 	public $mExtension;
 
+	/** @var string|null Path to the temporary images before the resized thumbnails are generated */
+	protected $mTempPath;
+
+	/** @var MWFileProps */
+	protected $mFileProps;
+
+	/** @var string|null Apparently always empty, see verifyUpload() for details */
+	protected $mFinalExtension;
+
 	function createThumbnail( $imageSrc, $imageInfo, $imgDest, $thumbWidth ) {
 		global $wgUseImageMagick, $wgImageMagickConvertCommand;
 

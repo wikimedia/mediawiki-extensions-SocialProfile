@@ -21,8 +21,6 @@ class UserStats {
 		}
 
 		$this->user->load();
-		$this->user_id = $this->user->getId();
-		$this->user_name = $this->user->getName();
 	}
 
 	/**
