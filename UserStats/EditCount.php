@@ -75,7 +75,7 @@ function removeDeletedEdits( WikiPage $article, $user, $reason ) {
 					'revactor_page' => $article->getID(),
 					'actor_user IS NOT NULL'
 				],
-				__METHOD__,
+				__FUNCTION__,
 				[ 'GROUP BY' => 'actor_name' ],
 				[
 					'actor' => [ 'JOIN', 'actor_id = revactor_actor' ],
@@ -90,7 +90,7 @@ function removeDeletedEdits( WikiPage $article, $user, $reason ) {
 					'rev_page' => $article->getID(),
 					'actor_user IS NOT NULL'
 				],
-				__METHOD__,
+				__FUNCTION__,
 				[ 'GROUP BY' => 'actor_name' ],
 				[
 					'actor' => [ 'JOIN', 'actor_id = rev_actor' ]
@@ -136,7 +136,7 @@ function restoreDeletedEdits( Title $title, $new ) {
 					'revactor_page' => $title->getArticleID(),
 					'actor_user IS NOT NULL'
 				],
-				__METHOD__,
+				__FUNCTION__,
 				[ 'GROUP BY' => 'actor_name' ],
 				[
 					'actor' => [ 'JOIN', 'actor_id = revactor_actor' ],
@@ -151,7 +151,7 @@ function restoreDeletedEdits( Title $title, $new ) {
 					'rev_page' => $title->getArticleID(),
 					'actor_user IS NOT NULL'
 				],
-				__METHOD__,
+				__FUNCTION__,
 				[ 'GROUP BY' => 'actor_name' ],
 				[
 					'actor' => [ 'JOIN', 'actor_id = rev_actor' ]
