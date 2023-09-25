@@ -73,38 +73,4 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 		return $form;
 	}
 
-	/**
-	 * Update users' total points in the user_stats DB table.
-	 *
-	 * @return int Amount of users whose records were updated
-	 */
-	private function performMagic() {
-		$dbw = wfGetDB( DB_MASTER );
-		$this->updateMainEditsCount();
-
-		// @todo FIXME: Why does this do this? I don't get it.
-		// This probably was here to prevent errors in notifications about leveling
-		// up. But that would effectively disable the level up message when editing.
-		// Let's comment it out and see what breaks...
-		// global $wgUserLevels;
-		// $wgUserLevels = '';
-
-		$res = $dbw->select(
-			[ 'user_stats', 'actor' ],
-			[ 'stats_actor', 'actor_name', 'stats_total_points' ],
-			[],
-			__METHOD__,
-			[ 'ORDER BY' => 'actor_name' ],
-			[ 'actor' => [ 'JOIN', 'stats_actor = actor_id' ] ]
-		);
-
-		$x = 0;
-		foreach ( $res as $row ) {
-			$x++;
-			$stats = new UserStatsTrack( $row->stats_actor );
-			$stats->updateTotalPoints();
-		}
-
-		return $x;
-	}
 }
