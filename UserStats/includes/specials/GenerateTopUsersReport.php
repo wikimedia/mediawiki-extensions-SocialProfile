@@ -358,7 +358,7 @@ class GenerateTopUsersReport extends SpecialPage {
 				'up_period' => ( ( $period == 'weekly' ) ? 1 : 2 ),
 				'up_date' => $dbw->addQuotes( $dbw->timestamp( $date ) )
 			],
-			'*',
+			[ '*' ],
 			__METHOD__
 		);
 
