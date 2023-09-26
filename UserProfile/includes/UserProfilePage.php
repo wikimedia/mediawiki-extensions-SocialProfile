@@ -1426,6 +1426,7 @@ class UserProfilePage extends Article {
 						<div class=\"item\">
 							<a href=\"" . htmlspecialchars( $viewGift->getFullURL( "gift_id={$item['id']}" ) ) . "\" rel=\"nofollow\">
 								{$icon}" .
+								// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 								htmlspecialchars( $item['pagetitle'] ) .
 							'</a>
 						</div>';
@@ -1438,6 +1439,7 @@ class UserProfilePage extends Article {
 								<div class=\"item\">
 									<a href=\"" . htmlspecialchars( $viewGift->getFullURL( "gift_id={$item['id']}" ) ) . "\" rel=\"nofollow\">
 										{$icon}" .
+										// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 										htmlspecialchars( $item['pagetitle'] ) .
 									'</a>
 								</div>';
@@ -1451,6 +1453,7 @@ class UserProfilePage extends Article {
 								<div class=\"user-home-item-gift\">
 									<a href=\"" . htmlspecialchars( $viewSystemGift->getFullURL( "gift_id={$item['id']}" ) ) . "\" rel=\"nofollow\">
 										{$icon}" .
+										// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 										htmlspecialchars( $item['pagetitle'] ) .
 									'</a>
 								</div>';

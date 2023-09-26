@@ -19,7 +19,7 @@
 	"useractivity-group-comment": "{{PLURAL:$1|one comment|$1 comments}}",
 	"useractivity-group-user_message": "{{PLURAL:$1|one message|$1 messages}}",
 	"useractivity-group-friend": "{{PLURAL:$1|one friend|$1 friends}}",
-	"useractivity-network-thought": "<b><a href=\"$4\">$2</a></b> has a thought for the $3 network",
+	"useractivity-network-thought": "'''[[User:$1|$2]]''' has a thought for the $3 network",
 	"useractivity-siteactivity": "Site activity",
 	"useractivity-title": "Friends' activity",
 	"useractivity-user_message": "$1 {{PLURAL:$4|sent a message to|sent messages to}} $3",

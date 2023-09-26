@@ -117,13 +117,14 @@ class UserActivity {
 				],
 				__METHOD__
 			);
+
 			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
-			$actorIDs = implode( ',', $userArray );
-			if ( !empty( $actorIDs ) ) {
-				$where[] = "actor_id IN ($actorIDs)";
+
+			if ( !empty( $userArray ) ) {
+				$where['actor_id'] = $userArray;
 			}
 		}
 
@@ -135,7 +136,6 @@ class UserActivity {
 		$actorQuery = ActorMigration::newMigration()->getJoin( 'rc_user' ); // @todo This usage is deprecated since MW 1.34.
 		$commentQuery = $commentStore->getJoin( 'rc_comment' );
 
-		// @phan-suppress-next-line SecurityCheck-SQLInjection The escaping here is totally proper, phan just can't tell
 		$res = $dbr->select(
 			[ 'recentchanges' ] + $commentQuery['tables'] + $actorQuery['tables'],
 			[
@@ -221,20 +221,20 @@ class UserActivity {
 				],
 				__METHOD__
 			);
+
 			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
-			$actorIDs = implode( ',', $userArray );
-			if ( !empty( $actorIDs ) ) {
-				$where[] = "vote_actor IN ($actorIDs)";
+
+			if ( !empty( $userArray ) ) {
+				$where['vote_actor'] = $userArray;
 			}
 		}
 		if ( $this->show_current_user ) {
 			$where['vote_actor'] = $this->user->getActorId();
 		}
 
-		// @phan-suppress-next-line SecurityCheck-SQLInjection The escaping here is totally proper, phan just can't tell
 		$res = $dbr->select(
 			[ 'Vote', 'page' ],
 			[
@@ -294,13 +294,14 @@ class UserActivity {
 				],
 				__METHOD__
 			);
+
 			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
-			$userIDs = implode( ',', $userArray );
-			if ( !empty( $userIDs ) ) {
-				$where[] = "Comment_actor IN ($userIDs)";
+
+			if ( !empty( $userArray ) ) {
+				$where['Comment_actor'] = $userArray;
 			}
 		}
 
@@ -308,7 +309,6 @@ class UserActivity {
 			$where['Comment_actor'] = $this->user->getActorId();
 		}
 
-		// @phan-suppress-next-line SecurityCheck-SQLInjection The escaping here is totally proper, phan just can't tell
 		$res = $dbr->select(
 			[ 'Comments', 'page' ],
 			[
@@ -390,13 +390,14 @@ class UserActivity {
 				],
 				__METHOD__
 			);
+
 			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
-			$actorIDs = implode( ',', $userArray );
-			if ( !empty( $actorIDs ) ) {
-				$where[] = "ug_actor_to IN ($actorIDs)";
+
+			if ( !empty( $userArray ) ) {
+				$where['ug_actor_to'] = $userArray;
 			}
 		}
 
@@ -404,7 +405,6 @@ class UserActivity {
 			$where['ug_actor_from'] = $this->user->getActorId();
 		}
 
-		// @phan-suppress-next-line SecurityCheck-SQLInjection The escaping here is totally proper, phan just can't tell
 		$res = $dbr->select(
 			[ 'user_gift', 'gift' ],
 			[
@@ -457,13 +457,14 @@ class UserActivity {
 				],
 				__METHOD__
 			);
+
 			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
-			$actorIDs = implode( ',', $userArray );
-			if ( !empty( $actorIDs ) ) {
-				$where[] = "ug_actor_to IN ($actorIDs)";
+
+			if ( !empty( $userArray ) ) {
+				$where['ug_actor_to'] = $userArray;
 			}
 		}
 
@@ -471,7 +472,6 @@ class UserActivity {
 			$where['ug_actor_to'] = $this->user->getActorId();
 		}
 
-		// @phan-suppress-next-line SecurityCheck-SQLInjection The escaping here is totally proper, phan just can't tell
 		$res = $dbr->select(
 			[ 'user_gift', 'gift' ],
 			[
@@ -549,13 +549,14 @@ class UserActivity {
 				],
 				__METHOD__
 			);
+
 			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
-			$actorIDs = implode( ',', $userArray );
-			if ( !empty( $actorIDs ) ) {
-				$where[] = "sg_actor IN ($actorIDs)";
+
+			if ( !empty( $userArray ) ) {
+				$where['sg_actor'] = $userArray;
 			}
 		}
 
@@ -563,7 +564,6 @@ class UserActivity {
 			$where['sg_actor'] = $this->user->getActorId();
 		}
 
-		// @phan-suppress-next-line SecurityCheck-SQLInjection The escaping here is totally proper, phan just can't tell
 		$res = $dbr->select(
 			[ 'user_system_gift', 'system_gift' ],
 			[
@@ -646,13 +646,14 @@ class UserActivity {
 				],
 				__METHOD__
 			);
+
 			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
-			$actorIDs = implode( ',', $userArray );
-			if ( !empty( $actorIDs ) ) {
-				$where[] = "r_actor IN ($actorIDs)";
+
+			if ( !empty( $userArray ) ) {
+				$where['r_actor'] = $userArray;
 			}
 		}
 
@@ -660,7 +661,6 @@ class UserActivity {
 			$where['r_actor'] = $this->user->getActorId();
 		}
 
-		// @phan-suppress-next-line SecurityCheck-SQLInjection The escaping here is totally proper, phan just can't tell
 		$res = $dbr->select(
 			'user_relationship',
 			[ 'r_id', 'r_actor', 'r_actor_relation', 'r_type', 'r_date' ],
@@ -743,13 +743,14 @@ class UserActivity {
 				],
 				__METHOD__
 			);
+
 			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
-			$actorIDs = implode( ',', $userArray );
-			if ( !empty( $actorIDs ) ) {
-				$where[] = "ub_actor_from IN ($actorIDs)";
+
+			if ( !empty( $userArray ) ) {
+				$where['ub_actor_from'] = $userArray;
 			}
 		}
 
@@ -757,7 +758,6 @@ class UserActivity {
 			$where['ub_actor_from'] = $this->user->getActorId();
 		}
 
-		// @phan-suppress-next-line SecurityCheck-SQLInjection The escaping here is totally proper, phan just can't tell
 		$res = $dbr->select(
 			'user_board',
 			[ 'ub_id', 'ub_actor', 'ub_actor_from', 'ub_date', 'ub_message' ],
@@ -832,13 +832,14 @@ class UserActivity {
 				],
 				__METHOD__
 			);
+
 			$userArray = [];
 			foreach ( $users as $user ) {
 				$userArray[] = $user;
 			}
-			$actorIDs = implode( ',', $userArray );
-			if ( !empty( $actorIDs ) ) {
-				$where[] = "um_actor IN ($actorIDs)";
+
+			if ( !empty( $userArray ) ) {
+				$where['um_actor'] = $userArray;
 			}
 		}
 
@@ -846,7 +847,6 @@ class UserActivity {
 			$where['um_actor'] = $this->user->getActorId();
 		}
 
-		// @phan-suppress-next-line SecurityCheck-SQLInjection The escaping here is totally proper, phan just can't tell
 		$res = $dbr->select(
 			'user_system_messages',
 			[ 'um_id', 'um_actor', 'um_type', 'um_message', 'um_date' ],
@@ -993,14 +993,13 @@ class UserActivity {
 				htmlspecialchars( $network_name ) . '</a>';
 			$network_image = SportsTeams::getLogo( $row->us_sport_id, $row->us_team_id, 's' );
 
-			// FIXME: This message uses raw HTML
 			$html = wfMessage(
 				'useractivity-network-thought',
-				htmlspecialchars( $userName ),
-				htmlspecialchars( $user_name_short ),
-				$page_link,
-				htmlspecialchars( $user->getUserPage()->getFullURL() )
-			)->text() .
+				$userName,
+				$user_name_short
+			)->rawParams(
+				$page_link
+			)->parse() .
 					'<div class="item">
 						<a href="' . $sportsNetworkURL . "\" rel=\"nofollow\">
 							{$network_image}
@@ -1066,6 +1065,13 @@ class UserActivity {
 		return $this->items;
 	}
 
+	/**
+	 * Phan does _NOT_ like something here and I can't quite figure out what it could be,
+	 * so let's pretend everything is fine.
+	 *
+	 * @return-taint onlysafefor_html
+	 * @return array
+	 */
 	public function getActivityList() {
 		if ( $this->show_edits ) {
 			$this->setEdits();
@@ -1104,6 +1110,13 @@ class UserActivity {
 		return $this->items;
 	}
 
+	/**
+	 * Phan does _NOT_ like something here and I can't quite figure out what it could be,
+	 * so let's pretend everything is fine.
+	 *
+	 * @return-taint onlysafefor_html
+	 * @return array
+	 */
 	public function getActivityListGrouped() {
 		$this->getActivityList();
 

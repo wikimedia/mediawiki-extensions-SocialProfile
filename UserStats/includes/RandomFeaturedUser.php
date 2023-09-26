@@ -95,7 +95,7 @@ class RandomFeaturedUser {
 
 		$link = Html::rawElement(
 			'a',
-			[ 'href' => htmlspecialchars( $userPageURL, ENT_QUOTES ) ],
+			[ 'href' => $userPageURL ],
 			wordwrap( htmlspecialchars( $random_user['user_name'], ENT_QUOTES ), 12, "<br />\n", true )
 		);
 		$output .= "<div class=\"random-featured-user-title\">$link<br /> " .

@@ -17,9 +17,6 @@ class SiteActivityHook {
 	/**
 	 * Callback for ParserFirstCallInit hook subscriber
 	 *
-	 * @suppress SecurityCheck-XSS Technically a valid issue but not fixable here, the
-	 *   real fix is to make the i18n msgs not use raw HTML (T30617, sorta)
-	 *
 	 * @param string|null $input
 	 * @param array $args
 	 * @param Parser $parser
