@@ -8,7 +8,8 @@
 			"He7d3r",
 			"Jorge Morais",
 			"Luckas",
-			"Malafaya"
+			"Malafaya",
+			"Felipe L. Ewald"
 		]
 	},
 	"editprofile": "Editar o perfil de outros usuários",
@@ -224,7 +225,7 @@
 	"right-editothersprofiles-private": "Ver e atualizar informações privadas (endereço de e-mail) nos perfis sociais de outros usuários",
 	"action-avatarremove": "remover avatares do usuário",
 	"action-editothersprofiles": "atualizar perfis sociais de outros usuários",
-	"right-populate-user-profiles": "Permite preencher perfis de outros usuários para wikis existentes",
+	"right-populate-user-profiles": "Preencher perfis de outros usuários para wikis existentes",
 	"action-populate-user-profiles": "preencher perfis de outros usuários",
 	"apihelp-socialprofile-userprofileprivacy-description": "Módulo da API para definir a visibilidade (\"privacidade\") de um campo do perfil",
 	"apihelp-socialprofile-userprofileprivacy-summary": "Módulo da API para definir a visibilidade (\"privacidade\") de um campo do perfil",
