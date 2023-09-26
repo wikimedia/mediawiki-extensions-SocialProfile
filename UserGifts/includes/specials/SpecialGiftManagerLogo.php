@@ -793,8 +793,8 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 			$output = '<table><tr><td style="color:#666666;font-weight:800">' .
 				htmlspecialchars( $this->msg( 'g-current-image' )->plain() ) . '</td></tr>';
 			$output .= '<tr><td>' . $icon . '</td></tr></table><br />';
+			$out->addHTML( $output );
 		}
-		$out->addHTML( $output );
 
 		$token = Html::hidden( 'wpEditToken', $this->getUser()->getEditToken() );
 

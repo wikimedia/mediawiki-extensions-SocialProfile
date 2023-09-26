@@ -39,7 +39,7 @@ class GiveGift extends SpecialPage {
 	 * @return bool
 	 */
 	function isListed() {
-		return (bool)$this->getUser()->isRegistered();
+		return $this->getUser()->isRegistered();
 	}
 
 	/**
@@ -241,13 +241,13 @@ class GiveGift extends SpecialPage {
 		if ( !$giftId || !is_numeric( $giftId ) ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
 			$out->addHTML( $this->msg( 'g-error-message-invalid-link' )->escaped() );
-			return false;
+			return '';
 		}
 
 		$gift = Gifts::getGift( $giftId );
 
 		if ( empty( $gift ) ) {
-			return false;
+			return '';
 		}
 
 		if ( $gift['access'] == 1 && $this->getUser()->getActorId() != $gift['creator_actor'] ) {
@@ -455,7 +455,7 @@ class GiveGift extends SpecialPage {
 					} else {
 						$output .= $linkRenderer->makeLink(
 							$giveGiftLink,
-							$i,
+							(string)$i,
 							[],
 							[
 								'user' => $user_name,

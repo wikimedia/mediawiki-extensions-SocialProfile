@@ -30,7 +30,7 @@ class ViewGifts extends SpecialPage {
 	 * @return bool
 	 */
 	function isListed() {
-		return (bool)$this->getUser()->isRegistered();
+		return $this->getUser()->isRegistered();
 	}
 
 	/**
@@ -226,7 +226,7 @@ class ViewGifts extends SpecialPage {
 				} else {
 					$output .= $linkRenderer->makeLink(
 						$pageLink,
-						$i,
+						(string)$i,
 						[],
 						[
 							'user' => $user_name,
