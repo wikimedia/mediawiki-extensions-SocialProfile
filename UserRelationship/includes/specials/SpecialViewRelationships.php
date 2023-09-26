@@ -36,7 +36,7 @@ class SpecialViewRelationships extends SpecialPage {
 	 * @return bool
 	 */
 	function isListed() {
-		return (bool)$this->getUser()->isRegistered();
+		return $this->getUser()->isRegistered();
 	}
 
 	/**
@@ -306,7 +306,7 @@ class SpecialViewRelationships extends SpecialPage {
 				} else {
 					$output .= $linkRenderer->makeLink(
 						$pageLink,
-						$i,
+						(string)$i,
 						[],
 						[
 							'user' => $user_name,

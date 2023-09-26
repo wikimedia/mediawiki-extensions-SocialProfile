@@ -7,7 +7,7 @@ class ApiRelationshipResponse extends ApiBase {
 		$main = $this->getMain();
 
 		$response = $main->getVal( 'response' );
-		$requestId = $main->getVal( 'id' );
+		$requestId = (int)$main->getVal( 'id' );
 
 		$user = $this->getUser();
 		$readOnlyMode = MediaWikiServices::getInstance()->getReadOnlyMode();

@@ -291,7 +291,8 @@ class UserRelationship {
 			$ur_type = $s->ur_type;
 
 			if ( self::getUserRelationshipByID( $this->user, $userFrom ) > 0 ) {
-				return '';
+				// Nothing to do if this relationship already exists.
+				return false;
 			}
 
 			$dbw->insert(

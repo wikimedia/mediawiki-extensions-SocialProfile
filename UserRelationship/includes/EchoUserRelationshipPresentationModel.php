@@ -55,6 +55,7 @@ class EchoUserRelationshipPresentationModel extends EchoEventPresentationModel {
 	public function getPrimaryLink() {
 		$eventType = $this->event->getType();
 		$relType = $this->event->getExtraParam( 'rel_type' );
+		$url = ''; // for phan
 		if ( $eventType == 'social-rel-add' ) { // pending request
 			$url = SpecialPage::getTitleFor( 'ViewRelationshipRequests' )->getLocalURL();
 		} elseif ( $eventType == 'social-rel-accept' ) { // accepted request
@@ -75,6 +76,7 @@ class EchoUserRelationshipPresentationModel extends EchoEventPresentationModel {
 	private function getSpecialPageLink() {
 		$eventType = $this->event->getType();
 		$relType = $this->event->getExtraParam( 'rel_type' );
+		$label = $url = ''; // for phan
 		if ( $eventType == 'social-rel-add' ) { // pending request
 			$label = $this->msg( 'viewrelationshiprequests' )->text();
 			$url = SpecialPage::getTitleFor( 'ViewRelationshipRequests' )->getLocalURL();
@@ -102,6 +104,7 @@ class EchoUserRelationshipPresentationModel extends EchoEventPresentationModel {
 	public function getSubjectMessage() {
 		$eventType = $this->event->getType();
 		$relType = $this->event->getExtraParam( 'rel_type' );
+		$msgKey = ''; // for phan with love
 		if ( $eventType == 'social-rel-add' ) { // pending request
 			$msgKey = ( $relType == 1 ) ? 'friend_request_subject' : 'foe_request_subject';
 		} elseif ( $eventType == 'social-rel-accept' ) { // accepted request

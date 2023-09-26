@@ -45,7 +45,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 	 * @return bool
 	 */
 	function isListed() {
-		return (bool)$this->getUser()->isRegistered();
+		return $this->getUser()->isRegistered();
 	}
 
 	/**
@@ -82,7 +82,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 			if ( $_SESSION['alreadysubmitted'] == false && !$request->getInt( 'response' ) ) {
 				$_SESSION['alreadysubmitted'] = true;
 				$rel->addRelationshipRequest(
-					$this->user_name_to,
+					$this->user_name_to, // @todo FIXME: should be a User and not a string...also not really defined here anymore?!
 					$this->relationship_type,
 					$request->getVal( 'message' )
 				);
