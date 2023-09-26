@@ -35,7 +35,7 @@ class RemoveAvatar extends SpecialPage {
 	 * @return bool
 	 */
 	function isListed() {
-		return (bool)$this->getUser()->isRegistered();
+		return $this->getUser()->isRegistered();
 	}
 
 	/**
@@ -83,8 +83,9 @@ class RemoveAvatar extends SpecialPage {
 		$this->checkReadOnly();
 
 		// If user is blocked, s/he doesn't need to access this page
-		if ( $user->getBlock() ) {
-			throw new UserBlockedError( $user->getBlock() );
+		$block = $user->getBlock();
+		if ( $block ) {
+			throw new UserBlockedError( $block );
 		}
 
 		// Set the page title, robot policies, etc.
@@ -240,7 +241,7 @@ class RemoveAvatar extends SpecialPage {
 		}
 
 		$currentUser = $this->getUser();
-		$userIsAvatarOwner = (bool)( $currentUser->getName() === $user_name );
+		$userIsAvatarOwner = ( $currentUser->getName() === $user_name );
 		$userIsPrivileged = $this->isUserPrivileged();
 		$avatar = new wAvatar( $user_id, 'l' );
 		$output = '';

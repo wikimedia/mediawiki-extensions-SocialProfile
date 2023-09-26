@@ -285,6 +285,7 @@ class GenerateTopUsersReport extends SpecialPage {
 		// For grep: user-stats-report-weekly-page-title, user-stats-report-monthly-page-title
 		$title = Title::makeTitleSafe(
 			NS_PROJECT,
+			// @phan-suppress-next-line PhanPossiblyUndeclaredVariable $period_title is set
 			$this->msg( "user-stats-report-{$period}-page-title", $period_title )->inContentLanguage()->plain()
 		);
 

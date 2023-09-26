@@ -227,6 +227,8 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			__METHOD__
 		);
 
+		$real_name = '';
+		$email = '';
 		if ( $s !== false ) {
 			$real_name = $s->user_real_name;
 			$email = $s->user_email;
@@ -444,7 +446,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			<p class="profile-update-title">' . $this->msg( 'user-profile-interests-eats' )->escaped() . '</p>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-foodsnacks' )->escaped() . '</p>
 			<p class="profile-update-unit">
-				<textarea name="snacks" id="snacks" rows="3" cols="75">' . ( isset( $snacks ) ? htmlspecialchars( $tv, ENT_QUOTES ) : '' ) . '</textarea>
+				<textarea name="snacks" id="snacks" rows="3" cols="75">' . ( isset( $snacks ) ? htmlspecialchars( $snacks, ENT_QUOTES ) : '' ) . '</textarea>
 			</p>
 			<div class="visualClear"></div>
 			<p class="profile-update-unit-left">' . $this->msg( 'user-profile-interests-drinks' )->escaped() . '</p>

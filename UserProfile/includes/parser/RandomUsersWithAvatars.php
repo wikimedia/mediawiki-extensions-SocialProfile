@@ -81,7 +81,7 @@ class RandomUsersWithAvatars {
 			// Extract user ID out of avatar image name
 			$avatarName = basename( $files[$random] );
 			preg_match( "/{$wgAvatarKey}_(.*)_/i", $avatarName, $matches );
-			$userId = $matches[1];
+			$userId = (int)$matches[1];
 
 			if ( $userId ) {
 				// Load user

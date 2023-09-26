@@ -300,6 +300,7 @@ class SpecialViewUserBoard extends SpecialPage {
 
 		$can_post = false;
 		$user_name_from = ''; // Prevent E_NOTICE
+		$user_name_to = '';
 
 		if ( !$user_2 ) {
 			if ( $currentUser->getName() != $user_name ) {

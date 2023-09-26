@@ -408,6 +408,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			// Resize the image.
 			imagecopyresampled(
 				$tnImage,
+				// @phan-suppress-next-line PhanPossiblyUndeclaredVariable
 				$fullImage,
 				0, 0, 0, 0,
 				$origWidth * $scale,
@@ -426,6 +427,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			}
 
 			// Clean up.
+			// @phan-suppress-next-line PhanPossiblyUndeclaredVariable
 			imagedestroy( $fullImage );
 			imagedestroy( $tnImage );
 
@@ -471,6 +473,8 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		$this->createThumbnail( $tempName, $ext, $this->gift_id . '_ml', 50 );
 		$this->createThumbnail( $tempName, $ext, $this->gift_id . '_m', 30 );
 		$this->createThumbnail( $tempName, $ext, $this->gift_id . '_s', 16 );
+
+		$type = 0;
 
 		if ( $ext == 'JPG' && is_file( wfTempDir() . '/sg_' . $this->gift_id . '_l.jpg' ) ) {
 			$type = 2;

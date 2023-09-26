@@ -46,12 +46,8 @@ $cfg['suppress_issue_types'] = array_merge( $cfg['suppress_issue_types'], [
 	'PhanTypeArraySuspiciousNullable',
 	'PhanUndeclaredTypeProperty',
 	'PhanSuspiciousValueComparison',
-	# This is happening locally because the vendor dir is not getting properly ignored:
+	# This is happening because the vendor dir is not getting properly ignored:
 	'PhanRedefinedClassReference',
-	# False positive from main PHP setup file
-	'PhanUndeclaredGlobalVariable',
-	# False positive (MediaWiki\MediaWikiServices::getActorNormalization calls in various maintenance scripts)
-	'PhanUndeclaredFunction',
 	# Tracked as T183072 (sorta anyway)
 	'PhanParamSignatureMismatch',
 	# False positive, NS_FANTAG is defined when FanBoxes is defined and it's only called in such a case
@@ -60,6 +56,10 @@ $cfg['suppress_issue_types'] = array_merge( $cfg['suppress_issue_types'], [
 	'PhanUndeclaredClassMethod',
 	# This is just legit noise:
 	'PhanUndeclaredVariableDim',
+	# Temporary while phan work is ongoing
+	# (I want to be able to have the few inline suppressions ready even if
+	# I haven't fixed all the issues of a certain issue type)
+	'UnusedPluginSuppression',
 ] );
 
 return $cfg;

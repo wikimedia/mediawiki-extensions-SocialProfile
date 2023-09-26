@@ -439,6 +439,7 @@ class UserStatsTrack {
 				$level_number_after = $user_level->getLevelNumber();
 
 				// Check if the user advanced to a new level on this update
+				// @phan-suppress-next-line PhanPossiblyUndeclaredVariable False positive, $level_number_before IS set
 				if ( $level_number_after > $level_number_before ) {
 					$m = new UserSystemMessage();
 					$m->addMessage(

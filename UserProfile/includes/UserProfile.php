@@ -24,11 +24,6 @@ class UserProfile {
 	public $user_name;
 
 	/**
-	 * @var Unused remove me?
-	 */
-	public $profile;
-
-	/**
 	 * @var int used in getProfileComplete()
 	 */
 	public $profile_fields_count;
@@ -196,8 +191,8 @@ class UserProfile {
 	function formatBirthday( $birthday, $showYear = true ) {
 		$dob = explode( '-', $birthday );
 		if ( count( $dob ) == 3 ) {
-			$month = $dob[1];
-			$day = $dob[2];
+			$month = (int)$dob[1];
+			$day = (int)$dob[2];
 			if ( !$showYear ) {
 				if ( $dob[1] == '00' && $dob[2] == '00' ) {
 					return '';
@@ -205,7 +200,7 @@ class UserProfile {
 					return date( 'F jS', mktime( 0, 0, 0, $month, $day ) );
 				}
 			}
-			$year = $dob[0];
+			$year = (int)$dob[0];
 			if ( $dob[0] == '00' && $dob[1] == '00' && $dob[2] == '00' ) {
 				return '';
 			} else {
@@ -221,7 +216,7 @@ class UserProfile {
 	 * Currently unused, I think that this might've been used in some older
 	 * ArmchairGM code, but this looks useful enough to be kept around.
 	 *
-	 * @return int
+	 * @return float
 	 */
 	public function getProfileComplete() {
 		$complete_count = 0;

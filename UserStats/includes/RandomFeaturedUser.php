@@ -76,6 +76,9 @@ class RandomFeaturedUser {
 
 		$user = User::newFromActorId( $random_user['actor'] );
 
+		// The default value is basically this (instead of 0)
+		$points = 1000;
+
 		if ( $wgRandomFeaturedUser['points'] == true ) {
 			$stats = new UserStats( $user );
 			$stats_data = $stats->getUserStats();
