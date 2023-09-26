@@ -192,17 +192,11 @@ class TopFansByStat extends UnlistedSpecialPage {
 			$commentIcon = $avatar->getAvatarURL();
 
 			// Stats row
-			// TODO: opinion_average isn't currently working, so it's not enabled in menus
-			if ( $statistic == 'opinion_average' ) {
-				$statistics_row = number_format( $row->opinion_average, 2 );
-				$lowercase_statistics_name = 'percent';
-			} else {
-				$statistics_row = number_format( $user['stat'] );
-				$lowercase_statistics_name = $lang->lc( $this->msg(
-					"top-fans-stats-{$fixedStatistic}",
-					$user['stat']
-				)->parse() );
-			}
+			$statistics_row = number_format( $user['stat'] );
+			$lowercase_statistics_name = $lang->lc( $this->msg(
+				"top-fans-stats-{$fixedStatistic}",
+				$user['stat']
+			)->parse() );
 
 			$output .= '<div class="top-fan-row">
 				<span class="top-fan-num">' . $x . '.</span>
