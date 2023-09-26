@@ -25,7 +25,9 @@ class PurgeAvatarKeysFromMemcached extends Maintenance {
 	}
 
 	public function execute() {
-		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		$services = MediaWikiServices::getInstance();
+		$cache = $services->getMainWANObjectCache();
+		$userFactory = $services->getUserFactory();
 
 		if ( !$this->hasOption( 'all' ) ) {
 			// Figure out the user ID, either by using the supplied ID as-is or
@@ -37,7 +39,7 @@ class PurgeAvatarKeysFromMemcached extends Maintenance {
 			} elseif ( $this->hasOption( 'username' ) ) {
 				if ( method_exists( MediaWikiServices::class, 'getUserIdentityLookup' ) ) {
 					// MW 1.36+
-					$userIdentity = MediaWikiServices::getInstance()->getUserIdentityLookup()
+					$userIdentity = $services->getUserIdentityLookup()
 						->getUserIdentityByName( $this->getOption( 'username' ) );
 					$uid = $userIdentity ? $userIdentity->getId() : 0;
 				} else {
@@ -82,7 +84,9 @@ class PurgeAvatarKeysFromMemcached extends Maintenance {
 			);
 
 			foreach ( $res as $row ) {
-				$uid = $row->stats_user_id;
+				$actorId = $row->stats_actor;
+				$user = $userFactory->newFromActorId( $actorId );
+				$uid = $user->getId();
 				$avatar = new wAvatar( $uid, 's' /* this doesn't even matter but it's a non-optional param */ );
 
 				// User has a custom avatar? Oh goody!
