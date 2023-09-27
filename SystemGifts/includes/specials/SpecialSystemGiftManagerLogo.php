@@ -717,10 +717,10 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	<form id='uploadwarning' method='post' enctype='multipart/form-data' action='$action'>
 		<input type='hidden' name='gift_id' value=\"" . ( $this->gift_id ) . "\" />
 		<input type='hidden' name='wpIgnoreWarning' value='1' />
-		<input type='hidden' name='wpSessionKey' value=\"" . htmlspecialchars( $this->mSessionKey ) . "\" />
+		<input type='hidden' name='wpSessionKey' value=\"" . htmlspecialchars( (string)$this->mSessionKey ) . "\" />
 		<input type='hidden' name='wpUploadDescription' value=\"" . htmlspecialchars( $this->mUploadDescription ) . "\" />
 		<input type='hidden' name='wpDestFile' value=\"" . htmlspecialchars( $this->mDestFile ) . "\" />
-		<input type='hidden' name='wpWatchthis' value=\"" . htmlspecialchars( intval( $this->mWatchthis ) ) . "\" />
+		<input type='hidden' name='wpWatchthis' value=\"" . intval( $this->mWatchthis ) . "\" />
 	{$copyright}
 	<table>
 		<tr>

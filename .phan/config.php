@@ -33,7 +33,6 @@ $cfg['suppress_issue_types'] = array_merge( $cfg['suppress_issue_types'], [
 	'PhanUndeclaredVariable',
 	'PhanTypeMismatchReturn',
 	'PhanTypeMismatchProperty',
-	'PhanTypeMismatchArgumentInternal',
 	'PhanParamTooMany',
 	'PhanRedundantCondition',
 	'PhanParamReqAfterOpt',
