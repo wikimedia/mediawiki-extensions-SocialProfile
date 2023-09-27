@@ -18,7 +18,7 @@ class ViewSystemGifts extends SpecialPage {
 	 * @return bool
 	 */
 	function isListed() {
-		return (bool)$this->getUser()->isRegistered();
+		return $this->getUser()->isRegistered();
 	}
 
 	/**
@@ -178,7 +178,7 @@ class ViewSystemGifts extends SpecialPage {
 				} else {
 					$output .= $linkRenderer->makeLink(
 						$page_link,
-						$i,
+						(string)$i,
 						[],
 						[
 							'user' => $user_name,

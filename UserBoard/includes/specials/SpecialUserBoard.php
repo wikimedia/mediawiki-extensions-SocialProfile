@@ -33,7 +33,7 @@ class SpecialViewUserBoard extends SpecialPage {
 	 * @return bool
 	 */
 	function isListed() {
-		return (bool)$this->getUser()->isRegistered();
+		return $this->getUser()->isRegistered();
 	}
 
 	/**
@@ -273,7 +273,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				} else {
 					$output .= $linkRenderer->makeLink(
 						$this->getPageTitle(),
-						$i,
+						(string)$i,
 						[],
 						[
 							'user' => $user_name,
@@ -310,7 +310,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		} else {
 			if ( $currentUser->getName() == $user_name ) {
 				$can_post = true;
-				$user_name_to = htmlspecialchars( $user_name_2, ENT_QUOTES );
+				$user_name_to = htmlspecialchars( $user_name_2 ?? '', ENT_QUOTES );
 				$user_name_from = htmlspecialchars( $user_name, ENT_QUOTES );
 			}
 		}

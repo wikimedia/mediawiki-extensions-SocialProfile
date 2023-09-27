@@ -36,8 +36,9 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$this->checkReadOnly();
 
 		// Blocked through Special:Block? No access for you!
-		if ( $user->getBlock() ) {
-			throw new UserBlockedError( $user->getBlock() );
+		$block = $user->getBlock();
+		if ( $block ) {
+			throw new UserBlockedError( $block );
 		}
 
 		// Set the page title, robot policies, etc.
@@ -100,7 +101,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 				$count = 0;
 
 				foreach ( $user_ids_to as $user_id ) {
-					$recipient = User::newFromId( $user_id );
+					$recipient = User::newFromId( (int)$user_id );
 					$recipient->loadFromId();
 					$b->sendBoardMessage(
 						$user,

@@ -42,8 +42,8 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 	/**
 	 * Show the special page
 	 *
-	 * @param string|null $par
-	 * @return string HTML
+	 * @param int|null $par Gift ID, if any; needed to be able to use this special page properly
+	 * @return void
 	 */
 	public function execute( $par ) {
 		$out = $this->getOutput();
@@ -57,8 +57,9 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 		$this->checkReadOnly();
 
 		// If user is blocked, s/he doesn't need to access this page
-		if ( $user->getBlock() ) {
-			throw new UserBlockedError( $user->getBlock() );
+		$block = $user->getBlock();
+		if ( $block ) {
+			throw new UserBlockedError( $block );
 		}
 
 		// Set the robot policies, etc.
@@ -73,10 +74,10 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 
 		$this->gift_id = $request->getInt( 'gift_id', $par );
 
-		if ( !$this->gift_id || !is_numeric( $this->gift_id ) ) {
+		if ( !$this->gift_id ) {
 			$out->setPageTitle( $this->msg( 'ga-error-title' ) );
 			$out->addHTML( $this->msg( 'ga-error-message-invalid-link' )->escaped() );
-			return false;
+			return;
 		}
 
 		if (

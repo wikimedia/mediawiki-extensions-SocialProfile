@@ -36,8 +36,9 @@ class SystemGiftManager extends SpecialPage {
 		$this->checkReadOnly();
 
 		// If user is blocked, s/he doesn't need to access this page
-		if ( $user->getBlock() ) {
-			throw new UserBlockedError( $user->getBlock() );
+		$block = $user->getBlock();
+		if ( $block ) {
+			throw new UserBlockedError( $block );
 		}
 
 		// Set the page title, robot policies, etc.
@@ -55,7 +56,7 @@ class SystemGiftManager extends SpecialPage {
 				$gift_id = $g->addGift(
 					$request->getVal( 'gift_name' ),
 					$request->getVal( 'gift_description' ),
-					$request->getVal( 'gift_category' ),
+					$request->getInt( 'gift_category' ),
 					$request->getInt( 'gift_threshold' )
 				);
 				$out->addHTML(
@@ -69,7 +70,7 @@ class SystemGiftManager extends SpecialPage {
 					$gift_id,
 					$request->getVal( 'gift_name' ),
 					$request->getVal( 'gift_description' ),
-					$request->getVal( 'gift_category' ),
+					$request->getInt( 'gift_category' ),
 					$request->getInt( 'gift_threshold' )
 				);
 				$out->addHTML(

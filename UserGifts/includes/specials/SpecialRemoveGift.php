@@ -42,7 +42,7 @@ class RemoveGift extends UnlistedSpecialPage {
 		$rel = new UserGifts( $user );
 
 		// Make sure that we have a gift ID, can't do anything without that
-		if ( !$this->gift_id || !is_numeric( $this->gift_id ) ) {
+		if ( !$this->gift_id ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
 			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-invalid-link' )->plain() ) );
 			return;
