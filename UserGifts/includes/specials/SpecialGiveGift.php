@@ -238,7 +238,7 @@ class GiveGift extends SpecialPage {
 
 		$giftId = $this->getRequest()->getInt( 'gift_id' );
 
-		if ( !$giftId || !is_numeric( $giftId ) ) {
+		if ( !$giftId ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
 			$out->addHTML( $this->msg( 'g-error-message-invalid-link' )->escaped() );
 			return '';
@@ -366,11 +366,7 @@ class GiveGift extends SpecialPage {
 		$linkRenderer = $this->getLinkRenderer();
 		$out = $this->getOutput();
 
-		$page = $this->getRequest()->getInt( 'page' );
-		if ( !$page || !is_numeric( $page ) ) {
-			$page = 1;
-		}
-
+		$page = $this->getRequest()->getInt( 'page', 1 );
 		$per_page = 24;
 		$per_row = $wgGiveGiftPerRow;
 		if ( !$per_row ) {

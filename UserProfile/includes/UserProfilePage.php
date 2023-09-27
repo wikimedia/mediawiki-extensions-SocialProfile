@@ -1551,7 +1551,7 @@ class UserProfilePage extends Article {
 			$gifts = $data;
 		}
 
-		$gift_count = $g->getGiftCountByUsername( $this->profileOwner );
+		$gift_count = $g->getGiftCountByUsername();
 		$gift_link = SpecialPage::getTitleFor( 'ViewGifts' );
 		$per_row = 4;
 

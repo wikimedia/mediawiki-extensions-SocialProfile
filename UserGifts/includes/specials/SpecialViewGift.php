@@ -34,7 +34,7 @@ class ViewGift extends UnlistedSpecialPage {
 		] );
 
 		$giftId = $this->getRequest()->getInt( 'gift_id' );
-		if ( !$giftId || !is_numeric( $giftId ) ) {
+		if ( !$giftId ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
 			$out->addHTML( $this->msg( 'g-error-message-invalid-link' )->escaped() );
 			return;

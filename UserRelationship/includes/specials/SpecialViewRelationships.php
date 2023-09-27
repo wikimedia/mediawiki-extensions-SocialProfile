@@ -70,8 +70,8 @@ class SpecialViewRelationships extends SpecialPage {
 		 * Get query string variables
 		 */
 		$user_name = $request->getVal( 'user' );
-		$rel_type = $request->getInt( 'rel_type' );
-		$page = $request->getInt( 'page' );
+		$rel_type = $request->getInt( 'rel_type', 1 );
+		$page = $request->getInt( 'page', 1 );
 
 		// Support for friendly-by-default URLs (T191157)
 		$params = explode( '/', $params );
@@ -83,12 +83,6 @@ class SpecialViewRelationships extends SpecialPage {
 		/**
 		 * Set up config for page / default values
 		 */
-		if ( !$page || !is_numeric( $page ) ) {
-			$page = 1;
-		}
-		if ( !$rel_type || !is_numeric( $rel_type ) ) {
-			$rel_type = 1;
-		}
 		$per_page = 50;
 		$per_row = 2;
 

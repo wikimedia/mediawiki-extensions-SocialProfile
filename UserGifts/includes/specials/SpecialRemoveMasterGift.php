@@ -82,8 +82,9 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 		}
 
 		// If user is blocked, s/he doesn't need to access this page
-		if ( $user->getBlock() ) {
-			throw new UserBlockedError( $user->getBlock() );
+		$block = $user->getBlock();
+		if ( $block ) {
+			throw new UserBlockedError( $block );
 		}
 
 		// Set the page title, robot policies, etc.
@@ -94,7 +95,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 
 		$this->gift_id = $request->getInt( 'gift_id' );
 
-		if ( !$this->gift_id || !is_numeric( $this->gift_id ) ) {
+		if ( !$this->gift_id ) {
 			$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
 			$out->addHTML( htmlspecialchars( $this->msg( 'g-error-message-invalid-link' )->plain() ) );
 			return;

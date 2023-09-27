@@ -6,7 +6,7 @@ class ApiRelationshipResponse extends ApiBase {
 	public function execute() {
 		$main = $this->getMain();
 
-		$response = $main->getVal( 'response' );
+		$response = (int)$main->getVal( 'response' );
 		$requestId = (int)$main->getVal( 'id' );
 
 		$user = $this->getUser();

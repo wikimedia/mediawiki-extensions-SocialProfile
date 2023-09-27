@@ -105,6 +105,8 @@ trait UploadAvatarTrait {
 			// Get the image size, used in calculations later.
 			list( $origWidth, $origHeight, $typeCode ) = getimagesize( $imageSrc );
 
+			$ext = '';
+
 			switch ( $typeCode ) {
 				case '1':
 					$fullImage = imagecreatefromgif( $imageSrc );

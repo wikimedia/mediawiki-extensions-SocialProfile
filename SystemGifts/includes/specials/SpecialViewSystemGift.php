@@ -35,7 +35,7 @@ class ViewSystemGift extends UnlistedSpecialPage {
 		// If gift ID wasn't passed in the URL parameters or if it's not
 		// numeric, display an error message
 		$giftId = $this->getRequest()->getInt( 'gift_id' );
-		if ( !$giftId || !is_numeric( $giftId ) ) {
+		if ( !$giftId ) {
 			$out->setPageTitle( $this->msg( 'ga-error-title' ) );
 			$out->addHTML( $this->msg( 'ga-error-message-invalid-link' )->escaped() );
 			return;
