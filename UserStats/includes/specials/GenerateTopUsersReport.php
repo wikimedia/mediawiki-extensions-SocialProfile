@@ -338,6 +338,7 @@ class GenerateTopUsersReport extends SpecialPage {
 				EDIT_NEW | EDIT_FORCE_BOT
 			);
 		} else {
+			// @phan-suppress-next-line PhanUndeclaredMethod Removed in MW 1.41
 			$page->doEditContent(
 				$contentObj,
 				$summary,

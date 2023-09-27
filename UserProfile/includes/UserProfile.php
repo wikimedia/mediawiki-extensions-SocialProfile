@@ -90,6 +90,7 @@ class UserProfile {
 	public static function getCacheKey( $user ) {
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
+		// @phan-suppress-next-line PhanUndeclaredMethod Removed in MW 1.41
 		return $cache->makeKey( 'user', 'profile', 'info', 'actor_id', $user->getActorId() );
 	}
 

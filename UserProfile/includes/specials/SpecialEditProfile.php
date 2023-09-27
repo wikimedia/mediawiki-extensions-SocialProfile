@@ -122,6 +122,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 						EDIT_SUPPRESS_RC
 					);
 				} else {
+					// @phan-suppress-next-line PhanUndeclaredMethod Removed in MW 1.41
 					$page->doEditContent(
 						ContentHandler::makeContent( '', $title ),
 						'create user page',
@@ -386,7 +387,10 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 				'up_tv', 'up_music', 'up_books', 'up_video_games',
 				'up_magazines', 'up_snacks', 'up_drinks'
 			],
-			[ 'up_actor' => $tar->getActorId() ],
+			[
+				// @phan-suppress-next-line PhanUndeclaredMethod Removed in MW 1.41
+				'up_actor' => $tar->getActorId()
+			],
 			__METHOD__
 		);
 
@@ -475,7 +479,10 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 				'up_custom_1', 'up_custom_2', 'up_custom_3', 'up_custom_4',
 				'up_custom_5'
 			],
-			[ 'up_actor' => $tar->getActorId() ],
+			[
+				// @phan-suppress-next-line PhanUndeclaredMethod Removed in MW 1.41
+				'up_actor' => $tar->getActorId()
+			],
 			__METHOD__
 		);
 

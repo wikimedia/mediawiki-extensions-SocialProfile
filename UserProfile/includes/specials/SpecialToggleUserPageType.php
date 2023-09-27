@@ -141,6 +141,7 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 					'import user wiki'
 				);
 			} else {
+				// @phan-suppress-next-line PhanUndeclaredMethod Removed in MW 1.41
 				$user_wiki->doEditContent(
 					ContentHandler::makeContent( $user_page_content, $user_wiki_title ),
 					'import user wiki'

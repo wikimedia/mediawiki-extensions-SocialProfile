@@ -36,6 +36,7 @@ function incEditCount( WikiPage $wikiPage, $revision, $baseRevId, $user ) {
 	) {
 		if ( method_exists( $user, 'getActorId' ) ) {
 			// MediaWiki 1.35
+			// @phan-suppress-next-line PhanUndeclaredMethod Removed in MW 1.41
 			$actorId = $user->getActorId();
 		} else {
 			// MediaWiki 1.36+

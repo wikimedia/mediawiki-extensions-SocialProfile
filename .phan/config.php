@@ -25,7 +25,6 @@ $cfg['exclude_analysis_directory_list'] = array_merge(
 // Suppress EVERYTHING for now, we only care about running seccheck and fixing legacy code
 // suckage is a gigantic task for another day...
 $cfg['suppress_issue_types'] = array_merge( $cfg['suppress_issue_types'], [
-	'PhanUndeclaredMethod',
 	'PhanPluginDuplicateExpressionAssignmentOperation',
 	'PhanTypeMismatchArgument',
 	'PhanTypeMismatchArgumentProbablyReal',
