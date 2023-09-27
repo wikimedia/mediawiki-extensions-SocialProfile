@@ -81,11 +81,6 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		if ( $request->wasPosted() ) {
 			if ( $_SESSION['alreadysubmitted'] == false && !$request->getInt( 'response' ) ) {
 				$_SESSION['alreadysubmitted'] = true;
-				$rel->addRelationshipRequest(
-					$this->user_name_to, // @todo FIXME: should be a User and not a string...also not really defined here anymore?!
-					$this->relationship_type,
-					$request->getVal( 'message' )
-				);
 				$output = '<br /><span class="title">' .
 					$this->msg( 'ur-already-submitted' )->escaped() .
 					'</span><br /><br />';
