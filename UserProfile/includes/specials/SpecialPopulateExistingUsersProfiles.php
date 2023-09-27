@@ -38,8 +38,9 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 		$this->checkReadOnly();
 
 		// If user is blocked, they don't need to access this page
-		if ( $user->getBlock() ) {
-			throw new UserBlockedError( $user->getBlock() );
+		$block = $user->getBlock();
+		if ( $block ) {
+			throw new UserBlockedError( $block );
 		}
 
 		// Set the page title, robot policy, etc.

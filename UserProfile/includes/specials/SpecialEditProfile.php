@@ -40,8 +40,9 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		$this->checkReadOnly();
 
 		// No need to allow blocked users to access this page, they could abuse it, y'know.
-		if ( $user->getBlock() ) {
-			throw new UserBlockedError( $user->getBlock() );
+		$block = $user->getBlock();
+		if ( $block ) {
+			throw new UserBlockedError( $block );
 		}
 
 		// Set the page title, robot policies, etc.

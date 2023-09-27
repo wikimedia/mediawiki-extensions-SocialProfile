@@ -44,8 +44,9 @@ class GenerateTopUsersReport extends SpecialPage {
 		$this->checkReadOnly();
 
 		// Blocked through Special:Block? Tough luck.
-		if ( $user->getBlock() ) {
-			throw new UserBlockedError( $user->getBlock() );
+		$block = $user->getBlock();
+		if ( $block ) {
+			throw new UserBlockedError( $block );
 		}
 
 		// Set the page title, robot policy, etc.
@@ -333,6 +334,7 @@ class GenerateTopUsersReport extends SpecialPage {
 			// MW 1.36+
 			$page->doUserEditContent(
 				$contentObj,
+				// @phan-suppress-next-line PhanTypeMismatchArgumentNullable There's no way this can be null...
 				$user,
 				$summary,
 				EDIT_NEW | EDIT_FORCE_BOT

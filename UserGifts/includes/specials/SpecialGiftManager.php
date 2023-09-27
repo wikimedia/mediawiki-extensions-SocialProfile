@@ -48,8 +48,9 @@ class GiftManager extends SpecialPage {
 		$this->checkReadOnly();
 
 		// If the user is blocked, don't allow access to them
-		if ( $user->getBlock() ) {
-			throw new UserBlockedError( $user->getBlock() );
+		$block = $user->getBlock();
+		if ( $block ) {
+			throw new UserBlockedError( $block );
 		}
 
 		// Set the page title, robot policies, etc.

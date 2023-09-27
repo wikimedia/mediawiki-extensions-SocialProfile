@@ -178,6 +178,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$block = $user->getBlock();
 		if ( $block || $user->isBlockedFromUpload() ) {
 			throw new UserBlockedError(
+				// @phan-suppress-next-line PhanTypeMismatchArgumentNullable Fake news!
 				$block,
 				$user,
 				$this->getLanguage(),
