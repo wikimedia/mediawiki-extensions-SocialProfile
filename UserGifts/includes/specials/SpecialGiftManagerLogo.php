@@ -576,7 +576,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		}
 
 		if ( $type === 0 ) {
-			throw new FatalError( $this->msg( 'filecopyerror', $tempName, $stash )->escaped() ); # FIXME: undefined variable $stash
+			throw new FatalError( $this->msg( 'filecopyerror', $tempName, $dest )->escaped() );
 		}
 
 		return $type;
