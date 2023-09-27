@@ -3,7 +3,8 @@
 class UserLevel {
 	/** @var int */
 	public $level_number = 0;
-	/** @var string */
+
+	/** @var string Name of the current level the user is on */
 	public $level_name;
 
 	/**
@@ -27,15 +28,29 @@ class UserLevel {
 	 */
 	public $next_level_points_needed;
 
+	/**
+	 * @param int $points Amount of social points the user has,
+	 *   usually fetched by calling $stats->getUserStats() where $stats
+	 *   is an instance of UserStats initialized with the desired User
+	 *   (object) passed to its constructor and then passing the 'points'
+	 *   array key from the return value of the aforementioned into this
+	 *   function
+	 */
 	function __construct( $points ) {
 		global $wgUserLevels;
 		$this->levels = $wgUserLevels;
-		$this->points = (int)str_replace( ',', '', $points );
+		$this->points = (int)str_replace( ',', '', (string)$points );
 		if ( $this->levels ) {
 			$this->setLevel();
 		}
 	}
 
+	/**
+	 * Iterate over $wgUserLevels and set the correct class member variables
+	 * based on the data we're working with.
+	 *
+	 * @return string|void Empty string sometimes but usually nothing
+	 */
 	private function setLevel() {
 		$this->level_number = 1;
 		foreach ( $this->levels as $level_name => $level_points_needed ) {
@@ -54,22 +69,48 @@ class UserLevel {
 		}
 	}
 
+	/**
+	 * Get the name of the user's _current_ level.
+	 *
+	 * @return string
+	 */
 	public function getLevelName() {
 		return $this->level_name;
 	}
 
+	/**
+	 * Get the level number of the user's current level.
+	 *
+	 * @return int
+	 */
 	public function getLevelNumber() {
 		return $this->level_number;
 	}
 
+	/**
+	 * Get the name of the next level the user can advance to.
+	 *
+	 * @return string
+	 */
 	public function getNextLevelName() {
 		return $this->next_level_name;
 	}
 
+	/**
+	 * How many points does the user need to advance to the next level?
+	 *
+	 * @return int
+	 */
 	public function getPointsNeededToAdvance() {
 		return $this->next_level_points_needed;
 	}
 
+	/**
+	 * Get the minimum amount of points needed to reach the level the user
+	 * is currently at.
+	 *
+	 * @return int
+	 */
 	public function getLevelMinimum() {
 		return $this->levels[$this->level_name];
 	}
