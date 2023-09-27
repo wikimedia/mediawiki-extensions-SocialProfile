@@ -187,7 +187,7 @@ class UserProfilePage extends Article {
 			] );
 		}
 		$out->addHTML( $this->getCasualGames() );
-		$out->addHTML( $this->getUserBoard( $context->getUser() ) );
+		$out->addHTML( $this->getUserBoard() );
 
 		if ( !MediaWikiServices::getInstance()->getHookContainer()->run( 'UserProfileEndRight', [ &$userProfilePage ] ) ) {
 			$logger->debug( "{method}: UserProfileEndRight messed up profile!\n", [
