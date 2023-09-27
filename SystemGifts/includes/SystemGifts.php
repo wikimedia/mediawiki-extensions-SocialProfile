@@ -178,7 +178,7 @@ class SystemGifts {
 	 * @param int $id System gift unique ID number
 	 * @param string|null $name Gift name
 	 * @param string|null $description Gift description
-	 * @param string|null $category
+	 * @param int|null $category See SystemGifts::$categories
 	 * @param int $threshold
 	 */
 	public function updateGift( $id, $name, $description, $category, $threshold ) {
