@@ -19,7 +19,7 @@ class UserLevel {
 	public $levels;
 
 	/**
-	 * @var int name of the next level
+	 * @var string name of the next level
 	 */
 	public $next_level_name;
 

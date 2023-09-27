@@ -40,13 +40,13 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	public $mUpload;
 	/** @var string|null */
 	public $mOname;
-	/** @var string|null */
+	/** @var int|bool|null */
 	public $mSessionKey;
 	/** @var bool */
 	public $mStashed;
 	/** @var string|null */
 	public $mDestFile;
-	/** @var bool|null */
+	/** @var string|null */
 	public $mSavedFile;
 	/** @var bool|null */
 	public $mWatchthis;
@@ -610,7 +610,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 * Returns a key value which will be passed through a form
 	 * to pick up the path info on a later invocation.
 	 *
-	 * @return int
+	 * @return int|bool Boolean false on failure
 	 */
 	function stashSession() {
 		$stash = $this->saveTempUploadedFile(

@@ -13,7 +13,7 @@ trait UploadAvatarTrait {
 	/** @var string|null Path to the temporary images before the resized thumbnails are generated */
 	protected $mTempPath;
 
-	/** @var MWFileProps */
+	/** @var array File properties detected by MWFileProps; basically unused, see verifyUpload() */
 	protected $mFileProps;
 
 	/** @var string|null Apparently always empty, see verifyUpload() for details */
