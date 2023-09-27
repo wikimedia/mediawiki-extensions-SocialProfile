@@ -1140,7 +1140,7 @@ class UserActivity {
 			$this->activityLines = [];
 		}
 
-		if ( isset( $this->activityLines ) && is_array( $this->activityLines ) ) {
+		if ( !empty( $this->activityLines ) && is_array( $this->activityLines ) ) {
 			usort( $this->activityLines, [ 'UserActivity', 'sortItems' ] );
 		}
 
