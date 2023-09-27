@@ -257,7 +257,7 @@ class UserBoard {
 	 * between two given users).
 	 *
 	 * @param User $user User object
-	 * @param User|null $user_2 User object representing the second user; only used
+	 * @param User|int $user_2 User object representing the second user; only used
 	 * in board-to-board stuff
 	 * @param int $limit Used to build the LIMIT and OFFSET for the SQL query
 	 * @param int $page Used to build the LIMIT and OFFSET for the SQL query
