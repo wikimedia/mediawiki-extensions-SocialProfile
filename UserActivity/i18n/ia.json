@@ -17,7 +17,7 @@
 	"useractivity-group-comment": "{{PLURAL:$1|un commento|$1 commentos}}",
 	"useractivity-group-user_message": "{{PLURAL:$1|un message|$1 messages}}",
 	"useractivity-group-friend": "{{PLURAL:$1|un amico|$1 amicos}}",
-	"useractivity-network-thought": "<b><a href=\"$4\">$2</a></b> ha un pensata pro le rete $3",
+	"useractivity-network-thought": "'''[[User:$1|$2]]''' ha un pensata pro le rete $3",
 	"useractivity-siteactivity": "Activitate del sito",
 	"useractivity-title": "Activitate de amicos",
 	"useractivity-user_message": "$1 ha inviate {{PLURAL:$4|un message|messages}} a $3",

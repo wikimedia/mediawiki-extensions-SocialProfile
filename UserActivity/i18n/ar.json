@@ -18,7 +18,7 @@
 	"useractivity-group-comment": "{{PLURAL:$1|تعليق واحد|$1 تعليق}}",
 	"useractivity-group-user_message": "{{PLURAL:$1|رسالة واحدة|$1 رسالة}}",
 	"useractivity-group-friend": "{{PLURAL:$1|صديق واحد|$1 صديق}}",
-	"useractivity-network-thought": "<b><a href=\"$4\">$2</a></b> لديه فكرة عن شبكة $3",
+	"useractivity-network-thought": "'''[[User:$1|$2]]''' لديه فكرة عن شبكة $3",
 	"useractivity-siteactivity": "نشاط الموقع",
 	"useractivity-title": "نشاط الأصدقاء",
 	"useractivity-user_message": "$1 {{PLURAL:$4|أرسل رسالة إلى|أرسل رسائل إلى}} $3",

@@ -17,7 +17,7 @@
 	"useractivity-group-comment": "{{PLURAL:$1|en komentar|$1 komentarja|$1 komentarji|$1 komentarjev}}",
 	"useractivity-group-user_message": "{{PLURAL:$1|eno sporočilo|dve sporočili|$1 sporočila|$1 sporočil}}",
 	"useractivity-group-friend": "{{PLURAL:$1|en prijatelj|$1 prijatelja|$1 prijatelji|$1 prijateljev}}",
-	"useractivity-network-thought": "<b><a href=\"$4\">$2</a></b> ima misel za omrežje $3",
+	"useractivity-network-thought": "'''[[User:$1|$2]]''' ima misel za omrežje $3",
 	"useractivity-siteactivity": "Aktivnost v projektu",
 	"useractivity-title": "Aktivnost prijateljev",
 	"useractivity-user_message": "$1 {{PLURAL:$4|je {{GENDER:$1|poslal|poslala|poslal_a}} sporočilo osebi|je {{GENDER:$1|poslal|poslala|poslal_a}} sporočila osebi}} $3",

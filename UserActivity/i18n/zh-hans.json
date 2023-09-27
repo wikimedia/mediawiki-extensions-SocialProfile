@@ -21,7 +21,7 @@
 	"useractivity-group-comment": "{{PLURAL:$1|1个评论|$1个评论}}",
 	"useractivity-group-user_message": "$1条信息",
 	"useractivity-group-friend": "{{PLURAL:$1|1位好友|$1位好友}}",
-	"useractivity-network-thought": "<b><a href=\"$4\">$2</a></b>对$3网络有看法",
+	"useractivity-network-thought": "'''[[User:$1|$2]]'''对$3网络有看法",
 	"useractivity-siteactivity": "站点动态",
 	"useractivity-title": "好友动态",
 	"useractivity-user_message": "$1向$3{{PLURAL:$4|发送了1条信息|发送了信息}}",

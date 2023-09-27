@@ -17,7 +17,7 @@
 	"useractivity-group-comment": "{{PLURAL:$1|jedan komentar|$1 komentara}}",
 	"useractivity-group-user_message": "{{PLURAL:$1|jedna poruka|$1 poruke|$1 poruka}}",
 	"useractivity-group-friend": "{{PLURAL:$1|jedan prijatelj|$1 prijatelja}}",
-	"useractivity-network-thought": "<b><a href=\"$4\">$2</a></b> ima ideju za mrežu $3",
+	"useractivity-network-thought": "'''[[User:$1|$2]]''' ima ideju za mrežu $3",
 	"useractivity-siteactivity": "Aktivnost sajta",
 	"useractivity-title": "Aktivnost prijatelja",
 	"useractivity-user_message": "$1 {{PLURAL:$4|je poslao poruku|je poslao poruke}} $3",

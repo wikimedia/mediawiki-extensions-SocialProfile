@@ -17,7 +17,7 @@
 	"useractivity-group-comment": "{{PLURAL:$1|'nu commende|$1 commende}}",
 	"useractivity-group-user_message": "{{PLURAL:$1|'nu messàgge|$1 messàgge}}",
 	"useractivity-group-friend": "{{PLURAL:$1|'n'amiche|$1 amice}}",
-	"useractivity-network-thought": "<b><a href=\"$4\">$2</a></b> ave 'nu penziere pa rezze $3",
+	"useractivity-network-thought": "'''[[User:$1|$2]]''' ave 'nu penziere pa rezze $3",
 	"useractivity-siteactivity": "Attività d'u site",
 	"useractivity-title": "Attività de l'amice",
 	"useractivity-user_message": "$1 ave mannate {{PLURAL:$4|'nu messàgge|messàgge}} a $3",

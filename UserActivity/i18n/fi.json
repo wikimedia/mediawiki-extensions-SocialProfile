@@ -18,7 +18,7 @@
 	"useractivity-group-comment": "{{PLURAL:$1|yksi kommentti|$1 kommenttia}}",
 	"useractivity-group-user_message": "{{PLURAL:$1|yksi viesti|$1 viestiä}}",
 	"useractivity-group-friend": "{{PLURAL:$1|yksi ystävä|$1 ystävät}}",
-	"useractivity-network-thought": "Käyttäjällä <b><a href=\"$4\">$2</a></b> on ajatus verkostoon $3 liittyen",
+	"useractivity-network-thought": "Käyttäjällä '''[[User:$1|$2]]''' on ajatus verkostoon $3 liittyen",
 	"useractivity-siteactivity": "Sivuston aktiivisuus",
 	"useractivity-title": "Ystävien aktiivisuus",
 	"useractivity-user_message": "$1 {{PLURAL:$4|lähetti viestin käyttäjälle|lähetti viestejä käyttäjille}} $3",

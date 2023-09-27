@@ -18,7 +18,7 @@
 	"useractivity-group-comment": "{{PLURAL:$1|én kommentar|$1 kommentarer}}",
 	"useractivity-group-user_message": "{{PLURAL:$1|én beskjed|$1 beskjeder}}",
 	"useractivity-group-friend": "{{PLURAL:$1|én venn|$1 venner}}",
-	"useractivity-network-thought": "<b><a href=\"$4\">$2</a></b> har en tanke for $3-nettverket",
+	"useractivity-network-thought": "'''[[User:$1|$2]]''' har en tanke for $3-nettverket",
 	"useractivity-siteactivity": "Sideaktivitet",
 	"useractivity-title": "Venners aktivitet",
 	"useractivity-user_message": "$1 {{PLURAL:$4|sendte en beskjed til|sendte flere beskjeder til}} $3",
