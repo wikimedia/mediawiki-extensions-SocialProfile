@@ -381,6 +381,9 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 				}
 			}
 		} else { // ImageMagick is not enabled, so fall back to PHP's GD library
+			$fullImage = '';
+			$ext = '';
+
 			// Get the image size, used in calculations later.
 			switch ( $typeCode ) {
 				case '1':
@@ -408,7 +411,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			// Resize the image.
 			imagecopyresampled(
 				$tnImage,
-				// @phan-suppress-next-line PhanPossiblyUndeclaredVariable
+				// @phan-suppress-next-line PhanTypeMismatchArgumentNullableInternal
 				$fullImage,
 				0, 0, 0, 0,
 				$origWidth * $scale,
@@ -427,7 +430,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			}
 
 			// Clean up.
-			// @phan-suppress-next-line PhanPossiblyUndeclaredVariable
+			// @phan-suppress-next-line PhanTypeMismatchArgumentNullableInternal
 			imagedestroy( $fullImage );
 			imagedestroy( $tnImage );
 

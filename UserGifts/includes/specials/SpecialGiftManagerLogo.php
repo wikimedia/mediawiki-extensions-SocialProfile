@@ -411,6 +411,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		} else {
 			// ImageMagick is not enabled, so fall back to PHP's GD library
 			// Get the image size, used in calculations later.
+			$fullImage = '';
 			switch ( $typeCode ) {
 				case '1':
 					$fullImage = imagecreatefromgif( $imageSrc );
@@ -437,6 +438,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 			// Resize the image.
 			imagecopyresampled(
 				$tnImage,
+				// @phan-suppress-next-line PhanTypeMismatchArgumentNullableInternal
 				$fullImage,
 				0, 0, 0, 0,
 				$origWidth * $scale,
@@ -455,6 +457,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 			}
 
 			// Clean up.
+			// @phan-suppress-next-line PhanTypeMismatchArgumentNullableInternal
 			imagedestroy( $fullImage );
 			imagedestroy( $tnImage );
 

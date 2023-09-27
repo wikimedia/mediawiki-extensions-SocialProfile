@@ -105,6 +105,7 @@ trait UploadAvatarTrait {
 			// Get the image size, used in calculations later.
 			list( $origWidth, $origHeight, $typeCode ) = getimagesize( $imageSrc );
 
+			$fullImage = '';
 			$ext = '';
 
 			switch ( $typeCode ) {
@@ -133,6 +134,7 @@ trait UploadAvatarTrait {
 			// Resize the image.
 			imagecopyresampled(
 				$tnImage,
+				// @phan-suppress-next-line PhanTypeMismatchArgumentNullableInternal
 				$fullImage,
 				0, 0, 0, 0,
 				$origWidth * $scale,
@@ -151,6 +153,7 @@ trait UploadAvatarTrait {
 			}
 
 			// Clean up.
+			// @phan-suppress-next-line PhanTypeMismatchArgumentNullableInternal
 			imagedestroy( $fullImage );
 			imagedestroy( $tnImage );
 

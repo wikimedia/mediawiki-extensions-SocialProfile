@@ -1007,6 +1007,7 @@ class UserProfilePage extends Article {
 		$user_social_profile = Title::makeTitle( NS_USER_PROFILE, $this->profileOwner->getName() );
 		$user_wiki = Title::makeTitle( NS_USER_WIKI, $this->profileOwner->getName() );
 
+		$relationship = false;
 		if ( !$this->profileOwner->isAnon() ) {
 			$relationship = UserRelationship::getUserRelationshipByID(
 				$this->profileOwner,
@@ -1362,6 +1363,7 @@ class UserProfilePage extends Article {
 			}
 
 			$items_html_type = [];
+			$user_link_2 = '';
 
 			foreach ( $activity as $item ) {
 				$item_html = '';
@@ -1935,6 +1937,7 @@ class UserProfilePage extends Article {
 			<div class="user-fanbox-container clearfix">';
 
 			$x = 1;
+			$fantag_image_tag = '';
 			$tagParser = $services->getParserFactory()->create();
 			$repoGroup = $services->getRepoGroup();
 			foreach ( $fanboxes as $fanbox ) {
