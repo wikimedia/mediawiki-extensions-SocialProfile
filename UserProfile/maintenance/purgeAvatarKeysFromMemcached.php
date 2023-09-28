@@ -48,10 +48,10 @@ class PurgeAvatarKeysFromMemcached extends Maintenance {
 				}
 			}
 			if ( !$uid ) {
-				$this->error(
+				$this->fatalError(
 					'Must specify either a user ID or a user name when not running ' .
 					"this script with the --all option!\n",
-					true
+					1
 				);
 			}
 
