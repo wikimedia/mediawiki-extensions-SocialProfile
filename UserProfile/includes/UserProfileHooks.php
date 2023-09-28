@@ -148,6 +148,7 @@ class UserProfileHooks {
 					// MW 1.38+
 					$out->disableClientCache();
 				} else {
+					// @phan-suppress-next-line PhanParamTooMany The arg is there for pre-1.38 MWs
 					$out->enableClientCache( false );
 				}
 
@@ -212,7 +213,11 @@ class UserProfileHooks {
 		// Need a RevisionRecord object
 		$oldRevision = $differenceEngine->getOldRevision();
 
-		$oldRevisionHeader = $differenceEngine->getRevisionHeader( $oldRevision, 'complete', 'old' );
+		// Core MW DifferenceEngine#getRevisionHeader never had a 3rd parameter.
+		// wikiHow introduced it for a custom hook of theirs, which hasn't (yet)
+		// been upstreamed. If uncommented, this would cause a PhanParamTooMany
+		// issue, but no adverse functionality whatsoever.
+		$oldRevisionHeader = $differenceEngine->getRevisionHeader( $oldRevision, 'complete'/*, 'old'*/ );
 
 		$oldRevUser = $oldRevision->getUser();
 		if ( $oldRevUser ) {
@@ -269,8 +274,12 @@ class UserProfileHooks {
 		// Need a RevisionRecord object
 		$newRevision = $differenceEngine->getNewRevision();
 
+		// Core MW DifferenceEngine#getRevisionHeader never had a 3rd parameter.
+		// wikiHow introduced it for a custom hook of theirs, which hasn't (yet)
+		// been upstreamed. If uncommented, this would cause a PhanParamTooMany
+		// issue, but no adverse functionality whatsoever.
 		$newRevisionHeader =
-			$differenceEngine->getRevisionHeader( $newRevision, 'complete', 'new' ) .
+			$differenceEngine->getRevisionHeader( $newRevision, 'complete'/*, 'new'*/ ) .
 			' ' . implode( ' ', $formattedRevisionTools );
 
 		$newRevUser = $newRevision->getUser();
