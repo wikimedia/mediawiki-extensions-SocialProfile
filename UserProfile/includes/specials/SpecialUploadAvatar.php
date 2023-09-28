@@ -99,7 +99,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 			$sessionKey = $stashStatus->getValue()->getFileKey();
 			$uploadWarning = 'upload-tryagain';
 		} else {
-			$sessionKey = null;
+			$sessionKey = '';
 			$uploadWarning = 'upload-tryagain-nostash';
 		}
 		$message = // '<h2>' . $this->msg( 'uploaderror' )->escaped() . "</h2>\n" .
