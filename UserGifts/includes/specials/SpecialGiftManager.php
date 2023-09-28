@@ -366,6 +366,7 @@ class GiftManager extends SpecialPage {
 			( isset( $gift['gift_description'] ) ? htmlspecialchars( $gift['gift_description'] ) : '' ) . '</textarea></td>
 		</tr>';
 		if ( $gift_id ) {
+			// @phan-suppress-next-line PhanTypeArraySuspiciousNullable $gift de facto can't be null
 			$creator = User::newFromActorId( $gift['creator_actor'] );
 			$form .= '<tr>
 			<td class="view-form">' .

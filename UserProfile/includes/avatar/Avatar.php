@@ -116,6 +116,7 @@ class wAvatar {
 						$wgAvatarKey . '_', $this->user_id, $this->avatar_size, $ext
 					);
 
+					// @phan-suppress-next-line PhanTypeArraySuspiciousNullable Not sure why phan is unhappy
 					$avatar_filename .= '?r=' . $backend->getFileBackend()->getFileStat( [
 						'src' => $backend->getContainerStoragePath() . '/' . $avatar_filename
 					] )['mtime'];
