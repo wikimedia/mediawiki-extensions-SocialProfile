@@ -66,7 +66,7 @@ class SocialProfileFileBackend {
 	 * Get the path to an image (e.g. avatar, award or gift one).
 	 *
 	 * @param string $prefix The prefix to use that goes in front of $id
-	 * @param string $id The id of the stored image
+	 * @param int $id User ID for avatars; internal identifier (sg_id/ug_id) for awards/gifts
 	 * @param string $size Size of the image to get
 	 * - s for small
 	 * - m for medium
@@ -87,7 +87,7 @@ class SocialProfileFileBackend {
 	 * Get the file name of an image.
 	 *
 	 * @param string $prefix The prefix to use that goes in front of $id
-	 * @param string $id The id of the stored image
+	 * @param int $id User ID for avatars; internal identifier (sg_id/ug_id) for awards/gifts
 	 * @param string $size Size of the image to get
 	 * - s for small
 	 * - m for medium
@@ -98,7 +98,7 @@ class SocialProfileFileBackend {
 	 * @return string file name
 	 */
 	public function getFileName( $prefix, $id, $size, $ext ) {
-		return $prefix . $id . '_' . $size . '.' . $ext;
+		return $prefix . (string)$id . '_' . $size . '.' . $ext;
 	}
 
 	/**
@@ -114,7 +114,7 @@ class SocialProfileFileBackend {
 	 * Get the HTTP URL for a file.
 	 *
 	 * @param string $prefix The prefix to use that goes in front of $id
-	 * @param string $id The id of the stored image
+	 * @param int $id User ID for avatars; internal identifier (sg_id/ug_id) for awards/gifts
 	 * @param string $size Size of the image to get
 	 * - s for small
 	 * - m for medium
@@ -159,7 +159,7 @@ class SocialProfileFileBackend {
 	 * Check if a file exists in the given backend.
 	 *
 	 * @param string $prefix The prefix to use that goes in front of $id
-	 * @param string $id The id of the stored image
+	 * @param int $id User ID for avatars; internal identifier (sg_id/ug_id) for awards/gifts
 	 * @param string $size Size of the image to get
 	 * - s for small
 	 * - m for medium
