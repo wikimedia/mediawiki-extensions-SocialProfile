@@ -39,7 +39,7 @@ class SiteActivityHook {
 		if ( !$data ) {
 			$logger->debug( "Got new site activity from DB\n" );
 
-			$rel = new UserActivity( '', 'ALL', $fixedLimit );
+			$rel = new UserActivity( null, 'ALL', $fixedLimit );
 
 			$rel->setActivityToggle( 'show_votes', 0 );
 			$activity = $rel->getActivityListGrouped();
