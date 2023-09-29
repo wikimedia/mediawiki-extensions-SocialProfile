@@ -68,7 +68,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		$ub_messages_show = 25;
 		$user_name = $userFromURL = $request->getVal( 'user', $par );
 		$user_name_2 = $request->getVal( 'conv' );
-		$user_2 = null; // Prevent E_NOTICE
+		$user_2 = 0; // Prevent E_NOTICE
 		$page = $request->getInt( 'page', 1 );
 		$output = '';
 
