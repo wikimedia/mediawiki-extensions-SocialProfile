@@ -563,6 +563,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			<p class="profile-update-unit"><input type="text" size="25" name="email" id="email" value="' . htmlspecialchars( $email, ENT_QUOTES ) . '"/>';
 		if ( !$user->mEmailAuthenticated ) {
 			$confirm = SpecialPage::getTitleFor( 'Confirmemail' );
+			$form .= '<br />';
 			$form .= " <a href=\"{$confirm->getFullURL()}\">" . $this->msg( 'confirmemail' )->escaped() . '</a>';
 		}
 		$form .= '</p>
