@@ -29,7 +29,6 @@ $cfg['suppress_issue_types'] = array_merge( $cfg['suppress_issue_types'], [
 	'PhanTypeMismatchArgumentProbablyReal',
 	'PhanParamReqAfterOpt',
 	'PhanTypeVoidAssignment',
-	'PhanSuspiciousValueComparison',
 	# This is happening because the vendor dir is not getting properly ignored:
 	'PhanRedefinedClassReference',
 	# Tracked as T183072 (sorta anyway)

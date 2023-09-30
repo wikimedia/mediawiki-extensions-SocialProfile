@@ -547,7 +547,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			}
 		}
 
-		if ( $type < 0 ) {
+		if ( !$type ) {
 			throw new FatalError( $this->msg( 'filecopyerror', $tempName, /*$stash*/'' )->escaped() );
 		}
 
