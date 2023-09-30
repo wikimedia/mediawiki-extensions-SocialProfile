@@ -214,7 +214,7 @@ class RemoveAvatar extends SpecialPage {
 			->setMethod( 'get' )
 			->setName( 'avatar' )
 			->setSubmitTextMsg( 'search' )
-			->setWrapperLegend( null )
+			->setWrapperLegend( '' )
 			->prepareForm()
 			->displayForm( false );
 		return true;

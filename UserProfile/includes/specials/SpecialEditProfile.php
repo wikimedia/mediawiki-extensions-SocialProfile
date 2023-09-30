@@ -161,7 +161,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		$htmlForm = HTMLForm::factory( 'ooui', $formDescriptor, $this->getContext() );
 		$htmlForm
 			->setSubmitTextMsg( 'edit' )
-			->setWrapperLegend( null )
+			->setWrapperLegend( '' )
 			->setAction( $actionUrl )
 			->setId( 'mw-socialprofile-edit-profile-userform' )
 			->setMethod( 'get' )
