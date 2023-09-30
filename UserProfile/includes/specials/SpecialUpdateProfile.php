@@ -301,27 +301,13 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$request = $this->getRequest();
 		$user = $this->getUser();
 
-		$notify_friend = $request->getVal( 'notify_friend' );
-		$notify_gift = $request->getVal( 'notify_gift' );
-		$notify_challenge = $request->getVal( 'notify_challenge' );
-		$notify_honorifics = $request->getVal( 'notify_honorifics' );
-		$notify_message = $request->getVal( 'notify_message' );
-		$show_year_of_birth = $request->getVal( 'show_year_of_birth', 0 );
-		if ( $notify_friend == '' ) {
-			$notify_friend = 0;
-		}
-		if ( $notify_gift == '' ) {
-			$notify_gift = 0;
-		}
-		if ( $notify_challenge == '' ) {
-			$notify_challenge = 0;
-		}
-		if ( $notify_honorifics == '' ) {
-			$notify_honorifics = 0;
-		}
-		if ( $notify_message == '' ) {
-			$notify_message = 0;
-		}
+		$notify_friend = $request->getInt( 'notify_friend', 0 );
+		$notify_gift = $request->getInt( 'notify_gift', 0 );
+		$notify_challenge = $request->getInt( 'notify_challenge', 0 );
+		$notify_honorifics = $request->getInt( 'notify_honorifics', 0 );
+		$notify_message = $request->getInt( 'notify_message', 0 );
+		$show_year_of_birth = $request->getInt( 'show_year_of_birth', 0 );
+
 		$userOptionsManager = MediaWikiServices::getInstance()->getUserOptionsManager();
 		$userOptionsManager->setOption( $user, 'notifygift', $notify_gift );
 		$userOptionsManager->setOption( $user, 'notifyfriendrequest', $notify_friend );
@@ -513,7 +499,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$hometown_state = $s->up_hometown_state;
 			$hometown_country = $s->up_hometown_country;
 			$userOptionsLookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
-			$showYOB = $userOptionsLookup->getIntOption( $user, 'showyearofbirth', !isset( $s->up_birthday ) ) == 1;
+			$showYOB = $userOptionsLookup->getIntOption( $user, 'showyearofbirth', (int)!isset( $s->up_birthday ) ) == 1;
 			$birthday = self::formatBirthday( $s->up_birthday, $showYOB );
 			$schools = $s->up_schools;
 			$places = $s->up_places_lived;
@@ -854,7 +840,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			'</p>
 			<p class="profile-update-row">' .
 				$this->msg( 'user-profile-preferences-miscellaneous-show-year-of-birth' )->escaped() .
-				' <input type="checkbox" size="25" name="show_year_of_birth" id="show_year_of_birth" value="1"' . ( ( $userOptionsLookup->getIntOption( $user, 'showyearofbirth', $showYOB ) == 1 ) ? 'checked' : '' ) . '/>
+				' <input type="checkbox" size="25" name="show_year_of_birth" id="show_year_of_birth" value="1"' . ( ( $userOptionsLookup->getIntOption( $user, 'showyearofbirth', (int)$showYOB ) == 1 ) ? 'checked' : '' ) . '/>
 			</p>';
 
 		// Allow extensions (like UserMailingList) to add new checkboxes

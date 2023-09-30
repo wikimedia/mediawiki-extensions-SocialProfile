@@ -143,7 +143,7 @@ class UserProfile {
 				$profile['actor'] = 0;
 			}
 			$userOptionsLookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
-			$showYOB = $userOptionsLookup->getIntOption( $this->user, 'showyearofbirth', !isset( $row->up_birthday ) ) == 1;
+			$showYOB = $userOptionsLookup->getIntOption( $this->user, 'showyearofbirth', (int)!isset( $row->up_birthday ) ) == 1;
 			$issetUpBirthday = $row->up_birthday ?? '';
 			$profile['location_city'] = $row->up_location_city ?? '';
 			$profile['location_state'] = $row->up_location_state ?? '';
