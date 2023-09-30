@@ -161,7 +161,7 @@ class TopUsersPoints extends SpecialPage {
 
 			// Break list into sections based on User Level if it's defined for this site
 			if ( is_array( $wgUserLevels ) ) {
-				$user_level = new UserLevel( number_format( $user['points'] ) );
+				$user_level = new UserLevel( $user['points'] );
 				if ( $user_level->getLevelName() != $last_level ) {
 					$output .= '<div class="top-fan-row"><div class="top-fan-level">
 						' . htmlspecialchars( $user_level->getLevelName() ) . '
