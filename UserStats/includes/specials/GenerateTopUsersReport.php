@@ -334,7 +334,6 @@ class GenerateTopUsersReport extends SpecialPage {
 			// MW 1.36+
 			$page->doUserEditContent(
 				$contentObj,
-				// @phan-suppress-next-line PhanTypeMismatchArgumentNullable There's no way this can be null...
 				$user,
 				$summary,
 				EDIT_NEW | EDIT_FORCE_BOT

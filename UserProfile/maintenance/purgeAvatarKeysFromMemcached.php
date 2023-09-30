@@ -57,7 +57,6 @@ class PurgeAvatarKeysFromMemcached extends Maintenance {
 
 			$sizes = [ 's', 'm', 'ml', 'l' ];
 			foreach ( $sizes as $size ) {
-				// @phan-suppress-next-line PhanTypeMismatchArgumentNullable $uid is not null if we got this far!
 				$key = $cache->makeKey( 'user', 'profile', 'avatar', $uid, $size );
 				$cache->delete( $key );
 			}

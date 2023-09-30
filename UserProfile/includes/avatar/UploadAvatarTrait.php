@@ -134,7 +134,6 @@ trait UploadAvatarTrait {
 			// Resize the image.
 			imagecopyresampled(
 				$tnImage,
-				// @phan-suppress-next-line PhanTypeMismatchArgumentNullableInternal
 				$fullImage,
 				0, 0, 0, 0,
 				$origWidth * $scale,
@@ -153,7 +152,6 @@ trait UploadAvatarTrait {
 			}
 
 			// Clean up.
-			// @phan-suppress-next-line PhanTypeMismatchArgumentNullableInternal
 			imagedestroy( $fullImage );
 			imagedestroy( $tnImage );
 

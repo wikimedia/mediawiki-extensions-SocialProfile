@@ -178,7 +178,6 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		$block = $user->getBlock();
 		if ( $block || $user->isBlockedFromUpload() ) {
 			throw new UserBlockedError(
-				// @phan-suppress-next-line PhanTypeMismatchArgumentNullable Fake news!
 				$block,
 				$user,
 				$this->getLanguage(),
@@ -439,7 +438,6 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 			// Resize the image.
 			imagecopyresampled(
 				$tnImage,
-				// @phan-suppress-next-line PhanTypeMismatchArgumentNullableInternal
 				$fullImage,
 				0, 0, 0, 0,
 				$origWidth * $scale,
@@ -458,7 +456,6 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 			}
 
 			// Clean up.
-			// @phan-suppress-next-line PhanTypeMismatchArgumentNullableInternal
 			imagedestroy( $fullImage );
 			imagedestroy( $tnImage );
 

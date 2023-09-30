@@ -412,7 +412,6 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			// Resize the image.
 			imagecopyresampled(
 				$tnImage,
-				// @phan-suppress-next-line PhanTypeMismatchArgumentNullableInternal
 				$fullImage,
 				0, 0, 0, 0,
 				$origWidth * $scale,
@@ -431,7 +430,6 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			}
 
 			// Clean up.
-			// @phan-suppress-next-line PhanTypeMismatchArgumentNullableInternal
 			imagedestroy( $fullImage );
 			imagedestroy( $tnImage );
 
