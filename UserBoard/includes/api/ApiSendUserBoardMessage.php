@@ -8,7 +8,7 @@ class ApiSendUserBoardMessage extends ApiBase {
 
 		$user_name = $main->getVal( 'username' );
 		$message = $main->getVal( 'message' );
-		$message_type = (int)$main->getVal( 'type', UserBoard::MESSAGE_PUBLIC );
+		$message_type = (int)$main->getVal( 'type', (string)UserBoard::MESSAGE_PUBLIC );
 
 		$user = $this->getUser();
 		$readOnlyMode = MediaWikiServices::getInstance()->getReadOnlyMode();
