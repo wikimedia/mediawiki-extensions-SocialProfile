@@ -24,16 +24,6 @@ $cfg['exclude_analysis_directory_list'] = array_merge(
 
 // Suppress certain issue types.
 $cfg['suppress_issue_types'] = array_merge( $cfg['suppress_issue_types'], [
-	# These are caused by the no-JS forms *intentionally* using null instead of an empty string
-	# as the submit button "text", which forces browsers to render a default text; an empty
-	# string would indeed be rendered as an empty button, i.e. <input type="submit" value="" />
-	# and that is NOT what is wanted here!
-	# Current known offenders:
-	# 1. SystemGifts/includes/specials/SpecialPopulateAwards.php
-	# 2. UserProfile/includes/specials/SpecialPopulateExistingUsersProfiles.php
-	# 3. UserStats/includes/specials/GenerateTopUsersReport.php
-	# 4. UserStats/includes/specials/SpecialUpdateEditCounts.php
-	'PhanTypeMismatchArgumentProbablyReal',
 	# Only 1 instance of this, in UserSystemMessage in UserStats/
 	'PhanParamReqAfterOpt',
 	# Only 2 instances of this, in TopFansByStat.php and TopUsersListLookup.php

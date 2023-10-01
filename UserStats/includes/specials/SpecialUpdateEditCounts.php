@@ -64,11 +64,7 @@ class UpdateEditCounts extends UnlistedSpecialPage {
 		$form .= $this->msg( 'updateeditcounts-confirm' )->escaped();
 		$form .= '<br />';
 		$form .= Html::hidden( 'wpEditToken', $this->getUser()->getEditToken() );
-		// passing null as the 1st argument makes the button use the browser default text
-		// (on Firefox 72 with English localization this is "Submit Query" which is good enough,
-		// since MW core lacks a generic "submit" message and I don't feel like introducing
-		// a new i18n msg just for this button...)
-		$form .= Html::submitButton( null, [ 'name' => 'wpSubmit' ] );
+		$form .= Html::submitButton( $this->msg( 'htmlform-submit' )->text(), [ 'name' => 'wpSubmit' ] );
 		$form .= '</form>';
 		return $form;
 	}
