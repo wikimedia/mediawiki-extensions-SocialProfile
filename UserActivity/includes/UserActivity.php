@@ -133,17 +133,18 @@ class UserActivity {
 		}
 
 		$commentStore = MediaWikiServices::getInstance()->getCommentStore();
-		$actorQuery = ActorMigration::newMigration()->getJoin( 'rc_user' ); // @todo This usage is deprecated since MW 1.34.
 		$commentQuery = $commentStore->getJoin( 'rc_comment' );
 
 		$res = $dbr->select(
-			[ 'recentchanges' ] + $commentQuery['tables'] + $actorQuery['tables'],
+			[ 'recentchanges', 'actor' ] + $commentQuery['tables'],
 			[
 				'rc_timestamp', 'rc_title',
 				'rc_id', 'rc_minor',
 				'rc_source', 'rc_namespace', 'rc_cur_id', 'rc_this_oldid',
-				'rc_last_oldid', 'rc_log_action'
-			] + $commentQuery['fields'] + $actorQuery['fields'],
+				'rc_last_oldid', 'rc_log_action',
+				'rc_actor',
+				'actor_user', 'actor_name'
+			] + $commentQuery['fields'],
 			$where,
 			__METHOD__,
 			[
@@ -151,7 +152,9 @@ class UserActivity {
 				'LIMIT' => $this->item_max,
 				'OFFSET' => 0
 			],
-			$commentQuery['joins'] + $actorQuery['joins']
+			[
+				'actor' => [ 'JOIN', 'actor_id = rc_actor' ]
+			] + $commentQuery['joins']
 		);
 
 		foreach ( $res as $row ) {
@@ -165,13 +168,13 @@ class UserActivity {
 			$title = Title::makeTitle( $row->rc_namespace, $row->rc_title );
 			$unixTS = wfTimestamp( TS_UNIX, $row->rc_timestamp );
 
-			$this->items_grouped['edit'][$title->getPrefixedText()]['users'][$row->rc_user_text][] = [
+			$this->items_grouped['edit'][$title->getPrefixedText()]['users'][$row->actor_name][] = [
 				'id' => 0,
 				'type' => 'edit',
 				'timestamp' => $unixTS,
 				'pagetitle' => $row->rc_title,
 				'namespace' => $row->rc_namespace,
-				'username' => $row->rc_user_text,
+				'username' => $row->actor_name,
 				'comment' => $this->fixItemComment( $commentStore->getComment(
 					'rc_comment', $row )->text ),
 				'minor' => $row->rc_minor,
@@ -187,7 +190,7 @@ class UserActivity {
 				'timestamp' => $unixTS,
 				'pagetitle' => $row->rc_title,
 				'namespace' => $row->rc_namespace,
-				'username' => $row->rc_user_text,
+				'username' => $row->actor_name,
 				'comment' => $this->fixItemComment( $commentStore->getComment(
 					'rc_comment', $row )->text ),
 				'minor' => $row->rc_minor,
