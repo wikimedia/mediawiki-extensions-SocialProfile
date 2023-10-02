@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"useractivity": "Aktivitéit vu Frënn",
@@ -16,6 +17,7 @@
 	"useractivity-group-comment": "{{PLURAL:$1|eng Bemierkung|$1 Bemierkungen}}",
 	"useractivity-group-user_message": "{{PLURAL:$1|ee Message|$1 Messagen}}",
 	"useractivity-group-friend": "{{PLURAL:$1|ee Frënd|$1 Frënn}}",
+	"useractivity-network-thought": "De Benotzer '''[[User:$1|$2]]''' huet eng Iddi fir d'Netzwierk $3",
 	"useractivity-siteactivity": "Aktivitéit um Site",
 	"useractivity-title": "Aktivitéit vun de Frënn",
 	"useractivity-user_message": "$1 huet dem $3 {{PLURAL:$4|ee Message|Message}} geschéckt",
