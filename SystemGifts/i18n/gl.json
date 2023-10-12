@@ -8,7 +8,7 @@
 	"ga-addnew": "+ Engadir un novo agasallo",
 	"ga-back-edit-gift": "Volver ao editor de agasallos",
 	"ga-back-gift-list": "Volver á lista de agasallos",
-	"ga-back-link": "[[User:$1|< Volver ao perfil de $1]]",
+	"ga-back-link": "[[User:$1|&lt; Volver ao perfil de $1]]",
 	"ga-choosefile": "Elixir o ficheiro:",
 	"ga-count": "$1 ten $2 {{PLURAL:$2|premio|premios}}.",
 	"ga-create-gift": "Crear un agasallo",
