@@ -10,6 +10,7 @@
 			"Indiralena",
 			"Locos epraix",
 			"Mor",
+			"No se",
 			"Sanbec",
 			"Translationista"
 		]
@@ -60,6 +61,7 @@
 	"message_received_subject": "$1 escribió en tu tablón en {{SITENAME}}",
 	"message_received_body_html": "Hola, $1.\n\n¡$2 acaba de escribir en tu tablón en {{SITENAME}}!\n\n¡Haz clic a continuación para revisar tu tablón!\n\n[[Special:UserBoard]]\n\n---\n\n¿Deseas dejar de recibir correos electrónicos de nosotros?\n\nHaz clic en [[Special:UpdateProfile]]\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
 	"message_received_body": "Hola, $1.\n\n¡$2 acaba de escribir en tu tablón en {{SITENAME}}!\n\n¡Haz clic a continuación para revisar tu tablón!\n\n$3\n\n---\n\n¿Deseas dejar de recibir correos electrónicos de nosotros?\n\nHaz clic en $4\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
+	"echo-category-title-social-msg": "Mensajes del tablón de usuarios",
 	"echo-pref-tooltip-social-msg": "Notificarme cuando alguien deje un mensaje en mi tablón de usuario.",
 	"apihelp-socialprofile-send-message-param-username": "El nombre de usuario del destinatario."
 }
