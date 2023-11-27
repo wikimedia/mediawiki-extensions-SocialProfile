@@ -2,9 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Mainframe98",
+			"McDutchie",
 			"Siebrand"
 		]
 	},
 	"socialprofile-desc": "Een set van sociale hulpmiddelen voor MediaWiki",
-	"socialprofile-uploads-disabled": "Het uploaden van avatars is uitgeschakeld"
+	"socialprofile-uploads-disabled": "Het uploaden van avatars is uitgeschakeld",
+	"apihelp-smpuserprivacy-summary": "API-module voor het instellen van de zichtbaarheid (“privacy”) van een profielveld",
+	"apihelp-smpuserprivacy-param-method": "Handeling (“get” of “set”)",
+	"apihelp-smpuserprivacy-param-field_key": "Doelveldsleutel, zoals up_movies voor het veld “Movies”",
+	"apihelp-smpuserprivacy-param-privacy": "Nieuwe privacywaarde (een van de volgende: public, hidden, friends, foaf)"
 }
