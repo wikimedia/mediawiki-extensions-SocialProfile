@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"McDutchie"
 		]
 	},
 	"socialprofile-desc": "{{desc|name=Social Profile|url=https://www.mediawiki.org/wiki/Extension:SocialProfile}}",
@@ -10,5 +11,5 @@
 	"apihelp-smpuserprivacy-summary": "{{doc-apihelp-summary|smpuserprivacy}}",
 	"apihelp-smpuserprivacy-param-method": "{{doc-apihelp-param|smpuserprivacy|method}}",
 	"apihelp-smpuserprivacy-param-field_key": "{{doc-important|Do not translate \"up_movies\".}}\n{{doc-apihelp-param|smpuserprivacy|field_key}}",
-	"apihelp-smpuserprivacy-param-privacy": "{{doc-important|Do not translate \"public, hidden, friends, foaf\", though you are feel free to change commas here.}}\n{{doc-apihelp-param|smpuserprivacy|privacy}}"
+	"apihelp-smpuserprivacy-param-privacy": "{{doc-important|Do not translate \"public, hidden, friends, foaf\", though you may change commas here.}}\n{{doc-apihelp-param|smpuserprivacy|privacy}}"
 }
