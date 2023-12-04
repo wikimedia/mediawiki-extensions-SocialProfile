@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"g-delete-message": "Weet je zeker dat je het cadeautje “$1” wilt verwijderen? Hierdoor wordt het ook weggehaald bij de gebruikers die het ontvangen hebben.",
+	"g-error-do-not-own": "Dit cadeautje is niet van jou.",
+	"g-error-message-blocked": "Je bent momenteel geblokkeerd en kunt geen cadeautjes geven",
+	"g-error-message-invalid-link": "De koppeling die je hebt ingevoerd is ongeldig.",
+	"g-error-message-login": "Je moet je [[Special:UserLogin|aanmelden]] om cadeautjes te kunnen geven",
+	"g-error-message-no-user": "De gebruiker die je wilt zien bestaat niet.",
+	"g-error-message-to-yourself": "Je kunt jezelf geen cadeautje geven.",
+	"g-file-instructions": "Je afbeelding moet een JPEG-, PNG- of GIF-bestand (zonder animatie) zijn en minder dan 100 KB groot.",
+	"g-give-enter-friend-title": "Als je de gebruikersnaam weet, voer die dan hieronder in",
+	"g-give-list-friends-title": "Uit je vriendenlijst kiezen",
+	"g-give-no-user-message": "Met cadeautjes en prijzen vertel je je vrienden dat je ze erg waardeert!",
+	"g-give-no-user-title": "Aan wie wil je een cadeautje geven?",
+	"g-imagesbelow": "Hieronder staan jouw afbeeldingen die op de site gebruikt zullen worden",
+	"g-remove-message": "Weet je zeker dat je het cadeautje “$1” wilt verwijderen?",
+	"g-remove-success-title": "Je hebt het cadeautje “$1” verwijderd",
+	"g-sent-title": "Je hebt $1 een cadeautje gestuurd",
+	"g-sent-message": "Je hebt $1 het volgende cadeautje gestuurd:",
+	"g-your-profile": "Jouw profiel",
+	"gift_received_subject": "$1 heeft jou het cadeautje $2 gestuurd op {{SITENAME}}!",
+	"gift_received_body_html": "Hoi $1,\n\n$2 heeft je zonet het cadeautje $3 gestuurd op {{SITENAME}}.\n\nWil je het bericht lezen dat $2 voor je heeft achtergelaten en je cadeautje zien? Klik dan hieronder:\n\n[[Special:ViewGifts]]\n\nWe hopen dat je er blij mee bent!\n\nBedankt,\n\n\nHet {{SITENAME}}-team\n\n---\n\nWil je geen e-mails meer van ons ontvangen?\n\nKlik dan op [[Special:UpdateProfile]] en schakel e-mailwaarschuwingen uit in de instellingen.",
+	"gift_received_body": "Hoi $1,\n\n$2 heeft je zonet het cadeautje $3 gestuurd op {{SITENAME}}.\n\nWil je het bericht lezen dat $2 voor je heeft achtergelaten en je cadeautje zien? Klik dan hieronder:\n\n$4\n\nWe hopen dat je er blij mee bent!\n\nBedankt,\n\n\nHet {{SITENAME}}-team\n\n---\n\nWil je geen e-mails meer van ons ontvangen?\n\nKlik dan op $5 en schakel e-mailwaarschuwingen uit in de instellingen.",
+	"notification-social-gift-send-no-message": "$1 heeft je zonet een cadeautje gestuurd: $2.",
+	"notification-social-gift-send-with-message": "$1 heeft jou zonet een cadeautje gestuurd: $2.<br /><br />''$3''",
+	"notification-social-gift-send-bundle": "{{PLURAL:$1|Iemand heeft jou een cadeautje|$1 mensen hebben jou cadeautjes}} gestuurd."
+}

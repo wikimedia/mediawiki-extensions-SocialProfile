@@ -16,7 +16,7 @@
 	"mp-requests-message": "U hebt de volgende aanvragen.",
 	"mp-request-new-message": "nieuw bericht",
 	"mp-request-new-award": "{{PLURAL:$1|1 nieuwe prijs|$1 nieuwe prijzen}}",
-	"mp-request-new-gift": "{{PLURAL:$1|1 nieuw geschenk|$1 nieuwe geschenken}}",
-	"mp-request-new-foe": "{{PLURAL:$1|1 nieuwe vijand|$1 nieuwe vijanden}}",
+	"mp-request-new-gift": "$1 {{PLURAL:$1|nieuw cadeautje|nieuwe cadeautjes}}",
+	"mp-request-new-foe": "$1 nieuwe tegenstander{{PLURAL:$1||s}}",
 	"mp-request-new-friend": "{{PLURAL:$1|1 nieuwe vriend|$1 nieuwe vrienden}}"
 }

@@ -1,19 +1,51 @@
 {
 	"@metadata": {
 		"authors": [
-			"Minh Nguyen"
+			"Minh Nguyen",
+			"Pisceskaze"
 		]
 	},
+	"systemgifts-desc": "Cho phép gửi, nhận, tạo và xóa quà tặng hệ thống",
+	"systemgiftmanager": "Quản lý quà tặng hệ thống",
+	"ga-addnew": "+ Thêm quà mới",
+	"ga-back-edit-gift": "Quay lại để chỉnh sửa món quà này",
+	"ga-back-gift-list": "Quay lại danh sách quà tặng",
 	"ga-choosefile": "Chọn tập tin:",
+	"ga-count": "$1 có $2 {{PLURAL:$2|giải thưởng}}.",
+	"ga-create-gift": "Tạo quà tặng",
+	"ga-created": "Món quà đã được tạo",
 	"ga-currentimage": "Hình hiện hành",
+	"ga-error-message-invalid-link": "Liên kết bạn đã nhập không hợp lệ.",
+	"ga-error-message-no-user": "Bài viết mà bạn muốn xem không tồn tại.",
+	"ga-error-title": "Hú, đi nhầm đường rồi!",
+	"ga-file-instructions": "Hình ảnh của bạn phải là jpeg, png hoặc gif và phải có kích thước nhỏ hơn 100kb.",
+	"ga-gift": "quà",
+	"ga-gift-given-count": "Món quà này đã được tặng $1 {{PLURAL:$1|lần}}",
 	"ga-gift-title": "“$2” của $1",
+	"ga-giftdesc": "miêu tả",
+	"ga-giftimage": "hình ảnh quà tặng",
+	"ga-giftname": "tên quà tặng",
+	"ga-gifttype": "loại quà tặng",
 	"ga-goback": "Trở lại",
+	"ga-imagesbelow": "Dưới đây là hình ảnh của bạn sẽ được sử dụng trên trang web",
 	"ga-img": "thêm/thay hình",
 	"ga-large": "Lớn",
 	"ga-medium": "Vừa",
 	"ga-mediumlarge": "Hơi lớn",
 	"ga-new": "Mới",
+	"ga-recent-recipients-award": "Những người khác gần đây đã nhận được giải thưởng này",
+	"ga-saved": "Món quà đã được lưu",
 	"ga-small": "Nhỏ",
+	"ga-threshold": "ngưỡng",
 	"ga-title": "Huy chương của $1",
-	"ga-uploadsuccess": "Đã tải lên thành công"
+	"ga-uploadsuccess": "Đã tải lên thành công",
+	"ga-viewlist": "Xem danh sách quà tặng",
+	"ga-remove": "Loại bỏ",
+	"ga-remove-title": "Loại bỏ \"$1\"?",
+	"ga-delete-message": "Bạn có chắc chắn muốn xóa món quà \"$1\"?\nThao tác này cũng sẽ xóa món quà đó khỏi những người dùng có thể đã nhận được nó.",
+	"ga-remove-success-title": "Bạn đã xóa thành công món quà \"$1\"",
+	"ga-remove-success-message": "Món quà \"$1\" đã bị xóa.",
+	"ga-user-got-awards": "$1 đã nhận được $2",
+	"ga-awards-populate-confirm": "Bạn có chắc muốn khởi tạo giải thưởng chứ?",
+	"topawards": "Giải thưởng hàng đầu"
 }

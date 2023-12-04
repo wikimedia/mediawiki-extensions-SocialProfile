@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pisceskaze"
+		]
+	},
+	"giftmanager-addgift": "+ Thêm món quà",
+	"giftmanager-access": "quyền truy cập quà tặng",
+	"giftmanager-description": "miêu tả",
+	"giftmanager-giftimage": "hình ảnh quà tặng",
+	"giftmanager-image": "thêm/thay hình",
+	"giftmanager-giftcreated": "Món quà đã được tạo",
+	"giftmanager-giftsaved": "Món quà đã được lưu",
+	"giftmanager-public": "Công khai",
+	"giftmanager-private": "Riêng tư",
+	"giftmanager-view": "Xem danh sách quà tặng",
+	"g-add-message": "Gửi thư",
+	"g-back-edit-gift": "Quay lại để chỉnh sửa món quà này",
+	"g-back-gift-list": "Quay lại danh sách quà tặng",
+	"g-choose-file": "Chọn tập tin:",
+	"g-count": "$1 có $2 {{PLURAL:$2|quà tặng}}",
+	"g-create-gift": "Tạo quà tặng",
+	"g-created-by": "được tạo bởi",
+	"g-current-image": "Hình ảnh hiện tại",
+	"g-give-separator": "hoặc",
+	"g-large": "Lớn",
+	"g-medium": "Vừa",
+	"g-mediumlarge": "Hơi lớn",
+	"g-new": "mới",
+	"g-next": "Tiếp",
+	"g-previous": "Kế trước",
+	"g-remove": "Loại bỏ",
+	"g-remove-gift": "Xóa món quà này",
+	"g-remove-message": "Bạn có chắc chắn muốn xóa món quà \"$1\" không?",
+	"g-small": "Nhỏ",
+	"g-your-profile": "Hồ sơ của bạn",
+	"echo-category-title-social-gift": "Quà tặng",
+	"echo-pref-tooltip-social-gift": "Thông báo cho tôi khi có ai đó gửi quà cho tôi.",
+	"notification-social-gift-send-no-message": "$1 vừa gửi một món quà cho bạn: $2.",
+	"notification-social-gift-send-with-message": "$1 vừa gửi một món quà cho bạn: $2.<br /><br />''$3''",
+	"notification-social-gift-send-bundle": "{{PLURAL:$1|Một người|$1 người}} đã gửi quà cho bạn."
+}

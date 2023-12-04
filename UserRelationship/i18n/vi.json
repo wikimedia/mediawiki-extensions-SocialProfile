@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Minh Nguyen"
+			"Minh Nguyen",
+			"Pisceskaze"
 		]
 	},
-	"ur-error-page-title": "Oái!",
+	"ur-backlink": "&lt; Quay lại trang của $1",
+	"ur-relationship-count-foes": "$1 có $2 {{PLURAL:$2|kẻ thù}}",
 	"ur-add-friend": "Thêm người bạn",
 	"ur-add-foe": "Thêm kẻ thù",
 	"ur-give-gift": "Tặng món quà",
