@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Minh Nguyen"
+			"Minh Nguyen",
+			"Pisceskaze"
 		]
 	},
 	"boardlinkselectall": "Chọn tất cả",
+	"userboard_private": "riêng tư",
 	"userboard_public": "công khai",
 	"userboard_nomessages": "Không có tin nhắn.",
 	"userboard_sendbutton": "gửi"
