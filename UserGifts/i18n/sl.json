@@ -3,7 +3,8 @@
 		"authors": [
 			"Dbc334",
 			"Smihael",
-			"Eleassar"
+			"Eleassar",
+			"Upwinxp"
 		]
 	},
 	"usergifts-desc": "Omogoča pošiljanje, prejemanje, ustvarjanje in odstranjevanje uporabniških daril",
@@ -73,19 +74,19 @@
 	"g-select-gift": "Prosimo, izberite darilo.",
 	"g-select-a-friend": "izberite prijatelja",
 	"g-sent-title": "Darilo ste poslali $1",
-	"g-sent-message": "Uporabniku_ci $1 ste poslali naslednje darilo.",
+	"g-sent-message": "Uporabniku/ci $1 ste poslali naslednje darilo.",
 	"g-small": "Majhno",
 	"g-to-another": "Podari nekomu drugemu",
 	"g-uploadsuccess": "Nalaganje je bilo uspešno",
 	"g-viewgiftlist": "Ogled seznama daril",
 	"g-your-profile": "Vaš profil",
 	"gift_received_subject": "$1 vam je poslal darilo $2 na {{GRAMMAR:dative|{{SITENAME}}}}!",
-	"gift_received_body_html": "Pozdravljeni, $1.\n\n$2 vam je v projektu {{SITENAME}} pravkar poslal_a darilo $3.\n\nŽelite prebrati sporočilo, ki vam ga je pustil_a $2, in si ogledati darilo? Kliknite naslednjo povezavo:\n\n[[Special:ViewGifts]]\n\nUpamo, da vam je všeč!\n\nHvala.\n\n\nEkipa projekta {{SITENAME}}\n\n---\n\nNe želite več prejemati naše e-pošte?\n\nKliknite [[Special:UpdateProfile]]\nin s spremembno nastavitev onemogočite prejemanje e-poštnih obvestil.",
-	"gift_received_body": "Pozdravljeni, $1!\n\n$2 vam je v projektu {{SITENAME}} pravkar poslal_a darilo $3.\n\nŽelite prebrati sporočilo, ki vam ga je pustil_a $2, in si ogledati darilo? Kliknite naslednjo povezavo:\n\n$4\n\nUpamo, da vam je všeč!\n\nHvala.\n\n\nEkipa {{SITENAME}}\n\n---\n\nNe želite več prejemati naše e-pošte?\n\nKliknite $5\nin s spremembno nastavitev onemogočite prejemanje e-poštnih obvestil.",
+	"gift_received_body_html": "Pozdravljeni, $1.\n\n$2 vam je v projektu {{SITENAME}} pravkar poslal/a darilo $3.\n\nŽelite prebrati sporočilo, ki vam ga je pustil/a $2, in si ogledati darilo? Kliknite naslednjo povezavo:\n\n[[Special:ViewGifts]]\n\nUpamo, da vam je všeč!\n\nHvala.\n\n\nEkipa projekta {{SITENAME}}\n\n---\n\nNe želite več prejemati naše e-pošte?\n\nKliknite [[Special:UpdateProfile]]\nin s spremembo nastavitev onemogočite prejemanje e-poštnih obvestil.",
+	"gift_received_body": "Pozdravljeni, $1!\n\n$2 vam je v projektu {{SITENAME}} pravkar poslal/a darilo $3.\n\nŽelite prebrati sporočilo, ki vam ga je pustil/a $2, in si ogledati darilo? Kliknite naslednjo povezavo:\n\n$4\n\nUpamo, da vam je všeč!\n\nHvala.\n\n\nEkipa {{SITENAME}}\n\n---\n\nNe želite več prejemati naše e-pošte?\n\nKliknite $5\nin s spremembo nastavitev onemogočite prejemanje e-poštnih obvestil.",
 	"echo-category-title-social-gift": "Darila",
 	"echo-pref-tooltip-social-gift": "Obvesti me, ko mi kdo pošlje darilo.",
-	"notification-social-gift-send-no-message": "$1 vam je pravkar poslal_a darilo: $2.",
-	"notification-social-gift-send-with-message": "$1 vam je pravkar poslal_a darilo: $2.<br /><br />''$3''",
+	"notification-social-gift-send-no-message": "$1 vam je pravkar poslal/a darilo: $2.",
+	"notification-social-gift-send-with-message": "$1 vam je pravkar poslal/a darilo: $2.<br /><br />''$3''",
 	"notification-social-gift-send-bundle": "{{PLURAL:$1|Ena oseba vam je poslala|Dve osebi sta vam poslali|$1 osebe so vam poslale|$1 oseb vam je poslalo}} darila.",
 	"right-giftadmin": "Ustvarjanje novih in urejanje obstoječih daril"
 }
