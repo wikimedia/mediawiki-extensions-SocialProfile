@@ -21,6 +21,6 @@
 	"useractivity-network-thought": "<b><a href=\"$4\">$2</a></b> ima misel za omrežje $3",
 	"useractivity-siteactivity": "Aktivnost v projektu",
 	"useractivity-title": "Aktivnost prijateljev",
-	"useractivity-user_message": "$1 {{PLURAL:$4|je {{GENDER:$1|poslal|poslala|poslal/a}} sporočilo osebi|je {{GENDER:$1|poslal|poslala|poslal/a}} sporočila osebi}} $3",
+	"useractivity-user_message": "$1 {{PLURAL:$4|je {{GENDER:$1|poslal|poslala|poslal_a}} sporočilo osebi|je {{GENDER:$1|poslal|poslala|poslal_a}} sporočila osebi}} $3",
 	"useractivity-comment": "$1 je {{PLURAL:$4|komentiral_a na strani|komentiral_a na naslednjih straneh:}} $3"
 }
