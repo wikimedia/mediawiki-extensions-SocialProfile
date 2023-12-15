@@ -47,7 +47,7 @@
 	"ga-delete-message": "Ste prepričani, da želite izbrisati darilo »$1«?\nTo ga bo odstranilo tudi od uporabnikov, ki so ga morda prejeli.",
 	"ga-remove-success-title": "Uspešno ste odstranili darilo »$1«",
 	"ga-remove-success-message": "Darilo »$1« je odstranjeno.",
-	"ga-user-got-awards": "$1 je prejel/a $2",
+	"ga-user-got-awards": "$1 je prejel_a $2",
 	"ga-awards-populate-confirm": "Ste prepričani, da želite popolniti nagrade?",
 	"ga-awards-given-out": "{{PLURAL:$1|Podeljena je bila ena nagrada|Podeljeni sta bili dve nagradi|Podeljene so bile $1 nagrad|Podeljenih je bilo $1 nagrad}}",
 	"topawards": "Najpogostejše nagrade",
