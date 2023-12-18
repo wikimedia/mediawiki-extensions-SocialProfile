@@ -3,6 +3,7 @@
 		"authors": [
 			"Kly",
 			"Mark85296341",
+			"SunAfterRain",
 			"Wrightbus"
 		]
 	},
@@ -17,6 +18,8 @@
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|已收到禮物}}",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|已傳送禮物}}",
 	"right-updatepoints": "更新編輯次數",
+	"action-updatepoints": "更新編輯次數",
+	"action-generatetopusersreport": "生成使用者排行榜報告",
 	"level-advanced-to": "已升至第 <span style=\"font-weight:800;\">$1</span> 級",
 	"echo-category-title-social-level-up": "等級升級",
 	"echo-pref-tooltip-social-level-up": "當我晉級到新等級時通知我。",
