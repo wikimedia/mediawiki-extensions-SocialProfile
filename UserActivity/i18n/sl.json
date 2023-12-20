@@ -7,13 +7,13 @@
 	},
 	"useractivity": "Aktivnost prijateljev",
 	"useractivity-desc": "Prikazuje družbeno aktivnost uporabnikov",
-	"useractivity-award": "$1 je prejel/a nagrado",
+	"useractivity-award": "$1 je prejel_a nagrado",
 	"useractivity-all": "Prikaži vse",
 	"useractivity-edit": "$1 je {{PLURAL:$4|uredil stran|uredil naslednji strani:|uredil naslednje strani:}} $3",
 	"useractivity-foe": "$1 {{PLURAL:$2|je zdaj sovražniki z|sta zdaj sovražnika z|so zdaj sovražniki z}} $3",
 	"useractivity-filter": "Filter",
 	"useractivity-friend": "$1 {{PLURAL:$2| je zdaj prijatelj z|sta zdaj prijatelja z|so zdaj prijatelji z}} $3",
-	"useractivity-gift": "$1 je prejel/a darilo od $2",
+	"useractivity-gift": "$1 je prejel_a darilo od $2",
 	"useractivity-group-edit": "{{PLURAL:$1|eno urejanje|$1 urejanji|$1 urejanja|$1 urejanj}}",
 	"useractivity-group-comment": "{{PLURAL:$1|en komentar|$1 komentarja|$1 komentarji|$1 komentarjev}}",
 	"useractivity-group-user_message": "{{PLURAL:$1|eno sporočilo|dve sporočili|$1 sporočila|$1 sporočil}}",
@@ -21,6 +21,6 @@
 	"useractivity-network-thought": "'''[[User:$1|$2]]''' ima misel za omrežje $3",
 	"useractivity-siteactivity": "Aktivnost v projektu",
 	"useractivity-title": "Aktivnost prijateljev",
-	"useractivity-user_message": "$1 {{PLURAL:$4|je {{GENDER:$1|poslal|poslala|poslal/a}} sporočilo osebi|je {{GENDER:$1|poslal|poslala|poslal/a}} sporočila osebi}} $3",
+	"useractivity-user_message": "$1 {{PLURAL:$4|je {{GENDER:$1|poslal|poslala|poslal_a}} sporočilo osebi|je {{GENDER:$1|poslal|poslala|poslal_a}} sporočila osebi}} $3",
 	"useractivity-comment": "$1 je {{PLURAL:$4|komentiral_a na strani|komentiral_a na naslednjih straneh:}} $3"
 }
