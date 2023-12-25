@@ -5,9 +5,11 @@
 			"Wrightbus",
 			"Kly",
 			"Lakejason0",
-			"Winston Sung"
+			"Winston Sung",
+			"SunAfterRain"
 		]
 	},
+	"userrelationship-desc": "允許傳送好友或仇敵請求",
 	"viewrelationships": "查看關係",
 	"viewrelationshiprequests": "查看關係請求",
 	"ur-already-submitted": "您的請求已傳送",
@@ -49,7 +51,12 @@
 	"friend_removed_subject": "哦，不！$1 已在 {{SITENAME}} 把您從朋友名單中移除了!",
 	"foe_removed_subject": "哦，不！$1 已在 {{SITENAME}} 把您從仇人名單中移除了!",
 	"echo-category-title-social-rel": "使用者關係更改",
+	"echo-pref-tooltip-social-rel": "當有人向我傳送使用者關係請求（好友或仇敵請求）時通知我。",
+	"echo-show-social-rel-add-link": "（好友/仇敵請求）",
 	"notification-social-rel-add-friend-message": "$1想要成為您的朋友。<br /><br />''$2''",
 	"notification-social-rel-add-foe-message": "$1想要成為您的冤家。<br /><br />''$2''",
-	"notification-social-rel-add-friend-no-message": "$1想要成為您的朋友。"
+	"notification-social-rel-add-friend-no-message": "$1想要成為您的朋友。",
+	"apihelp-socialprofile-request-response-summary": "回覆一個使用者關係（好友/仇敵）請求。",
+	"apihelp-socialprofile-request-response-param-response": "回覆一個使用者關係（好友/仇敵）請求；1表示接受，-1表示拒絕。",
+	"apihelp-socialprofile-request-response-param-id": "該關係請求的唯一識別碼"
 }
