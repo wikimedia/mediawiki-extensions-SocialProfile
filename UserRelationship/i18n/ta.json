@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"TRYPPN",
-			"செல்வா"
+			"செல்வா",
+			"Fahimrazick"
 		]
 	},
-	"ur-remove": "நீக்குக",
+	"ur-remove": "அகற்று",
 	"ur-accept": "ஒத்துக்கொள்",
 	"ur-reject": "ஒதுக்கித் தள்ளு"
 }

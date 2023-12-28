@@ -206,7 +206,7 @@
 	"avatarlogpage": "Dnevnik naloženih avatarjev",
 	"avatarlogpagetext": "To je dnevnik naložitev uporabniških avatarjev",
 	"user-profile-picture-log-entry": "je naložil_a novega avatarja",
-	"user-profile-picture-log-delete-entry": "je izbrisal/a avatar osebe $1",
+	"user-profile-picture-log-delete-entry": "je izbrisal_a avatar osebe $1",
 	"user-profile-remove-avatar": "odstrani",
 	"right-avatarremove": "Odstranjevanje uporabniških avatarjev",
 	"right-editothersprofiles": "Posodabljanje družbenih profilov drugih uporabnikov",
