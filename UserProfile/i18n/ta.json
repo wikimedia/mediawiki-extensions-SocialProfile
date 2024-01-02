@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"TRYPPN"
+			"TRYPPN",
+			"Fahimrazick"
 		]
 	},
 	"user-upload-image": "படத்தை பதிவேற்று",
-	"user-edit-this": "இதனைத் தொகுக்கவும்",
+	"user-edit-this": "இதைத் தொகு",
 	"user-watchlist": "என் கவனிப்புப் பட்டியல்",
 	"user-contributions": "பங்களிப்புக்கள்",
 	"user-personal-info-real-name": "உண்மைப் பெயர்",
