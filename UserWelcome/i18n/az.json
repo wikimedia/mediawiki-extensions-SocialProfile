@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Cekli829"
+			"Cekli829",
+			"Toghrul Rahimli"
 		]
 	},
-	"mp-welcome-logged-in": "Salam $1",
+	"mp-welcome-logged-in": "Salam, $1",
 	"mp-request-new-message": "yeni ismarıc",
 	"mp-request-new-award": "$1 yeni {{PLURAL:$1|mükafat|mükafat}}",
 	"mp-request-new-friend": "$1 yeni {{PLURAL:$1|dost|dost}}"
