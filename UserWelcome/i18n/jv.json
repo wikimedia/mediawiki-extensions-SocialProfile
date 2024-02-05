@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Pras"
+			"Pras",
+			"Sumbukompor"
 		]
 	},
-	"userwelcome-desc": "Nambahaké tag <code>&lt;welcomeUser&gt;</code> kanggo nuduhaké info sosial mligi-panganggo marang panganggo sing mlebu log",
-	"mp-userlevels-link": "Tataran panganggo",
+	"userwelcome-desc": "Nambahaké tag <code>&lt;welcomeUser&gt;</code> kanggo nuduhaké info sosial mligi-naraguna marang naraguna sing mlebu log",
+	"mp-userlevels-link": "Tataran naraguna",
 	"mp-welcome-upload": "Unggah",
 	"mp-welcome-points": "$1 {{PLURAL:$1|poin|poin}}",
 	"mp-welcome-needed-points": "Kanggo maju menyang [[$1|'''$2''']] kumpulna ''$3'' {{PLURAL:$3|poin|poin}} luwih akèh!",

@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Meursault2004",
-			"Pras"
+			"Pras",
+			"Sumbukompor"
 		]
 	},
 	"user-time-ago": "$1 kapungkur",
@@ -91,7 +92,7 @@
 	"user-profile-goback": "Balia",
 	"user-no-images": "Ora ana gambar sing diunggahaké",
 	"edit-profile-title": "Sunting profil panjenengan",
-	"user-page-link": "Kaca panganggo",
+	"user-page-link": "Kaca naraguna",
 	"user-social-profile-link": "Profil sosial",
 	"user-profile-picture-log-entry": "ngunggahaké avatar anyar"
 }
