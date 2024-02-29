@@ -79,7 +79,7 @@
 	"g-uploadsuccess": "Слање успешно",
 	"g-viewgiftlist": "Погледајте списак поклона",
 	"g-your-profile": "Ваш профил",
-	"gift_received_subject": "$1 Вам шаље поклон $2 на пројекту {{SITENAME}}!",
+	"gift_received_subject": "$1 Вам је послао поклон $2 на {{SITENAME}}!",
 	"echo-category-title-social-gift": "Поклони",
 	"echo-pref-tooltip-social-gift": "Обавештавај ме када ми неко пошаље поклон."
 }
