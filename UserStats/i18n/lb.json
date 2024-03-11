@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"user-stats-alltime-title": "Am Meeschte Punkte vn allen Zäiten",
@@ -59,5 +60,5 @@
 	"user-stats-report-generation-note": "Dës Säit gouf automatesch generéiert",
 	"user-stats-report-weekly-edit-summary": "automatesche Benotzer-Rapport pro Woch",
 	"user-stats-report-monthly-edit-summary": "automatesche Benotzer-Rapport pro Mount",
-	"random-user-about-me": "Iwwer Mech"
+	"random-user-about-me": "Iwwer mech"
 }
