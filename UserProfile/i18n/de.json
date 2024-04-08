@@ -14,7 +14,8 @@
 			"ThisCarthing",
 			"Tim 'Avatar' Bartel",
 			"Umherirrender",
-			"Umlaut"
+			"Umlaut",
+			"TomatoCake"
 		]
 	},
 	"editprofile": "Benutzerprofile anderer Benutzer bearbeiten",
@@ -134,6 +135,7 @@
 	"user-profile-interests-foodsnacks": "Essen",
 	"user-profile-interests-drinks": "Getränke",
 	"user-profile-preferences-emails": "E-Mail-Benachrichtigungen",
+	"user-profile-preferences-emails-manage": "E-Mail-Benachrichtigungen werden von der Echo-Erweiterung verwaltet. Du kannst diese in deinen [[Special:Preferences#mw-prefsection-echo|Einstellungen]] anpassen.",
 	"user-profile-preferences-emails-personalmessage": "Bei Empfang persönlicher Nachrichten",
 	"user-profile-preferences-emails-friendfoe": "Bei Freundes-/Feindschafts-Erklärungen",
 	"user-profile-preferences-emails-gift": "Bei Empfang von Geschenken",
@@ -168,9 +170,12 @@
 	"user-profile-goback": "Zurück",
 	"user-profile-userlevels-link": "Benutzerebenen",
 	"user-profile-create-threshold-title": "Benutzerprofil erstellen",
+	"user-profile-create-threshold-only-confirmed-email": "und eine bestätigte E-Mail-Adresse",
 	"user-profile-create-threshold-edits": "{{PLURAL:$1|eine Bearbeitung|$1 Bearbeitungen}}",
 	"user-profile-create-threshold-votes": "{{PLURAL:$1|eine Stimme|$1 Stimmen}}",
 	"user-profile-create-threshold-comments": "{{PLURAL:$1|Ein Kommentar|$1 Kommentare}}",
+	"user-profile-create-threshold-comment-score-plus": "{{PLURAL:$1|Ein Daumen nach oben|$1 Daumen nach oben}}",
+	"user-profile-create-threshold-comment-score-minus": "{{PLURAL:$1|ein ignorierter Kommentar|$1 ignorierte Kommentare}}",
 	"user-profile-create-threshold-friend-count": "{{PLURAL:$1|ein Freund|$1 Freunde}}",
 	"user-profile-create-threshold-poll-votes": "{{PLURAL:$1|eine Stimme|$1 Stimmen}}",
 	"user-profile-create-threshold-quiz-points": "{{PLURAL:$1|ein Quizpunkt|$1 Quizpunkte}}",
@@ -212,5 +217,9 @@
 	"right-avatarremove": "Avatar eines Benutzers entfernen",
 	"right-editothersprofiles": "Aktualisierung der Benutzerprofile anderer Benutzer",
 	"action-avatarremove": "Entferne den Avatar des Benutzers",
+	"apihelp-socialprofile-userprofileprivacy-param-method": "Aktion (entweder „get“ oder „set“)",
+	"apihelp-socialprofile-userprofileprivacy-param-field_key": "Zielfeldschlüssel, wie up_movies für das Feld „Filme“",
+	"apihelp-smpuserprofiletype-param-do": "Auszuführende Aktion (get oder set)",
+	"apihelp-smpuserprofiletype-param-user": "Benutzername (nur relevant, wenn <kbd>do</kbd> <kbd>get</kbd> entspricht, da dieses Modul nicht zum Festlegen der Benutzerseitentypen anderer Benutzer verwendet werden kann, sondern nur deiner eigenen Benutzerseite)",
 	"random-users-avatars-title": "Triff die Community"
 }
