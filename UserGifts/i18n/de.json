@@ -11,9 +11,11 @@
 			"Umherirrender",
 			"Umlaut",
 			"Zabe",
-			"Brettchenweber"
+			"Brettchenweber",
+			"TomatoCake"
 		]
 	},
+	"usergifts-desc": "Ermöglicht das Senden, Empfangen, Erstellen und Entfernen von Benutzergeschenken",
 	"giftmanager": "Geschenke-Verwaltung",
 	"giftmanager-addgift": "+ Neues Geschenk hinzufügen",
 	"giftmanager-access": "Geschenkfortschritt",
@@ -43,7 +45,7 @@
 	"g-error-message-login": "Du musst dich [[Special:UserLogin|anmelden]] um Geschenke zu vergeben.",
 	"g-error-message-no-user": "Der Benutzer, den du anschauen möchtest, existiert nicht.",
 	"g-error-message-to-yourself": "Du kannst dir selber keine Geschenke geben.",
-	"g-error-title": "Oops, da ging etwas schief!",
+	"g-error-title": "Ups, da ging etwas schief!",
 	"g-file-instructions": "Das Bild muss ein „JPEG“, „PNG“ oder ein nicht animiertes „GIF“ sein sowie eine Dateigröße unter 100 KB haben.",
 	"g-from": "von [[User:$1|$1]]",
 	"g-gift": "Geschenk",
@@ -60,7 +62,8 @@
 	"g-give-no-user-title": "Wem möchtest du ein Geschenk geben?",
 	"g-give-to-user-title": "Das Geschenk „$1“ an $2 geben",
 	"g-give-to-user-message": "Möchest du $1 ein [[Special:GiveGift/$1|anderes Geschenk geben]]?",
-	"g-go-back": "Gehe zurück",
+	"g-give-this-gift": "Dieses Geschenk senden",
+	"g-go-back": "Zurück",
 	"g-imagesbelow": "Hier drunter folgen alle Bilder, die auf dieser Seite genutzt werden",
 	"g-large": "Groß",
 	"g-list-title": "Geschenkeliste von $1",
@@ -73,7 +76,7 @@
 	"g-remove-gift": "Dieses Geschenk entfernen",
 	"g-remove-message": "Bist du dir sicher, das Geschenk „$1“ zu entfernen?",
 	"g-recent-recipients": "Andere aktuelle Empfänger dieses Geschenkes",
-	"g-remove-success-title": "Du hast das Geschenk „$1“ erfolgreich entfernt.",
+	"g-remove-success-title": "Du hast das Geschenk „$1“ erfolgreich entfernt",
 	"g-remove-success-message": "Das Geschenk „$1“ wurde entfernt.",
 	"g-remove-title": "„$1“ entfernen?",
 	"g-send-gift": "Geschenk senden",
@@ -89,5 +92,9 @@
 	"gift_received_subject": "[{{SITENAME}}] $1 hat dir das $2-Geschenk gesendet!",
 	"gift_received_body": "Hallo $1,\n\n$2 hat dir eben das $3-Geschenk auf {{SITENAME}} gesendet!\n\nMöchtest du die Notiz von $2 lesen und dein Geschenk sehen? Klicke den folgenden Link:\n\n$4\n\nWir hoffen, es gefällt dir!\n\nDanke,\n\nDas {{SITENAME}}-Team\n\n---\n\nDu möchtest keine E-Mails von uns erhalten?\n\nKlicke $5\nund ändere deine Einstellungen auf deaktivierte E-Mail-Benachrichtigung.",
 	"echo-category-title-social-gift": "Geschenke",
+	"echo-pref-tooltip-social-gift": "Benachrichtige mich, wenn mir jemand ein Geschenk sendet.",
+	"notification-social-gift-send-no-message": "$1 hat dir gerade ein Geschenk geschickt: $2.",
+	"notification-social-gift-send-with-message": "$1 hat dir gerade ein Geschenk geschickt: $2.<br /><br />''$3''",
+	"notification-social-gift-send-bundle": "{{PLURAL:$1|Ein Benutzer hat|$1 Benutzer haben}} dir Geschenke geschickt.",
 	"right-giftadmin": "Neue erstellen und bestehende Geschenke bearbeiten"
 }

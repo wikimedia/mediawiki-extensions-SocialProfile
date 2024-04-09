@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mehtab ahmed"
+		]
+	},
+	"userboard_posted_ago": "$1 اڳ پوسٽ ڪيل",
+	"userboard-time-minutes": "{{PLURAL:$1|ھڪ منٽ|$1 منٽ}}"
+}
