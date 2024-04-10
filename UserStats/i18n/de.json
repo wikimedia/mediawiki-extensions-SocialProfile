@@ -9,7 +9,8 @@
 			"Revolus",
 			"The Evil IP address",
 			"Umherirrender",
-			"Umlaut"
+			"Umlaut",
+			"TomatoCake"
 		]
 	},
 	"user-stats-alltime-title": "Am meisten Punkte (gesamt)",
@@ -59,8 +60,14 @@
 	"right-generatetopusersreport": "Berichte zu den aktivsten Benutzern generieren",
 	"level-advanced-to": "erweitert auf Level <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "[{{SITENAME}}] Du bist jetzt „$1“!",
+	"level-advance-body-html": "Hallo $1,\n\nDu bist jetzt ein „$2“ bei {{SITENAME}}!\n\nGratulation,\n\nDas {{SITENAME}}-Team\n\n---\nDu willst gar keine E-Mails mehr von uns bekommen?\n\nÖffne [[Special:UpdateProfile]]\nund passe deine Einstellungen an, um E-Mail-Benachrichtigungen zu deaktivieren.",
 	"level-advance-body": "Hallo $1,\n\nDu bist jetzt ein „$2“ bei {{SITENAME}}!\n\nGratulation,\n\nDas {{SITENAME}}-Team\n\n---\nDu willst gar keine E-Mails mehr von uns bekommen?\n\nKlicke $3\nund ändere deine Einstellungen, um die E-Mail-Benachrichtigungen abzustellen.",
+	"echo-category-title-social-level-up": "Stufenaufstieg",
+	"echo-pref-tooltip-social-level-up": "Benachrichtige mich, wenn ich eine Stufe aufsteige.",
+	"notification-social-level-up": "Du bist auf die Stufe „$1“ aufgestiegen!",
+	"notification-social-level-up-bundle": "Du bist {{PLURAL:$1|eine Stufe|$1 Stufen}} auf $2 aufgestiegen!",
 	"updateeditcounts": "Beitragszähler aktualisieren",
+	"updateeditcounts-confirm": "Bist du sicher, dass du die Bearbeitungszahlen aller Benutzer aktualisieren möchtest?",
 	"updateeditcounts-updated": "Aktualisierte die Statistiken für '''$1''' {{PLURAL:$1|Benutzer|Benutzer}}",
 	"updateeditcounts-updating": "Aktualisierung von $1 mit $2 {{PLURAL:$2|Bearbeitung|Bearbeitungen}}",
 	"generatetopusersreport": "Bericht zu den aktivsten Benutzern generieren",
