@@ -15,6 +15,7 @@
 			"TomatoCake"
 		]
 	},
+	"usergifts-desc": "Ermöglicht das Senden, Empfangen, Erstellen und Entfernen von Benutzergeschenken",
 	"giftmanager": "Geschenke-Verwaltung",
 	"giftmanager-addgift": "+ Neues Geschenk hinzufügen",
 	"giftmanager-access": "Geschenkfortschritt",
@@ -61,6 +62,7 @@
 	"g-give-no-user-title": "Wem möchtest du ein Geschenk geben?",
 	"g-give-to-user-title": "Das Geschenk „$1“ an $2 geben",
 	"g-give-to-user-message": "Möchest du $1 ein [[Special:GiveGift/$1|anderes Geschenk geben]]?",
+	"g-give-this-gift": "Dieses Geschenk senden",
 	"g-go-back": "Zurück",
 	"g-imagesbelow": "Hier drunter folgen alle Bilder, die auf dieser Seite genutzt werden",
 	"g-large": "Groß",

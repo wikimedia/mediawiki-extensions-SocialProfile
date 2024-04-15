@@ -2,20 +2,21 @@
 	"@metadata": {
 		"authors": [
 			"Ernác",
-			"Iltever"
+			"Iltever",
+			"Къарачайлы"
 		]
 	},
 	"userwelcome-desc": "Регистрацияны ётген къошулуучула социал информацияны кёрюрча <code>&lt;welcomeUser&gt;</code> тегни къошады",
 	"mp-userlevels-link": "Къошулуучуланы дараджалары",
 	"mp-welcome-upload": "Джюкле",
-	"mp-welcome-points": "$1 {{PLURAL:$1|балл|балл}}",
-	"mp-welcome-needed-points": "[[$1|'''$2''']]-гъа кёчер ючюн энтда ''$3'' {{PLURAL:$3|балл|балл}} керекди!",
+	"mp-welcome-points": "$1 {{PLURAL:$1|балл}}",
+	"mp-welcome-needed-points": "[[$1|'''$2''']] хайырланыучуну кёлютюрюр ючюн энтда {{PLURAL:$3|бал}} къаб!",
 	"mp-welcome-logged-in": "Сау кел, $1",
 	"mp-requests-title": "Сапаришле",
 	"mp-requests-message": "Сорууларыгъыз барды.",
 	"mp-request-new-message": "джангы билдириу",
-	"mp-request-new-award": "$1 джангы {{PLURAL:$1|награда|награда}}",
-	"mp-request-new-gift": "$1 джангы {{PLURAL:$1|саугъа|саугъа}}",
-	"mp-request-new-foe": "$1 джангы {{PLURAL:$1|джау|джау}}",
-	"mp-request-new-friend": "$1 джангы {{PLURAL:$1|тенг|тенг}}"
+	"mp-request-new-award": "$1 джангы {{PLURAL:$1|саугъа}}",
+	"mp-request-new-gift": "$1 джангы {{PLURAL:$1|саугъа}}",
+	"mp-request-new-foe": "$1 джангы {{PLURAL:$1|джау}}",
+	"mp-request-new-friend": "$1 джангы {{PLURAL:$1|шох}}"
 }
