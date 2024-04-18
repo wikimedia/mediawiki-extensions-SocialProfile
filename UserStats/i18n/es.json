@@ -15,6 +15,7 @@
 			"Translationista"
 		]
 	},
+	"userstats-desc": "Permite otorgar puntos a los usuarios según su actividad",
 	"user-stats-alltime-title": "Mayor puntuación de la historia",
 	"user-stats-weekly-title": "Mayor puntuación de esta semana",
 	"user-stats-monthly-title": "Mayor puntuación de este mes",
@@ -61,6 +62,7 @@
 	"right-updatepoints": "Actualizar conteos de ediciones",
 	"action-updatepoints": "actualizar conteos de edición",
 	"right-generatetopusersreport": "Generar informes de los usuarios principales",
+	"action-generatetopusersreport": "generar reportes de tabla de clasificación de usuarios",
 	"level-advanced-to": "avanzó a nivel <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "¡Ahora eres un «$1» en {{SITENAME}}!",
 	"level-advance-body-html": "Hola $1.\n\n¡Ahora eres «$2» en {{SITENAME}}!\n\nEnhorabuena,\n\nEl equipo de {{SITENAME}}\n\n---\n¿Deseas dejar de recibir correos electrónicos de nosotros?\n\nHaz clic en [[Special:UpdateProfile]]\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
@@ -70,6 +72,7 @@
 	"notification-social-level-up": "Has subido de nivel a \" $1 \".",
 	"notification-social-level-up-bundle": "¡Has subido {{PLURAL:$1|un nivel|$1 niveles}} hasta alcanzar el nivel $2!",
 	"updateeditcounts": "Actualizar la estadística de ediciones",
+	"updateeditcounts-confirm": "¿Seguro que quieres actualizar el recuento de ediciones de todos los usuarios?",
 	"updateeditcounts-updated": "Estadísticas actualizadas para '''$1''' {{PLURAL:$1|usuario|usuarios}}",
 	"updateeditcounts-updating": "Actualizando  $1 con  $2 {{PLURAL:$2|edición|ediciones}}",
 	"generatetopusersreport": "Generar informe de los usuarios principales",
