@@ -15,6 +15,7 @@
 			"No se"
 		]
 	},
+	"userboard-desc": "Permite mandar mensajes entre tablones de usuarios.",
 	"messagesenttitle": "Mensajes enviados",
 	"boardblasttitle": "Enviar mensaje a otros tablones",
 	"boardblaststep1": "Paso 1 - Escribe tu mensaje",
@@ -29,6 +30,7 @@
 	"boardsendbutton": "Enviar mensaje",
 	"boardnofriends": "¡No tienes amigos a los que enviar un mensaje!",
 	"messagesentsuccess": "Tu mensaje fue enviado exitosamente",
+	"boardblast-js-sending": "Enviando mensajes...",
 	"boardblast-error-missing-message": "Por favor, introduzca un mensaje",
 	"boardblast-error-missing-user": "Por favor, seleccione al menos una persona",
 	"userboard": "Tablón del usuario",
@@ -63,5 +65,7 @@
 	"message_received_body": "Hola, $1.\n\n¡$2 acaba de escribir en tu tablón en {{SITENAME}}!\n\n¡Haz clic a continuación para revisar tu tablón!\n\n$3\n\n---\n\n¿Deseas dejar de recibir correos electrónicos de nosotros?\n\nHaz clic en $4\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
 	"echo-category-title-social-msg": "Mensajes del tablón de usuarios",
 	"echo-pref-tooltip-social-msg": "Notificarme cuando alguien deje un mensaje en mi tablón de usuario.",
+	"notification-social-msg-send": "$1 acaba de dejarte un mensaje en tu tablón de usuario.<br /><br />''$2''",
+	"notification-social-msg-send-bundle": "Te han dejado {{PLURAL:$1|un mensaje|$1 mensajes|100=99+ mensajes}} en tu tablón de usuario.",
 	"apihelp-socialprofile-send-message-param-username": "El nombre de usuario del destinatario."
 }
