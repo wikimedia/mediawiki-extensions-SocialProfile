@@ -34,7 +34,7 @@ trait UploadAvatarTrait {
 		}
 
 		if ( $wgUseImageMagick ) { // ImageMagick is enabled
-			list( $origWidth, $origHeight, $typeCode ) = $imageInfo;
+			[ $origWidth, $origHeight, $typeCode ] = $imageInfo;
 
 			if ( $origWidth < $thumbWidth ) {
 				$thumbWidth = $origWidth;
@@ -103,7 +103,7 @@ trait UploadAvatarTrait {
 			}
 		} else { // ImageMagick is not enabled, so fall back to PHP's GD library
 			// Get the image size, used in calculations later.
-			list( $origWidth, $origHeight, $typeCode ) = getimagesize( $imageSrc );
+			[ $origWidth, $origHeight, $typeCode ] = getimagesize( $imageSrc );
 
 			$fullImage = '';
 			$ext = '';

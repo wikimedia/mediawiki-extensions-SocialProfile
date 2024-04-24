@@ -313,42 +313,42 @@ class GiveGift extends SpecialPage {
 			'</div>
 			<div class="g-give-container">';
 
-			// If friending is enabled, build a dropdown menu of the user's
-			// friends
-			if ( $wgFriendingEnabled ) {
-				$user = $this->getUser();
+		// If friending is enabled, build a dropdown menu of the user's
+		// friends
+		if ( $wgFriendingEnabled ) {
+			$user = $this->getUser();
 
-				$listLookup = new RelationshipListLookup( $user );
-				$friends = $listLookup->getFriendList();
+			$listLookup = new RelationshipListLookup( $user );
+			$friends = $listLookup->getFriendList();
 
-				if ( $friends ) {
-					$output .= '<div class="g-give-title">' .
-						$this->msg( 'g-give-list-friends-title' )->escaped() .
-					'</div>
+			if ( $friends ) {
+				$output .= '<div class="g-give-title">' .
+					$this->msg( 'g-give-list-friends-title' )->escaped() .
+				'</div>
 					<div class="g-gift-select">
 						<select name="friend-list">
 							<option value="#" selected="selected">' .
-								$this->msg( 'g-select-a-friend' )->escaped() .
-							'</option>';
-					foreach ( $friends as $friend ) {
-						$friendActor = User::newFromActorId( $friend['actor'] );
-						if ( !$friendActor || !$friendActor instanceof User ) {
-							continue;
-						}
-						$output .= '<option value="' . htmlspecialchars( $friendActor->getName() ) . '">' .
-							htmlspecialchars( $friendActor->getName() ) .
-						'</option>' . "\n";
+							$this->msg( 'g-select-a-friend' )->escaped() .
+						'</option>';
+				foreach ( $friends as $friend ) {
+					$friendActor = User::newFromActorId( $friend['actor'] );
+					if ( !$friendActor || !$friendActor instanceof User ) {
+						continue;
 					}
-					$output .= '</select>
+					$output .= '<option value="' . htmlspecialchars( $friendActor->getName() ) . '">' .
+						htmlspecialchars( $friendActor->getName() ) .
+					'</option>' . "\n";
+				}
+				$output .= '</select>
 					</div>
 					<div class="g-give-separator">' .
-						$this->msg( 'g-give-separator' )->escaped() .
-					'</div>';
-				}
+					$this->msg( 'g-give-separator' )->escaped() .
+				'</div>';
 			}
+		}
 
-			$output .= '<div class="g-give-title">' .
-				$this->msg( 'g-give-enter-friend-title' )->escaped() .
+		$output .= '<div class="g-give-title">' .
+			$this->msg( 'g-give-enter-friend-title' )->escaped() .
 			'</div>
 			<div class="g-give-textbox">
 				<input type="text" width="85" name="user" class="mw-autocomplete-user" value="" />

@@ -265,17 +265,17 @@ class SystemGiftManager extends SpecialPage {
 				<td class="view-form">' . $this->msg( 'ga-gifttype' )->escaped() . '</td>
 				<td class="view-container">
 					<select name="gift_category">' . "\n";
-			$g = new SystemGifts();
-			foreach ( $g->getCategories() as $category => $id ) {
-				$sel = '';
-				if ( isset( $gift['gift_category'] ) && $gift['gift_category'] == $id ) {
-					$sel = ' selected="selected"';
-				}
-				$indent = "\t\t\t\t\t\t";
-				$form .= $indent . '<option' . $sel .
-					" value=\"{$id}\">{$category}</option>\n";
+		$g = new SystemGifts();
+		foreach ( $g->getCategories() as $category => $id ) {
+			$sel = '';
+			if ( isset( $gift['gift_category'] ) && $gift['gift_category'] == $id ) {
+				$sel = ' selected="selected"';
 			}
-			$form .= "\t\t\t\t\t" . '</select>
+			$indent = "\t\t\t\t\t\t";
+			$form .= $indent . '<option' . $sel .
+				" value=\"{$id}\">{$category}</option>\n";
+		}
+		$form .= "\t\t\t\t\t" . '</select>
 				</td>
 			</tr>
 		<tr>

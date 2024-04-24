@@ -208,7 +208,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		 * We'll want to blacklist against *any* 'extension', and use
 		 * only the final one for the whitelist.
 		 */
-		list( $partname, $ext ) = UploadBase::splitExtensions( $basename );
+		[ $partname, $ext ] = UploadBase::splitExtensions( $basename );
 		if ( count( $ext ) ) {
 			$finalExt = $ext[count( $ext ) - 1];
 		} else {
@@ -302,7 +302,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 	function createThumbnail( $imageSrc, $ext, $imgDest, $thumbWidth ) {
 		global $wgUseImageMagick, $wgImageMagickConvertCommand;
 
-		list( $origWidth, $origHeight, $typeCode ) = getimagesize( $imageSrc );
+		[ $origWidth, $origHeight, $typeCode ] = getimagesize( $imageSrc );
 
 		$backend = new SocialProfileFileBackend( 'awards' );
 		$dir = $backend->getContainerStoragePath();
@@ -757,11 +757,11 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 			$source = "
 	<td align='right' nowrap='nowrap'>" . $this->msg( 'filestatus' )->escaped() . "</td>
 	<td><input tabindex='3' type='text' name=\"wpUploadCopyStatus\" value=\"" .
-	htmlspecialchars( $this->mUploadCopyStatus ) . "\" size='40' /></td>
+			htmlspecialchars( $this->mUploadCopyStatus ) . "\" size='40' /></td>
 	</tr><tr>
 	<td align='right'>" . $this->msg( 'filesource' )->escaped() . "</td>
 	<td><input tabindex='4' type='text' name='wpUploadSource' id='wpUploadSource' value=\"" .
-	htmlspecialchars( $this->mUploadSource ) . "\" /></td>
+			htmlspecialchars( $this->mUploadSource ) . "\" /></td>
 	";
 		}
 
