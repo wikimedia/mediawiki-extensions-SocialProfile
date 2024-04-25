@@ -35,6 +35,7 @@ class UserWelcome {
 			$user = MediaWikiServices::getInstance()
 				->getUserFactory()->newFromUserIdentity( $parser->getUserIdentity() );
 		} else {
+			// @phan-suppress-next-line PhanUndeclaredMethod
 			$user = $parser->getUser();
 		}
 		$uw = new UserWelcome( $user );

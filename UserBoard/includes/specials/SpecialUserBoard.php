@@ -176,7 +176,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				$currentUser->getName() == $user_name ||
 				$currentUser->isAllowed( 'userboard-delete' )
 			) {
-				$total = $total + $stats_data['user_board_priv'];
+				$total += $stats_data['user_board_priv'];
 			}
 		} else {
 			$total = $b->getUserBoardToBoardCount( ( $userFromURL ? User::newFromName( $userFromURL ) : $currentUser ), $user_2 );

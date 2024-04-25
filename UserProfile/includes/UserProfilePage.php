@@ -1747,7 +1747,7 @@ class UserProfilePage extends Article {
 			$this->viewingUser->getName() == $this->profileOwner->getName() ||
 			$this->viewingUser->isAllowed( 'userboard-delete' )
 		) {
-			$total = $total + $stats_data['user_board_priv'];
+			$total += $stats_data['user_board_priv'];
 		}
 
 		$output .= '<div class="user-section-heading">
