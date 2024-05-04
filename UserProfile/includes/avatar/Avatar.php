@@ -133,16 +133,23 @@ class wAvatar {
 	}
 
 	/**
-	 * @param array $extraParams Array of extra parameters to give to the image
-	 * @return string <img> HTML tag with full path to the avatar image
+	 * @param array $extraParams Array of extra parameters to give to the image;
+	 *  if [ 'raw' => true ], returns the raw avatar URL *without* the surrounding <img> tag
+	 * @return string Either the <img> HTML tag with full path to the avatar image
+	 *  or the raw avatar URL only if requested
 	 */
 	public function getAvatarURL( $extraParams = [] ) {
 		global $wgUserProfileDisplay, $wgNativeImageLazyLoading;
 
 		$backend = new SocialProfileFileBackend( 'avatars' );
 
+		$url = $backend->getFileHttpUrlFromName( $this->getAvatarImage() );
+		if ( isset( $extraParams['raw'] ) && $extraParams['raw'] === true ) {
+			return $url;
+		}
+
 		$defaultParams = [
-			'src' => $backend->getFileHttpUrlFromName( $this->getAvatarImage() ),
+			'src' => $url,
 			'border' => '0',
 			'class' => 'mw-socialprofile-avatar'
 		];
