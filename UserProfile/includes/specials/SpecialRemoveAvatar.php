@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\User\UserNamePrefixSearch;
 
 /**
  * A special page for removing avatars.
@@ -206,8 +207,11 @@ class RemoveAvatar extends SpecialPage {
 			return [];
 		}
 		if ( $this->isUserPrivileged() ) {
+			$services = MediaWikiServices::getInstance();
 			// Autocomplete subpage as user list - public to allow caching
-			return UserNamePrefixSearch::search( 'public', $search, $limit, $offset );
+			return $services->getUserNamePrefixSearch()->search(
+				UserNamePrefixSearch::AUDIENCE_PUBLIC, $user, $limit, $offset
+			);
 		} else {
 			return [ $this->getUser()->getName() ];
 		}

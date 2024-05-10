@@ -13,7 +13,9 @@
  * @license GPL-2.0-or-later
  */
 
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
+use MediaWiki\User\UserNamePrefixSearch;
 
 class SpecialAddRelationship extends UnlistedSpecialPage {
 
@@ -253,8 +255,11 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 			// No prefix suggestion for invalid user
 			return [];
 		}
+		$services = MediaWikiServices::getInstance();
 		// Autocomplete subpage as user list - public to allow caching
-		return UserNamePrefixSearch::search( 'public', $search, $limit, $offset );
+		return $services->getUserNamePrefixSearch()->search(
+			UserNamePrefixSearch::AUDIENCE_PUBLIC, $user, $limit, $offset
+		);
 	}
 
 	/**

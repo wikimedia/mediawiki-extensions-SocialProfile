@@ -3,6 +3,7 @@
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use MediaWiki\User\UserIdentity;
+use MediaWiki\User\UserNamePrefixSearch;
 
 /**
  * A special page to allow privileged users to update others' social profiles
@@ -556,8 +557,12 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 			// No prefix suggestion for invalid user
 			return [];
 		}
+
+		$services = MediaWikiServices::getInstance();
 		// Autocomplete subpage as user list - public to allow caching
-		return UserNamePrefixSearch::search( 'public', $search, $limit, $offset );
+		return $services->getUserNamePrefixSearch()->search(
+			UserNamePrefixSearch::AUDIENCE_PUBLIC, $user, $limit, $offset
+		);
 	}
 
 }

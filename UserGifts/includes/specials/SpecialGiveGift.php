@@ -3,6 +3,7 @@
 use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
+use MediaWiki\User\UserNamePrefixSearch;
 
 /**
  * Special:GiveGift -- a special page for sending out user-to-user gifts
@@ -225,8 +226,12 @@ class GiveGift extends SpecialPage {
 			// No prefix suggestion for invalid user
 			return [];
 		}
+
+		$services = MediaWikiServices::getInstance();
 		// Autocomplete subpage as user list - public to allow caching
-		return UserNamePrefixSearch::search( 'public', $search, $limit, $offset );
+		return $services->getUserNamePrefixSearch()->search(
+			UserNamePrefixSearch::AUDIENCE_PUBLIC, $user, $limit, $offset
+		);
 	}
 
 	/**
