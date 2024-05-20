@@ -185,7 +185,7 @@
 	"user-profile-remove-avatar": "アバターを削除",
 	"right-avatarremove": "利用者のアバターを除去",
 	"right-editothersprofiles": "他の利用者のソーシャルプロフィールを更新",
-	"right-editothersprofiles-private": "他のユーザーのソーシャルプロフィールの個人情報（メールアドレス）を表示および更新する",
+	"right-editothersprofiles-private": "他の利用者のソーシャルプロフィールの個人情報 (メールアドレス) を閲覧および更新",
 	"action-avatarremove": "利用者のアバターの除去",
 	"random-users-avatars-title": "コミュニティに出会う"
 }
