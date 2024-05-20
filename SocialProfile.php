@@ -85,6 +85,12 @@ $wgAutoloadClasses['MigrateOldUserFieldPrivacyUserColumnToActor'] = __DIR__ . '/
 $wgAutoloadClasses['ApiUserProfilePrivacy'] = __DIR__ . '/UserProfile/includes/api/ApiUserProfilePrivacy.php';
 $wgAPIModules['smpuserprivacy'] = 'ApiUserProfilePrivacy';
 
+$wgAutoloadClasses['ApiRemoveAvatar'] = __DIR__ . '/UserProfile/includes/api/ApiRemoveAvatar.php';
+$wgAPIModules['removeavatar'] = 'ApiRemoveAvatar';
+
+$wgAutoloadClasses['ApiUploadAvatar'] = __DIR__ . '/UserProfile/includes/api/ApiUploadAvatar.php';
+$wgAPIModules['uploadavatar'] = 'ApiUploadAvatar';
+
 $wgAutoloadClasses['ApiUserProfileType'] = __DIR__ . '/UserProfile/includes/api/ApiUserProfileType.php';
 $wgAPIModules['smpuserprofiletype'] = 'ApiUserProfileType';
 

@@ -152,10 +152,10 @@ class RemoveAvatar extends SpecialPage {
 			$user_deleted = $user;
 		}
 
-		$this->deleteImage( $user_id, 's' );
-		$this->deleteImage( $user_id, 'm' );
-		$this->deleteImage( $user_id, 'l' );
-		$this->deleteImage( $user_id, 'ml' );
+		self::deleteImage( $user_id, 's' );
+		self::deleteImage( $user_id, 'm' );
+		self::deleteImage( $user_id, 'l' );
+		self::deleteImage( $user_id, 'ml' );
 
 		$log = new LogPage( 'avatar' );
 		if ( !$wgUploadAvatarInRecentChanges ) {
@@ -249,7 +249,6 @@ class RemoveAvatar extends SpecialPage {
 		if ( !$avatar->isDefault() ) {
 			if ( !$userIsAvatarOwner ) {
 				$out->addHTML( '<div><b>' . $this->msg( 'avatarupload-currentavatar', $user_name )->parse() . '</b></div>' );
-
 			}
 			$out->addHTML( "<div>{$avatar->getAvatarURL()}</div>" );
 
@@ -283,9 +282,9 @@ class RemoveAvatar extends SpecialPage {
 	 *
 	 * @param int $id User ID
 	 * @param string $size Size of the avatar image to delete (small, medium or large).
-	 * Doesn't really matter since we're just going to blast 'em all.
+	 *  Doesn't really matter since we're just going to blast 'em all.
 	 */
-	private function deleteImage( $id, $size ) {
+	public static function deleteImage( $id, $size ) {
 		global $wgAvatarKey;
 
 		$backend = new SocialProfileFileBackend( 'avatars' );
