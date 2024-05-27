@@ -3,7 +3,8 @@
 		"authors": [
 			"Gerongfenh",
 			"Liuxinyu970226",
-			"列维劳德"
+			"列维劳德",
+			"LittlePaw365"
 		]
 	},
 	"socialprofile-desc": "用于 MediaWiki 的社交工具套装",
@@ -11,6 +12,6 @@
 	"apihelp-smpuserprivacy-description": "设置个人资料字段可见性（“privacy”）的 API 模块",
 	"apihelp-smpuserprivacy-summary": "设置个人资料字段可见性（“privacy”）的 API 模块",
 	"apihelp-smpuserprivacy-param-method": "操作（“get”或“set”）",
-	"apihelp-smpuserprivacy-param-field_key": "目标字段关键字，例如 up_movies 用于“Movies”字段",
+	"apihelp-smpuserprivacy-param-field_key": "目标字段键，例如“Movies”字段的up_movies",
 	"apihelp-smpuserprivacy-param-privacy": "新隐私值（以下之一：public、hidden、friends 或 foaf）"
 }
