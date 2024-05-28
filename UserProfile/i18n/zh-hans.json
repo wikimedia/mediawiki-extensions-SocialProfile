@@ -235,7 +235,7 @@
 	"apihelp-socialprofile-userprofileprivacy-description": "设置详情字段可见性（“privacy”）的API模块",
 	"apihelp-socialprofile-userprofileprivacy-summary": "设置详情字段可见性（“privacy”）的API模块",
 	"apihelp-socialprofile-userprofileprivacy-param-method": "操作（“get”或“set”）",
-	"apihelp-socialprofile-userprofileprivacy-param-field_key": "目标字段关键字，例如up_movies用于“Movies”字段",
+	"apihelp-socialprofile-userprofileprivacy-param-field_key": "目标字段键，例如“Movies”字段的up_movies",
 	"apihelp-socialprofile-userprofileprivacy-param-privacy": "新的隐私值（public, hidden, friends, foaf）",
 	"apihelp-socialprofile-userprofileprivacy-param-tuid": "目标用户ID",
 	"apihelp-smpuserprofiletype-description": "获取一位用户的用户页类型或设置您自己的用户页类型",
