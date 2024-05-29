@@ -6,6 +6,9 @@ use MediaWiki\User\UserIdentity;
  * Class to access profile data for a user
  */
 class UserProfile {
+	/** @var int Cache key version; bump this to force recaching of UserProfile data */
+	public const CACHE_VERSION = 2;
+
 	/**
 	 * @var User User object whose profile is being viewed
 	 */
@@ -91,7 +94,7 @@ class UserProfile {
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		// @phan-suppress-next-line PhanUndeclaredMethod Removed in MW 1.41
-		return $cache->makeKey( 'user', 'profile', 'info', 'actor_id', $user->getActorId() );
+		return $cache->makeKey( 'user', 'profile', 'info', 'actor_id', $user->getActorId(), self::CACHE_VERSION );
 	}
 
 	/**
@@ -184,30 +187,37 @@ class UserProfile {
 
 	/**
 	 * Format the user's birthday.
+	 * "Formatting" here means:
+	 * 1) stripping out the separator dashes
+	 * 2) respecting the "show/hide birth year" user preference
+	 *		This impacts the output of this method!
 	 *
-	 * @param string $birthday birthday in YYYY-MM-DD format
+	 * @param string $birthday Birthday in YYYY-MM-DD format
 	 * @param bool $showYear
-	 * @return string formatted birthday
+	 * @return string Formatted birthday, either 8 (with year) or 4 (without year) characters long
 	 */
 	function formatBirthday( $birthday, $showYear = true ) {
 		$dob = explode( '-', $birthday );
 		if ( count( $dob ) == 3 ) {
-			$month = (int)$dob[1];
-			$day = (int)$dob[2];
+			$month = $dob[1];
+			$day = $dob[2];
 			if ( !$showYear ) {
 				if ( $dob[1] == '00' && $dob[2] == '00' ) {
 					return '';
 				} else {
-					return date( 'F jS', mktime( 0, 0, 0, $month, $day ) );
+					return $month . $day;
+					// old, woefully English-specific code:
+					// return date( 'F jS', mktime( 0, 0, 0, $month, $day ) );
 				}
 			}
-			$year = (int)$dob[0];
+			$year = $dob[0];
 			if ( $dob[0] == '00' && $dob[1] == '00' && $dob[2] == '00' ) {
 				return '';
 			} else {
-				return date( 'F jS, Y', mktime( 0, 0, 0, $month, $day, $year ) );
+				return $year . $month . $day;
+				// old, woefully English-specific code:
+				// return date( 'F jS, Y', mktime( 0, 0, 0, $month, $day, $year ) );
 			}
-			// return $day . ' ' . $wgLang->getMonthNameGen( $month );
 		}
 		return $birthday;
 	}
