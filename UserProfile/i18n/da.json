@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Byrial",
+			"Jack Phoenix",
 			"Jon Harald Søby",
 			"Saederup92"
 		]
@@ -10,7 +11,7 @@
 	"user-stats-votes": "Stemmer",
 	"user-stats-comments": "Kommentarer",
 	"other-info-tv": "TV",
-	"user-personal-info-real-name": "Virkeligt navn:",
+	"user-personal-info-real-name": "Virkeligt navn",
 	"user-profile-personal-name": "Navn",
 	"user-profile-personal-city": "By",
 	"user-profile-personal-country": "Land",
