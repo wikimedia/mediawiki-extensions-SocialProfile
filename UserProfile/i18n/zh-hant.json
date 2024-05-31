@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Cookai1205",
 			"Kly",
 			"Lakejason0",
 			"Liangent",
@@ -97,7 +98,7 @@
 	"user-profile-section-personal": "個人資訊",
 	"user-profile-section-sportsteams": "更新網路",
 	"user-profile-section-custom": "自訂資訊",
-	"user-profile-section-interests": "其它資訊",
+	"user-profile-section-interests": "其他資訊",
 	"user-profile-section-picture": "頭像",
 	"user-profile-personal-info": "資訊",
 	"user-profile-personal-name": "姓名",
