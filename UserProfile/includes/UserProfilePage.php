@@ -741,8 +741,15 @@ class UserProfilePage extends Article {
 		$personal_output .= $this->getProfileSection( wfMessage( 'user-personal-info-location' )->escaped(), $location, false );
 		$personal_output .= $this->getProfileSection( wfMessage( 'user-personal-info-hometown' )->escaped(), $hometown, false );
 
-		if ( in_array( 'up_birthday', $this->profile_visible_fields ) ) {
-			$personal_output .= $this->getProfileSection( wfMessage( 'user-personal-info-birthday' )->escaped(), $profile_data['birthday'], false );
+		if ( in_array( 'up_birthday', $this->profile_visible_fields ) && $profile_data['birthday'] !== '' ) {
+			// $profile_data['birthday'] contains the user-supplied birthdate either with or without
+			// the year, hence why its output can be either 8 or 4 characters long, and thus we need to
+			// pad it accordingly with a sufficient amount of zeros.
+			$personal_output .= $this->getProfileSection(
+				wfMessage( 'user-personal-info-birthday' )->escaped(),
+				$this->getContext()->getLanguage()->date( str_pad( $profile_data['birthday'], 14, '0' ) ),
+				false
+			);
 		}
 
 		if ( in_array( 'up_occupation', $this->profile_visible_fields ) ) {
