@@ -33,9 +33,13 @@ class ApiRemoveAvatar extends ApiBase {
 		$isPrivileged = $user->isAllowed( 'avatarremove' );
 
 		$userToOperateOn = $user;
+		$reason = '';
 
 		if ( $isPrivileged ) {
 			$userToOperateOn = User::newFromName( $params['user'] );
+			if ( isset( $params['reason'] ) && $params['reason'] ) {
+				$reason = $params['reason'];
+			}
 		}
 
 		$user_id = $userToOperateOn->getId();
@@ -50,17 +54,33 @@ class ApiRemoveAvatar extends ApiBase {
 		RemoveAvatar::deleteImage( $user_id, 'ml' );
 
 		$log = new LogPage( 'avatar' );
+
 		if ( !$wgUploadAvatarInRecentChanges ) {
 			$log->updateRecentChanges = false;
 		}
-		$log->addEntry(
-			'avatar',
-			$user->getUserPage(),
-			$this->msg( 'user-profile-picture-log-delete-entry', $userToOperateOn->getName() )
-				->inContentLanguage()->text(),
-			[],
-			$user
-		);
+
+		if ( $isPrivileged && $reason !== '' ) {
+			$log->addEntry(
+				'avatar',
+				$user->getUserPage(),
+				$this->msg(
+					'user-profile-picture-log-delete-entry-with-reason',
+					$userToOperateOn->getName(),
+					$reason
+				)->inContentLanguage()->text(),
+				[],
+				$user
+			);
+		} else {
+			$log->addEntry(
+				'avatar',
+				$user->getUserPage(),
+				$this->msg( 'user-profile-picture-log-delete-entry', $userToOperateOn->getName() )
+					->inContentLanguage()->text(),
+				[],
+				$user
+			);
+		}
 
 		// Let the user know that everything went well.
 		$this->getResult()->addValue( null, $this->getModuleName(), [ 'status' => 'OK' ] );
@@ -83,6 +103,9 @@ class ApiRemoveAvatar extends ApiBase {
 				ParamValidator::PARAM_TYPE => 'user',
 				UserDef::PARAM_ALLOWED_USER_TYPES => [ 'name' ],
 				ApiBase::PARAM_REQUIRED => true
+			],
+			'reason' => [
+				ParamValidator::PARAM_TYPE => 'string'
 			]
 		];
 	}
@@ -91,6 +114,7 @@ class ApiRemoveAvatar extends ApiBase {
 	protected function getExamplesMessages() {
 		return [
 			'action=removeavatar&user=Ashley&token=123ABC' => 'apihelp-removeavatar-example-1',
+			'action=removeavatar&user=Elektra&token=123ABC&reason=Blatant copyvio' => 'apihelp-removeavatar-example-2',
 		];
 	}
 
