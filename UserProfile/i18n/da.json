@@ -3,14 +3,15 @@
 		"authors": [
 			"Byrial",
 			"Jon Harald Søby",
-			"Saederup92"
+			"Saederup92",
+			"Jack Phoenix"
 		]
 	},
 	"user-count-separator": "$1 af $2",
 	"user-stats-votes": "Stemmer",
 	"user-stats-comments": "Kommentarer",
 	"other-info-tv": "TV",
-	"user-personal-info-real-name": "Virkeligt navn:",
+	"user-personal-info-real-name": "Virkeligt navn",
 	"user-profile-personal-name": "Navn",
 	"user-profile-personal-city": "By",
 	"user-profile-personal-country": "Land",

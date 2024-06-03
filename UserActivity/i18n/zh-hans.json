@@ -5,7 +5,8 @@
 			"Lakejason0",
 			"Liuxinyu970226",
 			"Xiaomingyan",
-			"沈澄心"
+			"沈澄心",
+			"LittlePaw365"
 		]
 	},
 	"useractivity": "好友动态",
@@ -14,7 +15,7 @@
 	"useractivity-all": "查看全部",
 	"useractivity-edit": "$1{{PLURAL:$4|编辑了页面|编辑了如下页面：}}$3",
 	"useractivity-foe": "$1{{PLURAL:$2|现在与|现在与}}$3成为仇敌",
-	"useractivity-filter": "过滤器",
+	"useractivity-filter": "筛选",
 	"useractivity-friend": "$1{{PLURAL:$2|现在与|现在与}}$3成为好友",
 	"useractivity-gift": "$1收到了一份来自$2的礼物",
 	"useractivity-group-edit": "{{PLURAL:$1|1次编辑|$1次编辑}}",
