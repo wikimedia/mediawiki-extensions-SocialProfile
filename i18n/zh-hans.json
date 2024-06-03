@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Gerongfenh",
+			"Googology",
 			"LittlePaw365",
 			"Liuxinyu970226",
 			"列维劳德"
@@ -9,6 +10,8 @@
 	},
 	"socialprofile-desc": "用于 MediaWiki 的社交工具套装",
 	"socialprofile-uploads-disabled": "头像上传功能被禁用",
+	"apierror-avatar-is-default": "该用户的头像已经是默认的。",
+	"apihelp-uploadavatar-param-file": "新的头像文件内容。",
 	"apihelp-smpuserprivacy-summary": "设置个人资料字段可见性（“privacy”）的 API 模块",
 	"apihelp-smpuserprivacy-param-method": "操作（“get”或“set”）",
 	"apihelp-smpuserprivacy-param-field_key": "目标字段键，例如“Movies”字段的up_movies",
