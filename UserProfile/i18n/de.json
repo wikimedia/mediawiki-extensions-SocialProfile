@@ -20,6 +20,7 @@
 	},
 	"editprofile": "Benutzerprofile anderer Benutzer bearbeiten",
 	"populateuserprofiles": "Benutzerprofil vervollständigen",
+	"populateuserprofiles-confirm": "{{#FORMAL|Bist du sicher|Sind Sie sicher}}, dass {{#FORMAL|du|Sie}} die Profile vorhandener Profile der Benutzer auffüllen {{#FORMAL|willst|wollen}}?",
 	"user-time-ago": "vor $1",
 	"user-awards-title": "Auszeichnungen",
 	"user-gifts-title": "Geschenke",
