@@ -3,13 +3,14 @@
 		"authors": [
 			"Gomoko",
 			"Graineahumus",
-			"Thibaut120094"
+			"Thibaut120094",
+			"Wladek92"
 		]
 	},
 	"socialprofile-desc": "Un ensemble d’outils sociaux pour MediaWiki",
 	"socialprofile-uploads-disabled": "La fonctionalité permettant d’utiliser un avatar a été désactivée.",
 	"apihelp-removeavatar-summary": "Supprimez un avatar, le vôtre ou si vous avez les privilèges, également celui d'un autre utilisateur.",
-	"apihelp-removeavatar-param-user": "Nom de l'utilisateur dont l'avatar doit être supprimé",
+	"apihelp-removeavatar-param-user": "Nom de l'utilisateur dont l'avatar doit être supprimé.",
 	"apihelp-removeavatar-example-1": "Supprimer l'avatar de l'utilisateur nommé \"Ashley\"",
 	"apierror-avatar-is-default": "L'avatar de l'utilisateur est déjà celui par défaut.",
 	"apihelp-uploadavatar-summary": "Importer un avatar",

@@ -68,6 +68,7 @@
 	"user-profile-privacy-status-privacy-friends": "amici",
 	"user-profile-privacy-status-privacy-foaf": "amici di amici",
 	"user-page-link": "Pagina utente",
+	"removeavatar-reason": "Motivo:",
 	"user-profile-remove-avatar": "rimuovi",
 	"apihelp-socialprofile-userprofileprivacy-param-method": "Azione (che sia \"prendi\" o \"imposta\")",
 	"apihelp-socialprofile-userprofileprivacy-param-field_key": "Campo di destinazione chiave, ad esempio up_movies per il campo\"Film\"",
