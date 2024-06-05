@@ -2,14 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Sasan700",
-			"Умар"
+			"Умар",
+			"Исмаил Садуев"
 		]
 	},
 	"user-time-ago": "$1 хьалха",
 	"user-view-all": "Йерриге хьажар",
 	"user-upload-image": "Сурт чудаккха",
-	"user-edit-this": "Нисйе хӀара",
-	"user-edit-profile": "Нисйе профиль",
+	"user-edit-this": "ХӀара нисйан",
+	"user-edit-profile": "Профиль нисйан",
 	"user-add-friend": "ТӀетоха доттагӀ сана",
 	"user-send-message": "ДӀабахьийта хаам",
 	"user-contributions": "Къинхьегам",
