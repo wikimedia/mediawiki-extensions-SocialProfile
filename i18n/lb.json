@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"socialprofile-desc": "E Set vu sozialen Tools fir MediaWiki",
-	"socialprofile-uploads-disabled": "D'Funktioun fir Avataren eropzelueden ass desaktivéiert."
+	"socialprofile-uploads-disabled": "D'Funktioun fir Avataren eropzelueden ass desaktivéiert.",
+	"apihelp-removeavatar-param-user": "Numm vum Benotzer, deem säin Avatar geläscht soll ginn."
 }
