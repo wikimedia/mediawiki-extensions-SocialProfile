@@ -190,6 +190,7 @@
 	"user-board-login-message": "U moet [[Special:UserLogin|aangemeld]] zijn om berichten aan andere gebruikers te kunnen versturen",
 	"user-board-confirm-delete": "Wilt u dit bericht inderdaad verwijderen?",
 	"removeavatar": "Avatar verwijderen",
+	"removeavatar-reason": "Reden:",
 	"removeavatar-remove-my-avatar": "Mijn avatar verwijderen",
 	"removeavatar-remove-your-avatar": "Uw avatar verwijderen",
 	"removeavatar-already-default": "Deze gebruiker gebruikt de standaard-avatar al, dus er valt hier niets te verwijderen.",
