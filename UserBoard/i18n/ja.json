@@ -7,9 +7,11 @@
 			"Fryed-peach",
 			"Gzdavidwong",
 			"Schu",
-			"Shirayuki"
+			"Shirayuki",
+			"Waki285"
 		]
 	},
+	"userboard-desc": "掲示板間でメッセージを送信する",
 	"messagesenttitle": "メッセージを送る",
 	"boardblasttitle": "一斉メッセージの送信",
 	"boardblaststep1": "ステップ1 - メッセージを書きます",
@@ -24,6 +26,9 @@
 	"boardsendbutton": "一斉メッセージを送る",
 	"boardnofriends": "あなたはメッセージを送信する友達がいません！",
 	"messagesentsuccess": "あなたのメッセージは正常に送信されました",
+	"boardblast-js-sending": "メッセージを送信しています...",
+	"boardblast-error-missing-message": "メッセージを入力してください",
+	"boardblast-error-missing-user": "少なくとも1人を選択してください",
 	"userboard": "利用者掲示板",
 	"userboard_board-to-board": "掲示板連絡",
 	"userboard_noexist": "閲覧しようとした利用者は存在していません。",
@@ -45,11 +50,23 @@
 	"userboard_sendbutton": "送信",
 	"userboard_loggedout": "他の利用者にメッセージを送信するには[[Special:UserLogin|ログイン]]する必要があります。",
 	"userboard_showingmessages": "メッセージ$1件中{{PLURAL:$4|$3件|$2-$3件}}を表示中",
+	"userboard-delete-success": "メッセージが削除されました！",
 	"right-userboard-delete": "他の人の掲示板のメッセージを削除",
 	"userboard-time-days": "{{PLURAL:$1|$1日}}",
 	"userboard-time-hours": "{{PLURAL:$1|$1時間}}",
 	"userboard-time-minutes": "{{PLURAL:$1|$1分}}",
 	"userboard-time-seconds": "{{PLURAL:$1|$1秒}}",
 	"message_received_subject": "$1が{{SITENAME}}のあなたの掲示板に書き込みました",
-	"message_received_body": "こんにちは、$1さん。\n\nさきほど、$2さんが{{SITENAME}}上のあなたの掲示板に書き込みをしました！\n\n以下をクリックして、掲示板を確認してください！\n\n$3\n\n---\nメール受信を停止したい場合は、\n$4\nをクリックして、メール通知を無効にするよう設定変更してください。"
+	"message_received_body_html": "こんにちは、$1さん。\n\nさきほど、$2さんが{{SITENAME}}上のあなたの掲示板に書き込みをしました！\n\n以下をクリックして、掲示板を確認してください！\n\n[[Special:UserBoard]]\n\n---\nメール受信を停止したい場合は、\n\n[[Special:UpdateProfile]]\nをクリックして、メール通知を無効にするよう設定変更してください。",
+	"message_received_body": "こんにちは、$1さん。\n\nさきほど、$2さんが{{SITENAME}}上のあなたの掲示板に書き込みをしました！\n\n以下をクリックして、掲示板を確認してください！\n\n$3\n\n---\nメール受信を停止したい場合は、\n$4\nをクリックして、メール通知を無効にするよう設定変更してください。",
+	"echo-category-title-social-msg": "利用者掲示板メッセージ",
+	"echo-pref-tooltip-social-msg": "誰かが私の掲示板にメッセージを残したときに通知する。",
+	"notification-social-msg-send": "$1が利用者掲示板にメッセージを投稿しました。<br /><br />''$2''",
+	"notification-social-msg-send-bundle": "{{PLURAL:$1|$1件のメッセージ|100=99件以上のメッセージ}}が利用者掲示板に届いています。",
+	"apihelp-socialprofile-send-message-summary": "利用者の UserBoard (利用者掲示板) にメッセージを送信します。",
+	"apihelp-socialprofile-send-message-param-username": "受信者のユーザー名。",
+	"apihelp-socialprofile-send-message-param-message": "送信するメッセージのURLエンコードされたバージョン。",
+	"apihelp-socialprofile-send-message-param-type": "メッセージ タイプ: 公開メッセージの場合は0、非公開メッセージの場合は1。",
+	"apihelp-socialprofile-delete-message-summary": "UserBoard (利用者掲示板) メッセージを削除します。",
+	"apihelp-socialprofile-delete-message-param-id": "削除する掲示板メッセージの一意の識別子。"
 }

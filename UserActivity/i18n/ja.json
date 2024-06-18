@@ -7,14 +7,17 @@
 			"Rxy",
 			"Schu",
 			"Shirayuki",
-			"青子守歌"
+			"青子守歌",
+			"Waki285"
 		]
 	},
 	"useractivity": "友達の活動度",
+	"useractivity-desc": "利用者のソーシャル活動を表示する",
 	"useractivity-award": "$1が賞を受賞しました",
 	"useractivity-all": "すべて表示",
 	"useractivity-edit": "$1 {{PLURAL:$4|ページを編集|以下のページを編集:}} $3",
 	"useractivity-foe": "$1 {{PLURAL:$2|は次の人と敵対しています|は次の人々と敵対しています}} $3",
+	"useractivity-filter": "フィルター",
 	"useractivity-friend": "$1 {{PLURAL:$2|は次の人と友好関係にあります|は次の人々と友好関係にあります}} $3",
 	"useractivity-gift": "$1が$2からのギフトを受け取りました",
 	"useractivity-group-edit": "{{PLURAL:$1|$1回の編集}}",
