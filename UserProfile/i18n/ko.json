@@ -3,12 +3,15 @@
 		"authors": [
 			"Theshinster123",
 			"Ykhwong",
-			"아라"
+			"아라",
+			"Jack Phoenix"
 		]
 	},
 	"user-stats-edits": "편집",
 	"user-stats-quiz-points": "퀴즈 점수",
+	"user-personal-info-about-me": "나에 대해서",
 	"user-recent-activity-title": "최근 활동",
+	"user-profile-points": "$1 포인트",
 	"user-profile-preferences-emails": "이메일 알림",
 	"user-profile-create-threshold-title": "사용자 프로파일 만들기",
 	"user-profile-create-threshold-friend-count": "{{PLURAL:$1|친구 1명|친구 $1명}}",

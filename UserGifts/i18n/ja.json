@@ -8,9 +8,11 @@
 			"Hosiryuhosi",
 			"RYOUMA1117",
 			"Rxy",
-			"Shirayuki"
+			"Shirayuki",
+			"Waki285"
 		]
 	},
+	"usergifts-desc": "利用者の贈り物の送信、受信、作成、除去を可能にする",
 	"giftmanager": "贈り物の管理",
 	"giftmanager-addgift": "+ 新しい贈り物の追加",
 	"giftmanager-access": "贈り物のアクセス",
@@ -23,9 +25,10 @@
 	"giftmanager-private": "非公開",
 	"giftmanager-view": "贈り物の一覧を表示",
 	"g-add-message": "メッセージを追加",
+	"g-characters-left": "残り文字数 $1",
 	"g-back-edit-gift": "戻ってこの贈り物を編集する",
 	"g-back-gift-list": "贈り物一覧に戻る",
-	"g-back-link": "< $1のページに戻る",
+	"g-back-link": "&lt; $1のページに戻る",
 	"g-choose-file": "ファイルを選ぶ:",
 	"g-count": "$1は$2個の{{PLURAL:$2|贈り物|贈り物}}を所有しています。",
 	"g-create-gift": "贈り物を作成",
@@ -56,6 +59,7 @@
 	"g-give-no-user-title": "誰に贈り物を贈りますか？",
 	"g-give-to-user-title": "贈り物「$1」を$2 へ送る",
 	"g-give-to-user-message": "$1 へ[[Special:GiveGift/$1|別の贈り物]]を贈りますか？",
+	"g-give-this-gift": "この贈り物を贈る",
 	"g-go-back": "戻る",
 	"g-imagesbelow": "以下はサイトで使用されるあなたの画像です",
 	"g-large": "大",
@@ -73,6 +77,7 @@
 	"g-remove-success-message": "贈り物「$1」は削除されました。",
 	"g-remove-title": "「$1」を削除しますか？",
 	"g-send-gift": "贈り物を送る",
+	"g-select-gift": "贈り物を選択してください。",
 	"g-select-a-friend": "友達を選択",
 	"g-sent-title": "$1に贈り物を送りました。",
 	"g-sent-message": "以下の贈り物を$1に送りました。",
@@ -82,6 +87,12 @@
 	"g-viewgiftlist": "贈り物一覧を表示",
 	"g-your-profile": "あなたのプロフィール",
 	"gift_received_subject": "{{SITENAME}}上に$1さんからの$2の贈り物が届いています！",
+	"gift_received_body_html": "こんにちは、$1 さん。\n\n{{SITENAME}}上に、$2さんからあなたへ$3の贈り物が届いています。\n\n$2さんからのメッセージと贈り物を見るには以下のリンクをクリックしてください。\n\n[[Special:ViewGifts]]\n\n贈り物が気に入れば幸いです。\n\n{{SITENAME}}チーム\n\n---\nメール受信を停止したい場合は、\n[[Special:UpdateProfile]]\nをクリックして、メール通知を無効にするよう設定変更してください。",
 	"gift_received_body": "こんにちは、$1 さん。\n\n{{SITENAME}}上に、$2さんからあなたへ$3の贈り物が届いています。\n\n$2さんからのメッセージと贈り物を見るには以下のリンクをクリックしてください。\n\n$4\n\n贈り物が気に入れば幸いです。\n\n{{SITENAME}}チーム\n\n---\nメール受信を停止したい場合は、\n$5\nをクリックして、メール通知を無効にするよう設定変更してください。",
+	"echo-category-title-social-gift": "贈り物",
+	"echo-pref-tooltip-social-gift": "誰かが私に贈り物を送ったときに通知する。",
+	"notification-social-gift-send-no-message": "$1があなたに贈り物を送信しました: $2。",
+	"notification-social-gift-send-with-message": "$1があなたに贈り物を送信しました: $2。<br /><br />''$3''",
+	"notification-social-gift-send-bundle": "{{PLURAL:$1|$1人}}があなたに贈り物を送りました。",
 	"right-giftadmin": "贈り物を新規作成/編集"
 }

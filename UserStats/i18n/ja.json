@@ -6,9 +6,11 @@
 			"Hosiryuhosi",
 			"RYOUMA1117",
 			"Shirayuki",
-			"Yamagata Yusuke"
+			"Yamagata Yusuke",
+			"Waki285"
 		]
 	},
+	"userstats-desc": "実行された操作の種類に基づいて利用者にポイントを付与する",
 	"user-stats-alltime-title": "通算最高得点者",
 	"user-stats-weekly-title": "今週の最高得点者",
 	"user-stats-monthly-title": "今月の最高得点者",
@@ -19,6 +21,7 @@
 	"top-fans-weekly-points-link": "今週の得点",
 	"top-fans-monthly-points-link": "今月の得点",
 	"top-fans-points": "$1点",
+	"top-fans-points-tag": "'''+$1'''ポイント",
 	"top-fans-by-category-title-edit-count": "編集総数上位",
 	"top-fans-by-category-title-friends-count": "友人総数上位",
 	"top-fans-by-category-title-foe-count": "敵総数上位",
@@ -54,6 +57,7 @@
 	"right-updatepoints": "編集回数を更新",
 	"action-updatepoints": "編集回数の更新",
 	"right-generatetopusersreport": "上位利用者の報告を生成",
+	"action-generatetopusersreport": "上位利用者の報告の生成",
 	"level-advanced-to": "レベル<span style=\"font-weight:800;\">$1</span>に上がりました",
 	"level-advance-subject": "{{SITENAME}}の\"$1\"になりました！",
 	"level-advance-body": "$1さん、こんにちは。\n\nおめでとうございます。\n$1さんは{{SITENAME}}の「$2」になりました！\n\n{{SITENAME}}チームより。\n\n---\nメール受信を停止したい場合は、\n$3\nをクリックして、メール通知を無効にするよう設定変更してください。"
