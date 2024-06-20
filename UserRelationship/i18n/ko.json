@@ -1,8 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ykhwong"
+			"Ykhwong",
+			"Jack Phoenix"
 		]
 	},
-	"notification-social-rel-add-friend-no-message": "$1님이 당신의 친구가 되고 싶어 합니다."
+	"echo-category-title-social-rel": "사용자간 관계 변경",
+	"echo-pref-tooltip-social-rel": "내가 친구 신청을 받거나, 내 친구 신청이 수락되는 경우에 내게 알립니다.",
+	"echo-show-social-rel-add-link": "(친구 신청 보기)",
+	"notification-social-rel-add-friend-message": "$1님이 당신을 친구로 신청하고 싶어합니다.<br /><br />''$2''",
+	"notification-social-rel-add-friend-no-message": "$1님이 당신의 친구가 되고 싶어 합니다.",
+	"notification-social-rel-accept-friend": "$1님과 친구가 되었습니다."
 }

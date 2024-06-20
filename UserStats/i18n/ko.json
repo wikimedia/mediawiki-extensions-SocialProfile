@@ -1,9 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ykhwong"
+			"Ykhwong",
+			"Jack Phoenix"
 		]
 	},
+	"top-fans-by-points-nav-header": "상위 편집자",
+	"top-fans-total-points-link": "포인트 합계",
+	"top-fans-points": "'''$1''' 포인트",
+	"top-fans-points-tag": "'''+$1''' 포인트",
 	"notification-social-level-up": "\"$1\" 레벨로 승격되었습니다!",
 	"random-user-about-me": "내 정보"
 }
