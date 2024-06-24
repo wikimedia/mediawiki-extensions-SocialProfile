@@ -7,5 +7,7 @@
 	},
 	"socialprofile-desc": "E Set vu sozialen Tools fir MediaWiki",
 	"socialprofile-uploads-disabled": "D'Funktioun fir Avataren eropzelueden ass desaktivéiert.",
-	"apihelp-removeavatar-param-user": "Numm vum Benotzer, deem säin Avatar geläscht soll ginn."
+	"apihelp-removeavatar-param-user": "Numm vum Benotzer, deem säin Avatar geläscht soll ginn.",
+	"apihelp-removeavatar-example-1": "Den Avatar vum Benotzer mam Numm „Ashley“ ewechhuelen",
+	"apihelp-uploadavatar-summary": "En Avatar héichlueden."
 }
