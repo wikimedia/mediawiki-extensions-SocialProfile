@@ -113,12 +113,14 @@ class UserProfileHooks {
 	 * @param IContextSource $context
 	 */
 	public static function onArticleFromTitle( Title $title, &$article, $context ) {
-		global $wgHooks, $wgUserPageChoice;
+		global $wgUserPageChoice;
 
+		$services = MediaWikiServices::getInstance();
 		$out = $context->getOutput();
 		$request = $context->getRequest();
 		$pageTitle = $title->getText();
-		$userNameUtils = MediaWikiServices::getInstance()->getUserNameUtils();
+		$userNameUtils = $services->getUserNameUtils();
+		$hookContainer = $services->getHookContainer();
 		if (
 			!$title->isSubpage() &&
 			$title->inNamespaces( [ NS_USER, NS_USER_PROFILE ] ) &&
@@ -152,7 +154,7 @@ class UserProfileHooks {
 					$out->enableClientCache( false );
 				}
 
-				$wgHooks['ParserLimitReportPrepare'][] = 'UserProfileHooks::onParserLimitReportPrepare';
+				$hookContainer->register( 'ParserLimitReportPrepare', 'UserProfileHooks::onParserLimitReportPrepare' );
 			}
 
 			$out->addModuleStyles( [
