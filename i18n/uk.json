@@ -2,12 +2,17 @@
 	"@metadata": {
 		"authors": [
 			"Andriykopanytsia",
+			"Ignatgg",
 			"Piramidion",
 			"Ата"
 		]
 	},
 	"socialprofile-desc": "Набір соціальних інструментів для MediaWiki",
 	"socialprofile-uploads-disabled": "Функція завантаження аватара вимкнена",
+	"apihelp-removeavatar-summary": "Видаліть аватар, або свій, або, якщо ви маєте привілей, також аватар іншого користувача.",
+	"apihelp-removeavatar-param-reason": "Додаткова причина, чому ви видаляєте чужий аватар.",
+	"apihelp-removeavatar-param-user": "Ім'я користувача, аватар якого потрібно видалити.",
+	"apihelp-removeavatar-example-1": "Видалити аватар користувача з іменем \"Ashley\"",
 	"apihelp-smpuserprivacy-summary": "Модуль API для налаштування видимості («приватність») поля профілю",
 	"apihelp-smpuserprivacy-param-method": "Дія (або «get», або «set»)",
 	"apihelp-smpuserprivacy-param-field_key": "Ключ цільового поля, на кшталт up_movies для поля «Фільми»",
