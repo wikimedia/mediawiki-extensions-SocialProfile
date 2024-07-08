@@ -16,7 +16,7 @@
 	"mp-requests-message": "您有以下请求：",
 	"mp-request-new-message": "新信息",
 	"mp-request-new-award": "$1份新{{PLURAL:$1|奖励}}",
-	"mp-request-new-gift": "{{PLURAL:$1件|新礼物}}",
+	"mp-request-new-gift": "$1件新{{PLURAL:$1|礼物}}",
 	"mp-request-new-foe": "$1位新{{PLURAL:$1|仇敌}}",
-	"mp-request-new-friend": "{{PLURAL:$1名|新朋友}}"
+	"mp-request-new-friend": "$1名新{{PLURAL:$1|朋友}}"
 }
