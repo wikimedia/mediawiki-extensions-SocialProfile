@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Octahedron80",
-			"Woraponboonkerd"
+			"Woraponboonkerd",
+			"Ekminarin"
 		]
 	},
 	"messagesenttitle": "ข้อความได้ถูกส่งแล้ว",
@@ -39,7 +40,7 @@
 	"userboard_nomessages": "ไม่มีข้อความ",
 	"userboard_sendbutton": "ส่ง",
 	"userboard_loggedout": "คุณต้อง[[Special:UserLogin|ลงชื่อเข้าใช้]]เพื่อส่งข้อความไปยังผู้ใช้คนอื่นๆ",
-	"userboard_showingmessages": "กำลังแสดง {{PLURAL:$4|ข้อความที่ $3|ข้อความที่ $2-$3}} จากทั้งหมด {{PLURAL:$1|$1 ข้อความ|$1 ข้่อความ}}",
+	"userboard_showingmessages": "กำลังแสดง {{PLURAL:$4|ข้อความที่ $3|ข้อความที่ $2-$3}} จากทั้งหมด {{PLURAL:$1|$1 ข้อความ}}",
 	"right-userboard-delete": "ลบข้อความของบอร์ดอื่นๆ",
 	"userboard-time-days": "{{PLURAL:$1|1 วัน|$1 วัน}}",
 	"userboard-time-hours": "{{PLURAL:$1|1 ชั่วโมง|$1 ชั่วโมง}}",
