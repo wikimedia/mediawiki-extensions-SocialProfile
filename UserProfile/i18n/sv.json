@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Boivie",
+			"Jack Phoenix",
 			"Jon Harald Søby",
 			"Lokal Profil",
 			"M.M.S.",
@@ -195,7 +196,7 @@
 	"profilelogpage": "Logg för användarprofilredigeringar",
 	"profilelogpagetext": "Detta är en logg för användarprofilredigeringar",
 	"user-profile-edit-profile": "redigerade $1s profil",
-	"avatarlogpage": "Avataruppladdningslogg",
+	"avatarlogpage": "Avatarlogg",
 	"avatarlogpagetext": "Detta är en logg för uppladdningar av användaravatarer",
 	"user-profile-picture-log-entry": "laddade upp ny avatar",
 	"user-profile-picture-log-delete-entry": "raderade avataren för $1",
