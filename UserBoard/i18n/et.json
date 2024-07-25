@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Avjoska",
+			"Jack Phoenix",
 			"Pikne"
 		]
 	},
@@ -10,9 +11,11 @@
 	"boardlinkselectfriends": "Vali sõbrad",
 	"boardlinkselectfoes": "Vali vaenlased",
 	"boardnofriends": "Sul ei ole sõpru, kellele sõnumit saata!",
+	"boardblast-error-missing-user": "Palun valige vähemalt üks inimene",
 	"userboard_backyourprofile": "Tagasi oma profiili juurde",
 	"userboard_confirmdelete": "Kas Sa oled kindel, et soovid seda sõnumit kustutada?",
 	"userboard_private": "erasõnum",
 	"userboard_public": "avalik",
-	"userboard_messagetype": "Sõnumi tüüp"
+	"userboard_messagetype": "Sõnumi tüüp",
+	"userboard_sendbutton": "saada"
 }

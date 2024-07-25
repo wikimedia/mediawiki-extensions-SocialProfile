@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Jack Phoenix",
 			"Liuxinyu970226",
 			"McDutchie"
 		]
@@ -19,6 +20,6 @@
 	"apihelp-uploadavatar-param-url": "{{doc-apihelp-param|uploadavatar|url}}\n{{Identical|apihelp-upload-param-url}}",
 	"apihelp-smpuserprivacy-summary": "{{doc-apihelp-summary|smpuserprivacy}}",
 	"apihelp-smpuserprivacy-param-method": "{{doc-apihelp-param|smpuserprivacy|method}}",
-	"apihelp-smpuserprivacy-param-field_key": "{{doc-important|Do not translate \"up_movies\".}}\n{{doc-apihelp-param|smpuserprivacy|field_key}}",
+	"apihelp-smpuserprivacy-param-field_key": "{{doc-important|Do not translate \"up_movies\". The translation for \"Movies\" should be consistent with the messages {{msg-mw|user-profile-interests-movies}} and {{msg-mw|other-info-movies}}.}}\n{{doc-apihelp-param|smpuserprivacy|field_key}}",
 	"apihelp-smpuserprivacy-param-privacy": "{{doc-important|Do not translate \"public, hidden, friends, foaf\", though you may change commas here.}}\n{{doc-apihelp-param|smpuserprivacy|privacy}}"
 }
