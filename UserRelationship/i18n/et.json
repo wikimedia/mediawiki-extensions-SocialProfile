@@ -3,6 +3,7 @@
 		"authors": [
 			"Avjoska",
 			"Hendrik",
+			"Jack Phoenix",
 			"Pikne",
 			"Silvar"
 		]
@@ -29,5 +30,7 @@
 	"ur-add-button-friend": "Lisa sõbraks",
 	"ur-add-error-message-existing-relationship-friend": "Sa oled kasutajaga $1 juba sõber.",
 	"ur-add-error-message-pending-request-title": "Kannatust!",
-	"ur-add-error-message-not-loggedin-friend": "Sõbra lisamiseks pead olema sisse logitud"
+	"ur-add-error-message-not-loggedin-friend": "Sõbra lisamiseks pead olema sisse logitud",
+	"ur-accept": "Nõustu",
+	"ur-reject": "Lükka tagasi"
 }
