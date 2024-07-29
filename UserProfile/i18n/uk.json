@@ -6,7 +6,8 @@
 			"Ice bulldog",
 			"Prima klasy4na",
 			"Ата",
-			"Тест"
+			"Тест",
+			"Jack Phoenix"
 		]
 	},
 	"editprofile": "Редагувати профілі інших користувачів",
@@ -226,7 +227,7 @@
 	"action-populate-user-profiles": "заповнювати профілі інших користувачів",
 	"apihelp-socialprofile-userprofileprivacy-description": "Модуль API для встановлення видимості (\"конфіденційності\") поля профілю",
 	"apihelp-socialprofile-userprofileprivacy-summary": "Модуль API для встановлення видимості (\"конфіденційності\") поля профілю",
-	"apihelp-socialprofile-userprofileprivacy-param-method": "Дія (\"отримати\" або \"встановити\")",
+	"apihelp-socialprofile-userprofileprivacy-param-method": "Дія (\"get\" (отримати) або \"set\" (встановити))",
 	"apihelp-socialprofile-userprofileprivacy-param-field_key": "Ключ цільового поля, наприклад up_movies для поля \"Фільми\"",
 	"apihelp-socialprofile-userprofileprivacy-param-privacy": "Нове значення конфіденційності (загальнодоступне, приховане, друзі, печені)",
 	"apihelp-socialprofile-userprofileprivacy-param-tuid": "Цільовий користувач ID",

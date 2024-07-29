@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Liuxinyu970226",
-			"McDutchie"
+			"McDutchie",
+			"Jack Phoenix"
 		]
 	},
 	"socialprofile-desc": "{{desc|name=Social Profile|url=https://www.mediawiki.org/wiki/Extension:SocialProfile}}",
@@ -10,6 +11,6 @@
 	"apihelp-smpuserprivacy-description": "{{doc-apihelp-description|smpuserprivacy}}",
 	"apihelp-smpuserprivacy-summary": "{{doc-apihelp-summary|smpuserprivacy}}",
 	"apihelp-smpuserprivacy-param-method": "{{doc-apihelp-param|smpuserprivacy|method}}",
-	"apihelp-smpuserprivacy-param-field_key": "{{doc-important|Do not translate \"up_movies\".}}\n{{doc-apihelp-param|smpuserprivacy|field_key}}",
+	"apihelp-smpuserprivacy-param-field_key": "{{doc-important|Do not translate \"up_movies\". The translation for \"Movies\" should be consistent with the messages {{msg-mw|user-profile-interests-movies}} and {{msg-mw|other-info-movies}}.}}\n{{doc-apihelp-param|smpuserprivacy|field_key}}",
 	"apihelp-smpuserprivacy-param-privacy": "{{doc-important|Do not translate \"public, hidden, friends, foaf\", though you may change commas here.}}\n{{doc-apihelp-param|smpuserprivacy|privacy}}"
 }

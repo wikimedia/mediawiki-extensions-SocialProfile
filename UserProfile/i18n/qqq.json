@@ -11,7 +11,8 @@
 			"Shirayuki",
 			"The Evil IP address",
 			"Translationista",
-			"Umherirrender"
+			"Umherirrender",
+			"Jack Phoenix"
 		]
 	},
 	"editprofile": "Page title of Special:EditProfile, the special page which allows privileged users (usually admins, but not always) to edit other users' social profiles; generally speaking users can only edit their own social profiles, but it might be necessary for admins to be able to edit others' profiles to e.g. remove spam or personal attacks, etc.",
@@ -236,7 +237,7 @@
 	"action-populate-user-profiles": "{{doc-action|populate-user-profiles}}",
 	"apihelp-socialprofile-userprofileprivacy-description": "{{doc-apihelp-description|socialprofile-userprofileprivacy}}",
 	"apihelp-socialprofile-userprofileprivacy-summary": "{{doc-apihelp-summary|socialprofile-userprofileprivacy}}",
-	"apihelp-socialprofile-userprofileprivacy-param-method": "{{doc-apihelp-param|socialprofile-userprofileprivacy|method}}",
+	"apihelp-socialprofile-userprofileprivacy-param-method": "{{doc-important|Do not translate \"get\" or \"set\".}}\n{{doc-apihelp-param|socialprofile-userprofileprivacy|method}}",
 	"apihelp-socialprofile-userprofileprivacy-param-field_key": "{{doc-apihelp-param|socialprofile-userprofileprivacy|field_key}}",
 	"apihelp-socialprofile-userprofileprivacy-param-privacy": "{{doc-apihelp-param|socialprofile-userprofileprivacy|privacy}}",
 	"apihelp-socialprofile-userprofileprivacy-param-tuid": "{{doc-apihelp-param|socialprofile-userprofileprivacy|tuid}}",
