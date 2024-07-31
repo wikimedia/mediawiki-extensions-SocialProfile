@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Avjoska"
+			"Avjoska",
+			"Jack Phoenix"
 		]
 	},
+	"ga-addnew": "+ Lisa uus kingitus",
+	"ga-back-gift-list": "Tagasi kingituste nimekirja",
 	"ga-choosefile": "Vali fail:",
 	"ga-create-gift": "Loo kingitus",
 	"ga-created": "Kingitus on loodud",
@@ -19,5 +22,10 @@
 	"ga-medium": "Keskmine",
 	"ga-new": "Uus",
 	"ga-saved": "Kingitus on salvestatud",
-	"ga-small": "Väike"
+	"ga-small": "Väike",
+	"ga-viewlist": "Vaata kingituste nimekirja",
+	"ga-remove": "Eemalda",
+	"ga-remove-title": "Eemalda \"$1\"?",
+	"ga-remove-success-message": "Kingitus \"$1\" on eemaldatud.",
+	"ga-user-got-awards": "$1 sai kingituse $2"
 }

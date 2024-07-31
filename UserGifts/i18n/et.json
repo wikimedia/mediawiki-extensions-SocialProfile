@@ -3,7 +3,8 @@
 		"authors": [
 			"Avjoska",
 			"Pikne",
-			"Silvar"
+			"Silvar",
+			"Jack Phoenix"
 		]
 	},
 	"giftmanager-addgift": "+ Lisa uus kingitus",
@@ -15,7 +16,12 @@
 	"giftmanager-private": "privaatne",
 	"giftmanager-view": "Vaata kingituste nimekirja",
 	"g-add-message": "Lisa teade",
+	"g-choose-file": "Vali fail:",
+	"g-create-gift": "Loo kingitus",
+	"g-created-by": "loodud",
+	"g-current-image": "Praegune pilt",
 	"g-error-message-to-yourself": "Endale ei saa kingitust teha.",
+	"g-from": "kasutajalt [[User:$1|$1]]",
 	"g-gift": "kingitus",
 	"g-gift-name": "kingituse nimi",
 	"g-give-gift": "Anna kingitus",
@@ -32,9 +38,14 @@
 	"g-previous": "Eelmine",
 	"g-remove": "Eemalda",
 	"g-remove-gift": "Eemalda see kingitus",
+	"g-remove-success-message": "Kingitus \"$1\" on eemaldatud.",
+	"g-remove-title": "Eemalda \"$1\"?",
 	"g-send-gift": "Saada kingitus",
+	"g-select-gift": "Vali kingitus.",
 	"g-select-a-friend": "vali sõber",
 	"g-small": "Väike",
 	"g-viewgiftlist": "Vaata kingituste nimekirja",
-	"g-your-profile": "Sinu profiil"
+	"g-your-profile": "Sinu profiil",
+	"echo-category-title-social-gift": "Kingitused",
+	"echo-pref-tooltip-social-gift": "Teavita mind, kui keegi saada mulle kingituse."
 }
