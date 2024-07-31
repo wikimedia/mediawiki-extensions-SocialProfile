@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Dafer45",
+			"Jack Phoenix",
 			"Per",
 			"Sabelöga"
 		]
@@ -22,7 +23,7 @@
 	"g-characters-left": "$1 tecken kvar",
 	"g-back-edit-gift": "Tillbaka för att ändra denna present",
 	"g-back-gift-list": "Tillbaka till presentlista",
-	"g-back-link": "< Tillbaka till $1s sida",
+	"g-back-link": "&lt; Tillbaka till $1s sida",
 	"g-choose-file": "Välj fil:",
 	"g-count": "$1 har $2 {{PLURAL:$2|present|presenter}}.",
 	"g-create-gift": "Skapa present",
