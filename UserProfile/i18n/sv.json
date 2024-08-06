@@ -197,7 +197,7 @@
 	"profilelogpagetext": "Detta är en logg för användarprofilredigeringar",
 	"user-profile-edit-profile": "redigerade $1s profil",
 	"avatarlogpage": "Avatarlogg",
-	"avatarlogpagetext": "Detta är en logg för uppladdningar av användaravatarer",
+	"avatarlogpagetext": "Detta är en logg för uppladdningar och raderingar av användaravatarer.",
 	"user-profile-picture-log-entry": "laddade upp ny avatar",
 	"user-profile-picture-log-delete-entry": "raderade avataren för $1",
 	"user-profile-remove-avatar": "ta bort",
