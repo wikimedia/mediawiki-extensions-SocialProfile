@@ -3,7 +3,8 @@
 		"authors": [
 			"Dafer45",
 			"Per",
-			"Sabelöga"
+			"Sabelöga",
+			"Jack Phoenix"
 		]
 	},
 	"usergifts-desc": "Gör det möjlig att skicka, ta emot, skapa och ta bort användarpresenter",
@@ -22,7 +23,7 @@
 	"g-characters-left": "$1 tecken kvar",
 	"g-back-edit-gift": "Tillbaka för att ändra denna present",
 	"g-back-gift-list": "Tillbaka till presentlista",
-	"g-back-link": "< Tillbaka till $1s sida",
+	"g-back-link": "&lt; Tillbaka till $1s sida",
 	"g-choose-file": "Välj fil:",
 	"g-count": "$1 har $2 {{PLURAL:$2|present|presenter}}.",
 	"g-create-gift": "Skapa present",
@@ -37,6 +38,7 @@
 	"g-error-message-no-user": "Användaren du försöker titta på finns inte.",
 	"g-error-message-to-yourself": "Du kan inte ge en present till dig själv.",
 	"g-error-title": "Oj, du har hamnat fel!",
+	"g-file-instructions": "Din bild måste vara en jpeg, png eller gif (ingen animerad gif) och ha en storlek som är mindre än 100kb.",
 	"g-from": "från [[User:$1|$1]]",
 	"g-gift": "present",
 	"g-gift-name": "presentnamn",
@@ -54,6 +56,7 @@
 	"g-give-to-user-message": "Vill du ge $1 en [[Special:GiveGift/$1|annan present]]?",
 	"g-give-this-gift": "Ge den här gåvan",
 	"g-go-back": "Gå tillbaka",
+	"g-imagesbelow": "Nedan är dina bilder som kommer användas på webbplatsen",
 	"g-large": "Stor",
 	"g-list-title": "$1s presentlista",
 	"g-medium": "Medium",
