@@ -57,6 +57,7 @@
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|Geschenk erhalten|Geschenke erhalten}}",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Geschenk gemacht|Geschenke gemacht}}",
 	"right-updatepoints": "Beitragszähler aktualisieren",
+	"action-updatepoints": "Bearbeitungszahlen zu bearbeiten",
 	"right-generatetopusersreport": "Berichte zu den aktivsten Benutzern generieren",
 	"level-advanced-to": "erweitert auf Level <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "[{{SITENAME}}] Du bist jetzt „$1“!",

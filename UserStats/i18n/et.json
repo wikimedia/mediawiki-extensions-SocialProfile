@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Avjoska",
-			"Jack Phoenix"
+			"Jack Phoenix",
+			"Pikne"
 		]
 	},
 	"topusers": "Tippkasutajad",
@@ -12,7 +13,7 @@
 	"top-fans-points": "'''$1''' punktid",
 	"top-fans-points-tag": "'''+$1''' punkti",
 	"top-fans-bad-field-title": "Ups!",
-	"user-stats-report-row": "($1) [[User:$2|$2]] - '''$3''' {{PLURAL:$3|punkt|punkti}}!",
+	"user-stats-report-row": "($1) [[User:$2|$2]] – '''$3''' {{PLURAL:$3|punkt|punkti}}!",
 	"user-stats-report-points": "'''$1''' {{PLURAL:$1|punkt|punkti}}!",
 	"random-user-about-me": "Minu kohta"
 }

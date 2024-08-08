@@ -6,7 +6,8 @@
 			"Najami",
 			"Per",
 			"Sabelöga",
-			"WikiPhoenix"
+			"WikiPhoenix",
+			"Jack Phoenix"
 		]
 	},
 	"viewrelationships": "Visa relationer",
@@ -73,13 +74,13 @@
 	"ur-title-foe": "$1s lista över fiender",
 	"ur-title-friend": "$1s lista över vänner",
 	"friend_request_subject": "$1 har laggt till dig som vän på {{SITENAME}}!",
-	"friend_request_body": "Hej, $1!\n\n$2 har lagt till dig som en vän på {{SITENAME}}.  Vi vill vara säkra på att ni två verkligen är vänner.\n\nVar god klicka på den här länken för att bekräfta eran vänskap:\n$3\n\nTack\n\n---\n\nVill du inte ha mer mejl från oss?\n\nKlicka $4\noch ändra dina inställningar att inte tillåta e-postmeddelanden.",
+	"friend_request_body": "Hej, $1!\n\n$2 har lagt till dig som en vän på {{SITENAME}}. Vi vill vara säkra på att ni två verkligen är vänner.\n\nVar god klicka på den här länken för att bekräfta eran vänskap:\n$3\n\nTack,\n\n{{SITENAME}}-teamet\n\n---\n\nVill du inte ha mer mejl från oss?\n\nKlicka $4\noch ändra dina inställningar att inte tillåta e-postmeddelanden.",
 	"foe_request_subject": "Det är krig! $1 har lagt till dig som fiende på {{SITENAME}}!",
-	"foe_request_body": "Hej, $1!\n\n$2 har lagt till dig som fiende på {{SITENAME}}.  Vi vill vara säkra på att ni två är fiender  eller i varje fall bråkar.\n\nVar god klicka på den här länken för att bekräfta eran fiendeskap.\n\n$3\n\nTack\n\n---\n\nVill du inte ha mer mejl från oss?\n\nKlicka $4\noch ändra dina inställningar att inte tillåta e-postmeddelanden.",
+	"foe_request_body": "Hej, $1!\n\n$2 har lagt till dig som fiende på {{SITENAME}}. Vi vill vara säkra på att ni två är fiender eller i varje fall bråkar.\n\nVar god klicka på den här länken för att bekräfta eran fiendeskap.\n\n$3\n\nTack,\n\n{{SITENAME}}-teamet\n\n---\n\nVill du inte ha mer mejl från oss?\n\nKlicka $4\noch ändra dina inställningar att inte tillåta e-postmeddelanden.",
 	"friend_accept_subject": "$1 har accepterat din vänskapsefterfrågning på {{SITENAME}}!",
-	"friend_accept_body": "Hej, $1!\n\n$2 har accepterat din efterfrågning om att bli vän med $2 på {{SITENAME}}!\n\nKolla på $2s sida på $3\n\nTack\n\n---\n\nVill du inte ha mer mejl från oss?\n\nKlicka $4\noch ändra dina inställningar att inte tillåta e-postmeddelanden.",
+	"friend_accept_body": "Hej, $1!\n\n$2 har accepterat din efterfrågning om att bli vän med $2 på {{SITENAME}}!\n\nKolla på $2s sida på $3\n\nTack,\n\n{{SITENAME}}-teamet\n\n---\n\nVill du inte ha mer mejl från oss?\n\nKlicka $4\noch ändra dina inställningar att inte tillåta e-postmeddelanden.",
 	"foe_accept_subject": "$1 har accepterat din fiendeskapsefterfrågning på {{SITENAME}}!",
-	"foe_accept_body": "Hej, $1!\n\n$2 har accepterat din efterfrågning om fiendeskap med $2 på {{SITENAME}}!\n\nKolla på $2s sida på $3\n\nTack\n\n---\n\nVill du inte ha mer mejl från oss?\n\nKlicka $4\noch ändra dina inställningar att inte tillåta e-postmeddelanden.",
+	"foe_accept_body": "Hej, $1!\n\n$2 har accepterat din efterfrågning om fiendeskap med $2 på {{SITENAME}}!\n\nKolla på $2s sida på $3\n\nTack,\n\n{{SITENAME}}-teamet\n\n---\n\nVill du inte ha mer mejl från oss?\n\nKlicka $4\noch ändra dina inställningar att inte tillåta e-postmeddelanden.",
 	"friend_removed_subject": "Å Nej! $1 har tagit bort dig som vän på {{SITENAME}}!",
 	"friend_removed_body": "Hej, $1\n\n$2 har tagit bort dig som vän på {{SITENAME}}!\n\nTack,\n\n\n{{SITENAME}}-teamet\n\n---\n\nVill du inte mottaga mer e-post från oss?\n\nKlicka $4\noch ändra dina inställningar för att stänga av e-postmeddelanden.",
 	"foe_removed_subject": "Hurra! $1 har tagit bort dig som fiende på {{SITENAME}}!",
