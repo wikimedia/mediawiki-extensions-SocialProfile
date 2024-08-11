@@ -2016,7 +2016,19 @@ class UserProfilePage extends Article {
 					</div>";
 
 				if ( $user->isRegistered() ) {
-					if ( $check_user_fanbox ) {
+					// AAAAAAAAAAA I HATE THIS SO MUCH.
+					// Talk about [[uncyclopedia:Bat Fuck Insane]] code.
+					// When viewing someone *else*'s profile, we should be checking for $check_user_fanbox,
+					// but when viewing _your own_ profile, the condition should be negated.
+					// This is beyond senseless. Regardless, it's needed to display the correct message in each case.
+					$viewingYourOwnProfile = ( $this->profileOwner->getName() == $this->viewingUser->getName() );
+					if ( $viewingYourOwnProfile ) {
+						$condition = !$check_user_fanbox;
+					} else {
+						// Viewing someone else's profile, obviously...
+						$condition = $check_user_fanbox;
+					}
+					if ( $condition ) {
 						$output .= '<div class="fanbox-pop-up-box-profile" id="fanboxPopUpBox' . $fanbox['fantag_id'] . '">
 							<table cellpadding="0" cellspacing="0" align="center">
 								<tr>
