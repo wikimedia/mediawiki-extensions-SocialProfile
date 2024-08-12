@@ -5,11 +5,14 @@
 			"Googology",
 			"LittlePaw365",
 			"Liuxinyu970226",
+			"Maitian MaiLin",
 			"列维劳德"
 		]
 	},
 	"socialprofile-desc": "用于 MediaWiki 的社交工具套装",
 	"socialprofile-uploads-disabled": "头像上传功能被禁用",
+	"apihelp-removeavatar-summary": "移除您的头像，或是其它用户的头像（若您有特定权限）。",
+	"apihelp-removeavatar-param-reason": "关于移除用户头像的原因。（可选）",
 	"apierror-avatar-is-default": "该用户的头像已经是默认的。",
 	"apihelp-uploadavatar-param-file": "新的头像文件内容。",
 	"apihelp-smpuserprivacy-summary": "设置个人资料字段可见性（“privacy”）的 API 模块",
