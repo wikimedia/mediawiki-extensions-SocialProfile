@@ -13,6 +13,7 @@
 			"TomatoCake"
 		]
 	},
+	"userboard-desc": "Erlaubt das Senden von Pinnwand-Nachrichten",
 	"messagesenttitle": "Nachrichten verschickt",
 	"boardblasttitle": "Nachricht senden",
 	"boardblaststep1": "Schritt 1: Schreibe deine Nachricht",
@@ -27,6 +28,7 @@
 	"boardsendbutton": "Nachricht senden",
 	"boardnofriends": "Du hast keine Freunde, denen du eine Nachricht senden könntest!",
 	"messagesentsuccess": "Deine Nachricht wurde erfolgreich verschickt.",
+	"boardblast-js-sending": "Nachrichten werden gesendet...",
 	"boardblast-error-missing-message": "Bitte eine Mitteilung eingeben",
 	"boardblast-error-missing-user": "Bitte wähle mindestens eine Person aus",
 	"userboard": "Pinnwand",
@@ -60,7 +62,12 @@
 	"message_received_body": "Hallo $1,\n\n$2 hat eben auf deine {{SITENAME}}-Pinnwand geschrieben!\n\nKlicke auf den folgenden Link um deine Pinnwand aufzurufen!\n\n$3\n\n---\n\nHm, du willst keine E-Mails mehr von uns bekommen?\n\nKlicke $4\nund ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.",
 	"echo-category-title-social-msg": "Pinnwand-Nachrichten",
 	"echo-pref-tooltip-social-msg": "Benachrichtige mich, wenn jemand eine Nachricht auf meiner Pinnwand hinterlässt.",
+	"notification-social-msg-send": "$1 hat eine Nachricht auf deiner Pinnwand hinterlassen:<br /><br />''$2''",
+	"notification-social-msg-send-bundle": "{{PLURAL:$1|Eine Nachricht|$1 Nachrichten|100=99+ Nachrichten}} sind auf deiner Pinnwand noch offen.",
+	"apihelp-socialprofile-send-message-summary": "Sende eine Nachricht an die Pinnwand eines Benutzers.",
 	"apihelp-socialprofile-send-message-param-username": "Den Benutzernamen des Empfängers.",
+	"apihelp-socialprofile-send-message-param-message": "Eine URL-encodete Version der zu sendenden Nachricht.",
+	"apihelp-socialprofile-send-message-param-type": "Nachrichtentyp: 0 für eine öffentliche Nachricht, 1 für eine private.",
 	"apihelp-socialprofile-delete-message-summary": "Lösche eine Pinnwand-Nachricht.",
 	"apihelp-socialprofile-delete-message-param-id": "Eindeutige Kennung der zu löschenden Pinnwand-Nachricht."
 }
