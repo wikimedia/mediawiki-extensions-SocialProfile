@@ -21,7 +21,8 @@
 			"列维劳德",
 			"开炸弹车",
 			"沈澄心",
-			"淮南皓月"
+			"淮南皓月",
+			"Maitian MaiLin"
 		]
 	},
 	"editprofile": "编辑其他用户的资料页",
@@ -117,10 +118,10 @@
 	"user-profile-personal-email-needs-auth": "（您的电子邮箱必须被验证后才能接受站点通知）",
 	"user-profile-personal-location": "位置",
 	"user-profile-personal-city": "城市",
-	"user-profile-personal-country": "国家",
+	"user-profile-personal-country": "国家/地区",
 	"user-profile-personal-hometown": "家乡",
 	"user-profile-personal-birthday": "生日",
-	"user-profile-personal-birthdate": "日期（月／日）",
+	"user-profile-personal-birthdate": "日期（月/日）",
 	"user-profile-personal-birthdate-with-year": "日期（MM/DD/YYYY）",
 	"user-profile-personal-aboutme": "关于我",
 	"user-profile-personal-work": "工作",
@@ -227,7 +228,7 @@
 	"user-profile-remove-avatar": "移除",
 	"right-avatarremove": "移除用户的头像",
 	"right-editothersprofiles": "更新其他用户的社交资料",
-	"right-editothersprofiles-private": "查看与更新其他用户社交资料中的隐私信息（Email地址）",
+	"right-editothersprofiles-private": "查看和更新其他用户社交资料中的隐私信息（Email地址）",
 	"action-avatarremove": "移除用户头像",
 	"action-editothersprofiles": "更新其他用户的社交资料",
 	"right-populate-user-profiles": "为现有wiki填写其他用户的资料页",
