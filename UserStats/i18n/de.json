@@ -10,9 +10,11 @@
 			"The Evil IP address",
 			"TomatoCake",
 			"Umherirrender",
-			"Umlaut"
+			"Umlaut",
+			"Justman10000"
 		]
 	},
+	"userstats-desc": "Ermöglicht die Vergabe von Punkten an Benutzer auf der Grundlage der durchgeführten Aktionen",
 	"user-stats-alltime-title": "Am meisten Punkte (gesamt)",
 	"user-stats-weekly-title": "Am meisten Punkte diese Woche",
 	"user-stats-monthly-title": "Am meisten Punkte diesen Monat",
@@ -72,6 +74,8 @@
 	"updateeditcounts-updated": "Aktualisierte die Statistiken für '''$1''' {{PLURAL:$1|Benutzer|Benutzer}}",
 	"updateeditcounts-updating": "Aktualisierung von $1 mit $2 {{PLURAL:$2|Bearbeitung|Bearbeitungen}}",
 	"generatetopusersreport": "Bericht zu den aktivsten Benutzern generieren",
+	"generatetopusersreport-confirm-weekly": "Bist du sicher, dass du den wöchentlichen Top-Benutzer-Bericht erstellen möchtest?",
+	"generatetopusersreport-confirm-monthly": "Bist du sicher, dass du den monatlichen Bericht über die Top-Nutzer erstellen möchtest?",
 	"user-stats-weekly-winners": "{{PLURAL:$1|Wochensieger|Wochensieger}}",
 	"user-stats-monthly-winners": "{{PLURAL:$1|Monatssieger|Monatssieger}}",
 	"user-stats-weekly-win-congratulations": "Herzlichen Glückwunsch {{PLURAL:$1|dem folgenden Benutzer, der den Wochensieg errungen und {{PLURAL:$2|Zusatzpunkt|Zusatzpunkte}} erhalten hat.|den folgenden Benutzern, die den Wochensieg errungen und {{PLURAL:$2|Zusatzpunkt|Zusatzpunkte}} erhalten haben.}}",

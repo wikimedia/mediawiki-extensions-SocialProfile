@@ -9,9 +9,11 @@
 			"The Evil IP address",
 			"Tim 'Avatar' Bartel",
 			"Umherirrender",
-			"Umlaut"
+			"Umlaut",
+			"Justman10000"
 		]
 	},
+	"userrelationship-desc": "Erlaubt das Senden von Freund- und Feindschaftsanfragen",
 	"viewrelationships": "Zeige Beziehungen",
 	"viewrelationshiprequests": "Zeige Beziehungsanfragen",
 	"ur-already-submitted": "Deine Anfrage wurde gesendet",
@@ -87,6 +89,18 @@
 	"friend_removed_body": "Hi $1:\n\n$2 hat seine Freundschaft zu dir in {{SITENAME}} beendet!\n\nDanke,\n\nDas {{SITENAME}}-Team\n\n---\n\nHm, du willst keine E-Mails mehr von uns bekommen?\n\nKlicke $4\nund ändere deine Einstellungen um E-Mail-Benachrichtigungen auszuschalten.",
 	"foe_removed_subject": "[{{SITENAME}}] Hey! $1 hat seine Feindschaft zu dir beendet!",
 	"foe_removed_body": "Hi $1:\n\n$2 hat seine Feindschaft zu dir in {{SITENAME}} beendet!\n\nVielleicht werdet ihr beide ja sogar mal Freunde?\n\nDanke,\n\nDas {{SITENAME}}-Team\n\n---\n\nHm, du willst keine E-Mails mehr von uns bekommen?\n\nKlicke $4\nund ändere deine Einstellungen, um E-Mail-Benachrichtigungen auszuschalten.",
+	"echo-category-title-social-rel": "Änderungen der Benutzerbeziehung",
+	"echo-pref-tooltip-social-rel": "Benachrichtige mich, wenn mir jemand eine Beziehungsanfrage (Freund- oder Feindschaftsanfrage) sendet.",
+	"echo-show-social-rel-add-link": "(Freund/Feind-Anfrage)",
 	"notification-social-rel-add-friend-message": "$1 möchte Dein Freund werden.<br /><br />''$2''",
-	"notification-social-rel-add-friend-no-message": "$1 möchte Dein Freund werden."
+	"notification-social-rel-add-foe-message": "$1 will dein Feind sein.<br /><br />''$2''",
+	"notification-social-rel-add-friend-no-message": "$1 möchte Dein Freund werden.",
+	"notification-social-rel-add-foe-no-message": "$1 will dein Feind sein.",
+	"notification-social-rel-accept-friend": "Du hast dich mit $1 angefreundet.",
+	"notification-social-rel-accept-foe": "Du hast dich mit $1 verfeindet.",
+	"notification-social-rel-accept-email-subject": "$1 hat deine Beziehungsanfrage angenommen!",
+	"notification-social-rel-accept-email-batch-body": "$1 hat deine Beziehungsanfrage akzeptiert.",
+	"apihelp-socialprofile-request-response-summary": "Reagiert auf Anfragen zu Benutzerbeziehungen (Freund/Feind).",
+	"apihelp-socialprofile-request-response-param-response": "Antwort auf die Beziehungsanfrage; 1 für Annahme, -1 für Ablehnung.",
+	"apihelp-socialprofile-request-response-param-id": "Eindeutiger Bezeichner der Beziehungsanfrage"
 }
