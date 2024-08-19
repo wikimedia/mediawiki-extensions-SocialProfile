@@ -6,7 +6,8 @@
 			"The Evil IP address",
 			"Umherirrender",
 			"Zabe",
-			"TomatoCake"
+			"TomatoCake",
+			"Justman10000"
 		]
 	},
 	"systemgifts-desc": "Ermöglicht das Senden, Empfangen, Erstellen und Entfernen von Systemgeschenken",
@@ -51,6 +52,7 @@
 	"ga-remove-success-title": "Du hast das Geschenk „$1“ erfolgreich entfernt",
 	"ga-remove-success-message": "Das Geschenk „$1“ wurde entfernt.",
 	"ga-user-got-awards": "$1 erhielt $2",
+	"ga-awards-populate-confirm": "Bist du dir sicher, dass du die Auszeichnungen auffüllen willst?",
 	"ga-awards-given-out": "{{PLURAL:$1|Eine Auszeichnung|$1 Auszeichnungen}} wurden vergeben",
 	"topawards": "Auszeichnungen",
 	"topawards-edit-title": "Auszeichnungen - Meilensteine beim Bearbeiten",

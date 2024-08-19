@@ -4,7 +4,8 @@
 			"Ans",
 			"Geonuch",
 			"Passawuth",
-			"Woraponboonkerd"
+			"Woraponboonkerd",
+			"Ekminarin"
 		]
 	},
 	"populateuserprofiles": "รวมโปล์ไฟล์ของผู้ใช้",
@@ -54,7 +55,7 @@
 	"custom-no-info": "ไม่มีข้อมูลเพิ่มเติม",
 	"profile-updated-personal": "ปรับปรุงโปรไฟล์ของคุณ",
 	"profile-not-provided": "ไม่ให้ข้อมูล",
-	"populate-user-profile-done": "เพิ่มแล้ว $1 {{PLURAL:$1|โปรไฟล์|โปรไฟล์}}",
+	"populate-user-profile-done": "เพิ่มแล้ว $1 {{PLURAL:$1|โพรไฟล์}}",
 	"user-board-title": "กระดาน",
 	"user-send-board-blast": "กระจายข้อความ",
 	"user-personal-info-title": "ข้อมูลส่วนตัว",
