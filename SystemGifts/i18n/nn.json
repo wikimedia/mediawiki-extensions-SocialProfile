@@ -40,6 +40,7 @@
 	"ga-title": "utmerkingane til $1",
 	"ga-uploadsuccess": "Opplasting lukkast",
 	"ga-viewlist": "Sjå gåvelista",
+	"topawards-edits": "Endringar",
 	"system_gift_received_subject": "Du har motteke utmerkinga $1 på {{SITENAME}}!",
 	"system_gift_received_body": "Hei $1:\n\nDu har nett motteke $2-utmerkinga på {{SITENAME}}!\n\n«$3»\n\nTrykk nedanfor for å sjå trofeet ditt!\n\n$4\n\nMe håpar du vil lika det!\n\nTakk,\n\n\n{{SITENAME}}-laget\n\n----\n\nVil du ikkje lenger motta e-postar frå oss?\n\nTrykk $5\nog endra innstillingane dine for å slå av e-postmeldingar.",
 	"right-awardsmanage": "Opprett nye og endra eksisterande utmerkingar"
