@@ -140,7 +140,7 @@ class GenerateTopUsersReport extends SpecialPage {
 				' ' . $date['year'];
 		}
 
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		// Query the appropriate points table
 		$res = $dbw->select(
 			"user_points_{$period}",
@@ -348,7 +348,7 @@ class GenerateTopUsersReport extends SpecialPage {
 
 		$date = date( 'Y-m-d H:i:s' );
 		// Archive points from the weekly/monthly table into the archive table
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$dbw->insertSelect(
 			'user_points_archive',
 			"user_points_{$period}",

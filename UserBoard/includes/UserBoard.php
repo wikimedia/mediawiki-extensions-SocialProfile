@@ -43,7 +43,7 @@ class UserBoard {
 	 * @return int The inserted value of ub_id row
 	 */
 	public function sendBoardMessage( $sender, $recipient, $message, $message_type = 0 ) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 
 		$dbw->insert(
 			'user_board',
@@ -189,7 +189,7 @@ class UserBoard {
 	 */
 	public function deleteMessage( $ub_id ) {
 		if ( $ub_id ) {
-			$dbw = wfGetDB( DB_MASTER );
+			$dbw = wfGetDB( DB_PRIMARY );
 			$s = $dbw->selectRow(
 				'user_board',
 				[ 'ub_actor', 'ub_type' ],

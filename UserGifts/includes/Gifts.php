@@ -22,7 +22,7 @@ class Gifts {
 		$gift_description,
 		$gift_access = 0
 	) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 
 		$dbw->insert(
 			'gift',
@@ -47,7 +47,7 @@ class Gifts {
 	 * @param int $access 0 by default
 	 */
 	public static function updateGift( $id, $gift_name, $gift_description, $access = 0 ) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$dbw->update(
 			'gift',
 			/* SET */[

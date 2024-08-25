@@ -23,17 +23,6 @@
 	</rule>
 	<file>.</file>
 
-	<!--
-		Since there is no extension.json with a minimum required version, the sniff
-		assumes that the extension requires the latest version. This can be fixed once
-		this extension requires MediaWiki 1.36+ and can use DB_PRIMARY.
-		Set severity to 0 instead of excluding the rule entirely so that libup does not
-		try to autofix this in the future.
-	-->
-	<rule ref="MediaWiki.Usage.DeprecatedConstantUsage.DB_MASTER">
-		<severity>0</severity>
-	</rule>
-
 	<arg name="bootstrap" value="./vendor/mediawiki/mediawiki-codesniffer/utils/bootstrap-ci.php"/>
 	<arg name="extensions" value="php"/>
 	<arg name="encoding" value="UTF-8"/>

@@ -79,7 +79,7 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 	 * @return int Amount of profiles populated
 	 */
 	private function populateProfiles() {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$res = $dbw->select(
 			'page',
 			[ 'page_title' ],

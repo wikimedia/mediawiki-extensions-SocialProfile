@@ -67,7 +67,7 @@ class UserStats {
 			'user_name' => $this->user->getName()
 		] );
 
-		$dbr = wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_PRIMARY );
 		$row = $dbr->selectRow(
 			'user_stats',
 			'*',

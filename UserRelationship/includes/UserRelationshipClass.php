@@ -39,7 +39,7 @@ class UserRelationship {
 	 * @return int ID of the new relationship request
 	 */
 	public function addRelationshipRequest( $userTo, $type, $message, $email = true ) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 
 		$dbw->insert(
 			'user_relationship_request',
@@ -278,7 +278,7 @@ class UserRelationship {
 	public function addRelationship( $relationshipRequestId, $email = true ) {
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$s = $dbw->selectRow(
 			'user_relationship_request',
 			[ 'ur_actor_from', 'ur_type' ],
@@ -382,7 +382,7 @@ class UserRelationship {
 		}
 
 		// must delete record for each user involved in relationship
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$dbw->delete(
 			'user_relationship',
 			[ 'r_actor' => $user1->getActorId(), 'r_actor_relation' => $user2->getActorId() ],
@@ -426,7 +426,7 @@ class UserRelationship {
 		$requestCount = new RelationshipRequestCount( $cache, $this->user );
 		$requestCount->setType( $request[0]['rel_type'] )->clear();
 
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$dbw->delete(
 			'user_relationship_request',
 			[ 'ur_id' => $id ],
@@ -439,7 +439,7 @@ class UserRelationship {
 	 * @param int $status
 	 */
 	public function updateRelationshipRequestStatus( $relationshipRequestId, $status ) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$dbw->update(
 			'user_relationship_request',
 			/* SET */[ 'ur_status' => $status ],

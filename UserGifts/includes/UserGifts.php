@@ -39,7 +39,7 @@ class UserGifts {
 	 * @return int
 	 */
 	public function sendGift( $user_to, $gift_id, $type, $message ) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 
 		$services = MediaWikiServices::getInstance();
 		// Ensure that if we received a $message longer than 255 only the first
@@ -145,7 +145,7 @@ class UserGifts {
 	}
 
 	public function clearAllUserGiftStatus() {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$dbw->update( 'user_gift',
 			/* SET */[ 'ug_status' => 0 ],
 			/* WHERE */[ 'ug_actor_to' => $this->user->getActorId() ],
@@ -158,7 +158,7 @@ class UserGifts {
 	}
 
 	public function clearUserGiftStatus( $id ) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$dbw->update( 'user_gift',
 			/* SET */[ 'ug_status' => 0 ],
 			/* WHERE */[ 'ug_id' => $id ],
@@ -199,7 +199,7 @@ class UserGifts {
 	 * @param int $ug_id ID number of the gift to delete
 	 */
 	public static function deleteGift( $ug_id ) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$dbw->delete( 'user_gift', [ 'ug_id' => $ug_id ], __METHOD__ );
 	}
 
@@ -297,7 +297,7 @@ class UserGifts {
 	 * @param int $gift_id ID number of the gift that we're tracking
 	 */
 	private function incGiftGivenCount( $gift_id ) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$dbw->update(
 			'gift',
 			[ 'gift_given_count=gift_given_count+1' ],

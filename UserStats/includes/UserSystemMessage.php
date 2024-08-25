@@ -36,7 +36,7 @@ class UserSystemMessage {
 	 */
 	public function addMessage( $user, $type = 0, $message ) {
 		$actorId = $user->getActorId();
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 
 		$dbw->insert(
 			'user_system_messages',
@@ -55,7 +55,7 @@ class UserSystemMessage {
 	 * @param int $um_id Internal ID number of the message to delete
 	 */
 	public static function deleteMessage( $um_id ) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$dbw->delete(
 			'user_system_messages',
 			[ 'um_id' => $um_id ],

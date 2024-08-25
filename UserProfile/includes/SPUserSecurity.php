@@ -18,7 +18,7 @@ class SPUserSecurity {
 	 * @param string $priv New privacy value (in plain English, i.e. "public" or "hidden")
 	 */
 	public static function setPrivacy( $owner, $fieldKey, $priv ) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$s = $dbw->selectRow(
 			'user_fields_privacy',
 			[ '*' ],
@@ -54,7 +54,7 @@ class SPUserSecurity {
 	 * @return string Privacy value (in plain English, i.e. "public" or "hidden")
 	 */
 	public static function getPrivacy( $user, $fieldKey ) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$s = $dbw->selectRow(
 			'user_fields_privacy',
 			[ '*' ],
@@ -77,7 +77,7 @@ class SPUserSecurity {
 	 * @return string HTML suitable for output
 	 */
 	public static function renderEye( $fieldKey, User $user ) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$s = $dbw->selectRow(
 			'user_fields_privacy',
 			[ '*' ],

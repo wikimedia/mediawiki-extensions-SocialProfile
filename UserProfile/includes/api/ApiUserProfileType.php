@@ -73,7 +73,7 @@ class ApiUserProfileType extends ApiBase {
 		}
 
 		// @todo FIXME: M A S S I V E L Y duplicates SpecialToggleUserPageType.php!
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$s = $dbw->selectRow(
 			'user_profile',
 			[ 'up_actor' ],

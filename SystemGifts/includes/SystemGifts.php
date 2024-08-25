@@ -53,7 +53,7 @@ class SystemGifts {
 	public function updateSystemGifts() {
 		global $wgOut;
 
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$stats = new UserStatsTrack( 1, '' );
 		$this->categories = array_flip( $this->categories );
@@ -157,7 +157,7 @@ class SystemGifts {
 	 * @return int The inserted gift's ID number
 	 */
 	public function addGift( $name, $description, $category, $threshold ) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$dbw->insert(
 			'system_gift',
 			[
@@ -182,7 +182,7 @@ class SystemGifts {
 	 * @param int $threshold
 	 */
 	public function updateGift( $id, $name, $description, $category, $threshold ) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$dbw->update(
 			'system_gift',
 			/* SET */[

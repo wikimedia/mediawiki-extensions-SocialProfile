@@ -47,7 +47,7 @@ class MigrateOldUserGiftsUserColumnsToActor extends LoggedUpdateMaintenance {
 	 * @return bool True to log the update as done
 	 */
 	protected function doDBUpdates() {
-		$dbw = $this->getDB( DB_MASTER );
+		$dbw = $this->getDB( DB_PRIMARY );
 
 		if ( $dbw->fieldExists( 'user_gift', 'ug_user_id_to', __METHOD__ ) ) {
 			$res = $dbw->select(

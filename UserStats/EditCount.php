@@ -65,7 +65,7 @@ function removeDeletedEdits( WikiPage $article, $user, $reason ) {
 		!is_array( $wgNamespacesForEditPoints ) ||
 		in_array( $article->getTitle()->getNamespace(), $wgNamespacesForEditPoints )
 	) {
-		$dbr = wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_PRIMARY );
 
 		$MW139orEarlier = version_compare( MW_VERSION, '1.39', '<' );
 		if ( $MW139orEarlier ) {
@@ -126,7 +126,7 @@ function restoreDeletedEdits( Title $title, $new ) {
 		!is_array( $wgNamespacesForEditPoints ) ||
 		in_array( $title->getNamespace(), $wgNamespacesForEditPoints )
 	) {
-		$dbr = wfGetDB( DB_MASTER );
+		$dbr = wfGetDB( DB_PRIMARY );
 
 		$MW139orEarlier = version_compare( MW_VERSION, '1.39', '<' );
 		if ( $MW139orEarlier ) {

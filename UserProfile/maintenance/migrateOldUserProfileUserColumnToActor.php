@@ -47,7 +47,7 @@ class MigrateOldUserProfileUserColumnToActor extends LoggedUpdateMaintenance {
 	 * @return bool True to log the update as done
 	 */
 	protected function doDBUpdates() {
-		$dbw = $this->getDB( DB_MASTER );
+		$dbw = $this->getDB( DB_PRIMARY );
 		if ( $dbw->fieldExists( 'user_profile', 'up_user_id', __METHOD__ ) ) {
 			// Drop the _old_ PRIMARY KEY
 			$dbw->sourceFile( __DIR__ . '/../sql/patches/actor/drop-primary-key.sql' );

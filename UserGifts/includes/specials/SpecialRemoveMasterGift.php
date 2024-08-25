@@ -108,7 +108,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 		) {
 			$_SESSION['alreadysubmitted'] = true;
 
-			$dbw = wfGetDB( DB_MASTER );
+			$dbw = wfGetDB( DB_PRIMARY );
 			$gift = Gifts::getGift( $this->gift_id );
 
 			$dbw->delete(

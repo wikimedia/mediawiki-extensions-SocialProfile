@@ -59,7 +59,7 @@ class UserSystemGifts {
 			return '';
 		}
 
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$dbw->insert(
 			'user_system_gift',
 			[
@@ -179,7 +179,7 @@ class UserSystemGifts {
 	}
 
 	public function clearUserGiftStatus( $id ) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$dbw->update(
 			'user_system_gift',
 			[ 'sg_status' => 0 ],
@@ -198,7 +198,7 @@ class UserSystemGifts {
 	 * @param int $ug_id Gift ID of the system gift that we're about to delete
 	 */
 	public static function deleteGift( $ug_id ) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$dbw->delete(
 			'user_system_gift',
 			[ 'sg_id' => $ug_id ],
@@ -253,7 +253,7 @@ class UserSystemGifts {
 	 * @param int $giftId ID number of the system gift that we're tracking
 	 */
 	public static function incGiftGivenCount( $giftId ) {
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$dbw->update(
 			'system_gift',
 			[ 'gift_given_count = gift_given_count + 1' ],

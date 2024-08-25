@@ -47,7 +47,7 @@ class MigrateOldUserRelationshipRequestUserColumnsToActor extends LoggedUpdateMa
 	 * @return bool True to log the update as done
 	 */
 	protected function doDBUpdates() {
-		$dbw = $this->getDB( DB_MASTER );
+		$dbw = $this->getDB( DB_PRIMARY );
 
 		if ( $dbw->fieldExists( 'user_relationship_request', 'ur_user_id_from', __METHOD__ ) ) {
 			$res = $dbw->select(
