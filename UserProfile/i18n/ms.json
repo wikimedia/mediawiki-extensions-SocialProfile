@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Anakmalaysia",
+			"Hakimi97",
 			"Kurniasan",
 			"Tofeiku"
 		]
@@ -21,6 +22,7 @@
 	"user-personal-info-places-lived": "Tempat tinggal saya (dahulu hingga kini)",
 	"user-personal-info-schools": "Sekolah",
 	"user-personal-info-about-me": "Perihal saya",
+	"user-recent-activity-title": "Kegiatan terkini",
 	"user-profile-section-personal": "Maklumat peribadi",
 	"user-profile-section-interests": "Maklumat lain",
 	"user-profile-personal-name": "Nama",
