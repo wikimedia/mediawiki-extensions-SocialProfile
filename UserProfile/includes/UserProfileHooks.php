@@ -140,12 +140,7 @@ class UserProfileHooks {
 				}
 			}
 
-			if ( !$show_user_page ) {
-				// Prevents editing of userpage
-				if ( $request->getVal( 'action' ) == 'edit' ) {
-					$out->redirect( $title->getFullURL() );
-				}
-			} else {
+			if ( $show_user_page ) {
 				if ( method_exists( $out, 'disableClientCache' ) ) {
 					// MW 1.38+
 					$out->disableClientCache();
@@ -164,6 +159,141 @@ class UserProfileHooks {
 
 			$article = new UserProfilePage( $title );
 		}
+	}
+
+	/**
+	 * Redirect action=edit attempts on a social profile page to a meaningful
+	 * URL, which is either:
+	 * -Special:UpdateProfile (if user is attempting to edit their own profile)
+	 * -Special:EditProfile (if user is privileged and attempting to edit someone
+	 *   else's profile)
+	 * -the profile page (if user is attempting to edit someone else's profile
+	 *   without being allowed to do that)
+	 *
+	 * @param UserProfilePage|WikiPage $article
+	 * @param User $user
+	 * @return bool
+	 */
+	public static function onCustomEditor( $article, $user ) {
+		global $wgUserPageChoice;
+
+		$title = $article->getTitle();
+		$pageName = $title->getText();
+
+		// We only care about pages which can be social profile pages here, so
+		// ignore all other pages.
+		// Also, always ignore subpages, we only care about the user's "main" User: or User_profile: page.
+		if ( !$title->inNamespaces( [ NS_USER, NS_USER_PROFILE ] ) || $title->isSubpage() ) {
+			return true;
+		}
+
+		$show_wikitext_user_page = false;
+
+		if ( $wgUserPageChoice ) {
+			$profile = new UserProfile( $pageName );
+			$profile_data = $profile->getProfile();
+
+			// If they want regular page, ignore this hook
+			if (
+				isset( $profile_data['actor'] ) &&
+				$profile_data['actor'] &&
+				$profile_data['user_page_type'] == 0
+			) {
+				$show_wikitext_user_page = true;
+			}
+		}
+
+		// Need user account existence check so that creating User: pages
+		// for nonexistent user accounts remains possible
+		if (
+			!$show_wikitext_user_page &&
+			$article->getContext()->getRequest()->getVal( 'action' ) == 'edit' &&
+			!MediaWikiServices::getInstance()->getUserFactory()->newFromName( $pageName )->isAnon()
+		) {
+			$out = $article->getContext()->getOutput();
+
+			$userOwnsThisProfile = (
+				$title->equals( $user->getUserPage() ) ||
+				$title->equals( Title::makeTitle( NS_USER_PROFILE, $user->getName() ) )
+			);
+
+			// Prevents direct editing of the user page and redirects the user to the appropriate special page
+			// (if applicable)
+			if ( $userOwnsThisProfile ) {
+				$out->redirect( SpecialPage::getTitleFor( 'UpdateProfile' )->getFullURL() );
+				return false;
+			} elseif ( $user->isAllowed( 'editothersprofiles' ) ) {
+				$out->redirect( SpecialPage::getTitleFor( 'EditProfile', $pageName )->getFullURL() );
+				return false;
+			}
+
+			$out->redirect( $title->getFullURL() );
+
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * Potentially prevent editing User: & User_profile: pages via the API (api.php) if the user in question
+	 * has opted to use a social user profile page instead.
+	 *
+	 * @todo This and the above function duplicate _a lot_ of code with each other... :-/
+	 *
+	 * @param ApiBase $module
+	 * @param User $user
+	 * @param IApiMessage|Message|string|array &$message
+	 * @return bool
+	 */
+	public static function onApiCheckCanExecute( $module, $user, &$message ) {
+		global $wgUserPageChoice;
+
+		$moduleName = $module->getModuleName();
+
+		if ( $moduleName == 'edit' ) {
+			$params = $module->extractRequestParams();
+			$pageObj = $module->getTitleOrPageId( $params );
+			$title = $pageObj->getTitle();
+			$pageName = $title->getText();
+
+			// We only care about pages which can be social profile pages here, so
+			// ignore all other pages.
+			// Also, always ignore subpages, we only care about the user's "main" User: or User_profile: page.
+			if ( !$title->inNamespaces( [ NS_USER, NS_USER_PROFILE ] ) || $title->isSubpage() ) {
+				return true;
+			}
+
+			$show_wikitext_user_page = false;
+
+			if ( $wgUserPageChoice ) {
+				$profile = new UserProfile( $pageName );
+				$profile_data = $profile->getProfile();
+
+				// If they want regular page, ignore this hook
+				if (
+					isset( $profile_data['actor'] ) &&
+					$profile_data['actor'] &&
+					$profile_data['user_page_type'] == 0
+				) {
+					$show_wikitext_user_page = true;
+				}
+			}
+
+			// Need user account existence check so that creating User: pages
+			// for nonexistent user accounts remains possible
+			if (
+				!$show_wikitext_user_page &&
+				!MediaWikiServices::getInstance()->getUserFactory()->newFromName( $pageName )->isAnon()
+			) {
+				$message = 'user-profile-error-no-api-edit';
+				return false;
+			}
+
+			return true;
+		}
+
+		return true;
 	}
 
 	/**

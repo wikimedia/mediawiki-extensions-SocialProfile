@@ -230,6 +230,7 @@
 	"action-editothersprofiles": "{{doc-action|editothersprofiles}}",
 	"right-populate-user-profiles": "{{doc-right|populate-user-profiles}}",
 	"action-populate-user-profiles": "{{doc-action|populate-user-profiles}}",
+	"user-profile-error-no-api-edit": "Error message shown via the API, '''and also to users using [[mw:Extension:MobileFrontend|the MobileFrontend extension]]''' who try to edit User: pages via the API/MobileFrontend. '''Do not translate the special page names in this message!'''",
 	"apihelp-socialprofile-userprofileprivacy-summary": "{{doc-apihelp-summary|socialprofile-userprofileprivacy}}",
 	"apihelp-socialprofile-userprofileprivacy-param-method": "{{doc-important|Do not translate \"get\" or \"set\".}}\n{{doc-apihelp-param|socialprofile-userprofileprivacy|method}}",
 	"apihelp-socialprofile-userprofileprivacy-param-field_key": "{{doc-apihelp-param|socialprofile-userprofileprivacy|field_key}}",

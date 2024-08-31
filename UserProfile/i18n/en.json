@@ -220,6 +220,7 @@
 	"action-editothersprofiles": "update other users' social profiles",
 	"right-populate-user-profiles": "Populate other users' profiles for existing wikis",
 	"action-populate-user-profiles": "populate other users' profiles",
+	"user-profile-error-no-api-edit": "Editing social profiles via the API is not currently possible. Please use <code>Special:UpdateProfile</code> to edit your own user profile, or <code>Special:EditProfile</code> to edit other users' profiles (if you have the user rights needed to use that special page).",
 	"apihelp-socialprofile-userprofileprivacy-summary": "API module for setting the visibility (\"privacy\") of a profile field",
 	"apihelp-socialprofile-userprofileprivacy-param-method": "Action (either \"get\" or \"set\")",
 	"apihelp-socialprofile-userprofileprivacy-param-field_key": "Target field key, such as up_movies for the \"Movies\" field",
