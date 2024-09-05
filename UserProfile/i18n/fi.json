@@ -215,5 +215,6 @@
 	"right-editothersprofiles-private": "Tarkastella ja päivittää yksityisiä tietoja (sähköpostiosoite) toisten käyttäjien sosiaalisisa profiileissa",
 	"action-avatarremove": "poistaa käyttäjien avatareja",
 	"action-editothersprofiles": "päivittää muiden käyttäjien sosiaalisia profiileja",
+	"user-profile-error-no-api-edit": "Sosiaalisen profiilien muokkaaminen ohjelmointirajapinnan välityksellä ei ole tällä hetkellä mahdollista. Käytäthän sivua <code>Special:UpdateProfile</code> muokataksesi omaa käyttäjäprofiiliasi, tai sivua <code>Special:EditProfile</code> muokataksesi toisen käyttäjien profiileja (mikäli sinulla on kyseisen sivun käyttämiseen tarvittavat käyttäjäoikeudet).",
 	"random-users-avatars-title": "Tapaa yhteisö"
 }

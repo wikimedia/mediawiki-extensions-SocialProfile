@@ -215,6 +215,7 @@
 	"action-editothersprofiles": "поднова на туѓи друштвени профили",
 	"right-populate-user-profiles": "Исполнување на туѓите профили за постоечки викија",
 	"action-populate-user-profiles": "исполнување на туѓи кориснички профили",
+	"user-profile-error-no-api-edit": "Уредувањето на друштвени профили преку приложникот засега не е возможно. Користете <code>Special:UpdateProfile</code> за да го уредите вашиот кориснички профил, или пак <code>Special:EditProfile</code> за да уредите туѓ (ако ги имате корисничките права потребни за да ја користите таа службена страница).",
 	"apihelp-socialprofile-userprofileprivacy-summary": "Извршнички модул за укажување на видливоста („приватност“) на едно профилно поле",
 	"apihelp-socialprofile-userprofileprivacy-param-method": "Дејство (или „get“ или „set“)",
 	"apihelp-socialprofile-userprofileprivacy-param-field_key": "целен клуч на полето, како up_movies за полето „Филмови“",
