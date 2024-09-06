@@ -7,10 +7,12 @@
 		]
 	},
 	"useractivity": "Актыўнасьць сяброў",
+	"useractivity-desc": "Паказвае сацыяльную актыўнасьць удзельнікаў",
 	"useractivity-award": "$1 атрымаў узнагароду",
 	"useractivity-all": "Паказаць усё",
 	"useractivity-edit": "$1 рэдагаваў {{PLURAL:$4|старонку|наступныя старонкі:}} $3",
 	"useractivity-foe": "$1 {{PLURAL:$2|варагуе|варагуюць}} зараз з $3",
+	"useractivity-filter": "Фільтар",
 	"useractivity-friend": "$1 {{PLURAL:$2|сябруе|сябруюць}} зараз з $3",
 	"useractivity-gift": "$1 атрымаў падарунак ад $2",
 	"useractivity-group-edit": "$1 {{PLURAL:$1|рэдагаваньне|рэдагаваньні|рэдагаваньняў}}",
