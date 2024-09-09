@@ -75,5 +75,7 @@
 	"echo-category-title-social-award": "Узнагароды",
 	"echo-pref-tooltip-social-award": "Паведамляць мне, калі я атрымліваю ўзнагароду.",
 	"notification-social-award-rec": "Вы атрымалі новую ўзнагароду: $1.",
-	"right-awardsmanage": "Стварыць новую і рэдагаваць існуючыя ўзнагароды"
+	"notification-social-award-rec-bundle": "Вы атрымалі {{PLURAL:$1|адну новую ўзнагароду|$1 новыя ўзнагароды|$1 новых узнагародаў}}.",
+	"right-awardsmanage": "Ствараць новыя і рэдагаваць існыя ўзнагароды",
+	"action-awardsmanage": "ствараць новыя і рэдагаваць існыя ўзнагароды"
 }
