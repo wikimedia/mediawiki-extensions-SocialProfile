@@ -222,6 +222,7 @@
 	"action-editothersprofiles": "更新其他使用者的社交個人檔案",
 	"right-populate-user-profiles": "填寫現有 wiki 的其他使用者個人檔案",
 	"action-populate-user-profiles": "填寫其他人的個人檔案",
+	"user-profile-error-no-api-edit": "目前無法透過 API 編輯社交個人資料。請使用<code>Special:UpdateProfile</code> 來編輯您自己的使用者個人資料，或是用 <code>Special:EditProfile</code> 來編輯其他使用者的個人資料（若您擁有使用該特殊頁面所需的使用者權限）。",
 	"apihelp-socialprofile-userprofileprivacy-summary": "用於設定個人檔案欄位可見度（「privacy」）的 API 模組",
 	"apihelp-socialprofile-userprofileprivacy-param-method": "操作（「get」或是「set」）",
 	"apihelp-socialprofile-userprofileprivacy-param-field_key": "目標欄位鍵值，例如 up_movies 用於「Movies」欄位",
