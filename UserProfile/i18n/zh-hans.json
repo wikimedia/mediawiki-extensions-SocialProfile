@@ -235,6 +235,7 @@
 	"action-editothersprofiles": "更新其他用户的社交资料",
 	"right-populate-user-profiles": "为现有wiki填写其他用户的资料页",
 	"action-populate-user-profiles": "填写其他用户的资料页",
+	"user-profile-error-no-api-edit": "目前无法通过 API 编辑社交资料。请使用<code>Special:UpdateProfile</code>编辑您自己的用户资料，或使用<code>Special:EditProfile</code>编辑其他用户的资料（如果您拥有使用该特殊页面所需的用户权限）。",
 	"apihelp-socialprofile-userprofileprivacy-summary": "设置详情字段可见性（“privacy”）的API模块",
 	"apihelp-socialprofile-userprofileprivacy-param-method": "操作（“get”或“set”）",
 	"apihelp-socialprofile-userprofileprivacy-param-field_key": "目标字段键，例如“Movies”字段的up_movies",
