@@ -218,6 +218,7 @@
 	"action-editothersprofiles": "לעדכן פרופילים חברתיים של משתמשים אחרים",
 	"right-populate-user-profiles": "אכלוס פרופילים של משתמשים אחרים עבור אתרי ויקי קיימים",
 	"action-populate-user-profiles": "לאכלס פרופילים של משתמשים אחרים",
+	"user-profile-error-no-api-edit": "עריכת פרופילים חברתיים באמצעות ה־API אינה אפשרית כרגע. נא להשתמש ב־<code>Special:UpdateProfile</code> כדי לערוך את פרופיל המשתמש שלך, או ב־<code>Special:EditProfile</code> כדי לערוך פרופילים של משתמשים אחרים (אם יש לך הרשאות המשתמש שדרושות כדי להשתמש בדף המיוחד הזה).",
 	"apihelp-socialprofile-userprofileprivacy-summary": "מודול API להגדרת הנראות (\"פרטיות\") של שדה פרופיל",
 	"apihelp-socialprofile-userprofileprivacy-param-method": "פעולה (\"get\" או \"set\")",
 	"apihelp-socialprofile-userprofileprivacy-param-field_key": "מפתח שדה היעד, כגון up_movies עבור שדה \"Movies\"",
