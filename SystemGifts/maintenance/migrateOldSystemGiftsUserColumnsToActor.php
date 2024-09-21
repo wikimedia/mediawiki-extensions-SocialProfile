@@ -78,7 +78,8 @@ class MigrateOldSystemGiftsUserColumnsToActor extends LoggedUpdateMaintenance {
 				],
 				[
 					'sg_user_id' => $row->sg_user_id
-				]
+				],
+				__METHOD__
 			);
 		}
 

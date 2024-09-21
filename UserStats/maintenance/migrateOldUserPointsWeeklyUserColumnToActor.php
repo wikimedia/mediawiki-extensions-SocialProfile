@@ -78,7 +78,8 @@ class MigrateOldUserPointsWeeklyUserColumnToActor extends LoggedUpdateMaintenanc
 				],
 				[
 					'up_user_id' => $row->up_user_id
-				]
+				],
+				__METHOD__
 			);
 		}
 

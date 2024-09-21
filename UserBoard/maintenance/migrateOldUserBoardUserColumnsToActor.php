@@ -78,7 +78,8 @@ class MigrateOldUserBoardUserColumnsToActor extends LoggedUpdateMaintenance {
 				],
 				[
 					'ub_user_id' => $row->ub_user_id
-				]
+				],
+				__METHOD__
 			);
 		}
 
@@ -106,7 +107,8 @@ class MigrateOldUserBoardUserColumnsToActor extends LoggedUpdateMaintenance {
 				],
 				[
 					'ub_user_id_from' => $row->ub_user_id_from
-				]
+				],
+				__METHOD__
 			);
 		}
 

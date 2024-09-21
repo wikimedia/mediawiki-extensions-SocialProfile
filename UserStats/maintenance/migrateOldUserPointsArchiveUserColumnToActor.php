@@ -78,7 +78,8 @@ class MigrateOldUserPointsArchiveUserColumnToActor extends LoggedUpdateMaintenan
 				],
 				[
 					'up_user_id' => $row->up_user_id
-				]
+				],
+				__METHOD__
 			);
 		}
 

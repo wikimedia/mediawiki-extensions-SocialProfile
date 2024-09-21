@@ -74,7 +74,8 @@ class MigrateOldUserRelationshipUserColumnsToActor extends LoggedUpdateMaintenan
 					],
 					[
 						'r_user_id' => $row->r_user_id
-					]
+					],
+					__METHOD__
 				);
 			}
 		}
@@ -104,7 +105,8 @@ class MigrateOldUserRelationshipUserColumnsToActor extends LoggedUpdateMaintenan
 					],
 					[
 						'r_user_id_relation' => $row->r_user_id_relation
-					]
+					],
+					__METHOD__
 				);
 			}
 		}

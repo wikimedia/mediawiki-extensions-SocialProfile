@@ -77,7 +77,8 @@ class MigrateOldUserSystemMessagesUserColumnToActor extends LoggedUpdateMaintena
 				],
 				[
 					'um_user_id' => $row->um_user_id
-				]
+				],
+				__METHOD__
 			);
 		}
 

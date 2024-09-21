@@ -75,7 +75,8 @@ class MigrateOldUserGiftsUserColumnsToActor extends LoggedUpdateMaintenance {
 					],
 					[
 						'ug_user_id_to' => $row->ug_user_id_to
-					]
+					],
+					__METHOD__
 				);
 			}
 		}
@@ -105,7 +106,8 @@ class MigrateOldUserGiftsUserColumnsToActor extends LoggedUpdateMaintenance {
 					],
 					[
 						'ug_user_id_from' => $row->ug_user_id_from
-					]
+					],
+					__METHOD__
 				);
 			}
 		}

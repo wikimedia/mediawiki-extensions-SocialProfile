@@ -78,7 +78,8 @@ class MigrateOldGiftsUserColumnsToActor extends LoggedUpdateMaintenance {
 				],
 				[
 					'gift_creator_user_id' => $row->gift_creator_user_id
-				]
+				],
+				__METHOD__
 			);
 		}
 

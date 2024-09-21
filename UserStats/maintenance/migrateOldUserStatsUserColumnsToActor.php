@@ -79,7 +79,8 @@ class MigrateOldUserStatsUserColumnsToActor extends LoggedUpdateMaintenance {
 					],
 					[
 						'stats_user_id' => $row->stats_user_id
-					]
+					],
+					__METHOD__
 				);
 			}
 		}
