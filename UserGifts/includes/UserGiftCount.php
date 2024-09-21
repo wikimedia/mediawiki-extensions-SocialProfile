@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\MediaWikiServices;
 
 /**
  * This object allows for updating the amount (by increasing,
@@ -84,7 +85,7 @@ class UserGiftCount {
 			'user_name' => $this->user->getName()
 		] );
 
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$newGiftCount = 0;
 
 		$s = $dbr->selectRow(

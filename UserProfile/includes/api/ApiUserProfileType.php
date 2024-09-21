@@ -8,6 +8,8 @@
  * @license GPL-2.0-or-later
  */
 
+use MediaWiki\MediaWikiServices;
+
 class ApiUserProfileType extends ApiBase {
 
 	public function __construct( $query, $moduleName ) {
@@ -73,7 +75,7 @@ class ApiUserProfileType extends ApiBase {
 		}
 
 		// @todo FIXME: M A S S I V E L Y duplicates SpecialToggleUserPageType.php!
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 		$s = $dbw->selectRow(
 			'user_profile',
 			[ 'up_actor' ],

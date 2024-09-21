@@ -11,6 +11,8 @@
  * @license GPL-2.0-or-later
  */
 
+use MediaWiki\MediaWikiServices;
+
 class SpecialPopulateUserProfiles extends SpecialPage {
 
 	public function __construct() {
@@ -79,7 +81,7 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 	 * @return int Amount of profiles populated
 	 */
 	private function populateProfiles() {
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 		$res = $dbw->select(
 			'page',
 			[ 'page_title' ],

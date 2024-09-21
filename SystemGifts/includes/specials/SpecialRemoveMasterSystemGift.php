@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * A special page for removing system gifts permanently.
  *
@@ -87,7 +90,7 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 		) {
 			$_SESSION['alreadysubmitted'] = true;
 
-			$dbw = wfGetDB( DB_PRIMARY );
+			$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 			$gift = SystemGifts::getGift( $this->gift_id );
 
 			$dbw->delete(

@@ -43,7 +43,7 @@ class UserBoard {
 	 * @return int The inserted value of ub_id row
 	 */
 	public function sendBoardMessage( $sender, $recipient, $message, $message_type = 0 ) {
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 
 		$dbw->insert(
 			'user_board',
@@ -140,7 +140,7 @@ class UserBoard {
 	 * @return bool True if user owns the message, otherwise false
 	 */
 	public function doesUserOwnMessage( $user, $ub_id ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_board',
 			[ 'ub_actor' ],
@@ -165,7 +165,7 @@ class UserBoard {
 	 * @return bool True if user owns the message, otherwise false
 	 */
 	public function isUserAuthor( $user, $ub_id ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_board',
 			[ 'ub_actor_from' ],
@@ -189,7 +189,7 @@ class UserBoard {
 	 */
 	public function deleteMessage( $ub_id ) {
 		if ( $ub_id ) {
-			$dbw = wfGetDB( DB_PRIMARY );
+			$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 			$s = $dbw->selectRow(
 				'user_board',
 				[ 'ub_actor', 'ub_type' ],
@@ -223,7 +223,7 @@ class UserBoard {
 	public function getMessage( $messageId ) {
 		global $wgOut, $wgTitle;
 
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$res = $dbr->select(
 			'user_board',
 			'*',
@@ -266,7 +266,7 @@ class UserBoard {
 	public function getUserBoardMessages( $user, $user_2 = 0, $limit = 0, $page = 0 ) {
 		global $wgOut, $wgTitle;
 
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$offset = 0;
 		if ( $limit > 0 && $page ) {
@@ -327,7 +327,7 @@ class UserBoard {
 	 * @return int The amount of board-to-board messages
 	 */
 	public function getUserBoardToBoardCount( $user, $user_2 ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$user_sql = " ( (ub_actor={$user->getActorId()} AND ub_actor_from={$user_2->getActorId()}) OR
 					(ub_actor={$user_2->getActorId()} AND ub_actor_from={$user->getActorId()}) )";

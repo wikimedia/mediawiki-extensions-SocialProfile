@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\MediaWikiServices;
 
 /**
  * This object allows for increasing, decreasing, and getting
@@ -85,7 +86,7 @@ class SystemGiftCount {
 			'actor_id' => $actorId
 		] );
 
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$newCount = 0;
 		$s = $dbr->selectRow(
 			'user_system_gift',

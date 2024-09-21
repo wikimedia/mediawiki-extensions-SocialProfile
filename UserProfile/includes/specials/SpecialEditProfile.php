@@ -187,7 +187,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 	}
 
 	function displayBasicForm( $tar ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_profile',
 			[
@@ -379,7 +379,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 	}
 
 	function displayPersonalForm( $tar ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_profile',
 			[
@@ -473,7 +473,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 	 * @return string HTML
 	 */
 	function displayCustomForm( $tar ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_profile',
 			[

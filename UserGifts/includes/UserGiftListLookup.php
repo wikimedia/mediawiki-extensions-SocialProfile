@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * Allows querying the database to get info on lists of user gifts.
  */
@@ -36,7 +39,7 @@ class UserGiftListLookup {
 	 * @return array
 	 */
 	function getGiftList( $order = 'gift_createdate DESC' ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$params = [];
 
 		if ( $this->limit > 0 ) {
@@ -77,7 +80,7 @@ class UserGiftListLookup {
 	 * @return array
 	 */
 	public function getManagedGiftList() {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$where = []; // Prevent E_NOTICE
 		$params = [];

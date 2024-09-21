@@ -59,7 +59,7 @@ class UserSystemGifts {
 			return '';
 		}
 
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 		$dbw->insert(
 			'user_system_gift',
 			[
@@ -165,7 +165,7 @@ class UserSystemGifts {
 	 * @return bool True if the user has the gift, otherwise false
 	 */
 	public function doesUserHaveGift( $gift_id ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_system_gift',
 			[ 'sg_status' ],
@@ -179,7 +179,7 @@ class UserSystemGifts {
 	}
 
 	public function clearUserGiftStatus( $id ) {
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 		$dbw->update(
 			'user_system_gift',
 			[ 'sg_status' => 0 ],
@@ -198,7 +198,7 @@ class UserSystemGifts {
 	 * @param int $ug_id Gift ID of the system gift that we're about to delete
 	 */
 	public static function deleteGift( $ug_id ) {
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 		$dbw->delete(
 			'user_system_gift',
 			[ 'sg_id' => $ug_id ],
@@ -215,7 +215,7 @@ class UserSystemGifts {
 	 * @return array Array containing information about the system gift
 	 */
 	public static function getUserGift( $id ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$row = $dbr->selectRow(
 			[ 'user_system_gift', 'system_gift', 'actor' ],
 			[
@@ -253,7 +253,7 @@ class UserSystemGifts {
 	 * @param int $giftId ID number of the system gift that we're tracking
 	 */
 	public static function incGiftGivenCount( $giftId ) {
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 		$dbw->update(
 			'system_gift',
 			[ 'gift_given_count = gift_given_count + 1' ],
@@ -269,7 +269,7 @@ class UserSystemGifts {
 	 * @return int System gift count for the specified user
 	 */
 	public function getGiftCountByUsername( User $user ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$actorId = $user->getActorId();
 		$row = $dbr->selectRow(
 			'user_system_gift',

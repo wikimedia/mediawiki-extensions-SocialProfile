@@ -73,7 +73,7 @@ class NewUsersList {
 		$data = $cache->get( $key );
 
 		if ( !$data || $skipCache ) {
-			$dbr = wfGetDB( DB_REPLICA );
+			$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getMaintenanceConnectionRef( DB_REPLICA );
 
 			if ( $dbr->tableExists( 'user_register_track' ) ) {
 				$res = $dbr->select(

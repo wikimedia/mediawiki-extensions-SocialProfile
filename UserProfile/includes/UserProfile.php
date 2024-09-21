@@ -129,7 +129,7 @@ class UserProfile {
 			$profile = $data;
 		} else {
 			wfDebug( "Got user profile info for {$this->user->getName()} from DB\n" );
-			$dbr = wfGetDB( DB_REPLICA );
+			$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 			$row = $dbr->selectRow(
 				'user_profile',
 				'*',

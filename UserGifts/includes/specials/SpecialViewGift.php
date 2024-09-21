@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 class ViewGift extends UnlistedSpecialPage {
 
 	public function __construct() {
@@ -51,7 +53,7 @@ class ViewGift extends UnlistedSpecialPage {
 			}
 
 			// DB stuff
-			$dbr = wfGetDB( DB_REPLICA );
+			$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 			$res = $dbr->select(
 				[ 'user_gift', 'actor' ],
 				[ 'DISTINCT actor_name', 'ug_actor_to', 'ug_date' ],

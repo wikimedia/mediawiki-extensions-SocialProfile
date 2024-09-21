@@ -84,7 +84,7 @@ class TopFansRecent extends UnlistedSpecialPage {
 			$params['ORDER BY'] = 'up_points DESC';
 			$params['LIMIT'] = $count;
 
-			$dbr = wfGetDB( DB_REPLICA );
+			$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 			$res = $dbr->select(
 				"user_points_{$period}",
 				[ 'up_actor', 'up_points' ],

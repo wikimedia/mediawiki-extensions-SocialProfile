@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * Object for easily querying the user_relationship
  * and user_relationship_request tables
@@ -26,7 +29,7 @@ class RelationshipListLookup {
 	 * @return array Array of open relationship requests
 	 */
 	public function getRequestList( $status ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$options = [];
 		if ( $this->limit > 0 ) {
@@ -79,7 +82,7 @@ class RelationshipListLookup {
 	 * @return array Array of relationship information
 	 */
 	public function getRelationshipList( $type = 0, $page = 0 ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$where = [];
 		$options = [];

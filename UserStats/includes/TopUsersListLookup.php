@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 class TopUsersListLookup {
 
 	/**
@@ -22,7 +24,7 @@ class TopUsersListLookup {
 	 * names and amount of points the user has
 	 */
 	public function getList() {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$res = $dbr->select(
 			[ 'user_stats', 'actor' ],
 			[ 'stats_actor', 'actor_user', 'actor_name', 'stats_total_points' ],
@@ -63,7 +65,7 @@ class TopUsersListLookup {
 		}
 
 		$limit = $this->getLimit();
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$res = $dbr->select(
 			$pointsTable,
 			[ 'up_actor', 'up_points' ],

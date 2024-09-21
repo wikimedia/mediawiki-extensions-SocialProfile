@@ -103,7 +103,7 @@ class UserActivity {
 	 * appropriate class member variables.
 	 */
 	private function setEdits() {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$where = [];
 
@@ -204,7 +204,7 @@ class UserActivity {
 	 * set them in the appropriate class member variables.
 	 */
 	private function setVotes() {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getMaintenanceConnectionRef( DB_REPLICA );
 
 		# Bail out if Vote table doesn't exist
 		if ( !$dbr->tableExists( 'Vote' ) ) {
@@ -277,7 +277,7 @@ class UserActivity {
 	 * extension) and set them in the appropriate class member variables.
 	 */
 	private function setComments() {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getMaintenanceConnectionRef( DB_REPLICA );
 
 		# Bail out if Comments table doesn't exist
 		if ( !$dbr->tableExists( 'Comments' ) ) {
@@ -379,7 +379,7 @@ class UserActivity {
 	 * and set them in the appropriate class member variables.
 	 */
 	private function setGiftsSent() {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$where = [];
 
@@ -446,7 +446,7 @@ class UserActivity {
 	 * tables and set them in the appropriate class member variables.
 	 */
 	private function setGiftsRec() {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$where = [];
 
@@ -538,7 +538,7 @@ class UserActivity {
 	 * variables.
 	 */
 	private function setSystemGiftsRec() {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$where = [];
 
@@ -635,7 +635,7 @@ class UserActivity {
 	private function setRelationships() {
 		global $wgLang;
 
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$where = [];
 
@@ -730,7 +730,7 @@ class UserActivity {
 	 * and set them in the appropriate class member variables.
 	 */
 	private function setMessagesSent() {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$where = [];
 		// We do *not* want to display private messages...
@@ -821,7 +821,7 @@ class UserActivity {
 	private function setSystemMessages() {
 		global $wgLang;
 
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$where = [];
 
@@ -913,7 +913,7 @@ class UserActivity {
 			return;
 		}
 
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$where = [];
 
