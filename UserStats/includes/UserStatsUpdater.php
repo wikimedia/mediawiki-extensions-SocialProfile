@@ -34,8 +34,9 @@ class UserStatsUpdater {
 
 		$MW139orEarlier = version_compare( MW_VERSION, '1.39', '<' );
 
-		$dbr = wfGetDB( DB_REPLICA );
-		$dbw = wfGetDB( DB_PRIMARY );
+		$lb = MediaWikiServices::getInstance()->getDBLoadBalancer();
+		$dbr = $lb->getConnection( DB_REPLICA );
+		$dbw = $lb->getConnection( DB_PRIMARY );
 
 		// Traverse the user list. This means anons will be skipped
 		$resUsers = $dbr->select(
@@ -134,7 +135,7 @@ class UserStatsUpdater {
 	 * @return int Amount of users whose records were updated
 	 */
 	public function updateTotalPoints() {
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 		$res = $dbw->select(
 			[ 'user_stats', 'actor' ],
 			[ 'stats_actor', 'stats_total_points' ],

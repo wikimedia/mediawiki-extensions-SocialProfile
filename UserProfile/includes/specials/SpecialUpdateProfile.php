@@ -30,7 +30,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$user = $this->getUser();
 		}
 
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 		$s = $dbw->selectRow(
 			'user_profile',
 			[ 'up_actor' ],
@@ -361,7 +361,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		}
 
 		$this->initProfile( $user );
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 		$request = $this->getRequest();
 
 		$basicProfileData = [
@@ -412,7 +412,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$this->initProfile( $user );
 		$request = $this->getRequest();
 
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 		$dbw->update(
 			'user_profile',
 			/* SET */[
@@ -442,7 +442,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$this->initProfile( $user );
 		$request = $this->getRequest();
 
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 
 		$interestsData = [
 			'up_companies' => $request->getVal( 'companies' ),
@@ -476,7 +476,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * @return string
 	 */
 	function displayBasicForm( $user ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$s = $dbr->selectRow( 'user_profile',
 			[
 				'up_location_city', 'up_location_state', 'up_location_country',
@@ -687,7 +687,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * @return string
 	 */
 	function displayPersonalForm( $user ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_profile',
 			[
@@ -792,7 +792,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	function displayPreferencesForm() {
 		$user = $this->getUser();
 
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_profile',
 			[ 'up_birthday' ],
@@ -863,7 +863,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * @return string HTML
 	 */
 	function displayCustomForm( $user ) {
-		$dbr = wfGetDB( DB_PRIMARY );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 		$s = $dbr->selectRow(
 			'user_profile',
 			[

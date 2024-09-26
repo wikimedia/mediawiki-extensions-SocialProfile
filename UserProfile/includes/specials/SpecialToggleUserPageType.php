@@ -43,7 +43,7 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 		$this->setHeaders();
 
 		if ( $request->wasPosted() && $user->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
-			$dbw = wfGetDB( DB_PRIMARY );
+			$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 			$s = $dbw->selectRow(
 				'user_profile',
 				[ 'up_actor' ],

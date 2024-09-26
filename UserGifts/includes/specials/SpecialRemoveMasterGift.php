@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 class RemoveMasterGift extends UnlistedSpecialPage {
 
 	/**
@@ -108,7 +110,7 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 		) {
 			$_SESSION['alreadysubmitted'] = true;
 
-			$dbw = wfGetDB( DB_PRIMARY );
+			$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 			$gift = Gifts::getGift( $this->gift_id );
 
 			$dbw->delete(

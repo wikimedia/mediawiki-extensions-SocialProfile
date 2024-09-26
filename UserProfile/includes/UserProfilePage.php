@@ -321,7 +321,7 @@ class UserProfilePage extends Article {
 				'user_name' => $this->profileOwner->getName()
 			] );
 
-			$dbr = wfGetDB( DB_REPLICA );
+			$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 			$res = $dbr->select(
 				[ 'poll_question', 'page' ],
 				[ 'page_title', 'poll_date' ],
@@ -369,7 +369,7 @@ class UserProfilePage extends Article {
 				'user_name' => $this->profileOwner->getName()
 			] );
 
-			$dbr = wfGetDB( DB_REPLICA );
+			$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 			$res = $dbr->select(
 				'quizgame_questions',
 				[ 'q_id', 'q_text', 'q_date' ],
@@ -422,7 +422,7 @@ class UserProfilePage extends Article {
 				'user_name' => $this->profileOwner->getName()
 			] );
 
-			$dbr = wfGetDB( DB_REPLICA );
+			$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 			$res = $dbr->select(
 				'picturegame_images',
 				[ 'id', 'title', 'img1', 'img2', 'pg_date' ],

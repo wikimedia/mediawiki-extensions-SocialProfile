@@ -39,7 +39,7 @@ class UserRelationship {
 	 * @return int ID of the new relationship request
 	 */
 	public function addRelationshipRequest( $userTo, $type, $message, $email = true ) {
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 
 		$dbw->insert(
 			'user_relationship_request',
@@ -278,7 +278,7 @@ class UserRelationship {
 	public function addRelationship( $relationshipRequestId, $email = true ) {
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 		$s = $dbw->selectRow(
 			'user_relationship_request',
 			[ 'ur_actor_from', 'ur_type' ],
@@ -382,7 +382,7 @@ class UserRelationship {
 		}
 
 		// must delete record for each user involved in relationship
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 		$dbw->delete(
 			'user_relationship',
 			[ 'r_actor' => $user1->getActorId(), 'r_actor_relation' => $user2->getActorId() ],
@@ -426,7 +426,7 @@ class UserRelationship {
 		$requestCount = new RelationshipRequestCount( $cache, $this->user );
 		$requestCount->setType( $request[0]['rel_type'] )->clear();
 
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 		$dbw->delete(
 			'user_relationship_request',
 			[ 'ur_id' => $id ],
@@ -439,7 +439,7 @@ class UserRelationship {
 	 * @param int $status
 	 */
 	public function updateRelationshipRequestStatus( $relationshipRequestId, $status ) {
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 		$dbw->update(
 			'user_relationship_request',
 			/* SET */[ 'ur_status' => $status ],
@@ -456,7 +456,7 @@ class UserRelationship {
 	 * @return bool
 	 */
 	public function verifyRelationshipRequest( $relationshipRequestId ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_relationship_request',
 			[ 'ur_actor_to' ],
@@ -477,7 +477,7 @@ class UserRelationship {
 	 * @return int|bool false
 	 */
 	public static function getUserRelationshipByID( $user1, $user2 ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_relationship',
 			[ 'r_type' ],
@@ -497,7 +497,7 @@ class UserRelationship {
 	 * @return bool
 	 */
 	public static function userHasRequestByID( $user1, $user2 ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$s = $dbr->selectRow(
 			'user_relationship_request',
 			[ 'ur_type' ],
@@ -523,7 +523,7 @@ class UserRelationship {
 	 * such as its ID, type, requester, etc.
 	 */
 	public function getRequest( $id ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$res = $dbr->select(
 			'user_relationship_request',
 			[ 'ur_id', 'ur_actor_from', 'ur_type', 'ur_message', 'ur_date' ],
@@ -559,7 +559,7 @@ class UserRelationship {
 	 * @return array Array of actor ID numbers
 	 */
 	public function getRelationshipIDs( $type ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$res = $dbr->select(
 			[ 'user_relationship', 'actor' ],

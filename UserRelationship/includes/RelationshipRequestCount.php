@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\MediaWikiServices;
 
 /**
  * This object allows for increasing, decreasing, and getting
@@ -107,7 +108,7 @@ class RelationshipRequestCount {
 			'userName' => $this->user->getName()
 		] );
 
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$requestCount = 0;
 
 		$s = $dbr->selectRow(

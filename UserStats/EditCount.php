@@ -7,6 +7,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( "This is not a valid entry point.\n" );
 }
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * For the UserLevels (points) functionality to work, you will need to
  * define $wgUserLevels and require_once() this file in your wiki's
@@ -65,7 +67,7 @@ function removeDeletedEdits( WikiPage $article, $user, $reason ) {
 		!is_array( $wgNamespacesForEditPoints ) ||
 		in_array( $article->getTitle()->getNamespace(), $wgNamespacesForEditPoints )
 	) {
-		$dbr = wfGetDB( DB_PRIMARY );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 
 		$MW139orEarlier = version_compare( MW_VERSION, '1.39', '<' );
 		if ( $MW139orEarlier ) {
@@ -126,7 +128,7 @@ function restoreDeletedEdits( Title $title, $new ) {
 		!is_array( $wgNamespacesForEditPoints ) ||
 		in_array( $title->getNamespace(), $wgNamespacesForEditPoints )
 	) {
-		$dbr = wfGetDB( DB_PRIMARY );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 
 		$MW139orEarlier = version_compare( MW_VERSION, '1.39', '<' );
 		if ( $MW139orEarlier ) {

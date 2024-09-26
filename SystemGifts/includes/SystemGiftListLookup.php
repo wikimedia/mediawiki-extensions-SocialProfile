@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * Object for easily querying the system_gift and user_system_gift tables
  */
@@ -27,7 +30,7 @@ class SystemGiftListLookup {
 	 * description, etc.
 	 */
 	public function getGiftList() {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$offset = 0;
 		if ( $this->limit > 0 && $this->page ) {
@@ -72,7 +75,7 @@ class SystemGiftListLookup {
 	 * @return array Array of system gift information
 	 */
 	public function getUserGiftList( User $user ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$offset = 0;
 		if ( $this->limit > 0 && $this->page ) {

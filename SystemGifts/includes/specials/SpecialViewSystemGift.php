@@ -6,6 +6,8 @@
  * @ingroup Extensions
  */
 
+use MediaWiki\MediaWikiServices;
+
 class ViewSystemGift extends UnlistedSpecialPage {
 
 	public function __construct() {
@@ -52,7 +54,7 @@ class ViewSystemGift extends UnlistedSpecialPage {
 			}
 
 			// DB stuff
-			$dbr = wfGetDB( DB_REPLICA );
+			$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 			$res = $dbr->select(
 				[ 'user_system_gift', 'actor' ],
 				[

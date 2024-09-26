@@ -7,6 +7,8 @@
  * @ingroup Extensions
  */
 
+use MediaWiki\MediaWikiServices;
+
 class TopAwards extends UnlistedSpecialPage {
 
 	public function __construct() {
@@ -95,7 +97,7 @@ class TopAwards extends UnlistedSpecialPage {
 		}
 
 		// Database calls
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$res = $dbr->select(
 			[ 'user_system_gift', 'system_gift', 'actor' ],
 			[
