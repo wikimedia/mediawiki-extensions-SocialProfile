@@ -181,7 +181,7 @@ class ViewGifts extends SpecialPage {
 				$output .= '</div>
 					<div class="visualClear"></div>';
 				$output .= '</div>';
-				if ( $x == count( $gifts ) || $x != 1 && $x % $per_row == 0 ) {
+				if ( $x == count( $gifts ) || ( $x != 1 && $x % $per_row == 0 ) ) {
 					$output .= '<div class="visualClear"></div>';
 				}
 

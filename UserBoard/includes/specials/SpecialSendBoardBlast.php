@@ -204,7 +204,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 				$output .= '<input type="checkbox" name="user-' . $id . '" value="' . $safeUserName . '" />' .
 					'<div class="blast-' . $class . "-unselected\" id=\"user-{$id}\">" .
 					$safeUserName . '</div>';
-				if ( $x == count( $relationships ) || $x != 1 && $x % $per_row == 0 ) {
+				if ( $x == count( $relationships ) || ( $x != 1 && $x % $per_row == 0 ) ) {
 					$output .= '<div class="visualClear"></div>';
 				}
 				$x++;

@@ -94,7 +94,7 @@ class RandomUsersWithAvatars {
 				$output .= '<a href="' . htmlspecialchars( $userLink->getFullURL() ) .
 					'" rel="nofollow">' . $avatar->getAvatarURL( [ 'title' => $username ] ) . '</a>';
 
-				if ( $x == $count || $x != 1 && $x % $perRow == 0 ) {
+				if ( $x == $count || ( $x != 1 && $x % $perRow == 0 ) ) {
 					$output .= '<div class="visualClear"></div>';
 				}
 				$x++;

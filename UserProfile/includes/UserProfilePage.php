@@ -1310,7 +1310,7 @@ class UserProfilePage extends Article {
 					{$user_name}
 				</a>";
 
-				if ( $x == count( $friends ) || $x != 1 && $x % $per_row == 0 ) {
+				if ( $x == count( $friends ) || ( $x != 1 && $x % $per_row == 0 ) ) {
 					$output .= '<div class="visualClear"></div>';
 				}
 
@@ -1606,7 +1606,7 @@ class UserProfilePage extends Article {
 				}
 				$output .= '<a href="' . htmlspecialchars( $gift_link->getFullURL( [ 'gift_id' => $gift['id'] ] ) ) . '" ' .
 					$class . " rel=\"nofollow\">{$icon}</a>";
-				if ( $x == count( $gifts ) || $x != 1 && $x % $per_row == 0 ) {
+				if ( $x == count( $gifts ) || ( $x != 1 && $x % $per_row == 0 ) ) {
 					$output .= '<div class="visualClear"></div>';
 				}
 
@@ -1707,7 +1707,7 @@ class UserProfilePage extends Article {
 					{$icon}
 				</a>";
 
-				if ( $x == count( $systemGifts ) || $x != 1 && $x % $per_row == 0 ) {
+				if ( $x == count( $systemGifts ) || ( $x != 1 && $x % $per_row == 0 ) ) {
 					$output .= '<div class="visualClear"></div>';
 				}
 				$x++;

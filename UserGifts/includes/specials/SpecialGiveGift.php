@@ -411,7 +411,7 @@ class GiveGift extends SpecialPage {
 				$output .= Html::label( $this->msg( 'g-give-this-gift' )->text(), "nojs-gift-{$gift['id']}" );
 				$output .= '<div class="visualClear"></div>
 				</div>';
-				if ( $x == count( $gifts ) || $x != 1 && $x % $per_row == 0 ) {
+				if ( $x == count( $gifts ) || ( $x != 1 && $x % $per_row == 0 ) ) {
 					$output .= '<div class="visualClear"></div>';
 				}
 				$x++;

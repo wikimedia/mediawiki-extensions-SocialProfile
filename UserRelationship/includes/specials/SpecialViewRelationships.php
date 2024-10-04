@@ -254,7 +254,7 @@ class SpecialViewRelationships extends SpecialPage {
 				</div>';
 
 				$output .= '</div>';
-				if ( $x == count( $relationships ) || $x != 1 && $x % $per_row == 0 ) {
+				if ( $x == count( $relationships ) || ( $x != 1 && $x % $per_row == 0 ) ) {
 					$output .= '<div class="visualClear"></div>';
 				}
 				$x++;
