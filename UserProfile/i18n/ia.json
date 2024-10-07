@@ -214,6 +214,7 @@
 	"action-editothersprofiles": "actualisar le profilos social de altere usatores",
 	"right-populate-user-profiles": "Reimpler le profilos de altere usatores pro wikis existente",
 	"action-populate-user-profiles": "reimpler le profilos de altere usatores",
+	"user-profile-error-no-api-edit": "Non es actualmente possibile modificar profilos social per medio del API. Per favor usa <code>Special:UpdateProfile</code> pro modificar tu proprie profilo de usator, o <code>Special:EditProfile</code> pro modificar le profilos de altere usatores (si tu ha le derectos necessari pro usar ille pagina special).",
 	"apihelp-socialprofile-userprofileprivacy-summary": "Modulo API pro definir le visibilitate (\"confidentialitate\") de un campo de profilo",
 	"apihelp-socialprofile-userprofileprivacy-param-method": "Action (o \"get\" o \"set\")",
 	"apihelp-socialprofile-userprofileprivacy-param-field_key": "Clave del campo de destination, como up_movies pro le campo \"Films\"",
