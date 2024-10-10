@@ -1,15 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gazeb"
+			"Gazeb",
+			"Constraque"
 		]
 	},
 	"boardlinkselectall": "Выбрати вшыткы",
-	"boardlinkunselectall": "Зрушыти выбер",
+	"boardlinkunselectall": "Зрушити выбер вшыткых",
 	"boardlinkselectfriends": "Выбрати приятелїв",
-	"boardlinkunselectfriends": "Зрушыти выбер приятелїв",
+	"boardlinkunselectfriends": "Зрушеня выберу приятелїв",
 	"boardlinkselectfoes": "Выбрати неприятелїв",
-	"boardlinkunselectfoes": "Зрушыти выбер неприятелїв",
+	"boardlinkunselectfoes": "Зрушеня выберу неприятелїв",
 	"boardsendbutton": "Послати повідомлїня фора",
 	"boardnofriends": "Не маєте ниякых приятелїв, котрым бы сьте могли послати повідомлїня!",
 	"userboard": "Хосновательске форум",
