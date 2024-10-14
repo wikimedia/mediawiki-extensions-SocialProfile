@@ -3,7 +3,8 @@
 		"authors": [
 			"Minh Nguyen",
 			"Vinhtantran",
-			"Pisceskaze"
+			"Pisceskaze",
+			"SongNgu.xyz"
 		]
 	},
 	"editprofile": "Sửa hồ sơ của người dùng khác",
@@ -174,7 +175,7 @@
 	"user-type-toggle-old": "Sử dụng trang cá nhân wiki",
 	"user-type-toggle-new": "Sử dụng trang hồ sơ xã hội",
 	"user-board-blocked-message": "Bạn hiện đang bị chặn và do đó không thể gửi tin nhắn cho người dùng khác.",
-	"user-board-login-message": "Bạn phải [[Đặc biệt:UserLogin|đăng nhập trước]] để gửi tin nhắn cho người dùng khác",
+	"user-board-login-message": "Bạn phải [[Special:UserLogin|đăng nhập trước]] để gửi tin nhắn cho thành viên khác",
 	"user-board-confirm-delete": "Bạn có chắc chắn muốn xóa tin nhắn không?",
 	"removeavatar": "Xóa hình đại diện",
 	"removeavatar-remove-my-avatar": "Xóa hình đại diện của tôi",
