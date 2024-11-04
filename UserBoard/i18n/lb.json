@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"messagesenttitle": "Geschéckte Messagen",
@@ -20,7 +21,7 @@
 	"messagesentsuccess": "Äre Noriicht gouf geschéckt",
 	"userboard": "Benotzerpanneau",
 	"userboard_board-to-board": "Vu Panneau-zu-Panneau",
-	"userboard_noexist": "De Benotzer den Dir wëllt gesi gëtt et net.",
+	"userboard_noexist": "De Benotzer, deen Dir wëllt gesi, gëtt et net.",
 	"userboard_yourboard": "Äre Panneau",
 	"userboard_owner": "Dem $1 säi Panneau",
 	"userboard_yourboardwith": "Är Diskussioun vu Panneau-zu-Panneau mam $1",

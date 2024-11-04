@@ -3,7 +3,8 @@
 		"authors": [
 			"Jack Phoenix",
 			"Les Meloures",
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"giftmanager": "Cadeau's-Verwaltung",
@@ -32,7 +33,7 @@
 	"g-error-message-blocked": "Dir sidd den Ament gespaart a kënnt keng Cadeaue maachen",
 	"g-error-message-invalid-link": "De Link deen Dir uginn hutt ass net valabel.",
 	"g-error-message-login": "Dir musst [[Special:UserLogin|Iech alogge]] fir Cadeauen ze maachen.",
-	"g-error-message-no-user": "De Benotzer deen Dir versicht ze kucken gëtt et net.",
+	"g-error-message-no-user": "De Benotzer, deen Dir versicht ze kucken, gëtt et net.",
 	"g-error-message-to-yourself": "Dir kënnt Iech net selwer e Cadeau maachen.",
 	"g-error-title": "Oups, do ass eppes schief gaang!",
 	"g-file-instructions": "Äert Bild muss e jpeg, png oder gif (keng animéiert Gifen) sinn, a muss manner wéi 100KB grouss sinn.",
