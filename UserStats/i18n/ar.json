@@ -46,7 +46,7 @@
 	"user-stats-weekly-win-congratulations": "تهانينا لـ {{PLURAL:$1| user | users}} ، الذي ربح ربحًا أسبوعيًا و $2 إضافيًا {{PLURAL:$2| نقطة | نقاط}}!",
 	"user-stats-monthly-win-congratulations": "تهانينا لـ {{PLURAL:$1| user | users}} ، الذي ربح ربحًا شهريًا و $2 إضافيًا {{PLURAL:$2| نقطة | نقاط}}!",
 	"user-stats-full-top": "قمة كاملة $1",
-	"user-stats-report-row": "( $1 ) [[المستخدم: $2 | $2 ]] - '' ' $3 ' '' {{PLURAL:$3| نقطة | نقاط}}!",
+	"user-stats-report-row": "( $1 ) [[User:$2|$2]] - ''' $3 ''' {{PLURAL:$3| نقطة|نقاط}}!",
 	"user-stats-report-points": "'' ' $1 ' '' {{PLURAL:$1| نقطة | نقاط}}!",
 	"user-stats-report-generation-note": "تم إنشاء هذه الصفحة تلقائيًا",
 	"user-stats-report-weekly-edit-summary": "تقرير المستخدم الأسبوعي الآلي",
