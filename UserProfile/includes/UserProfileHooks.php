@@ -187,6 +187,20 @@ class UserProfileHooks {
 			return true;
 		}
 
+		$userObjectOrThenMaybeNotIfItIsAnIPAddress = MediaWikiServices::getInstance()->getUserFactory()->newFromName( $pageName );
+		if ( !$userObjectOrThenMaybeNotIfItIsAnIPAddress ) {
+			// For fuck's sake, MediaWiki.
+			return true;
+		}
+
+		$isAnon = $userObjectOrThenMaybeNotIfItIsAnIPAddress->isAnon();
+		// Ignore anonymous users, they can't have a social profile page.
+		// This is needed to prevent the "new UserProfile" initialization below from throwing exceptions
+		// upon trying to edit an anon user's User: page.
+		if ( $isAnon ) {
+			return true;
+		}
+
 		$show_wikitext_user_page = false;
 
 		if ( $wgUserPageChoice ) {
@@ -203,12 +217,9 @@ class UserProfileHooks {
 			}
 		}
 
-		// Need user account existence check so that creating User: pages
-		// for nonexistent user accounts remains possible
 		if (
 			!$show_wikitext_user_page &&
-			$article->getContext()->getRequest()->getVal( 'action' ) == 'edit' &&
-			!MediaWikiServices::getInstance()->getUserFactory()->newFromName( $pageName )->isAnon()
+			$article->getContext()->getRequest()->getVal( 'action' ) == 'edit'
 		) {
 			$out = $article->getContext()->getOutput();
 
@@ -264,6 +275,20 @@ class UserProfileHooks {
 				return true;
 			}
 
+			$userObjectOrThenMaybeNotIfItIsAnIPAddress = MediaWikiServices::getInstance()->getUserFactory()->newFromName( $pageName );
+			if ( !$userObjectOrThenMaybeNotIfItIsAnIPAddress ) {
+				// For fuck's sake, MediaWiki.
+				return true;
+			}
+
+			$isAnon = $userObjectOrThenMaybeNotIfItIsAnIPAddress->isAnon();
+			// Ignore anonymous users, they can't have a social profile page.
+			// This is needed to prevent the "new UserProfile" initialization below from throwing exceptions
+			// upon trying to edit an anon user's User: page.
+			if ( $isAnon ) {
+				return true;
+			}
+
 			$show_wikitext_user_page = false;
 
 			if ( $wgUserPageChoice ) {
@@ -280,12 +305,7 @@ class UserProfileHooks {
 				}
 			}
 
-			// Need user account existence check so that creating User: pages
-			// for nonexistent user accounts remains possible
-			if (
-				!$show_wikitext_user_page &&
-				!MediaWikiServices::getInstance()->getUserFactory()->newFromName( $pageName )->isAnon()
-			) {
+			if ( !$show_wikitext_user_page ) {
 				$message = 'user-profile-error-no-api-edit';
 				return false;
 			}
