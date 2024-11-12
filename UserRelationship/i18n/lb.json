@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Robby",
-			"Soued031"
+			"Soued031",
+			"Volvox"
 		]
 	},
 	"viewrelationships": "Relatioun weisen",
@@ -46,7 +47,7 @@
 	"ur-add-sent-title-friend": "Mir hunn Är Frëndschafts-Ufro un de Benotzer $1 geschéckt!",
 	"ur-add-sent-message-foe": "Är Ufro als Géigner gouf un de Benotzer $1 fir Confirmatioun geschéckt.\nWann de Benotzer $1 Är Ufro confirméiert, kritt Dir eng Mail.",
 	"ur-add-sent-message-friend": "Är Ufro als Frënd gouf un de Benotzer $1 fir Confirmatioun geschéckt.\nWann de Benotzer $1 Är Ufro confirméiert, kritt Dir eng Mail.",
-	"ur-add-error-message-no-user": "De Benotzer den Dir versicht derbäizesetzen gëtt et net.",
+	"ur-add-error-message-no-user": "De Benotzer, deen Dir versicht derbäizesetzen, gëtt et net.",
 	"ur-add-error-message-blocked": "Dir sidd elo gespaart a kënnt dofir keng Frënn oder Géigner derbäisetzen.",
 	"ur-add-error-message-yourself": "Dir kënnt Iech net selwer als Feind oder Frënd derbäisetzen.",
 	"ur-add-error-message-existing-relationship-foe": "Dir sidd schonn de Géigner vum $1.",

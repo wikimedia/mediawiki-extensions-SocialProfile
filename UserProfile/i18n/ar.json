@@ -203,7 +203,7 @@
 	"profilelogpagetext": "هذا سجل بتعديلات ملفات المستخدمين",
 	"user-profile-edit-profile": "قام بتحرير ملف $1 الشخصي",
 	"avatarlogpage": "سجل رفع الأفاتر",
-	"avatarlogpagetext": "هذا سجل بعمليات رفع أفاتر المستخدمين",
+	"avatarlogpagetext": "هذا سجل لتحميلات وإزالة صور المستخدم الرمزية.",
 	"user-profile-picture-log-entry": "رفع أفاتر جديد",
 	"user-profile-picture-log-delete-entry": "حذف الأفاتر الخاص ب$1",
 	"user-profile-remove-avatar": "إزالة",

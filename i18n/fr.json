@@ -4,18 +4,22 @@
 			"Gomoko",
 			"Graineahumus",
 			"Thibaut120094",
-			"Wladek92"
+			"Wladek92",
+			"Mahabarata"
 		]
 	},
 	"socialprofile-desc": "Un ensemble d’outils sociaux pour MediaWiki",
 	"socialprofile-uploads-disabled": "La fonctionalité permettant d’utiliser un avatar a été désactivée.",
 	"apihelp-removeavatar-summary": "Supprimez un avatar, le vôtre ou si vous avez les privilèges, également celui d'un autre utilisateur.",
+	"apihelp-removeavatar-param-reason": "Raison facultative pour laquelle vous supprimez l'avatar de quelqu'un d'autre.",
 	"apihelp-removeavatar-param-user": "Nom de l'utilisateur dont l'avatar doit être supprimé.",
 	"apihelp-removeavatar-example-1": "Supprimer l'avatar de l'utilisateur nommé \"Ashley\"",
+	"apihelp-removeavatar-example-2": "Supprimer l'avatar de l'utilisateur nommé « Elektra » avec « Copyvio flagrant » comme motif de suppression",
 	"apierror-avatar-is-default": "L'avatar de l'utilisateur est déjà celui par défaut.",
 	"apihelp-uploadavatar-summary": "Importer un avatar.",
 	"apihelp-uploadavatar-example-url": "Téléverser l'image depuis https://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png en tant que votre avatar.",
 	"apihelp-uploadavatar-param-file": "Nouveaux contenus du fichier image de l'avatar.",
+	"apihelp-uploadavatar-param-url": "URL pour récupérer le fichier.",
 	"apihelp-smpuserprivacy-summary": "Module de l’API pour fixer la visibilité (« confidentialité ») d’un champ du profil",
 	"apihelp-smpuserprivacy-param-method": "Action (soit « get », soit « set »)",
 	"apihelp-smpuserprivacy-param-field_key": "Clé du champ cible, comme up_movies pour le champ « Films »",
