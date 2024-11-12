@@ -6,7 +6,7 @@
 	},
 	"socialprofile-desc": "Komplet socialnih orodij za MediaWiki",
 	"socialprofile-uploads-disabled": "Možnost nalaganja avatarja je onemogočena",
-	"apihelp-smpuserprivacy-summary": "API-modul za nastavitev vidnosti (»zasebnosti«) polja profila",
+	"apihelp-smpuserprivacy-summary": "Modul API-ja za nastavitev vidnosti (»zasebnosti«) profilnega polja",
 	"apihelp-smpuserprivacy-param-method": "Dejanje (»get« ali »set«)",
 	"apihelp-smpuserprivacy-param-field_key": "Ključ ciljnega polja, na primer up_movies za polje »Filmi«.",
 	"apihelp-smpuserprivacy-param-privacy": "Nova vrednost zasebnosti (ena od naslednjih: »public«, »hidden«, »friends«, »foaf«)"
