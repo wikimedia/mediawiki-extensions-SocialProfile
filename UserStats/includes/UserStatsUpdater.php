@@ -19,7 +19,7 @@ class UserStatsUpdater {
 	 * @param callable|null $progressCallback Callback to print progress for
 	 *                      each user. Params: $userName, $editCount
 	 */
-	public function updateMainEditsCount( callable $progressCallback = null ) {
+	public function updateMainEditsCount( ?callable $progressCallback = null ) {
 		global $wgNamespacesForEditPoints;
 
 		$additionalConds = [];

@@ -22,7 +22,7 @@ class UploadAvatarFromUrl extends UploadFromUrl {
 	}
 
 	/** @inheritDoc */
-	public function doStashFile( User $user = null ) {
+	public function doStashFile( ?User $user = null ) {
 		return parent::doStashFile( $user );
 	}
 
