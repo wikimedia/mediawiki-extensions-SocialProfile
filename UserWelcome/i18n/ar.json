@@ -7,7 +7,7 @@
 	},
 	"userwelcome-desc": "يضيف وسم <code>&lt;welcomeUser&gt;</code> لعرض معلومات اجتماعية خاصة بالمستخدم للمستخدمين المسجلين",
 	"mp-userlevels-link": "مستويات المستخدم",
-	"mp-welcome-upload": "ارفع",
+	"mp-welcome-upload": "رفع",
 	"mp-welcome-points": "{{PLURAL:$1|لا نقاط|نقطة واحدة|نقطتان|$1 نقاط|$1 نقطة}}",
 	"mp-welcome-needed-points": "للتقدم [[$1|'''$2''']] لاستحقاق {{PLURAL:$3||نقطة واحدة إضافية|نقطتان إضافيتان|''$3'' نقاط إضافية|''$3'' نقطة إضافية}}!",
 	"mp-welcome-logged-in": "مرحبا $1",
