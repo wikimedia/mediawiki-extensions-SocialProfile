@@ -69,12 +69,12 @@
 	"ur-requests-reject-message-foe": "Dir hutt de Benotzer $1 als Äre Géigner refuséiert.",
 	"ur-title-foe": "Lëscht vun de Géigner vum $1",
 	"ur-title-friend": "Lëscht vun de Frënn vum $1",
-	"friend_request_subject": "$1 huet iech als Frënd op {{SITENAME}} derbäigesat!",
+	"friend_request_subject": "De Benotzer $1 huet iech als Frënd op {{SITENAME}} derbäigesat!",
 	"friend_request_body": "Salut $1.\n\nDe Benotzer $2 huet Iech als Frënd op {{SITENAME}} derbäigesat. Mir wëlle sécher sinn datt Dir och wierklech Frënn sidd.\n\nKlickt wgl. op dëse Link fir Är Frëndschaft ze confirméieren:\n$3\n\nMerci\n\n---\n\nWëllt dir keng Maile méi vun eis kréien?\n\nDa klickt $4\nan ännert Är Astellunge fir d'E-Mail-Notifikatioun auszeschalten.",
 	"foe_request_subject": "Et ass Krich! $1 huet iech als Géigner op {{SITENAME}} derbàigesat!",
 	"friend_accept_subject": "$1 huet är Ufro als Frënd op {{SITENAME}} ugeholl!",
 	"foe_accept_subject": "Et geet lass! $1 huet Iech als Géigner op {{SITENAME}} akzeptéiert!",
 	"friend_removed_subject": "Oh nee! $1 huet Iech als Frënd op {{SITENAME}} ewechgeholl!",
-	"foe_removed_subject": "Hey! $1 huet Iech als Géigner op {{SITENAME}} ewechgeholl!",
+	"foe_removed_subject": "Hey! De Benotzer $1 huet Iech als Géigner op {{SITENAME}} ewechgeholl!",
 	"notification-social-rel-add-friend-no-message": "$1 wëllt Äre Frënd sinn"
 }
