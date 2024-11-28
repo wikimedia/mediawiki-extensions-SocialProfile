@@ -13,6 +13,7 @@
 	"user-recent-activity-title": "최근 활동",
 	"user-profile-points": "$1 포인트",
 	"user-profile-preferences-emails": "이메일 알림",
+	"user-profile-update-button": "업데이트",
 	"user-profile-create-threshold-title": "사용자 프로파일 만들기",
 	"user-profile-create-threshold-friend-count": "{{PLURAL:$1|친구 1명|친구 $1명}}",
 	"user-profile-privacy-status-privacy-foaf": "친구의 친구",
