@@ -13,7 +13,7 @@
 	"ur-error-message-no-user": "Mir kënnen Är Ufro net ausféieren, well et kee Benotzer mat dem Numm gëtt.",
 	"ur-your-profile": "Äre Profil",
 	"ur-backlink": "&lt; Zréck op de Profil vum $1",
-	"ur-relationship-count-foes": "$1 huet $2 {{PLURAL:$2|Géigner|Géigner}}.",
+	"ur-relationship-count-foes": "$1 huet $2 {{PLURAL:$2|Géigner}}.",
 	"ur-relationship-count-friends": "$1 huet $2 {{PLURAL:$2|Frënd|Frënn}}.",
 	"ur-add-friend": "Als Frënd derbäisetzen",
 	"ur-add-foe": "Als Géigner derbäisetzen",
