@@ -187,6 +187,7 @@
 	"user-board-login-message": "أنت يجب أن تكون [[Special:UserLogin|مسجل الدخول]] لإرسال الرسائل إلى المستخدمين الآخرين",
 	"user-board-confirm-delete": "هل أنت متأكد أنك تريد حذف هذه الرسالة؟",
 	"removeavatar": "إزالة الأفاتر",
+	"removeavatar-reason": "السبب:",
 	"removeavatar-remove-my-avatar": "إزالة الصورة الرمزية الخاصة بي",
 	"removeavatar-remove-your-avatar": "إزالة الصورة الرمزية الخاصة بك",
 	"removeavatar-already-default": "هذا المستخدم يستخدم بالفعل الصورة الرمزية الافتراضية ، لذلك لا يوجد شيء يمكن إزالته هنا.",
