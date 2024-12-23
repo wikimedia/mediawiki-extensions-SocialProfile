@@ -157,7 +157,7 @@
 	"user-profile-picture-currentimage": "الصورة الحالية",
 	"user-profile-picture-choosepicture": "اختر صورتك",
 	"user-profile-picture-picsize": "صورتك يجب أن تكون jpeg، png، أو gif ويجب أن تكون أقل من 100kb في الحجم.",
-	"user-profile-goback": "اذهب للخلف",
+	"user-profile-goback": "رجوع",
 	"user-profile-userlevels-link": "مستويات المستخدم",
 	"user-profile-create-threshold-title": "إنشاء ملف تعريف المستخدم",
 	"user-profile-create-threshold-only-confirmed-email": "وعنوان بريد إلكتروني مؤكد",
