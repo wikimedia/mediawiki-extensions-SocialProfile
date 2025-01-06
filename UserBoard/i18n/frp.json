@@ -38,7 +38,7 @@
 	"right-userboard-delete": "Suprimar los mèssâjos a ôtros utilisators",
 	"userboard-time-days": "$1 jorn{{PLURAL:$1||s}}",
 	"userboard-time-hours": "$1 hor{{PLURAL:$1|a|es}}",
-	"userboard-time-minutes": "$1 menut{{PLURAL:$1|a|es}}",
-	"userboard-time-seconds": "$1 second{{PLURAL:$1|a|es}}",
+	"userboard-time-minutes": "$1 {{PLURAL:$1|menuta|menutes}}",
+	"userboard-time-seconds": "$1 {{PLURAL:$1|seconda|secondes}}",
 	"message_received_subject": "$1 at ècrit sur voutron tablô dessus {{SITENAME}}"
 }
