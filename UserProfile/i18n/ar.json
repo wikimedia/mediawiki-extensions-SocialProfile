@@ -5,7 +5,8 @@
 			"Alshamiri1",
 			"Meno25",
 			"OsamaK",
-			"محمد أحمد عبد الفتاح"
+			"محمد أحمد عبد الفتاح",
+			"Cigaryno"
 		]
 	},
 	"editprofile": "تحرير ملفات تعريف المستخدمين الآخرين",
@@ -207,6 +208,7 @@
 	"avatarlogpagetext": "هذا سجل لتحميلات وإزالة صور المستخدم الرمزية.",
 	"user-profile-picture-log-entry": "رفع أفاتر جديد",
 	"user-profile-picture-log-delete-entry": "حذف الأفاتر الخاص ب$1",
+	"user-profile-picture-log-delete-entry-with-reason": "تم حذف الصورة الرمزية لـ $1 ؛ السبب: $2",
 	"user-profile-remove-avatar": "إزالة",
 	"right-avatarremove": "إزالة أفاترات المستخدمين",
 	"right-editothersprofiles": "قم بتحديث الملفات الشخصية للمستخدمين الآخرين على مواقع التواصل الاجتماعي",
