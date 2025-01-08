@@ -45,5 +45,5 @@
 	"userboard-time-days": "{{PLURAL:$1|1 วัน|$1 วัน}}",
 	"userboard-time-hours": "{{PLURAL:$1|1 ชั่วโมง|$1 ชั่วโมง}}",
 	"userboard-time-minutes": "{{PLURAL:$1|1 นาที|$1 นาที}}",
-	"userboard-time-seconds": "{{PLURAL:$1|1 วินาที|$1 วินาที}}"
+	"userboard-time-seconds": "{{PLURAL:$1|$1 วินาที}}"
 }
