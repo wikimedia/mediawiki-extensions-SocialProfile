@@ -364,23 +364,53 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 		$request = $this->getRequest();
 
+		// As for why the rest of the fields are done below instead of here...that's got to do with T373265
+		// tl,dr summary: we do NOT want to overwrite hidden/otherwise not-viewable-by-the-current-user
+		// data when a privileged user (who is *not* allowed to view said user profile data, however) uses
+		// Special:EditProfile (sic) to edit another user's profile
 		$basicProfileData = [
-			'up_location_city' => $request->getVal( 'location_city' ) ?? '',
-			'up_location_state' => $request->getVal( 'location_state' ) ?? '',
-			'up_location_country' => $request->getVal( 'location_country' ) ?? '',
-
-			'up_hometown_city' => $request->getVal( 'hometown_city' ) ?? '',
-			'up_hometown_state' => $request->getVal( 'hometown_state' ) ?? '',
-			'up_hometown_country' => $request->getVal( 'hometown_country' ) ?? '',
-
 			'up_birthday' => self::formatBirthdayDB( $request->getVal( 'birthday' ) ),
-			'up_about' => $request->getVal( 'about' ) ?? '',
-			'up_occupation' => $request->getVal( 'occupation' ) ?? '',
-			'up_schools' => $request->getVal( 'schools' ) ?? '',
-			'up_places_lived' => $request->getVal( 'places' ) ?? '',
-			'up_websites' => $request->getVal( 'websites' ) ?? '',
-			'up_relationship' => $request->getVal( 'relationship' ) ?? 0
 		];
+
+		if ( $request->getVal( 'location_city' ) ) {
+			$basicProfileData['up_location_city'] = $request->getVal( 'location_city' );
+		}
+		if ( $request->getVal( 'location_state' ) ) {
+			$basicProfileData['up_location_state'] = $request->getVal( 'location_state' );
+		}
+		if ( $request->getVal( 'location_country' ) ) {
+			$basicProfileData['up_location_country'] = $request->getVal( 'location_country' );
+		}
+
+		if ( $request->getVal( 'hometown_city' ) ) {
+			$basicProfileData['up_hometown_city'] = $request->getVal( 'hometown_city' );
+		}
+		if ( $request->getVal( 'hometown_state' ) ) {
+			$basicProfileData['up_hometown_state'] = $request->getVal( 'hometown_state' );
+		}
+		if ( $request->getVal( 'hometown_country' ) ) {
+			$basicProfileData['up_hometown_country'] = $request->getVal( 'hometown_country' );
+		}
+
+		if ( $request->getVal( 'about' ) ) {
+			$basicProfileData['up_about'] = $request->getVal( 'about' );
+		}
+		if ( $request->getVal( 'occupation' ) ) {
+			$basicProfileData['up_occupation'] = $request->getVal( 'occupation' );
+		}
+		if ( $request->getVal( 'schools' ) ) {
+			$basicProfileData['up_schools'] = $request->getVal( 'schools' );
+		}
+		if ( $request->getVal( 'places' ) ) {
+			$basicProfileData['up_places_lived'] = $request->getVal( 'places' );
+		}
+		if ( $request->getVal( 'websites' ) ) {
+			$basicProfileData['up_websites'] = $request->getVal( 'websites' );
+		}
+		// @todo FIXME: remove this per T373263
+		if ( $request->getVal( 'relationship' ) ) {
+			$basicProfileData['up_relationship'] = $request->getVal( 'relationship' ) ?? 0;
+		}
 
 		$dbw->update(
 			'user_profile',
