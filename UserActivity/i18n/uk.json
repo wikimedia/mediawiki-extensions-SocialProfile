@@ -4,6 +4,7 @@
 			"DDPAT",
 			"Ice bulldog",
 			"Prima klasy4na",
+			"Ата",
 			"Тест"
 		]
 	},
@@ -20,7 +21,7 @@
 	"useractivity-group-comment": "{{PLURAL:$1|один коментар|$1 коментарі|$1 коментарів}}",
 	"useractivity-group-user_message": "{{PLURAL:$1|одне повідомлення|$1 повідомлень}}",
 	"useractivity-group-friend": "{{PLURAL:$1|один друг|$1 друзів}}",
-	"useractivity-network-thought": "'''[[User:$1|$2]]''' думає про мережу $3",
+	"useractivity-network-thought": "'''[[User:$1|$2]]''' має думку про мережу $3",
 	"useractivity-siteactivity": "Активність на сайті",
 	"useractivity-title": "Активність друзів",
 	"useractivity-user_message": "$1 {{GENDER:$6|відправив|відправила}} {{PLURAL:$4|повідомлення|повідомлення|повідомлень}} $3",
