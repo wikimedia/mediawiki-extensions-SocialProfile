@@ -1,34 +1,35 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ajeje Brazorf"
+			"Ajeje Brazorf",
+			"GianAntonucci"
 		]
 	},
-	"giftmanager-addgift": "+ Agghiunci nu rigalu novu",
-	"giftmanager-access": "accessu ô rigalu",
-	"giftmanager-description": "discrizzioni dû rigalu",
-	"giftmanager-giftimage": "mmàggini dû rigalu",
-	"giftmanager-giftcreated": "Lu rigalu fu criatu",
-	"giftmanager-giftsaved": "Lu rigalu fu sarvatu",
+	"giftmanager-addgift": "+ Agghiunci un rijalu novu",
+	"giftmanager-access": "accessu ô rijalu",
+	"giftmanager-description": "discrizzioni dû rijalu",
+	"giftmanager-giftimage": "mmàggini dû rijalu",
+	"giftmanager-giftcreated": "Lu rijalu àvi statu criatu",
+	"giftmanager-giftsaved": "Lu rijalu àvi statu sarbatu",
 	"giftmanager-public": "pùbblicu",
 	"giftmanager-private": "privata",
-	"giftmanager-view": "Talìa l'elencu dî rigali",
+	"giftmanager-view": "Talìa la lista di rijali",
 	"g-add-message": "Agghiunci nu missaggiu",
 	"g-choose-file": "Scegghi file:",
-	"g-create-gift": "Crea rigalu",
+	"g-create-gift": "Crìa rijalu",
 	"g-current-image": "Mmàggini attuali",
-	"g-gift": "rigalu",
-	"g-gift-name": "nomu dû rigalu",
+	"g-gift": "rijalu",
+	"g-gift-name": "nomu dû rijalu",
 	"g-give-all-message-title": "Agghiunci nu missaggiu",
 	"g-give-separator": "o",
 	"g-new": "novu",
 	"g-remove": "Leva",
-	"g-remove-gift": "Leva stu rigalu",
-	"g-remove-message": "Sî sìcuru di vuliri livari lu rigalu \"$1\"?",
+	"g-remove-gift": "Leva stu rijalu",
+	"g-remove-message": "Sì sicuru ca voi livari lu rijalu \"$1\"?",
 	"g-remove-title": "Leva \"$1\"?",
-	"g-send-gift": "Manna rigalu",
+	"g-send-gift": "Manna un rijalu",
 	"g-small": "Nicu",
-	"g-viewgiftlist": "Talìa l'elencu dî rigali",
+	"g-viewgiftlist": "Talìa la lista di rijali",
 	"g-your-profile": "Lu tò prufilu",
-	"echo-category-title-social-gift": "Rigali"
+	"echo-category-title-social-gift": "Rijali"
 }

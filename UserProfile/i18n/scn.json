@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ajeje Brazorf"
+			"Ajeje Brazorf",
+			"GianAntonucci"
 		]
 	},
 	"user-time-ago": "$1 fa",
-	"user-gifts-title": "Rigali",
+	"user-gifts-title": "Rijali",
 	"user-count-separator": "$1 di $2",
 	"user-view-all": "Talìa tuttu",
 	"user-upload-image": "Càrrica mmàggini",
@@ -17,7 +18,7 @@
 	"user-remove-friend": "Leva comu amicu",
 	"user-remove-foe": "Leva comu nnimicu",
 	"user-send-message": "Manna nu missaggiu",
-	"user-send-gift": "Manna nu rigalu",
+	"user-send-gift": "Manna un rijalu",
 	"user-contributions": "Cuntribbuti",
 	"user-stats-edits": "Canciamenti",
 	"user-stats-comments": "Cummenti",
