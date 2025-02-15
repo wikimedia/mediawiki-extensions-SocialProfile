@@ -4,6 +4,6 @@ class SocialProfileResponsiveRLModuleBundleSizeTest extends MediaWiki\Tests\Stru
 
 	/** @inheritDoc */
 	public function getBundleSizeConfig(): string {
-		return dirname( __DIR__, 3 ) . '/bundlesize.config.json';
+		return dirname( __DIR__, 3 ) . '/UserGifts/bundlesize.config.json';
 	}
 }

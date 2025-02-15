@@ -1,0 +1,7 @@
+[
+	{
+		"@note": "This is in UserGifts rather than root because PerformanceBudgetTest only supports extension.json.",
+		"resourceModule": "ext.socialprofile.responsive",
+		"maxSize": null
+	}
+]
