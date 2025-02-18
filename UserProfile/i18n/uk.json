@@ -190,6 +190,7 @@
 	"user-board-login-message": "Щоб надсилати повідомлення іншим користувачам, потрібно [[Special:UserLogin|увійти]] в систему",
 	"user-board-confirm-delete": "Ви впевнені, що хочете видалити це повідомлення?",
 	"removeavatar": "Вилучити аватар",
+	"removeavatar-reason": "Причина:",
 	"removeavatar-remove-my-avatar": "Вилучити мій аватар",
 	"removeavatar-remove-your-avatar": "Вилучити твій аватар",
 	"removeavatar-already-default": "Цей користувач уже використовує аватар за замовчуванням, тому тут нічого вилучати.",
