@@ -4,11 +4,14 @@
 			"Gerongfenh",
 			"Liuxinyu970226",
 			"列维劳德",
-			"LittlePaw365"
+			"LittlePaw365",
+			"Googology",
+			"Kichin",
+			"Maitian MaiLin"
 		]
 	},
 	"socialprofile-desc": "用于 MediaWiki 的社交工具套装",
-	"socialprofile-uploads-disabled": "头像上传功能被禁用",
+	"socialprofile-uploads-disabled": "头像上传功能已被禁用",
 	"apihelp-smpuserprivacy-description": "设置个人资料字段可见性（“privacy”）的 API 模块",
 	"apihelp-smpuserprivacy-summary": "设置个人资料字段可见性（“privacy”）的 API 模块",
 	"apihelp-smpuserprivacy-param-method": "操作（“get”或“set”）",
