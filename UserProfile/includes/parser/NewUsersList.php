@@ -75,7 +75,7 @@ class NewUsersList {
 		if ( !$data || $skipCache ) {
 			$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getMaintenanceConnectionRef( DB_REPLICA );
 
-			if ( $dbr->tableExists( 'user_register_track' ) ) {
+			if ( $dbr->tableExists( 'user_register_track', __METHOD__ ) ) {
 				$res = $dbr->select(
 					'user_register_track',
 					[ 'ur_actor' ],

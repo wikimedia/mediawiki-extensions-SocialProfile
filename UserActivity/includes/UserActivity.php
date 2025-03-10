@@ -207,7 +207,7 @@ class UserActivity {
 		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getMaintenanceConnectionRef( DB_REPLICA );
 
 		# Bail out if Vote table doesn't exist
-		if ( !$dbr->tableExists( 'Vote' ) ) {
+		if ( !$dbr->tableExists( 'Vote', __METHOD__ ) ) {
 			return;
 		}
 
@@ -280,7 +280,7 @@ class UserActivity {
 		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getMaintenanceConnectionRef( DB_REPLICA );
 
 		# Bail out if Comments table doesn't exist
-		if ( !$dbr->tableExists( 'Comments' ) ) {
+		if ( !$dbr->tableExists( 'Comments', __METHOD__ ) ) {
 			return;
 		}
 
