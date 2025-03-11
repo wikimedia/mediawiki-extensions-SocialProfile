@@ -1,4 +1,5 @@
 <?php
+
 /**
  * API module for setting the type of user profile, i.e. should a social profile
  * page or the wikitext page be shown by default when [[User:Foo]] is accessed
@@ -8,6 +9,7 @@
  * @license GPL-2.0-or-later
  */
 
+use MediaWiki\Language\RawMessage;
 use MediaWiki\MediaWikiServices;
 
 class ApiUserProfileType extends ApiBase {

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * A special page for removing existing friends/foes for the current logged in user
  *
@@ -10,6 +11,8 @@
  * @copyright Copyright © 2007, Wikia Inc.
  * @license GPL-2.0-or-later
  */
+
+use MediaWiki\Title\Title;
 
 class SpecialRemoveRelationship extends UnlistedSpecialPage {
 

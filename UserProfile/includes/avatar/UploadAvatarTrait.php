@@ -1,10 +1,13 @@
 <?php
+
 /**
  * Reusable avatar backend magic code shared by both the local upload class (UploadAvatar) and the upload-from-URL
  * class.
  * Split from UploadAvatar in October 2021.
  */
+
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 
 trait UploadAvatarTrait {
 	/** @var string */

@@ -8,6 +8,8 @@
  * @license GPL-2.0-or-later
  */
 
+use MediaWiki\Language\RawMessage;
+
 class ApiUserProfilePrivacy extends ApiBase {
 
 	public function __construct( $query, $moduleName ) {

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * A special page for adding friends/foe requests for existing users in the wiki
  *
@@ -11,6 +12,8 @@
  * @copyright Copyright © 2007, Wikia Inc.
  * @license GPL-2.0-or-later
  */
+
+use MediaWiki\Title\Title;
 
 class SpecialAddRelationship extends UnlistedSpecialPage {
 
