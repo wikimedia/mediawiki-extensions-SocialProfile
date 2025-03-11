@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Seipinne"
+			"Seipinne",
+			"Yupik"
 		]
 	},
+	"boardlinkselectall": "Valjii puoh",
 	"userboard_nomessages": "Iä viestah.",
 	"userboard_sendbutton": "vuolgât"
 }
