@@ -1,5 +1,6 @@
 <?php
 
+// @phan-suppress-next-line PhanUndeclaredExtendedClass
 class SocialProfileResponsiveRLModuleBundleSizeTest extends MediaWiki\Tests\Structure\BundleSizeTestBase {
 
 	/** @inheritDoc */
