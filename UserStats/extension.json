@@ -52,35 +52,45 @@
 		"UpdateEditCounts": "UpdateEditCounts"
 	},
 	"config": {
-		"UserStatsTrackWeekly": false,
-		"UserStatsTrackMonthly": false,
-		"UserStatsPointValues": {
-			"edit": 50,
-			"vote": 0,
-			"comment": 0,
-			"comment_plus": 0,
-			"comment_ignored": 0,
-			"opinions_created": 0,
-			"opinions_pub": 0,
-			"referral_complete": 0,
-			"friend": 0,
-			"foe": 0,
-			"gift_rec": 0,
-			"gift_sent": 0,
-			"points_winner_weekly": 0,
-			"points_winner_monthly": 0,
-			"user_image": 1000,
-			"poll_vote": 0,
-			"quiz_points": 0,
-			"quiz_created": 0
+		"UserStatsTrackWeekly": {
+			"value": false
 		},
-		"NamespacesForEditPoints": [
-			0
-		],
+		"UserStatsTrackMonthly": {
+			"value": false
+		},
+		"UserStatsPointValues": {
+			"value": {
+				"edit": 50,
+				"vote": 0,
+				"comment": 0,
+				"comment_plus": 0,
+				"comment_ignored": 0,
+				"opinions_created": 0,
+				"opinions_pub": 0,
+				"referral_complete": 0,
+				"friend": 0,
+				"foe": 0,
+				"gift_rec": 0,
+				"gift_sent": 0,
+				"points_winner_weekly": 0,
+				"points_winner_monthly": 0,
+				"user_image": 1000,
+				"poll_vote": 0,
+				"quiz_points": 0,
+				"quiz_created": 0
+			}
+		},
+		"NamespacesForEditPoints": {
+			"value": [
+				0
+			]
+		},
 		"RandomFeaturedUser": {
-			"about": true,
-			"avatar": true,
-			"points": true
+			"value": {
+				"about": true,
+				"avatar": true,
+				"points": true
+			}
 		}
 	},
 	"ResourceModules": {
@@ -95,5 +105,5 @@
 		"localBasePath": "resources",
 		"remoteExtPath": "SocialProfile/UserStats/resources"
 	},
-	"manifest_version": 1
+	"manifest_version": 2
 }

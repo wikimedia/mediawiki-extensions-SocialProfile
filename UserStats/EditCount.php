@@ -8,6 +8,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 
 /**
  * For the UserLevels (points) functionality to work, you will need to

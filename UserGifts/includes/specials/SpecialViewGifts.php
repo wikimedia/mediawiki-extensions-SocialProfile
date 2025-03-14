@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Special:ViewGifts -- a special page for viewing the list of user-to-user
  * gifts a given user has received
@@ -8,6 +9,7 @@
  */
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 
 class ViewGifts extends SpecialPage {
 
