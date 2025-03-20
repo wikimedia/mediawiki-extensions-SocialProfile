@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Solde",
-			"Ssola"
+			"Ssola",
+			"Paucabot"
 		]
 	},
+	"user-stats-monthly-title": "Màxima puntuació aquest mes",
 	"top-fans-total-points-link": "Punts totals",
 	"top-fans-weekly-points-link": "Punts aquesta setmana",
 	"top-fans-monthly-points-link": "Punts aquest mes",
