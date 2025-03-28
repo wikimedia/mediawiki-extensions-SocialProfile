@@ -42,13 +42,13 @@ class RemoveAvatar extends SpecialPage {
 	 * Special page description shown on Special:SpecialPages -- different for
 	 * privileged users and mortals
 	 *
-	 * @return string
+	 * @return Message
 	 */
 	function getDescription() {
 		if ( $this->isUserPrivileged() ) {
-			return $this->msg( 'removeavatar' )->plain();
+			return $this->msg( 'removeavatar' );
 		} else {
-			return $this->msg( 'removeavatar-remove-my-avatar' )->plain();
+			return $this->msg( 'removeavatar-remove-my-avatar' );
 		}
 	}
 
