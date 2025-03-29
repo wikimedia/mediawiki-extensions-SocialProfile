@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Title\Title;
+
 /**
  * Formatter for user's level up notifications ('social-level-up')
  */

@@ -12,6 +12,7 @@
  */
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\WikiMap\WikiMap;
 
 class SocialProfileFileBackend {
 

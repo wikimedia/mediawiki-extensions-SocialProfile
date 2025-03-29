@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\Html\Html;
+
 /**
  * A special page for uploading avatars
  * This page is a big hack -- it's just the image upload page with some changes
