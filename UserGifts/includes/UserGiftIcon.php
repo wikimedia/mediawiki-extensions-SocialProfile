@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\Html\Html;
+
 /**
  * Object for constructing user gift icons.
  */
