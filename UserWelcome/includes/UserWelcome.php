@@ -1,7 +1,6 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
-use MediaWiki\Title\Title;
 
 /**
  * UserWelcome extension

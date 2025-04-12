@@ -1,6 +1,5 @@
 <?php
 
-use MediaWiki\Html\TemplateParser;
 use MediaWiki\MediaWikiServices;
 
 /**

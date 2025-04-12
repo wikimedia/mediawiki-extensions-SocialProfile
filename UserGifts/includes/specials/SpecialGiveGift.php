@@ -2,7 +2,6 @@
 
 use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
-use MediaWiki\Title\Title;
 
 /**
  * Special:GiveGift -- a special page for sending out user-to-user gifts

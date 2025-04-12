@@ -1,7 +1,4 @@
 <?php
-
-use MediaWiki\Html\Html;
-
 /**
  * Object for easily constructing new system gift icons.
  */

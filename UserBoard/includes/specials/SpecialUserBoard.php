@@ -1,9 +1,6 @@
 <?php
 
-use MediaWiki\Html\Html;
-use MediaWiki\Html\TemplateParser;
 use MediaWiki\MediaWikiServices;
-use MediaWiki\Title\Title;
 
 /**
  * Display User Board messages for a user

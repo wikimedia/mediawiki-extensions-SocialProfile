@@ -1,7 +1,6 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
-use MediaWiki\Title\Title;
 
 /**
  * RandomUsersWithAvatars - displays a number of randomly selected users

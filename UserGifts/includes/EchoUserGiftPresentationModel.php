@@ -1,7 +1,5 @@
 <?php
 
-use MediaWiki\Title\Title;
-
 /**
  * Formatter for user gift notifications ('social-gift-send')
  */

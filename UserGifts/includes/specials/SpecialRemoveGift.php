@@ -1,6 +1,5 @@
 <?php
 
-use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 
 class RemoveGift extends UnlistedSpecialPage {
