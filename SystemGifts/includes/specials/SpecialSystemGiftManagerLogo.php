@@ -1,8 +1,6 @@
 <?php
 
-use MediaWiki\Html\Html;
 use MediaWiki\Logger\LoggerFactory;
-use MediaWiki\Request\WebRequestUpload;
 use MediaWiki\Shell\Shell;
 use Wikimedia\AtEase\AtEase;
 

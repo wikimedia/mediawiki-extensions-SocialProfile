@@ -1,7 +1,4 @@
 <?php
-
-use MediaWiki\Html\Html;
-
 /**
  * Object to easily build icons shown in a user activity feed.
  */
