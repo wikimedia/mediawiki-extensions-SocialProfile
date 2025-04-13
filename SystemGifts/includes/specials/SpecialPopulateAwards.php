@@ -7,6 +7,8 @@
  * @ingroup Extensions
  */
 
+use MediaWiki\Html\Html;
+
 class PopulateAwards extends UnlistedSpecialPage {
 
 	public function __construct() {

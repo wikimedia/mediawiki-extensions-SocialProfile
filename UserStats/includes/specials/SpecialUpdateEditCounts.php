@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Html\Html;
+
 /**
  * A special page for updating users' point counts.
  *

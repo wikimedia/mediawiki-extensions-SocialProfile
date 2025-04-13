@@ -11,6 +11,7 @@
  * @license GPL-2.0-or-later
  */
 
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 
 class SpecialPopulateUserProfiles extends SpecialPage {
