@@ -178,12 +178,6 @@ $wgResourceModules['ext.socialprofile.responsive'] = [
 // General/shared JS modules -- not (necessarily) directly used by SocialProfile,
 // but rather by other social tools which depend on SP
 // @see https://phabricator.wikimedia.org/T100025
-$wgResourceModules['ext.socialprofile.flash'] = [
-	'scripts' => 'flash.js',
-	'localBasePath' => __DIR__ . '/shared',
-	'remoteExtPath' => 'SocialProfile/shared',
-];
-
 $wgResourceModules['ext.socialprofile.LightBox'] = [
 	'scripts' => 'LightBox.js',
 	'localBasePath' => __DIR__ . '/shared',
