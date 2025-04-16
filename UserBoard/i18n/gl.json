@@ -28,7 +28,7 @@
 	"userboard_backprofile": "Volver ao perfil de $1",
 	"userboard_backyourprofile": "Volver ao seu perfil",
 	"userboard_boardtoboard": "De taboleiro a taboleiro",
-	"userboard_confirmdelete": "Está seguro de querer borrar esta mensaxe?",
+	"userboard_confirmdelete": "Quere borrar esta mensaxe?",
 	"userboard_sendmessage": "Enviar unha mensaxe a $1",
 	"userboard_myboard": "O meu taboleiro",
 	"userboard_posted_ago": "publicou hai $1",
@@ -45,5 +45,5 @@
 	"userboard-time-minutes": "{{PLURAL:$1|un minuto|$1 minutos}}",
 	"userboard-time-seconds": "{{PLURAL:$1|un segundo|$1 segundos}}",
 	"message_received_subject": "$1 escribiu no seu taboleiro en {{SITENAME}}",
-	"message_received_body": "Ola $1:\n\n$2 acaba de escribir no seu taboleiro en {{SITENAME}}!\n\nFaga clic embaixo para comprobar o seu taboleiro!\n\n$3\n\n---\n\nQuere deixar de recibir correos electrónicos nosos?\n\nFaga clic $4\ne troque as súas configuracións para deshabilitar as notificacións por correo electrónico."
+	"message_received_body": "Ola $1:\n\n$2 acaba de escribir no seu taboleiro en {{SITENAME}}!\n\nFaga clic embaixo para comprobar o seu taboleiro!\n\n$3\n\n---\n\nQuere deixar de recibir correos electrónicos nosos?\n\nFaga clic en $4\ne troque as súas configuracións para deshabilitar as notificacións por correo electrónico."
 }
