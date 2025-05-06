@@ -3,7 +3,8 @@
 		"authors": [
 			"ArenaL5",
 			"Jack Phoenix",
-			"Toliño"
+			"Toliño",
+			"Xosecalvo"
 		]
 	},
 	"editprofile": "Editar os perfís doutros usuarios",
@@ -169,8 +170,8 @@
 	"profilelogpage": "Rexistro de edicións do perfil de usuario",
 	"profilelogpagetext": "Este é un rexistro de edicións do perfil de usuario",
 	"user-profile-edit-profile": "editou o perfil de $1",
-	"avatarlogpage": "Rexistro de carga de avatares",
-	"avatarlogpagetext": "Este é un rexistro de cargas de avatares de usuario",
+	"avatarlogpage": "Rexistro de avatares",
+	"avatarlogpagetext": "Este é un rexistro de cargas e retiradas de avatares de usuario.",
 	"user-profile-picture-log-entry": "cargou un novo avatar",
 	"user-profile-picture-log-delete-entry": "borrou o avatar de $1",
 	"right-avatarremove": "Eliminar os avatares dun usuario",
