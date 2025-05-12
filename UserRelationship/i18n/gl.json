@@ -77,7 +77,7 @@
 	"foe_accept_subject": "A cousa está que arde! $1 aceptou a súa solicitude de inimizade en {{SITENAME}}!",
 	"foe_accept_body": "Ola $1:\n\n$2 aceptou a súa solicitude de inimizade en {{SITENAME}}!\n\nComprobe a páxina de $2 en $3\n\nGrazas\n\n---\n\nQuere deixar de recibir correos electrónicos nosos?\n\nFaga clic $4\ne troque as súas configuracións para deshabilitar as notificacións por correo electrónico.",
 	"friend_removed_subject": "Non! $1 eliminouno dos seus amigos en {{SITENAME}}!",
-	"friend_removed_body": "Ola $1:\n\n$2 eliminouno dos seus amigos en {{SITENAME}}!\n\nGrazas,\n\nO equipo de {{SITENAME}}\n\n---\n\nQuere deixar de recibir correos electrónicos nosos?\n\nPrema $4\ne troque as súas configuracións para deshabilitar as notificacións por correo electrónico.",
+	"friend_removed_body": "Ola $1:\n\n$2 eliminouno dos seus amigos en {{SITENAME}}!\n\nGrazas.\n\n\nO equipo de {{SITENAME}}\n\n---\n\nQuere deixar de recibir correos electrónicos nosos?\n\nPrema $4\ne troque as súas configuracións para deshabilitar as notificacións por correo electrónico.",
 	"foe_removed_subject": "Ben! $1 eliminouno dos seus inimigos en {{SITENAME}}!",
-	"foe_removed_body": "Ola $1:\n\n$2 eliminouno dos seus inimigos en {{SITENAME}}!\n\nTalvez esteades no bo camiño para retomar esa amizada?\n\nGrazas\n\nO equipo de {{SITENAME}}\n---\n\nQuere deixar de recibir correos electrónicos nosos?\n\nPrema $4\ne troque as súas configuracións para deshabilitar as notificacións por correo electrónico."
+	"foe_removed_body": "Ola $1:\n\n$2 eliminouno dos seus inimigos en {{SITENAME}}!\n\nTalvez esteades no bo camiño para retomar esa amizade?\n\nGrazas.\n\n\nO equipo de {{SITENAME}}\n\n---\n\nQuere deixar de recibir correos electrónicos nosos?\n\nPrema $4\ne troque as súas configuracións para deshabilitar as notificacións por correo electrónico."
 }
