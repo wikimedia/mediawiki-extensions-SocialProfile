@@ -30,7 +30,6 @@
 	},
 	"Hooks": {
 		"BeforeCreateEchoEvent": "UserBoardHooks::onBeforeCreateEchoEvent",
-		"EchoGetDefaultNotifiedUsers": "UserBoardHooks::onEchoGetDefaultNotifiedUsers",
 		"EchoGetBundleRules": "UserBoardHooks::onEchoGetBundleRules"
 	},
 	"DefaultUserOptions": {

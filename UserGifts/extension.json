@@ -36,7 +36,6 @@
 	},
 	"Hooks": {
 		"BeforeCreateEchoEvent": "UserGiftsHooks::onBeforeCreateEchoEvent",
-		"EchoGetDefaultNotifiedUsers": "UserGiftsHooks::onEchoGetDefaultNotifiedUsers",
 		"EchoGetBundleRules": "UserGiftsHooks::onEchoGetBundleRules"
 	},
 	"DefaultUserOptions": {

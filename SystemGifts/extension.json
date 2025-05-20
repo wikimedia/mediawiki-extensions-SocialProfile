@@ -35,7 +35,6 @@
 	},
 	"Hooks": {
 		"BeforeCreateEchoEvent": "UserSystemGiftsHooks::onBeforeCreateEchoEvent",
-		"EchoGetDefaultNotifiedUsers": "UserSystemGiftsHooks::onEchoGetDefaultNotifiedUsers",
 		"EchoGetBundleRules": "UserSystemGiftsHooks::onEchoGetBundleRules"
 	},
 	"SpecialPages": {
