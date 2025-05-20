@@ -19,7 +19,6 @@ class UserGiftsHooks {
 			'group' => 'interactive',
 			'presentation-model' => 'EchoUserGiftPresentationModel',
 			EchoAttributeManager::ATTR_LOCATORS => [
-				'EchoUserLocator::locateEventAgent'
 			],
 
 			'icon' => 'social-gift-send',
