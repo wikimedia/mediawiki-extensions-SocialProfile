@@ -38,13 +38,6 @@ class AvatarParserFunction {
 			// get int value of given px size
 			$givenPx = intval( substr( $givenSize, 0, strlen( $givenSize ) - 2 ) );
 
-			// if px value is not int, give default avatar
-			// with no px value
-			if ( !is_int( $givenPx ) ) {
-				$size = 'm';
-				$px = '';
-			}
-
 			// if given px value is smaller than small,
 			// use the small avatar and the given `px` value
 			if ( $givenPx <= 16 ) {

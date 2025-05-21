@@ -353,7 +353,7 @@ class SpecialUploadAvatar extends SpecialUpload {
 				// Use a cache buster variable to ensure we show the newly uploaded avatar
 				// should the user click on the "Upload a different avatar" button immediately
 				// after uploading an avatar (w/o the cachebuster variable it'll show the old avatar)
-				'?r=' . (int)rand() . '" alt="" border="0" />';
+				'?r=' . rand() . '" alt="" border="0" />';
 		}
 	}
 
