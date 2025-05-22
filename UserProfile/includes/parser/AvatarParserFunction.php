@@ -9,8 +9,6 @@ class AvatarParserFunction {
 
 	/**
 	 * Setup function for the {{#avatar:Username}} function
-	 *
-	 * @param Parser $parser
 	 */
 	public static function setupAvatarParserFunction( Parser $parser ) {
 		$parser->setFunctionHook( 'avatar', [ __CLASS__, 'renderAvatarParserFunction' ] );
@@ -34,33 +32,30 @@ class AvatarParserFunction {
 			$px = '';
 
 		// given size is a value in px
-		} elseif ( substr( $givenSize, -2 ) == 'px' ) {
+		} elseif ( preg_match( '/^([1-9]\d*)px$/', $givenSize, $matches ) ) {
+			$px = $givenSize;
 			// get int value of given px size
-			$givenPx = intval( substr( $givenSize, 0, strlen( $givenSize ) - 2 ) );
+			$givenPx = (int)$matches[1];
 
 			// if given px value is smaller than small,
 			// use the small avatar and the given `px` value
 			if ( $givenPx <= 16 ) {
 				$size = 's';
-				$px = $givenSize;
 
 			// if given px value is smaller than medium,
 			// use the medium avatar and the given `px` value
 			} elseif ( $givenPx <= 30 ) {
 				$size = 'm';
-				$px = $givenSize;
 
 			// if given px value is smaller than medium-large,
 			// use the medium-large avatar and the given `px` value
 			} elseif ( $givenPx <= 50 ) {
 				$size = 'ml';
-				$px = $givenSize;
 
 			// if given px value is bigger then medium large,
 			// use the large avatar and the given `px` value
 			} else {
 				$size = 'l';
-				$px = $givenSize;
 			}
 
 		// size value is not code or px
@@ -71,15 +66,16 @@ class AvatarParserFunction {
 		}
 
 		$user = User::newFromName( $username );
-		if ( $user instanceof User ) {
+		if ( $user ) {
 			$id = $user->getId();
-			$avatar = new wAvatar( $id, $size );
 		} else {
 			// Fallback for the case where an invalid (nonexistent)
 			// user name was supplied...
 			// not very nice, but -1 will get the default avatar
-			$avatar = new wAvatar( -1, 'm' );
+			$id = -1;
+			$size = 'm';
 		}
+		$avatar = new wAvatar( $id, $size );
 
 		// if px value needed, set height to it
 		if ( $px ) {
