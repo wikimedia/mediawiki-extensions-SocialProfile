@@ -5,21 +5,21 @@ var UserBoard = {
 		if ( !perPage ) {
 			perPage = 25;
 		}
-		var message = document.getElementById( 'message' ).value,
+		const message = document.getElementById( 'message' ).value,
 			recipient = document.getElementById( 'user_name_to' ).value,
 			sender = document.getElementById( 'user_name_from' ).value;
 		if ( message && !UserBoard.posted ) {
 			UserBoard.posted = 1;
-			var messageType = document.getElementById( 'message_type' ).value;
+			const messageType = document.getElementById( 'message_type' ).value;
 			( new mw.Api() ).postWithToken( 'csrf', {
 				action: 'socialprofile-send-message',
 				format: 'json',
 				username: recipient,
 				message: message,
 				type: messageType
-			} ).done( function () {
+			} ).done( () => {
 				UserBoard.posted = 0;
-				var user_1, user_2;
+				let user_1, user_2;
 				if ( sender ) { // it's a board to board
 					user_1 = sender;
 					user_2 = recipient;
@@ -27,8 +27,8 @@ var UserBoard = {
 					user_1 = recipient;
 					user_2 = '';
 				}
-				var params = ( user_2 ) ? '&conv=' + encodeURIComponent( user_2 ) : '';
-				var url = mw.config.get( 'wgScriptPath' ) + '/index.php?title=Special:UserBoard&user=' + encodeURIComponent( user_1 ) + params;
+				const params = ( user_2 ) ? '&conv=' + encodeURIComponent( user_2 ) : '';
+				const url = mw.config.get( 'wgScriptPath' ) + '/index.php?title=Special:UserBoard&user=' + encodeURIComponent( user_1 ) + params;
 				window.location = url;
 			} );
 		}
@@ -40,7 +40,7 @@ var UserBoard = {
 				action: 'socialprofile-delete-message',
 				format: 'json',
 				id: id
-			} ).done( function () {
+			} ).done( () => {
 				// window.location.reload();
 				// 1st parent = span.user-board-red
 				// 2nd parent = div.user-board-message-links
@@ -51,7 +51,7 @@ var UserBoard = {
 	}
 };
 
-$( function () {
+$( () => {
 	// "Delete" link
 	$( 'span.user-board-red a' ).on( 'click', function ( e ) {
 		e.preventDefault();

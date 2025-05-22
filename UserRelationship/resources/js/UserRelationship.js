@@ -12,8 +12,8 @@
 			format: 'json',
 			response: response,
 			id: id
-		} ).done( function ( data ) {
-			var html = '<div class="relationship-action red-text">' +
+		} ).done( ( data ) => {
+			const html = '<div class="relationship-action red-text">' +
 				data.response.avatar +
 				// I have no idea why CI is complaining when the message keys are *clearly*
 				// documented below, but this gets rid of that complaint:
@@ -33,7 +33,7 @@
 		} );
 	}
 
-	$( function () {
+	$( () => {
 		$( 'div.relationship-buttons input[type="submit"]' ).on( 'click', function ( e ) {
 			e.preventDefault();
 			requestResponse(

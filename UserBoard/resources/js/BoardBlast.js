@@ -2,7 +2,7 @@ var BoardBlast = {
 	submitted: 0,
 
 	toggleUser: function ( user_id ) {
-		var elem = $( '#user-' + user_id );
+		const elem = $( '#user-' + user_id );
 
 		if ( elem.hasClass( 'blast-friend-selected' ) ) {
 			elem.removeClass( 'blast-friend-selected' )
@@ -22,10 +22,10 @@ var BoardBlast = {
 	},
 
 	toggleType: function ( method, on, off ) {
-		var list = $( '#blast-friends-list div.' + ( ( method === 1 ) ? off : on ) );
+		const list = $( '#blast-friends-list div.' + ( ( method === 1 ) ? off : on ) );
 
-		for ( var x = 0; x <= list.length - 1; x++ ) {
-			var el = list[ x ];
+		for ( let x = 0; x <= list.length - 1; x++ ) {
+			const el = list[ x ];
 			if ( $( el ).hasClass( on ) || $( el ).hasClass( off ) ) {
 				if ( method === 1 ) {
 					$( el ).removeClass( off ).addClass( on );
@@ -68,11 +68,11 @@ var BoardBlast = {
 		}
 
 		BoardBlast.submitted = 1;
-		var selected = 0;
-		var user_ids_to = '';
+		let selected = 0;
+		let user_ids_to = '';
 
-		var list = $( '#blast-friends-list div.blast-friend-selected' );
-		var el, user_id;
+		let list = $( '#blast-friends-list div.blast-friend-selected' );
+		let el, user_id;
 		for ( var x = 0; x <= list.length - 1; x++ ) {
 			el = list[ x ];
 			selected++;
@@ -109,31 +109,31 @@ var BoardBlast = {
 	}
 };
 
-$( function () {
+$( () => {
 	// "Select/Unselect all" links
-	$( 'div.blast-nav-links a.blast-select-all-link' ).on( 'click', function () {
+	$( 'div.blast-nav-links a.blast-select-all-link' ).on( 'click', () => {
 		BoardBlast.selectAll();
 	} );
 
-	$( 'div.blast-nav-links a.blast-unselect-all-link' ).on( 'click', function () {
+	$( 'div.blast-nav-links a.blast-unselect-all-link' ).on( 'click', () => {
 		BoardBlast.unselectAll();
 	} );
 
 	// "Select/Unselect friends" links
-	$( 'div.blast-nav-links a.blast-select-friends-link' ).on( 'click', function () {
+	$( 'div.blast-nav-links a.blast-select-friends-link' ).on( 'click', () => {
 		BoardBlast.toggleFriends( 1 );
 	} );
 
-	$( 'div.blast-nav-links a.blast-unselect-friends-link' ).on( 'click', function () {
+	$( 'div.blast-nav-links a.blast-unselect-friends-link' ).on( 'click', () => {
 		BoardBlast.toggleFriends( 0 );
 	} );
 
 	// "Select/Unselect foes" links
-	$( 'div.blast-nav-links a.blast-select-foes-link' ).on( 'click', function () {
+	$( 'div.blast-nav-links a.blast-select-foes-link' ).on( 'click', () => {
 		BoardBlast.toggleFoes( 1 );
 	} );
 
-	$( 'div.blast-nav-links a.blast-unselect-foes-link' ).on( 'click', function () {
+	$( 'div.blast-nav-links a.blast-unselect-foes-link' ).on( 'click', () => {
 		BoardBlast.toggleFoes( 0 );
 	} );
 
@@ -143,7 +143,7 @@ $( function () {
 	} );
 
 	// The submit button
-	$( 'div.blast-message-box-button input[type="submit"]' ).on( 'click', function ( e ) {
+	$( 'div.blast-message-box-button input[type="submit"]' ).on( 'click', ( e ) => {
 		e.preventDefault();
 		BoardBlast.sendMessages();
 	} );

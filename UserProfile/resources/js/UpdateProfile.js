@@ -4,7 +4,7 @@
  */
 ( function () {
 
-	var countries = [];
+	const countries = [];
 	countries[ 0 ] = {
 		country: 'United States',
 		name: 'State',
@@ -23,14 +23,14 @@
 	};
 
 	function displaySection( id, country, section ) {
-		var country_id = -1;
+		let country_id = -1;
 		for ( var x = 0; x <= countries.length - 1; x++ ) {
 			if ( country === countries[ x ].country ) {
 				country_id = x;
 			}
 		}
 
-		var section_select = '';
+		let section_select = '';
 		if ( countries[ country_id ] ) {
 			document.getElementById( id + '_label' ).innerHTML = countries[ country_id ].name;
 			section_select += '<select class="profile-form" name="' + id + '" id="' + id + '"><option></option>';
@@ -44,7 +44,7 @@
 		document.getElementById( id + '_form' ).innerHTML = section_select;
 	}
 
-	$( function () {
+	$( () => {
 		$( '#birthday' ).datepicker( {
 			changeYear: true,
 			yearRange: '1930:c',
@@ -56,7 +56,7 @@
 		if (
 			(
 				mw.config.get( 'wgCanonicalSpecialPageName' ) === 'UpdateProfile' &&
-				mw.config.get( 'wgTitle' ).indexOf( '/' ) === -1
+				!mw.config.get( 'wgTitle' ).includes( '/' )
 			) ||
 			mw.config.get( 'wgCanonicalSpecialPageName' ) === 'EditProfile'
 		) {
@@ -83,7 +83,7 @@
 
 		$( 'body' ).on( 'mouseenter', '.eye-container', function () {
 			if ( $( this ).css( 'position' ) !== 'absolute' ) {
-				var offset = $( this ).offset();
+				const offset = $( this ).offset();
 
 				$( 'body' ).append( $( this ) );
 
@@ -106,9 +106,9 @@
 		$( 'body' ).on( 'click', '.eye-container > .menu > .item', function () {
 			$( this ).parent().parent().css( { height: 20 } );
 
-			var field_key = $( this ).parent().parent().attr( 'fieldkey' );
-			var priv = $( this ).attr( 'action' );
-			var this_element = $( this ).parent().parent();
+			const field_key = $( this ).parent().parent().attr( 'fieldkey' );
+			const priv = $( this ).attr( 'action' );
+			const this_element = $( this ).parent().parent();
 
 			$( this_element ).css( {
 				opacity: 0.3,
@@ -124,10 +124,10 @@
 				method: 'set',
 				field_key: field_key,
 				privacy: encodeURIComponent( priv )
-			} ).done( function ( data ) {
-				var offset = $( this_element ).offset();
+			} ).done( ( data ) => {
+				const offset = $( this_element ).offset();
 				$( this_element ).remove();
-				var newEl = $( data.smpuserprivacy.replace );
+				const newEl = $( data.smpuserprivacy.replace );
 
 				$( newEl ).css( {
 					position: 'absolute',

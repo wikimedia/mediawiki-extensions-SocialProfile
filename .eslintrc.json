@@ -1,7 +1,7 @@
 {
 	"root": true,
 	"extends": [
-		"wikimedia/client-es5",
+		"wikimedia/client",
 		"wikimedia/jquery",
 		"wikimedia/mediawiki"
 	],
@@ -23,6 +23,8 @@
 		"no-jquery/no-sizzle": "off",
 		"no-jquery/variable-pattern": "off",
 		"mediawiki/class-doc": "off",
-		"block-scoped-var": "warn"
+		"block-scoped-var": "warn",
+		"no-var": "warn",
+		"no-jquery/no-done-fail": "warn"
 	}
 }

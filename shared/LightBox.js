@@ -16,7 +16,7 @@ window.LightBox = {
 	 * @return Array with x,y page scroll values.
 	 */
 	getPageScroll: function () {
-		var yScroll;
+		let yScroll;
 
 		if ( this.pageYOffset ) {
 			yScroll = this.pageYOffset;
@@ -26,7 +26,7 @@ window.LightBox = {
 			yScroll = document.body.scrollTop;
 		}
 
-		var arrayPageScroll = new Array( '', yScroll );
+		const arrayPageScroll = new Array( '', yScroll );
 		return arrayPageScroll;
 	},
 
@@ -37,7 +37,7 @@ window.LightBox = {
 	 * @return Array with page width, height and window width, height
 	 */
 	getPageSize: function () {
-		var xScroll, yScroll;
+		let xScroll, yScroll;
 
 		if ( window.innerHeight && window.scrollMaxY ) {
 			xScroll = document.body.scrollWidth;
@@ -50,7 +50,7 @@ window.LightBox = {
 			yScroll = document.body.offsetHeight;
 		}
 
-		var windowWidth, windowHeight;
+		let windowWidth, windowHeight;
 		if ( this.innerHeight ) { // all except Explorer
 			windowWidth = this.innerWidth;
 			windowHeight = this.innerHeight;
@@ -63,7 +63,7 @@ window.LightBox = {
 		}
 
 		// for small pages with total height less then height of the viewport
-		var pageHeight, pageWidth;
+		let pageHeight, pageWidth;
 		if ( yScroll < windowHeight ) {
 			pageHeight = windowHeight;
 		} else {
@@ -77,7 +77,7 @@ window.LightBox = {
 			pageWidth = xScroll;
 		}
 
-		var arrayPageSize = new Array( pageWidth, pageHeight, windowWidth, windowHeight );
+		const arrayPageSize = new Array( pageWidth, pageHeight, windowWidth, windowHeight );
 		return arrayPageSize;
 	},
 
@@ -88,8 +88,8 @@ window.LightBox = {
 	 * @param numberMillis
 	 */
 	pause: function ( numberMillis ) {
-		var now = new Date();
-		var exitTime = now.getTime() + numberMillis;
+		let now = new Date();
+		const exitTime = now.getTime() + numberMillis;
 		while ( true ) {
 			now = new Date();
 			if ( now.getTime() > exitTime ) {
@@ -104,14 +104,14 @@ window.LightBox = {
 	 * @param objLink
 	 */
 	show: function ( objLink ) {
-		var lb = this;
+		const lb = this;
 		// prepare objects
-		var objOverlay = document.getElementById( 'overlay' );
-		var objLightbox = document.getElementById( 'lightbox' );
-		var objImage = document.getElementById( 'lightboxImage' );
-		var objLightboxText = document.getElementById( 'lightboxText' );
+		const objOverlay = document.getElementById( 'overlay' );
+		const objLightbox = document.getElementById( 'lightbox' );
+		const objImage = document.getElementById( 'lightboxImage' );
+		const objLightboxText = document.getElementById( 'lightboxText' );
 
-		var arrayPageSize = lb.getPageSize();
+		let arrayPageSize = lb.getPageSize();
 		// var arrayPageScroll = lb.getPageScroll();
 
 		objLightboxText.style.display = 'none';
@@ -120,7 +120,7 @@ window.LightBox = {
 		objOverlay.style.display = 'block';
 
 		// preload image
-		var imgPreload = new Image();
+		const imgPreload = new Image();
 
 		imgPreload.onload = function () {
 			objImage.src = objLink.href;
@@ -135,14 +135,14 @@ window.LightBox = {
 
 			// A small pause between the image loading and displaying is required with IE,
 			// this prevents the previous image displaying for a short burst causing flicker.
-			if ( navigator.appVersion.indexOf( 'MSIE' ) !== -1 ) {
+			if ( navigator.appVersion.includes( 'MSIE' ) ) {
 				lb.pause( 250 );
 			}
 
 			// Hide select boxes as they will 'peek' through the image in IE
-			var selects = document.getElementsByTagName( 'select' );
+			const selects = document.getElementsByTagName( 'select' );
 
-			for ( var i = 0; i !== selects.length; i++ ) {
+			for ( let i = 0; i !== selects.length; i++ ) {
 				selects[ i ].style.visibility = 'hidden';
 			}
 
@@ -164,9 +164,9 @@ window.LightBox = {
 
 	hide: function () {
 		// get objects
-		var objOverlay = document.getElementById( 'overlay' );
-		var objLightbox = document.getElementById( 'lightbox' );
-		var objLightBoxImg = document.getElementById( 'lightboxImage' );
+		const objOverlay = document.getElementById( 'overlay' );
+		const objLightbox = document.getElementById( 'lightbox' );
+		const objLightBoxImg = document.getElementById( 'lightboxImage' );
 
 		// hide lightbox and overlay
 		objOverlay.style.display = 'none';
@@ -175,8 +175,8 @@ window.LightBox = {
 		objLightBoxImg.style.display = 'none';
 
 		// make select boxes visible
-		var selects = document.getElementsByTagName( 'select' );
-		for ( var i = 0; i !== selects.length; i++ ) {
+		const selects = document.getElementsByTagName( 'select' );
+		for ( let i = 0; i !== selects.length; i++ ) {
 			selects[ i ].style.visibility = 'visible';
 		}
 
@@ -195,12 +195,12 @@ window.LightBox = {
 			return;
 		}
 
-		var objBody = document.getElementsByTagName( 'body' ).item( 0 );
-		var lb = this;
+		const objBody = document.getElementsByTagName( 'body' ).item( 0 );
+		const lb = this;
 
 		// create overlay div and hardcode some functional styles
 		// (aesthetic styles are in CSS file)
-		var objOverlay = document.createElement( 'div' );
+		const objOverlay = document.createElement( 'div' );
 		objOverlay.setAttribute( 'id', 'overlay' );
 		objOverlay.onclick = function () {
 			lb.hide();
@@ -221,7 +221,7 @@ window.LightBox = {
 		// var imgPreloader = new Image();
 
 		// create lightbox div, same note about styles as above
-		var objLightbox = document.createElement( 'div' );
+		const objLightbox = document.createElement( 'div' );
 		objLightbox.setAttribute( 'id', 'lightbox' );
 		objLightbox.style.display = 'none';
 		objLightbox.style.position = 'absolute';
@@ -229,7 +229,7 @@ window.LightBox = {
 		objBody.insertBefore( objLightbox, objOverlay.nextSibling );
 
 		// create lightbox div, same note about styles as above
-		var objLightboxText = document.createElement( 'div' );
+		const objLightboxText = document.createElement( 'div' );
 		objLightboxText.setAttribute( 'id', 'lightboxText' );
 		objLightboxText.style.display = 'none';
 		objLightboxText.style.zIndex = '102';
@@ -237,22 +237,22 @@ window.LightBox = {
 		objLightbox.appendChild( objLightboxText );
 
 		// create image
-		var objImage = document.createElement( 'img' );
+		const objImage = document.createElement( 'img' );
 		objImage.setAttribute( 'id', 'lightboxImage' );
 		objImage.style.display = 'none';
 		objLightbox.appendChild( objImage );
 	},
 
 	setText: function ( message ) {
-		var lb = this;
+		const lb = this;
 		// prep objects
 		// var objOverlay = document.getElementById( 'overlay' );
-		var objLightbox = document.getElementById( 'lightbox' );
-		var objImage = document.getElementById( 'lightboxImage' );
-		var objLightboxText = document.getElementById( 'lightboxText' );
+		const objLightbox = document.getElementById( 'lightbox' );
+		const objImage = document.getElementById( 'lightboxImage' );
+		const objLightboxText = document.getElementById( 'lightboxText' );
 
-		var arrayPageSize = lb.getPageSize();
-		var arrayPageScroll = lb.getPageScroll();
+		const arrayPageSize = lb.getPageSize();
+		const arrayPageScroll = lb.getPageScroll();
 
 		objImage.style.display = 'none';
 		objLightboxText.style.opacity = 0.01; // added
@@ -262,9 +262,9 @@ window.LightBox = {
 
 		// center lightbox and make sure that the top and left values are not negative
 		// and the image placed outside the viewport
-		var dimensionsObj = lb.getDimensions( objLightboxText );
-		var lightboxTop = arrayPageScroll[ 1 ] + ( ( arrayPageSize[ 3 ] - 35 - dimensionsObj.height ) / 2 );
-		var lightboxLeft = ( ( arrayPageSize[ 0 ] - 20 - dimensionsObj.width ) / 2 );
+		const dimensionsObj = lb.getDimensions( objLightboxText );
+		const lightboxTop = arrayPageScroll[ 1 ] + ( ( arrayPageSize[ 3 ] - 35 - dimensionsObj.height ) / 2 );
+		const lightboxLeft = ( ( arrayPageSize[ 0 ] - 20 - dimensionsObj.width ) / 2 );
 
 		objLightbox.style.top = ( lightboxTop < 0 ) ? '0px' : lightboxTop + 'px';
 		objLightbox.style.left = ( lightboxLeft < 0 ) ? '0px' : lightboxLeft + 'px';
@@ -278,7 +278,7 @@ window.LightBox = {
 	 * @return Array
 	 */
 	getDimensions: function ( element ) {
-		var display = element.style.display;
+		const display = element.style.display;
 
 		if ( display !== 'none' && display !== null ) { // Safari bug
 			return { width: element.offsetWidth, height: element.offsetHeight };
@@ -286,16 +286,16 @@ window.LightBox = {
 
 		// All *Width and *Height properties give 0 on elements with display none,
 		// so enable the element temporarily
-		var els = element.style;
-		var originalVisibility = els.visibility;
-		var originalPosition = els.position;
-		var originalDisplay = els.display;
+		const els = element.style;
+		const originalVisibility = els.visibility;
+		const originalPosition = els.position;
+		const originalDisplay = els.display;
 		els.visibility = 'hidden';
 		els.position = 'absolute';
 		els.display = 'block';
 
-		var originalWidth = element.clientWidth;
-		var originalHeight = element.clientHeight;
+		const originalWidth = element.clientWidth;
+		const originalHeight = element.clientHeight;
 		els.display = originalDisplay;
 		els.position = originalPosition;
 		els.visibility = originalVisibility;

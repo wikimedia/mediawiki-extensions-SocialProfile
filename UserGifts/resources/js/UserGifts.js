@@ -55,7 +55,7 @@ var UserGifts = {
 	}
 };
 
-$( function () {
+$( () => {
 	// "Select a friend" dropdown menu
 	$( 'div.g-gift-select select' ).on( 'change', function () {
 		UserGifts.chooseFriend( $( this ).val() );
@@ -97,7 +97,7 @@ $( function () {
 	} );
 
 	// "Send gift" button
-	$( 'input#send-gift-button' ).on( 'click', function () {
+	$( 'input#send-gift-button' ).on( 'click', () => {
 		UserGifts.sendGift();
 	} );
 } );
