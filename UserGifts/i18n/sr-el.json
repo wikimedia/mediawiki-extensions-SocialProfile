@@ -63,7 +63,7 @@
 	"g-remove-gift": "Obriši ovaj poklon",
 	"g-remove-message": "Želite li zaista da izbrišete poklon „$1”?",
 	"g-recent-recipients": "Drugi primaoci ovog poklona",
-	"g-remove-success-title": "Uspešno ste obrisali poklon \"$1\"",
+	"g-remove-success-title": "Uklonili ste poklon „$1”",
 	"g-remove-success-message": "Poklon \"$1\" je obrisan.",
 	"g-remove-title": "Obrisati \"$1\"?",
 	"g-send-gift": "Slanje poklona",
@@ -76,7 +76,7 @@
 	"g-uploadsuccess": "Slanje uspešno",
 	"g-viewgiftlist": "Pogledajte spisak poklona",
 	"g-your-profile": "Vaš profil",
-	"gift_received_subject": "$1 Vam šalje poklon $2 na projektu {{SITENAME}}!",
+	"gift_received_subject": "$1 Vam je poslao poklon $2 na {{SITENAME}}!",
 	"echo-category-title-social-gift": "Pokloni",
 	"echo-pref-tooltip-social-gift": "Obaveštavaj me kada mi neko pošalje poklon."
 }
