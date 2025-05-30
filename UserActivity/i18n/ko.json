@@ -1,9 +1,21 @@
 {
 	"@metadata": {
 		"authors": [
+			"YeBoy371",
 			"Ykhwong"
 		]
 	},
+	"useractivity": "친구들의 활동",
 	"useractivity-desc": "사용자들의 사회 활동을 표시합니다",
-	"useractivity-filter": "필터"
+	"useractivity-award": "$1이(가) 상을 수상했습니다",
+	"useractivity-all": "모두 보기",
+	"useractivity-filter": "필터",
+	"useractivity-gift": "$1이(가) $2으(로)부터 선물을 받았습니다",
+	"useractivity-group-edit": "{{PLURAL:$1|편집 1회|편집 $1회}}",
+	"useractivity-group-comment": "{{PLURAL:$1|의견 1개|의견 $1개}}",
+	"useractivity-group-user_message": "{{PLURAL:$1|메시지 1개|메시지 $1개}}",
+	"useractivity-group-friend": "{{PLURAL:$1|친구 1명|친구 $1명}}",
+	"useractivity-network-thought": "'''[[User:$1|$2]]'''은(는) $3 네트워크에 대한 의견을 가지고 있습니다",
+	"useractivity-siteactivity": "사이트 활동",
+	"useractivity-title": "친구들의 활동"
 }
