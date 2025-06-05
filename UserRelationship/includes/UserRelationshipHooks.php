@@ -19,7 +19,6 @@ class UserRelationshipHooks {
 			'group' => 'interactive',
 			'presentation-model' => 'EchoUserRelationshipPresentationModel',
 			EchoAttributeManager::ATTR_LOCATORS => [
-				'EchoUserLocator::locateEventAgent'
 			],
 			'icon' => 'gratitude',
 		];
@@ -29,7 +28,6 @@ class UserRelationshipHooks {
 			'group' => 'interactive',
 			'presentation-model' => 'EchoUserRelationshipPresentationModel',
 			EchoAttributeManager::ATTR_LOCATORS => [
-				'EchoUserLocator::locateEventAgent'
 			],
 			'icon' => 'gratitude',
 		];

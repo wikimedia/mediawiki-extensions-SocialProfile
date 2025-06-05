@@ -19,7 +19,6 @@ class UserBoardHooks {
 			'group' => 'interactive',
 			'presentation-model' => 'EchoUserBoardMessagePresentationModel',
 			EchoAttributeManager::ATTR_LOCATORS => [
-				'EchoUserLocator::locateEventAgent'
 			],
 
 			'icon' => 'emailuser', // per discussion with Cody on 27 March 2016
