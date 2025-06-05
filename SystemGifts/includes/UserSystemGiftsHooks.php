@@ -19,6 +19,7 @@ class UserSystemGiftsHooks {
 			'group' => 'interactive',
 			'presentation-model' => 'EchoUserSystemGiftPresentationModel',
 			EchoAttributeManager::ATTR_LOCATORS => [
+				[ 'EchoUserLocator::locateFromEventExtra', [ 'target' ] ],
 				'EchoUserLocator::locateEventAgent'
 			],
 			'canNotifyAgent' => true,
@@ -31,22 +32,6 @@ class UserSystemGiftsHooks {
 		$icons['social-award'] = [
 			'path' => 'SocialProfile/images/notifications-award.svg'
 		];
-	}
-
-	/**
-	 * Add user to be notified on Echo event
-	 *
-	 * @param EchoEvent $event
-	 * @param User[] &$users
-	 */
-	public static function onEchoGetDefaultNotifiedUsers( EchoEvent $event, array &$users ) {
-		switch ( $event->getType() ) {
-			case 'social-award-rec':
-				$extra = $event->getExtra();
-				$targetId = $extra['target'];
-				$users[] = User::newFromId( $targetId );
-				break;
-		}
 	}
 
 	/**

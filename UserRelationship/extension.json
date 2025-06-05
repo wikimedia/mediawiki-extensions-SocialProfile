@@ -34,8 +34,7 @@
 		"socialprofile-request-response": "ApiRelationshipResponse"
 	},
 	"Hooks": {
-		"BeforeCreateEchoEvent": "UserRelationshipHooks::onBeforeCreateEchoEvent",
-		"EchoGetDefaultNotifiedUsers": "UserRelationshipHooks::onEchoGetDefaultNotifiedUsers"
+		"BeforeCreateEchoEvent": "UserRelationshipHooks::onBeforeCreateEchoEvent"
 	},
 	"DefaultUserOptions": {
 		"echo-subscriptions-web-social-rel": true,

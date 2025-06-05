@@ -19,6 +19,7 @@ class UserRelationshipHooks {
 			'group' => 'interactive',
 			'presentation-model' => 'EchoUserRelationshipPresentationModel',
 			EchoAttributeManager::ATTR_LOCATORS => [
+				[ 'EchoUserLocator::locateFromEventExtra', [ 'target' ] ],
 			],
 			'icon' => 'gratitude',
 		];
@@ -28,6 +29,7 @@ class UserRelationshipHooks {
 			'group' => 'interactive',
 			'presentation-model' => 'EchoUserRelationshipPresentationModel',
 			EchoAttributeManager::ATTR_LOCATORS => [
+				[ 'EchoUserLocator::locateFromEventExtra', [ 'target' ] ],
 			],
 			'icon' => 'gratitude',
 		];
@@ -40,20 +42,4 @@ class UserRelationshipHooks {
 		];
 	}
 
-	/**
-	 * Add user to be notified on Echo event
-	 *
-	 * @param EchoEvent $event
-	 * @param User[] &$users
-	 */
-	public static function onEchoGetDefaultNotifiedUsers( EchoEvent $event, array &$users ) {
-		switch ( $event->getType() ) {
-			case 'social-rel-add':
-			case 'social-rel-accept':
-				$extra = $event->getExtra();
-				$targetId = $extra['target'];
-				$users[] = User::newFromId( $targetId );
-				break;
-		}
-	}
 }
