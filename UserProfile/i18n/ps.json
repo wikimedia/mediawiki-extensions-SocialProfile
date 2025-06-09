@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ahmed-Najib-Biabani-Ibrahimkhel"
+			"Ahmed-Najib-Biabani-Ibrahimkhel",
+			"شاه زمان پټان"
 		]
 	},
 	"user-time-ago": "$1 دمخه",
@@ -15,8 +16,8 @@
 	"user-send-message": "يو پيغام استول",
 	"user-send-gift": "يوه ډالۍ لېږل",
 	"user-contributions": "ونډې",
-	"user-stats-edits": "{{PLURAL:$1|سمون|سمونونه}}",
-	"user-stats-votes": "{{PLURAL:$1|رايه|رايې}}",
+	"user-stats-edits": "سمونونه",
+	"user-stats-votes": "رايې",
 	"other-info-title": "نور مالومات",
 	"user-friends-title": "ملګري",
 	"user-foes-title": "سيالان",
