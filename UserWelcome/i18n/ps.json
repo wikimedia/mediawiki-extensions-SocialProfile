@@ -1,14 +1,21 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ahmed-Najib-Biabani-Ibrahimkhel"
+			"Ahmed-Najib-Biabani-Ibrahimkhel",
+			"شاه زمان پټان"
 		]
 	},
+	"userwelcome-desc": "ننوتليو کارنانو ته د کارن ځانگړي ټولنيز مالومات ښودلو لپاره <code>&lt;welcomeUser&gt;</code> نښلن ورگډوي",
+	"mp-userlevels-link": "کارن کچې",
 	"mp-welcome-upload": "پورته کول",
+	"mp-welcome-points": "$1 {{PLURAL:$1|نومره|نومرې}}",
+	"mp-welcome-needed-points": "[[$1|'''$2''']] ته د پرمختگ لپاره ''$3'' {{PLURAL:$3| بله نومره|نورې نومرې}} ترلاسه کړئ!",
 	"mp-welcome-logged-in": "$1 سلامونه",
 	"mp-requests-title": "غوښتنې",
 	"mp-requests-message": "تاسو دغه لاندينۍ غوښتنې لری.",
 	"mp-request-new-message": "نوی پيغام",
+	"mp-request-new-award": "$1 نوی {{PLURAL:$1|جايزه|جايزی}}",
 	"mp-request-new-gift": "د $1 {{PLURAL:$1|نوې ډالۍ|نوي ډالۍ}}",
+	"mp-request-new-foe": "$1 {{PLURAL:$1|نو دښمن|نوي دښمنان}}",
 	"mp-request-new-friend": "د $1 {{PLURAL:$1|نوی ملګری|نوي ملګري}}"
 }

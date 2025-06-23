@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"socialprofile-desc": "د مېډياويکي لپاره د ټولينيزو توکو ټولگه",
+	"socialprofile-uploads-disabled": "د ځان‌بڼې راپورته‌کولو ځانگړنه ناچارنه ده",
+	"apihelp-removeavatar-summary": "یو ځان‌بڼه لرې کړئ، یا ستاسو یا که تاسو امتیاز لرئ، د بل کارن هم.",
+	"apihelp-removeavatar-param-reason": "د بل چا د ځان‌بڼې لرې کولو لپاره اختیاري دلیل.",
+	"apihelp-removeavatar-param-user": "د ځان‌بڼې لرې کېدونکي کارن نوم.",
+	"apihelp-removeavatar-example-1": "د \"اشلي\" په نوم کارن ځان‌بڼه لرې کول",
+	"apihelp-removeavatar-example-2": "د \"لېمس‌رېښتو ښکاره سرغړونې\" له امله د کارن \"اېلېکترا\" ځان‌بڼه لرې‌کول",
+	"apierror-avatar-is-default": "د کارن ځان‌بڼه له مخکې تلواليزه ده.",
+	"apihelp-uploadavatar-summary": "يو ځان‌بڼه راپورته کول.",
+	"apihelp-uploadavatar-example-url": "له https://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png نه يو انځور د ځان‌بڼې په توگه راپورته کړئ.",
+	"apihelp-uploadavatar-param-file": "د نوې ځان‌بڼې انځور دوتنې منځپانگه.",
+	"apihelp-uploadavatar-param-url": "وېبتړ د دوتنې راوړلو لپاره له.",
+	"apihelp-smpuserprivacy-summary": "د پېژنليک ډگر د ښکارېدو (\"پټنتيا\") لپاره ای‌پي‌آی چلنوال",
+	"apihelp-smpuserprivacy-param-method": "چاره (يو له \"اخيستل\" يا \"اوڼل\")",
+	"apihelp-smpuserprivacy-param-field_key": "د موخې ډگر کونجي، لکه up_movies د \"پيلمونو\" ډگر لپاره",
+	"apihelp-smpuserprivacy-param-privacy": "د پټنتيا نوی ارزښت ( يو له لاندې ارزښتونو:ټولوال، پټ‌شوی، ملگري، foaf)"
+}
