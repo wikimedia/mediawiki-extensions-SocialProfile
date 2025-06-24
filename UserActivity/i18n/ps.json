@@ -1,13 +1,26 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ahmed-Najib-Biabani-Ibrahimkhel"
+			"Ahmed-Najib-Biabani-Ibrahimkhel",
+			"شاه زمان پټان"
 		]
 	},
+	"useractivity": "ملگرو چارې",
+	"useractivity-desc": "د کارنانو ټولنيزې چارې راښيي",
+	"useractivity-award": "$1 يوه جايزه ترلاسه‌کړې",
 	"useractivity-all": "ټول کتل",
+	"useractivity-edit": "$1 {{PLURAL:$4|edited the pageمخ سم کړی|لاندې مخونه سم‌کړي:}} $3",
+	"useractivity-foe": "$1 {{PLURAL:$2|اوس دښمن دی د|اوس دښمنان دي د}} $3",
+	"useractivity-filter": "چاڼگر",
+	"useractivity-friend": "$1 {{PLURAL:$2|اوس ملگری دی د|اوس ملگري دي د}} $3",
+	"useractivity-gift": "$1 له$2 نه ډالۍ ترلاسه‌کړې",
 	"useractivity-group-edit": "{{PLURAL:$1|يو سمون|$1 سمونونه}}",
+	"useractivity-group-comment": "{{PLURAL:$1|يوه څرگندونه|$1 څرگندونې}}",
 	"useractivity-group-user_message": "{{PLURAL:$1|يو پيغام|$1 پيغامونه}}",
-	"useractivity-group-friend": "{{PLURAL:$1|يو ملګری|$1 ملګري}}",
-	"useractivity-siteactivity": "د وېبځي فعاليت",
-	"useractivity-title": "د ملګري فعاليت"
+	"useractivity-group-friend": "{{PLURAL:$1|يو ملگری|$1 ملگري}}",
+	"useractivity-network-thought": "'''[[User:$1|$2]]''' د $3 شبکې اړوند يو وړانديز لري",
+	"useractivity-siteactivity": "د وېبځي چارې",
+	"useractivity-title": "ملگرو چارې",
+	"useractivity-user_message": "$1، $3 ته {{PLURAL:$4|يو پيغام ولېږهٔ |پيغامونه ولېږل}}",
+	"useractivity-comment": "$1، $3 ته{{PLURAL:$4|مخ کې څرگندونه کړې|په لاندې مخونو کې څرگندونه کړې:}}"
 }
