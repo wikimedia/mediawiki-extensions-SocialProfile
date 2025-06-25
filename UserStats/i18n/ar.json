@@ -3,6 +3,7 @@
 		"authors": [
 			"Alshamiri1",
 			"Meno25",
+			"Mohammed Qays",
 			"NEHAOUA",
 			"OsamaK",
 			"ديفيد"
@@ -25,7 +26,7 @@
 	"top-fans-stats-monthly-winner-count": "{{PLURAL:$1|لا يوجد فوز شهري|فوز شهري|فوزان شهريان|فوز شهري}}",
 	"top-fans-stats-weekly-winner-count": "{{PLURAL:$1|لا يوجد فوز أسبوعي|فوز أسبوعي|فوزان أسبوعيان|فوز أسبوعي}}",
 	"top-fans-stats-edit-count": "{{PLURAL:$1|لا توجد تعديلات|تعديل|تعديلان|تعديلات}}",
-	"top-fans-stats-comment-count": "{{PLURAL:$1|لا توجد تعليقات|تعليق|تعليقان|تعليقات}}",
+	"top-fans-stats-comment-count": "{{PLURAL:$1|تعليق|تعليقان|تعليقات|تعليقًا|تعليق}}",
 	"top-fans-stats-referrals-completed": "{{PLURAL:$1|لا توجد إحالات|إحالة|إحالتان|إحالات}}",
 	"top-fans-stats-friends-count": "{{PLURAL:$1|لا يوجد أصدقاء|صديق|صديقان|أصدقاء}}",
 	"top-fans-stats-foe-count": "{{PLURAL:$1|لا يوجد أعداء|عدو|عدوان|أعداء}}",
