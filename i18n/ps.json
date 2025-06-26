@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"socialprofile-desc": "د مېډياويکي لپاره د ټولينيزو توکو ټولگه",
+	"socialprofile-uploads-disabled": "د ځان‌بڼې راپورته‌کولو ځانگړنه ناچارنه ده",
+	"apihelp-smpuserprivacy-summary": "د پېژنليک ډگر د ښکارېدو (\"پټنتيا\") لپاره ای‌پي‌آی چلنوال",
+	"apihelp-smpuserprivacy-param-method": "چاره (يو له \"اخيستل\" يا \"اوڼل\")",
+	"apihelp-smpuserprivacy-param-field_key": "د موخې ډگر کونجي، لکه up_movies د \"پيلمونو\" ډگر لپاره",
+	"apihelp-smpuserprivacy-param-privacy": "د پټنتيا نوی ارزښت ( يو له لاندې ارزښتونو:ټولوال، پټ‌شوی، ملگري، foaf)"
+}
