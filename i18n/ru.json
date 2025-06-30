@@ -2,16 +2,23 @@
 	"@metadata": {
 		"authors": [
 			"Dirruw'o",
+			"Engineer56",
 			"Facenapalm",
 			"Okras"
 		]
 	},
 	"socialprofile-desc": "Набор социальных инструментов для MediaWiki",
 	"socialprofile-uploads-disabled": "Функция загрузки аватара отключена",
+	"apihelp-removeavatar-summary": "Удалить Вашу или, если у вас есть привилегии, чужую аватарку другого пользователя.",
+	"apihelp-removeavatar-param-reason": "Необязательная причина, по которой вы удаляете чужую аватарку.",
 	"apihelp-removeavatar-param-user": "Имя пользователя, аватар которого удалить",
+	"apihelp-removeavatar-example-1": "Удалить аватарку пользователя с именем «Эшли»",
+	"apihelp-removeavatar-example-2": "Удалить аватарку пользователя с именем «Электра» с указанием причины удаления «Очевидное копирование»",
 	"apierror-avatar-is-default": "Аватар пользователя уже стоит по умолчанию.",
 	"apihelp-uploadavatar-summary": "Загрузить аватар",
+	"apihelp-uploadavatar-example-url": "Загрузите изображение с https://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png в качестве своей аватарки.",
 	"apihelp-uploadavatar-param-file": "Новое содержимое файла изображения аватара.",
+	"apihelp-uploadavatar-param-url": "Ссылка на запрашиваемый файл.",
 	"apihelp-smpuserprivacy-summary": "Модуль API для установки видимости («конфиденциальности») поля профиля",
 	"apihelp-smpuserprivacy-param-method": "Действие («get» или «set»)",
 	"apihelp-smpuserprivacy-param-field_key": "Ключ целевого поля, например, up_movies для поля «Фильмы»",
