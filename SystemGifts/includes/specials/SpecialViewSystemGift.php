@@ -39,7 +39,7 @@ class ViewSystemGift extends UnlistedSpecialPage {
 		// numeric, display an error message
 		$giftId = $this->getRequest()->getInt( 'gift_id' );
 		if ( !$giftId ) {
-			$out->setPageTitle( $this->msg( 'ga-error-title' ) );
+			$out->setPageTitle( $this->msg( 'ga-error-title' )->escaped() );
 			$out->addHTML( $this->msg( 'ga-error-message-invalid-link' )->escaped() );
 			return;
 		}

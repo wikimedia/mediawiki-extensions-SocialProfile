@@ -74,7 +74,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 		$userTitle = Title::newFromDBkey( $request->getVal( 'user', $user_name ) );
 
 		if ( !$userTitle ) {
-			$out->setPageTitle( $this->msg( 'ur-error-title' ) );
+			$out->setPageTitle( $this->msg( 'ur-error-title' )->escaped() );
 			$out->addWikiMsg( 'ur-add-no-user' );
 			return;
 		}

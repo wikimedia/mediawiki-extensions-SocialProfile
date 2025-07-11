@@ -125,7 +125,7 @@ class TopAwards extends UnlistedSpecialPage {
 		// topawards-comment-title, topawards-recruit-title,
 		// topawards-friend-title
 		$out->setPageTitle(
-			$this->msg( 'topawards-' . strtolower( $page_category ) . '-title' )
+			$this->msg( 'topawards-' . strtolower( $page_category ) . '-title' )->escaped()
 		);
 
 		// Add CSS
