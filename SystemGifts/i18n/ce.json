@@ -4,5 +4,18 @@
 			"Умар"
 		]
 	},
-	"ga-choosefile": "Харжа файл"
+	"ga-choosefile": "Харжа файл",
+	"ga-gift": "совгӀат",
+	"ga-new": "Керланиг",
+	"ga-small": "Жима",
+	"ga-threshold": "чаккхе:",
+	"ga-title": "СовгӀаташ $1",
+	"ga-uploadsuccess": "Чудаккхар кхиамца чекхдаьлла",
+	"ga-remove": "ДӀайаккха",
+	"ga-remove-title": "ДӀайаккха «$1» ?",
+	"topawards-edits": "Нисдарш",
+	"topawards-votes": "Аьзнаш",
+	"topawards-comments": "Комментареш",
+	"topawards-friends": "ДоттагӀий",
+	"echo-category-title-social-award": "СовгӀаташ"
 }

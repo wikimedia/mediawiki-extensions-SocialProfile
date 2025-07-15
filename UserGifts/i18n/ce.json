@@ -4,10 +4,21 @@
 			"Умар"
 		]
 	},
+	"giftmanager-public": "массарна лело йиш йолуш",
+	"giftmanager-private": "долара",
 	"g-add-message": "ТӀетоха хаам",
 	"g-choose-file": "Харжа файл:",
 	"g-current-image": "Карара сурт",
 	"g-give-all-message-title": "ТӀетоха хаам",
+	"g-give-separator": "йа",
+	"g-go-back": "Йуханехьа",
+	"g-large": "Йоккха",
+	"g-medium": "Йукъара",
+	"g-mediumlarge": "Йуккъера-боккха",
+	"g-new": "керла",
+	"g-next": "РогӀера",
+	"g-previous": "Хьалх.",
 	"g-remove": "ДӀайаккха",
-	"g-remove-title": "ДӀайаккха «$1» ?"
+	"g-remove-title": "ДӀайаккха «$1» ?",
+	"g-small": "Жима"
 }

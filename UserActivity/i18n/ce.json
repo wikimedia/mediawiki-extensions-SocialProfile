@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Умар"
+		]
+	},
+	"useractivity-all": "Йерриге хьажа",
+	"useractivity-filter": "Фильтр",
+	"useractivity-friend": "$1 {{PLURAL:$2|хӀинца доттагӀалла ду|хӀинца доттагӀий бу}} $3",
+	"useractivity-group-edit": "$1 {{PLURAL:$1|нисдар}}",
+	"useractivity-group-comment": "{{PLURAL:$1|цхьа комментари|$1 комментари}}",
+	"useractivity-group-user_message": "{{PLURAL:$1|цхьа хаам|$1 хаам}}",
+	"useractivity-group-friend": "{{PLURAL:$1|цхьа доттагӀ|$1 доттагӀ}}",
+	"useractivity-siteactivity": "Сайтан жигаралла",
+	"useractivity-title": "ДоттагӀийн ардамаш",
+	"useractivity-user_message": "$1 дӀабахьийтина {{PLURAL:$4|хаам}} $3"
+}

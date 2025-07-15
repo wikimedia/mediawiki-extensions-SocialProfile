@@ -211,6 +211,7 @@
 	"avatarlogpagetext": "Це журнал завантаження і вилучення аватарів користувача",
 	"user-profile-picture-log-entry": "завантажити новий аватар",
 	"user-profile-picture-log-delete-entry": "видалити аватар $1",
+	"user-profile-picture-log-delete-entry-with-reason": "вилучено аватар користувача $1; причина: $2",
 	"user-profile-remove-avatar": "вилучити",
 	"right-avatarremove": "Вилучити аватари користувача",
 	"right-editothersprofiles": "Оновіть соціальні профілі інших користувачів",
