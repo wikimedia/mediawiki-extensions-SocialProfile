@@ -121,34 +121,18 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 	public static function importUserWiki( User $user ) {
 		$article = $user->getUserPage();
 		$user_wiki_title = Title::makeTitle( NS_USER_WIKI, $user->getName() );
-		if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
-			// MW 1.36+
-			$wikiPageFactory = MediaWikiServices::getInstance()->getWikiPageFactory();
-			$wikiPage = $wikiPageFactory->newFromTitle( $article );
-			$user_wiki = $wikiPageFactory->newFromTitle( $user_wiki_title );
-		} else {
-			$wikiPage = new WikiPage( $article );
-			// @phan-suppress-next-line PhanUndeclaredStaticMethod
-			$user_wiki = WikiPage::factory( $user_wiki_title );
-		}
+		$wikiPageFactory = MediaWikiServices::getInstance()->getWikiPageFactory();
+		$wikiPage = $wikiPageFactory->newFromTitle( $article );
+		$user_wiki = $wikiPageFactory->newFromTitle( $user_wiki_title );
 
 		$contentObject = $wikiPage->getContent();
 		$user_page_content = ContentHandler::getContentText( $contentObject );
 		if ( !$user_wiki->exists() ) {
-			if ( method_exists( $user_wiki, 'doUserEditContent' ) ) {
-				// MW 1.36+
-				$user_wiki->doUserEditContent(
-					ContentHandler::makeContent( $user_page_content, $user_wiki_title ),
-					$user,
-					'import user wiki'
-				);
-			} else {
-				// @phan-suppress-next-line PhanUndeclaredMethod Removed in MW 1.41
-				$user_wiki->doEditContent(
-					ContentHandler::makeContent( $user_page_content, $user_wiki_title ),
-					'import user wiki'
-				);
-			}
+			$user_wiki->doUserEditContent(
+				ContentHandler::makeContent( $user_page_content, $user_wiki_title ),
+				$user,
+				'import user wiki'
+			);
 		}
 	}
 

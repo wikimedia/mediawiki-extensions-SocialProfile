@@ -37,15 +37,9 @@ class PurgeAvatarKeysFromMemcached extends Maintenance {
 			if ( $this->hasOption( 'uid' ) ) {
 				$uid = (int)$this->getOption( 'uid' );
 			} elseif ( $this->hasOption( 'username' ) ) {
-				if ( method_exists( MediaWikiServices::class, 'getUserIdentityLookup' ) ) {
-					// MW 1.36+
-					$userIdentity = $services->getUserIdentityLookup()
-						->getUserIdentityByName( $this->getOption( 'username' ) );
-					$uid = $userIdentity ? $userIdentity->getId() : 0;
-				} else {
-					// @phan-suppress-next-line PhanUndeclaredStaticMethod Removed in MW 1.41+
-					$uid = User::idFromName( $this->getOption( 'username' ) );
-				}
+				$userIdentity = $services->getUserIdentityLookup()
+					->getUserIdentityByName( $this->getOption( 'username' ) );
+				$uid = $userIdentity ? $userIdentity->getId() : 0;
 			}
 			if ( !$uid ) {
 				$this->fatalError(

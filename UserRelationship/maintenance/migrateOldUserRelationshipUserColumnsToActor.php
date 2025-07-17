@@ -61,12 +61,7 @@ class MigrateOldUserRelationshipUserColumnsToActor extends LoggedUpdateMaintenan
 			);
 			foreach ( $res as $row ) {
 				$user = User::newFromId( $row->r_user_id );
-				if ( interface_exists( '\MediaWiki\User\ActorNormalization' ) ) {
-					// MW 1.36+
-					$actorId = MediaWikiServices::getInstance()->getActorNormalization()->acquireActorId( $user, $dbw );
-				} else {
-					$actorId = $user->getActorId( $dbw );
-				}
+				$actorId = MediaWikiServices::getInstance()->getActorNormalization()->acquireActorId( $user, $dbw );
 				$dbw->update(
 					'user_relationship',
 					[
@@ -92,12 +87,7 @@ class MigrateOldUserRelationshipUserColumnsToActor extends LoggedUpdateMaintenan
 			);
 			foreach ( $res as $row ) {
 				$user = User::newFromId( $row->r_user_id_relation );
-				if ( interface_exists( '\MediaWiki\User\ActorNormalization' ) ) {
-					// MW 1.36+
-					$actorId = MediaWikiServices::getInstance()->getActorNormalization()->acquireActorId( $user, $dbw );
-				} else {
-					$actorId = $user->getActorId( $dbw );
-				}
+				$actorId = MediaWikiServices::getInstance()->getActorNormalization()->acquireActorId( $user, $dbw );
 				$dbw->update(
 					'user_relationship',
 					[

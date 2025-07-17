@@ -143,13 +143,7 @@ class UserProfileHooks {
 			}
 
 			if ( $show_user_page ) {
-				if ( method_exists( $out, 'disableClientCache' ) ) {
-					// MW 1.38+
-					$out->disableClientCache();
-				} else {
-					// @phan-suppress-next-line PhanParamTooMany The arg is there for pre-1.38 MWs
-					$out->enableClientCache( false );
-				}
+				$out->disableClientCache();
 
 				$hookContainer->register( 'ParserLimitReportPrepare', 'UserProfileHooks::onParserLimitReportPrepare' );
 			}

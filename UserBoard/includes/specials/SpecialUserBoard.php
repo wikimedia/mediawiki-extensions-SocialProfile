@@ -91,15 +91,9 @@ class SpecialViewUserBoard extends SpecialPage {
 		if ( !$user_name ) {
 			$user_name = $currentUser->getName();
 		}
-		if ( method_exists( MediaWikiServices::class, 'getUserIdentityLookup' ) ) {
-			// MW 1.36+
-			$userIdentity = MediaWikiServices::getInstance()->getUserIdentityLookup()
-				->getUserIdentityByName( $user_name );
-			$user_id = $userIdentity ? $userIdentity->getId() : 0;
-		} else {
-			// @phan-suppress-next-line PhanUndeclaredStaticMethod Removed in MW 1.41+
-			$user_id = User::idFromName( $user_name );
-		}
+		$userIdentity = MediaWikiServices::getInstance()->getUserIdentityLookup()
+			->getUserIdentityByName( $user_name );
+		$user_id = $userIdentity ? $userIdentity->getId() : 0;
 		$user = Title::makeTitle( NS_USER, $user_name );
 
 		// Compare with '' to handle [[User:0]]

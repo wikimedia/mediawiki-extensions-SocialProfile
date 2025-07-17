@@ -31,14 +31,8 @@ class UserWelcome {
 		// This is so stupid. The callback to onParserFirstCallInit() is
 		// *always* (assumed to be) static even if you don't declare it as such.
 		// So obviously using $this in a static function fails...grumble grumble.
-		if ( method_exists( $parser, 'getUserIdentity' ) ) {
-			// MW 1.36+
-			$user = MediaWikiServices::getInstance()
-				->getUserFactory()->newFromUserIdentity( $parser->getUserIdentity() );
-		} else {
-			// @phan-suppress-next-line PhanUndeclaredMethod
-			$user = $parser->getUser();
-		}
+		$user = MediaWikiServices::getInstance()
+			->getUserFactory()->newFromUserIdentity( $parser->getUserIdentity() );
 		$uw = new UserWelcome( $user );
 		$output = $uw->getWelcome();
 		return $output;

@@ -254,15 +254,9 @@ class RemoveAvatar extends SpecialPage {
 	private function showUserAvatar( $user_name ) {
 		$out = $this->getOutput();
 		$user_name = str_replace( '_', ' ', $user_name ); // replace underscores with spaces
-		if ( method_exists( MediaWikiServices::class, 'getUserIdentityLookup' ) ) {
-			// MW 1.36+
-			$userIdentity = MediaWikiServices::getInstance()->getUserIdentityLookup()
-				->getUserIdentityByName( $user_name );
-			$user_id = $userIdentity ? $userIdentity->getId() : 0;
-		} else {
-			// @phan-suppress-next-line PhanUndeclaredStaticMethod Removed in MW 1.41+
-			$user_id = User::idFromName( $user_name );
-		}
+		$userIdentity = MediaWikiServices::getInstance()->getUserIdentityLookup()
+			->getUserIdentityByName( $user_name );
+		$user_id = $userIdentity ? $userIdentity->getId() : 0;
 
 		$currentUser = $this->getUser();
 		$userIsAvatarOwner = ( $currentUser->getName() === $user_name );

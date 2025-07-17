@@ -219,30 +219,14 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 
 			// create the user page if it doesn't exist yet
 			$title = Title::makeTitle( NS_USER, $user->getName() );
-			if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
-				// MW 1.36+
-				$page = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $title );
-			} else {
-				// @phan-suppress-next-line PhanUndeclaredStaticMethod
-				$page = WikiPage::factory( $title );
-			}
+			$page = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $title );
 			if ( !$page->exists() ) {
-				if ( method_exists( $page, 'doUserEditContent' ) ) {
-					// MW 1.36+
-					$page->doUserEditContent(
-						ContentHandler::makeContent( '', $title ),
-						$this->getUser(),
-						'create user page',
-						EDIT_SUPPRESS_RC
-					);
-				} else {
-					// @phan-suppress-next-line PhanUndeclaredMethod Removed in MW 1.41
-					$page->doEditContent(
-						ContentHandler::makeContent( '', $title ),
-						'create user page',
-						EDIT_SUPPRESS_RC
-					);
-				}
+				$page->doUserEditContent(
+					ContentHandler::makeContent( '', $title ),
+					$this->getUser(),
+					'create user page',
+					EDIT_SUPPRESS_RC
+				);
 			}
 		}
 
