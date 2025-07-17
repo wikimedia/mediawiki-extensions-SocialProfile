@@ -53,7 +53,7 @@ class ViewSystemGifts extends SpecialPage {
 		if ( !$currentUser->isRegistered() && $user_name == '' ) {
 			$out->setPageTitle( $this->msg( 'ga-error-title' )->escaped() );
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
-			$out->redirect( htmlspecialchars( $login->getFullURL( 'returnto=Special:ViewSystemGifts' ) ) );
+			$out->redirect( $login->getFullURL( 'returnto=Special:ViewSystemGifts' ) );
 			return;
 		}
 

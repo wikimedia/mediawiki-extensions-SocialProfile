@@ -64,7 +64,7 @@ class ViewGifts extends SpecialPage {
 		 */
 		if ( $currentUser->getId() == 0 && $user_name == '' ) {
 			$login = SpecialPage::getTitleFor( 'Userlogin' );
-			$out->redirect( htmlspecialchars( $login->getFullURL( 'returnto=Special:ViewGifts' ) ) );
+			$out->redirect( $login->getFullURL( 'returnto=Special:ViewGifts' ) );
 			return;
 		}
 
