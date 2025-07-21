@@ -4,8 +4,24 @@
 			"Умар"
 		]
 	},
+	"messagesenttitle": "Хаам дӀахьажийна",
+	"boardblaststep1": "1-ра гӀулч - Хьайн хаам йазбе",
+	"boardlinkselectall": "Харжа массо",
+	"boardlinkunselectall": "ДӀадаккха харжар",
+	"boardlinkselectfriends": "ДоттагӀий харжа",
+	"boardlinkunselectfriends": "ДоттагӀий йукъара баха",
+	"userboard": "Декъашхочун у",
+	"userboard_yourboard": "Хьан у",
+	"userboard_owner": "Декъашхочун у $1",
 	"userboard_sendmessage": "ДӀабахьийта хаам $1",
+	"userboard_posted_ago": "дӀайазйина $1 хьалха",
+	"userboard_private": "долара",
 	"userboard_public": "массарна лело йиш йолуш",
+	"userboard_messagetype": "Хааман тайпа",
+	"userboard_nomessages": "Хаамаш бац.",
 	"userboard_sendbutton": "дӀадахьийта",
-	"userboard-time-hours": "{{PLURAL:$1|$1 сахьт|$1 сахьт|$1 сахьт}}"
+	"userboard-time-days": "{{PLURAL:$1|цхьа де|$1 де}}",
+	"userboard-time-hours": "{{PLURAL:$1|цхьа сахьт|$1 сахьт}}",
+	"userboard-time-minutes": "{{PLURAL:$1|цхьа минот|$1 минот}}",
+	"userboard-time-seconds": "{{PLURAL:$1|цхьа секунд|$1 секунд}}"
 }

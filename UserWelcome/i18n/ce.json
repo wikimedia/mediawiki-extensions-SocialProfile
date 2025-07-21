@@ -4,6 +4,15 @@
 			"Умар"
 		]
 	},
+	"mp-userlevels-link": "Декъашхойн тӀегӀанаш",
 	"mp-welcome-upload": "Чуйаккха",
-	"mp-request-new-message": "керла хаам"
+	"mp-welcome-points": "$1 {{PLURAL:$1|очко}}",
+	"mp-welcome-logged-in": "Маршалла, $1",
+	"mp-requests-title": "Дехарш",
+	"mp-requests-message": "Хьан рогӀера дехарш ду.",
+	"mp-request-new-message": "керла хаам",
+	"mp-request-new-award": "$1 {{PLURAL:$1|керла совгӀат}}",
+	"mp-request-new-gift": "$1 {{PLURAL:$1|керла совгӀат}}",
+	"mp-request-new-foe": "$1 {{PLURAL:$1|керла мостагӀ}}",
+	"mp-request-new-friend": "$1 {{PLURAL:$1|керла доттагӀ}}"
 }
