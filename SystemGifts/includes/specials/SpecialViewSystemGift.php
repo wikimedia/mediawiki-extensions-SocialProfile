@@ -76,7 +76,7 @@ class ViewSystemGift extends UnlistedSpecialPage {
 				[ 'actor' => [ 'JOIN', 'actor_id = sg_actor' ] ]
 			);
 
-			$out->setPageTitle( $this->msg( 'ga-gift-title', $gift['user_name'], $gift['name'] ) );
+			$out->setPageTitle( $this->msg( 'ga-gift-title', $gift['user_name'], $gift['name'] )->parse() );
 
 			$output .= '<div class="back-links">' .
 				$this->msg( 'ga-back-link', $gift['user_name'] )->parse() .
@@ -133,7 +133,7 @@ class ViewSystemGift extends UnlistedSpecialPage {
 
 			$out->addHTML( $output );
 		} else {
-			$out->setPageTitle( $this->msg( 'ga-error-title' ) );
+			$out->setPageTitle( $this->msg( 'ga-error-title' )->escaped() );
 			$out->addHTML( $this->msg( 'ga-error-message-invalid-link' )->escaped() );
 		}
 	}
