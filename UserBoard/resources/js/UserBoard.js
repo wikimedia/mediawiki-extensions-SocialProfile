@@ -1,10 +1,7 @@
 var UserBoard = {
 	posted: 0,
 
-	sendMessage: function ( perPage ) {
-		if ( !perPage ) {
-			perPage = 25;
-		}
+	sendMessage: function () {
 		const message = document.getElementById( 'message' ).value,
 			recipient = document.getElementById( 'user_name_to' ).value,
 			sender = document.getElementById( 'user_name_from' ).value;
@@ -61,6 +58,6 @@ $( () => {
 	// Submit button
 	$( 'div.user-page-message-box-button input[type="submit"]' ).on( 'click', function ( e ) {
 		e.preventDefault();
-		UserBoard.sendMessage( $( this ).data( 'per-page' ) );
+		UserBoard.sendMessage();
 	} );
 } );

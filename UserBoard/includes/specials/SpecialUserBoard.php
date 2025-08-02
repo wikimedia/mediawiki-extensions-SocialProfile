@@ -343,7 +343,7 @@ class SpecialViewUserBoard extends SpecialPage {
 					<textarea name="message" id="message" cols="63" rows="4"></textarea>
 
 					<div class="user-page-message-box-button">
-						<input type="submit" value="' . $this->msg( 'userboard_sendbutton' )->escaped() . '" class="site-button" data-per-page="' . $per_page . '" />
+						<input type="submit" value="' . $this->msg( 'userboard_sendbutton' )->escaped() . '" class="site-button" />
 					</div>' .
 					Html::hidden( 'wpEditToken', $currentUser->getEditToken() ) .
 				'</form>
