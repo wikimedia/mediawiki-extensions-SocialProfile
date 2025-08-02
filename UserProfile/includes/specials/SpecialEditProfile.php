@@ -132,7 +132,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		// Needed because display*Form() functions can and do override our title so
 		// if we don't do this here, the page title ends up being something like
 		// "Other information" and the HTML title ends up being "Tidbits"
-		$out->setPageTitle( $this->msg( 'editprofile' ) );
+		$out->setPageTitle( $this->msg( 'editprofile' )->escaped() );
 		$out->setHTMLTitle( $this->msg( 'pagetitle', $this->msg( 'edit-profiles-title' ) ) );
 	}
 
