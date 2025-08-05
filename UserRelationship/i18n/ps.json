@@ -1,18 +1,22 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ahmed-Najib-Biabani-Ibrahimkhel"
+			"Ahmed-Najib-Biabani-Ibrahimkhel",
+			"شاه زمان پټان"
 		]
 	},
 	"viewrelationships": "اړيکې کتل",
 	"viewrelationshiprequests": "د اړيکو غوښتنې کتل",
 	"ur-already-submitted": "ستاسې غوښتنه ولېږل شوه",
-	"ur-your-profile": "ستاسې پېژنليک",
-	"ur-add-friend": "خپل په ملګرو کې ورګډول",
-	"ur-add-foe": "د سيال په توګه ورګډول",
-	"ur-add-personal-message": "يو شخصي پيغام ورليکل",
-	"ur-remove-relationship-friend": "د ملګرتوب نه ليري کول",
-	"ur-remove-relationship-foe": "د سيالۍ نه ليري کول",
+	"ur-error-title": "اوه، تاسو ناسم گام پورته کړ!",
+	"ur-error-message-no-user": "موږ ستاسو غوښتنه نشو بشپړولی، ځکه چې دې نوم سره هېڅ کارن شتون نه لري.",
+	"ur-your-profile": "ستاسې پېژنيال",
+	"ur-backlink": "&lt; بېرته  $1 پېژنيال ته",
+	"ur-add-friend": "د ملگري په توگه ورگډول",
+	"ur-add-foe": "د ميرڅي په توگه ورگډول",
+	"ur-add-personal-message": "يو شخصي پيغام ورگډول",
+	"ur-remove-relationship-friend": "له ملگرتيا لرې‌کول",
+	"ur-remove-relationship-foe": "ميرڅي په توگه لرې‌کول",
 	"ur-give-gift": "يوه ډالۍ ورکول",
 	"ur-remove-relationship-title-foe": "آيا تاسې غواړۍ چې $1 د خپلې سيالۍ نه ليرې کړۍ؟",
 	"ur-remove-relationship-title-friend": "آيا تاسې غواړۍ چې $1 د خپل ملګرتوب نه ليرې کړۍ؟",
