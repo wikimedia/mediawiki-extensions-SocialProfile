@@ -125,11 +125,35 @@ class GiveGift extends SpecialPage {
 			) {
 				$_SESSION['alreadysubmitted'] = true;
 
+				// Check the user-supplied message for spam etc.
+				$message = $request->getVal( 'message' );
+
+				// @todo *Ideally* the below two anti-spam checks would have a
+				// "Return to $this->userTo's profile" button but renderReturnToButtons() currently
+				// only renders two buttons, one going to the Main Page and the second going to
+				// _your own_ profile. Still, it's better than nothing, though!
+				$hasSpam = SpecialUpdateProfile::validateSpamRegex( $message );
+				if ( $hasSpam ) {
+					$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
+					$out->addWikiMsg( 'spamprotectiontext' );
+					$out->addHTML( $this->renderReturnToButtons() );
+					return;
+				}
+
+				$hasSpam = SpecialUpdateProfile::validateSpamBlacklist( $message, rand(), $user );
+				if ( $hasSpam ) {
+					$out->setPageTitle( $this->msg( 'g-error-title' )->plain() );
+					$out->addWikiMsg( 'spamprotectiontext' );
+					$out->addHTML( $this->renderReturnToButtons() );
+					return;
+				}
+
+				// OK, no spam detected; so send the gift (and the message along with it, obviously)
 				$ug_gift_id = $gift->sendGift(
 					$this->userTo,
 					$giftId,
 					0,
-					$request->getVal( 'message' )
+					$message
 				);
 
 				// clear the cache for the user profile gifts for this user
@@ -190,14 +214,11 @@ class GiveGift extends SpecialPage {
 						htmlspecialchars( $sent_gift['message'] ) .
 					'</div>';
 				}
-				// NoJS TODO: these buttons should not require JS to work; might need to change
-				// them into styled <a>'s or something?
+
 				$output .= '</div>
-				<div class="visualClear"></div>
-				<div class="g-buttons">
-					<input type="button" class="site-button" value="' . $this->msg( 'mainpage' )->escaped() . '" size="20" onclick="window.location=\'' . htmlspecialchars( Title::newMainPage()->getFullURL() ) . '\'" />
-					<input type="button" class="site-button" value="' . $this->msg( 'g-your-profile' )->escaped() . '" size="20" onclick="window.location=\'' . htmlspecialchars( $user->getUserPage()->getFullURL() ) . '\'" />
-				</div>';
+				<div class="visualClear"></div>';
+
+				$output .= $this->renderReturnToButtons();
 
 				$out->addHTML( $output );
 			} else {
@@ -210,6 +231,22 @@ class GiveGift extends SpecialPage {
 				}
 			}
 		}
+	}
+
+	/**
+	 * Render the "Main Page" and "Your profile" buttons (which require JS to work properly), shown after
+	 * successfully sending a gift but also when tripping the anti-spam checks.
+	 *
+	 * @return string HTML suitable for output
+	 */
+	private function renderReturnToButtons() {
+		// NoJS TODO: these buttons should not require JS to work; might need to change
+		// them into styled <a>'s or something?
+		$html = '<div class="g-buttons">
+			<input type="button" class="site-button" value="' . $this->msg( 'mainpage' )->escaped() . '" size="20" onclick="window.location=\'' . htmlspecialchars( Title::newMainPage()->getFullURL() ) . '\'" />
+			<input type="button" class="site-button" value="' . $this->msg( 'g-your-profile' )->escaped() . '" size="20" onclick="window.location=\'' . htmlspecialchars( $this->getUser()->getUserPage()->getFullURL() ) . '\'" />
+		</div>';
+		return $html;
 	}
 
 	/**

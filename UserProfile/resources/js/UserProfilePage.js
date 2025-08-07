@@ -21,21 +21,35 @@ var UserProfilePage = {
 		} );
 	},
 
+	// @todo FIXME: merge with UserBoard's UserBoard.js and use ResourceLoader to call that new method or something
+	// I just don't want to implement the same code and same fixes in two different methods in two different files, when
+	// both basically internally are the same, only the location is different (user profile page vs. Special:UserBoard)
 	sendMessage: function () {
 		const userTo = decodeURIComponent( mw.config.get( 'wgTitle' ) ), // document.getElementById( 'user_name_to' ).value;
 			encMsg = encodeURIComponent( document.getElementById( 'message' ).value ),
 			msgType = document.getElementById( 'message_type' ).value;
+
 		if ( document.getElementById( 'message' ).value && !UserProfilePage.posted ) {
 			UserProfilePage.posted = 1;
+
 			( new mw.Api() ).postWithToken( 'csrf', {
 				action: 'socialprofile-send-message',
 				format: 'json',
 				username: userTo,
 				message: encMsg,
 				type: msgType
+			} ).always( () => {
+				// Always reset this flag so that it becomes possible to e.g. delete spammy parts of a message
+				// deemed to be spam and try again
+				UserProfilePage.posted = 0;
+			} ).fail( ( errorCode, details ) => {
+				// errorCode is e.g. 'spam' or 'nosend', from ApiSendUserBoardMessage
+				// details.error.info is the human-readable error text
+				if ( details && details.error && details.error.info ) {
+					alert( details.error.info );
+				}
 			} ).done( ( data ) => {
 				$( data.result ).prependTo( '#user-page-board' );
-				UserProfilePage.posted = 0;
 				$( '#message' ).val( '' );
 			} );
 		}

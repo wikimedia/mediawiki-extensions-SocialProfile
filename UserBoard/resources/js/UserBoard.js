@@ -5,17 +5,29 @@ var UserBoard = {
 		const message = document.getElementById( 'message' ).value,
 			recipient = document.getElementById( 'user_name_to' ).value,
 			sender = document.getElementById( 'user_name_from' ).value;
+
 		if ( message && !UserBoard.posted ) {
 			UserBoard.posted = 1;
+
 			const messageType = document.getElementById( 'message_type' ).value;
+
 			( new mw.Api() ).postWithToken( 'csrf', {
 				action: 'socialprofile-send-message',
 				format: 'json',
 				username: recipient,
 				message: message,
 				type: messageType
-			} ).done( () => {
+			} ).always( () => {
+				// Always reset this flag so that it becomes possible to e.g. delete spammy parts of a message
+				// deemed to be spam and try again
 				UserBoard.posted = 0;
+			} ).fail( ( errorCode, details ) => {
+				// errorCode is e.g. 'spam' or 'nosend', from ApiSendUserBoardMessage
+				// details.error.info is the human-readable error text
+				if ( details && details.error && details.error.info ) {
+					alert( details.error.info );
+				}
+			} ).done( () => {
 				let user_1, user_2;
 				if ( sender ) { // it's a board to board
 					user_1 = sender;

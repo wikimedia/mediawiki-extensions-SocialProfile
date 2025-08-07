@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use MediaWiki\User\UserIdentity;
@@ -85,10 +86,41 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		$this->profile_visible_fields = SPUserSecurity::getVisibleFields( $target, $user );
 
 		if ( $request->wasPosted() && $user->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
-			$this->saveProfileBasic( $target );
+			$statusBasic = $this->saveProfileBasic( $target );
 			$this->saveBasicSettings( $target );
-			$this->saveProfilePersonal( $target );
-			$this->saveProfileCustom( $target );
+			$statusPersonal = $this->saveProfilePersonal( $target );
+			$statusCustom = $this->saveProfileCustom( $target );
+
+			$problematicSections = [];
+			if ( !$statusBasic->isOK() ) {
+				$problematicSections[] = 'user-personal-info-title';
+			}
+			if ( !$statusPersonal->isOK() ) {
+				$problematicSections[] = 'other-info-title'; // [sic!]
+			}
+			if ( !$statusCustom->isOK() ) {
+				$problematicSections[] = 'custom-info-title';
+			}
+
+			// If there were errors saving one or more of the sections, let the
+			// admin user using this special page know
+			if ( $problematicSections !== [] && count( $problematicSections ) > 3 ) {
+				$out->addHTML( Html::errorBox(
+					// I wanted to use a more descriptive error message here but the i18n was giving me a headache,
+					// so I opted to...not do that.
+					// That's the very reason why $problematicSections uses valid i18n msg keys instead
+					// of plaintext section identifiers like 'basic', 'personal' or 'custom'.
+					// Either way, this should suffice to signal to the end-user (admin) that there's (still) spam
+					// and/or something else that's been blacklisted and which should be removed.
+					$this->msg( 'user-profile-error-spam' )->parse()
+				) );
+			} elseif ( $problematicSections !== [] && count( $problematicSections ) === 3 ) {
+				// ALL sections failed? Wow...do no further processing in that case, then.
+				$out->addHTML( Html::errorBox( $this->msg( 'user-profile-edit-error-all-section' )->parse() ) );
+				// @todo FIXME: this isn't optimal because now we're not displaying the form or anything, so
+				// the end-user's gotta user their browser's address bar to reload the page.
+				return;
+			}
 
 			UserProfile::clearCache( $target );
 

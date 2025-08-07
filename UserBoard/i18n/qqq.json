@@ -62,6 +62,7 @@
 	"echo-pref-tooltip-social-msg": "{{doc-echo-pref-tooltip|title=echo-category-title-social-msg}}",
 	"notification-social-msg-send": "[[mw:Extension:Echo|Echo]] notification title\nParameters:\n* $1 is the user name of the person who sent you a board message\n* $2 is the message they left you, or at least a part of it",
 	"notification-social-msg-send-bundle": "[[mw:Extension:Echo|Echo]] notification when multiple users have sent you board messages.\n$1 is the amount of users who sent you board messages.",
+	"apierror-socialprofile-send-message-nosend": "{{doc-apierror}}",
 	"apihelp-socialprofile-send-message-summary": "{{doc-apihelp-summary|socialprofile-send-message}}",
 	"apihelp-socialprofile-send-message-param-username": "{{doc-apihelp-param|socialprofile-send-message|username}}",
 	"apihelp-socialprofile-send-message-param-message": "{{doc-apihelp-param|socialprofile-send-message|message}}",

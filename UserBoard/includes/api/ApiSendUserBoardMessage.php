@@ -16,8 +16,7 @@ class ApiSendUserBoardMessage extends ApiBase {
 		// Don't allow blocked users to send messages and also don't allow message
 		// sending when the database is locked for some reason
 		if ( $user->getBlock() || $readOnlyMode->isReadOnly() ) {
-			$this->getResult()->addValue( null, 'result', 'You cannot send messages.' );
-			return true;
+			$this->dieWithError( 'apierror-socialprofile-send-message-nosend', 'nosend' );
 		}
 
 		$user_name = stripslashes( $user_name );
@@ -25,10 +24,19 @@ class ApiSendUserBoardMessage extends ApiBase {
 		$recipient = User::newFromName( $user_name );
 		$b = new UserBoard( $user );
 
+		$messageText = urldecode( $message );
+		$spamStatus = UserBoard::checkForSpam( $messageText, $user );
+		if ( !$spamStatus->isOK() ) {
+			// Use the generic error message from MW core.
+			// @todo Mildly silly, since we're totally ignoring the Status retval from
+			// the anti-spam method, but oh well.
+			$this->dieWithError( 'spamprotectiontext', 'spam' );
+		}
+
 		$m = $b->sendBoardMessage(
 			$user,
 			$recipient,
-			urldecode( $message ),
+			$messageText,
 			$message_type
 		);
 

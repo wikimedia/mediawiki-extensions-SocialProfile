@@ -60,12 +60,13 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$out->addModules( $jsModules );
 
 		$output = '';
+		$messageText = $request->getVal( 'message' );
 		$errors = [];
 
 		if ( $request->wasPosted() && $user->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
 			// Ensure that we have something to send, and if not, make a note to nag the
 			// user about that...
-			if ( empty( $request->getVal( 'message' ) ) ) {
+			if ( empty( $messageText ) ) {
 				$errors[] = 'boardblast-error-missing-message';
 			}
 
@@ -94,6 +95,16 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 				}
 			}
 
+			// Anti-spam checks
+			// @phan-suppress-next-line PhanTypeMismatchArgumentNullable
+			$spamStatus = UserBoard::checkForSpam( $messageText, $user );
+			if ( !$spamStatus->isOK() ) {
+				// Use the generic error message from MW core.
+				// @todo Mildly silly, since we're totally ignoring the Status retval from the anti-spam method, but
+				// oh well.
+				$errors[] = 'spamprotectiontext';
+			}
+
 			// If no errors popped up, everything should be fine and we can send the message!
 			if ( empty( $errors ) ) {
 				$out->setPageTitle( $this->msg( 'messagesenttitle' )->plain() );
@@ -107,7 +118,8 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 					$b->sendBoardMessage(
 						$user,
 						$recipient,
-						$request->getVal( 'message' ),
+						// @phan-suppress-next-line PhanTypeMismatchArgumentNullable Why are you like this, phan?
+						$messageText,
 						UserBoard::MESSAGE_PRIVATE
 					);
 					$count++;

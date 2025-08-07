@@ -32,6 +32,28 @@ class UserBoard {
 	}
 
 	/**
+	 * Check the given user-supplied text for spam and other nasty things.
+	 *
+	 * @note You should usually always call this before calling sendBoardMessage()!
+	 * @param string $textualContent The user-supplied text string to check for spam etc.
+	 * @param User|MediaWiki\User\UserIdentity $user The User (object) who is trying to send the message
+	 * @return Status
+	 */
+	public static function checkForSpam( $textualContent, $user ) {
+		$hasSpam = SpecialUpdateProfile::validateSpamRegex( $textualContent );
+		if ( $hasSpam ) {
+			return Status::newFatal( 'spamprotectiontext' );
+		}
+
+		$hasSpam = SpecialUpdateProfile::validateSpamBlacklist( $textualContent, rand(), $user );
+		if ( $hasSpam ) {
+			return Status::newFatal( 'spamprotectiontext' );
+		}
+
+		return Status::newGood();
+	}
+
+	/**
 	 * Sends a user board message to another user.
 	 *
 	 * Performs the insertion to user_board table, sends e-mail notification

@@ -141,12 +141,22 @@ class SpecialViewUserBoard extends SpecialPage {
 			} elseif ( $request->getVal( 'action' ) === 'send' ) {
 				// Sending a message
 				if ( $currentUser->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
-					$b->sendBoardMessage(
-						$currentUser,
-						User::newFromName( $request->getVal( 'user_name_to' ) ),
-						urldecode( $request->getVal( 'message' ) ),
-						$request->getInt( 'message_type' )
-					);
+					$messageText = urldecode( $request->getVal( 'message' ) );
+					$spamStatus = UserBoard::checkForSpam( $messageText, $currentUser );
+
+					if ( !$spamStatus->isOK() ) {
+						// Use the generic error message from MW core.
+						// @todo Mildly silly, since we're totally ignoring the Status retval from the
+						// anti-spam method, but oh well.
+						$output .= Html::errorBox( $this->msg( 'spamprotectiontext' )->parse() );
+					} else {
+						$b->sendBoardMessage(
+							$currentUser,
+							User::newFromName( $request->getVal( 'user_name_to' ) ),
+							$messageText,
+							$request->getInt( 'message_type' )
+						);
+					}
 				} else {
 					// CSRF attempt or something...display an informational message in that case
 					$output .= Html::errorBox( $this->msg( 'sessionfailure' )->escaped() );
