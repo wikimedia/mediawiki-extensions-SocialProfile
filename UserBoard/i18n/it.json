@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Beta16",
 			"Darth Kule"
 		]
 	},
@@ -9,5 +10,6 @@
 	"userboard_private": "privata",
 	"userboard_public": "pubblico",
 	"userboard_nomessages": "Non vi sono nuovi messaggi.",
-	"userboard_sendbutton": "invia"
+	"userboard_sendbutton": "invia",
+	"apierror-socialprofile-send-message-nosend": "Non puoi inviare messaggi,"
 }

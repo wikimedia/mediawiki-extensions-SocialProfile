@@ -56,6 +56,7 @@
 	"echo-pref-tooltip-social-msg": "Извести ме кога некој ќе ми остави порака на мојата корисничка табла.",
 	"notification-social-msg-send": "$1 штотуку ви остави порака на вашата корисничка табла.<br /><br />''$2''",
 	"notification-social-msg-send-bundle": "На корисничката табла имате {{PLURAL:$1|една порака|$1 пораки|100=преку 99 пораки}}.",
+	"apierror-socialprofile-send-message-nosend": "Не можете да праќате пораки,",
 	"apihelp-socialprofile-send-message-summary": "Испраќање порака на нечија корисничка табла.",
 	"apihelp-socialprofile-send-message-param-username": "Корисничко име на примачот.",
 	"apihelp-socialprofile-send-message-param-message": "Верзија на пораката за испраќање во URL-код.",

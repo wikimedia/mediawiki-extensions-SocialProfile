@@ -56,6 +56,7 @@
 	"echo-pref-tooltip-social-msg": "Notificar me quando alcuno lassa un message sur mi tabuliero de usator.",
 	"notification-social-msg-send": "$1 ha justo ora lassate un message sur tu tabuliero de usator.<br /><br />''$2''",
 	"notification-social-msg-send-bundle": "{{PLURAL:$1|Un message|$1 messages|100=99+ messages}} ha essite lassate sur tu tabuliero de ustor.",
+	"apierror-socialprofile-send-message-nosend": "Tu non pote inviar messages.",
 	"apihelp-socialprofile-send-message-summary": "Inviar un message al tabuliero (UserBoard) de un usator.",
 	"apihelp-socialprofile-send-message-param-username": "Le nomine de usator del destinatario.",
 	"apihelp-socialprofile-send-message-param-message": "Un version codificate in forma de URL del message a inviar.",

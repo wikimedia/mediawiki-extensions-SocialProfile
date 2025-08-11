@@ -60,6 +60,7 @@
 	"echo-pref-tooltip-social-msg": "إعلامي عندما يترك شخص ما رسالة على لوحة المستخدم الخاصة بي.",
 	"notification-social-msg-send": "$1 ترك للتو رسالة على لوحة المستخدم الخاصة بك.<br /><br /> $2",
 	"notification-social-msg-send-bundle": "{{PLURAL:$1| رسالة واحدة | $1 رسائل | 100 = 99 + رسالة}} تركت على لوحة المستخدم الخاصة بك.",
+	"apierror-socialprofile-send-message-nosend": "لا يمكنك إرسال الرسائل،",
 	"apihelp-socialprofile-send-message-summary": "أرسل رسالة إلى لوحة مستخدم المستخدم.",
 	"apihelp-socialprofile-send-message-param-username": "اسم مستخدم المستلم.",
 	"apihelp-socialprofile-send-message-param-message": "نسخة مشفرة من URL للرسالة لإرسالها.",
