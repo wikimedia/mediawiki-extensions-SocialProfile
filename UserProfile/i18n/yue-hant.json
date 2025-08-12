@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"JeffreyKim",
 			"Ktchankt"
 		]
 	},
+	"user-profile-edit-error-all-section": "嘗試儲存所有部分嗰陣發生錯誤。 用戶個人檔案嘅變更<u>未</u>儲存。",
+	"user-profile-error-spam": "錯誤：喺一個或者多個個人檔案欄位值入面搵到啲垃圾內容。唔該修改個數值。",
 	"user-page-link": "用戶頁"
 }
