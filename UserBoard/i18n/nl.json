@@ -58,6 +58,7 @@
 	"echo-pref-tooltip-social-msg": "Laat het me weten als iemand een bericht achterlaat op mijn gebruikersprikbord.",
 	"notification-social-msg-send": "$1 heeft zojuist een bericht achtergelaten op uw prikbord.<br /><br /> ''$2''",
 	"notification-social-msg-send-bundle": "Er {{PLURAL:$1|is één bericht|zijn $1 berichten|100=zijn meer dan 99 berichten}} achtergelaten op uw gebruikersprikbord.",
+	"apierror-socialprofile-send-message-nosend": "U kunt geen berichten versturen.",
 	"apihelp-socialprofile-send-message-summary": "Stuur een bericht naar het prikbord van een gebruiker.",
 	"apihelp-socialprofile-send-message-param-username": "De gebruikersnaam van de ontvanger.",
 	"apihelp-socialprofile-send-message-param-message": "Een als URL gecodeerde versie van het te verzenden bericht.",
