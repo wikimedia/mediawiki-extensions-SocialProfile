@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Crochet.david",
+			"Derugon",
 			"Gomoko",
 			"Grondin",
 			"IAlex",
@@ -63,6 +64,7 @@
 	"echo-pref-tooltip-social-msg": "Me notifier quand quelqu’un a laissé un message sur mon panneau utilisateur.",
 	"notification-social-msg-send": "$1 vient de laisser un message sur votre panneau utilisateur.<br /><br />''$2''",
 	"notification-social-msg-send-bundle": "{{PLURAL:$1|Un message a été laissé|$1 messages ont été laissés|100=Plus de 100 messages ont été laissés}} sur votre panneau utilisateur.",
+	"apierror-socialprofile-send-message-nosend": "Vous ne pouvez pas envoyer de messages,",
 	"apihelp-socialprofile-send-message-summary": "Envoyer un message au UserBoard d’un utilisateur.",
 	"apihelp-socialprofile-send-message-param-username": "Le nom d’utilisateur du destinataire.",
 	"apihelp-socialprofile-send-message-param-message": "Une version encodée sous forme d'URL du message à envoyer.",

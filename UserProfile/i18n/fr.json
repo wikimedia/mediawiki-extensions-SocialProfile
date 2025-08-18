@@ -3,6 +3,7 @@
 		"authors": [
 			"Crochet.david",
 			"Damouns",
+			"Derugon",
 			"Gomoko",
 			"Grondin",
 			"IAlex",
@@ -97,6 +98,7 @@
 	"user-recent-system-gift": "A reçu une récompense",
 	"user-profile-update-saved": "Votre profil a été sauvegardé",
 	"user-profile-edit-profile-update-saved": "Le profil de l'utilisateur a été sauvegardé avec succès",
+	"user-profile-edit-error-all-section": "Une erreur s’est produite lors de l’enregistrement de toutes les sections. Les modifications apportées au profil utilisateur <u>n’ont pas</u> été enregistrées.",
 	"user-profile-update-log-section": "section changée",
 	"user-profile-default-country": "États-Unis",
 	"user-profile-points": "$1 point{{PLURAL:$1||s}}",
@@ -185,6 +187,7 @@
 	"user-profile-privacy-status-privacy-hidden": "caché",
 	"user-profile-privacy-status-privacy-friends": "amis",
 	"user-profile-privacy-status-privacy-foaf": "amis d’amis",
+	"user-profile-error-spam": "Erreur : Du spam a été détecté dans une ou plusieurs valeurs de champs du profil. Veuillez modifier cette/ces valeur(s).",
 	"user-no-images": "Aucune image téléversée",
 	"edit-profile-title": "Modifier votre profil",
 	"edit-profiles-title": "Modifier les profils",
