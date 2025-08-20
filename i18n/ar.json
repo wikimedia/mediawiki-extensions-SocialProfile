@@ -1,11 +1,22 @@
 {
 	"@metadata": {
 		"authors": [
+			"Meno25",
 			"ديفيد"
 		]
 	},
 	"socialprofile-desc": "مجموعة من الأدوات الاجتماعية لميدياويكي",
 	"socialprofile-uploads-disabled": "تم تعطيل ميزة رفع الصور الرمزية",
+	"apihelp-removeavatar-summary": "قم بإزالة الصورة الرمزية، سواء الخاصة بك أو إذا كنت تتمتع بالامتياز، قم أيضًا بإزالة الصورة الرمزية الخاصة بمستخدم آخر.",
+	"apihelp-removeavatar-param-reason": "سبب اختياري لإزالة صورة شخص آخر.",
+	"apihelp-removeavatar-param-user": "اسم المستخدم الذي يريد إزالة الصورة الرمزية الخاصة به.",
+	"apihelp-removeavatar-example-1": "إزالة الصورة الرمزية للمستخدم المسمى \"أشلي\"",
+	"apihelp-removeavatar-example-2": "إزالة الصورة الرمزية للمستخدم المسمى \"Elektra\" مع \"Blatant copyvio\" كسبب للحذف",
+	"apierror-avatar-is-default": "الصورة الرمزية للمستخدم هي بالفعل الصورة الافتراضية.",
+	"apihelp-uploadavatar-summary": "تحميل الصورة الرمزية.",
+	"apihelp-uploadavatar-example-url": "قم برفع الصورة من https://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png كصورة رمزية لك.",
+	"apihelp-uploadavatar-param-file": "محتويات ملف صورة الرمزية الجديدة.",
+	"apihelp-uploadavatar-param-url": "عنوان URL لجلب الملف منه.",
 	"apihelp-smpuserprivacy-summary": "وحدة API لتعيين الرؤية (\"الخصوصية\") لحقل ملف شخصي",
 	"apihelp-smpuserprivacy-param-method": "الإجراء (إما \"get\" أو \"set\")",
 	"apihelp-smpuserprivacy-param-field_key": "مفتاح الحقل المستهدف، مثل up_movies للحقل \"الأفلام\"",
