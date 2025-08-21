@@ -5,6 +5,7 @@
 			"Hamilton Abreu",
 			"Lijealso",
 			"Malafaya",
+			"Mansil alfalb",
 			"Vanessa Sabino",
 			"Waldir",
 			"Waldyrious"
@@ -62,6 +63,7 @@
 	"echo-pref-tooltip-social-msg": "Notificar-me quando alguém deixar uma mensagem no meu mural.",
 	"notification-social-msg-send": "$1 acabou de deixar uma mensagem no seu mural.<br /><br />''$2''",
 	"notification-social-msg-send-bundle": "{{PLURAL:$1|Foi deixada uma mensagem|Foram deixadas $1 mensagens|100=Foram deixadas mais de 99 mensagens}} no seu mural.",
+	"apierror-socialprofile-send-message-nosend": "Não pode enviar mensagens,",
 	"apihelp-socialprofile-send-message-summary": "Enviar uma mensagem para o mural de um utilizador.",
 	"apihelp-socialprofile-send-message-param-username": "O nome de utilizador do destinatário.",
 	"apihelp-socialprofile-send-message-param-message": "Uma versão codificada para uso em URL da mensagem a ser enviada.",

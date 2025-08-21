@@ -60,6 +60,7 @@
 	"echo-pref-tooltip-social-msg": "當有人在我的使用者留言板留下訊息時通知我。",
 	"notification-social-msg-send": "$1剛剛在您的使用者留言板留下了訊息。<br /><br />''$2''",
 	"notification-social-msg-send-bundle": "在您的使用者留言板留下 {{PLURAL:$1|1|$1|100=99+}} 個訊息",
+	"apierror-socialprofile-send-message-nosend": "您無法傳送訊息，",
 	"apihelp-socialprofile-send-message-summary": "傳送訊息到使用者的留言板。",
 	"apihelp-socialprofile-send-message-param-username": "接收者的使用者名稱。",
 	"apihelp-socialprofile-send-message-param-message": "要傳送的訊息的 urlencoded 版本。",
