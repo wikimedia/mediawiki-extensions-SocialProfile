@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Gzdavidwong",
+			"Jack Phoenix",
 			"Lakejason0",
 			"Liangent",
 			"Peterxy12",
@@ -60,7 +61,7 @@
 	"echo-pref-tooltip-social-msg": "当有人在我的用户墙上留消息时通知我。",
 	"notification-social-msg-send": "$1于您的用户墙上留下了消息。<br /><br />''$2''",
 	"notification-social-msg-send-bundle": "您的用户墙上有{{PLURAL:$1|$1条消息|100=99+条消息}}。",
-	"apierror-socialprofile-send-message-nosend": "您无法发送消息，",
+	"apierror-socialprofile-send-message-nosend": "您无法发送消息。",
 	"apihelp-socialprofile-send-message-summary": "向一位用户的用户墙发送消息。",
 	"apihelp-socialprofile-send-message-param-username": "接收者的用户名。",
 	"apihelp-socialprofile-send-message-param-message": "要发送的URL编码过的消息。",

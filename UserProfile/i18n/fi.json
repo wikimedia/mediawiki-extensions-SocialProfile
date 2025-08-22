@@ -175,6 +175,7 @@
 	"user-profile-privacy-status-privacy-hidden": "piilotettu",
 	"user-profile-privacy-status-privacy-friends": "ystävät",
 	"user-profile-privacy-status-privacy-foaf": "ystävien ystävät",
+	"user-profile-error-spam": "Virhe: roskatekstiä löytyi yhdestä tai useammasta profiilikentän arvosta. Muokkaathan arvo(j)a.",
 	"user-no-images": "Ei ladattuja kuvia",
 	"edit-profile-title": "Muokkaa profiiliasi",
 	"edit-profiles-title": "Muokkaa profiileja",

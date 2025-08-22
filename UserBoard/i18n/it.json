@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
-			"Darth Kule"
+			"Darth Kule",
+			"Jack Phoenix"
 		]
 	},
 	"messagesenttitle": "Messaggio inviato",
@@ -11,5 +12,5 @@
 	"userboard_public": "pubblico",
 	"userboard_nomessages": "Non vi sono nuovi messaggi.",
 	"userboard_sendbutton": "invia",
-	"apierror-socialprofile-send-message-nosend": "Non puoi inviare messaggi,"
+	"apierror-socialprofile-send-message-nosend": "Non puoi inviare messaggi."
 }

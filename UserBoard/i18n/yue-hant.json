@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"Jack Phoenix",
 			"JeffreyKim"
 		]
 	},
-	"apierror-socialprofile-send-message-nosend": "你唔可以發送訊息，"
+	"apierror-socialprofile-send-message-nosend": "你唔可以發送訊息。"
 }

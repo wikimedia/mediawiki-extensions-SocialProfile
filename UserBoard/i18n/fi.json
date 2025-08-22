@@ -57,5 +57,6 @@
 	"echo-category-title-social-msg": "Keskustelualueen viestit",
 	"echo-pref-tooltip-social-msg": "Ilmoita minulle, kun joku jättää viestin keskustelualueelleni.",
 	"notification-social-msg-send": "$1 jätti juuri sinulle viestin.<br /><br />''$2''",
-	"notification-social-msg-send-bundle": "{{PLURAL:$1|Yksi henkilö jätti|$1 henkilöä jättivät|100=99+ henkilöä jättivät}} sinulle viestejä."
+	"notification-social-msg-send-bundle": "{{PLURAL:$1|Yksi henkilö jätti|$1 henkilöä jättivät|100=99+ henkilöä jättivät}} sinulle viestejä.",
+	"apierror-socialprofile-send-message-nosend": "Et voi lähettää viestejä."
 }
