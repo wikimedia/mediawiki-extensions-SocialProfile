@@ -11,6 +11,7 @@
 			"Locos epraix",
 			"Mor",
 			"No se",
+			"Rousmery96",
 			"Sanbec",
 			"Translationista"
 		]
@@ -67,5 +68,6 @@
 	"echo-pref-tooltip-social-msg": "Notificarme cuando alguien deje un mensaje en mi tablón de usuario.",
 	"notification-social-msg-send": "$1 acaba de dejarte un mensaje en tu tablón de usuario.<br /><br />''$2''",
 	"notification-social-msg-send-bundle": "Te han dejado {{PLURAL:$1|un mensaje|$1 mensajes|100=99+ mensajes}} en tu tablón de usuario.",
+	"apierror-socialprofile-send-message-nosend": "No puedes enviar mensajes.",
 	"apihelp-socialprofile-send-message-param-username": "El nombre de usuario del destinatario."
 }

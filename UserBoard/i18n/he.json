@@ -59,6 +59,7 @@
 	"echo-pref-tooltip-social-msg": "להודיע לי כשמישהו משאיר לי הודעה בלוח המשתמש שלי.",
 	"notification-social-msg-send": "$1 {{GENDER:$1|השאיר|השאירה}} זה עהה הודעה בלוח שלך.<br /><br />''$2''",
 	"notification-social-msg-send-bundle": "{{PLURAL:$1|הושארה הודעה אחת|הושארו $1 הודעות|הושארו יותר מ־99 הודעות}} בלוח שלך.",
+	"apierror-socialprofile-send-message-nosend": "אין לך אפשרות לשלוח הודעות.",
 	"apihelp-socialprofile-send-message-summary": "שליחת הודעה ל־UserBoard של המשתמש.",
 	"apihelp-socialprofile-send-message-param-username": "שם המשתמש של המקבל.",
 	"apihelp-socialprofile-send-message-param-message": "גרסת urlencoded של הודעה לשליחה.",

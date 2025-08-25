@@ -57,7 +57,7 @@
 	"echo-pref-tooltip-social-msg": "کله چې يو څوک زما په پيغام‌دړه کې پيغام پرېږدي ماته دې خبر راکړل شي.",
 	"notification-social-msg-send": "$1 همدا اوس ستاسو پيغام‌دړه کې پيغام پرېښود <br /><br />''$2''",
 	"notification-social-msg-send-bundle": "ستاسو پيغام دړه کې {{PLURAL:$1|يو پيغام|$1 پيغامونه|100=99+ پيغامونه}} ليکل‌شوې دي.",
-	"apierror-socialprofile-send-message-nosend": "تاسو پيغام نشئ لېږلای،",
+	"apierror-socialprofile-send-message-nosend": "تاسو پيغامونه نشئ لېږلای.",
 	"apihelp-socialprofile-send-message-summary": "د کارن کارن‌پيغام‌دړې ته پيغام لېږل",
 	"apihelp-socialprofile-send-message-param-username": "د ترلاسه کوونکي کارن نوم.",
 	"apihelp-socialprofile-send-message-param-message": "د لېږل‌کېدونکي پيغام د وېبتړ‌کوډشوې بلبڼه.",
