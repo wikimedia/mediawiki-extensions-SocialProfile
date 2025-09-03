@@ -59,6 +59,7 @@
 	"echo-pref-tooltip-social-msg": "Varsle meg når noen skriver en melding på brukertavla mi.",
 	"notification-social-msg-send": "$1 skrev en beskjed på brukertavla di.<br /><br />''$2''",
 	"notification-social-msg-send-bundle": "{{PLURAL:$1|Én melding|$1 meldinger|100=99+ meldinger}} har blitt skrevet på brukertavla di.",
+	"apierror-socialprofile-send-message-nosend": "Du kan ikke sende meldinger.",
 	"apihelp-socialprofile-send-message-summary": "Send en melding til en brukertavle.",
 	"apihelp-socialprofile-send-message-param-username": "Mottakerens brukernavn.",
 	"apihelp-socialprofile-send-message-param-message": "En URL-kodet versjon av meldingen som skal sendes.",
