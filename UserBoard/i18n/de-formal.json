@@ -5,11 +5,8 @@
 			"Umherirrender"
 		]
 	},
-	"messagesentsuccess": "Ihre Nachricht wurde erfolgreich verschickt.",
 	"userboard_yourboard": "Ihre Pinnwand",
 	"userboard_yourboardwith": "Ihre Pinnwand-Diskussion mit $1",
 	"userboard_backyourprofile": "Zurück zu Ihrem Profil",
-	"userboard_loggedout": "Sie müssen [[Special:UserLogin|angemeldet sein]], um Nachrichten an andere Nutzer schicken zu können.",
-	"message_received_subject": "$1 hat auf Ihre {{SITENAME}}-Pinnwand geschrieben",
-	"message_received_body": "Guten Tag $1,\n\n$2 hat eben auf Ihre {{SITENAME}}-Pinnwand geschrieben!\n\nKlicken Sie auf den folgenden Link um Ihre Pinnwand aufzurufen!\n\n$3\n\n---\n\nHm, Sie wollen keine E-Mails mehr von uns bekommen?\n\nKlicken Sie $4\nund ändern Sie Ihre Einstellungen um E-Mail-Benachrichtigungen auszuschalten."
+	"userboard_loggedout": "Sie müssen [[Special:UserLogin|angemeldet sein]], um Nachrichten an andere Nutzer schicken zu können."
 }
