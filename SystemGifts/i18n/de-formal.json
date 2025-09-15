@@ -6,9 +6,6 @@
 			"Umherirrender"
 		]
 	},
-	"ga-error-message-no-user": "Der Benutzer, den Sie anschauen möchten, existiert nicht.",
-	"ga-delete-message": "Sind Sie sich sicher, das Sie das Geschenk „$1“ löschen möchten?\nDies wird es auch bei Benutzern löschen, die es bereits erhalten haben.",
-	"ga-remove-success-title": "Sie haben das Geschenk „$1“ erfolgreich entfernt.",
 	"system_gift_received_subject": "[{{SITENAME}}]Sie haben die $1-Auszeichnung erhalten!",
 	"system_gift_received_body": "Hallo $1,\n\nSie haben soeben die $2-Auszeichnung auf {{SITENAME}} erhalten!\n\n„$3“\n\nKlicken Sie auf den nachfolgenden Link, um Ihre Trophäe anzusehen:\n\n$4\n\nWir hoffen, sie gefällt Ihnen!\n\nVielen Dank und viele Grüße,\n\nDas {{SITENAME}}-Team\n\n---\n\nSie möchten keine E-Mails von uns erhalten?\n\nKlicken Sie $5\nund ändern Sie Ihre Einstellungen so, dass E-Mail-Benachrichtigung deaktiviert sind."
 }
