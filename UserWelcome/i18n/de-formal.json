@@ -1,9 +1,0 @@
-{
-	"@metadata": {
-		"authors": [
-			"Imre"
-		]
-	},
-	"mp-welcome-needed-points": "Um [[$1|'''$2''']] zu werden müssen Sie noch ''$3'' {{PLURAL:$3|weiteren Punkt|weitere Punkte}} verdienen!",
-	"mp-requests-message": "Sie haben die folgenden Anfragen."
-}
