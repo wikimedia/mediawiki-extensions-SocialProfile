@@ -78,7 +78,7 @@ var UserProfilePage = {
 
 	uploadError: function ( message ) {
 		document.getElementById( 'mini-gallery-' + UserProfilePage.replaceID ).innerHTML = UserProfilePage.oldHtml;
-		document.getElementById( 'upload-frame-errors' ).innerHTML = message;
+		document.getElementById( 'upload-frame-errors' ).innerText = message;
 		document.getElementById( 'imageUpload-frame' ).src = 'index.php?title=Special:MiniAjaxUpload&wpThumbWidth=75';
 
 		document.getElementById( 'upload-container' ).style.display = 'block';
@@ -86,7 +86,7 @@ var UserProfilePage = {
 	},
 
 	textError: function ( message ) {
-		document.getElementById( 'upload-frame-errors' ).innerHTML = message;
+		document.getElementById( 'upload-frame-errors' ).innerText = message;
 		document.getElementById( 'upload-frame-errors' ).style.display = 'block';
 		document.getElementById( 'upload-frame-errors' ).style.visibility = 'visible';
 	},

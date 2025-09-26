@@ -95,7 +95,7 @@ var BoardBlast = {
 		}
 
 		if ( !document.getElementById( 'message' ).value ) {
-			window.alert( mw.msg( 'boardblast-error-missing-message' ) );
+			window.alert( mw.message( 'boardblast-error-missing-message' ).escaped() );
 			BoardBlast.submitted = 0;
 			return 0;
 		}
@@ -104,7 +104,7 @@ var BoardBlast = {
 
 		document.blast.message.style.color = '#ccc';
 		document.blast.message.readOnly = true;
-		document.getElementById( 'blast-friends-list' ).innerHTML = mw.msg( 'boardblast-js-sending' );
+		document.getElementById( 'blast-friends-list' ).innerText = mw.message( 'boardblast-js-sending' ).escaped();
 		document.blast.submit();
 	}
 };
