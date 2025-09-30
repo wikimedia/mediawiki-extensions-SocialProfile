@@ -7,9 +7,19 @@
 		]
 	},
 	"socialprofile-desc": "Un conxunto de ferramentas sociais para MediaWiki",
-	"socialprofile-uploads-disabled": "O envío de imaxes de perfil está desactivado",
-	"apihelp-smpuserprivacy-summary": "Módulo da API para definir a visibilidade (\"privacidade\") dun campo do perfil",
-	"apihelp-smpuserprivacy-param-method": "Acción (ou \"get\" ou \"set\")",
-	"apihelp-smpuserprivacy-param-field_key": "Clave do campo obxectivo, como up_movies para o campo \"Filmes\"",
-	"apihelp-smpuserprivacy-param-privacy": "Novo valor de privacidade (un dos seguintesː público, oculto, amigos, amigos dos amigos)"
+	"socialprofile-uploads-disabled": "A función de subir avatares está desactivada",
+	"apihelp-removeavatar-summary": "Eliminar un avatar, xa sexa teu ou (se tes privilexios) doutra persoa.",
+	"apihelp-removeavatar-param-reason": "Motivo opcional explicando por que eliminas o avatar doutra persoa.",
+	"apihelp-removeavatar-param-user": "Nome do usuario cuxo avatar se vai eliminar.",
+	"apihelp-removeavatar-example-1": "Eliminar o avatar do usuario chamado «Ashley»",
+	"apihelp-removeavatar-example-2": "Eliminar o avatar do usuario chamado «Elektra» con «Blatant copyvio» como motivo de eliminación",
+	"apierror-avatar-is-default": "O avatar do usuario xa é o predeterminado.",
+	"apihelp-uploadavatar-summary": "Subir un avatar.",
+	"apihelp-uploadavatar-example-url": "Subir a imaxe «https://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png» como o teu avatar.",
+	"apihelp-uploadavatar-param-file": "O contido do ficheiro de imaxe do avatar novo.",
+	"apihelp-uploadavatar-param-url": "URL desde onde obter o ficheiro.",
+	"apihelp-smpuserprivacy-summary": "Módulo da API para definir a visibilidade («privacy») dun campo do perfil",
+	"apihelp-smpuserprivacy-param-method": "Acción (ou ben «get» ou ben «set»)",
+	"apihelp-smpuserprivacy-param-field_key": "Clave do campo de destino, como «up_movies» para o campo «Películas»",
+	"apihelp-smpuserprivacy-param-privacy": "Novo valor de privacidade (un dos seguintes: «public», «hidden», «friends», «foaf»)"
 }
