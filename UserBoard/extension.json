@@ -62,7 +62,6 @@
 		},
 		"ext.socialprofile.userboard.boardblast.js": {
 			"scripts": "js/BoardBlast.js",
-			"dependencies": "mediawiki.jqueryMsg",
 			"messages": [
 				"boardblast-js-sending",
 				"boardblast-error-missing-message",
