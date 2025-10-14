@@ -57,6 +57,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		$out = $this->getOutput();
 		$user = $this->getUser();
 		$request = $this->getRequest();
+		$session = $request->getSession();
 
 		/**
 		 * Redirect anonymous users to the login page
@@ -79,12 +80,14 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 		$output = '';
 
 		if ( $request->wasPosted() ) {
-			if ( $_SESSION['alreadysubmitted'] == false && !$request->getInt( 'response' ) ) {
-				$_SESSION['alreadysubmitted'] = true;
+			if ( $session->get( 'alreadysubmitted' ) == false && !$request->getInt( 'response' ) ) {
+				$session->set( 'alreadysubmitted', true );
+
 				$output = '<br /><span class="title">' .
 					$this->msg( 'ur-already-submitted' )->escaped() .
 					'</span><br /><br />';
 				$out->addHTML( $output );
+
 				return;
 			}
 
@@ -123,7 +126,7 @@ class SpecialViewRelationshipRequests extends SpecialPage {
 			$out->addHTML( $output );
 			return;
 		} else {
-			$_SESSION['alreadysubmitted'] = false;
+			$session->set( 'alreadysubmitted', false );
 
 			$out->setPageTitle( $this->msg( 'ur-requests-title' )->plain() );
 

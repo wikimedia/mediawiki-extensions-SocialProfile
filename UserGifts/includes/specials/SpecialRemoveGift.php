@@ -31,6 +31,7 @@ class RemoveGift extends UnlistedSpecialPage {
 	public function execute( $par ) {
 		$out = $this->getOutput();
 		$request = $this->getRequest();
+		$session = $request->getSession();
 		$user = $this->getUser();
 
 		// Set the page title, robot policies, etc.
@@ -60,9 +61,9 @@ class RemoveGift extends UnlistedSpecialPage {
 		if (
 			$request->wasPosted() &&
 			$user->matchEditToken( $request->getVal( 'wpEditToken' ) ) &&
-			$_SESSION['alreadysubmitted'] == false
+			$session->get( 'alreadysubmitted' ) == false
 		) {
-			$_SESSION['alreadysubmitted'] = true;
+			$session->set( 'alreadysubmitted', true );
 
 			if ( $rel->doesUserOwnGift( $user, $this->gift_id ) == true ) {
 				$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
@@ -90,7 +91,7 @@ class RemoveGift extends UnlistedSpecialPage {
 
 			$out->addHTML( $html );
 		} else {
-			$_SESSION['alreadysubmitted'] = false;
+			$session->set( 'alreadysubmitted', false );
 			$out->addHTML( $this->displayForm() );
 		}
 	}

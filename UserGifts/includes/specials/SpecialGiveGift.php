@@ -53,6 +53,7 @@ class GiveGift extends SpecialPage {
 	public function execute( $par ) {
 		$out = $this->getOutput();
 		$request = $this->getRequest();
+		$session = $request->getSession();
 		$user = $this->getUser();
 
 		$output = ''; // Prevent E_NOTICE
@@ -121,9 +122,9 @@ class GiveGift extends SpecialPage {
 			if (
 				$request->wasPosted() &&
 				$user->matchEditToken( $request->getVal( 'wpEditToken' ) ) &&
-				$_SESSION['alreadysubmitted'] == false
+				$session->get( 'alreadysubmitted' ) == false
 			) {
-				$_SESSION['alreadysubmitted'] = true;
+				$session->set( 'alreadysubmitted', true );
 
 				// Check the user-supplied message for spam etc.
 				$message = $request->getVal( 'message' );
@@ -222,7 +223,7 @@ class GiveGift extends SpecialPage {
 
 				$out->addHTML( $output );
 			} else {
-				$_SESSION['alreadysubmitted'] = false;
+				$session->set( 'alreadysubmitted', false );
 
 				if ( $giftId ) {
 					$out->addHTML( $this->displayFormSingle() );

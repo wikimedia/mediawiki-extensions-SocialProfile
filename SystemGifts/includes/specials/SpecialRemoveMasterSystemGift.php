@@ -51,6 +51,7 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 	public function execute( $par ) {
 		$out = $this->getOutput();
 		$request = $this->getRequest();
+		$session = $request->getSession();
 		$user = $this->getUser();
 
 		// make sure user has the correct permissions
@@ -86,9 +87,9 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 		if (
 			$request->wasPosted() &&
 			$user->matchEditToken( $request->getVal( 'wpEditToken' ) ) &&
-			$_SESSION['alreadysubmitted'] == false
+			$session->get( 'alreadysubmitted' ) == false
 		) {
-			$_SESSION['alreadysubmitted'] = true;
+			$session->set( 'alreadysubmitted', true );
 
 			$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 			$gift = SystemGifts::getGift( $this->gift_id );
@@ -122,7 +123,7 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 
 			$out->addHTML( $output );
 		} else {
-			$_SESSION['alreadysubmitted'] = false;
+			$session->set( 'alreadysubmitted', false );
 			$out->addHTML( $this->displayForm() );
 		}
 	}

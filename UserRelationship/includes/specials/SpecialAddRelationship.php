@@ -51,6 +51,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 	public function execute( $par ) {
 		$out = $this->getOutput();
 		$request = $this->getRequest();
+		$session = $request->getSession();
 		$currentUser = $this->getUser();
 
 		// Can't use $this->setHeaders(); here because then it'll set the page
@@ -204,9 +205,9 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 			if (
 				$request->wasPosted() &&
 				$currentUser->matchEditToken( $request->getVal( 'wpEditToken' ) ) &&
-				$_SESSION['alreadysubmitted'] == false
+				$session->get( 'alreadysubmitted' ) == false
 			) {
-				$_SESSION['alreadysubmitted'] = true;
+				$session->set( 'alreadysubmitted', true );
 
 				// Check the user-supplied message for spam etc.
 				$message = $request->getVal( 'message' );
@@ -252,7 +253,7 @@ class SpecialAddRelationship extends UnlistedSpecialPage {
 
 				$out->addHTML( $output );
 			} else {
-				$_SESSION['alreadysubmitted'] = false;
+				$session->set( 'alreadysubmitted', false );
 				$out->addHTML( $this->displayForm() );
 			}
 		}
