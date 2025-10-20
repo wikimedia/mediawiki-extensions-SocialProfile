@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Armin1392",
+			"LordProfo",
 			"Mjbmr"
 		]
 	},
@@ -39,5 +40,6 @@
 	"user-profile-picture-medium": "متوسط",
 	"user-profile-picture-small": "کوچک",
 	"user-profile-picture-currentimage": "تصویر کنونی",
+	"user-page-link": "صفحهٔ کاربر",
 	"random-users-avatars-title": "دیدار اجتماع"
 }
