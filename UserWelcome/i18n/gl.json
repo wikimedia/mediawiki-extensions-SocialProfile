@@ -4,17 +4,17 @@
 			"Toliño"
 		]
 	},
-	"userwelcome-desc": "Engade a etiqueta <code>&lt;welcomeUser&gt;</code> para amosar información social específica a un usuario rexistrado",
+	"userwelcome-desc": "Engade a etiqueta <code>&lt;welcomeUser&gt;</code> para amosar información social específica aos usuarios que iniciaron sesión",
 	"mp-userlevels-link": "Niveis de usuario",
-	"mp-welcome-upload": "Cargar",
+	"mp-welcome-upload": "Subir",
 	"mp-welcome-points": "$1 {{PLURAL:$1|punto|puntos}}",
-	"mp-welcome-needed-points": "Para avanzar a [[$1|'''$2''']], gañe ''$3'' {{PLURAL:$3|punto|puntos}} máis!",
-	"mp-welcome-logged-in": "Ola $1",
+	"mp-welcome-needed-points": "Para avanzar a [[$1|'''$2''']], gaña ''$3'' {{PLURAL:$3|punto|puntos}} máis!",
+	"mp-welcome-logged-in": "Ola, $1",
 	"mp-requests-title": "Solicitudes",
-	"mp-requests-message": "Ten as seguintes solicitudes.",
-	"mp-request-new-message": "mensaxes novas",
-	"mp-request-new-award": "$1 {{PLURAL:$1|novo premio|novos premios}}",
-	"mp-request-new-gift": "$1 {{PLURAL:$1|novo agasallo|novos agasallos}}",
-	"mp-request-new-foe": "$1 {{PLURAL:$1|novo inimigo|novos inimigos}}",
-	"mp-request-new-friend": "$1 {{PLURAL:$1|novo amigo|novos amigos}}"
+	"mp-requests-message": "Tes as seguintes solicitudes.",
+	"mp-request-new-message": "mensaxe nova",
+	"mp-request-new-award": "$1 {{PLURAL:$1|premio novo|premios novos}}",
+	"mp-request-new-gift": "$1 {{PLURAL:$1|agasallo novo|agasallos novos}}",
+	"mp-request-new-foe": "$1 {{PLURAL:$1|inimigo novo|inimigos novos}}",
+	"mp-request-new-friend": "$1 {{PLURAL:$1|amigo novo|amigos novos}}"
 }
