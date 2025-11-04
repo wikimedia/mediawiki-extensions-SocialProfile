@@ -6,6 +6,7 @@
 			"Karduelis",
 			"MuratTheTurkish",
 			"Rapsar",
+			"SaldırganSincap",
 			"Vito Genovese"
 		]
 	},
@@ -205,8 +206,8 @@
 	"profilelogpage": "Kullanıcı profili değişiklik günlüğü",
 	"profilelogpagetext": "Bu, kullanıcı profili değişiklikleri günlüğüdür",
 	"user-profile-edit-profile": "$1 kullanıcısının profili düzenlendi",
-	"avatarlogpage": "Avatar yükleme günlüğü",
-	"avatarlogpagetext": "Bu, kullanıcı avatar yükleme günlüğüdür",
+	"avatarlogpage": "Avatar günlüğü",
+	"avatarlogpagetext": "Bu, kullanıcı avatarlarının yüklenmesi ve kaldırılmasının günlüğüdür.",
 	"user-profile-picture-log-entry": "yeni avatar yüklendi",
 	"user-profile-picture-log-delete-entry": "$1 kullanıcının avatarı silindi",
 	"user-profile-remove-avatar": "kaldır",
@@ -215,7 +216,7 @@
 	"right-editothersprofiles-private": "Diğer kullanıcıların sosyal profillerindeki özel bilgileri (e-posta adresi) görüntüle ve güncelle",
 	"action-avatarremove": "kullanıcının avatarları kaldır",
 	"action-editothersprofiles": "diğer kullanıcıların sosyal profillerini güncelle",
-	"right-populate-user-profiles": "Mevcut vikiler için diğer kullanıcıların profillerini doldurmaya izin verir",
+	"right-populate-user-profiles": "Mevcut vikiler için diğer kullanıcıların profillerini doldur",
 	"action-populate-user-profiles": "diğer kullanıcıların profillerini doldur",
 	"apihelp-socialprofile-userprofileprivacy-summary": "Bir profil alanının görünürlüğünü (\"privacy\") ayarlamak için API modülü",
 	"apihelp-socialprofile-userprofileprivacy-param-method": "Eylem (\"get\" veya \"set\")",
