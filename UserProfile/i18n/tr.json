@@ -6,7 +6,8 @@
 			"Karduelis",
 			"MuratTheTurkish",
 			"Vito Genovese",
-			"Rapsar"
+			"Rapsar",
+			"SaldırganSincap"
 		]
 	},
 	"editprofile": "Diğer kullanıcıların profillerini değiştir",
@@ -222,7 +223,7 @@
 	"right-editothersprofiles-private": "Diğer kullanıcıların sosyal profillerindeki özel bilgileri (e-posta adresi) görüntüle ve güncelle",
 	"action-avatarremove": "kullanıcının avatarları kaldır",
 	"action-editothersprofiles": "diğer kullanıcıların sosyal profillerini güncelle",
-	"right-populate-user-profiles": "Mevcut vikiler için diğer kullanıcıların profillerini doldurmaya izin verir",
+	"right-populate-user-profiles": "Mevcut vikiler için diğer kullanıcıların profillerini doldur",
 	"action-populate-user-profiles": "diğer kullanıcıların profillerini doldur",
 	"apihelp-socialprofile-userprofileprivacy-description": "Bir profil alanının görünürlüğünü (\"privacy\") ayarlamak için API modülü",
 	"apihelp-socialprofile-userprofileprivacy-summary": "Bir profil alanının görünürlüğünü (\"privacy\") ayarlamak için API modülü",
