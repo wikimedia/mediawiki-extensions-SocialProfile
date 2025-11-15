@@ -62,7 +62,7 @@ class UserGifts {
 		);
 		$ug_gift_id = $dbw->insertId();
 		$this->incGiftGivenCount( $gift_id );
-		$this->sendGiftNotificationEmail( $user_to, $gift_id, $type );
+		$this->sendGiftNotificationEmail( $user_to, $gift_id );
 
 		// Add to new gift count cache for receiving user
 		$cache = $services->getMainWANObjectCache();
@@ -100,9 +100,8 @@ class UserGifts {
 	 *
 	 * @param User $user User (object) receiving the gift
 	 * @param int $gift_id ID Number of the given gift
-	 * @param int $type Gift type; unused
 	 */
-	private function sendGiftNotificationEmail( $user, $gift_id, $type ) {
+	private function sendGiftNotificationEmail( $user, $gift_id ) {
 		$gift = Gifts::getGift( $gift_id );
 		$user->load();
 

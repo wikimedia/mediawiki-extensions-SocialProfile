@@ -25,6 +25,8 @@ $cfg['exclude_analysis_directory_list'] = array_merge(
 // Ignored to allow upgrading Phan, to be fixed later.
 $cfg['suppress_issue_types'][] = 'MediaWikiNoBaseException';
 $cfg['suppress_issue_types'][] = 'MediaWikiNoEmptyIfDefined';
+$cfg['suppress_issue_types'][] = 'MediaWikiNoIssetIfDefined';
+$cfg['suppress_issue_types'][] = 'PhanThrowTypeAbsent';
 
 // Suppress certain issue types.
 $cfg['suppress_issue_types'] = array_merge( $cfg['suppress_issue_types'], [

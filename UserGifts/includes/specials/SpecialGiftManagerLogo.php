@@ -4,7 +4,6 @@ use MediaWiki\Html\Html;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Request\WebRequestUpload;
 use MediaWiki\Shell\Shell;
-use Wikimedia\AtEase\AtEase;
 
 /**
  * A special page to upload images for gifts.
@@ -212,7 +211,6 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 		 * type but it's corrupt or data of the wrong type, we should
 		 * probably not accept it.
 		 */
-		// @phan-suppress-next-line SecurityCheck-PathTraversal False positive
 		$veri = $this->verify( $this->mUploadTempName, $finalExt );
 
 		if ( !$veri->isGood() ) {

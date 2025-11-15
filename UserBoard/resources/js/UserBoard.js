@@ -68,7 +68,7 @@ $( () => {
 	} );
 
 	// Submit button
-	$( 'div.user-page-message-box-button input[type="submit"]' ).on( 'click', function ( e ) {
+	$( 'div.user-page-message-box-button input[type="submit"]' ).on( 'click', ( e ) => {
 		e.preventDefault();
 		UserBoard.sendMessage();
 	} );
