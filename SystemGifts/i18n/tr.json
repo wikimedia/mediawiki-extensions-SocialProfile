@@ -3,6 +3,7 @@
 		"authors": [
 			"Karduelis",
 			"MuratTheTurkish",
+			"SaldırganSincap",
 			"Vito Genovese"
 		]
 	},
@@ -11,7 +12,7 @@
 	"ga-addnew": "+ Yeni hediye ekle",
 	"ga-back-edit-gift": "Bu hediyeyi düzenlemeye geri dön",
 	"ga-back-gift-list": "Hediye listesine geri dön",
-	"ga-back-link": "[[User:$1|< $1 kullanıcısının profiline geri dön]]",
+	"ga-back-link": "[[User:$1|&lt; $1 kullanıcısının profiline geri dön]]",
 	"ga-choosefile": "Dosya seç:",
 	"ga-count": "$1, $2 {{PLURAL:$2|ödüle|ödüle}} sahip.",
 	"ga-create-gift": "Hediye oluştur",
