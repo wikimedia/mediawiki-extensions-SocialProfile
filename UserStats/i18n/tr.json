@@ -4,6 +4,7 @@
 			"Joseph",
 			"MuratTheTurkish",
 			"Rapsar",
+			"SaldırganSincap",
 			"Vito Genovese"
 		]
 	},
@@ -66,7 +67,7 @@
 	"updateeditcounts": "Değişiklik Sayılarını Güncelle",
 	"updateeditcounts-confirm": "Tüm kullanıcıların düzenleme sayılarını güncellemek istediğinizden emin misiniz?",
 	"updateeditcounts-updated": "'''$1''' kullanıcısı için güncellenmiş istatistikler",
-	"updateeditcounts-updating": "$1 ile $2 değişiklik güncelleniyor",
+	"updateeditcounts-updating": "$1 ile $2 {{PLURAL:$2|değişiklik}} güncelleniyor",
 	"generatetopusersreport": "En İyi Kullanıcılar Raporu Oluştur",
 	"generatetopusersreport-confirm-weekly": "Haftalık en iyi kullanıcılar raporunu oluşturmak istediğinizden emin misiniz?",
 	"generatetopusersreport-confirm-monthly": "Aylık en iyi kullanıcılar raporunu oluşturmak istediğinizden emin misiniz?",

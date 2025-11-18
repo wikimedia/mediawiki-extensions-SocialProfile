@@ -4,6 +4,7 @@
 			"Karduelis",
 			"MuratTheTurkish",
 			"Rapsar",
+			"SaldırganSincap",
 			"Vito Genovese"
 		]
 	},
@@ -23,7 +24,7 @@
 	"g-characters-left": "$1 karakter kaldı",
 	"g-back-edit-gift": "Bu hediyeyi düzenlemeye geri dön",
 	"g-back-gift-list": "Hediye listesine geri dön",
-	"g-back-link": "< $1 kullanıcının sayfasına dön",
+	"g-back-link": "&lt; $1 kullanıcının sayfasına dön",
 	"g-choose-file": "Dosya seç:",
 	"g-count": "$1, $2 hediyeye sahip.",
 	"g-create-gift": "Hediye oluştur",
