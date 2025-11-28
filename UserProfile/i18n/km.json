@@ -3,6 +3,7 @@
 		"authors": [
 			"Chhorran",
 			"Lovekhmer",
+			"MeahNunh",
 			"Thearith",
 			"គីមស៊្រុន"
 		]
@@ -15,9 +16,9 @@
 	"user-upload-image": "ផ្ទុករូបភាពឡើង",
 	"user-edit-this": "កែប្រែ​អ្នកប្រើប្រាស់​នេះ",
 	"user-edit-profile": "កែប្រែប្រវត្តិរូប",
-	"user-upload-avatar": "ផ្ទុកអាវ៉ាតារ៍ឡើង",
+	"user-upload-avatar": "អាប់ឡូដរូបតំណាង",
 	"user-watchlist": "បញ្ជីតាមដានរបស់ខ្ញុំ",
-	"user-meet-people": "ជួម​ជាមួយ​ប្រជាជន",
+	"user-meet-people": "ចួបមនុស្ស",
 	"user-add-friend": "បន្ថែម​ជា​មិត្តភ័ក្ដិ",
 	"user-add-foe": "បន្ថែម​ជា​បច្ចាមិត្ត",
 	"user-remove-friend": "ដកចេញ​ពី​មិត្តភ័ក្ដិ",
@@ -47,7 +48,7 @@
 	"custom-info-field3": "ផ្ទាល់ខ្លួន ៣",
 	"custom-info-field4": "ផ្ទាល់ខ្លួន ៤",
 	"custom-no-info": "មិនមាន​ព័ត៌មាន​ផ្ទាល់ខ្លួន",
-	"profile-updated-personal": "ធ្វើឱ្យទាន់សម័យ​ទម្រង់​របស់​អ្នក",
+	"profile-updated-personal": "អាប់ដេតប្រូហ្វាលរបស់អ្នក",
 	"profile-not-provided": "មិន​ត្រូវ​បាន​ផ្ដល់ឱ្យ",
 	"populate-user-profile-done": "បន្ថែម $1 {{PLURAL:$1|ទម្រង់|ទម្រង់}}",
 	"user-personal-info-title": "ព័ត៌មាន​ផ្ទាល់ខ្លួន",
@@ -75,7 +76,7 @@
 	"user-profile-default-country": "សហរដ្ឋអាមេរិក",
 	"user-profile-points": "$1 {{PLURAL:$1|ពិន្ទុ|ពិន្ទុ}}",
 	"user-profile-section-personal": "ព័ត៌មានផ្ទាល់​ខ្លួន",
-	"user-profile-section-sportsteams": "ធ្វើឱ្យទាន់សម័យ​បណ្ដាញ​នានា",
+	"user-profile-section-sportsteams": "អាប់ដេតបណ្ដាញនានា",
 	"user-profile-section-custom": "ព័ត៌មានផ្ទាល់​ខ្លួន",
 	"user-profile-section-interests": "ព័ត៌មានផ្សេងៗទៀត",
 	"user-profile-section-picture": "អវតារ",

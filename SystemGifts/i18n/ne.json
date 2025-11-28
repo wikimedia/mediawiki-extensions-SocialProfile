@@ -1,8 +1,49 @@
 {
 	"@metadata": {
 		"authors": [
-			"पर्वत सुबेदी"
+			"पर्वत सुबेदी",
+			"बडा काजी"
 		]
 	},
-	"topawards-edits": "सम्पादनहरू"
+	"ga-addnew": "+ नयाँ उपहार थप्नुहोस्",
+	"ga-back-edit-gift": "यो उपहार सम्पादन गर्न फर्कनुहोस्",
+	"ga-back-gift-list": "उपहार सूचीमा फर्कनुहोस्",
+	"ga-choosefile": "फाइल छान्नुहोस्:",
+	"ga-create-gift": "उपहार सिर्जना गर्नुहोस्",
+	"ga-created": "उपहार सिर्जना गरिएको छ",
+	"ga-currentimage": "वर्तमान छवि",
+	"ga-error-message-no-user": "तपाईंले हेर्न खोज्नुभएको प्रयोगकर्ता अवस्थित छैन।",
+	"ga-error-title": "अरे, तिमीले गलत मोड लियौ!",
+	"ga-gift": "उपहार",
+	"ga-gift-title": "$1को \"$2\"",
+	"ga-giftdesc": "उपहार विवरण",
+	"ga-giftimage": "उपहारको छवि",
+	"ga-giftname": "उपहारको नाम",
+	"ga-gifttype": "उपहारको प्रकार",
+	"ga-goback": "पछाडि पर्कनुहोस्",
+	"ga-imagesbelow": "साइटमा प्रयोग गरिने तपाईंका तस्बिरहरू तल दिइएका छन्।",
+	"ga-img": "छवि थप्नुहोस्/बदल्नुहोस्",
+	"ga-large": "ठुलो",
+	"ga-medium": "मध्यम",
+	"ga-mediumlarge": "मध्यम-ठुलो",
+	"ga-new": "नयाँ",
+	"ga-recent-recipients-award": "यस पुरस्कारका अन्य हालसालै प्राप्तकर्ताहरू",
+	"ga-saved": "उपहार सिर्जना गरिएको छ",
+	"ga-small": "सानो",
+	"ga-threshold": "सीमा",
+	"ga-title": "$1 को पुरस्कार",
+	"ga-uploadsuccess": "अपलोड सफल भयो",
+	"ga-viewlist": "उपहार सूची हेर्नुहोस्",
+	"ga-remove": "हटाउनुहोस्",
+	"ga-remove-title": "\"$1\" हटाउने हो?",
+	"topawards": "शीर्ष पुरस्कारहरू",
+	"topawards-award-categories": "पुरस्कार श्रेणीहरू",
+	"topawards-edits": "सम्पादनहरू",
+	"topawards-votes": "मतहरू",
+	"topawards-comments": "टिप्पणीहरू",
+	"topawards-recruits": "भर्तीहरू",
+	"topawards-friends": "साथी",
+	"echo-category-title-social-award": "पुरस्कारहरू",
+	"echo-pref-tooltip-social-award": "मैले पुरस्कार प्राप्त गर्दा मलाई सूचित गर्नुहोस्।",
+	"notification-social-award-rec": "तपाईंले नयाँ पुरस्कार प्राप्त गर्नुभएको छ: $1 ।"
 }
