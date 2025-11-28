@@ -64,6 +64,12 @@ class SocialProfileHooks {
 		$updater->dropExtensionField( 'user_stats', 'stats_year_id', "$dir/UserStats/sql/patches/patch-drop-column-stats_year_id.sql" );
 		$updater->dropExtensionField( 'user_profile', 'up_last_seen', "$dir/UserProfile/sql/patches/patch-drop-column-up_last_seen.sql" );
 
+		// @see https://phabricator.wikimedia.org/T373263
+		$updater->dropExtensionField( 'user_profile', 'up_companies', "$dir/UserProfile/sql/patches/patch-drop-column-up_companies.sql" );
+		$updater->dropExtensionField( 'user_profile', 'up_interests', "$dir/UserProfile/sql/patches/patch-drop-column-up_interests.sql" );
+		$updater->dropExtensionField( 'user_profile', 'up_quotes', "$dir/UserProfile/sql/patches/patch-drop-column-up_quotes.sql" );
+		$updater->dropExtensionField( 'user_profile', 'up_relationship', "$dir/UserProfile/sql/patches/patch-drop-column-up_relationship.sql" );
+
 		// @see https://phabricator.wikimedia.org/T308594
 		$updater->dropExtensionField( 'user_stats', 'up_complete', "$dir/UserStats/sql/patches/patch-drop-column-up_complete.sql" );
 		$updater->dropExtensionField( 'user_stats', 'stats_overall_rank', "$dir/UserStats/sql/patches/patch-drop-column-stats_overall_rank.sql" );

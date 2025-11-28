@@ -406,8 +406,8 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		$s = $dbr->selectRow(
 			'user_profile',
 			[
-				'up_about', 'up_places_lived', 'up_websites', 'up_relationship',
-				'up_occupation', 'up_companies', 'up_schools', 'up_movies',
+				'up_about', 'up_places_lived', 'up_websites',
+				'up_occupation', 'up_schools', 'up_movies',
 				'up_tv', 'up_music', 'up_books', 'up_video_games',
 				'up_magazines', 'up_snacks', 'up_drinks'
 			],
@@ -421,8 +421,6 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		if ( $s !== false ) {
 			$places = $s->up_places_lived;
 			$websites = $s->up_websites;
-			$relationship = $s->up_relationship;
-			$companies = $s->up_companies;
 			$schools = $s->up_schools;
 			$movies = $s->up_movies;
 			$tv = $s->up_tv;

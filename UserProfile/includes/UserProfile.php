@@ -161,7 +161,6 @@ class UserProfile {
 			$profile['about'] = $row->up_about ?? '';
 			$profile['places_lived'] = $row->up_places_lived ?? '';
 			$profile['websites'] = $row->up_websites ?? '';
-			$profile['relationship'] = $row->up_relationship ?? '';
 			$profile['occupation'] = $row->up_occupation ?? '';
 			$profile['schools'] = $row->up_schools ?? '';
 			$profile['movies'] = $row->up_movies ?? '';

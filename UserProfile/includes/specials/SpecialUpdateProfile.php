@@ -409,10 +409,6 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		if ( $request->getVal( 'websites' ) ) {
 			$basicProfileData['up_websites'] = $request->getVal( 'websites' );
 		}
-		// @todo FIXME: remove this per T373263
-		if ( $request->getVal( 'relationship' ) ) {
-			$basicProfileData['up_relationship'] = $request->getVal( 'relationship' ) ?? 0;
-		}
 
 		$spammyFields = [];
 		foreach ( $basicProfileData as $key => $val ) {
@@ -517,7 +513,6 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$request = $this->getRequest();
 
 		$interestsData = [
-			'up_companies' => $request->getVal( 'companies' ),
 			'up_movies' => $request->getVal( 'movies' ),
 			'up_music' => $request->getVal( 'music' ),
 			'up_tv' => $request->getVal( 'tv' ),
@@ -784,8 +779,8 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		$s = $dbr->selectRow(
 			'user_profile',
 			[
-				'up_about', 'up_places_lived', 'up_websites', 'up_relationship',
-				'up_occupation', 'up_companies', 'up_schools', 'up_movies',
+				'up_about', 'up_places_lived', 'up_websites',
+				'up_occupation', 'up_schools', 'up_movies',
 				'up_tv', 'up_music', 'up_books', 'up_video_games',
 				'up_magazines', 'up_snacks', 'up_drinks'
 			],
@@ -799,8 +794,6 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		if ( $s !== false ) {
 			$places = $s->up_places_lived;
 			$websites = $s->up_websites;
-			$relationship = $s->up_relationship;
-			$companies = $s->up_companies;
 			$schools = $s->up_schools;
 			$movies = $s->up_movies;
 			$tv = $s->up_tv;
