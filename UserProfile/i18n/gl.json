@@ -169,7 +169,7 @@
 	"user-profile-create-threshold-picture-game-votes": "{{PLURAL:$1|un voto|$1 votos}} no xogo da imaxe",
 	"user-profile-create-threshold-quiz-created": "{{PLURAL:$1|un cuestionario creado|$1 cuestionarios creados}}",
 	"user-profile-create-threshold-quiz-answered": "{{PLURAL:$1|un cuestionario respondido|$1 cuestionarios respondidos}}",
-	"user-profile-create-threshold-quiz-correct": "{{PLURAL:$1|un cuestionario respondido| $1 cuestionarios respondidos}} correctamente",
+	"user-profile-create-threshold-quiz-correct": "{{PLURAL:$1|un cuestionario respondido|$1 cuestionarios respondidos}} correctamente",
 	"user-profile-create-threshold-quiz-points": "{{PLURAL:$1|un punto nun cuestionario|$1 puntos en cuestionarios}}",
 	"user-profile-create-threshold-reason": "Sentímolo, non podes crear un perfil de usuario ata que teñas, polo menos, $1",
 	"user-profile-privacy-status-privacy-public": "público",
