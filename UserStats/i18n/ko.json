@@ -28,7 +28,7 @@
 	"top-fans-by-category-title-comment-score-negative-rec": "전체 상위 싫어요",
 	"top-fans-by-category-title-comment-score-positive-given": "전체 상위 (받은) 좋아요",
 	"top-fans-by-category-title-comment-score-negative-given": "전체 상위 (받은) 싫어요",
-	"top-fans-bad-field-title": "앗!",
+	"top-fans-bad-field-title": "이런!",
 	"top-fans-stats-vote-count": "{{PLURAL:$1|투표}}",
 	"top-fans-stats-edit-count": "{{PLURAL:$1|편집}}",
 	"top-fans-stats-comment-count": "{{PLURAL:$1|댓글}}",
