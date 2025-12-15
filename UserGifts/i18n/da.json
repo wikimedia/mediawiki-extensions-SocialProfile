@@ -1,10 +1,21 @@
 {
 	"@metadata": {
 		"authors": [
+			"Jack Phoenix",
 			"Saederup92"
 		]
 	},
+	"giftmanager-private": "privat",
 	"g-characters-left": "$1 tegn tilbage",
+	"g-choose-file": "Vælg fil:",
 	"g-from": "fra [[User:$1|$1]]",
+	"g-give-list-friends-title": "Vælg fra din venneliste",
+	"g-give-separator": "eller",
+	"g-go-back": "Gå tilbage",
+	"g-new": "ny",
+	"g-remove": "Fjern",
+	"g-remove-title": "Fjern \"$1\"?",
+	"g-select-a-friend": "vælg en ven",
+	"g-your-profile": "Din profil",
 	"echo-category-title-social-gift": "Gaver"
 }

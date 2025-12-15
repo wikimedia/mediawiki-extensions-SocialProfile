@@ -1,11 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
+			"Jack Phoenix",
 			"Jon Harald Søby",
 			"Saederup92"
 		]
 	},
+	"boardlinkselectall": "Vælg alle",
+	"boardlinkunselectall": "Fravælg alle",
+	"boardlinkselectfriends": "Vælg venner",
+	"boardlinkunselectfriends": "Fravælg venner",
 	"boardblast-js-sending": "Sender beskeder...",
 	"userboard_private": "privat",
-	"userboard_sendbutton": "send"
+	"userboard_nomessages": "Ingen beskeder.",
+	"userboard_sendbutton": "send",
+	"apierror-socialprofile-send-message-nosend": "Du kan ikke sende beskeder."
 }

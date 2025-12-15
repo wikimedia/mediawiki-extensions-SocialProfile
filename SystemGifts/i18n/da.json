@@ -1,8 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
+			"Jack Phoenix",
 			"Zakawer2"
 		]
 	},
-	"ga-awards-given-out": "{{PLURAL:$1|Én pris blev|$1 priser blev}} uddelt"
+	"ga-choosefile": "Vælg fil:",
+	"ga-goback": "Gå tilbage",
+	"ga-new": "Ny",
+	"ga-remove": "Fjern",
+	"ga-remove-title": "Fjern \"$1\"?",
+	"ga-awards-given-out": "{{PLURAL:$1|Én pris blev|$1 priser blev}} uddelt",
+	"topawards-comments": "Kommentarer",
+	"topawards-friends": "Venner"
 }
