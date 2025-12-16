@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jack Phoenix"
+		]
+	},
+	"useractivity-all": "Vis alle",
+	"useractivity-group-edit": "{{PLURAL:$1|en redigering|$1 redigeringer}}"
+}

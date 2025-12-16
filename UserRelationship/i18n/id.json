@@ -5,7 +5,8 @@
 			"Bennylin",
 			"Daud I.F. Argana",
 			"Farras",
-			"Irwangatot"
+			"Irwangatot",
+			"Penyuwangi"
 		]
 	},
 	"userrelationship-desc": "Memungkinkan mengirim permintaan teman dan musuh",
@@ -102,6 +103,6 @@
 	"notification-social-rel-accept-email-subject": "$1 telah menerima permintaan hubungan Anda!",
 	"notification-social-rel-accept-email-batch-body": "$1 telah menerima permintaan hubungan Anda.",
 	"apihelp-socialprofile-request-response-summary": "Membalas permintaan hubungan (teman/musuh) pengguna.",
-	"apihelp-socialprofile-request-response-param-response": "Respons terhadap permintaan hubungan; 1 berarti menerima, -1 berarti menolak.",
+	"apihelp-socialprofile-request-response-param-response": "Tanggapan terhadap permintaan hubungan; 1 berarti menerima, -1 berarti menolak.",
 	"apihelp-socialprofile-request-response-param-id": "Penanda unik dari permintaan hubungan"
 }
