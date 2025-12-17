@@ -2,10 +2,16 @@
 	"@metadata": {
 		"authors": [
 			"Jon Harald Søby",
-			"Saederup92"
+			"Saederup92",
+			"Jack Phoenix"
 		]
 	},
+	"boardlinkselectall": "Vælg alle",
+	"boardlinkunselectall": "Fravælg alle",
+	"boardlinkselectfriends": "Vælg venner",
+	"boardlinkunselectfriends": "Fravælg venner",
 	"boardblast-js-sending": "Sender beskeder...",
 	"userboard_private": "privat",
+	"userboard_nomessages": "Ingen beskeder.",
 	"userboard_sendbutton": "send"
 }

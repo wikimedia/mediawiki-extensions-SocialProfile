@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jack Phoenix"
+		]
+	},
+	"mp-welcome-logged-in": "Hej $1",
+	"mp-request-new-friend": "$1 {{PLURAL:$1|ny ven|nye venner}}"
+}
