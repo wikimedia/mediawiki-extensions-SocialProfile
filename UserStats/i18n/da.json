@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jack Phoenix"
+		]
+	},
+	"top-fans-stats-friends-count": "{{PLURAL:$1|Ven|Venner}}",
+	"level-advance-subject": "Du er nu en \"$1\" på {{SITENAME}}!",
+	"random-user-about-me": "Om mig"
+}
