@@ -223,23 +223,19 @@ class UserGifts {
 			[],
 			[ 'gift' => [ 'INNER JOIN', 'ug_gift_id = gift_id' ] ]
 		);
-		if ( !$row ) {
-			return false;
-		}
 
-		$gift = [];
-		$gift['id'] = $row->ug_id;
-		$gift['actor_from'] = $row->ug_actor_from;
-		$gift['actor_to'] = $row->ug_actor_to;
-		$gift['message'] = $row->ug_message;
-		$gift['gift_count'] = $row->gift_given_count;
-		$gift['timestamp'] = $row->ug_date;
-		$gift['gift_id'] = $row->gift_id;
-		$gift['name'] = $row->gift_name;
-		$gift['description'] = $row->gift_description;
-		$gift['status'] = $row->ug_status;
-
-		return $gift;
+		return $row ? [
+			'id' => $row->ug_id,
+			'actor_from' => $row->ug_actor_from,
+			'actor_to' => $row->ug_actor_to,
+			'message' => $row->ug_message,
+			'gift_count' => $row->gift_given_count,
+			'timestamp' => $row->ug_date,
+			'gift_id' => $row->gift_id,
+			'name' => $row->gift_name,
+			'description' => $row->gift_description,
+			'status' => $row->ug_status,
+		] : false;
 	}
 
 	public function getUserGiftList( $type, $limit = 0, $page = 0 ) {

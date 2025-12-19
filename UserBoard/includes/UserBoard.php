@@ -482,17 +482,17 @@ class UserBoard {
 	 */
 	public function dateDiff( $date1, $date2 ) {
 		$dtDiff = $date1 - $date2;
-
 		$totalDays = intval( $dtDiff / ( 24 * 60 * 60 ) );
 		$totalSecs = $dtDiff - ( $totalDays * 24 * 60 * 60 );
-		$dif = [];
-		$dif['w'] = intval( $totalDays / 7 );
-		$dif['d'] = $totalDays;
-		$dif['h'] = $h = intval( $totalSecs / ( 60 * 60 ) );
-		$dif['m'] = $m = intval( ( $totalSecs - ( $h * 60 * 60 ) ) / 60 );
-		$dif['s'] = $totalSecs - ( $h * 60 * 60 ) - ( $m * 60 );
-
-		return $dif;
+		$h = intval( $totalSecs / ( 60 * 60 ) );
+		$m = intval( ( $totalSecs - ( $h * 60 * 60 ) ) / 60 );
+		return [
+			'w' => intval( $totalDays / 7 ),
+			'd' => $totalDays,
+			'h' => $h,
+			'm' => $m,
+			's' => $totalSecs - ( $h * 60 * 60 ) - ( $m * 60 ),
+		];
 	}
 
 	public function getTimeOffset( $time, $timeabrv, $timename ) {

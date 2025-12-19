@@ -74,37 +74,38 @@ class UserStats {
 			[ 'stats_actor' => $this->user->getActorId() ],
 			__METHOD__
 		);
-		$stats = [];
-		$stats['edits'] = $row->stats_edit_count ?? 0;
-		$stats['votes'] = $row->stats_vote_count ?? 0;
-		$stats['comments'] = $row->stats_comment_count ?? 0;
-		$stats['comment_score_plus'] = $row->stats_comment_score_positive_rec ?? 0;
-		$stats['comment_score_minus'] = $row->stats_comment_score_negative_rec ?? 0;
-		$stats['comment_score'] = ( $stats['comment_score_plus'] - $stats['comment_score_minus'] );
-		$stats['opinions_created'] = $row->stats_opinions_created ?? 0;
-		$stats['opinions_published'] = $row->stats_opinions_published ?? 0;
-		$stats['points'] = $row->stats_total_points ?? 0;
-		$stats['recruits'] = $row->stats_referrals_completed ?? 0;
-		$stats['challenges_won'] = $row->stats_challenges_won ?? 0;
-		$stats['friend_count'] = $row->stats_friends_count ?? 0;
-		$stats['foe_count'] = $row->stats_foe_count ?? 0;
-		$stats['user_board'] = $row->user_board_count ?? 0;
-		$stats['user_board_priv'] = $row->user_board_count_priv ?? 0;
-		$stats['user_board_sent'] = $row->user_board_sent ?? 0;
-		$stats['weekly_wins'] = $row->stats_weekly_winner_count ?? 0;
-		$stats['monthly_wins'] = $row->stats_monthly_winner_count ?? 0;
-		$stats['poll_votes'] = $row->stats_poll_votes ?? 0;
-		$stats['currency'] = $row->stats_currency ?? 0;
-		$stats['picture_game_votes'] = $row->stats_picturegame_votes ?? 0;
-		$stats['quiz_created'] = $row->stats_quiz_questions_created ?? 0;
-		$stats['quiz_answered'] = $row->stats_quiz_questions_answered ?? 0;
-		$stats['quiz_correct'] = $row->stats_quiz_questions_correct ?? 0;
-		$stats['quiz_points'] = $row->stats_quiz_points ?? 0;
-		$stats['quiz_correct_percent'] = number_format( ( $row->stats_quiz_questions_correct_percent ?? 0 ) * 100, 2 );
-		$stats['user_status_count'] = $row->user_status_count ?? 0;
-		if ( !$row ) {
-			$stats['points'] = '1000';
-		}
+
+		$scorePositive = $row->stats_comment_score_positive_rec ?? 0;
+		$scoreNegative = $row->stats_comment_score_negative_rec ?? 0;
+		$stats = [
+			'edits' => $row->stats_edit_count ?? 0,
+			'votes' => $row->stats_vote_count ?? 0,
+			'comments' => $row->stats_comment_count ?? 0,
+			'comment_score_plus' => $scorePositive,
+			'comment_score_minus' => $scoreNegative,
+			'comment_score' => $scorePositive - $scoreNegative,
+			'opinions_created' => $row->stats_opinions_created ?? 0,
+			'opinions_published' => $row->stats_opinions_published ?? 0,
+			'points' => $row ? ( $row->stats_total_points ?? 0 ) : '1000',
+			'recruits' => $row->stats_referrals_completed ?? 0,
+			'challenges_won' => $row->stats_challenges_won ?? 0,
+			'friend_count' => $row->stats_friends_count ?? 0,
+			'foe_count' => $row->stats_foe_count ?? 0,
+			'user_board' => $row->user_board_count ?? 0,
+			'user_board_priv' => $row->user_board_count_priv ?? 0,
+			'user_board_sent' => $row->user_board_sent ?? 0,
+			'weekly_wins' => $row->stats_weekly_winner_count ?? 0,
+			'monthly_wins' => $row->stats_monthly_winner_count ?? 0,
+			'poll_votes' => $row->stats_poll_votes ?? 0,
+			'currency' => $row->stats_currency ?? 0,
+			'picture_game_votes' => $row->stats_picturegame_votes ?? 0,
+			'quiz_created' => $row->stats_quiz_questions_created ?? 0,
+			'quiz_answered' => $row->stats_quiz_questions_answered ?? 0,
+			'quiz_correct' => $row->stats_quiz_questions_correct ?? 0,
+			'quiz_points' => $row->stats_quiz_points ?? 0,
+			'quiz_correct_percent' => number_format( ( $row->stats_quiz_questions_correct_percent ?? 0 ) * 100, 2 ),
+			'user_status_count' => $row->user_status_count ?? 0,
+		];
 
 		$key = $cache->makeKey( 'user', 'stats', 'actor_id', $this->user->getActorId() );
 		$cache->set( $key, $stats );
