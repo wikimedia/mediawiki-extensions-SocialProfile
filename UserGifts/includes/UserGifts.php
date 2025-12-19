@@ -178,18 +178,15 @@ class UserGifts {
 	 */
 	public function doesUserOwnGift( $user, $ug_id ) {
 		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
-		$s = $dbr->selectRow(
+		return (bool)$dbr->selectField(
 			'user_gift',
-			[ 'ug_actor_to' ],
-			[ 'ug_id' => $ug_id ],
+			'ug_actor_to',
+			[
+				'ug_id' => $ug_id,
+				'ug_actor_to' => $user->getActorId(),
+			],
 			__METHOD__
 		);
-		if ( $s !== false ) {
-			if ( $user->getActorId() == $s->ug_actor_to ) {
-				return true;
-			}
-		}
-		return false;
 	}
 
 	/**
@@ -312,20 +309,11 @@ class UserGifts {
 	 */
 	public function getGiftCountByUsername() {
 		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
-
-		$row = $dbr->selectRow(
+		return (int)$dbr->selectField(
 			'user_gift',
-			'COUNT(*) AS count',
+			'COUNT(*)',
 			[ 'ug_actor_to' => $this->user->getActorId() ],
 			__METHOD__
 		);
-
-		$giftCount = 0;
-
-		if ( $row ) {
-			$giftCount = $row->count;
-		}
-
-		return $giftCount;
 	}
 }
