@@ -8,6 +8,7 @@ $cfg['directory_list'] = array_merge(
 		'.', // our dir
 		// We don't actually *depend on* Echo, we merely *support* it, but phan cannot tell the difference.
 		'../../extensions/Echo',
+		'../../extensions/SpamRegex',
 		'../../extensions/SportsTeams',
 	]
 );
@@ -18,6 +19,7 @@ $cfg['exclude_analysis_directory_list'] = array_merge(
 		'vendor',
 		'../vendor',
 		'../../extensions/Echo',
+		'../../extensions/SpamRegex',
 		'../../extensions/SportsTeams',
 	]
 );

@@ -177,8 +177,9 @@ class ApiUploadAvatar extends ApiBase {
 		}
 
 		// Global blocks
-		if ( $user->isBlockedGlobally() ) {
-			$this->dieBlocked( $user->getGlobalBlock() );
+		$block = $user->getBlock();
+		if ( $block ) {
+			$this->dieBlocked( $block );
 		}
 	}
 

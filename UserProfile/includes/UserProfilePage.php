@@ -1974,7 +1974,7 @@ class UserProfilePage extends Article {
 						$fantag_leftside, $this->getTitle(),
 						$out->parserOptions(), false
 					);
-					$fantag_leftside = $fantag_leftside->getText();
+					$fantag_leftside = $fantag_leftside->getContentHolderText();
 				}
 
 				$leftfontsize = '10px';
@@ -2001,7 +2001,7 @@ class UserProfilePage extends Article {
 				$right_text = $tagParser->parse(
 					$right_text, $this->getTitle(), $out->parserOptions(), false
 				);
-				$right_text = $right_text->getText();
+				$right_text = $right_text->getContentHolderText();
 
 				// Output fanboxes
 				$output .= "<div class=\"fanbox-item\">

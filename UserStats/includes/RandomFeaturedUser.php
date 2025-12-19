@@ -122,7 +122,7 @@ class RandomFeaturedUser {
 				global $wgOut;
 				$output .= '<div class="random-featured-user-about-title">' .
 					wfMessage( 'random-user-about-me' )->escaped() . '</div>' .
-					$p->parse( $about, $parser->getTitle(), $wgOut->parserOptions(), false )->getText();
+					$p->parse( $about, $parser->getTitle(), $wgOut->parserOptions(), false )->getContentHolderText();
 			}
 		}
 

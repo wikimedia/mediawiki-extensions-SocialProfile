@@ -247,22 +247,19 @@ class UserBoard {
 		global $wgOut, $wgTitle;
 
 		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
-		$res = $dbr->select(
+		$row = $dbr->selectRow(
 			'user_board',
 			'*',
 			[ 'ub_id' => $messageId ],
-			__METHOD__,
-			[ 'LIMIT' => 1 ]
+			__METHOD__
 		);
 
-		$message = [];
-
-		foreach ( $res as $row ) {
+		if ( $row ) {
 			$parser = MediaWikiServices::getInstance()->getParserFactory()->create();
 			$message_text = $parser->parse( $row->ub_message, $wgTitle, $wgOut->parserOptions(), true );
-			$message_text = $message_text->getText();
+			$message_text = $message_text->getContentHolderText();
 
-			$message = [
+			return [
 				'id' => $row->ub_id,
 				'timestamp' => wfTimestamp( TS_UNIX, $row->ub_date ),
 				'ub_actor_from' => $row->ub_actor_from,
@@ -272,7 +269,7 @@ class UserBoard {
 			];
 		}
 
-		return $message;
+		return [];
 	}
 
 	/**
@@ -323,12 +320,11 @@ class UserBoard {
 		$res = $dbr->query( $dbr->limitResult( $sql, $limit, $offset ), __METHOD__ );
 
 		$messages = [];
+		$parser = MediaWikiServices::getInstance()->getParserFactory()->create();
 
 		foreach ( $res as $row ) {
-			$parser = MediaWikiServices::getInstance()->getParserFactory()->create();
 			$message_text = $parser->parse( $row->ub_message, $wgTitle, $wgOut->parserOptions(), true );
-			$message_text = $message_text->getText();
-
+			$message_text = $message_text->getContentHolderText();
 			$messages[] = [
 				'id' => $row->ub_id,
 				'timestamp' => wfTimestamp( TS_UNIX, $row->ub_date ),

@@ -119,15 +119,13 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 	 * @param User $user
 	 */
 	public static function importUserWiki( User $user ) {
-		$article = $user->getUserPage();
 		$user_wiki_title = Title::makeTitle( NS_USER_WIKI, $user->getName() );
 		$wikiPageFactory = MediaWikiServices::getInstance()->getWikiPageFactory();
-		$wikiPage = $wikiPageFactory->newFromTitle( $article );
 		$user_wiki = $wikiPageFactory->newFromTitle( $user_wiki_title );
 
-		$contentObject = $wikiPage->getContent();
-		$user_page_content = ContentHandler::getContentText( $contentObject );
 		if ( !$user_wiki->exists() ) {
+			$content = $wikiPageFactory->newFromTitle( $user->getUserPage() )->getContent();
+			$user_page_content = $content instanceof TextContent ? $content->getText() : '';
 			$user_wiki->doUserEditContent(
 				ContentHandler::makeContent( $user_page_content, $user_wiki_title ),
 				$user,
