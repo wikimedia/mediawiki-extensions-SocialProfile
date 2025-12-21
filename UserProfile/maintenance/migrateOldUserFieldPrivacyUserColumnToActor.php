@@ -34,7 +34,7 @@ class MigrateOldUserFieldPrivacyUserColumnToActor extends LoggedUpdateMaintenanc
 	 *
 	 * @return string
 	 */
-	protected function updateSkippedMessage() {
+	public function updateSkippedMessage() {
 		return 'user_fields_privacy has already been migrated to use the actor column.';
 	}
 

@@ -37,7 +37,7 @@ class MigrateOldUserProfileUserColumnToActor extends LoggedUpdateMaintenance {
 	 *
 	 * @return string
 	 */
-	protected function updateSkippedMessage() {
+	public function updateSkippedMessage() {
 		return 'user_profile has already been migrated to use the actor column.';
 	}
 

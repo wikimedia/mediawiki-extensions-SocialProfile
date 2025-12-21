@@ -37,7 +37,7 @@ class MigrateOldUserPointsWeeklyUserColumnToActor extends LoggedUpdateMaintenanc
 	 *
 	 * @return string
 	 */
-	protected function updateSkippedMessage() {
+	public function updateSkippedMessage() {
 		return 'user_points_weekly has already been migrated to use the actor column.';
 	}
 

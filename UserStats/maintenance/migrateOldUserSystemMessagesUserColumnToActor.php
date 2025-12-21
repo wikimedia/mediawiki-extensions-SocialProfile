@@ -37,7 +37,7 @@ class MigrateOldUserSystemMessagesUserColumnToActor extends LoggedUpdateMaintena
 	 *
 	 * @return string
 	 */
-	protected function updateSkippedMessage() {
+	public function updateSkippedMessage() {
 		return 'user_system_messages has already been migrated to use the actor column.';
 	}
 

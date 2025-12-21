@@ -37,7 +37,7 @@ class MigrateOldUserRelationshipRequestUserColumnsToActor extends LoggedUpdateMa
 	 *
 	 * @return string
 	 */
-	protected function updateSkippedMessage() {
+	public function updateSkippedMessage() {
 		return 'user_relationship_request has already been migrated to use the actor columns.';
 	}
 

@@ -37,7 +37,7 @@ class MigrateOldUserPointsArchiveUserColumnToActor extends LoggedUpdateMaintenan
 	 *
 	 * @return string
 	 */
-	protected function updateSkippedMessage() {
+	public function updateSkippedMessage() {
 		return 'user_points_archive has already been migrated to use the actor column.';
 	}
 

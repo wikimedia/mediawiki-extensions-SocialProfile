@@ -37,7 +37,7 @@ class MigrateOldUserBoardUserColumnsToActor extends LoggedUpdateMaintenance {
 	 *
 	 * @return string
 	 */
-	protected function updateSkippedMessage() {
+	public function updateSkippedMessage() {
 		return 'user_board has already been migrated to use the actor columns.';
 	}
 

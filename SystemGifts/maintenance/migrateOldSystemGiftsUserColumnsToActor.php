@@ -37,7 +37,7 @@ class MigrateOldSystemGiftsUserColumnsToActor extends LoggedUpdateMaintenance {
 	 *
 	 * @return string
 	 */
-	protected function updateSkippedMessage() {
+	public function updateSkippedMessage() {
 		return 'user_system_gift has already been migrated to use the actor column.';
 	}
 
