@@ -307,7 +307,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		$form .= '<select name="location_country" id="location_country"><option></option>';
 
 		foreach ( $countries as $country ) {
-			$form .= Xml::option( $country, $country, ( $country == $location_country ) );
+			$form .= Html::element( 'option', [ 'value' => $country, 'selected' => ( $country == $location_country ) ], $country );
 		}
 
 		$form .= '</select>';
@@ -330,7 +330,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 		$form .= '<select name="hometown_country" id="hometown_country"><option></option>';
 
 		foreach ( $countries as $country ) {
-			$form .= Xml::option( $country, $country, ( $country == $hometown_country ) );
+			$form .= Html::element( 'option', [ 'value' => $country, 'selected' => ( $country == $hometown_country ) ], $country );
 		}
 
 		$form .= '</select>';
