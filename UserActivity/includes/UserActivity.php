@@ -316,8 +316,8 @@ class UserActivity {
 		$res = $dbr->select(
 			[ 'Comments', 'page' ],
 			[
-				'Comment_Date AS item_date', 'Comment_actor', 'Comment_IP',
-				'page_title', 'Comment_Text', 'page_namespace', 'CommentID'
+				'Comment_Date AS item_date', 'Comment_actor', 'page_title',
+				'Comment_Text', 'page_namespace', 'CommentID'
 			],
 			$where,
 			__METHOD__,
