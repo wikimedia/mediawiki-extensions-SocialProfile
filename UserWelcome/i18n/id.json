@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bennylin"
+			"Bennylin",
+			"Penyuwangi"
 		]
 	},
-	"userwelcome-desc": "Menambahkan tag <code>&lt;welcomeUser&gt;</code> untuk menampilkan info sosial pengguna kepada pengguna yang masuk log",
+	"userwelcome-desc": "Menambahkan tanda <code>&lt;welcomeUser&gt;</code> untuk menampilkan info sosial pengguna kepada pengguna yang masuk log",
 	"mp-userlevels-link": "Tingkat pengguna",
 	"mp-welcome-upload": "Memuat",
 	"mp-welcome-points": "$1 {{PLURAL:$1||}}poin",
