@@ -63,9 +63,15 @@ class UserBoard {
 	 * @param User $recipient User (object) receiving the message
 	 * @param string $message Message text
 	 * @param int $message_type 0 for public message
-	 * @return int The inserted value of ub_id row
+	 * @return int|false The inserted value of ub_id row, or false if it was not sent
 	 */
 	public function sendBoardMessage( $sender, $recipient, $message, $message_type = 0 ) {
+		$allowPrivateMessages = MediaWikiServices::getInstance()->getMainConfig()
+			->get( 'UserBoardAllowPrivateMessages' );
+		if ( $message_type !== self::MESSAGE_PUBLIC && !$allowPrivateMessages ) {
+			return false;
+		}
+
 		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 
 		$dbw->insert(

@@ -30,6 +30,11 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$request = $this->getRequest();
 		$user = $this->getUser();
 
+		if ( !$this->getConfig()->get( 'UserBoardAllowPrivateMessages' ) ) {
+			$out->showErrorPage( 'userboard-private-messages-disabled-title', 'userboard-private-messages-disabled' );
+			return;
+		}
+
 		// This feature is available only to logged-in users.
 		$this->requireLogin();
 

@@ -33,7 +33,12 @@ class ApiSendUserBoardMessage extends ApiBase {
 			$this->dieWithError( 'spamprotectiontext', 'spam' );
 		}
 
-		$m = $b->sendBoardMessage(
+		if ( $message_type !== UserBoard::MESSAGE_PUBLIC &&
+			!$this->getConfig()->get( 'UserBoardAllowPrivateMessages' ) ) {
+			$this->dieWithError( 'userboard-private-messages-disabled' );
+		}
+
+		$b->sendBoardMessage(
 			$user,
 			$recipient,
 			$messageText,

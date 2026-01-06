@@ -65,5 +65,7 @@
 	"apihelp-socialprofile-send-message-param-message": "A urlencoded version of the message to send.",
 	"apihelp-socialprofile-send-message-param-type": "Message type: 0 for a public message, 1 for a private message.",
 	"apihelp-socialprofile-delete-message-summary": "Delete a UserBoard message.",
-	"apihelp-socialprofile-delete-message-param-id": "Unique identifier of the board message to delete."
+	"apihelp-socialprofile-delete-message-param-id": "Unique identifier of the board message to delete.",
+	"userboard-private-messages-disabled": "Private messages are disabled on this wiki.",
+	"userboard-private-messages-disabled-title": "Feature disabled"
 }

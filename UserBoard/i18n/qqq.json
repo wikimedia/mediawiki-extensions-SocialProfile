@@ -68,5 +68,7 @@
 	"apihelp-socialprofile-send-message-param-message": "{{doc-apihelp-param|socialprofile-send-message|message}}",
 	"apihelp-socialprofile-send-message-param-type": "{{doc-apihelp-param|socialprofile-send-message|type}}",
 	"apihelp-socialprofile-delete-message-summary": "{{doc-apihelp-summary|socialprofile-delete-message}}",
-	"apihelp-socialprofile-delete-message-param-id": "{{doc-apihelp-param|socialprofile-delete-message|id}}"
+	"apihelp-socialprofile-delete-message-param-id": "{{doc-apihelp-param|socialprofile-delete-message|id}}",
+	"userboard-private-messages-disabled": "Error that shows if a feature is unavailable because private messages are disabled.",
+	"userboard-private-messages-disabled-title": "Title of the error page that is shown if a feature is unavailable because private messages are disabled."
 }

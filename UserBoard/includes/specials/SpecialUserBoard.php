@@ -139,6 +139,12 @@ class SpecialViewUserBoard extends SpecialPage {
 					$output .= Html::errorBox( $this->msg( 'sessionfailure' )->escaped() );
 				}
 			} elseif ( $request->getVal( 'action' ) === 'send' ) {
+				$messageType = $request->getInt( 'message_type' );
+				if ( $messageType !== UserBoard::MESSAGE_PUBLIC && !$this->getConfig()->get( 'UserBoardAllowPrivateMessages' ) ) {
+					$out->showErrorPage( 'userboard-private-messages-disabled-title', 'userboard-private-messages-disabled' );
+					return;
+				}
+
 				// Sending a message
 				if ( $currentUser->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
 					$messageText = urldecode( $request->getVal( 'message' ) );
@@ -154,7 +160,7 @@ class SpecialViewUserBoard extends SpecialPage {
 							$currentUser,
 							User::newFromName( $request->getVal( 'user_name_to' ) ),
 							$messageText,
-							$request->getInt( 'message_type' )
+							$messageType
 						);
 					}
 				} else {

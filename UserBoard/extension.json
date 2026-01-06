@@ -40,6 +40,11 @@
 		"SendBoardBlast": "SpecialBoardBlast",
 		"UserBoard": "SpecialViewUserBoard"
 	},
+	"config": {
+		"UserBoardAllowPrivateMessages": {
+			"value": true
+		}
+	},
 	"ResourceModules": {
 		"ext.socialprofile.userboard.js": {
 			"scripts": "js/UserBoard.js",
