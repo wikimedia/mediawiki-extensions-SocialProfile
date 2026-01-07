@@ -13,7 +13,7 @@
 	"messagesenttitle": "Page title of Special:SendBoardBlast special page when a board blast has successfully been sent out; a board blast is a private user board message sent to a larger group of recipients at one and these recipients must be friends or foes of the sender. See also {{msg-mw|messagesentsuccess}}",
 	"boardblasttitle": "Page title of Special:SendBoardBlast; a board blast is a private user board message sent to a larger group of recipients at one and these recipients must be friends or foes of the sender",
 	"boardblaststep1": "Help message displayed on Special:SendBoardBlast",
-	"boardblastprivatenote": "Note displayed on Special:SendBoardBlast reminding users that board blasts will be sent as private board messages to the intended recipient(s)",
+	"boardblast-message-type-note": "Note displayed on Special:SendBoardBlast informing users that board blasts will be sent as public messages because privates ones are disabled.",
 	"boardblaststep2": "Help message displayed on Special:SendBoardBlast; below this message is a grid containing the names of your friends and foes (potential board blast recipients which you can click on to add them as a recipient)",
 	"boardlinkselectall": "Link text, shown on Special:SendBoardBlast; clicking on this link selects all displayed users as the recipients of the board blast",
 	"boardlinkunselectall": "Link text, shown on Special:SendBoardBlast; clicking on this link removes selection from all selected users",

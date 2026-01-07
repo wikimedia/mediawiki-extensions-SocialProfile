@@ -10,7 +10,7 @@
 	"messagesenttitle": "Messages sent",
 	"boardblasttitle": "Send board blast",
 	"boardblaststep1": "Step 1 - Write your message",
-	"boardblastprivatenote": "All messages will be sent as private messages",
+	"boardblast-message-type-note": "All messages will be sent as public messages, as private messages are disabled.",
 	"boardblaststep2": "Step 2 - Select who you want to send your message to",
 	"boardlinkselectall": "Select all",
 	"boardlinkunselectall": "Unselect all",

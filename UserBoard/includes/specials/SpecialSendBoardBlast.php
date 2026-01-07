@@ -30,11 +30,6 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$request = $this->getRequest();
 		$user = $this->getUser();
 
-		if ( !$this->getConfig()->get( 'UserBoardAllowPrivateMessages' ) ) {
-			$out->showErrorPage( 'userboard-private-messages-disabled-title', 'userboard-private-messages-disabled' );
-			return;
-		}
-
 		// This feature is available only to logged-in users.
 		$this->requireLogin();
 
@@ -66,6 +61,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 
 		$output = '';
 		$messageText = $request->getVal( 'message' );
+		$messageType = $request->getInt( 'message_type' );
 		$errors = [];
 
 		if ( $request->wasPosted() && $user->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
@@ -117,6 +113,11 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 
 				$count = 0;
 
+				$privateMessagesEnabled = $this->getConfig()->get( 'UserBoardAllowPrivateMessages' );
+				if ( !$privateMessagesEnabled && $messageType !== UserBoard::MESSAGE_PUBLIC ) {
+					$out->showErrorPage( 'userboard-private-messages-disabled-title', 'userboard-private-messages-disabled' );
+					return;
+				}
 				foreach ( $user_ids_to as $user_id ) {
 					$recipient = User::newFromId( (int)$user_id );
 					$recipient->loadFromId();
@@ -125,7 +126,7 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 						$recipient,
 						// @phan-suppress-next-line PhanTypeMismatchArgumentNullable Why are you like this, phan?
 						$messageText,
-						UserBoard::MESSAGE_PRIVATE
+						$messageType
 					);
 					$count++;
 				}
@@ -165,14 +166,28 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 		$friendCount = $stats_data['friend_count'];
 		$foeCount = $stats_data['foe_count'];
 
+		$privateMessagesEnabled = $this->getConfig()->get( 'UserBoardAllowPrivateMessages' );
+		if ( $privateMessagesEnabled ) {
+			$messageTypeSelector = Html::element(
+				'span',
+				[],
+				$this->msg( 'userboard_messagetype' )->text()
+			) . Html::rawElement(
+				'select',
+				[ 'id' => 'message_type', 'name' => 'message_type' ],
+				Html::element( 'option', [ 'value' => '0' ], $this->msg( 'userboard_public' )->text() ) .
+					Html::element( 'option', [ 'value' => '1', 'selected' => true ], $this->msg( 'userboard_private' )->text() )
+			);
+		} else {
+			$messageTypeSelector = $this->msg( 'boardblast-message-type-note' )->escaped();
+		}
+
 		$output = '<div class="board-blast-message-form">
 				<h2>' . $this->msg( 'boardblaststep1' )->escaped() . '</h2>
 				<form method="post" name="blast" action="">
 					<input type="hidden" name="ids" id="ids" />
 					<input type="hidden" name="wpEditToken" value="' . htmlspecialchars( $user->getEditToken(), ENT_QUOTES ) . '" />
-					<div class="blast-message-text">'
-						. $this->msg( 'boardblastprivatenote' )->escaped() .
-					'</div>
+					<div class="blast-message-text">' . $messageTypeSelector . '</div>
 					<textarea name="message" id="message" cols="63" rows="4"></textarea>
 		</div>
 		<div class="blast-nav">

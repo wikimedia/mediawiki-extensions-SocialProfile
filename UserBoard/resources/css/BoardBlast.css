@@ -74,3 +74,8 @@
 	color: #333;
 	margin: 15px 0 10px 0 !important;
 }
+
+select#message_type {
+	vertical-align: middle;
+	margin: -1px 0 0 5px;
+}
