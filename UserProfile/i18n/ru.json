@@ -15,7 +15,8 @@
 			"Rairakkumee",
 			"Rubin",
 			"Rubin16",
-			"Александр Сигачёв"
+			"Александр Сигачёв",
+			"Vonavy"
 		]
 	},
 	"editprofile": "Править профили других участников",
@@ -216,7 +217,7 @@
 	"profilelogpagetext": "Это журнал редактирования личных страниц",
 	"user-profile-edit-profile": "{{GENDER:|изменил|изменила|изменил_а}} профиль $1",
 	"avatarlogpage": "Журнал аватаров",
-	"avatarlogpagetext": "Это журнал загрузок аватар участников",
+	"avatarlogpagetext": "Это журнал загрузок и удалений аватаров участников.",
 	"user-profile-picture-log-entry": "{{GENDER:|загрузил|загрузила|загрузил_а}} новую аватару",
 	"user-profile-picture-log-delete-entry": "{{GENDER:|удалил|удалила|удалил_а}} аватару $1",
 	"user-profile-remove-avatar": "удалить",
