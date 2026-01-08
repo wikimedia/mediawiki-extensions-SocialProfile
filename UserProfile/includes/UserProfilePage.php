@@ -1814,20 +1814,27 @@ class UserProfilePage extends Article {
 					] ),
 					ENT_QUOTES
 				);
-				$output .= '<div class="user-page-message-form">
-					<form id="board-post-form" action="' . $url . '" method="post">
-						<input type="hidden" id="user_name_to" name="user_name_to" value="' . htmlspecialchars( $this->profileOwner->getName(), ENT_QUOTES ) . '" />
-						<span class="profile-board-message-type">' .
+
+				if ( $this->getContext()->getConfig()->get( 'UserBoardAllowPrivateMessages' ) ) {
+					$messageTypeSelector = '<span class="profile-board-message-type">' .
 							wfMessage( 'userboard_messagetype' )->escaped() .
 						'</span>
 						<select id="message_type" name="message_type">
-							<option value="0">' .
-								wfMessage( 'userboard_public' )->escaped() .
-							'</option>
-							<option value="1">' .
-								wfMessage( 'userboard_private' )->escaped() .
-							'</option>
-						</select><p>
+						<option value="0">' .
+							wfMessage( 'userboard_public' )->escaped() .
+						'</option>
+						<option value="1">' .
+							wfMessage( 'userboard_private' )->escaped() .
+						'</option>
+					</select>';
+				} else {
+					$messageTypeSelector = '';
+				}
+				$output .= '<div class="user-page-message-form">
+					<form id="board-post-form" action="' . $url . '" method="post">
+						<input type="hidden" id="user_name_to" name="user_name_to" value="' . htmlspecialchars( $this->profileOwner->getName(), ENT_QUOTES ) . '" />' .
+						$messageTypeSelector .
+						'<p>
 						<textarea name="message" id="message" cols="43" rows="4"></textarea>
 						<div class="user-page-message-box-button">
 							<input type="submit" value="' . wfMessage( 'userboard_sendbutton' )->escaped() . '" class="site-button" />

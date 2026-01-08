@@ -346,16 +346,27 @@ class SpecialViewUserBoard extends SpecialPage {
 					$urlParams['user'] = $request->getVal( 'user' );
 				}
 				$url = htmlspecialchars( $this->getPageTitle()->getFullURL( $urlParams ), ENT_QUOTES );
+				if ( $this->getConfig()->get( 'UserBoardAllowPrivateMessages' ) ) {
+					$messageTypeSelector = '<span class="user-board-message-type">' .
+						$this->msg( 'userboard_messagetype' )->escaped() .
+						'</span>
+						<select id="message_type" name="message_type">
+						<option value="0">' .
+						$this->msg( 'userboard_public' )->escaped() .
+						'</option>
+						<option value="1">' .
+						$this->msg( 'userboard_private' )->escaped() .
+						'</option>
+					</select>';
+				} else {
+					$messageTypeSelector = '';
+				}
 				$output .= '<div class="user-page-message-form">
 				<form id="board-post-form" action="' . $url . '" method="post">
 					<input type="hidden" id="user_name_to" name="user_name_to" value="' . $user_name_to . '"/>
-					<input type="hidden" id="user_name_from" name="user_name_from" value="' . $user_name_from . '"/>
-					<span class="user-board-message-type">' . $this->msg( 'userboard_messagetype' )->escaped() . ' </span>
-					<select id="message_type" name="message_type">
-						<option value="0">' . $this->msg( 'userboard_public' )->escaped() . '</option>
-						<option value="1">' . $this->msg( 'userboard_private' )->escaped() . '</option>
-					</select>
-					<p>
+					<input type="hidden" id="user_name_from" name="user_name_from" value="' . $user_name_from . '"/>' .
+					$messageTypeSelector .
+					'<p>
 					<textarea name="message" id="message" cols="63" rows="4"></textarea>
 
 					<div class="user-page-message-box-button">

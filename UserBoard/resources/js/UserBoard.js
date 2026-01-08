@@ -9,7 +9,8 @@ var UserBoard = {
 		if ( message && !UserBoard.posted ) {
 			UserBoard.posted = 1;
 
-			const messageType = document.getElementById( 'message_type' ).value;
+			const messageTypeSelect = document.getElementById( 'message_type' );
+			const messageType = messageTypeSelect ? messageTypeSelect.value : 0;
 
 			( new mw.Api() ).postWithToken( 'csrf', {
 				action: 'socialprofile-send-message',
