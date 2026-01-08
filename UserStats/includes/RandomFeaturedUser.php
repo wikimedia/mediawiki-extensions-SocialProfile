@@ -18,6 +18,7 @@
 
 use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Parser\ParserOptions;
 
 class RandomFeaturedUser {
 
@@ -119,10 +120,10 @@ class RandomFeaturedUser {
 			// Remove templates
 			$about = preg_replace( '@{{.*?}}@si', '', $about );
 			if ( !empty( $about ) ) {
-				global $wgOut;
+				$parserOptions = ParserOptions::newFromContext( RequestContext::getMain() );
 				$output .= '<div class="random-featured-user-about-title">' .
 					wfMessage( 'random-user-about-me' )->escaped() . '</div>' .
-					$p->parse( $about, $parser->getTitle(), $wgOut->parserOptions(), false )->getContentHolderText();
+					$p->parse( $about, $parser->getTitle(), $parserOptions, false )->getContentHolderText();
 			}
 		}
 

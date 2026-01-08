@@ -3,6 +3,7 @@
 use MediaWiki\Html\Html;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Parser\ParserOptions;
 use MediaWiki\Title\Title;
 
 /**
@@ -1979,7 +1980,7 @@ class UserProfilePage extends Article {
 					$fantag_leftside = $fanbox['fantag_left_text'];
 					$fantag_leftside = $tagParser->parse(
 						$fantag_leftside, $this->getTitle(),
-						$out->parserOptions(), false
+						ParserOptions::newFromContext( $out->getContext() ), false
 					);
 					$fantag_leftside = $fantag_leftside->getContentHolderText();
 				}
@@ -2006,7 +2007,7 @@ class UserProfilePage extends Article {
 				$fantag_title = Title::makeTitle( NS_FANTAG, $fanbox['fantag_title'] );
 				$right_text = $fanbox['fantag_right_text'];
 				$right_text = $tagParser->parse(
-					$right_text, $this->getTitle(), $out->parserOptions(), false
+					$right_text, $this->getTitle(), ParserOptions::newFromContext( $out->getContext() ), false
 				);
 				$right_text = $right_text->getContentHolderText();
 

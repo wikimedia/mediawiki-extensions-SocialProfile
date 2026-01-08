@@ -2,6 +2,7 @@
 
 use MediaWiki\Html\TemplateParser;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Parser\ParserOptions;
 
 /**
  * Functions for managing user board data
@@ -250,8 +251,6 @@ class UserBoard {
 	 * @return array Array containing info about the message on success, empty array on failure
 	 */
 	public function getMessage( $messageId ) {
-		global $wgOut, $wgTitle;
-
 		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$row = $dbr->selectRow(
 			'user_board',
@@ -262,7 +261,9 @@ class UserBoard {
 
 		if ( $row ) {
 			$parser = MediaWikiServices::getInstance()->getParserFactory()->create();
-			$message_text = $parser->parse( $row->ub_message, $wgTitle, $wgOut->parserOptions(), true );
+			$context = RequestContext::getMain();
+			$parserOptions = ParserOptions::newFromContext( $context );
+			$message_text = $parser->parse( $row->ub_message, $context->getTitle(), $parserOptions, true );
 			$message_text = $message_text->getContentHolderText();
 
 			return [
@@ -290,8 +291,6 @@ class UserBoard {
 	 * @return array Array of user board messages
 	 */
 	public function getUserBoardMessages( $user, $user_2 = 0, $limit = 0, $page = 0 ) {
-		global $wgOut, $wgTitle;
-
 		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$offset = 0;
@@ -328,8 +327,10 @@ class UserBoard {
 		$messages = [];
 		$parser = MediaWikiServices::getInstance()->getParserFactory()->create();
 
+		$context = RequestContext::getMain();
+		$parserOptions = ParserOptions::newFromContext( $context );
 		foreach ( $res as $row ) {
-			$message_text = $parser->parse( $row->ub_message, $wgTitle, $wgOut->parserOptions(), true );
+			$message_text = $parser->parse( $row->ub_message, $context->getTitle(), $parserOptions, true );
 			$message_text = $message_text->getContentHolderText();
 			$messages[] = [
 				'id' => $row->ub_id,
