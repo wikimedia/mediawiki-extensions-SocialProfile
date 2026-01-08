@@ -67,5 +67,7 @@
 	"apihelp-socialprofile-send-message-param-message": "要傳送的訊息的 urlencoded 版本。",
 	"apihelp-socialprofile-send-message-param-type": "訊息類型：0 用於公開訊息，1 用於非公開訊息。",
 	"apihelp-socialprofile-delete-message-summary": "刪除使用者留言板訊息。",
-	"apihelp-socialprofile-delete-message-param-id": "要刪除的留言訊息的唯一識別。"
+	"apihelp-socialprofile-delete-message-param-id": "要刪除的留言訊息的唯一識別。",
+	"userboard-private-messages-disabled": "此 wiki 已停用私訊功能。",
+	"userboard-private-messages-disabled-title": "功能已停用"
 }

@@ -62,5 +62,7 @@
 	"apihelp-socialprofile-send-message-param-message": "Unha versión codificada para enderezos URL da mensaxe a enviar.",
 	"apihelp-socialprofile-send-message-param-type": "Tipo de mensaxe: 0 para unha mensaxe pública, 1 para unha mensaxe privada.",
 	"apihelp-socialprofile-delete-message-summary": "Eliminar unha mensaxe do taboleiro de usuario.",
-	"apihelp-socialprofile-delete-message-param-id": "Identificador único da mensaxe que se vai eliminar."
+	"apihelp-socialprofile-delete-message-param-id": "Identificador único da mensaxe que se vai eliminar.",
+	"userboard-private-messages-disabled": "As mensaxes privadas están desactivadas neste wiki.",
+	"userboard-private-messages-disabled-title": "Función desactivada"
 }

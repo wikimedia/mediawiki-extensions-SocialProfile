@@ -72,5 +72,7 @@
 	"apihelp-socialprofile-send-message-param-message": "Eine URL-encodete Version der zu sendenden Nachricht.",
 	"apihelp-socialprofile-send-message-param-type": "Nachrichtentyp: 0 für eine öffentliche Nachricht, 1 für eine private.",
 	"apihelp-socialprofile-delete-message-summary": "Lösche eine Pinnwand-Nachricht.",
-	"apihelp-socialprofile-delete-message-param-id": "Eindeutige Kennung der zu löschenden Pinnwand-Nachricht."
+	"apihelp-socialprofile-delete-message-param-id": "Eindeutige Kennung der zu löschenden Pinnwand-Nachricht.",
+	"userboard-private-messages-disabled": "Private Nachrichten sind in diesem Wiki deaktiviert.",
+	"userboard-private-messages-disabled-title": "Funktion deaktiviert"
 }
