@@ -63,5 +63,7 @@
 	"apihelp-socialprofile-send-message-param-message": "Верзија на пораката за испраќање во URL-код.",
 	"apihelp-socialprofile-send-message-param-type": "Вид порака: 0 за јавна, 1 за приватна.",
 	"apihelp-socialprofile-delete-message-summary": "Избришете порака од корисничка табла.",
-	"apihelp-socialprofile-delete-message-param-id": "Единствена назнака на пораката за бришење."
+	"apihelp-socialprofile-delete-message-param-id": "Единствена назнака на пораката за бришење.",
+	"userboard-private-messages-disabled": "Личните пораки се оневозможени на ова вики.",
+	"userboard-private-messages-disabled-title": "Функцијата е оневозможена"
 }
