@@ -31,7 +31,8 @@
 	"Hooks": {
 		"BeforeCreateEchoEvent": "UserBoardHooks::onBeforeCreateEchoEvent",
 		"EchoGetDefaultNotifiedUsers": "UserBoardHooks::onEchoGetDefaultNotifiedUsers",
-		"EchoGetBundleRules": "UserBoardHooks::onEchoGetBundleRules"
+		"EchoGetBundleRules": "UserBoardHooks::onEchoGetBundleRules",
+		"ResourceLoaderRegisterModules": "UserBoardHooks:onResourceLoaderRegisterModules"
 	},
 	"DefaultUserOptions": {
 		"echo-subscriptions-web-social-msg": true,
@@ -50,10 +51,6 @@
 			"messages": [
 				"userboard_confirmdelete"
 			]
-		},
-		"ext.socialprofile.userboard.wikiEditor": {
-			"scripts": "js/WikiEditorIntegration.js",
-			"dependencies": "ext.wikiEditor"
 		},
 		"ext.socialprofile.userboard.css": {
 			"styles": "css/UserBoard.css"
