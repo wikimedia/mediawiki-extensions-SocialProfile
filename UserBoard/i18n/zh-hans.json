@@ -14,7 +14,7 @@
 	"messagesenttitle": "消息已发送",
 	"boardblasttitle": "群发用户墙消息",
 	"boardblaststep1": "第1步 - 把消息写出来",
-	"boardblastprivatenote": "所有消息都会以私信发送",
+	"boardblast-message-type-note": "所有的消息将被作为公共消息发送，因为非公开消息被关闭。",
 	"boardblaststep2": "第2步 - 选择您需要发送消息的人",
 	"boardlinkselectall": "选择全部",
 	"boardlinkunselectall": "取消选择所有",
@@ -68,5 +68,7 @@
 	"apihelp-socialprofile-send-message-param-message": "要发送的URL编码过的消息。",
 	"apihelp-socialprofile-send-message-param-type": "消息种类：0为公开，1为私信。",
 	"apihelp-socialprofile-delete-message-summary": "删除一条用户墙消息。",
-	"apihelp-socialprofile-delete-message-param-id": "要删除的用户墙消息的唯一标识符。"
+	"apihelp-socialprofile-delete-message-param-id": "要删除的用户墙消息的唯一标识符。",
+	"userboard-private-messages-disabled": "此wiki已停用私信功能。",
+	"userboard-private-messages-disabled-title": "功能已停用"
 }

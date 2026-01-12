@@ -9,7 +9,7 @@
 	"messagesenttitle": "Пораките се испратени",
 	"boardblasttitle": "Испрати изјава на таблата",
 	"boardblaststep1": "Чекор 1 - Напишете ја пораката",
-	"boardblastprivatenote": "Сите пораки ќе бидат испратени како приватни",
+	"boardblast-message-type-note": "Сите пораки ќе се испраќаат како јавни бидејќи личните пораки се оневозможени.",
 	"boardblaststep2": "Чекор 2 - Изберете кому сакате да ја испратите пораката",
 	"boardlinkselectall": "Избери сè",
 	"boardlinkunselectall": "Тргни избор",

@@ -10,7 +10,6 @@
 	"messagesenttitle": "Viestit lähetetty",
 	"boardblasttitle": "Lähetä keskustelupläjäys",
 	"boardblaststep1": "Vaihe 1 – Kirjoita viestisi",
-	"boardblastprivatenote": "Kaikki viestit lähetetään yksityisviesteinä",
 	"boardblaststep2": "Vaihe 2 – Valitse kenelle haluat lähettää viestisi",
 	"boardlinkselectall": "Valitse kaikki",
 	"boardlinkunselectall": "Poista valinta kaikista",
@@ -58,5 +57,7 @@
 	"echo-pref-tooltip-social-msg": "Ilmoita minulle, kun joku jättää viestin keskustelualueelleni.",
 	"notification-social-msg-send": "$1 jätti juuri sinulle viestin.<br /><br />''$2''",
 	"notification-social-msg-send-bundle": "{{PLURAL:$1|Yksi henkilö jätti|$1 henkilöä jättivät|100=99+ henkilöä jättivät}} sinulle viestejä.",
-	"apierror-socialprofile-send-message-nosend": "Et voi lähettää viestejä."
+	"apierror-socialprofile-send-message-nosend": "Et voi lähettää viestejä.",
+	"userboard-private-messages-disabled": "Yksityisviestit ovat pois käytöstä tässä wikissä.",
+	"userboard-private-messages-disabled-title": "Ominaisuus ei käytössä"
 }

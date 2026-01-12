@@ -18,7 +18,7 @@
 	"messagesenttitle": "Nachrichten verschickt",
 	"boardblasttitle": "Nachricht senden",
 	"boardblaststep1": "Schritt 1: {{#FORMAL:Schreibe deine|Schreiben Sie Ihre}} Nachricht",
-	"boardblastprivatenote": "Alle Nachrichten werden als private Mitteilungen verschickt",
+	"boardblast-message-type-note": "Alle Nachrichten werden als öffentliche Nachrichten versendet, da private Nachrichten deaktiviert sind.",
 	"boardblaststep2": "Schritt 2: {{#FORMAL:Wähle|Wählen Sie}} aus, wem {{#FORMAL:du|Sie}} die Nachrichte schicken {{#FORMAL:willst|wollen}}",
 	"boardlinkselectall": "Alle markieren",
 	"boardlinkunselectall": "Keine markieren",
