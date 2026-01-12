@@ -1,6 +1,9 @@
 <?php
 
-class UserBoardHooks {
+use MediaWiki\ResourceLoader\Hook\ResourceLoaderRegisterModulesHook;
+use MediaWiki\ResourceLoader\ResourceLoader;
+
+class UserBoardHooks implements ResourceLoaderRegisterModulesHook {
 	/**
 	 * For the Echo extension.
 	 *
@@ -39,6 +42,22 @@ class UserBoardHooks {
 			case 'social-msg-send':
 				$bundleString = 'social-msg-send';
 				break;
+		}
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function onResourceLoaderRegisterModules( ResourceLoader $resourceLoader ): void {
+		$dir = dirname( __DIR__ ) . '/resources';
+
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'WikiEditor' ) ) {
+			$resourceLoader->register( [
+				'ext.socialprofile.userboard.wikiEditor' => [
+					'scripts' => 'js/WikiEditorIntegration.js',
+					'dependencies' => 'ext.wikiEditor',
+				],
+			] );
 		}
 	}
 }
