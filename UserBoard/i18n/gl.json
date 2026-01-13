@@ -8,6 +8,7 @@
 	"messagesenttitle": "Mensaxes enviadas",
 	"boardblasttitle": "Enviar un recado",
 	"boardblaststep1": "Paso 1: Escribe a túa mensaxe",
+	"boardblast-message-type-note": "Todas as mensaxes enviaranse como mensaxes públicas, xa que as mensaxes privadas están desactivadas.",
 	"boardblaststep2": "Paso 2: Escolle a quen lle queres enviar a túa mensaxe",
 	"boardlinkselectall": "Seleccionar todos",
 	"boardlinkunselectall": "Deseleccionar todos",
