@@ -11,6 +11,7 @@
 	"messagesenttitle": "Sendte beskjeder",
 	"boardblasttitle": "Send melding",
 	"boardblaststep1": "Steg 1 &ndash; skriv beskjeden din",
+	"boardblast-message-type-note": "Alle meldinger som sendes er offentlige, siden private meldinger er deaktivert.",
 	"boardblaststep2": "Steg 2 &ndash; velg hvem du vil sende meldingen til",
 	"boardlinkselectall": "Merk alle",
 	"boardlinkunselectall": "Fjern all merking",
@@ -64,5 +65,7 @@
 	"apihelp-socialprofile-send-message-param-message": "En URL-kodet versjon av meldingen som skal sendes.",
 	"apihelp-socialprofile-send-message-param-type": "Meldingstype: 0 for offentlig melding, 1 for privat melding.",
 	"apihelp-socialprofile-delete-message-summary": "Slett en brukertavlemelding.",
-	"apihelp-socialprofile-delete-message-param-id": "Unik identifikator for tavlemeldingen som skal slettes."
+	"apihelp-socialprofile-delete-message-param-id": "Unik identifikator for tavlemeldingen som skal slettes.",
+	"userboard-private-messages-disabled": "Private meldinger er deaktivert på denne wikien.",
+	"userboard-private-messages-disabled-title": "Funksjonen er deaktivert"
 }
