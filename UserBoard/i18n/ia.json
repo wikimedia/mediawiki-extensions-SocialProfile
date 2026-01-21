@@ -8,6 +8,7 @@
 	"messagesenttitle": "Messages inviate",
 	"boardblasttitle": "Inviar colpo de tabuliero",
 	"boardblaststep1": "Passo 1 - Scribe tu message",
+	"boardblast-message-type-note": "Tote le messages essera inviate como messages public, perque le messages private ha essite disactivate.",
 	"boardblaststep2": "Passo 2 - Selige a qui tu vole inviar tu message",
 	"boardlinkselectall": "Seliger toto",
 	"boardlinkunselectall": "Disseliger toto",
@@ -61,5 +62,7 @@
 	"apihelp-socialprofile-send-message-param-message": "Un version codificate in forma de URL del message a inviar.",
 	"apihelp-socialprofile-send-message-param-type": "Typo de message: 0 pro un message public, 1 pro un message private.",
 	"apihelp-socialprofile-delete-message-summary": "Deler un message de un tabuliero de usator.",
-	"apihelp-socialprofile-delete-message-param-id": "Identificator unic del message a deler del tabuliero."
+	"apihelp-socialprofile-delete-message-param-id": "Identificator unic del message a deler del tabuliero.",
+	"userboard-private-messages-disabled": "Le messages private ha essite disactivate sur iste wiki.",
+	"userboard-private-messages-disabled-title": "Function disactivate"
 }
