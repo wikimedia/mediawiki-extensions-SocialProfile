@@ -12,6 +12,7 @@
 	"messagesenttitle": "الرسائل تم إرسالها",
 	"boardblasttitle": "أرسل بورد بلاست",
 	"boardblaststep1": "خطوة 1 - اكتب رسالتك",
+	"boardblast-message-type-note": "سيتم إرسال جميع الرسائل كرسائل عامة، حيث أن الرسائل الخاصة معطلة.",
 	"boardblaststep2": "خطوة 2 - اختر الشخص الذي تود إرسال رسالتك إليه",
 	"boardlinkselectall": "اختر الكل",
 	"boardlinkunselectall": "ألغِ اختيار الكل",
@@ -65,5 +66,7 @@
 	"apihelp-socialprofile-send-message-param-message": "نسخة مشفرة من URL للرسالة لإرسالها.",
 	"apihelp-socialprofile-send-message-param-type": "نوع الرسالة: 0 للرسالة العامة ، و 1 للرسالة الخاصة.",
 	"apihelp-socialprofile-delete-message-summary": "احذف رسالة UserBoard.",
-	"apihelp-socialprofile-delete-message-param-id": "المعرف الفريد لرسالة المنتدى المراد حذفها."
+	"apihelp-socialprofile-delete-message-param-id": "المعرف الفريد لرسالة المنتدى المراد حذفها.",
+	"userboard-private-messages-disabled": "تم تعطيل الرسائل الخاصة في هذه الويكي.",
+	"userboard-private-messages-disabled-title": "تم تعطيل هذه الميزة"
 }
