@@ -134,6 +134,7 @@
 	"user-type-toggle-new": "Използване на социалната потребителска страница",
 	"user-board-login-message": "За оставяне на съобщения до другите потребители е необходимо [[Special:UserLogin|влизане]] в системата",
 	"removeavatar": "Премахване на аватар",
+	"removeavatar-reason": "Причина:",
 	"givegift": "Даване на подарък",
 	"viewgifts": "Преглед на подаръците",
 	"viewsystemgifts": "Преглед на наградите",
