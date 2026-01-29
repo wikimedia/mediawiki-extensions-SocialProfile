@@ -6,7 +6,8 @@
 			"Red Winged Duck",
 			"Renessaince",
 			"Wizardist",
-			"Zedlik"
+			"Zedlik",
+			"Ucukor"
 		]
 	},
 	"editprofile": "Рэдагаваць профілі іншых удзельнікаў",
@@ -45,7 +46,7 @@
 	"user-friends-title": "Сябры",
 	"user-foes-title": "Ворагі",
 	"other-info-movies": "Фільмы",
-	"other-info-tv": "Тэлебачаньне",
+	"other-info-tv": "Тэлевізыя",
 	"other-info-music": "Музыка",
 	"other-info-books": "Кнігі",
 	"other-info-video-games": "Кампутарныя гульні",
@@ -116,7 +117,7 @@
 	"user-profile-personal-websites": "Ўэб-сайты",
 	"user-profile-interests-entertainment": "Захапленьні",
 	"user-profile-interests-movies": "Фільмы",
-	"user-profile-interests-tv": "Тэлебачаньне",
+	"user-profile-interests-tv": "Тэлевізыя",
 	"user-profile-interests-music": "Музыка",
 	"user-profile-interests-books": "Кнігі",
 	"user-profile-interests-magazines": "Часопісы",
