@@ -10,6 +10,7 @@
 	"messagesenttitle": "Berichten verzonden",
 	"boardblasttitle": "Bericht aan meerdere gebruikers verzenden",
 	"boardblaststep1": "Stap 1: uw bericht schrijven",
+	"boardblast-message-type-note": "Alle berichten worden als openbare berichten verzonden, aangezien privéberichten zijn uitgeschakeld.",
 	"boardblaststep2": "Stap 2: ontvangers van uw bericht selecteren",
 	"boardlinkselectall": "Alles selecteren",
 	"boardlinkunselectall": "Alles deselecteren",
@@ -63,5 +64,7 @@
 	"apihelp-socialprofile-send-message-param-message": "Een als URL gecodeerde versie van het te verzenden bericht.",
 	"apihelp-socialprofile-send-message-param-type": "Berichttype: 0 voor een openbaar bericht, 1 voor een privébericht.",
 	"apihelp-socialprofile-delete-message-summary": "Een prikbordbericht verwijderen.",
-	"apihelp-socialprofile-delete-message-param-id": "Unieke identificatiecode van het te verwijderen prikbordbericht."
+	"apihelp-socialprofile-delete-message-param-id": "Unieke identificatiecode van het te verwijderen prikbordbericht.",
+	"userboard-private-messages-disabled": "Privéberichten zijn uitgeschakeld op deze wiki.",
+	"userboard-private-messages-disabled-title": "Functie uitgeschakeld"
 }
