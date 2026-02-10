@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Merrahtar"
+		]
+	},
+	"userboard_posted_ago": "кырьйха лӣ $1 маӈас",
+	"userboard-time-days": "{{PLURAL:$1|э̄ххт пе̄ййв|$1 пе̄йв|$1 пе̄ййвэ}}",
+	"userboard-time-hours": "{{PLURAL:$1|э̄ххт ча̄сс|$1 ча̄сс|$1 ча̄ссэ}}",
+	"userboard-time-minutes": "{{PLURAL:$1|э̄ххт минута|$1 минута|$1 минутэдтӭ}}",
+	"userboard-time-seconds": "{{PLURAL:$1|$1 секунда|$1 секунда|$1 секундэдтӭ}}"
+}
