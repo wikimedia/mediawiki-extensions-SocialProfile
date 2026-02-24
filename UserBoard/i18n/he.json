@@ -3,6 +3,7 @@
 		"authors": [
 			"Amire80",
 			"Dee",
+			"Neriah",
 			"Rotemliss",
 			"YaronSh"
 		]
@@ -64,5 +65,6 @@
 	"apihelp-socialprofile-send-message-param-message": "גרסת urlencoded של הודעה לשליחה.",
 	"apihelp-socialprofile-send-message-param-type": "סוג ההודעה: 0 להודעה ציבורית, 1 להודעה פרטית.",
 	"apihelp-socialprofile-delete-message-summary": "מחיקת הודעת UserBoard.",
-	"apihelp-socialprofile-delete-message-param-id": "מזהה ייחודי של הודעה בלוח למחיקה."
+	"apihelp-socialprofile-delete-message-param-id": "מזהה ייחודי של הודעה בלוח למחיקה.",
+	"userboard-private-messages-disabled-title": "התכונה מושבתת"
 }
