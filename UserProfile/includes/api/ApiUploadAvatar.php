@@ -48,6 +48,8 @@ class ApiUploadAvatar extends ApiBase {
 		// Add the uploaded file to the params array
 		$this->mParams['file'] = $request->getFileName( 'file' );
 
+		$this->requireOnlyOneParameter( $this->mParams, 'file', 'url' );
+
 		if ( isset( $this->mParams['file'] ) ) {
 			$this->mUpload = new UploadAvatar();
 			$this->mUpload->initialize(
