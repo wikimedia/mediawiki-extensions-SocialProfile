@@ -60,7 +60,7 @@
 	"ur-add-error-message-pending-friend-request": "Ваш запыт аб сяброўстве з $1 чакае пацьверджаньня.\nМы абвясьцім Вас, калі $1 пацьвердзіць Ваш запыт.",
 	"ur-add-error-message-pending-foe-request": "Ваш запыт аб варожасьці з $1 чакае пацьверджаньня.\nМы абвясьцім Вас, калі $1 пацьвердзіць Ваш запыт.",
 	"ur-add-error-message-not-loggedin-foe": "Патрэбна ўвайсьці ў сыстэму, каб дадаць ворага",
-	"ur-add-error-message-not-loggedin-friend": "Вам неабходна ўвайсьці ў сыстэму, каб дадаць сябра",
+	"ur-add-error-message-not-loggedin-friend": "Вам патрэбна ўвайсьці ў сыстэму, каб дадаць сябра",
 	"ur-requests-title": "Запыты на стасункі",
 	"ur-requests-message-foe": "[[User:$1|$1]] жадае быць Вашым ворагам.",
 	"ur-requests-message-friend": "[[User:$1|$1]] жадае быць Вашым сябрам.",
