@@ -87,5 +87,5 @@
 	"user-stats-report-error-variable-not-set": "המשתנה <code dir=\"ltr\">$wgUserStatsPointValues['points_winner_$1']</code> צריך להכיל ערך גדול מ־0 בקובץ LocalSettings.php!",
 	"random-user-points-weekly": "{{PLURAL:$1|נקודה אחת|$1 נקודות}} השבוע",
 	"random-user-points-monthly": "{{PLURAL:$1|נקודה אחת|$1 נקודות}} החודש",
-	"random-user-about-me": "עלי"
+	"random-user-about-me": "עליי"
 }
