@@ -9,6 +9,7 @@
 	"messagesenttitle": "پيغامونه مو ولېږل شول",
 	"boardblasttitle": "پيغام دړې چاودنه ولېږئ",
 	"boardblaststep1": "۲ گام - خپل پيغام وليکئ",
+	"boardblast-message-type-note": "ټول پيغامونه به په ټولواله توگه ولېږل شي؛ ځکه چې ځانواله پيغامونه ناچارن شوې دي.",
 	"boardblaststep2": "۲ گام - هغه څوک غوره کړئ چې پيغام ورته لېږل غواړئ",
 	"boardlinkselectall": "ټول ټاکل",
 	"boardlinkunselectall": "ټول ناټاکل",
@@ -62,5 +63,7 @@
 	"apihelp-socialprofile-send-message-param-message": "د لېږل‌کېدونکي پيغام د وېبتړ‌کوډشوې بلبڼه.",
 	"apihelp-socialprofile-send-message-param-type": "پيغام ډول: ۰ د ټولگړي پيغام لپاره، ۱ د ځانواله پيغام لپاره.",
 	"apihelp-socialprofile-delete-message-summary": "د کارن‌پيغام‌دړې پيغام ړنگول.",
-	"apihelp-socialprofile-delete-message-param-id": "د پيغام‌دړې پيغام ړنگولو لپاره بې‌سارې پېژندگر."
+	"apihelp-socialprofile-delete-message-param-id": "د پيغام‌دړې پيغام ړنگولو لپاره بې‌سارې پېژندگر.",
+	"userboard-private-messages-disabled": "دې ويکي کې ځانواله پيغامونه ناچارن دي.",
+	"userboard-private-messages-disabled-title": "ځانگړنه ناچارنه شوې"
 }
