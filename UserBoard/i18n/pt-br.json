@@ -64,5 +64,6 @@
 	"apihelp-socialprofile-send-message-param-message": "Uma versão com código de URL da mensagem a ser enviada.",
 	"apihelp-socialprofile-send-message-param-type": "Tipo de mensagem: 0 para uma mensagem pública, 1 para uma mensagem privada.",
 	"apihelp-socialprofile-delete-message-summary": "Excluir uma mensagem no mural.",
-	"apihelp-socialprofile-delete-message-param-id": "Identificador exclusivo da mensagem do mural a ser excluída."
+	"apihelp-socialprofile-delete-message-param-id": "Identificador exclusivo da mensagem do mural a ser excluída.",
+	"userboard-private-messages-disabled-title": "Recurso desativado"
 }
