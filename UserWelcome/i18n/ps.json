@@ -7,7 +7,7 @@
 	},
 	"userwelcome-desc": "ننوتليو کارنانو ته د کارن ځانگړي ټولنيز مالومات ښودلو لپاره <code>&lt;welcomeUser&gt;</code> نښلن ورگډوي",
 	"mp-userlevels-link": "کارن کچې",
-	"mp-welcome-upload": "پورته کول",
+	"mp-welcome-upload": "راپورته‌کول",
 	"mp-welcome-points": "$1 {{PLURAL:$1|نومره|نومرې}}",
 	"mp-welcome-needed-points": "[[$1|'''$2''']] ته د پرمختگ لپاره ''$3'' {{PLURAL:$3| بله نومره|نورې نومرې}} ترلاسه کړئ!",
 	"mp-welcome-logged-in": "$1 سلامونه",
