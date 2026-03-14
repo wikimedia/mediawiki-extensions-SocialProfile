@@ -45,7 +45,7 @@ class TopFansByStat extends UnlistedSpecialPage {
 
 		// Error if the query string value does not match our stat column
 		if ( !preg_match( '/^stats_[0-9a-z_]{1,58}$/D', $column ) ||
-			!$dbr->fieldExists( 'user_stats', $column )
+			!$dbr->fieldExists( 'user_stats', $column, __METHOD__ )
 		) {
 			$out->setPageTitle( $this->msg( 'top-fans-bad-field-title' )->plain() );
 			$out->addHTML( htmlspecialchars( $this->msg( 'top-fans-bad-field-message' )->plain() ) );
