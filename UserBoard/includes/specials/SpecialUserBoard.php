@@ -270,6 +270,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				);
 			}
 
+			// @phan-suppress-next-line PhanTypeInvalidModuloOperand
 			if ( ( $total % $per_page ) != 0 ) {
 				$numofpages++;
 			}
