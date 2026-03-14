@@ -184,7 +184,7 @@ class UserRelationship {
 					)->text()
 				];
 			} else {
-				$subject = wfMessage( 'foe_accept_subject', $userFrom )->text();
+				$subject = wfMessage( 'foe_accept_subject', $userFrom->getName() )->text();
 				$body = [
 					'html' => wfMessage(
 						'foe_accept_body_html',

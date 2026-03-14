@@ -210,7 +210,7 @@ class RemoveAvatar extends SpecialPage {
 			$services = MediaWikiServices::getInstance();
 			// Autocomplete subpage as user list - public to allow caching
 			return $services->getUserNamePrefixSearch()->search(
-				UserNamePrefixSearch::AUDIENCE_PUBLIC, $user, $limit, $offset
+				UserNamePrefixSearch::AUDIENCE_PUBLIC, $user->getName(), $limit, $offset
 			);
 		} else {
 			return [ $this->getUser()->getName() ];
