@@ -192,6 +192,7 @@
 	"user-board-login-message": "Precisa de [[Special:UserLogin|autenticar-se]] para enviar mensagens a outros usuários",
 	"user-board-confirm-delete": "Você tem certeza que quer deletar esta mensagem?",
 	"removeavatar": "Remover avatar",
+	"removeavatar-reason": "Motivo:",
 	"removeavatar-remove-my-avatar": "Remover meu avatar",
 	"removeavatar-remove-your-avatar": "Remova seu avatar",
 	"removeavatar-already-default": "Este usuário já está usando o avatar padrão, então não há nada para remover aqui.",
