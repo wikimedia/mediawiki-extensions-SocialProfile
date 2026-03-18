@@ -10,12 +10,12 @@
 	"mp-welcome-upload": "راپورته‌کول",
 	"mp-welcome-points": "$1 {{PLURAL:$1|نومره|نومرې}}",
 	"mp-welcome-needed-points": "[[$1|'''$2''']] ته د پرمختگ لپاره ''$3'' {{PLURAL:$3| بله نومره|نورې نومرې}} ترلاسه کړئ!",
-	"mp-welcome-logged-in": "$1 سلامونه",
+	"mp-welcome-logged-in": "$1 سلام",
 	"mp-requests-title": "غوښتنې",
-	"mp-requests-message": "تاسو دغه لاندينۍ غوښتنې لری.",
+	"mp-requests-message": "تاسو لاندې غوښتنې لرئ.",
 	"mp-request-new-message": "نوی پيغام",
 	"mp-request-new-award": "$1 نوی {{PLURAL:$1|جايزه|جايزی}}",
-	"mp-request-new-gift": "د $1 {{PLURAL:$1|نوې ډالۍ|نوي ډالۍ}}",
+	"mp-request-new-gift": "د $1 {{PLURAL:$1|نوې ډالۍ}}",
 	"mp-request-new-foe": "$1 {{PLURAL:$1|نو دښمن|نوي دښمنان}}",
-	"mp-request-new-friend": "د $1 {{PLURAL:$1|نوی ملګری|نوي ملګري}}"
+	"mp-request-new-friend": "د $1 {{PLURAL:$1|نوی ملگری|نوي ملگري}}"
 }
