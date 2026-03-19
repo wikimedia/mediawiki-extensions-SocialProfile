@@ -170,7 +170,7 @@
 	"user-profile-create-threshold-quiz-correct": "{{PLURAL:$1|يوه سمه ځواب شوې ازموينه|$1 سمې ځواب شوې ازموينې}}",
 	"user-profile-create-threshold-quiz-points": "{{PLURAL:$1|د ازموينې يوه نومره|د ازموينې $1 نومرې}}",
 	"user-profile-create-threshold-reason": "وبښئ، تاسو تر هغې کارن پېژنيال نشئ جوړولای؛ ترڅو چې تاسو $1 ونه لرئ",
-	"user-profile-privacy-status-privacy-public": "ټولگړی",
+	"user-profile-privacy-status-privacy-public": "ټولواله",
 	"user-profile-privacy-status-privacy-hidden": "پټ",
 	"user-profile-privacy-status-privacy-friends": "ملگري",
 	"user-profile-privacy-status-privacy-foaf": "د ملگرو ملگري",
