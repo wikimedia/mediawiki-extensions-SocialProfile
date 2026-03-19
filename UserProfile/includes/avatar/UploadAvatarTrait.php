@@ -23,7 +23,7 @@ trait UploadAvatarTrait {
 	protected $mFinalExtension;
 
 	function createThumbnail( $imageSrc, $imageInfo, $imgDest, $thumbWidth ) {
-		global $wgUseImageMagick, $wgImageMagickConvertCommand;
+		global $wgUseImageMagick;
 
 		$backend = new SocialProfileFileBackend( 'avatars' );
 		$fname = $backend->getContainerStoragePath();
@@ -43,66 +43,51 @@ trait UploadAvatarTrait {
 				$thumbWidth = $origWidth;
 			}
 			$thumbHeight = ( $thumbWidth * $origHeight / $origWidth );
-			$border = ' -bordercolor white  -border  0x';
+			$border = [ '-bordercolor', 'white', '-border', '0x' ];
+			$imageSize = $thumbWidth . 'x' . $thumbWidth;
 			if ( $thumbHeight < $thumbWidth ) {
-				$border = ' -bordercolor white  -border  0x' . ( ( $thumbWidth - $thumbHeight ) / 2 );
+				$border = [ '-bordercolor', 'white', '-border', '0x' . ( ( $thumbWidth - $thumbHeight ) / 2 ) ];
 			}
-			if ( $typeCode == 2 ) {
-				exec(
-					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' . $thumbWidth .
-					' -resize ' . $thumbWidth . ' -crop ' . $thumbWidth . 'x' .
-					$thumbWidth . '+0+0   -quality 100 ' . $border . ' ' .
-					$imageSrc . ' ' . wfTempDir() . '/' . $imgDest . '.jpg'
-				);
 
-				$status = $fileBackend->quickStore( [
-					'src' => wfTempDir() . '/' . $imgDest . '.jpg',
-					'dst' => $fname . '/' . $imgDest . '.jpg'
-				] );
-
-				if ( !$status->isOK() ) {
-					throw new Exception(
-						wfMessage( 'backend-fail-internal', Status::wrap( $status )->getWikitext() )
-					);
-				}
+			$ext = '';
+			$quality = [];
+			switch ( $typeCode ) {
+				case 1:
+					$ext = '.gif';
+					break;
+				case 2:
+					$ext = '.jpg';
+					$quality = [ '-quality', 100 ];
+					break;
+				case 3:
+					$ext = '.png';
+					$border = []; // no border
+					break;
 			}
-			if ( $typeCode == 1 ) {
-				exec(
-					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' . $thumbWidth .
-					' -resize ' . $thumbWidth . ' -crop ' . $thumbWidth . 'x' .
-					$thumbWidth . '+0+0 ' . $imageSrc . ' ' . $border . ' ' .
-					wfTempDir() . '/' . $imgDest . '.gif'
+
+			$srcPath = wfTempDir() . '/' . $imgDest . $ext;
+
+			$options = [
+				$imageSrc,
+				'-size', $imageSize,
+				'-resize', $thumbWidth,
+				'-crop', $imageSize . '+0+0',
+				...$quality,
+				...$border,
+				$srcPath,
+			];
+
+			SocialProfileUtils::runImageMagickShell( $options );
+
+			$status = $fileBackend->quickStore( [
+				'src' => $srcPath,
+				'dst' => $fname . '/' . $imgDest . $ext
+			] );
+
+			if ( !$status->isOK() ) {
+				throw new Exception(
+					wfMessage( 'backend-fail-internal', Status::wrap( $status )->getWikitext() )
 				);
-
-				$status = $fileBackend->quickStore( [
-					'src' => wfTempDir() . '/' . $imgDest . '.gif',
-					'dst' => $fname . '/' . $imgDest . '.gif'
-				] );
-
-				if ( !$status->isOK() ) {
-					throw new Exception(
-						wfMessage( 'backend-fail-internal', Status::wrap( $status )->getWikitext() )
-					);
-				}
-			}
-			if ( $typeCode == 3 ) {
-				exec(
-					$wgImageMagickConvertCommand . ' -size ' . $thumbWidth . 'x' . $thumbWidth .
-					' -resize ' . $thumbWidth . ' -crop ' . $thumbWidth . 'x' .
-					$thumbWidth . '+0+0 ' . $imageSrc . ' ' .
-					wfTempDir() . '/' . $imgDest . '.png'
-				);
-
-				$status = $fileBackend->quickStore( [
-					'src' => wfTempDir() . '/' . $imgDest . '.png',
-					'dst' => $fname . '/' . $imgDest . '.png'
-				] );
-
-				if ( !$status->isOK() ) {
-					throw new Exception(
-						wfMessage( 'backend-fail-internal', Status::wrap( $status )->getWikitext() )
-					);
-				}
 			}
 		} else { // ImageMagick is not enabled, so fall back to PHP's GD library
 			// Get the image size, used in calculations later.

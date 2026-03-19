@@ -60,6 +60,7 @@ if ( defined( 'MEDIAWIKI_INSTALL' ) ) {
 
 // Classes to be autoloaded
 $wgAutoloadClasses['SocialProfileFileBackend'] = __DIR__ . '/SocialProfileFileBackend.php';
+$wgAutoloadClasses['SocialProfileUtils'] = __DIR__ . '/SocialProfileUtils.php';
 $wgAutoloadClasses['SpecialEditProfile'] = __DIR__ . '/UserProfile/includes/specials/SpecialEditProfile.php';
 $wgAutoloadClasses['SpecialPopulateUserProfiles'] = __DIR__ . '/UserProfile/includes/specials/SpecialPopulateExistingUsersProfiles.php';
 $wgAutoloadClasses['SpecialToggleUserPage'] = __DIR__ . '/UserProfile/includes/specials/SpecialToggleUserPageType.php';

@@ -3,7 +3,6 @@
 use MediaWiki\Html\Html;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Request\WebRequestUpload;
-use MediaWiki\Shell\Shell;
 
 /**
  * A special page to upload images for gifts.
@@ -267,7 +266,7 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 	 * @param int $thumbWidth Thumbnail image width in pixels
 	 */
 	function createThumbnail( $imageSrc, $ext, $imgDest, $thumbWidth ) {
-		global $wgUseImageMagick, $wgImageMagickConvertCommand;
+		global $wgUseImageMagick;
 
 		[ $origWidth, $origHeight, $typeCode ] = getimagesize( $imageSrc );
 
@@ -288,65 +287,51 @@ class GiftManagerLogo extends UnlistedSpecialPage {
 				$thumbWidth = $origWidth;
 			}
 			$thumbHeight = ( $thumbWidth * $origHeight / $origWidth );
-			$border = '';
+			$border = [];
+			$imageSize = $thumbWidth . 'x' . $thumbWidth;
 			if ( $thumbHeight < $thumbWidth ) {
-				$border = ' -bordercolor white -border 0x' . ( ( $thumbWidth - $thumbHeight ) / 2 );
+				$border = [ '-bordercolor', 'white', '-border', '	0x' . ( ( $thumbWidth - $thumbHeight ) / 2 ) ];
 			}
-			if ( $typeCode == 2 ) {
-				exec(
-					Shell::escape( $wgImageMagickConvertCommand ) . ' -size ' . $thumbWidth . 'x' .
-					$thumbWidth . ' -resize ' . $thumbWidth . '  -quality 100 ' .
-					$border . ' ' . Shell::escape( $imageSrc ) . ' ' .
-					wfTempDir() . '/' . $imgDest . '.jpg'
-				);
 
-				$status = $fileBackend->quickStore( [
-					'src' => wfTempDir() . '/' . $imgDest . '.jpg',
-					'dst' => $dir . '/' . $imgDest . '.jpg'
-				] );
-
-				if ( !$status->isOK() ) {
-					throw new Exception(
-						$this->msg( 'backend-fail-internal', Status::wrap( $status )->getWikitext() )
-					);
-				}
+			$ext = '';
+			$quality = [];
+			switch ( $typeCode ) {
+				case 1:
+					$ext = '.gif';
+					break;
+				case 2:
+					$ext = '.jpg';
+					$quality = [ '-quality', 100 ];
+					break;
+				case 3:
+					$ext = '.png';
+					$border = []; // no border
+					break;
 			}
-			if ( $typeCode == 1 ) {
-				exec(
-					Shell::escape( $wgImageMagickConvertCommand ) . ' -size ' . $thumbWidth . 'x' .
-					$thumbWidth . ' -resize ' . $thumbWidth . ' ' . Shell::escape( $imageSrc ) .
-					' ' . $border . ' ' .
-					wfTempDir() . '/' . $imgDest . '.gif'
+
+			$srcPath = wfTempDir() . '/' . $imgDest . $ext;
+
+			$options = [
+				$imageSrc,
+				'-size', $imageSize,
+				'-resize', $thumbWidth,
+				'-crop', $imageSize . '+0+0',
+				...$quality,
+				...$border,
+				$srcPath,
+			];
+
+			SocialProfileUtils::runImageMagickShell( $options );
+
+			$status = $fileBackend->quickStore( [
+				'src' => $srcPath,
+				'dst' => $dir . '/' . $imgDest . $ext
+			] );
+
+			if ( !$status->isOK() ) {
+				throw new Exception(
+					$this->msg( 'backend-fail-internal', Status::wrap( $status )->getWikitext() )
 				);
-
-				$status = $fileBackend->quickStore( [
-					'src' => wfTempDir() . '/' . $imgDest . '.gif',
-					'dst' => $dir . '/' . $imgDest . '.gif'
-				] );
-
-				if ( !$status->isOK() ) {
-					throw new Exception(
-						$this->msg( 'backend-fail-internal', Status::wrap( $status )->getWikitext() )
-					);
-				}
-			}
-			if ( $typeCode == 3 ) {
-				exec(
-					Shell::escape( $wgImageMagickConvertCommand ) . ' -size ' . $thumbWidth . 'x' .
-					$thumbWidth . ' -resize ' . $thumbWidth . ' ' . Shell::escape( $imageSrc ) .
-					' ' . wfTempDir() . '/' . $imgDest . '.png'
-				);
-
-				$status = $fileBackend->quickStore( [
-					'src' => wfTempDir() . '/' . $imgDest . '.png',
-					'dst' => $dir . '/' . $imgDest . '.png'
-				] );
-
-				if ( !$status->isOK() ) {
-					throw new Exception(
-						$this->msg( 'backend-fail-internal', Status::wrap( $status )->getWikitext() )
-					);
-				}
 			}
 		} else {
 			// ImageMagick is not enabled, so fall back to PHP's GD library
