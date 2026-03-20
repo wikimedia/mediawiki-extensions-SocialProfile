@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Aca",
 			"Winston Sung"
 		]
 	},
@@ -15,7 +16,7 @@
 	"ga-create-gift": "Napravi poklon",
 	"ga-created": "Poklon je napravljen",
 	"ga-currentimage": "Trenutna slika",
-	"ga-error-message-invalid-link": "Uneseni link nije važeći.",
+	"ga-error-message-invalid-link": "Unesena veza nije važeća.",
 	"ga-error-message-no-user": "Korisnik koga pokušavate da vidite ne postoji.",
 	"ga-error-title": "Ups, desilo nešto se nepredviđeno!",
 	"ga-file-instructions": "Slika mora biti u jpeg, png ili gif (bez neanimiranih gif-ova), i mora biti veličine ispod 100kB.",

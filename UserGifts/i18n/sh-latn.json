@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Aca",
 			"Winston Sung"
 		]
 	},
@@ -30,7 +31,7 @@
 	"g-description-title": "Poklon \"$2\" od $1",
 	"g-error-do-not-own": "Vi ne posjedujete ovaj poklon.",
 	"g-error-message-blocked": "Trenutno ste blokirani i ne možete slati poklone",
-	"g-error-message-invalid-link": "Uneseni link nije važeći.",
+	"g-error-message-invalid-link": "Unesena veza nije ispravna.",
 	"g-error-message-login": "Morate da se [[Special:UserLogin|prijavite]] za možete slati poklone.",
 	"g-error-message-no-user": "Korisnik kojeg pokušavate pogledati ne postoji.",
 	"g-error-message-to-yourself": "Ne možete pokloniti samom sebi.",

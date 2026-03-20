@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Aca",
 			"Winston Sung"
 		]
 	},
@@ -8,9 +9,9 @@
 	"messagesenttitle": "Poruke poslane",
 	"boardblasttitle": "Pošalji izjavu na tablu",
 	"boardblaststep1": "Korak 1. - Napišite poruku",
-	"boardblaststep2": "Korak 2. - Odaberite kome želite poslati poruku",
+	"boardblaststep2": "Korak 2. - Izaberite kome želite poslati poruku",
 	"boardlinkselectall": "Izaberi sve",
-	"boardlinkunselectall": "Ukloni sav odabir",
+	"boardlinkunselectall": "Ukloni sav izbor",
 	"boardlinkselectfriends": "Izaberi prijatelje",
 	"boardlinkunselectfriends": "Skini izbor sa prijatelja",
 	"boardlinkselectfoes": "Izaberi neprijatelje",
