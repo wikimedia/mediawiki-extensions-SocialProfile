@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Winston Sung"
+			"Winston Sung",
+			"Aca"
 		]
 	},
 	"userboard-desc": "Omogućava slanje poruka na tablu",
@@ -9,16 +10,16 @@
 	"boardblasttitle": "Pošalji izjavu na tablu",
 	"boardblaststep1": "Korak 1. - Napišite poruku",
 	"boardblastprivatenote": "Sve poruke će biti poslane kao privatne",
-	"boardblaststep2": "Korak 2. - Odaberite kome želite poslati poruku",
+	"boardblaststep2": "Korak 2. - Izaberite kome želite poslati poruku",
 	"boardlinkselectall": "Izaberi sve",
-	"boardlinkunselectall": "Ukloni sav odabir",
+	"boardlinkunselectall": "Ukloni sav izbor",
 	"boardlinkselectfriends": "Izaberi prijatelje",
 	"boardlinkunselectfriends": "Skini izbor sa prijatelja",
 	"boardlinkselectfoes": "Izaberi neprijatelje",
 	"boardlinkunselectfoes": "Skini izbor sa neprijatelja",
 	"boardsendbutton": "Pošalji izjavu na tablu",
 	"boardnofriends": "Nemate prijatelja kojima biste poslali poruku!",
-	"messagesentsuccess": "Vaša poruka je uspješno poslana",
+	"messagesentsuccess": "Poruka je poslana",
 	"boardblast-js-sending": "Slanje poruka…",
 	"boardblast-error-missing-message": "Unesite poruku",
 	"boardblast-error-missing-user": "Izaberite bar jednu osobu",
