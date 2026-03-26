@@ -4,11 +4,12 @@
 			"EugeneZelenko",
 			"Jim-by",
 			"Red Winged Duck",
-			"Renessaince"
+			"Renessaince",
+			"Ucukor"
 		]
 	},
 	"userwelcome-desc": "Дадае тэг <code>&lt;welcomeUser&gt;</code>, каб паказваць сацыяльную інфармацыю пра ўдзельніка іншым зарэгістраваным удзельнікам",
-	"mp-userlevels-link": "Узроўні ўдзельніка",
+	"mp-userlevels-link": "Роўні ўдзельніка",
 	"mp-welcome-upload": "Загрузіць",
 	"mp-welcome-points": "$1 {{PLURAL:$1|пункт|пункты|пунктаў}}",
 	"mp-welcome-needed-points": "Каб узьняцца да [[$1|'''$2''']], неабходна здабыць яшчэ ''$3'' {{PLURAL:$3|пункт|пункты|пунктаў}}!",
