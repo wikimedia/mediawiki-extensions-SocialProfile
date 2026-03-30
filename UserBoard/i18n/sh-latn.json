@@ -57,5 +57,5 @@
 	"apihelp-socialprofile-send-message-param-message": "Urlencoded verzija poruke za slanje.",
 	"apihelp-socialprofile-send-message-param-type": "Vrsta poruke: 0 za javnu, 1 za privatnu.",
 	"apihelp-socialprofile-delete-message-summary": "Izbrišite poruku sa korisničke table.",
-	"apihelp-socialprofile-delete-message-param-id": "Jedinstvena naznaka poruke za brisanje."
+	"apihelp-socialprofile-delete-message-param-id": "Jedinstveni identifikator poruke za brisanje."
 }
