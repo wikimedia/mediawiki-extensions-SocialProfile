@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Crt",
-			"Jack Phoenix"
+			"Jack Phoenix",
+			"Samoasambia"
 		]
 	},
 	"giftmanager": "Lahjojen hallinta",
@@ -82,7 +83,7 @@
 	"gift_received_body_html": "Hei $1:\n\n$2 juuri lähetti sinulle $3-lahjan {{GRAMMAR:inessive|{{SITENAME}}}}.\n\nHaluatko lukea viestin, jonka $2 jätti sinulle ja nähdä lahjasi? Napsauta linkkiä alapuolella:\n\n[[Special:ViewGifts]]\n\nToivomme, että pidät siitä!\n\nKiittäen,\n\n\n{{GRAMMAR:genitive|{{SITENAME}}}} tiimi\n\n---\n\nHei, etkö halua enää saada sähköposteja meiltä?\n\nNapsauta [[Special:UpdateProfile]]\nja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.",
 	"gift_received_body": "Hei $1:\n\n$2 juuri lähetti sinulle $3-lahjan {{GRAMMAR:inessive|{{SITENAME}}}}.\n\nHaluatko lukea viestin, jonka $2 jätti sinulle ja nähdä lahjasi? Napsauta linkkiä alapuolella:\n\n$4\n\nToivomme, että pidät siitä!\n\nKiittäen,\n\n\n{{GRAMMAR:genitive|{{SITENAME}}}} tiimi\n\n---\n\nHei, etkö halua enää saada sähköposteja meiltä?\n\nNapsauta $5\nja muuta asetuksiasi poistaaksesi sähköpostitoiminnot käytöstä.",
 	"echo-category-title-social-gift": "Lahjat",
-	"echo-pref-tooltip-social-gift": "Ilmoita minulle, kun joku lähettää minulle lahjan.",
+	"echo-pref-tooltip-social-gift": "Ilmoita, kun joku lähettää minulle lahjan.",
 	"notification-social-gift-send-no-message": "$1 lähetti juuri sinulle lahjan: $2.",
 	"notification-social-gift-send-with-message": "$1 lähetti juuri sinulle lahjan: $2.<br /><br />''$3''",
 	"notification-social-gift-send-bundle": "{{PLURAL:$1|Yksi henkilö lähetti|$1 henkilöä lähettivät}} sinulle lahjoja.",
