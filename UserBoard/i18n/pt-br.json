@@ -60,6 +60,7 @@
 	"echo-pref-tooltip-social-msg": "Notifique-me quando alguém deixar uma mensagem no meu mural de usuários.",
 	"notification-social-msg-send": "$1 deixou uma mensagem no seu mural de usuários.<br /><br />''$2''",
 	"notification-social-msg-send-bundle": "{{PLURAL:$1|Uma mensagem foi deixada|$1 mensagens foram deixadas|100=99+ mensagens foram deixadas}} no seu mural de usuário.",
+	"apierror-socialprofile-send-message-nosend": "Não pode enviar mensagens.",
 	"apihelp-socialprofile-send-message-summary": "Envie uma mensagem para o mural de um usuário.",
 	"apihelp-socialprofile-send-message-param-username": "O nome de usuário do destinatário.",
 	"apihelp-socialprofile-send-message-param-message": "Uma versão com código de URL da mensagem a ser enviada.",
