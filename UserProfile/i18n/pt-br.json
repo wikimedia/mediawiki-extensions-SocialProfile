@@ -209,7 +209,7 @@
 	"profilelogpage": "Registro de edição do perfil do usuário",
 	"profilelogpagetext": "Este é um registro de edições de perfil de usuário",
 	"user-profile-edit-profile": "editou o perfil de $1",
-	"avatarlogpage": "Registro de carregamento de avatar",
+	"avatarlogpage": "Registo de avatares",
 	"avatarlogpagetext": "Este é um registro de carregamentos de avatar de usuário",
 	"user-profile-picture-log-entry": "Carregado novo avatar",
 	"user-profile-picture-log-delete-entry": "Excluído avatar de $1",
