@@ -44,5 +44,5 @@
 	"userboard-time-minutes": "{{PLURAL:$1|jedna mjeńšina|$1 mjeńšinje|$1 mjeńšiny|$1 mjeńšin}}",
 	"userboard-time-seconds": "{{PLURAL:$1|jedna sekunda|$1 sekundźe|$1 sekundy|$1 sekundow}}",
 	"message_received_subject": "$1 je na twoju desku na {{GRAMMAR:lokatiw|{{SITENAME}}}} napisał",
-	"message_received_body": "Witaj $1.\n\n$2 je runje na twoju desku na {{GRAMMAR:lokatiw|{{SITENAME}}}} napisał!\n\nKlikń deleka, zo by sej swoju desku wobhladał!\n\n$3\n\n---\n\nHej, hižo nochceš e-mejle wot nas dóstać?\n\nKlikń na $4\na změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił."
+	"message_received_body": "Witaj $1.\n\n$2 je runje na twoju desku na {{GRAMMAR:lokatiw|{{SITENAME}}}} napisał!\n\nKlikń deleka, zo by sej swoju desku wobhladał!\n\n$3\n\n---\n\nHej, nochceš hižo mejlki wot nas dóstać?\n\nKlikń na $4\na změń swoje nastajenja, zo by e-mejlowe zdźělenja znjemóžnił."
 }

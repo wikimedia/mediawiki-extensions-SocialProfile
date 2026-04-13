@@ -4,6 +4,7 @@
 			"DDPAT",
 			"Ice bulldog",
 			"Prima klasy4na",
+			"Vlad5250",
 			"Тест"
 		]
 	},
@@ -58,6 +59,7 @@
 	"echo-pref-tooltip-social-msg": "Повідомляти мене, коли хтось залишає повідомлення на моїй дошці користувачів.",
 	"notification-social-msg-send": "$1 щойно залишив повідомлення на вашій дошці користувачів.<br /><br />''$2''",
 	"notification-social-msg-send-bundle": "{{PLURAL:$1|Одне повідомлення|$1 повідомлень|100=99+ повідомлень}} залишилося на вашій дошці користувачів.",
+	"apierror-socialprofile-send-message-nosend": "Ви не можете надсилати повідомлення.",
 	"apihelp-socialprofile-send-message-summary": "Надіслати повідомлення на UserBoard користувача.",
 	"apihelp-socialprofile-send-message-param-username": "Ім'я користувача одержувача.",
 	"apihelp-socialprofile-send-message-param-message": "Версія повідомлення з кодом, що надсилається.",
