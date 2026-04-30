@@ -3,6 +3,7 @@
 		"authors": [
 			"Garam",
 			"Suleiman the Magnificent Television",
+			"Tensama0415",
 			"Ykhwong"
 		]
 	},
@@ -15,5 +16,16 @@
 	"ga-giftname": "선물 이름",
 	"ga-threshold": "최소 수치",
 	"ga-uploadsuccess": "업로드 성공",
-	"ga-remove": "제거"
+	"ga-remove": "제거",
+	"topawards-edit-milestone": "{{PLURAL:$1|편집 1회|편집 $1회}} 이정표",
+	"topawards-vote-milestone": "{{PLURAL:$1|투표 1회|투표 $1회}} 이정표",
+	"topawards-comment-milestone": "{{PLURAL:$1|댓글 1회|댓글 $1회}} 이정표",
+	"topawards-recruit-milestone": "{{PLURAL:$1|영입 1회|영입 $1회}} 이정표",
+	"topawards-friend-milestone": "{{PLURAL:$1|친구 1명|친구 $1명}} 이정표",
+	"echo-category-title-social-award": "수상",
+	"echo-pref-tooltip-social-award": "수상할면 알립니다.",
+	"notification-social-award-rec": "새로운 상을 받았습니다: $1.",
+	"notification-social-award-rec-bundle": "새로운 {{PLURAL:$1|상을 하나|$1개의 상을}} 받았습니다.",
+	"right-awardsmanage": "새로운 상을 만들고 기존 상을 편집",
+	"action-awardsmanage": "새로운 상을 만들고 기존 상을 편집할"
 }
