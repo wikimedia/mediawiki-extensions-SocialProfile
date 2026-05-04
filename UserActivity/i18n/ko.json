@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Tensama0415",
 			"YeBoy371",
 			"Ykhwong"
 		]
@@ -9,7 +10,10 @@
 	"useractivity-desc": "사용자들의 사회 활동을 표시합니다",
 	"useractivity-award": "$1이(가) 상을 수상했습니다",
 	"useractivity-all": "모두 보기",
+	"useractivity-edit": "$1님이 {{PLURAL:$4|다음 문서를 편집했습니다:}} $3",
+	"useractivity-foe": "$1님은 이제 {{PLURAL:$2|다음 사용자와 적입니다:|다음 사용자들과 적입니다:}} $3",
 	"useractivity-filter": "필터",
+	"useractivity-friend": "$1님은 이제 {{PLURAL:$2|다음 사용자와 친구입니다:|다음 사용자들과 친구입니다:}} $3",
 	"useractivity-gift": "$1이(가) $2으(로)부터 선물을 받았습니다",
 	"useractivity-group-edit": "{{PLURAL:$1|편집 1회|편집 $1회}}",
 	"useractivity-group-comment": "{{PLURAL:$1|의견 1개|의견 $1개}}",
@@ -17,5 +21,7 @@
 	"useractivity-group-friend": "{{PLURAL:$1|친구 1명|친구 $1명}}",
 	"useractivity-network-thought": "'''[[User:$1|$2]]'''은(는) $3 네트워크에 대한 의견을 가지고 있습니다",
 	"useractivity-siteactivity": "사이트 활동",
-	"useractivity-title": "친구들의 활동"
+	"useractivity-title": "친구들의 활동",
+	"useractivity-user_message": "$1님이 {{PLURAL:$4|다음 사용자에게 메세지를 보냈습니다:}} $3",
+	"useractivity-comment": "$1님이 {{PLURAL:$4|다음 문서에 댓글을 달았습니다:}} $3"
 }

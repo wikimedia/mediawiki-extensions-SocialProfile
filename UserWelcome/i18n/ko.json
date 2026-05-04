@@ -10,6 +10,13 @@
 	"mp-userlevels-link": "사용자 레벨",
 	"mp-welcome-upload": "올리기",
 	"mp-welcome-points": "$1 {{PLURAL:$1|포인트}}",
+	"mp-welcome-needed-points": "[[$1|'''$2''']] 승급을 위해서는 ''$3'' {{PLURAL:$3|포인트를}} 더 획득하세요!",
+	"mp-welcome-logged-in": "안녕하세요 $1님",
 	"mp-requests-title": "요청",
-	"mp-request-new-message": "새 메시지"
+	"mp-requests-message": "다음의 요청이 있습니다.",
+	"mp-request-new-message": "새 메시지",
+	"mp-request-new-award": "$1개의 새 {{PLURAL:$1|상}}",
+	"mp-request-new-gift": "$1개의 새 {{PLURAL:$1|선물}}",
+	"mp-request-new-foe": "$1명의 새 {{PLURAL:$1|적}}",
+	"mp-request-new-friend": "$1명의 새 {{PLURAL:$1|친구}}"
 }
