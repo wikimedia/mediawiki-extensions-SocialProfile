@@ -33,7 +33,7 @@
 	"g-description-title": "Het cadeautje “$2” van $1",
 	"g-error-do-not-own": "U bent niet de eigenaar van dit cadeautje.",
 	"g-error-message-blocked": "U bent momenteel geblokkeerd en kunt geen cadeautjes geven",
-	"g-error-message-invalid-link": "De koppeling die u hebt ingevoerd is ongeldig.",
+	"g-error-message-invalid-link": "De koppeling die u hebt ingevoerd is onjuist.",
 	"g-error-message-login": "U moet zich [[Special:UserLogin|aanmelden]] om cadeautjes te kunnen geven",
 	"g-error-message-no-user": "De gebruiker die u wilt weergeven bestaat niet.",
 	"g-error-message-to-yourself": "U kunt geen cadeautje aan uzelf geven.",
