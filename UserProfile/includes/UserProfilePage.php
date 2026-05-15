@@ -535,13 +535,7 @@ class UserProfilePage extends Article {
 
 			$x = 1;
 
-			if ( method_exists( MediaWikiServices::class, 'getRepoGroup' ) ) {
-				// MediaWiki 1.34+
-				$repoGroup = MediaWikiServices::getInstance()->getRepoGroup();
-			} else {
-				// @phan-suppress-next-line PhanUndeclaredStaticMethod
-				$repoGroup = RepoGroup::singleton();
-			}
+			$repoGroup = MediaWikiServices::getInstance()->getRepoGroup();
 			foreach ( $combined_array as $item ) {
 				$output .= ( ( $x == 1 ) ? '<p class="item-top">' : '<p>' );
 

@@ -46,15 +46,9 @@ if ( defined( 'MEDIAWIKI_INSTALL' ) ) {
 
 	$registry = new ExtensionRegistry();
 	$data = $registry->readFromQueue( $subext );
-	if ( method_exists( AutoLoader::class, 'registerClasses' ) ) {
-		// MediaWiki 1.39+
-		AutoLoader::registerClasses( $data['autoloaderClasses'] );
-		if ( !isset( $wgAutoloadClasses ) ) {
-			$wgAutoloadClasses = [];
-		}
-	} else {
-		// @phan-suppress-next-line PhanUndeclaredVariableAssignOp
-		$wgAutoloadClasses += $data['globals']['wgAutoloadClasses'];
+	AutoLoader::registerClasses( $data['autoloaderClasses'] );
+	if ( !isset( $wgAutoloadClasses ) ) {
+		$wgAutoloadClasses = [];
 	}
 }
 

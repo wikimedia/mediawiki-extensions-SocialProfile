@@ -37,15 +37,8 @@ function incEditCount( WikiPage $wikiPage, $revision, $baseRevId, $user ) {
 		!is_array( $wgNamespacesForEditPoints ) ||
 		in_array( $wikiPage->getTitle()->getNamespace(), $wgNamespacesForEditPoints )
 	) {
-		if ( method_exists( $user, 'getActorId' ) ) {
-			// MediaWiki 1.35
-			// @phan-suppress-next-line PhanUndeclaredMethod Removed in MW 1.41
-			$actorId = $user->getActorId();
-		} else {
-			// MediaWiki 1.36+
-			$userObj = User::newFromName( $user->getName() );
-			$actorId = $userObj->getActorId();
-		}
+		$userObj = User::newFromName( $user->getName() );
+		$actorId = $userObj->getActorId();
 		$stats = new UserStatsTrack( $actorId );
 		$stats->incStatField( 'edit' );
 	}
@@ -70,41 +63,22 @@ function removeDeletedEdits( WikiPage $article, $user, $reason ) {
 	) {
 		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 
-		$MW139orEarlier = version_compare( MW_VERSION, '1.39', '<' );
-		if ( $MW139orEarlier ) {
-			$res = $dbr->select(
-				[ 'revision_actor_temp', 'revision', 'actor' ],
-				[ 'COUNT(*) AS the_count', 'revactor_actor' ],
-				[
-					'revactor_page' => $article->getID(),
-					'actor_user IS NOT NULL'
-				],
-				__FUNCTION__,
-				[ 'GROUP BY' => 'actor_name' ],
-				[
-					'actor' => [ 'JOIN', 'actor_id = revactor_actor' ],
-					'revision_actor_temp' => [ 'JOIN', 'revactor_rev = rev_id' ]
-				]
-			);
-		} else {
-			$res = $dbr->select(
-				[ 'revision', 'actor' ],
-				[ 'COUNT(*) AS the_count', 'rev_actor' ],
-				[
-					'rev_page' => $article->getID(),
-					'actor_user IS NOT NULL'
-				],
-				__FUNCTION__,
-				[ 'GROUP BY' => 'actor_name' ],
-				[
-					'actor' => [ 'JOIN', 'actor_id = rev_actor' ]
-				]
-			);
-		}
+		$res = $dbr->select(
+			[ 'revision', 'actor' ],
+			[ 'COUNT(*) AS the_count', 'rev_actor' ],
+			[
+				'rev_page' => $article->getID(),
+				'actor_user IS NOT NULL'
+			],
+			__FUNCTION__,
+			[ 'GROUP BY' => 'actor_name' ],
+			[
+				'actor' => [ 'JOIN', 'actor_id = rev_actor' ]
+			]
+		);
 
 		foreach ( $res as $row ) {
-			$columnName = $MW139orEarlier ? 'revactor_actor' : 'rev_actor';
-			$stats = new UserStatsTrack( $row->$columnName );
+			$stats = new UserStatsTrack( $row->rev_actor );
 			$stats->decStatField( 'edit', $row->the_count );
 		}
 	}
@@ -131,41 +105,22 @@ function restoreDeletedEdits( Title $title, $new ) {
 	) {
 		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 
-		$MW139orEarlier = version_compare( MW_VERSION, '1.39', '<' );
-		if ( $MW139orEarlier ) {
-			$res = $dbr->select(
-				[ 'revision_actor_temp', 'revision', 'actor' ],
-				[ 'COUNT(*) AS the_count', 'revactor_actor' ],
-				[
-					'revactor_page' => $title->getArticleID(),
-					'actor_user IS NOT NULL'
-				],
-				__FUNCTION__,
-				[ 'GROUP BY' => 'actor_name' ],
-				[
-					'actor' => [ 'JOIN', 'actor_id = revactor_actor' ],
-					'revision_actor_temp' => [ 'JOIN', 'revactor_rev = rev_id' ]
-				]
-			);
-		} else {
-			$res = $dbr->select(
-				[ 'revision', 'actor' ],
-				[ 'COUNT(*) AS the_count', 'rev_actor' ],
-				[
-					'rev_page' => $title->getArticleID(),
-					'actor_user IS NOT NULL'
-				],
-				__FUNCTION__,
-				[ 'GROUP BY' => 'actor_name' ],
-				[
-					'actor' => [ 'JOIN', 'actor_id = rev_actor' ]
-				]
-			);
-		}
+		$res = $dbr->select(
+			[ 'revision', 'actor' ],
+			[ 'COUNT(*) AS the_count', 'rev_actor' ],
+			[
+				'rev_page' => $title->getArticleID(),
+				'actor_user IS NOT NULL'
+			],
+			__FUNCTION__,
+			[ 'GROUP BY' => 'actor_name' ],
+			[
+				'actor' => [ 'JOIN', 'actor_id = rev_actor' ]
+			]
+		);
 
 		foreach ( $res as $row ) {
-			$columnName = $MW139orEarlier ? 'revactor_actor' : 'rev_actor';
-			$stats = new UserStatsTrack( $row->$columnName );
+			$stats = new UserStatsTrack( $row->rev_actor );
 			$stats->incStatField( 'edit', $row->the_count );
 		}
 	}

@@ -32,8 +32,6 @@ class UserStatsUpdater {
 			$additionalConds['page_namespace'] = $wgNamespacesForEditPoints;
 		}
 
-		$MW139orEarlier = version_compare( MW_VERSION, '1.39', '<' );
-
 		$lb = MediaWikiServices::getInstance()->getDBLoadBalancer();
 		$dbr = $lb->getConnection( DB_REPLICA );
 		$dbw = $lb->getConnection( DB_PRIMARY );
@@ -64,34 +62,17 @@ class UserStatsUpdater {
 			if ( (int)$rowUser->user_editcount === 0 || $user->isBot() ) {
 				$editCount = 0;
 			} else {
-				if ( $MW139orEarlier ) {
-					$whereConds = [
-						'revactor_actor' => $actorId,
-					];
-					$editCount = (int)$dbr->selectField(
-						[ 'revision_actor_temp', 'revision', 'page' ],
-						'COUNT(*) AS the_count',
-						array_merge( $whereConds, $additionalConds ),
-						__METHOD__,
-						[],
-						[
-							'revision_actor_temp' => [ 'INNER JOIN', 'revactor_rev = rev_id' ],
-							'page' => [ 'INNER JOIN', 'page_id = revactor_page' ]
-						]
-					);
-				} else {
-					$whereConds = [ 'rev_actor' => $actorId ];
-					$editCount = (int)$dbr->selectField(
-						[ 'revision', 'page' ],
-						'COUNT(*) AS the_count',
-						array_merge( $whereConds, $additionalConds ),
-						__METHOD__,
-						[],
-						[
-							'page' => [ 'INNER JOIN', 'page_id = rev_page' ]
-						]
-					);
-				}
+				$whereConds = [ 'rev_actor' => $actorId ];
+				$editCount = (int)$dbr->selectField(
+					[ 'revision', 'page' ],
+					'COUNT(*) AS the_count',
+					array_merge( $whereConds, $additionalConds ),
+					__METHOD__,
+					[],
+					[
+						'page' => [ 'INNER JOIN', 'page_id = rev_page' ]
+					]
+				);
 
 				$s = $dbw->selectRow(
 					'user_stats',
