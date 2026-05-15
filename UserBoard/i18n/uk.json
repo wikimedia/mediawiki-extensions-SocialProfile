@@ -5,13 +5,15 @@
 			"Ice bulldog",
 			"Prima klasy4na",
 			"Vlad5250",
-			"Тест"
+			"Тест",
+			"Movses"
 		]
 	},
 	"userboard-desc": "Дозволяє надсилати повідомлення \"борт до борту\"",
 	"messagesenttitle": "Повідомлення надіслано",
 	"boardblasttitle": "Надіслати вибух дошки",
 	"boardblaststep1": "Крок 1 - Напишіть своє повідомлення",
+	"boardblast-message-type-note": "Всі повідомлення будуть надсилатися як публічні, оскільки приватні повідомлення відключені.",
 	"boardblaststep2": "Крок 2 - Виберіть, кому ви хочете надіслати своє повідомлення",
 	"boardlinkselectall": "Обрати всі",
 	"boardlinkunselectall": "Скасувати вибір усіх",
@@ -65,5 +67,7 @@
 	"apihelp-socialprofile-send-message-param-message": "Версія повідомлення з кодом, що надсилається.",
 	"apihelp-socialprofile-send-message-param-type": "Тип повідомлення: 0 для публічного повідомлення, 1 для приватного повідомлення.",
 	"apihelp-socialprofile-delete-message-summary": "Видалити повідомлення UserBoard.",
-	"apihelp-socialprofile-delete-message-param-id": "Унікальний ідентифікатор повідомлення на дошці для видалення."
+	"apihelp-socialprofile-delete-message-param-id": "Унікальний ідентифікатор повідомлення на дошці для видалення.",
+	"userboard-private-messages-disabled": "Приватні повідомлення відключені у цій вікі.",
+	"userboard-private-messages-disabled-title": "Функція відключена"
 }
