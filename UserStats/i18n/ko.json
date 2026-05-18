@@ -54,7 +54,7 @@
 	"right-updatepoints": "편집 횟수 업데이트",
 	"action-updatepoints": "편집 횟수 업데이트",
 	"right-generatetopusersreport": "상위 사용자 보고서 생성",
-	"action-generatetopusersreport": "상위 사용자 보고서를 생성할",
+	"action-generatetopusersreport": "상위 사용자 보고서 생성",
 	"level-advanced-to": "<span style=\"font-weight:800;\">$1</span> 레벨로 승급함",
 	"level-advance-subject": "당신은 이제 {{SITENAME}}에서 \"$1\" 입니다!",
 	"level-advance-body-html": "$1님께,\n\n당신은 이제 {{SITENAME}}에서 \"$2\" 입니다!\n\n축하합니다.\n\n{{SITENAME}} 팀\n\n---\n저희로부터 더이상 이메일을 수신하고 싶지 않으신가요?\n\n이메일 알림을 비활성화 하기 위해서는 [[Special:UpdateProfile]]을 클릭해서 설정을 변경하세요.",

@@ -77,5 +77,5 @@
 	"notification-social-award-rec": "새로운 상을 받았습니다: $1.",
 	"notification-social-award-rec-bundle": "새로운 {{PLURAL:$1|상을 하나|$1개의 상을}} 받았습니다.",
 	"right-awardsmanage": "새로운 상을 만들고 기존 상을 편집",
-	"action-awardsmanage": "새로운 상을 만들고 기존 상을 편집할"
+	"action-awardsmanage": "새로운 상을 만들고 기존 상을 편집"
 }
