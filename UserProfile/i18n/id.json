@@ -6,13 +6,14 @@
 			"Daud I.F. Argana",
 			"Farras",
 			"Irwangatot",
-			"IvanLanin"
+			"IvanLanin",
+			"Bayahiu"
 		]
 	},
 	"editprofile": "Sunting profil pengguna lain",
 	"populateuserprofiles": "Buat profil pengguna",
 	"populateuserprofiles-confirm": "Apakah Anda yakin Anda ingin mengisi profil-profil pengguna yang sudah ada?",
-	"user-time-ago": "$1 yang lalu",
+	"user-time-ago": "$1 lalu",
 	"user-awards-title": "Penghargaan",
 	"user-gifts-title": "Hadiah",
 	"user-count-separator": "$1 dari $2",
