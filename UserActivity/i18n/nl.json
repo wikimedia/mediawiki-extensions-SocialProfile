@@ -8,7 +8,7 @@
 		]
 	},
 	"useractivity": "Activiteit van vrienden",
-	"useractivity-desc": "Toont de sociale activiteit van gebruikers",
+	"useractivity-desc": "Sociale activiteit van gebruikers",
 	"useractivity-award": "$1 heeft een prijs ontvangen",
 	"useractivity-all": "Allemaal bekijken",
 	"useractivity-edit": "$1 bewerkte de volgende {{PLURAL:$4|pagina|pagina's}}: $3",
