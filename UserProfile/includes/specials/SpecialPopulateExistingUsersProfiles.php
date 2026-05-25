@@ -15,9 +15,17 @@ use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 
 class SpecialPopulateUserProfiles extends SpecialPage {
-
+	// MW 1.46+ compatibility, remove comparison with 1.47 LTS release
 	public function __construct() {
-		parent::__construct( 'PopulateUserProfiles', 'populate-user-profiles' );
+		if ( version_compare( MW_VERSION, '1.46', '>=' ) ) {
+			parent::__construct( 'PopulateUserProfiles' );
+		} else {
+			parent::__construct( 'PopulateUserProfiles', 'populate-user-profiles' );
+		}
+	}
+
+	public function getRestriction(): string {
+		return 'populate-user-profiles';
 	}
 
 	public function doesWrites() {

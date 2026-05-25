@@ -15,8 +15,17 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 	 */
 	public $gift_id;
 
+	// MW 1.46+ compatibility, remove with 1.47 LTS release
 	public function __construct() {
-		parent::__construct( 'RemoveMasterSystemGift', 'awardsmanage' );
+		if ( version_compare( MW_VERSION, '1.46', '>=' ) ) {
+			parent::__construct( 'RemoveMasterSystemGift' );
+		} else {
+			parent::__construct( 'RemoveMasterSystemGift', 'awardsmanage' );
+		}
+	}
+
+	public function getRestriction(): string {
+		return 'awardsmanage';
 	}
 
 	/**

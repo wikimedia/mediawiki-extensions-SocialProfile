@@ -21,8 +21,17 @@ use MediaWiki\Title\Title;
  */
 class GenerateTopUsersReport extends SpecialPage {
 
+	// MW 1.46+ compatibility, remove comparison with 1.47 LTS release
 	public function __construct() {
-		parent::__construct( 'GenerateTopUsersReport', 'generatetopusersreport' );
+		if ( version_compare( MW_VERSION, '1.46', '>=' ) ) {
+			parent::__construct( 'GenerateTopUsersReport' );
+		} else {
+			parent::__construct( 'GenerateTopUsersReport', 'generatetopusersreport' );
+		}
+	}
+
+	public function getRestriction(): string {
+		return 'generatetopusersreport';
 	}
 
 	public function doesWrites() {

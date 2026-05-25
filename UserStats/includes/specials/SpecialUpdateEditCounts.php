@@ -11,8 +11,17 @@ use MediaWiki\Html\Html;
 
 class UpdateEditCounts extends UnlistedSpecialPage {
 
+	// MW 1.46+ compatibility, remove comparison with 1.47 LTS release
 	public function __construct() {
-		parent::__construct( 'UpdateEditCounts', 'updatepoints' );
+		if ( version_compare( MW_VERSION, '1.46', '>=' ) ) {
+			parent::__construct( 'UpdateEditCounts' );
+		} else {
+			parent::__construct( 'UpdateEditCounts', 'updatepoints' );
+		}
+	}
+
+	public function getRestriction(): string {
+		return 'updatepoints';
 	}
 
 	/**

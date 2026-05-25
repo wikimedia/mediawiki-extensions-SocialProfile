@@ -11,8 +11,17 @@ use MediaWiki\MediaWikiServices;
 
 class SystemGiftManager extends SpecialPage {
 
+	// MW 1.46+ compatibility, remove with 1.47 LTS release
 	public function __construct() {
-		parent::__construct( 'SystemGiftManager'/*class*/, 'awardsmanage'/*restriction*/ );
+		if ( version_compare( MW_VERSION, '1.46', '>=' ) ) {
+			parent::__construct( 'SystemGiftManager' );
+		} else {
+			parent::__construct( 'SystemGiftManager', 'awardsmanage' );
+		}
+	}
+
+	public function getRestriction(): string {
+		return 'awardsmanage';
 	}
 
 	public function doesWrites() {
