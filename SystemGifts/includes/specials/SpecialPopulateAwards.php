@@ -11,8 +11,17 @@ use MediaWiki\Html\Html;
 
 class PopulateAwards extends UnlistedSpecialPage {
 
+	// MW 1.46+ compatibility, remove comparison with 1.47 LTS release
 	public function __construct() {
-		parent::__construct( 'PopulateAwards'/*class*/, 'awardsmanage' /*restriction*/ );
+		if ( version_compare( MW_VERSION, '1.46', '>=' ) ) {
+			parent::__construct( 'PopulateAwards' );
+		} else {
+			parent::__construct( 'PopulateAwards', 'awardsmanage' );
+		}
+	}
+
+	public function getRestriction(): string {
+		return 'awardsmanage';
 	}
 
 	/**

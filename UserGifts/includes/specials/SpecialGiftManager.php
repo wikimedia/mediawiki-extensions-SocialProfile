@@ -9,8 +9,17 @@ use MediaWiki\MediaWikiServices;
  */
 class GiftManager extends SpecialPage {
 
+	// MW 1.46+ compatibility, remove comparison with 1.47 LTS release
 	public function __construct() {
-		parent::__construct( 'GiftManager'/*class*/, 'giftadmin'/*restriction*/ );
+		if ( version_compare( MW_VERSION, '1.46', '>=' ) ) {
+			parent::__construct( 'GiftManager' );
+		} else {
+			parent::__construct( 'GiftManager', 'giftadmin' );
+		}
+	}
+
+	public function getRestriction(): string {
+		return 'giftadmin';
 	}
 
 	public function doesWrites() {

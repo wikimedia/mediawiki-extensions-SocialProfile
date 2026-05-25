@@ -9,8 +9,17 @@ class RemoveMasterGift extends UnlistedSpecialPage {
 	 */
 	public $gift_id;
 
+	// MW 1.46+ compatibility, remove comparison with 1.47 LTS release
 	public function __construct() {
-		parent::__construct( 'RemoveMasterGift', 'giftadmin' );
+		if ( version_compare( MW_VERSION, '1.46', '>=' ) ) {
+			parent::__construct( 'RemoveMasterGift' );
+		} else {
+			parent::__construct( 'RemoveMasterGift', 'giftadmin' );
+		}
+	}
+
+	public function getRestriction(): string {
+		return 'giftadmin';
 	}
 
 	/**

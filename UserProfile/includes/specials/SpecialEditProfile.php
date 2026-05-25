@@ -19,8 +19,17 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 	/** @var string[] */
 	public $profile_visible_fields;
 
+	// MW 1.46+ compatibility, remove comparison with 1.47 LTS release
 	public function __construct() {
-		SpecialPage::__construct( 'EditProfile', 'editothersprofiles' );
+		if ( version_compare( MW_VERSION, '1.46', '>=' ) ) {
+			SpecialPage::__construct( 'EditProfile' );
+		} else {
+			SpecialPage::__construct( 'EditProfile', 'editothersprofiles' );
+		}
+	}
+
+	public function getRestriction(): string {
+		return 'editothersprofiles';
 	}
 
 	/**
