@@ -73,9 +73,9 @@
 	"system_gift_received_body_html": "$1님께,\n\n방금 {{SITENAME}}에서 $2상을 받았습니다!\n\n\"$3\"\n\n아래를 클릭해 트로피 진열장을 확인하세요!\n\n[[Special:ViewSystemGifts]]\n\n마음에 드셨으면 좋겠습니다!\n\n감사합니다.\n\n\n{{SITENAME}} 팀\n\n---\n\n저희로부터 더이상 이메일을 수신하고 싶지 않으신가요?\n\n이메일 알림을 비활성화 하기 위해서는 [[Special:UpdateProfile]]을 클릭해서 설정을 변경하세요.",
 	"system_gift_received_body": "$1님께,\n\n방금 {{SITENAME}}에서 $2상을 받았습니다!\n\n\"$3\"\n\n아래를 클릭해 트로피 진열장을 확인하세요!\n\n$4\n\n마음에 드셨으면 좋겠습니다!\n\n감사합니다.\n\n\n{{SITENAME}} 팀\n\n---\n\n저희로부터 더이상 이메일을 수신하고 싶지 않으신가요?\n\n이메일 알림을 비활성화 하기 위해서는 $5을(를) 클릭해서 설정을 변경하세요.",
 	"echo-category-title-social-award": "수상",
-	"echo-pref-tooltip-social-award": "수상할면 알립니다.",
+	"echo-pref-tooltip-social-award": "내가 수상하면 알립니다.",
 	"notification-social-award-rec": "새로운 상을 받았습니다: $1.",
 	"notification-social-award-rec-bundle": "새로운 {{PLURAL:$1|상을 하나|$1개의 상을}} 받았습니다.",
 	"right-awardsmanage": "새로운 상을 만들고 기존 상을 편집",
-	"action-awardsmanage": "새로운 상을 만들고 기존 상을 편집할"
+	"action-awardsmanage": "새로운 상을 만들고 기존 상을 편집"
 }

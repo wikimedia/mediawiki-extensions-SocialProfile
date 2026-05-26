@@ -22,6 +22,6 @@
 	"useractivity-network-thought": "'''[[User:$1|$2]]'''은(는) $3 네트워크에 대한 의견을 가지고 있습니다",
 	"useractivity-siteactivity": "사이트 활동",
 	"useractivity-title": "친구들의 활동",
-	"useractivity-user_message": "$1님이 {{PLURAL:$4|다음 사용자에게 메세지를 보냈습니다:}} $3",
+	"useractivity-user_message": "$1님이 {{PLURAL:$4|다음 사용자에게 메시지를 보냈습니다:}} $3",
 	"useractivity-comment": "$1님이 {{PLURAL:$4|다음 문서에 댓글을 달았습니다:}} $3"
 }
