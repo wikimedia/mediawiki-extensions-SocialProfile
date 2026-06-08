@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Helix84"
+			"Helix84",
+			"Wizzard"
 		]
 	},
 	"user-stats-alltime-title": "Najviac bodov celkom",
@@ -35,5 +36,5 @@
 	"right-updatepoints": "Aktualizovať počty úprav",
 	"level-advanced-to": "postúpil na úroveň <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "Teraz ste „$1” na {{GRAMMAR:lokál|{{SITENAME}}}}!",
-	"level-advance-body": "Ahoj $1:\n\nTeraz ste „$2” na {{GRAMMAR:lokál|{{SITENAME}}}}!\n\nGratulujeme,\n\nTím {{GRAMMAR:genitív|{{SITENAME}}}}\n\n---\nNechcete ďalej dostávať tieto emaily?\n\nKliknite na $3\na vypnite v svojich nastaveniach upozornenia emailom."
+	"level-advance-body": "Ahoj $1.\n\nTeraz ste „$2“ na {{GRAMMAR:lokál|{{SITENAME}}}}!\n\nGratulujeme,\n\nTím {{GRAMMAR:genitív|{{SITENAME}}}}\n\n---\nChcete prestať dostávať e-maily od nás?\n\nKliknite na $3\na zmeňte svoje nastavenia na vypnutie e-mailových upozornení."
 }
