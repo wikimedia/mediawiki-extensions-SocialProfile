@@ -1,14 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Helix84"
+			"Helix84",
+			"Wizzard"
 		]
 	},
 	"systemgiftmanager": "Systémový správca darčekov",
 	"ga-addnew": "+ Pridať nový darček",
 	"ga-back-edit-gift": "Späť na Upraviť tento darček",
 	"ga-back-gift-list": "Späť na zoznam darčekov",
-	"ga-back-link": "[[User:$1|< Späť na profil $1]]",
+	"ga-back-link": "[[User:$1|&lt; Späť na profil používateľa $1]]",
 	"ga-choosefile": "Vybrať súbor:",
 	"ga-count": "$1 má $2 {{PLURAL:$2|ocenenie|ocenenia|ocenení}}.",
 	"ga-create-gift": "Vytvoriť darček",
