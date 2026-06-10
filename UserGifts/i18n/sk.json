@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Helix84",
-			"Jack Phoenix"
+			"Jack Phoenix",
+			"Wizzard"
 		]
 	},
 	"giftmanager": "Správca darčekov",
@@ -19,7 +20,7 @@
 	"g-add-message": "Pridať správu",
 	"g-back-edit-gift": "Späť na Upraviť tento darček",
 	"g-back-gift-list": "Späť na Zoznam darčekov",
-	"g-back-link": "< Späť na stránku $1",
+	"g-back-link": "&lt; Späť na stránku používateľa $1",
 	"g-choose-file": "Vybrať súbor:",
 	"g-count": "$1 má $2 {{PLURAL:$2|darček|darčeky|darčekov}}.",
 	"g-create-gift": "Vytvoriť darček",
@@ -76,6 +77,6 @@
 	"g-viewgiftlist": "Zobraziť zoznam darčekov",
 	"g-your-profile": "Váš profil",
 	"gift_received_subject": "$1 vám poslal darček $2 na {{GRAMMAR:lokál|{{SITENAME}}}}",
-	"gift_received_body": "Ahoj $1:\n\n$1 vám práve poslal darček $3 na {{GRAMMAR:lokál|{{SITENAME}}}}\n\nChcete si prečítať komentár, ktorý vám $2 nechal a pozrieť si svoj darček? Kliknite na nasledovný odkaz:\n\n$4\n\nDúfame, že sa vám bude páčiť!\n\nVďaka,\n\n\nTím {{GRAMMAR:genitív|{{SITENAME}}}}\n\n---\n\nNeželáte si od nás dostávať emaily?\n\nKliknite na $5\na zmeňte svoje nastavenia týkajúce sa upozornení emailom.",
+	"gift_received_body": "Ahoj $1.\n\n$2 vám práve poslal darček $3 na {{GRAMMAR:lokál|{{SITENAME}}}}.\n\nChcete si prečítať odkaz, ktorý vám $2 nechal, a pozrieť si svoj darček? Kliknite na nasledovný odkaz:\n\n$4\n\nDúfame, že sa vám bude páčiť!\n\nVďaka,\n\n\nTím {{GRAMMAR:genitív|{{SITENAME}}}}\n\n---\n\nChcete prestať dostávať e-maily od nás?\n\nKliknite na $5\na zmeňte svoje nastavenia na vypnutie e-mailových upozornení.",
 	"right-giftadmin": "Vytvoriť nový alebo upraviť existujúce darčeky"
 }

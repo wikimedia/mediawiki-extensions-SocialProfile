@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Helix84"
+			"Helix84",
+			"Wizzard"
 		]
 	},
 	"messagesenttitle": "Poslaných správ",
@@ -45,5 +46,5 @@
 	"userboard-time-minutes": "{{PLURAL:$1|jedna minúta|$1 minúty|$1 minút}}",
 	"userboard-time-seconds": "{{PLURAL:$1|jedna sekunda|$1 sekundy|$1 sekúnd}}",
 	"message_received_subject": "$1 napísal na vaše fórum na {{GRAMMAR:lokál|{{SITENAME}}}}",
-	"message_received_body": "Ahoj, $1:\n\n$2 napísal na vaše fórum na {{GRAMMAR:lokál|{{SITENAME}}}}\n\nPo kliknutí na nasledujúci odkaz si môžete prečítať svoje fórum.\n\n$3\n\n---\n\nChcete prestať dostávať tieto emaily?\n\nKliknite sem $4\na zmeňte svoje nastavenia na vypnutie upozornení emailom."
+	"message_received_body": "Ahoj $1.\n\n$2 práve napísal na vašu nástenku na {{GRAMMAR:lokál|{{SITENAME}}}}!\n\nKliknite nižšie a pozrite si svoju nástenku!\n\n$3\n\n---\n\nChcete prestať dostávať e-maily od nás?\n\nKliknite na $4\na zmeňte svoje nastavenia na vypnutie e-mailových upozornení."
 }

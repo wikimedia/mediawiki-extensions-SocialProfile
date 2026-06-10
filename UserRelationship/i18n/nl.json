@@ -89,7 +89,7 @@
 	"foe_removed_subject": "$1 heeft u verwijderd als tegenstander op {{SITENAME}}!",
 	"foe_removed_body_html": "Hallo $1.\n\n$2 heeft u als tegenstander verwijderd op {{SITENAME}}!\n\nWellicht bent u op weg om vrienden te worden?\n\nBedankt,\n\n\nHet team van {{SITENAME}}\n\n---\n\nWilt u geen e-mails meer van ons ontvangen?\n\nKlik dan op [[Special:UpdateProfile]]\nen wijzig uw instellingen om e-mailberichten uit te schakelen.",
 	"foe_removed_body": "Hallo $1.\n\n$2 heeft u als tegenstander verwijderd op {{SITENAME}}!\n\nWellicht bent u op weg om vrienden te worden?\n\nBedankt,\n\n\nHet team van {{SITENAME}}\n\n---\n\nWilt u geen e-mails meer van ons ontvangen?\n\nKlik op $4\nen wijzig uw instellingen om e-mailberichten uit te schakelen.",
-	"echo-category-title-social-rel": "Veranderingen aan de gebruikersconnecties",
+	"echo-category-title-social-rel": "Wijzigingen aan de gebruikersconnecties",
 	"echo-pref-tooltip-social-rel": "Stuur mij een melding wanneer iemand mij een connectieverzoek (vriend- of tegenstanderverzoek) stuurt.",
 	"echo-show-social-rel-add-link": "(Vriend-/tegenstanderverzoek)",
 	"notification-social-rel-add-friend-message": "$1 wil graag uw vriend zijn.<br /><br />''$2''",
