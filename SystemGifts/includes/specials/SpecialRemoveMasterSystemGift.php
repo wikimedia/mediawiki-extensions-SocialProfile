@@ -100,7 +100,7 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 		) {
 			$session->set( 'alreadysubmitted', true );
 
-			$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+			$dbw = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
 			$gift = SystemGifts::getGift( $this->gift_id );
 
 			$dbw->delete(

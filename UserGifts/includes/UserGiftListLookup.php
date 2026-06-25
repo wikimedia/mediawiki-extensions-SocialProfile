@@ -39,7 +39,7 @@ class UserGiftListLookup {
 	 * @return array
 	 */
 	function getGiftList( $order = 'gift_createdate DESC' ) {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 		$params = [];
 
 		if ( $this->limit > 0 ) {
@@ -80,7 +80,7 @@ class UserGiftListLookup {
 	 * @return array
 	 */
 	public function getManagedGiftList() {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 
 		$where = []; // Prevent E_NOTICE
 		$params = [];

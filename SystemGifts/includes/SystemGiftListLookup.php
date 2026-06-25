@@ -30,7 +30,7 @@ class SystemGiftListLookup {
 	 * description, etc.
 	 */
 	public function getGiftList() {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 
 		$offset = 0;
 		if ( $this->limit > 0 && $this->page ) {
@@ -75,7 +75,7 @@ class SystemGiftListLookup {
 	 * @return array Array of system gift information
 	 */
 	public function getUserGiftList( User $user ) {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 
 		$offset = 0;
 		if ( $this->limit > 0 && $this->page ) {

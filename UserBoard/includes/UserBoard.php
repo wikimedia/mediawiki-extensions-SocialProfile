@@ -73,7 +73,7 @@ class UserBoard {
 			return false;
 		}
 
-		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
 
 		$dbw->insert(
 			'user_board',
@@ -170,7 +170,7 @@ class UserBoard {
 	 * @return bool True if user owns the message, otherwise false
 	 */
 	public function doesUserOwnMessage( $user, $ub_id ) {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 		$s = $dbr->selectRow(
 			'user_board',
 			[ 'ub_actor' ],
@@ -195,7 +195,7 @@ class UserBoard {
 	 * @return bool True if user owns the message, otherwise false
 	 */
 	public function isUserAuthor( $user, $ub_id ) {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 		$s = $dbr->selectRow(
 			'user_board',
 			[ 'ub_actor_from' ],
@@ -219,7 +219,7 @@ class UserBoard {
 	 */
 	public function deleteMessage( $ub_id ) {
 		if ( $ub_id ) {
-			$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+			$dbw = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
 			$s = $dbw->selectRow(
 				'user_board',
 				[ 'ub_actor', 'ub_type' ],
@@ -251,7 +251,7 @@ class UserBoard {
 	 * @return array Array containing info about the message on success, empty array on failure
 	 */
 	public function getMessage( $messageId ) {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 		$row = $dbr->selectRow(
 			'user_board',
 			'*',
@@ -291,7 +291,7 @@ class UserBoard {
 	 * @return array Array of user board messages
 	 */
 	public function getUserBoardMessages( $user, $user_2 = 0, $limit = 0, $page = 0 ) {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 
 		$offset = 0;
 		if ( $limit > 0 && $page ) {
@@ -322,6 +322,7 @@ class UserBoard {
 			FROM {$dbr->tableName( 'user_board' )}
 			WHERE {$user_sql}
 			ORDER BY ub_id DESC";
+		'@phan-var IDatabase $dbr';
 		$res = $dbr->query( $dbr->limitResult( $sql, $limit, $offset ), __METHOD__ );
 
 		$messages = [];
@@ -353,7 +354,7 @@ class UserBoard {
 	 * @return int The amount of board-to-board messages
 	 */
 	public function getUserBoardToBoardCount( $user, $user_2 ) {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 
 		$user_sql = " ( (ub_actor={$user->getActorId()} AND ub_actor_from={$user_2->getActorId()}) OR
 					(ub_actor={$user_2->getActorId()} AND ub_actor_from={$user->getActorId()}) )";
@@ -368,6 +369,7 @@ class UserBoard {
 			FROM {$dbr->tableName( 'user_board' )}
 			WHERE {$user_sql}";
 
+		'@phan-var IDatabase $dbr';
 		$res = $dbr->query( $sql, __METHOD__ );
 		$row = $res->fetchObject();
 

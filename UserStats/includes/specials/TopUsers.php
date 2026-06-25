@@ -53,7 +53,7 @@ class TopUsersPoints extends SpecialPage {
 			$params = [];
 			$params['ORDER BY'] = 'stats_total_points DESC';
 			$params['LIMIT'] = $count;
-			$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+			$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 			$res = $dbr->select(
 				'user_stats',
 				[ 'stats_actor', 'stats_total_points' ],

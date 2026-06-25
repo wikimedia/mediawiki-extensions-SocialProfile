@@ -90,7 +90,7 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 	 * @return int Amount of profiles populated
 	 */
 	private function populateProfiles() {
-		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
 		$res = $dbw->select(
 			'page',
 			[ 'page_title' ],

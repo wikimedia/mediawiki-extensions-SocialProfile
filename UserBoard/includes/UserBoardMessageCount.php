@@ -89,7 +89,7 @@ class UserBoardMessageCount {
 
 		$newCount = 0;
 		/*
-		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
 		$s = $dbw->selectRow(
 			'user_board',
 			[ 'COUNT(*) AS count' ],

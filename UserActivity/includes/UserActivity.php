@@ -104,7 +104,7 @@ class UserActivity {
 	 * appropriate class member variables.
 	 */
 	private function setEdits() {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 
 		$where = [];
 
@@ -380,7 +380,7 @@ class UserActivity {
 	 * and set them in the appropriate class member variables.
 	 */
 	private function setGiftsSent() {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 
 		$where = [];
 
@@ -447,7 +447,7 @@ class UserActivity {
 	 * tables and set them in the appropriate class member variables.
 	 */
 	private function setGiftsRec() {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 
 		$where = [];
 
@@ -539,7 +539,7 @@ class UserActivity {
 	 * variables.
 	 */
 	private function setSystemGiftsRec() {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 
 		$where = [];
 
@@ -636,7 +636,7 @@ class UserActivity {
 	private function setRelationships() {
 		global $wgLang;
 
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 
 		$where = [];
 
@@ -731,7 +731,7 @@ class UserActivity {
 	 * and set them in the appropriate class member variables.
 	 */
 	private function setMessagesSent() {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 
 		$where = [];
 		// We do *not* want to display private messages...
@@ -822,7 +822,7 @@ class UserActivity {
 	private function setSystemMessages() {
 		global $wgLang;
 
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 
 		$where = [];
 
@@ -914,7 +914,7 @@ class UserActivity {
 			return;
 		}
 
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 
 		$where = [];
 

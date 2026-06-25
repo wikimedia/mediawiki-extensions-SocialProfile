@@ -86,7 +86,7 @@ class SystemGiftCount {
 			'actor_id' => $actorId
 		] );
 
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 		$newCount = 0;
 		$s = $dbr->selectRow(
 			'user_system_gift',

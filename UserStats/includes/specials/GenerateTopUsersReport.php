@@ -153,7 +153,7 @@ class GenerateTopUsersReport extends SpecialPage {
 			throw new LogicException( "Period must be 'weekly' or 'monthly'" );
 		}
 
-		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
 		// Query the appropriate points table
 		$res = $dbw->select(
 			"user_points_{$period}",
@@ -342,7 +342,7 @@ class GenerateTopUsersReport extends SpecialPage {
 
 		$date = date( 'Y-m-d H:i:s' );
 		// Archive points from the weekly/monthly table into the archive table
-		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
 		$dbw->insertSelect(
 			'user_points_archive',
 			"user_points_{$period}",

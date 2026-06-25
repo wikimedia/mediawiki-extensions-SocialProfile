@@ -77,7 +77,7 @@ class ApiUserProfileType extends ApiBase {
 		}
 
 		// @todo FIXME: M A S S I V E L Y duplicates SpecialToggleUserPageType.php!
-		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
 		$s = $dbw->selectRow(
 			'user_profile',
 			[ 'up_actor' ],

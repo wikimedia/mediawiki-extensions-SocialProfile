@@ -61,7 +61,7 @@ function removeDeletedEdits( WikiPage $article, $user, $reason ) {
 		!is_array( $wgNamespacesForEditPoints ) ||
 		in_array( $article->getTitle()->getNamespace(), $wgNamespacesForEditPoints )
 	) {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
 
 		$res = $dbr->select(
 			[ 'revision', 'actor' ],
@@ -101,9 +101,9 @@ function restoreDeletedEdits( Title $title, $new ) {
 	// only keep tally for allowable namespaces
 	if (
 		!is_array( $wgNamespacesForEditPoints ) ||
-		in_array( $title->getNamespace(), $wgNamespacesForEditPoints )
+		$title->inNamespaces( $wgNamespacesForEditPoints )
 	) {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
 
 		$res = $dbr->select(
 			[ 'revision', 'actor' ],

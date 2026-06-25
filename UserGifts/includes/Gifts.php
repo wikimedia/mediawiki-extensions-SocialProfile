@@ -25,7 +25,7 @@ class Gifts {
 		$gift_description,
 		$gift_access = 0
 	) {
-		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
 
 		$dbw->insert(
 			'gift',
@@ -50,7 +50,7 @@ class Gifts {
 	 * @param int $access 0 by default
 	 */
 	public static function updateGift( $id, $gift_name, $gift_description, $access = 0 ) {
-		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
 		$dbw->update(
 			'gift',
 			/* SET */[
@@ -74,7 +74,7 @@ class Gifts {
 		if ( !is_numeric( $id ) ) {
 			return [];
 		}
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 		$row = $dbr->selectRow(
 			'gift',
 			[
@@ -102,7 +102,7 @@ class Gifts {
 	 * @return int
 	 */
 	public static function getCustomCreatedGiftCount( $user ) {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 		$gift_count = 0;
 		$s = $dbr->selectRow(
 			'gift',
@@ -129,7 +129,7 @@ class Gifts {
 	 * @return int
 	 */
 	public static function getGiftCount( $neverGivenOutOnly = true ) {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 		$gift_count = 0;
 		$s = $dbr->selectRow(
 			'gift',

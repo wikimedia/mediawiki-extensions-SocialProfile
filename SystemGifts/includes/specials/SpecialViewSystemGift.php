@@ -55,7 +55,7 @@ class ViewSystemGift extends UnlistedSpecialPage {
 			}
 
 			// DB stuff
-			$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+			$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 			$res = $dbr->select(
 				[ 'user_system_gift', 'actor' ],
 				[

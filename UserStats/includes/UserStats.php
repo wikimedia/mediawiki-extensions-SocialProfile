@@ -67,7 +67,7 @@ class UserStats {
 			'user_name' => $this->user->getName()
 		] );
 
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
 		$row = $dbr->selectRow(
 			'user_stats',
 			'*',
@@ -134,7 +134,7 @@ class UserStats {
 			$sort = 'DESC';
 		}
 
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 		$res = $dbr->select(
 			[ 'user_stats', 'user_relationship', 'actor' ],
 			[ 'stats_actor', 'actor_name', 'actor_user', 'stats_total_points' ],

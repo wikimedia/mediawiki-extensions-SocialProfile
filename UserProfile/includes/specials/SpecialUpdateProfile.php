@@ -36,7 +36,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			$user = $this->getUser();
 		}
 
-		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
 		$s = $dbw->selectRow(
 			'user_profile',
 			[ 'up_actor' ],
@@ -363,7 +363,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		}
 
 		$this->initProfile( $user );
-		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
 		$request = $this->getRequest();
 
 		// As for why the rest of the fields are done below instead of here...that's got to do with T373265
@@ -483,7 +483,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		if ( $spammyFields !== [] ) {
 			return Status::newFatal( 'user-profile-error-spam' );
 		} else {
-			$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+			$dbw = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
 			$dbw->update(
 				'user_profile',
 				/* SET */$customProfileData,
@@ -539,7 +539,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 		if ( $spammyFields !== [] ) {
 			return Status::newFatal( 'user-profile-error-spam' );
 		} else {
-			$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+			$dbw = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
 
 			$dbw->update(
 				'user_profile',
@@ -564,7 +564,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * @return string
 	 */
 	function displayBasicForm( $user ) {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 		$s = $dbr->selectRow( 'user_profile',
 			[
 				'up_location_city', 'up_location_state', 'up_location_country',
@@ -775,7 +775,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * @return string
 	 */
 	function displayPersonalForm( $user ) {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 		$s = $dbr->selectRow(
 			'user_profile',
 			[
@@ -878,7 +878,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	function displayPreferencesForm() {
 		$user = $this->getUser();
 
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 		$s = $dbr->selectRow(
 			'user_profile',
 			[ 'up_birthday' ],
@@ -949,7 +949,7 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 	 * @return string HTML
 	 */
 	function displayCustomForm( $user ) {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+		$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
 		$s = $dbr->selectRow(
 			'user_profile',
 			[

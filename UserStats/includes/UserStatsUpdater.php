@@ -32,9 +32,9 @@ class UserStatsUpdater {
 			$additionalConds['page_namespace'] = $wgNamespacesForEditPoints;
 		}
 
-		$lb = MediaWikiServices::getInstance()->getDBLoadBalancer();
-		$dbr = $lb->getConnection( DB_REPLICA );
-		$dbw = $lb->getConnection( DB_PRIMARY );
+		$dbProvider = MediaWikiServices::getInstance()->getConnectionProvider();
+		$dbr = $dbProvider->getReplicaDatabase();
+		$dbw = $dbProvider->getPrimaryDatabase();
 
 		// Traverse the user list. This means anons will be skipped
 		$resUsers = $dbr->select(
@@ -46,7 +46,6 @@ class UserStatsUpdater {
 			[
 				'actor' => [ 'INNER JOIN', 'actor_user = user_id' ]
 			]
-
 		);
 
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
@@ -116,7 +115,7 @@ class UserStatsUpdater {
 	 * @return int Amount of users whose records were updated
 	 */
 	public function updateTotalPoints() {
-		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
 		$res = $dbw->select(
 			[ 'user_stats', 'actor' ],
 			[ 'stats_actor', 'stats_total_points' ],
