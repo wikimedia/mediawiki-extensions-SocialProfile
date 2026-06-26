@@ -22,7 +22,7 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 	// MW 1.46+ compatibility, remove comparison with 1.47 LTS release
 	public function __construct() {
 		if ( version_compare( MW_VERSION, '1.46', '>=' ) ) {
-			SpecialPage::__construct( 'EditProfile' );
+			parent::__construct( 'EditProfile' );
 		} else {
 			SpecialPage::__construct( 'EditProfile', 'editothersprofiles' );
 		}

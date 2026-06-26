@@ -21,8 +21,8 @@ use MediaWiki\User\UserIdentity;
 
 class SpecialUpdateProfile extends UnlistedSpecialPage {
 
-	public function __construct() {
-		parent::__construct( 'UpdateProfile' );
+	public function __construct( ?string $name = null ) {
+		parent::__construct( $name ?? 'UpdateProfile' );
 	}
 
 	/**

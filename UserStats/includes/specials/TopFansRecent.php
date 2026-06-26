@@ -154,14 +154,14 @@ class TopFansRecent extends UnlistedSpecialPage {
 		if ( $period == 'weekly' ) {
 			if ( $wgUserStatsTrackMonthly ) {
 				$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=monthly' ) ) . '">' .
-					htmlspecialchars( $this->msg( 'top-fans-monthly-points-link' )->escaped() ) . '</a></p>';
+					$this->msg( 'top-fans-monthly-points-link' )->escaped() . '</a></p>';
 			}
-			$output .= '<p><b>' . htmlspecialchars( $this->msg( 'top-fans-weekly-points-link' )->escaped() ) . '</b></p>';
+			$output .= '<p><b>' . $this->msg( 'top-fans-weekly-points-link' )->escaped() . '</b></p>';
 		} else {
 			$output .= '<p><b>' . $this->msg( 'top-fans-monthly-points-link' )->escaped() . '</b></p>';
 			if ( $wgUserStatsTrackWeekly ) {
 				$output .= '<p><a href="' . htmlspecialchars( $recent_title->getFullURL( 'period=weekly' ) ) . '">' .
-					htmlspecialchars( $this->msg( 'top-fans-weekly-points-link' )->escaped() ) . '</a></p>';
+					$this->msg( 'top-fans-weekly-points-link' )->escaped() . '</a></p>';
 			}
 		}
 

@@ -7,6 +7,7 @@
  */
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Permissions\Authority;
 use MediaWiki\Title\Title;
 
 trait UploadAvatarTrait {
@@ -325,10 +326,10 @@ trait UploadAvatarTrait {
 	/**
 	 * We don't overwrite stuff, so don't care
 	 *
-	 * @param User|null $user Ignored; required for type fit with upstream.
+	 * @param Authority $performer Ignored; required for type fit with upstream.
 	 * @return array
 	 */
-	public function checkWarnings( $user = null ) {
+	public function checkWarnings( Authority $performer ): array {
 		return [];
 	}
 }
