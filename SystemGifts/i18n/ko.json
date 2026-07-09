@@ -45,7 +45,7 @@
 	"ga-viewlist": "선물 목록 보기",
 	"ga-remove": "제거",
 	"ga-remove-title": "\"$1\"을(를) 제거합니까?",
-	"ga-delete-message": "정말로 \"$1\" 선물을 제거하시겠습니까?\n제거하면 이미 선물을 받은 다른 사용자에게서도 제거됩니다.",
+	"ga-delete-message": "정말로 \"$1\" 선물을 삭제하시겠습니까?\n제거하면 이미 선물을 받은 다른 사용자에게서도 삭제됩니다.",
 	"ga-remove-success-title": "\"$1\" 선물을 성공적으로 제거했습니다,",
 	"ga-remove-success-message": "\"$1\" 선물이 제거되었습니다,",
 	"ga-user-got-awards": "$1님이 $2상을 받았습니다",

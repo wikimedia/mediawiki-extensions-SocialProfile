@@ -13,7 +13,7 @@
 	"ur-error-title": "앗, 길을 잘못 들었습니다!",
 	"ur-error-message-no-user": "해당 이름의 사용자가 존재하지 않으므로 요청을 완료할 수 없습니다.",
 	"ur-your-profile": "내 프로필",
-	"ur-backlink": "&lt; $1님의 프로파일로 돌아가기",
+	"ur-backlink": "&lt; $1님의 프로필로 돌아가기",
 	"ur-relationship-count-foes": "$1님은 $2명의 {{PLURAL:$2|적}}을 가지고 있습니다.",
 	"ur-relationship-count-friends": "$1님은 $2명의 {{PLURAL:$2|친구}}를 가지고 있습니다.",
 	"ur-add-friend": "친구로 추가",
