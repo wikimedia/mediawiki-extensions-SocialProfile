@@ -32,6 +32,11 @@ $wgHooks['ArticleUndelete'][] = 'restoreDeletedEdits';
 function incEditCount( WikiPage $wikiPage, $revision, $baseRevId, $user ) {
 	global $wgNamespacesForEditPoints;
 
+	// Skip anons entirely, they should not have any social stats whatsoever
+	if ( !$user->isRegistered() ) {
+		return;
+	}
+
 	// only keep tally for allowable namespaces
 	if (
 		!is_array( $wgNamespacesForEditPoints ) ||
@@ -55,6 +60,11 @@ function incEditCount( WikiPage $wikiPage, $revision, $baseRevId, $user ) {
  */
 function removeDeletedEdits( WikiPage $article, $user, $reason ) {
 	global $wgNamespacesForEditPoints;
+
+	// Skip anons entirely, they should not have any social stats whatsoever
+	if ( !$user->isRegistered() ) {
+		return true;
+	}
 
 	// only keep tally for allowable namespaces
 	if (
@@ -90,6 +100,11 @@ function removeDeletedEdits( WikiPage $article, $user, $reason ) {
  * Updates user's points after a page in a namespace that is listed in the
  * $wgNamespacesForEditPoints array that they've edited has been restored after
  * it was originally deleted.
+ *
+ * @todo FIXME: This should probably skip anons the same way the other two hooks
+ * above do, but we don't have access to a sensible User object here.
+ * This probably doesn't matter much/at all now that the previous two methods ensure
+ * that we do not store any social statistics data about anons.
  *
  * @param Title $title
  * @param bool $new
