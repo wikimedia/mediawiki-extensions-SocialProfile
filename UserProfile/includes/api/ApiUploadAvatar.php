@@ -127,17 +127,13 @@ class ApiUploadAvatar extends ApiBase {
 			$this->getHookContainer()->run( 'NewAvatarUploaded', [ $user ] );
 
 			// Log the change
-			$log = new LogPage( 'avatar' );
-			if ( !$wgUploadAvatarInRecentChanges ) {
-				$log->updateRecentChanges = false;
+			$log = new ManualLogEntry( 'avatar', 'upload' );
+			$log->setPerformer( $user );
+			$log->setTarget( $user->getUserPage() );
+			$logId = $log->insert();
+			if ( $wgUploadAvatarInRecentChanges ) {
+				$log->publish( $logId );
 			}
-			$log->addEntry(
-				'avatar',
-				$user->getUserPage(),
-				$this->msg( 'user-profile-picture-log-entry' )->inContentLanguage()->text(),
-				[],
-				$user
-			);
 		} else {
 			$sv = StatusValue::newGood();
 			foreach ( $status->getErrors() as $error ) {

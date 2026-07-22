@@ -244,5 +244,7 @@
 	"apihelp-smpuserprofiletype-param-user": "{{doc-apihelp-param|smpuserprofiletype|user}}",
 	"random-users-avatars-title": "Used as HTML <code><nowiki><h2></nowiki></code> heading in the output of the <code>&lt;randomuserswithavatars /&gt;</code> tag.",
 	"logentry-profile-changedsection": "Log entry shown at Special:Log/profile. Parameters:\n* $1 is the name of the user who performed the action.\n* $2 is the same as $1 but for GENDER.\n* $3 is the target of the action.\n* $4 is the section of the [[Special:UpdateProfile]], defined by the system.",
-	"logentry-profile-changedprofile": "Log entry generated when a user uses [[Special:EditProfile]] to edit a user's profile. Parameters:\n* $1 is the name of the user who performed the action.\n* $2 is the same as $1 but for GENDER.\n* $3 is the target of the action."
+	"logentry-profile-changedprofile": "Log entry generated when a user uses [[Special:EditProfile]] to edit a user's profile. Parameters:\n* $1 is the name of the user who performed the action.\n* $2 is the same as $1 but for GENDER.\n* $3 is the target of the action.",
+	"logentry-avatar-upload": "Log entry generated when a user uploads a new avatar using [[Special:UploadAvatar]].\\nParameters:\\n* $1 is the name of the user who performed the action.\\n* $2 is the same as $1 but for GENDER.\\n* $3 is the target of the action.",
+	"logentry-avatar-remove": "Log entry generated when a user's avatar is removed using [[Special:RemoveAvatar]]. Privileged users can remove other users avatars using this tool as well as their own.\\nParameters:\\n* $1 is the name of the user who performed the action.\\n* $2 is the same as $1 but for GENDER.\\n* $3 is the target of the action.\\n"
 }

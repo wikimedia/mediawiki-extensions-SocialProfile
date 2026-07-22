@@ -53,33 +53,13 @@ class ApiRemoveAvatar extends ApiBase {
 		RemoveAvatar::deleteImage( $user_id, 'l' );
 		RemoveAvatar::deleteImage( $user_id, 'ml' );
 
-		$log = new LogPage( 'avatar' );
-
-		if ( !$wgUploadAvatarInRecentChanges ) {
-			$log->updateRecentChanges = false;
-		}
-
-		if ( $isPrivileged && $reason !== '' ) {
-			$log->addEntry(
-				'avatar',
-				$user->getUserPage(),
-				$this->msg(
-					'user-profile-picture-log-delete-entry-with-reason',
-					$userToOperateOn->getName(),
-					$reason
-				)->inContentLanguage()->text(),
-				[],
-				$user
-			);
-		} else {
-			$log->addEntry(
-				'avatar',
-				$user->getUserPage(),
-				$this->msg( 'user-profile-picture-log-delete-entry', $userToOperateOn->getName() )
-					->inContentLanguage()->text(),
-				[],
-				$user
-			);
+		$log = new ManualLogEntry( 'avatar', 'remove' );
+		$log->setPerformer( $user );
+		$log->setComment( $reason );
+		$log->setTarget( $userToOperateOn->getUserPage() );
+		$logId = $log->insert();
+		if ( $wgUploadAvatarInRecentChanges ) {
+			$log->publish( $logId );
 		}
 
 		// Let the user know that everything went well.

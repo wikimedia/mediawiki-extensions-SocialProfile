@@ -160,35 +160,15 @@ class RemoveAvatar extends SpecialPage {
 		self::deleteImage( $user_id, 'l' );
 		self::deleteImage( $user_id, 'ml' );
 
-		$log = new LogPage( 'avatar' );
-
-		if ( !$wgUploadAvatarInRecentChanges ) {
-			$log->updateRecentChanges = false;
-		}
-
 		$reason = $request->getText( 'wpReason' );
 
-		if ( $this->isUserPrivileged() && $reason !== '' ) {
-			$log->addEntry(
-				'avatar',
-				$user->getUserPage(),
-				$this->msg(
-					'user-profile-picture-log-delete-entry-with-reason',
-					$user_deleted->getName(),
-					$reason
-				)->inContentLanguage()->text(),
-				[],
-				$user
-			);
-		} else {
-			$log->addEntry(
-				'avatar',
-				$user->getUserPage(),
-				$this->msg( 'user-profile-picture-log-delete-entry', $user_deleted->getName() )
-					->inContentLanguage()->text(),
-				[],
-				$user
-			);
+		$log = new ManualLogEntry( 'avatar', 'remove' );
+		$log->setPerformer( $user );
+		$log->setComment( $reason );
+		$log->setTarget( $user_deleted->getUserPage() );
+		$logId = $log->insert();
+		if ( $wgUploadAvatarInRecentChanges ) {
+			$log->publish( $logId );
 		}
 	}
 
