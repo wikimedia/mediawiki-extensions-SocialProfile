@@ -208,19 +208,17 @@ class SpecialUpdateProfile extends UnlistedSpecialPage {
 			if ( $status->isGood() ) {
 				UserProfile::clearCache( $user );
 
-				$log = new LogPage( 'profile' );
-				if ( !$wgUpdateProfileInRecentChanges ) {
-					$log->updateRecentChanges = false;
+				$log = new ManualLogEntry( 'profile', 'changedsection' );
+				$log->setPerformer( $user );
+				$log->setTarget( $user->getUserPage() );
+				$log->setParameters( [
+					'4::section' => $section
+				] );
+				$logId = $log->insert();
+				if ( $wgUpdateProfileInRecentChanges ) {
+					$log->publish( $logId );
 				}
-				$log->addEntry(
-					'profile',
-					$user->getUserPage(),
-					$this->msg( 'user-profile-update-log-section' )
-						->inContentLanguage()->text() .
-						" '{$section}'",
-					[],
-					$user
-				);
+
 				$out->addHTML(
 					'<span class="profile-on">' .
 					$this->msg( 'user-profile-update-saved' )->escaped() .

@@ -151,6 +151,10 @@ $wgLogTypes[]                    = 'profile';
 $wgLogNames['profile']           = 'profilelogpage';
 $wgLogHeaders['profile']         = 'profilelogpagetext';
 $wgLogActions['profile/profile'] = 'profilelogentry';
+$wgLogActionsHandlers = [
+	'profile/changesection' => 'LogFormatter',
+	'profile/changedprofile' => 'LogFormatter',
+];
 
 $wgLogTypes[]                    = 'avatar';
 $wgLogNames['avatar']            = 'avatarlogpage';

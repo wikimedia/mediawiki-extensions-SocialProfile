@@ -133,19 +133,14 @@ class SpecialEditProfile extends SpecialUpdateProfile {
 
 			UserProfile::clearCache( $target );
 
-			$log = new LogPage( 'profile' );
-			if ( !$wgUpdateProfileInRecentChanges ) {
-				$log->updateRecentChanges = false;
+			$log = new ManualLogEntry( 'profile', 'changedprofile' );
+			$log->setPerformer( $user );
+			$log->setTarget( $target->getUserPage() );
+			$logId = $log->insert();
+			if ( $wgUpdateProfileInRecentChanges ) {
+				$log->publish( $logId );
 			}
-			$log->addEntry(
-				'profile',
-				$target->getUserPage(),
-				$this->msg( 'user-profile-edit-profile',
-					[ '[[User:' . $target->getName() . ']]' ] )
-				->inContentLanguage()->text(),
-				[],
-				$user
-			);
+
 			$out->addHTML(
 				'<span class="profile-on">' .
 				$this->msg( 'user-profile-edit-profile-update-saved' )->escaped() .

@@ -241,5 +241,7 @@
 	"apihelp-smpuserprofiletype-summary": "{{doc-apihelp-summary|smpuserprofiletype}}",
 	"apihelp-smpuserprofiletype-param-do": "{{doc-apihelp-param|smpuserprofiletype|do}}",
 	"apihelp-smpuserprofiletype-param-user": "{{doc-apihelp-param|smpuserprofiletype|user}}",
-	"random-users-avatars-title": "Used as HTML <code><nowiki><h2></nowiki></code> heading in the output of the <code>&lt;randomuserswithavatars /&gt;</code> tag."
+	"random-users-avatars-title": "Used as HTML <code><nowiki><h2></nowiki></code> heading in the output of the <code>&lt;randomuserswithavatars /&gt;</code> tag.",
+	"logentry-profile-changedsection": "Log entry shown at Special:Log/profile.\\nParameters:\\n* $1 is the name of the user who performed the action.\\n* $2 is the same as $1 but for GENDER.\\n* $3 is the target of the action.\\n* $4 is the section of the [[Special:UpdateProfile]], defined by the system.",
+	"logentry-profile-changedprofile": "Log entry generated when a user uses [[Special:EditProfile]] to edit a user's profile.\\nParameters:\\n* $1 is the name of the user who performed the action.\\n* $2 is the same as $1 but for GENDER.\\n* $3 is the target of the action."
 }
