@@ -100,38 +100,55 @@ class SpecialBoardBlast extends UnlistedSpecialPage {
 			// @phan-suppress-next-line PhanTypeMismatchArgumentNullable
 			$spamStatus = UserBoard::checkForSpam( $messageText, $user );
 			if ( !$spamStatus->isOK() ) {
-				// Use the generic error message from MW core.
-				// @todo Mildly silly, since we're totally ignoring the Status retval from the anti-spam method, but
-				// oh well.
-				$errors[] = 'spamprotectiontext';
+				$errors[] = $spamStatus->getMessages()[0];
 			}
 
-			// If no errors popped up, everything should be fine and we can send the message!
+			// If no errors popped up, everything should be fine and we can try to send the message!
 			if ( empty( $errors ) ) {
 				$out->setPageTitle( $this->msg( 'messagesenttitle' )->plain() );
 				$b = new UserBoard( $user );
 
-				$count = 0;
+				$successCount = 0;
+				$blacklistCount = 0;
 
 				$privateMessagesEnabled = $this->getConfig()->get( 'UserBoardAllowPrivateMessages' );
 				if ( !$privateMessagesEnabled && $messageType !== UserBoard::MESSAGE_PUBLIC ) {
 					$out->showErrorPage( 'userboard-private-messages-disabled-title', 'userboard-private-messages-disabled' );
 					return;
 				}
+
 				foreach ( $user_ids_to as $user_id ) {
 					$recipient = User::newFromId( (int)$user_id );
 					$recipient->loadFromId();
-					$b->sendBoardMessage(
-						$user,
-						$recipient,
-						// @phan-suppress-next-line PhanTypeMismatchArgumentNullable Why are you like this, phan?
-						$messageText,
-						$messageType
-					);
-					$count++;
+
+					$isBlacklisted = UserBoard::isSenderBlacklistedByRecipient( $user, $recipient );
+					if ( !$isBlacklisted ) {
+						$b->sendBoardMessage(
+							$user,
+							$recipient,
+							// @phan-suppress-next-line PhanTypeMismatchArgumentNullable Why are you like this, phan?
+							$messageText,
+							$messageType
+						);
+						$successCount++;
+					} else {
+						$blacklistCount++;
+					}
 				}
 
-				$output .= $this->msg( 'messagesentsuccess' )->escaped();
+				if ( $successCount > 0 ) {
+					$output .= $this->msg( 'messagesentsuccess' )->escaped();
+
+					if ( $blacklistCount > 0 ) {
+						$output .= '<br />';
+						$output .= $this->msg(
+							'boardblast-error-blacklisted-by-some-users',
+							$blacklistCount
+						)->parse();
+					}
+				} else {
+					$output .= $this->msg( 'boardblast-error-generic' )->escaped();
+				}
 			} else {
 				$out->setPageTitle( $this->msg( 'boardblasttitle' )->plain() );
 

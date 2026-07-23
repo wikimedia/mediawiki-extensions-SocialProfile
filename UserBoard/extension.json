@@ -17,20 +17,31 @@
 		"MigrateOldUserBoardUserColumnsToActor": "maintenance/migrateOldUserBoardUserColumnsToActor.php",
 		"EchoUserBoardMessagePresentationModel": "includes/EchoUserBoardMessagePresentationModel.php",
 		"SpecialBoardBlast": "includes/specials/SpecialSendBoardBlast.php",
+		"SpecialMuteUserBoard": "includes/specials/SpecialMuteUserBoard.php",
 		"SpecialViewUserBoard": "includes/specials/SpecialUserBoard.php",
 		"UserBoard": "includes/UserBoard.php",
 		"UserBoardHooks": "includes/UserBoardHooks.php",
 		"UserBoardMessageCount": "includes/UserBoardMessageCount.php",
 		"ApiDeleteUserBoardMessage": "includes/api/ApiDeleteUserBoardMessage.php",
-		"ApiSendUserBoardMessage": "includes/api/ApiSendUserBoardMessage.php"
+		"ApiSendUserBoardMessage": "includes/api/ApiSendUserBoardMessage.php",
+		"ApiUserBoardMute": "includes/api/ApiUserBoardMute.php"
 	},
 	"APIModules": {
 		"socialprofile-delete-message": "ApiDeleteUserBoardMessage",
-		"socialprofile-send-message": "ApiSendUserBoardMessage"
+		"socialprofile-send-message": "ApiSendUserBoardMessage",
+		"userboard-mute": {
+			"class": "ApiUserBoardMute",
+			"services": [
+				"CentralIdLookup",
+				"LinkBatchFactory",
+				"UserOptionsManager"
+			]
+		}
 	},
 	"Hooks": {
 		"BeforeCreateEchoEvent": "UserBoardHooks::onBeforeCreateEchoEvent",
 		"EchoGetBundleRules": "UserBoardHooks::onEchoGetBundleRules",
+		"GetPreferences": "UserBoardHooks::onGetPreferences",
 		"ResourceLoaderRegisterModules": "UserBoardHooks:onResourceLoaderRegisterModules"
 	},
 	"DefaultUserOptions": {
@@ -39,6 +50,15 @@
 	},
 	"SpecialPages": {
 		"SendBoardBlast": "SpecialBoardBlast",
+		"MuteUserBoard": {
+			"class": "SpecialMuteUserBoard",
+			"services": [
+				"CentralIdLookup",
+				"UserOptionsManager",
+				"UserIdentityLookup",
+				"UserIdentityUtils"
+			]
+		},
 		"UserBoard": "SpecialViewUserBoard"
 	},
 	"config": {

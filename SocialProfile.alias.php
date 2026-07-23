@@ -12,6 +12,7 @@ $specialPageAliases = [];
 $specialPageAliases['en'] = [
 	'EditProfile' => [ 'EditProfile' ],
 	'GenerateTopUsersReport' => [ 'GenerateTopUsersReport' ],
+	'MuteUserBoard' => [ 'MuteUserBoard' ],
 	'PopulateUserProfiles' => [ 'PopulateUserProfiles' ],
 	'RemoveAvatar' => [ 'RemoveAvatar' ],
 	'SendBoardBlast' => [ 'SendBoardBlast' ],

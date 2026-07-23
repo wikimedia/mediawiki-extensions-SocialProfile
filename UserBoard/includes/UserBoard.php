@@ -3,6 +3,7 @@
 use MediaWiki\Html\TemplateParser;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Parser\ParserOptions;
+use MediaWiki\Preferences\MultiUsernameFilter;
 
 /**
  * Functions for managing user board data
@@ -37,21 +38,59 @@ class UserBoard {
 	 *
 	 * @note You should usually always call this before calling sendBoardMessage()!
 	 * @param string $textualContent The user-supplied text string to check for spam etc.
-	 * @param User|MediaWiki\User\UserIdentity $user The User (object) who is trying to send the message
+	 * @param User|MediaWiki\User\UserIdentity $sender The User (object) who is trying to send the message
+	 * @param User|MediaWiki\User\UserIdentity|null $recipient The User (object) who is supposed to receive the
+	 *   message; if null, the user-specific blacklist check is skipped
 	 * @return Status
 	 */
-	public static function checkForSpam( $textualContent, $user ) {
+	public static function checkForSpam( $textualContent, $sender, $recipient = null ) {
 		$hasSpam = SpecialUpdateProfile::validateSpamRegex( $textualContent );
 		if ( $hasSpam ) {
 			return Status::newFatal( 'spamprotectiontext' );
 		}
 
-		$hasSpam = SpecialUpdateProfile::validateSpamBlacklist( $textualContent, rand(), $user );
+		$hasSpam = SpecialUpdateProfile::validateSpamBlacklist( $textualContent, rand(), $sender );
 		if ( $hasSpam ) {
 			return Status::newFatal( 'spamprotectiontext' );
 		}
 
+		// Trying to send a message to someone who has explicitly blacklisted *you*? That's also spamming!
+		if ( $recipient !== null ) {
+			$isBlacklisted = self::isSenderBlacklistedByRecipient( $sender, $recipient );
+			if ( $isBlacklisted ) {
+				return Status::newFatal( 'user-board-you-are-blacklisted' );
+			}
+		}
+
 		return Status::newGood();
+	}
+
+	/**
+	 * Has the recipient explicitly blacklisted the sender from sending them board messages?
+	 *
+	 * (This code copied and slightly adapted for UserBoard from core EmailUser.)
+	 *
+	 * @param User|MediaWiki\User\UserIdentity $sender The User (object) who is trying to send the message
+	 * @param User|MediaWiki\User\UserIdentity $recipient The User (object) who is supposed to receive the message
+	 * @return bool True if they have, otherwise false
+	 */
+	public static function isSenderBlacklistedByRecipient( $sender, $recipient ) {
+		$services = MediaWikiServices::getInstance();
+		$muteList = $services->getUserOptionsLookup()->getOption(
+			$recipient,
+			'user-board-blacklist',
+			''
+		);
+
+		if ( $muteList ) {
+			$muteList = MultiUsernameFilter::splitIds( $muteList );
+			$senderId = $services->getCentralIdLookup()->centralIdFromLocalUser( $sender );
+			if ( $senderId !== 0 && in_array( $senderId, $muteList ) ) {
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	/**
@@ -404,6 +443,7 @@ class UserBoard {
 		$board_link = '';
 		$message_type_label = '';
 		$delete_link = '';
+		$blockLink = '';
 
 		$userBoardPage = SpecialPage::getTitleFor( 'UserBoard' );
 
@@ -437,6 +477,21 @@ class UserBoard {
 						wfMessage( 'delete' )->escaped() . '</a>
 				</span>';
 		}
+
+		if ( $this->currentUser->isRegistered() ) {
+			// Check blacklistedness to see if we should display "Block" or "Unblock" as the link text
+			$blacklisted = self::isSenderBlacklistedByRecipient( $sender, $recipient );
+			if ( $blacklisted ) {
+				$blockLinkText = wfMessage( 'user-board-unblock-link', $sender->getName() )->parse();
+			} else {
+				$blockLinkText = wfMessage( 'user-board-block-link', $sender->getName() )->parse();
+			}
+			$blockLink = '<a href="' .
+				htmlspecialchars(
+					SpecialPage::getTitleFor( 'MuteUserBoard', $sender->getName() )->getFullURL()
+				) . '">' . $blockLinkText . '</a>';
+		}
+
 		if ( $message['type'] == 1 ) {
 			$message_type_label = '(' . wfMessage( 'userboard_private' )->escaped() . ')';
 		}
@@ -456,16 +511,27 @@ class UserBoard {
 				'messageBody' => $message_text,
 				'boardLink' => $board_link,
 				'boardToBoard' => $board_to_board,
-				'deleteLink' => $delete_link
+				'deleteLink' => $delete_link,
+				'blockLink' => $blockLink
 			]
 		);
 
 		return $output;
 	}
 
+	/**
+	 * Get the HTML for all the board messages, up to $count of them, starting at the offset $page.
+	 * Displays a different message if there are no messages *and* we're viewing the current user's
+	 * user page.
+	 *
+	 * @param User $user
+	 * @param User|int $user_2 User object representing the second user; only used
+	 * in board-to-board stuff
+	 * @param int $count Get this many messages...
+	 * @param int $page ...starting at this offset/page
+	 * @return string HTML suitable for output
+	 */
 	public function displayMessages( $user, $user_2 = 0, $count = 10, $page = 0 ) {
-		global $wgTitle;
-
 		$output = ''; // Prevent E_NOTICE
 		$messages = $this->getUserBoardMessages( $user, $user_2, $count, $page );
 
@@ -473,7 +539,7 @@ class UserBoard {
 			foreach ( $messages as $message ) {
 				$output .= $this->displayMessage( $user, $message );
 			}
-		} elseif ( $this->currentUser->getName() == $wgTitle->getText() ) {
+		} elseif ( RequestContext::getMain()->getTitle()->equals( $this->currentUser->getUserPage() ) ) {
 			$output .= '<div class="no-info-container">' .
 				wfMessage( 'userboard_nomessages' )->parse() .
 			'</div>';

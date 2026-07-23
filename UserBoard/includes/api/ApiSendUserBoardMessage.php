@@ -19,18 +19,13 @@ class ApiSendUserBoardMessage extends ApiBase {
 			$this->dieWithError( 'apierror-socialprofile-send-message-nosend', 'nosend' );
 		}
 
-		$user_name = stripslashes( $user_name );
-		$user_name = urldecode( $user_name );
 		$recipient = User::newFromName( $user_name );
 		$b = new UserBoard( $user );
 
 		$messageText = urldecode( $message );
-		$spamStatus = UserBoard::checkForSpam( $messageText, $user );
+		$spamStatus = UserBoard::checkForSpam( $messageText, $user, $recipient );
 		if ( !$spamStatus->isOK() ) {
-			// Use the generic error message from MW core.
-			// @todo Mildly silly, since we're totally ignoring the Status retval from
-			// the anti-spam method, but oh well.
-			$this->dieWithError( 'spamprotectiontext', 'spam' );
+			$this->dieWithError( $spamStatus->getMessages()[0], 'spam' );
 		}
 
 		if ( $message_type !== UserBoard::MESSAGE_PUBLIC &&

@@ -72,6 +72,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		$user_name = $userFromURL = $request->getVal( 'user', $par );
 		$user_name_2 = $request->getVal( 'conv' ) ?? '';
 		$user_2 = 0; // Prevent E_NOTICE
+		$potentialRecipientOrThenMaybeNot = $userFromURL ? User::newFromName( $userFromURL ) : $currentUser;
 		$page = $request->getInt( 'page', 1 );
 		$output = '';
 
@@ -148,17 +149,15 @@ class SpecialViewUserBoard extends SpecialPage {
 				// Sending a message
 				if ( $currentUser->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
 					$messageText = urldecode( $request->getVal( 'message' ) );
-					$spamStatus = UserBoard::checkForSpam( $messageText, $currentUser );
+					$recipient = User::newFromName( $request->getVal( 'user_name_to' ) );
+					$spamStatus = UserBoard::checkForSpam( $messageText, $currentUser, $recipient );
 
 					if ( !$spamStatus->isOK() ) {
-						// Use the generic error message from MW core.
-						// @todo Mildly silly, since we're totally ignoring the Status retval from the
-						// anti-spam method, but oh well.
-						$output .= Html::errorBox( $this->msg( 'spamprotectiontext' )->parse() );
+						$output .= Html::errorBox( $this->msg( $spamStatus->getMessages()[0] )->parse() );
 					} else {
 						$b->sendBoardMessage(
 							$currentUser,
-							User::newFromName( $request->getVal( 'user_name_to' ) ),
+							$recipient,
 							$messageText,
 							$messageType
 						);
@@ -171,8 +170,7 @@ class SpecialViewUserBoard extends SpecialPage {
 		}
 
 		$ub_messages = $b->getUserBoardMessages(
-			// @todo FIXME: variabilize this construct since we're using it twice here
-			( $userFromURL ? User::newFromName( $userFromURL ) : $currentUser ),
+			$potentialRecipientOrThenMaybeNot,
 			$user_2,
 			$ub_messages_show,
 			$page
@@ -192,7 +190,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				$total += $stats_data['user_board_priv'];
 			}
 		} else {
-			$total = $b->getUserBoardToBoardCount( ( $userFromURL ? User::newFromName( $userFromURL ) : $currentUser ), $user_2 );
+			$total = $b->getUserBoardToBoardCount( $potentialRecipientOrThenMaybeNot, $user_2 );
 		}
 
 		if ( !$user_2 ) {
@@ -337,6 +335,11 @@ class SpecialViewUserBoard extends SpecialPage {
 			// }
 		}
 
+		$blacklisted = UserBoard::isSenderBlacklistedByRecipient( $currentUser, $potentialRecipientOrThenMaybeNot );
+		if ( $blacklisted ) {
+			$can_post = false;
+		}
+
 		if ( $can_post ) {
 			if ( $currentUser->isRegistered() && !$currentUser->getBlock() ) {
 				$urlParams = [ 'action' => 'send' ];
@@ -397,6 +400,7 @@ class SpecialViewUserBoard extends SpecialPage {
 				$board_link = '';
 				$ub_message_type_label = '';
 				$delete_link = '';
+				$blockLink = '';
 
 				if ( $currentUser->getActorId() != $ub_message['ub_actor_from'] ) {
 					// Prevent logged-out views from getting a board to board with 127.0.0.1
@@ -448,6 +452,20 @@ class SpecialViewUserBoard extends SpecialPage {
 					</span>';
 				}
 
+				if ( $currentUser->isRegistered() ) {
+					// Check blacklistedness to see if we should display "Block" or "Unblock" as the link text
+					$blacklisted = UserBoard::isSenderBlacklistedByRecipient( $sender, $recipient );
+					if ( $blacklisted ) {
+						$blockLinkText = $this->msg( 'user-board-unblock-link', $sender->getName() )->parse();
+					} else {
+						$blockLinkText = $this->msg( 'user-board-block-link', $sender->getName() )->parse();
+					}
+					$blockLink = '<a href="' .
+						htmlspecialchars(
+							SpecialPage::getTitleFor( 'MuteUserBoard', $sender->getName() )->getFullURL()
+						) . '">' . $blockLinkText . '</a>';
+				}
+
 				// Mark private messages as such
 				if ( $ub_message['type'] == 1 ) {
 					$ub_message_type_label = '(' . $this->msg( 'userboard_private' )->escaped() . ')';
@@ -469,7 +487,8 @@ class SpecialViewUserBoard extends SpecialPage {
 						'messageBody' => $ub_message_text,
 						'boardLink' => $board_link,
 						'boardToBoard' => $board_to_board,
-						'deleteLink' => $delete_link
+						'deleteLink' => $delete_link,
+						'blockLink' => $blockLink
 					]
 				);
 			}

@@ -1792,8 +1792,10 @@ class UserProfilePage extends Article {
 		</div>
 		<div class="visualClear"></div>';
 
+		$blacklisted = UserBoard::isSenderBlacklistedByRecipient( $this->viewingUser, $this->profileOwner );
+
 		if ( $this->viewingUser->getName() !== $this->profileOwner->getName() ) {
-			if ( $this->viewingUser->isRegistered() && !$this->viewingUser->getBlock() ) {
+			if ( $this->viewingUser->isRegistered() && !$this->viewingUser->getBlock() && !$blacklisted ) {
 				// Add WikiEditor to the textarea if enabled for the current user
 				if ( ExtensionRegistry::getInstance()->isLoaded( 'WikiEditor' )
 					&& MediaWikiServices::getInstance()->getUserOptionsLookup()->getOption( $this->viewingUser, 'usebetatoolbar' )
@@ -1841,6 +1843,10 @@ class UserProfilePage extends Article {
 				// @see https://phabricator.wikimedia.org/T266918
 				$output .= '<div class="user-page-message-form-blocked">' .
 					wfMessage( 'user-board-blocked-message' )->escaped() .
+				'</div>';
+			} elseif ( $blacklisted ) {
+				$output .= '<div class="user-page-message-form-blocked">' .
+					wfMessage( 'user-board-you-are-blacklisted' )->escaped() .
 				'</div>';
 			} else {
 				$output .= '<div class="user-page-message-form">' .
