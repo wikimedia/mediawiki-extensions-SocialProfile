@@ -64,8 +64,7 @@
 		// Set up a message to notify users if they try to leave the page without
 		// saving.
 		const allowCloseWindow = mw.confirmCloseWindow( {
-			test: isPrefsChanged,
-			message: mw.msg( 'user-profile-edit-profile-save-warning', mw.msg( 'user-profile-update-save' ) )
+			test: isPrefsChanged
 		} );
 
 		$( 'form[name="profile"]' ).on( 'submit', $.bind( allowCloseWindow, 'release' ) ); // CHANGED

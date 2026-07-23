@@ -100,10 +100,6 @@ $wgResourceModules['ext.userProfile.updateProfile'] = [
 // Only used on Special:UpdateProfile for the current user
 $wgResourceModules['ext.userProfile.updateProfile.confirmClose'] = [
 	'scripts' => 'resources/js/UpdateProfile-confirmClose.js',
-	'messages' => [
-		'user-profile-edit-profile-save-warning',
-		'user-profile-update-save'
-	],
 	'dependencies' => [
 		'mediawiki.confirmCloseWindow'
 	],
