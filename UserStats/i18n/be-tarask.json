@@ -54,7 +54,7 @@
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Дасланы падарунак|Дасланыя падарункі|Дасланых падарункаў}}",
 	"right-updatepoints": "абнаўленьне колькасьці рэдагаваньняў",
 	"right-generatetopusersreport": "стварэньне справаздач пра лепшых удзельніках",
-	"level-advanced-to": "палепшаны да ўзроўню <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "палепшаны да ўзроўню <strong>$1</strong>",
 	"level-advance-subject": "Цяпер Вы ў групе «$1» у {{SITENAME}}!",
 	"level-advance-body": "Прывітаньне, $1:\n\nЦяпер Вы «$2» у {{SITENAME}}!\n\nВіншуем,\n\nКаманда {{SITENAME}}\n\n---\nКалі Вы не жадаеце болей атрымліваць ад нас лісты на электронную пошту, націсьніце $3 і зьмяніце Вашыя налады абвестак.",
 	"generatetopusersreport": "Стварыць справаздачу пра лепшых удзельніках",

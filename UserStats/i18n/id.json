@@ -56,7 +56,7 @@
 	"action-updatepoints": "memutakhirkan jumlah suntingan",
 	"right-generatetopusersreport": "Menghasilkan laporan pengguna teratas",
 	"action-generatetopusersreport": "membuat laporan pengguna teratas",
-	"level-advanced-to": "naik ke level <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "naik ke level <strong>$1</strong>",
 	"level-advance-subject": "Anda sekarang adalah \"$1\" di {{SITENAME}}!",
 	"level-advance-body-html": "Halo $1.\n\nSekarang Anda adalah \"$2\" di {{SITENAME}}!\n\nSelamat,\n\nTim {{SITENAME}}\n\n---\nMau berhenti mendapatkan pesan ini?\n\nKlik [[Special:UpdateProfile]]\ndan ubah pengaturan Anda untuk mematikan pemberitahuan lewat surel.",
 	"level-advance-body": "Halo $1.\n\nSekarang Anda adalah \"$2\" di {{SITENAME}}!\n\nSelamat,\n\nTim {{SITENAME}}\n\n---\nMau berhenti mendapatkan pesan ini?\n\nKlik $3\ndan ganti seting Anda untuk mematikan pemberitahuan lewat surel.",

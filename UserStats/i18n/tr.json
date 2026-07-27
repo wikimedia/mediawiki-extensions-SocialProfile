@@ -56,7 +56,7 @@
 	"action-updatepoints": "değişiklik sayılarını güncelle",
 	"right-generatetopusersreport": "En iyi kullanıcı raporları oluştur",
 	"action-generatetopusersreport": "en iyi kullanıcı raporları oluştur",
-	"level-advanced-to": "<span style=\"font-weight:800;\">$1</span> seviyesine yükseldi",
+	"level-advanced-to": "<strong>$1</strong> seviyesine yükseldi",
 	"level-advance-subject": "Artık {{SITENAME}} bünyesinde \"$1\" statüsündesiniz!",
 	"level-advance-body-html": "Merhaba $1.\n\n{{SITENAME}} sitesinde \"$2\" seviyesiniz!\n\nTebrikler,\n\n{{SITENAME}} ekibi\n\n---\nHey, bizden e-posta almayı bırakmak ister misin?\n\n[[Special:UpdateProfile]] bağlantısına tıklayın\nve e-posta bildirimlerini devre dışı bırakmak için ayarlarınızı değiştirin.",
 	"level-advance-body": "Merhaba $1.\n\nArtık {{SITENAME}} sitesinde \"$2\" seviyesiniz!\n\nTebrikler,\n\n{{SITENAME}} ekibi\n\n---\nHey, bizden e-posta alımı durdurmak ister misiniz?\n\n$3 bağlantısına tıklayın ve e-posta bildirimlerini devre dışı bırakmak için ayarlarınızı değiştirin.",

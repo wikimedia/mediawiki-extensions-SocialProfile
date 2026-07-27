@@ -47,7 +47,7 @@
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|Dar dostaty|Dara dostatej|Dary dostate|Darow dostatych}}",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Dar pósłany|Dara pósłanej|Dary pósłane|Darow pósłanych}}",
 	"right-updatepoints": "Licbu změnow wobźěłaś",
-	"level-advanced-to": "póstupijo k rowninje <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "póstupijo k rowninje <strong>$1</strong>",
 	"level-advance-subject": "Sy něnto \"$1\" na {{GRAMMAR:lokatiw|{{SITENAME}}}}!",
 	"level-advance-body": "Witaj $1.\n\nSy něnto \"$2\" na {{GRAMMAR:lokatiw|{{SITENAME}}}}!\n\nGlukužycenje,\n\nTeam {{GRAMMAR:genitiw|{{SITENAME}}}}\n\n---\nNjocoš wěcej scełego žedne e-maile wót nas dostawaś?\n\nKlikni na $3\na změń swóje nastajenja, aby znjemóžnił zdźělenja pśez e-mail."
 }

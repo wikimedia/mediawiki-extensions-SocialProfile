@@ -57,7 +57,7 @@
 	"action-updatepoints": "تحديث عدد التحرير",
 	"right-generatetopusersreport": "إنشاء تقارير لأفضل المستخدمين",
 	"action-generatetopusersreport": "إنشاء تقارير أفضل المستخدمين",
-	"level-advanced-to": "تقدم إلى المستوى <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "تم التقدم إلى المستوى <strong>$1</strong>",
 	"level-advance-subject": "أنت الآن \"$1\" في {{SITENAME}}!",
 	"level-advance-body-html": "مرحبًا $1 .\n\nأنت الآن \" $2 \" على {{SITENAME}}!\n\nتهانينا،\n\nفريق {{SITENAME}}\n\n---\nمرحبًا، هل تريد التوقف عن تلقي رسائل البريد الإلكتروني منا؟\n\nانقر فوق [[Special:UpdateProfile]]\nوقم بتغيير إعداداتك لتعطيل إشعارات البريد الإلكتروني.",
 	"level-advance-body": "مرحبا $1:\n\nأنت الآن \"$2\" في {{SITENAME}}!\n\nتهانينا،\n\nفرق {{SITENAME}}\n\n---\nهل تريد التوقف عن تلقي رسائل بريد إلكتروني منا؟\n\nاضغط $3\nوغير إعداداتك لتعديل إخطارات البريد الإلكتروني.",

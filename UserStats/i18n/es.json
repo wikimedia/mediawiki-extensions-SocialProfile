@@ -63,7 +63,7 @@
 	"action-updatepoints": "actualizar conteos de edición",
 	"right-generatetopusersreport": "Generar informes de los usuarios principales",
 	"action-generatetopusersreport": "generar reportes de tabla de clasificación de usuarios",
-	"level-advanced-to": "avanzó a nivel <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "avanzó a nivel <strong>$1</strong>",
 	"level-advance-subject": "¡Ahora eres un «$1» en {{SITENAME}}!",
 	"level-advance-body-html": "Hola $1.\n\n¡Ahora eres «$2» en {{SITENAME}}!\n\nEnhorabuena,\n\nEl equipo de {{SITENAME}}\n\n---\n¿Deseas dejar de recibir correos electrónicos de nosotros?\n\nHaz clic en [[Special:UpdateProfile]]\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",
 	"level-advance-body": "Hola $1.\n\n¡Ahora eres «$2» en {{SITENAME}}!\n\nEnhorabuena,\n\nEl equipo de {{SITENAME}}\n\n---\n¿Deseas dejar de recibir correos electrónicos de nosotros?\n\nHaz clic en $3\ny cambia tus configuraciones para deshabilitar notificaciones por correo electrónico.",

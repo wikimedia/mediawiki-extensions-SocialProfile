@@ -53,7 +53,7 @@
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|Получено подарков}}",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Отправлено подарков}}",
 	"right-updatepoints": "обновление счётчика правок",
-	"level-advanced-to": "перешёл на уровень <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "перешёл на уровень <strong>$1</strong>",
 	"level-advance-subject": "Вы теперь «$1» в проекте {{SITENAME}}!",
 	"level-advance-body": "Привет, $1.\n\nВы теперь «$2» в проекте {{SITENAME}}!\n\nПоздравляем,\n\nКоманда проекта {{SITENAME}}\n\n---\nЭй, не хотите больше получать таких писем от нас?\n\nНажмите $3\nи измените свои настройки, чтобы отключить уведомления по электронной почте.",
 	"random-user-about-me": "Обо мне"

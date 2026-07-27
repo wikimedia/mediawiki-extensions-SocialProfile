@@ -53,7 +53,7 @@
 	"action-updatepoints": "posodabljanje števila urejanj",
 	"right-generatetopusersreport": "Ustvarjanje poročil o najboljših uporabnikih",
 	"action-generatetopusersreport": "ustvarjanje poročil o najboljših uporabnikih",
-	"level-advanced-to": "je napredoval_a na raven <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "je napredoval_a na raven <strong>$1</strong>",
 	"level-advance-subject": "V projektu {{SITENAME}} ste postali »$1«!",
 	"level-advance-body-html": "Pozdravljeni, $1.\n\nV projektu {{SITENAME}} ste postali »$2«!\n\nČestitamo.\n\n\nEkipa projekta {{SITENAME}}\n\n---\n\nHej, želite prenehati prejemati e-pošto od nas?\n\nKliknite [[Special:UpdateProfile]]\nin spremenite nastavitve, da onemogočite e-poštna obvestila.",
 	"level-advance-body": "Pozdravljeni, $1.\n\nV projektu {{SITENAME}} ste postali »$2«!\n\nČestitamo.\n\nEkipa projekta {{SITENAME}} \n\n---\n\nHej, želite prenehati prejemati e-pošto od nas?\n\nKliknite $3\nin spremenite svoje nastavitve, da onemogočite e-poštna obvestila.",

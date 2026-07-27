@@ -55,7 +55,7 @@
 	"action-updatepoints": "aktualizowania liczników edycji",
 	"right-generatetopusersreport": "Generowanie raportów z najwyższą liczbą punktów",
 	"action-generatetopusersreport": "generowania raportów z najwyższą liczbą punktów",
-	"level-advanced-to": "awansowany do poziomu <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "awansowany do poziomu <strong>$1</strong>",
 	"level-advance-subject": "Należysz teraz do grupy „$1” na {{GRAMMAR:MS.lp|{{SITENAME}}}}!",
 	"level-advance-body": "Witaj $1.\n\nJesteś „$2” w {{GRAMMAR:Ms.lp|{{SITENAME}}}}!\n\nGratulacje\n\nod zespołu {{GRAMMAR:D.lp|{{SITENAME}}}}\n\n---\nJeżeli nie chcesz otrzymywać od nas więcej wiadomości, kliknij na poniższy link i zmień swoje ustawienia powiadamiania:\n\n$3",
 	"random-user-about-me": "O mnie"

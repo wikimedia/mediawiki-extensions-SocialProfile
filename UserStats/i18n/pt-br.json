@@ -55,7 +55,7 @@
 	"action-updatepoints": "atualizar contagens de edição",
 	"right-generatetopusersreport": "Gerar relatórios dos usuários principais",
 	"action-generatetopusersreport": "gerar relatórios dos principais usuários",
-	"level-advanced-to": "Avançou para o nível <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "Avançou para o nível <strong>$1</strong>",
 	"level-advance-subject": "Você agora é um \"$1\" em {{SITENAME}}!",
 	"level-advance-body-html": "Oi $1:\n\nVocê agora é um \"$2\" em {{SITENAME}}!\n\nParabéns,\n\nO Time de {{SITENAME}}\n\n---\nEi, quer parar de receber e-mails de nós?\n\nClique [[Special:UpdateProfile]]\ne altere suas preferências para desabilitar e-mails de notificação",
 	"level-advance-body": "Oi $1:\n\nVocê agora é um \"$2\" em {{SITENAME}}!\n\nParabéns,\n\nO Time de {{SITENAME}}\n\n---\nEi, quer parar de receber e-mails de nós?\n\nClique $3\ne altere suas preferências para desabilitar e-mails de notificação",

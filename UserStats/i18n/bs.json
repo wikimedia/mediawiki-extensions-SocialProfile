@@ -47,7 +47,7 @@
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|Poklon primljen|Poklona primljeno}}",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Poslan poklon|Poslano poklona}}",
 	"right-updatepoints": "Ažuriranje brojanja izmjena",
-	"level-advanced-to": "prešao na nivo <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "prešao na nivo <strong>$1</strong>",
 	"level-advance-subject": "Vi ste sada \"$1\" na {{SITENAME}}!",
 	"level-advance-body": "Zdravo $1.\n\nSada ste \"$2\" na {{SITENAME}}!\n\nČestitamo,\n\nUrednici {{SITENAME}}\n\n---\nHej, želite da prestanete dobivati e-mailove od nas?\n\nKliknite $3\ni promijenite Vaše postavke da bi onemogućili e-mail obavještenja."
 }

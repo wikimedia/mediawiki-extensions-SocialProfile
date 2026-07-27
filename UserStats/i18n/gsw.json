@@ -49,7 +49,7 @@
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Gschänk gmacht|Gschänk gmacht}}",
 	"right-updatepoints": "Bearbeitigszeller aktualisiere",
 	"right-generatetopusersreport": "Bericht über di aktivste Benutzern generiere",
-	"level-advanced-to": "furtgschritte zum Level <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "furtgschritte zum Level <strong>$1</strong>",
 	"level-advance-subject": "Du bisch jetz „$1“ uf {{SITENAME}}!",
 	"level-advance-body": "Sali $1,\n\nDu bisch jetz e „$2“ uf {{SITENAME}}!\n\nS {{SITENAME}}-Team grateliert Dir!\n\n---\nDu witt gar kei E-Mail vu uns iberchu?\n\nDruck $3\nun ändere Dyyi Yystellige go d E-Mail-Benochrichtigunge abzstelle.",
 	"generatetopusersreport": "Bericht über di aktivste Benutzern generiere",

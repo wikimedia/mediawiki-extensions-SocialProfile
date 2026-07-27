@@ -33,7 +33,7 @@
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|present recebut|presents recebuts}}",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|present mandat|presents mandats}}",
 	"right-updatepoints": "Mesa a jorn del comptador d'edicions",
-	"level-advanced-to": "a avançat cap al nivèl <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "a avançat cap al nivèl <strong>$1</strong>",
 	"level-advance-subject": "D'ara enlà, avètz un « $1 » sus {{SITENAME}} !",
 	"level-advance-body": "Adiu $1 :\n\nAra avètz un « $2 » sus {{SITENAME}} !\n\nTotas nòstras felicitacions,\n\nL'equipa de {{SITENAME}}\n\n---\nVolètz arrestar de recebre de corrièrs electronics de nòstra part ?\n\nClicatz $3\ne modificatz vòstres paramètres en desactivant las notificacions per corrièr electronic."
 }

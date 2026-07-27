@@ -53,7 +53,7 @@
 	"action-updatepoints": "oppdatere redigeringstellere",
 	"right-generatetopusersreport": "Generere toppbrukerrapporter",
 	"action-generatetopusersreport": "generere toppbrukerrapporter",
-	"level-advanced-to": "avanserte til nivå <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "avanserte til nivå <strong>$1</strong>",
 	"level-advance-subject": "Du er nå $1 på {{SITENAME}}.",
 	"level-advance-body-html": "Hei, $1.\n\nDu er nå «$2» på {{SITENAME}}!\n\nGratulerer,\n\n{{SITENAME}}-teamet\n\n---\n\nØnsker du ikke lenger å motta eposter fra oss?\n\nTrykk på [[Special:UpdateProfile]]\nog endre innstillingene dine for å slå av epostvarsler.",
 	"level-advance-body": "Hei, $1.\n\nDu er nå «$2» på {{SITENAME}}.\n\nGratulerer,\n\n{{SITENAME}}-teamet\n\n----\nVil du ikke lenger motta eposter fra oss?\n\nTrykk på $3\nog endre innstillingene dine for å slå av epostvarsler.",

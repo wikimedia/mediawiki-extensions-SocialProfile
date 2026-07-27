@@ -24,7 +24,7 @@
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Hadiah dihantar|Hadiah dihantar}}",
 	"right-updatepoints": "Mengemas kini kiraan suntingan",
 	"right-generatetopusersreport": "Menjana laporan pengguna terunggul",
-	"level-advanced-to": "maju ke tahap <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "maju ke tahap <strong>$1</strong>",
 	"level-advance-subject": "Kini, anda seorang \"$1\" di {{SITENAME}}!",
 	"generatetopusersreport": "Jana Laporan Pengguna Terunggul",
 	"user-stats-weekly-winners": "{{PLURAL:$1|Pemenang|Pemenang}} Mingguan",

@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"AhmedG612"
+		]
+	},
+	"socialprofile-desc": "Qalab bulsheed oo loogu talagalay MediaWiki",
+	"socialprofile-uploads-disabled": "Astaanta soo gelinta sawirka waa naafo",
+	"apihelp-removeavatar-summary": "Ka saar sawirka astaanta, kaaga ama haddii aad leedahay oggolaansho, kan isticmaale kale sidoo kale.",
+	"apihelp-removeavatar-param-reason": "Sabab ikhtiyaari ah oo aad u sheegayso sababta aad uga saarayso sawirka astaanta ee isticmaale kale.",
+	"apihelp-removeavatar-param-user": "Magaca isticmaalaha ee sawirka astaantiisa la saarayo.",
+	"apihelp-removeavatar-example-1": "Ka saar sawirka astaanta isticmaalaha lagu magacaabo \"Ashley\"",
+	"apihelp-removeavatar-example-2": "Ka saar sawirka astaanta isticmaalaha lagu magacaabo \"Elektra\" iyadoo sababta tirtiristu tahay \"Ku xadgudub xuquuqda daabacaadda oo cad\"",
+	"apierror-avatar-is-default": "Sawirka astaanta isticmaalaha hore ayuu u yahay kii caadiga ahaa.",
+	"apihelp-uploadavatar-summary": "Soo geli sawir astaan.",
+	"apihelp-uploadavatar-example-url": "Soo geli sawirka laga helo https://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png sidii sawirkaaga astaanta.",
+	"apihelp-uploadavatar-param-file": "Nuxurka faylka sawirka astaanta cusub.",
+	"apihelp-uploadavatar-param-url": "URL-ka laga soo dejinayo faylka.",
+	"apihelp-smpuserprivacy-summary": "Qaybta API-ga ee lagu dejiyo muuqaalka (\"qarsoodin\") goob ka mid ah astaanta isticmaale",
+	"apihelp-smpuserprivacy-param-method": "Falka (ama \"get\" ama \"set\")",
+	"apihelp-smpuserprivacy-param-field_key": "Furaha goobta bartilmaameedka, tusaale ahaan <code>up_movies</code> oo loogu talagalay goobta \"Filimaan\"",
+	"apihelp-smpuserprivacy-param-privacy": "Qiimaha cusub ee qarsoodinnimada (mid ka mid ah kuwa soo socda: public, hidden, friends, foaf)"
+}

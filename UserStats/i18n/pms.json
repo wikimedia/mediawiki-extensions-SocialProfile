@@ -48,7 +48,7 @@
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|Cadò arseivù|Cadò arseivù}}",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Cadò mandà|Cadò mandà}}",
 	"right-updatepoints": "Modìfica ij conteur ëd le modìfiche",
-	"level-advanced-to": "avansà al livel <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "avansà al livel <strong>$1</strong>",
 	"level-advance-subject": "Adess it ses a \"$1\" dzora {{SITENAME}}!",
 	"level-advance-body": "Cerea $1.\n\nAdess it ses un \"$2\" dzora {{SITENAME}}!\n\nCongratulassion,\n\nL'echip ëd {{SITENAME}}\n\n---\nScota, veus-to pi nen arsèive ëd mëssagi ëd pòsta eletrònica da nojàutri?\n\nSgnaca $3\ne cambia toe ampostassion për disabilité le notìfiche an pòsta eletrònica."
 }

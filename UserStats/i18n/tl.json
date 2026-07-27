@@ -47,7 +47,7 @@
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|Natanggap na handog|Natanggap na mga handog}}",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Naipadalang handog|Naipadalang mga handog}}",
 	"right-updatepoints": "Isapanahon ang mga pagbilang ng pagbago",
-	"level-advanced-to": "isinulong sa antas na <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "isinulong sa antas na <strong>$1</strong>",
 	"level-advance-subject": "Isa ka na ngayong \"$1\" sa {{SITENAME}}!",
 	"level-advance-body": "Kumusta ka $1:\n\nIsa ka na ngayong \"$2\" sa {{SITENAME}}!\n\nMaligayang bati,\n\nAng Pangkat {{SITENAME}}\n\n---\nHoy, nais mo bang matigil ang pagtanggap ng mga e-liham mula sa amin?\n\nPindutin ang $3\nat baguhin ang mga pagtatakda mo upang huwag nang paganahin ang mga pagpapabatid sa pamamagitan ng e-liham."
 }

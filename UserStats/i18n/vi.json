@@ -54,7 +54,7 @@
 	"action-updatepoints": "cập nhật số điểm đóng góp",
 	"right-generatetopusersreport": "Tạo bảng xếp hạng người dùng",
 	"action-generatetopusersreport": "tạo bảng xếp hạng người dùng",
-	"level-advanced-to": "đã lên cấp <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "đã lên cấp <strong>$1</strong>",
 	"level-advance-subject": "Bây giờ bạn đã là \"$1\" trên {{SITENAME}}!",
 	"level-advance-body-html": "Xin chào $1.\n\nBây giờ bạn là \"$2\" trên {{SITENAME}}!\n\nXin chúc mừng,\n\nĐội ngũ {{SITENAME}}\n\n---\nNày, bạn có muốn ngừng nhận email từ chúng tôi không?\n\nNhấp vào [[Special:UpdateProfile]]\nvà thay đổi cài đặt của bạn để tắt thông báo qua email.",
 	"level-advance-body": "Xin chào $1.\n\nBây giờ bạn là \"$2\" trên {{SITENAME}}!\n\nXin chúc mừng,\n\nĐội ngũ {{SITENAME}}\n\n---\nNày, bạn có muốn ngừng nhận email từ chúng tôi không?\n\nNhấp vào $3\nvà thay đổi cài đặt của bạn để tắt thông báo qua email.",

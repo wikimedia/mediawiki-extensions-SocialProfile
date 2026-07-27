@@ -53,7 +53,7 @@
 	"action-updatepoints": "actualizar o contador de edicións",
 	"right-generatetopusersreport": "Xerar informes dos usuarios máis votados",
 	"action-generatetopusersreport": "xerar informes dos usuarios máis votados",
-	"level-advanced-to": "avanzou ata o nivel <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "avanzou ata o nivel <strong>$1</strong>",
 	"level-advance-subject": "Agora es un «$1» en {{SITENAME}}!",
 	"level-advance-body-html": "Ola, $1:\n\nAgora es un «$2» en {{SITENAME}}!\n\nParabéns.\n\nO equipo de {{SITENAME}}\n\n---\nQueres deixar de recibir correos electrónicos nosos?\n\nPreme en «[[Special:UpdateProfile]]»\ne modifica os teus axustes para deshabilitar as notificacións por correo electrónico.",
 	"level-advance-body": "Ola, $1:\n\nAgora es un «$2» en {{SITENAME}}!\n\nParabéns.\n\nO equipo de {{SITENAME}}\n\n---\nQueres deixar de recibir correos electrónicos nosos?\n\nPreme en «$3»\ne modifica os teus axustes para deshabilitar as notificacións por correo electrónico.",

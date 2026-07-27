@@ -52,7 +52,7 @@
 	"action-updatepoints": "поднова на бр. на уредувања",
 	"right-generatetopusersreport": "Создавање на извештаи за корисници-предводници",
 	"action-generatetopusersreport": "создавање на извештаи за најдобри корисници",
-	"level-advanced-to": "прејде на ниво <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "прејде на ниво <strong>$1</strong>",
 	"level-advance-subject": "Сега сте „$1“ на {{SITENAME}}!",
 	"level-advance-body-html": "Здраво $1.\n\nСега сте „$2“ на {{SITENAME}}!\n\nЧеститаме,\n\nЕкипата на {{SITENAME}}\n\n---\nАко сакате повеќе да не примате писма од нас:\n\nСтиснете [[Special:UpdateProfile]]\nи во вашите поставки оневозможете известувања по е-пошта.",
 	"level-advance-body": "Здраво $1.\n\nСега сте „$2“ на {{SITENAME}}!\n\nЧеститаме,\n\nЕкипата на {{SITENAME}}\n\n---\nАко сакате повеќе да не примате писма од нас:\n\nСтиснете $3\nи во вашите поставки оневозможете известувања по е-пошта.",

@@ -52,7 +52,7 @@
 	"action-updatepoints": "actualisar le numeros de modificationes",
 	"right-generatetopusersreport": "Generar reportos del usatores le plus active",
 	"action-generatetopusersreport": "generar reportos de usatores principal",
-	"level-advanced-to": "avantiava verso le nivello <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "avantiava verso le nivello <strong>$1</strong>",
 	"level-advance-subject": "Tu es ora un \"$1\" in {{SITENAME}}!",
 	"level-advance-body-html": "Salute $1,\n\nTu es ora un \"$2\" in {{SITENAME}}!\n\nFelicitationes,\n\nLe equipa de {{SITENAME}}\n\n---\nTu non vole reciper plus e-mail de nos?\n\nClicca sur [[Special:UpdateProfile]]\ne disactiva in tu preferentias le notificationes per e-mail.",
 	"level-advance-body": "Salute $1,\n\nTu es ora un \"$2\" in {{SITENAME}}!\n\nFelicitationes,\n\nLe equipa de {{SITENAME}}\n\n---\nTu non vole reciper plus e-mail de nos?\n\nClicca $3\ne disactiva in tu preferentias le notificationes per e-mail.",

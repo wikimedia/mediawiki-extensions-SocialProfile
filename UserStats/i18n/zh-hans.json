@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"GuoPC",
 			"Hydra",
 			"Lakejason0",
 			"Liangent",
@@ -55,7 +56,7 @@
 	"action-updatepoints": "更新编辑次数",
 	"right-generatetopusersreport": "生成用户排行榜报告",
 	"action-generatetopusersreport": "生成用户排行榜报告",
-	"level-advanced-to": "已升至第<span style=\"font-weight:800;\">$1</span>级",
+	"level-advanced-to": "已升至第<strong>$1</strong>级",
 	"level-advance-subject": "您现在是{{SITENAME}}上的“$1”了！",
 	"level-advance-body-html": "您好，$1。\n\n您现在已是{{SITENAME}}上的“$2”了！\n\n此致，\n\n{{SITENAME}}团队\n\n---\n\n嘿，不想继续从我们这里收到邮件了？\n\n点击[[Special:UpdateProfile]]\n然后更改您的设置以关闭邮件通知。",
 	"level-advance-body": "您好，$1。\n\n您现在已是{{SITENAME}}上的“$2”了！\n\n此致，\n\n{{SITENAME}}团队\n\n---\n\n嘿，不想继续从我们这里收到邮件了？\n\n点击$3\n然后更改您的设置以关闭邮件通知。",

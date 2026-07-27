@@ -34,7 +34,7 @@
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|Obdržaný dar|Obdržané dary|Obdržaných darov}}",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Poslaný dar|Poslané dary|Poslaných darov}}",
 	"right-updatepoints": "Aktualizovať počty úprav",
-	"level-advanced-to": "postúpil na úroveň <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "postúpil na úroveň <strong>$1</strong>",
 	"level-advance-subject": "Teraz ste „$1” na {{GRAMMAR:lokál|{{SITENAME}}}}!",
 	"level-advance-body": "Ahoj $1.\n\nTeraz ste „$2“ na {{GRAMMAR:lokál|{{SITENAME}}}}!\n\nGratulujeme,\n\nTím {{GRAMMAR:genitív|{{SITENAME}}}}\n\n---\nChcete prestať dostávať e-maily od nás?\n\nKliknite na $3\na zmeňte svoje nastavenia na vypnutie e-mailových upozornení."
 }

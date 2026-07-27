@@ -56,7 +56,7 @@
 	"action-updatepoints": "更新編輯次數",
 	"right-generatetopusersreport": "產生使用者排行榜報告",
 	"action-generatetopusersreport": "生成使用者排行榜報告",
-	"level-advanced-to": "已升至第 <span style=\"font-weight:800;\">$1</span> 級",
+	"level-advanced-to": "已升至第 <strong>$1</strong> 級",
 	"level-advance-subject": "您現在是{{SITENAME}}上的「$1」！",
 	"level-advance-body-html": "嗨，$1。\n\n您現在是{{SITENAME}}上的「$2」了！\n\n恭喜您，\n\n{{SITENAME}}團隊\n\n---\n嘿，不想再收到我們的郵件嗎？\n\n是的話請點擊 [[Special:UpdateProfile]] 來更改您的設定來停用電郵通知。",
 	"level-advance-body": "嗨，$1。\n\n您現在是{{SITENAME}}上的「$2」了！\n\n恭喜您，\n\n{{SITENAME}}團隊\n\n---\n嘿，不想再收到我們的郵件嗎？\n\n是的話請點擊$3來更改您的設定來停用電郵通知。",

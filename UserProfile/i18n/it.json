@@ -73,5 +73,7 @@
 	"apihelp-socialprofile-userprofileprivacy-param-method": "Azione (che sia \"get\" (prendi) o \"set\" (imposta))",
 	"apihelp-socialprofile-userprofileprivacy-param-field_key": "Campo di destinazione chiave, ad esempio up_movies per il campo\"Film\"",
 	"apihelp-smpuserprofiletype-param-do": "Azione da eseguire (\"prendi\" o \"imposta\")",
-	"random-users-avatars-title": "Incontra la comunità"
+	"random-users-avatars-title": "Incontra la comunità",
+	"logentry-profile-changedsection": "$1 ha modificato la sezione \"$4\" del profilo utente di $3",
+	"logentry-profile-changedprofile": "$1 ha modificato il profilo utente di $3"
 }

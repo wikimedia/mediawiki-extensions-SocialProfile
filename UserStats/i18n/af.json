@@ -33,7 +33,7 @@
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|Geskenk|Geskenke}} ontvang",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Geskenk|Geskenke}} gestuur",
 	"right-updatepoints": "Opdateer aantal wysigings",
-	"level-advanced-to": "is gepromoveer tot vlak <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "is gepromoveer tot vlak <strong>$1</strong>",
 	"level-advance-subject": "U is nou \"$1\" op {{SITENAME}}",
 	"level-advance-body": "Hallo $1.\n\nU is nou \"$2\" op {{SITENAME}}!\n\nVeels geluk.\n\nDie span van {{SITENAME}}\n\n---\nWil u nie langer e-posse van ons ontvang nie?\n\nKlik $3\nen wysig u instellings om e-posboodskappe te deaktiveer."
 }

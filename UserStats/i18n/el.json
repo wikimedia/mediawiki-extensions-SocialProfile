@@ -39,7 +39,7 @@
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|Δώρο λήφθηκε|Δώρα λήφθηκαν}}",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Δώρο στάλθηκε|Δώρα στάλθηκαν}}",
 	"right-updatepoints": "Ενημέρωση των μετρήσεων επεξεργασιών",
-	"level-advanced-to": "προχωρημένος στο επίπεδο <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "προχωρημένος στο επίπεδο <strong>$1</strong>",
 	"level-advance-subject": "Τώρα είσαι ένας \"$1\" στο {{SITENAME}}!",
 	"level-advance-body": "Γεια σας $1.\n\nΤώρα είστε \"$2\" στο {{SITENAME}}!\n\nΣυγχαρητήρια,\n\nΗ ομάδα του {{SITENAME}}\n\n---\nΘέλεις να μην λαμβάνεις πλέον αυτά τα μέιλ από εμάς;\n\nΚάντε κλικ στο $3\nγια αλλαγή των ρυθμίσεων για απενεργοποίηση των ειδοποιήσεων μέσω ηλεκτρονικής αλληλογραφίας.",
 	"random-user-points-weekly": "{{PLURAL:$1|one point|$1 points}} αυτήν την εβδομάδα",

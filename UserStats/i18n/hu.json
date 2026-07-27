@@ -49,7 +49,7 @@
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|fogadott ajándék|fogadott ajándék}}",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|küldött ajándék|küldött ajándék}}",
 	"right-updatepoints": "Szerkesztésszámláló frissítése",
-	"level-advanced-to": "előlépett a(z) <span style=\"font-weight:800;\">$1</span> szintre",
+	"level-advanced-to": "előlépett a(z) <strong>$1</strong> szintre",
 	"level-advance-subject": "Mostantól „$1” vagy a {{SITENAME}} oldalon!",
 	"level-advance-body": "Szia, $1!\n\n„$2” lettél a(z) {{SITENAME}} wikin!\n\nGratulálunk,\na(z) {{SITENAME}} csapata\n\n---\n\nSzeretnéd, ha nem zaklatnánk több e-maillel?\n\nKattints a következő hivatkozásra: $3\nés tiltsd le az e-mailes értesítéseket a beállításaidban."
 }

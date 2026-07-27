@@ -41,7 +41,7 @@
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Skickad present|Skickade presenter}}",
 	"right-updatepoints": "Uppdatera redigeringsräknare",
 	"action-updatepoints": "uppdatera antal redigeringar",
-	"level-advanced-to": "avancerat till nivå <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "avancerat till nivå <strong>$1</strong>",
 	"level-advance-subject": "Du är nu en \"$1\" på {{SITENAME}}!",
 	"level-advance-body": "Hej $1!\n\nDu är nu en \"$2\" på {{SITENAME}}!\n\nGrattis,\n\n{{SITENAME}}-teamet\n\n---\nFörresten, vill du slippa få e-post från oss?\n\nKlicka $3\noch ändra dina inställningar för att avaktivera e-postmeddelanden.",
 	"echo-category-title-social-level-up": "Nivå upp",

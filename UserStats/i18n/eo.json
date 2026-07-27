@@ -32,6 +32,6 @@
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|Donaco ricevita|Donacoj ricevita}}",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Donaco sendita|Donacoj senditaj}}",
 	"right-updatepoints": "Ĝisdatigi nombradon de redaktoj",
-	"level-advanced-to": "rangiĝis al nivelo <span style=\"font-weight:800;\">$1</span>",
+	"level-advanced-to": "rangiĝis al nivelo <strong>$1</strong>",
 	"level-advance-subject": "Vi nun estas \"$1\" en {{SITENAME}}!"
 }

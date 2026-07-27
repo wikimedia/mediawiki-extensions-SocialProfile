@@ -32,7 +32,7 @@
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Išsiųsta dovana|Išsiųstos dovanos}}",
 	"right-generatetopusersreport": "Generuoti top naudotojų ataskaitas",
 	"action-generatetopusersreport": "generuoti top naudotojų ataskaitas",
-	"level-advanced-to": "pakilo iki <span style=\"font-weight:800;\">$1</span> lygio",
+	"level-advanced-to": "pakilo iki <strong>$1</strong> lygio",
 	"level-advance-subject": "Dabar esate „$1“ {{SITENAME}}!",
 	"level-advance-body-html": "Sveiki, $1.\n\nDabar esate „$2“ {{SITENAME}}!\n\nSveikiname,\n\n{{SITENAME}} komanda\n\n---\nNenorite gauti iš mūsų el. laiškų?\n\nSpustelėkite [[Special:UpdateProfile]]\nir pakeiskite nustatymus, kad išjungtumėte el. pašto pranešimus.",
 	"level-advance-body": "Sveiki, $1.\n\nDabar esate „$2“ {{SITENAME}}!\n\nSveikiname,\n\n{{SITENAME}} komanda\n\n---\nNenorite gauti iš mūsų el. laiškų?\n\nSpustelėkite $3\nir pakeiskite nustatymus, kad išjungtumėte el. pašto pranešimus.",

@@ -246,5 +246,7 @@
 	"apihelp-smpuserprofiletype-summary": "获取一位用户的用户页类型或设置您自己的用户页类型",
 	"apihelp-smpuserprofiletype-param-do": "执行的操作（get或set）",
 	"apihelp-smpuserprofiletype-param-user": "用户名（仅当<kbd>do</kbd>为<kbd>get</kbd>时相关，因为此模块只能更改您自己的用户页类型，无法用于设置其他用户的。）",
-	"random-users-avatars-title": "加入社区"
+	"random-users-avatars-title": "加入社区",
+	"logentry-profile-changedsection": "$1更改了$3的用户资料的“$4”段落",
+	"logentry-profile-changedprofile": "$1更改了$3的用户资料"
 }

@@ -3,6 +3,7 @@
 		"authors": [
 			"Derbeth",
 			"Maikking",
+			"Rail",
 			"Sp5uhe",
 			"ToSter"
 		]
@@ -41,6 +42,7 @@
 	"userboard_sendbutton": "wyślij",
 	"userboard_loggedout": "Musisz [[Special:UserLogin|zalogować się]] aby wysłać wiadomość do innego użytkownika.",
 	"userboard_showingmessages": "Pokazano {{PLURAL:$4|wiadomość $3|wiadomości $2‐$3}} z $1",
+	"user-board-block-link": "Zablokuj",
 	"right-userboard-delete": "Usuwanie z forum ogłoszeń wstawionych przez innych",
 	"userboard-time-days": "{{PLURAL:$1|jeden dzień|$1 dni}}",
 	"userboard-time-hours": "{{PLURAL:$1|jedną godzinę|$1 godziny|$1 godzin}}",
