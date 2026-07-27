@@ -232,6 +232,6 @@
 	"apihelp-smpuserprofiletype-param-do": "Action to perform (get or set)",
 	"apihelp-smpuserprofiletype-param-user": "User name (only relevant when <kbd>do</kbd> is <kbd>get</kbd> as this module cannot be used to set other user's user page types, only your own)",
 	"random-users-avatars-title": "Meet the community",
-	"logentry-profile-changedsection": "$1 changed the \"$4\" section of $3's user profile",
-	"logentry-profile-changedprofile": "$1 changed $3's user profile"
+	"logentry-profile-changedsection": "$1 {{GENDER:$2|changed}} the \"$4\" section of $3's user profile",
+	"logentry-profile-changedprofile": "$1 {{GENDER:$2|changed}} $3's user profile"
 }
