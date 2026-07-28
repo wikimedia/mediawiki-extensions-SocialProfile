@@ -8,6 +8,7 @@
 	},
 	"messagesenttitle": "Messaggio inviato",
 	"boardlinkselectall": "Seleziona tutte",
+	"boardblast-error-generic": "Invio del messaggio non riuscito.",
 	"userboard_private": "privata",
 	"userboard_public": "pubblico",
 	"userboard_nomessages": "Non vi sono nuovi messaggi.",
