@@ -10,7 +10,6 @@
  */
 
 use MediaWiki\Language\RawMessage;
-use MediaWiki\MediaWikiServices;
 
 class ApiUserProfileType extends ApiBase {
 
@@ -76,46 +75,7 @@ class ApiUserProfileType extends ApiBase {
 			}
 		}
 
-		// @todo FIXME: M A S S I V E L Y duplicates SpecialToggleUserPageType.php!
-		$dbw = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
-		$s = $dbw->selectRow(
-			'user_profile',
-			[ 'up_actor' ],
-			[ 'up_actor' => $user->getActorId() ],
-			__METHOD__
-		);
-		if ( $s === false ) {
-			$dbw->insert(
-				'user_profile',
-				[ 'up_actor' => $user->getActorId() ],
-				__METHOD__
-			);
-		}
-
-		$profile = new UserProfile( $user );
-		$profile_data = $profile->getProfile();
-
-		// If type is currently 1 (social profile), the user will want to change it to
-		// 0 (wikitext page), and vice-versa
-		$user_page_type = ( ( $profile_data['user_page_type'] == 1 ) ? 0 : 1 );
-
-		$dbw->update(
-			'user_profile',
-			/* SET */[
-				'up_type' => $user_page_type
-			],
-			/* WHERE */[
-				'up_actor' => $user->getActorId()
-			],
-			__METHOD__
-		);
-
-		UserProfile::clearCache( $user );
-
-		if ( $user_page_type == 1 && !$user->getBlock() ) {
-			SpecialToggleUserPage::importUserWiki( $user );
-		}
-		// End massive code duplication
+		$user_page_type = SpecialToggleUserPage::doTheToggling( $user );
 
 		$result = $this->getResult();
 		$data = [

@@ -45,44 +45,7 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 		$this->setHeaders();
 
 		if ( $request->wasPosted() && $user->matchEditToken( $request->getVal( 'wpEditToken' ) ) ) {
-			$dbw = MediaWikiServices::getInstance()->getConnectionProvider()->getPrimaryDatabase();
-			$s = $dbw->selectRow(
-				'user_profile',
-				[ 'up_actor' ],
-				[ 'up_actor' => $user->getActorId() ],
-				__METHOD__
-			);
-			if ( $s === false ) {
-				$dbw->insert(
-					'user_profile',
-					[ 'up_actor' => $user->getActorId() ],
-					__METHOD__
-				);
-			}
-
-			$profile = new UserProfile( $user );
-			$profile_data = $profile->getProfile();
-
-			// If type is currently 1 (social profile), the user will want to change it to
-			// 0 (wikitext page), and vice-versa
-			$user_page_type = ( ( $profile_data['user_page_type'] == 1 ) ? 0 : 1 );
-
-			$dbw->update(
-				'user_profile',
-				/* SET */[
-					'up_type' => $user_page_type
-				],
-				/* WHERE */[
-					'up_actor' => $user->getActorId()
-				],
-				__METHOD__
-			);
-
-			UserProfile::clearCache( $user );
-
-			if ( $user_page_type == 1 && !$user->getBlock() ) {
-				self::importUserWiki( $user );
-			}
+			self::doTheToggling( $user );
 
 			$title = Title::makeTitle( NS_USER, $user->getName() );
 			$out->redirect( $title->getFullURL() );
@@ -104,6 +67,57 @@ class SpecialToggleUserPage extends UnlistedSpecialPage {
 		$form .= Html::submitButton( $this->msg( 'confirmable-yes' )->text(), [ 'name' => 'wpSubmit' ] );
 		$form .= '</form>';
 		return $form;
+	}
+
+	/**
+	 * Change the user's user profile page type in the database.
+	 *
+	 * @note This is also called from ApiUserProfileType.php.
+	 *
+	 * @param User $user
+	 * @return int New user page type
+	 */
+	public static function doTheToggling( $user ) {
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+		$s = $dbw->selectRow(
+			'user_profile',
+			[ 'up_actor' ],
+			[ 'up_actor' => $user->getActorId() ],
+			__METHOD__
+		);
+		if ( $s === false ) {
+			$dbw->insert(
+				'user_profile',
+				[ 'up_actor' => $user->getActorId() ],
+				__METHOD__
+			);
+		}
+
+		$profile = new UserProfile( $user );
+		$profile_data = $profile->getProfile();
+
+		// If type is currently 1 (social profile), the user will want to change it to
+		// 0 (wikitext page), and vice-versa
+		$user_page_type = ( ( $profile_data['user_page_type'] == 1 ) ? 0 : 1 );
+
+		$dbw->update(
+			'user_profile',
+			/* SET */[
+				'up_type' => $user_page_type
+			],
+			/* WHERE */[
+				'up_actor' => $user->getActorId()
+			],
+			__METHOD__
+		);
+
+		UserProfile::clearCache( $user );
+
+		if ( $user_page_type == 1 && !$user->getBlock() ) {
+			self::importUserWiki( $user );
+		}
+
+		return $user_page_type;
 	}
 
 	/**
