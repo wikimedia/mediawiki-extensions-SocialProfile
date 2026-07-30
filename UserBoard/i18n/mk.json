@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Bjankuloski06",
-			"Jack Phoenix"
+			"Jack Phoenix",
+			"Vlad5250"
 		]
 	},
 	"userboard-desc": "Овозможува испраќање пораки од табла на табла",
@@ -45,6 +46,7 @@
 	"userboard_loggedout": "Мора да сте [[Special:UserLogin|најавени]] за да можете да испраќате пораки до други корисници.",
 	"userboard_showingmessages": "Приказ на {{PLURAL:$4|порака $3|пораки $2-$3}} од {{PLURAL:$1|$1 порака|$1 пораки}}",
 	"userboard-delete-success": "Пораката е успешно избришана!",
+	"prefs-user-board": "Корисничка табла",
 	"right-userboard-delete": "Бришење на пораки на туѓи табли",
 	"userboard-time-days": "{{PLURAL:$1|еден ден|$1 дена}}",
 	"userboard-time-hours": "{{PLURAL:$1|еден час|$1 часа}}",
