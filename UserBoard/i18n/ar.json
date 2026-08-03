@@ -50,6 +50,7 @@
 	"userboard_showingmessages": "يعرض {{PLURAL:$4||الرسالة $3|الرسالتين $2-$3|الرسائل $2-$3}} من أصل {{PLURAL:$1||رسالة واحدة|رسالتين|$1 رسائل|$1 رسالة}}",
 	"userboard-delete-success": "حذفت الرسالة بنجاح.",
 	"prefs-user-board": "لوحة المستخدم",
+	"user-board-pref-notifications-blacklist": "لا تسمح لهؤلاء المستخدمين بإرسال رسائل إلى لوحة المستخدمين. ([https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:SocialProfile/User_board#mute تعرف على المزيد])",
 	"user-board-you-are-blacklisted": "لا يمكنك إرسال رسائل إلى هذا المستخدم في لوحة المستخدمين لأنه قام بحظرك من إرسال الرسائل إليه.",
 	"user-board-label-mute-board-messages": "كتم رسائل لوحة المستخدم من هذا المستخدم",
 	"user-board-block-link": "منع",

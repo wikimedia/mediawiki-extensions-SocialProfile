@@ -46,7 +46,7 @@
 	"action-updatepoints": "سمون شمېر هم‌مهمالول",
 	"right-generatetopusersreport": "د غوره کارنانو راپورونه توليدول",
 	"action-generatetopusersreport": "د غوره کارنانو راپورونه توليدول",
-	"level-advanced-to": "د <strong>$1</strong> کچې پرمختللی",
+	"level-advanced-to": "<strong>$1</strong> کچې ته لوړ شو",
 	"level-advance-subject": "تاسو اوس په {{SITENAME}} کې \"$1\" ياست!",
 	"level-advance-body-html": "سلام $1.\n\nمبارک شه\n\nتاسو اوس په {{SITENAME}} کې \"$2\" ياست!\n\n\nد {{SITENAME}} ډله\n\n---\nسلام، غواړئ له موږ څخه برېښليکونه ترلاسه کول بند کړئ؟\n\n[[Special:UpdateProfile]] کېکاږئ\nاو د برېښليک خبرتياوو ناچارنولو لپاره خپلې اوڼنې بدلې کړئ.",
 	"level-advance-body": "سلام $1.\n\nمبارک شه\n\nتاسو اوس په {{SITENAME}} کې \"$2\" ياست!\n\n\nد {{SITENAME}} ډله\n\n---\nسلام، غواړئ له موږ څخه برېښليکونه ترلاسه کول بند کړئ؟\n\n$3 کېکاږئ\nاو د برېښليک خبرتياوو ناچارنولو لپاره خپلې اوڼنې بدلې کړئ.",
