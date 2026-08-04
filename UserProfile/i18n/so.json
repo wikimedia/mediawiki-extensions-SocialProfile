@@ -226,6 +226,6 @@
 	"apihelp-smpuserprofiletype-param-do": "Ficilka la fulinayo (get ama set)",
 	"apihelp-smpuserprofiletype-param-user": "Magaca isticmaalaha (waxaa khuseeya oo keliya marka <kbd>do</kbd> uu yahay <kbd>get</kbd> maadaama qaybtan aan loo adeegsan karin dejinta noocyada bogagga isticmaalayaasha kale, ee kaliya nooca boggaaga isticmaale)",
 	"random-users-avatars-title": "La kulan bulshada",
-	"logentry-profile-changedsection": "$1 wuxuu beddelay qaybta \"$4\" ee astaanta isticmaale ee $3",
-	"logentry-profile-changedprofile": "$1 beddelay $3 astaanta isticmaale"
+	"logentry-profile-changedsection": "$1 {{GENDER:$2|wuxuu beddelay}} qaybta \"$4\" ee astaanta isticmaale ee $3",
+	"logentry-profile-changedprofile": "$1 {{GENDER:$2|beddelay}} $3 astaanta isticmaale"
 }

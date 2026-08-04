@@ -226,5 +226,7 @@
 	"apihelp-smpuserprofiletype-summary": "Дај вид на начија корисничка страница или задај вид на својата",
 	"apihelp-smpuserprofiletype-param-do": "Кое дејство да се изврши (get или set)",
 	"apihelp-smpuserprofiletype-param-user": "Корисничко име (релевантно само кога <kbd>do</kbd> е <kbd>get</kbd> бидејќи модулов не може да се користи за задавање на вид кај туѓа профилна страница, туку само за вашата)",
-	"random-users-avatars-title": "Запознајте ја заедницата"
+	"random-users-avatars-title": "Запознајте ја заедницата",
+	"logentry-profile-changedsection": "$1 го измени одделот „$4“ на корисничкиот профил на $3",
+	"logentry-profile-changedprofile": "$1 го измени корисничиот профил на $3"
 }

@@ -230,5 +230,7 @@
 	"apihelp-smpuserprofiletype-summary": "사용자의 사용자 문서 유형을 가져오거나 자신의 사용자 문서 유형을 직접 설정합니다",
 	"apihelp-smpuserprofiletype-param-do": "수행할 작업 (Get 또는 Set) 입니다",
 	"apihelp-smpuserprofiletype-param-user": "사용자 이름 (<kbd>do</kbd>가 <kbd>get</kbd>일때만 관련이 있음, 이는 이 모듈은 다른 사용자의 사용자 문서 유형을 설정하는 데 사용할 수 없고 자신의 문서 유형만 설정할 수 있기 때문)",
-	"random-users-avatars-title": "커뮤니티 만남"
+	"random-users-avatars-title": "커뮤니티 만남",
+	"logentry-profile-changedsection": "$1님이 $3님의 사용자 프로필의 \"$4\" 문단을 변경했습니다",
+	"logentry-profile-changedprofile": "$1님이 $3님의 사용자 프로필을 변경했습니다"
 }
