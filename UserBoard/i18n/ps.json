@@ -45,6 +45,8 @@
 	"userboard_loggedout": "نورو کارنانو ته د پيغامونو خپرولو لپاره تاسو بايد  [[Special:UserLogin| غونډال ته ننوځئ]]",
 	"userboard_showingmessages": "د {{PLURAL:$1|$1 پيغام|$1 پيغامونو}} څخه {{PLURAL:$4|$3پيغام|$2-$3 پيغامونه}}.",
 	"userboard-delete-success": "پيغام په برياليتوب سره ړنگ‌شوه!",
+	"user-board-block-link": "بنديز لگول",
+	"user-board-unblock-link": "بنديز لرې‌کول",
 	"right-userboard-delete": "د نورو د پيغام‌دړو پيغامونه ړنگول",
 	"userboard-time-days": "{{PLURAL:$1|يوه ورځ|$1 ورځې}}",
 	"userboard-time-hours": "{{PLURAL:$1|يو گړۍ|$1 گړۍ}}",

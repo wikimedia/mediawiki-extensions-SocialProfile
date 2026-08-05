@@ -24,6 +24,7 @@
 	"boardnofriends": "لا تمتلك أي أصدقاء لترسل رسالة إليهم!",
 	"messagesentsuccess": "رسالتك أُرسلت بنجاح",
 	"boardblast-js-sending": "إرسال الرسائل...",
+	"boardblast-error-blacklisted-by-some-users": "ومع ذلك، لم يتم إرسال رسالتك إلى {{PLURAL:$1|شخص واحد|$1 شخص}} لأنهم قاموا بحظر رسائل اللوحة منك.",
 	"boardblast-error-generic": "فشل إرسال الرسالة.",
 	"boardblast-error-missing-message": "من فضلك أدخل رسالة",
 	"boardblast-error-missing-user": "الرجاء تحديد شخص واحد على الأقل",

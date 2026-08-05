@@ -213,6 +213,6 @@
 	"user-profile-error-no-api-edit": "Et ass aktuell net méiglech, sozial Profiller iwwer d'API z'änneren. Benotzt wgl. <code>Special:UpdateProfile</code> fir Ären eegene Benotzerprofil a <code>Special:EditProfile</code> fir anere Benotzer hir Profiller z'änneren (wann Dir déi néideg Rechter hutt, fir déi Spezialsäit ze benotzen).",
 	"apihelp-socialprofile-userprofileprivacy-param-method": "Aktioun (entweeder „get“ oder „set“)",
 	"random-users-avatars-title": "D'Communautéit treffen",
-	"logentry-profile-changedsection": "De Benotzer $1 huet den Abschnitt „$4“ vum $3 sengem Benotzerprofil geännert",
-	"logentry-profile-changedprofile": "De Benotzer $1 huet dem $3 säi Benotzerprofil geännert"
+	"logentry-profile-changedsection": "{{GENDER:$2|De(n) $1|D'$1}} huet den Abschnitt „$4“ vum $3 sengem Benotzerprofil geännert",
+	"logentry-profile-changedprofile": "{{GENDER:$2|De(n) $1|D'$1}} huet dem $3 säi Benotzerprofil geännert"
 }

@@ -231,6 +231,6 @@
 	"apihelp-smpuserprofiletype-param-do": "الإجراء المطلوب تنفيذه (الحصول عليه أو تعيينه)",
 	"apihelp-smpuserprofiletype-param-user": "اسم المستخدم (يكون ذا صلة فقط عندما <kbd>تحصل</kbd> <kbd>على</kbd> حيث لا يمكن استخدام هذه الوحدة لتعيين أنواع صفحات المستخدم الخاصة بالمستخدمين الآخرين ، فقط الخاصة بك)",
 	"random-users-avatars-title": "مقابلة المجتمع",
-	"logentry-profile-changedsection": "قام $1 بتغيير قسم \" $4 \" في ملف تعريف المستخدم $3",
-	"logentry-profile-changedprofile": "قام المستخدم $1 بتغيير ملف تعريف المستخدم $3"
+	"logentry-profile-changedsection": "$1 {{GENDER:$2|changed}} القسم \"$4\" من ملف تعريف المستخدم $3",
+	"logentry-profile-changedprofile": "ملف تعريف المستخدم $3 $1 {{GENDER:$2|changed}}"
 }

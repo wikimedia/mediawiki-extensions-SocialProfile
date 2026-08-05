@@ -229,6 +229,6 @@
 	"apihelp-smpuserprofiletype-param-do": "Acción a realizar (ou ben «get» ou ben «set»)",
 	"apihelp-smpuserprofiletype-param-user": "Nome de usuario (só é relevante cando <kbd>do</kbd> é <kbd>get</kbd> xa que este módulo non se pode usar para definir os tipos de páxina doutros usuarios, só o tipo da túa páxina)",
 	"random-users-avatars-title": "Coñece a comunidade",
-	"logentry-profile-changedsection": "$1 cambiou a sección «$4» do perfil de usuario de $3",
-	"logentry-profile-changedprofile": "$1 cambiou o perfil de usuario de $3"
+	"logentry-profile-changedsection": "$1 {{GENDER:$2|cambiou}} a sección «$4» do perfil de usuario de $3",
+	"logentry-profile-changedprofile": "$1 {{GENDER:$2|cambiou}} o perfil de usuario de $3"
 }
