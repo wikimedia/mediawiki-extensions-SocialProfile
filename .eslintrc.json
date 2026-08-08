@@ -25,6 +25,7 @@
 		"mediawiki/class-doc": "off",
 		"block-scoped-var": "warn",
 		"no-var": "warn",
-		"no-jquery/no-done-fail": "warn"
+		"no-jquery/no-done-fail": "warn",
+		"no-jquery/no-jquery-ui": "warn"
 	}
 }
