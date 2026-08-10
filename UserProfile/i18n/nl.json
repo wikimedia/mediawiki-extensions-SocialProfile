@@ -232,6 +232,6 @@
 	"apihelp-smpuserprofiletype-param-do": "Te verrichten handeling (get of set)",
 	"apihelp-smpuserprofiletype-param-user": "Gebruikersnaam (alleen relevant wanneer <kbd>do</kbd> op <kbd>get</kbd> is ingesteld, want met deze module kunt u niet de gebruikerspaginatypen van andere gebruikers instellen, alleen die van uzelf)",
 	"random-users-avatars-title": "Ontmoet de gemeenschap",
-	"logentry-profile-changedsection": "$1 heeft de sectie \"$4\" van het gebruikersprofiel van $3 gewijzigd",
-	"logentry-profile-changedprofile": "$1 heeft het gebruikersprofiel van $3 gewijzigd"
+	"logentry-profile-changedsection": "$1 {{GENDER:$2|heeft}} de sectie \"$4\" van het gebruikersprofiel van $3 gewijzigd",
+	"logentry-profile-changedprofile": "$1 {{GENDER:$2|heeft}} het gebruikersprofiel van $3 gewijzigd"
 }

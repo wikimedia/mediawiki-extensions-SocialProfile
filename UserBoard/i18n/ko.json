@@ -45,6 +45,8 @@
 	"userboard_loggedout": "다른 사용자에게 메시지를 게시하려면 [[Special:UserLogin|로그인]]해야 합니다.",
 	"userboard_showingmessages": "{{PLURAL:$1|메시지 $1}}개 중 {{PLURAL:$4|메시지 $3|메시지 $2-$3}}개를 표시합니다.",
 	"userboard-delete-success": "메시지가 성공적으로 삭제되었습니다!",
+	"user-board-block-link": "차단",
+	"user-board-unblock-link": "차단 해제",
 	"right-userboard-delete": "다른 사람의 보드 메시지를 삭제",
 	"userboard-time-days": "{{PLURAL:$1|1일|$1일}}",
 	"userboard-time-hours": "{{PLURAL:$1|1시간|$1시간}}",
