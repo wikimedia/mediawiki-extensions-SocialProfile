@@ -57,6 +57,8 @@
 	"level-advanced-to": "палепшаны да ўзроўню <span style=\"font-weight:800;\">$1</span>",
 	"level-advance-subject": "Цяпер Вы ў групе «$1» у {{SITENAME}}!",
 	"level-advance-body": "Прывітаньне, $1:\n\nЦяпер Вы «$2» у {{SITENAME}}!\n\nВіншуем,\n\nКаманда {{SITENAME}}\n\n---\nКалі Вы не жадаеце болей атрымліваць ад нас лісты на электронную пошту, націсьніце $3 і зьмяніце Вашыя налады абвестак.",
+	"echo-category-title-social-level-up": "Новы ровень",
+	"notification-social-level-up-bundle": "Ровень сягнуў на $1 і становіцца $2",
 	"generatetopusersreport": "Стварыць справаздачу пра лепшых удзельніках",
 	"user-stats-weekly-winners": "{{PLURAL:$1|Штотыднёвы пераможца|Штотыднёвыя пераможцы}}",
 	"user-stats-monthly-winners": "{{PLURAL:$1|Штомесячны пераможца|Штомесячныя пераможцы}}",
