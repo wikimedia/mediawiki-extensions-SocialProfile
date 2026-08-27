@@ -6,6 +6,7 @@
 			"Wizzard"
 		]
 	},
+	"usergifts-desc": "Umožňuje odosielať, prijímať, vytvárať a odstraňovať používateľské darčeky",
 	"giftmanager": "Správca darčekov",
 	"giftmanager-addgift": "+ Pridať nový darček",
 	"giftmanager-access": "prístup k darčeku",
@@ -18,6 +19,7 @@
 	"giftmanager-private": "súkromný",
 	"giftmanager-view": "Zobraziť zoznam darčekov",
 	"g-add-message": "Pridať správu",
+	"g-characters-left": "Zostáva $1 znakov",
 	"g-back-edit-gift": "Späť na Upraviť tento darček",
 	"g-back-gift-list": "Späť na Zoznam darčekov",
 	"g-back-link": "&lt; Späť na stránku používateľa $1",
@@ -51,6 +53,7 @@
 	"g-give-no-user-title": "Komu by ste chceli darovať darček?",
 	"g-give-to-user-title": "Poslať darček „$1“ používateľovi $2",
 	"g-give-to-user-message": "Chcete dať používateľovi $1 [[Special:GiveGift/$1|iný darček]]?",
+	"g-give-this-gift": "Darovať tento darček",
 	"g-go-back": "Vrátiť sa späť",
 	"g-imagesbelow": "Dolu sú vaše obrázky, ktoré sa použijú na stránke",
 	"g-large": "Veľký",
@@ -68,6 +71,7 @@
 	"g-remove-success-message": "Na vašu žiadosť bol odstránený darček „$1“.",
 	"g-remove-title": "Odstrániť „$1“?",
 	"g-send-gift": "Poslať darček",
+	"g-select-gift": "Vyberte, prosím, darček.",
 	"g-select-a-friend": "vybrať priateľa",
 	"g-sent-title": "Poslali ste darček používateľovi $1",
 	"g-sent-message": "Poslali ste nasledovný darček používateľovi $1.",
@@ -77,6 +81,12 @@
 	"g-viewgiftlist": "Zobraziť zoznam darčekov",
 	"g-your-profile": "Váš profil",
 	"gift_received_subject": "$1 vám poslal darček $2 na {{GRAMMAR:lokál|{{SITENAME}}}}",
+	"gift_received_body_html": "Dobrý deň, $1.\n\nPoužívateľ $2 vám práve poslal darček $3 na {{GRAMMAR:lokál|{{SITENAME}}}}.\n\nChcete si prečítať odkaz, ktorý vám $2 zanechal, a pozrieť si svoj darček? Kliknite na odkaz nižšie:\n\n[[Special:ViewGifts]]\n\nDúfame, že sa vám bude páčiť!\n\nĎakujeme,\n\n\ntím {{GRAMMAR:genitív|{{SITENAME}}}}\n\n---\n\nChcete od nás prestať dostávať e-maily?\n\nKliknite na [[Special:UpdateProfile]]\na v nastaveniach vypnite e-mailové upozornenia.",
 	"gift_received_body": "Ahoj $1.\n\n$2 vám práve poslal darček $3 na {{GRAMMAR:lokál|{{SITENAME}}}}.\n\nChcete si prečítať odkaz, ktorý vám $2 nechal, a pozrieť si svoj darček? Kliknite na nasledovný odkaz:\n\n$4\n\nDúfame, že sa vám bude páčiť!\n\nVďaka,\n\n\nTím {{GRAMMAR:genitív|{{SITENAME}}}}\n\n---\n\nChcete prestať dostávať e-maily od nás?\n\nKliknite na $5\na zmeňte svoje nastavenia na vypnutie e-mailových upozornení.",
+	"echo-category-title-social-gift": "Darčeky",
+	"echo-pref-tooltip-social-gift": "Upozorniť ma, keď mi niekto pošle darček.",
+	"notification-social-gift-send-no-message": "$1 vám práve poslal darček: $2.",
+	"notification-social-gift-send-with-message": "$1 vám práve poslal darček: $2.<br /><br />''$3''",
+	"notification-social-gift-send-bundle": "{{PLURAL:$1|Jeden človek vám poslal darček|$1 ľudia vám poslali darčeky|$1 ľudí vám poslalo darčeky}}.",
 	"right-giftadmin": "Vytvoriť nový alebo upraviť existujúce darčeky"
 }
