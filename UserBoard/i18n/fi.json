@@ -10,6 +10,7 @@
 	"messagesenttitle": "Viestit lähetetty",
 	"boardblasttitle": "Lähetä keskustelupläjäys",
 	"boardblaststep1": "Vaihe 1 – Kirjoita viestisi",
+	"boardblast-message-type-note": "Kaikki viestit lähetetään julkisina viesteinä, sillä yksityisviestit ovat poissa käytöstä.",
 	"boardblaststep2": "Vaihe 2 – Valitse kenelle haluat lähettää viestisi",
 	"boardlinkselectall": "Valitse kaikki",
 	"boardlinkunselectall": "Poista valinta kaikista",
