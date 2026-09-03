@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Rail",
-			"Sp5uhe"
+			"Sp5uhe",
+			"PanWor"
 		]
 	},
 	"systemgifts-desc": "Umożliwia wysyłanie, otrzymywanie, tworzenie oraz usuwanie nagród",
@@ -18,7 +19,7 @@
 	"ga-currentimage": "Obecna grafika",
 	"ga-error-message-invalid-link": "Wprowadzone łącze jest nieprawidłowe.",
 	"ga-error-message-no-user": "Użytkownik, którego próbujesz wyświetlić nie istnieje.",
-	"ga-error-title": "Ojej, chciałeś wykonać nieprawidłową operację!",
+	"ga-error-title": "Ojej, nie możesz tego zrobić!",
 	"ga-file-instructions": "Grafika musi być w formacie jpeg, png lub gif (bez animacji) i musi być mniejsza niż 100kb.",
 	"ga-gift": "prezent",
 	"ga-gift-given-count": "Ten prezent został podrowany $1 dolar {{PLURAL:$1|raz|razy}}",
