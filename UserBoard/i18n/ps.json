@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Ahmed-Najib-Biabani-Ibrahimkhel",
+			"باران",
 			"شاه زمان پټان"
 		]
 	},
@@ -39,7 +40,7 @@
 	"userboard_sendmessage": "$1 ته يو پيغام ولېږئ",
 	"userboard_myboard": "زما پيغام‌دړه",
 	"userboard_posted_ago": "$1 مخکې خپورشوی",
-	"userboard_private": "ځانواله",
+	"userboard_private": "پټواله",
 	"userboard_public": "ټولواله",
 	"userboard_messagetype": "پيغام ډول",
 	"userboard_nomessages": "هېڅ کوم پيغام نشته.",

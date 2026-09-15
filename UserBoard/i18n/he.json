@@ -3,6 +3,7 @@
 		"authors": [
 			"Amire80",
 			"Dee",
+			"Ladypine",
 			"Neriah",
 			"Rotemliss",
 			"YaronSh"
@@ -12,6 +13,7 @@
 	"messagesenttitle": "ההודעות נשלחו",
 	"boardblasttitle": "שליחת מסר המוני",
 	"boardblaststep1": "שלב 1 – כתבו את הודעתכם",
+	"boardblast-message-type-note": "כל ההודעות יישלחו כהודעות ציבוריות, מכיוון שהודעות פרטיות מושבתות.",
 	"boardblaststep2": "שלב 2 – בחרו אל מי תרצו לשלוח את ההודעה",
 	"boardlinkselectall": "בחרו הכול",
 	"boardlinkunselectall": "ביטול בחירת הכול",
