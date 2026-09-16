@@ -202,5 +202,7 @@
 	"action-editothersprofiles": "aktualizowania profili innych użytkowników",
 	"random-users-avatars-title": "Poznaj społeczność",
 	"logentry-profile-changedsection": "$1 {{GENDER:$2|zmienił|zmieniła|zmienił(a)}} sekcję „$4” profilu użytkownika $3",
-	"logentry-profile-changedprofile": "$1 {{GENDER:$2|zmienił|zmieniła|zmienił(a)}} profil użytkownika $3"
+	"logentry-profile-changedprofile": "$1 {{GENDER:$2|zmienił|zmieniła|zmienił(a)}} profil użytkownika $3",
+	"logentry-avatar-upload": "$1 {{GENDER:$2|przesłał|przesłała|przesłał(a)}} nowy awatar",
+	"logentry-avatar-remove": "$1 {{GENDER:$2|usunął|usunęła|usunął(-ęła)}} awatar $3"
 }

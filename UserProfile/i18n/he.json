@@ -3,6 +3,7 @@
 		"authors": [
 			"Amire80",
 			"Dee",
+			"Neriah",
 			"Rotemliss",
 			"YaronSh",
 			"ישראל קלר"
@@ -229,5 +230,7 @@
 	"apihelp-smpuserprofiletype-summary": "קבלת סוג דף משתמש של משתמש או הגדרת סוג דף משתמש משלך",
 	"apihelp-smpuserprofiletype-param-do": "פעולה לביצוע (get או set)",
 	"apihelp-smpuserprofiletype-param-user": "שם משתמש (רלוונטי רק כאשר <kbd>do</kbd> הוא <kbd>get</kbd> כי לא ניתן להשתמש במודול הזה כדי להגדיר סוגי דפי משתמשים של משתמשים אחרים, אלא רק שלך)",
-	"random-users-avatars-title": "פגשו את הקהילה"
+	"random-users-avatars-title": "פגשו את הקהילה",
+	"logentry-avatar-upload": "$1 {{GENDER:$2|העלה|העלתה}} תמונה מייצגת חדשה",
+	"logentry-avatar-remove": "$1 {{GENDER:$2|הסיר|הסירה}} את התמונה המייצגת של $3"
 }
