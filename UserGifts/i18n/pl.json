@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Jack Phoenix",
+			"PanWor",
 			"Sp5uhe"
 		]
 	},
@@ -63,13 +64,13 @@
 	"g-remove-gift": "Usuń ten prezent",
 	"g-remove-message": "Czy na pewno chcesz usunąć prezent „$1”?",
 	"g-recent-recipients": "Pozostali ostatnio obdarowani tym darem",
-	"g-remove-success-title": "Usunąłeś prezent „$1”",
+	"g-remove-success-title": "Usunięto prezent „$1”",
 	"g-remove-success-message": "Prezent „$1” został usunięty.",
 	"g-remove-title": "Usunąć „$1”?",
 	"g-send-gift": "Wyślij prezent",
 	"g-select-a-friend": "wybierz znajomego",
-	"g-sent-title": "Wysłałeś prezent do $1",
-	"g-sent-message": "Wysłałeś następujący prezent do $1.",
+	"g-sent-title": "Wysłano prezent do $1",
+	"g-sent-message": "Wysłano następujący prezent do $1.",
 	"g-small": "Mały",
 	"g-to-another": "Daj komuś innemu",
 	"g-uploadsuccess": "Przesłano",
