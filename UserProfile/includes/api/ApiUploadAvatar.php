@@ -100,8 +100,9 @@ class ApiUploadAvatar extends ApiBase {
 
 		// Get the result based on the current upload context:
 		// Check throttle after we've handled warnings
-		if ( UploadBase::isThrottled( $user ) ) {
-			$this->dieWithError( 'apierror-ratelimited' );
+		$status = $this->mUpload->authorizeUpload( $user );
+		if ( !$status->isGood() ) {
+			$this->dieStatus( $status );
 		}
 
 		// This is the most common case -- a normal upload with no warnings
