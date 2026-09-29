@@ -633,11 +633,12 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		# magically determine mime type
 		$magic = \MediaWiki\MediaWikiServices::getInstance()->getMimeAnalyzer();
 		$mime = $magic->guessMimeType( $tmpfile, false );
+		$verify = \MediaWiki\MediaWikiServices::getInstance()->getUploadVerification();
 
 		# check mime type, if desired
 		if ( $wgVerifyMimeType ) {
 			# check mime type against file extension
-			if ( !UploadBase::verifyExtension( $mime, $extension ) ) {
+			if ( !$verify->verifyExtension( $mime, $extension ) ) {
 				return Status::newFatal( 'filetype-mime-mismatch', $extension, $mime );
 			}
 
@@ -650,7 +651,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 
 		# check for HTML-ish code and JavaScript
 		if ( !$wgDisableUploadScriptChecks ) {
-			if ( UploadBase::detectScript( $tmpfile, $mime, $extension ) ) {
+			if ( $verify->detectScript( $tmpfile, $mime, $extension ) ) {
 				return Status::newFatal( 'uploadscripted' );
 			}
 		}
@@ -658,7 +659,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		/**
 		 * Scan the uploaded file for viruses
 		 */
-		$virus = UploadBase::detectVirus( $tmpfile );
+		$virus = $verify->detectVirus( $tmpfile );
 		if ( $virus ) {
 			return Status::newFatal( 'uploadvirus', htmlspecialchars( $virus ) );
 		}
