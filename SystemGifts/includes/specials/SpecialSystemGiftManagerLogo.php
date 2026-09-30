@@ -46,6 +46,7 @@ class SystemGiftManagerLogo extends UnlistedSpecialPage {
 		if ( version_compare( MW_VERSION, '1.46', '>=' ) ) {
 			parent::__construct( 'SystemGiftManagerLogo' );
 		} else {
+			// @phan-suppress-next-line PhanParamTooMany
 			parent::__construct( 'SystemGiftManagerLogo', 'awardsmanage' );
 		}
 	}

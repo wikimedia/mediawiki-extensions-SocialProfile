@@ -20,6 +20,7 @@ class RemoveMasterSystemGift extends UnlistedSpecialPage {
 		if ( version_compare( MW_VERSION, '1.46', '>=' ) ) {
 			parent::__construct( 'RemoveMasterSystemGift' );
 		} else {
+			// @phan-suppress-next-line PhanParamTooMany
 			parent::__construct( 'RemoveMasterSystemGift', 'awardsmanage' );
 		}
 	}

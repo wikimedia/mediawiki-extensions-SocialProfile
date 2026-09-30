@@ -14,6 +14,7 @@ class GiftManager extends SpecialPage {
 		if ( version_compare( MW_VERSION, '1.46', '>=' ) ) {
 			parent::__construct( 'GiftManager' );
 		} else {
+			// @phan-suppress-next-line PhanParamTooMany
 			parent::__construct( 'GiftManager', 'giftadmin' );
 		}
 	}

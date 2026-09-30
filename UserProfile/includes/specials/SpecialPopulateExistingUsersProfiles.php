@@ -20,6 +20,7 @@ class SpecialPopulateUserProfiles extends SpecialPage {
 		if ( version_compare( MW_VERSION, '1.46', '>=' ) ) {
 			parent::__construct( 'PopulateUserProfiles' );
 		} else {
+			// @phan-suppress-next-line PhanParamTooMany
 			parent::__construct( 'PopulateUserProfiles', 'populate-user-profiles' );
 		}
 	}

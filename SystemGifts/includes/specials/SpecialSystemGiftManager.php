@@ -16,6 +16,7 @@ class SystemGiftManager extends SpecialPage {
 		if ( version_compare( MW_VERSION, '1.46', '>=' ) ) {
 			parent::__construct( 'SystemGiftManager' );
 		} else {
+			// @phan-suppress-next-line PhanParamTooMany
 			parent::__construct( 'SystemGiftManager', 'awardsmanage' );
 		}
 	}
