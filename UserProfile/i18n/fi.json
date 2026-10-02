@@ -220,5 +220,7 @@
 	"user-profile-error-no-api-edit": "Sosiaalisen profiilien muokkaaminen ohjelmointirajapinnan välityksellä ei ole tällä hetkellä mahdollista. Käytäthän sivua <code>Special:UpdateProfile</code> muokataksesi omaa käyttäjäprofiiliasi, tai sivua <code>Special:EditProfile</code> muokataksesi toisen käyttäjien profiileja (mikäli sinulla on kyseisen sivun käyttämiseen tarvittavat käyttäjäoikeudet).",
 	"random-users-avatars-title": "Tapaa yhteisö",
 	"logentry-profile-changedsection": "$1 {{GENDER:$2|muutti}} käyttäjän $3 käyttäjäprofiilin osioa \"$4\"",
-	"logentry-profile-changedprofile": "$1 {{GENDER:$2|muutti}} käyttäjän $3 käyttäjäprofiilia"
+	"logentry-profile-changedprofile": "$1 {{GENDER:$2|muutti}} käyttäjän $3 käyttäjäprofiilia",
+	"logentry-avatar-upload": "$1 {{GENDER:$2|tallensi}} uuden avatarin",
+	"logentry-avatar-remove": "$1 {{GENDER:$2|poisti}} käyttäjän $3 avatarin"
 }
