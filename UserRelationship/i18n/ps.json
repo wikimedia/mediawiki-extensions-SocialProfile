@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Ahmed-Najib-Biabani-Ibrahimkhel",
-			"شاه زمان پټان"
+			"شاه زمان پټان",
+			"باران"
 		]
 	},
 	"userrelationship-desc": "د ملگرتيا او دښمنۍ غوښتنې لېږلو اجازه ورکوي",
@@ -36,7 +37,7 @@
 	"ur-remove-error-message-pending-friend-request": "له $1 سره ستاسو د ملگرتيا غوښتنه په تمه ده.",
 	"ur-remove-error-not-loggedin-foe": "د سيال لرې کولو لپاره تاسو بايد ننوځئ.",
 	"ur-remove-error-not-loggedin-friend": "د ملگري لرې کولو لپاره تاسو بايد ننوځئ.",
-	"ur-remove": "غورځول",
+	"ur-remove": "لرې‌کول",
 	"ur-add-title-foe": "ايا تاسو $1 د خپل دوښمن په توگه ورگډول غواړئ؟",
 	"ur-add-title-friend": "ايا تاسو $1 د خپل ملگري په توگه ورگډول غواړئ؟",
 	"ur-add-message-foe": "نږدې ده چې تاسو $1 د خپل سيال په توگه ورگډ کړئ.\nموږ به ستاسو د کرکې تاييد لپاره $1 ته خبر ورکړو.",
