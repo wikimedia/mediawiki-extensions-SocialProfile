@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"AnakngAraw"
+			"AnakngAraw",
+			"Jack Phoenix"
 		]
 	},
 	"userwelcome-desc": "Nagdaragdag ng tatak na <code>&lt;welcomeUser&gt;</code> upang maipakita sa nakalagda/nakatalang mga tagagamit ang kabatirang panlipunang (impormasyon) tumutukoy sa   partikular na tagagamit",

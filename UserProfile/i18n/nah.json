@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Fluence",
+			"Jack Phoenix",
 			"Languaeditor",
 			"Ricardo gs"
 		]
@@ -11,7 +12,7 @@
 	"user-watchlist": "Notlachiyalis",
 	"user-add-friend": "Xikpiwi teeixmatketl",
 	"user-contributions": "Itlahkwilol",
-	"user-stats-edits": "{{PLURAL:$1|Tlapatlaliztli|Tlapatlaliztli}}",
+	"user-stats-edits": "Tlapatlaliztli",
 	"other-info-title": "Tlayolmelawalistli",
 	"user-friends-title": "Teeixmatinih",
 	"other-info-movies": "Tlamawisolli",

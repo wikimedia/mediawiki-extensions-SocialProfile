@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Cedric31"
+			"Cedric31",
+			"Jack Phoenix"
 		]
 	},
 	"userwelcome-desc": "Apond una balisa <code>&lt;welcomeUser&gt;</code> per afichar d'informacions socialas especificas a cada utilizaire als utilizaires enregistrats",

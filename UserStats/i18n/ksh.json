@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Jack Phoenix",
 			"Purodha"
 		]
 	},
@@ -47,7 +48,7 @@
 	"top-fans-stats-gifts-rec-count": "{{PLURAL:$1|Jeschenk|Jeschenke}} kräje",
 	"top-fans-stats-gifts-sent-count": "{{PLURAL:$1|Jeschenk|Jeschenke}} jejovve",
 	"right-updatepoints": "De Aanzahl Änderunge ändere",
-	"level-advanced-to": "opjeschtoof op dat Nivoh <span style=\"font-weight:800\">$1</span>",
+	"level-advanced-to": "opjeschtoof op dat Nivoh <strong>$1</strong>",
 	"level-advance-subject": "Do bes jätz ene „$1“ {{GRAMMAR:vum|{{SITENAME}}}}!",
 	"level-advance-body": "Hallo $1,\n\nDo bes jetz ene $2 {{GRAMMAR:vum|{{SITENAME}}}}!\n\nHätzlesche Jlöckwonsch fun de janze {{SITENAME}}\n\n---\n\nWells De kein e-mail fun uns han? Dann kleck\n$3\nun donn en Dinge Ennstellunge affschallde, dat\nDe e-mail jescheck kriß."
 }
