@@ -3,7 +3,8 @@
 		"authors": [
 			"Minh Nguyen",
 			"Pisceskaze",
-			"SongNgu.xyz"
+			"SongNgu.xyz",
+			"Jack Phoenix"
 		]
 	},
 	"userstats-desc": "Cho phép trao điểm cho người dùng dựa trên loại hành động đã thực hiện",
@@ -35,7 +36,7 @@
 	"top-fans-bad-field-title": "Oái!",
 	"top-fans-bad-field-message": "Thông số được chỉ định không tồn tại.",
 	"top-fans-stats-vote-count": "Lá phiếu{{PLURAL:$1||}}",
-	"top-fans-stats-monthly-winner-count": "{{{{PLURAL:$1|Chiến thắng hàng tháng}}",
+	"top-fans-stats-monthly-winner-count": "{{PLURAL:$1|Chiến thắng hàng tháng}}",
 	"top-fans-stats-weekly-winner-count": "{{PLURAL:$1|Chiến thắng hàng tuần}}",
 	"top-fans-stats-edit-count": "Lần sửa đổi{{PLURAL:$1||}}",
 	"top-fans-stats-comment-count": "{{PLURAL:$1|Bình luận}}",
