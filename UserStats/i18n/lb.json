@@ -60,5 +60,7 @@
 	"user-stats-report-generation-note": "Dës Säit gouf automatesch generéiert",
 	"user-stats-report-weekly-edit-summary": "automatesche Benotzer-Rapport pro Woch",
 	"user-stats-report-monthly-edit-summary": "automatesche Benotzer-Rapport pro Mount",
+	"random-user-points-weekly": "{{PLURAL:$1|ee Punkt|$1 Punkten}} dës Woch",
+	"random-user-points-monthly": "{{PLURAL:$1|ee Punkt|$1 Punkten}} dëse Mount",
 	"random-user-about-me": "Iwwer mech"
 }
